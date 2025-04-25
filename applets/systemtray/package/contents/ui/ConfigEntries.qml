@@ -21,6 +21,7 @@ KCMUtils.ScrollViewKCM {
     id: iconsPage
 
     signal configurationChanged
+    property bool unsavedChanges: !(changedVisibility.size === 0 && changedShortcuts.size === 0)
 
     property var cfg_shownItems: []
     property var cfg_hiddenItems: []
@@ -40,6 +41,68 @@ KCMUtils.ScrollViewKCM {
             : [autoElement, shownElement, hiddenElement, disabledElement]
     }
 
+    readonly property var changedShortcuts: new Map()
+    readonly property var changedVisibility: new Map()
+
+    function saveConfig() {
+        for (const [key, value] of changedVisibility.entries()) {
+            updateVisibility(key, value)
+        }
+        for (const [key, value] of changedShortcuts.entries()) {
+            key.globalShortcut = value
+        }
+        changedShortcuts.clear()
+        changedVisibility.clear()
+        cfg_shownItemsChanged()
+        cfg_hiddenItemsChanged()
+        cfg_extraItemsChanged()
+        cfg_disabledStatusNotifiersChanged()
+        changedShortcutsChanged()
+        changedVisibilityChanged()
+    }
+
+    function updateVisibility (itemId: string, visibility: string): void {
+        const shownIndex = cfg_shownItems.indexOf(itemId)
+        const hiddenIndex = cfg_hiddenItems.indexOf(itemId)
+        const extraIndex = cfg_extraItems.indexOf(itemId)
+        const disabledSniIndex = cfg_disabledStatusNotifiers.indexOf(itemId)
+
+        if (shownIndex > -1) {
+            cfg_shownItems.splice(shownIndex, 1)
+        }
+        if (hiddenIndex > -1) {
+            cfg_hiddenItems.splice(hiddenIndex, 1)
+        }
+        if (extraIndex > -1) {
+            cfg_extraItems.splice(extraIndex, 1)
+        }
+        if (disabledSniIndex > -1) {
+            cfg_disabledStatusNotifiers.splice(disabledSniIndex, 1)
+        }
+
+        switch (visibility) {
+            case "auto":
+            case "auto-sni":
+                cfg_extraItems.push(itemId)
+                break
+            case "shown":
+                cfg_extraItems.push(itemId)
+                /* fallthrough*/
+            case "shown-sni":
+                cfg_shownItems.push(itemId)
+                break
+            case "hidden":
+                cfg_extraItems.push(itemId)
+                /* fallthrough */
+            case "hidden-sni":
+                cfg_hiddenItems.push(itemId)
+                break
+            case "disabled-sni":
+                cfg_disabledStatusNotifiers.push(itemId)
+                break
+        }
+    }
+
     function categoryName(category) {
         switch (category) {
         case "ApplicationStatus":
@@ -53,6 +116,25 @@ KCMUtils.ScrollViewKCM {
         case "UnknownCategory":
         default:
             return i18n("Miscellaneous")
+        }
+    }
+
+    Connections {
+        target: plasmoid.configSystemTrayModel
+        function onRowsRemoved() {
+            // if the user closes an app with a SNI that has a visibility change queued, we need to remove it
+            // from the queue as the change is no longer visible in the UI.
+            let idsToRemove = [...changedVisibility.keys()]
+            for (let i = 0; i < plasmoid.configSystemTrayModel.rowCount() && idsToRemove.length > 0; ++i) {
+                let itemId = plasmoid.configSystemTrayModel.index(i,0).data(Qt.UserRole + 2)
+                idsToRemove = idsToRemove.filter(id => id !== itemId)
+            }
+            idsToRemove.forEach(id => {
+                changedVisibility.delete(id)
+            })
+            if (idsToRemove.length > 0) {
+                changedVisibilityChanged()
+            }
         }
     }
 
@@ -88,6 +170,7 @@ KCMUtils.ScrollViewKCM {
         Kirigami.InlineMessage {
             id: disablingKlipperMessage
 
+            visible: changedVisibility.get("org.kde.plasma.clipboard") === "disabled"
             Layout.fillWidth: true
             type: Kirigami.MessageType.Warning
             text: xi18nc("@info:usagetip", "Disabling the clipboard is not recommended, as it will cause copied data to be lost when the application it was copied from is closed.<nl/><nl/>Instead consider configuring the clipboard to disable its history, or only remember one item at a time.")
@@ -204,10 +287,21 @@ KCMUtils.ScrollViewKCM {
 
                         property real contentWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset,
                                                             implicitContentWidth + leftPadding + rightPadding)
-                        readonly property bool shown:    cfg_showAllItems || cfg_shownItems.indexOf(itemId) !== -1
-                        readonly property bool hidden:   cfg_hiddenItems.indexOf(itemId) !== -1
-                        readonly property bool disabled: (isPlasmoid && cfg_extraItems.indexOf(itemId) === -1)
-                                                      || (!isPlasmoid && cfg_disabledStatusNotifiers.indexOf(itemId) > -1)
+
+                        readonly property string currentVisibility: changedVisibility.has(itemId)
+                            ? changedVisibility.get(itemId).replace("-sni", "") : originalVisibility
+                        readonly property string originalVisibility: {
+                            if (cfg_showAllItems || cfg_shownItems.indexOf(itemId) !== -1) {
+                                return "shown"
+                            } else if (cfg_hiddenItems.indexOf(itemId) !== -1) {
+                                return "hidden"
+                            } else if ((isPlasmoid && cfg_extraItems.indexOf(itemId) === -1)
+                                || (!isPlasmoid && cfg_disabledStatusNotifiers.indexOf(itemId) > -1)) {
+                                return "disabled"
+                            } else {
+                                return "auto"
+                            }
+                        }
 
                         implicitWidth: Math.max(contentWidth, itemsList.visibilityColumnWidth)
                         Component.onCompleted: itemsList.visibilityColumnWidth = Math.max(implicitWidth, itemsList.visibilityColumnWidth)
@@ -217,20 +311,8 @@ KCMUtils.ScrollViewKCM {
                         valueRole: "value"
 
                         currentIndex: {
-                            let value
-
-                            if (shown) {
-                                value = "shown"
-                            } else if (hidden) {
-                                value = "hidden"
-                            } else if (disabled) {
-                                value = "disabled"
-                            } else {
-                                value = "auto"
-                            }
-
                             for (let i = 0; i < model.length; i++) {
-                                if (model[i].value === value) {
+                                if (model[i].value === currentVisibility) {
                                     return i
                                 }
                             }
@@ -240,79 +322,15 @@ KCMUtils.ScrollViewKCM {
                         model: iconsPage.comboBoxModel
 
                         onActivated: index => {
-                            const shownIndex = cfg_shownItems.indexOf(itemId)
-                            const hiddenIndex = cfg_hiddenItems.indexOf(itemId)
-                            const extraIndex = cfg_extraItems.indexOf(itemId)
-                            const disabledSniIndex = cfg_disabledStatusNotifiers.indexOf(itemId)
-
-                            switch (currentValue) {
-                            case "auto":
-                                if (itemId == "org.kde.plasma.clipboard") {
-                                    disablingKlipperMessage.visible = false;
-                                }
-                                if (shownIndex > -1) {
-                                    cfg_shownItems.splice(shownIndex, 1)
-                                }
-                                if (hiddenIndex > -1) {
-                                    cfg_hiddenItems.splice(hiddenIndex, 1)
-                                }
-                                if (isPlasmoid && extraIndex === -1) {
-                                    cfg_extraItems.push(itemId)
-                                } else if (!isPlasmoid && disabledSniIndex > -1) {
-                                    cfg_disabledStatusNotifiers.splice(disabledSniIndex, 1)
-                                }
-                                break
-                            case "shown":
-                                if (itemId == "org.kde.plasma.clipboard") {
-                                    disablingKlipperMessage.visible = false;
-                                }
-                                if (shownIndex === -1) {
-                                    cfg_shownItems.push(itemId)
-                                }
-                                if (hiddenIndex > -1) {
-                                    cfg_hiddenItems.splice(hiddenIndex, 1)
-                                }
-                                if (isPlasmoid && extraIndex === -1) {
-                                    cfg_extraItems.push(itemId)
-                                } else if (!isPlasmoid && disabledSniIndex > -1) {
-                                    cfg_disabledStatusNotifiers.splice(disabledSniIndex, 1)
-                                }
-                                break
-                            case "hidden":
-                                if (itemId == "org.kde.plasma.clipboard") {
-                                    disablingKlipperMessage.visible = false;
-                                }
-                                if (shownIndex > -1) {
-                                    cfg_shownItems.splice(shownIndex, 1)
-                                }
-                                if (hiddenIndex === -1) {
-                                    cfg_hiddenItems.push(itemId)
-                                }
-                                if (isPlasmoid && extraIndex === -1) {
-                                    cfg_extraItems.push(itemId)
-                                } else if (!isPlasmoid && disabledSniIndex > -1) {
-                                    cfg_disabledStatusNotifiers.splice(disabledSniIndex, 1)
-                                }
-                                break
-                            case "disabled":
-                                if (itemId == "org.kde.plasma.clipboard") {
-                                    disablingKlipperMessage.visible = true;
-                                }
-                                if (shownIndex > -1) {
-                                    cfg_shownItems.splice(shownIndex, 1)
-                                }
-                                if (hiddenIndex > -1) {
-                                    cfg_hiddenItems.splice(hiddenIndex, 1)
-                                }
-                                if (isPlasmoid && extraIndex >= -1) {
-                                    cfg_extraItems.splice(extraIndex, 1)
-                                } else if (!isPlasmoid && disabledSniIndex === -1) {
+                            if (currentValue !== originalVisibility) {
+                                if (currentValue === "disabled" && !isPlasmoid) {
                                     disablingSniMessage.showWithAppName(nameLabel.text)
-                                    cfg_disabledStatusNotifiers.push(itemId)
                                 }
-                                break
+                                iconsPage.changedVisibility.set(itemId, currentValue + (isPlasmoid ? "" : "-sni"))
+                            } else {
+                                iconsPage.changedVisibility.delete(itemId)
                             }
-                            iconsPage.configurationChanged()
+                            iconsPage.changedVisibilityChanged()
                         }
                     }
                     KQC.KeySequenceItem {
@@ -323,12 +341,18 @@ KCMUtils.ScrollViewKCM {
 
                         visible: isPlasmoid
                         enabled: visibilityComboBox.currentValue !== "disabled"
-                        keySequence: model.applet ? model.applet.plasmoid.globalShortcut : ""
+                        readonly property string originalKeySequence: model.applet ? model.applet.plasmoid.globalShortcut : ""
+                        keySequence: changedShortcuts.has(model.applet?.plasmoid) ? changedShortcuts.get(model.applet?.plasmoid) : originalKeySequence
                         onCaptureFinished: {
-                            if (model.applet && keySequence !== model.applet.plasmoid.globalShortcut) {
-                                model.applet.plasmoid.globalShortcut = keySequence
+                            if (model.applet) {
+                                if (keySequence !== model.applet.plasmoid.globalShortcut) {
+                                    changedShortcuts.set(model.applet.plasmoid, keySequence.toString())
+                                } else {
+                                    changedShortcuts.delete(model.applet.plasmoid)
+                                }
 
                                 itemsList.keySequenceColumnWidth = Math.max(implicitWidth, itemsList.keySequenceColumnWidth)
+                                changedShortcutsChanged()
                             }
                         }
                     }
