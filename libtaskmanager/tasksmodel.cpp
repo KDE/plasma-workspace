@@ -241,6 +241,12 @@ void TasksModel::Private::initModels()
         }
     });
 
+    QObject::connect(concatProxyModel, &QAbstractItemModel::modelReset, q, [this]() {
+        if (sortMode == SortManual) {
+            updateManualSortMap();
+        }
+    });
+
     // If we're in manual sort mode, we need to update the sort map after row removals.
     QObject::connect(concatProxyModel, &QAbstractItemModel::rowsRemoved, q, [this](const QModelIndex &parent, int first, int last) {
         Q_UNUSED(parent)
