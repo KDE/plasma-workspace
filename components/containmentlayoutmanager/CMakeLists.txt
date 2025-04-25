@@ -13,6 +13,7 @@ target_sources(containmentlayoutmanagerplugin PRIVATE
     gridlayoutmanager.cpp gridlayoutmanager.h
     itemcontainer.cpp itemcontainer.h
     resizehandle.cpp resizehandle.h
+    plasmabackground.cpp plasmabackground.h
 )
 
 ecm_target_qml_sources(containmentlayoutmanagerplugin
