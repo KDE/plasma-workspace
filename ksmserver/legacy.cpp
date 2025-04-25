@@ -66,8 +66,6 @@ static int winsErrorHandler(Display *, XErrorEvent *ev)
 void KSMServer::performLegacySessionSave()
 {
     qCDebug(KSMSERVER) << "Saving legacy session apps";
-    if (state == ClosingSubSession)
-        return; // FIXME implement later
 
     KSharedConfig::Ptr config = KSharedConfig::openConfig();
     config->reparseConfiguration(); // config may have changed in the KControl module
@@ -204,8 +202,6 @@ Stores legacy session management data
 */
 void KSMServer::storeLegacySession(KConfig *config)
 {
-    if (state == ClosingSubSession)
-        return; // FIXME implement later
     // Write LegacySession data
     config->deleteGroup(QString(u"Legacy" + sessionGroup));
     KConfigGroup group(config, QString(u"Legacy" + sessionGroup));

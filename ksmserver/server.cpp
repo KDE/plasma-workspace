@@ -743,13 +743,11 @@ void KSMServer::deleteClient(KSMClient *client)
         handlePendingInteractions();
     }
     delete client;
-    if (state == Shutdown || state == Checkpoint || state == ClosingSubSession) {
+    if (state == Shutdown || state == Checkpoint) {
         completeShutdownOrCheckpoint();
     }
     if (state == Killing) {
         completeKilling();
-    } else if (state == KillingSubSession) {
-        completeKillingSubSession();
     }
 }
 
@@ -902,7 +900,7 @@ void KSMServer::storeSession()
         if (program.isEmpty() && restartCommand.isEmpty()) {
             continue;
         }
-        if (state == ClosingSubSession && !clientsToSave.contains(c)) {
+        if (!clientsToSave.contains(c)) {
             continue;
         }
 
@@ -1001,25 +999,13 @@ void KSMServer::restoreSession()
     });
 }
 
-void KSMServer::restoreSubSession(const QString &name)
-{
-    sessionGroup = SUBSESSION_PREFIX + name;
-
-    KConfigGroup configSessionGroup(KSharedConfig::openConfig(), sessionGroup);
-    int count = configSessionGroup.readEntry("count", 0);
-    appsToStart = count;
-
-    state = RestoringSubSession;
-    tryRestore();
-}
-
 void KSMServer::clientRegistered(const char * /* previousId */)
 {
 }
 
 void KSMServer::tryRestore()
 {
-    if (state != Restoring && state != RestoringSubSession) {
+    if (state != Restoring) {
         return;
     }
     KConfigGroup config(KSharedConfig::openConfig(), sessionGroup);
@@ -1102,8 +1088,6 @@ void KSMServer::tryRestore()
     // all done
     if (state == Restoring) {
         Q_EMIT sessionRestored();
-    } else { // subsession
-        Q_EMIT subSessionOpened();
     }
     state = Idle;
 }

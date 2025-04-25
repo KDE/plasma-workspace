@@ -52,7 +52,6 @@ struct SMData {
 using WindowMap = QMap<WId, SMData>;
 
 constexpr QLatin1String SESSION_PREFIX("Session: ");
-constexpr QLatin1String SUBSESSION_PREFIX("SubSession: ");
 constexpr QLatin1String SESSION_PREVIOUS_LOGOUT("saved at previous logout");
 constexpr QLatin1String SESSION_BY_USER("saved by user");
 
@@ -117,11 +116,8 @@ private:
     void handlePendingInteractions();
     void completeShutdownOrCheckpoint();
     void startKilling();
-    void startKillingSubSession();
     void performStandardKilling();
     void completeKilling();
-    void completeKillingSubSession();
-    void signalSubSessionClosed();
     void cancelShutdown(KSMClient *c);
     void killingCompleted();
 
@@ -157,16 +153,11 @@ public Q_SLOTS: // public dbus interface
     void saveCurrentSession();
     void saveCurrentSessionAs(const QString &);
     QStringList sessionList();
-    void saveSubSession(const QString &name, QStringList saveAndClose, QStringList saveOnly = QStringList());
-    void restoreSubSession(const QString &name);
 
     void openSwitchUserDialog();
     bool closeSession();
 
 Q_SIGNALS:
-    void subSessionClosed();
-    void subSessionCloseCanceled();
-    void subSessionOpened();
     void sessionRestored();
 
 private:
@@ -180,9 +171,6 @@ private:
         Checkpoint,
         Killing,
         WaitingForKNotify, // shutdown
-        ClosingSubSession,
-        KillingSubSession,
-        RestoringSubSession,
     };
     State state;
     bool saveSession;
