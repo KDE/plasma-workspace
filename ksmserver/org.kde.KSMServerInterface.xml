@@ -15,18 +15,8 @@
     <method name="saveCurrentSessionAs">
       <arg type="s" direction="in"/>
     </method>
-    <method name="saveSubSession">
-      <arg type="s" direction="in"/>
-      <arg type="as" direction="in"/>
-      <arg type="as" direction="in"/>
-    </method>
-    <method name="restoreSubSession">
-      <arg type="s" direction="in"/>
-    </method>
+
     <method name="openSwitchUserDialog" />
-    <signal name="subSessionClosed"/>
-    <signal name="subSessionCloseCanceled"/>
-    <signal name="subSessionOpened"/>
 
     <method name="restoreSession">
         <!-- Restore the main session. Should only be called once on startup -->
