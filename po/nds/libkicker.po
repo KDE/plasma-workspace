@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-19 00:43+0000\n"
+"POT-Creation-Date: 2025-04-25 00:43+0000\n"
 "PO-Revision-Date: 2014-08-21 16:22+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -17,59 +17,59 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 1.4\n"
 
-#: actionlist.cpp:85
+#: actionlist.cpp:91
 #, kde-format
 msgid "Open with:"
 msgstr "Opmaken mit:"
 
-#: actionlist.cpp:98
+#: actionlist.cpp:104
 #, kde-format
 msgid "Properties"
 msgstr "Egenschappen"
 
-#: actionlist.cpp:145
+#: actionlist.cpp:151
 #, kde-format
 msgid "Add to Desktop"
 msgstr "Na den Schriefdisch tofögen"
 
-#: actionlist.cpp:152
+#: actionlist.cpp:158
 #, kde-format
 msgid "Pin to Task Manager"
 msgstr ""
 
-#: actionlist.cpp:156
+#: actionlist.cpp:162
 #, fuzzy, kde-format
 msgid "Add to Panel (Widget)"
 msgstr "Na't Paneel tofögen"
 
-#: actionlist.cpp:307 rootmodel.cpp:399
+#: actionlist.cpp:313 rootmodel.cpp:526
 #, fuzzy, kde-format
 #| msgid "Recent Documents"
 msgid "Recent Files"
 msgstr "Tolest bruukt Dokmenten"
 
-#: actionlist.cpp:317
+#: actionlist.cpp:323
 #, fuzzy, kde-format
 msgid "Forget Recent Files"
 msgstr "Tolest bruukt Dokmenten"
 
-#: actionlist.cpp:382
+#: actionlist.cpp:388
 #, fuzzy, kde-format
 msgid "Edit Application…"
 msgstr "Programmen bewerken..."
 
-#: actionlist.cpp:414
+#: actionlist.cpp:420
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
 msgstr ""
 
-#: appentry.cpp:328
+#: appentry.cpp:345
 #, fuzzy, kde-format
 msgid "Hide Application"
 msgstr "Programm vergeten"
 
-#: appentry.cpp:390
+#: appentry.cpp:407
 #, fuzzy, kde-format
 #| msgctxt "App name (Generic name)"
 #| msgid "%1 (%2)"
@@ -77,24 +77,24 @@ msgctxt "App name (Comment or Generic name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: appentry.cpp:392
+#: appentry.cpp:409
 #, kde-format
 msgctxt "Generic name (App name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: appsmodel.cpp:36 appsmodel.cpp:72 computermodel.cpp:97 computermodel.cpp:225
+#: appsmodel.cpp:38 appsmodel.cpp:74 computermodel.cpp:97 computermodel.cpp:225
 #: recentusagemodel.cpp:165 recentusagemodel.cpp:228
 #, fuzzy, kde-format
 msgid "Applications"
 msgstr "Programm vergeten"
 
-#: appsmodel.cpp:167
+#: appsmodel.cpp:169
 #, kde-format
 msgid "Unhide Applications in this Submenu"
 msgstr ""
 
-#: appsmodel.cpp:176
+#: appsmodel.cpp:178
 #, fuzzy, kde-format
 msgid "Unhide Applications in '%1'"
 msgstr "Tolest bruukt Programmen"
@@ -115,7 +115,7 @@ msgid "Computer"
 msgstr ""
 
 #. i18n.
-#: kastatsfavoritesmodel.cpp:554 rootmodel.cpp:392 simplefavoritesmodel.cpp:33
+#: kastatsfavoritesmodel.cpp:554 rootmodel.cpp:519 simplefavoritesmodel.cpp:33
 #, fuzzy, kde-format
 msgid "Favorites"
 msgstr "Na de Leestekens tofögen"
@@ -165,37 +165,37 @@ msgstr "All Programm vergeten"
 msgid "Forget All Files"
 msgstr "All Dokmenten vergeten"
 
-#: rootmodel.cpp:92
-#, kde-format
-msgid "Hide %1"
-msgstr ""
-
-#: rootmodel.cpp:374
+#: rootmodel.cpp:74
 #, fuzzy, kde-format
 msgid "All Applications"
 msgstr "All Programm vergeten"
 
-#: rootmodel.cpp:386
+#: rootmodel.cpp:127
+#, kde-format
+msgid "Hide %1"
+msgstr ""
+
+#: rootmodel.cpp:513
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr ""
 
-#: rootmodel.cpp:399
+#: rootmodel.cpp:526
 #, fuzzy, kde-format
 msgid "Often Used Files"
 msgstr "Tolest bruukt Dokmenten"
 
-#: rootmodel.cpp:408
+#: rootmodel.cpp:535
 #, kde-format
 msgid "Recent Applications"
 msgstr "Tolest bruukt Programmen"
 
-#: rootmodel.cpp:408
+#: rootmodel.cpp:535
 #, fuzzy, kde-format
 msgid "Often Used Applications"
 msgstr "Tolest bruukt Programmen"
 
-#: rootmodel.cpp:423
+#: rootmodel.cpp:550
 #, kde-format
 msgid "Power / Session"
 msgstr "Stroom un Törn"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-19 00:43+0000\n"
+"POT-Creation-Date: 2025-04-25 00:43+0000\n"
 "PO-Revision-Date: 2024-10-26 11:01+0200\n"
 "Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -18,81 +18,81 @@ msgstr ""
 "X-Generator: Lokalize 24.08.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: actionlist.cpp:85
+#: actionlist.cpp:91
 #, kde-format
 msgid "Open with:"
 msgstr "Åbn med:"
 
-#: actionlist.cpp:98
+#: actionlist.cpp:104
 #, kde-format
 msgid "Properties"
 msgstr "Egenskaber"
 
-#: actionlist.cpp:145
+#: actionlist.cpp:151
 #, kde-format
 msgid "Add to Desktop"
 msgstr "Føj til skrivebordet"
 
-#: actionlist.cpp:152
+#: actionlist.cpp:158
 #, kde-format
 msgid "Pin to Task Manager"
 msgstr "Fastgør til opgavelinje"
 
-#: actionlist.cpp:156
+#: actionlist.cpp:162
 #, kde-format
 msgid "Add to Panel (Widget)"
 msgstr "Føj til panel (widget)"
 
-#: actionlist.cpp:307 rootmodel.cpp:399
+#: actionlist.cpp:313 rootmodel.cpp:526
 #, kde-format
 msgid "Recent Files"
 msgstr "Nylige filer"
 
-#: actionlist.cpp:317
+#: actionlist.cpp:323
 #, kde-format
 msgid "Forget Recent Files"
 msgstr "Glem nylige filer"
 
-#: actionlist.cpp:382
+#: actionlist.cpp:388
 #, kde-format
 msgid "Edit Application…"
 msgstr "Redigér program..."
 
-#: actionlist.cpp:414
+#: actionlist.cpp:420
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
 msgstr "Afinstallér eller håndtér tilføjelser..."
 
-#: appentry.cpp:328
+#: appentry.cpp:345
 #, kde-format
 msgid "Hide Application"
 msgstr "Skjul program"
 
-#: appentry.cpp:390
+#: appentry.cpp:407
 #, kde-format
 msgctxt "App name (Comment or Generic name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: appentry.cpp:392
+#: appentry.cpp:409
 #, kde-format
 msgctxt "Generic name (App name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: appsmodel.cpp:36 appsmodel.cpp:72 computermodel.cpp:97 computermodel.cpp:225
+#: appsmodel.cpp:38 appsmodel.cpp:74 computermodel.cpp:97 computermodel.cpp:225
 #: recentusagemodel.cpp:165 recentusagemodel.cpp:228
 #, kde-format
 msgid "Applications"
 msgstr "Programmer"
 
-#: appsmodel.cpp:167
+#: appsmodel.cpp:169
 #, kde-format
 msgid "Unhide Applications in this Submenu"
 msgstr "Stop med at skjule programmer i denne undermenu"
 
-#: appsmodel.cpp:176
+#: appsmodel.cpp:178
 #, kde-format
 msgid "Unhide Applications in '%1'"
 msgstr "Stop med at skjule programmer i \"%1\""
@@ -113,7 +113,7 @@ msgid "Computer"
 msgstr "Computer"
 
 #. i18n.
-#: kastatsfavoritesmodel.cpp:554 rootmodel.cpp:392 simplefavoritesmodel.cpp:33
+#: kastatsfavoritesmodel.cpp:554 rootmodel.cpp:519 simplefavoritesmodel.cpp:33
 #, kde-format
 msgid "Favorites"
 msgstr "Favoritter"
@@ -164,37 +164,37 @@ msgstr "Glem alle programmer"
 msgid "Forget All Files"
 msgstr "Glem alle filer"
 
-#: rootmodel.cpp:92
-#, kde-format
-msgid "Hide %1"
-msgstr "Skjul %1"
-
-#: rootmodel.cpp:374
+#: rootmodel.cpp:74
 #, kde-format
 msgid "All Applications"
 msgstr "Alle programmer"
 
-#: rootmodel.cpp:386
+#: rootmodel.cpp:127
+#, kde-format
+msgid "Hide %1"
+msgstr "Skjul %1"
+
+#: rootmodel.cpp:513
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "Dette burde ikke være synligt! Use KICKER_FAVORITES_MODEL"
 
-#: rootmodel.cpp:399
+#: rootmodel.cpp:526
 #, kde-format
 msgid "Often Used Files"
 msgstr "Ofte anvendte filer"
 
-#: rootmodel.cpp:408
+#: rootmodel.cpp:535
 #, kde-format
 msgid "Recent Applications"
 msgstr "Nylige programmer"
 
-#: rootmodel.cpp:408
+#: rootmodel.cpp:535
 #, kde-format
 msgid "Often Used Applications"
 msgstr "Ofte anvendte programmer"
 
-#: rootmodel.cpp:423
+#: rootmodel.cpp:550
 #, kde-format
 msgid "Power / Session"
 msgstr "Strøm / session"

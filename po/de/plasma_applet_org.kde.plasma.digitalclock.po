@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-24 00:43+0000\n"
+"POT-Creation-Date: 2025-04-25 00:43+0000\n"
 "PO-Revision-Date: 2024-11-25 20:11+0100\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -321,27 +321,18 @@ msgstr "Cancun"
 msgid "Add Selected Time Zone"
 msgstr "Weitere Zeitzonen hinzufügen"
 
-#: package/contents/ui/configTimeZones.qml:99
-#, kde-format
-msgid ""
-"Tip: if you travel frequently, add your home time zone to this list. It will "
-"only appear when you change the systemwide time zone to something else."
-msgstr ""
-"Tipp: Fügen Sie dieser Liste Ihre Heimat-Zeitzone hinzu. Diese wird nur "
-"angezeigt, wenn Sie die Zeitzone des Systems auf eine andere ändern."
-
-#: package/contents/ui/configTimeZones.qml:116
+#: package/contents/ui/configTimeZones.qml:84
 #, fuzzy, kde-format
 #| msgid "Add Time Zones…"
 msgid "Add Time Zone…"
 msgstr "Zeitzonen hinzufügen ..."
 
-#: package/contents/ui/configTimeZones.qml:157
+#: package/contents/ui/configTimeZones.qml:143
 #, kde-format
 msgid "Clock is currently using this time zone"
 msgstr "Die Uhr verwendet aktuell diese Zeitzone"
 
-#: package/contents/ui/configTimeZones.qml:159
+#: package/contents/ui/configTimeZones.qml:145
 #, kde-format
 msgctxt ""
 "@label This list item shows a time zone city name that is identical to the "
@@ -350,27 +341,27 @@ msgctxt ""
 msgid "Hidden while this is the local time zone's city"
 msgstr "Versteckt, da der lokalen Zeitzone entsprechend"
 
-#: package/contents/ui/configTimeZones.qml:189
+#: package/contents/ui/configTimeZones.qml:175
 #, kde-format
 msgid "Switch Systemwide Time Zone…"
 msgstr "Zeitzone des Systems wechseln ..."
 
-#: package/contents/ui/configTimeZones.qml:201
+#: package/contents/ui/configTimeZones.qml:187
 #, kde-format
 msgid "Remove this time zone"
 msgstr "Diese Zeitzone entfernen"
 
-#: package/contents/ui/configTimeZones.qml:213
+#: package/contents/ui/configTimeZones.qml:199
 #, kde-format
 msgid "Systemwide Time Zone"
 msgstr "Zeitzone des Systems"
 
-#: package/contents/ui/configTimeZones.qml:213
+#: package/contents/ui/configTimeZones.qml:199
 #, kde-format
 msgid "Additional Time Zones"
 msgstr "Zusätzliche Zeitzonen"
 
-#: package/contents/ui/configTimeZones.qml:226
+#: package/contents/ui/configTimeZones.qml:212
 #, kde-format
 msgid ""
 "Add more time zones to display all of them in the applet's pop-up, or use "
@@ -379,12 +370,20 @@ msgstr ""
 "Weitere Zeitzonen hinzufügen, um sie im Pop-up des Applets anzuzeigen, oder "
 "eine davon für die Uhr selbst zu verwenden"
 
-#: package/contents/ui/configTimeZones.qml:240
+#: package/contents/ui/configTimeZones.qml:225
+#, kde-format
+msgctxt "@info:usagetip shown below listview"
+msgid ""
+"Tip: Add your home time zone to this list to see the time there even when "
+"you're traveling. It will not be shown twice while at home."
+msgstr ""
+
+#: package/contents/ui/configTimeZones.qml:235
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr "Die angezeigte Zeitzone durch Scrollen über der Uhr umschalten"
 
-#: package/contents/ui/configTimeZones.qml:247
+#: package/contents/ui/configTimeZones.qml:246
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
@@ -393,7 +392,7 @@ msgstr ""
 "Die Verwendung dieser Funktion ändert nicht die Zeitzone des Systems. Wenn "
 "Sie reisen, wechseln Sie stattdessen die Zeitzone des Systems."
 
-#: package/contents/ui/configTimeZones.qml:257
+#: package/contents/ui/configTimeZones.qml:256
 #, fuzzy, kde-format
 #| msgid "Time Zones"
 msgid "Choose Time Zone"
@@ -468,6 +467,14 @@ msgstr "Lokal"
 #, kde-format
 msgid "System's local time zone"
 msgstr "Lokale Zeitzone des Systems"
+
+#~ msgid ""
+#~ "Tip: if you travel frequently, add your home time zone to this list. It "
+#~ "will only appear when you change the systemwide time zone to something "
+#~ "else."
+#~ msgstr ""
+#~ "Tipp: Fügen Sie dieser Liste Ihre Heimat-Zeitzone hinzu. Diese wird nur "
+#~ "angezeigt, wenn Sie die Zeitzone des Systems auf eine andere ändern."
 
 #~ msgid "Adjust Date and Time…"
 #~ msgstr "Datum und Zeit einstellen ..."

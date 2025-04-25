@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kde 49i410\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-19 00:43+0000\n"
+"POT-Creation-Date: 2025-04-25 00:43+0000\n"
 "PO-Revision-Date: 2015-02-04 15:12+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian\n"
@@ -20,60 +20,60 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: actionlist.cpp:85
+#: actionlist.cpp:91
 #, kde-format
 msgid "Open with:"
 msgstr "Otvori sa:"
 
-#: actionlist.cpp:98
+#: actionlist.cpp:104
 #, kde-format
 msgid "Properties"
 msgstr "Podešavanja"
 
-#: actionlist.cpp:145
+#: actionlist.cpp:151
 #, kde-format
 msgid "Add to Desktop"
 msgstr "Dodaj na površ"
 
-#: actionlist.cpp:152
+#: actionlist.cpp:158
 #, kde-format
 msgid "Pin to Task Manager"
 msgstr ""
 
-#: actionlist.cpp:156
+#: actionlist.cpp:162
 #, fuzzy, kde-format
 msgid "Add to Panel (Widget)"
 msgstr "Dodaj na panel"
 
-#: actionlist.cpp:307 rootmodel.cpp:399
+#: actionlist.cpp:313 rootmodel.cpp:526
 #, fuzzy, kde-format
 #| msgid "Recent Documents"
 msgid "Recent Files"
 msgstr "Skorašnji dokumenti"
 
-#: actionlist.cpp:317
+#: actionlist.cpp:323
 #, fuzzy, kde-format
 msgid "Forget Recent Files"
 msgstr "Skorašnji dokumenti"
 
-#: actionlist.cpp:382
+#: actionlist.cpp:388
 #, fuzzy, kde-format
 #| msgid "Edit Application..."
 msgid "Edit Application…"
 msgstr "Podesavanje aplikacije..."
 
-#: actionlist.cpp:414
+#: actionlist.cpp:420
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
 msgstr ""
 
-#: appentry.cpp:328
+#: appentry.cpp:345
 #, kde-format
 msgid "Hide Application"
 msgstr "Sakrij aplikaciju"
 
-#: appentry.cpp:390
+#: appentry.cpp:407
 #, fuzzy, kde-format
 #| msgctxt "App name (Generic name)"
 #| msgid "%1 (%2)"
@@ -81,24 +81,24 @@ msgctxt "App name (Comment or Generic name)"
 msgid "%1 (%2)"
 msgstr "%1 ( %2)"
 
-#: appentry.cpp:392
+#: appentry.cpp:409
 #, kde-format
 msgctxt "Generic name (App name)"
 msgid "%1 (%2)"
 msgstr "%1 ( %2)"
 
-#: appsmodel.cpp:36 appsmodel.cpp:72 computermodel.cpp:97 computermodel.cpp:225
+#: appsmodel.cpp:38 appsmodel.cpp:74 computermodel.cpp:97 computermodel.cpp:225
 #: recentusagemodel.cpp:165 recentusagemodel.cpp:228
 #, fuzzy, kde-format
 msgid "Applications"
 msgstr "Sakrij aplikaciju"
 
-#: appsmodel.cpp:167
+#: appsmodel.cpp:169
 #, kde-format
 msgid "Unhide Applications in this Submenu"
 msgstr "Prikaži aplikacije u podmenu-u"
 
-#: appsmodel.cpp:176
+#: appsmodel.cpp:178
 #, kde-format
 msgid "Unhide Applications in '%1'"
 msgstr "Prikaži aplikacije u '%1'"
@@ -119,7 +119,7 @@ msgid "Computer"
 msgstr ""
 
 #. i18n.
-#: kastatsfavoritesmodel.cpp:554 rootmodel.cpp:392 simplefavoritesmodel.cpp:33
+#: kastatsfavoritesmodel.cpp:554 rootmodel.cpp:519 simplefavoritesmodel.cpp:33
 #, fuzzy, kde-format
 msgid "Favorites"
 msgstr "Dodaj u omiljene"
@@ -169,37 +169,37 @@ msgstr "Zaboravi sve aplikacije"
 msgid "Forget All Files"
 msgstr "Zaboravi sve dokumente"
 
-#: rootmodel.cpp:92
-#, kde-format
-msgid "Hide %1"
-msgstr ""
-
-#: rootmodel.cpp:374
+#: rootmodel.cpp:74
 #, fuzzy, kde-format
 msgid "All Applications"
 msgstr "Zaboravi sve aplikacije"
 
-#: rootmodel.cpp:386
+#: rootmodel.cpp:127
+#, kde-format
+msgid "Hide %1"
+msgstr ""
+
+#: rootmodel.cpp:513
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr ""
 
-#: rootmodel.cpp:399
+#: rootmodel.cpp:526
 #, fuzzy, kde-format
 msgid "Often Used Files"
 msgstr "Skorašnji dokumenti"
 
-#: rootmodel.cpp:408
+#: rootmodel.cpp:535
 #, kde-format
 msgid "Recent Applications"
 msgstr "Skorašnji programi"
 
-#: rootmodel.cpp:408
+#: rootmodel.cpp:535
 #, fuzzy, kde-format
 msgid "Often Used Applications"
 msgstr "Skorašnji programi"
 
-#: rootmodel.cpp:423
+#: rootmodel.cpp:550
 #, kde-format
 msgid "Power / Session"
 msgstr "Napajanje / Sesija"

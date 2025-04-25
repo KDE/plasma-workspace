@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-19 00:43+0000\n"
+"POT-Creation-Date: 2025-04-25 00:43+0000\n"
 "PO-Revision-Date: 2025-02-13 22:10+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -19,81 +19,81 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 24.12.1\n"
 
-#: actionlist.cpp:85
+#: actionlist.cpp:91
 #, kde-format
 msgid "Open with:"
 msgstr "Buka dengan:"
 
-#: actionlist.cpp:98
+#: actionlist.cpp:104
 #, kde-format
 msgid "Properties"
 msgstr "Properti"
 
-#: actionlist.cpp:145
+#: actionlist.cpp:151
 #, kde-format
 msgid "Add to Desktop"
 msgstr "Tambahkan ke Desktop"
 
-#: actionlist.cpp:152
+#: actionlist.cpp:158
 #, kde-format
 msgid "Pin to Task Manager"
 msgstr "Semat ke Pengelola Tugas"
 
-#: actionlist.cpp:156
+#: actionlist.cpp:162
 #, kde-format
 msgid "Add to Panel (Widget)"
 msgstr "Tambahkan ke Panel (Widget)"
 
-#: actionlist.cpp:307 rootmodel.cpp:399
+#: actionlist.cpp:313 rootmodel.cpp:526
 #, kde-format
 msgid "Recent Files"
 msgstr "File-file Baru-baru Ini"
 
-#: actionlist.cpp:317
+#: actionlist.cpp:323
 #, kde-format
 msgid "Forget Recent Files"
 msgstr "Lupakan File-file Baru-baru Ini"
 
-#: actionlist.cpp:382
+#: actionlist.cpp:388
 #, kde-format
 msgid "Edit Application…"
 msgstr "Edit Aplikasi..."
 
-#: actionlist.cpp:414
+#: actionlist.cpp:420
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
 msgstr "Uninstal atau Kelola Pernak-pernik..."
 
-#: appentry.cpp:328
+#: appentry.cpp:345
 #, kde-format
 msgid "Hide Application"
 msgstr "Sembunyikan Aplikasi"
 
-#: appentry.cpp:390
+#: appentry.cpp:407
 #, kde-format
 msgctxt "App name (Comment or Generic name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: appentry.cpp:392
+#: appentry.cpp:409
 #, kde-format
 msgctxt "Generic name (App name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: appsmodel.cpp:36 appsmodel.cpp:72 computermodel.cpp:97 computermodel.cpp:225
+#: appsmodel.cpp:38 appsmodel.cpp:74 computermodel.cpp:97 computermodel.cpp:225
 #: recentusagemodel.cpp:165 recentusagemodel.cpp:228
 #, kde-format
 msgid "Applications"
 msgstr "Aplikasi"
 
-#: appsmodel.cpp:167
+#: appsmodel.cpp:169
 #, kde-format
 msgid "Unhide Applications in this Submenu"
 msgstr "Tampakkan Aplikasi di Submenu ini"
 
-#: appsmodel.cpp:176
+#: appsmodel.cpp:178
 #, kde-format
 msgid "Unhide Applications in '%1'"
 msgstr "Tampakkan Aplikasi di '%1'"
@@ -114,7 +114,7 @@ msgid "Computer"
 msgstr "Komputer"
 
 #. i18n.
-#: kastatsfavoritesmodel.cpp:554 rootmodel.cpp:392 simplefavoritesmodel.cpp:33
+#: kastatsfavoritesmodel.cpp:554 rootmodel.cpp:519 simplefavoritesmodel.cpp:33
 #, kde-format
 msgid "Favorites"
 msgstr "Favorit"
@@ -164,37 +164,37 @@ msgstr "Lupakan Semua Aplikasi"
 msgid "Forget All Files"
 msgstr "Lupakan Semua File"
 
-#: rootmodel.cpp:92
-#, kde-format
-msgid "Hide %1"
-msgstr "Sembunyikan %1"
-
-#: rootmodel.cpp:374
+#: rootmodel.cpp:74
 #, kde-format
 msgid "All Applications"
 msgstr "Semua Aplikasi"
 
-#: rootmodel.cpp:386
+#: rootmodel.cpp:127
+#, kde-format
+msgid "Hide %1"
+msgstr "Sembunyikan %1"
+
+#: rootmodel.cpp:513
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "Ini seharusnya tidak terlihat! Gunakanlah KICKER_FAVORITES_MODEL"
 
-#: rootmodel.cpp:399
+#: rootmodel.cpp:526
 #, kde-format
 msgid "Often Used Files"
 msgstr "File-file Yang Sering Digunakan"
 
-#: rootmodel.cpp:408
+#: rootmodel.cpp:535
 #, kde-format
 msgid "Recent Applications"
 msgstr "Aplikasi Baru-baru ini"
 
-#: rootmodel.cpp:408
+#: rootmodel.cpp:535
 #, kde-format
 msgid "Often Used Applications"
 msgstr "Aplikasi Sering Digunakan"
 
-#: rootmodel.cpp:423
+#: rootmodel.cpp:550
 #, kde-format
 msgid "Power / Session"
 msgstr "Daya / Sesi"

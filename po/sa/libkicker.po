@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-19 00:43+0000\n"
+"POT-Creation-Date: 2025-04-25 00:43+0000\n"
 "PO-Revision-Date: 2025-03-02 14:52+0530\n"
 "Last-Translator: Shreekant Kalwar <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -19,81 +19,81 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
 "X-Generator: Lokalize 24.12.2\n"
 
-#: actionlist.cpp:85
+#: actionlist.cpp:91
 #, kde-format
 msgid "Open with:"
 msgstr "इत्यनेन सह उद्घाट्यते:"
 
-#: actionlist.cpp:98
+#: actionlist.cpp:104
 #, kde-format
 msgid "Properties"
 msgstr "गुणाः"
 
-#: actionlist.cpp:145
+#: actionlist.cpp:151
 #, kde-format
 msgid "Add to Desktop"
 msgstr "डेस्कटॉप् मध्ये योजयतु"
 
-#: actionlist.cpp:152
+#: actionlist.cpp:158
 #, kde-format
 msgid "Pin to Task Manager"
 msgstr "कार्यप्रबन्धकं प्रति पिन कुर्वन्तु"
 
-#: actionlist.cpp:156
+#: actionlist.cpp:162
 #, kde-format
 msgid "Add to Panel (Widget)"
 msgstr "फलक (विजेट्) मध्ये योजयतु ."
 
-#: actionlist.cpp:307 rootmodel.cpp:399
+#: actionlist.cpp:313 rootmodel.cpp:526
 #, kde-format
 msgid "Recent Files"
 msgstr "अद्यतनसञ्चिकाः"
 
-#: actionlist.cpp:317
+#: actionlist.cpp:323
 #, kde-format
 msgid "Forget Recent Files"
 msgstr "Recent Files विस्मरन्तु"
 
-#: actionlist.cpp:382
+#: actionlist.cpp:388
 #, kde-format
 msgid "Edit Application…"
 msgstr "अनुप्रयोग सम्पादयतु..."
 
-#: actionlist.cpp:414
+#: actionlist.cpp:420
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
 msgstr "Add-Ons विस्थापयन्तु अथवा प्रबन्धयन्तु..."
 
-#: appentry.cpp:328
+#: appentry.cpp:345
 #, kde-format
 msgid "Hide Application"
 msgstr "अनुप्रयोगं गोपयन्तु"
 
-#: appentry.cpp:390
+#: appentry.cpp:407
 #, kde-format
 msgctxt "App name (Comment or Generic name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: appentry.cpp:392
+#: appentry.cpp:409
 #, kde-format
 msgctxt "Generic name (App name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: appsmodel.cpp:36 appsmodel.cpp:72 computermodel.cpp:97 computermodel.cpp:225
+#: appsmodel.cpp:38 appsmodel.cpp:74 computermodel.cpp:97 computermodel.cpp:225
 #: recentusagemodel.cpp:165 recentusagemodel.cpp:228
 #, kde-format
 msgid "Applications"
 msgstr "अनुप्रयोगाः"
 
-#: appsmodel.cpp:167
+#: appsmodel.cpp:169
 #, kde-format
 msgid "Unhide Applications in this Submenu"
 msgstr "अस्मिन् उपमेनूमध्ये अनुप्रयोगाः अनगोपयन्तु"
 
-#: appsmodel.cpp:176
+#: appsmodel.cpp:178
 #, kde-format
 msgid "Unhide Applications in '%1'"
 msgstr "'%1' इत्यस्मिन् अनुप्रयोगाः अनगोपयन्तु ।"
@@ -114,7 +114,7 @@ msgid "Computer"
 msgstr "संगणक"
 
 #. i18n.
-#: kastatsfavoritesmodel.cpp:554 rootmodel.cpp:392 simplefavoritesmodel.cpp:33
+#: kastatsfavoritesmodel.cpp:554 rootmodel.cpp:519 simplefavoritesmodel.cpp:33
 #, kde-format
 msgid "Favorites"
 msgstr "प्रियाः"
@@ -164,37 +164,37 @@ msgstr "सर्वाणि अनुप्रयोगाः विस्म�
 msgid "Forget All Files"
 msgstr "सर्वाणि सञ्चिकाः विस्मरन्तु"
 
-#: rootmodel.cpp:92
-#, kde-format
-msgid "Hide %1"
-msgstr "%1 गोपयन्तु"
-
-#: rootmodel.cpp:374
+#: rootmodel.cpp:74
 #, kde-format
 msgid "All Applications"
 msgstr "सर्वे अनुप्रयोगाः"
 
-#: rootmodel.cpp:386
+#: rootmodel.cpp:127
+#, kde-format
+msgid "Hide %1"
+msgstr "%1 गोपयन्तु"
+
+#: rootmodel.cpp:513
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "एतत् दृश्यमानं न भवितुमर्हति! KICKER_FAVORITES_MODEL इत्यस्य उपयोगं कुर्वन्तु"
 
-#: rootmodel.cpp:399
+#: rootmodel.cpp:526
 #, kde-format
 msgid "Often Used Files"
 msgstr "प्रायः प्रयुक्ताः सञ्चिकाः"
 
-#: rootmodel.cpp:408
+#: rootmodel.cpp:535
 #, kde-format
 msgid "Recent Applications"
 msgstr "हाल के आवेदन"
 
-#: rootmodel.cpp:408
+#: rootmodel.cpp:535
 #, kde-format
 msgid "Often Used Applications"
 msgstr "प्रायः प्रयुक्ताः अनुप्रयोगाः"
 
-#: rootmodel.cpp:423
+#: rootmodel.cpp:550
 #, kde-format
 msgid "Power / Session"
 msgstr "शक्ति / सत्र"

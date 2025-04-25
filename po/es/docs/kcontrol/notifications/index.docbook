@@ -106,6 +106,17 @@
     <varlistentry>
     <term
 ><guiicon
+>Activar cuando una aplicación a pantalla completa tiene el foco</guiicon
+></term>
+    <listitem
+><para
+>Activar automáticamente el modo «no molestar» cuando esté usando una aplicación a pantalla completa. Por ejemplo, cuando está viendo un vídeo.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
 >Mostrar notificaciones críticas</guiicon
 ></term>
     <listitem

@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-23 00:44+0000\n"
-"PO-Revision-Date: 2025-04-01 15:03+0400\n"
-"Last-Translator: Khayyam <xxmn77@gmail.com>\n"
+"PO-Revision-Date: 2025-04-24 13:12+0400\n"
+"Last-Translator: linux <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: src/fingerprintmodel.cpp:145 src/fingerprintmodel.cpp:229
 #, kde-format
@@ -548,14 +548,13 @@ msgstr "İstifadəçi avatarı əvəzetmə nişanı"
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User Without Deleting Files?"
-msgstr ""
+msgstr "Faylları silmədən daxil olan istifadəçini silək?"
 
 #: src/ui/UserDetailsPage.qml:115
-#, fuzzy, kde-format
-#| msgid "Delete User…"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User?"
-msgstr "İstifadəçini silmək..."
+msgstr "Daxil olan istifadəçini silək?"
 
 #: src/ui/UserDetailsPage.qml:117
 #, kde-kuit-format
@@ -565,6 +564,9 @@ msgid ""
 "account instead?<nl/><nl/>This will make %1 unable to log in again, and they "
 "may experience strange behaviors until they log out."
 msgstr ""
+"%1 hal-hazırda daxil olub, buna görə onun faylları silinə bilməz. Bunun "
+"əvəzinə yalnız hesab silinsin?<nl/><nl/>Belə olduqda %1 daxil ola bilməyəcək "
+"və o, sistemdən çıxana qədər qəribə davranışlarla qarşılaşa bilər."
 
 #: src/ui/UserDetailsPage.qml:118
 #, kde-format
@@ -573,13 +575,15 @@ msgid ""
 "%1 is currently logged in. Deleting the account will make them unable to log "
 "in again, and they may experience strange behaviors until they log out."
 msgstr ""
+"%1 hal-hazırda daxil olub. Hesabın silinməsi onun yenidən daxil olmasını "
+"qeyri-mümkün edəəcək və sistemdən çıxana qədər qəribə davranışlarla "
+"qarşılaşa bilər."
 
 #: src/ui/UserDetailsPage.qml:125
-#, fuzzy, kde-format
-#| msgid "Delete files"
+#, kde-format
 msgctxt "@action: button"
 msgid "Delete %1"
-msgstr "Faylları Silmək"
+msgstr "%1 silmək"
 
 #: src/ui/UserDetailsPage.qml:144
 #, kde-format

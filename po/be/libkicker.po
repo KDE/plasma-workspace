@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-19 00:43+0000\n"
+"POT-Creation-Date: 2025-04-25 00:43+0000\n"
 "PO-Revision-Date: 2024-11-04 22:07\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -22,81 +22,81 @@ msgstr ""
 "libkicker.po\n"
 "X-Crowdin-File-ID: 10796\n"
 
-#: actionlist.cpp:85
+#: actionlist.cpp:91
 #, kde-format
 msgid "Open with:"
 msgstr "Адкрыць у:"
 
-#: actionlist.cpp:98
+#: actionlist.cpp:104
 #, kde-format
 msgid "Properties"
 msgstr "Уласцівасці"
 
-#: actionlist.cpp:145
+#: actionlist.cpp:151
 #, kde-format
 msgid "Add to Desktop"
 msgstr "Дадаць на працоўны стол"
 
-#: actionlist.cpp:152
+#: actionlist.cpp:158
 #, kde-format
 msgid "Pin to Task Manager"
 msgstr "Замацаваць у кіраўніку задач"
 
-#: actionlist.cpp:156
+#: actionlist.cpp:162
 #, kde-format
 msgid "Add to Panel (Widget)"
 msgstr "Дадаць на панэль (віджэт)"
 
-#: actionlist.cpp:307 rootmodel.cpp:399
+#: actionlist.cpp:313 rootmodel.cpp:526
 #, kde-format
 msgid "Recent Files"
 msgstr "Нядаўнія файлы"
 
-#: actionlist.cpp:317
+#: actionlist.cpp:323
 #, kde-format
 msgid "Forget Recent Files"
 msgstr "Забыць нядаўнія файлы"
 
-#: actionlist.cpp:382
+#: actionlist.cpp:388
 #, kde-format
 msgid "Edit Application…"
 msgstr "Рэдагаваць праграму…"
 
-#: actionlist.cpp:414
+#: actionlist.cpp:420
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
 msgstr "Выдаленне або кіраванне дапаўненнямі…"
 
-#: appentry.cpp:328
+#: appentry.cpp:345
 #, kde-format
 msgid "Hide Application"
 msgstr "Схаваць праграму"
 
-#: appentry.cpp:390
+#: appentry.cpp:407
 #, kde-format
 msgctxt "App name (Comment or Generic name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: appentry.cpp:392
+#: appentry.cpp:409
 #, kde-format
 msgctxt "Generic name (App name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: appsmodel.cpp:36 appsmodel.cpp:72 computermodel.cpp:97 computermodel.cpp:225
+#: appsmodel.cpp:38 appsmodel.cpp:74 computermodel.cpp:97 computermodel.cpp:225
 #: recentusagemodel.cpp:165 recentusagemodel.cpp:228
 #, kde-format
 msgid "Applications"
 msgstr "Праграмы"
 
-#: appsmodel.cpp:167
+#: appsmodel.cpp:169
 #, kde-format
 msgid "Unhide Applications in this Submenu"
 msgstr "Паказваць праграмы ў гэтым падменю"
 
-#: appsmodel.cpp:176
+#: appsmodel.cpp:178
 #, kde-format
 msgid "Unhide Applications in '%1'"
 msgstr "Паказваць праграмы ў \"%1\""
@@ -117,7 +117,7 @@ msgid "Computer"
 msgstr "Камп'ютар"
 
 #. i18n.
-#: kastatsfavoritesmodel.cpp:554 rootmodel.cpp:392 simplefavoritesmodel.cpp:33
+#: kastatsfavoritesmodel.cpp:554 rootmodel.cpp:519 simplefavoritesmodel.cpp:33
 #, kde-format
 msgid "Favorites"
 msgstr "Улюбёнае"
@@ -167,37 +167,37 @@ msgstr "Забыцца на ўсе праграмы"
 msgid "Forget All Files"
 msgstr "Забыцца на ўсе файлы"
 
-#: rootmodel.cpp:92
-#, kde-format
-msgid "Hide %1"
-msgstr "Схаваць %1"
-
-#: rootmodel.cpp:374
+#: rootmodel.cpp:74
 #, kde-format
 msgid "All Applications"
 msgstr "Усе праграмы"
 
-#: rootmodel.cpp:386
+#: rootmodel.cpp:127
+#, kde-format
+msgid "Hide %1"
+msgstr "Схаваць %1"
+
+#: rootmodel.cpp:513
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "Гэта мусіць быць бачна! Выкарыстоўвайце KICKER_FAVORITES_MODEL"
 
-#: rootmodel.cpp:399
+#: rootmodel.cpp:526
 #, kde-format
 msgid "Often Used Files"
 msgstr "Файлы, якія часта выкарыстоўваюцца"
 
-#: rootmodel.cpp:408
+#: rootmodel.cpp:535
 #, kde-format
 msgid "Recent Applications"
 msgstr "Нядаўнія праграмы"
 
-#: rootmodel.cpp:408
+#: rootmodel.cpp:535
 #, kde-format
 msgid "Often Used Applications"
 msgstr "Праграмы, якія часта выкарыстоўваюцца"
 
-#: rootmodel.cpp:423
+#: rootmodel.cpp:550
 #, kde-format
 msgid "Power / Session"
 msgstr "Сілкаванне / сеанс"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-24 00:43+0000\n"
+"POT-Creation-Date: 2025-04-25 00:43+0000\n"
 "PO-Revision-Date: 2025-03-11 21:25+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -320,27 +320,17 @@ msgstr "Atsisakyti"
 msgid "Add Selected Time Zone"
 msgstr "Pridėti pasirinktą laiko juostą"
 
-#: package/contents/ui/configTimeZones.qml:99
-#, kde-format
-msgid ""
-"Tip: if you travel frequently, add your home time zone to this list. It will "
-"only appear when you change the systemwide time zone to something else."
-msgstr ""
-"Patarimas: Jei dažnai keliaujate, pridėkite į šį sąrašą jūsų namų laiko "
-"juosta. Ji bus rodoma tik tuomet, kai pakeisite sistemos masto laiko juostą "
-"į kažkurią kitą."
-
-#: package/contents/ui/configTimeZones.qml:116
+#: package/contents/ui/configTimeZones.qml:84
 #, kde-format
 msgid "Add Time Zone…"
 msgstr "Pridėti laiko juostą…"
 
-#: package/contents/ui/configTimeZones.qml:157
+#: package/contents/ui/configTimeZones.qml:143
 #, kde-format
 msgid "Clock is currently using this time zone"
 msgstr "Šiuo metu laikrodis naudoja šią laiko juostą"
 
-#: package/contents/ui/configTimeZones.qml:159
+#: package/contents/ui/configTimeZones.qml:145
 #, kde-format
 msgctxt ""
 "@label This list item shows a time zone city name that is identical to the "
@@ -349,27 +339,27 @@ msgctxt ""
 msgid "Hidden while this is the local time zone's city"
 msgstr "Paslėpta tol, kol tai yra vietinės laiko juostos miestas"
 
-#: package/contents/ui/configTimeZones.qml:189
+#: package/contents/ui/configTimeZones.qml:175
 #, kde-format
 msgid "Switch Systemwide Time Zone…"
 msgstr "Perjungti sistemos masto laiko juostą…"
 
-#: package/contents/ui/configTimeZones.qml:201
+#: package/contents/ui/configTimeZones.qml:187
 #, kde-format
 msgid "Remove this time zone"
 msgstr "Šalinti šią laiko juostą"
 
-#: package/contents/ui/configTimeZones.qml:213
+#: package/contents/ui/configTimeZones.qml:199
 #, kde-format
 msgid "Systemwide Time Zone"
 msgstr "Sistemos masto laiko juosta"
 
-#: package/contents/ui/configTimeZones.qml:213
+#: package/contents/ui/configTimeZones.qml:199
 #, kde-format
 msgid "Additional Time Zones"
 msgstr "Papildomos laiko juostos"
 
-#: package/contents/ui/configTimeZones.qml:226
+#: package/contents/ui/configTimeZones.qml:212
 #, kde-format
 msgid ""
 "Add more time zones to display all of them in the applet's pop-up, or use "
@@ -378,12 +368,20 @@ msgstr ""
 "Pridėkite daugiau laiko juostų, norėdami rodyti jas visas programėlės "
 "iškylančiajame lange ar norėdami naudoti vieną iš jų laikrodžiui"
 
-#: package/contents/ui/configTimeZones.qml:240
+#: package/contents/ui/configTimeZones.qml:225
+#, kde-format
+msgctxt "@info:usagetip shown below listview"
+msgid ""
+"Tip: Add your home time zone to this list to see the time there even when "
+"you're traveling. It will not be shown twice while at home."
+msgstr ""
+
+#: package/contents/ui/configTimeZones.qml:235
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr "Perjungti rodomas laiko juostas slenkant virš laikrodžio programėlės"
 
-#: package/contents/ui/configTimeZones.qml:247
+#: package/contents/ui/configTimeZones.qml:246
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
@@ -392,7 +390,7 @@ msgstr ""
 "Šios ypatybės naudojimas nekeičia sistemos masto laiko juostos. Keliaudami, "
 "vietoje to, perjunkite sistemos masto laiko juostą."
 
-#: package/contents/ui/configTimeZones.qml:257
+#: package/contents/ui/configTimeZones.qml:256
 #, kde-format
 msgid "Choose Time Zone"
 msgstr "Pasirinkti laiko juostą"
@@ -466,6 +464,15 @@ msgstr "Vietinė"
 #, kde-format
 msgid "System's local time zone"
 msgstr "Sistemos vietinė laiko juosta"
+
+#~ msgid ""
+#~ "Tip: if you travel frequently, add your home time zone to this list. It "
+#~ "will only appear when you change the systemwide time zone to something "
+#~ "else."
+#~ msgstr ""
+#~ "Patarimas: Jei dažnai keliaujate, pridėkite į šį sąrašą jūsų namų laiko "
+#~ "juosta. Ji bus rodoma tik tuomet, kai pakeisite sistemos masto laiko "
+#~ "juostą į kažkurią kitą."
 
 #~ msgid "Adjust Date and Time…"
 #~ msgstr "Reguliuoti datą ir laiką…"

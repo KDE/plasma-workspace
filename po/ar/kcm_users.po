@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-23 00:44+0000\n"
-"PO-Revision-Date: 2025-01-09 09:38+0400\n"
+"PO-Revision-Date: 2025-04-24 11:08+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -532,14 +532,13 @@ msgstr "صورة تعبيرية للمستخدم"
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User Without Deleting Files?"
-msgstr ""
+msgstr "هل أحذف مستخدم والج في النظام دون حذف الملفات؟"
 
 #: src/ui/UserDetailsPage.qml:115
-#, fuzzy, kde-format
-#| msgid "Delete User…"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User?"
-msgstr "احذف المستخدم..."
+msgstr "هل أحذف مستخدم والج في النظام؟"
 
 #: src/ui/UserDetailsPage.qml:117
 #, kde-kuit-format
@@ -549,6 +548,9 @@ msgid ""
 "account instead?<nl/><nl/>This will make %1 unable to log in again, and they "
 "may experience strange behaviors until they log out."
 msgstr ""
+"%1 والج في النظام حاليًا، لذا لا يُمكن حذف ملفاته. هل تريد حذف الحساب فقط؟<nl/"
+"><nl/>سيؤدي هذا إلى عدم قدرة %1 على الولوج مرة أخرى، وقد يواجه سلوكيات غريبة "
+"حتى يخرج."
 
 #: src/ui/UserDetailsPage.qml:118
 #, kde-format
@@ -557,13 +559,14 @@ msgid ""
 "%1 is currently logged in. Deleting the account will make them unable to log "
 "in again, and they may experience strange behaviors until they log out."
 msgstr ""
+"%1 والج في النظام حاليًا. سيؤدي حذف الحساب إلى عدم تمكنه من الولوج مرة أخرى، "
+"وقد يواجه سلوكيات غريبة حتى يخرج."
 
 #: src/ui/UserDetailsPage.qml:125
-#, fuzzy, kde-format
-#| msgid "Delete files"
+#, kde-format
 msgctxt "@action: button"
 msgid "Delete %1"
-msgstr "احذف الملفات"
+msgstr "احذف %1"
 
 #: src/ui/UserDetailsPage.qml:144
 #, kde-format

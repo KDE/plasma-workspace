@@ -1,15 +1,15 @@
 # Spanish translations for kcm_notifications.po package.
 # Copyright (C) 2019-2025 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-#
 # Automatically generated, 2019.
+#
 # SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-24 00:43+0000\n"
-"PO-Revision-Date: 2025-04-13 19:18+0100\n"
+"PO-Revision-Date: 2025-04-24 16:23+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: kcm.cpp:70
 #, kde-format
@@ -157,7 +157,7 @@ msgctxt ""
 "Automatically enable Do Not Disturb mode while a fullscreen application is "
 "focused"
 msgid "While a fullscreen application is focused"
-msgstr ""
+msgstr "Mientras una aplicación a pantalla completa tiene el foco"
 
 #: ui/main.qml:149
 #, kde-format
@@ -294,9 +294,3 @@ msgid ""
 msgstr ""
 "Seleccione una aplicación en la lista para configurar las preferencias y el "
 "comportamiento de sus notificaciones"
-
-#~ msgid "Normal notifications:"
-#~ msgstr "Notificaciones normales:"
-
-#~ msgid "Show over full screen windows"
-#~ msgstr "Mostrar sobre las ventanas a pantalla completa"

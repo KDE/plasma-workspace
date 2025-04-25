@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-19 00:43+0000\n"
+"POT-Creation-Date: 2025-04-25 00:43+0000\n"
 "PO-Revision-Date: 2021-08-12 11:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -19,58 +19,58 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Weblate 4.7.2\n"
 
-#: actionlist.cpp:85
+#: actionlist.cpp:91
 #, kde-format
 msgid "Open with:"
 msgstr "ഇതിലൂടെ തുറക്കു:"
 
-#: actionlist.cpp:98
+#: actionlist.cpp:104
 #, kde-format
 msgid "Properties"
 msgstr "ഗുണഗണങ്ങള്‍"
 
-#: actionlist.cpp:145
+#: actionlist.cpp:151
 #, kde-format
 msgid "Add to Desktop"
 msgstr "പണിയിടത്തിലേക്ക് ചേര്‍ക്കുക"
 
-#: actionlist.cpp:152
+#: actionlist.cpp:158
 #, kde-format
 msgid "Pin to Task Manager"
 msgstr "ടാസ്ക് മാനേജറിലേക്ക് പിൻ ചെയ്യുക"
 
-#: actionlist.cpp:156
+#: actionlist.cpp:162
 #, kde-format
 msgid "Add to Panel (Widget)"
 msgstr "പാളിയിലേക്ക് ചേര്‍ക്കുക (വിഡ്ജറ്റ്)"
 
-#: actionlist.cpp:307 rootmodel.cpp:399
+#: actionlist.cpp:313 rootmodel.cpp:526
 #, kde-format
 msgid "Recent Files"
 msgstr "സമീപകാല ഫയലുകൾ"
 
-#: actionlist.cpp:317
+#: actionlist.cpp:323
 #, kde-format
 msgid "Forget Recent Files"
 msgstr "സമീപകാല ഫയലുകൾ മറക്കുക"
 
-#: actionlist.cpp:382
+#: actionlist.cpp:388
 #, kde-format
 msgid "Edit Application…"
 msgstr "പ്രയോഗം തിരുത്തുക…"
 
-#: actionlist.cpp:414
+#: actionlist.cpp:420
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
 msgstr "ആഡ്-ഓണുകൾ അൺഇൻസ്റ്റാൾ ചെയ്യുക അല്ലെങ്കിൽ കൈകാര്യം ചെയ്യുക…"
 
-#: appentry.cpp:328
+#: appentry.cpp:345
 #, kde-format
 msgid "Hide Application"
 msgstr "പ്രയോഗം മറയ്ക്കുക"
 
-#: appentry.cpp:390
+#: appentry.cpp:407
 #, fuzzy, kde-format
 #| msgctxt "App name (Generic name)"
 #| msgid "%1 (%2)"
@@ -78,24 +78,24 @@ msgctxt "App name (Comment or Generic name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: appentry.cpp:392
+#: appentry.cpp:409
 #, kde-format
 msgctxt "Generic name (App name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: appsmodel.cpp:36 appsmodel.cpp:72 computermodel.cpp:97 computermodel.cpp:225
+#: appsmodel.cpp:38 appsmodel.cpp:74 computermodel.cpp:97 computermodel.cpp:225
 #: recentusagemodel.cpp:165 recentusagemodel.cpp:228
 #, kde-format
 msgid "Applications"
 msgstr "പ്രയോഗങ്ങള്‍"
 
-#: appsmodel.cpp:167
+#: appsmodel.cpp:169
 #, kde-format
 msgid "Unhide Applications in this Submenu"
 msgstr "ഈ ഉപമെനുവിലെ അപ്ലിക്കേഷനുകൾ മറയ്ക്കാതിരിക്കുക"
 
-#: appsmodel.cpp:176
+#: appsmodel.cpp:178
 #, kde-format
 msgid "Unhide Applications in '%1'"
 msgstr "'%1' ലെ അപ്ലിക്കേഷനുകൾ മറയ്ക്കാതിരിക്കുക"
@@ -116,7 +116,7 @@ msgid "Computer"
 msgstr "കമ്പ്യൂട്ടര്‍"
 
 #. i18n.
-#: kastatsfavoritesmodel.cpp:554 rootmodel.cpp:392 simplefavoritesmodel.cpp:33
+#: kastatsfavoritesmodel.cpp:554 rootmodel.cpp:519 simplefavoritesmodel.cpp:33
 #, kde-format
 msgid "Favorites"
 msgstr "പ്രിയപ്പെട്ടവ"
@@ -166,37 +166,37 @@ msgstr "എല്ലാ പ്രയോഗങ്ങളും മറക്കു�
 msgid "Forget All Files"
 msgstr "എല്ലാ ഫയലുകളും മറക്കുക"
 
-#: rootmodel.cpp:92
-#, kde-format
-msgid "Hide %1"
-msgstr "%1 മറയ്ക്കുക"
-
-#: rootmodel.cpp:374
+#: rootmodel.cpp:74
 #, kde-format
 msgid "All Applications"
 msgstr "എല്ലാ പ്രയോഗങ്ങളും"
 
-#: rootmodel.cpp:386
+#: rootmodel.cpp:127
+#, kde-format
+msgid "Hide %1"
+msgstr "%1 മറയ്ക്കുക"
+
+#: rootmodel.cpp:513
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "ഇത് ദൃശ്യമാകില്ല! KICKER_FAVORITES_MODEL ഉപയോഗിക്കുക"
 
-#: rootmodel.cpp:399
+#: rootmodel.cpp:526
 #, kde-format
 msgid "Often Used Files"
 msgstr "കൂടെക്കൂടെ ഉപയോഗിച്ച ഫയലുകൾ"
 
-#: rootmodel.cpp:408
+#: rootmodel.cpp:535
 #, kde-format
 msgid "Recent Applications"
 msgstr "അടുത്തിടേയുള്ള പ്രയോഗങ്ങള്‍"
 
-#: rootmodel.cpp:408
+#: rootmodel.cpp:535
 #, kde-format
 msgid "Often Used Applications"
 msgstr "കൂടെക്കൂടെ ഉപയോഗിച്ച പ്രയോഗങ്ങള്‍"
 
-#: rootmodel.cpp:423
+#: rootmodel.cpp:550
 #, kde-format
 msgid "Power / Session"
 msgstr "ഊർജ്ജം / സെഷൻ"

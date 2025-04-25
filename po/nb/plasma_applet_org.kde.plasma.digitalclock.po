@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-24 00:43+0000\n"
+"POT-Creation-Date: 2025-04-25 00:43+0000\n"
 "PO-Revision-Date: 2025-03-02 12:53+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -316,27 +316,17 @@ msgstr "Avbryt"
 msgid "Add Selected Time Zone"
 msgstr "Legg til valgte tidssoner"
 
-#: package/contents/ui/configTimeZones.qml:99
-#, kde-format
-msgid ""
-"Tip: if you travel frequently, add your home time zone to this list. It will "
-"only appear when you change the systemwide time zone to something else."
-msgstr ""
-"Tips: Hvis du ofte er på reisefot, legg til en oppføring for tidssona hjemme "
-"i denne lista. Denne vises bare når du bytter tidssona for hele systemet til "
-"en annen tidssone."
-
-#: package/contents/ui/configTimeZones.qml:116
+#: package/contents/ui/configTimeZones.qml:84
 #, kde-format
 msgid "Add Time Zone…"
 msgstr "Legg til tidssone …"
 
-#: package/contents/ui/configTimeZones.qml:157
+#: package/contents/ui/configTimeZones.qml:143
 #, kde-format
 msgid "Clock is currently using this time zone"
 msgstr "Klokka bruker denne tidssona"
 
-#: package/contents/ui/configTimeZones.qml:159
+#: package/contents/ui/configTimeZones.qml:145
 #, kde-format
 msgctxt ""
 "@label This list item shows a time zone city name that is identical to the "
@@ -345,27 +335,27 @@ msgctxt ""
 msgid "Hidden while this is the local time zone's city"
 msgstr "Skult hvis dette er byen til den lokale tidssona"
 
-#: package/contents/ui/configTimeZones.qml:189
+#: package/contents/ui/configTimeZones.qml:175
 #, kde-format
 msgid "Switch Systemwide Time Zone…"
 msgstr "Bytt tidssone for hele systemet …"
 
-#: package/contents/ui/configTimeZones.qml:201
+#: package/contents/ui/configTimeZones.qml:187
 #, kde-format
 msgid "Remove this time zone"
 msgstr "Fjern denne tidssona"
 
-#: package/contents/ui/configTimeZones.qml:213
+#: package/contents/ui/configTimeZones.qml:199
 #, kde-format
 msgid "Systemwide Time Zone"
 msgstr "Tidssone for hele systemet"
 
-#: package/contents/ui/configTimeZones.qml:213
+#: package/contents/ui/configTimeZones.qml:199
 #, kde-format
 msgid "Additional Time Zones"
 msgstr "Flere tidssoner"
 
-#: package/contents/ui/configTimeZones.qml:226
+#: package/contents/ui/configTimeZones.qml:212
 #, kde-format
 msgid ""
 "Add more time zones to display all of them in the applet's pop-up, or use "
@@ -374,12 +364,20 @@ msgstr ""
 "Legg til flere tidssoner for å vise dem alle i sprettoppvinduet til "
 "skjermelementet, eller bruk en av de for klokka."
 
-#: package/contents/ui/configTimeZones.qml:240
+#: package/contents/ui/configTimeZones.qml:225
+#, kde-format
+msgctxt "@info:usagetip shown below listview"
+msgid ""
+"Tip: Add your home time zone to this list to see the time there even when "
+"you're traveling. It will not be shown twice while at home."
+msgstr ""
+
+#: package/contents/ui/configTimeZones.qml:235
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr "Bytt vist tidssone ved bruk av musehjulet på klokka"
 
-#: package/contents/ui/configTimeZones.qml:247
+#: package/contents/ui/configTimeZones.qml:246
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
@@ -388,7 +386,7 @@ msgstr ""
 "Denne funksjonen endrer ikke tidssona for hele systemet. Når du reiser, bytt "
 "i stedet den tidssona."
 
-#: package/contents/ui/configTimeZones.qml:257
+#: package/contents/ui/configTimeZones.qml:256
 #, kde-format
 msgid "Choose Time Zone"
 msgstr "Velg tidssone"
@@ -462,3 +460,12 @@ msgstr "Lokal"
 #, kde-format
 msgid "System's local time zone"
 msgstr "Systemets lokale tidssone"
+
+#~ msgid ""
+#~ "Tip: if you travel frequently, add your home time zone to this list. It "
+#~ "will only appear when you change the systemwide time zone to something "
+#~ "else."
+#~ msgstr ""
+#~ "Tips: Hvis du ofte er på reisefot, legg til en oppføring for tidssona "
+#~ "hjemme i denne lista. Denne vises bare når du bytter tidssona for hele "
+#~ "systemet til en annen tidssone."

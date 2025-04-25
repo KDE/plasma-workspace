@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-24 00:43+0000\n"
+"POT-Creation-Date: 2025-04-25 00:43+0000\n"
 "PO-Revision-Date: 2025-03-03 17:02+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -315,27 +315,17 @@ msgstr "Atcelt"
 msgid "Add Selected Time Zone"
 msgstr "Pievienot atlasīto laika joslu"
 
-#: package/contents/ui/configTimeZones.qml:99
-#, kde-format
-msgid ""
-"Tip: if you travel frequently, add your home time zone to this list. It will "
-"only appear when you change the systemwide time zone to something else."
-msgstr ""
-"Padoms: ja bieži ceļojat, šim sarakstam pievienojiet savu mājas laika joslu. "
-"Tā parādīsies tikai tad, ja mainīsies visas sistēmas laika josla uz kādu "
-"citu."
-
-#: package/contents/ui/configTimeZones.qml:116
+#: package/contents/ui/configTimeZones.qml:84
 #, kde-format
 msgid "Add Time Zone…"
 msgstr "Pievienot laika joslu…"
 
-#: package/contents/ui/configTimeZones.qml:157
+#: package/contents/ui/configTimeZones.qml:143
 #, kde-format
 msgid "Clock is currently using this time zone"
 msgstr "Šobrīd pulkstenis izmanto šo laika joslu"
 
-#: package/contents/ui/configTimeZones.qml:159
+#: package/contents/ui/configTimeZones.qml:145
 #, kde-format
 msgctxt ""
 "@label This list item shows a time zone city name that is identical to the "
@@ -344,27 +334,27 @@ msgctxt ""
 msgid "Hidden while this is the local time zone's city"
 msgstr "Paslēpta, kamēr šī pilsēta atrodas vietējā laika joslā"
 
-#: package/contents/ui/configTimeZones.qml:189
+#: package/contents/ui/configTimeZones.qml:175
 #, kde-format
 msgid "Switch Systemwide Time Zone…"
 msgstr "Mainīt sistēmas laika joslu…"
 
-#: package/contents/ui/configTimeZones.qml:201
+#: package/contents/ui/configTimeZones.qml:187
 #, kde-format
 msgid "Remove this time zone"
 msgstr "Noņemt šo laika joslu"
 
-#: package/contents/ui/configTimeZones.qml:213
+#: package/contents/ui/configTimeZones.qml:199
 #, kde-format
 msgid "Systemwide Time Zone"
 msgstr "Sistēmas laika josla"
 
-#: package/contents/ui/configTimeZones.qml:213
+#: package/contents/ui/configTimeZones.qml:199
 #, kde-format
 msgid "Additional Time Zones"
 msgstr "Papildu laika joslas"
 
-#: package/contents/ui/configTimeZones.qml:226
+#: package/contents/ui/configTimeZones.qml:212
 #, kde-format
 msgid ""
 "Add more time zones to display all of them in the applet's pop-up, or use "
@@ -373,12 +363,20 @@ msgstr ""
 "Pievienojiet papildu laika joslas, ko rādīt pulksteņa paskaidrē un uz kurām "
 "ātri pārslēgt pulksteni, kad vajadzīgs"
 
-#: package/contents/ui/configTimeZones.qml:240
+#: package/contents/ui/configTimeZones.qml:225
+#, kde-format
+msgctxt "@info:usagetip shown below listview"
+msgid ""
+"Tip: Add your home time zone to this list to see the time there even when "
+"you're traveling. It will not be shown twice while at home."
+msgstr ""
+
+#: package/contents/ui/configTimeZones.qml:235
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr "Pārslēgt laika joslas ritinot peles ritenīti virs pulksteņa"
 
-#: package/contents/ui/configTimeZones.qml:247
+#: package/contents/ui/configTimeZones.qml:246
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
@@ -387,7 +385,7 @@ msgstr ""
 "Šīs iespējas izmantošana nemainīs sistēmas laika joslu. Ja ceļojat, tad tā "
 "vietā mainiet sistēmas laika joslu."
 
-#: package/contents/ui/configTimeZones.qml:257
+#: package/contents/ui/configTimeZones.qml:256
 #, kde-format
 msgid "Choose Time Zone"
 msgstr "Izvēlieties laika joslu"
@@ -461,6 +459,15 @@ msgstr "Vietējā"
 #, kde-format
 msgid "System's local time zone"
 msgstr "Sistēmas vietējā laika josla"
+
+#~ msgid ""
+#~ "Tip: if you travel frequently, add your home time zone to this list. It "
+#~ "will only appear when you change the systemwide time zone to something "
+#~ "else."
+#~ msgstr ""
+#~ "Padoms: ja bieži ceļojat, šim sarakstam pievienojiet savu mājas laika "
+#~ "joslu. Tā parādīsies tikai tad, ja mainīsies visas sistēmas laika josla "
+#~ "uz kādu citu."
 
 #~ msgid "Adjust Date and Time…"
 #~ msgstr "Mainīt datumu un laiku…"

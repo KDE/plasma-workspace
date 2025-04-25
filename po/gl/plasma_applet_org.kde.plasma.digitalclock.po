@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-24 00:43+0000\n"
+"POT-Creation-Date: 2025-04-25 00:43+0000\n"
 "PO-Revision-Date: 2025-02-24 07:19+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -315,26 +315,17 @@ msgstr "Cancelar"
 msgid "Add Selected Time Zone"
 msgstr "Engadir o fuso horario seleccionado"
 
-#: package/contents/ui/configTimeZones.qml:99
-#, kde-format
-msgid ""
-"Tip: if you travel frequently, add your home time zone to this list. It will "
-"only appear when you change the systemwide time zone to something else."
-msgstr ""
-"Consello: Se viaxa con frecuencia, engada á lista o fuso horario de onde "
-"vive. Só aparecerá cando cambie o fuso horario do sistema por outro."
-
-#: package/contents/ui/configTimeZones.qml:116
+#: package/contents/ui/configTimeZones.qml:84
 #, kde-format
 msgid "Add Time Zone…"
 msgstr "Engadir un fuso horario…"
 
-#: package/contents/ui/configTimeZones.qml:157
+#: package/contents/ui/configTimeZones.qml:143
 #, kde-format
 msgid "Clock is currently using this time zone"
 msgstr "O reloxo está usando este fuso horario."
 
-#: package/contents/ui/configTimeZones.qml:159
+#: package/contents/ui/configTimeZones.qml:145
 #, kde-format
 msgctxt ""
 "@label This list item shows a time zone city name that is identical to the "
@@ -343,27 +334,27 @@ msgctxt ""
 msgid "Hidden while this is the local time zone's city"
 msgstr "Agóchase cando a cidade coincida co fuso horario local."
 
-#: package/contents/ui/configTimeZones.qml:189
+#: package/contents/ui/configTimeZones.qml:175
 #, kde-format
 msgid "Switch Systemwide Time Zone…"
 msgstr "Cambiar o fuso horario do sistema…"
 
-#: package/contents/ui/configTimeZones.qml:201
+#: package/contents/ui/configTimeZones.qml:187
 #, kde-format
 msgid "Remove this time zone"
 msgstr "Retirar este fuso horario"
 
-#: package/contents/ui/configTimeZones.qml:213
+#: package/contents/ui/configTimeZones.qml:199
 #, kde-format
 msgid "Systemwide Time Zone"
 msgstr "Fuso horario do sistema"
 
-#: package/contents/ui/configTimeZones.qml:213
+#: package/contents/ui/configTimeZones.qml:199
 #, kde-format
 msgid "Additional Time Zones"
 msgstr "Fusos horarios adicionais"
 
-#: package/contents/ui/configTimeZones.qml:226
+#: package/contents/ui/configTimeZones.qml:212
 #, kde-format
 msgid ""
 "Add more time zones to display all of them in the applet's pop-up, or use "
@@ -372,14 +363,22 @@ msgstr ""
 "Engada máis fusos horarios para amosalos na indicación emerxente da "
 "miniaplicación, ou use unha delas para o reloxo en si."
 
-#: package/contents/ui/configTimeZones.qml:240
+#: package/contents/ui/configTimeZones.qml:225
+#, kde-format
+msgctxt "@info:usagetip shown below listview"
+msgid ""
+"Tip: Add your home time zone to this list to see the time there even when "
+"you're traveling. It will not be shown twice while at home."
+msgstr ""
+
+#: package/contents/ui/configTimeZones.qml:235
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr ""
 "Cambiar o fuso horario que se amosa desprazando sobre a miniaplicación do "
 "reloxo."
 
-#: package/contents/ui/configTimeZones.qml:247
+#: package/contents/ui/configTimeZones.qml:246
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
@@ -388,7 +387,7 @@ msgstr ""
 "Usar esta funcionalidade non cambia o fuso horario do sistema. Cando viaxe, "
 "cambie mellor o fuso horario do sistema."
 
-#: package/contents/ui/configTimeZones.qml:257
+#: package/contents/ui/configTimeZones.qml:256
 #, kde-format
 msgid "Choose Time Zone"
 msgstr "Escoller o fuso horario"
@@ -462,6 +461,14 @@ msgstr "Local"
 #, kde-format
 msgid "System's local time zone"
 msgstr "Fuso horario local do sistema"
+
+#~ msgid ""
+#~ "Tip: if you travel frequently, add your home time zone to this list. It "
+#~ "will only appear when you change the systemwide time zone to something "
+#~ "else."
+#~ msgstr ""
+#~ "Consello: Se viaxa con frecuencia, engada á lista o fuso horario de onde "
+#~ "vive. Só aparecerá cando cambie o fuso horario do sistema por outro."
 
 #~ msgid "Adjust Date and Time…"
 #~ msgstr "Axustar a data e hora…"

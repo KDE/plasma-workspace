@@ -92,6 +92,17 @@
     <varlistentry>
     <term
 ><guiicon
+>Activa mentre una aplicació a pantalla completa té el focus</guiicon
+></term>
+    <listitem
+><para
+>Habilita de manera automàtica el mode no destorbar mentre esteu fent servir una aplicació a pantalla completa, per exemple, mirant un vídeo.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
 >Mostra les notificacions crítiques</guiicon
 ></term>
     <listitem
