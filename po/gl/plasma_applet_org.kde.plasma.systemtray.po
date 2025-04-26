@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-19 00:43+0000\n"
+"POT-Creation-Date: 2025-04-26 00:44+0000\n"
 "PO-Revision-Date: 2025-03-20 08:16+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -97,23 +97,33 @@ msgctxt "@action:button"
 msgid "I understand the risks"
 msgstr "Comprendo os riscos"
 
-#: package/contents/ui/ConfigEntries.qml:113
+#: package/contents/ui/ConfigEntries.qml:93
+#, kde-kuit-format
+msgctxt "@info:usagetip"
+msgid ""
+"Disabling the clipboard is not recommended, as it will cause copied data to "
+"be lost when the application it was copied from is closed.<nl/><nl/>Instead "
+"consider configuring the clipboard to disable its history, or only remember "
+"one item at a time."
+msgstr ""
+
+#: package/contents/ui/ConfigEntries.qml:121
 #, kde-format
 msgctxt "Name of the system tray entry"
 msgid "Entry"
 msgstr "Entrada"
 
-#: package/contents/ui/ConfigEntries.qml:120
+#: package/contents/ui/ConfigEntries.qml:128
 #, kde-format
 msgid "Visibility"
 msgstr "Visibilidade"
 
-#: package/contents/ui/ConfigEntries.qml:127
+#: package/contents/ui/ConfigEntries.qml:135
 #, kde-format
 msgid "Keyboard Shortcut"
 msgstr "Atallo de teclado"
 
-#: package/contents/ui/ConfigEntries.qml:347
+#: package/contents/ui/ConfigEntries.qml:367
 #, kde-format
 msgid "Always show all entries"
 msgstr "Amosar sempre todas as entradas."

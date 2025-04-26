@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-24 00:43+0000\n"
+"POT-Creation-Date: 2025-04-26 00:44+0000\n"
 "PO-Revision-Date: 2024-08-24 18:43+0300\n"
 "Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -181,7 +181,7 @@ msgstr "Νέα συνεδρία"
 msgid "Filters"
 msgstr "Φίλτρα"
 
-#: shellprivate/plasmaappletitemmodel.cpp:197
+#: shellprivate/plasmaappletitemmodel.cpp:199
 #, kde-format
 msgid ""
 "This Widget was written for an unknown older version of Plasma and is not "
@@ -192,7 +192,7 @@ msgstr ""
 "δεν είναι συμβατό με το Plasma %1. Παρακαλούμε επικοινωνήστε με τον "
 "συγγραφέα του συστατικού για μια ενημερωμένη έκδοση."
 
-#: shellprivate/plasmaappletitemmodel.cpp:201
+#: shellprivate/plasmaappletitemmodel.cpp:203
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -202,7 +202,7 @@ msgstr ""
 "Plasma %2. Παρακαλούμε επικοινωνήστε με τον δημιουργό του συστατικού για μια "
 "ενημερωμένη έκδοση."
 
-#: shellprivate/plasmaappletitemmodel.cpp:205
+#: shellprivate/plasmaappletitemmodel.cpp:207
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -212,7 +212,7 @@ msgstr ""
 "Plasma %2. Παρακαλούμε ενημερώστε το Plasma για να χρησιμοποιήσετε το "
 "συστατικό."
 
-#: shellprivate/plasmaappletitemmodel.cpp:210
+#: shellprivate/plasmaappletitemmodel.cpp:212
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "

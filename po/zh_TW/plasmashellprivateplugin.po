@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-24 00:43+0000\n"
+"POT-Creation-Date: 2025-04-26 00:44+0000\n"
 "PO-Revision-Date: 2025-03-26 18:22+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -183,7 +183,7 @@ msgstr "新工作階段"
 msgid "Filters"
 msgstr "過濾器"
 
-#: shellprivate/plasmaappletitemmodel.cpp:197
+#: shellprivate/plasmaappletitemmodel.cpp:199
 #, kde-format
 msgid ""
 "This Widget was written for an unknown older version of Plasma and is not "
@@ -193,7 +193,7 @@ msgstr ""
 "這個元件是供某個未知的舊版 Plasma 用的，與 Plasma %1 不相容。請與元件作者聯"
 "絡，待其發佈更新版本。"
 
-#: shellprivate/plasmaappletitemmodel.cpp:201
+#: shellprivate/plasmaappletitemmodel.cpp:203
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -202,7 +202,7 @@ msgstr ""
 "這個元件是供 Plasma %1 用的，與 Plasma %2 不相容。請與元件作者聯絡，待其發佈"
 "更新版本。"
 
-#: shellprivate/plasmaappletitemmodel.cpp:205
+#: shellprivate/plasmaappletitemmodel.cpp:207
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -210,7 +210,7 @@ msgid ""
 msgstr ""
 "這個元件是供 Plasma %1 用的，與 Plasma %2 不相容。請更新 Plasma 來使用它。"
 
-#: shellprivate/plasmaappletitemmodel.cpp:210
+#: shellprivate/plasmaappletitemmodel.cpp:212
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "

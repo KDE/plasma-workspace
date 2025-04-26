@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-24 00:43+0000\n"
+"POT-Creation-Date: 2025-04-26 00:44+0000\n"
 "PO-Revision-Date: 2025-03-24 12:01+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -184,7 +184,7 @@ msgstr "Sessió nova"
 msgid "Filters"
 msgstr "Filtres"
 
-#: shellprivate/plasmaappletitemmodel.cpp:197
+#: shellprivate/plasmaappletitemmodel.cpp:199
 #, kde-format
 msgid ""
 "This Widget was written for an unknown older version of Plasma and is not "
@@ -195,7 +195,7 @@ msgstr ""
 "és compatible amb el Plasma %1. Poseu-vos en contacte amb l'autor del giny "
 "per a una versió actualitzada."
 
-#: shellprivate/plasmaappletitemmodel.cpp:201
+#: shellprivate/plasmaappletitemmodel.cpp:203
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -204,7 +204,7 @@ msgstr ""
 "Aquest giny s'ha escrit per al Plasma %1 i no és compatible amb el Plasma "
 "%2. Poseu-vos en contacte amb l'autor del giny per a una versió actualitzada."
 
-#: shellprivate/plasmaappletitemmodel.cpp:205
+#: shellprivate/plasmaappletitemmodel.cpp:207
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -213,7 +213,7 @@ msgstr ""
 "Aquest giny s'ha escrit per al Plasma %1 i no és compatible amb el Plasma "
 "%2. Actualitzeu el Plasma per tal de fer servir el giny."
 
-#: shellprivate/plasmaappletitemmodel.cpp:210
+#: shellprivate/plasmaappletitemmodel.cpp:212
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "

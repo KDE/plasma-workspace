@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-24 00:43+0000\n"
+"POT-Creation-Date: 2025-04-26 00:44+0000\n"
 "PO-Revision-Date: 2025-01-25 16:59+0100\n"
 "Last-Translator: Flori G <Renner03@protonmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -182,7 +182,7 @@ msgstr "Neue Sitzung"
 msgid "Filters"
 msgstr "Filter"
 
-#: shellprivate/plasmaappletitemmodel.cpp:197
+#: shellprivate/plasmaappletitemmodel.cpp:199
 #, kde-format
 msgid ""
 "This Widget was written for an unknown older version of Plasma and is not "
@@ -194,7 +194,7 @@ msgstr ""
 "Autor des Miniprogramms Kontakt auf und bitten diesen um eine aktualisierte "
 "Version."
 
-#: shellprivate/plasmaappletitemmodel.cpp:201
+#: shellprivate/plasmaappletitemmodel.cpp:203
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -204,7 +204,7 @@ msgstr ""
 "%2 kompatibel. Bitte nehmen Sie mit dem Autor des Miniprogramms Kontakt auf "
 "und bitten diesen um eine aktualisierte Version."
 
-#: shellprivate/plasmaappletitemmodel.cpp:205
+#: shellprivate/plasmaappletitemmodel.cpp:207
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -214,7 +214,7 @@ msgstr ""
 "%2 kompatibel. Bitte aktualisieren Plasma, damit das Miniprogramm verwendet "
 "werden kann."
 
-#: shellprivate/plasmaappletitemmodel.cpp:210
+#: shellprivate/plasmaappletitemmodel.cpp:212
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "

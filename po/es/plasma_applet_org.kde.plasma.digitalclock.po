@@ -1,15 +1,15 @@
 # Spanish translations for plasma_applet_org.kde.plasma.digitalclock.po package.
 # Copyright (C) 2014-2025 This_file_is_part_of_KDE
 # This file is distributed under the same license as the plasma-workspace package.
-#
 # Automatically generated, 2014.
+#
 # SPDX-FileCopyrightText: 2014, 2015, 2016, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
-"Project-Id-Version: plasma_applet_org\n"
+"Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-25 00:43+0000\n"
-"PO-Revision-Date: 2025-02-23 00:10+0100\n"
+"PO-Revision-Date: 2025-04-25 12:15+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.2\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: package/contents/config/config.qml:20
 #, kde-format
@@ -372,6 +372,8 @@ msgid ""
 "Tip: Add your home time zone to this list to see the time there even when "
 "you're traveling. It will not be shown twice while at home."
 msgstr ""
+"Consejo: Añada su zona horaria local a esta lista para ver su hora incluso "
+"cuando esté de viaje. No se mostrará dos veces cuando esté en ella."
 
 #: package/contents/ui/configTimeZones.qml:235
 #, kde-format
@@ -463,12 +465,3 @@ msgstr "Local"
 #, kde-format
 msgid "System's local time zone"
 msgstr "Zona horaria local del sistema"
-
-#~ msgid ""
-#~ "Tip: if you travel frequently, add your home time zone to this list. It "
-#~ "will only appear when you change the systemwide time zone to something "
-#~ "else."
-#~ msgstr ""
-#~ "Consejo: Si viaja con frecuencia, añada su zona horaria inicial a esta "
-#~ "lista. Solo aparecerá cuando cambie la zona horaria del sistema a otra "
-#~ "distinta."

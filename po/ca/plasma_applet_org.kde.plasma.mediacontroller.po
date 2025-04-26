@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-21 00:43+0000\n"
+"POT-Creation-Date: 2025-04-26 00:44+0000\n"
 "PO-Revision-Date: 2025-03-29 13:58+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -21,98 +21,92 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Generator: Lokalize 22.12.3\n"
 
-#: package/contents/ui/AlbumArtStackView.qml:202
+#: AlbumArtStackView.qml:202
 #, kde-format
 msgid "No title"
 msgstr "Sense títol"
 
-#: package/contents/ui/AlbumArtStackView.qml:202
-#: package/contents/ui/main.qml:57
+#: AlbumArtStackView.qml:202 main.qml:57
 #, kde-format
 msgid "No media playing"
 msgstr "No s'està reproduint cap suport"
 
-#: package/contents/ui/ExpandedRepresentation.qml:402
-#: package/contents/ui/ExpandedRepresentation.qml:558
+#: ExpandedRepresentation.qml:402 ExpandedRepresentation.qml:558
 #, kde-format
 msgctxt "Remaining time for song e.g -5:42"
 msgid "-%1"
 msgstr "-%1"
 
-#: package/contents/ui/ExpandedRepresentation.qml:579
+#: ExpandedRepresentation.qml:579
 #, kde-format
 msgid "Playback rate %1"
 msgstr "Velocitat de reproducció %1"
 
-#: package/contents/ui/ExpandedRepresentation.qml:582
+#: ExpandedRepresentation.qml:582
 #, kde-format
 msgctxt "Playback rate"
 msgid "%1x"
 msgstr "%1x"
 
-#: package/contents/ui/ExpandedRepresentation.qml:586
+#: ExpandedRepresentation.qml:586
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Playback rate"
 msgstr "Velocitat de reproducció"
 
-#: package/contents/ui/ExpandedRepresentation.qml:632
+#: ExpandedRepresentation.qml:632
 #, kde-format
 msgctxt "@action:inmenu Playback speed (Normal)"
 msgid "%1 (Normal)"
 msgstr "%1 (Normal)"
 
-#: package/contents/ui/ExpandedRepresentation.qml:671
+#: ExpandedRepresentation.qml:671
 #, kde-format
 msgctxt "@action:button"
 msgid "Shuffle"
 msgstr "Barreja"
 
-#: package/contents/ui/ExpandedRepresentation.qml:695
-#: package/contents/ui/main.qml:114
+#: ExpandedRepresentation.qml:695 main.qml:114
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
 msgstr "Peça anterior"
 
-#: package/contents/ui/ExpandedRepresentation.qml:717
-#: package/contents/ui/main.qml:122
+#: ExpandedRepresentation.qml:717 main.qml:122
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
 msgstr "Pausa"
 
-#: package/contents/ui/ExpandedRepresentation.qml:717
-#: package/contents/ui/main.qml:130
+#: ExpandedRepresentation.qml:717 main.qml:130
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
 msgstr "Reprodueix"
 
-#: package/contents/ui/ExpandedRepresentation.qml:735
-#: package/contents/ui/main.qml:138
+#: ExpandedRepresentation.qml:735 main.qml:138
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
 msgstr "Peça següent"
 
-#: package/contents/ui/ExpandedRepresentation.qml:758
+#: ExpandedRepresentation.qml:758
 #, kde-format
 msgid "Repeat Track"
 msgstr "Repeteix la peça"
 
-#: package/contents/ui/ExpandedRepresentation.qml:758
+#: ExpandedRepresentation.qml:758
 #, kde-format
 msgid "Repeat"
 msgstr "Repeteix"
 
-#: package/contents/ui/ExpandedRepresentation.qml:828
+#: ExpandedRepresentation.qml:828
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose player automatically"
 msgstr "Tria el reproductor automàticament"
 
-#: package/contents/ui/main.qml:60
+#: main.qml:60
 #, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
@@ -124,7 +118,7 @@ msgstr ""
 "Clic del mig per a fer una pausa\n"
 "Desplaceu per a ajustar el volum"
 
-#: package/contents/ui/main.qml:61
+#: main.qml:61
 #, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
@@ -136,7 +130,7 @@ msgstr ""
 "Clic del mig per a fer una pausa\n"
 "Desplaceu per a ajustar el volum"
 
-#: package/contents/ui/main.qml:63
+#: main.qml:63
 #, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
@@ -148,7 +142,7 @@ msgstr ""
 "Clic del mig per a reproduir\n"
 "Desplaceu per a ajustar el volum"
 
-#: package/contents/ui/main.qml:64
+#: main.qml:64
 #, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
@@ -160,19 +154,19 @@ msgstr ""
 "Clic del mig per a reproduir\n"
 "Desplaceu per a ajustar el volum"
 
-#: package/contents/ui/main.qml:107
+#: main.qml:107
 #, kde-format
 msgctxt "Open player window or bring it to the front if already open"
 msgid "Open"
 msgstr "Obre"
 
-#: package/contents/ui/main.qml:146
+#: main.qml:146
 #, kde-format
 msgctxt "Stop playback"
 msgid "Stop"
 msgstr "Atura"
 
-#: package/contents/ui/main.qml:159
+#: main.qml:159
 #, kde-format
 msgctxt "Quit player"
 msgid "Quit"
