@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-25 00:43+0000\n"
-"PO-Revision-Date: 2025-02-23 12:05+0100\n"
+"PO-Revision-Date: 2025-04-25 12:58+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.2\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: package/contents/config/config.qml:20
 #, kde-format
@@ -369,6 +369,9 @@ msgid ""
 "Tip: Add your home time zone to this list to see the time there even when "
 "you're traveling. It will not be shown twice while at home."
 msgstr ""
+"Tip: voeg uw tijdzone van thuis toe aan deze lijst om de tijd daar te zien "
+"zelfs wanneer u reist. Het zal niet tweemaal getoond  worden wanneer u thuis "
+"bent."
 
 #: package/contents/ui/configTimeZones.qml:235
 #, kde-format

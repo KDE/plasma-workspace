@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-26 00:44+0000\n"
-"PO-Revision-Date: 2025-03-15 13:45+0100\n"
+"PO-Revision-Date: 2025-04-26 16:55+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -104,6 +104,11 @@ msgid ""
 "consider configuring the clipboard to disable its history, or only remember "
 "one item at a time."
 msgstr ""
+"Het klembord uitschakelen wordt niet aanbevolen, omdat het zal veroorzaken "
+"dat gekopieerde gegevens verloren gaan wanneer de toepassing waaruit het "
+"gekopieerd is wordt gesloten.<nl/><nl/>Overweeg, in plaats daarvan, de "
+"geschiedenis van het klembord uit te schakelen of alleen één item tegelijk "
+"te onthouden."
 
 #: package/contents/ui/ConfigEntries.qml:121
 #, kde-format

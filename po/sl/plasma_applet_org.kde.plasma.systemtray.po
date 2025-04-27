@@ -7,16 +7,16 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-26 00:44+0000\n"
-"PO-Revision-Date: 2025-03-25 07:14+0100\n"
+"PO-Revision-Date: 2025-04-26 07:46+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.12.3\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
+"X-Generator: Poedit 3.6\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -104,6 +104,10 @@ msgid ""
 "consider configuring the clipboard to disable its history, or only remember "
 "one item at a time."
 msgstr ""
+"Onemogočanje odložišča ni priporočljivo, saj bo to povzročilo izgubo "
+"kopiranih podatkov, ko se aplikacija, iz katere so bili kopirani, zapre.<nl/"
+"><nl/>Namesto tega razmislite o konfiguriranju odložišča tako, da "
+"onemogočite njegovo zgodovino ali pa si zapomnite le en element naenkrat."
 
 #: package/contents/ui/ConfigEntries.qml:121
 #, kde-format

@@ -1,12 +1,14 @@
-# Spanish translations for plasma_applet_org.kde.plasma.private.systemtray.po package.
+# Spanish translations for plasma_applet_org.kde.plasma.systemtray.po package.
+# Copyright (C) 2013-2025 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
 #
 # SPDX-FileCopyrightText: 2013, 2014, 2015, 2016, 2017, 2018, 2020, 2021, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
-"Project-Id-Version: plasma_applet_org.kde.plasma.private.systemtray\n"
+"Project-Id-Version: plasma_applet_org.kde.plasma.systemtray\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-26 00:44+0000\n"
-"PO-Revision-Date: 2025-03-16 01:28+0100\n"
+"PO-Revision-Date: 2025-04-26 11:33+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -14,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -104,6 +106,10 @@ msgid ""
 "consider configuring the clipboard to disable its history, or only remember "
 "one item at a time."
 msgstr ""
+"No se recomienda desactivar el portapapeles, ya que provocará que los datos "
+"que haya copiado se pierdan cuando se cierre la aplicación desde la que se "
+"copiaron.<nl/><nl/>En su lugar, considere configurar el portapapeles para "
+"desactivar su historial o para que solo recuerde un elemento a la vez."
 
 #: package/contents/ui/ConfigEntries.qml:121
 #, kde-format
