@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-31 02:33+0000\n"
-"PO-Revision-Date: 2024-02-03 01:55+0200\n"
+"PO-Revision-Date: 2025-04-28 00:38+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.5\n"
 
 #: fileinfo.cpp:170
 #, kde-format
@@ -450,7 +450,7 @@ msgstr[3] "%1 neskaitytas pranešimas"
 msgid "Do not disturb until %1; middle-click to exit now"
 msgstr ""
 "Netrukdyti iki %1; spustelėkite viduriniuoju pelės mygtuku norėdami dabar "
-"išeiti"
+"išjungti"
 
 #: package/contents/ui/main.qml:101
 #, kde-format
