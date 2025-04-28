@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-23 00:44+0000\n"
-"PO-Revision-Date: 2025-01-26 17:31+0530\n"
+"PO-Revision-Date: 2025-04-27 12:51+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: src/fingerprintmodel.cpp:145 src/fingerprintmodel.cpp:229
 #, kde-format
@@ -95,11 +95,7 @@ msgid "Change Wallet Password?"
 msgstr "வால்லட்டின் கடவுச்சொல்லையும் மாற்ற வேண்டுமா?"
 
 #: src/ui/ChangeWalletPassword.qml:29
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Now that you have changed your login password, you may also want to "
-#| "change the password on your default KWallet to match it."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Now that you have changed your login password, consider changing the "
@@ -535,14 +531,13 @@ msgstr "பயனரின் சின்னத்திற்கான கொ�
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User Without Deleting Files?"
-msgstr ""
+msgstr "கோப்புகளை நீக்காமல் தற்போதைய பயனர் கணக்கை நீக்கலாமா?"
 
 #: src/ui/UserDetailsPage.qml:115
-#, fuzzy, kde-format
-#| msgid "Delete User…"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User?"
-msgstr "பயனரை நீக்கு…"
+msgstr "தற்போதைய பயனர் கணக்கை நீக்கலாமா?"
 
 #: src/ui/UserDetailsPage.qml:117
 #, kde-kuit-format
@@ -552,6 +547,9 @@ msgid ""
 "account instead?<nl/><nl/>This will make %1 unable to log in again, and they "
 "may experience strange behaviors until they log out."
 msgstr ""
+"%1 தற்போது நுழைந்தள்ளார், அதனால் அவருடைய கோப்புகளை நீக்க முடியாது. கணக்கை மட்டும் "
+"நீக்கலாமா?<nl/><nl/>இப்படி செய்தால் %1 இனிமேல் நுழைய முடியாது, மேலும் அவருடைய "
+"தற்போதைய அமர்வு விசித்திரமாக செயல்படலாம்."
 
 #: src/ui/UserDetailsPage.qml:118
 #, kde-format
@@ -560,13 +558,14 @@ msgid ""
 "%1 is currently logged in. Deleting the account will make them unable to log "
 "in again, and they may experience strange behaviors until they log out."
 msgstr ""
+"%1 தற்போது நுழைந்தள்ளார். அவருடைய கணக்கை நீக்கினால் இனிமேல் அவரால் நுழைய முடியாது, "
+"மேலும் அவருடைய தற்போதைய அமர்வு விசித்திரமாக செயல்படலாம்."
 
 #: src/ui/UserDetailsPage.qml:125
-#, fuzzy, kde-format
-#| msgid "Delete files"
+#, kde-format
 msgctxt "@action: button"
 msgid "Delete %1"
-msgstr "கோப்புகளை நீக்கு"
+msgstr "%1 தனை நீக்கு"
 
 #: src/ui/UserDetailsPage.qml:144
 #, kde-format

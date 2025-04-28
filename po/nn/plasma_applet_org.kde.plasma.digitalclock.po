@@ -456,12 +456,3 @@ msgstr "Lokal"
 #, kde-format
 msgid "System's local time zone"
 msgstr "Systemets lokale tidssone"
-
-#~ msgid ""
-#~ "Tip: if you travel frequently, add your home time zone to this list. It "
-#~ "will only appear when you change the systemwide time zone to something "
-#~ "else."
-#~ msgstr ""
-#~ "Tips: Viss du ofte er på reisefot, legg til ei oppføring for tidssona til "
-#~ "heimstaden din her. Denne vert då berre vist når du byter tidssona for "
-#~ "heile systemet til ei anna tidssone."

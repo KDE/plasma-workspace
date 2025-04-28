@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-26 00:44+0000\n"
-"PO-Revision-Date: 2025-03-16 14:12+0530\n"
+"PO-Revision-Date: 2025-04-27 12:46+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -103,6 +103,9 @@ msgid ""
 "consider configuring the clipboard to disable its history, or only remember "
 "one item at a time."
 msgstr ""
+"பிடிப்புப்பலகையை முடக்கினால், ஓர் செயலியை மூடியபிறகு அதிலிருந்து நகலெடுத்ததை ஒட்ட "
+"முடியாமல் போகும்.<nl/><nl/> மாறாக, பிடிப்புப்பலகை வரலாற்றை முடக்கலாம், அல்லது ஒரு "
+"நேரத்தில் ஒரே உருப்படியை நினைவில் கொள்ளுமாறு பிடிப்புப்பலகையை அமைக்கலாம்."
 
 #: package/contents/ui/ConfigEntries.qml:121
 #, kde-format

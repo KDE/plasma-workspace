@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-24 00:43+0000\n"
-"PO-Revision-Date: 2024-08-12 16:20+0300\n"
+"PO-Revision-Date: 2025-04-27 23:45+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.5\n"
 
 #: kcm.cpp:70
 #, kde-format
@@ -155,7 +155,7 @@ msgctxt ""
 "Automatically enable Do Not Disturb mode while a fullscreen application is "
 "focused"
 msgid "While a fullscreen application is focused"
-msgstr ""
+msgstr "Kol visame ekrane esanti programa yra sufokusuota"
 
 #: ui/main.qml:149
 #, kde-format
@@ -211,7 +211,7 @@ msgstr "Šalia pranešimų piktogramos"
 #, kde-format
 msgctxt "@action:button choose custom notification position"
 msgid "Custom…"
-msgstr ""
+msgstr "Tinkinta…"
 
 #: ui/main.qml:257 ui/main.qml:273
 #, kde-format

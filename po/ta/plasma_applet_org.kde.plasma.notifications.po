@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-24 00:43+0000\n"
-"PO-Revision-Date: 2025-04-13 17:39+0530\n"
+"PO-Revision-Date: 2025-04-27 12:52+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: fileinfo.cpp:170
 #, kde-format
@@ -369,7 +369,7 @@ msgstr "திரைகள் பிரதிபலிக்கப்படு�
 #, kde-format
 msgctxt "Do not disturb because fullscreen app is focused"
 msgid "Fullscreen app is focused"
-msgstr ""
+msgstr "தற்போதைய செயலி முழுத்திரை பயன்முறையிலுள்ளது"
 
 #: package/contents/ui/FullRepresentation.qml:465
 #: package/contents/ui/FullRepresentation.qml:471
@@ -440,13 +440,11 @@ msgstr[0] "%1 படிக்காத அறிவிப்பு"
 msgstr[1] "%1 படிக்காத அறிவிப்புகள்"
 
 #: package/contents/ui/main.qml:91
-#, fuzzy, kde-format
-#| msgid "%1 unread notification"
-#| msgid_plural "%1 unread notifications"
+#, kde-format
 msgid "%1 active notification"
 msgid_plural "%1 active notifications"
-msgstr[0] "%1 படிக்காத அறிவிப்பு"
-msgstr[1] "%1 படிக்காத அறிவிப்புகள்"
+msgstr[0] "%1 அறிவிப்பு செயலிலுள்ளது"
+msgstr[1] "%1 அறிவிப்புகள் செயலிலுள்ளன"
 
 #: package/contents/ui/main.qml:104
 #, kde-format

@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-26 00:44+0000\n"
-"PO-Revision-Date: 2025-03-11 21:34+0200\n"
+"PO-Revision-Date: 2025-04-27 23:31+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -101,8 +101,7 @@ msgid "Repeat"
 msgstr "Kartoti"
 
 #: ExpandedRepresentation.qml:828
-#, fuzzy, kde-format
-#| msgid "Choose player automatically"
+#, kde-format
 msgctxt "@action:button"
 msgid "Choose player automatically"
 msgstr "Automatiškai parinkti leistuvę"

@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-24 00:43+0000\n"
-"PO-Revision-Date: 2024-02-03 01:55+0200\n"
+"PO-Revision-Date: 2025-04-28 00:37+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.5\n"
 
 #: fileinfo.cpp:170
 #, kde-format
@@ -292,12 +292,12 @@ msgstr "Siųsti"
 #: package/contents/ui/components/SpeedChart.qml:142
 #, kde-format
 msgid "Speed"
-msgstr ""
+msgstr "Greitis"
 
 #: package/contents/ui/components/SpeedChart.qml:192
 #, kde-format
 msgid "Average Speed"
-msgstr ""
+msgstr "Vidutinis greitis"
 
 #: package/contents/ui/components/SpeedChart.qml:249
 #, kde-format
@@ -396,14 +396,14 @@ msgstr "Ekranai yra suvienyti"
 #, kde-format
 msgctxt "Do not disturb because fullscreen app is focused"
 msgid "Fullscreen app is focused"
-msgstr ""
+msgstr "Visame ekrane esanti programa yra sufokusuota"
 
 #: package/contents/ui/FullRepresentation.qml:465
 #: package/contents/ui/FullRepresentation.qml:471
 #, kde-format
 msgctxt "@action:button"
 msgid "View"
-msgstr ""
+msgstr "Rodyti"
 
 #: package/contents/ui/FullRepresentation.qml:552
 #, kde-format
@@ -473,22 +473,20 @@ msgstr[2] "%1 neskaitytų pranešimų"
 msgstr[3] "%1 neskaitytas pranešimas"
 
 #: package/contents/ui/main.qml:91
-#, fuzzy, kde-format
-#| msgid "%1 unread notification"
-#| msgid_plural "%1 unread notifications"
+#, kde-format
 msgid "%1 active notification"
 msgid_plural "%1 active notifications"
-msgstr[0] "%1 neskaitytas pranešimas"
-msgstr[1] "%1 neskaityti pranešimai"
-msgstr[2] "%1 neskaitytų pranešimų"
-msgstr[3] "%1 neskaitytas pranešimas"
+msgstr[0] "%1 aktyvus pranešimas"
+msgstr[1] "%1 aktyvūs pranešimai"
+msgstr[2] "%1 aktyvių pranešimų"
+msgstr[3] "%1 aktyvus pranešimas"
 
 #: package/contents/ui/main.qml:104
 #, kde-format
 msgid "Do not disturb until %1; middle-click to exit now"
 msgstr ""
 "Netrukdyti iki %1; spustelėkite viduriniuoju pelės mygtuku norėdami dabar "
-"išeiti"
+"išjungti"
 
 #: package/contents/ui/main.qml:107
 #, kde-format

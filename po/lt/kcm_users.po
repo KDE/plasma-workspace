@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-23 00:44+0000\n"
-"PO-Revision-Date: 2025-01-10 01:21+0200\n"
+"PO-Revision-Date: 2025-04-27 23:44+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -568,14 +568,13 @@ msgstr "Naudotojo avataro vietaženklio piktograma"
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User Without Deleting Files?"
-msgstr ""
+msgstr "Ištrinti prisijungusį naudotoją neištrinant failų?"
 
 #: src/ui/UserDetailsPage.qml:115
-#, fuzzy, kde-format
-#| msgid "Delete User…"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User?"
-msgstr "Ištrinti naudotoją…"
+msgstr "Ištrinti prisijungusį naudotoją?"
 
 #: src/ui/UserDetailsPage.qml:117
 #, kde-kuit-format
@@ -585,6 +584,10 @@ msgid ""
 "account instead?<nl/><nl/>This will make %1 unable to log in again, and they "
 "may experience strange behaviors until they log out."
 msgstr ""
+"Naudotojas %1 šiuo metu yra prisijungęs, todėl jo failai negali būti "
+"ištrinti. Ar ištrinti, vietoj to, tik paskyrą?<nl/><nl/>Tokiu būdu %1 "
+"nebegalės vėl prisijungti ir gali patirti keistą elgseną tol, kol "
+"neatsijungs."
 
 #: src/ui/UserDetailsPage.qml:118
 #, kde-format
@@ -593,13 +596,15 @@ msgid ""
 "%1 is currently logged in. Deleting the account will make them unable to log "
 "in again, and they may experience strange behaviors until they log out."
 msgstr ""
+"Naudotojas %1 šiuo metu yra prisijungęs. Ištrinus paskyrą, jis daugiau "
+"nebegalės vėl prisijungti ir gali patirti keistą elgseną tol, kol "
+"neatsijungs."
 
 #: src/ui/UserDetailsPage.qml:125
-#, fuzzy, kde-format
-#| msgid "Delete files"
+#, kde-format
 msgctxt "@action: button"
 msgid "Delete %1"
-msgstr "Ištrinti failus"
+msgstr "Ištrinti %1"
 
 #: src/ui/UserDetailsPage.qml:144
 #, kde-format

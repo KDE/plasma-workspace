@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-25 00:43+0000\n"
-"PO-Revision-Date: 2025-03-11 21:25+0200\n"
+"PO-Revision-Date: 2025-04-28 00:29+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -375,6 +375,8 @@ msgid ""
 "Tip: Add your home time zone to this list to see the time there even when "
 "you're traveling. It will not be shown twice while at home."
 msgstr ""
+"Patarimas: Pridėkite į šį sąrašą savo namų laiko juostą, kad net keliaudami, "
+"matytumėte namų laiką. Jums būnant namie, jis nebus rodomas du kartus."
 
 #: package/contents/ui/configTimeZones.qml:235
 #, kde-format
