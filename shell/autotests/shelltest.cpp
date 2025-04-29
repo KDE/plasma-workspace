@@ -660,6 +660,8 @@ void ShellTest::testPanelSizeModes()
 
     auto panel = m_corona->m_panelViews[panelCont];
 
+    QTRY_VERIFY(panel->isExposed());
+
     // Plase panel to bottom edge of screen
     panel->containment()->setLocation(Plasma::Types::BottomEdge);
     QCOMPARE(panel->containment()->location(), Plasma::Types::BottomEdge);

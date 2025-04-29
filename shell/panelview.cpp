@@ -754,7 +754,13 @@ void PanelView::positionAndResizePanel()
     updateLayerWindow();
     m_internalResize = true;
 
-    setGeometry(geom);
+    // At least one QWindow setGeometry is needed to avoid a protocol error
+    if (m_layerWindow && !size().isEmpty()) {
+        m_layerWindow->setDesiredSize(geom.size());
+        setPosition(geom.topLeft());
+    } else {
+        setGeometry(geom);
+    }
     updateMask();
     Q_EMIT geometryChanged();
     Q_EMIT m_corona->availableScreenRegionChanged(containment()->screen());

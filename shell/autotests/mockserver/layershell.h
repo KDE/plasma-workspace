@@ -40,6 +40,8 @@ class LayerShell : public Global, public QtWaylandServer::zwlr_layer_shell_v1
 public:
     explicit LayerShell(CoreCompositor *compositor);
 
+    CoreCompositor *compositor();
+
 protected:
     void zwlr_layer_shell_v1_get_layer_surface(Resource *resource,
                                                uint32_t id,
@@ -50,17 +52,38 @@ protected:
     void zwlr_layer_shell_v1_destroy(Resource *resource) override;
 
 private:
+    CoreCompositor *m_compositor;
 };
 
 class LayerSurface : public SurfaceRole, public QtWaylandServer::zwlr_layer_surface_v1
 {
     Q_OBJECT
 public:
+    enum Anchor {
+        AnchorNone = 0,
+        AnchorTop = 1, ///< The top edge of the anchor rectangle
+        AnchorBottom = 2, ///< The bottom edge of the anchor rectangle
+        AnchorLeft = 4, ///< The left edge of the anchor rectangle
+        AnchorRight = 8, ///< The right edge of the anchor rectangle
+    };
+    Q_ENUM(Anchor);
+    Q_DECLARE_FLAGS(Anchors, Anchor)
     explicit LayerSurface(LayerShell *shell, Surface *surface, Output *output, uint32_t layer, const QString &scope, wl_resource *resource);
+
+    void zwlr_layer_surface_v1_set_anchor(Resource *resource, uint32_t anchor) override;
+    void zwlr_layer_surface_v1_set_size(Resource *resource, uint32_t width, uint32_t height) override;
 
     QPointer<Output> m_requestedOutput = nullptr;
     uint32_t m_layer = 0;
+    struct DoubleBufferedState {
+        QSize desiredSize = QSize(0, 0);
+        QSize pendingSize = QSize(0, 0);
+        uint32_t anchor = 0;
+    } m_pending, m_committed;
     QString m_scope;
+
+private:
+    CoreCompositor *m_compositor;
 };
 
 } // namespace MockCompositor

@@ -32,6 +32,7 @@ namespace MockCompositor
 {
 LayerShell::LayerShell(CoreCompositor *compositor)
     : QtWaylandServer::zwlr_layer_shell_v1(compositor->m_display, 1)
+    , m_compositor(compositor)
 {
 }
 
@@ -65,14 +66,57 @@ void LayerShell::zwlr_layer_shell_v1_destroy(Resource *resource)
     wl_resource_destroy(resource->handle);
 }
 
+CoreCompositor *LayerShell::compositor()
+{
+    return m_compositor;
+}
+
 LayerSurface::LayerSurface(LayerShell *shell, Surface *surface, Output *output, uint32_t layer, const QString &scope, wl_resource *resource)
     : QtWaylandServer::zwlr_layer_surface_v1(resource)
     , m_requestedOutput(output)
     , m_layer(layer)
     , m_scope(scope)
+    , m_compositor(shell->compositor())
 {
     Q_UNUSED(shell)
     surface->m_role = this;
+    connect(surface, &Surface::commit, this, [this, surface] {
+        m_committed = m_pending;
+        qWarning() << "COMMITTED" << m_pending.desiredSize;
+
+        QSize size = m_committed.desiredSize;
+
+        if ((m_committed.anchor & (AnchorLeft | AnchorRight)) == (AnchorLeft | AnchorRight)) {
+            size.setWidth(m_requestedOutput->mode().resolution.width());
+        }
+        if ((m_committed.anchor & (AnchorTop | AnchorBottom)) == (AnchorTop | AnchorBottom)) {
+            size.setHeight(m_requestedOutput->mode().resolution.height());
+        }
+
+        if (m_pending.pendingSize == size) {
+            qWarning() << "SKIPPING";
+            return;
+        }
+
+        const uint serial = m_compositor->nextSerial();
+        m_pending.pendingSize = size;
+        qWarning() << "SEND CONFIGURE" << size << serial;
+        send_configure(serial, size.width(), size.height());
+    });
+}
+
+void LayerSurface::zwlr_layer_surface_v1_set_anchor(Resource *resource, uint32_t anchor)
+{
+    Q_UNUSED(resource);
+    m_pending.anchor = anchor;
+    qWarning() << "SETTING ANCHOR" << anchor;
+}
+
+void LayerSurface::zwlr_layer_surface_v1_set_size(Resource *resource, uint32_t width, uint32_t height)
+{
+    Q_UNUSED(resource);
+    m_pending.desiredSize = QSize(width, height);
+    qWarning() << "SETTING DESIRED" << m_pending.desiredSize;
 }
 
 } // namespace MockCompositor

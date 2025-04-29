@@ -285,6 +285,11 @@ public:
         return m_data.scale;
     }
 
+    OutputMode mode() const
+    {
+        return m_data.mode;
+    }
+
     OutputData m_data;
 
 protected:
