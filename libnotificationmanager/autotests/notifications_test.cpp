@@ -70,11 +70,14 @@ void NotificationTest::parse_data()
     //more bad formatted options. To some extent actual output doesn't matter. Garbage in, garbage out.
     //the important thing is that it doesn't contain anything that could be parsed as the remote URL
     QTest::newRow("image remote URL no close") << "This is <img src=\"http://foo.com/boo.png>\" alt=\"cheese\">  and more text" << "This is <img alt=\"cheese\"> and more text</img>";
-    QTest::newRow("image remote URL double open") << "This is <<img src=\"http://foo.com/boo.png>\"  and more text" << "This is ";
+    QTest::newRow("image remote URL double open") << "This is <<img src=\"http://foo.com/boo.png>\"  and more text" << "This is &lt;";
     QTest::newRow("image remote URL no entity close") << "This is <img src=\"http://foo.com/boo.png\"  and more text" << "This is ";
-    QTest::newRow("image remote URL space in element name") << "This is < img src=\"http://foo.com/boo.png\" alt=\"cheese\" /> and more text" << "This is ";
+    QTest::newRow("image remote URL space in element name") << "This is < img src=\"http://foo.com/boo.png\" alt=\"cheese\" /> and more text" << "This is &lt; img src=&quot;http://foo.com/boo.png&quot; alt=&quot;cheese&quot; /&gt; and more text";
 
     QTest::newRow("link") << "This is a link <a href=\"http://foo.com/boo\"/> and more text" << "This is a link <a href=\"http://foo.com/boo\"/> and more text";
+
+    QTest::newRow("text with lessThan symbol inside of it") << "i <3 KDE" << "i &lt;3 KDE";
+    QTest::newRow("text with url and less than and greater than symbol") << "<a href=\"http://foo.com/boo\">kde</a> <3>" << "<a href=\"http://foo.com/boo\">kde</a> &lt;3&gt;";
     // clang-format on
 }
 

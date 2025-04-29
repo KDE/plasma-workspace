@@ -62,6 +62,15 @@ QString Notification::Private::sanitize(const QString &text)
     static const QRegularExpression escapeExpr(QStringLiteral("&(?!(?:apos|quot|[gl]t|amp);|#)"));
     t.replace(escapeExpr, QLatin1String("&amp;"));
 
+    // If the < or > is not followed or preceded by text or "/", escape it.
+    // This nightmarish RegExp matches the < or >, then captures whatever is after/before it.
+    // We then replace the match with the corresponding symbol, and add the captured bit back.
+    static const QRegularExpression ltExpr(QStringLiteral("<([^\\/,a-zA-Z])"));
+    t.replace(ltExpr, QLatin1String("&lt;\\1"));
+    // Check for " in case the item is something like <img src="bla">
+    static const QRegularExpression gtExpr(QStringLiteral("([^\\/,a-zA-Z,\"])>"));
+    t.replace(gtExpr, QLatin1String("\\1&gt;"));
+
     // Don't bother adding some HTML structure if the body is now empty
     if (t.isEmpty()) {
         return t;
