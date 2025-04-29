@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-26 00:44+0000\n"
-"PO-Revision-Date: 2025-03-20 09:48+0400\n"
+"PO-Revision-Date: 2025-04-28 17:28+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -104,6 +104,9 @@ msgid ""
 "consider configuring the clipboard to disable its history, or only remember "
 "one item at a time."
 msgstr ""
+"لا يُنصح بتعطيل الحافظة، إذ سيؤدي ذلك إلى فقدان البيانات المنسوخة عند إغلاق "
+"التطبيق الذي نُسخت منه.<nl/><nl/>بدلاً من ذلك، فكّر في تكوين الحافظة لتعطيل "
+"سجلّها، أو تذكر عنصر واحد فقط في كل مرة."
 
 #: package/contents/ui/ConfigEntries.qml:121
 #, kde-format
