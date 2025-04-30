@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-26 00:44+0000\n"
+"POT-Creation-Date: 2025-04-30 00:44+0000\n"
 "PO-Revision-Date: 2025-01-06 18:58+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -183,7 +183,7 @@ msgstr "Nova Seanco"
 msgid "Filters"
 msgstr "Filtriloj"
 
-#: shellprivate/plasmaappletitemmodel.cpp:199
+#: shellprivate/plasmaappletitemmodel.cpp:198
 #, kde-format
 msgid ""
 "This Widget was written for an unknown older version of Plasma and is not "
@@ -194,7 +194,7 @@ msgstr ""
 "kaj ne estas kongrua kun Plasma %1. Bonvolu kontakti la aŭtoron de la "
 "fenestraĵo pri ĝisdatigita versio."
 
-#: shellprivate/plasmaappletitemmodel.cpp:203
+#: shellprivate/plasmaappletitemmodel.cpp:202
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -204,7 +204,7 @@ msgstr ""
 "Plasma %2. Bonvolu kontakti la aŭtoron de la fenestraĵo pri ĝisdatigita "
 "versio."
 
-#: shellprivate/plasmaappletitemmodel.cpp:207
+#: shellprivate/plasmaappletitemmodel.cpp:206
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -213,7 +213,7 @@ msgstr ""
 "Ĉi tiu Fenestraĵo estis skribita por Plasma %1 kaj ne estas kongrua kun "
 "Plasma %2. Bonvolu kontakti la aŭtoron de la fenestraĵo pri ĝisdatigita "
 
-#: shellprivate/plasmaappletitemmodel.cpp:212
+#: shellprivate/plasmaappletitemmodel.cpp:211
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "

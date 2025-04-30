@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-23 00:44+0000\n"
-"PO-Revision-Date: 2025-01-06 16:42+0900\n"
+"PO-Revision-Date: 2025-04-30 02:20+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 25.03.70\n"
+"X-Generator: Lokalize 25.07.70\n"
 
 #: src/fingerprintmodel.cpp:145 src/fingerprintmodel.cpp:229
 #, kde-format
@@ -526,14 +526,13 @@ msgstr "使用者大頭貼預設圖示"
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User Without Deleting Files?"
-msgstr ""
+msgstr "要刪除尚未登出的使用者但保留其檔案嗎？"
 
 #: src/ui/UserDetailsPage.qml:115
-#, fuzzy, kde-format
-#| msgid "Delete User…"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User?"
-msgstr "刪除使用者(&D)…"
+msgstr "要刪除尚未登出的使用者嗎？"
 
 #: src/ui/UserDetailsPage.qml:117
 #, kde-kuit-format
@@ -543,6 +542,9 @@ msgid ""
 "account instead?<nl/><nl/>This will make %1 unable to log in again, and they "
 "may experience strange behaviors until they log out."
 msgstr ""
+"%1 目前已登入而尚未登出，因此該使用者的檔案無法被刪除。是否要只刪除帳號？<nl/"
+"><nl/>這會讓 %1 無法再次登入，而且該使用者登出之前系統可能會有難以理解的行"
+"為。"
 
 #: src/ui/UserDetailsPage.qml:118
 #, kde-format
@@ -551,13 +553,14 @@ msgid ""
 "%1 is currently logged in. Deleting the account will make them unable to log "
 "in again, and they may experience strange behaviors until they log out."
 msgstr ""
+"%1 目前已登入而尚未登出。刪除這個帳號會讓其無法再次登入，而且該使用者登出之前"
+"系統可能會有難以理解的行為。"
 
 #: src/ui/UserDetailsPage.qml:125
-#, fuzzy, kde-format
-#| msgid "Delete files"
+#, kde-format
 msgctxt "@action: button"
 msgid "Delete %1"
-msgstr "刪除檔案"
+msgstr "刪除 %1"
 
 #: src/ui/UserDetailsPage.qml:144
 #, kde-format

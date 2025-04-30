@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-26 00:44+0000\n"
-"PO-Revision-Date: 2025-03-26 18:22+0900\n"
+"PO-Revision-Date: 2025-04-30 02:23+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.07.70\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -106,6 +106,8 @@ msgid ""
 "consider configuring the clipboard to disable its history, or only remember "
 "one item at a time."
 msgstr ""
+"不建議停用剪貼簿，那會使得複製資料時複製的來源應用程式若關閉複製的資料便會丟"
+"失。<nl/><nl/>請考慮改成讓剪貼簿停用歷史記錄，或是一次只記住一個項目。"
 
 #: package/contents/ui/ConfigEntries.qml:121
 #, kde-format
