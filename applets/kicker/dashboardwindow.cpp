@@ -10,13 +10,11 @@
 #include <QIcon>
 #include <QScreen>
 
-#include <KWayland/Client/connection_thread.h>
-#include <KWayland/Client/plasmashell.h>
-#include <KWayland/Client/registry.h>
-#include <KWayland/Client/surface.h>
 #include <KWindowEffects>
 #include <KWindowSystem>
 #include <KX11Extras>
+
+#include <PlasmaQuick/PlasmaShellWaylandIntegration>
 
 DashboardWindow::DashboardWindow(QQuickItem *parent)
     : QQuickWindow(parent ? parent->window() : nullptr)
@@ -30,20 +28,8 @@ DashboardWindow::DashboardWindow(QQuickItem *parent)
 
     connect(&m_theme, &Plasma::Theme::themeChanged, this, &DashboardWindow::updateTheme);
 
-    if (KWindowSystem::isPlatformWayland()) {
-        KWayland::Client::ConnectionThread *connection = KWayland::Client::ConnectionThread::fromApplication(this);
-        Q_ASSERT(connection);
-
-        KWayland::Client::Registry *registry = new KWayland::Client::Registry(this);
-        registry->create(connection);
-
-        connect(registry, &KWayland::Client::Registry::plasmaShellAnnounced, this, [this, registry](quint32 name, quint32 version) {
-            m_plasmashell = registry->createPlasmaShell(name, version, this);
-        });
-
-        registry->setup();
-        connection->roundtrip();
-    }
+    // this takes care of SkipSwitcher and SkipTaskbar
+    PlasmaShellWaylandIntegration::get(this);
 }
 
 DashboardWindow::~DashboardWindow()
@@ -148,18 +134,6 @@ bool DashboardWindow::event(QEvent *event)
         if (pSEvent->surfaceEventType() == QPlatformSurfaceEvent::SurfaceCreated) {
             if (KWindowSystem::isPlatformX11()) {
                 KX11Extras::setState(winId(), NET::SkipTaskbar | NET::SkipPager | NET::SkipSwitcher);
-            } else {
-                if (m_plasmashell) {
-                    auto *surface = KWayland::Client::Surface::fromQtWinId(winId());
-                    auto *plasmashellSurface = KWayland::Client::PlasmaShellSurface::get(surface);
-
-                    if (!plasmashellSurface) {
-                        plasmashellSurface = m_plasmashell->createSurface(surface, this);
-                    }
-
-                    plasmashellSurface->setSkipSwitcher(true);
-                    plasmashellSurface->setSkipTaskbar(true);
-                }
             }
         }
     } else if (event->type() == QEvent::Show) {
