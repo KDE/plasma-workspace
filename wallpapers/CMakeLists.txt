@@ -1,3 +1,2 @@
 
-add_subdirectory(image)
-plasma_install_package(color org.kde.color wallpapers wallpaper)
+install(DIRECTORY Next DESTINATION ${KDE_INSTALL_WALLPAPERDIR} PATTERN "*base_size*" EXCLUDE)

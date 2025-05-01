@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+  <kcfgfile name=""/>
+
+  <group name="General">
+    <entry name="Blur" type="bool">
+      <label>Blur background filling</label>
+      <default>false</default>
+    </entry>
+    <entry name="Color" type="Color">
+      <label>Color of the wallpaper</label>
+      <default>#000000</default>
+    </entry>
+    <entry name="Image" type="String">
+      <label>Wallpaper image path or wallpaper name</label>
+      <default></default>
+    </entry>
+    <entry name="FillMode" type="int">
+      <label>Sizing, cropping and positioning of the wallpaper image</label>
+      <default>2</default>
+    </entry>
+    <entry name="SlidePaths" type="StringList">
+      <label>Paths used for the slideshow</label>
+      <default>preferred://wallpaperlocations</default>
+    </entry>
+    <entry name="SlideInterval" type="int">
+      <label>Interval between slides (s)</label>
+      <default>900</default>
+    </entry>
+    <entry name="UncheckedSlides" type="StringList">
+      <label>Unchecked Slides</label>
+      <default></default>
+    </entry>
+    <entry name="SlideshowMode" type="int">
+        <label>Ordering mode for the slideshow</label>
+        <default>0</default>
+    </entry>
+    <entry name="SlideshowFoldersFirst" type="bool">
+        <label>Processing folders first for the slideshow</label>
+        <default>false</default>
+    </entry>
+  </group>
+</kcfg>

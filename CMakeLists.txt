@@ -441,6 +441,7 @@ add_subdirectory(containmentactions)
 add_subdirectory(runners)
 add_subdirectory(applets)
 add_subdirectory(dataengines)
+add_subdirectory(wallpaper-plugins)
 add_subdirectory(wallpapers)
 
 add_subdirectory(kioworkers)

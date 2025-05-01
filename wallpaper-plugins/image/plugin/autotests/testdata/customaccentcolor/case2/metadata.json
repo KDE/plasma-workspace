@@ -1,0 +1,8 @@
+{
+    "KPlugin": {
+        "Id": "CustomAccentColorWallpaperTest",
+        "License": "CC-BY-SA-4.0",
+        "Name": "CustomAccentColorWallpaperTest (Don't translate)"
+    },
+    "X-KDE-PlasmaImageWallpaper-AccentColor": "green"
+}
