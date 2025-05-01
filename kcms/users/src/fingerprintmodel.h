@@ -10,12 +10,14 @@
 #include <qobjectdefs.h>
 
 #include <KLocalizedString>
+#include <qqmlintegration.h>
 
 #include "fprint_manager_interface.h"
 
 class Finger
 {
     Q_GADGET
+    QML_ELEMENT
     Q_PROPERTY(QString internalName READ internalName CONSTANT)
     Q_PROPERTY(QString friendlyName READ friendlyName CONSTANT)
 

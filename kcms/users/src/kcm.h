@@ -9,12 +9,14 @@
 #include "fingerprintmodel.h"
 #include "usermodel.h"
 #include <KQuickConfigModule>
+#include <qqmlintegration.h>
 
 class OrgFreedesktopAccountsInterface;
 
 class KCMUser : public KQuickConfigModule
 {
     Q_OBJECT
+    QML_ELEMENT
     Q_PROPERTY(UserModel *userModel MEMBER m_model CONSTANT)
     Q_PROPERTY(QStringList avatarFiles MEMBER m_avatarFiles CONSTANT)
     Q_PROPERTY(FingerprintModel *fingerprintModel MEMBER m_fingerprintModel CONSTANT)

@@ -23,18 +23,27 @@ KCM.ScrollViewKCM {
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
-    actions: Kirigami.Action {
-            icon.name: "list-add-symbolic"
-            text: i18nc("@action:button As in, 'add new user'", "Add New…")
-            Accessible.name: i18nc("@action:button", "Add New User…")
-            displayHint: Kirigami.DisplayHint.KeepVisible
+    function pushNewUserPage() {
+        console.log("~~~Pushing new user page~~~");
+        root.prepareChangePage();
+        kcm.push("CreateUser.qml");
+        userList.currentIndex = -1;
+    }
 
-            onTriggered: {
-                root.prepareChangePage();
-                kcm.push("CreateUser.qml");
-                userList.currentIndex = -1;
-            }
+    actions: Kirigami.Action {
+        icon.name: "list-add-symbolic"
+        text: i18nc("@action:button As in, 'add new user'", "Add New… Foxes")
+        Accessible.name: i18nc("@action:button", "Add New User…")
+        displayHint: Kirigami.DisplayHint.KeepVisible
+
+        onTriggered: {
+            // root.pushNewUserPage();
+            console.info('hi');
+            // root.prepareChangePage();
+            // kcm.push("CreateUser.qml");
+            // userList.currentIndex = -1;
         }
+    }
 
     // QML cannot update avatar image when override. By increasing this number and
     // appending it to image source with '?', we force avatar to reload
@@ -66,12 +75,16 @@ KCM.ScrollViewKCM {
     }
 
     Component.onCompleted: {
-        if (!Kirigami.Settings.isMobile) {
-            // Set two column mode
-            kcm.columnWidth = Kirigami.Units.gridUnit * 15
+        if(!kcm.userModel.getCurrentUser()) {
+            root.pushNewUserPage();
+        } else {
+            if (!Kirigami.Settings.isMobile) {
+                // Set two column mode
+                kcm.columnWidth = Kirigami.Units.gridUnit * 15
 
-            // Push users page on desktop for two pane layout
-            kcm.push("UserDetailsPage.qml", { user: kcm.userModel.getCurrentUser() })
+                // Push users page on desktop for two pane layout
+                kcm.push("UserDetailsPage.qml", { user: kcm.userModel.getCurrentUser() })
+            }
         }
     }
 

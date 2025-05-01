@@ -16,6 +16,7 @@
 #include <QUrl>
 
 #include <optional>
+#include <qqmlintegration.h>
 
 class OrgFreedesktopAccountsUserInterface;
 class QDBusError;
@@ -57,6 +58,7 @@ private:
 class User : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
 
     Q_PROPERTY(qulonglong uid READ uid WRITE setUid NOTIFY uidChanged)
     Q_PROPERTY(QString name READ name WRITE setName NOTIFY nameChanged)

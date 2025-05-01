@@ -175,31 +175,35 @@ KCM.SimpleKCM {
                 KeyNavigation.down: usertypeBox
             }
 
-            RowLayout {
-                spacing: Kirigami.Units.smallSpacing
-                Kirigami.FormData.label: i18n("Account type:")
+            QQC2.Item {
+                visible: !root.user.userModel.getCurrentUser()
 
-                QQC2.ComboBox {
-                    id: usertypeBox
+                RowLayout {
+                    spacing: Kirigami.Units.smallSpacing
+                    Kirigami.FormData.label: i18n("Account type:")
 
-                    readonly property bool shouldBeEnabled: kcm.userModel.moreThanOneAdminUser || !user.administrator
+                    QQC2.ComboBox {
+                        id: usertypeBox
 
-                    textRole: "label"
-                    valueRole: "type"
-                    model: [
-                        { "type": "standard", "label": i18n("Standard") },
-                        { "type": "administrator", "label": i18n("Administrator") },
-                    ]
+                        readonly property bool shouldBeEnabled: kcm.userModel.moreThanOneAdminUser || !user.administrator
 
-                    currentIndex: user.administrator ? 1 : 0
-                    enabled: shouldBeEnabled
+                        textRole: "label"
+                        valueRole: "type"
+                        model: [
+                            { "type": "standard", "label": i18n("Standard") },
+                            { "type": "administrator", "label": i18n("Administrator") },
+                        ]
 
-                    KeyNavigation.down: emailTextField
-                }
+                        currentIndex: user.administrator ? 1 : 0
+                        enabled: shouldBeEnabled
 
-                Kirigami.ContextualHelpButton {
-                    toolTipText: i18n("Cannot change the account type to Standard unless there is at least one other Administrator account on the system. Without one, authentication would become impossible or require the insecure use of the root password.")
-                    visible: !usertypeBox.shouldBeEnabled
+                        KeyNavigation.down: emailTextField
+                    }
+
+                    Kirigami.ContextualHelpButton {
+                        toolTipText: i18n("Cannot change the account type to Standard unless there is at least one other Administrator account on the system. Without one, authentication would become impossible or require the insecure use of the root password.")
+                        visible: !usertypeBox.shouldBeEnabled
+                    }
                 }
             }
 

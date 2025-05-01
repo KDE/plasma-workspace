@@ -36,6 +36,12 @@ qt_add_dbus_interface(kcm_users_DBUS_SRCS
     login1_interface
 )
 
+ecm_add_qml_module(kcm_users
+    URI org.kde.plasma.kcm.users
+    VERSION 1.0
+    GENERATE_PLUGIN_SOURCE
+)
+
 kcmutils_add_qml_kcm(kcm_users)
 target_sources(kcm_users PRIVATE
     kcm.cpp

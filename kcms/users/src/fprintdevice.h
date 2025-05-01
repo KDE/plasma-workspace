@@ -8,10 +8,12 @@
 
 #include "fprint_device_interface.h"
 #include "properties_interface.h"
+#include <qqmlintegration.h>
 
 class FprintDevice : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
 
 public:
     enum ScanType {

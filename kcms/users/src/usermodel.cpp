@@ -113,6 +113,8 @@ UserModel::~UserModel() = default;
 
 User *UserModel::getCurrentUser() const
 {
+    return nullptr;
+
     for (const auto user : std::as_const(m_userList)) {
         if (user->isCurrentUser()) {
             return user;

@@ -16,6 +16,7 @@ class OrgFreedesktopAccountsInterface;
 class UserModel : public QAbstractListModel
 {
     Q_OBJECT
+    QML_ELEMENT
 
 public:
     enum Roles {

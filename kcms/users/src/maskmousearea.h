@@ -11,6 +11,7 @@
 class MaskMouseArea : public QQuickItem
 {
     Q_OBJECT
+    QML_ELEMENT
 
     struct Private;
     QScopedPointer<Private> d;
