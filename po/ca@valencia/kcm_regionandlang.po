@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-25 00:43+0000\n"
+"POT-Creation-Date: 2025-05-01 00:44+0000\n"
 "PO-Revision-Date: 2024-04-23 14:51+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -424,42 +424,42 @@ msgctxt "@info:title"
 msgid "Data and Storage Sizes"
 msgstr "Dades i mides d'emmagatzematge"
 
-#: optionsmodel.cpp:131 optionsmodel.cpp:375
-#, kde-format
-msgctxt "@info:title, the current setting is system default"
-msgid "System Default"
-msgstr "Predeterminada del sistema"
-
-#: optionsmodel.cpp:297
+#: optionsmodel.cpp:279
 #, kde-format
 msgctxt "the prefix for IECBinaryDialect, %1 is an example for 1 KiB"
 msgid "KiB, MiB, GiB; %1"
 msgstr "KiB, MiB, GiB; %1"
 
-#: optionsmodel.cpp:300
+#: optionsmodel.cpp:282
 #, kde-format
 msgctxt "the prefix for JEDECBinaryDialect, %1 is an example for 1 KB"
 msgid "KB, MB, GB; %1"
 msgstr "KB, MB, GB; %1"
 
-#: optionsmodel.cpp:303
+#: optionsmodel.cpp:285
 #, kde-format
 msgctxt "the prefix for MetricBinaryDialect, %1 is an example for 1 kB"
 msgid "kB, MB, GB; %1"
 msgstr "kB, MB, GB; %1"
 
-#: optionsmodel.cpp:377
+#: optionsmodel.cpp:357
+#, kde-format
+msgctxt "@info:title, the current setting is system default"
+msgid "System Default"
+msgstr "Predeterminada del sistema"
+
+#: optionsmodel.cpp:359
 #, kde-format
 msgctxt ""
 "as subtitle, remind user that the format used now is inherited from locale %1"
 msgid " (Standard format for %1)"
 msgstr " (Format estàndard %1)"
 
-#: regionandlangsettingsbase.kcfg:18 regionandlangsettingsbase.kcfg:21
-#: regionandlangsettingsbase.kcfg:24 regionandlangsettingsbase.kcfg:27
-#: regionandlangsettingsbase.kcfg:30 regionandlangsettingsbase.kcfg:33
-#: regionandlangsettingsbase.kcfg:36 regionandlangsettingsbase.kcfg:39
-#: regionandlangsettingsbase.kcfg:42
+#: regionandlangsettingsbase.kcfg:14 regionandlangsettingsbase.kcfg:17
+#: regionandlangsettingsbase.kcfg:20 regionandlangsettingsbase.kcfg:23
+#: regionandlangsettingsbase.kcfg:26 regionandlangsettingsbase.kcfg:29
+#: regionandlangsettingsbase.kcfg:32 regionandlangsettingsbase.kcfg:35
+#: regionandlangsettingsbase.kcfg:38
 #, kde-format
 msgid "Inherit Language"
 msgstr "Idioma heretat"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-26 00:44+0000\n"
+"POT-Creation-Date: 2025-05-01 00:44+0000\n"
 "PO-Revision-Date: 2025-04-26 10:33+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -28,52 +28,52 @@ msgstr "כללי"
 msgid "Entries"
 msgstr "רשומות"
 
-#: package/contents/ui/ConfigEntries.qml:33
+#: package/contents/ui/ConfigEntries.qml:34
 #, kde-format
 msgid "Shown when relevant"
 msgstr "מופיע כשצריך"
 
-#: package/contents/ui/ConfigEntries.qml:34
+#: package/contents/ui/ConfigEntries.qml:35
 #, kde-format
 msgid "Always shown"
 msgstr "מופיע תמיד"
 
-#: package/contents/ui/ConfigEntries.qml:35
+#: package/contents/ui/ConfigEntries.qml:36
 #, kde-format
 msgid "Always hidden"
 msgstr "מוסתר תמיד"
 
-#: package/contents/ui/ConfigEntries.qml:36
+#: package/contents/ui/ConfigEntries.qml:37
 #, kde-format
 msgid "Disabled"
 msgstr "מושבת"
 
-#: package/contents/ui/ConfigEntries.qml:46
+#: package/contents/ui/ConfigEntries.qml:109
 #, kde-format
 msgid "Application Status"
 msgstr "מצב יישום"
 
-#: package/contents/ui/ConfigEntries.qml:48
+#: package/contents/ui/ConfigEntries.qml:111
 #, kde-format
 msgid "Communications"
 msgstr "צורות תקשורת"
 
-#: package/contents/ui/ConfigEntries.qml:50
+#: package/contents/ui/ConfigEntries.qml:113
 #, kde-format
 msgid "System Services"
 msgstr "שירותי מערכת"
 
-#: package/contents/ui/ConfigEntries.qml:52
+#: package/contents/ui/ConfigEntries.qml:115
 #, kde-format
 msgid "Hardware Control"
 msgstr "בקרת חומרה"
 
-#: package/contents/ui/ConfigEntries.qml:55
+#: package/contents/ui/ConfigEntries.qml:118
 #, kde-format
 msgid "Miscellaneous"
 msgstr "שונות"
 
-#: package/contents/ui/ConfigEntries.qml:79
+#: package/contents/ui/ConfigEntries.qml:161
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -89,13 +89,13 @@ msgstr ""
 ">השימוש בהגדרה הזאת הוא על אחריותך ואין לדווח על תקלות ל־KDE או ליוצרי "
 "היישום."
 
-#: package/contents/ui/ConfigEntries.qml:82
+#: package/contents/ui/ConfigEntries.qml:164
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
 msgstr "הסכנות ברורות לי"
 
-#: package/contents/ui/ConfigEntries.qml:93
+#: package/contents/ui/ConfigEntries.qml:176
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -108,23 +108,23 @@ msgstr ""
 "היישום שההעתקה בוצעה ממנו נסגר.<nl/><nl/>במקום, כדאי לשקול להגדיר להשבת את "
 "היסטוריית לוח הגזירים או רק לזכור פריט אחד בכל עת."
 
-#: package/contents/ui/ConfigEntries.qml:121
+#: package/contents/ui/ConfigEntries.qml:204
 #, kde-format
 msgctxt "Name of the system tray entry"
 msgid "Entry"
 msgstr "רשומה"
 
-#: package/contents/ui/ConfigEntries.qml:128
+#: package/contents/ui/ConfigEntries.qml:211
 #, kde-format
 msgid "Visibility"
 msgstr "חשיפה"
 
-#: package/contents/ui/ConfigEntries.qml:135
+#: package/contents/ui/ConfigEntries.qml:218
 #, kde-format
 msgid "Keyboard Shortcut"
 msgstr "קיצור מקשים במקלדת"
 
-#: package/contents/ui/ConfigEntries.qml:367
+#: package/contents/ui/ConfigEntries.qml:391
 #, kde-format
 msgid "Always show all entries"
 msgstr "תמיד להציג את כל הרשומות"

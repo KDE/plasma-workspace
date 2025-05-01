@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-26 00:44+0000\n"
+"POT-Creation-Date: 2025-05-01 00:44+0000\n"
 "PO-Revision-Date: 2025-03-21 18:07+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -27,52 +27,52 @@ msgstr "General"
 msgid "Entries"
 msgstr "Entratas"
 
-#: package/contents/ui/ConfigEntries.qml:33
+#: package/contents/ui/ConfigEntries.qml:34
 #, kde-format
 msgid "Shown when relevant"
 msgstr "Monstrate quando relevante"
 
-#: package/contents/ui/ConfigEntries.qml:34
+#: package/contents/ui/ConfigEntries.qml:35
 #, kde-format
 msgid "Always shown"
 msgstr "Sempre monstrate"
 
-#: package/contents/ui/ConfigEntries.qml:35
+#: package/contents/ui/ConfigEntries.qml:36
 #, kde-format
 msgid "Always hidden"
 msgstr "Sempre celate"
 
-#: package/contents/ui/ConfigEntries.qml:36
+#: package/contents/ui/ConfigEntries.qml:37
 #, kde-format
 msgid "Disabled"
 msgstr "Dishabilitate"
 
-#: package/contents/ui/ConfigEntries.qml:46
+#: package/contents/ui/ConfigEntries.qml:109
 #, kde-format
 msgid "Application Status"
 msgstr "Stato de Application"
 
-#: package/contents/ui/ConfigEntries.qml:48
+#: package/contents/ui/ConfigEntries.qml:111
 #, kde-format
 msgid "Communications"
 msgstr "Communicationes"
 
-#: package/contents/ui/ConfigEntries.qml:50
+#: package/contents/ui/ConfigEntries.qml:113
 #, kde-format
 msgid "System Services"
 msgstr "Servicios de systema"
 
-#: package/contents/ui/ConfigEntries.qml:52
+#: package/contents/ui/ConfigEntries.qml:115
 #, kde-format
 msgid "Hardware Control"
 msgstr "Controlo Hardware"
 
-#: package/contents/ui/ConfigEntries.qml:55
+#: package/contents/ui/ConfigEntries.qml:118
 #, kde-format
 msgid "Miscellaneous"
 msgstr "Miscellanea"
 
-#: package/contents/ui/ConfigEntries.qml:79
+#: package/contents/ui/ConfigEntries.qml:161
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -88,13 +88,13 @@ msgstr ""
 "lor se comporta demdo impreviste.<nl/><nl/>Usa iste preferentia a tu proprie "
 "risco e non face reporto de problemas al autor del app o de KDE."
 
-#: package/contents/ui/ConfigEntries.qml:82
+#: package/contents/ui/ConfigEntries.qml:164
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
 msgstr "Io comprende le riscos"
 
-#: package/contents/ui/ConfigEntries.qml:93
+#: package/contents/ui/ConfigEntries.qml:176
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -104,23 +104,23 @@ msgid ""
 "one item at a time."
 msgstr ""
 
-#: package/contents/ui/ConfigEntries.qml:121
+#: package/contents/ui/ConfigEntries.qml:204
 #, kde-format
 msgctxt "Name of the system tray entry"
 msgid "Entry"
 msgstr "Elemento"
 
-#: package/contents/ui/ConfigEntries.qml:128
+#: package/contents/ui/ConfigEntries.qml:211
 #, kde-format
 msgid "Visibility"
 msgstr "Visibilitate"
 
-#: package/contents/ui/ConfigEntries.qml:135
+#: package/contents/ui/ConfigEntries.qml:218
 #, kde-format
 msgid "Keyboard Shortcut"
 msgstr "Via Breve de Claviero"
 
-#: package/contents/ui/ConfigEntries.qml:367
+#: package/contents/ui/ConfigEntries.qml:391
 #, kde-format
 msgid "Always show all entries"
 msgstr "Sempre monstra omne entratas"

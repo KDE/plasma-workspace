@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-26 00:44+0000\n"
+"POT-Creation-Date: 2025-05-01 00:44+0000\n"
 "PO-Revision-Date: 2025-04-26 07:46+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -28,52 +28,52 @@ msgstr "Splošno"
 msgid "Entries"
 msgstr "Vnosi"
 
-#: package/contents/ui/ConfigEntries.qml:33
+#: package/contents/ui/ConfigEntries.qml:34
 #, kde-format
 msgid "Shown when relevant"
 msgstr "Prikazano, ko je ustrezno"
 
-#: package/contents/ui/ConfigEntries.qml:34
+#: package/contents/ui/ConfigEntries.qml:35
 #, kde-format
 msgid "Always shown"
 msgstr "Vedno prikazano"
 
-#: package/contents/ui/ConfigEntries.qml:35
+#: package/contents/ui/ConfigEntries.qml:36
 #, kde-format
 msgid "Always hidden"
 msgstr "Vedno skrito"
 
-#: package/contents/ui/ConfigEntries.qml:36
+#: package/contents/ui/ConfigEntries.qml:37
 #, kde-format
 msgid "Disabled"
 msgstr "Onemogočeno"
 
-#: package/contents/ui/ConfigEntries.qml:46
+#: package/contents/ui/ConfigEntries.qml:109
 #, kde-format
 msgid "Application Status"
 msgstr "Stanje aplikacije"
 
-#: package/contents/ui/ConfigEntries.qml:48
+#: package/contents/ui/ConfigEntries.qml:111
 #, kde-format
 msgid "Communications"
 msgstr "Komunikacije"
 
-#: package/contents/ui/ConfigEntries.qml:50
+#: package/contents/ui/ConfigEntries.qml:113
 #, kde-format
 msgid "System Services"
 msgstr "Sistemske storitve"
 
-#: package/contents/ui/ConfigEntries.qml:52
+#: package/contents/ui/ConfigEntries.qml:115
 #, kde-format
 msgid "Hardware Control"
 msgstr "Nadzor strojne opreme"
 
-#: package/contents/ui/ConfigEntries.qml:55
+#: package/contents/ui/ConfigEntries.qml:118
 #, kde-format
 msgid "Miscellaneous"
 msgstr "Razno"
 
-#: package/contents/ui/ConfigEntries.qml:79
+#: package/contents/ui/ConfigEntries.qml:161
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -89,13 +89,13 @@ msgstr ""
 "povzroči nepričakovano vedenje.<nl/><nl/>To nastavitev uporabljajte na "
 "lastno odgovornost in ne poročajte o težavah na KDE oz. avtorju aplikacije."
 
-#: package/contents/ui/ConfigEntries.qml:82
+#: package/contents/ui/ConfigEntries.qml:164
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
 msgstr "Razumem tveganja"
 
-#: package/contents/ui/ConfigEntries.qml:93
+#: package/contents/ui/ConfigEntries.qml:176
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -109,23 +109,23 @@ msgstr ""
 "><nl/>Namesto tega razmislite o konfiguriranju odložišča tako, da "
 "onemogočite njegovo zgodovino ali pa si zapomnite le en element naenkrat."
 
-#: package/contents/ui/ConfigEntries.qml:121
+#: package/contents/ui/ConfigEntries.qml:204
 #, kde-format
 msgctxt "Name of the system tray entry"
 msgid "Entry"
 msgstr "Vnos"
 
-#: package/contents/ui/ConfigEntries.qml:128
+#: package/contents/ui/ConfigEntries.qml:211
 #, kde-format
 msgid "Visibility"
 msgstr "Vidnost"
 
-#: package/contents/ui/ConfigEntries.qml:135
+#: package/contents/ui/ConfigEntries.qml:218
 #, kde-format
 msgid "Keyboard Shortcut"
 msgstr "Bližnjica tipkovnice"
 
-#: package/contents/ui/ConfigEntries.qml:367
+#: package/contents/ui/ConfigEntries.qml:391
 #, kde-format
 msgid "Always show all entries"
 msgstr "Vedno prikazuj vse vnose"
