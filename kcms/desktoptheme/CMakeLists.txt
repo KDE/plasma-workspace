@@ -28,6 +28,7 @@ target_link_libraries(kcm_desktoptheme PRIVATE
   KF6::Svg
   KF6::KCMUtilsQuick
   KF6::Package
+  KF6::ColorScheme
 )
 
 add_executable(plasma-apply-desktoptheme ${plasma-apply-desktoptheme_SRCS})
@@ -39,6 +40,7 @@ target_link_libraries(plasma-apply-desktoptheme
     KF6::CoreAddons
     KF6::KCMUtils
     KF6::I18n
+    KF6::ColorScheme
     Plasma::Plasma
 )
 

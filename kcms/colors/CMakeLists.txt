@@ -22,6 +22,7 @@ target_link_libraries(kcm_colors PRIVATE
     KF6::NewStuffCore
     KF6::KCMUtilsQuick
     KF6::WindowSystem
+    KF6::ColorScheme
     krdb
 )
 
@@ -69,6 +70,7 @@ target_link_libraries(plasma-apply-colorscheme
     KF6::I18n
     KF6::WindowSystem
     KF6::DBusAddons
+    KF6::ColorScheme
     PW::KWorkspace
     X11::X11
     krdb
@@ -94,6 +96,7 @@ target_link_libraries(plasma_accentcolor_service
     KF6::WindowSystem
     KF6::ConfigCore
     KF6::DBusAddons
+    KF6::ColorScheme
     PW::KWorkspace
     X11::X11
     krdb

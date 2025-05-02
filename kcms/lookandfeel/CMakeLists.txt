@@ -47,6 +47,7 @@ target_link_libraries(lookandfeelmanager
     KF6::KCMUtils
     KF6::NewStuffCore
     KF6::Package
+    KF6::ColorScheme
     PlasmaAutostart
     krdb
 )

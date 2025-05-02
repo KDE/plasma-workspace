@@ -14,6 +14,7 @@ target_link_libraries(kcm_fontinst
     KF6::KIOWidgets
     KF6::XmlGui
     KF6::NewStuffWidgets
+    KF6::ColorScheme
     kfontinstui
     kfontinst
     X11::X11

@@ -49,6 +49,7 @@ Dependencies:
     'frameworks/prison': '@latest-kf6'
     'frameworks/kstatusnotifieritem': '@latest-kf6'
     'frameworks/kuserfeedback': '@latest-kf6'
+    'frameworks/kcolorscheme': '@latest-kf6'
     'plasma/kwayland': '@same'
     'plasma/libplasma': '@same'
     'plasma/layer-shell-qt': '@same'

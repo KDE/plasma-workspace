@@ -65,7 +65,7 @@ find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
                     Archive Auth CoreAddons Crash DBusAddons Declarative GlobalAccel GuiAddons
                     I18n IconThemes ItemModels KCMUtils KDED KIO NewStuff Notifications
                     NotifyConfig Package Parts Prison Runner StatusNotifierItem Svg TextEditor
-                    TextWidgets UnitConversion Wallet
+                    TextWidgets UnitConversion Wallet ColorScheme
                     OPTIONAL_COMPONENTS DocTools)
 find_package(Plasma5Support ${PROJECT_DEP_VERSION} REQUIRED)
 find_package(Plasma ${PROJECT_DEP_VERSION} REQUIRED)

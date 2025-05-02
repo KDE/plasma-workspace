@@ -48,6 +48,7 @@ target_link_libraries(kcm_style PRIVATE
     KF6::Archive
     KF6::NewStuffCore
     KF6::XmlGui
+    KF6::ColorScheme
     krdb
 )
 
