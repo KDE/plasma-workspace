@@ -2,7 +2,8 @@ add_subdirectory(kded)
 
 set(colorcorrect_LIB_SRCS
     compositorcoloradaptor.cpp
-    suncalc.cpp suncalc.h
+    suncalc.cpp
+    suntransit.cpp
     )
 
 add_library(colorcorrect ${colorcorrect_LIB_SRCS})
