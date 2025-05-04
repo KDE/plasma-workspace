@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-24 00:43+0000\n"
-"PO-Revision-Date: 2025-03-19 13:15+0100\n"
+"PO-Revision-Date: 2025-05-03 07:10+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: fileinfo.cpp:170
 #, kde-format
@@ -372,14 +372,14 @@ msgstr "As pantallas están reflectidas"
 #, kde-format
 msgctxt "Do not disturb because fullscreen app is focused"
 msgid "Fullscreen app is focused"
-msgstr ""
+msgstr "Unha aplicación a pantalla completa ten o foco."
 
 #: package/contents/ui/FullRepresentation.qml:465
 #: package/contents/ui/FullRepresentation.qml:471
 #, kde-format
 msgctxt "@action:button"
 msgid "View"
-msgstr ""
+msgstr "Ver"
 
 #: package/contents/ui/FullRepresentation.qml:552
 #, kde-format
@@ -443,13 +443,11 @@ msgstr[0] "%1 notificación sen ler"
 msgstr[1] "%1 notificacións sen ler"
 
 #: package/contents/ui/main.qml:91
-#, fuzzy, kde-format
-#| msgid "%1 unread notification"
-#| msgid_plural "%1 unread notifications"
+#, kde-format
 msgid "%1 active notification"
 msgid_plural "%1 active notifications"
-msgstr[0] "%1 notificación sen ler"
-msgstr[1] "%1 notificacións sen ler"
+msgstr[0] "%1 notificación activa"
+msgstr[1] "%1 notificacións activas"
 
 #: package/contents/ui/main.qml:104
 #, kde-format

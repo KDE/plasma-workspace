@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-23 00:44+0000\n"
-"PO-Revision-Date: 2025-01-03 15:08+0100\n"
+"PO-Revision-Date: 2025-04-28 09:18+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: src/fingerprintmodel.cpp:145 src/fingerprintmodel.cpp:229
 #, kde-format
@@ -574,14 +574,13 @@ msgstr "Icona segnaposto con avatar dell'utente"
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User Without Deleting Files?"
-msgstr ""
+msgstr "Vuoi eliminare l'utente registrato senza eliminare i file?"
 
 #: src/ui/UserDetailsPage.qml:115
-#, fuzzy, kde-format
-#| msgid "Delete User…"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User?"
-msgstr "Elimina utente..."
+msgstr "Vuoi eliminare l'utente che ha eseguito l'accesso?"
 
 #: src/ui/UserDetailsPage.qml:117
 #, kde-kuit-format
@@ -591,6 +590,9 @@ msgid ""
 "account instead?<nl/><nl/>This will make %1 unable to log in again, and they "
 "may experience strange behaviors until they log out."
 msgstr ""
+"%1 è attualmente connesso, quindi i suoi file non possono essere eliminati. "
+"Vuoi eliminare solo l'account?<nl/><nl/>Questo impedirà a %1 di accedere "
+"nuovamente e potrebbe causare comportamenti strani finché non si disconnette."
 
 #: src/ui/UserDetailsPage.qml:118
 #, kde-format
@@ -599,13 +601,15 @@ msgid ""
 "%1 is currently logged in. Deleting the account will make them unable to log "
 "in again, and they may experience strange behaviors until they log out."
 msgstr ""
+"%1 è attualmente connesso. L'eliminazione dell'account non consentirà di "
+"effettuare nuovamente l'accesso e potrebbe causare comportamenti strani "
+"finché non si disconnette."
 
 #: src/ui/UserDetailsPage.qml:125
-#, fuzzy, kde-format
-#| msgid "Delete files"
+#, kde-format
 msgctxt "@action: button"
 msgid "Delete %1"
-msgstr "Elimina i file"
+msgstr "Elimina %1"
 
 #: src/ui/UserDetailsPage.qml:144
 #, kde-format

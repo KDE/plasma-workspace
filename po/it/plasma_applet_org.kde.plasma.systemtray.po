@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.systemtray\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-01 00:44+0000\n"
-"PO-Revision-Date: 2025-03-16 07:44+0100\n"
+"PO-Revision-Date: 2025-04-28 09:14+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -105,6 +105,11 @@ msgid ""
 "consider configuring the clipboard to disable its history, or only remember "
 "one item at a time."
 msgstr ""
+"Sconsigliamo di disattivare gli appunti, poiché ciò causerà la perdita dei "
+"dati copiati quando si chiude l'applicazione da cui sono stati copiati.<nl/"
+"><nl/>\n"
+"Considera invece di configurare gli appunti in modo da disattivarne la "
+"cronologia o da ricordare solo un elemento alla volta."
 
 #: package/contents/ui/ConfigEntries.qml:204
 #, kde-format
