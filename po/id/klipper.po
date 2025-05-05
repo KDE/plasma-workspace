@@ -671,7 +671,7 @@ msgstr "Panggil Tindakan Secara Manual di Papan Klip Saat Ini"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
-msgstr "&Sunting Konten..."
+msgstr "&Edit Konten..."
 
 #: klipper.cpp:135
 #, kde-format
