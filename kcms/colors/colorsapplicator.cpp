@@ -100,7 +100,7 @@ QColor OKLabToLinearSRGB(LAB lab)
     const auto g = -1.2684380046 * l + 2.6097574011 * m - 0.3413193965 * s;
     const auto b = -0.0041960863 * l - 0.7034186147 * m + 1.7076147010 * s;
 
-    return QColor::fromRgbF(r, g, b);
+    return QColor::fromRgbF(r, g, b).toRgb();
 }
 
 auto toLinearSRGB = QColorSpace(QColorSpace::SRgb).transformationToColorSpace(QColorSpace::SRgbLinear);
