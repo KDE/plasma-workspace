@@ -152,6 +152,12 @@ QHash<int, QByteArray> DeviceControl::roleNames() const
 void DeviceControl::onDeviceAdded(const QString &udi)
 {
     qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: Added device signal arrived : " << udi;
+
+    if (m_actions.contains(udi)) {
+        qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: Device already exists. Don't add another one : " << udi;
+        return;
+    }
+
     Solid::Device device(udi);
 
     if (!device.isValid()) {
