@@ -236,6 +236,8 @@ Kirigami.PageRow {
             }
 
             QQC2.Label {
+                enabled: enableWheelCheckBox.enabled
+                color: enabled ? Kirigami.Theme.textColor : Kirigami.Theme.disabledTextColor
                 Layout.fillWidth: true
                 Layout.leftMargin: Application.layoutDirection === Qt.LeftToRight
                     ? enableWheelCheckBox.indicator.width + enableWheelCheckBox.spacing
