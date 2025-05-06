@@ -153,6 +153,7 @@ public:
         setenv("XDG_RUNTIME_DIR", tmpRuntimeDir.path().toLocal8Bit().constData(), 1);                                                                          \
         setenv("XDG_CURRENT_DESKTOP", "qtwaylandtests", 1);                                                                                                    \
         setenv("QT_QPA_PLATFORM", "wayland", 1);                                                                                                               \
+        setenv("QT_WAYLAND_DISABLE_FIXED_POSITIONS", "1", 1);                                                                                                  \
         test tc;                                                                                                                                               \
         QApplication app(argc, argv);                                                                                                                          \
         return QTest::qExec(&tc, argc, argv);                                                                                                                  \
