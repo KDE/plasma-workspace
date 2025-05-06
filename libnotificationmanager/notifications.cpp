@@ -882,8 +882,11 @@ void Notifications::showInhibitionSummary()
     }
 
     KNotification::event(u"inhibitionSummary"_s,
-                         i18nc("@title", "Unread Notifications"),
-                         i18nc("@info", "%1 notifications were received while Do Not Disturb was active.", QString::number(inhibited)),
+                         i18ncp("@title", "Unread Notification", "Unread Notifications", inhibited),
+                         i18ncp("@info",
+                                "%1 notification was received while Do Not Disturb was active.",
+                                "%1 notifications were received while Do Not Disturb was active.",
+                                inhibited),
                          u"preferences-desktop-notification-bell"_s,
                          KNotification::CloseOnTimeout,
                          u"libnotificationmanager"_s);
