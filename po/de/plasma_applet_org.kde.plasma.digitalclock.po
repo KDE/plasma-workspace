@@ -3,6 +3,7 @@
 # Burkhard Lück <lueck@hube-lueck.de>, 2014, 2015, 2018, 2019, 2021.
 # Alois Spitzbart <spitz234@hotmail.com>, 2021.
 # Jannick Kuhr <opensource@kuhr.org>, 2023.
+# SPDX-FileCopyrightText: 2025 Flori G <Renner03@protonmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
@@ -16,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.03.70\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: package/contents/config/config.qml:20
 #, kde-format
