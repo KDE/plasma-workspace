@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-24 00:43+0000\n"
-"PO-Revision-Date: 2025-01-25 15:42+0100\n"
+"PO-Revision-Date: 2025-04-15 02:34+0200\n"
 "Last-Translator: Flori G <Renner03@protonmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -97,7 +97,7 @@ msgstr "KDE Plasma %1"
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
-msgstr "Besuchen Sie bugs.kde.org, um Probleme zu berichten"
+msgstr "Besuchen Sie bugs.kde.org, um Probleme zu melden"
 
 #: desktopview.cpp:286
 #, kde-format
@@ -109,7 +109,7 @@ msgstr "Plasma-Version kopieren"
 #, kde-format
 msgctxt "@action:button"
 msgid "Report a Bug…"
-msgstr "Probleme oder Wünsche berichten …"
+msgstr "Ein Problem melden …"
 
 #: desktopview.cpp:302
 #, kde-format
@@ -155,10 +155,9 @@ msgid "Enter Edit Mode"
 msgstr "Bearbeitungsmodus starten"
 
 #: desktopview.cpp:532
-#, fuzzy, kde-format
-#| msgid "Enter Edit Mode"
+#, kde-format
 msgid "Exit Edit Mode"
-msgstr "Bearbeitungsmodus starten"
+msgstr "Bearbeitungsmodus beenden"
 
 #: main.cpp:86
 #, kde-format

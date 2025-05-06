@@ -1,22 +1,24 @@
+# SPDX-FileCopyrightText: 2025 Flori G <Renner03@protonmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kded_geotimezoned\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-10 09:29+0000\n"
-"PO-Revision-Date: 2025-01-12 18:12+0100\n"
-"Last-Translator: Simulacrum\n"
+"PO-Revision-Date: 2025-02-21 18:38+0100\n"
+"Last-Translator: Flori G <Renner03@protonmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 24.12.2\n"
 
 #: geotimezonemodule.cpp:187
 #, kde-format
 msgctxt "OSD, keep short"
 msgid "Time zone changed to %1"
-msgstr ""
+msgstr "Zeitzone auf %1 gestellt"
 
 #: geotimezonemodule.cpp:190
 #, kde-format
@@ -24,14 +26,14 @@ msgctxt ""
 "System clock was changed due to time zone change OSD, keep short: new time "
 "(time zone)"
 msgid "Clock changed to %1 (%2)"
-msgstr ""
+msgstr "Uhr umgestellt auf %1 (%2)"
 
 #: geotimezonemodule.cpp:206
 #, kde-format
 msgid "Refresh is already in progress."
-msgstr ""
+msgstr "Aktualisierung läuft bereits."
 
 #: geotimezonemodule.cpp:269
 #, kde-format
 msgid "Received no or an invalid time zone."
-msgstr ""
+msgstr "Es wurde keine oder eine ungültige Zeitzone empfangen."
