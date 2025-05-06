@@ -514,11 +514,14 @@ void ShellTest::testReorderScreens()
     for (int i = 0; i < orderBefore.size(); ++i) {
         auto *view = m_corona->m_desktopViewForScreen[i];
         desktopViews.append(view);
+
         desktopContainments.append(view->containment());
         screens.append(view->screenToFollow());
 
         QCOMPARE(view->screen()->name(), orderBefore[i]);
         QCOMPARE(view->containment()->screen(), i);
+        QTRY_VERIFY(view->isExposed());
+
     }
 
     // Add a panel for each screen

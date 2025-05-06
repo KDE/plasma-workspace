@@ -78,29 +78,53 @@ LayerSurface::LayerSurface(LayerShell *shell, Surface *surface, Output *output, 
     , m_scope(scope)
     , m_compositor(shell->compositor())
 {
+    connect(output, &Output::destroyed, this, [this]() {
+        send_closed();
+    });
     Q_UNUSED(shell)
+
+    if (!m_requestedOutput) {
+        m_requestedOutput = m_compositor->get<Output>();
+    }
+    if (!m_requestedOutput) {
+        send_closed();
+        return;
+    }
+
+    if (m_requestedOutput) {
+        surface->sendEnter(m_requestedOutput);
+    }
     surface->m_role = this;
     connect(surface, &Surface::commit, this, [this, surface] {
         m_committed = m_pending;
-        qWarning() << "COMMITTED" << m_pending.desiredSize;
 
-        QSize size = m_committed.desiredSize;
-
-        if ((m_committed.anchor & (AnchorLeft | AnchorRight)) == (AnchorLeft | AnchorRight)) {
-            size.setWidth(m_requestedOutput->mode().resolution.width());
-        }
-        if ((m_committed.anchor & (AnchorTop | AnchorBottom)) == (AnchorTop | AnchorBottom)) {
-            size.setHeight(m_requestedOutput->mode().resolution.height());
-        }
-
-        if (m_pending.pendingSize == size) {
-            qWarning() << "SKIPPING";
+        // we received a configure after the output was destroyed
+        // this layer shell is defunct
+        if (!m_requestedOutput) {
             return;
         }
 
+        const QSize outputSize = m_requestedOutput->mode().resolution;
+        QSize size = m_committed.desiredSize;
+
+        if ((m_committed.anchor & (AnchorLeft | AnchorRight)) == (AnchorLeft | AnchorRight)) {
+            size.setWidth(outputSize.width());
+        }
+        if ((m_committed.anchor & (AnchorTop | AnchorBottom)) == (AnchorTop | AnchorBottom)) {
+            size.setHeight(outputSize.height());
+        }
+
+        if (surface->m_mapHandled && !surface->m_committed.buffer) {
+            // we were mapped, but now we're not
+            return;
+        }
+
+        if (size == m_committedSize) {
+            return;
+        }
+        m_committedSize = size;
+
         const uint serial = m_compositor->nextSerial();
-        m_pending.pendingSize = size;
-        qWarning() << "SEND CONFIGURE" << size << serial;
         send_configure(serial, size.width(), size.height());
     });
 }
@@ -109,14 +133,12 @@ void LayerSurface::zwlr_layer_surface_v1_set_anchor(Resource *resource, uint32_t
 {
     Q_UNUSED(resource);
     m_pending.anchor = anchor;
-    qWarning() << "SETTING ANCHOR" << anchor;
 }
 
 void LayerSurface::zwlr_layer_surface_v1_set_size(Resource *resource, uint32_t width, uint32_t height)
 {
     Q_UNUSED(resource);
     m_pending.desiredSize = QSize(width, height);
-    qWarning() << "SETTING DESIRED" << m_pending.desiredSize;
 }
 
 } // namespace MockCompositor

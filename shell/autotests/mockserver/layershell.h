@@ -80,6 +80,7 @@ public:
         QSize pendingSize = QSize(0, 0);
         uint32_t anchor = 0;
     } m_pending, m_committed;
+    QSize m_committedSize;
     QString m_scope;
 
 private:

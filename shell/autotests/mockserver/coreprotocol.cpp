@@ -41,6 +41,9 @@ void Surface::sendFrameCallbacks()
 
 void Surface::sendEnter(Output *output)
 {
+    if (m_outputs.contains(output)) {
+        return;
+    }
     m_outputs.append(output);
     const auto outputResources = output->resourceMap().values(resource()->client());
     for (auto outputResource : outputResources)
@@ -97,6 +100,7 @@ void Surface::surface_commit(Resource *resource)
         Q_EMIT bufferCommitted();
     else {
         m_role = nullptr;
+        m_mapHandled = false;
     }
 }
 

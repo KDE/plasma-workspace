@@ -56,8 +56,8 @@ DefaultCompositor::DefaultCompositor()
 
                 if (!surface->m_mapHandled) {
                     Output *output = get<Output>();
-                    if (auto layerSurface = qobject_cast<LayerSurface *>(surface->m_role)) {
-                        output = layerSurface->m_requestedOutput;
+                    if (qobject_cast<LayerSurface *>(surface->m_role)) {
+                        return;
                     }
 
                     if (m_config.autoEnter && output) {
