@@ -114,6 +114,34 @@ Item {
 
         anchors.fill: parent
 
+        NumberAnimation {
+            target: view
+            property: "map.zoomLevel"
+            id: zoomLevelAnimation
+            running: false
+            duration: Kirigami.Units.shortDuration
+            easing.type: Easing.InOutCubic
+        }
+        CoordinateAnimation {
+            id: coordAnimation
+            target: view
+            property: "map.center"
+            // HACK: The Map QML element has a bug that sometimes resets
+            // its center to the default value when assigned a new
+            // (valid) coordinate. To avoid this, we make the animation
+            // always last at least one frame, which effectively acts
+            // as a timer and re-sets the coordinate to the correct one
+            // after that frame. This is not visible by the user but
+            // works around the map bug.
+            duration: Kirigami.Units.shortDuration + 1
+            easing.type: Easing.InOutCubic
+            running: false
+        }
+        function animateCenterTo(coordinate) {
+            coordAnimation.to = coordinate
+            coordAnimation.running = true
+        }
+
         map {
             plugin: Plugin {
                 name: "osm"
@@ -138,26 +166,6 @@ Item {
                 view.map.bearing = 0
             }
             activeMapType: view.map.supportedMapTypes[0]
-
-            NumberAnimation on zoomLevel {
-                id: zoomLevelAnimation
-                running: false
-                duration: Kirigami.Units.shortDuration
-                easing.type: Easing.InOutCubic
-            }
-            Behavior on center {
-                CoordinateAnimation {
-                    // HACK: The Map QML element has a bug that sometimes resets
-                    // its center to the default value when assigned a new
-                    // (valid) coordinate. To avoid this, we make the animation
-                    // always last at least one frame, which effectively acts
-                    // as a timer and re-sets the coordinate to the correct one
-                    // after that frame. This is not visible by the user but
-                    // works around the map bug.
-                    duration: Kirigami.Units.shortDuration + 1
-                    easing.type: Easing.InOutCubic
-                }
-            }
 
             onCopyrightLinkActivated: (link) => { Qt.openUrlExternally(link); }
         }
