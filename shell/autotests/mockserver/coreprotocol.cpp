@@ -96,7 +96,6 @@ void Surface::surface_commit(Resource *resource)
     if (m_committed.commitSpecific.attached)
         Q_EMIT bufferCommitted();
     else {
-        m_mapHandled = false;
         m_role = nullptr;
     }
 }
