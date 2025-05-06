@@ -50,6 +50,11 @@ PlasmaExtras.Representation {
     KeyNavigation.tab: playerSelector.count ? playerSelector.currentItem : (seekSlider.visible ? seekSlider : seekSlider.KeyNavigation.down)
     KeyNavigation.down: KeyNavigation.tab
 
+    function isForwardArrowKey(key: int) : bool {
+        return ((key === Qt.Key_Right && Application.layoutDirection === Qt.LeftToRight)
+            ||  (key === Qt.Key_Left  && Application.layoutDirection === Qt.RightToLeft))
+    }
+
     onPositionChanged: {
         // we don't want to interrupt the user dragging the slider
         if (!seekSlider.pressed && !keyPressed) {
@@ -93,11 +98,10 @@ PlasmaExtras.Representation {
             }
         }
 
-        // the controls handle arrow keys on their own, but if the representation itself has focus
-        // it looks like the tabbar does, so treat it as such
         if ((event.key == Qt.Key_Left || event.key == Qt.Key_Right) && playerSelector.visible) {
-            event.accepted = true
-            playerSelector.forceActiveFocus(Qt.TabFocusReason)
+            // the controls handle arrow keys on their own, but if the representation itself has focus
+            // it looks like the tabbar does, so treat it as such...
+            playerSelector.currentItem.forceActiveFocus(Qt.TabFocusReason)
             playerSelector.handleArrows(event)
         }
 
@@ -142,6 +146,15 @@ PlasmaExtras.Representation {
             } else if (event.key >= Qt.Key_0 && event.key <= Qt.Key_9) {
                 // jump to percentage, ie. 0 = beginnign, 1 = 10% of total length etc
                 seekSlider.value = seekSlider.to * (event.key - Qt.Key_0) / 10
+                seekSlider.moved();
+            } else if ((Window.activeFocusItem === this) && (event.key == Qt.Key_Left || event.key == Qt.Key_Right)) {
+                // only handle if we're actually the activeFocusItem, or onReleased events from everywhere will trigger
+                seekSlider.forceActiveFocus(Qt.TabFocusReason)
+                if (isForwardArrowKey(event.key)) {
+                    seekSlider.value = Math.min(seekSlider.to, seekSlider.value + 5000000)
+                } else {
+                    seekSlider.value = Math.max(0, seekSlider.value - 5000000) // microseconds
+                }
                 seekSlider.moved();
             } else {
                 event.accepted = false
@@ -805,9 +818,7 @@ PlasmaExtras.Representation {
 
             // immediately update content on arrow key press the way other plasmoids do (e.g. weather, volume)
             function handleArrows(event: KeyEvent): void {
-                let forwardArrowKey = (event.key === Qt.Key_Right && Application.layoutDirection === Qt.LeftToRight) ||
-                    (event.key === Qt.Key_Left && Application.layoutDirection === Qt.RightToLeft)
-                if (forwardArrowKey) {
+                if (isForwardArrowKey(event.key)) {
                     mpris2Model.currentIndex = Math.min(currentIndex+1, count-1)
                 } else {
                     mpris2Model.currentIndex = Math.max(currentIndex-1, 0)
@@ -833,6 +844,7 @@ PlasmaExtras.Representation {
                     Accessible.onPressAction: clicked()
                     KeyNavigation.down: seekSlider.visible ? seekSlider : seekSlider.KeyNavigation.down
                     KeyNavigation.backtab: expandedRepresentation.KeyNavigation.backtab || repeatButton
+                    KeyNavigation.up: expandedRepresentation.KeyNavigation.backtab || null
                     Keys.onLeftPressed: event => playerSelector.handleArrows(event)
                     Keys.onRightPressed: event => playerSelector.handleArrows(event)
 
