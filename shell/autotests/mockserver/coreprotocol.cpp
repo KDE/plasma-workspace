@@ -69,7 +69,6 @@ void Surface::surface_attach(Resource *resource, wl_resource *buffer, int32_t x,
 {
     Q_UNUSED(resource);
     QPoint offset(x, y);
-    Q_ASSERT(!m_pending.buffer);
     m_pending.buffer = fromResource<Buffer>(buffer);
     m_pending.commitSpecific.attachOffset = offset;
     m_pending.commitSpecific.attached = m_pending.buffer;
@@ -93,6 +92,7 @@ void Surface::surface_commit(Resource *resource)
 
     m_pending.commitSpecific = PerCommitData();
     Q_EMIT commit();
+    sendFrameCallbacks();
     if (m_committed.commitSpecific.attached)
         Q_EMIT bufferCommitted();
     else {
