@@ -2,6 +2,7 @@
 # Frederik Schwarzer <schwarzer@kde.org>, 2014, 2016, 2018, 2022.
 # Burkhard Lück <lueck@hube-lueck.de>, 2014, 2017, 2021.
 # Jannick Kuhr <opensource@kuhr.org>, 2023.
+# SPDX-FileCopyrightText: 2025 Flori G <Renner03@protonmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.mediacontroller\n"
@@ -15,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.11.70\n"
+"X-Generator: Lokalize 24.12.2\n"
 
 #: package/contents/ui/AlbumArtStackView.qml:190
 #, kde-format

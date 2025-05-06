@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2024 Flori G <Renner03@protonmail.com>
+# SPDX-FileCopyrightText: 2024, 2025 Flori G <Renner03@protonmail.com>
 # Burkhard Lück <lueck@hube-lueck.de>, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021.
 # Markus Slopianka <markus.s@kdemail.net>, 2012, 2013.
 # Frederik Schwarzer <schwarzer@kde.org>, 2013, 2015, 2016, 2020.
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: libkicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-11 02:38+0000\n"
-"PO-Revision-Date: 2024-09-22 20:53+0200\n"
+"PO-Revision-Date: 2025-04-20 18:36+0200\n"
 "Last-Translator: Flori G <Renner03@protonmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.1\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: plugin/actionlist.cpp:86
 #, kde-format
@@ -245,11 +245,12 @@ msgstr "Sitzung speichern"
 msgid "Switch User"
 msgstr "Benutzer wechseln"
 
+# Standby-Modus ist zu lang, führt dazu, dass die Standardgröße von Kickoff nicht ausreicht und vom Nutzer manuell größer gemacht werden muss.
 #: plugin/systementry.cpp:207
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
-msgstr "Standby-Modus"
+msgstr "Standby"
 
 #: plugin/systementry.cpp:210
 #, kde-format
