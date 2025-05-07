@@ -127,6 +127,7 @@ void AbstractNotificationsModel::Private::onNotificationReplaced(uint replacedId
     newNotification.setDismissed(oldNotification.dismissed());
     newNotification.setRead(oldNotification.read());
     newNotification.setWasAddedDuringInhibition(Server::self().inhibited());
+    newNotification.setNotifiedWasMissed(oldNotification.notifiedWasMissed());
 
     notifications[row] = newNotification;
     const QModelIndex idx = q->index(row, 0);
@@ -452,6 +453,12 @@ bool AbstractNotificationsModel::setData(const QModelIndex &index, const QVarian
     case Notifications::WasAddedDuringInhibitionRole:
         if (bool v = value.toBool(); v != notification.wasAddedDuringInhibition()) {
             notification.setWasAddedDuringInhibition(v);
+            dirty = true;
+        }
+        break;
+    case Notifications::NotifiedWasMissedRole:
+        if (bool v = value.toBool(); v != notification.notifiedWasMissed()) {
+            notification.setNotifiedWasMissed(v);
             dirty = true;
         }
         break;

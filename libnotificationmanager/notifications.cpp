@@ -869,27 +869,50 @@ void Notifications::collapseAllGroups()
 
 void Notifications::showInhibitionSummary()
 {
-    int inhibited = 0;
+    // Find all notifications that were added during inhibition, that we haven't yet notified were missed.
+    QModelIndexList matchedNotifications;
     for (int i = 0, count = d->notificationsAndJobsModel->rowCount(); i < count; ++i) {
         const QModelIndex idx = d->notificationsAndJobsModel->index(i, 0);
-        if (!idx.data(Notifications::ReadRole).toBool() && idx.data(Notifications::WasAddedDuringInhibitionRole).toBool()) {
-            ++inhibited;
+        bool notRead = !idx.data(Notifications::ReadRole).toBool();
+        bool wasAddedDuringInhibition = idx.data(Notifications::WasAddedDuringInhibitionRole).toBool();
+        bool notifiedWasMissed = idx.data(Notifications::NotifiedWasMissedRole).toBool();
+        if (notRead && wasAddedDuringInhibition && !notifiedWasMissed) {
+            matchedNotifications.append(idx);
         }
     }
 
-    if (!inhibited) {
+    int inhibitedCount = matchedNotifications.count();
+
+    if (!inhibitedCount) {
         return;
     }
 
+    // // Mark that we have notified the user about these missed notifications, so we
+    // // don't send repeat notifications about them.
+    for (const QModelIndex &idx : matchedNotifications) {
+        d->notificationsAndJobsModel->setData(idx, true, Notifications::NotifiedWasMissedRole);
+    }
+
+    // Debug message with the content of the notifications and their NotifiedWasMissedRole
+    for (const QModelIndex &idx : matchedNotifications) {
+        qCDebug(NOTIFICATIONMANAGER) << "IdRole:" << idx.data(Notifications::IdRole).toUInt()
+                                     << "SummaryRole:" << idx.data(Notifications::SummaryRole).toString()
+                                     << "BodyRole:" << idx.data(Notifications::BodyRole).toString()
+                                     << "NotifiedWasMissedRole:" << idx.data(Notifications::NotifiedWasMissedRole).toBool();
+    }
+
+    // Show a notification to inform the user about the missed notifications.
     KNotification::event(u"inhibitionSummary"_s,
-                         i18ncp("@title", "Unread Notification", "Unread Notifications", inhibited),
+                         i18ncp("@title", "Unread Notification", "Unread Notifications", inhibitedCount),
                          i18ncp("@info",
                                 "%1 notification was received while Do Not Disturb was active.",
                                 "%1 notifications were received while Do Not Disturb was active.",
-                                inhibited),
+                                inhibitedCount),
                          u"preferences-desktop-notification-bell"_s,
                          KNotification::CloseOnTimeout,
                          u"libnotificationmanager"_s);
+
+    qCDebug(NOTIFICATIONMANAGER) << "Notified the user about" << inhibitedCount << "missed notifications";
 }
 
 QVariant Notifications::data(const QModelIndex &index, int role) const

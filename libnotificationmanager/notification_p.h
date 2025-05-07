@@ -98,6 +98,8 @@ public:
     bool transient = false;
 
     bool wasAddedDuringInhibition = false;
+
+    bool notifiedWasMissed = false;
 };
 
 } // namespace NotificationManager

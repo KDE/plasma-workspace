@@ -134,6 +134,9 @@ public:
     bool wasAddedDuringInhibition() const;
     void setWasAddedDuringInhibition(bool value);
 
+    bool notifiedWasMissed() const;
+    void setNotifiedWasMissed(bool value);
+
 private:
     friend class NotificationsModel;
     friend class AbstractNotificationsModel;

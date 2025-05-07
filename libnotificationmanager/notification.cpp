@@ -858,3 +858,13 @@ void Notification::setWasAddedDuringInhibition(bool value)
 {
     d->wasAddedDuringInhibition = value;
 }
+
+bool Notification::notifiedWasMissed() const
+{
+    return d->notifiedWasMissed;
+}
+
+void Notification::setNotifiedWasMissed(bool value)
+{
+    d->notifiedWasMissed = value;
+}

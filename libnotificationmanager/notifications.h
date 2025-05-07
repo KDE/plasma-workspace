@@ -305,6 +305,7 @@ public:
         TransientRole, ///< Whether the notification is transient and should not be kept in history. @since 5.22
 
         WasAddedDuringInhibitionRole, ///< Whether the notification was added while inhibition was active. @since 6.3
+        NotifiedWasMissedRole, ///< Whether we have notified the user this notification was missed while inhibition was active. @since 6.4
         HintsRole, ///< To provide extra data to a notification server that the server may be able to make use of. @since 6.4
         DismissableRole, ///< Whether a notification can be dismissed (minimized). @since 6.4
     };
