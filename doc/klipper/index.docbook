@@ -131,15 +131,11 @@ Use the mouse or cursor keys to select a program, and &klipper; will run
 this program, opening the address pointed to by the
 selection.</para>
 
-<para>If you do not want to perform any actions on the clipboard
-contents, select <guimenuitem>Disable This Popup</guimenuitem> on the pop-up menu
-to return to what you were doing before. If you leave the menu, it will
-disappear, leaving you to continue your work. You can change the time
-that the menu remains for in the settings 
-dialog, with the option <guilabel>Show action popup menu</guilabel>
-under the <guilabel>General</guilabel> page. You can separately disable the 
-file path part using the option <guilabel>Include MIME actions</guilabel> under
-the <guilabel>Action Menu</guilabel> page.</para>
+<para>You can change the time that the menu remains for in the settings dialog,
+with the option <guilabel>Show action popup menu</guilabel> under the
+<guilabel>General</guilabel> page. You can separately disable the  file path
+part using the option <guilabel>Include MIME actions</guilabel> under the
+<guilabel>Action Menu</guilabel> page.</para>
 
 <para>Actions can be disabled completely by pressing
 the shortcut <keycombo action="simul">&Ctrl;&Alt;<keycap>X</keycap></keycombo>.</para>
