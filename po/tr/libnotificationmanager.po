@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-01 00:43+0000\n"
+"POT-Creation-Date: 2025-05-07 00:44+0000\n"
 "PO-Revision-Date: 2025-01-09 15:45+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -104,13 +104,21 @@ msgid "Application closed unexpectedly."
 msgstr "Uygulama beklenmedik bir biçimde kapatıldı."
 
 #: notifications.cpp:885
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Unread Notifications"
 msgctxt "@title"
-msgid "Unread Notifications"
-msgstr "Okunmamış Bildirimler"
+msgid "Unread Notification"
+msgid_plural "Unread Notifications"
+msgstr[0] "Okunmamış Bildirimler"
+msgstr[1] "Okunmamış Bildirimler"
 
-#: notifications.cpp:886
-#, kde-format
+#: notifications.cpp:887
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid "%1 notifications were received while Do Not Disturb was active."
 msgctxt "@info"
-msgid "%1 notifications were received while Do Not Disturb was active."
-msgstr "Rahatsız Etmeyin kipi etkinken %1 bildirim alındı."
+msgid "%1 notification was received while Do Not Disturb was active."
+msgid_plural "%1 notifications were received while Do Not Disturb was active."
+msgstr[0] "Rahatsız Etmeyin kipi etkinken %1 bildirim alındı."
+msgstr[1] "Rahatsız Etmeyin kipi etkinken %1 bildirim alındı."

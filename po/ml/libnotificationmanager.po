@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-01 00:43+0000\n"
+"POT-Creation-Date: 2025-05-07 00:44+0000\n"
 "PO-Revision-Date: 2020-11-25 19:54+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -119,11 +119,15 @@ msgstr "പ്രയോഗം അപ്രതീക്ഷിതമായി അ�
 #: notifications.cpp:885
 #, kde-format
 msgctxt "@title"
-msgid "Unread Notifications"
-msgstr ""
+msgid "Unread Notification"
+msgid_plural "Unread Notifications"
+msgstr[0] ""
+msgstr[1] ""
 
-#: notifications.cpp:886
+#: notifications.cpp:887
 #, kde-format
 msgctxt "@info"
-msgid "%1 notifications were received while Do Not Disturb was active."
-msgstr ""
+msgid "%1 notification was received while Do Not Disturb was active."
+msgid_plural "%1 notifications were received while Do Not Disturb was active."
+msgstr[0] ""
+msgstr[1] ""
