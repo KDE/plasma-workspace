@@ -1,15 +1,15 @@
 # Spanish translations for libnotificationmanager.po package.
-# Copyright (C) 2019 This file is copyright:
+# Copyright (C) 2019-2025 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-#
 # Automatically generated, 2019.
+#
 # SPDX-FileCopyrightText: 2019, 2022, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: libnotificationmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-07 00:44+0000\n"
-"PO-Revision-Date: 2025-01-09 04:28+0100\n"
+"PO-Revision-Date: 2025-05-07 18:15+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: abstractnotificationsmodel.cpp:340
 #, kde-format
@@ -105,25 +105,20 @@ msgid "Application closed unexpectedly."
 msgstr "La aplicación se ha cerrado de forma no esperada."
 
 #: notifications.cpp:885
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Unread Notifications"
+#, kde-format
 msgctxt "@title"
 msgid "Unread Notification"
 msgid_plural "Unread Notifications"
-msgstr[0] "Notificaciones sin leer"
+msgstr[0] "Notificación sin leer"
 msgstr[1] "Notificaciones sin leer"
 
 #: notifications.cpp:887
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "%1 notifications were received while Do Not Disturb was active."
+#, kde-format
 msgctxt "@info"
 msgid "%1 notification was received while Do Not Disturb was active."
 msgid_plural "%1 notifications were received while Do Not Disturb was active."
 msgstr[0] ""
-"Se han recibido %1 notificaciones mientra estaba activo el modo «No "
-"molestar»."
+"Se ha recibido %1 notificación mientras estaba activo el modo «No molestar»."
 msgstr[1] ""
-"Se han recibido %1 notificaciones mientra estaba activo el modo «No "
+"Se han recibido %1 notificaciones mientras estaba activo el modo «No "
 "molestar»."

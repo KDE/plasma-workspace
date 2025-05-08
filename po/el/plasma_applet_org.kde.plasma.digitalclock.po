@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-25 00:43+0000\n"
+"POT-Creation-Date: 2025-05-08 00:44+0000\n"
 "PO-Revision-Date: 2024-08-24 10:59+0300\n"
 "Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -385,7 +385,7 @@ msgstr ""
 "Εναλλαγή της εμφανιζόμενης ζώνης ώρας με κύλιση πάνω από το συστατικό "
 "ρολογιού"
 
-#: package/contents/ui/configTimeZones.qml:246
+#: package/contents/ui/configTimeZones.qml:248
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
@@ -394,7 +394,7 @@ msgstr ""
 "Η χρήση αυτής της λειτουργίας δεν αλλάζει τη ζώνη ώρας σε όλο το σύστημα. "
 "Όταν ταξιδεύετε, αλλάξτε τη ζώνη ώρας σε όλο το σύστημα."
 
-#: package/contents/ui/configTimeZones.qml:256
+#: package/contents/ui/configTimeZones.qml:258
 #, fuzzy, kde-format
 #| msgid "Time Zones"
 msgid "Choose Time Zone"

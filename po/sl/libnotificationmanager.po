@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-07 00:44+0000\n"
-"PO-Revision-Date: 2025-01-09 07:25+0100\n"
+"PO-Revision-Date: 2025-05-07 06:33+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.6\n"
 
 #: abstractnotificationsmodel.cpp:340
 #, kde-format
@@ -119,25 +119,21 @@ msgid "Application closed unexpectedly."
 msgstr "Program se je nepričakovano zaprl."
 
 #: notifications.cpp:885
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Unread Notifications"
+#, kde-format
 msgctxt "@title"
 msgid "Unread Notification"
 msgid_plural "Unread Notifications"
 msgstr[0] "Neprebrana obvestila"
-msgstr[1] "Neprebrana obvestila"
-msgstr[2] "Neprebrana obvestila"
+msgstr[1] "Neprebrano obvestilo"
+msgstr[2] "Neprebrani obvestili"
 msgstr[3] "Neprebrana obvestila"
 
 #: notifications.cpp:887
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "%1 notifications were received while Do Not Disturb was active."
+#, kde-format
 msgctxt "@info"
 msgid "%1 notification was received while Do Not Disturb was active."
 msgid_plural "%1 notifications were received while Do Not Disturb was active."
 msgstr[0] "Prejetih je bilo %1 obvestil med aktivnim načinom Ne moti."
-msgstr[1] "Prejetih je bilo %1 obvestil med aktivnim načinom Ne moti."
-msgstr[2] "Prejetih je bilo %1 obvestil med aktivnim načinom Ne moti."
+msgstr[1] "Prejeto je bilo %1 obvestilo med aktivnim načinom Ne moti."
+msgstr[2] "Prejeti sta bili %1 obvestili med aktivnim načinom Ne moti."
 msgstr[3] "Prejetih je bilo %1 obvestil med aktivnim načinom Ne moti."

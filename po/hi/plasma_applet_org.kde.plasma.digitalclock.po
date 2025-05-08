@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-25 00:43+0000\n"
+"POT-Creation-Date: 2025-05-08 00:44+0000\n"
 "PO-Revision-Date: 2024-12-15 19:31+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Hindi <kde-i18n-doc@kde.org>\n"
@@ -400,7 +400,7 @@ msgstr ""
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr "घड़ी एप्लेट पर स्क्रॉल करके प्रदर्शित समय क्षेत्र बदलें"
 
-#: package/contents/ui/configTimeZones.qml:246
+#: package/contents/ui/configTimeZones.qml:248
 #, fuzzy, kde-format
 #| msgid ""
 #| "Note that using a different time zone for the clock does not change the "
@@ -413,7 +413,7 @@ msgstr ""
 "ध्यान दें कि घड़ी के लिए किसी भिन्न समय क्षेत्र का उपयोग करने से तंत्रव्यापी स्थानीय समय "
 "क्षेत्र नहीं बदलता है। जब आप यात्रा करते हैं, तो इसके बजाय स्थानीय समय क्षेत्र बदलें।"
 
-#: package/contents/ui/configTimeZones.qml:256
+#: package/contents/ui/configTimeZones.qml:258
 #, fuzzy, kde-format
 #| msgid "Time Zones"
 msgid "Choose Time Zone"

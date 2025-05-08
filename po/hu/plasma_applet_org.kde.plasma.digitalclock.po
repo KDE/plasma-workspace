@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-25 00:43+0000\n"
+"POT-Creation-Date: 2025-05-08 00:44+0000\n"
 "PO-Revision-Date: 2025-01-24 20:48+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -383,7 +383,7 @@ msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr ""
 "Megjelenített időzónák közti váltás az óra kisalkalmazás feletti görgetéssel"
 
-#: package/contents/ui/configTimeZones.qml:246
+#: package/contents/ui/configTimeZones.qml:248
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
@@ -392,7 +392,7 @@ msgstr ""
 "A funkció használata nem változtatja meg a rendszerszintű időzónát. Ha "
 "utazik, inkább állítsa át azt."
 
-#: package/contents/ui/configTimeZones.qml:256
+#: package/contents/ui/configTimeZones.qml:258
 #, fuzzy, kde-format
 #| msgid "Time Zones"
 msgid "Choose Time Zone"

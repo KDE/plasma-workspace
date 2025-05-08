@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-25 00:43+0000\n"
+"POT-Creation-Date: 2025-05-08 00:44+0000\n"
 "PO-Revision-Date: 2024-09-03 08:37+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -379,7 +379,7 @@ msgstr ""
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr "Přepnout zobrazené časové pásmo rolováním přes applet hodin"
 
-#: package/contents/ui/configTimeZones.qml:246
+#: package/contents/ui/configTimeZones.qml:248
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
@@ -388,7 +388,7 @@ msgstr ""
 "Použití této funkce nezmění časové pásmo napříč systémem. Pokud cestujete, "
 "přepněte raději na místní časové pásmo."
 
-#: package/contents/ui/configTimeZones.qml:256
+#: package/contents/ui/configTimeZones.qml:258
 #, kde-format
 msgid "Choose Time Zone"
 msgstr ""

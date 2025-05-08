@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kgeography\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-25 00:43+0000\n"
+"POT-Creation-Date: 2025-05-08 00:44+0000\n"
 "PO-Revision-Date: 2023-02-15 16:03+0000\n"
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
@@ -1147,7 +1147,7 @@ msgstr ""
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr "Mudar o fuso-horário apresentado ao deslizar o elemento do relógio"
 
-#: package/contents/ui/configTimeZones.qml:246
+#: package/contents/ui/configTimeZones.qml:248
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
@@ -1156,7 +1156,7 @@ msgstr ""
 "Se usar esta funcionalidade, não muda o fuso-horário local a nível do "
 "sistema. Quando viajar, mude o fuso-horário local em alternativa."
 
-#: package/contents/ui/configTimeZones.qml:256
+#: package/contents/ui/configTimeZones.qml:258
 #, fuzzy, kde-format
 #| msgid "Time Zones"
 msgid "Choose Time Zone"

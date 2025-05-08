@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-25 00:43+0000\n"
+"POT-Creation-Date: 2025-05-08 00:44+0000\n"
 "PO-Revision-Date: 2025-04-25 12:15+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -382,7 +382,7 @@ msgstr ""
 "Cambiar la zona horaria mostrada desplazando sobre la miniaplicación del "
 "reloj"
 
-#: package/contents/ui/configTimeZones.qml:246
+#: package/contents/ui/configTimeZones.qml:248
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
@@ -391,7 +391,7 @@ msgstr ""
 "El uso de esta función no cambia la zona horaria del sistema. Cuando viaje, "
 "cambie la zona horaria del sistema en lugar de esto."
 
-#: package/contents/ui/configTimeZones.qml:256
+#: package/contents/ui/configTimeZones.qml:258
 #, kde-format
 msgid "Choose Time Zone"
 msgstr "Elegir zona horaria"

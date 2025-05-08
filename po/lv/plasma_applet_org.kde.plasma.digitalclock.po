@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-25 00:43+0000\n"
+"POT-Creation-Date: 2025-05-08 00:44+0000\n"
 "PO-Revision-Date: 2025-03-03 17:02+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -376,7 +376,7 @@ msgstr ""
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr "Pārslēgt laika joslas ritinot peles ritenīti virs pulksteņa"
 
-#: package/contents/ui/configTimeZones.qml:246
+#: package/contents/ui/configTimeZones.qml:248
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
@@ -385,7 +385,7 @@ msgstr ""
 "Šīs iespējas izmantošana nemainīs sistēmas laika joslu. Ja ceļojat, tad tā "
 "vietā mainiet sistēmas laika joslu."
 
-#: package/contents/ui/configTimeZones.qml:256
+#: package/contents/ui/configTimeZones.qml:258
 #, kde-format
 msgid "Choose Time Zone"
 msgstr "Izvēlieties laika joslu"

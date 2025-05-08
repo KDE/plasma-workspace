@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-25 00:43+0000\n"
+"POT-Creation-Date: 2025-05-08 00:44+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -374,7 +374,7 @@ msgstr ""
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr "鼠标滚轮在时钟挂件上滚动时切换显示的时区"
 
-#: package/contents/ui/configTimeZones.qml:246
+#: package/contents/ui/configTimeZones.qml:248
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
@@ -383,7 +383,7 @@ msgstr ""
 "此功能仅切换当前显示的时区，不会更改系统全局时区。如果您正在旅行，请记得更改"
 "系统全局时区。"
 
-#: package/contents/ui/configTimeZones.qml:256
+#: package/contents/ui/configTimeZones.qml:258
 #, kde-format
 msgid "Choose Time Zone"
 msgstr "选择时区"

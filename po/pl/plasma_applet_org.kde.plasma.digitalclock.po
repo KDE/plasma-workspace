@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-25 00:43+0000\n"
+"POT-Creation-Date: 2025-05-08 00:44+0000\n"
 "PO-Revision-Date: 2025-02-23 12:30+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -380,7 +380,7 @@ msgstr ""
 "Przełącz wyświetlaną strefę czasową przewijając kółkiem myszy na aplecie "
 "zegara"
 
-#: package/contents/ui/configTimeZones.qml:246
+#: package/contents/ui/configTimeZones.qml:248
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
@@ -389,7 +389,7 @@ msgstr ""
 "Użycie tego nie zmieni systemowej strefy czasowej. Gdy podróżujesz, to "
 "zamiast tego zmień systemową strefę czasową."
 
-#: package/contents/ui/configTimeZones.qml:256
+#: package/contents/ui/configTimeZones.qml:258
 #, kde-format
 msgid "Choose Time Zone"
 msgstr "Wybierz strefę czasową"

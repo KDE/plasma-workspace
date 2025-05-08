@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-25 00:43+0000\n"
+"POT-Creation-Date: 2025-05-08 00:44+0000\n"
 "PO-Revision-Date: 2025-04-27 12:18+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -378,7 +378,7 @@ msgstr ""
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr "கடிகாரத்தின் மீது சுட்டியின் சக்கரத்தை உருட்டி காட்டப்படும் நேரமண்டலத்தை மாற்றுங்கள்"
 
-#: package/contents/ui/configTimeZones.qml:246
+#: package/contents/ui/configTimeZones.qml:248
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
@@ -387,7 +387,7 @@ msgstr ""
 "இந்த அம்சம், கணினியின் கால மண்டலத்தை மாற்றாது. பயணிக்கும்போது, இதற்கு பதிலாக கணினி "
 "முழுவதற்குமான நேரமண்டலத்தையே மாற்றி அமையுங்கள்."
 
-#: package/contents/ui/configTimeZones.qml:256
+#: package/contents/ui/configTimeZones.qml:258
 #, kde-format
 msgid "Choose Time Zone"
 msgstr "நேரமண்டலத்தை தேர்ந்தெடு"
