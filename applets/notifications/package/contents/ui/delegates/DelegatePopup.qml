@@ -137,6 +137,7 @@ BaseDelegate {
         PlasmaComponents3.ScrollView {
             id: scroll
             anchors.fill: parent
+            contentWidth: bodyLabel.width
 
             // This avoids a binding loop
             PlasmaComponents3.ScrollBar.vertical.visible: modelInterface.maximumLineCount > 0 && bodyLabel.implicitHeight > parent.Layout.maximumHeight
