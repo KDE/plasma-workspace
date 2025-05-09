@@ -560,7 +560,7 @@ public:
     /**
      * Shows a notification to report the number of unread inhibited notifications.
      */
-    Q_INVOKABLE void showInhibitionSummary();
+    Q_INVOKABLE void showInhibitionSummary(Urgency urgency, const QStringList &blacklistedDesktopEntries, const QStringList &blacklistedNotifyRcNames);
 
     QVariant data(const QModelIndex &index, int role) const override;
     bool setData(const QModelIndex &index, const QVariant &value, int role) override;

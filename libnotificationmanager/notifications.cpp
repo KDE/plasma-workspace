@@ -867,14 +867,32 @@ void Notifications::collapseAllGroups()
     }
 }
 
-void Notifications::showInhibitionSummary()
+void Notifications::showInhibitionSummary(Urgency urgency, const QStringList &blacklistedDesktopEntries, const QStringList &blacklistedNotifyRcNames)
 {
     int inhibited = 0;
     for (int i = 0, count = d->notificationsAndJobsModel->rowCount(); i < count; ++i) {
         const QModelIndex idx = d->notificationsAndJobsModel->index(i, 0);
-        if (!idx.data(Notifications::ReadRole).toBool() && idx.data(Notifications::WasAddedDuringInhibitionRole).toBool()) {
-            ++inhibited;
+        if (!idx.data(Notifications::WasAddedDuringInhibitionRole).toBool()) {
+            continue;
         }
+        if (idx.data(Notifications::UrgencyRole).toInt() < static_cast<int>(urgency) || idx.data(Notifications::ReadRole).toBool()) {
+            continue;
+        }
+        if (!blacklistedDesktopEntries.isEmpty()) {
+            const QString desktopEntry = idx.data(Notifications::DesktopEntryRole).toString();
+            if (!desktopEntry.isEmpty() && blacklistedDesktopEntries.contains(desktopEntry)) {
+                continue;
+            } else if (desktopEntry.isEmpty() && blacklistedDesktopEntries.contains(u"@other")) {
+                continue;
+            }
+        }
+        if (!blacklistedNotifyRcNames.isEmpty()) {
+            const QString notifyRcName = idx.data(Notifications::NotifyRcNameRole).toString();
+            if (!notifyRcName.isEmpty() && blacklistedNotifyRcNames.contains(notifyRcName)) {
+                continue;
+            }
+        }
+        ++inhibited;
     }
 
     if (!inhibited) {
