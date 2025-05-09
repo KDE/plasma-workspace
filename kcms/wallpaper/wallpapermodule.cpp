@@ -257,6 +257,8 @@ public:
     WallpaperConfigModel(QObject *parent);
 public Q_SLOTS:
     void repopulate();
+Q_SIGNALS:
+    void wallpaperPluginsChanged();
 };
 
 void WallpaperModule::onWallpaperChanged(uint screenIdx)
@@ -492,6 +494,7 @@ void WallpaperConfigModel::repopulate()
         }
         appendCategory(pkg.metadata().iconName(), pkg.metadata().name(), pkg.fileUrl("ui", QStringLiteral("config.qml")).toString(), m.pluginId());
     }
+    Q_EMIT wallpaperPluginsChanged();
 }
 
 #include "wallpapermodule.moc"
