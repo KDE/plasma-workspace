@@ -545,7 +545,7 @@ PlasmaExtras.Representation {
             right: monthViewWrapper.left
             bottom: parent.bottom
             // Stretch all the way to the top of a dialog. This magic comes
-            // from PlasmaCore.Dialog::margins and CompactApplet containment.
+            // from PlasmaCore.PlasmaWindow::topPadding and CompactApplet containment.
             topMargin: calendar.parent ? -calendar.parent.y : 0
         }
 
