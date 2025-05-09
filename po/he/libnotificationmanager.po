@@ -1,13 +1,13 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2024 Yaron Shahrabani <sh.yaron@gmail.com>
+# SPDX-FileCopyrightText: 2024, 2025 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-07 00:44+0000\n"
-"PO-Revision-Date: 2025-01-09 22:10+0200\n"
+"PO-Revision-Date: 2025-05-07 09:06+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: abstractnotificationsmodel.cpp:340
 #, kde-format
@@ -118,25 +118,21 @@ msgid "Application closed unexpectedly."
 msgstr "יישום נסגר במפתיע."
 
 #: notifications.cpp:885
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Unread Notifications"
+#, kde-format
 msgctxt "@title"
 msgid "Unread Notification"
 msgid_plural "Unread Notifications"
-msgstr[0] "התראות שלא נקראו"
+msgstr[0] "התראה שלא נקראה"
 msgstr[1] "התראות שלא נקראו"
 msgstr[2] "התראות שלא נקראו"
 msgstr[3] "התראות שלא נקראו"
 
 #: notifications.cpp:887
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "%1 notifications were received while Do Not Disturb was active."
+#, kde-format
 msgctxt "@info"
 msgid "%1 notification was received while Do Not Disturb was active."
 msgid_plural "%1 notifications were received while Do Not Disturb was active."
-msgstr[0] "התקבלו %1 התראות בזמן שמצב „לא להפריע” היה פעיל."
-msgstr[1] "התקבלו %1 התראות בזמן שמצב „לא להפריע” היה פעיל."
+msgstr[0] "התקבלה התראה בזמן שמצב „לא להפריע” היה פעיל."
+msgstr[1] "התקבלו שתי התראות בזמן שמצב „לא להפריע” היה פעיל."
 msgstr[2] "התקבלו %1 התראות בזמן שמצב „לא להפריע” היה פעיל."
 msgstr[3] "התקבלו %1 התראות בזמן שמצב „לא להפריע” היה פעיל."

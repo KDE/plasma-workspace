@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-26 00:44+0000\n"
+"POT-Creation-Date: 2025-05-09 00:43+0000\n"
 "PO-Revision-Date: 2021-07-06 19:02+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -27,18 +27,18 @@ msgstr ""
 msgid "No media playing"
 msgstr "कोई मीडिया नहीं बजा रहा है"
 
-#: ExpandedRepresentation.qml:402 ExpandedRepresentation.qml:558
+#: ExpandedRepresentation.qml:415 ExpandedRepresentation.qml:571
 #, kde-format
 msgctxt "Remaining time for song e.g -5:42"
 msgid "-%1"
 msgstr "-%1"
 
-#: ExpandedRepresentation.qml:579
+#: ExpandedRepresentation.qml:592
 #, kde-format
 msgid "Playback rate %1"
 msgstr ""
 
-#: ExpandedRepresentation.qml:582
+#: ExpandedRepresentation.qml:595
 #, fuzzy, kde-format
 #| msgctxt "Remaining time for song e.g -5:42"
 #| msgid "-%1"
@@ -46,60 +46,60 @@ msgctxt "Playback rate"
 msgid "%1x"
 msgstr "-%1"
 
-#: ExpandedRepresentation.qml:586
+#: ExpandedRepresentation.qml:599
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Playback rate"
 msgstr ""
 
-#: ExpandedRepresentation.qml:632
+#: ExpandedRepresentation.qml:645
 #, kde-format
 msgctxt "@action:inmenu Playback speed (Normal)"
 msgid "%1 (Normal)"
 msgstr ""
 
-#: ExpandedRepresentation.qml:671
+#: ExpandedRepresentation.qml:684
 #, fuzzy, kde-format
 #| msgid "Shuffle"
 msgctxt "@action:button"
 msgid "Shuffle"
 msgstr "फेंटें"
 
-#: ExpandedRepresentation.qml:695 main.qml:114
+#: ExpandedRepresentation.qml:708 main.qml:114
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
 msgstr "पिछले गीत पर जाएँ"
 
-#: ExpandedRepresentation.qml:717 main.qml:122
+#: ExpandedRepresentation.qml:730 main.qml:122
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
 msgstr "ठहराएँ"
 
-#: ExpandedRepresentation.qml:717 main.qml:130
+#: ExpandedRepresentation.qml:730 main.qml:130
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
 msgstr "बजाएँ"
 
-#: ExpandedRepresentation.qml:735 main.qml:138
+#: ExpandedRepresentation.qml:748 main.qml:138
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
 msgstr "अगले गीत पर जाएँ"
 
-#: ExpandedRepresentation.qml:758
+#: ExpandedRepresentation.qml:771
 #, kde-format
 msgid "Repeat Track"
 msgstr "गीत दोहराएँ"
 
-#: ExpandedRepresentation.qml:758
+#: ExpandedRepresentation.qml:771
 #, kde-format
 msgid "Repeat"
 msgstr "दोहराएँ"
 
-#: ExpandedRepresentation.qml:828
+#: ExpandedRepresentation.qml:839
 #, fuzzy, kde-format
 #| msgid "Choose player automatically"
 msgctxt "@action:button"

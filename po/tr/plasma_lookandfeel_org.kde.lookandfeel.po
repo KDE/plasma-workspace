@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-31 00:42+0000\n"
+"POT-Creation-Date: 2025-05-09 00:43+0000\n"
 "PO-Revision-Date: 2024-12-31 11:53+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -152,12 +152,6 @@ msgstr "Şimdi Oturumu Kapa&t"
 msgid "&Cancel"
 msgstr "İ&ptal"
 
-#: contents/osd/OsdItem.qml:34
-#, kde-format
-msgctxt "Percentage value"
-msgid "%1%"
-msgstr "%​%1"
-
 #: contents/splash/Splash.qml:79
 #, kde-format
 msgctxt ""
@@ -166,6 +160,10 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "KDE tarafından yapılan Plasma"
+
+#~ msgctxt "Percentage value"
+#~ msgid "%1%"
+#~ msgstr "%​%1"
 
 #~ msgctxt "@action:button Keep short"
 #~ msgid "Install Updates & Restart Now"
