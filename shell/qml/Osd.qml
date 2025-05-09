@@ -12,6 +12,9 @@ PlasmaCore.Dialog {
     type: PlasmaCore.Dialog.OnScreenDisplay
     outputOnly: true
 
+    LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
+    LayoutMirroring.childrenInherit: true
+
     property alias timeout: osd.timeout
     property alias osdValue: osd.osdValue
     property alias osdMaxValue: osd.osdMaxValue
