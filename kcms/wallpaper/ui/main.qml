@@ -139,6 +139,12 @@ Kirigami.ScrollablePage {
                 function onSettingsSaved() { main.currentItem.saveConfig(); }
             }
 
+            Connections {
+                enabled: true
+                target: kcm.wallpaperConfigModel
+                function onWallpaperPluginsChanged() { main.loadSourceFile() }
+            }
+
             function onWallpaperConfigurationChanged() {
                 let wallpaperConfig = kcm.configuration
                 wallpaperConfig.keys().forEach(key => {
