@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-24 00:43+0000\n"
+"POT-Creation-Date: 2025-05-10 00:44+0000\n"
 "PO-Revision-Date: 2025-01-25 08:20+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -333,13 +333,13 @@ msgstr ""
 "ogenomskinlighet kända för att orsaka dålig fönsterdragnings- och "
 "storleksändringsprestanda. Överväg att använda andra inställningar."
 
-#: panelview.cpp:1151
+#: panelview.cpp:1141
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Dölj panelinställning"
 
-#: panelview.cpp:1153
+#: panelview.cpp:1143
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"

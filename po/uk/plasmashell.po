@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-24 00:43+0000\n"
+"POT-Creation-Date: 2025-05-10 00:44+0000\n"
 "PO-Revision-Date: 2025-01-23 11:05+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -337,13 +337,13 @@ msgstr ""
 "перетягування та зміни розмірів вікон. Вам варто скористатися іншими "
 "варіантами параметрів."
 
-#: panelview.cpp:1151
+#: panelview.cpp:1141
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Приховати налаштування панелі"
 
-#: panelview.cpp:1153
+#: panelview.cpp:1143
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
