@@ -5,7 +5,8 @@
 */
 
 #include "suncalc.h"
-#include "suntransit.h"
+
+#include <KHolidays/SunEvents>
 
 using namespace Qt::StringLiterals;
 
@@ -25,10 +26,10 @@ static QVariantMap makeTransitionMap(const QDateTime &start, const QDateTime &en
 QVariantMap SunCalc::getMorningTimings(double latitude, double longitude)
 {
     const QDateTime now = QDateTime::currentDateTime();
-    const SunTransit transit(now, latitude, longitude);
+    const KHolidays::SunEvents events(now, latitude, longitude);
 
-    QDateTime civilDawn = transit.dateTime(SunTransit::CivilDawn);
-    QDateTime sunrise = transit.dateTime(SunTransit::Sunrise);
+    QDateTime civilDawn = events.civilDawn();
+    QDateTime sunrise = events.sunrise();
     if (civilDawn.isNull() || sunrise.isNull()) {
         sunrise = QDateTime(now.date(), QTime(6, 0));
         civilDawn = sunrise.addMSecs(-DEFAULT_TRANSITION_DURATION);
@@ -40,10 +41,10 @@ QVariantMap SunCalc::getMorningTimings(double latitude, double longitude)
 QVariantMap SunCalc::getEveningTimings(double latitude, double longitude)
 {
     const QDateTime now = QDateTime::currentDateTime();
-    const SunTransit transit(now, latitude, longitude);
+    const KHolidays::SunEvents events(now, latitude, longitude);
 
-    QDateTime sunset = transit.dateTime(SunTransit::Sunset);
-    QDateTime civilDusk = transit.dateTime(SunTransit::CivilDusk);
+    QDateTime sunset = events.sunset();
+    QDateTime civilDusk = events.civilDusk();
     if (sunset.isNull() || civilDusk.isNull()) {
         sunset = QDateTime(now.date(), QTime(18, 0));
         civilDusk = sunset.addMSecs(DEFAULT_TRANSITION_DURATION);
