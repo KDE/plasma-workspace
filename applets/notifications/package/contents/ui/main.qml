@@ -211,7 +211,7 @@ PlasmoidItem {
     }
 
     function closePlasmoid() {
-        if (root.hideOnWindowDeactivate) {
+        if (root.hideOnWindowDeactivate && !(root.width > root.switchWidth && root.height > root.switchHeight)) {
             root.expanded = false;
         }
     }
