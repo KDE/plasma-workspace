@@ -3,7 +3,6 @@ add_subdirectory(kded)
 set(colorcorrect_LIB_SRCS
     compositorcoloradaptor.cpp
     suncalc.cpp
-    suntransit.cpp
     )
 
 add_library(colorcorrect ${colorcorrect_LIB_SRCS})
@@ -20,6 +19,7 @@ target_link_libraries(colorcorrect
                       Qt::Core
                       Qt::Quick
                     PRIVATE
+                      KF6::Holidays
                       KF6::I18n
 
                       Qt::DBus)
