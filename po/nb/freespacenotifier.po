@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-23 00:41+0000\n"
+"POT-Creation-Date: 2025-05-11 00:44+0000\n"
 "PO-Revision-Date: 2025-02-20 19:33+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -19,17 +19,17 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: freespacenotifier.cpp:126
+#: freespacenotifier.cpp:121
 #, kde-format
 msgid "Open in Filelight"
 msgstr "Åpne i Filelight"
 
-#: freespacenotifier.cpp:132
+#: freespacenotifier.cpp:127
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Åpne i filbehandler"
 
-#: freespacenotifier.cpp:139
+#: freespacenotifier.cpp:134
 #, kde-format
 msgid "Configure Warning…"
 msgstr "Sett opp varsling …"
@@ -40,8 +40,15 @@ msgstr "Sett opp varsling …"
 msgid "Minimum free space before user starts being notified."
 msgstr "Ledig diskplass når du vil varsles."
 
-#. i18n: ectx: label, entry (enableNotification), group (General)
+#. i18n: ectx: label, entry (minimumSpacePercentage), group (General)
 #: freespacenotifier.kcfg:15
+#, fuzzy, kde-format
+#| msgid "Minimum free space before user starts being notified."
+msgid "Minimum percentage free space before user starts being notified."
+msgstr "Ledig diskplass når du vil varsles."
+
+#. i18n: ectx: label, entry (enableNotification), group (General)
+#: freespacenotifier.kcfg:21
 #, kde-format
 msgid "Is the free space notification enabled."
 msgstr "Er varsling om ledig diskplass slått på."
@@ -64,23 +71,61 @@ msgstr "Varsle når det er mindre diskplass enn:"
 msgid " MiB"
 msgstr " MiB"
 
-#: module.cpp:38
-#, kde-format
-msgid ""
-"Your Home folder is running out of disk space, you have %1 MiB remaining "
-"(%2%)."
-msgstr ""
-"Det er lite diskplass igjen i hjemmemappa di, du har %1 MiB igjen (%2%)."
+#. i18n: ectx: property (text), widget (QLabel, label_minimumSpacePercentage)
+#: freespacenotifier_prefs_base.ui:44
+#, fuzzy, kde-format
+#| msgid "Warn when free space is below:"
+msgid "And when free space is under:"
+msgstr "Varsle når det er mindre diskplass enn:"
 
-#: module.cpp:43
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpacePercentage)
+#: freespacenotifier_prefs_base.ui:54
+#, no-c-format, kde-format
+msgid "%"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_info)
+#: freespacenotifier_prefs_base.ui:67
 #, kde-format
 msgid ""
-"Your Root partition is running out of disk space, you have %1 MiB remaining "
+"The system will notify you if the free space drops below the specified MiB "
+"and the specified percentage of available space."
+msgstr ""
+
+#: module.cpp:100
+#, fuzzy, kde-format
+#| msgid ""
+#| "Your Root partition is running out of disk space, you have %1 MiB "
+#| "remaining (%2%)."
+msgid ""
+"Your %1 partition is running out of disk space; %2 MiB of space remaining "
+"(%3%)."
+msgstr ""
+"Det er lite diskplass igjen i rotpartisjonen. Du har %1 MiB igjen (%2%)."
+
+#: module.cpp:102
+#, fuzzy, kde-format
+#| msgid ""
+#| "Your Root partition is running out of disk space, you have %1 MiB "
+#| "remaining (%2%)."
+msgid ""
+"Your Root partition is running out of disk space; %1 MiB of space remaining "
 "(%2%)."
 msgstr ""
 "Det er lite diskplass igjen i rotpartisjonen. Du har %1 MiB igjen (%2%)."
 
-#: module.cpp:60
+#: module.cpp:104
+#, fuzzy, kde-format
+#| msgid ""
+#| "Your Home folder is running out of disk space, you have %1 MiB remaining "
+#| "(%2%)."
+msgid ""
+"Your Home folder is running out of disk space; %1 MiB of space remaining "
+"(%2%)."
+msgstr ""
+"Det er lite diskplass igjen i hjemmemappa di, du har %1 MiB igjen (%2%)."
+
+#: module.cpp:129
 #, kde-format
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"

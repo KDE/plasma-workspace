@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-23 00:41+0000\n"
+"POT-Creation-Date: 2025-05-11 00:44+0000\n"
 "PO-Revision-Date: 2021-06-24 22:57+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -17,17 +17,17 @@ msgstr ""
 "X-Generator: Lokalize 21.04.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: freespacenotifier.cpp:126
+#: freespacenotifier.cpp:121
 #, kde-format
 msgid "Open in Filelight"
 msgstr "Aperi in FileLight"
 
-#: freespacenotifier.cpp:132
+#: freespacenotifier.cpp:127
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Aperi in Gerente de File"
 
-#: freespacenotifier.cpp:139
+#: freespacenotifier.cpp:134
 #, kde-format
 msgid "Configure Warning…"
 msgstr "Configura aviso…"
@@ -38,8 +38,15 @@ msgstr "Configura aviso…"
 msgid "Minimum free space before user starts being notified."
 msgstr "Spatio minime libere ante que le usator es notificate."
 
-#. i18n: ectx: label, entry (enableNotification), group (General)
+#. i18n: ectx: label, entry (minimumSpacePercentage), group (General)
 #: freespacenotifier.kcfg:15
+#, fuzzy, kde-format
+#| msgid "Minimum free space before user starts being notified."
+msgid "Minimum percentage free space before user starts being notified."
+msgstr "Spatio minime libere ante que le usator es notificate."
+
+#. i18n: ectx: label, entry (enableNotification), group (General)
+#: freespacenotifier.kcfg:21
 #, kde-format
 msgid "Is the free space notification enabled."
 msgstr "Il ha habilitate le notification de spatio libere."
@@ -62,25 +69,64 @@ msgstr "Avisa quando spatio libere es infra:"
 msgid " MiB"
 msgstr "MiB"
 
-#: module.cpp:38
+#. i18n: ectx: property (text), widget (QLabel, label_minimumSpacePercentage)
+#: freespacenotifier_prefs_base.ui:44
+#, fuzzy, kde-format
+#| msgid "Warn when free space is below:"
+msgid "And when free space is under:"
+msgstr "Avisa quando spatio libere es infra:"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpacePercentage)
+#: freespacenotifier_prefs_base.ui:54
+#, no-c-format, kde-format
+msgid "%"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_info)
+#: freespacenotifier_prefs_base.ui:67
 #, kde-format
 msgid ""
-"Your Home folder is running out of disk space, you have %1 MiB remaining "
-"(%2%)."
+"The system will notify you if the free space drops below the specified MiB "
+"and the specified percentage of available space."
+msgstr ""
+
+#: module.cpp:100
+#, fuzzy, kde-format
+#| msgid ""
+#| "Your Root partition is running out of disk space, you have %1 MiB "
+#| "remaining (%2%)."
+msgid ""
+"Your %1 partition is running out of disk space; %2 MiB of space remaining "
+"(%3%)."
 msgstr ""
 "Tu dossier de Initio (Home) es exhauriente le spatio de disco, tu ha %1 MiB "
-"remanente (%2%)."
+"remanente (%2%)"
 
-#: module.cpp:43
-#, kde-format
+#: module.cpp:102
+#, fuzzy, kde-format
+#| msgid ""
+#| "Your Root partition is running out of disk space, you have %1 MiB "
+#| "remaining (%2%)."
 msgid ""
-"Your Root partition is running out of disk space, you have %1 MiB remaining "
+"Your Root partition is running out of disk space; %1 MiB of space remaining "
 "(%2%)."
 msgstr ""
 "Tu dossier de Initio (Home) es exhauriente le spatio de disco, tu ha %1 MiB "
 "remanente (%2%)"
 
-#: module.cpp:60
+#: module.cpp:104
+#, fuzzy, kde-format
+#| msgid ""
+#| "Your Home folder is running out of disk space, you have %1 MiB remaining "
+#| "(%2%)."
+msgid ""
+"Your Home folder is running out of disk space; %1 MiB of space remaining "
+"(%2%)."
+msgstr ""
+"Tu dossier de Initio (Home) es exhauriente le spatio de disco, tu ha %1 MiB "
+"remanente (%2%)."
+
+#: module.cpp:129
 #, kde-format
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"

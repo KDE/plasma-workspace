@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-23 00:41+0000\n"
+"POT-Creation-Date: 2025-05-11 00:44+0000\n"
 "PO-Revision-Date: 2019-10-06 20:59+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -17,19 +17,19 @@ msgstr ""
 "X-Generator: Lokalize 19.04.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: freespacenotifier.cpp:126
+#: freespacenotifier.cpp:121
 #, kde-format
 msgid "Open in Filelight"
 msgstr ""
 
-#: freespacenotifier.cpp:132
+#: freespacenotifier.cpp:127
 #, fuzzy, kde-format
 #| msgctxt "Opens a file manager like dolphin"
 #| msgid "Open File Manager..."
 msgid "Open in File Manager"
 msgstr "Кушодани мудири файлҳо..."
 
-#: freespacenotifier.cpp:139
+#: freespacenotifier.cpp:134
 #, fuzzy, kde-format
 #| msgctxt "Allows the user to configure the warning notification being shown"
 #| msgid "Configure Warning..."
@@ -42,8 +42,15 @@ msgstr "Танзимоти огоҳиҳо..."
 msgid "Minimum free space before user starts being notified."
 msgstr "Ҳадди ақали фазои озод пеш аз корбар огоҳиҳоро қабул мекунад."
 
-#. i18n: ectx: label, entry (enableNotification), group (General)
+#. i18n: ectx: label, entry (minimumSpacePercentage), group (General)
 #: freespacenotifier.kcfg:15
+#, fuzzy, kde-format
+#| msgid "Minimum free space before user starts being notified."
+msgid "Minimum percentage free space before user starts being notified."
+msgstr "Ҳадди ақали фазои озод пеш аз корбар огоҳиҳоро қабул мекунад."
+
+#. i18n: ectx: label, entry (enableNotification), group (General)
+#: freespacenotifier.kcfg:21
 #, kde-format
 msgid "Is the free space notification enabled."
 msgstr "Огоҳӣ дар бораи фазои озоди боқимонда фаъол аст"
@@ -66,7 +73,28 @@ msgstr "Ҳаҷми фазои озоди боқимонда барои огоҳ�
 msgid " MiB"
 msgstr "МБ"
 
-#: module.cpp:38
+#. i18n: ectx: property (text), widget (QLabel, label_minimumSpacePercentage)
+#: freespacenotifier_prefs_base.ui:44
+#, fuzzy, kde-format
+#| msgid "Warn when free space is below:"
+msgid "And when free space is under:"
+msgstr "Ҳаҷми фазои озоди боқимонда барои огоҳонидан:"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpacePercentage)
+#: freespacenotifier_prefs_base.ui:54
+#, no-c-format, kde-format
+msgid "%"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_info)
+#: freespacenotifier_prefs_base.ui:67
+#, kde-format
+msgid ""
+"The system will notify you if the free space drops below the specified MiB "
+"and the specified percentage of available space."
+msgstr ""
+
+#: module.cpp:100
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Warns the user that the system is running low on space on his home "
@@ -75,13 +103,13 @@ msgstr "МБ"
 #| "Your Home folder is running out of disk space, you have %1 MiB remaining "
 #| "(%2%)"
 msgid ""
-"Your Home folder is running out of disk space, you have %1 MiB remaining "
-"(%2%)."
+"Your %1 partition is running out of disk space; %2 MiB of space remaining "
+"(%3%)."
 msgstr ""
 "Фазои диски барои ҷузвадони асосии шумо кифоя нест, зеро ки танҳо %1 МБ боқӣ "
 "мондааст (%2%)"
 
-#: module.cpp:43
+#: module.cpp:102
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Warns the user that the system is running low on space on his home "
@@ -90,13 +118,28 @@ msgstr ""
 #| "Your Home folder is running out of disk space, you have %1 MiB remaining "
 #| "(%2%)"
 msgid ""
-"Your Root partition is running out of disk space, you have %1 MiB remaining "
+"Your Root partition is running out of disk space; %1 MiB of space remaining "
 "(%2%)."
 msgstr ""
 "Фазои диски барои ҷузвадони асосии шумо кифоя нест, зеро ки танҳо %1 МБ боқӣ "
 "мондааст (%2%)"
 
-#: module.cpp:60
+#: module.cpp:104
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Warns the user that the system is running low on space on his home "
+#| "folder, indicating the percentage and absolute MiB size remaining"
+#| msgid ""
+#| "Your Home folder is running out of disk space, you have %1 MiB remaining "
+#| "(%2%)"
+msgid ""
+"Your Home folder is running out of disk space; %1 MiB of space remaining "
+"(%2%)."
+msgstr ""
+"Фазои диски барои ҷузвадони асосии шумо кифоя нест, зеро ки танҳо %1 МБ боқӣ "
+"мондааст (%2%)"
+
+#: module.cpp:129
 #, kde-format
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"

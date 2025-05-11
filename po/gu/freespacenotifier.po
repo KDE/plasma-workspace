@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: freespacenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-23 00:41+0000\n"
+"POT-Creation-Date: 2025-05-11 00:44+0000\n"
 "PO-Revision-Date: 2010-12-21 16:10+0530\n"
 "Last-Translator: Sweta Kothari <swkothar@redhat.com>\n"
 "Language-Team: Gujarati\n"
@@ -18,19 +18,19 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: freespacenotifier.cpp:126
+#: freespacenotifier.cpp:121
 #, kde-format
 msgid "Open in Filelight"
 msgstr ""
 
-#: freespacenotifier.cpp:132
+#: freespacenotifier.cpp:127
 #, fuzzy, kde-format
 #| msgctxt "Opens a file manager like dolphin"
 #| msgid "Open File Manager"
 msgid "Open in File Manager"
 msgstr "ફાઇલ સંચાલક ખોલો"
 
-#: freespacenotifier.cpp:139
+#: freespacenotifier.cpp:134
 #, fuzzy, kde-format
 #| msgctxt "Allows the user to configure the warning notification being shown"
 #| msgid "Configure Warning"
@@ -43,8 +43,15 @@ msgstr "ચેતવણીને રૂપરેખાંકિત કરો"
 msgid "Minimum free space before user starts being notified."
 msgstr "લઘુત્તમ મુક્ત સ્પેસ જેના પછી વપરાશકર્તાને સૂચિત કરવામાં આવે."
 
-#. i18n: ectx: label, entry (enableNotification), group (General)
+#. i18n: ectx: label, entry (minimumSpacePercentage), group (General)
 #: freespacenotifier.kcfg:15
+#, fuzzy, kde-format
+#| msgid "Minimum free space before user starts being notified."
+msgid "Minimum percentage free space before user starts being notified."
+msgstr "લઘુત્તમ મુક્ત સ્પેસ જેના પછી વપરાશકર્તાને સૂચિત કરવામાં આવે."
+
+#. i18n: ectx: label, entry (enableNotification), group (General)
+#: freespacenotifier.kcfg:21
 #, kde-format
 msgid "Is the free space notification enabled."
 msgstr "મુક્ત સ્પેસ સૂચિત કરવાનું સક્રિય છે."
@@ -67,21 +74,49 @@ msgstr "જયારે નીચે મુજબની મુક્ત સ્�
 msgid " MiB"
 msgstr " MiB"
 
-#: module.cpp:38
+#. i18n: ectx: property (text), widget (QLabel, label_minimumSpacePercentage)
+#: freespacenotifier_prefs_base.ui:44
+#, fuzzy, kde-format
+#| msgid "Warn when free space is below:"
+msgid "And when free space is under:"
+msgstr "જયારે નીચે મુજબની મુક્ત સ્પેસ હોય ત્યારે ચેતવણી આપો:"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpacePercentage)
+#: freespacenotifier_prefs_base.ui:54
+#, no-c-format, kde-format
+msgid "%"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_info)
+#: freespacenotifier_prefs_base.ui:67
 #, kde-format
 msgid ""
-"Your Home folder is running out of disk space, you have %1 MiB remaining "
+"The system will notify you if the free space drops below the specified MiB "
+"and the specified percentage of available space."
+msgstr ""
+
+#: module.cpp:100
+#, kde-format
+msgid ""
+"Your %1 partition is running out of disk space; %2 MiB of space remaining "
+"(%3%)."
+msgstr ""
+
+#: module.cpp:102
+#, kde-format
+msgid ""
+"Your Root partition is running out of disk space; %1 MiB of space remaining "
 "(%2%)."
 msgstr ""
 
-#: module.cpp:43
+#: module.cpp:104
 #, kde-format
 msgid ""
-"Your Root partition is running out of disk space, you have %1 MiB remaining "
+"Your Home folder is running out of disk space; %1 MiB of space remaining "
 "(%2%)."
 msgstr ""
 
-#: module.cpp:60
+#: module.cpp:129
 #, kde-format
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"
