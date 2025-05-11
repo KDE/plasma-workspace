@@ -2,6 +2,7 @@
 Description=KDE Plasma Workspace
 Requires=plasma-core.target
 Requires=graphical-session.target
+Wants=plasma-geoclue-agent.service
 Wants=plasma-restoresession.service
 Wants=plasma-xembedsniproxy.service
 Wants=plasma-gmenudbusmenuproxy.service

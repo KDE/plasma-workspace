@@ -1,0 +1,129 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN"
+"http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+
+<!--
+    GeoClue 2.0 Interface Specification
+
+    Copyright 2013 Red Hat, Inc.
+-->
+
+<node>
+
+  <!--
+      org.freedesktop.GeoClue2.Manager:
+      @short_description: The GeoClue service manager
+
+      This is the interface you use to talk to main GeoClue2 manager object at
+      path "/org/freedesktop/GeoClue2/Manager". The only thing you do with this
+      interface is to call org.freedesktop.GeoClue2.Manager.GetClient() or
+      org.freedesktop.GeoClue2.Manager.CreateClient() on it to get your
+      application specific client object(s).
+  -->
+  <interface name="org.freedesktop.GeoClue2.Manager">
+    <!--
+        InUse:
+
+        Whether service is currently is use by any application.
+    -->
+    <property name="InUse" type="b" access="read"/>
+
+    <!--
+        AvailableAccuracyLevel:
+
+        The level of available accuracy, as
+        <link linkend="GClueAccuracyLevel">GClueAccuracyLevel</link>.
+    -->
+    <property name="AvailableAccuracyLevel" type="u" access="read"/>
+
+    <!--
+        GetClient:
+        @client: The path for the client object
+
+        Retrieves a client object which can only be used by the calling
+        application only. On the first call from a specific D-Bus peer, this
+        method will create the client object but subsequent calls will return
+        the path of the existing client.
+    -->
+    <method name="GetClient">
+      <arg name="client" type="o" direction="out"/>
+    </method>
+
+    <!--
+        CreateClient:
+        @client: The path for the newly created client object
+
+        Creates and retrieves a client object which can only be used by the
+        calling application only. Unlike
+        org.freedesktop.GeoClue2.Manager.GetClient(), thid method always
+        creates a new client.
+    -->
+    <method name="CreateClient">
+      <arg name="client" type="o" direction="out"/>
+    </method>
+
+    <!--
+        DeleteClient:
+        @client: The path of the client object to delete
+
+        Use this method to explicitly destroy a client, created using
+        org.freedesktop.GeoClue2.Manager.GetClient() or
+        org.freedesktop.GeoClue2.Manager.CreateClient().
+
+        Long-running applications, should either use this to delete associated
+        client(s) when not needed, or disconnect from the D-Bus connection used
+        for communicating with Geoclue (which is implicit on client process
+        termination).
+    -->
+    <method name="DeleteClient">
+      <arg name="client" type="o" direction="in"/>
+    </method>
+
+    <!--
+        AddAgent:
+        @id: The Desktop ID (excluding .desktop) of the agent
+
+        An API for user authorization agents to register themselves. Each agent
+        is responsible for the user it is running as. Application developers
+        can and should simply ignore this API.
+    -->
+    <method name="AddAgent">
+      <arg name="id" type="s" direction="in"/>
+    </method>
+
+    <!--
+        ListReceivers:
+        @receivers: List of all receiving clients
+
+        List all clients that are currently receiving location updates. Only
+        agent clients are allowed to call this request.
+    -->
+    <method name="ListReceivers">
+       <annotation name="org.qtproject.QtDBus.QtTypeName.Out0" value="QList&lt;QVariantMap&gt;"/>
+      <arg name="receivers" type="aa{sv}" direction="out"/>
+    </method>
+
+    <!--
+        ReceiverNew:
+        @receiver: Information about the receiving client
+
+        This signal is emitted when a client starts receiving location updates.
+        Only agent clients will get notified about this signal.
+    -->
+    <signal name="ReceiverNew">
+       <annotation name="org.qtproject.QtDBus.QtTypeName.Out0" value="QVariantMap"/>
+      <arg name="receiver" type="a{sv}" direction="out"/>
+    </signal>
+
+    <!--
+        ReceiverRemoved:
+        @receiver: Information about the receiving client
+
+        This signal is emitted when a client stops receiving location updates.
+        Only agent clients will get notified about this signal.
+    -->
+    <signal name="ReceiverRemoved">
+       <annotation name="org.qtproject.QtDBus.QtTypeName.Out0" value="QVariantMap"/>
+      <arg name="receiver" type="a{sv}" direction="out"/>
+    </signal>
+  </interface>
+</node>

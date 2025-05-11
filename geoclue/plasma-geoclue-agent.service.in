@@ -1,0 +1,11 @@
+[Unit]
+Description=GeoClue Agent
+PartOf=graphical-session.target
+After=plasma-core.target
+
+[Service]
+ExecStart=@KDE_INSTALL_FULL_LIBEXECDIR@/plasma-geoclue-agent
+Restart=on-failure
+Type=simple
+Slice=background.slice
+TimeoutSec=5sec
