@@ -44,7 +44,6 @@ NOAAIon::NOAAIon(QObject *parent)
     // Schedule the API calls according to the previous information required
     connect(this, &NOAAIon::locationUpdated, this, &NOAAIon::getObservation);
     connect(this, &NOAAIon::locationUpdated, this, &NOAAIon::getPointsInfo);
-    connect(this, &NOAAIon::observationUpdated, this, &NOAAIon::getSolarData);
     connect(this, &NOAAIon::pointsInfoUpdated, this, &NOAAIon::getForecast);
     connect(this, &NOAAIon::pointsInfoUpdated, this, &NOAAIon::getAlerts);
 
@@ -335,6 +334,7 @@ void NOAAIon::readObservation(const QString &source, const QJsonDocument &doc)
 
     data.weather = properties[u"textDescription"_s].toString();
     data.timestamp = QDateTime::fromString(properties[u"timestamp"_s].toString(), Qt::ISODate);
+    data.isNight = isNightTime(data.timestamp, m_weatherData[source].stationLatitude, m_weatherData[source].stationLongitude);
 
     data.temperature_F = parseQV(properties[u"temperature"_s], Fahrenheit);
     data.humidity = parseQV(properties[u"relativeHumidity"_s], Percent);
@@ -354,52 +354,12 @@ void NOAAIon::readObservation(const QString &source, const QJsonDocument &doc)
     Q_EMIT observationUpdated(source);
 }
 
-void NOAAIon::getSolarData(const QString &source)
-{
-    bool solarDataSourceNeedsConnect = false;
-    WeatherData &data = m_weatherData[source];
-
-    Plasma5Support::DataEngine *timeEngine = dataEngine(u"time"_s);
-    if (timeEngine) {
-        const bool canCalculateElevation = (data.observation.timestamp.isValid() && (!qIsNaN(data.stationLatitude) && !qIsNaN(data.stationLongitude)));
-        if (canCalculateElevation) {
-            data.solarDataTimeEngineSourceName =
-                u"%1|Solar|Latitude=%2|Longitude=%3|DateTime=%4"_s.arg(QString::fromUtf8(data.observation.timestamp.timeZone().id()))
-                    .arg(data.stationLatitude)
-                    .arg(data.stationLongitude)
-                    .arg(data.observation.timestamp.toString(Qt::ISODate));
-            solarDataSourceNeedsConnect = true;
-        }
-
-        // check any previous data
-        const auto it = m_weatherData.constFind(source);
-        if (it != m_weatherData.constEnd()) {
-            const QString &oldSolarDataTimeEngineSource = it.value().solarDataTimeEngineSourceName;
-
-            if (oldSolarDataTimeEngineSource == data.solarDataTimeEngineSourceName) {
-                // can reuse elevation source (if any), copy over data
-                data.isNight = it.value().isNight;
-                solarDataSourceNeedsConnect = false;
-            } else if (!oldSolarDataTimeEngineSource.isEmpty()) {
-                // drop old elevation source
-                timeEngine->disconnectSource(oldSolarDataTimeEngineSource, this);
-            }
-        }
-    }
-
-    // connect only after m_weatherData has the data, so the instant data push handling can see it
-    if (solarDataSourceNeedsConnect) {
-        data.isSolarDataPending = true;
-        timeEngine->connectSource(data.solarDataTimeEngineSourceName, this);
-    }
-}
-
 void NOAAIon::updateWeather(const QString &source)
 {
     const WeatherData &weatherData = m_weatherData[source];
     const WeatherData::Observation &current = weatherData.observation;
 
-    if (weatherData.isForecastsDataPending || weatherData.isSolarDataPending) {
+    if (weatherData.isForecastsDataPending) {
         return;
     }
 
@@ -426,7 +386,7 @@ void NOAAIon::updateWeather(const QString &source)
     qCDebug(IONENGINE_NOAA) << "i18n condition string: " << qPrintable(conditionI18n);
 
     const QString weather = current.weather.toLower();
-    ConditionIcons condition = getConditionIcon(weather, !weatherData.isNight);
+    ConditionIcons condition = getConditionIcon(weather, !current.isNight);
     data.insert(u"Condition Icon"_s, getWeatherIcon(condition));
 
     if (!qIsNaN(current.temperature_F)) {
@@ -942,20 +902,6 @@ void NOAAIon::readAlerts(const QString &source, const QJsonDocument &doc)
     updateWeather(source);
     forceImmediateUpdateOfAllVisualizations();
     Q_EMIT forceUpdate(this, source);
-}
-
-void NOAAIon::dataUpdated(const QString &sourceName, const Plasma5Support::DataEngine::Data &data)
-{
-    const bool isNight = (data.value(u"Corrected Elevation"_s).toDouble() < 0.0);
-
-    for (auto end = m_weatherData.end(), it = m_weatherData.begin(); it != end; ++it) {
-        auto &weatherData = it.value();
-        if (weatherData.solarDataTimeEngineSourceName == sourceName) {
-            weatherData.isNight = isNight;
-            weatherData.isSolarDataPending = false;
-            updateWeather(it.key());
-        }
-    }
 }
 
 K_PLUGIN_CLASS_WITH_JSON(NOAAIon, "ion-noaa.json")

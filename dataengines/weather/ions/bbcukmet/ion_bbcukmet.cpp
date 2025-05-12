@@ -429,7 +429,6 @@ void UKMETIon::observation_slotJobFinished(KJob *job)
         }
     } else {
         readObservationData(source, doc);
-        getSolarData(source);
     }
 
     m_retryAttemps = 0;
@@ -495,6 +494,8 @@ bool UKMETIon::readObservationData(const QString &source, const QJsonDocument &d
     current.observationDateTime = QDateTime::fromString(observation[u"updateTimestamp"].toString(), Qt::ISODate);
     current.obsTime = observation[u"localDate"].toString() + u" " + observation[u"localTime"].toString();
 
+    current.isNight = isNightTime(current.observationDateTime, data.stationLatitude, data.stationLongitude);
+
     current.condition = observation[u"weatherTypeText"].toString();
     if (current.condition == "null"_L1 || current.condition == "Not Available"_L1) {
         current.condition.clear();
@@ -518,38 +519,6 @@ bool UKMETIon::readObservationData(const QString &source, const QJsonDocument &d
     qCDebug(IONENGINE_BBCUKMET) << "Read observation data:" << m_weatherData[source].current.obsTime << m_weatherData[source].current.condition;
 
     return true;
-}
-
-void UKMETIon::getSolarData(const QString &source)
-{
-    WeatherData &data = m_weatherData[source];
-
-    Plasma5Support::DataEngine *timeEngine = dataEngine(QStringLiteral("time"));
-    const bool canCalculateElevation = (data.current.observationDateTime.isValid() && (!qIsNaN(data.stationLatitude) && !qIsNaN(data.stationLongitude)));
-
-    if (!timeEngine || !canCalculateElevation) {
-        return;
-    }
-
-    const QString oldTimeEngineSource = data.solarDataTimeEngineSourceName;
-    data.solarDataTimeEngineSourceName = QStringLiteral("%1|Solar|Latitude=%2|Longitude=%3|DateTime=%4")
-                                             .arg(QString::fromUtf8(data.current.observationDateTime.timeZone().id()))
-                                             .arg(data.stationLatitude)
-                                             .arg(data.stationLongitude)
-                                             .arg(data.current.observationDateTime.toString(Qt::ISODate));
-
-    // Check if we already have the data
-    if (data.solarDataTimeEngineSourceName == oldTimeEngineSource) {
-        return;
-    }
-
-    // Drop old elevation source
-    if (!oldTimeEngineSource.isEmpty()) {
-        timeEngine->disconnectSource(oldTimeEngineSource, this);
-    }
-
-    data.isSolarDataPending = true;
-    timeEngine->connectSource(data.solarDataTimeEngineSourceName, this);
 }
 
 bool UKMETIon::readForecast(const QString &source, const QJsonDocument &doc)
@@ -630,7 +599,7 @@ void UKMETIon::updateWeather(const QString &source)
 {
     const WeatherData &weatherData = m_weatherData[source];
 
-    if (weatherData.isForecastsDataPending || weatherData.isObservationDataPending || weatherData.isSolarDataPending) {
+    if (weatherData.isForecastsDataPending || weatherData.isObservationDataPending) {
         return;
     }
 
@@ -659,7 +628,7 @@ void UKMETIon::updateWeather(const QString &source)
         data.insert(QStringLiteral("Longitude"), weatherData.stationLongitude);
     }
 
-    data.insert(QStringLiteral("Condition Icon"), getWeatherIcon(weatherData.isNight ? nightIcons() : dayIcons(), current.condition));
+    data.insert(QStringLiteral("Condition Icon"), getWeatherIcon(current.isNight ? nightIcons() : dayIcons(), current.condition));
 
     if (!qIsNaN(current.humidity)) {
         data.insert(QStringLiteral("Humidity"), current.humidity);
@@ -734,19 +703,6 @@ void UKMETIon::updateWeather(const QString &source)
     }
 
     qCDebug(IONENGINE_BBCUKMET) << "Updated weather data for" << weatherSource;
-}
-
-void UKMETIon::dataUpdated(const QString &sourceName, const Plasma5Support::DataEngine::Data &data)
-{
-    const bool isNight = (data.value(QStringLiteral("Corrected Elevation")).toDouble() < 0.0);
-
-    for (auto [weatherSource, weatherData] : m_weatherData.asKeyValueRange()) {
-        if (weatherData.solarDataTimeEngineSourceName == sourceName) {
-            weatherData.isNight = isNight;
-            weatherData.isSolarDataPending = false;
-            updateWeather(weatherSource);
-        }
-    }
 }
 
 K_PLUGIN_CLASS_WITH_JSON(UKMETIon, "ion-bbcukmet.json")

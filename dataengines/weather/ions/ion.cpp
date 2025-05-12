@@ -8,6 +8,7 @@
 
 #include "iondebug.h"
 
+#include <KHolidays/SunEvents>
 #include <KLocalizedString>
 
 class Q_DECL_HIDDEN IonInterface::Private
@@ -212,6 +213,27 @@ QString IonInterface::getWeatherIcon(ConditionIcons condition) const
 QString IonInterface::getWeatherIcon(const QMap<QString, ConditionIcons> &conditionList, const QString &condition) const
 {
     return getWeatherIcon(conditionList[condition.toLower()]);
+}
+
+bool IonInterface::isNightTime(const QDateTime &dateTime, double latitude, double longitude)
+{
+    if (!dateTime.isValid() || qIsNaN(latitude) || qIsNaN(longitude)) {
+        return false;
+    }
+
+    const auto events = KHolidays::SunEvents(dateTime, latitude, longitude);
+
+    if (events.isPolarDay()) {
+        return false;
+    }
+    if (events.isPolarNight()) {
+        return true;
+    }
+    if (events.isPolarTwilight()) {
+        return dateTime < events.civilDawn() || dateTime > events.civilDusk();
+    }
+
+    return dateTime < events.sunrise() || dateTime > events.sunset();
 }
 
 #include "moc_ion.cpp"

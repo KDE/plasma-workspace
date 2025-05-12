@@ -118,7 +118,6 @@ public:
     float recordRain;
     float recordSnow;
 
-    QString solarDataTimeEngineSourceName;
     bool isNight = false;
 };
 
@@ -129,7 +128,7 @@ Q_DECLARE_TYPEINFO(WeatherData, Q_RELOCATABLE_TYPE);
 /**
  * https://weather.gc.ca/mainmenu/disclaimer_e.html
  */
-class Q_DECL_EXPORT EnvCanadaIon : public IonInterface, public Plasma5Support::DataEngineConsumer
+class Q_DECL_EXPORT EnvCanadaIon : public IonInterface
 {
     Q_OBJECT
 
@@ -139,10 +138,6 @@ public:
 
 public: // IonInterface API
     bool updateIonSource(const QString &source) override;
-
-public Q_SLOTS:
-    // for solar data pushes from the time engine
-    void dataUpdated(const QString &sourceName, const Plasma5Support::DataEngine::Data &data);
 
 protected: // IonInterface API
     void reset() override;
