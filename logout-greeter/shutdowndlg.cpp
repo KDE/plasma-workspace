@@ -12,7 +12,10 @@
 #include <QDBusPendingReply>
 #include <QFile>
 #include <QFileInfo>
+#include <QJsonArray>
+#include <QJsonValue>
 #include <QPainter>
+#include <QProcess>
 #include <QQmlContext>
 #include <QQmlEngine>
 #include <QQmlPropertyMap>
@@ -65,6 +68,7 @@ static const QString s_dbusPropertiesInterface = QStringLiteral("org.freedesktop
 static const QString s_login1ManagerInterface = QStringLiteral("org.freedesktop.login1.Manager");
 static const QString s_login1RebootToFirmwareSetup = QStringLiteral("RebootToFirmwareSetup");
 static const QString s_login1RebootToBootLoaderMenu = QStringLiteral("RebootToBootLoaderMenu");
+static const QString s_login1RebootToBootLoaderEntry = QStringLiteral("RebootToBootLoaderEntry");
 
 KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype, QScreen *screen)
     : QuickViewSharedEngine(parent)
@@ -133,6 +137,7 @@ KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype,
     // Trying to access a non-existent context property throws an error, always create the property and then update it later
     context->setContextProperty(u"rebootToFirmwareSetup"_s, false);
     context->setContextProperty(u"rebootToBootLoaderMenu"_s, false);
+    context->setContextProperty(u"rebootToBootLoaderEntry"_s, u""_s);
 
     {
         QDBusMessage message = QDBusMessage::createMethodCall(s_login1Service, s_login1Path, s_dbusPropertiesInterface, QStringLiteral("Get"));
@@ -161,6 +166,50 @@ KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype,
             if (reply.value().toULongLong() != std::numeric_limits<uint64_t>::max()) {
                 context->setContextProperty(u"rebootToBootLoaderMenu"_s, true);
             }
+        });
+    }
+
+    {
+        QDBusMessage message = QDBusMessage::createMethodCall(s_login1Service, s_login1Path, s_dbusPropertiesInterface, QStringLiteral("Get"));
+        message.setArguments({s_login1ManagerInterface, s_login1RebootToBootLoaderEntry});
+        QDBusPendingReply<QVariant> call = QDBusConnection::systemBus().asyncCall(message);
+        auto *callWatcher = new QDBusPendingCallWatcher(call, this);
+        connect(callWatcher, &QDBusPendingCallWatcher::finished, context, [context, this](QDBusPendingCallWatcher *watcher) {
+            QDBusPendingReply<QVariant> reply = *watcher;
+            watcher->deleteLater();
+
+            auto bootEntryId = reply.value().toString();
+
+            if (bootEntryId.isEmpty()) {
+                return;
+            }
+
+            QProcess *bootctl = new QProcess(this);
+
+            connect(bootctl, &QProcess::finished, context, [context, bootEntryId, bootctl](int exitCode, QProcess::ExitStatus) {
+                bootctl->deleteLater();
+
+                if (exitCode != 0) {
+                    return;
+                }
+
+                const QJsonDocument output = QJsonDocument::fromJson(bootctl->readAllStandardOutput());
+
+                for (const QJsonValue entry : output.array()) {
+                    if (const QJsonValue entryId = entry[u"id"_s]; entryId.toString() != bootEntryId) {
+                        continue;
+                    }
+
+                    if (const QJsonValue entryShowTitle = entry[u"showTitle"_s]; entryShowTitle.isString()) {
+                        context->setContextProperty(u"rebootToBootLoaderEntry"_s, entryShowTitle.toString());
+                        break;
+                    }
+                }
+            });
+
+            const QStringList bootctlArgs{u"list"_s, u"--json=short"_s};
+
+            bootctl->start(u"bootctl"_s, bootctlArgs);
         });
     }
 
