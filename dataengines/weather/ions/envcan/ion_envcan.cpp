@@ -692,43 +692,11 @@ bool EnvCanadaIon::readXMLData(const QString &source, QXmlStreamReader &xml)
         }
     }
 
-    bool solarDataSourceNeedsConnect = false;
-    Plasma5Support::DataEngine *timeEngine = dataEngine(QStringLiteral("time"));
-    if (timeEngine) {
-        const bool canCalculateElevation = (data.observationDateTime.isValid() && (!qIsNaN(data.stationLatitude) && !qIsNaN(data.stationLongitude)));
-        if (canCalculateElevation) {
-            data.solarDataTimeEngineSourceName = QStringLiteral("%1|Solar|Latitude=%2|Longitude=%3|DateTime=%4")
-                                                     .arg(QString::fromUtf8(data.observationDateTime.timeZone().id()))
-                                                     .arg(data.stationLatitude)
-                                                     .arg(data.stationLongitude)
-                                                     .arg(data.observationDateTime.toString(Qt::ISODate));
-            solarDataSourceNeedsConnect = true;
-        }
-
-        // check any previous data
-        const auto it = m_weatherData.constFind(source);
-        if (it != m_weatherData.constEnd()) {
-            const QString &oldSolarDataTimeEngineSource = it.value().solarDataTimeEngineSourceName;
-
-            if (oldSolarDataTimeEngineSource == data.solarDataTimeEngineSourceName) {
-                // can reuse elevation source (if any), copy over data
-                data.isNight = it.value().isNight;
-                solarDataSourceNeedsConnect = false;
-            } else if (!oldSolarDataTimeEngineSource.isEmpty()) {
-                // drop old elevation source
-                timeEngine->disconnectSource(oldSolarDataTimeEngineSource, this);
-            }
-        }
-    }
+    data.isNight = isNightTime(data.observationDateTime, data.stationLatitude, data.stationLongitude);
 
     m_weatherData[source] = data;
 
-    // connect only after m_weatherData has the data, so the instant data push handling can see it
-    if (solarDataSourceNeedsConnect) {
-        timeEngine->connectSource(data.solarDataTimeEngineSourceName, this);
-    } else {
-        updateWeather(source);
-    }
+    updateWeather(source);
 
     return !xml.error();
 }
@@ -1585,19 +1553,6 @@ void EnvCanadaIon::updateWeather(const QString &source)
     setData(source, data);
 
     qCDebug(IONENGINE_ENVCAN) << "Updated weather:" << source << data;
-}
-
-void EnvCanadaIon::dataUpdated(const QString &sourceName, const Plasma5Support::DataEngine::Data &data)
-{
-    const bool isNight = (data.value(QStringLiteral("Corrected Elevation")).toDouble() < 0.0);
-
-    for (auto end = m_weatherData.end(), it = m_weatherData.begin(); it != end; ++it) {
-        auto &weatherData = it.value();
-        if (weatherData.solarDataTimeEngineSourceName == sourceName) {
-            weatherData.isNight = isNight;
-            updateWeather(it.key());
-        }
-    }
 }
 
 K_PLUGIN_CLASS_WITH_JSON(EnvCanadaIon, "ion-envcan.json")

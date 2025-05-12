@@ -11,8 +11,6 @@
 
 #include "../ion.h"
 
-#include <Plasma5Support/DataEngineConsumer>
-
 #include <QDateTime>
 #include <QList>
 
@@ -34,6 +32,7 @@ public:
     struct Observation {
         QString obsTime;
         QDateTime observationDateTime;
+        bool isNight = false;
 
         QString condition;
         QString conditionIcon;
@@ -47,10 +46,6 @@ public:
     };
     Observation current;
     bool isObservationDataPending = false;
-
-    QString solarDataTimeEngineSourceName;
-    bool isNight = false;
-    bool isSolarDataPending = false;
 
     // Forecasts
     struct ForecastInfo {
@@ -72,7 +67,7 @@ public:
 Q_DECLARE_TYPEINFO(WeatherData::ForecastInfo, Q_RELOCATABLE_TYPE);
 Q_DECLARE_TYPEINFO(WeatherData, Q_RELOCATABLE_TYPE);
 
-class Q_DECL_EXPORT UKMETIon : public IonInterface, public Plasma5Support::DataEngineConsumer
+class Q_DECL_EXPORT UKMETIon : public IonInterface
 {
     Q_OBJECT
 
@@ -81,10 +76,6 @@ public:
 
 public: // IonInterface API
     bool updateIonSource(const QString &source) override;
-
-public Q_SLOTS:
-    // for solar data pushes from the time engine
-    void dataUpdated(const QString &sourceName, const Plasma5Support::DataEngine::Data &data);
 
 protected: // IonInterface API
     void reset() override;
@@ -124,7 +115,6 @@ private:
 
     // Load and parse current observation data
     void getObservation(const QString &source);
-    void getSolarData(const QString &source);
     bool readObservationData(const QString &source, const QJsonDocument &doc);
 
 private:

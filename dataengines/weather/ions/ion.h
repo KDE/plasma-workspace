@@ -190,6 +190,8 @@ public:
      */
     QString getWindDirectionIcon(const QMap<QString, WindDirections> &windDirList, const QString &windDirection) const;
 
+    static bool isNightTime(const QDateTime &dateTime, double latitude, double longitude);
+
 public Q_SLOTS:
 
     /**

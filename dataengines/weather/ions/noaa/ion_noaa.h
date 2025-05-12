@@ -48,6 +48,7 @@ public:
         float heatindex_F = qQNaN();
         float windchill_F = qQNaN();
         float visibility = qQNaN();
+        bool isNight = false;
     };
     Observation observation;
 
@@ -72,16 +73,12 @@ public:
     QList<Alert> alerts;
 
     bool isForecastsDataPending = false;
-
-    QString solarDataTimeEngineSourceName;
-    bool isNight = false;
-    bool isSolarDataPending = false;
 };
 
 Q_DECLARE_TYPEINFO(WeatherData::Forecast, Q_RELOCATABLE_TYPE);
 Q_DECLARE_TYPEINFO(WeatherData, Q_RELOCATABLE_TYPE);
 
-class Q_DECL_EXPORT NOAAIon : public IonInterface, public Plasma5Support::DataEngineConsumer
+class Q_DECL_EXPORT NOAAIon : public IonInterface
 {
     Q_OBJECT
 
@@ -91,10 +88,6 @@ public:
 
 public: // IonInterface API
     bool updateIonSource(const QString &source) override;
-
-public Q_SLOTS:
-    // for solar data pushes from the time engine
-    void dataUpdated(const QString &sourceName, const Plasma5Support::DataEngine::Data &data);
 
 Q_SIGNALS:
     void locationUpdated(const QString &source);
@@ -132,9 +125,6 @@ private:
     // Load and parse the observation data from a station
     void getObservation(const QString &source);
     void readObservation(const QString &source, const QJsonDocument &doc);
-
-    // To know whether the local observation is day or night time
-    void getSolarData(const QString &source);
 
     // Load and parse upcoming forecast for the next N days
     void getForecast(const QString &source);
