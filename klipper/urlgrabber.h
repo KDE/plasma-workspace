@@ -104,7 +104,6 @@ private Q_SLOTS:
 
 Q_SIGNALS:
     void sigPopup(QMenu *);
-    void sigDisablePopup();
 };
 
 struct ClipCommand {

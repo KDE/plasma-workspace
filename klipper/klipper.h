@@ -105,7 +105,6 @@ public Q_SLOTS:
 protected Q_SLOTS:
     void showPopupMenu(QMenu *);
     void slotRepeatAction();
-    void disableURLGrabber();
 
 private Q_SLOTS:
     void slotHistoryChanged(bool isTop = false);

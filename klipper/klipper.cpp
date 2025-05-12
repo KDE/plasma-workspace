@@ -97,7 +97,6 @@ Klipper::Klipper(QObject *parent)
      */
     m_myURLGrabber = new URLGrabber(this);
     connect(m_myURLGrabber, &URLGrabber::sigPopup, this, &Klipper::showPopupMenu);
-    connect(m_myURLGrabber, &URLGrabber::sigDisablePopup, this, &Klipper::disableURLGrabber);
     connect(m_historyModel.get(), &HistoryModel::actionInvoked, m_myURLGrabber, &URLGrabber::invokeAction);
 
     /*
@@ -307,21 +306,6 @@ bool Klipper::eventFilter(QObject *filtered, QEvent *event)
 void Klipper::saveSession()
 {
     saveSettings();
-}
-
-void Klipper::disableURLGrabber()
-{
-    QMessageBox *message = new QMessageBox(QMessageBox::Information,
-                                           QString(),
-                                           xi18nc("@info",
-                                                  "You can enable URL actions later in the "
-                                                  "<interface>Actions</interface> page of the "
-                                                  "Clipboard applet's configuration window"));
-    message->setAttribute(Qt::WA_DeleteOnClose);
-    message->setModal(false);
-    message->show();
-
-    setURLGrabberEnabled(false);
 }
 
 void Klipper::slotConfigure()

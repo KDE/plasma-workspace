@@ -193,15 +193,6 @@ void URLGrabber::actionMenu(HistoryItemConstPtr item, bool automatically_invoked
                 m_myMenu->addAction(action);
             }
         }
-
-        // only insert this when invoked via clipboard monitoring, not from an
-        // explicit Ctrl-Alt-R
-        if (automatically_invoked) {
-            m_myMenu->addSeparator();
-            QAction *disableAction = new QAction(i18n("Disable This Popup"), this);
-            connect(disableAction, &QAction::triggered, this, &URLGrabber::sigDisablePopup);
-            m_myMenu->addAction(disableAction);
-        }
         m_myMenu->addSeparator();
 
         QAction *cancelAction = new QAction(QIcon::fromTheme(QStringLiteral("dialog-cancel")), i18n("&Cancel"), this);
