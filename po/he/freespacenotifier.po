@@ -4,13 +4,13 @@
 # Diego Iastrubni <elcuco@kde.org>, 2012.
 # elkana bardugo <ttv200@gmail.com>, 2016.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
-# SPDX-FileCopyrightText: 2023 Yaron Shahrabani <sh.yaron@gmail.com>
+# SPDX-FileCopyrightText: 2023, 2025 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: freespacenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-11 00:44+0000\n"
-"PO-Revision-Date: 2023-10-04 15:19+0300\n"
+"PO-Revision-Date: 2025-05-11 18:59+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: freespacenotifier.cpp:121
 #, kde-format
@@ -44,10 +44,9 @@ msgstr "המקום הפנוי שממנו ומטה המשתמש יתחיל לקב
 
 #. i18n: ectx: label, entry (minimumSpacePercentage), group (General)
 #: freespacenotifier.kcfg:15
-#, fuzzy, kde-format
-#| msgid "Minimum free space before user starts being notified."
+#, kde-format
 msgid "Minimum percentage free space before user starts being notified."
-msgstr "המקום הפנוי שממנו ומטה המשתמש יתחיל לקבל התראות."
+msgstr "אחוז המקום הפנוי שממנו ומטה המשתמש יתחיל לקבל התראות."
 
 #. i18n: ectx: label, entry (enableNotification), group (General)
 #: freespacenotifier.kcfg:21
@@ -75,16 +74,15 @@ msgstr " MiB"
 
 #. i18n: ectx: property (text), widget (QLabel, label_minimumSpacePercentage)
 #: freespacenotifier_prefs_base.ui:44
-#, fuzzy, kde-format
-#| msgid "Warn when free space is below:"
+#, kde-format
 msgid "And when free space is under:"
-msgstr "להזהיר כשהמקום הפנוי יורד מתחת ל־:"
+msgstr "וכאשר המקום הפנוי פחות מ־:"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpacePercentage)
 #: freespacenotifier_prefs_base.ui:54
 #, no-c-format, kde-format
 msgid "%"
-msgstr ""
+msgstr "%"
 
 #. i18n: ectx: property (text), widget (QLabel, label_info)
 #: freespacenotifier_prefs_base.ui:67
@@ -93,36 +91,31 @@ msgid ""
 "The system will notify you if the free space drops below the specified MiB "
 "and the specified percentage of available space."
 msgstr ""
+"המערכת תודיע לך כשהמקום הפנוי צונח מתחת ל־MiB שצוינו והאחוזים שצוינו של נפח "
+"פנוי."
 
 #: module.cpp:100
-#, fuzzy, kde-format
-#| msgid ""
-#| "Your Root partition is running out of disk space, you have %1 MiB "
-#| "remaining (%2%)."
+#, kde-format
 msgid ""
 "Your %1 partition is running out of disk space; %2 MiB of space remaining "
 "(%3%)."
-msgstr "המקום הפנוי במחיצה העיקרית שלך עומד להיגמר, נותרו לך %1 MiB‏ (%2%)."
+msgstr "המקום הפנוי במחיצה %1 הולך ואוזל, נותרו %2 MiB של נפח (%3%)."
 
 #: module.cpp:102
-#, fuzzy, kde-format
-#| msgid ""
-#| "Your Root partition is running out of disk space, you have %1 MiB "
-#| "remaining (%2%)."
+#, kde-format
 msgid ""
 "Your Root partition is running out of disk space; %1 MiB of space remaining "
 "(%2%)."
-msgstr "המקום הפנוי במחיצה העיקרית שלך עומד להיגמר, נותרו לך %1 MiB‏ (%2%)."
+msgstr ""
+"המקום הפנוי במחיצת העלך שלך עומד להיגמר, נותרו לך %1 MiB‏ של נפח פנוי (%2%)."
 
 #: module.cpp:104
-#, fuzzy, kde-format
-#| msgid ""
-#| "Your Home folder is running out of disk space, you have %1 MiB remaining "
-#| "(%2%)."
+#, kde-format
 msgid ""
 "Your Home folder is running out of disk space; %1 MiB of space remaining "
 "(%2%)."
-msgstr "המקום הפנוי בתיקיית הבית שלך עומד להיגמר, נותרו לך %1 MiB‏ (%2%)."
+msgstr ""
+"המקום הפנוי בתיקיית הבית שלך עומד להיגמר, נותרו לך %1 MiB‏ של נפח פנוי (%2%)."
 
 #: module.cpp:129
 #, kde-format

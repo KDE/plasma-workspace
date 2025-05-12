@@ -5,21 +5,21 @@
 # Ozan Çağlayan <ozan@pardus.org.tr>, 2010.
 # H. İbrahim Güngör <ibrahim@pardus.org.tr>, 2011.
 # Volkan Gezer <volkangezer@gmail.com>, 2013, 2014, 2021, 2022.
-# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023, 2025 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kded_susefreespacenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-11 00:44+0000\n"
-"PO-Revision-Date: 2023-03-31 21:36+0300\n"
-"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
+"PO-Revision-Date: 2025-05-11 18:31+0300\n"
+"Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: freespacenotifier.cpp:121
 #, kde-format
@@ -40,20 +40,19 @@ msgstr "Uyarıyı Yapılandır…"
 #: freespacenotifier.kcfg:9
 #, kde-format
 msgid "Minimum free space before user starts being notified."
-msgstr "Kullanıcı uyarılmadan önce kalacak en az boş alan miktarı."
+msgstr "Kullanıcı uyarılmaya başlamadan önceki boş alan miktarı."
 
 #. i18n: ectx: label, entry (minimumSpacePercentage), group (General)
 #: freespacenotifier.kcfg:15
-#, fuzzy, kde-format
-#| msgid "Minimum free space before user starts being notified."
+#, kde-format
 msgid "Minimum percentage free space before user starts being notified."
-msgstr "Kullanıcı uyarılmadan önce kalacak en az boş alan miktarı."
+msgstr "Kullanıcı uyarılmaya başlamadan önceki boş alan yüzdesi."
 
 #. i18n: ectx: label, entry (enableNotification), group (General)
 #: freespacenotifier.kcfg:21
 #, kde-format
 msgid "Is the free space notification enabled."
-msgstr "Boş alan uyarısı etkin mi."
+msgstr "Boş alan bildiriminin etkin olup olmadığı."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableNotification)
 #: freespacenotifier_prefs_base.ui:17
@@ -75,16 +74,15 @@ msgstr " MiB"
 
 #. i18n: ectx: property (text), widget (QLabel, label_minimumSpacePercentage)
 #: freespacenotifier_prefs_base.ui:44
-#, fuzzy, kde-format
-#| msgid "Warn when free space is below:"
+#, kde-format
 msgid "And when free space is under:"
-msgstr "Boş alan bu düzeyin altına inerse uyar:"
+msgstr "Boş alan bu düzeyin altındaysa:"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpacePercentage)
 #: freespacenotifier_prefs_base.ui:54
 #, no-c-format, kde-format
 msgid "%"
-msgstr ""
+msgstr "%"
 
 #. i18n: ectx: property (text), widget (QLabel, label_info)
 #: freespacenotifier_prefs_base.ui:67
@@ -93,36 +91,30 @@ msgid ""
 "The system will notify you if the free space drops below the specified MiB "
 "and the specified percentage of available space."
 msgstr ""
+"Boş alan belirtilen MiB düzeyinin ve kullanılabilir yüzdenin altına "
+"düştüğünde sistem size bildirecektir."
 
 #: module.cpp:100
-#, fuzzy, kde-format
-#| msgid ""
-#| "Your Root partition is running out of disk space, you have %1 MiB "
-#| "remaining (%2%)."
+#, kde-format
 msgid ""
 "Your %1 partition is running out of disk space; %2 MiB of space remaining "
 "(%3%)."
-msgstr "Kök dizininiz dolmak üzere, %1 MiB alanınız kaldı (%​%2)"
+msgstr "%1 bölüntünüzdeki boş alan azalıyor, %2 MiB kadar alan kaldı (%​%3)."
 
 #: module.cpp:102
-#, fuzzy, kde-format
-#| msgid ""
-#| "Your Root partition is running out of disk space, you have %1 MiB "
-#| "remaining (%2%)."
+#, kde-format
 msgid ""
 "Your Root partition is running out of disk space; %1 MiB of space remaining "
 "(%2%)."
-msgstr "Kök dizininiz dolmak üzere, %1 MiB alanınız kaldı (%​%2)"
+msgstr "Kök bölüntünüzdeki boş alan azalıyor, %1 MiB kadar alan kaldı (%​%2)."
 
 #: module.cpp:104
-#, fuzzy, kde-format
-#| msgid ""
-#| "Your Home folder is running out of disk space, you have %1 MiB remaining "
-#| "(%2%)."
+#, kde-format
 msgid ""
 "Your Home folder is running out of disk space; %1 MiB of space remaining "
 "(%2%)."
-msgstr "Ana klasörünüz dolmak üzere, %1 MiB boş alanınız kaldı (%​%2)."
+msgstr ""
+"Ana klasörünüz için olan boş alan azalıyor, %1 MiB kadar alan kaldı (%​%2)."
 
 #: module.cpp:129
 #, kde-format
