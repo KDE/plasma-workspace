@@ -17,20 +17,20 @@ GridLayout {
     id: toolButtonsLayout
 
     enum ButtonRole {
+        Edit,
         InvokeAction,
         ShowQRCode,
-        Edit,
         Remove
     }
 
     readonly property Item defaultButton: visibleChildren.length > 0 ? visibleChildren[0] : this
     // https://bugreports.qt.io/browse/QTBUG-108821
     readonly property bool hovered: visibleChildren.filter(x => x.hovered).length > 0
-    readonly property list<string> actionIcons: ["system-run", "view-barcode-qr", "document-edit", "edit-delete"]
+    readonly property list<string> actionIcons: ["document-edit", "system-run", "view-barcode-qr", "edit-delete"]
     readonly property list<string> actionNames: [
+        i18nd("klipper", "Edit contents"),
         i18nd("klipper", "Invoke action"),
         i18nd("klipper", "Show QR code"),
-        i18nd("klipper", "Edit contents"),
         i18nd("klipper", "Remove from history")
     ]
 
@@ -44,14 +44,14 @@ GridLayout {
 
     function trigger(actionIndex: int): void {
         switch (actionIndex) {
+        case DelegateToolButtons.ButtonRole.Edit:
+            menuItem.edit();
+            break;
         case DelegateToolButtons.ButtonRole.InvokeAction:
             menuItem.triggerAction();
             break;
         case DelegateToolButtons.ButtonRole.ShowQRCode:
             menuItem.barcode();
-            break;
-        case DelegateToolButtons.ButtonRole.Edit:
-            menuItem.edit();
             break;
         case DelegateToolButtons.ButtonRole.Remove:
             menuItem.remove();
