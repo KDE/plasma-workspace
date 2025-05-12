@@ -353,7 +353,7 @@ private:
             }
 
             for (const KServiceAction &action : actions) {
-                if (action.text().isEmpty() || action.exec().isEmpty() || hasSeen(action)) {
+                if (action.text().isEmpty() || hasSeen(action)) {
                     continue;
                 }
                 seen(action);

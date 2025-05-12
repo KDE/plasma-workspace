@@ -222,7 +222,7 @@ QVariantList jumpListActions(KService::Ptr service)
 
     const auto &actions = service->actions();
     for (const KServiceAction &action : actions) {
-        if (action.text().isEmpty() || action.exec().isEmpty()) {
+        if (action.text().isEmpty()) {
             continue;
         }
 
