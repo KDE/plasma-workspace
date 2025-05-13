@@ -1,4 +1,5 @@
 set(image_SRCS
+    daynightwallpaper.cpp daynightwallpaper.h
     imagebackend.cpp imagebackend.h
     slidemodel.cpp slidemodel.h
     slidefiltermodel.cpp slidefiltermodel.h
@@ -18,6 +19,7 @@ set(image_SRCS
     utils/backgroundtype.h
     utils/maximizedwindowmonitor.cpp utils/maximizedwindowmonitor.h
     utils/mediaproxy.cpp utils/mediaproxy.h
+    utils/wallpaperurl.cpp utils/wallpaperurl.h
 )
 
 ecm_qt_declare_logging_category(image_SRCS HEADER debug.h
@@ -34,9 +36,11 @@ set_property(TARGET plasma_wallpaper_imageplugin_static PROPERTY POSITION_INDEPE
 
 target_link_libraries(plasma_wallpaper_imageplugin_static
     Qt::Core
+    Qt::Positioning
     Qt::Quick
     Qt::Qml
     Plasma::Plasma
+    KF6::Holidays
     KF6::I18n
     KF6::JobWidgets
     KF6::KIOCore

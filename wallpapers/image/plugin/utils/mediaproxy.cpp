@@ -270,30 +270,34 @@ QColor MediaProxy::getAccentColorFromMetaData(const KPackage::Package &package)
 
 void MediaProxy::determineBackgroundType(KPackage::Package *package)
 {
-    QString filePath;
-    if (package) {
-        filePath = findPreferredImageInPackage(*package).toLocalFile();
+    if (m_source.fragment() == QLatin1String("day-night")) {
+        m_backgroundType = BackgroundType::Type::DayNight;
     } else {
-        filePath = m_source.toLocalFile();
-    }
+        QString filePath;
+        if (package) {
+            filePath = findPreferredImageInPackage(*package).toLocalFile();
+        } else {
+            filePath = m_source.toLocalFile();
+        }
 
-    QMimeDatabase db;
-    const QString type = db.mimeTypeForFile(filePath).name();
+        QMimeDatabase db;
+        const QString type = db.mimeTypeForFile(filePath).name();
 
-    QBuffer dummyBuffer;
-    dummyBuffer.open(QIODevice::ReadOnly);
-    // Don't use QMovie::supportedFormats() as it loads all available image plugins
-    const bool isAnimated = QImageReader(&dummyBuffer, QFileInfo(filePath).suffix().toLower().toLatin1()).supportsOption(QImageIOHandler::Animation);
+        QBuffer dummyBuffer;
+        dummyBuffer.open(QIODevice::ReadOnly);
+        // Don't use QMovie::supportedFormats() as it loads all available image plugins
+        const bool isAnimated = QImageReader(&dummyBuffer, QFileInfo(filePath).suffix().toLower().toLatin1()).supportsOption(QImageIOHandler::Animation);
 
-    if (isAnimated) {
-        // Derived from the suffix
-        m_backgroundType = BackgroundType::Type::AnimatedImage;
-    } else if (type.startsWith(QLatin1String("image/svg"))) {
-        m_backgroundType = BackgroundType::Type::VectorImage;
-    } else if (type.startsWith(QLatin1String("image/"))) {
-        m_backgroundType = BackgroundType::Type::Image;
-    } else {
-        m_backgroundType = BackgroundType::Type::Unknown;
+        if (isAnimated) {
+            // Derived from the suffix
+            m_backgroundType = BackgroundType::Type::AnimatedImage;
+        } else if (type.startsWith(QLatin1String("image/svg"))) {
+            m_backgroundType = BackgroundType::Type::VectorImage;
+        } else if (type.startsWith(QLatin1String("image/"))) {
+            m_backgroundType = BackgroundType::Type::Image;
+        } else {
+            m_backgroundType = BackgroundType::Type::Unknown;
+        }
     }
 
     Q_EMIT backgroundTypeChanged();
@@ -384,6 +388,11 @@ void MediaProxy::updateModelImage(KPackage::Package *package, bool doesBlockSign
         if (m_customColor != color && color.isValid() && color != Qt::transparent) {
             m_customColor = color;
             Q_EMIT customColorChanged();
+        }
+
+        if (m_backgroundType == BackgroundType::Type::DayNight) {
+            newRealSource = m_source;
+            break;
         }
 
         if (m_backgroundType != BackgroundType::Type::VectorImage) {

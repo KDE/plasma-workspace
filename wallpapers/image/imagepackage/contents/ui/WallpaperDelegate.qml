@@ -12,6 +12,7 @@ import Qt5Compat.GraphicalEffects
 import org.kde.kirigami as Kirigami
 import org.kde.kquickcontrolsaddons
 import org.kde.kcmutils as KCM
+import org.kde.plasma.wallpapers.image as PlasmaWallpaper
 
 KCM.GridDelegate {
     id: wallpaperDelegate
@@ -49,6 +50,34 @@ KCM.GridDelegate {
                     wallpapersGrid.view.itemAtIndex(newIndex).clicked();
                 }
                 root.configurationChanged(); // BUG 438585
+            }
+        },
+        Kirigami.Action {
+            icon.name: {
+                if (selector == "" || selector == "dark-light") {
+                    return "color-mode-black-white"; // FIXME
+                } else if (selector == "day-night") {
+                    return "lighttable"; // FIXME
+                } else {
+                    return undefined;
+                }
+            }
+            tooltip: {
+                if (selector == "" || selector == "dark-light") {
+                    return i18nd("plasma_wallpaper_org.kde.image", "Follows color scheme");
+                } else if (selector == "day-night") {
+                    return i18nd("plasma_wallpaper_org.kde.image", "Switch automatically between dark and light images depending on the time of the day");
+                } else {
+                    return "";
+                }
+            }
+            visible: model.selectors.includes("day-night")
+            onTriggered: {
+                if (selector == "" || selector == "dark-light") {
+                    cfg_Image = PlasmaWallpaper.WallpaperUrl.make(model.packageName || model.path, "day-night");
+                } else {
+                    cfg_Image = PlasmaWallpaper.WallpaperUrl.make(model.packageName || model.path, "");
+                }
             }
         }
     ]
@@ -130,7 +159,8 @@ KCM.GridDelegate {
 
     onClicked: {
         if (configDialog.currentWallpaper === "org.kde.image") {
-            cfg_Image = model.packageName || model.path;
+            const effectiveSelector = model.selectors.includes(selector) ? selector : "";
+            cfg_Image = PlasmaWallpaper.WallpaperUrl.make(model.packageName || model.path, effectiveSelector);
             if (typeof wallpaper !== "undefined") {
                 wallpaper.configuration.PreviewImage = cfg_Image;
             }

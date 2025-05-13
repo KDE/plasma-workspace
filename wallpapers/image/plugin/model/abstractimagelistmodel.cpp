@@ -50,6 +50,7 @@ QHash<int, QByteArray> AbstractImageListModel::roleNames() const
         {RemovableRole, QByteArrayLiteral("removable")},
         {PendingDeletionRole, QByteArrayLiteral("pendingDeletion")},
         {ToggleRole, QByteArrayLiteral("checked")},
+        {SelectorsRole, QByteArrayLiteral("selectors")},
     };
 }
 

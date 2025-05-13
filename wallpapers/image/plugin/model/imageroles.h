@@ -20,6 +20,7 @@ public:
         RemovableRole,
         PendingDeletionRole,
         ToggleRole, /**< Used in slideshow model */
+        SelectorsRole,
     };
     Q_ENUM(RoleType)
 };

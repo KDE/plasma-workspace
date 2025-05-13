@@ -13,6 +13,24 @@
 
 #include <KPackage/Package>
 
+class WallpaperPackage
+{
+public:
+    WallpaperPackage(const KPackage::Package &package);
+
+    QString displayName() const;
+
+    /**
+     *
+     */
+    KPackage::Package package;
+
+    /**
+     *
+     */
+    QStringList selectors;
+};
+
 /**
  * A runnable that finds KPackage wallpapers.
  */
@@ -26,10 +44,9 @@ public:
     void run() override;
 
     static void findPreferredImageInPackage(KPackage::Package &package, const QSize &targetSize);
-    static QString packageDisplayName(const KPackage::Package &b);
 
 Q_SIGNALS:
-    void packageFound(const QList<KPackage::Package> &packages);
+    void packageFound(const QList<WallpaperPackage> &packages);
 
 private:
     QStringList m_paths;

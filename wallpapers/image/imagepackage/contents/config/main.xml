@@ -46,5 +46,9 @@
         <label>Ordering mode for the slideshow</label>
         <default>0</default>
     </entry>
+    <entry name="AllowGeolocation" type="Bool">
+      <label>Allow using geolocation to improve display of day/night wallpapers</label>
+      <default>false</default>
+    </entry>
   </group>
 </kcfg>

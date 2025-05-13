@@ -10,6 +10,7 @@
 #include <limits>
 
 #include <QDir>
+#include <QImageReader>
 
 #include <KPackage/PackageLoader>
 
@@ -47,6 +48,41 @@ QSize resSize(QStringView str)
 }
 }
 
+static bool isDayNightSupported(const QString &lightFilePath, const QString &darkFilePath)
+{
+    if (QImageReader(lightFilePath).supportsAnimation()) {
+        return false;
+    } else if (QImageReader(darkFilePath).supportsAnimation()) {
+        return false;
+    }
+    return true;
+}
+
+WallpaperPackage::WallpaperPackage(const KPackage::Package &package)
+    : package(package)
+{
+    const QString preferredDarkImage = package.filePath(QByteArrayLiteral("preferredDark"));
+    if (!preferredDarkImage.isEmpty()) {
+        selectors << QStringLiteral("dark-light");
+
+        const QString preferredImage = package.filePath(QByteArrayLiteral("preferred"));
+        if (isDayNightSupported(preferredImage, preferredDarkImage)) {
+            selectors << QStringLiteral("day-night");
+        }
+    }
+}
+
+QString WallpaperPackage::displayName() const
+{
+    const QString title = package.metadata().name();
+
+    if (title.isEmpty()) {
+        return QFileInfo(package.filePath("preferred")).completeBaseName();
+    }
+
+    return title;
+}
+
 PackageFinder::PackageFinder(const QStringList &paths, const QSize &targetSize, QObject *parent)
     : QObject(parent)
     , m_paths(paths)
@@ -56,7 +92,7 @@ PackageFinder::PackageFinder(const QStringList &paths, const QSize &targetSize, 
 
 void PackageFinder::run()
 {
-    QList<KPackage::Package> packages;
+    QList<WallpaperPackage> packages;
     QStringList folders;
 
     QDir dir;
@@ -92,7 +128,7 @@ void PackageFinder::run()
             }
 
             findPreferredImageInPackage(package, m_targetSize);
-            packages << package;
+            packages << WallpaperPackage(package);
             folders << folderPath;
 
             return true;
@@ -182,15 +218,4 @@ void PackageFinder::findPreferredImageInPackage(KPackage::Package &package, cons
         package.removeDefinition("preferredDark");
         package.addFileDefinition("preferredDark", QStringLiteral("images_dark/%1").arg(preferredDark));
     }
-}
-
-QString PackageFinder::packageDisplayName(const KPackage::Package &b)
-{
-    const QString title = b.metadata().name();
-
-    if (title.isEmpty()) {
-        return QFileInfo(b.filePath("preferred")).completeBaseName();
-    }
-
-    return title;
 }

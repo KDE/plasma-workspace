@@ -45,6 +45,9 @@ ColumnLayout {
     property int cfg_SlideIntervalDefault: 0
     property var cfg_UncheckedSlides: []
     property var cfg_UncheckedSlidesDefault: []
+    property bool cfg_AllowGeolocation: false
+
+    readonly property string selector: PlasmaWallpaper.WallpaperUrl.fragment(cfg_Image)
 
     signal configurationChanged()
     /**
@@ -198,6 +201,12 @@ ColumnLayout {
                     highlight: cfg_Color != cfg_ColorDefault
                 }
             }
+        }
+
+        QtControls2.CheckBox {
+            text: i18nd("plasma_wallpaper_org.kde.image", "Use geolocation to improve accuracy of dynamic wallpapers")
+            checked: cfg_AllowGeolocation
+            onToggled: cfg_AllowGeolocation = !cfg_AllowGeolocation
         }
     }
 
