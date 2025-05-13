@@ -56,6 +56,16 @@ Kirigami.PageRow {
 
     property Item realFooter
     property Item fakeFooter: QQC2.DialogButtonBox {
+        background: Item {
+            Kirigami.Separator {
+                id: bottomSeparator
+                anchors {
+                    left: parent.left
+                    right: parent.right
+                    top: parent.top
+                }
+            }
+        }
         QQC2.Button {
             text: i18n("Cancel")
             onClicked: {
