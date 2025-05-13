@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-20 00:43+0000\n"
+"POT-Creation-Date: 2025-05-13 00:43+0000\n"
 "PO-Revision-Date: 2025-04-11 20:25+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -648,85 +648,75 @@ msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Автоматично изскачащо меню за действие:"
 
-#: klipper.cpp:110
+#: klipper.cpp:109
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&Изчистване историята на клипборда"
 
-#: klipper.cpp:117
+#: klipper.cpp:116
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "&Конфигуриране на Klipper…"
 
-#: klipper.cpp:121
+#: klipper.cpp:120
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Мануално извършване на действие в текущия клипборд"
 
-#: klipper.cpp:129
+#: klipper.cpp:128
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "&Редактиране на съдържание…"
 
-#: klipper.cpp:135
+#: klipper.cpp:134
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "&Показване на баркод…"
 
-#: klipper.cpp:144
+#: klipper.cpp:143
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Следващ елемент от историята"
 
-#: klipper.cpp:149
+#: klipper.cpp:148
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Предишен елемент от историята"
 
-#: klipper.cpp:156
+#: klipper.cpp:155
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Показване на елементи на клипборда в позицията на мишката"
 
-#: klipper.cpp:317
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"You can enable URL actions later in the <interface>Actions</interface> page "
-"of the Clipboard applet's configuration window"
-msgstr ""
-"Можете да активирате URL действия на страницата <interface>Действия</"
-"interface> в конфигурационния прозорец на аплета на клипборда"
-
-#: klipper.cpp:451
+#: klipper.cpp:435
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Мобилен баркод"
 
-#: klipper.cpp:494 klipper.cpp:503
+#: klipper.cpp:478 klipper.cpp:487
 #, kde-format
 msgid "Clipboard history"
 msgstr "Историята на буфера"
 
-#: klipper.cpp:520
+#: klipper.cpp:504
 #, kde-format
 msgid "up"
 msgstr "нагоре"
 
-#: klipper.cpp:527
+#: klipper.cpp:511
 #, kde-format
 msgid "current"
 msgstr "текущо"
 
-#: klipper.cpp:534
+#: klipper.cpp:518
 #, kde-format
 msgid "down"
 msgstr "надолу"
@@ -950,12 +940,18 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "Изчакащ прозорец на клипборд"
 
-#: urlgrabber.cpp:201
-#, kde-format
-msgid "Disable This Popup"
-msgstr "Изключване на този изскачащ прозорец"
-
-#: urlgrabber.cpp:207
+#: urlgrabber.cpp:198
 #, kde-format
 msgid "&Cancel"
 msgstr "От&каз"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "You can enable URL actions later in the <interface>Actions</interface> "
+#~ "page of the Clipboard applet's configuration window"
+#~ msgstr ""
+#~ "Можете да активирате URL действия на страницата <interface>Действия</"
+#~ "interface> в конфигурационния прозорец на аплета на клипборда"
+
+#~ msgid "Disable This Popup"
+#~ msgstr "Изключване на този изскачащ прозорец"

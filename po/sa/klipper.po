@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-20 00:43+0000\n"
+"POT-Creation-Date: 2025-05-13 00:43+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -634,86 +634,76 @@ msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "स्वचालित क्रिया पॉपअप मेनू"
 
-#: klipper.cpp:110
+#: klipper.cpp:109
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "C&lear क्लिपबोर्ड इतिहास"
 
-#: klipper.cpp:117
+#: klipper.cpp:116
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "&क्लिप्स विन्यस्तं कुर्वन्तु..."
 
-#: klipper.cpp:121
+#: klipper.cpp:120
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "वर्तमान क्लिप्बोर्ड् मध्ये मैन्युअल् रूपेण क्रियाम् आह्वयन्तु"
 
-#: klipper.cpp:129
+#: klipper.cpp:128
 #, fuzzy, kde-format
 #| msgid "Edit contents"
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "सामग्रीं सम्पादयन्तु"
 
-#: klipper.cpp:135
+#: klipper.cpp:134
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "&बारकोडं दर्शयतु..."
 
-#: klipper.cpp:144
+#: klipper.cpp:143
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "अग्रिमः इतिहासः मदः"
 
-#: klipper.cpp:149
+#: klipper.cpp:148
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "पूर्व इतिहास मद"
 
-#: klipper.cpp:156
+#: klipper.cpp:155
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Mouse Position इत्यत्र Clipboard Items दर्शयतु"
 
-#: klipper.cpp:317
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"You can enable URL actions later in the <interface>Actions</interface> page "
-"of the Clipboard applet's configuration window"
-msgstr ""
-"भवन्तः पश्चात् Clipboard एप्लेट् इत्यस्य विन्यासविण्डो इत्यस्य <interface>Actions</"
-"interface> पृष्ठे URL क्रियाः सक्षमं कर्तुं शक्नुवन्ति"
-
-#: klipper.cpp:451
+#: klipper.cpp:435
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "मोबाइल बारकोड"
 
-#: klipper.cpp:494 klipper.cpp:503
+#: klipper.cpp:478 klipper.cpp:487
 #, kde-format
 msgid "Clipboard history"
 msgstr "क्लिपबोर्ड इतिहास"
 
-#: klipper.cpp:520
+#: klipper.cpp:504
 #, kde-format
 msgid "up"
 msgstr "उपरि"
 
-#: klipper.cpp:527
+#: klipper.cpp:511
 #, kde-format
 msgid "current"
 msgstr "वर्त्तमानः"
 
-#: klipper.cpp:534
+#: klipper.cpp:518
 #, kde-format
 msgid "down"
 msgstr "अधः"
@@ -928,12 +918,18 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "क्लिपबोर्ड पॉपअप"
 
-#: urlgrabber.cpp:201
-#, kde-format
-msgid "Disable This Popup"
-msgstr "This Popup अक्षमम्"
-
-#: urlgrabber.cpp:207
+#: urlgrabber.cpp:198
 #, kde-format
 msgid "&Cancel"
 msgstr "&निरसयतु"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "You can enable URL actions later in the <interface>Actions</interface> "
+#~ "page of the Clipboard applet's configuration window"
+#~ msgstr ""
+#~ "भवन्तः पश्चात् Clipboard एप्लेट् इत्यस्य विन्यासविण्डो इत्यस्य <interface>Actions</"
+#~ "interface> पृष्ठे URL क्रियाः सक्षमं कर्तुं शक्नुवन्ति"
+
+#~ msgid "Disable This Popup"
+#~ msgstr "This Popup अक्षमम्"

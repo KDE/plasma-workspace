@@ -150,7 +150,7 @@ msgctxt ""
 "Automatically enable Do Not Disturb mode while a fullscreen application is "
 "focused"
 msgid "While a fullscreen application is focused"
-msgstr ""
+msgstr "当全屏应用程序取得焦点时"
 
 #: ui/main.qml:149
 #, kde-format
@@ -206,7 +206,7 @@ msgstr "在通知图标附近"
 #, kde-format
 msgctxt "@action:button choose custom notification position"
 msgid "Custom…"
-msgstr ""
+msgstr "自定义…"
 
 #: ui/main.qml:257 ui/main.qml:273
 #, kde-format
@@ -284,9 +284,3 @@ msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior"
 msgstr "从列表中选择应用程序来配置其通知设置和行为"
-
-#~ msgid "Normal notifications:"
-#~ msgstr "正常通知："
-
-#~ msgid "Show over full screen windows"
-#~ msgstr "在全屏窗口中显示"

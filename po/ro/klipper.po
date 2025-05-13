@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-20 00:43+0000\n"
+"POT-Creation-Date: 2025-05-13 00:43+0000\n"
 "PO-Revision-Date: 2024-06-09 15:09+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -647,85 +647,75 @@ msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Meniu contextual cu acțiuni automate:"
 
-#: klipper.cpp:110
+#: klipper.cpp:109
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "Curăță istoricu&l"
 
-#: klipper.cpp:117
+#: klipper.cpp:116
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "&Configurează Klipper…"
 
-#: klipper.cpp:121
+#: klipper.cpp:120
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Invocă manual acțiunea pe clipboard-ul actual"
 
-#: klipper.cpp:129
+#: klipper.cpp:128
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "R&edactează conținutul…"
 
-#: klipper.cpp:135
+#: klipper.cpp:134
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "Arată cod de &bare…"
 
-#: klipper.cpp:144
+#: klipper.cpp:143
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Următorul element din istoric"
 
-#: klipper.cpp:149
+#: klipper.cpp:148
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Precedentul element din istoric"
 
-#: klipper.cpp:156
+#: klipper.cpp:155
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Arată elementele clipboard-ului la poziția mausului"
 
-#: klipper.cpp:317
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"You can enable URL actions later in the <interface>Actions</interface> page "
-"of the Clipboard applet's configuration window"
-msgstr ""
-"Puteți activa mai târziu acțiunile de URL pe pagina <interface>Acțiuni</"
-"interface> a ferestrei de configurare a miniaplicației Clipboard."
-
-#: klipper.cpp:451
+#: klipper.cpp:435
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Cod de bare pentru mobil"
 
-#: klipper.cpp:494 klipper.cpp:503
+#: klipper.cpp:478 klipper.cpp:487
 #, kde-format
 msgid "Clipboard history"
 msgstr "Istoric clipboard"
 
-#: klipper.cpp:520
+#: klipper.cpp:504
 #, kde-format
 msgid "up"
 msgstr "sus"
 
-#: klipper.cpp:527
+#: klipper.cpp:511
 #, kde-format
 msgid "current"
 msgstr "curent"
 
-#: klipper.cpp:534
+#: klipper.cpp:518
 #, kde-format
 msgid "down"
 msgstr "jos"
@@ -949,15 +939,21 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "Istoric clipboard"
 
-#: urlgrabber.cpp:201
-#, kde-format
-msgid "Disable This Popup"
-msgstr "Dezactivează acest meniu contextual"
-
-#: urlgrabber.cpp:207
+#: urlgrabber.cpp:198
 #, kde-format
 msgid "&Cancel"
 msgstr "&Renunță"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "You can enable URL actions later in the <interface>Actions</interface> "
+#~ "page of the Clipboard applet's configuration window"
+#~ msgstr ""
+#~ "Puteți activa mai târziu acțiunile de URL pe pagina <interface>Acțiuni</"
+#~ "interface> a ferestrei de configurare a miniaplicației Clipboard."
+
+#~ msgid "Disable This Popup"
+#~ msgstr "Dezactivează acest meniu contextual"
 
 #~ msgid "Clipboard Items"
 #~ msgstr "Elementele clipboard-ului"

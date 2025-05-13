@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-20 00:43+0000\n"
+"POT-Creation-Date: 2025-05-13 00:43+0000\n"
 "PO-Revision-Date: 2024-12-10 06:35+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -651,86 +651,75 @@ msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Menu a comparsa delle azioni automatiche"
 
-#: klipper.cpp:110
+#: klipper.cpp:109
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&Ripulisci la cronologia degli appunti"
 
-#: klipper.cpp:117
+#: klipper.cpp:116
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "&Configura Klipper…"
 
-#: klipper.cpp:121
+#: klipper.cpp:120
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Invoca manualmente le azioni sugli appunti correnti"
 
-#: klipper.cpp:129
+#: klipper.cpp:128
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "Modifica i cont&enuti…"
 
-#: klipper.cpp:135
+#: klipper.cpp:134
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "Mo&stra il codice a barre…"
 
-#: klipper.cpp:144
+#: klipper.cpp:143
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Elemento successivo nella cronologia"
 
-#: klipper.cpp:149
+#: klipper.cpp:148
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Elemento precedente nella cronologia"
 
-#: klipper.cpp:156
+#: klipper.cpp:155
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Mostra gli elementi degli appunti alla posizione del mouse"
 
-#: klipper.cpp:317
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"You can enable URL actions later in the <interface>Actions</interface> page "
-"of the Clipboard applet's configuration window"
-msgstr ""
-"Puoi abilitare le azioni degli URL più avanti nella pagina "
-"<interface>Azioni</interface> della finestra di configurazione dell'applet "
-"degli appunti"
-
-#: klipper.cpp:451
+#: klipper.cpp:435
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Codice a barre per cellulari"
 
-#: klipper.cpp:494 klipper.cpp:503
+#: klipper.cpp:478 klipper.cpp:487
 #, kde-format
 msgid "Clipboard history"
 msgstr "Cronologia degli appunti"
 
-#: klipper.cpp:520
+#: klipper.cpp:504
 #, kde-format
 msgid "up"
 msgstr "su"
 
-#: klipper.cpp:527
+#: klipper.cpp:511
 #, kde-format
 msgid "current"
 msgstr "corrente"
 
-#: klipper.cpp:534
+#: klipper.cpp:518
 #, kde-format
 msgid "down"
 msgstr "giù"
@@ -955,15 +944,22 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "Finestra a comparsa degli appunti"
 
-#: urlgrabber.cpp:201
-#, kde-format
-msgid "Disable This Popup"
-msgstr "Disabilita questo menu a comparsa"
-
-#: urlgrabber.cpp:207
+#: urlgrabber.cpp:198
 #, kde-format
 msgid "&Cancel"
 msgstr "Ann&ulla"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "You can enable URL actions later in the <interface>Actions</interface> "
+#~ "page of the Clipboard applet's configuration window"
+#~ msgstr ""
+#~ "Puoi abilitare le azioni degli URL più avanti nella pagina "
+#~ "<interface>Azioni</interface> della finestra di configurazione "
+#~ "dell'applet degli appunti"
+
+#~ msgid "Disable This Popup"
+#~ msgstr "Disabilita questo menu a comparsa"
 
 #~ msgid "Clipboard Items"
 #~ msgstr "Elementi negli appunti"

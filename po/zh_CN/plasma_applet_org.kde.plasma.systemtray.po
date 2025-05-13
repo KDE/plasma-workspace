@@ -103,6 +103,8 @@ msgid ""
 "consider configuring the clipboard to disable its history, or only remember "
 "one item at a time."
 msgstr ""
+"不建议禁用剪贴板，因为这会导致应用程序关闭时丢失已复制的数据。<nl/><nl/>您可"
+"以考虑禁用剪贴板历史记录，或设置为仅记忆一条内容。"
 
 #: package/contents/ui/ConfigEntries.qml:204
 #, kde-format

@@ -538,11 +538,10 @@ msgid "Delete Logged-In User Without Deleting Files?"
 msgstr ""
 
 #: src/ui/UserDetailsPage.qml:115
-#, fuzzy, kde-format
-#| msgid "Delete User…"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User?"
-msgstr "Odstranit uživatele…"
+msgstr ""
 
 #: src/ui/UserDetailsPage.qml:117
 #, kde-kuit-format
@@ -562,11 +561,10 @@ msgid ""
 msgstr ""
 
 #: src/ui/UserDetailsPage.qml:125
-#, fuzzy, kde-format
-#| msgid "Delete files"
+#, kde-format
 msgctxt "@action: button"
 msgid "Delete %1"
-msgstr "Smazat soubory"
+msgstr ""
 
 #: src/ui/UserDetailsPage.qml:144
 #, kde-format

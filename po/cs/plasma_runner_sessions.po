@@ -90,10 +90,9 @@ msgid "switch user;new session"
 msgstr "přepnout uživatele;nové sezení"
 
 #: sessionrunner.cpp:55
-#, fuzzy, kde-format
-#| msgid "Starts a new session as a different user"
+#, kde-format
 msgid "Switch to a session as a different user"
-msgstr "Spustí nové sezení jako jiný uživatel"
+msgstr ""
 
 #: sessionrunner.cpp:77
 #, kde-format
@@ -128,24 +127,3 @@ msgstr "Uložit sezení"
 #, kde-format
 msgid "Switch User"
 msgstr "Přepnout uživatele"
-
-#~ msgctxt "KRunner keyword to list user sessions"
-#~ msgid "sessions"
-#~ msgstr "sezení"
-
-#~ msgid "Lists all sessions"
-#~ msgstr "Vypíše všechna sezení"
-
-#~ msgctxt "KRunner keyword to switch user sessions"
-#~ msgid "switch"
-#~ msgstr "přepnout"
-
-#~ msgid ""
-#~ "Switches to the active session for the user :q:, or lists all active "
-#~ "sessions if :q: is not provided"
-#~ msgstr ""
-#~ "Přepne aktivní sezení pro uživatele :q:, nebo vypíše seznam aktivních "
-#~ "sezení, pokud nezadáte :q:"
-
-#~ msgid "New Desktop Session"
-#~ msgstr "Nové sezení plochy"

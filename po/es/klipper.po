@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-20 00:43+0000\n"
+"POT-Creation-Date: 2025-05-13 00:43+0000\n"
 "PO-Revision-Date: 2024-12-09 02:51+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -661,86 +661,75 @@ msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Menú emergente de acciones automático"
 
-#: klipper.cpp:110
+#: klipper.cpp:109
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&Borrar historial del portapapeles"
 
-#: klipper.cpp:117
+#: klipper.cpp:116
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "&Configurar Klipper..."
 
-#: klipper.cpp:121
+#: klipper.cpp:120
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Invocar manualmente la acción en el portapapeles actual"
 
-#: klipper.cpp:129
+#: klipper.cpp:128
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "&Editar el contenido..."
 
-#: klipper.cpp:135
+#: klipper.cpp:134
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "Mostrar código de &barras..."
 
-#: klipper.cpp:144
+#: klipper.cpp:143
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Siguiente elemento del historial"
 
-#: klipper.cpp:149
+#: klipper.cpp:148
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Anterior elemento del historial"
 
-#: klipper.cpp:156
+#: klipper.cpp:155
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Mostrar elementos del portapapeles en la posición del ratón"
 
-#: klipper.cpp:317
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"You can enable URL actions later in the <interface>Actions</interface> page "
-"of the Clipboard applet's configuration window"
-msgstr ""
-"Puede activar acciones de URL posteriormente en la página "
-"<interface>Acciones</interface> de la ventana de configuración de la "
-"miniaplicación del portapapeles."
-
-#: klipper.cpp:451
+#: klipper.cpp:435
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Código de barras para móvil"
 
-#: klipper.cpp:494 klipper.cpp:503
+#: klipper.cpp:478 klipper.cpp:487
 #, kde-format
 msgid "Clipboard history"
 msgstr "Historial del portapapeles"
 
-#: klipper.cpp:520
+#: klipper.cpp:504
 #, kde-format
 msgid "up"
 msgstr "arriba"
 
-#: klipper.cpp:527
+#: klipper.cpp:511
 #, kde-format
 msgid "current"
 msgstr "actual"
 
-#: klipper.cpp:534
+#: klipper.cpp:518
 #, kde-format
 msgid "down"
 msgstr "abajo"
@@ -964,15 +953,22 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "Ventana emergente del portapapeles"
 
-#: urlgrabber.cpp:201
-#, kde-format
-msgid "Disable This Popup"
-msgstr "Inhabilitar este menú emergente"
-
-#: urlgrabber.cpp:207
+#: urlgrabber.cpp:198
 #, kde-format
 msgid "&Cancel"
 msgstr "&Cancelar"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "You can enable URL actions later in the <interface>Actions</interface> "
+#~ "page of the Clipboard applet's configuration window"
+#~ msgstr ""
+#~ "Puede activar acciones de URL posteriormente en la página "
+#~ "<interface>Acciones</interface> de la ventana de configuración de la "
+#~ "miniaplicación del portapapeles."
+
+#~ msgid "Disable This Popup"
+#~ msgstr "Inhabilitar este menú emergente"
 
 #~ msgid "Clipboard Items"
 #~ msgstr "Elementos del portapapeles"

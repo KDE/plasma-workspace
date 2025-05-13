@@ -153,11 +153,10 @@ msgid "Offset from UTC time"
 msgstr "Posun od času UTC"
 
 #: package/contents/ui/configAppearance.qml:126
-#, fuzzy, kde-format
-#| msgid "Switch Systemwide Time Zone…"
+#, kde-format
 msgctxt "@action:button opens kcm"
 msgid "Switch Time Zone…"
-msgstr "Přepnout systémové časové pásmo…"
+msgstr ""
 
 #: package/contents/ui/configAppearance.qml:138
 #, kde-format
@@ -458,17 +457,3 @@ msgstr "Místní"
 #, kde-format
 msgid "System's local time zone"
 msgstr "Systémové místní časové pásmo"
-
-#~ msgid ""
-#~ "Tip: if you travel frequently, add your home time zone to this list. It "
-#~ "will only appear when you change the systemwide time zone to something "
-#~ "else."
-#~ msgstr ""
-#~ "Tip: Pokud pravidelně cestujete, přidejte vaše domovské časové pásmo. "
-#~ "Zobrazí se pouze pokud změníte časové pásmo systému na jiné."
-
-#~ msgid "Adjust Date and Time…"
-#~ msgstr "Upravit datum a čas…"
-
-#~ msgid "Set Time Format…"
-#~ msgstr "Nastavit formát času…"

@@ -1360,6 +1360,3 @@ msgstr "Otevřít barevné schéma"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Soubory barevných schémat (*.colors)"
-
-#~ msgid "Choose custom accent color"
-#~ msgstr "Vyberte vlastní barvu nádechu"

@@ -292,12 +292,9 @@ msgid "Online Services"
 msgstr "Služby online"
 
 #: shellprivate/widgetexplorer.cpp:125
-#, fuzzy
-#| msgctxt "applet category"
-#| msgid "System Information"
 msgctxt "applet category"
 msgid "Personal Information"
-msgstr "Systémové informace"
+msgstr ""
 
 #: shellprivate/widgetexplorer.cpp:126
 msgctxt "applet category"

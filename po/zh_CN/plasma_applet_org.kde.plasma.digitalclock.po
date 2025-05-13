@@ -368,6 +368,8 @@ msgid ""
 "Tip: Add your home time zone to this list to see the time there even when "
 "you're traveling. It will not be shown twice while at home."
 msgstr ""
+"提示：请将您家所在时区添加到列表中，以便在旅行时查看家中时间。在家时不会重复"
+"显示。"
 
 #: package/contents/ui/configTimeZones.qml:235
 #, kde-format
@@ -453,11 +455,3 @@ msgstr "本地"
 #, kde-format
 msgid "System's local time zone"
 msgstr "系统本地时区"
-
-#~ msgid ""
-#~ "Tip: if you travel frequently, add your home time zone to this list. It "
-#~ "will only appear when you change the systemwide time zone to something "
-#~ "else."
-#~ msgstr ""
-#~ "提示：如果您经常旅行，可将您的主时区添加到下表。它将只在系统全局时区发生改"
-#~ "变时显示。"

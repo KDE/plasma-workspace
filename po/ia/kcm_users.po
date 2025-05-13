@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the plasma-desktop package.
 #
 # SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024, 2025 Giovanni Sora <g.sora@tiscali.it>
-# giovanni <g.sora@tiscali.it>, 2024.
+# giovanni <g.sora@tiscali.it>, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-23 00:44+0000\n"
-"PO-Revision-Date: 2025-01-08 15:38+0100\n"
+"PO-Revision-Date: 2025-05-12 17:04+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 21.12.1\n"
 
 #: src/fingerprintmodel.cpp:145 src/fingerprintmodel.cpp:229
 #, kde-format
@@ -576,14 +576,13 @@ msgstr "Usa Icone de Substituto de avatar de usator"
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User Without Deleting Files?"
-msgstr ""
+msgstr "Dele Usatores Accedite Sin Deler Files?"
 
 #: src/ui/UserDetailsPage.qml:115
-#, fuzzy, kde-format
-#| msgid "Delete User…"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User?"
-msgstr "Dele usator..."
+msgstr "Dele usator accedite?"
 
 #: src/ui/UserDetailsPage.qml:117
 #, kde-kuit-format
@@ -593,6 +592,10 @@ msgid ""
 "account instead?<nl/><nl/>This will make %1 unable to log in again, and they "
 "may experience strange behaviors until they log out."
 msgstr ""
+"%1 es currentemente accedite, assi lor files non pote esser delite. Dele "
+"solmente le conto in loco?<nl/><nl/> Isto facere que %1 es incapace a "
+"acceder novemente, e illos potere experientiar comportamentos estranie usque "
+"illos claude le session."
 
 #: src/ui/UserDetailsPage.qml:118
 #, kde-format
@@ -601,13 +604,15 @@ msgid ""
 "%1 is currently logged in. Deleting the account will make them unable to log "
 "in again, and they may experience strange behaviors until they log out."
 msgstr ""
+"%1 es currentemente accedite. Deler le conto facera que los  es incapace a "
+"acceder novemente, e illos potera experientiar comportamentos estranie  "
+"usque illos claude le session."
 
 #: src/ui/UserDetailsPage.qml:125
-#, fuzzy, kde-format
-#| msgid "Delete files"
+#, kde-format
 msgctxt "@action: button"
 msgid "Delete %1"
-msgstr "Dele files"
+msgstr "Dele %1"
 
 #: src/ui/UserDetailsPage.qml:144
 #, kde-format

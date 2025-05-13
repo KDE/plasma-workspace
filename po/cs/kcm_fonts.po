@@ -321,6 +321,3 @@ msgid ""
 "above. To scale everything, use the scaling slider on the <interface>Display "
 "& Monitor</interface> page.</para>"
 msgstr ""
-
-#~ msgid "Select Font"
-#~ msgstr "Vybrat písmo"

@@ -287,12 +287,3 @@ msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior"
 msgstr "Vyberte v seznamu aplikaci, jejíž upozornění chcete nastavit"
-
-#~ msgid "Normal notifications:"
-#~ msgstr "Normální upozornění:"
-
-#~ msgid "Show over full screen windows"
-#~ msgstr "Zobrazit přes okna přes celou obrazovku"
-
-#~ msgid "Choose Custom Position…"
-#~ msgstr "Vybrat vlastní pozici…"

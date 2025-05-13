@@ -70,7 +70,3 @@ msgstr "Zesílení hlasitosti"
 msgctxt "@title shortcut"
 msgid "Media volume down"
 msgstr "Zeslabení hlasitosti"
-
-#~ msgctxt "@action:button"
-#~ msgid "Choose player automatically"
-#~ msgstr "Automaticky vybrat přehrávač"

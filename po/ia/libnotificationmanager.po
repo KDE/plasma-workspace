@@ -2,12 +2,13 @@
 # This file is distributed under the same license as the plasma-workspace package.
 #
 # SPDX-FileCopyrightText: 2019, 2022, 2025 Giovanni Sora <g.sora@tiscali.it>
+# giovanni <g.sora@tiscali.it>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-07 00:44+0000\n"
-"PO-Revision-Date: 2025-01-09 17:55+0100\n"
+"PO-Revision-Date: 2025-05-12 15:59+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 21.12.1\n"
 
 #: abstractnotificationsmodel.cpp:340
 #, kde-format
@@ -103,9 +104,7 @@ msgid "Application closed unexpectedly."
 msgstr "Application  claudeva inopinatemente."
 
 #: notifications.cpp:885
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Unread Notifications"
+#, kde-format
 msgctxt "@title"
 msgid "Unread Notification"
 msgid_plural "Unread Notifications"
@@ -113,13 +112,11 @@ msgstr[0] "Notificationes non legite"
 msgstr[1] "Notificationes non legite"
 
 #: notifications.cpp:887
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "%1 notifications were received while Do Not Disturb was active."
+#, kde-format
 msgctxt "@info"
 msgid "%1 notification was received while Do Not Disturb was active."
 msgid_plural "%1 notifications were received while Do Not Disturb was active."
 msgstr[0] ""
-"%1 notificationes esseva recipite durante que Non Distuirbar esseva active."
+"%1 notification esseva recipite durante que Non Disturbar esseva active."
 msgstr[1] ""
-"%1 notificationes esseva recipite durante que Non Distuirbar esseva active."
+"%1 notificationes esseva recipite durante que Non Disturbar esseva active."

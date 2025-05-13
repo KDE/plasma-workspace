@@ -23,28 +23,20 @@ msgstr ""
 "X-Source-Language: en_US\n"
 
 #: package/contents/ui/DeviceItem.qml:97
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Removing is a less technical word for Unmounting; translation should be "
-#| "short and mean 'Currently unmounting this device'"
-#| msgid "Removing…"
+#, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Checking…"
-msgstr "Odstraňuje se..."
+msgstr ""
 
 #: package/contents/ui/DeviceItem.qml:99
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Removing is a less technical word for Unmounting; translation should be "
-#| "short and mean 'Currently unmounting this device'"
-#| msgid "Removing…"
+#, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Repairing…"
-msgstr "Odstraňuje se..."
+msgstr ""
 
 #: package/contents/ui/DeviceItem.qml:102
 #, kde-format
@@ -161,10 +153,9 @@ msgid "Safely remove"
 msgstr "Bezpečně odstranit"
 
 #: plugin/deviceerrormonitor_p.cpp:198
-#, fuzzy, kde-format
-#| msgid "This device can now be safely removed."
+#, kde-format
 msgid "This device has file system errors."
-msgstr "Toto zařízení může být nyní bezpečně odebráno."
+msgstr ""
 
 #: plugin/deviceerrormonitor_p.cpp:201
 #, kde-format
@@ -203,11 +194,9 @@ msgid "You are not authorized to eject this disc."
 msgstr "Nemáte oprávnění vysunout tento disk."
 
 #: plugin/deviceerrormonitor_p.cpp:225
-#, fuzzy, kde-format
-#| msgctxt "Remove is less technical for unmount"
-#| msgid "You are not authorized to remove this device."
+#, kde-format
 msgid "You are not authorized to repair this device."
-msgstr "Nemáte oprávnění odstranit toto zařízení."
+msgstr ""
 
 #: plugin/deviceerrormonitor_p.cpp:232
 #, kde-format
@@ -257,8 +246,6 @@ msgid "Could not eject this disc."
 msgstr "Nelze odpojit tento disk."
 
 #: plugin/deviceerrormonitor_p.cpp:294
-#, fuzzy, kde-format
-#| msgctxt "Remove is less technical for unmount"
-#| msgid "Could not remove this device."
+#, kde-format
 msgid "Could not repair this device: %1"
-msgstr "Nelze odpojit  toto zařízení."
+msgstr ""

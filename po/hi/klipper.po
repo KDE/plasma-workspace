@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-20 00:43+0000\n"
+"POT-Creation-Date: 2025-05-13 00:43+0000\n"
 "PO-Revision-Date: 2024-12-15 19:31+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Hindi <kde-i18n-doc@kde.org>\n"
@@ -636,93 +636,83 @@ msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "स्वचालित कार्रवाई पॉपअप समय :"
 
-#: klipper.cpp:110
+#: klipper.cpp:109
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "क्लिपबोर्ड इतिहास साफ करें (&l)"
 
-#: klipper.cpp:117
+#: klipper.cpp:116
 #, fuzzy, kde-format
 #| msgid "&Configure Klipper…"
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "क्लिपर विन्यस्त करें… (&C)"
 
-#: klipper.cpp:121
+#: klipper.cpp:120
 #, fuzzy, kde-format
 #| msgid "Manually Invoke Action on Current Clipboard"
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "मौज़ूदा क्लिपबोर्ड पर क्रिया हाथों से इन्वोक करें"
 
-#: klipper.cpp:129
+#: klipper.cpp:128
 #, fuzzy, kde-format
 #| msgid "&Edit Contents…"
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "विषय-वस्तु का संपादन करें… (&E)"
 
-#: klipper.cpp:135
+#: klipper.cpp:134
 #, fuzzy, kde-format
 #| msgid "&Show Barcode…"
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "बारकोड दिखाएँ… (&S)"
 
-#: klipper.cpp:144
+#: klipper.cpp:143
 #, fuzzy, kde-format
 #| msgid "Next History Item"
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "अगली इतिहास वस्तु"
 
-#: klipper.cpp:149
+#: klipper.cpp:148
 #, fuzzy, kde-format
 #| msgid "Previous History Item"
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "पिछली इतिहास वस्तु"
 
-#: klipper.cpp:156
+#: klipper.cpp:155
 #, fuzzy, kde-format
 #| msgid "Open Klipper at Mouse Position"
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "माउस संकेतक स्थान पर क्लिपर खोलें"
 
-#: klipper.cpp:317
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"You can enable URL actions later in the <interface>Actions</interface> page "
-"of the Clipboard applet's configuration window"
-msgstr ""
-"आप बाद में क्लिपबोर्ड एप्लेट की कॉन्फ़िगरेशन विंडो के <interface>क्रियाएँ</interface> पृष्ठ "
-"में यूआरएल क्रियाओं को सक्षम कर सकते हैं"
-
-#: klipper.cpp:451
+#: klipper.cpp:435
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "मोबाइल बारकोड"
 
-#: klipper.cpp:494 klipper.cpp:503
+#: klipper.cpp:478 klipper.cpp:487
 #, kde-format
 msgid "Clipboard history"
 msgstr "क्लिपबोर्ड इतिहास"
 
-#: klipper.cpp:520
+#: klipper.cpp:504
 #, kde-format
 msgid "up"
 msgstr "ऊपर"
 
-#: klipper.cpp:527
+#: klipper.cpp:511
 #, kde-format
 msgid "current"
 msgstr "वर्तमान"
 
-#: klipper.cpp:534
+#: klipper.cpp:518
 #, kde-format
 msgid "down"
 msgstr "नीचे"
@@ -957,15 +947,21 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "क्लिपबोर्ड इतिहास"
 
-#: urlgrabber.cpp:201
-#, kde-format
-msgid "Disable This Popup"
-msgstr "इस पॉपअप को अक्षम करें"
-
-#: urlgrabber.cpp:207
+#: urlgrabber.cpp:198
 #, kde-format
 msgid "&Cancel"
 msgstr "रद्द करें (&C)"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "You can enable URL actions later in the <interface>Actions</interface> "
+#~ "page of the Clipboard applet's configuration window"
+#~ msgstr ""
+#~ "आप बाद में क्लिपबोर्ड एप्लेट की कॉन्फ़िगरेशन विंडो के <interface>क्रियाएँ</interface> "
+#~ "पृष्ठ में यूआरएल क्रियाओं को सक्षम कर सकते हैं"
+
+#~ msgid "Disable This Popup"
+#~ msgstr "इस पॉपअप को अक्षम करें"
 
 #, fuzzy
 #~| msgid "Clipboard Contents"
