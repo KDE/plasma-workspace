@@ -15,6 +15,7 @@ enum class Type {
     Image,
     AnimatedImage,
     VectorImage, // VectorImage is the only one that uses \QQuickImageProvider, because if QQuickImageProvider is used, then Image considers it always scalable
+    DayNight,
 };
 Q_ENUM_NS(Type)
 }

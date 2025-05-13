@@ -38,27 +38,27 @@ QVariant PackageListModel::data(const QModelIndex &index, int role) const
         return QVariant();
     }
 
-    const KPackage::Package &b = m_packages.at(index.row());
+    const WallpaperPackage &b = m_packages.at(index.row());
 
-    if (!b.isValid()) {
+    if (!b.package().isValid()) {
         Q_UNREACHABLE(); // Should be already filtered out by the finder
     }
 
     switch (role) {
     case Qt::DisplayRole:
-        return PackageFinder::packageDisplayName(b);
+        return b.displayName();
 
     case PreviewRole: {
         QUrl previewUrl(QStringLiteral("image://wallpaper-preview"));
         previewUrl.setQuery({
-            std::make_pair(QStringLiteral("package"), b.path()),
+            std::make_pair(QStringLiteral("package"), b.package().path()),
         });
         return previewUrl;
     }
 
     case AuthorRole: {
-        if (!b.metadata().authors().empty()) {
-            return b.metadata().authors().at(0).name();
+        if (!b.package().metadata().authors().empty()) {
+            return b.package().metadata().authors().at(0).name();
         }
 
         return QString();
@@ -66,27 +66,30 @@ QVariant PackageListModel::data(const QModelIndex &index, int role) const
 
     case PathRole: {
         if (qGray(qGuiApp->palette().window().color().rgb()) < 192) {
-            const QString darkPath = b.filePath(QByteArrayLiteral("preferredDark"));
+            const QString darkPath = b.package().filePath(QByteArrayLiteral("preferredDark"));
             if (!darkPath.isEmpty()) {
                 return QUrl::fromLocalFile(darkPath);
             }
         }
 
-        return QUrl::fromLocalFile(b.filePath("preferred"));
+        return QUrl::fromLocalFile(b.package().filePath("preferred"));
     }
 
     case PackageNameRole:
-        return b.path();
+        return b.package().path();
 
     case RemovableRole: {
-        const QString path = b.path();
+        const QString path = b.package().path();
 
         return path.startsWith(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/wallpapers/"))
             || m_removableWallpapers.contains(path);
     }
 
     case PendingDeletionRole:
-        return m_pendingDeletion.value(b.path(), false);
+        return m_pendingDeletion.value(b.package().path(), false);
+
+    case SelectorsRole:
+        return b.selectors();
     }
     Q_UNREACHABLE();
 }
@@ -98,8 +101,8 @@ bool PackageListModel::setData(const QModelIndex &index, const QVariant &value, 
     }
 
     if (role == PendingDeletionRole) {
-        const KPackage::Package &b = m_packages.at(index.row());
-        m_pendingDeletion[b.path()] = value.toBool();
+        const WallpaperPackage &b = m_packages.at(index.row());
+        m_pendingDeletion[b.package().path()] = value.toBool();
 
         Q_EMIT dataChanged(index, index, {PendingDeletionRole});
         return true;
@@ -116,8 +119,8 @@ static QString normalizeDirName(const QString &filePath)
 int PackageListModel::indexOf(const QUrl &url) const
 {
     const QString path = normalizeDirName(url.toLocalFile());
-    const auto it = std::find_if(m_packages.cbegin(), m_packages.cend(), [&path](const KPackage::Package &p) {
-        return path == p.path();
+    const auto it = std::find_if(m_packages.cbegin(), m_packages.cend(), [&path](const WallpaperPackage &p) {
+        return path == p.package().path();
     });
 
     if (it == m_packages.cend()) {
@@ -201,9 +204,9 @@ QStringList PackageListModel::removeBackground(const QUrl &url)
 
     beginRemoveRows(QModelIndex(), idx, idx);
 
-    m_pendingDeletion.remove(m_packages.at(idx).path());
-    m_removableWallpapers.removeOne(m_packages.at(idx).path());
-    results.append(m_packages.takeAt(idx).path());
+    m_pendingDeletion.remove(m_packages.at(idx).package().path());
+    m_removableWallpapers.removeOne(m_packages.at(idx).package().path());
+    results.append(m_packages.takeAt(idx).package().path());
 
     // Uninstall local package
     const QString path = url.toLocalFile();
@@ -220,7 +223,7 @@ QStringList PackageListModel::removeBackground(const QUrl &url)
     return results;
 }
 
-void PackageListModel::slotHandlePackageFound(const QList<KPackage::Package> &packages)
+void PackageListModel::slotHandlePackageFound(const QList<WallpaperPackage> &packages)
 {
     beginResetModel();
 

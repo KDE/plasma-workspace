@@ -1,4 +1,5 @@
 set(image_SRCS
+    daynightwallpaper.cpp daynightwallpaper.h
     imagebackend.cpp imagebackend.h
     slidemodel.cpp slidemodel.h
     slidefiltermodel.cpp slidefiltermodel.h
@@ -36,9 +37,11 @@ set_property(TARGET plasma_wallpaper_imageplugin_static PROPERTY POSITION_INDEPE
 
 target_link_libraries(plasma_wallpaper_imageplugin_static
     Qt::Core
+    Qt::Positioning
     Qt::Quick
     Qt::Qml
     Plasma::Plasma
+    KF6::Holidays
     KF6::I18n
     KF6::JobWidgets
     KF6::KIOCore

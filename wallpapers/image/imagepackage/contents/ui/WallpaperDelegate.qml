@@ -19,6 +19,7 @@ KCM.GridDelegate {
     property alias color: backgroundRect.color
     property alias previewSize: previewImage.sourceSize
     property string key: model.packageName || model.path
+    property list<string> selectors: model.selectors
     opacity: model.pendingDeletion ? 0.5 : 1
     scale: index, 1 // Workaround for https://bugreports.qt.io/browse/QTBUG-107458
 
@@ -100,6 +101,18 @@ KCM.GridDelegate {
             onToggled: model.checked = checked
         }
 
+        Kirigami.Icon {
+            anchors.right: parent.right
+            anchors.top: parent.top
+            anchors.margins: Kirigami.Units.smallSpacing
+            visible: model.selectors.includes("day-night")
+            source: "lighttable"
+            isMask: true
+            color: "white"
+            width: Kirigami.Units.iconSizes.medium
+            height: width
+        }
+
         Behavior on color {
             ColorAnimation {
                 duration: Kirigami.Units.longDuration
@@ -117,7 +130,7 @@ KCM.GridDelegate {
 
     onClicked: {
         if (configDialog.currentWallpaper === "org.kde.image") {
-            root.selectWallpaper(key);
+            root.selectWallpaper(key, selectors);
         }
         GridView.currentIndex = index;
     }

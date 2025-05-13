@@ -9,6 +9,7 @@
 
 #include <KFileItem>
 
+#include "daynightwallpaper.h"
 #include "finder/mediametadatafinder.h"
 #include "imagebackend.h"
 #include "provider/packageimageprovider.h"
@@ -31,6 +32,7 @@ void ImagePlugin::registerTypes(const char *uri)
 
     qmlRegisterType<ImageBackend>(uri, 2, 0, "ImageBackend");
     qmlRegisterType<MediaProxy>(uri, 2, 0, "MediaProxy");
+    qmlRegisterType<DayNightWallpaper>(uri, 2, 0, "DayNightWallpaper");
 
     qmlRegisterType<MaximizedWindowMonitor>(uri, 2, 0, "MaximizedWindowMonitor");
 

@@ -45,6 +45,8 @@ ColumnLayout {
     property int cfg_SlideIntervalDefault: 0
     property var cfg_UncheckedSlides: []
     property var cfg_UncheckedSlidesDefault: []
+    property int cfg_DynamicMode: 0
+    property bool cfg_Geolocation: false
 
     signal configurationChanged()
     /**
@@ -71,9 +73,23 @@ ColumnLayout {
         dialogComponent.destroy();
     }
 
-    function selectWallpaper(wallpaper: string): void {
-        cfg_Image = PlasmaWallpaper.WallpaperUrl.make(wallpaper);
+    function selectWallpaper(wallpaper: string, selectors: list<string>): void {
+        let selector = "";
+        if (selectors.includes("day-night")) {
+            if (cfg_DynamicMode == 1) {
+                selector = "day-night";
+            }
+        }
+
+        cfg_Image = PlasmaWallpaper.WallpaperUrl.make(wallpaper, selector);
         wallpaperConfiguration.PreviewImage = cfg_Image;
+    }
+
+    function selectDynamicMode(mode: int): void {
+        cfg_DynamicMode = mode;
+
+        selectWallpaper(thumbnailsLoader.item.view.currentItem.key,
+                        thumbnailsLoader.item.view.currentItem.selectors);
     }
 
     PlasmaWallpaper.ImageBackend {
@@ -168,6 +184,39 @@ ColumnLayout {
                         break;
                     }
                 }
+            }
+        }
+
+        QtControls2.ButtonGroup { id: dayNightModeGroup }
+
+        QtControls2.RadioButton {
+            Kirigami.FormData.label: i18ndc("plasma_wallpaper_org.kde.image", "part of a sentence: 'Switch dynamic wallpapers [based on]'", "Switch dynamic wallpapers:")
+            text: i18ndc("plasma_wallpaper_org.kde.image", "part of a sentence: 'Switch dynamic wallpapers'", "Based on whether the color scheme is dark or light")
+            QtControls2.ButtonGroup.group: dayNightModeGroup
+            checked: cfg_DynamicMode === 0
+            onToggled: selectDynamicMode(0)
+        }
+
+        QtControls2.RadioButton {
+            id: dayNightTimeOfDayButton
+            text: i18ndc("plasma_wallpaper_org.kde.image", "part of a sentence: 'Switch dynamic wallpapers'", "At sunrise and sunset")
+            QtControls2.ButtonGroup.group: dayNightModeGroup
+            checked: cfg_DynamicMode === 1
+            onToggled: selectDynamicMode(1)
+        }
+
+        RowLayout {
+            spacing: Kirigami.Units.smallSpacing
+
+            Item {
+                Layout.preferredWidth: Kirigami.Units.gridUnit
+            }
+
+            QtControls2.CheckBox {
+                enabled: dayNightTimeOfDayButton.checked
+                text: i18ndc("plasma_wallpaper_org.kde.image", "@label:checkbox Use geolocation services for more accurate sunset and sunrise times", "Use device's current location for more accurate timings")
+                checked: cfg_Geolocation
+                onToggled: cfg_Geolocation = !cfg_Geolocation
             }
         }
 

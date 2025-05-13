@@ -46,5 +46,13 @@
         <label>Ordering mode for the slideshow</label>
         <default>0</default>
     </entry>
+    <entry name="DynamicMode" type="UInt">
+        <label>Preferred dynamic wallpaper mode: 0 = switch based on whether the color scheme is dark or light, 1 = switch at sunrise and sunset</label>
+        <default>0</default>
+    </entry>
+    <entry name="Geolocation" type="Bool">
+      <label>Allow using geolocation services to improve accuracy of dynamic wallpapers</label>
+      <default>false</default>
+    </entry>
   </group>
 </kcfg>
