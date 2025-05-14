@@ -71,6 +71,13 @@ class NOTIFICATIONMANAGER_EXPORT Notifications : public QSortFilterProxyModel, p
     Q_PROPERTY(bool showAddedDuringInhibition READ showAddedDuringInhibition WRITE setShowAddedDuringInhibition NOTIFY showAddedDuringInhibitionChanged)
 
     /**
+     * Whether to show critical notifications in "Do not disturb" mode.
+     *
+     * Default is @c true.
+     */
+    Q_PROPERTY(bool showCriticalInDndMode READ showCriticalInDndMode WRITE setShowCriticalInDndMode NOTIFY showCriticalInDndModeChanged)
+
+    /**
      * A list of desktop entries for which no notifications should be shown.
      *
      * If the same desktop entry is present in both blacklist and whitelist,
@@ -396,6 +403,9 @@ public:
     bool showAddedDuringInhibition() const;
     void setShowAddedDuringInhibition(bool show);
 
+    bool showCriticalInDndMode() const;
+    void setShowCriticalInDndMode(bool show);
+
     QStringList blacklistedDesktopEntries() const;
     void setBlacklistedDesktopEntries(const QStringList &blacklist);
 
@@ -575,6 +585,7 @@ Q_SIGNALS:
     void showExpiredChanged();
     void showDismissedChanged();
     void showAddedDuringInhibitionChanged();
+    void showCriticalInDndModeChanged();
     void blacklistedDesktopEntriesChanged();
     void blacklistedNotifyRcNamesChanged();
     void whitelistedDesktopEntriesChanged();

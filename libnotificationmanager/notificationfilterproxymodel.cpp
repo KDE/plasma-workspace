@@ -72,6 +72,20 @@ void NotificationFilterProxyModel::setShowAddedDuringInhibition(bool show)
     }
 }
 
+bool NotificationFilterProxyModel::showCriticalInDndMode() const
+{
+    return m_showCriticalInDndMode;
+}
+
+void NotificationFilterProxyModel::setShowCriticalInDndMode(bool show)
+{
+    if (m_showCriticalInDndMode != show) {
+        m_showCriticalInDndMode = show;
+        invalidateFilter();
+        Q_EMIT showCriticalInDndModeChanged();
+    }
+}
+
 QStringList NotificationFilterProxyModel::blacklistedDesktopEntries() const
 {
     return m_blacklistedDesktopEntries;
@@ -194,8 +208,19 @@ bool NotificationFilterProxyModel::filterAcceptsRow(int source_row, const QModel
         }
     }
 
-    if (!m_showAddedDuringInhibition && sourceIdx.data(Notifications::WasAddedDuringInhibitionRole).toBool()) {
-        return false;
+    bool isCritical = urgency == Notifications::CriticalUrgency;
+
+    // During Do Not Disturb mode
+    if (sourceIdx.data(Notifications::WasAddedDuringInhibitionRole).toBool()) {
+        // Show critical notifications even in Do Not Disturb
+        if (isCritical && m_showCriticalInDndMode) {
+            return true;
+        }
+
+        // Normal Do Not Disturb filtering
+        if (!m_showAddedDuringInhibition) {
+            return false;
+        }
     }
 
     return true;

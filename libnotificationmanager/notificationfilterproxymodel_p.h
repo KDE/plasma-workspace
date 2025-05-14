@@ -33,6 +33,9 @@ public:
     bool showAddedDuringInhibition() const;
     void setShowAddedDuringInhibition(bool show);
 
+    bool showCriticalInDndMode() const;
+    void setShowCriticalInDndMode(bool show);
+
     QStringList blacklistedDesktopEntries() const;
     void setBlackListedDesktopEntries(const QStringList &blacklist);
 
@@ -50,6 +53,7 @@ Q_SIGNALS:
     void showExpiredChanged();
     void showDismissedChanged();
     void showAddedDuringInhibitionChanged();
+    void showCriticalInDndModeChanged();
     void blacklistedDesktopEntriesChanged();
     void blacklistedNotifyRcNamesChanged();
     void whitelistedDesktopEntriesChanged();
@@ -63,6 +67,12 @@ private:
     bool m_showDismissed = false;
     bool m_showExpired = false;
     bool m_showAddedDuringInhibition = true;
+
+    /**
+     * Indicates whether critical notifications should be shown while in Do Not Disturb (DND) mode.
+     * When set to true, critical notifications will bypass the DND mode and be displayed.
+     */
+    bool m_showCriticalInDndMode = true;
 
     QStringList m_blacklistedDesktopEntries;
     QStringList m_blacklistedNotifyRcNames;
