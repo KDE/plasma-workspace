@@ -869,24 +869,51 @@ void Notifications::collapseAllGroups()
 
 void Notifications::showInhibitionSummary()
 {
-    int inhibited = 0;
+    static QList<uint> alreadyNotifiedIds;
+    static const int maxNotifiedIds = 1000;
+
+    // Ensure the list does not grow indefinitely
+    if (alreadyNotifiedIds.size() > maxNotifiedIds) {
+        alreadyNotifiedIds = alreadyNotifiedIds.mid(alreadyNotifiedIds.size() - maxNotifiedIds);
+    }
+
+    // Find all notifications that were added during inhibition, that we haven't yet notified were missed.
+    QModelIndexList matchedNotifications;
     for (int i = 0, count = d->notificationsAndJobsModel->rowCount(); i < count; ++i) {
         const QModelIndex idx = d->notificationsAndJobsModel->index(i, 0);
-        if (!idx.data(Notifications::ReadRole).toBool() && idx.data(Notifications::WasAddedDuringInhibitionRole).toBool()) {
-            ++inhibited;
+        bool notRead = !idx.data(Notifications::ReadRole).toBool();
+        bool wasAddedDuringInhibition = idx.data(Notifications::WasAddedDuringInhibitionRole).toBool();
+        uint id = idx.data(Notifications::IdRole).toUInt();
+        bool notifiedWasMissed = alreadyNotifiedIds.contains(id);
+        if (notRead && wasAddedDuringInhibition && !notifiedWasMissed) {
+            matchedNotifications.append(idx);
         }
     }
 
-    if (!inhibited) {
+    int inhibitedCount = matchedNotifications.count();
+    if (!inhibitedCount) {
         return;
     }
 
+    // Mark that we have notified the user about these missed notifications, so we
+    // don't send repeat notifications about them.
+    for (const QModelIndex &idx : matchedNotifications) {
+        uint id = idx.data(Notifications::IdRole).toUInt();
+        // Skip if the ID is 0 (invalid) or if we have already notified about it.
+        if (id == 0 || alreadyNotifiedIds.contains(id)) {
+            continue;
+        }
+
+        alreadyNotifiedIds.append(id);
+    }
+
+    // Show a notification to inform the user about the missed notifications.
     KNotification::event(u"inhibitionSummary"_s,
-                         i18ncp("@title", "Unread Notification", "Unread Notifications", inhibited),
+                         i18ncp("@title", "Unread Notification", "Unread Notifications", inhibitedCount),
                          i18ncp("@info",
                                 "%1 notification was received while Do Not Disturb was active.",
                                 "%1 notifications were received while Do Not Disturb was active.",
-                                inhibited),
+                                inhibitedCount),
                          u"preferences-desktop-notification-bell"_s,
                          KNotification::CloseOnTimeout,
                          u"libnotificationmanager"_s);
