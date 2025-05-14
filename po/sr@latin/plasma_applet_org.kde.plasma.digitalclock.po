@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-08 00:44+0000\n"
+"POT-Creation-Date: 2025-05-14 00:45+0000\n"
 "PO-Revision-Date: 2016-05-17 01:39+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -324,31 +324,31 @@ msgstr ""
 msgid "Available Plugins:"
 msgstr "Dostupni kalendarski priključci"
 
-#: package/contents/ui/configTimeZones.qml:60
+#: package/contents/ui/configTimeZones.qml:70
 #, fuzzy, kde-format
 #| msgctxt "This is a city associated with particular time zone"
 #| msgid "Cancun"
 msgid "Cancel"
 msgstr "Kankun"
 
-#: package/contents/ui/configTimeZones.qml:67
+#: package/contents/ui/configTimeZones.qml:77
 #, fuzzy, kde-format
 #| msgid "Time Zones"
 msgid "Add Selected Time Zone"
 msgstr "Vremenske zone"
 
-#: package/contents/ui/configTimeZones.qml:84
+#: package/contents/ui/configTimeZones.qml:94
 #, fuzzy, kde-format
 #| msgid "Time Zones"
 msgid "Add Time Zone…"
 msgstr "Vremenske zone"
 
-#: package/contents/ui/configTimeZones.qml:143
+#: package/contents/ui/configTimeZones.qml:153
 #, kde-format
 msgid "Clock is currently using this time zone"
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:145
+#: package/contents/ui/configTimeZones.qml:155
 #, kde-format
 msgctxt ""
 "@label This list item shows a time zone city name that is identical to the "
@@ -357,37 +357,37 @@ msgctxt ""
 msgid "Hidden while this is the local time zone's city"
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:175
+#: package/contents/ui/configTimeZones.qml:185
 #, kde-format
 msgid "Switch Systemwide Time Zone…"
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:187
+#: package/contents/ui/configTimeZones.qml:197
 #, fuzzy, kde-format
 #| msgid "Your system time zone"
 msgid "Remove this time zone"
 msgstr "Vremenska zona sistema"
 
-#: package/contents/ui/configTimeZones.qml:199
+#: package/contents/ui/configTimeZones.qml:209
 #, fuzzy, kde-format
 #| msgid "Search Time Zones"
 msgid "Systemwide Time Zone"
 msgstr "Potraži vremenske zone"
 
-#: package/contents/ui/configTimeZones.qml:199
+#: package/contents/ui/configTimeZones.qml:209
 #, fuzzy, kde-format
 #| msgid "Time Zones"
 msgid "Additional Time Zones"
 msgstr "Vremenske zone"
 
-#: package/contents/ui/configTimeZones.qml:212
+#: package/contents/ui/configTimeZones.qml:222
 #, kde-format
 msgid ""
 "Add more time zones to display all of them in the applet's pop-up, or use "
 "one of them for the clock itself"
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:225
+#: package/contents/ui/configTimeZones.qml:235
 #, kde-format
 msgctxt "@info:usagetip shown below listview"
 msgid ""
@@ -395,19 +395,19 @@ msgid ""
 "you're traveling. It will not be shown twice while at home."
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:235
+#: package/contents/ui/configTimeZones.qml:245
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:248
+#: package/contents/ui/configTimeZones.qml:258
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
 "travel, switch the systemwide time zone instead."
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:258
+#: package/contents/ui/configTimeZones.qml:268
 #, fuzzy, kde-format
 #| msgid "Time Zones"
 msgid "Choose Time Zone"

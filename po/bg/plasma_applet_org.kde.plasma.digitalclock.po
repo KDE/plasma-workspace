@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-08 00:44+0000\n"
+"POT-Creation-Date: 2025-05-14 00:45+0000\n"
 "PO-Revision-Date: 2025-04-29 22:27+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -305,27 +305,27 @@ msgstr "Използване на регионалните настройки п
 msgid "Available Plugins:"
 msgstr "Налични приставки:"
 
-#: package/contents/ui/configTimeZones.qml:60
+#: package/contents/ui/configTimeZones.qml:70
 #, kde-format
 msgid "Cancel"
 msgstr "Отказ"
 
-#: package/contents/ui/configTimeZones.qml:67
+#: package/contents/ui/configTimeZones.qml:77
 #, kde-format
 msgid "Add Selected Time Zone"
 msgstr "Добавяне на избраната часова зона"
 
-#: package/contents/ui/configTimeZones.qml:84
+#: package/contents/ui/configTimeZones.qml:94
 #, kde-format
 msgid "Add Time Zone…"
 msgstr "Добавяне на часова зона…"
 
-#: package/contents/ui/configTimeZones.qml:143
+#: package/contents/ui/configTimeZones.qml:153
 #, kde-format
 msgid "Clock is currently using this time zone"
 msgstr "Часовникът използва понастоящем тази часова зона"
 
-#: package/contents/ui/configTimeZones.qml:145
+#: package/contents/ui/configTimeZones.qml:155
 #, kde-format
 msgctxt ""
 "@label This list item shows a time zone city name that is identical to the "
@@ -334,27 +334,27 @@ msgctxt ""
 msgid "Hidden while this is the local time zone's city"
 msgstr "Скрит, докато това е местната часова зона на града"
 
-#: package/contents/ui/configTimeZones.qml:175
+#: package/contents/ui/configTimeZones.qml:185
 #, kde-format
 msgid "Switch Systemwide Time Zone…"
 msgstr "Превключване на системната часова зона…"
 
-#: package/contents/ui/configTimeZones.qml:187
+#: package/contents/ui/configTimeZones.qml:197
 #, kde-format
 msgid "Remove this time zone"
 msgstr "Премахване на часова зона"
 
-#: package/contents/ui/configTimeZones.qml:199
+#: package/contents/ui/configTimeZones.qml:209
 #, kde-format
 msgid "Systemwide Time Zone"
 msgstr "Системна часова зона"
 
-#: package/contents/ui/configTimeZones.qml:199
+#: package/contents/ui/configTimeZones.qml:209
 #, kde-format
 msgid "Additional Time Zones"
 msgstr "Допълнителни часови зони"
 
-#: package/contents/ui/configTimeZones.qml:212
+#: package/contents/ui/configTimeZones.qml:222
 #, kde-format
 msgid ""
 "Add more time zones to display all of them in the applet's pop-up, or use "
@@ -363,7 +363,7 @@ msgstr ""
 "Добавете още часови зони, за да се показват всички от тях в изскачащия "
 "прозорец на аплета, или използвайте една от тях за самия часовник"
 
-#: package/contents/ui/configTimeZones.qml:225
+#: package/contents/ui/configTimeZones.qml:235
 #, kde-format
 msgctxt "@info:usagetip shown below listview"
 msgid ""
@@ -374,14 +374,14 @@ msgstr ""
 "часа, когато сте извън нея. Часът няма да се показва два пъти, докато сте в "
 "нея."
 
-#: package/contents/ui/configTimeZones.qml:235
+#: package/contents/ui/configTimeZones.qml:245
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr ""
 "Превключване на показаната часова зона чрез превъртане над аплета на "
 "часовника"
 
-#: package/contents/ui/configTimeZones.qml:248
+#: package/contents/ui/configTimeZones.qml:258
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
@@ -390,7 +390,7 @@ msgstr ""
 "Използването на тази функция не води до промяна на часовата зона в цялата "
 "система. Когато пътувате, вместо това превключете часовата зона на системата."
 
-#: package/contents/ui/configTimeZones.qml:258
+#: package/contents/ui/configTimeZones.qml:268
 #, kde-format
 msgid "Choose Time Zone"
 msgstr "Избиране на часова зона"

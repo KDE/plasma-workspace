@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-08 00:44+0000\n"
+"POT-Creation-Date: 2025-05-14 00:45+0000\n"
 "PO-Revision-Date: 2023-01-08 09:41+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -322,31 +322,31 @@ msgstr "Dùng thiết lập mặc định của vùng"
 msgid "Available Plugins:"
 msgstr "Phần cài cắm khả dụng:"
 
-#: package/contents/ui/configTimeZones.qml:60
+#: package/contents/ui/configTimeZones.qml:70
 #, fuzzy, kde-format
 #| msgctxt "This is a city associated with particular time zone"
 #| msgid "Cancun"
 msgid "Cancel"
 msgstr "Cancun"
 
-#: package/contents/ui/configTimeZones.qml:67
+#: package/contents/ui/configTimeZones.qml:77
 #, fuzzy, kde-format
 #| msgid "Add More Timezones"
 msgid "Add Selected Time Zone"
 msgstr "Thêm các múi giờ khác"
 
-#: package/contents/ui/configTimeZones.qml:84
+#: package/contents/ui/configTimeZones.qml:94
 #, fuzzy, kde-format
 #| msgid "Add Time Zones…"
 msgid "Add Time Zone…"
 msgstr "Thêm múi giờ…"
 
-#: package/contents/ui/configTimeZones.qml:143
+#: package/contents/ui/configTimeZones.qml:153
 #, kde-format
 msgid "Clock is currently using this time zone"
 msgstr "Đồng hồ hiện đang dùng múi giờ này"
 
-#: package/contents/ui/configTimeZones.qml:145
+#: package/contents/ui/configTimeZones.qml:155
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "@label This list item shows a time zone city name that is identical to "
@@ -360,27 +360,27 @@ msgctxt ""
 msgid "Hidden while this is the local time zone's city"
 msgstr "Ẩn trong khi đây là thành phố của múi giờ địa phương"
 
-#: package/contents/ui/configTimeZones.qml:175
+#: package/contents/ui/configTimeZones.qml:185
 #, kde-format
 msgid "Switch Systemwide Time Zone…"
 msgstr "Chuyển múi giờ toàn hệ thống…"
 
-#: package/contents/ui/configTimeZones.qml:187
+#: package/contents/ui/configTimeZones.qml:197
 #, kde-format
 msgid "Remove this time zone"
 msgstr "Bỏ múi giờ này"
 
-#: package/contents/ui/configTimeZones.qml:199
+#: package/contents/ui/configTimeZones.qml:209
 #, kde-format
 msgid "Systemwide Time Zone"
 msgstr "Múi giờ toàn hệ thống"
 
-#: package/contents/ui/configTimeZones.qml:199
+#: package/contents/ui/configTimeZones.qml:209
 #, kde-format
 msgid "Additional Time Zones"
 msgstr "Múi giờ bổ sung"
 
-#: package/contents/ui/configTimeZones.qml:212
+#: package/contents/ui/configTimeZones.qml:222
 #, kde-format
 msgid ""
 "Add more time zones to display all of them in the applet's pop-up, or use "
@@ -389,7 +389,7 @@ msgstr ""
 "Thêm các múi giờ khác để hiển thị tất cả ở ô bật lên của tiểu ứng dụng, hoặc "
 "dùng một trong số chúng cho cái đồng hồ"
 
-#: package/contents/ui/configTimeZones.qml:225
+#: package/contents/ui/configTimeZones.qml:235
 #, kde-format
 msgctxt "@info:usagetip shown below listview"
 msgid ""
@@ -397,13 +397,13 @@ msgid ""
 "you're traveling. It will not be shown twice while at home."
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:235
+#: package/contents/ui/configTimeZones.qml:245
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr ""
 "Chuyển múi giờ hiển thị bằng cách cuộn chuột ở trên tiểu ứng dụng đồng hồ"
 
-#: package/contents/ui/configTimeZones.qml:248
+#: package/contents/ui/configTimeZones.qml:258
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
@@ -412,7 +412,7 @@ msgstr ""
 "Việc dùng tính năng này sẽ không thay đổi múi giờ toàn hệ thống. Khi bạn đi "
 "đến nơi khác, hãy thay đổi múi giờ toàn hệ thống."
 
-#: package/contents/ui/configTimeZones.qml:258
+#: package/contents/ui/configTimeZones.qml:268
 #, fuzzy, kde-format
 #| msgid "Time Zones"
 msgid "Choose Time Zone"

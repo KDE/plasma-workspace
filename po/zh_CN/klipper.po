@@ -899,14 +899,3 @@ msgstr "剪贴板弹窗"
 #, kde-format
 msgid "&Cancel"
 msgstr "取消(&C)"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "You can enable URL actions later in the <interface>Actions</interface> "
-#~ "page of the Clipboard applet's configuration window"
-#~ msgstr ""
-#~ "您可以稍后在剪贴板小程序的配置窗口中的<interface>操作</interface>页面启用 "
-#~ "URL 操作。"
-
-#~ msgid "Disable This Popup"
-#~ msgstr "禁用此弹出菜单"

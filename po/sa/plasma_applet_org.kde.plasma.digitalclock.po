@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-08 00:44+0000\n"
+"POT-Creation-Date: 2025-05-14 00:45+0000\n"
 "PO-Revision-Date: 2024-12-20 22:20+0530\n"
 "Last-Translator: \n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -305,29 +305,29 @@ msgstr "क्षेत्रपूर्वनिर्धारितस्य
 msgid "Available Plugins:"
 msgstr "उपलब्धाः प्लगिन्स् :"
 
-#: package/contents/ui/configTimeZones.qml:60
+#: package/contents/ui/configTimeZones.qml:70
 #, kde-format
 msgid "Cancel"
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:67
+#: package/contents/ui/configTimeZones.qml:77
 #, fuzzy, kde-format
 #| msgid "Add More Time Zones"
 msgid "Add Selected Time Zone"
 msgstr "अधिकानि समयक्षेत्राणि योजयन्तु"
 
-#: package/contents/ui/configTimeZones.qml:84
+#: package/contents/ui/configTimeZones.qml:94
 #, fuzzy, kde-format
 #| msgid "Add Time Zones…"
 msgid "Add Time Zone…"
 msgstr "समयक्षेत्राणि योजयन्तु…"
 
-#: package/contents/ui/configTimeZones.qml:143
+#: package/contents/ui/configTimeZones.qml:153
 #, kde-format
 msgid "Clock is currently using this time zone"
 msgstr "घड़ी सम्प्रति एतत् समयक्षेत्रं उपयुज्यते"
 
-#: package/contents/ui/configTimeZones.qml:145
+#: package/contents/ui/configTimeZones.qml:155
 #, kde-format
 msgctxt ""
 "@label This list item shows a time zone city name that is identical to the "
@@ -336,27 +336,27 @@ msgctxt ""
 msgid "Hidden while this is the local time zone's city"
 msgstr "गुप्तं यदा एतत् स्थानीयसमयक्षेत्रस्य नगरम् अस्ति"
 
-#: package/contents/ui/configTimeZones.qml:175
+#: package/contents/ui/configTimeZones.qml:185
 #, kde-format
 msgid "Switch Systemwide Time Zone…"
 msgstr "सङ्गणकतन्त्रव्यापी समयक्षेत्रं परिवर्तयन्तु…"
 
-#: package/contents/ui/configTimeZones.qml:187
+#: package/contents/ui/configTimeZones.qml:197
 #, kde-format
 msgid "Remove this time zone"
 msgstr "एतत् समयक्षेत्रं निष्कासयन्तु"
 
-#: package/contents/ui/configTimeZones.qml:199
+#: package/contents/ui/configTimeZones.qml:209
 #, kde-format
 msgid "Systemwide Time Zone"
 msgstr "सङ्गणकतन्त्रव्यापी समयक्षेत्रम्"
 
-#: package/contents/ui/configTimeZones.qml:199
+#: package/contents/ui/configTimeZones.qml:209
 #, kde-format
 msgid "Additional Time Zones"
 msgstr "अतिरिक्तसमयक्षेत्राणि"
 
-#: package/contents/ui/configTimeZones.qml:212
+#: package/contents/ui/configTimeZones.qml:222
 #, kde-format
 msgid ""
 "Add more time zones to display all of them in the applet's pop-up, or use "
@@ -365,7 +365,7 @@ msgstr ""
 "एप्लेट्-पॉप्-अप-मध्ये तान् सर्वान् प्रदर्शयितुं अधिकानि समयक्षेत्राणि योजयन्तु, अथवा तेषु एकं "
 "घडिकायाः कृते एव उपयुज्यताम्"
 
-#: package/contents/ui/configTimeZones.qml:225
+#: package/contents/ui/configTimeZones.qml:235
 #, kde-format
 msgctxt "@info:usagetip shown below listview"
 msgid ""
@@ -373,12 +373,12 @@ msgid ""
 "you're traveling. It will not be shown twice while at home."
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:235
+#: package/contents/ui/configTimeZones.qml:245
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr "घड़ी एप्लेट् उपरि सारण कृत्वा प्रदर्शितं समयक्षेत्रं परिवर्तयन्तु"
 
-#: package/contents/ui/configTimeZones.qml:248
+#: package/contents/ui/configTimeZones.qml:258
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
@@ -387,7 +387,7 @@ msgstr ""
 "एतस्य विशेषतायाः उपयोगेन सङ्गणकतन्त्रव्यापी समयक्षेत्रं न परिवर्तते । यदा भवन्तः यात्रां "
 "कुर्वन्ति तदा तस्य स्थाने सङ्गणकतन्त्रव्यापी समयक्षेत्रं परिवर्तयन्तु ।."
 
-#: package/contents/ui/configTimeZones.qml:258
+#: package/contents/ui/configTimeZones.qml:268
 #, fuzzy, kde-format
 #| msgid "Time Zones"
 msgid "Choose Time Zone"

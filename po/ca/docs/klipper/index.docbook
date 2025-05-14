@@ -142,9 +142,7 @@
 >Per a usar aquesta característica, simplement copieu un &URL; o camí. Si hi ha una expressió regular en la llista del &klipper;, apareixerà un menú mostrant-vos els programes adients perquè trieu. Empreu el ratolí o el teclat per a seleccionar un programa, i el &klipper; l'executarà, obrint l'adreça cap on apunta la selecció.</para>
 
 <para
->Si no voleu realitzar cap acció amb el contingut del porta-retalls, seleccioneu <guimenuitem
->Desactiva aquest emergent</guimenuitem
-> en el menú emergent per a tornar al que estàveu fent anteriorment. Si abandoneu el menú, aquest desapareixerà, permetent-vos continuar amb el vostre treball. Podeu canviar el temps durant el qual el menú romandrà obert en el diàleg de configuració, amb l'opció <guilabel
+>Podeu canviar el temps durant el qual el menú romandrà obert en el diàleg de configuració, amb l'opció <guilabel
 >Mostra el menú emergent d'acció</guilabel
 > a la pàgina <guilabel
 >General</guilabel

@@ -144,9 +144,7 @@
 >Om deze functie te gebruiken, selecteert u een &URL; of bestandsnaam. Als er een reguliere expressie in &klipper; voldoet, dan zal er een menu openen met de programma's voor uw selectie. Gebruik uw muis of pijltjestoetsen om de gewenste handeling te selecteren. &klipper; zal de gevraagde toepassing openen met het adres dat in de selectie staat.</para>
 
 <para
->Als u geen handeling wilt uitvoeren aan de hand van de inhoud van het klembord, selecteert u <guimenuitem
->Deze dialoog deactiveren</guimenuitem
-> uit het menu. Als u het menu verlaat, zal het menu verdwijnen zodat u verder kunt gaan met waar u mee bezig was. De tijd dat het menu zal verschijnen, kunt u wijzigen in de instellingendialoog met de optie <guilabel
+>De tijd dat het menu zal verschijnen, kunt u wijzigen in de instellingendialoog met de optie <guilabel
 >actie-pop-up-menu</guilabel
 > in de pagina <guilabel
 >Algemeen</guilabel

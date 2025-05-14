@@ -94,6 +94,17 @@
     <varlistentry>
     <term
 ><guiicon
+>Inschakelen terwijl een toepassing met volledig scherm focus heeft</guiicon
+></term>
+    <listitem
+><para
+>Automatisch modus Niet storen inschakelen wanneer u een toepassing gebruikt in modus volledig scherm, bijvoorbeeld bij bekijken van een video.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
 >Kritieke meldingen tonen</guiicon
 ></term>
     <listitem
@@ -181,7 +192,7 @@
     <varlistentry>
     <term
 ><guiicon
->Aangepaste positie kiezen...</guiicon
+>Aangepast…</guiicon
 ></term>
     <listitem
 ><para
