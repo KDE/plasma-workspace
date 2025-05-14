@@ -38,6 +38,9 @@ PlasmaComponents3.ScrollView {
 
         readonly property int delegateHeight: (metrics.height * delegateMaxTextLines) + (delegateMargins * 2)
 
+        // Accessible.List as role is not optimal here as it's not clear it's a grid, and there is no grid role
+        Accessible.description: i18nc("@info:whatsthis accessible description for popup grid", "Grid with %1 items in %2 columns", hiddenTasks.count, columns)
+
         TextMetrics {
             id: metrics
             text: i18nc("Some letters with tall characters, ascenders, descenders, etc", "AILlmyjgGJP")
@@ -58,6 +61,7 @@ PlasmaComponents3.ScrollView {
         delegate: Items.ItemLoader {
             width: hiddenTasks.cellWidth
             height: hiddenTasks.cellHeight
+            Accessible.role: Accessible.ListItem // needed to get the GridView description or role announced
         }
 
         keyNavigationEnabled: true

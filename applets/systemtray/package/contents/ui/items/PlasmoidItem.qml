@@ -195,4 +195,18 @@ AbstractItem {
         when: plasmoidContainer.applet !== null
         restoreMode: Binding.RestoreBinding
     }
+    Binding {
+        property: "activeFocusOnTab"
+        value: false
+        target: plasmoidContainer.applet.compactRepresentationItem
+        when: plasmoidContainer.applet !== null && inHiddenLayout
+        restoreMode: Binding.RestoreBinding
+    }
+    Binding {
+        property: "activeFocusOnTab"
+        value: false
+        target: plasmoidContainer.applet.fullRepresentationItem
+        when: plasmoidContainer.applet !== null && inHiddenLayout && !plasmoidContainer.applet.compactRepresentationItem
+        restoreMode: Binding.RestoreBinding
+    }
 }

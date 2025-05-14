@@ -108,7 +108,7 @@ PlasmaCore.ToolTipArea {
             id: iconContainer
             scale: (abstractItem.effectivePressed || mouseArea.containsPress) ? 0.8 : 1
 
-            activeFocusOnTab: true
+            activeFocusOnTab: !inHiddenLayout
             focus: true // Required in HiddenItemsView so keyboard events can be forwarded to this item
             Accessible.name: abstractItem.text
             Accessible.description: abstractItem.subText
