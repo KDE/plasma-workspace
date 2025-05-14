@@ -42,7 +42,7 @@ ListView {
             }
 
             QQC2.ToolButton {
-                icon.name: "edit-entry"
+                icon.name: "edit-reset-symbolic"
                 text: i18n("Re-enroll finger")
                 display: QQC2.Button.IconOnly
 
