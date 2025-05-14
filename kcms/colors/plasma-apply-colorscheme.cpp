@@ -116,6 +116,7 @@ int main(int argc, char **argv)
                                requestedScheme,
                                availableThemes.join(QLatin1String{", "}))
                        << Qt::endl;
+                    exitCode = -1;
                 }
             } else {
                 // This shouldn't happen, but let's catch it and make angry noises, just in case...
