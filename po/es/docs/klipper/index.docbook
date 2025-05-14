@@ -179,7 +179,7 @@
 
 <para
 >La acción <guilabel
->Configurar el portapapeles...</guilabel
+>Configurar el portapapeles…</guilabel
 > del menú de contexto abre el <link linkend="preferences"
 >diálogo de preferencias</link
 >. </para>
@@ -221,7 +221,7 @@
 
 <para
 >El contenido del portapapeles que se ajuste a una expresión regular también se puede editar antes de realizar una acción sobre él. Seleccione <guimenuitem
->Editar contenido...</guimenuitem
+>Editar contenido…</guimenuitem
 > a la derecha de la entrada del portapapeles para poder cambiar el contenido del portapapeles en el diálogo que aparecerá, antes de pulsar el botón <guibutton
 >Aceptar</guibutton
 > para ejecutar la acción apropiada.</para>
@@ -271,7 +271,7 @@
 >Cambiar el comportamiento del portapapeles/selección</title>
 <para
 >Para cambiar el comportamiento del portapapeles o de la selección, seleccione <guimenuitem
->Configurar el portapapeles...</guimenuitem
+>Configurar el portapapeles…</guimenuitem
 > en el menú de contexto de &klipper; y en el diálogo que aparezca, seleccione la página <guilabel
 >General</guilabel
 >. Si quita la marca de la opción <guilabel
@@ -520,7 +520,7 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 <listitem
 ><para
 >Pulse el botón <guibutton
->Añadir acción...</guibutton
+>Añadir acción…</guibutton
 > para añadir una expresión regular con la que &klipper; pueda encontrar una coincidencia. &klipper; usa la clase la clase <classname
 >QRegularExpression</classname
 > de &Qt;, que usa PCRE (expresiones regulares compatibles con Perl).</para>
@@ -646,21 +646,23 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 <para
 >&klipper; </para>
 <para
->Derechos de autor del programa. 1998. &Andrew.Stanley-Jones; <email
+>Copyright del programa. 1998. &Andrew.Stanley-Jones; <email
 >asj@cban.com</email
 >. </para>
 <para
->Derechos de autor del programa. 1998-2000. &Carsten.Pfeiffer; &Carsten.Pfeiffer.mail;.</para>
+>Copyright del programa. 1998-2000. &Carsten.Pfeiffer; &Carsten.Pfeiffer.mail;.</para>
 <para
 >El encargado actual es Esben Mose Hansen. En <ulink url="http://mosehansen.dk/about"
 >http://mosehansen.dk/about</ulink
 > tiene información de contacto. </para>
 
 <para
->Derechos de autor de la documentación. 2000-2003, 2005. &Philip.Rodrigues; &Philip.Rodrigues.mail;.</para>
+>Copyright de la documentación. 2000-2003, 2005. &Philip.Rodrigues; &Philip.Rodrigues.mail;.</para>
 
 <para
->Traducido por Pablo de Vicente <email
+>Traducido por Rocío Gallego <email
+>traducciones@rociogallego.com</email
+>, Pablo de Vicente <email
 >pvicentea@nexo.es</email
 >, Marcos Fouces Lago <email
 >mfouces@yahoo.es</email
