@@ -18,6 +18,8 @@
 MountAction::MountAction(const QString &udi, QObject *parent)
     : ActionInterface(udi, parent)
     , m_stateMonitor(DevicesStateMonitor::instance())
+    , m_supportsMTP(false)
+    , m_hasStorageAccess(false)
 {
     Solid::Device device(udi);
 
@@ -38,6 +40,15 @@ MountAction::MountAction(const QString &udi, QObject *parent)
     }
 
     m_supportsMTP = supportedProtocols.contains(QLatin1String("mtp"));
+
+    // It's possible for there to be no StorageAccess (e.g. MTP devices don't have one)
+    if (device.is<Solid::StorageAccess>()) {
+        Solid::StorageAccess *access = device.as<Solid::StorageAccess>();
+        if (access) {
+            qCDebug(APPLETS::DEVICENOTIFIER) << "Mount action: have storage access";
+            m_hasStorageAccess = true;
+        }
+    }
 
     connect(m_stateMonitor.get(), &DevicesStateMonitor::stateChanged, this, &MountAction::updateIsValid);
 }
@@ -67,7 +78,7 @@ void MountAction::triggered()
 
 bool MountAction::isValid() const
 {
-    return m_stateMonitor->isRemovable(m_udi) && !m_stateMonitor->isMounted(m_udi) && !m_supportsMTP;
+    return m_hasStorageAccess && m_stateMonitor->isRemovable(m_udi) && !m_stateMonitor->isMounted(m_udi) && !m_supportsMTP;
 }
 
 void MountAction::updateIsValid(const QString &udi)

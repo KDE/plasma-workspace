@@ -33,6 +33,7 @@ private Q_SLOTS:
 
 private:
     bool m_supportsMTP;
+    bool m_hasStorageAccess;
 
     std::shared_ptr<DevicesStateMonitor> m_stateMonitor;
 };
