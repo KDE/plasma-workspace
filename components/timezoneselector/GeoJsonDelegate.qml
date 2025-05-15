@@ -62,7 +62,7 @@ DelegateChooser {
             property bool thisItemSelected: root.selectedTimeZone == modelData?.properties?.tzid
             onThisItemSelectedChanged: {
                 if (!thisItemSelected) return;
-                view.map.center = delegateChooser.centerOf(rect)
+                view.animateCenterTo(delegateChooser.centerOf(rect))
                 delegateChooser.animateZoomLevel(delegateChooser.suggestedZoomOf(rect))
             }
 
@@ -124,7 +124,7 @@ DelegateChooser {
             property bool thisItemSelected: root.selectedTimeZone === tzid
             onThisItemSelectedChanged: {
                 if (!thisItemSelected) return;
-                view.map.center = delegateChooser.centerOf(rect)
+                view.animateCenterTo(delegateChooser.centerOf(rect))
                 delegateChooser.animateZoomLevel(delegateChooser.suggestedZoomOf(rect))
             }
         }
