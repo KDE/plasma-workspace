@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-01 00:44+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2019-09-19 19:28+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -213,7 +213,13 @@ msgstr "Пӯшидани равзанаи пайдошаванда"
 msgid "Show hidden icons"
 msgstr "Намоиш додани нишонаҳои пинҳоншуда"
 
-#: package/contents/ui/HiddenItemsView.qml:43
+#: package/contents/ui/HiddenItemsView.qml:42
+#, kde-format
+msgctxt "@info:whatsthis accessible description for popup grid"
+msgid "Grid with %1 items in %2 columns"
+msgstr ""
+
+#: package/contents/ui/HiddenItemsView.qml:46
 #, kde-format
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"

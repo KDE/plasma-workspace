@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-13 00:43+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2024-10-08 14:36+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -376,18 +376,18 @@ msgstr "Schránka je prázdná"
 
 #: declarative/qml/DelegateToolButtons.qml:31
 #, kde-format
-msgid "Invoke action"
-msgstr "Vyvolat činnost"
+msgid "Edit contents"
+msgstr "Upravit obsah"
 
 #: declarative/qml/DelegateToolButtons.qml:32
 #, kde-format
-msgid "Show QR code"
-msgstr "Zobrazit QR kód"
+msgid "Invoke action"
+msgstr "Vyvolat činnost"
 
 #: declarative/qml/DelegateToolButtons.qml:33
 #, kde-format
-msgid "Edit contents"
-msgstr "Upravit obsah"
+msgid "Show QR code"
+msgstr "Zobrazit QR kód"
 
 #: declarative/qml/DelegateToolButtons.qml:34
 #, kde-format

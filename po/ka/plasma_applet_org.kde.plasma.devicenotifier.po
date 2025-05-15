@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-13 00:43+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2025-02-23 08:45+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -118,7 +118,7 @@ msgstr "ყველა მოწყობილობა"
 msgid "Show popup when new device is plugged in"
 msgstr "ახალი მოწყობილობის შეერთებისას მხტუნავი ფანჯრის ჩვენება"
 
-#: plugin/actions/mountaction.cpp:93
+#: plugin/actions/mountaction.cpp:104
 #, kde-format
 msgid "Mount"
 msgstr "მიმაგრება"

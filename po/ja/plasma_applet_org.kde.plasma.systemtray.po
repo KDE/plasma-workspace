@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.systemtray\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-01 00:44+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2022-08-28 20:50-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -213,7 +213,13 @@ msgstr "ポップアップを閉じる"
 msgid "Show hidden icons"
 msgstr "非表示のアイコンを表示"
 
-#: package/contents/ui/HiddenItemsView.qml:43
+#: package/contents/ui/HiddenItemsView.qml:42
+#, kde-format
+msgctxt "@info:whatsthis accessible description for popup grid"
+msgid "Grid with %1 items in %2 columns"
+msgstr ""
+
+#: package/contents/ui/HiddenItemsView.qml:46
 #, kde-format
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"

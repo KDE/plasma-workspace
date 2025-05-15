@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-13 00:43+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2013-03-28 14:37+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -378,21 +378,21 @@ msgstr "क्लिपबोर्ड रिकामा आहे"
 
 #: declarative/qml/DelegateToolButtons.qml:31
 #, fuzzy, kde-format
+#| msgid "Edit Contents"
+msgid "Edit contents"
+msgstr "अनुक्रम संपादित करा"
+
+#: declarative/qml/DelegateToolButtons.qml:32
+#, fuzzy, kde-format
 #| msgid "<new action>"
 msgid "Invoke action"
 msgstr "<नविन क्रिया>"
 
-#: declarative/qml/DelegateToolButtons.qml:32
+#: declarative/qml/DelegateToolButtons.qml:33
 #, fuzzy, kde-format
 #| msgid "&Show Barcode..."
 msgid "Show QR code"
 msgstr "बारकोड दर्शवा (&S)..."
-
-#: declarative/qml/DelegateToolButtons.qml:33
-#, fuzzy, kde-format
-#| msgid "Edit Contents"
-msgid "Edit contents"
-msgstr "अनुक्रम संपादित करा"
 
 #: declarative/qml/DelegateToolButtons.qml:34
 #, fuzzy, kde-format

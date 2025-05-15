@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-26 00:43+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2025-04-01 14:59+0400\n"
 "Last-Translator: Khayyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -1210,7 +1210,7 @@ msgid ""
 msgstr ""
 "\"%1\" mövzusu tapılmadı. Mövzu aşağıdakı variantlardan biri olmalıdır: %2"
 
-#: plasma-apply-colorscheme.cpp:122
+#: plasma-apply-colorscheme.cpp:123
 #, kde-format
 msgid ""
 "You have managed to pass an empty color scheme name, which isn't supported "
@@ -1218,7 +1218,7 @@ msgid ""
 msgstr ""
 "Siz rəng sxeminə boş ad verməyə nail oldunuz, hansı ki, bu dəstəklənmir."
 
-#: plasma-apply-colorscheme.cpp:126
+#: plasma-apply-colorscheme.cpp:127
 #, kde-format
 msgid ""
 "The file you attempted to set as your scheme, %1, could not be identified as "
@@ -1227,22 +1227,22 @@ msgstr ""
 "Rəng sxemi kimi quraşdırmağa çalışdığınız fayl, %1, rəng sxemi kimi tanına "
 "bilmədi."
 
-#: plasma-apply-colorscheme.cpp:149
+#: plasma-apply-colorscheme.cpp:150
 #, kde-format
 msgid "Successfully applied the accent color %1"
 msgstr "Seçim rəngi %1 uğurla tətbiq olundu"
 
-#: plasma-apply-colorscheme.cpp:151
+#: plasma-apply-colorscheme.cpp:152
 #, kde-format
 msgid "Invalid accent color "
 msgstr "Səhv seçim rəngi "
 
-#: plasma-apply-colorscheme.cpp:156
+#: plasma-apply-colorscheme.cpp:157
 #, kde-format
 msgid "You have the following color schemes on your system:"
 msgstr "Sisteminizdə aşağıdakı rəng sxemləri var:"
 
-#: plasma-apply-colorscheme.cpp:161
+#: plasma-apply-colorscheme.cpp:162
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (cari rəng sxemi)"

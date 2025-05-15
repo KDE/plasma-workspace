@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-26 00:43+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2024-09-05 09:45+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -1203,36 +1203,36 @@ msgstr ""
 "لم يعثر على السمة المطلوبة \"%1\". السمة يجب أن تكون واحدة من الخيارات "
 "التالية: %2"
 
-#: plasma-apply-colorscheme.cpp:122
+#: plasma-apply-colorscheme.cpp:123
 #, kde-format
 msgid ""
 "You have managed to pass an empty color scheme name, which isn't supported "
 "behavior."
 msgstr "لقد تمكنت من تمرير اسم تشكيلة ألوان فارغة، وهو سلوك غير مدعوم."
 
-#: plasma-apply-colorscheme.cpp:126
+#: plasma-apply-colorscheme.cpp:127
 #, kde-format
 msgid ""
 "The file you attempted to set as your scheme, %1, could not be identified as "
 "a color scheme."
 msgstr "تعذر تحديد الملف الذي حاولت تعيينه كتشكيلة ألوان %1 ."
 
-#: plasma-apply-colorscheme.cpp:149
+#: plasma-apply-colorscheme.cpp:150
 #, kde-format
 msgid "Successfully applied the accent color %1"
 msgstr "طبق لون التمييز %1 بنجاح"
 
-#: plasma-apply-colorscheme.cpp:151
+#: plasma-apply-colorscheme.cpp:152
 #, kde-format
 msgid "Invalid accent color "
 msgstr "لون التمييز غير صالح"
 
-#: plasma-apply-colorscheme.cpp:156
+#: plasma-apply-colorscheme.cpp:157
 #, kde-format
 msgid "You have the following color schemes on your system:"
 msgstr "لديك التشكيلات التالية على نظامك:"
 
-#: plasma-apply-colorscheme.cpp:161
+#: plasma-apply-colorscheme.cpp:162
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (تشكيلة الألوان الحالية)"

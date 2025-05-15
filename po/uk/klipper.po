@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-13 00:43+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2024-12-09 15:23+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -396,18 +396,18 @@ msgstr "Кишеня порожня"
 
 #: declarative/qml/DelegateToolButtons.qml:31
 #, kde-format
-msgid "Invoke action"
-msgstr "Викликати дію"
+msgid "Edit contents"
+msgstr "Редагувати вміст"
 
 #: declarative/qml/DelegateToolButtons.qml:32
 #, kde-format
-msgid "Show QR code"
-msgstr "Показати QR-код"
+msgid "Invoke action"
+msgstr "Викликати дію"
 
 #: declarative/qml/DelegateToolButtons.qml:33
 #, kde-format
-msgid "Edit contents"
-msgstr "Редагувати вміст"
+msgid "Show QR code"
+msgstr "Показати QR-код"
 
 #: declarative/qml/DelegateToolButtons.qml:34
 #, kde-format

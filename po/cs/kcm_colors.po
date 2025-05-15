@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-26 00:43+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2024-08-30 16:30+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -1204,7 +1204,7 @@ msgid ""
 msgstr ""
 "Nelze najít motiv \"%1\". Motiv by měl být jedna z následujících možností: %2"
 
-#: plasma-apply-colorscheme.cpp:122
+#: plasma-apply-colorscheme.cpp:123
 #, kde-format
 msgid ""
 "You have managed to pass an empty color scheme name, which isn't supported "
@@ -1213,7 +1213,7 @@ msgstr ""
 "Povedlo se vám předat prázdný název barevného schématu, což není podporované "
 "chování."
 
-#: plasma-apply-colorscheme.cpp:126
+#: plasma-apply-colorscheme.cpp:127
 #, kde-format
 msgid ""
 "The file you attempted to set as your scheme, %1, could not be identified as "
@@ -1222,22 +1222,22 @@ msgstr ""
 "Soubor %1, který jste se pokusili nastavit jako barevné schéma jako barevné "
 "schéma nebyl rozpoznán."
 
-#: plasma-apply-colorscheme.cpp:149
+#: plasma-apply-colorscheme.cpp:150
 #, kde-format
 msgid "Successfully applied the accent color %1"
 msgstr "Barevný nádech %1 byl úspěšně nastaven"
 
-#: plasma-apply-colorscheme.cpp:151
+#: plasma-apply-colorscheme.cpp:152
 #, kde-format
 msgid "Invalid accent color "
 msgstr "Neplatná barva nádechu "
 
-#: plasma-apply-colorscheme.cpp:156
+#: plasma-apply-colorscheme.cpp:157
 #, kde-format
 msgid "You have the following color schemes on your system:"
 msgstr "Ve vašem systému jsou dostupná následující barevná schémata:"
 
-#: plasma-apply-colorscheme.cpp:161
+#: plasma-apply-colorscheme.cpp:162
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (aktuální barevné schéma)"

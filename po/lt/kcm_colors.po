@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-26 00:43+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2024-09-01 00:56+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -1207,7 +1207,7 @@ msgstr ""
 "Nepavyko rasti apipavidalinimo „%1“. Apipavidalinimas turėtų būti vienas iš "
 "šių variantų: %2"
 
-#: plasma-apply-colorscheme.cpp:122
+#: plasma-apply-colorscheme.cpp:123
 #, kde-format
 msgid ""
 "You have managed to pass an empty color scheme name, which isn't supported "
@@ -1216,7 +1216,7 @@ msgstr ""
 "Jums pavyko perduoti tuščią spalvų rinkinio pavadinimą, o tai nėra palaikoma "
 "elgsena."
 
-#: plasma-apply-colorscheme.cpp:126
+#: plasma-apply-colorscheme.cpp:127
 #, kde-format
 msgid ""
 "The file you attempted to set as your scheme, %1, could not be identified as "
@@ -1225,22 +1225,22 @@ msgstr ""
 "Failo, kurį bandėte nustatyti kaip rinkinį, %1, nepavyko atpažinti kaip "
 "spalvų rinkinio."
 
-#: plasma-apply-colorscheme.cpp:149
+#: plasma-apply-colorscheme.cpp:150
 #, kde-format
 msgid "Successfully applied the accent color %1"
 msgstr "Sėkmingai pritaikyta %1 paryškinimo spalva"
 
-#: plasma-apply-colorscheme.cpp:151
+#: plasma-apply-colorscheme.cpp:152
 #, kde-format
 msgid "Invalid accent color "
 msgstr "Neteisinga paryškinimo spalvą "
 
-#: plasma-apply-colorscheme.cpp:156
+#: plasma-apply-colorscheme.cpp:157
 #, kde-format
 msgid "You have the following color schemes on your system:"
 msgstr "Savo sistemoje turite šiuos spalvų rinkinius:"
 
-#: plasma-apply-colorscheme.cpp:161
+#: plasma-apply-colorscheme.cpp:162
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (dabartinis spalvų rinkinys)"

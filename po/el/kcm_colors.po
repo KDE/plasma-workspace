@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-26 00:43+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2024-09-19 16:48+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -1223,7 +1223,7 @@ msgstr ""
 "Αδυναμία εύρεσης θέματος «%1». Το θέμα πρέπει να είναι μία από τις ακόλουθες "
 "επιλογές: %2"
 
-#: plasma-apply-colorscheme.cpp:122
+#: plasma-apply-colorscheme.cpp:123
 #, kde-format
 msgid ""
 "You have managed to pass an empty color scheme name, which isn't supported "
@@ -1232,7 +1232,7 @@ msgstr ""
 "Καταφέρατε να περάσετε ένα κενό όνομα θέματος χρωμάτων, το οποίο δεν είναι "
 "υποστηριζόμενη συμπεριφορά."
 
-#: plasma-apply-colorscheme.cpp:126
+#: plasma-apply-colorscheme.cpp:127
 #, kde-format
 msgid ""
 "The file you attempted to set as your scheme, %1, could not be identified as "
@@ -1241,22 +1241,22 @@ msgstr ""
 "Το αρχείο που προσπαθήσατε να ορίσετε ως θέμα, %1, δεν μπόρεσε να "
 "αναγνωριστεί ως θέμα χρωμάτων."
 
-#: plasma-apply-colorscheme.cpp:149
+#: plasma-apply-colorscheme.cpp:150
 #, kde-format
 msgid "Successfully applied the accent color %1"
 msgstr "Επιτυχής εφαρμογή του χρώματος έμφασης %1"
 
-#: plasma-apply-colorscheme.cpp:151
+#: plasma-apply-colorscheme.cpp:152
 #, kde-format
 msgid "Invalid accent color "
 msgstr "Μη έγκυρο χρώμα έμφασης"
 
-#: plasma-apply-colorscheme.cpp:156
+#: plasma-apply-colorscheme.cpp:157
 #, kde-format
 msgid "You have the following color schemes on your system:"
 msgstr "Έχετε τα ακόλουθα χρωματικά θέματα στο σύστημά σας:"
 
-#: plasma-apply-colorscheme.cpp:161
+#: plasma-apply-colorscheme.cpp:162
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr "* %1 (τρέχον θέμα χρωμάτων)"

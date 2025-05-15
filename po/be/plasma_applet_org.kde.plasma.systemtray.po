@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-01 00:44+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2024-11-06 22:00\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -217,7 +217,13 @@ msgstr "Закрыць выплыўное акно"
 msgid "Show hidden icons"
 msgstr "Паказваць схаваныя значкі"
 
-#: package/contents/ui/HiddenItemsView.qml:43
+#: package/contents/ui/HiddenItemsView.qml:42
+#, kde-format
+msgctxt "@info:whatsthis accessible description for popup grid"
+msgid "Grid with %1 items in %2 columns"
+msgstr ""
+
+#: package/contents/ui/HiddenItemsView.qml:46
 #, kde-format
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-13 00:43+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2024-12-10 06:35+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -393,18 +393,18 @@ msgstr "Gli appunti sono vuoti"
 
 #: declarative/qml/DelegateToolButtons.qml:31
 #, kde-format
-msgid "Invoke action"
-msgstr "Invoca azione"
+msgid "Edit contents"
+msgstr "Modifica i contenuti"
 
 #: declarative/qml/DelegateToolButtons.qml:32
 #, kde-format
-msgid "Show QR code"
-msgstr "Mostra il codice QR"
+msgid "Invoke action"
+msgstr "Invoca azione"
 
 #: declarative/qml/DelegateToolButtons.qml:33
 #, kde-format
-msgid "Edit contents"
-msgstr "Modifica i contenuti"
+msgid "Show QR code"
+msgstr "Mostra il codice QR"
 
 #: declarative/qml/DelegateToolButtons.qml:34
 #, kde-format

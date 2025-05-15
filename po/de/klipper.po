@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-13 00:43+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2025-02-21 18:43+0100\n"
 "Last-Translator: Flori G <Renner03@protonmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -394,18 +394,18 @@ msgstr "Die Zwischenablage ist leer"
 
 #: declarative/qml/DelegateToolButtons.qml:31
 #, kde-format
-msgid "Invoke action"
-msgstr "Aktion aufrufen"
+msgid "Edit contents"
+msgstr "Inhalt bearbeiten"
 
 #: declarative/qml/DelegateToolButtons.qml:32
 #, kde-format
-msgid "Show QR code"
-msgstr "QR-Code anzeigen"
+msgid "Invoke action"
+msgstr "Aktion aufrufen"
 
 #: declarative/qml/DelegateToolButtons.qml:33
 #, kde-format
-msgid "Edit contents"
-msgstr "Inhalt bearbeiten"
+msgid "Show QR code"
+msgstr "QR-Code anzeigen"
 
 #: declarative/qml/DelegateToolButtons.qml:34
 #, kde-format

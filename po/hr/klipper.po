@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper 0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-13 00:43+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2011-02-15 16:10+0100\n"
 "Last-Translator: Marko Dimjasevic <marko@dimjasevic.net>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -388,21 +388,21 @@ msgstr "Odlagalište je prazno"
 
 #: declarative/qml/DelegateToolButtons.qml:31
 #, fuzzy, kde-format
+#| msgid "Edit Contents"
+msgid "Edit contents"
+msgstr "Izmjeni sadržaj"
+
+#: declarative/qml/DelegateToolButtons.qml:32
+#, fuzzy, kde-format
 #| msgid "<new action>"
 msgid "Invoke action"
 msgstr "<nova akcija>"
 
-#: declarative/qml/DelegateToolButtons.qml:32
+#: declarative/qml/DelegateToolButtons.qml:33
 #, fuzzy, kde-format
 #| msgid "&Show Barcode..."
 msgid "Show QR code"
 msgstr "&Prikaži barkod…"
-
-#: declarative/qml/DelegateToolButtons.qml:33
-#, fuzzy, kde-format
-#| msgid "Edit Contents"
-msgid "Edit contents"
-msgstr "Izmjeni sadržaj"
 
 #: declarative/qml/DelegateToolButtons.qml:34
 #, fuzzy, kde-format

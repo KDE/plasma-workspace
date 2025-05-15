@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-13 00:43+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2024-12-09 12:42+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -401,18 +401,18 @@ msgstr "Klembordgeschiedenis is leeg"
 
 #: declarative/qml/DelegateToolButtons.qml:31
 #, kde-format
-msgid "Invoke action"
-msgstr "Actie aanroepen"
+msgid "Edit contents"
+msgstr "Inhoud bewerken"
 
 #: declarative/qml/DelegateToolButtons.qml:32
 #, kde-format
-msgid "Show QR code"
-msgstr "QR-code tonen"
+msgid "Invoke action"
+msgstr "Actie aanroepen"
 
 #: declarative/qml/DelegateToolButtons.qml:33
 #, kde-format
-msgid "Edit contents"
-msgstr "Inhoud bewerken"
+msgid "Show QR code"
+msgstr "QR-code tonen"
 
 #: declarative/qml/DelegateToolButtons.qml:34
 #, kde-format

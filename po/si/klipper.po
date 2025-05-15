@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-13 00:43+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2009-12-16 21:43+0530\n"
 "Last-Translator: Danishka Navin <danishka@gmail.com>\n"
 "Language-Team: Sinhala <danishka@gmail.com>\n"
@@ -376,20 +376,20 @@ msgstr "ක්ලිප් පුවරු ඉතිහාස ප්‍රමා
 
 #: declarative/qml/DelegateToolButtons.qml:31
 #, fuzzy, kde-format
+#| msgid "Edit Contents"
+msgid "Edit contents"
+msgstr "අන්තර්ගතය සකසන්න"
+
+#: declarative/qml/DelegateToolButtons.qml:32
+#, fuzzy, kde-format
 #| msgid "Ignore selection"
 msgid "Invoke action"
 msgstr "තෝරාගැනීම නොසලකන්න"
 
-#: declarative/qml/DelegateToolButtons.qml:32
+#: declarative/qml/DelegateToolButtons.qml:33
 #, kde-format
 msgid "Show QR code"
 msgstr ""
-
-#: declarative/qml/DelegateToolButtons.qml:33
-#, fuzzy, kde-format
-#| msgid "Edit Contents"
-msgid "Edit contents"
-msgstr "අන්තර්ගතය සකසන්න"
 
 #: declarative/qml/DelegateToolButtons.qml:34
 #, fuzzy, kde-format

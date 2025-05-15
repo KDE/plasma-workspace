@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-13 00:43+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2008-07-04 12:04+0530\n"
 "Last-Translator: Runa Bhattacharjee <runab@fedoraproject.org>\n"
 "Language-Team: Bengali INDIA <discuss@ankur.org.in>\n"
@@ -120,7 +120,7 @@ msgstr ""
 msgid "Show popup when new device is plugged in"
 msgstr ""
 
-#: plugin/actions/mountaction.cpp:93
+#: plugin/actions/mountaction.cpp:104
 #, kde-format
 msgid "Mount"
 msgstr ""

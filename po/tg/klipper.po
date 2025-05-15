@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-13 00:43+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2019-09-19 19:00+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -362,21 +362,21 @@ msgstr ""
 
 #: declarative/qml/DelegateToolButtons.qml:31
 #, fuzzy, kde-format
+#| msgid "&Edit Contents..."
+msgid "Edit contents"
+msgstr "&Таҳрир кардани муҳтаво..."
+
+#: declarative/qml/DelegateToolButtons.qml:32
+#, fuzzy, kde-format
 #| msgid "<new action>"
 msgid "Invoke action"
 msgstr "<амали нав>"
 
-#: declarative/qml/DelegateToolButtons.qml:32
+#: declarative/qml/DelegateToolButtons.qml:33
 #, fuzzy, kde-format
 #| msgid "&Show Barcode..."
 msgid "Show QR code"
 msgstr "&Намоиш додани рамзи наворӣ..."
-
-#: declarative/qml/DelegateToolButtons.qml:33
-#, fuzzy, kde-format
-#| msgid "&Edit Contents..."
-msgid "Edit contents"
-msgstr "&Таҳрир кардани муҳтаво..."
 
 #: declarative/qml/DelegateToolButtons.qml:34
 #, kde-format

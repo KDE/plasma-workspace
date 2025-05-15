@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-13 00:43+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2009-01-05 12:55+0530\n"
 "Last-Translator: Runa Bhattacharjee <runab@redhat.com>\n"
 "Language-Team: Bengali INDIA <fedora-trans-bn_IN@redhat.com>\n"
@@ -377,20 +377,20 @@ msgstr "ক্লিপবোর্ডের পূর্ববর্তী ত�
 
 #: declarative/qml/DelegateToolButtons.qml:31
 #, fuzzy, kde-format
+#| msgid "Edit Contents"
+msgid "Edit contents"
+msgstr "তথ্য সম্পাদনা"
+
+#: declarative/qml/DelegateToolButtons.qml:32
+#, fuzzy, kde-format
 #| msgid "<new action>"
 msgid "Invoke action"
 msgstr "<new action>"
 
-#: declarative/qml/DelegateToolButtons.qml:32
+#: declarative/qml/DelegateToolButtons.qml:33
 #, kde-format
 msgid "Show QR code"
 msgstr ""
-
-#: declarative/qml/DelegateToolButtons.qml:33
-#, fuzzy, kde-format
-#| msgid "Edit Contents"
-msgid "Edit contents"
-msgstr "তথ্য সম্পাদনা"
 
 #: declarative/qml/DelegateToolButtons.qml:34
 #, kde-format

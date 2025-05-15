@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-13 00:43+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -378,18 +378,18 @@ msgstr "क्लिप्बोर्ड् रिक्तम् अस्त�
 
 #: declarative/qml/DelegateToolButtons.qml:31
 #, kde-format
-msgid "Invoke action"
-msgstr "कर्म आह्वयन्तु"
+msgid "Edit contents"
+msgstr "सामग्रीं सम्पादयन्तु"
 
 #: declarative/qml/DelegateToolButtons.qml:32
 #, kde-format
-msgid "Show QR code"
-msgstr "QR कोड दर्शयतु"
+msgid "Invoke action"
+msgstr "कर्म आह्वयन्तु"
 
 #: declarative/qml/DelegateToolButtons.qml:33
 #, kde-format
-msgid "Edit contents"
-msgstr "सामग्रीं सम्पादयन्तु"
+msgid "Show QR code"
+msgstr "QR कोड दर्शयतु"
 
 #: declarative/qml/DelegateToolButtons.qml:34
 #, kde-format

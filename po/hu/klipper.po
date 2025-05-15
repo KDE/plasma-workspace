@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-13 00:43+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2025-01-24 20:47+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -389,18 +389,18 @@ msgstr "A vágólap üres"
 
 #: declarative/qml/DelegateToolButtons.qml:31
 #, kde-format
-msgid "Invoke action"
-msgstr "Művelet végrehajtása"
+msgid "Edit contents"
+msgstr "Tartalom szerkesztése"
 
 #: declarative/qml/DelegateToolButtons.qml:32
 #, kde-format
-msgid "Show QR code"
-msgstr "QR-kód megjelenítése"
+msgid "Invoke action"
+msgstr "Művelet végrehajtása"
 
 #: declarative/qml/DelegateToolButtons.qml:33
 #, kde-format
-msgid "Edit contents"
-msgstr "Tartalom szerkesztése"
+msgid "Show QR code"
+msgstr "QR-kód megjelenítése"
 
 #: declarative/qml/DelegateToolButtons.qml:34
 #, kde-format

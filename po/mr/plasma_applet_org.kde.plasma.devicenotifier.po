@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-13 00:43+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2014-10-28 10:25+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -146,7 +146,7 @@ msgstr "सर्व साधने"
 msgid "Show popup when new device is plugged in"
 msgstr "साधन जोडले नाही"
 
-#: plugin/actions/mountaction.cpp:93
+#: plugin/actions/mountaction.cpp:104
 #, kde-format
 msgid "Mount"
 msgstr ""

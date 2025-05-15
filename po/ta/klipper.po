@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-13 00:43+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2024-12-15 15:51+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -361,18 +361,18 @@ msgstr "பிடிப்புப்பலகை காலியாக உள�
 
 #: declarative/qml/DelegateToolButtons.qml:31
 #, kde-format
-msgid "Invoke action"
-msgstr "செயலை இயக்கு"
+msgid "Edit contents"
+msgstr "உள்ளடக்கத்தை திருத்து"
 
 #: declarative/qml/DelegateToolButtons.qml:32
 #, kde-format
-msgid "Show QR code"
-msgstr "QR குறியைக் காட்டு"
+msgid "Invoke action"
+msgstr "செயலை இயக்கு"
 
 #: declarative/qml/DelegateToolButtons.qml:33
 #, kde-format
-msgid "Edit contents"
-msgstr "உள்ளடக்கத்தை திருத்து"
+msgid "Show QR code"
+msgstr "QR குறியைக் காட்டு"
 
 #: declarative/qml/DelegateToolButtons.qml:34
 #, kde-format

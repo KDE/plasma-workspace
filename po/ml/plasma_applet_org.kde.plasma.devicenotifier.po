@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier trunk\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-13 00:43+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2021-08-12 11:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -127,7 +127,7 @@ msgstr "എല്ലാ ഉപകരണങ്ങളും"
 msgid "Show popup when new device is plugged in"
 msgstr "പുതിയ ഉപകരണം ബന്ധിപ്പിക്കുമ്പോൾ പോപ്പ്അപ്പ് കാണിക്കുക"
 
-#: plugin/actions/mountaction.cpp:93
+#: plugin/actions/mountaction.cpp:104
 #, kde-format
 msgid "Mount"
 msgstr "ഘടിപ്പിയ്ക്കുക"

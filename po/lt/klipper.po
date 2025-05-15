@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-13 00:43+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2025-01-10 01:19+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
@@ -395,18 +395,18 @@ msgstr "Iškarpinė tuščia"
 
 #: declarative/qml/DelegateToolButtons.qml:31
 #, kde-format
-msgid "Invoke action"
-msgstr "Vykdyti veiksmą"
+msgid "Edit contents"
+msgstr "Taisyti turinį"
 
 #: declarative/qml/DelegateToolButtons.qml:32
 #, kde-format
-msgid "Show QR code"
-msgstr "Rodyti QR kodą"
+msgid "Invoke action"
+msgstr "Vykdyti veiksmą"
 
 #: declarative/qml/DelegateToolButtons.qml:33
 #, kde-format
-msgid "Edit contents"
-msgstr "Taisyti turinį"
+msgid "Show QR code"
+msgstr "Rodyti QR kodą"
 
 #: declarative/qml/DelegateToolButtons.qml:34
 #, kde-format

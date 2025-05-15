@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-13 00:43+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2024-10-25 23:34-0500\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
@@ -352,18 +352,18 @@ msgstr "ਕਲਿੱਪਬੋਰਡ ਖਾਲੀ ਹੈ"
 
 #: declarative/qml/DelegateToolButtons.qml:31
 #, kde-format
-msgid "Invoke action"
-msgstr "ਸ਼ਾਮਲ ਕਾਰਵਾਈ"
+msgid "Edit contents"
+msgstr "ਸਮੱਗਰੀਆਂ ਨੂੰ ਸੋਧੋ"
 
 #: declarative/qml/DelegateToolButtons.qml:32
 #, kde-format
-msgid "Show QR code"
-msgstr "QR ਕੋਡ ਵੇਖਾਓ"
+msgid "Invoke action"
+msgstr "ਸ਼ਾਮਲ ਕਾਰਵਾਈ"
 
 #: declarative/qml/DelegateToolButtons.qml:33
 #, kde-format
-msgid "Edit contents"
-msgstr "ਸਮੱਗਰੀਆਂ ਨੂੰ ਸੋਧੋ"
+msgid "Show QR code"
+msgstr "QR ਕੋਡ ਵੇਖਾਓ"
 
 #: declarative/qml/DelegateToolButtons.qml:34
 #, kde-format

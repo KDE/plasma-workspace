@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-13 00:43+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2024-12-13 21:20+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -397,18 +397,18 @@ msgstr "Klippispjald er tómt"
 
 #: declarative/qml/DelegateToolButtons.qml:31
 #, kde-format
-msgid "Invoke action"
-msgstr "Framkvæma aðgerð"
+msgid "Edit contents"
+msgstr "Breyta innihaldi"
 
 #: declarative/qml/DelegateToolButtons.qml:32
 #, kde-format
-msgid "Show QR code"
-msgstr "Birta QR-kóða"
+msgid "Invoke action"
+msgstr "Framkvæma aðgerð"
 
 #: declarative/qml/DelegateToolButtons.qml:33
 #, kde-format
-msgid "Edit contents"
-msgstr "Breyta innihaldi"
+msgid "Show QR code"
+msgstr "Birta QR-kóða"
 
 #: declarative/qml/DelegateToolButtons.qml:34
 #, kde-format

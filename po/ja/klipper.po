@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-13 00:43+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2010-09-25 16:37-0700\n"
 "Last-Translator: Fumiaki Okushi <okushi@kde.gr.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -384,21 +384,21 @@ msgid "Clipboard is empty"
 msgstr "クリップボードは空です"
 
 #: declarative/qml/DelegateToolButtons.qml:31
+#, kde-format
+msgid "Edit contents"
+msgstr ""
+
+#: declarative/qml/DelegateToolButtons.qml:32
 #, fuzzy, kde-format
 #| msgid "Enable MIME-based actions"
 msgid "Invoke action"
 msgstr "MIME タイプに基くアクションを有効にする"
 
-#: declarative/qml/DelegateToolButtons.qml:32
+#: declarative/qml/DelegateToolButtons.qml:33
 #, fuzzy, kde-format
 #| msgid "&Show Barcode..."
 msgid "Show QR code"
 msgstr "バーコードを表示する(&S)..."
-
-#: declarative/qml/DelegateToolButtons.qml:33
-#, kde-format
-msgid "Edit contents"
-msgstr ""
 
 #: declarative/qml/DelegateToolButtons.qml:34
 #, fuzzy, kde-format

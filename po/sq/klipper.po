@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-13 00:43+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2010-02-17 02:14+0000\n"
 "Last-Translator: Vilson Gjeci <vilsongjeci@gmail.com>\n"
 "Language-Team: Albanian <sq@li.org>\n"
@@ -367,20 +367,20 @@ msgid "Clipboard is empty"
 msgstr ""
 
 #: declarative/qml/DelegateToolButtons.qml:31
-#, kde-format
-msgid "Invoke action"
-msgstr ""
-
-#: declarative/qml/DelegateToolButtons.qml:32
-#, kde-format
-msgid "Show QR code"
-msgstr ""
-
-#: declarative/qml/DelegateToolButtons.qml:33
 #, fuzzy, kde-format
 #| msgid "Edit Contents"
 msgid "Edit contents"
 msgstr "Modifiko Përmbajtjen"
+
+#: declarative/qml/DelegateToolButtons.qml:32
+#, kde-format
+msgid "Invoke action"
+msgstr ""
+
+#: declarative/qml/DelegateToolButtons.qml:33
+#, kde-format
+msgid "Show QR code"
+msgstr ""
 
 #: declarative/qml/DelegateToolButtons.qml:34
 #, kde-format

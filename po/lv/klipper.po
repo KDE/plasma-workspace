@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-13 00:43+0000\n"
+"POT-Creation-Date: 2025-05-15 00:44+0000\n"
 "PO-Revision-Date: 2025-01-03 16:59+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -392,18 +392,18 @@ msgstr "Starpliktuve ir tukša"
 
 #: declarative/qml/DelegateToolButtons.qml:31
 #, kde-format
-msgid "Invoke action"
-msgstr "Izsaukt darbību"
+msgid "Edit contents"
+msgstr "Rediģēt saturu"
 
 #: declarative/qml/DelegateToolButtons.qml:32
 #, kde-format
-msgid "Show QR code"
-msgstr "Rādīt kvadrātkodu"
+msgid "Invoke action"
+msgstr "Izsaukt darbību"
 
 #: declarative/qml/DelegateToolButtons.qml:33
 #, kde-format
-msgid "Edit contents"
-msgstr "Rediģēt saturu"
+msgid "Show QR code"
+msgstr "Rādīt kvadrātkodu"
 
 #: declarative/qml/DelegateToolButtons.qml:34
 #, kde-format
