@@ -194,8 +194,12 @@ bool NotificationFilterProxyModel::filterAcceptsRow(int source_row, const QModel
         }
     }
 
-    if (!m_showAddedDuringInhibition && sourceIdx.data(Notifications::WasAddedDuringInhibitionRole).toBool()) {
-        return false;
+    // Normal Do Not Disturb filtering
+    if (!m_showAddedDuringInhibition) {
+        // Show critical notifications even in Do Not Disturb
+        if (!m_urgencies.testFlag(urgency) && sourceIdx.data(Notifications::WasAddedDuringInhibitionRole).toBool()) {
+            return false;
+        }
     }
 
     return true;
