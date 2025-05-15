@@ -437,6 +437,17 @@ class NotificationsTest(unittest.TestCase):
         title = self.driver.find_element(AppiumBy.XPATH, f"//heading[starts-with(@name, '{summary}') and contains(@accessibility-id, 'FullRepresentation')]")
         self.assertRaises((NoSuchElementException, WebDriverException), self.driver.find_element, AppiumBy.XPATH, f"//notification[starts-with(@name, '{summary}')]")
 
+        # Test "CriticalInDndMode": show critical notifications even when "Do not disturb" is active
+        send_notification({
+            "app_name": "Appium Test",
+            "summary": "CriticalInDndMode",
+            "hints": {
+                "desktop-entry": GLib.Variant("s", "org.kde.plasmashell"),
+                "urgency": GLib.Variant("i", 2),  # Critical
+            },
+        })
+        self.driver.find_element(AppiumBy.XPATH, "//notification[@name='CriticalInDndMode']")
+
         dnd_button.click()
         self.driver.find_element(AppiumBy.XPATH, "//notification[@name='Unread Notifications' and @description='2 notifications were received while Do Not Disturb was active.  from Notification Manager']")
         self.driver.find_element(AppiumBy.XPATH, "//button[@name='Close' and contains(@accessibility-id, 'NotificationPopup')]").click()
