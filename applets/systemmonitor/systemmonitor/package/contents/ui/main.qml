@@ -67,7 +67,12 @@ PlasmoidItem {
     fullRepresentation: FullRepresentation {
     }
 
-    Plasmoid.configurationRequired: (Plasmoid.faceController ?? false) && Plasmoid.faceController.highPrioritySensorIds.length == 0 && Plasmoid.faceController.lowPrioritySensorIds.length == 0 && Plasmoid.faceController.totalSensors.length == 0
+    Plasmoid.configurationRequired: (Plasmoid.faceController ?? false) &&
+        Plasmoid.faceController.highPrioritySensorIds.length == 0 &&
+        Plasmoid.faceController.lowPrioritySensorIds.length == 0 &&
+        Plasmoid.faceController.totalSensors.length == 0 &&
+        ! (["org.kde.ksysguard.applicationstable",
+            "org.kde.ksysguard.processtable"].includes(Plasmoid.faceController.faceId))
 
     Sensors.Sensor {
         id: totalSensor
