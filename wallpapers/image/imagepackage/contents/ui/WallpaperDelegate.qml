@@ -18,6 +18,7 @@ KCM.GridDelegate {
 
     property alias color: backgroundRect.color
     property alias previewSize: previewImage.sourceSize
+    property string key: model.packageName || model.path
     opacity: model.pendingDeletion ? 0.5 : 1
     scale: index, 1 // Workaround for https://bugreports.qt.io/browse/QTBUG-107458
 
@@ -116,10 +117,7 @@ KCM.GridDelegate {
 
     onClicked: {
         if (configDialog.currentWallpaper === "org.kde.image") {
-            cfg_Image = model.packageName || model.path;
-            if (typeof wallpaper !== "undefined") {
-                wallpaper.configuration.PreviewImage = cfg_Image;
-            }
+            root.selectWallpaper(key);
         }
         GridView.currentIndex = index;
     }

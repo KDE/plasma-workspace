@@ -23,13 +23,13 @@ public:
     QVariant data(const QModelIndex &index, int role) const override;
     bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole) override;
 
-    int indexOf(const QString &path) const override;
+    int indexOf(const QUrl &url) const override;
 
     void load(const QStringList &customPaths = {}) override;
 
 public Q_SLOTS:
-    QStringList addBackground(const QString &path) override;
-    QStringList removeBackground(const QString &path) override;
+    QStringList addBackground(const QUrl &url) override;
+    QStringList removeBackground(const QUrl &url) override;
 
 protected Q_SLOTS:
     void slotHandleImageFound(const QStringList &paths);

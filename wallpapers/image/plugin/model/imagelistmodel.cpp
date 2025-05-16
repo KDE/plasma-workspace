@@ -105,16 +105,9 @@ bool ImageListModel::setData(const QModelIndex &index, const QVariant &value, in
     return false;
 }
 
-int ImageListModel::indexOf(const QString &_path) const
+int ImageListModel::indexOf(const QUrl &url) const
 {
-    QString path = _path;
-
-    if (path.startsWith(QLatin1String("file://"))) {
-        path.remove(0, 7);
-    }
-
-    const auto it = std::find(m_data.cbegin(), m_data.cend(), path);
-
+    const auto it = std::find(m_data.cbegin(), m_data.cend(), url.toLocalFile());
     if (it == m_data.cend()) {
         return -1;
     }
@@ -148,8 +141,9 @@ void ImageListModel::slotHandleImageFound(const QStringList &paths)
     Q_EMIT loaded(this);
 }
 
-QStringList ImageListModel::addBackground(const QString &path)
+QStringList ImageListModel::addBackground(const QUrl &url)
 {
+    const QString path = url.toLocalFile();
     if (path.isEmpty() || !QFile::exists(path) || m_data.contains(path)) {
         return {};
     }
@@ -180,16 +174,11 @@ QStringList ImageListModel::addBackground(const QString &path)
     return {path};
 }
 
-QStringList ImageListModel::removeBackground(const QString &path)
+QStringList ImageListModel::removeBackground(const QUrl &url)
 {
     QStringList results;
 
-    if (path.isEmpty()) {
-        return results;
-    }
-
-    const int idx = indexOf(path);
-
+    const int idx = indexOf(url);
     if (idx < 0) {
         return results;
     }
@@ -201,6 +190,7 @@ QStringList ImageListModel::removeBackground(const QString &path)
     results.append(m_data.takeAt(idx));
 
     // Remove local wallpaper
+    const QString path = url.toLocalFile();
     if (path.startsWith(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/wallpapers/"))) {
         QFile f(path);
 

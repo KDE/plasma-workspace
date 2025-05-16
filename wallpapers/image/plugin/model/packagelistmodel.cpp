@@ -108,14 +108,14 @@ bool PackageListModel::setData(const QModelIndex &index, const QVariant &value, 
     return false;
 }
 
-int PackageListModel::indexOf(const QString &_path) const
+static QString normalizeDirName(const QString &filePath)
 {
-    QString path = _path.endsWith(QDir::separator()) ? _path : _path + QDir::separator();
+    return filePath.endsWith(QDir::separator()) ? filePath : filePath + QDir::separator();
+}
 
-    if (path.startsWith(QLatin1String("file://"))) {
-        path.remove(0, 7);
-    }
-
+int PackageListModel::indexOf(const QUrl &url) const
+{
+    const QString path = normalizeDirName(url.toLocalFile());
     const auto it = std::find_if(m_packages.cbegin(), m_packages.cend(), [&path](const KPackage::Package &p) {
         return path == p.path();
     });
@@ -140,14 +140,14 @@ void PackageListModel::load(const QStringList &customPaths)
     QThreadPool::globalInstance()->start(finder);
 }
 
-QStringList PackageListModel::addBackground(const QString &path)
+QStringList PackageListModel::addBackground(const QUrl &url)
 {
-    if (path.isEmpty() || indexOf(path) >= 0 || !QFileInfo(path).isDir()) {
+    if (url.isEmpty() || indexOf(url) >= 0) {
         return {};
     }
 
     KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Wallpaper/Images"));
-    package.setPath(path);
+    package.setPath(url.toLocalFile());
 
     if (!package.isValid() || !package.metadata().isValid()) {
         return {};
@@ -186,18 +186,15 @@ QStringList PackageListModel::addBackground(const QString &path)
     return {package.path()};
 }
 
-QStringList PackageListModel::removeBackground(const QString &_path)
+QStringList PackageListModel::removeBackground(const QUrl &url)
 {
     QStringList results;
 
-    if (_path.isEmpty()) {
+    if (url.isEmpty()) {
         return results;
     }
 
-    const QString path = _path.endsWith(QDir::separator()) ? _path : _path + QDir::separator();
-
-    const int idx = indexOf(path);
-
+    const int idx = indexOf(url);
     if (idx < 0) {
         return results;
     }
@@ -209,6 +206,7 @@ QStringList PackageListModel::removeBackground(const QString &_path)
     results.append(m_packages.takeAt(idx).path());
 
     // Uninstall local package
+    const QString path = url.toLocalFile();
     if (path.startsWith(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/wallpapers/"))) {
         QDir f(path);
 

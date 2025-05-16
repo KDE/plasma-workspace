@@ -71,6 +71,11 @@ ColumnLayout {
         dialogComponent.destroy();
     }
 
+    function selectWallpaper(wallpaper: string): void {
+        cfg_Image = PlasmaWallpaper.WallpaperUrl.make(wallpaper);
+        wallpaperConfiguration.PreviewImage = cfg_Image;
+    }
+
     PlasmaWallpaper.ImageBackend {
         id: imageWallpaper
         renderingMode: (configDialog.currentWallpaper === "org.kde.image") ? PlasmaWallpaper.ImageBackend.SingleImage : PlasmaWallpaper.ImageBackend.SlideShow

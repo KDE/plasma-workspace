@@ -78,12 +78,17 @@ int ImageProxyModel::count() const
     return rowCount();
 }
 
-int ImageProxyModel::indexOf(const QString &packagePath) const
+int ImageProxyModel::indexOf(const QString &path) const
+{
+    return indexOf(QUrl::fromUserInput(path));
+}
+
+int ImageProxyModel::indexOf(const QUrl &url) const
 {
     int idx = -1;
 
     for (const auto models{sourceModels()}; auto m : models) {
-        idx = static_cast<const AbstractImageListModel *>(m)->indexOf(packagePath);
+        idx = static_cast<const AbstractImageListModel *>(m)->indexOf(url);
 
         if (idx >= 0) {
             return mapFromSource(m->index(idx, 0)).row();
@@ -107,26 +112,22 @@ void ImageProxyModel::reload()
     m_loaded = 0;
 }
 
-QStringList ImageProxyModel::addBackground(const QString &_path)
+QStringList ImageProxyModel::addBackground(const QUrl &url)
 {
-    QString path = _path;
-
-    if (constexpr QLatin1String prefix{"file://"}; path.startsWith(prefix)) {
-        path.remove(0, prefix.size());
+    if (!url.isLocalFile()) {
+        return QStringList();
     }
 
-    const QFileInfo info(path);
+    const QFileInfo info(url.toLocalFile());
+    if (!info.exists()) {
+        return QStringList();
+    }
 
     QStringList results;
-
     if (info.isDir()) {
-        if (!path.endsWith(QDir::separator())) {
-            path += QDir::separator();
-        }
-
-        results = m_packageModel->addBackground(path);
+        results = m_packageModel->addBackground(url);
     } else if (info.isFile()) {
-        results = m_imageModel->addBackground(path);
+        results = m_imageModel->addBackground(url);
     }
 
     if (!results.empty()) {
@@ -149,26 +150,25 @@ QStringList ImageProxyModel::addBackground(const QString &_path)
     return results;
 }
 
-void ImageProxyModel::removeBackground(const QString &_packagePath)
+void ImageProxyModel::removeBackground(const QUrl &url)
 {
-    QString packagePath = _packagePath;
-
-    if (constexpr QLatin1String prefix{"file://"}; packagePath.startsWith(prefix)) {
-        packagePath.remove(0, prefix.size());
+    if (!url.isLocalFile()) {
+        return;
     }
 
+    const QString packagePath = url.toLocalFile();
     QStringList results;
 
     // The file may be already deleted, so isFile/isDir won't work.
     if (const QFileInfo info(packagePath); isAcceptableSuffix(info.suffix())) {
-        results = m_imageModel->removeBackground(packagePath);
+        results = m_imageModel->removeBackground(url);
 
         if (!results.empty() && !isChildItem(m_customPaths, results.at(0))) {
             // Don't remove the file if its parent folder is in KDirWatch, otherwise KDirWatchPrivate::removeEntry will also remove the parent folder
             m_dirWatch.removeFile(results.at(0));
         }
     } else {
-        results = m_packageModel->removeBackground(packagePath);
+        results = m_packageModel->removeBackground(url);
 
         if (!results.empty()) {
             // Because of KDirWatch::WatchSubDirs, some folders will still be added to KDirWatch
@@ -213,7 +213,7 @@ void ImageProxyModel::commitDeletion()
     }
 
     for (const QString &p : std::as_const(pendingList)) {
-        removeBackground(p);
+        removeBackground(QUrl::fromLocalFile(p));
     }
 
     // Update the config
@@ -261,12 +261,12 @@ void ImageProxyModel::slotDirWatchCreated(const QString &_path)
         path = path.mid(0, idx);
     }
 
-    addBackground(path);
+    addBackground(QUrl::fromLocalFile(path));
 }
 
 void ImageProxyModel::slotDirWatchDeleted(const QString &path)
 {
-    removeBackground(path);
+    removeBackground(QUrl::fromLocalFile(path));
 }
 
 void ImageProxyModel::setupDirWatch()

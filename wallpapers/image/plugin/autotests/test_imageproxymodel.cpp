@@ -39,10 +39,10 @@ private:
 
     QDir m_dataDir;
     QDir m_alternateDir;
-    QStringList m_wallpaperPaths;
-    QString m_dummyWallpaperPath;
-    QStringList m_packagePaths;
-    QString m_dummyPackagePath;
+    QList<QUrl> m_wallpaperPaths;
+    QUrl m_dummyWallpaperPath;
+    QList<QUrl> m_packagePaths;
+    QUrl m_dummyPackagePath;
     int m_modelNum = 0;
     QProperty<QSize> m_targetSize;
     QProperty<bool> m_usedInConfig{false};
@@ -56,16 +56,16 @@ void ImageProxyModelTest::initTestCase()
     QVERIFY(!m_alternateDir.isEmpty());
     renameBizarreFile(m_dataDir);
 
-    m_wallpaperPaths << m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName1);
-    m_wallpaperPaths << m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName2);
-    m_wallpaperPaths << m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName3);
-    m_wallpaperPaths << m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName4);
-    m_wallpaperPaths << m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName5);
-    m_dummyWallpaperPath = m_alternateDir.absoluteFilePath(ImageBackendTestData::alternateImageFileName1);
+    m_wallpaperPaths << QUrl::fromLocalFile(m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName1));
+    m_wallpaperPaths << QUrl::fromLocalFile(m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName2));
+    m_wallpaperPaths << QUrl::fromLocalFile(m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName3));
+    m_wallpaperPaths << QUrl::fromLocalFile(m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName4));
+    m_wallpaperPaths << QUrl::fromLocalFile(m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName5));
+    m_dummyWallpaperPath = QUrl::fromLocalFile(m_alternateDir.absoluteFilePath(ImageBackendTestData::alternateImageFileName1));
 
-    m_packagePaths << m_dataDir.absoluteFilePath(ImageBackendTestData::defaultPackageFolderName1);
-    m_packagePaths << m_dataDir.absoluteFilePath(ImageBackendTestData::defaultPackageFolderName2);
-    m_dummyPackagePath = m_alternateDir.absoluteFilePath(ImageBackendTestData::alternatePackageFolderName1);
+    m_packagePaths << QUrl::fromLocalFile(m_dataDir.absoluteFilePath(ImageBackendTestData::defaultPackageFolderName1));
+    m_packagePaths << QUrl::fromLocalFile(m_dataDir.absoluteFilePath(ImageBackendTestData::defaultPackageFolderName2));
+    m_dummyPackagePath = QUrl::fromLocalFile(m_alternateDir.absoluteFilePath(ImageBackendTestData::alternatePackageFolderName1));
 
     m_modelNum = 2;
     m_targetSize = QSize(1920, 1080);
@@ -127,9 +127,9 @@ void ImageProxyModelTest::testImageProxyModelIndexOf()
     QVERIFY(m_model->indexOf(m_wallpaperPaths.at(4)) >= 0);
     QVERIFY(m_model->indexOf(m_packagePaths.at(0)) >= 0);
     QVERIFY(m_model->indexOf(m_packagePaths.at(1)) >= 0);
-    QVERIFY(m_model->indexOf(m_packagePaths.at(0) + QDir::separator()) >= 0);
-    QVERIFY(m_model->indexOf(m_packagePaths.at(1) + QDir::separator()) >= 0);
-    QCOMPARE(m_model->indexOf(m_dataDir.absoluteFilePath(u"brokenpackage" + QDir::separator())), -1);
+    QVERIFY(m_model->indexOf(QUrl::fromLocalFile(m_packagePaths.at(0).toLocalFile() + QDir::separator())) >= 0);
+    QVERIFY(m_model->indexOf(QUrl::fromLocalFile(m_packagePaths.at(1).toLocalFile() + QDir::separator())) >= 0);
+    QCOMPARE(m_model->indexOf(QUrl::fromLocalFile(m_dataDir.absoluteFilePath(u"brokenpackage" + QDir::separator()))), -1);
 }
 
 void ImageProxyModelTest::testImageProxyModelReload()
@@ -164,7 +164,7 @@ void ImageProxyModelTest::testImageProxyModelAddBackground()
     QCOMPARE(m_countSpy->size(), 0);
 
     // Case 3: add a new wallpaper
-    results = m_model->addBackground(QUrl::fromLocalFile(m_dummyWallpaperPath).toString());
+    results = m_model->addBackground(m_dummyWallpaperPath);
     QCOMPARE(m_countSpy->size(), 1);
     m_countSpy->clear();
     QCOMPARE(results.size(), 1);
@@ -182,8 +182,8 @@ void ImageProxyModelTest::testImageProxyModelAddBackground()
     QCOMPARE(m_model->m_packageModel->count(), ImageBackendTestData::defaultPackageCount + 1);
 
     // Test KDirWatch
-    QVERIFY(m_model->m_dirWatch.contains(m_dummyWallpaperPath));
-    QVERIFY(m_model->m_dirWatch.contains(m_dummyPackagePath));
+    QVERIFY(m_model->m_dirWatch.contains(m_dummyWallpaperPath.toLocalFile()));
+    QVERIFY(m_model->m_dirWatch.contains(m_dummyPackagePath.toLocalFile()));
 
     QCOMPARE(m_model->m_pendingAddition.size(), 2);
 }
@@ -201,13 +201,13 @@ void ImageProxyModelTest::testImageProxyModelRemoveBackground()
     int count = m_model->count();
 
     // Case 1: remove an existing wallpaper
-    m_model->removeBackground(QUrl::fromLocalFile(m_dummyWallpaperPath).toString());
+    m_model->removeBackground(m_dummyWallpaperPath);
     QCOMPARE(m_countSpy->size(), 1);
     m_countSpy->clear();
     QCOMPARE(m_model->m_imageModel->count(), ImageBackendTestData::defaultImageCount);
     QCOMPARE(m_model->m_packageModel->count(), ImageBackendTestData::defaultPackageCount + 1);
     QCOMPARE(m_model->count(), --count);
-    QVERIFY(!m_model->m_dirWatch.contains(m_dummyWallpaperPath));
+    QVERIFY(!m_model->m_dirWatch.contains(m_dummyWallpaperPath.toLocalFile()));
 
     m_model->removeBackground(m_dummyPackagePath);
     QCOMPARE(m_countSpy->size(), 1);
@@ -215,7 +215,7 @@ void ImageProxyModelTest::testImageProxyModelRemoveBackground()
     QCOMPARE(m_model->m_imageModel->count(), ImageBackendTestData::defaultImageCount);
     QCOMPARE(m_model->m_packageModel->count(), ImageBackendTestData::defaultPackageCount);
     QCOMPARE(m_model->count(), --count);
-    QVERIFY(!m_model->m_dirWatch.contains(m_dummyPackagePath));
+    QVERIFY(!m_model->m_dirWatch.contains(m_dummyPackagePath.toLocalFile()));
 
     QCOMPARE(m_model->m_pendingAddition.size(), 0);
 
@@ -229,11 +229,11 @@ void ImageProxyModelTest::testImageProxyModelDirWatch()
 {
     QVERIFY(m_model->m_dirWatch.contains(m_dataDir.absolutePath()));
     // Duplicate watched items as their parent folder is already in KDirWatch
-    for (const QString &path : std::as_const(m_wallpaperPaths)) {
-        QVERIFY2(!m_model->m_dirWatch.contains(path), qPrintable(path));
+    for (const QUrl &url : std::as_const(m_wallpaperPaths)) {
+        QVERIFY2(!m_model->m_dirWatch.contains(url.toLocalFile()), qPrintable(url.toLocalFile()));
     }
-    for (const QString &path : std::as_const(m_packagePaths)) {
-        QFileInfo info(path);
+    for (const QUrl &url : std::as_const(m_packagePaths)) {
+        QFileInfo info(url.toLocalFile());
         while (info.absoluteFilePath() != m_dataDir.absolutePath()) {
             // Because of KDirWatch::WatchSubDirs, some folders will still be added to KDirWatch
             QVERIFY2(m_model->m_dirWatch.contains(info.absoluteFilePath()), qPrintable(info.absoluteFilePath()));
@@ -260,7 +260,7 @@ void ImageProxyModelTest::testImageProxyModelDirWatch()
     QVERIFY(m_model->m_dirWatch.contains(standardPath));
 
     // Copy an image to the folder
-    QFile imageFile(m_wallpaperPaths.at(0));
+    QFile imageFile(m_wallpaperPaths.at(0).toLocalFile());
     QVERIFY(imageFile.copy(standardPath + QStringLiteral("image.jpg")));
     m_countSpy->wait();
     QCOMPARE(m_countSpy->size(), 1);
@@ -274,7 +274,7 @@ void ImageProxyModelTest::testImageProxyModelDirWatch()
     QVERIFY(!m_model->m_dirWatch.contains(standardPath + u"image.jpg"));
 
     // Copy a package to the folder
-    auto job = KIO::copy(QUrl::fromLocalFile(m_dummyPackagePath),
+    auto job = KIO::copy(m_dummyPackagePath,
                          QUrl::fromLocalFile(QString(standardPath + u"dummy" + QDir::separator())),
                          KIO::HideProgressInfo | KIO::Overwrite);
     job->start();

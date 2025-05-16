@@ -19,6 +19,7 @@ set(image_SRCS
     utils/backgroundtype.h
     utils/maximizedwindowmonitor.cpp utils/maximizedwindowmonitor.h
     utils/mediaproxy.cpp utils/mediaproxy.h
+    utils/wallpaperurl.cpp utils/wallpaperurl.h
 )
 
 ecm_qt_declare_logging_category(image_SRCS HEADER debug.h

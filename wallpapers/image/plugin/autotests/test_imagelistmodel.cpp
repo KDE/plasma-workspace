@@ -39,8 +39,8 @@ private:
 
     QDir m_dataDir;
     QDir m_alternateDir;
-    QStringList m_wallpaperPaths;
-    QString m_dummyWallpaperPath;
+    QList<QUrl> m_wallpaperPaths;
+    QUrl m_dummyWallpaperPath;
     QProperty<QSize> m_targetSize;
     QProperty<bool> m_usedInConfig{true};
 };
@@ -55,12 +55,12 @@ void ImageListModelTest::initTestCase()
     QVERIFY(!m_alternateDir.isEmpty());
     renameBizarreFile(m_dataDir);
 
-    m_wallpaperPaths << m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName1);
-    m_wallpaperPaths << m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName2);
-    m_wallpaperPaths << m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName3);
-    m_wallpaperPaths << m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName4);
-    m_wallpaperPaths << m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName5);
-    m_dummyWallpaperPath = m_alternateDir.absoluteFilePath(ImageBackendTestData::alternateImageFileName1);
+    m_wallpaperPaths << QUrl::fromLocalFile(m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName1));
+    m_wallpaperPaths << QUrl::fromLocalFile(m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName2));
+    m_wallpaperPaths << QUrl::fromLocalFile(m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName3));
+    m_wallpaperPaths << QUrl::fromLocalFile(m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName4));
+    m_wallpaperPaths << QUrl::fromLocalFile(m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName5));
+    m_dummyWallpaperPath = QUrl::fromLocalFile(m_alternateDir.absoluteFilePath(ImageBackendTestData::alternateImageFileName1));
 
     m_targetSize = QSize(1920, 1080);
 
@@ -120,8 +120,8 @@ void ImageListModelTest::testImageListModelData()
     QCOMPARE(idx.data(ImageRoles::AuthorRole).toString(), QString());
 #endif
 
-    QCOMPARE(idx.data(ImageRoles::PathRole).toUrl(), QUrl::fromLocalFile(m_wallpaperPaths.at(0)));
-    QCOMPARE(idx.data(ImageRoles::PackageNameRole).toString(), m_wallpaperPaths.at(0));
+    QCOMPARE(idx.data(ImageRoles::PathRole).toUrl(), m_wallpaperPaths.at(0));
+    QCOMPARE(idx.data(ImageRoles::PackageNameRole).toString(), m_wallpaperPaths.at(0).toLocalFile());
 
     QCOMPARE(idx.data(ImageRoles::RemovableRole).toBool(), false);
     QCOMPARE(idx.data(ImageRoles::PendingDeletionRole).toBool(), false);
@@ -134,8 +134,8 @@ void ImageListModelTest::testImageListModelIndexOf()
     QTRY_VERIFY(m_model->indexOf(m_wallpaperPaths.at(2)) >= 0);
     QVERIFY(m_model->indexOf(m_wallpaperPaths.at(3)) >= 0);
     QVERIFY(m_model->indexOf(m_wallpaperPaths.at(4)) >= 0);
-    QTRY_VERIFY(m_model->indexOf(QUrl::fromLocalFile(m_wallpaperPaths.at(0)).toString()) >= 0);
-    QCOMPARE(m_model->indexOf(m_dataDir.absoluteFilePath(QStringLiteral(".wallpaper.jpg"))), -1);
+    QTRY_VERIFY(m_model->indexOf(m_wallpaperPaths.at(0)) >= 0);
+    QCOMPARE(m_model->indexOf(QUrl::fromLocalFile(m_dataDir.absoluteFilePath(QStringLiteral(".wallpaper.jpg")))), -1);
 }
 
 void ImageListModelTest::testImageListModelLoad()
@@ -155,7 +155,7 @@ void ImageListModelTest::testImageListModelAddBackground()
     QCOMPARE(m_countSpy->size(), 1);
     m_countSpy->clear();
     QCOMPARE(results.size(), 1);
-    QCOMPARE(results.at(0), m_dummyWallpaperPath);
+    QCOMPARE(results.at(0), m_dummyWallpaperPath.toLocalFile());
     QCOMPARE(m_model->rowCount(), ImageBackendTestData::defaultImageCount + 1);
 
     QPersistentModelIndex idx = m_model->index(0, 0); // This is the newly added item.
@@ -170,23 +170,23 @@ void ImageListModelTest::testImageListModelAddBackground()
     QCOMPARE(m_countSpy->size(), 0);
 
     // Case 3: add an unexsting image
-    results = m_model->addBackground(m_alternateDir.absoluteFilePath(QStringLiteral("thisimagedoesnotexist.jpg")));
+    results = m_model->addBackground(QUrl::fromLocalFile(m_alternateDir.absoluteFilePath(QStringLiteral("thisimagedoesnotexist.jpg"))));
     QCOMPARE(results.size(), 0);
     QCOMPARE(m_countSpy->size(), 0);
 
     // Case 4: add a hidden image
     QVERIFY(QFile::exists(m_dataDir.absoluteFilePath(QStringLiteral(".wallpaper.jpg"))));
-    results = m_model->addBackground(m_dataDir.absoluteFilePath(QStringLiteral(".wallpaper.jpg")));
+    results = m_model->addBackground(QUrl::fromLocalFile(m_dataDir.absoluteFilePath(QStringLiteral(".wallpaper.jpg"))));
     QCOMPARE(results.size(), 0);
     QCOMPARE(m_countSpy->size(), 0);
 
     // Case 5: path is empty
-    results = m_model->addBackground(QString());
+    results = m_model->addBackground(QUrl());
     QCOMPARE(results.size(), 0);
     QCOMPARE(m_countSpy->size(), 0);
 
     // Case 6: add a non-image file
-    results = m_model->addBackground(m_alternateDir.absoluteFilePath(QStringLiteral("thisisnotanimage.txt")));
+    results = m_model->addBackground(QUrl::fromLocalFile(m_alternateDir.absoluteFilePath(QStringLiteral("thisisnotanimage.txt"))));
     QCOMPARE(results.size(), 0);
     QCOMPARE(m_countSpy->size(), 0);
 
@@ -218,18 +218,18 @@ void ImageListModelTest::testImageListModelRemoveBackground()
     m_model->addBackground(m_dummyWallpaperPath);
     m_countSpy->clear();
     QCOMPARE(m_model->m_removableWallpapers.size(), 1);
-    QCOMPARE(m_model->m_removableWallpapers.at(0), m_dummyWallpaperPath);
+    QCOMPARE(m_model->m_removableWallpapers.at(0), m_dummyWallpaperPath.toLocalFile());
 
     QStringList results;
 
     // Case 1: path is empty
-    results = m_model->removeBackground(QString());
+    results = m_model->removeBackground(QUrl());
     QCOMPARE(m_countSpy->size(), 0);
     QCOMPARE(results.size(), 0);
     QCOMPARE(m_model->m_removableWallpapers.size(), 1);
 
     // Case 2: remove a not added image
-    results = m_model->removeBackground(m_alternateDir.absoluteFilePath(QStringLiteral("thisimagedoesnotexist.jpg")));
+    results = m_model->removeBackground(QUrl::fromLocalFile(m_alternateDir.absoluteFilePath(QStringLiteral("thisimagedoesnotexist.jpg"))));
     QCOMPARE(m_countSpy->size(), 0);
     QCOMPARE(results.size(), 0);
     QCOMPARE(m_model->m_removableWallpapers.size(), 1);
@@ -239,7 +239,7 @@ void ImageListModelTest::testImageListModelRemoveBackground()
     QCOMPARE(m_countSpy->size(), 1);
     m_countSpy->clear();
     QCOMPARE(results.size(), 1);
-    QCOMPARE(results.at(0), m_dummyWallpaperPath);
+    QCOMPARE(results.at(0), m_dummyWallpaperPath.toLocalFile());
     QCOMPARE(m_model->rowCount(), ImageBackendTestData::defaultImageCount);
     QCOMPARE(m_model->m_removableWallpapers.size(), 0);
 }
@@ -247,7 +247,7 @@ void ImageListModelTest::testImageListModelRemoveBackground()
 void ImageListModelTest::testImageListModelRemoveLocalBackground()
 {
     const QString standardPath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/wallpapers/");
-    QFile imageFile(m_wallpaperPaths.at(0));
+    QFile imageFile(m_wallpaperPaths.at(0).toLocalFile());
 
     QVERIFY(QDir(standardPath).mkpath(standardPath));
     QVERIFY(imageFile.copy(standardPath + QStringLiteral("wallpaper.jpg.jpg")));
@@ -266,7 +266,7 @@ void ImageListModelTest::testImageListModelRemoveLocalBackground()
     m_dataSpy->clear();
     QCOMPARE(idx.data(ImageRoles::RemovableRole).toBool(), true);
 
-    m_model->removeBackground(standardPath + QStringLiteral("wallpaper.jpg.jpg"));
+    m_model->removeBackground(QUrl::fromLocalFile(standardPath + QStringLiteral("wallpaper.jpg.jpg")));
     QCOMPARE(m_countSpy->size(), 1);
     m_countSpy->clear();
 
