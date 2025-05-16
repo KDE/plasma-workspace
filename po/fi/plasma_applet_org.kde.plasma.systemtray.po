@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2013, 2014, 2015, 2017.
-# SPDX-FileCopyrightText: 2013, 2014, 2019, 2020, 2021, 2022, 2024 Tommi Nieminen <translator@legisign.org>
+# SPDX-FileCopyrightText: 2013, 2014, 2019, 2020, 2021, 2022, 2024, 2025 Tommi Nieminen <translator@legisign.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-15 00:44+0000\n"
-"PO-Revision-Date: 2024-10-16 19:02+0300\n"
+"PO-Revision-Date: 2025-04-08 21:09+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -83,12 +83,18 @@ msgid ""
 "><nl/>Use this setting at your own risk, and do not report issues to KDE or "
 "the app’s author."
 msgstr ""
+"Avaa <application>%1</application> ja etsi siitä asetusta "
+"ilmoitusaluekuvakkeen poistamiseksi ennen kuin yrität sitä täällä. Joidenkin "
+"sovellusten ilmoitusaluekuvakkeita ei ole tarkoitus poistaa käytöstä, ja "
+"tämän asetuksen käyttäminen voi saada ne toimimaan odottamattomalla tavalla."
+"<nl/><nl/>Käytä tätä asetusta omalla vastuullasi äläkä ilmoita ongelmista "
+"KDE:lle tai sovelluksen tekijöille."
 
 #: package/contents/ui/ConfigEntries.qml:164
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
-msgstr ""
+msgstr "Ymmärrän riskit"
 
 #: package/contents/ui/ConfigEntries.qml:176
 #, kde-kuit-format
