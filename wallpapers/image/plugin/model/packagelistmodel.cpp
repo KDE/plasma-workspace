@@ -13,6 +13,7 @@
 #include <QPixmap>
 #include <QStandardPaths>
 #include <QThreadPool>
+#include <QUrlQuery>
 
 #include <KAboutData>
 #include <KPackage/PackageLoader>
@@ -47,23 +48,12 @@ QVariant PackageListModel::data(const QModelIndex &index, int role) const
     case Qt::DisplayRole:
         return PackageFinder::packageDisplayName(b);
 
-    case ScreenshotRole: {
-        QStringList paths{b.filePath(QByteArrayLiteral("preferred"))};
-        const QString darkPath = b.filePath(QByteArrayLiteral("preferredDark"));
-
-        if (!darkPath.isEmpty()) {
-            paths.append(darkPath);
-        }
-
-        QPixmap *cachedPreview = m_imageCache.object(paths);
-
-        if (cachedPreview) {
-            return *cachedPreview;
-        }
-
-        asyncGetPreview(paths, QPersistentModelIndex(index));
-
-        return QVariant();
+    case PreviewRole: {
+        QUrl previewUrl(QStringLiteral("image://wallpaper-preview"));
+        previewUrl.setQuery({
+            std::make_pair(QStringLiteral("package"), b.path()),
+        });
+        return previewUrl;
     }
 
     case AuthorRole: {

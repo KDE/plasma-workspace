@@ -12,6 +12,7 @@
 #include <QStandardPaths>
 #include <QThreadPool>
 #include <QUrl>
+#include <QUrlQuery>
 
 #include <KIO/PreviewJob>
 
@@ -49,16 +50,12 @@ QVariant ImageListModel::data(const QModelIndex &index, int role) const
         return QFileInfo(m_data.at(row)).completeBaseName();
     }
 
-    case ScreenshotRole: {
-        QPixmap *cachedPreview = m_imageCache.object({m_data.at(row)});
-
-        if (cachedPreview) {
-            return *cachedPreview;
-        }
-
-        asyncGetPreview({m_data.at(row)}, QPersistentModelIndex(index));
-
-        return QVariant();
+    case PreviewRole: {
+        QUrl previewUrl(QStringLiteral("image://wallpaper-preview"));
+        previewUrl.setQuery({
+            std::make_pair(QStringLiteral("image"), m_data.at(row)),
+        });
+        return previewUrl;
     }
 
     case AuthorRole: {

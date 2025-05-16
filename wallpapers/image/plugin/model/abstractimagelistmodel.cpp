@@ -6,11 +6,7 @@
 
 #include "abstractimagelistmodel.h"
 
-#include <QPainter>
 #include <QThreadPool>
-
-#include <KFileItem>
-#include <KIO/PreviewJob>
 
 #include "../finder/mediametadatafinder.h"
 #include "config-KExiv2.h"
@@ -28,7 +24,6 @@ AbstractImageListModel::AbstractImageListModel(const QBindable<QSize> &bindableT
     m_usedInConfig.setBinding(bindableUsedInConfig.makeBinding());
 
     constexpr int maxCacheSize = 10;
-    m_imageCache.setMaxCost(maxCacheSize);
     m_backgroundTitleCache.setMaxCost(maxCacheSize);
     m_backgroundAuthorCache.setMaxCost(maxCacheSize);
     m_imageSizeCache.setMaxCost(maxCacheSize);
@@ -44,7 +39,7 @@ QHash<int, QByteArray> AbstractImageListModel::roleNames() const
         {Qt::DisplayRole, QByteArrayLiteral("display")},
         {Qt::DecorationRole, QByteArrayLiteral("decoration")},
         {AuthorRole, QByteArrayLiteral("author")},
-        {ScreenshotRole, QByteArrayLiteral("screenshot")},
+        {PreviewRole, QByteArrayLiteral("preview")},
         {PathRole, QByteArrayLiteral("path")},
         {PackageNameRole, QByteArrayLiteral("packageName")},
         {RemovableRole, QByteArrayLiteral("removable")},
@@ -75,107 +70,6 @@ void AbstractImageListModel::reload()
     load(m_customPaths);
 }
 
-void AbstractImageListModel::slotHandlePreview(const KFileItem &item, const QPixmap &preview)
-{
-    auto job = qobject_cast<KIO::PreviewJob *>(sender());
-    if (!job) {
-        return;
-    }
-
-    const QString urlString = item.url().toLocalFile();
-    const QPersistentModelIndex idx = job->property("index").toPersistentModelIndex();
-
-    auto it = m_previewJobsUrls.find(idx);
-    Q_ASSERT(it != m_previewJobsUrls.end());
-    it->removeOne(urlString);
-
-    const QStringList paths = job->property("paths").toStringList();
-    auto cachedPreviewIt = m_imageTempCache.find(paths);
-
-    if (cachedPreviewIt == m_imageTempCache.end() && !it->empty()) {
-        m_imageTempCache.insert(paths, preview);
-        // it->empty() is handled in the end
-        return;
-    } else if (cachedPreviewIt != m_imageTempCache.end()) {
-        // Show multiple images side by side
-        QPainter p(&*cachedPreviewIt);
-
-        const int i = paths.indexOf(urlString);
-        const double start = i / static_cast<double>(paths.size());
-        const double end = (i + 1) / static_cast<double>(paths.size());
-        // Cropped area
-        const QPoint topLeft(start * preview.width(), 0);
-        const QPoint bottomRight(end * preview.width(), preview.height());
-        // Inserted area
-        const QPoint topLeft2(start * cachedPreviewIt->width(), 0);
-        const QPoint bottomRight2(end * cachedPreviewIt->width(), cachedPreviewIt->height());
-
-        p.drawPixmap(QRect(topLeft2, bottomRight2), preview.copy(QRect(topLeft, bottomRight)));
-    }
-
-    if (it->empty()) {
-        // All images in the list have been loaded
-        m_previewJobsUrls.erase(it);
-
-        QPixmap *finalPreview = nullptr;
-        if (cachedPreviewIt == m_imageTempCache.end()) {
-            // Single image
-            finalPreview = new QPixmap(preview);
-        } else {
-            // Side-by-side image
-            finalPreview = new QPixmap(*cachedPreviewIt);
-            m_imageTempCache.erase(cachedPreviewIt);
-        }
-
-        if (m_imageCache.insert(paths, finalPreview, 1)) {
-            Q_EMIT dataChanged(idx, idx, {ScreenshotRole});
-        } else {
-            delete finalPreview;
-        }
-    }
-}
-
-void AbstractImageListModel::slotHandlePreviewFailed(const KFileItem &item)
-{
-    auto job = qobject_cast<KIO::PreviewJob *>(sender());
-    if (!job) {
-        return;
-    }
-
-    auto it = m_previewJobsUrls.find(job->property("index").toPersistentModelIndex());
-    Q_ASSERT(it != m_previewJobsUrls.end());
-
-    it->removeOne(item.url().toLocalFile());
-    if (it->empty()) {
-        m_previewJobsUrls.erase(it);
-    }
-}
-
-void AbstractImageListModel::asyncGetPreview(const QStringList &paths, const QPersistentModelIndex &index) const
-{
-    if (m_previewJobsUrls.contains(index) || paths.isEmpty()) {
-        return;
-    }
-
-    const QStringList availablePlugins = KIO::PreviewJob::availablePlugins();
-    KFileItemList list;
-
-    for (const QString &path : paths) {
-        list.append(KFileItem(QUrl::fromLocalFile(path), QString(), 0));
-    }
-
-    KIO::PreviewJob *const job = KIO::filePreview(list, m_screenshotSize, &availablePlugins);
-    job->setIgnoreMaximumSize(true);
-
-    job->setProperty("paths", paths);
-    job->setProperty("index", index);
-
-    connect(job, &KIO::PreviewJob::gotPreview, this, &AbstractImageListModel::slotHandlePreview);
-    connect(job, &KIO::PreviewJob::failed, this, &AbstractImageListModel::slotHandlePreviewFailed);
-
-    m_previewJobsUrls.insert(index, paths);
-}
-
 void AbstractImageListModel::asyncGetMediaMetadata(const QString &path, const QPersistentModelIndex &index) const
 {
     if (m_sizeJobsUrls.contains(path) || path.isEmpty()) {
@@ -191,7 +85,6 @@ void AbstractImageListModel::asyncGetMediaMetadata(const QString &path, const QP
 
 void AbstractImageListModel::clearCache()
 {
-    m_imageCache.clear();
     m_backgroundTitleCache.clear();
     m_backgroundAuthorCache.clear();
     m_imageSizeCache.clear();

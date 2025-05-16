@@ -54,14 +54,6 @@ Q_SIGNALS:
 
 protected:
     /**
-     * Asynchronously generates a preview.
-     * Multiple images are displayed side by side following the order in @c paths
-     *
-     * @note @c paths should have no duplicate urls.
-     */
-    void asyncGetPreview(const QStringList &paths, const QPersistentModelIndex &index) const;
-
-    /**
      * Asynchronously extracts metadata from an image or a video file.
      */
     void asyncGetMediaMetadata(const QString &path, const QPersistentModelIndex &index) const;
@@ -77,14 +69,10 @@ protected:
     Q_OBJECT_BINDABLE_PROPERTY(AbstractImageListModel, QSize, m_targetSize)
     QPropertyNotifier m_targetSizeChangeNotifier;
 
-    QCache<QStringList, QPixmap> m_imageCache;
-    // Store side-by-side images
-    QHash<QStringList, QPixmap> m_imageTempCache;
     QCache<QString, QString /* title */> m_backgroundTitleCache;
     QCache<QString, QString /* author */> m_backgroundAuthorCache;
     QCache<QString, QSize> m_imageSizeCache;
 
-    mutable QHash<QPersistentModelIndex, QStringList> m_previewJobsUrls;
     mutable QHash<QString, QPersistentModelIndex> m_sizeJobsUrls;
 
     QHash<QString, bool> m_pendingDeletion;
@@ -97,6 +85,4 @@ protected:
 
 private Q_SLOTS:
     void slotMediaMetadataFound(const QString &path, const MediaMetadata &metadata);
-    void slotHandlePreview(const KFileItem &item, const QPixmap &preview);
-    void slotHandlePreviewFailed(const KFileItem &item);
 };

@@ -117,15 +117,6 @@ void ImageListModelTest::testImageListModelData()
     QCOMPARE(m_dataSpy->size(), 1);
     QCOMPARE(m_dataSpy->takeFirst().at(2).value<QList<int>>().at(0), ImageRoles::ResolutionRole);
 
-    QCOMPARE(idx.data(ImageRoles::ScreenshotRole), QVariant()); // Not cached yet
-    const QStringList availablePlugins = KIO::PreviewJob::availablePlugins();
-    if (availablePlugins.contains(QLatin1String("imagethumbnail"))) {
-        m_dataSpy->wait();
-        QCOMPARE(m_dataSpy->size(), 1);
-        QCOMPARE(m_dataSpy->takeFirst().at(2).value<QList<int>>().at(0), ImageRoles::ScreenshotRole);
-        QVERIFY(!idx.data(ImageRoles::ScreenshotRole).value<QPixmap>().isNull());
-    }
-
 #if HAVE_KExiv2
     QCOMPARE(idx.data(ImageRoles::AuthorRole).toString(), QStringLiteral("KDE Community"));
 #else
