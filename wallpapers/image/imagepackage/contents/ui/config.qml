@@ -21,13 +21,13 @@ import org.kde.kirigami as Kirigami
  */
 ColumnLayout {
     id: root
-        
+
     property var configDialog
     property var wallpaperConfiguration: wallpaper.configuration
     property var parentLayout
     property var screen : Screen
     property var screenSize: !!screen.geometry ? Qt.size(screen.geometry.width, screen.geometry.height):  Qt.size(screen.width, screen.height)
-    
+
     property alias cfg_Color: colorButton.color
     property color cfg_ColorDefault
     property string cfg_Image
@@ -52,13 +52,13 @@ ColumnLayout {
      * Emitted when the user finishes adding images using the file dialog.
      */
     signal wallpaperBrowseCompleted();
-    
+
     onScreenChanged: function() {
         if (thumbnailsLoader.item) {
             thumbnailsLoader.item.screenSize = !!root.screen.geometry ? Qt.size(root.screen.geometry.width, root.screen.geometry.height):  Qt.size(root.screen.width, root.screen.height);
         }
     }
-    
+
     function saveConfig() {
         if (configDialog.currentWallpaper === "org.kde.image") {
             imageWallpaper.wallpaperModel.commitAddition();
@@ -228,31 +228,31 @@ ColumnLayout {
         Loader {
             id: thumbnailsLoader
             anchors.fill: parent
-        
+
             function loadWallpaper () {
                 let source = (configDialog.currentWallpaper == "org.kde.image") ? "ThumbnailsComponent.qml" :
                     ((configDialog.currentWallpaper == "org.kde.slideshow") ? "SlideshowComponent.qml" : "");
-                
+
                 let props = {screenSize: screenSize};
-                
+
                 if (configDialog.currentWallpaper == "org.kde.slideshow") {
                     props["configuration"] = wallpaperConfiguration;
                 }
                 thumbnailsLoader.setSource(source, props);
             }
         }
-        
+
         Connections {
             target: configDialog
             function onCurrentWallpaperChanged() {
                 thumbnailsLoader.loadWallpaper();
             }
         }
-        
+
         Component.onCompleted: () => {
             thumbnailsLoader.loadWallpaper();
         }
-        
+
     }
 
     Component.onDestruction: {
