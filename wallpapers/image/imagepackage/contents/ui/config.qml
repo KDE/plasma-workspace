@@ -25,8 +25,7 @@ ColumnLayout {
     property var configDialog
     property var wallpaperConfiguration: wallpaper.configuration
     property var parentLayout
-    property var screen : Screen
-    property var screenSize: !!screen.geometry ? Qt.size(screen.geometry.width, screen.geometry.height):  Qt.size(screen.width, screen.height)
+    property var screenSize: Qt.size(Screen.width, Screen.height)
 
     property alias cfg_Color: colorButton.color
     property color cfg_ColorDefault
@@ -53,9 +52,9 @@ ColumnLayout {
      */
     signal wallpaperBrowseCompleted();
 
-    onScreenChanged: function() {
+    onScreenSizeChanged: function() {
         if (thumbnailsLoader.item) {
-            thumbnailsLoader.item.screenSize = !!root.screen.geometry ? Qt.size(root.screen.geometry.width, root.screen.geometry.height):  Qt.size(root.screen.width, root.screen.height);
+            thumbnailsLoader.item.screenSize = root.screenSize;
         }
     }
 
@@ -77,7 +76,7 @@ ColumnLayout {
         renderingMode: (configDialog.currentWallpaper === "org.kde.image") ? PlasmaWallpaper.ImageBackend.SingleImage : PlasmaWallpaper.ImageBackend.SlideShow
         targetSize: {
             // Lock screen configuration case
-            return Qt.size(root.screenSize.width * root.screen.devicePixelRatio, root.screenSize.height * root.screen.devicePixelRatio)
+            return Qt.size(root.screenSize.width * Screen.devicePixelRatio, root.screenSize.height * Screen.devicePixelRatio)
         }
         onSlidePathsChanged: cfg_SlidePaths = slidePaths
         onUncheckedSlidesChanged: cfg_UncheckedSlides = uncheckedSlides
