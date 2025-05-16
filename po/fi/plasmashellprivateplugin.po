@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-30 00:44+0000\n"
-"PO-Revision-Date: 2025-02-14 19:55+0200\n"
+"POT-Creation-Date: 2025-05-16 00:44+0000\n"
+"PO-Revision-Date: 2025-04-08 21:09+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -301,12 +301,9 @@ msgid "Online Services"
 msgstr "Verkkopalvelut"
 
 #: shellprivate/widgetexplorer.cpp:125
-#, fuzzy
-#| msgctxt "applet category"
-#| msgid "System Information"
 msgctxt "applet category"
 msgid "Personal Information"
-msgstr "Järjestelmätiedot"
+msgstr "Henkilökohtaiset tiedot"
 
 #: shellprivate/widgetexplorer.cpp:126
 msgctxt "applet category"
@@ -410,42 +407,42 @@ msgid ""
 "map"
 msgstr "Valittu aikavyöhyke ei ole käytettävissä tämän kartan visualisointiin"
 
-#: timezoneselector/TimezoneSelector.qml:185
+#: timezoneselector/TimezoneSelector.qml:196
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom in"
 msgstr "Lähennä"
 
-#: timezoneselector/TimezoneSelector.qml:201
+#: timezoneselector/TimezoneSelector.qml:212
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom out"
 msgstr "Loitonna"
 
-#: timezoneselector/TimezoneSelector.qml:230
+#: timezoneselector/TimezoneSelector.qml:241
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Region:"
 msgstr "Alue:"
 
-#: timezoneselector/TimezoneSelector.qml:237
+#: timezoneselector/TimezoneSelector.qml:248
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
 msgstr "Valitse…"
 
-#: timezoneselector/TimezoneSelector.qml:241
+#: timezoneselector/TimezoneSelector.qml:252
 #, kde-format
 msgid "Timezone region selector"
 msgstr "Aikavyöhykkeen valinta"
 
-#: timezoneselector/TimezoneSelector.qml:261
+#: timezoneselector/TimezoneSelector.qml:272
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
 msgstr "Aikavyöhyke:"
 
-#: timezoneselector/TimezoneSelector.qml:271
+#: timezoneselector/TimezoneSelector.qml:282
 #, kde-format
 msgid "Timezone location selector"
 msgstr "Aikavyöhykkeen valinta"

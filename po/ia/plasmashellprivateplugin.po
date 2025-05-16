@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-30 00:44+0000\n"
+"POT-Creation-Date: 2025-05-16 00:44+0000\n"
 "PO-Revision-Date: 2025-03-25 12:35+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -408,42 +408,42 @@ msgstr ""
 "Le fuso horari currentemente selectionate non es disponibile per "
 "visualization sur iste mappa"
 
-#: timezoneselector/TimezoneSelector.qml:185
+#: timezoneselector/TimezoneSelector.qml:196
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom in"
 msgstr "Zoom in (aggrandi)"
 
-#: timezoneselector/TimezoneSelector.qml:201
+#: timezoneselector/TimezoneSelector.qml:212
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom out"
 msgstr "Zoom out (diminue)"
 
-#: timezoneselector/TimezoneSelector.qml:230
+#: timezoneselector/TimezoneSelector.qml:241
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Region:"
 msgstr "Region:"
 
-#: timezoneselector/TimezoneSelector.qml:237
+#: timezoneselector/TimezoneSelector.qml:248
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
 msgstr "Selige..."
 
-#: timezoneselector/TimezoneSelector.qml:241
+#: timezoneselector/TimezoneSelector.qml:252
 #, kde-format
 msgid "Timezone region selector"
 msgstr "Selector de region de fuso horari"
 
-#: timezoneselector/TimezoneSelector.qml:261
+#: timezoneselector/TimezoneSelector.qml:272
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
 msgstr "Fuso horari:"
 
-#: timezoneselector/TimezoneSelector.qml:271
+#: timezoneselector/TimezoneSelector.qml:282
 #, kde-format
 msgid "Timezone location selector"
 msgstr "Selector delocation de fuso horari"

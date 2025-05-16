@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-30 00:44+0000\n"
+"POT-Creation-Date: 2025-05-16 00:44+0000\n"
 "PO-Revision-Date: 2025-04-13 16:37+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -404,42 +404,42 @@ msgid ""
 "map"
 msgstr "தற்போதைய நேரமண்டலத்தை இந்த நிலப்படத்தில் காட்ட முடியாது"
 
-#: timezoneselector/TimezoneSelector.qml:185
+#: timezoneselector/TimezoneSelector.qml:196
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom in"
 msgstr "பெரிதாக்கு"
 
-#: timezoneselector/TimezoneSelector.qml:201
+#: timezoneselector/TimezoneSelector.qml:212
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom out"
 msgstr "சிறிதாக்கு"
 
-#: timezoneselector/TimezoneSelector.qml:230
+#: timezoneselector/TimezoneSelector.qml:241
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Region:"
 msgstr "பகுதி:"
 
-#: timezoneselector/TimezoneSelector.qml:237
+#: timezoneselector/TimezoneSelector.qml:248
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
 msgstr "தேர்வு செய்…"
 
-#: timezoneselector/TimezoneSelector.qml:241
+#: timezoneselector/TimezoneSelector.qml:252
 #, kde-format
 msgid "Timezone region selector"
 msgstr "பகுதித் தேர்வி"
 
-#: timezoneselector/TimezoneSelector.qml:261
+#: timezoneselector/TimezoneSelector.qml:272
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
 msgstr "நேர மண்டலம்:"
 
-#: timezoneselector/TimezoneSelector.qml:271
+#: timezoneselector/TimezoneSelector.qml:282
 #, kde-format
 msgid "Timezone location selector"
 msgstr "நேர மண்டல தேர்வி"

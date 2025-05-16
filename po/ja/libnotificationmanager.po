@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-07 00:44+0000\n"
+"POT-Creation-Date: 2025-05-16 00:44+0000\n"
 "PO-Revision-Date: 2023-02-07 03:30+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -95,14 +95,14 @@ msgstr "%2 の %1"
 msgid "Application closed unexpectedly."
 msgstr "アプリケーションが異常終了しました。"
 
-#: notifications.cpp:885
+#: notifications.cpp:903
 #, kde-format
 msgctxt "@title"
 msgid "Unread Notification"
 msgid_plural "Unread Notifications"
 msgstr[0] ""
 
-#: notifications.cpp:887
+#: notifications.cpp:905
 #, kde-format
 msgctxt "@info"
 msgid "%1 notification was received while Do Not Disturb was active."

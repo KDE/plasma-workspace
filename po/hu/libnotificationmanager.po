@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-07 00:44+0000\n"
+"POT-Creation-Date: 2025-05-16 00:44+0000\n"
 "PO-Revision-Date: 2025-01-24 20:48+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -103,7 +103,7 @@ msgstr "%1 innen: %2"
 msgid "Application closed unexpectedly."
 msgstr "Az alkalmazás váratlanul bezárult."
 
-#: notifications.cpp:885
+#: notifications.cpp:903
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "Unread Notifications"
@@ -113,7 +113,7 @@ msgid_plural "Unread Notifications"
 msgstr[0] "Olvasatlan értesítések"
 msgstr[1] "Olvasatlan értesítések"
 
-#: notifications.cpp:887
+#: notifications.cpp:905
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid "%1 notifications were received while Do Not Disturb was active."

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-07 00:44+0000\n"
+"POT-Creation-Date: 2025-05-16 00:44+0000\n"
 "PO-Revision-Date: 2025-01-12 14:23+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -102,7 +102,7 @@ msgstr "%1 de %2"
 msgid "Application closed unexpectedly."
 msgstr "A aplicación pechouse inesperadamente."
 
-#: notifications.cpp:885
+#: notifications.cpp:903
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "Unread Notifications"
@@ -112,7 +112,7 @@ msgid_plural "Unread Notifications"
 msgstr[0] "Notificacións sen ler"
 msgstr[1] "Notificacións sen ler"
 
-#: notifications.cpp:887
+#: notifications.cpp:905
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid "%1 notifications were received while Do Not Disturb was active."

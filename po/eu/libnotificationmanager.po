@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-07 00:44+0000\n"
+"POT-Creation-Date: 2025-05-16 00:44+0000\n"
 "PO-Revision-Date: 2025-01-09 22:22+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -105,7 +105,7 @@ msgstr "%1 %2(e)tik"
 msgid "Application closed unexpectedly."
 msgstr "Aplikazio bat itxi da ustekabean."
 
-#: notifications.cpp:885
+#: notifications.cpp:903
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "Unread Notifications"
@@ -115,7 +115,7 @@ msgid_plural "Unread Notifications"
 msgstr[0] "Irakurri gabeko jakinarazpenak"
 msgstr[1] "Irakurri gabeko jakinarazpenak"
 
-#: notifications.cpp:887
+#: notifications.cpp:905
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid "%1 notifications were received while Do Not Disturb was active."

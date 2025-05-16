@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-15 00:44+0000\n"
-"PO-Revision-Date: 2025-04-28 17:28+0400\n"
+"PO-Revision-Date: 2025-05-15 18:05+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -225,7 +225,7 @@ msgstr "أظهر الأيقونات المخفية"
 #, kde-format
 msgctxt "@info:whatsthis accessible description for popup grid"
 msgid "Grid with %1 items in %2 columns"
-msgstr ""
+msgstr "شبكة بـ %1 عناصر و  %2 عمود"
 
 #: package/contents/ui/HiddenItemsView.qml:46
 #, kde-format

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-30 00:44+0000\n"
+"POT-Creation-Date: 2025-05-16 00:44+0000\n"
 "PO-Revision-Date: 2025-03-24 22:37+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -408,42 +408,42 @@ msgstr ""
 "Şu anda seçili zaman dilimi, bu harita üzerinde görselleştirmek için uygun "
 "değil."
 
-#: timezoneselector/TimezoneSelector.qml:185
+#: timezoneselector/TimezoneSelector.qml:196
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom in"
 msgstr "Yakınlaştır"
 
-#: timezoneselector/TimezoneSelector.qml:201
+#: timezoneselector/TimezoneSelector.qml:212
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom out"
 msgstr "Uzaklaştır"
 
-#: timezoneselector/TimezoneSelector.qml:230
+#: timezoneselector/TimezoneSelector.qml:241
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Region:"
 msgstr "Bölge:"
 
-#: timezoneselector/TimezoneSelector.qml:237
+#: timezoneselector/TimezoneSelector.qml:248
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
 msgstr "Seç…"
 
-#: timezoneselector/TimezoneSelector.qml:241
+#: timezoneselector/TimezoneSelector.qml:252
 #, kde-format
 msgid "Timezone region selector"
 msgstr "Zaman dilimi bölgesi seçicisi"
 
-#: timezoneselector/TimezoneSelector.qml:261
+#: timezoneselector/TimezoneSelector.qml:272
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
 msgstr "Zaman dilimi:"
 
-#: timezoneselector/TimezoneSelector.qml:271
+#: timezoneselector/TimezoneSelector.qml:282
 #, kde-format
 msgid "Timezone location selector"
 msgstr "Zaman dilimi konumu seçicisi"
