@@ -7,6 +7,7 @@
 #include "slidemodel.h"
 
 #include <QDir>
+#include <QUrl>
 
 #include "model/imageproxymodel.h"
 
@@ -62,7 +63,7 @@ int SlideModel::indexOf(const QString &packagePath) const
     int idx = -1;
 
     for (const auto models{sourceModels()}; auto m : models) {
-        idx = static_cast<ImageProxyModel *>(m)->indexOf(packagePath);
+        idx = static_cast<ImageProxyModel *>(m)->indexOf(QUrl::fromLocalFile(packagePath));
 
         if (idx >= 0) {
             return mapFromSource(m->index(idx, 0)).row();

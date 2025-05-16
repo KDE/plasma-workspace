@@ -33,7 +33,7 @@ public:
     QHash<int, QByteArray> roleNames() const override;
 
     int count() const;
-    virtual int indexOf(const QString &path) const = 0;
+    virtual int indexOf(const QUrl &url) const = 0;
 
     virtual void load(const QStringList &customPaths = {});
     /**
@@ -42,11 +42,11 @@ public:
     void reload();
 
 public Q_SLOTS:
-    virtual QStringList addBackground(const QString &path) = 0;
+    virtual QStringList addBackground(const QUrl &url) = 0;
     /**
      * @return removed files that should be removed from \KDirWatch
      */
-    virtual QStringList removeBackground(const QString &path) = 0;
+    virtual QStringList removeBackground(const QUrl &url) = 0;
 
 Q_SIGNALS:
     void countChanged();

@@ -36,13 +36,14 @@ public:
     QHash<int, QByteArray> roleNames() const override;
 
     int count() const;
-    Q_INVOKABLE int indexOf(const QString &packagePath) const;
+    Q_INVOKABLE int indexOf(const QString &path) const;
+    Q_INVOKABLE int indexOf(const QUrl &url) const;
 
     QBindable<bool> loading() const;
 
     Q_INVOKABLE void reload();
-    Q_INVOKABLE QStringList addBackground(const QString &_path);
-    void removeBackground(const QString &packagePath);
+    Q_INVOKABLE QStringList addBackground(const QUrl &url);
+    void removeBackground(const QUrl &url);
 
     Q_INVOKABLE void commitAddition();
     Q_INVOKABLE void commitDeletion();

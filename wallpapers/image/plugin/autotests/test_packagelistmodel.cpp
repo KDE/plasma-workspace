@@ -40,8 +40,8 @@ private:
 
     QDir m_dataDir;
     QDir m_alternateDir;
-    QStringList m_packagePaths;
-    QString m_dummyPackagePath;
+    QList<QUrl> m_packagePaths;
+    QUrl m_dummyPackagePath;
     QProperty<QSize> m_targetSize;
     QProperty<bool> m_usedInConfig{true};
 };
@@ -55,9 +55,9 @@ void PackageListModelTest::initTestCase()
     QVERIFY(!m_dataDir.isEmpty());
     QVERIFY(!m_alternateDir.isEmpty());
 
-    m_packagePaths << m_dataDir.absoluteFilePath(ImageBackendTestData::defaultPackageFolderName1);
-    m_packagePaths << m_dataDir.absoluteFilePath(ImageBackendTestData::defaultPackageFolderName2);
-    m_dummyPackagePath = m_alternateDir.absoluteFilePath(ImageBackendTestData::alternatePackageFolderName1);
+    m_packagePaths << QUrl::fromLocalFile(m_dataDir.absoluteFilePath(ImageBackendTestData::defaultPackageFolderName1));
+    m_packagePaths << QUrl::fromLocalFile(m_dataDir.absoluteFilePath(ImageBackendTestData::defaultPackageFolderName2));
+    m_dummyPackagePath = QUrl::fromLocalFile(m_alternateDir.absoluteFilePath(ImageBackendTestData::alternatePackageFolderName1));
 
     m_targetSize = QSize(1920, 1080);
 
@@ -117,8 +117,8 @@ void PackageListModelTest::testPackageListModelData()
     QCOMPARE(idx.data(ImageRoles::ResolutionRole).toString(), QStringLiteral("1920x1080"));
 
     QCOMPARE(idx.data(ImageRoles::PathRole).toUrl().toLocalFile(),
-             m_packagePaths.at(1) + QDir::separator() + u"contents" + QDir::separator() + u"images" + QDir::separator() + u"1920x1080.jpg");
-    QCOMPARE(idx.data(ImageRoles::PackageNameRole).toString(), m_packagePaths.at(1) + QDir::separator());
+             m_packagePaths.at(1).toLocalFile() + QDir::separator() + u"contents" + QDir::separator() + u"images" + QDir::separator() + u"1920x1080.jpg");
+    QCOMPARE(idx.data(ImageRoles::PackageNameRole).toString(), m_packagePaths.at(1).toLocalFile() + QDir::separator());
 
     QCOMPARE(idx.data(ImageRoles::RemovableRole).toBool(), false);
     QCOMPARE(idx.data(ImageRoles::PendingDeletionRole).toBool(), false);
@@ -151,9 +151,7 @@ void PackageListModelTest::testPackageListModelIndexOf()
 {
     QCOMPARE(m_model->indexOf(m_packagePaths.at(0)), 0);
     QCOMPARE(m_model->indexOf(m_packagePaths.at(1)), 1);
-    QCOMPARE(m_model->indexOf(QUrl::fromLocalFile(m_packagePaths.at(0)).toString()), 0);
-    QCOMPARE(m_model->indexOf(QUrl::fromLocalFile(m_packagePaths.at(1)).toString()), 1);
-    QCOMPARE(m_model->indexOf(m_dataDir.absoluteFilePath(QStringLiteral("brokenpackage"))), -1);
+    QCOMPARE(m_model->indexOf(QUrl::fromLocalFile(m_dataDir.absoluteFilePath(QStringLiteral("brokenpackage")))), -1);
 }
 
 void PackageListModelTest::testPackageListModelLoad()
@@ -173,7 +171,7 @@ void PackageListModelTest::testPackageListModelAddBackground()
     QCOMPARE(m_countSpy->size(), 1);
     m_countSpy->clear();
     QCOMPARE(results.size(), 1);
-    QCOMPARE(results.at(0), m_dummyPackagePath + QDir::separator());
+    QCOMPARE(results.at(0), m_dummyPackagePath.toLocalFile() + QDir::separator());
     QCOMPARE(m_model->rowCount(), ImageBackendTestData::defaultPackageCount + 1);
 
     QPersistentModelIndex idx = m_model->index(0, 0); // This is the newly added item.
@@ -188,17 +186,17 @@ void PackageListModelTest::testPackageListModelAddBackground()
     QCOMPARE(m_countSpy->size(), 0);
 
     // Case 3: add an image
-    results = m_model->addBackground(m_alternateDir.absoluteFilePath(ImageBackendTestData::alternateImageFileName1));
+    results = m_model->addBackground(QUrl::fromLocalFile(m_alternateDir.absoluteFilePath(ImageBackendTestData::alternateImageFileName1)));
     QCOMPARE(results.size(), 0);
     QCOMPARE(m_countSpy->size(), 0);
 
     // Case 4: path is empty
-    results = m_model->addBackground(QString());
+    results = m_model->addBackground(QUrl());
     QCOMPARE(results.size(), 0);
     QCOMPARE(m_countSpy->size(), 0);
 
     // Case 5: add a broken package
-    results = m_model->addBackground(m_dataDir.absoluteFilePath(QStringLiteral("brokenpackage")));
+    results = m_model->addBackground(QUrl::fromLocalFile(m_dataDir.absoluteFilePath(QStringLiteral("brokenpackage"))));
     QCOMPARE(results.size(), 0);
     QCOMPARE(m_countSpy->size(), 0);
 
@@ -230,18 +228,18 @@ void PackageListModelTest::testPackageListModelRemoveBackground()
     m_model->addBackground(m_dummyPackagePath);
     m_countSpy->clear();
     QCOMPARE(m_model->m_removableWallpapers.size(), 1);
-    QCOMPARE(m_model->m_removableWallpapers.at(0), m_dummyPackagePath + QDir::separator());
+    QCOMPARE(m_model->m_removableWallpapers.at(0), m_dummyPackagePath.toLocalFile() + QDir::separator());
 
     QStringList results;
 
     // Case 1: path is empty
-    results = m_model->removeBackground(QString());
+    results = m_model->removeBackground(QUrl());
     QCOMPARE(m_countSpy->size(), 0);
     QCOMPARE(results.size(), 0);
     QCOMPARE(m_model->m_removableWallpapers.size(), 1);
 
     // Case 2: remove a not added package
-    results = m_model->removeBackground(m_alternateDir.absoluteFilePath(QStringLiteral("thispackagedoesnotexist")));
+    results = m_model->removeBackground(QUrl::fromLocalFile(m_alternateDir.absoluteFilePath(QStringLiteral("thispackagedoesnotexist"))));
     QCOMPARE(m_countSpy->size(), 0);
     QCOMPARE(results.size(), 0);
     QCOMPARE(m_model->m_removableWallpapers.size(), 1);
@@ -252,7 +250,7 @@ void PackageListModelTest::testPackageListModelRemoveBackground()
     m_countSpy->clear();
     QCOMPARE(m_model->rowCount(), ImageBackendTestData::defaultPackageCount);
     QCOMPARE(results.size(), 1);
-    QCOMPARE(results.at(0), m_dummyPackagePath + QDir::separator());
+    QCOMPARE(results.at(0), m_dummyPackagePath.toLocalFile() + QDir::separator());
     QCOMPARE(m_model->m_removableWallpapers.size(), 0);
 }
 
@@ -261,7 +259,7 @@ void PackageListModelTest::testPackageListModelRemoveLocalBackground()
     const QString standardPath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + u"/wallpapers/";
 
     QVERIFY(QDir(standardPath).mkpath(standardPath));
-    KIO::CopyJob *job = KIO::copy(QUrl::fromLocalFile(m_dummyPackagePath),
+    KIO::CopyJob *job = KIO::copy(m_dummyPackagePath,
                                   QUrl::fromLocalFile(QString(standardPath + u"dummy" + QDir::separator())),
                                   KIO::HideProgressInfo | KIO::Overwrite);
     QVERIFY(job->exec());
@@ -274,7 +272,7 @@ void PackageListModelTest::testPackageListModelRemoveLocalBackground()
     QCOMPARE(idx.data(Qt::DisplayRole).toString(), QStringLiteral("Dummy wallpaper (For test purpose, don't translate!)"));
     QCOMPARE(idx.data(ImageRoles::RemovableRole).toBool(), true);
 
-    m_model->removeBackground(QString(standardPath + u"dummy"));
+    m_model->removeBackground(QUrl::fromLocalFile(QString(standardPath + u"dummy")));
     QCOMPARE(m_countSpy->size(), 1);
     m_countSpy->clear();
 

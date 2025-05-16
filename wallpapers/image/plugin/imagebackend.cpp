@@ -365,7 +365,7 @@ QString ImageBackend::addUsersWallpaper(const QUrl &url)
 {
     Q_ASSERT(m_mode == SingleImage);
     ensureWallpaperModel(); // The model is not created by default when used in desktop
-    auto results = m_model->addBackground(url.isLocalFile() ? url.toLocalFile() : url.toString());
+    auto results = m_model->addBackground(url);
 
     if (!m_usedInConfig) {
         m_model->commitAddition();

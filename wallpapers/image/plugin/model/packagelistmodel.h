@@ -28,13 +28,13 @@ public:
     /**
      * @path Package folder path
      */
-    int indexOf(const QString &path) const override;
+    int indexOf(const QUrl &url) const override;
 
     void load(const QStringList &customPaths = {}) override;
 
 public Q_SLOTS:
-    QStringList addBackground(const QString &path) override;
-    QStringList removeBackground(const QString &path) override;
+    QStringList addBackground(const QUrl &url) override;
+    QStringList removeBackground(const QUrl &url) override;
 
 private Q_SLOTS:
     void slotHandlePackageFound(const QList<KPackage::Package> &packages);
