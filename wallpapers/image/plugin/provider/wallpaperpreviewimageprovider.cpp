@@ -44,7 +44,7 @@ WallpaperPreviewImageResponse::WallpaperPreviewImageResponse(const QList<QUrl> &
     m_previewJob = KIO::filePreview(list, requestedSize, &availablePlugins);
     m_previewJob->setIgnoreMaximumSize(true);
 
-    connect(m_previewJob, &KIO::PreviewJob::gotPreview, this, &WallpaperPreviewImageResponse::onGotPreview);
+    connect(m_previewJob, &KIO::PreviewJob::generated, this, &WallpaperPreviewImageResponse::onPreviewGenerated);
     connect(m_previewJob, &KIO::PreviewJob::failed, this, &WallpaperPreviewImageResponse::onPreviewFailed);
 }
 
@@ -63,7 +63,7 @@ QQuickTextureFactory *WallpaperPreviewImageResponse::textureFactory() const
     return QQuickTextureFactory::textureFactoryForImage(m_preview);
 }
 
-void WallpaperPreviewImageResponse::onGotPreview(const KFileItem &item, const QPixmap &pixmap)
+void WallpaperPreviewImageResponse::onPreviewGenerated(const KFileItem &item, const QImage &preview)
 {
     const int index = m_fileUrls.indexOf(item.url());
     if (index == -1) {
@@ -72,13 +72,13 @@ void WallpaperPreviewImageResponse::onGotPreview(const KFileItem &item, const QP
         return;
     }
 
-    m_parts[index] = pixmap;
+    m_parts[index] = preview;
     if (m_parts.size() != m_fileUrls.size()) {
         return;
     }
 
     if (m_parts.size() == 1) {
-        m_preview = m_parts[0].toImage(); // TODO: Extend KIO::PreviewJob API so it provides us QImages
+        m_preview = m_parts[0];
     } else {
         m_preview = QImage(m_parts[0].size(), QImage::Format_ARGB32_Premultiplied);
 
@@ -87,7 +87,7 @@ void WallpaperPreviewImageResponse::onGotPreview(const KFileItem &item, const QP
             const int start = (key * m_preview.width()) / m_parts.size();
             const int end = ((key + 1) * m_preview.width()) / m_parts.size();
             painter.setClipRect(QRect(start, 0, end - start, m_preview.height()));
-            painter.drawPixmap(m_preview.rect(), value, value.rect());
+            painter.drawImage(m_preview.rect(), value, value.rect());
         }
     }
 
