@@ -22,14 +22,14 @@ public:
     QQuickTextureFactory *textureFactory() const override;
 
 private Q_SLOTS:
-    void onGotPreview(const KFileItem &item, const QPixmap &preview);
+    void onPreviewGenerated(const KFileItem &item, const QImage &preview);
     void onPreviewFailed(const KFileItem &item);
 
 private:
     KIO::PreviewJob *m_previewJob = nullptr;
     QImage m_preview;
     QList<QUrl> m_fileUrls;
-    QMap<int, QPixmap> m_parts;
+    QMap<int, QImage> m_parts;
     QString m_errorString;
 };
 
