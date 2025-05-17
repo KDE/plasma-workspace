@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-15 00:44+0000\n"
-"PO-Revision-Date: 2025-04-30 02:23+0900\n"
+"PO-Revision-Date: 2025-05-16 15:35+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -226,7 +226,7 @@ msgstr "顯示隱藏圖示"
 #, kde-format
 msgctxt "@info:whatsthis accessible description for popup grid"
 msgid "Grid with %1 items in %2 columns"
-msgstr ""
+msgstr "用 %2 欄顯示 %1 個項目的網格"
 
 # 這應該是拿來在內部測量 font metrics 用的；有時候漢字的高度跟羅馬字的高度會不同，但漢字之間沒有太多不同，所以只要有包含漢字應該就夠了。
 # --Kisaragi

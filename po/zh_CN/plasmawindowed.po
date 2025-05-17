@@ -14,8 +14,8 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/plasma-workspace/plasmawindowed.pot\n"
-"X-Crowdin-File-ID: 46295\n"
+"X-Crowdin-File: /kf6-stable/messages/plasma-workspace/plasmawindowed.pot\n"
+"X-Crowdin-File-ID: 51586\n"
 
 #: main.cpp:52 plasmawindowedcorona.cpp:103
 #, kde-format

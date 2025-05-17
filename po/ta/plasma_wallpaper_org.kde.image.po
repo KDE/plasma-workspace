@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-01 00:42+0000\n"
+"POT-Creation-Date: 2025-05-17 02:36+0000\n"
 "PO-Revision-Date: 2024-09-01 17:16+0200\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -39,58 +39,58 @@ msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "காட்ட வேண்டிய படங்களை கொண்ட அடைவு"
 
-#: imagepackage/contents/ui/config.qml:128
+#: imagepackage/contents/ui/config.qml:127
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Positioning:"
 msgstr "காட்டப்படும் விதம்:"
 
-#: imagepackage/contents/ui/config.qml:131
+#: imagepackage/contents/ui/config.qml:130
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled and cropped"
 msgstr "வெட்டி அளவுமாற்றி"
 
-#: imagepackage/contents/ui/config.qml:135
+#: imagepackage/contents/ui/config.qml:134
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled"
 msgstr "அளவுமாற்றி"
 
-#: imagepackage/contents/ui/config.qml:139
+#: imagepackage/contents/ui/config.qml:138
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled, keep proportions"
 msgstr "அளவுமாற்றி, உருவத்தை மாற்றாமல்"
 
-#: imagepackage/contents/ui/config.qml:143
+#: imagepackage/contents/ui/config.qml:142
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "நடுப்படுத்தி"
 
-#: imagepackage/contents/ui/config.qml:147
+#: imagepackage/contents/ui/config.qml:146
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Tiled"
 msgstr "பக்கத்துப்பக்கதில் பலமுறை"
 
-#: imagepackage/contents/ui/config.qml:175
+#: imagepackage/contents/ui/config.qml:174
 #, kde-format
 msgid "Background:"
 msgstr "பின்புலம்:"
 
-#: imagepackage/contents/ui/config.qml:176
+#: imagepackage/contents/ui/config.qml:175
 #, kde-format
 msgid "Blur"
 msgstr "மங்கலாக்கு"
 
-#: imagepackage/contents/ui/config.qml:185
+#: imagepackage/contents/ui/config.qml:184
 #, kde-format
 msgid "Solid color"
 msgstr "நிறத்தால் நிரப்பு"
 
-#: imagepackage/contents/ui/config.qml:196
+#: imagepackage/contents/ui/config.qml:195
 #, kde-format
 msgid "Select Background Color"
 msgstr "பின்புல நிறத்தை தேர்ந்தெடுத்தல்"

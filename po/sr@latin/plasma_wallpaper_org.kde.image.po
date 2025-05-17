@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-01 00:42+0000\n"
+"POT-Creation-Date: 2025-05-17 02:36+0000\n"
 "PO-Revision-Date: 2017-12-15 12:38+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -44,7 +44,7 @@ msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Fascikla iz koje se povlače tapeti."
 
-#: imagepackage/contents/ui/config.qml:128
+#: imagepackage/contents/ui/config.qml:127
 #, fuzzy, kde-format
 #| msgid "Positioning:"
 msgctxt "@label:listbox"
@@ -52,7 +52,7 @@ msgid "Positioning:"
 msgstr "Postavljanje:"
 
 # >> @item:inlistbox Positioning
-#: imagepackage/contents/ui/config.qml:131
+#: imagepackage/contents/ui/config.qml:130
 #, fuzzy, kde-format
 #| msgid "Scaled and Cropped"
 msgctxt "@item:inlistbox"
@@ -60,7 +60,7 @@ msgid "Scaled and cropped"
 msgstr "skalirano i opsečeno"
 
 # >> @item:inlistbox Positioning
-#: imagepackage/contents/ui/config.qml:135
+#: imagepackage/contents/ui/config.qml:134
 #, fuzzy, kde-format
 #| msgid "Scaled"
 msgctxt "@item:inlistbox"
@@ -68,7 +68,7 @@ msgid "Scaled"
 msgstr "skalirano"
 
 # >> @item:inlistbox Positioning
-#: imagepackage/contents/ui/config.qml:139
+#: imagepackage/contents/ui/config.qml:138
 #, fuzzy, kde-format
 #| msgid "Scaled, Keep Proportions"
 msgctxt "@item:inlistbox"
@@ -76,7 +76,7 @@ msgid "Scaled, keep proportions"
 msgstr "skalirano, očuvana proporcija"
 
 # >> @item:inlistbox Positioning
-#: imagepackage/contents/ui/config.qml:143
+#: imagepackage/contents/ui/config.qml:142
 #, fuzzy, kde-format
 #| msgid "Centered"
 msgctxt "@item:inlistbox"
@@ -84,31 +84,31 @@ msgid "Centered"
 msgstr "centrirano"
 
 # >> @item:inlistbox Positioning
-#: imagepackage/contents/ui/config.qml:147
+#: imagepackage/contents/ui/config.qml:146
 #, fuzzy, kde-format
 #| msgid "Tiled"
 msgctxt "@item:inlistbox"
 msgid "Tiled"
 msgstr "popločano"
 
-#: imagepackage/contents/ui/config.qml:175
+#: imagepackage/contents/ui/config.qml:174
 #, kde-format
 msgid "Background:"
 msgstr "Pozadina:"
 
 # >> @option:radio Blur the background
-#: imagepackage/contents/ui/config.qml:176
+#: imagepackage/contents/ui/config.qml:175
 #, kde-format
 msgid "Blur"
 msgstr "Zamućena"
 
-#: imagepackage/contents/ui/config.qml:185
+#: imagepackage/contents/ui/config.qml:184
 #, kde-format
 msgid "Solid color"
 msgstr "Puna boja"
 
 # >> @title:window
-#: imagepackage/contents/ui/config.qml:196
+#: imagepackage/contents/ui/config.qml:195
 #, kde-format
 msgid "Select Background Color"
 msgstr "Izbor boje pozadine"

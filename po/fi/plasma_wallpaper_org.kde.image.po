@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-01 00:42+0000\n"
+"POT-Creation-Date: 2025-05-17 02:36+0000\n"
 "PO-Revision-Date: 2024-10-16 19:05+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -45,58 +45,58 @@ msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Kansio, josta kuvia näytetään"
 
-#: imagepackage/contents/ui/config.qml:128
+#: imagepackage/contents/ui/config.qml:127
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Positioning:"
 msgstr "Sijoittelu:"
 
-#: imagepackage/contents/ui/config.qml:131
+#: imagepackage/contents/ui/config.qml:130
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled and cropped"
 msgstr "Skaalattu ja rajattu"
 
-#: imagepackage/contents/ui/config.qml:135
+#: imagepackage/contents/ui/config.qml:134
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled"
 msgstr "Skaalattu"
 
-#: imagepackage/contents/ui/config.qml:139
+#: imagepackage/contents/ui/config.qml:138
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled, keep proportions"
 msgstr "Skaalattu, säilytä suhteet"
 
-#: imagepackage/contents/ui/config.qml:143
+#: imagepackage/contents/ui/config.qml:142
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "Keskitetty"
 
-#: imagepackage/contents/ui/config.qml:147
+#: imagepackage/contents/ui/config.qml:146
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Tiled"
 msgstr "Monistettu"
 
-#: imagepackage/contents/ui/config.qml:175
+#: imagepackage/contents/ui/config.qml:174
 #, kde-format
 msgid "Background:"
 msgstr "Tausta:"
 
-#: imagepackage/contents/ui/config.qml:176
+#: imagepackage/contents/ui/config.qml:175
 #, kde-format
 msgid "Blur"
 msgstr "Sumenna"
 
-#: imagepackage/contents/ui/config.qml:185
+#: imagepackage/contents/ui/config.qml:184
 #, kde-format
 msgid "Solid color"
 msgstr "Tasainen väri"
 
-#: imagepackage/contents/ui/config.qml:196
+#: imagepackage/contents/ui/config.qml:195
 #, kde-format
 msgid "Select Background Color"
 msgstr "Valitse taustan väri"

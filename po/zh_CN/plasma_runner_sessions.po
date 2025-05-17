@@ -14,9 +14,9 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/plasma-workspace/plasma_runner_sessions."
+"X-Crowdin-File: /kf6-stable/messages/plasma-workspace/plasma_runner_sessions."
 "pot\n"
-"X-Crowdin-File-ID: 43499\n"
+"X-Crowdin-File-ID: 49834\n"
 
 #: sessionrunner.cpp:22
 #, kde-format

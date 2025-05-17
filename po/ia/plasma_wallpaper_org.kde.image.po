@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-01 00:42+0000\n"
+"POT-Creation-Date: 2025-05-17 02:36+0000\n"
 "PO-Revision-Date: 2024-09-03 12:33+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -39,58 +39,58 @@ msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Directorio con le tapete de papiro desde que monstrar diapositivas"
 
-#: imagepackage/contents/ui/config.qml:128
+#: imagepackage/contents/ui/config.qml:127
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Positioning:"
 msgstr "Positionar:"
 
-#: imagepackage/contents/ui/config.qml:131
+#: imagepackage/contents/ui/config.qml:130
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled and cropped"
 msgstr "Scalate e Taliate"
 
-#: imagepackage/contents/ui/config.qml:135
+#: imagepackage/contents/ui/config.qml:134
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled"
 msgstr "Scalate"
 
-#: imagepackage/contents/ui/config.qml:139
+#: imagepackage/contents/ui/config.qml:138
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled, keep proportions"
 msgstr "Scalate, manteni le proportiones"
 
-#: imagepackage/contents/ui/config.qml:143
+#: imagepackage/contents/ui/config.qml:142
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "Centrate"
 
-#: imagepackage/contents/ui/config.qml:147
+#: imagepackage/contents/ui/config.qml:146
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Tiled"
 msgstr "Tegulate"
 
-#: imagepackage/contents/ui/config.qml:175
+#: imagepackage/contents/ui/config.qml:174
 #, kde-format
 msgid "Background:"
 msgstr "Fundo:"
 
-#: imagepackage/contents/ui/config.qml:176
+#: imagepackage/contents/ui/config.qml:175
 #, kde-format
 msgid "Blur"
 msgstr "Obscura (Blur)"
 
-#: imagepackage/contents/ui/config.qml:185
+#: imagepackage/contents/ui/config.qml:184
 #, kde-format
 msgid "Solid color"
 msgstr "Color Solid"
 
-#: imagepackage/contents/ui/config.qml:196
+#: imagepackage/contents/ui/config.qml:195
 #, kde-format
 msgid "Select Background Color"
 msgstr "Selige le color de fundo"

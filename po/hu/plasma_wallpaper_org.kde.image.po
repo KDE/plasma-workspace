@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-01 00:42+0000\n"
+"POT-Creation-Date: 2025-05-17 02:36+0000\n"
 "PO-Revision-Date: 2024-09-18 21:34+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -43,58 +43,58 @@ msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Diavetítés háttérképeit tartalmazó mappa"
 
-#: imagepackage/contents/ui/config.qml:128
+#: imagepackage/contents/ui/config.qml:127
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Positioning:"
 msgstr "Elhelyezkedés:"
 
-#: imagepackage/contents/ui/config.qml:131
+#: imagepackage/contents/ui/config.qml:130
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled and cropped"
 msgstr "Nyújtva és levágva"
 
-#: imagepackage/contents/ui/config.qml:135
+#: imagepackage/contents/ui/config.qml:134
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled"
 msgstr "Nyújtva"
 
-#: imagepackage/contents/ui/config.qml:139
+#: imagepackage/contents/ui/config.qml:138
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled, keep proportions"
 msgstr "Arányosan nyújtva"
 
-#: imagepackage/contents/ui/config.qml:143
+#: imagepackage/contents/ui/config.qml:142
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "Középre"
 
-#: imagepackage/contents/ui/config.qml:147
+#: imagepackage/contents/ui/config.qml:146
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Tiled"
 msgstr "Mozaikszerűen"
 
-#: imagepackage/contents/ui/config.qml:175
+#: imagepackage/contents/ui/config.qml:174
 #, kde-format
 msgid "Background:"
 msgstr "Háttér:"
 
-#: imagepackage/contents/ui/config.qml:176
+#: imagepackage/contents/ui/config.qml:175
 #, kde-format
 msgid "Blur"
 msgstr "Elmosás"
 
-#: imagepackage/contents/ui/config.qml:185
+#: imagepackage/contents/ui/config.qml:184
 #, kde-format
 msgid "Solid color"
 msgstr "Egyszínű"
 
-#: imagepackage/contents/ui/config.qml:196
+#: imagepackage/contents/ui/config.qml:195
 #, kde-format
 msgid "Select Background Color"
 msgstr "Válassza ki a háttér színét"
