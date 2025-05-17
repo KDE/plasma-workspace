@@ -109,6 +109,7 @@ Item {
 
                 view.delegate: WallpaperDelegate {
                     color: cfg_Color
+                    previewSize: Qt.size(thumbnailsComponent.screenSize.width / 8, thumbnailsComponent.screenSize.height / 8)
                 }
             }
         }

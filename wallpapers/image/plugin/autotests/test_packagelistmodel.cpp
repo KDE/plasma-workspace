@@ -26,7 +26,6 @@ private Q_SLOTS:
     void cleanupTestCase();
 
     void testPackageListModelData();
-    void testPackageListModelDarkWallpaperPreview();
     void testPackageListModelIndexOf();
     void testPackageListModelLoad();
     void testPackageListModelAddBackground();
@@ -99,15 +98,6 @@ void PackageListModelTest::testPackageListModelData()
 
     QCOMPARE(idx.data(Qt::DisplayRole).toString(), QStringLiteral("Honeywave (For test purpose, don't translate!)"));
 
-    QCOMPARE(idx.data(ImageRoles::ScreenshotRole), QVariant()); // Not cached yet
-    const QStringList availablePlugins = KIO::PreviewJob::availablePlugins();
-    if (availablePlugins.contains(QLatin1String("imagethumbnail"))) {
-        m_dataSpy->wait();
-        QCOMPARE(m_dataSpy->size(), 1);
-        QCOMPARE(m_dataSpy->takeFirst().at(2).value<QList<int>>().at(0), ImageRoles::ScreenshotRole);
-        QVERIFY(!idx.data(ImageRoles::ScreenshotRole).value<QPixmap>().isNull());
-    }
-
     QCOMPARE(idx.data(ImageRoles::AuthorRole).toString(), QStringLiteral("Ken Vermette"));
 
     QCOMPARE(idx.data(ImageRoles::ResolutionRole).toString(), QString());
@@ -122,29 +112,6 @@ void PackageListModelTest::testPackageListModelData()
 
     QCOMPARE(idx.data(ImageRoles::RemovableRole).toBool(), false);
     QCOMPARE(idx.data(ImageRoles::PendingDeletionRole).toBool(), false);
-}
-
-void PackageListModelTest::testPackageListModelDarkWallpaperPreview()
-{
-    QModelIndex idx = m_model->index(m_model->indexOf(m_packagePaths.at(0)), 0);
-    QVERIFY(idx.isValid());
-
-    QCOMPARE(idx.data(Qt::DisplayRole).toString(), QStringLiteral("Dark Wallpaper (For test purpose, don't translate!)"));
-
-    QCOMPARE(idx.data(ImageRoles::ScreenshotRole), QVariant()); // Not cached yet
-    const QStringList availablePlugins = KIO::PreviewJob::availablePlugins();
-    if (availablePlugins.contains(QLatin1String("imagethumbnail"))) {
-        m_dataSpy->wait();
-        QCOMPARE(m_dataSpy->size(), 1);
-        QCOMPARE(m_dataSpy->takeFirst().at(2).value<QList<int>>().at(0), ImageRoles::ScreenshotRole);
-        m_dataSpy->clear();
-
-        const auto preview = idx.data(ImageRoles::ScreenshotRole).value<QPixmap>();
-        QVERIFY(!preview.isNull());
-        const auto previewImage = preview.toImage();
-        QCOMPARE(previewImage.pixelColor({0, 0}), Qt::red);
-        QCOMPARE(previewImage.pixelColor({previewImage.width() / 2, 0}), Qt::black);
-    }
 }
 
 void PackageListModelTest::testPackageListModelIndexOf()

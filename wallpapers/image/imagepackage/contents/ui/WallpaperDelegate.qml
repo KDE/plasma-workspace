@@ -17,6 +17,7 @@ KCM.GridDelegate {
     id: wallpaperDelegate
 
     property alias color: backgroundRect.color
+    property alias previewSize: previewImage.sourceSize
     opacity: model.pendingDeletion ? 0.5 : 1
     scale: index, 1 // Workaround for https://bugreports.qt.io/browse/QTBUG-107458
 
@@ -63,48 +64,33 @@ KCM.GridDelegate {
             width: Kirigami.Units.iconSizes.large
             height: width
             source: "view-preview"
-            visible: !walliePreview.visible
-        }
-
-        QPixmapItem {
-            id: blurBackgroundSource
-            visible: cfg_Blur
-            anchors.fill: parent
-            smooth: true
-            pixmap: model.screenshot
-            fillMode: QPixmapItem.PreserveAspectCrop
+            visible: previewImage.status != Image.Ready
         }
 
         FastBlur {
+            id: fastBlur
             visible: cfg_Blur
             anchors.fill: parent
-            source: blurBackgroundSource
             radius: 4
-        }
-
-        QPixmapItem {
-            id: walliePreview
-            anchors.fill: parent
-            visible: model.screenshot !== null
-            smooth: true
-            pixmap: model.screenshot
-            fillMode: {
-                if (cfg_FillMode === Image.Stretch) {
-                    return QPixmapItem.Stretch;
-                } else if (cfg_FillMode === Image.PreserveAspectFit) {
-                    return QPixmapItem.PreserveAspectFit;
-                } else if (cfg_FillMode === Image.PreserveAspectCrop) {
-                    return QPixmapItem.PreserveAspectCrop;
-                } else if (cfg_FillMode === Image.Tile) {
-                    return QPixmapItem.Tile;
-                } else if (cfg_FillMode === Image.TileVertically) {
-                    return QPixmapItem.TileVertically;
-                } else if (cfg_FillMode === Image.TileHorizontally) {
-                    return QPixmapItem.TileHorizontally;
-                }
-                return QPixmapItem.PreserveAspectFit;
+            source: Image {
+                asynchronous: true
+                cache: false
+                fillMode: Image.PreserveAspectCrop
+                source: fastBlur.visible ? previewImage.source : ""
+                sourceSize: previewImage.sourceSize
+                visible: false
             }
         }
+
+        Image {
+            id: previewImage
+            anchors.fill: parent
+            asynchronous: true
+            cache: false
+            fillMode: cfg_FillMode
+            source: model.preview
+        }
+
         QtControls2.CheckBox {
             visible: configDialog.currentWallpaper === "org.kde.slideshow"
             anchors.right: parent.right

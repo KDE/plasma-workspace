@@ -13,7 +13,7 @@ class ImageRoles
 public:
     enum RoleType {
         AuthorRole = Qt::UserRole,
-        ScreenshotRole,
+        PreviewRole,
         ResolutionRole,
         PathRole,
         PackageNameRole,

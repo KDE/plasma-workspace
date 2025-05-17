@@ -12,6 +12,7 @@
 #include "finder/mediametadatafinder.h"
 #include "imagebackend.h"
 #include "provider/packageimageprovider.h"
+#include "provider/wallpaperpreviewimageprovider.h"
 #include "sortingmode.h"
 #include "utils/maximizedwindowmonitor.h"
 #include "utils/mediaproxy.h"
@@ -19,6 +20,7 @@
 void ImagePlugin::initializeEngine(QQmlEngine *engine, const char *)
 {
     engine->addImageProvider(QStringLiteral("package"), new PackageImageProvider);
+    engine->addImageProvider(QStringLiteral("wallpaper-preview"), new WallpaperPreviewImageProvider);
 }
 
 void ImagePlugin::registerTypes(const char *uri)
