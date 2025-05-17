@@ -15,11 +15,12 @@ target_link_libraries(kcm_icons PRIVATE
     Qt::Widgets
     Qt::Svg
     Qt::Quick
+    Qt::DBus
     KF6::KCMUtils
     KF6::I18n
     KF6::IconThemes
     KF6::Archive
-    KF6::KIOWidgets
+    KF6::KIOCore
     KF6::KCMUtilsQuick
 )
 
