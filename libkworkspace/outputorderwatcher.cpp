@@ -8,6 +8,7 @@
 #include "outputorderwatcher.h"
 
 #include <ranges>
+#include <version>
 
 #include <QScreen>
 #include <QTimer>
@@ -104,7 +105,16 @@ void OutputOrderWatcher::refresh()
 {
     Q_ASSERT(!m_orderProtocolPresent);
 
+#ifdef __cpp_lib_ranges_to_container
     QStringList pendingOutputOrder = qGuiApp->screens() | std::views::transform(&QScreen::name) | std::ranges::to<QStringList>();
+#else
+    QStringList pendingOutputOrder;
+
+    pendingOutputOrder.clear();
+    for (auto *s : qApp->screens()) {
+        pendingOutputOrder.append(s->name());
+    }
+#endif
 
     auto outputLess = [](const QString &c1, const QString &c2) {
         if (c1 == qApp->primaryScreen()->name()) {
