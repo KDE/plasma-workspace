@@ -129,7 +129,6 @@ void IconModule::ghnsEntriesChanged()
 {
     // reload the display icontheme items
     KIconTheme::reconfigure();
-    KIconLoader::global()->newIconLoader();
     load();
     QPixmapCache::clear();
 }
@@ -183,7 +182,7 @@ void IconModule::installThemeFile(const QString &path)
 
     Q_EMIT showSuccessMessage(i18n("Theme installed successfully."));
 
-    KIconLoader::global()->newIconLoader();
+    KIconTheme::reconfigure();
     m_model->load();
 }
 
