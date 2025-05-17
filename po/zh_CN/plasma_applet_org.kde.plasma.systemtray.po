@@ -223,7 +223,7 @@ msgstr "显示隐藏的图标"
 #, kde-format
 msgctxt "@info:whatsthis accessible description for popup grid"
 msgid "Grid with %1 items in %2 columns"
-msgstr ""
+msgstr "在 %2 列中显示 %1 个项目的网格"
 
 #: package/contents/ui/HiddenItemsView.qml:46
 #, kde-format
