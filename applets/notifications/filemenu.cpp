@@ -151,7 +151,8 @@ void FileMenu::open(int x, int y)
     const bool canTrash = itemProperties.isLocal() && itemProperties.supportsMoving();
     if (canTrash) {
         auto moveToTrashLambda = [this] {
-            auto handler = new KIO::WidgetsAskUserActionHandler(this);
+            // No parent since the FileMenu will be destroyed as soon as the user clicked the menu item.
+            auto handler = new KIO::WidgetsAskUserActionHandler();
             connect(handler, &KIO::WidgetsAskUserActionHandler::askUserDeleteResult, [handler](bool allow, const QList<QUrl> &urls) {
                 if (allow) {
                     auto job = KIO::trash(urls);
@@ -172,7 +173,8 @@ void FileMenu::open(int x, int y)
 
     if (itemProperties.supportsDeleting() && (!canTrash || showDeleteCommand)) {
         auto deleteLambda = [this] {
-            auto handler = new KIO::WidgetsAskUserActionHandler(this);
+            // No parent since the FileMenu will be destroyed as soon as the user clicked the menu item.
+            auto handler = new KIO::WidgetsAskUserActionHandler();
             connect(handler, &KIO::WidgetsAskUserActionHandler::askUserDeleteResult, [handler](bool allow, const QList<QUrl> &urls) {
                 if (allow) {
                     auto job = KIO::del(urls);
