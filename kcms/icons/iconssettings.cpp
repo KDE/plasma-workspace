@@ -8,7 +8,6 @@
 #include <QDebug>
 #include <QObject>
 
-#include <KBuildSycocaProgressDialog>
 #include <KIconTheme>
 #include <KSharedDataCache>
 
@@ -41,8 +40,6 @@ void IconsSettings::updateIconTheme()
         for (int i = 0; i < KIconLoader::LastGroup; i++) {
             KIconLoader::emitChange(KIconLoader::Group(i));
         }
-
-        KBuildSycocaProgressDialog::rebuildKSycoca(QApplication::activeWindow());
     }
 }
 
