@@ -44,7 +44,7 @@ PlasmaExtras.Representation {
     Connections {
         target: dialogItem.Window.window
         function onVisibleChanged() {
-            if (dialogItem.Window.window.visible) {
+            if (!dialogItem.Window.window.visible) {
                 ((stack.initialItem as Private.ClipboardMenu).view as ListView).currentIndex = 0;
                 ((stack.initialItem as Private.ClipboardMenu).view as ListView).positionViewAtBeginning();
             }
