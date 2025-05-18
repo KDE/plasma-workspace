@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-17 02:36+0000\n"
+"POT-Creation-Date: 2025-05-18 02:40+0000\n"
 "PO-Revision-Date: 2024-11-28 23:49+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -134,17 +134,17 @@ msgctxt "@action:button"
 msgid "Get New Wallpaper Images…"
 msgstr "새 배경 그림 가져오기…"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:31
+#: imagepackage/contents/ui/WallpaperDelegate.qml:32
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "포함하는 폴더 열기"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:37
+#: imagepackage/contents/ui/WallpaperDelegate.qml:38
 #, kde-format
 msgid "Restore wallpaper"
 msgstr "배경 그림 복원"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:42
+#: imagepackage/contents/ui/WallpaperDelegate.qml:43
 #, kde-format
 msgid "Remove Wallpaper"
 msgstr "배경 그림 삭제"

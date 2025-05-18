@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-17 02:36+0000\n"
+"POT-Creation-Date: 2025-05-18 02:40+0000\n"
 "PO-Revision-Date: 2024-08-30 01:12+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -138,17 +138,17 @@ msgctxt "@action:button"
 msgid "Get New Wallpaper Images…"
 msgstr "Obtener nuevas imágenes de fondo del escritorio..."
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:31
+#: imagepackage/contents/ui/WallpaperDelegate.qml:32
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Abrir la carpeta contenedora"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:37
+#: imagepackage/contents/ui/WallpaperDelegate.qml:38
 #, kde-format
 msgid "Restore wallpaper"
 msgstr "Restaurar fondo del escritorio"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:42
+#: imagepackage/contents/ui/WallpaperDelegate.qml:43
 #, kde-format
 msgid "Remove Wallpaper"
 msgstr "Eliminar fondo del escritorio"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-25 00:43+0000\n"
-"PO-Revision-Date: 2025-01-09 09:39+0400\n"
+"PO-Revision-Date: 2025-05-17 18:12+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -228,7 +228,7 @@ msgstr "بدّل المستخدم"
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
-msgstr "نَم"
+msgstr "علّق"
 
 #: systementry.cpp:209
 #, kde-format

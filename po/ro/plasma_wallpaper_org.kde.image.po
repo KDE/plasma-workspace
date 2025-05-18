@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-17 02:36+0000\n"
+"POT-Creation-Date: 2025-05-18 02:40+0000\n"
 "PO-Revision-Date: 2024-06-08 17:17+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -144,17 +144,17 @@ msgctxt "@action:button"
 msgid "Get New Wallpaper Images…"
 msgstr "Următoarea imagine de fundal"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:31
+#: imagepackage/contents/ui/WallpaperDelegate.qml:32
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Deschide dosarul conținător"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:37
+#: imagepackage/contents/ui/WallpaperDelegate.qml:38
 #, kde-format
 msgid "Restore wallpaper"
 msgstr "Restabilește tapetul"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:42
+#: imagepackage/contents/ui/WallpaperDelegate.qml:43
 #, kde-format
 msgid "Remove Wallpaper"
 msgstr "Elimină tapetul"

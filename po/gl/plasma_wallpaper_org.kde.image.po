@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-17 02:36+0000\n"
+"POT-Creation-Date: 2025-05-18 02:40+0000\n"
 "PO-Revision-Date: 2024-08-29 18:29+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -139,17 +139,17 @@ msgctxt "@action:button"
 msgid "Get New Wallpaper Images…"
 msgstr "Obter novas imaxes de fondo…"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:31
+#: imagepackage/contents/ui/WallpaperDelegate.qml:32
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Abrir o cartafol contedor…"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:37
+#: imagepackage/contents/ui/WallpaperDelegate.qml:38
 #, kde-format
 msgid "Restore wallpaper"
 msgstr "Restaurar o fondo"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:42
+#: imagepackage/contents/ui/WallpaperDelegate.qml:43
 #, kde-format
 msgid "Remove Wallpaper"
 msgstr "Retirar o fondo"
