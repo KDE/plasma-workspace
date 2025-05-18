@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-17 00:43+0000\n"
+"POT-Creation-Date: 2025-05-18 00:44+0000\n"
 "PO-Revision-Date: 2023-11-11 15:13+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -144,17 +144,17 @@ msgctxt "@action:button"
 msgid "Get New Wallpaper Images…"
 msgstr "Nasledujúci obrázok tapety"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:31
+#: imagepackage/contents/ui/WallpaperDelegate.qml:32
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Otvoriť priečinok s obsahom"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:37
+#: imagepackage/contents/ui/WallpaperDelegate.qml:38
 #, kde-format
 msgid "Restore wallpaper"
 msgstr "Obnoviť tapetu"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:42
+#: imagepackage/contents/ui/WallpaperDelegate.qml:43
 #, kde-format
 msgid "Remove Wallpaper"
 msgstr "Odstrániť tapetu"

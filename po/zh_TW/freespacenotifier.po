@@ -43,7 +43,6 @@ msgstr "剩餘空間最小到多少時開始警告使用者。"
 #. i18n: ectx: label, entry (minimumSpacePercentage), group (General)
 #: freespacenotifier.kcfg:15
 #, kde-format
-#| msgid "Minimum free space before user starts being notified."
 msgid "Minimum percentage free space before user starts being notified."
 msgstr "剩餘空間百分比最小到多少時開始警告使用者。"
 
@@ -74,7 +73,6 @@ msgstr " MiB"
 #. i18n: ectx: property (text), widget (QLabel, label_minimumSpacePercentage)
 #: freespacenotifier_prefs_base.ui:44
 #, kde-format
-#| msgid "Warn when free space is below:"
 msgid "And when free space is under:"
 msgstr "在剩餘空間低於多少時也警告使用者："
 
@@ -94,9 +92,6 @@ msgstr "系統會在磁碟空間掉到低於指定 MiB 數或可用空間的百�
 
 #: module.cpp:100
 #, kde-format
-#| msgid ""
-#| "Your Root partition is running out of disk space, you have %1 MiB "
-#| "remaining (%2%)."
 msgid ""
 "Your %1 partition is running out of disk space; %2 MiB of space remaining "
 "(%3%)."
@@ -104,9 +99,6 @@ msgstr "您的 %1 分割區磁碟空間即將用完；還剩 %2 MiB (%3%)。"
 
 #: module.cpp:102
 #, kde-format
-#| msgid ""
-#| "Your Root partition is running out of disk space, you have %1 MiB "
-#| "remaining (%2%)."
 msgid ""
 "Your Root partition is running out of disk space; %1 MiB of space remaining "
 "(%2%)."
@@ -114,9 +106,6 @@ msgstr "您的根目錄所在分割區磁碟空間即將用完；還剩 %1 MiB (
 
 #: module.cpp:104
 #, kde-format
-#| msgid ""
-#| "Your Home folder is running out of disk space, you have %1 MiB remaining "
-#| "(%2%)."
 msgid ""
 "Your Home folder is running out of disk space; %1 MiB of space remaining "
 "(%2%)."

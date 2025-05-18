@@ -101,8 +101,6 @@ msgstr "應用程式非預期關閉。"
 
 #: notifications.cpp:903
 #, kde-format
-#| msgctxt "@title"
-#| msgid "Unread Notifications"
 msgctxt "@title"
 msgid "Unread Notification"
 msgid_plural "Unread Notifications"
@@ -110,8 +108,6 @@ msgstr[0] "未讀通知"
 
 #: notifications.cpp:905
 #, kde-format
-#| msgctxt "@info"
-#| msgid "%1 notifications were received while Do Not Disturb was active."
 msgctxt "@info"
 msgid "%1 notification was received while Do Not Disturb was active."
 msgid_plural "%1 notifications were received while Do Not Disturb was active."

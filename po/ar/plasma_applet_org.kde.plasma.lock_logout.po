@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-#
 # Safa Alfulaij <safa1996alfulaij@gmail.com>, 2014, 2015.
-# SPDX-FileCopyrightText: 2021, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2024, 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-25 00:40+0000\n"
-"PO-Revision-Date: 2024-06-26 17:49+0400\n"
+"PO-Revision-Date: 2025-05-17 17:58+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -71,7 +71,7 @@ msgstr "أسبِت"
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
-msgstr "نَم"
+msgstr "علّق"
 
 #: contents/ui/data.js:6
 #, kde-format
@@ -132,7 +132,7 @@ msgstr "تخرج أو تطفئ الحاسوب أو تعيد تشغيل الحا�
 #: contents/ui/data.js:47
 #, kde-format
 msgid "Sleep (suspend to RAM)"
-msgstr "نَم (علّق إلى الذاكرة العشوائية)"
+msgstr "علّق إلى الذاكرة العشوائية"
 
 #: contents/ui/data.js:54
 #, kde-format
