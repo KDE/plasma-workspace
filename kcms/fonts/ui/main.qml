@@ -16,6 +16,20 @@ import org.kde.config // KAuthorized
 KCM.SimpleKCM {
     id: root
 
+    readonly property bool usingHugeFont: generalFontWidget.font.pointSize > 14
+        || fixedWidthFontWidget.font.pointSize > 14
+        || smallFontWidget.font.pointSize > 14
+        || toolbarFontWidget.font.pointSize > 14
+        || menuFontWidget.font.pointSize > 14
+
+    readonly property bool usingDisplayFont: [
+        generalFontWidget.font.family,
+        fixedWidthFontWidget.font.family,
+        smallFontWidget.font.family,
+        toolbarFontWidget.font.family,
+        menuFontWidget.font.family
+    ].find(a => a.includes("Display") || a.includes(i18nc("Sub-string in a font name; 'Display' as in display font — a type of font inappropriate for computer screens", "Display")))
+
     Kirigami.Action {
         id: kscreenAction
         visible: KAuthorized.authorizeControlModule("kcm_kscreen")
@@ -54,11 +68,7 @@ KCM.SimpleKCM {
             Connections {
                 target: kcm
                 function onFontsHaveChanged() {
-                    hugeFontsMessage.visible = generalFontWidget.font.pointSize > 14
-                    || fixedWidthFontWidget.font.pointSize > 14
-                    || smallFontWidget.font.pointSize > 14
-                    || toolbarFontWidget.font.pointSize > 14
-                    || menuFontWidget.font.pointSize > 14
+                    hugeFontsMessage.visible = root.usingHugeFont;
                 }
             }
 
@@ -78,11 +88,7 @@ KCM.SimpleKCM {
             Connections {
                 target: kcm
                 function onFontsHaveChanged() {
-                    displayFontsMessage.visible = [generalFontWidget.font.family,
-                                                   fixedWidthFontWidget.font.family,
-                                                   smallFontWidget.font.family,
-                                                   toolbarFontWidget.font.family,
-                                                   menuFontWidget.font.family].find(a => a.includes("Display") || a.includes(i18nc("Sub-string in a font name", "Display")));
+                    displayFontsMessage.visible = root.usingDisplayFont;
                 }
             }
         }
