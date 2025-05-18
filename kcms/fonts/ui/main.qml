@@ -47,6 +47,7 @@ KCM.SimpleKCM {
             id: hugeFontsMessage
             Layout.fillWidth: true
             position: Kirigami.InlineMessage.Position.Header
+            type: Kirigami.MessageType.Warning
             showCloseButton: true
             text: i18n("Very large fonts may produce odd-looking results. Instead of using a very large font size, consider adjusting the global screen scale.")
 
