@@ -359,7 +359,11 @@ bool WaylandOutputOrderWatcher::hasAllScreens() const
     const auto screens = qApp->screens();
     const auto screenNames = screens | std::views::transform(&QScreen::name);
     return std::ranges::all_of(std::as_const(m_pendingOutputOrder), [&screenNames](const QString &name) {
+#ifdef __cpp_lib_ranges_contains
         return std::ranges::contains(screenNames, name);
+#else
+            return std::ranges::find(screenNames, name) != screenNames.end();
+#endif
     });
 }
 
