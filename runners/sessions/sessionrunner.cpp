@@ -7,10 +7,7 @@
 
 #include "sessionrunner.h"
 
-#include <KGuiItem>
 #include <KLocalizedString>
-#include <KMessageBox>
-#include <KSharedConfig>
 
 K_PLUGIN_CLASS_WITH_JSON(SessionRunner, "plasma-runner-sessions.json")
 
