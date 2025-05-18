@@ -65,6 +65,28 @@ KCM.SimpleKCM {
         }
 
         Kirigami.InlineMessage {
+            id: displayFontsMessage
+            Layout.fillWidth: true
+            position: Kirigami.InlineMessage.Position.Header
+            type: Kirigami.MessageType.Warning
+            showCloseButton: true
+            text: xi18nc("@info", "“Display” fonts are <link url='https://wikipedia.org/wiki/Display_typeface'>not intended for use on computer displays</link>, and may produce odd results. Consider using a different font.")
+
+            onLinkActivated: (url) => Qt.openUrlExternally(url)
+
+            Connections {
+                target: kcm
+                function onFontsHaveChanged() {
+                    displayFontsMessage.visible = [generalFontWidget.font.family,
+                                                   fixedWidthFontWidget.font.family,
+                                                   smallFontWidget.font.family,
+                                                   toolbarFontWidget.font.family,
+                                                   menuFontWidget.font.family].find(a => a.includes("Display") || a.includes(i18nc("Sub-string in a font name", "Display")));
+                }
+            }
+        }
+
+        Kirigami.InlineMessage {
             id: dpiTwiddledMessage
             Layout.fillWidth: true
             position: Kirigami.InlineMessage.Position.Header
