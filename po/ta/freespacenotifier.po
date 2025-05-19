@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2021, 2023 Kishore G <kishore96@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2023, 2025 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-11 00:44+0000\n"
-"PO-Revision-Date: 2023-12-17 16:39+0530\n"
+"PO-Revision-Date: 2025-05-18 18:57+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: freespacenotifier.cpp:121
 #, kde-format
@@ -40,10 +40,9 @@ msgstr "இதைவிட குறைவாக காலியிடம் இ
 
 #. i18n: ectx: label, entry (minimumSpacePercentage), group (General)
 #: freespacenotifier.kcfg:15
-#, fuzzy, kde-format
-#| msgid "Minimum free space before user starts being notified."
+#, kde-format
 msgid "Minimum percentage free space before user starts being notified."
-msgstr "இதைவிட குறைவாக காலியிடம் இருந்தால் பயனரிடம் தெரிவிக்கப்படும்."
+msgstr "காலியிட சதவீதம் இதைவிட குறைவாக இருந்தால் பயனரிடம் தெரிவிக்கப்படும்."
 
 #. i18n: ectx: label, entry (enableNotification), group (General)
 #: freespacenotifier.kcfg:21
@@ -71,16 +70,15 @@ msgstr " MiB"
 
 #. i18n: ectx: property (text), widget (QLabel, label_minimumSpacePercentage)
 #: freespacenotifier_prefs_base.ui:44
-#, fuzzy, kde-format
-#| msgid "Warn when free space is below:"
+#, kde-format
 msgid "And when free space is under:"
-msgstr "இதைவிட குறைவாக காலியிடம் இருந்தால் எச்சரி:"
+msgstr "அல்லது இதைவிட குறைவாக காலியிடம் இருந்தால்:"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpacePercentage)
 #: freespacenotifier_prefs_base.ui:54
 #, no-c-format, kde-format
 msgid "%"
-msgstr ""
+msgstr "%"
 
 #. i18n: ectx: property (text), widget (QLabel, label_info)
 #: freespacenotifier_prefs_base.ui:67
@@ -89,36 +87,29 @@ msgid ""
 "The system will notify you if the free space drops below the specified MiB "
 "and the specified percentage of available space."
 msgstr ""
+"மீதமுள்ள காலியிடம் குறிப்பிட்ட அளவைவிடவோ சதவீதத்தைவிடவோ குறைவாக இருந்தால் உங்களுக்கு "
+"அறிவிப்பு காட்டப்படும்."
 
 #: module.cpp:100
-#, fuzzy, kde-format
-#| msgid ""
-#| "Your Root partition is running out of disk space, you have %1 MiB "
-#| "remaining (%2%)."
+#, kde-format
 msgid ""
 "Your %1 partition is running out of disk space; %2 MiB of space remaining "
 "(%3%)."
-msgstr "உங்கள் ரூட் அடைவில் இடம் குறைவாக உள்ளது, %1 MiB மீதி உள்ளது (%2%)."
+msgstr "உங்கள் %1 வகிர்வில் இடம் குறைவாக உள்ளது; %2 MiB மீதி உள்ளது (%3%)."
 
 #: module.cpp:102
-#, fuzzy, kde-format
-#| msgid ""
-#| "Your Root partition is running out of disk space, you have %1 MiB "
-#| "remaining (%2%)."
+#, kde-format
 msgid ""
 "Your Root partition is running out of disk space; %1 MiB of space remaining "
 "(%2%)."
-msgstr "உங்கள் ரூட் அடைவில் இடம் குறைவாக உள்ளது, %1 MiB மீதி உள்ளது (%2%)."
+msgstr "உங்கள் ரூட் அடைவில் இடம் குறைவாக உள்ளது; %1 MiB மீதி உள்ளது (%2%)."
 
 #: module.cpp:104
-#, fuzzy, kde-format
-#| msgid ""
-#| "Your Home folder is running out of disk space, you have %1 MiB remaining "
-#| "(%2%)."
+#, kde-format
 msgid ""
 "Your Home folder is running out of disk space; %1 MiB of space remaining "
 "(%2%)."
-msgstr "உங்கள் முகப்பு அடைவில் இடம் குறைவாக உள்ளது, %1 MiB மீதி உள்ளது (%2%)."
+msgstr "உங்கள் முகப்பு அடைவில் இடம் குறைவாக உள்ளது; %1 MiB மீதி உள்ளது (%2%)."
 
 #: module.cpp:129
 #, kde-format
