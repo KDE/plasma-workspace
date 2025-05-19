@@ -187,11 +187,11 @@ void SessionsModel::reload()
     }
 }
 
-void SessionsModel::checkScreenLocked(const std::function<void(bool)> &cb)
+void SessionsModel::checkScreenLocked(std::function<void(bool)> &&cb)
 {
     auto reply = m_screensaverInterface->GetActive();
     QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(reply, this);
-    QObject::connect(watcher, &QDBusPendingCallWatcher::finished, this, [cb](QDBusPendingCallWatcher *watcher) {
+    QObject::connect(watcher, &QDBusPendingCallWatcher::finished, this, [cb = std::move(cb)](QDBusPendingCallWatcher *watcher) {
         QDBusPendingReply<bool> reply = *watcher;
         if (!reply.isError()) {
             cb(reply.value());
