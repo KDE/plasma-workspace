@@ -448,9 +448,16 @@ class NotificationsTest(unittest.TestCase):
         })
         self.driver.find_element(AppiumBy.XPATH, "//notification[@name='CriticalInDndMode']")
 
+        # Disable DND & verify only the summary is shown
         dnd_button.click()
         self.driver.find_element(AppiumBy.XPATH, "//notification[@name='Unread Notifications' and @description='2 notifications were received while Do Not Disturb was active.  from Notification Manager']")
         self.driver.find_element(AppiumBy.XPATH, "//button[@name='Close' and contains(@accessibility-id, 'NotificationPopup')]").click()
+
+        # Toggle DND on/off again, and verify the summary is not shown for the same notifications
+        dnd_button.click()
+        dnd_button.click()
+        self.assertRaises((NoSuchElementException, WebDriverException), self.driver.find_element, AppiumBy.XPATH, f"//notification[starts-with(@name, '{summary}')]")
+        self.assertRaises((NoSuchElementException, WebDriverException), self.driver.find_element, AppiumBy.XPATH, "//notification[@name='Unread Notifications' and @description='2 notifications were received while Do Not Disturb was active.  from Notification Manager']")
 
         # Notifications can only be cleared after they are expired, otherwise they will stay in the list
         self.driver.find_element(AppiumBy.NAME, "Clear All Notifications").click()
