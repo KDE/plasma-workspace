@@ -91,7 +91,7 @@ Q_SIGNALS:
     void aboutToLockScreen();
 
 private:
-    void checkScreenLocked(const std::function<void(bool)> &cb);
+    void checkScreenLocked(std::function<void(bool)> &&cb);
 
     KDisplayManager m_displayManager;
 
