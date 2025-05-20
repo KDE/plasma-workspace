@@ -1,7 +1,7 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024 Alexander Yavorsky <kekcuha@gmail.com>
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024, 2025 Alexander Yavorsky <kekcuha@gmail.com>
 # Alexander Potashev <aspotashev@gmail.com>, 2020.
 # Дронова Ю <juliette.tux@gmail.com>, 2020.
 # Alexander Yavorsky <kekcuha@gmail.com>, 2024, 2025.
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-23 00:44+0000\n"
-"PO-Revision-Date: 2025-02-13 11:42+0300\n"
+"PO-Revision-Date: 2025-05-18 21:34+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.08.3\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: src/fingerprintmodel.cpp:145 src/fingerprintmodel.cpp:229
 #, kde-format
@@ -544,13 +544,13 @@ msgstr "Замещающий значок аватара пользовател�
 msgctxt "@title:window"
 msgid "Delete Logged-In User Without Deleting Files?"
 msgstr ""
+"Удалить пользователя, выполнившего вход в систему, не удаляя его файлы?"
 
 #: src/ui/UserDetailsPage.qml:115
-#, fuzzy, kde-format
-#| msgid "Delete User…"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User?"
-msgstr "Удалить пользователя..."
+msgstr "Удалить пользователя, выполнившего вход в систему?"
 
 #: src/ui/UserDetailsPage.qml:117
 #, kde-kuit-format
@@ -560,6 +560,11 @@ msgid ""
 "account instead?<nl/><nl/>This will make %1 unable to log in again, and they "
 "may experience strange behaviors until they log out."
 msgstr ""
+"Пользователь %1 в настоящее время выполнил вход в систему, поэтому файлы "
+"этого пользователя не могут быть удалены. Выполнить удаление только учётной "
+"записи этого пользователя?<nl/><nl/> Это приведёт к невозможности повторно "
+"войти в систему этому пользователю и может привести к неожиданному поведению "
+"до его выхода из системы."
 
 #: src/ui/UserDetailsPage.qml:118
 #, kde-format
@@ -568,13 +573,15 @@ msgid ""
 "%1 is currently logged in. Deleting the account will make them unable to log "
 "in again, and they may experience strange behaviors until they log out."
 msgstr ""
+"Пользователь %1 в настоящее время выполнил вход в систему. Удаление учётной "
+"записи приведёт к невозможности повторно войти в систему этому пользователю "
+"и может привести к неожиданному поведению до его выхода из системы."
 
 #: src/ui/UserDetailsPage.qml:125
-#, fuzzy, kde-format
-#| msgid "Delete files"
+#, kde-format
 msgctxt "@action: button"
 msgid "Delete %1"
-msgstr "Удалить файлы"
+msgstr "Удалить %1"
 
 #: src/ui/UserDetailsPage.qml:144
 #, kde-format
