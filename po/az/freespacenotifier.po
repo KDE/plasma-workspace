@@ -1,21 +1,22 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Xəyyam Qocayev <xxmn77@gmail.com>, 2020, 2021.
+# SPDX-FileCopyrightText: 2025 X əyyam
+# SPDX-FileCopyrightText: 2025 linux <xxmn77@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-11 00:44+0000\n"
-"PO-Revision-Date: 2021-05-28 19:19+0400\n"
-"Last-Translator: Kheyyam Gojayev <xxmn77@gmail.com>\n"
+"PO-Revision-Date: 2025-05-19 16:34+0400\n"
+"Last-Translator: linux <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.04.1\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: freespacenotifier.cpp:121
 #, kde-format
@@ -40,8 +41,7 @@ msgstr "Xəbərdarlıqdan əvvəl diskin boş sahəsinin minimal həcmi."
 
 #. i18n: ectx: label, entry (minimumSpacePercentage), group (General)
 #: freespacenotifier.kcfg:15
-#, fuzzy, kde-format
-#| msgid "Minimum free space before user starts being notified."
+#, kde-format
 msgid "Minimum percentage free space before user starts being notified."
 msgstr "Xəbərdarlıqdan əvvəl diskin boş sahəsinin minimal həcmi."
 
@@ -71,16 +71,15 @@ msgstr " MiB"
 
 #. i18n: ectx: property (text), widget (QLabel, label_minimumSpacePercentage)
 #: freespacenotifier_prefs_base.ui:44
-#, fuzzy, kde-format
-#| msgid "Warn when free space is below:"
+#, kde-format
 msgid "And when free space is under:"
-msgstr "Xəbərdarlıq ediləcək yer çatışmamazlığı səviyyəsi:"
+msgstr "Diskdəki boş yer bu ölçüdən az olduqda:"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpacePercentage)
 #: freespacenotifier_prefs_base.ui:54
 #, no-c-format, kde-format
 msgid "%"
-msgstr ""
+msgstr "%"
 
 #. i18n: ectx: property (text), widget (QLabel, label_info)
 #: freespacenotifier_prefs_base.ui:67
@@ -89,36 +88,32 @@ msgid ""
 "The system will notify you if the free space drops below the specified MiB "
 "and the specified percentage of available space."
 msgstr ""
+"Əgər boş disk sahəsini MiB və faiz ilə göstərilmiş ölçüdən aşağı düşərsə "
+"sistem sizi xəbərdar edəcək."
 
 #: module.cpp:100
-#, fuzzy, kde-format
-#| msgid ""
-#| "Your Root partition is running out of disk space, you have %1 MiB "
-#| "remaining (%2%)."
+#, kde-format
 msgid ""
 "Your %1 partition is running out of disk space; %2 MiB of space remaining "
 "(%3%)."
-msgstr "Diskin kök (root) bölməsində boş yer bitmək üzrədir, %1 MiB qalır (%2)"
+msgstr ""
+"%1 bölməsində boş disk sahəsi tükənir; hazırkı boş disk sahəsi: %2 MiB (%3)."
 
 #: module.cpp:102
-#, fuzzy, kde-format
-#| msgid ""
-#| "Your Root partition is running out of disk space, you have %1 MiB "
-#| "remaining (%2%)."
+#, kde-format
 msgid ""
 "Your Root partition is running out of disk space; %1 MiB of space remaining "
 "(%2%)."
-msgstr "Diskin kök (root) bölməsində boş yer bitmək üzrədir, %1 MiB qalır (%2)"
+msgstr ""
+"Kök (root) qovluöunda boş disk sahəsi tükınmək üzrədir; qalan boş disk "
+"sahəsi: %1 MiB (%2)."
 
 #: module.cpp:104
-#, fuzzy, kde-format
-#| msgid ""
-#| "Your Home folder is running out of disk space, you have %1 MiB remaining "
-#| "(%2%)."
+#, kde-format
 msgid ""
 "Your Home folder is running out of disk space; %1 MiB of space remaining "
 "(%2%)."
-msgstr "Ev qovluğunda diskin boş sahəsi bitmək üzrədir, %1 MiB qalır (%2)"
+msgstr "Ev qovluğunda diskin boş sahəsi tükənir, qalan boş sahə: %1 MiB (%2)."
 
 #: module.cpp:129
 #, kde-format
