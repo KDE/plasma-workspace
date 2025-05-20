@@ -22,6 +22,7 @@ class PlasmoidRegistry;
 class PlasmoidModel;
 class SystemTraySettings;
 class StatusNotifierModel;
+class BackgroundAppsModel;
 class SystemTrayModel;
 class SortedSystemTrayModel;
 class KJob;
@@ -54,6 +55,16 @@ public:
      * Shows the context menu for a statusnotifieritem
      */
     Q_INVOKABLE void showStatusNotifierContextMenu(KJob *job, QQuickItem *statusNotifierIcon);
+
+    /**
+     * Activate a background app
+     */
+    Q_INVOKABLE void activateBackgroundApp(const QString &appId, const QString &instanceId);
+
+    /**
+     * Terminate a background app
+     */
+    Q_INVOKABLE void terminateBackgroundApp(const QString &appId, const QString &instanceId);
 
     /**
      * Find out global coordinates for a popup given local MouseArea
@@ -95,6 +106,7 @@ private:
 
     PlasmoidModel *m_plasmoidModel = nullptr;
     StatusNotifierModel *m_statusNotifierModel = nullptr;
+    BackgroundAppsModel *m_backgroundAppsModel = nullptr;
     SystemTrayModel *m_systemTrayModel = nullptr;
     SortedSystemTrayModel *m_sortedSystemTrayModel = nullptr;
     SortedSystemTrayModel *m_configSystemTrayModel = nullptr;

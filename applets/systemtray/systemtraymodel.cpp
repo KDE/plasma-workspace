@@ -13,10 +13,15 @@
 #include "systemtraysettings.h"
 
 #include <KLocalizedString>
+#include <KService>
 #include <Plasma/Applet>
 #include <Plasma5Support/DataContainer>
 #include <PlasmaQuick/AppletQuickItem>
 
+#include <QDBusConnection>
+#include <QDBusInterface>
+#include <QDBusPendingReply>
+#include <QDBusVariant>
 #include <QIcon>
 #include <QQuickItem>
 
@@ -454,6 +459,201 @@ void StatusNotifierModel::init()
     for (const QStringList services = m_sniHost->services(); const QString &service : services) {
         addSource(service);
     }
+}
+
+const QString DBUS_SERVICE_BACKGROUNDAPPS(QLatin1String("org.freedesktop.background.Monitor"));
+const QString DBUS_PATH_BACKGROUNDAPPS(QLatin1String("/org/freedesktop/background/monitor"));
+const QString DBUS_INTERFACE_BACKGROUNDAPPS(QLatin1String("org.freedesktop.background.Monitor"));
+const QString DBUS_PROPERTY_NAME_BACKGROUNDAPPS(QLatin1String("BackgroundApps"));
+const QString DBUS_INTERFACE_FDO_DBUS_PROPERTIES(QLatin1String("org.freedesktop.DBus.Properties"));
+const QString DBUS_INTERFACE_FDO_APPLICATION(QLatin1String("org.freedesktop.Application"));
+
+BackgroundAppsModel::BackgroundAppsModel(QPointer<SystemTraySettings> settings, QObject *parent)
+    : BaseModel(settings, parent)
+{
+    auto dbusInterface =
+        new QDBusInterface(DBUS_SERVICE_BACKGROUNDAPPS, DBUS_PATH_BACKGROUNDAPPS, DBUS_INTERFACE_FDO_DBUS_PROPERTIES, QDBusConnection::sessionBus(), this);
+    QDBusPendingCall pcall = dbusInterface->asyncCall(QLatin1String("Get"), DBUS_INTERFACE_BACKGROUNDAPPS, DBUS_PROPERTY_NAME_BACKGROUNDAPPS);
+    auto watcher = new QDBusPendingCallWatcher(pcall, this);
+    connect(watcher, &QDBusPendingCallWatcher::finished, this, [this, dbusInterface](QDBusPendingCallWatcher *w) {
+        QDBusPendingReply<QVariant> reply(*w);
+        if (reply.isError()) {
+            qCWarning(SYSTEM_TRAY) << "Failed to get background apps:" << reply.error().message();
+        } else {
+            auto dbusReply = qdbus_cast<QList<QVariantMap>>(reply.value());
+            updateApps(dbusReply);
+        }
+        w->deleteLater();
+        dbusInterface->deleteLater();
+    });
+
+    QDBusConnection::sessionBus().connect(DBUS_SERVICE_BACKGROUNDAPPS,
+                                          DBUS_PATH_BACKGROUNDAPPS,
+                                          DBUS_INTERFACE_FDO_DBUS_PROPERTIES,
+                                          QLatin1String("PropertiesChanged"),
+                                          this,
+                                          SLOT(dbusPropertiesChanged(QString, QVariantMap, QStringList)));
+}
+
+QVariant BackgroundAppsModel::data(const QModelIndex &index, int role) const
+{
+    if (!checkIndex(index, CheckIndexOption::IndexIsValid)) {
+        return QVariant();
+    }
+
+    const BackgroundAppsModel::Item &item = m_items[index.row()];
+
+    if (role <= Qt::UserRole) {
+        switch (role) {
+        case Qt::DisplayRole:
+            return item.name;
+        case Qt::DecorationRole:
+            return item.icon;
+        default:
+            return QVariant();
+        }
+    }
+
+    if (role < static_cast<int>(Role::InstanceId)) {
+        switch (static_cast<BaseRole>(role)) {
+        case BaseRole::ItemType:
+            return QStringLiteral("BackgroundApp");
+        case BaseRole::ItemId:
+            return item.appId;
+        case BaseRole::CanRender:
+            return true;
+        case BaseRole::Category: {
+            return QStringLiteral("BackgroundApp");
+        }
+        case BaseRole::Status:
+            return Plasma::Types::ItemStatus::PassiveStatus;
+        case BaseRole::EffectiveStatus:
+            return calculateEffectiveStatus(true, Plasma::Types::ItemStatus::PassiveStatus, item.appId);
+        default:
+            return QVariant();
+        }
+    }
+
+    switch (static_cast<Role>(role)) {
+    case Role::InstanceId:
+        return item.instanceId;
+    case Role::AppId:
+        return item.appId;
+    case Role::AppName:
+        return item.name;
+    case Role::AppIcon:
+        return item.icon;
+    case Role::Message:
+        return item.message;
+    default:
+        return QVariant();
+    }
+}
+
+int BackgroundAppsModel::rowCount(const QModelIndex &parent) const
+{
+    return parent.isValid() ? 0 : m_items.size();
+}
+
+QHash<int, QByteArray> BackgroundAppsModel::roleNames() const
+{
+    QHash<int, QByteArray> roles = BaseModel::roleNames();
+
+    roles.insert(static_cast<int>(Role::InstanceId), QByteArrayLiteral("instanceId"));
+    roles.insert(static_cast<int>(Role::AppId), QByteArrayLiteral("appId"));
+    roles.insert(static_cast<int>(Role::AppName), QByteArrayLiteral("appName"));
+    roles.insert(static_cast<int>(Role::AppIcon), QByteArrayLiteral("appIcon"));
+    roles.insert(static_cast<int>(Role::Message), QByteArrayLiteral("message"));
+
+    return roles;
+}
+
+void BackgroundAppsModel::dbusPropertiesChanged(const QString &interfaceName, const QVariantMap &properties, const QStringList &invalidatedProperties)
+{
+    Q_UNUSED(invalidatedProperties);
+    if (interfaceName != DBUS_INTERFACE_BACKGROUNDAPPS) {
+        return;
+    }
+    auto it = properties.find(DBUS_PROPERTY_NAME_BACKGROUNDAPPS);
+    if (it != properties.constEnd()) {
+        auto dbusReply = qdbus_cast<QList<QVariantMap>>(it.value());
+        updateApps(dbusReply);
+    }
+}
+
+void BackgroundAppsModel::updateApps(const QList<QVariantMap> &apps)
+{
+    beginRemoveRows(QModelIndex(), 0, m_items.count() - 1);
+    m_items.clear();
+    endRemoveRows();
+    beginInsertRows(QModelIndex(), 0, apps.count() - 1);
+    m_items.reserve(apps.count());
+    for (const QVariantMap &appMap : apps) {
+        Item a;
+        a.appId = appMap.value(QStringLiteral("app_id")).toString();
+        a.instanceId = appMap.value(QStringLiteral("instance")).toString();
+        a.message = appMap.value(QStringLiteral("message")).toString();
+        auto servicePtr = KService::serviceByDesktopName(a.appId);
+        if (servicePtr) {
+            a.name = servicePtr->name();
+            a.icon = servicePtr->icon();
+        }
+        m_items.append(a);
+    }
+    endInsertRows();
+}
+
+static QString appIdToDBusPath(const QString &appId)
+{
+    QString dbusPath = appId;
+    dbusPath.replace(QLatin1Char('.'), QLatin1Char('/')).replace(QLatin1Char('-'), QLatin1Char('_'));
+    dbusPath = QStringLiteral("/") + dbusPath;
+    return dbusPath;
+}
+
+void BackgroundAppsModel::activateApp(const QString &appId, const QString &instanceId)
+{
+    Q_UNUSED(instanceId);
+    auto dbusInterface = new QDBusInterface(appId, appIdToDBusPath(appId), DBUS_INTERFACE_FDO_APPLICATION, QDBusConnection::sessionBus(), this);
+    QDBusPendingCall pcall = dbusInterface->asyncCall(QLatin1String("Activate"), QVariantMap());
+    auto watcher = new QDBusPendingCallWatcher(pcall, this);
+    connect(watcher, &QDBusPendingCallWatcher::finished, this, [dbusInterface](QDBusPendingCallWatcher *w) {
+        QDBusPendingReply reply(*w);
+        if (reply.isError()) {
+            qCWarning(SYSTEM_TRAY) << "Failed to activate background apps via dbus:" << reply.error().message();
+        }
+
+        w->deleteLater();
+        dbusInterface->deleteLater();
+    });
+}
+
+void BackgroundAppsModel::terminateApp(const QString &appId, const QString &instanceId)
+{
+    auto dbusInterface = new QDBusInterface(appId, appIdToDBusPath(appId), DBUS_INTERFACE_FDO_APPLICATION, QDBusConnection::sessionBus(), this);
+    QDBusPendingCall pcall = dbusInterface->asyncCall(QLatin1String("ActivateAction"), QLatin1String("quit"), QList<QVariant>(), QVariantMap());
+    auto watcher = new QDBusPendingCallWatcher(pcall, this);
+    connect(watcher, &QDBusPendingCallWatcher::finished, this, [this, dbusInterface, instanceId](QDBusPendingCallWatcher *w) {
+        QDBusPendingReply reply(*w);
+        if (reply.isError()) {
+            qCWarning(SYSTEM_TRAY) << "Failed to terminate background apps via dbus:" << reply.error().message();
+        } else {
+            // Immediately remove the app from the model. Otherwise there could be a delay of several seconds
+            // before DBus emits the change signal of the BackgrouproundApps property, and the user might
+            // think the quit action failed.
+            for (int i = 0; i < m_items.count(); ++i) {
+                if (m_items[i].instanceId == instanceId) {
+                    beginRemoveRows(QModelIndex(), i, i);
+                    m_items.removeAt(i);
+                    endRemoveRows();
+                    break;
+                }
+            }
+        }
+
+        w->deleteLater();
+        dbusInterface->deleteLater();
+    });
 }
 
 SystemTrayModel::SystemTrayModel(QObject *parent)

@@ -307,6 +307,16 @@ void SystemTray::showStatusNotifierContextMenu(KJob *job, QQuickItem *statusNoti
     }
 }
 
+void SystemTray::activateBackgroundApp(const QString &appId, const QString &instanceId)
+{
+    m_backgroundAppsModel->activateApp(appId, instanceId);
+}
+
+void SystemTray::terminateBackgroundApp(const QString &appId, const QString &instanceId)
+{
+    m_backgroundAppsModel->terminateApp(appId, instanceId);
+}
+
 QPointF SystemTray::popupPosition(QQuickItem *visualParent, int x, int y)
 {
     if (!visualParent) {
@@ -377,8 +387,11 @@ SystemTrayModel *SystemTray::systemTrayModel()
 
         m_statusNotifierModel = new StatusNotifierModel(m_settings, m_systemTrayModel);
 
+        m_backgroundAppsModel = new BackgroundAppsModel(m_settings, m_systemTrayModel);
+
         m_systemTrayModel->addSourceModel(m_plasmoidModel);
         m_systemTrayModel->addSourceModel(m_statusNotifierModel);
+        m_systemTrayModel->addSourceModel(m_backgroundAppsModel);
     }
 
     return m_systemTrayModel;

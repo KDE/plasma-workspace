@@ -44,6 +44,7 @@ target_link_libraries(systemtray_static
         KF6::IconThemes
         KF6::I18n
         KF6::ItemModels
+        KF6::Service
         KF6::WindowSystem
         KF6::XmlGui
         Plasma::Plasma

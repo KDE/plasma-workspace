@@ -157,6 +157,49 @@ private:
 Q_DECLARE_TYPEINFO(StatusNotifierModel::Item, Q_RELOCATABLE_TYPE);
 
 /**
+ * @brief Data model for XDG Portal Background Apps.
+ */
+class BackgroundAppsModel : public BaseModel
+{
+    Q_OBJECT
+    QML_ELEMENT
+
+public:
+    enum class Role {
+        InstanceId = static_cast<int>(BaseModel::BaseRole::LastBaseRole) + 200,
+        AppId,
+        AppName,
+        AppIcon,
+        Message,
+    };
+
+    explicit BackgroundAppsModel(QPointer<SystemTraySettings> settings, QObject *parent = nullptr);
+
+    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
+    int rowCount(const QModelIndex &parent = QModelIndex()) const override;
+    QHash<int, QByteArray> roleNames() const override;
+
+    void activateApp(const QString &appId, const QString &instanceId);
+    void terminateApp(const QString &appId, const QString &instanceId);
+
+    struct Item {
+        QString instanceId;
+        QString appId;
+        QString name;
+        QString icon;
+        QString message;
+    };
+
+private Q_SLOTS:
+    void dbusPropertiesChanged(const QString &interfaceName, const QVariantMap &properties, const QStringList &invalidatedProperties);
+
+private:
+    void updateApps(const QList<QVariantMap> &apps);
+
+    QList<Item> m_items;
+};
+
+/**
  * @brief Cantenating model for system tray, that can expose multiple data models as one.
  */
 class SystemTrayModel : public QConcatenateTablesProxyModel

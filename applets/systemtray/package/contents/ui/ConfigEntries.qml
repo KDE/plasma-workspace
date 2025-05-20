@@ -107,6 +107,8 @@ KCMUtils.ScrollViewKCM {
         switch (category) {
         case "ApplicationStatus":
             return i18n("Application Status")
+        case "BackgroundApp":
+            return i18n("Background Application")
         case "Communications":
             return i18n("Communications")
         case "SystemServices":
@@ -250,6 +252,7 @@ KCMUtils.ScrollViewKCM {
             down: false
 
             readonly property bool isPlasmoid: model.itemType === "Plasmoid"
+            readonly property bool isSNI: model.itemType === "StatusNotifier"
 
             contentItem: FocusScope {
                 implicitHeight: childrenRect.height
@@ -323,10 +326,10 @@ KCMUtils.ScrollViewKCM {
 
                         onActivated: index => {
                             if (currentValue !== originalVisibility) {
-                                if (currentValue === "disabled" && !isPlasmoid) {
+                                if (currentValue === "disabled" && isSNI) {
                                     disablingSniMessage.showWithAppName(nameLabel.text)
                                 }
-                                iconsPage.changedVisibility.set(itemId, currentValue + (isPlasmoid ? "" : "-sni"))
+                                iconsPage.changedVisibility.set(itemId, currentValue + (isSNI ? "-sni" : ""))
                             } else {
                                 iconsPage.changedVisibility.delete(itemId)
                             }
