@@ -119,6 +119,8 @@ BaseDelegate {
     }
 
     KQuickControlsAddons.MouseEventListener {
+        // Base layout intentionally has no row spacing, so add top padding here when needed
+        Layout.topMargin: summary.visible ? 0 : Kirigami.Units.smallSpacing
         Layout.fillWidth: true
         Layout.fillHeight: true
         Layout.row: summary.visible ? 3 : 2
