@@ -892,6 +892,10 @@ void Notifications::showInhibitionSummary(Urgency urgency, const QStringList &bl
                 continue;
             }
         }
+        // Remove WasAddedDuringInhibitionRole so we don't notify about this multiple times, e.g. when user leaves DND again.
+        d->notificationsAndJobsModel->setData(idx, false, Notifications::WasAddedDuringInhibitionRole);
+        // Set expired so the individual notifications don't pop up, only the summary does - but they still show up in the history.
+        d->notificationsAndJobsModel->setData(idx, true, Notifications::ExpiredRole);
         ++inhibited;
     }
 
