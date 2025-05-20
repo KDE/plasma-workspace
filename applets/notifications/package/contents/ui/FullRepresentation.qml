@@ -48,6 +48,10 @@ PlasmaExtras.Representation {
             if (root.expanded) {
                 list.positionViewAtBeginning();
                 list.currentIndex = -1;
+                for (let i = 0; i < historyModel.count; i++)  {
+                    let rowIdx = historyModel.index(i, 0);
+                    historyModel.setData(rowIdx, true, NotificationManager.Notifications.ReadRole);
+                }
             }
         }
     }
