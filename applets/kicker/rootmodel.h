@@ -109,6 +109,7 @@ protected Q_SLOTS:
 
 private:
     void refreshNewlyInstalledApps();
+    void cleanupNewlyInstalledApps();
 
     KAStatsFavoritesModel *m_favorites;
     SystemModel *m_systemModel;
@@ -123,6 +124,7 @@ private:
 
     bool m_highlightNewlyInstalledApps;
     QTimer *m_refreshNewlyInstalledAppsTimer;
+    QTimer *m_cleanupNewlyInstalledAppsTimer;
 
     RecentUsageModel *m_recentAppsModel;
     RecentUsageModel *m_recentDocsModel;

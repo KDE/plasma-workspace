@@ -471,13 +471,13 @@ void RootModel::refresh()
 
         stateConfig->group(QString()).writeEntry(QStringLiteral("InstalledApps"), installedApps);
 
-        // Clear apps that have been uninstalled before the highlight period was over.
-        const QStringList newlyInstalledApps = applicationsGroup.groupList();
-        for (const QString &appId : newlyInstalledApps) {
-            if (!installedApps.contains(appId)) {
-                applicationsGroup.deleteGroup(appId);
-            }
+        if (!m_cleanupNewlyInstalledAppsTimer) {
+            m_cleanupNewlyInstalledAppsTimer = new QTimer(this);
+            m_cleanupNewlyInstalledAppsTimer->setInterval(60 * 1000); // 1 min
+            m_cleanupNewlyInstalledAppsTimer->setSingleShot(true);
+            m_cleanupNewlyInstalledAppsTimer->callOnTimeout(this, &RootModel::cleanupNewlyInstalledApps);
         }
+        m_cleanupNewlyInstalledAppsTimer->start();
     }
 
     if (hasNewlyInstalledApp) {
@@ -603,6 +603,46 @@ void RootModel::refreshNewlyInstalledApps()
     if (!hasNewlyInstalledApp) {
         qCDebug(KICKER_DEBUG) << "Stopping periodic newly installed apps check";
         m_refreshNewlyInstalledAppsTimer->stop();
+    }
+}
+
+void RootModel::cleanupNewlyInstalledApps()
+{
+    qCDebug(KICKER_DEBUG) << "Cleaning up any uninstalled newly installed apps";
+    Q_ASSERT(m_highlightNewlyInstalledApps);
+
+    KSharedConfig::Ptr stateConfig = Kicker::stateConfig();
+    KConfigGroup applicationsGroup = stateConfig->group(QStringLiteral("Application"));
+
+    QStringList installedApps;
+
+    std::function<void(AbstractEntry *)> processEntry = [&](AbstractEntry *entry) {
+        if (entry->type() == AbstractEntry::RunnableType) {
+            AppEntry *appEntry = static_cast<AppEntry *>(entry);
+
+            const QString appId = appEntry->id();
+            installedApps.append(appId);
+        } else if (entry->type() == AbstractEntry::GroupType) {
+            GroupEntry *groupEntry = static_cast<GroupEntry *>(entry);
+            if (AbstractModel *model = groupEntry->childModel()) {
+                for (int i = 0; i < model->count(); ++i) {
+                    if (auto *entry = static_cast<AbstractEntry *>(model->index(i, 0).internalPointer())) {
+                        processEntry(entry);
+                    }
+                }
+            }
+        }
+    };
+
+    for (AbstractEntry *entry : std::as_const(m_entryList)) {
+        processEntry(entry);
+    }
+
+    const QStringList newlyInstalledApps = applicationsGroup.groupList();
+    for (const QString &appId : newlyInstalledApps) {
+        if (!installedApps.contains(appId)) {
+            applicationsGroup.deleteGroup(appId);
+        }
     }
 }
 
