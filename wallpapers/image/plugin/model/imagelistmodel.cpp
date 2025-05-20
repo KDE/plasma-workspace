@@ -70,18 +70,6 @@ QVariant ImageListModel::data(const QModelIndex &index, int role) const
         return QString();
     }
 
-    case ResolutionRole: {
-        QSize *size = m_imageSizeCache.object(m_data.at(row));
-
-        if (size && size->isValid()) {
-            return QStringLiteral("%1x%2").arg(size->width()).arg(size->height());
-        }
-
-        asyncGetMediaMetadata(m_data.at(row), QPersistentModelIndex(index));
-
-        return QString();
-    }
-
     case PathRole:
         return QUrl::fromLocalFile(m_data.at(row));
 

@@ -100,12 +100,6 @@ void PackageListModelTest::testPackageListModelData()
 
     QCOMPARE(idx.data(ImageRoles::AuthorRole).toString(), QStringLiteral("Ken Vermette"));
 
-    QCOMPARE(idx.data(ImageRoles::ResolutionRole).toString(), QString());
-    m_dataSpy->wait();
-    QCOMPARE(m_dataSpy->size(), 1);
-    QCOMPARE(m_dataSpy->takeFirst().at(2).value<QList<int>>().at(0), ImageRoles::ResolutionRole);
-    QCOMPARE(idx.data(ImageRoles::ResolutionRole).toString(), QStringLiteral("1920x1080"));
-
     QCOMPARE(idx.data(ImageRoles::PathRole).toUrl().toLocalFile(),
              m_packagePaths.at(1) + QDir::separator() + u"contents" + QDir::separator() + u"images" + QDir::separator() + u"1920x1080.jpg");
     QCOMPARE(idx.data(ImageRoles::PackageNameRole).toString(), m_packagePaths.at(1) + QDir::separator());

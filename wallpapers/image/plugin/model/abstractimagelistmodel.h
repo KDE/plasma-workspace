@@ -71,7 +71,6 @@ protected:
 
     QCache<QString, QString /* title */> m_backgroundTitleCache;
     QCache<QString, QString /* author */> m_backgroundAuthorCache;
-    QCache<QString, QSize> m_imageSizeCache;
 
     mutable QHash<QString, QPersistentModelIndex> m_sizeJobsUrls;
 

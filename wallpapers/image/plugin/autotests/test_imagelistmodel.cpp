@@ -105,25 +105,20 @@ void ImageListModelTest::testImageListModelData()
 
     // Should return the complete base name for wallpaper.jpg.jpg
     QCOMPARE(idx.data(Qt::DisplayRole).toString(), QStringLiteral("wallpaper.jpg"));
-    m_dataSpy->wait();
 #if HAVE_KExiv2
     m_dataSpy->wait();
     m_dataSpy->wait();
-    QCOMPARE(m_dataSpy->size(), 3);
+    QCOMPARE(m_dataSpy->size(), 2);
     QCOMPARE(m_dataSpy->takeFirst().at(2).value<QList<int>>().at(0), Qt::DisplayRole);
     QCOMPARE(idx.data(Qt::DisplayRole).toString(), QStringLiteral("DocumentName"));
     QCOMPARE(m_dataSpy->takeFirst().at(2).value<QList<int>>().at(0), ImageRoles::AuthorRole);
 #endif
-    QCOMPARE(m_dataSpy->size(), 1);
-    QCOMPARE(m_dataSpy->takeFirst().at(2).value<QList<int>>().at(0), ImageRoles::ResolutionRole);
 
 #if HAVE_KExiv2
     QCOMPARE(idx.data(ImageRoles::AuthorRole).toString(), QStringLiteral("KDE Community"));
 #else
     QCOMPARE(idx.data(ImageRoles::AuthorRole).toString(), QString());
 #endif
-
-    QCOMPARE(idx.data(ImageRoles::ResolutionRole).toString(), QStringLiteral("15x16"));
 
     QCOMPARE(idx.data(ImageRoles::PathRole).toUrl(), QUrl::fromLocalFile(m_wallpaperPaths.at(0)));
     QCOMPARE(idx.data(ImageRoles::PackageNameRole).toString(), m_wallpaperPaths.at(0));

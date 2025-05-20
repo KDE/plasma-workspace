@@ -14,7 +14,6 @@ public:
     enum RoleType {
         AuthorRole = Qt::UserRole,
         PreviewRole,
-        ResolutionRole,
         PathRole,
         PackageNameRole,
         RemovableRole,

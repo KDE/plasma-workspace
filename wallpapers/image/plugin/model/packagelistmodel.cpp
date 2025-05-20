@@ -64,20 +64,6 @@ QVariant PackageListModel::data(const QModelIndex &index, int role) const
         return QString();
     }
 
-    case ResolutionRole: {
-        const QString path = b.filePath("preferred");
-
-        QSize *size = m_imageSizeCache.object(path);
-
-        if (size && size->isValid()) {
-            return QStringLiteral("%1x%2").arg(size->width()).arg(size->height());
-        }
-
-        asyncGetMediaMetadata(path, QPersistentModelIndex(index));
-
-        return QString();
-    }
-
     case PathRole: {
         if (qGray(qGuiApp->palette().window().color().rgb()) < 192) {
             const QString darkPath = b.filePath(QByteArrayLiteral("preferredDark"));

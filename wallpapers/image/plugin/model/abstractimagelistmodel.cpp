@@ -26,7 +26,6 @@ AbstractImageListModel::AbstractImageListModel(const QBindable<QSize> &bindableT
     constexpr int maxCacheSize = 10;
     m_backgroundTitleCache.setMaxCost(maxCacheSize);
     m_backgroundAuthorCache.setMaxCost(maxCacheSize);
-    m_imageSizeCache.setMaxCost(maxCacheSize);
 
     connect(this, &QAbstractListModel::rowsInserted, this, &AbstractImageListModel::countChanged);
     connect(this, &QAbstractListModel::rowsRemoved, this, &AbstractImageListModel::countChanged);
@@ -87,7 +86,6 @@ void AbstractImageListModel::clearCache()
 {
     m_backgroundTitleCache.clear();
     m_backgroundAuthorCache.clear();
-    m_imageSizeCache.clear();
 }
 
 void AbstractImageListModel::slotMediaMetadataFound(const QString &path, const MediaMetadata &metadata)
@@ -113,11 +111,4 @@ void AbstractImageListModel::slotMediaMetadataFound(const QString &path, const M
         }
     }
 #endif
-
-    auto resolution = new QSize(metadata.resolution);
-    if (m_imageSizeCache.insert(path, resolution, 1)) {
-        Q_EMIT dataChanged(index, index, {ResolutionRole});
-    } else {
-        delete resolution;
-    }
 }
