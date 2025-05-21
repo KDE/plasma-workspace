@@ -108,7 +108,7 @@ KCMUtils.ScrollViewKCM {
         case "ApplicationStatus":
             return i18n("Application Status")
         case "BackgroundApp":
-            return i18n("Background Application")
+            return i18n("Background Applications")
         case "Communications":
             return i18n("Communications")
         case "SystemServices":
