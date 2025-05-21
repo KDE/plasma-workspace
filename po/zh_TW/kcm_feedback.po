@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2025-05-21 00:44+0000\n"
 "PO-Revision-Date: 2024-05-09 06:48+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -28,12 +28,12 @@ msgid ""
 "User Feedback has been disabled centrally. Please contact your distributor."
 msgstr "《使用者回饋》已集中停用。請聯絡您的發行版管理員。"
 
-#: ui/main.qml:45 ui/main.qml:78
+#: ui/main.qml:39 ui/main.qml:65
 #, kde-format
 msgid "Plasma:"
 msgstr "Plasma："
 
-#: ui/main.qml:52
+#: ui/main.qml:45
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -49,17 +49,17 @@ msgstr ""
 "我們永遠不會收集您的個人資料、使用的檔案、瀏覽的網站或能讓我們識別您的任何隱"
 "私資訊。<nl/><nl/>您能在下述連結閱讀我們的隱私權政策："
 
-#: ui/main.qml:113
+#: ui/main.qml:100
 #, kde-format
 msgid "Plasma"
 msgstr "Plasma"
 
-#: ui/main.qml:135
+#: ui/main.qml:122
 #, kde-format
 msgid "The following information will be sent:"
 msgstr "將會傳送下列資訊："
 
-#: ui/main.qml:182
+#: ui/main.qml:169
 #, kde-format
 msgid "View sent data:"
 msgstr "檢視已傳送的資料："

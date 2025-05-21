@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-15 00:44+0000\n"
-"PO-Revision-Date: 2025-03-20 08:16+0100\n"
+"PO-Revision-Date: 2025-05-20 06:47+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -106,6 +106,10 @@ msgid ""
 "consider configuring the clipboard to disable its history, or only remember "
 "one item at a time."
 msgstr ""
+"Non se recomenda desactivar o portapapeis, porque de facelo os datos "
+"copiados dunha aplicación perderanse ao pechar esa aplicación.<nl/><nl/"
+">Mellor considere configurar o portapapeis para desactivar o seu historial "
+"ou limitalo a 1 elemento."
 
 #: package/contents/ui/ConfigEntries.qml:204
 #, kde-format
@@ -225,7 +229,7 @@ msgstr "Amosar as iconas agochadas"
 #, kde-format
 msgctxt "@info:whatsthis accessible description for popup grid"
 msgid "Grid with %1 items in %2 columns"
-msgstr ""
+msgstr "Grade con %1 elementos en %2 columnas."
 
 #: package/contents/ui/HiddenItemsView.qml:46
 #, kde-format

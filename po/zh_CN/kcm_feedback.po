@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2025-05-21 00:44+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -23,12 +23,12 @@ msgid ""
 "User Feedback has been disabled centrally. Please contact your distributor."
 msgstr "用户反馈已被集中禁用。请联系您的软件发行组织。"
 
-#: ui/main.qml:45 ui/main.qml:78
+#: ui/main.qml:39 ui/main.qml:65
 #, kde-format
 msgid "Plasma:"
 msgstr "Plasma："
 
-#: ui/main.qml:52
+#: ui/main.qml:45
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -45,17 +45,17 @@ msgstr ""
 "件、您访问的网页或任何可以识别您个人身份的信息。<nl/><nl/>您可以点击此链接了"
 "解<link url='https://kde.org/privacypolicy-apps.php'>我们的隐私政策</link>。"
 
-#: ui/main.qml:113
+#: ui/main.qml:100
 #, kde-format
 msgid "Plasma"
 msgstr "Plasma"
 
-#: ui/main.qml:135
+#: ui/main.qml:122
 #, kde-format
 msgid "The following information will be sent:"
 msgstr "将发送以下信息："
 
-#: ui/main.qml:182
+#: ui/main.qml:169
 #, kde-format
 msgid "View sent data:"
 msgstr "查看已发送数据："

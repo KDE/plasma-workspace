@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2025-05-21 00:44+0000\n"
 "PO-Revision-Date: 2022-01-10 21:35+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -25,12 +25,12 @@ msgstr ""
 "\"Phản hồi của người dùng\" đã bị tắt từ trung ương. Vui lòng liên hệ nhà "
 "phân phối của bạn."
 
-#: ui/main.qml:45 ui/main.qml:78
+#: ui/main.qml:39 ui/main.qml:65
 #, kde-format
 msgid "Plasma:"
 msgstr "Plasma:"
 
-#: ui/main.qml:52
+#: ui/main.qml:45
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -49,17 +49,17 @@ msgstr ""
 "<link url='https://kde.org/privacypolicy-apps.php'>chính sách của chúng tôi "
 "về sự riêng tư.</link>"
 
-#: ui/main.qml:113
+#: ui/main.qml:100
 #, kde-format
 msgid "Plasma"
 msgstr "Plasma"
 
-#: ui/main.qml:135
+#: ui/main.qml:122
 #, kde-format
 msgid "The following information will be sent:"
 msgstr "Những thông tin sau sẽ được gửi đi:"
 
-#: ui/main.qml:182
+#: ui/main.qml:169
 #, kde-format
 msgid "View sent data:"
 msgstr "Xem dữ liệu đã gửi:"

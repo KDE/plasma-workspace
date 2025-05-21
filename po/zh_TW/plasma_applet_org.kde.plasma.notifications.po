@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-24 00:43+0000\n"
+"POT-Creation-Date: 2025-05-21 00:44+0000\n"
 "PO-Revision-Date: 2025-04-30 02:21+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -48,7 +48,7 @@ msgctxt "@action:incontextmenu"
 msgid "Copy Location"
 msgstr "複製位置"
 
-#: filemenu.cpp:196
+#: filemenu.cpp:198
 #, kde-format
 msgid "Properties"
 msgstr "屬性"
@@ -301,107 +301,107 @@ msgstr "%1（完成）"
 msgid "Job Finished"
 msgstr "工作已完成"
 
-#: package/contents/ui/FullRepresentation.qml:71
+#: package/contents/ui/FullRepresentation.qml:75
 #, kde-format
 msgid "Do not disturb"
 msgstr "請勿打擾"
 
-#: package/contents/ui/FullRepresentation.qml:121
+#: package/contents/ui/FullRepresentation.qml:125
 #, kde-format
 msgid "For 1 hour"
 msgstr "1 小時"
 
-#: package/contents/ui/FullRepresentation.qml:126
+#: package/contents/ui/FullRepresentation.qml:130
 #, kde-format
 msgid "For 4 hours"
 msgstr "4 小時"
 
-#: package/contents/ui/FullRepresentation.qml:135
+#: package/contents/ui/FullRepresentation.qml:139
 #, kde-format
 msgid "Until this evening"
 msgstr "直到傍晚"
 
-#: package/contents/ui/FullRepresentation.qml:145
+#: package/contents/ui/FullRepresentation.qml:149
 #, kde-format
 msgid "Until tomorrow morning"
 msgstr "直到隔天早晨"
 
-#: package/contents/ui/FullRepresentation.qml:157
+#: package/contents/ui/FullRepresentation.qml:161
 #, kde-format
 msgid "Until Monday"
 msgstr "直到週一"
 
-#: package/contents/ui/FullRepresentation.qml:164
+#: package/contents/ui/FullRepresentation.qml:168
 #, kde-format
 msgid "Until manually disabled"
 msgstr "直到手動停用"
 
-#: package/contents/ui/FullRepresentation.qml:216
+#: package/contents/ui/FullRepresentation.qml:220
 #, kde-format
 msgctxt "Do not disturb until date"
 msgid "Automatically ends: %1"
 msgstr "自動結束：%1"
 
-#: package/contents/ui/FullRepresentation.qml:228
+#: package/contents/ui/FullRepresentation.qml:232
 #, kde-format
 msgctxt "Do not disturb until app has finished (reason)"
 msgid "While %1 is active (%2)"
 msgstr "當 %1 使用中時（%2）"
 
-#: package/contents/ui/FullRepresentation.qml:230
+#: package/contents/ui/FullRepresentation.qml:234
 #, kde-format
 msgctxt "Do not disturb until app has finished"
 msgid "While %1 is active"
 msgstr "當 %1 使用中時"
 
-#: package/contents/ui/FullRepresentation.qml:236
+#: package/contents/ui/FullRepresentation.qml:240
 #, kde-format
 msgctxt "Do not disturb because external mirrored screens connected"
 msgid "Screens are mirrored"
 msgstr "已經鏡像螢幕"
 
-#: package/contents/ui/FullRepresentation.qml:240
+#: package/contents/ui/FullRepresentation.qml:244
 #, kde-format
 msgctxt "Do not disturb because fullscreen app is focused"
 msgid "Fullscreen app is focused"
 msgstr "已聚焦全螢幕應用程式"
 
-#: package/contents/ui/FullRepresentation.qml:465
-#: package/contents/ui/FullRepresentation.qml:471
+#: package/contents/ui/FullRepresentation.qml:469
+#: package/contents/ui/FullRepresentation.qml:475
 #, kde-format
 msgctxt "@action:button"
 msgid "View"
 msgstr "檢視"
 
-#: package/contents/ui/FullRepresentation.qml:552
+#: package/contents/ui/FullRepresentation.qml:556
 #, kde-format
 msgid "Close Group"
 msgstr "關閉群組"
 
-#: package/contents/ui/FullRepresentation.qml:574
+#: package/contents/ui/FullRepresentation.qml:578
 #, kde-format
 msgid "Show Fewer"
 msgstr "顯示較少通知"
 
-#: package/contents/ui/FullRepresentation.qml:576
+#: package/contents/ui/FullRepresentation.qml:580
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr "顯示更多 %1 則訊息"
 
-#: package/contents/ui/FullRepresentation.qml:605
+#: package/contents/ui/FullRepresentation.qml:609
 #: package/contents/ui/main.qml:111
 #, kde-format
 msgid "No unread notifications"
 msgstr "沒有未讀通知"
 
-#: package/contents/ui/FullRepresentation.qml:620
+#: package/contents/ui/FullRepresentation.qml:624
 #: package/contents/ui/main.qml:80
 #, kde-format
 msgid "Notification service not available"
 msgstr "無法使用通知服務"
 
-#: package/contents/ui/FullRepresentation.qml:622
+#: package/contents/ui/FullRepresentation.qml:626
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"

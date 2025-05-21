@@ -943,14 +943,3 @@ msgstr "Utklippstavle-sprettopp"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Avbryt"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "You can enable URL actions later in the <interface>Actions</interface> "
-#~ "page of the Clipboard applet's configuration window"
-#~ msgstr ""
-#~ "Du kan sette opp nettadressehandlinger senere på siden "
-#~ "<interface>Handlinger</interface> i innstillingsvinduet til utklippstavla."
-
-#~ msgid "Disable This Popup"
-#~ msgstr "Slå av dette sprettoppvinduet"

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2025-05-21 00:44+0000\n"
 "PO-Revision-Date: 2025-02-22 07:21+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -24,12 +24,12 @@ msgid ""
 "User Feedback has been disabled centrally. Please contact your distributor."
 msgstr "Tilbakemeldinger er slått av sentralt. Ta kontakt med leverandøren."
 
-#: ui/main.qml:45 ui/main.qml:78
+#: ui/main.qml:39 ui/main.qml:65
 #, kde-format
 msgid "Plasma:"
 msgstr "Plasma:"
 
-#: ui/main.qml:52
+#: ui/main.qml:45
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -47,17 +47,17 @@ msgstr ""
 "informasjon som kan brukes til å identifisere deg.<nl/><nl/>Les mer om <link "
 "url='https://kde.org/privacypolicy-apps.php'>personvernreglene våre</link>."
 
-#: ui/main.qml:113
+#: ui/main.qml:100
 #, kde-format
 msgid "Plasma"
 msgstr "Plasma"
 
-#: ui/main.qml:135
+#: ui/main.qml:122
 #, kde-format
 msgid "The following information will be sent:"
 msgstr "Følgende informasjon blir sendt:"
 
-#: ui/main.qml:182
+#: ui/main.qml:169
 #, kde-format
 msgid "View sent data:"
 msgstr "Vis sendt data:"

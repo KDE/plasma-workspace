@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2025-05-21 00:44+0000\n"
 "PO-Revision-Date: 2024-09-07 20:20+0200\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -25,12 +25,12 @@ msgstr ""
 "பயனர் பின்னூட்டம் நிர்வாகியால் முடக்கப்பட்டுள்ளது. உங்கள் இயக்குதள நிறுவனத்தை தொடர்பு "
 "கொள்ளுங்கள்."
 
-#: ui/main.qml:45 ui/main.qml:78
+#: ui/main.qml:39 ui/main.qml:65
 #, kde-format
 msgid "Plasma:"
 msgstr "பிளாஸ்மா:"
 
-#: ui/main.qml:52
+#: ui/main.qml:45
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -49,17 +49,17 @@ msgstr ""
 "நாங்கள் ஒருபோதும் சேகரிக்க மாட்டோம். <nl/><nl/>எங்கள் தனியுரிமை கொள்கையை பற்றி <link "
 "url='https://kde.org/privacypolicy-apps.php'>இங்கு படிக்கலாம்.</link>"
 
-#: ui/main.qml:113
+#: ui/main.qml:100
 #, kde-format
 msgid "Plasma"
 msgstr "பிளாஸ்மா"
 
-#: ui/main.qml:135
+#: ui/main.qml:122
 #, kde-format
 msgid "The following information will be sent:"
 msgstr "கீழ்காணும் விவரங்கள் அனுப்பப்படும்:"
 
-#: ui/main.qml:182
+#: ui/main.qml:169
 #, kde-format
 msgid "View sent data:"
 msgstr "அனுப்பியுள்ள தரவை பாருங்கள்:"
