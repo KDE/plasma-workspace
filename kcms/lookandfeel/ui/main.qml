@@ -136,8 +136,10 @@ KCM.GridViewKCM {
             }
         ]
         onClicked: {
-            kcm.lookAndFeelSettings.lookAndFeelPackage = model.pluginName
-            root.showConfirmation()
+            if (!delegate.GridView.isCurrentItem) {
+                kcm.lookAndFeelSettings.lookAndFeelPackage = model.pluginName
+                root.showConfirmation()
+            }
         }
     }
 
