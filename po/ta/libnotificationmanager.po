@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-16 02:43+0000\n"
+"POT-Creation-Date: 2025-05-21 02:41+0000\n"
 "PO-Revision-Date: 2025-05-18 18:52+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -102,7 +102,7 @@ msgstr "%2 என்பதிலிருந்து %1"
 msgid "Application closed unexpectedly."
 msgstr "செயலி எதிர்பாராத விதமாக மூடியது."
 
-#: notifications.cpp:903
+#: notifications.cpp:907
 #, kde-format
 msgctxt "@title"
 msgid "Unread Notification"
@@ -110,7 +110,7 @@ msgid_plural "Unread Notifications"
 msgstr[0] "படிக்காத அறிவிப்பு"
 msgstr[1] "படிக்காத அறிவிப்புகள்"
 
-#: notifications.cpp:905
+#: notifications.cpp:909
 #, kde-format
 msgctxt "@info"
 msgid "%1 notification was received while Do Not Disturb was active."

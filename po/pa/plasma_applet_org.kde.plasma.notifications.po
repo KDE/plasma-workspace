@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-24 00:43+0000\n"
+"POT-Creation-Date: 2025-05-21 02:41+0000\n"
 "PO-Revision-Date: 2024-02-05 07:41-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -43,7 +43,7 @@ msgctxt "@action:incontextmenu"
 msgid "Copy Location"
 msgstr "ਟਿਕਾਣਾ ਕਾਪੀ ਕਰੋ"
 
-#: filemenu.cpp:196
+#: filemenu.cpp:198
 #, kde-format
 msgid "Properties"
 msgstr "ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ"
@@ -306,107 +306,107 @@ msgstr "%1 (ਮੁਕੰਮਲ)"
 msgid "Job Finished"
 msgstr "ਜਾਬ ਪੂਰੀ ਹੋਈ"
 
-#: package/contents/ui/FullRepresentation.qml:71
+#: package/contents/ui/FullRepresentation.qml:75
 #, kde-format
 msgid "Do not disturb"
 msgstr "ਤੰਗ ਨਾ ਕਰੋ"
 
-#: package/contents/ui/FullRepresentation.qml:121
+#: package/contents/ui/FullRepresentation.qml:125
 #, kde-format
 msgid "For 1 hour"
 msgstr "1 ਘੰਟੇ ਲਈ"
 
-#: package/contents/ui/FullRepresentation.qml:126
+#: package/contents/ui/FullRepresentation.qml:130
 #, kde-format
 msgid "For 4 hours"
 msgstr "4 ਘੰਟਿਆਂ ਲਈ"
 
-#: package/contents/ui/FullRepresentation.qml:135
+#: package/contents/ui/FullRepresentation.qml:139
 #, kde-format
 msgid "Until this evening"
 msgstr "ਅੱਜ ਆਥਣ ਤੱਕ"
 
-#: package/contents/ui/FullRepresentation.qml:145
+#: package/contents/ui/FullRepresentation.qml:149
 #, kde-format
 msgid "Until tomorrow morning"
 msgstr "ਭਲਕੇ ਸਵੇਰ ਤੱਕ"
 
-#: package/contents/ui/FullRepresentation.qml:157
+#: package/contents/ui/FullRepresentation.qml:161
 #, kde-format
 msgid "Until Monday"
 msgstr "ਸੋਮਵਾਰ ਤੱਕ"
 
-#: package/contents/ui/FullRepresentation.qml:164
+#: package/contents/ui/FullRepresentation.qml:168
 #, kde-format
 msgid "Until manually disabled"
 msgstr "ਜਦੋਂ ਤੱਕ ਖੁਦ ਅਸਮਰੱਥ ਨਹੀਂ ਕਰਦੇ"
 
-#: package/contents/ui/FullRepresentation.qml:216
+#: package/contents/ui/FullRepresentation.qml:220
 #, kde-format
 msgctxt "Do not disturb until date"
 msgid "Automatically ends: %1"
 msgstr "ਆਟੋਮੈਟਿਕ ਬੰਦ ਹੁੰਦਾ ਹੈ: %1"
 
-#: package/contents/ui/FullRepresentation.qml:228
+#: package/contents/ui/FullRepresentation.qml:232
 #, kde-format
 msgctxt "Do not disturb until app has finished (reason)"
 msgid "While %1 is active (%2)"
 msgstr "ਜਦੋਂ %1 ਸਰਗਰਮ ਹੈ (%2)"
 
-#: package/contents/ui/FullRepresentation.qml:230
+#: package/contents/ui/FullRepresentation.qml:234
 #, kde-format
 msgctxt "Do not disturb until app has finished"
 msgid "While %1 is active"
 msgstr "ਜਦੋਂ %1 ਸਰਗਰਮ ਹੈ"
 
-#: package/contents/ui/FullRepresentation.qml:236
+#: package/contents/ui/FullRepresentation.qml:240
 #, kde-format
 msgctxt "Do not disturb because external mirrored screens connected"
 msgid "Screens are mirrored"
 msgstr "ਸਕਰੀਨਾਂ ਨੂੰ ਮਿਰੱਰ ਕੀਤਾ ਹੈ"
 
-#: package/contents/ui/FullRepresentation.qml:240
+#: package/contents/ui/FullRepresentation.qml:244
 #, kde-format
 msgctxt "Do not disturb because fullscreen app is focused"
 msgid "Fullscreen app is focused"
 msgstr ""
 
-#: package/contents/ui/FullRepresentation.qml:465
-#: package/contents/ui/FullRepresentation.qml:471
+#: package/contents/ui/FullRepresentation.qml:469
+#: package/contents/ui/FullRepresentation.qml:475
 #, kde-format
 msgctxt "@action:button"
 msgid "View"
 msgstr ""
 
-#: package/contents/ui/FullRepresentation.qml:552
+#: package/contents/ui/FullRepresentation.qml:556
 #, kde-format
 msgid "Close Group"
 msgstr "ਗਰੁੱਪ ਬੰਦ ਕਰੋ"
 
-#: package/contents/ui/FullRepresentation.qml:574
+#: package/contents/ui/FullRepresentation.qml:578
 #, kde-format
 msgid "Show Fewer"
 msgstr "ਘੱਟ ਵੇਖਾਓ"
 
-#: package/contents/ui/FullRepresentation.qml:576
+#: package/contents/ui/FullRepresentation.qml:580
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr "%1 ਹੋਰ ਵੇਖਾਓ"
 
-#: package/contents/ui/FullRepresentation.qml:605
+#: package/contents/ui/FullRepresentation.qml:609
 #: package/contents/ui/main.qml:111
 #, kde-format
 msgid "No unread notifications"
 msgstr "ਕੋਈ ਨਾ-ਪੜ੍ਹੇ ਨੋਟੀਫਿਕੇਸ਼ਨ ਨਹੀਂ ਹਨ"
 
-#: package/contents/ui/FullRepresentation.qml:620
+#: package/contents/ui/FullRepresentation.qml:624
 #: package/contents/ui/main.qml:80
 #, kde-format
 msgid "Notification service not available"
 msgstr "ਨੋਟੀਫਿਕੇਸ਼ਨ ਸੇਵਾ ਉਪਲਬਧ ਨਹੀਂ ਹੈ"
 
-#: package/contents/ui/FullRepresentation.qml:622
+#: package/contents/ui/FullRepresentation.qml:626
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"

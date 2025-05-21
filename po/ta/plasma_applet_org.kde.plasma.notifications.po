@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-24 00:43+0000\n"
+"POT-Creation-Date: 2025-05-21 02:41+0000\n"
 "PO-Revision-Date: 2025-04-27 12:52+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -43,7 +43,7 @@ msgctxt "@action:incontextmenu"
 msgid "Copy Location"
 msgstr "இருப்பிடத்தை நகலெடு"
 
-#: filemenu.cpp:196
+#: filemenu.cpp:198
 #, kde-format
 msgid "Properties"
 msgstr "பண்புகள்"
@@ -306,107 +306,107 @@ msgstr "%1 (முடிந்தது)"
 msgid "Job Finished"
 msgstr "பணி முடிந்தது"
 
-#: package/contents/ui/FullRepresentation.qml:71
+#: package/contents/ui/FullRepresentation.qml:75
 #, kde-format
 msgid "Do not disturb"
 msgstr "தொந்தரவு செய்யாதே"
 
-#: package/contents/ui/FullRepresentation.qml:121
+#: package/contents/ui/FullRepresentation.qml:125
 #, kde-format
 msgid "For 1 hour"
 msgstr "1 மணிநேரத்துக்கு"
 
-#: package/contents/ui/FullRepresentation.qml:126
+#: package/contents/ui/FullRepresentation.qml:130
 #, kde-format
 msgid "For 4 hours"
 msgstr "4 மணிநேரத்துக்கு"
 
-#: package/contents/ui/FullRepresentation.qml:135
+#: package/contents/ui/FullRepresentation.qml:139
 #, kde-format
 msgid "Until this evening"
 msgstr "இன்று மாலை வரை"
 
-#: package/contents/ui/FullRepresentation.qml:145
+#: package/contents/ui/FullRepresentation.qml:149
 #, kde-format
 msgid "Until tomorrow morning"
 msgstr "நாளை காலை வரை"
 
-#: package/contents/ui/FullRepresentation.qml:157
+#: package/contents/ui/FullRepresentation.qml:161
 #, kde-format
 msgid "Until Monday"
 msgstr "திங்கள் வரை"
 
-#: package/contents/ui/FullRepresentation.qml:164
+#: package/contents/ui/FullRepresentation.qml:168
 #, kde-format
 msgid "Until manually disabled"
 msgstr "கைமுறையாக முடக்கும் வரை"
 
-#: package/contents/ui/FullRepresentation.qml:216
+#: package/contents/ui/FullRepresentation.qml:220
 #, kde-format
 msgctxt "Do not disturb until date"
 msgid "Automatically ends: %1"
 msgstr "தானாக முடிவது: %1"
 
-#: package/contents/ui/FullRepresentation.qml:228
+#: package/contents/ui/FullRepresentation.qml:232
 #, kde-format
 msgctxt "Do not disturb until app has finished (reason)"
 msgid "While %1 is active (%2)"
 msgstr "%1 செயலில் இருக்கும்போது (%2)"
 
-#: package/contents/ui/FullRepresentation.qml:230
+#: package/contents/ui/FullRepresentation.qml:234
 #, kde-format
 msgctxt "Do not disturb until app has finished"
 msgid "While %1 is active"
 msgstr "%1 செயலில் இருக்கும்போது"
 
-#: package/contents/ui/FullRepresentation.qml:236
+#: package/contents/ui/FullRepresentation.qml:240
 #, kde-format
 msgctxt "Do not disturb because external mirrored screens connected"
 msgid "Screens are mirrored"
 msgstr "திரைகள் பிரதிபலிக்கப்படுவதால்"
 
-#: package/contents/ui/FullRepresentation.qml:240
+#: package/contents/ui/FullRepresentation.qml:244
 #, kde-format
 msgctxt "Do not disturb because fullscreen app is focused"
 msgid "Fullscreen app is focused"
 msgstr "தற்போதைய செயலி முழுத்திரை பயன்முறையிலுள்ளது"
 
-#: package/contents/ui/FullRepresentation.qml:465
-#: package/contents/ui/FullRepresentation.qml:471
+#: package/contents/ui/FullRepresentation.qml:469
+#: package/contents/ui/FullRepresentation.qml:475
 #, kde-format
 msgctxt "@action:button"
 msgid "View"
 msgstr "காட்டு"
 
-#: package/contents/ui/FullRepresentation.qml:552
+#: package/contents/ui/FullRepresentation.qml:556
 #, kde-format
 msgid "Close Group"
 msgstr "குழுவை மூடு"
 
-#: package/contents/ui/FullRepresentation.qml:574
+#: package/contents/ui/FullRepresentation.qml:578
 #, kde-format
 msgid "Show Fewer"
 msgstr "சிலவற்றையே காட்டு"
 
-#: package/contents/ui/FullRepresentation.qml:576
+#: package/contents/ui/FullRepresentation.qml:580
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr "இன்னும் %1 காட்டு"
 
-#: package/contents/ui/FullRepresentation.qml:605
+#: package/contents/ui/FullRepresentation.qml:609
 #: package/contents/ui/main.qml:111
 #, kde-format
 msgid "No unread notifications"
 msgstr "படிக்காத அறிவிப்புகள் இல்லை"
 
-#: package/contents/ui/FullRepresentation.qml:620
+#: package/contents/ui/FullRepresentation.qml:624
 #: package/contents/ui/main.qml:80
 #, kde-format
 msgid "Notification service not available"
 msgstr "அறிவிப்பு சேவை கிடைக்கவில்லை"
 
-#: package/contents/ui/FullRepresentation.qml:622
+#: package/contents/ui/FullRepresentation.qml:626
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"
