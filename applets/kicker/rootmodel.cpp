@@ -22,6 +22,11 @@
 
 using namespace std::literals::chrono_literals;
 
+namespace
+{
+static constexpr int s_rememberUninstalledDays = 3; // How many days we remember any uninstalled app
+}
+
 GroupEntry::GroupEntry(AppsModel *parentModel, const QString &name, const QString &iconName, AbstractModel *childModel)
     : AbstractGroupEntry(parentModel)
     , m_name(name)
@@ -419,16 +424,19 @@ void RootModel::refresh()
         allModel->setDescription(QStringLiteral("KICKER_ALL_MODEL")); // Intentionally no i18n.
     }
 
-    bool hasNewlyInstalledApp = false;
+    // Whether we have any newly installed apps, or any that were recently uninstalled
+    bool hasTrackedApp = false;
+
+    auto stateConfig = Kicker::stateConfig();
+
     if (m_highlightNewlyInstalledApps) {
+        // Track when we first see installed apps
         const QDate today = QDate::currentDate();
 
-        auto stateConfig = Kicker::stateConfig();
+        QStringList installedApps;
         const QStringList storedInstalledApps = stateConfig->group(QString()).readEntry(QStringLiteral("InstalledApps"), QStringList());
 
         KConfigGroup applicationsGroup = stateConfig->group(QStringLiteral("Application"));
-
-        QStringList installedApps;
 
         std::function<void(AbstractEntry *)> processEntry = [&](AbstractEntry *entry) {
             if (entry->type() == AbstractEntry::RunnableType) {
@@ -439,19 +447,20 @@ void RootModel::refresh()
 
                 QDate firstSeen;
 
-                // If stored list is empty, initial survey, everything is known.
                 KConfigGroup group = applicationsGroup.group(appId);
-                if (!storedInstalledApps.isEmpty() && !storedInstalledApps.contains(appId)) {
+                if (storedInstalledApps.isEmpty() || storedInstalledApps.contains(appId) || group.hasKey(QStringLiteral("LastSeen"))) {
+                    // Initial survey with everything known, or already known to be installed, or recently uninstalled (in which case,
+                    // if new, we held onto the FirstSeen key)
+                    firstSeen = group.readEntry(QStringLiteral("FirstSeen"), QDate());
+                } else if (!storedInstalledApps.contains(appId)) {
                     qCDebug(KICKER_DEBUG) << appId << "appears to be newly installed";
                     group.writeEntry(QStringLiteral("FirstSeen"), today);
                     firstSeen = today;
-                } else {
-                    firstSeen = group.readEntry(QStringLiteral("FirstSeen"), QDate());
                 }
 
                 appEntry->setFirstSeen(firstSeen);
                 if (appEntry->isNewlyInstalled()) {
-                    hasNewlyInstalledApp = true;
+                    hasTrackedApp = true;
                 } else {
                     applicationsGroup.deleteGroup(appId);
                 }
@@ -469,18 +478,35 @@ void RootModel::refresh()
             processEntry(entry);
         }
 
-        stateConfig->group(QString()).writeEntry(QStringLiteral("InstalledApps"), installedApps);
-
-        // Clear apps that have been uninstalled before the highlight period was over.
-        const QStringList newlyInstalledApps = applicationsGroup.groupList();
-        for (const QString &appId : newlyInstalledApps) {
+        // Remember uninstalled app (including, if new, when it was first seen)
+        for (const QString &appId : storedInstalledApps) {
             if (!installedApps.contains(appId)) {
-                applicationsGroup.deleteGroup(appId);
+                // App was uninstalled
+                qCDebug(KICKER_DEBUG) << appId << "is being remembered after being uninstalled";
+                KConfigGroup group = applicationsGroup.group(appId);
+                group.writeEntry(QStringLiteral("LastSeen"), today);
+                hasTrackedApp = true;
             }
         }
+
+        // Stop remembering uninstalled apps after 3 days
+        for (const QString &appId : applicationsGroup.groupList()) {
+            if (!installedApps.contains(appId)) {
+                KConfigGroup group = applicationsGroup.group(appId);
+                const QDate lastSeen = group.readEntry(QStringLiteral("LastSeen"), QDate());
+                if (lastSeen.isValid() && lastSeen.daysTo(QDate::currentDate()) < s_rememberUninstalledDays) {
+                    hasTrackedApp = true;
+                } else {
+                    qCDebug(KICKER_DEBUG) << appId << "is no longer being remembered after being uninstalled";
+                    applicationsGroup.deleteGroup(appId);
+                }
+            }
+        }
+
+        stateConfig->group(QString()).writeEntry(QStringLiteral("InstalledApps"), installedApps);
     }
 
-    if (hasNewlyInstalledApp) {
+    if (hasTrackedApp) {
         if (!m_refreshNewlyInstalledAppsTimer) {
             m_refreshNewlyInstalledAppsTimer = new QTimer(this);
             m_refreshNewlyInstalledAppsTimer->setInterval(24h);
@@ -566,17 +592,22 @@ void RootModel::refreshNewlyInstalledApps()
     qCDebug(KICKER_DEBUG) << "Refreshing newly installed apps";
     Q_ASSERT(m_highlightNewlyInstalledApps);
 
+    QStringList installedApps;
+
     KSharedConfig::Ptr stateConfig = Kicker::stateConfig();
     KConfigGroup applicationsGroup = stateConfig->group(QStringLiteral("Application"));
 
-    bool hasNewlyInstalledApp = false;
+    bool hasTrackedApp = false;
 
     std::function<void(AbstractEntry *)> processEntry = [&](AbstractEntry *entry) {
         if (entry->type() == AbstractEntry::RunnableType) {
             AppEntry *appEntry = static_cast<AppEntry *>(entry);
 
+            const QString appId = appEntry->id();
+            installedApps.append(appId);
+
             if (appEntry->isNewlyInstalled()) {
-                hasNewlyInstalledApp = true;
+                hasTrackedApp = true;
             } else if (appEntry->firstSeen().isValid()) {
                 qCDebug(KICKER_DEBUG) << appEntry->id() << "is no longer considered newly installed";
                 appEntry->setFirstSeen(QDate());
@@ -600,7 +631,21 @@ void RootModel::refreshNewlyInstalledApps()
         processEntry(entry);
     }
 
-    if (!hasNewlyInstalledApp) {
+    // Stop remembering uninstalled apps after 3 days
+    for (const QString &appId : applicationsGroup.groupList()) {
+        if (!installedApps.contains(appId)) {
+            KConfigGroup group = applicationsGroup.group(appId);
+            const QDate lastSeen = group.readEntry(QStringLiteral("LastSeen"), QDate());
+            if (lastSeen.isValid() && lastSeen.daysTo(QDate::currentDate()) < s_rememberUninstalledDays) {
+                hasTrackedApp = true;
+            } else {
+                qCDebug(KICKER_DEBUG) << appId << "is no longer being remembered after being uninstalled";
+                applicationsGroup.deleteGroup(appId);
+            }
+        }
+    }
+
+    if (!hasTrackedApp) {
         qCDebug(KICKER_DEBUG) << "Stopping periodic newly installed apps check";
         m_refreshNewlyInstalledAppsTimer->stop();
     }
