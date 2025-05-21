@@ -56,7 +56,7 @@ Kirigami.Dialog {
     modal: true
     QQC2.Overlay.modal: KcmPopupModal {}
 
-    contentItem: ColumnLayout {
+    ColumnLayout {
         enabled: root.componentChooser !== null
         spacing: Kirigami.Units.smallSpacing
 
