@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-14 00:45+0000\n"
-"PO-Revision-Date: 2025-01-24 20:48+0100\n"
+"PO-Revision-Date: 2025-05-21 21:50+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: package/contents/config/config.qml:20
 #, kde-format
@@ -152,11 +152,10 @@ msgid "Offset from UTC time"
 msgstr "Eltérés az UTC időtől"
 
 #: package/contents/ui/configAppearance.qml:126
-#, fuzzy, kde-format
-#| msgid "Switch Systemwide Time Zone…"
+#, kde-format
 msgctxt "@action:button opens kcm"
 msgid "Switch Time Zone…"
-msgstr "Rendszerszintű időzóna módosítása…"
+msgstr "Időzóna módosítása…"
 
 #: package/contents/ui/configAppearance.qml:138
 #, kde-format
@@ -308,23 +307,19 @@ msgid "Available Plugins:"
 msgstr "Elérhető bővítmények:"
 
 #: package/contents/ui/configTimeZones.qml:70
-#, fuzzy, kde-format
-#| msgctxt "This is a city associated with particular time zone"
-#| msgid "Cancun"
+#, kde-format
 msgid "Cancel"
-msgstr "Cancun"
+msgstr "Mégse"
 
 #: package/contents/ui/configTimeZones.qml:77
-#, fuzzy, kde-format
-#| msgid "Add More Time Zones"
+#, kde-format
 msgid "Add Selected Time Zone"
-msgstr "További időzónák hozzáadása"
+msgstr "Kijelölt időzóna hozzáadása"
 
 #: package/contents/ui/configTimeZones.qml:94
-#, fuzzy, kde-format
-#| msgid "Add Time Zones…"
+#, kde-format
 msgid "Add Time Zone…"
-msgstr "Időzónák hozzáadása…"
+msgstr "Időzóna hozzáadása…"
 
 #: package/contents/ui/configTimeZones.qml:153
 #, kde-format
@@ -376,6 +371,8 @@ msgid ""
 "Tip: Add your home time zone to this list to see the time there even when "
 "you're traveling. It will not be shown twice while at home."
 msgstr ""
+"Tipp: Adja hozzá az otthoni időzónáját ehhez a listához, hogy utazás közben "
+"is láthassa az ottani időt. Otthon nem fog kétszer megjelenni."
 
 #: package/contents/ui/configTimeZones.qml:245
 #, kde-format
@@ -393,10 +390,9 @@ msgstr ""
 "utazik, inkább állítsa át azt."
 
 #: package/contents/ui/configTimeZones.qml:268
-#, fuzzy, kde-format
-#| msgid "Time Zones"
+#, kde-format
 msgid "Choose Time Zone"
-msgstr "Időzónák"
+msgstr "Időzóna kiválasztása"
 
 #: package/contents/ui/main.qml:217
 #, kde-format

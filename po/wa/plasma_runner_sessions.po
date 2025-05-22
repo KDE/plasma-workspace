@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-19 00:43+0000\n"
+"POT-Creation-Date: 2025-05-22 02:42+0000\n"
 "PO-Revision-Date: 2011-07-14 09:06+0200\n"
 "Last-Translator: Jean Cayron <jean.cayron@base.be>\n"
 "Language-Team: Walloon <linux@walon.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "X-Generator: Lokalize 1.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: sessionrunner.cpp:22
+#: sessionrunner.cpp:19
 #, fuzzy, kde-format
 #| msgid "log out"
 msgctxt ""
@@ -28,12 +28,12 @@ msgctxt ""
 msgid "logout;log out"
 msgstr "dislodjî"
 
-#: sessionrunner.cpp:25
+#: sessionrunner.cpp:22
 #, kde-format
 msgid "Logs out, exiting the current desktop session"
 msgstr "Si dislodje, moussant foû del session scribanne do moumint"
 
-#: sessionrunner.cpp:28
+#: sessionrunner.cpp:25
 #, fuzzy, kde-format
 #| msgctxt "shutdown computer command"
 #| msgid "shutdown"
@@ -43,12 +43,12 @@ msgctxt ""
 msgid "shutdown;shut down;power;power off"
 msgstr "arester éndjole"
 
-#: sessionrunner.cpp:31
+#: sessionrunner.cpp:28
 #, kde-format
 msgid "Turns off the computer"
 msgstr "Arestêye li copiutrece"
 
-#: sessionrunner.cpp:34
+#: sessionrunner.cpp:31
 #, fuzzy, kde-format
 #| msgctxt "restart computer command"
 #| msgid "restart"
@@ -58,12 +58,12 @@ msgctxt ""
 msgid "restart;reboot"
 msgstr "renonder"
 
-#: sessionrunner.cpp:37
+#: sessionrunner.cpp:34
 #, kde-format
 msgid "Reboots the computer"
 msgstr "Renonde li copiutrece"
 
-#: sessionrunner.cpp:41
+#: sessionrunner.cpp:38
 #, fuzzy, kde-format
 #| msgid "Lock the screen"
 msgctxt ""
@@ -71,12 +71,12 @@ msgctxt ""
 msgid "lock;lock screen"
 msgstr "Eclawer waitroûle"
 
-#: sessionrunner.cpp:43
+#: sessionrunner.cpp:40
 #, kde-format
 msgid "Locks the current sessions and starts the screen saver"
 msgstr "Eclawe les sessions do moumint eyet enonde li spårgneu di waitroûle"
 
-#: sessionrunner.cpp:46
+#: sessionrunner.cpp:43
 #, fuzzy, kde-format
 #| msgid "new session"
 msgctxt ""
@@ -85,12 +85,12 @@ msgctxt ""
 msgid "save;save session"
 msgstr "novele session"
 
-#: sessionrunner.cpp:49
+#: sessionrunner.cpp:46
 #, kde-format
 msgid "Saves the current session for session restoration"
 msgstr ""
 
-#: sessionrunner.cpp:52
+#: sessionrunner.cpp:49
 #, fuzzy, kde-format
 #| msgid "switch user"
 msgctxt ""
@@ -99,19 +99,19 @@ msgctxt ""
 msgid "switch user;new session"
 msgstr "discandjî d' uzeu"
 
-#: sessionrunner.cpp:55
+#: sessionrunner.cpp:52
 #, fuzzy, kde-format
 #| msgid "Starts a new session as a different user"
 msgid "Switch to a session as a different user"
 msgstr "Enonde ene novele session pos èn ôte uzeu"
 
-#: sessionrunner.cpp:77
+#: sessionrunner.cpp:74
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
 msgstr ""
 
-#: sessionrunner.cpp:85
+#: sessionrunner.cpp:82
 #, fuzzy, kde-format
 #| msgctxt "shutdown computer command"
 #| msgid "shutdown"
@@ -119,7 +119,7 @@ msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "arester éndjole"
 
-#: sessionrunner.cpp:92
+#: sessionrunner.cpp:89
 #, fuzzy, kde-format
 #| msgctxt "restart computer command"
 #| msgid "restart"
@@ -127,19 +127,19 @@ msgctxt "restart computer command"
 msgid "Restart"
 msgstr "renonder"
 
-#: sessionrunner.cpp:99
+#: sessionrunner.cpp:96
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr ""
 
-#: sessionrunner.cpp:106
+#: sessionrunner.cpp:103
 #, fuzzy, kde-format
 #| msgid "new session"
 msgid "Save Session"
 msgstr "novele session"
 
-#: sessionrunner.cpp:113
+#: sessionrunner.cpp:110
 #, fuzzy, kde-format
 #| msgid "switch user"
 msgid "Switch User"

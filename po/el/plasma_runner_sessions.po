@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-19 00:43+0000\n"
+"POT-Creation-Date: 2025-05-22 02:42+0000\n"
 "PO-Revision-Date: 2024-08-24 14:37+0300\n"
 "Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.05.2\n"
 
-#: sessionrunner.cpp:22
+#: sessionrunner.cpp:19
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to log out of the "
@@ -31,12 +31,12 @@ msgctxt ""
 msgid "logout;log out"
 msgstr "αποσύνδεση;αποσύνδεση"
 
-#: sessionrunner.cpp:25
+#: sessionrunner.cpp:22
 #, kde-format
 msgid "Logs out, exiting the current desktop session"
 msgstr "Αποσύνδεση, τερματίζοντας την τρέχουσα συνεδρία επιφάνειας εργασίας"
 
-#: sessionrunner.cpp:28
+#: sessionrunner.cpp:25
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to shut down the "
@@ -44,12 +44,12 @@ msgctxt ""
 msgid "shutdown;shut down;power;power off"
 msgstr "τερματισμός;τερματισμός;ενέργεια;απενεργοποίηση"
 
-#: sessionrunner.cpp:31
+#: sessionrunner.cpp:28
 #, kde-format
 msgid "Turns off the computer"
 msgstr "Κλείσιμο του υπολογιστή"
 
-#: sessionrunner.cpp:34
+#: sessionrunner.cpp:31
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to restart the "
@@ -57,24 +57,24 @@ msgctxt ""
 msgid "restart;reboot"
 msgstr "επανεκκίνηση;επανεκκίνηση"
 
-#: sessionrunner.cpp:37
+#: sessionrunner.cpp:34
 #, kde-format
 msgid "Reboots the computer"
 msgstr "Επανεκκίνηση του υπολογιστή"
 
-#: sessionrunner.cpp:41
+#: sessionrunner.cpp:38
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to lock the screen"
 msgid "lock;lock screen"
 msgstr "κλείδωμα;κλείδωμα οθόνης"
 
-#: sessionrunner.cpp:43
+#: sessionrunner.cpp:40
 #, kde-format
 msgid "Locks the current sessions and starts the screen saver"
 msgstr "Κλείδωμα των τρεχουσών συνεδριών και εκκίνηση της προφύλαξης οθόνης"
 
-#: sessionrunner.cpp:46
+#: sessionrunner.cpp:43
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to save the "
@@ -82,12 +82,12 @@ msgctxt ""
 msgid "save;save session"
 msgstr "αποθήκευση;αποθήκευση συνεδρίας"
 
-#: sessionrunner.cpp:49
+#: sessionrunner.cpp:46
 #, kde-format
 msgid "Saves the current session for session restoration"
 msgstr "Αποθηκεύει την τρέχουσα συνεδρία για την επαναφορά της"
 
-#: sessionrunner.cpp:52
+#: sessionrunner.cpp:49
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to switch user "
@@ -95,42 +95,42 @@ msgctxt ""
 msgid "switch user;new session"
 msgstr "εναλλαγή χρήστη;νέα συνεδρία"
 
-#: sessionrunner.cpp:55
+#: sessionrunner.cpp:52
 #, fuzzy, kde-format
 #| msgid "Starts a new session as a different user"
 msgid "Switch to a session as a different user"
 msgstr "Εκκίνηση μιας νέας συνεδρίας ως διαφορετικός χρήστης"
 
-#: sessionrunner.cpp:77
+#: sessionrunner.cpp:74
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
 msgstr "Αποσύνδεση"
 
-#: sessionrunner.cpp:85
+#: sessionrunner.cpp:82
 #, kde-format
 msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "Τερματισμός"
 
-#: sessionrunner.cpp:92
+#: sessionrunner.cpp:89
 #, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
 msgstr "Επανεκκίνηση"
 
-#: sessionrunner.cpp:99
+#: sessionrunner.cpp:96
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr "Κλείδωμα"
 
-#: sessionrunner.cpp:106
+#: sessionrunner.cpp:103
 #, kde-format
 msgid "Save Session"
 msgstr "Αποθήκευση συνεδρίας"
 
-#: sessionrunner.cpp:113
+#: sessionrunner.cpp:110
 #, kde-format
 msgid "Switch User"
 msgstr "Εναλλαγή χρήστη"
