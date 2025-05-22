@@ -34,6 +34,20 @@
 
 using namespace Qt::StringLiterals;
 
+static const QString appropriateCaption(const KService::Ptr &service)
+{
+    if (!service) {
+        return {};
+    }
+
+    const QString genericName = service->genericName();
+    if (!genericName.isEmpty() && genericName != service->name()) {
+        return genericName;
+    }
+
+    return service->comment();
+}
+
 namespace TaskManager
 {
 AppData appDataFromUrl(const QUrl &url, const QIcon &fallbackIcon)
@@ -65,7 +79,7 @@ AppData appDataFromUrl(const QUrl &url, const QIcon &fallbackIcon)
 
         if (service && url.path() == service->menuId()) {
             data.name = service->name();
-            data.genericName = service->genericName();
+            data.genericName = appropriateCaption(service);
             data.id = service->storageId();
 
             if (data.icon.isNull()) {
@@ -89,7 +103,7 @@ AppData appDataFromUrl(const QUrl &url, const QIcon &fallbackIcon)
 
             if (service && QUrl::fromLocalFile(service->entryPath()) == url) {
                 data.name = service->name();
-                data.genericName = service->genericName();
+                data.genericName = appropriateCaption(service);
                 data.id = service->storageId();
 
                 if (data.icon.isNull()) {
@@ -99,7 +113,7 @@ AppData appDataFromUrl(const QUrl &url, const QIcon &fallbackIcon)
                 KDesktopFile f(url.toLocalFile());
                 if (f.tryExec()) {
                     data.name = f.readName();
-                    data.genericName = f.readGenericName();
+                    data.genericName = appropriateCaption(KService::serviceByDesktopPath(url.toLocalFile()));
                     data.id = QUrl::fromLocalFile(f.fileName()).fileName();
 
                     if (data.icon.isNull()) {
@@ -144,7 +158,7 @@ AppData appDataFromUrl(const QUrl &url, const QIcon &fallbackIcon)
             const QString &desktopFile = service->entryPath();
 
             data.name = service->name();
-            data.genericName = service->genericName();
+            data.genericName = appropriateCaption(service);
             data.id = service->storageId();
 
             if (data.icon.isNull()) {
