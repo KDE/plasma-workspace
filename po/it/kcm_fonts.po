@@ -1,13 +1,13 @@
 # translation of kcmfonts.po to Italian
 #
-# SPDX-FileCopyrightText: 2018, 2019, 2022, 2023 Paolo Zamponi <feus73@gmail.com>
+# SPDX-FileCopyrightText: 2017, 2018, 2020, 2021, 2022, 2023, 2025 Vincenzo Reale <smart2128vr@gmail.com>
 # Andrea Rizzi <rizzi@kde.org>, 2003, 2004, 2005.
 # Andrea RIZZI <arizzi@pi.infn.it>, 2004.
 # Andrea Celli <andrea.celli@libero.it>, 2006.
 # Federico Zenith <federico.zenith@member.fsf.org>, 2007, 2009.
 # Leonardo Finetti <finex@finex.org>, 2007, 2008, 2010, 2012.
 # Luciano Montanaro <mikelima@cirulla.net>, 2008.
-# Vincenzo Reale <smart2128vr@gmail.com>, 2017, 2018, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2018, 2019, 2022, 2023 Paolo Zamponi <feus73@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
 #: fontsaasettingsbase.kcfg:9
