@@ -181,6 +181,7 @@ EditActionDialog::EditActionDialog(QWidget *parent)
     : QDialog(parent)
 {
     setWindowTitle(i18n("Action Properties"));
+    setWindowModality(Qt::WindowModal);
     QDialogButtonBox *buttons = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     buttons->button(QDialogButtonBox::Ok)->setShortcut(Qt::CTRL | Qt::Key_Return);
     connect(buttons, &QDialogButtonBox::accepted, this, &EditActionDialog::slotAccepted);
