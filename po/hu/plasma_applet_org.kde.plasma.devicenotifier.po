@@ -4,45 +4,37 @@
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2011, 2014, 2019.
 # Balázs Úr <urbalazs@gmail.com>, 2012.
 # Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2020, 2021.
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Kristof Kiszel <ulysses@fsf.hu>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-15 00:44+0000\n"
-"PO-Revision-Date: 2024-01-12 21:41+0100\n"
+"PO-Revision-Date: 2025-05-21 22:07+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 25.04.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: package/contents/ui/DeviceItem.qml:97
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Removing is a less technical word for Unmounting; translation should be "
-#| "short and mean 'Currently unmounting this device'"
-#| msgid "Removing…"
+#, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Checking…"
-msgstr "Kiadás…"
+msgstr "Ellenőrzés…"
 
 #: package/contents/ui/DeviceItem.qml:99
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Removing is a less technical word for Unmounting; translation should be "
-#| "short and mean 'Currently unmounting this device'"
-#| msgid "Removing…"
+#, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Repairing…"
-msgstr "Kiadás…"
+msgstr "Javítás…"
 
 #: package/contents/ui/DeviceItem.qml:102
 #, kde-format
@@ -141,7 +133,7 @@ msgstr "Megnyitás fájlkezelőben"
 #: plugin/actions/mountandopenaction.cpp:182
 #, kde-format
 msgid "Try to Fix"
-msgstr ""
+msgstr "Javítás megkísérlése"
 
 #: plugin/actions/mountandopenaction.cpp:182
 #, kde-format
@@ -159,15 +151,14 @@ msgid "Safely remove"
 msgstr "Biztonságos eltávolítás"
 
 #: plugin/deviceerrormonitor_p.cpp:198
-#, fuzzy, kde-format
-#| msgid "This device can now be safely removed."
+#, kde-format
 msgid "This device has file system errors."
-msgstr "Az eszköz most már biztonságosan eltávolítható."
+msgstr "Az eszköz fájlrendszere hibás."
 
 #: plugin/deviceerrormonitor_p.cpp:201
 #, kde-format
 msgid "Successfully repaired!"
-msgstr ""
+msgstr "Sikeres javítás."
 
 #: plugin/deviceerrormonitor_p.cpp:204
 #, kde-format
@@ -201,11 +192,9 @@ msgid "You are not authorized to eject this disc."
 msgstr "Nincs jogosultsága a lemez kiadásához."
 
 #: plugin/deviceerrormonitor_p.cpp:225
-#, fuzzy, kde-format
-#| msgctxt "Remove is less technical for unmount"
-#| msgid "You are not authorized to remove this device."
+#, kde-format
 msgid "You are not authorized to repair this device."
-msgstr "Nincs jogosultsága az eszköz eltávolításához."
+msgstr "Nincs jogosultsága az eszköz javításához."
 
 #: plugin/deviceerrormonitor_p.cpp:232
 #, kde-format
@@ -251,11 +240,9 @@ msgid "Could not eject this disc."
 msgstr "Nem lehet kiadni a lemezt."
 
 #: plugin/deviceerrormonitor_p.cpp:294
-#, fuzzy, kde-format
-#| msgctxt "Remove is less technical for unmount"
-#| msgid "Could not remove this device."
+#, kde-format
 msgid "Could not repair this device: %1"
-msgstr "Nem lehet leválasztani az eszközt."
+msgstr "Nem lehet javítani az eszközt: %1"
 
 #~ msgid "Show:"
 #~ msgstr "Megjelenítés:"

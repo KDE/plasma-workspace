@@ -2,7 +2,7 @@
 # Translation of kcmfonts.po to Slovenian
 # KDEBASE TRANSLATION TO SLOVENIAN LANGUAGE.
 # Copyright (C) 2001, 2003, 2004, 2006, 2007 Free Software Foundation, Inc.
-# $Id: kcm_fonts.po 1709374 2025-05-21 01:22:53Z scripty $
+# $Id: kcm_fonts.po 1709437 2025-05-22 01:22:36Z scripty $
 # $Source$
 #
 # Roman Maurer <roman.maurer@amis.net>, 2001.
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-21 00:44+0000\n"
-"PO-Revision-Date: 2023-04-09 08:34+0200\n"
+"PO-Revision-Date: 2025-05-21 07:11+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -26,7 +26,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.6\n"
 
 #. i18n: ectx: label, entry (forceFontDPI), group (General)
 #: fontsaasettingsbase.kcfg:9
@@ -146,7 +146,7 @@ msgctxt ""
 "Sub-string in a font name; 'Display' as in display font — a type of font "
 "inappropriate for computer screens"
 msgid "Display"
-msgstr ""
+msgstr "Zaslon"
 
 #: ui/main.qml:36
 #, kde-format
@@ -179,6 +179,9 @@ msgid ""
 "Display_typeface'>not intended for use on computer displays</link>, and may "
 "produce odd results. Consider using a different font."
 msgstr ""
+"Pisave “Display” <link url='https://wikipedia.org/wiki/"
+"Display_typeface'>niso namenjene uporabi na računalniških zaslonih</link> in "
+"lahko povzročijo nenavadne rezultate. Razmislite o uporabi druge pisave."
 
 #: ui/main.qml:101
 #, kde-format

@@ -3,13 +3,13 @@
 #
 # Tamas Szanto <tszanto@interware.hu>, 2008.
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2010, 2011, 2019, 2020.
-# SPDX-FileCopyrightText: 2022, 2023 Kristof Kiszel <ulysses@fsf.hu>
+# SPDX-FileCopyrightText: 2022, 2023, 2025 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-19 00:44+0000\n"
-"PO-Revision-Date: 2023-12-28 11:08+0100\n"
+"PO-Revision-Date: 2025-05-21 21:53+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: sessionrunner.cpp:19
 #, kde-format
@@ -92,10 +92,9 @@ msgid "switch user;new session"
 msgstr "felhasználóváltás;új munkamenet"
 
 #: sessionrunner.cpp:52
-#, fuzzy, kde-format
-#| msgid "Starts a new session as a different user"
+#, kde-format
 msgid "Switch to a session as a different user"
-msgstr "Elindít egy új munkamenetet más felhasználónévvel"
+msgstr "Váltás munkamenetre más felhasználóként"
 
 #: sessionrunner.cpp:74
 #, kde-format

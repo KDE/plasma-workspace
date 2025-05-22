@@ -15,21 +15,22 @@
 # Tahmar1900 <tahmar1900@gmail.com>, 2011.
 # elkana bardugo <ttv200@gmail.com>, 2016.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+# SPDX-FileCopyrightText: 2025 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-21 00:44+0000\n"
-"PO-Revision-Date: 2023-10-03 11:42+0300\n"
-"Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
-"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2025-05-21 08:10+0300\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #. i18n: ectx: label, entry (forceFontDPI), group (General)
 #: fontsaasettingsbase.kcfg:9
@@ -149,7 +150,7 @@ msgctxt ""
 "Sub-string in a font name; 'Display' as in display font — a type of font "
 "inappropriate for computer screens"
 msgid "Display"
-msgstr ""
+msgstr "תצוגה"
 
 #: ui/main.qml:36
 #, kde-format
@@ -182,6 +183,9 @@ msgid ""
 "Display_typeface'>not intended for use on computer displays</link>, and may "
 "produce odd results. Consider using a different font."
 msgstr ""
+"גופני „תצוגה” <link url='https://wikipedia.org/wiki/Display_typeface'>אינם "
+"מיועדים לשימוש במסכי מחשב</link>, ועלולים לייצר תוצאות מוזרות. כדאי להשתמש "
+"בגופן אחר."
 
 #: ui/main.qml:101
 #, kde-format

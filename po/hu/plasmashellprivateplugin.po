@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-16 00:44+0000\n"
-"PO-Revision-Date: 2025-01-24 20:51+0100\n"
+"PO-Revision-Date: 2025-05-21 21:57+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -299,12 +299,9 @@ msgid "Online Services"
 msgstr "Online szolgáltatások"
 
 #: shellprivate/widgetexplorer.cpp:125
-#, fuzzy
-#| msgctxt "applet category"
-#| msgid "System Information"
 msgctxt "applet category"
 msgid "Personal Information"
-msgstr "Rendszerjellemzők"
+msgstr "Személyes adatok"
 
 #: shellprivate/widgetexplorer.cpp:126
 msgctxt "applet category"
@@ -407,46 +404,48 @@ msgid ""
 "The currently selected time zone is not available for visualization on this "
 "map"
 msgstr ""
+"A jelenleg kiválasztott időzóna nem áll rendelkezésre a térképen való "
+"megjelenítéshez"
 
 #: timezoneselector/TimezoneSelector.qml:196
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom in"
-msgstr ""
+msgstr "Nagyítás"
 
 #: timezoneselector/TimezoneSelector.qml:212
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom out"
-msgstr ""
+msgstr "Kicsinyítés"
 
 #: timezoneselector/TimezoneSelector.qml:241
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Region:"
-msgstr ""
+msgstr "Régió:"
 
 #: timezoneselector/TimezoneSelector.qml:248
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
-msgstr ""
+msgstr "Kiválasztás…"
 
 #: timezoneselector/TimezoneSelector.qml:252
 #, kde-format
 msgid "Timezone region selector"
-msgstr ""
+msgstr "Időzóna régióválasztó"
 
 #: timezoneselector/TimezoneSelector.qml:272
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
-msgstr ""
+msgstr "Időzóna:"
 
 #: timezoneselector/TimezoneSelector.qml:282
 #, kde-format
 msgid "Timezone location selector"
-msgstr ""
+msgstr "Időzóna helyválasztó"
 
 #~ msgid "&Execute"
 #~ msgstr "Végr&ehajtás"

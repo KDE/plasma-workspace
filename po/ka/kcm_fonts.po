@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-21 00:44+0000\n"
-"PO-Revision-Date: 2023-04-12 05:58+0200\n"
+"PO-Revision-Date: 2025-05-21 03:46+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.6\n"
 
 #. i18n: ectx: label, entry (forceFontDPI), group (General)
 #: fontsaasettingsbase.kcfg:9
@@ -136,7 +136,7 @@ msgctxt ""
 "Sub-string in a font name; 'Display' as in display font — a type of font "
 "inappropriate for computer screens"
 msgid "Display"
-msgstr ""
+msgstr "ეკრანი"
 
 #: ui/main.qml:36
 #, kde-format
@@ -169,6 +169,9 @@ msgid ""
 "Display_typeface'>not intended for use on computer displays</link>, and may "
 "produce odd results. Consider using a different font."
 msgstr ""
+"“ეკრანის” ფონტები <link url='https://wikipedia.org/wiki/"
+"Display_typeface'>არაა განკუთვნილი კომპიუტერის მონიტორებისთვის</link> და "
+"შეიძლება, უცნაური შედეგები მიიღოთ. იფიქრეთ სხვა ფონტის გამოყენებაზე."
 
 #: ui/main.qml:101
 #, kde-format
