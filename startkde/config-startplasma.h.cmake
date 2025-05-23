@@ -7,3 +7,5 @@
 #define KWIN_WAYLAND_BIN_PATH "@KWIN_WAYLAND_BIN_PATH@"
 
 #define KWIN_BIN "${KWIN_BIN}"
+
+#cmakedefine01 WITH_X11

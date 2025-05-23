@@ -12,12 +12,22 @@
 #include <QDBusInterface>
 #include <signal.h>
 
+static void setupWorkarounds()
+{
+#if WITH_X11
+    // Tell AWT that kwin_wayland is a non-reparenting window manager. Without this, AWT will ignore
+    // ConfigureNotify events and java applications will paint nothing on the screen.
+    qputenv("_JAVA_AWT_WM_NONREPARENTING", "1");
+#endif
+}
+
 int main(int argc, char **argv)
 {
     QCoreApplication app(argc, argv);
 
     createConfigDirectory();
     setupCursor(true);
+    setupWorkarounds();
     signal(SIGTERM, sigtermHandler);
 
     // Let clients try to reconnect to kwin after a restart
