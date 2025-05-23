@@ -37,7 +37,7 @@ qt6_generate_wayland_protocol_client_sources(ksmserver-logout-greeter FILES
 )
 
 install(TARGETS ksmserver-logout-greeter DESTINATION ${KDE_INSTALL_LIBEXECDIR})
-configure_file(org.kde.ksmserver.greeter.desktop.cmake ${CMAKE_CURRENT_BINARY_DIR}/org.kde.ksmserver.greeter.desktop @ONLY)
+configure_file(org.kde.ksmserver.greeter.desktop.in ${CMAKE_CURRENT_BINARY_DIR}/org.kde.ksmserver.greeter.desktop @ONLY)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/org.kde.ksmserver.greeter.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 kdbusaddons_generate_dbus_service_file(ksmserver-logout-greeter org.kde.LogoutPrompt ${KDE_INSTALL_FULL_LIBEXECDIR})
 

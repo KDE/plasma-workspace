@@ -13,7 +13,8 @@
 #include <QDebug>
 #include <QScreen>
 #include <QWaylandClientExtensionTemplate>
-#include <qpa/qplatformnativeinterface.h>
+
+#include <qpa/qplatformwindow_p.h>
 
 #include "shutdowndlg.h"
 
@@ -38,8 +39,12 @@ public:
 
     void allowWindow(QWindow *window)
     {
-        QPlatformNativeInterface *native = qGuiApp->platformNativeInterface();
-        wl_surface *surface = reinterpret_cast<wl_surface *>(native->nativeResourceForWindow(QByteArrayLiteral("surface"), window));
+        auto waylandWindow = window->nativeInterface<QNativeInterface::Private::QWaylandWindow>();
+        if (!waylandWindow) {
+            return;
+        }
+
+        wl_surface *surface = waylandWindow->surface();
 
         Q_ASSERT(surface);
         allow(surface);
@@ -131,7 +136,7 @@ void Greeter::adoptScreen(QScreen *screen)
             aboveLockscreen.allowWindow(w);
 
             // put window over lockscreen
-            KWaylandExtras::requestXdgActivationToken(w, 0, QStringLiteral("org.kde.ksmserver.greeter.desktop"));
+            KWaylandExtras::requestXdgActivationToken(w, 0, QStringLiteral("org.kde.ksmserver.greeter"));
             QObject::connect(KWaylandExtras::self(), &KWaylandExtras::xdgActivationTokenArrived, w, [w](int, const QString &token) {
                 KWindowSystem::setCurrentXdgActivationToken(token);
                 KWindowSystem::activateWindow(w);
