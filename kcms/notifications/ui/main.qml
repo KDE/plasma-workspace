@@ -1,14 +1,15 @@
 /*
     SPDX-FileCopyrightText: 2019 Kai Uwe Broulik <kde@privat.broulik.de>
+    SPDX-FileCopyrightText: 2025 Akseli Lahtinen <akselmo@akselmo.dev>
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-import QtQuick 2.9
-import QtQuick.Layouts 1.1
-import QtQuick.Controls 2.3 as QtControls
-import org.kde.kirigami 2.4 as Kirigami
-import org.kde.kquickcontrols 2.0 as KQuickControls
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as QtControls
+import org.kde.kirigami as Kirigami
+import org.kde.kquickcontrols as KQuickControls
 import org.kde.kcmutils as KCM
 
 import org.kde.notificationmanager as NotificationManager
@@ -97,6 +98,11 @@ KCM.SimpleKCM {
             visible: root.currentOwnerInfo.status === NotificationManager.ServerInfo.Running
                 && (currentOwnerInfo.vendor !== root.ourServerVendor || currentOwnerInfo.name !== root.ourServerName)
         }
+    }
+
+    PopupPositionDialog {
+        id: popupPositionDialog
+        parent: root
     }
 
     Kirigami.FormLayout {
@@ -247,7 +253,7 @@ KCM.SimpleKCM {
                 id: positionCustomButton
                 text: i18nc("@action:button choose custom notification position", "Custom…")
                 icon.name: "preferences-desktop-display"
-                onClicked: kcm.push("PopupPositionPage.qml")
+                onClicked: popupPositionDialog.open()
             }
         }
 

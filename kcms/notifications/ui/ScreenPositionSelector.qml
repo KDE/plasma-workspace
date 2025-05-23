@@ -1,37 +1,37 @@
 /*
     SPDX-FileCopyrightText: 2015 Martin Klapetek <mklapetek@kde.org>
     SPDX-FileCopyrightText: 2019 Kai Uwe Broulik <kde@privat.broulik.de>
+    SPDX-FileCopyrightText: 2025 Akseli Lahtinen <akselmo@akselmo.dev>
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-import QtQuick 2.0
-import QtQuick.Window 2.1
-import QtQuick.Controls 2.2 as QtControls
-import org.kde.kirigami 2.4 as Kirigami
+import QtQuick
+import QtQuick.Window
+import QtQuick.Controls as QtControls
+import org.kde.kirigami as Kirigami
 import QtQuick.Layouts
 
 import org.kde.notificationmanager as NotificationManager
 
 Item {
     id: monitorPanel
-
-    property int baseUnit: Kirigami.Units.gridUnit
-
     implicitWidth: baseUnit * 13 + baseUnit * 2
     implicitHeight: (screenRatio * baseUnit * 13) + (baseUnit * 2)
 
+    property int baseUnit: Kirigami.Units.gridUnit
     property int selectedPosition
     property var disabledPositions: []
     property real screenRatio: Screen.height / Screen.width
 
     Rectangle {
         id: monitorRectangle
-        color: Kirigami.Theme.alternateBackgroundColor
+        anchors.centerIn: monitorPanel
         border.color: Kirigami.Theme.textColor
         border.width: 1
-        width: monitorPanel.width
-        height: monitorPanel.height
+        color: Kirigami.Theme.alternateBackgroundColor
+        width: monitorPanel.width - (Kirigami.Units.smallSpacing * 2)
+        height: monitorPanel.height - (Kirigami.Units.smallSpacing * 2)
         radius: Kirigami.Units.cornerRadius
     }
 
