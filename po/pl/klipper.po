@@ -1,6 +1,6 @@
 # translation of klipper.po to Polish
 # translation of klipper.po to
-# Version: $Revision: 1708857 $
+# Version: $Revision: 1709493 $
 # Copyright (C) 2002, 2003, 2004, 2005, 2006, 2008, 2009 Free Software Foundation, Inc.
 # Norbert Popiołek <norbert@kde.com.pl>
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2002, 2003.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-15 00:44+0000\n"
+"POT-Creation-Date: 2025-05-23 00:44+0000\n"
 "PO-Revision-Date: 2024-12-21 11:42+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -472,7 +472,7 @@ msgstr "Opis"
 msgid "Action Properties"
 msgstr "Właściwości działania"
 
-#: editactiondialog.cpp:195
+#: editactiondialog.cpp:196
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -486,17 +486,17 @@ msgstr ""
 "interface> działania w menu wysuwnym Klippera; po wybraniu jednego z nich, "
 "zostanie ono wykonane."
 
-#: editactiondialog.cpp:207
+#: editactiondialog.cpp:208
 #, kde-format
 msgid "Enter a pattern to match against the clipboard"
 msgstr "Wpisz wzorzec dopasowywany do zawartości schowka"
 
-#: editactiondialog.cpp:209
+#: editactiondialog.cpp:210
 #, kde-format
 msgid "Match pattern:"
 msgstr "Wzorzec:"
 
-#: editactiondialog.cpp:212
+#: editactiondialog.cpp:213
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -507,22 +507,22 @@ msgstr ""
 "Wzorzec jest wyrażeniem regularnym. Po więcej szczegółów zajrzyj na <link "
 "url=\"https://en.wikipedia.org/wiki/Regular_expression\">Wikipedię</link>."
 
-#: editactiondialog.cpp:223
+#: editactiondialog.cpp:224
 #, kde-format
 msgid "Enter a description for the action"
 msgstr "Wpisz opis dla działania"
 
-#: editactiondialog.cpp:224 editcommanddialog.cpp:83
+#: editactiondialog.cpp:225 editcommanddialog.cpp:83
 #, kde-format
 msgid "Description:"
 msgstr "Opis:"
 
-#: editactiondialog.cpp:227
+#: editactiondialog.cpp:228
 #, kde-format
 msgid "Include in automatic popup"
 msgstr "Dołącz w samowysuwającym się menu"
 
-#: editactiondialog.cpp:231
+#: editactiondialog.cpp:232
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -539,28 +539,28 @@ msgstr ""
 "menu zostanie wywołane ręcznie przy użyciu skrótu klawiszowego <shortcut>%1</"
 "shortcut>."
 
-#: editactiondialog.cpp:266
+#: editactiondialog.cpp:267
 #, kde-format
 msgid "Add Command..."
 msgstr "Dodaj polecenie..."
 
-#: editactiondialog.cpp:271
+#: editactiondialog.cpp:272
 #, kde-format
 msgid "Edit Command..."
 msgstr "Edytuj polecenie..."
 
-#: editactiondialog.cpp:277
+#: editactiondialog.cpp:278
 #, kde-format
 msgid "Delete Command"
 msgstr "Usuń polecenie"
 
-#: editactiondialog.cpp:392
+#: editactiondialog.cpp:393
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Delete the selected command <resource>%1</resource>?"
 msgstr "Czy usunąć zaznaczone polecenie <resource>%1</resource>?"
 
-#: editactiondialog.cpp:393
+#: editactiondialog.cpp:394
 #, kde-format
 msgid "Confirm Delete Command"
 msgstr "Potwierdź polecenie usunięcia"

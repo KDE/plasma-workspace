@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-15 00:44+0000\n"
+"POT-Creation-Date: 2025-05-23 00:44+0000\n"
 "PO-Revision-Date: 2024-10-27 14:40+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -465,7 +465,7 @@ msgstr "Skildring"
 msgid "Action Properties"
 msgstr "Handlingseigenskapar"
 
-#: editactiondialog.cpp:195
+#: editactiondialog.cpp:196
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -478,18 +478,18 @@ msgstr ""
 "innhaldet på utklippstavla. Då vil <interface>kommandoane</interface> til "
 "handlinga visast i sprettopp­menyen. Trykk på ein kommando for å køyra han."
 
-#: editactiondialog.cpp:207
+#: editactiondialog.cpp:208
 #, kde-format
 msgid "Enter a pattern to match against the clipboard"
 msgstr "Skriv inn mønsteret du vil sjekka opp mot utklippstavla"
 
-#: editactiondialog.cpp:209
+#: editactiondialog.cpp:210
 #, kde-format
 msgid "Match pattern:"
 msgstr "Mønster:"
 
 # fixme (2023-03-11): Oppdater lenkja når Wikipedia har fått ein brukbar artikkel på nynorsk eller bokmål.
-#: editactiondialog.cpp:212
+#: editactiondialog.cpp:213
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -501,22 +501,22 @@ msgstr ""
 "wiki/Regular_expression\">Wikipedia-artikkelen om regulære uttrykk</link> "
 "for meir informasjon."
 
-#: editactiondialog.cpp:223
+#: editactiondialog.cpp:224
 #, kde-format
 msgid "Enter a description for the action"
 msgstr "Skriv inn ei skildring for handlinga"
 
-#: editactiondialog.cpp:224 editcommanddialog.cpp:83
+#: editactiondialog.cpp:225 editcommanddialog.cpp:83
 #, kde-format
 msgid "Description:"
 msgstr "Skildring:"
 
-#: editactiondialog.cpp:227
+#: editactiondialog.cpp:228
 #, kde-format
 msgid "Include in automatic popup"
 msgstr "Ta med i automatisk sprettopp"
 
-#: editactiondialog.cpp:231
+#: editactiondialog.cpp:232
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -531,28 +531,28 @@ msgstr ""
 "interface>). Viss ikkje, vert dei ikkje med der, men dei vert med når du "
 "hentar fram menyen via snøggtasten <shortcut>%1</shortcut>."
 
-#: editactiondialog.cpp:266
+#: editactiondialog.cpp:267
 #, kde-format
 msgid "Add Command..."
 msgstr "Legg til kommando …"
 
-#: editactiondialog.cpp:271
+#: editactiondialog.cpp:272
 #, kde-format
 msgid "Edit Command..."
 msgstr "Rediger kommando …"
 
-#: editactiondialog.cpp:277
+#: editactiondialog.cpp:278
 #, kde-format
 msgid "Delete Command"
 msgstr "Slett kommando"
 
-#: editactiondialog.cpp:392
+#: editactiondialog.cpp:393
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Delete the selected command <resource>%1</resource>?"
 msgstr "Vil du sletta kommandoen <resource>%1</resource>?"
 
-#: editactiondialog.cpp:393
+#: editactiondialog.cpp:394
 #, kde-format
 msgid "Confirm Delete Command"
 msgstr "Stadfest sletting av kommando"

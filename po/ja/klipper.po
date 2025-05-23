@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-15 00:44+0000\n"
+"POT-Creation-Date: 2025-05-23 00:44+0000\n"
 "PO-Revision-Date: 2010-09-25 16:37-0700\n"
 "Last-Translator: Fumiaki Okushi <okushi@kde.gr.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -467,7 +467,7 @@ msgstr "説明"
 msgid "Action Properties"
 msgstr "アクションのプロパティ"
 
-#: editactiondialog.cpp:195
+#: editactiondialog.cpp:196
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -477,17 +477,17 @@ msgid ""
 "command is executed."
 msgstr ""
 
-#: editactiondialog.cpp:207
+#: editactiondialog.cpp:208
 #, kde-format
 msgid "Enter a pattern to match against the clipboard"
 msgstr ""
 
-#: editactiondialog.cpp:209
+#: editactiondialog.cpp:210
 #, kde-format
 msgid "Match pattern:"
 msgstr ""
 
-#: editactiondialog.cpp:212
+#: editactiondialog.cpp:213
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -496,22 +496,22 @@ msgid ""
 "entry</link> for this topic."
 msgstr ""
 
-#: editactiondialog.cpp:223
+#: editactiondialog.cpp:224
 #, kde-format
 msgid "Enter a description for the action"
 msgstr ""
 
-#: editactiondialog.cpp:224 editcommanddialog.cpp:83
+#: editactiondialog.cpp:225 editcommanddialog.cpp:83
 #, kde-format
 msgid "Description:"
 msgstr "説明:"
 
-#: editactiondialog.cpp:227
+#: editactiondialog.cpp:228
 #, kde-format
 msgid "Include in automatic popup"
 msgstr ""
 
-#: editactiondialog.cpp:231
+#: editactiondialog.cpp:232
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -522,31 +522,31 @@ msgid ""
 "manually with the <shortcut>%1</shortcut> key shortcut."
 msgstr ""
 
-#: editactiondialog.cpp:266
+#: editactiondialog.cpp:267
 #, fuzzy, kde-format
 #| msgid "Add Command"
 msgid "Add Command..."
 msgstr "コマンドを追加"
 
-#: editactiondialog.cpp:271
+#: editactiondialog.cpp:272
 #, fuzzy, kde-format
 #| msgid "Add Command"
 msgid "Edit Command..."
 msgstr "コマンドを追加"
 
-#: editactiondialog.cpp:277
+#: editactiondialog.cpp:278
 #, fuzzy, kde-format
 #| msgid "Remove Command"
 msgid "Delete Command"
 msgstr "コマンドを削除"
 
-#: editactiondialog.cpp:392
+#: editactiondialog.cpp:393
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Delete the selected command <resource>%1</resource>?"
 msgstr ""
 
-#: editactiondialog.cpp:393
+#: editactiondialog.cpp:394
 #, kde-format
 msgid "Confirm Delete Command"
 msgstr ""

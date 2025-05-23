@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-15 00:44+0000\n"
+"POT-Creation-Date: 2025-05-23 00:44+0000\n"
 "PO-Revision-Date: 2025-04-11 10:01+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -473,7 +473,7 @@ msgstr "Descripció"
 msgid "Action Properties"
 msgstr "Propietats de l'acció"
 
-#: editactiondialog.cpp:195
+#: editactiondialog.cpp:196
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -487,17 +487,17 @@ msgstr ""
 "<interface>ordres</interface> de l'acció apareixen en el menú emergent de "
 "Klipper; si es tria una d'elles, s'executa l'ordre."
 
-#: editactiondialog.cpp:207
+#: editactiondialog.cpp:208
 #, kde-format
 msgid "Enter a pattern to match against the clipboard"
 msgstr "Introduïu un patró que coincidisca amb el porta-retalls"
 
-#: editactiondialog.cpp:209
+#: editactiondialog.cpp:210
 #, kde-format
 msgid "Match pattern:"
 msgstr "Patrons de coincidència:"
 
-#: editactiondialog.cpp:212
+#: editactiondialog.cpp:213
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -509,22 +509,22 @@ msgstr ""
 "vegeu l'entrada <link url=\"https://ca.wikipedia.org/wiki/Expressi"
 "%C3%B3_regular\">Viquipèdia</link> per a este tema."
 
-#: editactiondialog.cpp:223
+#: editactiondialog.cpp:224
 #, kde-format
 msgid "Enter a description for the action"
 msgstr "Introduïu una descripció de l'acció"
 
-#: editactiondialog.cpp:224 editcommanddialog.cpp:83
+#: editactiondialog.cpp:225 editcommanddialog.cpp:83
 #, kde-format
 msgid "Description:"
 msgstr "Descripció:"
 
-#: editactiondialog.cpp:227
+#: editactiondialog.cpp:228
 #, kde-format
 msgid "Include in automatic popup"
 msgstr "Inclou en la finestra emergent automàtica"
 
-#: editactiondialog.cpp:231
+#: editactiondialog.cpp:232
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -541,28 +541,28 @@ msgstr ""
 "finestra emergent s'activa manualment amb la drecera de teclat <shortcut>%1</"
 "shortcut>."
 
-#: editactiondialog.cpp:266
+#: editactiondialog.cpp:267
 #, kde-format
 msgid "Add Command..."
 msgstr "Afig una ordre…"
 
-#: editactiondialog.cpp:271
+#: editactiondialog.cpp:272
 #, kde-format
 msgid "Edit Command..."
 msgstr "Edita una ordre…"
 
-#: editactiondialog.cpp:277
+#: editactiondialog.cpp:278
 #, kde-format
 msgid "Delete Command"
 msgstr "Suprimix l'ordre"
 
-#: editactiondialog.cpp:392
+#: editactiondialog.cpp:393
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Delete the selected command <resource>%1</resource>?"
 msgstr "Voleu suprimir l'ordre seleccionada <resource>%1</resource>?"
 
-#: editactiondialog.cpp:393
+#: editactiondialog.cpp:394
 #, kde-format
 msgid "Confirm Delete Command"
 msgstr "Confirma l'ordre de supressió"

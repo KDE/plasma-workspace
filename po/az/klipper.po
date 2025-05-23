@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-15 00:44+0000\n"
+"POT-Creation-Date: 2025-05-23 00:44+0000\n"
 "PO-Revision-Date: 2025-04-01 15:05+0400\n"
 "Last-Translator: Khayyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -462,7 +462,7 @@ msgstr "Təsviri"
 msgid "Action Properties"
 msgstr "Fəaliyyətin xüsusiyyətləri"
 
-#: editactiondialog.cpp:195
+#: editactiondialog.cpp:196
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -476,17 +476,17 @@ msgstr ""
 "interface>i Klipper-in açılan menyusunda görünür; əgər onlardan biri "
 "seçilərsə əmr icra oluncaq."
 
-#: editactiondialog.cpp:207
+#: editactiondialog.cpp:208
 #, kde-format
 msgid "Enter a pattern to match against the clipboard"
 msgstr "Mübadilə yaddaşı ilə uyğunlaşacaq nümunəni daxil edin"
 
-#: editactiondialog.cpp:209
+#: editactiondialog.cpp:210
 #, kde-format
 msgid "Match pattern:"
 msgstr "Oxşarlıq nümunəsi:"
 
-#: editactiondialog.cpp:212
+#: editactiondialog.cpp:213
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -498,22 +498,22 @@ msgstr ""
 "\"https://en.wikipedia.org/wiki/Regular_expression\">Wikipedia "
 "məqalələrindən</link> uyğun mövzunu oxuyun."
 
-#: editactiondialog.cpp:223
+#: editactiondialog.cpp:224
 #, kde-format
 msgid "Enter a description for the action"
 msgstr "Əməlin təsvirini daxil edin"
 
-#: editactiondialog.cpp:224 editcommanddialog.cpp:83
+#: editactiondialog.cpp:225 editcommanddialog.cpp:83
 #, kde-format
 msgid "Description:"
 msgstr "İzahatı:"
 
-#: editactiondialog.cpp:227
+#: editactiondialog.cpp:228
 #, kde-format
 msgid "Include in automatic popup"
 msgstr "Avtomatik kontekst menyuya daxil edin"
 
-#: editactiondialog.cpp:231
+#: editactiondialog.cpp:232
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -530,28 +530,28 @@ msgstr ""
 "%1</shortcut> qısayolundan istifadə edilərək əl ilə aktiv edilərsə daxil "
 "ediləcəklər."
 
-#: editactiondialog.cpp:266
+#: editactiondialog.cpp:267
 #, kde-format
 msgid "Add Command..."
 msgstr "Əmr əlavə edin..."
 
-#: editactiondialog.cpp:271
+#: editactiondialog.cpp:272
 #, kde-format
 msgid "Edit Command..."
 msgstr "Əmrə düzəliş edin..."
 
-#: editactiondialog.cpp:277
+#: editactiondialog.cpp:278
 #, kde-format
 msgid "Delete Command"
 msgstr "Əmri silin"
 
-#: editactiondialog.cpp:392
+#: editactiondialog.cpp:393
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Delete the selected command <resource>%1</resource>?"
 msgstr "Seçilmiş <resource>%1</resource> əmri silinsin?"
 
-#: editactiondialog.cpp:393
+#: editactiondialog.cpp:394
 #, kde-format
 msgid "Confirm Delete Command"
 msgstr "Əmrin silinməsini təsdiq edin"

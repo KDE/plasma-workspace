@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-15 00:44+0000\n"
+"POT-Creation-Date: 2025-05-23 00:44+0000\n"
 "PO-Revision-Date: 2022-10-17 10:13+0100\n"
 "Last-Translator: José Nuno Pires <zepires@gmail.com>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
@@ -480,7 +480,7 @@ msgstr "Descrição"
 msgid "Action Properties"
 msgstr "Propriedades da Acção"
 
-#: editactiondialog.cpp:195
+#: editactiondialog.cpp:196
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -494,17 +494,17 @@ msgstr ""
 "acontecer, os <interface>comandos da acção</interface> aparecerão no menu de "
 "contexto do Klipper; se um deles for escolhido, o comando é executado."
 
-#: editactiondialog.cpp:207
+#: editactiondialog.cpp:208
 #, kde-format
 msgid "Enter a pattern to match against the clipboard"
 msgstr "Indique um padrão para corresponder com a área de transferência"
 
-#: editactiondialog.cpp:209
+#: editactiondialog.cpp:210
 #, kde-format
 msgid "Match pattern:"
 msgstr "Padrão de correspondência:"
 
-#: editactiondialog.cpp:212
+#: editactiondialog.cpp:213
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -516,22 +516,22 @@ msgstr ""
 "leia o <link url=\"https://en.wikipedia.org/wiki/Regular_expression\">item "
 "da Wikipédia</link> sobre esse tópico."
 
-#: editactiondialog.cpp:223
+#: editactiondialog.cpp:224
 #, kde-format
 msgid "Enter a description for the action"
 msgstr "Indique uma descrição da acção"
 
-#: editactiondialog.cpp:224 editcommanddialog.cpp:83
+#: editactiondialog.cpp:225 editcommanddialog.cpp:83
 #, kde-format
 msgid "Description:"
 msgstr "Descrição:"
 
-#: editactiondialog.cpp:227
+#: editactiondialog.cpp:228
 #, kde-format
 msgid "Include in automatic popup"
 msgstr "Incluir na janela automática"
 
-#: editactiondialog.cpp:231
+#: editactiondialog.cpp:232
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -547,28 +547,28 @@ msgstr ""
 "serão incluídos na janela automática, mas serão incluídos se a janela for "
 "activada manualmente com a combinação de teclas <shortcut>%1</shortcut>."
 
-#: editactiondialog.cpp:266
+#: editactiondialog.cpp:267
 #, kde-format
 msgid "Add Command..."
 msgstr "Adicionar um Comando..."
 
-#: editactiondialog.cpp:271
+#: editactiondialog.cpp:272
 #, kde-format
 msgid "Edit Command..."
 msgstr "Editar o Comando..."
 
-#: editactiondialog.cpp:277
+#: editactiondialog.cpp:278
 #, kde-format
 msgid "Delete Command"
 msgstr "Remover o Comando"
 
-#: editactiondialog.cpp:392
+#: editactiondialog.cpp:393
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Delete the selected command <resource>%1</resource>?"
 msgstr "Deseja apagar o comando seleccionado <resource>%1</resource>?"
 
-#: editactiondialog.cpp:393
+#: editactiondialog.cpp:394
 #, kde-format
 msgid "Confirm Delete Command"
 msgstr "Confirmar o Comando de Remoção"

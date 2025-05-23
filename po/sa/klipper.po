@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-15 00:44+0000\n"
+"POT-Creation-Date: 2025-05-23 00:44+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -456,7 +456,7 @@ msgstr "वर्णनम्‌"
 msgid "Action Properties"
 msgstr "क्रियागुणाः"
 
-#: editactiondialog.cpp:195
+#: editactiondialog.cpp:196
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -470,17 +470,17 @@ msgstr ""
 "interface> Klipper popup मेन्यू मध्ये दृश्यन्ते; यदि तेषु एकः चयनितः भवति तर्हि आदेशः "
 "निष्पादितः भवति।"
 
-#: editactiondialog.cpp:207
+#: editactiondialog.cpp:208
 #, kde-format
 msgid "Enter a pattern to match against the clipboard"
 msgstr "क्लिप्बोर्ड् इत्यस्य विरुद्धं मेलयितुम् एकं प्रतिरूपं प्रविशन्तु"
 
-#: editactiondialog.cpp:209
+#: editactiondialog.cpp:210
 #, kde-format
 msgid "Match pattern:"
 msgstr "मेलप्रतिमानः :"
 
-#: editactiondialog.cpp:212
+#: editactiondialog.cpp:213
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -492,22 +492,22 @@ msgstr ""
 "wikipedia.org/wiki/Regular_expression\"> विकिपीडिया प्रविष्टि</link> अस्य "
 "विषयस्य कृते।"
 
-#: editactiondialog.cpp:223
+#: editactiondialog.cpp:224
 #, kde-format
 msgid "Enter a description for the action"
 msgstr "क्रियायाः कृते वर्णनं प्रविशतु"
 
-#: editactiondialog.cpp:224 editcommanddialog.cpp:83
+#: editactiondialog.cpp:225 editcommanddialog.cpp:83
 #, kde-format
 msgid "Description:"
 msgstr "वर्णनम्‌:"
 
-#: editactiondialog.cpp:227
+#: editactiondialog.cpp:228
 #, kde-format
 msgid "Include in automatic popup"
 msgstr "स्वचालित-पॉपअप-मध्ये समाविष्टं कुर्वन्तु"
 
-#: editactiondialog.cpp:231
+#: editactiondialog.cpp:232
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -523,28 +523,28 @@ msgstr ""
 "पॉपअप <shortcut>%1</shortcut> कील-शॉर्टकट् इत्यनेन सह मैन्युअल् रूपेण सक्रियः भवति तर्हि "
 "ते समाविष्टाः भविष्यन्ति"
 
-#: editactiondialog.cpp:266
+#: editactiondialog.cpp:267
 #, kde-format
 msgid "Add Command..."
 msgstr "आदेशं योजयतु..."
 
-#: editactiondialog.cpp:271
+#: editactiondialog.cpp:272
 #, kde-format
 msgid "Edit Command..."
 msgstr "सम्पादन आदेश..."
 
-#: editactiondialog.cpp:277
+#: editactiondialog.cpp:278
 #, kde-format
 msgid "Delete Command"
 msgstr "Delete Command इति"
 
-#: editactiondialog.cpp:392
+#: editactiondialog.cpp:393
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Delete the selected command <resource>%1</resource>?"
 msgstr "<resource>%1</resource> इति चयनितं आदेशं विलोपयतु?"
 
-#: editactiondialog.cpp:393
+#: editactiondialog.cpp:394
 #, kde-format
 msgid "Confirm Delete Command"
 msgstr "Delete Command इत्यस्य पुष्टिः कुर्वन्तु"

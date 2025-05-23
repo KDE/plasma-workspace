@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-15 00:44+0000\n"
+"POT-Creation-Date: 2025-05-23 00:44+0000\n"
 "PO-Revision-Date: 2017-11-04 20:03+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -470,7 +470,7 @@ msgstr "опис"
 msgid "Action Properties"
 msgstr "Својства радње"
 
-#: editactiondialog.cpp:195
+#: editactiondialog.cpp:196
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -480,17 +480,17 @@ msgid ""
 "command is executed."
 msgstr ""
 
-#: editactiondialog.cpp:207
+#: editactiondialog.cpp:208
 #, kde-format
 msgid "Enter a pattern to match against the clipboard"
 msgstr ""
 
-#: editactiondialog.cpp:209
+#: editactiondialog.cpp:210
 #, kde-format
 msgid "Match pattern:"
 msgstr ""
 
-#: editactiondialog.cpp:212
+#: editactiondialog.cpp:213
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -499,22 +499,22 @@ msgid ""
 "entry</link> for this topic."
 msgstr ""
 
-#: editactiondialog.cpp:223
+#: editactiondialog.cpp:224
 #, kde-format
 msgid "Enter a description for the action"
 msgstr ""
 
-#: editactiondialog.cpp:224 editcommanddialog.cpp:83
+#: editactiondialog.cpp:225 editcommanddialog.cpp:83
 #, kde-format
 msgid "Description:"
 msgstr "Опис:"
 
-#: editactiondialog.cpp:227
+#: editactiondialog.cpp:228
 #, kde-format
 msgid "Include in automatic popup"
 msgstr ""
 
-#: editactiondialog.cpp:231
+#: editactiondialog.cpp:232
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -525,31 +525,31 @@ msgid ""
 "manually with the <shortcut>%1</shortcut> key shortcut."
 msgstr ""
 
-#: editactiondialog.cpp:266
+#: editactiondialog.cpp:267
 #, fuzzy, kde-format
 #| msgid "Add Command"
 msgid "Add Command..."
 msgstr "Додај наредбу"
 
-#: editactiondialog.cpp:271
+#: editactiondialog.cpp:272
 #, fuzzy, kde-format
 #| msgid "Add Command"
 msgid "Edit Command..."
 msgstr "Додај наредбу"
 
-#: editactiondialog.cpp:277
+#: editactiondialog.cpp:278
 #, fuzzy, kde-format
 #| msgid "Remove Command"
 msgid "Delete Command"
 msgstr "Уклони наредбу"
 
-#: editactiondialog.cpp:392
+#: editactiondialog.cpp:393
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Delete the selected command <resource>%1</resource>?"
 msgstr ""
 
-#: editactiondialog.cpp:393
+#: editactiondialog.cpp:394
 #, kde-format
 msgid "Confirm Delete Command"
 msgstr ""
