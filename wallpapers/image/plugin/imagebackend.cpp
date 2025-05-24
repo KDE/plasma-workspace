@@ -14,6 +14,7 @@
 
 #include <math.h>
 
+#include <QAction>
 #include <QDateTime>
 #include <QDir>
 #include <QFileInfo>
@@ -23,6 +24,7 @@
 #include <QScreen>
 #include <QStandardPaths>
 
+#include <KGlobalAccel>
 #include <KLocalizedString>
 
 #include "finder/suffixcheck.h"
@@ -33,7 +35,14 @@
 ImageBackend::ImageBackend(QObject *parent)
     : QObject(parent)
     , m_targetSize(qGuiApp->primaryScreen()->size() * qGuiApp->primaryScreen()->devicePixelRatio())
+    , m_nextSlideAction(new QAction(QIcon::fromTheme(QStringLiteral("user-desktop")), i18nd("plasma_wallpaper_org.kde.image", "Next Wallpaper Image"), this))
 {
+    const QString slideActionId = QStringLiteral("Slideshow Wallpaper Next Image");
+    m_nextSlideAction->setObjectName(slideActionId);
+    KGlobalAccel::self()->setGlobalShortcut(m_nextSlideAction, QKeySequence());
+    m_nextSlideAction->setShortcut(KGlobalAccel::self()->globalShortcut(QStringLiteral("plasmashell"), slideActionId).value(0));
+    connect(m_nextSlideAction, &QAction::triggered, this, &ImageBackend::nextSlide);
+
     m_timer.setSingleShot(true);
     m_timer.setTimerType(Qt::PreciseTimer);
     connect(&m_timer, &QTimer::timeout, this, &ImageBackend::nextSlide);
@@ -515,4 +524,9 @@ void ImageBackend::setPauseSlideshow(bool pauseSlideshow)
 bool ImageBackend::loading() const
 {
     return m_loading;
+}
+
+QAction *ImageBackend::nextSlideAction() const
+{
+    return m_nextSlideAction;
 }

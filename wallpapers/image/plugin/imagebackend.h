@@ -13,6 +13,7 @@
 #include <optional>
 
 #include <QAbstractItemModel>
+#include <QAction>
 #include <QBindable>
 #include <QPointer>
 #include <QQmlParserStatus>
@@ -83,6 +84,8 @@ class ImageBackend : public QObject, public QQmlParserStatus
      */
     Q_PROPERTY(bool loading READ loading NOTIFY loadingChanged)
 
+    Q_PROPERTY(QAction *nextSlideAction READ nextSlideAction CONSTANT)
+
 public:
     enum RenderingMode {
         SingleImage,
@@ -139,6 +142,8 @@ public:
 
     bool loading() const;
 
+    QAction *nextSlideAction() const;
+
 public Q_SLOTS:
     void nextSlide();
     void slotSlideModelDataChanged(const QModelIndex &topLeft, const QModelIndex &bottomRight, const QList<int> &roles);
@@ -194,4 +199,6 @@ private:
     ImageProxyModel *m_model = nullptr;
     SlideModel *m_slideshowModel = nullptr;
     SlideFilterModel *m_slideFilterModel = nullptr;
+
+    QAction *m_nextSlideAction;
 };

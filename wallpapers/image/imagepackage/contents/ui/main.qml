@@ -30,20 +30,14 @@ WallpaperItem {
         root.configuration.writeConfig();
     }
 
-    contextualActions: [
-        PlasmaCore.Action {
-            text: i18nd("plasma_wallpaper_org.kde.image", "Open Wallpaper Image")
-            icon.name: "document-open"
-            visible: root.pluginName === "org.kde.slideshow"
-            onTriggered: imageView.mediaProxy.openModelImage();
-        },
-        PlasmaCore.Action {
-            text: i18nd("plasma_wallpaper_org.kde.image", "Next Wallpaper Image")
-            icon.name: "user-desktop"
-            visible: root.pluginName === "org.kde.slideshow"
-            onTriggered: imageWallpaper.nextSlide();
-        }
-    ]
+    contextualActions: root.pluginName === "org.kde.slideshow" ? [openWallpaperAction, imageWallpaper.nextSlideAction] : []
+
+    PlasmaCore.Action {
+        id: openWallpaperAction
+        text: i18nd("plasma_wallpaper_org.kde.image", "Open Wallpaper Image")
+        icon.name: "document-open"
+        onTriggered: imageView.mediaProxy.openModelImage();
+    }
 
     Connections {
 		enabled: root.pluginName === "org.kde.slideshow"
