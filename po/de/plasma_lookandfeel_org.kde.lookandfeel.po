@@ -282,7 +282,9 @@ msgid "Cancel"
 msgstr "Abbrechen"
 
 #: contents/osd/OsdItem.qml:30
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "Percentage value"
+#| msgid "%1%"
 msgctxt "Percentage value"
 msgid "%1%"
 msgstr "%1 %"
