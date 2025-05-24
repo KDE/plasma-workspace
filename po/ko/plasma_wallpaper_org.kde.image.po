@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-18 00:44+0000\n"
+"POT-Creation-Date: 2025-05-24 00:44+0000\n"
 "PO-Revision-Date: 2024-11-28 23:49+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -39,58 +39,86 @@ msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "슬라이드 쇼에 사용할 그림이 있는 디렉터리 선택"
 
-#: imagepackage/contents/ui/config.qml:127
+#: imagepackage/contents/ui/config.qml:148
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Positioning:"
 msgstr "위치:"
 
-#: imagepackage/contents/ui/config.qml:130
+#: imagepackage/contents/ui/config.qml:151
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled and cropped"
 msgstr "크기 조정 후 자르기"
 
-#: imagepackage/contents/ui/config.qml:134
+#: imagepackage/contents/ui/config.qml:155
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled"
 msgstr "크기 조정"
 
-#: imagepackage/contents/ui/config.qml:138
+#: imagepackage/contents/ui/config.qml:159
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled, keep proportions"
 msgstr "크기 조정, 비율 유지"
 
-#: imagepackage/contents/ui/config.qml:142
+#: imagepackage/contents/ui/config.qml:163
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "가운데"
 
-#: imagepackage/contents/ui/config.qml:146
+#: imagepackage/contents/ui/config.qml:167
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Tiled"
 msgstr "바둑판식 배열"
 
-#: imagepackage/contents/ui/config.qml:174
+#: imagepackage/contents/ui/config.qml:193
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Set as Wallpaper"
+msgctxt "part of a sentence: 'Switch dynamic wallpapers [based on]'"
+msgid "Switch dynamic wallpapers:"
+msgstr "배경 그림으로 설정"
+
+#: imagepackage/contents/ui/config.qml:194
+#, kde-format
+msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
+msgid "Based on whether the color scheme is dark or light"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:202
+#, kde-format
+msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
+msgid "At sunrise and sunset"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:217
+#, kde-format
+msgctxt ""
+"@label:checkbox Use geolocation services for more accurate sunset and "
+"sunrise times"
+msgid "Use device's current location for more accurate timings"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:228
 #, kde-format
 msgid "Background:"
 msgstr "배경:"
 
-#: imagepackage/contents/ui/config.qml:175
+#: imagepackage/contents/ui/config.qml:229
 #, kde-format
 msgid "Blur"
 msgstr "흐리게"
 
-#: imagepackage/contents/ui/config.qml:184
+#: imagepackage/contents/ui/config.qml:238
 #, kde-format
 msgid "Solid color"
 msgstr "단색"
 
-#: imagepackage/contents/ui/config.qml:195
+#: imagepackage/contents/ui/config.qml:249
 #, kde-format
 msgid "Select Background Color"
 msgstr "배경색 선택"
@@ -134,17 +162,17 @@ msgctxt "@action:button"
 msgid "Get New Wallpaper Images…"
 msgstr "새 배경 그림 가져오기…"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:32
+#: imagepackage/contents/ui/WallpaperDelegate.qml:34
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "포함하는 폴더 열기"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:38
+#: imagepackage/contents/ui/WallpaperDelegate.qml:40
 #, kde-format
 msgid "Restore wallpaper"
 msgstr "배경 그림 복원"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:43
+#: imagepackage/contents/ui/WallpaperDelegate.qml:45
 #, kde-format
 msgid "Remove Wallpaper"
 msgstr "배경 그림 삭제"

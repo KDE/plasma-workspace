@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-18 00:44+0000\n"
+"POT-Creation-Date: 2025-05-24 00:44+0000\n"
 "PO-Revision-Date: 2024-09-18 21:34+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -43,58 +43,86 @@ msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Diavetítés háttérképeit tartalmazó mappa"
 
-#: imagepackage/contents/ui/config.qml:127
+#: imagepackage/contents/ui/config.qml:148
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Positioning:"
 msgstr "Elhelyezkedés:"
 
-#: imagepackage/contents/ui/config.qml:130
+#: imagepackage/contents/ui/config.qml:151
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled and cropped"
 msgstr "Nyújtva és levágva"
 
-#: imagepackage/contents/ui/config.qml:134
+#: imagepackage/contents/ui/config.qml:155
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled"
 msgstr "Nyújtva"
 
-#: imagepackage/contents/ui/config.qml:138
+#: imagepackage/contents/ui/config.qml:159
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled, keep proportions"
 msgstr "Arányosan nyújtva"
 
-#: imagepackage/contents/ui/config.qml:142
+#: imagepackage/contents/ui/config.qml:163
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "Középre"
 
-#: imagepackage/contents/ui/config.qml:146
+#: imagepackage/contents/ui/config.qml:167
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Tiled"
 msgstr "Mozaikszerűen"
 
-#: imagepackage/contents/ui/config.qml:174
+#: imagepackage/contents/ui/config.qml:193
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Set as Wallpaper"
+msgctxt "part of a sentence: 'Switch dynamic wallpapers [based on]'"
+msgid "Switch dynamic wallpapers:"
+msgstr "Beállítás háttérképként"
+
+#: imagepackage/contents/ui/config.qml:194
+#, kde-format
+msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
+msgid "Based on whether the color scheme is dark or light"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:202
+#, kde-format
+msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
+msgid "At sunrise and sunset"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:217
+#, kde-format
+msgctxt ""
+"@label:checkbox Use geolocation services for more accurate sunset and "
+"sunrise times"
+msgid "Use device's current location for more accurate timings"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:228
 #, kde-format
 msgid "Background:"
 msgstr "Háttér:"
 
-#: imagepackage/contents/ui/config.qml:175
+#: imagepackage/contents/ui/config.qml:229
 #, kde-format
 msgid "Blur"
 msgstr "Elmosás"
 
-#: imagepackage/contents/ui/config.qml:184
+#: imagepackage/contents/ui/config.qml:238
 #, kde-format
 msgid "Solid color"
 msgstr "Egyszínű"
 
-#: imagepackage/contents/ui/config.qml:195
+#: imagepackage/contents/ui/config.qml:249
 #, kde-format
 msgid "Select Background Color"
 msgstr "Válassza ki a háttér színét"
@@ -138,17 +166,17 @@ msgctxt "@action:button"
 msgid "Get New Wallpaper Images…"
 msgstr "Új háttérképek letöltése…"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:32
+#: imagepackage/contents/ui/WallpaperDelegate.qml:34
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Tartalmazó mappa megnyitása"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:38
+#: imagepackage/contents/ui/WallpaperDelegate.qml:40
 #, kde-format
 msgid "Restore wallpaper"
 msgstr "Háttérkép visszaállítása"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:43
+#: imagepackage/contents/ui/WallpaperDelegate.qml:45
 #, kde-format
 msgid "Remove Wallpaper"
 msgstr "Háttérkép eltávolítása"

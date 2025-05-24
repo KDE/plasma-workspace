@@ -135,7 +135,7 @@ msgctxt ""
 "Sub-string in a font name; 'Display' as in display font — a type of font "
 "inappropriate for computer screens"
 msgid "Display"
-msgstr ""
+msgstr "展示型"
 
 #: ui/main.qml:36
 #, kde-format
@@ -166,6 +166,9 @@ msgid ""
 "Display_typeface'>not intended for use on computer displays</link>, and may "
 "produce odd results. Consider using a different font."
 msgstr ""
+"展示型字体 (Display Fonts) <link url='https://wikipedia.org/wiki/"
+"Display_typeface'>是针对展示用途设计的字体，而不是用于电脑屏幕显示的字体</"
+"link>，它们可能会呈现出异常的视觉效果，请考虑选用另一款字体。"
 
 #: ui/main.qml:101
 #, kde-format

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-18 00:44+0000\n"
+"POT-Creation-Date: 2025-05-24 00:44+0000\n"
 "PO-Revision-Date: 2011-02-18 18:06+0100\n"
 "Last-Translator: Marko Dimjasevic <marko@dimjasevic.net>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -46,64 +46,91 @@ msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:127
+#: imagepackage/contents/ui/config.qml:148
 #, fuzzy, kde-format
 #| msgid "&Positioning:"
 msgctxt "@label:listbox"
 msgid "Positioning:"
 msgstr "P&ozicioniranje:"
 
-#: imagepackage/contents/ui/config.qml:130
+#: imagepackage/contents/ui/config.qml:151
 #, fuzzy, kde-format
 #| msgid "Scaled & Cropped"
 msgctxt "@item:inlistbox"
 msgid "Scaled and cropped"
 msgstr "Rastegnuta i obrezana"
 
-#: imagepackage/contents/ui/config.qml:134
+#: imagepackage/contents/ui/config.qml:155
 #, fuzzy, kde-format
 #| msgid "Scaled"
 msgctxt "@item:inlistbox"
 msgid "Scaled"
 msgstr "Rastegnuta"
 
-#: imagepackage/contents/ui/config.qml:138
+#: imagepackage/contents/ui/config.qml:159
 #, fuzzy, kde-format
 #| msgid "Scaled, keep proportions"
 msgctxt "@item:inlistbox"
 msgid "Scaled, keep proportions"
 msgstr "Rastegnuta, sačuvaj proporcije"
 
-#: imagepackage/contents/ui/config.qml:142
+#: imagepackage/contents/ui/config.qml:163
 #, fuzzy, kde-format
 #| msgid "Centered"
 msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "Centrirana"
 
-#: imagepackage/contents/ui/config.qml:146
+#: imagepackage/contents/ui/config.qml:167
 #, fuzzy, kde-format
 #| msgid "Tiled"
 msgctxt "@item:inlistbox"
 msgid "Tiled"
 msgstr "Popločeno"
 
-#: imagepackage/contents/ui/config.qml:174
+#: imagepackage/contents/ui/config.qml:193
+#, fuzzy, kde-format
+#| msgid "Get New Wallpapers..."
+msgctxt "part of a sentence: 'Switch dynamic wallpapers [based on]'"
+msgid "Switch dynamic wallpapers:"
+msgstr "Preuzmi nove pozadinske slike…"
+
+#: imagepackage/contents/ui/config.qml:194
+#, kde-format
+msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
+msgid "Based on whether the color scheme is dark or light"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:202
+#, kde-format
+msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
+msgid "At sunrise and sunset"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:217
+#, kde-format
+msgctxt ""
+"@label:checkbox Use geolocation services for more accurate sunset and "
+"sunrise times"
+msgid "Use device's current location for more accurate timings"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:228
 #, kde-format
 msgid "Background:"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:175
+#: imagepackage/contents/ui/config.qml:229
 #, kde-format
 msgid "Blur"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:184
+#: imagepackage/contents/ui/config.qml:238
 #, kde-format
 msgid "Solid color"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:195
+#: imagepackage/contents/ui/config.qml:249
 #, kde-format
 msgid "Select Background Color"
 msgstr ""
@@ -152,18 +179,18 @@ msgctxt "@action:button"
 msgid "Get New Wallpaper Images…"
 msgstr "Sljedeća slika podloge"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:32
+#: imagepackage/contents/ui/WallpaperDelegate.qml:34
 #, kde-format
 msgid "Open Containing Folder"
 msgstr ""
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:38
+#: imagepackage/contents/ui/WallpaperDelegate.qml:40
 #, fuzzy, kde-format
 #| msgid "&System wallpapers:"
 msgid "Restore wallpaper"
 msgstr "Pozadinske slike iz &sustava:"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:43
+#: imagepackage/contents/ui/WallpaperDelegate.qml:45
 #, fuzzy, kde-format
 #| msgid "&System wallpapers:"
 msgid "Remove Wallpaper"
