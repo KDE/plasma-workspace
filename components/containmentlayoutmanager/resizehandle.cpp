@@ -156,7 +156,7 @@ void ResizeHandle::mouseMoveEvent(QMouseEvent *event)
 
     // Now make minimumSize an integer number of cells
     minimumSize.setWidth(ceil(minimumSize.width() / layout->cellWidth()) * layout->cellWidth());
-    minimumSize.setHeight(ceil(minimumSize.height() / layout->cellWidth()) * layout->cellHeight());
+    minimumSize.setHeight(ceil(minimumSize.height() / layout->cellHeight()) * layout->cellHeight());
 
     // Horizontal resize
     if (resizeLeft()) {
