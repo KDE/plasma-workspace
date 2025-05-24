@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-15 00:44+0000\n"
+"POT-Creation-Date: 2025-05-24 02:38+0000\n"
 "PO-Revision-Date: 2025-02-21 18:43+0100\n"
 "Last-Translator: Flori G <Renner03@protonmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -472,7 +472,7 @@ msgstr "Beschreibung"
 msgid "Action Properties"
 msgstr "Aktions-Eigenschaften"
 
-#: editactiondialog.cpp:195
+#: editactiondialog.cpp:196
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -486,17 +486,17 @@ msgstr ""
 "erscheinen die <interface>Befehle</interface> der Aktion im Klipper-"
 "Aufklappmenü. Wird einer davon ausgewählt, wird dieser Befehl ausgeführt."
 
-#: editactiondialog.cpp:207
+#: editactiondialog.cpp:208
 #, kde-format
 msgid "Enter a pattern to match against the clipboard"
 msgstr "Mit Zwischenablage abzugleichendes Muster eingeben"
 
-#: editactiondialog.cpp:209
+#: editactiondialog.cpp:210
 #, kde-format
 msgid "Match pattern:"
 msgstr "Musterabgleich:"
 
-#: editactiondialog.cpp:212
+#: editactiondialog.cpp:213
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -508,22 +508,22 @@ msgstr ""
 "\"https://de.wikipedia.org/wiki/Regul%C3%A4rer_Ausdruck\">Wikipedia-Eintrag</"
 "link> für mehr Informationen zu diesem Thema."
 
-#: editactiondialog.cpp:223
+#: editactiondialog.cpp:224
 #, kde-format
 msgid "Enter a description for the action"
 msgstr "Beschreibung der Aktion eingeben"
 
-#: editactiondialog.cpp:224 editcommanddialog.cpp:83
+#: editactiondialog.cpp:225 editcommanddialog.cpp:83
 #, kde-format
 msgid "Description:"
 msgstr "Beschreibung:"
 
-#: editactiondialog.cpp:227
+#: editactiondialog.cpp:228
 #, kde-format
 msgid "Include in automatic popup"
 msgstr "In automatisches Aufklappmenü einschließen"
 
-#: editactiondialog.cpp:231
+#: editactiondialog.cpp:232
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -540,28 +540,28 @@ msgstr ""
 "können aber eingeschlossen werden, wenn das Aufklappmenü manuell mit dem "
 "Kurzbefehl <shortcut>%1</shortcut> aktiviert wird."
 
-#: editactiondialog.cpp:266
+#: editactiondialog.cpp:267
 #, kde-format
 msgid "Add Command..."
 msgstr "Befehl hinzufügen …"
 
-#: editactiondialog.cpp:271
+#: editactiondialog.cpp:272
 #, kde-format
 msgid "Edit Command..."
 msgstr "Befehl bearbeiten …"
 
-#: editactiondialog.cpp:277
+#: editactiondialog.cpp:278
 #, kde-format
 msgid "Delete Command"
 msgstr "Befehl löschen"
 
-#: editactiondialog.cpp:392
+#: editactiondialog.cpp:393
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Delete the selected command <resource>%1</resource>?"
 msgstr "Den ausgewählten Befehl <resource>%1</resource> löschen?"
 
-#: editactiondialog.cpp:393
+#: editactiondialog.cpp:394
 #, kde-format
 msgid "Confirm Delete Command"
 msgstr "Löschen des Befehls bestätigen"

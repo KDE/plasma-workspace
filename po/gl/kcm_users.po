@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-23 00:44+0000\n"
-"PO-Revision-Date: 2025-01-04 15:10+0100\n"
-"Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
+"PO-Revision-Date: 2025-05-23 10:27+0200\n"
+"Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: src/fingerprintmodel.cpp:145 src/fingerprintmodel.cpp:229
 #, kde-format
@@ -539,14 +539,13 @@ msgstr "Usar unha icona de marca de posición de avatar."
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User Without Deleting Files?"
-msgstr ""
+msgstr "Quere eliminar a conta cunha sesión activa sen eliminar os ficheiros?"
 
 #: src/ui/UserDetailsPage.qml:115
-#, fuzzy, kde-format
-#| msgid "Delete User…"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User?"
-msgstr "Eliminar a conta…"
+msgstr "Quere eliminar a conta cunha sesión activa?"
 
 #: src/ui/UserDetailsPage.qml:117
 #, kde-kuit-format
@@ -556,6 +555,9 @@ msgid ""
 "account instead?<nl/><nl/>This will make %1 unable to log in again, and they "
 "may experience strange behaviors until they log out."
 msgstr ""
+"%1 ten unha sesión activa, así que non se pode eliminar os seus ficheiros. "
+"Prefire eliminar só a conta?<nl/><nl/>Isto impedirá a %1 acceder de novo, e "
+"pode que experimente comportamentos inesperados durante a súa sesión actual."
 
 #: src/ui/UserDetailsPage.qml:118
 #, kde-format
@@ -564,13 +566,14 @@ msgid ""
 "%1 is currently logged in. Deleting the account will make them unable to log "
 "in again, and they may experience strange behaviors until they log out."
 msgstr ""
+"%1 ten unha sesión activa. Eliminar a conta impedirá que acceda de novo, e "
+"pode que experimente comportamentos inesperados durante a súa sesión actual."
 
 #: src/ui/UserDetailsPage.qml:125
-#, fuzzy, kde-format
-#| msgid "Delete files"
+#, kde-format
 msgctxt "@action: button"
 msgid "Delete %1"
-msgstr "Eliminar os ficheiros"
+msgstr "Eliminar %1"
 
 #: src/ui/UserDetailsPage.qml:144
 #, kde-format

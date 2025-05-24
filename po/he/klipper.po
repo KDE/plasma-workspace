@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-15 00:44+0000\n"
+"POT-Creation-Date: 2025-05-24 02:38+0000\n"
 "PO-Revision-Date: 2025-04-11 10:57+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -471,7 +471,7 @@ msgstr "תיאור"
 msgid "Action Properties"
 msgstr "מאפייני הפקודה"
 
-#: editactiondialog.cpp:195
+#: editactiondialog.cpp:196
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -484,17 +484,17 @@ msgstr ""
 "הגזירים. כשזה קורה, ה<interface>פקודות</interface> של הפעולה מופיעות בתפריט "
 "הקובץ של Klipper, אם אחת מהן נבחרה, הפקודה מופעלת."
 
-#: editactiondialog.cpp:207
+#: editactiondialog.cpp:208
 #, kde-format
 msgid "Enter a pattern to match against the clipboard"
 msgstr "נא למלא תבנית ללכידה מול לוח הגזירים"
 
-#: editactiondialog.cpp:209
+#: editactiondialog.cpp:210
 #, kde-format
 msgid "Match pattern:"
 msgstr "תבנית לכידה:"
 
-#: editactiondialog.cpp:212
+#: editactiondialog.cpp:213
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -505,22 +505,22 @@ msgstr ""
 "תבנית הלכידה היא ביטוי רגולרי. למידע נוסף ניתן לעיין ב<link url=\"https://he."
 "wikipedia.org/wiki/ביטוי_רגולרי\">ערך בוויקיפדיה</link> על הנושא הזה."
 
-#: editactiondialog.cpp:223
+#: editactiondialog.cpp:224
 #, kde-format
 msgid "Enter a description for the action"
 msgstr "נא למלא תיאור לפעולה"
 
-#: editactiondialog.cpp:224 editcommanddialog.cpp:83
+#: editactiondialog.cpp:225 editcommanddialog.cpp:83
 #, kde-format
 msgid "Description:"
 msgstr "תיאור:"
 
-#: editactiondialog.cpp:227
+#: editactiondialog.cpp:228
 #, kde-format
 msgid "Include in automatic popup"
 msgstr "לכלול בחלונית הקופצת האוטומטית"
 
-#: editactiondialog.cpp:231
+#: editactiondialog.cpp:232
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -535,28 +535,28 @@ msgstr ""
 "לא ייכללו בחלונית הקופצת האוטומטית אך הן תיכללנה אם החלונית הקופצת תופעל "
 "ידנית עם מקשי הקיצור <shortcut>%1</shortcut>."
 
-#: editactiondialog.cpp:266
+#: editactiondialog.cpp:267
 #, kde-format
 msgid "Add Command..."
 msgstr "הוספת פקודה…"
 
-#: editactiondialog.cpp:271
+#: editactiondialog.cpp:272
 #, kde-format
 msgid "Edit Command..."
 msgstr "עריכת פקודה…"
 
-#: editactiondialog.cpp:277
+#: editactiondialog.cpp:278
 #, kde-format
 msgid "Delete Command"
 msgstr "מחיקת פקודה"
 
-#: editactiondialog.cpp:392
+#: editactiondialog.cpp:393
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Delete the selected command <resource>%1</resource>?"
 msgstr "למחוק את הפקודה <resource>%1</resource> שנבחרה?"
 
-#: editactiondialog.cpp:393
+#: editactiondialog.cpp:394
 #, kde-format
 msgid "Confirm Delete Command"
 msgstr "אישור מחיקת פקודה"
