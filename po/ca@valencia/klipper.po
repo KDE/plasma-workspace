@@ -308,9 +308,9 @@ msgstr ""
 "El nom que s'ha d'introduir ací és el nom WM_CLASS de la finestra que "
 "s'exclou. Per a trobar el nom WM_CLASS per a una finestra, en una altra "
 "finestra de terminal introduïu l'ordre:<nl/><nl/>&nbsp;&nbsp;<icode>xprop | "
-"grep WM_CLASS</icode><nl/><nl/>i feu clic en la finestra que voleu excloure. "
-"El primer nom que es mostra després del signe d'igual és el que heu "
-"d'introduir."
+"grep WM_CLASS</icode><nl/><nl/>i cliqueu damunt de la finestra que voleu "
+"excloure. El primer nom que es mostra després del signe d'igual és el que "
+"heu d'introduir."
 
 #: declarative/qml/BarcodePage.qml:31
 #, kde-format
@@ -949,15 +949,3 @@ msgstr "Menú emergent del porta-retalls"
 #, kde-format
 msgid "&Cancel"
 msgstr "C&ancel·la"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "You can enable URL actions later in the <interface>Actions</interface> "
-#~ "page of the Clipboard applet's configuration window"
-#~ msgstr ""
-#~ "Més tard podreu habilitar accions d'URL a la pàgina <interface>Accions</"
-#~ "interface> de la finestra de configuració de la miniaplicació de porta-"
-#~ "retalls"
-
-#~ msgid "Disable This Popup"
-#~ msgstr "Desactiva este emergent"

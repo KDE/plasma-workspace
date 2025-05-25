@@ -3,19 +3,20 @@
 # Roman Paholík <wizzardsk@gmail.com>, 2017.
 # Dušan Kazik <prescott66@gmail.com>, 2020.
 # Matej Mrenica <matejm98mthw@gmail.com>, 2023.
+# SPDX-FileCopyrightText: 2025 Lucia Mrenica <lucia.mrenica@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_nightcolor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-13 00:47+0000\n"
-"PO-Revision-Date: 2023-12-02 19:43+0100\n"
-"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"PO-Revision-Date: 2025-05-24 17:26+0200\n"
+"Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.01.80\n"
+"X-Generator: Lokalize 25.04.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: ui/DayNightView.qml:154
@@ -52,10 +53,9 @@ msgid "Zoom in"
 msgstr "Priblížiť"
 
 #: ui/LocationsFixedView.qml:129
-#, fuzzy, kde-format
-#| msgid "Zoom in"
+#, kde-format
 msgid "Zoom out"
-msgstr "Priblížiť"
+msgstr "Oddialiť"
 
 #: ui/LocationsFixedView.qml:227
 #, kde-kuit-format
@@ -215,21 +215,19 @@ msgstr "Hľadám..."
 #, kde-format
 msgctxt "@info:tooltip Part of a control for setting a time"
 msgid "hour"
-msgstr ""
+msgstr "hodina"
 
 #: ui/TimeField.qml:50
 #, kde-format
 msgctxt "Time separator between hours and minutes"
 msgid ":"
-msgstr ""
+msgstr ":"
 
 #: ui/TimeField.qml:56
-#, fuzzy, kde-format
-#| msgid "%1 minute"
-#| msgid_plural "%1 minutes"
+#, kde-format
 msgctxt "@info:tooltip Part of a control for setting a time"
 msgid "minute"
-msgstr "%1 minúta"
+msgstr "minúta"
 
 #~ msgctxt "@info"
 #~ msgid ""

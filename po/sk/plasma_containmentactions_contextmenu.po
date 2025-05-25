@@ -3,19 +3,20 @@
 # Michal Sulek <misurel@gmail.com>, 2009.
 # Roman Paholík <wizzardsk@gmail.com>, 2014.
 # Matej Mrenica <matejm98mthw@gmail.com>, 2019, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2025 Lucia Mrenica <lucia.mrenica@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_containmentactions_contextmenu\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-24 00:43+0000\n"
-"PO-Revision-Date: 2023-01-11 21:30+0100\n"
-"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"PO-Revision-Date: 2025-05-24 17:06+0200\n"
+"Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 25.04.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: menu.cpp:109
@@ -36,18 +37,16 @@ msgid "Lock Screen"
 msgstr "Zamknúť obrazovku"
 
 #: menu.cpp:127
-#, fuzzy, kde-format
-#| msgctxt "plasma_containmentactions_contextmenu"
-#| msgid "Lock Screen"
+#, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Show Logout Screen"
-msgstr "Zamknúť obrazovku"
+msgstr "Zobraziť obrazovku na odhlásenie sa"
 
 #: menu.cpp:132
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Display Configuration"
-msgstr ""
+msgstr "Nastavenie obrazovky"
 
 #: menu.cpp:280
 #, kde-format

@@ -2,19 +2,20 @@
 # Roman Paholik <wizzardsk@gmail.com>, 2014, 2015, 2016.
 # Mthw <jari_45@hotmail.com>, 2018.
 # SPDX-FileCopyrightText: 2020, 2022, 2023 Matej Mrenica <matejm98mthw@gmail.com>
+# SPDX-FileCopyrightText: 2025 Lucia Mrenica <lucia.mrenica@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-10 00:44+0000\n"
-"PO-Revision-Date: 2023-11-11 15:11+0100\n"
-"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"PO-Revision-Date: 2025-05-24 17:15+0200\n"
+"Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 25.04.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #, kde-format
@@ -102,31 +103,31 @@ msgstr "Navštívte stránku bugs.kde.org pre nahlásenie problémov"
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy Plasma Version"
-msgstr ""
+msgstr "Kopírovať verziu Plasma"
 
 #: desktopview.cpp:292
 #, kde-format
 msgctxt "@action:button"
 msgid "Report a Bug…"
-msgstr ""
+msgstr "Nahlásiť chybu…"
 
 #: desktopview.cpp:302
 #, kde-format
 msgctxt "@title:menu"
 msgid "Hide Preview Banner"
-msgstr ""
+msgstr "Skryť banner náhľadu"
 
 #: desktopview.cpp:305
 #, kde-format
 msgctxt "@action:button Hide the preview banner until the system is restarted"
 msgid "Hide Until Restart"
-msgstr ""
+msgstr "Skryť do reštartu"
 
 #: desktopview.cpp:312
 #, kde-format
 msgctxt "@action:button Hide the preview banner permanently"
 msgid "Hide Permanently…"
-msgstr ""
+msgstr "Skryť natrvalo..."
 
 #: desktopview.cpp:318
 #, kde-kuit-format
@@ -142,17 +143,17 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide Preview Banner?"
-msgstr ""
+msgstr "Skryť banner náhľadu?"
 
 #: desktopview.cpp:518 desktopview.cpp:534
 #, kde-format
 msgid "Enter Edit Mode"
-msgstr ""
+msgstr "Prejsť do režimu úprav"
 
 #: desktopview.cpp:532
 #, kde-format
 msgid "Exit Edit Mode"
-msgstr ""
+msgstr "Ukončiť režim úprav"
 
 #: main.cpp:86
 #, kde-format
@@ -291,31 +292,31 @@ msgstr "Klávesnica na obrazovke deaktivovaná"
 #, kde-format
 msgctxt "power management was inhibited, keep short"
 msgid "Sleep and Screen Locking Blocked"
-msgstr ""
+msgstr "Spánok a obrazovka zablokovaná"
 
 #: osd.cpp:197
 #, kde-format
 msgctxt "power management was uninhibited, keep short"
 msgid "Sleep and Screen Locking Unblocked"
-msgstr ""
+msgstr "Spánok a obrazovka odblokovaná"
 
 #: osd.cpp:207
 #, kde-format
 msgctxt "Power profile was changed to power save mode, keep short"
 msgid "Power Save Mode"
-msgstr ""
+msgstr "Režim šetrenia energie"
 
 #: osd.cpp:210
 #, kde-format
 msgctxt "Power profile was changed to balanced mode, keep short"
 msgid "Balanced Power Mode"
-msgstr ""
+msgstr "Vyvážený režim"
 
 #: osd.cpp:213
 #, kde-format
 msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
-msgstr ""
+msgstr "Režim vysokého výkonu"
 
 #: panelview.cpp:458
 #, kde-format
@@ -324,18 +325,21 @@ msgid ""
 "known to cause poor window drag and resize performance. Consider using other "
 "settings."
 msgstr ""
+"Pri grafickom procesore NVIDIA v systéme X11 je známe, že plávajúci štýl a "
+"adaptívny režim nepriehľadnosti spôsobujú slabý výkon pri preťahovaní okien "
+"a zmene veľkosti. Zvážte použitie iných nastavení."
 
 #: panelview.cpp:1141
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
-msgstr ""
+msgstr "Skryť nastavenie panelu"
 
 #: panelview.cpp:1143
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
-msgstr ""
+msgstr "Zobraziť nastavenie panelu"
 
 #: shellcontainmentconfig.cpp:106
 #, kde-format
@@ -366,7 +370,7 @@ msgstr "Skryť plochu"
 #: shellcorona.cpp:232
 #, kde-format
 msgid "Activate Application Launcher"
-msgstr ""
+msgstr "Aktivovať spúšťač aplikácií"
 
 #: shellcorona.cpp:240
 #, kde-format
@@ -394,11 +398,10 @@ msgid "Activate Task Manager Entry %1"
 msgstr "Aktivovať položku správcu úloh %1"
 
 #: shellcorona.cpp:313
-#, fuzzy, kde-format
-#| msgid "Manage Desktops And Panels..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
-msgstr "Spravovať plochy a panely..."
+msgstr "Spravovať plochy a panely…"
 
 #: shellcorona.cpp:335
 #, kde-format

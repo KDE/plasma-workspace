@@ -2,53 +2,54 @@
 # Roman Paholík <wizzardsk@gmail.com>, 2022.
 # Matej Mrenica <matejm98mthw@gmail.com>, 2023.
 # Ferdinand Galko <galko.ferdinand@gmail.com>, 2023.
+# SPDX-FileCopyrightText: 2025 Lucia Mrenica <lucia.mrenica@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_regionandlang\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-01 00:44+0000\n"
-"PO-Revision-Date: 2023-04-15 19:43+0200\n"
-"Last-Translator: Ferdinand Galko <galko.ferdinand@gmail.com>\n"
-"Language-Team: Slovak <opensuse-translation@opensuse.org>\n"
+"PO-Revision-Date: 2025-05-24 17:25+0200\n"
+"Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
+"Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 25.04.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: binarydialectmodel.cpp:52
 #, kde-format
 msgctxt "Binary dialect IEC, with sigle in parentheses"
 msgid "International Electrotechnical Commission (IEC)"
-msgstr ""
+msgstr "International Electrotechnical Commission (IEC)"
 
 #: binarydialectmodel.cpp:56
 #, kde-format
 msgctxt "Binary dialect JEDEC, with sigle in parentheses"
 msgid "Joint Electron Device Engineering Council (JEDEC)"
-msgstr ""
+msgstr "Joint Electron Device Engineering Council (JEDEC)"
 
 #: binarydialectmodel.cpp:60
 #, kde-format
 msgctxt "Binary dialect Metric, with origin in parentheses"
 msgid "Metric system (SI)"
-msgstr ""
+msgstr "Metrický systém (SI)"
 
 #: binarydialectmodel.cpp:75
 #, kde-format
 msgid "Binary -  Kibibytes (KiB), Mebibytes (MiB), Gibibytes (GiB)"
-msgstr ""
+msgstr "Binárne -  Kibibajty (KiB), Mebibajty (MiB), Gibibajty (GiB)"
 
 #: binarydialectmodel.cpp:77
 #, kde-format
 msgid "Binary - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
-msgstr ""
+msgstr "Binárne -  Kilobajty (KiB), Megabajty (MiB), Gigabajty (GiB)"
 
 #: binarydialectmodel.cpp:79
 #, kde-format
 msgid "Decimal - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
-msgstr ""
+msgstr "Desatinné - Kilobajty (kB), Megabajty (MB), Gigabajty (GB)"
 
 #: exampleutility.cpp:31
 #, kde-format
@@ -415,25 +416,25 @@ msgstr "Telefónne čísla"
 #, kde-format
 msgctxt "@info:title"
 msgid "Data and Storage Sizes"
-msgstr ""
+msgstr "Veľkosti úložiska a údajov"
 
 #: optionsmodel.cpp:279
 #, kde-format
 msgctxt "the prefix for IECBinaryDialect, %1 is an example for 1 KiB"
 msgid "KiB, MiB, GiB; %1"
-msgstr ""
+msgstr "KiB, MiB, GiB; %1"
 
 #: optionsmodel.cpp:282
 #, kde-format
 msgctxt "the prefix for JEDECBinaryDialect, %1 is an example for 1 KB"
 msgid "KB, MB, GB; %1"
-msgstr ""
+msgstr "KB, MB, GB; %1"
 
 #: optionsmodel.cpp:285
 #, kde-format
 msgctxt "the prefix for MetricBinaryDialect, %1 is an example for 1 kB"
 msgid "kB, MB, GB; %1"
-msgstr ""
+msgstr "kB, MB, GB; %1"
 
 #: optionsmodel.cpp:357
 #, kde-format
@@ -581,7 +582,7 @@ msgstr "Upraviť..."
 #, kde-format
 msgctxt "@title:window"
 msgid "Data and Storage Sizes"
-msgstr ""
+msgstr "Veľkosti údajov a úložiska"
 
 #: ui/main.qml:275
 #, kde-format
