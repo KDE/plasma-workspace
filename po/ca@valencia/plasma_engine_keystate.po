@@ -23,7 +23,7 @@ msgstr ""
 
 #: keystate.cpp:15
 msgid "Shift"
-msgstr "Maj"
+msgstr "Majús"
 
 #: keystate.cpp:16
 msgid "Ctrl"
@@ -55,7 +55,7 @@ msgstr "Bloq Núm"
 
 #: keystate.cpp:23
 msgid "Caps Lock"
-msgstr "Bloq Maj"
+msgstr "Bloq Majús"
 
 #: keystate.cpp:24
 msgid "Scroll Lock"

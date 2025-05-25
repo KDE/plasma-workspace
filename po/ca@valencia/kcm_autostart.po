@@ -97,7 +97,8 @@ msgstr "No hi ha cap element d'inici automàtic especificat per l'usuari"
 msgctxt "@info"
 msgid "Click the <interface>Add…</interface> button below to add some"
 msgstr ""
-"Feu clic en el botó <interface>Afig…</interface> de davall per a afegir-ne"
+"Cliqueu damunt del botó <interface>Afig…</interface> de davall per a afegir-"
+"ne"
 
 #: package/contents/ui/main.qml:144
 #, kde-format

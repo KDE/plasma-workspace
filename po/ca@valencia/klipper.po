@@ -298,9 +298,9 @@ msgstr ""
 "El nom que s'ha d'introduir ací és el nom WM_CLASS de la finestra que "
 "s'exclou. Per a trobar el nom WM_CLASS per a una finestra, en una altra "
 "finestra de terminal introduïu l'ordre:<nl/><nl/>&nbsp;&nbsp;<icode>xprop | "
-"grep WM_CLASS</icode><nl/><nl/>i feu clic en la finestra que voleu excloure. "
-"El primer nom que es mostra després del signe d'igual és el que heu "
-"d'introduir."
+"grep WM_CLASS</icode><nl/><nl/>i cliqueu damunt de la finestra que voleu "
+"excloure. El primer nom que es mostra després del signe d'igual és el que "
+"heu d'introduir."
 
 #: editactiondialog.cpp:34 editcommanddialog.cpp:89
 #, kde-format

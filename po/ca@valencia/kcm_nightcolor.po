@@ -34,7 +34,7 @@ msgstr "Toqueu per a escollir el vostre emplaçament en el mapa."
 msgctxt ""
 "@label:chooser Click should be translated to mean clicking using a mouse"
 msgid "Click to choose your location on the map."
-msgstr "Feu clic per a escollir el vostre emplaçament en el mapa."
+msgstr "Cliqueu per a escollir el vostre emplaçament en el mapa."
 
 #: package/contents/ui/LocationsFixedView.qml:78
 #: package/contents/ui/LocationsFixedView.qml:103

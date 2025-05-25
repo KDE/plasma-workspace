@@ -476,7 +476,7 @@ msgstr "Fusta dura brillant"
 #, kde-format
 msgctxt "@title"
 msgid "Choose a picture"
-msgstr "Trieu una imatge"
+msgstr "Tria una imatge"
 
 #: package/contents/ui/PicturesSheet.qml:114
 #, kde-format
