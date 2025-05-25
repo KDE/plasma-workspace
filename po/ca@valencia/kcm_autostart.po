@@ -184,7 +184,8 @@ msgstr "No hi ha cap element d'inici automàtic especificat per l'usuari"
 #, kde-kuit-format
 msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add New</interface> button to add some"
-msgstr "Feu clic en el botó <interface>Afig nou</interface> per a afegir-ne"
+msgstr ""
+"Cliqueu damunt del botó <interface>Afig nou</interface> per a afegir-ne"
 
 #: ui/main.qml:219
 #, kde-format

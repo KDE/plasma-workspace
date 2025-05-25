@@ -1376,6 +1376,3 @@ msgstr "Obri un esquema de color"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Fitxers d'esquema de color (*.colors)"
-
-#~ msgid "Choose custom accent color"
-#~ msgstr "Seleccioneu el color d'accent personalitzat"

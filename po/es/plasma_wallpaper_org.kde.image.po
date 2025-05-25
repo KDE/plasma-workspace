@@ -1,15 +1,15 @@
-# Spanish translations for plasma_applet_org.kde.image.po package.
-# Copyright (C) 2014 This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
-#
+# Spanish translations for plasma_wallpaper_org.kde.image.po package.
+# Copyright (C) 2014-2025 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
 # Automatically generated, 2014.
-# SPDX-FileCopyrightText: 2014, 2015, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
+#
+# SPDX-FileCopyrightText: 2014, 2015, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
-"Project-Id-Version: plasma_applet_org\n"
+"Project-Id-Version: plasma_wallpaper_org.kde.image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-24 00:44+0000\n"
-"PO-Revision-Date: 2024-08-30 01:12+0200\n"
+"PO-Revision-Date: 2025-05-24 11:30+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -80,24 +80,22 @@ msgid "Tiled"
 msgstr "En mosaico"
 
 #: imagepackage/contents/ui/config.qml:193
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Set as Wallpaper"
+#, kde-format
 msgctxt "part of a sentence: 'Switch dynamic wallpapers [based on]'"
 msgid "Switch dynamic wallpapers:"
-msgstr "Definir como fondo del escritorio"
+msgstr "Cambiar fondos de escritorio dinámicos:"
 
 #: imagepackage/contents/ui/config.qml:194
 #, kde-format
 msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the color scheme is dark or light"
-msgstr ""
+msgstr "Según si el esquema de color es oscuro o claro"
 
 #: imagepackage/contents/ui/config.qml:202
 #, kde-format
 msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
 msgid "At sunrise and sunset"
-msgstr ""
+msgstr "Al amanecer y al anochecer"
 
 #: imagepackage/contents/ui/config.qml:217
 #, kde-format
@@ -105,7 +103,7 @@ msgctxt ""
 "@label:checkbox Use geolocation services for more accurate sunset and "
 "sunrise times"
 msgid "Use device's current location for more accurate timings"
-msgstr ""
+msgstr "Usar la ubicación actual del dispositivo para tiempos más precisos"
 
 #: imagepackage/contents/ui/config.qml:228
 #, kde-format
@@ -146,25 +144,25 @@ msgstr "Imágenes"
 #, kde-format
 msgctxt "@action:button the thing being added is an image file"
 msgid "Add…"
-msgstr "Añadir..."
+msgstr "Añadir…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:65
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Wallpaper Image…"
-msgstr "Añadir imagen de fondo del escritorio..."
+msgstr "Añadir imagen de fondo del escritorio…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:71
 #, kde-format
 msgctxt "@action:button the new things being gotten are wallpapers"
 msgid "Get New…"
-msgstr "Obtener nueva..."
+msgstr "Obtener nueva…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:72
 #, kde-format
 msgctxt "@action:button"
 msgid "Get New Wallpaper Images…"
-msgstr "Obtener nuevas imágenes de fondo del escritorio..."
+msgstr "Obtener nuevas imágenes de fondo del escritorio…"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:34
 #, kde-format
@@ -325,13 +323,13 @@ msgstr "Carpetas"
 #, kde-format
 msgctxt "@action button the thing being added is a folder"
 msgid "Add…"
-msgstr "Añadir..."
+msgstr "Añadir…"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:211
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Folder…"
-msgstr "Añadir carpeta..."
+msgstr "Añadir carpeta…"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:249
 #, kde-format
@@ -341,7 +339,7 @@ msgstr "Eliminar carpeta"
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:260
 #, kde-format
 msgid "Open Folder…"
-msgstr "Abrir carpeta..."
+msgstr "Abrir carpeta…"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:275
 #, kde-format
@@ -386,57 +384,3 @@ msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr ""
 "Ha ocurrido un error al intentar abrir el archivo de configuración "
 "«kscreenlockerrc»."
-
-#~ msgctxt "@title:window"
-#~ msgid "Open Media"
-#~ msgstr "Abrir multimedia"
-
-#~ msgid "Add Image…"
-#~ msgstr "Añadir imagen..."
-
-#~ msgid "Recommended wallpaper file"
-#~ msgstr "Archivo de fondo de escritorio recomendado"
-
-#~ msgid "There are no wallpapers in this slideshow"
-#~ msgstr "No existen fondos de escritorio en esta presentación"
-
-#~ msgid "Add Custom Wallpaper"
-#~ msgstr "Añadir fondo de escritorio personalizado"
-
-#~ msgid "Remove wallpaper"
-#~ msgstr "Eliminar fondo del escritorio"
-
-#~ msgid "%1 by %2"
-#~ msgstr "%1 por %2"
-
-#~ msgid "Wallpapers"
-#~ msgstr "Fondos de escritorio"
-
-#~ msgctxt "<image> by <author>"
-#~ msgid "By %1"
-#~ msgstr "Por %1"
-
-#~ msgid "Download Wallpapers"
-#~ msgstr "Descargar fondos del escritorio"
-
-#~ msgid "Hours"
-#~ msgstr "Horas"
-
-#~ msgid "Use blur background filling"
-#~ msgstr "Usar relleno de fondo borroso"
-
-#~ msgid "Open..."
-#~ msgstr "Abrir..."
-
-#~ msgctxt "Unknown Author"
-#~ msgid "Unknown"
-#~ msgstr "Desconocido"
-
-#~ msgid "Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz *.xcf)"
-#~ msgstr "Archivos de imagen (*.png *.jpg *.jpeg *.bmp *.svg *.svgz *.xcf)"
-
-#~ msgid "Screenshot"
-#~ msgstr "Captura de pantalla"
-
-#~ msgid "Preview"
-#~ msgstr "Vista previa"

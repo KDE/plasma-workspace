@@ -547,7 +547,7 @@ msgstr "Tria un fitxer…"
 #, kde-format
 msgctxt "@title"
 msgid "Choose a picture"
-msgstr "Trieu una imatge"
+msgstr "Tria una imatge"
 
 #: src/ui/PicturesSheet.qml:144
 #, kde-format

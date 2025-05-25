@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-24 00:44+0000\n"
-"PO-Revision-Date: 2024-08-29 06:21+0200\n"
+"PO-Revision-Date: 2025-05-24 04:15+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.6\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -77,24 +77,22 @@ msgid "Tiled"
 msgstr "მოზაიკა"
 
 #: imagepackage/contents/ui/config.qml:193
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Set as Wallpaper"
+#, kde-format
 msgctxt "part of a sentence: 'Switch dynamic wallpapers [based on]'"
 msgid "Switch dynamic wallpapers:"
-msgstr "ფონის სურათად დაყენება"
+msgstr "დინამიკური ფონური სურათების გადართვა:"
 
 #: imagepackage/contents/ui/config.qml:194
 #, kde-format
 msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the color scheme is dark or light"
-msgstr ""
+msgstr "ეფუძნება, არის ფერების სქემა მუქი, თუ ღია"
 
 #: imagepackage/contents/ui/config.qml:202
 #, kde-format
 msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
 msgid "At sunrise and sunset"
-msgstr ""
+msgstr "აისისას და დაისისას"
 
 #: imagepackage/contents/ui/config.qml:217
 #, kde-format
@@ -103,6 +101,8 @@ msgctxt ""
 "sunrise times"
 msgid "Use device's current location for more accurate timings"
 msgstr ""
+"მოწყობილობის მიმდინარე მდებარეობის გამოყენება დროის უფრო ზუსტი "
+"განსაზღვრისთვის"
 
 #: imagepackage/contents/ui/config.qml:228
 #, kde-format
