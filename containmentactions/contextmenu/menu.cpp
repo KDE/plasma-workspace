@@ -108,7 +108,7 @@ void ContextMenu::restore(const KConfigGroup &config)
     if (!m_runCommandAction) {
         m_runCommandAction = new QAction(i18nc("plasma_containmentactions_contextmenu", "Show KRunner"), this);
         m_runCommandAction->setIcon(QIcon::fromTheme(QStringLiteral("plasma-search")));
-        m_runCommandAction->setShortcut(KGlobalAccel::self()->globalShortcut(QStringLiteral("krunner.desktop"), QStringLiteral("_launch")).value(0));
+        m_runCommandAction->setShortcut(KGlobalAccel::self()->globalShortcut(QStringLiteral("org.kde.krunner.desktop"), QStringLiteral("_launch")).value(0));
         connect(m_runCommandAction, &QAction::triggered, this, &ContextMenu::runCommand);
 
         m_openTerminalAction = new QAction(i18n("Open Terminal"), this);
