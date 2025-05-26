@@ -27,9 +27,10 @@ Item {
     Rectangle {
         id: monitorRectangle
         anchors.centerIn: monitorPanel
-        border.color: Kirigami.Theme.textColor
+        border.color: Kirigami.Theme.highlightColor
         border.width: 1
-        color: Kirigami.Theme.alternateBackgroundColor
+        color: Kirigami.Theme.highlightColor
+        opacity: 0.5
         width: monitorPanel.width - (Kirigami.Units.smallSpacing * 2)
         height: monitorPanel.height - (Kirigami.Units.smallSpacing * 2)
         radius: Kirigami.Units.cornerRadius
