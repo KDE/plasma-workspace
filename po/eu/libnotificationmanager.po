@@ -1,7 +1,7 @@
 # Translation for libnotificationmanager.po to Euskara/Basque (eu).
 # Copyright (C) 2019-2025 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# SPDX-FileCopyrightText: 2025 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2025 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Iñigo Salvador Azurmendi <xalba@ni.eus>, 2019, 2022, 2025.
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-21 00:44+0000\n"
-"PO-Revision-Date: 2025-01-09 22:22+0100\n"
+"PO-Revision-Date: 2025-05-25 14:56+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: abstractnotificationsmodel.cpp:340
 #, kde-format
@@ -106,21 +106,17 @@ msgid "Application closed unexpectedly."
 msgstr "Aplikazio bat itxi da ustekabean."
 
 #: notifications.cpp:907
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Unread Notifications"
+#, kde-format
 msgctxt "@title"
 msgid "Unread Notification"
 msgid_plural "Unread Notifications"
-msgstr[0] "Irakurri gabeko jakinarazpenak"
+msgstr[0] "Irakurri gabeko jakinarazpena"
 msgstr[1] "Irakurri gabeko jakinarazpenak"
 
 #: notifications.cpp:909
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "%1 notifications were received while Do Not Disturb was active."
+#, kde-format
 msgctxt "@info"
 msgid "%1 notification was received while Do Not Disturb was active."
 msgid_plural "%1 notifications were received while Do Not Disturb was active."
-msgstr[0] "%1 jakinarazpen jaso dira Zaratarik Ez aktibo zegoen bitartean."
+msgstr[0] "Jakinarazpen %1 jaso da Zaratarik Ez aktibo zegoen bitartean."
 msgstr[1] "%1 jakinarazpen jaso dira Zaratarik Ez aktibo zegoen bitartean."

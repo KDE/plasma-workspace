@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-09 00:42+0000\n"
+"POT-Creation-Date: 2025-05-26 00:43+0000\n"
 "PO-Revision-Date: 2024-10-18 17:08+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -29,12 +29,12 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "anarchist_tomato@herzeleid.net"
 
-#: logout.cpp:273
+#: logout.cpp:269
 #, kde-format
 msgid "Logout canceled by '%1'"
 msgstr "Logout cancelled by '%1'"
 
-#: logout.cpp:371
+#: logout.cpp:363
 #, kde-format
 msgctxt "@info:status"
 msgid "Session is exiting"
@@ -103,13 +103,13 @@ msgstr ""
 "Starts without lock screen support. Only needed if other component provides "
 "the lock screen."
 
-#: server.cpp:778
+#: server.cpp:776
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[unknown]"
 
-#: server.cpp:801
+#: server.cpp:799
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -121,7 +121,7 @@ msgstr ""
 "are exhausted. Here are the top three consumers of session resources:\n"
 "%1"
 
-#: server.cpp:1073
+#: server.cpp:1059
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""

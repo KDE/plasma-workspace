@@ -1,17 +1,17 @@
 # Translation for plasma_applet_org.kde.plasma.private.systemtray.po to Euskara/Basque (eu).
 # Copyright (C) 2017, The Free Software Foundation, Inc.
-# Copyright (C) 2018-2024 This file is copyright:
+# Copyright (C) 2018-2025 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# SPDX-FileCopyrightText: 2024 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2024, 2025 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2017, 2019, 2020, 2021, 2022, 2024.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2017, 2019, 2020, 2021, 2022, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-15 00:44+0000\n"
-"PO-Revision-Date: 2024-09-02 06:53+0200\n"
+"PO-Revision-Date: 2025-05-25 15:20+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -86,12 +86,17 @@ msgid ""
 "><nl/>Use this setting at your own risk, and do not report issues to KDE or "
 "the app’s author."
 msgstr ""
+"Bilatu <application>%1</application>(e)(a)n bere erretiluko ikonoa "
+"ezgaitzeko ezarpen bat hori hemen egin aurretik. Aplikazio batzuen "
+"erretiluko ikonoak ez ziren ezgaitzeko diseinatu, eta ezarpen hau erabiltzea "
+"haiek espero ez den moduan jokatzea eragin dezake.<nl/><nl/>Erabili ezarpen "
+"hau zeure ardurapean, eta ez eman auzien berri KDE edo aplikazioaren egileei."
 
 #: package/contents/ui/ConfigEntries.qml:164
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
-msgstr ""
+msgstr "Arriskuak ulertzen ditut"
 
 #: package/contents/ui/ConfigEntries.qml:176
 #, kde-kuit-format
@@ -102,6 +107,9 @@ msgid ""
 "consider configuring the clipboard to disable its history, or only remember "
 "one item at a time."
 msgstr ""
+"Ez da gomendagarria arbela ezgaitzea, aplikazioa ixtean handik kopiatutako "
+"datuak galtzea eragingo baitu.<nl/><nl/>Horren ordez, arbela, bere historia "
+"ezgaitzeko edo elementu bakarra oroitzeko konfiguratu dezakezu."
 
 #: package/contents/ui/ConfigEntries.qml:204
 #, kde-format
@@ -220,7 +228,7 @@ msgstr "Erakutsi ezkutuko ikonoak"
 #, kde-format
 msgctxt "@info:whatsthis accessible description for popup grid"
 msgid "Grid with %1 items in %2 columns"
-msgstr ""
+msgstr "%1 elementu eta %2 zutabeko sareta"
 
 #: package/contents/ui/HiddenItemsView.qml:46
 #, kde-format

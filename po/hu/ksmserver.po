@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-09 00:42+0000\n"
+"POT-Creation-Date: 2025-05-26 00:43+0000\n"
 "PO-Revision-Date: 2024-09-30 22:15+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -29,12 +29,12 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "ulysses@fsf.hu"
 
-#: logout.cpp:273
+#: logout.cpp:269
 #, kde-format
 msgid "Logout canceled by '%1'"
 msgstr "A kijelentkezést megszakította: „%1”"
 
-#: logout.cpp:371
+#: logout.cpp:363
 #, kde-format
 msgctxt "@info:status"
 msgid "Session is exiting"
@@ -103,13 +103,13 @@ msgstr ""
 "Indítás képernyőzárolás támogatása nélkül. Csak akkor szükséges, ha más "
 "komponens biztosítja a képernyőzárolást."
 
-#: server.cpp:778
+#: server.cpp:776
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[ismeretlen]"
 
-#: server.cpp:801
+#: server.cpp:799
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -122,7 +122,7 @@ msgstr ""
 "legfontosabb fogyasztója:\n"
 "%1"
 
-#: server.cpp:1073
+#: server.cpp:1059
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""

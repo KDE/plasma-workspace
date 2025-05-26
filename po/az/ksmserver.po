@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-09 00:42+0000\n"
+"POT-Creation-Date: 2025-05-26 00:43+0000\n"
 "PO-Revision-Date: 2025-04-01 15:20+0400\n"
 "Last-Translator: Khayyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -28,12 +28,12 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "xxmn77@gmail.com"
 
-#: logout.cpp:273
+#: logout.cpp:269
 #, kde-format
 msgid "Logout canceled by '%1'"
 msgstr "Çıxış \"%1\" tərəfindən ləğv edildi"
 
-#: logout.cpp:371
+#: logout.cpp:363
 #, kde-format
 msgctxt "@info:status"
 msgid "Session is exiting"
@@ -102,13 +102,13 @@ msgstr ""
 "Kilid ekranını dəstəklənmədən başladılır. Kilid ekranını yalnız başqa "
 "komponentlər təmin etdikdə tələb olunur."
 
-#: server.cpp:778
+#: server.cpp:776
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[naməlum]"
 
-#: server.cpp:801
+#: server.cpp:799
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -121,7 +121,7 @@ msgstr ""
 "sessiyanın resurslarını ən çox istifadə edən üç tətbiq göstərilir\n"
 " %1"
 
-#: server.cpp:1073
+#: server.cpp:1059
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-23 00:44+0000\n"
-"PO-Revision-Date: 2025-01-12 17:09+0200\n"
+"PO-Revision-Date: 2025-05-25 10:32+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -554,14 +554,13 @@ msgstr "Käyttäjän avatarin paikkavarauskuvake"
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User Without Deleting Files?"
-msgstr ""
+msgstr "Poistetaanko kirjautunut käyttäjä poistamatta tiedostoja?"
 
 #: src/ui/UserDetailsPage.qml:115
-#, fuzzy, kde-format
-#| msgid "Delete User…"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User?"
-msgstr "Poista käyttäjä…"
+msgstr "Poistetaanko kirjautunut käyttäjä?"
 
 #: src/ui/UserDetailsPage.qml:117
 #, kde-kuit-format
@@ -571,6 +570,9 @@ msgid ""
 "account instead?<nl/><nl/>This will make %1 unable to log in again, and they "
 "may experience strange behaviors until they log out."
 msgstr ""
+"%1 on parhaillaan kirjautuneena, joten tiedostoja ei voida poistaa. "
+"Poistetaanko vain tili?<nl/><nl/>Tämän seurauksena %1 ei voi kirjautua enää "
+"takaisin, ja jo ennen sitä saattaa järjestelmän toiminta olla outoa."
 
 #: src/ui/UserDetailsPage.qml:118
 #, kde-format
@@ -579,13 +581,15 @@ msgid ""
 "%1 is currently logged in. Deleting the account will make them unable to log "
 "in again, and they may experience strange behaviors until they log out."
 msgstr ""
+"%1 on parhaillaan kirjautuneena. Kun tili on poistettu, hän ei enää voi "
+"kirjautua uudelleen, ja jo ennen sitä saattaa järjestelmän toiminta olla "
+"outoa."
 
 #: src/ui/UserDetailsPage.qml:125
-#, fuzzy, kde-format
-#| msgid "Delete files"
+#, kde-format
 msgctxt "@action: button"
 msgid "Delete %1"
-msgstr "Poista tiedostot"
+msgstr "Poista %1"
 
 #: src/ui/UserDetailsPage.qml:144
 #, kde-format

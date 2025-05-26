@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the plasma-desktop package.
 # SPDX-FileCopyrightText: 2024 Kimmo Kujansuu <mrkujansuu@gmail.com>
 # SPDX-FileCopyrightText: 2024 Lasse Liehu <lasse.liehu@iki.fi>
-# SPDX-FileCopyrightText: 2019, 2020, 2021, 2023, 2024 Tommi Nieminen <translator@legisign.org>
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2023, 2024, 2025 Tommi Nieminen <translator@legisign.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-24 00:43+0000\n"
-"PO-Revision-Date: 2024-10-16 18:54+0300\n"
+"PO-Revision-Date: 2025-05-25 10:30+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: kcm.cpp:70
 #, kde-format
@@ -152,7 +152,7 @@ msgctxt ""
 "Automatically enable Do Not Disturb mode while a fullscreen application is "
 "focused"
 msgid "While a fullscreen application is focused"
-msgstr ""
+msgstr "Kun kohdistus on koko näytön sovelluksessa"
 
 #: ui/main.qml:149
 #, kde-format
@@ -208,7 +208,7 @@ msgstr "Lähellä ilmoituskuvaketta"
 #, kde-format
 msgctxt "@action:button choose custom notification position"
 msgid "Custom…"
-msgstr ""
+msgstr "Mukautettu…"
 
 #: ui/main.qml:257 ui/main.qml:273
 #, kde-format

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-09 00:42+0000\n"
+"POT-Creation-Date: 2025-05-26 00:43+0000\n"
 "PO-Revision-Date: 2025-02-22 07:41+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -31,12 +31,12 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "bjornst@skogkatt.homelinux.org,mh306602@gmail.com"
 
-#: logout.cpp:273
+#: logout.cpp:269
 #, kde-format
 msgid "Logout canceled by '%1'"
 msgstr "Utlogging avbrutt av «%1»."
 
-#: logout.cpp:371
+#: logout.cpp:363
 #, kde-format
 msgctxt "@info:status"
 msgid "Session is exiting"
@@ -105,13 +105,13 @@ msgstr ""
 "Starter uten støtte for skjermlåsing. Bare nødvendig hvis andre komponenter "
 "står for skjermlåsinga."
 
-#: server.cpp:778
+#: server.cpp:776
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[ukjent]"
 
-#: server.cpp:801
+#: server.cpp:799
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -123,7 +123,7 @@ msgstr ""
 "dette systemet er oppbrukte. Her er det som bruker mest øktressurser:\n"
 "%1"
 
-#: server.cpp:1073
+#: server.cpp:1059
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""

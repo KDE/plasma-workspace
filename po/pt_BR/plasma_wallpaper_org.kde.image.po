@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-24 00:44+0000\n"
-"PO-Revision-Date: 2025-02-13 21:48-0300\n"
+"PO-Revision-Date: 2025-05-24 23:53-0300\n"
 "Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.12.2\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -81,24 +81,22 @@ msgid "Tiled"
 msgstr "Ladrilhado"
 
 #: imagepackage/contents/ui/config.qml:193
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Set as Wallpaper"
+#, kde-format
 msgctxt "part of a sentence: 'Switch dynamic wallpapers [based on]'"
 msgid "Switch dynamic wallpapers:"
-msgstr "Definir como papel de parede"
+msgstr "Alternar papéis de parede dinâmicos:"
 
 #: imagepackage/contents/ui/config.qml:194
 #, kde-format
 msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the color scheme is dark or light"
-msgstr ""
+msgstr "Com base em se o esquema de cores é escuro ou claro"
 
 #: imagepackage/contents/ui/config.qml:202
 #, kde-format
 msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
 msgid "At sunrise and sunset"
-msgstr ""
+msgstr "Ao nascer e ao pôr do sol"
 
 #: imagepackage/contents/ui/config.qml:217
 #, kde-format
@@ -107,6 +105,7 @@ msgctxt ""
 "sunrise times"
 msgid "Use device's current location for more accurate timings"
 msgstr ""
+"Usar a localização atual do dispositivo para obter horários mais precisos"
 
 #: imagepackage/contents/ui/config.qml:228
 #, kde-format

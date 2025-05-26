@@ -11,15 +11,15 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-21 00:44+0000\n"
-"PO-Revision-Date: 2025-02-03 08:19-0300\n"
-"Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
+"PO-Revision-Date: 2025-05-24 23:44-0300\n"
+"Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: abstractnotificationsmodel.cpp:340
 #, kde-format
@@ -107,21 +107,17 @@ msgid "Application closed unexpectedly."
 msgstr "O aplicativo fechou de forma inesperada."
 
 #: notifications.cpp:907
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Unread Notifications"
+#, kde-format
 msgctxt "@title"
 msgid "Unread Notification"
 msgid_plural "Unread Notifications"
-msgstr[0] "Notificações não lidas"
+msgstr[0] "Notificação não lida"
 msgstr[1] "Notificações não lidas"
 
 #: notifications.cpp:909
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "%1 notifications were received while Do Not Disturb was active."
+#, kde-format
 msgctxt "@info"
 msgid "%1 notification was received while Do Not Disturb was active."
 msgid_plural "%1 notifications were received while Do Not Disturb was active."
-msgstr[0] "%1 notificações foram recebidas enquanto Não Perturbe estava ativo."
+msgstr[0] "%1 notificação foi recebida enquanto Não Perturbe estava ativo."
 msgstr[1] "%1 notificações foram recebidas enquanto Não Perturbe estava ativo."

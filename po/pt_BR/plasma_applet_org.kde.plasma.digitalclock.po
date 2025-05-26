@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-14 00:45+0000\n"
-"PO-Revision-Date: 2025-02-23 18:46-0300\n"
+"PO-Revision-Date: 2025-05-24 23:40-0300\n"
 "Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.12.2\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: package/contents/config/config.qml:20
 #, kde-format
@@ -375,6 +375,8 @@ msgid ""
 "Tip: Add your home time zone to this list to see the time there even when "
 "you're traveling. It will not be shown twice while at home."
 msgstr ""
+"Dica: Adicione o fuso horário da sua casa nesta lista para ver a hora lá "
+"mesmo ao viajar. Ela não será mostrada duas vezes caso você esteja em casa."
 
 #: package/contents/ui/configTimeZones.qml:245
 #, kde-format

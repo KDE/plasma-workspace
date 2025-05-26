@@ -1,49 +1,41 @@
 # Translation for plasma_applet_org.kde.plasma.devicenotifier.po to Euskara/Basque (eu).
-# Copyright (C) 2007-2024 This file is copyright:
+# Copyright (C) 2007-2025 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# SPDX-FileCopyrightText: 2023, 2024 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
 # marcos <marcos@euskalgnu.org>, 2007.
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2008, 2010, 2011, 2017, 2018, 2019, 2020, 2021, 2023, 2024.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2008, 2010, 2011, 2017, 2018, 2019, 2020, 2021, 2023, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-15 00:44+0000\n"
-"PO-Revision-Date: 2024-07-17 06:23+0200\n"
+"PO-Revision-Date: 2025-05-25 15:01+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.04.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: package/contents/ui/DeviceItem.qml:97
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Removing is a less technical word for Unmounting; translation should be "
-#| "short and mean 'Currently unmounting this device'"
-#| msgid "Removing…"
+#, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Checking…"
-msgstr "Kentzen..."
+msgstr "Egiaztatzen…"
 
 #: package/contents/ui/DeviceItem.qml:99
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Removing is a less technical word for Unmounting; translation should be "
-#| "short and mean 'Currently unmounting this device'"
-#| msgid "Removing…"
+#, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Repairing…"
-msgstr "Kentzen..."
+msgstr "Konpontzen..."
 
 #: package/contents/ui/DeviceItem.qml:102
 #, kde-format
@@ -143,7 +135,7 @@ msgstr "Ireki fitxategi-kudeatzailean"
 #: plugin/actions/mountandopenaction.cpp:182
 #, kde-format
 msgid "Try to Fix"
-msgstr ""
+msgstr "Saiatu konpontzen"
 
 #: plugin/actions/mountandopenaction.cpp:182
 #, kde-format
@@ -161,15 +153,14 @@ msgid "Safely remove"
 msgstr "Kendu arriskurik gabe"
 
 #: plugin/deviceerrormonitor_p.cpp:198
-#, fuzzy, kde-format
-#| msgid "This device can now be safely removed."
+#, kde-format
 msgid "This device has file system errors."
-msgstr "Orain, gailu hori modu seguruan ken daiteke."
+msgstr "Gailu honek fitxategi-sistemaren erroreak ditu."
 
 #: plugin/deviceerrormonitor_p.cpp:201
 #, kde-format
 msgid "Successfully repaired!"
-msgstr ""
+msgstr "Ondo konpondu da!"
 
 #: plugin/deviceerrormonitor_p.cpp:204
 #, kde-format
@@ -203,11 +194,9 @@ msgid "You are not authorized to eject this disc."
 msgstr "Ez zaude disko hori egoztera baimenduta."
 
 #: plugin/deviceerrormonitor_p.cpp:225
-#, fuzzy, kde-format
-#| msgctxt "Remove is less technical for unmount"
-#| msgid "You are not authorized to remove this device."
+#, kde-format
 msgid "You are not authorized to repair this device."
-msgstr "Ez zaude gailu hori kentzera baimenduta."
+msgstr "Ez duzu gailu hau konpontzeko baimenik."
 
 #: plugin/deviceerrormonitor_p.cpp:232
 #, kde-format
@@ -252,11 +241,9 @@ msgid "Could not eject this disc."
 msgstr "Ezin izan du disko hori egotzi."
 
 #: plugin/deviceerrormonitor_p.cpp:294
-#, fuzzy, kde-format
-#| msgctxt "Remove is less technical for unmount"
-#| msgid "Could not remove this device."
+#, kde-format
 msgid "Could not repair this device: %1"
-msgstr "Ezin izan du gailu hori kendu."
+msgstr "Ezin izan du gailu hau konpondu: %1"
 
 #~ msgid "Filesystem is not responding"
 #~ msgstr "Fitxategi sistemak ez du erantzuten"

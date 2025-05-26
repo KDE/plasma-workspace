@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-23 00:44+0000\n"
-"PO-Revision-Date: 2025-02-27 20:05-0300\n"
+"PO-Revision-Date: 2025-05-25 00:03-0300\n"
 "Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.12.2\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: src/fingerprintmodel.cpp:145 src/fingerprintmodel.cpp:229
 #, kde-format
@@ -561,14 +561,13 @@ msgstr "Ícone marcador de posição para avatar do usuário"
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User Without Deleting Files?"
-msgstr ""
+msgstr "Excluir usuário logado sem excluir os arquivos?"
 
 #: src/ui/UserDetailsPage.qml:115
-#, fuzzy, kde-format
-#| msgid "Delete User…"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User?"
-msgstr "Excluir usuário..."
+msgstr "Excluir usuário logado?"
 
 #: src/ui/UserDetailsPage.qml:117
 #, kde-kuit-format
@@ -578,6 +577,10 @@ msgid ""
 "account instead?<nl/><nl/>This will make %1 unable to log in again, and they "
 "may experience strange behaviors until they log out."
 msgstr ""
+"%1 está logado atualmente, então os arquivos não podem sem excluídos. "
+"Excluir apenas a conta?<nl/><nl/>Isto irá fazer com que %1 não consiga fazer "
+"login novamente, e podem ocorrer comportamentos inesperados até encerrar a "
+"sessão."
 
 #: src/ui/UserDetailsPage.qml:118
 #, kde-format
@@ -586,13 +589,14 @@ msgid ""
 "%1 is currently logged in. Deleting the account will make them unable to log "
 "in again, and they may experience strange behaviors until they log out."
 msgstr ""
+"%1 está logado atualmente. Excluir a conta irá impossibilitar um novo login, "
+"e podem haver comportamentos inesperados até encerrar a sessão."
 
 #: src/ui/UserDetailsPage.qml:125
-#, fuzzy, kde-format
-#| msgid "Delete files"
+#, kde-format
 msgctxt "@action: button"
 msgid "Delete %1"
-msgstr "Excluir arquivos"
+msgstr "Excluir %1"
 
 #: src/ui/UserDetailsPage.qml:144
 #, kde-format

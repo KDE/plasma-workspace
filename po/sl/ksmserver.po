@@ -1,7 +1,7 @@
 # Translation of ksmserver.po to Slovenian
 # SLOVENIAN TRANSLATION OF KSMSERVER.
 # Copyright (C) 2000, 2003, 2004 Free Software Foundation, Inc.
-# $Id: ksmserver.po 1699768 2025-01-09 01:18:56Z scripty $
+# $Id: ksmserver.po 1709760 2025-05-26 01:21:40Z scripty $
 # $Source$
 #
 # Roman Maurer <roman.maurer@hermes.si>, 2000.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-09 00:42+0000\n"
+"POT-Creation-Date: 2025-05-26 00:43+0000\n"
 "PO-Revision-Date: 2024-09-25 07:35+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -36,12 +36,12 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "matjaz.jeran@amis.net"
 
-#: logout.cpp:273
+#: logout.cpp:269
 #, kde-format
 msgid "Logout canceled by '%1'"
 msgstr "Odjavo je preklical '%1'"
 
-#: logout.cpp:371
+#: logout.cpp:363
 #, kde-format
 msgctxt "@info:status"
 msgid "Session is exiting"
@@ -110,13 +110,13 @@ msgstr ""
 "Zaženi brez podpore za zaklep zaslona. Zahtevano le, če zaklep zaslona "
 "ponuja drugi sestavni del."
 
-#: server.cpp:778
+#: server.cpp:776
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[neznano]"
 
-#: server.cpp:801
+#: server.cpp:799
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -128,7 +128,7 @@ msgstr ""
 "upravljanje sej izčrpani. Tukaj so trije največji uporabniki virov seje:\n"
 "%1"
 
-#: server.cpp:1073
+#: server.cpp:1059
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""

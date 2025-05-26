@@ -1,16 +1,16 @@
 # Translation for kcm_notifications.po to Euskara/Basque (eu).
-# Copyright (C) 2019-2024 This file is copyright:
+# Copyright (C) 2019-2025 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# SPDX-FileCopyrightText: 2024 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2024, 2025 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2019, 2020, 2021, 2022, 2023, 2024.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2019, 2020, 2021, 2022, 2023, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-24 00:43+0000\n"
-"PO-Revision-Date: 2024-08-06 00:08+0200\n"
+"PO-Revision-Date: 2025-05-25 14:47+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: kcm.cpp:70
 #, kde-format
@@ -158,7 +158,7 @@ msgctxt ""
 "Automatically enable Do Not Disturb mode while a fullscreen application is "
 "focused"
 msgid "While a fullscreen application is focused"
-msgstr ""
+msgstr "Leiho osoko aplikazio batek arreta duenean"
 
 #: ui/main.qml:149
 #, kde-format
@@ -214,7 +214,7 @@ msgstr "Jakinarazpen ikonotik hurbil"
 #, kde-format
 msgctxt "@action:button choose custom notification position"
 msgid "Custom…"
-msgstr ""
+msgstr "Neurrira…"
 
 #: ui/main.qml:257 ui/main.qml:273
 #, kde-format

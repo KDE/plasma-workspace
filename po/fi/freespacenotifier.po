@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Tommi Nieminen <translator@legisign.org>, 2010, 2020, 2021.
+# SPDX-FileCopyrightText: 2010, 2020, 2021, 2025 Tommi Nieminen <translator@legisign.org>
 # Lasse Liehu <lasse.liehu@gmail.com>, 2012, 2014, 2015.
 #
 # KDE Finnish translation sprint participants:
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: freespacenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-11 00:44+0000\n"
-"PO-Revision-Date: 2021-06-04 22:58+0300\n"
+"PO-Revision-Date: 2025-05-25 10:21+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -17,6 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: freespacenotifier.cpp:121
 #, kde-format
@@ -41,10 +42,9 @@ msgstr "Vähimmäislevytila, ennen kuin käyttäjää varoitetaan."
 
 #. i18n: ectx: label, entry (minimumSpacePercentage), group (General)
 #: freespacenotifier.kcfg:15
-#, fuzzy, kde-format
-#| msgid "Minimum free space before user starts being notified."
+#, kde-format
 msgid "Minimum percentage free space before user starts being notified."
-msgstr "Vähimmäislevytila, ennen kuin käyttäjää varoitetaan."
+msgstr "Vähimmäislevytilan osuus, ennen kuin käyttäjää varoitetaan."
 
 #. i18n: ectx: label, entry (enableNotification), group (General)
 #: freespacenotifier.kcfg:21
@@ -72,16 +72,15 @@ msgstr " MiB"
 
 #. i18n: ectx: property (text), widget (QLabel, label_minimumSpacePercentage)
 #: freespacenotifier_prefs_base.ui:44
-#, fuzzy, kde-format
-#| msgid "Warn when free space is below:"
+#, kde-format
 msgid "And when free space is under:"
-msgstr "Varoita, kun vapaata tilaa on alle:"
+msgstr "Sekä kun vapaata tilaa on alle:"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpacePercentage)
 #: freespacenotifier_prefs_base.ui:54
 #, no-c-format, kde-format
 msgid "%"
-msgstr ""
+msgstr "%"
 
 #. i18n: ectx: property (text), widget (QLabel, label_info)
 #: freespacenotifier_prefs_base.ui:67
@@ -90,36 +89,29 @@ msgid ""
 "The system will notify you if the free space drops below the specified MiB "
 "and the specified percentage of available space."
 msgstr ""
+"Järjestelmä ilmoittaa, jos vapaa tila putoaa alle asetetun määrän tai "
+"osuuden käytettävissä olevasta tilasta."
 
 #: module.cpp:100
-#, fuzzy, kde-format
-#| msgid ""
-#| "Your Root partition is running out of disk space, you have %1 MiB "
-#| "remaining (%2%)."
+#, kde-format
 msgid ""
 "Your %1 partition is running out of disk space; %2 MiB of space remaining "
 "(%3%)."
-msgstr "Juurikansion levytila on vähissä: tilaa on jäljellä %1 MiB (%2 %)."
+msgstr "Levytila on käymässä vähiin osiolla %1: vapaana on %2 MiB (%3 %)."
 
 #: module.cpp:102
-#, fuzzy, kde-format
-#| msgid ""
-#| "Your Root partition is running out of disk space, you have %1 MiB "
-#| "remaining (%2%)."
+#, kde-format
 msgid ""
 "Your Root partition is running out of disk space; %1 MiB of space remaining "
 "(%2%)."
-msgstr "Juurikansion levytila on vähissä: tilaa on jäljellä %1 MiB (%2 %)."
+msgstr "Levytila on käymässä vähiin juuriosiolla: vapaana on %1 MiB (%2 %)."
 
 #: module.cpp:104
-#, fuzzy, kde-format
-#| msgid ""
-#| "Your Home folder is running out of disk space, you have %1 MiB remaining "
-#| "(%2%)."
+#, kde-format
 msgid ""
 "Your Home folder is running out of disk space; %1 MiB of space remaining "
 "(%2%)."
-msgstr "Kotikansiosi levytila on vähissä: tilaa on jäljellä %1 MiB (%2 %)."
+msgstr "Levytila on käymässä vähiin kotikansiossa: vapaana on %1 MiB (%2 %)."
 
 #: module.cpp:129
 #, kde-format

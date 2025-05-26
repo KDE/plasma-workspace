@@ -8,7 +8,7 @@
 # Mikko Piippo <piippo@cc.helsinki.fi>, 2007.
 # Jorma Karvonen <karvonen.jorma@gmail.com>, 2010.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2011, 2012, 2013, 2014.
-# Tommi Nieminen <translator@legisign.org>, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2025 Tommi Nieminen <translator@legisign.org>
 #
 # KDE Finnish translation sprint participants:
 # Author: Lliehu
@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-21 00:44+0000\n"
-"PO-Revision-Date: 2023-05-02 18:24+0300\n"
+"PO-Revision-Date: 2025-05-25 10:30+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -26,7 +26,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 23.08.5\n"
 
+# Jätetty toistaiseksi kääntämättä, kunnes löytyy, mitä ”display font/typeface” on suomeksi!
 #. i18n: ectx: label, entry (forceFontDPI), group (General)
 #: fontsaasettingsbase.kcfg:9
 #, kde-format
@@ -139,13 +141,14 @@ msgctxt ""
 msgid "%1 %2pt"
 msgstr "%1 %2 pt"
 
+# Jätetty toistaiseksi kääntämättä, kunnes löytyy, mitä tämä on suomeksi! Kyse EI siis ole tietokoneen näytöstä vaan osa ilmauksesta ”display font/typeface”, jolla tarkoitetaan hyvin suurikokoiseen käyttöön tarkoitettua kirjasinlajia.
 #: ui/main.qml:31
 #, kde-format
 msgctxt ""
 "Sub-string in a font name; 'Display' as in display font — a type of font "
 "inappropriate for computer screens"
 msgid "Display"
-msgstr ""
+msgstr "Display"
 
 #: ui/main.qml:36
 #, kde-format
@@ -178,6 +181,9 @@ msgid ""
 "Display_typeface'>not intended for use on computer displays</link>, and may "
 "produce odd results. Consider using a different font."
 msgstr ""
+"”Display”-fontteja <link url='https://wikipedia.org/wiki/"
+"Display_typeface'>ei ole tarkoitettu tietokonenäytöille</link>, ja ne voivat "
+"aiheuttaa outoja tuloksia. Harkitse toista fonttia."
 
 #: ui/main.qml:101
 #, kde-format

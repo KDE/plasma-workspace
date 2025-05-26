@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-21 00:44+0000\n"
-"PO-Revision-Date: 2025-04-08 21:08+0300\n"
+"PO-Revision-Date: 2025-05-25 10:34+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -377,7 +377,7 @@ msgstr "Näytöt on peilattu"
 #, kde-format
 msgctxt "Do not disturb because fullscreen app is focused"
 msgid "Fullscreen app is focused"
-msgstr ""
+msgstr "Kohdistus on koko näytön sovelluksessa"
 
 #: package/contents/ui/FullRepresentation.qml:469
 #: package/contents/ui/FullRepresentation.qml:475

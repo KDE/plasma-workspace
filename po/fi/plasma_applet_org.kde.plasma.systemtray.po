@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-15 00:44+0000\n"
-"PO-Revision-Date: 2025-04-08 21:09+0300\n"
+"PO-Revision-Date: 2025-05-25 10:36+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -105,6 +105,10 @@ msgid ""
 "consider configuring the clipboard to disable its history, or only remember "
 "one item at a time."
 msgstr ""
+"Ei ole suositeltavaa poistaa leikepöytää käytöstä, koska silloin kopioitu "
+"tieto menetetään suljettaessa sovellus, josta se kopioitiin.<nl/><nl/"
+">Harkitse sen sijaan leikepöydän historian poistamista käytöstä tai sen "
+"asettamista muistamaan vain kohde kerrallaan."
 
 #: package/contents/ui/ConfigEntries.qml:204
 #, kde-format
@@ -223,7 +227,7 @@ msgstr "Näytä piilotetut kuvakkeet"
 #, kde-format
 msgctxt "@info:whatsthis accessible description for popup grid"
 msgid "Grid with %1 items in %2 columns"
-msgstr ""
+msgstr "%1 rivin × %2 sarakkeen ruudukko"
 
 #: package/contents/ui/HiddenItemsView.qml:46
 #, kde-format
