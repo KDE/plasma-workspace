@@ -64,30 +64,25 @@ Item {
 
         Repeater {
             id: buttonRepeater
-            model: 6
+            model: [NotificationManager.Settings.TopLeft, NotificationManager.Settings.TopCenter, NotificationManager.Settings.TopRight, NotificationManager.Settings.BottomLeft, NotificationManager.Settings.BottomCenter, NotificationManager.Settings.BottomRight]
             QtControls.RadioButton {
-                required property int index
-                // Uses the PopupPosition enum from libnotificationmanager/settings.h
-                readonly property int position: index + 1
+                required property int modelData
+                readonly property int position: modelData
                 Layout.margins: Kirigami.Units.smallSpacing
                 Layout.alignment: {
-                    if (position == 1) {
-                        return Qt.AlignLeft | Qt.AlignTop
-                    }
-                    else if (position == 2) {
-                        return Qt.AlignHCenter | Qt.AlignTop
-                    }
-                    else if (position == 3) {
-                        return Qt.AlignRight | Qt.AlignTop
-                    }
-                    else if (position == 4) {
-                        return Qt.AlignLeft | Qt.AlignBottom
-                    }
-                    else if (position == 5) {
-                        return Qt.AlignHCenter | Qt.AlignBottom
-                    }
-                    else if (position == 6) {
-                        return Qt.AlignRight | Qt.AlignBottom
+                    switch (position) {
+                    case NotificationManager.Settings.TopLeft:
+                        return Qt.AlignLeft | Qt.AlignTop;
+                    case NotificationManager.Settings.TopCenter:
+                        return Qt.AlignHCenter | Qt.AlignTop;
+                    case NotificationManager.Settings.TopRight:
+                        return Qt.AlignRight | Qt.AlignTop;
+                    case NotificationManager.Settings.BottomLeft:
+                        return Qt.AlignLeft | Qt.AlignBottom;
+                    case NotificationManager.Settings.BottomCenter:
+                        return Qt.AlignHCenter | Qt.AlignBottom;
+                    case NotificationManager.Settings.BottomRight:
+                        return Qt.AlignRight | Qt.AlignBottom;
                     }
                 }
                 contentItem: Item {}
