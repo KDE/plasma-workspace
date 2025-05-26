@@ -111,7 +111,6 @@ Q_SIGNALS:
     void styleChanged(const QString &newStyle);
     void cursorsChanged(const QString &newStyle);
     void fontsChanged();
-    void refreshServices(const QStringList &toStop, const KService::List &toStart);
     void plasmaLockedChanged(bool locked);
 
 private:

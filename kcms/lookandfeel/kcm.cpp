@@ -93,17 +93,6 @@ KCMLookandFeel::KCMLookandFeel(QObject *parent, const KPluginMetaData &data)
         resetSelectedContents();
     });
 
-    connect(m_lnf, &LookAndFeelManager::refreshServices, this, [](const QStringList &toStop, const QList<KService::Ptr> &toStart) {
-        for (const auto &serviceName : toStop) {
-            // FIXME: quite ugly way to stop things, and what about non KDE things?
-            QProcess::startDetached(QStringLiteral("kquitapp6"), {QStringLiteral("--service"), serviceName});
-        }
-        for (const auto &service : toStart) {
-            auto *job = new KIO::ApplicationLauncherJob(service);
-            job->setUiDelegate(new KDialogJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled, nullptr));
-            job->start();
-        }
-    });
     connect(m_lnf, &LookAndFeelManager::styleChanged, this, [] {
         // FIXME: changing style on the fly breaks QQuickWidgets
         notifyKcmChange(GlobalChangeType::StyleChanged);
