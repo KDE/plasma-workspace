@@ -61,59 +61,38 @@ Item {
         width: monitorRectangle.width
         height: monitorRectangle.height
 
-        QtControls.RadioButton {
-            Layout.margins: Kirigami.Units.smallSpacing
-            Layout.alignment: Qt.AlignLeft | Qt.AlignTop
-            contentItem: Item{}
-            readonly property int position: NotificationManager.Settings.TopLeft
-            checked: monitorPanel.selectedPosition == position
-            visible: monitorPanel.disabledPositions.indexOf(position) == -1
-            QtControls.ButtonGroup.group: positionRadios
-        }
-        QtControls.RadioButton {
-            Layout.margins: Kirigami.Units.smallSpacing
-            Layout.alignment: Qt.AlignHCenter | Qt.AlignTop
-            contentItem: Item{}
-            readonly property int position: NotificationManager.Settings.TopCenter
-            checked: monitorPanel.selectedPosition == position
-            visible: monitorPanel.disabledPositions.indexOf(position) == -1
-            QtControls.ButtonGroup.group: positionRadios
-        }
-        QtControls.RadioButton {
-            Layout.margins: Kirigami.Units.smallSpacing
-            Layout.alignment: Qt.AlignRight | Qt.AlignTop
-            contentItem: Item{}
-            readonly property int position: NotificationManager.Settings.TopRight
-            checked: monitorPanel.selectedPosition == position
-            visible: monitorPanel.disabledPositions.indexOf(position) == -1
-            QtControls.ButtonGroup.group: positionRadios
-        }
-        QtControls.RadioButton {
-            Layout.margins: Kirigami.Units.smallSpacing
-            Layout.alignment: Qt.AlignLeft | Qt.AlignBottom
-            contentItem: Item{}
-            readonly property int position: NotificationManager.Settings.BottomLeft
-            checked: monitorPanel.selectedPosition == position
-            visible: monitorPanel.disabledPositions.indexOf(position) == -1
-            QtControls.ButtonGroup.group: positionRadios
-        }
-        QtControls.RadioButton {
-            Layout.margins: Kirigami.Units.smallSpacing
-            Layout.alignment: Qt.AlignHCenter | Qt.AlignBottom
-            contentItem: Item{}
-            readonly property int position: NotificationManager.Settings.BottomCenter
-            checked: monitorPanel.selectedPosition == position
-            visible: monitorPanel.disabledPositions.indexOf(position) == -1
-            QtControls.ButtonGroup.group: positionRadios
-        }
-        QtControls.RadioButton {
-            Layout.margins: Kirigami.Units.smallSpacing
-            Layout.alignment: Qt.AlignRight | Qt.AlignBottom
-            contentItem: Item{}
-            readonly property int position: NotificationManager.Settings.BottomRight
-            checked: monitorPanel.selectedPosition == position
-            visible: monitorPanel.disabledPositions.indexOf(position) == -1
-            QtControls.ButtonGroup.group: positionRadios
+        Repeater {
+            id: buttonRepeater
+            model: 6
+            QtControls.RadioButton {
+                required property int index
+                // Uses the PopupPosition enum from libnotificationmanager/settings.h
+                readonly property int position: index + 1
+                Layout.margins: Kirigami.Units.smallSpacing
+                Layout.alignment: {
+                    if (position == 1) {
+                        return Qt.AlignLeft | Qt.AlignTop
+                    }
+                    else if (position == 2) {
+                        return Qt.AlignHCenter | Qt.AlignTop
+                    }
+                    else if (position == 3) {
+                        return Qt.AlignRight | Qt.AlignTop
+                    }
+                    else if (position == 4) {
+                        return Qt.AlignLeft | Qt.AlignBottom
+                    }
+                    else if (position == 5) {
+                        return Qt.AlignHCenter | Qt.AlignBottom
+                    }
+                    else if (position == 6) {
+                        return Qt.AlignRight | Qt.AlignBottom
+                    }
+                }
+                contentItem: Item {}
+                checked: monitorPanel.selectedPosition == position
+                QtControls.ButtonGroup.group: positionRadios
+            }
         }
     }
 }
