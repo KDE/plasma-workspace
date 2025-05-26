@@ -64,27 +64,19 @@ Item {
 
         Repeater {
             id: buttonRepeater
-            model: [NotificationManager.Settings.TopLeft, NotificationManager.Settings.TopCenter, NotificationManager.Settings.TopRight, NotificationManager.Settings.BottomLeft, NotificationManager.Settings.BottomCenter, NotificationManager.Settings.BottomRight]
+            model: [
+                { "position": NotificationManager.Settings.TopLeft,      "alignment": Qt.AlignLeft | Qt.AlignTop},
+                { "position": NotificationManager.Settings.TopCenter,    "alignment": Qt.AlignHCenter | Qt.AlignTop},
+                { "position": NotificationManager.Settings.TopRight,     "alignment": Qt.AlignRight | Qt.AlignTop},
+                { "position": NotificationManager.Settings.BottomLeft,   "alignment": Qt.AlignLeft | Qt.AlignBottom},
+                { "position": NotificationManager.Settings.BottomCenter, "alignment": Qt.AlignHCenter | Qt.AlignBottom},
+                { "position": NotificationManager.Settings.BottomRight,  "alignment": Qt.AlignRight | Qt.AlignBottom}
+            ]
             QtControls.RadioButton {
-                required property int modelData
-                readonly property int position: modelData
+                required property var modelData
+                readonly property int position: modelData.position
                 Layout.margins: Kirigami.Units.smallSpacing
-                Layout.alignment: {
-                    switch (position) {
-                    case NotificationManager.Settings.TopLeft:
-                        return Qt.AlignLeft | Qt.AlignTop;
-                    case NotificationManager.Settings.TopCenter:
-                        return Qt.AlignHCenter | Qt.AlignTop;
-                    case NotificationManager.Settings.TopRight:
-                        return Qt.AlignRight | Qt.AlignTop;
-                    case NotificationManager.Settings.BottomLeft:
-                        return Qt.AlignLeft | Qt.AlignBottom;
-                    case NotificationManager.Settings.BottomCenter:
-                        return Qt.AlignHCenter | Qt.AlignBottom;
-                    case NotificationManager.Settings.BottomRight:
-                        return Qt.AlignRight | Qt.AlignBottom;
-                    }
-                }
+                Layout.alignment: modelData.alignment
                 contentItem: Item {}
                 checked: monitorPanel.selectedPosition == position
                 QtControls.ButtonGroup.group: positionRadios
