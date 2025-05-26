@@ -1,16 +1,16 @@
 # Translation for plasma_applet_org.kde.plasma.notifications.po to Euskara/Basque (eu).
-# Copyright (C) 2017-2024 This file is copyright:
+# Copyright (C) 2017-2025 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# SPDX-FileCopyrightText: 2024 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2024, 2025 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2010, 2011, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2010, 2011, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-21 02:41+0000\n"
-"PO-Revision-Date: 2024-02-02 19:37+0100\n"
+"PO-Revision-Date: 2025-05-25 15:08+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: fileinfo.cpp:170
 #, kde-format
@@ -268,12 +268,12 @@ msgstr "Bidali"
 #: package/contents/ui/components/SpeedChart.qml:142
 #, kde-format
 msgid "Speed"
-msgstr ""
+msgstr "Abiadura"
 
 #: package/contents/ui/components/SpeedChart.qml:192
 #, kde-format
 msgid "Average Speed"
-msgstr ""
+msgstr "Batez besteko abiadura"
 
 #: package/contents/ui/components/SpeedChart.qml:249
 #, kde-format
@@ -372,14 +372,14 @@ msgstr "Pantailak ispilatuta daude"
 #, kde-format
 msgctxt "Do not disturb because fullscreen app is focused"
 msgid "Fullscreen app is focused"
-msgstr ""
+msgstr "Pantaila osoko aplikazioak du arreta"
 
 #: package/contents/ui/FullRepresentation.qml:469
 #: package/contents/ui/FullRepresentation.qml:475
 #, kde-format
 msgctxt "@action:button"
 msgid "View"
-msgstr ""
+msgstr "Ikuspegia"
 
 #: package/contents/ui/FullRepresentation.qml:556
 #, kde-format
@@ -443,13 +443,11 @@ msgstr[0] "Irakurri gabeko jakinarazpen %1"
 msgstr[1] "Irakurri gabeko %1 jakinarazpen"
 
 #: package/contents/ui/main.qml:91
-#, fuzzy, kde-format
-#| msgid "%1 unread notification"
-#| msgid_plural "%1 unread notifications"
+#, kde-format
 msgid "%1 active notification"
 msgid_plural "%1 active notifications"
-msgstr[0] "Irakurri gabeko jakinarazpen %1"
-msgstr[1] "Irakurri gabeko %1 jakinarazpen"
+msgstr[0] "Jakinarazpen aktibo %1"
+msgstr[1] "%1 jakinarazpen aktibo"
 
 #: package/contents/ui/main.qml:104
 #, kde-format

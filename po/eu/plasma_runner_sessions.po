@@ -1,26 +1,26 @@
 # Translation for plasma_runner_sessions.po to Euskara/Basque (eu).
-# Copyright (C) 2008-2023 This file is copyright:
+# Copyright (C) 2008-2025 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# SPDX-FileCopyrightText: 2023 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2023, 2025 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Asier Urio Larrea <asieriko@gmail.com>, 2008.
 # marcos <marcos@euskalgnu.org>, 2008.
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2010, 2011, 2014, 2018, 2019, 2020, 2022.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2010, 2011, 2014, 2018, 2019, 2020, 2022, 2025.
 # Hizkuntza Politikarako Sailburuordetza <hizpol@ej-gv.es>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-22 02:42+0000\n"
-"PO-Revision-Date: 2023-09-07 22:41+0200\n"
+"PO-Revision-Date: 2025-05-25 14:06+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.0\n"
+"X-Generator: Lokalize 25.04.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: sessionrunner.cpp:19
@@ -29,7 +29,7 @@ msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to log out of the "
 "session"
 msgid "logout;log out"
-msgstr "saioa-itxi;saioa-itxi"
+msgstr "saioa-itxi;saioa itxi"
 
 #: sessionrunner.cpp:22
 #, kde-format
@@ -96,10 +96,9 @@ msgid "switch user;new session"
 msgstr "aldatu erabiltzailea; saio berria"
 
 #: sessionrunner.cpp:52
-#, fuzzy, kde-format
-#| msgid "Starts a new session as a different user"
+#, kde-format
 msgid "Switch to a session as a different user"
-msgstr "Saio berri bat hasten du beste erabiltzaile baten gisa"
+msgstr "Saio batera aldatu beste erabiltzaile bat gisa"
 
 #: sessionrunner.cpp:74
 #, kde-format

@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-14 00:45+0000\n"
-"PO-Revision-Date: 2025-03-15 09:14+0200\n"
+"PO-Revision-Date: 2025-05-25 10:33+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -370,6 +370,8 @@ msgid ""
 "Tip: Add your home time zone to this list to see the time there even when "
 "you're traveling. It will not be shown twice while at home."
 msgstr ""
+"Vihje: Lisää luetteloon kotiaikavyöhykkeesi, niin matkallakin näet "
+"kellonajan siellä. Aikaa ei näytetä kahdesti ollessasi kotona."
 
 #: package/contents/ui/configTimeZones.qml:245
 #, kde-format

@@ -1,7 +1,7 @@
 # Translation for kcm_users.po to Euskara/Basque (eu).
 # Copyright (C) 2020-2025 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# SPDX-FileCopyrightText: 2023, 2024, 2025 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Iñigo Salvador Azurmendi <xalba@ni.eus>, 2020, 2021, 2022, 2023, 2024, 2025.
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-23 00:44+0000\n"
-"PO-Revision-Date: 2025-01-03 09:56+0100\n"
+"PO-Revision-Date: 2025-05-25 14:54+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: src/fingerprintmodel.cpp:145 src/fingerprintmodel.cpp:229
 #, kde-format
@@ -578,14 +578,13 @@ msgstr "Erabiltzaile-abatarraren leku-markaren ikonoa"
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User Without Deleting Files?"
-msgstr ""
+msgstr "Ezabatu saioa hasita duen erabiltzailea fitxategik ezabatu gabe?"
 
 #: src/ui/UserDetailsPage.qml:115
-#, fuzzy, kde-format
-#| msgid "Delete User…"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User?"
-msgstr "Ezabatu erabiltzailea..."
+msgstr "Ezabatu saioa hasita duen erabiltzailea?"
 
 #: src/ui/UserDetailsPage.qml:117
 #, kde-kuit-format
@@ -595,6 +594,10 @@ msgid ""
 "account instead?<nl/><nl/>This will make %1 unable to log in again, and they "
 "may experience strange behaviors until they log out."
 msgstr ""
+"%1 une honetan saioa hasita dago, hori dela eta bere fitxategiak ezin dira "
+"ezabatu. Horren ordez kontua ezabatu besterik ez?<nl/><nl/>Horrek "
+"%1(e)kberriz saiorik ezin hastea eragingo du, eta jokabide arraroak pairatu "
+"ditzake saioa itxi arte."
 
 #: src/ui/UserDetailsPage.qml:118
 #, kde-format
@@ -603,13 +606,14 @@ msgid ""
 "%1 is currently logged in. Deleting the account will make them unable to log "
 "in again, and they may experience strange behaviors until they log out."
 msgstr ""
+"%1 une honetan saioa hasita dago. Kontua ezabatzea, berriz saiorik ezin "
+"hastea eragingo du, eta jokabide arraroak pairatu ditzake saioa itxi arte."
 
 #: src/ui/UserDetailsPage.qml:125
-#, fuzzy, kde-format
-#| msgid "Delete files"
+#, kde-format
 msgctxt "@action: button"
 msgid "Delete %1"
-msgstr "Ezabatu fitxategiak"
+msgstr "Ezabatu %1"
 
 #: src/ui/UserDetailsPage.qml:144
 #, kde-format

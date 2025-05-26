@@ -1,7 +1,7 @@
 # Translation for plasma_applet_org.kde.plasma.digitalclock.po to Euskara/Basque (eu).
 # Copyright (C) 2017-2025 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# SPDX-FileCopyrightText: 2023, 2024, 2025 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 KDE euskaratzeko proiektukoaren arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Iñigo Salvador Azurmendi <xalba@ni.eus>, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025.
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-14 00:45+0000\n"
-"PO-Revision-Date: 2025-01-24 06:33+0100\n"
+"PO-Revision-Date: 2025-05-25 15:05+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: package/contents/config/config.qml:20
 #, kde-format
@@ -154,11 +154,10 @@ msgid "Offset from UTC time"
 msgstr "UTC orduarekiko jatorri-aldaketa"
 
 #: package/contents/ui/configAppearance.qml:126
-#, fuzzy, kde-format
-#| msgid "Switch Systemwide Time Zone…"
+#, kde-format
 msgctxt "@action:button opens kcm"
 msgid "Switch Time Zone…"
-msgstr "Aldatu sistema osorako ordu-eremua..."
+msgstr "Aldatu ordu-eremua..."
 
 #: package/contents/ui/configAppearance.qml:138
 #, kde-format
@@ -376,6 +375,8 @@ msgid ""
 "Tip: Add your home time zone to this list to see the time there even when "
 "you're traveling. It will not be shown twice while at home."
 msgstr ""
+"Aholkua: Gehitu zure etxeko ordu-eremua zerrenda honetara, bidaiatzen ari "
+"zarenean ere ordua ikusteko. Etxean zaudenean ez da bitan erakutsiko."
 
 #: package/contents/ui/configTimeZones.qml:245
 #, kde-format
