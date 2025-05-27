@@ -107,8 +107,17 @@ Q_SIGNALS:
 protected Q_SLOTS:
     void refresh() override;
 
+private Q_SLOTS:
+    void onResourceScoresChanged(const QString &activity,
+                                 const QString &client,
+                                 const QString &resource,
+                                 double score,
+                                 unsigned int lastUpdate,
+                                 unsigned int firstUpdate);
+
 private:
     void refreshNewlyInstalledApps();
+    void trackNewlyInstalledApps(bool track);
 
     KAStatsFavoritesModel *m_favorites;
     SystemModel *m_systemModel;

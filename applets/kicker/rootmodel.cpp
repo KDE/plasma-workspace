@@ -16,6 +16,7 @@
 #include <KSharedConfig>
 
 #include <QCollator>
+#include <QDBusConnection>
 #include <QTimer>
 
 #include <chrono>
@@ -480,20 +481,7 @@ void RootModel::refresh()
         }
     }
 
-    if (hasNewlyInstalledApp) {
-        if (!m_refreshNewlyInstalledAppsTimer) {
-            m_refreshNewlyInstalledAppsTimer = new QTimer(this);
-            m_refreshNewlyInstalledAppsTimer->setInterval(24h);
-            m_refreshNewlyInstalledAppsTimer->callOnTimeout(this, &RootModel::refreshNewlyInstalledApps);
-        }
-        if (!m_refreshNewlyInstalledAppsTimer->isActive()) {
-            qCDebug(KICKER_DEBUG) << "Starting periodic newly installed apps check";
-            m_refreshNewlyInstalledAppsTimer->start();
-        }
-    } else if (m_refreshNewlyInstalledAppsTimer) {
-        qCDebug(KICKER_DEBUG) << "Stopping periodic newly installed apps check";
-        m_refreshNewlyInstalledAppsTimer->stop();
-    }
+    trackNewlyInstalledApps(hasNewlyInstalledApp);
 
     int separatorPosition = 0;
 
@@ -603,6 +591,95 @@ void RootModel::refreshNewlyInstalledApps()
     if (!hasNewlyInstalledApp) {
         qCDebug(KICKER_DEBUG) << "Stopping periodic newly installed apps check";
         m_refreshNewlyInstalledAppsTimer->stop();
+    }
+}
+
+void RootModel::trackNewlyInstalledApps(bool track)
+{
+    const bool doesTrack = m_refreshNewlyInstalledAppsTimer && m_refreshNewlyInstalledAppsTimer->isActive();
+
+    if (track == doesTrack) {
+        return;
+    }
+
+    if (track) {
+        if (!m_refreshNewlyInstalledAppsTimer) {
+            m_refreshNewlyInstalledAppsTimer = new QTimer(this);
+            m_refreshNewlyInstalledAppsTimer->setInterval(24h);
+            m_refreshNewlyInstalledAppsTimer->callOnTimeout(this, &RootModel::refreshNewlyInstalledApps);
+        }
+        if (!m_refreshNewlyInstalledAppsTimer->isActive()) {
+            qCDebug(KICKER_DEBUG) << "Starting periodic newly installed apps check";
+            m_refreshNewlyInstalledAppsTimer->start();
+        }
+
+        QDBusConnection::sessionBus().connect(QStringLiteral("org.kde.ActivityManager"),
+                                              QStringLiteral("/ActivityManager/Resources/Scoring"),
+                                              QStringLiteral("org.kde.ActivityManager.ResourcesScoring"),
+                                              QStringLiteral("ResourceScoreUpdated"),
+                                              this,
+                                              SLOT(onResourceScoresChanged(QString, QString, QString, double, unsigned int, unsigned int)));
+
+    } else {
+        if (m_refreshNewlyInstalledAppsTimer) {
+            qCDebug(KICKER_DEBUG) << "Stopping periodic newly installed apps check";
+            m_refreshNewlyInstalledAppsTimer->stop();
+        }
+
+        QDBusConnection::sessionBus().disconnect(QStringLiteral("org.kde.ActivityManager"),
+                                                 QStringLiteral("/ActivityManager/Resources/Scoring"),
+                                                 QStringLiteral("org.kde.ActivityManager.ResourcesScoring"),
+                                                 QStringLiteral("ResourceScoreUpdated"),
+                                                 this,
+                                                 SLOT(onResourceScoresChanged(QString, QString, QString, double, unsigned int, unsigned int)));
+    }
+}
+
+void RootModel::onResourceScoresChanged(const QString &activity,
+                                        const QString &client,
+                                        const QString &resource,
+                                        double score,
+                                        unsigned int lastUpdate,
+                                        unsigned int firstUpdate)
+{
+    Q_UNUSED(activity);
+    Q_UNUSED(client);
+    Q_UNUSED(resource);
+    Q_UNUSED(score);
+    Q_UNUSED(lastUpdate);
+    Q_UNUSED(firstUpdate);
+
+    constexpr QLatin1String s_prefix("applications:");
+    if (!resource.startsWith(s_prefix)) {
+        return;
+    }
+
+    const QStringView appId = QStringView(resource).mid(s_prefix.size());
+
+    std::function<void(AbstractEntry *)> processEntry = [&](AbstractEntry *entry) {
+        if (entry->type() == AbstractEntry::RunnableType) {
+            AppEntry *appEntry = static_cast<AppEntry *>(entry);
+
+            if (appEntry->id() == appId && appEntry->isNewlyInstalled()) {
+                appEntry->setFirstSeen(QDate());
+                auto stateConfig = Kicker::stateConfig();
+                KConfigGroup applicationsGroup = stateConfig->group(QStringLiteral("Application"));
+                applicationsGroup.deleteGroup(appEntry->id());
+
+                refreshNewlyInstalledEntry(appEntry);
+            }
+        } else if (entry->type() == AbstractEntry::GroupType) {
+            GroupEntry *groupEntry = static_cast<GroupEntry *>(entry);
+            if (AbstractModel *model = groupEntry->childModel()) {
+                for (int i = 0; i < model->count(); ++i) {
+                    processEntry(static_cast<AbstractEntry *>(model->index(i, 0).internalPointer()));
+                }
+            }
+        }
+    };
+
+    for (AbstractEntry *entry : std::as_const(m_entryList)) {
+        processEntry(entry);
     }
 }
 

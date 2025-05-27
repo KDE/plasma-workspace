@@ -294,16 +294,6 @@ bool AppsModel::trigger(int row, const QString &actionId, const QVariant &argume
         }
 
         return false;
-    } else if (entry->type() == AbstractEntry::RunnableType && (actionId.isEmpty() || actionId == QLatin1String("_kicker_jumpListAction"))) {
-        if (entry->firstSeen().isValid()) {
-            auto *appEntry = static_cast<AppEntry *>(entry);
-            appEntry->setFirstSeen(QDate());
-            refreshNewlyInstalledEntry(appEntry);
-
-            auto stateConfig = Kicker::stateConfig();
-            KConfigGroup applicationsGroup = stateConfig->group(QStringLiteral("Application"));
-            applicationsGroup.deleteGroup(appEntry->id());
-        }
     }
 
     return entry->run(actionId, argument);
