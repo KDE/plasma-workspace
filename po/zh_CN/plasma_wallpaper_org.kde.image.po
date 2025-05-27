@@ -77,12 +77,10 @@ msgid "Tiled"
 msgstr "平铺"
 
 #: imagepackage/contents/ui/config.qml:193
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Set as Wallpaper"
+#, kde-format
 msgctxt "part of a sentence: 'Switch dynamic wallpapers [based on]'"
 msgid "Switch dynamic wallpapers:"
-msgstr "设为壁纸"
+msgstr ""
 
 #: imagepackage/contents/ui/config.qml:194
 #, kde-format

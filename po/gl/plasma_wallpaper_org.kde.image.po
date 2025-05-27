@@ -5,22 +5,22 @@
 # marce villarino <mvillarino@users.sourceforge.net>, 2009.
 # Marce Villarino <mvillarino@kde-espana.es>, 2009, 2011, 2012, 2013, 2014.
 # Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2013, 2015.
-# SPDX-FileCopyrightText: 2023, 2024 Adrián Chaves (Gallaecio)
+# SPDX-FileCopyrightText: 2023, 2024, 2025 Adrián Chaves (Gallaecio)
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-24 00:44+0000\n"
-"PO-Revision-Date: 2024-08-29 18:29+0200\n"
-"Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
+"PO-Revision-Date: 2025-05-26 08:50+0200\n"
+"Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -81,24 +81,22 @@ msgid "Tiled"
 msgstr "En mosaico"
 
 #: imagepackage/contents/ui/config.qml:193
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Set as Wallpaper"
+#, kde-format
 msgctxt "part of a sentence: 'Switch dynamic wallpapers [based on]'"
 msgid "Switch dynamic wallpapers:"
-msgstr "Definir como fondo"
+msgstr "Cambiar os fondos dinámicos:"
 
 #: imagepackage/contents/ui/config.qml:194
 #, kde-format
 msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the color scheme is dark or light"
-msgstr ""
+msgstr "Segundo o esquema de cores sexa claro ou escuro."
 
 #: imagepackage/contents/ui/config.qml:202
 #, kde-format
 msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
 msgid "At sunrise and sunset"
-msgstr ""
+msgstr "Ao saír ou poñerse o sol."
 
 #: imagepackage/contents/ui/config.qml:217
 #, kde-format
@@ -107,6 +105,8 @@ msgctxt ""
 "sunrise times"
 msgid "Use device's current location for more accurate timings"
 msgstr ""
+"Usar a localización actual do dispositivo para determinar horas máis "
+"precisas."
 
 #: imagepackage/contents/ui/config.qml:228
 #, kde-format

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-24 00:43+0000\n"
+"POT-Creation-Date: 2025-05-27 00:43+0000\n"
 "PO-Revision-Date: 2024-07-27 14:20+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -30,13 +30,13 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "olivermkellogg@gmail.com"
 
-#: kcm.cpp:476
+#: kcm.cpp:465
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr "Vi devas rekomenci la Plasman seancon por ke ĉi tiuj ŝanĝoj efiku."
 
-#: kcm.cpp:477
+#: kcm.cpp:466
 #, kde-format
 msgid "Cursor Settings Changed"
 msgstr "Kursora agordo Ŝanĝita"
