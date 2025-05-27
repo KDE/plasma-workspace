@@ -87,91 +87,37 @@ void x11RoundTrip()
 }
 }
 
-class DatabaseRecordToMimeDataJob : public KCompositeJob
-{
-    Q_OBJECT
-
-public:
-    explicit DatabaseRecordToMimeDataJob(QObject *parent, const std::shared_ptr<const HistoryItem> &data);
-    ~DatabaseRecordToMimeDataJob() override;
-
-    void start() override;
-    QMimeData *mimeData() const;
-
-private:
-    void slotResult(KJob *job) override;
-
-    QString m_uuid;
-    std::list<std::pair<QString /*type*/, QByteArray /*data*/>> m_mimeDataList;
-};
-
-DatabaseRecordToMimeDataJob::DatabaseRecordToMimeDataJob(QObject *parent, const std::shared_ptr<const HistoryItem> &data)
-    : KCompositeJob(parent)
-    , m_uuid(data->uuid())
-{
-}
-
-DatabaseRecordToMimeDataJob::~DatabaseRecordToMimeDataJob()
-{
-}
-
-void DatabaseRecordToMimeDataJob::start()
+QMimeData *loadMimeDataForRecord(const QString &uuid)
 {
     QSqlDatabase db = QSqlDatabase::database(u"klipper"_s);
     if (!db.isOpen()) [[unlikely]] {
-        setError(UserDefinedError);
-        setErrorText(db.lastError().text());
-        emitResult();
-        return;
+        qCWarning(KLIPPER_LOG) << db.lastError().text();
+        return nullptr;
     }
 
+    auto mimeData = new QMimeData;
     QSqlQuery query(db);
-    query.exec(u"SELECT mimetype,data_uuid FROM aux WHERE uuid='%1'"_s.arg(m_uuid));
+    query.exec(u"SELECT mimetype,data_uuid FROM aux WHERE uuid='%1'"_s.arg(uuid));
     while (query.next()) {
         const QString mimeType = query.value(0).toString();
         const QString dataUuid = query.value(1).toString();
         if (mimeType.isEmpty() || dataUuid.isEmpty()) {
             continue;
         }
-        const QString dataPath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + u"/klipper/data/" + m_uuid + u'/' + dataUuid;
-        auto job = KIO::open(QUrl::fromLocalFile(dataPath), QIODevice::ReadOnly);
-        connect(job, &KIO::FileJob::open, this, [this, job, mimeType] {
-            connect(job, &KIO::FileJob::data, this, [this, job, mimeType](KJob *, const QByteArray &data) {
-                m_mimeDataList.emplace_back(mimeType, data);
-                job->close();
-            });
-            job->read(job->size());
-        });
-        addSubjob(job);
-    }
-    if (!hasSubjobs()) {
-        emitResult();
-        return;
-    }
-}
-
-QMimeData *DatabaseRecordToMimeDataJob::mimeData() const
-{
-    auto mimeData = new QMimeData;
-    for (auto &[format, data] : m_mimeDataList) {
-        if (format == s_imageFormat) {
+        const QString dataPath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + u"/klipper/data/" + uuid + u'/' + dataUuid;
+        auto file = QFile(dataPath);
+        if (!file.open(QFile::ReadOnly)) {
+            qCWarning(KLIPPER_LOG) << "failed opening file" << dataPath << "for record" << uuid;
+            continue;
+        }
+        const auto data = file.readAll();
+        if (mimeType == s_imageFormat) {
             mimeData->setImageData(QImage::fromData(data, "PNG"));
         } else {
-            mimeData->setData(format, data);
+            mimeData->setData(mimeType, data);
         }
     }
     return mimeData;
-}
-
-void DatabaseRecordToMimeDataJob::slotResult(KJob *job)
-{
-    removeSubjob(job);
-
-    if (hasSubjobs()) {
-        return;
-    }
-
-    emitResult();
 }
 
 std::shared_ptr<SystemClipboard> SystemClipboard::self()
@@ -280,11 +226,8 @@ void SystemClipboard::setMimeData(const HistoryItemConstPtr &data, SelectionMode
         return;
     }
 
-    auto job = new DatabaseRecordToMimeDataJob(this, data);
-    connect(job, &KJob::finished, this, [this, job, mode, updateReason] {
-        setMimeDataInternal(mode & Selection ? job->mimeData() : nullptr, mode & Clipboard ? job->mimeData() : nullptr, updateReason);
-    });
-    job->start();
+    auto mimeData = loadMimeDataForRecord(data->uuid());
+    setMimeDataInternal(mode & Selection ? mimeData : nullptr, mode & Clipboard ? mimeData : nullptr, updateReason);
 }
 
 void SystemClipboard::setMimeData(const QMimeData *data, SelectionMode mode, ClipboardUpdateReason updateReason)
