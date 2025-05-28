@@ -81,7 +81,7 @@ KCMLookandFeel::KCMLookandFeel(QObject *parent, const KPluginMetaData &data)
     m_model->setItemRoleNames(roles);
     loadModel();
 
-    connect(lookAndFeelSettings(), &LookAndFeelSettings::lookAndFeelPackageChanged, this, [this]() {
+    auto handleLookAndFeelPackageChanged = [this]() {
         // When the selected LNF package changes, update the available theme contents
         const int index = pluginIndex(lookAndFeelSettings()->lookAndFeelPackage());
         const LookAndFeelManager::Contents packageContents = m_model->index(index, 0).data(ContentsRole).value<LookAndFeelManager::Contents>();
@@ -91,7 +91,10 @@ KCMLookandFeel::KCMLookandFeel(QObject *parent, const KPluginMetaData &data)
         }
         // And also reset the user selection to the new available contents
         resetSelectedContents();
-    });
+    };
+
+    connect(lookAndFeelSettings(), &LookAndFeelSettings::lookAndFeelPackageChanged, handleLookAndFeelPackageChanged);
+    handleLookAndFeelPackageChanged();
 
     connect(m_lnf, &LookAndFeelManager::refreshServices, this, [](const QStringList &toStop, const QList<KService::Ptr> &toStart) {
         for (const auto &serviceName : toStop) {
