@@ -16,7 +16,7 @@ import org.kde.plasma.workspace.calendar as PlasmaCalendar
 import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCMUtils
 
-KCMUtils.SimpleKCM {
+KCMUtils.ScrollViewKCM {
     id: calendarPage
 
     signal configurationChanged()
@@ -24,6 +24,8 @@ KCMUtils.SimpleKCM {
     property alias cfg_showWeekNumbers: showWeekNumbers.checked
     property int cfg_firstDayOfWeek
     property bool unsavedChanges: false
+
+    extraFooterTopPadding: true
 
     function saveConfig() {
         Plasmoid.configuration.enabledCalendarPlugins = eventPluginsManager.enabledPlugins;
@@ -35,7 +37,7 @@ KCMUtils.SimpleKCM {
             calendarPage.unsavedChanges = !(Plasmoid.configuration.enabledCalendarPlugins.every(entry => eventPluginsManager.enabledPlugins.includes(entry)) &&  eventPluginsManager.enabledPlugins.every(entry =>  Plasmoid.configuration.enabledCalendarPlugins.includes(entry)))
     }
 
-    Kirigami.FormLayout {
+    header: Kirigami.FormLayout {
         PlasmaCalendar.EventPluginsManager {
             id: eventPluginsManager
             Component.onCompleted: {
@@ -45,8 +47,8 @@ KCMUtils.SimpleKCM {
 
         QQC2.CheckBox {
             id: showWeekNumbers
-            Kirigami.FormData.label: i18n("General:")
-            text: i18n("Show week numbers")
+            Kirigami.FormData.label: i18nc("@option:check formdata label", "General:")
+            text: i18nc("@option:check", "Show week numbers")
         }
 
 
@@ -70,44 +72,43 @@ KCMUtils.SimpleKCM {
         Item {
             Kirigami.FormData.isSection: true
         }
+    }
 
-        ColumnLayout {
-            id: calendarPluginsLayout
+    view: ListView {
+        id: pluginListView
+        activeFocusOnTab: true
+        model: eventPluginsManager.model
+        header: Kirigami.InlineViewHeader {
+                text: i18nc("@title:column", "Available Add-Ons")
+                width: pluginListView.width
+        }
+        headerPositioning: ListView.OverlayHeader
+        delegate: QQC2.CheckDelegate {
+            id: delegate
+            required property var model
+            width: pluginListView.width
+            checked: model.checked
+            text: model.display
+            property string subtitle: model.toolTip
+            icon.source: model.decoration
 
-            spacing: Kirigami.Units.smallSpacing
+            Accessible.onPressAction: {
+                toggle();
+                clicked();
+            }
 
-            Kirigami.FormData.label: i18n("Available Plugins:")
+            onClicked: {
+                //needed for model's setData to be called
+                model.checked = checked;
+                calendarPage.checkUnsavedChanges();
+            }
 
-            Repeater {
-                id: calendarPluginsRepeater
-
-                model: eventPluginsManager.model
-
-                delegate: QQC2.CheckBox {
-                    required property var model
-
-                    text: model.display
-                    checked: model.checked
-
-                    Accessible.onPressAction: {
-                        toggle();
-                        clicked();
-                    }
-
-                    onClicked: {
-                        //needed for model's setData to be called
-                        model.checked = checked;
-                        calendarPage.checkUnsavedChanges();
-                    }
-                }
-
-                onItemAdded: (index, item) => {
-                    if (index === 0) {
-                        // Set buddy once, for an item in the first row.
-                        // No, it doesn't work as a binding on children list.
-                        calendarPluginsLayout.Kirigami.FormData.buddyFor = item;
-                    }
-                }
+            contentItem: Kirigami.IconTitleSubtitle {
+                width: delegate.availableWidth
+                icon: icon.fromControlsIcon(delegate.icon)
+                title: delegate.text
+                subtitle: delegate.subtitle
+                selected: delegate.highlighted || delegate.pressed
             }
         }
     }
