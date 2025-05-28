@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2014, 2019, 2020.
-# SPDX-FileCopyrightText: 2023 Kristof Kiszel <ulysses@fsf.hu>
+# SPDX-FileCopyrightText: 2023, 2025 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-09 00:43+0000\n"
-"PO-Revision-Date: 2023-12-28 11:19+0100\n"
+"PO-Revision-Date: 2025-05-27 22:00+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: AlbumArtStackView.qml:202
 #, kde-format
@@ -37,27 +37,25 @@ msgstr "-%1"
 #: ExpandedRepresentation.qml:592
 #, kde-format
 msgid "Playback rate %1"
-msgstr ""
+msgstr "Lejátszási sebesség %1"
 
 #: ExpandedRepresentation.qml:595
-#, fuzzy, kde-format
-#| msgctxt "Remaining time for song e.g -5:42"
-#| msgid "-%1"
+#, kde-format
 msgctxt "Playback rate"
 msgid "%1x"
-msgstr "-%1"
+msgstr "%1x"
 
 #: ExpandedRepresentation.qml:599
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Playback rate"
-msgstr ""
+msgstr "Lejátszási sebesség"
 
 #: ExpandedRepresentation.qml:645
 #, kde-format
 msgctxt "@action:inmenu Playback speed (Normal)"
 msgid "%1 (Normal)"
-msgstr ""
+msgstr "%1 (Normál)"
 
 #: ExpandedRepresentation.qml:684
 #, kde-format
@@ -100,11 +98,10 @@ msgid "Repeat"
 msgstr "Ismétlés"
 
 #: ExpandedRepresentation.qml:839
-#, fuzzy, kde-format
-#| msgid "Choose player automatically"
+#, kde-format
 msgctxt "@action:button"
 msgid "Choose player automatically"
-msgstr "Lejátszó automatikus kiválasztása"
+msgstr "Automatikus lejátszóválasztás"
 
 #: main.qml:60
 #, kde-format
