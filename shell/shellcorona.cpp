@@ -2313,11 +2313,15 @@ void ShellCorona::clonePanelTo(PanelView *oldPanelView, Plasma::Types::Location 
 
     KConfigGroup oldPanelConfig = oldPanel->config();
     KConfigGroup targetConfig = targetPanel->config();
-    oldPanelConfig.copyTo(&targetConfig);
+    // Do not use KConfigGroup::copyTo as we do not want it to be recursive
+    for (const auto &key : oldPanelConfig.keyList()) {
+        targetConfig.writeEntry(key, oldPanelConfig.readEntry(key));
+    }
 
     KConfigGroup targetAppletsConfig = targetConfig.group(QStringLiteral("Applets"));
+    KConfigGroup oldGeneralConfig = oldPanelConfig.group(QStringLiteral("General"));
     KConfigGroup targetGeneralConfig = targetConfig.group(QStringLiteral("General"));
-    QString appletsOrder = targetGeneralConfig.readEntry(QStringLiteral("AppletOrder"), QStringLiteral());
+    QString appletsOrder = oldGeneralConfig.readEntry(QStringLiteral("AppletOrder"), QStringLiteral());
     QStringList appletsOrderList = appletsOrder.split(QStringLiteral(";"));
 
     for (auto applet : oldPanel->applets()) {
