@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-24 00:44+0000\n"
+"POT-Creation-Date: 2025-05-28 00:44+0000\n"
 "PO-Revision-Date: 2024-09-07 12:02+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -123,15 +123,10 @@ msgstr "Solid colour"
 msgid "Select Background Color"
 msgstr "Select Background Colour"
 
-#: imagepackage/contents/ui/main.qml:35
+#: imagepackage/contents/ui/main.qml:37
 #, kde-format
 msgid "Open Wallpaper Image"
 msgstr "Open Wallpaper Image"
-
-#: imagepackage/contents/ui/main.qml:41
-#, kde-format
-msgid "Next Wallpaper Image"
-msgstr "Next Wallpaper Image"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:60
 #, kde-format
@@ -240,8 +235,13 @@ msgstr ""
 "The file passed to be set as wallpaper does not exist, or we cannot identify "
 "it as a wallpaper: %1"
 
+#: plugin/imagebackend.cpp:38
+#, kde-format
+msgid "Next Wallpaper Image"
+msgstr "Next Wallpaper Image"
+
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
-#: plugin/imagebackend.cpp:340
+#: plugin/imagebackend.cpp:349
 #, kde-format
 msgid "Media Files"
 msgstr "Media Files"

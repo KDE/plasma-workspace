@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-24 00:44+0000\n"
+"POT-Creation-Date: 2025-05-28 00:44+0000\n"
 "PO-Revision-Date: 2024-06-08 17:17+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -131,15 +131,10 @@ msgstr "Culoare solidă"
 msgid "Select Background Color"
 msgstr "Alege culoarea de fundal"
 
-#: imagepackage/contents/ui/main.qml:35
+#: imagepackage/contents/ui/main.qml:37
 #, kde-format
 msgid "Open Wallpaper Image"
 msgstr "Deschide imagine cu tapet"
-
-#: imagepackage/contents/ui/main.qml:41
-#, kde-format
-msgid "Next Wallpaper Image"
-msgstr "Următoarea imagine de fundal"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:60
 #, kde-format
@@ -253,8 +248,13 @@ msgstr ""
 "Fișierul transmis pentru a fi stabilit ca tapet nu există sau nu poate fi "
 "identificat ca tapet: %1"
 
+#: plugin/imagebackend.cpp:38
+#, kde-format
+msgid "Next Wallpaper Image"
+msgstr "Următoarea imagine de fundal"
+
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
-#: plugin/imagebackend.cpp:340
+#: plugin/imagebackend.cpp:349
 #, kde-format
 msgid "Media Files"
 msgstr "Fișiere multimedia"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-24 00:44+0000\n"
+"POT-Creation-Date: 2025-05-28 00:44+0000\n"
 "PO-Revision-Date: 2009-06-27 00:55+0200\n"
 "Last-Translator: Rinse de Vries <rinsedevries@kde.nl>\n"
 "Language-Team: Frysk <kde-i18n-fry@kde.org>\n"
@@ -125,14 +125,9 @@ msgstr ""
 msgid "Select Background Color"
 msgstr ""
 
-#: imagepackage/contents/ui/main.qml:35
+#: imagepackage/contents/ui/main.qml:37
 #, kde-format
 msgid "Open Wallpaper Image"
-msgstr ""
-
-#: imagepackage/contents/ui/main.qml:41
-#, kde-format
-msgid "Next Wallpaper Image"
 msgstr ""
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:60
@@ -238,8 +233,13 @@ msgid ""
 "it as a wallpaper: %1"
 msgstr ""
 
+#: plugin/imagebackend.cpp:38
+#, kde-format
+msgid "Next Wallpaper Image"
+msgstr ""
+
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
-#: plugin/imagebackend.cpp:340
+#: plugin/imagebackend.cpp:349
 #, kde-format
 msgid "Media Files"
 msgstr ""

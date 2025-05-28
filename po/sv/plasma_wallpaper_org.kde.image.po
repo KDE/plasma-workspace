@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-24 00:44+0000\n"
+"POT-Creation-Date: 2025-05-28 00:44+0000\n"
 "PO-Revision-Date: 2024-08-29 20:11+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -123,15 +123,10 @@ msgstr "Enkel färg"
 msgid "Select Background Color"
 msgstr "Välj bakgrundsfärg"
 
-#: imagepackage/contents/ui/main.qml:35
+#: imagepackage/contents/ui/main.qml:37
 #, kde-format
 msgid "Open Wallpaper Image"
 msgstr "Öppna bild för skrivbordsunderlägg"
-
-#: imagepackage/contents/ui/main.qml:41
-#, kde-format
-msgid "Next Wallpaper Image"
-msgstr "Nästa skrivbordsunderlägg"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:60
 #, kde-format
@@ -245,8 +240,13 @@ msgstr ""
 "Filen som skickades för att användas som skrivbordsunderlägg finns inte, "
 "eller kan inte identifieras som ett skrivbordsunderlägg: %1"
 
+#: plugin/imagebackend.cpp:38
+#, kde-format
+msgid "Next Wallpaper Image"
+msgstr "Nästa skrivbordsunderlägg"
+
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
-#: plugin/imagebackend.cpp:340
+#: plugin/imagebackend.cpp:349
 #, kde-format
 msgid "Media Files"
 msgstr "Mediefiler"

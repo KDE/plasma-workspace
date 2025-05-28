@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-24 00:44+0000\n"
+"POT-Creation-Date: 2025-05-28 00:44+0000\n"
 "PO-Revision-Date: 2024-09-18 21:34+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -127,15 +127,10 @@ msgstr "Egyszínű"
 msgid "Select Background Color"
 msgstr "Válassza ki a háttér színét"
 
-#: imagepackage/contents/ui/main.qml:35
+#: imagepackage/contents/ui/main.qml:37
 #, kde-format
 msgid "Open Wallpaper Image"
 msgstr "Háttérkép megnyitása"
-
-#: imagepackage/contents/ui/main.qml:41
-#, kde-format
-msgid "Next Wallpaper Image"
-msgstr "Következő háttérkép"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:60
 #, kde-format
@@ -244,8 +239,13 @@ msgstr ""
 "A háttérképként használni kívánt fájl nem létezik, vagy nem azonosítható "
 "háttérképként: %1"
 
+#: plugin/imagebackend.cpp:38
+#, kde-format
+msgid "Next Wallpaper Image"
+msgstr "Következő háttérkép"
+
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
-#: plugin/imagebackend.cpp:340
+#: plugin/imagebackend.cpp:349
 #, kde-format
 msgid "Media Files"
 msgstr "Médiafájlok"

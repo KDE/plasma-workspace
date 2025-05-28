@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-24 00:44+0000\n"
+"POT-Creation-Date: 2025-05-28 00:44+0000\n"
 "PO-Revision-Date: 2024-08-31 23:23+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -129,15 +129,10 @@ msgstr "Vientisa spalva"
 msgid "Select Background Color"
 msgstr "Pasirinkti fono spalvą"
 
-#: imagepackage/contents/ui/main.qml:35
+#: imagepackage/contents/ui/main.qml:37
 #, kde-format
 msgid "Open Wallpaper Image"
 msgstr "Atverti darbalaukio fono paveikslą"
-
-#: imagepackage/contents/ui/main.qml:41
-#, kde-format
-msgid "Next Wallpaper Image"
-msgstr "Kitas darbalaukio fono paveikslas"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:60
 #, kde-format
@@ -248,8 +243,13 @@ msgstr ""
 "Failo, kuris buvo perduotas, kad būtų nustatytas darbalaukio fonu, nėra, "
 "arba nepavyksta jo atpažinti kaip darbalaukio fono: %1"
 
+#: plugin/imagebackend.cpp:38
+#, kde-format
+msgid "Next Wallpaper Image"
+msgstr "Kitas darbalaukio fono paveikslas"
+
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
-#: plugin/imagebackend.cpp:340
+#: plugin/imagebackend.cpp:349
 #, kde-format
 msgid "Media Files"
 msgstr "Medijos failai"

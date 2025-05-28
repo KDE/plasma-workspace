@@ -1,15 +1,15 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-#
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 # Safa Alfulaij <safa1996alfulaij@gmail.com>, 2014, 2016, 2017.
 # Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2024.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-24 00:44+0000\n"
-"PO-Revision-Date: 2024-09-05 09:48+0400\n"
+"POT-Creation-Date: 2025-05-28 00:44+0000\n"
+"PO-Revision-Date: 2025-05-27 18:02+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -79,24 +79,22 @@ msgid "Tiled"
 msgstr "مكرّرة"
 
 #: imagepackage/contents/ui/config.qml:193
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Set as Wallpaper"
+#, kde-format
 msgctxt "part of a sentence: 'Switch dynamic wallpapers [based on]'"
 msgid "Switch dynamic wallpapers:"
-msgstr "عيّن كخلفية"
+msgstr "بدّل خلفيات ديناميكية:"
 
 #: imagepackage/contents/ui/config.qml:194
 #, kde-format
 msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the color scheme is dark or light"
-msgstr ""
+msgstr "بناءً على ما إذا كان نظام الألوان مظلمًا أم فاتحًا"
 
 #: imagepackage/contents/ui/config.qml:202
 #, kde-format
 msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
 msgid "At sunrise and sunset"
-msgstr ""
+msgstr "عند شروق الشمس وغروبها"
 
 #: imagepackage/contents/ui/config.qml:217
 #, kde-format
@@ -104,7 +102,7 @@ msgctxt ""
 "@label:checkbox Use geolocation services for more accurate sunset and "
 "sunrise times"
 msgid "Use device's current location for more accurate timings"
-msgstr ""
+msgstr "استخدم الموقع الحالي للجهاز للحصول على توقيتات أكثر دقة"
 
 #: imagepackage/contents/ui/config.qml:228
 #, kde-format
@@ -126,15 +124,10 @@ msgstr "لون صلب"
 msgid "Select Background Color"
 msgstr "اختر لون الخلفيّة"
 
-#: imagepackage/contents/ui/main.qml:35
+#: imagepackage/contents/ui/main.qml:37
 #, kde-format
 msgid "Open Wallpaper Image"
 msgstr "افتح صورة خلفيّة"
-
-#: imagepackage/contents/ui/main.qml:41
-#, kde-format
-msgid "Next Wallpaper Image"
-msgstr "صورة الخلفيّة التّالية"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:60
 #, kde-format
@@ -242,8 +235,13 @@ msgstr ""
 "الملف الذي تم تمريره ليتم تعيينه كخلفية غير موجود ، أو لا يمكننا تحديده "
 "كخلفية: %1"
 
+#: plugin/imagebackend.cpp:38
+#, kde-format
+msgid "Next Wallpaper Image"
+msgstr "صورة الخلفيّة التّالية"
+
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
-#: plugin/imagebackend.cpp:340
+#: plugin/imagebackend.cpp:349
 #, kde-format
 msgid "Media Files"
 msgstr "ملفّات الوسائط"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-24 00:44+0000\n"
+"POT-Creation-Date: 2025-05-28 00:44+0000\n"
 "PO-Revision-Date: 2024-10-01 21:21-0500\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
@@ -123,15 +123,10 @@ msgstr "ਇਕਸਾਰ ਰੰਗ"
 msgid "Select Background Color"
 msgstr "ਬੈਕਗਰਾਊਂਡ ਰੰਗ ਚੁਣੋ"
 
-#: imagepackage/contents/ui/main.qml:35
+#: imagepackage/contents/ui/main.qml:37
 #, kde-format
 msgid "Open Wallpaper Image"
 msgstr "ਵਾਲਪੇਪਰ ਚਿੱਤਰ ਖੋਲ੍ਹੋ"
-
-#: imagepackage/contents/ui/main.qml:41
-#, kde-format
-msgid "Next Wallpaper Image"
-msgstr "ਅਗਲਾ ਵਾਲਪੇਪਰ ਚਿੱਤਰ"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:60
 #, kde-format
@@ -232,8 +227,13 @@ msgid ""
 msgstr ""
 "ਵਾਲਪੇਪਰ ਲਾਉਣ ਵਾਲੀ ਦਿੱਤੀ ਗਈ ਫਾਇਲ ਮੌਜੂਦ ਨਹੀਂ ਹੈ ਜਾਂ ਅਸੀਂ ਇਸ ਨੂੰ ਠੀਕ ਤਰ੍ਹਾਂ ਪਛਾਣ ਨਹੀਂ ਸਕੇ: %1"
 
+#: plugin/imagebackend.cpp:38
+#, kde-format
+msgid "Next Wallpaper Image"
+msgstr "ਅਗਲਾ ਵਾਲਪੇਪਰ ਚਿੱਤਰ"
+
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
-#: plugin/imagebackend.cpp:340
+#: plugin/imagebackend.cpp:349
 #, kde-format
 msgid "Media Files"
 msgstr "ਮੀਡੀਆ ਫਾਇਲਾਂ"

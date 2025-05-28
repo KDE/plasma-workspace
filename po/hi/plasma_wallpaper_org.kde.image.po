@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-24 00:44+0000\n"
+"POT-Creation-Date: 2025-05-28 00:44+0000\n"
 "PO-Revision-Date: 2023-02-28 21:51+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -135,15 +135,10 @@ msgstr "रंग"
 msgid "Select Background Color"
 msgstr "पृष्ठभूमि रंग चुनें"
 
-#: imagepackage/contents/ui/main.qml:35
+#: imagepackage/contents/ui/main.qml:37
 #, kde-format
 msgid "Open Wallpaper Image"
 msgstr "वालपेपर छवि खोलें"
-
-#: imagepackage/contents/ui/main.qml:41
-#, kde-format
-msgid "Next Wallpaper Image"
-msgstr "अगला वालपेपर छवि"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:60
 #, fuzzy, kde-format
@@ -254,8 +249,13 @@ msgstr ""
 "वॉलपेपर के रूप में नियत करने के लिए दी गई फ़ाइल मौजूद नहीं है, या हम इसे वॉलपेपर के रूप में "
 "नहीं पहचान सकते: %1"
 
+#: plugin/imagebackend.cpp:38
+#, kde-format
+msgid "Next Wallpaper Image"
+msgstr "अगला वालपेपर छवि"
+
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
-#: plugin/imagebackend.cpp:340
+#: plugin/imagebackend.cpp:349
 #, fuzzy, kde-format
 #| msgid "Image Files"
 msgid "Media Files"
