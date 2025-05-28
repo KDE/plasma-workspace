@@ -92,7 +92,7 @@ int main(int argc, char *argv[])
 
     bool replace = false;
 
-    ShellCorona *corona = nullptr;
+    ShellCorona corona;
     {
         QCommandLineParser cliOptions;
 
@@ -132,22 +132,19 @@ int main(int argc, char *argv[])
         QObject::connect(&app, &QGuiApplication::commitDataRequest, disableSessionManagement);
         QObject::connect(&app, &QGuiApplication::saveStateRequest, disableSessionManagement);
 
-        corona = new ShellCorona(&app);
-        corona->setShell(cliOptions.value(shellPluginOption));
-        if (!corona->kPackage().isValid()) {
-            qCritical() << "starting invalid corona" << corona->shell();
+        corona.setShell(cliOptions.value(shellPluginOption));
+        if (!corona.kPackage().isValid()) {
+            qCritical() << "starting invalid corona" << corona.shell();
             return 1;
         }
 
 #ifdef WITH_KUSERFEEDBACKCORE
-        auto userFeedback = new UserFeedback(corona, &app);
+        auto userFeedback = new UserFeedback(&corona, &corona);
         if (cliOptions.isSet(feedbackOption)) {
             QTextStream(stdout) << userFeedback->describeDataSources();
             return 0;
         }
 #endif
-
-        QObject::connect(QCoreApplication::instance(), &QCoreApplication::aboutToQuit, corona, &QObject::deleteLater);
 
         if (!cliOptions.isSet(noRespawnOption)) {
             KCrash::setFlags(KCrash::AutoRestart);
@@ -156,7 +153,7 @@ int main(int argc, char *argv[])
         // Tells libnotificationmanager that we're the only true application that may own notification and job progress services
         qApp->setProperty("_plasma_dbus_master", true);
 
-        QObject::connect(corona, &ShellCorona::glInitializationFailed, &app, [&app]() {
+        QObject::connect(&corona, &ShellCorona::glInitializationFailed, &app, [&app]() {
             // scene graphs errors come from a thread
             // even though we process them in the main thread, app.exit could still process these events
             static bool s_multipleInvokations = false;
@@ -185,7 +182,7 @@ int main(int argc, char *argv[])
 
     KDBusService service(KDBusService::Unique | KDBusService::StartupOption(replace ? KDBusService::Replace : 0));
 
-    corona->init();
+    corona.init();
     SoftwareRendererNotifier::notifyIfRelevant();
 
     return app.exec();
