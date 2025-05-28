@@ -88,12 +88,16 @@ QStringList SlideModel::addDirs(const QStringList &dirs)
             m_models.insert(d, m);
             added.append(d);
 
+            // Add the model immediately unconditionally as we might want to remove it before is loaded,
+            // which would crash if we didn't add it yet. when images are loaded the rowsInserted signals
+            // will be properly forwarded
+            addSourceModel(m);
+
             if (m->loading().value()) {
                 connect(m, &ImageProxyModel::loadingChanged, this, &SlideModel::slotSourceModelLoadingChanged);
             } else {
                 // In case it loads immediately
                 ++m_loaded;
-                addSourceModel(m);
             }
         }
     }
@@ -161,10 +165,6 @@ QBindable<bool> SlideModel::loading() const
 
 void SlideModel::slotSourceModelLoadingChanged()
 {
-    auto m = static_cast<ImageProxyModel *>(sender());
-    disconnect(m, &ImageProxyModel::loadingChanged, this, nullptr);
-    addSourceModel(m);
-
     if (++m_loaded == m_models.size()) {
         m_loading = false;
         Q_EMIT done();
