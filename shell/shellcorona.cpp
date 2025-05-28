@@ -2313,15 +2313,11 @@ void ShellCorona::clonePanelTo(PanelView *oldPanelView, Plasma::Types::Location 
 
     KConfigGroup oldPanelConfig = oldPanel->config();
     KConfigGroup targetConfig = targetPanel->config();
-    // Do not use KConfigGroup::copyTo as we do not want it to be recursive
-    for (const auto &key : oldPanelConfig.keyList()) {
-        targetConfig.writeEntry(key, oldPanelConfig.readEntry(key));
-    }
+    oldPanelConfig.copyTo(&targetConfig);
 
     KConfigGroup targetAppletsConfig = targetConfig.group(QStringLiteral("Applets"));
-    KConfigGroup oldGeneralConfig = oldPanelConfig.group(QStringLiteral("General"));
     KConfigGroup targetGeneralConfig = targetConfig.group(QStringLiteral("General"));
-    QString appletsOrder = oldGeneralConfig.readEntry(QStringLiteral("AppletOrder"), QStringLiteral());
+    QString appletsOrder = targetGeneralConfig.readEntry(QStringLiteral("AppletOrder"), QStringLiteral());
     QStringList appletsOrderList = appletsOrder.split(QStringLiteral(";"));
 
     for (auto applet : oldPanel->applets()) {
@@ -2374,7 +2370,6 @@ void ShellCorona::clonePanelTo(PanelView *oldPanelView, Plasma::Types::Location 
         } else {
             // All the applet ids are different, so we re-parent their settings.
             oldAppletConfig.copyTo(&newAppletConfig);
-            oldAppletConfig.deleteGroup();
 
             if (applicationConfig()->group(QStringLiteral("Applets")).hasGroup(QString::number(applet->id()))) {
                 auto oldCoronaConfig = applicationConfig()->group(QStringLiteral("Applets")).group(QString::number(applet->id()));
@@ -2382,6 +2377,7 @@ void ShellCorona::clonePanelTo(PanelView *oldPanelView, Plasma::Types::Location 
                 oldCoronaConfig.copyTo(&newCoronaConfig);
             }
         }
+        oldAppletConfig.deleteGroup();
     }
 
     targetGeneralConfig.writeEntry("AppletOrder", appletsOrderList.join(QStringLiteral(";")));
