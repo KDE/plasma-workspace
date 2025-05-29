@@ -19,6 +19,7 @@
 #include <Solid/StorageVolume>
 
 #include <QDir>
+#include <QFile>
 
 #include "kded_interface.h"
 
@@ -74,7 +75,11 @@ void FreeSpaceNotifierModule::onNewSolidDevice(const QString &udi)
     if (auto generic = device.as<Solid::GenericInterface>()) {
         isReadOnly = generic->property(QStringLiteral("ReadOnly")).toBool();
     }
-    if (isReadOnly) {
+    // Cache devices should be marked through a
+    // CACHEDIR.TAG file to avoid indexing; see
+    // https://bford.info/cachedir/ for reference.
+    const bool isCache = QFile::exists(QDir(access->filePath()).filePath(QStringLiteral("CACHEDIR.TAG")));
+    if (isReadOnly || isCache) {
         return;
     }
 
