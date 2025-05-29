@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-10 00:44+0000\n"
+"POT-Creation-Date: 2025-05-29 02:44+0000\n"
 "PO-Revision-Date: 2025-02-08 10:38-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -193,12 +193,12 @@ msgstr "Substitui uma instância existente"
 msgid "Lists the available options for user feedback"
 msgstr "Lista as opções disponíveis para os comentários dos usuários"
 
-#: main.cpp:177
+#: main.cpp:174
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Não foi possível iniciar o Plasma"
 
-#: main.cpp:178
+#: main.cpp:175
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "
