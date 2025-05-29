@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-10 00:44+0000\n"
+"POT-Creation-Date: 2025-05-29 00:44+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -188,12 +188,12 @@ msgstr "替换现有实例"
 msgid "Lists the available options for user feedback"
 msgstr "列出用户反馈的可用选项"
 
-#: main.cpp:177
+#: main.cpp:174
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Plasma 启动失败"
 
-#: main.cpp:178
+#: main.cpp:175
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "

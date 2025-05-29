@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-10 00:44+0000\n"
+"POT-Creation-Date: 2025-05-29 00:44+0000\n"
 "PO-Revision-Date: 2025-03-13 22:53+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -191,12 +191,12 @@ msgstr "Var olan bir örneği değiştir"
 msgid "Lists the available options for user feedback"
 msgstr "Kullanıcı geri bildirimi için kullanılabilir seçenekleri listeler"
 
-#: main.cpp:177
+#: main.cpp:174
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Plasma Başlatılamadı"
 
-#: main.cpp:178
+#: main.cpp:175
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "

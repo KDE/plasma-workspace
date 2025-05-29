@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-10 00:44+0000\n"
+"POT-Creation-Date: 2025-05-29 00:44+0000\n"
 "PO-Revision-Date: 2024-09-19 17:01+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -193,12 +193,12 @@ msgstr "Αντικατάσταση μιας υπάρχουσας περίπτω�
 msgid "Lists the available options for user feedback"
 msgstr "Απαριθμεί τις διαθέσιμες επιλογές για τα σχόλια των χρηστών"
 
-#: main.cpp:177
+#: main.cpp:174
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Αποτυχία εκκίνησης Plasma"
 
-#: main.cpp:178
+#: main.cpp:175
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "

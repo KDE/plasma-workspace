@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-27 00:43+0000\n"
+"POT-Creation-Date: 2025-05-29 00:44+0000\n"
 "PO-Revision-Date: 2024-11-29 00:19-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -32,14 +32,14 @@ msgid "Your emails"
 msgstr ""
 "alvarenga@kde.org, elchevive@opensuse.org, geraldosimiao@fedoraproject.org"
 
-#: kcm.cpp:465
+#: kcm.cpp:468
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr ""
 "A sessão do Plasma deve ser reiniciada para que as alterações tenham efeito."
 
-#: kcm.cpp:466
+#: kcm.cpp:469
 #, kde-format
 msgid "Cursor Settings Changed"
 msgstr "Configurações do cursor alteradas"

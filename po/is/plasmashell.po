@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-10 00:44+0000\n"
+"POT-Creation-Date: 2025-05-29 00:44+0000\n"
 "PO-Revision-Date: 2025-04-18 13:06+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -188,12 +188,12 @@ msgstr "Skipta út fyrirliggjandi tilviki"
 msgid "Lists the available options for user feedback"
 msgstr "Birtir lista yfir tiltæka valkosti fyrir umsagnir notenda"
 
-#: main.cpp:177
+#: main.cpp:174
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Mistókst að ræss Plasma"
 
-#: main.cpp:178
+#: main.cpp:175
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "

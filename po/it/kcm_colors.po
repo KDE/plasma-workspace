@@ -3,20 +3,21 @@
 # Andrea Rizzi <rizzi@kde.org>, 2003, 2005.
 # Andrea RIZZI <arizzi@pi.infn.it>, 2004.
 # Luciano Montanaro <mikelima@cirulla.net>, 2007, 2008, 2009, 2010, 2011, 2012.
+# SPDX-FileCopyrightText: 2025 Paolo Zamponi <feus73@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-15 00:44+0000\n"
-"PO-Revision-Date: 2024-08-29 18:39+0200\n"
-"Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
+"PO-Revision-Date: 2025-05-24 16:55+0200\n"
+"Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -1173,8 +1174,8 @@ msgid ""
 "Show all the color schemes available on the system (and which is the current "
 "theme)"
 msgstr ""
-"Mostra tutte le combinazioni di colori disponibili sul sistema (e qual è il "
-"tema attuale)"
+"Mostra tutti gli schemi di colori disponibili sul sistema (e qual è il tema "
+"attuale)"
 
 #: plasma-apply-colorscheme.cpp:53
 #, kde-format
