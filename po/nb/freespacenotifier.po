@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-11 00:44+0000\n"
+"POT-Creation-Date: 2025-05-30 02:40+0000\n"
 "PO-Revision-Date: 2025-02-20 19:33+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -92,7 +92,7 @@ msgid ""
 "and the specified percentage of available space."
 msgstr ""
 
-#: module.cpp:100
+#: module.cpp:105
 #, fuzzy, kde-format
 #| msgid ""
 #| "Your Root partition is running out of disk space, you have %1 MiB "
@@ -103,7 +103,7 @@ msgid ""
 msgstr ""
 "Det er lite diskplass igjen i rotpartisjonen. Du har %1 MiB igjen (%2%)."
 
-#: module.cpp:102
+#: module.cpp:107
 #, fuzzy, kde-format
 #| msgid ""
 #| "Your Root partition is running out of disk space, you have %1 MiB "
@@ -114,7 +114,7 @@ msgid ""
 msgstr ""
 "Det er lite diskplass igjen i rotpartisjonen. Du har %1 MiB igjen (%2%)."
 
-#: module.cpp:104
+#: module.cpp:109
 #, fuzzy, kde-format
 #| msgid ""
 #| "Your Home folder is running out of disk space, you have %1 MiB remaining "
@@ -125,7 +125,7 @@ msgid ""
 msgstr ""
 "Det er lite diskplass igjen i hjemmemappa di, du har %1 MiB igjen (%2%)."
 
-#: module.cpp:129
+#: module.cpp:134
 #, kde-format
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"
