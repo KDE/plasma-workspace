@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-11 00:44+0000\n"
+"POT-Creation-Date: 2025-05-30 00:44+0000\n"
 "PO-Revision-Date: 2025-05-18 21:27+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -94,7 +94,7 @@ msgid ""
 "and the specified percentage of available space."
 msgstr ""
 
-#: module.cpp:100
+#: module.cpp:105
 #, kde-format
 msgid ""
 "Your %1 partition is running out of disk space; %2 MiB of space remaining "
@@ -102,7 +102,7 @@ msgid ""
 msgstr ""
 "Свободное дисковое пространство на разделе %1: сейчас свободно %2 МиБ (%3 %)."
 
-#: module.cpp:102
+#: module.cpp:107
 #, kde-format
 msgid ""
 "Your Root partition is running out of disk space; %1 MiB of space remaining "
@@ -111,7 +111,7 @@ msgstr ""
 "Свободное дисковое пространство в корневой папке заканчивается: сейчас "
 "свободно %1 МиБ (%2 %)."
 
-#: module.cpp:104
+#: module.cpp:109
 #, kde-format
 msgid ""
 "Your Home folder is running out of disk space; %1 MiB of space remaining "
@@ -120,7 +120,7 @@ msgstr ""
 "Свободное дисковое пространство в вашей домашней папке заканчивается: сейчас "
 "свободно %1 МиБ (%2 %)."
 
-#: module.cpp:129
+#: module.cpp:134
 #, kde-format
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"

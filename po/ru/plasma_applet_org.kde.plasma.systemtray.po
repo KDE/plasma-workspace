@@ -8,14 +8,14 @@
 # Alexander Potashev <aspotashev@gmail.com>, 2009, 2010, 2011, 2014, 2015, 2016, 2017, 2019.
 # Nick Shaforostoff <shafff@ukr.net>, 2009.
 # Yuri Efremov <yur.arh@gmail.com>, 2013.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2020, 2021, 2022, 2024.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2020, 2021, 2022, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_systemtray\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-15 00:44+0000\n"
-"PO-Revision-Date: 2024-09-20 13:02+0300\n"
-"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"PO-Revision-Date: 2025-05-29 15:44+0200\n"
+"Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -93,12 +93,17 @@ msgid ""
 "><nl/>Use this setting at your own risk, and do not report issues to KDE or "
 "the app’s author."
 msgstr ""
+"Перед использованием этой настройки рекомендуется найти в <application>%1</"
+"application> параметр отключения иконки в трее. Некоторые приложения не "
+"предусматривают отключение своих иконок в трее, и применение данной "
+"настройки может вызвать непредсказуемое поведение. <nl/><nl/>Используйте эту "
+"возможность на свой страх и риск."
 
 #: package/contents/ui/ConfigEntries.qml:164
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
-msgstr ""
+msgstr "Я понимаю и принимаю риски"
 
 #: package/contents/ui/ConfigEntries.qml:176
 #, kde-kuit-format
@@ -109,6 +114,10 @@ msgid ""
 "consider configuring the clipboard to disable its history, or only remember "
 "one item at a time."
 msgstr ""
+"Отключение буфера обмена не рекомендуется, так как скопированные данные "
+"будут потеряны при закрытии приложения, из которого они были скопированы.<nl/"
+"><nl/> Вместо этого рекомендуется настроить буфер обмена так, чтобы "
+"отключить его историю или запоминать только один последний элемент."
 
 #: package/contents/ui/ConfigEntries.qml:204
 #, kde-format
@@ -227,7 +236,7 @@ msgstr "Показать скрытые значки"
 #, kde-format
 msgctxt "@info:whatsthis accessible description for popup grid"
 msgid "Grid with %1 items in %2 columns"
-msgstr ""
+msgstr "Сетка, объектов: %1, столбцов: %2"
 
 #: package/contents/ui/HiddenItemsView.qml:46
 #, kde-format

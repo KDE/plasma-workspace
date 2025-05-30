@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-11 00:44+0000\n"
+"POT-Creation-Date: 2025-05-30 00:44+0000\n"
 "PO-Revision-Date: 2019-10-06 20:59+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -94,7 +94,7 @@ msgid ""
 "and the specified percentage of available space."
 msgstr ""
 
-#: module.cpp:100
+#: module.cpp:105
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Warns the user that the system is running low on space on his home "
@@ -109,7 +109,7 @@ msgstr ""
 "Фазои диски барои ҷузвадони асосии шумо кифоя нест, зеро ки танҳо %1 МБ боқӣ "
 "мондааст (%2%)"
 
-#: module.cpp:102
+#: module.cpp:107
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Warns the user that the system is running low on space on his home "
@@ -124,7 +124,7 @@ msgstr ""
 "Фазои диски барои ҷузвадони асосии шумо кифоя нест, зеро ки танҳо %1 МБ боқӣ "
 "мондааст (%2%)"
 
-#: module.cpp:104
+#: module.cpp:109
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Warns the user that the system is running low on space on his home "
@@ -139,7 +139,7 @@ msgstr ""
 "Фазои диски барои ҷузвадони асосии шумо кифоя нест, зеро ки танҳо %1 МБ боқӣ "
 "мондааст (%2%)"
 
-#: module.cpp:129
+#: module.cpp:134
 #, kde-format
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: freespacenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-11 00:44+0000\n"
+"POT-Creation-Date: 2025-05-30 00:44+0000\n"
 "PO-Revision-Date: 2025-05-11 14:33+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -92,7 +92,7 @@ msgstr ""
 "Het systeem zal u melden als de vrije ruimte onder de gespecificeerde MiB "
 "valt en het gespecificeerde percentage van beschikbare ruimte."
 
-#: module.cpp:100
+#: module.cpp:105
 #, kde-format
 msgid ""
 "Your %1 partition is running out of disk space; %2 MiB of space remaining "
@@ -101,7 +101,7 @@ msgstr ""
 "Uw partitie %1 heeft bijna geen vrije ruimte meer, nog %2 MiB ruimte over "
 "(%3%)."
 
-#: module.cpp:102
+#: module.cpp:107
 #, kde-format
 msgid ""
 "Your Root partition is running out of disk space; %1 MiB of space remaining "
@@ -110,7 +110,7 @@ msgstr ""
 "Uw hoofdpartitie (root) heeft bijna geen vrije ruimte meer, u hebt nog %1 "
 "MiB ruimte over (%2%)."
 
-#: module.cpp:104
+#: module.cpp:109
 #, kde-format
 msgid ""
 "Your Home folder is running out of disk space; %1 MiB of space remaining "
@@ -119,7 +119,7 @@ msgstr ""
 "Uw thuismap heeft bijna geen vrije ruimte meer, u hebt nog %1 MiB ruimte "
 "over (%2%)."
 
-#: module.cpp:129
+#: module.cpp:134
 #, kde-format
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"

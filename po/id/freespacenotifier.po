@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: freespacenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-11 00:44+0000\n"
+"POT-Creation-Date: 2025-05-30 00:44+0000\n"
 "PO-Revision-Date: 2022-02-25 14:25+0700\n"
 "Last-Translator: Linerly <linerly@protonmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -92,7 +92,7 @@ msgid ""
 "and the specified percentage of available space."
 msgstr ""
 
-#: module.cpp:100
+#: module.cpp:105
 #, fuzzy, kde-format
 #| msgid ""
 #| "Your Root partition is running out of disk space, you have %1 MiB "
@@ -103,7 +103,7 @@ msgid ""
 msgstr ""
 "Partisi Root-mu kehabisan ruang disk, kamu mempunyai sisa %1 MiB (%2%)."
 
-#: module.cpp:102
+#: module.cpp:107
 #, fuzzy, kde-format
 #| msgid ""
 #| "Your Root partition is running out of disk space, you have %1 MiB "
@@ -114,7 +114,7 @@ msgid ""
 msgstr ""
 "Partisi Root-mu kehabisan ruang disk, kamu mempunyai sisa %1 MiB (%2%)."
 
-#: module.cpp:104
+#: module.cpp:109
 #, fuzzy, kde-format
 #| msgid ""
 #| "Your Home folder is running out of disk space, you have %1 MiB remaining "
@@ -125,7 +125,7 @@ msgid ""
 msgstr ""
 "Folder Beranda-mu kehabisan ruang disk, kamu mempunyai sisa %1 MiB (%2%)."
 
-#: module.cpp:129
+#: module.cpp:134
 #, kde-format
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"
