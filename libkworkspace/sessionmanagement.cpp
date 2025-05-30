@@ -148,11 +148,18 @@ void SessionManagement::requestLogoutPrompt()
         return;
     }
 
-    // Don't bother to check for whether the user normally wants confirmation or
-    // not; if this function was invoked, it means they do want to see the logout
-    // prompt right now
-    LogoutPromptIface iface;
-    lockQuitUntilFinished(iface.promptAll());
+    OrgFreedesktopScreenSaverInterface ifaceScreenSaver(QStringLiteral("org.freedesktop.ScreenSaver"),
+                                                        QStringLiteral("/ScreenSaver"),
+                                                        QDBusConnection::sessionBus());
+
+    // Do not show Logoup prompt when in the lockscreen / screensaver
+    if (!ifaceScreenSaver.GetActive()) {
+        // Don't bother to check for whether the user normally wants confirmation or
+        // not; if this function was invoked, it means they do want to see the logout
+        // prompt right now
+        LogoutPromptIface iface;
+        lockQuitUntilFinished(iface.promptAll());
+    }
 }
 
 void SessionManagement::requestShutdown(ConfirmationMode confirmationMode)
