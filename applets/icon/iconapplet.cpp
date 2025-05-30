@@ -402,6 +402,8 @@ QList<QAction *> IconApplet::extraActions()
         actions << m_openContainingFolderAction;
     }
 
+    actions << internalAction(QStringLiteral("remove"));
+
     return actions;
 }
 
