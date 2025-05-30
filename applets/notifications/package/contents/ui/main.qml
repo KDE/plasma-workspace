@@ -178,6 +178,7 @@ PlasmoidItem {
         groupMode: NotificationManager.Notifications.GroupApplicationsFlat
         groupLimit: 2
         expandUnread: true
+        ignoreBlacklistDuringInhibition: true
         blacklistedDesktopEntries: notificationSettings.historyBlacklistedApplications
         blacklistedNotifyRcNames: notificationSettings.historyBlacklistedServices
         urgencies: {
