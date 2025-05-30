@@ -15,6 +15,7 @@ import org.kde.kquickcontrolsaddons
 import org.kde.newstuff as NewStuff
 import org.kde.kcmutils as KCM
 import org.kde.kirigami as Kirigami
+import org.kde.config as KConfig
 
 /**
  * For proper alignment, an ancestor **MUST** have id "appearanceRoot" and property "parentLayout"
@@ -46,7 +47,6 @@ ColumnLayout {
     property var cfg_UncheckedSlides: []
     property var cfg_UncheckedSlidesDefault: []
     property int cfg_DynamicMode: 0
-    property bool cfg_Geolocation: false
 
     signal configurationChanged()
     /**
@@ -198,26 +198,20 @@ ColumnLayout {
             onToggled: selectDynamicMode(0)
         }
 
-        QtControls2.RadioButton {
-            id: dayNightTimeOfDayButton
-            text: i18ndc("plasma_wallpaper_org.kde.image", "part of a sentence: 'Switch dynamic wallpapers'", "At sunrise and sunset")
-            QtControls2.ButtonGroup.group: dayNightModeGroup
-            checked: cfg_DynamicMode === 1
-            onToggled: selectDynamicMode(1)
-        }
-
         RowLayout {
-            spacing: Kirigami.Units.smallSpacing
-
-            Item {
-                Layout.preferredWidth: Kirigami.Units.gridUnit
+            QtControls2.RadioButton {
+                id: dayNightTimeOfDayButton
+                text: i18ndc("plasma_wallpaper_org.kde.image", "part of a sentence: 'Switch dynamic wallpapers'", "Based on the dark-light cycle:")
+                QtControls2.ButtonGroup.group: dayNightModeGroup
+                checked: cfg_DynamicMode === 1
+                onToggled: selectDynamicMode(1)
             }
 
-            QtControls2.CheckBox {
-                enabled: dayNightTimeOfDayButton.checked
-                text: i18ndc("plasma_wallpaper_org.kde.image", "@label:checkbox Use geolocation services for more accurate sunset and sunrise times", "Use device's current location for more accurate timings")
-                checked: cfg_Geolocation
-                onToggled: cfg_Geolocation = !cfg_Geolocation
+            QtControls2.Button {
+                enabled: dayNightTimeOfDayButton.checked && KConfig.KAuthorized.authorizeControlModule("kcm_nighttime")
+                text: i18n("Configure…")
+                icon.name: "configure"
+                onClicked: KCM.KCMLauncher.openSystemSettings("kcm_nighttime")
             }
         }
 
