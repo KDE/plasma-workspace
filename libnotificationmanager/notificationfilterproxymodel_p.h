@@ -33,6 +33,9 @@ public:
     bool showAddedDuringInhibition() const;
     void setShowAddedDuringInhibition(bool show);
 
+    bool ignoreBlacklistDuringInhibition() const;
+    void setIgnoreBlacklistDuringInhibition(bool ignore);
+
     QStringList blacklistedDesktopEntries() const;
     void setBlackListedDesktopEntries(const QStringList &blacklist);
 
@@ -50,6 +53,7 @@ Q_SIGNALS:
     void showExpiredChanged();
     void showDismissedChanged();
     void showAddedDuringInhibitionChanged();
+    void ignoreBlacklistDuringInhibitionChanged();
     void blacklistedDesktopEntriesChanged();
     void blacklistedNotifyRcNamesChanged();
     void whitelistedDesktopEntriesChanged();
@@ -63,6 +67,7 @@ private:
     bool m_showDismissed = false;
     bool m_showExpired = false;
     bool m_showAddedDuringInhibition = true;
+    bool m_ignoreBlacklistDuringInhibition = true;
 
     QStringList m_blacklistedDesktopEntries;
     QStringList m_blacklistedNotifyRcNames;

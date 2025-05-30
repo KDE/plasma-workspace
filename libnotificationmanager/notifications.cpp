@@ -195,6 +195,7 @@ void Notifications::Private::initProxyModels()
         connect(filterModel, &NotificationFilterProxyModel::showExpiredChanged, q, &Notifications::showExpiredChanged);
         connect(filterModel, &NotificationFilterProxyModel::showDismissedChanged, q, &Notifications::showDismissedChanged);
         connect(filterModel, &NotificationFilterProxyModel::showAddedDuringInhibitionChanged, q, &Notifications::showAddedDuringInhibitionChanged);
+        connect(filterModel, &NotificationFilterProxyModel::ignoreBlacklistDuringInhibitionChanged, q, &Notifications::ignoreBlacklistDuringInhibitionChanged);
         connect(filterModel, &NotificationFilterProxyModel::blacklistedDesktopEntriesChanged, q, &Notifications::blacklistedDesktopEntriesChanged);
         connect(filterModel, &NotificationFilterProxyModel::blacklistedNotifyRcNamesChanged, q, &Notifications::blacklistedNotifyRcNamesChanged);
 
@@ -525,6 +526,16 @@ bool Notifications::showAddedDuringInhibition() const
 void Notifications::setShowAddedDuringInhibition(bool show)
 {
     d->filterModel->setShowAddedDuringInhibition(show);
+}
+
+bool Notifications::ignoreBlacklistDuringInhibition() const
+{
+    return d->filterModel->ignoreBlacklistDuringInhibition();
+}
+
+void Notifications::setIgnoreBlacklistDuringInhibition(bool show)
+{
+    d->filterModel->setIgnoreBlacklistDuringInhibition(show);
 }
 
 QStringList Notifications::blacklistedDesktopEntries() const
