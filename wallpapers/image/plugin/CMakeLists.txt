@@ -37,12 +37,10 @@ set_property(TARGET plasma_wallpaper_imageplugin_static PROPERTY POSITION_INDEPE
 
 target_link_libraries(plasma_wallpaper_imageplugin_static
     Qt::Core
-    Qt::Positioning
     Qt::Quick
     Qt::Qml
     Plasma::Plasma
     KF6::GlobalAccel
-    KF6::Holidays
     KF6::I18n
     KF6::JobWidgets
     KF6::KIOCore
@@ -52,6 +50,7 @@ target_link_libraries(plasma_wallpaper_imageplugin_static
     KF6::Svg
     PW::LibTaskManager
     PW::KWorkspace
+    KNightTime
     )
 
 if(HAVE_KExiv2)

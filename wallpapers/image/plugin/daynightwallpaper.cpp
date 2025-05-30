@@ -6,7 +6,6 @@
 
 #include "daynightwallpaper.h"
 
-#include <KHolidays/SunEvents>
 #include <KPluginMetaData>
 
 #include <QUrlQuery>
@@ -36,141 +35,38 @@ DayNightPhase DayNightPhase::next() const
     return DayNightPhase(Kind(positiveMod(int(m_kind) + 1, 4)));
 }
 
-DayNightTransition::DayNightTransition()
+DayNightPhase DayNightPhase::from(KDarkLightTransition::Type type)
 {
-}
-
-DayNightTransition::DayNightTransition(DayNightPhase phase, const QDateTime &start, const QDateTime &end)
-    : m_phase(phase)
-    , m_start(start)
-    , m_end(end)
-{
-}
-
-DayNightTransition::Relation DayNightTransition::test(const QDateTime &dateTime) const
-{
-    // Timers can fire earlier than expected, handle it by relaxing the time checks.
-    const int tolerance = 60;
-    if (dateTime.secsTo(m_start) > tolerance) {
-        return Relation::Before;
-    } else if (dateTime.secsTo(m_end) > tolerance) {
-        return Relation::Inside;
-    } else {
-        return Relation::After;
-    }
-}
-
-qreal DayNightTransition::progress(const QDateTime &dateTime) const
-{
-    const qreal elapsed = m_start.secsTo(dateTime);
-    const qreal total = m_start.secsTo(m_end);
-    return std::clamp<qreal>(elapsed / total, 0.0, 1.0);
-}
-
-DayNightSchedule DayNightSchedule::create(const QDateTime &dateTime)
-{
-    const QDateTime todayMorning(dateTime.date(), QTime(6, 0));
-    const QDateTime todayEvening(dateTime.date(), QTime(18, 0));
-
-    const QTime morning = QTime(6, 0);
-    const QTime evening = QTime(18, 0);
-    const int transitionDuration = 30 * 60;
-
-    const int tolerance = 60;
-    const bool passedMorning = dateTime.time().secsTo(morning) <= tolerance;
-    const bool passedEvening = dateTime.time().secsTo(evening) <= tolerance;
-
-    const QDateTime nextEarlyMorning = QDateTime(dateTime.date().addDays(passedMorning), morning);
-    const QDateTime nextLateMorning = nextEarlyMorning.addSecs(transitionDuration);
-    const QDateTime nextEarlyEvening = QDateTime(dateTime.date().addDays(passedEvening), evening);
-    const QDateTime nextLateEvening = nextEarlyEvening.addSecs(transitionDuration);
-
-    if (nextEarlyEvening < nextEarlyMorning) {
-        return DayNightSchedule(DayNightTransition(DayNightPhase::Sunrise, nextEarlyMorning.addDays(-1), nextLateMorning.addDays(-1)),
-                                DayNightTransition(DayNightPhase::Sunset, nextEarlyEvening, nextLateEvening));
-    } else {
-        return DayNightSchedule(DayNightTransition(DayNightPhase::Sunset, nextEarlyEvening.addDays(-1), nextLateEvening.addDays(-1)),
-                                DayNightTransition(DayNightPhase::Sunrise, nextEarlyMorning, nextLateMorning));
-    }
-}
-
-DayNightSchedule DayNightSchedule::create(const QDateTime &dateTime, const QGeoCoordinate &coordinate)
-{
-    const KHolidays::SunEvents todayEvents(dateTime, coordinate.latitude(), coordinate.longitude());
-
-    const auto todaySunrise = DayNightTransition(DayNightPhase::Sunrise, todayEvents.civilDawn(), todayEvents.sunrise());
-    const auto todaySunset = DayNightTransition(DayNightPhase::Sunset, todayEvents.sunset(), todayEvents.civilDusk());
-    if (!todaySunrise.isValid() || !todaySunset.isValid()) {
-        return DayNightSchedule();
-    }
-
-    switch (todaySunrise.test(dateTime)) {
-    case DayNightTransition::Before: {
-        const KHolidays::SunEvents yesterdayEvents(dateTime.addDays(-1), coordinate.latitude(), coordinate.longitude());
-
-        const auto yesterdaySunset = DayNightTransition(DayNightPhase::Sunset, yesterdayEvents.sunset(), yesterdayEvents.civilDusk());
-        if (!yesterdaySunset.isValid()) {
-            return DayNightSchedule();
-        }
-
-        return DayNightSchedule(yesterdaySunset, todaySunrise);
-    }
-
-    case DayNightTransition::Inside:
-        return DayNightSchedule(todaySunrise, todaySunset);
-
-    case DayNightTransition::After:
-        break;
-    }
-
-    switch (todaySunset.test(dateTime)) {
-    case DayNightTransition::Before:
-        return DayNightSchedule(todaySunrise, todaySunset);
-
-    case DayNightTransition::Inside:
-    case DayNightTransition::After: {
-        const KHolidays::SunEvents tomorrowEvents(dateTime.addDays(1), coordinate.latitude(), coordinate.longitude());
-
-        const auto tomorrowSunrise = DayNightTransition(DayNightPhase::Sunrise, tomorrowEvents.civilDawn(), tomorrowEvents.sunrise());
-        if (!tomorrowSunrise.isValid()) {
-            return DayNightSchedule();
-        }
-
-        return DayNightSchedule(todaySunset, tomorrowSunrise);
-    }
+    switch (type) {
+    case KDarkLightTransition::Morning:
+        return Kind::Sunrise;
+    case KDarkLightTransition::Evening:
+        return Kind::Sunset;
     }
 
     Q_UNREACHABLE();
 }
 
-DayNightSchedule::DayNightSchedule()
+DayNightPhase DayNightPhase::from(const QDateTime &dateTime, const KDarkLightTransition &previousTransition, const KDarkLightTransition &nextTransition)
 {
-}
-
-DayNightSchedule::DayNightSchedule(const DayNightTransition &previous, const DayNightTransition &next)
-    : m_previous(previous)
-    , m_next(next)
-{
-}
-
-DayNightPhase DayNightSchedule::phase(const QDateTime &dateTime) const
-{
-    switch (m_previous.test(dateTime)) {
-    case DayNightTransition::Before:
-        return m_previous.phase().previous();
-    case DayNightTransition::Inside:
-        return m_previous.phase();
-    case DayNightTransition::After:
+    const DayNightPhase previousPhase = from(previousTransition.type());
+    switch (previousTransition.test(dateTime)) {
+    case KDarkLightTransition::Upcoming:
+        return previousPhase.previous();
+    case KDarkLightTransition::InProgress:
+        return previousPhase;
+    case KDarkLightTransition::Passed:
         break;
     }
 
-    switch (m_next.test(dateTime)) {
-    case DayNightTransition::Before:
-        return m_next.phase().previous();
-    case DayNightTransition::Inside:
-        return m_next.phase();
-    case DayNightTransition::After:
-        return m_next.phase().next();
+    const DayNightPhase nextPhase = from(nextTransition.type());
+    switch (nextTransition.test(dateTime)) {
+    case KDarkLightTransition::Upcoming:
+        return nextPhase.previous();
+    case KDarkLightTransition::InProgress:
+        return nextPhase;
+    case KDarkLightTransition::Passed:
+        return nextPhase.next();
     }
 
     Q_UNREACHABLE();
@@ -211,6 +107,12 @@ void DayNightWallpaper::classBegin()
 
 void DayNightWallpaper::componentComplete()
 {
+    m_darkLightScheduleProvider = new KDarkLightScheduleProvider(m_initialState, this);
+    connect(m_darkLightScheduleProvider, &KDarkLightScheduleProvider::scheduleChanged, this, [this]() {
+        setState(m_darkLightScheduleProvider->state());
+        schedule();
+    });
+
     load();
     m_complete = true;
 }
@@ -226,37 +128,27 @@ void DayNightWallpaper::setSource(const QUrl &source)
     }
 }
 
-void DayNightWallpaper::setLocation(const QGeoCoordinate &location)
-{
-    const int minDistance = 50 * 1000;
-    if (m_location.isValid() && m_location.distanceTo(location) < minDistance) {
-        return;
-    }
-
-    m_location = location;
-    if (m_complete) {
-        schedule();
-    }
-
-    Q_EMIT locationChanged();
-}
-
-void DayNightWallpaper::resetLocation()
-{
-    if (m_location.isValid()) {
-        m_location = QGeoCoordinate();
-        if (m_complete) {
-            schedule();
-        }
-        Q_EMIT locationChanged();
-    }
-}
-
 void DayNightWallpaper::setSnapshot(const DayNightSnapshot &snapshot)
 {
     if (m_snapshot != snapshot) {
         m_snapshot = snapshot;
         Q_EMIT snapshotChanged();
+    }
+}
+
+void DayNightWallpaper::setInitialState(const QString &state)
+{
+    if (m_initialState != state) {
+        m_initialState = state;
+        Q_EMIT initialStateChanged();
+    }
+}
+
+void DayNightWallpaper::setState(const QString &state)
+{
+    if (m_state != state) {
+        m_state = state;
+        Q_EMIT stateChanged();
     }
 }
 
@@ -285,16 +177,12 @@ void DayNightWallpaper::load()
 void DayNightWallpaper::schedule()
 {
     const QDateTime now = QDateTime::currentDateTime();
+    const KDarkLightSchedule schedule = m_darkLightScheduleProvider->schedule();
 
-    m_schedule = DayNightSchedule();
-    if (m_location.isValid()) {
-        m_schedule = DayNightSchedule::create(now, m_location);
-    }
-    if (!m_schedule.isValid()) {
-        m_schedule = DayNightSchedule::create(now);
-    }
+    m_previousTransition = *schedule.previousTransition(now);
+    m_nextTransition = *schedule.nextTransition(now);
 
-    m_rescheduleTimer->start(now.msecsTo(m_schedule.next().start()));
+    m_rescheduleTimer->start(now.msecsTo(m_nextTransition.startDateTime()));
     update();
 }
 
@@ -302,7 +190,7 @@ void DayNightWallpaper::update()
 {
     const QDateTime now = QDateTime::currentDateTime();
 
-    DayNightPhase phase = m_schedule.phase(now);
+    DayNightPhase phase = DayNightPhase::from(now, m_previousTransition, m_nextTransition);
     if (!m_crossfade) {
         if (phase == DayNightPhase::Sunrise) {
             phase = DayNightPhase::Day;
@@ -321,7 +209,7 @@ void DayNightWallpaper::update()
     case DayNightPhase::Sunrise:
         bottom = m_night;
         top = m_day;
-        blendFactor = m_schedule.previous().progress(now);
+        blendFactor = m_previousTransition.progress(now);
         break;
     case DayNightPhase::Day:
         bottom = m_day;
@@ -329,7 +217,7 @@ void DayNightWallpaper::update()
     case DayNightPhase::Sunset:
         bottom = m_day;
         top = m_night;
-        blendFactor = m_schedule.previous().progress(now);
+        blendFactor = m_previousTransition.progress(now);
         break;
     }
 
@@ -356,10 +244,10 @@ void DayNightWallpaper::update()
             }
         } else if (m_snapshot.bottom() == bottom && m_snapshot.top().isEmpty()) {
             // Transitioning from either day to sunset or night to sunrise.
-            disjoint = std::abs(m_schedule.previous().start().msecsTo(now)) > disjointThreshold;
+            disjoint = std::abs(m_previousTransition.startDateTime().msecsTo(now)) > disjointThreshold;
         } else if (m_snapshot.bottom() == top && m_snapshot.top().isEmpty()) {
             // Transitioning from either sunset to day or sunrise to night.
-            disjoint = std::abs(m_schedule.previous().end().msecsTo(now)) > disjointThreshold;
+            disjoint = std::abs(m_previousTransition.endDateTime().msecsTo(now)) > disjointThreshold;
         } else {
             // Transitioning from either day to night or night to day. Or it's a new wallpaper.
             disjoint = true;

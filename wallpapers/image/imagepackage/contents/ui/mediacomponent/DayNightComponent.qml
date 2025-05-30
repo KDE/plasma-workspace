@@ -4,7 +4,6 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtPositioning
 import QtQuick
 import QtQuick.Controls
 import org.kde.plasma.wallpapers.image
@@ -14,11 +13,6 @@ BaseMediaComponent {
     blurSource: blurLoader.item
 
     readonly property alias status: dayNightView.status
-
-    PositionSource {
-        id: locationSource
-        active: configuration.Geolocation
-    }
 
     DayNightView {
         id: dayNightView
@@ -30,8 +24,15 @@ BaseMediaComponent {
 
     DayNightWallpaper {
         id: dayNightWallpaper
-        location: locationSource.active ? locationSource.position.coordinate : undefined
+        initialState: configuration.DarkLightScheduleState
         source: dayNightComponent.source
+
+        onStateChanged: () => {
+            if (configuration.DarkLightScheduleState != state) {
+                configuration.DarkLightScheduleState = state;
+                configuration.writeConfig();
+            }
+        }
     }
 
     Loader {

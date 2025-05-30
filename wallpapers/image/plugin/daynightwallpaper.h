@@ -6,10 +6,10 @@
 
 #pragma once
 
+#include <KDarkLightScheduleProvider>
 #include <KSystemClockSkewNotifier>
 
 #include <QDateTime>
-#include <QGeoCoordinate>
 #include <QObject>
 #include <QQmlParserStatus>
 #include <QTimer>
@@ -36,60 +36,11 @@ public:
     DayNightPhase previous() const;
     DayNightPhase next() const;
 
+    static DayNightPhase from(KDarkLightTransition::Type type);
+    static DayNightPhase from(const QDateTime &dateTime, const KDarkLightTransition &previousTransition, const KDarkLightTransition &nextTransition);
+
 private:
     Kind m_kind;
-};
-
-/**
- * The DayNightTransition type specifies a transition from one phase to another.
- */
-class DayNightTransition
-{
-public:
-    enum Relation {
-        Before,
-        Inside,
-        After,
-    };
-
-    DayNightTransition();
-    DayNightTransition(DayNightPhase phase, const QDateTime &start, const QDateTime &end);
-
-    bool isValid() const;
-    Relation test(const QDateTime &dateTime) const;
-    qreal progress(const QDateTime &dateTime) const;
-
-    DayNightPhase phase() const;
-    QDateTime start() const;
-    QDateTime end() const;
-
-private:
-    DayNightPhase m_phase;
-    QDateTime m_start;
-    QDateTime m_end;
-};
-
-/**
- * The DayNightSchedule type provides scheduling information about the previous and the next transition.
- */
-class DayNightSchedule
-{
-public:
-    static DayNightSchedule create(const QDateTime &dateTime);
-    static DayNightSchedule create(const QDateTime &dateTime, const QGeoCoordinate &coordinate);
-
-    DayNightSchedule();
-    DayNightSchedule(const DayNightTransition &previous, const DayNightTransition &next);
-
-    bool isValid() const;
-    DayNightPhase phase(const QDateTime &dateTime) const;
-
-    DayNightTransition previous() const;
-    DayNightTransition next() const;
-
-private:
-    DayNightTransition m_previous;
-    DayNightTransition m_next;
 };
 
 /**
@@ -144,8 +95,9 @@ class DayNightWallpaper : public QObject, public QQmlParserStatus
     Q_INTERFACES(QQmlParserStatus)
 
     Q_PROPERTY(QUrl source READ source WRITE setSource NOTIFY sourceChanged)
-    Q_PROPERTY(QGeoCoordinate location READ location WRITE setLocation RESET resetLocation NOTIFY locationChanged)
     Q_PROPERTY(DayNightSnapshot snapshot READ snapshot NOTIFY snapshotChanged)
+    Q_PROPERTY(QString initialState READ initialState WRITE setInitialState NOTIFY initialStateChanged)
+    Q_PROPERTY(QString state READ state NOTIFY stateChanged)
 
 public:
     explicit DayNightWallpaper(QObject *parent = nullptr);
@@ -156,33 +108,40 @@ public:
     QUrl source() const;
     void setSource(const QUrl &source);
 
-    QGeoCoordinate location() const;
-    void setLocation(const QGeoCoordinate &location);
-    void resetLocation();
-
     DayNightSnapshot snapshot() const;
     void setSnapshot(const DayNightSnapshot &snapshot);
 
+    QString initialState() const;
+    void setInitialState(const QString &state);
+
+    QString state() const;
+    void setState(const QString &state);
+
 Q_SIGNALS:
     void sourceChanged();
-    void locationChanged();
     void snapshotChanged();
+    void initialStateChanged();
+    void stateChanged();
 
 private:
     void load();
     void schedule();
     void update();
 
+    KDarkLightScheduleProvider *m_darkLightScheduleProvider = nullptr;
     KSystemClockSkewNotifier *m_systemClockMonitor;
 
     QUrl m_source;
-    QGeoCoordinate m_location;
     QUrl m_day;
     QUrl m_night;
     bool m_crossfade = true;
 
+    QString m_initialState;
+    QString m_state;
+
     DayNightSnapshot m_snapshot;
-    DayNightSchedule m_schedule;
+    KDarkLightTransition m_previousTransition;
+    KDarkLightTransition m_nextTransition;
     QTimer *m_blendTimer;
     QTimer *m_rescheduleTimer;
 
@@ -192,41 +151,6 @@ private:
 inline DayNightPhase::operator DayNightPhase::Kind() const
 {
     return m_kind;
-}
-
-inline bool DayNightTransition::isValid() const
-{
-    return m_start.isValid() && m_end.isValid();
-}
-
-inline DayNightPhase DayNightTransition::phase() const
-{
-    return m_phase;
-}
-
-inline QDateTime DayNightTransition::start() const
-{
-    return m_start;
-}
-
-inline QDateTime DayNightTransition::end() const
-{
-    return m_end;
-}
-
-inline bool DayNightSchedule::isValid() const
-{
-    return m_previous.isValid() && m_next.isValid();
-}
-
-inline DayNightTransition DayNightSchedule::previous() const
-{
-    return m_previous;
-}
-
-inline DayNightTransition DayNightSchedule::next() const
-{
-    return m_next;
 }
 
 inline bool DayNightSnapshot::isValid() const
@@ -264,9 +188,14 @@ inline QUrl DayNightWallpaper::source() const
     return m_source;
 }
 
-inline QGeoCoordinate DayNightWallpaper::location() const
+inline QString DayNightWallpaper::initialState() const
 {
-    return m_location;
+    return m_initialState;
+}
+
+inline QString DayNightWallpaper::state() const
+{
+    return m_state;
 }
 
 inline DayNightSnapshot DayNightWallpaper::snapshot() const
