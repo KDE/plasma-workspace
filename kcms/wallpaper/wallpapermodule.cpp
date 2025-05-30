@@ -230,6 +230,7 @@ void WallpaperModule::setWallpaperPluginConfiguration(const QString &wallpaperpl
     if (loadDefaults) {
         m_configLoader->setDefaults();
     }
+    m_configLoader->removeItem(QStringLiteral("PreviewImage"));
     m_wallpaperConfiguration.reset(new KConfigPropertyMap(m_configLoader, this));
 
     // set the default wallpaper value
