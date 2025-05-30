@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+    SPDX-FileCopyrightText: 2025 Vlad Zahorodnii <vlad.zahorodnii@kde.org>
+
+    SPDX-License-Identifier: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
+-->
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+                          http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+    <kcfgfile name="knighttimerc"/>
+
+    <group name="General">
+        <entry name="Source" type="Enum">
+            <choices name="Source">
+                <choice name="AutomaticLocation"/>
+                <choice name="ManualLocation"/>
+                <choice name="ManualTimes"/>
+            </choices>
+            <default>AutomaticLocation</default>
+        </entry>
+    </group>
+
+    <group name="ManualLocation">
+        <entry name="Latitude" type="Double">
+            <default>0</default>
+        </entry>
+
+        <entry name="Longitude" type="Double">
+            <default>0</default>
+        </entry>
+    </group>
+
+    <group name="ManualTimes">
+        <entry name="SunsetStart" type="String">
+            <default>18:00</default>
+        </entry>
+
+        <entry name="SunriseStart" type="String">
+            <default>06:00</default>
+        </entry>
+
+        <entry name="TransitionDuration" type="UInt">
+            <default>1800</default>
+        </entry>
+    </group>
+</kcfg>
