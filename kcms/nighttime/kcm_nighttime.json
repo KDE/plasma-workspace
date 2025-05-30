@@ -1,0 +1,13 @@
+{
+  "KPlugin": {
+    "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=systemsettings&component=kcm_nighttime",
+    "Description": "Configure the dark-light cycle times",
+    "FormFactors": ["tablet", "handset", "desktop"],
+    "Icon": "lighttable",
+    "Name": "Dark-Light Cycle"
+  },
+  "X-DocPath": "https://userbase.kde.org/TODOX",
+  "X-KDE-Keywords": "dark,light,night,day",
+  "X-KDE-System-Settings-Parent-Category": "regionalsettings",
+  "X-KDE-Weight": 70
+}
