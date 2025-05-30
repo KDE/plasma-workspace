@@ -72,6 +72,20 @@ void NotificationFilterProxyModel::setShowAddedDuringInhibition(bool show)
     }
 }
 
+bool NotificationFilterProxyModel::ignoreBlacklistDuringInhibition() const
+{
+    return m_ignoreBlacklistDuringInhibition;
+}
+
+void NotificationFilterProxyModel::setIgnoreBlacklistDuringInhibition(bool ignore)
+{
+    if (m_ignoreBlacklistDuringInhibition != ignore) {
+        m_ignoreBlacklistDuringInhibition = ignore;
+        invalidateFilter();
+        Q_EMIT ignoreBlacklistDuringInhibitionChanged();
+    }
+}
+
 QStringList NotificationFilterProxyModel::blacklistedDesktopEntries() const
 {
     return m_blacklistedDesktopEntries;
@@ -154,8 +168,9 @@ bool NotificationFilterProxyModel::filterAcceptsRow(int source_row, const QModel
         }
     }
 
+    bool ignoreBlacklist = m_ignoreBlacklistDuringInhibition && sourceIdx.data(Notifications::WasAddedDuringInhibitionRole).toBool();
     // Blacklist takes precedence over whitelist, i.e. when in doubt don't show
-    if (!m_blacklistedDesktopEntries.isEmpty()) {
+    if (!m_blacklistedDesktopEntries.isEmpty() && !ignoreBlacklist) {
         if (!desktopEntry.isEmpty() && m_blacklistedDesktopEntries.contains(desktopEntry)) {
             return false;
         }
