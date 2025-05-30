@@ -195,6 +195,7 @@ void Notifications::Private::initProxyModels()
         connect(filterModel, &NotificationFilterProxyModel::showExpiredChanged, q, &Notifications::showExpiredChanged);
         connect(filterModel, &NotificationFilterProxyModel::showDismissedChanged, q, &Notifications::showDismissedChanged);
         connect(filterModel, &NotificationFilterProxyModel::showAddedDuringInhibitionChanged, q, &Notifications::showAddedDuringInhibitionChanged);
+        connect(filterModel, &NotificationFilterProxyModel::ignoreBlacklistDuringInhibitionChanged, q, &Notifications::ignoreBlacklistDuringInhibitionChanged);
         connect(filterModel, &NotificationFilterProxyModel::blacklistedDesktopEntriesChanged, q, &Notifications::blacklistedDesktopEntriesChanged);
         connect(filterModel, &NotificationFilterProxyModel::blacklistedNotifyRcNamesChanged, q, &Notifications::blacklistedNotifyRcNamesChanged);
 
@@ -525,6 +526,16 @@ bool Notifications::showAddedDuringInhibition() const
 void Notifications::setShowAddedDuringInhibition(bool show)
 {
     d->filterModel->setShowAddedDuringInhibition(show);
+}
+
+bool Notifications::ignoreBlacklistDuringInhibition() const
+{
+    return d->filterModel->ignoreBlacklistDuringInhibition();
+}
+
+void Notifications::setIgnoreBlacklistDuringInhibition(bool show)
+{
+    d->filterModel->setIgnoreBlacklistDuringInhibition(show);
 }
 
 QStringList Notifications::blacklistedDesktopEntries() const
@@ -877,20 +888,6 @@ void Notifications::showInhibitionSummary(Urgency urgency, const QStringList &bl
         }
         if (idx.data(Notifications::UrgencyRole).toInt() < static_cast<int>(urgency) || idx.data(Notifications::ReadRole).toBool()) {
             continue;
-        }
-        if (!blacklistedDesktopEntries.isEmpty()) {
-            const QString desktopEntry = idx.data(Notifications::DesktopEntryRole).toString();
-            if (!desktopEntry.isEmpty() && blacklistedDesktopEntries.contains(desktopEntry)) {
-                continue;
-            } else if (desktopEntry.isEmpty() && blacklistedDesktopEntries.contains(u"@other")) {
-                continue;
-            }
-        }
-        if (!blacklistedNotifyRcNames.isEmpty()) {
-            const QString notifyRcName = idx.data(Notifications::NotifyRcNameRole).toString();
-            if (!notifyRcName.isEmpty() && blacklistedNotifyRcNames.contains(notifyRcName)) {
-                continue;
-            }
         }
         // Remove WasAddedDuringInhibitionRole so we don't notify about this multiple times, e.g. when user leaves DND again.
         d->notificationsAndJobsModel->setData(idx, false, Notifications::WasAddedDuringInhibitionRole);

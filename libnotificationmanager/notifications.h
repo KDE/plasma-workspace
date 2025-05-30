@@ -71,6 +71,16 @@ class NOTIFICATIONMANAGER_EXPORT Notifications : public QSortFilterProxyModel, p
     Q_PROPERTY(bool showAddedDuringInhibition READ showAddedDuringInhibition WRITE setShowAddedDuringInhibition NOTIFY showAddedDuringInhibitionChanged)
 
     /**
+     * Whether to show blacklisted notifications added during inhibition.
+     *
+     * If set to @c true, notifications are shown even if blacklisted when they are added during inhibition.
+     *
+     * Default is @c false.
+     */
+    Q_PROPERTY(bool ignoreBlacklistDuringInhibition READ ignoreBlacklistDuringInhibition WRITE setIgnoreBlacklistDuringInhibition NOTIFY
+                   ignoreBlacklistDuringInhibitionChanged)
+
+    /**
      * A list of desktop entries for which no notifications should be shown.
      *
      * If the same desktop entry is present in both blacklist and whitelist,
@@ -396,6 +406,9 @@ public:
     bool showAddedDuringInhibition() const;
     void setShowAddedDuringInhibition(bool show);
 
+    bool ignoreBlacklistDuringInhibition() const;
+    void setIgnoreBlacklistDuringInhibition(bool show);
+
     QStringList blacklistedDesktopEntries() const;
     void setBlacklistedDesktopEntries(const QStringList &blacklist);
 
@@ -575,6 +588,7 @@ Q_SIGNALS:
     void showExpiredChanged();
     void showDismissedChanged();
     void showAddedDuringInhibitionChanged();
+    void ignoreBlacklistDuringInhibitionChanged();
     void blacklistedDesktopEntriesChanged();
     void blacklistedNotifyRcNamesChanged();
     void whitelistedDesktopEntriesChanged();
