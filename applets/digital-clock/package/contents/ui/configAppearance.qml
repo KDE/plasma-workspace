@@ -45,6 +45,13 @@ KCMUtils.SimpleKCM {
     property alias cfg_use24hFormat: use24hFormat.currentIndex
     property alias cfg_dateDisplayFormat: dateDisplayFormat.currentIndex
 
+    property real comboBoxWidth: Math.max(dateDisplayFormat.implicitWidth,
+                                          showSecondsComboBox.implicitWidth,
+                                          displayTimeZoneFormat.implicitWidth,
+                                          use24hFormat.implicitWidth,
+                                          dateFormat.implicitWidth)
+
+
     Kirigami.FormLayout {
 
         RowLayout {
@@ -60,6 +67,7 @@ KCMUtils.SimpleKCM {
                 id: dateDisplayFormat
                 enabled: showDate.checked
                 visible: Plasmoid.formFactor !== PlasmaCore.Types.Vertical
+                Layout.preferredWidth: appearancePage.comboBoxWidth
                 model: [
                     i18n("Adaptive location"),
                     i18n("Always beside time"),
@@ -69,8 +77,13 @@ KCMUtils.SimpleKCM {
             }
         }
 
+        Item {
+            Kirigami.FormData.isSection: true
+        }
+
         QQC2.ComboBox {
             id: showSecondsComboBox
+            Layout.preferredWidth: appearancePage.comboBoxWidth
             Kirigami.FormData.label: i18n("Show seconds:")
             model: [
                 i18nc("@option:check", "Never"),
@@ -113,7 +126,7 @@ KCMUtils.SimpleKCM {
             QQC2.ComboBox {
                 id: displayTimeZoneFormat
 
-
+                Layout.preferredWidth: appearancePage.comboBoxWidth
                 model: [
                     i18n("Code"),
                     i18n("City"),
@@ -122,6 +135,8 @@ KCMUtils.SimpleKCM {
                 onActivated: cfg_displayTimezoneFormat = currentIndex
             }
             QQC2.Button {
+                id: switchTimeZoneButton
+                Layout.preferredWidth: Math.max(changeRegionalSettingsButton.implicitWidth, switchTimeZoneButton.implicitWidth, dateExampleLabel.implicitWidth)
                 visible: KConfig.KAuthorized.authorizeControlModule("kcm_clock")
                 text: i18nc("@action:button opens kcm", "Switch Time Zone…")
                 icon.name: "preferences-system-time"
@@ -140,6 +155,7 @@ KCMUtils.SimpleKCM {
 
             QQC2.ComboBox {
                 id: use24hFormat
+                Layout.preferredWidth: appearancePage.comboBoxWidth
                 model: [
                     i18nc("@item:inlistbox time display option", "12-Hour"),
                     i18nc("@item:inlistbox time display option", "Use region defaults"),
@@ -149,7 +165,9 @@ KCMUtils.SimpleKCM {
             }
 
             QQC2.Button {
+                id: changeRegionalSettingsButton
                 visible: KConfig.KAuthorized.authorizeControlModule("kcm_regionandlang")
+                Layout.preferredWidth: Math.max(changeRegionalSettingsButton.implicitWidth, switchTimeZoneButton.implicitWidth, dateExampleLabel.implicitWidth)
                 text: i18nc("@action:button opens kcm", "Change Regional Settings…")
                 icon.name: "preferences-desktop-locale"
                 onClicked: KCMUtils.KCMLauncher.openSystemSettings("kcm_regionandlang")
@@ -167,6 +185,7 @@ KCMUtils.SimpleKCM {
 
             QQC2.ComboBox {
                 id: dateFormat
+                Layout.preferredWidth: appearancePage.comboBoxWidth
                 textRole: "label"
                 model: [
                     {
@@ -207,7 +226,9 @@ KCMUtils.SimpleKCM {
             }
 
             QQC2.Label {
-                Layout.fillWidth: true
+                id: dateExampleLabel
+                Layout.preferredWidth: Math.max(changeRegionalSettingsButton.implicitWidth, switchTimeZoneButton.implicitWidth, dateExampleLabel.implicitWidth)
+                horizontalAlignment: Text.AlignHCenter
                 textFormat: Text.PlainText
                 text: dateFormat.model[dateFormat.currentIndex].formatter(new Date());
             }
@@ -244,18 +265,25 @@ KCMUtils.SimpleKCM {
             buttons: [autoFontAndSizeRadioButton, manualFontAndSizeRadioButton]
         }
 
-        QQC2.RadioButton {
-            id: autoFontAndSizeRadioButton
+        ColumnLayout {
+            spacing: Kirigami.Units.smallSpacing
             Kirigami.FormData.label: i18nc("@label:group", "Text display:")
-            text: i18nc("@option:radio", "Automatic")
-        }
+            Kirigami.FormData.buddyFor: autoFontAndSizeRadioButton
 
-        QQC2.Label {
-            text: i18nc("@label", "Text will follow the system font and expand to fill the available space.")
-            textFormat: Text.PlainText
-            Layout.fillWidth: true
-            wrapMode: Text.Wrap
-            font: Kirigami.Theme.smallFont
+            QQC2.RadioButton {
+                id: autoFontAndSizeRadioButton
+                text: i18nc("@option:radio", "Automatic")
+            }
+
+            QQC2.Label {
+                text: i18nc("@label", "Text will follow the system font and expand to fill the available space.")
+                Layout.leftMargin: Application.layoutDirection === Qt.LeftToRight ? autoFontAndSizeRadioButton.indicator.width + autoFontAndSizeRadioButton.spacing : Layout.margins
+                Layout.rightMargin: Application.layoutDirection !== Qt.LeftToRight ? autoFontAndSizeRadioButton.indicator.width + autoFontAndSizeRadioButton.spacing : Layout.margins
+                textFormat: Text.PlainText
+                Layout.fillWidth: true
+                wrapMode: Text.Wrap
+                font: Kirigami.Theme.smallFont
+            }
         }
 
         RowLayout {
@@ -284,17 +312,25 @@ KCMUtils.SimpleKCM {
 
         }
 
-        QQC2.Label {
-            visible: manualFontAndSizeRadioButton.checked
-            text: i18nc("@info %1 is the font size, %2 is the font family", "%1pt %2", cfg_fontSize, fontDialog.fontChosen.family)
-            textFormat: Text.PlainText
-            font: fontDialog.fontChosen
-        }
-        QQC2.Label {
-            visible: manualFontAndSizeRadioButton.checked
-            text: i18nc("@info", "Note: size may be reduced if the panel is not thick enough.")
-            textFormat: Text.PlainText
-            font: Kirigami.Theme.smallFont
+        ColumnLayout {
+            spacing: Kirigami.Units.smallSpacing
+
+            QQC2.Label {
+                visible: manualFontAndSizeRadioButton.checked
+                Layout.leftMargin: Application.layoutDirection === Qt.LeftToRight ? manualFontAndSizeRadioButton.indicator.width + manualFontAndSizeRadioButton.spacing : Layout.margins
+                Layout.rightMargin: Application.layoutDirection !== Qt.LeftToRight ? manualFontAndSizeRadioButton.indicator.width + manualFontAndSizeRadioButton.spacing : Layout.margins
+                text: i18nc("@info %1 is the font size, %2 is the font family", "%1pt %2", cfg_fontSize, fontDialog.fontChosen.family)
+                textFormat: Text.PlainText
+                font: fontDialog.fontChosen
+            }
+            QQC2.Label {
+                visible: manualFontAndSizeRadioButton.checked
+                Layout.leftMargin: Application.layoutDirection === Qt.LeftToRight ? manualFontAndSizeRadioButton.indicator.width + manualFontAndSizeRadioButton.spacing : Layout.margins
+                Layout.rightMargin: Application.layoutDirection !== Qt.LeftToRight ? manualFontAndSizeRadioButton.indicator.width + manualFontAndSizeRadioButton.spacing : Layout.margins
+                text: i18nc("@info", "Note: size may be reduced if the panel is not thick enough.")
+                textFormat: Text.PlainText
+                font: Kirigami.Theme.smallFont
+            }
         }
     }
 
