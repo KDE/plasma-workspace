@@ -94,6 +94,10 @@ QQC2.StackView {
             "blur": view.blur,
             "parent": view,
         });
+        if (!pendingImage) {
+            console.warn(baseImage.errorString());
+            return;
+        }
 
         pendingImage.statusChanged.connect(replaceWhenLoaded);
         replaceWhenLoaded();
