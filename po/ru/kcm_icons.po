@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2025-05-31 00:44+0000\n"
 "PO-Revision-Date: 2023-12-17 22:16+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -39,22 +39,22 @@ msgstr ""
 msgid "Name of the current icon theme"
 msgstr "Название текущего набора значков"
 
-#: main.cpp:150
+#: main.cpp:149
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Не удалось создать временный файл."
 
-#: main.cpp:161
+#: main.cpp:160
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Не удалось загрузить с сервера архив с набором значков: %1"
 
-#: main.cpp:175
+#: main.cpp:174
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Выбранный файл не является архивом с набором значков."
 
-#: main.cpp:180
+#: main.cpp:179
 #, kde-format
 msgid ""
 "A problem occurred during the installation process; however, most of the "
@@ -63,17 +63,17 @@ msgstr ""
 "Во время установки произошла ошибка; однако, некоторые файлы из архива были "
 "установлены."
 
-#: main.cpp:184
+#: main.cpp:183
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Набор значков успешно установлен."
 
-#: main.cpp:228
+#: main.cpp:227
 #, kde-format
 msgid "Installing icon themes…"
 msgstr "Установка наборов значков..."
 
-#: main.cpp:238
+#: main.cpp:237
 #, kde-format
 msgid "Installing %1 theme…"
 msgstr "Установка набора значков %1..."

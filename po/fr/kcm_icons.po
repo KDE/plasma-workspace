@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2025-05-31 00:44+0000\n"
 "PO-Revision-Date: 2023-08-19 22:53+0200\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -33,22 +33,22 @@ msgstr ""
 msgid "Name of the current icon theme"
 msgstr "Nom du thème courant d'icônes"
 
-#: main.cpp:150
+#: main.cpp:149
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Impossible de créer un fichier temporaire."
 
-#: main.cpp:161
+#: main.cpp:160
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Impossible de télécharger l'archive du thème d'icônes : « %1 »."
 
-#: main.cpp:175
+#: main.cpp:174
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Ce fichier n'est pas une archive de thème d'icônes valable."
 
-#: main.cpp:180
+#: main.cpp:179
 #, kde-format
 msgid ""
 "A problem occurred during the installation process; however, most of the "
@@ -57,17 +57,17 @@ msgstr ""
 "Un problème est survenu pendant le processus d'installation. Cependant, la "
 "plupart des thèmes dans l'archive ont été installés."
 
-#: main.cpp:184
+#: main.cpp:183
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Thème installé avec succès."
 
-#: main.cpp:228
+#: main.cpp:227
 #, kde-format
 msgid "Installing icon themes…"
 msgstr "Installation de thèmes d'icônes..."
 
-#: main.cpp:238
+#: main.cpp:237
 #, kde-format
 msgid "Installing %1 theme…"
 msgstr "Installation du thème %1 en cours..."

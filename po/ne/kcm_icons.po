@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2025-05-31 00:44+0000\n"
 "PO-Revision-Date: 2007-11-04 18:53+0545\n"
 "Last-Translator: Shyam Krishna Bal <shyamkrishna_bal@yahoo.com>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
@@ -25,23 +25,23 @@ msgstr ""
 msgid "Name of the current icon theme"
 msgstr ""
 
-#: main.cpp:150
+#: main.cpp:149
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr ""
 
-#: main.cpp:161
+#: main.cpp:160
 #, fuzzy, kde-format
 #| msgid "Unable to find the icon theme archive %1."
 msgid "Unable to download the icon theme archive: %1"
 msgstr "प्रतिमा विषयवस्तु सङ्ग्रह %1 फेला पार्न अक्षम ।"
 
-#: main.cpp:175
+#: main.cpp:174
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "फाइल एउटा वैध प्रतिमा विषयवस्तु सङ्ग्रह होइन ।"
 
-#: main.cpp:180
+#: main.cpp:179
 #, kde-format
 msgid ""
 "A problem occurred during the installation process; however, most of the "
@@ -49,18 +49,18 @@ msgid ""
 msgstr ""
 "सङ्ग्रहमा धेरैजसो विषयवस्तु स्थापन भएता पनि; स्थापना प्रक्रियामा एउटा समस्या देखापर्यो"
 
-#: main.cpp:184
+#: main.cpp:183
 #, kde-format
 msgid "Theme installed successfully."
 msgstr ""
 
-#: main.cpp:228
+#: main.cpp:227
 #, fuzzy, kde-format
 #| msgid "Installing icon themes"
 msgid "Installing icon themes…"
 msgstr "प्रतिमा विषयवस्तु स्थापना गर्दैछ"
 
-#: main.cpp:238
+#: main.cpp:237
 #, fuzzy, kde-format
 #| msgid "Installing icon themes"
 msgid "Installing %1 theme…"

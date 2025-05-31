@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-14 00:45+0000\n"
+"POT-Creation-Date: 2025-05-31 00:44+0000\n"
 "PO-Revision-Date: 2025-04-26 10:00+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -74,127 +74,127 @@ msgstr "החלפה…"
 msgid "Switch to another time zone"
 msgstr "מעבר לאזור זמן אחר"
 
-#: package/contents/ui/configAppearance.qml:51
+#: package/contents/ui/configAppearance.qml:58
 #, kde-format
 msgid "Information:"
 msgstr "מידע:"
 
-#: package/contents/ui/configAppearance.qml:56
+#: package/contents/ui/configAppearance.qml:63
 #, kde-format
 msgid "Show date"
 msgstr "הצגת תאריך"
 
-#: package/contents/ui/configAppearance.qml:64
+#: package/contents/ui/configAppearance.qml:72
 #, kde-format
 msgid "Adaptive location"
 msgstr "מיקום מסתגל"
 
-#: package/contents/ui/configAppearance.qml:65
+#: package/contents/ui/configAppearance.qml:73
 #, kde-format
 msgid "Always beside time"
 msgstr "תמיד לצד השעה"
 
-#: package/contents/ui/configAppearance.qml:66
+#: package/contents/ui/configAppearance.qml:74
 #, kde-format
 msgid "Always below time"
 msgstr "תמיד מתחת לשעה"
 
-#: package/contents/ui/configAppearance.qml:74
+#: package/contents/ui/configAppearance.qml:87
 #, kde-format
 msgid "Show seconds:"
 msgstr "הצגת שניות:"
 
-#: package/contents/ui/configAppearance.qml:76
+#: package/contents/ui/configAppearance.qml:89
 #, kde-format
 msgctxt "@option:check"
 msgid "Never"
 msgstr "אף פעם לא"
 
-#: package/contents/ui/configAppearance.qml:77
+#: package/contents/ui/configAppearance.qml:90
 #, kde-format
 msgctxt "@option:check"
 msgid "Only in the tooltip"
 msgstr "רק את חלונית העצה"
 
-#: package/contents/ui/configAppearance.qml:78
-#: package/contents/ui/configAppearance.qml:99
+#: package/contents/ui/configAppearance.qml:91
+#: package/contents/ui/configAppearance.qml:112
 #, kde-format
 msgid "Always"
 msgstr "תמיד"
 
-#: package/contents/ui/configAppearance.qml:88
+#: package/contents/ui/configAppearance.qml:101
 #, kde-format
 msgid "Show time zone:"
 msgstr "הצגת אזור זמן:"
 
-#: package/contents/ui/configAppearance.qml:94
+#: package/contents/ui/configAppearance.qml:107
 #, kde-format
 msgid "Only when different from local time zone"
 msgstr "רק כאשר שונה מאזור הזמן המקומי"
 
-#: package/contents/ui/configAppearance.qml:108
+#: package/contents/ui/configAppearance.qml:121
 #, kde-format
 msgid "Display time zone as:"
 msgstr "הצגת אזור הזמן בתור:"
 
-#: package/contents/ui/configAppearance.qml:118
+#: package/contents/ui/configAppearance.qml:131
 #, kde-format
 msgid "Code"
 msgstr "קוד"
 
-#: package/contents/ui/configAppearance.qml:119
+#: package/contents/ui/configAppearance.qml:132
 #, kde-format
 msgid "City"
 msgstr "עיר"
 
-#: package/contents/ui/configAppearance.qml:120
+#: package/contents/ui/configAppearance.qml:133
 #, kde-format
 msgid "Offset from UTC time"
 msgstr "הפרש משעון UTC"
 
-#: package/contents/ui/configAppearance.qml:126
+#: package/contents/ui/configAppearance.qml:141
 #, kde-format
 msgctxt "@action:button opens kcm"
 msgid "Switch Time Zone…"
 msgstr "החלפת אזור זמן…"
 
-#: package/contents/ui/configAppearance.qml:138
+#: package/contents/ui/configAppearance.qml:153
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Time display:"
 msgstr "תצוגת שעה:"
 
-#: package/contents/ui/configAppearance.qml:144
+#: package/contents/ui/configAppearance.qml:160
 #, kde-format
 msgctxt "@item:inlistbox time display option"
 msgid "12-Hour"
 msgstr "12 שעות"
 
-#: package/contents/ui/configAppearance.qml:145
+#: package/contents/ui/configAppearance.qml:161
 #, kde-format
 msgctxt "@item:inlistbox time display option"
 msgid "Use region defaults"
 msgstr "להשתמש בברירת המחדל המקומית"
 
-#: package/contents/ui/configAppearance.qml:146
+#: package/contents/ui/configAppearance.qml:162
 #, kde-format
 msgctxt "@item:inlistbox time display option"
 msgid "24-Hour"
 msgstr "24 שעות"
 
-#: package/contents/ui/configAppearance.qml:153
+#: package/contents/ui/configAppearance.qml:171
 #, kde-format
 msgctxt "@action:button opens kcm"
 msgid "Change Regional Settings…"
 msgstr "שינוי הגדרות אזוריות…"
 
-#: package/contents/ui/configAppearance.qml:164
+#: package/contents/ui/configAppearance.qml:182
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Date format:"
 msgstr "תבנית תאריך:"
 
-#: package/contents/ui/configAppearance.qml:173
+#: package/contents/ui/configAppearance.qml:192
 #, kde-format
 msgctxt ""
 "@item:inlistbox date display option, includes e.g. day of week and month as "
@@ -202,25 +202,25 @@ msgctxt ""
 msgid "Long date"
 msgstr "תאריך ארוך"
 
-#: package/contents/ui/configAppearance.qml:180
+#: package/contents/ui/configAppearance.qml:199
 #, kde-format
 msgctxt "@item:inlistbox date display option, e.g. all numeric"
 msgid "Short date"
 msgstr "תאריך קצר"
 
-#: package/contents/ui/configAppearance.qml:187
+#: package/contents/ui/configAppearance.qml:206
 #, kde-format
 msgctxt "@item:inlistbox date display option, yyyy-mm-dd"
 msgid "ISO date"
 msgstr "תאריך ISO"
 
-#: package/contents/ui/configAppearance.qml:194
+#: package/contents/ui/configAppearance.qml:213
 #, kde-format
 msgctxt "@item:inlistbox custom date format"
 msgid "Custom"
 msgstr "התאמה אישית"
 
-#: package/contents/ui/configAppearance.qml:224
+#: package/contents/ui/configAppearance.qml:245
 #, kde-format
 msgid ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
@@ -229,80 +229,86 @@ msgstr ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
 "\">תיעוד תבנית שעה</a>"
 
-#: package/contents/ui/configAppearance.qml:249
+#: package/contents/ui/configAppearance.qml:270
 #, kde-format
 msgctxt "@label:group"
 msgid "Text display:"
 msgstr "תצוגת טקסט:"
 
-#: package/contents/ui/configAppearance.qml:250
+#: package/contents/ui/configAppearance.qml:275
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatic"
 msgstr "אוטומטית"
 
-#: package/contents/ui/configAppearance.qml:254
+#: package/contents/ui/configAppearance.qml:279
 #, kde-format
 msgctxt "@label"
 msgid ""
 "Text will follow the system font and expand to fill the available space."
 msgstr "גופן הטקסט יושפע ישירות מגופן המערכת ויתרחב כדי למלא את המקום הפנוי."
 
-#: package/contents/ui/configAppearance.qml:266
+#: package/contents/ui/configAppearance.qml:294
 #, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
 msgstr "ידני"
 
-#: package/contents/ui/configAppearance.qml:276
+#: package/contents/ui/configAppearance.qml:304
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
 msgstr "בחירת סגנון…"
 
-#: package/contents/ui/configAppearance.qml:289
+#: package/contents/ui/configAppearance.qml:322
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
 msgstr "%1 נק׳ %2"
 
-#: package/contents/ui/configAppearance.qml:295
+#: package/contents/ui/configAppearance.qml:330
 #, kde-format
 msgctxt "@info"
 msgid "Note: size may be reduced if the panel is not thick enough."
 msgstr "לתשומת ליבך: אפשר לצמצם את הגודל אם הלוח לא עבה מספיק."
 
-#: package/contents/ui/configAppearance.qml:308
+#: package/contents/ui/configAppearance.qml:344
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
 msgstr "בחירת גופן"
 
-#: package/contents/ui/configCalendar.qml:48
-#, kde-format
+#: package/contents/ui/configCalendar.qml:50
+#, fuzzy, kde-format
+#| msgid "General:"
+msgctxt "@option:check formdata label"
 msgid "General:"
 msgstr "כללי:"
 
-#: package/contents/ui/configCalendar.qml:49
-#, kde-format
+#: package/contents/ui/configCalendar.qml:51
+#, fuzzy, kde-format
+#| msgid "Show week numbers"
+msgctxt "@option:check"
 msgid "Show week numbers"
 msgstr "הצגת מספרי שבועות"
 
-#: package/contents/ui/configCalendar.qml:56
+#: package/contents/ui/configCalendar.qml:58
 #, kde-format
 msgctxt "@label:listbox"
 msgid "First day of week:"
 msgstr "היום הראשון בשבוע:"
 
-#: package/contents/ui/configCalendar.qml:62
+#: package/contents/ui/configCalendar.qml:64
 #, kde-format
 msgctxt "@item:inlistbox first day of week option"
 msgid "Use region defaults"
 msgstr "להשתמש בברירת המחדל המקומית"
 
-#: package/contents/ui/configCalendar.qml:79
-#, kde-format
-msgid "Available Plugins:"
+#: package/contents/ui/configCalendar.qml:82
+#, fuzzy, kde-format
+#| msgid "Available Plugins:"
+msgctxt "@title:column"
+msgid "Available Add-Ons"
 msgstr "תוספים זמינים:"
 
 #: package/contents/ui/configTimeZones.qml:70

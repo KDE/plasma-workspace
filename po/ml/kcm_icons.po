@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2025-05-31 00:44+0000\n"
 "PO-Revision-Date: 2020-11-30 16:14+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -24,22 +24,22 @@ msgstr ""
 msgid "Name of the current icon theme"
 msgstr "ഇപ്പോഴത്തെ ചിഹ്ന പ്രമേയത്തിന്റെ പേര്"
 
-#: main.cpp:150
+#: main.cpp:149
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "താല്‍കാലിക ഫയല്‍ നിര്‍മ്മിക്കാന്‍ കഴി‍‌ഞ്ഞില്ല."
 
-#: main.cpp:161
+#: main.cpp:160
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "ചിഹ്ന പ്രമേയത്തിന്റെ ആര്‍ക്കൈവ് ലഭ്യമായില്ല: %1"
 
-#: main.cpp:175
+#: main.cpp:174
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "ഫയല്‍ സാധുതയുള്ള ഒരു ചിഹ്ന പ്രമേയ ആര്‍ക്കൈവ് അല്ല."
 
-#: main.cpp:180
+#: main.cpp:179
 #, kde-format
 msgid ""
 "A problem occurred during the installation process; however, most of the "
@@ -48,18 +48,18 @@ msgstr ""
 "ചേര്‍ക്കുന്ന സമയത്തു് ഒരു പിശകു് സംഭവിച്ചിരിക്കുന്നു; എന്നിരുന്നാലും ആര്‍ക്കൈവിലുള്ള മിക്ക പ്രമേയങ്ങളും "
 "ചേര്‍ത്തിട്ടുണ്ടു്"
 
-#: main.cpp:184
+#: main.cpp:183
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "പ്രമേയം വിജയകരമായി ഇന്‍സ്റ്റാള്‍ ചെയ്തു."
 
-#: main.cpp:228
+#: main.cpp:227
 #, fuzzy, kde-format
 #| msgid "Installing icon themes..."
 msgid "Installing icon themes…"
 msgstr "ചിഹ്ന പ്രമേയങ്ങള്‍ ചേര്‍ക്കുന്നു..."
 
-#: main.cpp:238
+#: main.cpp:237
 #, fuzzy, kde-format
 #| msgid "Installing %1 theme..."
 msgid "Installing %1 theme…"

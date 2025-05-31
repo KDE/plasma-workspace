@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-14 00:45+0000\n"
+"POT-Creation-Date: 2025-05-31 00:44+0000\n"
 "PO-Revision-Date: 2021-11-18 21:06+0100\n"
 "Last-Translator: Edward Wornar <edi.werner@gmx.de>\n"
 "Language-Team: Upper Sorbian <kde-i18n-doc@kde.org>\n"
@@ -72,135 +72,135 @@ msgstr "Přešaltować…"
 msgid "Switch to another time zone"
 msgstr "Na druhi časowy pas přešaltować"
 
-#: package/contents/ui/configAppearance.qml:51
+#: package/contents/ui/configAppearance.qml:58
 #, kde-format
 msgid "Information:"
 msgstr "Informacija:"
 
-#: package/contents/ui/configAppearance.qml:56
+#: package/contents/ui/configAppearance.qml:63
 #, kde-format
 msgid "Show date"
 msgstr "Datum pokazać"
 
-#: package/contents/ui/configAppearance.qml:64
+#: package/contents/ui/configAppearance.qml:72
 #, kde-format
 msgid "Adaptive location"
 msgstr "Městnosć so připrawja"
 
-#: package/contents/ui/configAppearance.qml:65
+#: package/contents/ui/configAppearance.qml:73
 #, kde-format
 msgid "Always beside time"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:66
+#: package/contents/ui/configAppearance.qml:74
 #, kde-format
 msgid "Always below time"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:74
+#: package/contents/ui/configAppearance.qml:87
 #, fuzzy, kde-format
 #| msgid "Show seconds"
 msgid "Show seconds:"
 msgstr "Sekundy pokazać"
 
-#: package/contents/ui/configAppearance.qml:76
+#: package/contents/ui/configAppearance.qml:89
 #, kde-format
 msgctxt "@option:check"
 msgid "Never"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:77
+#: package/contents/ui/configAppearance.qml:90
 #, kde-format
 msgctxt "@option:check"
 msgid "Only in the tooltip"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:78
-#: package/contents/ui/configAppearance.qml:99
+#: package/contents/ui/configAppearance.qml:91
+#: package/contents/ui/configAppearance.qml:112
 #, kde-format
 msgid "Always"
 msgstr "Přeco"
 
-#: package/contents/ui/configAppearance.qml:88
+#: package/contents/ui/configAppearance.qml:101
 #, kde-format
 msgid "Show time zone:"
 msgstr "Časowy pas pokazać:"
 
-#: package/contents/ui/configAppearance.qml:94
+#: package/contents/ui/configAppearance.qml:107
 #, kde-format
 msgid "Only when different from local time zone"
 msgstr "Jenož hdyž so wot lokalneho časoweho pasa rozeznawa"
 
-#: package/contents/ui/configAppearance.qml:108
+#: package/contents/ui/configAppearance.qml:121
 #, kde-format
 msgid "Display time zone as:"
 msgstr "Časoy pas pokazać jako:"
 
-#: package/contents/ui/configAppearance.qml:118
+#: package/contents/ui/configAppearance.qml:131
 #, kde-format
 msgid "Code"
 msgstr "Kod"
 
-#: package/contents/ui/configAppearance.qml:119
+#: package/contents/ui/configAppearance.qml:132
 #, kde-format
 msgid "City"
 msgstr "Město"
 
-#: package/contents/ui/configAppearance.qml:120
+#: package/contents/ui/configAppearance.qml:133
 #, kde-format
 msgid "Offset from UTC time"
 msgstr "Wotstawk wot UTC"
 
-#: package/contents/ui/configAppearance.qml:126
+#: package/contents/ui/configAppearance.qml:141
 #, fuzzy, kde-format
 #| msgid "Switch Local Time Zone…"
 msgctxt "@action:button opens kcm"
 msgid "Switch Time Zone…"
 msgstr "Lokalny časowy pas změnić..."
 
-#: package/contents/ui/configAppearance.qml:138
+#: package/contents/ui/configAppearance.qml:153
 #, fuzzy, kde-format
 #| msgid "Time display:"
 msgctxt "@label:listbox"
 msgid "Time display:"
 msgstr "Pokazowanje časa:"
 
-#: package/contents/ui/configAppearance.qml:144
+#: package/contents/ui/configAppearance.qml:160
 #, fuzzy, kde-format
 #| msgid "12-Hour"
 msgctxt "@item:inlistbox time display option"
 msgid "12-Hour"
 msgstr "12 hodźin"
 
-#: package/contents/ui/configAppearance.qml:145
+#: package/contents/ui/configAppearance.qml:161
 #, fuzzy, kde-format
 #| msgid "Use Region Defaults"
 msgctxt "@item:inlistbox time display option"
 msgid "Use region defaults"
 msgstr "Standard za region"
 
-#: package/contents/ui/configAppearance.qml:146
+#: package/contents/ui/configAppearance.qml:162
 #, fuzzy, kde-format
 #| msgid "24-Hour"
 msgctxt "@item:inlistbox time display option"
 msgid "24-Hour"
 msgstr "24 hodźin"
 
-#: package/contents/ui/configAppearance.qml:153
+#: package/contents/ui/configAppearance.qml:171
 #, fuzzy, kde-format
 #| msgid "Change Regional Settings…"
 msgctxt "@action:button opens kcm"
 msgid "Change Regional Settings…"
 msgstr "Nastajenja regiona připrawić..."
 
-#: package/contents/ui/configAppearance.qml:164
+#: package/contents/ui/configAppearance.qml:182
 #, fuzzy, kde-format
 #| msgid "Date format:"
 msgctxt "@label:listbox"
 msgid "Date format:"
 msgstr "Format datuma:"
 
-#: package/contents/ui/configAppearance.qml:173
+#: package/contents/ui/configAppearance.qml:192
 #, fuzzy, kde-format
 #| msgid "Long Date"
 msgctxt ""
@@ -209,21 +209,21 @@ msgctxt ""
 msgid "Long date"
 msgstr "Dołhi datum"
 
-#: package/contents/ui/configAppearance.qml:180
+#: package/contents/ui/configAppearance.qml:199
 #, fuzzy, kde-format
 #| msgid "Short Date"
 msgctxt "@item:inlistbox date display option, e.g. all numeric"
 msgid "Short date"
 msgstr "Krótki datum"
 
-#: package/contents/ui/configAppearance.qml:187
+#: package/contents/ui/configAppearance.qml:206
 #, fuzzy, kde-format
 #| msgid "ISO Date"
 msgctxt "@item:inlistbox date display option, yyyy-mm-dd"
 msgid "ISO date"
 msgstr "ISO-datum"
 
-#: package/contents/ui/configAppearance.qml:194
+#: package/contents/ui/configAppearance.qml:213
 #, fuzzy, kde-format
 #| msgctxt "custom date format"
 #| msgid "Custom"
@@ -231,90 +231,96 @@ msgctxt "@item:inlistbox custom date format"
 msgid "Custom"
 msgstr "Po wužiwarju"
 
-#: package/contents/ui/configAppearance.qml:224
+#: package/contents/ui/configAppearance.qml:245
 #, kde-format
 msgid ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
 "\">Time Format Documentation</a>"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:249
+#: package/contents/ui/configAppearance.qml:270
 #, fuzzy, kde-format
 #| msgid "Time display:"
 msgctxt "@label:group"
 msgid "Text display:"
 msgstr "Pokazowanje časa:"
 
-#: package/contents/ui/configAppearance.qml:250
+#: package/contents/ui/configAppearance.qml:275
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatic"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:254
+#: package/contents/ui/configAppearance.qml:279
 #, kde-format
 msgctxt "@label"
 msgid ""
 "Text will follow the system font and expand to fill the available space."
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:266
+#: package/contents/ui/configAppearance.qml:294
 #, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:276
+#: package/contents/ui/configAppearance.qml:304
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:289
+#: package/contents/ui/configAppearance.qml:322
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:295
+#: package/contents/ui/configAppearance.qml:330
 #, kde-format
 msgctxt "@info"
 msgid "Note: size may be reduced if the panel is not thick enough."
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:308
+#: package/contents/ui/configAppearance.qml:344
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
 msgstr ""
 
-#: package/contents/ui/configCalendar.qml:48
-#, kde-format
+#: package/contents/ui/configCalendar.qml:50
+#, fuzzy, kde-format
+#| msgid "General:"
+msgctxt "@option:check formdata label"
 msgid "General:"
 msgstr "Powšitkownje:"
 
-#: package/contents/ui/configCalendar.qml:49
-#, kde-format
+#: package/contents/ui/configCalendar.qml:51
+#, fuzzy, kde-format
+#| msgid "Show week numbers"
+msgctxt "@option:check"
 msgid "Show week numbers"
 msgstr "Tydźenje čisłować"
 
-#: package/contents/ui/configCalendar.qml:56
+#: package/contents/ui/configCalendar.qml:58
 #, fuzzy, kde-format
 #| msgid "First day of week:"
 msgctxt "@label:listbox"
 msgid "First day of week:"
 msgstr "Prěni dźeń tydźenja:"
 
-#: package/contents/ui/configCalendar.qml:62
+#: package/contents/ui/configCalendar.qml:64
 #, fuzzy, kde-format
 #| msgid "Use Region Defaults"
 msgctxt "@item:inlistbox first day of week option"
 msgid "Use region defaults"
 msgstr "Standard za region"
 
-#: package/contents/ui/configCalendar.qml:79
-#, kde-format
-msgid "Available Plugins:"
+#: package/contents/ui/configCalendar.qml:82
+#, fuzzy, kde-format
+#| msgid "Available Plugins:"
+msgctxt "@title:column"
+msgid "Available Add-Ons"
 msgstr "Zašćepki, kiž su k dispoziciji:"
 
 #: package/contents/ui/configTimeZones.qml:70

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons stable\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2025-05-31 00:44+0000\n"
 "PO-Revision-Date: 2005-06-29 11:28+0200\n"
 "Last-Translator: JUANITA FRANZ <JUANITA.FRANZ@VR-WEB.DE>\n"
 "Language-Team: AFRIKAANS <translate-discuss-af@lists.sourceforge.net>\n"
@@ -22,23 +22,23 @@ msgstr ""
 msgid "Name of the current icon theme"
 msgstr ""
 
-#: main.cpp:150
+#: main.cpp:149
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr ""
 
-#: main.cpp:161
+#: main.cpp:160
 #, fuzzy, kde-format
 #| msgid "Unable to find the icon theme archive %1."
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Nie moontlik om te vind die ikoon tema argief %1!"
 
-#: main.cpp:175
+#: main.cpp:174
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Die lêer is nie 'n geldige ikoon tema argief."
 
-#: main.cpp:180
+#: main.cpp:179
 #, kde-format
 msgid ""
 "A problem occurred during the installation process; however, most of the "
@@ -47,18 +47,18 @@ msgstr ""
 "'n probleem het voorgekom gedurende die installasie proses; Die meeste van "
 "die temas in die argief is reeds geïnstalleer"
 
-#: main.cpp:184
+#: main.cpp:183
 #, kde-format
 msgid "Theme installed successfully."
 msgstr ""
 
-#: main.cpp:228
+#: main.cpp:227
 #, fuzzy, kde-format
 #| msgid "Installing icon themes"
 msgid "Installing icon themes…"
 msgstr "Installering ikoon temas"
 
-#: main.cpp:238
+#: main.cpp:237
 #, fuzzy, kde-format
 #| msgid "Installing icon themes"
 msgid "Installing %1 theme…"

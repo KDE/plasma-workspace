@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2025-05-31 00:44+0000\n"
 "PO-Revision-Date: 2008-12-28 14:57+0200\n"
 "Last-Translator: Omer Ensari <oensari@gmail.com>\n"
 "Language-Team: Kurdish <ku@li.org>\n"
@@ -25,23 +25,23 @@ msgstr ""
 msgid "Name of the current icon theme"
 msgstr ""
 
-#: main.cpp:150
+#: main.cpp:149
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr ""
 
-#: main.cpp:161
+#: main.cpp:160
 #, fuzzy, kde-format
 #| msgid "Unable to find the icon theme archive %1."
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Nikare arşîva dirba îkonê %1 bibîne."
 
-#: main.cpp:175
+#: main.cpp:174
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Pel arşîvekê dirba îkonê yê derbasdar nîn e."
 
-#: main.cpp:180
+#: main.cpp:179
 #, kde-format
 msgid ""
 "A problem occurred during the installation process; however, most of the "
@@ -50,18 +50,18 @@ msgstr ""
 "Demê pêvajo ya saz kirinê de pirsgirêk derket;dîsa jî, zehfê dirbên di "
 "arşîvê de hatin saz kirin"
 
-#: main.cpp:184
+#: main.cpp:183
 #, kde-format
 msgid "Theme installed successfully."
 msgstr ""
 
-#: main.cpp:228
+#: main.cpp:227
 #, fuzzy, kde-format
 #| msgid "Installing icon themes"
 msgid "Installing icon themes…"
 msgstr "Saz kirina dirbên îkonê"
 
-#: main.cpp:238
+#: main.cpp:237
 #, fuzzy, kde-format
 #| msgid "Installing icon themes"
 msgid "Installing %1 theme…"

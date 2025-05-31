@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2025-05-31 00:44+0000\n"
 "PO-Revision-Date: 2009-01-22 15:58+0530\n"
 "Last-Translator: Ravishankar Shrivastava <raviratlami@aol.in>\n"
 "Language-Team: Hindi <kde-i18n-doc@lists.kde.org>\n"
@@ -25,23 +25,23 @@ msgstr ""
 msgid "Name of the current icon theme"
 msgstr ""
 
-#: main.cpp:150
+#: main.cpp:149
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr ""
 
-#: main.cpp:161
+#: main.cpp:160
 #, fuzzy, kde-format
 #| msgid "Unable to find the icon theme archive %1."
 msgid "Unable to download the icon theme archive: %1"
 msgstr "चिनहा प्रसंग अभिलेख %1 पाय मं अक्छम."
 
-#: main.cpp:175
+#: main.cpp:174
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "ए फाइल एक वैध चिनहा प्रसंग अभिलेख नइ हे."
 
-#: main.cpp:180
+#: main.cpp:179
 #, kde-format
 msgid ""
 "A problem occurred during the installation process; however, most of the "
@@ -50,18 +50,18 @@ msgstr ""
 "संस्थापन काम के समय समस्या उत्पन्न होइस, हालाकि अभिलेख के लगभग सब्बो प्रसंग इनस्टाल हो "
 "गिस"
 
-#: main.cpp:184
+#: main.cpp:183
 #, kde-format
 msgid "Theme installed successfully."
 msgstr ""
 
-#: main.cpp:228
+#: main.cpp:227
 #, fuzzy, kde-format
 #| msgid "Installing icon themes"
 msgid "Installing icon themes…"
 msgstr "चिनहा प्रसंग इनस्टाल करत हे"
 
-#: main.cpp:238
+#: main.cpp:237
 #, fuzzy, kde-format
 #| msgid "Installing icon themes"
 msgid "Installing %1 theme…"

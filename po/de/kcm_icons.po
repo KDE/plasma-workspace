@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_icons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2025-05-31 00:44+0000\n"
 "PO-Revision-Date: 2023-08-13 16:25+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -27,22 +27,22 @@ msgstr ""
 msgid "Name of the current icon theme"
 msgstr "Name des aktuellen Symboldesigns"
 
-#: main.cpp:150
+#: main.cpp:149
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Es kann keine temporäre Datei erstellt werden."
 
-#: main.cpp:161
+#: main.cpp:160
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Das Archiv für das Symboldesign %1 kann nicht heruntergeladen werden."
 
-#: main.cpp:175
+#: main.cpp:174
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Die Datei ist kein gültiges Symboldesign-Archiv."
 
-#: main.cpp:180
+#: main.cpp:179
 #, kde-format
 msgid ""
 "A problem occurred during the installation process; however, most of the "
@@ -51,17 +51,17 @@ msgstr ""
 "Während der Installation ist ein Problem aufgetreten. Die meisten Designs im "
 "Archiv sind allerdings dennoch installiert worden."
 
-#: main.cpp:184
+#: main.cpp:183
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Das Design wurde erfolgreich installiert."
 
-#: main.cpp:228
+#: main.cpp:227
 #, kde-format
 msgid "Installing icon themes…"
 msgstr "Neues Symboldesign installieren ..."
 
-#: main.cpp:238
+#: main.cpp:237
 #, kde-format
 msgid "Installing %1 theme…"
 msgstr "Das Design %1 wird installiert ..."

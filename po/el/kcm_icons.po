@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2025-05-31 00:44+0000\n"
 "PO-Revision-Date: 2024-08-13 21:09+0300\n"
 "Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -32,22 +32,22 @@ msgstr ""
 msgid "Name of the current icon theme"
 msgstr "Όνομα του τρέχοντος θέματος εικονιδίων"
 
-#: main.cpp:150
+#: main.cpp:149
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Αδυναμία δημιουργίας προσωρινού αρχείου."
 
-#: main.cpp:161
+#: main.cpp:160
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Δεν είναι δυνατή η λήψη του αρχείου του θέματος εικονιδίων: %1"
 
-#: main.cpp:175
+#: main.cpp:174
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Το αρχείο δεν είναι έγκυρο αρχείο θέματος εικονιδίων."
 
-#: main.cpp:180
+#: main.cpp:179
 #, kde-format
 msgid ""
 "A problem occurred during the installation process; however, most of the "
@@ -56,17 +56,17 @@ msgstr ""
 "Παρουσιάστηκε ένα πρόβλημα κατά τη διαδικασία εγκατάστασης: ωστόσο, τα "
 "περισσότερα από τα θέματα του αρχείου έχουν εγκατασταθεί"
 
-#: main.cpp:184
+#: main.cpp:183
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Το θέμα εγκαταστάθηκε με επιτυχία."
 
-#: main.cpp:228
+#: main.cpp:227
 #, kde-format
 msgid "Installing icon themes…"
 msgstr "Εγκατάσταση θεμάτων εικονιδίων…"
 
-#: main.cpp:238
+#: main.cpp:237
 #, kde-format
 msgid "Installing %1 theme…"
 msgstr "Εγκατάσταση του θέματος %1…"

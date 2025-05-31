@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-28 00:44+0000\n"
+"POT-Creation-Date: 2025-05-31 00:44+0000\n"
 "PO-Revision-Date: 2021-08-31 16:59+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc-"
@@ -41,68 +41,68 @@ msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "സ്ലൈഡുകൾ കാണിക്കുന്നതിന് പശ്ചാത്തലചിത്രമുള്ള കൂട"
 
-#: imagepackage/contents/ui/config.qml:148
+#: imagepackage/contents/ui/config.qml:149
 #, fuzzy, kde-format
 #| msgid "Positioning:"
 msgctxt "@label:listbox"
 msgid "Positioning:"
 msgstr "സ്ഥാനം:"
 
-#: imagepackage/contents/ui/config.qml:151
+#: imagepackage/contents/ui/config.qml:152
 #, fuzzy, kde-format
 #| msgid "Scaled and Cropped"
 msgctxt "@item:inlistbox"
 msgid "Scaled and cropped"
 msgstr "വലിപ്പം മാറ്റിയതും അറ്റം വെട്ടിചുരുക്കിയതും"
 
-#: imagepackage/contents/ui/config.qml:155
+#: imagepackage/contents/ui/config.qml:156
 #, fuzzy, kde-format
 #| msgid "Scaled"
 msgctxt "@item:inlistbox"
 msgid "Scaled"
 msgstr "വലിപ്പം മാറ്റിയത്"
 
-#: imagepackage/contents/ui/config.qml:159
+#: imagepackage/contents/ui/config.qml:160
 #, fuzzy, kde-format
 #| msgid "Scaled, Keep Proportions"
 msgctxt "@item:inlistbox"
 msgid "Scaled, keep proportions"
 msgstr "ചിത്രത്തിന്റെ അനുപാതം മാറ്റാതെ വലിപ്പം മാറ്റിയത്"
 
-#: imagepackage/contents/ui/config.qml:163
+#: imagepackage/contents/ui/config.qml:164
 #, fuzzy, kde-format
 #| msgid "Centered"
 msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "നടുവിലായിട്ട്"
 
-#: imagepackage/contents/ui/config.qml:167
+#: imagepackage/contents/ui/config.qml:168
 #, fuzzy, kde-format
 #| msgid "Tiled"
 msgctxt "@item:inlistbox"
 msgid "Tiled"
 msgstr "അടുത്തടുത്തു് വച്ചു്"
 
-#: imagepackage/contents/ui/config.qml:193
+#: imagepackage/contents/ui/config.qml:194
 #, fuzzy, kde-format
 #| msgid "Get New Wallpapers…"
 msgctxt "part of a sentence: 'Switch dynamic wallpapers [based on]'"
 msgid "Switch dynamic wallpapers:"
 msgstr "പുതിയ പശ്ചാത്തലചിത്രങ്ങള്‍ ലഭിക്കുക…"
 
-#: imagepackage/contents/ui/config.qml:194
+#: imagepackage/contents/ui/config.qml:195
 #, kde-format
 msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the color scheme is dark or light"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:202
+#: imagepackage/contents/ui/config.qml:203
 #, kde-format
 msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
 msgid "At sunrise and sunset"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:217
+#: imagepackage/contents/ui/config.qml:218
 #, kde-format
 msgctxt ""
 "@label:checkbox Use geolocation services for more accurate sunset and "
@@ -110,22 +110,22 @@ msgctxt ""
 msgid "Use device's current location for more accurate timings"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:228
+#: imagepackage/contents/ui/config.qml:229
 #, kde-format
 msgid "Background:"
 msgstr "പശ്ചാത്തലം:"
 
-#: imagepackage/contents/ui/config.qml:229
+#: imagepackage/contents/ui/config.qml:230
 #, kde-format
 msgid "Blur"
 msgstr "അവ്യക്തം"
 
-#: imagepackage/contents/ui/config.qml:238
+#: imagepackage/contents/ui/config.qml:239
 #, kde-format
 msgid "Solid color"
 msgstr "കടും നിറം"
 
-#: imagepackage/contents/ui/config.qml:249
+#: imagepackage/contents/ui/config.qml:250
 #, kde-format
 msgid "Select Background Color"
 msgstr "പശ്ചാത്തല നിറം തെരഞ്ഞെടുക്കുക"

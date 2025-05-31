@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-28 00:44+0000\n"
+"POT-Creation-Date: 2025-05-31 00:44+0000\n"
 "PO-Revision-Date: 2023-02-28 21:51+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -45,49 +45,49 @@ msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "वॉलपेपर की डिरेक्ट्री जिसमें से स्लाइड दिखानी है"
 
-#: imagepackage/contents/ui/config.qml:148
+#: imagepackage/contents/ui/config.qml:149
 #, fuzzy, kde-format
 #| msgid "Positioning:"
 msgctxt "@label:listbox"
 msgid "Positioning:"
 msgstr "स्थिति निर्धारण :\t"
 
-#: imagepackage/contents/ui/config.qml:151
+#: imagepackage/contents/ui/config.qml:152
 #, fuzzy, kde-format
 #| msgid "Scaled and Cropped"
 msgctxt "@item:inlistbox"
 msgid "Scaled and cropped"
 msgstr "अनुमापित व काटा गया"
 
-#: imagepackage/contents/ui/config.qml:155
+#: imagepackage/contents/ui/config.qml:156
 #, fuzzy, kde-format
 #| msgid "Scaled"
 msgctxt "@item:inlistbox"
 msgid "Scaled"
 msgstr "अनुमापित"
 
-#: imagepackage/contents/ui/config.qml:159
+#: imagepackage/contents/ui/config.qml:160
 #, fuzzy, kde-format
 #| msgid "Scaled, Keep Proportions"
 msgctxt "@item:inlistbox"
 msgid "Scaled, keep proportions"
 msgstr "अनुमापित, अनुपात बनाए रखें"
 
-#: imagepackage/contents/ui/config.qml:163
+#: imagepackage/contents/ui/config.qml:164
 #, fuzzy, kde-format
 #| msgid "Centered"
 msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "केंद्रित"
 
-#: imagepackage/contents/ui/config.qml:167
+#: imagepackage/contents/ui/config.qml:168
 #, fuzzy, kde-format
 #| msgid "Tiled"
 msgctxt "@item:inlistbox"
 msgid "Tiled"
 msgstr "टाइल्ड"
 
-#: imagepackage/contents/ui/config.qml:193
+#: imagepackage/contents/ui/config.qml:194
 #, fuzzy, kde-format
 #| msgctxt "@action:inmenu"
 #| msgid "Set as Wallpaper"
@@ -95,19 +95,19 @@ msgctxt "part of a sentence: 'Switch dynamic wallpapers [based on]'"
 msgid "Switch dynamic wallpapers:"
 msgstr "वॉलपेपर के रूप में नियत करें"
 
-#: imagepackage/contents/ui/config.qml:194
+#: imagepackage/contents/ui/config.qml:195
 #, kde-format
 msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the color scheme is dark or light"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:202
+#: imagepackage/contents/ui/config.qml:203
 #, kde-format
 msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
 msgid "At sunrise and sunset"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:217
+#: imagepackage/contents/ui/config.qml:218
 #, kde-format
 msgctxt ""
 "@label:checkbox Use geolocation services for more accurate sunset and "
@@ -115,22 +115,22 @@ msgctxt ""
 msgid "Use device's current location for more accurate timings"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:228
+#: imagepackage/contents/ui/config.qml:229
 #, kde-format
 msgid "Background:"
 msgstr "पृष्ठभूमि :"
 
-#: imagepackage/contents/ui/config.qml:229
+#: imagepackage/contents/ui/config.qml:230
 #, kde-format
 msgid "Blur"
 msgstr "धुंधला करें"
 
-#: imagepackage/contents/ui/config.qml:238
+#: imagepackage/contents/ui/config.qml:239
 #, kde-format
 msgid "Solid color"
 msgstr "रंग"
 
-#: imagepackage/contents/ui/config.qml:249
+#: imagepackage/contents/ui/config.qml:250
 #, kde-format
 msgid "Select Background Color"
 msgstr "पृष्ठभूमि रंग चुनें"

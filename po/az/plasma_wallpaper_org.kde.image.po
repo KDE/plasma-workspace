@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-28 00:44+0000\n"
+"POT-Creation-Date: 2025-05-31 00:44+0000\n"
 "PO-Revision-Date: 2025-05-28 16:40+0400\n"
 "Last-Translator: linux <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -40,61 +40,61 @@ msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Slaydları göstərmək üçün divar kağızı qovluğu"
 
-#: imagepackage/contents/ui/config.qml:148
+#: imagepackage/contents/ui/config.qml:149
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Positioning:"
 msgstr "Yerləşdirmə:"
 
-#: imagepackage/contents/ui/config.qml:151
+#: imagepackage/contents/ui/config.qml:152
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled and cropped"
 msgstr "Miqyaslandırılmış və əsilmiş"
 
-#: imagepackage/contents/ui/config.qml:155
+#: imagepackage/contents/ui/config.qml:156
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled"
 msgstr "Miqyaslanmış"
 
-#: imagepackage/contents/ui/config.qml:159
+#: imagepackage/contents/ui/config.qml:160
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled, keep proportions"
 msgstr "Nisbətləri saxlanılmaqla miqyaslanmış"
 
-#: imagepackage/contents/ui/config.qml:163
+#: imagepackage/contents/ui/config.qml:164
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "Mərkəzdə"
 
-#: imagepackage/contents/ui/config.qml:167
+#: imagepackage/contents/ui/config.qml:168
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Tiled"
 msgstr "Yan-yana düzülmüş"
 
-#: imagepackage/contents/ui/config.qml:193
+#: imagepackage/contents/ui/config.qml:194
 #, kde-format
 msgctxt "part of a sentence: 'Switch dynamic wallpapers [based on]'"
 msgid "Switch dynamic wallpapers:"
 msgstr "Hərəkətli divar kağızlarını dəyişmək"
 
-#: imagepackage/contents/ui/config.qml:194
+#: imagepackage/contents/ui/config.qml:195
 #, kde-format
 msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the color scheme is dark or light"
 msgstr "Rəng sxeminin qaranlıq və işıqlı olmasına görə"
 
-#: imagepackage/contents/ui/config.qml:202
+#: imagepackage/contents/ui/config.qml:203
 #, kde-format
 msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
 msgid "At sunrise and sunset"
 msgstr "Gün çıxanda və gün batanda"
 
-#: imagepackage/contents/ui/config.qml:217
+#: imagepackage/contents/ui/config.qml:218
 #, kde-format
 msgctxt ""
 "@label:checkbox Use geolocation services for more accurate sunset and "
@@ -103,22 +103,22 @@ msgid "Use device's current location for more accurate timings"
 msgstr ""
 "Daha dəqiq zamanlama üçün cihazın yerli məkan ayarlarından istifadə etmək"
 
-#: imagepackage/contents/ui/config.qml:228
+#: imagepackage/contents/ui/config.qml:229
 #, kde-format
 msgid "Background:"
 msgstr "Arxa fon:"
 
-#: imagepackage/contents/ui/config.qml:229
+#: imagepackage/contents/ui/config.qml:230
 #, kde-format
 msgid "Blur"
 msgstr "Tutqun"
 
-#: imagepackage/contents/ui/config.qml:238
+#: imagepackage/contents/ui/config.qml:239
 #, kde-format
 msgid "Solid color"
 msgstr "Bütöv rəng"
 
-#: imagepackage/contents/ui/config.qml:249
+#: imagepackage/contents/ui/config.qml:250
 #, kde-format
 msgid "Select Background Color"
 msgstr "Arxa fon şəklini seçmək"

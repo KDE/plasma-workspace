@@ -1,7 +1,7 @@
 # translation of kcmicons.po to Slovenian
 # Translation of kcmicons.po to Slovenian
 # Copyright (C) 2001, 2003, 2004, 2005, 2007 Free Software Foundation, Inc.
-# $Id: kcm_icons.po 1680767 2024-05-25 01:11:03Z scripty $
+# $Id: kcm_icons.po 1710108 2025-05-31 01:22:54Z scripty $
 # $Source$
 #
 # Roman Maurer <roman.maurer@amis.net>, 2000.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2025-05-31 00:44+0000\n"
 "PO-Revision-Date: 2023-08-03 07:54+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -33,22 +33,22 @@ msgstr ""
 msgid "Name of the current icon theme"
 msgstr "Ime trenutne teme ikon"
 
-#: main.cpp:150
+#: main.cpp:149
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Ni bilo mogoče ustvariti začasne datoteke."
 
-#: main.cpp:161
+#: main.cpp:160
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Ni bilo mogoče najti arhiva s temami ikon %1"
 
-#: main.cpp:175
+#: main.cpp:174
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Datoteka ni veljaven arhiv s temami ikon."
 
-#: main.cpp:180
+#: main.cpp:179
 #, kde-format
 msgid ""
 "A problem occurred during the installation process; however, most of the "
@@ -57,17 +57,17 @@ msgstr ""
 "Med namestitvijo je prišlo do težave. Vseeno je bila večina tem v arhivu "
 "nameščena"
 
-#: main.cpp:184
+#: main.cpp:183
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Tema uspešno nameščena."
 
-#: main.cpp:228
+#: main.cpp:227
 #, kde-format
 msgid "Installing icon themes…"
 msgstr "Nameščanje tem ikon…"
 
-#: main.cpp:238
+#: main.cpp:237
 #, kde-format
 msgid "Installing %1 theme…"
 msgstr "Nameščanje %1 teme…"

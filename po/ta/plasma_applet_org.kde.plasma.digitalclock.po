@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-14 00:45+0000\n"
+"POT-Creation-Date: 2025-05-31 00:44+0000\n"
 "PO-Revision-Date: 2025-04-27 12:18+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -71,127 +71,127 @@ msgstr "மாற்று..."
 msgid "Switch to another time zone"
 msgstr "இன்னொரு நேரமண்டலத்துக்கு மாற்று"
 
-#: package/contents/ui/configAppearance.qml:51
+#: package/contents/ui/configAppearance.qml:58
 #, kde-format
 msgid "Information:"
 msgstr "விவரங்கள்:"
 
-#: package/contents/ui/configAppearance.qml:56
+#: package/contents/ui/configAppearance.qml:63
 #, kde-format
 msgid "Show date"
 msgstr "தேதியை காட்டு"
 
-#: package/contents/ui/configAppearance.qml:64
+#: package/contents/ui/configAppearance.qml:72
 #, kde-format
 msgid "Adaptive location"
 msgstr "தானாக உணரப்படும் இடம்"
 
-#: package/contents/ui/configAppearance.qml:65
+#: package/contents/ui/configAppearance.qml:73
 #, kde-format
 msgid "Always beside time"
 msgstr "எப்போதும் நேரத்துக்கு பக்கத்தில்"
 
-#: package/contents/ui/configAppearance.qml:66
+#: package/contents/ui/configAppearance.qml:74
 #, kde-format
 msgid "Always below time"
 msgstr "எப்போதும் நேரத்துக்கு அடியில்"
 
-#: package/contents/ui/configAppearance.qml:74
+#: package/contents/ui/configAppearance.qml:87
 #, kde-format
 msgid "Show seconds:"
 msgstr "நொடிகளை காட்டுவது:"
 
-#: package/contents/ui/configAppearance.qml:76
+#: package/contents/ui/configAppearance.qml:89
 #, kde-format
 msgctxt "@option:check"
 msgid "Never"
 msgstr "ஒருபோதும் வேண்டாம்"
 
-#: package/contents/ui/configAppearance.qml:77
+#: package/contents/ui/configAppearance.qml:90
 #, kde-format
 msgctxt "@option:check"
 msgid "Only in the tooltip"
 msgstr "கருவித்துப்பில் மட்டும்"
 
-#: package/contents/ui/configAppearance.qml:78
-#: package/contents/ui/configAppearance.qml:99
+#: package/contents/ui/configAppearance.qml:91
+#: package/contents/ui/configAppearance.qml:112
 #, kde-format
 msgid "Always"
 msgstr "எப்போதும்"
 
-#: package/contents/ui/configAppearance.qml:88
+#: package/contents/ui/configAppearance.qml:101
 #, kde-format
 msgid "Show time zone:"
 msgstr "நேரமண்டலத்தை காட்டுவது:"
 
-#: package/contents/ui/configAppearance.qml:94
+#: package/contents/ui/configAppearance.qml:107
 #, kde-format
 msgid "Only when different from local time zone"
 msgstr "தற்போதைய இருப்பிடத்தின் நேரமண்டலமாக இல்லாத போது மட்டும்"
 
-#: package/contents/ui/configAppearance.qml:108
+#: package/contents/ui/configAppearance.qml:121
 #, kde-format
 msgid "Display time zone as:"
 msgstr "நேரமண்டலத்தை இவ்வாறு காட்டு:"
 
-#: package/contents/ui/configAppearance.qml:118
+#: package/contents/ui/configAppearance.qml:131
 #, kde-format
 msgid "Code"
 msgstr "குறிமுறையாக"
 
-#: package/contents/ui/configAppearance.qml:119
+#: package/contents/ui/configAppearance.qml:132
 #, kde-format
 msgid "City"
 msgstr "நகரமாக"
 
-#: package/contents/ui/configAppearance.qml:120
+#: package/contents/ui/configAppearance.qml:133
 #, kde-format
 msgid "Offset from UTC time"
 msgstr "UTC நேரத்திலிருந்து உள்ள வித்தியாசமாக"
 
-#: package/contents/ui/configAppearance.qml:126
+#: package/contents/ui/configAppearance.qml:141
 #, kde-format
 msgctxt "@action:button opens kcm"
 msgid "Switch Time Zone…"
 msgstr "நேர மண்டலத்தை மாற்று…"
 
-#: package/contents/ui/configAppearance.qml:138
+#: package/contents/ui/configAppearance.qml:153
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Time display:"
 msgstr "நேரம் காட்டப்படுவது:"
 
-#: package/contents/ui/configAppearance.qml:144
+#: package/contents/ui/configAppearance.qml:160
 #, kde-format
 msgctxt "@item:inlistbox time display option"
 msgid "12-Hour"
 msgstr "12-மணிநேரம்"
 
-#: package/contents/ui/configAppearance.qml:145
+#: package/contents/ui/configAppearance.qml:161
 #, kde-format
 msgctxt "@item:inlistbox time display option"
 msgid "Use region defaults"
 msgstr "வட்டார இயல்பிருப்பு"
 
-#: package/contents/ui/configAppearance.qml:146
+#: package/contents/ui/configAppearance.qml:162
 #, kde-format
 msgctxt "@item:inlistbox time display option"
 msgid "24-Hour"
 msgstr "24-மணிநேரம்"
 
-#: package/contents/ui/configAppearance.qml:153
+#: package/contents/ui/configAppearance.qml:171
 #, kde-format
 msgctxt "@action:button opens kcm"
 msgid "Change Regional Settings…"
 msgstr "வட்டார அமைப்புகளை மாற்று…"
 
-#: package/contents/ui/configAppearance.qml:164
+#: package/contents/ui/configAppearance.qml:182
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Date format:"
 msgstr "தேதி எவ்வாறு காட்டப்படும்:"
 
-#: package/contents/ui/configAppearance.qml:173
+#: package/contents/ui/configAppearance.qml:192
 #, kde-format
 msgctxt ""
 "@item:inlistbox date display option, includes e.g. day of week and month as "
@@ -199,25 +199,25 @@ msgctxt ""
 msgid "Long date"
 msgstr "விவரமான தேதி"
 
-#: package/contents/ui/configAppearance.qml:180
+#: package/contents/ui/configAppearance.qml:199
 #, kde-format
 msgctxt "@item:inlistbox date display option, e.g. all numeric"
 msgid "Short date"
 msgstr "சுருக்கமான தேதி"
 
-#: package/contents/ui/configAppearance.qml:187
+#: package/contents/ui/configAppearance.qml:206
 #, kde-format
 msgctxt "@item:inlistbox date display option, yyyy-mm-dd"
 msgid "ISO date"
 msgstr "ISO தேதி"
 
-#: package/contents/ui/configAppearance.qml:194
+#: package/contents/ui/configAppearance.qml:213
 #, kde-format
 msgctxt "@item:inlistbox custom date format"
 msgid "Custom"
 msgstr "வேறு"
 
-#: package/contents/ui/configAppearance.qml:224
+#: package/contents/ui/configAppearance.qml:245
 #, kde-format
 msgid ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
@@ -226,19 +226,19 @@ msgstr ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
 "\">தேதி/நேர வடிவத்திற்கான கையேடு</a>"
 
-#: package/contents/ui/configAppearance.qml:249
+#: package/contents/ui/configAppearance.qml:270
 #, kde-format
 msgctxt "@label:group"
 msgid "Text display:"
 msgstr "உரை காட்டப்படுவது:"
 
-#: package/contents/ui/configAppearance.qml:250
+#: package/contents/ui/configAppearance.qml:275
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatic"
 msgstr "தானியக்கம்"
 
-#: package/contents/ui/configAppearance.qml:254
+#: package/contents/ui/configAppearance.qml:279
 #, kde-format
 msgctxt "@label"
 msgid ""
@@ -247,61 +247,67 @@ msgstr ""
 "கணினி முழுவதற்குமான எழுத்துருவைப் பயன்படுத்தி, கிடைக்கும் இடத்தை நிரப்பும் அளவுக்கு உரை "
 "பெரிதாக்கப்படும்."
 
-#: package/contents/ui/configAppearance.qml:266
+#: package/contents/ui/configAppearance.qml:294
 #, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
 msgstr "கைமுறை"
 
-#: package/contents/ui/configAppearance.qml:276
+#: package/contents/ui/configAppearance.qml:304
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
 msgstr "தோற்றத்தை தேர்ந்தெடு…"
 
-#: package/contents/ui/configAppearance.qml:289
+#: package/contents/ui/configAppearance.qml:322
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
 msgstr "%1pt %2"
 
-#: package/contents/ui/configAppearance.qml:295
+#: package/contents/ui/configAppearance.qml:330
 #, kde-format
 msgctxt "@info"
 msgid "Note: size may be reduced if the panel is not thick enough."
 msgstr "குறிப்பு: பலகையின் அகலம் குறைவாக இருந்தால் இதன் அளவு குறையலாம்."
 
-#: package/contents/ui/configAppearance.qml:308
+#: package/contents/ui/configAppearance.qml:344
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
 msgstr "எழுத்துருவைத் தேர்வு செய்தல்"
 
-#: package/contents/ui/configCalendar.qml:48
-#, kde-format
+#: package/contents/ui/configCalendar.qml:50
+#, fuzzy, kde-format
+#| msgid "General:"
+msgctxt "@option:check formdata label"
 msgid "General:"
 msgstr "பொதுவானவை:"
 
-#: package/contents/ui/configCalendar.qml:49
-#, kde-format
+#: package/contents/ui/configCalendar.qml:51
+#, fuzzy, kde-format
+#| msgid "Show week numbers"
+msgctxt "@option:check"
 msgid "Show week numbers"
 msgstr "வார எண்களைக் காட்டு"
 
-#: package/contents/ui/configCalendar.qml:56
+#: package/contents/ui/configCalendar.qml:58
 #, kde-format
 msgctxt "@label:listbox"
 msgid "First day of week:"
 msgstr "வாரத்தின் முதல் நாள்:"
 
-#: package/contents/ui/configCalendar.qml:62
+#: package/contents/ui/configCalendar.qml:64
 #, kde-format
 msgctxt "@item:inlistbox first day of week option"
 msgid "Use region defaults"
 msgstr "வட்டார இயல்பிருப்பு"
 
-#: package/contents/ui/configCalendar.qml:79
-#, kde-format
-msgid "Available Plugins:"
+#: package/contents/ui/configCalendar.qml:82
+#, fuzzy, kde-format
+#| msgid "Available Plugins:"
+msgctxt "@title:column"
+msgid "Available Add-Ons"
 msgstr "பயன்படுத்தக்கூடிய செருகுநிரல்கள்:"
 
 #: package/contents/ui/configTimeZones.qml:70
