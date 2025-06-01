@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-23 00:44+0000\n"
-"PO-Revision-Date: 2025-01-11 12:29+0100\n"
+"PO-Revision-Date: 2025-05-31 15:16+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: src/fingerprintmodel.cpp:145 src/fingerprintmodel.cpp:229
 #, kde-format
@@ -534,14 +534,13 @@ msgstr "Använd platsmarkörsikon för avatar"
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User Without Deleting Files?"
-msgstr ""
+msgstr "Ta bort inloggad användare utan att ta bort filer?"
 
 #: src/ui/UserDetailsPage.qml:115
-#, fuzzy, kde-format
-#| msgid "Delete User…"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User?"
-msgstr "Ta bort användare..."
+msgstr "Ta bort inloggad användare?"
 
 #: src/ui/UserDetailsPage.qml:117
 #, kde-kuit-format
@@ -551,6 +550,9 @@ msgid ""
 "account instead?<nl/><nl/>This will make %1 unable to log in again, and they "
 "may experience strange behaviors until they log out."
 msgstr ""
+"%1 är för närvarande inloggad, så deras filer kan inte tas bort. Vill du "
+"bara ta bort kontot istället?<nl/><nl/>Det gör att %1 inte kan logga in "
+"igen, och de kan uppleva konstiga beteenden tills de loggar ut."
 
 #: src/ui/UserDetailsPage.qml:118
 #, kde-format
@@ -559,13 +561,14 @@ msgid ""
 "%1 is currently logged in. Deleting the account will make them unable to log "
 "in again, and they may experience strange behaviors until they log out."
 msgstr ""
+"%1 är för närvarande inloggad. Om du tar bort kontot kan de inte logga in "
+"igen, och de kan uppleva konstiga beteenden tills de loggar ut."
 
 #: src/ui/UserDetailsPage.qml:125
-#, fuzzy, kde-format
-#| msgid "Delete files"
+#, kde-format
 msgctxt "@action: button"
 msgid "Delete %1"
-msgstr "Ta bort filer"
+msgstr "Ta bort %1"
 
 #: src/ui/UserDetailsPage.qml:144
 #, kde-format

@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-31 00:44+0000\n"
-"PO-Revision-Date: 2025-04-25 12:16+0200\n"
+"PO-Revision-Date: 2025-05-31 18:56+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 25.04.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: package/contents/config/config.qml:20
 #, kde-format
@@ -282,18 +282,16 @@ msgid "Choose a Font"
 msgstr "Trieu una lletra"
 
 #: package/contents/ui/configCalendar.qml:50
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@option:check formdata label"
 msgid "General:"
 msgstr "General:"
 
 #: package/contents/ui/configCalendar.qml:51
-#, fuzzy, kde-format
-#| msgid "Show week numbers"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show week numbers"
-msgstr "Mostra els números de les setmanes"
+msgstr "Mostra els números de setmana"
 
 #: package/contents/ui/configCalendar.qml:58
 #, kde-format
@@ -308,11 +306,10 @@ msgid "Use region defaults"
 msgstr "Usa els valors predeterminats de la regió"
 
 #: package/contents/ui/configCalendar.qml:82
-#, fuzzy, kde-format
-#| msgid "Available Plugins:"
+#, kde-format
 msgctxt "@title:column"
 msgid "Available Add-Ons"
-msgstr "Connectors disponibles:"
+msgstr "Complements disponibles"
 
 #: package/contents/ui/configTimeZones.qml:70
 #, kde-format
@@ -472,12 +469,3 @@ msgstr "Local"
 #, kde-format
 msgid "System's local time zone"
 msgstr "Zona horària local del sistema"
-
-#~ msgid ""
-#~ "Tip: if you travel frequently, add your home time zone to this list. It "
-#~ "will only appear when you change the systemwide time zone to something "
-#~ "else."
-#~ msgstr ""
-#~ "Consell: si viatgeu amb freqüència, afegiu la vostra zona horària de "
-#~ "residència a aquesta llista. Només apareixerà quan canvieu la zona "
-#~ "horària global del sistema a una altra cosa."

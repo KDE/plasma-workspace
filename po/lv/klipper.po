@@ -12,14 +12,14 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-23 00:44+0000\n"
-"PO-Revision-Date: 2025-01-03 16:59+0200\n"
+"PO-Revision-Date: 2025-05-29 16:36+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 25.04.1\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
@@ -667,11 +667,10 @@ msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Manuāli izsaukt darbību ar pašreizējo starpliktuvi"
 
 #: klipper.cpp:128
-#, fuzzy, kde-format
-#| msgid "Edit Contents"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
-msgstr "Rediģēt saturu"
+msgstr "&Rediģēt saturu…"
 
 #: klipper.cpp:134
 #, kde-format

@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2014, 2015, 2017, 2018, 2019, 2020, 2021, 2022, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
+# SPDX-FileCopyrightText: 2014, 2015, 2017, 2018, 2019, 2020, 2021, 2022, 2024, 2025 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-31 00:44+0000\n"
-"PO-Revision-Date: 2024-08-29 20:11+0200\n"
+"PO-Revision-Date: 2025-05-31 15:19+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -76,24 +76,22 @@ msgid "Tiled"
 msgstr "Sida vid sida"
 
 #: imagepackage/contents/ui/config.qml:194
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Set as Wallpaper"
+#, kde-format
 msgctxt "part of a sentence: 'Switch dynamic wallpapers [based on]'"
 msgid "Switch dynamic wallpapers:"
-msgstr "Använd som skrivbordsunderlägg"
+msgstr "Byt dynamiska skrivbordsunderlägg:"
 
 #: imagepackage/contents/ui/config.qml:195
 #, kde-format
 msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the color scheme is dark or light"
-msgstr ""
+msgstr "Baserat på om färgschemat är mörkt eller ljust"
 
 #: imagepackage/contents/ui/config.qml:203
 #, kde-format
 msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
 msgid "At sunrise and sunset"
-msgstr ""
+msgstr "Vid soluppgång och solnedgång"
 
 #: imagepackage/contents/ui/config.qml:218
 #, kde-format
@@ -101,7 +99,7 @@ msgctxt ""
 "@label:checkbox Use geolocation services for more accurate sunset and "
 "sunrise times"
 msgid "Use device's current location for more accurate timings"
-msgstr ""
+msgstr "Använd datorns nuvarande plats för noggrannare tider"
 
 #: imagepackage/contents/ui/config.qml:229
 #, kde-format

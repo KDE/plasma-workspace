@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-31 00:44+0000\n"
-"PO-Revision-Date: 2025-04-25 04:34+0200\n"
+"PO-Revision-Date: 2025-05-31 03:30+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.6\n"
 
 #: package/contents/config/config.qml:20
 #, kde-format
@@ -279,15 +279,13 @@ msgid "Choose a Font"
 msgstr "აირჩიეთ ფონტი"
 
 #: package/contents/ui/configCalendar.qml:50
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@option:check formdata label"
 msgid "General:"
-msgstr "ზოგადი:"
+msgstr "საერთო:"
 
 #: package/contents/ui/configCalendar.qml:51
-#, fuzzy, kde-format
-#| msgid "Show week numbers"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show week numbers"
 msgstr "კვირის რიცხვის ჩვენება"
@@ -305,11 +303,10 @@ msgid "Use region defaults"
 msgstr "რეგიონის ნაგულისხმები მნიშვნელობების გამოყენება"
 
 #: package/contents/ui/configCalendar.qml:82
-#, fuzzy, kde-format
-#| msgid "Available Plugins:"
+#, kde-format
 msgctxt "@title:column"
 msgid "Available Add-Ons"
-msgstr "ხელმისაწვდომი დამატებები:"
+msgstr "ხელმისაწვდომი დამატებები"
 
 #: package/contents/ui/configTimeZones.qml:70
 #, kde-format

@@ -4,13 +4,13 @@
 #
 # Einars Sprugis <einars8@gmail.com>, 2011.
 # Maris Nartiss <maris.kde@gmail.com>, 2012.
-# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2024, 2025 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-21 00:44+0000\n"
-"PO-Revision-Date: 2024-10-29 11:59+0200\n"
+"PO-Revision-Date: 2025-05-29 16:43+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: fileinfo.cpp:170
 #, kde-format
@@ -113,9 +113,9 @@ msgstr[2] "Pirms %1 min."
 msgctxt "seconds remaining, keep short"
 msgid "%1 s remaining"
 msgid_plural "%1 s remaining"
-msgstr[0] "Atlikusi %1 s"
-msgstr[1] "Atlikušas %1 s"
-msgstr[2] "Atlikušas %1 s"
+msgstr[0] "Atlikusi %1 sek."
+msgstr[1] "Atlikušas %1 sek."
+msgstr[2] "Atlicis %1 sek."
 
 #: package/contents/ui/components/HeadingButtons.qml:120
 #, kde-format
@@ -124,7 +124,7 @@ msgid "%1 min remaining"
 msgid_plural "%1 min remaining"
 msgstr[0] "Atlikusi %1 min."
 msgstr[1] "Atlikušas %1 min."
-msgstr[2] "Atlikušas %1 min."
+msgstr[2] "Atlicis %1 min."
 
 #: package/contents/ui/components/HeadingButtons.qml:125
 #, kde-format
@@ -133,7 +133,7 @@ msgid "%1 h remaining"
 msgid_plural "%1 h remaining"
 msgstr[0] "Atlikusi %1 st."
 msgstr[1] "Atlikušas %1 st."
-msgstr[2] "Atlikušas %1 st."
+msgstr[2] "Atlicis %1 st."
 
 #: package/contents/ui/components/HeadingButtons.qml:145
 #, kde-format
@@ -227,7 +227,7 @@ msgstr[2] "%1 vienumu"
 #, kde-format
 msgctxt "Bytes per second"
 msgid "%1/s"
-msgstr "%1/s"
+msgstr "%1/sek."
 
 #: package/contents/ui/components/JobItem.qml:58
 #, kde-format
@@ -268,7 +268,7 @@ msgstr "Atvērt"
 #, kde-format
 msgctxt "Text field placeholder"
 msgid "Type a reply…"
-msgstr "Ievadiet atbildi…"
+msgstr "Ierakstiet atbildi…"
 
 #: package/contents/ui/components/NotificationReplyField.qml:66
 #, kde-format
@@ -279,18 +279,18 @@ msgstr "Nosūtīt"
 #: package/contents/ui/components/SpeedChart.qml:142
 #, kde-format
 msgid "Speed"
-msgstr ""
+msgstr "Ātrums"
 
 #: package/contents/ui/components/SpeedChart.qml:192
 #, kde-format
 msgid "Average Speed"
-msgstr ""
+msgstr "Vidējais ātrums"
 
 #: package/contents/ui/components/SpeedChart.qml:249
 #, kde-format
 msgctxt "Percentage of a job"
 msgid "%1%"
-msgstr "%1%"
+msgstr "%1 %"
 
 #: package/contents/ui/components/Summary.qml:36
 #, kde-format
@@ -383,14 +383,14 @@ msgstr "Ekrāni ir spoguļoti"
 #, kde-format
 msgctxt "Do not disturb because fullscreen app is focused"
 msgid "Fullscreen app is focused"
-msgstr ""
+msgstr "Ir fokusēta pilnekrāna programma"
 
 #: package/contents/ui/FullRepresentation.qml:469
 #: package/contents/ui/FullRepresentation.qml:475
 #, kde-format
 msgctxt "@action:button"
 msgid "View"
-msgstr ""
+msgstr "Skatīt"
 
 #: package/contents/ui/FullRepresentation.qml:556
 #, kde-format
@@ -424,7 +424,7 @@ msgstr "Paziņojumu serviss nav pieejams"
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"
-msgstr "Šobrīd paziņojumus sniedz „%1“ izstrādātais „%2“"
+msgstr "Šobrīd paziņojumus sniedz „%2“, ko izstrādājis „%1“"
 
 #: package/contents/ui/main.qml:64
 #, kde-format
@@ -438,15 +438,15 @@ msgstr[2] "%1 palaistu uzdevumu"
 #, kde-format
 msgctxt "Job title (percentage)"
 msgid "%1 (%2%)"
-msgstr "%1 (%2%)"
+msgstr "%1 (%2 %)"
 
 #: package/contents/ui/main.qml:73
 #, kde-format
 msgid "%1 running job (%2%)"
 msgid_plural "%1 running jobs (%2%)"
-msgstr[0] "%1 palaists uzdevums (%2%)"
-msgstr[1] "%1 palaisti uzdevumi (%2%)"
-msgstr[2] "%1 palaistu uzdevumu (%2%)"
+msgstr[0] "%1 palaists uzdevums (%2 %)"
+msgstr[1] "%1 palaisti uzdevumi (%2 %)"
+msgstr[2] "%1 palaistu uzdevumu (%2 %)"
 
 #: package/contents/ui/main.qml:86
 #, kde-format
@@ -457,19 +457,17 @@ msgstr[1] "%1 neizlasīti paziņojumi"
 msgstr[2] "%1 neizlasītu paziņojumu"
 
 #: package/contents/ui/main.qml:91
-#, fuzzy, kde-format
-#| msgid "%1 unread notification"
-#| msgid_plural "%1 unread notifications"
+#, kde-format
 msgid "%1 active notification"
 msgid_plural "%1 active notifications"
-msgstr[0] "%1 neizlasīts paziņojums"
-msgstr[1] "%1 neizlasīti paziņojumi"
-msgstr[2] "%1 neizlasītu paziņojumu"
+msgstr[0] "%1 aktīvs paziņojums"
+msgstr[1] "%1 aktīvi paziņojumi"
+msgstr[2] "%1 aktīvu paziņojumu"
 
 #: package/contents/ui/main.qml:104
 #, kde-format
 msgid "Do not disturb until %1; middle-click to exit now"
-msgstr "Netraucēt līdz %1. Spiediet peles vidējo pogu, lai no tā izietu uzreiz"
+msgstr "Netraucēt līdz %1. Spiediet peles vidējo pogu, lai no šī režīma izietu"
 
 #: package/contents/ui/main.qml:107
 #, kde-format

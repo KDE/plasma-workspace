@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-15 00:44+0000\n"
-"PO-Revision-Date: 2025-04-05 09:02+0200\n"
+"PO-Revision-Date: 2025-05-31 15:18+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -103,6 +103,10 @@ msgid ""
 "consider configuring the clipboard to disable its history, or only remember "
 "one item at a time."
 msgstr ""
+"Att inaktivera klippbordet rekommenderas inte, eftersom det leder till att "
+"kopierad data går förlorad när programmet det kopieras från stängs.<nl/><nl/"
+">Överväg istället att ställa in klippbordet så att dess historik "
+"inaktiveras, eller att det bara kommer ihåg ett objekt åt gången."
 
 #: package/contents/ui/ConfigEntries.qml:204
 #, kde-format
@@ -221,7 +225,7 @@ msgstr "Visa dolda ikoner"
 #, kde-format
 msgctxt "@info:whatsthis accessible description for popup grid"
 msgid "Grid with %1 items in %2 columns"
-msgstr ""
+msgstr "Rutnät med %1 objekt i %2 kolumner"
 
 #: package/contents/ui/HiddenItemsView.qml:46
 #, kde-format

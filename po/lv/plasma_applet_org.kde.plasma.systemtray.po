@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2024, 2025 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-15 00:44+0000\n"
-"PO-Revision-Date: 2024-10-29 12:01+0200\n"
+"PO-Revision-Date: 2025-05-29 16:48+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -83,12 +83,18 @@ msgid ""
 "><nl/>Use this setting at your own risk, and do not report issues to KDE or "
 "the app’s author."
 msgstr ""
+"Pirms izslēdzat ikonu sistēmas ikonu joslā no šejienes apskatiet, vai "
+"<application>%1</application> programma nepiedāvā to izslēgt savos "
+"iestatījumos. Dažu programmu sistēmas ikonu joslas ikonas nav paredzētas, "
+"lai tās izslēgtu, tāpēc to izslēgšana var izraisīt nevēlamu programmas "
+"darbību<nl/><nl/>Izmantojiet šos iestatījumus uz sava riska un, ja tā dēļ "
+"rodas problēmas, neziņojiet par tām KDE vai programmas autoriem."
 
 #: package/contents/ui/ConfigEntries.qml:164
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
-msgstr ""
+msgstr "Es saprotu riskus"
 
 #: package/contents/ui/ConfigEntries.qml:176
 #, kde-kuit-format
@@ -99,6 +105,10 @@ msgid ""
 "consider configuring the clipboard to disable its history, or only remember "
 "one item at a time."
 msgstr ""
+"Starpliktuves izslēgšana nav ieteicama, jo rezultātā, aizverot programmu, "
+"tajā nokopētie dati būs zuduši.<nl/><nl/>Tā vietā apsveriet izslēgt "
+"starpliktuves vēstures funkciju vai likt tai atcerēties vienlaicīgi tikai "
+"vienu vienumu."
 
 #: package/contents/ui/ConfigEntries.qml:204
 #, kde-format
@@ -217,7 +227,7 @@ msgstr "Rādīt paslēptās ikonas"
 #, kde-format
 msgctxt "@info:whatsthis accessible description for popup grid"
 msgid "Grid with %1 items in %2 columns"
-msgstr ""
+msgstr "Režģis ar %1 vienumiem %2 kolonnās"
 
 #: package/contents/ui/HiddenItemsView.qml:46
 #, kde-format

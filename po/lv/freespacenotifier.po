@@ -3,20 +3,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Maris Nartiss <maris.kde@gmail.com>, 2010.
-# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2024, 2025 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: freespacenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-30 00:44+0000\n"
-"PO-Revision-Date: 2024-01-15 16:26+0200\n"
+"PO-Revision-Date: 2025-05-29 16:27+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 25.04.1\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
@@ -45,12 +45,11 @@ msgstr ""
 
 #. i18n: ectx: label, entry (minimumSpacePercentage), group (General)
 #: freespacenotifier.kcfg:15
-#, fuzzy, kde-format
-#| msgid "Minimum free space before user starts being notified."
+#, kde-format
 msgid "Minimum percentage free space before user starts being notified."
 msgstr ""
-"Minimālās brīvās vietas daudzums, pēc kura pārsniegšanas ir jābrīdina "
-"lietotājs."
+"Minimālās brīvās vietas daudzums procentuāli, pēc kura pārsniegšanas ir "
+"jābrīdina lietotājs."
 
 #. i18n: ectx: label, entry (enableNotification), group (General)
 #: freespacenotifier.kcfg:21
@@ -78,16 +77,15 @@ msgstr " MiB"
 
 #. i18n: ectx: property (text), widget (QLabel, label_minimumSpacePercentage)
 #: freespacenotifier_prefs_base.ui:44
-#, fuzzy, kde-format
-#| msgid "Warn when free space is below:"
+#, kde-format
 msgid "And when free space is under:"
-msgstr "Brīdināt kad brīvā vieta ir mazāk par:"
+msgstr "Un kad brīvās vietas ir mazāk par:"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpacePercentage)
 #: freespacenotifier_prefs_base.ui:54
 #, no-c-format, kde-format
 msgid "%"
-msgstr ""
+msgstr "%"
 
 #. i18n: ectx: property (text), widget (QLabel, label_info)
 #: freespacenotifier_prefs_base.ui:67
@@ -96,48 +94,39 @@ msgid ""
 "The system will notify you if the free space drops below the specified MiB "
 "and the specified percentage of available space."
 msgstr ""
+"Sistēma brīdinās, ja brīvā vieta samazināsies zem noteiktajiem brīvās vietas "
+"MiB un procentuālās izteiksmes."
 
 #: module.cpp:105
-#, fuzzy, kde-format
-#| msgid ""
-#| "Your Root partition is running out of disk space, you have %1 MiB "
-#| "remaining (%2%)."
+#, kde-format
 msgid ""
 "Your %1 partition is running out of disk space; %2 MiB of space remaining "
 "(%3%)."
 msgstr ""
-"Jūsu saknes nodalījumā sāk trūkt diska vietas. Brīvā vieta šobrīd ir: %1 MiB "
-"(%2%)."
+"Jūsu „%1“ nodalījumā sāk trūkt vietas. Brīvā vieta šobrīd ir: %2 MiB (%3 %)."
 
 #: module.cpp:107
-#, fuzzy, kde-format
-#| msgid ""
-#| "Your Root partition is running out of disk space, you have %1 MiB "
-#| "remaining (%2%)."
+#, kde-format
 msgid ""
 "Your Root partition is running out of disk space; %1 MiB of space remaining "
 "(%2%)."
 msgstr ""
-"Jūsu saknes nodalījumā sāk trūkt diska vietas. Brīvā vieta šobrīd ir: %1 MiB "
-"(%2%)."
+"Jūsu saknes nodalījumā sāk trūkt vietas. Brīvā vieta šobrīd ir: %1 MiB (%2 "
+"%)."
 
 #: module.cpp:109
-#, fuzzy, kde-format
-#| msgid ""
-#| "Your Home folder is running out of disk space, you have %1 MiB remaining "
-#| "(%2%)."
+#, kde-format
 msgid ""
 "Your Home folder is running out of disk space; %1 MiB of space remaining "
 "(%2%)."
 msgstr ""
-"Jūsu „Mājas“ mapē sāk trūkt diska vietas. Brīvā vieta šobrīd ir: %1 MiB "
-"(%2%)."
+"Jūsu „Mājas“ mapē sāk trūkt vietas. Brīvā vieta šobrīd ir: %1 MiB (%2 %)."
 
 #: module.cpp:134
 #, kde-format
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"
-msgstr "Vispārīgi"
+msgstr "Pamata"
 
 #~ msgctxt ""
 #~ "Warns the user that the system is running low on space on his home "
