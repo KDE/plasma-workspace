@@ -143,7 +143,7 @@ ColumnLayout {
             Notifications.FileMenu {
                 id: otherFileActionsMenu
                 url: modelInterface.jobDetails.effectiveDestUrl
-                onActionTriggered: modelInterface.fileActionInvoked(action)
+                onActionTriggered: action => modelInterface.fileActionInvoked(action)
             }
         }
 
