@@ -11,6 +11,8 @@
 
 #include "ion_bbcukmetdebug.h"
 
+#include <mutex>
+
 #include <KIO/TransferJob>
 #include <KLocalizedString>
 #include <KUnitConversion/Converter>
