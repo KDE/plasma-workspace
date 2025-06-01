@@ -42,7 +42,7 @@ msgstr "Minimalt ledigt utrymme innan användaren blir underrättad."
 #: freespacenotifier.kcfg:15
 #, kde-format
 msgid "Minimum percentage free space before user starts being notified."
-msgstr "Minimalt ledigt utrymme innan användaren blir börjar bli underrättad."
+msgstr "Minimalt ledigt utrymme innan användaren börjar bli underrättad."
 
 #. i18n: ectx: label, entry (enableNotification), group (General)
 #: freespacenotifier.kcfg:21
@@ -78,7 +78,7 @@ msgstr "Och när ledigt utrymme är under:"
 #: freespacenotifier_prefs_base.ui:54
 #, no-c-format, kde-format
 msgid "%"
-msgstr "%"
+msgstr " %"
 
 #. i18n: ectx: property (text), widget (QLabel, label_info)
 #: freespacenotifier_prefs_base.ui:67
