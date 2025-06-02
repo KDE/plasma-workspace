@@ -51,17 +51,45 @@ void PlacesRunner::match(KRunner::RunnerContext &context)
     const bool all = term.compare(i18n("places"), Qt::CaseInsensitive) == 0;
     for (int i = 0; i <= m_places->rowCount(); i++) {
         QModelIndex current_index = m_places->index(i, 0);
+        KRunner::QueryMatch::CategoryRelevance categoryRelevance = KRunner::QueryMatch::CategoryRelevance::Lowest;
         qreal relevance = 0;
 
-        const QString text = m_places->text(current_index);
-        int categoryRelevance = 0;
-        if ((all && !text.isEmpty()) || text.compare(term, Qt::CaseInsensitive) == 0) {
-            categoryRelevance = qToUnderlying(KRunner::QueryMatch::CategoryRelevance::Highest);
-            relevance = all ? 0.9 : 1.0;
-        } else if (text.contains(term, Qt::CaseInsensitive)) {
-            categoryRelevance = qToUnderlying(KRunner::QueryMatch::CategoryRelevance::High);
-            relevance = 0.7;
-        } else {
+        const QString canonicalText = m_places->text(current_index);
+        QStringList texts(canonicalText);
+
+        // For 'Trash', consider additional keywords
+        if (m_places->url(current_index) == QUrl(QStringLiteral("trash:/"))) {
+            texts << i18nc(
+                         "A semicolon (;) separated list of other keywords for the 'Trash' place, such as 'Wastebin' or 'Recycle Bin'. Only include keywords "
+                         "appropriate for the language; do not duplicate the official translation of 'Trash'. For example, if en_GB translates 'Trash' as "
+                         "'Wastebin', don't include 'Wastebin' in the keywords list but include 'Trash' instead.",
+                         "Wastebin;Wastebasket;Recycle Bin")
+                         .split(QStringLiteral(";"));
+        }
+
+        bool matched = false;
+        for (const QString &text : texts) {
+            if ((all && !text.isEmpty()) || text.compare(term, Qt::CaseInsensitive) == 0) {
+                // Best possible match
+                matched = true;
+
+                categoryRelevance = KRunner::QueryMatch::CategoryRelevance::Highest;
+                relevance = all ? 0.9 : 1.0;
+                break;
+            } else if (text.contains(term, Qt::CaseInsensitive)) {
+                // Good match, but keep looking for better
+                matched = true;
+
+                KRunner::QueryMatch::CategoryRelevance thisCategoryRelevance = KRunner::QueryMatch::CategoryRelevance::High;
+                qreal thisRelevance = 0.7;
+                if (thisRelevance > relevance) {
+                    categoryRelevance = thisCategoryRelevance;
+                    relevance = thisRelevance;
+                }
+            }
+        }
+
+        if (!matched) {
             continue;
         }
 
@@ -69,7 +97,7 @@ void PlacesRunner::match(KRunner::RunnerContext &context)
         match.setCategoryRelevance(categoryRelevance);
         match.setRelevance(relevance);
         match.setIcon(m_places->icon(current_index));
-        match.setText(text);
+        match.setText(canonicalText);
 
         // Add category as subtext so one can tell "Pictures" folder from "Search for Pictures"
         // Don't add it if it would match the category ("Places") of the runner to avoid "Places: Pictures (Places)"
