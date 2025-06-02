@@ -28,6 +28,10 @@ void LocaleGeneratorUbuntu::ubuntuInstall(const QStringList &locales)
     QStringList args;
     args.reserve(locales.size());
     for (const auto &locale : locales) {
+        // fallback Locale C does not have language support packages
+        if (locale == QStringLiteral("C")) {
+            continue;
+        }
         auto localeStripped = locale;
         localeStripped.remove(QStringLiteral(".UTF-8"));
         args.append(QStringLiteral("--language=%1").arg(localeStripped));
