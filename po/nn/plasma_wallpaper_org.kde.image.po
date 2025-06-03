@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: KDE 4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-31 00:44+0000\n"
-"PO-Revision-Date: 2024-09-22 16:28+0200\n"
+"PO-Revision-Date: 2025-06-01 15:19+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.11.70\n"
+"X-Generator: Lokalize 25.07.70\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -79,24 +79,22 @@ msgid "Tiled"
 msgstr "Jamsides"
 
 #: imagepackage/contents/ui/config.qml:194
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Set as Wallpaper"
+#, kde-format
 msgctxt "part of a sentence: 'Switch dynamic wallpapers [based on]'"
 msgid "Switch dynamic wallpapers:"
-msgstr "Bruk som bakgrunns­bilete"
+msgstr "Byt dynamiske bakgrunnsbilete:"
 
 #: imagepackage/contents/ui/config.qml:195
 #, kde-format
 msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the color scheme is dark or light"
-msgstr ""
+msgstr "Basert på om fargetemaet er mørkt eller lyst"
 
 #: imagepackage/contents/ui/config.qml:203
 #, kde-format
 msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
 msgid "At sunrise and sunset"
-msgstr ""
+msgstr "Ved soloppgang og solnedgang"
 
 #: imagepackage/contents/ui/config.qml:218
 #, kde-format
@@ -104,7 +102,7 @@ msgctxt ""
 "@label:checkbox Use geolocation services for more accurate sunset and "
 "sunrise times"
 msgid "Use device's current location for more accurate timings"
-msgstr ""
+msgstr "Bruk gjeldande plassering til eininga for meir nøyaktig tid"
 
 #: imagepackage/contents/ui/config.qml:229
 #, kde-format

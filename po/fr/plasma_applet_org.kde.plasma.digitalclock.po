@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-31 00:44+0000\n"
-"PO-Revision-Date: 2025-04-30 15:06+0200\n"
+"PO-Revision-Date: 2025-06-01 19:27+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.04.1\n"
 "X-Text-Markup: kde4\n"
 
 #: package/contents/config/config.qml:20
@@ -286,15 +286,13 @@ msgid "Choose a Font"
 msgstr "Sélectionner une police"
 
 #: package/contents/ui/configCalendar.qml:50
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@option:check formdata label"
 msgid "General:"
 msgstr "Général :"
 
 #: package/contents/ui/configCalendar.qml:51
-#, fuzzy, kde-format
-#| msgid "Show week numbers"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show week numbers"
 msgstr "Afficher les numéros de semaine"
@@ -312,11 +310,10 @@ msgid "Use region defaults"
 msgstr "Utiliser les paramètres régionaux par défaut"
 
 #: package/contents/ui/configCalendar.qml:82
-#, fuzzy, kde-format
-#| msgid "Available Plugins:"
+#, kde-format
 msgctxt "@title:column"
 msgid "Available Add-Ons"
-msgstr "Modules complémentaires disponibles :"
+msgstr "Modules complémentaires disponibles"
 
 #: package/contents/ui/configTimeZones.qml:70
 #, kde-format

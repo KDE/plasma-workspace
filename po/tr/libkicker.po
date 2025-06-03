@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-25 00:43+0000\n"
+"POT-Creation-Date: 2025-06-03 00:44+0000\n"
 "PO-Revision-Date: 2025-01-07 15:08+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -44,7 +44,7 @@ msgstr "Görev Yöneticisine Sabitle"
 msgid "Add to Panel (Widget)"
 msgstr "Araç Takımı Olarak Panele Ekle"
 
-#: actionlist.cpp:313 rootmodel.cpp:526
+#: actionlist.cpp:313 rootmodel.cpp:552
 #, kde-format
 msgid "Recent Files"
 msgstr "Son Dosyalar"
@@ -114,7 +114,7 @@ msgid "Computer"
 msgstr "Bilgisayar"
 
 #. i18n.
-#: kastatsfavoritesmodel.cpp:554 rootmodel.cpp:519 simplefavoritesmodel.cpp:33
+#: kastatsfavoritesmodel.cpp:554 rootmodel.cpp:545 simplefavoritesmodel.cpp:33
 #, kde-format
 msgid "Favorites"
 msgstr "Sık Kullanılanlar"
@@ -164,37 +164,37 @@ msgstr "Tüm Uygulamaları Unut"
 msgid "Forget All Files"
 msgstr "Tüm Dosyaları Unut"
 
-#: rootmodel.cpp:74
+#: rootmodel.cpp:79
 #, kde-format
 msgid "All Applications"
 msgstr "Tüm Uygulamalar"
 
-#: rootmodel.cpp:127
+#: rootmodel.cpp:132
 #, kde-format
 msgid "Hide %1"
 msgstr "%1 Gizle"
 
-#: rootmodel.cpp:513
+#: rootmodel.cpp:539
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "Bu görülmemeli! KICKER_FAVORITES_MODEL’i kullan"
 
-#: rootmodel.cpp:526
+#: rootmodel.cpp:552
 #, kde-format
 msgid "Often Used Files"
 msgstr "Sık Kullanılan Dosyalar"
 
-#: rootmodel.cpp:535
+#: rootmodel.cpp:561
 #, kde-format
 msgid "Recent Applications"
 msgstr "Son Kullanılan Uygulamalar"
 
-#: rootmodel.cpp:535
+#: rootmodel.cpp:561
 #, kde-format
 msgid "Often Used Applications"
 msgstr "Sık Kullanılan Uygulamalar"
 
-#: rootmodel.cpp:550
+#: rootmodel.cpp:576
 #, kde-format
 msgid "Power / Session"
 msgstr "Güç/Oturum"

@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-31 00:44+0000\n"
-"PO-Revision-Date: 2025-05-24 23:40-0300\n"
-"Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
+"PO-Revision-Date: 2025-06-02 00:05-0300\n"
+"Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
@@ -284,15 +284,13 @@ msgid "Choose a Font"
 msgstr "Escolha uma fonte"
 
 #: package/contents/ui/configCalendar.qml:50
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@option:check formdata label"
 msgid "General:"
 msgstr "Geral:"
 
 #: package/contents/ui/configCalendar.qml:51
-#, fuzzy, kde-format
-#| msgid "Show week numbers"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show week numbers"
 msgstr "Mostrar os números das semanas"
@@ -310,11 +308,10 @@ msgid "Use region defaults"
 msgstr "Usar padrões regionais"
 
 #: package/contents/ui/configCalendar.qml:82
-#, fuzzy, kde-format
-#| msgid "Available Plugins:"
+#, kde-format
 msgctxt "@title:column"
 msgid "Available Add-Ons"
-msgstr "Plugins disponíveis:"
+msgstr "Complementos disponíveis"
 
 #: package/contents/ui/configTimeZones.qml:70
 #, kde-format

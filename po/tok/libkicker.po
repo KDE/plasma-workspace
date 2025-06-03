@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-25 00:43+0000\n"
+"POT-Creation-Date: 2025-06-03 00:44+0000\n"
 "PO-Revision-Date: 2022-07-08 04:45+0000\n"
 "Last-Translator: Weblate Admin <admin@example.com>\n"
 "Language-Team: Toki Pona <http://weblate.blackquill.cc/projects/ante-toki-pi-"
@@ -44,7 +44,7 @@ msgstr ""
 msgid "Add to Panel (Widget)"
 msgstr ""
 
-#: actionlist.cpp:313 rootmodel.cpp:526
+#: actionlist.cpp:313 rootmodel.cpp:552
 #, kde-format
 msgid "Recent Files"
 msgstr ""
@@ -114,7 +114,7 @@ msgid "Computer"
 msgstr ""
 
 #. i18n.
-#: kastatsfavoritesmodel.cpp:554 rootmodel.cpp:519 simplefavoritesmodel.cpp:33
+#: kastatsfavoritesmodel.cpp:554 rootmodel.cpp:545 simplefavoritesmodel.cpp:33
 #, kde-format
 msgid "Favorites"
 msgstr ""
@@ -164,37 +164,37 @@ msgstr ""
 msgid "Forget All Files"
 msgstr ""
 
-#: rootmodel.cpp:74
+#: rootmodel.cpp:79
 #, kde-format
 msgid "All Applications"
 msgstr ""
 
-#: rootmodel.cpp:127
+#: rootmodel.cpp:132
 #, kde-format
 msgid "Hide %1"
 msgstr ""
 
-#: rootmodel.cpp:513
+#: rootmodel.cpp:539
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr ""
 
-#: rootmodel.cpp:526
+#: rootmodel.cpp:552
 #, kde-format
 msgid "Often Used Files"
 msgstr ""
 
-#: rootmodel.cpp:535
+#: rootmodel.cpp:561
 #, kde-format
 msgid "Recent Applications"
 msgstr ""
 
-#: rootmodel.cpp:535
+#: rootmodel.cpp:561
 #, kde-format
 msgid "Often Used Applications"
 msgstr ""
 
-#: rootmodel.cpp:550
+#: rootmodel.cpp:576
 #, kde-format
 msgid "Power / Session"
 msgstr ""

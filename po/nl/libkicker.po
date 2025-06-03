@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-25 00:43+0000\n"
+"POT-Creation-Date: 2025-06-03 00:44+0000\n"
 "PO-Revision-Date: 2025-01-07 11:13+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -42,7 +42,7 @@ msgstr "Pin naar takenbeheerder"
 msgid "Add to Panel (Widget)"
 msgstr "Aan paneel toevoegen (widget)"
 
-#: actionlist.cpp:313 rootmodel.cpp:526
+#: actionlist.cpp:313 rootmodel.cpp:552
 #, kde-format
 msgid "Recent Files"
 msgstr "Recente bestanden"
@@ -112,7 +112,7 @@ msgid "Computer"
 msgstr "Computer"
 
 #. i18n.
-#: kastatsfavoritesmodel.cpp:554 rootmodel.cpp:519 simplefavoritesmodel.cpp:33
+#: kastatsfavoritesmodel.cpp:554 rootmodel.cpp:545 simplefavoritesmodel.cpp:33
 #, kde-format
 msgid "Favorites"
 msgstr "Favorieten"
@@ -162,37 +162,37 @@ msgstr "Alle toepassingen vergeten"
 msgid "Forget All Files"
 msgstr "Alle bestanden vergeten"
 
-#: rootmodel.cpp:74
+#: rootmodel.cpp:79
 #, kde-format
 msgid "All Applications"
 msgstr "Alle toepassingen"
 
-#: rootmodel.cpp:127
+#: rootmodel.cpp:132
 #, kde-format
 msgid "Hide %1"
 msgstr "%1 verbergen"
 
-#: rootmodel.cpp:513
+#: rootmodel.cpp:539
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "Dit zou niet zichtbaar moeten zijn! KICKER_FAVORITES_MODEL gebruiken"
 
-#: rootmodel.cpp:526
+#: rootmodel.cpp:552
 #, kde-format
 msgid "Often Used Files"
 msgstr "Vaak gebruikte bestanden"
 
-#: rootmodel.cpp:535
+#: rootmodel.cpp:561
 #, kde-format
 msgid "Recent Applications"
 msgstr "Recente programma's"
 
-#: rootmodel.cpp:535
+#: rootmodel.cpp:561
 #, kde-format
 msgid "Often Used Applications"
 msgstr "Vaak gebruikte toepassingen"
 
-#: rootmodel.cpp:550
+#: rootmodel.cpp:576
 #, kde-format
 msgid "Power / Session"
 msgstr "Energieverbruik / sessie"

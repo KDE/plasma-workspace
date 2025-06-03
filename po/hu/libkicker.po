@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-25 00:43+0000\n"
+"POT-Creation-Date: 2025-06-03 00:44+0000\n"
 "PO-Revision-Date: 2025-01-24 20:48+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -45,7 +45,7 @@ msgstr "Rögzítés a panelen"
 msgid "Add to Panel (Widget)"
 msgstr "Hozzáadás a panelhez (widget)"
 
-#: actionlist.cpp:313 rootmodel.cpp:526
+#: actionlist.cpp:313 rootmodel.cpp:552
 #, kde-format
 msgid "Recent Files"
 msgstr "Legutóbbi fájlok"
@@ -115,7 +115,7 @@ msgid "Computer"
 msgstr "Számítógép"
 
 #. i18n.
-#: kastatsfavoritesmodel.cpp:554 rootmodel.cpp:519 simplefavoritesmodel.cpp:33
+#: kastatsfavoritesmodel.cpp:554 rootmodel.cpp:545 simplefavoritesmodel.cpp:33
 #, kde-format
 msgid "Favorites"
 msgstr "Kedvencek"
@@ -165,37 +165,37 @@ msgstr "Összes alkalmazás elfelejtése"
 msgid "Forget All Files"
 msgstr "Összes fájl elfelejtése"
 
-#: rootmodel.cpp:74
+#: rootmodel.cpp:79
 #, kde-format
 msgid "All Applications"
 msgstr "Minden alkalmazás"
 
-#: rootmodel.cpp:127
+#: rootmodel.cpp:132
 #, kde-format
 msgid "Hide %1"
 msgstr "%1 elrejtése"
 
-#: rootmodel.cpp:513
+#: rootmodel.cpp:539
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "Ennek nem szabadna megjelennie! Használja a KICKER_FAVORITES_MODEL-t"
 
-#: rootmodel.cpp:526
+#: rootmodel.cpp:552
 #, kde-format
 msgid "Often Used Files"
 msgstr "Gyakran használt fájlok"
 
-#: rootmodel.cpp:535
+#: rootmodel.cpp:561
 #, kde-format
 msgid "Recent Applications"
 msgstr "Legutóbbi alkalmazások"
 
-#: rootmodel.cpp:535
+#: rootmodel.cpp:561
 #, kde-format
 msgid "Often Used Applications"
 msgstr "Gyakran használt alkalmazások"
 
-#: rootmodel.cpp:550
+#: rootmodel.cpp:576
 #, kde-format
 msgid "Power / Session"
 msgstr "Energiakezelés / Munkamenet"
