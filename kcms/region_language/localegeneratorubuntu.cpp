@@ -53,8 +53,9 @@ void LocaleGeneratorUbuntu::ubuntuLangCheck(int statusCode, QProcess::ExitStatus
     if (statusCode != 0) {
         // Something wrong with this Ubuntu, don't try further
         Q_EMIT userHasToGenerateManually(i18nc("the arg is the output of failed check-language-support call",
-                                               "check-language-support failed, output: %1",
-                                               QString::fromUtf8(m_proc->readAllStandardOutput())));
+                                               "check-language-support failed, output: %1 %2",
+                                               QString::fromUtf8(m_proc->readAllStandardOutput()),
+                                               QString::fromUtf8(m_proc->readAllStandardError())));
         return;
     }
     const QString output = QString::fromUtf8(m_proc->readAllStandardOutput().simplified());
