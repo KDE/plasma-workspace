@@ -38,6 +38,12 @@ ItemContainer::ItemContainer(QQuickItem *parent)
         setLayout(qobject_cast<AppletsLayout *>(parentItem()));
     });
 
+    connect(this, &ItemContainer::activeFocusChanged, this, [this]() {
+        if (!hasActiveFocus()) { // don't start edit mode if press caused a popup
+            m_editModeTimer->stop();
+        }
+    });
+
     connect(m_editModeTimer, &QTimer::timeout, this, [this]() {
         setEditMode(true);
     });
