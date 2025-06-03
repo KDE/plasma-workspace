@@ -257,6 +257,7 @@ public:
     }
     const QString id;
     QString name;
+    uint position = 0;
 Q_SIGNALS:
     void done();
     void activated();
@@ -265,6 +266,10 @@ protected:
     void org_kde_plasma_virtual_desktop_name(const QString &name) override
     {
         this->name = name;
+    }
+    void org_kde_plasma_virtual_desktop_position(uint32_t index) override
+    {
+        this->position = index;
     }
     void org_kde_plasma_virtual_desktop_done() override
     {
@@ -282,7 +287,7 @@ class PlasmaVirtualDesktopManagement : public QWaylandClientExtensionTemplate<Pl
     Q_OBJECT
 public:
     PlasmaVirtualDesktopManagement()
-        : QWaylandClientExtensionTemplate(2)
+        : QWaylandClientExtensionTemplate(4)
     {
         connect(this, &QWaylandClientExtension::activeChanged, this, [this] {
             if (!isActive()) {
@@ -436,7 +441,11 @@ int VirtualDesktopInfo::WaylandPrivate::numberOfDesktops() const
 
 quint32 VirtualDesktopInfo::WaylandPrivate::position(const QVariant &desktop) const
 {
-    return std::distance(virtualDesktops.begin(), findDesktop(desktop.toString()));
+    // return std::distance(virtualDesktops.begin(), findDesktop(desktop.toString()));
+    if (auto it = findDesktop(desktop.toString()); it != virtualDesktops.end()) {
+        return (*it)->position;
+    }
+    return 0;
 }
 
 QVariantList VirtualDesktopInfo::WaylandPrivate::desktopIds() const
