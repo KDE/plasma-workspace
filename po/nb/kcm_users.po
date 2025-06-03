@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-08 02:42+0000\n"
-"PO-Revision-Date: 2025-02-20 21:13+0100\n"
+"PO-Revision-Date: 2025-05-31 21:05+0200\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
 "Language: nb\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.2\n"
+"X-Generator: Lokalize 25.04.1\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -482,7 +482,7 @@ msgid ""
 "fingerprint is not yet supported."
 msgstr ""
 "Fingeravtrykk kan brukes i stedet for passord for å låse opp skjermen og gi "
-"administratorrettigheter til brukerprogram og kommandolinjeprogram som spør "
+"administratortillatelser til brukerprogram og kommandolinjeprogram som spør "
 "om det.<nl/><nl/>Systempålogging med fingeravtrykk er ennå ikke støttet."
 
 #: src/fingerprintmodel.cpp:151 src/fingerprintmodel.cpp:258
@@ -535,7 +535,7 @@ msgstr "Det oppstod en ukjent feil."
 #: src/user.cpp:279
 #, kde-format
 msgid "Could not get permission to save user %1"
-msgstr "Fikk ikke rettighet til å lagre brukeren %1"
+msgstr "Fikk ikke tillatelse til å lagre brukeren %1"
 
 #: src/user.cpp:284
 #, kde-format
