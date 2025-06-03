@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_engine_weather\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-26 00:43+0000\n"
+"POT-Creation-Date: 2025-06-03 02:41+0000\n"
 "PO-Revision-Date: 2024-06-15 14:50+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -2699,19 +2699,19 @@ msgctxt "weather forecast"
 msgid "Windy"
 msgstr "Ventoso"
 
-#: ions/bbcukmet/ion_bbcukmet.cpp:699 ions/dwd/ion_dwd.cpp:501
+#: ions/bbcukmet/ion_bbcukmet.cpp:701 ions/dwd/ion_dwd.cpp:501
 #, kde-format
 msgctxt "Short for Today"
 msgid "Today"
 msgstr "Hoxe"
 
-#: ions/bbcukmet/ion_bbcukmet.cpp:699
+#: ions/bbcukmet/ion_bbcukmet.cpp:701
 #, kde-format
 msgctxt "Short for Tonight"
 msgid "Tonight"
 msgstr "Esta noite"
 
-#: ions/bbcukmet/ion_bbcukmet.cpp:720
+#: ions/bbcukmet/ion_bbcukmet.cpp:722
 #, kde-format
 msgctxt "credit line, keep string short"
 msgid "Data from BBC Weather"

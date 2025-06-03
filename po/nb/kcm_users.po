@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-23 00:44+0000\n"
-"PO-Revision-Date: 2025-02-20 21:13+0100\n"
+"PO-Revision-Date: 2025-05-31 21:05+0200\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
 "Language: nb\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.2\n"
+"X-Generator: Lokalize 25.04.1\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -533,14 +533,13 @@ msgstr "Bruk plassholderikon for avatar"
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User Without Deleting Files?"
-msgstr ""
+msgstr "Slett innlogget bruker uten å slette filene?"
 
 #: src/ui/UserDetailsPage.qml:115
-#, fuzzy, kde-format
-#| msgid "Delete User…"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User?"
-msgstr "Slett bruker …"
+msgstr "Slett innlogget bruker?"
 
 #: src/ui/UserDetailsPage.qml:117
 #, kde-kuit-format
@@ -550,6 +549,9 @@ msgid ""
 "account instead?<nl/><nl/>This will make %1 unable to log in again, and they "
 "may experience strange behaviors until they log out."
 msgstr ""
+"%1 er logget inn, så filene deres kan ikke slettes. Slett bare kontoen i "
+"stedet?<nl/> <nl/> Dette vil gjøre at %1 ikke kan logge inn igjen, og de kan "
+"oppleve feil fremtil de logger ut."
 
 #: src/ui/UserDetailsPage.qml:118
 #, kde-format
@@ -558,13 +560,14 @@ msgid ""
 "%1 is currently logged in. Deleting the account will make them unable to log "
 "in again, and they may experience strange behaviors until they log out."
 msgstr ""
+"%1 er logget inn. Dette vil gjøre at ikke kan logge inn igjen, og de kan "
+"oppleve feil fremtil de logger ut."
 
 #: src/ui/UserDetailsPage.qml:125
-#, fuzzy, kde-format
-#| msgid "Delete files"
+#, kde-format
 msgctxt "@action: button"
 msgid "Delete %1"
-msgstr "Slett filer"
+msgstr "Slett %1"
 
 #: src/ui/UserDetailsPage.qml:144
 #, kde-format
@@ -617,7 +620,7 @@ msgid ""
 "fingerprint is not yet supported."
 msgstr ""
 "Fingeravtrykk kan brukes i stedet for passord for å låse opp skjermen og gi "
-"administratorrettigheter til brukerprogram og kommandolinjeprogram som spør "
+"administratortillatelser til brukerprogram og kommandolinjeprogram som spør "
 "om det.<nl/><nl/>Systempålogging med fingeravtrykk er ennå ikke støttet."
 
 #: src/user.cpp:141
@@ -629,7 +632,7 @@ msgstr "Klarte ikke beskjære bilde: %1"
 #: src/user.cpp:337
 #, kde-format
 msgid "Could not get permission to save user %1"
-msgstr "Fikk ikke rettighet til å lagre brukeren %1"
+msgstr "Fikk ikke tillatelse til å lagre brukeren %1"
 
 #: src/user.cpp:342
 #, kde-format

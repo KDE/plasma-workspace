@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-26 00:43+0000\n"
+"POT-Creation-Date: 2025-06-03 02:41+0000\n"
 "PO-Revision-Date: 2024-06-27 20:44+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -2698,19 +2698,19 @@ msgctxt "weather forecast"
 msgid "Windy"
 msgstr "Ветрено"
 
-#: ions/bbcukmet/ion_bbcukmet.cpp:699 ions/dwd/ion_dwd.cpp:501
+#: ions/bbcukmet/ion_bbcukmet.cpp:701 ions/dwd/ion_dwd.cpp:501
 #, kde-format
 msgctxt "Short for Today"
 msgid "Today"
 msgstr "Сегодня"
 
-#: ions/bbcukmet/ion_bbcukmet.cpp:699
+#: ions/bbcukmet/ion_bbcukmet.cpp:701
 #, kde-format
 msgctxt "Short for Tonight"
 msgid "Tonight"
 msgstr "Ночью"
 
-#: ions/bbcukmet/ion_bbcukmet.cpp:720
+#: ions/bbcukmet/ion_bbcukmet.cpp:722
 #, kde-format
 msgctxt "credit line, keep string short"
 msgid "Data from BBC Weather"
