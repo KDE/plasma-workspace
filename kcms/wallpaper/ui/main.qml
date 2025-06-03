@@ -24,7 +24,7 @@ import org.kde.plasma.configuration 2.0
 Kirigami.ScrollablePage {
     id: appearanceRoot
 
-    title: i18nc("@title:window", "Wallpaper")
+    title: i18ndc("plasma_shell_org.kde.plasma.desktop", "@title:window", "Wallpaper")
 
     signal configurationChanged
 
@@ -38,7 +38,7 @@ Kirigami.ScrollablePage {
     actions: [
         Kirigami.Action {
             id: allScreensAction
-            text: i18nc("@option:check Set the wallpaper for all screens","Set for all screens")
+            text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@option:check Set the wallpaper for all screens", "Set for all screens")
             visible: kcm.screens.length > 1
             checkable: true
             checked: kcm.allScreens
