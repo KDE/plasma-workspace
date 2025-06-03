@@ -39,7 +39,7 @@ Item {
         id: fileMenu
         url: thumbnailer.url
         visualParent: menuButton
-        onActionTriggered: modelInterface.fileActionInvoked(action)
+        onActionTriggered: action => modelInterface.fileActionInvoked(action)
     }
 
     Notifications.Thumbnailer {
