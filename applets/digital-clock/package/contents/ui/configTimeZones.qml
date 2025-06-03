@@ -249,12 +249,8 @@ Kirigami.PageRow {
                 enabled: enableWheelCheckBox.enabled
                 color: enabled ? Kirigami.Theme.textColor : Kirigami.Theme.disabledTextColor
                 Layout.fillWidth: true
-                Layout.leftMargin: Application.layoutDirection === Qt.LeftToRight
-                    ? enableWheelCheckBox.indicator.width + enableWheelCheckBox.spacing
-                    : Kirigami.Units.largeSpacing * 2
-                Layout.rightMargin: Application.layoutDirection === Qt.LeftToRight
-                    ? Kirigami.Units.largeSpacing * 2
-                    : enableWheelCheckBox.indicator.width + enableWheelCheckBox.spacing
+                Layout.leftMargin: enableWheelCheckBox.indicator.width + enableWheelCheckBox.spacing
+                Layout.rightMargin: Kirigami.Units.largeSpacing * 2
                 text: i18n("Using this feature does not change the systemwide time zone. When you travel, switch the systemwide time zone instead.")
                 textFormat: Text.PlainText
                 font: Kirigami.Theme.smallFont

@@ -277,8 +277,7 @@ KCMUtils.SimpleKCM {
 
             QQC2.Label {
                 text: i18nc("@label", "Text will follow the system font and expand to fill the available space.")
-                Layout.leftMargin: Application.layoutDirection === Qt.LeftToRight ? autoFontAndSizeRadioButton.indicator.width + autoFontAndSizeRadioButton.spacing : Layout.margins
-                Layout.rightMargin: Application.layoutDirection !== Qt.LeftToRight ? autoFontAndSizeRadioButton.indicator.width + autoFontAndSizeRadioButton.spacing : Layout.margins
+                Layout.leftMargin: autoFontAndSizeRadioButton.indicator.width + autoFontAndSizeRadioButton.spacing
                 textFormat: Text.PlainText
                 Layout.fillWidth: true
                 wrapMode: Text.Wrap
@@ -317,16 +316,14 @@ KCMUtils.SimpleKCM {
 
             QQC2.Label {
                 visible: manualFontAndSizeRadioButton.checked
-                Layout.leftMargin: Application.layoutDirection === Qt.LeftToRight ? manualFontAndSizeRadioButton.indicator.width + manualFontAndSizeRadioButton.spacing : Layout.margins
-                Layout.rightMargin: Application.layoutDirection !== Qt.LeftToRight ? manualFontAndSizeRadioButton.indicator.width + manualFontAndSizeRadioButton.spacing : Layout.margins
+                Layout.leftMargin: manualFontAndSizeRadioButton.indicator.width + manualFontAndSizeRadioButton.spacing
                 text: i18nc("@info %1 is the font size, %2 is the font family", "%1pt %2", cfg_fontSize, fontDialog.fontChosen.family)
                 textFormat: Text.PlainText
                 font: fontDialog.fontChosen
             }
             QQC2.Label {
                 visible: manualFontAndSizeRadioButton.checked
-                Layout.leftMargin: Application.layoutDirection === Qt.LeftToRight ? manualFontAndSizeRadioButton.indicator.width + manualFontAndSizeRadioButton.spacing : Layout.margins
-                Layout.rightMargin: Application.layoutDirection !== Qt.LeftToRight ? manualFontAndSizeRadioButton.indicator.width + manualFontAndSizeRadioButton.spacing : Layout.margins
+                Layout.leftMargin: manualFontAndSizeRadioButton.indicator.width + manualFontAndSizeRadioButton.spacing
                 text: i18nc("@info", "Note: size may be reduced if the panel is not thick enough.")
                 textFormat: Text.PlainText
                 font: Kirigami.Theme.smallFont
