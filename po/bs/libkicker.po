@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kde 49i410\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-25 00:43+0000\n"
+"POT-Creation-Date: 2025-06-04 02:35+0000\n"
 "PO-Revision-Date: 2015-02-04 15:12+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian\n"
@@ -45,7 +45,7 @@ msgstr ""
 msgid "Add to Panel (Widget)"
 msgstr "Dodaj na panel"
 
-#: actionlist.cpp:313 rootmodel.cpp:526
+#: actionlist.cpp:313 rootmodel.cpp:552
 #, fuzzy, kde-format
 #| msgid "Recent Documents"
 msgid "Recent Files"
@@ -119,7 +119,7 @@ msgid "Computer"
 msgstr ""
 
 #. i18n.
-#: kastatsfavoritesmodel.cpp:554 rootmodel.cpp:519 simplefavoritesmodel.cpp:33
+#: kastatsfavoritesmodel.cpp:554 rootmodel.cpp:545 simplefavoritesmodel.cpp:33
 #, fuzzy, kde-format
 msgid "Favorites"
 msgstr "Dodaj u omiljene"
@@ -169,37 +169,37 @@ msgstr "Zaboravi sve aplikacije"
 msgid "Forget All Files"
 msgstr "Zaboravi sve dokumente"
 
-#: rootmodel.cpp:74
+#: rootmodel.cpp:79
 #, fuzzy, kde-format
 msgid "All Applications"
 msgstr "Zaboravi sve aplikacije"
 
-#: rootmodel.cpp:127
+#: rootmodel.cpp:132
 #, kde-format
 msgid "Hide %1"
 msgstr ""
 
-#: rootmodel.cpp:513
+#: rootmodel.cpp:539
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr ""
 
-#: rootmodel.cpp:526
+#: rootmodel.cpp:552
 #, fuzzy, kde-format
 msgid "Often Used Files"
 msgstr "Skorašnji dokumenti"
 
-#: rootmodel.cpp:535
+#: rootmodel.cpp:561
 #, kde-format
 msgid "Recent Applications"
 msgstr "Skorašnji programi"
 
-#: rootmodel.cpp:535
+#: rootmodel.cpp:561
 #, fuzzy, kde-format
 msgid "Often Used Applications"
 msgstr "Skorašnji programi"
 
-#: rootmodel.cpp:550
+#: rootmodel.cpp:576
 #, kde-format
 msgid "Power / Session"
 msgstr "Napajanje / Sesija"

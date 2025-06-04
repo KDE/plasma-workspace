@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.homerun\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-25 00:43+0000\n"
+"POT-Creation-Date: 2025-06-04 02:35+0000\n"
 "PO-Revision-Date: 2012-09-21 16:01-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -42,7 +42,7 @@ msgstr ""
 msgid "Add to Panel (Widget)"
 msgstr ""
 
-#: actionlist.cpp:313 rootmodel.cpp:526
+#: actionlist.cpp:313 rootmodel.cpp:552
 #, fuzzy, kde-format
 #| msgid "Applications"
 msgid "Recent Files"
@@ -113,7 +113,7 @@ msgid "Computer"
 msgstr ""
 
 #. i18n.
-#: kastatsfavoritesmodel.cpp:554 rootmodel.cpp:519 simplefavoritesmodel.cpp:33
+#: kastatsfavoritesmodel.cpp:554 rootmodel.cpp:545 simplefavoritesmodel.cpp:33
 #, fuzzy, kde-format
 msgid "Favorites"
 msgstr "Áiteanna Is Ansa Liom"
@@ -164,38 +164,38 @@ msgstr "Feidhmchláir Is Ansa Leat"
 msgid "Forget All Files"
 msgstr "Feidhmchláir Is Ansa Leat"
 
-#: rootmodel.cpp:74
+#: rootmodel.cpp:79
 #, kde-format
 msgid "All Applications"
 msgstr "Gach Feidhmchlár"
 
-#: rootmodel.cpp:127
+#: rootmodel.cpp:132
 #, kde-format
 msgid "Hide %1"
 msgstr ""
 
-#: rootmodel.cpp:513
+#: rootmodel.cpp:539
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr ""
 
-#: rootmodel.cpp:526
+#: rootmodel.cpp:552
 #, fuzzy, kde-format
 #| msgid "Installed Applications"
 msgid "Often Used Files"
 msgstr "Feidhmchláir Shuiteáilte"
 
-#: rootmodel.cpp:535
+#: rootmodel.cpp:561
 #, fuzzy, kde-format
 msgid "Recent Applications"
 msgstr "Feidhmchláir"
 
-#: rootmodel.cpp:535
+#: rootmodel.cpp:561
 #, fuzzy, kde-format
 msgid "Often Used Applications"
 msgstr "Feidhmchláir Shuiteáilte"
 
-#: rootmodel.cpp:550
+#: rootmodel.cpp:576
 #, fuzzy, kde-format
 msgid "Power / Session"
 msgstr "Seisiún"
