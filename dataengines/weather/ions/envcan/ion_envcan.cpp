@@ -17,6 +17,8 @@
 #include <QRegularExpression>
 #include <QTimeZone>
 
+using namespace Qt::StringLiterals;
+
 WeatherData::WeatherData()
     : stationLatitude(qQNaN())
     , stationLongitude(qQNaN())
@@ -490,7 +492,7 @@ bool EnvCanadaIon::updateIonSource(const QString &source)
 void EnvCanadaIon::getXMLSetup()
 {
     // If network is down, we need to spin and wait
-    const QUrl url(QStringLiteral("https://dd.weather.gc.ca/citypage_weather/xml/siteList.xml"));
+    const QUrl url(QStringLiteral("https://dd.weather.gc.ca/today/citypage_weather/xml/siteList.xml"));
     qCDebug(IONENGINE_ENVCAN) << "Fetching station list:" << url;
 
     KIO::TransferJob *getJob = KIO::get(url, KIO::NoReload, KIO::HideProgressInfo);
@@ -516,7 +518,7 @@ void EnvCanadaIon::getXMLData(const QString &source)
     const XMLMapInfo &place = m_places[dataKey];
 
     const QUrl url(QStringLiteral("https://dd.weather.gc.ca/citypage_weather/xml/%1/%2_e.xml").arg(place.territoryName, place.cityCode));
-    qCDebug(IONENGINE_ENVCAN) << "Fetching weather URL:" << url;
+    qCDebug(IONENGINE_ENVCAN) << "Fetching legacy weather URL:" << url;
 
     if (place.territoryName.isEmpty() && place.cityCode.isEmpty()) {
         setData(source, QStringLiteral("validate"), QStringLiteral("envcan|malformed"));
@@ -524,6 +526,51 @@ void EnvCanadaIon::getXMLData(const QString &source)
     }
 
     KIO::TransferJob *getJob = KIO::get(url, KIO::Reload, KIO::HideProgressInfo);
+
+    m_jobXml.insert(getJob, new QXmlStreamReader);
+    m_jobList.insert(getJob, source);
+
+    connect(getJob, &KIO::TransferJob::data, this, &EnvCanadaIon::slotDataArrived);
+    connect(getJob, &KJob::result, this, &EnvCanadaIon::slotJobFinished);
+}
+
+// The weather URL has a dynamic name and path depending on its timestamp:
+// https://dd.weather.gc.ca/today/citypage_weather/{PROV}/{HH}/{YYYYMMDD}T{HHmmss.sss}Z_MSC_CitypageWeather_{SiteCode}_en.xml
+// This method is called iteratively 3 times to get the URL and then the weather report
+void EnvCanadaIon::getWeatherData(const QString &source)
+{
+    WeatherData::UrlInfo &info = m_weatherData[source].urlInfo;
+
+    info.requests++;
+    if (info.requests > 3) {
+        qCWarning(IONENGINE_ENVCAN) << "Too many requests to find the weather URL";
+        return;
+    }
+
+    // We get the place info from the stations list
+    if (info.cityCode.isEmpty()) {
+        QString dataKey = source;
+        dataKey.remove(QStringLiteral("envcan|weather|"));
+        const XMLMapInfo &place = m_places[dataKey];
+
+        info.province = place.territoryName;
+        info.cityCode = place.cityCode;
+    }
+
+    // 1. Base URL, on the territory dir, to get the list of hours
+    QString url = u"https://dd.weather.gc.ca/today/citypage_weather/%1/"_s.arg(info.province);
+    // 2. When we know the hour folder, we check for the weather report files
+    if (!info.hour.isEmpty()) {
+        url += info.hour + u"/";
+    }
+    // 3. Now we have the full information to compose the URL
+    if (!info.fileName.isEmpty()) {
+        url += info.fileName;
+    }
+
+    qCDebug(IONENGINE_ENVCAN) << "Fetching weather URL:" << url;
+
+    KIO::TransferJob *getJob = KIO::get(QUrl(url), KIO::Reload, KIO::HideProgressInfo);
 
     m_jobXml.insert(getJob, new QXmlStreamReader);
     m_jobList.insert(getJob, source);
@@ -550,7 +597,13 @@ void EnvCanadaIon::slotDataArrived(KIO::Job *job, const QByteArray &data)
         return;
     }
 
-    // Send to xml.
+    // Remove the HTML doctype line from XML parsing
+    if (data.startsWith("<!DOCTYPE"_ba)) {
+        int newLinePos = data.indexOf('\n');
+        m_jobXml[job]->addData(QByteArrayView(data).slice(newLinePos + 1));
+        return;
+    }
+
     m_jobXml[job]->addData(data);
 }
 
@@ -560,8 +613,14 @@ void EnvCanadaIon::slotJobFinished(KJob *job)
     const QString source = m_jobList.value(job);
     setData(source, Data());
     QXmlStreamReader *reader = m_jobXml.value(job);
-    if (reader) {
+    if (!job->error() && reader) {
         readXMLData(m_jobList[job], *reader);
+    }
+
+    if (job->error() == KIO::ERR_DOES_NOT_EXIST || qobject_cast<KIO::TransferJob *>(job)->isErrorPage()) {
+        qCDebug(IONENGINE_ENVCAN) << "Legacy page not found. Falling back to new API";
+        m_weatherData[source].urlInfo = WeatherData::UrlInfo();
+        getWeatherData(source);
     }
 
     m_jobList.remove(job);
@@ -686,6 +745,11 @@ bool EnvCanadaIon::readXMLData(const QString &source, QXmlStreamReader &xml)
         if (xml.isStartElement()) {
             if (xml.name() == QLatin1String("siteData")) {
                 parseWeatherSite(data, xml);
+            } else if (xml.name() == QLatin1String("html")) {
+                auto &urlInfo = m_weatherData[source].urlInfo;
+                parseDirListing(urlInfo, xml);
+                getWeatherData(source);
+                return !xml.hasError();
             } else {
                 parseUnknownElement(xml);
             }
@@ -731,6 +795,50 @@ bool EnvCanadaIon::readXMLData(const QString &source, QXmlStreamReader &xml)
     }
 
     return !xml.error();
+}
+
+void EnvCanadaIon::parseDirListing(WeatherData::UrlInfo &info, QXmlStreamReader &xml)
+{
+    const bool expectingFileNames = !info.hour.isEmpty();
+
+    while (!xml.atEnd()) {
+        xml.readNext();
+
+        // We are parsing a directory listing with files or folders as hyperlinks
+        if (xml.isStartElement() && xml.name() == "a"_L1) {
+            QString item = xml.attributes().value(u"href").toString().trimmed();
+
+            // Check for hour folders
+            if (!expectingFileNames && item.endsWith('/'_L1)) {
+                item.slice(0, item.length() - 1);
+
+                bool isHour = false;
+                const int hour = item.toInt(&isHour);
+
+                if (isHour && hour > info.hour.toInt()) {
+                    info.hour = item;
+                    continue;
+                }
+            }
+
+            // Check just for files that match our city code en English language
+            if (!item.endsWith(u"%1_en.xml"_s.arg(info.cityCode))) {
+                continue;
+            }
+
+            info.fileName = item;
+        }
+    }
+
+    // If we didn't find the filename in the current hour folder
+    // set it up to check on the previous one
+    if (expectingFileNames && info.fileName.isEmpty()) {
+        const int currentHour = info.hour.toInt();
+        if (currentHour > 0) {
+            info.hour = QString::number(currentHour - 1).rightJustified(2, u'0');
+            info.requests--;
+        }
+    }
 }
 
 void EnvCanadaIon::parseFloat(float &value, QXmlStreamReader &xml)
