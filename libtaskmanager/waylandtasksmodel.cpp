@@ -1240,14 +1240,14 @@ void WaylandTasksModel::requestActivities(const QModelIndex &index, const QStrin
     const auto plasmaActivities = window->activities;
     const auto oldActivities = QSet(plasmaActivities.begin(), plasmaActivities.end());
 
-    const auto activitiesToAdd = newActivities - oldActivities;
-    for (const auto &activity : activitiesToAdd) {
-        window->request_enter_activity(activity);
-    }
-
     const auto activitiesToRemove = oldActivities - newActivities;
     for (const auto &activity : activitiesToRemove) {
         window->request_leave_activity(activity);
+    }
+
+    const auto activitiesToAdd = newActivities - oldActivities;
+    for (const auto &activity : activitiesToAdd) {
+        window->request_enter_activity(activity);
     }
 }
 
