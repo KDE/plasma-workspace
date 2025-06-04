@@ -119,6 +119,17 @@ public:
     float recordSnow;
 
     bool isNight = false;
+
+    // Fields to get the forecast url
+    struct UrlInfo {
+        QString province;
+        QString cityCode;
+        QString hour;
+        QString fileName;
+        int requests = 0;
+    };
+
+    UrlInfo urlInfo;
 };
 
 Q_DECLARE_TYPEINFO(WeatherData::WeatherEvent, Q_RELOCATABLE_TYPE);
@@ -168,6 +179,11 @@ private:
     // Load and parse the specific place(s)
     void getXMLData(const QString &source);
     bool readXMLData(const QString &source, QXmlStreamReader &xml);
+
+    // New API on envcan: need to get a specifically named file
+    void getWeatherData(const QString &source);
+    // Parse a directory listing with files or folders as hyperlinks
+    void parseDirListing(WeatherData::UrlInfo &info, QXmlStreamReader &xml);
 
     // Check if place specified is valid or not
     QStringList validate(const QString &source) const;
