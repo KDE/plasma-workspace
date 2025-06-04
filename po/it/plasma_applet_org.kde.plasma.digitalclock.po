@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-31 00:44+0000\n"
+"POT-Creation-Date: 2025-06-04 00:44+0000\n"
 "PO-Revision-Date: 2025-04-28 09:00+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -247,25 +247,25 @@ msgstr ""
 "Il testo seguirà il carattere del sistema e si espanderà per riempire lo "
 "spazio disponibile."
 
-#: package/contents/ui/configAppearance.qml:294
+#: package/contents/ui/configAppearance.qml:293
 #, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
 msgstr "Manuale"
 
-#: package/contents/ui/configAppearance.qml:304
+#: package/contents/ui/configAppearance.qml:303
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
 msgstr "Scegli stile…"
 
-#: package/contents/ui/configAppearance.qml:322
+#: package/contents/ui/configAppearance.qml:320
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
 msgstr "%1pt %2"
 
-#: package/contents/ui/configAppearance.qml:330
+#: package/contents/ui/configAppearance.qml:327
 #, kde-format
 msgctxt "@info"
 msgid "Note: size may be reduced if the panel is not thick enough."
@@ -273,7 +273,7 @@ msgstr ""
 "Nota: le dimensioni potrebbero ridursi se il pannello non è sufficientemente "
 "spesso."
 
-#: package/contents/ui/configAppearance.qml:344
+#: package/contents/ui/configAppearance.qml:341
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
@@ -386,7 +386,7 @@ msgstr ""
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr "Cambia il fuso orario visualizzato scorrendo sull'applet dell'orologio"
 
-#: package/contents/ui/configTimeZones.qml:258
+#: package/contents/ui/configTimeZones.qml:254
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
@@ -395,7 +395,7 @@ msgstr ""
 "L'utilizzo di questa funzionalità non modifica il fuso orario a livello di "
 "sistema. Quando viaggi, cambia invece il fuso orario di sistema."
 
-#: package/contents/ui/configTimeZones.qml:268
+#: package/contents/ui/configTimeZones.qml:264
 #, kde-format
 msgid "Choose Time Zone"
 msgstr "Scegli il fuso orario"

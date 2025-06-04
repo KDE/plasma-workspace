@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-31 00:44+0000\n"
+"POT-Creation-Date: 2025-06-04 00:44+0000\n"
 "PO-Revision-Date: 2024-12-15 19:31+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Hindi <kde-i18n-doc@kde.org>\n"
@@ -264,31 +264,31 @@ msgid ""
 "Text will follow the system font and expand to fill the available space."
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:294
+#: package/contents/ui/configAppearance.qml:293
 #, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:304
+#: package/contents/ui/configAppearance.qml:303
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:322
+#: package/contents/ui/configAppearance.qml:320
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:330
+#: package/contents/ui/configAppearance.qml:327
 #, kde-format
 msgctxt "@info"
 msgid "Note: size may be reduced if the panel is not thick enough."
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:344
+#: package/contents/ui/configAppearance.qml:341
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
@@ -406,7 +406,7 @@ msgstr ""
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr "घड़ी एप्लेट पर स्क्रॉल करके प्रदर्शित समय क्षेत्र बदलें"
 
-#: package/contents/ui/configTimeZones.qml:258
+#: package/contents/ui/configTimeZones.qml:254
 #, fuzzy, kde-format
 #| msgid ""
 #| "Note that using a different time zone for the clock does not change the "
@@ -419,7 +419,7 @@ msgstr ""
 "ध्यान दें कि घड़ी के लिए किसी भिन्न समय क्षेत्र का उपयोग करने से तंत्रव्यापी स्थानीय समय "
 "क्षेत्र नहीं बदलता है। जब आप यात्रा करते हैं, तो इसके बजाय स्थानीय समय क्षेत्र बदलें।"
 
-#: package/contents/ui/configTimeZones.qml:268
+#: package/contents/ui/configTimeZones.qml:264
 #, fuzzy, kde-format
 #| msgid "Time Zones"
 msgid "Choose Time Zone"

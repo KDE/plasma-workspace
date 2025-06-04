@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-31 00:44+0000\n"
+"POT-Creation-Date: 2025-06-04 00:44+0000\n"
 "PO-Revision-Date: 2025-05-31 21:57+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -251,31 +251,31 @@ msgstr ""
 "Besedilo bo sledilo sistemski pisavi in bo razširjeno, da zapolni "
 "razpoložljivi prostor."
 
-#: package/contents/ui/configAppearance.qml:294
+#: package/contents/ui/configAppearance.qml:293
 #, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
 msgstr "Ročno"
 
-#: package/contents/ui/configAppearance.qml:304
+#: package/contents/ui/configAppearance.qml:303
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
 msgstr "Izbor sloga …"
 
-#: package/contents/ui/configAppearance.qml:322
+#: package/contents/ui/configAppearance.qml:320
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
 msgstr "%1 pik %2"
 
-#: package/contents/ui/configAppearance.qml:330
+#: package/contents/ui/configAppearance.qml:327
 #, kde-format
 msgctxt "@info"
 msgid "Note: size may be reduced if the panel is not thick enough."
 msgstr "Opomba: velikost se lahko zmanjša, če plošča ni dovolj debela."
 
-#: package/contents/ui/configAppearance.qml:344
+#: package/contents/ui/configAppearance.qml:341
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
@@ -386,7 +386,7 @@ msgstr ""
 "Prikazani časovni pas zamenjaj, ko zavrtim miškin kolešček nad programčkom "
 "ure"
 
-#: package/contents/ui/configTimeZones.qml:258
+#: package/contents/ui/configTimeZones.qml:254
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
@@ -395,7 +395,7 @@ msgstr ""
 "Uporaba te možnosti ne spremeni sistemskega časovnega pasu. Ko potujete, "
 "namesto tega preklopite sistemski časovni pas."
 
-#: package/contents/ui/configTimeZones.qml:268
+#: package/contents/ui/configTimeZones.qml:264
 #, kde-format
 msgid "Choose Time Zone"
 msgstr "Izberi časovni pas"

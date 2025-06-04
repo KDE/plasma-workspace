@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-31 00:44+0000\n"
+"POT-Creation-Date: 2025-06-04 00:44+0000\n"
 "PO-Revision-Date: 2025-05-21 21:50+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -249,31 +249,31 @@ msgstr ""
 "A szöveg a rendszer betűtípusát használja, és kitölti a rendelkezése álló "
 "helyet."
 
-#: package/contents/ui/configAppearance.qml:294
+#: package/contents/ui/configAppearance.qml:293
 #, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
 msgstr "Kézi"
 
-#: package/contents/ui/configAppearance.qml:304
+#: package/contents/ui/configAppearance.qml:303
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
 msgstr "Stílus kiválasztása…"
 
-#: package/contents/ui/configAppearance.qml:322
+#: package/contents/ui/configAppearance.qml:320
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
 msgstr "%1pt %2"
 
-#: package/contents/ui/configAppearance.qml:330
+#: package/contents/ui/configAppearance.qml:327
 #, kde-format
 msgctxt "@info"
 msgid "Note: size may be reduced if the panel is not thick enough."
 msgstr "Megjegyzés: a méret csökkenthető, ha a panel nem elég vastag."
 
-#: package/contents/ui/configAppearance.qml:344
+#: package/contents/ui/configAppearance.qml:341
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
@@ -386,7 +386,7 @@ msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr ""
 "Megjelenített időzónák közti váltás az óra kisalkalmazás feletti görgetéssel"
 
-#: package/contents/ui/configTimeZones.qml:258
+#: package/contents/ui/configTimeZones.qml:254
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
@@ -395,7 +395,7 @@ msgstr ""
 "A funkció használata nem változtatja meg a rendszerszintű időzónát. Ha "
 "utazik, inkább állítsa át azt."
 
-#: package/contents/ui/configTimeZones.qml:268
+#: package/contents/ui/configTimeZones.qml:264
 #, kde-format
 msgid "Choose Time Zone"
 msgstr "Időzóna kiválasztása"

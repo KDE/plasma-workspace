@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-24 00:43+0000\n"
+"POT-Creation-Date: 2025-06-04 00:44+0000\n"
 "PO-Revision-Date: 2024-09-29 20:48+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -37,7 +37,7 @@ msgstr "Tampilkan sembulan"
 msgid "Show in do not disturb mode"
 msgstr "Tampilkan dalam mode jangan mengganggu"
 
-#: ui/ApplicationConfiguration.qml:132 ui/main.qml:187
+#: ui/ApplicationConfiguration.qml:132 ui/main.qml:193
 #, kde-format
 msgid "Show in history"
 msgstr "Tampilkan dalam histori"
@@ -89,19 +89,19 @@ msgstr "Set ulang"
 msgid "Choose sound file"
 msgstr "Pilih file suara"
 
-#: ui/main.qml:46
+#: ui/main.qml:47
 #, kde-format
 msgctxt "@action:button Plasma-specific notifications"
 msgid "System Notifications"
 msgstr "Notifikasi Sistem"
 
-#: ui/main.qml:52
+#: ui/main.qml:53
 #, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Application Settings"
 msgstr "Pengaturan Aplikasi"
 
-#: ui/main.qml:80
+#: ui/main.qml:81
 #, kde-format
 msgid ""
 "Could not find a 'Notifications' widget, which is required for displaying "
@@ -112,42 +112,42 @@ msgstr ""
 "menampilkan notifikasi. Pastikan bahwa itu difungsikan antara di System Tray "
 "atau sebagai widget mandiri."
 
-#: ui/main.qml:91
+#: ui/main.qml:92
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2' instead of Plasma."
 msgstr "Notifikasi saat ini disediakan oleh '%1 %2' bukannya Plasma."
 
-#: ui/main.qml:95
+#: ui/main.qml:96
 #, kde-format
 msgid "Notifications are currently not provided by Plasma."
 msgstr "Notifikasi saat ini tidak disediakan oleh Plasma."
 
-#: ui/main.qml:105
+#: ui/main.qml:111
 #, kde-format
 msgctxt "@title:group"
 msgid "Do Not Disturb mode"
 msgstr "Mode Jangan Ganggu"
 
-#: ui/main.qml:110
+#: ui/main.qml:116
 #, kde-format
 msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "Enable automatically:"
 msgstr "Fungsikan secara otomatis:"
 
-#: ui/main.qml:111
+#: ui/main.qml:117
 #, kde-format
 msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
 msgstr "Ketika layar dicerminkan"
 
-#: ui/main.qml:123
+#: ui/main.qml:129
 #, kde-format
 msgctxt "Automatically enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
 msgstr "Selagi berbagi layar"
 
-#: ui/main.qml:137
+#: ui/main.qml:143
 #, kde-format
 msgctxt ""
 "Automatically enable Do Not Disturb mode while a fullscreen application is "
@@ -155,109 +155,109 @@ msgctxt ""
 msgid "While a fullscreen application is focused"
 msgstr ""
 
-#: ui/main.qml:149
+#: ui/main.qml:155
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
 msgid "Manually toggle with shortcut:"
 msgstr "Jungkit secara manual dengan pintasan:"
 
-#: ui/main.qml:156
+#: ui/main.qml:162
 #, kde-format
 msgctxt "@title:group"
 msgid "Visibility conditions"
 msgstr "Kondisi keterlihatan"
 
-#: ui/main.qml:161
+#: ui/main.qml:167
 #, kde-format
 msgid "Critical notifications:"
 msgstr "Notifikasi kritis"
 
-#: ui/main.qml:162
+#: ui/main.qml:168
 #, kde-format
 msgid "Show in Do Not Disturb mode"
 msgstr "Tampilkan dalam mode Jangan Ganggu"
 
-#: ui/main.qml:174
+#: ui/main.qml:180
 #, kde-format
 msgid "Low priority notifications:"
 msgstr "Notifikasi prioritas rendah:"
 
-#: ui/main.qml:175
+#: ui/main.qml:181
 #, kde-format
 msgid "Show popup"
 msgstr "Tampilkan sembulan"
 
-#: ui/main.qml:204
+#: ui/main.qml:210
 #, kde-format
 msgctxt "@title:group As in: 'notification popups'"
 msgid "Popups"
 msgstr "Sembulan"
 
-#: ui/main.qml:210
+#: ui/main.qml:216
 #, kde-format
 msgctxt "@label"
 msgid "Location:"
 msgstr "Lokasi:"
 
-#: ui/main.qml:211
+#: ui/main.qml:217
 #, kde-format
 msgctxt "Popup position near notification plasmoid"
 msgid "Near notification icon"
 msgstr "Dekat ikon notifikasi"
 
-#: ui/main.qml:248
+#: ui/main.qml:254
 #, kde-format
 msgctxt "@action:button choose custom notification position"
 msgid "Custom…"
 msgstr ""
 
-#: ui/main.qml:257 ui/main.qml:273
+#: ui/main.qml:263 ui/main.qml:279
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
 msgstr[0] "%1 detik"
 msgstr[1] "%1 detik"
 
-#: ui/main.qml:262
+#: ui/main.qml:268
 #, kde-format
 msgctxt "Part of a sentence like, 'Hide popup after n seconds'"
 msgid "Hide after:"
 msgstr "Sembunyikan sesudah:"
 
-#: ui/main.qml:285
+#: ui/main.qml:291
 #, kde-format
 msgctxt "@title:group"
 msgid "Additional feedback"
 msgstr "Respons tambahan"
 
-#: ui/main.qml:291
+#: ui/main.qml:297
 #, kde-format
 msgctxt "Show application jobs in notification widget"
 msgid "Show in notifications"
 msgstr "Tampilkan di dalam notifikasi"
 
-#: ui/main.qml:292
+#: ui/main.qml:298
 #, kde-format
 msgid "Application progress:"
 msgstr "Progres aplikasi:"
 
-#: ui/main.qml:306
+#: ui/main.qml:312
 #, kde-format
 msgctxt "Keep application job popup open for entire duration of job"
 msgid "Keep popup open during progress"
 msgstr "Jaga sembulan terbuka selagi progres"
 
-#: ui/main.qml:319
+#: ui/main.qml:325
 #, kde-format
 msgid "Notification badges:"
 msgstr "Lencana notifikasi:"
 
-#: ui/main.qml:320
+#: ui/main.qml:326
 #, kde-format
 msgid "Show in task manager"
 msgstr "Tampilkan dalam task manager"
 
-#: ui/PopupPositionPage.qml:14
+#: ui/PopupPositionDialog.qml:15
 #, kde-format
 msgid "Popup Position"
 msgstr "Posisi Sembulan"

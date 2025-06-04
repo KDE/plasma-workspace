@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-31 00:44+0000\n"
+"POT-Creation-Date: 2025-06-04 00:44+0000\n"
 "PO-Revision-Date: 2025-05-17 13:24+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -248,31 +248,31 @@ msgstr ""
 "O texto usará a fonte do sistema e expandirase para encher o espazo "
 "dispoñíbel."
 
-#: package/contents/ui/configAppearance.qml:294
+#: package/contents/ui/configAppearance.qml:293
 #, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
 msgstr "Manual"
 
-#: package/contents/ui/configAppearance.qml:304
+#: package/contents/ui/configAppearance.qml:303
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
 msgstr "Escoller o estilo…"
 
-#: package/contents/ui/configAppearance.qml:322
+#: package/contents/ui/configAppearance.qml:320
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
 msgstr "%1p. %2"
 
-#: package/contents/ui/configAppearance.qml:330
+#: package/contents/ui/configAppearance.qml:327
 #, kde-format
 msgctxt "@info"
 msgid "Note: size may be reduced if the panel is not thick enough."
 msgstr "Nota: pode que se reduza o tamaño se o panel non é groso dabondo."
 
-#: package/contents/ui/configAppearance.qml:344
+#: package/contents/ui/configAppearance.qml:341
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
@@ -386,7 +386,7 @@ msgstr ""
 "Cambiar o fuso horario que se amosa desprazando sobre a miniaplicación do "
 "reloxo."
 
-#: package/contents/ui/configTimeZones.qml:258
+#: package/contents/ui/configTimeZones.qml:254
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
@@ -395,7 +395,7 @@ msgstr ""
 "Usar esta funcionalidade non cambia o fuso horario do sistema. Cando viaxe, "
 "cambie mellor o fuso horario do sistema."
 
-#: package/contents/ui/configTimeZones.qml:268
+#: package/contents/ui/configTimeZones.qml:264
 #, kde-format
 msgid "Choose Time Zone"
 msgstr "Escoller o fuso horario"

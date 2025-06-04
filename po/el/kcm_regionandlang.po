@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-01 00:44+0000\n"
+"POT-Creation-Date: 2025-06-04 00:44+0000\n"
 "PO-Revision-Date: 2024-09-19 16:50+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -277,25 +277,27 @@ msgctxt ""
 msgid "%1 (Brazil)"
 msgstr "%1 (Βραζιλία)"
 
-#: localegeneratorubuntu.cpp:42
+#: localegeneratorubuntu.cpp:46
 #, kde-format
 msgctxt "@info:warning"
 msgid "Can't locate executable `check-language-support`"
 msgstr "Αδυανμία εντοπισμού εκτελέσιμου αρχείου `check-language-support`"
 
-#: localegeneratorubuntu.cpp:52
-#, kde-format
+#: localegeneratorubuntu.cpp:56
+#, fuzzy, kde-format
+#| msgctxt "the arg is the output of failed check-language-support call"
+#| msgid "check-language-support failed, output: %1"
 msgctxt "the arg is the output of failed check-language-support call"
-msgid "check-language-support failed, output: %1"
+msgid "check-language-support failed, output: %1 %2"
 msgstr "αποτυχία ελέγχου-υποστήριξης-γλώσσας, έξοδος: %1"
 
-#: localegeneratorubuntu.cpp:83
+#: localegeneratorubuntu.cpp:88
 #, kde-format
 msgctxt "%1 is a list of package names"
 msgid "Not all missing packages managed to resolve! %1"
 msgstr "Δεν κατάφεραν να επιλυθούν όλα τα πακέτα που λείπουν! %1"
 
-#: localegeneratorubuntu.cpp:89
+#: localegeneratorubuntu.cpp:94
 #, kde-format
 msgctxt "%1 is a list of package names"
 msgid "Failed to install package %1"
