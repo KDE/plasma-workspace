@@ -1242,16 +1242,16 @@ QRect ShellCorona::strictAvailableScreenRect(int id) const
         if (v->visibilityMode() == PanelView::AutoHide) {
             switch (v->location()) {
             case Plasma::Types::LeftEdge:
-                rect.setLeft(rect.left() + v->totalThickness());
+                rect.setLeft(rect.left() + v->spaceToReserve());
                 break;
             case Plasma::Types::RightEdge:
-                rect.setRight(rect.right() - v->totalThickness());
+                rect.setRight(rect.right() - v->spaceToReserve());
                 break;
             case Plasma::Types::TopEdge:
-                rect.setTop(rect.top() + v->totalThickness());
+                rect.setTop(rect.top() + v->spaceToReserve());
                 break;
             case Plasma::Types::BottomEdge:
-                rect.setBottom(rect.bottom() - v->totalThickness());
+                rect.setBottom(rect.bottom() - v->spaceToReserve());
             default:
                 break;
             }
@@ -1283,16 +1283,16 @@ QRect ShellCorona::_availableScreenRect(int id) const
         if (v->isVisible() && v->screen() == screen && v->visibilityMode() != PanelView::AutoHide) {
             switch (v->location()) {
             case Plasma::Types::LeftEdge:
-                leftThickness = qMax(leftThickness, v->totalThickness());
+                leftThickness = qMax(leftThickness, v->spaceToReserve());
                 break;
             case Plasma::Types::RightEdge:
-                rightThickness = qMax(rightThickness, v->totalThickness());
+                rightThickness = qMax(rightThickness, v->spaceToReserve());
                 break;
             case Plasma::Types::TopEdge:
-                topThickness = qMax(topThickness, v->totalThickness());
+                topThickness = qMax(topThickness, v->spaceToReserve());
                 break;
             case Plasma::Types::BottomEdge:
-                bottomThickness = qMax(bottomThickness, v->totalThickness());
+                bottomThickness = qMax(bottomThickness, v->spaceToReserve());
             default:
                 break;
             }

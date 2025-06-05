@@ -1540,6 +1540,22 @@ bool PanelView::canSetStrut() const
 #endif
 }
 
+int PanelView::spaceToReserve() const
+{
+    switch (containment()->location()) {
+    case Plasma::Types::TopEdge:
+        return thickness() + m_topFloatingPadding;
+    case Plasma::Types::LeftEdge:
+        return thickness() + m_leftFloatingPadding;
+    case Plasma::Types::RightEdge:
+        return thickness() + m_rightFloatingPadding;
+    case Plasma::Types::BottomEdge:
+        return thickness() + m_bottomFloatingPadding;
+    default:
+        return thickness();
+    }
+}
+
 void PanelView::updateExclusiveZone()
 {
     if (containment() && containment()->isUserConfiguring() && m_layerWindow && m_layerWindow->exclusionZone() == -1) {
@@ -1566,7 +1582,11 @@ void PanelView::updateExclusiveZone()
         switch (m_visibilityMode) {
         case NormalPanel:
             if (m_corona->shouldPanelReserveSpace(this)) {
-                m_layerWindow->setExclusiveZone(thickness());
+                if (m_floatingness == 0) {
+                    m_layerWindow->setExclusiveZone(spaceToReserve());
+                } else {
+                    m_layerWindow->setExclusiveZone(thickness());
+                }
             } else {
                 m_layerWindow->setExclusiveZone(-1);
             }
