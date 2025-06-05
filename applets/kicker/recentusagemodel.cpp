@@ -273,10 +273,12 @@ QModelIndex RecentUsageModel::findPlaceForKFileItem(const KFileItem &fileItem) c
 
 QVariant RecentUsageModel::docData(const QString &resource, int role, const QString &mimeType) const
 {
-    QUrl url(resource);
+    QUrl url;
 
-    if (url.scheme().isEmpty()) {
-        url.setScheme(QStringLiteral("file"));
+    if (QDir::isAbsolutePath(resource)) {
+        url = QUrl::fromLocalFile(resource);
+    } else {
+        url = QUrl(resource);
     }
 
     auto getFileItem = [=]() {
