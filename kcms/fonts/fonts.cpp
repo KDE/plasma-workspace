@@ -160,6 +160,11 @@ void KFonts::adjustFont(const QFont &font, const QString &category)
     QFont selFont = font;
     int ret = KFontChooserDialog::getFont(selFont, KFontChooser::NoDisplayFlags, QApplication::activeWindow());
 
+    if (selFont.pointSize() < 4) {
+        Q_EMIT fontTooSmall();
+        selFont.setPointSize(4);
+    }
+
     if (ret == QDialog::Accepted) {
         if (category == QLatin1String("font")) {
             fontsSettings()->setFont(selFont);

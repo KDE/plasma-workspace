@@ -22,6 +22,12 @@ KCM.SimpleKCM {
         || toolbarFontWidget.font.pointSize > 14
         || menuFontWidget.font.pointSize > 14
 
+    readonly property bool usingInadvisablySmallFont: generalFontWidget.font.pointSize < 7
+        || fixedWidthFontWidget.font.pointSize < 7
+        // Deliberately not checking for Small font here since it's designed to be smaller
+        || toolbarFontWidget.font.pointSize < 7
+        || menuFontWidget.font.pointSize < 7
+
     readonly property bool usingDisplayFont: [
         generalFontWidget.font.family,
         fixedWidthFontWidget.font.family,
@@ -100,6 +106,40 @@ KCM.SimpleKCM {
             showCloseButton: true
             text: i18n("The recommended way to scale the user interface is using the global screen scaling feature.")
             actions: [ kscreenAction ]
+        }
+
+        Kirigami.InlineMessage {
+            id: fontTooSmallMessage
+            Layout.fillWidth: true
+            position: Kirigami.InlineMessage.Position.Header
+            type: Kirigami.MessageType.Warning
+            showCloseButton: true
+            text: i18nc("@info:usagetip", "Plasma is not designed to be usable with fonts smaller than 4pt. Size has been reset to 4pt.")
+
+            Connections {
+                target: kcm
+                function onFontTooSmall() {
+                    fontTooSmallMessage.visible = true
+                }
+            }
+        }
+
+        Kirigami.InlineMessage {
+            id: fontInadvisablySmall
+            Layout.fillWidth: true
+            position: Kirigami.InlineMessage.Position.Header
+            type: Kirigami.MessageType.Warning
+            showCloseButton: true
+            text: i18nc("@info:usagetip", "Very small fonts may produce odd-looking results. Instead of using a very small font size, consider adjusting the global screen scale.")
+
+            actions: [ kscreenAction ]
+
+            Connections {
+                target: kcm
+                function onFontsHaveChanged() {
+                    fontInadvisablySmall.visible = !fontTooSmallMessage.visible && root.usingInadvisablySmallFont;
+                }
+            }
         }
     }
 
