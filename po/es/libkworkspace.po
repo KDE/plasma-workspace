@@ -1,18 +1,16 @@
-# translation of libkworkspace.po to Spanish
-# Translation of libkworkspace to Spanish
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
+# Spanish translations for libkworkspace.po package.
+# Copyright (C) 2007-2025 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
 #
-# Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>, 2007.
-# Jaime Robles <jaime@kde.org>, 2008.
-# Eloy <ecuadra@eloihr.net>, 2017.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2017, 2021.
+# SPDX-FileCopyrightText: 2007 Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>
+# SPDX-FileCopyrightText: 2008 Jaime Robles <jaime@kde.org>
+# SPDX-FileCopyrightText: 2017, 2021, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: libkworkspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-06 01:42+0000\n"
-"PO-Revision-Date: 2021-05-27 01:06+0200\n"
+"PO-Revision-Date: 2025-06-04 19:49+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -56,18 +54,3 @@ msgstr "%1: %2"
 msgctxt "session (location)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
-
-#~ msgctxt ""
-#~ "Action that reorganizes the windows to try to have them less cluttered"
-#~ msgid "Unclutter Windows"
-#~ msgstr "Ordenar las ventanas"
-
-#~ msgctxt "Action that reorganizes the windows so that they are in cascade"
-#~ msgid "Cascade Windows"
-#~ msgstr "Ventanas en cascada"
-
-#~ msgid "On All Desktops"
-#~ msgstr "En todos los escritorios"
-
-#~ msgid "No Windows"
-#~ msgstr "Sin ventanas"

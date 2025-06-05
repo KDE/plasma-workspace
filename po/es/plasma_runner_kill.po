@@ -1,13 +1,14 @@
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
+# Spanish translations for plasma_runner_kill.po package.
+# Copyright (C) 2010-2025 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
 #
-# Eloy Cuadra <ecuadra@eloihr.net>, 2010, 2020.
+# SPDX-FileCopyrightText: 2010, 2020, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_kill\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2020-05-14 20:33+0200\n"
+"PO-Revision-Date: 2025-06-04 19:54+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -94,10 +95,3 @@ msgstr "&Ordenar por"
 #, kde-format
 msgid "It is not sure, that this will take effect"
 msgstr "No es seguro que esto surta efecto"
-
-#~ msgid ""
-#~ "Process ID: %1\n"
-#~ "Running as user: %2"
-#~ msgstr ""
-#~ "ID de proceso: %1\n"
-#~ "Ejecutándose como el usuario: %2"

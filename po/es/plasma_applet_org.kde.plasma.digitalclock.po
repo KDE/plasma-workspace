@@ -1,5 +1,5 @@
 # Spanish translations for plasma_applet_org.kde.plasma.digitalclock.po package.
-# Copyright (C) 2014-2025 This_file_is_part_of_KDE
+# Copyright (C) 2014-2025 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 # Automatically generated, 2014.
 #
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-04 02:35+0000\n"
-"PO-Revision-Date: 2025-04-25 12:15+0100\n"
+"PO-Revision-Date: 2025-06-04 19:51+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"

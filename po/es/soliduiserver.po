@@ -1,17 +1,17 @@
-# translation of soliduiserver.po to Spanish
-# Translation of soliduiserver to Spanish
-# Copyright (C) 2007 This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
+# Spanish translations for soliduiserver.po package.
+# Copyright (C) 2007-2025 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
 #
-# Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>, 2007.
-# Jaime Robles <jaime@kde.org>, 2008.
+# SPDX-FileCopyrightText: 2007 Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>
+# SPDX-FileCopyrightText: 2008 Jaime Robles <jaime@kde.org>
+# SPDX-FileCopyrightText: 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: soliduiserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-18 01:43+0000\n"
-"PO-Revision-Date: 2008-11-23 12:21+0100\n"
-"Last-Translator: Jaime Robles <jaime@kde.org>\n"
+"PO-Revision-Date: 2025-06-04 19:55+0100\n"
+"Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
@@ -25,16 +25,3 @@ msgstr ""
 msgid "'%1' needs a password to be accessed. Please enter a password."
 msgstr ""
 "Se necesita una contraseña para acceder a «%1». Introduzca una contraseña."
-
-#~ msgid "A new device has been detected.<br><b>What do you want to do?</b>"
-#~ msgstr "Se ha detectado un nuevo dispositivo.<br><b>¿Qué desea hacer?</b>"
-
-#~ msgid "..."
-#~ msgstr "..."
-
-#~ msgid "Do nothing"
-#~ msgstr "No hacer nada"
-
-#~ msgctxt "A default name for an action without proper label"
-#~ msgid "Unknown"
-#~ msgstr "Desconocido"

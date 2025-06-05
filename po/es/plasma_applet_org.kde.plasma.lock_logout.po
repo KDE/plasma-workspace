@@ -1,15 +1,15 @@
 # Spanish translations for plasma_applet_org.kde.plasma.lock_logout.po package.
-# Copyright (C) 2014 This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
-#
+# Copyright (C) 2014-2025 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
 # Automatically generated, 2014.
-# SPDX-FileCopyrightText: 2014, 2015, 2019, 2020, 2021, 2022, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
+#
+# SPDX-FileCopyrightText: 2014, 2015, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
-"Project-Id-Version: plasma_applet_org\n"
+"Project-Id-Version: plasma_applet_org.kde.plasma.lock_logout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-25 00:40+0000\n"
-"PO-Revision-Date: 2024-06-25 18:14+0200\n"
+"PO-Revision-Date: 2025-06-04 19:51+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -91,7 +91,7 @@ msgstr "Iniciar una sesión paralela como un usuario distinto"
 #: contents/ui/data.js:18
 #, kde-format
 msgid "Shutdown…"
-msgstr "Apagar..."
+msgstr "Apagar…"
 
 #: contents/ui/data.js:19
 #, kde-format
@@ -101,7 +101,7 @@ msgstr "Apagar el equipo"
 #: contents/ui/data.js:25
 #, kde-format
 msgid "Restart…"
-msgstr "Reiniciar..."
+msgstr "Reiniciar…"
 
 #: contents/ui/data.js:26
 #, kde-format
@@ -111,7 +111,7 @@ msgstr "Reiniciar el equipo"
 #: contents/ui/data.js:32
 #, kde-format
 msgid "Logout…"
-msgstr "Salir de la sesión..."
+msgstr "Salir de la sesión…"
 
 #: contents/ui/data.js:33
 #, kde-format
@@ -138,46 +138,3 @@ msgstr "Reposo (suspender en memoria)"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Hibernar (suspender en disco)"
-
-#~ msgid "Logout"
-#~ msgstr "Salir de la sesión"
-
-#~ msgid "Reboot"
-#~ msgstr "Reiniciar"
-
-#~ msgid "Shutdown..."
-#~ msgstr "Apagar..."
-
-#~ msgid "Logout..."
-#~ msgstr "Salir de la sesión..."
-
-#~ msgid "Do you want to suspend to disk (hibernate)?"
-#~ msgstr "¿Desea suspender en disco (hibernar)?"
-
-#~ msgid "Yes"
-#~ msgstr "Sí"
-
-#~ msgid "No"
-#~ msgstr "No"
-
-#~ msgid "Do you want to suspend to RAM (sleep)?"
-#~ msgstr "¿Desea suspender en memoria (dormir)?"
-
-#~ msgid "Leave"
-#~ msgstr "Salir"
-
-#~ msgid "Leave..."
-#~ msgstr "Salir..."
-
-#~ msgctxt "Heading for list of actions (leave, lock, shutdown, ...)"
-#~ msgid "Actions"
-#~ msgstr "Acciones"
-
-#~ msgid "Suspend"
-#~ msgstr "Suspender"
-
-#~ msgid "Lock/Logout Settings"
-#~ msgstr "Preferencias de bloqueo o de fin de sesión"
-
-#~ msgid "SystemTray Settings"
-#~ msgstr "Preferencias de la bandeja del sistema"

@@ -1,12 +1,14 @@
-# Translation of oom-notifier to Spanish
+# Spanish translations for oom-notifier.po package.
+# Copyright (C) 2024-2025 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2024 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: oom-notifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-29 00:41+0000\n"
-"PO-Revision-Date: 2024-10-29 16:46+0100\n"
+"PO-Revision-Date: 2025-06-04 19:49+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"

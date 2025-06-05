@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-04 02:35+0000\n"
+"POT-Creation-Date: 2025-06-05 02:37+0000\n"
 "PO-Revision-Date: 2025-02-22 07:41+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -45,7 +45,7 @@ msgstr "Fest til oppgavelinja"
 msgid "Add to Panel (Widget)"
 msgstr "Legg til panel (skjermelement)"
 
-#: actionlist.cpp:313 rootmodel.cpp:552
+#: actionlist.cpp:313 rootmodel.cpp:540
 #, kde-format
 msgid "Recent Files"
 msgstr "Nylig brukte filer"
@@ -115,7 +115,7 @@ msgid "Computer"
 msgstr "Datamaskin"
 
 #. i18n.
-#: kastatsfavoritesmodel.cpp:554 rootmodel.cpp:545 simplefavoritesmodel.cpp:33
+#: kastatsfavoritesmodel.cpp:554 rootmodel.cpp:533 simplefavoritesmodel.cpp:33
 #, kde-format
 msgid "Favorites"
 msgstr "Favoritter"
@@ -165,37 +165,37 @@ msgstr "Glem alle programmene"
 msgid "Forget All Files"
 msgstr "Glem alle filer"
 
-#: rootmodel.cpp:79
+#: rootmodel.cpp:80
 #, kde-format
 msgid "All Applications"
 msgstr "Alle programmer"
 
-#: rootmodel.cpp:132
+#: rootmodel.cpp:133
 #, kde-format
 msgid "Hide %1"
 msgstr "Skjul %1"
 
-#: rootmodel.cpp:539
+#: rootmodel.cpp:527
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "Denne meldinga skal aldri være synlig! Bruk KICKER_FAVORITES_MODEL"
 
-#: rootmodel.cpp:552
+#: rootmodel.cpp:540
 #, kde-format
 msgid "Often Used Files"
 msgstr "Ofte brukte filer"
 
-#: rootmodel.cpp:561
+#: rootmodel.cpp:549
 #, kde-format
 msgid "Recent Applications"
 msgstr "Nylig brukte programmer"
 
-#: rootmodel.cpp:561
+#: rootmodel.cpp:549
 #, kde-format
 msgid "Often Used Applications"
 msgstr "Ofte brukte programmer"
 
-#: rootmodel.cpp:576
+#: rootmodel.cpp:564
 #, kde-format
 msgid "Power / Session"
 msgstr "Strøm / økt"

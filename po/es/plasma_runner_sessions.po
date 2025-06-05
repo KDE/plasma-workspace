@@ -1,5 +1,5 @@
-# translation of krunner_sessions.po to Spanish
-# Copyright (C) 2008-2025 This_file_is_part_of_KDE
+# Spanish translations for plasma_runner_sessions.po package.
+# Copyright (C) 2008-2025 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
 # SPDX-FileCopyrightText: 2008 Jaime Robles <jaime@kde.org>
@@ -8,10 +8,10 @@
 # SPDX-FileCopyrightText: 2016, 2018, 2020, 2022, 2023, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
-"Project-Id-Version: krunner_sessions\n"
+"Project-Id-Version: plasma_runner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-22 02:42+0000\n"
-"PO-Revision-Date: 2025-02-19 03:33+0100\n"
+"PO-Revision-Date: 2025-06-04 19:54+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -131,104 +131,3 @@ msgstr "Guardar sesión"
 #, kde-format
 msgid "Switch User"
 msgstr "Cambiar usuario"
-
-#~ msgctxt "KRunner keyword to list user sessions"
-#~ msgid "sessions"
-#~ msgstr "sesiones"
-
-#~ msgid "Lists all sessions"
-#~ msgstr "Lista todas las sesiones"
-
-#~ msgctxt "KRunner keyword to switch user sessions"
-#~ msgid "switch"
-#~ msgstr "cambiar"
-
-#~ msgid ""
-#~ "Switches to the active session for the user :q:, or lists all active "
-#~ "sessions if :q: is not provided"
-#~ msgstr ""
-#~ "Cambia a la sesión activa para el usuario :q:, o lista todas las sesiones "
-#~ "activas si no se indica :q:"
-
-#~ msgid ""
-#~ "<p>You are about to enter a new desktop session.</p><p>A login screen "
-#~ "will be displayed and the current session will be hidden.</p><p>You can "
-#~ "switch between desktop sessions using:</p><ul><li>Ctrl+Alt+F{number of "
-#~ "session}</li><li>Plasma search (type '%1')</li><li>Plasma widgets (such "
-#~ "as the application launcher)</li></ul>"
-#~ msgstr ""
-#~ "<p>Está a punto de entrar en una nueva sesión de escritorio.</p><p>Se "
-#~ "mostrará una pantalla de inicio de sesión y la sesión actual se ocultará."
-#~ "</p><p>Puede cambiar entre sesiones de escritorio usando:</p><ul><li>Ctrl"
-#~ "+Alt+F{número de sesión}</li><li>La búsqueda de Plasma (escriba «%1»)</"
-#~ "li><li><i>Widgets</i> de Plasma (como el lanzador de aplicaciones)</li></"
-#~ "ul>"
-
-#~ msgid "New Desktop Session"
-#~ msgstr "Nueva sesión de escritorio"
-
-#~ msgctxt "log out command"
-#~ msgid "logout"
-#~ msgstr "cerrar sesión"
-
-#~ msgctxt "lock screen command"
-#~ msgid "lock"
-#~ msgstr "bloquear"
-
-#~ msgctxt "restart computer command"
-#~ msgid "reboot"
-#~ msgstr "reiniciar"
-
-#~ msgctxt "save session command"
-#~ msgid "save"
-#~ msgstr "guardar"
-
-#~ msgctxt "switch user command"
-#~ msgid "switch :q:"
-#~ msgstr "cambiar :q:"
-
-#~ msgid "new session"
-#~ msgstr "nueva sesión"
-
-#~ msgctxt "log out command"
-#~ msgid "Logout"
-#~ msgstr "Cerrar la sesión"
-
-#~ msgid "Restart the computer"
-#~ msgstr "Reiniciar el equipo"
-
-#~ msgctxt "shut down computer command"
-#~ msgid "shutdown"
-#~ msgstr "apagar"
-
-#~ msgid "Shut down the computer"
-#~ msgstr "Apagar el equipo"
-
-#~ msgid "Save the session"
-#~ msgstr "Guardar la sesión"
-
-#~ msgid "Save the current session for session restoration"
-#~ msgstr "Guardar la sesión actual para la restauración de sesiones"
-
-#~ msgid "Warning - New Session"
-#~ msgstr "Advertencia: nueva sesión"
-
-#~ msgid ""
-#~ "<p>You have chosen to open another desktop session.<br />The current "
-#~ "session will be hidden and a new login screen will be displayed.<br />An "
-#~ "F-key is assigned to each session; F%1 is usually assigned to the first "
-#~ "session, F%2 to the second session and so on. You can switch between "
-#~ "sessions by pressing Ctrl, Alt and the appropriate F-key at the same "
-#~ "time. Additionally, the Plasma Panel and Desktop menus have actions for "
-#~ "switching between sessions.</p>"
-#~ msgstr ""
-#~ "<p>Ha elegido abrir otra sesión de escritorio.<br />La sesión actual se "
-#~ "ocultará y se mostrará una nueva pantalla de identificación.<br />Se "
-#~ "asignará una tecla de función a cada sesión. F%1 suele asignarse a la "
-#~ "primera sesión, F%2 a la segunda, y así sucesivamente. Puede cambiar "
-#~ "entre sesiones pulsando simultáneamente las teclas Ctrl, Alt y la tecla "
-#~ "de función adecuada. Además, dispone de acciones para cambiar de sesión "
-#~ "en los menús del panel y del escritorio de Plasma.</p>"
-
-#~ msgid "&Start New Session"
-#~ msgstr "Iniciar una nueva &sesión"

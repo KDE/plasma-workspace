@@ -1,5 +1,5 @@
-# Translation of kcm_autostart.po to Spanish
-# Copyright (C) 2008-2025 This_file_is_part_of_KDE
+# Spanish translations for kcm_autostart.po package.
+# Copyright (C) 2008-2025 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
 # SPDX-FileCopyrightText: 2008 Ignacio Poggi <ignaciop.3@gmail.com>
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-31 00:43+0000\n"
-"PO-Revision-Date: 2025-02-03 01:12+0100\n"
+"PO-Revision-Date: 2025-06-04 19:43+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -115,19 +115,19 @@ msgstr "Añadir nuevo"
 #, kde-format
 msgctxt "@action:inmenu completes: add new application"
 msgid "Application…"
-msgstr "Aplicación..."
+msgstr "Aplicación…"
 
 #: ui/main.qml:82
 #, kde-format
 msgctxt "@action:inmenu completes: add new login script"
 msgid "Login Script…"
-msgstr "Guion de inicio de sesión..."
+msgstr "Guion de inicio de sesión…"
 
 #: ui/main.qml:89
 #, kde-format
 msgctxt "@action:inmenu completes: add new logout script"
 msgid "Logout Script…"
-msgstr "Guion de cierre de sesión..."
+msgstr "Guion de cierre de sesión…"
 
 #: ui/main.qml:126
 #, kde-format

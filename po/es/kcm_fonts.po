@@ -1,28 +1,27 @@
-# translation of kcmfonts.po to Spanish
-# Translation of kcmfonts to Spanish
-# Copyright (C) 2000-2002.
+# Spanish translations for kcm_fonts.po package.
+# Copyright (C) 2000-2025 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
 #
-# Pablo de Vicente <vicente@oan.es>, 2000-2002.
-# Jaime Robles <jaime@kde.org>, 2003, 2005, 2007, 2008.
-# Miguel Revilla Rodríguez <yo@miguelrevilla.com>, 2003, 2004.
-# Pablo de Vicente <pablo.devicente@gmail.com>, 2006.
-# Pablo de Vicente <p.devicente@oan.es>, 2007.
-# Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>, 2007.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2008, 2010, 2012, 2014, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
-# Javier Vinal <fjvinal@gmail.com>, 2012.
+# SPDX-FileCopyrightText: 2000-2002 Pablo de Vicente <vicente@oan.es>
+# SPDX-FileCopyrightText: 2003, 2005, 2007, 2008 Jaime Robles <jaime@kde.org>
+# SPDX-FileCopyrightText: 2003, 2004 Miguel Revilla Rodríguez <yo@miguelrevilla.com>
+# SPDX-FileCopyrightText: 2006 Pablo de Vicente <pablo.devicente@gmail.com>
+# SPDX-FileCopyrightText: 2007 Pablo de Vicente <p.devicente@oan.es>
+# SPDX-FileCopyrightText: 2007 Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>
+# SPDX-FileCopyrightText: 2008, 2010, 2012, 2014, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2025 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2012 Javier Vinal <fjvinal@gmail.com>
 msgid ""
 msgstr ""
-"Project-Id-Version: kcmfonts\n"
+"Project-Id-Version: kcm_fonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-05 00:45+0000\n"
-"PO-Revision-Date: 2023-04-09 11:48+0200\n"
+"PO-Revision-Date: 2025-06-04 19:44+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"com>\n"
 "First-Translator: Valux (Manuel Soriano) <manu@valux.org>\n"
 "X-Generator: Lokalize 23.03.90\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
@@ -142,7 +141,7 @@ msgstr "%1 %2 pt"
 #: ui/main.qml:22
 #, kde-format
 msgid "Adjust Global Scale…"
-msgstr "Ajustar el escalado global..."
+msgstr "Ajustar el escalado global…"
 
 #: ui/main.qml:36
 #, kde-format
@@ -175,7 +174,7 @@ msgstr ""
 #: ui/main.qml:85
 #, kde-format
 msgid "&Adjust All Fonts…"
-msgstr "&Ajustar todos los tipos de letra..."
+msgstr "&Ajustar todos los tipos de letra…"
 
 #: ui/main.qml:98
 #, kde-format
@@ -352,191 +351,3 @@ msgstr ""
 "espera.</para><para>Para aumentar el tamaño del texto, cambie el tamaño de "
 "los tipos de letra superiores. Para escalar todo, use el control de escalado "
 "en la página <interface>Pantalla y monitor</interface>.</para>"
-
-#~ msgid "Select Font"
-#~ msgstr "Seleccionar tipo de letra"
-
-#~ msgid ""
-#~ "Decimal font sizes can cause text layout problems in some applications. "
-#~ "Consider using only integer font sizes."
-#~ msgstr ""
-#~ "Los tamaños de letra decimales pueden causar problemas al mostrar el "
-#~ "texto en algunas aplicaciones. Considere solo el uso de tamaños enteros."
-
-#~ msgid "Force font DPI Wayland"
-#~ msgstr "Forzar PPP de los tipos de letra (Wayland):"
-
-#~ msgid "This module lets you configure the system fonts."
-#~ msgstr "Este módulo le permite configurar los tipos de letra del sistema."
-
-#~ msgid "Change Display Scaling…"
-#~ msgstr "Cambiar el escalado de la pantalla..."
-
-#~ msgctxt "@info:tooltip Force fonts DPI"
-#~ msgid ""
-#~ "<para>This option forces a specific DPI value for fonts. It may be useful "
-#~ "when the real DPI of the hardware is not detected properly and it is also "
-#~ "often misused when poor quality fonts are used that do not look well with "
-#~ "DPI values other than 96 or 120 DPI.</para><para>The use of this option "
-#~ "is generally discouraged.</para><para>If you are using the <emphasis>X "
-#~ "Window System</emphasis>, for selecting the proper DPI value a better "
-#~ "option is explicitly configuring it for the whole X server if possible (e."
-#~ "g. DisplaySize in xorg.conf). When fonts do not render properly with the "
-#~ "real DPI value better fonts should be used or configuration of font "
-#~ "hinting should be checked.</para>"
-#~ msgstr ""
-#~ "<para>Esta opción fuerza una valor específico de PPP (puntos por "
-#~ "pulgada). Puede resultar útil cuando el valor real de PPP del hardware no "
-#~ "sea detectado correctamente, y a menudo también se usa indebidamente "
-#~ "cuando se usan tipos de letra de mala calidad que no quedan bien con "
-#~ "valores de PPP diferentes de 96 o 120 PPP.</para><para>Normalmente se "
-#~ "desaconseja el uso de esta opción.</para><para>Si está usando el "
-#~ "<emphasis>sistema X Window</emphasis>, una opción preferible para "
-#~ "seleccionar el valor adecuado de PPP es configurarlo explícitamente para "
-#~ "el servidor X completo si es posible (por ejemplo, DisplaySize en xorg."
-#~ "conf). Cuando los tipos de letra no se representan correctamente con el "
-#~ "valor de PPP real, se deberían utilizar otros tipos de letra mejores, o "
-#~ "se debería comprobar la configuración del «hinting».</para>"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Eloy Cuadra"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "ecuadra@eloihr.net"
-
-#~ msgid "Fonts"
-#~ msgstr "Tipos de letra"
-
-#~ msgid "Antonis Tsiapaliokas"
-#~ msgstr "Antonis Tsiapaliokas"
-
-#~ msgctxt "@action:button"
-#~ msgid "Show Contextual Help"
-#~ msgstr "Mostrar ayuda de contexto"
-
-#~ msgid "Select %1 Font..."
-#~ msgstr "Seleccionar el tipo de letra %1..."
-
-#~ msgid "Font Settings Changed"
-#~ msgstr "Cambiadas las preferencias de tipos de letra"
-
-#~ msgid ""
-#~ "<p>Some changes such as DPI will only affect newly started applications.</"
-#~ "p>"
-#~ msgstr ""
-#~ "<p>Algunos cambios, como los puntos por pulgada, solo afectan a las "
-#~ "aplicaciones que inicien en adelante.</p>"
-
-#~ msgid "Vendor default"
-#~ msgstr "Por omisión del vendedor"
-
-#~ msgid "Disabled"
-#~ msgstr "Desactivado"
-
-#~| msgid "Configure Fonts"
-#~ msgid "Configure the system fonts"
-#~ msgstr "Configurar los tipos de letra del sistema"
-
-#~ msgid "Choose..."
-#~ msgstr "Escoger..."
-
-#~ msgid "Configure Anti-Alias Settings"
-#~ msgstr "Configurar las preferencias de suavizado"
-
-#~ msgid "E&xclude range:"
-#~ msgstr "E&xcluir intervalo:"
-
-#~ msgctxt "abbreviation for unit of points"
-#~ msgid " pt"
-#~ msgstr " pt"
-
-#~ msgid ""
-#~ "<p>If you have a TFT or LCD screen you can further improve the quality of "
-#~ "displayed fonts by selecting this option.<br />Sub-pixel rendering is "
-#~ "also known as ClearType(tm).<br /> In order for sub-pixel rendering to "
-#~ "work correctly you need to know how the sub-pixels of your display are "
-#~ "aligned.</p> <p>On TFT or LCD displays a single pixel is actually "
-#~ "composed of three sub-pixels, red, green and blue. Most displays have a "
-#~ "linear ordering of RGB sub-pixel, some have BGR.<br /> This feature does "
-#~ "not work with CRT monitors.</p>"
-#~ msgstr ""
-#~ "<p>Si tiene una pantalla TFT o LCD, puede mejorar aún más la calidad con "
-#~ "que se muestran las letras seleccionando esta opción.<br />La "
-#~ "representación con subpíxeles también se conoce como ClearType(tm).<br /"
-#~ ">Para que la representación con subpíxeles funcione correctamente, debe "
-#~ "saber cómo están alineados los subpíxeles de su pantalla.</p><p>En las "
-#~ "pantallas TFT o LCD cada píxel está compuesto, en realidad, por tres "
-#~ "subpíxeles, rojo, verde y azul. La mayoría de las pantallas tienen un "
-#~ "orden lineal de subpíxeles RGB, pero otras tienen BGR.<br />Esta función "
-#~ "no funciona con monitores CRT.</p>"
-
-#~ msgid ""
-#~ "Hinting is a process used to enhance the quality of fonts at small sizes."
-#~ msgstr ""
-#~ "El «hinting» es un proceso que se utiliza para mejorar la calidad de los "
-#~ "tipos de letra a tamaños pequeños."
-
-#~ msgid "Used for normal text (e.g. button labels, list items)."
-#~ msgstr ""
-#~ "Se usa para el texto normal (por ejemplo, etiquetas de botones o "
-#~ "elementos de listas)."
-
-#~ msgid "A non-proportional font (i.e. typewriter font)."
-#~ msgstr ""
-#~ "Un tipo de letra no proporcional (es decir, como de máquina de escribir)."
-
-#~ msgid "Smallest font that is still readable well."
-#~ msgstr "El tipo de letra más pequeño que aun se lee bien."
-
-#~ msgid "Used to display text beside toolbar icons."
-#~ msgstr ""
-#~ "Se usa para mostrar texto junto a los iconos de la barra de herramientas."
-
-#~ msgid "Used by menu bars and popup menus."
-#~ msgstr "Usado por las barras de menús y menús emergentes."
-
-#~ msgid "Used by the window titlebar."
-#~ msgstr "Se usa en el título de la ventana."
-
-#~ msgctxt "Font role"
-#~ msgid "%1: "
-#~ msgstr "%1: "
-
-#~ msgid "Click to change all fonts"
-#~ msgstr "Pulse para cambiar todos los tipos de letra"
-
-#~ msgctxt "Use anti-aliasing"
-#~ msgid "System Settings"
-#~ msgstr "Preferencias del sistema"
-
-#~ msgid "Select this option to smooth the edges of curves in fonts."
-#~ msgstr ""
-#~ "Seleccione esta opción para suavizará los bordes de las curvas en los "
-#~ "tipos de letra."
-
-#~ msgid "This property has no effect on this platform"
-#~ msgstr "Esta propiedad no tiene efecto en esta plataforma"
-
-#~ msgctxt "use system subpixel setting"
-#~ msgid "System default"
-#~ msgstr "Por omisión del sistema"
-
-#~ msgctxt "use system hinting settings"
-#~ msgid "System default"
-#~ msgstr "Por omisión del sistema"
-
-#~ msgctxt "font usage"
-#~ msgid "Taskbar"
-#~ msgstr "Barra de tareas"
-
-#~ msgctxt "font usage"
-#~ msgid "Desktop"
-#~ msgstr "Escritorio"
-
-#~ msgid "Used by the taskbar."
-#~ msgstr "Usado por la barra de tareas."
-
-#~ msgid "Used for desktop icons."
-#~ msgstr "Usado para los iconos del escritorio."

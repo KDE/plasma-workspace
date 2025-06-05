@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-04 02:35+0000\n"
+"POT-Creation-Date: 2025-06-05 02:37+0000\n"
 "PO-Revision-Date: 2025-02-13 22:10+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -44,7 +44,7 @@ msgstr "Semat ke Pengelola Tugas"
 msgid "Add to Panel (Widget)"
 msgstr "Tambahkan ke Panel (Widget)"
 
-#: actionlist.cpp:313 rootmodel.cpp:552
+#: actionlist.cpp:313 rootmodel.cpp:540
 #, kde-format
 msgid "Recent Files"
 msgstr "File-file Baru-baru Ini"
@@ -114,7 +114,7 @@ msgid "Computer"
 msgstr "Komputer"
 
 #. i18n.
-#: kastatsfavoritesmodel.cpp:554 rootmodel.cpp:545 simplefavoritesmodel.cpp:33
+#: kastatsfavoritesmodel.cpp:554 rootmodel.cpp:533 simplefavoritesmodel.cpp:33
 #, kde-format
 msgid "Favorites"
 msgstr "Favorit"
@@ -164,37 +164,37 @@ msgstr "Lupakan Semua Aplikasi"
 msgid "Forget All Files"
 msgstr "Lupakan Semua File"
 
-#: rootmodel.cpp:79
+#: rootmodel.cpp:80
 #, kde-format
 msgid "All Applications"
 msgstr "Semua Aplikasi"
 
-#: rootmodel.cpp:132
+#: rootmodel.cpp:133
 #, kde-format
 msgid "Hide %1"
 msgstr "Sembunyikan %1"
 
-#: rootmodel.cpp:539
+#: rootmodel.cpp:527
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "Ini seharusnya tidak terlihat! Gunakanlah KICKER_FAVORITES_MODEL"
 
-#: rootmodel.cpp:552
+#: rootmodel.cpp:540
 #, kde-format
 msgid "Often Used Files"
 msgstr "File-file Yang Sering Digunakan"
 
-#: rootmodel.cpp:561
+#: rootmodel.cpp:549
 #, kde-format
 msgid "Recent Applications"
 msgstr "Aplikasi Baru-baru ini"
 
-#: rootmodel.cpp:561
+#: rootmodel.cpp:549
 #, kde-format
 msgid "Often Used Applications"
 msgstr "Aplikasi Sering Digunakan"
 
-#: rootmodel.cpp:576
+#: rootmodel.cpp:564
 #, kde-format
 msgid "Power / Session"
 msgstr "Daya / Sesi"

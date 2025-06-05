@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-18 02:40+0000\n"
+"POT-Creation-Date: 2025-06-05 02:37+0000\n"
 "PO-Revision-Date: 2024-08-31 23:23+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -45,58 +45,58 @@ msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Katalogas su darbalaukio fonais skaidrių rodymui"
 
-#: imagepackage/contents/ui/config.qml:127
+#: imagepackage/contents/ui/config.qml:128
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Positioning:"
 msgstr "Išdėstymas:"
 
-#: imagepackage/contents/ui/config.qml:130
+#: imagepackage/contents/ui/config.qml:131
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled and cropped"
 msgstr "Pakeisto mastelio ir apkarpytas"
 
-#: imagepackage/contents/ui/config.qml:134
+#: imagepackage/contents/ui/config.qml:135
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled"
 msgstr "Pakeisto mastelio"
 
-#: imagepackage/contents/ui/config.qml:138
+#: imagepackage/contents/ui/config.qml:139
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled, keep proportions"
 msgstr "Pakeisto mastelio, išlaikytų proporcijų"
 
-#: imagepackage/contents/ui/config.qml:142
+#: imagepackage/contents/ui/config.qml:143
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "Centruotas"
 
-#: imagepackage/contents/ui/config.qml:146
+#: imagepackage/contents/ui/config.qml:147
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Tiled"
 msgstr "Išklotas"
 
-#: imagepackage/contents/ui/config.qml:174
+#: imagepackage/contents/ui/config.qml:175
 #, kde-format
 msgid "Background:"
 msgstr "Fonas:"
 
-#: imagepackage/contents/ui/config.qml:175
+#: imagepackage/contents/ui/config.qml:176
 #, kde-format
 msgid "Blur"
 msgstr "Suliejimas"
 
-#: imagepackage/contents/ui/config.qml:184
+#: imagepackage/contents/ui/config.qml:185
 #, kde-format
 msgid "Solid color"
 msgstr "Vientisa spalva"
 
-#: imagepackage/contents/ui/config.qml:195
+#: imagepackage/contents/ui/config.qml:196
 #, kde-format
 msgid "Select Background Color"
 msgstr "Pasirinkti fono spalvą"

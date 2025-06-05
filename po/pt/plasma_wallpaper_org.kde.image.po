@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-18 02:40+0000\n"
+"POT-Creation-Date: 2025-06-05 02:37+0000\n"
 "PO-Revision-Date: 2022-05-23 03:16+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -42,64 +42,64 @@ msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "A pasta com o papel de parede de onde mostrar as imagens"
 
-#: imagepackage/contents/ui/config.qml:127
+#: imagepackage/contents/ui/config.qml:128
 #, fuzzy, kde-format
 #| msgid "Positioning:"
 msgctxt "@label:listbox"
 msgid "Positioning:"
 msgstr "Posicionamento:"
 
-#: imagepackage/contents/ui/config.qml:130
+#: imagepackage/contents/ui/config.qml:131
 #, fuzzy, kde-format
 #| msgid "Scaled and Cropped"
 msgctxt "@item:inlistbox"
 msgid "Scaled and cropped"
 msgstr "Escalado e Recortado"
 
-#: imagepackage/contents/ui/config.qml:134
+#: imagepackage/contents/ui/config.qml:135
 #, fuzzy, kde-format
 #| msgid "Scaled"
 msgctxt "@item:inlistbox"
 msgid "Scaled"
 msgstr "Escalado"
 
-#: imagepackage/contents/ui/config.qml:138
+#: imagepackage/contents/ui/config.qml:139
 #, fuzzy, kde-format
 #| msgid "Scaled, Keep Proportions"
 msgctxt "@item:inlistbox"
 msgid "Scaled, keep proportions"
 msgstr "Escalado Proporcionalmente"
 
-#: imagepackage/contents/ui/config.qml:142
+#: imagepackage/contents/ui/config.qml:143
 #, fuzzy, kde-format
 #| msgid "Centered"
 msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "Centrado"
 
-#: imagepackage/contents/ui/config.qml:146
+#: imagepackage/contents/ui/config.qml:147
 #, fuzzy, kde-format
 #| msgid "Tiled"
 msgctxt "@item:inlistbox"
 msgid "Tiled"
 msgstr "Mosaico"
 
-#: imagepackage/contents/ui/config.qml:174
+#: imagepackage/contents/ui/config.qml:175
 #, kde-format
 msgid "Background:"
 msgstr "Fundo:"
 
-#: imagepackage/contents/ui/config.qml:175
+#: imagepackage/contents/ui/config.qml:176
 #, kde-format
 msgid "Blur"
 msgstr "Borrar"
 
-#: imagepackage/contents/ui/config.qml:184
+#: imagepackage/contents/ui/config.qml:185
 #, kde-format
 msgid "Solid color"
 msgstr "Cor única"
 
-#: imagepackage/contents/ui/config.qml:195
+#: imagepackage/contents/ui/config.qml:196
 #, kde-format
 msgid "Select Background Color"
 msgstr "Seleccionar a Cor de Fundo"

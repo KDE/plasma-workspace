@@ -1,15 +1,15 @@
 # Spanish translations for plasma_runner_appstream.po package.
-# Copyright (C) 2018 This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
-#
+# Copyright (C) 2018-2025 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
 # Automatically generated, 2018.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2018, 2021.
+#
+# SPDX-FileCopyrightText: 2018, 2021, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_appstream\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-06 00:40+0000\n"
-"PO-Revision-Date: 2021-05-27 01:03+0200\n"
+"PO-Revision-Date: 2025-06-04 19:53+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -27,4 +27,4 @@ msgstr "Busca componentes no instalados según :q:"
 #: appstreamrunner.cpp:124
 #, kde-format
 msgid "Get %1…"
-msgstr "Obtener %1..."
+msgstr "Obtener %1…"

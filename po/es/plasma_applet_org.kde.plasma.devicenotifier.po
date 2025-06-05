@@ -1,5 +1,5 @@
-# Translation of plasma_applet_devicenotifier.po to Spanish
-# Copyright (C) 2007-2025 This_file_is_part_of_KDE
+# Spanish translations for plasma_applet_org.kde.plasma.devicenotifier.po package.
+# Copyright (C) 2007-2025 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
 # SPDX-FileCopyrightText: 2007 Jaime Robles <jaime@robles.nu>
@@ -9,10 +9,10 @@
 # SPDX-FileCopyrightText: 2012 Javier Vinal <fjvinal@gmail.com>
 msgid ""
 msgstr ""
-"Project-Id-Version: plasma_applet_devicenotifier\n"
+"Project-Id-Version: plasma_applet_org.kde.plasma.devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-15 00:44+0000\n"
-"PO-Revision-Date: 2025-02-23 02:37+0100\n"
+"PO-Revision-Date: 2025-06-04 19:51+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -246,46 +246,3 @@ msgstr "No se ha podido expulsar este disco."
 #, kde-format
 msgid "Could not repair this device: %1"
 msgstr "No se ha podido reparar este dispositivo: %1"
-
-#~ msgid "Filesystem is not responding"
-#~ msgstr "El sistema de archivos no responde"
-
-#~ msgid "Filesystem mounted at '%1' is not responding"
-#~ msgstr "El sistema de archivos montado en «%1» no está respondiendo"
-
-#~ msgid "Show:"
-#~ msgstr "Mostrar:"
-
-#~ msgid "General"
-#~ msgstr "General"
-
-#~ msgid ""
-#~ "It is currently <b>not safe</b> to remove this device: applications may "
-#~ "be accessing it. Click the eject button to safely remove this device."
-#~ msgstr ""
-#~ "<b>No es seguro</b> extraer el dispositivo: puede que haya aplicaciones "
-#~ "accediendo a él. Presione el botón de extracción para extraerlo de manera "
-#~ "segura."
-
-#~ msgid "This device is currently accessible."
-#~ msgstr "Se puede acceder al dispositivo."
-
-#~ msgid ""
-#~ "It is currently <b>not safe</b> to remove this device: applications may "
-#~ "be accessing other volumes on this device. Click the eject button on "
-#~ "these other volumes to safely remove this device."
-#~ msgstr ""
-#~ "<b>No es seguro</b> extraer el dispositivo: puede que haya aplicaciones "
-#~ "accediendo a otros volúmenes. Presione el botón de expulsión para "
-#~ "extraerlo de manera segura."
-
-#~ msgid "This device is not currently accessible."
-#~ msgstr "No se puede acceder al dispositivo en este momento."
-
-#~ msgid "1 action for this device"
-#~ msgid_plural "%1 actions for this device"
-#~ msgstr[0] "1 acción para este dispositivo"
-#~ msgstr[1] "%1 acciones para este dispositivo"
-
-#~ msgid "Available Devices"
-#~ msgstr "Dispositivos disponibles"

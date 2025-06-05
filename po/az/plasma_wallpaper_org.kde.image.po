@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-18 02:40+0000\n"
+"POT-Creation-Date: 2025-06-05 02:37+0000\n"
 "PO-Revision-Date: 2025-04-01 17:17+0400\n"
 "Last-Translator: Khayyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -40,58 +40,58 @@ msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Slaydları göstərmək üçün divar kağızı qovluğu"
 
-#: imagepackage/contents/ui/config.qml:127
+#: imagepackage/contents/ui/config.qml:128
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Positioning:"
 msgstr "Yerləşdirmə:"
 
-#: imagepackage/contents/ui/config.qml:130
+#: imagepackage/contents/ui/config.qml:131
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled and cropped"
 msgstr "Miqyaslandırılmış və əsilmiş"
 
-#: imagepackage/contents/ui/config.qml:134
+#: imagepackage/contents/ui/config.qml:135
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled"
 msgstr "Miqyaslanmış"
 
-#: imagepackage/contents/ui/config.qml:138
+#: imagepackage/contents/ui/config.qml:139
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled, keep proportions"
 msgstr "Nisbətləri saxlanılmaqla miqyaslanmış"
 
-#: imagepackage/contents/ui/config.qml:142
+#: imagepackage/contents/ui/config.qml:143
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "Mərkəzdə"
 
-#: imagepackage/contents/ui/config.qml:146
+#: imagepackage/contents/ui/config.qml:147
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Tiled"
 msgstr "Yan-yana düzülmüş"
 
-#: imagepackage/contents/ui/config.qml:174
+#: imagepackage/contents/ui/config.qml:175
 #, kde-format
 msgid "Background:"
 msgstr "Arxa fon:"
 
-#: imagepackage/contents/ui/config.qml:175
+#: imagepackage/contents/ui/config.qml:176
 #, kde-format
 msgid "Blur"
 msgstr "Tutqun"
 
-#: imagepackage/contents/ui/config.qml:184
+#: imagepackage/contents/ui/config.qml:185
 #, kde-format
 msgid "Solid color"
 msgstr "Bütöv rəng"
 
-#: imagepackage/contents/ui/config.qml:195
+#: imagepackage/contents/ui/config.qml:196
 #, kde-format
 msgid "Select Background Color"
 msgstr "Arxa fon şəklini seçmək"

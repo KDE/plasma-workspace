@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-01 00:44+0000\n"
+"POT-Creation-Date: 2025-06-05 02:37+0000\n"
 "PO-Revision-Date: 2024-04-23 06:28+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -277,25 +277,25 @@ msgctxt ""
 msgid "%1 (Brazil)"
 msgstr "%1 (Brazilsko)"
 
-#: localegeneratorubuntu.cpp:42
+#: localegeneratorubuntu.cpp:46
 #, kde-format
 msgctxt "@info:warning"
 msgid "Can't locate executable `check-language-support`"
 msgstr "Ni mogoče najti izvedljivega programa `check-language-support`"
 
-#: localegeneratorubuntu.cpp:52
+#: localegeneratorubuntu.cpp:56
 #, kde-format
 msgctxt "the arg is the output of failed check-language-support call"
 msgid "check-language-support failed, output: %1"
 msgstr "check-language-support ni uspel, izhod: %1"
 
-#: localegeneratorubuntu.cpp:83
+#: localegeneratorubuntu.cpp:87
 #, kde-format
 msgctxt "%1 is a list of package names"
 msgid "Not all missing packages managed to resolve! %1"
 msgstr "Nekateri manjkajoči paketi se ne uspejo razrešiti! %1"
 
-#: localegeneratorubuntu.cpp:89
+#: localegeneratorubuntu.cpp:93
 #, kde-format
 msgctxt "%1 is a list of package names"
 msgid "Failed to install package %1"

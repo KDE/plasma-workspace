@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-18 02:40+0000\n"
+"POT-Creation-Date: 2025-06-05 02:37+0000\n"
 "PO-Revision-Date: 2024-09-13 20:59+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -39,58 +39,58 @@ msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Директория с тапета, от който да се показват сменяемите изображения"
 
-#: imagepackage/contents/ui/config.qml:127
+#: imagepackage/contents/ui/config.qml:128
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Positioning:"
 msgstr "Позициониране:"
 
-#: imagepackage/contents/ui/config.qml:130
+#: imagepackage/contents/ui/config.qml:131
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled and cropped"
 msgstr "Мащабирано и изрязано"
 
-#: imagepackage/contents/ui/config.qml:134
+#: imagepackage/contents/ui/config.qml:135
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled"
 msgstr "Мащабирано"
 
-#: imagepackage/contents/ui/config.qml:138
+#: imagepackage/contents/ui/config.qml:139
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled, keep proportions"
 msgstr "Мащабирано, запазени пропорции"
 
-#: imagepackage/contents/ui/config.qml:142
+#: imagepackage/contents/ui/config.qml:143
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "Центрирано"
 
-#: imagepackage/contents/ui/config.qml:146
+#: imagepackage/contents/ui/config.qml:147
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Tiled"
 msgstr "Плочки"
 
-#: imagepackage/contents/ui/config.qml:174
+#: imagepackage/contents/ui/config.qml:175
 #, kde-format
 msgid "Background:"
 msgstr "Фон:"
 
-#: imagepackage/contents/ui/config.qml:175
+#: imagepackage/contents/ui/config.qml:176
 #, kde-format
 msgid "Blur"
 msgstr "Замъгляване"
 
-#: imagepackage/contents/ui/config.qml:184
+#: imagepackage/contents/ui/config.qml:185
 #, kde-format
 msgid "Solid color"
 msgstr "Плътен цвят"
 
-#: imagepackage/contents/ui/config.qml:195
+#: imagepackage/contents/ui/config.qml:196
 #, kde-format
 msgid "Select Background Color"
 msgstr "Избиране на цвят на фона"

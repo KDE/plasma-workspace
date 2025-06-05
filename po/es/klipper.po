@@ -1,5 +1,6 @@
-# Translation of klipper to Spanish
-# Copyright (C) 2000-2024.
+# Spanish translations for klipper.po package.
+# Copyright (C) 2000-2025 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
 #
 # SPDX-FileCopyrightText: 2000-2002 Pablo de Vicente <vicente@oan.es>
 # SPDX-FileCopyrightText: 2003, 2005, 2007, 2008, 2009 Jaime Robles <jaime@kde.org>
@@ -8,7 +9,7 @@
 # SPDX-FileCopyrightText: 2005 Santiago Fernandez Sancho <santi@kde-es.org>
 # SPDX-FileCopyrightText: 2006 Pablo de Vicente <pablo.devicente@gmail.com>
 # SPDX-FileCopyrightText: 2007 Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>
-# SPDX-FileCopyrightText: 2009, 2010, 2012, 2014, 2017, 2019, 2020, 2021, 2022, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2009, 2010, 2012, 2014, 2017, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 # SPDX-FileCopyrightText: 2010 Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>
 # SPDX-FileCopyrightText: 2012 Javier Vinal <fjvinal@gmail.com>
 msgid ""
@@ -16,14 +17,13 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-24 02:38+0000\n"
-"PO-Revision-Date: 2024-12-09 02:51+0100\n"
+"PO-Revision-Date: 2025-06-04 19:48+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"com>\n"
 "First-Translator: Valux (Manuel Soriano) <manu@europa3.com>\n"
 "X-Generator: Lokalize 24.08.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
@@ -149,7 +149,7 @@ msgstr ""
 #: configdialog.cpp:281
 #, kde-format
 msgid "Exclude Windows..."
-msgstr "Excluir ventanas..."
+msgstr "Excluir ventanas…"
 
 #: configdialog.cpp:295
 #, kde-format
@@ -202,12 +202,12 @@ msgstr "Descripción"
 #: configdialog.cpp:377
 #, kde-format
 msgid "Add Action..."
-msgstr "Añadir una acción..."
+msgstr "Añadir una acción…"
 
 #: configdialog.cpp:381
 #, kde-format
 msgid "Edit Action..."
-msgstr "Editar acción..."
+msgstr "Editar acción…"
 
 #: configdialog.cpp:386
 #, kde-format
@@ -552,12 +552,12 @@ msgstr ""
 #: editactiondialog.cpp:267
 #, kde-format
 msgid "Add Command..."
-msgstr "Añadir orden..."
+msgstr "Añadir orden…"
 
 #: editactiondialog.cpp:272
 #, kde-format
 msgid "Edit Command..."
-msgstr "Editar orden..."
+msgstr "Editar orden…"
 
 #: editactiondialog.cpp:278
 #, kde-format
@@ -671,7 +671,7 @@ msgstr "&Borrar historial del portapapeles"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
-msgstr "&Configurar Klipper..."
+msgstr "&Configurar Klipper…"
 
 #: klipper.cpp:120
 #, kde-format
@@ -683,13 +683,13 @@ msgstr "Invocar manualmente la acción en el portapapeles actual"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
-msgstr "&Editar el contenido..."
+msgstr "&Editar el contenido…"
 
 #: klipper.cpp:134
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
-msgstr "Mostrar código de &barras..."
+msgstr "Mostrar código de &barras…"
 
 #: klipper.cpp:143
 #, kde-format
@@ -957,296 +957,3 @@ msgstr "Ventana emergente del portapapeles"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Cancelar"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "You can enable URL actions later in the <interface>Actions</interface> "
-#~ "page of the Clipboard applet's configuration window"
-#~ msgstr ""
-#~ "Puede activar acciones de URL posteriormente en la página "
-#~ "<interface>Acciones</interface> de la ventana de configuración de la "
-#~ "miniaplicación del portapapeles."
-
-#~ msgid "Disable This Popup"
-#~ msgstr "Inhabilitar este menú emergente"
-
-#~ msgid "Clipboard Items"
-#~ msgstr "Elementos del portapapeles"
-
-#~ msgid "Search…"
-#~ msgstr "Buscar..."
-
-#~ msgid "Invalid regular expression, %1"
-#~ msgstr "Expresión regular no válida, %1"
-
-#~ msgid "&More"
-#~ msgstr "&Más"
-
-#~ msgid "Should Klipper start automatically when you login?"
-#~ msgstr ""
-#~ "¿Desea iniciar Klipper automáticamente cada vez que inicie una sesión?"
-
-#~ msgid "Automatically Start Klipper?"
-#~ msgstr "¿Iniciar Klipper de forma automática?"
-
-#~ msgid "Start"
-#~ msgstr "Iniciar"
-
-#~ msgid "Do Not Start"
-#~ msgstr "No iniciar"
-
-#~ msgctxt "@action:inmenu Quit Klipper"
-#~ msgid "&Quit"
-#~ msgstr "&Salir"
-
-#~ msgctxt "%1 is application display name"
-#~ msgid "%1 - Clipboard Tool"
-#~ msgstr "%1 - Herramienta del portapapeles"
-
-#~ msgid "Klipper"
-#~ msgstr "Klipper"
-
-#~ msgid "Plasma cut & paste history utility"
-#~ msgstr "Utilidad de Plasma del historial de cortar y pegar"
-
-#~ msgid ""
-#~ "(c) 1998, Andrew Stanley-Jones\n"
-#~ "1998-2002, Carsten Pfeiffer\n"
-#~ "2001, Patrick Dubroy"
-#~ msgstr ""
-#~ "(c) 1998, Andrew Stanley-Jones\n"
-#~ "1998-2002, Carsten Pfeiffer\n"
-#~ "2001, Patrick Dubroy"
-
-#~ msgid "Carsten Pfeiffer"
-#~ msgstr "Carsten Pfeiffer"
-
-#~ msgid "Author"
-#~ msgstr "Autor"
-
-#~ msgid "Andrew Stanley-Jones"
-#~ msgstr "Andrew Stanley-Jones"
-
-#~ msgid "Original Author"
-#~ msgstr "Autor original"
-
-#~ msgid "Patrick Dubroy"
-#~ msgstr "Patrick Dubroy"
-
-#~ msgid "Contributor"
-#~ msgstr "Colaborador"
-
-#~ msgid "Luboš Luňák"
-#~ msgstr "Luboš Luňák"
-
-#~ msgid "Bugfixes and optimizations"
-#~ msgstr "Correcciones y optimizaciones"
-
-#~ msgid "Esben Mose Hansen"
-#~ msgstr "Esben Mose Hansen"
-
-#~ msgid "Previous Maintainer"
-#~ msgstr "Responsable anterior"
-
-#~ msgid "Martin Gräßlin"
-#~ msgstr "Martin Gräßlin"
-
-#~ msgid "Maintainer"
-#~ msgstr "Encargado"
-
-#~ msgid "Clipboard Contents"
-#~ msgstr "Contenido del portapapeles"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "The actions shown in the popup menu can be configured on the "
-#~ "<interface>Actions Configuration</interface> page."
-#~ msgstr ""
-#~ "Las acciones que se muestran en el menú emergente se pueden configurar en "
-#~ "la página <interface>Configuración de acciones</interface>."
-
-#~ msgid "Delete clipboard history?"
-#~ msgstr "¿Borrar historial del portapapeles?"
-
-#~ msgid "Action list:"
-#~ msgstr "Acciones:"
-
-#~ msgid "Regular Expression"
-#~ msgstr "Expresión regular"
-
-#~ msgid ""
-#~ "Click on a highlighted item's column to change it. \"%s\" in a command "
-#~ "will be replaced with the clipboard contents.<br>For more information "
-#~ "about regular expressions, you could have a look at the <a href=\"https://"
-#~ "en.wikipedia.org/wiki/Regular_expression\">Wikipedia entry about this "
-#~ "topic</a>."
-#~ msgstr ""
-#~ "Pulse en la columna del elemento resaltado para cambiarlo. «%s» se "
-#~ "sustituirá en una orden por el contenido del portapapeles.<br>Consulte la "
-#~ "<a href=\"https://es.wikipedia.org/wiki/Expresión_regular\">entrada de "
-#~ "Wikipedia sobre este tema</a> para más información."
-
-#~ msgid "Output Handling"
-#~ msgstr "Tratamiento de la salida"
-
-#~ msgid "new command"
-#~ msgstr "nueva orden"
-
-#~ msgid "Command Description"
-#~ msgstr "Descripción de la orden"
-
-#~ msgid "Action properties:"
-#~ msgstr "Propiedades de la acción:"
-
-#~ msgid "Automatic:"
-#~ msgstr "Automático:"
-
-#~ msgid "List of commands for this action:"
-#~ msgstr "Lista de órdenes para esta acción:"
-
-#~ msgid "Double-click an item to edit"
-#~ msgstr "Doble clic sobre un elemento para editarlo"
-
-#~ msgid "Remove whitespace when executing actions"
-#~ msgstr "Eliminar los espacios en blanco al ejecutar las acciones"
-
-#~ msgid "Advanced..."
-#~ msgstr "Avanzado..."
-
-#~ msgid "Advanced Settings"
-#~ msgstr "Preferencias avanzadas"
-
-#~ msgid "D&isable Actions for Windows of Type WM_CLASS"
-#~ msgstr "&Inhabilitar las acciones para las ventanas del tipo WM_CLASS"
-
-#~ msgid ""
-#~ "<qt>This lets you specify windows in which Klipper should not invoke "
-#~ "\"actions\". Use<br /><br /><center><b>xprop | grep WM_CLASS</b></"
-#~ "center><br />in a terminal to find out the WM_CLASS of a window. Next, "
-#~ "click on the window you want to examine. The first string it outputs "
-#~ "after the equal sign is the one you need to enter here.</qt>"
-#~ msgstr ""
-#~ "<qt>Esto le permite especificar ventanas en las que klipper no debería "
-#~ "invocar «Acciones». Utilice <br /><br /><center><b>xprop | grep WM_CLASS</"
-#~ "b></center><br />en un terminal para averiguar el WM_CLASS de una "
-#~ "ventana. Después, pulse en la ventana que desea examinar. La primera "
-#~ "cadena de caracteres que se muestra después del signo igual es la que "
-#~ "necesita introducir aquí.</qt>"
-
-#~ msgid "Enable Clipboard Actions"
-#~ msgstr "Habilitar las acciones del portapapeles"
-
-#~ msgid "URL grabber enabled"
-#~ msgstr "Capturador de URL habilitado"
-
-#~ msgid "Replay action in history"
-#~ msgstr "Repetir acción del historial"
-
-#~ msgid ""
-#~ "When a clipboard item is selected from the history popup, automatically "
-#~ "perform the configured actions on it."
-#~ msgstr ""
-#~ "Cuando se selecciona un elemento del portapapeles en la ventana emergente "
-#~ "del historial, realizar sobre el las acciones configuradas de forma "
-#~ "automatica."
-
-#~ msgid "Save clipboard contents on exit"
-#~ msgstr "Guardar el contenido del portapapeles al salir"
-
-#~ msgid "Synchronize contents of the clipboard and the selection"
-#~ msgstr "Sincronizar contenidos del portapapeles y la selección"
-
-#~ msgid "Keep clipboard contents"
-#~ msgstr "Guardar el contenido del portapapeles al salir"
-
-#~ msgid ""
-#~ "Selecting this option has the effect, that the clipboard can never be "
-#~ "emptied. E.g. when an application exits, the clipboard would usually be "
-#~ "emptied."
-#~ msgstr ""
-#~ "Si selecciona esta opción, el portapapeles nunca se podrá borrar. P. ej. "
-#~ "cuando una aplicación acaba, el portapapeles se debería borrar."
-
-#~ msgid ""
-#~ "When an area of the screen is selected with mouse or keyboard, this is "
-#~ "called \"the selection\".<br/>If this option is set, the selection is not "
-#~ "entered into the clipboard history, though it is still available for "
-#~ "pasting using the middle mouse button."
-#~ msgstr ""
-#~ "Cuando selecciona un área de la pantalla con el ratón o el teclado, esta "
-#~ "se denomina «selección».<br/>Si marca esta opción, dicha selección no se "
-#~ "almacenará en el historial del portapapeles, pero se podrá pegar usando "
-#~ "el botón central del ratón."
-
-#~ msgid "Synchronize clipboard and selection"
-#~ msgstr "Sincronizar el portapapeles y la selección"
-
-#~ msgid ""
-#~ "When an area of the screen is selected with mouse or keyboard, this is "
-#~ "called \"the selection\".<br/>If this option is selected, the selection "
-#~ "and the clipboard is kept the same, so that anything in the selection is "
-#~ "immediately available for pasting elsewhere using any method, including "
-#~ "the traditional middle mouse button. Otherwise, the selection is recorded "
-#~ "in the clipboard history, but the selection can only be pasted using the "
-#~ "middle mouse button. Also see the 'Ignore Selection' option."
-#~ msgstr ""
-#~ "Cuando selecciona un área de la pantalla con el ratón o el teclado, esta "
-#~ "se denomina «selección».<br/>Si marca esta opción, la selección y el "
-#~ "portapapeles se coordinarán, por lo que cualquier cosa que seleccione "
-#~ "estará inmediatamente disponible para pegarse en otra parte usando "
-#~ "cualquier método, incluyendo el botón central del ratón. Si no, la "
-#~ "selección se guardará en el historial del portapapeles pero solo podrá "
-#~ "pegarse con dicho botón central. Véase también la opción «Ignorar "
-#~ "selección»."
-
-#~ msgid "Selection text only"
-#~ msgstr "Solo selección de texto"
-
-#~ msgid ""
-#~ "When an area of the screen is selected with mouse or keyboard, this is "
-#~ "called \"the selection\".<br/>If this option is selected, only text "
-#~ "selections are stored in the history, while images and other selections "
-#~ "are not."
-#~ msgstr ""
-#~ "Cuando selecciona un área de la pantalla con el ratón o el teclado, esta "
-#~ "se denomina «selección».<br/>Si marca esta opción, solo se almacenarán en "
-#~ "el historial las selecciones de texto, y las de imágenes u otro tipo se "
-#~ "excluirán."
-
-#~ msgid "Timeout for action popups (seconds)"
-#~ msgstr "Tiempo límite para el menú emergente de las acciones (segundos)"
-
-#~ msgid "A value of 0 disables the timeout"
-#~ msgstr "Un valor 0 desactiva el tiempo de espera"
-
-#~ msgid "Clipboard history size"
-#~ msgstr "Tamaño del historial del portapapeles"
-
-#~ msgid ""
-#~ "Sometimes, the selected text has some whitespace at the end, which, if "
-#~ "loaded as URL in a browser would cause an error. Enabling this option "
-#~ "removes any whitespace at the beginning or end of the selected string "
-#~ "(the original clipboard contents will not be modified)."
-#~ msgstr ""
-#~ "Algunas veces, el texto seleccionado tiene espacios en blanco al final, "
-#~ "el cual, si se carga como un URL en el navegador puede causar un error. "
-#~ "Habilitando esta opción, se eliminan los espacios en blanco al principio "
-#~ "y al final de la cadena seleccionada (el contenido original del "
-#~ "portapapeles no se alterará)."
-
-#~ msgid "%1 - Actions For: %2"
-#~ msgstr "%1 -  Acciones para: %2"
-
-#~ msgid "&Edit Contents..."
-#~ msgstr "&Editar el contenido..."
-
-#~ msgid "<empty clipboard>"
-#~ msgstr "<portapapeles vacío>"
-
-#~ msgid ""
-#~ "You can enable URL actions later by left-clicking on the Klipper icon and "
-#~ "selecting 'Enable Clipboard Actions'"
-#~ msgstr ""
-#~ "Puede habilitar las acciones de URL más tarde pulsando con el botón "
-#~ "derecho sobre el icono de Klipper y seleccionando «Habilitar acciones del "
-#~ "portapapeles»"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-18 02:40+0000\n"
+"POT-Creation-Date: 2025-06-05 02:37+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -40,58 +40,58 @@ msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "选择幻灯片的壁纸目录"
 
-#: imagepackage/contents/ui/config.qml:127
+#: imagepackage/contents/ui/config.qml:128
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Positioning:"
 msgstr "位置："
 
-#: imagepackage/contents/ui/config.qml:130
+#: imagepackage/contents/ui/config.qml:131
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled and cropped"
 msgstr "缩放并裁剪"
 
-#: imagepackage/contents/ui/config.qml:134
+#: imagepackage/contents/ui/config.qml:135
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled"
 msgstr "缩放"
 
-#: imagepackage/contents/ui/config.qml:138
+#: imagepackage/contents/ui/config.qml:139
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled, keep proportions"
 msgstr "缩放，保持比例"
 
-#: imagepackage/contents/ui/config.qml:142
+#: imagepackage/contents/ui/config.qml:143
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "居中"
 
-#: imagepackage/contents/ui/config.qml:146
+#: imagepackage/contents/ui/config.qml:147
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Tiled"
 msgstr "平铺"
 
-#: imagepackage/contents/ui/config.qml:174
+#: imagepackage/contents/ui/config.qml:175
 #, kde-format
 msgid "Background:"
 msgstr "背景色："
 
-#: imagepackage/contents/ui/config.qml:175
+#: imagepackage/contents/ui/config.qml:176
 #, kde-format
 msgid "Blur"
 msgstr "虚化"
 
-#: imagepackage/contents/ui/config.qml:184
+#: imagepackage/contents/ui/config.qml:185
 #, kde-format
 msgid "Solid color"
 msgstr "纯色"
 
-#: imagepackage/contents/ui/config.qml:195
+#: imagepackage/contents/ui/config.qml:196
 #, kde-format
 msgid "Select Background Color"
 msgstr "选择背景色"

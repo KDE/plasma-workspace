@@ -1,17 +1,17 @@
-# translation of plasma_engine_weather.po to Spanish
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
+# Spanish translations for plasma_engine_weather.po package.
+# Copyright (C) 2009-2025 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2009, 2010, 2015, 2016, 2017, 2018, 2019, 2021, 2024 Eloy Cuadra <ecuadra@eloihr.net>
-# Jaime Robles <jaime@kde.org>, 2009.
-# Javier Vinal <fjvinal@gmail.com>, 2011.
-# Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>, 2011.
+# SPDX-FileCopyrightText: 2009, 2010, 2015, 2016, 2017, 2018, 2019, 2021, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2009 Jaime Robles <jaime@kde.org>
+# SPDX-FileCopyrightText: 2011 Javier Vinal <fjvinal@gmail.com>
+# SPDX-FileCopyrightText: 2011 Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_engine_weather\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-03 02:41+0000\n"
-"PO-Revision-Date: 2024-06-12 01:25+0200\n"
+"PO-Revision-Date: 2025-06-04 19:53+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -4907,173 +4907,3 @@ msgstr "Posibilidad de chaparrones y tormentas eléctricas"
 msgctxt "weather forecast"
 msgid "Showers And Thunderstorms Likely"
 msgstr "Alta probabilidad de chaparrones y tormentas eléctricas"
-
-#~ msgid "UK"
-#~ msgstr "RU"
-
-#~ msgid "USA"
-#~ msgstr "EE. UU."
-
-#~ msgctxt "weather condition"
-#~ msgid "weather condition"
-#~ msgstr "condición meteorológica"
-
-#~ msgctxt "weather condition"
-#~ msgid "thunder storm"
-#~ msgstr "tormenta eléctrica"
-
-#~ msgctxt "weather forecast"
-#~ msgid "thunder storm"
-#~ msgstr "tormenta eléctrica"
-
-#~ msgctxt "wind direction"
-#~ msgid "N"
-#~ msgstr "N"
-
-#~ msgctxt "wind direction"
-#~ msgid "NNE"
-#~ msgstr "NNE"
-
-#~ msgctxt "wind direction"
-#~ msgid "NE"
-#~ msgstr "NE"
-
-#~ msgctxt "wind direction"
-#~ msgid "ENE"
-#~ msgstr "ENE"
-
-#~ msgctxt "wind direction"
-#~ msgid "E"
-#~ msgstr "E"
-
-#~ msgctxt "wind direction"
-#~ msgid "SSE"
-#~ msgstr "SSE"
-
-#~ msgctxt "wind direction"
-#~ msgid "SE"
-#~ msgstr "SE"
-
-#~ msgctxt "wind direction"
-#~ msgid "ESE"
-#~ msgstr "ESE"
-
-#~ msgctxt "wind direction"
-#~ msgid "S"
-#~ msgstr "S"
-
-#~ msgctxt "wind direction"
-#~ msgid "NNW"
-#~ msgstr "NNO"
-
-#~ msgctxt "wind direction"
-#~ msgid "NW"
-#~ msgstr "NO"
-
-#~ msgctxt "wind direction"
-#~ msgid "WNW"
-#~ msgstr "ONO"
-
-#~ msgctxt "wind direction"
-#~ msgid "W"
-#~ msgstr "O"
-
-#~ msgctxt "wind direction"
-#~ msgid "SSW"
-#~ msgstr "SSO"
-
-#~ msgctxt "wind direction"
-#~ msgid "SW"
-#~ msgstr "SO"
-
-#~ msgctxt "wind direction"
-#~ msgid "WSW"
-#~ msgstr "OSO"
-
-#~ msgctxt "wind direction"
-#~ msgid "VR"
-#~ msgstr "VR"
-
-#~ msgctxt "pressure tendency"
-#~ msgid "rising"
-#~ msgstr "levantando"
-
-#~ msgctxt "pressure tendency"
-#~ msgid "falling"
-#~ msgstr "cayendo"
-
-#~ msgctxt "pressure tendency"
-#~ msgid "no change"
-#~ msgstr "sin cambios"
-
-#~ msgctxt "wind speed"
-#~ msgid "Calm"
-#~ msgstr "Calma"
-
-#~ msgctxt "wind speed"
-#~ msgid "N/A"
-#~ msgstr "N/D"
-
-#~ msgctxt "pressure tendency"
-#~ msgid "steady"
-#~ msgstr "quieto"
-
-#~ msgctxt "wind direction - wind speed is too low to measure"
-#~ msgid "VR"
-#~ msgstr "VR"
-
-#~ msgid "N"
-#~ msgstr "N"
-
-#~ msgid "NNE"
-#~ msgstr "NNE"
-
-#~ msgid "NE"
-#~ msgstr "NE"
-
-#~ msgid "ENE"
-#~ msgstr "ENE"
-
-#~ msgid "E"
-#~ msgstr "E"
-
-#~ msgid "SSE"
-#~ msgstr "SSE"
-
-#~ msgid "SE"
-#~ msgstr "SE"
-
-#~ msgid "ESE"
-#~ msgstr "ESE"
-
-#~ msgid "S"
-#~ msgstr "S"
-
-#~ msgid "NNW"
-#~ msgstr "NNO"
-
-#~ msgid "NW"
-#~ msgstr "NO"
-
-#~ msgid "WNW"
-#~ msgstr "ONO"
-
-#~ msgid "W"
-#~ msgstr "O"
-
-#~ msgid "SSW"
-#~ msgstr "SSO"
-
-#~ msgid "SW"
-#~ msgstr "SO"
-
-#~ msgid "WSW"
-#~ msgstr "OSO"
-
-#~ msgid "Meteorological data is provided by Environment Canada"
-#~ msgstr "Datos meteorológicos proporcionados por Medio ambiente de Canadá"
-
-#~ msgid "Supported by backstage.bbc.co.uk / Data from UK MET Office"
-#~ msgstr ""
-#~ "Proporcionado por backstage.bbc.co.uk / Datos de la Oficina Meteorológica "
-#~ "del Reino Unido"

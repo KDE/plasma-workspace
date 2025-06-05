@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-04 02:35+0000\n"
+"POT-Creation-Date: 2025-06-05 02:37+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -42,7 +42,7 @@ msgstr "固定到任务管理器"
 msgid "Add to Panel (Widget)"
 msgstr "添加到面板 (挂件)"
 
-#: actionlist.cpp:313 rootmodel.cpp:552
+#: actionlist.cpp:313 rootmodel.cpp:540
 #, kde-format
 msgid "Recent Files"
 msgstr "最近文件"
@@ -112,7 +112,7 @@ msgid "Computer"
 msgstr "电脑"
 
 #. i18n.
-#: kastatsfavoritesmodel.cpp:554 rootmodel.cpp:545 simplefavoritesmodel.cpp:33
+#: kastatsfavoritesmodel.cpp:554 rootmodel.cpp:533 simplefavoritesmodel.cpp:33
 #, kde-format
 msgid "Favorites"
 msgstr "常用程序"
@@ -162,37 +162,37 @@ msgstr "忘记全部应用程序"
 msgid "Forget All Files"
 msgstr "忘记全部文件"
 
-#: rootmodel.cpp:79
+#: rootmodel.cpp:80
 #, kde-format
 msgid "All Applications"
 msgstr "全部应用程序"
 
-#: rootmodel.cpp:132
+#: rootmodel.cpp:133
 #, kde-format
 msgid "Hide %1"
 msgstr "隐藏 %1"
 
-#: rootmodel.cpp:539
+#: rootmodel.cpp:527
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "这不应该可见！请用 KICKER_FAVORITES_MODEL"
 
-#: rootmodel.cpp:552
+#: rootmodel.cpp:540
 #, kde-format
 msgid "Often Used Files"
 msgstr "常用文件"
 
-#: rootmodel.cpp:561
+#: rootmodel.cpp:549
 #, kde-format
 msgid "Recent Applications"
 msgstr "最近应用程序"
 
-#: rootmodel.cpp:561
+#: rootmodel.cpp:549
 #, kde-format
 msgid "Often Used Applications"
 msgstr "常用应用"
 
-#: rootmodel.cpp:576
+#: rootmodel.cpp:564
 #, kde-format
 msgid "Power / Session"
 msgstr "电源 / 会话"

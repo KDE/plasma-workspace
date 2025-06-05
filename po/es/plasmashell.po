@@ -1,15 +1,15 @@
 # Spanish translations for plasmashell.po package.
-# Copyright (C) 2014 This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
-#
+# Copyright (C) 2014-2025 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
 # Automatically generated, 2014.
+#
 # SPDX-FileCopyrightText: 2014, 2015, 2016, 2018, 2020, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-29 02:44+0000\n"
-"PO-Revision-Date: 2025-01-24 00:34+0100\n"
+"PO-Revision-Date: 2025-06-04 19:55+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -110,7 +110,7 @@ msgstr "Copiar la versión de Plasma"
 #, kde-format
 msgctxt "@action:button"
 msgid "Report a Bug…"
-msgstr "Informar de un fallo..."
+msgstr "Informar de un fallo…"
 
 #: desktopview.cpp:302
 #, kde-format
@@ -128,7 +128,7 @@ msgstr "Ocultar hasta reiniciar"
 #, kde-format
 msgctxt "@action:button Hide the preview banner permanently"
 msgid "Hide Permanently…"
-msgstr "Ocultar permanentemente..."
+msgstr "Ocultar permanentemente…"
 
 #: desktopview.cpp:318
 #, kde-kuit-format
@@ -409,7 +409,7 @@ msgstr "Activar la entrada %1 del gestor de tareas"
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
-msgstr "Gestión de escritorios y paneles..."
+msgstr "Gestión de escritorios y paneles…"
 
 #: shellcorona.cpp:335
 #, kde-format
@@ -458,136 +458,3 @@ msgstr "Contador de paneles"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Cuenta los paneles"
-
-#~ msgid "Panel and Desktop Management"
-#~ msgstr "Gestión del panel y el escritorio"
-
-#~ msgid ""
-#~ "Enables test mode and specifies the layout javascript file to set up the "
-#~ "testing environment"
-#~ msgstr ""
-#~ "Activa el modo de pruebas e indica el archivo javascripit para configurar "
-#~ "el entorno de pruebas"
-
-#~ msgid "file"
-#~ msgstr "archivo"
-
-#~ msgctxt "@label %1 version string"
-#~ msgid "Plasma %1 Development Build"
-#~ msgstr "Compilación de desarrollo de Plasma %1"
-
-#~ msgid ""
-#~ "Load plasmashell as a standalone application, needs the shell-plugin "
-#~ "option to be specified"
-#~ msgstr ""
-#~ "Cargar el intérprete de órdenes de Plasma como aplicación independiente; "
-#~ "necesita que se especifique la opción «shell-plugin»"
-
-#~ msgid "Unknown %1"
-#~ msgstr "No se conoce %1"
-
-#~ msgid "Unable to load script file: %1"
-#~ msgstr "No se puede cargar el archivo de script: %1"
-
-#~ msgid "Activities..."
-#~ msgstr "Actividades..."
-
-#~ msgctxt "Fatal error message body"
-#~ msgid ""
-#~ "All shell packages missing.\n"
-#~ "This is an installation issue, please contact your distribution"
-#~ msgstr ""
-#~ "Faltan todos los paquetes del intérprete.\n"
-#~ "Se trata de un problema de instalación. Por favor, póngase en contacto "
-#~ "con su distribución."
-
-#~ msgctxt "Fatal error message title"
-#~ msgid "Plasma Cannot Start"
-#~ msgstr "No se puede iniciar Plasma"
-
-#~ msgctxt "Fatal error message body"
-#~ msgid "Shell package %1 cannot be found"
-#~ msgstr "No se puede encontrar el paquete del intérprete %1."
-
-#~ msgid "Main Script File"
-#~ msgstr "Archivo de guion principal"
-
-#~ msgid "Force a windowed view for testing purposes"
-#~ msgstr "Forzar una vista en ventana para probar"
-
-#~ msgid "Deprecated, does nothing"
-#~ msgstr "Desaconsejado, no hace nada"
-
-#~ msgid ""
-#~ "Your graphics hardware does not support OpenGL (ES) 2. Plasma will abort "
-#~ "now."
-#~ msgstr ""
-#~ "Su hardware gráfico no permite el uso de OpenGL (ES) 2. Plasma se "
-#~ "interrumpirá ahora."
-
-#~ msgid "Incompatible OpenGL version detected"
-#~ msgstr "Se ha detectado una versión de OpenGL no compatible"
-
-#~ msgid "Recent number of crashes"
-#~ msgstr "Número de cuelgues recientes"
-
-#~ msgid "Show Dashboard"
-#~ msgstr "Mostrar el tablero de mandos"
-
-#~ msgid "Hide Dashboard"
-#~ msgstr "Ocultar el tablero de mandos"
-
-#~ msgid "Shuts up the output"
-#~ msgstr "Silencia la salida"
-
-#~ msgid "&Execute"
-#~ msgstr "&Ejecutar"
-
-#~ msgctxt "Toolbar Button to switch to KWin Scripting Mode"
-#~ msgid "KWin"
-#~ msgstr "KWin"
-
-#~ msgid "Templates"
-#~ msgstr "Plantillas"
-
-#~ msgid "Desktop Shell Scripting Console"
-#~ msgstr "Consola para guiones del intérprete de órdenes del escritorio"
-
-#~ msgid "Editor"
-#~ msgstr "Editor"
-
-#~ msgid "Load"
-#~ msgstr "Cargar"
-
-#~ msgid "Use"
-#~ msgstr "Usar"
-
-#~ msgid "Output"
-#~ msgstr "Salida"
-
-#~ msgid "Unable to load script file <b>%1</b>"
-#~ msgstr "No se puede cargar el archivo de script <b>%1</b>"
-
-#~ msgid "Save Script File"
-#~ msgstr "Guardar archivo de script"
-
-#~ msgid "Executing script at %1"
-#~ msgstr "Ejecutando script en %1"
-
-#~ msgid "Runtime: %1ms"
-#~ msgstr "Tiempo de ejecución: %1 ms"
-
-#~ msgid "No plugins found, check your installation."
-#~ msgstr "No se ha encontrado ningún complemento. Compruebe su instalación."
-
-#~ msgctxt "About mouse action"
-#~ msgid "About"
-#~ msgstr "Acerca de"
-
-#~ msgctxt "Configure mouse action"
-#~ msgid "Configure"
-#~ msgstr "Configurar"
-
-#~ msgctxt "Remove mouse action"
-#~ msgid "Remove"
-#~ msgstr "Eliminar"

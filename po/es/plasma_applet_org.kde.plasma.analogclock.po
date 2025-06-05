@@ -1,17 +1,16 @@
-# translation of plasma_applet_clock.po to Spanish
-# Translation of plasma_applet_clock to Spanish
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
+# Spanish translations for plasma_applet_org.kde.plasma.analogclock.po package.
+# Copyright (C) 2007-2025 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
 #
-# Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>, 2007.
-# Jaime Robles <jaime@kde.org>, 2007, 2008.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2009, 2013, 2019, 2022.
+# SPDX-FileCopyrightText: 2007 Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>
+# SPDX-FileCopyrightText: 2007, 2008 Jaime Robles <jaime@kde.org>
+# SPDX-FileCopyrightText: 2009, 2013, 2019, 2022, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
-"Project-Id-Version: plasma_applet_clock\n"
+"Project-Id-Version: plasma_applet_org.kde.plasma.analogclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-19 01:53+0000\n"
-"PO-Revision-Date: 2022-07-25 03:47+0200\n"
+"PO-Revision-Date: 2025-06-04 19:50+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -46,22 +45,3 @@ msgstr "Mostrar la zona horaria"
 msgctxt "@info:tooltip"
 msgid "Current time is %1; Current date is %2"
 msgstr "La hora actual es %1; la fecha actual es %2"
-
-#~ msgid "Show the seconds"
-#~ msgstr "Mostrar los segundos"
-
-#~ msgid "Check this if you want to show the seconds."
-#~ msgstr "Marque esta casilla si quiere que se muestren los segundos."
-
-#~ msgid "Show &seconds hand"
-#~ msgstr "Mostrar el &segundero"
-
-#~ msgid "Show the Timezone in text"
-#~ msgstr "Mostrar la zona horaria en texto"
-
-#~ msgid "Check this if you want to display Timezone in text."
-#~ msgstr ""
-#~ "Marque esta casilla si quiere que se muestre la zona horaria en texto."
-
-#~ msgid "Show &time zone"
-#~ msgstr "Mos&trar la zona horaria"

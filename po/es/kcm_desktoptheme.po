@@ -1,5 +1,5 @@
-# Ttranslation of kcm_desktoptheme.po to Spanish
-# Copyright (C) 2008-2025 This_file_is_part_of_KDE
+# Spanish translations for kcm_desktoptheme.po package.
+# Copyright (C) 2008-2025 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
 # SPDX-FileCopyrightText: 2008 Ignacio Poggi <ignaciop.3@gmail.com>
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kcm_desktoptheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-29 00:41+0000\n"
-"PO-Revision-Date: 2025-02-03 01:18+0100\n"
+"PO-Revision-Date: 2025-06-04 19:44+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -136,12 +136,12 @@ msgstr "Compatible con el esquema de color"
 #: ui/main.qml:130
 #, kde-format
 msgid "Install from File…"
-msgstr "Instalar desde archivo..."
+msgstr "Instalar desde archivo…"
 
 #: ui/main.qml:135
 #, kde-format
 msgid "Get New…"
-msgstr "Obtener novedades..."
+msgstr "Obtener novedades…"
 
 #: ui/main.qml:148
 #, kde-format
@@ -151,7 +151,7 @@ msgstr "Sigue el esquema de color"
 #: ui/main.qml:166
 #, kde-format
 msgid "Edit Theme…"
-msgstr "Editar tema..."
+msgstr "Editar tema…"
 
 #: ui/main.qml:173
 #, kde-format
