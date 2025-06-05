@@ -1,15 +1,15 @@
 # Spanish translations for krunner.po package.
-# Copyright (C) 2014 This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
-#
+# Copyright (C) 2014-2025 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
 # Automatically generated, 2014.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2014, 2015, 2016, 2017, 2019, 2022, 2023.
+#
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2019, 2022, 2023, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: krunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-14 00:44+0000\n"
-"PO-Revision-Date: 2023-07-25 16:41+0200\n"
+"PO-Revision-Date: 2025-06-04 19:35+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -88,7 +88,7 @@ msgstr "Configurar el comportamiento de KRunner"
 #: qml/RunCommand.qml:108
 #, kde-format
 msgid "Configure KRunner…"
-msgstr "Configurar KRunner..."
+msgstr "Configurar KRunner…"
 
 #: qml/RunCommand.qml:121
 #, kde-format
@@ -99,13 +99,13 @@ msgstr "Mostrando solo los resultados de %1"
 #, kde-format
 msgctxt "Textfield placeholder text, query specific KRunner plugin"
 msgid "Search '%1'…"
-msgstr "Buscar «%1»..."
+msgstr "Buscar «%1»…"
 
 #: qml/RunCommand.qml:136
 #, kde-format
 msgctxt "Textfield placeholder text"
 msgid "Search…"
-msgstr "Buscar..."
+msgstr "Buscar…"
 
 #: qml/RunCommand.qml:309 qml/RunCommand.qml:310 qml/RunCommand.qml:312
 #, kde-format
@@ -136,32 +136,3 @@ msgstr "Consultas recientes"
 #, kde-format
 msgid "Remove"
 msgstr "Eliminar"
-
-#~ msgid "Only query this specific runner"
-#~ msgstr "Consultar solo este lanzador"
-
-#~ msgid "Querying runner %1 in single runner mode"
-#~ msgstr "Consultando el lanzador %1 en el modo de lanzador único"
-
-#~ msgid "in category recent queries"
-#~ msgstr "en la categoría de consultas recientes"
-
-#~ msgid "krunner"
-#~ msgstr "krunner"
-
-#~ msgid "Show KRunner"
-#~ msgstr "Mostrar KRunner"
-
-#~ msgctxt "Name for krunner shortcuts category"
-#~ msgid "KRunner"
-#~ msgstr "KRunner"
-
-#~ msgid "Run Command on clipboard contents"
-#~ msgstr "Ejecutar orden en el contenido del portapapeles"
-
-#~ msgid "Run Command"
-#~ msgstr "Ejecutar orden"
-
-#~ msgctxt "Name for krunner shortcuts category"
-#~ msgid "Run Command"
-#~ msgstr "Ejecutar orden"

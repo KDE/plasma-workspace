@@ -1,5 +1,6 @@
-# Translation of kcm_colors.po to Spanish
-# Copyright (C) 2000-2025.
+# Spanish translations for kcm_colors.po package.
+# Copyright (C) 2000-2025 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
 #
 # SPDX-FileCopyrightText: 2000-2002 Pablo de Vicente <vicente@oan.es>
 # SPDX-FileCopyrightText: 2003, 2007, 2008 Jaime Robles <jaime@kde.org>
@@ -16,7 +17,7 @@ msgstr ""
 "Project-Id-Version: kcm_colors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-15 00:44+0000\n"
-"PO-Revision-Date: 2025-02-03 01:14+0100\n"
+"PO-Revision-Date: 2025-06-04 19:29+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -1305,12 +1306,12 @@ msgstr "Esquemas oscuros"
 #: ui/main.qml:152
 #, kde-format
 msgid "Install from File…"
-msgstr "Instalar desde archivo..."
+msgstr "Instalar desde archivo…"
 
 #: ui/main.qml:157
 #, kde-format
 msgid "Get New…"
-msgstr "Obtener novedades..."
+msgstr "Obtener novedades…"
 
 #: ui/main.qml:204
 #, kde-format
@@ -1357,7 +1358,7 @@ msgstr "Texto desactivado"
 #: ui/main.qml:317
 #, kde-format
 msgid "Edit Color Scheme…"
-msgstr "Editar esquema de color..."
+msgstr "Editar esquema de color…"
 
 #: ui/main.qml:323
 #, kde-format
@@ -1378,6 +1379,3 @@ msgstr "Abrir esquema de color"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Archivos de esquema de color (*.colors)"
-
-#~ msgid "Choose custom accent color"
-#~ msgstr "Escoger color de acento personalizado"

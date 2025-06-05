@@ -1,15 +1,15 @@
 # Spanish translations for kcm_lookandfeel.po package.
-# Copyright (C) 2014 This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
-#
+# Copyright (C) 2014-2025 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
 # Automatically generated, 2014.
-# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
+#
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-29 00:44+0000\n"
-"PO-Revision-Date: 2024-07-27 00:32+0200\n"
+"PO-Revision-Date: 2025-06-04 19:32+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -130,7 +130,7 @@ msgstr "Cancelar"
 #: ui/main.qml:88
 #, kde-format
 msgid "Get New…"
-msgstr "Obtener novedades..."
+msgstr "Obtener novedades…"
 
 #: ui/main.qml:103
 #, kde-format
@@ -171,12 +171,12 @@ msgstr "¿Aplicar %1?"
 #: ui/main.qml:178
 #, kde-format
 msgid "Choose what to apply…"
-msgstr "Escoja qué aplicar..."
+msgstr "Escoja qué aplicar…"
 
 #: ui/main.qml:178
 #, kde-format
 msgid "Show fewer options…"
-msgstr "Mostrar menos opciones..."
+msgstr "Mostrar menos opciones…"
 
 #: ui/MoreOptions.qml:24
 #, kde-format
@@ -292,67 +292,3 @@ msgid ""
 msgstr ""
 "Este tema global no proporciona preferencias aplicables. Contacte con el "
 "encargado de mantener este tema global, ya que podría estar incompleto."
-
-#~ msgid "Apply"
-#~ msgstr "Aplicar"
-
-#~ msgid "Cancel"
-#~ msgstr "Cancelar"
-
-#~ msgid "Lock Screen"
-#~ msgstr "Pantalla de bloqueo"
-
-#~ msgid "Get New Global Themes…"
-#~ msgstr "Obtener nuevos temas globales..."
-
-#~ msgid "This module lets you choose the global look and feel."
-#~ msgstr "Este módulo le permite escoger el aspecto visual global."
-
-#~ msgid ""
-#~ "Your current layout and configuration of panels, desktop widgets, and "
-#~ "wallpapers will be lost and reset to the default layout provided by the "
-#~ "selected theme."
-#~ msgstr ""
-#~ "El diseño actual y la configuración de los paneles, widgets y fondo del "
-#~ "escritorio se perderá y se reiniciará al diseño por omisión proporcionado "
-#~ "por el tema seleccionado."
-
-#~ msgid "Use desktop layout from theme"
-#~ msgstr "Usar diseño de escritorio del tema"
-
-#~ msgid "Global Theme"
-#~ msgstr "Tema global"
-
-#~ msgid "Apply a global theme package"
-#~ msgstr "Aplicar un paquete de tema global"
-
-#~ msgid "Customize..."
-#~ msgstr "Personalizar..."
-
-#~ msgid "Global Themes"
-#~ msgstr "Temas globales"
-
-#~ msgid "Download New Global Themes"
-#~ msgstr "Descargar nuevos temas globales"
-
-#~ msgid "Look and feel tool"
-#~ msgstr "Herramienta de aspecto visual"
-
-#~ msgid "Choose the Look and Feel theme"
-#~ msgstr "Escoger el tema del aspecto visual..."
-
-#~ msgid "Configure Look and Feel details"
-#~ msgstr "Configurar los detalles del aspecto visual"
-
-#~ msgid ""
-#~ "Select an overall theme for your workspace (including plasma theme, color "
-#~ "scheme, mouse cursor, window and desktop switcher, splash screen, lock "
-#~ "screen etc.)"
-#~ msgstr ""
-#~ "Seleccione un tema de aspecto visual general para el espacio de trabajo "
-#~ "(que incluye un tema para Plasma, un esquema de color, un cursor para el "
-#~ "ratón, un cambiador de ventanas y de escritorios, una pantalla de "
-#~ "bienvenida, una pantalla de bloqueo, etc.)"
-
-#~ msgid "Show Preview"
-#~ msgstr "Mostrar vista previa"

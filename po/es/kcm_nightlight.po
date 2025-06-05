@@ -1,15 +1,15 @@
-# Spanish translations for kcm_nightcolor.po package.
-# Copyright (C) 2017 This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
-#
+# Spanish translations for kcm_nightlight.po package.
+# Copyright (C) 2017-2025 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
 # Automatically generated, 2017.
-# SPDX-FileCopyrightText: 2017, 2019, 2021, 2022, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
+#
+# SPDX-FileCopyrightText: 2017, 2019, 2021, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
-"Project-Id-Version: kcm_nightcolor\n"
+"Project-Id-Version: kcm_nightlight\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-13 00:47+0000\n"
-"PO-Revision-Date: 2024-08-21 03:59+0200\n"
+"PO-Revision-Date: 2025-06-04 19:32+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -222,7 +222,7 @@ msgstr "En minutos (mín. 1, máx. 600)"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"
-msgstr "Ubicando..."
+msgstr "Ubicando…"
 
 #: ui/TimeField.qml:43
 #, kde-format
@@ -241,112 +241,3 @@ msgstr ":"
 msgctxt "@info:tooltip Part of a control for setting a time"
 msgid "minute"
 msgstr "minuto"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "The device's location will be periodically updated using GPS (if "
-#~ "available), or by sending network information to <link url='https://"
-#~ "location.services.mozilla.com'>Mozilla Location Service</link>."
-#~ msgstr ""
-#~ "La ubicación del dispositivo se actualizará periódicamente usando el GPS "
-#~ "(si está disponible) o enviando información de redes al <link url="
-#~ "\"https://location.services.mozilla.com\">Servicio de localización de "
-#~ "Mozilla</link>."
-
-#~ msgid "Error: Transition time overlaps."
-#~ msgstr "Error: el tiempo de transición se solapa."
-
-#~ msgid "Input format: HH:MM"
-#~ msgstr "Formato de entrada: HH:MM"
-
-#~ msgctxt "Night colour blue-ish"
-#~ msgid "Cool"
-#~ msgstr "Frío"
-
-#~ msgid "This is what day color temperature will look like when active."
-#~ msgstr ""
-#~ "Así se mostrará la temperatura del color diurno cuando esté activado."
-
-#~ msgid "This is what night color temperature will look like when active."
-#~ msgstr ""
-#~ "Así se mostrará la temperatura del color nocturno cuando esté activado."
-
-#~ msgid "Activate blue light filter"
-#~ msgstr "Activar el filtro de luz azul"
-
-#~ msgid "Turn on at:"
-#~ msgstr "Encender a las:"
-
-#~ msgid "Turn off at:"
-#~ msgstr "Apagar a las:"
-
-#~ msgid "Night Color begins changing back at %1 and ends at %2"
-#~ msgstr "El color nocturno empieza a revertirse a las %1 y termina a las %2"
-
-#~ msgid "Error: Morning is before evening."
-#~ msgstr "Error: la mañana es anterior a la tarde."
-
-#~ msgid ""
-#~ "The device's location will be detected using GPS (if available), or by "
-#~ "sending network information to <a href=\"https://location.services."
-#~ "mozilla.com\">Mozilla Location Service</a>."
-#~ msgstr ""
-#~ "La ubicación del dispositivo se detectará usando el GPS (si está "
-#~ "disponible) o enviando información de redes al <a href=\"https://location."
-#~ "services.mozilla.com\">Servicio de localización de Mozilla</a>."
-
-#~ msgid "Night Color begins at %1"
-#~ msgstr "El color nocturno empieza a las %1"
-
-#~ msgid "Color fully changed at %1"
-#~ msgstr "Color completamente cambiado a las %1"
-
-#~ msgid "Normal coloration restored by %1"
-#~ msgstr "Coloración normal restaurada a las %1"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Eloy Cuadra"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "ecuadra@eloihr.net"
-
-#~ msgid "Night Color"
-#~ msgstr "Color nocturno"
-
-#~ msgid "Roman Gilg"
-#~ msgstr "Roman Gilg"
-
-#~ msgid " K"
-#~ msgstr " K"
-
-#~ msgid "Operation mode:"
-#~ msgstr "Modo de operación:"
-
-#~ msgid "Automatic"
-#~ msgstr "Automático"
-
-#~ msgid "Times"
-#~ msgstr "Horas"
-
-#~ msgid "Constant"
-#~ msgstr "Constante"
-
-#~ msgid "Sunrise begins:"
-#~ msgstr "El amanecer empieza a las:"
-
-#~ msgid "(Input format: HH:MM)"
-#~ msgstr "(Formato de entrada: HH:MM)"
-
-#~ msgid "Sunset begins:"
-#~ msgstr "La puesta de sol empieza a las:"
-
-#~ msgid "...and ends:"
-#~ msgstr "...y termina a las:"
-
-#~ msgid "Manual"
-#~ msgstr "Manual"
-
-#~ msgid "(HH:MM)"
-#~ msgstr "(HH:MM)"

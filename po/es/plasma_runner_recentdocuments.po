@@ -1,14 +1,15 @@
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
+# Spanish translations for plasma_runner_recentdocuments.po package.
+# Copyright (C) 2008-2025 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
 #
-# Ignacio Poggi <ignaciop.3@gmail.com>, 2008.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2009, 2016.
+# SPDX-FileCopyrightText: 2008 Ignacio Poggi <ignaciop.3@gmail.com>
+# SPDX-FileCopyrightText: 2009, 2016, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
-"Project-Id-Version: krunner_recentdocuments\n"
+"Project-Id-Version: plasma_runner_recentdocuments\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-06 00:40+0000\n"
-"PO-Revision-Date: 2016-06-19 11:54+0200\n"
+"PO-Revision-Date: 2025-06-04 19:42+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -27,6 +28,3 @@ msgstr "Abrir la carpeta contenedora"
 #, kde-format
 msgid "Looks for documents recently used with names matching :q:."
 msgstr "Busca documentos usados recientemente cuyos nombres coincidan con :q:."
-
-#~ msgid "Recent Document"
-#~ msgstr "Documento reciente"

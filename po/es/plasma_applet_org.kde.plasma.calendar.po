@@ -1,15 +1,15 @@
 # Spanish translations for plasma_applet_org.kde.plasma.calendar.po package.
-# Copyright (C) 2014 This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
-#
+# Copyright (C) 2014-2025 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
 # Automatically generated, 2014.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2014, 2015, 2016, 2019.
+#
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2019, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
-"Project-Id-Version: plasma_applet_org\n"
+"Project-Id-Version: plasma_applet_org.kde.plasma.calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-19 01:53+0000\n"
-"PO-Revision-Date: 2019-04-26 13:54+0200\n"
+"PO-Revision-Date: 2025-06-04 19:37+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -51,23 +51,3 @@ msgstr "Mostrar día del mes"
 msgctxt "Show the week number (eg. 50) in the icon"
 msgid "Show week number"
 msgstr "Mostrar número de semana"
-
-#~ msgid "Working Day"
-#~ msgstr "Día laborable"
-
-#~ msgid "Starts at 9"
-#~ msgstr "Comienza a las 9"
-
-#~ msgid "Ends at 5"
-#~ msgstr "Finaliza a las 5"
-
-#~ msgctxt "What information is shown in the calendar icon"
-#~ msgid "Icon:"
-#~ msgstr "Icono:"
-
-#~ msgctxt "Show the number of the day (eg. 31) in the icon"
-#~ msgid "Day in month"
-#~ msgstr "Día del mes"
-
-#~ msgid "Agenda"
-#~ msgstr "Agenda"

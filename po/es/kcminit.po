@@ -1,17 +1,16 @@
-# translation of kcminit.po to Spanish
-# Translation of kcminit to Spanish
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
+# Spanish translations for kcminit.po package.
+# Copyright (C) 2007-2025 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
 #
-# Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>, 2007.
-# Jaime Robles <jaime@kde.org>, 2008.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2014.
+# SPDX-FileCopyrightText: 2007 Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>
+# SPDX-FileCopyrightText: 2008 Jaime Robles <jaime@kde.org>
+# SPDX-FileCopyrightText: 2014, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcminit\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-09 01:39+0000\n"
-"PO-Revision-Date: 2014-08-05 17:53+0200\n"
+"PO-Revision-Date: 2025-06-04 19:33+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -50,6 +49,3 @@ msgstr "Listar los módulos que se ejecutan en el arranque"
 #, kde-format
 msgid "Configuration module to run"
 msgstr "Módulo de configuración a ejecutar"
-
-#~ msgid "Module %1 not found"
-#~ msgstr "No se ha encontrado el módulo %1"

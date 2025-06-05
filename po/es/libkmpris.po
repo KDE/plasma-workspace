@@ -1,15 +1,15 @@
 # Spanish translations for libkmpris.po package.
-# Copyright (C) 2023 This file is copyright:
+# Copyright (C) 2023-2025 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 # Automatically generated, 2023.
 #
-# SPDX-FileCopyrightText: 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: libkmpris\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-29 00:44+0000\n"
-"PO-Revision-Date: 2024-02-09 12:40+0100\n"
+"PO-Revision-Date: 2025-06-04 19:35+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -72,7 +72,3 @@ msgstr "Subir el volumen multimedia"
 msgctxt "@title shortcut"
 msgid "Media volume down"
 msgstr "Bajar el volumen multimedia"
-
-#~ msgctxt "@action:button"
-#~ msgid "Choose player automatically"
-#~ msgstr "Escoger reproductor automáticamente"

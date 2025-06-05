@@ -1,28 +1,27 @@
-# translation of ksmserver.po to Spanish
-# Translation of ksmserver to Spanish
-# Copyright (C) 2000-2002
+# Spanish translations for ksmserver.po package.
+# Copyright (C) 2000-2025 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
 #
-# Pablo de Vicente <vicente@oan.es>, 2000-2002.
-# Miguel Revilla Rodríguez <yo@miguelrevilla.com>, 2003, 2004.
-# Pablo de Vicente <p.devicente@wanadoo.es>, 2004.
-# Jaime Robles <jaime@kde.org>, 2005, 2008, 2009.
-# Santiago Fernandez Sancho <santi@kde-es.org>, 2005.
-# Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>, 2007.
-# Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>, 2010.
-# SPDX-FileCopyrightText: 2012, 2013, 2014, 2015, 2018, 2020, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2000-2002 Pablo de Vicente <vicente@oan.es>
+# SPDX-FileCopyrightText: 2003, 2004 Miguel Revilla Rodríguez <yo@miguelrevilla.com>
+# SPDX-FileCopyrightText: 2004 Pablo de Vicente <p.devicente@wanadoo.es>
+# SPDX-FileCopyrightText: 2005, 2008, 2009 Jaime Robles <jaime@kde.org>
+# SPDX-FileCopyrightText: 2005 Santiago Fernandez Sancho <santi@kde-es.org>
+# SPDX-FileCopyrightText: 2007 Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>
+# SPDX-FileCopyrightText: 2010 Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>
+# SPDX-FileCopyrightText: 2012, 2013, 2014, 2015, 2018, 2020, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-26 00:43+0000\n"
-"PO-Revision-Date: 2024-09-26 18:33+0200\n"
+"PO-Revision-Date: 2025-06-04 19:35+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"com>\n"
 "First-Translator: Boris Wesslowski <Boris@Wesslowski.com>\n"
 "X-Generator: Lokalize 24.08.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
@@ -145,144 +144,3 @@ msgstr ""
 "No se ha podido restaurar <application>%1</application> porque está dañada y "
 "ha agotado los recursos de restauración de la sesión del sistema. Comunique "
 "este problema a los desarrolladores de la aplicación."
-
-#~ msgid "$HOME not set!"
-#~ msgstr "$HOME no definida."
-
-#~ msgid "$HOME directory (%1) does not exist."
-#~ msgstr "El directorio $HOME (%1) no existe."
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "No write access to $HOME directory (%1). If this is intentional, set "
-#~ "<envar>KDE_HOME_READONLY=1</envar> in your environment."
-#~ msgstr ""
-#~ "No tiene permiso de acceso al directorio $HOME (%1). Si se trata de algo "
-#~ "intencionado, defina la variable <envar>KDE_HOME_READONLY=1</envar> en su "
-#~ "entorno."
-
-#~ msgid "No read access to $HOME directory (%1)."
-#~ msgstr "No tiene permiso de lectura en el directorio $HOME (%1)."
-
-#~ msgid "$HOME directory (%1) is out of disk space."
-#~ msgstr "El directorio $HOME (%1) se ha quedado sin espacio en disco."
-
-#~ msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
-#~ msgstr ""
-#~ "Ha fallado la escritura en el directorio $HOME (%2) con el error «%1»"
-
-#~ msgid "Temp directory (%1) is out of disk space."
-#~ msgstr "El directorio temporal (%1) se ha quedado sin espacio en disco."
-
-#~ msgid ""
-#~ "Writing to the temp directory (%2) failed with\n"
-#~ "    the error '%1'"
-#~ msgstr ""
-#~ "Ha fallado la escritura en el directorio temporal (%2)\n"
-#~ "    con el error «%1»"
-
-#~ msgid "Plasma Workspace installation problem!"
-#~ msgstr "Problema de instalación del espacio de trabajo Plasma"
-
-#~ msgid "Session Management"
-#~ msgstr "Gestión de sesiones"
-
-#~ msgid "Log Out"
-#~ msgstr "Cerrar la sesión"
-
-#~ msgid "Shut Down"
-#~ msgstr "Apagar"
-
-#~ msgid "Reboot"
-#~ msgstr "Reiniciar"
-
-#~ msgid "Log Out Without Confirmation"
-#~ msgstr "Cerrar la sesión sin confirmación"
-
-#~ msgid "Shut Down Without Confirmation"
-#~ msgstr "Apagar sin confirmación"
-
-#~ msgid "Reboot Without Confirmation"
-#~ msgstr "Reiniciar sin confirmación"
-
-#~ msgid "No write access to $HOME directory (%1)."
-#~ msgstr "No tiene permiso de escritura en el directorio $HOME (%1)."
-
-#~ msgid ""
-#~ "Starts <wm> in case no other window manager is \n"
-#~ "participating in the session. Default is 'kwin'"
-#~ msgstr ""
-#~ "Inicia <wm> en el caso de que no haya otro gestor de \n"
-#~ "ventanas participando en la sesión. El predeterminado es «kwin»"
-
-#~ msgid "wm"
-#~ msgstr "wm"
-
-#~ msgid "Logout"
-#~ msgstr "Cerrar sesión"
-
-#~ msgid "Sleeping in 1 second"
-#~ msgid_plural "Sleeping in %1 seconds"
-#~ msgstr[0] "Dormir en 1 segundo"
-#~ msgstr[1] "Dormir en %1 segundos"
-
-#~ msgid "Lock"
-#~ msgstr "Bloquear"
-
-#~ msgid "ksmserver"
-#~ msgstr "ksmserver"
-
-#~ msgid "Turn off"
-#~ msgstr "Apagar"
-
-#~ msgid "Sleep"
-#~ msgstr "Dormir"
-
-#~ msgid "Logging out in 1 second."
-#~ msgid_plural "Logging out in %1 seconds."
-#~ msgstr[0] "Cerrar sesión en 1 segundo."
-#~ msgstr[1] "Cerrar sesión en %1 segundos."
-
-#~ msgid "Turning off computer in 1 second."
-#~ msgid_plural "Turning off computer in %1 seconds."
-#~ msgstr[0] "Apagar el equipo en 1 segundo."
-#~ msgstr[1] "Apagar el equipo en %1 segundos."
-
-#~ msgid "Restarting computer in 1 second."
-#~ msgid_plural "Restarting computer in %1 seconds."
-#~ msgstr[0] "Reiniciar el equipo en 1 segundo."
-#~ msgstr[1] "Reiniciar el equipo en %1 segundos."
-
-#~ msgid "Turn Off Computer"
-#~ msgstr "Apagar el equipo"
-
-#~ msgid "Restart Computer"
-#~ msgstr "Reiniciar el equipo"
-
-#~ msgctxt "default option in boot loader"
-#~ msgid " (default)"
-#~ msgstr " (por omisión)"
-
-#~ msgid "Cancel"
-#~ msgstr "Cancelar"
-
-#~ msgid "&Standby"
-#~ msgstr "En &espera"
-
-#~ msgid "Suspend to &RAM"
-#~ msgstr "Suspender en &RAM"
-
-#~ msgid "Suspend to &Disk"
-#~ msgstr "&Hibernar"
-
-#~ msgid "(C) 2000, The KDE Developers"
-#~ msgstr "© 2000, los desarrolladores de KDE"
-
-#~ msgid "Matthias Ettrich"
-#~ msgstr "Matthias Ettrich"
-
-#~ msgid "Luboš Luňák"
-#~ msgstr "Luboš Luňák"
-
-#~ msgid "Maintainer"
-#~ msgstr "Responsable"

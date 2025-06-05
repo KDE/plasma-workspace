@@ -1,29 +1,27 @@
-# Translation of kcmstyle to Spanish
-# translation of kcmstyle.po to Spanish
-# Translation to spanish.
-# Copyright (C) 2000-2002.
+# Spanish translations for kcm_style.po package.
+# Copyright (C) 2000-2025 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
 #
-# Pablo de Vicente <vicente@oan.es>, 2000-2002.
-# Jaime Robles <jaime@kde.org>, 2003, 2005, 2007, 2008.
-# Miguel Revilla Rodríguez <yo@miguelrevilla.com>, 2003.
-# Pablo de Vicente <p.devicente@wanadoo.es>, 2004.
-# Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>, 2007.
-# Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>, 2010.
-# Javier Vinal <fjvinal@gmail.com>, 2012.
-# SPDX-FileCopyrightText: 2012, 2014, 2017, 2019, 2020, 2021, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2000-2002 Pablo de Vicente <vicente@oan.es>
+# SPDX-FileCopyrightText: 2003, 2005, 2007, 2008 Jaime Robles <jaime@kde.org>
+# SPDX-FileCopyrightText: 2003 Miguel Revilla Rodríguez <yo@miguelrevilla.com>
+# SPDX-FileCopyrightText: 2004 Pablo de Vicente <p.devicente@wanadoo.es>
+# SPDX-FileCopyrightText: 2007 Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>
+# SPDX-FileCopyrightText: 2010 Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>
+# SPDX-FileCopyrightText: 2012 Javier Vinal <fjvinal@gmail.com>
+# SPDX-FileCopyrightText: 2012, 2014, 2017, 2019, 2020, 2021, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
-"Project-Id-Version: kcmstyle\n"
+"Project-Id-Version: kcm_style\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-17 00:41+0000\n"
-"PO-Revision-Date: 2024-07-18 01:26+0200\n"
+"PO-Revision-Date: 2025-06-04 19:33+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"com>\n"
 "First-Translator: Valux (Manuel Soriano) <manu@europa3.com>\n"
 "X-Generator: Lokalize 24.05.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
@@ -187,17 +185,17 @@ msgstr "Tema de GTK:"
 #: ui/GtkStylePage.qml:68
 #, kde-format
 msgid "Preview…"
-msgstr "Vista previa..."
+msgstr "Vista previa…"
 
 #: ui/GtkStylePage.qml:87
 #, kde-format
 msgid "Install from File…"
-msgstr "Instalar desde archivo..."
+msgstr "Instalar desde archivo…"
 
 #: ui/GtkStylePage.qml:92
 #, kde-format
 msgid "Get New GNOME/GTK Application Styles…"
-msgstr "Obtener nuevos estilos de aplicaciones GNOME/GTK..."
+msgstr "Obtener nuevos estilos de aplicaciones GNOME/GTK…"
 
 #: ui/GtkStylePage.qml:108
 #, kde-format
@@ -212,218 +210,14 @@ msgstr "Archivos de temas de GTK (*.tar.xz *.tar.gz *.tar.bz2)"
 #: ui/main.qml:55
 #, kde-format
 msgid "Configure Icons and Toolbars…"
-msgstr "Configurar los iconos y las barras de herramientas..."
+msgstr "Configurar los iconos y las barras de herramientas…"
 
 #: ui/main.qml:73
 #, kde-format
 msgid "Configure GNOME/GTK Application Style…"
-msgstr "Configurar el estilo de las aplicaciones de GNOME/GTK..."
+msgstr "Configurar el estilo de las aplicaciones de GNOME/GTK…"
 
 #: ui/main.qml:106
 #, kde-format
 msgid "Configure Style…"
-msgstr "Configurar estilo..."
-
-#~ msgid ""
-#~ "This module allows you to modify the visual appearance of applications' "
-#~ "user interface elements."
-#~ msgstr ""
-#~ "Este módulo le permite modificar el aspecto visual de los elementos de la "
-#~ "interfaz del usuario de las aplicaciones."
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Eloy Cuadra,Jaime Robles,Pablo de Vicente,Miguel Revilla Rodríguez"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr ""
-#~ "ecuadra@eloihr.net,jaime@kde.org,vicente@oan.es,yo@miguelrevilla.com"
-
-#~ msgid "Application Style"
-#~ msgstr "Estilo de las aplicaciones"
-
-#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik "
-#~ msgstr "© 2002 Karol Szwed, Daniel Molkentin, © 2019 Kai Uwe Broulik "
-
-#~ msgid "Karol Szwed"
-#~ msgstr "Karol Szwed"
-
-#~ msgid "Daniel Molkentin"
-#~ msgstr "Daniel Molkentin"
-
-#~ msgid "Kai Uwe Broulik"
-#~ msgstr "Kai Uwe Broulik"
-
-#~ msgid "GTK3 theme:"
-#~ msgstr "Tema de GTK3:"
-
-#~ msgid "Download New GNOME/GTK Application Styles..."
-#~ msgstr "Descargar nuevos estilos de aplicaciones GNOME/GTK..."
-
-#~ msgid "Download New GNOME/GTK2 Application Styles..."
-#~ msgstr "Descargar nuevos estilos de aplicaciones GNOME/GTK2..."
-
-#~ msgid "GNOME/GTK2 Application Styles"
-#~ msgstr "Estilos de aplicaciones de GNOME/GTK2"
-
-#~ msgid "Download New GNOME/GTK3 Application Styles..."
-#~ msgstr "Descargar nuevos estilos de aplicaciones GNOME/GTK3..."
-
-#~ msgid "GNOME/GTK3 Application Styles"
-#~ msgstr "Estilos de aplicaciones de GNOME/GTK3"
-
-#~ msgid "Get New GNOME/GTK2 Application Styles..."
-#~ msgstr "Obtener nuevos estilos de aplicaciones GNOME/GTK2..."
-
-#~ msgid "Get New GNOME/GTK3 Application Styles..."
-#~ msgstr "Obtener nuevos estilos de aplicaciones GNOME/GTK3..."
-
-#~ msgid "Unable to Load Dialog"
-#~ msgstr "Imposible cargar el diálogo"
-
-#~ msgid "No description available."
-#~ msgstr "No hay descripción disponible."
-
-#~ msgid ""
-#~ "This area shows a preview of the currently selected style without having "
-#~ "to apply it to the whole desktop."
-#~ msgstr ""
-#~ "Esta área muestra una previsualización del estilo actualmente "
-#~ "seleccionado sin tener que aplicarlo al escritorio completo."
-
-#~ msgid ""
-#~ "Here you can choose from a list of predefined widget styles (e.g. the way "
-#~ "buttons are drawn) which may or may not be combined with a theme "
-#~ "(additional information like a marble texture or a gradient)."
-#~ msgstr ""
-#~ "Aquí puede elegir, de una lista de elementos predefinidos (p.ej. como se "
-#~ "tienen que dibujar los botones), lo que puede o no ser combinado con un "
-#~ "tema (información adicional como una textura de mármol o un degradado)."
-
-#~ msgid ""
-#~ "If you enable this option, applications will show small icons alongside "
-#~ "some important buttons."
-#~ msgstr ""
-#~ "Si activa esta opción, las aplicaciones mostrarán pequeños iconos junto a "
-#~ "botones importantes."
-
-#~ msgid ""
-#~ "If you enable this option, applications will show small icons alongside "
-#~ "most menu items."
-#~ msgstr ""
-#~ "Si activa esta opción, las aplicaciones mostrarán pequeños iconos junto a "
-#~ "la mayoría de entradas de menú."
-
-#~ msgid ""
-#~ "<p><b>No text:</b> Shows only icons on toolbar buttons. Best option for "
-#~ "low resolutions.</p><p><b>Text only: </b>Shows only text on toolbar "
-#~ "buttons.</p><p><b>Text beside icons: </b> Shows icons and text on toolbar "
-#~ "buttons. Text is aligned beside the icon.</p><b>Text below icons: </b> "
-#~ "Shows icons and text on toolbar buttons. Text is aligned below the icon."
-#~ msgstr ""
-#~ "<p><b>Sin texto:</b> Muestra solo iconos en los botones de la barra de "
-#~ "herramientas. La mejor opción para resoluciones bajas.</p><p><b>Solo "
-#~ "texto: </b>Muestra solo texto en los botones de la barra.</p><p><b>Texto "
-#~ "junto a iconos: </b> Muestra iconos y texto en botones de la barra, con "
-#~ "el texto junto al icono.</p><b>Texto bajo iconos: </b> Muestra iconos y "
-#~ "texto en los botones de la barra, con el texto alineado bajo el icono."
-
-#~ msgid "Toolbars"
-#~ msgstr "Barras de herramientas"
-
-#~ msgid "No Text"
-#~ msgstr "Sin texto"
-
-#~ msgid "Widget Style"
-#~ msgstr "Estilo de los elementos gráficos"
-
-#~ msgid "Widget style:"
-#~ msgstr "Estilo de los elementos gráficos:"
-
-#~ msgctxt "@title:tab"
-#~ msgid "&Fine Tuning"
-#~ msgstr "Ajuste &fino"
-
-#~ msgid "Description: %1"
-#~ msgstr "Descripción: %1"
-
-#~ msgid ""
-#~ "This page allows you to choose details about the widget style options"
-#~ msgstr ""
-#~ "Esta página le permite seleccionar detalles del estilo de los elementos "
-#~ "gráficos"
-
-#~ msgid "Group Box"
-#~ msgstr "Cuadro de grupo"
-
-#~ msgid "KDE Style Module"
-#~ msgstr "Módulo de estilo de KDE"
-
-#~ msgid "Ralf Nolden"
-#~ msgstr "Ralf Nolden"
-
-#~ msgid "Menubar"
-#~ msgstr "Barra de menú"
-
-#~ msgid "Menubar style:"
-#~ msgstr "Estilo de la barra de menú:"
-
-#~ msgid "In application"
-#~ msgstr "En la aplicación"
-
-#~ msgid "Title bar button"
-#~ msgstr "Botón de la barra de título"
-
-#~ msgid "Global Menu widget"
-#~ msgstr "Elemento gráfico de menú global"
-
-#~ msgid "Your changes will take effect only on application restart."
-#~ msgstr "Los cambios solo tendrán efecto cuando reinicie la aplicación."
-
-#~ msgid ""
-#~ "<p>Changes to the visibility of menu icons will only affect newly started "
-#~ "applications.</p>"
-#~ msgstr ""
-#~ "<p>Los cambios en la visibilidad de los iconos de los menús solo surtirán "
-#~ "efectos en las nuevas aplicaciones que abra.</p>"
-
-#~ msgctxt "@title:window"
-#~ msgid "Menu Icons Changed"
-#~ msgstr "Iconos de menú modificados"
-
-#~ msgid "Top screen menubar"
-#~ msgstr "Barra de menú de la parte superior de pantalla"
-
-#~ msgid "Only export"
-#~ msgstr "Solo exportar"
-
-#~ msgid "Graphical effects:"
-#~ msgstr "Efectos gráficos"
-
-#~ msgid "Low display resolution and Low CPU"
-#~ msgstr "Baja resolución y poca CPU"
-
-#~ msgid "High display resolution and Low CPU"
-#~ msgstr "Alta resolución y poca CPU"
-
-#~ msgid "Low display resolution and High CPU"
-#~ msgstr "Baja resolución y mucha CPU"
-
-#~ msgid "High display resolution and High CPU"
-#~ msgstr "Alta resolución y mucha CPU"
-
-#~ msgid "Low display resolution and Very High CPU"
-#~ msgstr "Baja resolución y muchísima CPU"
-
-#~ msgid "High display resolution and Very High CPU"
-#~ msgstr "Alta resolución y muchísima CPU"
-
-#~ msgid ""
-#~ "If you enable this option, KDE Applications will run internal animations."
-#~ msgstr ""
-#~ "Si activa esta opción, las aplicaciones KDE mostrarán pequeñas "
-#~ "animaciones."
-
-#~ msgid "kcmstyle"
-#~ msgstr "kcmstyle"
+msgstr "Configurar estilo…"

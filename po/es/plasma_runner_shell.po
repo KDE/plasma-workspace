@@ -1,15 +1,15 @@
-# translation of krunner_shellrunner.po to Spanish
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
+# Spanish translations for plasma_runner_shell.po package.
+# Copyright (C) 2008-2025 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
 #
-# Jaime Robles <jaime@kde.org>, 2008.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2009, 2016.
+# SPDX-FileCopyrightText: 2008 Jaime Robles <jaime@kde.org>
+# SPDX-FileCopyrightText: 2009, 2016, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
-"Project-Id-Version: krunner_shellrunner\n"
+"Project-Id-Version: plasma_runner_shell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-06 01:40+0000\n"
-"PO-Revision-Date: 2016-05-13 11:31+0200\n"
+"PO-Revision-Date: 2025-06-04 19:42+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -35,42 +35,3 @@ msgstr ""
 #, kde-format
 msgid "Run %1"
 msgstr "Ejecutar %1"
-
-#~ msgid "Enter the user you want to run the application as here."
-#~ msgstr "Introduzca el usuario que desea que ejecute la aplicación."
-
-#~ msgid "User&name:"
-#~ msgstr "&Nombre de usuario:"
-
-#~ msgid "Enter the password here for the user you specified above."
-#~ msgstr "Introduzca la contraseña para el usuario que ha especificado."
-
-#~ msgid "Pass&word:"
-#~ msgstr "&Contraseña:"
-
-#~ msgid ""
-#~ "Check this option if the application you want to run is a text mode "
-#~ "application. The application will then be run in a terminal emulator "
-#~ "window."
-#~ msgstr ""
-#~ "Marque esta opción si la aplicación que desea ejecutar es una aplicación "
-#~ "en modo texto. La aplicación se ejecutará en una ventana de emulador de "
-#~ "terminal."
-
-#~ msgid "Run in &terminal window"
-#~ msgstr "Ejecutar en ventana de &terminal"
-
-#~ msgid ""
-#~ "Check this option if you want to run the application with a different "
-#~ "user id. Every process has a user id associated with it. This id code "
-#~ "determines file access and other permissions. The password of the user is "
-#~ "required to do this."
-#~ msgstr ""
-#~ "Marque esta opción si desea ejecutar la aplicación con un identificador "
-#~ "de usuario diferente. Cada proceso tiene un identificador de usuario "
-#~ "asociado con él. Este código de identificación determina el acceso a los "
-#~ "archivos y otros permisos. Para hacerlo se requerirá la contraseña del "
-#~ "usuario."
-
-#~ msgid "Run as a different &user"
-#~ msgstr "Ejecutar como un &usuario diferente"

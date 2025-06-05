@@ -1,15 +1,15 @@
 # Spanish translations for kcm_regionandlang.po package.
-# Copyright (C) 2022 This file is copyright:
+# Copyright (C) 2022-2025 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-#
 # Automatically generated, 2022.
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
+#
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_regionandlang\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-04 00:44+0000\n"
-"PO-Revision-Date: 2024-04-24 16:58+0200\n"
+"PO-Revision-Date: 2025-06-04 19:32+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: binarydialectmodel.cpp:52
 #, kde-format
@@ -285,12 +285,10 @@ msgid "Can't locate executable `check-language-support`"
 msgstr "No se puede localizar el ejecutable «check-language-support»"
 
 #: localegeneratorubuntu.cpp:56
-#, fuzzy, kde-format
-#| msgctxt "the arg is the output of failed check-language-support call"
-#| msgid "check-language-support failed, output: %1"
+#, kde-format
 msgctxt "the arg is the output of failed check-language-support call"
 msgid "check-language-support failed, output: %1 %2"
-msgstr "«check-language-support» ha fallado; salida: %1"
+msgstr "«check-language-support» ha fallado; salida: %1 %2"
 
 #: localegeneratorubuntu.cpp:88
 #, kde-format
@@ -528,7 +526,7 @@ msgstr "Añadir idiomas"
 #, kde-format
 msgctxt "@action:button"
 msgid "Add More…"
-msgstr "Añadir más..."
+msgstr "Añadir más…"
 
 #: ui/main.qml:34
 #, kde-format
@@ -580,7 +578,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button for change the locale used"
 msgid "Modify…"
-msgstr "Modificar..."
+msgstr "Modificar…"
 
 #: ui/main.qml:212
 #, kde-format
@@ -630,26 +628,3 @@ msgstr "Nombre"
 msgctxt "Phone Numbers"
 msgid "Phone number"
 msgstr "Número de teléfono"
-
-#~ msgid ""
-#~ "You can configure the formats used for time, dates, money and other "
-#~ "numbers here."
-#~ msgstr ""
-#~ "Aquí puede configurar los formatos que se usan para la hora, las fechas, "
-#~ "la moneda y otros números."
-
-#~ msgctxt "@info:warning"
-#~ msgid ""
-#~ "Locale has been configured, but this KCM currently doesn't support auto "
-#~ "locale generation on non-glibc systems, please refer to your "
-#~ "distribution's manual to install fonts and generate locales"
-#~ msgstr ""
-#~ "Se ha completado la configuración local, pero este módulo KCM no permite "
-#~ "en la actualidad la generación automática de la configuración local en "
-#~ "sistemas que no son «glibc». Consulte el manual de su distribución para "
-#~ "la instalación de tipos de letra y la generación de configuraciones "
-#~ "locales."
-
-#~ msgctxt "Button for change the locale used"
-#~ msgid "Change it…"
-#~ msgstr "Cambiarla..."

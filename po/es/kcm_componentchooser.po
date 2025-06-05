@@ -1,15 +1,15 @@
 # Spanish translations for kcm_componentchooser.po package.
-# Copyright (C) 2021 This file is copyright:
-# This file is distributed under the same license as the plasma-desktop package.
-#
+# Copyright (C) 2021-2025 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
 # Automatically generated, 2021.
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
+#
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_componentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-16 00:43+0000\n"
-"PO-Revision-Date: 2024-09-26 18:36+0200\n"
+"PO-Revision-Date: 2025-06-04 19:30+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,12 +17,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.1\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: applicationmodel.cpp:67
 #, kde-format
 msgid "Other…"
-msgstr "Otro..."
+msgstr "Otro…"
 
 #: components/componentchooserarchivemanager.cpp:15
 #, kde-format
@@ -124,7 +124,7 @@ msgstr "Forzar apertura de todos en %1"
 #: ui/ComponentOverlay.qml:159
 #, kde-format
 msgid "Configure Manually…"
-msgstr "Configura manualmente..."
+msgstr "Configurar manualmente…"
 
 #: ui/main.qml:17
 #, kde-format
@@ -233,52 +233,3 @@ msgstr "Gestor de archivos comprimidos:"
 msgctxt "Map related application’s category’s name"
 msgid "Map:"
 msgstr "Mapas:"
-
-#~ msgid ""
-#~ "The following file types are still associated with a different "
-#~ "application:"
-#~ msgstr ""
-#~ "Los siguientes tipos de archivo siguen asociados a otra aplicación "
-#~ "distinta:"
-
-#~ msgctxt "@label %1 is a MIME type and %2 is an application name"
-#~ msgid "%1 associated with %2"
-#~ msgstr "%1 asociado con %2"
-
-#~ msgctxt "@action:button %1 is an application name"
-#~ msgid "Re-assign-all to %1"
-#~ msgstr "Reasignar todo a %1"
-
-#~ msgid "Change file type association manually"
-#~ msgstr "Cambiar la asociación del tipo de archivo a mano"
-
-#~ msgctxt "Default phone app"
-#~ msgid "Dialer:"
-#~ msgstr "Marcador:"
-
-#~ msgid "Default web browser"
-#~ msgstr "Navegador web predeterminado"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Eloy Cuadra"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "ecuadra@eloihr.net"
-
-#~ msgid "Component Chooser"
-#~ msgstr "Selector de componentes"
-
-#~ msgctxt "@title"
-#~ msgid "Default Applications"
-#~ msgstr "Aplicaciones predeterminadas"
-
-#~ msgid "Joseph Wenninger"
-#~ msgstr "Joseph Wenninger"
-
-#~ msgid "Méven Car"
-#~ msgstr "Méven Car"
-
-#~ msgid "Tobias Fella"
-#~ msgstr "Tobias Fella"

@@ -1,15 +1,15 @@
 # Spanish translations for kcm_feedback.po package.
-# Copyright (C) 2019 This file is copyright:
+# Copyright (C) 2019-2025 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-#
 # Automatically generated, 2019.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2019, 2020, 2021, 2022.
+#
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_feedback\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-21 00:44+0000\n"
-"PO-Revision-Date: 2022-01-05 19:50+0100\n"
+"PO-Revision-Date: 2025-06-04 19:31+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -65,36 +65,3 @@ msgstr "Se enviará la siguiente información:"
 #, kde-format
 msgid "View sent data:"
 msgstr "Ver los datos enviados:"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Eloy Cuadra"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "ecuadra@eloihr.net"
-
-#~ msgid "User Feedback"
-#~ msgstr "Comentarios del usuario"
-
-#~ msgid "Configure user feedback settings"
-#~ msgstr "Configurar las preferencias de los comentarios del usuario"
-
-#~ msgctxt "@info"
-#~ msgid "You can read about our policy in the following link:"
-#~ msgstr "Puede consultar nuestra política en el siguiente enlace:"
-
-#~ msgid "Allow KDE software to collect anonymous usage information"
-#~ msgstr "Permitir que el software de KDE recopile información de uso anónima"
-
-#~ msgid "Send basic system information"
-#~ msgstr "Enviar información básica del sistema"
-
-#~ msgid "Send basic usage information"
-#~ msgstr "Enviar información básica de uso"
-
-#~ msgid "Send detailed system information"
-#~ msgstr "Enviar información detallada del sistema"
-
-#~ msgid "Send detailed usage information"
-#~ msgstr "Enviar información detallada de uso"

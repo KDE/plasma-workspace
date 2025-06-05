@@ -1,14 +1,14 @@
-# translation of plasma_runner_services.po to Spanish
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
+# Spanish translations for plasma_runner_services.po package.
+# Copyright (C) 2009-2025 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
 #
-# Eloy Cuadra <ecuadra@eloihr.net>, 2009, 2014, 2016, 2020.
+# SPDX-FileCopyrightText: 2009, 2014, 2016, 2020, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_services\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-03 00:41+0000\n"
-"PO-Revision-Date: 2020-05-14 20:33+0200\n"
+"PO-Revision-Date: 2025-06-04 19:42+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -30,12 +30,3 @@ msgstr "%1 - %2"
 #, kde-format
 msgid "Finds applications whose name or description match :q:"
 msgstr "Encuentra aplicaciones cuyo nombre o descripción coincidan con :q:."
-
-#~ msgid "System Information"
-#~ msgstr "Información del sistema"
-
-#~ msgid "System Settings"
-#~ msgstr "Preferencias del sistema"
-
-#~ msgid "Applications"
-#~ msgstr "Aplicaciones"

@@ -1,20 +1,21 @@
-# translation of kfontinst.po to Spanish
-# Copyright (C) 2003, 2004, 2005, 2007, 2008, 2009 Free Software Foundation, Inc.
+# Spanish translations for kfontinst.po package.
+# Copyright (C) 2003-2025 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
 #
-# Miguel Revilla Rodríguez <yo@miguelrevilla.com>, 2003, 2004.
-# Pablo de Vicente <p.devicente@wanadoo.es>, 2004, 2005.
-# SPDX-FileCopyrightText: 2005, 2010, 2012, 2014, 2016, 2018, 2019, 2021, 2024 Eloy Cuadra <ecuadra@eloihr.net>
-# Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>, 2007.
-# Pablo de Vicente <pablo.devicente@gmail.com>, 2007.
-# Jaime Robles <jaime@kde.org>, 2007, 2008, 2009.
-# Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>, 2010.
-# Javier Vinal <fjvinal@gmail.com>, 2011, 2012.
+# SPDX-FileCopyrightText: 2003, 2004 Miguel Revilla Rodríguez <yo@miguelrevilla.com>
+# SPDX-FileCopyrightText: 2004, 2005 Pablo de Vicente <p.devicente@wanadoo.es>
+# SPDX-FileCopyrightText: 2005, 2010, 2012, 2014, 2016, 2018, 2019, 2021, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2007 Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>
+# SPDX-FileCopyrightText: 2007 Pablo de Vicente <pablo.devicente@gmail.com>
+# SPDX-FileCopyrightText: 2007, 2008, 2009 Jaime Robles <jaime@kde.org>
+# SPDX-FileCopyrightText: 2010 Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>
+# SPDX-FileCopyrightText: 2011, 2012 Javier Vinal <fjvinal@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-26 00:42+0000\n"
-"PO-Revision-Date: 2024-04-07 22:43+0200\n"
+"PO-Revision-Date: 2025-06-04 19:34+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -84,7 +85,7 @@ msgstr "Imprimir"
 #: apps/Printer.cpp:311 kcmfontinst/DuplicatesDialog.cpp:224
 #, kde-format
 msgid "Canceling…"
-msgstr "Cancelando..."
+msgstr "Cancelando…"
 
 #: apps/Printer.cpp:328
 #, kde-format
@@ -168,7 +169,7 @@ msgstr "Duplicar tipos de letra"
 #: kcmfontinst/DuplicatesDialog.cpp:79
 #, kde-format
 msgid "Scanning for duplicate fonts. Please wait…"
-msgstr "Buscando tipos de letra duplicados. Espere..."
+msgstr "Buscando tipos de letra duplicados. Espere…"
 
 #: kcmfontinst/DuplicatesDialog.cpp:98
 #, kde-format
@@ -306,7 +307,7 @@ msgstr "Símbolo/otro"
 #: kcmfontinst/FontFilter.cpp:267 kcmfontinst/FontFilter.cpp:335
 #, kde-format
 msgid "Filter by %1…"
-msgstr "Filtrar por %1..."
+msgstr "Filtrar por %1…"
 
 #: kcmfontinst/FontList.cpp:548
 #, kde-format
@@ -344,7 +345,7 @@ msgstr ""
 #: kcmfontinst/FontList.cpp:950 kcmfontinst/FontList.cpp:974
 #, kde-format
 msgid "…plus %1 more"
-msgstr "... y %1 más"
+msgstr "… y %1 más"
 
 #: kcmfontinst/FontList.cpp:1001
 #, kde-format
@@ -371,7 +372,7 @@ msgstr "Desactivar"
 #: kcmfontinst/FontList.cpp:1308 kcmfontinst/GroupList.cpp:798
 #, kde-format
 msgid "Print…"
-msgstr "Imprimir..."
+msgstr "Imprimir…"
 
 #: kcmfontinst/FontList.cpp:1312
 #, kde-format
@@ -489,12 +490,12 @@ msgstr "<qt>¡Ya existe un grupo llamado <b>«%1»</b>!</qt>"
 #: kcmfontinst/GroupList.cpp:794
 #, kde-format
 msgid "Rename…"
-msgstr "Cambiar nombre..."
+msgstr "Cambiar nombre…"
 
 #: kcmfontinst/GroupList.cpp:803
 #, kde-format
 msgid "Export…"
-msgstr "Exportar..."
+msgstr "Exportar…"
 
 #: kcmfontinst/GroupList.cpp:897
 #, kde-format
@@ -583,7 +584,7 @@ msgstr "Desactivando"
 #: kcmfontinst/JobRunner.cpp:372
 #, kde-format
 msgid "Updating font configuration. Please wait…"
-msgstr "Actualizando configuración de tipos de letra. Espere..."
+msgstr "Actualizando configuración de tipos de letra. Espere…"
 
 #: kcmfontinst/JobRunner.cpp:444
 #, kde-format
@@ -677,22 +678,22 @@ msgstr "Error inesperado durante el procesamiento: <i>%1</i>"
 #: kcmfontinst/KCmFontInst.cpp:213
 #, kde-format
 msgid "Create New Group…"
-msgstr "Crear nuevo grupo..."
+msgstr "Crear nuevo grupo…"
 
 #: kcmfontinst/KCmFontInst.cpp:216
 #, kde-format
 msgid "Remove Group…"
-msgstr "Eliminar grupo..."
+msgstr "Eliminar grupo…"
 
 #: kcmfontinst/KCmFontInst.cpp:219
 #, kde-format
 msgid "Enable Fonts in Group…"
-msgstr "Activar tipos de letra en el grupo..."
+msgstr "Activar tipos de letra en el grupo…"
 
 #: kcmfontinst/KCmFontInst.cpp:222
 #, kde-format
 msgid "Disable Fonts in Group…"
-msgstr "Desactivar tipos de letra en el grupo..."
+msgstr "Desactivar tipos de letra en el grupo…"
 
 #: kcmfontinst/KCmFontInst.cpp:243
 #, kde-format
@@ -702,17 +703,17 @@ msgstr "Muestra una previsualización del tipo de letra seleccionado."
 #: kcmfontinst/KCmFontInst.cpp:260
 #, kde-format
 msgid "Find Duplicates…"
-msgstr "Encontrar duplicados..."
+msgstr "Encontrar duplicados…"
 
 #: kcmfontinst/KCmFontInst.cpp:260
 #, kde-format
 msgid "Scan for Duplicate Fonts…"
-msgstr "Buscar tipos de letra duplicados..."
+msgstr "Buscar tipos de letra duplicados…"
 
 #: kcmfontinst/KCmFontInst.cpp:262
 #, kde-format
 msgid "Install from File…"
-msgstr "Instalar desde archivo..."
+msgstr "Instalar desde archivo…"
 
 #: kcmfontinst/KCmFontInst.cpp:262
 #, kde-format
@@ -722,7 +723,7 @@ msgstr "Instalar tipos de letra desde un archivo local"
 #: kcmfontinst/KCmFontInst.cpp:263
 #, kde-format
 msgid "Get New Fonts…"
-msgstr "Obtener nuevos tipos de letra..."
+msgstr "Obtener nuevos tipos de letra…"
 
 #: kcmfontinst/KCmFontInst.cpp:264
 #, kde-format
@@ -732,12 +733,12 @@ msgstr "Descargar nuevos tipos de letra"
 #: kcmfontinst/KCmFontInst.cpp:266
 #, kde-format
 msgid "Delete Selected Fonts…"
-msgstr "Borrar tipos de letra seleccionados..."
+msgstr "Borrar tipos de letra seleccionados…"
 
 #: kcmfontinst/KCmFontInst.cpp:331
 #, kde-format
 msgid "Change Preview Text…"
-msgstr "Cambiar texto de vista previa..."
+msgstr "Cambiar texto de vista previa…"
 
 #: kcmfontinst/KCmFontInst.cpp:430
 #, kde-format
@@ -804,7 +805,7 @@ msgstr "Eliminar tipos de letra"
 #: kcmfontinst/KCmFontInst.cpp:632
 #, kde-format
 msgid "Deleting font(s)…"
-msgstr "Eliminando tipos de letra..."
+msgstr "Eliminando tipos de letra…"
 
 #: kcmfontinst/KCmFontInst.cpp:647
 #, kde-format
@@ -855,7 +856,7 @@ msgstr "Mover tipos de letra"
 #: kcmfontinst/KCmFontInst.cpp:679
 #, kde-format
 msgid "Moving font(s)…"
-msgstr "Moviendo tipos de letra..."
+msgstr "Moviendo tipos de letra…"
 
 #: kcmfontinst/KCmFontInst.cpp:693
 #, kde-format
@@ -900,7 +901,7 @@ msgstr "Por favor, introduzca un nuevo texto:"
 #: kcmfontinst/KCmFontInst.cpp:822
 #, kde-format
 msgid "Scanning font list…"
-msgstr "Buscando lista de tipos de letra..."
+msgstr "Buscando lista de tipos de letra…"
 
 #: kcmfontinst/KCmFontInst.cpp:881
 #, kde-format
@@ -941,17 +942,17 @@ msgstr ""
 #: kcmfontinst/KCmFontInst.cpp:982
 #, kde-format
 msgid "Looking for any associated files…"
-msgstr "Buscando cualquier archivo asociado..."
+msgstr "Buscando cualquier archivo asociado…"
 
 #: kcmfontinst/KCmFontInst.cpp:986
 #, kde-format
 msgid "Scanning Files…"
-msgstr "Explorando archivos..."
+msgstr "Explorando archivos…"
 
 #: kcmfontinst/KCmFontInst.cpp:987
 #, kde-format
 msgid "Looking for additional files to install…"
-msgstr "Buscando archivos adicionales a instalar..."
+msgstr "Buscando archivos adicionales a instalar…"
 
 #: kcmfontinst/KCmFontInst.cpp:1002
 #, kde-format
@@ -961,7 +962,7 @@ msgstr "Buscando archivos asociados con %1"
 #: kcmfontinst/KCmFontInst.cpp:1030
 #, kde-format
 msgid "Installing font(s)…"
-msgstr "Instalando tipos de letra..."
+msgstr "Instalando tipos de letra…"
 
 #: kcmfontinst/KCmFontInst.cpp:1095
 #, kde-format
@@ -1077,12 +1078,12 @@ msgstr "Desactivar tipos de letra"
 #: kcmfontinst/KCmFontInst.cpp:1142
 #, kde-format
 msgid "Enabling font(s)…"
-msgstr "Activando tipos de letra..."
+msgstr "Activando tipos de letra…"
 
 #: kcmfontinst/KCmFontInst.cpp:1144
 #, kde-format
 msgid "Disabling font(s)…"
-msgstr "Desactivando tipos de letra..."
+msgstr "Desactivando tipos de letra…"
 
 #: kcmfontinst/PrintDialog.cpp:21
 #, kde-format
@@ -1577,12 +1578,12 @@ msgstr "Mostrar cara:"
 #: viewpart/FontViewPart.cpp:94
 #, kde-format
 msgid "Install…"
-msgstr "Instalar..."
+msgstr "Instalar…"
 
 #: viewpart/FontViewPart.cpp:115
 #, kde-format
 msgid "Change Text…"
-msgstr "Cambiar texto..."
+msgstr "Cambiar texto…"
 
 #: viewpart/FontViewPart.cpp:341
 #, kde-format
@@ -2297,90 +2298,3 @@ msgstr "Phags Pa"
 #: viewpart/UnicodeScripts.h:80
 msgid "Yi"
 msgstr "Yi"
-
-#~ msgid "Font Management"
-#~ msgstr "Gestión de tipos de letra"
-
-#~ msgid "(C) Craig Drummond, 2000 - 2009"
-#~ msgstr "© Craig Drummond, 2000 - 2009"
-
-#~ msgid "Craig Drummond"
-#~ msgstr "Craig Drummond"
-
-#~ msgid "Developer and maintainer"
-#~ msgstr "Desarrollador y mantenedor"
-
-#~ msgid ""
-#~ "<h1>Font Installer</h1><p> This module allows you to install TrueType, "
-#~ "Type1, and Bitmap fonts.</p><p>You may also install fonts using "
-#~ "Konqueror: type fonts:/ into Konqueror's location bar and this will "
-#~ "display your installed fonts. To install a font, simply copy one into the "
-#~ "folder.</p>"
-#~ msgstr ""
-#~ "<h1>Instalador de tipos de letra</h1><p>Este módulo le permite instalar "
-#~ "tipos de letra TrueType, Type1 y Bitmap.</p><p>También puede instalar "
-#~ "tipos de letra utilizando Konqueror: introduzca fonts:/ en la barra de "
-#~ "dirección de Konqueror y esto le mostrará los tipos de letra instalados. "
-#~ "Para instalar un tipo de letra, basta con que lo copie en la carpeta "
-#~ "apropiada.</p>"
-
-#~ msgid ""
-#~ "<h1>Font Installer</h1><p> This module allows you to install TrueType, "
-#~ "Type1, and Bitmap fonts.</p><p>You may also install fonts using "
-#~ "Konqueror: type fonts:/ into Konqueror's location bar and this will "
-#~ "display your installed fonts. To install a font, simply copy it into the "
-#~ "appropriate folder -  \"%1\" for fonts available to just yourself, or  "
-#~ "\"%2\" for system-wide fonts (available to all).</p>"
-#~ msgstr ""
-#~ "<h1>Instalador de tipos de letra</h1><p>Este módulo le permite instalar "
-#~ "tipos de letra TrueType, Type1 y Bitmap.</p><p>También puede instalar "
-#~ "tipos de letra utilizando Konqueror: introduzca fonts:/ en la barra de "
-#~ "dirección de Konqueror y esto le mostrará los tipos de letra instalados. "
-#~ "Para instalar un tipo de letra, basta con que lo copie en la carpeta "
-#~ "apropiada. - «%1» los tipos de letra disponibles para usted o en «%2» los "
-#~ "tipos de letra disponibles a todos los usuarios.</p>"
-
-#~ msgid "Filter by %1..."
-#~ msgstr "Filtrar por %1..."
-
-#~ msgid "Print..."
-#~ msgstr "Imprimir..."
-
-#~ msgid "Create New Group..."
-#~ msgstr "Crear nuevo grupo..."
-
-#~ msgid "Remove Group..."
-#~ msgstr "Eliminar grupo..."
-
-#~ msgid "Install..."
-#~ msgstr "Instalar..."
-
-#~ msgid "FontViewPart"
-#~ msgstr "FontViewPart"
-
-#~ msgid "<p>No information</p>"
-#~ msgstr "<p>Sin información</p>"
-
-#~ msgid "Create a new group"
-#~ msgstr "Crear un grupo nuevo"
-
-#~ msgid "Enable all disabled fonts in the current group"
-#~ msgstr "Habilitar todos los tipos de letra deshabilitados del grupo actual"
-
-#~ msgid "Disable all enabled fonts in the current group"
-#~ msgstr "Deshabilitar todos los tipos de letra habilitados del grupo actual"
-
-#~ msgid "Please enter the name of the new group:"
-#~ msgstr "Por favor, introduzca un nombre para el grupo nuevo:"
-
-#~ msgid "Type here to filter on %1"
-#~ msgstr "Filtrar en %1"
-
-#~ msgid "Tools"
-#~ msgstr "Herramientas"
-
-#~ msgid "Add..."
-#~ msgstr "Añadir..."
-
-#~ msgid "Install fonts"
-#~ msgstr "Instalar tipos de letras"

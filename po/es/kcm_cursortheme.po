@@ -1,15 +1,15 @@
 # Spanish translations for kcm_cursortheme.po package.
-# Copyright (C) 2015 This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
-#
+# Copyright (C) 2015-2025 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
 # Automatically generated, 2015.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2015, 2016, 2018, 2019, 2020, 2021, 2022, 2023.
+#
+# SPDX-FileCopyrightText: 2015, 2016, 2018, 2019, 2020, 2021, 2022, 2023, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_cursortheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-12 00:44+0000\n"
-"PO-Revision-Date: 2023-08-13 01:02+0200\n"
+"PO-Revision-Date: 2025-06-04 19:30+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -254,17 +254,17 @@ msgstr "Tamaño: %1"
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
-msgstr "&Configurar la notificación de lanzamiento..."
+msgstr "&Configurar la notificación de lanzamiento…"
 
 #: ui/main.qml:159
 #, kde-format
 msgid "&Install from File…"
-msgstr "&Instalar desde archivo..."
+msgstr "&Instalar desde archivo…"
 
 #: ui/main.qml:165
 #, kde-format
 msgid "&Get New…"
-msgstr "&Obtener novedades..."
+msgstr "&Obtener novedades…"
 
 #: ui/main.qml:179
 #, kde-format
@@ -283,75 +283,3 @@ msgctxt ""
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(Tamaños disponibles: %1)"
-
-#~ msgid "This module lets you choose the mouse cursor theme."
-#~ msgstr "Este módulo le permite escoger el tema de cursores de ratón."
-
-#~ msgid "Name"
-#~ msgstr "Nombre"
-
-#~ msgid "Description"
-#~ msgstr "Descripción"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Eloy Cuadra"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "ecuadra@eloihr.net"
-
-#~ msgid "Cursors"
-#~ msgstr "Cursores"
-
-#~ msgid "(c) 2003-2007 Fredrik Höglund"
-#~ msgstr "© 2003-2007 Fredrik Höglund"
-
-#~ msgid "Fredrik Höglund"
-#~ msgstr "Fredrik Höglund"
-
-#~ msgid "Marco Martin"
-#~ msgstr "Marco Martin"
-
-#~ msgid ""
-#~ "<qt>You cannot delete the theme you are currently using.<br />You have to "
-#~ "switch to another theme first.</qt>"
-#~ msgstr ""
-#~ "<qt>No puede borrar el tema que está usando actualmente.<br />Primero "
-#~ "debe cambiar a otro tema.</qt>"
-
-#~ msgid ""
-#~ "<qt>Are you sure you want to remove the <i>%1</i> cursor theme?<br />This "
-#~ "will delete all the files installed by this theme.</qt>"
-#~ msgstr ""
-#~ "<qt>¿Seguro que quiere eliminar el tema de cursores <i>%1</i>?<br />Esto "
-#~ "borrará todos los archivos instalados por dicho tema.</qt>"
-
-#~ msgid "Confirmation"
-#~ msgstr "Confirmación"
-
-#~ msgctxt "@item:inlistbox size"
-#~ msgid "Resolution dependent"
-#~ msgstr "Dependiente de la resolución"
-
-#~ msgid "Cursor Settings Changed"
-#~ msgstr "Preferencias de cursores cambiadas"
-
-#~ msgid "Drag or Type Theme URL"
-#~ msgstr "Arrastre o introduzca el URL del tema"
-
-#~ msgid ""
-#~ "Unable to download the cursor theme archive; please check that the "
-#~ "address %1 is correct."
-#~ msgstr ""
-#~ "No se ha podido descargar el archivo del tema de cursores. Por favor, "
-#~ "compruebe que la dirección %1 es correcta."
-
-#~ msgid "Get new color schemes from the Internet"
-#~ msgstr "Obtener nuevos esquemas de color de Internet"
-
-#~ msgid ""
-#~ "Select the cursor theme you want to use (hover preview to test cursor):"
-#~ msgstr ""
-#~ "Seleccione el tema de cursores que quiere usar (sitúe el ratón sobre la "
-#~ "vista previa para probar el cursor):"
