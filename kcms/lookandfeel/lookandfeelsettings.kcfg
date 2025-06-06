@@ -9,5 +9,25 @@
       <label>Global look and feel</label>
       <default>org.kde.breeze.desktop</default>
     </entry>
+    <entry name="defaultLightLookAndFeel" key="DefaultLightLookAndFeel" type="String">
+      <label>Global Look and Feel package, alternate</label>
+      <default>org.kde.breeze.desktop</default>
+    </entry>
+    <entry name="defaultDarkLookAndFeel" key="DefaultDarkLookAndFeel" type="String">
+      <label>Global Look and Feel package, alternate</label>
+      <default>org.kde.breezedark.desktop</default>
+    </entry>
+    <entry name="automaticLookAndFeel" key="AutomaticLookAndFeel" type="Bool">
+      <label>Switch between dark and light global themes depending on time of day</label>
+      <default>false</default>
+    </entry>
+    <entry name="automaticLookAndFeelOnIdle" key="AutomaticLookAndFeelOnIdle" type="Bool">
+      <label>Switch between dark and light global themes when the computer is idle</label>
+      <default>true</default>
+    </entry>
+    <entry name="automaticLookAndFeelIdleInterval" key="AutomaticLookAndFeelIdleInterval" type="UInt">
+      <label>How long the computer should be idle in order to switch between dark and light global themes, in seconds</label>
+      <default>5</default>
+    </entry>
   </group>
 </kcfg>

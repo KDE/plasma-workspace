@@ -1,5 +1,7 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_lookandfeel\")
 
+add_subdirectory(kded)
+
 if(HAVE_X11)
     set(HAVE_XCURSOR TRUE)
 endif()
@@ -63,6 +65,7 @@ target_link_libraries(kcm_lookandfeel PRIVATE
     KF6::JobWidgets
     KF6::KIOGui
     KF6::KCMUtilsQuick
+    PW::KLookAndFeel
     PW::KWorkspace
 )
 

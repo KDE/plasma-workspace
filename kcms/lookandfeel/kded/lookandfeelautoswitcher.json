@@ -1,0 +1,7 @@
+{
+    "KPlugin": {
+        "Description": "Switches between dark and light Global Themes based on time of day",
+        "Name": "Global Theme Auto-Switcher"
+    },
+    "X-KDE-Kded-autoload": true
+}
