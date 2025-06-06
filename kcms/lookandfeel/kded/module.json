@@ -1,0 +1,7 @@
+{
+    "KPlugin": {
+        "Description": "Switches between dark and light look-and-feel packages based on time of day",
+        "Name": "Auto Dark-Light Look-and-Feel"
+    },
+    "X-KDE-Kded-autoload": true
+}
