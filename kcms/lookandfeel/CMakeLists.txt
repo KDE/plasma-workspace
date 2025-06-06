@@ -1,5 +1,7 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_lookandfeel\")
 
+add_subdirectory(kded)
+
 if(HAVE_X11)
     set(HAVE_XCURSOR TRUE)
 endif()
