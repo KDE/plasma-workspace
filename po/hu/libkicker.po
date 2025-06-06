@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-05 02:37+0000\n"
+"POT-Creation-Date: 2025-06-06 02:32+0000\n"
 "PO-Revision-Date: 2025-01-24 20:48+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -125,7 +125,7 @@ msgstr "Kedvencek"
 msgid "Recently Used"
 msgstr "Legutóbb használt"
 
-#: recentusagemodel.cpp:168 recentusagemodel.cpp:315
+#: recentusagemodel.cpp:168 recentusagemodel.cpp:317
 #, kde-format
 msgid "Files"
 msgstr "Fájlok"
@@ -135,32 +135,32 @@ msgstr "Fájlok"
 msgid "Forget Application"
 msgstr "Alkalmazás elfelejtése"
 
-#: recentusagemodel.cpp:313
+#: recentusagemodel.cpp:315
 #, kde-format
 msgid "Folders"
 msgstr "Mappák"
 
-#: recentusagemodel.cpp:350
+#: recentusagemodel.cpp:352
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Tartalmazó mappa megnyitása"
 
-#: recentusagemodel.cpp:353
+#: recentusagemodel.cpp:355
 #, kde-format
 msgid "Forget File"
 msgstr "Fájl elfelejtése"
 
-#: recentusagemodel.cpp:490
+#: recentusagemodel.cpp:492
 #, kde-format
 msgid "Forget All"
 msgstr "Összes elfelejtése"
 
-#: recentusagemodel.cpp:492
+#: recentusagemodel.cpp:494
 #, kde-format
 msgid "Forget All Applications"
 msgstr "Összes alkalmazás elfelejtése"
 
-#: recentusagemodel.cpp:495
+#: recentusagemodel.cpp:497
 #, kde-format
 msgid "Forget All Files"
 msgstr "Összes fájl elfelejtése"

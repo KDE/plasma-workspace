@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-05 02:37+0000\n"
+"POT-Creation-Date: 2025-06-06 02:32+0000\n"
 "PO-Revision-Date: 2025-01-27 15:49+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -124,7 +124,7 @@ msgstr "Iecienītās"
 msgid "Recently Used"
 msgstr "Nesen lietotās"
 
-#: recentusagemodel.cpp:168 recentusagemodel.cpp:315
+#: recentusagemodel.cpp:168 recentusagemodel.cpp:317
 #, kde-format
 msgid "Files"
 msgstr "Datnes"
@@ -134,32 +134,32 @@ msgstr "Datnes"
 msgid "Forget Application"
 msgstr "Aizmirst programmu"
 
-#: recentusagemodel.cpp:313
+#: recentusagemodel.cpp:315
 #, kde-format
 msgid "Folders"
 msgstr "Mapes"
 
-#: recentusagemodel.cpp:350
+#: recentusagemodel.cpp:352
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Atvērt saturošo mapi"
 
-#: recentusagemodel.cpp:353
+#: recentusagemodel.cpp:355
 #, kde-format
 msgid "Forget File"
 msgstr "Aizmirst datni"
 
-#: recentusagemodel.cpp:490
+#: recentusagemodel.cpp:492
 #, kde-format
 msgid "Forget All"
 msgstr "Aizmirst visu"
 
-#: recentusagemodel.cpp:492
+#: recentusagemodel.cpp:494
 #, kde-format
 msgid "Forget All Applications"
 msgstr "Aizmirst visas programmas"
 
-#: recentusagemodel.cpp:495
+#: recentusagemodel.cpp:497
 #, kde-format
 msgid "Forget All Files"
 msgstr "Aizmirst visas datnes"

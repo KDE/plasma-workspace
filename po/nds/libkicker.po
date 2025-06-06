@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-05 02:37+0000\n"
+"POT-Creation-Date: 2025-06-06 02:32+0000\n"
 "PO-Revision-Date: 2014-08-21 16:22+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -125,7 +125,7 @@ msgstr "Na de Leestekens tofögen"
 msgid "Recently Used"
 msgstr ""
 
-#: recentusagemodel.cpp:168 recentusagemodel.cpp:315
+#: recentusagemodel.cpp:168 recentusagemodel.cpp:317
 #, kde-format
 msgid "Files"
 msgstr ""
@@ -135,32 +135,32 @@ msgstr ""
 msgid "Forget Application"
 msgstr "Programm vergeten"
 
-#: recentusagemodel.cpp:313
+#: recentusagemodel.cpp:315
 #, kde-format
 msgid "Folders"
 msgstr ""
 
-#: recentusagemodel.cpp:350
+#: recentusagemodel.cpp:352
 #, kde-format
 msgid "Open Containing Folder"
 msgstr ""
 
-#: recentusagemodel.cpp:353
+#: recentusagemodel.cpp:355
 #, fuzzy, kde-format
 msgid "Forget File"
 msgstr "All Dokmenten vergeten"
 
-#: recentusagemodel.cpp:490
+#: recentusagemodel.cpp:492
 #, fuzzy, kde-format
 msgid "Forget All"
 msgstr "All Dokmenten vergeten"
 
-#: recentusagemodel.cpp:492
+#: recentusagemodel.cpp:494
 #, kde-format
 msgid "Forget All Applications"
 msgstr "All Programm vergeten"
 
-#: recentusagemodel.cpp:495
+#: recentusagemodel.cpp:497
 #, fuzzy, kde-format
 msgid "Forget All Files"
 msgstr "All Dokmenten vergeten"

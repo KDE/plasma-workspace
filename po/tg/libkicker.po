@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-05 02:37+0000\n"
+"POT-Creation-Date: 2025-06-06 02:32+0000\n"
 "PO-Revision-Date: 2020-09-21 13:33+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -127,7 +127,7 @@ msgstr "Баргузидаҳо"
 msgid "Recently Used"
 msgstr "Истифодашудаи охирин"
 
-#: recentusagemodel.cpp:168 recentusagemodel.cpp:315
+#: recentusagemodel.cpp:168 recentusagemodel.cpp:317
 #, kde-format
 msgid "Files"
 msgstr "Файлҳо"
@@ -137,32 +137,32 @@ msgstr "Файлҳо"
 msgid "Forget Application"
 msgstr "Пок кардани барнома"
 
-#: recentusagemodel.cpp:313
+#: recentusagemodel.cpp:315
 #, kde-format
 msgid "Folders"
 msgstr ""
 
-#: recentusagemodel.cpp:350
+#: recentusagemodel.cpp:352
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Кушодани ҷузвадони марбут"
 
-#: recentusagemodel.cpp:353
+#: recentusagemodel.cpp:355
 #, kde-format
 msgid "Forget File"
 msgstr "Пок кардани файл"
 
-#: recentusagemodel.cpp:490
+#: recentusagemodel.cpp:492
 #, kde-format
 msgid "Forget All"
 msgstr "Ҳамаро пок кардан"
 
-#: recentusagemodel.cpp:492
+#: recentusagemodel.cpp:494
 #, kde-format
 msgid "Forget All Applications"
 msgstr "Пок кардани ҳамаи барномаҳо"
 
-#: recentusagemodel.cpp:495
+#: recentusagemodel.cpp:497
 #, kde-format
 msgid "Forget All Files"
 msgstr "Пок кардани ҳамаи файлҳо"

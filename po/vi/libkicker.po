@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-05 02:37+0000\n"
+"POT-Creation-Date: 2025-06-06 02:32+0000\n"
 "PO-Revision-Date: 2021-05-26 21:06+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -124,7 +124,7 @@ msgstr "Ưa thích"
 msgid "Recently Used"
 msgstr "Dùng gần đây"
 
-#: recentusagemodel.cpp:168 recentusagemodel.cpp:315
+#: recentusagemodel.cpp:168 recentusagemodel.cpp:317
 #, kde-format
 msgid "Files"
 msgstr "Tệp"
@@ -134,32 +134,32 @@ msgstr "Tệp"
 msgid "Forget Application"
 msgstr "Quên ứng dụng đi"
 
-#: recentusagemodel.cpp:313
+#: recentusagemodel.cpp:315
 #, kde-format
 msgid "Folders"
 msgstr ""
 
-#: recentusagemodel.cpp:350
+#: recentusagemodel.cpp:352
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Mở thư mục chứa"
 
-#: recentusagemodel.cpp:353
+#: recentusagemodel.cpp:355
 #, kde-format
 msgid "Forget File"
 msgstr "Quên tệp đi"
 
-#: recentusagemodel.cpp:490
+#: recentusagemodel.cpp:492
 #, kde-format
 msgid "Forget All"
 msgstr "Quên tất cả đi"
 
-#: recentusagemodel.cpp:492
+#: recentusagemodel.cpp:494
 #, kde-format
 msgid "Forget All Applications"
 msgstr "Quên tất cả ứng dụng đi"
 
-#: recentusagemodel.cpp:495
+#: recentusagemodel.cpp:497
 #, kde-format
 msgid "Forget All Files"
 msgstr "Quên tất cả tệp đi"

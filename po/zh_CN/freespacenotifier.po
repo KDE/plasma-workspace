@@ -25,7 +25,7 @@ msgstr "在 Filelight 中打开"
 #: freespacenotifier.cpp:127
 #, kde-format
 msgid "Open in File Manager"
-msgstr "在文件管理器中打开"
+msgstr "用文件管理器打开"
 
 #: freespacenotifier.cpp:134
 #, kde-format
