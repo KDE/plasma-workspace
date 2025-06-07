@@ -3,13 +3,13 @@
 #
 # Balázs Úr <urbalazs@gmail.com>, 2013, 2014.
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2014, 2019, 2020.
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Kristof Kiszel <kiszel.kristof@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Kristof Kiszel <kiszel.kristof@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-15 00:44+0000\n"
-"PO-Revision-Date: 2024-09-18 21:28+0200\n"
+"PO-Revision-Date: 2025-06-06 21:57+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -84,12 +84,18 @@ msgid ""
 "><nl/>Use this setting at your own risk, and do not report issues to KDE or "
 "the app’s author."
 msgstr ""
+"Nézzen szét a(z) <application>%1</application> beállításában a tálcaikon "
+"kikapcsolásához, mielőtt itt tenné meg. Egyes alkalmazás tálcaikonját nem "
+"tervezték kikapcsolhatóra, és ezzel a beállítással nem várt működési "
+"problémák léphetnek fel.<nl/><nl/>Csakis saját felelősségére használja ezt a "
+"beállítást, és ne küldjön hibabejelentést a KDE-nek vagy az alkalmazás "
+"szerzőinek."
 
 #: package/contents/ui/ConfigEntries.qml:164
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
-msgstr ""
+msgstr "Megértettem a kockázatot"
 
 #: package/contents/ui/ConfigEntries.qml:176
 #, kde-kuit-format
@@ -100,6 +106,10 @@ msgid ""
 "consider configuring the clipboard to disable its history, or only remember "
 "one item at a time."
 msgstr ""
+"A vágólap kikapcsolása nem ajánlott, mivel a másolt adatok elvesznek az "
+"adatok forrásául szolgáló alkalmazás bezárásakor.<nl/><nl/>Helyette fontolja "
+"meg a vágólap előzményeinek kikapcsolását, vagy állítsa be, hogy egyszerre "
+"egy elemet tartalmazzon."
 
 #: package/contents/ui/ConfigEntries.qml:204
 #, kde-format
@@ -218,7 +228,7 @@ msgstr "Rejtett ikonok megjelenítése"
 #, kde-format
 msgctxt "@info:whatsthis accessible description for popup grid"
 msgid "Grid with %1 items in %2 columns"
-msgstr ""
+msgstr "Rács %1 elemmel %2 oszlopban"
 
 #: package/contents/ui/HiddenItemsView.qml:46
 #, kde-format

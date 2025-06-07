@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_fonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-21 00:44+0000\n"
+"POT-Creation-Date: 2025-06-07 00:44+0000\n"
 "PO-Revision-Date: 2025-05-24 23:49-0300\n"
 "Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -140,7 +140,7 @@ msgctxt ""
 msgid "%1 %2pt"
 msgstr "%1 %2pt"
 
-#: ui/main.qml:31
+#: ui/main.qml:37
 #, kde-format
 msgctxt ""
 "Sub-string in a font name; 'Display' as in display font — a type of font "
@@ -148,12 +148,12 @@ msgctxt ""
 msgid "Display"
 msgstr "Display"
 
-#: ui/main.qml:36
+#: ui/main.qml:42
 #, kde-format
 msgid "Adjust Global Scale…"
 msgstr "Ajustar escala global..."
 
-#: ui/main.qml:50
+#: ui/main.qml:56
 #, kde-format
 msgid ""
 "Some changes such as anti-aliasing or DPI will only affect newly started "
@@ -162,7 +162,7 @@ msgstr ""
 "Algumas alterações como de anti-aliasing ou DPI afetarão apenas os "
 "aplicativos iniciados a partir de agora."
 
-#: ui/main.qml:66
+#: ui/main.qml:72
 #, kde-format
 msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
@@ -171,7 +171,7 @@ msgstr ""
 "Fontes muito grandes podem levar a resultados estranhos. Ao invés de usar "
 "uma fonte de tamanho muito grande, considere ajustar a escala global."
 
-#: ui/main.qml:84
+#: ui/main.qml:90
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -184,7 +184,7 @@ msgstr ""
 "computador</link>, e podem produzir resultados inesperados. Considere "
 "utilizar uma fonte diferente."
 
-#: ui/main.qml:101
+#: ui/main.qml:107
 #, kde-format
 msgid ""
 "The recommended way to scale the user interface is using the global screen "
@@ -193,82 +193,103 @@ msgstr ""
 "O método recomendado de alterar a escala da interface é o uso da "
 "funcionalidade de escala global."
 
-#: ui/main.qml:114
+#: ui/main.qml:117
+#, kde-format
+msgctxt "@info:usagetip"
+msgid ""
+"Plasma is not designed to be usable with fonts smaller than 4pt. Size has "
+"been reset to 4pt."
+msgstr ""
+
+#: ui/main.qml:133
+#, fuzzy, kde-format
+#| msgid ""
+#| "Very large fonts may produce odd-looking results. Instead of using a very "
+#| "large font size, consider adjusting the global screen scale."
+msgctxt "@info:usagetip"
+msgid ""
+"Very small fonts may produce odd-looking results. Instead of using a very "
+"small font size, consider adjusting the global screen scale."
+msgstr ""
+"Fontes muito grandes podem levar a resultados estranhos. Ao invés de usar "
+"uma fonte de tamanho muito grande, considere ajustar a escala global."
+
+#: ui/main.qml:154
 #, kde-format
 msgid "&Adjust All Fonts…"
 msgstr "A&justar todas as fontes..."
 
-#: ui/main.qml:127
+#: ui/main.qml:167
 #, kde-format
 msgid "General:"
 msgstr "Geral:"
 
-#: ui/main.qml:128
+#: ui/main.qml:168
 #, kde-format
 msgid "Select general font"
 msgstr "Selecionar fonte geral"
 
-#: ui/main.qml:139
+#: ui/main.qml:179
 #, kde-format
 msgid "Fixed width:"
 msgstr "Largura fixa:"
 
-#: ui/main.qml:140
+#: ui/main.qml:180
 #, kde-format
 msgid "Select fixed width font"
 msgstr "Selecionar fonte de largura fixa"
 
-#: ui/main.qml:151
+#: ui/main.qml:191
 #, kde-format
 msgid "Small:"
 msgstr "Pequena:"
 
-#: ui/main.qml:152
+#: ui/main.qml:192
 #, kde-format
 msgid "Select small font"
 msgstr "Selecionar fonte pequena"
 
-#: ui/main.qml:163
+#: ui/main.qml:203
 #, kde-format
 msgid "Toolbar:"
 msgstr "Barra de ferramentas:"
 
-#: ui/main.qml:164
+#: ui/main.qml:204
 #, kde-format
 msgid "Select toolbar font"
 msgstr "Selecionar fonte da barra de ferramentas"
 
-#: ui/main.qml:175
+#: ui/main.qml:215
 #, kde-format
 msgid "Menu:"
 msgstr "Menu:"
 
-#: ui/main.qml:176
+#: ui/main.qml:216
 #, kde-format
 msgid "Select menu font"
 msgstr "Selecionar fonte do menu"
 
-#: ui/main.qml:186
+#: ui/main.qml:226
 #, kde-format
 msgid "Window title:"
 msgstr "Título da janela:"
 
-#: ui/main.qml:187
+#: ui/main.qml:227
 #, kde-format
 msgid "Select window title font"
 msgstr "Selecionar fonte do título da janela"
 
-#: ui/main.qml:202
+#: ui/main.qml:242
 #, kde-format
 msgid "Anti-Aliasing:"
 msgstr "Anti-aliasing:"
 
-#: ui/main.qml:207
+#: ui/main.qml:247
 #, kde-format
 msgid "Enable"
 msgstr "Habilitado"
 
-#: ui/main.qml:211
+#: ui/main.qml:251
 #, kde-kuit-format
 msgctxt "@info:tooltip Anti-Aliasing"
 msgid ""
@@ -284,28 +305,28 @@ msgstr ""
 "usadas para reduzir este efeito. Geralmente, você deseja manter essa opção "
 "ativada, a menos que ela cause problemas."
 
-#: ui/main.qml:225
+#: ui/main.qml:265
 #, kde-format
 msgid "Exclude range from anti-aliasing"
 msgstr "Excluir faixa do anti-aliasing"
 
-#: ui/main.qml:244 ui/main.qml:268
+#: ui/main.qml:284 ui/main.qml:308
 #, kde-format
 msgid "%1 pt"
 msgstr "%1 pt"
 
-#: ui/main.qml:259
+#: ui/main.qml:299
 #, kde-format
 msgid "to"
 msgstr " até "
 
-#: ui/main.qml:291
+#: ui/main.qml:331
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "Renderização de subpixel:"
 
-#: ui/main.qml:337
+#: ui/main.qml:377
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -328,13 +349,13 @@ msgstr ""
 "ordens exóticas não são suportadas por este recurso. </para> Isto não "
 "funciona com monitores CRT."
 
-#: ui/main.qml:342
+#: ui/main.qml:382
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "Hinting:"
 
-#: ui/main.qml:387
+#: ui/main.qml:427
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -348,12 +369,12 @@ msgstr ""
 "pequenos. Sugestões mais fortes geralmente levam a bordas mais nítidas, mas "
 "as letras pequenas se parecem menos com sua forma em tamanhos grandes."
 
-#: ui/main.qml:400
+#: ui/main.qml:440
 #, kde-format
 msgid "Force font DPI:"
 msgstr "Forçar DPI das fontes:"
 
-#: ui/main.qml:428
+#: ui/main.qml:468
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
