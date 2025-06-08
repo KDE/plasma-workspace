@@ -74,6 +74,7 @@
         "Description[tr]": "Çeşitli ülkelerdeki ve eyaletlerdeki tatil günlerini gösterin",
         "Description[uk]": "Показ громадських свят у різних країнах та штатах",
         "Description[x-test]": "xxShow public holidays in various countries or statesxx",
+        "Description[zh_CN]": "显示各个国家或地区的公众假期",
         "Description[zh_TW]": "顯示多個國家或地區的假日",
         "Icon": "view-calendar-holiday",
         "Name": "Holidays",
