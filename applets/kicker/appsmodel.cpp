@@ -436,6 +436,9 @@ void AppsModel::setAppNameFormat(int format)
         for (AbstractEntry *entry : std::as_const(m_entryList)) {
             entry->reload();
         }
+        if (m_complete) {
+            Q_EMIT layoutChanged();
+        }
     }
 }
 

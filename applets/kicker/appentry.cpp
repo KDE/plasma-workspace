@@ -233,7 +233,6 @@ void AppEntry::reload()
         if (m_service) {
             init((NameFormat)owner()->rootModel()->property("appNameFormat").toInt());
             m_icon = QString();
-            Q_EMIT(owner()->layoutChanged());
         }
     } else {
         m_service = KService::serviceByStorageId(id());
@@ -243,7 +242,6 @@ void AppEntry::reload()
         }
         init((NameFormat)owner()->rootModel()->property("appNameFormat").toInt());
         m_icon = QString();
-        Q_EMIT(owner()->layoutChanged());
     }
     if (!m_service) {
         m_service = new KService(QString());
