@@ -2,7 +2,7 @@
 # Translation of kcmfonts.po to Slovenian
 # KDEBASE TRANSLATION TO SLOVENIAN LANGUAGE.
 # Copyright (C) 2001, 2003, 2004, 2006, 2007 Free Software Foundation, Inc.
-# $Id: kcm_fonts.po 1710571 2025-06-07 01:22:44Z scripty $
+# $Id: kcm_fonts.po 1710624 2025-06-08 01:23:28Z scripty $
 # $Source$
 #
 # Roman Maurer <roman.maurer@amis.net>, 2001.
@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-07 00:44+0000\n"
-"PO-Revision-Date: 2025-05-21 07:11+0200\n"
+"PO-Revision-Date: 2025-06-07 06:09+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -199,18 +199,17 @@ msgid ""
 "Plasma is not designed to be usable with fonts smaller than 4pt. Size has "
 "been reset to 4pt."
 msgstr ""
+"Plazma ni zasnovana za uporabo s pisavami, manjšimi od 4pt. Velikost je bila "
+"ponastavljena na 4pt."
 
 #: ui/main.qml:133
-#, fuzzy, kde-format
-#| msgid ""
-#| "Very large fonts may produce odd-looking results. Instead of using a very "
-#| "large font size, consider adjusting the global screen scale."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "Very small fonts may produce odd-looking results. Instead of using a very "
 "small font size, consider adjusting the global screen scale."
 msgstr ""
-"Zelo velike pisave dajo lahko čudne rezultate. Namesto uporabe zelo velikih "
+"Zelo majhne pisave dajo lahko čudne rezultate. Namesto uporabe zelo majhnih "
 "velikosti pisav, razmislite raje o prilagoditvi globalnega merila zaslona."
 
 #: ui/main.qml:154

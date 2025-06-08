@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kcm_fonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-07 00:44+0000\n"
-"PO-Revision-Date: 2025-05-21 22:45+0300\n"
+"PO-Revision-Date: 2025-06-07 18:09+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -196,19 +196,18 @@ msgid ""
 "Plasma is not designed to be usable with fonts smaller than 4pt. Size has "
 "been reset to 4pt."
 msgstr ""
+"Плазму не розраховано для використання з розмірами шрифтів, які є меншими за "
+"4 пункти. Розмір скинуто до 4 пт."
 
 #: ui/main.qml:133
-#, fuzzy, kde-format
-#| msgid ""
-#| "Very large fonts may produce odd-looking results. Instead of using a very "
-#| "large font size, consider adjusting the global screen scale."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "Very small fonts may produce odd-looking results. Instead of using a very "
 "small font size, consider adjusting the global screen scale."
 msgstr ""
-"Використання дуже великих розмірів шрифту може призвести до небажаних "
-"наслідків. Замість встановлення дуже великого розміру шрифту, вам варто "
+"Використання дуже малих розмірів шрифту може призвести до небажаних "
+"наслідків. Замість встановлення дуже малого розміру шрифту, вам варто "
 "скоригувати загальний масштаб екрана."
 
 #: ui/main.qml:154

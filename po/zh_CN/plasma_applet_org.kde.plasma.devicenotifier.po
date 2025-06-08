@@ -126,7 +126,7 @@ msgstr "挂载"
 #: plugin/actions/mountandopenaction.cpp:179
 #, kde-format
 msgid "Open in File Manager"
-msgstr "在文件管理器中打开"
+msgstr "用文件管理器打开"
 
 #: plugin/actions/mountandopenaction.cpp:182
 #, kde-format

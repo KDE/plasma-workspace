@@ -80,19 +80,19 @@ msgstr "平铺"
 #, kde-format
 msgctxt "part of a sentence: 'Switch dynamic wallpapers [based on]'"
 msgid "Switch dynamic wallpapers:"
-msgstr ""
+msgstr "切换动态壁纸："
 
 #: imagepackage/contents/ui/config.qml:195
 #, kde-format
 msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the color scheme is dark or light"
-msgstr ""
+msgstr "基于配色方案是深色还是浅色"
 
 #: imagepackage/contents/ui/config.qml:203
 #, kde-format
 msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
 msgid "At sunrise and sunset"
-msgstr ""
+msgstr "日出和日落时"
 
 #: imagepackage/contents/ui/config.qml:218
 #, kde-format
@@ -100,7 +100,7 @@ msgctxt ""
 "@label:checkbox Use geolocation services for more accurate sunset and "
 "sunrise times"
 msgid "Use device's current location for more accurate timings"
-msgstr ""
+msgstr "使用设备的当前位置以提高切换时间的准确性"
 
 #: imagepackage/contents/ui/config.qml:229
 #, kde-format

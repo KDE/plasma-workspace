@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-07 00:44+0000\n"
-"PO-Revision-Date: 2025-05-21 21:06+0300\n"
+"PO-Revision-Date: 2025-06-07 19:44+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -198,19 +198,18 @@ msgid ""
 "Plasma is not designed to be usable with fonts smaller than 4pt. Size has "
 "been reset to 4pt."
 msgstr ""
+"Plasma, 4 puntodan daha küçük yazıtipleriyle çalışmak üzere "
+"tasarlanmamıştır. Boyut, 4 punto olarak geri değiştirildi."
 
 #: ui/main.qml:133
-#, fuzzy, kde-format
-#| msgid ""
-#| "Very large fonts may produce odd-looking results. Instead of using a very "
-#| "large font size, consider adjusting the global screen scale."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "Very small fonts may produce odd-looking results. Instead of using a very "
 "small font size, consider adjusting the global screen scale."
 msgstr ""
-"Çok büyük yazıtipleri tuhaf görünen sonuçlar üretebilir. Çok büyük bir "
-"yazıtipi boyutu kullanmak yerine global ekran ölçeğini ayarlamayı düşünün."
+"Çok küçük yazıtipleri tuhaf görünen sonuçlar üretebilir. Çok küçük bir punto "
+"kullanmak yerine global ekran ölçeğini ayarlamayı düşünün."
 
 #: ui/main.qml:154
 #, kde-format

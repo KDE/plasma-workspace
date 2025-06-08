@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kcm_fonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-07 00:44+0000\n"
-"PO-Revision-Date: 2025-06-04 19:31+0100\n"
+"PO-Revision-Date: 2025-06-07 12:12+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -167,8 +167,8 @@ msgid ""
 "large font size, consider adjusting the global screen scale."
 msgstr ""
 "Los tipos de letra muy grandes pueden producir una mala visualización. En "
-"lugar de usar tipos de letra muy grandes, considere ajustar el escalado de "
-"pantalla global."
+"lugar de usar tipos de letra muy grandes, considere ajustar el escalado "
+"global de la pantalla."
 
 #: ui/main.qml:90
 #, kde-kuit-format
@@ -190,7 +190,7 @@ msgid ""
 "scaling feature."
 msgstr ""
 "El modo recomendado de escalar la interfaz del usuario es el uso de la "
-"funcionalidad de escalado de pantalla global."
+"funcionalidad de escalado global de la pantalla."
 
 #: ui/main.qml:117
 #, kde-format
@@ -199,20 +199,19 @@ msgid ""
 "Plasma is not designed to be usable with fonts smaller than 4pt. Size has "
 "been reset to 4pt."
 msgstr ""
+"Plasma no está diseñado para funcionar con tipos de letra menores de 4 pt. "
+"Se ha restablecido el tamaño a 4 pt."
 
 #: ui/main.qml:133
-#, fuzzy, kde-format
-#| msgid ""
-#| "Very large fonts may produce odd-looking results. Instead of using a very "
-#| "large font size, consider adjusting the global screen scale."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "Very small fonts may produce odd-looking results. Instead of using a very "
 "small font size, consider adjusting the global screen scale."
 msgstr ""
-"Los tipos de letra muy grandes pueden producir una mala visualización. En "
-"lugar de usar tipos de letra muy grandes, considere ajustar el escalado de "
-"pantalla global."
+"Los tipos de letra muy pequeños pueden producir una mala visualización. En "
+"lugar de usar tipos de letra muy pequeños, considere ajustar el escalado "
+"global de la pantalla."
 
 #: ui/main.qml:154
 #, kde-format

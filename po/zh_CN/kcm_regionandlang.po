@@ -282,12 +282,10 @@ msgid "Can't locate executable `check-language-support`"
 msgstr "无法定位可执行程序 `check-language-support`"
 
 #: localegeneratorubuntu.cpp:56
-#, fuzzy, kde-format
-#| msgctxt "the arg is the output of failed check-language-support call"
-#| msgid "check-language-support failed, output: %1"
+#, kde-format
 msgctxt "the arg is the output of failed check-language-support call"
 msgid "check-language-support failed, output: %1 %2"
-msgstr "check-language-support 执行失败，输出：%1"
+msgstr "check-language-support 执行失败，输出：%1 %2"
 
 #: localegeneratorubuntu.cpp:88
 #, kde-format

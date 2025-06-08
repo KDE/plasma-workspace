@@ -277,15 +277,13 @@ msgid "Choose a Font"
 msgstr "选择字体"
 
 #: package/contents/ui/configCalendar.qml:50
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@option:check formdata label"
 msgid "General:"
 msgstr "常规："
 
 #: package/contents/ui/configCalendar.qml:51
-#, fuzzy, kde-format
-#| msgid "Show week numbers"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show week numbers"
 msgstr "显示周数"
@@ -303,11 +301,10 @@ msgid "Use region defaults"
 msgstr "使用当前区域设置的默认值"
 
 #: package/contents/ui/configCalendar.qml:82
-#, fuzzy, kde-format
-#| msgid "Available Plugins:"
+#, kde-format
 msgctxt "@title:column"
 msgid "Available Add-Ons"
-msgstr "可用插件："
+msgstr "可用的附加组件"
 
 #: package/contents/ui/configTimeZones.qml:70
 #, kde-format
