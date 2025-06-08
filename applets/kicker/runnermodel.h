@@ -58,6 +58,8 @@ public:
     bool mergeResults() const;
     void setMergeResults(bool merge);
 
+    Q_INVOKABLE void clear();
+
 Q_SIGNALS:
     void countChanged() const;
     void favoritesModelChanged() const;
@@ -73,7 +75,6 @@ private Q_SLOTS:
     void startQuery();
 
 private:
-    void clear();
     // Initializes the models when the first query is run or mergeResults changed
     void initializeModels();
 
