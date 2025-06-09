@@ -204,6 +204,7 @@ public:
                         removeResult(key);
                     }
                 }
+                Q_EMIT layoutChanged();
             },
             Qt::QueuedConnection);
 
