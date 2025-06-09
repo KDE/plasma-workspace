@@ -1,7 +1,7 @@
 # Translation for kcm_fonts.po to Euskara/Basque (eu).
 # Copyright (C) 2002-2025 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>.
+# SPDX-FileCopyrightText: 2025 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Marcos  <marcos@euskalgnu.org>, 2002,2003, 2005, 2006, 2007, 2008.
@@ -12,21 +12,21 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-05 00:45+0000\n"
-"PO-Revision-Date: 2023-04-09 21:48+0200\n"
+"PO-Revision-Date: 2025-06-08 09:57+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 25.04.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. i18n: ectx: label, entry (forceFontDPI), group (General)
 #: fontsaasettingsbase.kcfg:9
 #, kde-format
 msgid "Force font DPI on X11"
-msgstr "Behartu letra-tipoen DPI «X11»rekin"
+msgstr "Behartu letra-tipoen DPI X11(a)n"
 
 #. i18n: ectx: label, entry (font), group (General)
 #: fontssettings.kcfg:9
@@ -155,8 +155,8 @@ msgid ""
 "large font size, consider adjusting the global screen scale."
 msgstr ""
 "Letra-tipo oso handiek itxura arraroko emaitzak sor ditzakete. Letra-tipo "
-"oso handia erabili ordez, kontuan izan pantailaren eskala orokorra doitzeko "
-"aukera."
+"neurri oso handia erabili ordez, kontuan izan pantailaren eskala orokorra "
+"doitzeko aukera."
 
 #: ui/main.qml:72
 #, kde-format
