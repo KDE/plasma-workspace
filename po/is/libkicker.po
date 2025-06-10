@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-06 00:44+0000\n"
+"POT-Creation-Date: 2025-06-10 00:44+0000\n"
 "PO-Revision-Date: 2025-04-18 11:08+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -64,18 +64,18 @@ msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
 msgstr "Fjarlægja eða vinna með viðbætur…"
 
-#: appentry.cpp:345
+#: appentry.cpp:343
 #, kde-format
 msgid "Hide Application"
 msgstr "Fela forrit"
 
-#: appentry.cpp:407
+#: appentry.cpp:405
 #, kde-format
 msgctxt "App name (Comment or Generic name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: appentry.cpp:409
+#: appentry.cpp:407
 #, kde-format
 msgctxt "Generic name (App name)"
 msgid "%1 (%2)"
@@ -113,7 +113,7 @@ msgid "Computer"
 msgstr "Tölva"
 
 #. i18n.
-#: kastatsfavoritesmodel.cpp:554 rootmodel.cpp:533 simplefavoritesmodel.cpp:33
+#: kastatsfavoritesmodel.cpp:555 rootmodel.cpp:533 simplefavoritesmodel.cpp:33
 #, kde-format
 msgid "Favorites"
 msgstr "Eftirlæti"

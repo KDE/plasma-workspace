@@ -186,14 +186,12 @@ msgid ""
 msgstr ""
 
 #: ui/main.qml:133
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "Very small fonts may produce odd-looking results. Instead of using a very "
 "small font size, consider adjusting the global screen scale."
 msgstr ""
-"单独设置字体大小时，视觉效果可能不佳。您可以尝试通过调整全局屏幕缩放改变字体"
-"大小。"
 
 #: ui/main.qml:154
 #, kde-format

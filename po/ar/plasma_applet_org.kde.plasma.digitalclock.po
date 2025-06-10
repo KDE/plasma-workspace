@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-04 00:44+0000\n"
-"PO-Revision-Date: 2025-04-28 17:26+0400\n"
+"PO-Revision-Date: 2025-06-09 17:50+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -279,15 +279,13 @@ msgid "Choose a Font"
 msgstr "اختر خطاً"
 
 #: package/contents/ui/configCalendar.qml:50
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@option:check formdata label"
 msgid "General:"
 msgstr "عام:"
 
 #: package/contents/ui/configCalendar.qml:51
-#, fuzzy, kde-format
-#| msgid "Show week numbers"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show week numbers"
 msgstr "أظهر أرقام الأسابيع"
@@ -305,11 +303,10 @@ msgid "Use region defaults"
 msgstr "استخدام مبدئيات المنطقة"
 
 #: package/contents/ui/configCalendar.qml:82
-#, fuzzy, kde-format
-#| msgid "Available Plugins:"
+#, kde-format
 msgctxt "@title:column"
 msgid "Available Add-Ons"
-msgstr "الملحقات المتوفّرة:"
+msgstr "الإضافات المتوفرة"
 
 #: package/contents/ui/configTimeZones.qml:70
 #, kde-format
