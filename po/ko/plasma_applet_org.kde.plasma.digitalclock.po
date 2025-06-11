@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-04 00:44+0000\n"
-"PO-Revision-Date: 2025-04-07 00:28+0200\n"
+"PO-Revision-Date: 2025-06-10 22:09+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: package/contents/config/config.qml:20
 #, kde-format
@@ -277,15 +277,13 @@ msgid "Choose a Font"
 msgstr "글꼴 선택"
 
 #: package/contents/ui/configCalendar.qml:50
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@option:check formdata label"
 msgid "General:"
 msgstr "일반:"
 
 #: package/contents/ui/configCalendar.qml:51
-#, fuzzy, kde-format
-#| msgid "Show week numbers"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show week numbers"
 msgstr "주 번호 표시"
@@ -303,11 +301,10 @@ msgid "Use region defaults"
 msgstr "지역 기본값 사용"
 
 #: package/contents/ui/configCalendar.qml:82
-#, fuzzy, kde-format
-#| msgid "Available Plugins:"
+#, kde-format
 msgctxt "@title:column"
 msgid "Available Add-Ons"
-msgstr "사용 가능한 플러그인:"
+msgstr "사용 가능한 추가 기능"
 
 #: package/contents/ui/configTimeZones.qml:70
 #, kde-format
@@ -373,6 +370,8 @@ msgid ""
 "Tip: Add your home time zone to this list to see the time there even when "
 "you're traveling. It will not be shown twice while at home."
 msgstr ""
+"팁: 홈 시간대를 추가하면 여행 중에도 항상 해당 시간대를 표시합니다. 홈 지역"
+"에 있을 때에는 두 번 표시되지 않습니다."
 
 #: package/contents/ui/configTimeZones.qml:245
 #, kde-format
