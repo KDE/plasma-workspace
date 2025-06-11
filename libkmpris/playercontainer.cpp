@@ -666,7 +666,7 @@ void PlayerContainer::updateFromMap(const QVariantMap &map)
         return;
     }
 
-    if (m_position != 0.0 && (m_playbackStatus == PlaybackStatus::Stopped || (!oldTrackId.isEmpty() && m_trackId.value() != oldTrackId))) {
+    if (m_position > 0 && (m_playbackStatus == PlaybackStatus::Stopped || (!oldTrackId.isEmpty() && m_trackId.value() != oldTrackId))) {
         // assume the position has reset to 0, since this is really the
         // only sensible value for a stopped track
         updatePosition();
