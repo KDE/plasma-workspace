@@ -129,6 +129,7 @@ Q_SIGNALS:
     void numberOfDesktopsChanged() const;
     void desktopIdsChanged() const;
     void desktopNamesChanged() const;
+    void desktopPositionsChanged() const;
     void desktopLayoutRowsChanged() const;
     void navigationWrappingAroundChanged() const;
 
