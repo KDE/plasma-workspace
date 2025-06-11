@@ -58,7 +58,7 @@
                 "Name[zh_TW]": "Plasma 團隊"
             }
         ],
-        "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=Icon",
+        "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=Icon%20widget",
         "Category": "File System",
         "Description": "A generic icon",
         "Description[ar]": "أيقونة عامّة",

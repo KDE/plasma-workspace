@@ -58,7 +58,7 @@
                 "Name[zh_TW]": "Marco Martin"
             }
         ],
-        "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=System%20Monitor",
+        "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=System%20Monitor%20widgets",
         "Category": "System Information",
         "Description": "System monitor widget that shows the download and upload data rate",
         "Description[ar]": "أداة مراقبة النظام التي تعرض سرعة تنزيل ورفع البيانات",

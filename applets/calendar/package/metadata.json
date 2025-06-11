@@ -58,7 +58,7 @@
                 "Name[zh_TW]": "Sebastian Kügler"
             }
         ],
-        "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=Calendar",
+        "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=Calendar%20widget",
         "Category": "Date and Time",
         "Description": "Month display with your appointments and events",
         "Description[ar]": "عرض للشّهر فيه المواعيد والأحداث",

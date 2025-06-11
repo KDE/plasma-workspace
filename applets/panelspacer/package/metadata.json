@@ -58,7 +58,7 @@
                 "Name[zh_TW]": "Plasma 團隊"
             }
         ],
-        "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=Panel%20Spacer",
+        "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=Panel%20Spacer%20widget",
         "Category": "System Information",
         "Description": "Reserve empty spaces within the panel.",
         "Description[ar]": "يحجز مساحات فارغة في اللوحة.",

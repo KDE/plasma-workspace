@@ -57,7 +57,7 @@
                 "Name[zh_TW]": "Viranch Mehta"
             }
         ],
-        "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=Lock/logout",
+        "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=Lock%2Flogout%20widget",
         "Category": "System Information",
         "Description": "Lock the screen or log out",
         "Description[ar]": "اقفل الشاشة أو اخرج",

@@ -58,7 +58,7 @@
                 "Name[zh_TW]": "Marco Martin"
             }
         ],
-        "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=Analog%20Clock",
+        "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=Analog%20Clock%20widget",
         "Category": "Date and Time",
         "Description": "A clock with hands",
         "Description[ar]": "ساعة بِعقارب",

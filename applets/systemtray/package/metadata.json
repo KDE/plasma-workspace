@@ -58,7 +58,7 @@
                 "Name[zh_TW]": "Marco Martin"
             }
         ],
-        "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=System%20Tray",
+        "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=System%20Tray%20widget",
         "Category": "Windows and Tasks",
         "Description": "Access hidden applications minimized in the system tray",
         "Description[ar]": "الوصول إلى التطبيقات المصغّرة في صينية النظام",

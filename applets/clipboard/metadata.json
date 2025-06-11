@@ -57,7 +57,7 @@
                 "Name[zh_TW]": "Martin Gräßlin"
             }
         ],
-        "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=Clipboard",
+        "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=Clipboard%20widget%20%26%20pop-up",
         "Category": "Clipboard",
         "Description": "Provides access to the clipboard history",
         "Description[ar]": "اطّلع على تاريخ الحافظة",
