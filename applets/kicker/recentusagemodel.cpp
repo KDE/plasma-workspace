@@ -79,11 +79,7 @@ bool InvalidAppsFilterProxy::filterAcceptsRow(int source_row, const QModelIndex 
     const QString resource = sourceModel()->index(source_row, 0).data(ResultModel::ResourceRole).toString();
 
     if (resource.startsWith(QLatin1String("applications:"))) {
-        KService::Ptr service = KService::serviceByStorageId(resource.section(QLatin1Char(':'), 1));
-
-        KAStatsFavoritesModel *favoritesModel = m_parentModel ? static_cast<KAStatsFavoritesModel *>(m_parentModel->favoritesModel()) : nullptr;
-
-        return (service && (!favoritesModel || !favoritesModel->isFavorite(service->storageId())));
+        return KService::serviceByStorageId(resource.section(QLatin1Char(':'), 1));
     }
 
     return true;
