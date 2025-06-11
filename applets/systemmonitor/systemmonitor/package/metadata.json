@@ -57,7 +57,7 @@
                 "Name[zh_TW]": "Marco Martin"
             }
         ],
-        "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=System%20Monitor",
+        "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=System%20Monitor%20widgets",
         "Category": "System Information",
         "Description": "Displays a configurable chart of a system monitor sensor",
         "Description[ar]": "يعرض مخططًا قابلًا للتكوين لمتحسسات مراقبة النظام",
