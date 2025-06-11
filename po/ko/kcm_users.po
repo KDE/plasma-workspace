@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-23 00:44+0000\n"
-"PO-Revision-Date: 2025-04-07 00:26+0200\n"
+"PO-Revision-Date: 2025-06-10 22:08+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: src/fingerprintmodel.cpp:145 src/fingerprintmodel.cpp:229
 #, kde-format
@@ -531,14 +531,13 @@ msgstr "사용자 아바타 자리 비움자 아이콘"
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User Without Deleting Files?"
-msgstr ""
+msgstr "파일 삭제 없이 로그인한 사용자 삭제?"
 
 #: src/ui/UserDetailsPage.qml:115
-#, fuzzy, kde-format
-#| msgid "Delete User…"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User?"
-msgstr "사용자 삭제…"
+msgstr "로그인한 사용자 삭제?"
 
 #: src/ui/UserDetailsPage.qml:117
 #, kde-kuit-format
@@ -548,6 +547,9 @@ msgid ""
 "account instead?<nl/><nl/>This will make %1 unable to log in again, and they "
 "may experience strange behaviors until they log out."
 msgstr ""
+"%1 사용자가 현재 로그인해 있어서 해당 사용자의 파일을 삭제할 수 없습니다. 계"
+"정만 삭제하시겠습니까?<nl/><nl/>이렇게 하면 %1 사용자는 더 이상 로그인할 수 "
+"없으며, 로그아웃할 때까지 예상하지 못하게 작동할 수도 있습니다."
 
 #: src/ui/UserDetailsPage.qml:118
 #, kde-format
@@ -556,13 +558,14 @@ msgid ""
 "%1 is currently logged in. Deleting the account will make them unable to log "
 "in again, and they may experience strange behaviors until they log out."
 msgstr ""
+"%1 사용자가 현재 로그인해 있습니다. 해당 사용자를 삭제하면 더 이상 로그인할 "
+"수 없으며, 로그아웃할 때까지 예상하지 못하게 작동할 수도 있습니다."
 
 #: src/ui/UserDetailsPage.qml:125
-#, fuzzy, kde-format
-#| msgid "Delete files"
+#, kde-format
 msgctxt "@action: button"
 msgid "Delete %1"
-msgstr "파일 삭제"
+msgstr "%1 삭제"
 
 #: src/ui/UserDetailsPage.qml:144
 #, kde-format

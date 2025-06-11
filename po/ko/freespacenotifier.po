@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Shinjo Park <kde@peremen.name>, 2010, 2014, 2020, 2021.
+# SPDX-FileCopyrightText: 2010, 2014, 2020, 2021, 2025 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-30 02:40+0000\n"
-"PO-Revision-Date: 2021-05-28 02:24+0200\n"
+"PO-Revision-Date: 2025-06-10 22:05+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 20.12.3\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: freespacenotifier.cpp:121
 #, kde-format
@@ -40,10 +40,9 @@ msgstr "디스크 남은 공간이 다음 이하일 때 사용자에게 알려 �
 
 #. i18n: ectx: label, entry (minimumSpacePercentage), group (General)
 #: freespacenotifier.kcfg:15
-#, fuzzy, kde-format
-#| msgid "Minimum free space before user starts being notified."
+#, kde-format
 msgid "Minimum percentage free space before user starts being notified."
-msgstr "디스크 남은 공간이 다음 이하일 때 사용자에게 알려 줍니다."
+msgstr "디스크 남은 공간 백분율이 다음 이하일 때 사용자에게 알려 줍니다."
 
 #. i18n: ectx: label, entry (enableNotification), group (General)
 #: freespacenotifier.kcfg:21
@@ -71,16 +70,15 @@ msgstr " MiB"
 
 #. i18n: ectx: property (text), widget (QLabel, label_minimumSpacePercentage)
 #: freespacenotifier_prefs_base.ui:44
-#, fuzzy, kde-format
-#| msgid "Warn when free space is below:"
+#, kde-format
 msgid "And when free space is under:"
-msgstr "다음 이하로 남았을 때 알려주기:"
+msgstr "그리고 다음 이하로 남았을 때:"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpacePercentage)
 #: freespacenotifier_prefs_base.ui:54
 #, no-c-format, kde-format
 msgid "%"
-msgstr ""
+msgstr "%"
 
 #. i18n: ectx: property (text), widget (QLabel, label_info)
 #: freespacenotifier_prefs_base.ui:67
@@ -89,36 +87,29 @@ msgid ""
 "The system will notify you if the free space drops below the specified MiB "
 "and the specified percentage of available space."
 msgstr ""
+"남은 공간이 지정한 MiB 이하 및 사용 가능한 공간의 지정한 퍼센트 이하일 때 시"
+"스템에서 알려 줍니다."
 
 #: module.cpp:105
-#, fuzzy, kde-format
-#| msgid ""
-#| "Your Root partition is running out of disk space, you have %1 MiB "
-#| "remaining (%2%)."
+#, kde-format
 msgid ""
 "Your %1 partition is running out of disk space; %2 MiB of space remaining "
 "(%3%)."
-msgstr "루트 파티션의 디스크 공간이 부족합니다. %1MiB 남았습니다(%2%)."
+msgstr "%1 파티션의 디스크 공간이 부족합니다. %2 MiB 남았습니다(%3%)."
 
 #: module.cpp:107
-#, fuzzy, kde-format
-#| msgid ""
-#| "Your Root partition is running out of disk space, you have %1 MiB "
-#| "remaining (%2%)."
+#, kde-format
 msgid ""
 "Your Root partition is running out of disk space; %1 MiB of space remaining "
 "(%2%)."
-msgstr "루트 파티션의 디스크 공간이 부족합니다. %1MiB 남았습니다(%2%)."
+msgstr "루트 파티션의 디스크 공간이 부족합니다. %1 MiB 남았습니다(%2%)."
 
 #: module.cpp:109
-#, fuzzy, kde-format
-#| msgid ""
-#| "Your Home folder is running out of disk space, you have %1 MiB remaining "
-#| "(%2%)."
+#, kde-format
 msgid ""
 "Your Home folder is running out of disk space; %1 MiB of space remaining "
 "(%2%)."
-msgstr "홈 폴더의 디스크 공간이 부족합니다. %1MiB 남았습니다(%2%)."
+msgstr "홈 폴더의 디스크 공간이 부족합니다. %1 MiB 남았습니다(%2%)."
 
 #: module.cpp:134
 #, kde-format
