@@ -43,12 +43,6 @@ void MediaMetadataFinder::run()
         metadata.title = QString::fromUtf8(titleByte).chopped(std::min<qsizetype>(titleByte.size(), 1));
     }
 
-    // Use description as title
-    if (metadata.title.isEmpty()) {
-        const QByteArray titleByte = exivImage.getExifTagData("Exif.Image.ImageDescription");
-        metadata.title = QString::fromUtf8(titleByte).chopped(std::min<qsizetype>(titleByte.size(), 1));
-    }
-
     // Extract author from artist
     {
         const QByteArray authorByte = exivImage.getExifTagData("Exif.Image.Artist");
