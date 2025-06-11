@@ -1,6 +1,6 @@
 # Translation of kcmfonts.po to Korean.
 # Copyright (C) 2001, 2007 Free Software Foundation, Inc.
-# Shinjo Park <kde@peremen.name>, 2007, 2010, 2012, 2015, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2007, 2010, 2012, 2015, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2025 Shinjo Park <kde@peremen.name>
 #
 # Yu-Chan, Park, 2001.
 msgid ""
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
 #: fontsaasettingsbase.kcfg:9
