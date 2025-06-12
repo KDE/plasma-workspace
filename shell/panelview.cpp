@@ -1016,7 +1016,7 @@ void PanelView::restoreAutoHide()
 
     if (!edgeActivated()) {
         autoHide = false;
-    } else if (m_containsMouse || m_containsDrag) {
+    } else if (m_containsDrag) {
         autoHide = false;
     } else if (m_corona->isEditMode()) {
         autoHide = false;
@@ -1223,19 +1223,6 @@ bool PanelView::event(QEvent *e)
     case QEvent::Show:
         positionAndResizePanel();
         break;
-    case QEvent::Enter:
-        m_containsMouse = true;
-        if (edgeActivated()) {
-            m_unhideTimer.stop();
-        }
-        break;
-
-    case QEvent::Leave:
-        m_containsMouse = false;
-        if (edgeActivated()) {
-            m_unhideTimer.start();
-        }
-        break;
 
         /*Fitt's law: if the containment has margins, and the mouse cursor clicked
          * on the mouse edge, forward the click in the containment boundaries
@@ -1316,7 +1303,6 @@ bool PanelView::event(QEvent *e)
     }
     case QEvent::DragLeave:
         m_containsDrag = false;
-        m_containsMouse = false;
         if (edgeActivated()) {
             m_unhideTimer.start();
         }
@@ -1348,7 +1334,6 @@ bool PanelView::event(QEvent *e)
     }
 
     case QEvent::Hide: {
-        m_containsMouse = false;
         break;
     }
     default:
