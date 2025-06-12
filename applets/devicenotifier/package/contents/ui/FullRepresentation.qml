@@ -132,15 +132,9 @@ PlasmaExtras.Representation {
 
             section {
                 property: "deviceType"
-                delegate: Item {
-                    height: Math.floor(childrenRect.height)
+                delegate: PlasmaExtras.ListSectionHeader {
                     width: notifierDialog.width - (scrollView.PlasmaComponents3.ScrollBar.vertical.visible ? Kirigami.Units.largeSpacing * 2 : 0)
-                    Kirigami.Heading {
-                        level: 3
-                        opacity: 0.6
-                        text: section
-                        textFormat: Text.PlainText
-                    }
+                    text: section
                 }
             }
 
