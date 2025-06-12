@@ -85,7 +85,7 @@ KCM.GridViewKCM {
             QQC2.Label {
                 text: theme.comment
                 textFormat: Text.PlainText
-                opacity: 0.6
+                opacity: 0.75
                 wrapMode: Text.WordWrap
                 Layout.fillWidth: true
             }

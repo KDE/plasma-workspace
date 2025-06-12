@@ -172,7 +172,7 @@ Kirigami.PageRow {
                     Kirigami.TitleSubtitle {
                         Layout.fillWidth: true
 
-                        opacity: timeZoneListItem.isIdenticalToLocal ? 0.6 : 1.0
+                        opacity: timeZoneListItem.isIdenticalToLocal ? 0.75 : 1.0
 
                         title: timeZoneListItem.text
                         subtitle: timeZoneListItem.subtitle

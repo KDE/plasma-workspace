@@ -33,7 +33,7 @@ Item {
 
     property real faceSize: Kirigami.Units.gridUnit * 7
 
-    opacity: isCurrent ? 1.0 : 0.5
+    opacity: isCurrent ? 1.0 : 0.75
 
     Behavior on opacity {
         OpacityAnimator {
