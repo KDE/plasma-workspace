@@ -26,7 +26,7 @@ msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-07 00:44+0000\n"
-"PO-Revision-Date: 2025-05-23 08:13+0200\n"
+"PO-Revision-Date: 2025-06-10 08:12+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -36,7 +36,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.04.2\n"
 "X-Text-Markup: kde4\n"
 
 #. i18n: ectx: label, entry (forceFontDPI), group (General)
@@ -212,20 +212,19 @@ msgid ""
 "Plasma is not designed to be usable with fonts smaller than 4pt. Size has "
 "been reset to 4pt."
 msgstr ""
+"La conception de Plasma ne permet pas l'utilisation de polices inférieures à "
+"4pt. La taille a été réinitialisée à 4pt."
 
 #: ui/main.qml:133
-#, fuzzy, kde-format
-#| msgid ""
-#| "Very large fonts may produce odd-looking results. Instead of using a very "
-#| "large font size, consider adjusting the global screen scale."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "Very small fonts may produce odd-looking results. Instead of using a very "
 "small font size, consider adjusting the global screen scale."
 msgstr ""
-"Des polices de très grande taille peuvent produire des résultats bizarres. "
-"Veuillez privilégier l'ajustement de l'échelle globale de l'écran au lieu "
-"d'utiliser des tailles de polices de très grande taille."
+"Des polices de très petite taille peuvent produire des résultats bizarres. "
+"Plutôt que d'utiliser une taille très petite de fonte, veuillez privilégier "
+"l'ajustement de l'échelle globale."
 
 #: ui/main.qml:154
 #, kde-format

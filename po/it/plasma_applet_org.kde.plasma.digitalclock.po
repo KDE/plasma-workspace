@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-04 00:44+0000\n"
-"PO-Revision-Date: 2025-04-28 09:00+0200\n"
+"PO-Revision-Date: 2025-06-02 21:00+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.0\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: package/contents/config/config.qml:20
 #, kde-format
@@ -280,18 +280,16 @@ msgid "Choose a Font"
 msgstr "Scegli un carattere"
 
 #: package/contents/ui/configCalendar.qml:50
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@option:check formdata label"
 msgid "General:"
 msgstr "Generale:"
 
 #: package/contents/ui/configCalendar.qml:51
-#, fuzzy, kde-format
-#| msgid "Show week numbers"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show week numbers"
-msgstr "Mostra numeri di settimana"
+msgstr "Mostra i numeri di settimana"
 
 #: package/contents/ui/configCalendar.qml:58
 #, kde-format
@@ -306,11 +304,10 @@ msgid "Use region defaults"
 msgstr "Utilizza impostazioni regionali predefinite"
 
 #: package/contents/ui/configCalendar.qml:82
-#, fuzzy, kde-format
-#| msgid "Available Plugins:"
+#, kde-format
 msgctxt "@title:column"
 msgid "Available Add-Ons"
-msgstr "Estensioni disponibili:"
+msgstr "Componenti aggiuntivi disponibili"
 
 #: package/contents/ui/configTimeZones.qml:70
 #, kde-format
