@@ -480,10 +480,13 @@ bool EnvCanadaIon::updateIonSource(const QString &source)
 
         return true;
     }
+
     if (sourceAction[1] == QLatin1String("weather") && sourceAction.size() > 2) {
-        getXMLData(source);
+        m_weatherData[source].urlInfo = WeatherData::UrlInfo();
+        getWeatherData(source);
         return true;
     }
+
     setData(source, QStringLiteral("validate"), QStringLiteral("envcan|malformed"));
     return true;
 }
@@ -500,38 +503,6 @@ void EnvCanadaIon::getXMLSetup()
     m_xmlSetup.clear();
     connect(getJob, &KIO::TransferJob::data, this, &EnvCanadaIon::setup_slotDataArrived);
     connect(getJob, &KJob::result, this, &EnvCanadaIon::setup_slotJobFinished);
-}
-
-// Gets specific city XML data
-void EnvCanadaIon::getXMLData(const QString &source)
-{
-    for (const QString &fetching : std::as_const(m_jobList)) {
-        if (fetching == source) {
-            // already getting this source and awaiting the data
-            return;
-        }
-    }
-
-    // Demunge source name for key only.
-    QString dataKey = source;
-    dataKey.remove(QStringLiteral("envcan|weather|"));
-    const XMLMapInfo &place = m_places[dataKey];
-
-    const QUrl url(QStringLiteral("https://dd.weather.gc.ca/citypage_weather/xml/%1/%2_e.xml").arg(place.territoryName, place.cityCode));
-    qCDebug(IONENGINE_ENVCAN) << "Fetching legacy weather URL:" << url;
-
-    if (place.territoryName.isEmpty() && place.cityCode.isEmpty()) {
-        setData(source, QStringLiteral("validate"), QStringLiteral("envcan|malformed"));
-        return;
-    }
-
-    KIO::TransferJob *getJob = KIO::get(url, KIO::Reload, KIO::HideProgressInfo);
-
-    m_jobXml.insert(getJob, new QXmlStreamReader);
-    m_jobList.insert(getJob, source);
-
-    connect(getJob, &KIO::TransferJob::data, this, &EnvCanadaIon::slotDataArrived);
-    connect(getJob, &KJob::result, this, &EnvCanadaIon::slotJobFinished);
 }
 
 // The weather URL has a dynamic name and path depending on its timestamp:
@@ -615,12 +586,6 @@ void EnvCanadaIon::slotJobFinished(KJob *job)
     QXmlStreamReader *reader = m_jobXml.value(job);
     if (!job->error() && reader) {
         readXMLData(m_jobList[job], *reader);
-    }
-
-    if (job->error() == KIO::ERR_DOES_NOT_EXIST || qobject_cast<KIO::TransferJob *>(job)->isErrorPage()) {
-        qCDebug(IONENGINE_ENVCAN) << "Legacy page not found. Falling back to new API";
-        m_weatherData[source].urlInfo = WeatherData::UrlInfo();
-        getWeatherData(source);
     }
 
     m_jobList.remove(job);

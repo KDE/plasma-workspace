@@ -177,11 +177,9 @@ private:
     bool readXMLSetup();
 
     // Load and parse the specific place(s)
-    void getXMLData(const QString &source);
+    void getWeatherData(const QString &source);
     bool readXMLData(const QString &source, QXmlStreamReader &xml);
 
-    // New API on envcan: need to get a specifically named file
-    void getWeatherData(const QString &source);
     // Parse a directory listing with files or folders as hyperlinks
     void parseDirListing(WeatherData::UrlInfo &info, QXmlStreamReader &xml);
 
