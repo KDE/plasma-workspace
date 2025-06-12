@@ -131,6 +131,8 @@ KCM.GridDelegate {
     onClicked: {
         if (configDialog.currentWallpaper === "org.kde.image") {
             root.selectWallpaper(key, selectors);
+        } else {
+            model.checked = !model.checked;
         }
         GridView.currentIndex = index;
     }
