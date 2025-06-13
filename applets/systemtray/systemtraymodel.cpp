@@ -35,7 +35,11 @@ BaseModel::BaseModel(QPointer<SystemTraySettings> settings, QObject *parent)
 QHash<int, QByteArray> BaseModel::roleNames() const
 {
     return {
-        {Qt::DisplayRole, QByteArrayLiteral("display")},
+        // We're using `displayText` instead of `display` with the `Qt::DisplayRole` because the
+        // QML ItemDelegate inherits from AbstractButton, which already has a `display` property
+        // that we can't override.
+        {static_cast<int>(BaseRole::DisplayText), QByteArrayLiteral("displayText")},
+
         {Qt::DecorationRole, QByteArrayLiteral("decoration")},
         {static_cast<int>(BaseRole::ItemType), QByteArrayLiteral("itemType")},
         {static_cast<int>(BaseRole::ItemId), QByteArrayLiteral("itemId")},
@@ -112,9 +116,6 @@ QVariant PlasmoidModel::data(const QModelIndex &index, int role) const
 
     if (role <= Qt::UserRole) {
         switch (role) {
-        case Qt::DisplayRole: {
-            return pluginMetaData.name();
-        }
         case Qt::DecorationRole: {
             QIcon icon = QIcon::fromTheme(applet ? applet->icon() : QString(), QIcon::fromTheme(pluginMetaData.iconName()));
             return icon.isNull() ? QVariant() : icon;
@@ -139,6 +140,8 @@ QVariant PlasmoidModel::data(const QModelIndex &index, int role) const
             return applet != nullptr;
         case BaseRole::Category:
             return plasmoidCategoryForMetadata(pluginMetaData);
+        case BaseRole::DisplayText:
+            return pluginMetaData.name();
         case BaseRole::Status:
             return status;
         case BaseRole::EffectiveStatus:
@@ -291,8 +294,6 @@ QVariant StatusNotifierModel::data(const QModelIndex &index, int role) const
 
     if (role <= Qt::UserRole) {
         switch (role) {
-        case Qt::DisplayRole:
-            return sniData->title();
         case Qt::DecorationRole:
             if (!sniData->iconName().isNull()) {
                 return sniData->iconName();
@@ -318,6 +319,8 @@ QVariant StatusNotifierModel::data(const QModelIndex &index, int role) const
             QVariant category = sniData->category();
             return category.isNull() ? QStringLiteral("UnknownCategory") : sniData->category();
         }
+        case BaseRole::DisplayText:
+            return sniData->title();
         case BaseRole::Status:
             return extractStatus(sniData);
         case BaseRole::EffectiveStatus:

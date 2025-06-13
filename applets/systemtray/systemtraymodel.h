@@ -34,6 +34,7 @@ class BaseModel : public QAbstractListModel
     Q_OBJECT
 public:
     enum class BaseRole {
+        DisplayText,
         ItemType = Qt::UserRole + 1,
         ItemId,
         CanRender,
