@@ -31,14 +31,24 @@ KCMUtils.ScrollViewKCM {
 
     // We can share one combobox model across all delegates, they all have the same options
     readonly property var comboBoxModel: {
-        const autoElement = {"value": "auto", "text": i18n("Shown when relevant")}
-        const shownElement = {"value": "shown", "text": i18n("Always shown")}
-        const hiddenElement = {"value": "hidden", "text": i18n("Always hidden")}
-        const disabledElement = {"value": "disabled", "text": i18n("Disabled")}
+        const autoElement = {
+            "value": "auto",
+            "text": i18n("Shown when relevant")
+        };
+        const shownElement = {
+            "value": "shown",
+            "text": i18n("Always shown")
+        };
+        const hiddenElement = {
+            "value": "hidden",
+            "text": i18n("Always hidden")
+        };
+        const disabledElement = {
+            "value": "disabled",
+            "text": i18n("Disabled")
+        };
 
-        return cfg_showAllItems
-            ? [autoElement, disabledElement]
-            : [autoElement, shownElement, hiddenElement, disabledElement]
+        return cfg_showAllItems ? [autoElement, disabledElement] : [autoElement, shownElement, hiddenElement, disabledElement];
     }
 
     readonly property var changedShortcuts: new Map()
@@ -46,76 +56,76 @@ KCMUtils.ScrollViewKCM {
 
     function saveConfig() {
         for (const [key, value] of changedVisibility.entries()) {
-            updateVisibility(key, value)
+            updateVisibility(key, value);
         }
         for (const [key, value] of changedShortcuts.entries()) {
-            key.globalShortcut = value
+            key.globalShortcut = value;
         }
-        changedShortcuts.clear()
-        changedVisibility.clear()
-        cfg_shownItemsChanged()
-        cfg_hiddenItemsChanged()
-        cfg_extraItemsChanged()
-        cfg_disabledStatusNotifiersChanged()
-        changedShortcutsChanged()
-        changedVisibilityChanged()
+        changedShortcuts.clear();
+        changedVisibility.clear();
+        cfg_shownItemsChanged();
+        cfg_hiddenItemsChanged();
+        cfg_extraItemsChanged();
+        cfg_disabledStatusNotifiersChanged();
+        changedShortcutsChanged();
+        changedVisibilityChanged();
     }
 
-    function updateVisibility (itemId: string, visibility: string): void {
-        const shownIndex = cfg_shownItems.indexOf(itemId)
-        const hiddenIndex = cfg_hiddenItems.indexOf(itemId)
-        const extraIndex = cfg_extraItems.indexOf(itemId)
-        const disabledSniIndex = cfg_disabledStatusNotifiers.indexOf(itemId)
+    function updateVisibility(itemId: string, visibility: string): void {
+        const shownIndex = cfg_shownItems.indexOf(itemId);
+        const hiddenIndex = cfg_hiddenItems.indexOf(itemId);
+        const extraIndex = cfg_extraItems.indexOf(itemId);
+        const disabledSniIndex = cfg_disabledStatusNotifiers.indexOf(itemId);
 
         if (shownIndex > -1) {
-            cfg_shownItems.splice(shownIndex, 1)
+            cfg_shownItems.splice(shownIndex, 1);
         }
         if (hiddenIndex > -1) {
-            cfg_hiddenItems.splice(hiddenIndex, 1)
+            cfg_hiddenItems.splice(hiddenIndex, 1);
         }
         if (extraIndex > -1) {
-            cfg_extraItems.splice(extraIndex, 1)
+            cfg_extraItems.splice(extraIndex, 1);
         }
         if (disabledSniIndex > -1) {
-            cfg_disabledStatusNotifiers.splice(disabledSniIndex, 1)
+            cfg_disabledStatusNotifiers.splice(disabledSniIndex, 1);
         }
 
         switch (visibility) {
-            case "auto":
-            case "auto-sni":
-                cfg_extraItems.push(itemId)
-                break
-            case "shown":
-                cfg_extraItems.push(itemId)
-                /* fallthrough*/
-            case "shown-sni":
-                cfg_shownItems.push(itemId)
-                break
-            case "hidden":
-                cfg_extraItems.push(itemId)
-                /* fallthrough */
-            case "hidden-sni":
-                cfg_hiddenItems.push(itemId)
-                break
-            case "disabled-sni":
-                cfg_disabledStatusNotifiers.push(itemId)
-                break
+        case "auto":
+        case "auto-sni":
+            cfg_extraItems.push(itemId);
+            break;
+        case "shown":
+            cfg_extraItems.push(itemId);
+        /* fallthrough*/
+        case "shown-sni":
+            cfg_shownItems.push(itemId);
+            break;
+        case "hidden":
+            cfg_extraItems.push(itemId);
+        /* fallthrough */
+        case "hidden-sni":
+            cfg_hiddenItems.push(itemId);
+            break;
+        case "disabled-sni":
+            cfg_disabledStatusNotifiers.push(itemId);
+            break;
         }
     }
 
     function categoryName(category) {
         switch (category) {
         case "ApplicationStatus":
-            return i18n("Application Status")
+            return i18n("Application Status");
         case "Communications":
-            return i18n("Communications")
+            return i18n("Communications");
         case "SystemServices":
-            return i18n("System Services")
+            return i18n("System Services");
         case "Hardware":
-            return i18n("Hardware Control")
+            return i18n("Hardware Control");
         case "UnknownCategory":
         default:
-            return i18n("Miscellaneous")
+            return i18n("Miscellaneous");
         }
     }
 
@@ -124,16 +134,16 @@ KCMUtils.ScrollViewKCM {
         function onRowsRemoved() {
             // if the user closes an app with a SNI that has a visibility change queued, we need to remove it
             // from the queue as the change is no longer visible in the UI.
-            let idsToRemove = [...changedVisibility.keys()]
+            let idsToRemove = [...changedVisibility.keys()];
             for (let i = 0; i < plasmoid.configSystemTrayModel.rowCount() && idsToRemove.length > 0; ++i) {
-                let itemId = plasmoid.configSystemTrayModel.index(i,0).data(Qt.UserRole + 2)
-                idsToRemove = idsToRemove.filter(id => id !== itemId)
+                let itemId = plasmoid.configSystemTrayModel.index(i, 0).data(Qt.UserRole + 2);
+                idsToRemove = idsToRemove.filter(id => id !== itemId);
             }
             idsToRemove.forEach(id => {
-                changedVisibility.delete(id)
-            })
+                changedVisibility.delete(id);
+            });
             if (idsToRemove.length > 0) {
-                changedVisibilityChanged()
+                changedVisibilityChanged();
             }
         }
     }
@@ -143,8 +153,8 @@ KCMUtils.ScrollViewKCM {
         spacing: Kirigami.Units.smallSpacing
 
         Kirigami.SearchField {
-            Layout.fillWidth: true
             id: filterField
+            Layout.fillWidth: true
         }
 
         Kirigami.InlineMessage {
@@ -152,7 +162,7 @@ KCMUtils.ScrollViewKCM {
             property string appName
 
             function showWithAppName(appName: string) {
-                disablingSniMessage.appName = appName
+                disablingSniMessage.appName = appName;
                 visible = true;
             }
 
@@ -162,7 +172,7 @@ KCMUtils.ScrollViewKCM {
             actions: [
                 Kirigami.Action {
                     text: i18nc("@action:button", "I understand the risks")
-                    onTriggered: disablingSniMessage.visible = false;
+                    onTriggered: disablingSniMessage.visible = false
                 }
             ]
         }
@@ -221,7 +231,8 @@ KCMUtils.ScrollViewKCM {
                 Layout.preferredWidth: itemsList.keySequenceColumnWidth
                 Component.onCompleted: itemsList.keySequenceColumnWidth = Math.max(implicitWidth, itemsList.keySequenceColumnWidth)
             }
-            QQC2.Button { // Configure button column
+            QQC2.Button {
+                // Configure button column
                 icon.name: "configure"
                 enabled: false
                 opacity: 0
@@ -285,21 +296,18 @@ KCMUtils.ScrollViewKCM {
                     QQC2.ComboBox {
                         id: visibilityComboBox
 
-                        property real contentWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset,
-                                                            implicitContentWidth + leftPadding + rightPadding)
+                        property real contentWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset, implicitContentWidth + leftPadding + rightPadding)
 
-                        readonly property string currentVisibility: changedVisibility.has(itemId)
-                            ? changedVisibility.get(itemId).replace("-sni", "") : originalVisibility
+                        readonly property string currentVisibility: changedVisibility.has(itemId) ? changedVisibility.get(itemId).replace("-sni", "") : originalVisibility
                         readonly property string originalVisibility: {
                             if (cfg_showAllItems || cfg_shownItems.indexOf(itemId) !== -1) {
-                                return "shown"
+                                return "shown";
                             } else if (cfg_hiddenItems.indexOf(itemId) !== -1) {
-                                return "hidden"
-                            } else if ((isPlasmoid && cfg_extraItems.indexOf(itemId) === -1)
-                                || (!isPlasmoid && cfg_disabledStatusNotifiers.indexOf(itemId) > -1)) {
-                                return "disabled"
+                                return "hidden";
+                            } else if ((isPlasmoid && cfg_extraItems.indexOf(itemId) === -1) || (!isPlasmoid && cfg_disabledStatusNotifiers.indexOf(itemId) > -1)) {
+                                return "disabled";
                             } else {
-                                return "auto"
+                                return "auto";
                             }
                         }
 
@@ -313,24 +321,24 @@ KCMUtils.ScrollViewKCM {
                         currentIndex: {
                             for (let i = 0; i < model.length; i++) {
                                 if (model[i].value === currentVisibility) {
-                                    return i
+                                    return i;
                                 }
                             }
 
-                            return 0
+                            return 0;
                         }
                         model: iconsPage.comboBoxModel
 
                         onActivated: index => {
                             if (currentValue !== originalVisibility) {
                                 if (currentValue === "disabled" && !isPlasmoid) {
-                                    disablingSniMessage.showWithAppName(nameLabel.text)
+                                    disablingSniMessage.showWithAppName(nameLabel.text);
                                 }
-                                iconsPage.changedVisibility.set(itemId, currentValue + (isPlasmoid ? "" : "-sni"))
+                                iconsPage.changedVisibility.set(itemId, currentValue + (isPlasmoid ? "" : "-sni"));
                             } else {
-                                iconsPage.changedVisibility.delete(itemId)
+                                iconsPage.changedVisibility.delete(itemId);
                             }
-                            iconsPage.changedVisibilityChanged()
+                            iconsPage.changedVisibilityChanged();
                         }
                     }
                     KQC.KeySequenceItem {
@@ -346,13 +354,13 @@ KCMUtils.ScrollViewKCM {
                         onCaptureFinished: {
                             if (model.applet) {
                                 if (keySequence !== model.applet.plasmoid.globalShortcut) {
-                                    changedShortcuts.set(model.applet.plasmoid, keySequence.toString())
+                                    changedShortcuts.set(model.applet.plasmoid, keySequence.toString());
                                 } else {
-                                    changedShortcuts.delete(model.applet.plasmoid)
+                                    changedShortcuts.delete(model.applet.plasmoid);
                                 }
 
-                                itemsList.keySequenceColumnWidth = Math.max(implicitWidth, itemsList.keySequenceColumnWidth)
-                                changedShortcutsChanged()
+                                itemsList.keySequenceColumnWidth = Math.max(implicitWidth, itemsList.keySequenceColumnWidth);
+                                changedShortcutsChanged();
                             }
                         }
                     }
