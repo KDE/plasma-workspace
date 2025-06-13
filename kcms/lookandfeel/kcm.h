@@ -91,7 +91,6 @@ public:
     bool isPlasmaLocked() const;
 
 public Q_SLOTS:
-    void load() override;
     void save() override;
     void defaults() override;
 
@@ -112,5 +111,4 @@ private:
     LookAndFeelManager::Contents m_selectedContents;
 
     QStandardItemModel *m_model;
-    KPackage::Package m_package;
 };

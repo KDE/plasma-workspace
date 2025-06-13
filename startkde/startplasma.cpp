@@ -378,7 +378,7 @@ void setupPlasmaEnvironment()
         KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"), currentLnf);
         LookAndFeelManager lnfManager;
         lnfManager.setMode(LookAndFeelManager::Mode::Defaults);
-        lnfManager.save(package, KPackage::Package());
+        lnfManager.save(package);
     }
     // check if colors changed, if so apply them and discard plasma cache
     {

@@ -227,13 +227,6 @@ bool KCMLookandFeel::isSaveNeeded() const
     return lookAndFeelSettings()->isSaveNeeded();
 }
 
-void KCMLookandFeel::load()
-{
-    KQuickManagedConfigModule::load();
-
-    m_package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"), lookAndFeelSettings()->lookAndFeelPackage());
-}
-
 void KCMLookandFeel::save()
 {
     QString newLnfPackage = lookAndFeelSettings()->lookAndFeelPackage();
@@ -245,8 +238,7 @@ void KCMLookandFeel::save()
     }
 
     KQuickManagedConfigModule::save();
-    m_lnf->save(package, m_package, m_selectedContents);
-    m_package.setPath(newLnfPackage);
+    m_lnf->save(package, m_selectedContents);
 }
 
 void KCMLookandFeel::defaults()

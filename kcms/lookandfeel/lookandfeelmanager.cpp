@@ -484,7 +484,7 @@ QString LookAndFeelManager::colorSchemeFile(const QString &schemeName) const
     return QString();
 }
 
-void LookAndFeelManager::save(const KPackage::Package &package, const KPackage::Package &previousPackage, Contents applyMask)
+void LookAndFeelManager::save(const KPackage::Package &package, Contents applyMask)
 {
     // The items to apply are the package contents filtered with the user selection mask
     const Contents itemsToApply = packageContents(package) & applyMask;
