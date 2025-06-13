@@ -36,19 +36,19 @@ KCMUtils.ScrollViewKCM {
     readonly property var comboBoxModel: {
         const autoElement = {
             "value": "auto",
-            "text": i18n("Shown when relevant")
+            "text": i18n("Shown when relevant") // qmllint disable unqualified
         };
         const shownElement = {
             "value": "shown",
-            "text": i18n("Always shown")
+            "text": i18n("Always shown") // qmllint disable unqualified
         };
         const hiddenElement = {
             "value": "hidden",
-            "text": i18n("Always hidden")
+            "text": i18n("Always hidden") // qmllint disable unqualified
         };
         const disabledElement = {
             "value": "disabled",
-            "text": i18n("Disabled")
+            "text": i18n("Disabled") // qmllint disable unqualified
         };
 
         return cfg_showAllItems ? [autoElement, disabledElement] : [autoElement, shownElement, hiddenElement, disabledElement];
@@ -119,16 +119,16 @@ KCMUtils.ScrollViewKCM {
     function categoryName(category) {
         switch (category) {
         case "ApplicationStatus":
-            return i18n("Application Status");
+            return i18n("Application Status"); // qmllint disable unqualified
         case "Communications":
-            return i18n("Communications");
+            return i18n("Communications"); // qmllint disable unqualified
         case "SystemServices":
-            return i18n("System Services");
+            return i18n("System Services"); // qmllint disable unqualified
         case "Hardware":
-            return i18n("Hardware Control");
+            return i18n("Hardware Control"); // qmllint disable unqualified
         case "UnknownCategory":
         default:
-            return i18n("Miscellaneous");
+            return i18n("Miscellaneous"); // qmllint disable unqualified
         }
     }
 
@@ -171,10 +171,10 @@ KCMUtils.ScrollViewKCM {
 
             Layout.fillWidth: true
             type: Kirigami.MessageType.Warning
-            text: xi18nc("@info:usagetip", "Look for a setting in <application>%1</application> to disable its tray icon before doing it here. Some apps’ tray icons were not designed to be disabled, and using this setting may cause them to behave unexpectedly.<nl/><nl/>Use this setting at your own risk, and do not report issues to KDE or the app’s author.", appName)
+            text: xi18nc("@info:usagetip", "Look for a setting in <application>%1</application> to disable its tray icon before doing it here. Some apps’ tray icons were not designed to be disabled, and using this setting may cause them to behave unexpectedly.<nl/><nl/>Use this setting at your own risk, and do not report issues to KDE or the app’s author.", appName) // qmllint disable unqualified
             actions: [
                 Kirigami.Action {
-                    text: i18nc("@action:button", "I understand the risks")
+                    text: i18nc("@action:button", "I understand the risks") // qmllint disable unqualified
                     onTriggered: disablingSniMessage.visible = false
                 }
             ]
@@ -186,7 +186,7 @@ KCMUtils.ScrollViewKCM {
             visible: iconsPage.changedVisibility.get("org.kde.plasma.clipboard") === "disabled"
             Layout.fillWidth: true
             type: Kirigami.MessageType.Warning
-            text: xi18nc("@info:usagetip", "Disabling the clipboard is not recommended, as it will cause copied data to be lost when the application it was copied from is closed.<nl/><nl/>Instead consider configuring the clipboard to disable its history, or only remember one item at a time.")
+            text: xi18nc("@info:usagetip", "Disabling the clipboard is not recommended, as it will cause copied data to be lost when the application it was copied from is closed.<nl/><nl/>Instead consider configuring the clipboard to disable its history, or only remember one item at a time.") // qmllint disable unqualified
         }
     }
 
@@ -214,21 +214,21 @@ KCMUtils.ScrollViewKCM {
                 implicitWidth: itemsList.iconSize + 2 * Kirigami.Units.smallSpacing
             }
             Kirigami.Heading {
-                text: i18nc("Name of the system tray entry", "Entry")
+                text: i18nc("Name of the system tray entry", "Entry") // qmllint disable unqualified
                 textFormat: Text.PlainText
                 level: 2
                 elide: Text.ElideRight
                 Layout.fillWidth: true
             }
             Kirigami.Heading {
-                text: i18n("Visibility")
+                text: i18n("Visibility") // qmllint disable unqualified
                 textFormat: Text.PlainText
                 level: 2
                 Layout.preferredWidth: itemsList.visibilityColumnWidth
                 Component.onCompleted: itemsList.visibilityColumnWidth = Math.max(implicitWidth, itemsList.visibilityColumnWidth)
             }
             Kirigami.Heading {
-                text: i18n("Keyboard Shortcut")
+                text: i18n("Keyboard Shortcut") // qmllint disable unqualified
                 textFormat: Text.PlainText
                 level: 2
                 Layout.preferredWidth: itemsList.keySequenceColumnWidth
@@ -260,7 +260,7 @@ KCMUtils.ScrollViewKCM {
     extraFooterTopPadding: true
     footer: QQC2.CheckBox {
         id: showAllCheckBox
-        text: i18n("Always show all entries")
+        text: i18n("Always show all entries") // qmllint disable unqualified
         Layout.alignment: Qt.AlignVCenter
     }
 
