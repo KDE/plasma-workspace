@@ -10,15 +10,13 @@
 */
 
 #include "kcm.h"
-#include "../kcms-common_p.h"
 #include "config-kcm.h"
 #include "config-workspace.h"
-#include "krdb.h"
 
 #include <KDialogJobUiDelegate>
 #include <KIO/ApplicationLauncherJob>
-#include <KIconLoader>
-#include <KMessageBox>
+#include <KLocalizedString>
+#include <KPackage/PackageLoader>
 #include <KService>
 
 #include <QCollator>
@@ -31,26 +29,6 @@
 #include <QQuickWindow>
 #include <QStandardItemModel>
 #include <QStandardPaths>
-
-#include <KLocalizedString>
-#include <KPackage/PackageLoader>
-
-#include <array>
-
-#include "config-X11.h"
-#if HAVE_X11
-#include <X11/Xlib.h>
-#include <private/qtx11extras_p.h>
-
-#ifdef HAVE_XCURSOR
-#include "../cursortheme/xcursor/xcursortheme.h"
-#include <X11/Xcursor/Xcursor.h>
-#endif
-
-#ifdef HAVE_XFIXES
-#include <X11/extensions/Xfixes.h>
-#endif
-#endif
 
 using namespace Qt::StringLiterals;
 
@@ -95,25 +73,6 @@ KCMLookandFeel::KCMLookandFeel(QObject *parent, const KPluginMetaData &data)
 
     connect(lookAndFeelSettings(), &LookAndFeelSettings::lookAndFeelPackageChanged, handleLookAndFeelPackageChanged);
     handleLookAndFeelPackageChanged();
-
-    connect(m_lnf, &LookAndFeelManager::styleChanged, this, [] {
-        // FIXME: changing style on the fly breaks QQuickWidgets
-        notifyKcmChange(GlobalChangeType::StyleChanged);
-    });
-    connect(m_lnf, &LookAndFeelManager::colorsChanged, this, [] {
-        // FIXME: changing style on the fly breaks QQuickWidgets
-        notifyKcmChange(GlobalChangeType::PaletteChanged);
-    });
-    connect(m_lnf, &LookAndFeelManager::iconsChanged, this, [] {
-        for (int i = 0; i < KIconLoader::LastGroup; i++) {
-            KIconLoader::emitChange(KIconLoader::Group(i));
-        }
-    });
-    connect(m_lnf, &LookAndFeelManager::cursorsChanged, this, &KCMLookandFeel::cursorsChanged);
-    connect(m_lnf, &LookAndFeelManager::fontsChanged, this, [] {
-        QDBusMessage message = QDBusMessage::createSignal(u"/KDEPlatformTheme"_s, u"org.kde.KDEPlatformTheme"_s, u"refreshFonts"_s);
-        QDBusConnection::sessionBus().send(message);
-    });
 
     connect(m_lnf, &LookAndFeelManager::plasmaLockedChanged, this, &KCMLookandFeel::plasmaLockedChanged);
 }
@@ -284,7 +243,6 @@ void KCMLookandFeel::save()
     KQuickManagedConfigModule::save();
     m_lnf->save(package, m_package, m_selectedContents);
     m_package.setPath(newLnfPackage);
-    runRdb(KRdbExportQtColors | KRdbExportGtkTheme | KRdbExportColors | KRdbExportQtSettings | KRdbExportXftSettings);
 }
 
 void KCMLookandFeel::defaults()
@@ -327,147 +285,4 @@ void KCMLookandFeel::resetSelectedContents()
 bool KCMLookandFeel::isPlasmaLocked() const
 {
     return m_lnf->isPlasmaLocked();
-}
-
-QDir KCMLookandFeel::cursorThemeDir(const QString &theme, const int depth)
-{
-    // Prevent infinite recursion
-    if (depth > 10) {
-        return QDir();
-    }
-
-    // Search each icon theme directory for 'theme'
-    for (const QString &baseDir : cursorSearchPaths()) {
-        QDir dir(baseDir);
-        if (!dir.exists() || !dir.cd(theme)) {
-            continue;
-        }
-
-        // If there's a cursors subdir, we'll assume this is a cursor theme
-        if (dir.exists(QStringLiteral("cursors"))) {
-            return dir;
-        }
-
-        // If the theme doesn't have an index.theme file, it can't inherit any themes.
-        if (!dir.exists(QStringLiteral("index.theme"))) {
-            continue;
-        }
-
-        // Open the index.theme file, so we can get the list of inherited themes
-        KConfig config(dir.path() + QStringLiteral("/index.theme"), KConfig::NoGlobals);
-        KConfigGroup cg(&config, u"Icon Theme"_s);
-
-        // Recurse through the list of inherited themes, to check if one of them
-        // is a cursor theme.
-        const QStringList inherits = cg.readEntry("Inherits", QStringList());
-        for (const QString &inherit : inherits) {
-            // Avoid possible DoS
-            if (inherit == theme) {
-                continue;
-            }
-
-            if (cursorThemeDir(inherit, depth + 1).exists()) {
-                return dir;
-            }
-        }
-    }
-
-    return QDir();
-}
-
-QStringList KCMLookandFeel::cursorSearchPaths()
-{
-#ifdef HAVE_XCURSOR
-#if XCURSOR_LIB_MAJOR == 1 && XCURSOR_LIB_MINOR < 1
-
-    if (!m_cursorSearchPaths.isEmpty())
-        return m_cursorSearchPaths;
-    // These are the default paths Xcursor will scan for cursor themes
-    QString path("~/.icons:/usr/share/icons:/usr/share/pixmaps:/usr/X11R6/lib/X11/icons");
-
-    // If XCURSOR_PATH is set, use that instead of the default path
-    char *xcursorPath = std::getenv("XCURSOR_PATH");
-    if (xcursorPath)
-        path = xcursorPath;
-#else
-    // Get the search path from Xcursor
-    QString path = QString::fromLocal8Bit(XcursorLibraryPath());
-#endif
-
-    // Separate the paths
-    m_cursorSearchPaths = path.split(QLatin1Char(':'), Qt::SkipEmptyParts);
-
-    // Remove duplicates
-    QMutableStringListIterator i(m_cursorSearchPaths);
-    while (i.hasNext()) {
-        const QString path = i.next();
-        QMutableStringListIterator j(i);
-        while (j.hasNext())
-            if (j.next() == path)
-                j.remove();
-    }
-
-    // Expand all occurrences of ~/ to the home dir
-    m_cursorSearchPaths.replaceInStrings(QRegularExpression(QStringLiteral("^~\\/")), QString(QDir::home().path() + QDir::separator()));
-#endif
-    return m_cursorSearchPaths;
-}
-
-void KCMLookandFeel::cursorsChanged(const QString &themeName)
-{
-#ifdef HAVE_XCURSOR
-    // Require the Xcursor version that shipped with X11R6.9 or greater, since
-    // in previous versions the Xfixes code wasn't enabled due to a bug in the
-    // build system (freedesktop bug #975).
-#if defined(HAVE_XFIXES) && XFIXES_MAJOR >= 2 && XCURSOR_LIB_VERSION >= 10105
-    KSharedConfigPtr config = KSharedConfig::openConfig(QStringLiteral("kcminputrc"));
-    KConfigGroup cg(config, QStringLiteral("Mouse"));
-    const int cursorSize = cg.readEntry("cursorSize", 24);
-
-    QDir themeDir = cursorThemeDir(themeName, 0);
-    if (!themeDir.exists()) {
-        return;
-    }
-
-    XCursorTheme theme(themeDir);
-
-    if (!CursorTheme::haveXfixes()) {
-        return;
-    }
-
-    // Update the Xcursor X resources
-    runRdb(0);
-
-    // Notify all applications that the cursor theme has changed
-    notifyKcmChange(GlobalChangeType::CursorChanged);
-
-    // Reload the standard cursors
-    QStringList names;
-
-    // Qt cursors
-    names << QStringLiteral("left_ptr") << QStringLiteral("up_arrow") << QStringLiteral("cross") << QStringLiteral("wait") << QStringLiteral("left_ptr_watch")
-          << QStringLiteral("ibeam") << QStringLiteral("size_ver") << QStringLiteral("size_hor") << QStringLiteral("size_bdiag") << QStringLiteral("size_fdiag")
-          << QStringLiteral("size_all") << QStringLiteral("split_v") << QStringLiteral("split_h") << QStringLiteral("pointing_hand")
-          << QStringLiteral("openhand") << QStringLiteral("closedhand") << QStringLiteral("forbidden") << QStringLiteral("whats_this") << QStringLiteral("copy")
-          << QStringLiteral("move") << QStringLiteral("link");
-
-    // X core cursors
-    names << QStringLiteral("X_cursor") << QStringLiteral("right_ptr") << QStringLiteral("hand1") << QStringLiteral("hand2") << QStringLiteral("watch")
-          << QStringLiteral("xterm") << QStringLiteral("crosshair") << QStringLiteral("left_ptr_watch") << QStringLiteral("center_ptr")
-          << QStringLiteral("sb_h_double_arrow") << QStringLiteral("sb_v_double_arrow") << QStringLiteral("fleur") << QStringLiteral("top_left_corner")
-          << QStringLiteral("top_side") << QStringLiteral("top_right_corner") << QStringLiteral("right_side") << QStringLiteral("bottom_right_corner")
-          << QStringLiteral("bottom_side") << QStringLiteral("bottom_left_corner") << QStringLiteral("left_side") << QStringLiteral("question_arrow")
-          << QStringLiteral("pirate");
-
-    for (const QString &name : std::as_const(names)) {
-        XFixesChangeCursorByName(QX11Info::display(), theme.loadCursor(name, cursorSize), QFile::encodeName(name).constData());
-    }
-
-#else
-    KMessageBox::information(this,
-                             i18n("You have to restart the Plasma session for these changes to take effect."),
-                             i18n("Cursor Settings Changed"),
-                             "CursorSettingsChanged");
-#endif
-#endif
 }
