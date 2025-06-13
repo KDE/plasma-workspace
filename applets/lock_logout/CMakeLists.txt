@@ -1,0 +1,10 @@
+plasma_add_applet(org.kde.plasma.lock_logout
+    QML_SOURCES
+        main.qml
+        config.qml
+        ConfigGeneral.qml
+        data.js
+    RESOURCES
+        main.xml
+    GENERATE_APPLET_CLASS
+)
