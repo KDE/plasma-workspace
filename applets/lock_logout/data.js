@@ -10,7 +10,8 @@ var data = [{
     operation: "switchUser",
     configKey: "switchUser",
     tooltip_mainText: i18n("Switch user"),
-    tooltip_subText: i18n("Start a parallel session as a different user")
+    tooltip_subText: i18n("Start a parallel session as a different user"),
+    requires: ""
 }, {
     icon: "system-shutdown",
     operation: "requestShutdown",

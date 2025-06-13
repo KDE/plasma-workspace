@@ -4,6 +4,8 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Layouts
 import org.kde.plasma.plasmoid
@@ -25,18 +27,18 @@ PlasmoidItem {
             if (Plasmoid.formFactor === PlasmaCore.Types.Vertical) {
                 return 0
             } else if (Plasmoid.formFactor === PlasmaCore.Types.Horizontal) {
-                return height < minButtonSize * visibleButtons ? height * visibleButtons : height / visibleButtons;
+                return height < root.minButtonSize * visibleButtons ? height * visibleButtons : height / visibleButtons;
             } else {
-                return width > height ? minButtonSize * visibleButtons : minButtonSize
+                return width > height ? root.minButtonSize * visibleButtons : root.minButtonSize
             }
         }
         Layout.minimumHeight: {
             if (Plasmoid.formFactor === PlasmaCore.Types.Vertical) {
-                return width >= minButtonSize * visibleButtons ? width / visibleButtons : width * visibleButtons
+                return width >= root.minButtonSize * visibleButtons ? width / visibleButtons : width * visibleButtons
             } else if (Plasmoid.formFactor === PlasmaCore.Types.Horizontal) {
                 return 0
             } else {
-                return width > height ? minButtonSize : minButtonSize * visibleButtons
+                return width > height ? root.minButtonSize : root.minButtonSize * visibleButtons
             }
         }
 
@@ -54,8 +56,8 @@ PlasmoidItem {
         }
 
         flow: {
-            if ((Plasmoid.formFactor === PlasmaCore.Types.Vertical && width >= minButtonSize * visibleButtons) ||
-                (Plasmoid.formFactor === PlasmaCore.Types.Horizontal && height < minButtonSize * visibleButtons) ||
+            if ((Plasmoid.formFactor === PlasmaCore.Types.Vertical && width >= root.minButtonSize * visibleButtons) ||
+                (Plasmoid.formFactor === PlasmaCore.Types.Horizontal && height < root.minButtonSize * visibleButtons) ||
                 (width > height)) {
                 return Flow.LeftToRight // horizontal
             } else {
@@ -69,21 +71,29 @@ PlasmoidItem {
 
         Repeater {
             id: items
-            property int itemWidth: parent.flow==Flow.LeftToRight ? Math.floor(parent.width/visibleButtons) : parent.width
-            property int itemHeight: parent.flow==Flow.TopToBottom ? Math.floor(parent.height/visibleButtons) : parent.height
+            property int itemWidth: parent.flow==Flow.LeftToRight ? Math.floor(parent.width/lockout.visibleButtons) : parent.width
+            property int itemHeight: parent.flow==Flow.TopToBottom ? Math.floor(parent.height/lockout.visibleButtons) : parent.height
             property int iconSize: Math.min(itemWidth, itemHeight)
 
             model: Data.data
 
             delegate: PlasmaCore.ToolTipArea {
                 id: iconDelegate
-                visible: Plasmoid.configuration["show_" + modelData.configKey] && (!modelData.hasOwnProperty("requires") || session["can" + modelData.requires])
+
+                required property string configKey
+                required property string requires
+                required property string tooltip_mainText
+                required property string tooltip_subText
+                required property string operation
+                required property string icon
+
+                visible: Plasmoid.configuration["show_" + configKey] && (requires !== ""|| session["can" + requires])
                 width: items.itemWidth
                 height: items.itemHeight
 
                 activeFocusOnTab: true
-                mainText: modelData.tooltip_mainText
-                subText: modelData.tooltip_subText
+                mainText: tooltip_mainText
+                subText: tooltip_subText
                 textFormat: Text.PlainText
 
                 Accessible.name: iconDelegate.mainText
@@ -95,14 +105,14 @@ PlasmoidItem {
                     case Qt.Key_Enter:
                     case Qt.Key_Return:
                     case Qt.Key_Select:
-                        performOperation(modelData.operation)
+                        lockout.performOperation(operation)
                         break;
                     }
                 }
 
                 TapHandler {
                     id: tapHandler
-                    onTapped: performOperation(modelData.operation)
+                    onTapped: lockout.performOperation(iconDelegate.operation)
                 }
 
                 Kirigami.Icon {
@@ -110,7 +120,7 @@ PlasmoidItem {
                     width: items.iconSize
                     height: items.iconSize
                     anchors.centerIn: parent
-                    source: modelData.icon
+                    source: iconDelegate.icon
                     scale: tapHandler.pressed ? 0.9 : 1
                     active: iconDelegate.containsMouse
                 }

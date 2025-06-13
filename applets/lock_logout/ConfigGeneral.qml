@@ -12,6 +12,8 @@ import org.kde.plasma.private.sessions 2.0
 import org.kde.kcmutils as KCM
 
 KCM.SimpleKCM {
+    id: root
+
     readonly property int checkedOptions: logout.checked + logoutScreen.checked + shutdown.checked + reboot.checked + lock.checked + switchUser.checked + hibernate.checked + sleep.checked
 
     property alias cfg_show_requestLogoutScreen: logoutScreen.checked
@@ -35,49 +37,49 @@ KCM.SimpleKCM {
             text: i18n("Log Out")
             icon.name: "system-log-out"
             // ensure user cannot have all options unchecked
-            enabled: session.canLogout && (checkedOptions > 1 || !checked)
+            enabled: session.canLogout && (root.checkedOptions > 1 || !checked)
         }
         QtControls.CheckBox {
             id: logoutScreen
             text: i18nc("@option:check", "Show logout screen")
             icon.name: "system-log-out"
-            enabled: session.canLogout && (checkedOptions > 1 || !checked)
+            enabled: session.canLogout && (root.checkedOptions > 1 || !checked)
         }
         QtControls.CheckBox {
             id: shutdown
             text: i18n("Shut Down")
             icon.name: "system-shutdown"
-            enabled: session.canShutdown && (checkedOptions > 1 || !checked)
+            enabled: session.canShutdown && (root.checkedOptions > 1 || !checked)
         }
         QtControls.CheckBox {
             id: reboot
             text: i18n("Restart")
             icon.name: "system-reboot"
-            enabled: session.canReboot && (checkedOptions > 1 || !checked)
+            enabled: session.canReboot && (root.checkedOptions > 1 || !checked)
         }
         QtControls.CheckBox {
             id: lock
             text: i18n("Lock")
             icon.name: "system-lock-screen"
-            enabled: session.canLock && (checkedOptions > 1 || !checked)
+            enabled: session.canLock && (root.checkedOptions > 1 || !checked)
         }
         QtControls.CheckBox {
             id: switchUser
             text: i18n("Switch User")
             icon.name: "system-switch-user"
-            enabled: checkedOptions > 1 || !checked
+            enabled: root.checkedOptions > 1 || !checked
         }
         QtControls.CheckBox {
             id: hibernate
             text: i18n("Hibernate")
             icon.name: "system-suspend-hibernate"
-            enabled: session.canHibernate && (checkedOptions > 1 || !checked)
+            enabled: session.canHibernate && (root.checkedOptions > 1 || !checked)
         }
         QtControls.CheckBox {
             id: sleep
             text: i18nc("Suspend to RAM", "Sleep")
             icon.name: "system-suspend"
-            enabled: session.canSuspend && (checkedOptions > 1 || !checked)
+            enabled: session.canSuspend && (root.checkedOptions > 1 || !checked)
         }
     }
 }
