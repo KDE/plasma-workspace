@@ -105,9 +105,6 @@ private:
     // List only packages which provide at least one of the components
     QList<KPackage::Package> availablePackages(const QStringList &components);
     void loadModel();
-    QDir cursorThemeDir(const QString &theme, const int depth);
-    QStringList cursorSearchPaths();
-    void cursorsChanged(const QString &name);
 
     LookAndFeelManager *const m_lnf;
 
@@ -116,5 +113,4 @@ private:
 
     QStandardItemModel *m_model;
     KPackage::Package m_package;
-    QStringList m_cursorSearchPaths;
 };
