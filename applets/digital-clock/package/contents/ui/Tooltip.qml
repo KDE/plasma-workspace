@@ -84,7 +84,7 @@ Item {
                 }
             }
             text: tooltipMaintext.anyTimezoneSet ? subText : i18nc("@label sub text shown in digital clock's tooltip when timezone is missing", "Click the clock icon to open Date & Time settings and set a time zone.")
-            opacity: 0.6
+            opacity: 0.75
             visible: !clocks.visible
             font.features: { "tnum": 1 }
         }
@@ -95,7 +95,7 @@ Item {
             Layout.maximumWidth: toolTipContentItem.preferredTextWidth
             text: (root.fullRepresentationItem as CalendarView)?.monthView.todayAuxilliaryText ?? ""
             textFormat: Text.PlainText
-            opacity: 0.6
+            opacity: 0.75
             visible: !clocks.visible && text.length > 0
         }
 

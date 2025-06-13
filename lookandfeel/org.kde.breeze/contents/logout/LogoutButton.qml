@@ -19,7 +19,7 @@ ActionButton {
     icon.height: Kirigami.Units.iconSizes.huge
 
     font.underline: false // See https://phabricator.kde.org/D9452
-    opacity: activeFocus || hovered ? 1 : 0.5
+    opacity: activeFocus || hovered ? 1 : 0.75
 
     Keys.onPressed: {
         AutoTriggerTimer.cancelAutoTrigger();

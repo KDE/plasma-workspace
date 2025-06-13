@@ -184,7 +184,7 @@ Loader {
                     horizontalAlignment: grid.flow === GridLayout.TopToBottom ? Text.AlignHCenter : Text.AlignJustify
                     maximumLineCount: 1
 
-                    opacity: root.isPlaying ? 1 : 0.6
+                    opacity: root.isPlaying ? 1 : 0.75
                     Behavior on opacity {
                         NumberAnimation {
                             duration: Kirigami.Units.longDuration
@@ -208,7 +208,7 @@ Loader {
                     font.pointSize: Kirigami.Theme.smallFont.pointSize
                     horizontalAlignment: songTitle.horizontalAlignment
                     maximumLineCount: 1
-                    opacity: 0.6
+                    opacity: 0.75
                     text: root.artist
                     textFormat: Text.PlainText
                     wrapMode: Text.Wrap

@@ -271,7 +271,7 @@ ColumnLayout {
                                 Layout.bottomMargin: Kirigami.Units.smallSpacing
                                 visible: text.length > 0
                                 level: 5
-                                opacity: 0.7
+                                opacity: 0.75
                                 text: model?.comment ?? ""
                                 textFormat: Text.PlainText
                                 wrapMode: Text.WordWrap

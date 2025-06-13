@@ -369,7 +369,7 @@ PlasmaExtras.Representation {
                     color: (softwareRendering || !albumArt.hasImage) ? Kirigami.Theme.textColor : "white"
 
                     level: 3
-                    opacity: 0.6
+                    opacity: 0.75
 
                     textFormat: Text.PlainText
                     wrapMode: Text.Wrap

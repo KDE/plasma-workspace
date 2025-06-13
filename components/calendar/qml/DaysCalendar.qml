@@ -69,17 +69,18 @@ Item {
                 return null;
             }
 
-            PlasmaComponents.Label {
+            Kirigami.Heading {
                 required property int modelData
 
                 height: daysCalendar.cellHeight
                 width: daysCalendar.cellWidth
+                level: 2
+                type: Kirigami.Heading.Type.Primary
+                opacity: 0.75
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
-                opacity: 0.4
                 text: modelData
                 textFormat: Text.PlainText
-                font.pixelSize: Math.max(Kirigami.Theme.smallFont.pixelSize, daysCalendar.cellHeight / 3)
             }
         }
     }
@@ -104,15 +105,16 @@ Item {
         Repeater {
             id: dayOfWeekHeaderRepeater
 
-            PlasmaComponents.Label {
+            Kirigami.Heading {
                 required property int index
 
                 width: daysCalendar.cellWidth
                 height: daysCalendar.cellHeight
                 text: Qt.locale(Qt.locale().uiLanguages[0]).dayName(((daysCalendar.backend.firstDayOfWeek + index) % dayOfWeekHeaderRepeater.count), Locale.ShortFormat)
                 textFormat: Text.PlainText
-                font.pixelSize: Math.max(Kirigami.Theme.smallFont.pixelSize, daysCalendar.cellHeight / 3)
-                opacity: 0.4
+                level: 2
+                type: Kirigami.Heading.Type.Primary
+                opacity: 0.75
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
                 elide: Text.ElideRight

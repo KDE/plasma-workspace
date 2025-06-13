@@ -351,7 +351,7 @@ PlasmaExtras.Representation {
                                     : agenda.formatDateWithoutYear(eventItem.modelData.endDateTime)
                                 textFormat: Text.PlainText
                                 horizontalAlignment: Qt.AlignRight
-                                opacity: 0.7
+                                opacity: 0.75
 
                                 visible: eventItem.hasTime
                             }

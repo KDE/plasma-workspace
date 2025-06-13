@@ -93,7 +93,7 @@ ClipboardItemDelegate {
         PlasmaComponents3.Label {
             property int additionalItems: menuItem.model?.display.split(" ").length ?? 0 - maximumNumberOfPreviews
             visible: additionalItems > 0
-            opacity: 0.6
+            opacity: 0.75
             text: i18ndc("klipper", "Indicator that there are more urls in the clipboard than previews shown", "+%1", additionalItems)
             textFormat: Text.PlainText
             anchors {
