@@ -1,5 +1,4 @@
 {
-    "KPackageStructure": "Plasma/Applet",
     "KPlugin": {
         "Authors": [
             {
@@ -115,7 +114,6 @@
             "desktop"
         ],
         "Icon": "system-shutdown",
-        "Id": "org.kde.plasma.lock_logout",
         "License": "LGPL",
         "Name": "Lock/Logout",
         "Name[af]": "Sluit/Teken af",
