@@ -12,11 +12,13 @@
 #include "kcm.h"
 #include "config-kcm.h"
 #include "config-workspace.h"
+#include "lookandfeeldata.h"
 
 #include <KDialogJobUiDelegate>
 #include <KIO/ApplicationLauncherJob>
 #include <KLocalizedString>
 #include <KPackage/PackageLoader>
+#include <KPluginFactory>
 #include <KService>
 
 #include <QCollator>
@@ -31,6 +33,8 @@
 #include <QStandardPaths>
 
 using namespace Qt::StringLiterals;
+
+K_PLUGIN_FACTORY_WITH_JSON(KCMLookandFeelFactory, "kcm_lookandfeel.json", registerPlugin<KCMLookandFeel>(); registerPlugin<LookAndFeelData>();)
 
 KCMLookandFeel::KCMLookandFeel(QObject *parent, const KPluginMetaData &data)
     : KQuickManagedConfigModule(parent, data)
@@ -286,3 +290,6 @@ bool KCMLookandFeel::isPlasmaLocked() const
 {
     return m_lnf->isPlasmaLocked();
 }
+
+#include "kcm.moc"
+#include "moc_kcm.cpp"

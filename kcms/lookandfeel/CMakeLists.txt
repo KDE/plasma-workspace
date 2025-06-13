@@ -57,19 +57,17 @@ if(HAVE_X11)
    target_link_libraries(lookandfeelmanager X11::Xcursor X11::Xfixes Qt::GuiPrivate)
 endif()
 
-add_library(kcm_lookandfeel_objects OBJECT kcm.cpp)
-target_link_libraries(kcm_lookandfeel_objects
+kcmutils_add_qml_kcm(kcm_lookandfeel)
+target_sources(kcm_lookandfeel PRIVATE
+    kcm.cpp
+)
+target_link_libraries(kcm_lookandfeel PRIVATE
     lookandfeelmanager
     KF6::JobWidgets
     KF6::KIOGui
     KF6::KCMUtilsQuick
     PW::KWorkspace
 )
-
-set_property(TARGET kcm_lookandfeel_objects PROPERTY POSITION_INDEPENDENT_CODE ON)
-
-kcmutils_add_qml_kcm(kcm_lookandfeel SOURCES kcmmain.cpp)
-target_link_libraries(kcm_lookandfeel PRIVATE kcm_lookandfeel_objects)
 
 install(FILES lookandfeelsettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
 install(FILES lookandfeel.knsrc DESTINATION ${KDE_INSTALL_KNSRCDIR})
@@ -82,8 +80,9 @@ endif()
 ###### Command line tool
 
 add_executable(plasma-apply-lookandfeel lnftool.cpp)
-
-target_link_libraries(plasma-apply-lookandfeel kcm_lookandfeel_objects)
+target_link_libraries(plasma-apply-lookandfeel PRIVATE
+    lookandfeelmanager
+)
 
 ADD_CUSTOM_TARGET(plasma-apply-lookandfeel_link ALL
                   COMMAND ${CMAKE_COMMAND} -E create_symlink ${KDE_INSTALL_FULL_BINDIR}/plasma-apply-lookandfeel ${CMAKE_CURRENT_BINARY_DIR}/lookandfeeltool)

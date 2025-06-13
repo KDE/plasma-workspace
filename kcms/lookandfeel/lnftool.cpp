@@ -5,7 +5,8 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#include "kcm.h"
+#include "lookandfeelmanager.h"
+#include "lookandfeelsettings.h"
 
 #include <iostream>
 
@@ -19,8 +20,6 @@
 
 #include <KPackage/Package>
 #include <KPackage/PackageLoader>
-
-#include "lookandfeelsettings.h"
 
 using namespace Qt::StringLiterals;
 
@@ -93,19 +92,19 @@ int main(int argc, char **argv)
             }
         }
 
-        KCMLookandFeel *kcm = new KCMLookandFeel(nullptr, KPluginMetaData());
-        kcm->load();
-        kcm->lookAndFeelSettings()->setLookAndFeelPackage(requestedTheme);
         // By default do not modify the layout, unless explicitely specified
         LookAndFeelManager::Contents selection = LookAndFeelManager::AppearanceSettings;
         if (parser.isSet(_resetLayout)) {
             selection |= LookAndFeelManager::LayoutSettings;
         }
-        kcm->setSelectedContents(selection);
-        // Save manually as we aren't in an event loop
-        kcm->lookAndFeelSettings()->save();
-        kcm->save();
-        delete kcm;
+
+        LookAndFeelManager manager;
+        LookAndFeelSettings *settings = manager.settings();
+
+        settings->setLookAndFeelPackage(requestedTheme);
+        settings->save();
+
+        manager.save(p, KPackage::Package(), selection);
     }
 
     return 0;
