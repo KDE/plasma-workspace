@@ -248,148 +248,7 @@ KCMUtils.ScrollViewKCM {
             }
         }
 
-        delegate: QQC2.ItemDelegate {
-            id: listItem
-
-            width: itemsList.width
-
-            Kirigami.Theme.useAlternateBackgroundColor: true
-
-            // Don't need highlight, hover, or pressed effects
-            highlighted: false
-            hoverEnabled: false
-            down: false
-
-            readonly property bool isPlasmoid: model.itemType === "Plasmoid"
-
-            contentItem: FocusScope {
-                implicitHeight: childrenRect.height
-
-                onActiveFocusChanged: if (activeFocus) {
-                    listItem.ListView.view.positionViewAtIndex(index, ListView.Contain);
-                }
-
-                RowLayout {
-                    width: parent.width
-                    spacing: Kirigami.Units.smallSpacing
-
-                    Kirigami.Icon {
-                        implicitWidth: itemsList.iconSize
-                        implicitHeight: itemsList.iconSize
-                        source: model.decoration
-                        animated: false
-                    }
-
-                    QQC2.Label {
-                        id: nameLabel
-                        Layout.fillWidth: true
-                        text: model.display
-                        textFormat: Text.PlainText
-                        elide: Text.ElideRight
-
-                        QQC2.ToolTip {
-                            visible: listItem.hovered && parent.truncated
-                            text: parent.text
-                        }
-                    }
-
-                    QQC2.ComboBox {
-                        id: visibilityComboBox
-
-                        property real contentWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset, implicitContentWidth + leftPadding + rightPadding)
-
-                        readonly property string currentVisibility: changedVisibility.has(itemId) ? changedVisibility.get(itemId).replace("-sni", "") : originalVisibility
-                        readonly property string originalVisibility: {
-                            if (cfg_showAllItems || cfg_shownItems.indexOf(itemId) !== -1) {
-                                return "shown";
-                            } else if (cfg_hiddenItems.indexOf(itemId) !== -1) {
-                                return "hidden";
-                            } else if ((isPlasmoid && cfg_extraItems.indexOf(itemId) === -1) || (!isPlasmoid && cfg_disabledStatusNotifiers.indexOf(itemId) > -1)) {
-                                return "disabled";
-                            } else {
-                                return "auto";
-                            }
-                        }
-
-                        implicitWidth: Math.max(contentWidth, itemsList.visibilityColumnWidth)
-                        Component.onCompleted: itemsList.visibilityColumnWidth = Math.max(implicitWidth, itemsList.visibilityColumnWidth)
-
-                        enabled: !cfg_showAllItems && itemId
-                        textRole: "text"
-                        valueRole: "value"
-
-                        currentIndex: {
-                            for (let i = 0; i < model.length; i++) {
-                                if (model[i].value === currentVisibility) {
-                                    return i;
-                                }
-                            }
-
-                            return 0;
-                        }
-                        model: iconsPage.comboBoxModel
-
-                        onActivated: index => {
-                            if (currentValue !== originalVisibility) {
-                                if (currentValue === "disabled" && !isPlasmoid) {
-                                    disablingSniMessage.showWithAppName(nameLabel.text);
-                                }
-                                iconsPage.changedVisibility.set(itemId, currentValue + (isPlasmoid ? "" : "-sni"));
-                            } else {
-                                iconsPage.changedVisibility.delete(itemId);
-                            }
-                            iconsPage.changedVisibilityChanged();
-                        }
-                    }
-                    KQC.KeySequenceItem {
-                        id: keySequenceItem
-                        Layout.minimumWidth: itemsList.keySequenceColumnWidth
-                        Layout.preferredWidth: itemsList.keySequenceColumnWidth
-                        Component.onCompleted: itemsList.keySequenceColumnWidth = Math.max(implicitWidth, itemsList.keySequenceColumnWidth)
-
-                        visible: isPlasmoid
-                        enabled: visibilityComboBox.currentValue !== "disabled"
-                        readonly property string originalKeySequence: model.applet ? model.applet.plasmoid.globalShortcut : ""
-                        keySequence: changedShortcuts.has(model.applet?.plasmoid) ? changedShortcuts.get(model.applet?.plasmoid) : originalKeySequence
-                        onCaptureFinished: {
-                            if (model.applet) {
-                                if (keySequence !== model.applet.plasmoid.globalShortcut) {
-                                    changedShortcuts.set(model.applet.plasmoid, keySequence.toString());
-                                } else {
-                                    changedShortcuts.delete(model.applet.plasmoid);
-                                }
-
-                                itemsList.keySequenceColumnWidth = Math.max(implicitWidth, itemsList.keySequenceColumnWidth);
-                                changedShortcutsChanged();
-                            }
-                        }
-                    }
-                    // Placeholder for when KeySequenceItem is not visible
-                    Item {
-                        Layout.minimumWidth: itemsList.keySequenceColumnWidth
-                        Layout.maximumWidth: itemsList.keySequenceColumnWidth
-                        visible: !keySequenceItem.visible
-                    }
-
-                    QQC2.Button {
-                        readonly property QtObject configureAction: (model.applet && model.applet.plasmoid.internalAction("configure")) || null
-
-                        Accessible.name: configureAction ? configureAction.text : ""
-                        icon.name: "configure"
-                        enabled: configureAction && configureAction.visible && configureAction.enabled
-                        // Still reserve layout space, so not setting visible to false
-                        opacity: enabled ? 1 : 0
-                        onClicked: configureAction.trigger()
-
-                        QQC2.ToolTip {
-                            // Strip out ampersands right before non-whitespace characters, i.e.
-                            // those used to determine the alt key shortcut
-                            text: parent.Accessible.name.replace(/&(?=\S)/g, "")
-                        }
-                    }
-                }
-            }
-        }
+        delegate: TrayItemDelegate {}
     }
 
     // Re-add separator line between footer and list view
@@ -398,5 +257,151 @@ KCMUtils.ScrollViewKCM {
         id: showAllCheckBox
         text: i18n("Always show all entries")
         Layout.alignment: Qt.AlignVCenter
+    }
+
+    /*!
+    * Delegate representing each system tray item.
+    */
+    component TrayItemDelegate: QQC2.ItemDelegate {
+        id: listItem
+
+        width: itemsList.width
+
+        Kirigami.Theme.useAlternateBackgroundColor: true
+
+        // Don't need highlight, hover, or pressed effects
+        highlighted: false
+        hoverEnabled: false
+        down: false
+
+        readonly property bool isPlasmoid: model.itemType === "Plasmoid"
+
+        contentItem: FocusScope {
+            implicitHeight: childrenRect.height
+
+            onActiveFocusChanged: if (activeFocus) {
+                listItem.ListView.view.positionViewAtIndex(index, ListView.Contain);
+            }
+
+            RowLayout {
+                width: parent.width
+                spacing: Kirigami.Units.smallSpacing
+
+                Kirigami.Icon {
+                    implicitWidth: itemsList.iconSize
+                    implicitHeight: itemsList.iconSize
+                    source: model.decoration
+                    animated: false
+                }
+
+                QQC2.Label {
+                    id: nameLabel
+                    Layout.fillWidth: true
+                    text: model.display
+                    textFormat: Text.PlainText
+                    elide: Text.ElideRight
+
+                    QQC2.ToolTip {
+                        visible: listItem.hovered && parent.truncated
+                        text: parent.text
+                    }
+                }
+
+                QQC2.ComboBox {
+                    id: visibilityComboBox
+
+                    property real contentWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset, implicitContentWidth + leftPadding + rightPadding)
+
+                    readonly property string currentVisibility: changedVisibility.has(itemId) ? changedVisibility.get(itemId).replace("-sni", "") : originalVisibility
+                    readonly property string originalVisibility: {
+                        if (cfg_showAllItems || cfg_shownItems.indexOf(itemId) !== -1) {
+                            return "shown";
+                        } else if (cfg_hiddenItems.indexOf(itemId) !== -1) {
+                            return "hidden";
+                        } else if ((isPlasmoid && cfg_extraItems.indexOf(itemId) === -1) || (!isPlasmoid && cfg_disabledStatusNotifiers.indexOf(itemId) > -1)) {
+                            return "disabled";
+                        } else {
+                            return "auto";
+                        }
+                    }
+
+                    implicitWidth: Math.max(contentWidth, itemsList.visibilityColumnWidth)
+                    Component.onCompleted: itemsList.visibilityColumnWidth = Math.max(implicitWidth, itemsList.visibilityColumnWidth)
+
+                    enabled: !cfg_showAllItems && itemId
+                    textRole: "text"
+                    valueRole: "value"
+
+                    currentIndex: {
+                        for (let i = 0; i < model.length; i++) {
+                            if (model[i].value === currentVisibility) {
+                                return i;
+                            }
+                        }
+
+                        return 0;
+                    }
+                    model: iconsPage.comboBoxModel
+
+                    onActivated: index => {
+                        if (currentValue !== originalVisibility) {
+                            if (currentValue === "disabled" && !isPlasmoid) {
+                                disablingSniMessage.showWithAppName(nameLabel.text);
+                            }
+                            iconsPage.changedVisibility.set(itemId, currentValue + (isPlasmoid ? "" : "-sni"));
+                        } else {
+                            iconsPage.changedVisibility.delete(itemId);
+                        }
+                        iconsPage.changedVisibilityChanged();
+                    }
+                }
+                KQC.KeySequenceItem {
+                    id: keySequenceItem
+                    Layout.minimumWidth: itemsList.keySequenceColumnWidth
+                    Layout.preferredWidth: itemsList.keySequenceColumnWidth
+                    Component.onCompleted: itemsList.keySequenceColumnWidth = Math.max(implicitWidth, itemsList.keySequenceColumnWidth)
+
+                    visible: isPlasmoid
+                    enabled: visibilityComboBox.currentValue !== "disabled"
+                    readonly property string originalKeySequence: model.applet ? model.applet.plasmoid.globalShortcut : ""
+                    keySequence: changedShortcuts.has(model.applet?.plasmoid) ? changedShortcuts.get(model.applet?.plasmoid) : originalKeySequence
+                    onCaptureFinished: {
+                        if (model.applet) {
+                            if (keySequence !== model.applet.plasmoid.globalShortcut) {
+                                changedShortcuts.set(model.applet.plasmoid, keySequence.toString());
+                            } else {
+                                changedShortcuts.delete(model.applet.plasmoid);
+                            }
+
+                            itemsList.keySequenceColumnWidth = Math.max(implicitWidth, itemsList.keySequenceColumnWidth);
+                            changedShortcutsChanged();
+                        }
+                    }
+                }
+                // Placeholder for when KeySequenceItem is not visible
+                Item {
+                    Layout.minimumWidth: itemsList.keySequenceColumnWidth
+                    Layout.maximumWidth: itemsList.keySequenceColumnWidth
+                    visible: !keySequenceItem.visible
+                }
+
+                QQC2.Button {
+                    readonly property QtObject configureAction: (model.applet && model.applet.plasmoid.internalAction("configure")) || null
+
+                    Accessible.name: configureAction ? configureAction.text : ""
+                    icon.name: "configure"
+                    enabled: configureAction && configureAction.visible && configureAction.enabled
+                    // Still reserve layout space, so not setting visible to false
+                    opacity: enabled ? 1 : 0
+                    onClicked: configureAction.trigger()
+
+                    QQC2.ToolTip {
+                        // Strip out ampersands right before non-whitespace characters, i.e.
+                        // those used to determine the alt key shortcut
+                        text: parent.Accessible.name.replace(/&(?=\S)/g, "")
+                    }
+                }
+            }
+        }
     }
 }
