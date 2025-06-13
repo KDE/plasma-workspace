@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-15 00:44+0000\n"
+"POT-Creation-Date: 2025-06-13 00:44+0000\n"
 "PO-Revision-Date: 2025-05-25 15:01+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -76,12 +76,12 @@ msgstr "Kendu guztiak"
 msgid "Click to safely remove all devices"
 msgstr "Egin klik gailu guztiak era seguruan kentzeko."
 
-#: package/contents/ui/FullRepresentation.qml:159
+#: package/contents/ui/FullRepresentation.qml:153
 #, kde-format
 msgid "No removable devices attached"
 msgstr "Ez dago konektatuta gailu eramangarririk"
 
-#: package/contents/ui/FullRepresentation.qml:159
+#: package/contents/ui/FullRepresentation.qml:153
 #, kde-format
 msgid "No disks available"
 msgstr "Ez dago disko erabilgarririk"

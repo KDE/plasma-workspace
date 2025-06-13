@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-15 00:44+0000\n"
+"POT-Creation-Date: 2025-06-13 00:44+0000\n"
 "PO-Revision-Date: 2025-02-23 19:04+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -77,12 +77,12 @@ msgstr "أزِل الكل"
 msgid "Click to safely remove all devices"
 msgstr "انقر لإزالة جميع الأجهزة بأمان."
 
-#: package/contents/ui/FullRepresentation.qml:159
+#: package/contents/ui/FullRepresentation.qml:153
 #, kde-format
 msgid "No removable devices attached"
 msgstr "لم توصل أي أجهزة منفصلة"
 
-#: package/contents/ui/FullRepresentation.qml:159
+#: package/contents/ui/FullRepresentation.qml:153
 #, kde-format
 msgid "No disks available"
 msgstr "لا يوجد أقراص"

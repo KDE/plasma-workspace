@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-07 00:44+0000\n"
-"PO-Revision-Date: 2025-05-21 17:35+0400\n"
+"PO-Revision-Date: 2025-06-12 11:58+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -197,19 +197,18 @@ msgid ""
 "Plasma is not designed to be usable with fonts smaller than 4pt. Size has "
 "been reset to 4pt."
 msgstr ""
+"بلازما غير مصممة لتكون قابلة للاستخدام مع خطوط أصغر من 4 نقاط. أعيد تعيين "
+"الحجم إلى 4 نقاط."
 
 #: ui/main.qml:133
-#, fuzzy, kde-format
-#| msgid ""
-#| "Very large fonts may produce odd-looking results. Instead of using a very "
-#| "large font size, consider adjusting the global screen scale."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "Very small fonts may produce odd-looking results. Instead of using a very "
 "small font size, consider adjusting the global screen scale."
 msgstr ""
-"قد ينتج عن الخطوط الكبيرة جدًا نتائج غريبة المظهر. ضع في اعتبارك تعديل مقياس "
-"الشاشة العامل العام بدلاً من استخدام حجم خط كبير جدًا."
+"قد ينتج عن الخطوط الصغيرة جدًا نتائج غريبة المظهر. ضع في اعتبارك تعديل مقياس "
+"الشاشة العامل العام بدلاً من استخدام حجم خط صغير جدًا."
 
 #: ui/main.qml:154
 #, kde-format
