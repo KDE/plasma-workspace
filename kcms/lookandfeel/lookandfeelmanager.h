@@ -128,6 +128,9 @@ private:
     void
     writeNewDefaults(KConfigGroup &cg, KConfigGroup &cgd, const QString &key, const QString &value, KConfig::WriteConfigFlags writeFlags = KConfig::Normal);
     static KConfig configDefaults(const QString &filename);
+    QDir cursorThemeDir(const QString &theme, const int depth);
+    QStringList cursorSearchPaths();
+    void applyCursorTheme(const QString &themeName);
 
     QStringList m_cursorSearchPaths;
     LookAndFeelData *const m_data;

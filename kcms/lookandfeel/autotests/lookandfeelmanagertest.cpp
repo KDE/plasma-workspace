@@ -5,19 +5,20 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#include "../kcm.h"
 #include "../lookandfeelmanager.h"
+#include "../lookandfeelsettings.h"
 // Qt
 #include <KJob>
 #include <KPackage/Package>
 #include <KPackage/PackageJob>
+#include <KPackage/PackageLoader>
 #include <KSycoca>
 #include <QSignalSpy>
 #include <QTest>
 
 using namespace Qt::StringLiterals;
 
-class KcmTest : public QObject
+class LookAndFeelManagerTest : public QObject
 {
     /**
      *  Following tests ensure lookandfeel configuration are saved to kdedefaults,
@@ -37,15 +38,15 @@ private Q_SLOTS:
     void testCursorTheme();
     void testSplashScreen();
     void testWindowSwitcher();
-    void testKCMSave();
+    void testSave();
 
 private:
     QDir m_configDir;
     QDir m_dataDir;
-    KCMLookandFeel *m_KCMLookandFeel;
+    LookAndFeelManager *m_lookAndFeel;
 };
 
-void KcmTest::initTestCase()
+void LookAndFeelManagerTest::initTestCase()
 {
     QStandardPaths::setTestModeEnabled(true);
     qunsetenv("XDG_CONFIG_DIRS");
@@ -79,21 +80,20 @@ void KcmTest::initTestCase()
     KConfigGroup cg(&config, u"KDE"_s);
     cg.writeEntry("LookAndFeelPackage", "org.kde.test");
     cg.sync();
-    m_KCMLookandFeel = new KCMLookandFeel(nullptr, KPluginMetaData());
-    m_KCMLookandFeel->load();
+    m_lookAndFeel = new LookAndFeelManager(this);
 }
 
-void KcmTest::cleanupTestCase()
+void LookAndFeelManagerTest::cleanupTestCase()
 {
     m_configDir.removeRecursively();
     m_dataDir.removeRecursively();
 }
 
-void KcmTest::testWidgetStyle()
+void LookAndFeelManagerTest::testWidgetStyle()
 {
     // We have to use an actual theme name here because setWidgetStyle checks
     // if the theme can actually be used before it changes the config
-    m_KCMLookandFeel->lookAndFeel()->setWidgetStyle(QStringLiteral("Fusion"));
+    m_lookAndFeel->setWidgetStyle(QStringLiteral("Fusion"));
 
     KConfig config(QStringLiteral("kdeglobals"));
     KConfigGroup cg(&config, u"KDE"_s);
@@ -104,14 +104,14 @@ void KcmTest::testWidgetStyle()
     QCOMPARE(cgd.readEntry("widgetStyle", QString()), QStringLiteral("Fusion"));
 
     // Test that a fake style is not actually written to config
-    m_KCMLookandFeel->lookAndFeel()->setWidgetStyle(QStringLiteral("customStyle"));
+    m_lookAndFeel->setWidgetStyle(QStringLiteral("customStyle"));
     QCOMPARE(cgd.readEntry("widgetStyle", QString()), QStringLiteral("Fusion"));
 }
 
-void KcmTest::testColors()
+void LookAndFeelManagerTest::testColors()
 {
     // TODO: test colorFile as well
-    m_KCMLookandFeel->lookAndFeel()->setColors(QStringLiteral("customTestValue"), QString());
+    m_lookAndFeel->setColors(QStringLiteral("customTestValue"), QString());
 
     KConfig config(QStringLiteral("kdeglobals"));
     KConfigGroup cg(&config, u"General"_s);
@@ -122,9 +122,9 @@ void KcmTest::testColors()
     QCOMPARE(cgd.readEntry("ColorScheme", QString()), QStringLiteral("customTestValue"));
 }
 
-void KcmTest::testIcons()
+void LookAndFeelManagerTest::testIcons()
 {
-    m_KCMLookandFeel->lookAndFeel()->setIcons(QStringLiteral("customTestValue"));
+    m_lookAndFeel->setIcons(QStringLiteral("customTestValue"));
 
     KConfig config(QStringLiteral("kdeglobals"));
     KConfigGroup cg(&config, u"Icons"_s);
@@ -135,9 +135,9 @@ void KcmTest::testIcons()
     QCOMPARE(cgd.readEntry("Theme", QString()), QStringLiteral("customTestValue"));
 }
 
-void KcmTest::testPlasmaTheme()
+void LookAndFeelManagerTest::testPlasmaTheme()
 {
-    m_KCMLookandFeel->lookAndFeel()->setPlasmaTheme(QStringLiteral("customTestValue"));
+    m_lookAndFeel->setPlasmaTheme(QStringLiteral("customTestValue"));
 
     KConfig config(QStringLiteral("plasmarc"));
     KConfigGroup cg(&config, u"Theme"_s);
@@ -148,9 +148,9 @@ void KcmTest::testPlasmaTheme()
     QCOMPARE(cgd.readEntry("name", QString()), QStringLiteral("customTestValue"));
 }
 
-void KcmTest::testCursorTheme()
+void LookAndFeelManagerTest::testCursorTheme()
 {
-    m_KCMLookandFeel->lookAndFeel()->setCursorTheme(QStringLiteral("customTestValue"));
+    m_lookAndFeel->setCursorTheme(QStringLiteral("customTestValue"));
 
     KConfig config(QStringLiteral("kcminputrc"));
     KConfigGroup cg(&config, u"Mouse"_s);
@@ -161,9 +161,9 @@ void KcmTest::testCursorTheme()
     QCOMPARE(cgd.readEntry("cursorTheme", QString()), QStringLiteral("customTestValue"));
 }
 
-void KcmTest::testSplashScreen()
+void LookAndFeelManagerTest::testSplashScreen()
 {
-    m_KCMLookandFeel->lookAndFeel()->setSplashScreen(QStringLiteral("customTestValue"));
+    m_lookAndFeel->setSplashScreen(QStringLiteral("customTestValue"));
 
     KConfig config(QStringLiteral("ksplashrc"));
     KConfigGroup cg(&config, u"KSplash"_s);
@@ -176,9 +176,9 @@ void KcmTest::testSplashScreen()
     QCOMPARE(cgd.readEntry("Engine", QString()), QStringLiteral("KSplashQML"));
 }
 
-void KcmTest::testWindowSwitcher()
+void LookAndFeelManagerTest::testWindowSwitcher()
 {
-    m_KCMLookandFeel->lookAndFeel()->setWindowSwitcher(QStringLiteral("customTestValue"));
+    m_lookAndFeel->setWindowSwitcher(QStringLiteral("customTestValue"));
 
     KConfig config(QStringLiteral("kwinrc"));
     KConfigGroup cg(&config, u"TabBox"_s);
@@ -189,16 +189,11 @@ void KcmTest::testWindowSwitcher()
     QCOMPARE(cgd.readEntry("LayoutName", QString()), QStringLiteral("customTestValue"));
 }
 
-void KcmTest::testKCMSave()
+void LookAndFeelManagerTest::testSave()
 {
-    // TODO: Previous bussiness code was effectively filtering every item from
-    // getting save, so the values would remain those set in the previous tests.
-    // This is the simpler fix to emulate the old behavior.
-    // Ideally we would test for the real items in the default theme or better,
-    // in a custom-made test package.
-    m_KCMLookandFeel->setSelectedContents(LookAndFeelManager::Empty);
-
-    m_KCMLookandFeel->save();
+    KPackage::Package package =
+        KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"), m_lookAndFeel->settings()->lookAndFeelPackage());
+    m_lookAndFeel->save(package, LookAndFeelManager::Empty);
 
     // On real setup we read entries from kdedefaults directory (XDG_CONFIG_DIRS is modified but not in test scenario)
 
@@ -252,5 +247,5 @@ void KcmTest::testKCMSave()
     QCOMPARE(cgd.readEntry("LayoutName", QString()), QStringLiteral("customTestValue"));
 }
 
-QTEST_MAIN(KcmTest)
-#include "kcmtest.moc"
+QTEST_MAIN(LookAndFeelManagerTest)
+#include "lookandfeelmanagertest.moc"

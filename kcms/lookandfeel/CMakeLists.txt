@@ -43,6 +43,7 @@ target_link_libraries(lookandfeelmanager
     KF6::ConfigCore
     KF6::GuiAddons
     KF6::I18n
+    KF6::IconThemes
     KF6::KIOGui
     KF6::KCMUtils
     KF6::NewStuffCore
@@ -59,7 +60,6 @@ endif()
 add_library(kcm_lookandfeel_objects OBJECT kcm.cpp)
 target_link_libraries(kcm_lookandfeel_objects
     lookandfeelmanager
-    KF6::IconThemes
     KF6::JobWidgets
     KF6::KIOGui
     KF6::KCMUtilsQuick
