@@ -115,7 +115,7 @@ PlasmaExtras.Representation {
             highlightMoveDuration: Kirigami.Units.shortDuration
             highlightResizeDuration: Kirigami.Units.shortDuration
 
-            topMargin: Kirigami.Units.largeSpacing
+            // No topMargin because ListSectionHeader brings its own
             bottomMargin: Kirigami.Units.largeSpacing
             leftMargin: Kirigami.Units.largeSpacing
             rightMargin: Kirigami.Units.largeSpacing
@@ -133,7 +133,7 @@ PlasmaExtras.Representation {
             section {
                 property: "deviceType"
                 delegate: PlasmaExtras.ListSectionHeader {
-                    width: notifierDialog.width - (scrollView.PlasmaComponents3.ScrollBar.vertical.visible ? Kirigami.Units.largeSpacing * 2 : 0)
+                    width: notifierDialog.width - notifierDialog.leftMargin - notifierDialog.rightMargin
                     text: section
                 }
             }
