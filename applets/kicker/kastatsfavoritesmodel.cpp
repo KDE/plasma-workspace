@@ -116,6 +116,8 @@ public:
                     m_id = QUrl::fromLocalFile(file.canonicalFilePath()).toString();
                     return;
                 }
+                // if the file was deleted, take the url as-is
+                m_id = url.toString();
             }
 
             // If this is a file, we should have already covered it
