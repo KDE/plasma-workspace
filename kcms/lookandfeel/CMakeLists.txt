@@ -23,6 +23,7 @@ if (HAVE_X11)
         ../cursortheme/xcursor/cursortheme.cpp
         ../cursortheme/xcursor/xcursortheme.cpp
     )
+   target_link_libraries(lookandfeelmanager X11::Xcursor X11::Xfixes Qt::GuiPrivate)
 endif ()
 
 kcmutils_generate_module_data(
@@ -52,10 +53,6 @@ target_link_libraries(lookandfeelmanager
     PlasmaAutostart
     krdb
 )
-
-if(HAVE_X11)
-   target_link_libraries(lookandfeelmanager X11::Xcursor X11::Xfixes Qt::GuiPrivate)
-endif()
 
 kcmutils_add_qml_kcm(kcm_lookandfeel)
 target_sources(kcm_lookandfeel PRIVATE
