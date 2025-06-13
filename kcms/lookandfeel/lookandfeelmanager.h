@@ -65,11 +65,10 @@ public:
 
     void setMode(Mode mode);
     /**
-     * Apply the theme represented by @p package, with @p previousPackage being the currently active package.
-     * Effects depend upon the Mode of this object. If Mode is Defaults, @p previousPackage is ignored.
+     * Apply the theme represented by @p package. Effects depend upon the Mode of this object.
      * @p applyMask filters the package contents that will be applied.
      */
-    void save(const KPackage::Package &package, const KPackage::Package &previousPackage, Contents applyMask = AllSettings);
+    void save(const KPackage::Package &package, Contents applyMask = AllSettings);
     bool remove(const KPackage::Package &package, Contents contentsMask = Empty);
 
     Contents packageContents(const KPackage::Package &package) const;

@@ -104,7 +104,7 @@ int main(int argc, char **argv)
         settings->setLookAndFeelPackage(requestedTheme);
         settings->save();
 
-        manager.save(p, KPackage::Package(), selection);
+        manager.save(p, selection);
     }
 
     return 0;
