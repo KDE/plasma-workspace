@@ -13,7 +13,7 @@ import org.kde.config // KAuthorized
 import org.kde.kcmutils // KCMLauncher
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.milou 0.3 as Milou
+import org.kde.milou as Milou
 import org.kde.krunner.private.view
 import org.kde.kirigami 2.20 as Kirigami
 
