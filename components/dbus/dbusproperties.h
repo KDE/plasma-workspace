@@ -25,6 +25,7 @@ class DBusPropertyMap : public QQmlPropertyMap
 {
     Q_OBJECT
     Q_DISABLE_COPY_MOVE(DBusPropertyMap)
+    QML_ELEMENT
     QML_UNCREATABLE("")
 
 public:
@@ -111,7 +112,7 @@ class DBusProperties : public QObject, public QQmlParserStatus
 
         The properties of the specific interface
      */
-    Q_PROPERTY(DBusPropertyMap *properties READ properties NOTIFY propertyMapChanged)
+    Q_PROPERTY(Plasma::DBusPropertyMap *properties READ properties NOTIFY propertyMapChanged)
 
 public:
     explicit DBusProperties(QObject *parent = nullptr);
