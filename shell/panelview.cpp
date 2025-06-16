@@ -1022,6 +1022,10 @@ void PanelView::restoreAutoHide()
         autoHide = false;
     } else if (containment() && containment()->status() >= Plasma::Types::NeedsAttentionStatus && containment()->status() != Plasma::Types::HiddenStatus) {
         autoHide = false;
+    } else if (m_visibilityMode == VisibilityMode::DodgeWindows && !m_touchingWindow) {
+        autoHide = false;
+    } else if (m_visibilityMode != VisibilityMode::AutoHide && m_visibilityMode != VisibilityMode::DodgeWindows) {
+        autoHide = false;
     } else {
         for (QWindow *window : qApp->topLevelWindows()) {
             if (window->transientParent() == this && window->isVisible()) {
@@ -1037,15 +1041,11 @@ void PanelView::restoreAutoHide()
 
 void PanelView::setAutoHideEnabled(bool enabled)
 {
-    if (m_visibilityMode == VisibilityMode::AutoHide || (m_visibilityMode == VisibilityMode::DodgeWindows && m_touchingWindow)) {
+    if (enabled) {
         if (!m_autoHideScreenEdge) {
             m_autoHideScreenEdge = AutoHideScreenEdge::create(this);
         }
-        if (enabled) {
-            m_autoHideScreenEdge->activate();
-        } else {
-            m_autoHideScreenEdge->deactivate();
-        }
+        m_autoHideScreenEdge->hide();
     } else {
         delete m_autoHideScreenEdge;
         m_autoHideScreenEdge = nullptr;

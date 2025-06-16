@@ -18,8 +18,8 @@ class AutoHideScreenEdge : public QObject
 public:
     static AutoHideScreenEdge *create(PanelView *view);
 
-    virtual void activate() = 0;
-    virtual void deactivate() = 0;
+    virtual void hide() = 0;
+    virtual void show() = 0;
 
 protected:
     AutoHideScreenEdge(PanelView *view);

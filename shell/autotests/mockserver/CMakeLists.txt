@@ -27,7 +27,7 @@ qt6_generate_wayland_protocol_client_sources(SharedClientTest
     FILES
         ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-primary-output-v1.xml
         ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-output-order-v1.xml
-        ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-screen-edge-v1.xml
+        ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-screen-edge-v2.xml
 )
 qt6_generate_wayland_protocol_server_sources(SharedClientTest
     ${private_code_option}

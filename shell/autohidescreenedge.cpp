@@ -10,7 +10,7 @@
 #include "debug.h"
 #include "panelview.h"
 
-#include "qwayland-kde-screen-edge-v1.h"
+#include "qwayland-kde-screen-edge-v2.h"
 
 #include <KWindowSystem>
 
@@ -24,18 +24,18 @@
 #include <xcb/xcb.h>
 #endif
 
-class WaylandScreenEdgeManagerV1 : public QWaylandClientExtensionTemplate<WaylandScreenEdgeManagerV1>, public QtWayland::kde_screen_edge_manager_v1
+class WaylandScreenEdgeManagerV2 : public QWaylandClientExtensionTemplate<WaylandScreenEdgeManagerV2>, public QtWayland::kde_screen_edge_manager_v2
 {
     Q_OBJECT
 
 public:
-    WaylandScreenEdgeManagerV1()
+    WaylandScreenEdgeManagerV2()
         : QWaylandClientExtensionTemplate(1)
     {
         initialize();
     }
 
-    ~WaylandScreenEdgeManagerV1() override
+    ~WaylandScreenEdgeManagerV2() override
     {
         if (isInitialized()) {
             destroy();
@@ -43,16 +43,16 @@ public:
     }
 };
 
-class WaylandAutoHideScreenEdgeV1 : public QtWayland::kde_auto_hide_screen_edge_v1
+class WaylandAutoHideScreenEdgeV2 : public QtWayland::kde_screen_edge_v2
 {
 public:
-    WaylandAutoHideScreenEdgeV1(Plasma::Types::Location location, ::kde_auto_hide_screen_edge_v1 *edge)
-        : QtWayland::kde_auto_hide_screen_edge_v1(edge)
+    WaylandAutoHideScreenEdgeV2(Plasma::Types::Location location, ::kde_screen_edge_v2 *edge)
+        : QtWayland::kde_screen_edge_v2(edge)
         , location(location)
     {
     }
 
-    ~WaylandAutoHideScreenEdgeV1() override
+    ~WaylandAutoHideScreenEdgeV2() override
     {
         destroy();
     }
@@ -67,8 +67,8 @@ class WaylandAutoHideScreenEdge : public AutoHideScreenEdge
 public:
     WaylandAutoHideScreenEdge(PanelView *view);
 
-    void deactivate() override;
-    void activate() override;
+    void show() override;
+    void hide() override;
 
 protected:
     bool eventFilter(QObject *watched, QEvent *event) override;
@@ -77,15 +77,15 @@ private:
     bool create();
     void destroy();
 
-    std::unique_ptr<WaylandScreenEdgeManagerV1> m_manager;
-    std::unique_ptr<WaylandAutoHideScreenEdgeV1> m_edge;
+    std::unique_ptr<WaylandScreenEdgeManagerV2> m_manager;
+    std::unique_ptr<WaylandAutoHideScreenEdgeV2> m_edge;
     bool m_active = false;
 };
 
 WaylandAutoHideScreenEdge::WaylandAutoHideScreenEdge(PanelView *view)
     : AutoHideScreenEdge(view)
 {
-    m_manager = std::make_unique<WaylandScreenEdgeManagerV1>();
+    m_manager = std::make_unique<WaylandScreenEdgeManagerV2>();
     if (!m_manager->isActive()) {
         qCWarning(PLASMASHELL) << m_manager->extensionInterface()->name << "is unsupported by the compositor. Panel autohide won't work correctly";
         return;
@@ -103,7 +103,7 @@ bool WaylandAutoHideScreenEdge::eventFilter(QObject *watched, QEvent *event)
         const auto window = static_cast<QWindow *>(watched);
         if (!m_edge && m_active && window->isExposed()) {
             if (create()) {
-                m_edge->activate();
+                m_edge->hide();
             }
         }
     } else if (event->type() == QEvent::Hide) {
@@ -112,15 +112,15 @@ bool WaylandAutoHideScreenEdge::eventFilter(QObject *watched, QEvent *event)
     return false;
 }
 
-void WaylandAutoHideScreenEdge::deactivate()
+void WaylandAutoHideScreenEdge::show()
 {
     m_active = false;
     if (m_edge) {
-        m_edge->deactivate();
+        m_edge->show();
     }
 }
 
-void WaylandAutoHideScreenEdge::activate()
+void WaylandAutoHideScreenEdge::hide()
 {
     if (!m_manager->isActive()) {
         return;
@@ -138,7 +138,7 @@ void WaylandAutoHideScreenEdge::activate()
 
     m_active = true;
     if (m_edge) {
-        m_edge->activate();
+        m_edge->hide();
     }
 }
 
@@ -152,21 +152,21 @@ bool WaylandAutoHideScreenEdge::create()
     uint32_t border;
     switch (m_view->location()) {
     case Plasma::Types::Location::LeftEdge:
-        border = QtWayland::kde_screen_edge_manager_v1::border_left;
+        border = QtWayland::kde_screen_edge_manager_v2::border_left;
         break;
     case Plasma::Types::Location::RightEdge:
-        border = QtWayland::kde_screen_edge_manager_v1::border_right;
+        border = QtWayland::kde_screen_edge_manager_v2::border_right;
         break;
     case Plasma::Types::Location::TopEdge:
-        border = QtWayland::kde_screen_edge_manager_v1::border_top;
+        border = QtWayland::kde_screen_edge_manager_v2::border_top;
         break;
     case Plasma::Types::Location::BottomEdge:
     default:
-        border = QtWayland::kde_screen_edge_manager_v1::border_bottom;
+        border = QtWayland::kde_screen_edge_manager_v2::border_bottom;
         break;
     }
 
-    m_edge = std::make_unique<WaylandAutoHideScreenEdgeV1>(m_view->location(), m_manager->get_auto_hide_screen_edge(border, waylandWindow->surface()));
+    m_edge = std::make_unique<WaylandAutoHideScreenEdgeV2>(m_view->location(), m_manager->get_screen_edge(border, waylandWindow->surface()));
     return true;
 }
 
@@ -185,8 +185,8 @@ public:
     X11AutoHideScreenEdge(PanelView *view);
     ~X11AutoHideScreenEdge() override;
 
-    void deactivate() override;
-    void activate() override;
+    void show() override;
+    void hide() override;
 
 private:
     xcb_atom_t m_atom = XCB_ATOM_NONE;
@@ -211,17 +211,17 @@ X11AutoHideScreenEdge::~X11AutoHideScreenEdge()
     if (!m_view) {
         return;
     }
-    deactivate();
+    show();
 }
 
-void X11AutoHideScreenEdge::deactivate()
+void X11AutoHideScreenEdge::show()
 {
     if (m_atom != XCB_ATOM_NONE) {
         xcb_delete_property(qGuiApp->nativeInterface<QNativeInterface::QX11Application>()->connection(), m_view->winId(), m_atom);
     }
 }
 
-void X11AutoHideScreenEdge::activate()
+void X11AutoHideScreenEdge::hide()
 {
     if (m_atom == XCB_ATOM_NONE) {
         return;
