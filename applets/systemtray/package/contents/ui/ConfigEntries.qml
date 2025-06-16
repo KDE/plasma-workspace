@@ -265,6 +265,13 @@ KCMUtils.ScrollViewKCM {
     component TrayItemDelegate: QQC2.ItemDelegate {
         id: listItem
 
+        required property var applet
+        required property var decoration
+        required property string displayText
+        required property int index
+        required property string itemId
+        required property string itemType
+
         width: itemsList.width
 
         Kirigami.Theme.useAlternateBackgroundColor: true
@@ -274,13 +281,13 @@ KCMUtils.ScrollViewKCM {
         hoverEnabled: false
         down: false
 
-        readonly property bool isPlasmoid: model.itemType === "Plasmoid"
+        readonly property bool isPlasmoid: itemType === "Plasmoid"
 
         contentItem: FocusScope {
             implicitHeight: childrenRect.height
 
             onActiveFocusChanged: if (activeFocus) {
-                listItem.ListView.view.positionViewAtIndex(index, ListView.Contain);
+                listItem.ListView.view.positionViewAtIndex(listItem.index, ListView.Contain);
             }
 
             RowLayout {
@@ -290,14 +297,14 @@ KCMUtils.ScrollViewKCM {
                 Kirigami.Icon {
                     implicitWidth: itemsList.iconSize
                     implicitHeight: itemsList.iconSize
-                    source: model.decoration
+                    source: listItem.decoration
                     animated: false
                 }
 
                 QQC2.Label {
                     id: nameLabel
                     Layout.fillWidth: true
-                    text: model.display
+                    text: listItem.displayText
                     textFormat: Text.PlainText
                     elide: Text.ElideRight
 
@@ -312,13 +319,13 @@ KCMUtils.ScrollViewKCM {
 
                     property real contentWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset, implicitContentWidth + leftPadding + rightPadding)
 
-                    readonly property string currentVisibility: changedVisibility.has(itemId) ? changedVisibility.get(itemId).replace("-sni", "") : originalVisibility
+                    readonly property string currentVisibility: changedVisibility.has(listItem.itemId) ? changedVisibility.get(listItem.itemId).replace("-sni", "") : originalVisibility
                     readonly property string originalVisibility: {
-                        if (cfg_showAllItems || cfg_shownItems.indexOf(itemId) !== -1) {
+                        if (cfg_showAllItems || cfg_shownItems.indexOf(listItem.itemId) !== -1) {
                             return "shown";
-                        } else if (cfg_hiddenItems.indexOf(itemId) !== -1) {
+                        } else if (cfg_hiddenItems.indexOf(listItem.itemId) !== -1) {
                             return "hidden";
-                        } else if ((isPlasmoid && cfg_extraItems.indexOf(itemId) === -1) || (!isPlasmoid && cfg_disabledStatusNotifiers.indexOf(itemId) > -1)) {
+                        } else if ((isPlasmoid && cfg_extraItems.indexOf(listItem.itemId) === -1) || (!isPlasmoid && cfg_disabledStatusNotifiers.indexOf(listItem.itemId) > -1)) {
                             return "disabled";
                         } else {
                             return "auto";
@@ -328,7 +335,7 @@ KCMUtils.ScrollViewKCM {
                     implicitWidth: Math.max(contentWidth, itemsList.visibilityColumnWidth)
                     Component.onCompleted: itemsList.visibilityColumnWidth = Math.max(implicitWidth, itemsList.visibilityColumnWidth)
 
-                    enabled: !cfg_showAllItems && itemId
+                    enabled: !cfg_showAllItems && listItem.itemId
                     textRole: "text"
                     valueRole: "value"
 
@@ -348,9 +355,9 @@ KCMUtils.ScrollViewKCM {
                             if (currentValue === "disabled" && !isPlasmoid) {
                                 disablingSniMessage.showWithAppName(nameLabel.text);
                             }
-                            iconsPage.changedVisibility.set(itemId, currentValue + (isPlasmoid ? "" : "-sni"));
+                            iconsPage.changedVisibility.set(listItem.itemId, currentValue + (isPlasmoid ? "" : "-sni"));
                         } else {
-                            iconsPage.changedVisibility.delete(itemId);
+                            iconsPage.changedVisibility.delete(listItem.itemId);
                         }
                         iconsPage.changedVisibilityChanged();
                     }
@@ -363,14 +370,14 @@ KCMUtils.ScrollViewKCM {
 
                     visible: isPlasmoid
                     enabled: visibilityComboBox.currentValue !== "disabled"
-                    readonly property string originalKeySequence: model.applet ? model.applet.plasmoid.globalShortcut : ""
-                    keySequence: changedShortcuts.has(model.applet?.plasmoid) ? changedShortcuts.get(model.applet?.plasmoid) : originalKeySequence
+                    readonly property string originalKeySequence: listItem.applet ? listItem.applet.plasmoid.globalShortcut : ""
+                    keySequence: changedShortcuts.has(listItem.applet?.plasmoid) ? changedShortcuts.get(listItem.applet?.plasmoid) : originalKeySequence
                     onCaptureFinished: {
-                        if (model.applet) {
-                            if (keySequence !== model.applet.plasmoid.globalShortcut) {
-                                changedShortcuts.set(model.applet.plasmoid, keySequence.toString());
+                        if (listItem.applet) {
+                            if (keySequence !== listItem.applet.plasmoid.globalShortcut) {
+                                changedShortcuts.set(listItem.applet.plasmoid, keySequence.toString());
                             } else {
-                                changedShortcuts.delete(model.applet.plasmoid);
+                                changedShortcuts.delete(listItem.applet.plasmoid);
                             }
 
                             itemsList.keySequenceColumnWidth = Math.max(implicitWidth, itemsList.keySequenceColumnWidth);
@@ -386,7 +393,7 @@ KCMUtils.ScrollViewKCM {
                 }
 
                 QQC2.Button {
-                    readonly property QtObject configureAction: (model.applet && model.applet.plasmoid.internalAction("configure")) || null
+                    readonly property QtObject configureAction: (listItem.applet && listItem.applet.plasmoid.internalAction("configure")) || null
 
                     Accessible.name: configureAction ? configureAction.text : ""
                     icon.name: "configure"

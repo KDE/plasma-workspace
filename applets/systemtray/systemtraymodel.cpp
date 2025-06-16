@@ -35,7 +35,9 @@ BaseModel::BaseModel(QPointer<SystemTraySettings> settings, QObject *parent)
 QHash<int, QByteArray> BaseModel::roleNames() const
 {
     return {
-        {Qt::DisplayRole, QByteArrayLiteral("display")},
+        // We're using `displayText` instead of `display` because the QML ItemDelegate inherits from
+        // AbstractButton, which already has a `display` property that we can't override.
+        {Qt::DisplayRole, QByteArrayLiteral("displayText")},
         {Qt::DecorationRole, QByteArrayLiteral("decoration")},
         {static_cast<int>(BaseRole::ItemType), QByteArrayLiteral("itemType")},
         {static_cast<int>(BaseRole::ItemId), QByteArrayLiteral("itemId")},
@@ -459,7 +461,6 @@ void StatusNotifierModel::init()
 SystemTrayModel::SystemTrayModel(QObject *parent)
     : QConcatenateTablesProxyModel(parent)
 {
-    m_roleNames = QConcatenateTablesProxyModel::roleNames();
 }
 
 QHash<int, QByteArray> SystemTrayModel::roleNames() const
