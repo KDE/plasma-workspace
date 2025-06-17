@@ -52,7 +52,7 @@ msgstr "Toqueu per a escollir el vostre emplaçament en el mapa."
 msgctxt ""
 "@label:chooser Click should be translated to mean clicking using a mouse"
 msgid "Click to choose your location on the map."
-msgstr "Feu clic per a escollir el vostre emplaçament en el mapa."
+msgstr "Cliqueu per a escollir el vostre emplaçament en el mapa."
 
 #: ui/LocationsFixedView.qml:112
 #, kde-format
@@ -99,7 +99,7 @@ msgstr "El filtre de llum blava fa més càlids els colors de la pantalla."
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1K"
-msgstr "%1K"
+msgstr "%1 K"
 
 #: ui/main.qml:136
 #, kde-format
