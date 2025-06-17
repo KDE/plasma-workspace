@@ -67,7 +67,7 @@ KCMLookandFeel::KCMLookandFeel(QObject *parent, const KPluginMetaData &data)
 
     auto handleLookAndFeelPackageChanged = [this]() {
         // When the selected LNF package changes, update the available theme contents
-        const int index = pluginIndex(lookAndFeelSettings()->lookAndFeelPackage());
+        const int index = pluginIndex(settings()->lookAndFeelPackage());
         const LookAndFeelManager::Contents packageContents = m_model->index(index, 0).data(ContentsRole).value<LookAndFeelManager::Contents>();
         if (m_themeContents != packageContents) {
             m_themeContents = packageContents;
@@ -77,7 +77,7 @@ KCMLookandFeel::KCMLookandFeel(QObject *parent, const KPluginMetaData &data)
         resetSelectedContents();
     };
 
-    connect(lookAndFeelSettings(), &LookAndFeelSettings::lookAndFeelPackageChanged, handleLookAndFeelPackageChanged);
+    connect(settings(), &LookAndFeelSettings::lookAndFeelPackageChanged, handleLookAndFeelPackageChanged);
     handleLookAndFeelPackageChanged();
 
     connect(m_lnf, &LookAndFeelManager::plasmaLockedChanged, this, &KCMLookandFeel::plasmaLockedChanged);
@@ -114,7 +114,7 @@ void KCMLookandFeel::knsEntryChanged(const KNSCore::Entry &entry)
     }
 }
 
-QStandardItemModel *KCMLookandFeel::lookAndFeelModel() const
+QStandardItemModel *KCMLookandFeel::model() const
 {
     return m_model;
 }
@@ -179,7 +179,7 @@ QList<KPackage::Package> KCMLookandFeel::availablePackages(const QStringList &co
     return packages;
 }
 
-LookAndFeelSettings *KCMLookandFeel::lookAndFeelSettings() const
+LookAndFeelSettings *KCMLookandFeel::settings() const
 {
     return m_data->settings();
 }
@@ -202,7 +202,7 @@ void KCMLookandFeel::loadModel()
     }
 
     // Model has been cleared so pretend the selected look and fell changed to force view update
-    Q_EMIT(lookAndFeelSettings()->lookAndFeelPackageChanged());
+    Q_EMIT(settings()->lookAndFeelPackageChanged());
 }
 
 void KCMLookandFeel::addKPackageToModel(const KPackage::Package &pkg)
@@ -226,12 +226,12 @@ void KCMLookandFeel::addKPackageToModel(const KPackage::Package &pkg)
 
 bool KCMLookandFeel::isSaveNeeded() const
 {
-    return lookAndFeelSettings()->isSaveNeeded();
+    return settings()->isSaveNeeded();
 }
 
 void KCMLookandFeel::save()
 {
-    QString newLnfPackage = lookAndFeelSettings()->lookAndFeelPackage();
+    QString newLnfPackage = settings()->lookAndFeelPackage();
     KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
     package.setPath(newLnfPackage);
 
