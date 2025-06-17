@@ -125,7 +125,7 @@ msgstr "Temperatura del color de dia:"
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1K"
-msgstr "%1K"
+msgstr "%1 K"
 
 #: package/contents/ui/main.qml:233 package/contents/ui/main.qml:292
 #, kde-format
