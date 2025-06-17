@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-29 02:44+0000\n"
-"PO-Revision-Date: 2025-01-24 22:39+0900\n"
+"PO-Revision-Date: 2025-06-17 09:42+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 25.03.70\n"
+"X-Generator: Lokalize 25.07.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -183,7 +183,7 @@ msgstr "強制載入指定的 shell 外掛程式"
 #: main.cpp:109
 #, kde-format
 msgid "Replace an existing instance"
-msgstr "取代一個存在的事例"
+msgstr "取代現存實體"
 
 #: main.cpp:112
 #, kde-format
