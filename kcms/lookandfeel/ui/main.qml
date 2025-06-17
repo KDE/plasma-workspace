@@ -43,11 +43,11 @@ KCM.GridViewKCM {
         }
     }
 
-    view.model: kcm.lookAndFeelModel
-    view.currentIndex: kcm.pluginIndex(kcm.lookAndFeelSettings.lookAndFeelPackage)
+    view.model: kcm.model
+    view.currentIndex: kcm.pluginIndex(kcm.settings.lookAndFeelPackage)
 
     KCM.SettingStateBinding {
-        configObject: kcm.lookAndFeelSettings
+        configObject: kcm.settings
         settingName: "lookAndFeelPackage"
     }
 
@@ -136,7 +136,7 @@ KCM.GridViewKCM {
             }
         ]
         onClicked: {
-            kcm.lookAndFeelSettings.lookAndFeelPackage = model.pluginName
+            kcm.settings.lookAndFeelPackage = model.pluginName
             root.showConfirmation()
         }
     }

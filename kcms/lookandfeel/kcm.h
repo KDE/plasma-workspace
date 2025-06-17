@@ -28,8 +28,8 @@ class LookAndFeelSettings;
 class KCMLookandFeel : public KQuickManagedConfigModule
 {
     Q_OBJECT
-    Q_PROPERTY(LookAndFeelSettings *lookAndFeelSettings READ lookAndFeelSettings CONSTANT)
-    Q_PROPERTY(QStandardItemModel *lookAndFeelModel READ lookAndFeelModel CONSTANT)
+    Q_PROPERTY(LookAndFeelSettings *settings READ settings CONSTANT)
+    Q_PROPERTY(QStandardItemModel *model READ model CONSTANT)
 
     Q_PROPERTY(LookAndFeelManager::Contents themeContents READ themeContents NOTIFY themeContentsChanged)
     Q_PROPERTY(LookAndFeelManager::Contents selectedContents READ selectedContents WRITE setSelectedContents RESET resetSelectedContents NOTIFY
@@ -52,8 +52,8 @@ public:
     KCMLookandFeel(QObject *parent, const KPluginMetaData &data);
     ~KCMLookandFeel() override;
 
-    LookAndFeelSettings *lookAndFeelSettings() const;
-    QStandardItemModel *lookAndFeelModel() const;
+    LookAndFeelSettings *settings() const;
+    QStandardItemModel *model() const;
 
     /**
      * Removes the given row from the LookandFeel items.
