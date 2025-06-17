@@ -249,7 +249,7 @@ MouseArea {
                 target: contentItem
 
                 height: sizehelper.height
-                width: dateLabel.width + labelsGrid.width + timeMetrics.advanceWidth(" ") * 2 + separator.width
+                width: dateLabel.width + dateLabel.anchors.rightMargin + labelsGrid.width
             }
 
             AnchorChanges {
@@ -264,12 +264,11 @@ MouseArea {
                 height: timeLabel.height
                 width: dateLabel.paintedWidth
 
-                // to debug font sizing issues
-                // onHeightChanged: () => console.log("height", timeMetrics.font.pixelSize, dateLabel.height)
-                // onWidthChanged: () => console.log("width", timeMetrics.advanceWidth("26"), dateLabel.width)
-
                 font.pixelSize: 1024
                 verticalAlignment: Text.AlignVCenter
+                // between date and time; they are styled the same, so
+                // a space is more appropriate than smallSpacing
+                anchors.rightMargin: timeMetrics.advanceWidth(" ")
 
                 fontSizeMode: Text.VerticalFit
             }
@@ -277,7 +276,7 @@ MouseArea {
             AnchorChanges {
                 target: dateLabel
 
-                anchors.left: contentItem.left
+                anchors.right: labelsGrid.left
                 anchors.verticalCenter: labelsGrid.verticalCenter
             }
 
@@ -565,23 +564,6 @@ MouseArea {
             }
         }
 
-        Rectangle {
-            id: separator
-
-            property bool isOneLineMode: main.state == "oneLineDate"
-
-            height: timeLabel.height * 0.8
-            width: timeLabel.height / 16
-            radius: width / 2
-            color: Kirigami.Theme.textColor
-
-            anchors.leftMargin: timeMetrics.advanceWidth(" ") + width / 2
-            anchors.verticalCenter: parent.verticalCenter
-            anchors.left: dateLabel.right
-
-            visible: isOneLineMode && Plasmoid.configuration.showDate
-        }
-
         PlasmaComponents.Label {
             id: dateLabel
 
@@ -637,8 +619,6 @@ MouseArea {
         font.family: timeLabel.font.family
         font.weight: timeLabel.font.weight
         font.italic: timeLabel.font.italic
-
-        font.pixelSize: dateLabel.contentHeight
     }
 
     // Qt's QLocale does not offer any modular time creating like Klocale did
