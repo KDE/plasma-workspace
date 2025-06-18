@@ -84,6 +84,8 @@ QVariant DeviceControl::data(const QModelIndex &index, int role) const
         return m_devices[index.row()].emblems();
     case Description:
         return m_deviceTypes[m_devices[index.row()].udi()].second.second;
+    case IsBusy:
+        return m_stateMonitor->isBusy(m_devices[index.row()].udi());
     case IsRemovable: {
         return m_stateMonitor->isRemovable(m_devices[index.row()].udi());
     }
@@ -135,6 +137,7 @@ QHash<int, QByteArray> DeviceControl::roleNames() const
     roles[Type] = "deviceType";
     roles[Icon] = "deviceIcon";
     roles[Emblems] = "deviceEmblems";
+    roles[IsBusy] = "deviceIsBusy";
     roles[IsRemovable] = "deviceIsRemovable";
     roles[FreeSpace] = "deviceFreeSpace";
     roles[Size] = "deviceSize";
@@ -411,7 +414,7 @@ void DeviceControl::onDeviceStatusChanged(const QString &udi)
     for (int position = 0; position < m_devices.size(); ++position) {
         if (m_devices[position].udi() == udi) {
             QModelIndex index = DeviceControl::index(position);
-            Q_EMIT dataChanged(index, index, {Mounted, OperationResult, Emblems});
+            Q_EMIT dataChanged(index, index, {Mounted, OperationResult, Emblems, IsBusy});
             return;
         }
     }

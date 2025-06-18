@@ -25,6 +25,7 @@ public:
         Type,
         Icon,
         Emblems,
+        IsBusy,
         IsRemovable,
         FreeSpace,
         Size,

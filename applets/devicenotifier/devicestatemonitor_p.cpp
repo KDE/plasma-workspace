@@ -53,7 +53,17 @@ void DevicesStateMonitor::addMonitoringDevice(const QString &udi)
 
     Solid::Device device(udi);
 
-    auto it = m_devicesStates.emplace(udi, DeviceInfo{false, false, false, false, Idle, QDateTime::currentDateTimeUtc()});
+    DeviceInfo deviceInfo{
+        false,
+        false,
+        false,
+        false,
+        false,
+        Idle,
+        QDateTime::currentDateTimeUtc(),
+    };
+
+    auto it = m_devicesStates.emplace(udi, deviceInfo);
 
     if (device.is<Solid::OpticalDisc>()) {
         Solid::OpticalDrive *drive = getAncestorAs<Solid::OpticalDrive>(device);
@@ -164,6 +174,14 @@ void DevicesStateMonitor::removeMonitoringDevice(const QString &udi)
     }
 }
 
+bool DevicesStateMonitor::isBusy(const QString &udi) const
+{
+    if (auto it = m_devicesStates.constFind(udi); it != m_devicesStates.constEnd()) {
+        return it->isBusy;
+    }
+    return false;
+}
+
 bool DevicesStateMonitor::isRemovable(const QString &udi) const
 {
     if (auto it = m_devicesStates.constFind(udi); it != m_devicesStates.constEnd()) {
@@ -216,7 +234,8 @@ void DevicesStateMonitor::setMountingState(const QString &udi)
 {
     qCDebug(APPLETS::DEVICENOTIFIER) << "Devices State Monitor : Device " << udi << " state changed";
     if (auto it = m_devicesStates.find(udi); it != m_devicesStates.end()) {
-        it->operationResult = Working;
+        it->isBusy = true;
+        it->operationResult = Mounting;
         Q_EMIT stateChanged(udi);
     }
 }
@@ -225,7 +244,8 @@ void DevicesStateMonitor::setUnmountingState(const QString &udi)
 {
     qCDebug(APPLETS::DEVICENOTIFIER) << "Devices State Monitor : Device " << udi << " state changed";
     if (auto it = m_devicesStates.find(udi); it != m_devicesStates.end()) {
-        it->operationResult = Working;
+        it->isBusy = true;
+        it->operationResult = Unmounting;
         Q_EMIT stateChanged(udi);
     }
 }
@@ -234,6 +254,7 @@ void DevicesStateMonitor::setCheckingState(const QString &udi)
 {
     qCDebug(APPLETS::DEVICENOTIFIER) << "Devices State Monitor : Device " << udi << " state changed";
     if (auto it = m_devicesStates.find(udi); it != m_devicesStates.end()) {
+        it->isBusy = true;
         it->operationResult = Checking;
         Q_EMIT stateChanged(udi);
     }
@@ -243,6 +264,7 @@ void DevicesStateMonitor::setRepairingState(const QString &udi)
 {
     qCDebug(APPLETS::DEVICENOTIFIER) << "Devices State Monitor : Device " << udi << " state changed";
     if (auto it = m_devicesStates.find(udi); it != m_devicesStates.end()) {
+        it->isBusy = true;
         it->operationResult = Repairing;
         Q_EMIT stateChanged(udi);
     }
@@ -267,6 +289,7 @@ void DevicesStateMonitor::setIdleState(Solid::ErrorType error, QVariant errorDat
     }
 
     if (auto it = m_devicesStates.find(udi); it != m_devicesStates.end()) {
+        it->isBusy = false;
         if (it->operationResult == Checking) {
             Solid::StorageAccess *access = device.as<Solid::StorageAccess>();
             it->isChecked = true;
@@ -277,33 +300,21 @@ void DevicesStateMonitor::setIdleState(Solid::ErrorType error, QVariant errorDat
             it->needRepair = (error != Solid::NoError);
             qCDebug(APPLETS::DEVICENOTIFIER) << "Devices State Monitor : Device " << udi << " repair done, need repair : " << it->needRepair;
             it->operationResult = RepairDone;
-        } else if (error == Solid::NoError) {
-            Solid::StorageAccess *access = device.as<Solid::StorageAccess>();
+        } else if (it->operationResult == Mounting) {
+            auto access = device.as<Solid::StorageAccess>();
             it->isMounted = access->isAccessible();
-            qCDebug(APPLETS::DEVICENOTIFIER) << "Devices State Monitor : Device " << udi << " state changed : " << access->isAccessible();
-            it->operationResult = Successful;
+            qCDebug(APPLETS::DEVICENOTIFIER) << "Devices State Monitor : Device " << udi << " Mount signal arrived. State changed : " << access->isAccessible();
+            it->operationResult = MountDone;
+        } else if (it->operationResult == Unmounting) {
+            auto access = device.as<Solid::StorageAccess>();
+            it->isMounted = access->isAccessible();
+            qCDebug(APPLETS::DEVICENOTIFIER) << "Devices State Monitor : Device " << udi
+                                             << " Unmount signal arrived. State changed : " << access->isAccessible();
+            it->operationResult = UnmountDone;
         } else {
-            qCDebug(APPLETS::DEVICENOTIFIER) << "Devices State Monitor : Device " << udi << " Error! state don't changed. Error data: " << errorData.toString();
-            it->operationResult = Unsuccessful;
+            it->operationResult = Idle;
         }
         Q_EMIT stateChanged(udi);
-
-        // update state after some time to Idle
-        QTimer *stateTimer = new QTimer(this);
-        stateTimer->setSingleShot(true);
-        stateTimer->setInterval(std::chrono::seconds(2));
-        stateTimer->callOnTimeout([this, device, stateTimer]() {
-            if (auto it = m_devicesStates.find(device.udi()); it != m_devicesStates.end() && device.isValid()) {
-                if (it->operationResult == CheckDone || it->operationResult == RepairDone) {
-                    it->operationResult = Idle;
-                } else {
-                    it->operationResult = it->isMounted ? Idle : it->operationResult == Successful ? NotPresent : Idle;
-                }
-            }
-            Q_EMIT stateChanged(device.udi());
-            stateTimer->deleteLater();
-        });
-        stateTimer->start();
     }
 }
 

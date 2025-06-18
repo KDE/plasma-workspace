@@ -38,9 +38,10 @@ public:
     enum OperationResult {
         NotPresent = 0,
         Idle,
-        Working,
-        Successful,
-        Unsuccessful,
+        Mounting,
+        MountDone,
+        Unmounting,
+        UnmountDone,
         Checking,
         CheckDone,
         Repairing,
@@ -55,6 +56,7 @@ public:
     void addMonitoringDevice(const QString &udi);
     void removeMonitoringDevice(const QString &udi);
 
+    bool isBusy(const QString &udi) const;
     bool isRemovable(const QString &udi) const;
     bool isMounted(const QString &udi) const;
     bool isChecked(const QString &udi) const;
@@ -95,6 +97,7 @@ Q_SIGNALS:
 
 private:
     struct DeviceInfo {
+        bool isBusy;
         bool isRemovable;
         bool isMounted;
         bool isChecked;

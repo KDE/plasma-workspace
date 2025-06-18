@@ -30,6 +30,7 @@ PlasmaExtras.ExpandableListItem {
     required property double deviceSize
     required property string deviceFreeSpaceText
     required property string deviceSizeText
+    required property bool deviceIsBusy
     required property bool deviceMounted
     required property int deviceOperationResult
     required property int deviceError
@@ -39,21 +40,26 @@ PlasmaExtras.ExpandableListItem {
 
     property bool hasMessage: deviceItem.deviceErrorMessage !== ""
 
-    property bool isFree: deviceItem.deviceOperationResult !== DevicesStateMonitor.Working && deviceItem.deviceOperationResult !== DevicesStateMonitor.Checking && deviceItem.deviceOperationResult !== DevicesStateMonitor.Repairing && deviceItem.deviceOperationResult !== DevicesStateMonitor.NotPresent && !(deviceItem.deviceMounted === false && deviceItem.deviceOperationResult === DevicesStateMonitor.Successful)
+    //Shows true whenever the device is idle and present in the system.
+    readonly property bool isFree: !deviceItem.deviceIsBusy && deviceItem.deviceOperationResult !== DevicesStateMonitor.NotPresent
+
+    //Shows true whenever the device finished some job
+    readonly property bool isOperationFinished: deviceItem.isFree && deviceItem.deviceOperationResult !== DevicesStateMonitor.Idle
 
     onDeviceOperationResultChanged: {
-        if (!popupIconTimer.running) {
-            if (deviceItem.deviceOperationResult === DevicesStateMonitor.Working) {
-                if(deviceMounted){
-                    unmountTimer.restart();
-                }
-            } else if (deviceItem.deviceOperationResult === DevicesStateMonitor.Successful) {
-                devicenotifier.popupIcon = "dialog-ok"
-                popupIconTimer.restart()
-            } else if (deviceItem.deviceOperationResult === DevicesStateMonitor.Unsuccessful) {
-                devicenotifier.popupIcon = "dialog-error"
-                popupIconTimer.restart()
-            }
+        //No need to update anything if device is not present in the system
+        if (deviceItem.deviceOperationResult === DevicesStateMonitor.NotPresent) {
+            return;
+        }
+
+        if (deviceItem.deviceOperationResult === DevicesStateMonitor.Unmounting) {
+            unmountTimer.restart();
+        } else if (deviceItem.deviceError === 0) {
+            devicenotifier.popupIcon = "dialog-ok"
+            popupIconTimer.restart()
+        } else if (deviceItem.deviceError !== 0) {
+            devicenotifier.popupIcon = "dialog-error"
+            popupIconTimer.restart()
         }
     }
 
@@ -69,16 +75,20 @@ PlasmaExtras.ExpandableListItem {
         repeat: false
     }
 
+    //show busy indicator whenever is busy (mounting, unmounting or other operations on the device)
+    isBusy: deviceItem.deviceIsBusy
+
     icon: deviceItem.deviceIcon
 
     iconEmblem: {
-        if (deviceItem.hasMessage) {
+        if (deviceItem.isOperationFinished && deviceItem.hasMessage) {
             if (deviceItem.deviceError === 0) {
                 return "emblem-information"
             } else {
                 return "emblem-error"
             }
-        } else if (deviceItem.deviceOperationResult !== DevicesStateMonitor.Working && deviceItem.deviceEmblems[0]) {
+        //if device is not busy then show its emblem
+        } else if (!deviceItem.deviceIsBusy && deviceItem.deviceEmblems[0]) {
             return deviceItem.deviceEmblems[0]
         } else {
             return ""
@@ -88,27 +98,28 @@ PlasmaExtras.ExpandableListItem {
     title: deviceItem.deviceDescription
 
     subtitle: {
-        if (deviceItem.hasMessage) {
+        if (deviceItem.isOperationFinished && deviceItem.hasMessage) {
             return deviceItem.deviceErrorMessage
         }
         if (deviceItem.deviceOperationResult === DevicesStateMonitor.Checking) {
             return i18nc("Accessing is a less technical word for Mounting; translation should be short and mean \'Currently mounting this device\'", "Checking…")
         } else if (deviceItem.deviceOperationResult === DevicesStateMonitor.Repairing) {
             return i18nc("Accessing is a less technical word for Mounting; translation should be short and mean \'Currently mounting this device\'", "Repairing…")
-        } else if (deviceItem.deviceOperationResult !== DevicesStateMonitor.Working) {
+        } else if (!deviceItem.deviceIsBusy) {
             if (deviceItem.deviceFreeSpace > 0 && deviceItem.deviceSize > 0) {
                 return i18nc("@info:status Free disk space", "%1 free of %2", deviceItem.deviceFreeSpaceText, deviceItem.deviceSizeText)
             }
             return ""
-        } else if (!deviceItem.deviceMounted && deviceItem.deviceOperationResult === DevicesStateMonitor.Working) {
+        } else if (deviceItem.deviceOperationResult === DevicesStateMonitor.Mounting) {
             return i18nc("Accessing is a less technical word for Mounting; translation should be short and mean \'Currently mounting this device\'", "Accessing…")
-        } else if (unmountTimer.running) {
+        } else if (deviceItem.deviceOperationResult === DevicesStateMonitor.Unmounting && unmountTimer.running) {
             // Unmounting; shown if unmount takes less than 1 second
             return i18nc("Removing is a less technical word for Unmounting; translation should be short and mean \'Currently unmounting this device\'", "Removing…")
-        } else {
+        } else if (deviceItem.deviceOperationResult === DevicesStateMonitor.Unmounting) {
             // Unmounting; shown if unmount takes longer than 1 second
             return i18n("Don't unplug yet! Files are still being transferred…")
         }
+        return ""
     }
 
     subtitleCanWrap: true
@@ -136,8 +147,6 @@ PlasmaExtras.ExpandableListItem {
             deviceActions.actionTriggered(deviceActions.defaultActionName)
         }
     }
-
-    isBusy: deviceItem.deviceOperationResult === DevicesStateMonitor.Working || deviceItem.deviceOperationResult === DevicesStateMonitor.Checking || deviceItem.deviceOperationResult === DevicesStateMonitor.Repairing
 
     customExpandedViewContent: deviceActions !== undefined && deviceActions.rowCount() !== 0 && isFree ? actionComponent : null
 
