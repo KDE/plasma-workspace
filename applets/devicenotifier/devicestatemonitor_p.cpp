@@ -71,11 +71,14 @@ void DevicesStateMonitor::addMonitoringDevice(const QString &udi)
             connect(access, &Solid::StorageAccess::setupDone, this, &DevicesStateMonitor::setIdleState);
             connect(access, &Solid::StorageAccess::teardownRequested, this, &DevicesStateMonitor::setUnmountingState);
             connect(access, &Solid::StorageAccess::teardownDone, this, &DevicesStateMonitor::setIdleState);
-            connect(access, &Solid::StorageAccess::checkRequested, this, &DevicesStateMonitor::setCheckingState);
-            connect(access, &Solid::StorageAccess::checkDone, this, &DevicesStateMonitor::setIdleState);
-            connect(access, &Solid::StorageAccess::repairRequested, this, &DevicesStateMonitor::setRepairingState);
-            connect(access, &Solid::StorageAccess::repairDone, this, &DevicesStateMonitor::setIdleState);
-
+            if (access->canCheck()) {
+                connect(access, &Solid::StorageAccess::checkRequested, this, &DevicesStateMonitor::setCheckingState);
+                connect(access, &Solid::StorageAccess::checkDone, this, &DevicesStateMonitor::setIdleState);
+            }
+            if (access->canRepair()) {
+                connect(access, &Solid::StorageAccess::repairRequested, this, &DevicesStateMonitor::setRepairingState);
+                connect(access, &Solid::StorageAccess::repairDone, this, &DevicesStateMonitor::setIdleState);
+            }
             qCDebug(APPLETS::DEVICENOTIFIER) << "Devices State Monitor : Device " << udi << " state : " << access->isAccessible();
             it->isMounted = access->isAccessible();
         }
