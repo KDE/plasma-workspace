@@ -59,6 +59,8 @@ void DevicesStateMonitor::addMonitoringDevice(const QString &udi)
         false,
         false,
         false,
+        Solid::NoError,
+        QVariant(),
         Idle,
         QDateTime::currentDateTimeUtc(),
     };
@@ -230,6 +232,22 @@ DevicesStateMonitor::OperationResult DevicesStateMonitor::getOperationResult(con
     return NotPresent;
 }
 
+Solid::ErrorType DevicesStateMonitor::getErrorType(const QString &udi) const
+{
+    if (auto it = m_devicesStates.constFind(udi); it != m_devicesStates.constEnd()) {
+        return it->errorType;
+    }
+    return Solid::NoError;
+}
+
+QVariant DevicesStateMonitor::getErrorData(const QString &udi) const
+{
+    if (auto it = m_devicesStates.constFind(udi); it != m_devicesStates.constEnd()) {
+        return it->errorData;
+    }
+    return {};
+}
+
 void DevicesStateMonitor::setMountingState(const QString &udi)
 {
     qCDebug(APPLETS::DEVICENOTIFIER) << "Devices State Monitor : Device " << udi << " state changed";
@@ -290,6 +308,10 @@ void DevicesStateMonitor::setIdleState(Solid::ErrorType error, QVariant errorDat
 
     if (auto it = m_devicesStates.find(udi); it != m_devicesStates.end()) {
         it->isBusy = false;
+        // Also save error data. It is used by DeviceErrorMonitor
+        it->errorType = error;
+        it->errorData = errorData;
+        qCDebug(APPLETS::DEVICENOTIFIER) << "Devices State Monitor : Device " << udi << " Error is: " << error << " error message: " << it->errorData;
         if (it->operationResult == Checking) {
             Solid::StorageAccess *access = device.as<Solid::StorageAccess>();
             it->isChecked = true;

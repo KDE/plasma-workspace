@@ -74,6 +74,8 @@ public:
      * Successful and unsuccessful states are changed to Idle after some time
      */
     OperationResult getOperationResult(const QString &udi) const;
+    Solid::ErrorType getErrorType(const QString &udi) const;
+    QVariant getErrorData(const QString &udi) const;
 
 private:
     explicit DevicesStateMonitor(QObject *parent = nullptr);
@@ -102,6 +104,8 @@ private:
         bool isMounted;
         bool isChecked;
         bool needRepair;
+        Solid::ErrorType errorType;
+        QVariant errorData;
         OperationResult operationResult;
         QDateTime deviceTimeStamp;
     };

@@ -30,6 +30,8 @@ using namespace Qt::StringLiterals;
 DeviceErrorMonitor::DeviceErrorMonitor(QObject *parent)
     : QObject(parent)
 {
+    m_deviceStateMonitor = DevicesStateMonitor::instance();
+    connect(m_deviceStateMonitor.get(), &DevicesStateMonitor::stateChanged, this, &DeviceErrorMonitor::onStateChanged);
 }
 
 DeviceErrorMonitor::~DeviceErrorMonitor()
@@ -55,69 +57,21 @@ void DeviceErrorMonitor::addMonitoringDevice(const QString &udi)
         return;
     }
 
-    Solid::StorageAccess *access = device.as<Solid::StorageAccess>();
-    if (access) {
-        connect(access, &Solid::StorageAccess::teardownDone, this, [this](Solid::ErrorType error, const QVariant &errorData, const QString &udi) {
-            qCDebug(APPLETS::DEVICENOTIFIER) << "Device Error Monitor: "
-                                             << "Teardown signal arrived for device " << udi;
-            onSolidReply(SolidReplyType::Teardown, error, errorData, udi);
-        });
-
-        connect(access, &Solid::StorageAccess::setupDone, this, [this](Solid::ErrorType error, const QVariant &errorData, const QString &udi) {
-            qCDebug(APPLETS::DEVICENOTIFIER) << "Device Error Monitor: "
-                                             << "Setup signal arrived for device " << udi;
-            onSolidReply(SolidReplyType::Setup, error, errorData, udi);
-        });
-
-        connect(access, &Solid::StorageAccess::checkDone, this, [this](Solid::ErrorType error, const QVariant &errorData, const QString &udi) {
-            qCDebug(APPLETS::DEVICENOTIFIER) << "Device Error Monitor: " << "Check signal arrived for device " << udi;
-            onSolidReply(SolidReplyType::Check, error, errorData, udi);
-        });
-
-        connect(access, &Solid::StorageAccess::repairDone, this, [this](Solid::ErrorType error, const QVariant &errorData, const QString &udi) {
-            qCDebug(APPLETS::DEVICENOTIFIER) << "Device Error Monitor: " << "Repair signal arrived for device " << udi;
-            onSolidReply(SolidReplyType::Repair, error, errorData, udi);
-        });
-
-        connect(access, &Solid::StorageAccess::setupRequested, this, &DeviceErrorMonitor::clearPreviousError);
-        connect(access, &Solid::StorageAccess::repairRequested, this, &DeviceErrorMonitor::clearPreviousError);
-    }
-    if (device.is<Solid::OpticalDisc>()) {
-        Solid::OpticalDrive *drive = device.parent().as<Solid::OpticalDrive>();
-        qCDebug(APPLETS::DEVICENOTIFIER) << "Device Error Monitor: "
-                                         << "Eject signal arrived for device " << udi;
-        connect(drive, &Solid::OpticalDrive::ejectDone, this, [this](Solid::ErrorType error, const QVariant &errorData, const QString &udi) {
-            onSolidReply(SolidReplyType::Eject, error, errorData, udi);
-        });
-    }
+    // Check for errors that we potentially missed
+    onStateChanged(udi);
 }
 
 void DeviceErrorMonitor::removeMonitoringDevice(const QString &udi)
 {
-    Solid::Device device(udi);
-    if (device.is<Solid::StorageVolume>()) {
-        Solid::StorageAccess *access = device.as<Solid::StorageAccess>();
-        if (access) {
-            access->disconnect(this);
-        }
-    }
     if (auto it = m_deviceErrors.constFind(udi); it != m_deviceErrors.cend()) {
         m_deviceErrors.erase(it);
     }
 }
 
-Solid::ErrorType DeviceErrorMonitor::getError(const QString &udi)
-{
-    if (auto it = m_deviceErrors.constFind(udi); it != m_deviceErrors.cend()) {
-        return it->first;
-    }
-    return Solid::ErrorType::NoError;
-}
-
 QString DeviceErrorMonitor::getErrorMassage(const QString &udi)
 {
     if (auto it = m_deviceErrors.constFind(udi); it != m_deviceErrors.cend()) {
-        return it->second;
+        return it.value();
     }
     return {};
 }
@@ -174,32 +128,44 @@ void DeviceErrorMonitor::queryBlockingApps(const QString &devicePath)
 
 void DeviceErrorMonitor::clearPreviousError(const QString &udi)
 {
-    notify(Solid::NoError, QString(), QString(), udi);
+    notify(QString(), QString(), udi);
 }
 
-void DeviceErrorMonitor::onSolidReply(SolidReplyType type, Solid::ErrorType error, const QVariant &errorData, const QString &udi)
+void DeviceErrorMonitor::onStateChanged(const QString &udi)
 {
     qCDebug(APPLETS::DEVICENOTIFIER) << "Device Error Monitor: "
-                                     << "Reply arrived for device " << udi << " arrived";
+                                     << "State change signal arrived for device " << udi;
 
-    if (error == Solid::ErrorType::NoError && type == SolidReplyType::Setup) {
-        notify(Solid::ErrorType::NoError, QString(), QString(), udi);
+    if (m_deviceStateMonitor->isBusy(udi)) {
+        qCDebug(APPLETS::DEVICENOTIFIER) << "Device Error Monitor: "
+                                         << "The device in work. Reset the errors for " << udi;
+        notify(QString(), QString(), udi);
+        return;
+    }
+
+    auto result = m_deviceStateMonitor->getOperationResult(udi);
+    auto error = m_deviceStateMonitor->getErrorType(udi);
+
+    if (error == Solid::ErrorType::NoError && result == DevicesStateMonitor::MountDone) {
+        notify(QString(), QString(), udi);
         qCDebug(APPLETS::DEVICENOTIFIER) << "Device Error Monitor: "
                                          << "No error for device " << udi;
         return;
     }
 
+    auto errorData = m_deviceStateMonitor->getErrorData(udi);
+
     QString errorMsg;
 
     switch (error) {
     case Solid::ErrorType::NoError:
-        if (type == SolidReplyType::Check) {
+        if (result == DevicesStateMonitor::CheckDone) {
             if (!errorData.toBool()) {
                 errorMsg = i18n("This device has file system errors.");
             }
-        } else if (type == SolidReplyType::Repair) {
+        } else if (result == DevicesStateMonitor::RepairDone) {
             errorMsg = i18n("Successfully repaired!");
-        } else if (type != SolidReplyType::Setup && isSafelyRemovable(udi)) {
+        } else if (result != DevicesStateMonitor::MountDone && isSafelyRemovable(udi)) {
             KNotification::event(QStringLiteral("safelyRemovable"),
                                  i18n("Device Status"),
                                  i18n("A device can now be safely removed"),
@@ -211,29 +177,35 @@ void DeviceErrorMonitor::onSolidReply(SolidReplyType type, Solid::ErrorType erro
         break;
 
     case Solid::ErrorType::UnauthorizedOperation:
-        switch (type) {
-        case SolidReplyType::Setup:
+        switch (result) {
+        case DevicesStateMonitor::MountDone:
             errorMsg = i18n("You are not authorized to mount this device.");
             break;
-        case SolidReplyType::Teardown:
+        case DevicesStateMonitor::UnmountDone: {
+            Solid::Device device(udi);
+            if (device.is<Solid::OpticalDisc>()) {
+                errorMsg = i18n("You are not authorized to eject this disc.");
+                break;
+            }
+
             errorMsg = i18nc("Remove is less technical for unmount", "You are not authorized to remove this device.");
             break;
-        case SolidReplyType::Eject:
-            errorMsg = i18n("You are not authorized to eject this disc.");
-            break;
-        case SolidReplyType::Repair:
+        }
+        case DevicesStateMonitor::RepairDone:
             errorMsg = i18n("You are not authorized to repair this device.");
             break;
+        default:
+            errorMsg = i18n("Unknown error type");
+            break;
         }
-
         break;
     case Solid::ErrorType::DeviceBusy: {
-        if (type == SolidReplyType::Setup) { // can this even happen?
+        if (result == DevicesStateMonitor::MountDone) { // can this even happen?
             errorMsg = i18n("Could not mount this device as it is busy.");
         } else {
             QString deviceUdi = udi;
-
-            if (type == SolidReplyType::Eject) {
+            Solid::Device device(udi);
+            if (result == DevicesStateMonitor::UnmountDone && device.is<Solid::OpticalDisc>()) {
                 const auto discs = Solid::Device::listFromType(Solid::DeviceInterface::OpticalDisc);
                 for (const auto &disc : discs) {
                     if (disc.parentUdi() == udi) {
@@ -246,8 +218,6 @@ void DeviceErrorMonitor::onSolidReply(SolidReplyType type, Solid::ErrorType erro
                     Q_ASSERT_X(false, Q_FUNC_INFO, "This should not happen, bail out");
                 }
             }
-
-            Solid::Device device(deviceUdi);
 
             Solid::StorageAccess *access = device.as<Solid::StorageAccess>();
 
@@ -264,7 +234,7 @@ void DeviceErrorMonitor::onSolidReply(SolidReplyType type, Solid::ErrorType erro
                                          blockApps.size(),
                                          blockApps.join(i18nc("separator in list of apps blocking device unmount", ", ")));
                 }
-                notify(error, errorMessage, errorData.toString(), deviceUdi);
+                notify(errorMessage, errorData.toString(), deviceUdi);
                 qCDebug(APPLETS::DEVICENOTIFIER) << "Device Error Monitor: " << "Error for device " << deviceUdi << " error: " << error
                                                  << " error message:" << errorMessage;
                 disconnect(*c);
@@ -276,39 +246,45 @@ void DeviceErrorMonitor::onSolidReply(SolidReplyType type, Solid::ErrorType erro
 
         break;
     }
-    case Solid::ErrorType::UserCanceled:
+    case Solid::ErrorType::UserCanceled: {
         // don't point out the obvious to the user, do nothing here
         break;
-    default:
-        switch (type) {
-        case SolidReplyType::Setup:
+    }
+    default: {
+        switch (result) {
+        case DevicesStateMonitor::MountDone:
             errorMsg = i18n("Could not mount this device.");
             break;
-        case SolidReplyType::Teardown:
+        case DevicesStateMonitor::UnmountDone: {
+            Solid::Device device(udi);
+            if (device.is<Solid::OpticalDisc>()) {
+                errorMsg = i18n("Could not eject this disc.");
+                break;
+            }
             errorMsg = i18nc("Remove is less technical for unmount", "Could not remove this device.");
             break;
-        case SolidReplyType::Eject:
-            errorMsg = i18n("Could not eject this disc.");
-            break;
-        case SolidReplyType::Repair:
+        }
+        case DevicesStateMonitor::RepairDone:
             errorMsg = i18n("Could not repair this device: %1").arg(errorData.toString());
             break;
+        default:
+            errorMsg = i18n("Unknown error type");
+            break;
         }
-
         break;
+    }
     }
     qCDebug(APPLETS::DEVICENOTIFIER) << "Device Error Monitor: "
                                      << "Error for device " << udi << " error: " << error << " error message:" << errorMsg;
-    notify(error, errorMsg, errorData.toString(), udi);
+    notify(errorMsg, errorData.toString(), udi);
 }
 
-void DeviceErrorMonitor::notify(Solid::ErrorType error, const QString &errorMessage, const QString &description, const QString &udi)
+void DeviceErrorMonitor::notify(const QString &errorMessage, const QString &description, const QString &udi)
 {
     Q_UNUSED(description)
 
     if (!errorMessage.isEmpty()) {
-        m_deviceErrors[udi].first = error;
-        m_deviceErrors[udi].second = errorMessage;
+        m_deviceErrors[udi] = errorMessage;
     } else {
         if (auto it = m_deviceErrors.constFind(udi); it != m_deviceErrors.cend()) {
             m_deviceErrors.erase(it);

@@ -11,10 +11,11 @@
 
 #include <Solid/SolidNamespace>
 
+class DevicesStateMonitor;
+
 /**
  * Class that monitors error messages for devices
  */
-
 class DeviceErrorMonitor : public QObject
 {
     Q_OBJECT
@@ -26,18 +27,9 @@ public:
     void addMonitoringDevice(const QString &udi);
     void removeMonitoringDevice(const QString &udi);
 
-    Solid::ErrorType getError(const QString &udi);
     QString getErrorMassage(const QString &udi);
 
 private:
-    enum class SolidReplyType {
-        Setup = 0,
-        Teardown,
-        Eject,
-        Check,
-        Repair,
-    };
-
     explicit DeviceErrorMonitor(QObject *parent = nullptr);
 
 Q_SIGNALS:
@@ -46,12 +38,14 @@ Q_SIGNALS:
     void blockingAppsReady(const QStringList &apps);
 
 private Q_SLOTS:
-    void onSolidReply(SolidReplyType type, Solid::ErrorType error, const QVariant &errorData, const QString &udi);
-    void notify(Solid::ErrorType error, const QString &errorMessage, const QString &errorData, const QString &udi);
+    void onStateChanged(const QString &udi);
+    void notify(const QString &errorMessage, const QString &errorData, const QString &udi);
     bool isSafelyRemovable(const QString &udi) const;
     void queryBlockingApps(const QString &devicePath);
     void clearPreviousError(const QString &udi);
 
 private:
-    QHash<QString, std::pair<Solid::ErrorType, QString>> m_deviceErrors;
+    QHash<QString, QString> m_deviceErrors;
+
+    std::shared_ptr<DevicesStateMonitor> m_deviceStateMonitor;
 };

@@ -115,7 +115,7 @@ QVariant DeviceControl::data(const QModelIndex &index, int role) const
         return m_deviceTypes[m_devices[index.row()].udi()].first;
     }
     case Error:
-        return m_errorMonitor->getError(m_devices[index.row()].udi());
+        return m_stateMonitor->getErrorType(m_devices[index.row()].udi());
     case ErrorMessage:
         return m_errorMonitor->getErrorMassage(m_devices[index.row()].udi());
     case Actions: {
@@ -414,7 +414,7 @@ void DeviceControl::onDeviceStatusChanged(const QString &udi)
     for (int position = 0; position < m_devices.size(); ++position) {
         if (m_devices[position].udi() == udi) {
             QModelIndex index = DeviceControl::index(position);
-            Q_EMIT dataChanged(index, index, {Mounted, OperationResult, Emblems, IsBusy});
+            Q_EMIT dataChanged(index, index, {Mounted, OperationResult, Emblems, IsBusy, Error});
             return;
         }
     }
@@ -426,7 +426,7 @@ void DeviceControl::onDeviceErrorChanged(const QString &udi)
     for (int position = 0; position < m_devices.size(); ++position) {
         if (m_devices[position].udi() == udi) {
             QModelIndex index = DeviceControl::index(position);
-            Q_EMIT dataChanged(index, index, {Error, ErrorMessage});
+            Q_EMIT dataChanged(index, index, {ErrorMessage});
             return;
         }
     }
