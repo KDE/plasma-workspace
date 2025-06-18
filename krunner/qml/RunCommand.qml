@@ -144,8 +144,9 @@ ColumnLayout {
                 bottomPadding: parent.bottomPadding
                 width: parent.width
                 height: parent.height
+                elide: Text.ElideRight
                 visible: text !== queryField.text
-                    && queryField.contentWidth < (queryField.width
+                    && queryField.implicitWidth < (queryField.width
                                                 - queryField.leftPadding
                                                 - queryField.rightPadding)
                 opacity: 0.5
