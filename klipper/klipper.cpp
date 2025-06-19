@@ -110,12 +110,6 @@ Klipper::Klipper(QObject *parent)
     KGlobalAccel::setGlobalShortcut(m_clearHistoryAction, QKeySequence());
     connect(m_clearHistoryAction, &QAction::triggered, m_historyModel.get(), &HistoryModel::clearHistory);
 
-    QString CONFIGURE = QStringLiteral("configure");
-    m_configureAction = m_collection->addAction(CONFIGURE);
-    m_configureAction->setIcon(QIcon::fromTheme(CONFIGURE));
-    m_configureAction->setText(i18nc("@action:inmenu", "&Configure Klipper…"));
-    connect(m_configureAction, &QAction::triggered, this, &Klipper::slotConfigure);
-
     m_repeatAction = m_collection->addAction(QStringLiteral("repeat_action"));
     m_repeatAction->setText(i18nc("@action:inmenu", "Manually Invoke Action on Current Clipboard"));
     m_repeatAction->setIcon(QIcon::fromTheme(QStringLiteral("open-menu-symbolic")));
