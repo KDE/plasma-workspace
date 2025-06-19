@@ -115,7 +115,6 @@
             "desktop"
         ],
         "Icon": "device-notifier",
-        "Id": "org.kde.plasma.devicenotifier",
         "License": "GPL-2.0+",
         "Name": "Disks & Devices",
         "Name[ar]": "الأجهزة والأقراص",

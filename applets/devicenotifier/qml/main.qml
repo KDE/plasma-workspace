@@ -15,21 +15,20 @@ import org.kde.kirigami as Kirigami
 
 import org.kde.kcmutils // For KCMLauncher
 import org.kde.config // KAuthorized
-import org.kde.plasma.private.devicenotifier as DN
 
 PlasmoidItem {
     id: devicenotifier
 
-    DN.DeviceFilterControl {
+    DeviceFilterControl {
         id: filterModel
 
         filterType: {
             if (Plasmoid.configuration.allDevices) {
-                return DN.DeviceFilterControl.All
+                return DeviceFilterControl.All
             } else if (Plasmoid.configuration.removableDevices) {
-                return DN.DeviceFilterControl.Removable
+                return DeviceFilterControl.Removable
             } else {
-                return DN.DeviceFilterControl.Unremovable
+                return DeviceFilterControl.Unremovable
             }
         }
 

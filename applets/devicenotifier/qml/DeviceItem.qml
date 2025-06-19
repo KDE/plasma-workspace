@@ -19,8 +19,6 @@ import org.kde.kirigami as Kirigami
 
 import org.kde.kquickcontrolsaddons
 
-import org.kde.plasma.private.devicenotifier as DN
-
 PlasmaExtras.ExpandableListItem {
     id: deviceItem
 
@@ -41,18 +39,18 @@ PlasmaExtras.ExpandableListItem {
 
     property bool hasMessage: deviceItem.deviceErrorMessage !== ""
 
-    property bool isFree: deviceItem.deviceOperationResult !== DN.DevicesStateMonitor.Working && deviceItem.deviceOperationResult !== DN.DevicesStateMonitor.Checking && deviceItem.deviceOperationResult !== DN.DevicesStateMonitor.Repairing && deviceItem.deviceOperationResult !== DN.DevicesStateMonitor.NotPresent && !(deviceItem.deviceMounted === false && deviceItem.deviceOperationResult === DN.DevicesStateMonitor.Successful)
+    property bool isFree: deviceItem.deviceOperationResult !== DevicesStateMonitor.Working && deviceItem.deviceOperationResult !== DevicesStateMonitor.Checking && deviceItem.deviceOperationResult !== DevicesStateMonitor.Repairing && deviceItem.deviceOperationResult !== DevicesStateMonitor.NotPresent && !(deviceItem.deviceMounted === false && deviceItem.deviceOperationResult === DevicesStateMonitor.Successful)
 
     onDeviceOperationResultChanged: {
         if (!popupIconTimer.running) {
-            if (deviceItem.deviceOperationResult === DN.DevicesStateMonitor.Working) {
+            if (deviceItem.deviceOperationResult === DevicesStateMonitor.Working) {
                 if(deviceMounted){
                     unmountTimer.restart();
                 }
-            } else if (deviceItem.deviceOperationResult === DN.DevicesStateMonitor.Successful) {
+            } else if (deviceItem.deviceOperationResult === DevicesStateMonitor.Successful) {
                 devicenotifier.popupIcon = "dialog-ok"
                 popupIconTimer.restart()
-            } else if (deviceItem.deviceOperationResult === DN.DevicesStateMonitor.Unsuccessful) {
+            } else if (deviceItem.deviceOperationResult === DevicesStateMonitor.Unsuccessful) {
                 devicenotifier.popupIcon = "dialog-error"
                 popupIconTimer.restart()
             }
@@ -80,7 +78,7 @@ PlasmaExtras.ExpandableListItem {
             } else {
                 return "emblem-error"
             }
-        } else if (deviceItem.deviceOperationResult !== DN.DevicesStateMonitor.Working && deviceItem.deviceEmblems[0]) {
+        } else if (deviceItem.deviceOperationResult !== DevicesStateMonitor.Working && deviceItem.deviceEmblems[0]) {
             return deviceItem.deviceEmblems[0]
         } else {
             return ""
@@ -93,16 +91,16 @@ PlasmaExtras.ExpandableListItem {
         if (deviceItem.hasMessage) {
             return deviceItem.deviceErrorMessage
         }
-        if (deviceItem.deviceOperationResult === DN.DevicesStateMonitor.Checking) {
+        if (deviceItem.deviceOperationResult === DevicesStateMonitor.Checking) {
             return i18nc("Accessing is a less technical word for Mounting; translation should be short and mean \'Currently mounting this device\'", "Checking…")
-        } else if (deviceItem.deviceOperationResult === DN.DevicesStateMonitor.Repairing) {
+        } else if (deviceItem.deviceOperationResult === DevicesStateMonitor.Repairing) {
             return i18nc("Accessing is a less technical word for Mounting; translation should be short and mean \'Currently mounting this device\'", "Repairing…")
-        } else if (deviceItem.deviceOperationResult !== DN.DevicesStateMonitor.Working) {
+        } else if (deviceItem.deviceOperationResult !== DevicesStateMonitor.Working) {
             if (deviceItem.deviceFreeSpace > 0 && deviceItem.deviceSize > 0) {
                 return i18nc("@info:status Free disk space", "%1 free of %2", deviceItem.deviceFreeSpaceText, deviceItem.deviceSizeText)
             }
             return ""
-        } else if (!deviceItem.deviceMounted && deviceItem.deviceOperationResult === DN.DevicesStateMonitor.Working) {
+        } else if (!deviceItem.deviceMounted && deviceItem.deviceOperationResult === DevicesStateMonitor.Working) {
             return i18nc("Accessing is a less technical word for Mounting; translation should be short and mean \'Currently mounting this device\'", "Accessing…")
         } else if (unmountTimer.running) {
             // Unmounting; shown if unmount takes less than 1 second
@@ -139,7 +137,7 @@ PlasmaExtras.ExpandableListItem {
         }
     }
 
-    isBusy: deviceItem.deviceOperationResult === DN.DevicesStateMonitor.Working || deviceItem.deviceOperationResult === DN.DevicesStateMonitor.Checking || deviceItem.deviceOperationResult === DN.DevicesStateMonitor.Repairing
+    isBusy: deviceItem.deviceOperationResult === DevicesStateMonitor.Working || deviceItem.deviceOperationResult === DevicesStateMonitor.Checking || deviceItem.deviceOperationResult === DevicesStateMonitor.Repairing
 
     customExpandedViewContent: deviceActions !== undefined && deviceActions.rowCount() !== 0 && isFree ? actionComponent : null
 
