@@ -45,9 +45,9 @@ PlasmaExtras.Representation {
         target: dialogItem.Window.window
         function onVisibleChanged() {
             if (!dialogItem.Window.window.visible) {
-                ((stack.initialItem as Private.ClipboardMenu).view as ListView).currentIndex = 0;
                 ((stack.initialItem as Private.ClipboardMenu).view as ListView).positionViewAtBeginning();
             }
+            ((stack.initialItem as Private.ClipboardMenu).view as ListView).currentIndex = 0;
         }
     }
 
