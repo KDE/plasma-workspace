@@ -79,7 +79,8 @@ PlasmaComponents.AbstractButton {
             return "calendarCell-" + yearNumber + "-" + model.monthNumber + "-" + model.dayNumber;
         }
     }
-    hoverEnabled: true
+    hoverEnabled: isCurrent
+    enabled: isCurrent
 
     // type: either PlasmaCalendar.DaysModel or an equivalent ListModel
     required property QtObject dayModel
