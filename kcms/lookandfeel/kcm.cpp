@@ -13,6 +13,7 @@
 #include "config-kcm.h"
 #include "config-workspace.h"
 #include "lookandfeeldata.h"
+#include "lookandfeelsettings.h"
 
 #include <KDialogJobUiDelegate>
 #include <KIO/ApplicationLauncherJob>
@@ -38,6 +39,7 @@ K_PLUGIN_FACTORY_WITH_JSON(KCMLookandFeelFactory, "kcm_lookandfeel.json", regist
 
 KCMLookandFeel::KCMLookandFeel(QObject *parent, const KPluginMetaData &data)
     : KQuickManagedConfigModule(parent, data)
+    , m_data(new LookAndFeelData(this))
     , m_lnf(new LookAndFeelManager(this))
     , m_themeContents(LookAndFeelManager::Empty)
     , m_selectedContents(LookAndFeelManager::AppearanceSettings)
@@ -179,7 +181,7 @@ QList<KPackage::Package> KCMLookandFeel::availablePackages(const QStringList &co
 
 LookAndFeelSettings *KCMLookandFeel::lookAndFeelSettings() const
 {
-    return m_lnf->settings();
+    return m_data->settings();
 }
 
 void KCMLookandFeel::loadModel()

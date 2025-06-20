@@ -23,9 +23,9 @@
 #include <KQuickManagedConfigModule>
 
 #include "lookandfeelmanager.h"
-#include "lookandfeelsettings.h"
 
-class LookAndFeelManager;
+class LookAndFeelData;
+class LookAndFeelSettings;
 
 class KCMLookandFeel : public KQuickManagedConfigModule
 {
@@ -105,6 +105,7 @@ private:
     QList<KPackage::Package> availablePackages(const QStringList &components);
     void loadModel();
 
+    LookAndFeelData *const m_data;
     LookAndFeelManager *const m_lnf;
 
     LookAndFeelManager::Contents m_themeContents;

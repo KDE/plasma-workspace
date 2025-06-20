@@ -18,9 +18,6 @@
 #include <QDir>
 #include <QObject>
 
-class LookAndFeelData;
-class LookAndFeelSettings;
-
 class LookAndFeelManager : public QObject
 {
     Q_OBJECT
@@ -101,8 +98,6 @@ public:
 
     bool isPlasmaLocked() const;
 
-    LookAndFeelSettings *settings() const;
-
 Q_SIGNALS:
     void message();
     void iconsChanged();
@@ -132,7 +127,6 @@ private:
     void applyCursorTheme(const QString &themeName);
 
     QStringList m_cursorSearchPaths;
-    LookAndFeelData *const m_data;
     Mode m_mode = Mode::Apply;
     bool m_applyLatteLayout : 1;
     bool m_plasmashellChanged : 1;

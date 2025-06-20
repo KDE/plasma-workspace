@@ -14,8 +14,6 @@
 #include "../kcms-common_p.h"
 #include "config-kcm.h"
 #include "krdb.h"
-#include "lookandfeeldata.h"
-#include "lookandfeelsettings.h"
 #include <KIO/CommandLauncherJob>
 #include <KIconLoader>
 #include <KMessageBox>
@@ -78,7 +76,6 @@ bool configProvides(KSharedConfigPtr config, const QString &groupPath, const QSt
 
 LookAndFeelManager::LookAndFeelManager(QObject *parent)
     : QObject(parent)
-    , m_data(new LookAndFeelData(this))
     , m_plasmashellChanged(false)
     , m_fontsChanged(false)
     , m_plasmaLocked(false)
@@ -114,11 +111,6 @@ LookAndFeelManager::LookAndFeelManager(QObject *parent)
 bool LookAndFeelManager::isPlasmaLocked() const
 {
     return m_plasmaLocked;
-}
-
-LookAndFeelSettings *LookAndFeelManager::settings() const
-{
-    return m_data->settings();
 }
 
 LookAndFeelManager::Contents LookAndFeelManager::packageContents(const KPackage::Package &pkg) const
@@ -487,6 +479,7 @@ QString LookAndFeelManager::colorSchemeFile(const QString &schemeName) const
 void LookAndFeelManager::save(const KPackage::Package &package, Contents applyMask)
 {
     // The items to apply are the package contents filtered with the user selection mask
+    const QString packageId = package.metadata().pluginId();
     const Contents itemsToApply = packageContents(package) & applyMask;
 
     if (itemsToApply.testFlag(DesktopLayout) && m_mode == Mode::Apply) {
@@ -496,7 +489,7 @@ void LookAndFeelManager::save(const KPackage::Package &package, Contents applyMa
                                                               QStringLiteral("loadLookAndFeelDefaultLayout"));
 
         QList<QVariant> args;
-        args << m_data->settings()->lookAndFeelPackage();
+        args << packageId;
         message.setArguments(args);
 
         QDBusConnection::sessionBus().call(message, QDBus::NoBlock);
@@ -639,13 +632,13 @@ void LookAndFeelManager::save(const KPackage::Package &package, Contents applyMa
             if (!splashScreen.isEmpty()) {
                 setSplashScreen(splashScreen);
             } else {
-                setSplashScreen(m_data->settings()->lookAndFeelPackage());
+                setSplashScreen(packageId);
             }
         }
 
         QFile packageFile(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QLatin1String("/kdedefaults/package"));
         packageFile.open(QIODevice::WriteOnly);
-        packageFile.write(m_data->settings()->lookAndFeelPackage().toUtf8());
+        packageFile.write(packageId.toUtf8());
 
         if (m_mode == Mode::Defaults) {
             return;

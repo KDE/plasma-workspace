@@ -98,12 +98,11 @@ int main(int argc, char **argv)
             selection |= LookAndFeelManager::LayoutSettings;
         }
 
+        LookAndFeelSettings settings;
+        settings.setLookAndFeelPackage(requestedTheme);
+        settings.save();
+
         LookAndFeelManager manager;
-        LookAndFeelSettings *settings = manager.settings();
-
-        settings->setLookAndFeelPackage(requestedTheme);
-        settings->save();
-
         manager.save(p, selection);
     }
 
