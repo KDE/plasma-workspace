@@ -6,7 +6,6 @@
 */
 
 #include "../lookandfeelmanager.h"
-#include "../lookandfeelsettings.h"
 // Qt
 #include <KJob>
 #include <KPackage/Package>
@@ -191,8 +190,7 @@ void LookAndFeelManagerTest::testWindowSwitcher()
 
 void LookAndFeelManagerTest::testSave()
 {
-    KPackage::Package package =
-        KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"), m_lookAndFeel->settings()->lookAndFeelPackage());
+    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"), QStringLiteral("org.kde.test"));
     m_lookAndFeel->save(package, LookAndFeelManager::Empty);
 
     // On real setup we read entries from kdedefaults directory (XDG_CONFIG_DIRS is modified but not in test scenario)
