@@ -420,7 +420,6 @@ add_subdirectory(oom-notifier)
 add_subdirectory(libtaskmanager)
 add_subdirectory(libkmpris)
 add_subdirectory(libnotificationmanager)
-add_subdirectory(libcolorcorrect)
 add_subdirectory(components)
 
 add_subdirectory(plasma-windowed)
