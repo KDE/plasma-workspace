@@ -34,9 +34,6 @@ private:
     int maxDayTemp;
     int minNightTemp;
     int maxNightTemp;
-
-public Q_SLOTS:
-    void save() override;
 };
 
 }

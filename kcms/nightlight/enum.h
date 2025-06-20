@@ -13,27 +13,13 @@ namespace ColorCorrect
 Q_NAMESPACE
 enum NightLightMode {
     /**
-     * Color temperature is computed based on the current position of the Sun.
-     *
-     * Location of the user is provided by Plasma.
-     */
-    Automatic,
-    /**
-     * Color temperature is computed based on the current position of the Sun.
-     *
-     * Location of the user is provided by themselves.
-     */
-    Location,
-    /**
-     * Color temperature is computed based on the current time.
-     *
-     * Sunrise and sunset times have to be specified by the user.
-     */
-    Timings,
-    /**
      * Color temperature is constant thoughout the day.
      */
     Constant,
+    /**
+     * Colore temperature is synchronized to the dark-light cycle.
+     */
+    DarkLight,
 };
 
 Q_ENUM_NS(NightLightMode)

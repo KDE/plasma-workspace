@@ -9,8 +9,8 @@ pragma ComponentBehavior: Bound
 import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls as QQC2
-import QtPositioning
 
+import org.kde.config as KConfig
 import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCM
 
@@ -29,24 +29,6 @@ KCM.SimpleKCM {
 
     CC.CompositorAdaptor {
         id: compositorAdaptor
-    }
-
-    CC.SunCalc {
-        id: sunCalc
-    }
-
-    PositionSource {
-        id: automaticLocationProvider
-        active: kcm.nightLightSettings.active && kcm.nightLightSettings.mode === Private.NightLightMode.Automatic
-
-        readonly property bool locating: automaticLocationProvider.active
-            && automaticLocationProvider.sourceError == PositionSource.NoError
-            && !(automaticLocationProvider.position.latitudeValid || automaticLocationProvider.position.longitudeValid)
-
-        onPositionChanged: {
-            kcm.nightLightSettings.latitudeAuto = Math.round(automaticLocationProvider.position.coordinate.latitude * 100) / 100;
-            kcm.nightLightSettings.longitudeAuto = Math.round(automaticLocationProvider.position.coordinate.longitude * 100) / 100;
-        }
     }
 
     headerPaddingEnabled: false // Let the InlineMessage touch the edges
@@ -77,46 +59,68 @@ KCM.SimpleKCM {
             wrapMode: Text.WordWrap
         }
 
+        Kirigami.FormLayout {
+            id: parentLayout
+
+            RowLayout {
+                Kirigami.FormData.label: i18n("Switching times:")
+                spacing: Kirigami.Units.smallSpacing
+
+                QQC2.ComboBox {
+                    id: modeSwitcher
+                    // Work around https://bugs.kde.org/show_bug.cgi?id=403153
+                    Layout.minimumWidth: Kirigami.Units.gridUnit * 17
+                    currentIndex: kcm.nightLightSettings.active ? kcm.nightLightSettings.mode + 1 : 0
+                    model: [
+                        i18n("Always off"),  // This is not actually a Mode, but represents Night Light being disabled
+                        i18n("Always on night light"),
+                        i18n("Sunrise and sunset")
+                    ]
+                    onCurrentIndexChanged: {
+                        if (currentIndex !== 0) {
+                            kcm.nightLightSettings.mode = currentIndex - 1;
+                        }
+                        kcm.nightLightSettings.active = (currentIndex !== 0);
+                    }
+                }
+
+                QQC2.Button {
+                    icon.name: "configure"
+                    text: i18nc("@action:button Configure day-night cycle times", "Configure…")
+                    display: QQC2.AbstractButton.IconOnly
+
+                    QQC2.ToolTip.text: text
+                    QQC2.ToolTip.visible: hovered
+                    QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
+
+                    enabled: kcm.nightLightSettings.active && kcm.nightLightSettings.mode === Private.NightLightMode.DarkLight && KConfig.KAuthorized.authorizeControlModule("kcm_nighttime")
+                    onClicked: KCM.KCMLauncher.openSystemSettings("kcm_nighttime")
+                }
+            }
+        }
+
         DayNightView {
             Layout.margins: Kirigami.Units.smallSpacing
             Layout.bottomMargin: Kirigami.Units.gridUnit
             Layout.maximumWidth: Kirigami.Units.gridUnit * 30
             Layout.alignment: Qt.AlignCenter
 
-            readonly property real latitude: kcm.nightLightSettings.mode === Private.NightLightMode.Location
-                ? kcm.nightLightSettings.latitudeFixed
-                : automaticLocationProvider.position.latitudeValid ? automaticLocationProvider.position.coordinate.latitude : kcm.nightLightSettings.latitudeAuto
-            readonly property real longitude: kcm.nightLightSettings.mode === Private.NightLightMode.Location
-                ? kcm.nightLightSettings.longitudeFixed
-                : automaticLocationProvider.position.longitudeValid ? automaticLocationProvider.position.coordinate.longitude : kcm.nightLightSettings.longitudeAuto
-
-            readonly property var morningTimings: sunCalc.getMorningTimings(latitude, longitude)
-            readonly property var eveningTimings: sunCalc.getEveningTimings(latitude, longitude)
-
             enabled: kcm.nightLightSettings.active
-
             dayTemperature: kcm.nightLightSettings.dayTemperature
             nightTemperature: kcm.nightLightSettings.nightTemperature
-
             alwaysOn: kcm.nightLightSettings.mode === Private.NightLightMode.Constant
-            dayTransitionOn: kcm.nightLightSettings.mode === Private.NightLightMode.Timings
-                ? minutesForFixed(kcm.nightLightSettings.morningBeginFixed)
-                : minutesForDate(morningTimings.begin)
-            dayTransitionOff: kcm.nightLightSettings.mode === Private.NightLightMode.Timings
-                ? (minutesForFixed(kcm.nightLightSettings.morningBeginFixed) + kcm.nightLightSettings.transitionTime) % 1440
-                : minutesForDate(morningTimings.end)
-            nightTransitionOn: kcm.nightLightSettings.mode === Private.NightLightMode.Timings
-                ? minutesForFixed(kcm.nightLightSettings.eveningBeginFixed)
-                : minutesForDate(eveningTimings.begin)
-            nightTransitionOff: kcm.nightLightSettings.mode === Private.NightLightMode.Timings
-                ? (minutesForFixed(kcm.nightLightSettings.eveningBeginFixed) + kcm.nightLightSettings.transitionTime) % 1440
-                : minutesForDate(eveningTimings.end)
+            dayTransitionOn: minutesForDate(dayNightTimings.morningStart)
+            dayTransitionOff: minutesForDate(dayNightTimings.morningEnd)
+            nightTransitionOn: minutesForDate(dayNightTimings.eveningStart)
+            nightTransitionOff: minutesForDate(dayNightTimings.eveningEnd)
 
-            function minutesForFixed(dateString: string): int {
-                // The fixed timings format is "hhmm"
-                const hours = parseInt(dateString.substring(0, 2), 10)
-                const mins = parseInt(dateString.substring(2, 4), 10)
-                return hours * 60 + mins
+            function minutesForFixed(date: date): int {
+                return date.getHours() * 60 + date.getMinutes();
+            }
+
+            Private.DayNightTimings {
+                id: dayNightTimings
+                dateTime: new Date()
             }
         }
 
@@ -130,7 +134,7 @@ KCM.SimpleKCM {
         }
 
         Kirigami.FormLayout {
-            id: parentLayout
+            twinFormLayouts: parentLayout
 
             GridLayout {
                 Kirigami.FormData.label: i18n("Day light temperature:")
@@ -258,159 +262,6 @@ KCM.SimpleKCM {
                     textFormat: Text.PlainText
                 }
                 Item {}
-            }
-
-            Item { implicitHeight: Kirigami.Units.largeSpacing }
-
-            QQC2.ComboBox {
-                id: modeSwitcher
-                // Work around https://bugs.kde.org/show_bug.cgi?id=403153
-                Layout.minimumWidth: Kirigami.Units.gridUnit * 17
-                Kirigami.FormData.label: i18n("Switching times:")
-                currentIndex: kcm.nightLightSettings.active ? kcm.nightLightSettings.mode + 1 : 0
-                model: [
-                    i18n("Always off"),  // This is not actually a Mode, but represents Night Light being disabled
-                    i18n("Sunset and sunrise at current location"),
-                    i18n("Sunset and sunrise at manual location"),
-                    i18n("Custom times"),
-                    i18n("Always on night light")
-                ]
-                onCurrentIndexChanged: {
-                    if (currentIndex !== 0) {
-                        kcm.nightLightSettings.mode = currentIndex - 1;
-                    }
-                    kcm.nightLightSettings.active = (currentIndex !== 0);
-                }
-            }
-
-            // Show current location in auto mode
-            QQC2.Label {
-                Kirigami.FormData.label: i18nc("@label The coordinates for the current location", "Current location:")
-
-                visible: automaticLocationProvider.active && !automaticLocationProvider.locating
-                enabled: kcm.nightLightSettings.active
-                wrapMode: Text.Wrap
-                text: i18n("Latitude: %1°   Longitude: %2°",
-                    Math.round((automaticLocationProvider.position.latitudeValid ? automaticLocationProvider.position.coordinate.latitude : 0) * 100) / 100,
-                    Math.round((automaticLocationProvider.position.longitudeValid ? automaticLocationProvider.position.coordinate.longitude : 0) * 100) / 100)
-                textFormat: Text.PlainText
-            }
-
-            // Inform about geolocation access in auto mode
-            // The system settings window likes to take over the cursor with a plain label.
-            // The TextEdit 'takes priority' over the system settings window trying to eat the mouse,
-            // allowing us to use the HoverHandler boilerplate for proper link handling
-            TextEdit {
-                Layout.maximumWidth: modeSwitcher.width
-
-                visible: modeSwitcher.currentIndex - 1 === Private.NightLightMode.Automatic && kcm.nightLightSettings.active
-                enabled: kcm.nightLightSettings.active
-
-                textFormat: TextEdit.RichText
-                wrapMode: Text.Wrap
-                readOnly: true
-
-                color: Kirigami.Theme.textColor
-                selectedTextColor: Kirigami.Theme.highlightedTextColor
-                selectionColor: Kirigami.Theme.highlightColor
-
-                text: automaticLocationProvider.name === "geoclue2"
-                    ? xi18nc("@info", "The <application>GeoClue2</application> service will be used to periodically update the device's location using GPS or cell tower triangulation if available, or else by sending its IP address to <link url='https://geoip.com/privacy/'>GeoIP</link>.")
-                    : xi18nc("@info", "The <application>%1</application> service will be used to periodically update the device's location. Please open a bug report at <link url='https://bugs.kde.org'>https://bugs.kde.org</link> asking KDE developers to write a detailed description of what this service will do.", automaticLocationProvider.name)
-                font: Kirigami.Theme.smallFont
-
-                onLinkActivated: (url) => Qt.openUrlExternally(url)
-
-                HoverHandler {
-                    acceptedButtons: Qt.NoButton
-                    cursorShape: parent.hoveredLink ? Qt.PointingHandCursor : Qt.ArrowCursor
-                }
-            }
-
-            // Show time entry fields in manual timings mode
-            TimeField {
-                id: eveningBeginFixedField
-                visible: kcm.nightLightSettings.mode === Private.NightLightMode.Timings && kcm.nightLightSettings.active
-                Kirigami.FormData.label: i18n("Begin night light at:")
-
-                backend: kcm.nightLightSettings.eveningBeginFixed
-                onBackendChanged: {
-                    morningBeginFixedField.preventOverlapWith(backendToDate(), transitionDurationField.value)
-                    kcm.nightLightSettings.eveningBeginFixed = backend;
-                }
-                KCM.SettingStateBinding {
-                    configObject: kcm.nightLightSettings
-                    settingName: "EveningBeginFixed"
-                    extraEnabledConditions: kcm.nightLightSettings.active && kcm.nightLightSettings.mode === Private.NightLightMode.Timings
-                }
-            }
-
-            TimeField {
-                id: morningBeginFixedField
-                visible: kcm.nightLightSettings.mode === Private.NightLightMode.Timings && kcm.nightLightSettings.active
-                Kirigami.FormData.label: i18n("Begin day light at:")
-                backend: kcm.nightLightSettings.morningBeginFixed
-                onBackendChanged: {
-                    eveningBeginFixedField.preventOverlapWith(backendToDate(), transitionDurationField.value)
-                    kcm.nightLightSettings.morningBeginFixed = backend;
-                }
-                KCM.SettingStateBinding {
-                    configObject: kcm.nightLightSettings
-                    settingName: "MorningBeginFixed"
-                    extraEnabledConditions: kcm.nightLightSettings.active && kcm.nightLightSettings.mode === Private.NightLightMode.Timings
-                }
-            }
-
-            QQC2.SpinBox {
-                id: transitionDurationField
-                visible: kcm.nightLightSettings.mode === Private.NightLightMode.Timings && kcm.nightLightSettings.active
-                Kirigami.FormData.label: i18n("Transition duration:")
-                from: 1
-                to: 600 // less than 10 hours (in minutes: 600)
-                stepSize: 5
-                value: kcm.nightLightSettings.transitionTime
-                editable: true
-                onValueModified: {
-                    kcm.nightLightSettings.transitionTime = value;
-                    eveningBeginFixedField.preventOverlapWith(morningBeginFixedField.backendToDate(), value);
-                }
-                textFromValue: function(value, locale) {
-                    return i18np("%1 minute", "%1 minutes", value);
-                }
-                valueFromText: function(text, locale) {
-                    return parseInt(text);
-                }
-
-                KCM.SettingStateBinding {
-                    configObject: kcm.nightLightSettings
-                    settingName: "TransitionTime"
-                    extraEnabledConditions: kcm.nightLightSettings.active
-                }
-
-                QQC2.ToolTip {
-                    text: i18n("Input minutes - min. 1, max. 600")
-                }
-            }
-        }
-
-        // Show location chooser in manual location mode
-        LocationsFixedView {
-            visible: kcm.nightLightSettings.mode === Private.NightLightMode.Location && kcm.nightLightSettings.active
-            Layout.alignment: Qt.AlignHCenter
-            enabled: kcm.nightLightSettings.active
-        }
-
-        Item {
-            visible: automaticLocationProvider.locating
-            Layout.topMargin: Kirigami.Units.largeSpacing * 4
-            Layout.fillWidth: true
-            implicitHeight: loadingPlaceholder.implicitHeight
-
-            Kirigami.LoadingPlaceholder {
-                id: loadingPlaceholder
-
-                text: i18nc("@info:placeholder", "Locating…")
-                anchors.centerIn: parent
             }
         }
     }

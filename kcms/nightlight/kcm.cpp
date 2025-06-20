@@ -5,6 +5,7 @@
 */
 
 #include "kcm.h"
+#include "daynighttimings.h"
 
 #include <QDBusConnection>
 #include <QDBusMessage>
@@ -28,6 +29,7 @@ KCMNightLight::KCMNightLight(QObject *parent, const KPluginMetaData &data)
 {
     const auto uri = "org.kde.private.kcms.nightlight";
     qmlRegisterAnonymousType<NightLightSettings>(uri, 1);
+    qmlRegisterType<DayNightTimings>(uri, 1, 0, "DayNightTimings");
     qmlRegisterUncreatableMetaObject(ColorCorrect::staticMetaObject, uri, 1, 0, "NightLightMode", QStringLiteral("Error: only enums"));
 
     minDayTemp = nightLightSettings()->findItem(u"DayTemperature"_s)->minValue().toInt();
@@ -41,23 +43,6 @@ KCMNightLight::KCMNightLight(QObject *parent, const KPluginMetaData &data)
 NightLightSettings *KCMNightLight::nightLightSettings() const
 {
     return m_data->settings();
-}
-
-void KCMNightLight::save()
-{
-    KQuickManagedConfigModule::save();
-
-    // load/unload colorcorrectlocationupdater based on whether user set it to automatic location
-    QDBusConnection dbus = QDBusConnection::sessionBus();
-
-    bool enableUpdater = (nightLightSettings()->mode() == NightLightMode::Automatic);
-
-    QDBusMessage loadMsg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kded6"),
-                                                          QStringLiteral("/kded"),
-                                                          QStringLiteral("org.kde.kded6"),
-                                                          (enableUpdater ? QStringLiteral("loadModule") : QStringLiteral("unloadModule")));
-    loadMsg.setArguments({QVariant(QStringLiteral("colorcorrectlocationupdater"))});
-    dbus.call(loadMsg, QDBus::NoBlock);
 }
 }
 #include "kcm.moc"
