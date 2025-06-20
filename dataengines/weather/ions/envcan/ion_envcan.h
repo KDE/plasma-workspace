@@ -125,7 +125,8 @@ public:
     struct UrlInfo {
         QString province;
         QString cityCode;
-        QString hour;
+        QStringList hours;
+        int hourIndex = 0;
         QString fileName;
         int requests = 0;
     };
