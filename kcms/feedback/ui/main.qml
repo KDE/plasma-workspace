@@ -145,27 +145,6 @@ SimpleKCM {
                         text: "· " + modelData.description
                         textFormat: Text.PlainText
                         Layout.fillWidth: true
-
-                        MouseArea {
-                            anchors.fill: parent
-                            hoverEnabled: true
-                            QQC2.ToolTip {
-                                width: iconsLayout.implicitWidth + Kirigami.Units.largeSpacing * 2
-                                height: iconsLayout.implicitHeight + Kirigami.Units.smallSpacing * 2
-                                visible: parent.containsMouse
-                                RowLayout {
-                                    id: iconsLayout
-                                    Repeater {
-                                        model: modelData.icons
-                                        delegate: Kirigami.Icon {
-                                            implicitHeight: Kirigami.Units.iconSizes.medium
-                                            implicitWidth: Kirigami.Units.iconSizes.medium
-                                            source: modelData
-                                        }
-                                    }
-                                }
-                            }
-                        }
                     }
                 }
             }
