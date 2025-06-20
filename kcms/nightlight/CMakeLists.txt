@@ -1,6 +1,12 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_nightlight\")
 
-kcmutils_add_qml_kcm(kcm_nightlight SOURCES kcm.cpp enum.h)
+kcmutils_add_qml_kcm(kcm_nightlight)
+
+target_sources(kcm_nightlight PRIVATE
+    daynighttimings.cpp
+    enum.h
+    kcm.cpp
+)
 
 kcmutils_generate_module_data(kcm_nightlight
     MODULE_DATA_HEADER nightlightdata.h
@@ -15,4 +21,5 @@ target_link_libraries(kcm_nightlight PRIVATE
     KF6::KCMUtils
     PW::LibColorCorrect
     Qt::DBus
+    KNightTime
 )
