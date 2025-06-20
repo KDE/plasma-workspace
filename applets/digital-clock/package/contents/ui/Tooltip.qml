@@ -12,6 +12,7 @@ import QtQuick.Layouts
 import org.kde.plasma.components as PlasmaComponents
 import org.kde.plasma.plasmoid
 import org.kde.kirigami as Kirigami
+import org.kde.plasma.clock 1.0
 
 Item {
     id: toolTipContentItem
@@ -40,6 +41,13 @@ Item {
         return description.join('; ');
     }
 
+    Clock {
+        id: clock
+        timeZone: Plasmoid.configuration.lastSelectedTimezone
+        Component.onCompleted: console.log(clock.timezone)
+    }
+
+
     ColumnLayout {
         id: mainLayout
 
@@ -60,7 +68,7 @@ Item {
             level: 3
             elide: Text.ElideRight
             // keep this consistent with toolTipMainText in analog-clock
-            property var mainText: clocks.visible ? Qt.formatDate(root.currentDateTimeInSelectedTimeZone, Qt.locale(), Locale.LongFormat) : Qt.locale().toString(root.currentDateTimeInSelectedTimeZone, "dddd")
+            property var mainText: clocks.visible ? Qt.formatDate(clock.dateTime, Qt.locale(), Locale.LongFormat) : Qt.locale().toString(clock.dateTime, "dddd")
             property bool anyTimezoneSet: !!mainText
             text: anyTimezoneSet ? mainText : i18nc("@label main text shown in digital clock's tooltip when timezone is missing", "Time zone is not set")
             textFormat: Text.PlainText
@@ -76,11 +84,11 @@ Item {
 
             property var subText: {
                 if (Plasmoid.configuration.showSeconds === 0) {
-                    return Qt.formatDate(root.currentDateTimeInSelectedTimeZone, Qt.locale(), root.dateFormatString);
+                    return Qt.format(clock.dateTime, Qt.locale(), root.dateFormatString);
                 } else {
                     return "%1\n%2"
-                        .arg(Qt.formatTime(root.currentDateTimeInSelectedTimeZone, Qt.locale(), Locale.LongFormat))
-                        .arg(Qt.formatDate(root.currentDateTimeInSelectedTimeZone, Qt.locale(), root.dateFormatString))
+                        .arg(Qt.formatTime(clock.dateTime, Qt.locale(), Locale.LongFormat))
+                        .arg(Qt.formatDate(clock.dateTime, Qt.locale(), root.dateFormatString))
                 }
             }
             text: tooltipMaintext.anyTimezoneSet ? subText : i18nc("@label sub text shown in digital clock's tooltip when timezone is missing", "Click the clock icon to open Date & Time settings and set a time zone.")
@@ -130,9 +138,15 @@ Item {
                         if (index % 2 === 0) {
                             return i18nc("@label %1 is a city or time zone name", "%1:", root.displayStringForTimeZone(modelData));
                         } else {
-                            return timeForZone(modelData, Plasmoid.configuration.showSeconds > 0);
+                            return formatTime(tzClock.dateTime, Plasmoid.configuration.showSeconds > 0);
                         }
                     }
+                    Clock {
+                        id: tzClock
+                        timeZone: modelData
+                        trackSeconds: Plasmoid.configuration.showSeconds
+                    }
+
                     textFormat: Text.PlainText
                     font.weight: root.timeZoneResolvesToLastSelectedTimeZone(modelData) ? Font.Bold : Font.Normal
                     font.features: {

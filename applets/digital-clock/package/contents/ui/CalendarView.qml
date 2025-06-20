@@ -21,6 +21,7 @@ import org.kde.plasma.private.digitalclock
 import org.kde.config as KConfig
 import org.kde.kcmutils as KCMUtils
 import org.kde.kirigami as Kirigami
+import org.kde.plasma.clock 1.0
 
 // Top-level layout containing:
 // - Leading column with world clock and agenda view
@@ -502,12 +503,21 @@ PlasmaExtras.Representation {
                     rightPadding: calendar.paddings
 
                     highlighted: ListView.isCurrentItem
-                    Accessible.name: root.displayStringForTimeZone(modelData)
-                    Accessible.description: root.timeForZone(modelData, Plasmoid.configuration.showSeconds === 2)
+                    // Accessible.name: root.displayStringForTimeZone(modelData)
+                    Accessible.description: root.formatTime(tzClock.dateTime, Plasmoid.configuration.showSeconds === 2)
 
                     // Only highlight with keyboard
                     down: false
                     hoverEnabled: false
+
+                    Clock {
+                        id: tzClock
+                        timeZone: modelData
+                        Component.onCompleted: console.log(tzClock.timeZone, tzClock.dateTime)
+
+                        onDateTimeChanged: console.log("AA", tzClock.dateTime, Qt.formatTime(dateTime))
+                        trackSeconds: true
+                    }
 
                     contentItem: RowLayout {
                         spacing: Kirigami.Units.smallSpacing
@@ -523,7 +533,7 @@ PlasmaExtras.Representation {
 
                         PlasmaComponents.Label {
                             horizontalAlignment: Qt.AlignRight
-                            text: root.timeForZone(listItem.modelData, Plasmoid.configuration.showSeconds === 2)
+                            text: root.formatTime(tzClock.dateTime, Plasmoid.configuration.showSeconds === 2)
                             textFormat: Text.PlainText
                             font.weight: listItem.isCurrentTimeZone ? Font.Bold : Font.Normal
                             elide: Text.ElideRight
@@ -588,7 +598,7 @@ PlasmaExtras.Representation {
             borderOpacity: 0.25
 
             eventPluginsManager: eventPluginsManager
-            today: root.currentDateTimeInSelectedTimeZone
+            today: root.currentTime
             firstDayOfWeek: Plasmoid.configuration.firstDayOfWeek > -1
                 ? Plasmoid.configuration.firstDayOfWeek
                 : Qt.locale().firstDayOfWeek
