@@ -13,37 +13,20 @@ import QtQuick.Controls as QQC2
 import org.kde.config as KConfig
 import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCM
-
-import org.kde.colorcorrect as CC
-
 import org.kde.private.kcms.nightlight as Private
 
 KCM.SimpleKCM {
     id: root
 
-    readonly property int error: compositorAdaptor.error
     property bool defaultRequested: false
 
     implicitHeight: Kirigami.Units.gridUnit * 29
     implicitWidth: Kirigami.Units.gridUnit * 35
 
-    CC.CompositorAdaptor {
-        id: compositorAdaptor
-    }
-
-    headerPaddingEnabled: false // Let the InlineMessage touch the edges
-    header: Kirigami.InlineMessage {
-        id: errorMessage
-        visible: compositorAdaptor.error !== CC.CompositorAdaptor.ErrorCodeSuccess
-        position: Kirigami.InlineMessage.Position.Header
-        type: Kirigami.MessageType.Error
-        text: compositorAdaptor.errorText
-    }
-
     Timer {
         id: previewTimer
         interval: Kirigami.Units.humanMoment
-        onTriggered: compositorAdaptor.stopPreview()
+        onTriggered: kcm.stopPreview()
     }
 
     ColumnLayout {
@@ -157,7 +140,7 @@ KCM.SimpleKCM {
 
                     onMoved: {
                         kcm.nightLightSettings.dayTemperature = value
-                        compositorAdaptor.preview(value)
+                        kcm.preview(value)
 
                         // This can fire for scroll events; in this case we need
                         // to use a timer to make the preview message disappear, since
@@ -169,7 +152,7 @@ KCM.SimpleKCM {
                     }
                     onPressedChanged: {
                         if (!pressed) {
-                            compositorAdaptor.stopPreview()
+                            kcm.stopPreview()
                         }
                     }
 
@@ -221,7 +204,7 @@ KCM.SimpleKCM {
 
                     onMoved: {
                         kcm.nightLightSettings.nightTemperature = value
-                        compositorAdaptor.preview(value)
+                        kcm.preview(value)
 
                         // This can fire for scroll events; in this case we need
                         // to use a timer to make the preview disappear, since
@@ -233,7 +216,7 @@ KCM.SimpleKCM {
                     }
                     onPressedChanged: {
                         if (!pressed) {
-                            compositorAdaptor.stopPreview()
+                            kcm.stopPreview()
                         }
                     }
 

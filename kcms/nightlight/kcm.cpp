@@ -44,6 +44,19 @@ NightLightSettings *KCMNightLight::nightLightSettings() const
 {
     return m_data->settings();
 }
+
+void KCMNightLight::preview(uint temperature)
+{
+    auto message = QDBusMessage::createMethodCall(u"org.kde.KWin.NightLight"_s, u"/org/kde/KWin/NightLight"_s, u"org.kde.KWin.NightLight"_s, u"preview"_s);
+    message.setArguments({temperature});
+    QDBusConnection::sessionBus().send(message);
+}
+
+void KCMNightLight::stopPreview()
+{
+    auto message = QDBusMessage::createMethodCall(u"org.kde.KWin.NightLight"_s, u"/org/kde/KWin/NightLight"_s, u"org.kde.KWin.NightLight"_s, u"stopPreview"_s);
+    QDBusConnection::sessionBus().send(message);
+}
 }
 #include "kcm.moc"
 
