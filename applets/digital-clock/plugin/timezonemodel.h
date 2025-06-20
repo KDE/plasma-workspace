@@ -87,3 +87,15 @@ private:
     QStringList m_selectedTimeZones;
     TimeZonesI18n *m_timezonesI18n;
 };
+
+class TimeZoneUtils : public QObject
+{
+    Q_OBJECT
+    QML_ELEMENT
+    QML_SINGLETON
+public:
+    /*!
+     * Returns a list of timezones ordered by offset
+     */
+    Q_INVOKABLE QStringList sortedTimeZones(const QStringList timeZones) const;
+};

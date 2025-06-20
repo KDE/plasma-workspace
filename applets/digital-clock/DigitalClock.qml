@@ -17,6 +17,7 @@ import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.components as PlasmaComponents
 import org.kde.plasma.private.digitalclock
 import org.kde.kirigami as Kirigami
+import org.kde.plasma.clock
 
 MouseArea {
     id: main
@@ -79,11 +80,19 @@ MouseArea {
     Accessible.role: Accessible.Button
     Accessible.onPressAction: clicked(null)
 
+    Clock {
+        id: clock
+        timeZone: Plasmoid.configuration.lastSelectedTimezone
+        trackSeconds: Plasmoid.configuration.showSeconds == 2 // show seconds always
+        onDateTimeChanged: main.dateTimeChanged()
+        onTimeZoneChanged: main.setupLabels()
+    }
+
     Connections {
         target: Plasmoid
         function onContextualActionsAboutToShow() {
             ClipboardMenu.secondsIncluded = (Plasmoid.configuration.showSeconds === 2);
-            ClipboardMenu.currentDate = main.getCurrentTime();
+            ClipboardMenu.currentDate = clock.dateTime;
         }
     }
 
@@ -119,26 +128,6 @@ MouseArea {
         function onUse24hFormatChanged() {
             main.timeFormatCorrection();
         }
-    }
-
-    function getCurrentTime(): date {
-        const data = dataSource.data[Plasmoid.configuration.lastSelectedTimezone];
-        // The order of signal propagation is unspecified, so we might get
-        // here before the dataSource has updated. Alternatively, a buggy
-        // configuration view might set lastSelectedTimezone to a new time
-        // zone before applying the new list, or it may just be set to
-        // something invalid in the config file.
-        if (data === undefined) {
-            return new Date();
-        }
-
-        // get the time for the given time zone from the dataengine
-        const now = data["DateTime"];
-        // get current UTC time
-        const msUTC = now.getTime() + (now.getTimezoneOffset() * 60000);
-        // add the dataengine TZ offset to it
-        const currentTime = new Date(msUTC + (data["Offset"] * 1000));
-        return currentTime;
     }
 
     function pointToPixel(pointSize: int): int {
@@ -504,9 +493,6 @@ MouseArea {
         if (newIndex !== tzIndex) {
             Plasmoid.configuration.lastSelectedTimezone = Plasmoid.configuration.selectedTimeZones[newIndex];
             tzIndex = newIndex;
-
-            dataSource.dataChanged();
-            setupLabels();
         }
     }
 
@@ -542,7 +528,7 @@ MouseArea {
                 }
                 minimumPixelSize: 1
 
-                text: Qt.formatTime(main.getCurrentTime(), Plasmoid.configuration.showSeconds === 2 ? main.timeFormatWithSeconds : main.timeFormat)
+                text: Qt.formatTime(clock.dateTime, Plasmoid.configuration.showSeconds === 2 ? main.timeFormatWithSeconds : main.timeFormat)
                 textFormat: Text.PlainText
 
                 verticalAlignment: Text.AlignVCenter
@@ -657,20 +643,9 @@ MouseArea {
     }
 
     function setupLabels() {
-        const lastSelectedData = dataSource.data[Plasmoid.configuration.lastSelectedTimezone];
-        const localData = dataSource.data["Local"];
-        // The order of signal propagation is unspecified, so we might get
-        // here before the dataSource has updated. Alternatively, a buggy
-        // configuration view might set lastSelectedTimezone to a new time
-        // zone before applying the new list, or it may just be set to
-        // something invalid in the config file.
-        if (lastSelectedData === undefined || localData === undefined) {
-            return;
-        }
-
         const showTimezone = Plasmoid.configuration.showLocalTimezone
             || (Plasmoid.configuration.lastSelectedTimezone !== "Local"
-                && lastSelectedData["Timezone City"] !== localData["Timezone City"]);
+                && !clock.isSystemTimeZone);
 
         let timezoneString = "";
 
@@ -678,18 +653,13 @@ MouseArea {
             // format time zone as tz code, city or UTC offset
             switch (Plasmoid.configuration.displayTimezoneFormat) {
             case 0: // Code
-                timezoneString = lastSelectedData["Timezone Abbreviation"]
+                timezoneString = clock.timeZoneCode;
                 break;
             case 1: // City
-                timezoneString = TimeZonesI18n.i18nCity(lastSelectedData["Timezone"]);
+                timezoneString = TimeZonesI18n.i18nCity(clock.timeZone);
                 break;
             case 2: // Offset from UTC time
-                const lastOffset = lastSelectedData["Offset"];
-                const symbol = lastOffset > 0 ? '+' : '';
-                const hours = Math.floor(lastOffset / 3600);
-                const minutes = Math.floor(lastOffset % 3600 / 60);
-
-                timezoneString = "UTC" + symbol + hours.toString().padStart(2, '0') + ":" + minutes.toString().padStart(2, '0');
+                timezoneString = clock.timeZoneOffset;
                 break;
             }
             if ((Plasmoid.configuration.showDate || oneLineMode) && Plasmoid.formFactor === PlasmaCore.Types.Horizontal) {
@@ -700,7 +670,7 @@ MouseArea {
         timeZoneLabel.text = timezoneString;
 
         if (Plasmoid.configuration.showDate) {
-            dateLabel.text = dateFormatter(getCurrentTime());
+            dateLabel.text = dateFormatter(clock.dateTime);
         } else {
             // clear it so it doesn't take space in the layout
             dateLabel.text = "";
@@ -740,18 +710,11 @@ MouseArea {
         if (Plasmoid.configuration.showDate) {
             // If the date has changed, force size recalculation, because the day name
             // or the month name can now be longer/shorter, so we need to adjust applet size
-            const currentDate = Qt.formatDateTime(getCurrentTime(), "yyyy-MM-dd");
+            const currentDate = Qt.formatDateTime(clock.dateTime, "yyyy-MM-dd");
             if (lastDate !== currentDate) {
                 doCorrections = true;
                 lastDate = currentDate
             }
-        }
-
-        const currentTimeZoneOffset = dataSource.data["Local"]["Offset"] / 60;
-        if (currentTimeZoneOffset !== tzOffset) {
-            doCorrections = true;
-            tzOffset = currentTimeZoneOffset;
-            Date.timeZoneUpdated(); // inform the QML JS engine about TZ change
         }
 
         if (doCorrections) {
@@ -764,27 +727,11 @@ MouseArea {
     }
 
     Component.onCompleted: {
-        // Sort the time zones according to their offset
-        // Calling sort() directly on Plasmoid.configuration.selectedTimeZones
-        // has no effect, so sort a copy and then assign the copy to it
-        const byOffset = (a, b) => a.offset - b.offset;
-        const sortedTimeZones = Plasmoid.configuration.selectedTimeZones
-            .map(timeZone => ({
-                timeZone,
-                // If not found, move it to the bottom by giving it the highest offset as a fallback
-                offset: dataSource.data[timeZone]?.["Offset"] ?? 86400,
-            }));
-        sortedTimeZones.sort(byOffset);
-        Plasmoid.configuration.selectedTimeZones = sortedTimeZones
-            .map(({ timeZone }) => timeZone);
+        Plasmoid.configuration.selectedTimeZones = TimeZoneUtils.sortedTimeZones(Plasmoid.configuration.selectedTimeZones);
 
         setTimeZoneIndex();
-        tzOffset = -(new Date().getTimezoneOffset());
         dateTimeChanged();
         timeFormatCorrection();
-
-        dataSource.dataChanged
-            .connect(dateTimeChanged);
 
         dateFormatterChanged
             .connect(setupLabels);
