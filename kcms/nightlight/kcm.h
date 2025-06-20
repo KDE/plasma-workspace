@@ -28,6 +28,9 @@ public:
 
     NightLightSettings *nightLightSettings() const;
 
+    Q_INVOKABLE void preview(uint temperature);
+    Q_INVOKABLE void stopPreview();
+
 private:
     NightLightData *const m_data;
     int minDayTemp;

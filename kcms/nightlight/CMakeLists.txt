@@ -19,7 +19,6 @@ target_link_libraries(kcm_nightlight PRIVATE
     KF6::KCMUtilsQuick
     KF6::I18n
     KF6::KCMUtils
-    PW::LibColorCorrect
     Qt::DBus
     KNightTime
 )
