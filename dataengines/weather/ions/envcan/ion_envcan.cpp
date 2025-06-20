@@ -531,8 +531,8 @@ void EnvCanadaIon::getWeatherData(const QString &source)
     // 1. Base URL, on the territory dir, to get the list of hours
     QString url = u"https://dd.weather.gc.ca/today/citypage_weather/%1/"_s.arg(info.province);
     // 2. When we know the hour folder, we check for the weather report files
-    if (!info.hour.isEmpty()) {
-        url += info.hour + u"/";
+    if (!info.hours.isEmpty()) {
+        url += info.hours.at(info.hourIndex) + u"/";
     }
     // 3. Now we have the full information to compose the URL
     if (!info.fileName.isEmpty()) {
@@ -732,7 +732,7 @@ bool EnvCanadaIon::readXMLData(const QString &source, QXmlStreamReader &xml)
 
 void EnvCanadaIon::parseDirListing(WeatherData::UrlInfo &info, QXmlStreamReader &xml)
 {
-    const bool expectingFileNames = !info.hour.isEmpty();
+    const bool expectingFileNames = !info.hours.isEmpty();
 
     while (!xml.atEnd()) {
         xml.readNext();
@@ -746,29 +746,32 @@ void EnvCanadaIon::parseDirListing(WeatherData::UrlInfo &info, QXmlStreamReader 
                 item.slice(0, item.length() - 1);
 
                 bool isHour = false;
-                const int hour = item.toInt(&isHour);
-
-                if (isHour && hour > info.hour.toInt()) {
-                    info.hour = item;
-                    continue;
+                item.toInt(&isHour);
+                if (isHour) {
+                    info.hours.prepend(item);
                 }
-            }
-
-            // Check just for files that match our city code en English language
-            if (!item.endsWith(u"%1_en.xml"_s.arg(info.cityCode))) {
                 continue;
             }
 
-            info.fileName = item;
+            // Check just for files that match our city code en English language
+            if (item.endsWith(u"%1_en.xml"_s.arg(info.cityCode))) {
+                info.fileName = item;
+            }
         }
     }
 
+    // Sort hours in reverse order (more recent first)
+    if (!expectingFileNames && !info.hours.isEmpty()) {
+        std::sort(info.hours.begin(), info.hours.end(), [](const auto &a, const auto &b) {
+            return a.toInt() > b.toInt();
+        });
+    }
+
     // If we didn't find the filename in the current hour folder
-    // set it up to check on the previous one
+    // set up a new requests to search it on the previous one
     if (expectingFileNames && info.fileName.isEmpty()) {
-        const int currentHour = info.hour.toInt();
-        if (currentHour > 0) {
-            info.hour = QString::number(currentHour - 1).rightJustified(2, u'0');
+        if (info.hourIndex < info.hours.count()) {
+            info.hourIndex++;
             info.requests--;
         }
     }
