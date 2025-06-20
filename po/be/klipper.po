@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-24 02:38+0000\n"
+"POT-Creation-Date: 2025-06-20 02:34+0000\n"
 "PO-Revision-Date: 2024-11-04 22:00\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -658,69 +658,63 @@ msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&Ачысціць гісторыю буфера абмену"
 
-#: klipper.cpp:116
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "&Configure Klipper…"
-msgstr "&Наладжванне Klipper…"
-
-#: klipper.cpp:120
+#: klipper.cpp:114
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Уласнаручны выклік дзеяння ў бягучым буферы абмену"
 
-#: klipper.cpp:128
+#: klipper.cpp:122
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "&Рэдагаваць змесціва…"
 
-#: klipper.cpp:134
+#: klipper.cpp:128
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "&Паказаць штрых-код…"
 
-#: klipper.cpp:143
+#: klipper.cpp:137
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Наступны элемент гісторыі"
 
-#: klipper.cpp:148
+#: klipper.cpp:142
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Папярэдні элемент гісторыі"
 
-#: klipper.cpp:155
+#: klipper.cpp:149
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Паказваць элементы буфера абмену ў месцы курсора мышы"
 
-#: klipper.cpp:435
+#: klipper.cpp:429
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Мабільны штрых-код"
 
-#: klipper.cpp:478 klipper.cpp:487
+#: klipper.cpp:472 klipper.cpp:481
 #, kde-format
 msgid "Clipboard history"
 msgstr "Гісторыя буфера абмену"
 
-#: klipper.cpp:504
+#: klipper.cpp:498
 #, kde-format
 msgid "up"
 msgstr "уверх"
 
-#: klipper.cpp:511
+#: klipper.cpp:505
 #, kde-format
 msgid "current"
 msgstr "бягучая"
 
-#: klipper.cpp:518
+#: klipper.cpp:512
 #, kde-format
 msgid "down"
 msgstr "уніз"
@@ -943,6 +937,10 @@ msgstr "Выплыўное акно буфера абмену"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Скасаваць"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "&Configure Klipper…"
+#~ msgstr "&Наладжванне Klipper…"
 
 #~ msgctxt "@info"
 #~ msgid ""

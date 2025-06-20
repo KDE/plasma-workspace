@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-24 02:38+0000\n"
+"POT-Creation-Date: 2025-06-20 02:34+0000\n"
 "PO-Revision-Date: 2024-10-08 14:36+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -639,69 +639,63 @@ msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "V&yčistit historii schránky"
 
-#: klipper.cpp:116
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "&Configure Klipper…"
-msgstr "Nastavit &Klipper…"
-
-#: klipper.cpp:120
+#: klipper.cpp:114
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Ručně vyvolat činnost nad současným obsahem schránky"
 
-#: klipper.cpp:128
+#: klipper.cpp:122
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "&Upravit obsah…"
 
-#: klipper.cpp:134
+#: klipper.cpp:128
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "Zobrazit čárový &kód..."
 
-#: klipper.cpp:143
+#: klipper.cpp:137
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Následující položka v historii"
 
-#: klipper.cpp:148
+#: klipper.cpp:142
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Předchozí položka v historii"
 
-#: klipper.cpp:155
+#: klipper.cpp:149
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Zobrazit položky ve schránce na pozici myši"
 
-#: klipper.cpp:435
+#: klipper.cpp:429
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Mobilní čárový kód"
 
-#: klipper.cpp:478 klipper.cpp:487
+#: klipper.cpp:472 klipper.cpp:481
 #, kde-format
 msgid "Clipboard history"
 msgstr "Historie schránky"
 
-#: klipper.cpp:504
+#: klipper.cpp:498
 #, kde-format
 msgid "up"
 msgstr "nahoru"
 
-#: klipper.cpp:511
+#: klipper.cpp:505
 #, kde-format
 msgid "current"
 msgstr "současný"
 
-#: klipper.cpp:518
+#: klipper.cpp:512
 #, kde-format
 msgid "down"
 msgstr "dolů"
@@ -917,6 +911,10 @@ msgstr ""
 #, kde-format
 msgid "&Cancel"
 msgstr "Z&rušit"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "&Configure Klipper…"
+#~ msgstr "Nastavit &Klipper…"
 
 #~ msgid "Disable This Popup"
 #~ msgstr "Zakázat toto okno"

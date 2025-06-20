@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-24 02:38+0000\n"
+"POT-Creation-Date: 2025-06-20 02:34+0000\n"
 "PO-Revision-Date: 2024-12-15 15:51+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -611,69 +611,63 @@ msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "பிடிப்புப்பலகையின் வரலாற்றை &காலியாக்கு"
 
-#: klipper.cpp:116
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "&Configure Klipper…"
-msgstr "&கிளிப்பரை அமை…"
-
-#: klipper.cpp:120
+#: klipper.cpp:114
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "தற்போதைய பிடிப்பின்மீது கைமுறையாக ஒரு செயலை இயக்கு"
 
-#: klipper.cpp:128
+#: klipper.cpp:122
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "&உள்ளடக்கத்தை திருத்து…"
 
-#: klipper.cpp:134
+#: klipper.cpp:128
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "&பட்டைக்குறியீட்டை காட்டு…"
 
-#: klipper.cpp:143
+#: klipper.cpp:137
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "வரலாற்றிலுள்ள அடுத்த உருப்படி"
 
-#: klipper.cpp:148
+#: klipper.cpp:142
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "வரலாற்றிலுள்ள முந்தைய உருப்படி"
 
-#: klipper.cpp:155
+#: klipper.cpp:149
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "பிடிப்புப்பலகையை சுட்டிக்குறியின் இருப்பிடத்திலேயே காட்டு"
 
-#: klipper.cpp:435
+#: klipper.cpp:429
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "பட்டைக்குறியீடு"
 
-#: klipper.cpp:478 klipper.cpp:487
+#: klipper.cpp:472 klipper.cpp:481
 #, kde-format
 msgid "Clipboard history"
 msgstr "பிடிப்புப்பலகை வரலாறு"
 
-#: klipper.cpp:504
+#: klipper.cpp:498
 #, kde-format
 msgid "up"
 msgstr "மேலே"
 
-#: klipper.cpp:511
+#: klipper.cpp:505
 #, kde-format
 msgid "current"
 msgstr "தற்போதையது"
 
-#: klipper.cpp:518
+#: klipper.cpp:512
 #, kde-format
 msgid "down"
 msgstr "கீழே"
@@ -897,6 +891,10 @@ msgstr "மேல்தோன்றும் பிடிப்புப்ப�
 #, kde-format
 msgid "&Cancel"
 msgstr "&ரத்து செய்"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "&Configure Klipper…"
+#~ msgstr "&கிளிப்பரை அமை…"
 
 #~ msgctxt "@info"
 #~ msgid ""

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-24 02:38+0000\n"
+"POT-Creation-Date: 2025-06-20 02:34+0000\n"
 "PO-Revision-Date: 2025-01-03 16:59+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -654,70 +654,64 @@ msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&Tīrīt starpliktuves vēsturi"
 
-#: klipper.cpp:116
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "&Configure Klipper…"
-msgstr "&Konfigurēt „Klipper“…"
-
-#: klipper.cpp:120
+#: klipper.cpp:114
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Manuāli izsaukt darbību ar pašreizējo starpliktuvi"
 
-#: klipper.cpp:128
+#: klipper.cpp:122
 #, fuzzy, kde-format
 #| msgid "Edit Contents"
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "Rediģēt saturu"
 
-#: klipper.cpp:134
+#: klipper.cpp:128
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "&Rādīt svītrkodu…"
 
-#: klipper.cpp:143
+#: klipper.cpp:137
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Nākamais vēstures ieraksts"
 
-#: klipper.cpp:148
+#: klipper.cpp:142
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Iepriekšējais vēstures ieraksts"
 
-#: klipper.cpp:155
+#: klipper.cpp:149
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Atvērt starpliktuves vienumu pie peles kursora"
 
-#: klipper.cpp:435
+#: klipper.cpp:429
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Mobilais svītrkods"
 
-#: klipper.cpp:478 klipper.cpp:487
+#: klipper.cpp:472 klipper.cpp:481
 #, kde-format
 msgid "Clipboard history"
 msgstr "Starpliktuves vēsture"
 
-#: klipper.cpp:504
+#: klipper.cpp:498
 #, kde-format
 msgid "up"
 msgstr "augšup"
 
-#: klipper.cpp:511
+#: klipper.cpp:505
 #, kde-format
 msgid "current"
 msgstr "aktīvais"
 
-#: klipper.cpp:518
+#: klipper.cpp:512
 #, kde-format
 msgid "down"
 msgstr "lejup"
@@ -939,6 +933,10 @@ msgstr "Starpliktuves uzlecošais logs"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Atcelt"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "&Configure Klipper…"
+#~ msgstr "&Konfigurēt „Klipper“…"
 
 #~ msgctxt "@info"
 #~ msgid ""

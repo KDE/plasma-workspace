@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-24 02:38+0000\n"
+"POT-Creation-Date: 2025-06-20 02:34+0000\n"
 "PO-Revision-Date: 2025-05-18 20:44+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -651,69 +651,63 @@ msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "Vágólapnapló tör&lése"
 
-#: klipper.cpp:116
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "&Configure Klipper…"
-msgstr "A Klipper &beállítása…"
-
-#: klipper.cpp:120
+#: klipper.cpp:114
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Művelet végrehajtása saját kezűleg az aktuális vágólapon"
 
-#: klipper.cpp:128
+#: klipper.cpp:122
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "Tartalom sz&erkesztése…"
 
-#: klipper.cpp:134
+#: klipper.cpp:128
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "Vonalkód megjeleníté&se…"
 
-#: klipper.cpp:143
+#: klipper.cpp:137
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Következő előzményelem"
 
-#: klipper.cpp:148
+#: klipper.cpp:142
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Előző előzményelem"
 
-#: klipper.cpp:155
+#: klipper.cpp:149
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Vágólapelemek megjelenítése a kurzorpozíciónál"
 
-#: klipper.cpp:435
+#: klipper.cpp:429
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Mobil vonalkód"
 
-#: klipper.cpp:478 klipper.cpp:487
+#: klipper.cpp:472 klipper.cpp:481
 #, kde-format
 msgid "Clipboard history"
 msgstr "Vágólapnapló"
 
-#: klipper.cpp:504
+#: klipper.cpp:498
 #, kde-format
 msgid "up"
 msgstr "fel"
 
-#: klipper.cpp:511
+#: klipper.cpp:505
 #, kde-format
 msgid "current"
 msgstr "jelenlegi"
 
-#: klipper.cpp:518
+#: klipper.cpp:512
 #, kde-format
 msgid "down"
 msgstr "le"
@@ -937,6 +931,10 @@ msgstr "Felugró vágólap"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Mégsem"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "&Configure Klipper…"
+#~ msgstr "A Klipper &beállítása…"
 
 #~ msgctxt "@info"
 #~ msgid ""

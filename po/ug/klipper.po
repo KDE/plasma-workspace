@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-24 02:38+0000\n"
+"POT-Creation-Date: 2025-06-20 02:34+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -623,72 +623,65 @@ msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "چاپلاش تاختىسى ئىزى"
 
-#: klipper.cpp:116
-#, fuzzy, kde-format
-#| msgid "&Configure Klipper..."
-msgctxt "@action:inmenu"
-msgid "&Configure Klipper…"
-msgstr "Klipper نى سەپلە(&C)"
-
-#: klipper.cpp:120
+#: klipper.cpp:114
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr ""
 
-#: klipper.cpp:128
+#: klipper.cpp:122
 #, fuzzy, kde-format
 #| msgid "&Edit Contents..."
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "مەزمۇنلارنى تەھرىرلە(&E)…"
 
-#: klipper.cpp:134
+#: klipper.cpp:128
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr ""
 
-#: klipper.cpp:143
+#: klipper.cpp:137
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr ""
 
-#: klipper.cpp:148
+#: klipper.cpp:142
 #, fuzzy, kde-format
 #| msgid "Maintainer"
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "مەسئۇل كىشى"
 
-#: klipper.cpp:155
+#: klipper.cpp:149
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr ""
 
-#: klipper.cpp:435
+#: klipper.cpp:429
 #, kde-format
 msgid "Mobile Barcode"
 msgstr ""
 
-#: klipper.cpp:478 klipper.cpp:487
+#: klipper.cpp:472 klipper.cpp:481
 #, kde-format
 msgid "Clipboard history"
 msgstr "چاپلاش تاختىسى ئىزى"
 
-#: klipper.cpp:504
+#: klipper.cpp:498
 #, kde-format
 msgid "up"
 msgstr "ئۈستىگە"
 
-#: klipper.cpp:511
+#: klipper.cpp:505
 #, kde-format
 msgid "current"
 msgstr "نۆۋەتتىكى"
 
-#: klipper.cpp:518
+#: klipper.cpp:512
 #, kde-format
 msgid "down"
 msgstr "ئاستى"
@@ -899,6 +892,12 @@ msgstr "چاپلاش تاختىسى ئىزى"
 #, kde-format
 msgid "&Cancel"
 msgstr "ۋاز كەچ(&C)"
+
+#, fuzzy
+#~| msgid "&Configure Klipper..."
+#~ msgctxt "@action:inmenu"
+#~ msgid "&Configure Klipper…"
+#~ msgstr "Klipper نى سەپلە(&C)"
 
 #, fuzzy
 #~| msgid "Clipboard Contents"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-24 02:38+0000\n"
+"POT-Creation-Date: 2025-06-20 02:34+0000\n"
 "PO-Revision-Date: 2024-10-25 23:34-0500\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
@@ -600,70 +600,64 @@ msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "ਕਲਿੱਪਬੋਰਡ ਅਤੀਤ ਨੂੰ ਮਿਟਾਓ(&l)"
 
-#: klipper.cpp:116
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "&Configure Klipper…"
-msgstr "…ਕਲਿੱਪਰ ਦੀ ਸੰਰਚਨਾ(&C)"
-
-#: klipper.cpp:120
+#: klipper.cpp:114
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "ਮੌਜੂਦਾ ਕਲਿੱਪਬੋਰਡ ਉੱਤੇ ਕਾਰਵਾਈ ਦਸਤੀ ਸ਼ਾਮਿਲ ਕਰੋ"
 
-#: klipper.cpp:128
+#: klipper.cpp:122
 #, fuzzy, kde-format
 #| msgid "&Edit Contents…"
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "…ਸਮੱਗਰੀ ਸੋਧੋ(&E)"
 
-#: klipper.cpp:134
+#: klipper.cpp:128
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "…ਬਾਰਕੋਡ ਵੇਖੋ(&S)"
 
-#: klipper.cpp:143
+#: klipper.cpp:137
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "ਅਗਲੀ ਅਤੀਤ ਆਈਟਮ"
 
-#: klipper.cpp:148
+#: klipper.cpp:142
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "ਪਿਛਲੀ ਅਤੀਤ ਆਈਟਮ"
 
-#: klipper.cpp:155
+#: klipper.cpp:149
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "ਮਾਊਸ ਸਥਿਤੀ ਉੱਤੇ ਕਲਿੱਪਬੋਰਡ ਆਈਟਮਾਂ ਵੇਖਾਓ"
 
-#: klipper.cpp:435
+#: klipper.cpp:429
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "ਮੋਬਾਇਲ ਬਾਰਕੋਡ"
 
-#: klipper.cpp:478 klipper.cpp:487
+#: klipper.cpp:472 klipper.cpp:481
 #, kde-format
 msgid "Clipboard history"
 msgstr "ਕਲਿੱਪਬੋਰਡ ਅਤੀਤ"
 
-#: klipper.cpp:504
+#: klipper.cpp:498
 #, kde-format
 msgid "up"
 msgstr "ਉੱਤੇ"
 
-#: klipper.cpp:511
+#: klipper.cpp:505
 #, kde-format
 msgid "current"
 msgstr "ਮੌਜੂਦਾ"
 
-#: klipper.cpp:518
+#: klipper.cpp:512
 #, kde-format
 msgid "down"
 msgstr "ਹੇਠਾਂ"
@@ -868,6 +862,10 @@ msgstr "ਕਲਿੱਪਬੋਰਡ ਪੌਪਅੱਪ"
 #, kde-format
 msgid "&Cancel"
 msgstr "ਰੱਦ ਕਰੋ(&C)"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "&Configure Klipper…"
+#~ msgstr "…ਕਲਿੱਪਰ ਦੀ ਸੰਰਚਨਾ(&C)"
 
 #~ msgid "Disable This Popup"
 #~ msgstr "ਇਹ ਪੋਪਅੱਪ ਅਯੋਗ"

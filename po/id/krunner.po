@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-14 00:44+0000\n"
+"POT-Creation-Date: 2025-06-20 02:34+0000\n"
 "PO-Revision-Date: 2024-10-02 18:11+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -105,32 +105,32 @@ msgctxt "Textfield placeholder text"
 msgid "Search…"
 msgstr "Cari..."
 
-#: qml/RunCommand.qml:309 qml/RunCommand.qml:310 qml/RunCommand.qml:312
+#: qml/RunCommand.qml:310 qml/RunCommand.qml:311 qml/RunCommand.qml:313
 #, kde-format
 msgid "Show Usage Help"
 msgstr "Tampilkan Bantuan Penggunaan"
 
-#: qml/RunCommand.qml:320
+#: qml/RunCommand.qml:321
 #, kde-format
 msgid "Pin"
 msgstr "Semat"
 
-#: qml/RunCommand.qml:321
+#: qml/RunCommand.qml:322
 #, kde-format
 msgid "Pin Search"
 msgstr "Sematkan Pencarian"
 
-#: qml/RunCommand.qml:323
+#: qml/RunCommand.qml:324
 #, kde-format
 msgid "Keep Open"
 msgstr "Tetap Buka"
 
-#: qml/RunCommand.qml:382 qml/RunCommand.qml:387
+#: qml/RunCommand.qml:383 qml/RunCommand.qml:388
 #, kde-format
 msgid "Recent Queries"
 msgstr "Query Baru-Baru Ini"
 
-#: qml/RunCommand.qml:385
+#: qml/RunCommand.qml:386
 #, kde-format
 msgid "Remove"
 msgstr "Hapus"

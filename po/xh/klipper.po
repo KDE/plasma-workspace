@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-24 02:38+0000\n"
+"POT-Creation-Date: 2025-06-20 02:34+0000\n"
 "PO-Revision-Date: 2002-10-26 12:49SAST\n"
 "Last-Translator: Lwandle Mgidlana <lwandle@translate.org.za>\n"
 "Language-Team: Xhosa <xhosa@translate.org.za>\n"
@@ -642,76 +642,69 @@ msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&Cacisa Ibhodi eqhotyoshwayo Yembali"
 
-#: klipper.cpp:116
-#, fuzzy, kde-format
-#| msgid "&Configure Klipper..."
-msgctxt "@action:inmenu"
-msgid "&Configure Klipper…"
-msgstr "&Qwalasela i Klipper..."
-
-#: klipper.cpp:120
+#: klipper.cpp:114
 #, fuzzy, kde-format
 #| msgid "Manually Invoke Action on Current Clipboard"
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Yenzisa Ngesandla Intshukuno Kwibhodi yokuqobosha Yangoku"
 
-#: klipper.cpp:128
+#: klipper.cpp:122
 #, fuzzy, kde-format
 #| msgid "Edit Contents"
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "Hlela Imixholo"
 
-#: klipper.cpp:134
+#: klipper.cpp:128
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr ""
 
-#: klipper.cpp:143
+#: klipper.cpp:137
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "U&bungakanani bembali yebebhodi eqhotyoshwayo:"
 
-#: klipper.cpp:148
+#: klipper.cpp:142
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "U&bungakanani bembali yebebhodi eqhotyoshwayo:"
 
-#: klipper.cpp:155
+#: klipper.cpp:149
 #, fuzzy, kde-format
 #| msgid "&Popup menu at mouse-cursor position"
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "&Jolisa i menu kwi mouse-indawo yesalathisi"
 
-#: klipper.cpp:435
+#: klipper.cpp:429
 #, kde-format
 msgid "Mobile Barcode"
 msgstr ""
 
-#: klipper.cpp:478 klipper.cpp:487
+#: klipper.cpp:472 klipper.cpp:481
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgid "Clipboard history"
 msgstr "U&bungakanani bembali yebebhodi eqhotyoshwayo:"
 
-#: klipper.cpp:504
+#: klipper.cpp:498
 #, kde-format
 msgid "up"
 msgstr ""
 
-#: klipper.cpp:511
+#: klipper.cpp:505
 #, kde-format
 msgid "current"
 msgstr ""
 
-#: klipper.cpp:518
+#: klipper.cpp:512
 #, kde-format
 msgid "down"
 msgstr ""
@@ -928,6 +921,12 @@ msgstr "U&bungakanani bembali yebebhodi eqhotyoshwayo:"
 #, kde-format
 msgid "&Cancel"
 msgstr ""
+
+#, fuzzy
+#~| msgid "&Configure Klipper..."
+#~ msgctxt "@action:inmenu"
+#~ msgid "&Configure Klipper…"
+#~ msgstr "&Qwalasela i Klipper..."
 
 #, fuzzy
 #~ msgid "Disable This Popup"

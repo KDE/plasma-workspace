@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-24 02:38+0000\n"
+"POT-Creation-Date: 2025-06-20 02:34+0000\n"
 "PO-Revision-Date: 2019-12-18 18:26+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -640,76 +640,69 @@ msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "Puhasta &lõikepuhvri ajalugu"
 
-#: klipper.cpp:116
-#, fuzzy, kde-format
-#| msgid "&Configure Klipper..."
-msgctxt "@action:inmenu"
-msgid "&Configure Klipper…"
-msgstr "&Klipperi seadistamine..."
-
-#: klipper.cpp:120
+#: klipper.cpp:114
 #, fuzzy, kde-format
 #| msgid "Manually Invoke Action on Current Clipboard"
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Toimingu käsitsi rakendamine lõikepuhvri aktiivsele sisule"
 
-#: klipper.cpp:128
+#: klipper.cpp:122
 #, fuzzy, kde-format
 #| msgid "Edit Contents"
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "Sisu muutmine"
 
-#: klipper.cpp:134
+#: klipper.cpp:128
 #, fuzzy, kde-format
 #| msgid "&Show Barcode..."
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "&Näita ribakoodi..."
 
-#: klipper.cpp:143
+#: klipper.cpp:137
 #, fuzzy, kde-format
 #| msgid "Next History Item"
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Ajaloo järgmine element"
 
-#: klipper.cpp:148
+#: klipper.cpp:142
 #, fuzzy, kde-format
 #| msgid "Previous History Item"
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Ajaloo eelmine element"
 
-#: klipper.cpp:155
+#: klipper.cpp:149
 #, fuzzy, kde-format
 #| msgid "Open Klipper at Mouse Position"
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Klipper avatakse hiirekursori asukohas"
 
-#: klipper.cpp:435
+#: klipper.cpp:429
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Mobiili ribakood"
 
-#: klipper.cpp:478 klipper.cpp:487
+#: klipper.cpp:472 klipper.cpp:481
 #, kde-format
 msgid "Clipboard history"
 msgstr "Lõikepuhvri ajalugu"
 
-#: klipper.cpp:504
+#: klipper.cpp:498
 #, kde-format
 msgid "up"
 msgstr "üles"
 
-#: klipper.cpp:511
+#: klipper.cpp:505
 #, kde-format
 msgid "current"
 msgstr "aktiivne"
 
-#: klipper.cpp:518
+#: klipper.cpp:512
 #, kde-format
 msgid "down"
 msgstr "alla"
@@ -926,6 +919,12 @@ msgstr "Lõikepuhvri ajalugu"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Loobu"
+
+#, fuzzy
+#~| msgid "&Configure Klipper..."
+#~ msgctxt "@action:inmenu"
+#~ msgid "&Configure Klipper…"
+#~ msgstr "&Klipperi seadistamine..."
 
 #~ msgid "Disable This Popup"
 #~ msgstr "Selle hüpikakna keelamine"

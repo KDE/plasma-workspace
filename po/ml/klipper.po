@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE Malayalam Translation\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-24 02:38+0000\n"
+"POT-Creation-Date: 2025-06-20 02:34+0000\n"
 "PO-Revision-Date: 2021-08-17 12:59+0000\n"
 "Last-Translator: anuraghkp <kpanuragh@gmail.com>\n"
 "Language-Team: Malayalam <Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|"
@@ -639,76 +639,69 @@ msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "ഓര്‍മ്മച്ചെപ്പ് ചരിത്രം കളയുക"
 
-#: klipper.cpp:116
-#, fuzzy, kde-format
-#| msgid "&Configure Klipper..."
-msgctxt "@action:inmenu"
-msgid "&Configure Klipper…"
-msgstr "ക്ലിപ്പര്‍ സജ്ജീകരിക്കുക"
-
-#: klipper.cpp:120
+#: klipper.cpp:114
 #, fuzzy, kde-format
 #| msgid "Manually Invoke Action on Current Clipboard"
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "ഇപ്പോഴത്തെ ഓര്‍മ്മച്ചെപ്പില്‍ പ്രവൃത്തി തുടങ്ങുക"
 
-#: klipper.cpp:128
+#: klipper.cpp:122
 #, fuzzy, kde-format
 #| msgid "Edit Contents"
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "ഉള്ളടക്കം ചിട്ടപ്പെടുത്തുക"
 
-#: klipper.cpp:134
+#: klipper.cpp:128
 #, fuzzy, kde-format
 #| msgid "&Show Barcode…"
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "ബാർകോഡ് കാണിക്കുക… (&S)"
 
-#: klipper.cpp:143
+#: klipper.cpp:137
 #, fuzzy, kde-format
 #| msgid "Next History Item"
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "ചരിത്രത്തിലെ അടുത്ത ഇനം"
 
-#: klipper.cpp:148
+#: klipper.cpp:142
 #, fuzzy, kde-format
 #| msgid "Previous History Item"
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "ചരിത്രത്തിലെ മുമ്പുള്ള ഇനം"
 
-#: klipper.cpp:155
+#: klipper.cpp:149
 #, fuzzy, kde-format
 #| msgid "Open Klipper at Mouse Position"
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "മൗസ് സ്ഥാനത്ത് ക്ലിപ്പർ തുറക്കുക"
 
-#: klipper.cpp:435
+#: klipper.cpp:429
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "മൊബൈൽ ബാർകോഡ്"
 
-#: klipper.cpp:478 klipper.cpp:487
+#: klipper.cpp:472 klipper.cpp:481
 #, kde-format
 msgid "Clipboard history"
 msgstr "ഓര്‍മ്മച്ചെപ്പ് ചരിത്രം"
 
-#: klipper.cpp:504
+#: klipper.cpp:498
 #, kde-format
 msgid "up"
 msgstr "മുകളില്‍"
 
-#: klipper.cpp:511
+#: klipper.cpp:505
 #, kde-format
 msgid "current"
 msgstr "ഇപ്പോള്‍ നിലവിലുളളത്"
 
-#: klipper.cpp:518
+#: klipper.cpp:512
 #, kde-format
 msgid "down"
 msgstr "താഴെ"
@@ -925,6 +918,12 @@ msgstr "ഓര്‍മ്മച്ചെപ്പ് ചരിത്രം"
 #, kde-format
 msgid "&Cancel"
 msgstr "&റദ്ദാക്കുക"
+
+#, fuzzy
+#~| msgid "&Configure Klipper..."
+#~ msgctxt "@action:inmenu"
+#~ msgid "&Configure Klipper…"
+#~ msgstr "ക്ലിപ്പര്‍ സജ്ജീകരിക്കുക"
 
 #~ msgctxt "@info"
 #~ msgid ""
