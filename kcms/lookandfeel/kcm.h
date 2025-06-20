@@ -11,18 +11,16 @@
 
 #pragma once
 
+#include "lookandfeelmanager.h"
+
 #include <KConfig>
 #include <KConfigGroup>
 #include <KNSCore/Entry>
-#include <KSharedConfig>
-
-#include <QDir>
-#include <QStandardItemModel>
-
 #include <KPackage/Package>
 #include <KQuickManagedConfigModule>
+#include <KSharedConfig>
 
-#include "lookandfeelmanager.h"
+#include <QStandardItemModel>
 
 class LookAndFeelData;
 class LookAndFeelSettings;
