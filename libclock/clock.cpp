@@ -59,6 +59,11 @@ void Clock::setTimeZone(const QByteArray &ianaId)
         return;
     }
 
+    if (ianaId == "Local") { // for compatability with older code
+        resetTimeZone();
+        return;
+    }
+
     const QTimeZone timeZone = QTimeZone(ianaId);
     m_timeZoneExplicitlySet = true;
     setupTimeZone(timeZone);
@@ -68,7 +73,7 @@ void Clock::setTimeZone(const QByteArray &ianaId)
 void Clock::resetTimeZone()
 {
     m_timeZoneExplicitlySet = false;
-    setupTimeZone(QTimeZone(QTimeZone::systemTimeZoneId()));
+    setupTimeZone(QTimeZone(QTimeZone::Initialization::LocalTime));
     update();
 }
 

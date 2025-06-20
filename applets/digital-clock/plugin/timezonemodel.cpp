@@ -228,4 +228,30 @@ void TimeZoneModel::sortTimeZones()
     });
 }
 
+
+QStringList TimeZoneUtils::sortedTimeZones(const QStringList timeZones) const
+{
+    const QDateTime now = QDateTime::currentDateTime();
+    QVector<QPair<int, QString>> offsetIdPairs;
+
+    for (const QString &tzId : timeZones) {
+        QTimeZone timeZone = tzId == QLatin1String("Local") ? QTimeZone(QTimeZone::LocalTime) : QTimeZone(tzId.toUtf8());
+        int offset = timeZone.offsetFromUtc(now); // Offset in seconds
+        offsetIdPairs.append(qMakePair(offset, tzId));
+    }
+
+    std::sort(offsetIdPairs.begin(), offsetIdPairs.end(), [](const QPair<int, QString> &a, const QPair<int, QString> &b) {
+        return a.first < b.first;
+    });
+
+    QStringList sortedIds;
+    sortedIds.reserve(timeZones.count());
+    for (const auto &pair : offsetIdPairs) {
+        sortedIds << pair.second;
+    }
+
+    return sortedIds;
+}
+
 #include "moc_timezonemodel.cpp"
+

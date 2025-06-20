@@ -12,11 +12,11 @@ import QtQuick.Layouts
 
 import org.kde.plasma.plasmoid
 import org.kde.plasma.core as PlasmaCore
-import org.kde.plasma.plasma5support as P5Support
 import org.kde.plasma.private.digitalclock
 import org.kde.kirigami as Kirigami
 import org.kde.config as KConfig
 import org.kde.kcmutils as KCMUtils
+import org.kde.plasma.clock
 
 PlasmoidItem {
     id: root
@@ -27,24 +27,17 @@ PlasmoidItem {
     Plasmoid.backgroundHints: PlasmaCore.Types.ShadowBackground | PlasmaCore.Types.ConfigurableBackground
 
     readonly property string dateFormatString: setDateFormatString()
+    readonly property var currentTime: currentClock.dateTime
+    readonly property var currentTimezone: currentClock.timeZone
 
-    readonly property date currentDateTimeInSelectedTimeZone: {
-        const data = dataSource.data[Plasmoid.configuration.lastSelectedTimezone];
-        // The order of signal propagation is unspecified, so we might get
-        // here before the dataSource has updated. Alternatively, a buggy
-        // configuration view might set lastSelectedTimezone to a new time
-        // zone before applying the new list, or it may just be set to
-        // something invalid in the config file.
-        if (data === undefined) {
-            return new Date();
-        }
-        // get the time for the given time zone from the dataengine
-        const now = data["DateTime"];
-        // get current UTC time
-        const nowUtcMilliseconds = now.getTime() + (now.getTimezoneOffset() * 60000);
-        const selectedTimeZoneOffsetMilliseconds = data["Offset"] * 1000;
-        // add the selected time zone's offset to it
-        return new Date(nowUtcMilliseconds + selectedTimeZoneOffsetMilliseconds);
+    Clock {
+        id: currentClock
+        timeZone: Plasmoid.configuration.lastSelectedTimezone
+    }
+
+    Clock {
+        id: systemClock
+        // not defining a timezone keeps it up to date with the system timezone
     }
 
     function initTimeZones() {
@@ -55,22 +48,10 @@ PlasmoidItem {
         root.allTimeZones = timeZones.concat(Plasmoid.configuration.selectedTimeZones);
     }
 
-    function timeForZone(timeZone: string, showSeconds: bool): string {
+    function formatTime(dateTime: date, showSeconds: bool): string {
         if (!compactRepresentationItem) {
             return "";
         }
-
-        const data = dataSource.data[timeZone];
-        if (data === undefined) {
-            return "";
-        }
-
-        // get the time for the given time zone from the dataengine
-        const now = data["DateTime"];
-        // get current UTC time
-        const msUTC = now.getTime() + (now.getTimezoneOffset() * 60000);
-        // add the dataengine TZ offset to it
-        const dateTime = new Date(msUTC + (data["Offset"] * 1000));
 
         let formattedTime;
         if (showSeconds) {
@@ -79,29 +60,14 @@ PlasmoidItem {
             formattedTime = Qt.formatTime(dateTime, compactRepresentationItem.item.timeFormat);
         }
 
-        if (dateTime.getDay() !== dataSource.data["Local"]["DateTime"].getDay()) {
+        if (dateTime.getDay() !== currentClock.dateTime.getDay()) {
             formattedTime += " (" + compactRepresentationItem.item.dateFormatter(dateTime) + ")";
         }
 
         return formattedTime;
     }
 
-    function displayStringForTimeZone(timeZone: string): string {
-        const data = dataSource.data[timeZone];
-        if (data === undefined) {
-            return timeZone;
-        }
-
-        // add the time zone string to the clock
-        if (Plasmoid.configuration.displayTimezoneAsCode) {
-            return data["Timezone Abbreviation"];
-        } else {
-            return TimeZonesI18n.i18nCity(data["Timezone"]);
-        }
-    }
-
     function selectedTimeZonesDeduplicatingExplicitLocalTimeZone():/* [string] */var {
-        const displayStringForLocalTimeZone = displayStringForTimeZone("Local");
         /*
          * Don't add this item if it's the same as the local time zone, which
          * would indicate that the user has deliberately added a dedicated entry
@@ -114,16 +80,10 @@ PlasmoidItem {
          * this, let's suppress the duplicate.
          */
         const isLiterallyLocalOrResolvesToSomethingOtherThanLocal = timeZone =>
-            timeZone === "Local" || displayStringForTimeZone(timeZone) !== displayStringForLocalTimeZone;
+            timeZone == "Local" || timeZone != systemClock.timeZone
 
-        return Plasmoid.configuration.selectedTimeZones
-            .filter(isLiterallyLocalOrResolvesToSomethingOtherThanLocal)
-            .sort((a, b) => dataSource.data[a]["Offset"] - dataSource.data[b]["Offset"]);
-    }
-
-    function timeZoneResolvesToLastSelectedTimeZone(timeZone: string): bool {
-        return timeZone === Plasmoid.configuration.lastSelectedTimezone
-            || displayStringForTimeZone(timeZone) === displayStringForTimeZone(Plasmoid.configuration.lastSelectedTimezone);
+        return TimeZoneUtils.sortedTimeZones(Plasmoid.configuration.selectedTimeZones
+            .filter(isLiterallyLocalOrResolvesToSomethingOtherThanLocal));
     }
 
     preferredRepresentation: compactRepresentation
@@ -141,7 +101,7 @@ PlasmoidItem {
         Layout.maximumWidth: item.Layout.maximumWidth
         Layout.maximumHeight: item.Layout.maximumHeight
 
-        sourceComponent: (currentDateTimeInSelectedTimeZone == "Invalid Date") ? noTimezoneComponent : digitalClockComponent
+        sourceComponent: !currentClock.valid ? noTimezoneComponent : digitalClockComponent
     }
 
     Component {
@@ -183,23 +143,6 @@ PlasmoidItem {
     }
 
     hideOnWindowDeactivate: !Plasmoid.configuration.pin
-
-    P5Support.DataSource {
-        id: dataSource
-        engine: "time"
-        connectedSources: allTimeZones
-        interval: intervalAlignment === P5Support.Types.NoAlignment ? 1000 : 60000
-        intervalAlignment: {
-            if (Plasmoid.configuration.showSeconds === 2
-                || (Plasmoid.configuration.showSeconds === 1
-                    && compactRepresentationItem
-                    && compactRepresentationItem.containsMouse)) {
-                return P5Support.Types.NoAlignment;
-            } else {
-                return P5Support.Types.AlignToMinute;
-            }
-        }
-    }
 
     function setDateFormatString() {
         // remove "dddd" from the locale format string
