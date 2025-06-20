@@ -1,8 +1,0 @@
-@PACKAGE_INIT@
-
-include(CMakeFindDependencyMacro)
-find_dependency(Qt6Core "@QT_MIN_VERSION@")
-find_dependency(Qt6Quick "@QT_MIN_VERSION@")
-find_dependency(Plasma "@PROJECT_VERSION@")
-
-include("${CMAKE_CURRENT_LIST_DIR}/LibColorCorrectLibraryTargets.cmake")
