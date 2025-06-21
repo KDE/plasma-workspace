@@ -95,7 +95,7 @@
 >Gestione dello schema</title>
 
   <para
->Questo modulo consente di gestire gli schemi di colori sulla propria macchina. Mostra un elenco di schemi di colore forniti con &plasma; e un'anteprima in alto. Ci può essere solo uno schema attivo, ma è possibile modificare gli schemi. Si può rimuovere uno schema utilizzando il pulsante <guibutton
+>Questo modulo consente di gestire gli schemi di colori sulla propria macchina. Mostra un elenco di schemi di colori forniti con &plasma; e un'anteprima in alto. Ci può essere solo uno schema attivo, ma è possibile modificare gli schemi. Si può rimuovere uno schema utilizzando il pulsante <guibutton
 >Rimuovi schema</guibutton
 >mostrato quando si passa il puntatore del mouse sopra un elemento della griglia. Notare che gli schemi di sistema non possono essere rimossi; il pulsante per questa azione è disabilitato.</para>
 
@@ -110,7 +110,7 @@
 
   <para
 >Se si dispone di una connessione a Internet, è possibile anche sfogliare e scaricare schemi creati da altri utenti utilizzando il pulsante <guibutton
->Ottieni nuovi schemi di colore...</guibutton
+>Ottieni nuovi schemi di colori...</guibutton
 >.</para>
 
   <para
@@ -139,7 +139,7 @@
 ><para
 ><guilabel
 >Dallo schema di colori attuale</guilabel
->: questa opzione lascerà il colore degli elementi evidenziati allo schema di colori, e non imposterà un colore secondario globale per tutte le combinazioni. Puoi scoprire di più sulla modifica degli schemi di colore nella sezione sottostante. </para
+>: questa opzione lascerà il colore degli elementi evidenziati allo schema di colori, e non imposterà un colore secondario globale per tutte le combinazioni. Puoi scoprire di più sulla modifica degli schemi di colori nella sezione sottostante. </para
 ></listitem>
       <listitem
 ><para

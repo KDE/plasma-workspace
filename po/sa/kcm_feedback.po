@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2025-06-21 02:40+0000\n"
 "PO-Revision-Date: 2024-12-20 21:54+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -58,7 +58,7 @@ msgstr "प्लाज्मा"
 msgid "The following information will be sent:"
 msgstr "निम्नलिखितसूचना प्रेषिता भविष्यति :"
 
-#: ui/main.qml:182
+#: ui/main.qml:161
 #, kde-format
 msgid "View sent data:"
 msgstr "प्रेषितदत्तांशं पश्यन्तु :"

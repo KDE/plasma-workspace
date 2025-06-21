@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2025-06-21 02:40+0000\n"
 "PO-Revision-Date: 2022-01-05 19:53+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -56,7 +56,7 @@ msgstr "بلازما"
 msgid "The following information will be sent:"
 msgstr "المعلومات التالية سترسل:"
 
-#: ui/main.qml:182
+#: ui/main.qml:161
 #, kde-format
 msgid "View sent data:"
 msgstr "اعرض البيانات المرسلة:"

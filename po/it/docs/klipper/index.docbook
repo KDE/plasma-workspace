@@ -172,9 +172,7 @@
 >Per usare le azioni, seleziona un &URL; o un percorso di file. Se corrisponde con una delle espressioni regolari nella lista di &klipper;, apparirà un menu che mostra i programmi disponibili per quella selezione. Usa il mouse o i tasti freccia per scegliere il programma che vuoi e &klipper; avvierà questo programma, aprendo l'indirizzo a cui si riferiva la selezione.</para>
 
 <para
->Se non vuoi eseguire alcuna azione sui contenuti degli appunti, seleziona <guimenuitem
->Disabilita questo menu a comparsa</guimenuitem
-> dal menu a comparsa per ritornare a ciò che stavi facendo prima. Se lasci il menu, esso scomparirà, permettendoti di continuare a lavorare. Puoi cambiare il tempo di permanenza del menu nella finestra delle preferenze, con l'opzione <guilabel
+>Puoi cambiare il tempo di permanenza del menu nella finestra delle preferenze, con l'opzione <guilabel
 >Mostra il menu a comparsa delle azioni</guilabel
 > nella pagina <guilabel
 >Generale</guilabel
