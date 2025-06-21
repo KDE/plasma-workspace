@@ -13,6 +13,7 @@ import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kirigami 2.20 as Kirigami
+import org.kde.kquickcontrolsaddons as KQuickControlsAddons
 
 import org.kde.prison 1.0 as Prison
 
@@ -79,6 +80,29 @@ Item {
             }
 
             PlasmaComponents3.ToolButton {
+                id: copyQRButton
+
+                action: Kirigami.Action {
+                    enabled: barcodeView.valid && barcodeView.fit
+                    icon.name: "edit-copy"
+                    shortcut: StandardKey.Copy
+                    text: i18ndc("klipper", "@action:button Copy to clipboard", "Copy")
+
+                    onTriggered: {
+                        barcodeItem.grabToImage((result) => {
+                            clipboard.content = result.image;
+                            feedback.show(
+                                i18ndc("klipper", "@info:status", "An image of the QR code has been copied to clipboard"), 5000)
+                        });
+                    }
+                }
+
+                PlasmaComponents3.ToolTip {
+                    text: i18ndc("klipper", "@info:tooltip", "Copy QR code image to clipboard")
+                }
+            }
+
+            PlasmaComponents3.ToolButton {
                 id: configureButton
                 checkable: true
                 checked: menu.opened
@@ -96,6 +120,10 @@ Item {
         }
     }
 
+    KQuickControlsAddons.Clipboard {
+        id: clipboard
+    }
+
     Rectangle {
         readonly property bool square: barcodeItem.dimensions == Prison.Barcode.TwoDimensions
         readonly property int shortestSize: Math.floor(Math.min(barcodeView.width, barcodeView.height))
@@ -106,7 +134,6 @@ Item {
 
         color: barcodeItem.backgroundColor
         radius: Kirigami.Units.cornerRadius
-
         // Cannot set visible to false as we need it to re-render when changing its size
         opacity: barcodeView.valid && barcodeView.fit ? 1 : 0
 
@@ -144,6 +171,20 @@ Item {
                         barcodeItem.Drag.active = false;
                     }
                 }
+            }
+        }
+
+        // This item is placed in the center of the barcode item
+        // to position the tooltip that shows feedback notifications
+        Item {
+            id: feedbackAnchor
+            anchors.centerIn: barcodeItem
+            width: 5
+            height: 5
+
+            PlasmaComponents3.ToolTip {
+                id: feedback
+                parent: feedbackAnchor
             }
         }
     }
