@@ -211,12 +211,12 @@
 > senza animazione.</para>
 
 <para
->La classica notifica di avvio di &plasma; ha una modalità diversa, che puoi abilitare o disabilitare qui. Normalmente, quando avvii un'applicazione, questa ottiene immediatamente una voce nella barra dei processi, in cui l'icona è sostituita da una clessidra rotante per fare sapere che sta succedendo qualcosa. Puoi attivare o disabilitare questo comportamento tramite la casella <guilabel
+>La classica notifica di avvio di &plasma; ha una modalità diversa, che puoi abilitare o disabilitare qui. Normalmente, quando avvii un'applicazione, questa ottiene immediatamente una voce nella barra delle applicazioni, in cui l'icona è sostituita da una clessidra rotante per fare sapere che sta succedendo qualcosa. Puoi attivare o disabilitare questo comportamento tramite la casella <guilabel
 >Abilita l'animazione</guilabel
 >.</para>
 
 <para
->Non tutte le applicazioni che avvii mostreranno alla fine una finestra o una voce nella barra dei processi. Alcune di esse, ad esempio, saranno agganciate al vassoio di sistema di &plasma;. Oppure potresti averle mandate in un desktop virtuale diverso, e, nella sezione <guilabel
+>Non tutte le applicazioni che avvii mostreranno alla fine una finestra o una voce nella barra delle applicazioni. Alcune di esse, ad esempio, saranno agganciate al vassoio di sistema di &plasma;. Oppure potresti averle mandate in un desktop virtuale diverso, e, nella sezione <guilabel
 >Comportamento</guilabel
 > delle <ulink url="help:/plasma-desktop/panel.html"
 > <guilabel

@@ -108,6 +108,17 @@
     <varlistentry>
     <term
 ><guiicon
+>Abilita quando ha il fuoco un'applicazione a schermo intero</guiicon
+></term>
+    <listitem
+><para
+>Abilita automaticamente la modalità non disturbare quando stai utilizzando un'applicazione a schermo intero, ad esempio mentre stai guardando un video.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
 >Mostra notifiche critiche</guiicon
 ></term>
     <listitem
@@ -195,7 +206,7 @@
     <varlistentry>
     <term
 ><guiicon
->Scegli posizione personalizzata...</guiicon
+>Personalizzata…</guiicon
 ></term>
     <listitem
 ><para

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-21 00:44+0000\n"
+"POT-Creation-Date: 2025-06-21 00:44+0000\n"
 "PO-Revision-Date: 2023-04-08 13:35+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -61,7 +61,7 @@ msgstr "Plasmo"
 msgid "The following information will be sent:"
 msgstr "La jenaj informoj estos senditaj:"
 
-#: ui/main.qml:169
+#: ui/main.qml:148
 #, kde-format
 msgid "View sent data:"
 msgstr "Vidi senditajn datumojn:"

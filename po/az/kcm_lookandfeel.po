@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-29 00:44+0000\n"
+"POT-Creation-Date: 2025-06-21 00:44+0000\n"
 "PO-Revision-Date: 2024-08-09 16:04+0400\n"
 "Last-Translator: Khayyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -28,25 +28,12 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "xxmn77@gmail.com"
 
-#: kcm.cpp:468
-#, kde-format
-msgid ""
-"You have to restart the Plasma session for these changes to take effect."
-msgstr ""
-"Bu dəyişikliklərin qüvvəyə minməsi üçün Plazma seansını yenidən "
-"başlatmalısınız."
-
-#: kcm.cpp:469
-#, kde-format
-msgid "Cursor Settings Changed"
-msgstr "Kursor Ayarları Dəyişdirildi"
-
-#: lnftool.cpp:33
+#: lnftool.cpp:32
 #, kde-format
 msgid "Global Theme Tool"
 msgstr "Qlobal Mövzu Aləti"
 
-#: lnftool.cpp:35
+#: lnftool.cpp:34
 #, kde-format
 msgid ""
 "Command line tool to apply global theme packages for changing the look and "
@@ -55,27 +42,27 @@ msgstr ""
 "Xarici görünüşü dəyişdirmək məqsədi ilə, Qlobal Mövzu paketlərini tətbiq "
 "etmək üçün əmrlər sətiri vasitəsi."
 
-#: lnftool.cpp:37
+#: lnftool.cpp:36
 #, kde-format
 msgid "Copyright 2017, Marco Martin"
 msgstr "Copyright 2017, Marco Martin"
 
-#: lnftool.cpp:38
+#: lnftool.cpp:37
 #, kde-format
 msgid "Marco Martin"
 msgstr "Marco Martin"
 
-#: lnftool.cpp:38
+#: lnftool.cpp:37
 #, kde-format
 msgid "Maintainer"
 msgstr "Müşayətçi"
 
-#: lnftool.cpp:46
+#: lnftool.cpp:45
 #, kde-format
 msgid "List available global theme packages"
 msgstr "Sonuncu mövcud Qlobal Mövzu paketləri"
 
-#: lnftool.cpp:49
+#: lnftool.cpp:48
 #, kde-format
 msgid ""
 "Apply a global theme package. This can be the name of a package, or a full "
@@ -86,15 +73,28 @@ msgstr ""
 "tam yolu ola bilər, hansı ki bu mərhələdə bu alət onun qlobal mövzu paketi "
 "olmasını yoxlayacaq və yenidən cəhd edəcək."
 
-#: lnftool.cpp:51
+#: lnftool.cpp:50
 #, kde-format
 msgid "packagename"
 msgstr "packagename"
 
-#: lnftool.cpp:52
+#: lnftool.cpp:51
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
 msgstr "Plasma İş masası nizamını sıfırlamaq"
+
+#: lookandfeelmanager.cpp:890
+#, kde-format
+msgid ""
+"You have to restart the Plasma session for these changes to take effect."
+msgstr ""
+"Bu dəyişikliklərin qüvvəyə minməsi üçün Plazma seansını yenidən "
+"başlatmalısınız."
+
+#: lookandfeelmanager.cpp:891
+#, kde-format
+msgid "Cursor Settings Changed"
+msgstr "Kursor Ayarları Dəyişdirildi"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: lookandfeelsettings.kcfg:9

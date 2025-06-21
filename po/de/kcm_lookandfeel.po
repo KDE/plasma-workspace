@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-29 00:44+0000\n"
+"POT-Creation-Date: 2025-06-21 00:44+0000\n"
 "PO-Revision-Date: 2024-09-29 18:25+0200\n"
 "Last-Translator: Flori G <Renner03@protonmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -27,25 +27,12 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde-i18n-de@kde.org"
 
-#: kcm.cpp:468
-#, kde-format
-msgid ""
-"You have to restart the Plasma session for these changes to take effect."
-msgstr ""
-"Die Plasma-Sitzung muss neu gestartet werden, damit die Änderungen wirksam "
-"werden."
-
-#: kcm.cpp:469
-#, kde-format
-msgid "Cursor Settings Changed"
-msgstr "Zeiger-Einstellungen geändert"
-
-#: lnftool.cpp:33
+#: lnftool.cpp:32
 #, kde-format
 msgid "Global Theme Tool"
 msgstr "Dienstprogramm für globales Design"
 
-#: lnftool.cpp:35
+#: lnftool.cpp:34
 #, kde-format
 msgid ""
 "Command line tool to apply global theme packages for changing the look and "
@@ -54,27 +41,27 @@ msgstr ""
 "Befehlszeilenprogramm zum Anwenden von globalen Designpaketen zur Änderung "
 "des Erscheinungsbilds."
 
-#: lnftool.cpp:37
+#: lnftool.cpp:36
 #, kde-format
 msgid "Copyright 2017, Marco Martin"
 msgstr "Copyright 2017, Marco Martin"
 
-#: lnftool.cpp:38
+#: lnftool.cpp:37
 #, kde-format
 msgid "Marco Martin"
 msgstr "Marco Martin"
 
-#: lnftool.cpp:38
+#: lnftool.cpp:37
 #, kde-format
 msgid "Maintainer"
 msgstr "Betreuer"
 
-#: lnftool.cpp:46
+#: lnftool.cpp:45
 #, kde-format
 msgid "List available global theme packages"
 msgstr "Alle verfügbaren globalen Designpakete anzeigen"
 
-#: lnftool.cpp:49
+#: lnftool.cpp:48
 #, kde-format
 msgid ""
 "Apply a global theme package. This can be the name of a package, or a full "
@@ -86,15 +73,28 @@ msgstr ""
 "prüft, dass es sich um ein globales Designpaket handelt und es dann "
 "anzuwenden versucht."
 
-#: lnftool.cpp:51
+#: lnftool.cpp:50
 #, kde-format
 msgid "packagename"
 msgstr "Paketname"
 
-#: lnftool.cpp:52
+#: lnftool.cpp:51
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
 msgstr "Das Plasma-Arbeitsflächen-Layout zurücksetzen"
+
+#: lookandfeelmanager.cpp:890
+#, kde-format
+msgid ""
+"You have to restart the Plasma session for these changes to take effect."
+msgstr ""
+"Die Plasma-Sitzung muss neu gestartet werden, damit die Änderungen wirksam "
+"werden."
+
+#: lookandfeelmanager.cpp:891
+#, kde-format
+msgid "Cursor Settings Changed"
+msgstr "Zeiger-Einstellungen geändert"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: lookandfeelsettings.kcfg:9

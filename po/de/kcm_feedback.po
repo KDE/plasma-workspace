@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_feedback\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-21 00:44+0000\n"
+"POT-Creation-Date: 2025-06-21 00:44+0000\n"
 "PO-Revision-Date: 2023-01-30 21:59+0100\n"
 "Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -62,7 +62,7 @@ msgstr "Plasma"
 msgid "The following information will be sent:"
 msgstr "Die folgenden Informationen werden gesendet:"
 
-#: ui/main.qml:169
+#: ui/main.qml:148
 #, kde-format
 msgid "View sent data:"
 msgstr "Gesendete Daten anzeigen:"

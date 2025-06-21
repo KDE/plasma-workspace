@@ -893,7 +893,3 @@ msgstr "剪贴板弹窗"
 #, kde-format
 msgid "&Cancel"
 msgstr "取消(&C)"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "&Configure Klipper…"
-#~ msgstr "配置 Klipper(&C)…"
