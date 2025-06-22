@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-04 00:44+0000\n"
-"PO-Revision-Date: 2025-02-27 20:05-0300\n"
+"PO-Revision-Date: 2025-06-21 19:11-0300\n"
 "Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.12.2\n"
+"X-Generator: Lokalize 25.04.2\n"
 
 #: binarydialectmodel.cpp:52
 #, kde-format
@@ -285,12 +285,10 @@ msgid "Can't locate executable `check-language-support`"
 msgstr "Não é possível localizar o executável `check-language-support`"
 
 #: localegeneratorubuntu.cpp:56
-#, fuzzy, kde-format
-#| msgctxt "the arg is the output of failed check-language-support call"
-#| msgid "check-language-support failed, output: %1"
+#, kde-format
 msgctxt "the arg is the output of failed check-language-support call"
 msgid "check-language-support failed, output: %1 %2"
-msgstr "check-language-support falhou, saída: %1"
+msgstr "check-language-support falhou, saída: %1 %2"
 
 #: localegeneratorubuntu.cpp:88
 #, kde-format

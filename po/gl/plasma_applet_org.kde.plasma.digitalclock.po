@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-04 00:44+0000\n"
-"PO-Revision-Date: 2025-05-17 13:24+0200\n"
+"PO-Revision-Date: 2025-06-19 09:49+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.04.2\n"
 
 #: package/contents/config/config.qml:20
 #, kde-format
@@ -279,18 +279,16 @@ msgid "Choose a Font"
 msgstr "Escoller unha fonte"
 
 #: package/contents/ui/configCalendar.qml:50
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@option:check formdata label"
 msgid "General:"
 msgstr "Xeral:"
 
 #: package/contents/ui/configCalendar.qml:51
-#, fuzzy, kde-format
-#| msgid "Show week numbers"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show week numbers"
-msgstr "Amosar os números das semanas"
+msgstr "Amosar os números das semanas."
 
 #: package/contents/ui/configCalendar.qml:58
 #, kde-format
@@ -305,8 +303,7 @@ msgid "Use region defaults"
 msgstr "Usar o predeterminado da rexión"
 
 #: package/contents/ui/configCalendar.qml:82
-#, fuzzy, kde-format
-#| msgid "Available Plugins:"
+#, kde-format
 msgctxt "@title:column"
 msgid "Available Add-Ons"
 msgstr "Complementos dispoñíbeis:"

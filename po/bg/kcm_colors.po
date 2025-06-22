@@ -1363,6 +1363,3 @@ msgstr "Отваряне на цветова схема"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Файлове с цветна схема (*.colors)"
-
-#~ msgid "Choose custom accent color"
-#~ msgstr "Избиране на персонализиран цвят за акцентиране"

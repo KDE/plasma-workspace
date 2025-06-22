@@ -931,7 +931,3 @@ msgstr "Utklippstavle-sprettopp"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Avbryt"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "&Configure Klipper…"
-#~ msgstr "&Set opp Klipper …"

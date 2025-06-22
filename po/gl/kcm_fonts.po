@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-07 00:44+0000\n"
-"PO-Revision-Date: 2025-05-22 13:07+0200\n"
+"PO-Revision-Date: 2025-06-19 10:14+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.04.2\n"
 
 #. i18n: ectx: label, entry (forceFontDPI), group (General)
 #: fontsaasettingsbase.kcfg:9
@@ -196,19 +196,18 @@ msgid ""
 "Plasma is not designed to be usable with fonts smaller than 4pt. Size has "
 "been reset to 4pt."
 msgstr ""
+"Plasma non está deseñado para funcionar con fontes de menos de 4 puntos. "
+"Restabeleceuse o tamaño a 4 puntos."
 
 #: ui/main.qml:133
-#, fuzzy, kde-format
-#| msgid ""
-#| "Very large fonts may produce odd-looking results. Instead of using a very "
-#| "large font size, consider adjusting the global screen scale."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "Very small fonts may produce odd-looking results. Instead of using a very "
 "small font size, consider adjusting the global screen scale."
 msgstr ""
-"As fontes moi grandes poden producir resultados raros. En vez de usar un "
-"tamaño de fonte moi grande, considere axustar a escala global da pantalla."
+"As fontes moi pequenas poden producir resultados raros. En vez de usar un "
+"tamaño de fonte moi pequeno, considere axustar a escala global da pantalla."
 
 #: ui/main.qml:154
 #, kde-format

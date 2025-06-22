@@ -129,37 +129,3 @@ msgstr "Запазване на сесията"
 #, kde-format
 msgid "Switch User"
 msgstr "Превключване на потребител"
-
-#~ msgctxt "KRunner keyword to list user sessions"
-#~ msgid "sessions"
-#~ msgstr "сесии"
-
-#~ msgid "Lists all sessions"
-#~ msgstr "Списък на всички сесии"
-
-#~ msgctxt "KRunner keyword to switch user sessions"
-#~ msgid "switch"
-#~ msgstr "превключване"
-
-#~ msgid ""
-#~ "Switches to the active session for the user :q:, or lists all active "
-#~ "sessions if :q: is not provided"
-#~ msgstr ""
-#~ "Превключване към активната сесия на потребителя :q: или показване на "
-#~ "списък с всички активни сесии, ако не е зададен :q:"
-
-#~ msgid ""
-#~ "<p>You are about to enter a new desktop session.</p><p>A login screen "
-#~ "will be displayed and the current session will be hidden.</p><p>You can "
-#~ "switch between desktop sessions using:</p><ul><li>Ctrl+Alt+F{number of "
-#~ "session}</li><li>Plasma search (type '%1')</li><li>Plasma widgets (such "
-#~ "as the application launcher)</li></ul>"
-#~ msgstr ""
-#~ "<p>Ще влезете в нова сесия на работния плот.</p><p>Ще се появи екран за "
-#~ "вход и текущата сесия ще бъде скрита.</p><p>Можете да превключвате между "
-#~ "сесиите на работния плот, като използвате:</p><ul><li>Ctrl+Alt+F{номер на "
-#~ "сесия}</li><li>Търсене на Plasma (въведете „%1“)</li><li>Уиджети на "
-#~ "Plasma (като например програмата за стартиране на приложения)</li></ul>"
-
-#~ msgid "New Desktop Session"
-#~ msgstr "Нова сесия на работната среда"

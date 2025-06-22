@@ -70,7 +70,3 @@ msgstr "Усилване на звука"
 msgctxt "@title shortcut"
 msgid "Media volume down"
 msgstr "Намаляване на звука"
-
-#~ msgctxt "@action:button"
-#~ msgid "Choose player automatically"
-#~ msgstr "Автоматично затваряне на медийно устройство"

@@ -133,39 +133,3 @@ msgstr ""
 "Не е възможно да се възстанови приложението <application>%1</application>, "
 "защото е повредено и е изчерпало ресурсите за възстановяване на сесиите на "
 "системата. Моля, докладвайте за това на разработчиците на приложението."
-
-#~ msgid "$HOME not set!"
-#~ msgstr "$HOME не е зададена!"
-
-#~ msgid "$HOME directory (%1) does not exist."
-#~ msgstr "Директория $HOME (%1) не съществува."
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "No write access to $HOME directory (%1). If this is intentional, set "
-#~ "<envar>KDE_HOME_READONLY=1</envar> in your environment."
-#~ msgstr ""
-#~ "Няма достъп за запис в директорията $HOME (%1). Ако това е умишлено, "
-#~ "задайте <envar>KDE_HOME_READONLY=1</envar>  като променлива на среда."
-
-#~ msgid "No read access to $HOME directory (%1)."
-#~ msgstr "Няма достъп за четене до директория $HOME (%1)."
-
-#~ msgid "$HOME directory (%1) is out of disk space."
-#~ msgstr "В директорията $HOME (%1) няма достатъчно дисково пространство."
-
-#~ msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
-#~ msgstr "Записът в директорията $HOME (%2) не бе успешен, грешка „%1“"
-
-#~ msgid "Temp directory (%1) is out of disk space."
-#~ msgstr "Временната директория (%1) няма достатъчно дисково пространство ."
-
-#~ msgid ""
-#~ "Writing to the temp directory (%2) failed with\n"
-#~ "    the error '%1'"
-#~ msgstr ""
-#~ "Записът във временната директория (%2) не бе успешен, \n"
-#~ "    грешка „%1“"
-
-#~ msgid "Plasma Workspace installation problem!"
-#~ msgstr "Проблем с инсталирането на Plasma!"
