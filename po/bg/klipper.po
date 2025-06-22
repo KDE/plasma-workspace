@@ -938,18 +938,3 @@ msgstr "Изчакащ прозорец на клипборд"
 #, kde-format
 msgid "&Cancel"
 msgstr "От&каз"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "&Configure Klipper…"
-#~ msgstr "&Конфигуриране на Klipper…"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "You can enable URL actions later in the <interface>Actions</interface> "
-#~ "page of the Clipboard applet's configuration window"
-#~ msgstr ""
-#~ "Можете да активирате URL действия на страницата <interface>Действия</"
-#~ "interface> в конфигурационния прозорец на аплета на клипборда"
-
-#~ msgid "Disable This Popup"
-#~ msgstr "Изключване на този изскачащ прозорец"

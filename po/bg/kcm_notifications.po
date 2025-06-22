@@ -290,12 +290,3 @@ msgid ""
 msgstr ""
 "Изберете приложение от списъка, за да конфигурирате настройките му за "
 "известяване и поведение"
-
-#~ msgid "Normal notifications:"
-#~ msgstr "Нормални известия:"
-
-#~ msgid "Show over full screen windows"
-#~ msgstr "Показване над прозорци на цял екран"
-
-#~ msgid "Choose Custom Position…"
-#~ msgstr "Изберете персонализирана позиция…"

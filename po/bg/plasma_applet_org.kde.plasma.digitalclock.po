@@ -464,31 +464,3 @@ msgstr "Местно"
 #, kde-format
 msgid "System's local time zone"
 msgstr "Местна часова зона на системата"
-
-#~ msgid ""
-#~ "Tip: if you travel frequently, add your home time zone to this list. It "
-#~ "will only appear when you change the systemwide time zone to something "
-#~ "else."
-#~ msgstr ""
-#~ "Съвет: ако пътувате често, добавете още един запис за домашната си часова "
-#~ "зона към този списък. Той ще се появи само когато промените "
-#~ "общосистемната часова зона на друга."
-
-#~ msgid "Adjust Date and Time…"
-#~ msgstr "Сверяване на дата и час…"
-
-#~ msgid "Set Time Format…"
-#~ msgstr "Задаване на формат на времето…"
-
-#~ msgid ""
-#~ "At least one time zone needs to be enabled. Your local time zone was "
-#~ "enabled automatically."
-#~ msgstr ""
-#~ "Трябва да бъде активирана поне една часова зона. Местната ви часова зона "
-#~ "беше активирана автоматично."
-
-#~ msgid "%1, %2 (%3)"
-#~ msgstr "%1, %2 (%3)"
-
-#~ msgid "%1, %2"
-#~ msgstr "%1, %2"
