@@ -35,50 +35,76 @@ ColumnLayout {
         window.show();
     }
 
-    spacing: Kirigami.Units.smallSpacing
+    spacing: 0
 
     Kirigami.Separator {
         Layout.fillWidth: true
     }
 
-    RowLayout {
-
-        Layout.leftMargin: Kirigami.Units.largeSpacing
-        Layout.rightMargin: Kirigami.Units.largeSpacing
+    QQC2.Control {
+        id: headerControl
 
         Layout.fillWidth: true
-        spacing: Kirigami.Units.smallSpacing
 
-        Kirigami.Icon {
-            id: icon
-            visible: source
-            implicitWidth: Kirigami.Units.iconSizes.large
-            implicitHeight: Kirigami.Units.iconSizes.large
+        visible: contentItem.visible
+
+        topPadding: Kirigami.Units.largeSpacing * 2
+        bottomPadding: Kirigami.Units.largeSpacing * 2
+        leftPadding: Kirigami.Units.largeSpacing * 2
+        rightPadding: Kirigami.Units.largeSpacing * 2
+
+        Kirigami.Theme.colorSet: Kirigami.Theme.Window
+        background: Rectangle {
+            Kirigami.Theme.colorSet: Kirigami.Theme.Window
+            color: Kirigami.Theme.alternateBackgroundColor
         }
 
-        ColumnLayout {
-            Layout.fillWidth: true
+        contentItem: RowLayout {
+            id: headerRow
 
+            Layout.leftMargin: Kirigami.Units.largeSpacing
+            Layout.rightMargin: Kirigami.Units.largeSpacing
+
+            visible: titleHeading.text.length > 0 || subtitleLabel.text.length > 0 || icon.source
+
+            // Layout.fillWidth: true
             spacing: Kirigami.Units.smallSpacing
 
-            Kirigami.Heading {
-                id: titleHeading
-                Layout.fillWidth: true
-                level: 2
-                wrapMode: Text.Wrap
-                textFormat: Text.RichText
-                elide: Text.ElideRight
+            Kirigami.Icon {
+                id: icon
+                visible: source
+                implicitWidth: Kirigami.Units.iconSizes.large
+                implicitHeight: Kirigami.Units.iconSizes.large
             }
 
-            QQC2.Label {
-                id: subtitleLabel
+            ColumnLayout {
                 Layout.fillWidth: true
-                wrapMode: Text.Wrap
-                elide: Text.ElideRight
-                textFormat: Text.RichText
-                visible: text.length > 0
+
+                spacing: Kirigami.Units.smallSpacing
+
+                Kirigami.Heading {
+                    id: titleHeading
+                    Layout.fillWidth: true
+                    level: 2
+                    wrapMode: Text.Wrap
+                    textFormat: Text.RichText
+                    elide: Text.ElideRight
+                }
+
+                QQC2.Label {
+                    id: subtitleLabel
+                    Layout.fillWidth: true
+                    wrapMode: Text.Wrap
+                    elide: Text.ElideRight
+                    textFormat: Text.RichText
+                    visible: text.length > 0
+                }
             }
         }
+    }
+
+    Kirigami.Separator {
+        Layout.fillWidth: true
     }
 
     // Main content area, to be provided by the implementation
@@ -88,8 +114,18 @@ ColumnLayout {
         Layout.fillWidth: true
         Layout.fillHeight: true
 
+        Kirigami.Theme.colorSet: Kirigami.Theme.View
+        background: Rectangle {
+            Kirigami.Theme.colorSet: Kirigami.Theme.View
+            color: Kirigami.Theme.backgroundColor
+        }
+
         // make sure we don't add padding if there is no content
         visible: contentItem !== null
+    }
+
+    Kirigami.Separator {
+        Layout.fillWidth: true
     }
 
     // Footer area with buttons
@@ -97,6 +133,12 @@ ColumnLayout {
         id: footerButtonBox
 
         Layout.fillWidth: true
+
+        Kirigami.Theme.colorSet: Kirigami.Theme.Window
+        background: Rectangle {
+            Kirigami.Theme.colorSet: Kirigami.Theme.Window
+            color: Kirigami.Theme.alternateBackgroundColor
+        }
 
         visible: count > 0
 

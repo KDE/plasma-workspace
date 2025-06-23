@@ -1,5 +1,6 @@
 /*
  *  SPDX-FileCopyrightText: 2021 Aleix Pol Gonzalez <aleixpol@kde.org>
+ *  SPDX-FileCopyrightText: 2025 Harald Sitter <sitter@kde.org>
  *
  *  SPDX-License-Identifier: LGPL-2.0-or-later
  */
@@ -73,8 +74,8 @@ Kirigami.AbstractApplicationWindow {
     property int /*Qt.Orientation*/ layout: actions.length > 3 ? Qt.Vertical : Qt.Horizontal
 
     flags: contentDialog.item.flags
-    width: contentDialog.implicitWidth
-    height: contentDialog.implicitHeight
+    width: contentDialog.defaultWidth
+    height: contentDialog.defaultHeight
     visible: false
     minimumHeight: contentDialog.item.minimumHeight
     minimumWidth: contentDialog.item.minimumWidth
@@ -95,8 +96,8 @@ Kirigami.AbstractApplicationWindow {
         if (!visible && !accepted) {
             root.reject()
         }
-        width = Qt.binding(() => contentDialog.implicitWidth)
-        height = Qt.binding(() => contentDialog.implicitHeight)
+        width = Qt.binding(() => contentDialog.defaultWidth)
+        height = Qt.binding(() => contentDialog.defaultHeight)
     }
 
     Binding {
@@ -108,7 +109,13 @@ Kirigami.AbstractApplicationWindow {
 
     Loader {
         id: contentDialog
+
+        // Helpful size hints for the parent to use by default when showing the window
+        property int defaultWidth: Math.max(implicitWidth, Kirigami.Units.largeSpacing * 60) // ensure we have some minimum breathing room
+        property int defaultHeight: Math.max(implicitHeight, Kirigami.Units.largeSpacing * 60) // ensure we have some minimum breathing room
+
         anchors.fill: parent
+
         Component.onCompleted: {
             var component = LookAndFeel.fileUrl("systemdialogscript")
             var initialProperties = {
