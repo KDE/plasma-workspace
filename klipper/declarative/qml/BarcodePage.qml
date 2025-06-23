@@ -96,38 +96,53 @@ Item {
         }
     }
 
-    Prison.Barcode {
-        id: barcodeItem
-        anchors.fill: parent
-        anchors.topMargin: Kirigami.Units.smallSpacing
-        barcodeType: barcodeView.barcodeMap.find(data => data.code === barcodeView.barcodeType)?.type ?? barcodeView.barcodeMap[0].type
+    Rectangle {
+        readonly property bool square: barcodeItem.dimensions == Prison.Barcode.TwoDimensions
+        readonly property int shortestSize: Math.floor(Math.min(barcodeView.width, barcodeView.height))
+
+        anchors.centerIn: parent
+        width: (square ? shortestSize : barcodeView.width) - 2 * Kirigami.Units.largeSpacing
+        height: (square ? shortestSize : barcodeView.height) - 2 * Kirigami.Units.largeSpacing
+
+        color: barcodeItem.backgroundColor
+        radius: Kirigami.Units.cornerRadius
+
         // Cannot set visible to false as we need it to re-render when changing its size
         opacity: barcodeView.valid && barcodeView.fit ? 1 : 0
 
-        Accessible.name: barcodeView.barcodeMap.find(data => data.type === barcodeItem.barcodeType)?.text ?? barcodeView.barcodeMap[0].text
-        Accessible.role: Accessible.Graphic
-        Drag.dragType: Drag.Automatic
-        Drag.supportedActions: Qt.CopyAction
+        Prison.Barcode {
+            id: barcodeItem
 
-        HoverHandler {
-            enabled: barcodeView.valid && barcodeView.fit
-            cursorShape: Qt.OpenHandCursor
-        }
+            anchors.fill: parent
+            anchors.margins: Kirigami.Units.cornerRadius
 
-        DragHandler {
-            id: dragHandler
-            enabled: barcodeView.valid && barcodeView.fit
+            barcodeType: barcodeView.barcodeMap.find(data => data.code === barcodeView.barcodeType)?.type ?? barcodeView.barcodeMap[0].type
 
-            onActiveChanged: {
-                if (active) {
-                    barcodeItem.grabToImage((result) => {
-                        barcodeItem.Drag.mimeData = {
-                            "image/png": result.image,
-                        };
-                        barcodeItem.Drag.active = dragHandler.active;
-                    });
-                } else {
-                    barcodeItem.Drag.active = false;
+            Accessible.name: barcodeView.barcodeMap.find(data => data.type === barcodeItem.barcodeType)?.text ?? barcodeView.barcodeMap[0].text
+            Accessible.role: Accessible.Graphic
+            Drag.dragType: Drag.Automatic
+            Drag.supportedActions: Qt.CopyAction
+
+            HoverHandler {
+                enabled: barcodeView.valid && barcodeView.fit
+                cursorShape: Qt.OpenHandCursor
+            }
+
+            DragHandler {
+                id: dragHandler
+                enabled: barcodeView.valid && barcodeView.fit
+
+                onActiveChanged: {
+                    if (active) {
+                        barcodeItem.grabToImage((result) => {
+                            barcodeItem.Drag.mimeData = {
+                                "image/png": result.image,
+                            };
+                            barcodeItem.Drag.active = dragHandler.active;
+                        });
+                    } else {
+                        barcodeItem.Drag.active = false;
+                    }
                 }
             }
         }
