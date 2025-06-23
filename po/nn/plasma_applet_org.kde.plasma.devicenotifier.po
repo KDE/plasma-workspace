@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-15 00:44+0000\n"
-"PO-Revision-Date: 2024-07-18 11:53+0200\n"
+"PO-Revision-Date: 2025-06-22 11:10+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -15,26 +15,26 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.04.2\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
 #: package/contents/ui/DeviceItem.qml:97
-#, fuzzy, kde-format
+#, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Checking…"
-msgstr "Fjernar …"
+msgstr "Kontrollerer …"
 
 #: package/contents/ui/DeviceItem.qml:99
-#, fuzzy, kde-format
+#, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Repairing…"
-msgstr "Fjernar …"
+msgstr "Reparerer …"
 
 #: package/contents/ui/DeviceItem.qml:102
 #, kde-format
@@ -133,7 +133,7 @@ msgstr "Opna i filhandsamar"
 #: plugin/actions/mountandopenaction.cpp:182
 #, kde-format
 msgid "Try to Fix"
-msgstr ""
+msgstr "Prøv å reparera"
 
 #: plugin/actions/mountandopenaction.cpp:182
 #, kde-format
@@ -151,14 +151,14 @@ msgid "Safely remove"
 msgstr "Fjern trygt"
 
 #: plugin/deviceerrormonitor_p.cpp:198
-#, fuzzy, kde-format
+#, kde-format
 msgid "This device has file system errors."
-msgstr "Eininga kan no trygt fjernast."
+msgstr "Einiga har feil i filsystemet."
 
 #: plugin/deviceerrormonitor_p.cpp:201
 #, kde-format
 msgid "Successfully repaired!"
-msgstr ""
+msgstr "Filsystemet er no reparert."
 
 #: plugin/deviceerrormonitor_p.cpp:204
 #, kde-format
@@ -192,9 +192,9 @@ msgid "You are not authorized to eject this disc."
 msgstr "Du har ikkje løyve til løysa ut denne disken."
 
 #: plugin/deviceerrormonitor_p.cpp:225
-#, fuzzy, kde-format
+#, kde-format
 msgid "You are not authorized to repair this device."
-msgstr "Du har ikkje løyve til fjerna denne eininga."
+msgstr "Du har ikkje løyve til å reparera eininga."
 
 #: plugin/deviceerrormonitor_p.cpp:232
 #, kde-format
@@ -237,6 +237,6 @@ msgid "Could not eject this disc."
 msgstr "Klarte ikkje løysa ut plata."
 
 #: plugin/deviceerrormonitor_p.cpp:294
-#, fuzzy, kde-format
+#, kde-format
 msgid "Could not repair this device: %1"
-msgstr "Klarte ikkje fjerna eininga."
+msgstr "Klarte ikkje reparera eininga: %1"
