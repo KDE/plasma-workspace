@@ -9,5 +9,13 @@
       <label>Global look and feel</label>
       <default>org.kde.breeze.desktop</default>
     </entry>
+    <entry name="defaultLightLookAndFeel" key="DefaultLightLookAndFeel" type="String">
+      <label>Global Look and Feel package, alternate</label>
+      <default>org.kde.breeze.desktop</default>
+    </entry>
+    <entry name="defaultDarkLookAndFeel" key="DefaultDarkLookAndFeel" type="String">
+      <label>Global Look and Feel package, alternate</label>
+      <default>org.kde.breezedark.desktop</default>
+    </entry>
   </group>
 </kcfg>

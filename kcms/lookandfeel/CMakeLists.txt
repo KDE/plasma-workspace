@@ -58,6 +58,7 @@ target_link_libraries(lookandfeelmanager
 
 kcmutils_add_qml_kcm(kcm_lookandfeel)
 target_sources(kcm_lookandfeel PRIVATE
+    config.cpp
     kcm.cpp
 )
 target_link_libraries(kcm_lookandfeel PRIVATE
