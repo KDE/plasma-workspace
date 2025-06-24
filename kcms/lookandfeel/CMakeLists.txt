@@ -65,6 +65,7 @@ target_link_libraries(kcm_lookandfeel PRIVATE
     KF6::JobWidgets
     KF6::KIOGui
     KF6::KCMUtilsQuick
+    PW::KLookAndFeel
     PW::KWorkspace
 )
 
