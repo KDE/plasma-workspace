@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-20 00:44+0000\n"
+"POT-Creation-Date: 2025-06-24 00:44+0000\n"
 "PO-Revision-Date: 2024-11-04 22:00\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -353,7 +353,7 @@ msgstr "Вярнуцца да буфера абмену"
 msgid "Change the QR code type"
 msgstr "Змяніць тып QR-кода"
 
-#: declarative/qml/BarcodePage.qml:141
+#: declarative/qml/BarcodePage.qml:156
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
@@ -361,7 +361,7 @@ msgstr ""
 "Недастаткова месца для паказу QR-кода. Паспрабуйце змяніць памер гэтага "
 "аплета."
 
-#: declarative/qml/BarcodePage.qml:141
+#: declarative/qml/BarcodePage.qml:156
 #, kde-format
 msgid "Creating QR code failed"
 msgstr "Не ўдалося стварыць QR-код"

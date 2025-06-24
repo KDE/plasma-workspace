@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-20 00:44+0000\n"
+"POT-Creation-Date: 2025-06-24 00:44+0000\n"
 "PO-Revision-Date: 2007-11-01 18:39+0545\n"
 "Last-Translator: Shyam Krishna Bal <shyamkrishna_bal@yahoo.com>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
@@ -339,13 +339,13 @@ msgstr "<empty clipboard>"
 msgid "Change the QR code type"
 msgstr ""
 
-#: declarative/qml/BarcodePage.qml:141
+#: declarative/qml/BarcodePage.qml:156
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr ""
 
-#: declarative/qml/BarcodePage.qml:141
+#: declarative/qml/BarcodePage.qml:156
 #, kde-format
 msgid "Creating QR code failed"
 msgstr ""
