@@ -268,4 +268,14 @@ PlasmoidItem {
     Component.onDestruction: {
         Globals.forget(root);
     }
+
+    Connections {
+        target: Globals.popupNotificationsModel
+
+        // The user requested to show the notifications popup, probably by 
+        // clicking the "Missed Notifications in Do Not Disturb" notification.
+        function onShowNotificationsRequested(): void {
+            root.expanded = true;
+        }
+    }
 }

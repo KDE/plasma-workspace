@@ -597,6 +597,13 @@ Q_SIGNALS:
     void jobsPercentageChanged();
     void windowChanged(QWindow *window);
 
+    /**
+     * Emitted when the user has requested to show the notifications popup.
+     *
+     * This is typically connected to a button in the "Missed Notifications in Do Not Disturb" notification.
+     */
+    void showNotificationsRequested();
+
 protected:
     void classBegin() override;
     void componentComplete() override;
