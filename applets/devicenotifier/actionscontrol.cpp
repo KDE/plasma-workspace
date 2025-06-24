@@ -18,6 +18,7 @@
 #include <KLocalizedString>
 #include <KService>
 
+#include <actions/checkaction.h>
 #include <actions/defaultaction.h>
 #include <actions/mountaction.h>
 #include <actions/mountandopenaction.h>
@@ -138,7 +139,15 @@ void ActionsControl::actionTriggered(const QString &name)
 
 void ActionsControl::addActions()
 {
-    ActionInterface *action = new MountAction(m_udi, this);
+    ActionInterface *action = new CheckAction(m_udi, this);
+    connect(action, &ActionInterface::isValidChanged, this, &ActionsControl::onIsActionValidChanged);
+    if (action->isValid()) {
+        m_actions.append(action);
+    } else {
+        m_notValidActions[action->name()] = std::make_pair(m_actions.size(), action);
+    }
+
+    action = new MountAction(m_udi, this);
     connect(action, &ActionInterface::isValidChanged, this, &ActionsControl::onIsActionValidChanged);
     if (action->isValid()) {
         m_actions.append(action);

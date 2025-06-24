@@ -159,8 +159,11 @@ void DeviceMessageMonitor::onStateChanged(const QString &udi)
     const auto errorVariant = [&] -> std::variant<std::optional<QString>, DeferredError> {
         switch (operationResult) {
         case Solid::ErrorType::NoError:
-            if (state == DevicesStateMonitor::CheckDone && !operationInfo.toBool()) {
-                return i18n("This device has file system errors.");
+            if (state == DevicesStateMonitor::CheckDone) {
+                if (!operationInfo.toBool()) {
+                    return i18n("This device has file system errors.");
+                }
+                return i18nc("@label device is a storage disk", "This device has no errors");
             }
             if (state == DevicesStateMonitor::RepairDone) {
                 return i18n("Successfully repaired!");

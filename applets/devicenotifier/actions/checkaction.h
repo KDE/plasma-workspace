@@ -1,5 +1,5 @@
 /*
- * SPDX-FileCopyrightText: 2024 Bohdan Onofriichuk <bogdan.onofriuchuk@gmail.com>
+ * SPDX-FileCopyrightText: 2025 Bohdan Onofriichuk <bogdan.onofriuchuk@gmail.com>
  *
  * SPDX-License-Identifier: GPL-2.0-or-later
  */
@@ -8,17 +8,17 @@
 
 #include "actioninterface.h"
 
-#include <devicestatemonitor_p.h>
+class DevicesStateMonitor;
 
-class MountAction : public ActionInterface
+class CheckAction : public ActionInterface
 {
     Q_OBJECT
 
     Q_INTERFACES(ActionInterface)
 
 public:
-    explicit MountAction(const QString &udi, QObject *parent = nullptr);
-    ~MountAction() override;
+    explicit CheckAction(const QString &udi, QObject *parent = nullptr);
+    ~CheckAction() override;
 
     void triggered() override;
 
@@ -32,8 +32,5 @@ private Q_SLOTS:
     void updateIsValid(const QString &udi);
 
 private:
-    bool m_supportsMTP;
-    bool m_hasStorageAccess;
-
     std::shared_ptr<DevicesStateMonitor> m_stateMonitor;
 };
