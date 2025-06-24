@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-10 02:39+0000\n"
+"POT-Creation-Date: 2025-06-24 02:36+0000\n"
 "PO-Revision-Date: 2021-08-12 11:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -116,7 +116,7 @@ msgid "Computer"
 msgstr "കമ്പ്യൂട്ടര്‍"
 
 #. i18n.
-#: kastatsfavoritesmodel.cpp:555 rootmodel.cpp:533 simplefavoritesmodel.cpp:33
+#: kastatsfavoritesmodel.cpp:557 rootmodel.cpp:533 simplefavoritesmodel.cpp:33
 #, kde-format
 msgid "Favorites"
 msgstr "പ്രിയപ്പെട്ടവ"
