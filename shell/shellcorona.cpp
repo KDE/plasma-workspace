@@ -868,10 +868,6 @@ void ShellCorona::load()
     connect(m_screenPool, &ScreenPool::screenOrderChanged, this, &ShellCorona::handleScreenOrderChanged, Qt::UniqueConnection);
     connect(m_screenPool, &ScreenPool::screenRemoved, this, &ShellCorona::handleScreenRemoved, Qt::UniqueConnection);
 
-    if (!m_waitingPanels.isEmpty()) {
-        m_waitingPanelsTimer.start();
-    }
-
     if (config()->isImmutable() || !KAuthorized::authorize(QStringLiteral("plasma/plasmashell/unlockedDesktop"))) {
         setImmutability(Plasma::Types::SystemImmutable);
     } else {
@@ -1517,11 +1513,6 @@ void ShellCorona::addOutput(QScreen *screen)
     // in the list. We still don't want to have an invisible view added.
     containment->reactToScreenChange();
 
-    // were there any panels for this screen before it popped up?
-    if (!m_waitingPanels.isEmpty()) {
-        m_waitingPanelsTimer.start();
-    }
-
     if (!m_screenReorderInProgress) {
         Q_EMIT availableScreenRectChanged(m_screenPool->idForScreen(screen));
     }
@@ -1547,6 +1538,10 @@ void ShellCorona::checkAllDesktopsUiReady()
                                                                             QStringLiteral("setStage"));
     ksplashProgressMessage.setArguments(QList<QVariant>() << QStringLiteral("desktop"));
     QDBusConnection::sessionBus().asyncCall(ksplashProgressMessage);
+
+    if (!m_waitingPanels.isEmpty()) {
+        m_waitingPanelsTimer.start();
+    }
 }
 
 Plasma::Containment *ShellCorona::createContainmentForActivity(const QString &activity, int screenNum)
@@ -1604,7 +1599,7 @@ void ShellCorona::createWaitingPanels()
 
         QScreen *screen = m_screenPool->screenForId(requestedScreen);
         DesktopView *desktopView = desktopForScreen(screen);
-        if (!screen || !desktopView) {
+        if (!screen || !desktopView || !desktopView->containment()->isUiReady()) {
             stillWaitingPanels << cont;
             continue;
         }
