@@ -1,6 +1,3 @@
-ecm_install_configured_files(INPUT plasma-ksplash-ready.service.in @ONLY
-                                                   DESTINATION ${KDE_INSTALL_SYSTEMDUSERUNITDIR})
-
 install(FILES plasma-core.target DESTINATION ${KDE_INSTALL_SYSTEMDUSERUNITDIR})
 install(FILES plasma-workspace.target DESTINATION ${KDE_INSTALL_SYSTEMDUSERUNITDIR})
 install(FILES plasma-workspace-wayland.target DESTINATION ${KDE_INSTALL_SYSTEMDUSERUNITDIR})

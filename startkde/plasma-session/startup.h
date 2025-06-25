@@ -20,7 +20,6 @@ class Startup : public QObject
     Q_OBJECT
 public:
     Startup(QObject *parent);
-    void upAndRunning(const QString &msg);
     void finishStartup();
 
     static Startup *self()

@@ -206,20 +206,9 @@ Startup::Startup(QObject *parent)
     // app will be closed when all KJobs finish thanks to the QEventLoopLocker in each KJob
 }
 
-void Startup::upAndRunning(const QString &msg)
-{
-    QDBusMessage ksplashProgressMessage = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KSplash"),
-                                                                         QStringLiteral("/KSplash"),
-                                                                         QStringLiteral("org.kde.KSplash"),
-                                                                         QStringLiteral("setStage"));
-    ksplashProgressMessage.setArguments(QList<QVariant>() << msg);
-    QDBusConnection::sessionBus().asyncCall(ksplashProgressMessage);
-}
-
 void Startup::finishStartup()
 {
     qCDebug(PLASMA_SESSION) << "Finished";
-    upAndRunning(QStringLiteral("ready"));
 
     playStartupSound();
     new SessionTrack(m_processes);

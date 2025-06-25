@@ -26,13 +26,12 @@
 #define TEST_STEP_INTERVAL 2000
 
 /**
- * There are 7 stages in ksplash
+ * There are 6 stages in ksplash
  *  - initial (from this class)
  *  - startPlasma (from startplasma)
  *  - kcminit
  *  - ksmserver
  *  - wm (for X11 from KWin, for Wayland from this class)
- *  - ready (from plasma-session startup)
  *  - desktop (from shellcorona)
  */
 
@@ -114,7 +113,7 @@ void SplashApp::setStage(const QString &stage)
 void SplashApp::setStage(int stage)
 {
     m_stage = stage;
-    if (m_stage == 7) {
+    if (m_stage == 6) {
         QGuiApplication::exit(EXIT_SUCCESS);
     }
     for (SplashWindow *w : std::as_const(m_windows)) {

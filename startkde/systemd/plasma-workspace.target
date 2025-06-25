@@ -6,7 +6,6 @@ Wants=plasma-restoresession.service
 Wants=plasma-xembedsniproxy.service
 Wants=plasma-gmenudbusmenuproxy.service
 Wants=plasma-powerdevil.service
-Wants=plasma-ksplash-ready.service
 Wants=plasma-polkit-agent.service
 Wants=kde-baloo.service
 Wants=plasma-foreground-booster.service
