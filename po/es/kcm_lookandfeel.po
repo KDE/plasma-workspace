@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-21 00:44+0000\n"
+"POT-Creation-Date: 2025-06-25 00:44+0000\n"
 "PO-Revision-Date: 2025-06-04 19:32+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -85,14 +85,14 @@ msgstr "nombredepaquete"
 msgid "Reset the Plasma Desktop layout"
 msgstr "Reiniciar la distribución del escritorio Plasma"
 
-#: lookandfeelmanager.cpp:890
+#: lookandfeelmanager.cpp:883
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr ""
 "Debe reiniciar la sesión de Plasma para que estos cambios tengan efecto."
 
-#: lookandfeelmanager.cpp:891
+#: lookandfeelmanager.cpp:884
 #, kde-format
 msgid "Cursor Settings Changed"
 msgstr "Preferencias de cursores cambiadas"

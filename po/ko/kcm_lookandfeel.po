@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-21 00:44+0000\n"
+"POT-Creation-Date: 2025-06-25 00:44+0000\n"
 "PO-Revision-Date: 2024-11-28 23:28+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -79,13 +79,13 @@ msgstr "packagename"
 msgid "Reset the Plasma Desktop layout"
 msgstr "Plasma 바탕 화면 레이아웃 초기화"
 
-#: lookandfeelmanager.cpp:890
+#: lookandfeelmanager.cpp:883
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr "커서 변경 사항을 적용하려면 Plasma 세션을 다시 시작해야 합니다."
 
-#: lookandfeelmanager.cpp:891
+#: lookandfeelmanager.cpp:884
 #, kde-format
 msgid "Cursor Settings Changed"
 msgstr "커서 설정 변경됨"

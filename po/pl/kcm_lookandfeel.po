@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-21 00:44+0000\n"
+"POT-Creation-Date: 2025-06-25 00:44+0000\n"
 "PO-Revision-Date: 2024-07-27 09:15+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -82,13 +82,13 @@ msgstr "nazwa pakietu"
 msgid "Reset the Plasma Desktop layout"
 msgstr "Wyzeruj układ pulpitu Plazmy"
 
-#: lookandfeelmanager.cpp:890
+#: lookandfeelmanager.cpp:883
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr "Zmiany zostaną zastosowane dopiero po ponownym uruchomieniu Plazmy."
 
-#: lookandfeelmanager.cpp:891
+#: lookandfeelmanager.cpp:884
 #, kde-format
 msgid "Cursor Settings Changed"
 msgstr "Ustawienia wskaźnika uległy zmienianie"

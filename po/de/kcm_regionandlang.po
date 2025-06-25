@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_regionandlang\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-04 00:44+0000\n"
+"POT-Creation-Date: 2025-06-25 00:44+0000\n"
 "PO-Revision-Date: 2025-05-17 14:17+0200\n"
 "Last-Translator: Flori G <Renner03@protonmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -303,10 +303,12 @@ msgctxt "%1 is a list of package names"
 msgid "Not all missing packages managed to resolve! %1"
 msgstr "Nicht alle fehlenden Pakete konnten aufgelöst werden! %1"
 
-#: localegeneratorubuntu.cpp:94
-#, kde-format
-msgctxt "%1 is a list of package names"
-msgid "Failed to install package %1"
+#: localegeneratorubuntu.cpp:96
+#, fuzzy, kde-format
+#| msgctxt "%1 is a list of package names"
+#| msgid "Failed to install package %1"
+msgctxt "%1 is a list of package names, %2 is the error explanation"
+msgid "Failed to install language packages (%1): %2"
 msgstr "Fehler beim Installieren von Paket %1"
 
 #: localegenhelper/localegenhelper.cpp:45

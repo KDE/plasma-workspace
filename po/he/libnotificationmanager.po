@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-21 00:44+0000\n"
+"POT-Creation-Date: 2025-06-25 00:44+0000\n"
 "PO-Revision-Date: 2025-05-07 09:06+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -136,3 +136,14 @@ msgstr[0] "התקבלה התראה בזמן שמצב „לא להפריע” ה�
 msgstr[1] "התקבלו שתי התראות בזמן שמצב „לא להפריע” היה פעיל."
 msgstr[2] "התקבלו %1 התראות בזמן שמצב „לא להפריע” היה פעיל."
 msgstr[3] "התקבלו %1 התראות בזמן שמצב „לא להפריע” היה פעיל."
+
+#: notifications.cpp:918
+#, fuzzy, kde-format
+#| msgctxt "@title"
+#| msgid "Unread Notification"
+#| msgid_plural "Unread Notifications"
+msgctxt ""
+"@action:button Show the notifications popup; translate this in as short a "
+"form as possible"
+msgid "Show Notifications"
+msgstr "התראה שלא נקראה"

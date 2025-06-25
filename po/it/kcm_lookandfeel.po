@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-21 00:44+0000\n"
+"POT-Creation-Date: 2025-06-25 00:44+0000\n"
 "PO-Revision-Date: 2024-07-28 15:24+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -83,14 +83,14 @@ msgstr "nomepacchetto"
 msgid "Reset the Plasma Desktop layout"
 msgstr "Ripristina la disposizione di Plasma Desktop"
 
-#: lookandfeelmanager.cpp:890
+#: lookandfeelmanager.cpp:883
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr ""
 "Devi riavviare la sessione di Plasma affinché le modifiche abbiano effetto."
 
-#: lookandfeelmanager.cpp:891
+#: lookandfeelmanager.cpp:884
 #, kde-format
 msgid "Cursor Settings Changed"
 msgstr "Impostazioni dei puntatori modificate"

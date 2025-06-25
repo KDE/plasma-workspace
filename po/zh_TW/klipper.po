@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-24 00:44+0000\n"
+"POT-Creation-Date: 2025-06-25 00:44+0000\n"
 "PO-Revision-Date: 2024-12-19 17:32+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -301,54 +301,73 @@ msgstr ""
 "<icode>xprop | grep WM_CLASS</icode><nl/><nl/>然後點擊您要排除的視窗。在終端"
 "機視窗裡顯示，在 = 符號後方的第一個名稱就是您需要輸入的名稱。"
 
-#: declarative/qml/BarcodePage.qml:31
+#: declarative/qml/BarcodePage.qml:32
 #, kde-format
 msgid "QR Code"
 msgstr "QR 碼"
 
-#: declarative/qml/BarcodePage.qml:32
+#: declarative/qml/BarcodePage.qml:33
 #, kde-format
 msgid "Data Matrix"
 msgstr "資料矩陣"
 
-#: declarative/qml/BarcodePage.qml:33
+#: declarative/qml/BarcodePage.qml:34
 #, kde-format
 msgctxt "Aztec barcode"
 msgid "Aztec"
 msgstr "Aztec"
 
-#: declarative/qml/BarcodePage.qml:34
+#: declarative/qml/BarcodePage.qml:35
 #, kde-format
 msgid "Code 39"
 msgstr "Code 39"
 
-#: declarative/qml/BarcodePage.qml:35
+#: declarative/qml/BarcodePage.qml:36
 #, kde-format
 msgid "Code 93"
 msgstr "Code 93"
 
-#: declarative/qml/BarcodePage.qml:36
+#: declarative/qml/BarcodePage.qml:37
 #, kde-format
 msgid "Code 128"
 msgstr "Code 128"
 
-#: declarative/qml/BarcodePage.qml:52
+#: declarative/qml/BarcodePage.qml:53
 #, kde-format
 msgid "Return to Clipboard"
 msgstr "移回到剪貼簿"
 
-#: declarative/qml/BarcodePage.qml:88
+#: declarative/qml/BarcodePage.qml:89
+#, kde-format
+msgctxt "@action:button Copy to clipboard"
+msgid "Copy"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:95
+#, kde-format
+msgctxt "@info:status"
+msgid "An image of the QR code has been copied to clipboard"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:101
+#, fuzzy, kde-format
+#| msgid "Append to clipboard"
+msgctxt "@info:tooltip"
+msgid "Copy QR code image to clipboard"
+msgstr "加到剪貼簿後方"
+
+#: declarative/qml/BarcodePage.qml:112
 #, kde-format
 msgid "Change the QR code type"
 msgstr "變更 QR 碼型態"
 
-#: declarative/qml/BarcodePage.qml:156
+#: declarative/qml/BarcodePage.qml:197
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr "沒有足夠空間來顯示 QR 碼。請嘗試調整此小程式的大小。"
 
-#: declarative/qml/BarcodePage.qml:156
+#: declarative/qml/BarcodePage.qml:197
 #, kde-format
 msgid "Creating QR code failed"
 msgstr "建立 QR 碼失敗"

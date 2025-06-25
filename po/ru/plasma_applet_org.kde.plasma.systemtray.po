@@ -9,19 +9,20 @@
 # Nick Shaforostoff <shafff@ukr.net>, 2009.
 # Yuri Efremov <yur.arh@gmail.com>, 2013.
 # Alexander Yavorsky <kekcuha@gmail.com>, 2020, 2021, 2022, 2024, 2025.
+# SPDX-FileCopyrightText: 2025 Olesya Gerasimenko <goa@altlinux.ru>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_systemtray\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-15 00:44+0000\n"
-"PO-Revision-Date: 2025-05-29 15:44+0200\n"
-"Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
-"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"PO-Revision-Date: 2025-06-24 16:22+0300\n"
+"Last-Translator: Olesya Gerasimenko <goa@altlinux.ru>\n"
+"Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.08.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Environment: kde\n"
@@ -93,11 +94,11 @@ msgid ""
 "><nl/>Use this setting at your own risk, and do not report issues to KDE or "
 "the app’s author."
 msgstr ""
-"Перед использованием этой настройки рекомендуется найти в <application>%1</"
-"application> параметр отключения иконки в трее. Некоторые приложения не "
-"предусматривают отключение своих иконок в трее, и применение данной "
-"настройки может вызвать непредсказуемое поведение. <nl/><nl/>Используйте эту "
-"возможность на свой страх и риск."
+"Перед использованием этой опции рекомендуется найти в <application>%1</"
+"application> параметр отключения значка в системном лотке. Некоторые "
+"приложения не предусматривают отключение своих значков в системном лотке, и "
+"применение данной опции может вызвать непредсказуемое поведение.<nl/><nl/"
+">Используйте эту возможность на свой страх и риск."
 
 #: package/contents/ui/ConfigEntries.qml:164
 #, kde-format

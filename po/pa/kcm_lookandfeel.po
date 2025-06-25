@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-21 00:44+0000\n"
+"POT-Creation-Date: 2025-06-25 00:44+0000\n"
 "PO-Revision-Date: 2025-03-24 14:58-0500\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -77,13 +77,13 @@ msgstr "ਪੈਕੇਜ ਦਾ ਨਾਂ"
 msgid "Reset the Plasma Desktop layout"
 msgstr "ਪਲਾਜ਼ਮਾ ਡੈਸਕਟਾਪ ਖਾਕਾ ਮੁੜ-ਸੈੱਟ ਕਰੋ"
 
-#: lookandfeelmanager.cpp:890
+#: lookandfeelmanager.cpp:883
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr "ਇਹਨਾਂ ਤਬਦੀਲੀਆਂ ਨੂੰ ਲਾਗੂ ਕਰਨ ਲਈ ਤੁਹਾਨੂੰ ਪਲਾਜ਼ਮਾ ਸ਼ੈਸ਼ਨ ਮੁੜ ਚਾਲੂ ਕਰਨਾ ਪਵੇਗਾ।"
 
-#: lookandfeelmanager.cpp:891
+#: lookandfeelmanager.cpp:884
 #, kde-format
 msgid "Cursor Settings Changed"
 msgstr "ਕਰਸਰ ਸੈਟਿੰਗਾਂ ਬਦਲੀਆਂ ਗਈਆਂ"

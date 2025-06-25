@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-21 00:44+0000\n"
+"POT-Creation-Date: 2025-06-25 00:44+0000\n"
 "PO-Revision-Date: 2024-08-04 17:06+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -81,13 +81,13 @@ msgstr "தொகுப்புப்பெயர்"
 msgid "Reset the Plasma Desktop layout"
 msgstr "பிளாஸ்மா பணிமேடையின் தளவமைப்பை இயல்பிருப்புக்கு மீட்டமை"
 
-#: lookandfeelmanager.cpp:890
+#: lookandfeelmanager.cpp:883
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr "இந்த மாற்றங்கள் செயல்பட, பிளாஸ்மா அமர்வை நீங்கள் மீள்துவக்க வேண்டும்."
 
-#: lookandfeelmanager.cpp:891
+#: lookandfeelmanager.cpp:884
 #, kde-format
 msgid "Cursor Settings Changed"
 msgstr "சுட்டிக்குறி அமைப்புகள் மாற்றப்பட்டன"
