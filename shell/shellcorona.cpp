@@ -1338,6 +1338,8 @@ void ShellCorona::removeDesktop(DesktopView *desktopView)
 
     desktopView->destroy();
     desktopView->containment()->reactToScreenChange();
+
+    checkAllDesktopsUiReady();
 }
 
 PanelView *ShellCorona::panelView(Plasma::Containment *containment) const
@@ -1529,22 +1531,22 @@ void ShellCorona::addOutput(QScreen *screen)
 #endif
 }
 
-void ShellCorona::checkAllDesktopsUiReady(bool ready)
+void ShellCorona::checkAllDesktopsUiReady()
 {
-    if (!ready)
+    const bool ready = std::ranges::all_of(std::as_const(m_desktopViewForScreen), [](const DesktopView *view) {
+        return view->containment()->isUiReady();
+    });
+    if (!ready) {
         return;
-    for (auto v : std::as_const(m_desktopViewForScreen)) {
-        if (!v->containment()->isUiReady())
-            return;
-
-        qCDebug(PLASMASHELL) << "Plasma Shell startup completed";
-        QDBusMessage ksplashProgressMessage = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KSplash"),
-                                                                             QStringLiteral("/KSplash"),
-                                                                             QStringLiteral("org.kde.KSplash"),
-                                                                             QStringLiteral("setStage"));
-        ksplashProgressMessage.setArguments(QList<QVariant>() << QStringLiteral("desktop"));
-        QDBusConnection::sessionBus().asyncCall(ksplashProgressMessage);
     }
+
+    qCDebug(PLASMASHELL) << "Plasma Shell startup completed";
+    QDBusMessage ksplashProgressMessage = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KSplash"),
+                                                                            QStringLiteral("/KSplash"),
+                                                                            QStringLiteral("org.kde.KSplash"),
+                                                                            QStringLiteral("setStage"));
+    ksplashProgressMessage.setArguments(QList<QVariant>() << QStringLiteral("desktop"));
+    QDBusConnection::sessionBus().asyncCall(ksplashProgressMessage);
 }
 
 Plasma::Containment *ShellCorona::createContainmentForActivity(const QString &activity, int screenNum)

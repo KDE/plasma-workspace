@@ -275,7 +275,7 @@ private:
     DesktopView *desktopForScreen(QScreen *screen) const;
     void setupWaylandIntegration();
     void executeSetupPlasmoidScript(Plasma::Containment *containment, Plasma::Applet *applet);
-    void checkAllDesktopsUiReady(bool ready);
+    void checkAllDesktopsUiReady();
     void activateLauncherMenu(const QString &screenName);
     void handleColorRequestedFromDBus(const QDBusMessage &msg);
 
