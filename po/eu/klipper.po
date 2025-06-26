@@ -1,40 +1,40 @@
 # Translation for klipper.po to Euskara/Basque (eu).
-# Copyright (C) 2002-2024 This file is copyright:
+# Copyright (C) 2002-2025 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# SPDX-FileCopyrightText: 2024 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2024, 2025 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Koldo Navarro <koldo.np@euskalnet.net>
 # Marcos  <marcos@euskalgnu.org>, 2002, 2005, 2006, 2007, 2008, 2010.
 # Juan Irigoien <juanirigoien@irakasle.net>, 2004.
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2010, 2011, 2014, 2018, 2019, 2020, 2021, 2022, 2023, 2024.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2010, 2011, 2014, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025.
 # Hizkuntza Politikarako Sailburuordetza <hizpol@ej-gv.es>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-25 00:44+0000\n"
-"PO-Revision-Date: 2024-12-09 18:36+0100\n"
+"PO-Revision-Date: 2025-06-25 20:29+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 25.04.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Koldo Navarro, Juan Irigoien, Marcos, Iñigo Salvador Azurmendi"
+msgstr "Iñigo Salvador Azurmendi,Koldo Navarro,Juan Irigoien,Marcos"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
-"koldo.np@euskalnet.net, juanirigoien@irakasle.net, marcos@euskalgnu.org, "
-"xalba@euskalnet.net"
+"xalba@ni.eus,koldo.np@euskalnet.net,juanirigoien@irakasle.net,"
+"marcos@euskalgnu.org"
 
 #: configdialog.cpp:83
 #, kde-format
@@ -351,20 +351,19 @@ msgstr "Itzuli arbelera"
 #, kde-format
 msgctxt "@action:button Copy to clipboard"
 msgid "Copy"
-msgstr ""
+msgstr "Kopiatu"
 
 #: declarative/qml/BarcodePage.qml:95
 #, kde-format
 msgctxt "@info:status"
 msgid "An image of the QR code has been copied to clipboard"
-msgstr ""
+msgstr "QR-kodearen irudi bat arbelean kopiatu da"
 
 #: declarative/qml/BarcodePage.qml:101
-#, fuzzy, kde-format
-#| msgid "Append to clipboard"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Copy QR code image to clipboard"
-msgstr "Erantsi arbelean"
+msgstr "Kopiatu QR-kodearen irudia arbelean"
 
 #: declarative/qml/BarcodePage.qml:112
 #, kde-format

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-25 00:44+0000\n"
-"PO-Revision-Date: 2025-05-07 05:11+0200\n"
+"PO-Revision-Date: 2025-06-25 04:08+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.6\n"
 
 #: abstractnotificationsmodel.cpp:340
 #, kde-format
@@ -120,12 +120,9 @@ msgstr[0] "როცა აქტიური იყო 'არ შემაწ�
 msgstr[1] "როცა აქტიური იყო 'არ შემაწუხო', მიღებულია %1 გაფრთხილება."
 
 #: notifications.cpp:918
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Unread Notification"
-#| msgid_plural "Unread Notifications"
+#, kde-format
 msgctxt ""
 "@action:button Show the notifications popup; translate this in as short a "
 "form as possible"
 msgid "Show Notifications"
-msgstr "წაუკითხავი შეტყობინებება"
+msgstr "გაფრთხილებების ჩვენება"

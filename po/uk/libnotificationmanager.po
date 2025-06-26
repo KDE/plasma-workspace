@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: libnotificationmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-25 00:44+0000\n"
-"PO-Revision-Date: 2025-05-07 13:46+0300\n"
+"PO-Revision-Date: 2025-06-25 09:52+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -140,12 +140,9 @@ msgstr[2] "У режимі «Не турбувати» було отримано
 msgstr[3] "У режимі «Не турбувати» було отримано сповіщення."
 
 #: notifications.cpp:918
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Unread Notification"
-#| msgid_plural "Unread Notifications"
+#, kde-format
 msgctxt ""
 "@action:button Show the notifications popup; translate this in as short a "
 "form as possible"
 msgid "Show Notifications"
-msgstr "Непрочитані сповіщення"
+msgstr "Показувати сповіщення"

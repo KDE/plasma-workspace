@@ -336,11 +336,10 @@ msgid "An image of the QR code has been copied to clipboard"
 msgstr ""
 
 #: declarative/qml/BarcodePage.qml:101
-#, fuzzy, kde-format
-#| msgid "Append to clipboard"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Copy QR code image to clipboard"
-msgstr "添加到剪贴板"
+msgstr ""
 
 #: declarative/qml/BarcodePage.qml:112
 #, kde-format

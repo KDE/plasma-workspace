@@ -155,8 +155,8 @@ msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
 "large font size, consider adjusting the global screen scale."
 msgstr ""
-"单独设置字体大小时，视觉效果可能不佳。您可以尝试通过调整全局屏幕缩放改变字体"
-"大小。"
+"字体太大可能会导致显示效果不佳。与其勉强使用大字号，不如调整屏幕的全局缩放比"
+"例。"
 
 #: ui/main.qml:90
 #, kde-kuit-format
@@ -183,7 +183,7 @@ msgctxt "@info:usagetip"
 msgid ""
 "Plasma is not designed to be usable with fonts smaller than 4pt. Size has "
 "been reset to 4pt."
-msgstr ""
+msgstr "Plasma 不支持使用小于 4pt 的字体。字体大小已重置为 4pt。"
 
 #: ui/main.qml:133
 #, kde-format
@@ -192,6 +192,8 @@ msgid ""
 "Very small fonts may produce odd-looking results. Instead of using a very "
 "small font size, consider adjusting the global screen scale."
 msgstr ""
+"字体太小可能会导致显示效果不佳。与其勉强使用小字号，不如调整屏幕的全局缩放比"
+"例。"
 
 #: ui/main.qml:154
 #, kde-format
