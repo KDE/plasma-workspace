@@ -147,8 +147,8 @@ msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
 "large font size, consider adjusting the global screen scale."
 msgstr ""
-"单独设置字体大小时，视觉效果可能不佳。您可以尝试通过调整全局屏幕缩放改变字体"
-"大小。"
+"字体太大可能会导致显示效果不佳。与其勉强使用大字号，不如调整屏幕的全局缩放比"
+"例。"
 
 #: ui/main.qml:72
 #, kde-format
