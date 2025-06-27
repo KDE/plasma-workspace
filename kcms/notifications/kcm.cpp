@@ -8,17 +8,9 @@
 
 #include <QAction>
 #include <QCommandLineParser>
-#include <QDialog>
-#include <QDialogButtonBox>
 #include <QFile>
 #include <QFileInfo>
-#include <QPushButton>
-#include <QQuickItem>
-#include <QQuickRenderControl>
-#include <QQuickWindow>
 #include <QStandardPaths>
-#include <QVBoxLayout>
-#include <QWindow>
 
 #include <KConfigGroup>
 #include <KGlobalAccel>
