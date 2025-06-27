@@ -1,15 +1,17 @@
-set(lookandfeelqmlplugin_SRCS
-    lookandfeelqmlplugin.cpp lookandfeelqmlplugin.h
+ecm_add_qml_module(lookandfeelqmlplugin
+    URI org.kde.plasma.lookandfeel
+    VERSION 1.0
+    GENERATE_PLUGIN_SOURCE
+)
+
+target_sources(lookandfeelqmlplugin PRIVATE
     kpackageinterface.cpp kpackageinterface.h
 )
 
-add_library(lookandfeelqmlplugin SHARED ${lookandfeelqmlplugin_SRCS})
-target_link_libraries(lookandfeelqmlplugin
+target_link_libraries(lookandfeelqmlplugin PRIVATE
     Qt::Qml
     KF6::ConfigCore
     KF6::Package
 )
 
-install(TARGETS lookandfeelqmlplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/lookandfeel)
-
-install(FILES qmldir DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/lookandfeel)
+ecm_finalize_qml_module(lookandfeelqmlplugin)
