@@ -10,6 +10,7 @@
 #pragma once
 
 #include "config-X11.h"
+#include "multipanelview.h"
 #include "plasma/corona.h"
 
 #include <QDBusArgument>
@@ -297,6 +298,7 @@ private:
     QMap<const Plasma::Containment *, PanelView *> m_panelViews;
     // map from QScreen to desktop view
     QHash<int, DesktopView *> m_desktopViewForScreen;
+    QHash<int, MultiPanelView *> m_multiPanelViewForScreen;
     QHash<const Plasma::Containment *, int> m_pendingScreenChanges;
     KConfigGroup m_desktopDefaultsConfig;
     KConfigGroup m_lnfDefaultsConfig;

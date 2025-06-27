@@ -20,6 +20,7 @@ MACRO(PLASMASHELL_UNIT_TESTS)
                     ../shellcontainmentconfig.cpp
                     ../osd.cpp
                     ../panelview.cpp
+                    ../multipanelview.cpp
                     ../panelconfigview.cpp
                     ../containmentconfigview.cpp
                     ../currentcontainmentactionsmodel.cpp

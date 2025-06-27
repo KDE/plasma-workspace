@@ -13,9 +13,15 @@
 #include <QQuickView>
 
 #include <Plasma/Corona>
+#include <Plasma/Theme>
 
 #include "config-workspace.h"
 #include "containmentconfigview.h"
+
+namespace LayerShellQt
+{
+class Window;
+}
 
 namespace LayerShellQt
 {
@@ -36,6 +42,8 @@ public:
     explicit MultiPanelView(Plasma::Corona *corona, QScreen *targetScreen = nullptr);
     ~MultiPanelView() override;
 
+    void updateLayerWindow();
+
     /*This is different from screen() as is always there, even if the window is
       temporarily outside the screen or if is hidden: only plasmashell will ever
       change this property, unlike QWindow::screen()*/
@@ -45,7 +53,7 @@ public:
     void adaptToScreen();
     void showEvent(QShowEvent *) override;
 
-    void addContainemt(Plasma::Containment *containment);
+    void addContainment(Plasma::Containment *containment);
     bool removeContainment(Plasma::Containment *containment);
     QList<Plasma::Containment *> containments() const;
     QList<QQuickItem *> containmentGraphicItems() const;
@@ -59,6 +67,9 @@ public:
     // TODO: change name
     void screenGeometryChanged();
 
+    Q_INVOKABLE void setMaskFromRectangles(const QList<QRect> &rects);
+    Q_INVOKABLE void setBlurBehindMask(const QList<QObject *> &frameSvgs);
+
 Q_SIGNALS:
     void containmentsChanged();
     void geometryChanged();
@@ -68,4 +79,6 @@ private:
     QList<Plasma::Containment *> m_containments;
     QPointer<Plasma::Corona> m_corona;
     QPointer<QScreen> m_screenToFollow;
+    LayerShellQt::Window *m_layerWindow = nullptr;
+    Plasma::Theme m_theme;
 };

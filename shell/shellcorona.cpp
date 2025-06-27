@@ -57,6 +57,7 @@
 #include "futureutil.h"
 #include "kconfigloader.h"
 #include "kconfigpropertymap.h"
+#include "multipanelview.h"
 #include "osd.h"
 #include "panelview.h"
 #include "plasmashelladaptor.h"
@@ -1604,34 +1605,41 @@ void ShellCorona::createWaitingPanels()
             continue;
         }
 
+        MultiPanelView *panel = m_multiPanelViewForScreen.value(requestedScreen);
+        if (!panel) {
+            panel = new MultiPanelView(this, screen);
+            m_multiPanelViewForScreen[requestedScreen] = panel;
+        }
+
         // TODO: does a similar check make sense?
         // Q_ASSERT(qBound(0, requestedScreen, m_screenPool->count() - 1) == requestedScreen);
-        PanelView *panel = new PanelView(this, screen);
+        //        PanelView *panel = new PanelView(this, screen);
         if (panel->rendererInterface()->graphicsApi() != QSGRendererInterface::Software) {
             connect(panel, &QQuickWindow::sceneGraphError, this, &ShellCorona::glInitializationFailed);
         }
-        auto rectNotify = [this, panel]() {
-            Q_ASSERT(qobject_cast<PanelView *>(panel)); // https://bugreports.qt.io/browse/QTBUG-118841
-            if (!m_screenReorderInProgress && panel->containment()) {
-                Q_EMIT availableScreenRectChanged(panel->containment()->screen());
-            }
-        };
-
-        m_panelViews[cont] = panel;
-        panel->setContainment(cont);
+        // TODO
+        /*   auto rectNotify = [this, panel]() {
+               Q_ASSERT(qobject_cast<PanelView *>(panel)); // https://bugreports.qt.io/browse/QTBUG-118841
+               if (!m_screenReorderInProgress && panel->containment()) {
+                   Q_EMIT availableScreenRectChanged(panel->containment()->screen());
+               }
+           };
+   // TODO
+           m_panelViews[cont] = panel;*/
+        panel->addContainment(cont);
         cont->reactToScreenChange();
         Q_EMIT cont->screenGeometryChanged(cont->screenGeometry());
-
-        rectNotify();
+        // TODO
+        // rectNotify();
 
         connect(cont, &QObject::destroyed, this, &ShellCorona::panelContainmentDestroyed);
 
-        connect(panel, &QWindow::visibleChanged, this, rectNotify);
-        connect(panel, &QWindow::screenChanged, this, rectNotify);
-        connect(panel, &PanelView::locationChanged, this, rectNotify);
-        connect(panel, &PanelView::visibilityModeChanged, this, rectNotify);
-        connect(panel, &PanelView::thicknessChanged, this, rectNotify);
-        connect(panel, &PanelView::userConfiguringChanged, this, &ShellCorona::panelBeingConfiguredChanged);
+        /*    connect(panel, &QWindow::visibleChanged, this, rectNotify);
+            connect(panel, &QWindow::screenChanged, this, rectNotify);
+            connect(panel, &PanelView::locationChanged, this, rectNotify);
+            connect(panel, &PanelView::visibilityModeChanged, this, rectNotify);
+            connect(panel, &PanelView::thicknessChanged, this, rectNotify);
+            connect(panel, &PanelView::userConfiguringChanged, this, &ShellCorona::panelBeingConfiguredChanged);*/
     }
     m_waitingPanels = stillWaitingPanels;
 }
