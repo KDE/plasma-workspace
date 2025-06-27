@@ -913,9 +913,7 @@ void Notifications::showInhibitionSummary(Urgency urgency, const QStringList &bl
     notification->setFlags(KNotification::CloseOnTimeout);
     notification->setComponentName(u"libnotificationmanager"_s);
 
-    const QString showNotificationsText = i18nc( //
-        "@action:button Show the notifications popup; translate this in as short a form as possible",
-        "Show Notifications");
+    const QString showNotificationsText = i18nc("@action:button Show the notifications popup", "Show Notifications");
 
     const KNotificationAction *defaultShowNotificationsAction = notification->addDefaultAction(showNotificationsText);
     connect(defaultShowNotificationsAction, &KNotificationAction::activated, this, [this]() {
