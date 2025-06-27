@@ -25,7 +25,7 @@ PlasmaQuick::AppletQuickItem *PanelSpacer::containmentGraphicObject() const
     return PlasmaQuick::AppletQuickItem::itemForApplet(containment());
 }
 
-K_PLUGIN_CLASS(PanelSpacer)
+K_PLUGIN_CLASS_WITH_JSON(PanelSpacer, "metadata.json")
 
 #include "panelspacer.moc"
 

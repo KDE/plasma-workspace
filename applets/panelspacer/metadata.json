@@ -1,5 +1,4 @@
 {
-    "KPackageStructure": "Plasma/Applet",
     "KPlugin": {
         "Authors": [
             {
@@ -113,7 +112,6 @@
         "Description[zh_TW]": "在面板內保留空間。",
         "EnabledByDefault": true,
         "Icon": "distribute-horizontal-x",
-        "Id": "org.kde.plasma.panelspacer",
         "License": "GPL-2.0+",
         "Name": "Panel Spacer",
         "Name[ar]": "مُباعِد لوحة",
