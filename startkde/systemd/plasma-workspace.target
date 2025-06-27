@@ -17,7 +17,6 @@ Wants=xdg-desktop-autostart.target
 BindsTo=graphical-session.target
 Before=graphical-session.target
 Before=xdg-desktop-autostart.target
-Before=plasma-ksplash-ready.service
 Before=plasma-restoresession.service
 RefuseManualStart=yes
 StopWhenUnneeded=true
