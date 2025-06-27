@@ -6,6 +6,12 @@
 
 #include "kpackageinterface.h"
 
+#include <KConfigGroup>
+#include <KPackage/PackageLoader>
+#include <KSharedConfig>
+
+using namespace Qt::StringLiterals;
+
 KPackageInterface::KPackageInterface(const KPackage::Package &package)
     : m_package(package)
 {
@@ -20,6 +26,14 @@ QUrl KPackageInterface::fileUrl(const QByteArray &key) const
 QUrl KPackageInterface::fallbackFileUrl(const QByteArray &key) const
 {
     return m_package.fallbackPackage().fileUrl(key);
+}
+
+KPackageInterface *KPackageInterface::create(QQmlEngine *, QJSEngine *)
+{
+    const KConfigGroup cg(KSharedConfig::openConfig(), u"KDE"_s);
+    const auto packageName = cg.readEntry("LookAndFeelPackage", QString());
+    const auto package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"), packageName);
+    return new KPackageInterface(package);
 }
 
 #include "moc_kpackageinterface.cpp"
