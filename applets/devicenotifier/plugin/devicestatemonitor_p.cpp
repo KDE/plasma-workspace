@@ -248,7 +248,7 @@ void DevicesStateMonitor::setRepairingState(const QString &udi)
 void DevicesStateMonitor::setAccessibilityState(bool isAccessible, const QString &udi)
 {
     if (auto it = m_devicesStates.find(udi); it != m_devicesStates.end()) {
-        if (it->isMounted != isAccessible) {
+        if (it->isMounted != isAccessible && it->operationResult != Working) {
             it->isMounted = isAccessible;
             Q_EMIT stateChanged(udi);
         }
