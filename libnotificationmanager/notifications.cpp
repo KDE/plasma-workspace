@@ -916,14 +916,10 @@ void Notifications::showInhibitionSummary(Urgency urgency, const QStringList &bl
     const QString showNotificationsText = i18nc("@action:button Show the notifications popup", "Show Notifications");
 
     const KNotificationAction *defaultShowNotificationsAction = notification->addDefaultAction(showNotificationsText);
-    connect(defaultShowNotificationsAction, &KNotificationAction::activated, this, [this]() {
-        Q_EMIT showNotificationsRequested();
-    });
+    connect(defaultShowNotificationsAction, &KNotificationAction::activated, this, &Notifications::showNotificationsRequested);
 
     const KNotificationAction *showNotificationsAction = notification->addAction(showNotificationsText);
-    connect(showNotificationsAction, &KNotificationAction::activated, this, [this]() {
-        Q_EMIT showNotificationsRequested();
-    });
+    connect(showNotificationsAction, &KNotificationAction::activated, this, &Notifications::showNotificationsRequested);
 
     notification->sendEvent();
 }
