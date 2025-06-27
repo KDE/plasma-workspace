@@ -60,13 +60,26 @@ KCM.SimpleKCM {
     Connections {
         target: kcm
         function onFirstLoadDone() {
-            if (kcm.initialDesktopEntry || kcm.initialNotifyRcName) {
-                if (kcm.initialNotifyRcName === kcm.plasmaWorkspaceNotifyRcName) {
-                    root.openSystemNotificationSettings();
-                } else {
-                    root.openSourcesSettings();
-                }
+            if (!kcm.initialDesktopEntry && !kcm.initialNotifyRcName) {
+                return;
             }
+
+            // Open the system notification settings only if it's not an app
+            if (kcm.initialNotifyRcName === kcm.plasmaWorkspaceNotifyRcName
+                    && (!kcm.initialDesktopEntry || (kcm.initialEventId && kcm.initialEventId !== "notification"))) {
+                root.openSystemNotificationSettings();
+                return;
+            }
+
+            // Open the settings for the application set by the KCM arguments
+            let idx = kcm.sourcesModel.persistentIndexForDesktopEntry(kcm.initialDesktopEntry);
+            if (!idx.valid) {
+                idx = kcm.sourcesModel.persistentIndexForNotifyRcName(kcm.initialNotifyRcName);
+            }
+            root.openSourcesSettings({
+                rootIndex: idx,
+                showOnlyEventsConfig: false
+            });
         }
     }
 
