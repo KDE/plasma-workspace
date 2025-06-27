@@ -495,7 +495,7 @@ bool EnvCanadaIon::updateIonSource(const QString &source)
 void EnvCanadaIon::getXMLSetup()
 {
     // If network is down, we need to spin and wait
-    const QUrl url(QStringLiteral("https://dd.weather.gc.ca/today/citypage_weather/xml/siteList.xml"));
+    const QUrl url(QStringLiteral("https://dd.weather.gc.ca/today/citypage_weather/siteList.xml"));
     qCDebug(IONENGINE_ENVCAN) << "Fetching station list:" << url;
 
     KIO::TransferJob *getJob = KIO::get(url, KIO::NoReload, KIO::HideProgressInfo);
