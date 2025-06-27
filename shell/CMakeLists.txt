@@ -41,6 +41,7 @@ set (plasma_shell_SRCS
     containmentconfigview.cpp
     currentcontainmentactionsmodel.cpp
     desktopview.cpp
+    multipanelview.cpp
     panelview.cpp
     panelconfigview.cpp
     panelshadows.cpp
