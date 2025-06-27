@@ -21,28 +21,17 @@ KCM.AbstractKCM {
 
     property alias rootIndex: appConfiguration.rootIndex
     property bool showOnlyEventsConfig: false
+    property string eventId: ""
 
     framedView: false
 
     Component.onCompleted: {
-        var idx = kcm.sourcesModel.persistentIndexForDesktopEntry(kcm.initialDesktopEntry);
-        if (!idx.valid) {
-            idx = kcm.sourcesModel.persistentIndexForNotifyRcName(kcm.initialNotifyRcName);
-        }
-        if (idx.valid) {
-            appConfiguration.rootIndex = idx;
-        }
-
         // In Component.onCompleted we might not be assigned a window yet
         // which we need to make the events config dialog transient to it
         Qt.callLater(function() {
-            if (kcm.initialEventId && kcm.initialNotifyRcName) {
-                appConfiguration.configureEvents(kcm.initialEventId);
+            if (eventId) {
+                appConfiguration.configureEvents(eventId);
             }
-
-            kcm.initialDesktopEntry = "";
-            kcm.initialNotifyRcName = "";
-            kcm.initialEventId = "";
         });
     }
 
