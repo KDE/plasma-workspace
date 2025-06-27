@@ -60,13 +60,27 @@ KCM.SimpleKCM {
     Connections {
         target: kcm
         function onFirstLoadDone() {
-            if (kcm.initialDesktopEntry || kcm.initialNotifyRcName) {
-                if (kcm.initialNotifyRcName === kcm.plasmaWorkspaceNotifyRcName) {
-                    root.openSystemNotificationSettings();
-                } else {
-                    root.openSourcesSettings();
-                }
+            if (!kcm.initialDesktopEntry && !kcm.initialNotifyRcName) {
+                return;
             }
+
+            // Detect if we want to open the system notification settings
+            const showSystemNotifications = (kcm.initialNotifyRcName === kcm.plasmaWorkspaceNotifyRcName);
+
+            let idx = kcm.sourcesModel.persistentIndexForDesktopEntry(kcm.initialDesktopEntry);
+            if (showSystemNotifications || !idx.valid) {
+                idx = kcm.sourcesModel.persistentIndexForNotifyRcName(kcm.initialNotifyRcName);
+            }
+
+            root.openSourcesSettings({
+                rootIndex: idx,
+                showOnlyEventsConfig: showSystemNotifications,
+                eventId: kcm.initialNotifyRcName ? kcm.initialEventId : "",
+            });
+
+            kcm.initialDesktopEntry = "";
+            kcm.initialNotifyRcName = "";
+            kcm.initialEventId = "";
         }
     }
 
