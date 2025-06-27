@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-13 00:44+0000\n"
+"POT-Creation-Date: 2025-06-27 00:44+0000\n"
 "PO-Revision-Date: 2025-04-08 09:45+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -28,193 +28,93 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: package/contents/ui/DeviceItem.qml:97
-#, kde-format
-msgctxt ""
-"Accessing is a less technical word for Mounting; translation should be short "
-"and mean 'Currently mounting this device'"
-msgid "Checking…"
-msgstr "Проверка…"
-
-#: package/contents/ui/DeviceItem.qml:99
-#, kde-format
-msgctxt ""
-"Accessing is a less technical word for Mounting; translation should be short "
-"and mean 'Currently mounting this device'"
-msgid "Repairing…"
-msgstr "Устранение проблемы…"
-
-#: package/contents/ui/DeviceItem.qml:102
-#, kde-format
-msgctxt "@info:status Free disk space"
-msgid "%1 free of %2"
-msgstr "Свободно %1 из %2"
-
-#: package/contents/ui/DeviceItem.qml:106
-#, kde-format
-msgctxt ""
-"Accessing is a less technical word for Mounting; translation should be short "
-"and mean 'Currently mounting this device'"
-msgid "Accessing…"
-msgstr "Подключение…"
-
-#: package/contents/ui/DeviceItem.qml:109
-#, kde-format
-msgctxt ""
-"Removing is a less technical word for Unmounting; translation should be "
-"short and mean 'Currently unmounting this device'"
-msgid "Removing…"
-msgstr "Отключение…"
-
-#: package/contents/ui/DeviceItem.qml:112
-#, kde-format
-msgid "Don't unplug yet! Files are still being transferred…"
-msgstr "Не отключайте оборудование, выполняется передача файлов…"
-
-#: package/contents/ui/FullRepresentation.qml:45
-#: package/contents/ui/main.qml:125
-#, kde-format
-msgid "Remove All"
-msgstr "Извлечь все"
-
-#: package/contents/ui/FullRepresentation.qml:46
-#, kde-format
-msgid "Click to safely remove all devices"
-msgstr "Безопасно извлечь все носители"
-
-#: package/contents/ui/FullRepresentation.qml:153
-#, kde-format
-msgid "No removable devices attached"
-msgstr "Не подключено ни одного внешнего устройства"
-
-#: package/contents/ui/FullRepresentation.qml:153
-#, kde-format
-msgid "No disks available"
-msgstr "Нет доступных устройств"
-
-#: package/contents/ui/main.qml:72
-#, kde-format
-msgid "Most Recent Device"
-msgstr "Последнее подключённое устройство"
-
-#: package/contents/ui/main.qml:72
-#, kde-format
-msgid "No Devices Available"
-msgstr "Нет доступных устройств"
-
-#: package/contents/ui/main.qml:108
-#, kde-format
-msgctxt "Open auto mounter kcm"
-msgid "Configure Removable Devices…"
-msgstr "Настроить внешние устройства..."
-
-#: package/contents/ui/main.qml:133
-#, kde-format
-msgid "Removable Devices"
-msgstr "Подключаемые устройства"
-
-#: package/contents/ui/main.qml:148
-#, kde-format
-msgid "Non Removable Devices"
-msgstr "Несъёмные устройства"
-
-#: package/contents/ui/main.qml:163
-#, kde-format
-msgid "All Devices"
-msgstr "Все устройства"
-
-#: package/contents/ui/main.qml:180
-#, kde-format
-msgid "Show popup when new device is plugged in"
-msgstr "Открывать всплывающее окно при подключении устройств"
-
-#: plugin/actions/mountaction.cpp:104
+#: actions/mountaction.cpp:104
 #, kde-format
 msgid "Mount"
 msgstr "Подключить"
 
-#: plugin/actions/mountandopenaction.cpp:179
+#: actions/mountandopenaction.cpp:179
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Открыть в диспетчере файлов"
 
-#: plugin/actions/mountandopenaction.cpp:182
+#: actions/mountandopenaction.cpp:182
 #, kde-format
 msgid "Try to Fix"
 msgstr "Попытаться устранить проблему"
 
-#: plugin/actions/mountandopenaction.cpp:182
+#: actions/mountandopenaction.cpp:182
 #, kde-format
 msgid "Mount and Open"
 msgstr "Подключить и открыть"
 
-#: plugin/actions/mountandopenaction.cpp:184
+#: actions/mountandopenaction.cpp:184
 #, kde-format
 msgid "Eject"
 msgstr "Извлечь"
 
-#: plugin/actions/mountandopenaction.cpp:186
+#: actions/mountandopenaction.cpp:186
 #, kde-format
 msgid "Safely remove"
 msgstr "Безопасно извлечь"
 
-#: plugin/deviceerrormonitor_p.cpp:198
+#: deviceerrormonitor_p.cpp:198
 #, kde-format
 msgid "This device has file system errors."
 msgstr "Файловая система этого устройства содержит ошибки."
 
-#: plugin/deviceerrormonitor_p.cpp:201
+#: deviceerrormonitor_p.cpp:201
 #, kde-format
 msgid "Successfully repaired!"
 msgstr "Проблема устранена!"
 
-#: plugin/deviceerrormonitor_p.cpp:204
+#: deviceerrormonitor_p.cpp:204
 #, kde-format
 msgid "Device Status"
 msgstr "Состояние устройства"
 
-#: plugin/deviceerrormonitor_p.cpp:205
+#: deviceerrormonitor_p.cpp:205
 #, kde-format
 msgid "A device can now be safely removed"
 msgstr "Устройство может быть безопасно извлечено"
 
-#: plugin/deviceerrormonitor_p.cpp:209
+#: deviceerrormonitor_p.cpp:209
 #, kde-format
 msgid "This device can now be safely removed."
 msgstr "Устройство может быть безопасно извлечено."
 
-#: plugin/deviceerrormonitor_p.cpp:216
+#: deviceerrormonitor_p.cpp:216
 #, kde-format
 msgid "You are not authorized to mount this device."
 msgstr "У вас нет прав на подключение этого устройства."
 
-#: plugin/deviceerrormonitor_p.cpp:219
+#: deviceerrormonitor_p.cpp:219
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr "У вас нет прав на отключение этого устройства."
 
-#: plugin/deviceerrormonitor_p.cpp:222
+#: deviceerrormonitor_p.cpp:222
 #, kde-format
 msgid "You are not authorized to eject this disc."
 msgstr "У вас нет прав на извлечение диска из этого устройства."
 
-#: plugin/deviceerrormonitor_p.cpp:225
+#: deviceerrormonitor_p.cpp:225
 #, kde-format
 msgid "You are not authorized to repair this device."
 msgstr "У вас нет прав на устранение проблемы с работой этого устройства."
 
-#: plugin/deviceerrormonitor_p.cpp:232
+#: deviceerrormonitor_p.cpp:232
 #, kde-format
 msgid "Could not mount this device as it is busy."
 msgstr "Не удалось подключить следующее устройство, поскольку оно занято."
 
-#: plugin/deviceerrormonitor_p.cpp:260
+#: deviceerrormonitor_p.cpp:260
 #, kde-format
 msgid "One or more files on this device are open within an application."
 msgstr "Один или несколько файлов на этом носителе открыты в приложениях."
 
-#: plugin/deviceerrormonitor_p.cpp:262
+#: deviceerrormonitor_p.cpp:262
 #, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
@@ -231,32 +131,131 @@ msgstr[3] ""
 "Один или несколько файлов на этом устройстве открыты в следующих "
 "приложениях: %2."
 
-#: plugin/deviceerrormonitor_p.cpp:265
+#: deviceerrormonitor_p.cpp:265
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ", "
 
-#: plugin/deviceerrormonitor_p.cpp:285
+#: deviceerrormonitor_p.cpp:285
 #, kde-format
 msgid "Could not mount this device."
 msgstr "Не удалось подключить это устройство."
 
-#: plugin/deviceerrormonitor_p.cpp:288
+#: deviceerrormonitor_p.cpp:288
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "Не удалось отключить это устройство."
 
-#: plugin/deviceerrormonitor_p.cpp:291
+#: deviceerrormonitor_p.cpp:291
 #, kde-format
 msgid "Could not eject this disc."
 msgstr "Не удалось извлечь диск."
 
-#: plugin/deviceerrormonitor_p.cpp:294
+#: deviceerrormonitor_p.cpp:294
 #, kde-format
 msgid "Could not repair this device: %1"
 msgstr "Не удалось устранить проблему с работой этого устройства: %1"
+
+#: qml/DeviceItem.qml:95
+#, kde-format
+msgctxt ""
+"Accessing is a less technical word for Mounting; translation should be short "
+"and mean 'Currently mounting this device'"
+msgid "Checking…"
+msgstr "Проверка…"
+
+#: qml/DeviceItem.qml:97
+#, kde-format
+msgctxt ""
+"Accessing is a less technical word for Mounting; translation should be short "
+"and mean 'Currently mounting this device'"
+msgid "Repairing…"
+msgstr "Устранение проблемы…"
+
+#: qml/DeviceItem.qml:100
+#, kde-format
+msgctxt "@info:status Free disk space"
+msgid "%1 free of %2"
+msgstr "Свободно %1 из %2"
+
+#: qml/DeviceItem.qml:104
+#, kde-format
+msgctxt ""
+"Accessing is a less technical word for Mounting; translation should be short "
+"and mean 'Currently mounting this device'"
+msgid "Accessing…"
+msgstr "Подключение…"
+
+#: qml/DeviceItem.qml:107
+#, kde-format
+msgctxt ""
+"Removing is a less technical word for Unmounting; translation should be "
+"short and mean 'Currently unmounting this device'"
+msgid "Removing…"
+msgstr "Отключение…"
+
+#: qml/DeviceItem.qml:110
+#, kde-format
+msgid "Don't unplug yet! Files are still being transferred…"
+msgstr "Не отключайте оборудование, выполняется передача файлов…"
+
+#: qml/FullRepresentation.qml:45 qml/main.qml:124
+#, kde-format
+msgid "Remove All"
+msgstr "Извлечь все"
+
+#: qml/FullRepresentation.qml:46
+#, kde-format
+msgid "Click to safely remove all devices"
+msgstr "Безопасно извлечь все носители"
+
+#: qml/FullRepresentation.qml:153
+#, kde-format
+msgid "No removable devices attached"
+msgstr "Не подключено ни одного внешнего устройства"
+
+#: qml/FullRepresentation.qml:153
+#, kde-format
+msgid "No disks available"
+msgstr "Нет доступных устройств"
+
+#: qml/main.qml:71
+#, kde-format
+msgid "Most Recent Device"
+msgstr "Последнее подключённое устройство"
+
+#: qml/main.qml:71
+#, kde-format
+msgid "No Devices Available"
+msgstr "Нет доступных устройств"
+
+#: qml/main.qml:107
+#, kde-format
+msgctxt "Open auto mounter kcm"
+msgid "Configure Removable Devices…"
+msgstr "Настроить внешние устройства..."
+
+#: qml/main.qml:132
+#, kde-format
+msgid "Removable Devices"
+msgstr "Подключаемые устройства"
+
+#: qml/main.qml:147
+#, kde-format
+msgid "Non Removable Devices"
+msgstr "Несъёмные устройства"
+
+#: qml/main.qml:162
+#, kde-format
+msgid "All Devices"
+msgstr "Все устройства"
+
+#: qml/main.qml:179
+#, kde-format
+msgid "Show popup when new device is plugged in"
+msgstr "Открывать всплывающее окно при подключении устройств"
 
 #~ msgid "Filesystem is not responding"
 #~ msgstr "Файловая система не отвечает"

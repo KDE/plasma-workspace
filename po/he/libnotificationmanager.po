@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-25 00:44+0000\n"
-"PO-Revision-Date: 2025-05-07 09:06+0300\n"
+"PO-Revision-Date: 2025-06-26 09:37+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 25.04.0\n"
+"X-Generator: Lokalize 25.04.2\n"
 
 #: abstractnotificationsmodel.cpp:340
 #, kde-format
@@ -138,12 +138,9 @@ msgstr[2] "התקבלו %1 התראות בזמן שמצב „לא להפריע�
 msgstr[3] "התקבלו %1 התראות בזמן שמצב „לא להפריע” היה פעיל."
 
 #: notifications.cpp:918
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Unread Notification"
-#| msgid_plural "Unread Notifications"
+#, kde-format
 msgctxt ""
 "@action:button Show the notifications popup; translate this in as short a "
 "form as possible"
 msgid "Show Notifications"
-msgstr "התראה שלא נקראה"
+msgstr "הצגת התראות"

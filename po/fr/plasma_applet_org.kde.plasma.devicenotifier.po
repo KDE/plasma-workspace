@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-13 00:44+0000\n"
+"POT-Creation-Date: 2025-06-27 00:44+0000\n"
 "PO-Revision-Date: 2025-02-24 09:27+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -33,195 +33,94 @@ msgstr ""
 "X-Generator: Lokalize 24.12.2\n"
 "X-Text-Markup: kde4\n"
 
-#: package/contents/ui/DeviceItem.qml:97
-#, kde-format
-msgctxt ""
-"Accessing is a less technical word for Mounting; translation should be short "
-"and mean 'Currently mounting this device'"
-msgid "Checking…"
-msgstr "Vérification en cours…"
-
-#: package/contents/ui/DeviceItem.qml:99
-#, kde-format
-msgctxt ""
-"Accessing is a less technical word for Mounting; translation should be short "
-"and mean 'Currently mounting this device'"
-msgid "Repairing…"
-msgstr "Réparation en cours…"
-
-#: package/contents/ui/DeviceItem.qml:102
-#, kde-format
-msgctxt "@info:status Free disk space"
-msgid "%1 free of %2"
-msgstr "%1 libre sur %2"
-
-#: package/contents/ui/DeviceItem.qml:106
-#, kde-format
-msgctxt ""
-"Accessing is a less technical word for Mounting; translation should be short "
-"and mean 'Currently mounting this device'"
-msgid "Accessing…"
-msgstr "Accès en cours..."
-
-#: package/contents/ui/DeviceItem.qml:109
-#, kde-format
-msgctxt ""
-"Removing is a less technical word for Unmounting; translation should be "
-"short and mean 'Currently unmounting this device'"
-msgid "Removing…"
-msgstr "Suppression en cours…"
-
-#: package/contents/ui/DeviceItem.qml:112
-#, kde-format
-msgid "Don't unplug yet! Files are still being transferred…"
-msgstr ""
-"Ne pas débrancher encore ! Les fichiers sont encore en cours de transfert..."
-
-#: package/contents/ui/FullRepresentation.qml:45
-#: package/contents/ui/main.qml:125
-#, kde-format
-msgid "Remove All"
-msgstr "Tout supprimer"
-
-#: package/contents/ui/FullRepresentation.qml:46
-#, kde-format
-msgid "Click to safely remove all devices"
-msgstr "Cliquez pour retirer l'ensemble des périphériques en toute sécurité"
-
-#: package/contents/ui/FullRepresentation.qml:153
-#, kde-format
-msgid "No removable devices attached"
-msgstr "Aucun périphérique amovible branché"
-
-#: package/contents/ui/FullRepresentation.qml:153
-#, kde-format
-msgid "No disks available"
-msgstr "Aucun disque disponible"
-
-#: package/contents/ui/main.qml:72
-#, kde-format
-msgid "Most Recent Device"
-msgstr "Le périphérique le plus récent"
-
-#: package/contents/ui/main.qml:72
-#, kde-format
-msgid "No Devices Available"
-msgstr "Aucun périphérique disponible"
-
-#: package/contents/ui/main.qml:108
-#, kde-format
-msgctxt "Open auto mounter kcm"
-msgid "Configure Removable Devices…"
-msgstr "Configurer les périphériques amovibles..."
-
-#: package/contents/ui/main.qml:133
-#, kde-format
-msgid "Removable Devices"
-msgstr "Périphériques amovibles"
-
-#: package/contents/ui/main.qml:148
-#, kde-format
-msgid "Non Removable Devices"
-msgstr "Périphériques non amovibles"
-
-#: package/contents/ui/main.qml:163
-#, kde-format
-msgid "All Devices"
-msgstr "Tous les périphériques"
-
-#: package/contents/ui/main.qml:180
-#, kde-format
-msgid "Show popup when new device is plugged in"
-msgstr "Afficher un menu contextuel lorsqu'un nouveau périphérique est branché"
-
-#: plugin/actions/mountaction.cpp:104
+#: actions/mountaction.cpp:104
 #, kde-format
 msgid "Mount"
 msgstr "Monter"
 
-#: plugin/actions/mountandopenaction.cpp:179
+#: actions/mountandopenaction.cpp:179
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Ouvrir dans le gestionnaire de fichiers"
 
-#: plugin/actions/mountandopenaction.cpp:182
+#: actions/mountandopenaction.cpp:182
 #, kde-format
 msgid "Try to Fix"
 msgstr "Essayer de réparer"
 
-#: plugin/actions/mountandopenaction.cpp:182
+#: actions/mountandopenaction.cpp:182
 #, kde-format
 msgid "Mount and Open"
 msgstr "Monter et ouvrir"
 
-#: plugin/actions/mountandopenaction.cpp:184
+#: actions/mountandopenaction.cpp:184
 #, kde-format
 msgid "Eject"
 msgstr "Éjecter"
 
-#: plugin/actions/mountandopenaction.cpp:186
+#: actions/mountandopenaction.cpp:186
 #, kde-format
 msgid "Safely remove"
 msgstr "Retirer en toute sécurité"
 
-#: plugin/deviceerrormonitor_p.cpp:198
+#: deviceerrormonitor_p.cpp:198
 #, kde-format
 msgid "This device has file system errors."
 msgstr "Ce périphérique présente des erreurs de fichiers système."
 
-#: plugin/deviceerrormonitor_p.cpp:201
+#: deviceerrormonitor_p.cpp:201
 #, kde-format
 msgid "Successfully repaired!"
 msgstr "Réparé avec succès !"
 
-#: plugin/deviceerrormonitor_p.cpp:204
+#: deviceerrormonitor_p.cpp:204
 #, kde-format
 msgid "Device Status"
 msgstr "État de périphérique"
 
-#: plugin/deviceerrormonitor_p.cpp:205
+#: deviceerrormonitor_p.cpp:205
 #, kde-format
 msgid "A device can now be safely removed"
 msgstr "Ce périphérique peut désormais être retiré en toute sécurité."
 
-#: plugin/deviceerrormonitor_p.cpp:209
+#: deviceerrormonitor_p.cpp:209
 #, kde-format
 msgid "This device can now be safely removed."
 msgstr "Ce périphérique peut désormais être retiré en toute sécurité."
 
-#: plugin/deviceerrormonitor_p.cpp:216
+#: deviceerrormonitor_p.cpp:216
 #, kde-format
 msgid "You are not authorized to mount this device."
 msgstr "Vous n'êtes pas autorisé à monter ce périphérique."
 
-#: plugin/deviceerrormonitor_p.cpp:219
+#: deviceerrormonitor_p.cpp:219
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr "Vous n'êtes pas autorisé à retirer ce périphérique."
 
-#: plugin/deviceerrormonitor_p.cpp:222
+#: deviceerrormonitor_p.cpp:222
 #, kde-format
 msgid "You are not authorized to eject this disc."
 msgstr "Vous n'êtes pas autorisé à libérer ce disque."
 
-#: plugin/deviceerrormonitor_p.cpp:225
+#: deviceerrormonitor_p.cpp:225
 #, kde-format
 msgid "You are not authorized to repair this device."
 msgstr "Vous n'êtes pas autorisé à réparer ce périphérique."
 
-#: plugin/deviceerrormonitor_p.cpp:232
+#: deviceerrormonitor_p.cpp:232
 #, kde-format
 msgid "Could not mount this device as it is busy."
 msgstr "Impossible de monter ce périphérique car il est occupé."
 
-#: plugin/deviceerrormonitor_p.cpp:260
+#: deviceerrormonitor_p.cpp:260
 #, kde-format
 msgid "One or more files on this device are open within an application."
 msgstr ""
 "Un ou plusieurs fichiers de ce périphérique sont ouverts par une application."
 
-#: plugin/deviceerrormonitor_p.cpp:262
+#: deviceerrormonitor_p.cpp:262
 #, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
@@ -233,32 +132,132 @@ msgstr[1] ""
 "Un ou plusieurs fichiers de ce périphérique sont ouverts dans les "
 "applications suivantes : %2."
 
-#: plugin/deviceerrormonitor_p.cpp:265
+#: deviceerrormonitor_p.cpp:265
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ", "
 
-#: plugin/deviceerrormonitor_p.cpp:285
+#: deviceerrormonitor_p.cpp:285
 #, kde-format
 msgid "Could not mount this device."
 msgstr "Impossible de monter ce périphérique."
 
-#: plugin/deviceerrormonitor_p.cpp:288
+#: deviceerrormonitor_p.cpp:288
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "Impossible de retirer ce périphérique."
 
-#: plugin/deviceerrormonitor_p.cpp:291
+#: deviceerrormonitor_p.cpp:291
 #, kde-format
 msgid "Could not eject this disc."
 msgstr "Impossible de libérer ce disque."
 
-#: plugin/deviceerrormonitor_p.cpp:294
+#: deviceerrormonitor_p.cpp:294
 #, kde-format
 msgid "Could not repair this device: %1"
 msgstr "Impossible de réparer ce périphérique :%1"
+
+#: qml/DeviceItem.qml:95
+#, kde-format
+msgctxt ""
+"Accessing is a less technical word for Mounting; translation should be short "
+"and mean 'Currently mounting this device'"
+msgid "Checking…"
+msgstr "Vérification en cours…"
+
+#: qml/DeviceItem.qml:97
+#, kde-format
+msgctxt ""
+"Accessing is a less technical word for Mounting; translation should be short "
+"and mean 'Currently mounting this device'"
+msgid "Repairing…"
+msgstr "Réparation en cours…"
+
+#: qml/DeviceItem.qml:100
+#, kde-format
+msgctxt "@info:status Free disk space"
+msgid "%1 free of %2"
+msgstr "%1 libre sur %2"
+
+#: qml/DeviceItem.qml:104
+#, kde-format
+msgctxt ""
+"Accessing is a less technical word for Mounting; translation should be short "
+"and mean 'Currently mounting this device'"
+msgid "Accessing…"
+msgstr "Accès en cours..."
+
+#: qml/DeviceItem.qml:107
+#, kde-format
+msgctxt ""
+"Removing is a less technical word for Unmounting; translation should be "
+"short and mean 'Currently unmounting this device'"
+msgid "Removing…"
+msgstr "Suppression en cours…"
+
+#: qml/DeviceItem.qml:110
+#, kde-format
+msgid "Don't unplug yet! Files are still being transferred…"
+msgstr ""
+"Ne pas débrancher encore ! Les fichiers sont encore en cours de transfert..."
+
+#: qml/FullRepresentation.qml:45 qml/main.qml:124
+#, kde-format
+msgid "Remove All"
+msgstr "Tout supprimer"
+
+#: qml/FullRepresentation.qml:46
+#, kde-format
+msgid "Click to safely remove all devices"
+msgstr "Cliquez pour retirer l'ensemble des périphériques en toute sécurité"
+
+#: qml/FullRepresentation.qml:153
+#, kde-format
+msgid "No removable devices attached"
+msgstr "Aucun périphérique amovible branché"
+
+#: qml/FullRepresentation.qml:153
+#, kde-format
+msgid "No disks available"
+msgstr "Aucun disque disponible"
+
+#: qml/main.qml:71
+#, kde-format
+msgid "Most Recent Device"
+msgstr "Le périphérique le plus récent"
+
+#: qml/main.qml:71
+#, kde-format
+msgid "No Devices Available"
+msgstr "Aucun périphérique disponible"
+
+#: qml/main.qml:107
+#, kde-format
+msgctxt "Open auto mounter kcm"
+msgid "Configure Removable Devices…"
+msgstr "Configurer les périphériques amovibles..."
+
+#: qml/main.qml:132
+#, kde-format
+msgid "Removable Devices"
+msgstr "Périphériques amovibles"
+
+#: qml/main.qml:147
+#, kde-format
+msgid "Non Removable Devices"
+msgstr "Périphériques non amovibles"
+
+#: qml/main.qml:162
+#, kde-format
+msgid "All Devices"
+msgstr "Tous les périphériques"
+
+#: qml/main.qml:179
+#, kde-format
+msgid "Show popup when new device is plugged in"
+msgstr "Afficher un menu contextuel lorsqu'un nouveau périphérique est branché"
 
 #~ msgid "Filesystem is not responding"
 #~ msgstr "Le système de fichiers ne répond pas."

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase/plasma_applet_devicenotifier.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-13 00:44+0000\n"
+"POT-Creation-Date: 2025-06-27 00:44+0000\n"
 "PO-Revision-Date: 2007-10-23 08:08-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -17,220 +17,93 @@ msgstr ""
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
 
-#: package/contents/ui/DeviceItem.qml:97
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Removing is a less technical word for Unmounting; translation shoud be "
-#| "short and mean 'Currently unmounting this device'"
-#| msgid "Removing..."
-msgctxt ""
-"Accessing is a less technical word for Mounting; translation should be short "
-"and mean 'Currently mounting this device'"
-msgid "Checking…"
-msgstr "Á Bhaint..."
-
-#: package/contents/ui/DeviceItem.qml:99
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Removing is a less technical word for Unmounting; translation shoud be "
-#| "short and mean 'Currently unmounting this device'"
-#| msgid "Removing..."
-msgctxt ""
-"Accessing is a less technical word for Mounting; translation should be short "
-"and mean 'Currently mounting this device'"
-msgid "Repairing…"
-msgstr "Á Bhaint..."
-
-#: package/contents/ui/DeviceItem.qml:102
-#, fuzzy, kde-format
-#| msgctxt "@info:status Free disk space"
-#| msgid "%1 free"
-msgctxt "@info:status Free disk space"
-msgid "%1 free of %2"
-msgstr "%1 saor"
-
-#: package/contents/ui/DeviceItem.qml:106
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Accessing is a less technical word for Mounting; translation should be "
-#| "short and mean 'Currently mounting this device'"
-#| msgid "Accessing..."
-msgctxt ""
-"Accessing is a less technical word for Mounting; translation should be short "
-"and mean 'Currently mounting this device'"
-msgid "Accessing…"
-msgstr "Á rochtain..."
-
-#: package/contents/ui/DeviceItem.qml:109
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Removing is a less technical word for Unmounting; translation shoud be "
-#| "short and mean 'Currently unmounting this device'"
-#| msgid "Removing..."
-msgctxt ""
-"Removing is a less technical word for Unmounting; translation should be "
-"short and mean 'Currently unmounting this device'"
-msgid "Removing…"
-msgstr "Á Bhaint..."
-
-#: package/contents/ui/DeviceItem.qml:112
-#, kde-format
-msgid "Don't unplug yet! Files are still being transferred…"
-msgstr ""
-
-#: package/contents/ui/FullRepresentation.qml:45
-#: package/contents/ui/main.qml:125
-#, kde-format
-msgid "Remove All"
-msgstr ""
-
-#: package/contents/ui/FullRepresentation.qml:46
-#, fuzzy, kde-format
-#| msgid "Click to safely remove this device."
-msgid "Click to safely remove all devices"
-msgstr "Cliceáil chun an gléas seo a dhícheangal gan dochar a dhéanamh."
-
-#: package/contents/ui/FullRepresentation.qml:153
-#, fuzzy, kde-format
-#| msgid "Non-removable devices only"
-msgid "No removable devices attached"
-msgstr "Gléasanna neamh-inbhainte amháin"
-
-#: package/contents/ui/FullRepresentation.qml:153
-#, fuzzy, kde-format
-#| msgid "No devices available"
-msgid "No disks available"
-msgstr "Níl aon ghléasanna ar fáil"
-
-#: package/contents/ui/main.qml:72
-#, fuzzy, kde-format
-#| msgid "Most recent device"
-msgid "Most Recent Device"
-msgstr "An gléas is déanaí"
-
-#: package/contents/ui/main.qml:72
-#, kde-format
-msgid "No Devices Available"
-msgstr "Níl Aon Ghléasanna Ar Fáil"
-
-#: package/contents/ui/main.qml:108
-#, fuzzy, kde-format
-#| msgid "Non-removable devices only"
-msgctxt "Open auto mounter kcm"
-msgid "Configure Removable Devices…"
-msgstr "Gléasanna neamh-inbhainte amháin"
-
-#: package/contents/ui/main.qml:133
-#, fuzzy, kde-format
-#| msgid "Removable devices only"
-msgid "Removable Devices"
-msgstr "Gléasanna inbhainte amháin"
-
-#: package/contents/ui/main.qml:148
-#, fuzzy, kde-format
-#| msgid "Non-removable devices only"
-msgid "Non Removable Devices"
-msgstr "Gléasanna neamh-inbhainte amháin"
-
-#: package/contents/ui/main.qml:163
-#, fuzzy, kde-format
-#| msgid "All devices"
-msgid "All Devices"
-msgstr "Gach gléas"
-
-#: package/contents/ui/main.qml:180
-#, fuzzy, kde-format
-#| msgid "No devices plugged in"
-msgid "Show popup when new device is plugged in"
-msgstr "Níl aon ghléasanna plugáilte isteach"
-
-#: plugin/actions/mountaction.cpp:104
+#: actions/mountaction.cpp:104
 #, kde-format
 msgid "Mount"
 msgstr ""
 
-#: plugin/actions/mountandopenaction.cpp:179
+#: actions/mountandopenaction.cpp:179
 #, kde-format
 msgid "Open in File Manager"
 msgstr ""
 
-#: plugin/actions/mountandopenaction.cpp:182
+#: actions/mountandopenaction.cpp:182
 #, kde-format
 msgid "Try to Fix"
 msgstr ""
 
-#: plugin/actions/mountandopenaction.cpp:182
+#: actions/mountandopenaction.cpp:182
 #, kde-format
 msgid "Mount and Open"
 msgstr ""
 
-#: plugin/actions/mountandopenaction.cpp:184
+#: actions/mountandopenaction.cpp:184
 #, kde-format
 msgid "Eject"
 msgstr ""
 
-#: plugin/actions/mountandopenaction.cpp:186
+#: actions/mountandopenaction.cpp:186
 #, kde-format
 msgid "Safely remove"
 msgstr ""
 
-#: plugin/deviceerrormonitor_p.cpp:198
+#: deviceerrormonitor_p.cpp:198
 #, kde-format
 msgid "This device has file system errors."
 msgstr ""
 
-#: plugin/deviceerrormonitor_p.cpp:201
+#: deviceerrormonitor_p.cpp:201
 #, kde-format
 msgid "Successfully repaired!"
 msgstr ""
 
-#: plugin/deviceerrormonitor_p.cpp:204
+#: deviceerrormonitor_p.cpp:204
 #, kde-format
 msgid "Device Status"
 msgstr ""
 
-#: plugin/deviceerrormonitor_p.cpp:205
+#: deviceerrormonitor_p.cpp:205
 #, kde-format
 msgid "A device can now be safely removed"
 msgstr ""
 
-#: plugin/deviceerrormonitor_p.cpp:209
+#: deviceerrormonitor_p.cpp:209
 #, kde-format
 msgid "This device can now be safely removed."
 msgstr ""
 
-#: plugin/deviceerrormonitor_p.cpp:216
+#: deviceerrormonitor_p.cpp:216
 #, fuzzy, kde-format
 #| msgid "Click to mount this device."
 msgid "You are not authorized to mount this device."
 msgstr "Cliceáil chun an gléas seo a fheistiú."
 
-#: plugin/deviceerrormonitor_p.cpp:219
+#: deviceerrormonitor_p.cpp:219
 #, fuzzy, kde-format
 #| msgid "It is currently safe to remove this device."
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr "Tig leat an gléas seo a bhaint faoi láthair gan dochar a dhéanamh dó."
 
-#: plugin/deviceerrormonitor_p.cpp:222
+#: deviceerrormonitor_p.cpp:222
 #, fuzzy, kde-format
 #| msgid "Click to eject this disc."
 msgid "You are not authorized to eject this disc."
 msgstr "Cliceáil chun an diosca seo a dhíchur."
 
-#: plugin/deviceerrormonitor_p.cpp:225
+#: deviceerrormonitor_p.cpp:225
 #, fuzzy, kde-format
 #| msgid "It is currently safe to remove this device."
 msgid "You are not authorized to repair this device."
 msgstr "Tig leat an gléas seo a bhaint faoi láthair gan dochar a dhéanamh dó."
 
-#: plugin/deviceerrormonitor_p.cpp:232
+#: deviceerrormonitor_p.cpp:232
 #, fuzzy, kde-format
 #| msgid "Click to mount this device."
 msgid "Could not mount this device as it is busy."
 msgstr "Cliceáil chun an gléas seo a fheistiú."
 
-#: plugin/deviceerrormonitor_p.cpp:260
+#: deviceerrormonitor_p.cpp:260
 #, fuzzy, kde-format
 #| msgid ""
 #| "Cannot eject the disc.\n"
@@ -241,7 +114,7 @@ msgstr ""
 "Tá comhad nó níos mó ná comhad amháin oscailte ar an diosca seo i "
 "bhfeidhmchlár éigin."
 
-#: plugin/deviceerrormonitor_p.cpp:262
+#: deviceerrormonitor_p.cpp:262
 #, fuzzy, kde-format
 #| msgid ""
 #| "Cannot eject the disc.\n"
@@ -270,36 +143,162 @@ msgstr[4] ""
 "Tá comhad nó níos mó ná comhad amháin oscailte ar an diosca seo i "
 "bhfeidhmchlár éigin."
 
-#: plugin/deviceerrormonitor_p.cpp:265
+#: deviceerrormonitor_p.cpp:265
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ""
 
-#: plugin/deviceerrormonitor_p.cpp:285
+#: deviceerrormonitor_p.cpp:285
 #, fuzzy, kde-format
 #| msgid "Click to mount this device."
 msgid "Could not mount this device."
 msgstr "Cliceáil chun an gléas seo a fheistiú."
 
-#: plugin/deviceerrormonitor_p.cpp:288
+#: deviceerrormonitor_p.cpp:288
 #, fuzzy, kde-format
 #| msgid "Click to safely remove this device."
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "Cliceáil chun an gléas seo a dhícheangal gan dochar a dhéanamh."
 
-#: plugin/deviceerrormonitor_p.cpp:291
+#: deviceerrormonitor_p.cpp:291
 #, fuzzy, kde-format
 #| msgid "Click to eject this disc."
 msgid "Could not eject this disc."
 msgstr "Cliceáil chun an diosca seo a dhíchur."
 
-#: plugin/deviceerrormonitor_p.cpp:294
+#: deviceerrormonitor_p.cpp:294
 #, fuzzy, kde-format
 #| msgid "Click to safely remove this device."
 msgid "Could not repair this device: %1"
 msgstr "Cliceáil chun an gléas seo a dhícheangal gan dochar a dhéanamh."
+
+#: qml/DeviceItem.qml:95
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Removing is a less technical word for Unmounting; translation shoud be "
+#| "short and mean 'Currently unmounting this device'"
+#| msgid "Removing..."
+msgctxt ""
+"Accessing is a less technical word for Mounting; translation should be short "
+"and mean 'Currently mounting this device'"
+msgid "Checking…"
+msgstr "Á Bhaint..."
+
+#: qml/DeviceItem.qml:97
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Removing is a less technical word for Unmounting; translation shoud be "
+#| "short and mean 'Currently unmounting this device'"
+#| msgid "Removing..."
+msgctxt ""
+"Accessing is a less technical word for Mounting; translation should be short "
+"and mean 'Currently mounting this device'"
+msgid "Repairing…"
+msgstr "Á Bhaint..."
+
+#: qml/DeviceItem.qml:100
+#, fuzzy, kde-format
+#| msgctxt "@info:status Free disk space"
+#| msgid "%1 free"
+msgctxt "@info:status Free disk space"
+msgid "%1 free of %2"
+msgstr "%1 saor"
+
+#: qml/DeviceItem.qml:104
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Accessing is a less technical word for Mounting; translation should be "
+#| "short and mean 'Currently mounting this device'"
+#| msgid "Accessing..."
+msgctxt ""
+"Accessing is a less technical word for Mounting; translation should be short "
+"and mean 'Currently mounting this device'"
+msgid "Accessing…"
+msgstr "Á rochtain..."
+
+#: qml/DeviceItem.qml:107
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Removing is a less technical word for Unmounting; translation shoud be "
+#| "short and mean 'Currently unmounting this device'"
+#| msgid "Removing..."
+msgctxt ""
+"Removing is a less technical word for Unmounting; translation should be "
+"short and mean 'Currently unmounting this device'"
+msgid "Removing…"
+msgstr "Á Bhaint..."
+
+#: qml/DeviceItem.qml:110
+#, kde-format
+msgid "Don't unplug yet! Files are still being transferred…"
+msgstr ""
+
+#: qml/FullRepresentation.qml:45 qml/main.qml:124
+#, kde-format
+msgid "Remove All"
+msgstr ""
+
+#: qml/FullRepresentation.qml:46
+#, fuzzy, kde-format
+#| msgid "Click to safely remove this device."
+msgid "Click to safely remove all devices"
+msgstr "Cliceáil chun an gléas seo a dhícheangal gan dochar a dhéanamh."
+
+#: qml/FullRepresentation.qml:153
+#, fuzzy, kde-format
+#| msgid "Non-removable devices only"
+msgid "No removable devices attached"
+msgstr "Gléasanna neamh-inbhainte amháin"
+
+#: qml/FullRepresentation.qml:153
+#, fuzzy, kde-format
+#| msgid "No devices available"
+msgid "No disks available"
+msgstr "Níl aon ghléasanna ar fáil"
+
+#: qml/main.qml:71
+#, fuzzy, kde-format
+#| msgid "Most recent device"
+msgid "Most Recent Device"
+msgstr "An gléas is déanaí"
+
+#: qml/main.qml:71
+#, kde-format
+msgid "No Devices Available"
+msgstr "Níl Aon Ghléasanna Ar Fáil"
+
+#: qml/main.qml:107
+#, fuzzy, kde-format
+#| msgid "Non-removable devices only"
+msgctxt "Open auto mounter kcm"
+msgid "Configure Removable Devices…"
+msgstr "Gléasanna neamh-inbhainte amháin"
+
+#: qml/main.qml:132
+#, fuzzy, kde-format
+#| msgid "Removable devices only"
+msgid "Removable Devices"
+msgstr "Gléasanna inbhainte amháin"
+
+#: qml/main.qml:147
+#, fuzzy, kde-format
+#| msgid "Non-removable devices only"
+msgid "Non Removable Devices"
+msgstr "Gléasanna neamh-inbhainte amháin"
+
+#: qml/main.qml:162
+#, fuzzy, kde-format
+#| msgid "All devices"
+msgid "All Devices"
+msgstr "Gach gléas"
+
+#: qml/main.qml:179
+#, fuzzy, kde-format
+#| msgid "No devices plugged in"
+msgid "Show popup when new device is plugged in"
+msgstr "Níl aon ghléasanna plugáilte isteach"
 
 #~ msgid "1 action for this device"
 #~ msgid_plural "%1 actions for this device"

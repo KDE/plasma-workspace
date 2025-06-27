@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-13 00:44+0000\n"
+"POT-Creation-Date: 2025-06-27 00:44+0000\n"
 "PO-Revision-Date: 2008-04-18 14:31+0330\n"
 "Last-Translator: Saied Taghavi <s.taghavi@gmail.com>\n"
 "Language-Team: Persian <kde-i18n-fa@kde.org>\n"
@@ -14,176 +14,69 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: package/contents/ui/DeviceItem.qml:97
-#, kde-format
-msgctxt ""
-"Accessing is a less technical word for Mounting; translation should be short "
-"and mean 'Currently mounting this device'"
-msgid "Checking…"
-msgstr ""
-
-#: package/contents/ui/DeviceItem.qml:99
-#, kde-format
-msgctxt ""
-"Accessing is a less technical word for Mounting; translation should be short "
-"and mean 'Currently mounting this device'"
-msgid "Repairing…"
-msgstr ""
-
-#: package/contents/ui/DeviceItem.qml:102
-#, kde-format
-msgctxt "@info:status Free disk space"
-msgid "%1 free of %2"
-msgstr ""
-
-#: package/contents/ui/DeviceItem.qml:106
-#, kde-format
-msgctxt ""
-"Accessing is a less technical word for Mounting; translation should be short "
-"and mean 'Currently mounting this device'"
-msgid "Accessing…"
-msgstr ""
-
-#: package/contents/ui/DeviceItem.qml:109
-#, kde-format
-msgctxt ""
-"Removing is a less technical word for Unmounting; translation should be "
-"short and mean 'Currently unmounting this device'"
-msgid "Removing…"
-msgstr ""
-
-#: package/contents/ui/DeviceItem.qml:112
-#, kde-format
-msgid "Don't unplug yet! Files are still being transferred…"
-msgstr ""
-
-#: package/contents/ui/FullRepresentation.qml:45
-#: package/contents/ui/main.qml:125
-#, kde-format
-msgid "Remove All"
-msgstr ""
-
-#: package/contents/ui/FullRepresentation.qml:46
-#, fuzzy, kde-format
-#| msgid "1 action for this device"
-#| msgid_plural "%1 actions for this device"
-msgid "Click to safely remove all devices"
-msgstr "%1 کنش برای دستگاه"
-
-#: package/contents/ui/FullRepresentation.qml:153
-#, fuzzy, kde-format
-#| msgid "Configure New Device Notifier"
-msgid "No removable devices attached"
-msgstr "پیکربندی آگاه‌ساز دستگاه جدید"
-
-#: package/contents/ui/FullRepresentation.qml:153
-#, kde-format
-msgid "No disks available"
-msgstr ""
-
-#: package/contents/ui/main.qml:72
-#, fuzzy, kde-format
-#| msgid "Recently plugged devices :"
-msgid "Most Recent Device"
-msgstr "دستگاه‌های تازه‌متصل‌شده :"
-
-#: package/contents/ui/main.qml:72
-#, kde-format
-msgid "No Devices Available"
-msgstr ""
-
-#: package/contents/ui/main.qml:108
-#, fuzzy, kde-format
-#| msgid "Configure New Device Notifier"
-msgctxt "Open auto mounter kcm"
-msgid "Configure Removable Devices…"
-msgstr "پیکربندی آگاه‌ساز دستگاه جدید"
-
-#: package/contents/ui/main.qml:133
-#, fuzzy, kde-format
-#| msgid "Configure New Device Notifier"
-msgid "Removable Devices"
-msgstr "پیکربندی آگاه‌ساز دستگاه جدید"
-
-#: package/contents/ui/main.qml:148
-#, fuzzy, kde-format
-#| msgid "Configure New Device Notifier"
-msgid "Non Removable Devices"
-msgstr "پیکربندی آگاه‌ساز دستگاه جدید"
-
-#: package/contents/ui/main.qml:163
-#, kde-format
-msgid "All Devices"
-msgstr ""
-
-#: package/contents/ui/main.qml:180
-#, kde-format
-msgid "Show popup when new device is plugged in"
-msgstr ""
-
-#: plugin/actions/mountaction.cpp:104
+#: actions/mountaction.cpp:104
 #, kde-format
 msgid "Mount"
 msgstr ""
 
-#: plugin/actions/mountandopenaction.cpp:179
+#: actions/mountandopenaction.cpp:179
 #, kde-format
 msgid "Open in File Manager"
 msgstr ""
 
-#: plugin/actions/mountandopenaction.cpp:182
+#: actions/mountandopenaction.cpp:182
 #, kde-format
 msgid "Try to Fix"
 msgstr ""
 
-#: plugin/actions/mountandopenaction.cpp:182
+#: actions/mountandopenaction.cpp:182
 #, kde-format
 msgid "Mount and Open"
 msgstr ""
 
-#: plugin/actions/mountandopenaction.cpp:184
+#: actions/mountandopenaction.cpp:184
 #, kde-format
 msgid "Eject"
 msgstr ""
 
-#: plugin/actions/mountandopenaction.cpp:186
+#: actions/mountandopenaction.cpp:186
 #, kde-format
 msgid "Safely remove"
 msgstr ""
 
-#: plugin/deviceerrormonitor_p.cpp:198
+#: deviceerrormonitor_p.cpp:198
 #, kde-format
 msgid "This device has file system errors."
 msgstr ""
 
-#: plugin/deviceerrormonitor_p.cpp:201
+#: deviceerrormonitor_p.cpp:201
 #, kde-format
 msgid "Successfully repaired!"
 msgstr ""
 
-#: plugin/deviceerrormonitor_p.cpp:204
+#: deviceerrormonitor_p.cpp:204
 #, kde-format
 msgid "Device Status"
 msgstr ""
 
-#: plugin/deviceerrormonitor_p.cpp:205
+#: deviceerrormonitor_p.cpp:205
 #, kde-format
 msgid "A device can now be safely removed"
 msgstr ""
 
-#: plugin/deviceerrormonitor_p.cpp:209
+#: deviceerrormonitor_p.cpp:209
 #, kde-format
 msgid "This device can now be safely removed."
 msgstr ""
 
-#: plugin/deviceerrormonitor_p.cpp:216
+#: deviceerrormonitor_p.cpp:216
 #, fuzzy, kde-format
 #| msgid "1 action for this device"
 #| msgid_plural "%1 actions for this device"
 msgid "You are not authorized to mount this device."
 msgstr "%1 کنش برای دستگاه"
 
-#: plugin/deviceerrormonitor_p.cpp:219
+#: deviceerrormonitor_p.cpp:219
 #, fuzzy, kde-format
 #| msgid "1 action for this device"
 #| msgid_plural "%1 actions for this device"
@@ -191,32 +84,32 @@ msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr "%1 کنش برای دستگاه"
 
-#: plugin/deviceerrormonitor_p.cpp:222
+#: deviceerrormonitor_p.cpp:222
 #, fuzzy, kde-format
 #| msgid "1 action for this device"
 #| msgid_plural "%1 actions for this device"
 msgid "You are not authorized to eject this disc."
 msgstr "%1 کنش برای دستگاه"
 
-#: plugin/deviceerrormonitor_p.cpp:225
+#: deviceerrormonitor_p.cpp:225
 #, fuzzy, kde-format
 #| msgid "1 action for this device"
 #| msgid_plural "%1 actions for this device"
 msgid "You are not authorized to repair this device."
 msgstr "%1 کنش برای دستگاه"
 
-#: plugin/deviceerrormonitor_p.cpp:232
+#: deviceerrormonitor_p.cpp:232
 #, fuzzy, kde-format
 #| msgid "Recently plugged devices :"
 msgid "Could not mount this device as it is busy."
 msgstr "دستگاه‌های تازه‌متصل‌شده :"
 
-#: plugin/deviceerrormonitor_p.cpp:260
+#: deviceerrormonitor_p.cpp:260
 #, kde-format
 msgid "One or more files on this device are open within an application."
 msgstr ""
 
-#: plugin/deviceerrormonitor_p.cpp:262
+#: deviceerrormonitor_p.cpp:262
 #, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
@@ -224,37 +117,143 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: plugin/deviceerrormonitor_p.cpp:265
+#: deviceerrormonitor_p.cpp:265
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ""
 
-#: plugin/deviceerrormonitor_p.cpp:285
+#: deviceerrormonitor_p.cpp:285
 #, fuzzy, kde-format
 #| msgid "Recently plugged devices :"
 msgid "Could not mount this device."
 msgstr "دستگاه‌های تازه‌متصل‌شده :"
 
-#: plugin/deviceerrormonitor_p.cpp:288
+#: deviceerrormonitor_p.cpp:288
 #, fuzzy, kde-format
 #| msgid "Recently plugged devices :"
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "دستگاه‌های تازه‌متصل‌شده :"
 
-#: plugin/deviceerrormonitor_p.cpp:291
+#: deviceerrormonitor_p.cpp:291
 #, fuzzy, kde-format
 #| msgid "1 action for this device"
 #| msgid_plural "%1 actions for this device"
 msgid "Could not eject this disc."
 msgstr "%1 کنش برای دستگاه"
 
-#: plugin/deviceerrormonitor_p.cpp:294
+#: deviceerrormonitor_p.cpp:294
 #, fuzzy, kde-format
 #| msgid "Recently plugged devices :"
 msgid "Could not repair this device: %1"
 msgstr "دستگاه‌های تازه‌متصل‌شده :"
+
+#: qml/DeviceItem.qml:95
+#, kde-format
+msgctxt ""
+"Accessing is a less technical word for Mounting; translation should be short "
+"and mean 'Currently mounting this device'"
+msgid "Checking…"
+msgstr ""
+
+#: qml/DeviceItem.qml:97
+#, kde-format
+msgctxt ""
+"Accessing is a less technical word for Mounting; translation should be short "
+"and mean 'Currently mounting this device'"
+msgid "Repairing…"
+msgstr ""
+
+#: qml/DeviceItem.qml:100
+#, kde-format
+msgctxt "@info:status Free disk space"
+msgid "%1 free of %2"
+msgstr ""
+
+#: qml/DeviceItem.qml:104
+#, kde-format
+msgctxt ""
+"Accessing is a less technical word for Mounting; translation should be short "
+"and mean 'Currently mounting this device'"
+msgid "Accessing…"
+msgstr ""
+
+#: qml/DeviceItem.qml:107
+#, kde-format
+msgctxt ""
+"Removing is a less technical word for Unmounting; translation should be "
+"short and mean 'Currently unmounting this device'"
+msgid "Removing…"
+msgstr ""
+
+#: qml/DeviceItem.qml:110
+#, kde-format
+msgid "Don't unplug yet! Files are still being transferred…"
+msgstr ""
+
+#: qml/FullRepresentation.qml:45 qml/main.qml:124
+#, kde-format
+msgid "Remove All"
+msgstr ""
+
+#: qml/FullRepresentation.qml:46
+#, fuzzy, kde-format
+#| msgid "1 action for this device"
+#| msgid_plural "%1 actions for this device"
+msgid "Click to safely remove all devices"
+msgstr "%1 کنش برای دستگاه"
+
+#: qml/FullRepresentation.qml:153
+#, fuzzy, kde-format
+#| msgid "Configure New Device Notifier"
+msgid "No removable devices attached"
+msgstr "پیکربندی آگاه‌ساز دستگاه جدید"
+
+#: qml/FullRepresentation.qml:153
+#, kde-format
+msgid "No disks available"
+msgstr ""
+
+#: qml/main.qml:71
+#, fuzzy, kde-format
+#| msgid "Recently plugged devices :"
+msgid "Most Recent Device"
+msgstr "دستگاه‌های تازه‌متصل‌شده :"
+
+#: qml/main.qml:71
+#, kde-format
+msgid "No Devices Available"
+msgstr ""
+
+#: qml/main.qml:107
+#, fuzzy, kde-format
+#| msgid "Configure New Device Notifier"
+msgctxt "Open auto mounter kcm"
+msgid "Configure Removable Devices…"
+msgstr "پیکربندی آگاه‌ساز دستگاه جدید"
+
+#: qml/main.qml:132
+#, fuzzy, kde-format
+#| msgid "Configure New Device Notifier"
+msgid "Removable Devices"
+msgstr "پیکربندی آگاه‌ساز دستگاه جدید"
+
+#: qml/main.qml:147
+#, fuzzy, kde-format
+#| msgid "Configure New Device Notifier"
+msgid "Non Removable Devices"
+msgstr "پیکربندی آگاه‌ساز دستگاه جدید"
+
+#: qml/main.qml:162
+#, kde-format
+msgid "All Devices"
+msgstr ""
+
+#: qml/main.qml:179
+#, kde-format
+msgid "Show popup when new device is plugged in"
+msgstr ""
 
 #, fuzzy
 #~| msgid "1 action for this device"

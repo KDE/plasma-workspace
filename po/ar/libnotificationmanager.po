@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-25 00:44+0000\n"
-"PO-Revision-Date: 2025-05-07 17:59+0400\n"
+"PO-Revision-Date: 2025-06-26 10:19+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -156,12 +156,9 @@ msgstr[4] "وصل %1 إشعارًا أثناء تنشيط وضع \"عدم الإ
 msgstr[5] "وصل %1 إشعارًا أثناء تنشيط وضع \"عدم الإزعاج\"."
 
 #: notifications.cpp:918
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Unread Notification"
-#| msgid_plural "Unread Notifications"
+#, kde-format
 msgctxt ""
 "@action:button Show the notifications popup; translate this in as short a "
 "form as possible"
 msgid "Show Notifications"
-msgstr "لا يوجد إشعارات"
+msgstr "أظهر الإشعارات"

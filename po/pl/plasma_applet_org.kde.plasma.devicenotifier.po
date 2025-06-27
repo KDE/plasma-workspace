@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-13 00:44+0000\n"
+"POT-Creation-Date: 2025-06-27 00:44+0000\n"
 "PO-Revision-Date: 2024-07-20 09:05+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -19,205 +19,97 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 
-#: package/contents/ui/DeviceItem.qml:97
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Removing is a less technical word for Unmounting; translation should be "
-#| "short and mean 'Currently unmounting this device'"
-#| msgid "Removing…"
-msgctxt ""
-"Accessing is a less technical word for Mounting; translation should be short "
-"and mean 'Currently mounting this device'"
-msgid "Checking…"
-msgstr "Odpinanie..."
-
-#: package/contents/ui/DeviceItem.qml:99
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Removing is a less technical word for Unmounting; translation should be "
-#| "short and mean 'Currently unmounting this device'"
-#| msgid "Removing…"
-msgctxt ""
-"Accessing is a less technical word for Mounting; translation should be short "
-"and mean 'Currently mounting this device'"
-msgid "Repairing…"
-msgstr "Odpinanie..."
-
-#: package/contents/ui/DeviceItem.qml:102
-#, kde-format
-msgctxt "@info:status Free disk space"
-msgid "%1 free of %2"
-msgstr "%1 wolnych z %2"
-
-#: package/contents/ui/DeviceItem.qml:106
-#, kde-format
-msgctxt ""
-"Accessing is a less technical word for Mounting; translation should be short "
-"and mean 'Currently mounting this device'"
-msgid "Accessing…"
-msgstr "Podpinanie..."
-
-#: package/contents/ui/DeviceItem.qml:109
-#, kde-format
-msgctxt ""
-"Removing is a less technical word for Unmounting; translation should be "
-"short and mean 'Currently unmounting this device'"
-msgid "Removing…"
-msgstr "Odpinanie..."
-
-#: package/contents/ui/DeviceItem.qml:112
-#, kde-format
-msgid "Don't unplug yet! Files are still being transferred…"
-msgstr "Zaczekaj z wysuwaniem! Pliki są jeszcze przesyłane..."
-
-#: package/contents/ui/FullRepresentation.qml:45
-#: package/contents/ui/main.qml:125
-#, kde-format
-msgid "Remove All"
-msgstr "Wysuń wszystkie"
-
-#: package/contents/ui/FullRepresentation.qml:46
-#, kde-format
-msgid "Click to safely remove all devices"
-msgstr "Naciśnij, aby bezpiecznie wysunąć wszystkie urządzenia."
-
-#: package/contents/ui/FullRepresentation.qml:153
-#, kde-format
-msgid "No removable devices attached"
-msgstr "Nie podpięto żadnych urządzeń wymiennych"
-
-#: package/contents/ui/FullRepresentation.qml:153
-#, kde-format
-msgid "No disks available"
-msgstr "Brak dysku"
-
-#: package/contents/ui/main.qml:72
-#, kde-format
-msgid "Most Recent Device"
-msgstr "Najwcześniejsze urządzenie"
-
-#: package/contents/ui/main.qml:72
-#, kde-format
-msgid "No Devices Available"
-msgstr "Brak urządzeń"
-
-#: package/contents/ui/main.qml:108
-#, kde-format
-msgctxt "Open auto mounter kcm"
-msgid "Configure Removable Devices…"
-msgstr "Ustawienia urządzeń wymiennych..."
-
-#: package/contents/ui/main.qml:133
-#, kde-format
-msgid "Removable Devices"
-msgstr "Urządzenia wymienne"
-
-#: package/contents/ui/main.qml:148
-#, kde-format
-msgid "Non Removable Devices"
-msgstr "Urządzenia niewymienne"
-
-#: package/contents/ui/main.qml:163
-#, kde-format
-msgid "All Devices"
-msgstr "Wszystkie urządzenia"
-
-#: package/contents/ui/main.qml:180
-#, kde-format
-msgid "Show popup when new device is plugged in"
-msgstr "Wysuń okno, po podłączeniu nowego urządzenia"
-
-#: plugin/actions/mountaction.cpp:104
+#: actions/mountaction.cpp:104
 #, kde-format
 msgid "Mount"
 msgstr "Podepnij"
 
-#: plugin/actions/mountandopenaction.cpp:179
+#: actions/mountandopenaction.cpp:179
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Otwórz w przeglądarce plików"
 
-#: plugin/actions/mountandopenaction.cpp:182
+#: actions/mountandopenaction.cpp:182
 #, kde-format
 msgid "Try to Fix"
 msgstr ""
 
-#: plugin/actions/mountandopenaction.cpp:182
+#: actions/mountandopenaction.cpp:182
 #, kde-format
 msgid "Mount and Open"
 msgstr "Podepnij i otwórz"
 
-#: plugin/actions/mountandopenaction.cpp:184
+#: actions/mountandopenaction.cpp:184
 #, kde-format
 msgid "Eject"
 msgstr "Wysuń"
 
-#: plugin/actions/mountandopenaction.cpp:186
+#: actions/mountandopenaction.cpp:186
 #, kde-format
 msgid "Safely remove"
 msgstr "Wysuń bezpiecznie"
 
-#: plugin/deviceerrormonitor_p.cpp:198
+#: deviceerrormonitor_p.cpp:198
 #, fuzzy, kde-format
 #| msgid "This device can now be safely removed."
 msgid "This device has file system errors."
 msgstr "Możesz teraz bezpiecznie wysunąć to urządzenie."
 
-#: plugin/deviceerrormonitor_p.cpp:201
+#: deviceerrormonitor_p.cpp:201
 #, kde-format
 msgid "Successfully repaired!"
 msgstr ""
 
-#: plugin/deviceerrormonitor_p.cpp:204
+#: deviceerrormonitor_p.cpp:204
 #, kde-format
 msgid "Device Status"
 msgstr "Stan urządzenia"
 
-#: plugin/deviceerrormonitor_p.cpp:205
+#: deviceerrormonitor_p.cpp:205
 #, kde-format
 msgid "A device can now be safely removed"
 msgstr "Możesz teraz bezpiecznie wysunąć to urządzenie"
 
-#: plugin/deviceerrormonitor_p.cpp:209
+#: deviceerrormonitor_p.cpp:209
 #, kde-format
 msgid "This device can now be safely removed."
 msgstr "Możesz teraz bezpiecznie wysunąć to urządzenie."
 
-#: plugin/deviceerrormonitor_p.cpp:216
+#: deviceerrormonitor_p.cpp:216
 #, kde-format
 msgid "You are not authorized to mount this device."
 msgstr "Nie masz uprawnień do podpięcia tego urządzenia."
 
-#: plugin/deviceerrormonitor_p.cpp:219
+#: deviceerrormonitor_p.cpp:219
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr "Nie masz uprawnień do wysunięcia tego urządzenia."
 
-#: plugin/deviceerrormonitor_p.cpp:222
+#: deviceerrormonitor_p.cpp:222
 #, kde-format
 msgid "You are not authorized to eject this disc."
 msgstr "Nie masz uprawnień do wysunięcia tego dysku."
 
-#: plugin/deviceerrormonitor_p.cpp:225
+#: deviceerrormonitor_p.cpp:225
 #, fuzzy, kde-format
 #| msgctxt "Remove is less technical for unmount"
 #| msgid "You are not authorized to remove this device."
 msgid "You are not authorized to repair this device."
 msgstr "Nie masz uprawnień do wysunięcia tego urządzenia."
 
-#: plugin/deviceerrormonitor_p.cpp:232
+#: deviceerrormonitor_p.cpp:232
 #, kde-format
 msgid "Could not mount this device as it is busy."
 msgstr "Nie można podpiąć tego urządzenia, bo jest zajęte."
 
-#: plugin/deviceerrormonitor_p.cpp:260
+#: deviceerrormonitor_p.cpp:260
 #, kde-format
 msgid "One or more files on this device are open within an application."
 msgstr ""
 "Jeden lub więcej plików na tym urządzeniu jest otwartych w jakiejś aplikacji."
 
-#: plugin/deviceerrormonitor_p.cpp:262
+#: deviceerrormonitor_p.cpp:262
 #, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
@@ -231,34 +123,141 @@ msgstr[2] ""
 "Jeden lub więcej plików na tym urządzeniu jest otwartych w następujących "
 "aplikacjach: \"%2\"."
 
-#: plugin/deviceerrormonitor_p.cpp:265
+#: deviceerrormonitor_p.cpp:265
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ", "
 
-#: plugin/deviceerrormonitor_p.cpp:285
+#: deviceerrormonitor_p.cpp:285
 #, kde-format
 msgid "Could not mount this device."
 msgstr "Nie można podpiąć tego urządzenia."
 
-#: plugin/deviceerrormonitor_p.cpp:288
+#: deviceerrormonitor_p.cpp:288
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "Nie można wysunąć tego urządzenia."
 
-#: plugin/deviceerrormonitor_p.cpp:291
+#: deviceerrormonitor_p.cpp:291
 #, kde-format
 msgid "Could not eject this disc."
 msgstr "Nie można wysunąć dysku."
 
-#: plugin/deviceerrormonitor_p.cpp:294
+#: deviceerrormonitor_p.cpp:294
 #, fuzzy, kde-format
 #| msgctxt "Remove is less technical for unmount"
 #| msgid "Could not remove this device."
 msgid "Could not repair this device: %1"
 msgstr "Nie można wysunąć tego urządzenia."
+
+#: qml/DeviceItem.qml:95
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Removing is a less technical word for Unmounting; translation should be "
+#| "short and mean 'Currently unmounting this device'"
+#| msgid "Removing…"
+msgctxt ""
+"Accessing is a less technical word for Mounting; translation should be short "
+"and mean 'Currently mounting this device'"
+msgid "Checking…"
+msgstr "Odpinanie..."
+
+#: qml/DeviceItem.qml:97
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Removing is a less technical word for Unmounting; translation should be "
+#| "short and mean 'Currently unmounting this device'"
+#| msgid "Removing…"
+msgctxt ""
+"Accessing is a less technical word for Mounting; translation should be short "
+"and mean 'Currently mounting this device'"
+msgid "Repairing…"
+msgstr "Odpinanie..."
+
+#: qml/DeviceItem.qml:100
+#, kde-format
+msgctxt "@info:status Free disk space"
+msgid "%1 free of %2"
+msgstr "%1 wolnych z %2"
+
+#: qml/DeviceItem.qml:104
+#, kde-format
+msgctxt ""
+"Accessing is a less technical word for Mounting; translation should be short "
+"and mean 'Currently mounting this device'"
+msgid "Accessing…"
+msgstr "Podpinanie..."
+
+#: qml/DeviceItem.qml:107
+#, kde-format
+msgctxt ""
+"Removing is a less technical word for Unmounting; translation should be "
+"short and mean 'Currently unmounting this device'"
+msgid "Removing…"
+msgstr "Odpinanie..."
+
+#: qml/DeviceItem.qml:110
+#, kde-format
+msgid "Don't unplug yet! Files are still being transferred…"
+msgstr "Zaczekaj z wysuwaniem! Pliki są jeszcze przesyłane..."
+
+#: qml/FullRepresentation.qml:45 qml/main.qml:124
+#, kde-format
+msgid "Remove All"
+msgstr "Wysuń wszystkie"
+
+#: qml/FullRepresentation.qml:46
+#, kde-format
+msgid "Click to safely remove all devices"
+msgstr "Naciśnij, aby bezpiecznie wysunąć wszystkie urządzenia."
+
+#: qml/FullRepresentation.qml:153
+#, kde-format
+msgid "No removable devices attached"
+msgstr "Nie podpięto żadnych urządzeń wymiennych"
+
+#: qml/FullRepresentation.qml:153
+#, kde-format
+msgid "No disks available"
+msgstr "Brak dysku"
+
+#: qml/main.qml:71
+#, kde-format
+msgid "Most Recent Device"
+msgstr "Najwcześniejsze urządzenie"
+
+#: qml/main.qml:71
+#, kde-format
+msgid "No Devices Available"
+msgstr "Brak urządzeń"
+
+#: qml/main.qml:107
+#, kde-format
+msgctxt "Open auto mounter kcm"
+msgid "Configure Removable Devices…"
+msgstr "Ustawienia urządzeń wymiennych..."
+
+#: qml/main.qml:132
+#, kde-format
+msgid "Removable Devices"
+msgstr "Urządzenia wymienne"
+
+#: qml/main.qml:147
+#, kde-format
+msgid "Non Removable Devices"
+msgstr "Urządzenia niewymienne"
+
+#: qml/main.qml:162
+#, kde-format
+msgid "All Devices"
+msgstr "Wszystkie urządzenia"
+
+#: qml/main.qml:179
+#, kde-format
+msgid "Show popup when new device is plugged in"
+msgstr "Wysuń okno, po podłączeniu nowego urządzenia"
 
 #~ msgid "Filesystem is not responding"
 #~ msgstr "System plików nie odpowiada"

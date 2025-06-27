@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-13 00:44+0000\n"
+"POT-Creation-Date: 2025-06-27 00:44+0000\n"
 "PO-Revision-Date: 2024-08-03 12:55+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -20,7 +20,134 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.05.2\n"
 
-#: package/contents/ui/DeviceItem.qml:97
+#: actions/mountaction.cpp:104
+#, kde-format
+msgid "Mount"
+msgstr "Mount"
+
+#: actions/mountandopenaction.cpp:179
+#, kde-format
+msgid "Open in File Manager"
+msgstr "Open in File Manager"
+
+#: actions/mountandopenaction.cpp:182
+#, kde-format
+msgid "Try to Fix"
+msgstr ""
+
+#: actions/mountandopenaction.cpp:182
+#, kde-format
+msgid "Mount and Open"
+msgstr "Mount and Open"
+
+#: actions/mountandopenaction.cpp:184
+#, kde-format
+msgid "Eject"
+msgstr "Eject"
+
+#: actions/mountandopenaction.cpp:186
+#, kde-format
+msgid "Safely remove"
+msgstr "Safely remove"
+
+#: deviceerrormonitor_p.cpp:198
+#, fuzzy, kde-format
+#| msgid "This device can now be safely removed."
+msgid "This device has file system errors."
+msgstr "This device can now be safely removed."
+
+#: deviceerrormonitor_p.cpp:201
+#, kde-format
+msgid "Successfully repaired!"
+msgstr ""
+
+#: deviceerrormonitor_p.cpp:204
+#, kde-format
+msgid "Device Status"
+msgstr "Device Status"
+
+#: deviceerrormonitor_p.cpp:205
+#, kde-format
+msgid "A device can now be safely removed"
+msgstr "A device can now be safely removed"
+
+#: deviceerrormonitor_p.cpp:209
+#, kde-format
+msgid "This device can now be safely removed."
+msgstr "This device can now be safely removed."
+
+#: deviceerrormonitor_p.cpp:216
+#, kde-format
+msgid "You are not authorized to mount this device."
+msgstr "You are not authorised to mount this device."
+
+#: deviceerrormonitor_p.cpp:219
+#, kde-format
+msgctxt "Remove is less technical for unmount"
+msgid "You are not authorized to remove this device."
+msgstr "You are not authorised to remove this device."
+
+#: deviceerrormonitor_p.cpp:222
+#, kde-format
+msgid "You are not authorized to eject this disc."
+msgstr "You are not authorised to eject this disc."
+
+#: deviceerrormonitor_p.cpp:225
+#, fuzzy, kde-format
+#| msgctxt "Remove is less technical for unmount"
+#| msgid "You are not authorized to remove this device."
+msgid "You are not authorized to repair this device."
+msgstr "You are not authorised to remove this device."
+
+#: deviceerrormonitor_p.cpp:232
+#, kde-format
+msgid "Could not mount this device as it is busy."
+msgstr "Could not mount this device as it is busy."
+
+#: deviceerrormonitor_p.cpp:260
+#, kde-format
+msgid "One or more files on this device are open within an application."
+msgstr "One or more files on this device are open within an application."
+
+#: deviceerrormonitor_p.cpp:262
+#, kde-format
+msgid "One or more files on this device are opened in application \"%2\"."
+msgid_plural ""
+"One or more files on this device are opened in following applications: %2."
+msgstr[0] "One or more files on this device are opened in application \"%2\"."
+msgstr[1] ""
+"One or more files on this device are opened in following applications: %2."
+
+#: deviceerrormonitor_p.cpp:265
+#, kde-format
+msgctxt "separator in list of apps blocking device unmount"
+msgid ", "
+msgstr ", "
+
+#: deviceerrormonitor_p.cpp:285
+#, kde-format
+msgid "Could not mount this device."
+msgstr "Could not mount this device."
+
+#: deviceerrormonitor_p.cpp:288
+#, kde-format
+msgctxt "Remove is less technical for unmount"
+msgid "Could not remove this device."
+msgstr "Could not remove this device."
+
+#: deviceerrormonitor_p.cpp:291
+#, kde-format
+msgid "Could not eject this disc."
+msgstr "Could not eject this disc."
+
+#: deviceerrormonitor_p.cpp:294
+#, fuzzy, kde-format
+#| msgctxt "Remove is less technical for unmount"
+#| msgid "Could not remove this device."
+msgid "Could not repair this device: %1"
+msgstr "Could not remove this device."
+
+#: qml/DeviceItem.qml:95
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Removing is a less technical word for Unmounting; translation should be "
@@ -32,7 +159,7 @@ msgctxt ""
 msgid "Checking…"
 msgstr "Removing…"
 
-#: package/contents/ui/DeviceItem.qml:99
+#: qml/DeviceItem.qml:97
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Removing is a less technical word for Unmounting; translation should be "
@@ -44,13 +171,13 @@ msgctxt ""
 msgid "Repairing…"
 msgstr "Removing…"
 
-#: package/contents/ui/DeviceItem.qml:102
+#: qml/DeviceItem.qml:100
 #, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "%1 free of %2"
 
-#: package/contents/ui/DeviceItem.qml:106
+#: qml/DeviceItem.qml:104
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -58,7 +185,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr "Accessing…"
 
-#: package/contents/ui/DeviceItem.qml:109
+#: qml/DeviceItem.qml:107
 #, kde-format
 msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
@@ -66,194 +193,66 @@ msgctxt ""
 msgid "Removing…"
 msgstr "Removing…"
 
-#: package/contents/ui/DeviceItem.qml:112
+#: qml/DeviceItem.qml:110
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr "Do not unplug yet! Files are still being transferred…"
 
-#: package/contents/ui/FullRepresentation.qml:45
-#: package/contents/ui/main.qml:125
+#: qml/FullRepresentation.qml:45 qml/main.qml:124
 #, kde-format
 msgid "Remove All"
 msgstr "Remove All"
 
-#: package/contents/ui/FullRepresentation.qml:46
+#: qml/FullRepresentation.qml:46
 #, kde-format
 msgid "Click to safely remove all devices"
 msgstr "Click to safely remove all devices"
 
-#: package/contents/ui/FullRepresentation.qml:153
+#: qml/FullRepresentation.qml:153
 #, kde-format
 msgid "No removable devices attached"
 msgstr "No removable devices attached"
 
-#: package/contents/ui/FullRepresentation.qml:153
+#: qml/FullRepresentation.qml:153
 #, kde-format
 msgid "No disks available"
 msgstr "No disks available"
 
-#: package/contents/ui/main.qml:72
+#: qml/main.qml:71
 #, kde-format
 msgid "Most Recent Device"
 msgstr "Most Recent Device"
 
-#: package/contents/ui/main.qml:72
+#: qml/main.qml:71
 #, kde-format
 msgid "No Devices Available"
 msgstr "No Devices Available"
 
-#: package/contents/ui/main.qml:108
+#: qml/main.qml:107
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Configure Removable Devices…"
 
-#: package/contents/ui/main.qml:133
+#: qml/main.qml:132
 #, kde-format
 msgid "Removable Devices"
 msgstr "Removable Devices"
 
-#: package/contents/ui/main.qml:148
+#: qml/main.qml:147
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "Non Removable Devices"
 
-#: package/contents/ui/main.qml:163
+#: qml/main.qml:162
 #, kde-format
 msgid "All Devices"
 msgstr "All Devices"
 
-#: package/contents/ui/main.qml:180
+#: qml/main.qml:179
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "Show popup when new device is plugged in"
-
-#: plugin/actions/mountaction.cpp:104
-#, kde-format
-msgid "Mount"
-msgstr "Mount"
-
-#: plugin/actions/mountandopenaction.cpp:179
-#, kde-format
-msgid "Open in File Manager"
-msgstr "Open in File Manager"
-
-#: plugin/actions/mountandopenaction.cpp:182
-#, kde-format
-msgid "Try to Fix"
-msgstr ""
-
-#: plugin/actions/mountandopenaction.cpp:182
-#, kde-format
-msgid "Mount and Open"
-msgstr "Mount and Open"
-
-#: plugin/actions/mountandopenaction.cpp:184
-#, kde-format
-msgid "Eject"
-msgstr "Eject"
-
-#: plugin/actions/mountandopenaction.cpp:186
-#, kde-format
-msgid "Safely remove"
-msgstr "Safely remove"
-
-#: plugin/deviceerrormonitor_p.cpp:198
-#, fuzzy, kde-format
-#| msgid "This device can now be safely removed."
-msgid "This device has file system errors."
-msgstr "This device can now be safely removed."
-
-#: plugin/deviceerrormonitor_p.cpp:201
-#, kde-format
-msgid "Successfully repaired!"
-msgstr ""
-
-#: plugin/deviceerrormonitor_p.cpp:204
-#, kde-format
-msgid "Device Status"
-msgstr "Device Status"
-
-#: plugin/deviceerrormonitor_p.cpp:205
-#, kde-format
-msgid "A device can now be safely removed"
-msgstr "A device can now be safely removed"
-
-#: plugin/deviceerrormonitor_p.cpp:209
-#, kde-format
-msgid "This device can now be safely removed."
-msgstr "This device can now be safely removed."
-
-#: plugin/deviceerrormonitor_p.cpp:216
-#, kde-format
-msgid "You are not authorized to mount this device."
-msgstr "You are not authorised to mount this device."
-
-#: plugin/deviceerrormonitor_p.cpp:219
-#, kde-format
-msgctxt "Remove is less technical for unmount"
-msgid "You are not authorized to remove this device."
-msgstr "You are not authorised to remove this device."
-
-#: plugin/deviceerrormonitor_p.cpp:222
-#, kde-format
-msgid "You are not authorized to eject this disc."
-msgstr "You are not authorised to eject this disc."
-
-#: plugin/deviceerrormonitor_p.cpp:225
-#, fuzzy, kde-format
-#| msgctxt "Remove is less technical for unmount"
-#| msgid "You are not authorized to remove this device."
-msgid "You are not authorized to repair this device."
-msgstr "You are not authorised to remove this device."
-
-#: plugin/deviceerrormonitor_p.cpp:232
-#, kde-format
-msgid "Could not mount this device as it is busy."
-msgstr "Could not mount this device as it is busy."
-
-#: plugin/deviceerrormonitor_p.cpp:260
-#, kde-format
-msgid "One or more files on this device are open within an application."
-msgstr "One or more files on this device are open within an application."
-
-#: plugin/deviceerrormonitor_p.cpp:262
-#, kde-format
-msgid "One or more files on this device are opened in application \"%2\"."
-msgid_plural ""
-"One or more files on this device are opened in following applications: %2."
-msgstr[0] "One or more files on this device are opened in application \"%2\"."
-msgstr[1] ""
-"One or more files on this device are opened in following applications: %2."
-
-#: plugin/deviceerrormonitor_p.cpp:265
-#, kde-format
-msgctxt "separator in list of apps blocking device unmount"
-msgid ", "
-msgstr ", "
-
-#: plugin/deviceerrormonitor_p.cpp:285
-#, kde-format
-msgid "Could not mount this device."
-msgstr "Could not mount this device."
-
-#: plugin/deviceerrormonitor_p.cpp:288
-#, kde-format
-msgctxt "Remove is less technical for unmount"
-msgid "Could not remove this device."
-msgstr "Could not remove this device."
-
-#: plugin/deviceerrormonitor_p.cpp:291
-#, kde-format
-msgid "Could not eject this disc."
-msgstr "Could not eject this disc."
-
-#: plugin/deviceerrormonitor_p.cpp:294
-#, fuzzy, kde-format
-#| msgctxt "Remove is less technical for unmount"
-#| msgid "Could not remove this device."
-msgid "Could not repair this device: %1"
-msgstr "Could not remove this device."
 
 #~ msgid "Filesystem is not responding"
 #~ msgstr "Filesystem is not responding"

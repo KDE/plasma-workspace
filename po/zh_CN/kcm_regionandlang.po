@@ -297,7 +297,7 @@ msgstr "未能安装全部缺失的软件包。%1"
 #, kde-format
 msgctxt "%1 is a list of package names, %2 is the error explanation"
 msgid "Failed to install language packages (%1): %2"
-msgstr ""
+msgstr "无法安装语言软件包 (%1)：%2"
 
 #: localegenhelper/localegenhelper.cpp:45
 #, kde-format

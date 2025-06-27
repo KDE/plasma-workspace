@@ -327,19 +327,19 @@ msgstr "返回剪贴板"
 #, kde-format
 msgctxt "@action:button Copy to clipboard"
 msgid "Copy"
-msgstr ""
+msgstr "复制"
 
 #: declarative/qml/BarcodePage.qml:95
 #, kde-format
 msgctxt "@info:status"
 msgid "An image of the QR code has been copied to clipboard"
-msgstr ""
+msgstr "该二维码图像已复制到剪贴板"
 
 #: declarative/qml/BarcodePage.qml:101
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Copy QR code image to clipboard"
-msgstr ""
+msgstr "复制二维码图像到剪贴板"
 
 #: declarative/qml/BarcodePage.qml:112
 #, kde-format

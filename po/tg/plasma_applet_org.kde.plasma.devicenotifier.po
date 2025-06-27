@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-13 00:44+0000\n"
+"POT-Creation-Date: 2025-06-27 00:44+0000\n"
 "PO-Revision-Date: 2020-09-03 15:56+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: Tajik <kde-i18n-doc@kde.org>\n"
@@ -17,7 +17,137 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 20.04.2\n"
 
-#: package/contents/ui/DeviceItem.qml:97
+#: actions/mountaction.cpp:104
+#, kde-format
+msgid "Mount"
+msgstr "Васл кардан"
+
+#: actions/mountandopenaction.cpp:179
+#, kde-format
+msgid "Open in File Manager"
+msgstr "Кушодан дар Мудири файлҳо"
+
+#: actions/mountandopenaction.cpp:182
+#, kde-format
+msgid "Try to Fix"
+msgstr ""
+
+#: actions/mountandopenaction.cpp:182
+#, kde-format
+msgid "Mount and Open"
+msgstr ""
+
+#: actions/mountandopenaction.cpp:184
+#, kde-format
+msgid "Eject"
+msgstr "Ҷудо кардан"
+
+#: actions/mountandopenaction.cpp:186
+#, kde-format
+msgid "Safely remove"
+msgstr "Ба таври бехатар ҷудо кардан"
+
+#: deviceerrormonitor_p.cpp:198
+#, kde-format
+msgid "This device has file system errors."
+msgstr ""
+
+#: deviceerrormonitor_p.cpp:201
+#, kde-format
+msgid "Successfully repaired!"
+msgstr ""
+
+#: deviceerrormonitor_p.cpp:204
+#, kde-format
+msgid "Device Status"
+msgstr ""
+
+#: deviceerrormonitor_p.cpp:205
+#, kde-format
+msgid "A device can now be safely removed"
+msgstr ""
+
+#: deviceerrormonitor_p.cpp:209
+#, kde-format
+msgid "This device can now be safely removed."
+msgstr ""
+
+#: deviceerrormonitor_p.cpp:216
+#, fuzzy, kde-format
+#| msgid "1 action for this device"
+#| msgid_plural "%1 actions for this device"
+msgid "You are not authorized to mount this device."
+msgstr "1 амалиёт барои ин дастгоҳ"
+
+#: deviceerrormonitor_p.cpp:219
+#, kde-format
+msgctxt "Remove is less technical for unmount"
+msgid "You are not authorized to remove this device."
+msgstr ""
+
+#: deviceerrormonitor_p.cpp:222
+#, kde-format
+msgid "You are not authorized to eject this disc."
+msgstr ""
+
+#: deviceerrormonitor_p.cpp:225
+#, fuzzy, kde-format
+#| msgid "1 action for this device"
+#| msgid_plural "%1 actions for this device"
+msgid "You are not authorized to repair this device."
+msgstr "1 амалиёт барои ин дастгоҳ"
+
+#: deviceerrormonitor_p.cpp:232
+#, fuzzy, kde-format
+#| msgid "Last plugged in device: %1"
+msgid "Could not mount this device as it is busy."
+msgstr "Васлшудаи охирин: %1"
+
+#: deviceerrormonitor_p.cpp:260
+#, kde-format
+msgid "One or more files on this device are open within an application."
+msgstr ""
+
+#: deviceerrormonitor_p.cpp:262
+#, kde-format
+msgid "One or more files on this device are opened in application \"%2\"."
+msgid_plural ""
+"One or more files on this device are opened in following applications: %2."
+msgstr[0] ""
+msgstr[1] ""
+
+#: deviceerrormonitor_p.cpp:265
+#, kde-format
+msgctxt "separator in list of apps blocking device unmount"
+msgid ", "
+msgstr ""
+
+#: deviceerrormonitor_p.cpp:285
+#, fuzzy, kde-format
+#| msgid "Last plugged in device: %1"
+msgid "Could not mount this device."
+msgstr "Васлшудаи охирин: %1"
+
+#: deviceerrormonitor_p.cpp:288
+#, fuzzy, kde-format
+#| msgid "Last plugged in device: %1"
+msgctxt "Remove is less technical for unmount"
+msgid "Could not remove this device."
+msgstr "Васлшудаи охирин: %1"
+
+#: deviceerrormonitor_p.cpp:291
+#, fuzzy, kde-format
+#| msgid "Last plugged in device: %1"
+msgid "Could not eject this disc."
+msgstr "Васлшудаи охирин: %1"
+
+#: deviceerrormonitor_p.cpp:294
+#, fuzzy, kde-format
+#| msgid "Last plugged in device: %1"
+msgid "Could not repair this device: %1"
+msgstr "Васлшудаи охирин: %1"
+
+#: qml/DeviceItem.qml:95
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Removing is a less technical word for Unmounting; translation should be "
@@ -29,7 +159,7 @@ msgctxt ""
 msgid "Checking…"
 msgstr "Дар ҳоли ҷудокунӣ..."
 
-#: package/contents/ui/DeviceItem.qml:99
+#: qml/DeviceItem.qml:97
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Removing is a less technical word for Unmounting; translation should be "
@@ -41,13 +171,13 @@ msgctxt ""
 msgid "Repairing…"
 msgstr "Дар ҳоли ҷудокунӣ..."
 
-#: package/contents/ui/DeviceItem.qml:102
+#: qml/DeviceItem.qml:100
 #, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "%1 озод аз %2"
 
-#: package/contents/ui/DeviceItem.qml:106
+#: qml/DeviceItem.qml:104
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Accessing is a less technical word for Mounting; translation should be "
@@ -59,7 +189,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr "Дар ҳоли пайдокунии дастрасӣ..."
 
-#: package/contents/ui/DeviceItem.qml:109
+#: qml/DeviceItem.qml:107
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Removing is a less technical word for Unmounting; translation should be "
@@ -71,45 +201,44 @@ msgctxt ""
 msgid "Removing…"
 msgstr "Дар ҳоли ҷудокунӣ..."
 
-#: package/contents/ui/DeviceItem.qml:112
+#: qml/DeviceItem.qml:110
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr ""
 
-#: package/contents/ui/FullRepresentation.qml:45
-#: package/contents/ui/main.qml:125
+#: qml/FullRepresentation.qml:45 qml/main.qml:124
 #, kde-format
 msgid "Remove All"
 msgstr "Ҳамаро ҷудо кардан"
 
-#: package/contents/ui/FullRepresentation.qml:46
+#: qml/FullRepresentation.qml:46
 #, kde-format
 msgid "Click to safely remove all devices"
 msgstr "Зер кунед, то ки ҳамаи дастгоҳҳо ба таври бехатар ҷудо карда шаванд"
 
-#: package/contents/ui/FullRepresentation.qml:153
+#: qml/FullRepresentation.qml:153
 #, fuzzy, kde-format
 #| msgid "Non-removable devices"
 msgid "No removable devices attached"
 msgstr "Дастгоҳҳои доимӣ"
 
-#: package/contents/ui/FullRepresentation.qml:153
+#: qml/FullRepresentation.qml:153
 #, fuzzy, kde-format
 #| msgid "No devices available"
 msgid "No disks available"
 msgstr "Ягон дастгоҳ васл нашудааст"
 
-#: package/contents/ui/main.qml:72
+#: qml/main.qml:71
 #, kde-format
 msgid "Most Recent Device"
 msgstr "Дастгоҳи васлшудаи охирин"
 
-#: package/contents/ui/main.qml:72
+#: qml/main.qml:71
 #, kde-format
 msgid "No Devices Available"
 msgstr "Ягон дастгоҳ васл нашудааст"
 
-#: package/contents/ui/main.qml:108
+#: qml/main.qml:107
 #, fuzzy, kde-format
 #| msgctxt "Open auto mounter kcm"
 #| msgid "Configure Removable Devices"
@@ -117,158 +246,28 @@ msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Танзимоти дастгоҳҳои ҷудошаванда"
 
-#: package/contents/ui/main.qml:133
+#: qml/main.qml:132
 #, fuzzy, kde-format
 #| msgid "Removable devices"
 msgid "Removable Devices"
 msgstr "Дастгоҳҳои ҷудошаванда"
 
-#: package/contents/ui/main.qml:148
+#: qml/main.qml:147
 #, fuzzy, kde-format
 #| msgid "Non-removable devices"
 msgid "Non Removable Devices"
 msgstr "Дастгоҳҳои доимӣ"
 
-#: package/contents/ui/main.qml:163
+#: qml/main.qml:162
 #, fuzzy, kde-format
 #| msgid "All devices"
 msgid "All Devices"
 msgstr "Ҳамаи дастгоҳҳо"
 
-#: package/contents/ui/main.qml:180
+#: qml/main.qml:179
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr ""
-
-#: plugin/actions/mountaction.cpp:104
-#, kde-format
-msgid "Mount"
-msgstr "Васл кардан"
-
-#: plugin/actions/mountandopenaction.cpp:179
-#, kde-format
-msgid "Open in File Manager"
-msgstr "Кушодан дар Мудири файлҳо"
-
-#: plugin/actions/mountandopenaction.cpp:182
-#, kde-format
-msgid "Try to Fix"
-msgstr ""
-
-#: plugin/actions/mountandopenaction.cpp:182
-#, kde-format
-msgid "Mount and Open"
-msgstr ""
-
-#: plugin/actions/mountandopenaction.cpp:184
-#, kde-format
-msgid "Eject"
-msgstr "Ҷудо кардан"
-
-#: plugin/actions/mountandopenaction.cpp:186
-#, kde-format
-msgid "Safely remove"
-msgstr "Ба таври бехатар ҷудо кардан"
-
-#: plugin/deviceerrormonitor_p.cpp:198
-#, kde-format
-msgid "This device has file system errors."
-msgstr ""
-
-#: plugin/deviceerrormonitor_p.cpp:201
-#, kde-format
-msgid "Successfully repaired!"
-msgstr ""
-
-#: plugin/deviceerrormonitor_p.cpp:204
-#, kde-format
-msgid "Device Status"
-msgstr ""
-
-#: plugin/deviceerrormonitor_p.cpp:205
-#, kde-format
-msgid "A device can now be safely removed"
-msgstr ""
-
-#: plugin/deviceerrormonitor_p.cpp:209
-#, kde-format
-msgid "This device can now be safely removed."
-msgstr ""
-
-#: plugin/deviceerrormonitor_p.cpp:216
-#, fuzzy, kde-format
-#| msgid "1 action for this device"
-#| msgid_plural "%1 actions for this device"
-msgid "You are not authorized to mount this device."
-msgstr "1 амалиёт барои ин дастгоҳ"
-
-#: plugin/deviceerrormonitor_p.cpp:219
-#, kde-format
-msgctxt "Remove is less technical for unmount"
-msgid "You are not authorized to remove this device."
-msgstr ""
-
-#: plugin/deviceerrormonitor_p.cpp:222
-#, kde-format
-msgid "You are not authorized to eject this disc."
-msgstr ""
-
-#: plugin/deviceerrormonitor_p.cpp:225
-#, fuzzy, kde-format
-#| msgid "1 action for this device"
-#| msgid_plural "%1 actions for this device"
-msgid "You are not authorized to repair this device."
-msgstr "1 амалиёт барои ин дастгоҳ"
-
-#: plugin/deviceerrormonitor_p.cpp:232
-#, fuzzy, kde-format
-#| msgid "Last plugged in device: %1"
-msgid "Could not mount this device as it is busy."
-msgstr "Васлшудаи охирин: %1"
-
-#: plugin/deviceerrormonitor_p.cpp:260
-#, kde-format
-msgid "One or more files on this device are open within an application."
-msgstr ""
-
-#: plugin/deviceerrormonitor_p.cpp:262
-#, kde-format
-msgid "One or more files on this device are opened in application \"%2\"."
-msgid_plural ""
-"One or more files on this device are opened in following applications: %2."
-msgstr[0] ""
-msgstr[1] ""
-
-#: plugin/deviceerrormonitor_p.cpp:265
-#, kde-format
-msgctxt "separator in list of apps blocking device unmount"
-msgid ", "
-msgstr ""
-
-#: plugin/deviceerrormonitor_p.cpp:285
-#, fuzzy, kde-format
-#| msgid "Last plugged in device: %1"
-msgid "Could not mount this device."
-msgstr "Васлшудаи охирин: %1"
-
-#: plugin/deviceerrormonitor_p.cpp:288
-#, fuzzy, kde-format
-#| msgid "Last plugged in device: %1"
-msgctxt "Remove is less technical for unmount"
-msgid "Could not remove this device."
-msgstr "Васлшудаи охирин: %1"
-
-#: plugin/deviceerrormonitor_p.cpp:291
-#, fuzzy, kde-format
-#| msgid "Last plugged in device: %1"
-msgid "Could not eject this disc."
-msgstr "Васлшудаи охирин: %1"
-
-#: plugin/deviceerrormonitor_p.cpp:294
-#, fuzzy, kde-format
-#| msgid "Last plugged in device: %1"
-msgid "Could not repair this device: %1"
-msgstr "Васлшудаи охирин: %1"
 
 #~ msgid "Show:"
 #~ msgstr "Нишон додани:"
