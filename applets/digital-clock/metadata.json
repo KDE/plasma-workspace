@@ -1,5 +1,4 @@
 {
-    "KPackageStructure": "Plasma/Applet",
     "KPlugin": {
         "Authors": [
             {
@@ -115,7 +114,6 @@
             "desktop"
         ],
         "Icon": "preferences-system-time",
-        "Id": "org.kde.plasma.digitalclock",
         "License": "GPL-2.0+",
         "Name": "Digital Clock",
         "Name[af]": "Digitale horlosie",
