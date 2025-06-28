@@ -14,8 +14,6 @@ import org.kde.kirigami as Kirigami
 import org.kde.notificationmanager as NotificationManager
 import plasma.applet.org.kde.plasma.notifications as NotificationsApplet
 
-import ".."
-import "global"
 import "delegates" as Delegates
 
 NotificationsApplet.NotificationWindow {
@@ -24,7 +22,7 @@ NotificationsApplet.NotificationWindow {
     property int popupWidth
 
     // Maximum width the popup can take to not break out of the screen geometry.
-    readonly property int availableWidth: globals.screenRect.width - globals.popupEdgeDistance * 2 - leftPadding - rightPadding
+    readonly property int availableWidth: NotificationsApplet.Globals.screenRect.width - NotificationsApplet.Globals.popupEdgeDistance * 2 - leftPadding - rightPadding
 
     readonly property int minimumContentWidth: popupWidth
     readonly property int maximumContentWidth: Math.min((availableWidth > 0 ? availableWidth : Number.MAX_VALUE), popupWidth * 3)

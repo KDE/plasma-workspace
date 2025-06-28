@@ -19,7 +19,6 @@ import org.kde.coreaddons as KCoreAddons
 import org.kde.notificationmanager as NotificationManager
 import plasma.applet.org.kde.plasma.notifications as Notifications
 
-import "global"
 import "delegates" as Delegates
 import "components" as Components
 
@@ -77,10 +76,10 @@ PlasmaExtras.Representation {
                     text: i18n("Do not disturb")
                     icon.name: "notifications-disabled"
                     checkable: true
-                    checked: Globals.inhibited
+                    checked: Notifications.Globals.inhibited
 
-                    Accessible.onPressAction: if (Globals.inhibited) {
-                        Globals.revokeInhibitions();
+                    Accessible.onPressAction: if (Notifications.Globals.inhibited) {
+                        Notifications.Globals.revokeInhibitions();
                     } else {
                         let date = new Date();
                         date.setFullYear(date.getFullYear() + 1);
@@ -92,7 +91,7 @@ PlasmaExtras.Representation {
 
                     // Let the menu open on press
                     onPressed: {
-                        if (!Globals.inhibited) {
+                        if (!Notifications.Globals.inhibited) {
                             dndMenu.date = new Date();
                             // shows ontop of CheckBox to hide the fact that it's unchecked
                             // until you actually select something :)
@@ -101,8 +100,8 @@ PlasmaExtras.Representation {
                     }
                     // but disable only on click
                     onClicked: {
-                        if (Globals.inhibited) {
-                            Globals.revokeInhibitions();
+                        if (Notifications.Globals.inhibited) {
+                            Notifications.Globals.revokeInhibitions();
                         }
                     }
 
@@ -199,7 +198,7 @@ PlasmaExtras.Representation {
                 wrapMode: Text.WordWrap
                 textFormat: Text.PlainText
                 text: {
-                    if (!Globals.inhibited) {
+                    if (!Notifications.Globals.inhibited) {
                         return "";
                     }
 
