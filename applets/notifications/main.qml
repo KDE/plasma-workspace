@@ -24,8 +24,6 @@ import plasma.applet.org.kde.plasma.notifications as Notifications
 PlasmoidItem {
     id: root
 
-    property alias clearHistoryAction: clearHistory
-
     readonly property int unreadCount: Math.min(99, historyModel.unreadNotificationsCount)
 
     readonly property bool inhibitedOrBroken: Notifications.Globals.inhibited || !NotificationManager.Server.valid
@@ -161,7 +159,10 @@ PlasmoidItem {
     }
 
     fullRepresentation: FullRepresentation {
-
+        appletInterface: root
+        notificationSettings: notificationSettings
+        clearHistoryAction: clearHistory
+        historyModel: historyModel
     }
 
     NotificationManager.Settings {
