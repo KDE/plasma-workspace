@@ -134,7 +134,7 @@ void NotificationApplet::forceActivateWindow(QWindow *window)
     }
 }
 
-K_PLUGIN_CLASS(NotificationApplet)
+K_PLUGIN_CLASS_WITH_JSON(NotificationApplet, "metadata.json")
 
 #include "notificationapplet.moc"
 

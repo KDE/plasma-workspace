@@ -1,5 +1,4 @@
 {
-    "KPackageStructure": "Plasma/Applet",
     "KPlugin": {
         "Authors": [
             {
@@ -116,7 +115,6 @@
             "desktop"
         ],
         "Icon": "preferences-desktop-notification-bell",
-        "Id": "org.kde.plasma.notifications",
         "License": "GPL-2.0+",
         "Name": "Notifications",
         "Name[ar]": "إخطارات",

@@ -19,8 +19,53 @@ set(notificationapplet_SRCS
     thumbnailer.h
 )
 
-kcoreaddons_add_plugin(org.kde.plasma.notifications SOURCES ${notificationapplet_SRCS} INSTALL_NAMESPACE "plasma/applets")
+plasma_add_applet(org.kde.plasma.notifications)
 
+target_sources(org.kde.plasma.notifications PRIVATE ${notificationapplet_SRCS})
+
+ecm_target_qml_sources(org.kde.plasma.notifications SOURCES
+    components/ActionContainer.qml
+    components/Body.qml
+    components/DraggableFileArea.qml
+    components/EditContextMenu.qml
+    components/FooterLoader.qml
+    components/HeadingButtons.qml
+    components/Icon.qml
+    components/JobDetails.qml
+    components/JobIconItem.qml
+    components/JobItem.qml
+    components/ModelInterface.qml
+    components/NotificationHeader.qml
+    components/NotificationReplyField.qml
+    components/SpeedChart.qml
+    components/Summary.qml
+    components/ThumbnailStrip.qml
+    PATH components
+)
+
+ecm_target_qml_sources(org.kde.plasma.notifications SOURCES
+    delegates/BaseDelegate.qml
+    delegates/DelegateHistoryGrouped.qml
+    delegates/DelegateHistory.qml
+    delegates/DelegatePopup.qml
+    PATH delegates
+)
+
+set_source_files_properties(global/Globals.qml PROPERTIES QT_QML_SINGLETON_TYPE ON)
+
+ecm_target_qml_sources(org.kde.plasma.notifications SOURCES
+    global/Globals.qml
+    global/PulseAudio.qml
+    PATH global
+)
+
+ecm_target_qml_sources(org.kde.plasma.notifications SOURCES
+    CompactRepresentation.qml
+    DraggableDelegate.qml
+    FullRepresentation.qml
+    main.qml
+    NotificationPopup.qml
+)
 
 if (Qt6_VERSION VERSION_GREATER_EQUAL "6.8.0")
     set(private_code_option  "PRIVATE_CODE")
@@ -32,7 +77,7 @@ qt_generate_wayland_protocol_client_sources(org.kde.plasma.notifications
     ${private_code_option}
 )
 
-target_link_libraries(org.kde.plasma.notifications
+target_link_libraries(org.kde.plasma.notifications PRIVATE
                       Qt::Gui
                       Qt::Quick # for QQmlParserStatus
                       KF6::ConfigGui # for KStandardActions
@@ -55,5 +100,3 @@ ecm_qt_declare_logging_category(org.kde.plasma.notifications
     DESCRIPTION "plasma applet notification"
     EXPORT PLASMAWORKSPACE
 )
-
-plasma_install_package(package org.kde.plasma.notifications)
