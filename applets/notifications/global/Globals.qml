@@ -4,6 +4,7 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
+pragma ComponentBehavior: Bound
 pragma Singleton
 import QtQuick 2.8
 import QtQuick.Window 2.12
@@ -476,67 +477,107 @@ QtObject {
         model: globals.popupNotificationsModel
         delegate: NotificationPopup {
             id: popup
-            // so Instantiator can access that after the model row is gone
-            readonly property var notificationId: model.notificationId
 
-            readonly property bool hasSomeActions: (model.hasDefaultAction || false) || (model.actionLabels || []).length > 0 || (model.configureActionLabel || "").length > 0 || (model.hasReplyAction || false)
+            required property int index
+            required property var model
+
+            required property string notificationId
+            required property bool hasDefaultAction
+            required property list<string> actionLabels
+            required property string configureActionLabel
+            required property bool hasReplyAction
+            required property int urgency
+            required property int timeout
+            required property list<url> urls
+            required property int type
+            required property int jobState
+            required property string applicationName
+            required property string applicationIconName
+            required property string originName
+            required property date updated
+            required property date created
+            required property bool configurable
+            required property bool dismissable
+            required property bool closable
+            required property string summary
+            required property string body
+            required property string accessibleDescription
+            required property var image
+            required property var iconName
+            required property int percentage
+            required property string jobError
+            required property bool suspendable
+            required property bool killable
+            required property QtObject jobDetails
+            required property list<string> actionNames
+            required property string replyActionLabel
+            required property string replyPlaceholderText
+            required property string replySubmitButtonText
+            required property string replySubmitButtonIconName
+            required property bool resident
+            required property string notifyRcName
+            required property string desktopEntry
+
+            readonly property bool hasSomeActions: (hasDefaultAction || false) || (actionLabels || []).length > 0 || (configureActionLabel || "").length > 0 || (hasReplyAction || false)
 
             popupWidth: globals.popupWidth
 
-            isCritical: model.urgency === NotificationManager.Notifications.CriticalUrgency || (model.urgency === NotificationManager.Notifications.NormalUrgency && !globals.notificationSettings.inhibitNotificationsWhenFullscreen)
+            isCritical: urgency === NotificationManager.Notifications.CriticalUrgency || (urgency === NotificationManager.Notifications.NormalUrgency && !globals.notificationSettings.inhibitNotificationsWhenFullscreen)
 
-            modelTimeout: model.timeout
+            modelTimeout: timeout
             // Increase default timeout for notifications with a URL so you have enough time
             // to interact with the thumbnail or bring the window to the front where you want to drag it into
-            defaultTimeout: globals.notificationSettings.popupTimeout + (model.urls && model.urls.length > 0 ? 5000 : 0)
+            defaultTimeout: globals.notificationSettings.popupTimeout + (urls && urls.length > 0 ? 5000 : 0)
             // When configured to not keep jobs open permanently, we autodismiss them after the standard timeout
             dismissTimeout: !globals.notificationSettings.permanentJobPopups
-                            && model.type === NotificationManager.Notifications.JobType
-                            && model.jobState !== NotificationManager.Notifications.JobStateStopped
+                            && type === NotificationManager.Notifications.JobType
+                            && jobState !== NotificationManager.Notifications.JobStateStopped
                             ? defaultTimeout : 0
 
             modelInterface {
-                notificationType: model.type
+                index: popup.index
 
-                applicationName: model.applicationName
-                applicationIconSource: model.applicationIconName
-                originName: model.originName || ""
+                notificationType: popup.type
 
-                time: model.updated || model.created
+                applicationName: popup.applicationName
+                applicationIconSource: popup.applicationIconName
+                originName: popup.originName || ""
 
-                configurable: model.configurable
+                time: popup.updated || popup.created
+
+                configurable: popup.configurable
                 // For running jobs instead of offering a "close" button that might lead the user to
                 // think that will cancel the job, we offer a "dismiss" button that hides it in the history
-                dismissable: model.dismissable
+                dismissable: popup.dismissable
                 // TODO would be nice to be able to "pin" jobs when they autohide
                     && globals.notificationSettings.permanentJobPopups
-                closable: model.closable
+                closable: popup.closable
 
-                summary: model.summary
-                body: model.body || ""
-                accessibleDescription: model.accessibleDescription
-                icon: model.image || model.iconName
-                hasDefaultAction: model.hasDefaultAction || false
+                summary: popup.summary
+                body: popup.body || ""
+                accessibleDescription: popup.accessibleDescription
+                icon: popup.image || popup.iconName
+                hasDefaultAction: popup.hasDefaultAction || false
 
-                urls: model.urls || []
-                urgency: model.urgency || NotificationManager.Notifications.NormalUrgency
+                urls: popup.urls || []
+                urgency: popup.urgency || NotificationManager.Notifications.NormalUrgency
 
-                jobState: model.jobState || 0
-                percentage: model.percentage || 0
-                jobError: model.jobError || 0
-                suspendable: !!model.suspendable
-                killable: !!model.killable
-                jobDetails: model.jobDetails || null
+                jobState: popup.jobState || 0
+                percentage: popup.percentage || 0
+                jobError: popup.jobError || 0
+                suspendable: !!popup.suspendable
+                killable: !!popup.killable
+                jobDetails: popup.jobDetails || null
 
-                configureActionLabel: model.configureActionLabel || ""
-                actionNames: model.actionNames
-                actionLabels: model.actionLabels
+                configureActionLabel: popup.configureActionLabel || ""
+                actionNames: popup.actionNames
+                actionLabels: popup.actionLabels
 
-                hasReplyAction: model.hasReplyAction || false
-                replyActionLabel: model.replyActionLabel || ""
-                replyPlaceholderText: model.replyPlaceholderText || ""
-                replySubmitButtonText: model.replySubmitButtonText || ""
-                replySubmitButtonIconName: model.replySubmitButtonIconName || ""
+                hasReplyAction: popup.hasReplyAction || false
+                replyActionLabel: popup.replyActionLabel || ""
+                replyPlaceholderText: popup.replyPlaceholderText || ""
+                replySubmitButtonText: popup.replySubmitButtonText || ""
+                replySubmitButtonIconName: popup.replySubmitButtonIconName || ""
 
                 // explicit close, even when resident
                 onCloseClicked: globals.popupNotificationsModel.close(globals.popupNotificationsModel.index(index, 0))
@@ -567,7 +608,7 @@ QtObject {
 
                             if (highestIdx && highestIdx.valid) {
                                 globals.tasksModel.requestActivate(highestIdx);
-                                if (!model.resident) {
+                                if (!resident) {
                                     globals.popupNotificationsModel.close(globals.popupNotificationsModel.index(index, 0))
                                 }
 
@@ -576,34 +617,34 @@ QtObject {
                         }
 
                         globals.tasksModel.requestActivate(defaultActionFallbackWindowIdx);
-                        if (!model.resident) {
+                        if (!resident) {
                             globals.popupNotificationsModel.close(globals.popupNotificationsModel.index(index, 0))
                         }
                         return;
                     }
 
-                    const behavior = model.resident ? NotificationManager.Notifications.None : NotificationManager.Notifications.Close;
+                    const behavior = resident ? NotificationManager.Notifications.None : NotificationManager.Notifications.Close;
                     globals.popupNotificationsModel.invokeDefaultAction(globals.popupNotificationsModel.index(index, 0), behavior)
                 }
                 onActionInvoked: actionName => {
-                    const behavior = model.resident ? NotificationManager.Notifications.None : NotificationManager.Notifications.Close;
+                    const behavior = resident ? NotificationManager.Notifications.None : NotificationManager.Notifications.Close;
                     globals.popupNotificationsModel.invokeAction(globals.popupNotificationsModel.index(index, 0), actionName, behavior)
                 }
                 onReplied: text => {
-                    const behavior = model.resident ? NotificationManager.Notifications.None : NotificationManager.Notifications.Close;
+                    const behavior = resident ? NotificationManager.Notifications.None : NotificationManager.Notifications.Close;
                     globals.popupNotificationsModel.reply(globals.popupNotificationsModel.index(index, 0), text, behavior);
                 }
                 onOpenUrl: url => {
                     Qt.openUrlExternally(url);
                     // Client isn't informed of this action, so we always hide the popup
-                    if (model.resident) {
+                    if (resident) {
                         model.expired = true;
                     } else {
                         globals.popupNotificationsModel.close(globals.popupNotificationsModel.index(index, 0))
                     }
                 }
                 onFileActionInvoked: action => {
-                    if (!model.resident
+                    if (!resident
                         || (action.objectName === "movetotrash" || action.objectName === "deletefile")) {
                         globals.popupNotificationsModel.close(globals.popupNotificationsModel.index(index, 0));
                     } else {
@@ -622,7 +663,7 @@ QtObject {
 
             onHoverEntered: model.read = true
             onExpired: {
-                if (model.resident || hasSomeActions) {
+                if (resident || hasSomeActions) {
                     // When resident, only mark it as expired so the popup disappears
                     // but don't actually invalidate the notification.
                     // Also don't invalidate if the popup has any actions,
@@ -640,24 +681,24 @@ QtObject {
                     model.wasAddedDuringInhibition = false; // Don't count already shown notifications
                 }
 
-                if (model.type === NotificationManager.Notifications.NotificationType && model.desktopEntry) {
+                if (type === NotificationManager.Notifications.NotificationType && desktopEntry) {
                     // Register apps that were seen spawning a popup so they can be configured later
                     // Apps with notifyrc can already be configured anyway
-                    if (!model.notifyRcName) {
-                        globals.notificationSettings.registerKnownApplication(model.desktopEntry);
+                    if (!notifyRcName) {
+                        globals.notificationSettings.registerKnownApplication(desktopEntry);
                         globals.notificationSettings.save();
                     }
 
                     // If there is no default action, check if there is a window we could activate instead
-                    if (!model.hasDefaultAction) {
+                    if (!popup.hasDefaultAction) {
                         for (let i = 0; i < globals.tasksModel.rowCount(); ++i) {
                             const idx = globals.tasksModel.index(i, 0);
 
                             const appId = globals.tasksModel.data(idx, TaskManager.AbstractTasksModel.AppId);
-                            if (appId === model.desktopEntry + ".desktop") {
+                            if (appId === desktopEntry + ".desktop") {
                                 // Takes a row number, not a QModelIndex
                                 defaultActionFallbackWindowIdx = globals.tasksModel.makePersistentModelIndex(i);
-                                hasDefaultAction = true;
+                                model.hasDefaultAction = true;
                                 break;
                             }
                         }
