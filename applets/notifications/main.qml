@@ -21,8 +21,6 @@ import org.kde.notificationmanager as NotificationManager
 
 import plasma.applet.org.kde.plasma.notifications as Notifications
 
-import "global"
-
 PlasmoidItem {
     id: root
 
@@ -30,7 +28,7 @@ PlasmoidItem {
 
     readonly property int unreadCount: Math.min(99, historyModel.unreadNotificationsCount)
 
-    readonly property bool inhibitedOrBroken: Globals.inhibited || !NotificationManager.Server.valid
+    readonly property bool inhibitedOrBroken: Notifications.Globals.inhibited || !NotificationManager.Server.valid
 
     readonly property bool inPanel: (Plasmoid.location === PlasmaCore.Types.TopEdge
         || Plasmoid.location === PlasmaCore.Types.RightEdge
@@ -40,7 +38,7 @@ PlasmoidItem {
     readonly property int effectiveStatus: historyModel.activeJobsCount > 0
                      || historyModel.unreadNotificationsCount > 0
                      || historyModel.dismissedResidentNotificationsCount > 0
-                     || Globals.inhibited ? PlasmaCore.Types.ActiveStatus
+                     || Notifications.Globals.inhibited ? PlasmaCore.Types.ActiveStatus
                                           : PlasmaCore.Types.PassiveStatus
     onEffectiveStatusChanged: {
         if (effectiveStatus === PlasmaCore.Types.PassiveStatus) {
@@ -82,7 +80,7 @@ PlasmoidItem {
         } else {
             // Any notification that is newer than "lastRead" is "unread"
             // since it doesn't know the popup is on screen which makes the user see it
-            var actualUnread = historyModel.unreadNotificationsCount - Globals.popupNotificationsModel.activeNotificationsCount;
+            var actualUnread = historyModel.unreadNotificationsCount - Notifications.Globals.popupNotificationsModel.activeNotificationsCount;
             if (actualUnread > 0) {
                 lines.push(i18np("%1 unread notification", "%1 unread notifications", actualUnread));
             }
@@ -92,7 +90,7 @@ PlasmoidItem {
                 lines.push(i18np("%1 active notification", "%1 active notifications", dismissedResidents));
             }
 
-            if (Globals.inhibited) {
+            if (Notifications.Globals.inhibited) {
                 var inhibitedUntil = notificationSettings.notificationsInhibitedUntil
                 var inhibitedUntilTime = inhibitedUntil.getTime();
                 var inhibitedUntilValid = !isNaN(inhibitedUntilTime);
@@ -153,7 +151,7 @@ PlasmoidItem {
     }
 
     compactRepresentation: CompactRepresentation {
-        activeCount: Globals.popupNotificationsModel.activeNotificationsCount
+        activeCount: Notifications.Globals.popupNotificationsModel.activeNotificationsCount
         unreadCount: root.unreadCount
 
         jobsCount: historyModel.activeJobsCount
@@ -260,7 +258,7 @@ PlasmoidItem {
     }
 
     Component.onCompleted: {
-        Globals.adopt(root);
+        Notifications.Globals.adopt(root);
 
         // The applet's config window has nothing in it, so let's make the header's
         // "Configure" button open the KCM instead, like we do in the Bluetooth
@@ -268,11 +266,11 @@ PlasmoidItem {
         Plasmoid.setInternalAction("configure", configureAction)
     }
     Component.onDestruction: {
-        Globals.forget(root);
+        Notifications.Globals.forget(root);
     }
 
     Connections {
-        target: Globals.popupNotificationsModel
+        target: Notifications.Globals.popupNotificationsModel
 
         // The user requested to show the notifications popup, probably by 
         // clicking the "Missed Notifications in Do Not Disturb" notification.

@@ -10,13 +10,13 @@ import QtQuick.Layouts
 import org.kde.plasma.components as PlasmaComponents3
 import org.kde.kirigami as Kirigami
 
-import "../global"
+import plasma.applet.org.kde.plasma.notifications as Notifications
 
 RowLayout {
     id: replyRow
 
     // implicitWidth will keep being rewritten by the Layout itself
-    Layout.maximumWidth: Globals.popupWidth
+    Layout.maximumWidth: Notifications.Globals.popupWidth
     required property ModelInterface modelInterface
 
     signal beginReplyRequested

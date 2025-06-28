@@ -16,7 +16,7 @@ import org.kde.notificationmanager as NotificationManager
 
 import org.kde.coreaddons as KCoreAddons
 
-import "../global"
+import plasma.applet.org.kde.plasma.notifications as Notifications
 
 RowLayout {
     id: headingButtons
@@ -41,7 +41,7 @@ RowLayout {
     Component.onCompleted: updateAgoText()
 
     Connections {
-        target: Globals
+        target: Notifications.Globals
         // clock time changed
         function onTimeChanged() {
             headingButtons.updateAgoText()

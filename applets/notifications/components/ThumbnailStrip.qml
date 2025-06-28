@@ -16,8 +16,6 @@ import org.kde.kquickcontrolsaddons as KQCAddons
 
 import plasma.applet.org.kde.plasma.notifications as Notifications
 
-import "../global"
-
 Item {
     id: thumbnailArea
 
@@ -51,7 +49,7 @@ Item {
         // height is dynamic, so request a "square" size and then show it fitting to aspect ratio
         // Also use popupWidth instead of our width to ensure it is fixed and doesn't
         // change temporarily during (re)layouting
-        size: Qt.size(Globals.popupWidth, Globals.popupWidth)
+        size: Qt.size(Notifications.Globals.popupWidth, Notifications.Globals.popupWidth)
     }
 
     KQCAddons.QPixmapItem {

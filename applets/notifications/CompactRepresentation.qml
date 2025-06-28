@@ -13,7 +13,7 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.quickcharts 1.0 as Charts
 
-import "global"
+import plasma.applet.org.kde.plasma.notifications as Notifications
 
 MouseArea {
     id: compactRoot
@@ -35,7 +35,7 @@ MouseArea {
     onPressed: wasExpanded = root.expanded
     onClicked: mouse => {
         if (mouse.button === Qt.MiddleButton) {
-            Globals.toggleDoNotDisturbMode();
+            Notifications.Globals.toggleDoNotDisturbMode();
         } else {
             root.expanded = !wasExpanded;
         }
