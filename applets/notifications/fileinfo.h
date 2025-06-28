@@ -10,6 +10,7 @@
 #include <QPointer>
 #include <QString>
 #include <QUrl>
+#include <qqmlregistration.h>
 
 #include <KService>
 
@@ -23,6 +24,7 @@ class MimeTypeFinderJob;
 class FileInfo : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
 
     Q_PROPERTY(QUrl url READ url WRITE setUrl NOTIFY urlChanged)
 

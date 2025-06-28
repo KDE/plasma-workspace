@@ -8,6 +8,7 @@
 
 #include <QObject>
 #include <QQmlParserStatus>
+#include <qqmlregistration.h>
 
 #include <QPixmap>
 #include <QSize>
@@ -16,6 +17,7 @@
 class Thumbnailer : public QObject, public QQmlParserStatus
 {
     Q_OBJECT
+    QML_ELEMENT
     Q_INTERFACES(QQmlParserStatus)
 
     Q_PROPERTY(QUrl url READ url WRITE setUrl NOTIFY urlChanged)

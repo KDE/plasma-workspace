@@ -16,6 +16,7 @@ class QAction;
 class FileMenu : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
     Q_PROPERTY(QUrl url READ url WRITE setUrl NOTIFY urlChanged)
     Q_PROPERTY(QQuickItem *visualParent READ visualParent WRITE setVisualParent NOTIFY visualParentChanged)
     Q_PROPERTY(bool visible READ visible WRITE setVisible NOTIFY visibleChanged)

@@ -12,7 +12,7 @@ import org.kde.plasma.core as PlasmaCore
 import org.kde.kirigami as Kirigami
 
 import org.kde.notificationmanager as NotificationManager
-import org.kde.plasma.private.notifications as NotificationsApplet
+import plasma.applet.org.kde.plasma.notifications as NotificationsApplet
 
 import ".."
 import "global"

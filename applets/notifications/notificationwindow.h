@@ -10,6 +10,7 @@
 class NotificationWindow : public PlasmaQuick::PlasmaWindow
 {
     Q_OBJECT
+    QML_ELEMENT
     Q_PROPERTY(bool takeFocus READ takeFocus WRITE setTakeFocus NOTIFY takeFocusChanged)
     Q_PROPERTY(bool isCritical READ isCritical WRITE setIsCritical NOTIFY isCriticalChanged FINAL)
 public:

@@ -12,7 +12,7 @@ import QtQml
 import org.kde.plasma.components as PlasmaComponents3
 import org.kde.kirigami as Kirigami
 
-import org.kde.plasma.private.notifications as Notifications
+import plasma.applet.org.kde.plasma.notifications as Notifications
 
 // This item is parented to the NotificationItem iconContainer
 Item {

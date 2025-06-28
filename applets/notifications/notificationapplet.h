@@ -13,6 +13,16 @@
 
 class QRect;
 
+class InputDisabler : public QObject
+{
+    Q_OBJECT
+    QML_ELEMENT
+    QML_SINGLETON
+
+public:
+    Q_INVOKABLE void makeTransparentForInput(QQuickItem *item);
+};
+
 class NotificationApplet : public Plasma::Applet
 {
     Q_OBJECT
