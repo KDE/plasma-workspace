@@ -7,12 +7,14 @@
 #pragma once
 
 #include <QObject>
+#include <qqmlregistration.h>
 
 class QAction;
 
 class GlobalShortcuts : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
 
 public:
     explicit GlobalShortcuts(QObject *parent = nullptr);

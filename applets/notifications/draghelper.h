@@ -12,10 +12,13 @@
 #include <QString>
 #include <QUrl>
 #include <QWindow>
+#include <qqmlregistration.h>
 
 class DragHelper : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
+    QML_SINGLETON
 
     Q_PROPERTY(bool dragActive READ dragActive NOTIFY dragActiveChanged)
     Q_PROPERTY(int dragPixmapSize READ dragPixmapSize WRITE setDragPixmapSize NOTIFY dragPixmapSizeChanged)

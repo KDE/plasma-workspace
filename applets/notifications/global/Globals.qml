@@ -18,7 +18,7 @@ import org.kde.kirigami 2.11 as Kirigami
 import org.kde.notificationmanager as NotificationManager
 import org.kde.taskmanager 0.1 as TaskManager
 
-import org.kde.plasma.private.notifications 2.0 as Notifications
+import plasma.applet.org.kde.plasma.notifications as Notifications
 
 import ".."
 

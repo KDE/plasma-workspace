@@ -14,7 +14,7 @@ import org.kde.kirigami as Kirigami
 
 import org.kde.kquickcontrolsaddons as KQCAddons
 
-import org.kde.plasma.private.notifications as Notifications
+import plasma.applet.org.kde.plasma.notifications as Notifications
 
 import "../global"
 

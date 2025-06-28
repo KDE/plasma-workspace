@@ -17,7 +17,7 @@ import org.kde.kirigami as Kirigami
 import org.kde.coreaddons as KCoreAddons
 
 import org.kde.notificationmanager as NotificationManager
-import org.kde.plasma.private.notifications as Notifications
+import plasma.applet.org.kde.plasma.notifications as Notifications
 
 import "global"
 import "delegates" as Delegates

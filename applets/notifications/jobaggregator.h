@@ -9,10 +9,12 @@
 #include <QAbstractItemModel>
 #include <QObject>
 #include <QPointer>
+#include <qqmlregistration.h>
 
 class JobAggregator : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
 
     Q_PROPERTY(QAbstractItemModel *sourceModel READ sourceModel WRITE setSourceModel NOTIFY sourceModelChanged)
 

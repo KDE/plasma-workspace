@@ -18,7 +18,7 @@ import org.kde.config as KConfig
 
 import org.kde.notificationmanager as NotificationManager
 
-import org.kde.plasma.private.notifications 2.0 as Notifications
+import plasma.applet.org.kde.plasma.notifications as Notifications
 
 import "global"
 
