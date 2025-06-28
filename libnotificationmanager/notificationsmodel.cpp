@@ -11,8 +11,7 @@
 
 #include "debug.h"
 
-#include <QProcess>
-
+#include <KIO/CommandLauncherJob>
 #include <KShell>
 
 using namespace NotificationManager;
@@ -145,10 +144,6 @@ void NotificationsModel::configure(uint notificationId)
 
 void NotificationsModel::configure(const QString &desktopEntry, const QString &notifyRcName, const QString &eventId)
 {
-    // TODO would be nice to just have a signal but since NotificationsModel is shared,
-    // if we connect to this from Notifications you would get a signal in every instance
-    // and potentially open the config dialog multiple times.
-
     QStringList args;
     if (!desktopEntry.isEmpty()) {
         args.append(QStringLiteral("--desktop-entry"));
@@ -163,5 +158,8 @@ void NotificationsModel::configure(const QString &desktopEntry, const QString &n
         args.append(eventId);
     }
 
-    QProcess::startDetached(QStringLiteral("kcmshell6"), {QStringLiteral("notifications"), QStringLiteral("--args"), KShell::joinArgs(args)});
+    const QString systemSettings = QStringLiteral("systemsettings");
+    auto job = new KIO::CommandLauncherJob(systemSettings, {QStringLiteral("kcm_notifications"), QStringLiteral("--args"), KShell::joinArgs(args)});
+    job->setDesktopName(systemSettings);
+    job->start();
 }
