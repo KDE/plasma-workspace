@@ -103,7 +103,7 @@ NotificationsApplet.NotificationWindow {
             rightPadding: 0
             hoverEnabled: true
             draggable: notificationItem.modelInterface.notificationType != NotificationManager.Notifications.JobType
-            onDismissRequested: popupNotificationsModel.close(popupNotificationsModel.index(notificationItem.modelInterface.index, 0))
+            onDismissRequested: NotificationsApplet.Globals.popupNotificationsModel.close(NotificationsApplet.Globals.popupNotificationsModel.index(notificationItem.modelInterface.index, 0))
 
             TapHandler {
                 id: tapHandler
