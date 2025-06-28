@@ -28,7 +28,10 @@ PlasmaExtras.Representation {
     // TODO these should be configurable in the future
     readonly property int dndMorningHour: 6
     readonly property int dndEveningHour: 20
-    readonly property var appletInterface: root
+    required property PlasmoidItem appletInterface
+    required property NotificationManager.Settings notificationSettings
+    required property PlasmaCore.Action clearHistoryAction
+    required property NotificationManager.Notifications historyModel
 
     Layout.minimumWidth: Kirigami.Units.gridUnit * 12
     Layout.minimumHeight: Kirigami.Units.gridUnit * 12
@@ -44,14 +47,14 @@ PlasmaExtras.Representation {
     Keys.onDownPressed: dndCheck.forceActiveFocus(Qt.TabFocusReason);
 
     Connections {
-        target: root
+        target: fullRepresentationRoot.appletInterface
         function onExpandedChanged() {
-            if (root.expanded) {
+            if (fullRepresentationRoot.appletInterface.expanded) {
                 list.positionViewAtBeginning();
                 list.currentIndex = -1;
-                for (let i = 0; i < historyModel.count; i++)  {
-                    let rowIdx = historyModel.index(i, 0);
-                    historyModel.setData(rowIdx, true, NotificationManager.Notifications.ReadRole);
+                for (let i = 0; i < fullRepresentationRoot.historyModel.count; i++)  {
+                    let rowIdx = fullRepresentationRoot.historyModel.index(i, 0);
+                    fullRepresentationRoot.historyModel.setData(rowIdx, true, NotificationManager.Notifications.ReadRole);
                 }
             }
         }
@@ -83,8 +86,8 @@ PlasmaExtras.Representation {
                     } else {
                         let date = new Date();
                         date.setFullYear(date.getFullYear() + 1);
-                        notificationSettings.notificationsInhibitedUntil = date;
-                        notificationSettings.save();
+                        fullRepresentationRoot.notificationSettings.notificationsInhibitedUntil = date;
+                        fullRepresentationRoot.notificationSettings.save();
                     }
                     KeyNavigation.down: list
                     KeyNavigation.tab: list
@@ -112,8 +115,8 @@ PlasmaExtras.Representation {
                         visualParent: dndCheck
 
                         onClicked: {
-                            notificationSettings.notificationsInhibitedUntil = model.date;
-                            notificationSettings.save();
+                            fullRepresentationRoot.notificationSettings.notificationsInhibitedUntil = model.date;
+                            fullRepresentationRoot.notificationSettings.save();
                         }
 
                         model: {
@@ -180,10 +183,10 @@ PlasmaExtras.Representation {
                 PlasmaComponents3.ToolButton {
                     visible: !(Plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentDrawsPlasmoidHeading)
 
-                    Accessible.name: root.clearHistoryAction.text
+                    Accessible.name: fullRepresentationRoot.clearHistoryAction.text
                     icon.name: "edit-clear-history"
-                    enabled: root.clearHistoryAction.visible
-                    onClicked: root.clearHistoryAction.trigger()
+                    enabled: fullRepresentationRoot.clearHistoryAction.visible
+                    onClicked: fullRepresentationRoot.clearHistoryAction.trigger()
 
                     PlasmaComponents3.ToolTip {
                         text: parent.Accessible.name
@@ -202,13 +205,13 @@ PlasmaExtras.Representation {
                         return "";
                     }
 
-                    var inhibitedUntil = notificationSettings.notificationsInhibitedUntil;
+                    var inhibitedUntil = fullRepresentationRoot.notificationSettings.notificationsInhibitedUntil;
                     var inhibitedUntilTime = inhibitedUntil.getTime();
-                    var inhibitedByApp = notificationSettings.notificationsInhibitedByApplication;
-                    var inhibitedByMirroredScreens = notificationSettings.inhibitNotificationsWhenScreensMirrored
-                                                        && notificationSettings.screensMirrored;
-                    var inhibitedByFullscreen = notificationSettings.inhibitNotificationsWhenFullscreen
-                                                        && notificationSettings.fullscreenFocused;
+                    var inhibitedByApp = fullRepresentationRoot.notificationSettings.notificationsInhibitedByApplication;
+                    var inhibitedByMirroredScreens = fullRepresentationRoot.notificationSettings.inhibitNotificationsWhenScreensMirrored
+                                                        && fullRepresentationRoot.notificationSettings.screensMirrored;
+                    var inhibitedByFullscreen = fullRepresentationRoot.notificationSettings.inhibitNotificationsWhenFullscreen
+                                                        && fullRepresentationRoot.notificationSettings.fullscreenFocused;
                     var dateNow = Date.now();
 
                     var sections = [];
@@ -222,8 +225,8 @@ PlasmaExtras.Representation {
                     }
 
                     if (inhibitedByApp) {
-                        var inhibitionAppNames = notificationSettings.notificationInhibitionApplications;
-                        var inhibitionAppReasons = notificationSettings.notificationInhibitionReasons;
+                        var inhibitionAppNames = fullRepresentationRoot.notificationSettings.notificationInhibitionApplications;
+                        var inhibitionAppReasons = fullRepresentationRoot.notificationSettings.notificationInhibitionReasons;
 
                         for (var i = 0, length = inhibitionAppNames.length; i < length; ++i) {
                             var name = inhibitionAppNames[i];
@@ -262,7 +265,7 @@ PlasmaExtras.Representation {
             id: list
             width: scrollView.availableWidth
             focus: true
-            model: root.expanded ? historyModel : null
+            model: fullRepresentationRoot.appletInterface.expanded ? fullRepresentationRoot.historyModel : null
             currentIndex: -1
 
             topMargin: Kirigami.Units.largeSpacing
@@ -272,23 +275,23 @@ PlasmaExtras.Representation {
             KeyNavigation.up: dndCheck
 
             Keys.onDeletePressed: {
-                var idx = historyModel.index(currentIndex, 0);
-                if (historyModel.data(idx, NotificationManager.Notifications.ClosableRole)) {
-                    historyModel.close(idx);
+                var idx = fullRepresentationRoot.historyModel.index(currentIndex, 0);
+                if (fullRepresentationRoot.historyModel.data(idx, NotificationManager.Notifications.ClosableRole)) {
+                    fullRepresentationRoot.historyModel.close(idx);
                     // TODO would be nice to stay inside the current group when deleting an item
                 }
             }
             Keys.onEnterPressed: event => { Keys.returnPressed(event) }
             Keys.onReturnPressed: {
                 // Trigger default action, if any
-                var idx = historyModel.index(currentIndex, 0);
-                if (historyModel.data(idx, NotificationManager.Notifications.HasDefaultActionRole)) {
-                    historyModel.invokeDefaultAction(idx);
+                var idx = fullRepresentationRoot.historyModel.index(currentIndex, 0);
+                if (fullRepresentationRoot.historyModel.data(idx, NotificationManager.Notifications.HasDefaultActionRole)) {
+                    fullRepresentationRoot.historyModel.invokeDefaultAction(idx);
                     return;
                 }
 
                 // Trigger thumbnail URL if there's one
-                var urls = historyModel.data(idx, NotificationManager.Notifications.UrlsRole);
+                var urls = fullRepresentationRoot.historyModel.data(idx, NotificationManager.Notifications.UrlsRole);
                 if (urls && urls.length === 1) {
                     Qt.openUrlExternally(urls[0]);
                     return;
@@ -311,11 +314,11 @@ PlasmaExtras.Representation {
             }
 
             function setGroupExpanded(row, expanded) {
-                var rowIdx = historyModel.index(row, 0);
-                var persistentRowIdx = historyModel.makePersistentModelIndex(rowIdx);
-                var persistentGroupIdx = historyModel.makePersistentModelIndex(historyModel.groupIndex(rowIdx));
+                var rowIdx = fullRepresentationRoot.historyModel.index(row, 0);
+                var persistentRowIdx = fullRepresentationRoot.historyModel.makePersistentModelIndex(rowIdx);
+                var persistentGroupIdx = fullRepresentationRoot.historyModel.makePersistentModelIndex(fullRepresentationRoot.historyModel.groupIndex(rowIdx));
 
-                historyModel.setData(rowIdx, expanded, NotificationManager.Notifications.IsGroupExpandedRole);
+                fullRepresentationRoot.historyModel.setData(rowIdx, expanded, NotificationManager.Notifications.IsGroupExpandedRole);
 
                 // If the current item went away when the group collapsed, scroll to the group heading
                 if (!persistentRowIdx || !persistentRowIdx.valid) {
@@ -421,7 +424,7 @@ PlasmaExtras.Representation {
 
                 draggable: !model.isGroup && model.type != NotificationManager.Notifications.JobType
 
-                onDismissRequested: historyModel.close(historyModel.index(index, 0));
+                onDismissRequested: fullRepresentationRoot.historyModel.close(fullRepresentationRoot.historyModel.index(index, 0));
 
                 contentItem: Loader {
                     id: delegateLoader
@@ -457,7 +460,7 @@ PlasmaExtras.Representation {
                         dismissable: model.dismissable
                             && model.dismissed
                             // TODO would be nice to be able to undismiss jobs even when they autohide
-                            && notificationSettings.permanentJobPopups
+                            && fullRepresentationRoot.notificationSettings.permanentJobPopups
                         dismissed: model.dismissed || false
                         closable: model.closable
 
@@ -491,9 +494,9 @@ PlasmaExtras.Representation {
 
                         onDismissClicked: {
                             model.dismissed = false;
-                            root.closePlasmoid();
+                            fullRepresentationRoot.appletInterface.closePlasmoid();
                         }
-                        onConfigureClicked: historyModel.configure(historyModel.index(index, 0))
+                        onConfigureClicked: fullRepresentationRoot.historyModel.configure(fullRepresentationRoot.historyModel.index(index, 0))
 
                         onActionInvoked: actionName => {
                             // We close any non-resident notification (even those that still may have some actions)
@@ -506,9 +509,9 @@ PlasmaExtras.Representation {
                             const behavior = model.resident ? NotificationManager.Notifications.None : NotificationManager.Notifications.Close;
 
                             if (actionName === "default") {
-                                historyModel.invokeDefaultAction(historyModel.index(index, 0), behavior);
+                                fullRepresentationRoot.historyModel.invokeDefaultAction(fullRepresentationRoot.historyModel.index(index, 0), behavior);
                             } else {
-                                historyModel.invokeAction(historyModel.index(index, 0), actionName, behavior);
+                                fullRepresentationRoot.historyModel.invokeAction(fullRepresentationRoot.historyModel.index(index, 0), actionName, behavior);
                             }
                         }
                         onOpenUrl: url => {
@@ -524,19 +527,19 @@ PlasmaExtras.Representation {
                         }
                         onReplied: text => {
                             const behavior = model.resident ? NotificationManager.Notifications.None : NotificationManager.Notifications.Close;
-                            historyModel.reply(historyModel.index(index, 0), text, behavior);
+                            fullRepresentationRoot.historyModel.reply(fullRepresentationRoot.historyModel.index(index, 0), text, behavior);
                         }
 
-                        onSuspendJobClicked: historyModel.suspendJob(historyModel.index(index, 0))
-                        onResumeJobClicked: historyModel.resumeJob(historyModel.index(index, 0))
-                        onKillJobClicked: historyModel.killJob(historyModel.index(index, 0))
+                        onSuspendJobClicked: fullRepresentationRoot.historyModel.suspendJob(fullRepresentationRoot.historyModel.index(index, 0))
+                        onResumeJobClicked: fullRepresentationRoot.historyModel.resumeJob(fullRepresentationRoot.historyModel.index(index, 0))
+                        onKillJobClicked: fullRepresentationRoot.historyModel.killJob(fullRepresentationRoot.historyModel.index(index, 0))
                     }
 
                     function expire() {
                         if (model.resident) {
                             model.expired = true;
                         } else {
-                            historyModel.expire(historyModel.index(index, 0));
+                            fullRepresentationRoot.historyModel.expire(fullRepresentationRoot.historyModel.index(index, 0));
                         }
                     }
 
@@ -551,8 +554,8 @@ PlasmaExtras.Representation {
                                 configurable: model.configurable
                                 closable: model.closable
 
-                                onCloseClicked: historyModel.close(historyModel.index(index, 0));
-                                onConfigureClicked: historyModel.configure(historyModel.index(index, 0))
+                                onCloseClicked: fullRepresentationRoot.historyModel.close(fullRepresentationRoot.historyModel.index(index, 0));
+                                onConfigureClicked: fullRepresentationRoot.historyModel.configure(fullRepresentationRoot.historyModel.index(index, 0))
                             }
                             closeButtonTooltip: i18n("Close Group")
                         }
