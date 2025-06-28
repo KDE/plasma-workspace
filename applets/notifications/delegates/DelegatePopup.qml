@@ -40,8 +40,8 @@ BaseDelegate {
         Layout.columnSpan: delegateRoot.__firstColumn + 2
         bottomPadding: 0
         // We want the close button borders to touch popup borders
-        leftPadding: Layout.mirrored ? -modelInterface.popupLeftPadding : 0
-        rightPadding: Layout.mirrored ? 0 : -modelInterface.popupRightPadding
+        leftPadding: Layout.mirrored ? -delegateRoot.modelInterface.popupLeftPadding : 0
+        rightPadding: Layout.mirrored ? 0 : -delegateRoot.modelInterface.popupRightPadding
 
         // HACK PlasmoidHeading is a QQC2 Control which accepts left mouse button by default,
         // which breaks the popup default action mouse handler, cf. QTBUG-89785
@@ -79,8 +79,8 @@ BaseDelegate {
     Rectangle {
         id: criticalNotificationIndicator
         Layout.fillHeight: true
-        Layout.leftMargin: Layout.mirrored ? 0 : -modelInterface.popupLeftPadding
-        Layout.rightMargin: Layout.mirrored ? -modelInterface.popupRightPadding : 0
+        Layout.leftMargin: Layout.mirrored ? 0 : -delegateRoot.modelInterface.popupLeftPadding
+        Layout.rightMargin: Layout.mirrored ? -delegateRoot.modelInterface.popupRightPadding : 0
         Layout.topMargin: -delegateRoot.rowSpacing
         Layout.bottomMargin: -delegateRoot.rowSpacing
         Layout.rowSpan: 3
@@ -88,7 +88,7 @@ BaseDelegate {
         implicitWidth: 4
         height: parent.height
         color: Kirigami.Theme.neutralTextColor
-        visible: modelInterface.urgency === NotificationManager.Notifications.CriticalUrgency
+        visible: delegateRoot.modelInterface.urgency === NotificationManager.Notifications.CriticalUrgency
     }
 
     Components.Summary {
@@ -103,8 +103,8 @@ BaseDelegate {
 
         KQuickControlsAddons.MouseEventListener {
             anchors.fill: parent
-            visible: modelInterface.hasDefaultAction && !delegateRoot.hasBodyText
-            onClicked: modelInterface.defaultActionInvoked();
+            visible: delegateRoot.modelInterface.hasDefaultAction && !delegateRoot.hasBodyText
+            onClicked: delegateRoot.modelInterface.defaultActionInvoked();
         }
     }
 
@@ -126,14 +126,14 @@ BaseDelegate {
         Layout.row: summary.visible ? 3 : 2
         Layout.column: delegateRoot.__firstColumn
         Layout.columnSpan: icon.visible ? 1 : 2
-        Layout.maximumHeight: Kirigami.Units.gridUnit * modelInterface.maximumLineCount
+        Layout.maximumHeight: Kirigami.Units.gridUnit * delegateRoot.modelInterface.maximumLineCount
         // The body doesn't need to influence the implicit width in any way, this avoids a binding loop
         implicitWidth: -1
         implicitHeight: scroll.implicitHeight
         visible: delegateRoot.hasBodyText
         onClicked: {
-            if (modelInterface.hasDefaultAction) {
-                modelInterface.defaultActionInvoked();
+            if (delegateRoot.modelInterface.hasDefaultAction) {
+                delegateRoot.modelInterface.defaultActionInvoked();
             }
         }
         PlasmaComponents3.ScrollView {
@@ -142,7 +142,7 @@ BaseDelegate {
             contentWidth: bodyLabel.width
 
             // This avoids a binding loop
-            PlasmaComponents3.ScrollBar.vertical.visible: modelInterface.maximumLineCount > 0 && bodyLabel.implicitHeight > parent.Layout.maximumHeight
+            PlasmaComponents3.ScrollBar.vertical.visible: delegateRoot.modelInterface.maximumLineCount > 0 && bodyLabel.implicitHeight > parent.Layout.maximumHeight
             PlasmaComponents3.ScrollBar.horizontal.visible: false
 
             Components.Body {

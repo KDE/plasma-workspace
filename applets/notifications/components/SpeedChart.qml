@@ -73,7 +73,7 @@ Item {
     Loader {
         id: chartContainer
 
-        active: dataSource.count >= 2 && expanded
+        active: dataSource.count >= 2 && root.expanded
         visible: active
 
         anchors.fill: parent
@@ -206,13 +206,13 @@ Item {
     }
 
     Connections {
-        target: modelInterface.jobDetails
+        target: root.modelInterface.jobDetails
 
         function onProcessedBytesChanged() {
-            dataSource.appendSpeed(modelInterface.jobDetails.processedBytes, modelInterface.jobDetails.speed)
+            dataSource.appendSpeed(root.modelInterface.jobDetails.processedBytes, root.modelInterface.jobDetails.speed)
 
-            root.speed = modelInterface.jobDetails.speed
-            root.averageSpeed = modelInterface.jobDetails.processedBytes / modelInterface.jobDetails.elapsedTime * 1000;
+            root.speed = root.modelInterface.jobDetails.speed
+            root.averageSpeed = root.modelInterface.jobDetails.processedBytes / root.modelInterface.jobDetails.elapsedTime * 1000;
         }
     }
 
@@ -230,13 +230,13 @@ Item {
 
             from: 0
             to: 100
-            value: modelInterface.percentage
+            value: root.modelInterface.percentage
             // TODO do we actually need the window visible check? perhaps I do because it can be in popup or expanded plasmoid
-            indeterminate: visible && Window.window && Window.window.visible && modelInterface.percentage < 1
-                           && modelInterface.jobState === NotificationManager.Notifications.JobStateRunning
+            indeterminate: visible && Window.window && Window.window.visible && root.modelInterface.percentage < 1
+                           && root.modelInterface.jobState === NotificationManager.Notifications.JobStateRunning
                            // is this too annoying?
-                           && (modelInterface.jobDetails.processedBytes === 0 || modelInterface.jobDetails.totalBytes === 0)
-                           && modelInterface.jobDetails.processedFiles === 0
+                           && (root.modelInterface.jobDetails.processedBytes === 0 || root.modelInterface.jobDetails.totalBytes === 0)
+                           && root.modelInterface.jobDetails.processedFiles === 0
                            //&& modelInterface.jobDetails.processedDirectories === 0
         }
 
@@ -246,7 +246,7 @@ Item {
             visible: !progressBar.indeterminate
             // the || "0" is a workaround for the fact that 0 as number is falsey, and is wrongly considered a missing argument
             // BUG: 451807
-            text: i18ndc("plasma_applet_org.kde.plasma.notifications", "Percentage of a job", "%1%", modelInterface.percentage || "0")
+            text: i18ndc("plasma_applet_org.kde.plasma.notifications", "Percentage of a job", "%1%", root.modelInterface.percentage || "0")
             textFormat: Text.PlainText
         }
     }

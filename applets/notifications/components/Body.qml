@@ -39,7 +39,7 @@ Kirigami.SelectableLabel {
     onClicked: modelInterface.bodyClicked()
 
     Binding {
-        target: modelInterface
+        target: bodyLabel.modelInterface
         property: "bodyCursorShape"
         value: bodyLabel.cursorShape
     }

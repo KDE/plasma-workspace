@@ -43,14 +43,14 @@ PlasmaExtras.Menu {
     PlasmaExtras.MenuItem {
         text: i18ndc("plasma_applet_org.kde.plasma.notifications", "@action:inmenu", "Copy")
         icon: "edit-copy-symbolic"
-        enabled: typeof target.selectionStart !== "undefined"
-        ? target.selectionStart !== target.selectionEnd
-        : (target.text || "").length > 0
+        enabled: typeof contextMenu.target.selectionStart !== "undefined"
+        ? contextMenu.target.selectionStart !== contextMenu.target.selectionEnd
+        : (contextMenu.target.text || "").length > 0
         onClicked: {
-            if (typeof target.copy === "function") {
-                target.copy();
+            if (typeof contextMenu.target.copy === "function") {
+                contextMenu.target.copy();
             } else {
-                __clipboard.content = target.text;
+                contextMenu.__clipboard.content = contextMenu.target.text;
             }
         }
     }
@@ -59,7 +59,7 @@ PlasmaExtras.Menu {
         id: selectAllAction
         icon: "edit-select-all-symbolic"
         text: i18ndc("plasma_applet_org.kde.plasma.notifications", "@action:inmenu", "Select All")
-        onClicked: target.selectAll()
-        visible: typeof target.selectAll === "function"
+        onClicked: contextMenu.target.selectAll()
+        visible: typeof contextMenu.target.selectAll === "function"
     }
 }

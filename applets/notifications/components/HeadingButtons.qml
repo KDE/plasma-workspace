@@ -27,7 +27,7 @@ RowLayout {
     readonly property string __applicationName: modelInterface.applicationName + (modelInterface.originName ? " · " + modelInterface.originName : "")
 
     Connections {
-        target: modelInterface
+        target: headingButtons.modelInterface
         function onTimeChanged() {
             headingButtons.updateAgoText()
         }
@@ -62,17 +62,17 @@ RowLayout {
         textFormat: Text.PlainText
 
         function generateAgoText() {
-            const time = modelInterface.time;
+            const time = headingButtons.modelInterface.time;
             if (!time || isNaN(time.getTime())
-                    || modelInterface.jobState === NotificationManager.Notifications.JobStateRunning
-                    || modelInterface.jobState === NotificationManager.Notifications.JobStateSuspended) {
+                    || headingButtons.modelInterface.jobState === NotificationManager.Notifications.JobStateRunning
+                    || headingButtons.modelInterface.jobState === NotificationManager.Notifications.JobStateSuspended) {
                 return "";
             }
 
             var deltaMinutes = Math.floor((Date.now() - time.getTime()) / 1000 / 60);
             if (deltaMinutes < 1) {
                 // "Just now" is implied by
-                return modelInterface.inHistory
+                return headingButtons.modelInterface.inHistory
                     ? i18ndc("plasma_applet_org.kde.plasma.notifications", "Notification was added less than a minute ago, keep short", "Just now")
                     : "";
             }
@@ -91,12 +91,12 @@ RowLayout {
         }
 
         function generateRemainingText() {
-            if (modelInterface.notificationType !== NotificationManager.Notifications.JobType
-                || modelInterface.jobState !== NotificationManager.Notifications.JobStateRunning) {
+            if (headingButtons.modelInterface.notificationType !== NotificationManager.Notifications.JobType
+                || headingButtons.modelInterface.jobState !== NotificationManager.Notifications.JobStateRunning) {
                 return "";
             }
 
-            var details = modelInterface.jobDetails;
+            var details = headingButtons.modelInterface.jobDetails;
             if (!details || !details.speed) {
                 return "";
             }
@@ -132,20 +132,20 @@ RowLayout {
         PlasmaCore.ToolTipArea {
             anchors.fill: parent
             active: ageLabel.agoText !== ""
-            subText: modelInterface.time ? modelInterface.time.toLocaleString(Qt.locale(), Locale.LongFormat) : ""
+            subText: headingButtons.modelInterface.time ? headingButtons.modelInterface.time.toLocaleString(Qt.locale(), Locale.LongFormat) : ""
         }
     }
 
     PlasmaComponents3.ToolButton {
         id: configureButton
         icon.name: "configure"
-        visible: modelInterface.configurable
+        visible: headingButtons.modelInterface.configurable
 
         display: PlasmaComponents3.AbstractButton.IconOnly
-        text: modelInterface.configureActionLabel || i18nd("plasma_applet_org.kde.plasma.notifications", "Configure")
-        Accessible.description: __applicationName
+        text: headingButtons.modelInterface.configureActionLabel || i18nd("plasma_applet_org.kde.plasma.notifications", "Configure")
+        Accessible.description: headingButtons.__applicationName
 
-        onClicked: modelInterface.configureClicked()
+        onClicked: headingButtons.modelInterface.configureClicked()
 
         PlasmaComponents3.ToolTip {
             text: parent.text
@@ -154,16 +154,16 @@ RowLayout {
 
     PlasmaComponents3.ToolButton {
         id: dismissButton
-        icon.name: modelInterface.dismissed ? "window-restore" : "window-minimize"
-        visible: modelInterface.dismissable
+        icon.name: headingButtons.modelInterface.dismissed ? "window-restore" : "window-minimize"
+        visible: headingButtons.modelInterface.dismissable
 
         display: PlasmaComponents3.AbstractButton.IconOnly
-        text: modelInterface.dismissed
+        text: headingButtons.modelInterface.dismissed
             ? i18ndc("plasma_applet_org.kde.plasma.notifications", "Opposite of minimize", "Restore")
             : i18nd("plasma_applet_org.kde.plasma.notifications", "Minimize")
-        Accessible.description: __applicationName
+        Accessible.description: headingButtons.__applicationName
 
-        onClicked: modelInterface.dismissClicked()
+        onClicked: headingButtons.modelInterface.dismissClicked()
 
         PlasmaComponents3.ToolTip {
             text: parent.text
@@ -172,18 +172,18 @@ RowLayout {
 
     PlasmaComponents3.ToolButton {
         id: closeButton
-        visible: modelInterface.closable
+        visible: headingButtons.modelInterface.closable
         icon.name: "window-close"
 
         display: PlasmaComponents3.AbstractButton.IconOnly
         text: closeButtonToolTip.text
-        Accessible.description: __applicationName
+        Accessible.description: headingButtons.__applicationName
 
-        onClicked: modelInterface.closeClicked()
+        onClicked: headingButtons.modelInterface.closeClicked()
 
         PlasmaComponents3.ToolTip {
             id: closeButtonToolTip
-            text: modelInterface.closeButtonToolTip || i18nd("plasma_applet_org.kde.plasma.notifications", "Close")
+            text: headingButtons.modelInterface.closeButtonToolTip || i18nd("plasma_applet_org.kde.plasma.notifications", "Close")
         }
     }
 }

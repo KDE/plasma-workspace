@@ -25,13 +25,13 @@ Item {
 
     Notifications.FileInfo {
         id: fileInfo
-        url: modelInterface.jobDetails?.totalFiles === 1 ? modelInterface.jobDetails?.effectiveDestUrl : ""
+        url: jobDragIconItem.modelInterface.jobDetails?.totalFiles === 1 ? jobDragIconItem.modelInterface.jobDetails?.effectiveDestUrl : ""
     }
 
     Notifications.FileMenu {
         id: otherFileActionsMenu
-        url: modelInterface.jobDetails?.effectiveDestUrl
-        onActionTriggered: action => modelInterface.fileActionInvoked(action)
+        url: jobDragIconItem.modelInterface.jobDetails?.effectiveDestUrl
+        onActionTriggered: action => jobDragIconItem.modelInterface.fileActionInvoked(action)
     }
 
     Kirigami.Icon {
@@ -54,10 +54,10 @@ Item {
             anchors.fill: parent
 
             dragParent: jobDragIcon
-            dragUrl: modelInterface.jobDetails?.effectiveDestUrl
+            dragUrl: jobDragIconItem.modelInterface.jobDetails?.effectiveDestUrl
             dragPixmap: jobDragIcon.source
 
-            onActivated: modelInterface.openUrl(modelInterface.jobDetails?.effectiveDestUrl)
+            onActivated: jobDragIconItem.modelInterface.openUrl(jobDragIconItem.modelInterface.jobDetails?.effectiveDestUrl)
             onContextMenuRequested: (pos) => {
                 otherFileActionsMenu.visualParent = this;
                 otherFileActionsMenu.open(pos.x, pos.y);

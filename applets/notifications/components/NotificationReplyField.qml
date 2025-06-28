@@ -28,19 +28,19 @@ RowLayout {
     }
 
     Binding {
-        target: modelInterface
+        target: replyRow.modelInterface
         property: "hasPendingReply"
         value: replyTextField.text !== ""
     }
     PlasmaComponents3.TextField {
         id: replyTextField
         Layout.fillWidth: true
-        placeholderText: modelInterface.replyPlaceholderText
+        placeholderText: replyRow.modelInterface.replyPlaceholderText
                          || i18ndc("plasma_applet_org.kde.plasma.notifications", "Text field placeholder", "Type a reply…")
         Accessible.name: placeholderText
         onAccepted: {
             if (replyButton.enabled) {
-                modelInterface.replied(text);
+                replyRow.modelInterface.replied(text);
             }
         }
 
@@ -48,7 +48,7 @@ RowLayout {
         MouseArea {
             anchors.fill: parent
             cursorShape: Qt.IBeamCursor
-            visible: !modelInterface.replying
+            visible: !replyRow.modelInterface.replying
             Accessible.name: "begin reply"
             Accessible.role: Accessible.Button
             Accessible.onPressAction: replyRow.beginReplyRequested()
@@ -61,10 +61,10 @@ RowLayout {
 
     PlasmaComponents3.Button {
         id: replyButton
-        icon.name: modelInterface.replySubmitButtonIconName || "document-send"
-        text: modelInterface.replySubmitButtonText
+        icon.name: replyRow.modelInterface.replySubmitButtonIconName || "document-send"
+        text: replyRow.modelInterface.replySubmitButtonText
               || i18ndc("plasma_applet_org.kde.plasma.notifications", "@action:button", "Send")
         enabled: replyTextField.length > 0
-        onClicked: modelInterface.replied(replyTextField.text)
+        onClicked: replyRow.modelInterface.replied(replyTextField.text)
     }
 }

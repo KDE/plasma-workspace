@@ -420,20 +420,20 @@ QtObject {
         showExpired: false
         showDismissed: false
         showAddedDuringInhibition: false
-        blacklistedDesktopEntries: notificationSettings.popupBlacklistedApplications
-        blacklistedNotifyRcNames: notificationSettings.popupBlacklistedServices
-        whitelistedDesktopEntries: globals.inhibited ? notificationSettings.doNotDisturbPopupWhitelistedApplications : []
-        whitelistedNotifyRcNames: globals.inhibited ? notificationSettings.doNotDisturbPopupWhitelistedServices : []
-        showJobs: notificationSettings.jobsInNotifications
+        blacklistedDesktopEntries: globals.notificationSettings.popupBlacklistedApplications
+        blacklistedNotifyRcNames: globals.notificationSettings.popupBlacklistedServices
+        whitelistedDesktopEntries: globals.inhibited ? globals.notificationSettings.doNotDisturbPopupWhitelistedApplications : []
+        whitelistedNotifyRcNames: globals.inhibited ? globals.notificationSettings.doNotDisturbPopupWhitelistedServices : []
+        showJobs: globals.notificationSettings.jobsInNotifications
         sortMode: NotificationManager.Notifications.SortByTypeAndUrgency
         sortOrder: Qt.AscendingOrder
         groupMode: NotificationManager.Notifications.GroupDisabled
-        window: visualParent ? visualParent.Window.window : null
+        window: globals.visualParent ? globals.visualParent.Window.window : null
         urgencies: {
             var urgencies = 0;
 
             // Critical always except in do not disturb mode when disabled in settings
-            if (!globals.inhibited || notificationSettings.criticalPopupsInDoNotDisturbMode) {
+            if (!globals.inhibited || globals.notificationSettings.criticalPopupsInDoNotDisturbMode) {
                 urgencies |= NotificationManager.Notifications.CriticalUrgency;
             }
 
@@ -443,7 +443,7 @@ QtObject {
             }
 
             // Low only when enabled in settings and not in do not disturb mode
-            if (!globals.inhibited && notificationSettings.lowPriorityPopups) {
+            if (!globals.inhibited && globals.notificationSettings.lowPriorityPopups) {
                 urgencies |=NotificationManager.Notifications.LowUrgency;
             }
 
@@ -467,13 +467,13 @@ QtObject {
         interval: 60000 // 1 min
         intervalAlignment: P5Support.Types.AlignToMinute
         onDataChanged: {
-            checkInhibition();
+            globals.checkInhibition();
             globals.timeChanged();
         }
     }
 
     property Instantiator popupInstantiator: Instantiator {
-        model: popupNotificationsModel
+        model: globals.popupNotificationsModel
         delegate: NotificationPopup {
             id: popup
             // so Instantiator can access that after the model row is gone
@@ -483,14 +483,14 @@ QtObject {
 
             popupWidth: globals.popupWidth
 
-            isCritical: model.urgency === NotificationManager.Notifications.CriticalUrgency || (model.urgency === NotificationManager.Notifications.NormalUrgency && !notificationSettings.inhibitNotificationsWhenFullscreen)
+            isCritical: model.urgency === NotificationManager.Notifications.CriticalUrgency || (model.urgency === NotificationManager.Notifications.NormalUrgency && !globals.notificationSettings.inhibitNotificationsWhenFullscreen)
 
             modelTimeout: model.timeout
             // Increase default timeout for notifications with a URL so you have enough time
             // to interact with the thumbnail or bring the window to the front where you want to drag it into
-            defaultTimeout: notificationSettings.popupTimeout + (model.urls && model.urls.length > 0 ? 5000 : 0)
+            defaultTimeout: globals.notificationSettings.popupTimeout + (model.urls && model.urls.length > 0 ? 5000 : 0)
             // When configured to not keep jobs open permanently, we autodismiss them after the standard timeout
-            dismissTimeout: !notificationSettings.permanentJobPopups
+            dismissTimeout: !globals.notificationSettings.permanentJobPopups
                             && model.type === NotificationManager.Notifications.JobType
                             && model.jobState !== NotificationManager.Notifications.JobStateStopped
                             ? defaultTimeout : 0
@@ -509,7 +509,7 @@ QtObject {
                 // think that will cancel the job, we offer a "dismiss" button that hides it in the history
                 dismissable: model.dismissable
                 // TODO would be nice to be able to "pin" jobs when they autohide
-                    && notificationSettings.permanentJobPopups
+                    && globals.notificationSettings.permanentJobPopups
                 closable: model.closable
 
                 summary: model.summary
@@ -539,9 +539,9 @@ QtObject {
                 replySubmitButtonIconName: model.replySubmitButtonIconName || ""
 
                 // explicit close, even when resident
-                onCloseClicked: popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
+                onCloseClicked: globals.popupNotificationsModel.close(globals.popupNotificationsModel.index(index, 0))
                 onDismissClicked: model.dismissed = true
-                onConfigureClicked: popupNotificationsModel.configure(popupNotificationsModel.index(index, 0))
+                onConfigureClicked: globals.popupNotificationsModel.configure(globals.popupNotificationsModel.index(index, 0))
                 onDefaultActionInvoked: {
                     if (defaultActionFallbackWindowIdx) {
                         if (!defaultActionFallbackWindowIdx.valid) {
@@ -550,48 +550,48 @@ QtObject {
                         }
 
                         // When it's a group, activate the window highest in stacking order (presumably last used)
-                        if (tasksModel.data(defaultActionFallbackWindowIdx, TaskManager.AbstractTasksModel.IsGroupParent)) {
+                        if (globals.tasksModel.data(defaultActionFallbackWindowIdx, TaskManager.AbstractTasksModel.IsGroupParent)) {
                             let highestStacking = -1;
                             let highestIdx = undefined;
 
-                            for (let i = 0; i < tasksModel.rowCount(defaultActionFallbackWindowIdx); ++i) {
-                                const idx = tasksModel.index(i, 0, defaultActionFallbackWindowIdx);
+                            for (let i = 0; i < globals.tasksModel.rowCount(defaultActionFallbackWindowIdx); ++i) {
+                                const idx = globals.tasksModel.index(i, 0, defaultActionFallbackWindowIdx);
 
-                                const stacking = tasksModel.data(idx, TaskManager.AbstractTasksModel.StackingOrder);
+                                const stacking = globals.tasksModel.data(idx, TaskManager.AbstractTasksModel.StackingOrder);
 
                                 if (stacking > highestStacking) {
                                     highestStacking = stacking;
-                                    highestIdx = tasksModel.makePersistentModelIndex(defaultActionFallbackWindowIdx.row, i);
+                                    highestIdx = globals.tasksModel.makePersistentModelIndex(defaultActionFallbackWindowIdx.row, i);
                                 }
                             }
 
                             if (highestIdx && highestIdx.valid) {
-                                tasksModel.requestActivate(highestIdx);
+                                globals.tasksModel.requestActivate(highestIdx);
                                 if (!model.resident) {
-                                    popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
+                                    globals.popupNotificationsModel.close(globals.popupNotificationsModel.index(index, 0))
                                 }
 
                             }
                             return;
                         }
 
-                        tasksModel.requestActivate(defaultActionFallbackWindowIdx);
+                        globals.tasksModel.requestActivate(defaultActionFallbackWindowIdx);
                         if (!model.resident) {
-                            popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
+                            globals.popupNotificationsModel.close(globals.popupNotificationsModel.index(index, 0))
                         }
                         return;
                     }
 
                     const behavior = model.resident ? NotificationManager.Notifications.None : NotificationManager.Notifications.Close;
-                    popupNotificationsModel.invokeDefaultAction(popupNotificationsModel.index(index, 0), behavior)
+                    globals.popupNotificationsModel.invokeDefaultAction(globals.popupNotificationsModel.index(index, 0), behavior)
                 }
                 onActionInvoked: actionName => {
                     const behavior = model.resident ? NotificationManager.Notifications.None : NotificationManager.Notifications.Close;
-                    popupNotificationsModel.invokeAction(popupNotificationsModel.index(index, 0), actionName, behavior)
+                    globals.popupNotificationsModel.invokeAction(globals.popupNotificationsModel.index(index, 0), actionName, behavior)
                 }
                 onReplied: text => {
                     const behavior = model.resident ? NotificationManager.Notifications.None : NotificationManager.Notifications.Close;
-                    popupNotificationsModel.reply(popupNotificationsModel.index(index, 0), text, behavior);
+                    globals.popupNotificationsModel.reply(globals.popupNotificationsModel.index(index, 0), text, behavior);
                 }
                 onOpenUrl: url => {
                     Qt.openUrlExternally(url);
@@ -599,25 +599,25 @@ QtObject {
                     if (model.resident) {
                         model.expired = true;
                     } else {
-                        popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
+                        globals.popupNotificationsModel.close(globals.popupNotificationsModel.index(index, 0))
                     }
                 }
                 onFileActionInvoked: action => {
                     if (!model.resident
                         || (action.objectName === "movetotrash" || action.objectName === "deletefile")) {
-                        popupNotificationsModel.close(popupNotificationsModel.index(index, 0));
+                        globals.popupNotificationsModel.close(globals.popupNotificationsModel.index(index, 0));
                     } else {
                         model.expired = true;
                     }
                 }
                 onForceActiveFocusRequested: {
                     // NOTE this is our "plasmoid" property from above, don't port this to Plasmoid attached property!
-                    plasmoid.forceActivateWindow(popup);
+                    globals.plasmoid.forceActivateWindow(popup);
                 }
 
-                onSuspendJobClicked: popupNotificationsModel.suspendJob(popupNotificationsModel.index(index, 0))
-                onResumeJobClicked: popupNotificationsModel.resumeJob(popupNotificationsModel.index(index, 0))
-                onKillJobClicked: popupNotificationsModel.killJob(popupNotificationsModel.index(index, 0))
+                onSuspendJobClicked: globals.popupNotificationsModel.suspendJob(globals.popupNotificationsModel.index(index, 0))
+                onResumeJobClicked: globals.popupNotificationsModel.resumeJob(globals.popupNotificationsModel.index(index, 0))
+                onKillJobClicked: globals.popupNotificationsModel.killJob(globals.popupNotificationsModel.index(index, 0))
             }
 
             onHoverEntered: model.read = true
@@ -629,7 +629,7 @@ QtObject {
                     // so it remains usable in history.
                     model.expired = true;
                 } else {
-                    popupNotificationsModel.expire(popupNotificationsModel.index(index, 0))
+                    globals.popupNotificationsModel.expire(globals.popupNotificationsModel.index(index, 0))
                 }
             }
             // popup width is fixed
@@ -644,19 +644,19 @@ QtObject {
                     // Register apps that were seen spawning a popup so they can be configured later
                     // Apps with notifyrc can already be configured anyway
                     if (!model.notifyRcName) {
-                        notificationSettings.registerKnownApplication(model.desktopEntry);
-                        notificationSettings.save();
+                        globals.notificationSettings.registerKnownApplication(model.desktopEntry);
+                        globals.notificationSettings.save();
                     }
 
                     // If there is no default action, check if there is a window we could activate instead
                     if (!model.hasDefaultAction) {
-                        for (let i = 0; i < tasksModel.rowCount(); ++i) {
-                            const idx = tasksModel.index(i, 0);
+                        for (let i = 0; i < globals.tasksModel.rowCount(); ++i) {
+                            const idx = globals.tasksModel.index(i, 0);
 
-                            const appId = tasksModel.data(idx, TaskManager.AbstractTasksModel.AppId);
+                            const appId = globals.tasksModel.data(idx, TaskManager.AbstractTasksModel.AppId);
                             if (appId === model.desktopEntry + ".desktop") {
                                 // Takes a row number, not a QModelIndex
-                                defaultActionFallbackWindowIdx = tasksModel.makePersistentModelIndex(i);
+                                defaultActionFallbackWindowIdx = globals.tasksModel.makePersistentModelIndex(i);
                                 hasDefaultAction = true;
                                 break;
                             }
@@ -665,21 +665,21 @@ QtObject {
                 }
 
                 // Tell the model that we're handling the timeout now
-                popupNotificationsModel.stopTimeout(popupNotificationsModel.index(index, 0));
+                globals.popupNotificationsModel.stopTimeout(globals.popupNotificationsModel.index(index, 0));
             }
         }
         onObjectAdded: (index, object) => {
-            positionPopups();
+            globals.positionPopups();
             object.visible = true;
-            popupNotificationsModel.playSoundHint(popupNotificationsModel.index(index, 0));
+            globals.popupNotificationsModel.playSoundHint(globals.popupNotificationsModel.index(index, 0));
         }
         onObjectRemoved: (index, object) => {
             var notificationId = object.notificationId
             // Popup might have been destroyed because of a filter change, tell the model to do the timeout work for us again
             // cannot use QModelIndex here as the model row is already gone
-            popupNotificationsModel.startTimeout(notificationId);
+            globals.popupNotificationsModel.startTimeout(notificationId);
 
-            positionPopups();
+            globals.positionPopups();
         }
     }
 
@@ -691,43 +691,43 @@ QtObject {
     // Normally popups are repositioned through Qt.callLater but in case of e.g. screen geometry changes we want to compress that
     property Timer repositionTimer: Timer {
         interval: 250
-        onTriggered: positionPopups()
+        onTriggered: globals.positionPopups()
     }
 
     // Tracks the visual parent's window since mapToItem cannot signal
     // so that when user resizes panel we reposition the popups live
     property Connections visualParentWindowConnections: Connections {
-        target: visualParent ? visualParent.Window.window : null
+        target: globals.visualParent ? globals.visualParent.Window.window : null
         function onXChanged() {
-            repositionTimer.start();
+            globals.repositionTimer.start();
         }
         function onYChanged() {
-            repositionTimer.start();
+            globals.repositionTimer.start();
         }
         function onWidthChanged() {
-            repositionTimer.start();
+            globals.repositionTimer.start();
         }
         function onHeightChanged() {
-            repositionTimer.start();
+            globals.repositionTimer.start();
         }
     }
     // Tracks movement, size and visibility of obstructingDialog, if any
     property Connections obstructingDialogConnections: Connections {
-        target: obstructingDialog
+        target: globals.obstructingDialog
         function onVisibleChanged() {
-            repositionTimer.start();
+            globals.repositionTimer.start();
         }
         function onXChanged() {
-            repositionTimer.start();
+            globals.repositionTimer.start();
         }
         function onYChanged() {
-            repositionTimer.start();
+            globals.repositionTimer.start();
         }
         function onWidthChanged() {
-            repositionTimer.start();
+            globals.repositionTimer.start();
         }
         function onHeightChanged() {
-            repositionTimer.start();
+            globals.repositionTimer.start();
         }
     }
 

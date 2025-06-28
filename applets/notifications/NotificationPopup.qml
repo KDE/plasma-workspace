@@ -99,7 +99,7 @@ NotificationsApplet.NotificationWindow {
         DraggableDelegate {
             anchors {
                 fill: parent
-                topMargin: modelInterface.closable || modelInterface.dismissable || modelInterface.configurable ? -notificationPopup.topPadding : 0
+                topMargin: notificationPopup.modelInterface.closable || notificationPopup.modelInterface.dismissable || notificationPopup.modelInterface.configurable ? -notificationPopup.topPadding : 0
             }
             leftPadding: 0
             rightPadding: 0
