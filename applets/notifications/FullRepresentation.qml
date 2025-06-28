@@ -24,6 +24,8 @@ import "delegates" as Delegates
 import "components" as Components
 
 PlasmaExtras.Representation {
+    id: fullRepresentationRoot
+
     // TODO these should be configurable in the future
     readonly property int dndMorningHour: 6
     readonly property int dndEveningHour: 20
@@ -130,20 +132,20 @@ PlasmaExtras.Representation {
                             model.push({date: d, text: i18n("For 4 hours")});
 
                             // Until this evening
-                            if (dndMenu.date.getHours() < dndEveningHour) {
+                            if (dndMenu.date.getHours() < fullRepresentationRoot.dndEveningHour) {
                                 d = dndMenu.date;
                                 // TODO make the user's preferred time schedule configurable
-                                d.setHours(dndEveningHour);
+                                d.setHours(fullRepresentationRoot.dndEveningHour);
                                 d.setMinutes(0);
                                 d.setSeconds(0);
                                 model.push({date: d, text: i18n("Until this evening")});
                             }
 
                             // Until next morning
-                            if (dndMenu.date.getHours() > dndMorningHour) {
+                            if (dndMenu.date.getHours() > fullRepresentationRoot.dndMorningHour) {
                                 d = dndMenu.date;
                                 d.setDate(d.getDate() + 1);
-                                d.setHours(dndMorningHour);
+                                d.setHours(fullRepresentationRoot.dndMorningHour);
                                 d.setMinutes(0);
                                 d.setSeconds(0);
                                 model.push({date: d, text: i18n("Until tomorrow morning")});
@@ -153,7 +155,7 @@ PlasmaExtras.Representation {
                             // show Friday and Saturday, Sunday is "0" but for that you can use "until tomorrow morning"
                             if (dndMenu.date.getDay() >= 5) {
                                 d = dndMenu.date;
-                                d.setHours(dndMorningHour);
+                                d.setHours(fullRepresentationRoot.dndMorningHour);
                                 // wraps around if necessary
                                 d.setDate(d.getDate() + (7 - d.getDay() + 1));
                                 d.setMinutes(0);

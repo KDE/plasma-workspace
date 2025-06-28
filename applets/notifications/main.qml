@@ -3,6 +3,7 @@
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
+pragma ComponentBehavior: Bound
 
 import QtQuick 2.8
 import QtQml 2.15
@@ -192,7 +193,7 @@ PlasmoidItem {
 
         onCountChanged: {
             if (count === 0) {
-                closePlasmoid();
+                root.closePlasmoid();
             }
         }
     }
@@ -243,7 +244,7 @@ PlasmoidItem {
             }
             function closeWhenCleared() {
                 if (historyModel.count === 0) {
-                    closePlasmoid();
+                    root.closePlasmoid();
                 }
                 historyModel.countChanged.disconnect(closeWhenCleared)
             }

@@ -39,7 +39,7 @@ Item {
         id: fileMenu
         url: thumbnailer.url
         visualParent: menuButton
-        onActionTriggered: action => modelInterface.fileActionInvoked(action)
+        onActionTriggered: action => thumbnailArea.modelInterface.fileActionInvoked(action)
     }
 
     Notifications.Thumbnailer {
@@ -58,10 +58,10 @@ Item {
         id: previewBackground
         anchors {
             fill: parent
-            leftMargin: -modelInterface.popupLeftPadding
-            topMargin: -modelInterface.popupTopPadding
-            rightMargin: -modelInterface.popupRightPadding
-            bottomMargin: -modelInterface.popupBottomPadding
+            leftMargin: -thumbnailArea.modelInterface.popupLeftPadding
+            topMargin: -thumbnailArea.modelInterface.popupTopPadding
+            rightMargin: -thumbnailArea.modelInterface.popupRightPadding
+            bottomMargin: -thumbnailArea.modelInterface.popupBottomPadding
         }
         fillMode: Image.PreserveAspectCrop
         layer.enabled: true
@@ -82,7 +82,7 @@ Item {
         dragPixmap: thumbnailer.hasPreview ? thumbnailer.pixmap : thumbnailer.iconName
         dragUrl: thumbnailer.url
 
-        onActivated: modelInterface.openUrl(thumbnailer.url)
+        onActivated: thumbnailArea.modelInterface.openUrl(thumbnailer.url)
         onContextMenuRequested: (pos) => {
             // avoid menu button glowing if we didn't actually press it
             menuButton.checked = false;

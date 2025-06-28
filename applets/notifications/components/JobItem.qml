@@ -32,7 +32,7 @@ ColumnLayout {
 
     Notifications.FileInfo {
         id: fileInfo
-        url: jobItem.totalFiles === 1 ? modelInterface.jobDetails.effectiveDestUrl : ""
+        url: jobItem.totalFiles === 1 ? jobItem.modelInterface.jobDetails.effectiveDestUrl : ""
     }
 
     SpeedChart {
@@ -56,7 +56,7 @@ ColumnLayout {
 
             icon.name: checked ? "collapse-symbolic" : "expand-symbolic"
             text: i18ndc("plasma_applet_org.kde.plasma.notifications", "Hides/expands item details", "Details")
-            checkable: modelInterface.jobDetails && modelInterface.jobDetails.hasDetails
+            checkable: jobItem.modelInterface.jobDetails && jobItem.modelInterface.jobDetails.hasDetails
             visible: checkable
 
             Accessible.onPressAction: if (checkable) toggle()
@@ -67,9 +67,9 @@ ColumnLayout {
         PlasmaComponents3.Button {
             id: suspendButton
 
-            readonly property bool paused: modelInterface.jobState === NotificationManager.Notifications.JobStateSuspended
+            readonly property bool paused: jobItem.modelInterface.jobState === NotificationManager.Notifications.JobStateSuspended
 
-            visible: modelInterface.suspendable
+            visible: jobItem.modelInterface.suspendable
 
             Layout.fillWidth: true
             Layout.maximumWidth: implicitWidth
@@ -78,8 +78,8 @@ ColumnLayout {
                               : "media-playback-pause-symbolic"
             text: paused ? i18ndc("plasma_applet_org.kde.plasma.notifications", "Resume paused job", "Resume")
                          : i18ndc("plasma_applet_org.kde.plasma.notifications", "Pause running job", "Pause")
-            onClicked: paused ? modelInterface.resumeJobClicked()
-                              : modelInterface.suspendJobClicked()
+            onClicked: paused ? jobItem.modelInterface.resumeJobClicked()
+                              : jobItem.modelInterface.suspendJobClicked()
         }
 
         PlasmaComponents3.Button {
@@ -88,11 +88,11 @@ ColumnLayout {
             Layout.fillWidth: true
             Layout.maximumWidth: implicitWidth
 
-            visible: modelInterface.killable
+            visible: jobItem.modelInterface.killable
 
             icon.name: "dialog-cancel-symbolic"
             text: i18ndc("plasma_applet_org.kde.plasma.notifications", "Cancel running job", "Cancel")
-            onClicked: modelInterface.killJobClicked()
+            onClicked: jobItem.modelInterface.killJobClicked()
         }
     }
 
@@ -115,7 +115,7 @@ ColumnLayout {
         // We want the actions to be right-aligned but Row also reverses
         // the order of items, so we put them in reverse order
         layoutDirection: Qt.RightToLeft
-        visible: modelInterface.jobDetails.effectiveDestUrl.toString() !== "" && !fileInfo.error
+        visible: jobItem.modelInterface.jobDetails.effectiveDestUrl.toString() !== "" && !fileInfo.error
 
         PlasmaComponents3.Button {
             id: otherFileActionsButton
@@ -142,8 +142,8 @@ ColumnLayout {
 
             Notifications.FileMenu {
                 id: otherFileActionsMenu
-                url: modelInterface.jobDetails.effectiveDestUrl
-                onActionTriggered: action => modelInterface.fileActionInvoked(action)
+                url: jobItem.modelInterface.jobDetails.effectiveDestUrl
+                onActionTriggered: action => jobItem.modelInterface.fileActionInvoked(action)
             }
         }
 
@@ -152,11 +152,11 @@ ColumnLayout {
             width: Math.min(implicitWidth, jobItem.width - otherFileActionsButton.width - fileActionsRow.spacing)
             height: Math.max(implicitHeight, otherFileActionsButton.implicitHeight)
             text: i18nd("plasma_applet_org.kde.plasma.notifications", "Open")
-            onClicked: modelInterface.openUrl(modelInterface.jobDetails.effectiveDestUrl)
+            onClicked: jobItem.modelInterface.openUrl(jobItem.modelInterface.jobDetails.effectiveDestUrl)
 
             states: [
                 State {
-                    when: modelInterface.jobDetails && modelInterface.jobDetails.totalFiles !== 1
+                    when: jobItem.modelInterface.jobDetails && jobItem.modelInterface.jobDetails.totalFiles !== 1
                     PropertyChanges {
                         target: openButton
                         text: i18nd("plasma_applet_org.kde.plasma.notifications", "Open Containing Folder")
@@ -182,14 +182,14 @@ ColumnLayout {
 
     states: [
         State {
-            when: modelInterface.jobState === NotificationManager.Notifications.JobStateSuspended
+            when: jobItem.modelInterface.jobState === NotificationManager.Notifications.JobStateSuspended
             PropertyChanges {
                 target: speedChart
                 enabled: false
             }
         },
         State {
-            when: modelInterface.jobState === NotificationManager.Notifications.JobStateStopped
+            when: jobItem.modelInterface.jobState === NotificationManager.Notifications.JobStateStopped
             PropertyChanges {
                 target: speedChart
                 visible: false

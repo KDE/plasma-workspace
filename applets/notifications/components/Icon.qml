@@ -5,6 +5,8 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Layouts
 
@@ -29,7 +31,7 @@ Kirigami.Icon {
     Loader {
         id: jobIconLoader
         anchors.fill: parent
-        active: modelInterface.jobDetails?.effectiveDestUrl ?? false
+        active: iconItem.modelInterface.jobDetails?.effectiveDestUrl ?? false
         sourceComponent: JobIconItem {
             modelInterface: iconItem.modelInterface
         }

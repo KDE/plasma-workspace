@@ -31,8 +31,8 @@ QtObject {
         }
 
         onObjectAdded: (index, object) => {
-            if (object.name === notificationStreamId) {
-                notificationStream = object;
+            if (object.name === pulseAudio.notificationStreamId) {
+                pulseAudio.notificationStream = object;
             }
         }
     }

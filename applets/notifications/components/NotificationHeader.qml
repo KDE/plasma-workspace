@@ -22,7 +22,7 @@ RowLayout {
         id: applicationIconItem
         Layout.preferredWidth: Kirigami.Units.iconSizes.small
         Layout.preferredHeight: Kirigami.Units.iconSizes.small
-        source: modelInterface.applicationIconSource
+        source: notificationHeading.modelInterface.applicationIconSource
         visible: valid
     }
 
@@ -34,7 +34,7 @@ RowLayout {
         textFormat: Text.PlainText
         elide: Text.ElideMiddle
         maximumLineCount: 2
-        text: modelInterface.applicationName + (modelInterface.originName ? " · " + modelInterface.originName : "")
+        text: notificationHeading.modelInterface.applicationName + (notificationHeading.modelInterface.originName ? " · " + notificationHeading.modelInterface.originName : "")
     }
     HeadingButtons {
         id: headingButtons
