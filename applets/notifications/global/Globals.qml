@@ -415,7 +415,7 @@ QtObject {
         }
     }
 
-    property QtObject popupNotificationsModel: NotificationManager.Notifications {
+    property NotificationManager.Notifications popupNotificationsModel: NotificationManager.Notifications {
         limit: plasmoid ? (Math.ceil(globals.screenRect.height / (Kirigami.Units.gridUnit * 4))) : 0
         showExpired: false
         showDismissed: false
@@ -451,17 +451,17 @@ QtObject {
         }
     }
 
-    property QtObject notificationSettings: NotificationManager.Settings {
+    property NotificationManager.Settings notificationSettings: NotificationManager.Settings {
         onNotificationsInhibitedUntilChanged: globals.checkInhibition()
     }
 
-    property QtObject tasksModel: TaskManager.TasksModel {
+    property TaskManager.TasksModel tasksModel: TaskManager.TasksModel {
         groupMode: TaskManager.TasksModel.GroupApplications
         groupInline: false
     }
 
     // This periodically checks whether do not disturb mode timed out and updates the "minutes ago" labels
-    property QtObject timeSource: P5Support.DataSource {
+    property P5Support.DataSource timeSource: P5Support.DataSource {
         engine: "time"
         connectedSources: ["Local"]
         interval: 60000 // 1 min
@@ -684,7 +684,7 @@ QtObject {
     }
 
     // TODO use pulseaudio-qt for this once it becomes a framework
-    property QtObject pulseAudio: Loader {
+    property Loader pulseAudio: Loader {
         source: "PulseAudio.qml"
     }
 
