@@ -19,7 +19,7 @@ set(notificationapplet_SRCS
     thumbnailer.h
 )
 
-plasma_add_applet(org.kde.plasma.notifications)
+plasma_add_applet(org.kde.plasma.notifications QML_ARGS DEPENDENCIES QtCore QtQuick org.kde.plasma.core)
 
 target_sources(org.kde.plasma.notifications PRIVATE ${notificationapplet_SRCS})
 
