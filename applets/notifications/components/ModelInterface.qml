@@ -13,6 +13,8 @@ import org.kde.notificationmanager as NotificationManager
 QtObject {
     id: root
 
+    property int index
+
     property int maximumLineCount: 0
     property int bodyCursorShape: Qt.ArrowCursor
 

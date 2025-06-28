@@ -104,14 +104,14 @@ NotificationsApplet.NotificationWindow {
             leftPadding: 0
             rightPadding: 0
             hoverEnabled: true
-            draggable: notificationItem.notificationType != NotificationManager.Notifications.JobType
-            onDismissRequested: popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
+            draggable: notificationItem.modelInterface.notificationType != NotificationManager.Notifications.JobType
+            onDismissRequested: popupNotificationsModel.close(popupNotificationsModel.index(notificationItem.modelInterface.index, 0))
 
             TapHandler {
                 id: tapHandler
                 acceptedButtons: {
                     let buttons = Qt.MiddleButton;
-                    if (hasDefaultAction) {
+                    if (notificationPopup.modelInterface.hasDefaultAction) {
                         buttons |= Qt.LeftButton;
                     }
                     return buttons;
@@ -121,7 +121,7 @@ NotificationsApplet.NotificationWindow {
                         if (notificationItem.modelInterface.closable) {
                             notificationItem.modelInterface.closeClicked();
                         }
-                    } else if (hasDefaultAction) {
+                    } else if (notificationPopup.modelInterface.hasDefaultAction) {
                         notificationItem.modelInterface.defaultActionInvoked();
                     }
                 }
@@ -177,7 +177,7 @@ NotificationsApplet.NotificationWindow {
 
                 modelInterface {
                     maximumLineCount: 8
-                    bodyCursorShape: notificationPopup.hasDefaultAction ? Qt.PointingHandCursor : 0
+                    bodyCursorShape: modelInterface.hasDefaultAction ? Qt.PointingHandCursor : 0
 
                     popupLeftPadding: notificationPopup.leftPadding
                     popupTopPadding: notificationPopup.topPadding
@@ -195,7 +195,7 @@ NotificationsApplet.NotificationWindow {
                     closable: true
 
                     onBodyClicked: {
-                        if (hasDefaultAction) {
+                        if (modelInterface.hasDefaultAction) {
                             notificationItem.modelInterface.defaultActionInvoked();
                         }
                     }
