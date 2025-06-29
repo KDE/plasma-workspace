@@ -60,6 +60,10 @@ KCM.SimpleKCM {
     Connections {
         target: kcm
         function onFirstLoadDone() {
+            // Make sure we start from the main page
+            if (kcm.depth > 1) {
+                kcm.pop();
+            }
             if (!kcm.initialDesktopEntry && !kcm.initialNotifyRcName) {
                 return;
             }
