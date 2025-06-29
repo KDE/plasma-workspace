@@ -85,6 +85,7 @@ Q_SIGNALS:
 private Q_SLOTS:
     void onDefaultsIndicatorsVisibleChanged();
     void updateModelIsDefaultStatus(const QModelIndex &index);
+    void parseArguments(const QVariantList &args);
 
 private:
     bool isSaveNeeded() const override;

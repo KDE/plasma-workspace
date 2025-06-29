@@ -60,6 +60,10 @@ KCM.SimpleKCM {
     Connections {
         target: kcm
         function onNavigateToComponent(desktopEntry, notifyRcName, eventId) {
+            // Make sure we start from the main page
+            while (kcm.depth > 1) {
+                kcm.pop();
+            }
             if (!desktopEntry && !notifyRcName) {
                 return;
             }

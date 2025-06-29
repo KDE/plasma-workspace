@@ -62,6 +62,20 @@ KCMNotifications::KCMNotifications(QObject *parent, const KPluginMetaData &data,
     m_toggleDoNotDisturbAction->setText(i18n("Toggle do not disturb"));
     m_toggleDoNotDisturbAction->setIcon(QIcon::fromTheme(QStringLiteral("notifications-disabled")));
 
+    parseArguments(args);
+
+    connect(this, &KCMNotifications::toggleDoNotDisturbShortcutChanged, this, &KCMNotifications::settingsChanged);
+    connect(m_sourcesModel, &QAbstractItemModel::dataChanged, this, &KCMNotifications::settingsChanged);
+    connect(this, &KCMNotifications::defaultsIndicatorsVisibleChanged, this, &KCMNotifications::onDefaultsIndicatorsVisibleChanged);
+    connect(this, &KCMNotifications::activationRequested, this, &KCMNotifications::parseArguments);
+}
+
+KCMNotifications::~KCMNotifications()
+{
+}
+
+void KCMNotifications::parseArguments(const QVariantList &args)
+{
     QStringList stringArgs;
     stringArgs.reserve(args.count() + 1);
     // need to add a fake argv[0] for QCommandLineParser
@@ -85,13 +99,9 @@ KCMNotifications::KCMNotifications(QObject *parent, const KPluginMetaData &data,
     m_initialNotifyRcName = parser.value(notifyRcNameOption);
     m_initialEventId = parser.value(eventIdOption);
 
-    connect(this, &KCMNotifications::toggleDoNotDisturbShortcutChanged, this, &KCMNotifications::settingsChanged);
-    connect(m_sourcesModel, &QAbstractItemModel::dataChanged, this, &KCMNotifications::settingsChanged);
-    connect(this, &KCMNotifications::defaultsIndicatorsVisibleChanged, this, &KCMNotifications::onDefaultsIndicatorsVisibleChanged);
-}
-
-KCMNotifications::~KCMNotifications()
-{
+    if (!m_firstLoad) { // Wait until the model is loaded
+        Q_EMIT navigateToComponent(m_initialDesktopEntry, m_initialNotifyRcName, m_initialEventId);
+    }
 }
 
 QString KCMNotifications::plasmaWorkspaceNotifyRcName()
