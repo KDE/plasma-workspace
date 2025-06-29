@@ -4,6 +4,8 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Layouts
 
@@ -370,6 +372,40 @@ PlasmaExtras.Representation {
                 required property int index
                 required property var model
 
+                required property bool isGroup
+                required property bool isInGroup
+                required property int type
+                required property bool hasDefaultAction
+                required property list<string> actionLabels
+                required property string configureActionLabel
+                required property bool hasReplyAction
+                required property string applicationName
+                required property string applicationIconName
+                required property string originName
+                required property date updated
+                required property date created
+                required property bool configurable
+                required property bool dismissable
+                required property bool dismissed
+                required property bool closable
+                required property string summary
+                required property string body
+                required property var image
+                required property string iconName
+                required property list<url> urls
+                required property string defaultActionLabel
+                required property int jobState
+                required property int percentage
+                required property string jobError
+                required property bool suspendable
+                required property bool killable
+                required property QtObject jobDetails
+                required property list<string> actionNames
+                required property bool resident
+                required property bool isGroupExpanded
+                required property int groupChildrenCount
+                required property int expandedGroupChildrenCount
+
                 // NOTE: The following animations replace the Transitions in the ListView
                 // because they don't work when the items change size during the animation
                 // (showing/hiding the show more/show less button) in that case they will
@@ -422,7 +458,7 @@ PlasmaExtras.Representation {
                     }
                 }
 
-                draggable: !model.isGroup && model.type != NotificationManager.Notifications.JobType
+                draggable: !delegate.isGroup && delegate.type != NotificationManager.Notifications.JobType
 
                 onDismissRequested: fullRepresentationRoot.historyModel.close(fullRepresentationRoot.historyModel.index(index, 0));
 
@@ -430,9 +466,9 @@ PlasmaExtras.Representation {
                     id: delegateLoader
 
                     sourceComponent: {
-                        if (model.isGroup) {
+                        if (delegate.isGroup) {
                             return groupDelegate;
-                        } else if (model.isInGroup) {
+                        } else if (delegate.isInGroup) {
                             return notificationGroupedDelegate;
                         } else {
                             return notificationDelegate;
@@ -440,60 +476,60 @@ PlasmaExtras.Representation {
                     }
 
                     readonly property Components.ModelInterface modelInterface: Components.ModelInterface {
-                        notificationType: model.type
+                        notificationType: delegate.type
 
-                        hasSomeActions: (model.hasDefaultAction || false) || (model.actionLabels || []).length > 0 || (model.configureActionLabel || "").length > 0 || (model.hasReplyAction || false)
-                        hasReplyAction: model.hasReplyAction || false
+                        hasSomeActions: (delegate.hasDefaultAction || false) || (delegate.actionLabels || []).length > 0 || (delegate.configureActionLabel || "").length > 0 || (delegate.hasReplyAction || false)
+                        hasReplyAction: delegate.hasReplyAction || false
 
-                        inGroup: model.isInGroup
+                        inGroup: delegate.isInGroup
                         inHistory: true
 
-                        applicationName: model.applicationName
-                        applicationIconSource: model.applicationIconName
-                        originName: model.originName || ""
+                        applicationName: delegate.applicationName
+                        applicationIconSource: delegate.applicationIconName
+                        originName: delegate.originName || ""
 
-                        time: model.updated || model.created
+                        time: delegate.updated || delegate.created
 
                         // configure button on every single notifications is bit overwhelming
-                        configurable: !inGroup && model.configurable
+                        configurable: !inGroup && delegate.configurable
 
-                        dismissable: model.dismissable
-                            && model.dismissed
+                        dismissable: delegate.dismissable
+                            && delegate.dismissed
                             // TODO would be nice to be able to undismiss jobs even when they autohide
                             && fullRepresentationRoot.notificationSettings.permanentJobPopups
-                        dismissed: model.dismissed || false
-                        closable: model.closable
+                        dismissed: delegate.dismissed || false
+                        closable: delegate.closable
 
-                        summary: model.summary
-                        body: model.body || ""
-                        icon: model.image || model.iconName
+                        summary: delegate.summary
+                        body: delegate.body || ""
+                        icon: delegate.image || delegate.iconName
 
-                        urls: model.urls || []
+                        urls: delegate.urls || []
 
-                        defaultActionLabel: model.defaultActionLabel || i18nc("@action:button", "View")
+                        defaultActionLabel: delegate.defaultActionLabel || i18nc("@action:button", "View")
 
                         // In the popup the default action is triggered by clicking on the popup
                         // however in the list this is undesirable, so instead show a clickable button
                         // in case you have a non-expired notification in history (do not disturb mode)
                         // unless it has the same label as an action
-                        addDefaultAction: (model.hasDefaultAction && (model.actionLabels || []).indexOf(model.defaultActionLabel || i18nc("@action:button", "View")) === -1) ? true : false
+                        addDefaultAction: (delegate.hasDefaultAction && (delegate.actionLabels || []).indexOf(delegate.defaultActionLabel || i18nc("@action:button", "View")) === -1) ? true : false
 
-                        jobState: model.jobState || 0
-                        percentage: model.percentage || 0
-                        jobError: model.jobError || 0
-                        suspendable: !!model.suspendable
-                        killable: !!model.killable
-                        jobDetails: model.jobDetails || null
+                        jobState: delegate.jobState || 0
+                        percentage: delegate.percentage || 0
+                        jobError: delegate.jobError || 0
+                        suspendable: !!delegate.suspendable
+                        killable: !!delegate.killable
+                        jobDetails: delegate.jobDetails || null
 
-                        configureActionLabel: model.configureActionLabel || ""
+                        configureActionLabel: delegate.configureActionLabel || ""
 
-                        actionNames: model.actionNames || []
-                        actionLabels: model.actionLabels || []
+                        actionNames: delegate.actionNames || []
+                        actionLabels: delegate.actionLabels || []
 
                         onCloseClicked: delegate.close()
 
                         onDismissClicked: {
-                            model.dismissed = false;
+                            delegate.model.dismissed = false;
                             fullRepresentationRoot.appletInterface.closePlasmoid();
                         }
                         onConfigureClicked: fullRepresentationRoot.historyModel.configure(fullRepresentationRoot.historyModel.index(index, 0))
@@ -506,7 +542,7 @@ PlasmaExtras.Representation {
                             // The alternative to this would have the downside that notifications whose apps have been
                             // closed will keep their buttons in the notification history. This way, invoking an action
                             // will make the notification actually disappear (as is common on other operating systems).
-                            const behavior = model.resident ? NotificationManager.Notifications.None : NotificationManager.Notifications.Close;
+                            const behavior = delegate.resident ? NotificationManager.Notifications.None : NotificationManager.Notifications.Close;
 
                             if (actionName === "default") {
                                 fullRepresentationRoot.historyModel.invokeDefaultAction(fullRepresentationRoot.historyModel.index(index, 0), behavior);
@@ -526,7 +562,7 @@ PlasmaExtras.Representation {
                             }
                         }
                         onReplied: text => {
-                            const behavior = model.resident ? NotificationManager.Notifications.None : NotificationManager.Notifications.Close;
+                            const behavior = delegate.resident ? NotificationManager.Notifications.None : NotificationManager.Notifications.Close;
                             fullRepresentationRoot.historyModel.reply(fullRepresentationRoot.historyModel.index(index, 0), text, behavior);
                         }
 
@@ -536,10 +572,10 @@ PlasmaExtras.Representation {
                     }
 
                     function expire() {
-                        if (model.resident) {
-                            model.expired = true;
+                        if (delegate.resident) {
+                            delegate.model.expired = true;
                         } else {
-                            fullRepresentationRoot.historyModel.expire(fullRepresentationRoot.historyModel.index(index, 0));
+                            fullRepresentationRoot.historyModel.expire(fullRepresentationRoot.historyModel.index(delegate.index, 0));
                         }
                     }
 
@@ -547,15 +583,15 @@ PlasmaExtras.Representation {
                         id: groupDelegate
                         Components.NotificationHeader {
                             modelInterface {
-                                applicationName: model.applicationName
-                                applicationIconSource: model.applicationIconName
-                                originName: model.originName || ""
+                                applicationName: delegate.applicationName
+                                applicationIconSource: delegate.applicationIconName
+                                originName: delegate.originName || ""
 
-                                configurable: model.configurable
-                                closable: model.closable
+                                configurable: delegate.configurable
+                                closable: delegate.closable
 
-                                onCloseClicked: fullRepresentationRoot.historyModel.close(fullRepresentationRoot.historyModel.index(index, 0));
-                                onConfigureClicked: fullRepresentationRoot.historyModel.configure(fullRepresentationRoot.historyModel.index(index, 0))
+                                onCloseClicked: fullRepresentationRoot.historyModel.close(fullRepresentationRoot.historyModel.index(delegate.index, 0));
+                                onConfigureClicked: fullRepresentationRoot.historyModel.configure(fullRepresentationRoot.historyModel.index(delegate.index, 0))
                             }
                             closeButtonTooltip: i18n("Close Group")
                         }
@@ -578,13 +614,13 @@ PlasmaExtras.Representation {
                             }
 
                             PlasmaComponents3.ToolButton {
-                                icon.name: model.isGroupExpanded ? "arrow-up" : "arrow-down"
-                                text: model.isGroupExpanded ? i18n("Show Fewer")
+                                icon.name: delegate.isGroupExpanded ? "arrow-up" : "arrow-down"
+                                text: delegate.isGroupExpanded ? i18n("Show Fewer")
                                                             : i18nc("Expand to show n more notifications",
-                                                                    "Show %1 More", (model.groupChildrenCount - model.expandedGroupChildrenCount))
-                                visible: (model.groupChildrenCount > model.expandedGroupChildrenCount || model.isGroupExpanded)
+                                                                    "Show %1 More", (delegate.groupChildrenCount - delegate.expandedGroupChildrenCount))
+                                visible: (delegate.groupChildrenCount > delegate.expandedGroupChildrenCount || delegate.isGroupExpanded)
                                     && delegate.ListView.nextSection !== delegate.ListView.section
-                                onClicked: list.setGroupExpanded(model.index, !model.isGroupExpanded)
+                                onClicked: list.setGroupExpanded(delegate.index, !delegate.isGroupExpanded)
                             }
                         }
                     }
