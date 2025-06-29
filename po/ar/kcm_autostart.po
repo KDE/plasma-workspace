@@ -3,7 +3,7 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # محمد ابراهيم الحرقان <malham1@hotmail.com>, 2008.
-# SPDX-FileCopyrightText: 2008, 2021, 2022, 2024 zayed <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2008, 2021, 2022, 2024, 2025 zayed <zayed.alsaidi@gmail.com>
 # Abdalrahim Fakhouri <abdilra7eem@yahoo.com>, 2012.
 # Safa Alfulaij <safa1996alfulaij@gmail.com>, 2015.
 msgid ""
@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-31 00:43+0000\n"
-"PO-Revision-Date: 2024-08-15 10:47+0400\n"
+"PO-Revision-Date: 2025-06-28 17:07+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -80,13 +80,13 @@ msgstr "آخر نشاط كان في:"
 #: ui/entry.qml:114
 #, kde-format
 msgid "Unable to load logs. Try refreshing."
-msgstr "تعذر تحميل السجل. حاول الإنعاش مجددا."
+msgstr "تعذر تحميل السجل. حاول التحديث مجددا."
 
 #: ui/entry.qml:118
 #, kde-format
 msgctxt "@action:button Refresh entry logs when it failed to load"
 msgid "Refresh"
-msgstr "أنعش"
+msgstr "حدّث"
 
 #: ui/main.qml:35
 #, kde-format
