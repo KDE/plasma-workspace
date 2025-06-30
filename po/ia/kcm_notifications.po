@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-04 00:44+0000\n"
+"POT-Creation-Date: 2025-06-30 00:43+0000\n"
 "PO-Revision-Date: 2025-05-12 15:51+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 21.12.1\n"
 
-#: kcm.cpp:70
+#: kcm.cpp:62
 #, kde-format
 msgid "Toggle do not disturb"
 msgstr "Commuta a non disturbar"

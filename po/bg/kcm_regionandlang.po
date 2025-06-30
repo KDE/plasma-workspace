@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-25 00:44+0000\n"
-"PO-Revision-Date: 2025-06-04 19:01+0200\n"
+"PO-Revision-Date: 2025-06-29 20:29+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -297,12 +297,10 @@ msgid "Not all missing packages managed to resolve! %1"
 msgstr "Не всички липсващи пакети успяха да се разрешат! %1"
 
 #: localegeneratorubuntu.cpp:96
-#, fuzzy, kde-format
-#| msgctxt "%1 is a list of package names"
-#| msgid "Failed to install package %1"
+#, kde-format
 msgctxt "%1 is a list of package names, %2 is the error explanation"
 msgid "Failed to install language packages (%1): %2"
-msgstr "Неуспех при инсталиране на пакета %1"
+msgstr "Неуспех при инсталиране на езикови пакети (%1): %2"
 
 #: localegenhelper/localegenhelper.cpp:45
 #, kde-format

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-25 00:40+0000\n"
+"POT-Creation-Date: 2025-06-30 00:43+0000\n"
 "PO-Revision-Date: 2024-06-25 16:57+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -18,122 +18,122 @@ msgstr ""
 "X-Generator: Lokalize 24.05.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: contents/config/config.qml:13
+#: config.qml:13
 #, kde-format
 msgid "General"
 msgstr "Общи"
 
-#: contents/ui/ConfigGeneral.qml:34
+#: ConfigGeneral.qml:36
 #, kde-format
 msgctxt ""
 "Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
 msgid "Show actions:"
 msgstr "Показване на действия:"
 
-#: contents/ui/ConfigGeneral.qml:35
+#: ConfigGeneral.qml:37
 #, kde-format
 msgid "Log Out"
 msgstr "Излизане от сесия"
 
-#: contents/ui/ConfigGeneral.qml:42
+#: ConfigGeneral.qml:44
 #, kde-format
 msgctxt "@option:check"
 msgid "Show logout screen"
 msgstr "Показване на екран за напускане на сесията"
 
-#: contents/ui/ConfigGeneral.qml:48
+#: ConfigGeneral.qml:50
 #, kde-format
 msgid "Shut Down"
 msgstr "Изключване"
 
-#: contents/ui/ConfigGeneral.qml:54
+#: ConfigGeneral.qml:56
 #, kde-format
 msgid "Restart"
 msgstr "Рестартиране"
 
-#: contents/ui/ConfigGeneral.qml:60 contents/ui/data.js:5
+#: ConfigGeneral.qml:62 data.js:5
 #, kde-format
 msgid "Lock"
 msgstr "Заключване"
 
-#: contents/ui/ConfigGeneral.qml:66
+#: ConfigGeneral.qml:68
 #, kde-format
 msgid "Switch User"
 msgstr "Превключване на потребител"
 
-#: contents/ui/ConfigGeneral.qml:72 contents/ui/data.js:53
+#: ConfigGeneral.qml:74 data.js:54
 #, kde-format
 msgid "Hibernate"
 msgstr "Хибернация"
 
-#: contents/ui/ConfigGeneral.qml:78 contents/ui/data.js:46
+#: ConfigGeneral.qml:80 data.js:47
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Приспиване"
 
-#: contents/ui/data.js:6
+#: data.js:6
 #, kde-format
 msgid "Lock the screen"
 msgstr "Заключване на екрана"
 
-#: contents/ui/data.js:12
+#: data.js:12
 #, kde-format
 msgid "Switch user"
 msgstr "Превключване на потребител"
 
-#: contents/ui/data.js:13
+#: data.js:13
 #, kde-format
 msgid "Start a parallel session as a different user"
 msgstr "Започване на паралелна сесия като различен потребител"
 
-#: contents/ui/data.js:18
+#: data.js:19
 #, kde-format
 msgid "Shutdown…"
 msgstr "Изключване…"
 
-#: contents/ui/data.js:19
+#: data.js:20
 #, kde-format
 msgid "Turn off the computer"
 msgstr "Изключване на компютъра"
 
-#: contents/ui/data.js:25
+#: data.js:26
 #, kde-format
 msgid "Restart…"
 msgstr "Рестартиране…"
 
-#: contents/ui/data.js:26
+#: data.js:27
 #, kde-format
 msgid "Reboot the computer"
 msgstr "Рестартиране на компютъра"
 
-#: contents/ui/data.js:32
+#: data.js:33
 #, kde-format
 msgid "Logout…"
 msgstr "Излизане от сесия…"
 
-#: contents/ui/data.js:33
+#: data.js:34
 #, kde-format
 msgid "End the session"
 msgstr "Завършване на сесията"
 
-#: contents/ui/data.js:39
+#: data.js:40
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Show logout screen"
 msgstr "Показване на екран за напускане на сесията"
 
-#: contents/ui/data.js:40
+#: data.js:41
 #, kde-format
 msgid "Log out, turn off, or restart the computer"
 msgstr "Излизане, изключване или рестартиране на компютъра"
 
-#: contents/ui/data.js:47
+#: data.js:48
 #, kde-format
 msgid "Sleep (suspend to RAM)"
 msgstr "Приспиване (в паметта)"
 
-#: contents/ui/data.js:54
+#: data.js:55
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Хибернация (записване на диск)"

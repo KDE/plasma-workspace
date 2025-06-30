@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-25 00:40+0000\n"
+"POT-Creation-Date: 2025-06-30 00:43+0000\n"
 "PO-Revision-Date: 2024-06-26 01:02+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -22,122 +22,122 @@ msgstr ""
 "X-POOTLE-MTIME: 1413102242.000000\n"
 "X-Generator: Lokalize 24.07.70\n"
 
-#: contents/config/config.qml:13
+#: config.qml:13
 #, kde-format
 msgid "General"
 msgstr "Genel"
 
-#: contents/ui/ConfigGeneral.qml:34
+#: ConfigGeneral.qml:36
 #, kde-format
 msgctxt ""
 "Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
 msgid "Show actions:"
 msgstr "Eylemleri göster:"
 
-#: contents/ui/ConfigGeneral.qml:35
+#: ConfigGeneral.qml:37
 #, kde-format
 msgid "Log Out"
 msgstr "Oturumu Kapat"
 
-#: contents/ui/ConfigGeneral.qml:42
+#: ConfigGeneral.qml:44
 #, kde-format
 msgctxt "@option:check"
 msgid "Show logout screen"
 msgstr "Oturumu kapat ekranını göster"
 
-#: contents/ui/ConfigGeneral.qml:48
+#: ConfigGeneral.qml:50
 #, kde-format
 msgid "Shut Down"
 msgstr "Kapat"
 
-#: contents/ui/ConfigGeneral.qml:54
+#: ConfigGeneral.qml:56
 #, kde-format
 msgid "Restart"
 msgstr "Yeniden Başlat"
 
-#: contents/ui/ConfigGeneral.qml:60 contents/ui/data.js:5
+#: ConfigGeneral.qml:62 data.js:5
 #, kde-format
 msgid "Lock"
 msgstr "Kilitle"
 
-#: contents/ui/ConfigGeneral.qml:66
+#: ConfigGeneral.qml:68
 #, kde-format
 msgid "Switch User"
 msgstr "Kullanıcı Değiştir"
 
-#: contents/ui/ConfigGeneral.qml:72 contents/ui/data.js:53
+#: ConfigGeneral.qml:74 data.js:54
 #, kde-format
 msgid "Hibernate"
 msgstr "Derin Uykuya Geçir"
 
-#: contents/ui/ConfigGeneral.qml:78 contents/ui/data.js:46
+#: ConfigGeneral.qml:80 data.js:47
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Uyut"
 
-#: contents/ui/data.js:6
+#: data.js:6
 #, kde-format
 msgid "Lock the screen"
 msgstr "Ekranı kilitle"
 
-#: contents/ui/data.js:12
+#: data.js:12
 #, kde-format
 msgid "Switch user"
 msgstr "Kullanıcı değiştir"
 
-#: contents/ui/data.js:13
+#: data.js:13
 #, kde-format
 msgid "Start a parallel session as a different user"
 msgstr "Başka bir kullanıcı olarak paralel oturum başlat"
 
-#: contents/ui/data.js:18
+#: data.js:19
 #, kde-format
 msgid "Shutdown…"
 msgstr "Kapat…"
 
-#: contents/ui/data.js:19
+#: data.js:20
 #, kde-format
 msgid "Turn off the computer"
 msgstr "Bilgisayarı kapat"
 
-#: contents/ui/data.js:25
+#: data.js:26
 #, kde-format
 msgid "Restart…"
 msgstr "Yeniden Başlat…"
 
-#: contents/ui/data.js:26
+#: data.js:27
 #, kde-format
 msgid "Reboot the computer"
 msgstr "Bilgisayarı yeniden başlat"
 
-#: contents/ui/data.js:32
+#: data.js:33
 #, kde-format
 msgid "Logout…"
 msgstr "Oturumu Kapat…"
 
-#: contents/ui/data.js:33
+#: data.js:34
 #, kde-format
 msgid "End the session"
 msgstr "Oturumu sonlandır"
 
-#: contents/ui/data.js:39
+#: data.js:40
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Show logout screen"
 msgstr "Oturumu kapat ekranını göster"
 
-#: contents/ui/data.js:40
+#: data.js:41
 #, kde-format
 msgid "Log out, turn off, or restart the computer"
 msgstr "Oturumu kapat, bilgisayarı kapat veya yeniden başlat"
 
-#: contents/ui/data.js:47
+#: data.js:48
 #, kde-format
 msgid "Sleep (suspend to RAM)"
 msgstr "Uyut (bellek kullanarak askıya al)"
 
-#: contents/ui/data.js:54
+#: data.js:55
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Derin uykuya geçir (disk kullanarak askıya al)"

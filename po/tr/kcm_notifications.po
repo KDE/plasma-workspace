@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-04 00:44+0000\n"
+"POT-Creation-Date: 2025-06-30 00:43+0000\n"
 "PO-Revision-Date: 2025-04-25 09:54+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 25.04.0\n"
 
-#: kcm.cpp:70
+#: kcm.cpp:62
 #, kde-format
 msgid "Toggle do not disturb"
 msgstr "Rahatsız Etmeyin kipini aç/kapat"

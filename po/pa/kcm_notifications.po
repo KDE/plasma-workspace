@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-04 00:44+0000\n"
+"POT-Creation-Date: 2025-06-30 00:43+0000\n"
 "PO-Revision-Date: 2024-10-25 23:37-0500\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.08.2\n"
 
-#: kcm.cpp:70
+#: kcm.cpp:62
 #, kde-format
 msgid "Toggle do not disturb"
 msgstr "ਤੰਗ ਨਾ ਕਰੋ ਨੂੰ ਬਦਲੋ"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-25 00:40+0000\n"
+"POT-Creation-Date: 2025-06-30 00:43+0000\n"
 "PO-Revision-Date: 2024-08-24 11:04+0300\n"
 "Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -22,122 +22,122 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.05.2\n"
 
-#: contents/config/config.qml:13
+#: config.qml:13
 #, kde-format
 msgid "General"
 msgstr "Γενικά"
 
-#: contents/ui/ConfigGeneral.qml:34
+#: ConfigGeneral.qml:36
 #, kde-format
 msgctxt ""
 "Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
 msgid "Show actions:"
 msgstr "Εμφάνιση ενεργειών:"
 
-#: contents/ui/ConfigGeneral.qml:35
+#: ConfigGeneral.qml:37
 #, kde-format
 msgid "Log Out"
 msgstr "Αποσύνδεση"
 
-#: contents/ui/ConfigGeneral.qml:42
+#: ConfigGeneral.qml:44
 #, kde-format
 msgctxt "@option:check"
 msgid "Show logout screen"
 msgstr "Εμφάνιση οθόνης αποσύνδεσης"
 
-#: contents/ui/ConfigGeneral.qml:48
+#: ConfigGeneral.qml:50
 #, kde-format
 msgid "Shut Down"
 msgstr "Τερματισμός"
 
-#: contents/ui/ConfigGeneral.qml:54
+#: ConfigGeneral.qml:56
 #, kde-format
 msgid "Restart"
 msgstr "Επανεκκίνηση"
 
-#: contents/ui/ConfigGeneral.qml:60 contents/ui/data.js:5
+#: ConfigGeneral.qml:62 data.js:5
 #, kde-format
 msgid "Lock"
 msgstr "Κλείδωμα"
 
-#: contents/ui/ConfigGeneral.qml:66
+#: ConfigGeneral.qml:68
 #, kde-format
 msgid "Switch User"
 msgstr "Εναλλαγή χρήστη"
 
-#: contents/ui/ConfigGeneral.qml:72 contents/ui/data.js:53
+#: ConfigGeneral.qml:74 data.js:54
 #, kde-format
 msgid "Hibernate"
 msgstr "Νάρκη"
 
-#: contents/ui/ConfigGeneral.qml:78 contents/ui/data.js:46
+#: ConfigGeneral.qml:80 data.js:47
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Κοίμηση"
 
-#: contents/ui/data.js:6
+#: data.js:6
 #, kde-format
 msgid "Lock the screen"
 msgstr "Κλείδωμα οθόνης"
 
-#: contents/ui/data.js:12
+#: data.js:12
 #, kde-format
 msgid "Switch user"
 msgstr "Εναλλαγή χρήστη"
 
-#: contents/ui/data.js:13
+#: data.js:13
 #, kde-format
 msgid "Start a parallel session as a different user"
 msgstr "Έναρξη μιας παράλληλης συνεδρίας σαν διαφορετικός χρήστης"
 
-#: contents/ui/data.js:18
+#: data.js:19
 #, kde-format
 msgid "Shutdown…"
 msgstr "Τερματισμός…"
 
-#: contents/ui/data.js:19
+#: data.js:20
 #, kde-format
 msgid "Turn off the computer"
 msgstr "Κλείσιμο του υπολογιστή"
 
-#: contents/ui/data.js:25
+#: data.js:26
 #, kde-format
 msgid "Restart…"
 msgstr "Επανεκκίνηση…"
 
-#: contents/ui/data.js:26
+#: data.js:27
 #, kde-format
 msgid "Reboot the computer"
 msgstr "Επανεκκίνηση του υπολογιστή"
 
-#: contents/ui/data.js:32
+#: data.js:33
 #, kde-format
 msgid "Logout…"
 msgstr "Αποσύνδεση…"
 
-#: contents/ui/data.js:33
+#: data.js:34
 #, kde-format
 msgid "End the session"
 msgstr "Τερματισμός της συνεδρίας"
 
-#: contents/ui/data.js:39
+#: data.js:40
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Show logout screen"
 msgstr "Εμφάνιση οθόνης αποσύνδεσης"
 
-#: contents/ui/data.js:40
+#: data.js:41
 #, kde-format
 msgid "Log out, turn off, or restart the computer"
 msgstr "Αποσύνδεση, κλείσιμο ή επανεκκίνηση του υπολογιστή"
 
-#: contents/ui/data.js:47
+#: data.js:48
 #, kde-format
 msgid "Sleep (suspend to RAM)"
 msgstr "Κοίμηση (αναστολή στη μνήμη RAM)"
 
-#: contents/ui/data.js:54
+#: data.js:55
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Νάρκη (αναστολή στο δίσκο)"

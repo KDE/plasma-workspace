@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-25 00:40+0000\n"
+"POT-Creation-Date: 2025-06-30 00:43+0000\n"
 "PO-Revision-Date: 2024-06-30 12:39+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -17,122 +17,122 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.05.1\n"
 
-#: contents/config/config.qml:13
+#: config.qml:13
 #, kde-format
 msgid "General"
 msgstr "பொதுவானவை"
 
-#: contents/ui/ConfigGeneral.qml:34
+#: ConfigGeneral.qml:36
 #, kde-format
 msgctxt ""
 "Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
 msgid "Show actions:"
 msgstr "இந்த செயல்களைக் காட்டு"
 
-#: contents/ui/ConfigGeneral.qml:35
+#: ConfigGeneral.qml:37
 #, kde-format
 msgid "Log Out"
 msgstr "அமர்விலிருந்து வெளியேறு"
 
-#: contents/ui/ConfigGeneral.qml:42
+#: ConfigGeneral.qml:44
 #, kde-format
 msgctxt "@option:check"
 msgid "Show logout screen"
 msgstr "வெளியேற்ற திரையை காட்டு"
 
-#: contents/ui/ConfigGeneral.qml:48
+#: ConfigGeneral.qml:50
 #, kde-format
 msgid "Shut Down"
 msgstr "கணினியை நிறுத்து"
 
-#: contents/ui/ConfigGeneral.qml:54
+#: ConfigGeneral.qml:56
 #, kde-format
 msgid "Restart"
 msgstr "மீள்துவக்கு"
 
-#: contents/ui/ConfigGeneral.qml:60 contents/ui/data.js:5
+#: ConfigGeneral.qml:62 data.js:5
 #, kde-format
 msgid "Lock"
 msgstr "பூட்டு"
 
-#: contents/ui/ConfigGeneral.qml:66
+#: ConfigGeneral.qml:68
 #, kde-format
 msgid "Switch User"
 msgstr "பயனரை மாற்று"
 
-#: contents/ui/ConfigGeneral.qml:72 contents/ui/data.js:53
+#: ConfigGeneral.qml:74 data.js:54
 #, kde-format
 msgid "Hibernate"
 msgstr "ஆழுறங்கு"
 
-#: contents/ui/ConfigGeneral.qml:78 contents/ui/data.js:46
+#: ConfigGeneral.qml:80 data.js:47
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "தூங்கு"
 
-#: contents/ui/data.js:6
+#: data.js:6
 #, kde-format
 msgid "Lock the screen"
 msgstr "திரையைப் பூட்டு"
 
-#: contents/ui/data.js:12
+#: data.js:12
 #, kde-format
 msgid "Switch user"
 msgstr "பயனரை மாற்று"
 
-#: contents/ui/data.js:13
+#: data.js:13
 #, kde-format
 msgid "Start a parallel session as a different user"
 msgstr "இன்னொரு பயனராக வேறொரு (இணையான) அமர்வை தொடக்கும்"
 
-#: contents/ui/data.js:18
+#: data.js:19
 #, kde-format
 msgid "Shutdown…"
 msgstr "கணினியை நிறுத்து…"
 
-#: contents/ui/data.js:19
+#: data.js:20
 #, kde-format
 msgid "Turn off the computer"
 msgstr "கணினியை நிறுத்து"
 
-#: contents/ui/data.js:25
+#: data.js:26
 #, kde-format
 msgid "Restart…"
 msgstr "மீள்துவக்கு…"
 
-#: contents/ui/data.js:26
+#: data.js:27
 #, kde-format
 msgid "Reboot the computer"
 msgstr "கணினியை மறுபடியும் துவக்கும்"
 
-#: contents/ui/data.js:32
+#: data.js:33
 #, kde-format
 msgid "Logout…"
 msgstr "கணக்கிலிருந்து வெளியேறு…"
 
-#: contents/ui/data.js:33
+#: data.js:34
 #, kde-format
 msgid "End the session"
 msgstr "தற்போதைய அமர்விலிருந்து வெளியேறும்"
 
-#: contents/ui/data.js:39
+#: data.js:40
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Show logout screen"
 msgstr "வெளியேற்ற திரையை காட்டு"
 
-#: contents/ui/data.js:40
+#: data.js:41
 #, kde-format
 msgid "Log out, turn off, or restart the computer"
 msgstr "வெளியேறலாம், கணினியை நிறுத்தலாம், அல்லது அதை மீள்துவக்கலாம்"
 
-#: contents/ui/data.js:47
+#: data.js:48
 #, kde-format
 msgid "Sleep (suspend to RAM)"
 msgstr "தூங்கு (RAM-க்கு இடைநிறுத்தும்)"
 
-#: contents/ui/data.js:54
+#: data.js:55
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "ஆழுறங்கு (வட்டுக்கு இடைநிறுத்தம்)"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-25 00:40+0000\n"
+"POT-Creation-Date: 2025-06-30 00:43+0000\n"
 "PO-Revision-Date: 2015-02-15 12:30+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -22,127 +22,127 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: contents/config/config.qml:13
+#: config.qml:13
 #, kde-format
 msgid "General"
 msgstr "Opće"
 
-#: contents/ui/ConfigGeneral.qml:34
+#: ConfigGeneral.qml:36
 #, kde-format
 msgctxt ""
 "Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
 msgid "Show actions:"
 msgstr ""
 
-#: contents/ui/ConfigGeneral.qml:35
+#: ConfigGeneral.qml:37
 #, kde-format
 msgid "Log Out"
 msgstr ""
 
-#: contents/ui/ConfigGeneral.qml:42
+#: ConfigGeneral.qml:44
 #, fuzzy, kde-format
 #| msgid "Lock the screen"
 msgctxt "@option:check"
 msgid "Show logout screen"
 msgstr "Zaključaj ekran"
 
-#: contents/ui/ConfigGeneral.qml:48
+#: ConfigGeneral.qml:50
 #, kde-format
 msgid "Shut Down"
 msgstr ""
 
-#: contents/ui/ConfigGeneral.qml:54
+#: ConfigGeneral.qml:56
 #, kde-format
 msgid "Restart"
 msgstr ""
 
-#: contents/ui/ConfigGeneral.qml:60 contents/ui/data.js:5
+#: ConfigGeneral.qml:62 data.js:5
 #, kde-format
 msgid "Lock"
 msgstr "Zaključaj"
 
-#: contents/ui/ConfigGeneral.qml:66
+#: ConfigGeneral.qml:68
 #, kde-format
 msgid "Switch User"
 msgstr "Prebaci korisnika"
 
-#: contents/ui/ConfigGeneral.qml:72 contents/ui/data.js:53
+#: ConfigGeneral.qml:74 data.js:54
 #, kde-format
 msgid "Hibernate"
 msgstr "Hibernacija"
 
-#: contents/ui/ConfigGeneral.qml:78 contents/ui/data.js:46
+#: ConfigGeneral.qml:80 data.js:47
 #, fuzzy, kde-format
 #| msgid "Sleep"
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Spavaj"
 
-#: contents/ui/data.js:6
+#: data.js:6
 #, kde-format
 msgid "Lock the screen"
 msgstr "Zaključaj ekran"
 
-#: contents/ui/data.js:12
+#: data.js:12
 #, kde-format
 msgid "Switch user"
 msgstr "Promjena korisnika"
 
-#: contents/ui/data.js:13
+#: data.js:13
 #, kde-format
 msgid "Start a parallel session as a different user"
 msgstr "Pokreni paralelnu sesiju kao drugi korisnik"
 
-#: contents/ui/data.js:18
+#: data.js:19
 #, kde-format
 msgid "Shutdown…"
 msgstr ""
 
-#: contents/ui/data.js:19
+#: data.js:20
 #, fuzzy, kde-format
 #| msgid "Logout, turn off or restart the computer"
 msgid "Turn off the computer"
 msgstr "Odjavi se, isključi ili ponovo pokreni računar"
 
-#: contents/ui/data.js:25
+#: data.js:26
 #, kde-format
 msgid "Restart…"
 msgstr ""
 
-#: contents/ui/data.js:26
+#: data.js:27
 #, kde-format
 msgid "Reboot the computer"
 msgstr ""
 
-#: contents/ui/data.js:32
+#: data.js:33
 #, kde-format
 msgid "Logout…"
 msgstr ""
 
-#: contents/ui/data.js:33
+#: data.js:34
 #, kde-format
 msgid "End the session"
 msgstr ""
 
-#: contents/ui/data.js:39
+#: data.js:40
 #, fuzzy, kde-format
 #| msgid "Lock the screen"
 msgctxt "@info:tooltip"
 msgid "Show logout screen"
 msgstr "Zaključaj ekran"
 
-#: contents/ui/data.js:40
+#: data.js:41
 #, fuzzy, kde-format
 #| msgid "Logout, turn off or restart the computer"
 msgid "Log out, turn off, or restart the computer"
 msgstr "Odjavi se, isključi ili ponovo pokreni računar"
 
-#: contents/ui/data.js:47
+#: data.js:48
 #, kde-format
 msgid "Sleep (suspend to RAM)"
 msgstr "Spavaj (suspenduj u RAM)"
 
-#: contents/ui/data.js:54
+#: data.js:55
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Hiberniraj (suspenduj na disk)"

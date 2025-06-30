@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-31 00:44+0000\n"
-"PO-Revision-Date: 2025-05-24 20:54+0300\n"
+"PO-Revision-Date: 2025-06-29 09:04+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.04.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -128,7 +128,7 @@ msgstr "Arka Plan Rengini Seç"
 #: imagepackage/contents/ui/main.qml:37
 #, kde-format
 msgid "Open Wallpaper Image"
-msgstr "Duvar Kağıdı Resmi Aç"
+msgstr "Duvar Kâğıdı Resmi Aç"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:60
 #, kde-format
@@ -145,7 +145,7 @@ msgstr "Ekle…"
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Wallpaper Image…"
-msgstr "Duvar Kağıdı Görseli Ekle…"
+msgstr "Duvar Kâğıdı Görseli Ekle…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:71
 #, kde-format
@@ -157,7 +157,7 @@ msgstr "Yeni Al…"
 #, kde-format
 msgctxt "@action:button"
 msgid "Get New Wallpaper Images…"
-msgstr "Yeni Duvar Kağıdı Görselleri Al…"
+msgstr "Yeni Duvar Kâğıdı Görselleri Al…"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:34
 #, kde-format
@@ -167,19 +167,19 @@ msgstr "İçeren Klasörü Aç"
 #: imagepackage/contents/ui/WallpaperDelegate.qml:40
 #, kde-format
 msgid "Restore wallpaper"
-msgstr "Duvar kağıdını geri yükle"
+msgstr "Duvar kâğıdını geri yükle"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:45
 #, kde-format
 msgid "Remove Wallpaper"
-msgstr "Duvar Kağıdını Kaldır"
+msgstr "Duvar Kâğıdını Kaldır"
 
 #: plasma-apply-wallpaperimage.cpp:28
 #, kde-format
 msgid ""
 "This tool allows you to set an image as the wallpaper for the Plasma session."
 msgstr ""
-"Bu araç, Plasma oturumu için bir görseli duvar kağıdı olarak ayarlamanıza "
+"Bu araç, Plasma oturumu için bir görseli duvar kâğıdı olarak ayarlamanıza "
 "izin verir."
 
 #: plasma-apply-wallpaperimage.cpp:30
@@ -188,8 +188,8 @@ msgid ""
 "An image file or an installed wallpaper kpackage that you wish to set as the "
 "wallpaper for your Plasma session"
 msgstr ""
-"Bir görseli dosyası veya kurulu bir duvar kağıdı kpackage’ını Plasma duvar "
-"kağıdı olarak ayarlayabilirsiniz"
+"Bir görseli dosyası veya kurulu bir duvar kâğıdı kpackage’ını Plasma duvar "
+"kâğıdı olarak ayarlayabilirsiniz"
 
 #: plasma-apply-wallpaperimage.cpp:33
 #, kde-format
@@ -203,8 +203,8 @@ msgid ""
 "contact the author of the wallpaper to fix this, or rename the file "
 "yourself: %1"
 msgstr ""
-"Bu duvar kağıdının dosya adında başıboş bir tek tırnak (') var, lütfen duvar "
-"kağıdının sanatçısı ile iletişime geçin veya dosyayı kendiniz yeniden "
+"Bu duvar kâğıdının dosya adında başıboş bir tek tırnak (') var, lütfen duvar "
+"kâğıdının sanatçısı ile iletişime geçin veya dosyayı kendiniz yeniden "
 "adlandırın: %1"
 
 #: plasma-apply-wallpaperimage.cpp:99
@@ -215,19 +215,19 @@ msgstr "Geçersiz dolgu kipi belirtildi: %1"
 #: plasma-apply-wallpaperimage.cpp:115
 #, kde-format
 msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
-msgstr "Plasma duvar kağıdı ayarlamaya çalışırken bir hata oluştu:\n"
+msgstr "Plasma duvar kâğıdı ayarlamaya çalışırken bir hata oluştu:\n"
 
 #: plasma-apply-wallpaperimage.cpp:119
 #, kde-format
 msgid ""
 "Successfully set the wallpaper for all desktops to the KPackage based %1"
 msgstr ""
-"Tüm masaüstleri için KPackage tabanlı %1 duvar kağıdı başarıyla ayarlandı"
+"Tüm masaüstleri için KPackage tabanlı %1 duvar kâğıdı başarıyla ayarlandı"
 
 #: plasma-apply-wallpaperimage.cpp:121
 #, kde-format
 msgid "Successfully set the wallpaper for all desktops to the image %1"
-msgstr "Tüm masaüstleri için duvar kağıdı %1 görseli olarak ayarlandı"
+msgstr "Tüm masaüstleri için duvar kâğıdı %1 görseli olarak ayarlandı"
 
 #: plasma-apply-wallpaperimage.cpp:128
 #, kde-format
@@ -235,13 +235,13 @@ msgid ""
 "The file passed to be set as wallpaper does not exist, or we cannot identify "
 "it as a wallpaper: %1"
 msgstr ""
-"Duvar kağıdı olarak ayarlanmak istenen dosya yok veya onu duvar kağıdı "
+"Duvar kâğıdı olarak ayarlanmak istenen dosya yok veya onu duvar kâğıdı "
 "olarak tanımlayamıyoruz: %1"
 
 #: plugin/imagebackend.cpp:38
 #, kde-format
 msgid "Next Wallpaper Image"
-msgstr "Sonraki Duvar Kağıdı Görseli"
+msgstr "Sonraki Duvar Kâğıdı Görseli"
 
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
 #: plugin/imagebackend.cpp:349
@@ -340,13 +340,13 @@ msgstr "Klasör Aç…"
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:275
 #, kde-format
 msgid "There are no wallpaper locations configured"
-msgstr "Yapılandırılmış duvar kağıdı konumu yok"
+msgstr "Yapılandırılmış duvar kâğıdı konumu yok"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:49
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Set as Wallpaper"
-msgstr "Duvar Kağıdı Olarak Ayarla"
+msgstr "Duvar Kâğıdı Olarak Ayarla"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:52
 #, kde-format
@@ -370,7 +370,7 @@ msgstr "Her İkisi"
 #, kde-kuit-format
 msgctxt "@info %1 is the dbus error message"
 msgid "An error occurred while attempting to set the Plasma wallpaper:<nl/>%1"
-msgstr "Plasma duvar kağıdını ayarlamaya çalışırken bir hata oluştu:<nl/>%1"
+msgstr "Plasma duvar kâğıdını ayarlamaya çalışırken bir hata oluştu:<nl/>%1"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:110
 #, kde-format
