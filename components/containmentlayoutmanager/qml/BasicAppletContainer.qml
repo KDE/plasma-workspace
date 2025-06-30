@@ -228,7 +228,6 @@ ContainmentLayoutManager.AppletContainer {
             maskSource: mask
             // In the config they are more or less from 0 to 2, here from -1 to 1
             contrast: ContainmentLayoutManager.PlasmaBackground.backgroundContrast - 1.0
-            brightness: ContainmentLayoutManager.PlasmaBackground.backgroundIntensity - 1.0
             saturation: ContainmentLayoutManager.PlasmaBackground.backgroundSaturation - 1.0
 
             Item {
