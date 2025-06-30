@@ -43,7 +43,7 @@
         "Description[sl]": "Uveljavi izločeno barvo poudarka iz ozadja na zahtevo",
         "Description[sv]": "Använder extraherad accentfärg från skrivbordsunderlägg på begäran",
         "Description[ta]": "கோரிக்கைக்கேற்ப, பின்புல படித்தின் பிரதான நிறத்தை நிறத்திட்டத்தின் சிறப்பு நிறமாக அமைக்கும்",
-        "Description[tr]": "İsteğe bağlı olarak, duvar kağıdından çıkarılan vurgu rengini uygular",
+        "Description[tr]": "İsteğe bağlı olarak, duvar kâğıdından çıkarılan vurgu rengini uygular",
         "Description[uk]": "Застосовує видобутий з фонового зображення стільниці колір акценту у відповідь на запит",
         "Description[vi]": "Áp dụng màu chủ đạo trích xuất từ phông nền khi có yêu cầu",
         "Description[x-test]": "xxApplies extracted accent color from wallpaper on requestxx",
