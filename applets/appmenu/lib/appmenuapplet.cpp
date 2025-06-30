@@ -187,19 +187,23 @@ void AppMenuApplet::trigger(QQuickItem *ctx, int idx)
             }
         };
 
-        if (!m_currentMenu) {
-            m_currentMenu = new QMenu(qobject_cast<QWidget *>(actionMenu->parent()));
-            connect(m_currentMenu, &QMenu::aboutToHide, this, &AppMenuApplet::onMenuAboutToHide, Qt::UniqueConnection);
-        } else if (m_sourceMenu != actionMenu) {
-            for (QAction *action : m_currentMenu->actions()) {
-                m_currentMenu->removeAction(action);
-                m_sourceMenu->addAction(action);
+        if (view() == FullView) {
+            if (!m_currentMenu) {
+                m_currentMenu = new QMenu(qobject_cast<QWidget *>(actionMenu->parent()));
+                connect(m_currentMenu, &QMenu::aboutToHide, this, &AppMenuApplet::onMenuAboutToHide, Qt::UniqueConnection);
+            } else if (m_sourceMenu != actionMenu) {
+                for (QAction *action : m_currentMenu->actions()) {
+                    m_currentMenu->removeAction(action);
+                    m_sourceMenu->addAction(action);
+                }
             }
-        }
-        m_sourceMenu = actionMenu;
-        for (QAction *action : m_sourceMenu->actions()) {
-            m_sourceMenu->removeAction(action);
-            m_currentMenu->addAction(action);
+            m_sourceMenu = actionMenu;
+            for (QAction *action : m_sourceMenu->actions()) {
+                m_sourceMenu->removeAction(action);
+                m_currentMenu->addAction(action);
+            }
+        } else {
+            m_currentMenu = actionMenu;
         }
 
         QTimer::singleShot(0, ctx, ungrabMouseHack);
@@ -230,6 +234,11 @@ void AppMenuApplet::trigger(QQuickItem *ctx, int idx)
                 m_currentMenu->windowHandle()->setTransientParent(ctx->window());
                 m_currentMenu->popup(pos);
             }
+        }
+
+        if (KWindowSystem::isPlatformWayland() && view() == CompactView) {
+            m_currentMenu->popup(pos);
+            connect(actionMenu, &QMenu::aboutToHide, this, &AppMenuApplet::onMenuAboutToHide, Qt::UniqueConnection);
         }
 
         setCurrentIndex(idx);
