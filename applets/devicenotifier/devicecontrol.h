@@ -10,7 +10,7 @@
 #include <QAbstractListModel>
 #include <qqmlregistration.h>
 
-#include "deviceerrormonitor_p.h"
+#include "devicemessagemonitor_p.h"
 #include "devicestatemonitor_p.h"
 #include "spacemonitor_p.h"
 
@@ -32,10 +32,10 @@ public:
         FreeSpaceText,
         SizeText,
         Mounted,
+        State,
         OperationResult,
         Timestamp,
-        Error,
-        ErrorMessage,
+        Message,
         Actions,
     };
 
@@ -55,7 +55,7 @@ private Q_SLOTS:
 
     void onDeviceSizeChanged(const QString &udi);
     void onDeviceStatusChanged(const QString &udi);
-    void onDeviceErrorChanged(const QString &udi);
+    void onDeviceMessageChanged(const QString &udi);
 
 private:
     void deviceDelayRemove(const QString &udi, const QString &parentUdi);
@@ -85,5 +85,5 @@ private:
 
     std::shared_ptr<SpaceMonitor> m_spaceMonitor;
     std::shared_ptr<DevicesStateMonitor> m_stateMonitor;
-    std::shared_ptr<DeviceErrorMonitor> m_errorMonitor;
+    std::shared_ptr<DeviceMessageMonitor> m_messageMonitor;
 };

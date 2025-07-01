@@ -32,32 +32,32 @@ PlasmaExtras.ExpandableListItem {
     required property string deviceSizeText
     required property bool deviceIsBusy
     required property bool deviceMounted
+    required property int deviceState
     required property int deviceOperationResult
-    required property int deviceError
-    required property string deviceErrorMessage
+    required property string deviceMessage
     required property var deviceActions
     required property var deviceEmblems
 
-    property bool hasMessage: deviceItem.deviceErrorMessage !== ""
+    property bool hasMessage: deviceItem.deviceMessage !== ""
 
     //Shows true whenever the device is idle and present in the system.
-    readonly property bool isFree: !deviceItem.deviceIsBusy && deviceItem.deviceOperationResult !== DevicesStateMonitor.NotPresent
+    readonly property bool isFree: !deviceItem.deviceIsBusy && deviceItem.deviceState !== DevicesStateMonitor.NotPresent
 
     //Shows true whenever the device finished some job
-    readonly property bool isOperationFinished: deviceItem.isFree && deviceItem.deviceOperationResult !== DevicesStateMonitor.Idle
+    readonly property bool isOperationFinished: deviceItem.isFree && deviceItem.deviceState !== DevicesStateMonitor.Idle
 
-    onDeviceOperationResultChanged: {
+    onDeviceStateChanged: {
         //No need to update anything if device is not present in the system
-        if (deviceItem.deviceOperationResult === DevicesStateMonitor.NotPresent) {
+        if (deviceItem.deviceState === DevicesStateMonitor.NotPresent) {
             return;
         }
 
-        if (deviceItem.deviceOperationResult === DevicesStateMonitor.Unmounting) {
+        if (deviceItem.deviceState === DevicesStateMonitor.Unmounting) {
             unmountTimer.restart();
-        } else if (deviceItem.deviceError === 0) {
+        } else if (deviceItem.deviceOperationResult === 0) {
             devicenotifier.popupIcon = "dialog-ok"
             popupIconTimer.restart()
-        } else if (deviceItem.deviceError !== 0) {
+        } else if (deviceItem.deviceOperationResult !== 0) {
             devicenotifier.popupIcon = "dialog-error"
             popupIconTimer.restart()
         }
@@ -82,7 +82,7 @@ PlasmaExtras.ExpandableListItem {
 
     iconEmblem: {
         if (deviceItem.isOperationFinished && deviceItem.hasMessage) {
-            if (deviceItem.deviceError === 0) {
+            if (deviceItem.deviceOperationResult === 0) {
                 return "emblem-information"
             } else {
                 return "emblem-error"
@@ -99,23 +99,23 @@ PlasmaExtras.ExpandableListItem {
 
     subtitle: {
         if (deviceItem.isOperationFinished && deviceItem.hasMessage) {
-            return deviceItem.deviceErrorMessage
+            return deviceItem.deviceMessage
         }
-        if (deviceItem.deviceOperationResult === DevicesStateMonitor.Checking) {
+        if (deviceItem.deviceState === DevicesStateMonitor.Checking) {
             return i18nc("Accessing is a less technical word for Mounting; translation should be short and mean \'Currently mounting this device\'", "Checking…")
-        } else if (deviceItem.deviceOperationResult === DevicesStateMonitor.Repairing) {
+        } else if (deviceItem.deviceState === DevicesStateMonitor.Repairing) {
             return i18nc("Accessing is a less technical word for Mounting; translation should be short and mean \'Currently mounting this device\'", "Repairing…")
         } else if (!deviceItem.deviceIsBusy) {
             if (deviceItem.deviceFreeSpace > 0 && deviceItem.deviceSize > 0) {
                 return i18nc("@info:status Free disk space", "%1 free of %2", deviceItem.deviceFreeSpaceText, deviceItem.deviceSizeText)
             }
             return ""
-        } else if (deviceItem.deviceOperationResult === DevicesStateMonitor.Mounting) {
+        } else if (deviceItem.deviceState === DevicesStateMonitor.Mounting) {
             return i18nc("Accessing is a less technical word for Mounting; translation should be short and mean \'Currently mounting this device\'", "Accessing…")
-        } else if (deviceItem.deviceOperationResult === DevicesStateMonitor.Unmounting && unmountTimer.running) {
+        } else if (deviceItem.deviceState === DevicesStateMonitor.Unmounting && unmountTimer.running) {
             // Unmounting; shown if unmount takes less than 1 second
             return i18nc("Removing is a less technical word for Unmounting; translation should be short and mean \'Currently unmounting this device\'", "Removing…")
-        } else if (deviceItem.deviceOperationResult === DevicesStateMonitor.Unmounting) {
+        } else if (deviceItem.deviceState === DevicesStateMonitor.Unmounting) {
             // Unmounting; shown if unmount takes longer than 1 second
             return i18n("Don't unplug yet! Files are still being transferred…")
         }

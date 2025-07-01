@@ -106,7 +106,7 @@ QString MountAction::text() const
 
 void MountAction::deviceStateChanged(const QString &udi)
 {
-    if (udi != m_udi || m_stateMonitor->getOperationResult(m_udi) != DevicesStateMonitor::CheckDone) {
+    if (udi != m_udi || m_stateMonitor->getState(m_udi) != DevicesStateMonitor::CheckDone) {
         return;
     }
 

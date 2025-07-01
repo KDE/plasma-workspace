@@ -35,7 +35,7 @@ class DevicesStateMonitor : public QObject
     QML_UNCREATABLE("Singleton that monitors device states")
 
 public:
-    enum OperationResult {
+    enum State {
         NotPresent = 0,
         Idle,
         Mounting,
@@ -48,7 +48,7 @@ public:
         RepairDone,
     };
 
-    Q_ENUM(OperationResult)
+    Q_ENUM(State)
 
     static std::shared_ptr<DevicesStateMonitor> instance();
     ~DevicesStateMonitor() override;
@@ -73,9 +73,9 @@ public:
      *
      * Successful and unsuccessful states are changed to Idle after some time
      */
-    OperationResult getOperationResult(const QString &udi) const;
-    Solid::ErrorType getErrorType(const QString &udi) const;
-    QVariant getErrorData(const QString &udi) const;
+    State getState(const QString &udi) const;
+    Solid::ErrorType getOperationResult(const QString &udi) const;
+    QVariant getOperationInfo(const QString &udi) const;
 
 private:
     explicit DevicesStateMonitor(QObject *parent = nullptr);
@@ -88,7 +88,7 @@ private Q_SLOTS:
     void setUnmountingState(const QString &udi);
     void setCheckingState(const QString &udi);
     void setRepairingState(const QString &udi);
-    void setIdleState(Solid::ErrorType error, QVariant errorData, const QString &udi);
+    void setIdleState(Solid::ErrorType operationResult, QVariant operationInfo, const QString &udi);
 
 Q_SIGNALS:
 
@@ -104,9 +104,9 @@ private:
         bool isMounted;
         bool isChecked;
         bool needRepair;
-        Solid::ErrorType errorType;
-        QVariant errorData;
-        OperationResult operationResult;
+        Solid::ErrorType operationResult;
+        QVariant operationInfo;
+        State state;
         QDateTime deviceTimeStamp;
     };
 

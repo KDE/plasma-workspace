@@ -36,7 +36,7 @@ DeviceControl::DeviceControl(QObject *parent)
       })
     , m_spaceMonitor(SpaceMonitor::instance())
     , m_stateMonitor(DevicesStateMonitor::instance())
-    , m_errorMonitor(DeviceErrorMonitor::instance())
+    , m_messageMonitor(DeviceMessageMonitor::instance())
 
 {
     qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: Begin initializing";
@@ -55,7 +55,7 @@ DeviceControl::DeviceControl(QObject *parent)
 
     connect(m_spaceMonitor.get(), &SpaceMonitor::sizeChanged, this, &DeviceControl::onDeviceSizeChanged);
     connect(m_stateMonitor.get(), &DevicesStateMonitor::stateChanged, this, &DeviceControl::onDeviceStatusChanged);
-    connect(m_errorMonitor.get(), &DeviceErrorMonitor::errorDataChanged, this, &DeviceControl::onDeviceErrorChanged);
+    connect(m_messageMonitor.get(), &DeviceMessageMonitor::messageChanged, this, &DeviceControl::onDeviceMessageChanged);
     qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: Initialized";
 }
 
@@ -105,8 +105,8 @@ QVariant DeviceControl::data(const QModelIndex &index, int role) const
         return m_stateMonitor->isMounted(m_devices[index.row()].udi());
     }
 
-    case OperationResult: {
-        return m_stateMonitor->getOperationResult(m_devices[index.row()].udi());
+    case State: {
+        return m_stateMonitor->getState(m_devices[index.row()].udi());
     }
     case Timestamp: {
         return m_stateMonitor->getDeviceTimeStamp(m_devices[index.row()].udi());
@@ -114,10 +114,10 @@ QVariant DeviceControl::data(const QModelIndex &index, int role) const
     case Type: {
         return m_deviceTypes[m_devices[index.row()].udi()].first;
     }
-    case Error:
-        return m_stateMonitor->getErrorType(m_devices[index.row()].udi());
-    case ErrorMessage:
-        return m_errorMonitor->getErrorMassage(m_devices[index.row()].udi());
+    case OperationResult:
+        return m_stateMonitor->getOperationResult(m_devices[index.row()].udi());
+    case Message:
+        return m_messageMonitor->getMessage(m_devices[index.row()].udi());
     case Actions: {
         if (auto it = m_actions.constFind(m_devices[index.row()].udi()); it != m_actions.end()) {
             return QVariant::fromValue(*it);
@@ -144,10 +144,10 @@ QHash<int, QByteArray> DeviceControl::roleNames() const
     roles[FreeSpaceText] = "deviceFreeSpaceText";
     roles[SizeText] = "deviceSizeText";
     roles[Mounted] = "deviceMounted";
+    roles[State] = "deviceState";
     roles[OperationResult] = "deviceOperationResult";
     roles[Timestamp] = "deviceTimestamp";
-    roles[Error] = "deviceError";
-    roles[ErrorMessage] = "deviceErrorMessage";
+    roles[Message] = "deviceMessage";
     roles[Actions] = "deviceActions";
     return roles;
 }
@@ -229,7 +229,7 @@ void DeviceControl::onDeviceAdded(const QString &udi)
     qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: Add device: " << udi << " to the model at position : " << position;
     m_stateMonitor->addMonitoringDevice(udi);
     m_spaceMonitor->addMonitoringDevice(udi);
-    m_errorMonitor->addMonitoringDevice(udi);
+    m_messageMonitor->addMonitoringDevice(udi);
     m_devices.append(device);
     endInsertRows();
 
@@ -344,7 +344,7 @@ void DeviceControl::deviceDelayRemove(const QString &udi, const QString &parentU
             m_deviceTypes.remove(udi);
 
             m_stateMonitor->removeMonitoringDevice(m_devices[position].udi());
-            m_errorMonitor->removeMonitoringDevice(m_devices[position].udi());
+            m_messageMonitor->removeMonitoringDevice(m_devices[position].udi());
 
             qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: device: " << m_devices[position].udi() << " successfully removed from the model";
             m_devices.removeAt(position);
@@ -414,19 +414,19 @@ void DeviceControl::onDeviceStatusChanged(const QString &udi)
     for (int position = 0; position < m_devices.size(); ++position) {
         if (m_devices[position].udi() == udi) {
             QModelIndex index = DeviceControl::index(position);
-            Q_EMIT dataChanged(index, index, {Mounted, OperationResult, Emblems, IsBusy, Error});
+            Q_EMIT dataChanged(index, index, {Mounted, State, OperationResult, Emblems, IsBusy});
             return;
         }
     }
 }
 
-void DeviceControl::onDeviceErrorChanged(const QString &udi)
+void DeviceControl::onDeviceMessageChanged(const QString &udi)
 {
     qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: Error for device : " << udi << " changed";
     for (int position = 0; position < m_devices.size(); ++position) {
         if (m_devices[position].udi() == udi) {
             QModelIndex index = DeviceControl::index(position);
-            Q_EMIT dataChanged(index, index, {ErrorMessage});
+            Q_EMIT dataChanged(index, index, {Message});
             return;
         }
     }
