@@ -1442,6 +1442,7 @@ void ShellCorona::handleScreenOrderChanged(QList<QScreen *> screens)
             v->setVisible(true);
             m_panelViews[v->containment()] = v;
         } else {
+            m_waitingPanels << v->containment();
             v->destroy();
             v->containment()->reactToScreenChange();
         }
