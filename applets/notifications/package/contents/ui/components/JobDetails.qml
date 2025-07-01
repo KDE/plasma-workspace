@@ -100,15 +100,15 @@ GridLayout {
 
                 if (processed > 0 || total > 1) {
                     // Format numbers to not display as exponential
-                    processedAsString = processed.toLocaleString(Qt.locale(), 'f', 0);
-                    totalAsString = total.toLocaleString(Qt.locale(), 'f', 0);
+                    const processedAsString = processed.toLocaleString(Qt.locale(), 'f', 0);
+                    const totalAsString = total.toLocaleString(Qt.locale(), 'f', 0);
 
                     if (processed > 0 && total > 0 && processed <= total) {
                         switch(modelData) {
                         case "Bytes":
                             return i18ndc("plasma_applet_org.kde.plasma.notifications", "How many bytes have been copied", "%2 of %1",
-                                KCoreAddons.Format.formatByteSize(total).toLocaleString(Qt.locale(), 'f', 0),
-                                KCoreAddons.Format.formatByteSize(processed)).toLocaleString(Qt.locale(), 'f', 0)
+                                KCoreAddons.Format.formatByteSize(total),
+                                KCoreAddons.Format.formatByteSize(processed))
                         case "Files":
                             return i18ndcp("plasma_applet_org.kde.plasma.notifications", "How many files have been copied", "%2 of %1 file", "%2 of %1 files",
                                           totalAsString, processedAsString);
@@ -122,7 +122,7 @@ GridLayout {
                     } else {
                         switch(modelData) {
                         case "Bytes":
-                            return KCoreAddons.Format.formatByteSize(processedAsString || totalAsString)
+                            return KCoreAddons.Format.formatByteSize(processed || total)
                         case "Files":
                             return i18ndp("plasma_applet_org.kde.plasma.notifications", "%1 file", "%1 files", (processedAsString || totalAsString));
                         case "Directories":
