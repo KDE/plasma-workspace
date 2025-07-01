@@ -1501,8 +1501,6 @@ void ShellCorona::addOutput(QScreen *screen)
         removeAction->deleteLater();
     }
 
-    connect(containment, &Plasma::Containment::uiReadyChanged, this, &ShellCorona::checkAllDesktopsUiReady);
-
     m_desktopViewForScreen[insertPosition] = view;
     view->setContainment(containment);
     view->show();
@@ -1512,6 +1510,9 @@ void ShellCorona::addOutput(QScreen *screen)
     // need to specifically call the reactToScreenChange, since when the screen is shown it's not yet
     // in the list. We still don't want to have an invisible view added.
     containment->reactToScreenChange();
+
+    checkAllDesktopsUiReady();
+    connect(containment, &Plasma::Containment::uiReadyChanged, this, &ShellCorona::checkAllDesktopsUiReady);
 
     if (!m_screenReorderInProgress) {
         Q_EMIT availableScreenRectChanged(m_screenPool->idForScreen(screen));
