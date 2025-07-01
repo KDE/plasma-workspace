@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_systemtray\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-15 00:44+0000\n"
+"POT-Creation-Date: 2025-07-01 00:43+0000\n"
 "PO-Revision-Date: 2025-06-24 16:22+0300\n"
 "Last-Translator: Olesya Gerasimenko <goa@altlinux.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -39,52 +39,52 @@ msgstr "Основное"
 msgid "Entries"
 msgstr "Элементы"
 
-#: package/contents/ui/ConfigEntries.qml:34
+#: package/contents/ui/ConfigEntries.qml:36
 #, kde-format
 msgid "Shown when relevant"
 msgstr "Автоматически"
 
-#: package/contents/ui/ConfigEntries.qml:35
+#: package/contents/ui/ConfigEntries.qml:40
 #, kde-format
 msgid "Always shown"
 msgstr "Всегда показывать"
 
-#: package/contents/ui/ConfigEntries.qml:36
+#: package/contents/ui/ConfigEntries.qml:44
 #, kde-format
 msgid "Always hidden"
 msgstr "Всегда скрывать"
 
-#: package/contents/ui/ConfigEntries.qml:37
+#: package/contents/ui/ConfigEntries.qml:48
 #, kde-format
 msgid "Disabled"
 msgstr "Отключить"
 
-#: package/contents/ui/ConfigEntries.qml:109
+#: package/contents/ui/ConfigEntries.qml:119
 #, kde-format
 msgid "Application Status"
 msgstr "Состояния приложений"
 
-#: package/contents/ui/ConfigEntries.qml:111
+#: package/contents/ui/ConfigEntries.qml:121
 #, kde-format
 msgid "Communications"
 msgstr "Связь"
 
-#: package/contents/ui/ConfigEntries.qml:113
+#: package/contents/ui/ConfigEntries.qml:123
 #, kde-format
 msgid "System Services"
 msgstr "Системные службы"
 
-#: package/contents/ui/ConfigEntries.qml:115
+#: package/contents/ui/ConfigEntries.qml:125
 #, kde-format
 msgid "Hardware Control"
 msgstr "Управление оборудованием"
 
-#: package/contents/ui/ConfigEntries.qml:118
+#: package/contents/ui/ConfigEntries.qml:128
 #, kde-format
 msgid "Miscellaneous"
 msgstr "Прочее"
 
-#: package/contents/ui/ConfigEntries.qml:161
+#: package/contents/ui/ConfigEntries.qml:171
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -100,13 +100,13 @@ msgstr ""
 "применение данной опции может вызвать непредсказуемое поведение.<nl/><nl/"
 ">Используйте эту возможность на свой страх и риск."
 
-#: package/contents/ui/ConfigEntries.qml:164
+#: package/contents/ui/ConfigEntries.qml:174
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
 msgstr "Я понимаю и принимаю риски"
 
-#: package/contents/ui/ConfigEntries.qml:176
+#: package/contents/ui/ConfigEntries.qml:186
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -120,23 +120,23 @@ msgstr ""
 "><nl/> Вместо этого рекомендуется настроить буфер обмена так, чтобы "
 "отключить его историю или запоминать только один последний элемент."
 
-#: package/contents/ui/ConfigEntries.qml:204
+#: package/contents/ui/ConfigEntries.qml:214
 #, kde-format
 msgctxt "Name of the system tray entry"
 msgid "Entry"
 msgstr "Элемент"
 
-#: package/contents/ui/ConfigEntries.qml:211
+#: package/contents/ui/ConfigEntries.qml:221
 #, kde-format
 msgid "Visibility"
 msgstr "Видимость"
 
-#: package/contents/ui/ConfigEntries.qml:218
+#: package/contents/ui/ConfigEntries.qml:228
 #, kde-format
 msgid "Keyboard Shortcut"
 msgstr "Комбинация клавиш"
 
-#: package/contents/ui/ConfigEntries.qml:391
+#: package/contents/ui/ConfigEntries.qml:399
 #, kde-format
 msgid "Always show all entries"
 msgstr "Всегда показывать все элементы"

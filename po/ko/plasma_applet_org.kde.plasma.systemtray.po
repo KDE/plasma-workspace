@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-15 00:44+0000\n"
+"POT-Creation-Date: 2025-07-01 00:43+0000\n"
 "PO-Revision-Date: 2025-06-10 22:11+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -28,52 +28,52 @@ msgstr "일반"
 msgid "Entries"
 msgstr "항목"
 
-#: package/contents/ui/ConfigEntries.qml:34
+#: package/contents/ui/ConfigEntries.qml:36
 #, kde-format
 msgid "Shown when relevant"
 msgstr "필요할 때 표시"
 
-#: package/contents/ui/ConfigEntries.qml:35
+#: package/contents/ui/ConfigEntries.qml:40
 #, kde-format
 msgid "Always shown"
 msgstr "항상 표시"
 
-#: package/contents/ui/ConfigEntries.qml:36
+#: package/contents/ui/ConfigEntries.qml:44
 #, kde-format
 msgid "Always hidden"
 msgstr "항상 숨김"
 
-#: package/contents/ui/ConfigEntries.qml:37
+#: package/contents/ui/ConfigEntries.qml:48
 #, kde-format
 msgid "Disabled"
 msgstr "비활성화됨"
 
-#: package/contents/ui/ConfigEntries.qml:109
+#: package/contents/ui/ConfigEntries.qml:119
 #, kde-format
 msgid "Application Status"
 msgstr "앱 상태"
 
-#: package/contents/ui/ConfigEntries.qml:111
+#: package/contents/ui/ConfigEntries.qml:121
 #, kde-format
 msgid "Communications"
 msgstr "통신"
 
-#: package/contents/ui/ConfigEntries.qml:113
+#: package/contents/ui/ConfigEntries.qml:123
 #, kde-format
 msgid "System Services"
 msgstr "시스템 서비스"
 
-#: package/contents/ui/ConfigEntries.qml:115
+#: package/contents/ui/ConfigEntries.qml:125
 #, kde-format
 msgid "Hardware Control"
 msgstr "하드웨어 제어"
 
-#: package/contents/ui/ConfigEntries.qml:118
+#: package/contents/ui/ConfigEntries.qml:128
 #, kde-format
 msgid "Miscellaneous"
 msgstr "기타"
 
-#: package/contents/ui/ConfigEntries.qml:161
+#: package/contents/ui/ConfigEntries.qml:171
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -89,13 +89,13 @@ msgstr ""
 "수도 있습니다.<nl/><nl/>이 설정을 사용하는 것은 본인의 책임이며, KDE나 앱 개"
 "발자에게 문제를 보고하지 마십시오."
 
-#: package/contents/ui/ConfigEntries.qml:164
+#: package/contents/ui/ConfigEntries.qml:174
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
 msgstr "이해했고 위험성을 받아들임"
 
-#: package/contents/ui/ConfigEntries.qml:176
+#: package/contents/ui/ConfigEntries.qml:186
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -108,23 +108,23 @@ msgstr ""
 "실되므로 추천하지 않습니다.<nl/><nl/>그 대신 클립보드 과거 기록을 비활성화하"
 "거나 최근 1개 항목만 기억하게 하는 것을 추천합니다."
 
-#: package/contents/ui/ConfigEntries.qml:204
+#: package/contents/ui/ConfigEntries.qml:214
 #, kde-format
 msgctxt "Name of the system tray entry"
 msgid "Entry"
 msgstr "항목"
 
-#: package/contents/ui/ConfigEntries.qml:211
+#: package/contents/ui/ConfigEntries.qml:221
 #, kde-format
 msgid "Visibility"
 msgstr "표시 여부"
 
-#: package/contents/ui/ConfigEntries.qml:218
+#: package/contents/ui/ConfigEntries.qml:228
 #, kde-format
 msgid "Keyboard Shortcut"
 msgstr "키보드 단축키"
 
-#: package/contents/ui/ConfigEntries.qml:391
+#: package/contents/ui/ConfigEntries.qml:399
 #, kde-format
 msgid "Always show all entries"
 msgstr "항상 모든 항목 표시"

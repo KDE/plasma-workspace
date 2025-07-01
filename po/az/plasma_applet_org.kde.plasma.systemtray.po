@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-15 00:44+0000\n"
+"POT-Creation-Date: 2025-07-01 00:43+0000\n"
 "PO-Revision-Date: 2025-05-19 15:53+0400\n"
 "Last-Translator: linux <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -28,52 +28,52 @@ msgstr "Əsas"
 msgid "Entries"
 msgstr "Girişlər"
 
-#: package/contents/ui/ConfigEntries.qml:34
+#: package/contents/ui/ConfigEntries.qml:36
 #, kde-format
 msgid "Shown when relevant"
 msgstr "Lazım olduğunda göstərilir"
 
-#: package/contents/ui/ConfigEntries.qml:35
+#: package/contents/ui/ConfigEntries.qml:40
 #, kde-format
 msgid "Always shown"
 msgstr "Həmişə göstərmək"
 
-#: package/contents/ui/ConfigEntries.qml:36
+#: package/contents/ui/ConfigEntries.qml:44
 #, kde-format
 msgid "Always hidden"
 msgstr "Həmişə gizlətmək"
 
-#: package/contents/ui/ConfigEntries.qml:37
+#: package/contents/ui/ConfigEntries.qml:48
 #, kde-format
 msgid "Disabled"
 msgstr "Söndürülüb"
 
-#: package/contents/ui/ConfigEntries.qml:109
+#: package/contents/ui/ConfigEntries.qml:119
 #, kde-format
 msgid "Application Status"
 msgstr "Tətbiq vəziyyəti"
 
-#: package/contents/ui/ConfigEntries.qml:111
+#: package/contents/ui/ConfigEntries.qml:121
 #, kde-format
 msgid "Communications"
 msgstr "Kommunikasiya"
 
-#: package/contents/ui/ConfigEntries.qml:113
+#: package/contents/ui/ConfigEntries.qml:123
 #, kde-format
 msgid "System Services"
 msgstr "Sistem xidmətləri"
 
-#: package/contents/ui/ConfigEntries.qml:115
+#: package/contents/ui/ConfigEntries.qml:125
 #, kde-format
 msgid "Hardware Control"
 msgstr "Avadanlığın İdarə edilməsi"
 
-#: package/contents/ui/ConfigEntries.qml:118
+#: package/contents/ui/ConfigEntries.qml:128
 #, kde-format
 msgid "Miscellaneous"
 msgstr "Müxtəlif"
 
-#: package/contents/ui/ConfigEntries.qml:161
+#: package/contents/ui/ConfigEntries.qml:171
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -89,13 +89,13 @@ msgstr ""
 "><nl/>Bu ayarı təhlükəni gözə alaraq istifadə edin və tətbiqin müəllifinə bu "
 "barədə xəta hesabatı göndərməyin."
 
-#: package/contents/ui/ConfigEntries.qml:164
+#: package/contents/ui/ConfigEntries.qml:174
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
 msgstr "Mən bu təhlükəni başa düşürəm"
 
-#: package/contents/ui/ConfigEntries.qml:176
+#: package/contents/ui/ConfigEntries.qml:186
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -109,23 +109,23 @@ msgstr ""
 "><nl/>Bunun əvəzinə mübadilə yaddaşını tarixçəni söndürmək və ya hər "
 "dəfəsində yalnız bir elementi saxlamaq kimi ayarlaya bilərsiniz."
 
-#: package/contents/ui/ConfigEntries.qml:204
+#: package/contents/ui/ConfigEntries.qml:214
 #, kde-format
 msgctxt "Name of the system tray entry"
 msgid "Entry"
 msgstr "Giriş"
 
-#: package/contents/ui/ConfigEntries.qml:211
+#: package/contents/ui/ConfigEntries.qml:221
 #, kde-format
 msgid "Visibility"
 msgstr "Görünən"
 
-#: package/contents/ui/ConfigEntries.qml:218
+#: package/contents/ui/ConfigEntries.qml:228
 #, kde-format
 msgid "Keyboard Shortcut"
 msgstr "Klaviatura Qısayolları"
 
-#: package/contents/ui/ConfigEntries.qml:391
+#: package/contents/ui/ConfigEntries.qml:399
 #, kde-format
 msgid "Always show all entries"
 msgstr "Bütün girişləri həmişə göstərmək"

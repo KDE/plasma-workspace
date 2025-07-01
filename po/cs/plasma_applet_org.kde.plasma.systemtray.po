@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-15 00:44+0000\n"
+"POT-Creation-Date: 2025-07-01 00:43+0000\n"
 "PO-Revision-Date: 2023-01-06 14:58+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -30,52 +30,52 @@ msgstr "Obecné"
 msgid "Entries"
 msgstr "Položky"
 
-#: package/contents/ui/ConfigEntries.qml:34
+#: package/contents/ui/ConfigEntries.qml:36
 #, kde-format
 msgid "Shown when relevant"
 msgstr "Zobrazit pokud relevantní"
 
-#: package/contents/ui/ConfigEntries.qml:35
+#: package/contents/ui/ConfigEntries.qml:40
 #, kde-format
 msgid "Always shown"
 msgstr "Vždy zobrazovat"
 
-#: package/contents/ui/ConfigEntries.qml:36
+#: package/contents/ui/ConfigEntries.qml:44
 #, kde-format
 msgid "Always hidden"
 msgstr "Vždy skrytý"
 
-#: package/contents/ui/ConfigEntries.qml:37
+#: package/contents/ui/ConfigEntries.qml:48
 #, kde-format
 msgid "Disabled"
 msgstr "Zakázáno"
 
-#: package/contents/ui/ConfigEntries.qml:109
+#: package/contents/ui/ConfigEntries.qml:119
 #, kde-format
 msgid "Application Status"
 msgstr "Stav aplikace"
 
-#: package/contents/ui/ConfigEntries.qml:111
+#: package/contents/ui/ConfigEntries.qml:121
 #, kde-format
 msgid "Communications"
 msgstr "Komunikace"
 
-#: package/contents/ui/ConfigEntries.qml:113
+#: package/contents/ui/ConfigEntries.qml:123
 #, kde-format
 msgid "System Services"
 msgstr "Systémové služby"
 
-#: package/contents/ui/ConfigEntries.qml:115
+#: package/contents/ui/ConfigEntries.qml:125
 #, kde-format
 msgid "Hardware Control"
 msgstr "Ovládání hardware"
 
-#: package/contents/ui/ConfigEntries.qml:118
+#: package/contents/ui/ConfigEntries.qml:128
 #, kde-format
 msgid "Miscellaneous"
 msgstr "Různé"
 
-#: package/contents/ui/ConfigEntries.qml:161
+#: package/contents/ui/ConfigEntries.qml:171
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -86,13 +86,13 @@ msgid ""
 "the app’s author."
 msgstr ""
 
-#: package/contents/ui/ConfigEntries.qml:164
+#: package/contents/ui/ConfigEntries.qml:174
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
 msgstr ""
 
-#: package/contents/ui/ConfigEntries.qml:176
+#: package/contents/ui/ConfigEntries.qml:186
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -102,23 +102,23 @@ msgid ""
 "one item at a time."
 msgstr ""
 
-#: package/contents/ui/ConfigEntries.qml:204
+#: package/contents/ui/ConfigEntries.qml:214
 #, kde-format
 msgctxt "Name of the system tray entry"
 msgid "Entry"
 msgstr "Záznam"
 
-#: package/contents/ui/ConfigEntries.qml:211
+#: package/contents/ui/ConfigEntries.qml:221
 #, kde-format
 msgid "Visibility"
 msgstr "Viditelnost"
 
-#: package/contents/ui/ConfigEntries.qml:218
+#: package/contents/ui/ConfigEntries.qml:228
 #, kde-format
 msgid "Keyboard Shortcut"
 msgstr "Klávesová zkratka"
 
-#: package/contents/ui/ConfigEntries.qml:391
+#: package/contents/ui/ConfigEntries.qml:399
 #, kde-format
 msgid "Always show all entries"
 msgstr "Vždy zobrazit všechny položky"
