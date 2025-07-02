@@ -7,6 +7,7 @@
 #include "darklightschedulepreview.h"
 
 #include <KDarkLightSchedule>
+#include <KHolidays/SunEvents>
 
 DarkLightSchedulePreview::DarkLightSchedulePreview(QObject *parent)
     : QObject(parent)
@@ -150,13 +151,37 @@ void DarkLightSchedulePreview::setEndSunsetDateTime(const QDateTime &dateTime)
     }
 }
 
+DarkLightSchedulePreview::FallbackReason DarkLightSchedulePreview::fallbackReason() const
+{
+    return m_fallbackReason;
+}
+
+void DarkLightSchedulePreview::setFallbackReason(FallbackReason reason)
+{
+    if (m_fallbackReason != reason) {
+        m_fallbackReason = reason;
+        Q_EMIT fallbackReasonChanged();
+    }
+}
+
 void DarkLightSchedulePreview::recalculate()
 {
     const QDateTime now = QDateTime::currentDateTime();
 
+    FallbackReason fallbackReason = FallbackReason::None;
     std::optional<KDarkLightSchedule> schedule;
     if (m_coordinate.isValid()) {
         schedule = KDarkLightSchedule::forecast(now, m_coordinate.latitude(), m_coordinate.longitude());
+        if (!schedule) {
+            const KHolidays::SunEvents sunEvents(now, m_coordinate.latitude(), m_coordinate.longitude());
+            if (sunEvents.isPolarDay()) {
+                fallbackReason = FallbackReason::PolarDay;
+            } else if (sunEvents.isPolarNight()) {
+                fallbackReason = FallbackReason::PolarNight;
+            } else {
+                fallbackReason = FallbackReason::Other;
+            }
+        }
     }
     if (!schedule) {
         const QTime sunriseStart = QTime::fromString(m_sunriseStart, QStringLiteral("hh:mm"));
@@ -166,6 +191,7 @@ void DarkLightSchedulePreview::recalculate()
 
     apply(*schedule->previousTransition(now));
     apply(*schedule->nextTransition(now));
+    setFallbackReason(fallbackReason);
 }
 
 void DarkLightSchedulePreview::apply(const KDarkLightTransition &transition)

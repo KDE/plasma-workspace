@@ -26,8 +26,17 @@ class DarkLightSchedulePreview : public QObject, public QQmlParserStatus
     Q_PROPERTY(QDateTime endSunriseDateTime READ endSunriseDateTime NOTIFY endSunriseDateTimeChanged)
     Q_PROPERTY(QDateTime startSunsetDateTime READ startSunsetDateTime NOTIFY startSunsetDateTimeChanged)
     Q_PROPERTY(QDateTime endSunsetDateTime READ endSunsetDateTime NOTIFY endSunsetDateTimeChanged)
+    Q_PROPERTY(FallbackReason fallbackReason READ fallbackReason NOTIFY fallbackReasonChanged)
 
 public:
+    enum class FallbackReason {
+        None,
+        PolarDay,
+        PolarNight,
+        Other,
+    };
+    Q_ENUM(FallbackReason)
+
     explicit DarkLightSchedulePreview(QObject *parent = nullptr);
 
     void classBegin() override;
@@ -58,6 +67,9 @@ public:
     QDateTime endSunsetDateTime() const;
     void setEndSunsetDateTime(const QDateTime &dateTime);
 
+    FallbackReason fallbackReason() const;
+    void setFallbackReason(FallbackReason reason);
+
 Q_SIGNALS:
     void coordinateChanged();
     void sunsetStartChanged();
@@ -67,6 +79,7 @@ Q_SIGNALS:
     void endSunriseDateTimeChanged();
     void startSunsetDateTimeChanged();
     void endSunsetDateTimeChanged();
+    void fallbackReasonChanged();
 
 private:
     void recalculate();
@@ -80,5 +93,6 @@ private:
     QDateTime m_endSunriseDateTime;
     QDateTime m_startSunsetDateTime;
     QDateTime m_endSunsetDateTime;
+    FallbackReason m_fallbackReason = FallbackReason::None;
     bool m_complete = false;
 };
