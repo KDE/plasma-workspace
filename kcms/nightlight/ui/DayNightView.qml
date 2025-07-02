@@ -164,7 +164,7 @@ ColumnLayout {
                 const date = new Date();
                 date.setHours(minutes / 60);
                 date.setMinutes(minutes % 60);
-                return date.toLocaleString(Qt.locale(), "h:mm");
+                return date.toLocaleTimeString(Qt.locale(), Locale.ShortFormat);
             }
         }
     }
