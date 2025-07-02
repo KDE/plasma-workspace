@@ -33,68 +33,98 @@ KCM.SimpleKCM {
         ColumnLayout {
             Layout.maximumWidth: Kirigami.Units.gridUnit * 30
             Layout.alignment: Qt.AlignHCenter
+            spacing: Kirigami.Units.smallSpacing
 
-            spacing: Kirigami.Units.gridUnit * 0.5
-
-            Private.SunPathChart {
-                id: sunPathChart
+            Item {
                 Layout.fillWidth: true
-                Layout.minimumHeight: Kirigami.Units.gridUnit * 5
-                Layout.alignment: Qt.AlignHCenter
-                sunriseDateTime: schedulePreview.endSunriseDateTime
-                sunsetDateTime: schedulePreview.startSunsetDateTime
-                dayColor: Kirigami.Theme.neutralTextColor
-                nightColor: Kirigami.Theme.disabledTextColor
-            }
+                Layout.preferredHeight: sunChartColumn.implicitHeight
 
-            RowLayout {
-                Layout.preferredWidth: sunPathChart.width
-
-                ColumnLayout {
-                    Layout.alignment: Qt.AlignLeft
-                    Layout.leftMargin: Math.max(Math.round(0.5 * (sunPathChart.width - width) - sunPathChart.daylightSpan), Kirigami.Units.gridUnit)
-                    ToolTip.visible: sunriseHoverHandler.hovered
-                    ToolTip.text: i18n("Sunrise starts at %1 and ends at %2", formatTime(schedulePreview.startSunriseDateTime), formatTime(schedulePreview.endSunriseDateTime))
-
-                    Label {
-                        Layout.alignment: Qt.AlignHCenter
-                        text: i18n("Sunrise")
-                        textFormat: Text.PlainText
-                        font.bold: true
-                    }
-
-                    Label {
-                        Layout.alignment: Qt.AlignHCenter
-                        text: formatTime(schedulePreview.endSunriseDateTime)
-                        textFormat: Text.PlainText
-                    }
-
-                    HoverHandler {
-                        id: sunriseHoverHandler
-                    }
+                Private.DashedBackground {
+                    anchors.fill: parent
+                    visible: schedulePreview.fallbackReason !== Private.DarkLightSchedulePreview.FallbackReason.None
+                    color: Kirigami.Theme.negativeTextColor
                 }
 
                 ColumnLayout {
-                    Layout.alignment: Qt.AlignRight
-                    Layout.rightMargin: Math.max(Math.round(0.5 * (sunPathChart.width - width) - sunPathChart.daylightSpan), Kirigami.Units.gridUnit)
-                    ToolTip.visible: sunsetHoverHandler.hovered
-                    ToolTip.text: i18n("Sunset starts at %1 and ends at %2", formatTime(schedulePreview.startSunsetDateTime), formatTime(schedulePreview.endSunsetDateTime))
+                    id: sunChartColumn
+                    anchors.fill: parent
+                    spacing: Kirigami.Units.gridUnit * 0.5
 
-                    Label {
-                        Layout.alignment: Qt.AlignHCenter
-                        text: i18n("Sunset")
-                        textFormat: Text.PlainText
-                        font.bold: true
+                    Private.SunPathChart {
+                        id: sunPathChart
+                        Layout.fillWidth: true
+                        Layout.minimumHeight: Kirigami.Units.gridUnit * 5
+                        sunriseDateTime: schedulePreview.endSunriseDateTime
+                        sunsetDateTime: schedulePreview.startSunsetDateTime
+                        dayColor: Kirigami.Theme.neutralTextColor
+                        nightColor: Kirigami.Theme.disabledTextColor
                     }
 
-                    Label {
-                        Layout.alignment: Qt.AlignHCenter
-                        text: formatTime(schedulePreview.startSunsetDateTime)
-                        textFormat: Text.PlainText
-                    }
+                    RowLayout {
+                        Layout.preferredWidth: sunPathChart.width
 
-                    HoverHandler {
-                        id: sunsetHoverHandler
+                        ColumnLayout {
+                            Layout.alignment: Qt.AlignLeft
+                            Layout.leftMargin: Math.max(Math.round(0.5 * (sunPathChart.width - width) - sunPathChart.daylightSpan), Kirigami.Units.gridUnit)
+                            ToolTip.visible: sunriseHoverHandler.hovered
+                            ToolTip.text: i18n("Sunrise starts at %1 and ends at %2", formatTime(schedulePreview.startSunriseDateTime), formatTime(schedulePreview.endSunriseDateTime))
+
+                            Label {
+                                Layout.alignment: Qt.AlignHCenter
+                                text: i18n("Sunrise")
+                                textFormat: Text.PlainText
+                                font.bold: true
+                            }
+
+                            Label {
+                                Layout.alignment: Qt.AlignHCenter
+                                text: formatTime(schedulePreview.endSunriseDateTime)
+                                textFormat: Text.PlainText
+                            }
+
+                            HoverHandler {
+                                id: sunriseHoverHandler
+                            }
+                        }
+
+                        ColumnLayout {
+                            Layout.alignment: Qt.AlignRight
+                            Layout.rightMargin: Math.max(Math.round(0.5 * (sunPathChart.width - width) - sunPathChart.daylightSpan), Kirigami.Units.gridUnit)
+                            ToolTip.visible: sunsetHoverHandler.hovered
+                            ToolTip.text: i18n("Sunset starts at %1 and ends at %2", formatTime(schedulePreview.startSunsetDateTime), formatTime(schedulePreview.endSunsetDateTime))
+
+                            Label {
+                                Layout.alignment: Qt.AlignHCenter
+                                text: i18n("Sunset")
+                                textFormat: Text.PlainText
+                                font.bold: true
+                            }
+
+                            Label {
+                                Layout.alignment: Qt.AlignHCenter
+                                text: formatTime(schedulePreview.startSunsetDateTime)
+                                textFormat: Text.PlainText
+                            }
+
+                            HoverHandler {
+                                id: sunsetHoverHandler
+                            }
+                        }
+                    }
+                }
+            }
+
+            Kirigami.InlineMessage {
+                Layout.fillWidth: true
+                type: Kirigami.MessageType.Warning
+                visible: schedulePreview.fallbackReason !== Private.DarkLightSchedulePreview.FallbackReason.None
+                text: {
+                    if (schedulePreview.fallbackReason === Private.DarkLightSchedulePreview.FallbackReason.PolarDay) {
+                        return i18n("Sunrise and sunset times cannot be determined at your location due to polar day. Using custom times instead.");
+                    } else if (schedulePreview.fallbackReason === Private.DarkLightSchedulePreview.FallbackReason.PolarNight) {
+                        return i18n("Sunrise and sunset times cannot be determined at your location due to polar night. Using custom times instead.");
+                    } else {
+                        return i18n("Sunrise and sunset times cannot be reliably determined at your location. Using custom times instead.");
                     }
                 }
             }

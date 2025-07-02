@@ -5,6 +5,7 @@ kcmutils_add_qml_kcm(kcm_nighttime)
 target_sources(kcm_nighttime PRIVATE
     darklightschedulepreview.cpp
     darklightschedulevalidator.cpp
+    dashedbackground.cpp
     kcm.cpp
     sunpathchart.cpp
 )
@@ -31,6 +32,7 @@ target_link_libraries(kcm_nighttime PRIVATE
     Qt6::DBus
     Qt6::Positioning
     Qt6::Quick
+    KF6::Holidays
     KF6::I18n
     KF6::KCMUtils
     KF6::KCMUtilsQuick
