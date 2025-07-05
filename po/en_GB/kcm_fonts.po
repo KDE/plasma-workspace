@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-12-31 16:56+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-i18n-doc@kde.org>\n"
@@ -18,6 +18,54 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 21.12.3\n"
+
+#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
+#: fontsaasettingsbase.kcfg:9
+#, kde-format
+msgid "Force font DPI Wayland"
+msgstr "Force font DPI Wayland"
+
+#. i18n: ectx: label, entry (forceFontDPI), group (General)
+#: fontsaasettingsbase.kcfg:13
+#, kde-format
+msgid "Force font DPI on X11"
+msgstr "Force font DPI on X11"
+
+#. i18n: ectx: label, entry (font), group (General)
+#: fontssettings.kcfg:9
+#, kde-format
+msgid "General font"
+msgstr "General font"
+
+#. i18n: ectx: label, entry (fixed), group (General)
+#: fontssettings.kcfg:21
+#, kde-format
+msgid "Fixed width font"
+msgstr "Fixed width font"
+
+#. i18n: ectx: label, entry (smallestReadableFont), group (General)
+#: fontssettings.kcfg:33
+#, kde-format
+msgid "Small font"
+msgstr "Small font"
+
+#. i18n: ectx: label, entry (toolBarFont), group (General)
+#: fontssettings.kcfg:45
+#, kde-format
+msgid "Tool bar font"
+msgstr "Tool bar font"
+
+#. i18n: ectx: label, entry (menuFont), group (General)
+#: fontssettings.kcfg:57
+#, kde-format
+msgid "Menu font"
+msgstr "Menu font"
+
+#. i18n: ectx: label, entry (activeFont), group (WM)
+#: fontssettings.kcfg:71
+#, kde-format
+msgid "Window title font"
+msgstr "Window title font"
 
 #: kxftconfig.cpp:458
 #, kde-format
@@ -308,30 +356,6 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "Select Font"
-
-#~ msgid "Force font DPI Wayland"
-#~ msgstr "Force font DPI Wayland"
-
-#~ msgid "Force font DPI on X11"
-#~ msgstr "Force font DPI on X11"
-
-#~ msgid "General font"
-#~ msgstr "General font"
-
-#~ msgid "Fixed width font"
-#~ msgstr "Fixed width font"
-
-#~ msgid "Small font"
-#~ msgstr "Small font"
-
-#~ msgid "Tool bar font"
-#~ msgstr "Tool bar font"
-
-#~ msgid "Menu font"
-#~ msgstr "Menu font"
-
-#~ msgid "Window title font"
-#~ msgstr "Window title font"
 
 #~ msgid "Change Display Scaling…"
 #~ msgstr "Change Display Scaling…"

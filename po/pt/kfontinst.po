@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2021-11-09 18:52+0000\n"
 "Last-Translator: José Nuno Pires <zepires@gmail.com>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
@@ -1675,6 +1675,12 @@ msgstr "Texto de Antevisão"
 msgid "Please enter new string:"
 msgstr "Indique o novo texto:"
 
+#. i18n: ectx: ToolBar (mainToolBar)
+#: viewpart/kfontviewpart.rc:4
+#, kde-format
+msgid "&Main Toolbar"
+msgstr "Barra &Principal"
+
 #: viewpart/PreviewSelectAction.cpp:13
 #, kde-format
 msgid "Preview Type"
@@ -2367,6 +2373,3 @@ msgstr "Phags Pa"
 #: viewpart/UnicodeScripts.h:80
 msgid "Yi"
 msgstr "Yi"
-
-#~ msgid "&Main Toolbar"
-#~ msgstr "Barra &Principal"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2019-10-09 17:44+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -16,6 +16,60 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 19.04.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
+#: fontsaasettingsbase.kcfg:9
+#, kde-format
+msgid "Force font DPI Wayland"
+msgstr ""
+
+#. i18n: ectx: label, entry (forceFontDPI), group (General)
+#: fontsaasettingsbase.kcfg:13
+#, kde-format
+msgid "Force font DPI on X11"
+msgstr ""
+
+#. i18n: ectx: label, entry (font), group (General)
+#: fontssettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "General:"
+msgid "General font"
+msgstr "Умумӣ"
+
+#. i18n: ectx: label, entry (fixed), group (General)
+#: fontssettings.kcfg:21
+#, fuzzy, kde-format
+#| msgid "Window title:"
+msgid "Fixed width font"
+msgstr "Сарлавҳаи равзана:"
+
+#. i18n: ectx: label, entry (smallestReadableFont), group (General)
+#: fontssettings.kcfg:33
+#, fuzzy, kde-format
+#| msgid "Small:"
+msgid "Small font"
+msgstr "Хурд:"
+
+#. i18n: ectx: label, entry (toolBarFont), group (General)
+#: fontssettings.kcfg:45
+#, fuzzy, kde-format
+#| msgid "Toolbar:"
+msgid "Tool bar font"
+msgstr "Навори абзорҳо:"
+
+#. i18n: ectx: label, entry (menuFont), group (General)
+#: fontssettings.kcfg:57
+#, fuzzy, kde-format
+#| msgid "General:"
+msgid "Menu font"
+msgstr "Умумӣ"
+
+#. i18n: ectx: label, entry (activeFont), group (WM)
+#: fontssettings.kcfg:71
+#, fuzzy, kde-format
+#| msgid "Window title:"
+msgid "Window title font"
+msgstr "Сарлавҳаи равзана:"
 
 #: kxftconfig.cpp:458
 #, kde-format
@@ -282,26 +336,6 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "Ҳуруфро интихоб намоед"
-
-#, fuzzy
-#~| msgid "General:"
-#~ msgid "General font"
-#~ msgstr "Умумӣ"
-
-#, fuzzy
-#~| msgid "Small:"
-#~ msgid "Small font"
-#~ msgstr "Хурд:"
-
-#, fuzzy
-#~| msgid "Toolbar:"
-#~ msgid "Tool bar font"
-#~ msgstr "Навори абзорҳо:"
-
-#, fuzzy
-#~| msgid "Window title:"
-#~ msgid "Window title font"
-#~ msgstr "Сарлавҳаи равзана:"
 
 #, fuzzy
 #~| msgid ""

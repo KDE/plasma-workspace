@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2023-02-18 01:53+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese <zh-l10n@linux.org.tw>\n"
@@ -1593,6 +1593,12 @@ msgstr "預覽字串"
 msgid "Please enter new string:"
 msgstr "請輸入新的字串:"
 
+#. i18n: ectx: ToolBar (mainToolBar)
+#: viewpart/kfontviewpart.rc:4
+#, kde-format
+msgid "&Main Toolbar"
+msgstr "主工具列(&M)"
+
 #: viewpart/PreviewSelectAction.cpp:13
 #, kde-format
 msgid "Preview Type"
@@ -2285,9 +2291,6 @@ msgstr "Phags Pa"
 #: viewpart/UnicodeScripts.h:80
 msgid "Yi"
 msgstr "Yi"
-
-#~ msgid "&Main Toolbar"
-#~ msgstr "主工具列(&M)"
 
 #~ msgid "Print..."
 #~ msgstr "列印..."

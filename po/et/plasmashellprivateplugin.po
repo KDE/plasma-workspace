@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2020-10-08 10:41+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -135,6 +135,30 @@ msgstr ""
 #, kde-format
 msgid "Configure…"
 msgstr ""
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:10
+#, kde-format
+msgid "Screen lock enabled"
+msgstr "Ekraani lukustamine on lubatud"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:11
+#, kde-format
+msgid "Sets whether the screen will be locked after the specified time."
+msgstr "Määramine, kas lukustada ekraan määratud aja järel."
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:16
+#, kde-format
+msgid "Screen saver timeout"
+msgstr "Ekraanisäästja viivitus"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:17
+#, kde-format
+msgid "Sets the minutes after which the screen is locked."
+msgstr "Määramine, mitme minuti pärast ekraan lukustatakse."
 
 #: sessionsprivate/sessionsmodel.cpp:235 sessionsprivate/sessionsmodel.cpp:239
 #, kde-format
@@ -309,18 +333,6 @@ msgstr "Laadi alla uusi Plasma vidinaid"
 #| msgid "Install Widget From Local File..."
 msgid "Install Widget From Local File…"
 msgstr "Paigalda vidin kohalikust failist..."
-
-#~ msgid "Screen lock enabled"
-#~ msgstr "Ekraani lukustamine on lubatud"
-
-#~ msgid "Sets whether the screen will be locked after the specified time."
-#~ msgstr "Määramine, kas lukustada ekraan määratud aja järel."
-
-#~ msgid "Screen saver timeout"
-#~ msgstr "Ekraanisäästja viivitus"
-
-#~ msgid "Sets the minutes after which the screen is locked."
-#~ msgstr "Määramine, mitme minuti pärast ekraan lukustatakse."
 
 #~ msgid "&Execute"
 #~ msgstr "&Käivita"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2017-01-19 19:37+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -91,6 +91,13 @@ msgstr ""
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
 msgstr ""
+
+#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
+#: lookandfeelsettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Configure Look and Feel details"
+msgid "Global look and feel"
+msgstr "Διαμόρφωση λεπτομερειών εμφάνισης και αίσθησης"
 
 #: package/contents/ui/main.qml:21
 #, fuzzy, kde-format
@@ -261,11 +268,6 @@ msgid ""
 "This Global Theme does not provide any applicable settings. Please contact "
 "the maintainer of this Global Theme as it might be broken."
 msgstr ""
-
-#, fuzzy
-#~| msgid "Configure Look and Feel details"
-#~ msgid "Global look and feel"
-#~ msgstr "Διαμόρφωση λεπτομερειών εμφάνισης και αίσθησης"
 
 #, fuzzy
 #~| msgid ""

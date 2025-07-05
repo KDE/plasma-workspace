@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2023-06-02 10:56-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -152,41 +152,78 @@ msgstr "Configurar estilo de aplicativos GNOME/GTK..."
 msgid "Configure %1"
 msgstr "Configurar %1"
 
-#~ msgid "Tab 1"
-#~ msgstr "Aba 1"
+#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
+#: stylepreview.ui:33
+#, kde-format
+msgid "Tab 1"
+msgstr "Aba 1"
 
-#~ msgid "Push Button"
-#~ msgstr "Botão de apertar"
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: stylepreview.ui:65
+#, kde-format
+msgid "Push Button"
+msgstr "Botão de apertar"
 
-#~ msgid "Combo box"
-#~ msgstr "Caixa de seleção"
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
+#: stylepreview.ui:86
+#, kde-format
+msgid "Combo box"
+msgstr "Caixa de seleção"
 
-#~ msgid "Checkbox"
-#~ msgstr "Opção"
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
+#: stylepreview.ui:96
+#, kde-format
+msgid "Checkbox"
+msgstr "Opção"
 
-#~ msgid "Radio button"
-#~ msgstr "Botão de opção"
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
+#: stylepreview.ui:106 stylepreview.ui:116
+#, kde-format
+msgid "Radio button"
+msgstr "Botão de opção"
 
-#~ msgid "%p%"
-#~ msgstr "%p%"
+#. i18n: ectx: property (format), widget (QProgressBar, progressBar)
+#: stylepreview.ui:128
+#, no-c-format, kde-format
+msgid "%p%"
+msgstr "%p%"
 
-#~ msgid "Tab 2"
-#~ msgstr "Aba 2"
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: stylepreview.ui:136
+#, kde-format
+msgid "Tab 2"
+msgstr "Aba 2"
 
-#~ msgid "Application style"
-#~ msgstr "Estilo do aplicativo"
+#. i18n: ectx: label, entry (widgetStyle), group (KDE)
+#: stylesettings.kcfg:9
+#, kde-format
+msgid "Application style"
+msgstr "Estilo do aplicativo"
 
-#~ msgid "Show icons on buttons"
-#~ msgstr "Mostrar ícones nos botões"
+#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
+#: stylesettings.kcfg:13
+#, kde-format
+msgid "Show icons on buttons"
+msgstr "Mostrar ícones nos botões"
 
-#~ msgid "Show icons in menus"
-#~ msgstr "Mostrar ícones nos menus"
+#. i18n: ectx: label, entry (iconsInMenus), group (KDE)
+#: stylesettings.kcfg:17
+#, kde-format
+msgid "Show icons in menus"
+msgstr "Mostrar ícones nos menus"
 
-#~ msgid "Main toolbar label"
-#~ msgstr "Texto da barra de ferramentas principal"
+#. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
+#: stylesettings.kcfg:23
+#, kde-format
+msgid "Main toolbar label"
+msgstr "Texto da barra de ferramentas principal"
 
-#~ msgid "Secondary toolbar label"
-#~ msgstr "Texto da barra de ferramentas secundária"
+#. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
+#: stylesettings.kcfg:27
+#, kde-format
+msgid "Secondary toolbar label"
+msgstr "Texto da barra de ferramentas secundária"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

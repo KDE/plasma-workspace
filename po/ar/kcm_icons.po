@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-10-22 19:01+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -44,6 +44,48 @@ msgstr "أيقونات صغيرة"
 #, kde-format
 msgid "Dialogs"
 msgstr "مربعات الحوار"
+
+#. i18n: ectx: label, entry (Theme), group (Icons)
+#: iconssettingsbase.kcfg:9
+#, kde-format
+msgid "Name of the current icon theme"
+msgstr "اسم سمة الأيقونات الحالية"
+
+#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
+#: iconssettingsbase.kcfg:15
+#, kde-format
+msgid "Desktop icons size"
+msgstr "حجم أيقونات سطح المكتب"
+
+#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
+#: iconssettingsbase.kcfg:21
+#, kde-format
+msgid "Toolbar icons size"
+msgstr "حجم أيقونة شريط الأدوات"
+
+#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
+#: iconssettingsbase.kcfg:27
+#, kde-format
+msgid "Main toolbar icons size"
+msgstr "حجم أيقونة شريط الأدوات الرئيس"
+
+#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
+#: iconssettingsbase.kcfg:33
+#, kde-format
+msgid "Small icons size"
+msgstr "حجم الأيقونات صغير"
+
+#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
+#: iconssettingsbase.kcfg:39
+#, kde-format
+msgid "Panel icons size"
+msgstr "حجم أيقونات اللوحة"
+
+#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
+#: iconssettingsbase.kcfg:45
+#, kde-format
+msgid "Dialog icons size"
+msgstr "حجم أيقونات الحوراي"
 
 #: main.cpp:182
 #, kde-format
@@ -154,27 +196,6 @@ msgstr "افتح سمة"
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "ملفات السمة (*.tar.gz *.tar.bz2)"
-
-#~ msgid "Name of the current icon theme"
-#~ msgstr "اسم سمة الأيقونات الحالية"
-
-#~ msgid "Desktop icons size"
-#~ msgstr "حجم أيقونات سطح المكتب"
-
-#~ msgid "Toolbar icons size"
-#~ msgstr "حجم أيقونة شريط الأدوات"
-
-#~ msgid "Main toolbar icons size"
-#~ msgstr "حجم أيقونة شريط الأدوات الرئيس"
-
-#~ msgid "Small icons size"
-#~ msgstr "حجم الأيقونات صغير"
-
-#~ msgid "Panel icons size"
-#~ msgstr "حجم أيقونات اللوحة"
-
-#~ msgid "Dialog icons size"
-#~ msgstr "حجم أيقونات الحوراي"
 
 #~ msgid "Toolbar"
 #~ msgstr "شريط الأدوات"

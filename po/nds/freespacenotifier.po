@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: freespacenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2014-05-28 11:27+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-doc@kde.org>\n"
@@ -37,6 +37,36 @@ msgstr ""
 #| msgid "Open File Manager..."
 msgid "Open in File Manager"
 msgstr "Dateipleger opmaken..."
+
+#. i18n: ectx: label, entry (minimumSpace), group (General)
+#: freespacenotifier.kcfg:9
+#, kde-format
+msgid "Minimum free space before user starts being notified."
+msgstr "Sietst free Ruum, ehr de Bruker en Bescheed kriggt"
+
+#. i18n: ectx: label, entry (enableNotification), group (General)
+#: freespacenotifier.kcfg:15
+#, kde-format
+msgid "Is the free space notification enabled."
+msgstr "De Freeruumbescheed is anmaakt."
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableNotification)
+#: freespacenotifier_prefs_base.ui:17
+#, kde-format
+msgid "Enable low disk space warning"
+msgstr "Wohrschoen för to minn free Plaatspieker anmaken"
+
+#. i18n: ectx: property (text), widget (QLabel, label_minimumSpace)
+#: freespacenotifier_prefs_base.ui:27
+#, kde-format
+msgid "Warn when free space is below:"
+msgstr "Wohrschoen bi sieter Plaatspieker as:"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpace)
+#: freespacenotifier_prefs_base.ui:37
+#, kde-format
+msgid " MiB"
+msgstr " MiB"
 
 #: module.cpp:37
 #, fuzzy, kde-format
@@ -73,21 +103,6 @@ msgstr ""
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"
 msgstr "Allmeen"
-
-#~ msgid "Minimum free space before user starts being notified."
-#~ msgstr "Sietst free Ruum, ehr de Bruker en Bescheed kriggt"
-
-#~ msgid "Is the free space notification enabled."
-#~ msgstr "De Freeruumbescheed is anmaakt."
-
-#~ msgid "Enable low disk space warning"
-#~ msgstr "Wohrschoen för to minn free Plaatspieker anmaken"
-
-#~ msgid "Warn when free space is below:"
-#~ msgstr "Wohrschoen bi sieter Plaatspieker as:"
-
-#~ msgid " MiB"
-#~ msgstr " MiB"
 
 #~ msgid "Low Disk Space"
 #~ msgstr "Siet free Ruum op Fastplaat"

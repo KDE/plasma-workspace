@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2017-05-16 06:57-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -135,6 +135,30 @@ msgstr ""
 #, kde-format
 msgid "Configure…"
 msgstr ""
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:10
+#, kde-format
+msgid "Screen lock enabled"
+msgstr "מסך נעילה מאופשר"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:11
+#, kde-format
+msgid "Sets whether the screen will be locked after the specified time."
+msgstr "הגדר אם המסך ינעל אחרי זמן מוגדר"
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:16
+#, kde-format
+msgid "Screen saver timeout"
+msgstr "זמן מוקצב לשומר מסך"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:17
+#, kde-format
+msgid "Sets the minutes after which the screen is locked."
+msgstr "הגדר תוך כמה דקות איזה מהמסכים ינעל"
 
 #: sessionsprivate/sessionsmodel.cpp:235 sessionsprivate/sessionsmodel.cpp:239
 #, kde-format
@@ -305,18 +329,6 @@ msgstr ""
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr ""
-
-#~ msgid "Screen lock enabled"
-#~ msgstr "מסך נעילה מאופשר"
-
-#~ msgid "Sets whether the screen will be locked after the specified time."
-#~ msgstr "הגדר אם המסך ינעל אחרי זמן מוגדר"
-
-#~ msgid "Screen saver timeout"
-#~ msgstr "זמן מוקצב לשומר מסך"
-
-#~ msgid "Sets the minutes after which the screen is locked."
-#~ msgstr "הגדר תוך כמה דקות איזה מהמסכים ינעל"
 
 #~ msgid "&Execute"
 #~ msgstr "ביצוע"

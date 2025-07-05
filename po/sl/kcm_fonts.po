@@ -2,7 +2,7 @@
 # Translation of kcmfonts.po to Slovenian
 # KDEBASE TRANSLATION TO SLOVENIAN LANGUAGE.
 # Copyright (C) 2001, 2003, 2004, 2006, 2007 Free Software Foundation, Inc.
-# $Id: kcm_fonts.po 1712705 2025-07-05 03:36:47Z scripty $
+# $Id: kcm_fonts.po 1712710 2025-07-05 06:09:14Z scripty $
 # $Source$
 #
 # Roman Maurer <roman.maurer@amis.net>, 2001.
@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-10-16 06:51+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -27,6 +27,54 @@ msgstr ""
 "X-Generator: Lokalize 22.08.1\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
+
+#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
+#: fontsaasettingsbase.kcfg:9
+#, kde-format
+msgid "Force font DPI Wayland"
+msgstr "Vsili ločljivost pisav Wayland"
+
+#. i18n: ectx: label, entry (forceFontDPI), group (General)
+#: fontsaasettingsbase.kcfg:13
+#, kde-format
+msgid "Force font DPI on X11"
+msgstr "Vsili ločljivost pisav na X11"
+
+#. i18n: ectx: label, entry (font), group (General)
+#: fontssettings.kcfg:9
+#, kde-format
+msgid "General font"
+msgstr "Splošna pisava"
+
+#. i18n: ectx: label, entry (fixed), group (General)
+#: fontssettings.kcfg:21
+#, kde-format
+msgid "Fixed width font"
+msgstr "Pisava stalne širine"
+
+#. i18n: ectx: label, entry (smallestReadableFont), group (General)
+#: fontssettings.kcfg:33
+#, kde-format
+msgid "Small font"
+msgstr "Majhna pisava"
+
+#. i18n: ectx: label, entry (toolBarFont), group (General)
+#: fontssettings.kcfg:45
+#, kde-format
+msgid "Tool bar font"
+msgstr "Pisava orodne letvice"
+
+#. i18n: ectx: label, entry (menuFont), group (General)
+#: fontssettings.kcfg:57
+#, kde-format
+msgid "Menu font"
+msgstr "Pisava menija"
+
+#. i18n: ectx: label, entry (activeFont), group (WM)
+#: fontssettings.kcfg:71
+#, kde-format
+msgid "Window title font"
+msgstr "Pisava naslova okna"
 
 #: kxftconfig.cpp:458
 #, kde-format
@@ -319,30 +367,6 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "Izberi pisavo"
-
-#~ msgid "Force font DPI Wayland"
-#~ msgstr "Vsili ločljivost pisav Wayland"
-
-#~ msgid "Force font DPI on X11"
-#~ msgstr "Vsili ločljivost pisav na X11"
-
-#~ msgid "General font"
-#~ msgstr "Splošna pisava"
-
-#~ msgid "Fixed width font"
-#~ msgstr "Pisava stalne širine"
-
-#~ msgid "Small font"
-#~ msgstr "Majhna pisava"
-
-#~ msgid "Tool bar font"
-#~ msgstr "Pisava orodne letvice"
-
-#~ msgid "Menu font"
-#~ msgstr "Pisava menija"
-
-#~ msgid "Window title font"
-#~ msgstr "Pisava naslova okna"
 
 #~ msgid "Change Display Scaling…"
 #~ msgstr "Spremeni merilo velikosti zaslona…"

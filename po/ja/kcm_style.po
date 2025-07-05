@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2024-02-11 06:02+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -150,38 +150,75 @@ msgstr "GNOME/GTK のスタイルを設定..."
 msgid "Configure %1"
 msgstr "%1 を設定"
 
-#~ msgid "Tab 1"
-#~ msgstr "タブ 1"
+#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
+#: stylepreview.ui:33
+#, kde-format
+msgid "Tab 1"
+msgstr "タブ 1"
 
-#~ msgid "Push Button"
-#~ msgstr "プッシュボタン"
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: stylepreview.ui:65
+#, kde-format
+msgid "Push Button"
+msgstr "プッシュボタン"
 
-#~ msgid "Combo box"
-#~ msgstr "コンボボックス"
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
+#: stylepreview.ui:86
+#, kde-format
+msgid "Combo box"
+msgstr "コンボボックス"
 
-#~ msgid "Checkbox"
-#~ msgstr "チェックボックス"
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
+#: stylepreview.ui:96
+#, kde-format
+msgid "Checkbox"
+msgstr "チェックボックス"
 
-#~ msgid "Radio button"
-#~ msgstr "ラジオボタン"
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
+#: stylepreview.ui:106 stylepreview.ui:116
+#, kde-format
+msgid "Radio button"
+msgstr "ラジオボタン"
 
-#~ msgid "%p%"
-#~ msgstr "%p%"
+#. i18n: ectx: property (format), widget (QProgressBar, progressBar)
+#: stylepreview.ui:128
+#, no-c-format, kde-format
+msgid "%p%"
+msgstr "%p%"
 
-#~ msgid "Tab 2"
-#~ msgstr "タブ 2"
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: stylepreview.ui:136
+#, kde-format
+msgid "Tab 2"
+msgstr "タブ 2"
 
-#~ msgid "Application style"
-#~ msgstr "アプリケーションスタイル"
+#. i18n: ectx: label, entry (widgetStyle), group (KDE)
+#: stylesettings.kcfg:9
+#, kde-format
+msgid "Application style"
+msgstr "アプリケーションスタイル"
 
-#~ msgid "Show icons on buttons"
-#~ msgstr "ボタンにアイコンを表示する"
+#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
+#: stylesettings.kcfg:13
+#, kde-format
+msgid "Show icons on buttons"
+msgstr "ボタンにアイコンを表示する"
 
-#~ msgid "Show icons in menus"
-#~ msgstr "メニューにアイコンを表示する"
+#. i18n: ectx: label, entry (iconsInMenus), group (KDE)
+#: stylesettings.kcfg:17
+#, kde-format
+msgid "Show icons in menus"
+msgstr "メニューにアイコンを表示する"
 
-#~ msgid "Main toolbar label"
-#~ msgstr "メインツールバーのラベル"
+#. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
+#: stylesettings.kcfg:23
+#, kde-format
+msgid "Main toolbar label"
+msgstr "メインツールバーのラベル"
 
-#~ msgid "Secondary toolbar label"
-#~ msgstr "補助ツールバーのラベル"
+#. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
+#: stylesettings.kcfg:27
+#, kde-format
+msgid "Secondary toolbar label"
+msgstr "補助ツールバーのラベル"

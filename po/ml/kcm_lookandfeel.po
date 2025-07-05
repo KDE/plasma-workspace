@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-sdk\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2021-08-20 15:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -88,6 +88,12 @@ msgstr "പാക്കേജിന്റെ പേര്"
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
 msgstr "പ്ലാസ്മ ഡെസ്ക്ടോപ്പ് ലേഔട്ട് പുനർസജ്ജമാക്കുക"
+
+#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
+#: lookandfeelsettings.kcfg:9
+#, kde-format
+msgid "Global look and feel"
+msgstr "പൊതുവായുള്ള കെട്ടും മട്ടും"
 
 #: package/contents/ui/main.qml:21
 #, kde-format
@@ -252,9 +258,6 @@ msgid ""
 "This Global Theme does not provide any applicable settings. Please contact "
 "the maintainer of this Global Theme as it might be broken."
 msgstr ""
-
-#~ msgid "Global look and feel"
-#~ msgstr "പൊതുവായുള്ള കെട്ടും മട്ടും"
 
 #~ msgid ""
 #~ "Your current layout and configuration of panels, desktop widgets, and "

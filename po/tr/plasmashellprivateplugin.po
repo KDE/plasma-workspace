@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2023-05-28 11:15+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -135,6 +135,30 @@ msgstr "Açık Tut"
 #, kde-format
 msgid "Configure…"
 msgstr "Yapılandır…"
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:10
+#, kde-format
+msgid "Screen lock enabled"
+msgstr "Ekran kilidi etkin"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:11
+#, kde-format
+msgid "Sets whether the screen will be locked after the specified time."
+msgstr "Belirtilen zamanda ekranı kilitleyecek olan hava durumunu ayarlar."
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:16
+#, kde-format
+msgid "Screen saver timeout"
+msgstr "Ekran koruyucu zaman aşımı"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:17
+#, kde-format
+msgid "Sets the minutes after which the screen is locked."
+msgstr "Ekranın kaç saniye sonra kilitleneceğini ayarlar."
 
 #: sessionsprivate/sessionsmodel.cpp:235 sessionsprivate/sessionsmodel.cpp:239
 #, kde-format
@@ -304,18 +328,6 @@ msgstr "Yeni Plasma Araç Takımları İndir"
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "Yerel Dosyadan Araç Takımı Kur…"
-
-#~ msgid "Screen lock enabled"
-#~ msgstr "Ekran kilidi etkin"
-
-#~ msgid "Sets whether the screen will be locked after the specified time."
-#~ msgstr "Belirtilen zamanda ekranı kilitleyecek olan hava durumunu ayarlar."
-
-#~ msgid "Screen saver timeout"
-#~ msgstr "Ekran koruyucu zaman aşımı"
-
-#~ msgid "Sets the minutes after which the screen is locked."
-#~ msgstr "Ekranın kaç saniye sonra kilitleneceğini ayarlar."
 
 #~ msgid "&Execute"
 #~ msgstr "&Çalıştır"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: freespacenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2021-06-04 22:58+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -34,6 +34,36 @@ msgstr "Avaa Filelightiin"
 msgid "Open in File Manager"
 msgstr "Avaa tiedostonhallintaan"
 
+#. i18n: ectx: label, entry (minimumSpace), group (General)
+#: freespacenotifier.kcfg:9
+#, kde-format
+msgid "Minimum free space before user starts being notified."
+msgstr "Vähimmäislevytila, ennen kuin käyttäjää varoitetaan."
+
+#. i18n: ectx: label, entry (enableNotification), group (General)
+#: freespacenotifier.kcfg:15
+#, kde-format
+msgid "Is the free space notification enabled."
+msgstr "Käytetäänkö vapaan tilan varoitusta."
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableNotification)
+#: freespacenotifier_prefs_base.ui:17
+#, kde-format
+msgid "Enable low disk space warning"
+msgstr "Varoita vähäisestä levytilasta"
+
+#. i18n: ectx: property (text), widget (QLabel, label_minimumSpace)
+#: freespacenotifier_prefs_base.ui:27
+#, kde-format
+msgid "Warn when free space is below:"
+msgstr "Varoita, kun vapaata tilaa on alle:"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpace)
+#: freespacenotifier_prefs_base.ui:37
+#, kde-format
+msgid " MiB"
+msgstr " MiB"
+
 #: module.cpp:37
 #, kde-format
 msgid ""
@@ -53,21 +83,6 @@ msgstr "Juurikansion levytila on vähissä: tilaa on jäljellä %1 MiB (%2 %).
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"
 msgstr "Perusasetukset"
-
-#~ msgid "Minimum free space before user starts being notified."
-#~ msgstr "Vähimmäislevytila, ennen kuin käyttäjää varoitetaan."
-
-#~ msgid "Is the free space notification enabled."
-#~ msgstr "Käytetäänkö vapaan tilan varoitusta."
-
-#~ msgid "Enable low disk space warning"
-#~ msgstr "Varoita vähäisestä levytilasta"
-
-#~ msgid "Warn when free space is below:"
-#~ msgstr "Varoita, kun vapaata tilaa on alle:"
-
-#~ msgid " MiB"
-#~ msgstr " MiB"
 
 #~ msgid "Low Disk Space"
 #~ msgstr "Levytila vähissä"

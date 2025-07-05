@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2020-09-18 09:22+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -16,6 +16,18 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 20.04.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. i18n: ectx: label, entry (cursorTheme), group (Mouse)
+#: cursorthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current cursor theme"
+msgstr "Номи мавзӯи курсори ҷорӣ"
+
+#. i18n: ectx: label, entry (cursorSize), group (Mouse)
+#: cursorthemesettings.kcfg:13
+#, kde-format
+msgid "Current cursor size"
+msgstr "Андозаи курсори ҷорӣ"
 
 #: kcmcursortheme.cpp:308
 #, kde-format
@@ -60,6 +72,13 @@ msgstr "Мавзӯро аз нав иваз мекунед?"
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Мавзӯъ бо муваффақият насб карда шуд."
+
+#. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
+#. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)
+#: launchfeedbacksettings.kcfg:19 launchfeedbacksettings.kcfg:33
+#, kde-format
+msgid "Timeout in seconds"
+msgstr ""
 
 #: package/contents/ui/Delegate.qml:54
 #, kde-format
@@ -255,12 +274,6 @@ msgctxt ""
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(Андозаҳои дастрас: %1)"
-
-#~ msgid "Name of the current cursor theme"
-#~ msgstr "Номи мавзӯи курсори ҷорӣ"
-
-#~ msgid "Current cursor size"
-#~ msgstr "Андозаи курсори ҷорӣ"
 
 #~ msgid "Name"
 #~ msgstr "Ном"

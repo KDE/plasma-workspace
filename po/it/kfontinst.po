@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2021-11-30 18:45+0100\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -1636,6 +1636,12 @@ msgstr "Stringa di anteprima"
 msgid "Please enter new string:"
 msgstr "Inserisci una nuova stringa:"
 
+#. i18n: ectx: ToolBar (mainToolBar)
+#: viewpart/kfontviewpart.rc:4
+#, kde-format
+msgid "&Main Toolbar"
+msgstr "&Barra degli strumenti principale"
+
 #: viewpart/PreviewSelectAction.cpp:13
 #, kde-format
 msgid "Preview Type"
@@ -2335,9 +2341,6 @@ msgstr "Phagspa"
 #: viewpart/UnicodeScripts.h:80
 msgid "Yi"
 msgstr "Yi"
-
-#~ msgid "&Main Toolbar"
-#~ msgstr "&Barra degli strumenti principale"
 
 #~ msgid "Print..."
 #~ msgstr "Stampa..."

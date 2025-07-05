@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput-1.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2004-09-19 18:09+0200\n"
 "Last-Translator: Jañ-Mai Drapier <jdrapier@club-internet.fr>\n"
 "Language-Team: Brezhoneg <Suav.Icb@wanadoo.fr>\n"
@@ -16,6 +16,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#. i18n: ectx: label, entry (cursorTheme), group (Mouse)
+#: cursorthemesettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Do not change cursor theme"
+msgid "Name of the current cursor theme"
+msgstr "Ne gemmit ket giz ar reti"
+
+#. i18n: ectx: label, entry (cursorSize), group (Mouse)
+#: cursorthemesettings.kcfg:13
+#, kde-format
+msgid "Current cursor size"
+msgstr ""
 
 #: kcmcursortheme.cpp:308
 #, fuzzy, kde-format
@@ -61,6 +74,13 @@ msgstr "Rasklañ ar c'hiz ?"
 #: kcmcursortheme.cpp:468
 #, kde-format
 msgid "Theme installed successfully."
+msgstr ""
+
+#. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
+#. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)
+#: launchfeedbacksettings.kcfg:19 launchfeedbacksettings.kcfg:33
+#, kde-format
+msgid "Timeout in seconds"
 msgstr ""
 
 #: package/contents/ui/Delegate.qml:54
@@ -257,11 +277,6 @@ msgctxt ""
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr ""
-
-#, fuzzy
-#~| msgid "Do not change cursor theme"
-#~ msgid "Name of the current cursor theme"
-#~ msgstr "Ne gemmit ket giz ar reti"
 
 #~ msgid "Name"
 #~ msgstr "Anv"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase/kfontinst.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2004-12-03 14:52-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -1706,6 +1706,12 @@ msgstr "Teaghrán Réamhamhairc"
 msgid "Please enter new string:"
 msgstr "Iontráil teaghrán nua, le do thoil:"
 
+#. i18n: ectx: ToolBar (mainToolBar)
+#: viewpart/kfontviewpart.rc:4
+#, kde-format
+msgid "&Main Toolbar"
+msgstr "&Príomhbharra Uirlisí"
+
 # looks ok - see messages which follow
 #: viewpart/PreviewSelectAction.cpp:13
 #, kde-format
@@ -2400,9 +2406,6 @@ msgstr "Phags Pa"
 #: viewpart/UnicodeScripts.h:80
 msgid "Yi"
 msgstr "Yi Hangalach"
-
-#~ msgid "&Main Toolbar"
-#~ msgstr "&Príomhbharra Uirlisí"
 
 #~ msgid "Print..."
 #~ msgstr "Priontáil..."

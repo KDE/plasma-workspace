@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2021-09-05 11:25-0700\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: Tajik Language Support\n"
@@ -91,6 +91,12 @@ msgstr "Номи баста"
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
 msgstr "Барқарор кардани тарҳбандии мизи кории Плазма"
+
+#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
+#: lookandfeelsettings.kcfg:9
+#, kde-format
+msgid "Global look and feel"
+msgstr "Намуди зоҳирии умумӣ"
 
 #: package/contents/ui/main.qml:21
 #, kde-format
@@ -257,9 +263,6 @@ msgid ""
 "This Global Theme does not provide any applicable settings. Please contact "
 "the maintainer of this Global Theme as it might be broken."
 msgstr ""
-
-#~ msgid "Global look and feel"
-#~ msgstr "Намуди зоҳирии умумӣ"
 
 #, fuzzy
 #~| msgid ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2010-02-01 00:29+0100\n"
 "Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
 "Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
@@ -1675,6 +1675,12 @@ msgstr "Низа за преглед"
 msgid "Please enter new string:"
 msgstr "Ве молиме внесете нова низа:"
 
+#. i18n: ectx: ToolBar (mainToolBar)
+#: viewpart/kfontviewpart.rc:4
+#, kde-format
+msgid "&Main Toolbar"
+msgstr "Г&лавен алатник"
+
 #: viewpart/PreviewSelectAction.cpp:13
 #, kde-format
 msgid "Preview Type"
@@ -2367,9 +2373,6 @@ msgstr "Фагс-па"
 #: viewpart/UnicodeScripts.h:80
 msgid "Yi"
 msgstr "Ји"
-
-#~ msgid "&Main Toolbar"
-#~ msgstr "Г&лавен алатник"
 
 #~ msgid "Print..."
 #~ msgstr "Печати..."

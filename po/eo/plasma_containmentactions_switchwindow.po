@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_containmentactions_switchwindow\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2023-01-02 18:01+0300\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -16,6 +16,24 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8-bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. i18n: ectx: property (text), widget (QRadioButton, flatButton)
+#: config.ui:16
+#, kde-format
+msgid "Display all windows in one list"
+msgstr "Montri ĉiujn fenestrojn en unu listo"
+
+#. i18n: ectx: property (text), widget (QRadioButton, subButton)
+#: config.ui:23
+#, kde-format
+msgid "Display a submenu for each desktop"
+msgstr "Montri submenuon por ĉiu labortablo"
+
+#. i18n: ectx: property (text), widget (QRadioButton, curButton)
+#: config.ui:30
+#, kde-format
+msgid "Display only the current desktop's windows"
+msgstr "Montri nur fenestrojn sur la nuna labrotablo"
 
 #: switch.cpp:75
 #, kde-format
@@ -34,12 +52,3 @@ msgstr "Fenestroj"
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "All Desktops"
 msgstr "Ĉiuj labortabloj"
-
-#~ msgid "Display all windows in one list"
-#~ msgstr "Montri ĉiujn fenestrojn en unu listo"
-
-#~ msgid "Display a submenu for each desktop"
-#~ msgstr "Montri submenuon por ĉiu labortablo"
-
-#~ msgid "Display only the current desktop's windows"
-#~ msgstr "Montri nur fenestrojn sur la nuna labrotablo"

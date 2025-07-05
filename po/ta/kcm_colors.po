@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2023-02-02 19:30+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -56,6 +56,32 @@ msgstr "'color-scheme' தரவு அடைவிற்குள் நிற�
 #, kde-format
 msgid "Color scheme installed successfully."
 msgstr "நிறத் திட்டம் வெற்றிகரமாக நிறுவப் பட்டது."
+
+#. i18n: ectx: label, entry (colorScheme), group (General)
+#: colorssettings.kcfg:9
+#, kde-format
+msgid "Color scheme name"
+msgstr "நிறத் திட்டத்தின் பெயர்"
+
+#. i18n: ectx: label, entry (accentColor), group (General)
+#: colorssettings.kcfg:13
+#, kde-format
+msgid "Accent color"
+msgstr "சிறப்பு நிறம்"
+
+#. i18n: ectx: label, entry (lastUsedCustomAccentColor), group (General)
+#: colorssettings.kcfg:17
+#, kde-format
+msgid ""
+"The last used custom accent color before user switched to wallpaper "
+"generated color or default color"
+msgstr ""
+
+#. i18n: ectx: label, entry (accentColorFromWallpaper), group (General)
+#: colorssettings.kcfg:21
+#, kde-format
+msgid "Whether accent color from wallpaper should be applied"
+msgstr "பின்புலப்படத்திலிருந்தான சிறப்பு நிறம் பயன்படுத்தப்பட வேண்டுமா"
 
 #: editor/kcolorschemeeditor.cpp:25
 #, kde-format
@@ -118,6 +144,229 @@ msgstr ""
 msgid "Scheme not found, falling back to current one.\n"
 msgstr "திட்டத்தை கண்டுபிடிக்க முடியவில்லை. தற்போதைய திட்டமே பயன்படுத்தப் படும்.\n"
 
+#. i18n: ectx: property (toolTip), widget (QLabel, label)
+#: editor/preview.ui:29
+#, kde-format
+msgid "Window text on Window Background"
+msgstr "சாளரப் பின்னணிக்கு மேல் சாளர உரை"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: editor/preview.ui:32
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "Window text"
+msgstr "சாளர உரை"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, pushButton)
+#: editor/preview.ui:39
+#, kde-format
+msgid "Button text on Button Background"
+msgstr "பட்டனின் பின்னணி மேல் பட்டனின் உரை"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: editor/preview.ui:42
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "Push Button"
+msgstr "அழுத்தக்கூடிய பட்டன்"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection0)
+#: editor/preview.ui:123
+#, kde-format
+msgid "Selection Normal Text against Selection Normal Background"
+msgstr "தேர்வின் சாதாரண பின்னணி மீது தேர்ந்தெடுத்த சாதாரண உரை"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection0)
+#: editor/preview.ui:126
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "Selected text"
+msgstr "தேர்ந்தெடுக்கப்பட்ட சொற்கள்"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection3)
+#: editor/preview.ui:138
+#, kde-format
+msgid "Selection Link Text against Selection Normal Background"
+msgstr "தேர்வின் சாதாரண பின்னணி மீது தேர்ந்தெடுத்த இணைப்பு"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection3)
+#. i18n: ectx: property (text), widget (QLabel, labelView3)
+#: editor/preview.ui:141 editor/preview.ui:265
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "link"
+msgstr "இணைப்பு"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection4)
+#: editor/preview.ui:153
+#, kde-format
+msgid "Selection Visited Text against Selection Normal Background"
+msgstr "தேர்வின் சாதாரண பின்னணி மீது தேர்ந்தெடுத்த அணுகியுள்ள இணைப்பு"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection4)
+#. i18n: ectx: property (text), widget (QLabel, labelView4)
+#: editor/preview.ui:156 editor/preview.ui:280
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "visited"
+msgstr "அணுகப்பட்டது"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection2)
+#: editor/preview.ui:163
+#, kde-format
+msgid "Selection Active Text against Selection Normal Background"
+msgstr "தேர்வின் சாதாரண பின்னணி மீது தேர்ந்தெடுத்த செயலிலுள்ள உரை"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection2)
+#. i18n: ectx: property (text), widget (QLabel, labelView2)
+#: editor/preview.ui:166 editor/preview.ui:290
+#, fuzzy, kde-format
+#| msgctxt "active (abbreviate)"
+#| msgid "a"
+msgctxt "color-kcm-preview"
+msgid "a"
+msgstr "a"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection1)
+#: editor/preview.ui:173
+#, kde-format
+msgid "Selection Inactive Text against Selection Normal Background"
+msgstr "தேர்வின் சாதாரண பின்னணி மீது தேர்ந்தெடுத்த செயலிலில்லாத உரை"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection1)
+#. i18n: ectx: property (text), widget (QLabel, labelView1)
+#: editor/preview.ui:176 editor/preview.ui:300
+#, fuzzy, kde-format
+#| msgctxt "inactive (abbreviate)"
+#| msgid "i"
+msgctxt "color-kcm-preview"
+msgid "i"
+msgstr "i"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection5)
+#: editor/preview.ui:183
+#, fuzzy, kde-format
+#| msgid "Normal Background"
+msgid "Selection Negative Text against Selection Normal Background"
+msgstr "சாதாரண பின்னணி"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection5)
+#. i18n: ectx: property (text), widget (QLabel, labelView5)
+#: editor/preview.ui:186 editor/preview.ui:310
+#, fuzzy, kde-format
+#| msgid "!"
+msgctxt "color-kcm-preview"
+msgid "!"
+msgstr "!"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection6)
+#: editor/preview.ui:193
+#, fuzzy, kde-format
+#| msgid "Normal Background"
+msgid "Selection Neutral Text against Selection Normal Background"
+msgstr "சாதாரண பின்னணி"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection6)
+#. i18n: ectx: property (text), widget (QLabel, labelView6)
+#: editor/preview.ui:196 editor/preview.ui:320
+#, fuzzy, kde-format
+#| msgid "="
+msgctxt "color-kcm-preview"
+msgid "="
+msgstr "="
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection7)
+#: editor/preview.ui:203
+#, fuzzy, kde-format
+#| msgid "Normal Background"
+msgid "Selection Positive Text against Selection Normal Background"
+msgstr "சாதாரண பின்னணி"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection7)
+#. i18n: ectx: property (text), widget (QLabel, labelView7)
+#: editor/preview.ui:206 editor/preview.ui:330
+#, fuzzy, kde-format
+#| msgid "+"
+msgctxt "color-kcm-preview"
+msgid "+"
+msgstr "+"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView0)
+#: editor/preview.ui:247
+#, kde-format
+msgid "View Normal Text against View Normal Background"
+msgstr "காட்சிப்பகுதியின் சாதாரண பின்னணி மீது காட்சிப்பகுதியின் சாதாரண உரை"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelView0)
+#: editor/preview.ui:250
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "Normal text"
+msgstr "இயல்பான உரை"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView3)
+#: editor/preview.ui:262
+#, kde-format
+msgid "View Link Text against View Normal Background"
+msgstr "காட்சிப்பகுதியின் சாதாரண பின்னணி மீது காட்சிப்பகுதியில் இணைப்பு"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView4)
+#: editor/preview.ui:277
+#, kde-format
+msgid "View Visited Text against View Normal Background"
+msgstr "காட்சிப்பகுதியின் சாதாரண பின்னணி மீது காட்சிப்பகுதியில் அணுகப்பட்ட இணைப்பு"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView2)
+#: editor/preview.ui:287
+#, kde-format
+msgid "View Active Text against View Normal Background"
+msgstr "காட்சிப்பகுதியின் சாதாரண பின்னணி மீது காட்சிப்பகுதியில் செயலிலுள்ள உரை"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView1)
+#: editor/preview.ui:297
+#, kde-format
+msgid "View Inactive Text against View Normal Background"
+msgstr "காட்சிப்பகுதியின் சாதாரண பின்னணி மீது காட்சிப்பகுதியில் செயலிலில்லாத உரை"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView5)
+#: editor/preview.ui:307
+#, fuzzy, kde-format
+#| msgid "Normal Background"
+msgid "View Negative Text against View Normal Background"
+msgstr "சாதாரண பின்னணி"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView6)
+#: editor/preview.ui:317
+#, fuzzy, kde-format
+#| msgid "Normal Background"
+msgid "View Neutral Text against View Normal Background"
+msgstr "சாதாரண பின்னணி"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView7)
+#: editor/preview.ui:327
+#, fuzzy, kde-format
+#| msgid "Normal Background"
+msgid "View Positive Text against View Normal Background"
+msgstr "சாதாரண பின்னணி"
+
 #: editor/scmeditorcolors.cpp:62 editor/scmeditorcolors.cpp:76
 #, kde-format
 msgid "Varies"
@@ -138,50 +387,267 @@ msgstr "மாற்றுப் பின்னணி"
 msgid "Normal Text"
 msgstr "இயல்பான உரை"
 
-#: editor/scmeditorcolors.cpp:102
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:102 editor/scmeditorcolors.ui:303
 #, kde-format
 msgid "Inactive Text"
 msgstr "செயற்படாத உரை"
 
-#: editor/scmeditorcolors.cpp:103
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:103 editor/scmeditorcolors.ui:308
 #, kde-format
 msgid "Active Text"
 msgstr "செயற்படும் உரை"
 
-#: editor/scmeditorcolors.cpp:104
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:104 editor/scmeditorcolors.ui:313
 #, kde-format
 msgid "Link Text"
 msgstr "இணைப்பின் உரை"
 
-#: editor/scmeditorcolors.cpp:105
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:105 editor/scmeditorcolors.ui:318
 #, kde-format
 msgid "Visited Text"
 msgstr "அணுகப்பட்டதன் உரை"
 
-#: editor/scmeditorcolors.cpp:106
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:106 editor/scmeditorcolors.ui:323
 #, fuzzy, kde-format
 msgid "Negative Text"
 msgstr "எதிர்ம உரை"
 
-#: editor/scmeditorcolors.cpp:107
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:107 editor/scmeditorcolors.ui:328
 #, fuzzy, kde-format
 msgid "Neutral Text"
 msgstr "நடுநிலை உரை"
 
-#: editor/scmeditorcolors.cpp:108
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:108 editor/scmeditorcolors.ui:333
 #, fuzzy, kde-format
 msgid "Positive Text"
 msgstr "உறுதி உரை"
 
-#: editor/scmeditorcolors.cpp:109
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:109 editor/scmeditorcolors.ui:338
 #, fuzzy, kde-format
 msgid "Focus Decoration"
 msgstr "குவியப்பட்டிருக்கும் விளிம்பு"
 
-#: editor/scmeditorcolors.cpp:110
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:110 editor/scmeditorcolors.ui:343
 #, fuzzy, kde-format
 msgid "Hover Decoration"
 msgstr "சுட்டியின் அடியிலுள்ள விளிம்பு"
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: editor/scmeditorcolors.ui:23
+#, kde-format
+msgid "Color set:"
+msgstr "நிறத் தொகுப்பு:"
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:36
+#, kde-format
+msgid "Colorset to view/modify"
+msgstr "காண/மாற்ற வேண்டிய நிறத்தொகுப்பு"
+
+#. i18n: 'Common' here means &quot;frequent/not rare&quot;, not &quot;shared&quot;
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:40
+#, kde-format
+msgctxt "color-sets"
+msgid "Common Colors"
+msgstr "பொதுவான நிறங்கள்"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:45
+#, kde-format
+msgctxt "color-sets"
+msgid "View"
+msgstr "காட்சிப்பகுதி"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:50
+#, kde-format
+msgctxt "color-sets"
+msgid "Window"
+msgstr "சாளரம்"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:55
+#, kde-format
+msgctxt "color-sets"
+msgid "Button"
+msgstr "பட்டன்"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:60
+#, kde-format
+msgctxt "color-sets"
+msgid "Selection"
+msgstr "தேர்வு"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:65
+#, kde-format
+msgctxt "color-sets"
+msgid "Tooltip"
+msgstr "கருவித் துப்பு"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:70
+#, kde-format
+msgctxt "color-sets"
+msgid "Complementary"
+msgstr "எதிர்முறை"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:75
+#, kde-format
+msgctxt "color-sets"
+msgid "Header"
+msgstr "தலைப்பு"
+
+#. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:118 editor/scmeditorcolors.ui:123
+#: editor/scmeditorcolors.ui:128 editor/scmeditorcolors.ui:133
+#: editor/scmeditorcolors.ui:138 editor/scmeditorcolors.ui:143
+#: editor/scmeditorcolors.ui:148 editor/scmeditorcolors.ui:153
+#: editor/scmeditorcolors.ui:158 editor/scmeditorcolors.ui:163
+#: editor/scmeditorcolors.ui:168 editor/scmeditorcolors.ui:173
+#: editor/scmeditorcolors.ui:178 editor/scmeditorcolors.ui:183
+#: editor/scmeditorcolors.ui:188 editor/scmeditorcolors.ui:193
+#: editor/scmeditorcolors.ui:198 editor/scmeditorcolors.ui:203
+#: editor/scmeditorcolors.ui:208 editor/scmeditorcolors.ui:213
+#: editor/scmeditorcolors.ui:218 editor/scmeditorcolors.ui:223
+#: editor/scmeditorcolors.ui:228 editor/scmeditorcolors.ui:233
+#: editor/scmeditorcolors.ui:238 editor/scmeditorcolors.ui:243
+#, kde-format
+msgid "New Row"
+msgstr "புதிய வரிசை"
+
+#. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:248
+#, kde-format
+msgid "0"
+msgstr "0"
+
+#. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:253
+#, kde-format
+msgid "1"
+msgstr "1"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:258
+#, kde-format
+msgid "View Background"
+msgstr "காட்சிப்பகுதியின் பின்னணி"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:263
+#, kde-format
+msgid "View Text"
+msgstr "காட்சிப்பகுதியின் உரை"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:268
+#, kde-format
+msgid "Window Background"
+msgstr "சாளரப் பின்னணி"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:273
+#, kde-format
+msgid "Window Text"
+msgstr "சாளர உரை"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:278
+#, kde-format
+msgid "Button Background"
+msgstr "பட்டனின் பின்னணி"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:283
+#, kde-format
+msgid "Button Text"
+msgstr "பட்டனின் உரை"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:288
+#, kde-format
+msgid "Selection Background"
+msgstr "தேர்வின் பின்னணி"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:293
+#, kde-format
+msgid "Selection Text"
+msgstr "தேர்வின் உரை"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:298
+#, kde-format
+msgid "Selection Inactive Text"
+msgstr "தேர்வில் செயலிலில்லாத உரை"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:348
+#, kde-format
+msgid "Tooltip Background"
+msgstr "துப்பின் பின்னணி"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:353
+#, kde-format
+msgid "Tooltip Text"
+msgstr "துப்பின் உரை"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:358
+#, kde-format
+msgid "Active Titlebar"
+msgstr "செயலில் உள்ள தலைப்புப்பட்டை"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:363
+#, kde-format
+msgid "Active Titlebar Text"
+msgstr "செயலில் உள்ள தலைப்புபட்டையின் உரை"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:368
+#, kde-format
+msgid "Active Titlebar Secondary"
+msgstr "செயலில் உள்ள இரண்டாம் நிலை தலைப்புபட்டையின் உரை"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:373
+#, kde-format
+msgid "Inactive Titlebar"
+msgstr "செயலிலில்லாத தலைப்புப்பட்டை"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:378
+#, kde-format
+msgid "Inactive Titlebar Text"
+msgstr "செயலிலில்லாத தலைப்புப்பட்டையின் உரை"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:383
+#, kde-format
+msgid "Inactive Titlebar Secondary"
+msgstr "செயலிலில்லாத இரண்டாம் நிலை தலைப்புபட்டையின் உரை"
 
 #: editor/scmeditordialog.cpp:60
 #, kde-format
@@ -241,6 +707,476 @@ msgstr "சிக்கல்"
 #, kde-format
 msgid "Inactive"
 msgstr "செயலிலில்லை"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: editor/scmeditoreffects.ui:17
+#, kde-format
+msgid "Color:"
+msgstr "நிறம்:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: editor/scmeditoreffects.ui:27
+#, fuzzy, kde-format
+#| msgid "Intensity"
+msgid "Intensity:"
+msgstr "உக்கிரம்"
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, colorBox)
+#: editor/scmeditoreffects.ui:37
+#, fuzzy, kde-format
+msgid "Disabled color effect type"
+msgstr "முடங்கிய நிற தாக்க வகை"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
+#: editor/scmeditoreffects.ui:41
+#, kde-format
+msgctxt "no disabled color effect"
+msgid "None"
+msgstr "ஏதுமில்லை"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
+#: editor/scmeditoreffects.ui:46
+#, fuzzy, kde-format
+#| msgid "Desaturate"
+msgctxt "disabled color effect"
+msgid "Desaturate"
+msgstr "காலியாக்கு"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
+#: editor/scmeditoreffects.ui:51
+#, fuzzy, kde-format
+#| msgid "Fade"
+msgctxt "disabled color effect"
+msgid "Fade"
+msgstr "வெளிர்"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
+#: editor/scmeditoreffects.ui:56
+#, fuzzy, kde-format
+#| msgid "Tint"
+msgctxt "disabled color effect"
+msgid "Tint"
+msgstr "டின்ட்"
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, intensityBox)
+#: editor/scmeditoreffects.ui:64
+#, kde-format
+msgid "Disabled intensity effect type"
+msgstr "முடங்கிய உக்கிர தாக்க வகை"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
+#: editor/scmeditoreffects.ui:68
+#, kde-format
+msgctxt "no disabled intensity effect"
+msgid "None"
+msgstr "ஏதுமில்லை"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
+#: editor/scmeditoreffects.ui:73
+#, fuzzy, kde-format
+#| msgid "Shade"
+msgctxt "disabled intensity effect"
+msgid "Shade"
+msgstr "சாயல்"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
+#: editor/scmeditoreffects.ui:78
+#, kde-format
+msgctxt "disabled intensity effect"
+msgid "Darken"
+msgstr "கருமையாக்கு"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
+#: editor/scmeditoreffects.ui:83
+#, kde-format
+msgctxt "disabled intensity effect"
+msgid "Lighten"
+msgstr "வெள்ளையாக்கு"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: editor/scmeditoreffects.ui:107
+#, kde-format
+msgid "Contrast:"
+msgstr "நிறவேறுபாடு:"
+
+#. i18n: ectx: property (toolTip), widget (QSlider, colorSlider)
+#: editor/scmeditoreffects.ui:120
+#, fuzzy, kde-format
+msgid "Disabled color effect amount"
+msgstr "முடங்கிய நிற தாக்க அளவு"
+
+#. i18n: ectx: property (toolTip), widget (QSlider, intensitySlider)
+#: editor/scmeditoreffects.ui:139
+#, fuzzy, kde-format
+msgid "Disabled intensity effect amount"
+msgstr "முடங்கிய உக்கிர தாக்க அளவு"
+
+#. i18n: ectx: property (toolTip), widget (KColorButton, colorButton)
+#: editor/scmeditoreffects.ui:158
+#, fuzzy, kde-format
+msgid "Disabled color"
+msgstr "முடங்கிய நிறம்"
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, contrastBox)
+#: editor/scmeditoreffects.ui:181
+#, fuzzy, kde-format
+msgid "Disabled contrast type"
+msgstr "முடங்கிய நிறவேறுபாட்டு வகை"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
+#: editor/scmeditoreffects.ui:185
+#, kde-format
+msgctxt "no disabled contrast"
+msgid "None"
+msgstr "ஏதுமில்லை"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
+#: editor/scmeditoreffects.ui:190
+#, fuzzy, kde-format
+#| msgid "Fade"
+msgctxt "disabled contrast"
+msgid "Fade"
+msgstr "வெளிர்"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
+#: editor/scmeditoreffects.ui:195
+#, fuzzy, kde-format
+#| msgid "Tint"
+msgctxt "disabled contrast"
+msgid "Tint"
+msgstr "டின்ட்"
+
+#. i18n: ectx: property (toolTip), widget (QSlider, contrastSlider)
+#: editor/scmeditoreffects.ui:222
+#, fuzzy, kde-format
+msgid "Disabled contrast amount"
+msgstr "முடங்கிய நிறவேறுபாட்டு அளவு"
+
+#. i18n: ectx: property (text), widget (QCheckBox, useInactiveEffects)
+#: editor/scmeditoroptions.ui:17
+#, fuzzy, kde-format
+#| msgid "Apply inactive window color &effects"
+msgid "Apply &effects to inactive windows"
+msgstr "முடக்கப்பட்ட சாளர நிற &தாக்கங்களை அமல் செய்க"
+
+#. i18n: ectx: property (text), widget (QCheckBox, inactiveSelectionEffect)
+#: editor/scmeditoroptions.ui:24
+#, kde-format
+msgid "Use different colors for in&active selections"
+msgstr "&செயலிலில்லாத தேர்வுகளுக்கு வேறு நிறங்களை பயன்படுத்து"
+
+#. i18n: ectx: property (text), widget (QCheckBox, shadeSortedColumn)
+#: editor/scmeditoroptions.ui:31
+#, kde-format
+msgid "Shade sorted column &in lists"
+msgstr "&பட்டியல்களை வரிசைப்படுத்த பயன்படும் நெடுவரிசையை முன்னிலைப்படுத்து"
+
+#. i18n: ectx: property (text), widget (QCheckBox, tintColors)
+#: editor/scmeditoroptions.ui:38
+#, kde-format
+msgid "Tint all colors with accent color"
+msgstr "அனைத்து நிறங்களிலும் சிறப்பு நிறத்தை கல"
+
+#. i18n: ectx: property (text), widget (QCheckBox, accentTitlebar)
+#: editor/scmeditoroptions.ui:45
+#, kde-format
+msgid "Make window titlebars a&ccent-colored"
+msgstr "சா&ளர தலைப்புப்பட்டைகளுக்கு சிறப்பு நிறத்தையிடு"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: editor/scmeditoroptions.ui:52
+#, kde-format
+msgid "Tint strength:"
+msgstr "நிறக்கலப்பின் அளவு:"
+
+#. i18n: ectx: property (toolTip), widget (QGroupBox, groupBox_5)
+#: editor/scmeditoroptions.ui:69
+#, kde-format
+msgid "Shading of frames and lighting (\"3D\") effects"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
+#: editor/scmeditoroptions.ui:72
+#, kde-format
+msgid "Shading"
+msgstr "நிழலிடுவது"
+
+#. i18n: ectx: property (text), widget (QLabel, label_10)
+#: editor/scmeditoroptions.ui:97
+#, kde-format
+msgid "Maximum"
+msgstr "அதிகபட்சம்"
+
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: editor/scmeditoroptions.ui:117
+#, kde-format
+msgid "Minimum"
+msgstr "குறைந்தபட்சம்"
+
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: editor/scmeditoroptions.ui:124
+#, kde-format
+msgid "Contrast"
+msgstr "நிறவேறுபாடு"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore0)
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack0)
+#: editor/setpreview.ui:35 editor/setpreview.ui:189
+#, kde-format
+msgid "Normal Text on Normal Background"
+msgstr "சாதாரண பின்னணி மீது சாதாரண உரை"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore0)
+#. i18n: ectx: property (text), widget (QLabel, labelBack0)
+#: editor/setpreview.ui:38 editor/setpreview.ui:192
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "normal"
+msgstr "சாதாரணம்"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore3)
+#: editor/setpreview.ui:56
+#, kde-format
+msgid "Link Text on Normal Background"
+msgstr "சாதாரண பின்னணி மீது இணைப்பிற்கான உரை"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore3)
+#. i18n: ectx: property (text), widget (QLabel, labelBack3)
+#: editor/setpreview.ui:59 editor/setpreview.ui:214
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "link"
+msgstr "இணைப்பு"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore4)
+#: editor/setpreview.ui:77
+#, kde-format
+msgid "Visited Text on Normal Background"
+msgstr "சாதாரண பின்னணி மீது அணுகப்பட்டதன் உரை"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore4)
+#. i18n: ectx: property (text), widget (QLabel, labelBack4)
+#: editor/setpreview.ui:80 editor/setpreview.ui:236
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "visited"
+msgstr "அணுகப்பட்டது"
+
+#. i18n: ectx: property (toolTip), widget (QWidget, widgetFore2)
+#: editor/setpreview.ui:90
+#, kde-format
+msgid "Active Text on Normal Background"
+msgstr "சாதாரண பின்னணி மீது செயலிலுள்ள உரை"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore2)
+#. i18n: ectx: property (text), widget (QLabel, labelBack2)
+#: editor/setpreview.ui:96 editor/setpreview.ui:253
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "active"
+msgstr "செயலிலுள்ளது"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore1)
+#: editor/setpreview.ui:109
+#, kde-format
+msgid "Inactive Text on Normal Background"
+msgstr "சாதாரண பின்னணி மீது செயலிலில்லாத உரை"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore1)
+#: editor/setpreview.ui:112
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "inactive"
+msgstr "செயலிலில்லாத‍து"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore5)
+#: editor/setpreview.ui:125
+#, fuzzy, kde-format
+#| msgid "Normal Background"
+msgid "Negative Text on Normal Background"
+msgstr "சாதாரண பின்னணி"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore5)
+#. i18n: ectx: property (text), widget (QLabel, labelBack5)
+#: editor/setpreview.ui:128 editor/setpreview.ui:286
+#, fuzzy, kde-format
+#| msgid "Inactive"
+msgctxt "color-kcm-set-preview"
+msgid "negative"
+msgstr "முடங்கியநிலை"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore6)
+#: editor/setpreview.ui:141
+#, fuzzy, kde-format
+#| msgid "Normal Background"
+msgid "Neutral Text on Normal Background"
+msgstr "சாதாரண பின்னணி"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore6)
+#. i18n: ectx: property (text), widget (QLabel, labelBack6)
+#: editor/setpreview.ui:144 editor/setpreview.ui:303
+#, fuzzy, kde-format
+#| msgid "Neutral Text"
+msgctxt "color-kcm-set-preview"
+msgid "neutral"
+msgstr "நடுநிலை உரை"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore7)
+#: editor/setpreview.ui:157
+#, fuzzy, kde-format
+#| msgid "Normal Background"
+msgid "Positive Text on Normal Background"
+msgstr "சாதாரண பின்னணி"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore7)
+#. i18n: ectx: property (text), widget (QLabel, labelBack7)
+#: editor/setpreview.ui:160 editor/setpreview.ui:320
+#, fuzzy, kde-format
+#| msgid "Positive Text"
+msgctxt "color-kcm-set-preview"
+msgid "positive"
+msgstr "உறுதி உரை"
+
+#. i18n: ectx: property (toolTip), widget (QWidget, widgetFore8)
+#: editor/setpreview.ui:170
+#, kde-format
+msgid "Hover on Normal Background"
+msgstr "சுட்டிக்கு அடியிலிருப்பது, சாதாரண பின்னணியின் மீது"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore8)
+#: editor/setpreview.ui:176
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "hover"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack3)
+#: editor/setpreview.ui:211
+#, kde-format
+msgid ""
+"Link Text on Link Background\n"
+"(Note: Link Background is derived from Link Text and cannot be separately "
+"configured at this time)"
+msgstr ""
+"இணைப்பின் பின்னணி மீது இணைப்பின் உரை\n"
+"(குறிப்பு: இணைப்பின் பின்னணி நிறம், இணைப்பின் உரையின் நிறத்தை பொறுத்தே அமைக்கப்படும், "
+"அதாவது அதனை சுயேச்சையாக அமைக்க முடியாது)"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack4)
+#: editor/setpreview.ui:233
+#, kde-format
+msgid ""
+"Visited Text on Visited Background\n"
+"(Note: Visited Background is derived from Visited Text and cannot be "
+"separately configured at this time)"
+msgstr ""
+"அணுகப்பட்டதன் பின்னணி மீது அணுகப்பட்டதன் உரை\n"
+"(குறிப்பு: அணுகப்பட்டதன் பின்னணி நிறம், அணுகப்பட்டதன் உரையின் நிறத்தை பொறுத்தே "
+"அமைக்கப்படும், அதாவது அதனை சுயேச்சையாக அமைக்க முடியாது)"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack2)
+#: editor/setpreview.ui:250
+#, kde-format
+msgid ""
+"Active Text on Active Background\n"
+"(Note: Active Background is derived from Active Text and cannot be "
+"separately configured at this time)"
+msgstr ""
+"செயலிலுள்ள பின்னணி மீது செயலிலுள்ள உரை\n"
+"(குறிப்பு: செயலிலுள்ள பின்னணி நிறம், செயலிலுள்ள உரையின் நிறத்தை பொறுத்தே அமைக்கப்படும், "
+"அதாவது அதனை சுயேச்சையாக அமைக்க முடியாது)"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack1)
+#: editor/setpreview.ui:266
+#, kde-format
+msgid "Inactive Text on Alternate Background"
+msgstr "மாற்று பின்னணி மீது செயலிலில்லாத உரை"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelBack1)
+#: editor/setpreview.ui:269
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "alternate"
+msgstr "மாற்று"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack5)
+#: editor/setpreview.ui:283
+#, fuzzy, kde-format
+#| msgid ""
+#| "Active Text on Active Background\n"
+#| "(Note: Active Background is derived from Active Text and cannot be "
+#| "separately configured at this time)"
+msgid ""
+"Negative Text on Negative Background\n"
+"(Note: Negative Background is derived from Negative Text and cannot be "
+"separately configured at this time)"
+msgstr ""
+"செயலிலுள்ள பின்னணி மீது செயலிலுள்ள உரை\n"
+"(குறிப்பு: செயலிலுள்ள பின்னணி நிறம், செயலிலுள்ள உரையின் நிறத்தை பொறுத்தே அமைக்கப்படும், "
+"அதாவது அதனை சுயேச்சையாக அமைக்க முடியாது)"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack6)
+#: editor/setpreview.ui:300
+#, fuzzy, kde-format
+#| msgid ""
+#| "Active Text on Active Background\n"
+#| "(Note: Active Background is derived from Active Text and cannot be "
+#| "separately configured at this time)"
+msgid ""
+"Neutral Text on Neutral Background\n"
+"(Note: Neutral Background is derived from Neutral Text and cannot be "
+"separately configured at this time)"
+msgstr ""
+"செயலிலுள்ள பின்னணி மீது செயலிலுள்ள உரை\n"
+"(குறிப்பு: செயலிலுள்ள பின்னணி நிறம், செயலிலுள்ள உரையின் நிறத்தை பொறுத்தே அமைக்கப்படும், "
+"அதாவது அதனை சுயேச்சையாக அமைக்க முடியாது)"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack7)
+#: editor/setpreview.ui:317
+#, fuzzy, kde-format
+#| msgid ""
+#| "Active Text on Active Background\n"
+#| "(Note: Active Background is derived from Active Text and cannot be "
+#| "separately configured at this time)"
+msgid ""
+"Positive Text on Positive Background\n"
+"(Note: Positive Background is derived from Positive Text and cannot be "
+"separately configured at this time)"
+msgstr ""
+"செயலிலுள்ள பின்னணி மீது செயலிலுள்ள உரை\n"
+"(குறிப்பு: செயலிலுள்ள பின்னணி நிறம், செயலிலுள்ள உரையின் நிறத்தை பொறுத்தே அமைக்கப்படும், "
+"அதாவது அதனை சுயேச்சையாக அமைக்க முடியாது)"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore9)
+#: editor/setpreview.ui:333
+#, kde-format
+msgid "Focus on Normal Background"
+msgstr "குவியப்பட்டிருப்பது, சாதாரண பின்னணியின் மீது"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore9)
+#: editor/setpreview.ui:336
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "focus"
+msgstr "குவியம்"
 
 #: package/contents/ui/main.qml:23
 #, kde-format
@@ -454,473 +1390,6 @@ msgstr "உங்கள் கணினியில் பின்வரும�
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (தற்போதைய நிறத்திட்டம்)"
-
-#~ msgid "Color scheme name"
-#~ msgstr "நிறத் திட்டத்தின் பெயர்"
-
-#~ msgid "Accent color"
-#~ msgstr "சிறப்பு நிறம்"
-
-#~ msgid "Whether accent color from wallpaper should be applied"
-#~ msgstr "பின்புலப்படத்திலிருந்தான சிறப்பு நிறம் பயன்படுத்தப்பட வேண்டுமா"
-
-#~ msgid "Window text on Window Background"
-#~ msgstr "சாளரப் பின்னணிக்கு மேல் சாளர உரை"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "Window text"
-#~ msgstr "சாளர உரை"
-
-#~ msgid "Button text on Button Background"
-#~ msgstr "பட்டனின் பின்னணி மேல் பட்டனின் உரை"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "Push Button"
-#~ msgstr "அழுத்தக்கூடிய பட்டன்"
-
-#~ msgid "Selection Normal Text against Selection Normal Background"
-#~ msgstr "தேர்வின் சாதாரண பின்னணி மீது தேர்ந்தெடுத்த சாதாரண உரை"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "Selected text"
-#~ msgstr "தேர்ந்தெடுக்கப்பட்ட சொற்கள்"
-
-#~ msgid "Selection Link Text against Selection Normal Background"
-#~ msgstr "தேர்வின் சாதாரண பின்னணி மீது தேர்ந்தெடுத்த இணைப்பு"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "link"
-#~ msgstr "இணைப்பு"
-
-#~ msgid "Selection Visited Text against Selection Normal Background"
-#~ msgstr "தேர்வின் சாதாரண பின்னணி மீது தேர்ந்தெடுத்த அணுகியுள்ள இணைப்பு"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "visited"
-#~ msgstr "அணுகப்பட்டது"
-
-#~ msgid "Selection Active Text against Selection Normal Background"
-#~ msgstr "தேர்வின் சாதாரண பின்னணி மீது தேர்ந்தெடுத்த செயலிலுள்ள உரை"
-
-#, fuzzy
-#~| msgctxt "active (abbreviate)"
-#~| msgid "a"
-#~ msgctxt "color-kcm-preview"
-#~ msgid "a"
-#~ msgstr "a"
-
-#~ msgid "Selection Inactive Text against Selection Normal Background"
-#~ msgstr "தேர்வின் சாதாரண பின்னணி மீது தேர்ந்தெடுத்த செயலிலில்லாத உரை"
-
-#, fuzzy
-#~| msgctxt "inactive (abbreviate)"
-#~| msgid "i"
-#~ msgctxt "color-kcm-preview"
-#~ msgid "i"
-#~ msgstr "i"
-
-#, fuzzy
-#~| msgid "Normal Background"
-#~ msgid "Selection Negative Text against Selection Normal Background"
-#~ msgstr "சாதாரண பின்னணி"
-
-#, fuzzy
-#~| msgid "!"
-#~ msgctxt "color-kcm-preview"
-#~ msgid "!"
-#~ msgstr "!"
-
-#, fuzzy
-#~| msgid "Normal Background"
-#~ msgid "Selection Neutral Text against Selection Normal Background"
-#~ msgstr "சாதாரண பின்னணி"
-
-#, fuzzy
-#~| msgid "="
-#~ msgctxt "color-kcm-preview"
-#~ msgid "="
-#~ msgstr "="
-
-#, fuzzy
-#~| msgid "Normal Background"
-#~ msgid "Selection Positive Text against Selection Normal Background"
-#~ msgstr "சாதாரண பின்னணி"
-
-#, fuzzy
-#~| msgid "+"
-#~ msgctxt "color-kcm-preview"
-#~ msgid "+"
-#~ msgstr "+"
-
-#~ msgid "View Normal Text against View Normal Background"
-#~ msgstr "காட்சிப்பகுதியின் சாதாரண பின்னணி மீது காட்சிப்பகுதியின் சாதாரண உரை"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "Normal text"
-#~ msgstr "இயல்பான உரை"
-
-#~ msgid "View Link Text against View Normal Background"
-#~ msgstr "காட்சிப்பகுதியின் சாதாரண பின்னணி மீது காட்சிப்பகுதியில் இணைப்பு"
-
-#~ msgid "View Visited Text against View Normal Background"
-#~ msgstr "காட்சிப்பகுதியின் சாதாரண பின்னணி மீது காட்சிப்பகுதியில் அணுகப்பட்ட இணைப்பு"
-
-#~ msgid "View Active Text against View Normal Background"
-#~ msgstr "காட்சிப்பகுதியின் சாதாரண பின்னணி மீது காட்சிப்பகுதியில் செயலிலுள்ள உரை"
-
-#~ msgid "View Inactive Text against View Normal Background"
-#~ msgstr "காட்சிப்பகுதியின் சாதாரண பின்னணி மீது காட்சிப்பகுதியில் செயலிலில்லாத உரை"
-
-#, fuzzy
-#~| msgid "Normal Background"
-#~ msgid "View Negative Text against View Normal Background"
-#~ msgstr "சாதாரண பின்னணி"
-
-#, fuzzy
-#~| msgid "Normal Background"
-#~ msgid "View Neutral Text against View Normal Background"
-#~ msgstr "சாதாரண பின்னணி"
-
-#, fuzzy
-#~| msgid "Normal Background"
-#~ msgid "View Positive Text against View Normal Background"
-#~ msgstr "சாதாரண பின்னணி"
-
-#~ msgid "Color set:"
-#~ msgstr "நிறத் தொகுப்பு:"
-
-#~ msgid "Colorset to view/modify"
-#~ msgstr "காண/மாற்ற வேண்டிய நிறத்தொகுப்பு"
-
-#~ msgctxt "color-sets"
-#~ msgid "Common Colors"
-#~ msgstr "பொதுவான நிறங்கள்"
-
-#~ msgctxt "color-sets"
-#~ msgid "View"
-#~ msgstr "காட்சிப்பகுதி"
-
-#~ msgctxt "color-sets"
-#~ msgid "Window"
-#~ msgstr "சாளரம்"
-
-#~ msgctxt "color-sets"
-#~ msgid "Button"
-#~ msgstr "பட்டன்"
-
-#~ msgctxt "color-sets"
-#~ msgid "Selection"
-#~ msgstr "தேர்வு"
-
-#~ msgctxt "color-sets"
-#~ msgid "Tooltip"
-#~ msgstr "கருவித் துப்பு"
-
-#~ msgctxt "color-sets"
-#~ msgid "Complementary"
-#~ msgstr "எதிர்முறை"
-
-#~ msgctxt "color-sets"
-#~ msgid "Header"
-#~ msgstr "தலைப்பு"
-
-#~ msgid "New Row"
-#~ msgstr "புதிய வரிசை"
-
-#~ msgid "0"
-#~ msgstr "0"
-
-#~ msgid "1"
-#~ msgstr "1"
-
-#~ msgid "View Background"
-#~ msgstr "காட்சிப்பகுதியின் பின்னணி"
-
-#~ msgid "View Text"
-#~ msgstr "காட்சிப்பகுதியின் உரை"
-
-#~ msgid "Window Background"
-#~ msgstr "சாளரப் பின்னணி"
-
-#~ msgid "Window Text"
-#~ msgstr "சாளர உரை"
-
-#~ msgid "Button Background"
-#~ msgstr "பட்டனின் பின்னணி"
-
-#~ msgid "Button Text"
-#~ msgstr "பட்டனின் உரை"
-
-#~ msgid "Selection Background"
-#~ msgstr "தேர்வின் பின்னணி"
-
-#~ msgid "Selection Text"
-#~ msgstr "தேர்வின் உரை"
-
-#~ msgid "Selection Inactive Text"
-#~ msgstr "தேர்வில் செயலிலில்லாத உரை"
-
-#~ msgid "Tooltip Background"
-#~ msgstr "துப்பின் பின்னணி"
-
-#~ msgid "Tooltip Text"
-#~ msgstr "துப்பின் உரை"
-
-#~ msgid "Active Titlebar"
-#~ msgstr "செயலில் உள்ள தலைப்புப்பட்டை"
-
-#~ msgid "Active Titlebar Text"
-#~ msgstr "செயலில் உள்ள தலைப்புபட்டையின் உரை"
-
-#~ msgid "Active Titlebar Secondary"
-#~ msgstr "செயலில் உள்ள இரண்டாம் நிலை தலைப்புபட்டையின் உரை"
-
-#~ msgid "Inactive Titlebar"
-#~ msgstr "செயலிலில்லாத தலைப்புப்பட்டை"
-
-#~ msgid "Inactive Titlebar Text"
-#~ msgstr "செயலிலில்லாத தலைப்புப்பட்டையின் உரை"
-
-#~ msgid "Inactive Titlebar Secondary"
-#~ msgstr "செயலிலில்லாத இரண்டாம் நிலை தலைப்புபட்டையின் உரை"
-
-#~ msgid "Color:"
-#~ msgstr "நிறம்:"
-
-#, fuzzy
-#~| msgid "Intensity"
-#~ msgid "Intensity:"
-#~ msgstr "உக்கிரம்"
-
-#, fuzzy
-#~ msgid "Disabled color effect type"
-#~ msgstr "முடங்கிய நிற தாக்க வகை"
-
-#~ msgctxt "no disabled color effect"
-#~ msgid "None"
-#~ msgstr "ஏதுமில்லை"
-
-#, fuzzy
-#~| msgid "Desaturate"
-#~ msgctxt "disabled color effect"
-#~ msgid "Desaturate"
-#~ msgstr "காலியாக்கு"
-
-#, fuzzy
-#~| msgid "Fade"
-#~ msgctxt "disabled color effect"
-#~ msgid "Fade"
-#~ msgstr "வெளிர்"
-
-#, fuzzy
-#~| msgid "Tint"
-#~ msgctxt "disabled color effect"
-#~ msgid "Tint"
-#~ msgstr "டின்ட்"
-
-#~ msgid "Disabled intensity effect type"
-#~ msgstr "முடங்கிய உக்கிர தாக்க வகை"
-
-#~ msgctxt "no disabled intensity effect"
-#~ msgid "None"
-#~ msgstr "ஏதுமில்லை"
-
-#, fuzzy
-#~| msgid "Shade"
-#~ msgctxt "disabled intensity effect"
-#~ msgid "Shade"
-#~ msgstr "சாயல்"
-
-#~ msgctxt "disabled intensity effect"
-#~ msgid "Darken"
-#~ msgstr "கருமையாக்கு"
-
-#~ msgctxt "disabled intensity effect"
-#~ msgid "Lighten"
-#~ msgstr "வெள்ளையாக்கு"
-
-#~ msgid "Contrast:"
-#~ msgstr "நிறவேறுபாடு:"
-
-#, fuzzy
-#~ msgid "Disabled color effect amount"
-#~ msgstr "முடங்கிய நிற தாக்க அளவு"
-
-#, fuzzy
-#~ msgid "Disabled intensity effect amount"
-#~ msgstr "முடங்கிய உக்கிர தாக்க அளவு"
-
-#, fuzzy
-#~ msgid "Disabled color"
-#~ msgstr "முடங்கிய நிறம்"
-
-#, fuzzy
-#~ msgid "Disabled contrast type"
-#~ msgstr "முடங்கிய நிறவேறுபாட்டு வகை"
-
-#~ msgctxt "no disabled contrast"
-#~ msgid "None"
-#~ msgstr "ஏதுமில்லை"
-
-#, fuzzy
-#~| msgid "Fade"
-#~ msgctxt "disabled contrast"
-#~ msgid "Fade"
-#~ msgstr "வெளிர்"
-
-#, fuzzy
-#~| msgid "Tint"
-#~ msgctxt "disabled contrast"
-#~ msgid "Tint"
-#~ msgstr "டின்ட்"
-
-#, fuzzy
-#~ msgid "Disabled contrast amount"
-#~ msgstr "முடங்கிய நிறவேறுபாட்டு அளவு"
-
-#, fuzzy
-#~| msgid "Apply inactive window color &effects"
-#~ msgid "Apply &effects to inactive windows"
-#~ msgstr "முடக்கப்பட்ட சாளர நிற &தாக்கங்களை அமல் செய்க"
-
-#~ msgid "Use different colors for in&active selections"
-#~ msgstr "&செயலிலில்லாத தேர்வுகளுக்கு வேறு நிறங்களை பயன்படுத்து"
-
-#~ msgid "Shade sorted column &in lists"
-#~ msgstr "&பட்டியல்களை வரிசைப்படுத்த பயன்படும் நெடுவரிசையை முன்னிலைப்படுத்து"
-
-#~ msgid "Tint all colors with accent color"
-#~ msgstr "அனைத்து நிறங்களிலும் சிறப்பு நிறத்தை கல"
-
-#~ msgid "Make window titlebars a&ccent-colored"
-#~ msgstr "சா&ளர தலைப்புப்பட்டைகளுக்கு சிறப்பு நிறத்தையிடு"
-
-#~ msgid "Tint strength:"
-#~ msgstr "நிறக்கலப்பின் அளவு:"
-
-#~ msgid "Shading"
-#~ msgstr "நிழலிடுவது"
-
-#~ msgid "Maximum"
-#~ msgstr "அதிகபட்சம்"
-
-#~ msgid "Minimum"
-#~ msgstr "குறைந்தபட்சம்"
-
-#~ msgid "Contrast"
-#~ msgstr "நிறவேறுபாடு"
-
-#~ msgid "Normal Text on Normal Background"
-#~ msgstr "சாதாரண பின்னணி மீது சாதாரண உரை"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "normal"
-#~ msgstr "சாதாரணம்"
-
-#~ msgid "Link Text on Normal Background"
-#~ msgstr "சாதாரண பின்னணி மீது இணைப்பிற்கான உரை"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "link"
-#~ msgstr "இணைப்பு"
-
-#~ msgid "Visited Text on Normal Background"
-#~ msgstr "சாதாரண பின்னணி மீது அணுகப்பட்டதன் உரை"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "visited"
-#~ msgstr "அணுகப்பட்டது"
-
-#~ msgid "Active Text on Normal Background"
-#~ msgstr "சாதாரண பின்னணி மீது செயலிலுள்ள உரை"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "active"
-#~ msgstr "செயலிலுள்ளது"
-
-#~ msgid "Inactive Text on Normal Background"
-#~ msgstr "சாதாரண பின்னணி மீது செயலிலில்லாத உரை"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "inactive"
-#~ msgstr "செயலிலில்லாத‍து"
-
-#, fuzzy
-#~| msgid "Normal Background"
-#~ msgid "Negative Text on Normal Background"
-#~ msgstr "சாதாரண பின்னணி"
-
-#, fuzzy
-#~| msgid "Inactive"
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "negative"
-#~ msgstr "முடங்கியநிலை"
-
-#, fuzzy
-#~| msgid "Normal Background"
-#~ msgid "Neutral Text on Normal Background"
-#~ msgstr "சாதாரண பின்னணி"
-
-#, fuzzy
-#~| msgid "Neutral Text"
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "neutral"
-#~ msgstr "நடுநிலை உரை"
-
-#, fuzzy
-#~| msgid "Normal Background"
-#~ msgid "Positive Text on Normal Background"
-#~ msgstr "சாதாரண பின்னணி"
-
-#, fuzzy
-#~| msgid "Positive Text"
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "positive"
-#~ msgstr "உறுதி உரை"
-
-#~ msgid "Hover on Normal Background"
-#~ msgstr "சுட்டிக்கு அடியிலிருப்பது, சாதாரண பின்னணியின் மீது"
-
-#~ msgid ""
-#~ "Link Text on Link Background\n"
-#~ "(Note: Link Background is derived from Link Text and cannot be separately "
-#~ "configured at this time)"
-#~ msgstr ""
-#~ "இணைப்பின் பின்னணி மீது இணைப்பின் உரை\n"
-#~ "(குறிப்பு: இணைப்பின் பின்னணி நிறம், இணைப்பின் உரையின் நிறத்தை பொறுத்தே அமைக்கப்படும், "
-#~ "அதாவது அதனை சுயேச்சையாக அமைக்க முடியாது)"
-
-#~ msgid ""
-#~ "Visited Text on Visited Background\n"
-#~ "(Note: Visited Background is derived from Visited Text and cannot be "
-#~ "separately configured at this time)"
-#~ msgstr ""
-#~ "அணுகப்பட்டதன் பின்னணி மீது அணுகப்பட்டதன் உரை\n"
-#~ "(குறிப்பு: அணுகப்பட்டதன் பின்னணி நிறம், அணுகப்பட்டதன் உரையின் நிறத்தை பொறுத்தே "
-#~ "அமைக்கப்படும், அதாவது அதனை சுயேச்சையாக அமைக்க முடியாது)"
-
-#~ msgid ""
-#~ "Active Text on Active Background\n"
-#~ "(Note: Active Background is derived from Active Text and cannot be "
-#~ "separately configured at this time)"
-#~ msgstr ""
-#~ "செயலிலுள்ள பின்னணி மீது செயலிலுள்ள உரை\n"
-#~ "(குறிப்பு: செயலிலுள்ள பின்னணி நிறம், செயலிலுள்ள உரையின் நிறத்தை பொறுத்தே "
-#~ "அமைக்கப்படும், அதாவது அதனை சுயேச்சையாக அமைக்க முடியாது)"
-
-#~ msgid "Inactive Text on Alternate Background"
-#~ msgstr "மாற்று பின்னணி மீது செயலிலில்லாத உரை"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "alternate"
-#~ msgstr "மாற்று"
-
-#~ msgid "Focus on Normal Background"
-#~ msgstr "குவியப்பட்டிருப்பது, சாதாரண பின்னணியின் மீது"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "focus"
-#~ msgstr "குவியம்"
 
 #, fuzzy
 #~| msgid "Apply inactive window color &effects"

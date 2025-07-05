@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2024-02-29 18:33+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -573,5 +573,13 @@ msgctxt "Phone Numbers"
 msgid "Phone number"
 msgstr "Número de telèfon"
 
-#~ msgid "Inherit Language"
-#~ msgstr "Idioma heretat"
+#: regionandlangsettingsbase.kcfg:18 regionandlangsettingsbase.kcfg:21
+#: regionandlangsettingsbase.kcfg:24 regionandlangsettingsbase.kcfg:27
+#: regionandlangsettingsbase.kcfg:30 regionandlangsettingsbase.kcfg:33
+#: regionandlangsettingsbase.kcfg:36 regionandlangsettingsbase.kcfg:39
+#: regionandlangsettingsbase.kcfg:42
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Change Language"
+msgid "Inherit Language"
+msgstr "Canvia l'idioma"

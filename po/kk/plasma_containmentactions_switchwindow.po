@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2010-03-12 05:08+0600\n"
 "Last-Translator: \n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -16,6 +16,24 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#. i18n: ectx: property (text), widget (QRadioButton, flatButton)
+#: config.ui:16
+#, kde-format
+msgid "Display all windows in one list"
+msgstr "Бүкіл терезелер бір тізімде көрсетілсін"
+
+#. i18n: ectx: property (text), widget (QRadioButton, subButton)
+#: config.ui:23
+#, kde-format
+msgid "Display a submenu for each desktop"
+msgstr "Әрбір үстелге ішкі мәзір арналсын"
+
+#. i18n: ectx: property (text), widget (QRadioButton, curButton)
+#: config.ui:30
+#, kde-format
+msgid "Display only the current desktop's windows"
+msgstr "Назардағы үстелдегі ғана терезелер көрсетілсін"
 
 #: switch.cpp:75
 #, fuzzy, kde-format
@@ -37,12 +55,3 @@ msgstr "Терезелер"
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "All Desktops"
 msgstr "Барлық үстелдер"
-
-#~ msgid "Display all windows in one list"
-#~ msgstr "Бүкіл терезелер бір тізімде көрсетілсін"
-
-#~ msgid "Display a submenu for each desktop"
-#~ msgstr "Әрбір үстелге ішкі мәзір арналсын"
-
-#~ msgid "Display only the current desktop's windows"
-#~ msgstr "Назардағы үстелдегі ғана терезелер көрсетілсін"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-03-29 20:42+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -18,6 +18,54 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 21.12.3\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
+#: fontsaasettingsbase.kcfg:9
+#, kde-format
+msgid "Force font DPI Wayland"
+msgstr "फ़ॉन्ट्स डीपीआई बाध्य करें:"
+
+#. i18n: ectx: label, entry (forceFontDPI), group (General)
+#: fontsaasettingsbase.kcfg:13
+#, kde-format
+msgid "Force font DPI on X11"
+msgstr "फ़ॉन्ट्स डीपीआई एक्स ११ पर बाध्य करें:"
+
+#. i18n: ectx: label, entry (font), group (General)
+#: fontssettings.kcfg:9
+#, kde-format
+msgid "General font"
+msgstr "साधारण फ़ॉन्ट"
+
+#. i18n: ectx: label, entry (fixed), group (General)
+#: fontssettings.kcfg:21
+#, kde-format
+msgid "Fixed width font"
+msgstr "स्थिर चौड़ाई फ़ॉन्ट"
+
+#. i18n: ectx: label, entry (smallestReadableFont), group (General)
+#: fontssettings.kcfg:33
+#, kde-format
+msgid "Small font"
+msgstr "छोटा फ़ॉन्टः"
+
+#. i18n: ectx: label, entry (toolBarFont), group (General)
+#: fontssettings.kcfg:45
+#, kde-format
+msgid "Tool bar font"
+msgstr "औज़ार पट्टी फ़ॉन्ट"
+
+#. i18n: ectx: label, entry (menuFont), group (General)
+#: fontssettings.kcfg:57
+#, kde-format
+msgid "Menu font"
+msgstr "मेन्यू फ़ॉन्ट"
+
+#. i18n: ectx: label, entry (activeFont), group (WM)
+#: fontssettings.kcfg:71
+#, kde-format
+msgid "Window title font"
+msgstr "विंडो शीर्षक फ़ॉन्ट"
 
 #: kxftconfig.cpp:458
 #, kde-format
@@ -306,30 +354,6 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "फ़ॉन्ट चुनें"
-
-#~ msgid "Force font DPI Wayland"
-#~ msgstr "फ़ॉन्ट्स डीपीआई बाध्य करें:"
-
-#~ msgid "Force font DPI on X11"
-#~ msgstr "फ़ॉन्ट्स डीपीआई एक्स ११ पर बाध्य करें:"
-
-#~ msgid "General font"
-#~ msgstr "साधारण फ़ॉन्ट"
-
-#~ msgid "Fixed width font"
-#~ msgstr "स्थिर चौड़ाई फ़ॉन्ट"
-
-#~ msgid "Small font"
-#~ msgstr "छोटा फ़ॉन्टः"
-
-#~ msgid "Tool bar font"
-#~ msgstr "औज़ार पट्टी फ़ॉन्ट"
-
-#~ msgid "Menu font"
-#~ msgstr "मेन्यू फ़ॉन्ट"
-
-#~ msgid "Window title font"
-#~ msgstr "विंडो शीर्षक फ़ॉन्ट"
 
 #~ msgid "Change Display Scaling…"
 #~ msgstr "प्रदर्शक अनुमाप बदलें…"

@@ -1,6 +1,6 @@
 # translation of kcmfonts.po to Polish
 # translation of kcmfonts.po to
-# Version: $Revision: 1712705 $
+# Version: $Revision: 1712710 $
 # Michał Rudolf <mrudolf@kdewebdev.org>, 2002.
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2002, 2003, 2004, 2005, 2006, 2008.
 # Krzysztof Lichota <lichota@mimuw.edu.pl>, 2005.
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-12-03 09:50+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -21,6 +21,54 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
+
+#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
+#: fontsaasettingsbase.kcfg:9
+#, kde-format
+msgid "Force font DPI Wayland"
+msgstr "Wymuś DPI czcionek na Waylandzie"
+
+#. i18n: ectx: label, entry (forceFontDPI), group (General)
+#: fontsaasettingsbase.kcfg:13
+#, kde-format
+msgid "Force font DPI on X11"
+msgstr "Wymuś DPI czcionek na X11"
+
+#. i18n: ectx: label, entry (font), group (General)
+#: fontssettings.kcfg:9
+#, kde-format
+msgid "General font"
+msgstr "Ogólna czcionka"
+
+#. i18n: ectx: label, entry (fixed), group (General)
+#: fontssettings.kcfg:21
+#, kde-format
+msgid "Fixed width font"
+msgstr "Czcionka o stałej szerokości"
+
+#. i18n: ectx: label, entry (smallestReadableFont), group (General)
+#: fontssettings.kcfg:33
+#, kde-format
+msgid "Small font"
+msgstr "Mała czcionka"
+
+#. i18n: ectx: label, entry (toolBarFont), group (General)
+#: fontssettings.kcfg:45
+#, kde-format
+msgid "Tool bar font"
+msgstr "Czcionka paska narzędzi"
+
+#. i18n: ectx: label, entry (menuFont), group (General)
+#: fontssettings.kcfg:57
+#, kde-format
+msgid "Menu font"
+msgstr "Czcionka menu"
+
+#. i18n: ectx: label, entry (activeFont), group (WM)
+#: fontssettings.kcfg:71
+#, kde-format
+msgid "Window title font"
+msgstr "Czcionka nazwy okna"
 
 #: kxftconfig.cpp:458
 #, kde-format
@@ -314,30 +362,6 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "Wybierz czcionkę"
-
-#~ msgid "Force font DPI Wayland"
-#~ msgstr "Wymuś DPI czcionek na Waylandzie"
-
-#~ msgid "Force font DPI on X11"
-#~ msgstr "Wymuś DPI czcionek na X11"
-
-#~ msgid "General font"
-#~ msgstr "Ogólna czcionka"
-
-#~ msgid "Fixed width font"
-#~ msgstr "Czcionka o stałej szerokości"
-
-#~ msgid "Small font"
-#~ msgstr "Mała czcionka"
-
-#~ msgid "Tool bar font"
-#~ msgstr "Czcionka paska narzędzi"
-
-#~ msgid "Menu font"
-#~ msgstr "Czcionka menu"
-
-#~ msgid "Window title font"
-#~ msgstr "Czcionka nazwy okna"
 
 #~ msgid "Change Display Scaling…"
 #~ msgstr "Zmień skalowanie wyświetlania..."

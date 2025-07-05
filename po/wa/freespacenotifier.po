@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2010-10-21 22:05+0200\n"
 "Last-Translator: Djan Cayron <jean.cayron@gmail.com>\n"
 "Language-Team: Walloon <kde-i18n-doc@kde.org>\n"
@@ -36,6 +36,36 @@ msgstr ""
 msgid "Open in File Manager"
 msgstr "Drovi e manaedjeu des fitchîs"
 
+#. i18n: ectx: label, entry (minimumSpace), group (General)
+#: freespacenotifier.kcfg:9
+#, kde-format
+msgid "Minimum free space before user starts being notified."
+msgstr "Li plaece minimom divant k' l' uzeu fouxhe notifyî."
+
+#. i18n: ectx: label, entry (enableNotification), group (General)
+#: freespacenotifier.kcfg:15
+#, kde-format
+msgid "Is the free space notification enabled."
+msgstr "Est ç' kel notifiaedje del libe plaece est èn alaedje."
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableNotification)
+#: freespacenotifier_prefs_base.ui:17
+#, kde-format
+msgid "Enable low disk space warning"
+msgstr "Mete èn alaedje l' adviertixhmint di cwand gn a waire di plaece"
+
+#. i18n: ectx: property (text), widget (QLabel, label_minimumSpace)
+#: freespacenotifier_prefs_base.ui:27
+#, kde-format
+msgid "Warn when free space is below:"
+msgstr "Advierti cwand l' plaece sol plake est pa dzo :"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpace)
+#: freespacenotifier_prefs_base.ui:37
+#, kde-format
+msgid " MiB"
+msgstr " Mio"
+
 #: module.cpp:37
 #, kde-format
 msgid ""
@@ -55,21 +85,6 @@ msgstr ""
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"
 msgstr "Djenerå"
-
-#~ msgid "Minimum free space before user starts being notified."
-#~ msgstr "Li plaece minimom divant k' l' uzeu fouxhe notifyî."
-
-#~ msgid "Is the free space notification enabled."
-#~ msgstr "Est ç' kel notifiaedje del libe plaece est èn alaedje."
-
-#~ msgid "Enable low disk space warning"
-#~ msgstr "Mete èn alaedje l' adviertixhmint di cwand gn a waire di plaece"
-
-#~ msgid "Warn when free space is below:"
-#~ msgstr "Advierti cwand l' plaece sol plake est pa dzo :"
-
-#~ msgid " MiB"
-#~ msgstr " Mio"
 
 #~ msgctxt ""
 #~ "Warns the user that the system is running low on space on his home "

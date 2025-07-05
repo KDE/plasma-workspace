@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2023-05-16 22:30+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -143,38 +143,75 @@ msgstr "Конфигуриране на стила на GNOME/GTK приложе
 msgid "Configure %1"
 msgstr "Конфигуриране на %1"
 
-#~ msgid "Tab 1"
-#~ msgstr "Раздел 1"
+#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
+#: stylepreview.ui:33
+#, kde-format
+msgid "Tab 1"
+msgstr "Раздел 1"
 
-#~ msgid "Push Button"
-#~ msgstr "Бутон"
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: stylepreview.ui:65
+#, kde-format
+msgid "Push Button"
+msgstr "Бутон"
 
-#~ msgid "Combo box"
-#~ msgstr "Комбинирана листа"
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
+#: stylepreview.ui:86
+#, kde-format
+msgid "Combo box"
+msgstr "Комбинирана листа"
 
-#~ msgid "Checkbox"
-#~ msgstr "Поле за отметка"
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
+#: stylepreview.ui:96
+#, kde-format
+msgid "Checkbox"
+msgstr "Поле за отметка"
 
-#~ msgid "Radio button"
-#~ msgstr "Радио бутон"
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
+#: stylepreview.ui:106 stylepreview.ui:116
+#, kde-format
+msgid "Radio button"
+msgstr "Радио бутон"
 
-#~ msgid "%p%"
-#~ msgstr "%p%"
+#. i18n: ectx: property (format), widget (QProgressBar, progressBar)
+#: stylepreview.ui:128
+#, no-c-format, kde-format
+msgid "%p%"
+msgstr "%p%"
 
-#~ msgid "Tab 2"
-#~ msgstr "Раздел 2"
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: stylepreview.ui:136
+#, kde-format
+msgid "Tab 2"
+msgstr "Раздел 2"
 
-#~ msgid "Application style"
-#~ msgstr "Стил на приложение"
+#. i18n: ectx: label, entry (widgetStyle), group (KDE)
+#: stylesettings.kcfg:9
+#, kde-format
+msgid "Application style"
+msgstr "Стил на приложение"
 
-#~ msgid "Show icons on buttons"
-#~ msgstr "Показване на икони на бутоните"
+#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
+#: stylesettings.kcfg:13
+#, kde-format
+msgid "Show icons on buttons"
+msgstr "Показване на икони на бутоните"
 
-#~ msgid "Show icons in menus"
-#~ msgstr "Показване на икони в менютата"
+#. i18n: ectx: label, entry (iconsInMenus), group (KDE)
+#: stylesettings.kcfg:17
+#, kde-format
+msgid "Show icons in menus"
+msgstr "Показване на икони в менютата"
 
-#~ msgid "Main toolbar label"
-#~ msgstr "Етикет на основната лента с инструменти"
+#. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
+#: stylesettings.kcfg:23
+#, kde-format
+msgid "Main toolbar label"
+msgstr "Етикет на основната лента с инструменти"
 
-#~ msgid "Secondary toolbar label"
-#~ msgstr "Етикет на вторичната лента с инструменти"
+#. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
+#: stylesettings.kcfg:27
+#, kde-format
+msgid "Secondary toolbar label"
+msgstr "Етикет на вторичната лента с инструменти"

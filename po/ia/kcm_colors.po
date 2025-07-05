@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2023-01-25 21:35+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -56,6 +56,34 @@ msgstr "Falleva a crear le dossier de datos  'color-scheme'"
 #, kde-format
 msgid "Color scheme installed successfully."
 msgstr "Schema de color installate con successo."
+
+#. i18n: ectx: label, entry (colorScheme), group (General)
+#: colorssettings.kcfg:9
+#, kde-format
+msgid "Color scheme name"
+msgstr "Nomine de schema de Color"
+
+#. i18n: ectx: label, entry (accentColor), group (General)
+#: colorssettings.kcfg:13
+#, kde-format
+msgid "Accent color"
+msgstr "Color de accento"
+
+#. i18n: ectx: label, entry (lastUsedCustomAccentColor), group (General)
+#: colorssettings.kcfg:17
+#, kde-format
+msgid ""
+"The last used custom accent color before user switched to wallpaper "
+"generated color or default color"
+msgstr ""
+"Le ultime color de accento personalisate usate ante que le usator commutava "
+"al color generate de  tapete de papiro o color predefinite "
+
+#. i18n: ectx: label, entry (accentColorFromWallpaper), group (General)
+#: colorssettings.kcfg:21
+#, kde-format
+msgid "Whether accent color from wallpaper should be applied"
+msgstr "Si color de accento ex tapete de papiro deberea esser applicate"
 
 #: editor/kcolorschemeeditor.cpp:25
 #, kde-format
@@ -119,6 +147,216 @@ msgstr ""
 msgid "Scheme not found, falling back to current one.\n"
 msgstr "Schema non trovate, retornante a lo currente.\n"
 
+#. i18n: ectx: property (toolTip), widget (QLabel, label)
+#: editor/preview.ui:29
+#, kde-format
+msgid "Window text on Window Background"
+msgstr "Texto de fenestra sur fundo de fenestra"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: editor/preview.ui:32
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "Window text"
+msgstr "Texto de fenestra"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, pushButton)
+#: editor/preview.ui:39
+#, kde-format
+msgid "Button text on Button Background"
+msgstr "Texto de Button sur Fundo de Button"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: editor/preview.ui:42
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "Push Button"
+msgstr "Preme Button"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection0)
+#: editor/preview.ui:123
+#, kde-format
+msgid "Selection Normal Text against Selection Normal Background"
+msgstr "Selection de Texto Normal contra Selection de Fundo Normal"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection0)
+#: editor/preview.ui:126
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "Selected text"
+msgstr "Texto Selectionate"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection3)
+#: editor/preview.ui:138
+#, kde-format
+msgid "Selection Link Text against Selection Normal Background"
+msgstr "Selection de Texto de Ligamine contra Selection de Fundo Normal"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection3)
+#. i18n: ectx: property (text), widget (QLabel, labelView3)
+#: editor/preview.ui:141 editor/preview.ui:265
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "link"
+msgstr "ligamine"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection4)
+#: editor/preview.ui:153
+#, kde-format
+msgid "Selection Visited Text against Selection Normal Background"
+msgstr "Selection de Texto Visitate contra Selection de Fundo Normal"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection4)
+#. i18n: ectx: property (text), widget (QLabel, labelView4)
+#: editor/preview.ui:156 editor/preview.ui:280
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "visited"
+msgstr "visitate"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection2)
+#: editor/preview.ui:163
+#, kde-format
+msgid "Selection Active Text against Selection Normal Background"
+msgstr "Selection de Texto Active contra Selection de Fundo Normal"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection2)
+#. i18n: ectx: property (text), widget (QLabel, labelView2)
+#: editor/preview.ui:166 editor/preview.ui:290
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "a"
+msgstr "a"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection1)
+#: editor/preview.ui:173
+#, kde-format
+msgid "Selection Inactive Text against Selection Normal Background"
+msgstr "Selection de Texto Inactive contra Selection de Fundo Normal"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection1)
+#. i18n: ectx: property (text), widget (QLabel, labelView1)
+#: editor/preview.ui:176 editor/preview.ui:300
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "i"
+msgstr "i"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection5)
+#: editor/preview.ui:183
+#, kde-format
+msgid "Selection Negative Text against Selection Normal Background"
+msgstr "Selection de Texto Negative contra Selection de Fundo Normal"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection5)
+#. i18n: ectx: property (text), widget (QLabel, labelView5)
+#: editor/preview.ui:186 editor/preview.ui:310
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "!"
+msgstr "!"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection6)
+#: editor/preview.ui:193
+#, kde-format
+msgid "Selection Neutral Text against Selection Normal Background"
+msgstr "Selection de Texto Neutre contra Selection de Fundo Normal"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection6)
+#. i18n: ectx: property (text), widget (QLabel, labelView6)
+#: editor/preview.ui:196 editor/preview.ui:320
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "="
+msgstr "="
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection7)
+#: editor/preview.ui:203
+#, kde-format
+msgid "Selection Positive Text against Selection Normal Background"
+msgstr "Selection de Texto Positive contra Selection de Fundo Normal"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection7)
+#. i18n: ectx: property (text), widget (QLabel, labelView7)
+#: editor/preview.ui:206 editor/preview.ui:330
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "+"
+msgstr "+"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView0)
+#: editor/preview.ui:247
+#, kde-format
+msgid "View Normal Text against View Normal Background"
+msgstr "Vista de Texto Normal contra Vista de Fundo Normal"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelView0)
+#: editor/preview.ui:250
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "Normal text"
+msgstr "Texto Normal"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView3)
+#: editor/preview.ui:262
+#, kde-format
+msgid "View Link Text against View Normal Background"
+msgstr "Vista de Texto de Ligamine contra Vista de Fundo Normal"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView4)
+#: editor/preview.ui:277
+#, kde-format
+msgid "View Visited Text against View Normal Background"
+msgstr "Vista de Texto Visitate contra Vista de Fundo Normal"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView2)
+#: editor/preview.ui:287
+#, kde-format
+msgid "View Active Text against View Normal Background"
+msgstr "Vista de Texto Active contra Vista de Fundo Normal"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView1)
+#: editor/preview.ui:297
+#, kde-format
+msgid "View Inactive Text against View Normal Background"
+msgstr "Vista de Texto Inactive contra Vista de Fundo Normal"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView5)
+#: editor/preview.ui:307
+#, kde-format
+msgid "View Negative Text against View Normal Background"
+msgstr "Vista de Texto Negative contra Vista de Fundo Normal"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView6)
+#: editor/preview.ui:317
+#, kde-format
+msgid "View Neutral Text against View Normal Background"
+msgstr "Vista de Texto Neutre contra Vista de Fundo Normal"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView7)
+#: editor/preview.ui:327
+#, kde-format
+msgid "View Positive Text against View Normal Background"
+msgstr "Vista de Texto Positive contra Vista de Fundo Normal"
+
 #: editor/scmeditorcolors.cpp:62 editor/scmeditorcolors.cpp:76
 #, kde-format
 msgid "Varies"
@@ -139,50 +377,267 @@ msgstr "Fundo Alternative"
 msgid "Normal Text"
 msgstr "Texto Normal"
 
-#: editor/scmeditorcolors.cpp:102
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:102 editor/scmeditorcolors.ui:303
 #, kde-format
 msgid "Inactive Text"
 msgstr "Texto inactive"
 
-#: editor/scmeditorcolors.cpp:103
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:103 editor/scmeditorcolors.ui:308
 #, kde-format
 msgid "Active Text"
 msgstr "Texto active"
 
-#: editor/scmeditorcolors.cpp:104
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:104 editor/scmeditorcolors.ui:313
 #, kde-format
 msgid "Link Text"
 msgstr "Texto de ligamine"
 
-#: editor/scmeditorcolors.cpp:105
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:105 editor/scmeditorcolors.ui:318
 #, kde-format
 msgid "Visited Text"
 msgstr "Texto de visitate"
 
-#: editor/scmeditorcolors.cpp:106
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:106 editor/scmeditorcolors.ui:323
 #, kde-format
 msgid "Negative Text"
 msgstr "Texto Negative"
 
-#: editor/scmeditorcolors.cpp:107
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:107 editor/scmeditorcolors.ui:328
 #, kde-format
 msgid "Neutral Text"
 msgstr "Texto Neutral"
 
-#: editor/scmeditorcolors.cpp:108
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:108 editor/scmeditorcolors.ui:333
 #, kde-format
 msgid "Positive Text"
 msgstr "Texto Positive"
 
-#: editor/scmeditorcolors.cpp:109
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:109 editor/scmeditorcolors.ui:338
 #, kde-format
 msgid "Focus Decoration"
 msgstr "Decoration de Foco"
 
-#: editor/scmeditorcolors.cpp:110
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:110 editor/scmeditorcolors.ui:343
 #, kde-format
 msgid "Hover Decoration"
 msgstr "Decoration de planar"
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: editor/scmeditorcolors.ui:23
+#, kde-format
+msgid "Color set:"
+msgstr "Insimul de color:"
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:36
+#, kde-format
+msgid "Colorset to view/modify"
+msgstr "Insimul de color per vider/modificar"
+
+#. i18n: 'Common' here means &quot;frequent/not rare&quot;, not &quot;shared&quot;
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:40
+#, kde-format
+msgctxt "color-sets"
+msgid "Common Colors"
+msgstr "Colores commun"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:45
+#, kde-format
+msgctxt "color-sets"
+msgid "View"
+msgstr "Vista"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:50
+#, kde-format
+msgctxt "color-sets"
+msgid "Window"
+msgstr "Fenestra"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:55
+#, kde-format
+msgctxt "color-sets"
+msgid "Button"
+msgstr "Button"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:60
+#, kde-format
+msgctxt "color-sets"
+msgid "Selection"
+msgstr "Selection"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:65
+#, kde-format
+msgctxt "color-sets"
+msgid "Tooltip"
+msgstr "Consilio"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:70
+#, kde-format
+msgctxt "color-sets"
+msgid "Complementary"
+msgstr "Complementari"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:75
+#, kde-format
+msgctxt "color-sets"
+msgid "Header"
+msgstr "Capite"
+
+#. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:118 editor/scmeditorcolors.ui:123
+#: editor/scmeditorcolors.ui:128 editor/scmeditorcolors.ui:133
+#: editor/scmeditorcolors.ui:138 editor/scmeditorcolors.ui:143
+#: editor/scmeditorcolors.ui:148 editor/scmeditorcolors.ui:153
+#: editor/scmeditorcolors.ui:158 editor/scmeditorcolors.ui:163
+#: editor/scmeditorcolors.ui:168 editor/scmeditorcolors.ui:173
+#: editor/scmeditorcolors.ui:178 editor/scmeditorcolors.ui:183
+#: editor/scmeditorcolors.ui:188 editor/scmeditorcolors.ui:193
+#: editor/scmeditorcolors.ui:198 editor/scmeditorcolors.ui:203
+#: editor/scmeditorcolors.ui:208 editor/scmeditorcolors.ui:213
+#: editor/scmeditorcolors.ui:218 editor/scmeditorcolors.ui:223
+#: editor/scmeditorcolors.ui:228 editor/scmeditorcolors.ui:233
+#: editor/scmeditorcolors.ui:238 editor/scmeditorcolors.ui:243
+#, kde-format
+msgid "New Row"
+msgstr "Nove riga"
+
+#. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:248
+#, kde-format
+msgid "0"
+msgstr "0"
+
+#. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:253
+#, kde-format
+msgid "1"
+msgstr "1"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:258
+#, kde-format
+msgid "View Background"
+msgstr "Vide fundo"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:263
+#, kde-format
+msgid "View Text"
+msgstr "Vide texto"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:268
+#, kde-format
+msgid "Window Background"
+msgstr "Fundo de Fenestra"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:273
+#, kde-format
+msgid "Window Text"
+msgstr "Texto de Fenestra"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:278
+#, kde-format
+msgid "Button Background"
+msgstr "Fundo de Button"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:283
+#, kde-format
+msgid "Button Text"
+msgstr "Texto de Button"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:288
+#, kde-format
+msgid "Selection Background"
+msgstr "Fundo de selection"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:293
+#, kde-format
+msgid "Selection Text"
+msgstr "Texto de selection"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:298
+#, kde-format
+msgid "Selection Inactive Text"
+msgstr "Texto inactive de selection"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:348
+#, kde-format
+msgid "Tooltip Background"
+msgstr "Fundo de consilio"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:353
+#, kde-format
+msgid "Tooltip Text"
+msgstr "Texto de consilio"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:358
+#, kde-format
+msgid "Active Titlebar"
+msgstr "Barra de titulo active"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:363
+#, kde-format
+msgid "Active Titlebar Text"
+msgstr "Texto de barra de titulo active"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:368
+#, kde-format
+msgid "Active Titlebar Secondary"
+msgstr "Barra secundari de titulo active"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:373
+#, kde-format
+msgid "Inactive Titlebar"
+msgstr "Barra de titulo inactive"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:378
+#, kde-format
+msgid "Inactive Titlebar Text"
+msgstr "Texto de barra de titulo inactive"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:383
+#, kde-format
+msgid "Inactive Titlebar Secondary"
+msgstr "Barra secundari de titulo inactive"
 
 #: editor/scmeditordialog.cpp:60
 #, kde-format
@@ -242,6 +697,450 @@ msgstr "Error"
 #, kde-format
 msgid "Inactive"
 msgstr "Inactive"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: editor/scmeditoreffects.ui:17
+#, kde-format
+msgid "Color:"
+msgstr "Color:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: editor/scmeditoreffects.ui:27
+#, kde-format
+msgid "Intensity:"
+msgstr "Intensitate:"
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, colorBox)
+#: editor/scmeditoreffects.ui:37
+#, kde-format
+msgid "Disabled color effect type"
+msgstr "Typo de effecto de color dishabilitate"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
+#: editor/scmeditoreffects.ui:41
+#, kde-format
+msgctxt "no disabled color effect"
+msgid "None"
+msgstr "Nulle"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
+#: editor/scmeditoreffects.ui:46
+#, kde-format
+msgctxt "disabled color effect"
+msgid "Desaturate"
+msgstr "De-satura"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
+#: editor/scmeditoreffects.ui:51
+#, kde-format
+msgctxt "disabled color effect"
+msgid "Fade"
+msgstr "Pallidi"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
+#: editor/scmeditoreffects.ui:56
+#, kde-format
+msgctxt "disabled color effect"
+msgid "Tint"
+msgstr "Tinta"
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, intensityBox)
+#: editor/scmeditoreffects.ui:64
+#, kde-format
+msgid "Disabled intensity effect type"
+msgstr "Typo de effecto de intensitate dishabilitate"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
+#: editor/scmeditoreffects.ui:68
+#, kde-format
+msgctxt "no disabled intensity effect"
+msgid "None"
+msgstr "Nulle"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
+#: editor/scmeditoreffects.ui:73
+#, kde-format
+msgctxt "disabled intensity effect"
+msgid "Shade"
+msgstr "Adumbra"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
+#: editor/scmeditoreffects.ui:78
+#, kde-format
+msgctxt "disabled intensity effect"
+msgid "Darken"
+msgstr "Obscura"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
+#: editor/scmeditoreffects.ui:83
+#, kde-format
+msgctxt "disabled intensity effect"
+msgid "Lighten"
+msgstr "Illumina"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: editor/scmeditoreffects.ui:107
+#, kde-format
+msgid "Contrast:"
+msgstr "Contrasto:"
+
+#. i18n: ectx: property (toolTip), widget (QSlider, colorSlider)
+#: editor/scmeditoreffects.ui:120
+#, kde-format
+msgid "Disabled color effect amount"
+msgstr "Amonta de effecto de color dishabilitate"
+
+#. i18n: ectx: property (toolTip), widget (QSlider, intensitySlider)
+#: editor/scmeditoreffects.ui:139
+#, kde-format
+msgid "Disabled intensity effect amount"
+msgstr "Amonta de effecto de intensitate dishabilitate"
+
+#. i18n: ectx: property (toolTip), widget (KColorButton, colorButton)
+#: editor/scmeditoreffects.ui:158
+#, kde-format
+msgid "Disabled color"
+msgstr "Color dishabilitate"
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, contrastBox)
+#: editor/scmeditoreffects.ui:181
+#, kde-format
+msgid "Disabled contrast type"
+msgstr "Typo de contrasto dishabilitate"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
+#: editor/scmeditoreffects.ui:185
+#, kde-format
+msgctxt "no disabled contrast"
+msgid "None"
+msgstr "Nulle"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
+#: editor/scmeditoreffects.ui:190
+#, kde-format
+msgctxt "disabled contrast"
+msgid "Fade"
+msgstr "Pallidi"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
+#: editor/scmeditoreffects.ui:195
+#, kde-format
+msgctxt "disabled contrast"
+msgid "Tint"
+msgstr "Tinta"
+
+#. i18n: ectx: property (toolTip), widget (QSlider, contrastSlider)
+#: editor/scmeditoreffects.ui:222
+#, kde-format
+msgid "Disabled contrast amount"
+msgstr "Amonta de contrasto dishabilitate"
+
+#. i18n: ectx: property (text), widget (QCheckBox, useInactiveEffects)
+#: editor/scmeditoroptions.ui:17
+#, kde-format
+msgid "Apply &effects to inactive windows"
+msgstr "Applica &effectos a fenestras inactive"
+
+#. i18n: ectx: property (text), widget (QCheckBox, inactiveSelectionEffect)
+#: editor/scmeditoroptions.ui:24
+#, kde-format
+msgid "Use different colors for in&active selections"
+msgstr "Usa colores differente per selectiones de in&active"
+
+#. i18n: ectx: property (text), widget (QCheckBox, shadeSortedColumn)
+#: editor/scmeditoroptions.ui:31
+#, kde-format
+msgid "Shade sorted column &in lists"
+msgstr "Umbra columnas ordinate &in listas"
+
+#. i18n: ectx: property (text), widget (QCheckBox, tintColors)
+#: editor/scmeditoroptions.ui:38
+#, kde-format
+msgid "Tint all colors with accent color"
+msgstr "Tinge omne colores con color de accento "
+
+#. i18n: ectx: property (text), widget (QCheckBox, accentTitlebar)
+#: editor/scmeditoroptions.ui:45
+#, kde-format
+msgid "Make window titlebars a&ccent-colored"
+msgstr "Face che le barras de titulo del fenestra es colorate de a&ccento"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: editor/scmeditoroptions.ui:52
+#, kde-format
+msgid "Tint strength:"
+msgstr "Fortia de tinta:"
+
+#. i18n: ectx: property (toolTip), widget (QGroupBox, groupBox_5)
+#: editor/scmeditoroptions.ui:69
+#, kde-format
+msgid "Shading of frames and lighting (\"3D\") effects"
+msgstr "Umbrar de quadros e effectos de lumine (\"3D\")"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
+#: editor/scmeditoroptions.ui:72
+#, kde-format
+msgid "Shading"
+msgstr "Umbrar"
+
+#. i18n: ectx: property (text), widget (QLabel, label_10)
+#: editor/scmeditoroptions.ui:97
+#, kde-format
+msgid "Maximum"
+msgstr "Maxime"
+
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: editor/scmeditoroptions.ui:117
+#, kde-format
+msgid "Minimum"
+msgstr "Minime"
+
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: editor/scmeditoroptions.ui:124
+#, kde-format
+msgid "Contrast"
+msgstr "Contrasto"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore0)
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack0)
+#: editor/setpreview.ui:35 editor/setpreview.ui:189
+#, kde-format
+msgid "Normal Text on Normal Background"
+msgstr "Texto Normal sur Fundo Normal"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore0)
+#. i18n: ectx: property (text), widget (QLabel, labelBack0)
+#: editor/setpreview.ui:38 editor/setpreview.ui:192
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "normal"
+msgstr "normal"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore3)
+#: editor/setpreview.ui:56
+#, kde-format
+msgid "Link Text on Normal Background"
+msgstr "Texto de Ligamine sur Fundo Normal"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore3)
+#. i18n: ectx: property (text), widget (QLabel, labelBack3)
+#: editor/setpreview.ui:59 editor/setpreview.ui:214
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "link"
+msgstr "ligamine"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore4)
+#: editor/setpreview.ui:77
+#, kde-format
+msgid "Visited Text on Normal Background"
+msgstr "Texto Visitate sur Fundo Normal"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore4)
+#. i18n: ectx: property (text), widget (QLabel, labelBack4)
+#: editor/setpreview.ui:80 editor/setpreview.ui:236
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "visited"
+msgstr "Visitate"
+
+#. i18n: ectx: property (toolTip), widget (QWidget, widgetFore2)
+#: editor/setpreview.ui:90
+#, kde-format
+msgid "Active Text on Normal Background"
+msgstr "Texto Active sur Fundo Normal"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore2)
+#. i18n: ectx: property (text), widget (QLabel, labelBack2)
+#: editor/setpreview.ui:96 editor/setpreview.ui:253
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "active"
+msgstr "Activa"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore1)
+#: editor/setpreview.ui:109
+#, kde-format
+msgid "Inactive Text on Normal Background"
+msgstr "Texto Inactive sur Fundo Normal"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore1)
+#: editor/setpreview.ui:112
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "inactive"
+msgstr "Inactive"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore5)
+#: editor/setpreview.ui:125
+#, kde-format
+msgid "Negative Text on Normal Background"
+msgstr "Texto Negative sur Fundo Normal"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore5)
+#. i18n: ectx: property (text), widget (QLabel, labelBack5)
+#: editor/setpreview.ui:128 editor/setpreview.ui:286
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "negative"
+msgstr "Negative"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore6)
+#: editor/setpreview.ui:141
+#, kde-format
+msgid "Neutral Text on Normal Background"
+msgstr "Texto Neutre sur Fundo Normal"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore6)
+#. i18n: ectx: property (text), widget (QLabel, labelBack6)
+#: editor/setpreview.ui:144 editor/setpreview.ui:303
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "neutral"
+msgstr "Neutral"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore7)
+#: editor/setpreview.ui:157
+#, kde-format
+msgid "Positive Text on Normal Background"
+msgstr "Texto Positive sur Fundo Normal"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore7)
+#. i18n: ectx: property (text), widget (QLabel, labelBack7)
+#: editor/setpreview.ui:160 editor/setpreview.ui:320
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "positive"
+msgstr "Positive"
+
+#. i18n: ectx: property (toolTip), widget (QWidget, widgetFore8)
+#: editor/setpreview.ui:170
+#, kde-format
+msgid "Hover on Normal Background"
+msgstr "Suspendite sur Fundo Normal"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore8)
+#: editor/setpreview.ui:176
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "hover"
+msgstr "Suspendite"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack3)
+#: editor/setpreview.ui:211
+#, kde-format
+msgid ""
+"Link Text on Link Background\n"
+"(Note: Link Background is derived from Link Text and cannot be separately "
+"configured at this time)"
+msgstr ""
+"Texto de Ligamine sur Fundo de Ligamine\n"
+"(Tu nota: Fundo de Ligamine es derivate ab Texto de Ligamine e non pote "
+"esser configurate separatemente ora)"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack4)
+#: editor/setpreview.ui:233
+#, kde-format
+msgid ""
+"Visited Text on Visited Background\n"
+"(Note: Visited Background is derived from Visited Text and cannot be "
+"separately configured at this time)"
+msgstr ""
+"Texto Visitate sur Fundo Visitate\n"
+"(Tu nota: Fundo Visitate es derivate ab Texto Visitate e non pote esser "
+"configurate separatemente ora)"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack2)
+#: editor/setpreview.ui:250
+#, kde-format
+msgid ""
+"Active Text on Active Background\n"
+"(Note: Active Background is derived from Active Text and cannot be "
+"separately configured at this time)"
+msgstr ""
+"Texto Active sur Fundo Active\n"
+"(Tu nota: Fundo Active es derivate ab Texto Active e non pote esser "
+"configurate separatemente ora)"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack1)
+#: editor/setpreview.ui:266
+#, kde-format
+msgid "Inactive Text on Alternate Background"
+msgstr "Texto Inactive sur Fundo Alternative"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelBack1)
+#: editor/setpreview.ui:269
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "alternate"
+msgstr "alternative"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack5)
+#: editor/setpreview.ui:283
+#, kde-format
+msgid ""
+"Negative Text on Negative Background\n"
+"(Note: Negative Background is derived from Negative Text and cannot be "
+"separately configured at this time)"
+msgstr ""
+"Texto Negative sur Fundo Negative\n"
+"(Tu nota: Fundo Negative es derivate ab Texto Negative e non pote esser "
+"configurate separatemente ora)"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack6)
+#: editor/setpreview.ui:300
+#, kde-format
+msgid ""
+"Neutral Text on Neutral Background\n"
+"(Note: Neutral Background is derived from Neutral Text and cannot be "
+"separately configured at this time)"
+msgstr ""
+"Texto Neutre sur Fundo Neutre\n"
+"(Tu nota: Fundo Neutre es derivate ab Texto Neutre e non pote esser "
+"configurate separatemente ora)"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack7)
+#: editor/setpreview.ui:317
+#, kde-format
+msgid ""
+"Positive Text on Positive Background\n"
+"(Note: Positive Background is derived from Positive Text and cannot be "
+"separately configured at this time)"
+msgstr ""
+"Texto Positive sur Fundo Positive\n"
+"(Tu nota: Fundo Positive es derivate ab Texto Positive e non pote esser "
+"configurate separatemente ora)"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore9)
+#: editor/setpreview.ui:333
+#, kde-format
+msgid "Focus on Normal Background"
+msgstr "Foco sur fundo normal"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore9)
+#: editor/setpreview.ui:336
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "focus"
+msgstr "Foco"
 
 #: package/contents/ui/main.qml:23
 #, kde-format
@@ -476,456 +1375,6 @@ msgstr "Tu ha le sequente schemas de color sur tu systema:"
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr "* %1 (schema de color currente)"
-
-#~ msgid "Color scheme name"
-#~ msgstr "Nomine de schema de Color"
-
-#~ msgid "Accent color"
-#~ msgstr "Color de accento"
-
-#~ msgid ""
-#~ "The last used custom accent color before user switched to wallpaper "
-#~ "generated color or default color"
-#~ msgstr ""
-#~ "Le ultime color de accento personalisate usate ante que le usator "
-#~ "commutava al color generate de  tapete de papiro o color predefinite "
-
-#~ msgid "Whether accent color from wallpaper should be applied"
-#~ msgstr "Si color de accento ex tapete de papiro deberea esser applicate"
-
-#~ msgid "Window text on Window Background"
-#~ msgstr "Texto de fenestra sur fundo de fenestra"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "Window text"
-#~ msgstr "Texto de fenestra"
-
-#~ msgid "Button text on Button Background"
-#~ msgstr "Texto de Button sur Fundo de Button"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "Push Button"
-#~ msgstr "Preme Button"
-
-#~ msgid "Selection Normal Text against Selection Normal Background"
-#~ msgstr "Selection de Texto Normal contra Selection de Fundo Normal"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "Selected text"
-#~ msgstr "Texto Selectionate"
-
-#~ msgid "Selection Link Text against Selection Normal Background"
-#~ msgstr "Selection de Texto de Ligamine contra Selection de Fundo Normal"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "link"
-#~ msgstr "ligamine"
-
-#~ msgid "Selection Visited Text against Selection Normal Background"
-#~ msgstr "Selection de Texto Visitate contra Selection de Fundo Normal"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "visited"
-#~ msgstr "visitate"
-
-#~ msgid "Selection Active Text against Selection Normal Background"
-#~ msgstr "Selection de Texto Active contra Selection de Fundo Normal"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "a"
-#~ msgstr "a"
-
-#~ msgid "Selection Inactive Text against Selection Normal Background"
-#~ msgstr "Selection de Texto Inactive contra Selection de Fundo Normal"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "i"
-#~ msgstr "i"
-
-#~ msgid "Selection Negative Text against Selection Normal Background"
-#~ msgstr "Selection de Texto Negative contra Selection de Fundo Normal"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "!"
-#~ msgstr "!"
-
-#~ msgid "Selection Neutral Text against Selection Normal Background"
-#~ msgstr "Selection de Texto Neutre contra Selection de Fundo Normal"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "="
-#~ msgstr "="
-
-#~ msgid "Selection Positive Text against Selection Normal Background"
-#~ msgstr "Selection de Texto Positive contra Selection de Fundo Normal"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "+"
-#~ msgstr "+"
-
-#~ msgid "View Normal Text against View Normal Background"
-#~ msgstr "Vista de Texto Normal contra Vista de Fundo Normal"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "Normal text"
-#~ msgstr "Texto Normal"
-
-#~ msgid "View Link Text against View Normal Background"
-#~ msgstr "Vista de Texto de Ligamine contra Vista de Fundo Normal"
-
-#~ msgid "View Visited Text against View Normal Background"
-#~ msgstr "Vista de Texto Visitate contra Vista de Fundo Normal"
-
-#~ msgid "View Active Text against View Normal Background"
-#~ msgstr "Vista de Texto Active contra Vista de Fundo Normal"
-
-#~ msgid "View Inactive Text against View Normal Background"
-#~ msgstr "Vista de Texto Inactive contra Vista de Fundo Normal"
-
-#~ msgid "View Negative Text against View Normal Background"
-#~ msgstr "Vista de Texto Negative contra Vista de Fundo Normal"
-
-#~ msgid "View Neutral Text against View Normal Background"
-#~ msgstr "Vista de Texto Neutre contra Vista de Fundo Normal"
-
-#~ msgid "View Positive Text against View Normal Background"
-#~ msgstr "Vista de Texto Positive contra Vista de Fundo Normal"
-
-#~ msgid "Color set:"
-#~ msgstr "Insimul de color:"
-
-#~ msgid "Colorset to view/modify"
-#~ msgstr "Insimul de color per vider/modificar"
-
-#~ msgctxt "color-sets"
-#~ msgid "Common Colors"
-#~ msgstr "Colores commun"
-
-#~ msgctxt "color-sets"
-#~ msgid "View"
-#~ msgstr "Vista"
-
-#~ msgctxt "color-sets"
-#~ msgid "Window"
-#~ msgstr "Fenestra"
-
-#~ msgctxt "color-sets"
-#~ msgid "Button"
-#~ msgstr "Button"
-
-#~ msgctxt "color-sets"
-#~ msgid "Selection"
-#~ msgstr "Selection"
-
-#~ msgctxt "color-sets"
-#~ msgid "Tooltip"
-#~ msgstr "Consilio"
-
-#~ msgctxt "color-sets"
-#~ msgid "Complementary"
-#~ msgstr "Complementari"
-
-#~ msgctxt "color-sets"
-#~ msgid "Header"
-#~ msgstr "Capite"
-
-#~ msgid "New Row"
-#~ msgstr "Nove riga"
-
-#~ msgid "0"
-#~ msgstr "0"
-
-#~ msgid "1"
-#~ msgstr "1"
-
-#~ msgid "View Background"
-#~ msgstr "Vide fundo"
-
-#~ msgid "View Text"
-#~ msgstr "Vide texto"
-
-#~ msgid "Window Background"
-#~ msgstr "Fundo de Fenestra"
-
-#~ msgid "Window Text"
-#~ msgstr "Texto de Fenestra"
-
-#~ msgid "Button Background"
-#~ msgstr "Fundo de Button"
-
-#~ msgid "Button Text"
-#~ msgstr "Texto de Button"
-
-#~ msgid "Selection Background"
-#~ msgstr "Fundo de selection"
-
-#~ msgid "Selection Text"
-#~ msgstr "Texto de selection"
-
-#~ msgid "Selection Inactive Text"
-#~ msgstr "Texto inactive de selection"
-
-#~ msgid "Tooltip Background"
-#~ msgstr "Fundo de consilio"
-
-#~ msgid "Tooltip Text"
-#~ msgstr "Texto de consilio"
-
-#~ msgid "Active Titlebar"
-#~ msgstr "Barra de titulo active"
-
-#~ msgid "Active Titlebar Text"
-#~ msgstr "Texto de barra de titulo active"
-
-#~ msgid "Active Titlebar Secondary"
-#~ msgstr "Barra secundari de titulo active"
-
-#~ msgid "Inactive Titlebar"
-#~ msgstr "Barra de titulo inactive"
-
-#~ msgid "Inactive Titlebar Text"
-#~ msgstr "Texto de barra de titulo inactive"
-
-#~ msgid "Inactive Titlebar Secondary"
-#~ msgstr "Barra secundari de titulo inactive"
-
-#~ msgid "Color:"
-#~ msgstr "Color:"
-
-#~ msgid "Intensity:"
-#~ msgstr "Intensitate:"
-
-#~ msgid "Disabled color effect type"
-#~ msgstr "Typo de effecto de color dishabilitate"
-
-#~ msgctxt "no disabled color effect"
-#~ msgid "None"
-#~ msgstr "Nulle"
-
-#~ msgctxt "disabled color effect"
-#~ msgid "Desaturate"
-#~ msgstr "De-satura"
-
-#~ msgctxt "disabled color effect"
-#~ msgid "Fade"
-#~ msgstr "Pallidi"
-
-#~ msgctxt "disabled color effect"
-#~ msgid "Tint"
-#~ msgstr "Tinta"
-
-#~ msgid "Disabled intensity effect type"
-#~ msgstr "Typo de effecto de intensitate dishabilitate"
-
-#~ msgctxt "no disabled intensity effect"
-#~ msgid "None"
-#~ msgstr "Nulle"
-
-#~ msgctxt "disabled intensity effect"
-#~ msgid "Shade"
-#~ msgstr "Adumbra"
-
-#~ msgctxt "disabled intensity effect"
-#~ msgid "Darken"
-#~ msgstr "Obscura"
-
-#~ msgctxt "disabled intensity effect"
-#~ msgid "Lighten"
-#~ msgstr "Illumina"
-
-#~ msgid "Contrast:"
-#~ msgstr "Contrasto:"
-
-#~ msgid "Disabled color effect amount"
-#~ msgstr "Amonta de effecto de color dishabilitate"
-
-#~ msgid "Disabled intensity effect amount"
-#~ msgstr "Amonta de effecto de intensitate dishabilitate"
-
-#~ msgid "Disabled color"
-#~ msgstr "Color dishabilitate"
-
-#~ msgid "Disabled contrast type"
-#~ msgstr "Typo de contrasto dishabilitate"
-
-#~ msgctxt "no disabled contrast"
-#~ msgid "None"
-#~ msgstr "Nulle"
-
-#~ msgctxt "disabled contrast"
-#~ msgid "Fade"
-#~ msgstr "Pallidi"
-
-#~ msgctxt "disabled contrast"
-#~ msgid "Tint"
-#~ msgstr "Tinta"
-
-#~ msgid "Disabled contrast amount"
-#~ msgstr "Amonta de contrasto dishabilitate"
-
-#~ msgid "Apply &effects to inactive windows"
-#~ msgstr "Applica &effectos a fenestras inactive"
-
-#~ msgid "Use different colors for in&active selections"
-#~ msgstr "Usa colores differente per selectiones de in&active"
-
-#~ msgid "Shade sorted column &in lists"
-#~ msgstr "Umbra columnas ordinate &in listas"
-
-#~ msgid "Tint all colors with accent color"
-#~ msgstr "Tinge omne colores con color de accento "
-
-#~ msgid "Make window titlebars a&ccent-colored"
-#~ msgstr "Face che le barras de titulo del fenestra es colorate de a&ccento"
-
-#~ msgid "Tint strength:"
-#~ msgstr "Fortia de tinta:"
-
-#~ msgid "Shading of frames and lighting (\"3D\") effects"
-#~ msgstr "Umbrar de quadros e effectos de lumine (\"3D\")"
-
-#~ msgid "Shading"
-#~ msgstr "Umbrar"
-
-#~ msgid "Maximum"
-#~ msgstr "Maxime"
-
-#~ msgid "Minimum"
-#~ msgstr "Minime"
-
-#~ msgid "Contrast"
-#~ msgstr "Contrasto"
-
-#~ msgid "Normal Text on Normal Background"
-#~ msgstr "Texto Normal sur Fundo Normal"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "normal"
-#~ msgstr "normal"
-
-#~ msgid "Link Text on Normal Background"
-#~ msgstr "Texto de Ligamine sur Fundo Normal"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "link"
-#~ msgstr "ligamine"
-
-#~ msgid "Visited Text on Normal Background"
-#~ msgstr "Texto Visitate sur Fundo Normal"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "visited"
-#~ msgstr "Visitate"
-
-#~ msgid "Active Text on Normal Background"
-#~ msgstr "Texto Active sur Fundo Normal"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "active"
-#~ msgstr "Activa"
-
-#~ msgid "Inactive Text on Normal Background"
-#~ msgstr "Texto Inactive sur Fundo Normal"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "inactive"
-#~ msgstr "Inactive"
-
-#~ msgid "Negative Text on Normal Background"
-#~ msgstr "Texto Negative sur Fundo Normal"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "negative"
-#~ msgstr "Negative"
-
-#~ msgid "Neutral Text on Normal Background"
-#~ msgstr "Texto Neutre sur Fundo Normal"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "neutral"
-#~ msgstr "Neutral"
-
-#~ msgid "Positive Text on Normal Background"
-#~ msgstr "Texto Positive sur Fundo Normal"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "positive"
-#~ msgstr "Positive"
-
-#~ msgid "Hover on Normal Background"
-#~ msgstr "Suspendite sur Fundo Normal"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "hover"
-#~ msgstr "Suspendite"
-
-#~ msgid ""
-#~ "Link Text on Link Background\n"
-#~ "(Note: Link Background is derived from Link Text and cannot be separately "
-#~ "configured at this time)"
-#~ msgstr ""
-#~ "Texto de Ligamine sur Fundo de Ligamine\n"
-#~ "(Tu nota: Fundo de Ligamine es derivate ab Texto de Ligamine e non pote "
-#~ "esser configurate separatemente ora)"
-
-#~ msgid ""
-#~ "Visited Text on Visited Background\n"
-#~ "(Note: Visited Background is derived from Visited Text and cannot be "
-#~ "separately configured at this time)"
-#~ msgstr ""
-#~ "Texto Visitate sur Fundo Visitate\n"
-#~ "(Tu nota: Fundo Visitate es derivate ab Texto Visitate e non pote esser "
-#~ "configurate separatemente ora)"
-
-#~ msgid ""
-#~ "Active Text on Active Background\n"
-#~ "(Note: Active Background is derived from Active Text and cannot be "
-#~ "separately configured at this time)"
-#~ msgstr ""
-#~ "Texto Active sur Fundo Active\n"
-#~ "(Tu nota: Fundo Active es derivate ab Texto Active e non pote esser "
-#~ "configurate separatemente ora)"
-
-#~ msgid "Inactive Text on Alternate Background"
-#~ msgstr "Texto Inactive sur Fundo Alternative"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "alternate"
-#~ msgstr "alternative"
-
-#~ msgid ""
-#~ "Negative Text on Negative Background\n"
-#~ "(Note: Negative Background is derived from Negative Text and cannot be "
-#~ "separately configured at this time)"
-#~ msgstr ""
-#~ "Texto Negative sur Fundo Negative\n"
-#~ "(Tu nota: Fundo Negative es derivate ab Texto Negative e non pote esser "
-#~ "configurate separatemente ora)"
-
-#~ msgid ""
-#~ "Neutral Text on Neutral Background\n"
-#~ "(Note: Neutral Background is derived from Neutral Text and cannot be "
-#~ "separately configured at this time)"
-#~ msgstr ""
-#~ "Texto Neutre sur Fundo Neutre\n"
-#~ "(Tu nota: Fundo Neutre es derivate ab Texto Neutre e non pote esser "
-#~ "configurate separatemente ora)"
-
-#~ msgid ""
-#~ "Positive Text on Positive Background\n"
-#~ "(Note: Positive Background is derived from Positive Text and cannot be "
-#~ "separately configured at this time)"
-#~ msgstr ""
-#~ "Texto Positive sur Fundo Positive\n"
-#~ "(Tu nota: Fundo Positive es derivate ab Texto Positive e non pote esser "
-#~ "configurate separatemente ora)"
-
-#~ msgid "Focus on Normal Background"
-#~ msgstr "Foco sur fundo normal"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "focus"
-#~ msgstr "Foco"
 
 #~ msgid "Apply a&ccent color to active window titlebars"
 #~ msgstr "Applica color de a&ccento per activar barras de titulo de fenestra."

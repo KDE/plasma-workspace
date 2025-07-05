@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-02-01 10:46+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -135,6 +135,30 @@ msgstr ""
 #, kde-format
 msgid "Configure…"
 msgstr ""
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:10
+#, kde-format
+msgid "Screen lock enabled"
+msgstr "Képernyőzár bekapcsolva"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:11
+#, kde-format
+msgid "Sets whether the screen will be locked after the specified time."
+msgstr "Beállítja, hogy a képernyő lezárjon-e a megadott idő letelte után."
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:16
+#, kde-format
+msgid "Screen saver timeout"
+msgstr "A képernyővédő időkorlátja"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:17
+#, kde-format
+msgid "Sets the minutes after which the screen is locked."
+msgstr "Beállítja az időt, aminek a letelte után a képernyő lezár."
 
 #: sessionsprivate/sessionsmodel.cpp:235 sessionsprivate/sessionsmodel.cpp:239
 #, kde-format
@@ -307,18 +331,6 @@ msgstr "Új Plasma widgetek letöltése"
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "Telepítés helyi fájlból…"
-
-#~ msgid "Screen lock enabled"
-#~ msgstr "Képernyőzár bekapcsolva"
-
-#~ msgid "Sets whether the screen will be locked after the specified time."
-#~ msgstr "Beállítja, hogy a képernyő lezárjon-e a megadott idő letelte után."
-
-#~ msgid "Screen saver timeout"
-#~ msgstr "A képernyővédő időkorlátja"
-
-#~ msgid "Sets the minutes after which the screen is locked."
-#~ msgstr "Beállítja az időt, aminek a letelte után a képernyő lezár."
 
 #~ msgid "&Execute"
 #~ msgstr "Végr&ehajtás"

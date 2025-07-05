@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-10-22 06:56+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -38,6 +38,48 @@ msgstr "Малки икони"
 #, kde-format
 msgid "Dialogs"
 msgstr "Диалогови прозорци"
+
+#. i18n: ectx: label, entry (Theme), group (Icons)
+#: iconssettingsbase.kcfg:9
+#, kde-format
+msgid "Name of the current icon theme"
+msgstr "Име на текущата тема на икони"
+
+#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
+#: iconssettingsbase.kcfg:15
+#, kde-format
+msgid "Desktop icons size"
+msgstr "Размер на иконите на работния плот"
+
+#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
+#: iconssettingsbase.kcfg:21
+#, kde-format
+msgid "Toolbar icons size"
+msgstr "Размер на иконите на лентата с инструменти"
+
+#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
+#: iconssettingsbase.kcfg:27
+#, kde-format
+msgid "Main toolbar icons size"
+msgstr "Размер на иконите на основната лента с инструменти"
+
+#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
+#: iconssettingsbase.kcfg:33
+#, kde-format
+msgid "Small icons size"
+msgstr "Малък размер на иконите"
+
+#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
+#: iconssettingsbase.kcfg:39
+#, kde-format
+msgid "Panel icons size"
+msgstr "Размер на иконите на панела"
+
+#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
+#: iconssettingsbase.kcfg:45
+#, kde-format
+msgid "Dialog icons size"
+msgstr "Размер на диалоговите икони"
 
 #: main.cpp:182
 #, kde-format
@@ -149,24 +191,3 @@ msgstr "Отваряне на тема"
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Файлове на тема (*.tar.gz *.tar.bz2)"
-
-#~ msgid "Name of the current icon theme"
-#~ msgstr "Име на текущата тема на икони"
-
-#~ msgid "Desktop icons size"
-#~ msgstr "Размер на иконите на работния плот"
-
-#~ msgid "Toolbar icons size"
-#~ msgstr "Размер на иконите на лентата с инструменти"
-
-#~ msgid "Main toolbar icons size"
-#~ msgstr "Размер на иконите на основната лента с инструменти"
-
-#~ msgid "Small icons size"
-#~ msgstr "Малък размер на иконите"
-
-#~ msgid "Panel icons size"
-#~ msgstr "Размер на иконите на панела"
-
-#~ msgid "Dialog icons size"
-#~ msgstr "Размер на диалоговите икони"

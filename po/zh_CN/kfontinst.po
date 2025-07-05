@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2024-03-30 19:46\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -1589,6 +1589,12 @@ msgstr "预览文字"
 msgid "Please enter new string:"
 msgstr "请输入新的预览文字："
 
+#. i18n: ectx: ToolBar (mainToolBar)
+#: viewpart/kfontviewpart.rc:4
+#, kde-format
+msgid "&Main Toolbar"
+msgstr "主工具栏(&M)"
+
 #: viewpart/PreviewSelectAction.cpp:13
 #, kde-format
 msgid "Preview Type"
@@ -2281,6 +2287,3 @@ msgstr "八思巴文"
 #: viewpart/UnicodeScripts.h:80
 msgid "Yi"
 msgstr "彝文"
-
-#~ msgid "&Main Toolbar"
-#~ msgstr "主工具栏(&M)"

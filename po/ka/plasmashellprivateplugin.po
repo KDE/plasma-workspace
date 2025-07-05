@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2023-05-29 07:02+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -135,6 +135,30 @@ msgstr "ღიად დატოვება"
 #, kde-format
 msgid "Configure…"
 msgstr "მორგება…"
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:10
+#, kde-format
+msgid "Screen lock enabled"
+msgstr "ეკრანის ჩაკეტვა ჩართულია"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:11
+#, kde-format
+msgid "Sets whether the screen will be locked after the specified time."
+msgstr "დროის მითითება, რამდენ ხანში ჩაიკეტება ეკრანი."
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:16
+#, kde-format
+msgid "Screen saver timeout"
+msgstr "ეკრანის დაცვის ვადა"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:17
+#, kde-format
+msgid "Sets the minutes after which the screen is locked."
+msgstr "ეკრანის ჩაკეტვის ვადის დაყენება."
 
 #: sessionsprivate/sessionsmodel.cpp:235 sessionsprivate/sessionsmodel.cpp:239
 #, kde-format
@@ -304,15 +328,3 @@ msgstr "Plasma-ის ახალი ვიჯეტების გადმ�
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "ვიჯეტის ლოკალური ფაილიდან დაყენება…"
-
-#~ msgid "Screen lock enabled"
-#~ msgstr "ეკრანის ჩაკეტვა ჩართულია"
-
-#~ msgid "Sets whether the screen will be locked after the specified time."
-#~ msgstr "დროის მითითება, რამდენ ხანში ჩაიკეტება ეკრანი."
-
-#~ msgid "Screen saver timeout"
-#~ msgstr "ეკრანის დაცვის ვადა"
-
-#~ msgid "Sets the minutes after which the screen is locked."
-#~ msgstr "ეკრანის ჩაკეტვის ვადის დაყენება."

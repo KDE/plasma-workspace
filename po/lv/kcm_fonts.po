@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2010-01-30 18:57+0200\n"
 "Last-Translator: Viesturs Zarins <viesturs.zarins@mii.lu.lv>\n"
 "Language-Team: Latvian <locale@laka.lv>\n"
@@ -19,6 +19,68 @@ msgstr ""
 "X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
+
+#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
+#: fontsaasettingsbase.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Force fonts DPI:"
+msgid "Force font DPI Wayland"
+msgstr "Uzspiest fontu izšķirtspēju DPI:"
+
+#. i18n: ectx: label, entry (forceFontDPI), group (General)
+#: fontsaasettingsbase.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Force fonts DPI:"
+msgid "Force font DPI on X11"
+msgstr "Uzspiest fontu izšķirtspēju DPI:"
+
+#. i18n: ectx: label, entry (font), group (General)
+#: fontssettings.kcfg:9
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "General"
+msgid "General font"
+msgstr "Pamata"
+
+#. i18n: ectx: label, entry (fixed), group (General)
+#: fontssettings.kcfg:21
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "Fixed width"
+msgid "Fixed width font"
+msgstr "Fiksēta platuma"
+
+#. i18n: ectx: label, entry (smallestReadableFont), group (General)
+#: fontssettings.kcfg:33
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "Small"
+msgid "Small font"
+msgstr "Mazs"
+
+#. i18n: ectx: label, entry (toolBarFont), group (General)
+#: fontssettings.kcfg:45
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "Toolbar"
+msgid "Tool bar font"
+msgstr "Rīkjosla"
+
+#. i18n: ectx: label, entry (menuFont), group (General)
+#: fontssettings.kcfg:57
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "General"
+msgid "Menu font"
+msgstr "Pamata"
+
+#. i18n: ectx: label, entry (activeFont), group (WM)
+#: fontssettings.kcfg:71
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "Window title"
+msgid "Window title font"
+msgstr "Loga virsraksts"
 
 #: kxftconfig.cpp:458
 #, fuzzy, kde-format
@@ -321,46 +383,6 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr ""
-
-#, fuzzy
-#~| msgid "Force fonts DPI:"
-#~ msgid "Force font DPI Wayland"
-#~ msgstr "Uzspiest fontu izšķirtspēju DPI:"
-
-#, fuzzy
-#~| msgid "Force fonts DPI:"
-#~ msgid "Force font DPI on X11"
-#~ msgstr "Uzspiest fontu izšķirtspēju DPI:"
-
-#, fuzzy
-#~| msgctxt "font usage"
-#~| msgid "General"
-#~ msgid "General font"
-#~ msgstr "Pamata"
-
-#, fuzzy
-#~| msgctxt "font usage"
-#~| msgid "Fixed width"
-#~ msgid "Fixed width font"
-#~ msgstr "Fiksēta platuma"
-
-#, fuzzy
-#~| msgctxt "font usage"
-#~| msgid "Small"
-#~ msgid "Small font"
-#~ msgstr "Mazs"
-
-#, fuzzy
-#~| msgctxt "font usage"
-#~| msgid "Toolbar"
-#~ msgid "Tool bar font"
-#~ msgstr "Rīkjosla"
-
-#, fuzzy
-#~| msgctxt "font usage"
-#~| msgid "Window title"
-#~ msgid "Window title font"
-#~ msgstr "Loga virsraksts"
 
 #, fuzzy
 #~| msgid ""

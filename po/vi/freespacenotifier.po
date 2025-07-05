@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2021-05-26 21:11+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -32,6 +32,37 @@ msgstr "Mở trong Filelight"
 msgid "Open in File Manager"
 msgstr "Mở trong Trình quản lí tệp"
 
+#. i18n: ectx: label, entry (minimumSpace), group (General)
+#: freespacenotifier.kcfg:9
+#, kde-format
+msgid "Minimum free space before user starts being notified."
+msgstr ""
+"Không gian trống thấp nhất trước khi người dùng bắt đầu được thông báo."
+
+#. i18n: ectx: label, entry (enableNotification), group (General)
+#: freespacenotifier.kcfg:15
+#, kde-format
+msgid "Is the free space notification enabled."
+msgstr "Thông báo không gian trống có được bật không."
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableNotification)
+#: freespacenotifier_prefs_base.ui:17
+#, kde-format
+msgid "Enable low disk space warning"
+msgstr "Bật cảnh báo không gian đĩa còn ít"
+
+#. i18n: ectx: property (text), widget (QLabel, label_minimumSpace)
+#: freespacenotifier_prefs_base.ui:27
+#, kde-format
+msgid "Warn when free space is below:"
+msgstr "Cảnh báo khi không gian trống còn dưới:"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpace)
+#: freespacenotifier_prefs_base.ui:37
+#, kde-format
+msgid " MiB"
+msgstr " MiB"
+
 #: module.cpp:37
 #, kde-format
 msgid ""
@@ -51,19 +82,3 @@ msgstr "Phân vùng Gốc của bạn đang dần hết chỗ, bạn còn có %1
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"
 msgstr "Chung"
-
-#~ msgid "Minimum free space before user starts being notified."
-#~ msgstr ""
-#~ "Không gian trống thấp nhất trước khi người dùng bắt đầu được thông báo."
-
-#~ msgid "Is the free space notification enabled."
-#~ msgstr "Thông báo không gian trống có được bật không."
-
-#~ msgid "Enable low disk space warning"
-#~ msgstr "Bật cảnh báo không gian đĩa còn ít"
-
-#~ msgid "Warn when free space is below:"
-#~ msgstr "Cảnh báo khi không gian trống còn dưới:"
-
-#~ msgid " MiB"
-#~ msgstr " MiB"

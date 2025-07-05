@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2024-03-30 19:46\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -134,6 +134,30 @@ msgstr "保持展开状态"
 #, kde-format
 msgid "Configure…"
 msgstr "配置…"
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:10
+#, kde-format
+msgid "Screen lock enabled"
+msgstr "启用屏幕锁定"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:11
+#, kde-format
+msgid "Sets whether the screen will be locked after the specified time."
+msgstr "设置屏幕是否在指定时间后锁定。"
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:16
+#, kde-format
+msgid "Screen saver timeout"
+msgstr "屏幕保护程序超时时间"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:17
+#, kde-format
+msgid "Sets the minutes after which the screen is locked."
+msgstr "设置屏幕锁定前等待的分钟数。"
 
 #: sessionsprivate/sessionsmodel.cpp:235 sessionsprivate/sessionsmodel.cpp:239
 #, kde-format
@@ -303,15 +327,3 @@ msgstr "下载新 Plasma 挂件"
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "从本地文件安装挂件…"
-
-#~ msgid "Screen lock enabled"
-#~ msgstr "启用屏幕锁定"
-
-#~ msgid "Sets whether the screen will be locked after the specified time."
-#~ msgstr "设置屏幕是否在指定时间后锁定。"
-
-#~ msgid "Screen saver timeout"
-#~ msgstr "屏幕保护程序超时时间"
-
-#~ msgid "Sets the minutes after which the screen is locked."
-#~ msgstr "设置屏幕锁定前等待的分钟数。"

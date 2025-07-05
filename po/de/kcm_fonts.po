@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_fonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2024-05-20 13:02+0200\n"
 "Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: de\n"
@@ -19,6 +19,54 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 24.02.2\n"
+
+#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
+#: fontsaasettingsbase.kcfg:9
+#, kde-format
+msgid "Force font DPI Wayland"
+msgstr "DPI für Schriften erzwingen (Wayland)"
+
+#. i18n: ectx: label, entry (forceFontDPI), group (General)
+#: fontsaasettingsbase.kcfg:13
+#, kde-format
+msgid "Force font DPI on X11"
+msgstr "DPI für Schriften erzwingen (X11)"
+
+#. i18n: ectx: label, entry (font), group (General)
+#: fontssettings.kcfg:9
+#, kde-format
+msgid "General font"
+msgstr "Allgemeine Schriftart"
+
+#. i18n: ectx: label, entry (fixed), group (General)
+#: fontssettings.kcfg:21
+#, kde-format
+msgid "Fixed width font"
+msgstr "Feste Zeichenbreiten"
+
+#. i18n: ectx: label, entry (smallestReadableFont), group (General)
+#: fontssettings.kcfg:33
+#, kde-format
+msgid "Small font"
+msgstr "Kleine Schrift"
+
+#. i18n: ectx: label, entry (toolBarFont), group (General)
+#: fontssettings.kcfg:45
+#, kde-format
+msgid "Tool bar font"
+msgstr "Schriftart für Werkzeugleisten"
+
+#. i18n: ectx: label, entry (menuFont), group (General)
+#: fontssettings.kcfg:57
+#, kde-format
+msgid "Menu font"
+msgstr "Schriftart für Menüs"
+
+#. i18n: ectx: label, entry (activeFont), group (WM)
+#: fontssettings.kcfg:71
+#, kde-format
+msgid "Window title font"
+msgstr "Schriftart für Fenstertitel"
 
 #: kxftconfig.cpp:458
 #, kde-format
@@ -315,30 +363,6 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "Schriftart auswählen"
-
-#~ msgid "Force font DPI Wayland"
-#~ msgstr "DPI für Schriften erzwingen (Wayland)"
-
-#~ msgid "Force font DPI on X11"
-#~ msgstr "DPI für Schriften erzwingen (X11)"
-
-#~ msgid "General font"
-#~ msgstr "Allgemeine Schriftart"
-
-#~ msgid "Fixed width font"
-#~ msgstr "Feste Zeichenbreiten"
-
-#~ msgid "Small font"
-#~ msgstr "Kleine Schrift"
-
-#~ msgid "Tool bar font"
-#~ msgstr "Schriftart für Werkzeugleisten"
-
-#~ msgid "Menu font"
-#~ msgstr "Schriftart für Menüs"
-
-#~ msgid "Window title font"
-#~ msgstr "Schriftart für Fenstertitel"
 
 #~ msgid "Change Display Scaling…"
 #~ msgstr "Anzeigeskalierung ändern ..."

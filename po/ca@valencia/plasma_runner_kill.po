@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2020-07-30 22:13+0200\n"
 "Last-Translator: Antoni Bella Pérez <antonibella5@yahoo.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -68,17 +68,32 @@ msgstr "ús invertit de la CPU"
 msgid "nothing"
 msgstr "res"
 
-#~ msgid "Kill Applications Config"
-#~ msgstr "Configureu la finalització d'aplicacions"
+#. i18n: ectx: property (title), widget (QGroupBox, main)
+#: killrunner_config.ui:30
+#, kde-format
+msgid "Kill Applications Config"
+msgstr "Configureu la finalització d'aplicacions"
 
-#~ msgid "&Use trigger word"
-#~ msgstr "Utilit&za una paraula d'activació"
+#. i18n: ectx: property (text), widget (QCheckBox, useTriggerWord)
+#: killrunner_config.ui:39
+#, kde-format
+msgid "&Use trigger word"
+msgstr "Utilit&za una paraula d'activació"
 
-#~ msgid "&Trigger word:"
-#~ msgstr "Paraula d'ac&tivació:"
+#. i18n: ectx: property (text), widget (QLabel, label_trigger)
+#: killrunner_config.ui:51
+#, kde-format
+msgid "&Trigger word:"
+msgstr "Paraula d'ac&tivació:"
 
-#~ msgid "&Sort by"
-#~ msgstr "&Ordena per"
+#. i18n: ectx: property (text), widget (QLabel, label_sorting)
+#: killrunner_config.ui:72
+#, kde-format
+msgid "&Sort by"
+msgstr "&Ordena per"
 
-#~ msgid "It is not sure, that this will take effect"
-#~ msgstr "No és segur que açò tindrà efecte"
+#. i18n: ectx: property (toolTip), widget (KComboBox, sorting)
+#: killrunner_config.ui:82
+#, kde-format
+msgid "It is not sure, that this will take effect"
+msgstr "No és segur que açò tindrà efecte"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2023-12-20 09:45+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -141,6 +141,30 @@ msgstr "Conserver ouvert"
 #, kde-format
 msgid "Configure…"
 msgstr "Configurer..."
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:10
+#, kde-format
+msgid "Screen lock enabled"
+msgstr "Verrouillage d'écran activé"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:11
+#, kde-format
+msgid "Sets whether the screen will be locked after the specified time."
+msgstr "Définit si l'écran sera verrouillé après un temps spécifié."
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:16
+#, kde-format
+msgid "Screen saver timeout"
+msgstr "Temps d'expiration de l'économiseur d'écran"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:17
+#, kde-format
+msgid "Sets the minutes after which the screen is locked."
+msgstr "Définit le nombre de minutes après lequel l'écran est verrouillé."
 
 #: sessionsprivate/sessionsmodel.cpp:235 sessionsprivate/sessionsmodel.cpp:239
 #, kde-format
@@ -310,18 +334,6 @@ msgstr "Télécharger de nouveaux composants graphiques"
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "Installer un composant graphique depuis un fichier local..."
-
-#~ msgid "Screen lock enabled"
-#~ msgstr "Verrouillage d'écran activé"
-
-#~ msgid "Sets whether the screen will be locked after the specified time."
-#~ msgstr "Définit si l'écran sera verrouillé après un temps spécifié."
-
-#~ msgid "Screen saver timeout"
-#~ msgstr "Temps d'expiration de l'économiseur d'écran"
-
-#~ msgid "Sets the minutes after which the screen is locked."
-#~ msgstr "Définit le nombre de minutes après lequel l'écran est verrouillé."
 
 #~ msgid "&Execute"
 #~ msgstr "&Exécuter"

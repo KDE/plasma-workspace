@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-10-15 12:36+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -26,6 +26,54 @@ msgstr ""
 "First-Translator: Valux (Manuel Soriano) <manu@valux.org>\n"
 "X-Generator: Lokalize 22.08.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
+#: fontsaasettingsbase.kcfg:9
+#, kde-format
+msgid "Force font DPI Wayland"
+msgstr "Forzar PPP de los tipos de letra (Wayland):"
+
+#. i18n: ectx: label, entry (forceFontDPI), group (General)
+#: fontsaasettingsbase.kcfg:13
+#, kde-format
+msgid "Force font DPI on X11"
+msgstr "Forzar PPP de los tipos de letra en X11"
+
+#. i18n: ectx: label, entry (font), group (General)
+#: fontssettings.kcfg:9
+#, kde-format
+msgid "General font"
+msgstr "Tipo de letra general"
+
+#. i18n: ectx: label, entry (fixed), group (General)
+#: fontssettings.kcfg:21
+#, kde-format
+msgid "Fixed width font"
+msgstr "Tipo de letra de anchura fija"
+
+#. i18n: ectx: label, entry (smallestReadableFont), group (General)
+#: fontssettings.kcfg:33
+#, kde-format
+msgid "Small font"
+msgstr "Tipo de letra pequeña"
+
+#. i18n: ectx: label, entry (toolBarFont), group (General)
+#: fontssettings.kcfg:45
+#, kde-format
+msgid "Tool bar font"
+msgstr "Tipo de letra para barras de herramientas"
+
+#. i18n: ectx: label, entry (menuFont), group (General)
+#: fontssettings.kcfg:57
+#, kde-format
+msgid "Menu font"
+msgstr "Tipo de letra para menús"
+
+#. i18n: ectx: label, entry (activeFont), group (WM)
+#: fontssettings.kcfg:71
+#, kde-format
+msgid "Window title font"
+msgstr "Tipo de letra para título de ventana"
 
 #: kxftconfig.cpp:458
 #, kde-format
@@ -321,30 +369,6 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "Seleccionar tipo de letra"
-
-#~ msgid "Force font DPI Wayland"
-#~ msgstr "Forzar PPP de los tipos de letra (Wayland):"
-
-#~ msgid "Force font DPI on X11"
-#~ msgstr "Forzar PPP de los tipos de letra en X11"
-
-#~ msgid "General font"
-#~ msgstr "Tipo de letra general"
-
-#~ msgid "Fixed width font"
-#~ msgstr "Tipo de letra de anchura fija"
-
-#~ msgid "Small font"
-#~ msgstr "Tipo de letra pequeña"
-
-#~ msgid "Tool bar font"
-#~ msgstr "Tipo de letra para barras de herramientas"
-
-#~ msgid "Menu font"
-#~ msgstr "Tipo de letra para menús"
-
-#~ msgid "Window title font"
-#~ msgstr "Tipo de letra para título de ventana"
 
 #~ msgid "Change Display Scaling…"
 #~ msgstr "Cambiar el escalado de la pantalla..."

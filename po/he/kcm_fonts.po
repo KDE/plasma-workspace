@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2017-05-23 10:21-0400\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -29,6 +29,68 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Zanata 3.9.6\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
+#: fontsaasettingsbase.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Force fonts DPI:"
+msgid "Force font DPI Wayland"
+msgstr "אכוף דרגת DPI:"
+
+#. i18n: ectx: label, entry (forceFontDPI), group (General)
+#: fontsaasettingsbase.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Force fonts DPI:"
+msgid "Force font DPI on X11"
+msgstr "אכוף דרגת DPI:"
+
+#. i18n: ectx: label, entry (font), group (General)
+#: fontssettings.kcfg:9
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "General"
+msgid "General font"
+msgstr "כללי"
+
+#. i18n: ectx: label, entry (fixed), group (General)
+#: fontssettings.kcfg:21
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "Fixed width"
+msgid "Fixed width font"
+msgstr "רוחב קבוע"
+
+#. i18n: ectx: label, entry (smallestReadableFont), group (General)
+#: fontssettings.kcfg:33
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "Small"
+msgid "Small font"
+msgstr "קטן"
+
+#. i18n: ectx: label, entry (toolBarFont), group (General)
+#: fontssettings.kcfg:45
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "Toolbar"
+msgid "Tool bar font"
+msgstr "סרגלי כלים"
+
+#. i18n: ectx: label, entry (menuFont), group (General)
+#: fontssettings.kcfg:57
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "General"
+msgid "Menu font"
+msgstr "כללי"
+
+#. i18n: ectx: label, entry (activeFont), group (WM)
+#: fontssettings.kcfg:71
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "Window title"
+msgid "Window title font"
+msgstr "כותרת החלון"
 
 #: kxftconfig.cpp:458
 #, fuzzy, kde-format
@@ -328,46 +390,6 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr ""
-
-#, fuzzy
-#~| msgid "Force fonts DPI:"
-#~ msgid "Force font DPI Wayland"
-#~ msgstr "אכוף דרגת DPI:"
-
-#, fuzzy
-#~| msgid "Force fonts DPI:"
-#~ msgid "Force font DPI on X11"
-#~ msgstr "אכוף דרגת DPI:"
-
-#, fuzzy
-#~| msgctxt "font usage"
-#~| msgid "General"
-#~ msgid "General font"
-#~ msgstr "כללי"
-
-#, fuzzy
-#~| msgctxt "font usage"
-#~| msgid "Fixed width"
-#~ msgid "Fixed width font"
-#~ msgstr "רוחב קבוע"
-
-#, fuzzy
-#~| msgctxt "font usage"
-#~| msgid "Small"
-#~ msgid "Small font"
-#~ msgstr "קטן"
-
-#, fuzzy
-#~| msgctxt "font usage"
-#~| msgid "Toolbar"
-#~ msgid "Tool bar font"
-#~ msgstr "סרגלי כלים"
-
-#, fuzzy
-#~| msgctxt "font usage"
-#~| msgid "Window title"
-#~ msgid "Window title font"
-#~ msgstr "כותרת החלון"
 
 #, fuzzy
 #~| msgid ""

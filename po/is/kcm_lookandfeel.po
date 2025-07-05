@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-10-22 16:57+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -93,6 +93,12 @@ msgstr "pakkaheiti"
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
 msgstr "Endurstilla framsetningu Plasma-skjáborðsins"
+
+#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
+#: lookandfeelsettings.kcfg:9
+#, kde-format
+msgid "Global look and feel"
+msgstr "Almennt útlit og áferð"
 
 #: package/contents/ui/main.qml:21
 #, kde-format
@@ -259,6 +265,3 @@ msgid ""
 msgstr ""
 "Þetta almenna þema er ekki með neinar nothæfar stillingar. Hafðu samband við "
 "umsjónaraðila þemans þar sem það er mögulega bilað."
-
-#~ msgid "Global look and feel"
-#~ msgstr "Almennt útlit og áferð"

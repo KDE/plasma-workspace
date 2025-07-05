@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2024-05-13 10:56+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -24,6 +24,18 @@ msgstr ""
 "\n"
 "\n"
 "\n"
+
+#. i18n: ectx: label, entry (cursorTheme), group (Mouse)
+#: cursorthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current cursor theme"
+msgstr "Heiti núverandi bendilþema"
+
+#. i18n: ectx: label, entry (cursorSize), group (Mouse)
+#: cursorthemesettings.kcfg:13
+#, kde-format
+msgid "Current cursor size"
+msgstr "Núverandi stærð bendils"
 
 #: kcmcursortheme.cpp:308
 #, kde-format
@@ -69,6 +81,13 @@ msgstr "Skrifa yfir þema?"
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Uppsetning á þema er lokið."
+
+#. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
+#. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)
+#: launchfeedbacksettings.kcfg:19 launchfeedbacksettings.kcfg:33
+#, kde-format
+msgid "Timeout in seconds"
+msgstr "Tímamörk í sekúndum"
 
 #: package/contents/ui/Delegate.qml:54
 #, kde-format
@@ -270,15 +289,6 @@ msgctxt ""
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(Tiltækar stærðir: %1)"
-
-#~ msgid "Name of the current cursor theme"
-#~ msgstr "Heiti núverandi bendilþema"
-
-#~ msgid "Current cursor size"
-#~ msgstr "Núverandi stærð bendils"
-
-#~ msgid "Timeout in seconds"
-#~ msgstr "Tímamörk í sekúndum"
 
 #~ msgid "Name"
 #~ msgstr "Heiti"

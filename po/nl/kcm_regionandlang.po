@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-12-27 10:30+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -567,8 +567,14 @@ msgctxt "Phone Numbers"
 msgid "Phone number"
 msgstr "Telefoonnummer"
 
-#~ msgid "Inherit Language"
-#~ msgstr "Taal erven"
+#: regionandlangsettingsbase.kcfg:18 regionandlangsettingsbase.kcfg:21
+#: regionandlangsettingsbase.kcfg:24 regionandlangsettingsbase.kcfg:27
+#: regionandlangsettingsbase.kcfg:30 regionandlangsettingsbase.kcfg:33
+#: regionandlangsettingsbase.kcfg:36 regionandlangsettingsbase.kcfg:39
+#: regionandlangsettingsbase.kcfg:42
+#, kde-format
+msgid "Inherit Language"
+msgstr "Taal erven"
 
 #~ msgctxt "@info:warning"
 #~ msgid ""

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2025-05-14 17:39+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -33,6 +33,36 @@ msgstr "افتح في فلايت لايت"
 msgid "Open in File Manager"
 msgstr "افتح في مدير الملفّات"
 
+#. i18n: ectx: label, entry (minimumSpace), group (General)
+#: freespacenotifier.kcfg:9
+#, kde-format
+msgid "Minimum free space before user starts being notified."
+msgstr "أقلّ مساحة حرّة متبقّية قبل البدء في إخطار المستخدم."
+
+#. i18n: ectx: label, entry (enableNotification), group (General)
+#: freespacenotifier.kcfg:15
+#, kde-format
+msgid "Is the free space notification enabled."
+msgstr "هل إخطار المساحة الحرّة مفعّل."
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableNotification)
+#: freespacenotifier_prefs_base.ui:17
+#, kde-format
+msgid "Enable low disk space warning"
+msgstr "فعّل التّحذير عند انخفاض المساحة الحرّة"
+
+#. i18n: ectx: property (text), widget (QLabel, label_minimumSpace)
+#: freespacenotifier_prefs_base.ui:27
+#, kde-format
+msgid "Warn when free space is below:"
+msgstr "حذّر إن انخفضت المساحة الحرّة عن:"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpace)
+#: freespacenotifier_prefs_base.ui:37
+#, kde-format
+msgid " MiB"
+msgstr " م.بايت"
+
 #: module.cpp:37
 #, kde-format
 msgid ""
@@ -52,21 +82,6 @@ msgstr "مساحة مجلّد الجذر تنفد، بقيت %1 م.بايت (%2�
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"
 msgstr "عامّ"
-
-#~ msgid "Minimum free space before user starts being notified."
-#~ msgstr "أقلّ مساحة حرّة متبقّية قبل البدء في إخطار المستخدم."
-
-#~ msgid "Is the free space notification enabled."
-#~ msgstr "هل إخطار المساحة الحرّة مفعّل."
-
-#~ msgid "Enable low disk space warning"
-#~ msgstr "فعّل التّحذير عند انخفاض المساحة الحرّة"
-
-#~ msgid "Warn when free space is below:"
-#~ msgstr "حذّر إن انخفضت المساحة الحرّة عن:"
-
-#~ msgid " MiB"
-#~ msgstr " م.بايت"
 
 #~ msgid "Low Disk Space"
 #~ msgstr "مساحة القرص منخفضة"

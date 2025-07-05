@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_kill\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2010-01-29 16:23+0530\n"
 "Last-Translator: Rajesh Ranjan <rajesh672@gmail.com>\n"
 "Language-Team: Maithili <maithili.sf.net>\n"
@@ -67,23 +67,35 @@ msgstr "उनटा CPU प्रयोग"
 msgid "nothing"
 msgstr "किछु नहि"
 
-#, fuzzy
-#~ msgid "Kill Applications Config"
-#~ msgstr "मारू अनुप्रयोग"
+#. i18n: ectx: property (title), widget (QGroupBox, main)
+#: killrunner_config.ui:30
+#, fuzzy, kde-format
+msgid "Kill Applications Config"
+msgstr "मारू अनुप्रयोग"
 
-#, fuzzy
-#~ msgid "&Use trigger word"
-#~ msgstr "उपयोग करू शब्द"
+#. i18n: ectx: property (text), widget (QCheckBox, useTriggerWord)
+#: killrunner_config.ui:39
+#, fuzzy, kde-format
+msgid "&Use trigger word"
+msgstr "उपयोग करू शब्द"
 
-#~ msgid "&Trigger word:"
-#~ msgstr "ट्रिगर शब्द (&T):"
+#. i18n: ectx: property (text), widget (QLabel, label_trigger)
+#: killrunner_config.ui:51
+#, kde-format
+msgid "&Trigger word:"
+msgstr "ट्रिगर शब्द (&T):"
 
-#~ msgid "&Sort by"
-#~ msgstr "एकरा द्वारा छाँटू (&S)"
+#. i18n: ectx: property (text), widget (QLabel, label_sorting)
+#: killrunner_config.ui:72
+#, kde-format
+msgid "&Sort by"
+msgstr "एकरा द्वारा छाँटू (&S)"
 
-#, fuzzy
-#~ msgid "It is not sure, that this will take effect"
-#~ msgstr "अछि नहि प्रभाव"
+#. i18n: ectx: property (toolTip), widget (KComboBox, sorting)
+#: killrunner_config.ui:82
+#, fuzzy, kde-format
+msgid "It is not sure, that this will take effect"
+msgstr "अछि नहि प्रभाव"
 
 #~ msgid ""
 #~ "Process ID: %1\n"

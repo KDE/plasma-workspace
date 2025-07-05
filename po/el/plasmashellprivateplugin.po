@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2016-09-04 14:52+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -134,6 +134,31 @@ msgstr ""
 #, kde-format
 msgid "Configure…"
 msgstr ""
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:10
+#, kde-format
+msgid "Screen lock enabled"
+msgstr "Κλείδωμα οθόνης ενεργοποιημένο"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:11
+#, kde-format
+msgid "Sets whether the screen will be locked after the specified time."
+msgstr ""
+"Ρυθμίζει το αν η οθόνη θα κλειδώνει μετά από κάποιο καθορισμένο διάστημα."
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:16
+#, kde-format
+msgid "Screen saver timeout"
+msgstr "Λήξη χρονικού ορίου οθόνης προφύλαξης"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:17
+#, kde-format
+msgid "Sets the minutes after which the screen is locked."
+msgstr "Ορίζει μετά από πόσα λεπτά θα κλειδωθεί η οθόνη."
 
 #: sessionsprivate/sessionsmodel.cpp:235 sessionsprivate/sessionsmodel.cpp:239
 #, kde-format
@@ -305,19 +330,6 @@ msgstr "Λήψη νέων συστατικών Plasma"
 #| msgid "Install Widget From Local File..."
 msgid "Install Widget From Local File…"
 msgstr "Εγκατάσταση συστατικού από τοπικό αρχείο..."
-
-#~ msgid "Screen lock enabled"
-#~ msgstr "Κλείδωμα οθόνης ενεργοποιημένο"
-
-#~ msgid "Sets whether the screen will be locked after the specified time."
-#~ msgstr ""
-#~ "Ρυθμίζει το αν η οθόνη θα κλειδώνει μετά από κάποιο καθορισμένο διάστημα."
-
-#~ msgid "Screen saver timeout"
-#~ msgstr "Λήξη χρονικού ορίου οθόνης προφύλαξης"
-
-#~ msgid "Sets the minutes after which the screen is locked."
-#~ msgstr "Ορίζει μετά από πόσα λεπτά θα κλειδωθεί η οθόνη."
 
 #~ msgid "&Execute"
 #~ msgstr "&Εκτέλεση"

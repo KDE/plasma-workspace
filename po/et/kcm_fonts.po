@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2020-10-25 19:45+0100\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -21,6 +21,55 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 20.08.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
+#: fontsaasettingsbase.kcfg:9
+#, kde-format
+msgid "Force font DPI Wayland"
+msgstr "Fontidele DPI määramine Waylandi puhul"
+
+#. i18n: ectx: label, entry (forceFontDPI), group (General)
+#: fontsaasettingsbase.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Force font DPI X11"
+msgid "Force font DPI on X11"
+msgstr "Fontidele DPI määramine X11 puhul"
+
+#. i18n: ectx: label, entry (font), group (General)
+#: fontssettings.kcfg:9
+#, kde-format
+msgid "General font"
+msgstr "Üldine font"
+
+#. i18n: ectx: label, entry (fixed), group (General)
+#: fontssettings.kcfg:21
+#, kde-format
+msgid "Fixed width font"
+msgstr "Fikseeritud laiusega font"
+
+#. i18n: ectx: label, entry (smallestReadableFont), group (General)
+#: fontssettings.kcfg:33
+#, kde-format
+msgid "Small font"
+msgstr "Väike font"
+
+#. i18n: ectx: label, entry (toolBarFont), group (General)
+#: fontssettings.kcfg:45
+#, kde-format
+msgid "Tool bar font"
+msgstr "Tööriistaribade font"
+
+#. i18n: ectx: label, entry (menuFont), group (General)
+#: fontssettings.kcfg:57
+#, kde-format
+msgid "Menu font"
+msgstr "Menüüde font"
+
+#. i18n: ectx: label, entry (activeFont), group (WM)
+#: fontssettings.kcfg:71
+#, kde-format
+msgid "Window title font"
+msgstr "Aknatiitlite font"
 
 #: kxftconfig.cpp:458
 #, kde-format
@@ -309,32 +358,6 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "Fondi valimine"
-
-#~ msgid "Force font DPI Wayland"
-#~ msgstr "Fontidele DPI määramine Waylandi puhul"
-
-#, fuzzy
-#~| msgid "Force font DPI X11"
-#~ msgid "Force font DPI on X11"
-#~ msgstr "Fontidele DPI määramine X11 puhul"
-
-#~ msgid "General font"
-#~ msgstr "Üldine font"
-
-#~ msgid "Fixed width font"
-#~ msgstr "Fikseeritud laiusega font"
-
-#~ msgid "Small font"
-#~ msgstr "Väike font"
-
-#~ msgid "Tool bar font"
-#~ msgstr "Tööriistaribade font"
-
-#~ msgid "Menu font"
-#~ msgstr "Menüüde font"
-
-#~ msgid "Window title font"
-#~ msgstr "Aknatiitlite font"
 
 #, fuzzy
 #~| msgid "Change Display Scaling..."

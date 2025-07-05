@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2024-07-26 23:13+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -95,6 +95,12 @@ msgstr "nomedopaquete"
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
 msgstr "Restabelecer a disposición do escritorio de Plasma."
+
+#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
+#: lookandfeelsettings.kcfg:9
+#, kde-format
+msgid "Global look and feel"
+msgstr "Xeito global"
 
 #: package/contents/ui/main.qml:21
 #, kde-format
@@ -259,9 +265,6 @@ msgid ""
 msgstr ""
 "O tema global non fornece opcións aplicábeis. Contacte con quen o mantén, "
 "pode que estea roto."
-
-#~ msgid "Global look and feel"
-#~ msgstr "Xeito global"
 
 #, fuzzy
 #~| msgid ""

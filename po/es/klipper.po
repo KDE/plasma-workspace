@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2023-09-03 22:06+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -647,6 +647,220 @@ msgstr "actual"
 msgid "down"
 msgstr "abajo"
 
+#. i18n: ectx: label, entry (Version), group (General)
+#: klipper.kcfg:10
+#, kde-format
+msgid "Klipper version"
+msgstr "Versión de Klipper"
+
+#. i18n: ectx: label, entry (KeepClipboardContents), group (General)
+#: klipper.kcfg:13
+#, kde-format
+msgid "Save history across desktop sessions"
+msgstr "Guardar el historial entre sesiones de escritorio"
+
+#. i18n: ectx: tooltip, entry (KeepClipboardContents), group (General)
+#: klipper.kcfg:15
+#, kde-format
+msgid ""
+"Retain the clipboard history, so it will be available the next time you log "
+"in."
+msgstr ""
+"Retener el historial del portapapeles para que esté disponible la próxima "
+"vez que inicie sesión."
+
+#. i18n: ectx: label, entry (PreventEmptyClipboard), group (General)
+#: klipper.kcfg:18
+#, kde-format
+msgid "Prevent the clipboard from being cleared"
+msgstr "Impedir que se pueda borrar el portapapeles"
+
+#. i18n: ectx: whatsthis, entry (PreventEmptyClipboard), group (General)
+#: klipper.kcfg:20
+#, kde-format
+msgid ""
+"Do not allow the clipboard to be cleared, for example when an application "
+"exits."
+msgstr ""
+"No permitir que se pueda borrar el portapapeles (por ejemplo, cuando se "
+"cierra una aplicación)."
+
+#. i18n: ectx: label, entry (SyncClipboards), group (General)
+#: klipper.kcfg:27
+#, kde-format
+msgid "Keep the selection and clipboard the same"
+msgstr "Hacer que la selección y el portapapeles sean idénticos"
+
+#. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
+#: klipper.kcfg:29
+#, kde-format
+msgid ""
+"Content selected with the cursor is automatically copied to the clipboard so "
+"that it can be pasted with either a Paste action or a middle-click.<br/><a "
+"href=\"1\">More about the selection and clipboard</a>."
+msgstr ""
+"El contenido seleccionado con el cursor se copia automáticamente en el "
+"portapapeles para que se pueda pegar con una acción «Pegar» o con un clic "
+"central.<br/><a href=\"1\">Más sobre la selección y el portapapeles</a>."
+
+#. i18n: ectx: label, entry (IgnoreSelection), group (General)
+#: klipper.kcfg:32
+#, kde-format
+msgid "Ignore the selection"
+msgstr "Ignorar la selección"
+
+#. i18n: ectx: whatsthis, entry (IgnoreSelection), group (General)
+#: klipper.kcfg:34
+#, kde-format
+msgid ""
+"Content selected with the cursor but not explicitly copied to the clipboard "
+"is not automatically stored in the clipboard history, and can only be pasted "
+"using a middle-click."
+msgstr ""
+"El contenido seleccionado con el cursor, pero no copiado explícitamente en "
+"el portapapeles, no se guarda de forma automática en el historial del "
+"portapapeles, y solo se puede pegar usando un clic central."
+
+#. i18n: ectx: label, entry (SelectionTextOnly), group (General)
+#: klipper.kcfg:37
+#, kde-format
+msgid "Text selection only"
+msgstr "Solo selección de texto"
+
+#. i18n: ectx: whatsthis, entry (SelectionTextOnly), group (General)
+#: klipper.kcfg:39
+#, kde-format
+msgid ""
+"Only store text selections in the clipboard history, not images or any other "
+"type of data."
+msgstr ""
+"Guardar solo selecciones de texto en el historial del portapapeles, no "
+"imágenes ni cualquier otro tipo de datos."
+
+#. i18n: ectx: label, entry (IgnoreImages), group (General)
+#: klipper.kcfg:42
+#, kde-format
+msgid "Always ignore images"
+msgstr "Ignorar imágenes siempre"
+
+#. i18n: ectx: whatsthis, entry (IgnoreImages), group (General)
+#: klipper.kcfg:44
+#, kde-format
+msgid ""
+"Do not store images in the clipboard history, even if explicitly copied."
+msgstr ""
+"No guardar imágenes en el historial del portapapeles, incluso cuando se "
+"copian explícitamente."
+
+#. i18n: ectx: label, entry (UseGUIRegExpEditor), group (General)
+#: klipper.kcfg:47
+#, kde-format
+msgid "Use graphical regexp editor"
+msgstr "Usar editor gráfico de expresiones regulares"
+
+#. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
+#: klipper.kcfg:51
+#, kde-format
+msgid "Immediately on selection"
+msgstr "Inmediatamente al seleccionar"
+
+#. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
+#: klipper.kcfg:52
+#, kde-format
+msgid ""
+"Show the popup menu of applicable actions as soon as a selection is made."
+msgstr ""
+"Mostrar el menú emergente de las acciones aplicables en cuanto se realiza "
+"una selección."
+
+#. i18n: ectx: label, entry (NoActionsForWM_CLASS), group (General)
+#: klipper.kcfg:57
+#, kde-format
+msgid "No actions for WM_CLASS"
+msgstr "No hay acciones para WM_CLASS"
+
+#. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
+#: klipper.kcfg:60
+#, kde-format
+msgid "Automatic action menu time:"
+msgstr "Tiempo para el menú emergente de acciones automático:"
+
+#. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
+#: klipper.kcfg:64
+#, kde-format
+msgid "Display the automatic action popup menu for this time."
+msgstr "Mostrar el menú emergente de acciones automático durante este tiempo."
+
+#. i18n: ectx: label, entry (MaxClipItems), group (General)
+#: klipper.kcfg:67
+#, kde-format
+msgid "History size:"
+msgstr "Tamaño del historial:"
+
+#. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
+#: klipper.kcfg:71
+#, kde-format
+msgid "The clipboard history will store up to this many items."
+msgstr "El historial del portapapeles guardará este número de elementos."
+
+#. i18n: ectx: label, entry (ActionList), group (General)
+#: klipper.kcfg:74
+#, kde-format
+msgid "Dummy entry for indicating changes in an action's tree widget"
+msgstr "Entrada ficticia para indicar cambios en el árbol de una acción"
+
+#. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
+#: klipper.kcfg:84
+#, kde-format
+msgid "Trim whitespace from selection"
+msgstr "Recortar los espacios en blanco iniciales y finales de la selección"
+
+#. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
+#: klipper.kcfg:86
+#, kde-format
+msgid ""
+"Remove any whitespace from the start and end of selected text, before "
+"performing an action. For example, this ensures that a URL pasted in a "
+"browser is interpreted as expected. The text saved on the clipboard is not "
+"affected."
+msgstr ""
+"Eliminar todos los espacios en blanco iniciales y finales del texto "
+"seleccionado antes de realizar una acción. Por ejemplo, esto se asegura de "
+"que la URL pegada en un navegador se interprete como es de esperar. El texto "
+"guardado en el portapapeles no se ve afectado."
+
+#. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
+#: klipper.kcfg:89
+#, kde-format
+msgid "For an item chosen from history"
+msgstr "Para un elemento seleccionado del historial"
+
+#. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
+#: klipper.kcfg:91
+#, kde-format
+msgid ""
+"Show the popup menu of applicable actions if an entry is chosen from the "
+"clipboard history."
+msgstr ""
+"Mostrar el menú emergente de las acciones aplicables si se escoge una "
+"entrada del historial del portapapeles."
+
+#. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
+#: klipper.kcfg:94
+#, kde-format
+msgid "Include MIME actions"
+msgstr "Incluir acciones MIME"
+
+#. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
+#: klipper.kcfg:96
+#, kde-format
+msgid ""
+"If a file name or URL is selected, include applications that can accept its "
+"MIME type in the popup menu."
+msgstr ""
+"Si se selecciona un nombre de archivo o una URL, incluir las aplicaciones "
+"que pueden aceptar su tipo MIME en el menú emergente."
+
 #: klipperpopup.cpp:105
 #, kde-format
 msgctxt "%1 is application display name"
@@ -786,137 +1000,6 @@ msgstr "Inhabilitar este menú emergente"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Cancelar"
-
-#~ msgid "Klipper version"
-#~ msgstr "Versión de Klipper"
-
-#~ msgid "Save history across desktop sessions"
-#~ msgstr "Guardar el historial entre sesiones de escritorio"
-
-#~ msgid ""
-#~ "Retain the clipboard history, so it will be available the next time you "
-#~ "log in."
-#~ msgstr ""
-#~ "Retener el historial del portapapeles para que esté disponible la próxima "
-#~ "vez que inicie sesión."
-
-#~ msgid "Prevent the clipboard from being cleared"
-#~ msgstr "Impedir que se pueda borrar el portapapeles"
-
-#~ msgid ""
-#~ "Do not allow the clipboard to be cleared, for example when an application "
-#~ "exits."
-#~ msgstr ""
-#~ "No permitir que se pueda borrar el portapapeles (por ejemplo, cuando se "
-#~ "cierra una aplicación)."
-
-#~ msgid "Keep the selection and clipboard the same"
-#~ msgstr "Hacer que la selección y el portapapeles sean idénticos"
-
-#~ msgid ""
-#~ "Content selected with the cursor is automatically copied to the clipboard "
-#~ "so that it can be pasted with either a Paste action or a middle-click.<br/"
-#~ "><a href=\"1\">More about the selection and clipboard</a>."
-#~ msgstr ""
-#~ "El contenido seleccionado con el cursor se copia automáticamente en el "
-#~ "portapapeles para que se pueda pegar con una acción «Pegar» o con un clic "
-#~ "central.<br/><a href=\"1\">Más sobre la selección y el portapapeles</a>."
-
-#~ msgid "Ignore the selection"
-#~ msgstr "Ignorar la selección"
-
-#~ msgid ""
-#~ "Content selected with the cursor but not explicitly copied to the "
-#~ "clipboard is not automatically stored in the clipboard history, and can "
-#~ "only be pasted using a middle-click."
-#~ msgstr ""
-#~ "El contenido seleccionado con el cursor, pero no copiado explícitamente "
-#~ "en el portapapeles, no se guarda de forma automática en el historial del "
-#~ "portapapeles, y solo se puede pegar usando un clic central."
-
-#~ msgid "Text selection only"
-#~ msgstr "Solo selección de texto"
-
-#~ msgid ""
-#~ "Only store text selections in the clipboard history, not images or any "
-#~ "other type of data."
-#~ msgstr ""
-#~ "Guardar solo selecciones de texto en el historial del portapapeles, no "
-#~ "imágenes ni cualquier otro tipo de datos."
-
-#~ msgid "Always ignore images"
-#~ msgstr "Ignorar imágenes siempre"
-
-#~ msgid ""
-#~ "Do not store images in the clipboard history, even if explicitly copied."
-#~ msgstr ""
-#~ "No guardar imágenes en el historial del portapapeles, incluso cuando se "
-#~ "copian explícitamente."
-
-#~ msgid "Use graphical regexp editor"
-#~ msgstr "Usar editor gráfico de expresiones regulares"
-
-#~ msgid "Immediately on selection"
-#~ msgstr "Inmediatamente al seleccionar"
-
-#~ msgid ""
-#~ "Show the popup menu of applicable actions as soon as a selection is made."
-#~ msgstr ""
-#~ "Mostrar el menú emergente de las acciones aplicables en cuanto se realiza "
-#~ "una selección."
-
-#~ msgid "No actions for WM_CLASS"
-#~ msgstr "No hay acciones para WM_CLASS"
-
-#~ msgid "Automatic action menu time:"
-#~ msgstr "Tiempo para el menú emergente de acciones automático:"
-
-#~ msgid "Display the automatic action popup menu for this time."
-#~ msgstr ""
-#~ "Mostrar el menú emergente de acciones automático durante este tiempo."
-
-#~ msgid "History size:"
-#~ msgstr "Tamaño del historial:"
-
-#~ msgid "The clipboard history will store up to this many items."
-#~ msgstr "El historial del portapapeles guardará este número de elementos."
-
-#~ msgid "Dummy entry for indicating changes in an action's tree widget"
-#~ msgstr "Entrada ficticia para indicar cambios en el árbol de una acción"
-
-#~ msgid "Trim whitespace from selection"
-#~ msgstr "Recortar los espacios en blanco iniciales y finales de la selección"
-
-#~ msgid ""
-#~ "Remove any whitespace from the start and end of selected text, before "
-#~ "performing an action. For example, this ensures that a URL pasted in a "
-#~ "browser is interpreted as expected. The text saved on the clipboard is "
-#~ "not affected."
-#~ msgstr ""
-#~ "Eliminar todos los espacios en blanco iniciales y finales del texto "
-#~ "seleccionado antes de realizar una acción. Por ejemplo, esto se asegura "
-#~ "de que la URL pegada en un navegador se interprete como es de esperar. El "
-#~ "texto guardado en el portapapeles no se ve afectado."
-
-#~ msgid "For an item chosen from history"
-#~ msgstr "Para un elemento seleccionado del historial"
-
-#~ msgid ""
-#~ "Show the popup menu of applicable actions if an entry is chosen from the "
-#~ "clipboard history."
-#~ msgstr ""
-#~ "Mostrar el menú emergente de las acciones aplicables si se escoge una "
-#~ "entrada del historial del portapapeles."
-
-#~ msgid "Include MIME actions"
-#~ msgstr "Incluir acciones MIME"
-
-#~ msgid ""
-#~ "If a file name or URL is selected, include applications that can accept "
-#~ "its MIME type in the popup menu."
-#~ msgstr ""
-#~ "Si se selecciona un nombre de archivo o una URL, incluir las aplicaciones "
-#~ "que pueden aceptar su tipo MIME en el menú emergente."
 
 #~ msgctxt "@info"
 #~ msgid ""

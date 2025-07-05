@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2023-03-04 18:04+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -30,6 +30,18 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. i18n: ectx: label, entry (cursorTheme), group (Mouse)
+#: cursorthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current cursor theme"
+msgstr "Nykyisen osoitinteeman nimi"
+
+#. i18n: ectx: label, entry (cursorSize), group (Mouse)
+#: cursorthemesettings.kcfg:13
+#, kde-format
+msgid "Current cursor size"
+msgstr "Osoittimen nykyinen koko"
 
 #: kcmcursortheme.cpp:308
 #, kde-format
@@ -74,6 +86,13 @@ msgstr "Korvataanko teema?"
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Teeman asennus onnistui."
+
+#. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
+#. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)
+#: launchfeedbacksettings.kcfg:19 launchfeedbacksettings.kcfg:33
+#, kde-format
+msgid "Timeout in seconds"
+msgstr "Aikakatkaisu sekunteina"
 
 #: package/contents/ui/Delegate.qml:54
 #, kde-format
@@ -272,15 +291,6 @@ msgctxt ""
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(Saatavilla koot: %1)"
-
-#~ msgid "Name of the current cursor theme"
-#~ msgstr "Nykyisen osoitinteeman nimi"
-
-#~ msgid "Current cursor size"
-#~ msgstr "Osoittimen nykyinen koko"
-
-#~ msgid "Timeout in seconds"
-#~ msgstr "Aikakatkaisu sekunteina"
 
 #~ msgid "Name"
 #~ msgstr "Nimi"

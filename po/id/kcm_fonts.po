@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2024-09-29 08:19+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -19,6 +19,54 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 24.05.2\n"
+
+#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
+#: fontsaasettingsbase.kcfg:9
+#, kde-format
+msgid "Force font DPI Wayland"
+msgstr "Paksa DPI font Wayland"
+
+#. i18n: ectx: label, entry (forceFontDPI), group (General)
+#: fontsaasettingsbase.kcfg:13
+#, kde-format
+msgid "Force font DPI on X11"
+msgstr "Paksa DPI font di X11"
+
+#. i18n: ectx: label, entry (font), group (General)
+#: fontssettings.kcfg:9
+#, kde-format
+msgid "General font"
+msgstr "Font umum"
+
+#. i18n: ectx: label, entry (fixed), group (General)
+#: fontssettings.kcfg:21
+#, kde-format
+msgid "Fixed width font"
+msgstr "Lebar font tetap"
+
+#. i18n: ectx: label, entry (smallestReadableFont), group (General)
+#: fontssettings.kcfg:33
+#, kde-format
+msgid "Small font"
+msgstr "Font kecil"
+
+#. i18n: ectx: label, entry (toolBarFont), group (General)
+#: fontssettings.kcfg:45
+#, kde-format
+msgid "Tool bar font"
+msgstr "Font bilah alat"
+
+#. i18n: ectx: label, entry (menuFont), group (General)
+#: fontssettings.kcfg:57
+#, kde-format
+msgid "Menu font"
+msgstr "Font menu"
+
+#. i18n: ectx: label, entry (activeFont), group (WM)
+#: fontssettings.kcfg:71
+#, kde-format
+msgid "Window title font"
+msgstr "Font judul jendela"
 
 #: kxftconfig.cpp:458
 #, kde-format
@@ -311,30 +359,6 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "Pilih Font"
-
-#~ msgid "Force font DPI Wayland"
-#~ msgstr "Paksa DPI font Wayland"
-
-#~ msgid "Force font DPI on X11"
-#~ msgstr "Paksa DPI font di X11"
-
-#~ msgid "General font"
-#~ msgstr "Font umum"
-
-#~ msgid "Fixed width font"
-#~ msgstr "Lebar font tetap"
-
-#~ msgid "Small font"
-#~ msgstr "Font kecil"
-
-#~ msgid "Tool bar font"
-#~ msgstr "Font bilah alat"
-
-#~ msgid "Menu font"
-#~ msgstr "Font menu"
-
-#~ msgid "Window title font"
-#~ msgstr "Font judul jendela"
 
 #~ msgid "Change Display Scaling…"
 #~ msgstr "Ubah Skala Display..."

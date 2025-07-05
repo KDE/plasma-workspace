@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2021-03-22 15:56+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -17,11 +17,14 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 20.12.3\n"
 
+#. i18n: ectx: property (text), widget (QCheckBox, showAppsByName)
+#: config.ui:17
+#, kde-format
+msgid "Show applications by name"
+msgstr "Mostra applicazioni per nome"
+
 #: launch.cpp:89
 #, kde-format
 msgctxt "plasma_containmentactions_applauncher"
 msgid "Configure Application Launcher Plugin"
 msgstr "Configura estensione del lanciatore di applicazioni"
-
-#~ msgid "Show applications by name"
-#~ msgstr "Mostra applicazioni per nome"

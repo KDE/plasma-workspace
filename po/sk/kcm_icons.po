@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2023-01-22 16:56+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -43,6 +43,48 @@ msgstr "Malé ikony"
 #, kde-format
 msgid "Dialogs"
 msgstr "Dialógy"
+
+#. i18n: ectx: label, entry (Theme), group (Icons)
+#: iconssettingsbase.kcfg:9
+#, kde-format
+msgid "Name of the current icon theme"
+msgstr "Názov aktuálnej témy ikon"
+
+#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
+#: iconssettingsbase.kcfg:15
+#, kde-format
+msgid "Desktop icons size"
+msgstr "Veľkosť ikon na pracovnej ploche"
+
+#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
+#: iconssettingsbase.kcfg:21
+#, kde-format
+msgid "Toolbar icons size"
+msgstr "Veľkosť ikon panela nástrojov"
+
+#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
+#: iconssettingsbase.kcfg:27
+#, kde-format
+msgid "Main toolbar icons size"
+msgstr "Veľkosť ikon panelu nástrojov"
+
+#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
+#: iconssettingsbase.kcfg:33
+#, kde-format
+msgid "Small icons size"
+msgstr "Veľkosť malých ikon"
+
+#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
+#: iconssettingsbase.kcfg:39
+#, kde-format
+msgid "Panel icons size"
+msgstr "Veľkosť ikon panela"
+
+#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
+#: iconssettingsbase.kcfg:45
+#, kde-format
+msgid "Dialog icons size"
+msgstr "Veľkosť ikon dialógov"
 
 #: main.cpp:182
 #, kde-format
@@ -154,27 +196,6 @@ msgstr "Otvoriť tému"
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Súbory tém (*.tar.gz *.tar.bz2)"
-
-#~ msgid "Name of the current icon theme"
-#~ msgstr "Názov aktuálnej témy ikon"
-
-#~ msgid "Desktop icons size"
-#~ msgstr "Veľkosť ikon na pracovnej ploche"
-
-#~ msgid "Toolbar icons size"
-#~ msgstr "Veľkosť ikon panela nástrojov"
-
-#~ msgid "Main toolbar icons size"
-#~ msgstr "Veľkosť ikon panelu nástrojov"
-
-#~ msgid "Small icons size"
-#~ msgstr "Veľkosť malých ikon"
-
-#~ msgid "Panel icons size"
-#~ msgstr "Veľkosť ikon panela"
-
-#~ msgid "Dialog icons size"
-#~ msgstr "Veľkosť ikon dialógov"
 
 #~ msgid "Toolbar"
 #~ msgstr "Panel nástrojov"

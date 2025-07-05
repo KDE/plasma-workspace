@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: freespacenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2011-05-24 20:06+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@gmail.com>\n"
 "Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
@@ -39,6 +39,36 @@ msgstr ""
 msgid "Open in File Manager"
 msgstr "Buka Pengurus Fail"
 
+#. i18n: ectx: label, entry (minimumSpace), group (General)
+#: freespacenotifier.kcfg:9
+#, kde-format
+msgid "Minimum free space before user starts being notified."
+msgstr "Ruangan bebas minimum sebelum pengguna mula diberitahu."
+
+#. i18n: ectx: label, entry (enableNotification), group (General)
+#: freespacenotifier.kcfg:15
+#, kde-format
+msgid "Is the free space notification enabled."
+msgstr "Adakah pemberitahuan ruang bebas dihidupkan."
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableNotification)
+#: freespacenotifier_prefs_base.ui:17
+#, kde-format
+msgid "Enable low disk space warning"
+msgstr "Hidupkan amaran ruang cakera rendah"
+
+#. i18n: ectx: property (text), widget (QLabel, label_minimumSpace)
+#: freespacenotifier_prefs_base.ui:27
+#, kde-format
+msgid "Warn when free space is below:"
+msgstr "Amaran apabila ruang bebas dibawah:"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpace)
+#: freespacenotifier_prefs_base.ui:37
+#, kde-format
+msgid " MiB"
+msgstr " MiB"
+
 #: module.cpp:37
 #, kde-format
 msgid ""
@@ -58,21 +88,6 @@ msgstr ""
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"
 msgstr "Umum"
-
-#~ msgid "Minimum free space before user starts being notified."
-#~ msgstr "Ruangan bebas minimum sebelum pengguna mula diberitahu."
-
-#~ msgid "Is the free space notification enabled."
-#~ msgstr "Adakah pemberitahuan ruang bebas dihidupkan."
-
-#~ msgid "Enable low disk space warning"
-#~ msgstr "Hidupkan amaran ruang cakera rendah"
-
-#~ msgid "Warn when free space is below:"
-#~ msgstr "Amaran apabila ruang bebas dibawah:"
-
-#~ msgid " MiB"
-#~ msgstr " MiB"
 
 #~ msgctxt ""
 #~ "Warns the user that the system is running low on space on his home "

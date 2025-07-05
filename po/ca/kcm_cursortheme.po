@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2023-01-03 06:16+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -21,6 +21,18 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 "X-Generator: Lokalize 20.12.0\n"
+
+#. i18n: ectx: label, entry (cursorTheme), group (Mouse)
+#: cursorthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current cursor theme"
+msgstr ""
+
+#. i18n: ectx: label, entry (cursorSize), group (Mouse)
+#: cursorthemesettings.kcfg:13
+#, kde-format
+msgid "Current cursor size"
+msgstr ""
 
 #: kcmcursortheme.cpp:308
 #, kde-format
@@ -68,6 +80,13 @@ msgstr "Sobreescriure el tema?"
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "El tema s'ha instal·lat correctament."
+
+#. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
+#. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)
+#: launchfeedbacksettings.kcfg:19 launchfeedbacksettings.kcfg:33
+#, kde-format
+msgid "Timeout in seconds"
+msgstr ""
 
 #: package/contents/ui/Delegate.qml:54
 #, kde-format
@@ -272,12 +291,3 @@ msgctxt ""
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(Mides disponibles: %1)"
-
-#~ msgid "Name of the current cursor theme"
-#~ msgstr "Nom del tema de cursor actual"
-
-#~ msgid "Current cursor size"
-#~ msgstr "Mida actual del cursor"
-
-#~ msgid "Timeout in seconds"
-#~ msgstr "Temps d'espera en segons"

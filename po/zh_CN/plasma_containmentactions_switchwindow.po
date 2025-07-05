@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2024-03-30 19:46\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -17,6 +17,24 @@ msgstr ""
 "X-Crowdin-File: /kf5-stable/messages/plasma-workspace/"
 "plasma_containmentactions_switchwindow.pot\n"
 "X-Crowdin-File-ID: 2814\n"
+
+#. i18n: ectx: property (text), widget (QRadioButton, flatButton)
+#: config.ui:16
+#, kde-format
+msgid "Display all windows in one list"
+msgstr "在列表中显示全部窗口"
+
+#. i18n: ectx: property (text), widget (QRadioButton, subButton)
+#: config.ui:23
+#, kde-format
+msgid "Display a submenu for each desktop"
+msgstr "为每个桌面显示子菜单"
+
+#. i18n: ectx: property (text), widget (QRadioButton, curButton)
+#: config.ui:30
+#, kde-format
+msgid "Display only the current desktop's windows"
+msgstr "只显示当前桌面的窗口"
 
 #: switch.cpp:75
 #, kde-format
@@ -35,12 +53,3 @@ msgstr "窗口"
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "All Desktops"
 msgstr "全部桌面"
-
-#~ msgid "Display all windows in one list"
-#~ msgstr "在列表中显示全部窗口"
-
-#~ msgid "Display a submenu for each desktop"
-#~ msgstr "为每个桌面显示子菜单"
-
-#~ msgid "Display only the current desktop's windows"
-#~ msgstr "只显示当前桌面的窗口"

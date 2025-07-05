@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-11-19 01:26+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -142,6 +142,30 @@ msgstr ""
 #, kde-format
 msgid "Configure…"
 msgstr ""
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:10
+#, kde-format
+msgid "Screen lock enabled"
+msgstr "Ekrano užraktas įjungtas"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:11
+#, kde-format
+msgid "Sets whether the screen will be locked after the specified time."
+msgstr "Nustato ar ekranas užsirakins po tam tikro nurodyto laiko."
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:16
+#, kde-format
+msgid "Screen saver timeout"
+msgstr "Ekrano užsklandos laiko limitas"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:17
+#, kde-format
+msgid "Sets the minutes after which the screen is locked."
+msgstr "Nustato, po kiek minučių ekranas užrakinamas."
 
 #: sessionsprivate/sessionsmodel.cpp:235 sessionsprivate/sessionsmodel.cpp:239
 #, kde-format
@@ -314,18 +338,6 @@ msgstr "Atsisiųsti naujus Plasma valdiklius"
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "Įdiegti valdiklį iš vietinio failo…"
-
-#~ msgid "Screen lock enabled"
-#~ msgstr "Ekrano užraktas įjungtas"
-
-#~ msgid "Sets whether the screen will be locked after the specified time."
-#~ msgstr "Nustato ar ekranas užsirakins po tam tikro nurodyto laiko."
-
-#~ msgid "Screen saver timeout"
-#~ msgstr "Ekrano užsklandos laiko limitas"
-
-#~ msgid "Sets the minutes after which the screen is locked."
-#~ msgstr "Nustato, po kiek minučių ekranas užrakinamas."
 
 #~ msgid "&Execute"
 #~ msgstr "&Vykdyti"

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-08-11 19:59+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -62,6 +62,34 @@ msgstr "Huts egin du kolore-antolaera «color-scheme» datu karpetan kopiatzea."
 #, kde-format
 msgid "Color scheme installed successfully."
 msgstr "Kolore-antolaera instalatze arrakastatsua."
+
+#. i18n: ectx: label, entry (colorScheme), group (General)
+#: colorssettings.kcfg:9
+#, kde-format
+msgid "Color scheme name"
+msgstr "Kolore-antolaeraren izena"
+
+#. i18n: ectx: label, entry (accentColor), group (General)
+#: colorssettings.kcfg:13
+#, kde-format
+msgid "Accent color"
+msgstr "Azentu-kolorea"
+
+#. i18n: ectx: label, entry (lastUsedCustomAccentColor), group (General)
+#: colorssettings.kcfg:17
+#, kde-format
+msgid ""
+"The last used custom accent color before user switched to wallpaper "
+"generated color or default color"
+msgstr ""
+"Horma-paperetik sortutako kolorera edo lehenetsitako kolorera aldatu baino "
+"lehen erabilitako norberak finkatutako azken azentu-kolorea"
+
+#. i18n: ectx: label, entry (accentColorFromWallpaper), group (General)
+#: colorssettings.kcfg:21
+#, kde-format
+msgid "Whether accent color from wallpaper should be applied"
+msgstr "Horma-papereko azentu-kolorea ezarri beharko litzatekeen ala ez"
 
 #: editor/kcolorschemeeditor.cpp:25
 #, kde-format
@@ -132,6 +160,216 @@ msgstr ""
 msgid "Scheme not found, falling back to current one.\n"
 msgstr "Antolaera ez da aurkitu, atzera unekora itzuli.\n"
 
+#. i18n: ectx: property (toolTip), widget (QLabel, label)
+#: editor/preview.ui:29
+#, kde-format
+msgid "Window text on Window Background"
+msgstr "Leihoaren testua leiho hondoan"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: editor/preview.ui:32
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "Window text"
+msgstr "Leihoko testua"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, pushButton)
+#: editor/preview.ui:39
+#, kde-format
+msgid "Button text on Button Background"
+msgstr "Botoien testua Botoien hondoan"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: editor/preview.ui:42
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "Push Button"
+msgstr "Sakatu botoia"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection0)
+#: editor/preview.ui:123
+#, kde-format
+msgid "Selection Normal Text against Selection Normal Background"
+msgstr "Hautatuketaren ohiko testua Hautaketaren ohiko hondoaren gainean"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection0)
+#: editor/preview.ui:126
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "Selected text"
+msgstr "Hautatutako testua"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection3)
+#: editor/preview.ui:138
+#, kde-format
+msgid "Selection Link Text against Selection Normal Background"
+msgstr "Hautaketaren estekaren testua Hautaketaren ohiko hondoaren gainean"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection3)
+#. i18n: ectx: property (text), widget (QLabel, labelView3)
+#: editor/preview.ui:141 editor/preview.ui:265
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "link"
+msgstr "esteka"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection4)
+#: editor/preview.ui:153
+#, kde-format
+msgid "Selection Visited Text against Selection Normal Background"
+msgstr "Hautaketaren bisitatutako testua Hautaketaren ohiko hondoaren gainean"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection4)
+#. i18n: ectx: property (text), widget (QLabel, labelView4)
+#: editor/preview.ui:156 editor/preview.ui:280
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "visited"
+msgstr "bisitatua"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection2)
+#: editor/preview.ui:163
+#, kde-format
+msgid "Selection Active Text against Selection Normal Background"
+msgstr "Hautaketaren testu aktiboa Hautaketaren ohiko hondoaren gainean"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection2)
+#. i18n: ectx: property (text), widget (QLabel, labelView2)
+#: editor/preview.ui:166 editor/preview.ui:290
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "a"
+msgstr "a"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection1)
+#: editor/preview.ui:173
+#, kde-format
+msgid "Selection Inactive Text against Selection Normal Background"
+msgstr "Hautaketaren testu ez-aktiboa Hautaketaren ohiko hondoaren gainean"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection1)
+#. i18n: ectx: property (text), widget (QLabel, labelView1)
+#: editor/preview.ui:176 editor/preview.ui:300
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "i"
+msgstr "e"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection5)
+#: editor/preview.ui:183
+#, kde-format
+msgid "Selection Negative Text against Selection Normal Background"
+msgstr "Hautaketaren testu negatiboa Huataketaren ohiko hondoaren gainean"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection5)
+#. i18n: ectx: property (text), widget (QLabel, labelView5)
+#: editor/preview.ui:186 editor/preview.ui:310
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "!"
+msgstr "!"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection6)
+#: editor/preview.ui:193
+#, kde-format
+msgid "Selection Neutral Text against Selection Normal Background"
+msgstr "Hautaketaren testu neutroa Hautaketaren ohiko hondoaren gainean"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection6)
+#. i18n: ectx: property (text), widget (QLabel, labelView6)
+#: editor/preview.ui:196 editor/preview.ui:320
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "="
+msgstr "="
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection7)
+#: editor/preview.ui:203
+#, kde-format
+msgid "Selection Positive Text against Selection Normal Background"
+msgstr "Hautaketaren testu positiboa Hautaketaren ohiko hondoaren gainean"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection7)
+#. i18n: ectx: property (text), widget (QLabel, labelView7)
+#: editor/preview.ui:206 editor/preview.ui:330
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "+"
+msgstr "+"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView0)
+#: editor/preview.ui:247
+#, kde-format
+msgid "View Normal Text against View Normal Background"
+msgstr "Ikusi ohiko testua Ikusi ohiko hondoaren gainean"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelView0)
+#: editor/preview.ui:250
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "Normal text"
+msgstr "Testu arrunta"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView3)
+#: editor/preview.ui:262
+#, kde-format
+msgid "View Link Text against View Normal Background"
+msgstr "Ikusi estekaren testua Ikusi ohiko hondoaren gainean"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView4)
+#: editor/preview.ui:277
+#, kde-format
+msgid "View Visited Text against View Normal Background"
+msgstr "Ikusi bisitatutako testua Ikusi ohiko hondoaren gainean"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView2)
+#: editor/preview.ui:287
+#, kde-format
+msgid "View Active Text against View Normal Background"
+msgstr "Ikusi testu aktiboa Ikusi ohiko hondoaren gainean"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView1)
+#: editor/preview.ui:297
+#, kde-format
+msgid "View Inactive Text against View Normal Background"
+msgstr "Ikusi testu inaktiboa Ikusi ohiko hondoaren gainean"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView5)
+#: editor/preview.ui:307
+#, kde-format
+msgid "View Negative Text against View Normal Background"
+msgstr "Ikusi testuaren negatiboa Ikusi ohiko hondoaren gainean"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView6)
+#: editor/preview.ui:317
+#, kde-format
+msgid "View Neutral Text against View Normal Background"
+msgstr "Ikusi testu neutrala Ikusi ohiko hondoaren gainean"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView7)
+#: editor/preview.ui:327
+#, kde-format
+msgid "View Positive Text against View Normal Background"
+msgstr "Ikusi testu positiboa Ikusi ohiko hondoaren gainean"
+
 #: editor/scmeditorcolors.cpp:62 editor/scmeditorcolors.cpp:76
 #, kde-format
 msgid "Varies"
@@ -152,50 +390,267 @@ msgstr "Ordezko hondoa"
 msgid "Normal Text"
 msgstr "Ohiko testua"
 
-#: editor/scmeditorcolors.cpp:102
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:102 editor/scmeditorcolors.ui:303
 #, kde-format
 msgid "Inactive Text"
 msgstr "Testu ez-aktiboa"
 
-#: editor/scmeditorcolors.cpp:103
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:103 editor/scmeditorcolors.ui:308
 #, kde-format
 msgid "Active Text"
 msgstr "Testu aktiboa"
 
-#: editor/scmeditorcolors.cpp:104
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:104 editor/scmeditorcolors.ui:313
 #, kde-format
 msgid "Link Text"
 msgstr "Esteka testua"
 
-#: editor/scmeditorcolors.cpp:105
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:105 editor/scmeditorcolors.ui:318
 #, kde-format
 msgid "Visited Text"
 msgstr "Bisitatutako testua"
 
-#: editor/scmeditorcolors.cpp:106
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:106 editor/scmeditorcolors.ui:323
 #, kde-format
 msgid "Negative Text"
 msgstr "Testu negatiboa"
 
-#: editor/scmeditorcolors.cpp:107
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:107 editor/scmeditorcolors.ui:328
 #, kde-format
 msgid "Neutral Text"
 msgstr "Testu neutrala"
 
-#: editor/scmeditorcolors.cpp:108
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:108 editor/scmeditorcolors.ui:333
 #, kde-format
 msgid "Positive Text"
 msgstr "Testu positiboa"
 
-#: editor/scmeditorcolors.cpp:109
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:109 editor/scmeditorcolors.ui:338
 #, kde-format
 msgid "Focus Decoration"
 msgstr "Fokuaren apainketa"
 
-#: editor/scmeditorcolors.cpp:110
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:110 editor/scmeditorcolors.ui:343
 #, kde-format
 msgid "Hover Decoration"
 msgstr "Gainetik pasatzerako apainketa"
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: editor/scmeditorcolors.ui:23
+#, kde-format
+msgid "Color set:"
+msgstr "Kolore multzoa:"
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:36
+#, kde-format
+msgid "Colorset to view/modify"
+msgstr "Kolore multzoa ikusiteko/aldatzeko"
+
+#. i18n: 'Common' here means &quot;frequent/not rare&quot;, not &quot;shared&quot;
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:40
+#, kde-format
+msgctxt "color-sets"
+msgid "Common Colors"
+msgstr "Kolore arruntak"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:45
+#, kde-format
+msgctxt "color-sets"
+msgid "View"
+msgstr "Ikusi"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:50
+#, kde-format
+msgctxt "color-sets"
+msgid "Window"
+msgstr "Leihoa"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:55
+#, kde-format
+msgctxt "color-sets"
+msgid "Button"
+msgstr "Botoia"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:60
+#, kde-format
+msgctxt "color-sets"
+msgid "Selection"
+msgstr "Hautaketa"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:65
+#, kde-format
+msgctxt "color-sets"
+msgid "Tooltip"
+msgstr "Argibidea"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:70
+#, kde-format
+msgctxt "color-sets"
+msgid "Complementary"
+msgstr "Osagarria"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:75
+#, kde-format
+msgctxt "color-sets"
+msgid "Header"
+msgstr "Goiburua"
+
+#. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:118 editor/scmeditorcolors.ui:123
+#: editor/scmeditorcolors.ui:128 editor/scmeditorcolors.ui:133
+#: editor/scmeditorcolors.ui:138 editor/scmeditorcolors.ui:143
+#: editor/scmeditorcolors.ui:148 editor/scmeditorcolors.ui:153
+#: editor/scmeditorcolors.ui:158 editor/scmeditorcolors.ui:163
+#: editor/scmeditorcolors.ui:168 editor/scmeditorcolors.ui:173
+#: editor/scmeditorcolors.ui:178 editor/scmeditorcolors.ui:183
+#: editor/scmeditorcolors.ui:188 editor/scmeditorcolors.ui:193
+#: editor/scmeditorcolors.ui:198 editor/scmeditorcolors.ui:203
+#: editor/scmeditorcolors.ui:208 editor/scmeditorcolors.ui:213
+#: editor/scmeditorcolors.ui:218 editor/scmeditorcolors.ui:223
+#: editor/scmeditorcolors.ui:228 editor/scmeditorcolors.ui:233
+#: editor/scmeditorcolors.ui:238 editor/scmeditorcolors.ui:243
+#, kde-format
+msgid "New Row"
+msgstr "Lerro berria"
+
+#. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:248
+#, kde-format
+msgid "0"
+msgstr "0"
+
+#. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:253
+#, kde-format
+msgid "1"
+msgstr "1"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:258
+#, kde-format
+msgid "View Background"
+msgstr "Ikusi hondoa"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:263
+#, kde-format
+msgid "View Text"
+msgstr "Ikusi testua"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:268
+#, kde-format
+msgid "Window Background"
+msgstr "Leihoaren hondoa"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:273
+#, kde-format
+msgid "Window Text"
+msgstr "Leihoaren testua"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:278
+#, kde-format
+msgid "Button Background"
+msgstr "Botoiaren hondoa"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:283
+#, kde-format
+msgid "Button Text"
+msgstr "Botoiaren testua"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:288
+#, kde-format
+msgid "Selection Background"
+msgstr "Hautaketaren hondoa"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:293
+#, kde-format
+msgid "Selection Text"
+msgstr "Hautaketaren testua"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:298
+#, kde-format
+msgid "Selection Inactive Text"
+msgstr "Hautaketaren testu ez-aktiboa"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:348
+#, kde-format
+msgid "Tooltip Background"
+msgstr "Argibidearen hondoa"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:353
+#, kde-format
+msgid "Tooltip Text"
+msgstr "Argibidearen testua"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:358
+#, kde-format
+msgid "Active Titlebar"
+msgstr "Izenburu-barra aktiboa"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:363
+#, kde-format
+msgid "Active Titlebar Text"
+msgstr "Izenburu-barra aktiboaren testua"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:368
+#, kde-format
+msgid "Active Titlebar Secondary"
+msgstr "Izenburu-barra aktiboa (bigarren mailakoa)"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:373
+#, kde-format
+msgid "Inactive Titlebar"
+msgstr "Izenburu-barra ez-aktiboa"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:378
+#, kde-format
+msgid "Inactive Titlebar Text"
+msgstr "Izenburu-barra ez-aktiboaren testua"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:383
+#, kde-format
+msgid "Inactive Titlebar Secondary"
+msgstr "Izenburu-barra ez-aktiboa (bigarren mailakoa)"
 
 #: editor/scmeditordialog.cpp:60
 #, kde-format
@@ -255,6 +710,450 @@ msgstr "Akatsa"
 #, kde-format
 msgid "Inactive"
 msgstr "Ez-aktiboa"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: editor/scmeditoreffects.ui:17
+#, kde-format
+msgid "Color:"
+msgstr "Kolorea:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: editor/scmeditoreffects.ui:27
+#, kde-format
+msgid "Intensity:"
+msgstr "Intensitatea:"
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, colorBox)
+#: editor/scmeditoreffects.ui:37
+#, kde-format
+msgid "Disabled color effect type"
+msgstr "Ezgaituaren kolore efektu mota"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
+#: editor/scmeditoreffects.ui:41
+#, kde-format
+msgctxt "no disabled color effect"
+msgid "None"
+msgstr "Bat ere ez"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
+#: editor/scmeditoreffects.ui:46
+#, kde-format
+msgctxt "disabled color effect"
+msgid "Desaturate"
+msgstr "Desasetu"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
+#: editor/scmeditoreffects.ui:51
+#, kde-format
+msgctxt "disabled color effect"
+msgid "Fade"
+msgstr "Koloregabetu"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
+#: editor/scmeditoreffects.ui:56
+#, kde-format
+msgctxt "disabled color effect"
+msgid "Tint"
+msgstr "Tonua"
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, intensityBox)
+#: editor/scmeditoreffects.ui:64
+#, kde-format
+msgid "Disabled intensity effect type"
+msgstr "Ezgaituaren intensitate efektu mota"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
+#: editor/scmeditoreffects.ui:68
+#, kde-format
+msgctxt "no disabled intensity effect"
+msgid "None"
+msgstr "Bat ere ez"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
+#: editor/scmeditoreffects.ui:73
+#, kde-format
+msgctxt "disabled intensity effect"
+msgid "Shade"
+msgstr "Itzaldu"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
+#: editor/scmeditoreffects.ui:78
+#, kde-format
+msgctxt "disabled intensity effect"
+msgid "Darken"
+msgstr "Ilundu"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
+#: editor/scmeditoreffects.ui:83
+#, kde-format
+msgctxt "disabled intensity effect"
+msgid "Lighten"
+msgstr "Argitu"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: editor/scmeditoreffects.ui:107
+#, kde-format
+msgid "Contrast:"
+msgstr "Kontrastea:"
+
+#. i18n: ectx: property (toolTip), widget (QSlider, colorSlider)
+#: editor/scmeditoreffects.ui:120
+#, kde-format
+msgid "Disabled color effect amount"
+msgstr "Ezgaituaren kolore efektuaren zenbatekoa"
+
+#. i18n: ectx: property (toolTip), widget (QSlider, intensitySlider)
+#: editor/scmeditoreffects.ui:139
+#, kde-format
+msgid "Disabled intensity effect amount"
+msgstr "Ezgaituaren intensitate efektuaren zenbatekoa"
+
+#. i18n: ectx: property (toolTip), widget (KColorButton, colorButton)
+#: editor/scmeditoreffects.ui:158
+#, kde-format
+msgid "Disabled color"
+msgstr "Ezgaituaren kolorea"
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, contrastBox)
+#: editor/scmeditoreffects.ui:181
+#, kde-format
+msgid "Disabled contrast type"
+msgstr "Ezgaituaren kontraste mota"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
+#: editor/scmeditoreffects.ui:185
+#, kde-format
+msgctxt "no disabled contrast"
+msgid "None"
+msgstr "Bat ere ez"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
+#: editor/scmeditoreffects.ui:190
+#, kde-format
+msgctxt "disabled contrast"
+msgid "Fade"
+msgstr "Koloregabetu"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
+#: editor/scmeditoreffects.ui:195
+#, kde-format
+msgctxt "disabled contrast"
+msgid "Tint"
+msgstr "Tonua"
+
+#. i18n: ectx: property (toolTip), widget (QSlider, contrastSlider)
+#: editor/scmeditoreffects.ui:222
+#, kde-format
+msgid "Disabled contrast amount"
+msgstr "Ezgaituaren kontrastearen zenbatzekoa"
+
+#. i18n: ectx: property (text), widget (QCheckBox, useInactiveEffects)
+#: editor/scmeditoroptions.ui:17
+#, kde-format
+msgid "Apply &effects to inactive windows"
+msgstr "Ezarri &efektuak leiho ez aktiboei"
+
+#. i18n: ectx: property (text), widget (QCheckBox, inactiveSelectionEffect)
+#: editor/scmeditoroptions.ui:24
+#, kde-format
+msgid "Use different colors for in&active selections"
+msgstr "Erabili kolore desberdinak hautapen ez-aktiboekin"
+
+#. i18n: ectx: property (text), widget (QCheckBox, shadeSortedColumn)
+#: editor/scmeditoroptions.ui:31
+#, kde-format
+msgid "Shade sorted column &in lists"
+msgstr "Itzaldu sailkatze zutabea zerrende&tan"
+
+#. i18n: ectx: property (text), widget (QCheckBox, tintColors)
+#: editor/scmeditoroptions.ui:38
+#, kde-format
+msgid "Tint all colors with accent color"
+msgstr "Tindatu kolore guztiak Azentu-kolorearekin"
+
+#. i18n: ectx: property (text), widget (QCheckBox, accentTitlebar)
+#: editor/scmeditoroptions.ui:45
+#, kde-format
+msgid "Make window titlebars a&ccent-colored"
+msgstr "Egin leihoetako titulu-barrak azentu-koloredun"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: editor/scmeditoroptions.ui:52
+#, kde-format
+msgid "Tint strength:"
+msgstr "Tonuaren sendotasuna:"
+
+#. i18n: ectx: property (toolTip), widget (QGroupBox, groupBox_5)
+#: editor/scmeditoroptions.ui:69
+#, kde-format
+msgid "Shading of frames and lighting (\"3D\") effects"
+msgstr "Markoen itzaldura eta argiztapen (\"3D\") efektuak"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
+#: editor/scmeditoroptions.ui:72
+#, kde-format
+msgid "Shading"
+msgstr "Itzaldura"
+
+#. i18n: ectx: property (text), widget (QLabel, label_10)
+#: editor/scmeditoroptions.ui:97
+#, kde-format
+msgid "Maximum"
+msgstr "Handiena"
+
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: editor/scmeditoroptions.ui:117
+#, kde-format
+msgid "Minimum"
+msgstr "Txikiena"
+
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: editor/scmeditoroptions.ui:124
+#, kde-format
+msgid "Contrast"
+msgstr "Kontrastea"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore0)
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack0)
+#: editor/setpreview.ui:35 editor/setpreview.ui:189
+#, kde-format
+msgid "Normal Text on Normal Background"
+msgstr "Ohiko testua Ohiko hondoan"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore0)
+#. i18n: ectx: property (text), widget (QLabel, labelBack0)
+#: editor/setpreview.ui:38 editor/setpreview.ui:192
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "normal"
+msgstr "ohikoa"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore3)
+#: editor/setpreview.ui:56
+#, kde-format
+msgid "Link Text on Normal Background"
+msgstr "Estekaren testua Ohiko hondoan"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore3)
+#. i18n: ectx: property (text), widget (QLabel, labelBack3)
+#: editor/setpreview.ui:59 editor/setpreview.ui:214
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "link"
+msgstr "esteka"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore4)
+#: editor/setpreview.ui:77
+#, kde-format
+msgid "Visited Text on Normal Background"
+msgstr "Bisitatutako testua Ohiko hondoan"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore4)
+#. i18n: ectx: property (text), widget (QLabel, labelBack4)
+#: editor/setpreview.ui:80 editor/setpreview.ui:236
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "visited"
+msgstr "bisitatuta"
+
+#. i18n: ectx: property (toolTip), widget (QWidget, widgetFore2)
+#: editor/setpreview.ui:90
+#, kde-format
+msgid "Active Text on Normal Background"
+msgstr "Testu aktiboa Ohiko hondoan"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore2)
+#. i18n: ectx: property (text), widget (QLabel, labelBack2)
+#: editor/setpreview.ui:96 editor/setpreview.ui:253
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "active"
+msgstr "aktiboa"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore1)
+#: editor/setpreview.ui:109
+#, kde-format
+msgid "Inactive Text on Normal Background"
+msgstr "Testu ez-aktiboa Ohiko hondoan"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore1)
+#: editor/setpreview.ui:112
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "inactive"
+msgstr "ez-aktiboa"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore5)
+#: editor/setpreview.ui:125
+#, kde-format
+msgid "Negative Text on Normal Background"
+msgstr "Testu negatiboa Ohiko hondoan"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore5)
+#. i18n: ectx: property (text), widget (QLabel, labelBack5)
+#: editor/setpreview.ui:128 editor/setpreview.ui:286
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "negative"
+msgstr "negatiboa"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore6)
+#: editor/setpreview.ui:141
+#, kde-format
+msgid "Neutral Text on Normal Background"
+msgstr "Testu neutrala Ohiko hondoan"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore6)
+#. i18n: ectx: property (text), widget (QLabel, labelBack6)
+#: editor/setpreview.ui:144 editor/setpreview.ui:303
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "neutral"
+msgstr "neutrala"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore7)
+#: editor/setpreview.ui:157
+#, kde-format
+msgid "Positive Text on Normal Background"
+msgstr "Testu positiboa Ohiko hondoan"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore7)
+#. i18n: ectx: property (text), widget (QLabel, labelBack7)
+#: editor/setpreview.ui:160 editor/setpreview.ui:320
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "positive"
+msgstr "positiboa"
+
+#. i18n: ectx: property (toolTip), widget (QWidget, widgetFore8)
+#: editor/setpreview.ui:170
+#, kde-format
+msgid "Hover on Normal Background"
+msgstr "Ohiko hondo gainetik igaro"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore8)
+#: editor/setpreview.ui:176
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "hover"
+msgstr "gainetik igarotzerakoan"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack3)
+#: editor/setpreview.ui:211
+#, kde-format
+msgid ""
+"Link Text on Link Background\n"
+"(Note: Link Background is derived from Link Text and cannot be separately "
+"configured at this time)"
+msgstr ""
+"Estekaren testua Estekaren hondoan\n"
+"(Oharra: Estekaren hondoa estekaren testutik eratorria dago eta momentuz "
+"ezin da banatuta konfiguratu)"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack4)
+#: editor/setpreview.ui:233
+#, kde-format
+msgid ""
+"Visited Text on Visited Background\n"
+"(Note: Visited Background is derived from Visited Text and cannot be "
+"separately configured at this time)"
+msgstr ""
+"Bisitatutako testua Bisitatutako hondoan\n"
+"(Oharra: Bisitatutako hondoa Bisitatutako testutik eratorria dago eta "
+"momentuz ezin da banatuta konfiguratu)"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack2)
+#: editor/setpreview.ui:250
+#, kde-format
+msgid ""
+"Active Text on Active Background\n"
+"(Note: Active Background is derived from Active Text and cannot be "
+"separately configured at this time)"
+msgstr ""
+"Testu aktiboa Hondo aktiboan\n"
+"(Oharra: Hondo aktiboa Testu aktibotik eratorria dago eta momentuz ezin da "
+"banatuta konfiguratu)"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack1)
+#: editor/setpreview.ui:266
+#, kde-format
+msgid "Inactive Text on Alternate Background"
+msgstr "Testu ez-aktiboa Ordezko hondoan"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelBack1)
+#: editor/setpreview.ui:269
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "alternate"
+msgstr "ordezko"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack5)
+#: editor/setpreview.ui:283
+#, kde-format
+msgid ""
+"Negative Text on Negative Background\n"
+"(Note: Negative Background is derived from Negative Text and cannot be "
+"separately configured at this time)"
+msgstr ""
+"Testu negatiboa Hondo negatiboan\n"
+"(Oharra: Hondo negatiboa Testu negatibotik eratorria dago eta momentuz ezin "
+"da banatuta konfiguratu)"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack6)
+#: editor/setpreview.ui:300
+#, kde-format
+msgid ""
+"Neutral Text on Neutral Background\n"
+"(Note: Neutral Background is derived from Neutral Text and cannot be "
+"separately configured at this time)"
+msgstr ""
+"Testu neutrala Hondo neutralan\n"
+"(Oharra: Hondo neutrala Testu neutraletik eratorria dago eta momentuz ezin "
+"da banatuta konfiguratu)"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack7)
+#: editor/setpreview.ui:317
+#, kde-format
+msgid ""
+"Positive Text on Positive Background\n"
+"(Note: Positive Background is derived from Positive Text and cannot be "
+"separately configured at this time)"
+msgstr ""
+"Testu positiboa Hondo positiboan\n"
+"(Oharra: Hondo positiboa Testu positibotik eratorria dago eta momentuz ezin "
+"da banatuta konfiguratu)"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore9)
+#: editor/setpreview.ui:333
+#, kde-format
+msgid "Focus on Normal Background"
+msgstr "Fokua ohiko hondoan"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore9)
+#: editor/setpreview.ui:336
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "focus"
+msgstr "fokua"
 
 #: package/contents/ui/main.qml:23
 #, kde-format
@@ -484,457 +1383,6 @@ msgstr "Zure sisteman ondoko kolore-antolaerak dituzu:"
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr "* %1 (uneko kolore-antolaera)"
-
-#~ msgid "Color scheme name"
-#~ msgstr "Kolore-antolaeraren izena"
-
-#~ msgid "Accent color"
-#~ msgstr "Azentu-kolorea"
-
-#~ msgid ""
-#~ "The last used custom accent color before user switched to wallpaper "
-#~ "generated color or default color"
-#~ msgstr ""
-#~ "Horma-paperetik sortutako kolorera edo lehenetsitako kolorera aldatu "
-#~ "baino lehen erabilitako norberak finkatutako azken azentu-kolorea"
-
-#~ msgid "Whether accent color from wallpaper should be applied"
-#~ msgstr "Horma-papereko azentu-kolorea ezarri beharko litzatekeen ala ez"
-
-#~ msgid "Window text on Window Background"
-#~ msgstr "Leihoaren testua leiho hondoan"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "Window text"
-#~ msgstr "Leihoko testua"
-
-#~ msgid "Button text on Button Background"
-#~ msgstr "Botoien testua Botoien hondoan"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "Push Button"
-#~ msgstr "Sakatu botoia"
-
-#~ msgid "Selection Normal Text against Selection Normal Background"
-#~ msgstr "Hautatuketaren ohiko testua Hautaketaren ohiko hondoaren gainean"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "Selected text"
-#~ msgstr "Hautatutako testua"
-
-#~ msgid "Selection Link Text against Selection Normal Background"
-#~ msgstr "Hautaketaren estekaren testua Hautaketaren ohiko hondoaren gainean"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "link"
-#~ msgstr "esteka"
-
-#~ msgid "Selection Visited Text against Selection Normal Background"
-#~ msgstr ""
-#~ "Hautaketaren bisitatutako testua Hautaketaren ohiko hondoaren gainean"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "visited"
-#~ msgstr "bisitatua"
-
-#~ msgid "Selection Active Text against Selection Normal Background"
-#~ msgstr "Hautaketaren testu aktiboa Hautaketaren ohiko hondoaren gainean"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "a"
-#~ msgstr "a"
-
-#~ msgid "Selection Inactive Text against Selection Normal Background"
-#~ msgstr "Hautaketaren testu ez-aktiboa Hautaketaren ohiko hondoaren gainean"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "i"
-#~ msgstr "e"
-
-#~ msgid "Selection Negative Text against Selection Normal Background"
-#~ msgstr "Hautaketaren testu negatiboa Huataketaren ohiko hondoaren gainean"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "!"
-#~ msgstr "!"
-
-#~ msgid "Selection Neutral Text against Selection Normal Background"
-#~ msgstr "Hautaketaren testu neutroa Hautaketaren ohiko hondoaren gainean"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "="
-#~ msgstr "="
-
-#~ msgid "Selection Positive Text against Selection Normal Background"
-#~ msgstr "Hautaketaren testu positiboa Hautaketaren ohiko hondoaren gainean"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "+"
-#~ msgstr "+"
-
-#~ msgid "View Normal Text against View Normal Background"
-#~ msgstr "Ikusi ohiko testua Ikusi ohiko hondoaren gainean"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "Normal text"
-#~ msgstr "Testu arrunta"
-
-#~ msgid "View Link Text against View Normal Background"
-#~ msgstr "Ikusi estekaren testua Ikusi ohiko hondoaren gainean"
-
-#~ msgid "View Visited Text against View Normal Background"
-#~ msgstr "Ikusi bisitatutako testua Ikusi ohiko hondoaren gainean"
-
-#~ msgid "View Active Text against View Normal Background"
-#~ msgstr "Ikusi testu aktiboa Ikusi ohiko hondoaren gainean"
-
-#~ msgid "View Inactive Text against View Normal Background"
-#~ msgstr "Ikusi testu inaktiboa Ikusi ohiko hondoaren gainean"
-
-#~ msgid "View Negative Text against View Normal Background"
-#~ msgstr "Ikusi testuaren negatiboa Ikusi ohiko hondoaren gainean"
-
-#~ msgid "View Neutral Text against View Normal Background"
-#~ msgstr "Ikusi testu neutrala Ikusi ohiko hondoaren gainean"
-
-#~ msgid "View Positive Text against View Normal Background"
-#~ msgstr "Ikusi testu positiboa Ikusi ohiko hondoaren gainean"
-
-#~ msgid "Color set:"
-#~ msgstr "Kolore multzoa:"
-
-#~ msgid "Colorset to view/modify"
-#~ msgstr "Kolore multzoa ikusiteko/aldatzeko"
-
-#~ msgctxt "color-sets"
-#~ msgid "Common Colors"
-#~ msgstr "Kolore arruntak"
-
-#~ msgctxt "color-sets"
-#~ msgid "View"
-#~ msgstr "Ikusi"
-
-#~ msgctxt "color-sets"
-#~ msgid "Window"
-#~ msgstr "Leihoa"
-
-#~ msgctxt "color-sets"
-#~ msgid "Button"
-#~ msgstr "Botoia"
-
-#~ msgctxt "color-sets"
-#~ msgid "Selection"
-#~ msgstr "Hautaketa"
-
-#~ msgctxt "color-sets"
-#~ msgid "Tooltip"
-#~ msgstr "Argibidea"
-
-#~ msgctxt "color-sets"
-#~ msgid "Complementary"
-#~ msgstr "Osagarria"
-
-#~ msgctxt "color-sets"
-#~ msgid "Header"
-#~ msgstr "Goiburua"
-
-#~ msgid "New Row"
-#~ msgstr "Lerro berria"
-
-#~ msgid "0"
-#~ msgstr "0"
-
-#~ msgid "1"
-#~ msgstr "1"
-
-#~ msgid "View Background"
-#~ msgstr "Ikusi hondoa"
-
-#~ msgid "View Text"
-#~ msgstr "Ikusi testua"
-
-#~ msgid "Window Background"
-#~ msgstr "Leihoaren hondoa"
-
-#~ msgid "Window Text"
-#~ msgstr "Leihoaren testua"
-
-#~ msgid "Button Background"
-#~ msgstr "Botoiaren hondoa"
-
-#~ msgid "Button Text"
-#~ msgstr "Botoiaren testua"
-
-#~ msgid "Selection Background"
-#~ msgstr "Hautaketaren hondoa"
-
-#~ msgid "Selection Text"
-#~ msgstr "Hautaketaren testua"
-
-#~ msgid "Selection Inactive Text"
-#~ msgstr "Hautaketaren testu ez-aktiboa"
-
-#~ msgid "Tooltip Background"
-#~ msgstr "Argibidearen hondoa"
-
-#~ msgid "Tooltip Text"
-#~ msgstr "Argibidearen testua"
-
-#~ msgid "Active Titlebar"
-#~ msgstr "Izenburu-barra aktiboa"
-
-#~ msgid "Active Titlebar Text"
-#~ msgstr "Izenburu-barra aktiboaren testua"
-
-#~ msgid "Active Titlebar Secondary"
-#~ msgstr "Izenburu-barra aktiboa (bigarren mailakoa)"
-
-#~ msgid "Inactive Titlebar"
-#~ msgstr "Izenburu-barra ez-aktiboa"
-
-#~ msgid "Inactive Titlebar Text"
-#~ msgstr "Izenburu-barra ez-aktiboaren testua"
-
-#~ msgid "Inactive Titlebar Secondary"
-#~ msgstr "Izenburu-barra ez-aktiboa (bigarren mailakoa)"
-
-#~ msgid "Color:"
-#~ msgstr "Kolorea:"
-
-#~ msgid "Intensity:"
-#~ msgstr "Intensitatea:"
-
-#~ msgid "Disabled color effect type"
-#~ msgstr "Ezgaituaren kolore efektu mota"
-
-#~ msgctxt "no disabled color effect"
-#~ msgid "None"
-#~ msgstr "Bat ere ez"
-
-#~ msgctxt "disabled color effect"
-#~ msgid "Desaturate"
-#~ msgstr "Desasetu"
-
-#~ msgctxt "disabled color effect"
-#~ msgid "Fade"
-#~ msgstr "Koloregabetu"
-
-#~ msgctxt "disabled color effect"
-#~ msgid "Tint"
-#~ msgstr "Tonua"
-
-#~ msgid "Disabled intensity effect type"
-#~ msgstr "Ezgaituaren intensitate efektu mota"
-
-#~ msgctxt "no disabled intensity effect"
-#~ msgid "None"
-#~ msgstr "Bat ere ez"
-
-#~ msgctxt "disabled intensity effect"
-#~ msgid "Shade"
-#~ msgstr "Itzaldu"
-
-#~ msgctxt "disabled intensity effect"
-#~ msgid "Darken"
-#~ msgstr "Ilundu"
-
-#~ msgctxt "disabled intensity effect"
-#~ msgid "Lighten"
-#~ msgstr "Argitu"
-
-#~ msgid "Contrast:"
-#~ msgstr "Kontrastea:"
-
-#~ msgid "Disabled color effect amount"
-#~ msgstr "Ezgaituaren kolore efektuaren zenbatekoa"
-
-#~ msgid "Disabled intensity effect amount"
-#~ msgstr "Ezgaituaren intensitate efektuaren zenbatekoa"
-
-#~ msgid "Disabled color"
-#~ msgstr "Ezgaituaren kolorea"
-
-#~ msgid "Disabled contrast type"
-#~ msgstr "Ezgaituaren kontraste mota"
-
-#~ msgctxt "no disabled contrast"
-#~ msgid "None"
-#~ msgstr "Bat ere ez"
-
-#~ msgctxt "disabled contrast"
-#~ msgid "Fade"
-#~ msgstr "Koloregabetu"
-
-#~ msgctxt "disabled contrast"
-#~ msgid "Tint"
-#~ msgstr "Tonua"
-
-#~ msgid "Disabled contrast amount"
-#~ msgstr "Ezgaituaren kontrastearen zenbatzekoa"
-
-#~ msgid "Apply &effects to inactive windows"
-#~ msgstr "Ezarri &efektuak leiho ez aktiboei"
-
-#~ msgid "Use different colors for in&active selections"
-#~ msgstr "Erabili kolore desberdinak hautapen ez-aktiboekin"
-
-#~ msgid "Shade sorted column &in lists"
-#~ msgstr "Itzaldu sailkatze zutabea zerrende&tan"
-
-#~ msgid "Tint all colors with accent color"
-#~ msgstr "Tindatu kolore guztiak Azentu-kolorearekin"
-
-#~ msgid "Make window titlebars a&ccent-colored"
-#~ msgstr "Egin leihoetako titulu-barrak azentu-koloredun"
-
-#~ msgid "Tint strength:"
-#~ msgstr "Tonuaren sendotasuna:"
-
-#~ msgid "Shading of frames and lighting (\"3D\") effects"
-#~ msgstr "Markoen itzaldura eta argiztapen (\"3D\") efektuak"
-
-#~ msgid "Shading"
-#~ msgstr "Itzaldura"
-
-#~ msgid "Maximum"
-#~ msgstr "Handiena"
-
-#~ msgid "Minimum"
-#~ msgstr "Txikiena"
-
-#~ msgid "Contrast"
-#~ msgstr "Kontrastea"
-
-#~ msgid "Normal Text on Normal Background"
-#~ msgstr "Ohiko testua Ohiko hondoan"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "normal"
-#~ msgstr "ohikoa"
-
-#~ msgid "Link Text on Normal Background"
-#~ msgstr "Estekaren testua Ohiko hondoan"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "link"
-#~ msgstr "esteka"
-
-#~ msgid "Visited Text on Normal Background"
-#~ msgstr "Bisitatutako testua Ohiko hondoan"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "visited"
-#~ msgstr "bisitatuta"
-
-#~ msgid "Active Text on Normal Background"
-#~ msgstr "Testu aktiboa Ohiko hondoan"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "active"
-#~ msgstr "aktiboa"
-
-#~ msgid "Inactive Text on Normal Background"
-#~ msgstr "Testu ez-aktiboa Ohiko hondoan"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "inactive"
-#~ msgstr "ez-aktiboa"
-
-#~ msgid "Negative Text on Normal Background"
-#~ msgstr "Testu negatiboa Ohiko hondoan"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "negative"
-#~ msgstr "negatiboa"
-
-#~ msgid "Neutral Text on Normal Background"
-#~ msgstr "Testu neutrala Ohiko hondoan"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "neutral"
-#~ msgstr "neutrala"
-
-#~ msgid "Positive Text on Normal Background"
-#~ msgstr "Testu positiboa Ohiko hondoan"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "positive"
-#~ msgstr "positiboa"
-
-#~ msgid "Hover on Normal Background"
-#~ msgstr "Ohiko hondo gainetik igaro"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "hover"
-#~ msgstr "gainetik igarotzerakoan"
-
-#~ msgid ""
-#~ "Link Text on Link Background\n"
-#~ "(Note: Link Background is derived from Link Text and cannot be separately "
-#~ "configured at this time)"
-#~ msgstr ""
-#~ "Estekaren testua Estekaren hondoan\n"
-#~ "(Oharra: Estekaren hondoa estekaren testutik eratorria dago eta momentuz "
-#~ "ezin da banatuta konfiguratu)"
-
-#~ msgid ""
-#~ "Visited Text on Visited Background\n"
-#~ "(Note: Visited Background is derived from Visited Text and cannot be "
-#~ "separately configured at this time)"
-#~ msgstr ""
-#~ "Bisitatutako testua Bisitatutako hondoan\n"
-#~ "(Oharra: Bisitatutako hondoa Bisitatutako testutik eratorria dago eta "
-#~ "momentuz ezin da banatuta konfiguratu)"
-
-#~ msgid ""
-#~ "Active Text on Active Background\n"
-#~ "(Note: Active Background is derived from Active Text and cannot be "
-#~ "separately configured at this time)"
-#~ msgstr ""
-#~ "Testu aktiboa Hondo aktiboan\n"
-#~ "(Oharra: Hondo aktiboa Testu aktibotik eratorria dago eta momentuz ezin "
-#~ "da banatuta konfiguratu)"
-
-#~ msgid "Inactive Text on Alternate Background"
-#~ msgstr "Testu ez-aktiboa Ordezko hondoan"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "alternate"
-#~ msgstr "ordezko"
-
-#~ msgid ""
-#~ "Negative Text on Negative Background\n"
-#~ "(Note: Negative Background is derived from Negative Text and cannot be "
-#~ "separately configured at this time)"
-#~ msgstr ""
-#~ "Testu negatiboa Hondo negatiboan\n"
-#~ "(Oharra: Hondo negatiboa Testu negatibotik eratorria dago eta momentuz "
-#~ "ezin da banatuta konfiguratu)"
-
-#~ msgid ""
-#~ "Neutral Text on Neutral Background\n"
-#~ "(Note: Neutral Background is derived from Neutral Text and cannot be "
-#~ "separately configured at this time)"
-#~ msgstr ""
-#~ "Testu neutrala Hondo neutralan\n"
-#~ "(Oharra: Hondo neutrala Testu neutraletik eratorria dago eta momentuz "
-#~ "ezin da banatuta konfiguratu)"
-
-#~ msgid ""
-#~ "Positive Text on Positive Background\n"
-#~ "(Note: Positive Background is derived from Positive Text and cannot be "
-#~ "separately configured at this time)"
-#~ msgstr ""
-#~ "Testu positiboa Hondo positiboan\n"
-#~ "(Oharra: Hondo positiboa Testu positibotik eratorria dago eta momentuz "
-#~ "ezin da banatuta konfiguratu)"
-
-#~ msgid "Focus on Normal Background"
-#~ msgstr "Fokua ohiko hondoan"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "focus"
-#~ msgstr "fokua"
 
 #~ msgid "Apply a&ccent color to active window titlebars"
 #~ msgstr "Ezarri a&zentu-kolorea leiho aktiboen titulu-barrei"

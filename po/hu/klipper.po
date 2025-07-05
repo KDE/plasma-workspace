@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-02-01 11:32+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -625,6 +625,231 @@ msgstr "jelenlegi"
 msgid "down"
 msgstr "le"
 
+#. i18n: ectx: label, entry (Version), group (General)
+#: klipper.kcfg:10
+#, kde-format
+msgid "Klipper version"
+msgstr "Klipper verzió"
+
+#. i18n: ectx: label, entry (KeepClipboardContents), group (General)
+#: klipper.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Save the clipboard history across desktop sessions"
+msgid "Save history across desktop sessions"
+msgstr "A vágólap előzményeinek mentése az asztali munkamenetek között"
+
+#. i18n: ectx: tooltip, entry (KeepClipboardContents), group (General)
+#: klipper.kcfg:15
+#, kde-format
+msgid ""
+"Retain the clipboard history, so it will be available the next time you log "
+"in."
+msgstr ""
+"A vágólap előzményeinek megőrzése, hogy a következő bejelentkezéskor is "
+"elérhetőek legyenek."
+
+#. i18n: ectx: label, entry (PreventEmptyClipboard), group (General)
+#: klipper.kcfg:18
+#, kde-format
+msgid "Prevent the clipboard from being cleared"
+msgstr "A vágólap törlésének megelőzése"
+
+#. i18n: ectx: whatsthis, entry (PreventEmptyClipboard), group (General)
+#: klipper.kcfg:20
+#, kde-format
+msgid ""
+"Do not allow the clipboard to be cleared, for example when an application "
+"exits."
+msgstr "Ne engedje a vágólap kiürítését, például alkalmazások kilépésekor."
+
+#. i18n: ectx: label, entry (SyncClipboards), group (General)
+#: klipper.kcfg:27
+#, kde-format
+msgid "Keep the selection and clipboard the same"
+msgstr "A kijelölés és a vágólap egyezzen meg"
+
+#. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
+#: klipper.kcfg:29
+#, kde-format
+msgid ""
+"Content selected with the cursor is automatically copied to the clipboard so "
+"that it can be pasted with either a Paste action or a middle-click.<br/><a "
+"href=\"1\">More about the selection and clipboard</a>."
+msgstr ""
+"A kurzorral kijelölt tartalom automatikusan a vágólapra másolódik, így "
+"beilleszthető lesz a Beillesztés művelettel vagy középső gombos kattintással."
+"<br/><a href=\"1\">További információk a kijelölésről és a vágólapról.</a>"
+
+#. i18n: ectx: label, entry (IgnoreSelection), group (General)
+#: klipper.kcfg:32
+#, kde-format
+msgid "Ignore the selection"
+msgstr "Kijelölés mellőzése"
+
+#. i18n: ectx: whatsthis, entry (IgnoreSelection), group (General)
+#: klipper.kcfg:34
+#, kde-format
+msgid ""
+"Content selected with the cursor but not explicitly copied to the clipboard "
+"is not automatically stored in the clipboard history, and can only be pasted "
+"using a middle-click."
+msgstr ""
+"A kurzorral kijelölt, de a vágólapra nem kifejezetten másolt tartalom nem "
+"kerül be a vágólap előzményei közé, és csak a középső egérgombbal "
+"illeszthető be."
+
+#. i18n: ectx: label, entry (SelectionTextOnly), group (General)
+#: klipper.kcfg:37
+#, kde-format
+msgid "Text selection only"
+msgstr "Csak szövegkijelölés"
+
+#. i18n: ectx: whatsthis, entry (SelectionTextOnly), group (General)
+#: klipper.kcfg:39
+#, kde-format
+msgid ""
+"Only store text selections in the clipboard history, not images or any other "
+"type of data."
+msgstr ""
+"Csak a szövegkijelölések tárolódjanak az előzményekben, képek vagy más "
+"adatok ne."
+
+#. i18n: ectx: label, entry (IgnoreImages), group (General)
+#: klipper.kcfg:42
+#, kde-format
+msgid "Always ignore images"
+msgstr "Mindig mellőzze a képeket"
+
+#. i18n: ectx: whatsthis, entry (IgnoreImages), group (General)
+#: klipper.kcfg:44
+#, kde-format
+msgid ""
+"Do not store images in the clipboard history, even if explicitly copied."
+msgstr ""
+"Ne tároljon képeket a vágólap előzményeiben, még kifejezett másoláskor sem."
+
+#. i18n: ectx: label, entry (UseGUIRegExpEditor), group (General)
+#: klipper.kcfg:47
+#, kde-format
+msgid "Use graphical regexp editor"
+msgstr "Grafikus reguláriskifejezés-szerkesztő használata"
+
+#. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
+#: klipper.kcfg:51
+#, fuzzy, kde-format
+#| msgid "Ignore the selection"
+msgid "Immediately on selection"
+msgstr "Kijelölés mellőzése"
+
+#. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
+#: klipper.kcfg:52
+#, fuzzy, kde-format
+#| msgid "Whether text selections are saved in the clipboard history."
+msgid ""
+"Show the popup menu of applicable actions as soon as a selection is made."
+msgstr "A szövegkijelölés mentésre kerüljön-e a vágólap előzményeibe."
+
+#. i18n: ectx: label, entry (NoActionsForWM_CLASS), group (General)
+#: klipper.kcfg:57
+#, kde-format
+msgid "No actions for WM_CLASS"
+msgstr "Nincsenek műveletek a WM_CLASS-hoz"
+
+#. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
+#: klipper.kcfg:60
+#, fuzzy, kde-format
+#| msgid "Automatic action popup time:"
+msgid "Automatic action menu time:"
+msgstr "Automatikus műveletmenü időkorlátja:"
+
+#. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
+#: klipper.kcfg:64
+#, fuzzy, kde-format
+#| msgid "Display the automatic action popup for this time."
+msgid "Display the automatic action popup menu for this time."
+msgstr "Az automatikus műveletmenü megjelenítése ennyi ideig."
+
+#. i18n: ectx: label, entry (MaxClipItems), group (General)
+#: klipper.kcfg:67
+#, fuzzy, kde-format
+#| msgid "Clipboard history size:"
+msgid "History size:"
+msgstr "A vágólapnapló mérete:"
+
+#. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
+#: klipper.kcfg:71
+#, kde-format
+msgid "The clipboard history will store up to this many items."
+msgstr "A vágólap előzményei legfeljebb ennyi elemet tárolnak."
+
+#. i18n: ectx: label, entry (ActionList), group (General)
+#: klipper.kcfg:74
+#, kde-format
+msgid "Dummy entry for indicating changes in an action's tree widget"
+msgstr "Üres bejegyzés egy művelet faeleme változásainak jelzésére"
+
+#. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
+#: klipper.kcfg:84
+#, fuzzy, kde-format
+#| msgid "Strip whitespace when executing an action"
+msgid "Trim whitespace from selection"
+msgstr "Üres helyek eltávolítása művelet végrehajtásakor"
+
+#. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
+#: klipper.kcfg:86
+#, fuzzy, kde-format
+#| msgid ""
+#| "Remove white space from the start and end of clipboard text before "
+#| "performing an action. For example, this ensures that the URL pasted in a "
+#| "browser is interpreted as expected.<br/><br/>The text saved on the "
+#| "clipboard is not affected."
+msgid ""
+"Remove any whitespace from the start and end of selected text, before "
+"performing an action. For example, this ensures that a URL pasted in a "
+"browser is interpreted as expected. The text saved on the clipboard is not "
+"affected."
+msgstr ""
+"Üres helyek eltávolítása a vágólap szövegeinek elejéről és végéről művelet "
+"végrehajtása előtt. Például URL-cím másolásakor ez segít abban, hogy a "
+"böngésző megfelelően értelmezze azt.<br/><br/>A vágólapra mentett szöveget "
+"nem érinti."
+
+#. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
+#: klipper.kcfg:89
+#, fuzzy, kde-format
+#| msgid "Replay actions on an item selected from history"
+msgid "For an item chosen from history"
+msgstr "Műveletek engedélyezése naplóbeli elemeken"
+
+#. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
+#: klipper.kcfg:91
+#, fuzzy, kde-format
+#| msgid "Whether text selections are saved in the clipboard history."
+msgid ""
+"Show the popup menu of applicable actions if an entry is chosen from the "
+"clipboard history."
+msgstr "A szövegkijelölés mentésre kerüljön-e a vágólap előzményeibe."
+
+#. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
+#: klipper.kcfg:94
+#, fuzzy, kde-format
+#| msgid "Enable MIME-based actions"
+msgid "Include MIME actions"
+msgstr "MIME-típus alapú műveletek bekapcsolása"
+
+#. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
+#: klipper.kcfg:96
+#, fuzzy, kde-format
+#| msgid ""
+#| "If this option is set, and a file name or URL is selected, include "
+#| "applications that can handle its MIME type in the actions popup."
+msgid ""
+"If a file name or URL is selected, include applications that can accept its "
+"MIME type in the popup menu."
+msgstr ""
+"Ha ez az opció be van állítva, és fájlnevet vagy URL-t választanak ki, a "
+"műveletmenü tartalmazza a MIME-típust kezelő alkalmazásokat is."
+
 #: klipperpopup.cpp:105
 #, fuzzy, kde-format
 #| msgid "Clipboard Contents"
@@ -766,155 +991,6 @@ msgstr "Ez az ablak ne jelenjen meg többé"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Mégsem"
-
-#~ msgid "Klipper version"
-#~ msgstr "Klipper verzió"
-
-#, fuzzy
-#~| msgid "Save the clipboard history across desktop sessions"
-#~ msgid "Save history across desktop sessions"
-#~ msgstr "A vágólap előzményeinek mentése az asztali munkamenetek között"
-
-#~ msgid ""
-#~ "Retain the clipboard history, so it will be available the next time you "
-#~ "log in."
-#~ msgstr ""
-#~ "A vágólap előzményeinek megőrzése, hogy a következő bejelentkezéskor is "
-#~ "elérhetőek legyenek."
-
-#~ msgid "Prevent the clipboard from being cleared"
-#~ msgstr "A vágólap törlésének megelőzése"
-
-#~ msgid ""
-#~ "Do not allow the clipboard to be cleared, for example when an application "
-#~ "exits."
-#~ msgstr "Ne engedje a vágólap kiürítését, például alkalmazások kilépésekor."
-
-#~ msgid "Keep the selection and clipboard the same"
-#~ msgstr "A kijelölés és a vágólap egyezzen meg"
-
-#~ msgid ""
-#~ "Content selected with the cursor is automatically copied to the clipboard "
-#~ "so that it can be pasted with either a Paste action or a middle-click.<br/"
-#~ "><a href=\"1\">More about the selection and clipboard</a>."
-#~ msgstr ""
-#~ "A kurzorral kijelölt tartalom automatikusan a vágólapra másolódik, így "
-#~ "beilleszthető lesz a Beillesztés művelettel vagy középső gombos "
-#~ "kattintással.<br/><a href=\"1\">További információk a kijelölésről és a "
-#~ "vágólapról.</a>"
-
-#~ msgid "Ignore the selection"
-#~ msgstr "Kijelölés mellőzése"
-
-#~ msgid ""
-#~ "Content selected with the cursor but not explicitly copied to the "
-#~ "clipboard is not automatically stored in the clipboard history, and can "
-#~ "only be pasted using a middle-click."
-#~ msgstr ""
-#~ "A kurzorral kijelölt, de a vágólapra nem kifejezetten másolt tartalom nem "
-#~ "kerül be a vágólap előzményei közé, és csak a középső egérgombbal "
-#~ "illeszthető be."
-
-#~ msgid "Text selection only"
-#~ msgstr "Csak szövegkijelölés"
-
-#~ msgid ""
-#~ "Only store text selections in the clipboard history, not images or any "
-#~ "other type of data."
-#~ msgstr ""
-#~ "Csak a szövegkijelölések tárolódjanak az előzményekben, képek vagy más "
-#~ "adatok ne."
-
-#~ msgid "Always ignore images"
-#~ msgstr "Mindig mellőzze a képeket"
-
-#~ msgid ""
-#~ "Do not store images in the clipboard history, even if explicitly copied."
-#~ msgstr ""
-#~ "Ne tároljon képeket a vágólap előzményeiben, még kifejezett másoláskor "
-#~ "sem."
-
-#~ msgid "Use graphical regexp editor"
-#~ msgstr "Grafikus reguláriskifejezés-szerkesztő használata"
-
-#, fuzzy
-#~| msgid "Ignore the selection"
-#~ msgid "Immediately on selection"
-#~ msgstr "Kijelölés mellőzése"
-
-#~ msgid "No actions for WM_CLASS"
-#~ msgstr "Nincsenek műveletek a WM_CLASS-hoz"
-
-#, fuzzy
-#~| msgid "Automatic action popup time:"
-#~ msgid "Automatic action menu time:"
-#~ msgstr "Automatikus műveletmenü időkorlátja:"
-
-#, fuzzy
-#~| msgid "Display the automatic action popup for this time."
-#~ msgid "Display the automatic action popup menu for this time."
-#~ msgstr "Az automatikus műveletmenü megjelenítése ennyi ideig."
-
-#, fuzzy
-#~| msgid "Clipboard history size:"
-#~ msgid "History size:"
-#~ msgstr "A vágólapnapló mérete:"
-
-#~ msgid "The clipboard history will store up to this many items."
-#~ msgstr "A vágólap előzményei legfeljebb ennyi elemet tárolnak."
-
-#~ msgid "Dummy entry for indicating changes in an action's tree widget"
-#~ msgstr "Üres bejegyzés egy művelet faeleme változásainak jelzésére"
-
-#, fuzzy
-#~| msgid "Strip whitespace when executing an action"
-#~ msgid "Trim whitespace from selection"
-#~ msgstr "Üres helyek eltávolítása művelet végrehajtásakor"
-
-#, fuzzy
-#~| msgid ""
-#~| "Remove white space from the start and end of clipboard text before "
-#~| "performing an action. For example, this ensures that the URL pasted in a "
-#~| "browser is interpreted as expected.<br/><br/>The text saved on the "
-#~| "clipboard is not affected."
-#~ msgid ""
-#~ "Remove any whitespace from the start and end of selected text, before "
-#~ "performing an action. For example, this ensures that a URL pasted in a "
-#~ "browser is interpreted as expected. The text saved on the clipboard is "
-#~ "not affected."
-#~ msgstr ""
-#~ "Üres helyek eltávolítása a vágólap szövegeinek elejéről és végéről "
-#~ "művelet végrehajtása előtt. Például URL-cím másolásakor ez segít abban, "
-#~ "hogy a böngésző megfelelően értelmezze azt.<br/><br/>A vágólapra mentett "
-#~ "szöveget nem érinti."
-
-#, fuzzy
-#~| msgid "Replay actions on an item selected from history"
-#~ msgid "For an item chosen from history"
-#~ msgstr "Műveletek engedélyezése naplóbeli elemeken"
-
-#, fuzzy
-#~| msgid "Whether text selections are saved in the clipboard history."
-#~ msgid ""
-#~ "Show the popup menu of applicable actions if an entry is chosen from the "
-#~ "clipboard history."
-#~ msgstr "A szövegkijelölés mentésre kerüljön-e a vágólap előzményeibe."
-
-#, fuzzy
-#~| msgid "Enable MIME-based actions"
-#~ msgid "Include MIME actions"
-#~ msgstr "MIME-típus alapú műveletek bekapcsolása"
-
-#, fuzzy
-#~| msgid ""
-#~| "If this option is set, and a file name or URL is selected, include "
-#~| "applications that can handle its MIME type in the actions popup."
-#~ msgid ""
-#~ "If a file name or URL is selected, include applications that can accept "
-#~ "its MIME type in the popup menu."
-#~ msgstr ""
-#~ "Ha ez az opció be van állítva, és fájlnevet vagy URL-t választanak ki, a "
-#~ "műveletmenü tartalmazza a MIME-típust kezelő alkalmazásokat is."
 
 #~ msgid "Delete clipboard history?"
 #~ msgstr "Törli a vágólapnaplót?"

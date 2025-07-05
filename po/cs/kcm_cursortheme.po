@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2023-06-14 14:52+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -19,6 +19,18 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Lokalize 23.04.2\n"
+
+#. i18n: ectx: label, entry (cursorTheme), group (Mouse)
+#: cursorthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current cursor theme"
+msgstr "Uložit aktuálního motivu kurzorů"
+
+#. i18n: ectx: label, entry (cursorSize), group (Mouse)
+#: cursorthemesettings.kcfg:13
+#, kde-format
+msgid "Current cursor size"
+msgstr "Současná velikost kurzoru"
 
 #: kcmcursortheme.cpp:308
 #, kde-format
@@ -64,6 +76,13 @@ msgstr "Přepsat motiv?"
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Motiv byl úspěšně nainstalován."
+
+#. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
+#. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)
+#: launchfeedbacksettings.kcfg:19 launchfeedbacksettings.kcfg:33
+#, kde-format
+msgid "Timeout in seconds"
+msgstr "Čas vypršení v sekundách"
 
 #: package/contents/ui/Delegate.qml:54
 #, kde-format
@@ -266,12 +285,3 @@ msgctxt ""
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(Dostupné velikosti: %1)"
-
-#~ msgid "Name of the current cursor theme"
-#~ msgstr "Uložit aktuálního motivu kurzorů"
-
-#~ msgid "Current cursor size"
-#~ msgstr "Současná velikost kurzoru"
-
-#~ msgid "Timeout in seconds"
-#~ msgstr "Čas vypršení v sekundách"

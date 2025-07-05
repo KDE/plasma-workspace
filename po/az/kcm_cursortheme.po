@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-03-24 15:03+0400\n"
 "Last-Translator: Kheyyam Gojayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -16,6 +16,18 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 21.12.3\n"
+
+#. i18n: ectx: label, entry (cursorTheme), group (Mouse)
+#: cursorthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current cursor theme"
+msgstr "Cari kursor mövzusunun adı"
+
+#. i18n: ectx: label, entry (cursorSize), group (Mouse)
+#: cursorthemesettings.kcfg:13
+#, kde-format
+msgid "Current cursor size"
+msgstr "Cari kursorun ölçüsü"
 
 #: kcmcursortheme.cpp:308
 #, kde-format
@@ -63,6 +75,13 @@ msgstr "Mövzu üstünə yazılsın?"
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Mövzu uğurla quraşdırıldı."
+
+#. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
+#. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)
+#: launchfeedbacksettings.kcfg:19 launchfeedbacksettings.kcfg:33
+#, kde-format
+msgid "Timeout in seconds"
+msgstr ""
 
 #: package/contents/ui/Delegate.qml:54
 #, kde-format
@@ -264,12 +283,6 @@ msgctxt ""
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(Mövcud ölçüsü: %1)"
-
-#~ msgid "Name of the current cursor theme"
-#~ msgstr "Cari kursor mövzusunun adı"
-
-#~ msgid "Current cursor size"
-#~ msgstr "Cari kursorun ölçüsü"
 
 #~ msgid "Name"
 #~ msgstr "Adı"

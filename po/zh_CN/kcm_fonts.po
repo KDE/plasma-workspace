@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2024-03-30 19:46\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -16,6 +16,54 @@ msgstr ""
 "X-Crowdin-Language: zh-CN\n"
 "X-Crowdin-File: /kf5-stable/messages/plasma-workspace/kcm_fonts.pot\n"
 "X-Crowdin-File-ID: 7136\n"
+
+#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
+#: fontsaasettingsbase.kcfg:9
+#, kde-format
+msgid "Force font DPI Wayland"
+msgstr "强制 Wayland 字体 DPI"
+
+#. i18n: ectx: label, entry (forceFontDPI), group (General)
+#: fontsaasettingsbase.kcfg:13
+#, kde-format
+msgid "Force font DPI on X11"
+msgstr "强制 X11 字体 DPI"
+
+#. i18n: ectx: label, entry (font), group (General)
+#: fontssettings.kcfg:9
+#, kde-format
+msgid "General font"
+msgstr "常规字体"
+
+#. i18n: ectx: label, entry (fixed), group (General)
+#: fontssettings.kcfg:21
+#, kde-format
+msgid "Fixed width font"
+msgstr "等宽字体"
+
+#. i18n: ectx: label, entry (smallestReadableFont), group (General)
+#: fontssettings.kcfg:33
+#, kde-format
+msgid "Small font"
+msgstr "小字体"
+
+#. i18n: ectx: label, entry (toolBarFont), group (General)
+#: fontssettings.kcfg:45
+#, kde-format
+msgid "Tool bar font"
+msgstr "工具栏字体"
+
+#. i18n: ectx: label, entry (menuFont), group (General)
+#: fontssettings.kcfg:57
+#, kde-format
+msgid "Menu font"
+msgstr "菜单字体"
+
+#. i18n: ectx: label, entry (activeFont), group (WM)
+#: fontssettings.kcfg:71
+#, kde-format
+msgid "Window title font"
+msgstr "窗口标题字体"
 
 #: kxftconfig.cpp:458
 #, kde-format
@@ -295,27 +343,3 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "选择字体"
-
-#~ msgid "Force font DPI Wayland"
-#~ msgstr "强制 Wayland 字体 DPI"
-
-#~ msgid "Force font DPI on X11"
-#~ msgstr "强制 X11 字体 DPI"
-
-#~ msgid "General font"
-#~ msgstr "常规字体"
-
-#~ msgid "Fixed width font"
-#~ msgstr "等宽字体"
-
-#~ msgid "Small font"
-#~ msgstr "小字体"
-
-#~ msgid "Tool bar font"
-#~ msgstr "工具栏字体"
-
-#~ msgid "Menu font"
-#~ msgstr "菜单字体"
-
-#~ msgid "Window title font"
-#~ msgstr "窗口标题字体"

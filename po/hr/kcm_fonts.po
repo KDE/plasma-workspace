@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts 0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2010-01-26 11:57+0100\n"
 "Last-Translator: Andrej Dundovic <adundovi@gmail.com>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -20,6 +20,68 @@ msgstr ""
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
+
+#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
+#: fontsaasettingsbase.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Force fonts DPI:"
+msgid "Force font DPI Wayland"
+msgstr "Prisilna vrijednost DPI za pisma:"
+
+#. i18n: ectx: label, entry (forceFontDPI), group (General)
+#: fontsaasettingsbase.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Force fonts DPI:"
+msgid "Force font DPI on X11"
+msgstr "Prisilna vrijednost DPI za pisma:"
+
+#. i18n: ectx: label, entry (font), group (General)
+#: fontssettings.kcfg:9
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "General"
+msgid "General font"
+msgstr "Opće"
+
+#. i18n: ectx: label, entry (fixed), group (General)
+#: fontssettings.kcfg:21
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "Fixed width"
+msgid "Fixed width font"
+msgstr "Stalne širine"
+
+#. i18n: ectx: label, entry (smallestReadableFont), group (General)
+#: fontssettings.kcfg:33
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "Small"
+msgid "Small font"
+msgstr "Sitan"
+
+#. i18n: ectx: label, entry (toolBarFont), group (General)
+#: fontssettings.kcfg:45
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "Toolbar"
+msgid "Tool bar font"
+msgstr "Alatna traka"
+
+#. i18n: ectx: label, entry (menuFont), group (General)
+#: fontssettings.kcfg:57
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "General"
+msgid "Menu font"
+msgstr "Opće"
+
+#. i18n: ectx: label, entry (activeFont), group (WM)
+#: fontssettings.kcfg:71
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "Window title"
+msgid "Window title font"
+msgstr "Naslov prozora"
 
 #: kxftconfig.cpp:458
 #, fuzzy, kde-format
@@ -322,46 +384,6 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr ""
-
-#, fuzzy
-#~| msgid "Force fonts DPI:"
-#~ msgid "Force font DPI Wayland"
-#~ msgstr "Prisilna vrijednost DPI za pisma:"
-
-#, fuzzy
-#~| msgid "Force fonts DPI:"
-#~ msgid "Force font DPI on X11"
-#~ msgstr "Prisilna vrijednost DPI za pisma:"
-
-#, fuzzy
-#~| msgctxt "font usage"
-#~| msgid "General"
-#~ msgid "General font"
-#~ msgstr "Opće"
-
-#, fuzzy
-#~| msgctxt "font usage"
-#~| msgid "Fixed width"
-#~ msgid "Fixed width font"
-#~ msgstr "Stalne širine"
-
-#, fuzzy
-#~| msgctxt "font usage"
-#~| msgid "Small"
-#~ msgid "Small font"
-#~ msgstr "Sitan"
-
-#, fuzzy
-#~| msgctxt "font usage"
-#~| msgid "Toolbar"
-#~ msgid "Tool bar font"
-#~ msgstr "Alatna traka"
-
-#, fuzzy
-#~| msgctxt "font usage"
-#~| msgid "Window title"
-#~ msgid "Window title font"
-#~ msgstr "Naslov prozora"
 
 #, fuzzy
 #~| msgid ""

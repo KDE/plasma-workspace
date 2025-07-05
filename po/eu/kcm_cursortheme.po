@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2023-01-03 08:30+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -21,6 +21,18 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 22.12.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. i18n: ectx: label, entry (cursorTheme), group (Mouse)
+#: cursorthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current cursor theme"
+msgstr "Uneko kurtsore-gaiaren izena"
+
+#. i18n: ectx: label, entry (cursorSize), group (Mouse)
+#: cursorthemesettings.kcfg:13
+#, kde-format
+msgid "Current cursor size"
+msgstr "Kurtsorearen uneko neurria"
 
 #: kcmcursortheme.cpp:308
 #, kde-format
@@ -67,6 +79,13 @@ msgstr "Gaia gainidatzi?"
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Gaia ondo instalatu da."
+
+#. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
+#. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)
+#: launchfeedbacksettings.kcfg:19 launchfeedbacksettings.kcfg:33
+#, kde-format
+msgid "Timeout in seconds"
+msgstr "Denbora-muga segundotan"
 
 #: package/contents/ui/Delegate.qml:54
 #, kde-format
@@ -268,15 +287,6 @@ msgctxt ""
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(Neurriak erabilgarriak: %1)"
-
-#~ msgid "Name of the current cursor theme"
-#~ msgstr "Uneko kurtsore-gaiaren izena"
-
-#~ msgid "Current cursor size"
-#~ msgstr "Kurtsorearen uneko neurria"
-
-#~ msgid "Timeout in seconds"
-#~ msgstr "Denbora-muga segundotan"
 
 #~ msgid "Name"
 #~ msgstr "Izena"

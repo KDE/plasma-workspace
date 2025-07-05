@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-09-02 06:59+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -92,6 +92,12 @@ msgstr "პაკეტის სახელი"
 msgid "Reset the Plasma Desktop layout"
 msgstr ""
 "Plasma-ის სამუშაო მაგიდის განლაგების ნაგულისხმებ მნიშვნელობებზე დაბრუნება"
+
+#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
+#: lookandfeelsettings.kcfg:9
+#, kde-format
+msgid "Global look and feel"
+msgstr "გლობალური გარეგნობა"
 
 #: package/contents/ui/main.qml:21
 #, kde-format
@@ -256,6 +262,3 @@ msgid ""
 msgstr ""
 "გლობალურ თემას პარამეტრები არ გააჩნია. დაუკავშირდით გლობალური თემის ავტორს. "
 "ვფიქრობთ, ის გაფუჭებულია."
-
-#~ msgid "Global look and feel"
-#~ msgstr "გლობალური გარეგნობა"

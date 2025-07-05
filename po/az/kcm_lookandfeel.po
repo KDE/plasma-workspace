@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-08-16 16:43+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -94,6 +94,12 @@ msgstr "packagename"
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
 msgstr "Plasma İş masası nizamını sıfırlamaq"
+
+#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
+#: lookandfeelsettings.kcfg:9
+#, kde-format
+msgid "Global look and feel"
+msgstr "Qlobal Xarici Görünüş"
 
 #: package/contents/ui/main.qml:21
 #, kde-format
@@ -259,9 +265,6 @@ msgid ""
 msgstr ""
 "Bu Qlobal mövzu tətbiq ediləbilən ayarlar ilə təmin edilməyib. Lütfən Qlobal "
 "mövzunun himayəçisi ilə əlaqə saxlayın, ola bilsin həmin mövzu korlanıb."
-
-#~ msgid "Global look and feel"
-#~ msgstr "Qlobal Xarici Görünüş"
 
 #~ msgid ""
 #~ "Your current layout and configuration of panels, desktop widgets, and "

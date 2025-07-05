@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2020-05-14 23:42+0800\n"
 "Last-Translator: Yi-Jyun Pan <pan93412@gmail.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
@@ -63,20 +63,35 @@ msgstr "倒轉 CPU 使用量"
 msgid "nothing"
 msgstr "無"
 
-#~ msgid "Kill Applications Config"
-#~ msgstr "砍掉應用程式設定"
+#. i18n: ectx: property (title), widget (QGroupBox, main)
+#: killrunner_config.ui:30
+#, kde-format
+msgid "Kill Applications Config"
+msgstr "砍掉應用程式設定"
 
-#~ msgid "&Use trigger word"
-#~ msgstr "使用觸發單字(&U)"
+#. i18n: ectx: property (text), widget (QCheckBox, useTriggerWord)
+#: killrunner_config.ui:39
+#, kde-format
+msgid "&Use trigger word"
+msgstr "使用觸發單字(&U)"
 
-#~ msgid "&Trigger word:"
-#~ msgstr "觸發單字(&T)："
+#. i18n: ectx: property (text), widget (QLabel, label_trigger)
+#: killrunner_config.ui:51
+#, kde-format
+msgid "&Trigger word:"
+msgstr "觸發單字(&T)："
 
-#~ msgid "&Sort by"
-#~ msgstr "排序依據(&S)："
+#. i18n: ectx: property (text), widget (QLabel, label_sorting)
+#: killrunner_config.ui:72
+#, kde-format
+msgid "&Sort by"
+msgstr "排序依據(&S)："
 
-#~ msgid "It is not sure, that this will take effect"
-#~ msgstr "不確定這會生效"
+#. i18n: ectx: property (toolTip), widget (KComboBox, sorting)
+#: killrunner_config.ui:82
+#, kde-format
+msgid "It is not sure, that this will take effect"
+msgstr "不確定這會生效"
 
 #~ msgid ""
 #~ "Process ID: %1\n"

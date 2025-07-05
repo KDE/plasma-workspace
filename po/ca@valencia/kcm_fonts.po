@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-10-19 10:43+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -22,6 +22,54 @@ msgstr ""
 "X-Generator: Lokalize 20.12.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
+
+#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
+#: fontsaasettingsbase.kcfg:9
+#, kde-format
+msgid "Force font DPI Wayland"
+msgstr "Força els ppp dels tipus de lletra a Wayland"
+
+#. i18n: ectx: label, entry (forceFontDPI), group (General)
+#: fontsaasettingsbase.kcfg:13
+#, kde-format
+msgid "Force font DPI on X11"
+msgstr "Força els ppp dels tipus de lletra a X11"
+
+#. i18n: ectx: label, entry (font), group (General)
+#: fontssettings.kcfg:9
+#, kde-format
+msgid "General font"
+msgstr "Tipus de lletra general"
+
+#. i18n: ectx: label, entry (fixed), group (General)
+#: fontssettings.kcfg:21
+#, kde-format
+msgid "Fixed width font"
+msgstr "Tipus de lletra fixa"
+
+#. i18n: ectx: label, entry (smallestReadableFont), group (General)
+#: fontssettings.kcfg:33
+#, kde-format
+msgid "Small font"
+msgstr "Tipus de lletra xicoteta"
+
+#. i18n: ectx: label, entry (toolBarFont), group (General)
+#: fontssettings.kcfg:45
+#, kde-format
+msgid "Tool bar font"
+msgstr "Tipus de lletra de les barres d'eines"
+
+#. i18n: ectx: label, entry (menuFont), group (General)
+#: fontssettings.kcfg:57
+#, kde-format
+msgid "Menu font"
+msgstr "Tipus de lletra dels menús"
+
+#. i18n: ectx: label, entry (activeFont), group (WM)
+#: fontssettings.kcfg:71
+#, kde-format
+msgid "Window title font"
+msgstr "Tipus de lletra dels títols de finestra"
 
 #: kxftconfig.cpp:458
 #, kde-format
@@ -318,27 +366,3 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "Seleccioneu el tipus de lletra"
-
-#~ msgid "Force font DPI Wayland"
-#~ msgstr "Força els ppp dels tipus de lletra a Wayland"
-
-#~ msgid "Force font DPI on X11"
-#~ msgstr "Força els ppp dels tipus de lletra a X11"
-
-#~ msgid "General font"
-#~ msgstr "Tipus de lletra general"
-
-#~ msgid "Fixed width font"
-#~ msgstr "Tipus de lletra fixa"
-
-#~ msgid "Small font"
-#~ msgstr "Tipus de lletra xicoteta"
-
-#~ msgid "Tool bar font"
-#~ msgstr "Tipus de lletra de les barres d'eines"
-
-#~ msgid "Menu font"
-#~ msgstr "Tipus de lletra dels menús"
-
-#~ msgid "Window title font"
-#~ msgstr "Tipus de lletra dels títols de finestra"

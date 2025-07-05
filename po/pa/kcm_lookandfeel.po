@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-06-11 09:40-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -87,6 +87,12 @@ msgstr "ਪੈਕੇਜ ਦਾ ਨਾਂ"
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
 msgstr "ਪਲਾਜ਼ਮਾ ਡੈਸਕਟਾਪ ਖਾਕਾ ਮੁੜ-ਸੈੱਟ ਕਰੋ"
+
+#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
+#: lookandfeelsettings.kcfg:9
+#, kde-format
+msgid "Global look and feel"
+msgstr "ਗਲੋਬਲ ਦਿੱਖ ਤੇ ਛੋਹ"
 
 #: package/contents/ui/main.qml:21
 #, kde-format
@@ -250,9 +256,6 @@ msgid ""
 "This Global Theme does not provide any applicable settings. Please contact "
 "the maintainer of this Global Theme as it might be broken."
 msgstr ""
-
-#~ msgid "Global look and feel"
-#~ msgstr "ਗਲੋਬਲ ਦਿੱਖ ਤੇ ਛੋਹ"
 
 #~ msgid "Global Theme"
 #~ msgstr "ਗਲੋਬਲ ਥੀਮ"

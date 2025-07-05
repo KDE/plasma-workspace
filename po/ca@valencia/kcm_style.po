@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2023-04-24 11:45+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -149,38 +149,75 @@ msgstr "Configura l'estil de l'aplicació GNOME/GTK…"
 msgid "Configure %1"
 msgstr "Configura %1"
 
-#~ msgid "Tab 1"
-#~ msgstr "Pestanya 1"
+#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
+#: stylepreview.ui:33
+#, kde-format
+msgid "Tab 1"
+msgstr "Pestanya 1"
 
-#~ msgid "Push Button"
-#~ msgstr "Botó premut"
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: stylepreview.ui:65
+#, kde-format
+msgid "Push Button"
+msgstr "Botó premut"
 
-#~ msgid "Combo box"
-#~ msgstr "Quadro combinat"
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
+#: stylepreview.ui:86
+#, kde-format
+msgid "Combo box"
+msgstr "Quadro combinat"
 
-#~ msgid "Checkbox"
-#~ msgstr "Casella de selecció"
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
+#: stylepreview.ui:96
+#, kde-format
+msgid "Checkbox"
+msgstr "Casella de selecció"
 
-#~ msgid "Radio button"
-#~ msgstr "Botó d'opció"
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
+#: stylepreview.ui:106 stylepreview.ui:116
+#, kde-format
+msgid "Radio button"
+msgstr "Botó d'opció"
 
-#~ msgid "%p%"
-#~ msgstr "%p%"
+#. i18n: ectx: property (format), widget (QProgressBar, progressBar)
+#: stylepreview.ui:128
+#, no-c-format, kde-format
+msgid "%p%"
+msgstr "%p%"
 
-#~ msgid "Tab 2"
-#~ msgstr "Pestanya 2"
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: stylepreview.ui:136
+#, kde-format
+msgid "Tab 2"
+msgstr "Pestanya 2"
 
-#~ msgid "Application style"
-#~ msgstr "Estil de l'aplicació"
+#. i18n: ectx: label, entry (widgetStyle), group (KDE)
+#: stylesettings.kcfg:9
+#, kde-format
+msgid "Application style"
+msgstr "Estil de l'aplicació"
 
-#~ msgid "Show icons on buttons"
-#~ msgstr "Mostra les icones als botons"
+#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
+#: stylesettings.kcfg:13
+#, kde-format
+msgid "Show icons on buttons"
+msgstr "Mostra les icones als botons"
 
-#~ msgid "Show icons in menus"
-#~ msgstr "Mostra les icones en els menús"
+#. i18n: ectx: label, entry (iconsInMenus), group (KDE)
+#: stylesettings.kcfg:17
+#, kde-format
+msgid "Show icons in menus"
+msgstr "Mostra les icones en els menús"
 
-#~ msgid "Main toolbar label"
-#~ msgstr "Etiqueta de la barra d'eines principal"
+#. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
+#: stylesettings.kcfg:23
+#, kde-format
+msgid "Main toolbar label"
+msgstr "Etiqueta de la barra d'eines principal"
 
-#~ msgid "Secondary toolbar label"
-#~ msgstr "Etiqueta de la barra d'eines secundària"
+#. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
+#: stylesettings.kcfg:27
+#, kde-format
+msgid "Secondary toolbar label"
+msgstr "Etiqueta de la barra d'eines secundària"

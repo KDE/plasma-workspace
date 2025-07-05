@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_containmentactions_switchwindow\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2014-06-16 21:10+0300\n"
 "Last-Translator: Lasse Liehu <lasse.liehu@gmail.com>\n"
 "Language-Team: Finnish <lokalisointi@lists.coss.fi>\n"
@@ -17,6 +17,24 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. i18n: ectx: property (text), widget (QRadioButton, flatButton)
+#: config.ui:16
+#, kde-format
+msgid "Display all windows in one list"
+msgstr "Näytä kaikki ikkunat yhtenä luettelona"
+
+#. i18n: ectx: property (text), widget (QRadioButton, subButton)
+#: config.ui:23
+#, kde-format
+msgid "Display a submenu for each desktop"
+msgstr "Näyttää alivalikon kullekin työpöydälle"
+
+#. i18n: ectx: property (text), widget (QRadioButton, curButton)
+#: config.ui:30
+#, kde-format
+msgid "Display only the current desktop's windows"
+msgstr "Näyttää vain nykyisen työpöydän ikkunat"
 
 #: switch.cpp:75
 #, kde-format
@@ -35,12 +53,3 @@ msgstr "Ikkunat"
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "All Desktops"
 msgstr "Kaikki työpöydät"
-
-#~ msgid "Display all windows in one list"
-#~ msgstr "Näytä kaikki ikkunat yhtenä luettelona"
-
-#~ msgid "Display a submenu for each desktop"
-#~ msgstr "Näyttää alivalikon kullekin työpöydälle"
-
-#~ msgid "Display only the current desktop's windows"
-#~ msgstr "Näyttää vain nykyisen työpöydän ikkunat"

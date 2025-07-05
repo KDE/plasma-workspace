@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2023-05-28 09:44+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -138,6 +138,30 @@ msgstr "Mantín obert"
 #, kde-format
 msgid "Configure…"
 msgstr "Configura…"
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:10
+#, kde-format
+msgid "Screen lock enabled"
+msgstr "El bloqueig de la pantalla està activat"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:11
+#, kde-format
+msgid "Sets whether the screen will be locked after the specified time."
+msgstr "Establix si la pantalla s'ha de bloquejar després del temps indicat."
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:16
+#, kde-format
+msgid "Screen saver timeout"
+msgstr "Temps d'espera del salvapantalla"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:17
+#, kde-format
+msgid "Sets the minutes after which the screen is locked."
+msgstr "Establix els minuts després dels quals es bloqueja la pantalla."
 
 #: sessionsprivate/sessionsmodel.cpp:235 sessionsprivate/sessionsmodel.cpp:239
 #, kde-format
@@ -307,16 +331,3 @@ msgstr "Baixa ginys nous de Plasma"
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "Instal·la un giny des d'un fitxer local…"
-
-#~ msgid "Screen lock enabled"
-#~ msgstr "El bloqueig de la pantalla està activat"
-
-#~ msgid "Sets whether the screen will be locked after the specified time."
-#~ msgstr ""
-#~ "Establix si la pantalla s'ha de bloquejar després del temps indicat."
-
-#~ msgid "Screen saver timeout"
-#~ msgstr "Temps d'espera del salvapantalla"
-
-#~ msgid "Sets the minutes after which the screen is locked."
-#~ msgstr "Establix els minuts després dels quals es bloqueja la pantalla."

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2023-11-12 09:58+0100\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -22,6 +22,54 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 25.04.2\n"
+
+#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
+#: fontsaasettingsbase.kcfg:9
+#, kde-format
+msgid "Force font DPI Wayland"
+msgstr "Forza DPI dei caratteri Wayland"
+
+#. i18n: ectx: label, entry (forceFontDPI), group (General)
+#: fontsaasettingsbase.kcfg:13
+#, kde-format
+msgid "Force font DPI on X11"
+msgstr "Forza DPI dei caratteri su X11"
+
+#. i18n: ectx: label, entry (font), group (General)
+#: fontssettings.kcfg:9
+#, kde-format
+msgid "General font"
+msgstr "Carattere generale"
+
+#. i18n: ectx: label, entry (fixed), group (General)
+#: fontssettings.kcfg:21
+#, kde-format
+msgid "Fixed width font"
+msgstr "Carattere a larghezza fissa"
+
+#. i18n: ectx: label, entry (smallestReadableFont), group (General)
+#: fontssettings.kcfg:33
+#, kde-format
+msgid "Small font"
+msgstr "Carattere piccolo"
+
+#. i18n: ectx: label, entry (toolBarFont), group (General)
+#: fontssettings.kcfg:45
+#, kde-format
+msgid "Tool bar font"
+msgstr "Carattere della barra degli strumenti"
+
+#. i18n: ectx: label, entry (menuFont), group (General)
+#: fontssettings.kcfg:57
+#, kde-format
+msgid "Menu font"
+msgstr "Carattere dei menu"
+
+#. i18n: ectx: label, entry (activeFont), group (WM)
+#: fontssettings.kcfg:71
+#, kde-format
+msgid "Window title font"
+msgstr "Carattere del titolo della finestra"
 
 #: kxftconfig.cpp:458
 #, kde-format
@@ -319,30 +367,6 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "Seleziona carattere"
-
-#~ msgid "Force font DPI Wayland"
-#~ msgstr "Forza DPI dei caratteri Wayland"
-
-#~ msgid "Force font DPI on X11"
-#~ msgstr "Forza DPI dei caratteri su X11"
-
-#~ msgid "General font"
-#~ msgstr "Carattere generale"
-
-#~ msgid "Fixed width font"
-#~ msgstr "Carattere a larghezza fissa"
-
-#~ msgid "Small font"
-#~ msgstr "Carattere piccolo"
-
-#~ msgid "Tool bar font"
-#~ msgstr "Carattere della barra degli strumenti"
-
-#~ msgid "Menu font"
-#~ msgstr "Carattere dei menu"
-
-#~ msgid "Window title font"
-#~ msgstr "Carattere del titolo della finestra"
 
 #~ msgid "Change Display Scaling…"
 #~ msgstr "Cambia la scala dello schermo..."

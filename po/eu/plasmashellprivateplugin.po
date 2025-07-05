@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2023-06-21 17:06+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -137,6 +137,30 @@ msgstr "Eduki irekita"
 #, kde-format
 msgid "Configure…"
 msgstr "Konfiguratu…"
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:10
+#, kde-format
+msgid "Screen lock enabled"
+msgstr "Pantaila giltzatzea gaituta"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:11
+#, kde-format
+msgid "Sets whether the screen will be locked after the specified time."
+msgstr "Zehaztutako denbora igarotakoan pantaila giltzatuko den ezartzen du."
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:16
+#, kde-format
+msgid "Screen saver timeout"
+msgstr "Pantaila-babeslearen denbora-muga"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:17
+#, kde-format
+msgid "Sets the minutes after which the screen is locked."
+msgstr "Pantaila giltzatzeko minutu kopurua ezartzen du."
 
 #: sessionsprivate/sessionsmodel.cpp:235 sessionsprivate/sessionsmodel.cpp:239
 #, kde-format
@@ -306,19 +330,6 @@ msgstr "Jaitsi Plasma trepeta berriak"
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "Instalatu trepeta fitxategi lokal batetik..."
-
-#~ msgid "Screen lock enabled"
-#~ msgstr "Pantaila giltzatzea gaituta"
-
-#~ msgid "Sets whether the screen will be locked after the specified time."
-#~ msgstr ""
-#~ "Zehaztutako denbora igarotakoan pantaila giltzatuko den ezartzen du."
-
-#~ msgid "Screen saver timeout"
-#~ msgstr "Pantaila-babeslearen denbora-muga"
-
-#~ msgid "Sets the minutes after which the screen is locked."
-#~ msgstr "Pantaila giltzatzeko minutu kopurua ezartzen du."
 
 #~ msgid "&Execute"
 #~ msgstr "&Exekutatu"

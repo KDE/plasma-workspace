@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2023-06-27 15:58+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -136,6 +136,30 @@ msgstr "Pidä avoinna"
 #, kde-format
 msgid "Configure…"
 msgstr "Asetukset…"
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:10
+#, kde-format
+msgid "Screen lock enabled"
+msgstr "Näyttölukko käytössä"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:11
+#, kde-format
+msgid "Sets whether the screen will be locked after the specified time."
+msgstr "Asettaa, lukitaanko näyttö määräajan kuluessa."
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:16
+#, kde-format
+msgid "Screen saver timeout"
+msgstr "Näytönsäästäjän aikakatkaisu"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:17
+#, kde-format
+msgid "Sets the minutes after which the screen is locked."
+msgstr "Asettaa minuutteina ajan, jossa näyttö lukitaan."
 
 #: sessionsprivate/sessionsmodel.cpp:235 sessionsprivate/sessionsmodel.cpp:239
 #, kde-format
@@ -305,18 +329,6 @@ msgstr "Lataa uusia Plasma-sovelmia"
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "Asenna sovelma paikallisesta tiedostosta…"
-
-#~ msgid "Screen lock enabled"
-#~ msgstr "Näyttölukko käytössä"
-
-#~ msgid "Sets whether the screen will be locked after the specified time."
-#~ msgstr "Asettaa, lukitaanko näyttö määräajan kuluessa."
-
-#~ msgid "Screen saver timeout"
-#~ msgstr "Näytönsäästäjän aikakatkaisu"
-
-#~ msgid "Sets the minutes after which the screen is locked."
-#~ msgstr "Asettaa minuutteina ajan, jossa näyttö lukitaan."
 
 #~ msgid "&Execute"
 #~ msgstr "&Suorita"

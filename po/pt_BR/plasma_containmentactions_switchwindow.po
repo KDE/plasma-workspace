@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_containmentactions_switchwindow\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2014-06-16 08:17-0300\n"
 "Last-Translator: André Marcelo Alvarenga <alvarenga@kde.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_br@kde.org>\n"
@@ -18,6 +18,24 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 1.5\n"
+
+#. i18n: ectx: property (text), widget (QRadioButton, flatButton)
+#: config.ui:16
+#, kde-format
+msgid "Display all windows in one list"
+msgstr "Exibir todas as janelas em uma lista"
+
+#. i18n: ectx: property (text), widget (QRadioButton, subButton)
+#: config.ui:23
+#, kde-format
+msgid "Display a submenu for each desktop"
+msgstr "Exibir um submenu para cada área de trabalho"
+
+#. i18n: ectx: property (text), widget (QRadioButton, curButton)
+#: config.ui:30
+#, kde-format
+msgid "Display only the current desktop's windows"
+msgstr "Exibir somente as janelas da área de trabalho atual"
 
 #: switch.cpp:75
 #, kde-format
@@ -36,12 +54,3 @@ msgstr "Janelas"
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "All Desktops"
 msgstr "Todas as áreas de trabalho"
-
-#~ msgid "Display all windows in one list"
-#~ msgstr "Exibir todas as janelas em uma lista"
-
-#~ msgid "Display a submenu for each desktop"
-#~ msgstr "Exibir um submenu para cada área de trabalho"
-
-#~ msgid "Display only the current desktop's windows"
-#~ msgstr "Exibir somente as janelas da área de trabalho atual"

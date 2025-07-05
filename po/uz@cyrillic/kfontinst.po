@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2006-12-17 12:18+0000\n"
 "Last-Translator: Mashrab Kuvatov <kmashrab@uni-bremen.de>\n"
 "Language-Team: Uzbek <floss-uz-l10n@googlegroups.com>\n"
@@ -1590,6 +1590,12 @@ msgstr "Кўриб чиқиш матни"
 #, kde-format
 msgid "Please enter new string:"
 msgstr "Янги матнни киритинг:"
+
+#. i18n: ectx: ToolBar (mainToolBar)
+#: viewpart/kfontviewpart.rc:4
+#, kde-format
+msgid "&Main Toolbar"
+msgstr ""
 
 #: viewpart/PreviewSelectAction.cpp:13
 #, fuzzy, kde-format

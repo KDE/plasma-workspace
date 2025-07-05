@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2017-07-03 16:03+0100\n"
 "Last-Translator: Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -17,11 +17,14 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Lokalize 2.0\n"
 
+#. i18n: ectx: property (text), widget (QCheckBox, showAppsByName)
+#: config.ui:17
+#, kde-format
+msgid "Show applications by name"
+msgstr "Zobrazit aplikace podle jména"
+
 #: launch.cpp:89
 #, kde-format
 msgctxt "plasma_containmentactions_applauncher"
 msgid "Configure Application Launcher Plugin"
 msgstr "Nastavte modul pro spouštění aplikací"
-
-#~ msgid "Show applications by name"
-#~ msgstr "Zobrazit aplikace podle jména"

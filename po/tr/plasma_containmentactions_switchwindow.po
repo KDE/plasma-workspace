@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_containmentactions_switchwindow\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-03-12 15:28+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -18,6 +18,24 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 21.12.3\n"
+
+#. i18n: ectx: property (text), widget (QRadioButton, flatButton)
+#: config.ui:16
+#, kde-format
+msgid "Display all windows in one list"
+msgstr "Tüm pencereleri bir listede göster"
+
+#. i18n: ectx: property (text), widget (QRadioButton, subButton)
+#: config.ui:23
+#, kde-format
+msgid "Display a submenu for each desktop"
+msgstr "Her masaüstü için bir alt menü göster"
+
+#. i18n: ectx: property (text), widget (QRadioButton, curButton)
+#: config.ui:30
+#, kde-format
+msgid "Display only the current desktop's windows"
+msgstr "Yalnızca geçerli masaüstünün pencerelerini göster"
 
 #: switch.cpp:75
 #, kde-format
@@ -36,12 +54,3 @@ msgstr "Pencereler"
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "All Desktops"
 msgstr "Tüm Masaüstleri"
-
-#~ msgid "Display all windows in one list"
-#~ msgstr "Tüm pencereleri bir listede göster"
-
-#~ msgid "Display a submenu for each desktop"
-#~ msgstr "Her masaüstü için bir alt menü göster"
-
-#~ msgid "Display only the current desktop's windows"
-#~ msgstr "Yalnızca geçerli masaüstünün pencerelerini göster"

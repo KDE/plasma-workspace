@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-10-24 16:25+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -40,6 +40,48 @@ msgstr "Icone piccole"
 #, kde-format
 msgid "Dialogs"
 msgstr "Finestre"
+
+#. i18n: ectx: label, entry (Theme), group (Icons)
+#: iconssettingsbase.kcfg:9
+#, kde-format
+msgid "Name of the current icon theme"
+msgstr "Nome del tema di icone attuale"
+
+#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
+#: iconssettingsbase.kcfg:15
+#, kde-format
+msgid "Desktop icons size"
+msgstr "Dimensione delle icone del  desktop"
+
+#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
+#: iconssettingsbase.kcfg:21
+#, kde-format
+msgid "Toolbar icons size"
+msgstr "Dimensione delle icone della barra degli strumenti"
+
+#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
+#: iconssettingsbase.kcfg:27
+#, kde-format
+msgid "Main toolbar icons size"
+msgstr "Dimensione delle icone barra principale"
+
+#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
+#: iconssettingsbase.kcfg:33
+#, kde-format
+msgid "Small icons size"
+msgstr "Dimensione delle icone piccole"
+
+#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
+#: iconssettingsbase.kcfg:39
+#, kde-format
+msgid "Panel icons size"
+msgstr "Dimensione delle icone del pannello"
+
+#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
+#: iconssettingsbase.kcfg:45
+#, kde-format
+msgid "Dialog icons size"
+msgstr "Dimensione delle icone della finestra"
 
 #: main.cpp:182
 #, kde-format
@@ -151,27 +193,6 @@ msgstr "Apri tema"
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "File di tema (*.tar.gz *.tar.bz2)"
-
-#~ msgid "Name of the current icon theme"
-#~ msgstr "Nome del tema di icone attuale"
-
-#~ msgid "Desktop icons size"
-#~ msgstr "Dimensione delle icone del  desktop"
-
-#~ msgid "Toolbar icons size"
-#~ msgstr "Dimensione delle icone della barra degli strumenti"
-
-#~ msgid "Main toolbar icons size"
-#~ msgstr "Dimensione delle icone barra principale"
-
-#~ msgid "Small icons size"
-#~ msgstr "Dimensione delle icone piccole"
-
-#~ msgid "Panel icons size"
-#~ msgstr "Dimensione delle icone del pannello"
-
-#~ msgid "Dialog icons size"
-#~ msgstr "Dimensione delle icone della finestra"
 
 #~ msgid "Toolbar"
 #~ msgstr "Barra degli strumenti"

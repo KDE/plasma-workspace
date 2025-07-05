@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2021-11-14 17:38+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -1594,6 +1594,12 @@ msgstr "문자열 미리 보기"
 msgid "Please enter new string:"
 msgstr "새로운 문자열을 입력하십시오:"
 
+#. i18n: ectx: ToolBar (mainToolBar)
+#: viewpart/kfontviewpart.rc:4
+#, kde-format
+msgid "&Main Toolbar"
+msgstr "주 도구 모음(&M)"
+
 #: viewpart/PreviewSelectAction.cpp:13
 #, kde-format
 msgid "Preview Type"
@@ -2286,9 +2292,6 @@ msgstr "파스파 문자"
 #: viewpart/UnicodeScripts.h:80
 msgid "Yi"
 msgstr "이 문자"
-
-#~ msgid "&Main Toolbar"
-#~ msgstr "주 도구 모음(&M)"
 
 #~ msgid "Print..."
 #~ msgstr "인쇄..."

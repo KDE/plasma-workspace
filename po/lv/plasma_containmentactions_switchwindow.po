@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2009-12-05 22:13+0200\n"
 "Last-Translator: Viesturs Zarins <viesturs.zarins@mii.lu.lv>\n"
 "Language-Team: Latvian <locale@laka.lv>\n"
@@ -17,6 +17,24 @@ msgstr ""
 "X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
+
+#. i18n: ectx: property (text), widget (QRadioButton, flatButton)
+#: config.ui:16
+#, kde-format
+msgid "Display all windows in one list"
+msgstr "Rādīt visus logus vienā sarakstā"
+
+#. i18n: ectx: property (text), widget (QRadioButton, subButton)
+#: config.ui:23
+#, kde-format
+msgid "Display a submenu for each desktop"
+msgstr "Rādīt apakšizvēlni katrai darbvirsmai"
+
+#. i18n: ectx: property (text), widget (QRadioButton, curButton)
+#: config.ui:30
+#, kde-format
+msgid "Display only the current desktop's windows"
+msgstr "Rādīt tikai aktīvās darbvirsmas logus"
 
 #: switch.cpp:75
 #, fuzzy, kde-format
@@ -38,12 +56,3 @@ msgstr "Logi"
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "All Desktops"
 msgstr "Visas darbvirsmas"
-
-#~ msgid "Display all windows in one list"
-#~ msgstr "Rādīt visus logus vienā sarakstā"
-
-#~ msgid "Display a submenu for each desktop"
-#~ msgstr "Rādīt apakšizvēlni katrai darbvirsmai"
-
-#~ msgid "Display only the current desktop's windows"
-#~ msgstr "Rādīt tikai aktīvās darbvirsmas logus"

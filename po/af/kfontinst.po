@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst stable\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2005-11-25 21:56+0200\n"
 "Last-Translator: AFRIKAANS <translate-discuss-af@lists.sourceforge.net>\n"
 "Language-Team: Afrikaans <af@li.org>\n"
@@ -1619,6 +1619,12 @@ msgstr "Voorskou String"
 #, kde-format
 msgid "Please enter new string:"
 msgstr "Sleutel asseblief nuwe string in:"
+
+#. i18n: ectx: ToolBar (mainToolBar)
+#: viewpart/kfontviewpart.rc:4
+#, kde-format
+msgid "&Main Toolbar"
+msgstr ""
 
 #: viewpart/PreviewSelectAction.cpp:13
 #, fuzzy, kde-format

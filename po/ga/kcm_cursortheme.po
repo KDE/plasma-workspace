@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2004-12-03 14:52-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -17,6 +17,19 @@ msgstr ""
 "X-Generator: KBabel 1.0beta1\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
+
+#. i18n: ectx: label, entry (cursorTheme), group (Mouse)
+#: cursorthemesettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Do not change cursor theme"
+msgid "Name of the current cursor theme"
+msgstr "Ná hathraigh an téama cúrsóra"
+
+#. i18n: ectx: label, entry (cursorSize), group (Mouse)
+#: cursorthemesettings.kcfg:13
+#, kde-format
+msgid "Current cursor size"
+msgstr ""
 
 #: kcmcursortheme.cpp:308
 #, fuzzy, kde-format
@@ -64,6 +77,13 @@ msgstr "Forscríobh an Téama?"
 #: kcmcursortheme.cpp:468
 #, kde-format
 msgid "Theme installed successfully."
+msgstr ""
+
+#. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
+#. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)
+#: launchfeedbacksettings.kcfg:19 launchfeedbacksettings.kcfg:33
+#, kde-format
+msgid "Timeout in seconds"
 msgstr ""
 
 #: package/contents/ui/Delegate.qml:54
@@ -269,11 +289,6 @@ msgctxt ""
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(Méideanna le fáil: %1)"
-
-#, fuzzy
-#~| msgid "Do not change cursor theme"
-#~ msgid "Name of the current cursor theme"
-#~ msgstr "Ná hathraigh an téama cúrsóra"
 
 #~ msgid "Name"
 #~ msgstr "Ainm"

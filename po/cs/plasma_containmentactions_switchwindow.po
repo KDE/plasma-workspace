@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2014-06-23 10:39+0200\n"
 "Last-Translator: Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -16,6 +16,24 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Lokalize 1.5\n"
+
+#. i18n: ectx: property (text), widget (QRadioButton, flatButton)
+#: config.ui:16
+#, kde-format
+msgid "Display all windows in one list"
+msgstr "Zobrazit všechna okna v jednom seznamu"
+
+#. i18n: ectx: property (text), widget (QRadioButton, subButton)
+#: config.ui:23
+#, kde-format
+msgid "Display a submenu for each desktop"
+msgstr "Pro každou plochu zobrazit podnabídku"
+
+#. i18n: ectx: property (text), widget (QRadioButton, curButton)
+#: config.ui:30
+#, kde-format
+msgid "Display only the current desktop's windows"
+msgstr "Zobrazit pouze okna z aktuální plochy"
 
 #: switch.cpp:75
 #, kde-format
@@ -34,12 +52,3 @@ msgstr "Okna"
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "All Desktops"
 msgstr "Všechny plochy"
-
-#~ msgid "Display all windows in one list"
-#~ msgstr "Zobrazit všechna okna v jednom seznamu"
-
-#~ msgid "Display a submenu for each desktop"
-#~ msgstr "Pro každou plochu zobrazit podnabídku"
-
-#~ msgid "Display only the current desktop's windows"
-#~ msgstr "Zobrazit pouze okna z aktuální plochy"

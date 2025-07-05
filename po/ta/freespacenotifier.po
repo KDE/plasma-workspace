@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2021-08-08 16:15+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -32,6 +32,36 @@ msgstr "ஃபைல்-லைட்டில் திற"
 msgid "Open in File Manager"
 msgstr "கோப்பு உலாவியில் திற"
 
+#. i18n: ectx: label, entry (minimumSpace), group (General)
+#: freespacenotifier.kcfg:9
+#, kde-format
+msgid "Minimum free space before user starts being notified."
+msgstr "இதைவிட குறைவாக காலியிடம் இருந்தால் பயனரிடம் தெரிவிக்கப்படும்."
+
+#. i18n: ectx: label, entry (enableNotification), group (General)
+#: freespacenotifier.kcfg:15
+#, kde-format
+msgid "Is the free space notification enabled."
+msgstr "காலியிட அறிவிப்பு இயக்கப்பட்டுள்ளதா."
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableNotification)
+#: freespacenotifier_prefs_base.ui:17
+#, kde-format
+msgid "Enable low disk space warning"
+msgstr "வட்டில் காலியிடம் குறைவாக இருக்கும்போது வரும் எச்சரிக்கையை இயக்கு"
+
+#. i18n: ectx: property (text), widget (QLabel, label_minimumSpace)
+#: freespacenotifier_prefs_base.ui:27
+#, kde-format
+msgid "Warn when free space is below:"
+msgstr "இதைவிட குறைவாக காலியிடம் இருந்தால் எச்சரி:"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpace)
+#: freespacenotifier_prefs_base.ui:37
+#, kde-format
+msgid " MiB"
+msgstr " MiB"
+
 #: module.cpp:37
 #, kde-format
 msgid ""
@@ -51,18 +81,3 @@ msgstr "உங்கள் ரூட் அடைவில் இடம் க�
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"
 msgstr "பொது"
-
-#~ msgid "Minimum free space before user starts being notified."
-#~ msgstr "இதைவிட குறைவாக காலியிடம் இருந்தால் பயனரிடம் தெரிவிக்கப்படும்."
-
-#~ msgid "Is the free space notification enabled."
-#~ msgstr "காலியிட அறிவிப்பு இயக்கப்பட்டுள்ளதா."
-
-#~ msgid "Enable low disk space warning"
-#~ msgstr "வட்டில் காலியிடம் குறைவாக இருக்கும்போது வரும் எச்சரிக்கையை இயக்கு"
-
-#~ msgid "Warn when free space is below:"
-#~ msgstr "இதைவிட குறைவாக காலியிடம் இருந்தால் எச்சரி:"
-
-#~ msgid " MiB"
-#~ msgstr " MiB"

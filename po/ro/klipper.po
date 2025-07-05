@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-12-29 17:31+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -617,6 +617,219 @@ msgstr "curent"
 msgid "down"
 msgstr "jos"
 
+#. i18n: ectx: label, entry (Version), group (General)
+#: klipper.kcfg:10
+#, kde-format
+msgid "Klipper version"
+msgstr "Versiune Klipper"
+
+#. i18n: ectx: label, entry (KeepClipboardContents), group (General)
+#: klipper.kcfg:13
+#, kde-format
+msgid "Save history across desktop sessions"
+msgstr "Salvează istoricul între sesiuni de birou"
+
+#. i18n: ectx: tooltip, entry (KeepClipboardContents), group (General)
+#: klipper.kcfg:15
+#, kde-format
+msgid ""
+"Retain the clipboard history, so it will be available the next time you log "
+"in."
+msgstr ""
+"Păstrează istoricul clipboard-ului, astfel încât să fie disponibil la "
+"următoarea autentificare."
+
+#. i18n: ectx: label, entry (PreventEmptyClipboard), group (General)
+#: klipper.kcfg:18
+#, kde-format
+msgid "Prevent the clipboard from being cleared"
+msgstr "Previne curățarea clipboard-ului"
+
+#. i18n: ectx: whatsthis, entry (PreventEmptyClipboard), group (General)
+#: klipper.kcfg:20
+#, kde-format
+msgid ""
+"Do not allow the clipboard to be cleared, for example when an application "
+"exits."
+msgstr ""
+"Nu permite curățarea clipboard-ului, de exemplu la terminarea unei aplicații."
+
+#. i18n: ectx: label, entry (SyncClipboards), group (General)
+#: klipper.kcfg:27
+#, kde-format
+msgid "Keep the selection and clipboard the same"
+msgstr "Păstrează selecția și clipboard-ul la fel"
+
+#. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
+#: klipper.kcfg:29
+#, kde-format
+msgid ""
+"Content selected with the cursor is automatically copied to the clipboard so "
+"that it can be pasted with either a Paste action or a middle-click.<br/><a "
+"href=\"1\">More about the selection and clipboard</a>."
+msgstr ""
+"Conținutul ales cu cursorul e copiat automat în clipboard, astfel încât să "
+"poată fi lipit cu o acțiune de lipire sau clic mijlociu.<br/><a href="
+"\"1\">Informații suplimentare despre selecție și clipboard</a>."
+
+#. i18n: ectx: label, entry (IgnoreSelection), group (General)
+#: klipper.kcfg:32
+#, kde-format
+msgid "Ignore the selection"
+msgstr "Ignoră selecția"
+
+#. i18n: ectx: whatsthis, entry (IgnoreSelection), group (General)
+#: klipper.kcfg:34
+#, kde-format
+msgid ""
+"Content selected with the cursor but not explicitly copied to the clipboard "
+"is not automatically stored in the clipboard history, and can only be pasted "
+"using a middle-click."
+msgstr ""
+"Conținutul ales cu cursorul, dar care nu e copiat explicit în clipboard, nu "
+"va fi păstrat automat în istoricul clipboard-ului și poate fi lipit numai cu "
+"clic mijlociu."
+
+#. i18n: ectx: label, entry (SelectionTextOnly), group (General)
+#: klipper.kcfg:37
+#, kde-format
+msgid "Text selection only"
+msgstr "Numai selecție textuală"
+
+#. i18n: ectx: whatsthis, entry (SelectionTextOnly), group (General)
+#: klipper.kcfg:39
+#, kde-format
+msgid ""
+"Only store text selections in the clipboard history, not images or any other "
+"type of data."
+msgstr ""
+"Păstrează doar selecțiile textuale în istoricul clipboard-ului, nu și "
+"imagini sau alte tipuri de date."
+
+#. i18n: ectx: label, entry (IgnoreImages), group (General)
+#: klipper.kcfg:42
+#, kde-format
+msgid "Always ignore images"
+msgstr "Ignoră imaginile întotdeauna"
+
+#. i18n: ectx: whatsthis, entry (IgnoreImages), group (General)
+#: klipper.kcfg:44
+#, kde-format
+msgid ""
+"Do not store images in the clipboard history, even if explicitly copied."
+msgstr ""
+"Nu păstra imagini în istoricul clipboard-ului, chiar dacă sunt copiate "
+"explicit."
+
+#. i18n: ectx: label, entry (UseGUIRegExpEditor), group (General)
+#: klipper.kcfg:47
+#, kde-format
+msgid "Use graphical regexp editor"
+msgstr "Folosește redactor regexp grafic"
+
+#. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
+#: klipper.kcfg:51
+#, kde-format
+msgid "Immediately on selection"
+msgstr "Imediat la selectare"
+
+#. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
+#: klipper.kcfg:52
+#, kde-format
+msgid ""
+"Show the popup menu of applicable actions as soon as a selection is made."
+msgstr "Arată meniu contextual cu acțiuni aplicabile imediat ce e ales ceva."
+
+#. i18n: ectx: label, entry (NoActionsForWM_CLASS), group (General)
+#: klipper.kcfg:57
+#, kde-format
+msgid "No actions for WM_CLASS"
+msgstr "Nicio acțiune pentru WM_CLASS"
+
+#. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
+#: klipper.kcfg:60
+#, kde-format
+msgid "Automatic action menu time:"
+msgstr "Durată meniu cu acțiuni automat:"
+
+#. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
+#: klipper.kcfg:64
+#, kde-format
+msgid "Display the automatic action popup menu for this time."
+msgstr "Afișează meniul contextual cu acțiuni automate pentru această durată."
+
+#. i18n: ectx: label, entry (MaxClipItems), group (General)
+#: klipper.kcfg:67
+#, kde-format
+msgid "History size:"
+msgstr "Dimensiune istoric:"
+
+#. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
+#: klipper.kcfg:71
+#, kde-format
+msgid "The clipboard history will store up to this many items."
+msgstr "Istoricul clipboard-ului va păstra cel mult atâtea elemente."
+
+#. i18n: ectx: label, entry (ActionList), group (General)
+#: klipper.kcfg:74
+#, kde-format
+msgid "Dummy entry for indicating changes in an action's tree widget"
+msgstr ""
+"Înregistrare fictivă pentru a indica modificări în arborele de controale al "
+"acțiunii"
+
+#. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
+#: klipper.kcfg:84
+#, kde-format
+msgid "Trim whitespace from selection"
+msgstr "Tunde spațiile albe de la selecție"
+
+#. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
+#: klipper.kcfg:86
+#, kde-format
+msgid ""
+"Remove any whitespace from the start and end of selected text, before "
+"performing an action. For example, this ensures that a URL pasted in a "
+"browser is interpreted as expected. The text saved on the clipboard is not "
+"affected."
+msgstr ""
+"Elimină orice spațiu alb de la începutul și sfârșitul textului ales, înainte "
+"de a efectua o acțiune. De exemplu, aceasta asigură că un URL lipit într-un "
+"navigator e interpretat corect.<br/><br/>Textul salvat în clipboard nu e "
+"afectat."
+
+#. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
+#: klipper.kcfg:89
+#, kde-format
+msgid "For an item chosen from history"
+msgstr "Pentru un element ales din istoric"
+
+#. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
+#: klipper.kcfg:91
+#, kde-format
+msgid ""
+"Show the popup menu of applicable actions if an entry is chosen from the "
+"clipboard history."
+msgstr ""
+"Arată meniu contextual cu acțiuni aplicabile dacă e aleasă o înregistrare "
+"din istoricul clipboard-ului."
+
+#. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
+#: klipper.kcfg:94
+#, kde-format
+msgid "Include MIME actions"
+msgstr "Include acțiunile MIME"
+
+#. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
+#: klipper.kcfg:96
+#, kde-format
+msgid ""
+"If a file name or URL is selected, include applications that can accept its "
+"MIME type in the popup menu."
+msgstr ""
+"Dacă o denumire de fișier sau un URL sunt alese, include aplicații ce pot "
+"accepta acest tip MIME în meniul contextual."
+
 #: klipperpopup.cpp:105
 #, kde-format
 msgctxt "%1 is application display name"
@@ -755,138 +968,6 @@ msgstr "Dezactivează acest meniu contextual"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Renunță"
-
-#~ msgid "Klipper version"
-#~ msgstr "Versiune Klipper"
-
-#~ msgid "Save history across desktop sessions"
-#~ msgstr "Salvează istoricul între sesiuni de birou"
-
-#~ msgid ""
-#~ "Retain the clipboard history, so it will be available the next time you "
-#~ "log in."
-#~ msgstr ""
-#~ "Păstrează istoricul clipboard-ului, astfel încât să fie disponibil la "
-#~ "următoarea autentificare."
-
-#~ msgid "Prevent the clipboard from being cleared"
-#~ msgstr "Previne curățarea clipboard-ului"
-
-#~ msgid ""
-#~ "Do not allow the clipboard to be cleared, for example when an application "
-#~ "exits."
-#~ msgstr ""
-#~ "Nu permite curățarea clipboard-ului, de exemplu la terminarea unei "
-#~ "aplicații."
-
-#~ msgid "Keep the selection and clipboard the same"
-#~ msgstr "Păstrează selecția și clipboard-ul la fel"
-
-#~ msgid ""
-#~ "Content selected with the cursor is automatically copied to the clipboard "
-#~ "so that it can be pasted with either a Paste action or a middle-click.<br/"
-#~ "><a href=\"1\">More about the selection and clipboard</a>."
-#~ msgstr ""
-#~ "Conținutul ales cu cursorul e copiat automat în clipboard, astfel încât "
-#~ "să poată fi lipit cu o acțiune de lipire sau clic mijlociu.<br/><a href="
-#~ "\"1\">Informații suplimentare despre selecție și clipboard</a>."
-
-#~ msgid "Ignore the selection"
-#~ msgstr "Ignoră selecția"
-
-#~ msgid ""
-#~ "Content selected with the cursor but not explicitly copied to the "
-#~ "clipboard is not automatically stored in the clipboard history, and can "
-#~ "only be pasted using a middle-click."
-#~ msgstr ""
-#~ "Conținutul ales cu cursorul, dar care nu e copiat explicit în clipboard, "
-#~ "nu va fi păstrat automat în istoricul clipboard-ului și poate fi lipit "
-#~ "numai cu clic mijlociu."
-
-#~ msgid "Text selection only"
-#~ msgstr "Numai selecție textuală"
-
-#~ msgid ""
-#~ "Only store text selections in the clipboard history, not images or any "
-#~ "other type of data."
-#~ msgstr ""
-#~ "Păstrează doar selecțiile textuale în istoricul clipboard-ului, nu și "
-#~ "imagini sau alte tipuri de date."
-
-#~ msgid "Always ignore images"
-#~ msgstr "Ignoră imaginile întotdeauna"
-
-#~ msgid ""
-#~ "Do not store images in the clipboard history, even if explicitly copied."
-#~ msgstr ""
-#~ "Nu păstra imagini în istoricul clipboard-ului, chiar dacă sunt copiate "
-#~ "explicit."
-
-#~ msgid "Use graphical regexp editor"
-#~ msgstr "Folosește redactor regexp grafic"
-
-#~ msgid "Immediately on selection"
-#~ msgstr "Imediat la selectare"
-
-#~ msgid ""
-#~ "Show the popup menu of applicable actions as soon as a selection is made."
-#~ msgstr ""
-#~ "Arată meniu contextual cu acțiuni aplicabile imediat ce e ales ceva."
-
-#~ msgid "No actions for WM_CLASS"
-#~ msgstr "Nicio acțiune pentru WM_CLASS"
-
-#~ msgid "Automatic action menu time:"
-#~ msgstr "Durată meniu cu acțiuni automat:"
-
-#~ msgid "Display the automatic action popup menu for this time."
-#~ msgstr ""
-#~ "Afișează meniul contextual cu acțiuni automate pentru această durată."
-
-#~ msgid "History size:"
-#~ msgstr "Dimensiune istoric:"
-
-#~ msgid "The clipboard history will store up to this many items."
-#~ msgstr "Istoricul clipboard-ului va păstra cel mult atâtea elemente."
-
-#~ msgid "Dummy entry for indicating changes in an action's tree widget"
-#~ msgstr ""
-#~ "Înregistrare fictivă pentru a indica modificări în arborele de controale "
-#~ "al acțiunii"
-
-#~ msgid "Trim whitespace from selection"
-#~ msgstr "Tunde spațiile albe de la selecție"
-
-#~ msgid ""
-#~ "Remove any whitespace from the start and end of selected text, before "
-#~ "performing an action. For example, this ensures that a URL pasted in a "
-#~ "browser is interpreted as expected. The text saved on the clipboard is "
-#~ "not affected."
-#~ msgstr ""
-#~ "Elimină orice spațiu alb de la începutul și sfârșitul textului ales, "
-#~ "înainte de a efectua o acțiune. De exemplu, aceasta asigură că un URL "
-#~ "lipit într-un navigator e interpretat corect.<br/><br/>Textul salvat în "
-#~ "clipboard nu e afectat."
-
-#~ msgid "For an item chosen from history"
-#~ msgstr "Pentru un element ales din istoric"
-
-#~ msgid ""
-#~ "Show the popup menu of applicable actions if an entry is chosen from the "
-#~ "clipboard history."
-#~ msgstr ""
-#~ "Arată meniu contextual cu acțiuni aplicabile dacă e aleasă o înregistrare "
-#~ "din istoricul clipboard-ului."
-
-#~ msgid "Include MIME actions"
-#~ msgstr "Include acțiunile MIME"
-
-#~ msgid ""
-#~ "If a file name or URL is selected, include applications that can accept "
-#~ "its MIME type in the popup menu."
-#~ msgstr ""
-#~ "Dacă o denumire de fișier sau un URL sunt alese, include aplicații ce pot "
-#~ "accepta acest tip MIME în meniul contextual."
 
 #~ msgctxt "@info"
 #~ msgid ""

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2021-04-16 17:59+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -18,11 +18,14 @@ msgstr ""
 "20)) ? 1 : 2;\n"
 "X-Generator: Lokalize 19.12.3\n"
 
+#. i18n: ectx: property (text), widget (QCheckBox, showAppsByName)
+#: config.ui:17
+#, kde-format
+msgid "Show applications by name"
+msgstr "Arată aplicațiile după denumire"
+
 #: launch.cpp:89
 #, kde-format
 msgctxt "plasma_containmentactions_applauncher"
 msgid "Configure Application Launcher Plugin"
 msgstr "Configurează extensia pentru lansator de aplicații"
-
-#~ msgid "Show applications by name"
-#~ msgstr "Arată aplicațiile după denumire"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2023-11-12 16:39+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -626,6 +626,214 @@ msgstr "aktuala"
 msgid "down"
 msgstr "malsupra"
 
+#. i18n: ectx: label, entry (Version), group (General)
+#: klipper.kcfg:10
+#, kde-format
+msgid "Klipper version"
+msgstr "Klipper versio"
+
+#. i18n: ectx: label, entry (KeepClipboardContents), group (General)
+#: klipper.kcfg:13
+#, kde-format
+msgid "Save history across desktop sessions"
+msgstr "Konservi historion tra labortablaj seancoj"
+
+#. i18n: ectx: tooltip, entry (KeepClipboardContents), group (General)
+#: klipper.kcfg:15
+#, kde-format
+msgid ""
+"Retain the clipboard history, so it will be available the next time you log "
+"in."
+msgstr ""
+"Konservu la tondujohistorion, do ĝi estos disponebla la venontan fojon kiam "
+"vi ensalutos."
+
+#. i18n: ectx: label, entry (PreventEmptyClipboard), group (General)
+#: klipper.kcfg:18
+#, kde-format
+msgid "Prevent the clipboard from being cleared"
+msgstr "Eviti ke la poŝo estu forviŝata"
+
+#. i18n: ectx: whatsthis, entry (PreventEmptyClipboard), group (General)
+#: klipper.kcfg:20
+#, kde-format
+msgid ""
+"Do not allow the clipboard to be cleared, for example when an application "
+"exits."
+msgstr "Ne permesu ke la tondujo estu forigita, ekzemple kiam aplikaĵo eliras."
+
+#. i18n: ectx: label, entry (SyncClipboards), group (General)
+#: klipper.kcfg:27
+#, kde-format
+msgid "Keep the selection and clipboard the same"
+msgstr "Konservi elekton kaj poŝon sama"
+
+#. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
+#: klipper.kcfg:29
+#, kde-format
+msgid ""
+"Content selected with the cursor is automatically copied to the clipboard so "
+"that it can be pasted with either a Paste action or a middle-click.<br/><a "
+"href=\"1\">More about the selection and clipboard</a>."
+msgstr ""
+"Enhavo elektita per la kursoro estas aŭtomate kopiita al la tondujo tiel ke "
+"ĝi povas esti algluita per aŭ alglui ago aŭ mezklako.<br/><a href=\"1\">Pli "
+"pri la elekto kaj tondujo</a>."
+
+#. i18n: ectx: label, entry (IgnoreSelection), group (General)
+#: klipper.kcfg:32
+#, kde-format
+msgid "Ignore the selection"
+msgstr "Ignori la elekton"
+
+#. i18n: ectx: whatsthis, entry (IgnoreSelection), group (General)
+#: klipper.kcfg:34
+#, kde-format
+msgid ""
+"Content selected with the cursor but not explicitly copied to the clipboard "
+"is not automatically stored in the clipboard history, and can only be pasted "
+"using a middle-click."
+msgstr ""
+"Enhavo elektita per la kursoro sed ne eksplicite kopiita al la tondujo ne "
+"estas aŭtomate konservita en la tondujo-historio, kaj povas esti algluita "
+"nur per mezklako."
+
+#. i18n: ectx: label, entry (SelectionTextOnly), group (General)
+#: klipper.kcfg:37
+#, kde-format
+msgid "Text selection only"
+msgstr "Nur tekstelekto"
+
+#. i18n: ectx: whatsthis, entry (SelectionTextOnly), group (General)
+#: klipper.kcfg:39
+#, kde-format
+msgid ""
+"Only store text selections in the clipboard history, not images or any other "
+"type of data."
+msgstr ""
+"Konservu nur tekstajn elektojn en la tondujo-historio, ne bildojn aŭ ajnan "
+"alian tipon de datumoj."
+
+#. i18n: ectx: label, entry (IgnoreImages), group (General)
+#: klipper.kcfg:42
+#, kde-format
+msgid "Always ignore images"
+msgstr "Ĉiam ignori bildojn"
+
+#. i18n: ectx: whatsthis, entry (IgnoreImages), group (General)
+#: klipper.kcfg:44
+#, kde-format
+msgid ""
+"Do not store images in the clipboard history, even if explicitly copied."
+msgstr "Ne konservi bildojn en la tondujohistorio, eĉ se eksplicite kopiitaj."
+
+#. i18n: ectx: label, entry (UseGUIRegExpEditor), group (General)
+#: klipper.kcfg:47
+#, kde-format
+msgid "Use graphical regexp editor"
+msgstr "Uzi grafikan regexp-redaktilon"
+
+#. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
+#: klipper.kcfg:51
+#, kde-format
+msgid "Immediately on selection"
+msgstr "Senpere je elekto"
+
+#. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
+#: klipper.kcfg:52
+#, kde-format
+msgid ""
+"Show the popup menu of applicable actions as soon as a selection is made."
+msgstr "Montru la ŝprucmenuon de aplikeblaj agoj tuj kiam elekto estas farita."
+
+#. i18n: ectx: label, entry (NoActionsForWM_CLASS), group (General)
+#: klipper.kcfg:57
+#, kde-format
+msgid "No actions for WM_CLASS"
+msgstr "Neniuj agoj por WM_CLASS"
+
+#. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
+#: klipper.kcfg:60
+#, kde-format
+msgid "Automatic action menu time:"
+msgstr "Aŭtomata agomontra tempo:"
+
+#. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
+#: klipper.kcfg:64
+#, kde-format
+msgid "Display the automatic action popup menu for this time."
+msgstr "Montri la aŭtomatan ŝprucmenuon por agoj dum tiu tempo."
+
+#. i18n: ectx: label, entry (MaxClipItems), group (General)
+#: klipper.kcfg:67
+#, kde-format
+msgid "History size:"
+msgstr "Grando de la historio:"
+
+#. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
+#: klipper.kcfg:71
+#, kde-format
+msgid "The clipboard history will store up to this many items."
+msgstr "La tondujo-historio konservos ĝis tiom da eroj."
+
+#. i18n: ectx: label, entry (ActionList), group (General)
+#: klipper.kcfg:74
+#, kde-format
+msgid "Dummy entry for indicating changes in an action's tree widget"
+msgstr "Imita eniro por indiki ŝanĝojn en la arbfenestraĵo de ago"
+
+#. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
+#: klipper.kcfg:84
+#, kde-format
+msgid "Trim whitespace from selection"
+msgstr "Stuci spacetojn de elekto"
+
+#. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
+#: klipper.kcfg:86
+#, kde-format
+msgid ""
+"Remove any whitespace from the start and end of selected text, before "
+"performing an action. For example, this ensures that a URL pasted in a "
+"browser is interpreted as expected. The text saved on the clipboard is not "
+"affected."
+msgstr ""
+"Forigu ajnan blankspacon de la komenco kaj fino de elektita teksto, antaŭ ol "
+"fari agon. Ekzemple, ĉi tio certigas, ke URL algluita en retumilo estas "
+"interpretita kiel atendite. La teksto konservita en la tondujo ne estas "
+"tuŝita."
+
+#. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
+#: klipper.kcfg:89
+#, kde-format
+msgid "For an item chosen from history"
+msgstr "Por ero elektita el la historio"
+
+#. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
+#: klipper.kcfg:91
+#, kde-format
+msgid ""
+"Show the popup menu of applicable actions if an entry is chosen from the "
+"clipboard history."
+msgstr ""
+"Montri la ŝprucmenuon de aplikeblaj agoj se ero de la poŝohistorio estas "
+"elektata."
+
+#. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
+#: klipper.kcfg:94
+#, kde-format
+msgid "Include MIME actions"
+msgstr "Inkluzivi MIME agojn"
+
+#. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
+#: klipper.kcfg:96
+#, kde-format
+msgid ""
+"If a file name or URL is selected, include applications that can accept its "
+"MIME type in the popup menu."
+msgstr ""
+"Se estas elektita dosiernomo aŭ URL, inkludu aplikaĵojn kiuj povas akcepti "
+"ĝian MIME-tipo en la ŝprucmenuo."
+
 #: klipperpopup.cpp:105
 #, kde-format
 msgctxt "%1 is application display name"
@@ -766,130 +974,3 @@ msgstr "Malebligi ĉi tiun ŝprucmesaĝon"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Rezigni"
-
-#~ msgid "Klipper version"
-#~ msgstr "Klipper versio"
-
-#~ msgid "Save history across desktop sessions"
-#~ msgstr "Konservi historion tra labortablaj seancoj"
-
-#~ msgid ""
-#~ "Retain the clipboard history, so it will be available the next time you "
-#~ "log in."
-#~ msgstr ""
-#~ "Konservu la tondujohistorion, do ĝi estos disponebla la venontan fojon "
-#~ "kiam vi ensalutos."
-
-#~ msgid "Prevent the clipboard from being cleared"
-#~ msgstr "Eviti ke la poŝo estu forviŝata"
-
-#~ msgid ""
-#~ "Do not allow the clipboard to be cleared, for example when an application "
-#~ "exits."
-#~ msgstr ""
-#~ "Ne permesu ke la tondujo estu forigita, ekzemple kiam aplikaĵo eliras."
-
-#~ msgid "Keep the selection and clipboard the same"
-#~ msgstr "Konservi elekton kaj poŝon sama"
-
-#~ msgid ""
-#~ "Content selected with the cursor is automatically copied to the clipboard "
-#~ "so that it can be pasted with either a Paste action or a middle-click.<br/"
-#~ "><a href=\"1\">More about the selection and clipboard</a>."
-#~ msgstr ""
-#~ "Enhavo elektita per la kursoro estas aŭtomate kopiita al la tondujo tiel "
-#~ "ke ĝi povas esti algluita per aŭ alglui ago aŭ mezklako.<br/><a href="
-#~ "\"1\">Pli pri la elekto kaj tondujo</a>."
-
-#~ msgid "Ignore the selection"
-#~ msgstr "Ignori la elekton"
-
-#~ msgid ""
-#~ "Content selected with the cursor but not explicitly copied to the "
-#~ "clipboard is not automatically stored in the clipboard history, and can "
-#~ "only be pasted using a middle-click."
-#~ msgstr ""
-#~ "Enhavo elektita per la kursoro sed ne eksplicite kopiita al la tondujo ne "
-#~ "estas aŭtomate konservita en la tondujo-historio, kaj povas esti algluita "
-#~ "nur per mezklako."
-
-#~ msgid "Text selection only"
-#~ msgstr "Nur tekstelekto"
-
-#~ msgid ""
-#~ "Only store text selections in the clipboard history, not images or any "
-#~ "other type of data."
-#~ msgstr ""
-#~ "Konservu nur tekstajn elektojn en la tondujo-historio, ne bildojn aŭ "
-#~ "ajnan alian tipon de datumoj."
-
-#~ msgid "Always ignore images"
-#~ msgstr "Ĉiam ignori bildojn"
-
-#~ msgid ""
-#~ "Do not store images in the clipboard history, even if explicitly copied."
-#~ msgstr ""
-#~ "Ne konservi bildojn en la tondujohistorio, eĉ se eksplicite kopiitaj."
-
-#~ msgid "Use graphical regexp editor"
-#~ msgstr "Uzi grafikan regexp-redaktilon"
-
-#~ msgid "Immediately on selection"
-#~ msgstr "Senpere je elekto"
-
-#~ msgid ""
-#~ "Show the popup menu of applicable actions as soon as a selection is made."
-#~ msgstr ""
-#~ "Montru la ŝprucmenuon de aplikeblaj agoj tuj kiam elekto estas farita."
-
-#~ msgid "No actions for WM_CLASS"
-#~ msgstr "Neniuj agoj por WM_CLASS"
-
-#~ msgid "Automatic action menu time:"
-#~ msgstr "Aŭtomata agomontra tempo:"
-
-#~ msgid "Display the automatic action popup menu for this time."
-#~ msgstr "Montri la aŭtomatan ŝprucmenuon por agoj dum tiu tempo."
-
-#~ msgid "History size:"
-#~ msgstr "Grando de la historio:"
-
-#~ msgid "The clipboard history will store up to this many items."
-#~ msgstr "La tondujo-historio konservos ĝis tiom da eroj."
-
-#~ msgid "Dummy entry for indicating changes in an action's tree widget"
-#~ msgstr "Imita eniro por indiki ŝanĝojn en la arbfenestraĵo de ago"
-
-#~ msgid "Trim whitespace from selection"
-#~ msgstr "Stuci spacetojn de elekto"
-
-#~ msgid ""
-#~ "Remove any whitespace from the start and end of selected text, before "
-#~ "performing an action. For example, this ensures that a URL pasted in a "
-#~ "browser is interpreted as expected. The text saved on the clipboard is "
-#~ "not affected."
-#~ msgstr ""
-#~ "Forigu ajnan blankspacon de la komenco kaj fino de elektita teksto, antaŭ "
-#~ "ol fari agon. Ekzemple, ĉi tio certigas, ke URL algluita en retumilo "
-#~ "estas interpretita kiel atendite. La teksto konservita en la tondujo ne "
-#~ "estas tuŝita."
-
-#~ msgid "For an item chosen from history"
-#~ msgstr "Por ero elektita el la historio"
-
-#~ msgid ""
-#~ "Show the popup menu of applicable actions if an entry is chosen from the "
-#~ "clipboard history."
-#~ msgstr ""
-#~ "Montri la ŝprucmenuon de aplikeblaj agoj se ero de la poŝohistorio estas "
-#~ "elektata."
-
-#~ msgid "Include MIME actions"
-#~ msgstr "Inkluzivi MIME agojn"
-
-#~ msgid ""
-#~ "If a file name or URL is selected, include applications that can accept "
-#~ "its MIME type in the popup menu."
-#~ msgstr ""
-#~ "Se estas elektita dosiernomo aŭ URL, inkludu aplikaĵojn kiuj povas "
-#~ "akcepti ĝian MIME-tipo en la ŝprucmenuo."

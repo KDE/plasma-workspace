@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2025-02-14 08:32+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -135,6 +135,31 @@ msgstr "Manter aberto"
 #, kde-format
 msgid "Configure…"
 msgstr "Configurar…"
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:10
+#, kde-format
+msgid "Screen lock enabled"
+msgstr "Activouse o bloqueo da pantalla"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:11
+#, kde-format
+msgid "Sets whether the screen will be locked after the specified time."
+msgstr "Define se se bloqueará ou non a pantalla pasado o tempo indicado."
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:16
+#, kde-format
+msgid "Screen saver timeout"
+msgstr "Tempo de agarda do protector de pantalla"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:17
+#, kde-format
+msgid "Sets the minutes after which the screen is locked."
+msgstr ""
+"Define o número de minutos que deben pasar para que se bloquee a pantalla."
 
 #: sessionsprivate/sessionsmodel.cpp:235 sessionsprivate/sessionsmodel.cpp:239
 #, kde-format
@@ -304,19 +329,6 @@ msgstr "Descargar novos trebellos de Plasma"
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "Instalar o trebello dun ficheiro local…"
-
-#~ msgid "Screen lock enabled"
-#~ msgstr "Activouse o bloqueo da pantalla"
-
-#~ msgid "Sets whether the screen will be locked after the specified time."
-#~ msgstr "Define se se bloqueará ou non a pantalla pasado o tempo indicado."
-
-#~ msgid "Screen saver timeout"
-#~ msgstr "Tempo de agarda do protector de pantalla"
-
-#~ msgid "Sets the minutes after which the screen is locked."
-#~ msgstr ""
-#~ "Define o número de minutos que deben pasar para que se bloquee a pantalla."
 
 #~ msgid "&Execute"
 #~ msgstr "&Executar"

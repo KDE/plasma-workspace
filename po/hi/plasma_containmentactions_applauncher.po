@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2021-07-01 18:59+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -17,11 +17,14 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Generator: Lokalize 21.04.2\n"
 
+#. i18n: ectx: property (text), widget (QCheckBox, showAppsByName)
+#: config.ui:17
+#, kde-format
+msgid "Show applications by name"
+msgstr "नाम से अनुप्रयोगों को दिखाएं"
+
 #: launch.cpp:89
 #, kde-format
 msgctxt "plasma_containmentactions_applauncher"
 msgid "Configure Application Launcher Plugin"
 msgstr "अनुप्रयोग चालक प्लगइन विन्यस्त करें"
-
-#~ msgid "Show applications by name"
-#~ msgstr "नाम से अनुप्रयोगों को दिखाएं"

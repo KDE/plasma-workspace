@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2024-07-27 14:20+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -93,6 +93,12 @@ msgstr "paknomo"
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
 msgstr "Restarigi la aranĝon de Plasma Desktop"
+
+#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
+#: lookandfeelsettings.kcfg:9
+#, kde-format
+msgid "Global look and feel"
+msgstr "Ĉiea aspekto kaj sento"
 
 #: package/contents/ui/main.qml:21
 #, kde-format
@@ -257,6 +263,3 @@ msgid ""
 msgstr ""
 "Ĉi tiu Ĉiea Etoso ne provizas ajnajn aplikeblajn agordojn. Bonvolu kontakti "
 "la prizorganton de ĉi tiu Ĉiea Etoso ĉar ĝi povus esti rompita."
-
-#~ msgid "Global look and feel"
-#~ msgstr "Ĉiea aspekto kaj sento"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2023-01-30 16:28+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -18,6 +18,54 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Lokalize 22.12.3\n"
+
+#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
+#: fontsaasettingsbase.kcfg:9
+#, kde-format
+msgid "Force font DPI Wayland"
+msgstr "Vynutit DPI písem Wayland"
+
+#. i18n: ectx: label, entry (forceFontDPI), group (General)
+#: fontsaasettingsbase.kcfg:13
+#, kde-format
+msgid "Force font DPI on X11"
+msgstr "Vynutit DPI písem na X11"
+
+#. i18n: ectx: label, entry (font), group (General)
+#: fontssettings.kcfg:9
+#, kde-format
+msgid "General font"
+msgstr "Obecné písmo"
+
+#. i18n: ectx: label, entry (fixed), group (General)
+#: fontssettings.kcfg:21
+#, kde-format
+msgid "Fixed width font"
+msgstr "Neproporcionální písmo"
+
+#. i18n: ectx: label, entry (smallestReadableFont), group (General)
+#: fontssettings.kcfg:33
+#, kde-format
+msgid "Small font"
+msgstr "Malé písmo"
+
+#. i18n: ectx: label, entry (toolBarFont), group (General)
+#: fontssettings.kcfg:45
+#, kde-format
+msgid "Tool bar font"
+msgstr "Písmo pro nástrojovou lištu"
+
+#. i18n: ectx: label, entry (menuFont), group (General)
+#: fontssettings.kcfg:57
+#, kde-format
+msgid "Menu font"
+msgstr "Písmo nabídky"
+
+#. i18n: ectx: label, entry (activeFont), group (WM)
+#: fontssettings.kcfg:71
+#, kde-format
+msgid "Window title font"
+msgstr "Písmo titulku okna"
 
 #: kxftconfig.cpp:458
 #, kde-format
@@ -288,27 +336,3 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "Vybrat písmo"
-
-#~ msgid "Force font DPI Wayland"
-#~ msgstr "Vynutit DPI písem Wayland"
-
-#~ msgid "Force font DPI on X11"
-#~ msgstr "Vynutit DPI písem na X11"
-
-#~ msgid "General font"
-#~ msgstr "Obecné písmo"
-
-#~ msgid "Fixed width font"
-#~ msgstr "Neproporcionální písmo"
-
-#~ msgid "Small font"
-#~ msgstr "Malé písmo"
-
-#~ msgid "Tool bar font"
-#~ msgstr "Písmo pro nástrojovou lištu"
-
-#~ msgid "Menu font"
-#~ msgstr "Písmo nabídky"
-
-#~ msgid "Window title font"
-#~ msgstr "Písmo titulku okna"

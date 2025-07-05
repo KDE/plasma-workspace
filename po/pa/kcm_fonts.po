@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2021-06-08 22:27-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -17,6 +17,55 @@ msgstr ""
 "X-Generator: Lokalize 20.12.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
+
+#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
+#: fontsaasettingsbase.kcfg:9
+#, kde-format
+msgid "Force font DPI Wayland"
+msgstr "ਫੋਂਟ DPI ਵੇਲੈਂਡ ਲਈ ਮਜ਼ਬੂਰ"
+
+#. i18n: ectx: label, entry (forceFontDPI), group (General)
+#: fontsaasettingsbase.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Force font DPI X11"
+msgid "Force font DPI on X11"
+msgstr "ਫੋਂਟ DPI X11 ਲਈ ਮਜ਼ਬੂਰ"
+
+#. i18n: ectx: label, entry (font), group (General)
+#: fontssettings.kcfg:9
+#, kde-format
+msgid "General font"
+msgstr "ਸਧਾਰਨ ਫ਼ੋਂਟ"
+
+#. i18n: ectx: label, entry (fixed), group (General)
+#: fontssettings.kcfg:21
+#, kde-format
+msgid "Fixed width font"
+msgstr "ਸਥਿਰ ਚੌੜਾਈ ਫ਼ੋਂਟ"
+
+#. i18n: ectx: label, entry (smallestReadableFont), group (General)
+#: fontssettings.kcfg:33
+#, kde-format
+msgid "Small font"
+msgstr "ਛੋਟੇ ਫ਼ੋਂਟ"
+
+#. i18n: ectx: label, entry (toolBarFont), group (General)
+#: fontssettings.kcfg:45
+#, kde-format
+msgid "Tool bar font"
+msgstr "ਟੂਲਬਾਰ ਫ਼ੋਂਟ"
+
+#. i18n: ectx: label, entry (menuFont), group (General)
+#: fontssettings.kcfg:57
+#, kde-format
+msgid "Menu font"
+msgstr "ਮੇਨੂ ਫ਼ੋਂਟ"
+
+#. i18n: ectx: label, entry (activeFont), group (WM)
+#: fontssettings.kcfg:71
+#, kde-format
+msgid "Window title font"
+msgstr "ਵਿੰਡੋ ਟਾਇਟਲ ਫ਼ੋਂਟ"
 
 #: kxftconfig.cpp:458
 #, kde-format
@@ -279,32 +328,6 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "ਫੋਂਟ ਚੁਣੋ"
-
-#~ msgid "Force font DPI Wayland"
-#~ msgstr "ਫੋਂਟ DPI ਵੇਲੈਂਡ ਲਈ ਮਜ਼ਬੂਰ"
-
-#, fuzzy
-#~| msgid "Force font DPI X11"
-#~ msgid "Force font DPI on X11"
-#~ msgstr "ਫੋਂਟ DPI X11 ਲਈ ਮਜ਼ਬੂਰ"
-
-#~ msgid "General font"
-#~ msgstr "ਸਧਾਰਨ ਫ਼ੋਂਟ"
-
-#~ msgid "Fixed width font"
-#~ msgstr "ਸਥਿਰ ਚੌੜਾਈ ਫ਼ੋਂਟ"
-
-#~ msgid "Small font"
-#~ msgstr "ਛੋਟੇ ਫ਼ੋਂਟ"
-
-#~ msgid "Tool bar font"
-#~ msgstr "ਟੂਲਬਾਰ ਫ਼ੋਂਟ"
-
-#~ msgid "Menu font"
-#~ msgstr "ਮੇਨੂ ਫ਼ੋਂਟ"
-
-#~ msgid "Window title font"
-#~ msgstr "ਵਿੰਡੋ ਟਾਇਟਲ ਫ਼ੋਂਟ"
 
 #~ msgid "Change Display Scaling…"
 #~ msgstr "…ਡਿਸਪਲੇਅ ਸਕੇਲਿੰਗ ਬਦਲੋ"

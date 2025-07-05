@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors stable\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2005-11-23 16:45+0200\n"
 "Last-Translator: Kobus <kabousv@therugby.co.za>\n"
 "Language-Team: AFRIKAANS <translate-discuss-af@lists.sourceforge.net>\n"
@@ -58,6 +58,34 @@ msgstr ""
 #: colors.cpp:309
 #, kde-format
 msgid "Color scheme installed successfully."
+msgstr ""
+
+#. i18n: ectx: label, entry (colorScheme), group (General)
+#: colorssettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Save Color Scheme"
+msgid "Color scheme name"
+msgstr "Stoor Kleur Skema"
+
+#. i18n: ectx: label, entry (accentColor), group (General)
+#: colorssettings.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Inactive window"
+msgid "Accent color"
+msgstr "Onaktiewe venster"
+
+#. i18n: ectx: label, entry (lastUsedCustomAccentColor), group (General)
+#: colorssettings.kcfg:17
+#, kde-format
+msgid ""
+"The last used custom accent color before user switched to wallpaper "
+"generated color or default color"
+msgstr ""
+
+#. i18n: ectx: label, entry (accentColorFromWallpaper), group (General)
+#: colorssettings.kcfg:21
+#, kde-format
+msgid "Whether accent color from wallpaper should be applied"
 msgstr ""
 
 #: editor/kcolorschemeeditor.cpp:25
@@ -120,6 +148,222 @@ msgstr ""
 msgid "Scheme not found, falling back to current one.\n"
 msgstr ""
 
+#. i18n: ectx: property (toolTip), widget (QLabel, label)
+#: editor/preview.ui:29
+#, fuzzy, kde-format
+#| msgid "Standard Background"
+msgid "Window text on Window Background"
+msgstr "Standaard Agtergrond"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: editor/preview.ui:32
+#, fuzzy, kde-format
+msgctxt "color-kcm-preview"
+msgid "Window text"
+msgstr "Venster teks"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, pushButton)
+#: editor/preview.ui:39
+#, fuzzy, kde-format
+#| msgid "Button Background"
+msgid "Button text on Button Background"
+msgstr "Knoppie Agtergrond"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: editor/preview.ui:42
+#, fuzzy, kde-format
+#| msgid "Push Button"
+msgctxt "color-kcm-preview"
+msgid "Push Button"
+msgstr "Stoot Knoppie"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection0)
+#: editor/preview.ui:123
+#, fuzzy, kde-format
+msgid "Selection Normal Text against Selection Normal Background"
+msgstr "Venster agtergrond"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection0)
+#: editor/preview.ui:126
+#, fuzzy, kde-format
+#| msgid "Selected text"
+msgctxt "color-kcm-preview"
+msgid "Selected text"
+msgstr "Gekose teks"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection3)
+#: editor/preview.ui:138
+#, fuzzy, kde-format
+msgid "Selection Link Text against Selection Normal Background"
+msgstr "Venster agtergrond"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection3)
+#. i18n: ectx: property (text), widget (QLabel, labelView3)
+#: editor/preview.ui:141 editor/preview.ui:265
+#, fuzzy, kde-format
+#| msgid "link"
+msgctxt "color-kcm-preview"
+msgid "link"
+msgstr "skakel"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection4)
+#: editor/preview.ui:153
+#, fuzzy, kde-format
+msgid "Selection Visited Text against Selection Normal Background"
+msgstr "Venster agtergrond"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection4)
+#. i18n: ectx: property (text), widget (QLabel, labelView4)
+#: editor/preview.ui:156 editor/preview.ui:280
+#, fuzzy, kde-format
+#| msgid "Active Title Text"
+msgctxt "color-kcm-preview"
+msgid "visited"
+msgstr "Aktiewe titel teks"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection2)
+#: editor/preview.ui:163
+#, fuzzy, kde-format
+msgid "Selection Active Text against Selection Normal Background"
+msgstr "Venster agtergrond"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection2)
+#. i18n: ectx: property (text), widget (QLabel, labelView2)
+#: editor/preview.ui:166 editor/preview.ui:290
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "a"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection1)
+#: editor/preview.ui:173
+#, fuzzy, kde-format
+msgid "Selection Inactive Text against Selection Normal Background"
+msgstr "Venster agtergrond"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection1)
+#. i18n: ectx: property (text), widget (QLabel, labelView1)
+#: editor/preview.ui:176 editor/preview.ui:300
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "i"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection5)
+#: editor/preview.ui:183
+#, fuzzy, kde-format
+msgid "Selection Negative Text against Selection Normal Background"
+msgstr "Venster agtergrond"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection5)
+#. i18n: ectx: property (text), widget (QLabel, labelView5)
+#: editor/preview.ui:186 editor/preview.ui:310
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "!"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection6)
+#: editor/preview.ui:193
+#, fuzzy, kde-format
+msgid "Selection Neutral Text against Selection Normal Background"
+msgstr "Venster agtergrond"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection6)
+#. i18n: ectx: property (text), widget (QLabel, labelView6)
+#: editor/preview.ui:196 editor/preview.ui:320
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "="
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection7)
+#: editor/preview.ui:203
+#, fuzzy, kde-format
+msgid "Selection Positive Text against Selection Normal Background"
+msgstr "Venster agtergrond"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection7)
+#. i18n: ectx: property (text), widget (QLabel, labelView7)
+#: editor/preview.ui:206 editor/preview.ui:330
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "+"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView0)
+#: editor/preview.ui:247
+#, fuzzy, kde-format
+msgid "View Normal Text against View Normal Background"
+msgstr "Venster agtergrond"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelView0)
+#: editor/preview.ui:250
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "Normal text"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView3)
+#: editor/preview.ui:262
+#, fuzzy, kde-format
+msgid "View Link Text against View Normal Background"
+msgstr "Venster agtergrond"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView4)
+#: editor/preview.ui:277
+#, fuzzy, kde-format
+msgid "View Visited Text against View Normal Background"
+msgstr "Venster agtergrond"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView2)
+#: editor/preview.ui:287
+#, fuzzy, kde-format
+msgid "View Active Text against View Normal Background"
+msgstr "Venster agtergrond"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView1)
+#: editor/preview.ui:297
+#, fuzzy, kde-format
+msgid "View Inactive Text against View Normal Background"
+msgstr "Venster agtergrond"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView5)
+#: editor/preview.ui:307
+#, fuzzy, kde-format
+msgid "View Negative Text against View Normal Background"
+msgstr "Venster agtergrond"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView6)
+#: editor/preview.ui:317
+#, fuzzy, kde-format
+msgid "View Neutral Text against View Normal Background"
+msgstr "Venster agtergrond"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView7)
+#: editor/preview.ui:327
+#, fuzzy, kde-format
+msgid "View Positive Text against View Normal Background"
+msgstr "Venster agtergrond"
+
 #: editor/scmeditorcolors.cpp:62 editor/scmeditorcolors.cpp:76
 #, kde-format
 msgid "Varies"
@@ -141,56 +385,291 @@ msgstr "Alternatiwe Agtergrond in lyste"
 msgid "Normal Text"
 msgstr ""
 
-#: editor/scmeditorcolors.cpp:102
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:102 editor/scmeditorcolors.ui:303
 #, fuzzy, kde-format
 #| msgid "Inactive Title Text"
 msgid "Inactive Text"
 msgstr "Onaktiewe titel teks"
 
-#: editor/scmeditorcolors.cpp:103
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:103 editor/scmeditorcolors.ui:308
 #, fuzzy, kde-format
 #| msgid "Active Title Text"
 msgid "Active Text"
 msgstr "Aktiewe titel teks"
 
-#: editor/scmeditorcolors.cpp:104
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:104 editor/scmeditorcolors.ui:313
 #, fuzzy, kde-format
 #| msgid "Link"
 msgid "Link Text"
 msgstr "Skakel"
 
-#: editor/scmeditorcolors.cpp:105
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:105 editor/scmeditorcolors.ui:318
 #, fuzzy, kde-format
 #| msgid "Active Title Text"
 msgid "Visited Text"
 msgstr "Aktiewe titel teks"
 
-#: editor/scmeditorcolors.cpp:106
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:106 editor/scmeditorcolors.ui:323
 #, fuzzy, kde-format
 #| msgid "Inactive Title Text"
 msgid "Negative Text"
 msgstr "Onaktiewe titel teks"
 
-#: editor/scmeditorcolors.cpp:107
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:107 editor/scmeditorcolors.ui:328
 #, kde-format
 msgid "Neutral Text"
 msgstr ""
 
-#: editor/scmeditorcolors.cpp:108
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:108 editor/scmeditorcolors.ui:333
 #, fuzzy, kde-format
 #| msgid "Active Title Text"
 msgid "Positive Text"
 msgstr "Aktiewe titel teks"
 
-#: editor/scmeditorcolors.cpp:109
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:109 editor/scmeditorcolors.ui:338
 #, kde-format
 msgid "Focus Decoration"
 msgstr ""
 
-#: editor/scmeditorcolors.cpp:110
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:110 editor/scmeditorcolors.ui:343
 #, kde-format
 msgid "Hover Decoration"
 msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: editor/scmeditorcolors.ui:23
+#, fuzzy, kde-format
+#| msgid "Colors"
+msgid "Color set:"
+msgstr "Kleure"
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:36
+#, kde-format
+msgid "Colorset to view/modify"
+msgstr ""
+
+#. i18n: 'Common' here means &quot;frequent/not rare&quot;, not &quot;shared&quot;
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:40
+#, fuzzy, kde-format
+#| msgid "Colors"
+msgctxt "color-sets"
+msgid "Common Colors"
+msgstr "Kleure"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:45
+#, fuzzy, kde-format
+#| msgid "Active Title Text"
+msgctxt "color-sets"
+msgid "View"
+msgstr "Aktiewe titel teks"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:50
+#, fuzzy, kde-format
+msgctxt "color-sets"
+msgid "Window"
+msgstr "Venster teks"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:55
+#, fuzzy, kde-format
+msgctxt "color-sets"
+msgid "Button"
+msgstr "Knoppie Teks"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:60
+#, fuzzy, kde-format
+msgctxt "color-sets"
+msgid "Selection"
+msgstr "Gekose teks"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:65
+#, fuzzy, kde-format
+#| msgid "Active Title Text"
+msgctxt "color-sets"
+msgid "Tooltip"
+msgstr "Aktiewe titel teks"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:70
+#, kde-format
+msgctxt "color-sets"
+msgid "Complementary"
+msgstr ""
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:75
+#, kde-format
+msgctxt "color-sets"
+msgid "Header"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:118 editor/scmeditorcolors.ui:123
+#: editor/scmeditorcolors.ui:128 editor/scmeditorcolors.ui:133
+#: editor/scmeditorcolors.ui:138 editor/scmeditorcolors.ui:143
+#: editor/scmeditorcolors.ui:148 editor/scmeditorcolors.ui:153
+#: editor/scmeditorcolors.ui:158 editor/scmeditorcolors.ui:163
+#: editor/scmeditorcolors.ui:168 editor/scmeditorcolors.ui:173
+#: editor/scmeditorcolors.ui:178 editor/scmeditorcolors.ui:183
+#: editor/scmeditorcolors.ui:188 editor/scmeditorcolors.ui:193
+#: editor/scmeditorcolors.ui:198 editor/scmeditorcolors.ui:203
+#: editor/scmeditorcolors.ui:208 editor/scmeditorcolors.ui:213
+#: editor/scmeditorcolors.ui:218 editor/scmeditorcolors.ui:223
+#: editor/scmeditorcolors.ui:228 editor/scmeditorcolors.ui:233
+#: editor/scmeditorcolors.ui:238 editor/scmeditorcolors.ui:243
+#, fuzzy, kde-format
+#| msgid "New"
+msgid "New Row"
+msgstr "Nuwe"
+
+#. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:248
+#, kde-format
+msgid "0"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:253
+#, kde-format
+msgid "1"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:258
+#, fuzzy, kde-format
+#| msgid "Selected Background"
+msgid "View Background"
+msgstr "Gekose agtergrond"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:263
+#, fuzzy, kde-format
+#| msgid "Active Title Text"
+msgid "View Text"
+msgstr "Aktiewe titel teks"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:268
+#, fuzzy, kde-format
+#| msgid "Standard Background"
+msgid "Window Background"
+msgstr "Standaard Agtergrond"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:273
+#, fuzzy, kde-format
+msgid "Window Text"
+msgstr "Venster teks"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:278
+#, kde-format
+msgid "Button Background"
+msgstr "Knoppie Agtergrond"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:283
+#, fuzzy, kde-format
+msgid "Button Text"
+msgstr "Knoppie Teks"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:288
+#, fuzzy, kde-format
+#| msgid "Selected Background"
+msgid "Selection Background"
+msgstr "Gekose agtergrond"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:293
+#, fuzzy, kde-format
+#| msgid "Selected text"
+msgid "Selection Text"
+msgstr "Gekose teks"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:298
+#, fuzzy, kde-format
+#| msgid "Inactive Title Text"
+msgid "Selection Inactive Text"
+msgstr "Onaktiewe titel teks"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:348
+#, fuzzy, kde-format
+msgid "Tooltip Background"
+msgstr "Venster agtergrond"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:353
+#, fuzzy, kde-format
+#| msgid "Active Title Text"
+msgid "Tooltip Text"
+msgstr "Aktiewe titel teks"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:358
+#, fuzzy, kde-format
+#| msgid "Active Title Bar"
+msgid "Active Titlebar"
+msgstr "Aktiewe titel balk"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:363
+#, fuzzy, kde-format
+#| msgid "Active Title Bar"
+msgid "Active Titlebar Text"
+msgstr "Aktiewe titel balk"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:368
+#, fuzzy, kde-format
+#| msgid "Active Title Bar"
+msgid "Active Titlebar Secondary"
+msgstr "Aktiewe titel balk"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:373
+#, fuzzy, kde-format
+#| msgid "Inactive Title Bar"
+msgid "Inactive Titlebar"
+msgstr "Onaktiewe titel balk"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:378
+#, fuzzy, kde-format
+#| msgid "Inactive Title Bar"
+msgid "Inactive Titlebar Text"
+msgstr "Onaktiewe titel balk"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:383
+#, fuzzy, kde-format
+#| msgid "Inactive Title Bar"
+msgid "Inactive Titlebar Secondary"
+msgstr "Onaktiewe titel balk"
 
 #: editor/scmeditordialog.cpp:60
 #, kde-format
@@ -256,6 +735,457 @@ msgstr ""
 #| msgid "Inactive window"
 msgid "Inactive"
 msgstr "Onaktiewe venster"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: editor/scmeditoreffects.ui:17
+#, fuzzy, kde-format
+#| msgid "Colors"
+msgid "Color:"
+msgstr "Kleure"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: editor/scmeditoreffects.ui:27
+#, kde-format
+msgid "Intensity:"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, colorBox)
+#: editor/scmeditoreffects.ui:37
+#, fuzzy, kde-format
+#| msgid "Inactive Title Button"
+msgid "Disabled color effect type"
+msgstr "Onaktiewe titel Knoppie"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
+#: editor/scmeditoreffects.ui:41
+#, kde-format
+msgctxt "no disabled color effect"
+msgid "None"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
+#: editor/scmeditoreffects.ui:46
+#, kde-format
+msgctxt "disabled color effect"
+msgid "Desaturate"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
+#: editor/scmeditoreffects.ui:51
+#, kde-format
+msgctxt "disabled color effect"
+msgid "Fade"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
+#: editor/scmeditoreffects.ui:56
+#, kde-format
+msgctxt "disabled color effect"
+msgid "Tint"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, intensityBox)
+#: editor/scmeditoreffects.ui:64
+#, fuzzy, kde-format
+#| msgid "Inactive Title Button"
+msgid "Disabled intensity effect type"
+msgstr "Onaktiewe titel Knoppie"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
+#: editor/scmeditoreffects.ui:68
+#, kde-format
+msgctxt "no disabled intensity effect"
+msgid "None"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
+#: editor/scmeditoreffects.ui:73
+#, fuzzy, kde-format
+msgctxt "disabled intensity effect"
+msgid "Shade"
+msgstr ""
+"_: Menu item\n"
+"Stoor"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
+#: editor/scmeditoreffects.ui:78
+#, kde-format
+msgctxt "disabled intensity effect"
+msgid "Darken"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
+#: editor/scmeditoreffects.ui:83
+#, fuzzy, kde-format
+#| msgid "R&emove Scheme"
+msgctxt "disabled intensity effect"
+msgid "Lighten"
+msgstr "Verwyder Skema"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: editor/scmeditoreffects.ui:107
+#, fuzzy, kde-format
+#| msgid "Con&trast"
+msgid "Contrast:"
+msgstr "Kontras"
+
+#. i18n: ectx: property (toolTip), widget (QSlider, colorSlider)
+#: editor/scmeditoreffects.ui:120
+#, fuzzy, kde-format
+#| msgid "Inactive Title Button"
+msgid "Disabled color effect amount"
+msgstr "Onaktiewe titel Knoppie"
+
+#. i18n: ectx: property (toolTip), widget (QSlider, intensitySlider)
+#: editor/scmeditoreffects.ui:139
+#, fuzzy, kde-format
+#| msgid "Inactive Title Button"
+msgid "Disabled intensity effect amount"
+msgstr "Onaktiewe titel Knoppie"
+
+#. i18n: ectx: property (toolTip), widget (KColorButton, colorButton)
+#: editor/scmeditoreffects.ui:158
+#, fuzzy, kde-format
+#| msgid "Inactive Title Button"
+msgid "Disabled color"
+msgstr "Onaktiewe titel Knoppie"
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, contrastBox)
+#: editor/scmeditoreffects.ui:181
+#, fuzzy, kde-format
+#| msgid "Inactive Title Button"
+msgid "Disabled contrast type"
+msgstr "Onaktiewe titel Knoppie"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
+#: editor/scmeditoreffects.ui:185
+#, kde-format
+msgctxt "no disabled contrast"
+msgid "None"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
+#: editor/scmeditoreffects.ui:190
+#, kde-format
+msgctxt "disabled contrast"
+msgid "Fade"
+msgstr ""
+
+#. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
+#: editor/scmeditoreffects.ui:195
+#, kde-format
+msgctxt "disabled contrast"
+msgid "Tint"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QSlider, contrastSlider)
+#: editor/scmeditoreffects.ui:222
+#, fuzzy, kde-format
+#| msgid "Inactive Title Button"
+msgid "Disabled contrast amount"
+msgstr "Onaktiewe titel Knoppie"
+
+#. i18n: ectx: property (text), widget (QCheckBox, useInactiveEffects)
+#: editor/scmeditoroptions.ui:17
+#, fuzzy, kde-format
+#| msgid "Inactive window"
+msgid "Apply &effects to inactive windows"
+msgstr "Onaktiewe venster"
+
+#. i18n: ectx: property (text), widget (QCheckBox, inactiveSelectionEffect)
+#: editor/scmeditoroptions.ui:24
+#, kde-format
+msgid "Use different colors for in&active selections"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, shadeSortedColumn)
+#: editor/scmeditoroptions.ui:31
+#, fuzzy, kde-format
+#| msgid "Shade sorted column in lists"
+msgid "Shade sorted column &in lists"
+msgstr "Skadu sorteer kolom in lys"
+
+#. i18n: ectx: property (text), widget (QCheckBox, tintColors)
+#: editor/scmeditoroptions.ui:38
+#, fuzzy, kde-format
+#| msgid "Inactive window"
+msgid "Tint all colors with accent color"
+msgstr "Onaktiewe venster"
+
+#. i18n: ectx: property (text), widget (QCheckBox, accentTitlebar)
+#: editor/scmeditoroptions.ui:45
+#, kde-format
+msgid "Make window titlebars a&ccent-colored"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: editor/scmeditoroptions.ui:52
+#, kde-format
+msgid "Tint strength:"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QGroupBox, groupBox_5)
+#: editor/scmeditoroptions.ui:69
+#, kde-format
+msgid "Shading of frames and lighting (\"3D\") effects"
+msgstr ""
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
+#: editor/scmeditoroptions.ui:72
+#, fuzzy, kde-format
+msgid "Shading"
+msgstr ""
+"_: Menu item\n"
+"Stoor"
+
+#. i18n: ectx: property (text), widget (QLabel, label_10)
+#: editor/scmeditoroptions.ui:97
+#, kde-format
+msgid "Maximum"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: editor/scmeditoroptions.ui:117
+#, kde-format
+msgid "Minimum"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: editor/scmeditoroptions.ui:124
+#, fuzzy, kde-format
+#| msgid "Con&trast"
+msgid "Contrast"
+msgstr "Kontras"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore0)
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack0)
+#: editor/setpreview.ui:35 editor/setpreview.ui:189
+#, fuzzy, kde-format
+msgid "Normal Text on Normal Background"
+msgstr "Venster agtergrond"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore0)
+#. i18n: ectx: property (text), widget (QLabel, labelBack0)
+#: editor/setpreview.ui:38 editor/setpreview.ui:192
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "normal"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore3)
+#: editor/setpreview.ui:56
+#, fuzzy, kde-format
+msgid "Link Text on Normal Background"
+msgstr "Venster agtergrond"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore3)
+#. i18n: ectx: property (text), widget (QLabel, labelBack3)
+#: editor/setpreview.ui:59 editor/setpreview.ui:214
+#, fuzzy, kde-format
+#| msgid "link"
+msgctxt "color-kcm-set-preview"
+msgid "link"
+msgstr "skakel"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore4)
+#: editor/setpreview.ui:77
+#, fuzzy, kde-format
+msgid "Visited Text on Normal Background"
+msgstr "Venster agtergrond"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore4)
+#. i18n: ectx: property (text), widget (QLabel, labelBack4)
+#: editor/setpreview.ui:80 editor/setpreview.ui:236
+#, fuzzy, kde-format
+#| msgid "Active Title Text"
+msgctxt "color-kcm-set-preview"
+msgid "visited"
+msgstr "Aktiewe titel teks"
+
+#. i18n: ectx: property (toolTip), widget (QWidget, widgetFore2)
+#: editor/setpreview.ui:90
+#, fuzzy, kde-format
+msgid "Active Text on Normal Background"
+msgstr "Venster agtergrond"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore2)
+#. i18n: ectx: property (text), widget (QLabel, labelBack2)
+#: editor/setpreview.ui:96 editor/setpreview.ui:253
+#, fuzzy, kde-format
+#| msgid "Inactive window"
+msgctxt "color-kcm-set-preview"
+msgid "active"
+msgstr "Onaktiewe venster"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore1)
+#: editor/setpreview.ui:109
+#, fuzzy, kde-format
+msgid "Inactive Text on Normal Background"
+msgstr "Venster agtergrond"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore1)
+#: editor/setpreview.ui:112
+#, fuzzy, kde-format
+#| msgid "Inactive window"
+msgctxt "color-kcm-set-preview"
+msgid "inactive"
+msgstr "Onaktiewe venster"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore5)
+#: editor/setpreview.ui:125
+#, fuzzy, kde-format
+msgid "Negative Text on Normal Background"
+msgstr "Venster agtergrond"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore5)
+#. i18n: ectx: property (text), widget (QLabel, labelBack5)
+#: editor/setpreview.ui:128 editor/setpreview.ui:286
+#, fuzzy, kde-format
+#| msgid "Inactive window"
+msgctxt "color-kcm-set-preview"
+msgid "negative"
+msgstr "Onaktiewe venster"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore6)
+#: editor/setpreview.ui:141
+#, fuzzy, kde-format
+msgid "Neutral Text on Normal Background"
+msgstr "Venster agtergrond"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore6)
+#. i18n: ectx: property (text), widget (QLabel, labelBack6)
+#: editor/setpreview.ui:144 editor/setpreview.ui:303
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "neutral"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore7)
+#: editor/setpreview.ui:157
+#, fuzzy, kde-format
+msgid "Positive Text on Normal Background"
+msgstr "Venster agtergrond"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore7)
+#. i18n: ectx: property (text), widget (QLabel, labelBack7)
+#: editor/setpreview.ui:160 editor/setpreview.ui:320
+#, fuzzy, kde-format
+#| msgid "Active Title Text"
+msgctxt "color-kcm-set-preview"
+msgid "positive"
+msgstr "Aktiewe titel teks"
+
+#. i18n: ectx: property (toolTip), widget (QWidget, widgetFore8)
+#: editor/setpreview.ui:170
+#, fuzzy, kde-format
+msgid "Hover on Normal Background"
+msgstr "Venster agtergrond"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore8)
+#: editor/setpreview.ui:176
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "hover"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack3)
+#: editor/setpreview.ui:211
+#, kde-format
+msgid ""
+"Link Text on Link Background\n"
+"(Note: Link Background is derived from Link Text and cannot be separately "
+"configured at this time)"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack4)
+#: editor/setpreview.ui:233
+#, kde-format
+msgid ""
+"Visited Text on Visited Background\n"
+"(Note: Visited Background is derived from Visited Text and cannot be "
+"separately configured at this time)"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack2)
+#: editor/setpreview.ui:250
+#, kde-format
+msgid ""
+"Active Text on Active Background\n"
+"(Note: Active Background is derived from Active Text and cannot be "
+"separately configured at this time)"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack1)
+#: editor/setpreview.ui:266
+#, fuzzy, kde-format
+#| msgid "Alternate Background in Lists"
+msgid "Inactive Text on Alternate Background"
+msgstr "Alternatiwe Agtergrond in lyste"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelBack1)
+#: editor/setpreview.ui:269
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "alternate"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack5)
+#: editor/setpreview.ui:283
+#, kde-format
+msgid ""
+"Negative Text on Negative Background\n"
+"(Note: Negative Background is derived from Negative Text and cannot be "
+"separately configured at this time)"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack6)
+#: editor/setpreview.ui:300
+#, kde-format
+msgid ""
+"Neutral Text on Neutral Background\n"
+"(Note: Neutral Background is derived from Neutral Text and cannot be "
+"separately configured at this time)"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack7)
+#: editor/setpreview.ui:317
+#, kde-format
+msgid ""
+"Positive Text on Positive Background\n"
+"(Note: Positive Background is derived from Positive Text and cannot be "
+"separately configured at this time)"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore9)
+#: editor/setpreview.ui:333
+#, fuzzy, kde-format
+msgid "Focus on Normal Background"
+msgstr "Venster agtergrond"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore9)
+#: editor/setpreview.ui:336
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "focus"
+msgstr ""
 
 #: package/contents/ui/main.qml:23
 #, kde-format
@@ -484,407 +1414,6 @@ msgstr ""
 #| msgid "Save Color Scheme"
 msgid " * %1 (current color scheme)"
 msgstr "Stoor Kleur Skema"
-
-#, fuzzy
-#~| msgid "Save Color Scheme"
-#~ msgid "Color scheme name"
-#~ msgstr "Stoor Kleur Skema"
-
-#, fuzzy
-#~| msgid "Inactive window"
-#~ msgid "Accent color"
-#~ msgstr "Onaktiewe venster"
-
-#, fuzzy
-#~| msgid "Standard Background"
-#~ msgid "Window text on Window Background"
-#~ msgstr "Standaard Agtergrond"
-
-#, fuzzy
-#~ msgctxt "color-kcm-preview"
-#~ msgid "Window text"
-#~ msgstr "Venster teks"
-
-#, fuzzy
-#~| msgid "Button Background"
-#~ msgid "Button text on Button Background"
-#~ msgstr "Knoppie Agtergrond"
-
-#, fuzzy
-#~| msgid "Push Button"
-#~ msgctxt "color-kcm-preview"
-#~ msgid "Push Button"
-#~ msgstr "Stoot Knoppie"
-
-#, fuzzy
-#~ msgid "Selection Normal Text against Selection Normal Background"
-#~ msgstr "Venster agtergrond"
-
-#, fuzzy
-#~| msgid "Selected text"
-#~ msgctxt "color-kcm-preview"
-#~ msgid "Selected text"
-#~ msgstr "Gekose teks"
-
-#, fuzzy
-#~ msgid "Selection Link Text against Selection Normal Background"
-#~ msgstr "Venster agtergrond"
-
-#, fuzzy
-#~| msgid "link"
-#~ msgctxt "color-kcm-preview"
-#~ msgid "link"
-#~ msgstr "skakel"
-
-#, fuzzy
-#~ msgid "Selection Visited Text against Selection Normal Background"
-#~ msgstr "Venster agtergrond"
-
-#, fuzzy
-#~| msgid "Active Title Text"
-#~ msgctxt "color-kcm-preview"
-#~ msgid "visited"
-#~ msgstr "Aktiewe titel teks"
-
-#, fuzzy
-#~ msgid "Selection Active Text against Selection Normal Background"
-#~ msgstr "Venster agtergrond"
-
-#, fuzzy
-#~ msgid "Selection Inactive Text against Selection Normal Background"
-#~ msgstr "Venster agtergrond"
-
-#, fuzzy
-#~ msgid "Selection Negative Text against Selection Normal Background"
-#~ msgstr "Venster agtergrond"
-
-#, fuzzy
-#~ msgid "Selection Neutral Text against Selection Normal Background"
-#~ msgstr "Venster agtergrond"
-
-#, fuzzy
-#~ msgid "Selection Positive Text against Selection Normal Background"
-#~ msgstr "Venster agtergrond"
-
-#, fuzzy
-#~ msgid "View Normal Text against View Normal Background"
-#~ msgstr "Venster agtergrond"
-
-#, fuzzy
-#~ msgid "View Link Text against View Normal Background"
-#~ msgstr "Venster agtergrond"
-
-#, fuzzy
-#~ msgid "View Visited Text against View Normal Background"
-#~ msgstr "Venster agtergrond"
-
-#, fuzzy
-#~ msgid "View Active Text against View Normal Background"
-#~ msgstr "Venster agtergrond"
-
-#, fuzzy
-#~ msgid "View Inactive Text against View Normal Background"
-#~ msgstr "Venster agtergrond"
-
-#, fuzzy
-#~ msgid "View Negative Text against View Normal Background"
-#~ msgstr "Venster agtergrond"
-
-#, fuzzy
-#~ msgid "View Neutral Text against View Normal Background"
-#~ msgstr "Venster agtergrond"
-
-#, fuzzy
-#~ msgid "View Positive Text against View Normal Background"
-#~ msgstr "Venster agtergrond"
-
-#, fuzzy
-#~| msgid "Colors"
-#~ msgid "Color set:"
-#~ msgstr "Kleure"
-
-#, fuzzy
-#~| msgid "Colors"
-#~ msgctxt "color-sets"
-#~ msgid "Common Colors"
-#~ msgstr "Kleure"
-
-#, fuzzy
-#~| msgid "Active Title Text"
-#~ msgctxt "color-sets"
-#~ msgid "View"
-#~ msgstr "Aktiewe titel teks"
-
-#, fuzzy
-#~ msgctxt "color-sets"
-#~ msgid "Window"
-#~ msgstr "Venster teks"
-
-#, fuzzy
-#~ msgctxt "color-sets"
-#~ msgid "Button"
-#~ msgstr "Knoppie Teks"
-
-#, fuzzy
-#~ msgctxt "color-sets"
-#~ msgid "Selection"
-#~ msgstr "Gekose teks"
-
-#, fuzzy
-#~| msgid "Active Title Text"
-#~ msgctxt "color-sets"
-#~ msgid "Tooltip"
-#~ msgstr "Aktiewe titel teks"
-
-#, fuzzy
-#~| msgid "New"
-#~ msgid "New Row"
-#~ msgstr "Nuwe"
-
-#, fuzzy
-#~| msgid "Selected Background"
-#~ msgid "View Background"
-#~ msgstr "Gekose agtergrond"
-
-#, fuzzy
-#~| msgid "Active Title Text"
-#~ msgid "View Text"
-#~ msgstr "Aktiewe titel teks"
-
-#, fuzzy
-#~| msgid "Standard Background"
-#~ msgid "Window Background"
-#~ msgstr "Standaard Agtergrond"
-
-#, fuzzy
-#~ msgid "Window Text"
-#~ msgstr "Venster teks"
-
-#~ msgid "Button Background"
-#~ msgstr "Knoppie Agtergrond"
-
-#, fuzzy
-#~ msgid "Button Text"
-#~ msgstr "Knoppie Teks"
-
-#, fuzzy
-#~| msgid "Selected Background"
-#~ msgid "Selection Background"
-#~ msgstr "Gekose agtergrond"
-
-#, fuzzy
-#~| msgid "Selected text"
-#~ msgid "Selection Text"
-#~ msgstr "Gekose teks"
-
-#, fuzzy
-#~| msgid "Inactive Title Text"
-#~ msgid "Selection Inactive Text"
-#~ msgstr "Onaktiewe titel teks"
-
-#, fuzzy
-#~ msgid "Tooltip Background"
-#~ msgstr "Venster agtergrond"
-
-#, fuzzy
-#~| msgid "Active Title Text"
-#~ msgid "Tooltip Text"
-#~ msgstr "Aktiewe titel teks"
-
-#, fuzzy
-#~| msgid "Active Title Bar"
-#~ msgid "Active Titlebar"
-#~ msgstr "Aktiewe titel balk"
-
-#, fuzzy
-#~| msgid "Active Title Bar"
-#~ msgid "Active Titlebar Text"
-#~ msgstr "Aktiewe titel balk"
-
-#, fuzzy
-#~| msgid "Active Title Bar"
-#~ msgid "Active Titlebar Secondary"
-#~ msgstr "Aktiewe titel balk"
-
-#, fuzzy
-#~| msgid "Inactive Title Bar"
-#~ msgid "Inactive Titlebar"
-#~ msgstr "Onaktiewe titel balk"
-
-#, fuzzy
-#~| msgid "Inactive Title Bar"
-#~ msgid "Inactive Titlebar Text"
-#~ msgstr "Onaktiewe titel balk"
-
-#, fuzzy
-#~| msgid "Inactive Title Bar"
-#~ msgid "Inactive Titlebar Secondary"
-#~ msgstr "Onaktiewe titel balk"
-
-#, fuzzy
-#~| msgid "Colors"
-#~ msgid "Color:"
-#~ msgstr "Kleure"
-
-#, fuzzy
-#~| msgid "Inactive Title Button"
-#~ msgid "Disabled color effect type"
-#~ msgstr "Onaktiewe titel Knoppie"
-
-#, fuzzy
-#~| msgid "Inactive Title Button"
-#~ msgid "Disabled intensity effect type"
-#~ msgstr "Onaktiewe titel Knoppie"
-
-#, fuzzy
-#~ msgctxt "disabled intensity effect"
-#~ msgid "Shade"
-#~ msgstr ""
-#~ "_: Menu item\n"
-#~ "Stoor"
-
-#, fuzzy
-#~| msgid "R&emove Scheme"
-#~ msgctxt "disabled intensity effect"
-#~ msgid "Lighten"
-#~ msgstr "Verwyder Skema"
-
-#, fuzzy
-#~| msgid "Con&trast"
-#~ msgid "Contrast:"
-#~ msgstr "Kontras"
-
-#, fuzzy
-#~| msgid "Inactive Title Button"
-#~ msgid "Disabled color effect amount"
-#~ msgstr "Onaktiewe titel Knoppie"
-
-#, fuzzy
-#~| msgid "Inactive Title Button"
-#~ msgid "Disabled intensity effect amount"
-#~ msgstr "Onaktiewe titel Knoppie"
-
-#, fuzzy
-#~| msgid "Inactive Title Button"
-#~ msgid "Disabled color"
-#~ msgstr "Onaktiewe titel Knoppie"
-
-#, fuzzy
-#~| msgid "Inactive Title Button"
-#~ msgid "Disabled contrast type"
-#~ msgstr "Onaktiewe titel Knoppie"
-
-#, fuzzy
-#~| msgid "Inactive Title Button"
-#~ msgid "Disabled contrast amount"
-#~ msgstr "Onaktiewe titel Knoppie"
-
-#, fuzzy
-#~| msgid "Inactive window"
-#~ msgid "Apply &effects to inactive windows"
-#~ msgstr "Onaktiewe venster"
-
-#, fuzzy
-#~| msgid "Shade sorted column in lists"
-#~ msgid "Shade sorted column &in lists"
-#~ msgstr "Skadu sorteer kolom in lys"
-
-#, fuzzy
-#~| msgid "Inactive window"
-#~ msgid "Tint all colors with accent color"
-#~ msgstr "Onaktiewe venster"
-
-#, fuzzy
-#~ msgid "Shading"
-#~ msgstr ""
-#~ "_: Menu item\n"
-#~ "Stoor"
-
-#, fuzzy
-#~| msgid "Con&trast"
-#~ msgid "Contrast"
-#~ msgstr "Kontras"
-
-#, fuzzy
-#~ msgid "Normal Text on Normal Background"
-#~ msgstr "Venster agtergrond"
-
-#, fuzzy
-#~ msgid "Link Text on Normal Background"
-#~ msgstr "Venster agtergrond"
-
-#, fuzzy
-#~| msgid "link"
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "link"
-#~ msgstr "skakel"
-
-#, fuzzy
-#~ msgid "Visited Text on Normal Background"
-#~ msgstr "Venster agtergrond"
-
-#, fuzzy
-#~| msgid "Active Title Text"
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "visited"
-#~ msgstr "Aktiewe titel teks"
-
-#, fuzzy
-#~ msgid "Active Text on Normal Background"
-#~ msgstr "Venster agtergrond"
-
-#, fuzzy
-#~| msgid "Inactive window"
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "active"
-#~ msgstr "Onaktiewe venster"
-
-#, fuzzy
-#~ msgid "Inactive Text on Normal Background"
-#~ msgstr "Venster agtergrond"
-
-#, fuzzy
-#~| msgid "Inactive window"
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "inactive"
-#~ msgstr "Onaktiewe venster"
-
-#, fuzzy
-#~ msgid "Negative Text on Normal Background"
-#~ msgstr "Venster agtergrond"
-
-#, fuzzy
-#~| msgid "Inactive window"
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "negative"
-#~ msgstr "Onaktiewe venster"
-
-#, fuzzy
-#~ msgid "Neutral Text on Normal Background"
-#~ msgstr "Venster agtergrond"
-
-#, fuzzy
-#~ msgid "Positive Text on Normal Background"
-#~ msgstr "Venster agtergrond"
-
-#, fuzzy
-#~| msgid "Active Title Text"
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "positive"
-#~ msgstr "Aktiewe titel teks"
-
-#, fuzzy
-#~ msgid "Hover on Normal Background"
-#~ msgstr "Venster agtergrond"
-
-#, fuzzy
-#~| msgid "Alternate Background in Lists"
-#~ msgid "Inactive Text on Alternate Background"
-#~ msgstr "Alternatiwe Agtergrond in lyste"
-
-#, fuzzy
-#~ msgid "Focus on Normal Background"
-#~ msgstr "Venster agtergrond"
 
 #, fuzzy
 #~| msgid "Inactive window"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2014-08-26 20:08+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -16,6 +16,24 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. i18n: ectx: property (text), widget (QRadioButton, flatButton)
+#: config.ui:16
+#, kde-format
+msgid "Display all windows in one list"
+msgstr "Vis alle vinduer på én liste"
+
+#. i18n: ectx: property (text), widget (QRadioButton, subButton)
+#: config.ui:23
+#, kde-format
+msgid "Display a submenu for each desktop"
+msgstr "Vis en undermenu for hvert skrivebord"
+
+#. i18n: ectx: property (text), widget (QRadioButton, curButton)
+#: config.ui:30
+#, kde-format
+msgid "Display only the current desktop's windows"
+msgstr "Vis kun vinduer fra aktuelt skrivebord"
 
 #: switch.cpp:75
 #, kde-format
@@ -34,12 +52,3 @@ msgstr "Vinduer"
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "All Desktops"
 msgstr "Alle skriveborde"
-
-#~ msgid "Display all windows in one list"
-#~ msgstr "Vis alle vinduer på én liste"
-
-#~ msgid "Display a submenu for each desktop"
-#~ msgstr "Vis en undermenu for hvert skrivebord"
-
-#~ msgid "Display only the current desktop's windows"
-#~ msgstr "Vis kun vinduer fra aktuelt skrivebord"

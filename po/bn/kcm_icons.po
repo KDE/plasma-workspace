@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2006-01-04 13:30-0600\n"
 "Last-Translator: KUSHAL DAS <programmerkd@yahoo.co.in>\n"
 "Language-Team: Bengali <kde-translation@bengalinux.org>\n"
@@ -35,6 +35,52 @@ msgstr "ছোট আইকন"
 #, kde-format
 msgid "Dialogs"
 msgstr ""
+
+#. i18n: ectx: label, entry (Theme), group (Icons)
+#: iconssettingsbase.kcfg:9
+#, kde-format
+msgid "Name of the current icon theme"
+msgstr ""
+
+#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
+#: iconssettingsbase.kcfg:15
+#, fuzzy, kde-format
+#| msgid "Small Icons"
+msgid "Desktop icons size"
+msgstr "ছোট আইকন"
+
+#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
+#: iconssettingsbase.kcfg:21
+#, fuzzy, kde-format
+msgid "Toolbar icons size"
+msgstr "টুলবার"
+
+#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
+#: iconssettingsbase.kcfg:27
+#, fuzzy, kde-format
+msgid "Main toolbar icons size"
+msgstr "টুলবার"
+
+#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
+#: iconssettingsbase.kcfg:33
+#, fuzzy, kde-format
+#| msgid "Small Icons"
+msgid "Small icons size"
+msgstr "ছোট আইকন"
+
+#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
+#: iconssettingsbase.kcfg:39
+#, fuzzy, kde-format
+#| msgid "Small Icons"
+msgid "Panel icons size"
+msgstr "ছোট আইকন"
+
+#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
+#: iconssettingsbase.kcfg:45
+#, fuzzy, kde-format
+#| msgid "Small Icons"
+msgid "Dialog icons size"
+msgstr "ছোট আইকন"
 
 #: main.cpp:182
 #, kde-format
@@ -148,15 +194,6 @@ msgstr "থীম সরিয়ে ফেলো"
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr ""
-
-#, fuzzy
-#~ msgid "Main toolbar icons size"
-#~ msgstr "টুলবার"
-
-#, fuzzy
-#~| msgid "Small Icons"
-#~ msgid "Small icons size"
-#~ msgstr "ছোট আইকন"
 
 #~ msgid "Toolbar"
 #~ msgstr "টুলবার"

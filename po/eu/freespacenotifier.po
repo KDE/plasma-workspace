@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2021-07-18 19:58+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -37,6 +37,38 @@ msgstr "Ireki Filelight-en"
 msgid "Open in File Manager"
 msgstr "Ireki fitxategi kudeatzailean"
 
+#. i18n: ectx: label, entry (minimumSpace), group (General)
+#: freespacenotifier.kcfg:9
+#, kde-format
+msgid "Minimum free space before user starts being notified."
+msgstr ""
+"Erabiltzaileari jakinarazpenak bidaltzen hasi aurretiko gutxieneko leku "
+"askea."
+
+#. i18n: ectx: label, entry (enableNotification), group (General)
+#: freespacenotifier.kcfg:15
+#, kde-format
+msgid "Is the free space notification enabled."
+msgstr "Leku askearen jakinarazpena gaituta dago?"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableNotification)
+#: freespacenotifier_prefs_base.ui:17
+#, kde-format
+msgid "Enable low disk space warning"
+msgstr "Gaitu diskoan leku gutxi abisua"
+
+#. i18n: ectx: property (text), widget (QLabel, label_minimumSpace)
+#: freespacenotifier_prefs_base.ui:27
+#, kde-format
+msgid "Warn when free space is below:"
+msgstr "Abisatu leku askea balio honetatik jaisten denean:"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpace)
+#: freespacenotifier_prefs_base.ui:37
+#, kde-format
+msgid " MiB"
+msgstr " MiB"
+
 #: module.cpp:37
 #, kde-format
 msgid ""
@@ -60,23 +92,6 @@ msgstr ""
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"
 msgstr "Orokorra"
-
-#~ msgid "Minimum free space before user starts being notified."
-#~ msgstr ""
-#~ "Erabiltzaileari jakinarazpenak bidaltzen hasi aurretiko gutxieneko leku "
-#~ "askea."
-
-#~ msgid "Is the free space notification enabled."
-#~ msgstr "Leku askearen jakinarazpena gaituta dago?"
-
-#~ msgid "Enable low disk space warning"
-#~ msgstr "Gaitu diskoan leku gutxi abisua"
-
-#~ msgid "Warn when free space is below:"
-#~ msgstr "Abisatu leku askea balio honetatik jaisten denean:"
-
-#~ msgid " MiB"
-#~ msgstr " MiB"
 
 #~ msgid "Low Disk Space"
 #~ msgstr "Diskoan leku gutxi"

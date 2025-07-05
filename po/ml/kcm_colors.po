@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2021-08-27 12:19+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -60,6 +60,33 @@ msgstr "നിറക്കൂട്ടു് 'color-scheme' ഡാറ്റ ഫ�
 #, kde-format
 msgid "Color scheme installed successfully."
 msgstr "നിറക്കൂട്ടു് വിജയകരമായി ഇൻസ്റ്റാൾ ചെയ്തു."
+
+#. i18n: ectx: label, entry (colorScheme), group (General)
+#: colorssettings.kcfg:9
+#, kde-format
+msgid "Color scheme name"
+msgstr "നിറക്കൂട്ടിന്റെ പേര്"
+
+#. i18n: ectx: label, entry (accentColor), group (General)
+#: colorssettings.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Inactive color"
+msgid "Accent color"
+msgstr "സജീവമല്ലാത്തവയുടെ നിറം"
+
+#. i18n: ectx: label, entry (lastUsedCustomAccentColor), group (General)
+#: colorssettings.kcfg:17
+#, kde-format
+msgid ""
+"The last used custom accent color before user switched to wallpaper "
+"generated color or default color"
+msgstr ""
+
+#. i18n: ectx: label, entry (accentColorFromWallpaper), group (General)
+#: colorssettings.kcfg:21
+#, kde-format
+msgid "Whether accent color from wallpaper should be applied"
+msgstr ""
 
 #: editor/kcolorschemeeditor.cpp:25
 #, kde-format
@@ -122,6 +149,216 @@ msgstr ""
 msgid "Scheme not found, falling back to current one.\n"
 msgstr "സ്കീം കണ്ടെത്തിയില്ല, നിലവിലുള്ളതിലേക്ക് മടങ്ങുന്നു.\n"
 
+#. i18n: ectx: property (toolTip), widget (QLabel, label)
+#: editor/preview.ui:29
+#, kde-format
+msgid "Window text on Window Background"
+msgstr "ജാലക പശ്ചാത്തലത്തിലുള്ള ജാലക വാചകം"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: editor/preview.ui:32
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "Window text"
+msgstr "ജാലക വാചകം"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, pushButton)
+#: editor/preview.ui:39
+#, kde-format
+msgid "Button text on Button Background"
+msgstr "ബട്ടൺ പശ്ചാത്തലത്തിലെ ബട്ടൺ വാചകം"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: editor/preview.ui:42
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "Push Button"
+msgstr "പുഷ് ബട്ടണ്‍"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection0)
+#: editor/preview.ui:123
+#, kde-format
+msgid "Selection Normal Text against Selection Normal Background"
+msgstr "സാധാരണ പശ്ചാത്തലത്തിൽ നിന്ന് സാധാരണ പദാവലി തിരഞ്ഞെടുക്കപ്പെട്ടു"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection0)
+#: editor/preview.ui:126
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "Selected text"
+msgstr "തെരഞ്ഞെടുത്ത പദാവലി"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection3)
+#: editor/preview.ui:138
+#, kde-format
+msgid "Selection Link Text against Selection Normal Background"
+msgstr "സാധാരണ പശ്ചാത്തലത്തിൽ നിന്ന് ചങ്ങലക്കണ്ണി പദാവലി തിരഞ്ഞെടുക്കപ്പെട്ടു"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection3)
+#. i18n: ectx: property (text), widget (QLabel, labelView3)
+#: editor/preview.ui:141 editor/preview.ui:265
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "link"
+msgstr "കണ്ണി"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection4)
+#: editor/preview.ui:153
+#, kde-format
+msgid "Selection Visited Text against Selection Normal Background"
+msgstr "സാധാരണ പശ്ചാത്തലത്തിൽ നിന്ന് സന്ദർശിച്ച പദാവലി തിരഞ്ഞെടുക്കപ്പെട്ടു"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection4)
+#. i18n: ectx: property (text), widget (QLabel, labelView4)
+#: editor/preview.ui:156 editor/preview.ui:280
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "visited"
+msgstr "സന്ദര്‍ശിച്ചതു്"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection2)
+#: editor/preview.ui:163
+#, kde-format
+msgid "Selection Active Text against Selection Normal Background"
+msgstr "സാധാരണ പശ്ചാത്തലത്തിൽ നിന്ന് സജീവ പദാവലി തിരഞ്ഞെടുക്കപ്പെട്ടു"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection2)
+#. i18n: ectx: property (text), widget (QLabel, labelView2)
+#: editor/preview.ui:166 editor/preview.ui:290
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "a"
+msgstr "a"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection1)
+#: editor/preview.ui:173
+#, kde-format
+msgid "Selection Inactive Text against Selection Normal Background"
+msgstr "സാധാരണ പശ്ചാത്തലത്തിൽ നിന്ന് നിര്‍ജ്ജീവ പദാവലി തിരഞ്ഞെടുക്കപ്പെട്ടു"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection1)
+#. i18n: ectx: property (text), widget (QLabel, labelView1)
+#: editor/preview.ui:176 editor/preview.ui:300
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "i"
+msgstr "i"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection5)
+#: editor/preview.ui:183
+#, kde-format
+msgid "Selection Negative Text against Selection Normal Background"
+msgstr "സാധാരണ പശ്ചാത്തലത്തിൽ നിന്ന് നെഗറ്റീവ് പദാവലി തിരഞ്ഞെടുക്കപ്പെട്ടു"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection5)
+#. i18n: ectx: property (text), widget (QLabel, labelView5)
+#: editor/preview.ui:186 editor/preview.ui:310
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "!"
+msgstr "!"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection6)
+#: editor/preview.ui:193
+#, kde-format
+msgid "Selection Neutral Text against Selection Normal Background"
+msgstr "സാധാരണ പശ്ചാത്തലത്തിൽ നിന്ന് ന്യൂട്രൽ പദാവലി തിരഞ്ഞെടുക്കപ്പെട്ടു"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection6)
+#. i18n: ectx: property (text), widget (QLabel, labelView6)
+#: editor/preview.ui:196 editor/preview.ui:320
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "="
+msgstr "="
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection7)
+#: editor/preview.ui:203
+#, kde-format
+msgid "Selection Positive Text against Selection Normal Background"
+msgstr "സാധാരണ പശ്ചാത്തലത്തിൽ നിന്ന് പോസിറ്റീവ് പദാവലി തിരഞ്ഞെടുക്കപ്പെട്ടു"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection7)
+#. i18n: ectx: property (text), widget (QLabel, labelView7)
+#: editor/preview.ui:206 editor/preview.ui:330
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "+"
+msgstr "+"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView0)
+#: editor/preview.ui:247
+#, kde-format
+msgid "View Normal Text against View Normal Background"
+msgstr "സാധാരണ പശ്ചാത്തലത്തിൽ നിന്ന് സാധാരണ പദാവലി കാണുക"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelView0)
+#: editor/preview.ui:250
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "Normal text"
+msgstr "സാധരണ പദാവലി"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView3)
+#: editor/preview.ui:262
+#, kde-format
+msgid "View Link Text against View Normal Background"
+msgstr "സാധാരണ പശ്ചാത്തലത്തിൽ നിന്ന് ചങ്ങലക്കണ്ണി പദാവലി കാണുക"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView4)
+#: editor/preview.ui:277
+#, kde-format
+msgid "View Visited Text against View Normal Background"
+msgstr "സാധാരണ പശ്ചാത്തലത്തിൽ നിന്ന് സന്ദർശിച്ച പദാവലി കാണുക"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView2)
+#: editor/preview.ui:287
+#, kde-format
+msgid "View Active Text against View Normal Background"
+msgstr "സാധാരണ പശ്ചാത്തലത്തിൽ നിന്ന് സജീവ പദാവലി കാണുക"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView1)
+#: editor/preview.ui:297
+#, kde-format
+msgid "View Inactive Text against View Normal Background"
+msgstr "സാധാരണ പശ്ചാത്തലത്തിൽ നിന്ന് നിര്‍ജ്ജീവ പദാവലി കാണുക"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView5)
+#: editor/preview.ui:307
+#, kde-format
+msgid "View Negative Text against View Normal Background"
+msgstr "സാധാരണ പശ്ചാത്തലത്തിൽ നിന്ന് നെഗറ്റീവ് പദാവലി കാണുക"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView6)
+#: editor/preview.ui:317
+#, kde-format
+msgid "View Neutral Text against View Normal Background"
+msgstr "സാധാരണ പശ്ചാത്തലത്തിൽ നിന്ന് ന്യൂട്രൽ പദാവലി കാണുക"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView7)
+#: editor/preview.ui:327
+#, kde-format
+msgid "View Positive Text against View Normal Background"
+msgstr "സാധാരണ പശ്ചാത്തലത്തിൽ നിന്ന് പോസിറ്റീവ് പദാവലി കാണുക"
+
 #: editor/scmeditorcolors.cpp:62 editor/scmeditorcolors.cpp:76
 #, kde-format
 msgid "Varies"
@@ -142,50 +379,267 @@ msgstr "മറ്റൊരു പശ്ചാത്തലം"
 msgid "Normal Text"
 msgstr "സാധാരണ പദാവലി"
 
-#: editor/scmeditorcolors.cpp:102
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:102 editor/scmeditorcolors.ui:303
 #, kde-format
 msgid "Inactive Text"
 msgstr "നിര്‍ജ്ജീവ പദാവലി"
 
-#: editor/scmeditorcolors.cpp:103
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:103 editor/scmeditorcolors.ui:308
 #, kde-format
 msgid "Active Text"
 msgstr "സജീവ പദാവലി"
 
-#: editor/scmeditorcolors.cpp:104
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:104 editor/scmeditorcolors.ui:313
 #, kde-format
 msgid "Link Text"
 msgstr "കണ്ണിയായ പദാവലി"
 
-#: editor/scmeditorcolors.cpp:105
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:105 editor/scmeditorcolors.ui:318
 #, kde-format
 msgid "Visited Text"
 msgstr "സന്ദര്‍ശിച്ച പദാവലി"
 
-#: editor/scmeditorcolors.cpp:106
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:106 editor/scmeditorcolors.ui:323
 #, kde-format
 msgid "Negative Text"
 msgstr "നെഗറ്റിവ് പദാവലി"
 
-#: editor/scmeditorcolors.cpp:107
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:107 editor/scmeditorcolors.ui:328
 #, kde-format
 msgid "Neutral Text"
 msgstr "ന്യൂട്രല്‍ പദാവലി"
 
-#: editor/scmeditorcolors.cpp:108
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:108 editor/scmeditorcolors.ui:333
 #, kde-format
 msgid "Positive Text"
 msgstr "പോസിറ്റിവ് പദാവലി"
 
-#: editor/scmeditorcolors.cpp:109
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:109 editor/scmeditorcolors.ui:338
 #, kde-format
 msgid "Focus Decoration"
 msgstr "ദൃഷ്ടി-കേന്ദ്രാലങ്കാരം"
 
-#: editor/scmeditorcolors.cpp:110
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:110 editor/scmeditorcolors.ui:343
 #, kde-format
 msgid "Hover Decoration"
 msgstr "മുകളി‍ല്‍ വരുമ്പോഴുള്ള അലങ്കാരം"
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: editor/scmeditorcolors.ui:23
+#, kde-format
+msgid "Color set:"
+msgstr "നിറക്കൂട്ടം:"
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:36
+#, kde-format
+msgid "Colorset to view/modify"
+msgstr "കാണേണ്ട/മാറ്റേണ്ട നിറക്കൂട്ടം"
+
+#. i18n: 'Common' here means &quot;frequent/not rare&quot;, not &quot;shared&quot;
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:40
+#, kde-format
+msgctxt "color-sets"
+msgid "Common Colors"
+msgstr "സാധാരണ നിറങ്ങള്‍"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:45
+#, kde-format
+msgctxt "color-sets"
+msgid "View"
+msgstr "കാഴ്ച"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:50
+#, kde-format
+msgctxt "color-sets"
+msgid "Window"
+msgstr "ജാലകം"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:55
+#, kde-format
+msgctxt "color-sets"
+msgid "Button"
+msgstr "ബട്ടണ്‍"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:60
+#, kde-format
+msgctxt "color-sets"
+msgid "Selection"
+msgstr "തെരഞ്ഞെടുത്തവ"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:65
+#, kde-format
+msgctxt "color-sets"
+msgid "Tooltip"
+msgstr "സൂചന"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:70
+#, kde-format
+msgctxt "color-sets"
+msgid "Complementary"
+msgstr "പൂരകം"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:75
+#, kde-format
+msgctxt "color-sets"
+msgid "Header"
+msgstr "തലക്കെട്ട്"
+
+#. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:118 editor/scmeditorcolors.ui:123
+#: editor/scmeditorcolors.ui:128 editor/scmeditorcolors.ui:133
+#: editor/scmeditorcolors.ui:138 editor/scmeditorcolors.ui:143
+#: editor/scmeditorcolors.ui:148 editor/scmeditorcolors.ui:153
+#: editor/scmeditorcolors.ui:158 editor/scmeditorcolors.ui:163
+#: editor/scmeditorcolors.ui:168 editor/scmeditorcolors.ui:173
+#: editor/scmeditorcolors.ui:178 editor/scmeditorcolors.ui:183
+#: editor/scmeditorcolors.ui:188 editor/scmeditorcolors.ui:193
+#: editor/scmeditorcolors.ui:198 editor/scmeditorcolors.ui:203
+#: editor/scmeditorcolors.ui:208 editor/scmeditorcolors.ui:213
+#: editor/scmeditorcolors.ui:218 editor/scmeditorcolors.ui:223
+#: editor/scmeditorcolors.ui:228 editor/scmeditorcolors.ui:233
+#: editor/scmeditorcolors.ui:238 editor/scmeditorcolors.ui:243
+#, kde-format
+msgid "New Row"
+msgstr "പുതിയ വരി"
+
+#. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:248
+#, kde-format
+msgid "0"
+msgstr "0"
+
+#. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:253
+#, kde-format
+msgid "1"
+msgstr "1"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:258
+#, kde-format
+msgid "View Background"
+msgstr "പശ്ചാത്തലം കാണുക"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:263
+#, kde-format
+msgid "View Text"
+msgstr "പദാവലി കാണുക"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:268
+#, kde-format
+msgid "Window Background"
+msgstr "ജാലകത്തിന്റെ പശ്ചാത്തലം"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:273
+#, kde-format
+msgid "Window Text"
+msgstr "ജാലകത്തിനുള്ള പദാവലി"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:278
+#, kde-format
+msgid "Button Background"
+msgstr "ബട്ടണിന്റെ പശ്ചാത്തലം"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:283
+#, kde-format
+msgid "Button Text"
+msgstr "ബട്ടണിനുള്ള പദാവലി"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:288
+#, kde-format
+msgid "Selection Background"
+msgstr "തെരഞ്ഞെടുത്തവയുടെ പശ്ചാത്തലം"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:293
+#, kde-format
+msgid "Selection Text"
+msgstr "തെരഞ്ഞെടുത്ത പദാവലി"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:298
+#, kde-format
+msgid "Selection Inactive Text"
+msgstr "തെരഞ്ഞെടുക്കല്‍ സജീവമല്ലാത്ത വാചങ്ങള്‍"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:348
+#, kde-format
+msgid "Tooltip Background"
+msgstr "സൂചനാ പശ്ചാത്തലം"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:353
+#, kde-format
+msgid "Tooltip Text"
+msgstr "സൂചനാ പദാവലി"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:358
+#, kde-format
+msgid "Active Titlebar"
+msgstr "സജീവമായ തലകെട്ട് ബാര്‍"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:363
+#, kde-format
+msgid "Active Titlebar Text"
+msgstr "സജീവമായ തലകെട്ട് ബാര്‍ പദാവലി"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:368
+#, kde-format
+msgid "Active Titlebar Secondary"
+msgstr "ദ്വിതീയ സജീവതലക്കെട്ട് ബാർ"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:373
+#, kde-format
+msgid "Inactive Titlebar"
+msgstr "സജീവമല്ലാത്ത തലകെട്ട് ബാര്‍"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:378
+#, kde-format
+msgid "Inactive Titlebar Text"
+msgstr "സജീവമല്ലാത്ത തലകെട്ട് ബാര്‍ പദാവലി"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:383
+#, kde-format
+msgid "Inactive Titlebar Secondary"
+msgstr "സജീവമല്ലാത്ത ദ്വിതീയ തലകെട്ട് ബാര്‍"
 
 #: editor/scmeditordialog.cpp:60
 #, kde-format
@@ -245,6 +699,451 @@ msgstr "പിശകു്"
 #, kde-format
 msgid "Inactive"
 msgstr "നിര്‍ജ്ജീവം"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: editor/scmeditoreffects.ui:17
+#, kde-format
+msgid "Color:"
+msgstr "നിറം:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: editor/scmeditoreffects.ui:27
+#, kde-format
+msgid "Intensity:"
+msgstr "രൂക്ഷത:"
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, colorBox)
+#: editor/scmeditoreffects.ui:37
+#, kde-format
+msgid "Disabled color effect type"
+msgstr "പ്രവര്‍ത്തനരഹിതമായവയുടെ നിറത്തിന്റെ പ്രഭാവ തരം"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
+#: editor/scmeditoreffects.ui:41
+#, kde-format
+msgctxt "no disabled color effect"
+msgid "None"
+msgstr "ശൂന്യം"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
+#: editor/scmeditoreffects.ui:46
+#, kde-format
+msgctxt "disabled color effect"
+msgid "Desaturate"
+msgstr "ഡീസാച്ചുറേറ്റ് ചെയ്യുക"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
+#: editor/scmeditoreffects.ui:51
+#, kde-format
+msgctxt "disabled color effect"
+msgid "Fade"
+msgstr "മങ്ങുക"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
+#: editor/scmeditoreffects.ui:56
+#, kde-format
+msgctxt "disabled color effect"
+msgid "Tint"
+msgstr "ഇളംനിറം"
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, intensityBox)
+#: editor/scmeditoreffects.ui:64
+#, kde-format
+msgid "Disabled intensity effect type"
+msgstr "പ്രവര്‍ത്തനരഹിതമായവയുടെ രൂക്ഷതയുടെ പ്രഭാവ തരം"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
+#: editor/scmeditoreffects.ui:68
+#, kde-format
+msgctxt "no disabled intensity effect"
+msgid "None"
+msgstr "ശൂന്യം"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
+#: editor/scmeditoreffects.ui:73
+#, kde-format
+msgctxt "disabled intensity effect"
+msgid "Shade"
+msgstr "നിഴൽ"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
+#: editor/scmeditoreffects.ui:78
+#, kde-format
+msgctxt "disabled intensity effect"
+msgid "Darken"
+msgstr "ഇരുണ്ടതാക്കുക"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
+#: editor/scmeditoreffects.ui:83
+#, kde-format
+msgctxt "disabled intensity effect"
+msgid "Lighten"
+msgstr "പ്രകാശിപ്പിക്കുക"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: editor/scmeditoreffects.ui:107
+#, kde-format
+msgid "Contrast:"
+msgstr "വ്യത്യയം (contrast):"
+
+#. i18n: ectx: property (toolTip), widget (QSlider, colorSlider)
+#: editor/scmeditoreffects.ui:120
+#, kde-format
+msgid "Disabled color effect amount"
+msgstr "പ്രവര്‍ത്തനരഹിതമായവയുടെ നിറത്തിന്റെ പ്രഭാവത്തിന്റെ അളവു്"
+
+#. i18n: ectx: property (toolTip), widget (QSlider, intensitySlider)
+#: editor/scmeditoreffects.ui:139
+#, kde-format
+msgid "Disabled intensity effect amount"
+msgstr "പ്രവര്‍ത്തനരഹിതമായവയുടെ രൂക്ഷതയുടെ പ്രഭാവത്തിന്റെ അളവു്"
+
+#. i18n: ectx: property (toolTip), widget (KColorButton, colorButton)
+#: editor/scmeditoreffects.ui:158
+#, kde-format
+msgid "Disabled color"
+msgstr "പ്രവര്‍ത്തനരഹിതമായവയുടെ നിറം"
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, contrastBox)
+#: editor/scmeditoreffects.ui:181
+#, kde-format
+msgid "Disabled contrast type"
+msgstr "പ്രവര്‍ത്തനരഹിതമായവയുടെ വ്യത്യയത്തിന്റെ (contrast) തരം"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
+#: editor/scmeditoreffects.ui:185
+#, kde-format
+msgctxt "no disabled contrast"
+msgid "None"
+msgstr "ശൂന്യം"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
+#: editor/scmeditoreffects.ui:190
+#, kde-format
+msgctxt "disabled contrast"
+msgid "Fade"
+msgstr "മങ്ങുക"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
+#: editor/scmeditoreffects.ui:195
+#, kde-format
+msgctxt "disabled contrast"
+msgid "Tint"
+msgstr "ഇളംനിറം"
+
+#. i18n: ectx: property (toolTip), widget (QSlider, contrastSlider)
+#: editor/scmeditoreffects.ui:222
+#, kde-format
+msgid "Disabled contrast amount"
+msgstr "പ്രവര്‍ത്തനരഹിതമായവയുടെ വ്യത്യയത്തിന്റെ അളവു്"
+
+#. i18n: ectx: property (text), widget (QCheckBox, useInactiveEffects)
+#: editor/scmeditoroptions.ui:17
+#, kde-format
+msgid "Apply &effects to inactive windows"
+msgstr "സജീവമല്ലാത്ത ജാലകത്തിനുള്ള നിറ പ്രഭാവങ്ങള്‍ പ്രയോഗിയ്ക്കുക (&E)"
+
+#. i18n: ectx: property (text), widget (QCheckBox, inactiveSelectionEffect)
+#: editor/scmeditoroptions.ui:24
+#, kde-format
+msgid "Use different colors for in&active selections"
+msgstr "നിഷ്ക്രിയമായ തിരഞ്ഞെടുപ്പുകൾക്കായി വ്യത്യസ്ത നിറങ്ങൾ ഉപയോഗിക്കുക"
+
+#. i18n: ectx: property (text), widget (QCheckBox, shadeSortedColumn)
+#: editor/scmeditoroptions.ui:31
+#, kde-format
+msgid "Shade sorted column &in lists"
+msgstr "പട്ടികകളില്‍ ക്രമീകരിച്ചിരിക്കുന്ന നിരകള്‍ എടുത്ത്കാണിക്കുക (&i)"
+
+#. i18n: ectx: property (text), widget (QCheckBox, tintColors)
+#: editor/scmeditoroptions.ui:38
+#, fuzzy, kde-format
+#| msgid "Inactive color"
+msgid "Tint all colors with accent color"
+msgstr "സജീവമല്ലാത്തവയുടെ നിറം"
+
+#. i18n: ectx: property (text), widget (QCheckBox, accentTitlebar)
+#: editor/scmeditoroptions.ui:45
+#, kde-format
+msgid "Make window titlebars a&ccent-colored"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: editor/scmeditoroptions.ui:52
+#, kde-format
+msgid "Tint strength:"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QGroupBox, groupBox_5)
+#: editor/scmeditoroptions.ui:69
+#, kde-format
+msgid "Shading of frames and lighting (\"3D\") effects"
+msgstr "ഫ്രെയിമുകളുടെ നിഴലും ലൈറ്റിംഗ് (\"3D\") ഇഫക്റ്റുകളും"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
+#: editor/scmeditoroptions.ui:72
+#, kde-format
+msgid "Shading"
+msgstr "നിഴലിമ"
+
+#. i18n: ectx: property (text), widget (QLabel, label_10)
+#: editor/scmeditoroptions.ui:97
+#, kde-format
+msgid "Maximum"
+msgstr "കൂടിയത്"
+
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: editor/scmeditoroptions.ui:117
+#, kde-format
+msgid "Minimum"
+msgstr "കുറഞ്ഞത്"
+
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: editor/scmeditoroptions.ui:124
+#, kde-format
+msgid "Contrast"
+msgstr "വ്യത്യയം (contrast)"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore0)
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack0)
+#: editor/setpreview.ui:35 editor/setpreview.ui:189
+#, kde-format
+msgid "Normal Text on Normal Background"
+msgstr "സാധാരണ പശ്ചാത്തലത്തിലുള്ള സാധാരണ പദാവലി"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore0)
+#. i18n: ectx: property (text), widget (QLabel, labelBack0)
+#: editor/setpreview.ui:38 editor/setpreview.ui:192
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "normal"
+msgstr "സാധാരണ"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore3)
+#: editor/setpreview.ui:56
+#, kde-format
+msgid "Link Text on Normal Background"
+msgstr "സാധാരണ പശ്ചാത്തലത്തിൽ കണ്ണി പദാവലി"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore3)
+#. i18n: ectx: property (text), widget (QLabel, labelBack3)
+#: editor/setpreview.ui:59 editor/setpreview.ui:214
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "link"
+msgstr "കണ്ണി"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore4)
+#: editor/setpreview.ui:77
+#, kde-format
+msgid "Visited Text on Normal Background"
+msgstr "സാധാരണ പശ്ചാത്തലത്തിൽ സന്ദർശിച്ച പദാവലി"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore4)
+#. i18n: ectx: property (text), widget (QLabel, labelBack4)
+#: editor/setpreview.ui:80 editor/setpreview.ui:236
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "visited"
+msgstr "സന്ദര്‍ശിച്ചതു്"
+
+#. i18n: ectx: property (toolTip), widget (QWidget, widgetFore2)
+#: editor/setpreview.ui:90
+#, kde-format
+msgid "Active Text on Normal Background"
+msgstr "സാധാരണ പശ്ചാത്തലത്തിലുള്ള സജീവ പദാവലി"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore2)
+#. i18n: ectx: property (text), widget (QLabel, labelBack2)
+#: editor/setpreview.ui:96 editor/setpreview.ui:253
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "active"
+msgstr "സജീവം"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore1)
+#: editor/setpreview.ui:109
+#, kde-format
+msgid "Inactive Text on Normal Background"
+msgstr "സാധാരണ പശ്ചാത്തലത്തിൽ നിഷ്‌ക്രിയ പദാവലി"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore1)
+#: editor/setpreview.ui:112
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "inactive"
+msgstr "സജീവമല്ലാത്ത"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore5)
+#: editor/setpreview.ui:125
+#, kde-format
+msgid "Negative Text on Normal Background"
+msgstr "സാധാരണ പശ്ചാത്തലത്തിൽ നെഗറ്റീവ് പദാവലി"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore5)
+#. i18n: ectx: property (text), widget (QLabel, labelBack5)
+#: editor/setpreview.ui:128 editor/setpreview.ui:286
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "negative"
+msgstr "നെഗറ്റിവ്"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore6)
+#: editor/setpreview.ui:141
+#, kde-format
+msgid "Neutral Text on Normal Background"
+msgstr "സാധാരണ പശ്ചാത്തലത്തിലുള്ള നിഷ്പക്ഷ പദാവലി"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore6)
+#. i18n: ectx: property (text), widget (QLabel, labelBack6)
+#: editor/setpreview.ui:144 editor/setpreview.ui:303
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "neutral"
+msgstr "നിഷ്പക്ഷം"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore7)
+#: editor/setpreview.ui:157
+#, kde-format
+msgid "Positive Text on Normal Background"
+msgstr "സാധാരണ പശ്ചാത്തലത്തിൽ പോസിറ്റീവ് പദാവലി"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore7)
+#. i18n: ectx: property (text), widget (QLabel, labelBack7)
+#: editor/setpreview.ui:160 editor/setpreview.ui:320
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "positive"
+msgstr "പോസിറ്റിവ്"
+
+#. i18n: ectx: property (toolTip), widget (QWidget, widgetFore8)
+#: editor/setpreview.ui:170
+#, kde-format
+msgid "Hover on Normal Background"
+msgstr "സാധാരണ പശ്ചാത്തലത്തിൽ ഹോവർ ചെയ്യുക"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore8)
+#: editor/setpreview.ui:176
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "hover"
+msgstr "ഹോവർ ചെയ്യുക"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack3)
+#: editor/setpreview.ui:211
+#, kde-format
+msgid ""
+"Link Text on Link Background\n"
+"(Note: Link Background is derived from Link Text and cannot be separately "
+"configured at this time)"
+msgstr ""
+"കണ്ണി പശ്ചാത്തലത്തിൽ കണ്ണി പദാവലി\n"
+"(കുറിപ്പ്: കണ്ണി പദാവലിയിൽ നിന്ന് കണ്ണി പശ്ചാത്തലം ഉരുത്തിരിഞ്ഞതാണ്, ഇപ്പോൾ അത് പ്രത്യേകമായി "
+"ക്രമീകരിക്കാൻ കഴിയില്ല)"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack4)
+#: editor/setpreview.ui:233
+#, kde-format
+msgid ""
+"Visited Text on Visited Background\n"
+"(Note: Visited Background is derived from Visited Text and cannot be "
+"separately configured at this time)"
+msgstr ""
+"സന്ദർശിച്ച പശ്ചാത്തലത്തിൽ സന്ദർശിച്ച പദാവലി\n"
+"(കുറിപ്പ്: സന്ദർശിച്ച പശ്ചാത്തലം സന്ദർശിച്ച പദാവലിയിൽ നിന്ന് ഉരുത്തിരിഞ്ഞതാണ്, ഇപ്പോൾ "
+"പ്രത്യേകമായി ക്രമീകരിക്കാൻ കഴിയില്ല)"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack2)
+#: editor/setpreview.ui:250
+#, kde-format
+msgid ""
+"Active Text on Active Background\n"
+"(Note: Active Background is derived from Active Text and cannot be "
+"separately configured at this time)"
+msgstr ""
+"സജീവ പശ്ചാത്തലത്തിലുള്ള സജീവ പദാവലി\n"
+"(കുറിപ്പ്: സജീവ പശ്ചാത്തലം സജീവ പദാവലിയിൽ നിന്ന് ഉരുത്തിരിഞ്ഞതാണ്, ഇപ്പോൾ പ്രത്യേകമായി "
+"ക്രമീകരിക്കാൻ കഴിയില്ല)"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack1)
+#: editor/setpreview.ui:266
+#, kde-format
+msgid "Inactive Text on Alternate Background"
+msgstr "ഇതര പശ്ചാത്തലത്തിൽ നിഷ്‌ക്രിയ പദാവലി"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelBack1)
+#: editor/setpreview.ui:269
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "alternate"
+msgstr "പകരമായി"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack5)
+#: editor/setpreview.ui:283
+#, kde-format
+msgid ""
+"Negative Text on Negative Background\n"
+"(Note: Negative Background is derived from Negative Text and cannot be "
+"separately configured at this time)"
+msgstr ""
+"നെഗറ്റീവ് പശ്ചാത്തലത്തിൽ നെഗറ്റീവ് പദാവലി\n"
+"(കുറിപ്പ്: നെഗറ്റീവ് പശ്ചാത്തലം നെഗറ്റീവ് പദാവലിയിൽ നിന്ന് ഉരുത്തിരിഞ്ഞതാണ്, ഇപ്പോൾ "
+"പ്രത്യേകമായി ക്രമീകരിക്കാൻ കഴിയില്ല)"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack6)
+#: editor/setpreview.ui:300
+#, kde-format
+msgid ""
+"Neutral Text on Neutral Background\n"
+"(Note: Neutral Background is derived from Neutral Text and cannot be "
+"separately configured at this time)"
+msgstr ""
+"ന്യൂട്രൽ പശ്ചാത്തലത്തിൽ ന്യൂട്രൽ പദാവലി\n"
+"(കുറിപ്പ്: ന്യൂട്രൽ പശ്ചാത്തലം ന്യൂട്രൽ പദാവലിയിൽ നിന്ന് ഉരുത്തിരിഞ്ഞതാണ്, ഈ സമയത്ത് പ്രത്യേകമായി "
+"ക്രമീകരിക്കാൻ കഴിയില്ല)"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack7)
+#: editor/setpreview.ui:317
+#, kde-format
+msgid ""
+"Positive Text on Positive Background\n"
+"(Note: Positive Background is derived from Positive Text and cannot be "
+"separately configured at this time)"
+msgstr ""
+"പോസിറ്റീവ് പശ്ചാത്തലത്തിൽ പോസിറ്റീവ് പദാവലി\n"
+"(കുറിപ്പ്: പോസിറ്റീവ് പശ്ചാത്തലം പോസിറ്റീവ് പദാവലിയിൽ നിന്ന് ഉരുത്തിരിഞ്ഞതാണ്, ഇപ്പോൾ "
+"പ്രത്യേകമായി ക്രമീകരിക്കാൻ കഴിയില്ല)"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore9)
+#: editor/setpreview.ui:333
+#, kde-format
+msgid "Focus on Normal Background"
+msgstr "സാധാരണ പശ്ചാത്തലത്തിൽ ശ്രദ്ധാകേന്ദ്രം"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore9)
+#: editor/setpreview.ui:336
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "focus"
+msgstr "ശ്രദ്ധാകേന്ദ്രം"
 
 #: package/contents/ui/main.qml:23
 #, kde-format
@@ -466,444 +1365,6 @@ msgstr "നിങ്ങളുടെ സിസ്റ്റത്തിൽ ഇന�
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (നിലവിലെ കളർ സ്കീം)"
-
-#~ msgid "Color scheme name"
-#~ msgstr "നിറക്കൂട്ടിന്റെ പേര്"
-
-#, fuzzy
-#~| msgid "Inactive color"
-#~ msgid "Accent color"
-#~ msgstr "സജീവമല്ലാത്തവയുടെ നിറം"
-
-#~ msgid "Window text on Window Background"
-#~ msgstr "ജാലക പശ്ചാത്തലത്തിലുള്ള ജാലക വാചകം"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "Window text"
-#~ msgstr "ജാലക വാചകം"
-
-#~ msgid "Button text on Button Background"
-#~ msgstr "ബട്ടൺ പശ്ചാത്തലത്തിലെ ബട്ടൺ വാചകം"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "Push Button"
-#~ msgstr "പുഷ് ബട്ടണ്‍"
-
-#~ msgid "Selection Normal Text against Selection Normal Background"
-#~ msgstr "സാധാരണ പശ്ചാത്തലത്തിൽ നിന്ന് സാധാരണ പദാവലി തിരഞ്ഞെടുക്കപ്പെട്ടു"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "Selected text"
-#~ msgstr "തെരഞ്ഞെടുത്ത പദാവലി"
-
-#~ msgid "Selection Link Text against Selection Normal Background"
-#~ msgstr "സാധാരണ പശ്ചാത്തലത്തിൽ നിന്ന് ചങ്ങലക്കണ്ണി പദാവലി തിരഞ്ഞെടുക്കപ്പെട്ടു"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "link"
-#~ msgstr "കണ്ണി"
-
-#~ msgid "Selection Visited Text against Selection Normal Background"
-#~ msgstr "സാധാരണ പശ്ചാത്തലത്തിൽ നിന്ന് സന്ദർശിച്ച പദാവലി തിരഞ്ഞെടുക്കപ്പെട്ടു"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "visited"
-#~ msgstr "സന്ദര്‍ശിച്ചതു്"
-
-#~ msgid "Selection Active Text against Selection Normal Background"
-#~ msgstr "സാധാരണ പശ്ചാത്തലത്തിൽ നിന്ന് സജീവ പദാവലി തിരഞ്ഞെടുക്കപ്പെട്ടു"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "a"
-#~ msgstr "a"
-
-#~ msgid "Selection Inactive Text against Selection Normal Background"
-#~ msgstr "സാധാരണ പശ്ചാത്തലത്തിൽ നിന്ന് നിര്‍ജ്ജീവ പദാവലി തിരഞ്ഞെടുക്കപ്പെട്ടു"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "i"
-#~ msgstr "i"
-
-#~ msgid "Selection Negative Text against Selection Normal Background"
-#~ msgstr "സാധാരണ പശ്ചാത്തലത്തിൽ നിന്ന് നെഗറ്റീവ് പദാവലി തിരഞ്ഞെടുക്കപ്പെട്ടു"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "!"
-#~ msgstr "!"
-
-#~ msgid "Selection Neutral Text against Selection Normal Background"
-#~ msgstr "സാധാരണ പശ്ചാത്തലത്തിൽ നിന്ന് ന്യൂട്രൽ പദാവലി തിരഞ്ഞെടുക്കപ്പെട്ടു"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "="
-#~ msgstr "="
-
-#~ msgid "Selection Positive Text against Selection Normal Background"
-#~ msgstr "സാധാരണ പശ്ചാത്തലത്തിൽ നിന്ന് പോസിറ്റീവ് പദാവലി തിരഞ്ഞെടുക്കപ്പെട്ടു"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "+"
-#~ msgstr "+"
-
-#~ msgid "View Normal Text against View Normal Background"
-#~ msgstr "സാധാരണ പശ്ചാത്തലത്തിൽ നിന്ന് സാധാരണ പദാവലി കാണുക"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "Normal text"
-#~ msgstr "സാധരണ പദാവലി"
-
-#~ msgid "View Link Text against View Normal Background"
-#~ msgstr "സാധാരണ പശ്ചാത്തലത്തിൽ നിന്ന് ചങ്ങലക്കണ്ണി പദാവലി കാണുക"
-
-#~ msgid "View Visited Text against View Normal Background"
-#~ msgstr "സാധാരണ പശ്ചാത്തലത്തിൽ നിന്ന് സന്ദർശിച്ച പദാവലി കാണുക"
-
-#~ msgid "View Active Text against View Normal Background"
-#~ msgstr "സാധാരണ പശ്ചാത്തലത്തിൽ നിന്ന് സജീവ പദാവലി കാണുക"
-
-#~ msgid "View Inactive Text against View Normal Background"
-#~ msgstr "സാധാരണ പശ്ചാത്തലത്തിൽ നിന്ന് നിര്‍ജ്ജീവ പദാവലി കാണുക"
-
-#~ msgid "View Negative Text against View Normal Background"
-#~ msgstr "സാധാരണ പശ്ചാത്തലത്തിൽ നിന്ന് നെഗറ്റീവ് പദാവലി കാണുക"
-
-#~ msgid "View Neutral Text against View Normal Background"
-#~ msgstr "സാധാരണ പശ്ചാത്തലത്തിൽ നിന്ന് ന്യൂട്രൽ പദാവലി കാണുക"
-
-#~ msgid "View Positive Text against View Normal Background"
-#~ msgstr "സാധാരണ പശ്ചാത്തലത്തിൽ നിന്ന് പോസിറ്റീവ് പദാവലി കാണുക"
-
-#~ msgid "Color set:"
-#~ msgstr "നിറക്കൂട്ടം:"
-
-#~ msgid "Colorset to view/modify"
-#~ msgstr "കാണേണ്ട/മാറ്റേണ്ട നിറക്കൂട്ടം"
-
-#~ msgctxt "color-sets"
-#~ msgid "Common Colors"
-#~ msgstr "സാധാരണ നിറങ്ങള്‍"
-
-#~ msgctxt "color-sets"
-#~ msgid "View"
-#~ msgstr "കാഴ്ച"
-
-#~ msgctxt "color-sets"
-#~ msgid "Window"
-#~ msgstr "ജാലകം"
-
-#~ msgctxt "color-sets"
-#~ msgid "Button"
-#~ msgstr "ബട്ടണ്‍"
-
-#~ msgctxt "color-sets"
-#~ msgid "Selection"
-#~ msgstr "തെരഞ്ഞെടുത്തവ"
-
-#~ msgctxt "color-sets"
-#~ msgid "Tooltip"
-#~ msgstr "സൂചന"
-
-#~ msgctxt "color-sets"
-#~ msgid "Complementary"
-#~ msgstr "പൂരകം"
-
-#~ msgctxt "color-sets"
-#~ msgid "Header"
-#~ msgstr "തലക്കെട്ട്"
-
-#~ msgid "New Row"
-#~ msgstr "പുതിയ വരി"
-
-#~ msgid "0"
-#~ msgstr "0"
-
-#~ msgid "1"
-#~ msgstr "1"
-
-#~ msgid "View Background"
-#~ msgstr "പശ്ചാത്തലം കാണുക"
-
-#~ msgid "View Text"
-#~ msgstr "പദാവലി കാണുക"
-
-#~ msgid "Window Background"
-#~ msgstr "ജാലകത്തിന്റെ പശ്ചാത്തലം"
-
-#~ msgid "Window Text"
-#~ msgstr "ജാലകത്തിനുള്ള പദാവലി"
-
-#~ msgid "Button Background"
-#~ msgstr "ബട്ടണിന്റെ പശ്ചാത്തലം"
-
-#~ msgid "Button Text"
-#~ msgstr "ബട്ടണിനുള്ള പദാവലി"
-
-#~ msgid "Selection Background"
-#~ msgstr "തെരഞ്ഞെടുത്തവയുടെ പശ്ചാത്തലം"
-
-#~ msgid "Selection Text"
-#~ msgstr "തെരഞ്ഞെടുത്ത പദാവലി"
-
-#~ msgid "Selection Inactive Text"
-#~ msgstr "തെരഞ്ഞെടുക്കല്‍ സജീവമല്ലാത്ത വാചങ്ങള്‍"
-
-#~ msgid "Tooltip Background"
-#~ msgstr "സൂചനാ പശ്ചാത്തലം"
-
-#~ msgid "Tooltip Text"
-#~ msgstr "സൂചനാ പദാവലി"
-
-#~ msgid "Active Titlebar"
-#~ msgstr "സജീവമായ തലകെട്ട് ബാര്‍"
-
-#~ msgid "Active Titlebar Text"
-#~ msgstr "സജീവമായ തലകെട്ട് ബാര്‍ പദാവലി"
-
-#~ msgid "Active Titlebar Secondary"
-#~ msgstr "ദ്വിതീയ സജീവതലക്കെട്ട് ബാർ"
-
-#~ msgid "Inactive Titlebar"
-#~ msgstr "സജീവമല്ലാത്ത തലകെട്ട് ബാര്‍"
-
-#~ msgid "Inactive Titlebar Text"
-#~ msgstr "സജീവമല്ലാത്ത തലകെട്ട് ബാര്‍ പദാവലി"
-
-#~ msgid "Inactive Titlebar Secondary"
-#~ msgstr "സജീവമല്ലാത്ത ദ്വിതീയ തലകെട്ട് ബാര്‍"
-
-#~ msgid "Color:"
-#~ msgstr "നിറം:"
-
-#~ msgid "Intensity:"
-#~ msgstr "രൂക്ഷത:"
-
-#~ msgid "Disabled color effect type"
-#~ msgstr "പ്രവര്‍ത്തനരഹിതമായവയുടെ നിറത്തിന്റെ പ്രഭാവ തരം"
-
-#~ msgctxt "no disabled color effect"
-#~ msgid "None"
-#~ msgstr "ശൂന്യം"
-
-#~ msgctxt "disabled color effect"
-#~ msgid "Desaturate"
-#~ msgstr "ഡീസാച്ചുറേറ്റ് ചെയ്യുക"
-
-#~ msgctxt "disabled color effect"
-#~ msgid "Fade"
-#~ msgstr "മങ്ങുക"
-
-#~ msgctxt "disabled color effect"
-#~ msgid "Tint"
-#~ msgstr "ഇളംനിറം"
-
-#~ msgid "Disabled intensity effect type"
-#~ msgstr "പ്രവര്‍ത്തനരഹിതമായവയുടെ രൂക്ഷതയുടെ പ്രഭാവ തരം"
-
-#~ msgctxt "no disabled intensity effect"
-#~ msgid "None"
-#~ msgstr "ശൂന്യം"
-
-#~ msgctxt "disabled intensity effect"
-#~ msgid "Shade"
-#~ msgstr "നിഴൽ"
-
-#~ msgctxt "disabled intensity effect"
-#~ msgid "Darken"
-#~ msgstr "ഇരുണ്ടതാക്കുക"
-
-#~ msgctxt "disabled intensity effect"
-#~ msgid "Lighten"
-#~ msgstr "പ്രകാശിപ്പിക്കുക"
-
-#~ msgid "Contrast:"
-#~ msgstr "വ്യത്യയം (contrast):"
-
-#~ msgid "Disabled color effect amount"
-#~ msgstr "പ്രവര്‍ത്തനരഹിതമായവയുടെ നിറത്തിന്റെ പ്രഭാവത്തിന്റെ അളവു്"
-
-#~ msgid "Disabled intensity effect amount"
-#~ msgstr "പ്രവര്‍ത്തനരഹിതമായവയുടെ രൂക്ഷതയുടെ പ്രഭാവത്തിന്റെ അളവു്"
-
-#~ msgid "Disabled color"
-#~ msgstr "പ്രവര്‍ത്തനരഹിതമായവയുടെ നിറം"
-
-#~ msgid "Disabled contrast type"
-#~ msgstr "പ്രവര്‍ത്തനരഹിതമായവയുടെ വ്യത്യയത്തിന്റെ (contrast) തരം"
-
-#~ msgctxt "no disabled contrast"
-#~ msgid "None"
-#~ msgstr "ശൂന്യം"
-
-#~ msgctxt "disabled contrast"
-#~ msgid "Fade"
-#~ msgstr "മങ്ങുക"
-
-#~ msgctxt "disabled contrast"
-#~ msgid "Tint"
-#~ msgstr "ഇളംനിറം"
-
-#~ msgid "Disabled contrast amount"
-#~ msgstr "പ്രവര്‍ത്തനരഹിതമായവയുടെ വ്യത്യയത്തിന്റെ അളവു്"
-
-#~ msgid "Apply &effects to inactive windows"
-#~ msgstr "സജീവമല്ലാത്ത ജാലകത്തിനുള്ള നിറ പ്രഭാവങ്ങള്‍ പ്രയോഗിയ്ക്കുക (&E)"
-
-#~ msgid "Use different colors for in&active selections"
-#~ msgstr "നിഷ്ക്രിയമായ തിരഞ്ഞെടുപ്പുകൾക്കായി വ്യത്യസ്ത നിറങ്ങൾ ഉപയോഗിക്കുക"
-
-#~ msgid "Shade sorted column &in lists"
-#~ msgstr "പട്ടികകളില്‍ ക്രമീകരിച്ചിരിക്കുന്ന നിരകള്‍ എടുത്ത്കാണിക്കുക (&i)"
-
-#, fuzzy
-#~| msgid "Inactive color"
-#~ msgid "Tint all colors with accent color"
-#~ msgstr "സജീവമല്ലാത്തവയുടെ നിറം"
-
-#~ msgid "Shading of frames and lighting (\"3D\") effects"
-#~ msgstr "ഫ്രെയിമുകളുടെ നിഴലും ലൈറ്റിംഗ് (\"3D\") ഇഫക്റ്റുകളും"
-
-#~ msgid "Shading"
-#~ msgstr "നിഴലിമ"
-
-#~ msgid "Maximum"
-#~ msgstr "കൂടിയത്"
-
-#~ msgid "Minimum"
-#~ msgstr "കുറഞ്ഞത്"
-
-#~ msgid "Contrast"
-#~ msgstr "വ്യത്യയം (contrast)"
-
-#~ msgid "Normal Text on Normal Background"
-#~ msgstr "സാധാരണ പശ്ചാത്തലത്തിലുള്ള സാധാരണ പദാവലി"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "normal"
-#~ msgstr "സാധാരണ"
-
-#~ msgid "Link Text on Normal Background"
-#~ msgstr "സാധാരണ പശ്ചാത്തലത്തിൽ കണ്ണി പദാവലി"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "link"
-#~ msgstr "കണ്ണി"
-
-#~ msgid "Visited Text on Normal Background"
-#~ msgstr "സാധാരണ പശ്ചാത്തലത്തിൽ സന്ദർശിച്ച പദാവലി"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "visited"
-#~ msgstr "സന്ദര്‍ശിച്ചതു്"
-
-#~ msgid "Active Text on Normal Background"
-#~ msgstr "സാധാരണ പശ്ചാത്തലത്തിലുള്ള സജീവ പദാവലി"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "active"
-#~ msgstr "സജീവം"
-
-#~ msgid "Inactive Text on Normal Background"
-#~ msgstr "സാധാരണ പശ്ചാത്തലത്തിൽ നിഷ്‌ക്രിയ പദാവലി"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "inactive"
-#~ msgstr "സജീവമല്ലാത്ത"
-
-#~ msgid "Negative Text on Normal Background"
-#~ msgstr "സാധാരണ പശ്ചാത്തലത്തിൽ നെഗറ്റീവ് പദാവലി"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "negative"
-#~ msgstr "നെഗറ്റിവ്"
-
-#~ msgid "Neutral Text on Normal Background"
-#~ msgstr "സാധാരണ പശ്ചാത്തലത്തിലുള്ള നിഷ്പക്ഷ പദാവലി"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "neutral"
-#~ msgstr "നിഷ്പക്ഷം"
-
-#~ msgid "Positive Text on Normal Background"
-#~ msgstr "സാധാരണ പശ്ചാത്തലത്തിൽ പോസിറ്റീവ് പദാവലി"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "positive"
-#~ msgstr "പോസിറ്റിവ്"
-
-#~ msgid "Hover on Normal Background"
-#~ msgstr "സാധാരണ പശ്ചാത്തലത്തിൽ ഹോവർ ചെയ്യുക"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "hover"
-#~ msgstr "ഹോവർ ചെയ്യുക"
-
-#~ msgid ""
-#~ "Link Text on Link Background\n"
-#~ "(Note: Link Background is derived from Link Text and cannot be separately "
-#~ "configured at this time)"
-#~ msgstr ""
-#~ "കണ്ണി പശ്ചാത്തലത്തിൽ കണ്ണി പദാവലി\n"
-#~ "(കുറിപ്പ്: കണ്ണി പദാവലിയിൽ നിന്ന് കണ്ണി പശ്ചാത്തലം ഉരുത്തിരിഞ്ഞതാണ്, ഇപ്പോൾ അത് "
-#~ "പ്രത്യേകമായി ക്രമീകരിക്കാൻ കഴിയില്ല)"
-
-#~ msgid ""
-#~ "Visited Text on Visited Background\n"
-#~ "(Note: Visited Background is derived from Visited Text and cannot be "
-#~ "separately configured at this time)"
-#~ msgstr ""
-#~ "സന്ദർശിച്ച പശ്ചാത്തലത്തിൽ സന്ദർശിച്ച പദാവലി\n"
-#~ "(കുറിപ്പ്: സന്ദർശിച്ച പശ്ചാത്തലം സന്ദർശിച്ച പദാവലിയിൽ നിന്ന് ഉരുത്തിരിഞ്ഞതാണ്, ഇപ്പോൾ "
-#~ "പ്രത്യേകമായി ക്രമീകരിക്കാൻ കഴിയില്ല)"
-
-#~ msgid ""
-#~ "Active Text on Active Background\n"
-#~ "(Note: Active Background is derived from Active Text and cannot be "
-#~ "separately configured at this time)"
-#~ msgstr ""
-#~ "സജീവ പശ്ചാത്തലത്തിലുള്ള സജീവ പദാവലി\n"
-#~ "(കുറിപ്പ്: സജീവ പശ്ചാത്തലം സജീവ പദാവലിയിൽ നിന്ന് ഉരുത്തിരിഞ്ഞതാണ്, ഇപ്പോൾ പ്രത്യേകമായി "
-#~ "ക്രമീകരിക്കാൻ കഴിയില്ല)"
-
-#~ msgid "Inactive Text on Alternate Background"
-#~ msgstr "ഇതര പശ്ചാത്തലത്തിൽ നിഷ്‌ക്രിയ പദാവലി"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "alternate"
-#~ msgstr "പകരമായി"
-
-#~ msgid ""
-#~ "Negative Text on Negative Background\n"
-#~ "(Note: Negative Background is derived from Negative Text and cannot be "
-#~ "separately configured at this time)"
-#~ msgstr ""
-#~ "നെഗറ്റീവ് പശ്ചാത്തലത്തിൽ നെഗറ്റീവ് പദാവലി\n"
-#~ "(കുറിപ്പ്: നെഗറ്റീവ് പശ്ചാത്തലം നെഗറ്റീവ് പദാവലിയിൽ നിന്ന് ഉരുത്തിരിഞ്ഞതാണ്, ഇപ്പോൾ "
-#~ "പ്രത്യേകമായി ക്രമീകരിക്കാൻ കഴിയില്ല)"
-
-#~ msgid ""
-#~ "Neutral Text on Neutral Background\n"
-#~ "(Note: Neutral Background is derived from Neutral Text and cannot be "
-#~ "separately configured at this time)"
-#~ msgstr ""
-#~ "ന്യൂട്രൽ പശ്ചാത്തലത്തിൽ ന്യൂട്രൽ പദാവലി\n"
-#~ "(കുറിപ്പ്: ന്യൂട്രൽ പശ്ചാത്തലം ന്യൂട്രൽ പദാവലിയിൽ നിന്ന് ഉരുത്തിരിഞ്ഞതാണ്, ഈ സമയത്ത് "
-#~ "പ്രത്യേകമായി ക്രമീകരിക്കാൻ കഴിയില്ല)"
-
-#~ msgid ""
-#~ "Positive Text on Positive Background\n"
-#~ "(Note: Positive Background is derived from Positive Text and cannot be "
-#~ "separately configured at this time)"
-#~ msgstr ""
-#~ "പോസിറ്റീവ് പശ്ചാത്തലത്തിൽ പോസിറ്റീവ് പദാവലി\n"
-#~ "(കുറിപ്പ്: പോസിറ്റീവ് പശ്ചാത്തലം പോസിറ്റീവ് പദാവലിയിൽ നിന്ന് ഉരുത്തിരിഞ്ഞതാണ്, ഇപ്പോൾ "
-#~ "പ്രത്യേകമായി ക്രമീകരിക്കാൻ കഴിയില്ല)"
-
-#~ msgid "Focus on Normal Background"
-#~ msgstr "സാധാരണ പശ്ചാത്തലത്തിൽ ശ്രദ്ധാകേന്ദ്രം"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "focus"
-#~ msgstr "ശ്രദ്ധാകേന്ദ്രം"
 
 #, fuzzy
 #~| msgid "Apply &effects to inactive windows"

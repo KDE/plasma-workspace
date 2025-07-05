@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kded_susefreespacenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-08-18 09:13+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -35,6 +35,36 @@ msgstr "Filelight で開く"
 msgid "Open in File Manager"
 msgstr "ファイルマネージャで開く"
 
+#. i18n: ectx: label, entry (minimumSpace), group (General)
+#: freespacenotifier.kcfg:9
+#, kde-format
+msgid "Minimum free space before user starts being notified."
+msgstr "ユーザが通知され始める前の最小の空き領域"
+
+#. i18n: ectx: label, entry (enableNotification), group (General)
+#: freespacenotifier.kcfg:15
+#, kde-format
+msgid "Is the free space notification enabled."
+msgstr "空き領域の通知が有効化されているか"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableNotification)
+#: freespacenotifier_prefs_base.ui:17
+#, kde-format
+msgid "Enable low disk space warning"
+msgstr "ディスク領域が少なくなったら警告する"
+
+#. i18n: ectx: property (text), widget (QLabel, label_minimumSpace)
+#: freespacenotifier_prefs_base.ui:27
+#, kde-format
+msgid "Warn when free space is below:"
+msgstr "空き領域が次の量を下回ったら警告する:"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpace)
+#: freespacenotifier_prefs_base.ui:37
+#, kde-format
+msgid " MiB"
+msgstr " MiB"
+
 #: module.cpp:37
 #, kde-format
 msgid ""
@@ -57,18 +87,3 @@ msgstr ""
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"
 msgstr "全般"
-
-#~ msgid "Minimum free space before user starts being notified."
-#~ msgstr "ユーザが通知され始める前の最小の空き領域"
-
-#~ msgid "Is the free space notification enabled."
-#~ msgstr "空き領域の通知が有効化されているか"
-
-#~ msgid "Enable low disk space warning"
-#~ msgstr "ディスク領域が少なくなったら警告する"
-
-#~ msgid "Warn when free space is below:"
-#~ msgstr "空き領域が次の量を下回ったら警告する:"
-
-#~ msgid " MiB"
-#~ msgstr " MiB"

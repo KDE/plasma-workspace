@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2023-10-10 15:15+0300\n"
 "Last-Translator: Мария Шикунова <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -152,6 +152,32 @@ msgstr "Держать открытым"
 #, kde-format
 msgid "Configure…"
 msgstr "Настроить…"
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:10
+#, kde-format
+msgid "Screen lock enabled"
+msgstr "Включен блокировщик экрана"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:11
+#, kde-format
+msgid "Sets whether the screen will be locked after the specified time."
+msgstr ""
+"Если включён, то экран будет автоматически блокироваться спустя указанное "
+"время."
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:16
+#, kde-format
+msgid "Screen saver timeout"
+msgstr "Задержка блокировки экрана"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:17
+#, kde-format
+msgid "Sets the minutes after which the screen is locked."
+msgstr "Экран будет блокироваться спустя указанное число минут."
 
 #: sessionsprivate/sessionsmodel.cpp:235 sessionsprivate/sessionsmodel.cpp:239
 #, kde-format
@@ -321,20 +347,6 @@ msgstr "Загрузить виджеты Plasma..."
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "Установить виджет из файла..."
-
-#~ msgid "Screen lock enabled"
-#~ msgstr "Включен блокировщик экрана"
-
-#~ msgid "Sets whether the screen will be locked after the specified time."
-#~ msgstr ""
-#~ "Если включён, то экран будет автоматически блокироваться спустя указанное "
-#~ "время."
-
-#~ msgid "Screen saver timeout"
-#~ msgstr "Задержка блокировки экрана"
-
-#~ msgid "Sets the minutes after which the screen is locked."
-#~ msgstr "Экран будет блокироваться спустя указанное число минут."
 
 #~ msgid "&Execute"
 #~ msgstr "&Выполнить"

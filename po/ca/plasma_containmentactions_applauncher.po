@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2021-03-22 11:34+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -20,11 +20,14 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Generator: Lokalize 2.0\n"
 
+#. i18n: ectx: property (text), widget (QCheckBox, showAppsByName)
+#: config.ui:17
+#, kde-format
+msgid "Show applications by name"
+msgstr ""
+
 #: launch.cpp:89
 #, kde-format
 msgctxt "plasma_containmentactions_applauncher"
 msgid "Configure Application Launcher Plugin"
 msgstr "Configura el connector llançador d'aplicacions"
-
-#~ msgid "Show applications by name"
-#~ msgstr "Mostra les aplicacions per nom"

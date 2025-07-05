@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2024-05-12 21:32+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -25,6 +25,54 @@ msgstr ""
 "\n"
 "\n"
 "\n"
+
+#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
+#: fontsaasettingsbase.kcfg:9
+#, kde-format
+msgid "Force font DPI Wayland"
+msgstr "Þvinga DPI-kvörðun leturs í Wayland"
+
+#. i18n: ectx: label, entry (forceFontDPI), group (General)
+#: fontsaasettingsbase.kcfg:13
+#, kde-format
+msgid "Force font DPI on X11"
+msgstr "Þvinga DPI-kvörðun leturs í X11"
+
+#. i18n: ectx: label, entry (font), group (General)
+#: fontssettings.kcfg:9
+#, kde-format
+msgid "General font"
+msgstr "Almennt letur"
+
+#. i18n: ectx: label, entry (fixed), group (General)
+#: fontssettings.kcfg:21
+#, kde-format
+msgid "Fixed width font"
+msgstr "Jafnbreitt letur"
+
+#. i18n: ectx: label, entry (smallestReadableFont), group (General)
+#: fontssettings.kcfg:33
+#, kde-format
+msgid "Small font"
+msgstr "Smátt letur"
+
+#. i18n: ectx: label, entry (toolBarFont), group (General)
+#: fontssettings.kcfg:45
+#, kde-format
+msgid "Tool bar font"
+msgstr "Letur fyrir verkfærastiku"
+
+#. i18n: ectx: label, entry (menuFont), group (General)
+#: fontssettings.kcfg:57
+#, kde-format
+msgid "Menu font"
+msgstr "Letur valmynda"
+
+#. i18n: ectx: label, entry (activeFont), group (WM)
+#: fontssettings.kcfg:71
+#, kde-format
+msgid "Window title font"
+msgstr "Letur fyrir gluggatitil"
 
 #: kxftconfig.cpp:458
 #, kde-format
@@ -316,30 +364,6 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "Veldu letur"
-
-#~ msgid "Force font DPI Wayland"
-#~ msgstr "Þvinga DPI-kvörðun leturs í Wayland"
-
-#~ msgid "Force font DPI on X11"
-#~ msgstr "Þvinga DPI-kvörðun leturs í X11"
-
-#~ msgid "General font"
-#~ msgstr "Almennt letur"
-
-#~ msgid "Fixed width font"
-#~ msgstr "Jafnbreitt letur"
-
-#~ msgid "Small font"
-#~ msgstr "Smátt letur"
-
-#~ msgid "Tool bar font"
-#~ msgstr "Letur fyrir verkfærastiku"
-
-#~ msgid "Menu font"
-#~ msgstr "Letur valmynda"
-
-#~ msgid "Window title font"
-#~ msgstr "Letur fyrir gluggatitil"
 
 #~ msgid "Change Display Scaling…"
 #~ msgstr "Breyta kvarða skjás…"

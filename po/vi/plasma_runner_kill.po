@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2021-07-19 14:49+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -62,17 +62,32 @@ msgstr "Lượng dùng CPU đảo ngược"
 msgid "nothing"
 msgstr "không gì cả"
 
-#~ msgid "Kill Applications Config"
-#~ msgstr "Cấu hình diệt ứng dụng"
+#. i18n: ectx: property (title), widget (QGroupBox, main)
+#: killrunner_config.ui:30
+#, kde-format
+msgid "Kill Applications Config"
+msgstr "Cấu hình diệt ứng dụng"
 
-#~ msgid "&Use trigger word"
-#~ msgstr "&Dùng từ kích hoạt"
+#. i18n: ectx: property (text), widget (QCheckBox, useTriggerWord)
+#: killrunner_config.ui:39
+#, kde-format
+msgid "&Use trigger word"
+msgstr "&Dùng từ kích hoạt"
 
-#~ msgid "&Trigger word:"
-#~ msgstr "Từ &kích hoạt:"
+#. i18n: ectx: property (text), widget (QLabel, label_trigger)
+#: killrunner_config.ui:51
+#, kde-format
+msgid "&Trigger word:"
+msgstr "Từ &kích hoạt:"
 
-#~ msgid "&Sort by"
-#~ msgstr "&Sắp xếp theo"
+#. i18n: ectx: property (text), widget (QLabel, label_sorting)
+#: killrunner_config.ui:72
+#, kde-format
+msgid "&Sort by"
+msgstr "&Sắp xếp theo"
 
-#~ msgid "It is not sure, that this will take effect"
-#~ msgstr "Không chắc là việc này sẽ có hiệu lực"
+#. i18n: ectx: property (toolTip), widget (KComboBox, sorting)
+#: killrunner_config.ui:82
+#, kde-format
+msgid "It is not sure, that this will take effect"
+msgstr "Không chắc là việc này sẽ có hiệu lực"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2025-02-21 18:43+0100\n"
 "Last-Translator: Flori G <Renner03@protonmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -636,6 +636,221 @@ msgstr "aktuelle"
 msgid "down"
 msgstr "nach unten"
 
+#. i18n: ectx: label, entry (Version), group (General)
+#: klipper.kcfg:10
+#, kde-format
+msgid "Klipper version"
+msgstr "Klipper-Version"
+
+#. i18n: ectx: label, entry (KeepClipboardContents), group (General)
+#: klipper.kcfg:13
+#, kde-format
+msgid "Save history across desktop sessions"
+msgstr "Verlauf über Desktop-Sitzungen hinweg speichern"
+
+#. i18n: ectx: tooltip, entry (KeepClipboardContents), group (General)
+#: klipper.kcfg:15
+#, kde-format
+msgid ""
+"Retain the clipboard history, so it will be available the next time you log "
+"in."
+msgstr ""
+"Verlauf der Zwischenablage behalten, sodass er bei der nächsten Anmeldung "
+"verfügbar ist."
+
+#. i18n: ectx: label, entry (PreventEmptyClipboard), group (General)
+#: klipper.kcfg:18
+#, kde-format
+msgid "Prevent the clipboard from being cleared"
+msgstr "Leeren der Zwischenablage verhindern"
+
+#. i18n: ectx: whatsthis, entry (PreventEmptyClipboard), group (General)
+#: klipper.kcfg:20
+#, kde-format
+msgid ""
+"Do not allow the clipboard to be cleared, for example when an application "
+"exits."
+msgstr ""
+"Nicht zulassen, dass die Zwischenablage geleert wird, wenn beispielsweise "
+"eine Anwendung beendet wird."
+
+#. i18n: ectx: label, entry (SyncClipboards), group (General)
+#: klipper.kcfg:27
+#, kde-format
+msgid "Keep the selection and clipboard the same"
+msgstr "Auswahl und Zwischenablage synchronisieren"
+
+#. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
+#: klipper.kcfg:29
+#, kde-format
+msgid ""
+"Content selected with the cursor is automatically copied to the clipboard so "
+"that it can be pasted with either a Paste action or a middle-click.<br/><a "
+"href=\"1\">More about the selection and clipboard</a>."
+msgstr ""
+"Mit dem Mauszeiger ausgewählter Inhalt wird automatisch in die "
+"Zwischenablage kopiert, so dass er entweder mit einer Einfügen-Aktion oder "
+"einem Mittelklick eingefügt werden kann.<br/><a href=\"1\">Mehr über das "
+"Auswählen und die Zwischenablage</a>."
+
+#. i18n: ectx: label, entry (IgnoreSelection), group (General)
+#: klipper.kcfg:32
+#, kde-format
+msgid "Ignore the selection"
+msgstr "Auswahl ignorieren"
+
+#. i18n: ectx: whatsthis, entry (IgnoreSelection), group (General)
+#: klipper.kcfg:34
+#, kde-format
+msgid ""
+"Content selected with the cursor but not explicitly copied to the clipboard "
+"is not automatically stored in the clipboard history, and can only be pasted "
+"using a middle-click."
+msgstr ""
+"Mit dem Mauszeiger ausgewählter, aber nicht explizit in die Zwischenablage "
+"kopierter Inhalt,  wird nicht automatisch im Verlauf der Zwischenablage "
+"gespeichert und kann nur mit einem Mittelklick eingefügt werden."
+
+#. i18n: ectx: label, entry (SelectionTextOnly), group (General)
+#: klipper.kcfg:37
+#, kde-format
+msgid "Text selection only"
+msgstr "Nur Textauswahl"
+
+#. i18n: ectx: whatsthis, entry (SelectionTextOnly), group (General)
+#: klipper.kcfg:39
+#, kde-format
+msgid ""
+"Only store text selections in the clipboard history, not images or any other "
+"type of data."
+msgstr ""
+"Nur ausgewählte Texte in der Zwischenablage speichern, keine Bilder oder "
+"sonstigen Daten."
+
+#. i18n: ectx: label, entry (IgnoreImages), group (General)
+#: klipper.kcfg:42
+#, kde-format
+msgid "Always ignore images"
+msgstr "Bilder immer ignorieren"
+
+#. i18n: ectx: whatsthis, entry (IgnoreImages), group (General)
+#: klipper.kcfg:44
+#, kde-format
+msgid ""
+"Do not store images in the clipboard history, even if explicitly copied."
+msgstr ""
+"Keine Bilder in der Zwischenablage speichern, auch wenn diese explizit "
+"kopiert wurden."
+
+#. i18n: ectx: label, entry (UseGUIRegExpEditor), group (General)
+#: klipper.kcfg:47
+#, kde-format
+msgid "Use graphical regexp editor"
+msgstr "Grafischen Editor für reguläre Ausdrücke verwenden"
+
+#. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
+#: klipper.kcfg:51
+#, kde-format
+msgid "Immediately on selection"
+msgstr "Sofort bei der Auswahl"
+
+#. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
+#: klipper.kcfg:52
+#, kde-format
+msgid ""
+"Show the popup menu of applicable actions as soon as a selection is made."
+msgstr ""
+"Das Aufklappmenü anwendbarer Aktionen anzeigen, sobald eine Auswahl erfolgt "
+"ist."
+
+#. i18n: ectx: label, entry (NoActionsForWM_CLASS), group (General)
+#: klipper.kcfg:57
+#, kde-format
+msgid "No actions for WM_CLASS"
+msgstr "Keine Aktionen für WM_CLASS"
+
+#. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
+#: klipper.kcfg:60
+#, kde-format
+msgid "Automatic action menu time:"
+msgstr "Zeitlimit für Aktionen-Menüs:"
+
+#. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
+#: klipper.kcfg:64
+#, kde-format
+msgid "Display the automatic action popup menu for this time."
+msgstr "Das automatische Aktionen-Menü für diese Dauer anzeigen."
+
+#. i18n: ectx: label, entry (MaxClipItems), group (General)
+#: klipper.kcfg:67
+#, kde-format
+msgid "History size:"
+msgstr "Größe des Verlaufs:"
+
+#. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
+#: klipper.kcfg:71
+#, kde-format
+msgid "The clipboard history will store up to this many items."
+msgstr "Der Verlauf der Zwischenablage speichert diese Anzahl an Elementen."
+
+#. i18n: ectx: label, entry (ActionList), group (General)
+#: klipper.kcfg:74
+#, kde-format
+msgid "Dummy entry for indicating changes in an action's tree widget"
+msgstr "Pseudo-Eintrag zum Anzeigen von Änderungen im Baumelement einer Aktion"
+
+#. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
+#: klipper.kcfg:84
+#, kde-format
+msgid "Trim whitespace from selection"
+msgstr "Leerräume aus Auswahl entfernen"
+
+#. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
+#: klipper.kcfg:86
+#, kde-format
+msgid ""
+"Remove any whitespace from the start and end of selected text, before "
+"performing an action. For example, this ensures that a URL pasted in a "
+"browser is interpreted as expected. The text saved on the clipboard is not "
+"affected."
+msgstr ""
+"Alle Leerräume am Beginn und Ende eines ausgewählten Textes entfernen, bevor "
+"eine Aktion ausgeführt wird. Dies stellt zum Beispiel sicher, dass eine im "
+"Browser eingefügte Adresse wie erwartet interpretiert wird. Der in der "
+"Zwischenablage gespeicherte Text ist davon nicht betroffen."
+
+#. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
+#: klipper.kcfg:89
+#, kde-format
+msgid "For an item chosen from history"
+msgstr "Für ein Element aus dem Verlauf"
+
+#. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
+#: klipper.kcfg:91
+#, kde-format
+msgid ""
+"Show the popup menu of applicable actions if an entry is chosen from the "
+"clipboard history."
+msgstr ""
+"Das Aufklappmenü anwendbarer Aktionen anzeigen, wenn ein Eintrag aus dem "
+"Verlauf der Zwischenablage ausgewählt wird."
+
+#. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
+#: klipper.kcfg:94
+#, kde-format
+msgid "Include MIME actions"
+msgstr "MIME-Aktionen einschließen"
+
+#. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
+#: klipper.kcfg:96
+#, kde-format
+msgid ""
+"If a file name or URL is selected, include applications that can accept its "
+"MIME type in the popup menu."
+msgstr ""
+"Bei Auswahl eines Dateinamen oder einer Adresse Anwendungen, die den "
+"entsprechenden MIME-Typ akzeptieren, in das Aufklappmenü einschließen."
+
 #: klipperpopup.cpp:105
 #, kde-format
 msgctxt "%1 is application display name"
@@ -774,139 +989,6 @@ msgstr "Aufklappmenü deaktivieren"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Abbrechen"
-
-#~ msgid "Klipper version"
-#~ msgstr "Klipper-Version"
-
-#~ msgid "Save history across desktop sessions"
-#~ msgstr "Verlauf über Desktop-Sitzungen hinweg speichern"
-
-#~ msgid ""
-#~ "Retain the clipboard history, so it will be available the next time you "
-#~ "log in."
-#~ msgstr ""
-#~ "Verlauf der Zwischenablage behalten, sodass er bei der nächsten Anmeldung "
-#~ "verfügbar ist."
-
-#~ msgid "Prevent the clipboard from being cleared"
-#~ msgstr "Leeren der Zwischenablage verhindern"
-
-#~ msgid ""
-#~ "Do not allow the clipboard to be cleared, for example when an application "
-#~ "exits."
-#~ msgstr ""
-#~ "Nicht zulassen, dass die Zwischenablage geleert wird, wenn beispielsweise "
-#~ "eine Anwendung beendet wird."
-
-#~ msgid "Keep the selection and clipboard the same"
-#~ msgstr "Auswahl und Zwischenablage synchronisieren"
-
-#~ msgid ""
-#~ "Content selected with the cursor is automatically copied to the clipboard "
-#~ "so that it can be pasted with either a Paste action or a middle-click.<br/"
-#~ "><a href=\"1\">More about the selection and clipboard</a>."
-#~ msgstr ""
-#~ "Mit dem Mauszeiger ausgewählter Inhalt wird automatisch in die "
-#~ "Zwischenablage kopiert, so dass er entweder mit einer Einfügen-Aktion "
-#~ "oder einem Mittelklick eingefügt werden kann.<br/><a href=\"1\">Mehr über "
-#~ "das Auswählen und die Zwischenablage</a>."
-
-#~ msgid "Ignore the selection"
-#~ msgstr "Auswahl ignorieren"
-
-#~ msgid ""
-#~ "Content selected with the cursor but not explicitly copied to the "
-#~ "clipboard is not automatically stored in the clipboard history, and can "
-#~ "only be pasted using a middle-click."
-#~ msgstr ""
-#~ "Mit dem Mauszeiger ausgewählter, aber nicht explizit in die "
-#~ "Zwischenablage kopierter Inhalt,  wird nicht automatisch im Verlauf der "
-#~ "Zwischenablage gespeichert und kann nur mit einem Mittelklick eingefügt "
-#~ "werden."
-
-#~ msgid "Text selection only"
-#~ msgstr "Nur Textauswahl"
-
-#~ msgid ""
-#~ "Only store text selections in the clipboard history, not images or any "
-#~ "other type of data."
-#~ msgstr ""
-#~ "Nur ausgewählte Texte in der Zwischenablage speichern, keine Bilder oder "
-#~ "sonstigen Daten."
-
-#~ msgid "Always ignore images"
-#~ msgstr "Bilder immer ignorieren"
-
-#~ msgid ""
-#~ "Do not store images in the clipboard history, even if explicitly copied."
-#~ msgstr ""
-#~ "Keine Bilder in der Zwischenablage speichern, auch wenn diese explizit "
-#~ "kopiert wurden."
-
-#~ msgid "Use graphical regexp editor"
-#~ msgstr "Grafischen Editor für reguläre Ausdrücke verwenden"
-
-#~ msgid "Immediately on selection"
-#~ msgstr "Sofort bei der Auswahl"
-
-#~ msgid ""
-#~ "Show the popup menu of applicable actions as soon as a selection is made."
-#~ msgstr ""
-#~ "Das Aufklappmenü anwendbarer Aktionen anzeigen, sobald eine Auswahl "
-#~ "erfolgt ist."
-
-#~ msgid "No actions for WM_CLASS"
-#~ msgstr "Keine Aktionen für WM_CLASS"
-
-#~ msgid "Automatic action menu time:"
-#~ msgstr "Zeitlimit für Aktionen-Menüs:"
-
-#~ msgid "Display the automatic action popup menu for this time."
-#~ msgstr "Das automatische Aktionen-Menü für diese Dauer anzeigen."
-
-#~ msgid "History size:"
-#~ msgstr "Größe des Verlaufs:"
-
-#~ msgid "The clipboard history will store up to this many items."
-#~ msgstr "Der Verlauf der Zwischenablage speichert diese Anzahl an Elementen."
-
-#~ msgid "Dummy entry for indicating changes in an action's tree widget"
-#~ msgstr ""
-#~ "Pseudo-Eintrag zum Anzeigen von Änderungen im Baumelement einer Aktion"
-
-#~ msgid "Trim whitespace from selection"
-#~ msgstr "Leerräume aus Auswahl entfernen"
-
-#~ msgid ""
-#~ "Remove any whitespace from the start and end of selected text, before "
-#~ "performing an action. For example, this ensures that a URL pasted in a "
-#~ "browser is interpreted as expected. The text saved on the clipboard is "
-#~ "not affected."
-#~ msgstr ""
-#~ "Alle Leerräume am Beginn und Ende eines ausgewählten Textes entfernen, "
-#~ "bevor eine Aktion ausgeführt wird. Dies stellt zum Beispiel sicher, dass "
-#~ "eine im Browser eingefügte Adresse wie erwartet interpretiert wird. Der "
-#~ "in der Zwischenablage gespeicherte Text ist davon nicht betroffen."
-
-#~ msgid "For an item chosen from history"
-#~ msgstr "Für ein Element aus dem Verlauf"
-
-#~ msgid ""
-#~ "Show the popup menu of applicable actions if an entry is chosen from the "
-#~ "clipboard history."
-#~ msgstr ""
-#~ "Das Aufklappmenü anwendbarer Aktionen anzeigen, wenn ein Eintrag aus dem "
-#~ "Verlauf der Zwischenablage ausgewählt wird."
-
-#~ msgid "Include MIME actions"
-#~ msgstr "MIME-Aktionen einschließen"
-
-#~ msgid ""
-#~ "If a file name or URL is selected, include applications that can accept "
-#~ "its MIME type in the popup menu."
-#~ msgstr ""
-#~ "Bei Auswahl eines Dateinamen oder einer Adresse Anwendungen, die den "
-#~ "entsprechenden MIME-Typ akzeptieren, in das Aufklappmenü einschließen."
 
 #~ msgid "Delete clipboard history?"
 #~ msgstr "Verlauf der Zwischenablage löschen?"

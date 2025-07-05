@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts stable\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2005-06-29 11:28+0200\n"
 "Last-Translator: JUANITA FRANZ <JUANITA.FRANZ@VR-WEB.DE>\n"
 "Language-Team: AFRIKAANS <translate-discuss-af@lists.sourceforge.net>\n"
@@ -15,6 +15,60 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
+#: fontsaasettingsbase.kcfg:9
+#, kde-format
+msgid "Force font DPI Wayland"
+msgstr ""
+
+#. i18n: ectx: label, entry (forceFontDPI), group (General)
+#: fontsaasettingsbase.kcfg:13
+#, kde-format
+msgid "Force font DPI on X11"
+msgstr ""
+
+#. i18n: ectx: label, entry (font), group (General)
+#: fontssettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "General"
+msgid "General font"
+msgstr "Algemeen"
+
+#. i18n: ectx: label, entry (fixed), group (General)
+#: fontssettings.kcfg:21
+#, fuzzy, kde-format
+#| msgid "Fixed width"
+msgid "Fixed width font"
+msgstr "Vasgemaakte wydte"
+
+#. i18n: ectx: label, entry (smallestReadableFont), group (General)
+#: fontssettings.kcfg:33
+#, fuzzy, kde-format
+#| msgid "General"
+msgid "Small font"
+msgstr "Algemeen"
+
+#. i18n: ectx: label, entry (toolBarFont), group (General)
+#: fontssettings.kcfg:45
+#, fuzzy, kde-format
+#| msgid "Toolbar"
+msgid "Tool bar font"
+msgstr "Nutsbalk"
+
+#. i18n: ectx: label, entry (menuFont), group (General)
+#: fontssettings.kcfg:57
+#, fuzzy, kde-format
+#| msgid "General"
+msgid "Menu font"
+msgstr "Algemeen"
+
+#. i18n: ectx: label, entry (activeFont), group (WM)
+#: fontssettings.kcfg:71
+#, fuzzy, kde-format
+#| msgid "Window title"
+msgid "Window title font"
+msgstr "Venster titel"
 
 #: kxftconfig.cpp:458
 #, kde-format
@@ -295,26 +349,6 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr ""
-
-#, fuzzy
-#~| msgid "General"
-#~ msgid "General font"
-#~ msgstr "Algemeen"
-
-#, fuzzy
-#~| msgid "Fixed width"
-#~ msgid "Fixed width font"
-#~ msgstr "Vasgemaakte wydte"
-
-#, fuzzy
-#~| msgid "Toolbar"
-#~ msgid "Tool bar font"
-#~ msgstr "Nutsbalk"
-
-#, fuzzy
-#~| msgid "Window title"
-#~ msgid "Window title font"
-#~ msgstr "Venster titel"
 
 #, fuzzy
 #~ msgid "Font Settings Changed"

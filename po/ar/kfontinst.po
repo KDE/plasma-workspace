@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2021-11-16 20:16+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -1652,6 +1652,12 @@ msgstr "معاينة السلسلة"
 msgid "Please enter new string:"
 msgstr "من فضلك أدخل السلسلة الجديدة:"
 
+#. i18n: ectx: ToolBar (mainToolBar)
+#: viewpart/kfontviewpart.rc:4
+#, kde-format
+msgid "&Main Toolbar"
+msgstr "شريط الأ&دوات العام"
+
 #: viewpart/PreviewSelectAction.cpp:13
 #, kde-format
 msgid "Preview Type"
@@ -2344,9 +2350,6 @@ msgstr "فاكس با"
 #: viewpart/UnicodeScripts.h:80
 msgid "Yi"
 msgstr "يي"
-
-#~ msgid "&Main Toolbar"
-#~ msgstr "شريط الأ&دوات العام"
 
 #~ msgid "Print..."
 #~ msgstr "اطبع..."

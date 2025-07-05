@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2021-05-26 11:05+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -36,6 +36,36 @@ msgstr "Obre al Filelight"
 msgid "Open in File Manager"
 msgstr "Obre al gestor de fitxers"
 
+#. i18n: ectx: label, entry (minimumSpace), group (General)
+#: freespacenotifier.kcfg:9
+#, kde-format
+msgid "Minimum free space before user starts being notified."
+msgstr ""
+
+#. i18n: ectx: label, entry (enableNotification), group (General)
+#: freespacenotifier.kcfg:15
+#, kde-format
+msgid "Is the free space notification enabled."
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableNotification)
+#: freespacenotifier_prefs_base.ui:17
+#, kde-format
+msgid "Enable low disk space warning"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_minimumSpace)
+#: freespacenotifier_prefs_base.ui:27
+#, kde-format
+msgid "Warn when free space is below:"
+msgstr ""
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpace)
+#: freespacenotifier_prefs_base.ui:37
+#, kde-format
+msgid " MiB"
+msgstr ""
+
 #: module.cpp:37
 #, kde-format
 msgid ""
@@ -58,18 +88,3 @@ msgstr ""
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"
 msgstr "General"
-
-#~ msgid "Minimum free space before user starts being notified."
-#~ msgstr "Espai lliure mínim abans de notificar a l'usuari."
-
-#~ msgid "Is the free space notification enabled."
-#~ msgstr "És l'activació de la notificació d'espai lliure."
-
-#~ msgid "Enable low disk space warning"
-#~ msgstr "Activa l'avís d'espai lliure escàs"
-
-#~ msgid "Warn when free space is below:"
-#~ msgstr "Avisa quan l'espai lliure sigui menys de:"
-
-#~ msgid " MiB"
-#~ msgstr " MiB"

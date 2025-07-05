@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2014-10-28 10:30+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -39,6 +39,54 @@ msgstr "छोटे चिन्ह"
 #, kde-format
 msgid "Dialogs"
 msgstr "संवाद"
+
+#. i18n: ectx: label, entry (Theme), group (Icons)
+#: iconssettingsbase.kcfg:9
+#, kde-format
+msgid "Name of the current icon theme"
+msgstr ""
+
+#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
+#: iconssettingsbase.kcfg:15
+#, fuzzy, kde-format
+#| msgid "Small Icons"
+msgid "Desktop icons size"
+msgstr "छोटे चिन्ह"
+
+#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
+#: iconssettingsbase.kcfg:21
+#, fuzzy, kde-format
+#| msgid "Main Toolbar"
+msgid "Toolbar icons size"
+msgstr "मुख्य साधनपट्टी"
+
+#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
+#: iconssettingsbase.kcfg:27
+#, fuzzy, kde-format
+#| msgid "Main Toolbar"
+msgid "Main toolbar icons size"
+msgstr "मुख्य साधनपट्टी"
+
+#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
+#: iconssettingsbase.kcfg:33
+#, fuzzy, kde-format
+#| msgid "Small Icons"
+msgid "Small icons size"
+msgstr "छोटे चिन्ह"
+
+#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
+#: iconssettingsbase.kcfg:39
+#, fuzzy, kde-format
+#| msgid "Small Icons"
+msgid "Panel icons size"
+msgstr "छोटे चिन्ह"
+
+#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
+#: iconssettingsbase.kcfg:45
+#, fuzzy, kde-format
+#| msgid "Small Icons"
+msgid "Dialog icons size"
+msgstr "छोटे चिन्ह"
 
 #: main.cpp:182
 #, kde-format
@@ -154,16 +202,6 @@ msgstr "शैली काढून टाका"
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr ""
-
-#, fuzzy
-#~| msgid "Main Toolbar"
-#~ msgid "Main toolbar icons size"
-#~ msgstr "मुख्य साधनपट्टी"
-
-#, fuzzy
-#~| msgid "Small Icons"
-#~ msgid "Small icons size"
-#~ msgstr "छोटे चिन्ह"
 
 #~ msgid "Toolbar"
 #~ msgstr "साधनपट्टी"

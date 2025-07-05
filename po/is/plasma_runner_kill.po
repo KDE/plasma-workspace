@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_kill\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-10-17 19:07+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -66,17 +66,32 @@ msgstr "öfug örgjörvanotkun"
 msgid "nothing"
 msgstr "ekkert"
 
-#~ msgid "Kill Applications Config"
-#~ msgstr "Grunnstillingar forritadráps"
+#. i18n: ectx: property (title), widget (QGroupBox, main)
+#: killrunner_config.ui:30
+#, kde-format
+msgid "Kill Applications Config"
+msgstr "Grunnstillingar forritadráps"
 
-#~ msgid "&Use trigger word"
-#~ msgstr "Nota mark&orð"
+#. i18n: ectx: property (text), widget (QCheckBox, useTriggerWord)
+#: killrunner_config.ui:39
+#, kde-format
+msgid "&Use trigger word"
+msgstr "Nota mark&orð"
 
-#~ msgid "&Trigger word:"
-#~ msgstr "&Markorð:"
+#. i18n: ectx: property (text), widget (QLabel, label_trigger)
+#: killrunner_config.ui:51
+#, kde-format
+msgid "&Trigger word:"
+msgstr "&Markorð:"
 
-#~ msgid "&Sort by"
-#~ msgstr "&Raða eftir"
+#. i18n: ectx: property (text), widget (QLabel, label_sorting)
+#: killrunner_config.ui:72
+#, kde-format
+msgid "&Sort by"
+msgstr "&Raða eftir"
 
-#~ msgid "It is not sure, that this will take effect"
-#~ msgstr "Það er ekki víst að þetta muni gilda"
+#. i18n: ectx: property (toolTip), widget (KComboBox, sorting)
+#: killrunner_config.ui:82
+#, kde-format
+msgid "It is not sure, that this will take effect"
+msgstr "Það er ekki víst að þetta muni gilda"

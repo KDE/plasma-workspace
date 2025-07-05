@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2014-07-04 11:44+0300\n"
 "Last-Translator: Safa Alfulaij <safa1996alfulaij@gmail.com>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
@@ -15,6 +15,24 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#. i18n: ectx: property (text), widget (QRadioButton, flatButton)
+#: config.ui:16
+#, kde-format
+msgid "Display all windows in one list"
+msgstr "اعرض كلّ النوافذ في قائمة واحدة"
+
+#. i18n: ectx: property (text), widget (QRadioButton, subButton)
+#: config.ui:23
+#, kde-format
+msgid "Display a submenu for each desktop"
+msgstr "اعرض قائمة فرعية لكلّ سطح مكتب"
+
+#. i18n: ectx: property (text), widget (QRadioButton, curButton)
+#: config.ui:30
+#, kde-format
+msgid "Display only the current desktop's windows"
+msgstr "اعرض نوافذ سطح المكتب الحالي فقط"
 
 #: switch.cpp:75
 #, kde-format
@@ -33,12 +51,3 @@ msgstr "النوافذ"
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "All Desktops"
 msgstr "كلّ أسطح المكتب"
-
-#~ msgid "Display all windows in one list"
-#~ msgstr "اعرض كلّ النوافذ في قائمة واحدة"
-
-#~ msgid "Display a submenu for each desktop"
-#~ msgstr "اعرض قائمة فرعية لكلّ سطح مكتب"
-
-#~ msgid "Display only the current desktop's windows"
-#~ msgstr "اعرض نوافذ سطح المكتب الحالي فقط"

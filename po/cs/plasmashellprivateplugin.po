@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2023-06-14 14:55+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -136,6 +136,30 @@ msgstr "Ponechat otevřené"
 #, kde-format
 msgid "Configure…"
 msgstr "Nastavit…"
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:10
+#, kde-format
+msgid "Screen lock enabled"
+msgstr "Zámek obrazovky povolen"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:11
+#, kde-format
+msgid "Sets whether the screen will be locked after the specified time."
+msgstr "Nastavuje, zda bude zámek obrazovky po daném čase povolen."
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:16
+#, kde-format
+msgid "Screen saver timeout"
+msgstr "Prodleva spořiče obrazovky"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:17
+#, kde-format
+msgid "Sets the minutes after which the screen is locked."
+msgstr "Nastavuje počet minut, po jejichž uplynutí se zamkne obrazovka."
 
 #: sessionsprivate/sessionsmodel.cpp:235 sessionsprivate/sessionsmodel.cpp:239
 #, kde-format
@@ -305,15 +329,3 @@ msgstr "Stáhnout nové widgety Plasma"
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "Instalovat widget ze souboru…"
-
-#~ msgid "Screen lock enabled"
-#~ msgstr "Zámek obrazovky povolen"
-
-#~ msgid "Sets whether the screen will be locked after the specified time."
-#~ msgstr "Nastavuje, zda bude zámek obrazovky po daném čase povolen."
-
-#~ msgid "Screen saver timeout"
-#~ msgstr "Prodleva spořiče obrazovky"
-
-#~ msgid "Sets the minutes after which the screen is locked."
-#~ msgstr "Nastavuje počet minut, po jejichž uplynutí se zamkne obrazovka."

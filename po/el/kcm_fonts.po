@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2017-03-14 12:21+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -26,6 +26,68 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 2.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
+#: fontsaasettingsbase.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Force fonts DPI:"
+msgid "Force font DPI Wayland"
+msgstr "Εξαναγκασμός DPI για τις γραμματοσειρές:"
+
+#. i18n: ectx: label, entry (forceFontDPI), group (General)
+#: fontsaasettingsbase.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Force fonts DPI:"
+msgid "Force font DPI on X11"
+msgstr "Εξαναγκασμός DPI για τις γραμματοσειρές:"
+
+#. i18n: ectx: label, entry (font), group (General)
+#: fontssettings.kcfg:9
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "General"
+msgid "General font"
+msgstr "Γενικά"
+
+#. i18n: ectx: label, entry (fixed), group (General)
+#: fontssettings.kcfg:21
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "Fixed width"
+msgid "Fixed width font"
+msgstr "Σταθερό πλάτος"
+
+#. i18n: ectx: label, entry (smallestReadableFont), group (General)
+#: fontssettings.kcfg:33
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "Small"
+msgid "Small font"
+msgstr "Μικρό"
+
+#. i18n: ectx: label, entry (toolBarFont), group (General)
+#: fontssettings.kcfg:45
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "Toolbar"
+msgid "Tool bar font"
+msgstr "Γραμμή εργαλείων"
+
+#. i18n: ectx: label, entry (menuFont), group (General)
+#: fontssettings.kcfg:57
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "General"
+msgid "Menu font"
+msgstr "Γενικά"
+
+#. i18n: ectx: label, entry (activeFont), group (WM)
+#: fontssettings.kcfg:71
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "Window title"
+msgid "Window title font"
+msgstr "Τίτλος παραθύρου"
 
 #: kxftconfig.cpp:458
 #, fuzzy, kde-format
@@ -325,46 +387,6 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr ""
-
-#, fuzzy
-#~| msgid "Force fonts DPI:"
-#~ msgid "Force font DPI Wayland"
-#~ msgstr "Εξαναγκασμός DPI για τις γραμματοσειρές:"
-
-#, fuzzy
-#~| msgid "Force fonts DPI:"
-#~ msgid "Force font DPI on X11"
-#~ msgstr "Εξαναγκασμός DPI για τις γραμματοσειρές:"
-
-#, fuzzy
-#~| msgctxt "font usage"
-#~| msgid "General"
-#~ msgid "General font"
-#~ msgstr "Γενικά"
-
-#, fuzzy
-#~| msgctxt "font usage"
-#~| msgid "Fixed width"
-#~ msgid "Fixed width font"
-#~ msgstr "Σταθερό πλάτος"
-
-#, fuzzy
-#~| msgctxt "font usage"
-#~| msgid "Small"
-#~ msgid "Small font"
-#~ msgstr "Μικρό"
-
-#, fuzzy
-#~| msgctxt "font usage"
-#~| msgid "Toolbar"
-#~ msgid "Tool bar font"
-#~ msgstr "Γραμμή εργαλείων"
-
-#, fuzzy
-#~| msgctxt "font usage"
-#~| msgid "Window title"
-#~ msgid "Window title font"
-#~ msgstr "Τίτλος παραθύρου"
 
 #, fuzzy
 #~| msgid ""

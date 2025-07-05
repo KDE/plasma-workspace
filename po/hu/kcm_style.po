@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2021-09-30 13:51+0200\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -143,38 +143,78 @@ msgstr "GNOME/GTK alkalmazásstílusok beállítása…"
 msgid "Configure %1"
 msgstr "A(z) %1 beállításai"
 
-#~ msgid "Tab 1"
-#~ msgstr "1. lap"
+#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
+#: stylepreview.ui:33
+#, kde-format
+msgid "Tab 1"
+msgstr "1. lap"
 
-#~ msgid "Push Button"
-#~ msgstr "Nyomógomb"
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: stylepreview.ui:65
+#, kde-format
+msgid "Push Button"
+msgstr "Nyomógomb"
 
-#~ msgid "Combo box"
-#~ msgstr "Kombinált lista"
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
+#: stylepreview.ui:86
+#, kde-format
+msgid "Combo box"
+msgstr "Kombinált lista"
 
-#~ msgid "Checkbox"
-#~ msgstr "Jelölőnégyzet"
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
+#: stylepreview.ui:96
+#, kde-format
+msgid "Checkbox"
+msgstr "Jelölőnégyzet"
 
-#~ msgid "Radio button"
-#~ msgstr "Választógomb"
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
+#: stylepreview.ui:106 stylepreview.ui:116
+#, kde-format
+msgid "Radio button"
+msgstr "Választógomb"
 
-#~ msgid "Tab 2"
-#~ msgstr "2. lap"
+#. i18n: ectx: property (format), widget (QProgressBar, progressBar)
+#: stylepreview.ui:128
+#, no-c-format, kde-format
+msgid "%p%"
+msgstr ""
 
-#~ msgid "Application style"
-#~ msgstr "Alkalmazásstílus"
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: stylepreview.ui:136
+#, kde-format
+msgid "Tab 2"
+msgstr "2. lap"
 
-#~ msgid "Show icons on buttons"
-#~ msgstr "Ikonok megjelenítése a nyomógombokon"
+#. i18n: ectx: label, entry (widgetStyle), group (KDE)
+#: stylesettings.kcfg:9
+#, kde-format
+msgid "Application style"
+msgstr "Alkalmazásstílus"
 
-#~ msgid "Show icons in menus"
-#~ msgstr "Ikonok megjelenítése a menükben"
+#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
+#: stylesettings.kcfg:13
+#, kde-format
+msgid "Show icons on buttons"
+msgstr "Ikonok megjelenítése a nyomógombokon"
 
-#~ msgid "Main toolbar label"
-#~ msgstr "Fő eszköztár címkéje"
+#. i18n: ectx: label, entry (iconsInMenus), group (KDE)
+#: stylesettings.kcfg:17
+#, kde-format
+msgid "Show icons in menus"
+msgstr "Ikonok megjelenítése a menükben"
 
-#~ msgid "Secondary toolbar label"
-#~ msgstr "Másodlagos eszköztár címkéje"
+#. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
+#: stylesettings.kcfg:23
+#, kde-format
+msgid "Main toolbar label"
+msgstr "Fő eszköztár címkéje"
+
+#. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
+#: stylesettings.kcfg:27
+#, kde-format
+msgid "Secondary toolbar label"
+msgstr "Másodlagos eszköztár címkéje"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

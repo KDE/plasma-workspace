@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_containmentactions_switchwindow\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2017-05-16 06:56-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -18,6 +18,24 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Zanata 3.9.6\n"
+
+#. i18n: ectx: property (text), widget (QRadioButton, flatButton)
+#: config.ui:16
+#, kde-format
+msgid "Display all windows in one list"
+msgstr "הצג את כל החלונות ברשימה אחת"
+
+#. i18n: ectx: property (text), widget (QRadioButton, subButton)
+#: config.ui:23
+#, kde-format
+msgid "Display a submenu for each desktop"
+msgstr "הצג תת־תפריט עבור כל שולחן עבודה"
+
+#. i18n: ectx: property (text), widget (QRadioButton, curButton)
+#: config.ui:30
+#, kde-format
+msgid "Display only the current desktop's windows"
+msgstr "הצג רק את החלונות של שולחן העבודה הנוכחי"
 
 #: switch.cpp:75
 #, kde-format
@@ -36,12 +54,3 @@ msgstr "חלונות"
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "All Desktops"
 msgstr "כל שולחנות העבודה"
-
-#~ msgid "Display all windows in one list"
-#~ msgstr "הצג את כל החלונות ברשימה אחת"
-
-#~ msgid "Display a submenu for each desktop"
-#~ msgstr "הצג תת־תפריט עבור כל שולחן עבודה"
-
-#~ msgid "Display only the current desktop's windows"
-#~ msgstr "הצג רק את החלונות של שולחן העבודה הנוכחי"

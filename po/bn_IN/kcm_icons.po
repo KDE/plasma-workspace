@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2009-01-06 12:22+0530\n"
 "Last-Translator: Runa Bhattacharjee <runab@redhat.com>\n"
 "Language-Team: Bengali INDIA <fedora-trans-bn_IN@redhat.com>\n"
@@ -38,6 +38,54 @@ msgstr "ক্ষুদ্র মাপের আইকন"
 #, kde-format
 msgid "Dialogs"
 msgstr ""
+
+#. i18n: ectx: label, entry (Theme), group (Icons)
+#: iconssettingsbase.kcfg:9
+#, kde-format
+msgid "Name of the current icon theme"
+msgstr ""
+
+#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
+#: iconssettingsbase.kcfg:15
+#, fuzzy, kde-format
+#| msgid "Small Icons"
+msgid "Desktop icons size"
+msgstr "ক্ষুদ্র মাপের আইকন"
+
+#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
+#: iconssettingsbase.kcfg:21
+#, fuzzy, kde-format
+#| msgid "Main Toolbar"
+msgid "Toolbar icons size"
+msgstr "প্রধান টুল-বার"
+
+#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
+#: iconssettingsbase.kcfg:27
+#, fuzzy, kde-format
+#| msgid "Main Toolbar"
+msgid "Main toolbar icons size"
+msgstr "প্রধান টুল-বার"
+
+#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
+#: iconssettingsbase.kcfg:33
+#, fuzzy, kde-format
+#| msgid "Small Icons"
+msgid "Small icons size"
+msgstr "ক্ষুদ্র মাপের আইকন"
+
+#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
+#: iconssettingsbase.kcfg:39
+#, fuzzy, kde-format
+#| msgid "Small Icons"
+msgid "Panel icons size"
+msgstr "ক্ষুদ্র মাপের আইকন"
+
+#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
+#: iconssettingsbase.kcfg:45
+#, fuzzy, kde-format
+#| msgid "Small Icons"
+msgid "Dialog icons size"
+msgstr "ক্ষুদ্র মাপের আইকন"
 
 #: main.cpp:182
 #, kde-format
@@ -153,16 +201,6 @@ msgstr "থিম মুছে ফেলুন"
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr ""
-
-#, fuzzy
-#~| msgid "Main Toolbar"
-#~ msgid "Main toolbar icons size"
-#~ msgstr "প্রধান টুল-বার"
-
-#, fuzzy
-#~| msgid "Small Icons"
-#~ msgid "Small icons size"
-#~ msgstr "ক্ষুদ্র মাপের আইকন"
 
 #~ msgid "Toolbar"
 #~ msgstr "টুল-বার"

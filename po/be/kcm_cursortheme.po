@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-11-10 12:14\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -22,6 +22,18 @@ msgstr ""
 "X-Crowdin-Language: be\n"
 "X-Crowdin-File: /main/be/plasma-workspace/kcm_cursortheme.po\n"
 "X-Crowdin-File-ID: 8539\n"
+
+#. i18n: ectx: label, entry (cursorTheme), group (Mouse)
+#: cursorthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current cursor theme"
+msgstr "Назва бягучай тэмы курсора"
+
+#. i18n: ectx: label, entry (cursorSize), group (Mouse)
+#: cursorthemesettings.kcfg:13
+#, kde-format
+msgid "Current cursor size"
+msgstr "Бягучы памер курсора"
 
 #: kcmcursortheme.cpp:308
 #, kde-format
@@ -65,6 +77,13 @@ msgstr "Перазапісаць тэму?"
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Тэма паспяхова ўсталяваная."
+
+#. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
+#. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)
+#: launchfeedbacksettings.kcfg:19 launchfeedbacksettings.kcfg:33
+#, kde-format
+msgid "Timeout in seconds"
+msgstr ""
 
 #: package/contents/ui/Delegate.qml:54
 #, kde-format
@@ -267,12 +286,6 @@ msgctxt ""
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(Даступныя памеры: %1)"
-
-#~ msgid "Name of the current cursor theme"
-#~ msgstr "Назва бягучай тэмы курсора"
-
-#~ msgid "Current cursor size"
-#~ msgstr "Бягучы памер курсора"
 
 #~ msgid "Name"
 #~ msgstr "Назва"

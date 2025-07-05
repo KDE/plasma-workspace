@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_style\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2023-08-03 07:04+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -144,38 +144,75 @@ msgstr "Agordi GNOME/GTK Aplikaĵstilon…"
 msgid "Configure %1"
 msgstr "Agordi %1"
 
-#~ msgid "Tab 1"
-#~ msgstr "Langeto 1"
+#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
+#: stylepreview.ui:33
+#, kde-format
+msgid "Tab 1"
+msgstr "Langeto 1"
 
-#~ msgid "Push Button"
-#~ msgstr "Prembutono"
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: stylepreview.ui:65
+#, kde-format
+msgid "Push Button"
+msgstr "Prembutono"
 
-#~ msgid "Combo box"
-#~ msgstr "Redaktebla falmenuo"
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
+#: stylepreview.ui:86
+#, kde-format
+msgid "Combo box"
+msgstr "Redaktebla falmenuo"
 
-#~ msgid "Checkbox"
-#~ msgstr "Markobutono"
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
+#: stylepreview.ui:96
+#, kde-format
+msgid "Checkbox"
+msgstr "Markobutono"
 
-#~ msgid "Radio button"
-#~ msgstr "Radiobutono"
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
+#: stylepreview.ui:106 stylepreview.ui:116
+#, kde-format
+msgid "Radio button"
+msgstr "Radiobutono"
 
-#~ msgid "%p%"
-#~ msgstr "%p%"
+#. i18n: ectx: property (format), widget (QProgressBar, progressBar)
+#: stylepreview.ui:128
+#, no-c-format, kde-format
+msgid "%p%"
+msgstr "%p%"
 
-#~ msgid "Tab 2"
-#~ msgstr "Langeto 2"
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: stylepreview.ui:136
+#, kde-format
+msgid "Tab 2"
+msgstr "Langeto 2"
 
-#~ msgid "Application style"
-#~ msgstr "Aplikaĵa stilo"
+#. i18n: ectx: label, entry (widgetStyle), group (KDE)
+#: stylesettings.kcfg:9
+#, kde-format
+msgid "Application style"
+msgstr "Aplikaĵa stilo"
 
-#~ msgid "Show icons on buttons"
-#~ msgstr "Montri piktogramojn sur butonoj"
+#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
+#: stylesettings.kcfg:13
+#, kde-format
+msgid "Show icons on buttons"
+msgstr "Montri piktogramojn sur butonoj"
 
-#~ msgid "Show icons in menus"
-#~ msgstr "Montri piktogramojn en menuoj"
+#. i18n: ectx: label, entry (iconsInMenus), group (KDE)
+#: stylesettings.kcfg:17
+#, kde-format
+msgid "Show icons in menus"
+msgstr "Montri piktogramojn en menuoj"
 
-#~ msgid "Main toolbar label"
-#~ msgstr "Ĉef-ilobreta etikedo"
+#. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
+#: stylesettings.kcfg:23
+#, kde-format
+msgid "Main toolbar label"
+msgstr "Ĉef-ilobreta etikedo"
 
-#~ msgid "Secondary toolbar label"
-#~ msgstr "Etikedo de duaranga ilobreto"
+#. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
+#: stylesettings.kcfg:27
+#, kde-format
+msgid "Secondary toolbar label"
+msgstr "Etikedo de duaranga ilobreto"

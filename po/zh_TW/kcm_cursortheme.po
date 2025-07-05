@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2023-02-07 23:18+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -19,6 +19,18 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 23.03.70\n"
+
+#. i18n: ectx: label, entry (cursorTheme), group (Mouse)
+#: cursorthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current cursor theme"
+msgstr "目前的游標主題名稱"
+
+#. i18n: ectx: label, entry (cursorSize), group (Mouse)
+#: cursorthemesettings.kcfg:13
+#, kde-format
+msgid "Current cursor size"
+msgstr "目前游標大小"
 
 #: kcmcursortheme.cpp:308
 #, kde-format
@@ -62,6 +74,13 @@ msgstr "要覆寫主題嗎？"
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "主題安裝成功。"
+
+#. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
+#. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)
+#: launchfeedbacksettings.kcfg:19 launchfeedbacksettings.kcfg:33
+#, kde-format
+msgid "Timeout in seconds"
+msgstr "逾時（秒）"
 
 #: package/contents/ui/Delegate.qml:54
 #, kde-format
@@ -255,15 +274,6 @@ msgctxt ""
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "（可用大小：%1）"
-
-#~ msgid "Name of the current cursor theme"
-#~ msgstr "目前的游標主題名稱"
-
-#~ msgid "Current cursor size"
-#~ msgstr "目前游標大小"
-
-#~ msgid "Timeout in seconds"
-#~ msgstr "逾時（秒）"
 
 #~ msgid "Name"
 #~ msgstr "名稱"

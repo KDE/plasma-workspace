@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2004-12-03 14:52-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -58,6 +58,34 @@ msgstr ""
 #: colors.cpp:309
 #, kde-format
 msgid "Color scheme installed successfully."
+msgstr ""
+
+#. i18n: ectx: label, entry (colorScheme), group (General)
+#: colorssettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Save Color Scheme"
+msgid "Color scheme name"
+msgstr "Sábháil Scéim Datha"
+
+#. i18n: ectx: label, entry (accentColor), group (General)
+#: colorssettings.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Inactive color"
+msgid "Accent color"
+msgstr "Dath neamhghníomhach"
+
+#. i18n: ectx: label, entry (lastUsedCustomAccentColor), group (General)
+#: colorssettings.kcfg:17
+#, kde-format
+msgid ""
+"The last used custom accent color before user switched to wallpaper "
+"generated color or default color"
+msgstr ""
+
+#. i18n: ectx: label, entry (accentColorFromWallpaper), group (General)
+#: colorssettings.kcfg:21
+#, kde-format
+msgid "Whether accent color from wallpaper should be applied"
 msgstr ""
 
 #: editor/kcolorschemeeditor.cpp:25
@@ -120,6 +148,224 @@ msgstr ""
 msgid "Scheme not found, falling back to current one.\n"
 msgstr ""
 
+#. i18n: ectx: property (toolTip), widget (QLabel, label)
+#: editor/preview.ui:29
+#, kde-format
+msgid "Window text on Window Background"
+msgstr "Téacs fuinneoige ar chúlra na fuinneoige"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: editor/preview.ui:32
+#, fuzzy, kde-format
+#| msgctxt "color-kcm-preview"
+#| msgid "Window text"
+msgctxt "color-kcm-preview"
+msgid "Window text"
+msgstr "Téacs fuinneog"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, pushButton)
+#: editor/preview.ui:39
+#, kde-format
+msgid "Button text on Button Background"
+msgstr "Téacs Cnaipe ar Chúlra Cnaipe"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: editor/preview.ui:42
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "Push Button"
+msgstr "Cnaipe Ordaithe"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection0)
+#: editor/preview.ui:123
+#, kde-format
+msgid "Selection Normal Text against Selection Normal Background"
+msgstr "Gnáth-Théacs Roghnaithe ar Ghnáthchúlra Roghnaithe"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection0)
+#: editor/preview.ui:126
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "Selected text"
+msgstr "Téacs roghnaithe"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection3)
+#: editor/preview.ui:138
+#, kde-format
+msgid "Selection Link Text against Selection Normal Background"
+msgstr "Téacs Naisc Roghnaithe ar Ghnáthchúlra Roghnaithe"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection3)
+#. i18n: ectx: property (text), widget (QLabel, labelView3)
+#: editor/preview.ui:141 editor/preview.ui:265
+#, fuzzy, kde-format
+#| msgctxt "color-kcm-preview"
+#| msgid "link"
+msgctxt "color-kcm-preview"
+msgid "link"
+msgstr "nasc"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection4)
+#: editor/preview.ui:153
+#, kde-format
+msgid "Selection Visited Text against Selection Normal Background"
+msgstr "Nasc Feicthe Roghnaithe ar Ghnáthchúlra Roghnaithe"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection4)
+#. i18n: ectx: property (text), widget (QLabel, labelView4)
+#: editor/preview.ui:156 editor/preview.ui:280
+#, fuzzy, kde-format
+#| msgctxt "color-kcm-preview"
+#| msgid "visited"
+msgctxt "color-kcm-preview"
+msgid "visited"
+msgstr "feicthe"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection2)
+#: editor/preview.ui:163
+#, kde-format
+msgid "Selection Active Text against Selection Normal Background"
+msgstr "Téacs Gníomhach Roghnaithe ar Ghnáthchúlra Roghnaithe"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection2)
+#. i18n: ectx: property (text), widget (QLabel, labelView2)
+#: editor/preview.ui:166 editor/preview.ui:290
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "a"
+msgstr "g"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection1)
+#: editor/preview.ui:173
+#, kde-format
+msgid "Selection Inactive Text against Selection Normal Background"
+msgstr "Téacs Neamhghníomhach Roghnaithe ar Ghnáthchúlra Roghnaithe"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection1)
+#. i18n: ectx: property (text), widget (QLabel, labelView1)
+#: editor/preview.ui:176 editor/preview.ui:300
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "i"
+msgstr "n"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection5)
+#: editor/preview.ui:183
+#, kde-format
+msgid "Selection Negative Text against Selection Normal Background"
+msgstr "Téacs Diúltach Roghnaithe ar Ghnáthchúlra Roghnaithe"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection5)
+#. i18n: ectx: property (text), widget (QLabel, labelView5)
+#: editor/preview.ui:186 editor/preview.ui:310
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "!"
+msgstr "!"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection6)
+#: editor/preview.ui:193
+#, kde-format
+msgid "Selection Neutral Text against Selection Normal Background"
+msgstr "Téacs Neodrach Roghnaithe ar Ghnáthchúlra Roghnaithe"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection6)
+#. i18n: ectx: property (text), widget (QLabel, labelView6)
+#: editor/preview.ui:196 editor/preview.ui:320
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "="
+msgstr "="
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection7)
+#: editor/preview.ui:203
+#, kde-format
+msgid "Selection Positive Text against Selection Normal Background"
+msgstr "Téacs Deimhneach Roghnaithe ar Ghnáthchúlra Roghnaithe"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection7)
+#. i18n: ectx: property (text), widget (QLabel, labelView7)
+#: editor/preview.ui:206 editor/preview.ui:330
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "+"
+msgstr "+"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView0)
+#: editor/preview.ui:247
+#, kde-format
+msgid "View Normal Text against View Normal Background"
+msgstr "Gnáth-Théacs Amhairc ar Ghnáthchúlra Amhairc"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelView0)
+#: editor/preview.ui:250
+#, fuzzy, kde-format
+#| msgctxt "color-kcm-preview"
+#| msgid "Normal text"
+msgctxt "color-kcm-preview"
+msgid "Normal text"
+msgstr "Gnáth-théacs"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView3)
+#: editor/preview.ui:262
+#, kde-format
+msgid "View Link Text against View Normal Background"
+msgstr "Gnáth-Théacs Naisc ar Ghnáthchúlra Amhairc"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView4)
+#: editor/preview.ui:277
+#, kde-format
+msgid "View Visited Text against View Normal Background"
+msgstr "Téacs Feicthe Amhairc ar Gnáthchúlra Amhairc"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView2)
+#: editor/preview.ui:287
+#, kde-format
+msgid "View Active Text against View Normal Background"
+msgstr "Téacs Gníomhach Amhairc ar Ghnáthchúlra Amhairc"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView1)
+#: editor/preview.ui:297
+#, kde-format
+msgid "View Inactive Text against View Normal Background"
+msgstr "Téacs Neamhghníomhach Amhairc ar Ghnáthchúlra Amhairc"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView5)
+#: editor/preview.ui:307
+#, kde-format
+msgid "View Negative Text against View Normal Background"
+msgstr "Téacs Diúltach Amhairc ar Ghnáthchúlra Amhairc"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView6)
+#: editor/preview.ui:317
+#, kde-format
+msgid "View Neutral Text against View Normal Background"
+msgstr "Téacs Neodrach Amhairc ar Ghnáthchúlta Amhairc"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView7)
+#: editor/preview.ui:327
+#, kde-format
+msgid "View Positive Text against View Normal Background"
+msgstr "Téacs Deimhneach Amhairc ar Ghnáthchúlra Amhairc"
+
 #: editor/scmeditorcolors.cpp:62 editor/scmeditorcolors.cpp:76
 #, kde-format
 msgid "Varies"
@@ -140,51 +386,276 @@ msgstr "Cúlra Malartach"
 msgid "Normal Text"
 msgstr "Gnáth-théacs"
 
-#: editor/scmeditorcolors.cpp:102
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:102 editor/scmeditorcolors.ui:303
 #, kde-format
 msgid "Inactive Text"
 msgstr "Téacs Neamhghníomhach"
 
-#: editor/scmeditorcolors.cpp:103
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:103 editor/scmeditorcolors.ui:308
 #, kde-format
 msgid "Active Text"
 msgstr "Téacs Gníomhach"
 
 # look at context - here *not* Téacs an Naisc
-#: editor/scmeditorcolors.cpp:104
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:104 editor/scmeditorcolors.ui:313
 #, kde-format
 msgid "Link Text"
 msgstr "Téacs Naisc"
 
-#: editor/scmeditorcolors.cpp:105
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:105 editor/scmeditorcolors.ui:318
 #, kde-format
 msgid "Visited Text"
 msgstr "Téacs Feicthe"
 
-#: editor/scmeditorcolors.cpp:106
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:106 editor/scmeditorcolors.ui:323
 #, kde-format
 msgid "Negative Text"
 msgstr "Téacs Diúltach"
 
-#: editor/scmeditorcolors.cpp:107
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:107 editor/scmeditorcolors.ui:328
 #, kde-format
 msgid "Neutral Text"
 msgstr "Téacs Neodrach"
 
-#: editor/scmeditorcolors.cpp:108
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:108 editor/scmeditorcolors.ui:333
 #, kde-format
 msgid "Positive Text"
 msgstr "Téacs Deimhneach"
 
-#: editor/scmeditorcolors.cpp:109
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:109 editor/scmeditorcolors.ui:338
 #, kde-format
 msgid "Focus Decoration"
 msgstr "Maisíocht Fhócais"
 
-#: editor/scmeditorcolors.cpp:110
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:110 editor/scmeditorcolors.ui:343
 #, kde-format
 msgid "Hover Decoration"
 msgstr "Maisíocht Ainlithe"
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: editor/scmeditorcolors.ui:23
+#, kde-format
+msgid "Color set:"
+msgstr "Tacar dathanna:"
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:36
+#, kde-format
+msgid "Colorset to view/modify"
+msgstr "Tacar dathanna le hamharc/hathrú"
+
+#. i18n: 'Common' here means &quot;frequent/not rare&quot;, not &quot;shared&quot;
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:40
+#, kde-format
+msgctxt "color-sets"
+msgid "Common Colors"
+msgstr "Gnáth-Dhathanna"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:45
+#, kde-format
+msgctxt "color-sets"
+msgid "View"
+msgstr "Amharc"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:50
+#, kde-format
+msgctxt "color-sets"
+msgid "Window"
+msgstr "Fuinneog"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:55
+#, fuzzy, kde-format
+#| msgctxt "color-sets"
+#| msgid "Button"
+msgctxt "color-sets"
+msgid "Button"
+msgstr "Cnaipe"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:60
+#, kde-format
+msgctxt "color-sets"
+msgid "Selection"
+msgstr "Roghnúchán"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:65
+#, kde-format
+msgctxt "color-sets"
+msgid "Tooltip"
+msgstr "Leid Uirlisí"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:70
+#, kde-format
+msgctxt "color-sets"
+msgid "Complementary"
+msgstr ""
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:75
+#, kde-format
+msgctxt "color-sets"
+msgid "Header"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:118 editor/scmeditorcolors.ui:123
+#: editor/scmeditorcolors.ui:128 editor/scmeditorcolors.ui:133
+#: editor/scmeditorcolors.ui:138 editor/scmeditorcolors.ui:143
+#: editor/scmeditorcolors.ui:148 editor/scmeditorcolors.ui:153
+#: editor/scmeditorcolors.ui:158 editor/scmeditorcolors.ui:163
+#: editor/scmeditorcolors.ui:168 editor/scmeditorcolors.ui:173
+#: editor/scmeditorcolors.ui:178 editor/scmeditorcolors.ui:183
+#: editor/scmeditorcolors.ui:188 editor/scmeditorcolors.ui:193
+#: editor/scmeditorcolors.ui:198 editor/scmeditorcolors.ui:203
+#: editor/scmeditorcolors.ui:208 editor/scmeditorcolors.ui:213
+#: editor/scmeditorcolors.ui:218 editor/scmeditorcolors.ui:223
+#: editor/scmeditorcolors.ui:228 editor/scmeditorcolors.ui:233
+#: editor/scmeditorcolors.ui:238 editor/scmeditorcolors.ui:243
+#, kde-format
+msgid "New Row"
+msgstr "Ró Nua"
+
+#. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:248
+#, kde-format
+msgid "0"
+msgstr "0"
+
+#. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:253
+#, kde-format
+msgid "1"
+msgstr "1"
+
+# "view" is a noun here I think
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:258
+#, kde-format
+msgid "View Background"
+msgstr "Cúlra an Amhairc"
+
+# "view" is a noun here I think
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:263
+#, kde-format
+msgid "View Text"
+msgstr "Téacs an Amhairc"
+
+# gen plural in all of these
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:268
+#, kde-format
+msgid "Window Background"
+msgstr "Cúlra Fuinneog"
+
+# gen plural in all of these
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:273
+#, kde-format
+msgid "Window Text"
+msgstr "Téacs Fuinneog"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:278
+#, kde-format
+msgid "Button Background"
+msgstr "Cúlra Cnaipí"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:283
+#, kde-format
+msgid "Button Text"
+msgstr "Téacs Cnaipí"
+
+# gen plural in all of these
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:288
+#, kde-format
+msgid "Selection Background"
+msgstr "Cúlra Roghnúchán"
+
+# gen plural in all of these
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:293
+#, kde-format
+msgid "Selection Text"
+msgstr "Téacs Roghnúchán"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:298
+#, kde-format
+msgid "Selection Inactive Text"
+msgstr "Téacs Roghnaithe Neamhghníomhaigh"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:348
+#, kde-format
+msgid "Tooltip Background"
+msgstr "Cúlra Leideanna"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:353
+#, kde-format
+msgid "Tooltip Text"
+msgstr "Téacs Leideanna"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:358
+#, kde-format
+msgid "Active Titlebar"
+msgstr "Barra Teidil Gníomhach"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:363
+#, kde-format
+msgid "Active Titlebar Text"
+msgstr "Téacs sa Bharra Teidil Gníomhach"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:368
+#, kde-format
+msgid "Active Titlebar Secondary"
+msgstr "Barra Teidil Gníomhach Tánaisteach"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:373
+#, kde-format
+msgid "Inactive Titlebar"
+msgstr "Barra Teidil Neamhghníomhach"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:378
+#, kde-format
+msgid "Inactive Titlebar Text"
+msgstr "Téacs sa Bharra Teidil Neamhghníomhach"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:383
+#, kde-format
+msgid "Inactive Titlebar Secondary"
+msgstr "Barra Teidil Neamhghníomhach Tánaisteach"
 
 #: editor/scmeditordialog.cpp:60
 #, kde-format
@@ -248,6 +719,452 @@ msgstr "Earráid"
 #| msgid "Inactive"
 msgid "Inactive"
 msgstr "Neamhghníomhach"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: editor/scmeditoreffects.ui:17
+#, kde-format
+msgid "Color:"
+msgstr "Dath:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: editor/scmeditoreffects.ui:27
+#, kde-format
+msgid "Intensity:"
+msgstr "Déine:"
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, colorBox)
+#: editor/scmeditoreffects.ui:37
+#, kde-format
+msgid "Disabled color effect type"
+msgstr "Cineál na héifeachta datha ar mhíreanna díchumasaithe"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
+#: editor/scmeditoreffects.ui:41
+#, kde-format
+msgctxt "no disabled color effect"
+msgid "None"
+msgstr "Neamhní"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
+#: editor/scmeditoreffects.ui:46
+#, kde-format
+msgctxt "disabled color effect"
+msgid "Desaturate"
+msgstr "Dísháithigh"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
+#: editor/scmeditoreffects.ui:51
+#, kde-format
+msgctxt "disabled color effect"
+msgid "Fade"
+msgstr "Céimnigh"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
+#: editor/scmeditoreffects.ui:56
+#, kde-format
+msgctxt "disabled color effect"
+msgid "Tint"
+msgstr "Imir"
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, intensityBox)
+#: editor/scmeditoreffects.ui:64
+#, kde-format
+msgid "Disabled intensity effect type"
+msgstr "Cineál na héifeachta déine ar mhíreanna díchumasaithe"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
+#: editor/scmeditoreffects.ui:68
+#, kde-format
+msgctxt "no disabled intensity effect"
+msgid "None"
+msgstr "Neamhní"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
+#: editor/scmeditoreffects.ui:73
+#, kde-format
+msgctxt "disabled intensity effect"
+msgid "Shade"
+msgstr "Scáthaigh"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
+#: editor/scmeditoreffects.ui:78
+#, kde-format
+msgctxt "disabled intensity effect"
+msgid "Darken"
+msgstr "Dorchaigh"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
+#: editor/scmeditoreffects.ui:83
+#, kde-format
+msgctxt "disabled intensity effect"
+msgid "Lighten"
+msgstr "Sorchaigh"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: editor/scmeditoreffects.ui:107
+#, kde-format
+msgid "Contrast:"
+msgstr "Codarsnacht:"
+
+#. i18n: ectx: property (toolTip), widget (QSlider, colorSlider)
+#: editor/scmeditoreffects.ui:120
+#, kde-format
+msgid "Disabled color effect amount"
+msgstr "Méid na héifeachta datha ar mhíreanna díchumasaithe"
+
+#. i18n: ectx: property (toolTip), widget (QSlider, intensitySlider)
+#: editor/scmeditoreffects.ui:139
+#, kde-format
+msgid "Disabled intensity effect amount"
+msgstr "Méid na héifeachta déine ar mhíreanna díchumasaithe"
+
+#. i18n: ectx: property (toolTip), widget (KColorButton, colorButton)
+#: editor/scmeditoreffects.ui:158
+#, kde-format
+msgid "Disabled color"
+msgstr "Dath míreanna díchumasaithe"
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, contrastBox)
+#: editor/scmeditoreffects.ui:181
+#, kde-format
+msgid "Disabled contrast type"
+msgstr "Cineál codarsnachta ar mhíreanna díchumasaithe"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
+#: editor/scmeditoreffects.ui:185
+#, kde-format
+msgctxt "no disabled contrast"
+msgid "None"
+msgstr "Neamhní"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
+#: editor/scmeditoreffects.ui:190
+#, kde-format
+msgctxt "disabled contrast"
+msgid "Fade"
+msgstr "Céimnigh"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
+#: editor/scmeditoreffects.ui:195
+#, kde-format
+msgctxt "disabled contrast"
+msgid "Tint"
+msgstr "Imir"
+
+#. i18n: ectx: property (toolTip), widget (QSlider, contrastSlider)
+#: editor/scmeditoreffects.ui:222
+#, kde-format
+msgid "Disabled contrast amount"
+msgstr "Méid codarsnachta ar mhíreanna díchumasaithe"
+
+#. i18n: ectx: property (text), widget (QCheckBox, useInactiveEffects)
+#: editor/scmeditoroptions.ui:17
+#, fuzzy, kde-format
+#| msgid "Apply inactive window color &effects"
+msgid "Apply &effects to inactive windows"
+msgstr "Cuir maisíochtaí datha i bhf&eidhm ar fhuinneoga neamhghníomhacha"
+
+#. i18n: ectx: property (text), widget (QCheckBox, inactiveSelectionEffect)
+#: editor/scmeditoroptions.ui:24
+#, kde-format
+msgid "Use different colors for in&active selections"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, shadeSortedColumn)
+#: editor/scmeditoroptions.ui:31
+#, kde-format
+msgid "Shade sorted column &in lists"
+msgstr "Scáthaigh an colún sórtáilte &i liostaí"
+
+#. i18n: ectx: property (text), widget (QCheckBox, tintColors)
+#: editor/scmeditoroptions.ui:38
+#, fuzzy, kde-format
+#| msgid "Inactive color"
+msgid "Tint all colors with accent color"
+msgstr "Dath neamhghníomhach"
+
+#. i18n: ectx: property (text), widget (QCheckBox, accentTitlebar)
+#: editor/scmeditoroptions.ui:45
+#, kde-format
+msgid "Make window titlebars a&ccent-colored"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: editor/scmeditoroptions.ui:52
+#, kde-format
+msgid "Tint strength:"
+msgstr ""
+
+#. i18n: ectx: property (toolTip), widget (QGroupBox, groupBox_5)
+#: editor/scmeditoroptions.ui:69
+#, kde-format
+msgid "Shading of frames and lighting (\"3D\") effects"
+msgstr "Scáthú frámaí agus maisíochtaí soilsithe (\"3T\")"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
+#: editor/scmeditoroptions.ui:72
+#, kde-format
+msgid "Shading"
+msgstr "Scáthlíniú"
+
+#. i18n: ectx: property (text), widget (QLabel, label_10)
+#: editor/scmeditoroptions.ui:97
+#, kde-format
+msgid "Maximum"
+msgstr "Uasmhéid"
+
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: editor/scmeditoroptions.ui:117
+#, kde-format
+msgid "Minimum"
+msgstr "Íosmhéid"
+
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: editor/scmeditoroptions.ui:124
+#, kde-format
+msgid "Contrast"
+msgstr "Codarsnacht"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore0)
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack0)
+#: editor/setpreview.ui:35 editor/setpreview.ui:189
+#, kde-format
+msgid "Normal Text on Normal Background"
+msgstr "Gnáth-Théacs ar Ghnáthchúlra"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore0)
+#. i18n: ectx: property (text), widget (QLabel, labelBack0)
+#: editor/setpreview.ui:38 editor/setpreview.ui:192
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "normal"
+msgstr "gnách"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore3)
+#: editor/setpreview.ui:56
+#, kde-format
+msgid "Link Text on Normal Background"
+msgstr "Téacs Naisc ar Ghnáthchúlra"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore3)
+#. i18n: ectx: property (text), widget (QLabel, labelBack3)
+#: editor/setpreview.ui:59 editor/setpreview.ui:214
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "link"
+msgstr "nasc"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore4)
+#: editor/setpreview.ui:77
+#, kde-format
+msgid "Visited Text on Normal Background"
+msgstr "Nasc Feicthe ar Ghnáthchúlra"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore4)
+#. i18n: ectx: property (text), widget (QLabel, labelBack4)
+#: editor/setpreview.ui:80 editor/setpreview.ui:236
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "visited"
+msgstr "feicthe"
+
+#. i18n: ectx: property (toolTip), widget (QWidget, widgetFore2)
+#: editor/setpreview.ui:90
+#, kde-format
+msgid "Active Text on Normal Background"
+msgstr "Téacs Gníomhach ar Ghnáthchúlra"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore2)
+#. i18n: ectx: property (text), widget (QLabel, labelBack2)
+#: editor/setpreview.ui:96 editor/setpreview.ui:253
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "active"
+msgstr "gníomhach"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore1)
+#: editor/setpreview.ui:109
+#, kde-format
+msgid "Inactive Text on Normal Background"
+msgstr "Téacs Neamhghníomhach ar Ghnáthchúlra"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore1)
+#: editor/setpreview.ui:112
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "inactive"
+msgstr "neamhghníomhach"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore5)
+#: editor/setpreview.ui:125
+#, kde-format
+msgid "Negative Text on Normal Background"
+msgstr "Téacs Diúltach ar Ghnáthchúlra"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore5)
+#. i18n: ectx: property (text), widget (QLabel, labelBack5)
+#: editor/setpreview.ui:128 editor/setpreview.ui:286
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "negative"
+msgstr "diúltach"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore6)
+#: editor/setpreview.ui:141
+#, kde-format
+msgid "Neutral Text on Normal Background"
+msgstr "Téacs Neodrach ar Ghnáthchúlra"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore6)
+#. i18n: ectx: property (text), widget (QLabel, labelBack6)
+#: editor/setpreview.ui:144 editor/setpreview.ui:303
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "neutral"
+msgstr "neodrach"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore7)
+#: editor/setpreview.ui:157
+#, kde-format
+msgid "Positive Text on Normal Background"
+msgstr "Téacs Deimhneach ar Ghnáthchúlra"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore7)
+#. i18n: ectx: property (text), widget (QLabel, labelBack7)
+#: editor/setpreview.ui:160 editor/setpreview.ui:320
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "positive"
+msgstr "deimhneach"
+
+#. i18n: ectx: property (toolTip), widget (QWidget, widgetFore8)
+#: editor/setpreview.ui:170
+#, kde-format
+msgid "Hover on Normal Background"
+msgstr "Ainliú ar Ghnáthchúlra"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore8)
+#: editor/setpreview.ui:176
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "hover"
+msgstr "ainliú"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack3)
+#: editor/setpreview.ui:211
+#, kde-format
+msgid ""
+"Link Text on Link Background\n"
+"(Note: Link Background is derived from Link Text and cannot be separately "
+"configured at this time)"
+msgstr ""
+"Téacs Naisc ar Chúlra Naisc\n"
+"(Nóta: Tagann an Cúlra Naisc ón Téacs Naisc agus ní féidir cumraíocht ar "
+"leith a dhéanamh air faoi láthair)"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack4)
+#: editor/setpreview.ui:233
+#, kde-format
+msgid ""
+"Visited Text on Visited Background\n"
+"(Note: Visited Background is derived from Visited Text and cannot be "
+"separately configured at this time)"
+msgstr ""
+"Téacs Feicthe ar Chúlra Feicthe\n"
+"(Nóta: Tagann an Cúlra Feicthe ón Téacs Feicthe agus ní féidir cumraíocht ar "
+"leith a dhéanamh air faoi láthair)"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack2)
+#: editor/setpreview.ui:250
+#, kde-format
+msgid ""
+"Active Text on Active Background\n"
+"(Note: Active Background is derived from Active Text and cannot be "
+"separately configured at this time)"
+msgstr ""
+"Téacs Gníomhach ar Chúlra Gníomhach\n"
+"(Nóta: Tagann an Cúlra Gníomhach ón Téacs Gníomhach agus ní féidir "
+"cumraíocht ar leith a dhéanamh air faoi láthair)"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack1)
+#: editor/setpreview.ui:266
+#, kde-format
+msgid "Inactive Text on Alternate Background"
+msgstr "Téacs Neamhghníomhach ar Chúlra Malartach"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelBack1)
+#: editor/setpreview.ui:269
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "alternate"
+msgstr "malartach"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack5)
+#: editor/setpreview.ui:283
+#, kde-format
+msgid ""
+"Negative Text on Negative Background\n"
+"(Note: Negative Background is derived from Negative Text and cannot be "
+"separately configured at this time)"
+msgstr ""
+"Téacs Diúltach ar Chúlra Diúltach\n"
+"(Nóta: Tagann an Cúlra Diúltach ón Téacs Diúltach agus ní féidir cumraíocht "
+"ar leith a dhéanamh air faoi láthair)"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack6)
+#: editor/setpreview.ui:300
+#, kde-format
+msgid ""
+"Neutral Text on Neutral Background\n"
+"(Note: Neutral Background is derived from Neutral Text and cannot be "
+"separately configured at this time)"
+msgstr ""
+"Téacs Neodrach ar Chúlra Neodrach\n"
+"(Nóta: Tagann an Cúlra Neodrach ón Téacs Neodrach agus ní féidir cumraíocht "
+"ar leith a dhéanamh air faoi láthair)"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack7)
+#: editor/setpreview.ui:317
+#, kde-format
+msgid ""
+"Positive Text on Positive Background\n"
+"(Note: Positive Background is derived from Positive Text and cannot be "
+"separately configured at this time)"
+msgstr ""
+"Téacs Deimhneach ar Chúlra Deimhneach\n"
+"(Nóta: Tagann an Cúlra Deimhneach ón Téacs Deimhneach agus ní féidir "
+"cumraíocht ar leith a dhéanamh air faoi láthair)"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore9)
+#: editor/setpreview.ui:333
+#, kde-format
+msgid "Focus on Normal Background"
+msgstr "Fócas ar Ghnáthchúlra"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore9)
+#: editor/setpreview.ui:336
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "focus"
+msgstr "fócas"
 
 #: package/contents/ui/main.qml:23
 #, kde-format
@@ -487,458 +1404,6 @@ msgstr ""
 #| msgid "Save the current color scheme"
 msgid " * %1 (current color scheme)"
 msgstr "Sábháil an scéim reatha datha"
-
-#, fuzzy
-#~| msgid "Save Color Scheme"
-#~ msgid "Color scheme name"
-#~ msgstr "Sábháil Scéim Datha"
-
-#, fuzzy
-#~| msgid "Inactive color"
-#~ msgid "Accent color"
-#~ msgstr "Dath neamhghníomhach"
-
-#~ msgid "Window text on Window Background"
-#~ msgstr "Téacs fuinneoige ar chúlra na fuinneoige"
-
-#, fuzzy
-#~| msgctxt "color-kcm-preview"
-#~| msgid "Window text"
-#~ msgctxt "color-kcm-preview"
-#~ msgid "Window text"
-#~ msgstr "Téacs fuinneog"
-
-#~ msgid "Button text on Button Background"
-#~ msgstr "Téacs Cnaipe ar Chúlra Cnaipe"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "Push Button"
-#~ msgstr "Cnaipe Ordaithe"
-
-#~ msgid "Selection Normal Text against Selection Normal Background"
-#~ msgstr "Gnáth-Théacs Roghnaithe ar Ghnáthchúlra Roghnaithe"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "Selected text"
-#~ msgstr "Téacs roghnaithe"
-
-#~ msgid "Selection Link Text against Selection Normal Background"
-#~ msgstr "Téacs Naisc Roghnaithe ar Ghnáthchúlra Roghnaithe"
-
-#, fuzzy
-#~| msgctxt "color-kcm-preview"
-#~| msgid "link"
-#~ msgctxt "color-kcm-preview"
-#~ msgid "link"
-#~ msgstr "nasc"
-
-#~ msgid "Selection Visited Text against Selection Normal Background"
-#~ msgstr "Nasc Feicthe Roghnaithe ar Ghnáthchúlra Roghnaithe"
-
-#, fuzzy
-#~| msgctxt "color-kcm-preview"
-#~| msgid "visited"
-#~ msgctxt "color-kcm-preview"
-#~ msgid "visited"
-#~ msgstr "feicthe"
-
-#~ msgid "Selection Active Text against Selection Normal Background"
-#~ msgstr "Téacs Gníomhach Roghnaithe ar Ghnáthchúlra Roghnaithe"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "a"
-#~ msgstr "g"
-
-#~ msgid "Selection Inactive Text against Selection Normal Background"
-#~ msgstr "Téacs Neamhghníomhach Roghnaithe ar Ghnáthchúlra Roghnaithe"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "i"
-#~ msgstr "n"
-
-#~ msgid "Selection Negative Text against Selection Normal Background"
-#~ msgstr "Téacs Diúltach Roghnaithe ar Ghnáthchúlra Roghnaithe"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "!"
-#~ msgstr "!"
-
-#~ msgid "Selection Neutral Text against Selection Normal Background"
-#~ msgstr "Téacs Neodrach Roghnaithe ar Ghnáthchúlra Roghnaithe"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "="
-#~ msgstr "="
-
-#~ msgid "Selection Positive Text against Selection Normal Background"
-#~ msgstr "Téacs Deimhneach Roghnaithe ar Ghnáthchúlra Roghnaithe"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "+"
-#~ msgstr "+"
-
-#~ msgid "View Normal Text against View Normal Background"
-#~ msgstr "Gnáth-Théacs Amhairc ar Ghnáthchúlra Amhairc"
-
-#, fuzzy
-#~| msgctxt "color-kcm-preview"
-#~| msgid "Normal text"
-#~ msgctxt "color-kcm-preview"
-#~ msgid "Normal text"
-#~ msgstr "Gnáth-théacs"
-
-#~ msgid "View Link Text against View Normal Background"
-#~ msgstr "Gnáth-Théacs Naisc ar Ghnáthchúlra Amhairc"
-
-#~ msgid "View Visited Text against View Normal Background"
-#~ msgstr "Téacs Feicthe Amhairc ar Gnáthchúlra Amhairc"
-
-#~ msgid "View Active Text against View Normal Background"
-#~ msgstr "Téacs Gníomhach Amhairc ar Ghnáthchúlra Amhairc"
-
-#~ msgid "View Inactive Text against View Normal Background"
-#~ msgstr "Téacs Neamhghníomhach Amhairc ar Ghnáthchúlra Amhairc"
-
-#~ msgid "View Negative Text against View Normal Background"
-#~ msgstr "Téacs Diúltach Amhairc ar Ghnáthchúlra Amhairc"
-
-#~ msgid "View Neutral Text against View Normal Background"
-#~ msgstr "Téacs Neodrach Amhairc ar Ghnáthchúlta Amhairc"
-
-#~ msgid "View Positive Text against View Normal Background"
-#~ msgstr "Téacs Deimhneach Amhairc ar Ghnáthchúlra Amhairc"
-
-#~ msgid "Color set:"
-#~ msgstr "Tacar dathanna:"
-
-#~ msgid "Colorset to view/modify"
-#~ msgstr "Tacar dathanna le hamharc/hathrú"
-
-#~ msgctxt "color-sets"
-#~ msgid "Common Colors"
-#~ msgstr "Gnáth-Dhathanna"
-
-#~ msgctxt "color-sets"
-#~ msgid "View"
-#~ msgstr "Amharc"
-
-#~ msgctxt "color-sets"
-#~ msgid "Window"
-#~ msgstr "Fuinneog"
-
-#, fuzzy
-#~| msgctxt "color-sets"
-#~| msgid "Button"
-#~ msgctxt "color-sets"
-#~ msgid "Button"
-#~ msgstr "Cnaipe"
-
-#~ msgctxt "color-sets"
-#~ msgid "Selection"
-#~ msgstr "Roghnúchán"
-
-#~ msgctxt "color-sets"
-#~ msgid "Tooltip"
-#~ msgstr "Leid Uirlisí"
-
-#~ msgid "New Row"
-#~ msgstr "Ró Nua"
-
-#~ msgid "0"
-#~ msgstr "0"
-
-#~ msgid "1"
-#~ msgstr "1"
-
-# "view" is a noun here I think
-#~ msgid "View Background"
-#~ msgstr "Cúlra an Amhairc"
-
-# "view" is a noun here I think
-#~ msgid "View Text"
-#~ msgstr "Téacs an Amhairc"
-
-# gen plural in all of these
-#~ msgid "Window Background"
-#~ msgstr "Cúlra Fuinneog"
-
-# gen plural in all of these
-#~ msgid "Window Text"
-#~ msgstr "Téacs Fuinneog"
-
-#~ msgid "Button Background"
-#~ msgstr "Cúlra Cnaipí"
-
-#~ msgid "Button Text"
-#~ msgstr "Téacs Cnaipí"
-
-# gen plural in all of these
-#~ msgid "Selection Background"
-#~ msgstr "Cúlra Roghnúchán"
-
-# gen plural in all of these
-#~ msgid "Selection Text"
-#~ msgstr "Téacs Roghnúchán"
-
-#~ msgid "Selection Inactive Text"
-#~ msgstr "Téacs Roghnaithe Neamhghníomhaigh"
-
-#~ msgid "Tooltip Background"
-#~ msgstr "Cúlra Leideanna"
-
-#~ msgid "Tooltip Text"
-#~ msgstr "Téacs Leideanna"
-
-#~ msgid "Active Titlebar"
-#~ msgstr "Barra Teidil Gníomhach"
-
-#~ msgid "Active Titlebar Text"
-#~ msgstr "Téacs sa Bharra Teidil Gníomhach"
-
-#~ msgid "Active Titlebar Secondary"
-#~ msgstr "Barra Teidil Gníomhach Tánaisteach"
-
-#~ msgid "Inactive Titlebar"
-#~ msgstr "Barra Teidil Neamhghníomhach"
-
-#~ msgid "Inactive Titlebar Text"
-#~ msgstr "Téacs sa Bharra Teidil Neamhghníomhach"
-
-#~ msgid "Inactive Titlebar Secondary"
-#~ msgstr "Barra Teidil Neamhghníomhach Tánaisteach"
-
-#~ msgid "Color:"
-#~ msgstr "Dath:"
-
-#~ msgid "Intensity:"
-#~ msgstr "Déine:"
-
-#~ msgid "Disabled color effect type"
-#~ msgstr "Cineál na héifeachta datha ar mhíreanna díchumasaithe"
-
-#~ msgctxt "no disabled color effect"
-#~ msgid "None"
-#~ msgstr "Neamhní"
-
-#~ msgctxt "disabled color effect"
-#~ msgid "Desaturate"
-#~ msgstr "Dísháithigh"
-
-#~ msgctxt "disabled color effect"
-#~ msgid "Fade"
-#~ msgstr "Céimnigh"
-
-#~ msgctxt "disabled color effect"
-#~ msgid "Tint"
-#~ msgstr "Imir"
-
-#~ msgid "Disabled intensity effect type"
-#~ msgstr "Cineál na héifeachta déine ar mhíreanna díchumasaithe"
-
-#~ msgctxt "no disabled intensity effect"
-#~ msgid "None"
-#~ msgstr "Neamhní"
-
-#~ msgctxt "disabled intensity effect"
-#~ msgid "Shade"
-#~ msgstr "Scáthaigh"
-
-#~ msgctxt "disabled intensity effect"
-#~ msgid "Darken"
-#~ msgstr "Dorchaigh"
-
-#~ msgctxt "disabled intensity effect"
-#~ msgid "Lighten"
-#~ msgstr "Sorchaigh"
-
-#~ msgid "Contrast:"
-#~ msgstr "Codarsnacht:"
-
-#~ msgid "Disabled color effect amount"
-#~ msgstr "Méid na héifeachta datha ar mhíreanna díchumasaithe"
-
-#~ msgid "Disabled intensity effect amount"
-#~ msgstr "Méid na héifeachta déine ar mhíreanna díchumasaithe"
-
-#~ msgid "Disabled color"
-#~ msgstr "Dath míreanna díchumasaithe"
-
-#~ msgid "Disabled contrast type"
-#~ msgstr "Cineál codarsnachta ar mhíreanna díchumasaithe"
-
-#~ msgctxt "no disabled contrast"
-#~ msgid "None"
-#~ msgstr "Neamhní"
-
-#~ msgctxt "disabled contrast"
-#~ msgid "Fade"
-#~ msgstr "Céimnigh"
-
-#~ msgctxt "disabled contrast"
-#~ msgid "Tint"
-#~ msgstr "Imir"
-
-#~ msgid "Disabled contrast amount"
-#~ msgstr "Méid codarsnachta ar mhíreanna díchumasaithe"
-
-#, fuzzy
-#~| msgid "Apply inactive window color &effects"
-#~ msgid "Apply &effects to inactive windows"
-#~ msgstr "Cuir maisíochtaí datha i bhf&eidhm ar fhuinneoga neamhghníomhacha"
-
-#~ msgid "Shade sorted column &in lists"
-#~ msgstr "Scáthaigh an colún sórtáilte &i liostaí"
-
-#, fuzzy
-#~| msgid "Inactive color"
-#~ msgid "Tint all colors with accent color"
-#~ msgstr "Dath neamhghníomhach"
-
-#~ msgid "Shading of frames and lighting (\"3D\") effects"
-#~ msgstr "Scáthú frámaí agus maisíochtaí soilsithe (\"3T\")"
-
-#~ msgid "Shading"
-#~ msgstr "Scáthlíniú"
-
-#~ msgid "Maximum"
-#~ msgstr "Uasmhéid"
-
-#~ msgid "Minimum"
-#~ msgstr "Íosmhéid"
-
-#~ msgid "Contrast"
-#~ msgstr "Codarsnacht"
-
-#~ msgid "Normal Text on Normal Background"
-#~ msgstr "Gnáth-Théacs ar Ghnáthchúlra"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "normal"
-#~ msgstr "gnách"
-
-#~ msgid "Link Text on Normal Background"
-#~ msgstr "Téacs Naisc ar Ghnáthchúlra"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "link"
-#~ msgstr "nasc"
-
-#~ msgid "Visited Text on Normal Background"
-#~ msgstr "Nasc Feicthe ar Ghnáthchúlra"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "visited"
-#~ msgstr "feicthe"
-
-#~ msgid "Active Text on Normal Background"
-#~ msgstr "Téacs Gníomhach ar Ghnáthchúlra"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "active"
-#~ msgstr "gníomhach"
-
-#~ msgid "Inactive Text on Normal Background"
-#~ msgstr "Téacs Neamhghníomhach ar Ghnáthchúlra"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "inactive"
-#~ msgstr "neamhghníomhach"
-
-#~ msgid "Negative Text on Normal Background"
-#~ msgstr "Téacs Diúltach ar Ghnáthchúlra"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "negative"
-#~ msgstr "diúltach"
-
-#~ msgid "Neutral Text on Normal Background"
-#~ msgstr "Téacs Neodrach ar Ghnáthchúlra"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "neutral"
-#~ msgstr "neodrach"
-
-#~ msgid "Positive Text on Normal Background"
-#~ msgstr "Téacs Deimhneach ar Ghnáthchúlra"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "positive"
-#~ msgstr "deimhneach"
-
-#~ msgid "Hover on Normal Background"
-#~ msgstr "Ainliú ar Ghnáthchúlra"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "hover"
-#~ msgstr "ainliú"
-
-#~ msgid ""
-#~ "Link Text on Link Background\n"
-#~ "(Note: Link Background is derived from Link Text and cannot be separately "
-#~ "configured at this time)"
-#~ msgstr ""
-#~ "Téacs Naisc ar Chúlra Naisc\n"
-#~ "(Nóta: Tagann an Cúlra Naisc ón Téacs Naisc agus ní féidir cumraíocht ar "
-#~ "leith a dhéanamh air faoi láthair)"
-
-#~ msgid ""
-#~ "Visited Text on Visited Background\n"
-#~ "(Note: Visited Background is derived from Visited Text and cannot be "
-#~ "separately configured at this time)"
-#~ msgstr ""
-#~ "Téacs Feicthe ar Chúlra Feicthe\n"
-#~ "(Nóta: Tagann an Cúlra Feicthe ón Téacs Feicthe agus ní féidir cumraíocht "
-#~ "ar leith a dhéanamh air faoi láthair)"
-
-#~ msgid ""
-#~ "Active Text on Active Background\n"
-#~ "(Note: Active Background is derived from Active Text and cannot be "
-#~ "separately configured at this time)"
-#~ msgstr ""
-#~ "Téacs Gníomhach ar Chúlra Gníomhach\n"
-#~ "(Nóta: Tagann an Cúlra Gníomhach ón Téacs Gníomhach agus ní féidir "
-#~ "cumraíocht ar leith a dhéanamh air faoi láthair)"
-
-#~ msgid "Inactive Text on Alternate Background"
-#~ msgstr "Téacs Neamhghníomhach ar Chúlra Malartach"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "alternate"
-#~ msgstr "malartach"
-
-#~ msgid ""
-#~ "Negative Text on Negative Background\n"
-#~ "(Note: Negative Background is derived from Negative Text and cannot be "
-#~ "separately configured at this time)"
-#~ msgstr ""
-#~ "Téacs Diúltach ar Chúlra Diúltach\n"
-#~ "(Nóta: Tagann an Cúlra Diúltach ón Téacs Diúltach agus ní féidir "
-#~ "cumraíocht ar leith a dhéanamh air faoi láthair)"
-
-#~ msgid ""
-#~ "Neutral Text on Neutral Background\n"
-#~ "(Note: Neutral Background is derived from Neutral Text and cannot be "
-#~ "separately configured at this time)"
-#~ msgstr ""
-#~ "Téacs Neodrach ar Chúlra Neodrach\n"
-#~ "(Nóta: Tagann an Cúlra Neodrach ón Téacs Neodrach agus ní féidir "
-#~ "cumraíocht ar leith a dhéanamh air faoi láthair)"
-
-#~ msgid ""
-#~ "Positive Text on Positive Background\n"
-#~ "(Note: Positive Background is derived from Positive Text and cannot be "
-#~ "separately configured at this time)"
-#~ msgstr ""
-#~ "Téacs Deimhneach ar Chúlra Deimhneach\n"
-#~ "(Nóta: Tagann an Cúlra Deimhneach ón Téacs Deimhneach agus ní féidir "
-#~ "cumraíocht ar leith a dhéanamh air faoi láthair)"
-
-#~ msgid "Focus on Normal Background"
-#~ msgstr "Fócas ar Ghnáthchúlra"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "focus"
-#~ msgstr "fócas"
 
 #, fuzzy
 #~| msgid "Apply inactive window color &effects"

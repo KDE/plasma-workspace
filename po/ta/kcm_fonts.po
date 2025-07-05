@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-10-18 21:26+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -15,6 +15,54 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 22.08.2\n"
+
+#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
+#: fontsaasettingsbase.kcfg:9
+#, kde-format
+msgid "Force font DPI Wayland"
+msgstr "எழுத்துரு DPI-ஐ Wayland-இல் கட்டாயப்படுத்து"
+
+#. i18n: ectx: label, entry (forceFontDPI), group (General)
+#: fontsaasettingsbase.kcfg:13
+#, kde-format
+msgid "Force font DPI on X11"
+msgstr "எழுத்துருக்கான DPI-யை X11-இல் கட்டாயப்படுத்து"
+
+#. i18n: ectx: label, entry (font), group (General)
+#: fontssettings.kcfg:9
+#, kde-format
+msgid "General font"
+msgstr "பொதுவான எழுத்துரு"
+
+#. i18n: ectx: label, entry (fixed), group (General)
+#: fontssettings.kcfg:21
+#, kde-format
+msgid "Fixed width font"
+msgstr "சம‍அகல எழுத்துரு"
+
+#. i18n: ectx: label, entry (smallestReadableFont), group (General)
+#: fontssettings.kcfg:33
+#, kde-format
+msgid "Small font"
+msgstr "சிறு எழுத்துரு"
+
+#. i18n: ectx: label, entry (toolBarFont), group (General)
+#: fontssettings.kcfg:45
+#, kde-format
+msgid "Tool bar font"
+msgstr "கருவிப்பட்டைக்கான எழுத்துரு"
+
+#. i18n: ectx: label, entry (menuFont), group (General)
+#: fontssettings.kcfg:57
+#, kde-format
+msgid "Menu font"
+msgstr "பட்டிக்கான எழுத்துரு"
+
+#. i18n: ectx: label, entry (activeFont), group (WM)
+#: fontssettings.kcfg:71
+#, kde-format
+msgid "Window title font"
+msgstr "சாளரத் தலைப்பிற்கான எழுத்துரு"
 
 #: kxftconfig.cpp:458
 #, kde-format
@@ -281,30 +329,6 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "எழுத்துருவை தேர்வு செய்தல்"
-
-#~ msgid "Force font DPI Wayland"
-#~ msgstr "எழுத்துரு DPI-ஐ Wayland-இல் கட்டாயப்படுத்து"
-
-#~ msgid "Force font DPI on X11"
-#~ msgstr "எழுத்துருக்கான DPI-யை X11-இல் கட்டாயப்படுத்து"
-
-#~ msgid "General font"
-#~ msgstr "பொதுவான எழுத்துரு"
-
-#~ msgid "Fixed width font"
-#~ msgstr "சம‍அகல எழுத்துரு"
-
-#~ msgid "Small font"
-#~ msgstr "சிறு எழுத்துரு"
-
-#~ msgid "Tool bar font"
-#~ msgstr "கருவிப்பட்டைக்கான எழுத்துரு"
-
-#~ msgid "Menu font"
-#~ msgstr "பட்டிக்கான எழுத்துரு"
-
-#~ msgid "Window title font"
-#~ msgstr "சாளரத் தலைப்பிற்கான எழுத்துரு"
 
 #~ msgid "Change Display Scaling…"
 #~ msgstr "காட்சிக்கான அளவீட்டை மாற்று…"

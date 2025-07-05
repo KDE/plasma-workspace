@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2024-09-30 21:36+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -143,41 +143,78 @@ msgstr "Konfigurasi Gaya Aplikasi GNOME/GTK..."
 msgid "Configure %1"
 msgstr "Konfigurasikan %1"
 
-#~ msgid "Tab 1"
-#~ msgstr "Tab 1"
+#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
+#: stylepreview.ui:33
+#, kde-format
+msgid "Tab 1"
+msgstr "Tab 1"
 
-#~ msgid "Push Button"
-#~ msgstr "Tombol Dorong"
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: stylepreview.ui:65
+#, kde-format
+msgid "Push Button"
+msgstr "Tombol Dorong"
 
-#~ msgid "Combo box"
-#~ msgstr "Kotak kombo"
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
+#: stylepreview.ui:86
+#, kde-format
+msgid "Combo box"
+msgstr "Kotak kombo"
 
-#~ msgid "Checkbox"
-#~ msgstr "Kotak centang"
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
+#: stylepreview.ui:96
+#, kde-format
+msgid "Checkbox"
+msgstr "Kotak centang"
 
-#~ msgid "Radio button"
-#~ msgstr "Tombol radio"
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
+#: stylepreview.ui:106 stylepreview.ui:116
+#, kde-format
+msgid "Radio button"
+msgstr "Tombol radio"
 
-#~ msgid "%p%"
-#~ msgstr "%p%"
+#. i18n: ectx: property (format), widget (QProgressBar, progressBar)
+#: stylepreview.ui:128
+#, no-c-format, kde-format
+msgid "%p%"
+msgstr "%p%"
 
-#~ msgid "Tab 2"
-#~ msgstr "Tab 2"
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: stylepreview.ui:136
+#, kde-format
+msgid "Tab 2"
+msgstr "Tab 2"
 
-#~ msgid "Application style"
-#~ msgstr "Gaya aplikasi"
+#. i18n: ectx: label, entry (widgetStyle), group (KDE)
+#: stylesettings.kcfg:9
+#, kde-format
+msgid "Application style"
+msgstr "Gaya aplikasi"
 
-#~ msgid "Show icons on buttons"
-#~ msgstr "Tampilkan ikon di tombol"
+#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
+#: stylesettings.kcfg:13
+#, kde-format
+msgid "Show icons on buttons"
+msgstr "Tampilkan ikon di tombol"
 
-#~ msgid "Show icons in menus"
-#~ msgstr "Tampilkan ikon di menu"
+#. i18n: ectx: label, entry (iconsInMenus), group (KDE)
+#: stylesettings.kcfg:17
+#, kde-format
+msgid "Show icons in menus"
+msgstr "Tampilkan ikon di menu"
 
-#~ msgid "Main toolbar label"
-#~ msgstr "Label toolbar utama"
+#. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
+#: stylesettings.kcfg:23
+#, kde-format
+msgid "Main toolbar label"
+msgstr "Label toolbar utama"
 
-#~ msgid "Secondary toolbar label"
-#~ msgstr "Label toolbar sekunder"
+#. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
+#: stylesettings.kcfg:27
+#, kde-format
+msgid "Secondary toolbar label"
+msgstr "Label toolbar sekunder"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

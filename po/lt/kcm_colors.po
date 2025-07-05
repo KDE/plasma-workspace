@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-11-18 20:43+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -58,6 +58,34 @@ msgstr "Nepavyko nukopijuoti spalvų rinkinio į 'color-scheme' duomenų aplank�
 #, kde-format
 msgid "Color scheme installed successfully."
 msgstr "Spalvų rinkinys sėkmingai įdiegtas."
+
+#. i18n: ectx: label, entry (colorScheme), group (General)
+#: colorssettings.kcfg:9
+#, kde-format
+msgid "Color scheme name"
+msgstr "Spalvų rinkinio pavadinimas"
+
+#. i18n: ectx: label, entry (accentColor), group (General)
+#: colorssettings.kcfg:13
+#, kde-format
+msgid "Accent color"
+msgstr "Paryškinimo spalva"
+
+#. i18n: ectx: label, entry (lastUsedCustomAccentColor), group (General)
+#: colorssettings.kcfg:17
+#, kde-format
+msgid ""
+"The last used custom accent color before user switched to wallpaper "
+"generated color or default color"
+msgstr ""
+"Paskiausiai naudota tinkinta paryškinimo spalva prieš tai, kai naudotojas "
+"perjungė į darbalaukio generuotą spalvą ar numatytąją spalvą"
+
+#. i18n: ectx: label, entry (accentColorFromWallpaper), group (General)
+#: colorssettings.kcfg:21
+#, kde-format
+msgid "Whether accent color from wallpaper should be applied"
+msgstr "Ar turėtų būti taikoma paryškinimo spalva iš darbalaukio"
 
 #: editor/kcolorschemeeditor.cpp:25
 #, kde-format
@@ -119,6 +147,216 @@ msgstr "Padaro dialogą laikiną kitam programos langui, nurodytam pagal ranken�
 msgid "Scheme not found, falling back to current one.\n"
 msgstr "Rinkinys nerastas, grįžtama prie esamo.\n"
 
+#. i18n: ectx: property (toolTip), widget (QLabel, label)
+#: editor/preview.ui:29
+#, kde-format
+msgid "Window text on Window Background"
+msgstr "Lango tekstas ant lango fono"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: editor/preview.ui:32
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "Window text"
+msgstr "Lango tekstas"
+
+#. i18n: ectx: property (toolTip), widget (QPushButton, pushButton)
+#: editor/preview.ui:39
+#, kde-format
+msgid "Button text on Button Background"
+msgstr "Mygtuko tekstas ant mygtuko fono"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: editor/preview.ui:42
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "Push Button"
+msgstr "Spaudžiamas mygtukas"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection0)
+#: editor/preview.ui:123
+#, kde-format
+msgid "Selection Normal Text against Selection Normal Background"
+msgstr "Pažymėtas normalus tekstas ant normalaus pažymėto fono"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection0)
+#: editor/preview.ui:126
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "Selected text"
+msgstr "Pažymėtas tekstas"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection3)
+#: editor/preview.ui:138
+#, kde-format
+msgid "Selection Link Text against Selection Normal Background"
+msgstr "Pažymėtas nuorodos tekstas ant pažymėto normalaus fono"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection3)
+#. i18n: ectx: property (text), widget (QLabel, labelView3)
+#: editor/preview.ui:141 editor/preview.ui:265
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "link"
+msgstr "nuoroda"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection4)
+#: editor/preview.ui:153
+#, kde-format
+msgid "Selection Visited Text against Selection Normal Background"
+msgstr "Pažymėta aplankyta nuoroda ant pažymėto normalaus fono"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection4)
+#. i18n: ectx: property (text), widget (QLabel, labelView4)
+#: editor/preview.ui:156 editor/preview.ui:280
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "visited"
+msgstr "aplankyta"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection2)
+#: editor/preview.ui:163
+#, kde-format
+msgid "Selection Active Text against Selection Normal Background"
+msgstr "Pažymėtas aktyvus tekstas ant pažymėto normalaus fono"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection2)
+#. i18n: ectx: property (text), widget (QLabel, labelView2)
+#: editor/preview.ui:166 editor/preview.ui:290
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "a"
+msgstr "a"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection1)
+#: editor/preview.ui:173
+#, kde-format
+msgid "Selection Inactive Text against Selection Normal Background"
+msgstr "Pažymėtas neaktyvus tekstas ant pažymėto normalaus fono"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection1)
+#. i18n: ectx: property (text), widget (QLabel, labelView1)
+#: editor/preview.ui:176 editor/preview.ui:300
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "i"
+msgstr "i"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection5)
+#: editor/preview.ui:183
+#, kde-format
+msgid "Selection Negative Text against Selection Normal Background"
+msgstr "Pažymėtas teksto negatyvas ant pažymėto normalaus fono"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection5)
+#. i18n: ectx: property (text), widget (QLabel, labelView5)
+#: editor/preview.ui:186 editor/preview.ui:310
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "!"
+msgstr "!"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection6)
+#: editor/preview.ui:193
+#, kde-format
+msgid "Selection Neutral Text against Selection Normal Background"
+msgstr "Pažymėtas neutralus tekstas ant pažymėto normalaus fono"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection6)
+#. i18n: ectx: property (text), widget (QLabel, labelView6)
+#: editor/preview.ui:196 editor/preview.ui:320
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "="
+msgstr "="
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection7)
+#: editor/preview.ui:203
+#, kde-format
+msgid "Selection Positive Text against Selection Normal Background"
+msgstr "Pažymėtas pozityvus tekstas ant pažymėto normalaus fono"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelSelection7)
+#. i18n: ectx: property (text), widget (QLabel, labelView7)
+#: editor/preview.ui:206 editor/preview.ui:330
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "+"
+msgstr "+"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView0)
+#: editor/preview.ui:247
+#, kde-format
+msgid "View Normal Text against View Normal Background"
+msgstr "Normalus tekstas ant normalaus fono"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelView0)
+#: editor/preview.ui:250
+#, kde-format
+msgctxt "color-kcm-preview"
+msgid "Normal text"
+msgstr "Normalus tekstas"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView3)
+#: editor/preview.ui:262
+#, kde-format
+msgid "View Link Text against View Normal Background"
+msgstr "Nuorodos tekstas ant normalaus fono"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView4)
+#: editor/preview.ui:277
+#, kde-format
+msgid "View Visited Text against View Normal Background"
+msgstr "Aplankyta nuoroda ant normalaus fono"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView2)
+#: editor/preview.ui:287
+#, kde-format
+msgid "View Active Text against View Normal Background"
+msgstr "Aktyvus tekstas ant normalus fono"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView1)
+#: editor/preview.ui:297
+#, kde-format
+msgid "View Inactive Text against View Normal Background"
+msgstr "Neaktyvus tekstas ant normalaus fono"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView5)
+#: editor/preview.ui:307
+#, kde-format
+msgid "View Negative Text against View Normal Background"
+msgstr "Teksto negatyvas ant normalaus fono"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView6)
+#: editor/preview.ui:317
+#, kde-format
+msgid "View Neutral Text against View Normal Background"
+msgstr "Neutralus tekstas ant normalaus fono"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelView7)
+#: editor/preview.ui:327
+#, kde-format
+msgid "View Positive Text against View Normal Background"
+msgstr "Teksto pozityvas ant normalaus fono"
+
 #: editor/scmeditorcolors.cpp:62 editor/scmeditorcolors.cpp:76
 #, kde-format
 msgid "Varies"
@@ -139,50 +377,267 @@ msgstr "Alternatyvus fonas"
 msgid "Normal Text"
 msgstr "Paprastas tekstas"
 
-#: editor/scmeditorcolors.cpp:102
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:102 editor/scmeditorcolors.ui:303
 #, kde-format
 msgid "Inactive Text"
 msgstr "Neaktyvus tekstas"
 
-#: editor/scmeditorcolors.cpp:103
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:103 editor/scmeditorcolors.ui:308
 #, kde-format
 msgid "Active Text"
 msgstr "Aktyvus tekstas"
 
-#: editor/scmeditorcolors.cpp:104
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:104 editor/scmeditorcolors.ui:313
 #, kde-format
 msgid "Link Text"
 msgstr "Nuorodos tekstas"
 
-#: editor/scmeditorcolors.cpp:105
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:105 editor/scmeditorcolors.ui:318
 #, kde-format
 msgid "Visited Text"
 msgstr "Aplankytos nuorodos tekstas"
 
-#: editor/scmeditorcolors.cpp:106
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:106 editor/scmeditorcolors.ui:323
 #, kde-format
 msgid "Negative Text"
 msgstr "Tekstas negatyve"
 
-#: editor/scmeditorcolors.cpp:107
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:107 editor/scmeditorcolors.ui:328
 #, kde-format
 msgid "Neutral Text"
 msgstr "Neutralus tekstas"
 
-#: editor/scmeditorcolors.cpp:108
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:108 editor/scmeditorcolors.ui:333
 #, kde-format
 msgid "Positive Text"
 msgstr "Tekstas pozityve"
 
-#: editor/scmeditorcolors.cpp:109
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:109 editor/scmeditorcolors.ui:338
 #, kde-format
 msgid "Focus Decoration"
 msgstr "Dekoracija fokusavimo metu"
 
-#: editor/scmeditorcolors.cpp:110
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.cpp:110 editor/scmeditorcolors.ui:343
 #, kde-format
 msgid "Hover Decoration"
 msgstr "Pelės užvedimo dekoracija"
+
+#. i18n: ectx: property (text), widget (QLabel, label_7)
+#: editor/scmeditorcolors.ui:23
+#, kde-format
+msgid "Color set:"
+msgstr "Spalvų rinkinys:"
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:36
+#, kde-format
+msgid "Colorset to view/modify"
+msgstr "Spalvų rinkinys peržiūrėjimui/modifikavimui"
+
+#. i18n: 'Common' here means &quot;frequent/not rare&quot;, not &quot;shared&quot;
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:40
+#, kde-format
+msgctxt "color-sets"
+msgid "Common Colors"
+msgstr "Dažnai pasitaikančios spalvos"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:45
+#, kde-format
+msgctxt "color-sets"
+msgid "View"
+msgstr "Peržiūra"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:50
+#, kde-format
+msgctxt "color-sets"
+msgid "Window"
+msgstr "Langas"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:55
+#, kde-format
+msgctxt "color-sets"
+msgid "Button"
+msgstr "Mygtukas"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:60
+#, kde-format
+msgctxt "color-sets"
+msgid "Selection"
+msgstr "Pažymėjimas"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:65
+#, kde-format
+msgctxt "color-sets"
+msgid "Tooltip"
+msgstr "Paaiškinimas"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:70
+#, kde-format
+msgctxt "color-sets"
+msgid "Complementary"
+msgstr "Papildantis"
+
+#. i18n: see plasma-workspace/kcms/colors/README.i18n
+#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
+#: editor/scmeditorcolors.ui:75
+#, kde-format
+msgctxt "color-sets"
+msgid "Header"
+msgstr "Antraštė"
+
+#. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:118 editor/scmeditorcolors.ui:123
+#: editor/scmeditorcolors.ui:128 editor/scmeditorcolors.ui:133
+#: editor/scmeditorcolors.ui:138 editor/scmeditorcolors.ui:143
+#: editor/scmeditorcolors.ui:148 editor/scmeditorcolors.ui:153
+#: editor/scmeditorcolors.ui:158 editor/scmeditorcolors.ui:163
+#: editor/scmeditorcolors.ui:168 editor/scmeditorcolors.ui:173
+#: editor/scmeditorcolors.ui:178 editor/scmeditorcolors.ui:183
+#: editor/scmeditorcolors.ui:188 editor/scmeditorcolors.ui:193
+#: editor/scmeditorcolors.ui:198 editor/scmeditorcolors.ui:203
+#: editor/scmeditorcolors.ui:208 editor/scmeditorcolors.ui:213
+#: editor/scmeditorcolors.ui:218 editor/scmeditorcolors.ui:223
+#: editor/scmeditorcolors.ui:228 editor/scmeditorcolors.ui:233
+#: editor/scmeditorcolors.ui:238 editor/scmeditorcolors.ui:243
+#, kde-format
+msgid "New Row"
+msgstr "Nauja eilutė"
+
+#. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:248
+#, kde-format
+msgid "0"
+msgstr "0"
+
+#. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:253
+#, kde-format
+msgid "1"
+msgstr "1"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:258
+#, kde-format
+msgid "View Background"
+msgstr "Vaizdo fonas"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:263
+#, kde-format
+msgid "View Text"
+msgstr "Vaizdo tekstas"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:268
+#, kde-format
+msgid "Window Background"
+msgstr "Lango fonas"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:273
+#, kde-format
+msgid "Window Text"
+msgstr "Lango tekstas"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:278
+#, kde-format
+msgid "Button Background"
+msgstr "Mygtuko fonas"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:283
+#, kde-format
+msgid "Button Text"
+msgstr "Mygtuko tekstas"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:288
+#, kde-format
+msgid "Selection Background"
+msgstr "Pažymėjimo fonas"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:293
+#, kde-format
+msgid "Selection Text"
+msgstr "Pažymėjimo tekstas"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:298
+#, kde-format
+msgid "Selection Inactive Text"
+msgstr "Neaktyvus pažymėjimo tekstas"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:348
+#, kde-format
+msgid "Tooltip Background"
+msgstr "Paaiškinimo fonas"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:353
+#, kde-format
+msgid "Tooltip Text"
+msgstr "Paaiškinimo tekstas"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:358
+#, kde-format
+msgid "Active Titlebar"
+msgstr "Aktyvi antraštės juosta"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:363
+#, kde-format
+msgid "Active Titlebar Text"
+msgstr "Aktyvios antraštės juostos tekstas"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:368
+#, kde-format
+msgid "Active Titlebar Secondary"
+msgstr "Aktyvios antraštės antrinis"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:373
+#, kde-format
+msgid "Inactive Titlebar"
+msgstr "Neaktyvi antraštės juosta"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:378
+#, kde-format
+msgid "Inactive Titlebar Text"
+msgstr "Neaktyvios antraštės juostos tekstas"
+
+#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
+#: editor/scmeditorcolors.ui:383
+#, kde-format
+msgid "Inactive Titlebar Secondary"
+msgstr "Neaktyvios antraštės antrinis"
 
 #: editor/scmeditordialog.cpp:60
 #, kde-format
@@ -242,6 +697,450 @@ msgstr "Klaida"
 #, kde-format
 msgid "Inactive"
 msgstr "Neaktyvus"
+
+#. i18n: ectx: property (text), widget (QLabel, label_4)
+#: editor/scmeditoreffects.ui:17
+#, kde-format
+msgid "Color:"
+msgstr "Spalva:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_5)
+#: editor/scmeditoreffects.ui:27
+#, kde-format
+msgid "Intensity:"
+msgstr "Intensyvumas:"
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, colorBox)
+#: editor/scmeditoreffects.ui:37
+#, kde-format
+msgid "Disabled color effect type"
+msgstr "Išjungtų elementų spalvos tipas"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
+#: editor/scmeditoreffects.ui:41
+#, kde-format
+msgctxt "no disabled color effect"
+msgid "None"
+msgstr "Nenustatyta"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
+#: editor/scmeditoreffects.ui:46
+#, kde-format
+msgctxt "disabled color effect"
+msgid "Desaturate"
+msgstr "Nusodrinti"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
+#: editor/scmeditoreffects.ui:51
+#, kde-format
+msgctxt "disabled color effect"
+msgid "Fade"
+msgstr "Išnykimas"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
+#: editor/scmeditoreffects.ui:56
+#, kde-format
+msgctxt "disabled color effect"
+msgid "Tint"
+msgstr "Atspalvis"
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, intensityBox)
+#: editor/scmeditoreffects.ui:64
+#, kde-format
+msgid "Disabled intensity effect type"
+msgstr "Išjungtų elementų efekto tipas"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
+#: editor/scmeditoreffects.ui:68
+#, kde-format
+msgctxt "no disabled intensity effect"
+msgid "None"
+msgstr "Nenustatyta"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
+#: editor/scmeditoreffects.ui:73
+#, kde-format
+msgctxt "disabled intensity effect"
+msgid "Shade"
+msgstr "Užtemdyti"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
+#: editor/scmeditoreffects.ui:78
+#, kde-format
+msgctxt "disabled intensity effect"
+msgid "Darken"
+msgstr "Patamsinimas"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
+#: editor/scmeditoreffects.ui:83
+#, kde-format
+msgctxt "disabled intensity effect"
+msgid "Lighten"
+msgstr "Pašviesinti"
+
+#. i18n: ectx: property (text), widget (QLabel, label_6)
+#: editor/scmeditoreffects.ui:107
+#, kde-format
+msgid "Contrast:"
+msgstr "Kontrastas:"
+
+#. i18n: ectx: property (toolTip), widget (QSlider, colorSlider)
+#: editor/scmeditoreffects.ui:120
+#, kde-format
+msgid "Disabled color effect amount"
+msgstr "Išjungtų elementų spalvos efekto kiekis"
+
+#. i18n: ectx: property (toolTip), widget (QSlider, intensitySlider)
+#: editor/scmeditoreffects.ui:139
+#, kde-format
+msgid "Disabled intensity effect amount"
+msgstr "Išjungtų elementų intensyvumo efekto kiekis"
+
+#. i18n: ectx: property (toolTip), widget (KColorButton, colorButton)
+#: editor/scmeditoreffects.ui:158
+#, kde-format
+msgid "Disabled color"
+msgstr "Išjungtų elementų spalva"
+
+#. i18n: ectx: property (toolTip), widget (QComboBox, contrastBox)
+#: editor/scmeditoreffects.ui:181
+#, kde-format
+msgid "Disabled contrast type"
+msgstr "Išjungtų elementų kontrasto tipas"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
+#: editor/scmeditoreffects.ui:185
+#, kde-format
+msgctxt "no disabled contrast"
+msgid "None"
+msgstr "Nenustatyta"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
+#: editor/scmeditoreffects.ui:190
+#, kde-format
+msgctxt "disabled contrast"
+msgid "Fade"
+msgstr "Išnykimas"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
+#: editor/scmeditoreffects.ui:195
+#, kde-format
+msgctxt "disabled contrast"
+msgid "Tint"
+msgstr "Atspalvis"
+
+#. i18n: ectx: property (toolTip), widget (QSlider, contrastSlider)
+#: editor/scmeditoreffects.ui:222
+#, kde-format
+msgid "Disabled contrast amount"
+msgstr "Išjungtų elementų kontrasto kiekis"
+
+#. i18n: ectx: property (text), widget (QCheckBox, useInactiveEffects)
+#: editor/scmeditoroptions.ui:17
+#, kde-format
+msgid "Apply &effects to inactive windows"
+msgstr "Taikyti &efektus neaktyviems langams"
+
+#. i18n: ectx: property (text), widget (QCheckBox, inactiveSelectionEffect)
+#: editor/scmeditoroptions.ui:24
+#, kde-format
+msgid "Use different colors for in&active selections"
+msgstr "Neaktyviems žymėjimams n&audoti kitokias spalvas"
+
+#. i18n: ectx: property (text), widget (QCheckBox, shadeSortedColumn)
+#: editor/scmeditoroptions.ui:31
+#, kde-format
+msgid "Shade sorted column &in lists"
+msgstr "Pritemdyti rikiuojamus stulpel&ius sąrašuose"
+
+#. i18n: ectx: property (text), widget (QCheckBox, tintColors)
+#: editor/scmeditoroptions.ui:38
+#, kde-format
+msgid "Tint all colors with accent color"
+msgstr "Suteikti visoms spalvoms paryškinimo spalvos atspalvį"
+
+#. i18n: ectx: property (text), widget (QCheckBox, accentTitlebar)
+#: editor/scmeditoroptions.ui:45
+#, kde-format
+msgid "Make window titlebars a&ccent-colored"
+msgstr "Padaryti, kad antraščių juostos būtų nuspalvintos &paryškinimo spalva"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: editor/scmeditoroptions.ui:52
+#, kde-format
+msgid "Tint strength:"
+msgstr "Atspalvio stiprumas:"
+
+#. i18n: ectx: property (toolTip), widget (QGroupBox, groupBox_5)
+#: editor/scmeditoroptions.ui:69
+#, kde-format
+msgid "Shading of frames and lighting (\"3D\") effects"
+msgstr "Rėmelių šešėliai ir apšvietimo („trimačiai“) efektai"
+
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
+#: editor/scmeditoroptions.ui:72
+#, kde-format
+msgid "Shading"
+msgstr "Užtemdymas"
+
+#. i18n: ectx: property (text), widget (QLabel, label_10)
+#: editor/scmeditoroptions.ui:97
+#, kde-format
+msgid "Maximum"
+msgstr "Maksimumas"
+
+#. i18n: ectx: property (text), widget (QLabel, label_9)
+#: editor/scmeditoroptions.ui:117
+#, kde-format
+msgid "Minimum"
+msgstr "Minimumas"
+
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: editor/scmeditoroptions.ui:124
+#, kde-format
+msgid "Contrast"
+msgstr "Kontrastas"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore0)
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack0)
+#: editor/setpreview.ui:35 editor/setpreview.ui:189
+#, kde-format
+msgid "Normal Text on Normal Background"
+msgstr "Normalus tekstas ant normalaus fono"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore0)
+#. i18n: ectx: property (text), widget (QLabel, labelBack0)
+#: editor/setpreview.ui:38 editor/setpreview.ui:192
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "normal"
+msgstr "normalus"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore3)
+#: editor/setpreview.ui:56
+#, kde-format
+msgid "Link Text on Normal Background"
+msgstr "Nuorodos tekstas ant normalaus fono"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore3)
+#. i18n: ectx: property (text), widget (QLabel, labelBack3)
+#: editor/setpreview.ui:59 editor/setpreview.ui:214
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "link"
+msgstr "nuoroda"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore4)
+#: editor/setpreview.ui:77
+#, kde-format
+msgid "Visited Text on Normal Background"
+msgstr "Aplankyta nuoroda ant normalaus fono"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore4)
+#. i18n: ectx: property (text), widget (QLabel, labelBack4)
+#: editor/setpreview.ui:80 editor/setpreview.ui:236
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "visited"
+msgstr "aplankyta"
+
+#. i18n: ectx: property (toolTip), widget (QWidget, widgetFore2)
+#: editor/setpreview.ui:90
+#, kde-format
+msgid "Active Text on Normal Background"
+msgstr "Aktyvus tekstas ant normalaus fono"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore2)
+#. i18n: ectx: property (text), widget (QLabel, labelBack2)
+#: editor/setpreview.ui:96 editor/setpreview.ui:253
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "active"
+msgstr "aktyvus"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore1)
+#: editor/setpreview.ui:109
+#, kde-format
+msgid "Inactive Text on Normal Background"
+msgstr "Neaktyvus tekstas ant normalaus fono"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore1)
+#: editor/setpreview.ui:112
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "inactive"
+msgstr "neaktyvus"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore5)
+#: editor/setpreview.ui:125
+#, kde-format
+msgid "Negative Text on Normal Background"
+msgstr "Negatyvus tekstas ant normalaus fono"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore5)
+#. i18n: ectx: property (text), widget (QLabel, labelBack5)
+#: editor/setpreview.ui:128 editor/setpreview.ui:286
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "negative"
+msgstr "negatyvus"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore6)
+#: editor/setpreview.ui:141
+#, kde-format
+msgid "Neutral Text on Normal Background"
+msgstr "Neutralus tekstas ant normalaus fono"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore6)
+#. i18n: ectx: property (text), widget (QLabel, labelBack6)
+#: editor/setpreview.ui:144 editor/setpreview.ui:303
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "neutral"
+msgstr "neutralus"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore7)
+#: editor/setpreview.ui:157
+#, kde-format
+msgid "Positive Text on Normal Background"
+msgstr "Pozityvus tekstas ant normalaus fono"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore7)
+#. i18n: ectx: property (text), widget (QLabel, labelBack7)
+#: editor/setpreview.ui:160 editor/setpreview.ui:320
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "positive"
+msgstr "pozityvus"
+
+#. i18n: ectx: property (toolTip), widget (QWidget, widgetFore8)
+#: editor/setpreview.ui:170
+#, kde-format
+msgid "Hover on Normal Background"
+msgstr "Tekstas su užvesta pele normaliame fone"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore8)
+#: editor/setpreview.ui:176
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "hover"
+msgstr "pelė užvesta"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack3)
+#: editor/setpreview.ui:211
+#, kde-format
+msgid ""
+"Link Text on Link Background\n"
+"(Note: Link Background is derived from Link Text and cannot be separately "
+"configured at this time)"
+msgstr ""
+"Nuorodos tekstas and nuorodos fono\n"
+"(Pastaba: nuorodos fonas yra išskaičiuojamas iš nuorodos teksto ir šiuo metu "
+"negali būti atskirai nustatytas)"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack4)
+#: editor/setpreview.ui:233
+#, kde-format
+msgid ""
+"Visited Text on Visited Background\n"
+"(Note: Visited Background is derived from Visited Text and cannot be "
+"separately configured at this time)"
+msgstr ""
+"Aplankyta nuoroda and aplankytos nuorodos fono\n"
+"(Pastaba: aplankytos nuorodos fonas išskaičiuojamas iš aplankytos nuorodos "
+"teksto ir šiuo metu negali būti pakeista)"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack2)
+#: editor/setpreview.ui:250
+#, kde-format
+msgid ""
+"Active Text on Active Background\n"
+"(Note: Active Background is derived from Active Text and cannot be "
+"separately configured at this time)"
+msgstr ""
+"Aktyvios nuorodos tekstas and aktyvios nuorodos fono\n"
+"(Pastaba: aktyvios nuorodos fonas išskaičiuojamas iš aktyvios nuorodos "
+"teksto ir šiuo metu negali būti pakeistas)"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack1)
+#: editor/setpreview.ui:266
+#, kde-format
+msgid "Inactive Text on Alternate Background"
+msgstr "Neaktyvus tekstas ant alternatyvaus fono"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelBack1)
+#: editor/setpreview.ui:269
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "alternate"
+msgstr "alternatyvus"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack5)
+#: editor/setpreview.ui:283
+#, kde-format
+msgid ""
+"Negative Text on Negative Background\n"
+"(Note: Negative Background is derived from Negative Text and cannot be "
+"separately configured at this time)"
+msgstr ""
+"Negatyvus tekstas and negatyvaus fono\n"
+"(Pastaba: negatyvaus teksto fonas išskaičiuojamas iš teksto negatyvo ir šiuo "
+"metu negali būti pakeistas)"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack6)
+#: editor/setpreview.ui:300
+#, kde-format
+msgid ""
+"Neutral Text on Neutral Background\n"
+"(Note: Neutral Background is derived from Neutral Text and cannot be "
+"separately configured at this time)"
+msgstr ""
+"Neutralus tekstas ant neutralaus fono\n"
+"(Pastaba: neutralus fonas išskaičiuojamas iš neutralaus teksto ir šiuo metu "
+"negali būti pakeistas)"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelBack7)
+#: editor/setpreview.ui:317
+#, kde-format
+msgid ""
+"Positive Text on Positive Background\n"
+"(Note: Positive Background is derived from Positive Text and cannot be "
+"separately configured at this time)"
+msgstr ""
+"Pozityvus tekstas ant pozityvaus fono\n"
+"(Pastaba: pozityvus fonas išskaičiuojamas iš pozityvaus teksto ir šiuo metu "
+"negali būti pakeistas)"
+
+#. i18n: ectx: property (toolTip), widget (QLabel, labelFore9)
+#: editor/setpreview.ui:333
+#, kde-format
+msgid "Focus on Normal Background"
+msgstr "Fokusuotas tekstas normaliame fone"
+
+#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
+#. i18n: ectx: property (text), widget (QLabel, labelFore9)
+#: editor/setpreview.ui:336
+#, kde-format
+msgctxt "color-kcm-set-preview"
+msgid "focus"
+msgstr "fokusas"
 
 #: package/contents/ui/main.qml:23
 #, kde-format
@@ -476,457 +1375,6 @@ msgstr "Savo sistemoje turite šiuos spalvų rinkinius:"
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (dabartinis spalvų rinkinys)"
-
-#~ msgid "Color scheme name"
-#~ msgstr "Spalvų rinkinio pavadinimas"
-
-#~ msgid "Accent color"
-#~ msgstr "Paryškinimo spalva"
-
-#~ msgid ""
-#~ "The last used custom accent color before user switched to wallpaper "
-#~ "generated color or default color"
-#~ msgstr ""
-#~ "Paskiausiai naudota tinkinta paryškinimo spalva prieš tai, kai naudotojas "
-#~ "perjungė į darbalaukio generuotą spalvą ar numatytąją spalvą"
-
-#~ msgid "Whether accent color from wallpaper should be applied"
-#~ msgstr "Ar turėtų būti taikoma paryškinimo spalva iš darbalaukio"
-
-#~ msgid "Window text on Window Background"
-#~ msgstr "Lango tekstas ant lango fono"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "Window text"
-#~ msgstr "Lango tekstas"
-
-#~ msgid "Button text on Button Background"
-#~ msgstr "Mygtuko tekstas ant mygtuko fono"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "Push Button"
-#~ msgstr "Spaudžiamas mygtukas"
-
-#~ msgid "Selection Normal Text against Selection Normal Background"
-#~ msgstr "Pažymėtas normalus tekstas ant normalaus pažymėto fono"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "Selected text"
-#~ msgstr "Pažymėtas tekstas"
-
-#~ msgid "Selection Link Text against Selection Normal Background"
-#~ msgstr "Pažymėtas nuorodos tekstas ant pažymėto normalaus fono"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "link"
-#~ msgstr "nuoroda"
-
-#~ msgid "Selection Visited Text against Selection Normal Background"
-#~ msgstr "Pažymėta aplankyta nuoroda ant pažymėto normalaus fono"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "visited"
-#~ msgstr "aplankyta"
-
-#~ msgid "Selection Active Text against Selection Normal Background"
-#~ msgstr "Pažymėtas aktyvus tekstas ant pažymėto normalaus fono"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "a"
-#~ msgstr "a"
-
-#~ msgid "Selection Inactive Text against Selection Normal Background"
-#~ msgstr "Pažymėtas neaktyvus tekstas ant pažymėto normalaus fono"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "i"
-#~ msgstr "i"
-
-#~ msgid "Selection Negative Text against Selection Normal Background"
-#~ msgstr "Pažymėtas teksto negatyvas ant pažymėto normalaus fono"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "!"
-#~ msgstr "!"
-
-#~ msgid "Selection Neutral Text against Selection Normal Background"
-#~ msgstr "Pažymėtas neutralus tekstas ant pažymėto normalaus fono"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "="
-#~ msgstr "="
-
-#~ msgid "Selection Positive Text against Selection Normal Background"
-#~ msgstr "Pažymėtas pozityvus tekstas ant pažymėto normalaus fono"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "+"
-#~ msgstr "+"
-
-#~ msgid "View Normal Text against View Normal Background"
-#~ msgstr "Normalus tekstas ant normalaus fono"
-
-#~ msgctxt "color-kcm-preview"
-#~ msgid "Normal text"
-#~ msgstr "Normalus tekstas"
-
-#~ msgid "View Link Text against View Normal Background"
-#~ msgstr "Nuorodos tekstas ant normalaus fono"
-
-#~ msgid "View Visited Text against View Normal Background"
-#~ msgstr "Aplankyta nuoroda ant normalaus fono"
-
-#~ msgid "View Active Text against View Normal Background"
-#~ msgstr "Aktyvus tekstas ant normalus fono"
-
-#~ msgid "View Inactive Text against View Normal Background"
-#~ msgstr "Neaktyvus tekstas ant normalaus fono"
-
-#~ msgid "View Negative Text against View Normal Background"
-#~ msgstr "Teksto negatyvas ant normalaus fono"
-
-#~ msgid "View Neutral Text against View Normal Background"
-#~ msgstr "Neutralus tekstas ant normalaus fono"
-
-#~ msgid "View Positive Text against View Normal Background"
-#~ msgstr "Teksto pozityvas ant normalaus fono"
-
-#~ msgid "Color set:"
-#~ msgstr "Spalvų rinkinys:"
-
-#~ msgid "Colorset to view/modify"
-#~ msgstr "Spalvų rinkinys peržiūrėjimui/modifikavimui"
-
-#~ msgctxt "color-sets"
-#~ msgid "Common Colors"
-#~ msgstr "Dažnai pasitaikančios spalvos"
-
-#~ msgctxt "color-sets"
-#~ msgid "View"
-#~ msgstr "Peržiūra"
-
-#~ msgctxt "color-sets"
-#~ msgid "Window"
-#~ msgstr "Langas"
-
-#~ msgctxt "color-sets"
-#~ msgid "Button"
-#~ msgstr "Mygtukas"
-
-#~ msgctxt "color-sets"
-#~ msgid "Selection"
-#~ msgstr "Pažymėjimas"
-
-#~ msgctxt "color-sets"
-#~ msgid "Tooltip"
-#~ msgstr "Paaiškinimas"
-
-#~ msgctxt "color-sets"
-#~ msgid "Complementary"
-#~ msgstr "Papildantis"
-
-#~ msgctxt "color-sets"
-#~ msgid "Header"
-#~ msgstr "Antraštė"
-
-#~ msgid "New Row"
-#~ msgstr "Nauja eilutė"
-
-#~ msgid "0"
-#~ msgstr "0"
-
-#~ msgid "1"
-#~ msgstr "1"
-
-#~ msgid "View Background"
-#~ msgstr "Vaizdo fonas"
-
-#~ msgid "View Text"
-#~ msgstr "Vaizdo tekstas"
-
-#~ msgid "Window Background"
-#~ msgstr "Lango fonas"
-
-#~ msgid "Window Text"
-#~ msgstr "Lango tekstas"
-
-#~ msgid "Button Background"
-#~ msgstr "Mygtuko fonas"
-
-#~ msgid "Button Text"
-#~ msgstr "Mygtuko tekstas"
-
-#~ msgid "Selection Background"
-#~ msgstr "Pažymėjimo fonas"
-
-#~ msgid "Selection Text"
-#~ msgstr "Pažymėjimo tekstas"
-
-#~ msgid "Selection Inactive Text"
-#~ msgstr "Neaktyvus pažymėjimo tekstas"
-
-#~ msgid "Tooltip Background"
-#~ msgstr "Paaiškinimo fonas"
-
-#~ msgid "Tooltip Text"
-#~ msgstr "Paaiškinimo tekstas"
-
-#~ msgid "Active Titlebar"
-#~ msgstr "Aktyvi antraštės juosta"
-
-#~ msgid "Active Titlebar Text"
-#~ msgstr "Aktyvios antraštės juostos tekstas"
-
-#~ msgid "Active Titlebar Secondary"
-#~ msgstr "Aktyvios antraštės antrinis"
-
-#~ msgid "Inactive Titlebar"
-#~ msgstr "Neaktyvi antraštės juosta"
-
-#~ msgid "Inactive Titlebar Text"
-#~ msgstr "Neaktyvios antraštės juostos tekstas"
-
-#~ msgid "Inactive Titlebar Secondary"
-#~ msgstr "Neaktyvios antraštės antrinis"
-
-#~ msgid "Color:"
-#~ msgstr "Spalva:"
-
-#~ msgid "Intensity:"
-#~ msgstr "Intensyvumas:"
-
-#~ msgid "Disabled color effect type"
-#~ msgstr "Išjungtų elementų spalvos tipas"
-
-#~ msgctxt "no disabled color effect"
-#~ msgid "None"
-#~ msgstr "Nenustatyta"
-
-#~ msgctxt "disabled color effect"
-#~ msgid "Desaturate"
-#~ msgstr "Nusodrinti"
-
-#~ msgctxt "disabled color effect"
-#~ msgid "Fade"
-#~ msgstr "Išnykimas"
-
-#~ msgctxt "disabled color effect"
-#~ msgid "Tint"
-#~ msgstr "Atspalvis"
-
-#~ msgid "Disabled intensity effect type"
-#~ msgstr "Išjungtų elementų efekto tipas"
-
-#~ msgctxt "no disabled intensity effect"
-#~ msgid "None"
-#~ msgstr "Nenustatyta"
-
-#~ msgctxt "disabled intensity effect"
-#~ msgid "Shade"
-#~ msgstr "Užtemdyti"
-
-#~ msgctxt "disabled intensity effect"
-#~ msgid "Darken"
-#~ msgstr "Patamsinimas"
-
-#~ msgctxt "disabled intensity effect"
-#~ msgid "Lighten"
-#~ msgstr "Pašviesinti"
-
-#~ msgid "Contrast:"
-#~ msgstr "Kontrastas:"
-
-#~ msgid "Disabled color effect amount"
-#~ msgstr "Išjungtų elementų spalvos efekto kiekis"
-
-#~ msgid "Disabled intensity effect amount"
-#~ msgstr "Išjungtų elementų intensyvumo efekto kiekis"
-
-#~ msgid "Disabled color"
-#~ msgstr "Išjungtų elementų spalva"
-
-#~ msgid "Disabled contrast type"
-#~ msgstr "Išjungtų elementų kontrasto tipas"
-
-#~ msgctxt "no disabled contrast"
-#~ msgid "None"
-#~ msgstr "Nenustatyta"
-
-#~ msgctxt "disabled contrast"
-#~ msgid "Fade"
-#~ msgstr "Išnykimas"
-
-#~ msgctxt "disabled contrast"
-#~ msgid "Tint"
-#~ msgstr "Atspalvis"
-
-#~ msgid "Disabled contrast amount"
-#~ msgstr "Išjungtų elementų kontrasto kiekis"
-
-#~ msgid "Apply &effects to inactive windows"
-#~ msgstr "Taikyti &efektus neaktyviems langams"
-
-#~ msgid "Use different colors for in&active selections"
-#~ msgstr "Neaktyviems žymėjimams n&audoti kitokias spalvas"
-
-#~ msgid "Shade sorted column &in lists"
-#~ msgstr "Pritemdyti rikiuojamus stulpel&ius sąrašuose"
-
-#~ msgid "Tint all colors with accent color"
-#~ msgstr "Suteikti visoms spalvoms paryškinimo spalvos atspalvį"
-
-#~ msgid "Make window titlebars a&ccent-colored"
-#~ msgstr ""
-#~ "Padaryti, kad antraščių juostos būtų nuspalvintos &paryškinimo spalva"
-
-#~ msgid "Tint strength:"
-#~ msgstr "Atspalvio stiprumas:"
-
-#~ msgid "Shading of frames and lighting (\"3D\") effects"
-#~ msgstr "Rėmelių šešėliai ir apšvietimo („trimačiai“) efektai"
-
-#~ msgid "Shading"
-#~ msgstr "Užtemdymas"
-
-#~ msgid "Maximum"
-#~ msgstr "Maksimumas"
-
-#~ msgid "Minimum"
-#~ msgstr "Minimumas"
-
-#~ msgid "Contrast"
-#~ msgstr "Kontrastas"
-
-#~ msgid "Normal Text on Normal Background"
-#~ msgstr "Normalus tekstas ant normalaus fono"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "normal"
-#~ msgstr "normalus"
-
-#~ msgid "Link Text on Normal Background"
-#~ msgstr "Nuorodos tekstas ant normalaus fono"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "link"
-#~ msgstr "nuoroda"
-
-#~ msgid "Visited Text on Normal Background"
-#~ msgstr "Aplankyta nuoroda ant normalaus fono"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "visited"
-#~ msgstr "aplankyta"
-
-#~ msgid "Active Text on Normal Background"
-#~ msgstr "Aktyvus tekstas ant normalaus fono"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "active"
-#~ msgstr "aktyvus"
-
-#~ msgid "Inactive Text on Normal Background"
-#~ msgstr "Neaktyvus tekstas ant normalaus fono"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "inactive"
-#~ msgstr "neaktyvus"
-
-#~ msgid "Negative Text on Normal Background"
-#~ msgstr "Negatyvus tekstas ant normalaus fono"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "negative"
-#~ msgstr "negatyvus"
-
-#~ msgid "Neutral Text on Normal Background"
-#~ msgstr "Neutralus tekstas ant normalaus fono"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "neutral"
-#~ msgstr "neutralus"
-
-#~ msgid "Positive Text on Normal Background"
-#~ msgstr "Pozityvus tekstas ant normalaus fono"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "positive"
-#~ msgstr "pozityvus"
-
-#~ msgid "Hover on Normal Background"
-#~ msgstr "Tekstas su užvesta pele normaliame fone"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "hover"
-#~ msgstr "pelė užvesta"
-
-#~ msgid ""
-#~ "Link Text on Link Background\n"
-#~ "(Note: Link Background is derived from Link Text and cannot be separately "
-#~ "configured at this time)"
-#~ msgstr ""
-#~ "Nuorodos tekstas and nuorodos fono\n"
-#~ "(Pastaba: nuorodos fonas yra išskaičiuojamas iš nuorodos teksto ir šiuo "
-#~ "metu negali būti atskirai nustatytas)"
-
-#~ msgid ""
-#~ "Visited Text on Visited Background\n"
-#~ "(Note: Visited Background is derived from Visited Text and cannot be "
-#~ "separately configured at this time)"
-#~ msgstr ""
-#~ "Aplankyta nuoroda and aplankytos nuorodos fono\n"
-#~ "(Pastaba: aplankytos nuorodos fonas išskaičiuojamas iš aplankytos "
-#~ "nuorodos teksto ir šiuo metu negali būti pakeista)"
-
-#~ msgid ""
-#~ "Active Text on Active Background\n"
-#~ "(Note: Active Background is derived from Active Text and cannot be "
-#~ "separately configured at this time)"
-#~ msgstr ""
-#~ "Aktyvios nuorodos tekstas and aktyvios nuorodos fono\n"
-#~ "(Pastaba: aktyvios nuorodos fonas išskaičiuojamas iš aktyvios nuorodos "
-#~ "teksto ir šiuo metu negali būti pakeistas)"
-
-#~ msgid "Inactive Text on Alternate Background"
-#~ msgstr "Neaktyvus tekstas ant alternatyvaus fono"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "alternate"
-#~ msgstr "alternatyvus"
-
-#~ msgid ""
-#~ "Negative Text on Negative Background\n"
-#~ "(Note: Negative Background is derived from Negative Text and cannot be "
-#~ "separately configured at this time)"
-#~ msgstr ""
-#~ "Negatyvus tekstas and negatyvaus fono\n"
-#~ "(Pastaba: negatyvaus teksto fonas išskaičiuojamas iš teksto negatyvo ir "
-#~ "šiuo metu negali būti pakeistas)"
-
-#~ msgid ""
-#~ "Neutral Text on Neutral Background\n"
-#~ "(Note: Neutral Background is derived from Neutral Text and cannot be "
-#~ "separately configured at this time)"
-#~ msgstr ""
-#~ "Neutralus tekstas ant neutralaus fono\n"
-#~ "(Pastaba: neutralus fonas išskaičiuojamas iš neutralaus teksto ir šiuo "
-#~ "metu negali būti pakeistas)"
-
-#~ msgid ""
-#~ "Positive Text on Positive Background\n"
-#~ "(Note: Positive Background is derived from Positive Text and cannot be "
-#~ "separately configured at this time)"
-#~ msgstr ""
-#~ "Pozityvus tekstas ant pozityvaus fono\n"
-#~ "(Pastaba: pozityvus fonas išskaičiuojamas iš pozityvaus teksto ir šiuo "
-#~ "metu negali būti pakeistas)"
-
-#~ msgid "Focus on Normal Background"
-#~ msgstr "Fokusuotas tekstas normaliame fone"
-
-#~ msgctxt "color-kcm-set-preview"
-#~ msgid "focus"
-#~ msgstr "fokusas"
 
 #, fuzzy
 #~| msgid "Apply &effects to inactive windows"

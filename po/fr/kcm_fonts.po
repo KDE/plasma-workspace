@@ -25,7 +25,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2022-10-16 14:32+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -38,6 +38,54 @@ msgstr ""
 "X-Environment: kde\n"
 "X-Generator: Lokalize 25.04.2\n"
 "X-Text-Markup: kde4\n"
+
+#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
+#: fontsaasettingsbase.kcfg:9
+#, kde-format
+msgid "Force font DPI Wayland"
+msgstr "Forcer la police en « DPI Wayland »"
+
+#. i18n: ectx: label, entry (forceFontDPI), group (General)
+#: fontsaasettingsbase.kcfg:13
+#, kde-format
+msgid "Force font DPI on X11"
+msgstr "Forcer la résolution « DPI » de la police sous « X11 »"
+
+#. i18n: ectx: label, entry (font), group (General)
+#: fontssettings.kcfg:9
+#, kde-format
+msgid "General font"
+msgstr "Police général"
+
+#. i18n: ectx: label, entry (fixed), group (General)
+#: fontssettings.kcfg:21
+#, kde-format
+msgid "Fixed width font"
+msgstr "Police à chasse fixe"
+
+#. i18n: ectx: label, entry (smallestReadableFont), group (General)
+#: fontssettings.kcfg:33
+#, kde-format
+msgid "Small font"
+msgstr "Petite police"
+
+#. i18n: ectx: label, entry (toolBarFont), group (General)
+#: fontssettings.kcfg:45
+#, kde-format
+msgid "Tool bar font"
+msgstr "Police de la barre d'outils"
+
+#. i18n: ectx: label, entry (menuFont), group (General)
+#: fontssettings.kcfg:57
+#, kde-format
+msgid "Menu font"
+msgstr "Police du menu"
+
+#. i18n: ectx: label, entry (activeFont), group (WM)
+#: fontssettings.kcfg:71
+#, kde-format
+msgid "Window title font"
+msgstr "police du titre de la fenêtre"
 
 #: kxftconfig.cpp:458
 #, kde-format
@@ -336,30 +384,6 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "Sélectionner une police"
-
-#~ msgid "Force font DPI Wayland"
-#~ msgstr "Forcer la police en « DPI Wayland »"
-
-#~ msgid "Force font DPI on X11"
-#~ msgstr "Forcer la résolution « DPI » de la police sous « X11 »"
-
-#~ msgid "General font"
-#~ msgstr "Police général"
-
-#~ msgid "Fixed width font"
-#~ msgstr "Police à chasse fixe"
-
-#~ msgid "Small font"
-#~ msgstr "Petite police"
-
-#~ msgid "Tool bar font"
-#~ msgstr "Police de la barre d'outils"
-
-#~ msgid "Menu font"
-#~ msgstr "Police du menu"
-
-#~ msgid "Window title font"
-#~ msgstr "police du titre de la fenêtre"
 
 #~ msgid "Change Display Scaling…"
 #~ msgstr "Modifier la mise à l'échelle de l'affichage..."

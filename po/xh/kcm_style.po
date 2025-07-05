@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2002-11-08 09:44+0200\n"
 "Last-Translator: Thelma Lungcuzo <thelma@translate.org.za>\n"
 "Language-Team: Xhosa <xhosa@translate.org.za>\n"
@@ -158,42 +158,83 @@ msgstr "Uhlobo lwe Widget"
 msgid "Configure %1"
 msgstr ""
 
-#~ msgid "Tab 1"
-#~ msgstr "Tab 1"
+#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
+#: stylepreview.ui:33
+#, kde-format
+msgid "Tab 1"
+msgstr "Tab 1"
 
-#, fuzzy
-#~| msgid "Button"
-#~ msgid "Push Button"
-#~ msgstr "Iqhosha"
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: stylepreview.ui:65
+#, fuzzy, kde-format
+#| msgid "Button"
+msgid "Push Button"
+msgstr "Iqhosha"
 
-#, fuzzy
-#~| msgid "Combobox"
-#~ msgid "Combo box"
-#~ msgstr "ComboBox"
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
+#: stylepreview.ui:86
+#, fuzzy, kde-format
+#| msgid "Combobox"
+msgid "Combo box"
+msgstr "ComboBox"
 
-#~ msgid "Checkbox"
-#~ msgstr "Checkbox"
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
+#: stylepreview.ui:96
+#, kde-format
+msgid "Checkbox"
+msgstr "Checkbox"
 
-#~ msgid "Radio button"
-#~ msgstr "Iqosha lika nomatotolo"
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
+#: stylepreview.ui:106 stylepreview.ui:116
+#, kde-format
+msgid "Radio button"
+msgstr "Iqosha lika nomatotolo"
 
-#~ msgid "Tab 2"
-#~ msgstr "Tab 2"
+#. i18n: ectx: property (format), widget (QProgressBar, progressBar)
+#: stylepreview.ui:128
+#, no-c-format, kde-format
+msgid "%p%"
+msgstr ""
 
-#, fuzzy
-#~| msgid "Application Level"
-#~ msgid "Application style"
-#~ msgstr "Umphakamo Wesicelo"
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: stylepreview.ui:136
+#, kde-format
+msgid "Tab 2"
+msgstr "Tab 2"
 
-#, fuzzy
-#~| msgid "Sho&w icons on buttons"
-#~ msgid "Show icons on buttons"
-#~ msgstr "Ibonis&a iimphawu zomfanekiso emaqosheni"
+#. i18n: ectx: label, entry (widgetStyle), group (KDE)
+#: stylesettings.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Application Level"
+msgid "Application style"
+msgstr "Umphakamo Wesicelo"
 
-#, fuzzy
-#~| msgid "Sho&w icons on buttons"
-#~ msgid "Show icons in menus"
-#~ msgstr "Ibonis&a iimphawu zomfanekiso emaqosheni"
+#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
+#: stylesettings.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Sho&w icons on buttons"
+msgid "Show icons on buttons"
+msgstr "Ibonis&a iimphawu zomfanekiso emaqosheni"
+
+#. i18n: ectx: label, entry (iconsInMenus), group (KDE)
+#: stylesettings.kcfg:17
+#, fuzzy, kde-format
+#| msgid "Sho&w icons on buttons"
+msgid "Show icons in menus"
+msgstr "Ibonis&a iimphawu zomfanekiso emaqosheni"
+
+#. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
+#: stylesettings.kcfg:23
+#, kde-format
+msgid "Main toolbar label"
+msgstr ""
+
+#. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
+#: stylesettings.kcfg:27
+#, kde-format
+msgid "Secondary toolbar label"
+msgstr ""
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_cursortheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2023-01-03 15:53+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -19,6 +19,18 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 20.12.0\n"
+
+#. i18n: ectx: label, entry (cursorTheme), group (Mouse)
+#: cursorthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current cursor theme"
+msgstr "Назва поточної теми вказівників"
+
+#. i18n: ectx: label, entry (cursorSize), group (Mouse)
+#: cursorthemesettings.kcfg:13
+#, kde-format
+msgid "Current cursor size"
+msgstr "Поточний розмір вказівника"
 
 #: kcmcursortheme.cpp:308
 #, kde-format
@@ -64,6 +76,13 @@ msgstr "Перезаписати тему?"
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Тему успішно встановлено."
+
+#. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
+#. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)
+#: launchfeedbacksettings.kcfg:19 launchfeedbacksettings.kcfg:33
+#, kde-format
+msgid "Timeout in seconds"
+msgstr "Час очікування у секундах"
 
 #: package/contents/ui/Delegate.qml:54
 #, kde-format
@@ -266,15 +285,6 @@ msgctxt ""
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(Доступні розміри: %1)"
-
-#~ msgid "Name of the current cursor theme"
-#~ msgstr "Назва поточної теми вказівників"
-
-#~ msgid "Current cursor size"
-#~ msgstr "Поточний розмір вказівника"
-
-#~ msgid "Timeout in seconds"
-#~ msgstr "Час очікування у секундах"
 
 #~ msgid "Name"
 #~ msgstr "Назва"

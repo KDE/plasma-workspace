@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2020-05-15 20:42+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -62,20 +62,35 @@ msgstr "inverterad processoranvändning"
 msgid "nothing"
 msgstr "ingenting"
 
-#~ msgid "Kill Applications Config"
-#~ msgstr "Inställning av döda program"
+#. i18n: ectx: property (title), widget (QGroupBox, main)
+#: killrunner_config.ui:30
+#, kde-format
+msgid "Kill Applications Config"
+msgstr "Inställning av döda program"
 
-#~ msgid "&Use trigger word"
-#~ msgstr "An&vänd utlösande ord"
+#. i18n: ectx: property (text), widget (QCheckBox, useTriggerWord)
+#: killrunner_config.ui:39
+#, kde-format
+msgid "&Use trigger word"
+msgstr "An&vänd utlösande ord"
 
-#~ msgid "&Trigger word:"
-#~ msgstr "U&tlösande ord:"
+#. i18n: ectx: property (text), widget (QLabel, label_trigger)
+#: killrunner_config.ui:51
+#, kde-format
+msgid "&Trigger word:"
+msgstr "U&tlösande ord:"
 
-#~ msgid "&Sort by"
-#~ msgstr "Sortera &enligt"
+#. i18n: ectx: property (text), widget (QLabel, label_sorting)
+#: killrunner_config.ui:72
+#, kde-format
+msgid "&Sort by"
+msgstr "Sortera &enligt"
 
-#~ msgid "It is not sure, that this will take effect"
-#~ msgstr "Det är inte säkert att det här får någon effekt"
+#. i18n: ectx: property (toolTip), widget (KComboBox, sorting)
+#: killrunner_config.ui:82
+#, kde-format
+msgid "It is not sure, that this will take effect"
+msgstr "Det är inte säkert att det här får någon effekt"
 
 #~ msgid ""
 #~ "Process ID: %1\n"

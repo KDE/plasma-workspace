@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2025-06-10 22:05+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -32,6 +32,36 @@ msgstr "Filelight에서 열기"
 msgid "Open in File Manager"
 msgstr "파일 관리자에서 열기"
 
+#. i18n: ectx: label, entry (minimumSpace), group (General)
+#: freespacenotifier.kcfg:9
+#, kde-format
+msgid "Minimum free space before user starts being notified."
+msgstr "디스크 남은 공간이 다음 이하일 때 사용자에게 알려 줍니다."
+
+#. i18n: ectx: label, entry (enableNotification), group (General)
+#: freespacenotifier.kcfg:15
+#, kde-format
+msgid "Is the free space notification enabled."
+msgstr "남은 공간 알림을 사용하는지 여부입니다."
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableNotification)
+#: freespacenotifier_prefs_base.ui:17
+#, kde-format
+msgid "Enable low disk space warning"
+msgstr "디스크 공간 부족 알림 사용하기"
+
+#. i18n: ectx: property (text), widget (QLabel, label_minimumSpace)
+#: freespacenotifier_prefs_base.ui:27
+#, kde-format
+msgid "Warn when free space is below:"
+msgstr "다음 이하로 남았을 때 알려주기:"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpace)
+#: freespacenotifier_prefs_base.ui:37
+#, kde-format
+msgid " MiB"
+msgstr " MiB"
+
 #: module.cpp:37
 #, kde-format
 msgid ""
@@ -51,21 +81,6 @@ msgstr "루트 파티션의 디스크 공간이 부족합니다. %1 MiB 남았�
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"
 msgstr "일반"
-
-#~ msgid "Minimum free space before user starts being notified."
-#~ msgstr "디스크 남은 공간이 다음 이하일 때 사용자에게 알려 줍니다."
-
-#~ msgid "Is the free space notification enabled."
-#~ msgstr "남은 공간 알림을 사용하는지 여부입니다."
-
-#~ msgid "Enable low disk space warning"
-#~ msgstr "디스크 공간 부족 알림 사용하기"
-
-#~ msgid "Warn when free space is below:"
-#~ msgstr "다음 이하로 남았을 때 알려주기:"
-
-#~ msgid " MiB"
-#~ msgstr " MiB"
 
 #~ msgid "Low Disk Space"
 #~ msgstr "디스크 공간 부족"

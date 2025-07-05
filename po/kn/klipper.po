@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2010-01-29 11:32+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: kn-IN <>\n"
@@ -629,6 +629,209 @@ msgstr "ಪ್ರಸ್ತುತ"
 msgid "down"
 msgstr "ಕೆಳಕ್ಕೆ"
 
+#. i18n: ectx: label, entry (Version), group (General)
+#: klipper.kcfg:10
+#, kde-format
+msgid "Klipper version"
+msgstr "Klipper ಆವೃತ್ತಿ"
+
+#. i18n: ectx: label, entry (KeepClipboardContents), group (General)
+#: klipper.kcfg:13
+#, kde-format
+msgid "Save history across desktop sessions"
+msgstr ""
+
+#. i18n: ectx: tooltip, entry (KeepClipboardContents), group (General)
+#: klipper.kcfg:15
+#, kde-format
+msgid ""
+"Retain the clipboard history, so it will be available the next time you log "
+"in."
+msgstr ""
+
+#. i18n: ectx: label, entry (PreventEmptyClipboard), group (General)
+#: klipper.kcfg:18
+#, fuzzy, kde-format
+#| msgid "Prevent empty clipboard"
+msgid "Prevent the clipboard from being cleared"
+msgstr "ಖಾಲಿ ನಕಲು ಫಲಕವುಂಟಾಗದಂತೆ ತಡೆಗಟ್ಟು"
+
+#. i18n: ectx: whatsthis, entry (PreventEmptyClipboard), group (General)
+#: klipper.kcfg:20
+#, kde-format
+msgid ""
+"Do not allow the clipboard to be cleared, for example when an application "
+"exits."
+msgstr ""
+
+#. i18n: ectx: label, entry (SyncClipboards), group (General)
+#: klipper.kcfg:27
+#, fuzzy, kde-format
+#| msgid "Selection and clipboard"
+msgid "Keep the selection and clipboard the same"
+msgstr "ಆಯ್ಕೆ ಹಾಗು ನಕಲುಫಲಕ"
+
+#. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
+#: klipper.kcfg:29
+#, kde-format
+msgid ""
+"Content selected with the cursor is automatically copied to the clipboard so "
+"that it can be pasted with either a Paste action or a middle-click.<br/><a "
+"href=\"1\">More about the selection and clipboard</a>."
+msgstr ""
+
+#. i18n: ectx: label, entry (IgnoreSelection), group (General)
+#: klipper.kcfg:32
+#, fuzzy, kde-format
+#| msgid "Ignore Selection"
+msgid "Ignore the selection"
+msgstr "ಆಯ್ಕೆಯನ್ನು ನಿರ್ಲಕ್ಷಿಸು"
+
+#. i18n: ectx: whatsthis, entry (IgnoreSelection), group (General)
+#: klipper.kcfg:34
+#, kde-format
+msgid ""
+"Content selected with the cursor but not explicitly copied to the clipboard "
+"is not automatically stored in the clipboard history, and can only be pasted "
+"using a middle-click."
+msgstr ""
+
+#. i18n: ectx: label, entry (SelectionTextOnly), group (General)
+#: klipper.kcfg:37
+#, kde-format
+msgid "Text selection only"
+msgstr "ಪಠ್ಯ ಆಯ್ಕೆ ಮಾತ್ರ"
+
+#. i18n: ectx: whatsthis, entry (SelectionTextOnly), group (General)
+#: klipper.kcfg:39
+#, kde-format
+msgid ""
+"Only store text selections in the clipboard history, not images or any other "
+"type of data."
+msgstr ""
+
+#. i18n: ectx: label, entry (IgnoreImages), group (General)
+#: klipper.kcfg:42
+#, fuzzy, kde-format
+#| msgid "Ignore images"
+msgid "Always ignore images"
+msgstr "ಚಿತ್ರಗಳನ್ನು ಆಲಕ್ಷಿಸು"
+
+#. i18n: ectx: whatsthis, entry (IgnoreImages), group (General)
+#: klipper.kcfg:44
+#, kde-format
+msgid ""
+"Do not store images in the clipboard history, even if explicitly copied."
+msgstr ""
+
+#. i18n: ectx: label, entry (UseGUIRegExpEditor), group (General)
+#: klipper.kcfg:47
+#, kde-format
+msgid "Use graphical regexp editor"
+msgstr "ಚಿತ್ರಾತ್ಮಕ regexp ಸಂಪಾದಕವನ್ನು ಬಳಸು"
+
+#. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
+#: klipper.kcfg:51
+#, fuzzy, kde-format
+#| msgid "Ignore Selection"
+msgid "Immediately on selection"
+msgstr "ಆಯ್ಕೆಯನ್ನು ನಿರ್ಲಕ್ಷಿಸು"
+
+#. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
+#: klipper.kcfg:52
+#, fuzzy, kde-format
+#| msgid "Really delete entire clipboard history?"
+msgid ""
+"Show the popup menu of applicable actions as soon as a selection is made."
+msgstr "ಸಂಪೂರ್ಣ ನಕಲುಫಲಕದ ಚರಿತ್ರೆಯನ್ನು ಖಚಿತವಾಗಿಯೂ ಅಳಿಸಿಹಾಕಲು ಬಯಸುತ್ತೀರಾ?"
+
+#. i18n: ectx: label, entry (NoActionsForWM_CLASS), group (General)
+#: klipper.kcfg:57
+#, kde-format
+msgid "No actions for WM_CLASS"
+msgstr "WM_CLASS ಗೆ ಯಾವುದೇ ಕ್ರಿಯೆಗಳಿಲ್ಲ"
+
+#. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
+#: klipper.kcfg:60
+#, fuzzy, kde-format
+#| msgid "Timeout for action popups:"
+msgid "Automatic action menu time:"
+msgstr "ಕ್ರಿಯಾಪುಟಿಕೆಗಳ ಕಾಲಾವಧಿ ತೀರಿಕೆ:"
+
+#. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
+#: klipper.kcfg:64
+#, fuzzy, kde-format
+#| msgid "Timeout for action popups:"
+msgid "Display the automatic action popup menu for this time."
+msgstr "ಕ್ರಿಯಾಪುಟಿಕೆಗಳ ಕಾಲಾವಧಿ ತೀರಿಕೆ:"
+
+#. i18n: ectx: label, entry (MaxClipItems), group (General)
+#: klipper.kcfg:67
+#, fuzzy, kde-format
+#| msgid "Clipboard history size:"
+msgid "History size:"
+msgstr "ನಕಲು ಫಲಕದ ಚರಿತ್ರೆಯ ಗಾತ್ರ:"
+
+#. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
+#: klipper.kcfg:71
+#, kde-format
+msgid "The clipboard history will store up to this many items."
+msgstr ""
+
+#. i18n: ectx: label, entry (ActionList), group (General)
+#: klipper.kcfg:74
+#, kde-format
+msgid "Dummy entry for indicating changes in an action's tree widget"
+msgstr "ಕ್ರಿಯೆಯ ವೃಕ್ಷ ಸಂಪರ್ಕತಟದಲ್ಲಿ ಬದಲಾವಣೆಗಳನ್ನು ಸೂಚಿಸುವ ಒಂದು ನಕಲಿ ನಮೂದು"
+
+#. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
+#: klipper.kcfg:84
+#, fuzzy, kde-format
+#| msgid "Strip whitespace when executing an action"
+msgid "Trim whitespace from selection"
+msgstr "ಕ್ರಿಯೆಯನ್ನು ಕಾರ್ಯಗತಗೊಳಿಸುವಾಗ ಖಾಲಿಜಾಗಗಳನ್ನು ತೆಗೆದು ಹಾಕು"
+
+#. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
+#: klipper.kcfg:86
+#, kde-format
+msgid ""
+"Remove any whitespace from the start and end of selected text, before "
+"performing an action. For example, this ensures that a URL pasted in a "
+"browser is interpreted as expected. The text saved on the clipboard is not "
+"affected."
+msgstr ""
+
+#. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
+#: klipper.kcfg:89
+#, fuzzy, kde-format
+#| msgid "Replay actions on an item selected from history"
+msgid "For an item chosen from history"
+msgstr "ಚರಿತ್ರೆಯಿಂದ ಆಯ್ಕೆ ಮಾಡಿದ ವಸ್ತುವಿನಲ್ಲಿ ಕ್ರಿಯೆಗಳನ್ನು ಮರಳಿ ಚಲಾಯಿಸು"
+
+#. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
+#: klipper.kcfg:91
+#, fuzzy, kde-format
+#| msgid "Really delete entire clipboard history?"
+msgid ""
+"Show the popup menu of applicable actions if an entry is chosen from the "
+"clipboard history."
+msgstr "ಸಂಪೂರ್ಣ ನಕಲುಫಲಕದ ಚರಿತ್ರೆಯನ್ನು ಖಚಿತವಾಗಿಯೂ ಅಳಿಸಿಹಾಕಲು ಬಯಸುತ್ತೀರಾ?"
+
+#. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
+#: klipper.kcfg:94
+#, fuzzy, kde-format
+#| msgid "Enable MIME-based actions"
+msgid "Include MIME actions"
+msgstr "ಮೈಮ್ ಆಧರಿಯವಾದ ಕ್ರಿಯೆಗಳನ್ನು ಶಕ್ತಗೊಳಿಸು"
+
+#. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
+#: klipper.kcfg:96
+#, kde-format
+msgid ""
+"If a file name or URL is selected, include applications that can accept its "
+"MIME type in the popup menu."
+msgstr ""
+
 #: klipperpopup.cpp:105
 #, fuzzy, kde-format
 #| msgid "Keep clipboard contents"
@@ -779,83 +982,6 @@ msgstr "ಈ ಪುಟಿಕೆಯನ್ನು ನಿಶ್ಚೇತಗೊಳಿ�
 #, kde-format
 msgid "&Cancel"
 msgstr "ರದ್ದುಮಾಡು(&C)"
-
-#~ msgid "Klipper version"
-#~ msgstr "Klipper ಆವೃತ್ತಿ"
-
-#, fuzzy
-#~| msgid "Prevent empty clipboard"
-#~ msgid "Prevent the clipboard from being cleared"
-#~ msgstr "ಖಾಲಿ ನಕಲು ಫಲಕವುಂಟಾಗದಂತೆ ತಡೆಗಟ್ಟು"
-
-#, fuzzy
-#~| msgid "Selection and clipboard"
-#~ msgid "Keep the selection and clipboard the same"
-#~ msgstr "ಆಯ್ಕೆ ಹಾಗು ನಕಲುಫಲಕ"
-
-#, fuzzy
-#~| msgid "Ignore Selection"
-#~ msgid "Ignore the selection"
-#~ msgstr "ಆಯ್ಕೆಯನ್ನು ನಿರ್ಲಕ್ಷಿಸು"
-
-#~ msgid "Text selection only"
-#~ msgstr "ಪಠ್ಯ ಆಯ್ಕೆ ಮಾತ್ರ"
-
-#, fuzzy
-#~| msgid "Ignore images"
-#~ msgid "Always ignore images"
-#~ msgstr "ಚಿತ್ರಗಳನ್ನು ಆಲಕ್ಷಿಸು"
-
-#~ msgid "Use graphical regexp editor"
-#~ msgstr "ಚಿತ್ರಾತ್ಮಕ regexp ಸಂಪಾದಕವನ್ನು ಬಳಸು"
-
-#, fuzzy
-#~| msgid "Ignore Selection"
-#~ msgid "Immediately on selection"
-#~ msgstr "ಆಯ್ಕೆಯನ್ನು ನಿರ್ಲಕ್ಷಿಸು"
-
-#~ msgid "No actions for WM_CLASS"
-#~ msgstr "WM_CLASS ಗೆ ಯಾವುದೇ ಕ್ರಿಯೆಗಳಿಲ್ಲ"
-
-#, fuzzy
-#~| msgid "Timeout for action popups:"
-#~ msgid "Automatic action menu time:"
-#~ msgstr "ಕ್ರಿಯಾಪುಟಿಕೆಗಳ ಕಾಲಾವಧಿ ತೀರಿಕೆ:"
-
-#, fuzzy
-#~| msgid "Timeout for action popups:"
-#~ msgid "Display the automatic action popup menu for this time."
-#~ msgstr "ಕ್ರಿಯಾಪುಟಿಕೆಗಳ ಕಾಲಾವಧಿ ತೀರಿಕೆ:"
-
-#, fuzzy
-#~| msgid "Clipboard history size:"
-#~ msgid "History size:"
-#~ msgstr "ನಕಲು ಫಲಕದ ಚರಿತ್ರೆಯ ಗಾತ್ರ:"
-
-#~ msgid "Dummy entry for indicating changes in an action's tree widget"
-#~ msgstr "ಕ್ರಿಯೆಯ ವೃಕ್ಷ ಸಂಪರ್ಕತಟದಲ್ಲಿ ಬದಲಾವಣೆಗಳನ್ನು ಸೂಚಿಸುವ ಒಂದು ನಕಲಿ ನಮೂದು"
-
-#, fuzzy
-#~| msgid "Strip whitespace when executing an action"
-#~ msgid "Trim whitespace from selection"
-#~ msgstr "ಕ್ರಿಯೆಯನ್ನು ಕಾರ್ಯಗತಗೊಳಿಸುವಾಗ ಖಾಲಿಜಾಗಗಳನ್ನು ತೆಗೆದು ಹಾಕು"
-
-#, fuzzy
-#~| msgid "Replay actions on an item selected from history"
-#~ msgid "For an item chosen from history"
-#~ msgstr "ಚರಿತ್ರೆಯಿಂದ ಆಯ್ಕೆ ಮಾಡಿದ ವಸ್ತುವಿನಲ್ಲಿ ಕ್ರಿಯೆಗಳನ್ನು ಮರಳಿ ಚಲಾಯಿಸು"
-
-#, fuzzy
-#~| msgid "Really delete entire clipboard history?"
-#~ msgid ""
-#~ "Show the popup menu of applicable actions if an entry is chosen from the "
-#~ "clipboard history."
-#~ msgstr "ಸಂಪೂರ್ಣ ನಕಲುಫಲಕದ ಚರಿತ್ರೆಯನ್ನು ಖಚಿತವಾಗಿಯೂ ಅಳಿಸಿಹಾಕಲು ಬಯಸುತ್ತೀರಾ?"
-
-#, fuzzy
-#~| msgid "Enable MIME-based actions"
-#~ msgid "Include MIME actions"
-#~ msgstr "ಮೈಮ್ ಆಧರಿಯವಾದ ಕ್ರಿಯೆಗಳನ್ನು ಶಕ್ತಗೊಳಿಸು"
 
 #~ msgid "Delete clipboard history?"
 #~ msgstr "ನಕಲುಫಲಕದ ಚರಿತ್ರೆಯನ್ನು ತೆರವು ಮಾಡಬೇಕೆ?"

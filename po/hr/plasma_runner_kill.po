@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2009-11-03 10:43+0100\n"
 "Last-Translator: Andrej Dundovic <adundovi@gmail.com>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -65,20 +65,35 @@ msgstr "obrnuto korištenje procesora"
 msgid "nothing"
 msgstr "ništa"
 
-#~ msgid "Kill Applications Config"
-#~ msgstr "Uništi konfiguracije aplikacija"
+#. i18n: ectx: property (title), widget (QGroupBox, main)
+#: killrunner_config.ui:30
+#, kde-format
+msgid "Kill Applications Config"
+msgstr "Uništi konfiguracije aplikacija"
 
-#~ msgid "&Use trigger word"
-#~ msgstr "&Koristi riječ okidač"
+#. i18n: ectx: property (text), widget (QCheckBox, useTriggerWord)
+#: killrunner_config.ui:39
+#, kde-format
+msgid "&Use trigger word"
+msgstr "&Koristi riječ okidač"
 
-#~ msgid "&Trigger word:"
-#~ msgstr "&Riječ okidač:"
+#. i18n: ectx: property (text), widget (QLabel, label_trigger)
+#: killrunner_config.ui:51
+#, kde-format
+msgid "&Trigger word:"
+msgstr "&Riječ okidač:"
 
-#~ msgid "&Sort by"
-#~ msgstr "&Sortiraj po"
+#. i18n: ectx: property (text), widget (QLabel, label_sorting)
+#: killrunner_config.ui:72
+#, kde-format
+msgid "&Sort by"
+msgstr "&Sortiraj po"
 
-#~ msgid "It is not sure, that this will take effect"
-#~ msgstr "Nije sigurno da li će ovo djelovati"
+#. i18n: ectx: property (toolTip), widget (KComboBox, sorting)
+#: killrunner_config.ui:82
+#, kde-format
+msgid "It is not sure, that this will take effect"
+msgstr "Nije sigurno da li će ovo djelovati"
 
 #~ msgid ""
 #~ "Process ID: %1\n"

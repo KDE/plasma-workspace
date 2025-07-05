@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2010-05-21 06:06+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -36,6 +36,36 @@ msgstr ""
 msgid "Open in File Manager"
 msgstr "Файл менеджерін ашу"
 
+#. i18n: ectx: label, entry (minimumSpace), group (General)
+#: freespacenotifier.kcfg:9
+#, kde-format
+msgid "Minimum free space before user starts being notified."
+msgstr "Қанша бос орын қалғанда ескертуді бастау керек."
+
+#. i18n: ectx: label, entry (enableNotification), group (General)
+#: freespacenotifier.kcfg:15
+#, kde-format
+msgid "Is the free space notification enabled."
+msgstr "Бос орын туралы құлақтандыруы рұқсат етілген бе."
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableNotification)
+#: freespacenotifier_prefs_base.ui:17
+#, kde-format
+msgid "Enable low disk space warning"
+msgstr "Бос орын туралы ескерту рұқсат етілсін"
+
+#. i18n: ectx: property (text), widget (QLabel, label_minimumSpace)
+#: freespacenotifier_prefs_base.ui:27
+#, kde-format
+msgid "Warn when free space is below:"
+msgstr "Қанша бос орын қалғанда ескерту:"
+
+#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpace)
+#: freespacenotifier_prefs_base.ui:37
+#, kde-format
+msgid " MiB"
+msgstr " МиБ"
+
 #: module.cpp:37
 #, kde-format
 msgid ""
@@ -55,21 +85,6 @@ msgstr ""
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"
 msgstr "Жалпы"
-
-#~ msgid "Minimum free space before user starts being notified."
-#~ msgstr "Қанша бос орын қалғанда ескертуді бастау керек."
-
-#~ msgid "Is the free space notification enabled."
-#~ msgstr "Бос орын туралы құлақтандыруы рұқсат етілген бе."
-
-#~ msgid "Enable low disk space warning"
-#~ msgstr "Бос орын туралы ескерту рұқсат етілсін"
-
-#~ msgid "Warn when free space is below:"
-#~ msgstr "Қанша бос орын қалғанда ескерту:"
-
-#~ msgid " MiB"
-#~ msgstr " МиБ"
 
 #~ msgctxt ""
 #~ "Warns the user that the system is running low on space on his home "

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 03:22+0000\n"
+"POT-Creation-Date: 2025-07-05 05:54+0000\n"
 "PO-Revision-Date: 2004-12-03 14:52-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -17,6 +17,68 @@ msgstr ""
 "X-Generator: KBabel 1.0beta1\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
+
+#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
+#: fontsaasettingsbase.kcfg:9
+#, fuzzy, kde-format
+#| msgid "Force fonts DPI:"
+msgid "Force font DPI Wayland"
+msgstr "Fórsáil luach PSO na gclónna:"
+
+#. i18n: ectx: label, entry (forceFontDPI), group (General)
+#: fontsaasettingsbase.kcfg:13
+#, fuzzy, kde-format
+#| msgid "Force fonts DPI:"
+msgid "Force font DPI on X11"
+msgstr "Fórsáil luach PSO na gclónna:"
+
+#. i18n: ectx: label, entry (font), group (General)
+#: fontssettings.kcfg:9
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "General"
+msgid "General font"
+msgstr "Ginearálta"
+
+#. i18n: ectx: label, entry (fixed), group (General)
+#: fontssettings.kcfg:21
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "Fixed width"
+msgid "Fixed width font"
+msgstr "Aonleithid"
+
+#. i18n: ectx: label, entry (smallestReadableFont), group (General)
+#: fontssettings.kcfg:33
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "Small"
+msgid "Small font"
+msgstr "Beag"
+
+#. i18n: ectx: label, entry (toolBarFont), group (General)
+#: fontssettings.kcfg:45
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "Toolbar"
+msgid "Tool bar font"
+msgstr "Barra Uirlisí"
+
+#. i18n: ectx: label, entry (menuFont), group (General)
+#: fontssettings.kcfg:57
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "General"
+msgid "Menu font"
+msgstr "Ginearálta"
+
+#. i18n: ectx: label, entry (activeFont), group (WM)
+#: fontssettings.kcfg:71
+#, fuzzy, kde-format
+#| msgctxt "font usage"
+#| msgid "Window title"
+msgid "Window title font"
+msgstr "Teideal fuinneog"
 
 #: kxftconfig.cpp:458
 #, fuzzy, kde-format
@@ -316,46 +378,6 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr ""
-
-#, fuzzy
-#~| msgid "Force fonts DPI:"
-#~ msgid "Force font DPI Wayland"
-#~ msgstr "Fórsáil luach PSO na gclónna:"
-
-#, fuzzy
-#~| msgid "Force fonts DPI:"
-#~ msgid "Force font DPI on X11"
-#~ msgstr "Fórsáil luach PSO na gclónna:"
-
-#, fuzzy
-#~| msgctxt "font usage"
-#~| msgid "General"
-#~ msgid "General font"
-#~ msgstr "Ginearálta"
-
-#, fuzzy
-#~| msgctxt "font usage"
-#~| msgid "Fixed width"
-#~ msgid "Fixed width font"
-#~ msgstr "Aonleithid"
-
-#, fuzzy
-#~| msgctxt "font usage"
-#~| msgid "Small"
-#~ msgid "Small font"
-#~ msgstr "Beag"
-
-#, fuzzy
-#~| msgctxt "font usage"
-#~| msgid "Toolbar"
-#~ msgid "Tool bar font"
-#~ msgstr "Barra Uirlisí"
-
-#, fuzzy
-#~| msgctxt "font usage"
-#~| msgid "Window title"
-#~ msgid "Window title font"
-#~ msgstr "Teideal fuinneog"
 
 #, fuzzy
 #~| msgid ""
