@@ -57,6 +57,9 @@ public:
                     if (changed.value(u"Result"_s, QString()) != "oom-kill"_L1) {
                         return;
                     }
+                    if (changed.value(u"MainPID"_s) == 0) {
+                        return;
+                    }
 
                     const auto unit = decodeUnitName(QFileInfo(msg.path()).fileName());
                     const auto service = serviceForUnitName(unit);
