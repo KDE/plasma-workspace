@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-22 02:35+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2023-12-29 15:17+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -69,34 +69,6 @@ msgstr ""
 #, kde-format
 msgid "Color scheme installed successfully."
 msgstr "カラースキームのインストールに成功しました。"
-
-#. i18n: ectx: label, entry (colorScheme), group (General)
-#: colorssettings.kcfg:9
-#, kde-format
-msgid "Color scheme name"
-msgstr "カラースキームの名前"
-
-#. i18n: ectx: label, entry (accentColor), group (General)
-#: colorssettings.kcfg:13
-#, kde-format
-msgid "Accent color"
-msgstr "アクセントカラー"
-
-#. i18n: ectx: label, entry (lastUsedCustomAccentColor), group (General)
-#: colorssettings.kcfg:17
-#, kde-format
-msgid ""
-"The last used custom accent color before user switched to wallpaper "
-"generated color or default color"
-msgstr ""
-"ユーザが壁紙アクセントカラーもしくはデフォルトの色に切り替える前、最後に使用"
-"されたカスタムのアクセントカラー"
-
-#. i18n: ectx: label, entry (accentColorFromWallpaper), group (General)
-#: colorssettings.kcfg:21
-#, kde-format
-msgid "Whether accent color from wallpaper should be applied"
-msgstr "壁紙から抽出されたアクセントカラーを適用するかどうか"
 
 #: editor/kcolorschemeeditor.cpp:25
 #, kde-format
@@ -158,216 +130,6 @@ msgstr ""
 msgid "Scheme not found, falling back to current one.\n"
 msgstr "スキームが見つかりませんでした。現在のスキームを使用します。\n"
 
-#. i18n: ectx: property (toolTip), widget (QLabel, label)
-#: editor/preview.ui:29
-#, kde-format
-msgid "Window text on Window Background"
-msgstr "ウィンドウの背景上のウィンドウのテキスト"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: editor/preview.ui:32
-#, kde-format
-msgctxt "color-kcm-preview"
-msgid "Window text"
-msgstr "ウィンドウのテキスト"
-
-#. i18n: ectx: property (toolTip), widget (QPushButton, pushButton)
-#: editor/preview.ui:39
-#, kde-format
-msgid "Button text on Button Background"
-msgstr "ボタンの背景上のボタンのテキスト"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QPushButton, pushButton)
-#: editor/preview.ui:42
-#, kde-format
-msgctxt "color-kcm-preview"
-msgid "Push Button"
-msgstr "プッシュボタン"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection0)
-#: editor/preview.ui:123
-#, kde-format
-msgid "Selection Normal Text against Selection Normal Background"
-msgstr "選択の通常の背景に対する選択の通常のテキスト"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelSelection0)
-#: editor/preview.ui:126
-#, kde-format
-msgctxt "color-kcm-preview"
-msgid "Selected text"
-msgstr "選択のテキスト"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection3)
-#: editor/preview.ui:138
-#, kde-format
-msgid "Selection Link Text against Selection Normal Background"
-msgstr "選択の通常の背景に対する選択のリンクテキスト"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelSelection3)
-#. i18n: ectx: property (text), widget (QLabel, labelView3)
-#: editor/preview.ui:141 editor/preview.ui:265
-#, kde-format
-msgctxt "color-kcm-preview"
-msgid "link"
-msgstr "リンク"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection4)
-#: editor/preview.ui:153
-#, kde-format
-msgid "Selection Visited Text against Selection Normal Background"
-msgstr "選択の通常の背景に対する選択の訪問済みリンクのテキスト"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelSelection4)
-#. i18n: ectx: property (text), widget (QLabel, labelView4)
-#: editor/preview.ui:156 editor/preview.ui:280
-#, kde-format
-msgctxt "color-kcm-preview"
-msgid "visited"
-msgstr "訪問済み"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection2)
-#: editor/preview.ui:163
-#, kde-format
-msgid "Selection Active Text against Selection Normal Background"
-msgstr "選択の通常の背景に対する選択のアクティブなテキスト"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelSelection2)
-#. i18n: ectx: property (text), widget (QLabel, labelView2)
-#: editor/preview.ui:166 editor/preview.ui:290
-#, kde-format
-msgctxt "color-kcm-preview"
-msgid "a"
-msgstr "a"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection1)
-#: editor/preview.ui:173
-#, kde-format
-msgid "Selection Inactive Text against Selection Normal Background"
-msgstr "選択の通常の背景に対する選択の非アクティブなテキスト"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelSelection1)
-#. i18n: ectx: property (text), widget (QLabel, labelView1)
-#: editor/preview.ui:176 editor/preview.ui:300
-#, kde-format
-msgctxt "color-kcm-preview"
-msgid "i"
-msgstr "i"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection5)
-#: editor/preview.ui:183
-#, kde-format
-msgid "Selection Negative Text against Selection Normal Background"
-msgstr "選択の通常の背景に対する選択のネガティブなテキスト"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelSelection5)
-#. i18n: ectx: property (text), widget (QLabel, labelView5)
-#: editor/preview.ui:186 editor/preview.ui:310
-#, kde-format
-msgctxt "color-kcm-preview"
-msgid "!"
-msgstr "!"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection6)
-#: editor/preview.ui:193
-#, kde-format
-msgid "Selection Neutral Text against Selection Normal Background"
-msgstr "選択の通常の背景に対する選択のニュートラルなテキスト"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelSelection6)
-#. i18n: ectx: property (text), widget (QLabel, labelView6)
-#: editor/preview.ui:196 editor/preview.ui:320
-#, kde-format
-msgctxt "color-kcm-preview"
-msgid "="
-msgstr "="
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection7)
-#: editor/preview.ui:203
-#, kde-format
-msgid "Selection Positive Text against Selection Normal Background"
-msgstr "通常の背景に対するポジティブな選択テキスト"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelSelection7)
-#. i18n: ectx: property (text), widget (QLabel, labelView7)
-#: editor/preview.ui:206 editor/preview.ui:330
-#, kde-format
-msgctxt "color-kcm-preview"
-msgid "+"
-msgstr "+"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelView0)
-#: editor/preview.ui:247
-#, kde-format
-msgid "View Normal Text against View Normal Background"
-msgstr "ビューの通常の背景に対するビューの通常のテキスト"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelView0)
-#: editor/preview.ui:250
-#, kde-format
-msgctxt "color-kcm-preview"
-msgid "Normal text"
-msgstr "通常のテキスト"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelView3)
-#: editor/preview.ui:262
-#, kde-format
-msgid "View Link Text against View Normal Background"
-msgstr "ビューの通常の背景に対するビューのリンクテキスト"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelView4)
-#: editor/preview.ui:277
-#, kde-format
-msgid "View Visited Text against View Normal Background"
-msgstr "ビューの通常の背景に対するビューの訪問済みリンクのテキスト"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelView2)
-#: editor/preview.ui:287
-#, kde-format
-msgid "View Active Text against View Normal Background"
-msgstr "ビューの通常の背景に対するビューのアクティブなテキスト"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelView1)
-#: editor/preview.ui:297
-#, kde-format
-msgid "View Inactive Text against View Normal Background"
-msgstr "ビューの通常の背景に対するビューの非アクティブなテキスト"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelView5)
-#: editor/preview.ui:307
-#, kde-format
-msgid "View Negative Text against View Normal Background"
-msgstr "ビューの通常の背景に対するビューのネガティブなテキスト"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelView6)
-#: editor/preview.ui:317
-#, kde-format
-msgid "View Neutral Text against View Normal Background"
-msgstr "ビューの通常の背景に対するビューのニュートラルなテキスト"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelView7)
-#: editor/preview.ui:327
-#, kde-format
-msgid "View Positive Text against View Normal Background"
-msgstr "ビューの通常の背景に対するビューのポジティブなテキスト"
-
 #: editor/scmeditorcolors.cpp:62 editor/scmeditorcolors.cpp:76
 #, kde-format
 msgid "Varies"
@@ -388,267 +150,50 @@ msgstr "もう一つの背景"
 msgid "Normal Text"
 msgstr "通常のテキスト"
 
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:102 editor/scmeditorcolors.ui:303
+#: editor/scmeditorcolors.cpp:102
 #, kde-format
 msgid "Inactive Text"
 msgstr "非アクティブなテキスト"
 
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:103 editor/scmeditorcolors.ui:308
+#: editor/scmeditorcolors.cpp:103
 #, kde-format
 msgid "Active Text"
 msgstr "アクティブなテキスト"
 
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:104 editor/scmeditorcolors.ui:313
+#: editor/scmeditorcolors.cpp:104
 #, kde-format
 msgid "Link Text"
 msgstr "リンクのテキスト"
 
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:105 editor/scmeditorcolors.ui:318
+#: editor/scmeditorcolors.cpp:105
 #, kde-format
 msgid "Visited Text"
 msgstr "訪問済みリンクのテキスト"
 
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:106 editor/scmeditorcolors.ui:323
+#: editor/scmeditorcolors.cpp:106
 #, kde-format
 msgid "Negative Text"
 msgstr "ネガティブ"
 
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:107 editor/scmeditorcolors.ui:328
+#: editor/scmeditorcolors.cpp:107
 #, kde-format
 msgid "Neutral Text"
 msgstr "ニュートラル"
 
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:108 editor/scmeditorcolors.ui:333
+#: editor/scmeditorcolors.cpp:108
 #, kde-format
 msgid "Positive Text"
 msgstr "ポジティブ"
 
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:109 editor/scmeditorcolors.ui:338
+#: editor/scmeditorcolors.cpp:109
 #, kde-format
 msgid "Focus Decoration"
 msgstr "フォーカス時の装飾"
 
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:110 editor/scmeditorcolors.ui:343
+#: editor/scmeditorcolors.cpp:110
 #, kde-format
 msgid "Hover Decoration"
 msgstr "マウスオーバー時の装飾"
-
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: editor/scmeditorcolors.ui:23
-#, kde-format
-msgid "Color set:"
-msgstr "色セット:"
-
-#. i18n: ectx: property (toolTip), widget (QComboBox, colorSet)
-#: editor/scmeditorcolors.ui:36
-#, kde-format
-msgid "Colorset to view/modify"
-msgstr "表示/変更する色セット"
-
-#. i18n: 'Common' here means &quot;frequent/not rare&quot;, not &quot;shared&quot;
-#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
-#: editor/scmeditorcolors.ui:40
-#, kde-format
-msgctxt "color-sets"
-msgid "Common Colors"
-msgstr "共通色"
-
-#. i18n: see plasma-workspace/kcms/colors/README.i18n
-#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
-#: editor/scmeditorcolors.ui:45
-#, kde-format
-msgctxt "color-sets"
-msgid "View"
-msgstr "ビュー"
-
-#. i18n: see plasma-workspace/kcms/colors/README.i18n
-#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
-#: editor/scmeditorcolors.ui:50
-#, kde-format
-msgctxt "color-sets"
-msgid "Window"
-msgstr "ウィンドウ"
-
-#. i18n: see plasma-workspace/kcms/colors/README.i18n
-#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
-#: editor/scmeditorcolors.ui:55
-#, kde-format
-msgctxt "color-sets"
-msgid "Button"
-msgstr "ボタン"
-
-#. i18n: see plasma-workspace/kcms/colors/README.i18n
-#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
-#: editor/scmeditorcolors.ui:60
-#, kde-format
-msgctxt "color-sets"
-msgid "Selection"
-msgstr "選択"
-
-#. i18n: see plasma-workspace/kcms/colors/README.i18n
-#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
-#: editor/scmeditorcolors.ui:65
-#, kde-format
-msgctxt "color-sets"
-msgid "Tooltip"
-msgstr "ツールチップ"
-
-#. i18n: see plasma-workspace/kcms/colors/README.i18n
-#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
-#: editor/scmeditorcolors.ui:70
-#, kde-format
-msgctxt "color-sets"
-msgid "Complementary"
-msgstr "補足"
-
-#. i18n: see plasma-workspace/kcms/colors/README.i18n
-#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
-#: editor/scmeditorcolors.ui:75
-#, kde-format
-msgctxt "color-sets"
-msgid "Header"
-msgstr "ヘッダ"
-
-#. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:118 editor/scmeditorcolors.ui:123
-#: editor/scmeditorcolors.ui:128 editor/scmeditorcolors.ui:133
-#: editor/scmeditorcolors.ui:138 editor/scmeditorcolors.ui:143
-#: editor/scmeditorcolors.ui:148 editor/scmeditorcolors.ui:153
-#: editor/scmeditorcolors.ui:158 editor/scmeditorcolors.ui:163
-#: editor/scmeditorcolors.ui:168 editor/scmeditorcolors.ui:173
-#: editor/scmeditorcolors.ui:178 editor/scmeditorcolors.ui:183
-#: editor/scmeditorcolors.ui:188 editor/scmeditorcolors.ui:193
-#: editor/scmeditorcolors.ui:198 editor/scmeditorcolors.ui:203
-#: editor/scmeditorcolors.ui:208 editor/scmeditorcolors.ui:213
-#: editor/scmeditorcolors.ui:218 editor/scmeditorcolors.ui:223
-#: editor/scmeditorcolors.ui:228 editor/scmeditorcolors.ui:233
-#: editor/scmeditorcolors.ui:238 editor/scmeditorcolors.ui:243
-#, kde-format
-msgid "New Row"
-msgstr "新しい行"
-
-#. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:248
-#, kde-format
-msgid "0"
-msgstr "0"
-
-#. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:253
-#, kde-format
-msgid "1"
-msgstr "1"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:258
-#, kde-format
-msgid "View Background"
-msgstr "ビューの背景"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:263
-#, kde-format
-msgid "View Text"
-msgstr "ビューのテキスト"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:268
-#, kde-format
-msgid "Window Background"
-msgstr "ウィンドウの背景"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:273
-#, kde-format
-msgid "Window Text"
-msgstr "ウィンドウのテキスト"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:278
-#, kde-format
-msgid "Button Background"
-msgstr "ボタンの背景"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:283
-#, kde-format
-msgid "Button Text"
-msgstr "ボタンのテキスト"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:288
-#, kde-format
-msgid "Selection Background"
-msgstr "選択の背景"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:293
-#, kde-format
-msgid "Selection Text"
-msgstr "選択のテキスト"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:298
-#, kde-format
-msgid "Selection Inactive Text"
-msgstr "選択の非アクティブなテキスト"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:348
-#, kde-format
-msgid "Tooltip Background"
-msgstr "ツールチップの背景"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:353
-#, kde-format
-msgid "Tooltip Text"
-msgstr "ツールチップのテキスト"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:358
-#, kde-format
-msgid "Active Titlebar"
-msgstr "アクティブなタイトルバー"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:363
-#, kde-format
-msgid "Active Titlebar Text"
-msgstr "アクティブなタイトルバーのテキスト"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:368
-#, kde-format
-msgid "Active Titlebar Secondary"
-msgstr "アクティブなタイトルバー (セカンダリ)"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:373
-#, kde-format
-msgid "Inactive Titlebar"
-msgstr "非アクティブなタイトルバー"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:378
-#, kde-format
-msgid "Inactive Titlebar Text"
-msgstr "非アクティブなタイトルバーのテキスト"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:383
-#, kde-format
-msgid "Inactive Titlebar Secondary"
-msgstr "非アクティブなタイトルバー (セカンダリ)"
 
 #: editor/scmeditordialog.cpp:60
 #, kde-format
@@ -708,450 +253,6 @@ msgstr "エラー"
 #, kde-format
 msgid "Inactive"
 msgstr "非アクティブ"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: editor/scmeditoreffects.ui:17
-#, kde-format
-msgid "Color:"
-msgstr "色:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: editor/scmeditoreffects.ui:27
-#, kde-format
-msgid "Intensity:"
-msgstr "強調:"
-
-#. i18n: ectx: property (toolTip), widget (QComboBox, colorBox)
-#: editor/scmeditoreffects.ui:37
-#, kde-format
-msgid "Disabled color effect type"
-msgstr "無効の色効果のタイプ"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
-#: editor/scmeditoreffects.ui:41
-#, kde-format
-msgctxt "no disabled color effect"
-msgid "None"
-msgstr "なし"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
-#: editor/scmeditoreffects.ui:46
-#, kde-format
-msgctxt "disabled color effect"
-msgid "Desaturate"
-msgstr "彩度を減らす"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
-#: editor/scmeditoreffects.ui:51
-#, kde-format
-msgctxt "disabled color effect"
-msgid "Fade"
-msgstr "フェード"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
-#: editor/scmeditoreffects.ui:56
-#, kde-format
-msgctxt "disabled color effect"
-msgid "Tint"
-msgstr "色付け"
-
-#. i18n: ectx: property (toolTip), widget (QComboBox, intensityBox)
-#: editor/scmeditoreffects.ui:64
-#, kde-format
-msgid "Disabled intensity effect type"
-msgstr "無効の強調効果のタイプ"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
-#: editor/scmeditoreffects.ui:68
-#, kde-format
-msgctxt "no disabled intensity effect"
-msgid "None"
-msgstr "なし"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
-#: editor/scmeditoreffects.ui:73
-#, kde-format
-msgctxt "disabled intensity effect"
-msgid "Shade"
-msgstr "シェード"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
-#: editor/scmeditoreffects.ui:78
-#, kde-format
-msgctxt "disabled intensity effect"
-msgid "Darken"
-msgstr "暗く"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
-#: editor/scmeditoreffects.ui:83
-#, kde-format
-msgctxt "disabled intensity effect"
-msgid "Lighten"
-msgstr "明るく"
-
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: editor/scmeditoreffects.ui:107
-#, kde-format
-msgid "Contrast:"
-msgstr "コントラスト:"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, colorSlider)
-#: editor/scmeditoreffects.ui:120
-#, kde-format
-msgid "Disabled color effect amount"
-msgstr "無効の色効果の強さ"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, intensitySlider)
-#: editor/scmeditoreffects.ui:139
-#, kde-format
-msgid "Disabled intensity effect amount"
-msgstr "無効の強調効果の強さ"
-
-#. i18n: ectx: property (toolTip), widget (KColorButton, colorButton)
-#: editor/scmeditoreffects.ui:158
-#, kde-format
-msgid "Disabled color"
-msgstr "無効の色"
-
-#. i18n: ectx: property (toolTip), widget (QComboBox, contrastBox)
-#: editor/scmeditoreffects.ui:181
-#, kde-format
-msgid "Disabled contrast type"
-msgstr "無効のコントラストのタイプ"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
-#: editor/scmeditoreffects.ui:185
-#, kde-format
-msgctxt "no disabled contrast"
-msgid "None"
-msgstr "なし"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
-#: editor/scmeditoreffects.ui:190
-#, kde-format
-msgctxt "disabled contrast"
-msgid "Fade"
-msgstr "フェード"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
-#: editor/scmeditoreffects.ui:195
-#, kde-format
-msgctxt "disabled contrast"
-msgid "Tint"
-msgstr "色付け"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, contrastSlider)
-#: editor/scmeditoreffects.ui:222
-#, kde-format
-msgid "Disabled contrast amount"
-msgstr "無効のコントラストの強さ"
-
-#. i18n: ectx: property (text), widget (QCheckBox, useInactiveEffects)
-#: editor/scmeditoroptions.ui:17
-#, kde-format
-msgid "Apply &effects to inactive windows"
-msgstr "非アクティブなウィンドウに効果を適用する(&E)"
-
-#. i18n: ectx: property (text), widget (QCheckBox, inactiveSelectionEffect)
-#: editor/scmeditoroptions.ui:24
-#, kde-format
-msgid "Use different colors for in&active selections"
-msgstr "非アクティブな選択には異なった色を使用する(&A)"
-
-#. i18n: ectx: property (text), widget (QCheckBox, shadeSortedColumn)
-#: editor/scmeditoroptions.ui:31
-#, kde-format
-msgid "Shade sorted column &in lists"
-msgstr "リストでソートされた列にトーンをかける(&I)"
-
-#. i18n: ectx: property (text), widget (QCheckBox, tintColors)
-#: editor/scmeditoroptions.ui:38
-#, kde-format
-msgid "Tint all colors with accent color"
-msgstr "すべての色にアクセントカラーの色味をつける"
-
-#. i18n: ectx: property (text), widget (QCheckBox, accentTitlebar)
-#: editor/scmeditoroptions.ui:45
-#, kde-format
-msgid "Make window titlebars a&ccent-colored"
-msgstr "ウィンドウのタイトルバーをアクセントカラーで染める(&C)"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: editor/scmeditoroptions.ui:52
-#, kde-format
-msgid "Tint strength:"
-msgstr "色味の強さ:"
-
-#. i18n: ectx: property (toolTip), widget (QGroupBox, groupBox_5)
-#: editor/scmeditoroptions.ui:69
-#, kde-format
-msgid "Shading of frames and lighting (\"3D\") effects"
-msgstr "枠の影付けと 3D 効果"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
-#: editor/scmeditoroptions.ui:72
-#, kde-format
-msgid "Shading"
-msgstr "影付け"
-
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#: editor/scmeditoroptions.ui:97
-#, kde-format
-msgid "Maximum"
-msgstr "最大"
-
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: editor/scmeditoroptions.ui:117
-#, kde-format
-msgid "Minimum"
-msgstr "最小"
-
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: editor/scmeditoroptions.ui:124
-#, kde-format
-msgid "Contrast"
-msgstr "コントラスト"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelFore0)
-#. i18n: ectx: property (toolTip), widget (QLabel, labelBack0)
-#: editor/setpreview.ui:35 editor/setpreview.ui:189
-#, kde-format
-msgid "Normal Text on Normal Background"
-msgstr "通常の背景上の通常のテキスト"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore0)
-#. i18n: ectx: property (text), widget (QLabel, labelBack0)
-#: editor/setpreview.ui:38 editor/setpreview.ui:192
-#, kde-format
-msgctxt "color-kcm-set-preview"
-msgid "normal"
-msgstr "通常"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelFore3)
-#: editor/setpreview.ui:56
-#, kde-format
-msgid "Link Text on Normal Background"
-msgstr "通常の背景上のリンクテキスト"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore3)
-#. i18n: ectx: property (text), widget (QLabel, labelBack3)
-#: editor/setpreview.ui:59 editor/setpreview.ui:214
-#, kde-format
-msgctxt "color-kcm-set-preview"
-msgid "link"
-msgstr "リンク"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelFore4)
-#: editor/setpreview.ui:77
-#, kde-format
-msgid "Visited Text on Normal Background"
-msgstr "通常の背景上の訪問済みリンクのテキスト"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore4)
-#. i18n: ectx: property (text), widget (QLabel, labelBack4)
-#: editor/setpreview.ui:80 editor/setpreview.ui:236
-#, kde-format
-msgctxt "color-kcm-set-preview"
-msgid "visited"
-msgstr "訪問済み"
-
-#. i18n: ectx: property (toolTip), widget (QWidget, widgetFore2)
-#: editor/setpreview.ui:90
-#, kde-format
-msgid "Active Text on Normal Background"
-msgstr "通常の背景上のアクティブなテキスト"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore2)
-#. i18n: ectx: property (text), widget (QLabel, labelBack2)
-#: editor/setpreview.ui:96 editor/setpreview.ui:253
-#, kde-format
-msgctxt "color-kcm-set-preview"
-msgid "active"
-msgstr "アクティブ"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelFore1)
-#: editor/setpreview.ui:109
-#, kde-format
-msgid "Inactive Text on Normal Background"
-msgstr "通常の背景上の非アクティブなテキスト"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore1)
-#: editor/setpreview.ui:112
-#, kde-format
-msgctxt "color-kcm-set-preview"
-msgid "inactive"
-msgstr "非アクティブ"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelFore5)
-#: editor/setpreview.ui:125
-#, kde-format
-msgid "Negative Text on Normal Background"
-msgstr "通常の背景上のネガティブなテキスト"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore5)
-#. i18n: ectx: property (text), widget (QLabel, labelBack5)
-#: editor/setpreview.ui:128 editor/setpreview.ui:286
-#, kde-format
-msgctxt "color-kcm-set-preview"
-msgid "negative"
-msgstr "ネガティブ"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelFore6)
-#: editor/setpreview.ui:141
-#, kde-format
-msgid "Neutral Text on Normal Background"
-msgstr "通常の背景上のニュートラルなテキスト"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore6)
-#. i18n: ectx: property (text), widget (QLabel, labelBack6)
-#: editor/setpreview.ui:144 editor/setpreview.ui:303
-#, kde-format
-msgctxt "color-kcm-set-preview"
-msgid "neutral"
-msgstr "ニュートラル"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelFore7)
-#: editor/setpreview.ui:157
-#, kde-format
-msgid "Positive Text on Normal Background"
-msgstr "通常の背景上のポジティブなテキスト"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore7)
-#. i18n: ectx: property (text), widget (QLabel, labelBack7)
-#: editor/setpreview.ui:160 editor/setpreview.ui:320
-#, kde-format
-msgctxt "color-kcm-set-preview"
-msgid "positive"
-msgstr "ポジティブ"
-
-#. i18n: ectx: property (toolTip), widget (QWidget, widgetFore8)
-#: editor/setpreview.ui:170
-#, kde-format
-msgid "Hover on Normal Background"
-msgstr "通常の背景上のマウスオーバー"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore8)
-#: editor/setpreview.ui:176
-#, kde-format
-msgctxt "color-kcm-set-preview"
-msgid "hover"
-msgstr "マウスオーバー"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelBack3)
-#: editor/setpreview.ui:211
-#, kde-format
-msgid ""
-"Link Text on Link Background\n"
-"(Note: Link Background is derived from Link Text and cannot be separately "
-"configured at this time)"
-msgstr ""
-"リンクテキストとその背景\n"
-"(注意: リンクの背景はリンクテキストから派生しており、ここでは別々に設定するこ"
-"とはできません。)"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelBack4)
-#: editor/setpreview.ui:233
-#, kde-format
-msgid ""
-"Visited Text on Visited Background\n"
-"(Note: Visited Background is derived from Visited Text and cannot be "
-"separately configured at this time)"
-msgstr ""
-"訪問済みのテキストとその背景\n"
-"(注意: 訪問済み背景は訪問済みテキストから派生しており、ここでは別々に設定する"
-"ことはできません。)"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelBack2)
-#: editor/setpreview.ui:250
-#, kde-format
-msgid ""
-"Active Text on Active Background\n"
-"(Note: Active Background is derived from Active Text and cannot be "
-"separately configured at this time)"
-msgstr ""
-"アクティブなテキストとその背景\n"
-"(注意: アクティブな背景はアクティブなテキストから派生しており、ここでは別々に"
-"設定することはできません。)"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelBack1)
-#: editor/setpreview.ui:266
-#, kde-format
-msgid "Inactive Text on Alternate Background"
-msgstr "もう一つの背景上の非アクティブなテキスト"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelBack1)
-#: editor/setpreview.ui:269
-#, kde-format
-msgctxt "color-kcm-set-preview"
-msgid "alternate"
-msgstr "もう一つの背景"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelBack5)
-#: editor/setpreview.ui:283
-#, kde-format
-msgid ""
-"Negative Text on Negative Background\n"
-"(Note: Negative Background is derived from Negative Text and cannot be "
-"separately configured at this time)"
-msgstr ""
-"ネガティブなテキストとその背景\n"
-"(注意: ネガティブな背景はネガティブなテキストから派生しており、ここでは別々に"
-"設定することはできません。)"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelBack6)
-#: editor/setpreview.ui:300
-#, kde-format
-msgid ""
-"Neutral Text on Neutral Background\n"
-"(Note: Neutral Background is derived from Neutral Text and cannot be "
-"separately configured at this time)"
-msgstr ""
-"ニュートラルなテキストとその背景\n"
-"(注意: ニュートラルな背景はニュートラルなテキストから派生しており、ここでは"
-"別々に設定することはできません。)"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelBack7)
-#: editor/setpreview.ui:317
-#, kde-format
-msgid ""
-"Positive Text on Positive Background\n"
-"(Note: Positive Background is derived from Positive Text and cannot be "
-"separately configured at this time)"
-msgstr ""
-"ポジティブなテキストとその背景\n"
-"(注意: ポジティブな背景はポジティブなテキストから派生しており、ここでは別々に"
-"設定することはできません。)"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelFore9)
-#: editor/setpreview.ui:333
-#, kde-format
-msgid "Focus on Normal Background"
-msgstr "通常の背景上のフォーカス"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore9)
-#: editor/setpreview.ui:336
-#, kde-format
-msgctxt "color-kcm-set-preview"
-msgid "focus"
-msgstr "フォーカス"
 
 #: package/contents/ui/main.qml:23
 #, kde-format
@@ -1368,3 +469,453 @@ msgstr "以下のカラースキームがシステム上にあります:"
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (現在のカラースキーム)"
+
+#~ msgid "Color scheme name"
+#~ msgstr "カラースキームの名前"
+
+#~ msgid "Accent color"
+#~ msgstr "アクセントカラー"
+
+#~ msgid ""
+#~ "The last used custom accent color before user switched to wallpaper "
+#~ "generated color or default color"
+#~ msgstr ""
+#~ "ユーザが壁紙アクセントカラーもしくはデフォルトの色に切り替える前、最後に使"
+#~ "用されたカスタムのアクセントカラー"
+
+#~ msgid "Whether accent color from wallpaper should be applied"
+#~ msgstr "壁紙から抽出されたアクセントカラーを適用するかどうか"
+
+#~ msgid "Window text on Window Background"
+#~ msgstr "ウィンドウの背景上のウィンドウのテキスト"
+
+#~ msgctxt "color-kcm-preview"
+#~ msgid "Window text"
+#~ msgstr "ウィンドウのテキスト"
+
+#~ msgid "Button text on Button Background"
+#~ msgstr "ボタンの背景上のボタンのテキスト"
+
+#~ msgctxt "color-kcm-preview"
+#~ msgid "Push Button"
+#~ msgstr "プッシュボタン"
+
+#~ msgid "Selection Normal Text against Selection Normal Background"
+#~ msgstr "選択の通常の背景に対する選択の通常のテキスト"
+
+#~ msgctxt "color-kcm-preview"
+#~ msgid "Selected text"
+#~ msgstr "選択のテキスト"
+
+#~ msgid "Selection Link Text against Selection Normal Background"
+#~ msgstr "選択の通常の背景に対する選択のリンクテキスト"
+
+#~ msgctxt "color-kcm-preview"
+#~ msgid "link"
+#~ msgstr "リンク"
+
+#~ msgid "Selection Visited Text against Selection Normal Background"
+#~ msgstr "選択の通常の背景に対する選択の訪問済みリンクのテキスト"
+
+#~ msgctxt "color-kcm-preview"
+#~ msgid "visited"
+#~ msgstr "訪問済み"
+
+#~ msgid "Selection Active Text against Selection Normal Background"
+#~ msgstr "選択の通常の背景に対する選択のアクティブなテキスト"
+
+#~ msgctxt "color-kcm-preview"
+#~ msgid "a"
+#~ msgstr "a"
+
+#~ msgid "Selection Inactive Text against Selection Normal Background"
+#~ msgstr "選択の通常の背景に対する選択の非アクティブなテキスト"
+
+#~ msgctxt "color-kcm-preview"
+#~ msgid "i"
+#~ msgstr "i"
+
+#~ msgid "Selection Negative Text against Selection Normal Background"
+#~ msgstr "選択の通常の背景に対する選択のネガティブなテキスト"
+
+#~ msgctxt "color-kcm-preview"
+#~ msgid "!"
+#~ msgstr "!"
+
+#~ msgid "Selection Neutral Text against Selection Normal Background"
+#~ msgstr "選択の通常の背景に対する選択のニュートラルなテキスト"
+
+#~ msgctxt "color-kcm-preview"
+#~ msgid "="
+#~ msgstr "="
+
+#~ msgid "Selection Positive Text against Selection Normal Background"
+#~ msgstr "通常の背景に対するポジティブな選択テキスト"
+
+#~ msgctxt "color-kcm-preview"
+#~ msgid "+"
+#~ msgstr "+"
+
+#~ msgid "View Normal Text against View Normal Background"
+#~ msgstr "ビューの通常の背景に対するビューの通常のテキスト"
+
+#~ msgctxt "color-kcm-preview"
+#~ msgid "Normal text"
+#~ msgstr "通常のテキスト"
+
+#~ msgid "View Link Text against View Normal Background"
+#~ msgstr "ビューの通常の背景に対するビューのリンクテキスト"
+
+#~ msgid "View Visited Text against View Normal Background"
+#~ msgstr "ビューの通常の背景に対するビューの訪問済みリンクのテキスト"
+
+#~ msgid "View Active Text against View Normal Background"
+#~ msgstr "ビューの通常の背景に対するビューのアクティブなテキスト"
+
+#~ msgid "View Inactive Text against View Normal Background"
+#~ msgstr "ビューの通常の背景に対するビューの非アクティブなテキスト"
+
+#~ msgid "View Negative Text against View Normal Background"
+#~ msgstr "ビューの通常の背景に対するビューのネガティブなテキスト"
+
+#~ msgid "View Neutral Text against View Normal Background"
+#~ msgstr "ビューの通常の背景に対するビューのニュートラルなテキスト"
+
+#~ msgid "View Positive Text against View Normal Background"
+#~ msgstr "ビューの通常の背景に対するビューのポジティブなテキスト"
+
+#~ msgid "Color set:"
+#~ msgstr "色セット:"
+
+#~ msgid "Colorset to view/modify"
+#~ msgstr "表示/変更する色セット"
+
+#~ msgctxt "color-sets"
+#~ msgid "Common Colors"
+#~ msgstr "共通色"
+
+#~ msgctxt "color-sets"
+#~ msgid "View"
+#~ msgstr "ビュー"
+
+#~ msgctxt "color-sets"
+#~ msgid "Window"
+#~ msgstr "ウィンドウ"
+
+#~ msgctxt "color-sets"
+#~ msgid "Button"
+#~ msgstr "ボタン"
+
+#~ msgctxt "color-sets"
+#~ msgid "Selection"
+#~ msgstr "選択"
+
+#~ msgctxt "color-sets"
+#~ msgid "Tooltip"
+#~ msgstr "ツールチップ"
+
+#~ msgctxt "color-sets"
+#~ msgid "Complementary"
+#~ msgstr "補足"
+
+#~ msgctxt "color-sets"
+#~ msgid "Header"
+#~ msgstr "ヘッダ"
+
+#~ msgid "New Row"
+#~ msgstr "新しい行"
+
+#~ msgid "0"
+#~ msgstr "0"
+
+#~ msgid "1"
+#~ msgstr "1"
+
+#~ msgid "View Background"
+#~ msgstr "ビューの背景"
+
+#~ msgid "View Text"
+#~ msgstr "ビューのテキスト"
+
+#~ msgid "Window Background"
+#~ msgstr "ウィンドウの背景"
+
+#~ msgid "Window Text"
+#~ msgstr "ウィンドウのテキスト"
+
+#~ msgid "Button Background"
+#~ msgstr "ボタンの背景"
+
+#~ msgid "Button Text"
+#~ msgstr "ボタンのテキスト"
+
+#~ msgid "Selection Background"
+#~ msgstr "選択の背景"
+
+#~ msgid "Selection Text"
+#~ msgstr "選択のテキスト"
+
+#~ msgid "Selection Inactive Text"
+#~ msgstr "選択の非アクティブなテキスト"
+
+#~ msgid "Tooltip Background"
+#~ msgstr "ツールチップの背景"
+
+#~ msgid "Tooltip Text"
+#~ msgstr "ツールチップのテキスト"
+
+#~ msgid "Active Titlebar"
+#~ msgstr "アクティブなタイトルバー"
+
+#~ msgid "Active Titlebar Text"
+#~ msgstr "アクティブなタイトルバーのテキスト"
+
+#~ msgid "Active Titlebar Secondary"
+#~ msgstr "アクティブなタイトルバー (セカンダリ)"
+
+#~ msgid "Inactive Titlebar"
+#~ msgstr "非アクティブなタイトルバー"
+
+#~ msgid "Inactive Titlebar Text"
+#~ msgstr "非アクティブなタイトルバーのテキスト"
+
+#~ msgid "Inactive Titlebar Secondary"
+#~ msgstr "非アクティブなタイトルバー (セカンダリ)"
+
+#~ msgid "Color:"
+#~ msgstr "色:"
+
+#~ msgid "Intensity:"
+#~ msgstr "強調:"
+
+#~ msgid "Disabled color effect type"
+#~ msgstr "無効の色効果のタイプ"
+
+#~ msgctxt "no disabled color effect"
+#~ msgid "None"
+#~ msgstr "なし"
+
+#~ msgctxt "disabled color effect"
+#~ msgid "Desaturate"
+#~ msgstr "彩度を減らす"
+
+#~ msgctxt "disabled color effect"
+#~ msgid "Fade"
+#~ msgstr "フェード"
+
+#~ msgctxt "disabled color effect"
+#~ msgid "Tint"
+#~ msgstr "色付け"
+
+#~ msgid "Disabled intensity effect type"
+#~ msgstr "無効の強調効果のタイプ"
+
+#~ msgctxt "no disabled intensity effect"
+#~ msgid "None"
+#~ msgstr "なし"
+
+#~ msgctxt "disabled intensity effect"
+#~ msgid "Shade"
+#~ msgstr "シェード"
+
+#~ msgctxt "disabled intensity effect"
+#~ msgid "Darken"
+#~ msgstr "暗く"
+
+#~ msgctxt "disabled intensity effect"
+#~ msgid "Lighten"
+#~ msgstr "明るく"
+
+#~ msgid "Contrast:"
+#~ msgstr "コントラスト:"
+
+#~ msgid "Disabled color effect amount"
+#~ msgstr "無効の色効果の強さ"
+
+#~ msgid "Disabled intensity effect amount"
+#~ msgstr "無効の強調効果の強さ"
+
+#~ msgid "Disabled color"
+#~ msgstr "無効の色"
+
+#~ msgid "Disabled contrast type"
+#~ msgstr "無効のコントラストのタイプ"
+
+#~ msgctxt "no disabled contrast"
+#~ msgid "None"
+#~ msgstr "なし"
+
+#~ msgctxt "disabled contrast"
+#~ msgid "Fade"
+#~ msgstr "フェード"
+
+#~ msgctxt "disabled contrast"
+#~ msgid "Tint"
+#~ msgstr "色付け"
+
+#~ msgid "Disabled contrast amount"
+#~ msgstr "無効のコントラストの強さ"
+
+#~ msgid "Apply &effects to inactive windows"
+#~ msgstr "非アクティブなウィンドウに効果を適用する(&E)"
+
+#~ msgid "Use different colors for in&active selections"
+#~ msgstr "非アクティブな選択には異なった色を使用する(&A)"
+
+#~ msgid "Shade sorted column &in lists"
+#~ msgstr "リストでソートされた列にトーンをかける(&I)"
+
+#~ msgid "Tint all colors with accent color"
+#~ msgstr "すべての色にアクセントカラーの色味をつける"
+
+#~ msgid "Make window titlebars a&ccent-colored"
+#~ msgstr "ウィンドウのタイトルバーをアクセントカラーで染める(&C)"
+
+#~ msgid "Tint strength:"
+#~ msgstr "色味の強さ:"
+
+#~ msgid "Shading of frames and lighting (\"3D\") effects"
+#~ msgstr "枠の影付けと 3D 効果"
+
+#~ msgid "Shading"
+#~ msgstr "影付け"
+
+#~ msgid "Maximum"
+#~ msgstr "最大"
+
+#~ msgid "Minimum"
+#~ msgstr "最小"
+
+#~ msgid "Contrast"
+#~ msgstr "コントラスト"
+
+#~ msgid "Normal Text on Normal Background"
+#~ msgstr "通常の背景上の通常のテキスト"
+
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "normal"
+#~ msgstr "通常"
+
+#~ msgid "Link Text on Normal Background"
+#~ msgstr "通常の背景上のリンクテキスト"
+
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "link"
+#~ msgstr "リンク"
+
+#~ msgid "Visited Text on Normal Background"
+#~ msgstr "通常の背景上の訪問済みリンクのテキスト"
+
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "visited"
+#~ msgstr "訪問済み"
+
+#~ msgid "Active Text on Normal Background"
+#~ msgstr "通常の背景上のアクティブなテキスト"
+
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "active"
+#~ msgstr "アクティブ"
+
+#~ msgid "Inactive Text on Normal Background"
+#~ msgstr "通常の背景上の非アクティブなテキスト"
+
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "inactive"
+#~ msgstr "非アクティブ"
+
+#~ msgid "Negative Text on Normal Background"
+#~ msgstr "通常の背景上のネガティブなテキスト"
+
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "negative"
+#~ msgstr "ネガティブ"
+
+#~ msgid "Neutral Text on Normal Background"
+#~ msgstr "通常の背景上のニュートラルなテキスト"
+
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "neutral"
+#~ msgstr "ニュートラル"
+
+#~ msgid "Positive Text on Normal Background"
+#~ msgstr "通常の背景上のポジティブなテキスト"
+
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "positive"
+#~ msgstr "ポジティブ"
+
+#~ msgid "Hover on Normal Background"
+#~ msgstr "通常の背景上のマウスオーバー"
+
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "hover"
+#~ msgstr "マウスオーバー"
+
+#~ msgid ""
+#~ "Link Text on Link Background\n"
+#~ "(Note: Link Background is derived from Link Text and cannot be separately "
+#~ "configured at this time)"
+#~ msgstr ""
+#~ "リンクテキストとその背景\n"
+#~ "(注意: リンクの背景はリンクテキストから派生しており、ここでは別々に設定す"
+#~ "ることはできません。)"
+
+#~ msgid ""
+#~ "Visited Text on Visited Background\n"
+#~ "(Note: Visited Background is derived from Visited Text and cannot be "
+#~ "separately configured at this time)"
+#~ msgstr ""
+#~ "訪問済みのテキストとその背景\n"
+#~ "(注意: 訪問済み背景は訪問済みテキストから派生しており、ここでは別々に設定"
+#~ "することはできません。)"
+
+#~ msgid ""
+#~ "Active Text on Active Background\n"
+#~ "(Note: Active Background is derived from Active Text and cannot be "
+#~ "separately configured at this time)"
+#~ msgstr ""
+#~ "アクティブなテキストとその背景\n"
+#~ "(注意: アクティブな背景はアクティブなテキストから派生しており、ここでは"
+#~ "別々に設定することはできません。)"
+
+#~ msgid "Inactive Text on Alternate Background"
+#~ msgstr "もう一つの背景上の非アクティブなテキスト"
+
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "alternate"
+#~ msgstr "もう一つの背景"
+
+#~ msgid ""
+#~ "Negative Text on Negative Background\n"
+#~ "(Note: Negative Background is derived from Negative Text and cannot be "
+#~ "separately configured at this time)"
+#~ msgstr ""
+#~ "ネガティブなテキストとその背景\n"
+#~ "(注意: ネガティブな背景はネガティブなテキストから派生しており、ここでは"
+#~ "別々に設定することはできません。)"
+
+#~ msgid ""
+#~ "Neutral Text on Neutral Background\n"
+#~ "(Note: Neutral Background is derived from Neutral Text and cannot be "
+#~ "separately configured at this time)"
+#~ msgstr ""
+#~ "ニュートラルなテキストとその背景\n"
+#~ "(注意: ニュートラルな背景はニュートラルなテキストから派生しており、ここで"
+#~ "は別々に設定することはできません。)"
+
+#~ msgid ""
+#~ "Positive Text on Positive Background\n"
+#~ "(Note: Positive Background is derived from Positive Text and cannot be "
+#~ "separately configured at this time)"
+#~ msgstr ""
+#~ "ポジティブなテキストとその背景\n"
+#~ "(注意: ポジティブな背景はポジティブなテキストから派生しており、ここでは"
+#~ "別々に設定することはできません。)"
+
+#~ msgid "Focus on Normal Background"
+#~ msgstr "通常の背景上のフォーカス"
+
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "focus"
+#~ msgstr "フォーカス"

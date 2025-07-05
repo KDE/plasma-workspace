@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-29 02:56+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2021-11-27 12:35+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -1648,12 +1648,6 @@ msgstr "Aurreikusi katea"
 msgid "Please enter new string:"
 msgstr "Sartu kate berria:"
 
-#. i18n: ectx: ToolBar (mainToolBar)
-#: viewpart/kfontviewpart.rc:4
-#, kde-format
-msgid "&Main Toolbar"
-msgstr "&Tresna-barra nagusia"
-
 #: viewpart/PreviewSelectAction.cpp:13
 #, kde-format
 msgid "Preview Type"
@@ -2346,6 +2340,9 @@ msgstr "Phags Pa"
 #: viewpart/UnicodeScripts.h:80
 msgid "Yi"
 msgstr "Yia"
+
+#~ msgid "&Main Toolbar"
+#~ msgstr "&Tresna-barra nagusia"
 
 #~ msgid "Print..."
 #~ msgstr "Inprimatu..."

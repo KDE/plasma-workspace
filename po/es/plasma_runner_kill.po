@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_kill\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2020-05-14 20:33+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -65,35 +65,20 @@ msgstr "consumo de CPU invertido"
 msgid "nothing"
 msgstr "nada"
 
-#. i18n: ectx: property (title), widget (QGroupBox, main)
-#: killrunner_config.ui:30
-#, kde-format
-msgid "Kill Applications Config"
-msgstr "Configuración para matar aplicaciones"
+#~ msgid "Kill Applications Config"
+#~ msgstr "Configuración para matar aplicaciones"
 
-#. i18n: ectx: property (text), widget (QCheckBox, useTriggerWord)
-#: killrunner_config.ui:39
-#, kde-format
-msgid "&Use trigger word"
-msgstr "&Usar palabra de activación"
+#~ msgid "&Use trigger word"
+#~ msgstr "&Usar palabra de activación"
 
-#. i18n: ectx: property (text), widget (QLabel, label_trigger)
-#: killrunner_config.ui:51
-#, kde-format
-msgid "&Trigger word:"
-msgstr "Palabra de ac&tivación:"
+#~ msgid "&Trigger word:"
+#~ msgstr "Palabra de ac&tivación:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_sorting)
-#: killrunner_config.ui:72
-#, kde-format
-msgid "&Sort by"
-msgstr "&Ordenar por"
+#~ msgid "&Sort by"
+#~ msgstr "&Ordenar por"
 
-#. i18n: ectx: property (toolTip), widget (KComboBox, sorting)
-#: killrunner_config.ui:82
-#, kde-format
-msgid "It is not sure, that this will take effect"
-msgstr "No es seguro que esto surta efecto"
+#~ msgid "It is not sure, that this will take effect"
+#~ msgstr "No es seguro que esto surta efecto"
 
 #~ msgid ""
 #~ "Process ID: %1\n"

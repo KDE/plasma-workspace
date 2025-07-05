@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm5_icons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-22 00:47+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2022-10-22 09:26+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -42,48 +42,6 @@ msgstr "Малі піктограми"
 #, kde-format
 msgid "Dialogs"
 msgstr "Діалогові вікна"
-
-#. i18n: ectx: label, entry (Theme), group (Icons)
-#: iconssettingsbase.kcfg:9
-#, kde-format
-msgid "Name of the current icon theme"
-msgstr "Назва поточної теми піктограм"
-
-#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
-#: iconssettingsbase.kcfg:15
-#, kde-format
-msgid "Desktop icons size"
-msgstr "Розмір піктограм на стільниці"
-
-#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
-#: iconssettingsbase.kcfg:21
-#, kde-format
-msgid "Toolbar icons size"
-msgstr "Розмір піктограм на панелі інструментів"
-
-#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
-#: iconssettingsbase.kcfg:27
-#, kde-format
-msgid "Main toolbar icons size"
-msgstr "Розмір піктограм головної панелі інструментів"
-
-#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
-#: iconssettingsbase.kcfg:33
-#, kde-format
-msgid "Small icons size"
-msgstr "Розмір малих піктограм"
-
-#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
-#: iconssettingsbase.kcfg:39
-#, kde-format
-msgid "Panel icons size"
-msgstr "Розмір піктограм на панелі"
-
-#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
-#: iconssettingsbase.kcfg:45
-#, kde-format
-msgid "Dialog icons size"
-msgstr "Розмір піктограм у діалогових вікнах"
 
 #: main.cpp:182
 #, kde-format
@@ -196,6 +154,27 @@ msgstr "Відкриття теми"
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "файли тем (*.tar.gz *.tar.bz2)"
+
+#~ msgid "Name of the current icon theme"
+#~ msgstr "Назва поточної теми піктограм"
+
+#~ msgid "Desktop icons size"
+#~ msgstr "Розмір піктограм на стільниці"
+
+#~ msgid "Toolbar icons size"
+#~ msgstr "Розмір піктограм на панелі інструментів"
+
+#~ msgid "Main toolbar icons size"
+#~ msgstr "Розмір піктограм головної панелі інструментів"
+
+#~ msgid "Small icons size"
+#~ msgstr "Розмір малих піктограм"
+
+#~ msgid "Panel icons size"
+#~ msgstr "Розмір піктограм на панелі"
+
+#~ msgid "Dialog icons size"
+#~ msgstr "Розмір піктограм у діалогових вікнах"
 
 #~ msgid "Toolbar"
 #~ msgstr "Пенал"

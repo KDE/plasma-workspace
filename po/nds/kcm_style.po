@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-24 03:15+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2014-02-17 01:45+0100\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -161,86 +161,53 @@ msgstr "&Instellen..."
 msgid "Configure %1"
 msgstr "%1 instellen"
 
-#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
-#: stylepreview.ui:33
-#, kde-format
-msgid "Tab 1"
-msgstr "Dialoogsiet 1"
+#~ msgid "Tab 1"
+#~ msgstr "Dialoogsiet 1"
 
-#. i18n: ectx: property (text), widget (QPushButton, pushButton)
-#: stylepreview.ui:65
-#, fuzzy, kde-format
-#| msgid "Button"
-msgid "Push Button"
-msgstr "Knoop"
+#, fuzzy
+#~| msgid "Button"
+#~ msgid "Push Button"
+#~ msgstr "Knoop"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
-#: stylepreview.ui:86
-#, fuzzy, kde-format
-#| msgid "Combobox"
-msgid "Combo box"
-msgstr "Utsöökfeld"
+#, fuzzy
+#~| msgid "Combobox"
+#~ msgid "Combo box"
+#~ msgstr "Utsöökfeld"
 
-#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
-#: stylepreview.ui:96
-#, kde-format
-msgid "Checkbox"
-msgstr "Krüüzfeld"
+#~ msgid "Checkbox"
+#~ msgstr "Krüüzfeld"
 
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
-#: stylepreview.ui:106 stylepreview.ui:116
-#, kde-format
-msgid "Radio button"
-msgstr "Radioknoop"
+#~ msgid "Radio button"
+#~ msgstr "Radioknoop"
 
-#. i18n: ectx: property (format), widget (QProgressBar, progressBar)
-#: stylepreview.ui:128
-#, no-c-format, kde-format
-msgid "%p%"
-msgstr ""
+#~ msgid "Tab 2"
+#~ msgstr "Dialoogsiet 2"
 
-#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
-#: stylepreview.ui:136
-#, kde-format
-msgid "Tab 2"
-msgstr "Dialoogsiet 2"
+#, fuzzy
+#~| msgctxt "@title:tab"
+#~| msgid "&Applications"
+#~ msgid "Application style"
+#~ msgstr "&Programmen"
 
-#. i18n: ectx: label, entry (widgetStyle), group (KDE)
-#: stylesettings.kcfg:9
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "&Applications"
-msgid "Application style"
-msgstr "&Programmen"
+#, fuzzy
+#~| msgid "Show icons on buttons:"
+#~ msgid "Show icons on buttons"
+#~ msgstr "Lüttbiller op Knööp wiesen:"
 
-#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
-#: stylesettings.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Show icons on buttons:"
-msgid "Show icons on buttons"
-msgstr "Lüttbiller op Knööp wiesen:"
+#, fuzzy
+#~| msgid "Show icons on buttons:"
+#~ msgid "Show icons in menus"
+#~ msgstr "Lüttbiller op Knööp wiesen:"
 
-#. i18n: ectx: label, entry (iconsInMenus), group (KDE)
-#: stylesettings.kcfg:17
-#, fuzzy, kde-format
-#| msgid "Show icons on buttons:"
-msgid "Show icons in menus"
-msgstr "Lüttbiller op Knööp wiesen:"
+#, fuzzy
+#~| msgid "Main toolbar text:"
+#~ msgid "Main toolbar label"
+#~ msgstr "Hööft-Warktüüchbalkentext:"
 
-#. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
-#: stylesettings.kcfg:23
-#, fuzzy, kde-format
-#| msgid "Main toolbar text:"
-msgid "Main toolbar label"
-msgstr "Hööft-Warktüüchbalkentext:"
-
-#. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
-#: stylesettings.kcfg:27
-#, fuzzy, kde-format
-#| msgid "Secondary toolbar text:"
-msgid "Secondary toolbar label"
-msgstr "Tweet Warktüüchbalkentext:"
+#, fuzzy
+#~| msgid "Secondary toolbar text:"
+#~ msgid "Secondary toolbar label"
+#~ msgstr "Tweet Warktüüchbalkentext:"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

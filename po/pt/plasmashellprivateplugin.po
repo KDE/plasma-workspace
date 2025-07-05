@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-31 02:25+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2023-01-19 02:31+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -130,30 +130,6 @@ msgstr "Manter Aberto"
 #, kde-format
 msgid "Configure…"
 msgstr "Configurar…"
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:10
-#, kde-format
-msgid "Screen lock enabled"
-msgstr "Bloqueio do ecrã activo"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:11
-#, kde-format
-msgid "Sets whether the screen will be locked after the specified time."
-msgstr "Define se o ecrã será bloqueado após o tempo indicado."
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:16
-#, kde-format
-msgid "Screen saver timeout"
-msgstr "Tempo-limite do protector do ecrã"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:17
-#, kde-format
-msgid "Sets the minutes after which the screen is locked."
-msgstr "Define os minutos, após os quais o ecrã será bloqueado."
 
 #: sessionsprivate/sessionsmodel.cpp:235 sessionsprivate/sessionsmodel.cpp:239
 #, kde-format
@@ -326,3 +302,15 @@ msgstr "Obter Novos Elementos do Plasma"
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "Instalar um Elemento do Ficheiro Local…"
+
+#~ msgid "Screen lock enabled"
+#~ msgstr "Bloqueio do ecrã activo"
+
+#~ msgid "Sets whether the screen will be locked after the specified time."
+#~ msgstr "Define se o ecrã será bloqueado após o tempo indicado."
+
+#~ msgid "Screen saver timeout"
+#~ msgstr "Tempo-limite do protector do ecrã"
+
+#~ msgid "Sets the minutes after which the screen is locked."
+#~ msgstr "Define os minutos, após os quais o ecrã será bloqueado."

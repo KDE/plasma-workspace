@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2020-07-15 10:20+0400\n"
 "Last-Translator: Xəyyam Qocayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -62,32 +62,17 @@ msgstr "Prosessorun istifadəsinə görə (əksinə)"
 msgid "nothing"
 msgstr "heç biri"
 
-#. i18n: ectx: property (title), widget (QGroupBox, main)
-#: killrunner_config.ui:30
-#, kde-format
-msgid "Kill Applications Config"
-msgstr "Tətbiqin məhv edilmısi Ayarı"
+#~ msgid "Kill Applications Config"
+#~ msgstr "Tətbiqin məhv edilmısi Ayarı"
 
-#. i18n: ectx: property (text), widget (QCheckBox, useTriggerWord)
-#: killrunner_config.ui:39
-#, kde-format
-msgid "&Use trigger word"
-msgstr "&Açar sözündən istifadə etmək"
+#~ msgid "&Use trigger word"
+#~ msgstr "&Açar sözündən istifadə etmək"
 
-#. i18n: ectx: property (text), widget (QLabel, label_trigger)
-#: killrunner_config.ui:51
-#, kde-format
-msgid "&Trigger word:"
-msgstr "&Açar sözü"
+#~ msgid "&Trigger word:"
+#~ msgstr "&Açar sözü"
 
-#. i18n: ectx: property (text), widget (QLabel, label_sorting)
-#: killrunner_config.ui:72
-#, kde-format
-msgid "&Sort by"
-msgstr "&Çeşidləmə:"
+#~ msgid "&Sort by"
+#~ msgstr "&Çeşidləmə:"
 
-#. i18n: ectx: property (toolTip), widget (KComboBox, sorting)
-#: killrunner_config.ui:82
-#, kde-format
-msgid "It is not sure, that this will take effect"
-msgstr "Bunun effektiv olacağı bəlli deyil"
+#~ msgid "It is not sure, that this will take effect"
+#~ msgstr "Bunun effektiv olacağı bəlli deyil"

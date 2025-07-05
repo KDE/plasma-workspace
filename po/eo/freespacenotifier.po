@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kded_susefreespacenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-17 00:48+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2023-01-01 21:06+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -32,36 +32,6 @@ msgstr "Malfermi en Filelight"
 msgid "Open in File Manager"
 msgstr "Malfermi en File Manager"
 
-#. i18n: ectx: label, entry (minimumSpace), group (General)
-#: freespacenotifier.kcfg:9
-#, kde-format
-msgid "Minimum free space before user starts being notified."
-msgstr "Minimuma libera spaco antaŭ kiu uzanto ekhavos atentigojn."
-
-#. i18n: ectx: label, entry (enableNotification), group (General)
-#: freespacenotifier.kcfg:15
-#, kde-format
-msgid "Is the free space notification enabled."
-msgstr "Ĉu la atentigo pri libera spaco estas enŝaltata."
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableNotification)
-#: freespacenotifier_prefs_base.ui:17
-#, kde-format
-msgid "Enable low disk space warning"
-msgstr "Enŝalti averton pri malmulta liberspaco"
-
-#. i18n: ectx: property (text), widget (QLabel, label_minimumSpace)
-#: freespacenotifier_prefs_base.ui:27
-#, kde-format
-msgid "Warn when free space is below:"
-msgstr "Averti kiam libera spaco malpliiĝas ol:"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpace)
-#: freespacenotifier_prefs_base.ui:37
-#, kde-format
-msgid " MiB"
-msgstr " MiB"
-
 #: module.cpp:37
 #, kde-format
 msgid ""
@@ -84,3 +54,18 @@ msgstr ""
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"
 msgstr "Ĝeneralo"
+
+#~ msgid "Minimum free space before user starts being notified."
+#~ msgstr "Minimuma libera spaco antaŭ kiu uzanto ekhavos atentigojn."
+
+#~ msgid "Is the free space notification enabled."
+#~ msgstr "Ĉu la atentigo pri libera spaco estas enŝaltata."
+
+#~ msgid "Enable low disk space warning"
+#~ msgstr "Enŝalti averton pri malmulta liberspaco"
+
+#~ msgid "Warn when free space is below:"
+#~ msgstr "Averti kiam libera spaco malpliiĝas ol:"
+
+#~ msgid " MiB"
+#~ msgstr " MiB"

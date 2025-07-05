@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-29 02:56+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2021-12-12 14:50+0200\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -1651,12 +1651,6 @@ msgstr "Peržiūros eilutė"
 msgid "Please enter new string:"
 msgstr "Įveskite naują eilutę:"
 
-#. i18n: ectx: ToolBar (mainToolBar)
-#: viewpart/kfontviewpart.rc:4
-#, kde-format
-msgid "&Main Toolbar"
-msgstr "&Pagrindinė įrankių juosta"
-
 #: viewpart/PreviewSelectAction.cpp:13
 #, kde-format
 msgid "Preview Type"
@@ -2349,6 +2343,9 @@ msgstr "Phagspos raštas"
 #: viewpart/UnicodeScripts.h:80
 msgid "Yi"
 msgstr "Yi"
+
+#~ msgid "&Main Toolbar"
+#~ msgstr "&Pagrindinė įrankių juosta"
 
 #~ msgid "Print..."
 #~ msgstr "Spausdinti..."

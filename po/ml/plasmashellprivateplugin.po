@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-31 02:25+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2021-08-12 11:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -136,30 +136,6 @@ msgstr ""
 #, kde-format
 msgid "Configure…"
 msgstr ""
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:10
-#, kde-format
-msgid "Screen lock enabled"
-msgstr "സ്ക്രീൻ ലോക്ക് പ്രവർത്തനക്ഷമമാക്കി"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:11
-#, kde-format
-msgid "Sets whether the screen will be locked after the specified time."
-msgstr "നിർദ്ദിഷ്ട സമയത്തിന് ശേഷം സ്‌ക്രീൻ ലോക്കുചെയ്യണോ എന്നത് സജ്ജമാക്കുന്നു."
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:16
-#, kde-format
-msgid "Screen saver timeout"
-msgstr "സ്ക്രീൻ സേവർ ടൈം ഔട്ട്"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:17
-#, kde-format
-msgid "Sets the minutes after which the screen is locked."
-msgstr "സ്‌ക്രീൻ ലോക്കുചെയ്‌തതിന് ശേഷം മിനിറ്റുകൾ സജ്ജമാക്കുന്നു."
 
 #: sessionsprivate/sessionsmodel.cpp:235 sessionsprivate/sessionsmodel.cpp:239
 #, kde-format
@@ -333,6 +309,18 @@ msgstr "പുതിയ പ്ലാസ്മ വിഡ്ജറ്റുകൾ 
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "തദ്ദേശ ഫയലിൽ നിന്ന് വിഡ്ജറ്റ് ഇൻസ്റ്റാൾ ചെയ്യുക…"
+
+#~ msgid "Screen lock enabled"
+#~ msgstr "സ്ക്രീൻ ലോക്ക് പ്രവർത്തനക്ഷമമാക്കി"
+
+#~ msgid "Sets whether the screen will be locked after the specified time."
+#~ msgstr "നിർദ്ദിഷ്ട സമയത്തിന് ശേഷം സ്‌ക്രീൻ ലോക്കുചെയ്യണോ എന്നത് സജ്ജമാക്കുന്നു."
+
+#~ msgid "Screen saver timeout"
+#~ msgstr "സ്ക്രീൻ സേവർ ടൈം ഔട്ട്"
+
+#~ msgid "Sets the minutes after which the screen is locked."
+#~ msgstr "സ്‌ക്രീൻ ലോക്കുചെയ്‌തതിന് ശേഷം മിനിറ്റുകൾ സജ്ജമാക്കുന്നു."
 
 #~ msgid "&Execute"
 #~ msgstr "&പ്രവർത്തിപ്പിക്കുക"

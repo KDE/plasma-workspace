@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-31 02:25+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2021-08-21 16:25+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -134,30 +134,6 @@ msgstr ""
 #, kde-format
 msgid "Configure…"
 msgstr ""
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:10
-#, kde-format
-msgid "Screen lock enabled"
-msgstr "स्क्रीन तालाबंदी सक्षम"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:11
-#, kde-format
-msgid "Sets whether the screen will be locked after the specified time."
-msgstr "नियत करता है कि निर्दिष्ट समय के बाद स्क्रीन तालाबंद हो जाएगी या नहीं।"
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:16
-#, kde-format
-msgid "Screen saver timeout"
-msgstr "स्क्रीन सेवर समय समाप्त"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:17
-#, kde-format
-msgid "Sets the minutes after which the screen is locked."
-msgstr "मिनटों को नियत करता है जिसके बाद स्क्रीन लॉक हो जाती है।"
 
 #: sessionsprivate/sessionsmodel.cpp:235 sessionsprivate/sessionsmodel.cpp:239
 #, kde-format
@@ -331,6 +307,18 @@ msgstr "नए प्लाज़्मा विजेटों को डा�
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "स्थानीय फ़ाइल से विजेट स्थापित करें…"
+
+#~ msgid "Screen lock enabled"
+#~ msgstr "स्क्रीन तालाबंदी सक्षम"
+
+#~ msgid "Sets whether the screen will be locked after the specified time."
+#~ msgstr "नियत करता है कि निर्दिष्ट समय के बाद स्क्रीन तालाबंद हो जाएगी या नहीं।"
+
+#~ msgid "Screen saver timeout"
+#~ msgstr "स्क्रीन सेवर समय समाप्त"
+
+#~ msgid "Sets the minutes after which the screen is locked."
+#~ msgstr "मिनटों को नियत करता है जिसके बाद स्क्रीन लॉक हो जाती है।"
 
 #~ msgid "&Execute"
 #~ msgstr "चलाएँ (&E)"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_containmentactions_switchwindow\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2009-12-24 06:59-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -16,24 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
-
-#. i18n: ectx: property (text), widget (QRadioButton, flatButton)
-#: config.ui:16
-#, kde-format
-msgid "Display all windows in one list"
-msgstr "Taispeáin gach fuinneog i liosta amháin"
-
-#. i18n: ectx: property (text), widget (QRadioButton, subButton)
-#: config.ui:23
-#, kde-format
-msgid "Display a submenu for each desktop"
-msgstr "Taispeáin foroghchlár le haghaidh gach deasc"
-
-#. i18n: ectx: property (text), widget (QRadioButton, curButton)
-#: config.ui:30
-#, kde-format
-msgid "Display only the current desktop's windows"
-msgstr "Ná taispeáin ach na fuinneoga ar an deasc reatha"
 
 #: switch.cpp:75
 #, fuzzy, kde-format
@@ -55,3 +37,12 @@ msgstr "Fuinneoga"
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "All Desktops"
 msgstr "Gach Deasc"
+
+#~ msgid "Display all windows in one list"
+#~ msgstr "Taispeáin gach fuinneog i liosta amháin"
+
+#~ msgid "Display a submenu for each desktop"
+#~ msgstr "Taispeáin foroghchlár le haghaidh gach deasc"
+
+#~ msgid "Display only the current desktop's windows"
+#~ msgstr "Ná taispeáin ach na fuinneoga ar an deasc reatha"

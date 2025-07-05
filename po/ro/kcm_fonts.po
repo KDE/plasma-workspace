@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-15 00:48+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2022-12-29 17:29+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -16,54 +16,6 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
 "X-Generator: Lokalize 21.12.3\n"
-
-#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
-#: fontsaasettingsbase.kcfg:9
-#, kde-format
-msgid "Force font DPI Wayland"
-msgstr "Forțează DPI-ul fonturilor în Wayland"
-
-#. i18n: ectx: label, entry (forceFontDPI), group (General)
-#: fontsaasettingsbase.kcfg:13
-#, kde-format
-msgid "Force font DPI on X11"
-msgstr "Forțează DPI-ul fonturilor în X11"
-
-#. i18n: ectx: label, entry (font), group (General)
-#: fontssettings.kcfg:9
-#, kde-format
-msgid "General font"
-msgstr "Font general"
-
-#. i18n: ectx: label, entry (fixed), group (General)
-#: fontssettings.kcfg:21
-#, kde-format
-msgid "Fixed width font"
-msgstr "Font cu lățime fixă"
-
-#. i18n: ectx: label, entry (smallestReadableFont), group (General)
-#: fontssettings.kcfg:33
-#, kde-format
-msgid "Small font"
-msgstr "Font mic"
-
-#. i18n: ectx: label, entry (toolBarFont), group (General)
-#: fontssettings.kcfg:45
-#, kde-format
-msgid "Tool bar font"
-msgstr "Font pentru bara de unelte"
-
-#. i18n: ectx: label, entry (menuFont), group (General)
-#: fontssettings.kcfg:57
-#, kde-format
-msgid "Menu font"
-msgstr "Font pentru meniuri"
-
-#. i18n: ectx: label, entry (activeFont), group (WM)
-#: fontssettings.kcfg:71
-#, kde-format
-msgid "Window title font"
-msgstr "Font pentru titlu fereastră"
 
 #: kxftconfig.cpp:458
 #, kde-format
@@ -359,6 +311,30 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "Alege fontul"
+
+#~ msgid "Force font DPI Wayland"
+#~ msgstr "Forțează DPI-ul fonturilor în Wayland"
+
+#~ msgid "Force font DPI on X11"
+#~ msgstr "Forțează DPI-ul fonturilor în X11"
+
+#~ msgid "General font"
+#~ msgstr "Font general"
+
+#~ msgid "Fixed width font"
+#~ msgstr "Font cu lățime fixă"
+
+#~ msgid "Small font"
+#~ msgstr "Font mic"
+
+#~ msgid "Tool bar font"
+#~ msgstr "Font pentru bara de unelte"
+
+#~ msgid "Menu font"
+#~ msgstr "Font pentru meniuri"
+
+#~ msgid "Window title font"
+#~ msgstr "Font pentru titlu fereastră"
 
 #~ msgid "Change Display Scaling…"
 #~ msgstr "Modifică scalarea afișajului…"

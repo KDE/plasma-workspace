@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-15 00:48+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2023-07-26 12:22+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -16,54 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 20.08.1\n"
-
-#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
-#: fontsaasettingsbase.kcfg:9
-#, kde-format
-msgid "Force font DPI Wayland"
-msgstr "Tvinga teckensnittens punkter per tum för Wayland:"
-
-#. i18n: ectx: label, entry (forceFontDPI), group (General)
-#: fontsaasettingsbase.kcfg:13
-#, kde-format
-msgid "Force font DPI on X11"
-msgstr "Tvinga teckensnittens punkter/tum för X11"
-
-#. i18n: ectx: label, entry (font), group (General)
-#: fontssettings.kcfg:9
-#, kde-format
-msgid "General font"
-msgstr "Allmänt teckensnitt"
-
-#. i18n: ectx: label, entry (fixed), group (General)
-#: fontssettings.kcfg:21
-#, kde-format
-msgid "Fixed width font"
-msgstr "Teckensnitt med fast breddsteg"
-
-#. i18n: ectx: label, entry (smallestReadableFont), group (General)
-#: fontssettings.kcfg:33
-#, kde-format
-msgid "Small font"
-msgstr "Litet teckensnitt"
-
-#. i18n: ectx: label, entry (toolBarFont), group (General)
-#: fontssettings.kcfg:45
-#, kde-format
-msgid "Tool bar font"
-msgstr "Teckensnitt för verktygsrad"
-
-#. i18n: ectx: label, entry (menuFont), group (General)
-#: fontssettings.kcfg:57
-#, kde-format
-msgid "Menu font"
-msgstr "Teckensnitt för meny"
-
-#. i18n: ectx: label, entry (activeFont), group (WM)
-#: fontssettings.kcfg:71
-#, kde-format
-msgid "Window title font"
-msgstr "Teckensnitt för fönsterrubrik"
 
 #: kxftconfig.cpp:458
 #, kde-format
@@ -356,6 +308,30 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "Välj teckensnitt"
+
+#~ msgid "Force font DPI Wayland"
+#~ msgstr "Tvinga teckensnittens punkter per tum för Wayland:"
+
+#~ msgid "Force font DPI on X11"
+#~ msgstr "Tvinga teckensnittens punkter/tum för X11"
+
+#~ msgid "General font"
+#~ msgstr "Allmänt teckensnitt"
+
+#~ msgid "Fixed width font"
+#~ msgstr "Teckensnitt med fast breddsteg"
+
+#~ msgid "Small font"
+#~ msgstr "Litet teckensnitt"
+
+#~ msgid "Tool bar font"
+#~ msgstr "Teckensnitt för verktygsrad"
+
+#~ msgid "Menu font"
+#~ msgstr "Teckensnitt för meny"
+
+#~ msgid "Window title font"
+#~ msgstr "Teckensnitt för fönsterrubrik"
 
 #~ msgid "Change Display Scaling…"
 #~ msgstr "Ändra bildskärmsskalning…"

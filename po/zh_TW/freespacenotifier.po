@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-17 00:48+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2023-03-07 02:49+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -34,36 +34,6 @@ msgstr "在 Filelight 中開啟"
 msgid "Open in File Manager"
 msgstr "在檔案管理員開啟"
 
-#. i18n: ectx: label, entry (minimumSpace), group (General)
-#: freespacenotifier.kcfg:9
-#, kde-format
-msgid "Minimum free space before user starts being notified."
-msgstr "剩餘空間最小到多少時開始警告使用者。"
-
-#. i18n: ectx: label, entry (enableNotification), group (General)
-#: freespacenotifier.kcfg:15
-#, kde-format
-msgid "Is the free space notification enabled."
-msgstr "是否開啟剩餘空間通知。"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableNotification)
-#: freespacenotifier_prefs_base.ui:17
-#, kde-format
-msgid "Enable low disk space warning"
-msgstr "開啟磁碟空間過低的警告"
-
-#. i18n: ectx: property (text), widget (QLabel, label_minimumSpace)
-#: freespacenotifier_prefs_base.ui:27
-#, kde-format
-msgid "Warn when free space is below:"
-msgstr "當剩餘空間低於多少時警告："
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpace)
-#: freespacenotifier_prefs_base.ui:37
-#, kde-format
-msgid " MiB"
-msgstr " MB"
-
 #: module.cpp:37
 #, kde-format
 msgid ""
@@ -83,6 +53,21 @@ msgstr "您的根目錄所在分割區磁碟空間即將用完，您還剩 %1 Mi
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"
 msgstr "一般"
+
+#~ msgid "Minimum free space before user starts being notified."
+#~ msgstr "剩餘空間最小到多少時開始警告使用者。"
+
+#~ msgid "Is the free space notification enabled."
+#~ msgstr "是否開啟剩餘空間通知。"
+
+#~ msgid "Enable low disk space warning"
+#~ msgstr "開啟磁碟空間過低的警告"
+
+#~ msgid "Warn when free space is below:"
+#~ msgstr "當剩餘空間低於多少時警告："
+
+#~ msgid " MiB"
+#~ msgstr " MB"
 
 #~ msgid "Low Disk Space"
 #~ msgstr "磁碟空間過低"

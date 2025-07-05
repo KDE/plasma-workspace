@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-29 02:56+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2022-07-08 04:45+0000\n"
 "Last-Translator: Weblate Admin <admin@example.com>\n"
 "Language-Team: Toki Pona <http://weblate.blackquill.cc/projects/ante-toki-pi-"
@@ -1574,12 +1574,6 @@ msgstr ""
 #: viewpart/FontViewPart.cpp:387
 #, kde-format
 msgid "Please enter new string:"
-msgstr ""
-
-#. i18n: ectx: ToolBar (mainToolBar)
-#: viewpart/kfontviewpart.rc:4
-#, kde-format
-msgid "&Main Toolbar"
 msgstr ""
 
 #: viewpart/PreviewSelectAction.cpp:13

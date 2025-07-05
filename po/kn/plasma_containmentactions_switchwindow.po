@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2010-01-13 13:05+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: Kannada <kde-l10n-kn@kde.org>\n"
@@ -17,24 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-
-#. i18n: ectx: property (text), widget (QRadioButton, flatButton)
-#: config.ui:16
-#, kde-format
-msgid "Display all windows in one list"
-msgstr "ಎಲ್ಲಾ ಕಿಟಕಿಗಳನ್ನು ಒಂದು ಪಟ್ಟಿಯಲ್ಲಿ ತೋರಿಸು"
-
-#. i18n: ectx: property (text), widget (QRadioButton, subButton)
-#: config.ui:23
-#, kde-format
-msgid "Display a submenu for each desktop"
-msgstr "ಪ್ರತಿ ಗಣಕತೆರೆಗೂ ಒಂದು ಉಪಪರಿವಿಡಿಯನ್ನು ತೋರಿಸು"
-
-#. i18n: ectx: property (text), widget (QRadioButton, curButton)
-#: config.ui:30
-#, kde-format
-msgid "Display only the current desktop's windows"
-msgstr "ಪ್ರಸಕ್ತ ಗಣಕತೆರೆಗಳಲ್ಲಿನ ಕಿಟಕಿಗಳನ್ನು ಮಾತ್ರ ತೋರಿಸು"
 
 #: switch.cpp:75
 #, fuzzy, kde-format
@@ -56,3 +38,12 @@ msgstr "ಕಿಟಕಿಗಳು"
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "All Desktops"
 msgstr "ಎಲ್ಲಾ ಗಣಕತೆರೆಗಳು"
+
+#~ msgid "Display all windows in one list"
+#~ msgstr "ಎಲ್ಲಾ ಕಿಟಕಿಗಳನ್ನು ಒಂದು ಪಟ್ಟಿಯಲ್ಲಿ ತೋರಿಸು"
+
+#~ msgid "Display a submenu for each desktop"
+#~ msgstr "ಪ್ರತಿ ಗಣಕತೆರೆಗೂ ಒಂದು ಉಪಪರಿವಿಡಿಯನ್ನು ತೋರಿಸು"
+
+#~ msgid "Display only the current desktop's windows"
+#~ msgstr "ಪ್ರಸಕ್ತ ಗಣಕತೆರೆಗಳಲ್ಲಿನ ಕಿಟಕಿಗಳನ್ನು ಮಾತ್ರ ತೋರಿಸು"

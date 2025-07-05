@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-15 00:48+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2023-05-25 20:30+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -20,54 +20,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-
-#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
-#: fontsaasettingsbase.kcfg:9
-#, kde-format
-msgid "Force font DPI Wayland"
-msgstr "Devigi tiparan DPI Wayland"
-
-#. i18n: ectx: label, entry (forceFontDPI), group (General)
-#: fontsaasettingsbase.kcfg:13
-#, kde-format
-msgid "Force font DPI on X11"
-msgstr "Devigi tiparan DPI sur X11"
-
-#. i18n: ectx: label, entry (font), group (General)
-#: fontssettings.kcfg:9
-#, kde-format
-msgid "General font"
-msgstr "Ĝenerala tiparo"
-
-#. i18n: ectx: label, entry (fixed), group (General)
-#: fontssettings.kcfg:21
-#, kde-format
-msgid "Fixed width font"
-msgstr "Egallarĝa tiparo"
-
-#. i18n: ectx: label, entry (smallestReadableFont), group (General)
-#: fontssettings.kcfg:33
-#, kde-format
-msgid "Small font"
-msgstr "Malgranda tiparo"
-
-#. i18n: ectx: label, entry (toolBarFont), group (General)
-#: fontssettings.kcfg:45
-#, kde-format
-msgid "Tool bar font"
-msgstr "Ilobreta tiparo"
-
-#. i18n: ectx: label, entry (menuFont), group (General)
-#: fontssettings.kcfg:57
-#, kde-format
-msgid "Menu font"
-msgstr "Menutiparo"
-
-#. i18n: ectx: label, entry (activeFont), group (WM)
-#: fontssettings.kcfg:71
-#, kde-format
-msgid "Window title font"
-msgstr "Fenestra titoltiparo"
 
 #: kxftconfig.cpp:458
 #, kde-format
@@ -359,3 +311,27 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "Elekti Tiparon"
+
+#~ msgid "Force font DPI Wayland"
+#~ msgstr "Devigi tiparan DPI Wayland"
+
+#~ msgid "Force font DPI on X11"
+#~ msgstr "Devigi tiparan DPI sur X11"
+
+#~ msgid "General font"
+#~ msgstr "Ĝenerala tiparo"
+
+#~ msgid "Fixed width font"
+#~ msgstr "Egallarĝa tiparo"
+
+#~ msgid "Small font"
+#~ msgstr "Malgranda tiparo"
+
+#~ msgid "Tool bar font"
+#~ msgstr "Ilobreta tiparo"
+
+#~ msgid "Menu font"
+#~ msgstr "Menutiparo"
+
+#~ msgid "Window title font"
+#~ msgstr "Fenestra titoltiparo"

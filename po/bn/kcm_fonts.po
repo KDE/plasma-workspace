@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-15 00:48+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2004-10-18 22:55-0500\n"
 "Last-Translator: Khandakar Mujahidul Islam <suzan@bengalinux.org>\n"
 "Language-Team: Bengali <kde-translation@bengalinux.org>\n"
@@ -14,58 +14,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.3.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-
-#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
-#: fontsaasettingsbase.kcfg:9
-#, kde-format
-msgid "Force font DPI Wayland"
-msgstr ""
-
-#. i18n: ectx: label, entry (forceFontDPI), group (General)
-#: fontsaasettingsbase.kcfg:13
-#, kde-format
-msgid "Force font DPI on X11"
-msgstr ""
-
-#. i18n: ectx: label, entry (font), group (General)
-#: fontssettings.kcfg:9
-#, fuzzy, kde-format
-#| msgid "General"
-msgid "General font"
-msgstr "সাধারণ"
-
-#. i18n: ectx: label, entry (fixed), group (General)
-#: fontssettings.kcfg:21
-#, fuzzy, kde-format
-#| msgid "Fixed width"
-msgid "Fixed width font"
-msgstr "নির্ধারিত প্রস্থ"
-
-#. i18n: ectx: label, entry (smallestReadableFont), group (General)
-#: fontssettings.kcfg:33
-#, kde-format
-msgid "Small font"
-msgstr ""
-
-#. i18n: ectx: label, entry (toolBarFont), group (General)
-#: fontssettings.kcfg:45
-#, fuzzy, kde-format
-#| msgid "Toolbar"
-msgid "Tool bar font"
-msgstr "টুলবার"
-
-#. i18n: ectx: label, entry (menuFont), group (General)
-#: fontssettings.kcfg:57
-#, kde-format
-msgid "Menu font"
-msgstr ""
-
-#. i18n: ectx: label, entry (activeFont), group (WM)
-#: fontssettings.kcfg:71
-#, fuzzy, kde-format
-#| msgid "Window title"
-msgid "Window title font"
-msgstr "উইন্ডো শিরোনাম"
 
 #: kxftconfig.cpp:458
 #, kde-format
@@ -346,6 +294,26 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr ""
+
+#, fuzzy
+#~| msgid "General"
+#~ msgid "General font"
+#~ msgstr "সাধারণ"
+
+#, fuzzy
+#~| msgid "Fixed width"
+#~ msgid "Fixed width font"
+#~ msgstr "নির্ধারিত প্রস্থ"
+
+#, fuzzy
+#~| msgid "Toolbar"
+#~ msgid "Tool bar font"
+#~ msgstr "টুলবার"
+
+#, fuzzy
+#~| msgid "Window title"
+#~ msgid "Window title font"
+#~ msgstr "উইন্ডো শিরোনাম"
 
 #, fuzzy
 #~ msgid "Font Settings Changed"

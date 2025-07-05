@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: freespacenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-17 00:48+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2017-05-16 06:51-0400\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -39,36 +39,6 @@ msgstr ""
 #| msgid "Open File Manager..."
 msgid "Open in File Manager"
 msgstr "פתח את מנהל הקבצים..."
-
-#. i18n: ectx: label, entry (minimumSpace), group (General)
-#: freespacenotifier.kcfg:9
-#, kde-format
-msgid "Minimum free space before user starts being notified."
-msgstr "המקום הפנוי שממנו ומטה המשתמש יתחיל לקבל התרעות."
-
-#. i18n: ectx: label, entry (enableNotification), group (General)
-#: freespacenotifier.kcfg:15
-#, kde-format
-msgid "Is the free space notification enabled."
-msgstr "האם ההתרעה על מקום פנוי מופעלת."
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableNotification)
-#: freespacenotifier_prefs_base.ui:17
-#, kde-format
-msgid "Enable low disk space warning"
-msgstr "הזהר כשהמקום הפנוי אוזל"
-
-#. i18n: ectx: property (text), widget (QLabel, label_minimumSpace)
-#: freespacenotifier_prefs_base.ui:27
-#, kde-format
-msgid "Warn when free space is below:"
-msgstr "הזהר כשהמקום הפנוי יורד מתחת ל:"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpace)
-#: freespacenotifier_prefs_base.ui:37
-#, kde-format
-msgid " MiB"
-msgstr " מ\"ב"
 
 #: module.cpp:37
 #, fuzzy, kde-format
@@ -101,6 +71,21 @@ msgstr "לתיקית הבית הולך להגמר מקום האחסון, יש ל
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"
 msgstr "כללי"
+
+#~ msgid "Minimum free space before user starts being notified."
+#~ msgstr "המקום הפנוי שממנו ומטה המשתמש יתחיל לקבל התרעות."
+
+#~ msgid "Is the free space notification enabled."
+#~ msgstr "האם ההתרעה על מקום פנוי מופעלת."
+
+#~ msgid "Enable low disk space warning"
+#~ msgstr "הזהר כשהמקום הפנוי אוזל"
+
+#~ msgid "Warn when free space is below:"
+#~ msgstr "הזהר כשהמקום הפנוי יורד מתחת ל:"
+
+#~ msgid " MiB"
+#~ msgstr " מ\"ב"
 
 #~ msgid "Low Disk Space"
 #~ msgstr "שטח הכונן נמוך"

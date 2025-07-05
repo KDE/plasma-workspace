@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-27 02:34+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2022-10-18 13:09+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -627,220 +627,6 @@ msgstr "cari"
 msgid "down"
 msgstr "aşağı"
 
-#. i18n: ectx: label, entry (Version), group (General)
-#: klipper.kcfg:10
-#, kde-format
-msgid "Klipper version"
-msgstr "Klipper versiyası"
-
-#. i18n: ectx: label, entry (KeepClipboardContents), group (General)
-#: klipper.kcfg:13
-#, kde-format
-msgid "Save history across desktop sessions"
-msgstr "Tarixçəni iş masası sessiyalarında saxlayın"
-
-#. i18n: ectx: tooltip, entry (KeepClipboardContents), group (General)
-#: klipper.kcfg:15
-#, kde-format
-msgid ""
-"Retain the clipboard history, so it will be available the next time you log "
-"in."
-msgstr ""
-"Mübadilə yaddaşı tarixçəsini saxlayın, belə ki, o növbəti girişdə əlçatan "
-"olacaq."
-
-#. i18n: ectx: label, entry (PreventEmptyClipboard), group (General)
-#: klipper.kcfg:18
-#, kde-format
-msgid "Prevent the clipboard from being cleared"
-msgstr "Mübadilə yaddaşının təmizlənməsini qarşısını almaq"
-
-#. i18n: ectx: whatsthis, entry (PreventEmptyClipboard), group (General)
-#: klipper.kcfg:20
-#, kde-format
-msgid ""
-"Do not allow the clipboard to be cleared, for example when an application "
-"exits."
-msgstr ""
-"Mübadilə yaddaşının təmizlənməsinə icazə verməyin, məsələn tətbiqdən "
-"çıxıldıqda."
-
-#. i18n: ectx: label, entry (SyncClipboards), group (General)
-#: klipper.kcfg:27
-#, kde-format
-msgid "Keep the selection and clipboard the same"
-msgstr "Seçimi və mübadilə yaddaşını eyni saxlayın"
-
-#. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
-#: klipper.kcfg:29
-#, kde-format
-msgid ""
-"Content selected with the cursor is automatically copied to the clipboard so "
-"that it can be pasted with either a Paste action or a middle-click.<br/><a "
-"href=\"1\">More about the selection and clipboard</a>."
-msgstr ""
-"Kursor ilə seçilmiş hissə avtomatik mübadilə yaddaşına kopyalanır və "
-"beləliklə həm Yerləşdirin əməli həm də siçanın orta düyməsi ilə yerləşdirilə "
-"bilər.<br/><a href=\"1\">Seçim və mübadilə yaddaşı haqqında daha çox</a>."
-
-#. i18n: ectx: label, entry (IgnoreSelection), group (General)
-#: klipper.kcfg:32
-#, kde-format
-msgid "Ignore the selection"
-msgstr "Seçimdən imtina etmək"
-
-#. i18n: ectx: whatsthis, entry (IgnoreSelection), group (General)
-#: klipper.kcfg:34
-#, kde-format
-msgid ""
-"Content selected with the cursor but not explicitly copied to the clipboard "
-"is not automatically stored in the clipboard history, and can only be pasted "
-"using a middle-click."
-msgstr ""
-"Kursor ilə seçilmiş, lakin birbaşa kopyalanmamış hissə avtomatik mübadilə "
-"yaddaşında saxlanılmır və yalnız siçanın orta düyməsi ilə yerləşdirilə bilər."
-
-#. i18n: ectx: label, entry (SelectionTextOnly), group (General)
-#: klipper.kcfg:37
-#, kde-format
-msgid "Text selection only"
-msgstr "Yalnız mətn seçimi"
-
-#. i18n: ectx: whatsthis, entry (SelectionTextOnly), group (General)
-#: klipper.kcfg:39
-#, kde-format
-msgid ""
-"Only store text selections in the clipboard history, not images or any other "
-"type of data."
-msgstr ""
-"Mübadilə yaddaşında yalnız seçilmiş mətn saxlanılsın, şəkillər və digər "
-"verilənlər saxlanılmasın."
-
-#. i18n: ectx: label, entry (IgnoreImages), group (General)
-#: klipper.kcfg:42
-#, kde-format
-msgid "Always ignore images"
-msgstr "Şəkillər heç vaxt saxlanılmasın"
-
-#. i18n: ectx: whatsthis, entry (IgnoreImages), group (General)
-#: klipper.kcfg:44
-#, kde-format
-msgid ""
-"Do not store images in the clipboard history, even if explicitly copied."
-msgstr ""
-"Şəkillər heç vaxt mübadilə yaddaşında saxlanılmasın, hətta birbaşa "
-"kopyalansa belə."
-
-#. i18n: ectx: label, entry (UseGUIRegExpEditor), group (General)
-#: klipper.kcfg:47
-#, kde-format
-msgid "Use graphical regexp editor"
-msgstr "Müntəzəm ifadənin qrafik redaktorunu istifadə etmək"
-
-#. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
-#: klipper.kcfg:51
-#, kde-format
-msgid "Immediately on selection"
-msgstr "Seçimdən dərhal sonra"
-
-#. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
-#: klipper.kcfg:52
-#, kde-format
-msgid ""
-"Show the popup menu of applicable actions as soon as a selection is made."
-msgstr ""
-"Seçim edildiyi an tətbiq ediləbilən fəaliyyətin açılan menyusu göstərilsin."
-
-#. i18n: ectx: label, entry (NoActionsForWM_CLASS), group (General)
-#: klipper.kcfg:57
-#, kde-format
-msgid "No actions for WM_CLASS"
-msgstr "WM_CLASS üçün fəaliyyət yoxdur"
-
-#. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:60
-#, kde-format
-msgid "Automatic action menu time:"
-msgstr "Avtomatik fəlaiyyət menyusunu göstərilmə müddəti:"
-
-#. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:64
-#, kde-format
-msgid "Display the automatic action popup menu for this time."
-msgstr "Avtomatik fəaliyyət açılan menyusu bu vaxt ərzində göstərilsin."
-
-#. i18n: ectx: label, entry (MaxClipItems), group (General)
-#: klipper.kcfg:67
-#, kde-format
-msgid "History size:"
-msgstr "Tarixçəsnin ölçüsü:"
-
-#. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
-#: klipper.kcfg:71
-#, kde-format
-msgid "The clipboard history will store up to this many items."
-msgstr "Mübadilə yaddaşı tarixçəsində saxlanılacaq elementlərin miqdarı."
-
-#. i18n: ectx: label, entry (ActionList), group (General)
-#: klipper.kcfg:74
-#, kde-format
-msgid "Dummy entry for indicating changes in an action's tree widget"
-msgstr ""
-"Budaqlanan vidjetlər fəaliyyətlərində dəyişiklikləri göstərmək üçün boş "
-"element"
-
-#. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:84
-#, kde-format
-msgid "Trim whitespace from selection"
-msgstr "Seçim kənarlarındakı ara boşluqlarını çıxarın"
-
-#. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:86
-#, kde-format
-msgid ""
-"Remove any whitespace from the start and end of selected text, before "
-"performing an action. For example, this ensures that a URL pasted in a "
-"browser is interpreted as expected. The text saved on the clipboard is not "
-"affected."
-msgstr ""
-"Əməl icra edilərkən mübadilə yaddaşında saxlanılmış mətnin əvvəlindəki və "
-"sonundakı boşluqları silmək. Məsələn, bu veb-bələdçidə yerləşdirilmiş URL-un "
-"olduğu kimi görünməsini təmin edir. Mübadilə yaddaşında saxlanılmış mətnə "
-"təsir etməyəcək."
-
-#. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:89
-#, kde-format
-msgid "For an item chosen from history"
-msgstr "Tarixçədən seçilmiş element üçün"
-
-#. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:91
-#, kde-format
-msgid ""
-"Show the popup menu of applicable actions if an entry is chosen from the "
-"clipboard history."
-msgstr ""
-"Əgər qeyd mübadilə tarixçəsindən seçilərsə, tətbiq ediləbilən fəaliyyətlərin "
-"açılan menyusu göstərilsin."
-
-#. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:94
-#, kde-format
-msgid "Include MIME actions"
-msgstr "MİME fəaliyyətlərini daxil edin"
-
-#. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:96
-#, kde-format
-msgid ""
-"If a file name or URL is selected, include applications that can accept its "
-"MIME type in the popup menu."
-msgstr ""
-"Fayl adı və ya URL seçilərsə, açılan menyuda MİME növləri qəbul ediləbiləcək "
-"tətbiqləri daxil edin."
-
 #: klipperpopup.cpp:105
 #, kde-format
 msgctxt "%1 is application display name"
@@ -979,6 +765,139 @@ msgstr "Bu menyu pəncərəsini bağlamaq"
 #, kde-format
 msgid "&Cancel"
 msgstr "&İmtina etmək"
+
+#~ msgid "Klipper version"
+#~ msgstr "Klipper versiyası"
+
+#~ msgid "Save history across desktop sessions"
+#~ msgstr "Tarixçəni iş masası sessiyalarında saxlayın"
+
+#~ msgid ""
+#~ "Retain the clipboard history, so it will be available the next time you "
+#~ "log in."
+#~ msgstr ""
+#~ "Mübadilə yaddaşı tarixçəsini saxlayın, belə ki, o növbəti girişdə əlçatan "
+#~ "olacaq."
+
+#~ msgid "Prevent the clipboard from being cleared"
+#~ msgstr "Mübadilə yaddaşının təmizlənməsini qarşısını almaq"
+
+#~ msgid ""
+#~ "Do not allow the clipboard to be cleared, for example when an application "
+#~ "exits."
+#~ msgstr ""
+#~ "Mübadilə yaddaşının təmizlənməsinə icazə verməyin, məsələn tətbiqdən "
+#~ "çıxıldıqda."
+
+#~ msgid "Keep the selection and clipboard the same"
+#~ msgstr "Seçimi və mübadilə yaddaşını eyni saxlayın"
+
+#~ msgid ""
+#~ "Content selected with the cursor is automatically copied to the clipboard "
+#~ "so that it can be pasted with either a Paste action or a middle-click.<br/"
+#~ "><a href=\"1\">More about the selection and clipboard</a>."
+#~ msgstr ""
+#~ "Kursor ilə seçilmiş hissə avtomatik mübadilə yaddaşına kopyalanır və "
+#~ "beləliklə həm Yerləşdirin əməli həm də siçanın orta düyməsi ilə "
+#~ "yerləşdirilə bilər.<br/><a href=\"1\">Seçim və mübadilə yaddaşı haqqında "
+#~ "daha çox</a>."
+
+#~ msgid "Ignore the selection"
+#~ msgstr "Seçimdən imtina etmək"
+
+#~ msgid ""
+#~ "Content selected with the cursor but not explicitly copied to the "
+#~ "clipboard is not automatically stored in the clipboard history, and can "
+#~ "only be pasted using a middle-click."
+#~ msgstr ""
+#~ "Kursor ilə seçilmiş, lakin birbaşa kopyalanmamış hissə avtomatik mübadilə "
+#~ "yaddaşında saxlanılmır və yalnız siçanın orta düyməsi ilə yerləşdirilə "
+#~ "bilər."
+
+#~ msgid "Text selection only"
+#~ msgstr "Yalnız mətn seçimi"
+
+#~ msgid ""
+#~ "Only store text selections in the clipboard history, not images or any "
+#~ "other type of data."
+#~ msgstr ""
+#~ "Mübadilə yaddaşında yalnız seçilmiş mətn saxlanılsın, şəkillər və digər "
+#~ "verilənlər saxlanılmasın."
+
+#~ msgid "Always ignore images"
+#~ msgstr "Şəkillər heç vaxt saxlanılmasın"
+
+#~ msgid ""
+#~ "Do not store images in the clipboard history, even if explicitly copied."
+#~ msgstr ""
+#~ "Şəkillər heç vaxt mübadilə yaddaşında saxlanılmasın, hətta birbaşa "
+#~ "kopyalansa belə."
+
+#~ msgid "Use graphical regexp editor"
+#~ msgstr "Müntəzəm ifadənin qrafik redaktorunu istifadə etmək"
+
+#~ msgid "Immediately on selection"
+#~ msgstr "Seçimdən dərhal sonra"
+
+#~ msgid ""
+#~ "Show the popup menu of applicable actions as soon as a selection is made."
+#~ msgstr ""
+#~ "Seçim edildiyi an tətbiq ediləbilən fəaliyyətin açılan menyusu "
+#~ "göstərilsin."
+
+#~ msgid "No actions for WM_CLASS"
+#~ msgstr "WM_CLASS üçün fəaliyyət yoxdur"
+
+#~ msgid "Automatic action menu time:"
+#~ msgstr "Avtomatik fəlaiyyət menyusunu göstərilmə müddəti:"
+
+#~ msgid "Display the automatic action popup menu for this time."
+#~ msgstr "Avtomatik fəaliyyət açılan menyusu bu vaxt ərzində göstərilsin."
+
+#~ msgid "History size:"
+#~ msgstr "Tarixçəsnin ölçüsü:"
+
+#~ msgid "The clipboard history will store up to this many items."
+#~ msgstr "Mübadilə yaddaşı tarixçəsində saxlanılacaq elementlərin miqdarı."
+
+#~ msgid "Dummy entry for indicating changes in an action's tree widget"
+#~ msgstr ""
+#~ "Budaqlanan vidjetlər fəaliyyətlərində dəyişiklikləri göstərmək üçün boş "
+#~ "element"
+
+#~ msgid "Trim whitespace from selection"
+#~ msgstr "Seçim kənarlarındakı ara boşluqlarını çıxarın"
+
+#~ msgid ""
+#~ "Remove any whitespace from the start and end of selected text, before "
+#~ "performing an action. For example, this ensures that a URL pasted in a "
+#~ "browser is interpreted as expected. The text saved on the clipboard is "
+#~ "not affected."
+#~ msgstr ""
+#~ "Əməl icra edilərkən mübadilə yaddaşında saxlanılmış mətnin əvvəlindəki və "
+#~ "sonundakı boşluqları silmək. Məsələn, bu veb-bələdçidə yerləşdirilmiş URL-"
+#~ "un olduğu kimi görünməsini təmin edir. Mübadilə yaddaşında saxlanılmış "
+#~ "mətnə təsir etməyəcək."
+
+#~ msgid "For an item chosen from history"
+#~ msgstr "Tarixçədən seçilmiş element üçün"
+
+#~ msgid ""
+#~ "Show the popup menu of applicable actions if an entry is chosen from the "
+#~ "clipboard history."
+#~ msgstr ""
+#~ "Əgər qeyd mübadilə tarixçəsindən seçilərsə, tətbiq ediləbilən "
+#~ "fəaliyyətlərin açılan menyusu göstərilsin."
+
+#~ msgid "Include MIME actions"
+#~ msgstr "MİME fəaliyyətlərini daxil edin"
+
+#~ msgid ""
+#~ "If a file name or URL is selected, include applications that can accept "
+#~ "its MIME type in the popup menu."
+#~ msgstr ""
+#~ "Fayl adı və ya URL seçilərsə, açılan menyuda MİME növləri qəbul "
+#~ "ediləbiləcək tətbiqləri daxil edin."
 
 #~ msgctxt "@info"
 #~ msgid ""

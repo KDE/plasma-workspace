@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2022-11-18 20:23+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -96,12 +96,6 @@ msgstr "paketo_pavadinimas"
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
 msgstr "Atstatyti Plasma darbalaukio išdėstymą"
-
-#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
-#: lookandfeelsettings.kcfg:9
-#, kde-format
-msgid "Global look and feel"
-msgstr "Visuotinė išvaizda ir turinys"
 
 #: package/contents/ui/main.qml:21
 #, kde-format
@@ -267,6 +261,9 @@ msgstr ""
 "Šis visuotinis apipavidalinimas nepateikia jokių nuostatų, kurias galima "
 "būtų pritaikyti. Susisiekite su šio visuotinio apipavidalinimo autoriumi, "
 "nes gali būti, jog apipavidalinimas yra sugadintas."
+
+#~ msgid "Global look and feel"
+#~ msgstr "Visuotinė išvaizda ir turinys"
 
 #~ msgid ""
 #~ "Your current layout and configuration of panels, desktop widgets, and "

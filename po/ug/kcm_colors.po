@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-22 02:35+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -57,34 +57,6 @@ msgstr ""
 #: colors.cpp:309
 #, kde-format
 msgid "Color scheme installed successfully."
-msgstr ""
-
-#. i18n: ectx: label, entry (colorScheme), group (General)
-#: colorssettings.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Save Color Scheme"
-msgid "Color scheme name"
-msgstr "رەڭ لايىھىسىنى ساقلاش"
-
-#. i18n: ectx: label, entry (accentColor), group (General)
-#: colorssettings.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Inactive color"
-msgid "Accent color"
-msgstr "پاسسىپ رەڭ"
-
-#. i18n: ectx: label, entry (lastUsedCustomAccentColor), group (General)
-#: colorssettings.kcfg:17
-#, kde-format
-msgid ""
-"The last used custom accent color before user switched to wallpaper "
-"generated color or default color"
-msgstr ""
-
-#. i18n: ectx: label, entry (accentColorFromWallpaper), group (General)
-#: colorssettings.kcfg:21
-#, kde-format
-msgid "Whether accent color from wallpaper should be applied"
 msgstr ""
 
 #: editor/kcolorschemeeditor.cpp:25
@@ -147,240 +119,6 @@ msgstr ""
 msgid "Scheme not found, falling back to current one.\n"
 msgstr ""
 
-#. i18n: ectx: property (toolTip), widget (QLabel, label)
-#: editor/preview.ui:29
-#, kde-format
-msgid "Window text on Window Background"
-msgstr "كۆزنەك تەگلىكىدىكى كۆزنەك تېكىستى"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: editor/preview.ui:32
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "Window text"
-msgctxt "color-kcm-preview"
-msgid "Window text"
-msgstr "كۆزنەك تېكىستى"
-
-#. i18n: ectx: property (toolTip), widget (QPushButton, pushButton)
-#: editor/preview.ui:39
-#, kde-format
-msgid "Button text on Button Background"
-msgstr "توپچا تەگلىكىدىكى توپچا تېكىستى"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QPushButton, pushButton)
-#: editor/preview.ui:42
-#, kde-format
-msgctxt "color-kcm-preview"
-msgid "Push Button"
-msgstr "توپچا"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection0)
-#: editor/preview.ui:123
-#, fuzzy, kde-format
-#| msgid "Normal Text on Normal Background"
-msgid "Selection Normal Text against Selection Normal Background"
-msgstr "نورمال تەگلىكتىكى نورمال تېكىست"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelSelection0)
-#: editor/preview.ui:126
-#, kde-format
-msgctxt "color-kcm-preview"
-msgid "Selected text"
-msgstr "تاللانغان تېكىست"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection3)
-#: editor/preview.ui:138
-#, fuzzy, kde-format
-#| msgid "Link Text on Normal Background"
-msgid "Selection Link Text against Selection Normal Background"
-msgstr "نورمال تەگلىكتىكى ئۇلانما تېكىستى"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelSelection3)
-#. i18n: ectx: property (text), widget (QLabel, labelView3)
-#: editor/preview.ui:141 editor/preview.ui:265
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "link"
-msgctxt "color-kcm-preview"
-msgid "link"
-msgstr "ئۇلانما"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection4)
-#: editor/preview.ui:153
-#, fuzzy, kde-format
-#| msgid "Visited Text on Normal Background"
-msgid "Selection Visited Text against Selection Normal Background"
-msgstr "نورمال تەگلىكتىكى كۆرۈلگەن تېكىست"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelSelection4)
-#. i18n: ectx: property (text), widget (QLabel, labelView4)
-#: editor/preview.ui:156 editor/preview.ui:280
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "visited"
-msgctxt "color-kcm-preview"
-msgid "visited"
-msgstr "كۆرۈلگەن"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection2)
-#: editor/preview.ui:163
-#, fuzzy, kde-format
-#| msgid "Active Text on Normal Background"
-msgid "Selection Active Text against Selection Normal Background"
-msgstr "نورمال تەگلىكتىكى ئاكتىپ تېكىست"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelSelection2)
-#. i18n: ectx: property (text), widget (QLabel, labelView2)
-#: editor/preview.ui:166 editor/preview.ui:290
-#, kde-format
-msgctxt "color-kcm-preview"
-msgid "a"
-msgstr "a"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection1)
-#: editor/preview.ui:173
-#, fuzzy, kde-format
-#| msgid "Inactive Text on Normal Background"
-msgid "Selection Inactive Text against Selection Normal Background"
-msgstr "نورمال تەگلىكتىكى پاسسىپ تېكىست"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelSelection1)
-#. i18n: ectx: property (text), widget (QLabel, labelView1)
-#: editor/preview.ui:176 editor/preview.ui:300
-#, kde-format
-msgctxt "color-kcm-preview"
-msgid "i"
-msgstr "i"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection5)
-#: editor/preview.ui:183
-#, fuzzy, kde-format
-#| msgid "Negative Text on Normal Background"
-msgid "Selection Negative Text against Selection Normal Background"
-msgstr "نورمال تەگلىكتىكى تەتۈر تېكىست"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelSelection5)
-#. i18n: ectx: property (text), widget (QLabel, labelView5)
-#: editor/preview.ui:186 editor/preview.ui:310
-#, kde-format
-msgctxt "color-kcm-preview"
-msgid "!"
-msgstr "!"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection6)
-#: editor/preview.ui:193
-#, fuzzy, kde-format
-#| msgid "Neutral Text on Normal Background"
-msgid "Selection Neutral Text against Selection Normal Background"
-msgstr "نورمال تەگلىكتىكى بىتەرەپ تېكىست"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelSelection6)
-#. i18n: ectx: property (text), widget (QLabel, labelView6)
-#: editor/preview.ui:196 editor/preview.ui:320
-#, kde-format
-msgctxt "color-kcm-preview"
-msgid "="
-msgstr "="
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection7)
-#: editor/preview.ui:203
-#, fuzzy, kde-format
-#| msgid "Positive Text on Normal Background"
-msgid "Selection Positive Text against Selection Normal Background"
-msgstr "نورمال تەگلىكتىكى ئوڭ تېكىست"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelSelection7)
-#. i18n: ectx: property (text), widget (QLabel, labelView7)
-#: editor/preview.ui:206 editor/preview.ui:330
-#, kde-format
-msgctxt "color-kcm-preview"
-msgid "+"
-msgstr "+"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelView0)
-#: editor/preview.ui:247
-#, fuzzy, kde-format
-#| msgid "Normal Text on Normal Background"
-msgid "View Normal Text against View Normal Background"
-msgstr "نورمال تەگلىكتىكى نورمال تېكىست"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelView0)
-#: editor/preview.ui:250
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "Normal text"
-msgctxt "color-kcm-preview"
-msgid "Normal text"
-msgstr "نورمال تېكىست"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelView3)
-#: editor/preview.ui:262
-#, fuzzy, kde-format
-#| msgid "Link Text on Normal Background"
-msgid "View Link Text against View Normal Background"
-msgstr "نورمال تەگلىكتىكى ئۇلانما تېكىستى"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelView4)
-#: editor/preview.ui:277
-#, fuzzy, kde-format
-#| msgid "Visited Text on Normal Background"
-msgid "View Visited Text against View Normal Background"
-msgstr "نورمال تەگلىكتىكى كۆرۈلگەن تېكىست"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelView2)
-#: editor/preview.ui:287
-#, fuzzy, kde-format
-#| msgid "Active Text on Normal Background"
-msgid "View Active Text against View Normal Background"
-msgstr "نورمال تەگلىكتىكى ئاكتىپ تېكىست"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelView1)
-#: editor/preview.ui:297
-#, fuzzy, kde-format
-#| msgid "Inactive Text on Normal Background"
-msgid "View Inactive Text against View Normal Background"
-msgstr "نورمال تەگلىكتىكى پاسسىپ تېكىست"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelView5)
-#: editor/preview.ui:307
-#, fuzzy, kde-format
-#| msgid "Negative Text on Normal Background"
-msgid "View Negative Text against View Normal Background"
-msgstr "نورمال تەگلىكتىكى تەتۈر تېكىست"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelView6)
-#: editor/preview.ui:317
-#, fuzzy, kde-format
-#| msgid "Neutral Text on Normal Background"
-msgid "View Neutral Text against View Normal Background"
-msgstr "نورمال تەگلىكتىكى بىتەرەپ تېكىست"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelView7)
-#: editor/preview.ui:327
-#, fuzzy, kde-format
-#| msgid "Positive Text on Normal Background"
-msgid "View Positive Text against View Normal Background"
-msgstr "نورمال تەگلىكتىكى ئوڭ تېكىست"
-
 #: editor/scmeditorcolors.cpp:62 editor/scmeditorcolors.cpp:76
 #, kde-format
 msgid "Varies"
@@ -401,269 +139,50 @@ msgstr "زاپاس تەگلىك"
 msgid "Normal Text"
 msgstr "نورمال تېكىست"
 
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:102 editor/scmeditorcolors.ui:303
+#: editor/scmeditorcolors.cpp:102
 #, kde-format
 msgid "Inactive Text"
 msgstr "پاسسىپ تېكىست"
 
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:103 editor/scmeditorcolors.ui:308
+#: editor/scmeditorcolors.cpp:103
 #, kde-format
 msgid "Active Text"
 msgstr "ئاكتىپ تېكىست"
 
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:104 editor/scmeditorcolors.ui:313
+#: editor/scmeditorcolors.cpp:104
 #, kde-format
 msgid "Link Text"
 msgstr "ئۇلانما تېكىستى"
 
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:105 editor/scmeditorcolors.ui:318
+#: editor/scmeditorcolors.cpp:105
 #, kde-format
 msgid "Visited Text"
 msgstr "زىيارەت قىلىنغان تېكىست"
 
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:106 editor/scmeditorcolors.ui:323
+#: editor/scmeditorcolors.cpp:106
 #, kde-format
 msgid "Negative Text"
 msgstr "تەتۈر تېكىست"
 
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:107 editor/scmeditorcolors.ui:328
+#: editor/scmeditorcolors.cpp:107
 #, kde-format
 msgid "Neutral Text"
 msgstr "تەرەپسىز تېكىست"
 
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:108 editor/scmeditorcolors.ui:333
+#: editor/scmeditorcolors.cpp:108
 #, kde-format
 msgid "Positive Text"
 msgstr "ئوڭ تېكىست"
 
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:109 editor/scmeditorcolors.ui:338
+#: editor/scmeditorcolors.cpp:109
 #, kde-format
 msgid "Focus Decoration"
 msgstr "فوكۇس بېزىكى"
 
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:110 editor/scmeditorcolors.ui:343
+#: editor/scmeditorcolors.cpp:110
 #, kde-format
 msgid "Hover Decoration"
 msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: editor/scmeditorcolors.ui:23
-#, kde-format
-msgid "Color set:"
-msgstr "رەڭ توپلىمى:"
-
-#. i18n: ectx: property (toolTip), widget (QComboBox, colorSet)
-#: editor/scmeditorcolors.ui:36
-#, kde-format
-msgid "Colorset to view/modify"
-msgstr "كۆرىدىغان/تۈزىتىدىغان رەڭ توپلىمى"
-
-#. i18n: 'Common' here means &quot;frequent/not rare&quot;, not &quot;shared&quot;
-#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
-#: editor/scmeditorcolors.ui:40
-#, kde-format
-msgctxt "color-sets"
-msgid "Common Colors"
-msgstr "دائىم ئىشلىتىدىغان رەڭلەر"
-
-#. i18n: see plasma-workspace/kcms/colors/README.i18n
-#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
-#: editor/scmeditorcolors.ui:45
-#, kde-format
-msgctxt "color-sets"
-msgid "View"
-msgstr "كۆرۈنۈش"
-
-#. i18n: see plasma-workspace/kcms/colors/README.i18n
-#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
-#: editor/scmeditorcolors.ui:50
-#, kde-format
-msgctxt "color-sets"
-msgid "Window"
-msgstr "كۆزنەك"
-
-#. i18n: see plasma-workspace/kcms/colors/README.i18n
-#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
-#: editor/scmeditorcolors.ui:55
-#, fuzzy, kde-format
-#| msgctxt "color-sets"
-#| msgid "Button"
-msgctxt "color-sets"
-msgid "Button"
-msgstr "توپچا"
-
-#. i18n: see plasma-workspace/kcms/colors/README.i18n
-#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
-#: editor/scmeditorcolors.ui:60
-#, kde-format
-msgctxt "color-sets"
-msgid "Selection"
-msgstr "تاللاش"
-
-#. i18n: see plasma-workspace/kcms/colors/README.i18n
-#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
-#: editor/scmeditorcolors.ui:65
-#, kde-format
-msgctxt "color-sets"
-msgid "Tooltip"
-msgstr "كۆرسەتمە"
-
-#. i18n: see plasma-workspace/kcms/colors/README.i18n
-#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
-#: editor/scmeditorcolors.ui:70
-#, kde-format
-msgctxt "color-sets"
-msgid "Complementary"
-msgstr ""
-
-#. i18n: see plasma-workspace/kcms/colors/README.i18n
-#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
-#: editor/scmeditorcolors.ui:75
-#, kde-format
-msgctxt "color-sets"
-msgid "Header"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:118 editor/scmeditorcolors.ui:123
-#: editor/scmeditorcolors.ui:128 editor/scmeditorcolors.ui:133
-#: editor/scmeditorcolors.ui:138 editor/scmeditorcolors.ui:143
-#: editor/scmeditorcolors.ui:148 editor/scmeditorcolors.ui:153
-#: editor/scmeditorcolors.ui:158 editor/scmeditorcolors.ui:163
-#: editor/scmeditorcolors.ui:168 editor/scmeditorcolors.ui:173
-#: editor/scmeditorcolors.ui:178 editor/scmeditorcolors.ui:183
-#: editor/scmeditorcolors.ui:188 editor/scmeditorcolors.ui:193
-#: editor/scmeditorcolors.ui:198 editor/scmeditorcolors.ui:203
-#: editor/scmeditorcolors.ui:208 editor/scmeditorcolors.ui:213
-#: editor/scmeditorcolors.ui:218 editor/scmeditorcolors.ui:223
-#: editor/scmeditorcolors.ui:228 editor/scmeditorcolors.ui:233
-#: editor/scmeditorcolors.ui:238 editor/scmeditorcolors.ui:243
-#, kde-format
-msgid "New Row"
-msgstr "يېڭى قۇر"
-
-#. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:248
-#, kde-format
-msgid "0"
-msgstr "0"
-
-#. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:253
-#, kde-format
-msgid "1"
-msgstr "1"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:258
-#, kde-format
-msgid "View Background"
-msgstr "رەكلىك كۆرۈش"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:263
-#, kde-format
-msgid "View Text"
-msgstr "تېكىست كۆرۈش"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:268
-#, kde-format
-msgid "Window Background"
-msgstr "كۆزنەك تەگلىكى"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:273
-#, kde-format
-msgid "Window Text"
-msgstr "كۆزنەك خېتى"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:278
-#, kde-format
-msgid "Button Background"
-msgstr "توپچا تەگلىكى"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:283
-#, kde-format
-msgid "Button Text"
-msgstr "توپچا تېكىستى"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:288
-#, kde-format
-msgid "Selection Background"
-msgstr "تاللانغان تەگلىك"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:293
-#, kde-format
-msgid "Selection Text"
-msgstr "تاللانغان تېكىست"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:298
-#, kde-format
-msgid "Selection Inactive Text"
-msgstr "تاللانغان پاسسىپ تېكىست"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:348
-#, kde-format
-msgid "Tooltip Background"
-msgstr "كۆرسەتمە تەگلىكى"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:353
-#, kde-format
-msgid "Tooltip Text"
-msgstr "كۆرسەتمە تېكىستى"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:358
-#, kde-format
-msgid "Active Titlebar"
-msgstr "ئاكتىپ ماۋزۇ بالدىقى"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:363
-#, kde-format
-msgid "Active Titlebar Text"
-msgstr "ئاكتىپ ماۋزۇ بالدىقى تېكىستى"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:368
-#, kde-format
-msgid "Active Titlebar Secondary"
-msgstr "ئاكتىپ ماۋزۇ بالدىقى ئىككىنچى"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:373
-#, kde-format
-msgid "Inactive Titlebar"
-msgstr "پاسسىپ ماۋزۇ بالداق"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:378
-#, kde-format
-msgid "Inactive Titlebar Text"
-msgstr "پاسسىپ ماۋزۇ بالدىقى تېكىستى"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:383
-#, kde-format
-msgid "Inactive Titlebar Secondary"
-msgstr "پاسسىپ ماۋزۇ بالدىقى ئىككىنچى"
 
 #: editor/scmeditordialog.cpp:60
 #, kde-format
@@ -727,438 +246,6 @@ msgstr "خاتالىق"
 #| msgid "Inactive"
 msgid "Inactive"
 msgstr "ئاكتىپسىز"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: editor/scmeditoreffects.ui:17
-#, kde-format
-msgid "Color:"
-msgstr "رەڭ:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: editor/scmeditoreffects.ui:27
-#, kde-format
-msgid "Intensity:"
-msgstr "كۈچلۈكلۈك:"
-
-#. i18n: ectx: property (toolTip), widget (QComboBox, colorBox)
-#: editor/scmeditoreffects.ui:37
-#, kde-format
-msgid "Disabled color effect type"
-msgstr "ئىناۋەتسىز قىلىنغان  رەڭ ئۈنۈمىنىڭ تىپى"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
-#: editor/scmeditoreffects.ui:41
-#, kde-format
-msgctxt "no disabled color effect"
-msgid "None"
-msgstr "يوق"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
-#: editor/scmeditoreffects.ui:46
-#, kde-format
-msgctxt "disabled color effect"
-msgid "Desaturate"
-msgstr "ئاچۇرۇش"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
-#: editor/scmeditoreffects.ui:51
-#, kde-format
-msgctxt "disabled color effect"
-msgid "Fade"
-msgstr "سۇسلاشتۇر"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
-#: editor/scmeditoreffects.ui:56
-#, kde-format
-msgctxt "disabled color effect"
-msgid "Tint"
-msgstr "رەڭلە"
-
-#. i18n: ectx: property (toolTip), widget (QComboBox, intensityBox)
-#: editor/scmeditoreffects.ui:64
-#, fuzzy, kde-format
-#| msgid "Disabled color effect type"
-msgid "Disabled intensity effect type"
-msgstr "ئىناۋەتسىز قىلىنغان  رەڭ ئۈنۈمىنىڭ تىپى"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
-#: editor/scmeditoreffects.ui:68
-#, kde-format
-msgctxt "no disabled intensity effect"
-msgid "None"
-msgstr "يوق"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
-#: editor/scmeditoreffects.ui:73
-#, kde-format
-msgctxt "disabled intensity effect"
-msgid "Shade"
-msgstr "تۈرۈش"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
-#: editor/scmeditoreffects.ui:78
-#, kde-format
-msgctxt "disabled intensity effect"
-msgid "Darken"
-msgstr "قارايت"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
-#: editor/scmeditoreffects.ui:83
-#, kde-format
-msgctxt "disabled intensity effect"
-msgid "Lighten"
-msgstr "يورۇت"
-
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: editor/scmeditoreffects.ui:107
-#, kde-format
-msgid "Contrast:"
-msgstr "سېلىشتۇرما دەرىجە:"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, colorSlider)
-#: editor/scmeditoreffects.ui:120
-#, kde-format
-msgid "Disabled color effect amount"
-msgstr "ئىناۋەتسىز قىلىنغان  رەڭ ئۈنۈمىنىڭ مىقدارى"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, intensitySlider)
-#: editor/scmeditoreffects.ui:139
-#, fuzzy, kde-format
-#| msgid "Disabled color effect amount"
-msgid "Disabled intensity effect amount"
-msgstr "ئىناۋەتسىز قىلىنغان  رەڭ ئۈنۈمىنىڭ مىقدارى"
-
-#. i18n: ectx: property (toolTip), widget (KColorButton, colorButton)
-#: editor/scmeditoreffects.ui:158
-#, kde-format
-msgid "Disabled color"
-msgstr "ئىناۋەتسىز قىلىنغان رەڭ"
-
-#. i18n: ectx: property (toolTip), widget (QComboBox, contrastBox)
-#: editor/scmeditoreffects.ui:181
-#, kde-format
-msgid "Disabled contrast type"
-msgstr "ئىناۋەتسىز قىلىنغان سېلىشتۇرما دەرىجەنىڭ تىپى"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
-#: editor/scmeditoreffects.ui:185
-#, kde-format
-msgctxt "no disabled contrast"
-msgid "None"
-msgstr "يوق"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
-#: editor/scmeditoreffects.ui:190
-#, kde-format
-msgctxt "disabled contrast"
-msgid "Fade"
-msgstr "سۇسلاشتۇر"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
-#: editor/scmeditoreffects.ui:195
-#, kde-format
-msgctxt "disabled contrast"
-msgid "Tint"
-msgstr "رەڭلە"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, contrastSlider)
-#: editor/scmeditoreffects.ui:222
-#, kde-format
-msgid "Disabled contrast amount"
-msgstr "ئىناۋەتسىز قىلىنغان سېلىشتۇرما دەرىجەنىڭ مىقدارى"
-
-#. i18n: ectx: property (text), widget (QCheckBox, useInactiveEffects)
-#: editor/scmeditoroptions.ui:17
-#, fuzzy, kde-format
-#| msgid "Apply inactive window color &effects"
-msgid "Apply &effects to inactive windows"
-msgstr "پاسسىپ كۆزنەك رەڭ ئۈنۈمىنى قوللان(&E)"
-
-#. i18n: ectx: property (text), widget (QCheckBox, inactiveSelectionEffect)
-#: editor/scmeditoroptions.ui:24
-#, kde-format
-msgid "Use different colors for in&active selections"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, shadeSortedColumn)
-#: editor/scmeditoroptions.ui:31
-#, kde-format
-msgid "Shade sorted column &in lists"
-msgstr "تىزىمدىكى تەرتىپلەنگەن ئىستوننى سايىلەشتۇر"
-
-#. i18n: ectx: property (text), widget (QCheckBox, tintColors)
-#: editor/scmeditoroptions.ui:38
-#, fuzzy, kde-format
-#| msgid "Inactive color"
-msgid "Tint all colors with accent color"
-msgstr "پاسسىپ رەڭ"
-
-#. i18n: ectx: property (text), widget (QCheckBox, accentTitlebar)
-#: editor/scmeditoroptions.ui:45
-#, kde-format
-msgid "Make window titlebars a&ccent-colored"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: editor/scmeditoroptions.ui:52
-#, kde-format
-msgid "Tint strength:"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QGroupBox, groupBox_5)
-#: editor/scmeditoroptions.ui:69
-#, kde-format
-msgid "Shading of frames and lighting (\"3D\") effects"
-msgstr ""
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
-#: editor/scmeditoroptions.ui:72
-#, kde-format
-msgid "Shading"
-msgstr "سايىلەش"
-
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#: editor/scmeditoroptions.ui:97
-#, kde-format
-msgid "Maximum"
-msgstr "ئەڭ چوڭ"
-
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: editor/scmeditoroptions.ui:117
-#, kde-format
-msgid "Minimum"
-msgstr "ئەڭ كىچىك"
-
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: editor/scmeditoroptions.ui:124
-#, kde-format
-msgid "Contrast"
-msgstr "ئاق-قارىلىقى"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelFore0)
-#. i18n: ectx: property (toolTip), widget (QLabel, labelBack0)
-#: editor/setpreview.ui:35 editor/setpreview.ui:189
-#, kde-format
-msgid "Normal Text on Normal Background"
-msgstr "نورمال تەگلىكتىكى نورمال تېكىست"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore0)
-#. i18n: ectx: property (text), widget (QLabel, labelBack0)
-#: editor/setpreview.ui:38 editor/setpreview.ui:192
-#, kde-format
-msgctxt "color-kcm-set-preview"
-msgid "normal"
-msgstr "نورمال"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelFore3)
-#: editor/setpreview.ui:56
-#, kde-format
-msgid "Link Text on Normal Background"
-msgstr "نورمال تەگلىكتىكى ئۇلانما تېكىستى"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore3)
-#. i18n: ectx: property (text), widget (QLabel, labelBack3)
-#: editor/setpreview.ui:59 editor/setpreview.ui:214
-#, kde-format
-msgctxt "color-kcm-set-preview"
-msgid "link"
-msgstr "ئۇلانما"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelFore4)
-#: editor/setpreview.ui:77
-#, kde-format
-msgid "Visited Text on Normal Background"
-msgstr "نورمال تەگلىكتىكى كۆرۈلگەن تېكىست"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore4)
-#. i18n: ectx: property (text), widget (QLabel, labelBack4)
-#: editor/setpreview.ui:80 editor/setpreview.ui:236
-#, kde-format
-msgctxt "color-kcm-set-preview"
-msgid "visited"
-msgstr "كۆرۈلگەن"
-
-#. i18n: ectx: property (toolTip), widget (QWidget, widgetFore2)
-#: editor/setpreview.ui:90
-#, kde-format
-msgid "Active Text on Normal Background"
-msgstr "نورمال تەگلىكتىكى ئاكتىپ تېكىست"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore2)
-#. i18n: ectx: property (text), widget (QLabel, labelBack2)
-#: editor/setpreview.ui:96 editor/setpreview.ui:253
-#, kde-format
-msgctxt "color-kcm-set-preview"
-msgid "active"
-msgstr "ئاكتىپ"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelFore1)
-#: editor/setpreview.ui:109
-#, kde-format
-msgid "Inactive Text on Normal Background"
-msgstr "نورمال تەگلىكتىكى پاسسىپ تېكىست"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore1)
-#: editor/setpreview.ui:112
-#, kde-format
-msgctxt "color-kcm-set-preview"
-msgid "inactive"
-msgstr "پاسسىپ"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelFore5)
-#: editor/setpreview.ui:125
-#, kde-format
-msgid "Negative Text on Normal Background"
-msgstr "نورمال تەگلىكتىكى تەتۈر تېكىست"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore5)
-#. i18n: ectx: property (text), widget (QLabel, labelBack5)
-#: editor/setpreview.ui:128 editor/setpreview.ui:286
-#, kde-format
-msgctxt "color-kcm-set-preview"
-msgid "negative"
-msgstr "تەتۈر"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelFore6)
-#: editor/setpreview.ui:141
-#, kde-format
-msgid "Neutral Text on Normal Background"
-msgstr "نورمال تەگلىكتىكى بىتەرەپ تېكىست"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore6)
-#. i18n: ectx: property (text), widget (QLabel, labelBack6)
-#: editor/setpreview.ui:144 editor/setpreview.ui:303
-#, kde-format
-msgctxt "color-kcm-set-preview"
-msgid "neutral"
-msgstr "بىتەرەپ"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelFore7)
-#: editor/setpreview.ui:157
-#, kde-format
-msgid "Positive Text on Normal Background"
-msgstr "نورمال تەگلىكتىكى ئوڭ تېكىست"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore7)
-#. i18n: ectx: property (text), widget (QLabel, labelBack7)
-#: editor/setpreview.ui:160 editor/setpreview.ui:320
-#, kde-format
-msgctxt "color-kcm-set-preview"
-msgid "positive"
-msgstr "ئوڭ"
-
-#. i18n: ectx: property (toolTip), widget (QWidget, widgetFore8)
-#: editor/setpreview.ui:170
-#, fuzzy, kde-format
-#| msgid "Focus on Normal Background"
-msgid "Hover on Normal Background"
-msgstr "نورمال تەگلىك ئۈستىدىكى فوكۇس"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore8)
-#: editor/setpreview.ui:176
-#, kde-format
-msgctxt "color-kcm-set-preview"
-msgid "hover"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelBack3)
-#: editor/setpreview.ui:211
-#, kde-format
-msgid ""
-"Link Text on Link Background\n"
-"(Note: Link Background is derived from Link Text and cannot be separately "
-"configured at this time)"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelBack4)
-#: editor/setpreview.ui:233
-#, kde-format
-msgid ""
-"Visited Text on Visited Background\n"
-"(Note: Visited Background is derived from Visited Text and cannot be "
-"separately configured at this time)"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelBack2)
-#: editor/setpreview.ui:250
-#, kde-format
-msgid ""
-"Active Text on Active Background\n"
-"(Note: Active Background is derived from Active Text and cannot be "
-"separately configured at this time)"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelBack1)
-#: editor/setpreview.ui:266
-#, fuzzy, kde-format
-#| msgid "Inactive Text on Normal Background"
-msgid "Inactive Text on Alternate Background"
-msgstr "نورمال تەگلىكتىكى پاسسىپ تېكىست"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelBack1)
-#: editor/setpreview.ui:269
-#, kde-format
-msgctxt "color-kcm-set-preview"
-msgid "alternate"
-msgstr "ئالماشتۇر"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelBack5)
-#: editor/setpreview.ui:283
-#, kde-format
-msgid ""
-"Negative Text on Negative Background\n"
-"(Note: Negative Background is derived from Negative Text and cannot be "
-"separately configured at this time)"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelBack6)
-#: editor/setpreview.ui:300
-#, kde-format
-msgid ""
-"Neutral Text on Neutral Background\n"
-"(Note: Neutral Background is derived from Neutral Text and cannot be "
-"separately configured at this time)"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelBack7)
-#: editor/setpreview.ui:317
-#, kde-format
-msgid ""
-"Positive Text on Positive Background\n"
-"(Note: Positive Background is derived from Positive Text and cannot be "
-"separately configured at this time)"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelFore9)
-#: editor/setpreview.ui:333
-#, kde-format
-msgid "Focus on Normal Background"
-msgstr "نورمال تەگلىك ئۈستىدىكى فوكۇس"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore9)
-#: editor/setpreview.ui:336
-#, kde-format
-msgctxt "color-kcm-set-preview"
-msgid "focus"
-msgstr "فوكۇس"
 
 #: package/contents/ui/main.qml:23
 #, kde-format
@@ -1397,6 +484,431 @@ msgstr ""
 #| msgid "Save the current color scheme"
 msgid " * %1 (current color scheme)"
 msgstr "نۆۋەتتىكى رەڭ لاھىيەسىنى ساقلايدۇ"
+
+#, fuzzy
+#~| msgid "Save Color Scheme"
+#~ msgid "Color scheme name"
+#~ msgstr "رەڭ لايىھىسىنى ساقلاش"
+
+#, fuzzy
+#~| msgid "Inactive color"
+#~ msgid "Accent color"
+#~ msgstr "پاسسىپ رەڭ"
+
+#~ msgid "Window text on Window Background"
+#~ msgstr "كۆزنەك تەگلىكىدىكى كۆزنەك تېكىستى"
+
+#, fuzzy
+#~| msgctxt "color-kcm-preview"
+#~| msgid "Window text"
+#~ msgctxt "color-kcm-preview"
+#~ msgid "Window text"
+#~ msgstr "كۆزنەك تېكىستى"
+
+#~ msgid "Button text on Button Background"
+#~ msgstr "توپچا تەگلىكىدىكى توپچا تېكىستى"
+
+#~ msgctxt "color-kcm-preview"
+#~ msgid "Push Button"
+#~ msgstr "توپچا"
+
+#, fuzzy
+#~| msgid "Normal Text on Normal Background"
+#~ msgid "Selection Normal Text against Selection Normal Background"
+#~ msgstr "نورمال تەگلىكتىكى نورمال تېكىست"
+
+#~ msgctxt "color-kcm-preview"
+#~ msgid "Selected text"
+#~ msgstr "تاللانغان تېكىست"
+
+#, fuzzy
+#~| msgid "Link Text on Normal Background"
+#~ msgid "Selection Link Text against Selection Normal Background"
+#~ msgstr "نورمال تەگلىكتىكى ئۇلانما تېكىستى"
+
+#, fuzzy
+#~| msgctxt "color-kcm-preview"
+#~| msgid "link"
+#~ msgctxt "color-kcm-preview"
+#~ msgid "link"
+#~ msgstr "ئۇلانما"
+
+#, fuzzy
+#~| msgid "Visited Text on Normal Background"
+#~ msgid "Selection Visited Text against Selection Normal Background"
+#~ msgstr "نورمال تەگلىكتىكى كۆرۈلگەن تېكىست"
+
+#, fuzzy
+#~| msgctxt "color-kcm-preview"
+#~| msgid "visited"
+#~ msgctxt "color-kcm-preview"
+#~ msgid "visited"
+#~ msgstr "كۆرۈلگەن"
+
+#, fuzzy
+#~| msgid "Active Text on Normal Background"
+#~ msgid "Selection Active Text against Selection Normal Background"
+#~ msgstr "نورمال تەگلىكتىكى ئاكتىپ تېكىست"
+
+#~ msgctxt "color-kcm-preview"
+#~ msgid "a"
+#~ msgstr "a"
+
+#, fuzzy
+#~| msgid "Inactive Text on Normal Background"
+#~ msgid "Selection Inactive Text against Selection Normal Background"
+#~ msgstr "نورمال تەگلىكتىكى پاسسىپ تېكىست"
+
+#~ msgctxt "color-kcm-preview"
+#~ msgid "i"
+#~ msgstr "i"
+
+#, fuzzy
+#~| msgid "Negative Text on Normal Background"
+#~ msgid "Selection Negative Text against Selection Normal Background"
+#~ msgstr "نورمال تەگلىكتىكى تەتۈر تېكىست"
+
+#~ msgctxt "color-kcm-preview"
+#~ msgid "!"
+#~ msgstr "!"
+
+#, fuzzy
+#~| msgid "Neutral Text on Normal Background"
+#~ msgid "Selection Neutral Text against Selection Normal Background"
+#~ msgstr "نورمال تەگلىكتىكى بىتەرەپ تېكىست"
+
+#~ msgctxt "color-kcm-preview"
+#~ msgid "="
+#~ msgstr "="
+
+#, fuzzy
+#~| msgid "Positive Text on Normal Background"
+#~ msgid "Selection Positive Text against Selection Normal Background"
+#~ msgstr "نورمال تەگلىكتىكى ئوڭ تېكىست"
+
+#~ msgctxt "color-kcm-preview"
+#~ msgid "+"
+#~ msgstr "+"
+
+#, fuzzy
+#~| msgid "Normal Text on Normal Background"
+#~ msgid "View Normal Text against View Normal Background"
+#~ msgstr "نورمال تەگلىكتىكى نورمال تېكىست"
+
+#, fuzzy
+#~| msgctxt "color-kcm-preview"
+#~| msgid "Normal text"
+#~ msgctxt "color-kcm-preview"
+#~ msgid "Normal text"
+#~ msgstr "نورمال تېكىست"
+
+#, fuzzy
+#~| msgid "Link Text on Normal Background"
+#~ msgid "View Link Text against View Normal Background"
+#~ msgstr "نورمال تەگلىكتىكى ئۇلانما تېكىستى"
+
+#, fuzzy
+#~| msgid "Visited Text on Normal Background"
+#~ msgid "View Visited Text against View Normal Background"
+#~ msgstr "نورمال تەگلىكتىكى كۆرۈلگەن تېكىست"
+
+#, fuzzy
+#~| msgid "Active Text on Normal Background"
+#~ msgid "View Active Text against View Normal Background"
+#~ msgstr "نورمال تەگلىكتىكى ئاكتىپ تېكىست"
+
+#, fuzzy
+#~| msgid "Inactive Text on Normal Background"
+#~ msgid "View Inactive Text against View Normal Background"
+#~ msgstr "نورمال تەگلىكتىكى پاسسىپ تېكىست"
+
+#, fuzzy
+#~| msgid "Negative Text on Normal Background"
+#~ msgid "View Negative Text against View Normal Background"
+#~ msgstr "نورمال تەگلىكتىكى تەتۈر تېكىست"
+
+#, fuzzy
+#~| msgid "Neutral Text on Normal Background"
+#~ msgid "View Neutral Text against View Normal Background"
+#~ msgstr "نورمال تەگلىكتىكى بىتەرەپ تېكىست"
+
+#, fuzzy
+#~| msgid "Positive Text on Normal Background"
+#~ msgid "View Positive Text against View Normal Background"
+#~ msgstr "نورمال تەگلىكتىكى ئوڭ تېكىست"
+
+#~ msgid "Color set:"
+#~ msgstr "رەڭ توپلىمى:"
+
+#~ msgid "Colorset to view/modify"
+#~ msgstr "كۆرىدىغان/تۈزىتىدىغان رەڭ توپلىمى"
+
+#~ msgctxt "color-sets"
+#~ msgid "Common Colors"
+#~ msgstr "دائىم ئىشلىتىدىغان رەڭلەر"
+
+#~ msgctxt "color-sets"
+#~ msgid "View"
+#~ msgstr "كۆرۈنۈش"
+
+#~ msgctxt "color-sets"
+#~ msgid "Window"
+#~ msgstr "كۆزنەك"
+
+#, fuzzy
+#~| msgctxt "color-sets"
+#~| msgid "Button"
+#~ msgctxt "color-sets"
+#~ msgid "Button"
+#~ msgstr "توپچا"
+
+#~ msgctxt "color-sets"
+#~ msgid "Selection"
+#~ msgstr "تاللاش"
+
+#~ msgctxt "color-sets"
+#~ msgid "Tooltip"
+#~ msgstr "كۆرسەتمە"
+
+#~ msgid "New Row"
+#~ msgstr "يېڭى قۇر"
+
+#~ msgid "0"
+#~ msgstr "0"
+
+#~ msgid "1"
+#~ msgstr "1"
+
+#~ msgid "View Background"
+#~ msgstr "رەكلىك كۆرۈش"
+
+#~ msgid "View Text"
+#~ msgstr "تېكىست كۆرۈش"
+
+#~ msgid "Window Background"
+#~ msgstr "كۆزنەك تەگلىكى"
+
+#~ msgid "Window Text"
+#~ msgstr "كۆزنەك خېتى"
+
+#~ msgid "Button Background"
+#~ msgstr "توپچا تەگلىكى"
+
+#~ msgid "Button Text"
+#~ msgstr "توپچا تېكىستى"
+
+#~ msgid "Selection Background"
+#~ msgstr "تاللانغان تەگلىك"
+
+#~ msgid "Selection Text"
+#~ msgstr "تاللانغان تېكىست"
+
+#~ msgid "Selection Inactive Text"
+#~ msgstr "تاللانغان پاسسىپ تېكىست"
+
+#~ msgid "Tooltip Background"
+#~ msgstr "كۆرسەتمە تەگلىكى"
+
+#~ msgid "Tooltip Text"
+#~ msgstr "كۆرسەتمە تېكىستى"
+
+#~ msgid "Active Titlebar"
+#~ msgstr "ئاكتىپ ماۋزۇ بالدىقى"
+
+#~ msgid "Active Titlebar Text"
+#~ msgstr "ئاكتىپ ماۋزۇ بالدىقى تېكىستى"
+
+#~ msgid "Active Titlebar Secondary"
+#~ msgstr "ئاكتىپ ماۋزۇ بالدىقى ئىككىنچى"
+
+#~ msgid "Inactive Titlebar"
+#~ msgstr "پاسسىپ ماۋزۇ بالداق"
+
+#~ msgid "Inactive Titlebar Text"
+#~ msgstr "پاسسىپ ماۋزۇ بالدىقى تېكىستى"
+
+#~ msgid "Inactive Titlebar Secondary"
+#~ msgstr "پاسسىپ ماۋزۇ بالدىقى ئىككىنچى"
+
+#~ msgid "Color:"
+#~ msgstr "رەڭ:"
+
+#~ msgid "Intensity:"
+#~ msgstr "كۈچلۈكلۈك:"
+
+#~ msgid "Disabled color effect type"
+#~ msgstr "ئىناۋەتسىز قىلىنغان  رەڭ ئۈنۈمىنىڭ تىپى"
+
+#~ msgctxt "no disabled color effect"
+#~ msgid "None"
+#~ msgstr "يوق"
+
+#~ msgctxt "disabled color effect"
+#~ msgid "Desaturate"
+#~ msgstr "ئاچۇرۇش"
+
+#~ msgctxt "disabled color effect"
+#~ msgid "Fade"
+#~ msgstr "سۇسلاشتۇر"
+
+#~ msgctxt "disabled color effect"
+#~ msgid "Tint"
+#~ msgstr "رەڭلە"
+
+#, fuzzy
+#~| msgid "Disabled color effect type"
+#~ msgid "Disabled intensity effect type"
+#~ msgstr "ئىناۋەتسىز قىلىنغان  رەڭ ئۈنۈمىنىڭ تىپى"
+
+#~ msgctxt "no disabled intensity effect"
+#~ msgid "None"
+#~ msgstr "يوق"
+
+#~ msgctxt "disabled intensity effect"
+#~ msgid "Shade"
+#~ msgstr "تۈرۈش"
+
+#~ msgctxt "disabled intensity effect"
+#~ msgid "Darken"
+#~ msgstr "قارايت"
+
+#~ msgctxt "disabled intensity effect"
+#~ msgid "Lighten"
+#~ msgstr "يورۇت"
+
+#~ msgid "Contrast:"
+#~ msgstr "سېلىشتۇرما دەرىجە:"
+
+#~ msgid "Disabled color effect amount"
+#~ msgstr "ئىناۋەتسىز قىلىنغان  رەڭ ئۈنۈمىنىڭ مىقدارى"
+
+#, fuzzy
+#~| msgid "Disabled color effect amount"
+#~ msgid "Disabled intensity effect amount"
+#~ msgstr "ئىناۋەتسىز قىلىنغان  رەڭ ئۈنۈمىنىڭ مىقدارى"
+
+#~ msgid "Disabled color"
+#~ msgstr "ئىناۋەتسىز قىلىنغان رەڭ"
+
+#~ msgid "Disabled contrast type"
+#~ msgstr "ئىناۋەتسىز قىلىنغان سېلىشتۇرما دەرىجەنىڭ تىپى"
+
+#~ msgctxt "no disabled contrast"
+#~ msgid "None"
+#~ msgstr "يوق"
+
+#~ msgctxt "disabled contrast"
+#~ msgid "Fade"
+#~ msgstr "سۇسلاشتۇر"
+
+#~ msgctxt "disabled contrast"
+#~ msgid "Tint"
+#~ msgstr "رەڭلە"
+
+#~ msgid "Disabled contrast amount"
+#~ msgstr "ئىناۋەتسىز قىلىنغان سېلىشتۇرما دەرىجەنىڭ مىقدارى"
+
+#, fuzzy
+#~| msgid "Apply inactive window color &effects"
+#~ msgid "Apply &effects to inactive windows"
+#~ msgstr "پاسسىپ كۆزنەك رەڭ ئۈنۈمىنى قوللان(&E)"
+
+#~ msgid "Shade sorted column &in lists"
+#~ msgstr "تىزىمدىكى تەرتىپلەنگەن ئىستوننى سايىلەشتۇر"
+
+#, fuzzy
+#~| msgid "Inactive color"
+#~ msgid "Tint all colors with accent color"
+#~ msgstr "پاسسىپ رەڭ"
+
+#~ msgid "Shading"
+#~ msgstr "سايىلەش"
+
+#~ msgid "Maximum"
+#~ msgstr "ئەڭ چوڭ"
+
+#~ msgid "Minimum"
+#~ msgstr "ئەڭ كىچىك"
+
+#~ msgid "Contrast"
+#~ msgstr "ئاق-قارىلىقى"
+
+#~ msgid "Normal Text on Normal Background"
+#~ msgstr "نورمال تەگلىكتىكى نورمال تېكىست"
+
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "normal"
+#~ msgstr "نورمال"
+
+#~ msgid "Link Text on Normal Background"
+#~ msgstr "نورمال تەگلىكتىكى ئۇلانما تېكىستى"
+
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "link"
+#~ msgstr "ئۇلانما"
+
+#~ msgid "Visited Text on Normal Background"
+#~ msgstr "نورمال تەگلىكتىكى كۆرۈلگەن تېكىست"
+
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "visited"
+#~ msgstr "كۆرۈلگەن"
+
+#~ msgid "Active Text on Normal Background"
+#~ msgstr "نورمال تەگلىكتىكى ئاكتىپ تېكىست"
+
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "active"
+#~ msgstr "ئاكتىپ"
+
+#~ msgid "Inactive Text on Normal Background"
+#~ msgstr "نورمال تەگلىكتىكى پاسسىپ تېكىست"
+
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "inactive"
+#~ msgstr "پاسسىپ"
+
+#~ msgid "Negative Text on Normal Background"
+#~ msgstr "نورمال تەگلىكتىكى تەتۈر تېكىست"
+
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "negative"
+#~ msgstr "تەتۈر"
+
+#~ msgid "Neutral Text on Normal Background"
+#~ msgstr "نورمال تەگلىكتىكى بىتەرەپ تېكىست"
+
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "neutral"
+#~ msgstr "بىتەرەپ"
+
+#~ msgid "Positive Text on Normal Background"
+#~ msgstr "نورمال تەگلىكتىكى ئوڭ تېكىست"
+
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "positive"
+#~ msgstr "ئوڭ"
+
+#, fuzzy
+#~| msgid "Focus on Normal Background"
+#~ msgid "Hover on Normal Background"
+#~ msgstr "نورمال تەگلىك ئۈستىدىكى فوكۇس"
+
+#, fuzzy
+#~| msgid "Inactive Text on Normal Background"
+#~ msgid "Inactive Text on Alternate Background"
+#~ msgstr "نورمال تەگلىكتىكى پاسسىپ تېكىست"
+
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "alternate"
+#~ msgstr "ئالماشتۇر"
+
+#~ msgid "Focus on Normal Background"
+#~ msgstr "نورمال تەگلىك ئۈستىدىكى فوكۇس"
+
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "focus"
+#~ msgstr "فوكۇس"
 
 #, fuzzy
 #~| msgid "Apply inactive window color &effects"

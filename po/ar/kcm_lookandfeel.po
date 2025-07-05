@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2022-08-10 22:26+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -92,12 +92,6 @@ msgstr "اسم الحزمة"
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
 msgstr "أعد ضبط تخطيط سطح مكتب بلازما"
-
-#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
-#: lookandfeelsettings.kcfg:9
-#, kde-format
-msgid "Global look and feel"
-msgstr "الشكل والمظهر الشامل"
 
 #: package/contents/ui/main.qml:21
 #, kde-format
@@ -262,6 +256,9 @@ msgid ""
 msgstr ""
 "لا تقدم السمة الشاملة أي إعدادات. الرجاء التواصل مع مؤلف هذه السمة لأنها قد "
 "تكون معطوبة."
+
+#~ msgid "Global look and feel"
+#~ msgstr "الشكل والمظهر الشامل"
 
 #~ msgid ""
 #~ "Your current layout and configuration of panels, desktop widgets, and "

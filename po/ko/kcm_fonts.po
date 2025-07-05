@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-15 00:48+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2023-04-22 00:12+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -17,54 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 24.12.3\n"
-
-#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
-#: fontsaasettingsbase.kcfg:9
-#, kde-format
-msgid "Force font DPI Wayland"
-msgstr "글꼴 DPI 강제 지정(Wayland)"
-
-#. i18n: ectx: label, entry (forceFontDPI), group (General)
-#: fontsaasettingsbase.kcfg:13
-#, kde-format
-msgid "Force font DPI on X11"
-msgstr "X11에서 글꼴 DPI 강제 지정"
-
-#. i18n: ectx: label, entry (font), group (General)
-#: fontssettings.kcfg:9
-#, kde-format
-msgid "General font"
-msgstr "일반 글꼴"
-
-#. i18n: ectx: label, entry (fixed), group (General)
-#: fontssettings.kcfg:21
-#, kde-format
-msgid "Fixed width font"
-msgstr "고정폭 글꼴"
-
-#. i18n: ectx: label, entry (smallestReadableFont), group (General)
-#: fontssettings.kcfg:33
-#, kde-format
-msgid "Small font"
-msgstr "작은 글꼴"
-
-#. i18n: ectx: label, entry (toolBarFont), group (General)
-#: fontssettings.kcfg:45
-#, kde-format
-msgid "Tool bar font"
-msgstr "도구 모음 글꼴"
-
-#. i18n: ectx: label, entry (menuFont), group (General)
-#: fontssettings.kcfg:57
-#, kde-format
-msgid "Menu font"
-msgstr "메뉴 글꼴"
-
-#. i18n: ectx: label, entry (activeFont), group (WM)
-#: fontssettings.kcfg:71
-#, kde-format
-msgid "Window title font"
-msgstr "창 제목 글꼴"
 
 #: kxftconfig.cpp:458
 #, kde-format
@@ -351,6 +303,30 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "글꼴 선택"
+
+#~ msgid "Force font DPI Wayland"
+#~ msgstr "글꼴 DPI 강제 지정(Wayland)"
+
+#~ msgid "Force font DPI on X11"
+#~ msgstr "X11에서 글꼴 DPI 강제 지정"
+
+#~ msgid "General font"
+#~ msgstr "일반 글꼴"
+
+#~ msgid "Fixed width font"
+#~ msgstr "고정폭 글꼴"
+
+#~ msgid "Small font"
+#~ msgstr "작은 글꼴"
+
+#~ msgid "Tool bar font"
+#~ msgstr "도구 모음 글꼴"
+
+#~ msgid "Menu font"
+#~ msgstr "메뉴 글꼴"
+
+#~ msgid "Window title font"
+#~ msgstr "창 제목 글꼴"
 
 #~ msgid "Change Display Scaling…"
 #~ msgstr "디스플레이 크기 조정 변경…"

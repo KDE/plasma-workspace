@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_containmentactions_switchwindow\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2015-05-26 17:39+0100\n"
 "Last-Translator: Maxime Corteel <mcorteel@gmail.com>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -20,24 +20,6 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 "X-Generator: Lokalize 2.0\n"
-
-#. i18n: ectx: property (text), widget (QRadioButton, flatButton)
-#: config.ui:16
-#, kde-format
-msgid "Display all windows in one list"
-msgstr "Afficher toutes les fenêtres dans une seule liste"
-
-#. i18n: ectx: property (text), widget (QRadioButton, subButton)
-#: config.ui:23
-#, kde-format
-msgid "Display a submenu for each desktop"
-msgstr "Afficher un sous-menu pour chaque bureau"
-
-#. i18n: ectx: property (text), widget (QRadioButton, curButton)
-#: config.ui:30
-#, kde-format
-msgid "Display only the current desktop's windows"
-msgstr "N'afficher que les fenêtres du bureau actuel"
 
 #: switch.cpp:75
 #, kde-format
@@ -56,3 +38,12 @@ msgstr "Fenêtres"
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "All Desktops"
 msgstr "Tous les bureaux"
+
+#~ msgid "Display all windows in one list"
+#~ msgstr "Afficher toutes les fenêtres dans une seule liste"
+
+#~ msgid "Display a submenu for each desktop"
+#~ msgstr "Afficher un sous-menu pour chaque bureau"
+
+#~ msgid "Display only the current desktop's windows"
+#~ msgstr "N'afficher que les fenêtres du bureau actuel"

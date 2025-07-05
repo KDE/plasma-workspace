@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-31 02:25+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2024-05-16 11:39+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -140,30 +140,6 @@ msgstr "أبقه مفتوحاً"
 #, kde-format
 msgid "Configure…"
 msgstr "اضبط…"
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:10
-#, kde-format
-msgid "Screen lock enabled"
-msgstr "قفل الشاشة مفعل"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:11
-#, kde-format
-msgid "Sets whether the screen will be locked after the specified time."
-msgstr "يضبط ما إذا كان سيتم قفل الشاشة بعد الوقت المحدد."
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:16
-#, kde-format
-msgid "Screen saver timeout"
-msgstr "مهلة حافظة الشاشة"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:17
-#, kde-format
-msgid "Sets the minutes after which the screen is locked."
-msgstr "يضبط الدقائق التي تقفل بعدها الشاشة."
 
 #: sessionsprivate/sessionsmodel.cpp:235 sessionsprivate/sessionsmodel.cpp:239
 #, kde-format
@@ -333,6 +309,18 @@ msgstr "نزّل ودجات بلازما جديدة"
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "ثبّت ودجة من ملفّ محليّ..."
+
+#~ msgid "Screen lock enabled"
+#~ msgstr "قفل الشاشة مفعل"
+
+#~ msgid "Sets whether the screen will be locked after the specified time."
+#~ msgstr "يضبط ما إذا كان سيتم قفل الشاشة بعد الوقت المحدد."
+
+#~ msgid "Screen saver timeout"
+#~ msgstr "مهلة حافظة الشاشة"
+
+#~ msgid "Sets the minutes after which the screen is locked."
+#~ msgstr "يضبط الدقائق التي تقفل بعدها الشاشة."
 
 #~ msgid "&Execute"
 #~ msgstr "&نفّذ"

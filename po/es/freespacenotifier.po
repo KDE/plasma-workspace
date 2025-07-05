@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kded_susefreespacenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-17 00:48+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2021-05-27 01:04+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -35,37 +35,6 @@ msgstr "Abrir en Filelight"
 msgid "Open in File Manager"
 msgstr "Abrir en el gestor de archivos"
 
-#. i18n: ectx: label, entry (minimumSpace), group (General)
-#: freespacenotifier.kcfg:9
-#, kde-format
-msgid "Minimum free space before user starts being notified."
-msgstr ""
-"Espacio libre mínimo a partir del que se empezará a notificar al usuario."
-
-#. i18n: ectx: label, entry (enableNotification), group (General)
-#: freespacenotifier.kcfg:15
-#, kde-format
-msgid "Is the free space notification enabled."
-msgstr "Si la notificación de espacio libre está activada."
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableNotification)
-#: freespacenotifier_prefs_base.ui:17
-#, kde-format
-msgid "Enable low disk space warning"
-msgstr "Activar advertencia de poco espacio en disco"
-
-#. i18n: ectx: property (text), widget (QLabel, label_minimumSpace)
-#: freespacenotifier_prefs_base.ui:27
-#, kde-format
-msgid "Warn when free space is below:"
-msgstr "Avisar cuando el espacio libre sea menor de:"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpace)
-#: freespacenotifier_prefs_base.ui:37
-#, kde-format
-msgid " MiB"
-msgstr " MiB"
-
 #: module.cpp:37
 #, kde-format
 msgid ""
@@ -89,6 +58,22 @@ msgstr ""
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"
 msgstr "General"
+
+#~ msgid "Minimum free space before user starts being notified."
+#~ msgstr ""
+#~ "Espacio libre mínimo a partir del que se empezará a notificar al usuario."
+
+#~ msgid "Is the free space notification enabled."
+#~ msgstr "Si la notificación de espacio libre está activada."
+
+#~ msgid "Enable low disk space warning"
+#~ msgstr "Activar advertencia de poco espacio en disco"
+
+#~ msgid "Warn when free space is below:"
+#~ msgstr "Avisar cuando el espacio libre sea menor de:"
+
+#~ msgid " MiB"
+#~ msgstr " MiB"
 
 #~ msgid "Low Disk Space"
 #~ msgstr "Poco espacio en disco"

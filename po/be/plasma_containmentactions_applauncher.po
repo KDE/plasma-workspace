@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2022-12-20 11:01\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -22,14 +22,11 @@ msgstr ""
 "plasma_containmentactions_applauncher.po\n"
 "X-Crowdin-File-ID: 8832\n"
 
-#. i18n: ectx: property (text), widget (QCheckBox, showAppsByName)
-#: config.ui:17
-#, kde-format
-msgid "Show applications by name"
-msgstr "Паказваць праграмы па назвах"
-
 #: launch.cpp:89
 #, kde-format
 msgctxt "plasma_containmentactions_applauncher"
 msgid "Configure Application Launcher Plugin"
 msgstr "Наладжванне ўбудовы для запуску праграм"
+
+#~ msgid "Show applications by name"
+#~ msgstr "Паказваць праграмы па назвах"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_kill\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2020-05-14 09:15+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -65,35 +65,20 @@ msgstr "інвертоване використання процесора"
 msgid "nothing"
 msgstr "Без впорядковування"
 
-#. i18n: ectx: property (title), widget (QGroupBox, main)
-#: killrunner_config.ui:30
-#, kde-format
-msgid "Kill Applications Config"
-msgstr "Налаштування завершення роботи програм"
+#~ msgid "Kill Applications Config"
+#~ msgstr "Налаштування завершення роботи програм"
 
-#. i18n: ectx: property (text), widget (QCheckBox, useTriggerWord)
-#: killrunner_config.ui:39
-#, kde-format
-msgid "&Use trigger word"
-msgstr "С&лово-перемикач"
+#~ msgid "&Use trigger word"
+#~ msgstr "С&лово-перемикач"
 
-#. i18n: ectx: property (text), widget (QLabel, label_trigger)
-#: killrunner_config.ui:51
-#, kde-format
-msgid "&Trigger word:"
-msgstr "&Слово-перемикач:"
+#~ msgid "&Trigger word:"
+#~ msgstr "&Слово-перемикач:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_sorting)
-#: killrunner_config.ui:72
-#, kde-format
-msgid "&Sort by"
-msgstr "&Впорядкувати за"
+#~ msgid "&Sort by"
+#~ msgstr "&Впорядкувати за"
 
-#. i18n: ectx: property (toolTip), widget (KComboBox, sorting)
-#: killrunner_config.ui:82
-#, kde-format
-msgid "It is not sure, that this will take effect"
-msgstr "Можливо, ніяких наслідків і не буде"
+#~ msgid "It is not sure, that this will take effect"
+#~ msgstr "Можливо, ніяких наслідків і не буде"
 
 #~ msgid ""
 #~ "Process ID: %1\n"

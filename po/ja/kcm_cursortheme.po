@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-10 00:58+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2024-01-09 16:09+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -25,18 +25,6 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-
-#. i18n: ectx: label, entry (cursorTheme), group (Mouse)
-#: cursorthemesettings.kcfg:9
-#, kde-format
-msgid "Name of the current cursor theme"
-msgstr "現在のマウスカーソルテーマの名前"
-
-#. i18n: ectx: label, entry (cursorSize), group (Mouse)
-#: cursorthemesettings.kcfg:13
-#, kde-format
-msgid "Current cursor size"
-msgstr "現在のカーソルサイズ"
 
 #: kcmcursortheme.cpp:308
 #, kde-format
@@ -80,13 +68,6 @@ msgstr "テーマを上書きしますか？"
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "テーマのインストールに成功しました。"
-
-#. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
-#. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)
-#: launchfeedbacksettings.kcfg:19 launchfeedbacksettings.kcfg:33
-#, kde-format
-msgid "Timeout in seconds"
-msgstr "タイムアウト (秒)"
 
 #: package/contents/ui/Delegate.qml:54
 #, kde-format
@@ -278,3 +259,12 @@ msgctxt ""
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(利用可能なサイズ: %1)"
+
+#~ msgid "Name of the current cursor theme"
+#~ msgstr "現在のマウスカーソルテーマの名前"
+
+#~ msgid "Current cursor size"
+#~ msgstr "現在のカーソルサイズ"
+
+#~ msgid "Timeout in seconds"
+#~ msgstr "タイムアウト (秒)"

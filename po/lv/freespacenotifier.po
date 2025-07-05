@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: freespacenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-17 00:48+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2010-07-08 11:35+0300\n"
 "Last-Translator: Maris Nartiss <maris.kde@gmail.com>\n"
 "Language-Team: Latvian\n"
@@ -38,38 +38,6 @@ msgstr ""
 msgid "Open in File Manager"
 msgstr "Atvērt failu pārvaldnieku"
 
-#. i18n: ectx: label, entry (minimumSpace), group (General)
-#: freespacenotifier.kcfg:9
-#, kde-format
-msgid "Minimum free space before user starts being notified."
-msgstr ""
-"Minimālās brīvās vietas daudzums pēc kura pārsniegšanas ir jābrīdina "
-"lietotājs."
-
-#. i18n: ectx: label, entry (enableNotification), group (General)
-#: freespacenotifier.kcfg:15
-#, kde-format
-msgid "Is the free space notification enabled."
-msgstr "Brīvās vietas ziņošana ir ieslēgta."
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableNotification)
-#: freespacenotifier_prefs_base.ui:17
-#, kde-format
-msgid "Enable low disk space warning"
-msgstr "Ieslēgt brīvās vietas brīdinājumu"
-
-#. i18n: ectx: property (text), widget (QLabel, label_minimumSpace)
-#: freespacenotifier_prefs_base.ui:27
-#, kde-format
-msgid "Warn when free space is below:"
-msgstr "Brīdināt kad brīvā vieta ir mazāk par:"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpace)
-#: freespacenotifier_prefs_base.ui:37
-#, kde-format
-msgid " MiB"
-msgstr " MiB"
-
 #: module.cpp:37
 #, kde-format
 msgid ""
@@ -89,6 +57,23 @@ msgstr ""
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"
 msgstr "Vispārēji"
+
+#~ msgid "Minimum free space before user starts being notified."
+#~ msgstr ""
+#~ "Minimālās brīvās vietas daudzums pēc kura pārsniegšanas ir jābrīdina "
+#~ "lietotājs."
+
+#~ msgid "Is the free space notification enabled."
+#~ msgstr "Brīvās vietas ziņošana ir ieslēgta."
+
+#~ msgid "Enable low disk space warning"
+#~ msgstr "Ieslēgt brīvās vietas brīdinājumu"
+
+#~ msgid "Warn when free space is below:"
+#~ msgstr "Brīdināt kad brīvā vieta ir mazāk par:"
+
+#~ msgid " MiB"
+#~ msgstr " MiB"
 
 #~ msgctxt ""
 #~ "Warns the user that the system is running low on space on his home "

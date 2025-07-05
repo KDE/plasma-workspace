@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2011-09-10 17:27+0200\n"
 "Last-Translator: Dimitrios Glentadakis <dglent@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -65,35 +65,20 @@ msgstr "ανεστραμμένη χρήση ΚΜΕ"
 msgid "nothing"
 msgstr "καμία ενέργεια"
 
-#. i18n: ectx: property (title), widget (QGroupBox, main)
-#: killrunner_config.ui:30
-#, kde-format
-msgid "Kill Applications Config"
-msgstr "Διαμόρφωση του τερματισμού των εφαρμογών"
+#~ msgid "Kill Applications Config"
+#~ msgstr "Διαμόρφωση του τερματισμού των εφαρμογών"
 
-#. i18n: ectx: property (text), widget (QCheckBox, useTriggerWord)
-#: killrunner_config.ui:39
-#, kde-format
-msgid "&Use trigger word"
-msgstr "&Χρησιμοποίηση λέξης ενεργοποίησης"
+#~ msgid "&Use trigger word"
+#~ msgstr "&Χρησιμοποίηση λέξης ενεργοποίησης"
 
-#. i18n: ectx: property (text), widget (QLabel, label_trigger)
-#: killrunner_config.ui:51
-#, kde-format
-msgid "&Trigger word:"
-msgstr "&Λέξη ενεργοποίησης:"
+#~ msgid "&Trigger word:"
+#~ msgstr "&Λέξη ενεργοποίησης:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_sorting)
-#: killrunner_config.ui:72
-#, kde-format
-msgid "&Sort by"
-msgstr "&Ταξινόμηση κατά"
+#~ msgid "&Sort by"
+#~ msgstr "&Ταξινόμηση κατά"
 
-#. i18n: ectx: property (toolTip), widget (KComboBox, sorting)
-#: killrunner_config.ui:82
-#, kde-format
-msgid "It is not sure, that this will take effect"
-msgstr "Δεν είναι σίγουρο, ότι αυτό θα τεθεί σε ισχύ"
+#~ msgid "It is not sure, that this will take effect"
+#~ msgstr "Δεν είναι σίγουρο, ότι αυτό θα τεθεί σε ισχύ"
 
 #~ msgid ""
 #~ "Process ID: %1\n"

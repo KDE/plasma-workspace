@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-29 02:56+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2022-08-27 00:23+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -1629,12 +1629,6 @@ msgstr "Öncədən baxış sətiri"
 msgid "Please enter new string:"
 msgstr "Yeni sətir daxil edin:"
 
-#. i18n: ectx: ToolBar (mainToolBar)
-#: viewpart/kfontviewpart.rc:4
-#, kde-format
-msgid "&Main Toolbar"
-msgstr "&Əsas Alətlər paneli"
-
 #: viewpart/PreviewSelectAction.cpp:13
 #, kde-format
 msgid "Preview Type"
@@ -2327,6 +2321,9 @@ msgstr "Laqba-Lamı kvadrat yazısı"
 #: viewpart/UnicodeScripts.h:80
 msgid "Yi"
 msgstr "Yi yazısı"
+
+#~ msgid "&Main Toolbar"
+#~ msgstr "&Əsas Alətlər paneli"
 
 #~ msgid "Print..."
 #~ msgstr "Çap..."

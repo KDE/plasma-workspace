@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-31 02:25+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2024-09-29 07:45+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -135,30 +135,6 @@ msgstr "Tetap Buka"
 #, kde-format
 msgid "Configure…"
 msgstr "Konfigurasi..."
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:10
-#, kde-format
-msgid "Screen lock enabled"
-msgstr "Kunci layar difungsikan"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:11
-#, kde-format
-msgid "Sets whether the screen will be locked after the specified time."
-msgstr "Atur apakah layar akan dikunci sesudah waktu yang ditentukan."
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:16
-#, kde-format
-msgid "Screen saver timeout"
-msgstr "Batas waktu screensaver"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:17
-#, kde-format
-msgid "Sets the minutes after which the screen is locked."
-msgstr "Atur menit sesudah layar dikunci."
 
 #: sessionsprivate/sessionsmodel.cpp:235 sessionsprivate/sessionsmodel.cpp:239
 #, kde-format
@@ -328,6 +304,18 @@ msgstr "Unduh Widget Plasma Baru"
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "Instal Widget Dari File Lokal..."
+
+#~ msgid "Screen lock enabled"
+#~ msgstr "Kunci layar difungsikan"
+
+#~ msgid "Sets whether the screen will be locked after the specified time."
+#~ msgstr "Atur apakah layar akan dikunci sesudah waktu yang ditentukan."
+
+#~ msgid "Screen saver timeout"
+#~ msgstr "Batas waktu screensaver"
+
+#~ msgid "Sets the minutes after which the screen is locked."
+#~ msgstr "Atur menit sesudah layar dikunci."
 
 #~ msgid "&Execute"
 #~ msgstr "&Eksekusi"

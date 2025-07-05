@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-15 00:48+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2022-10-18 13:15+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -16,54 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.08.2\n"
-
-#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
-#: fontsaasettingsbase.kcfg:9
-#, kde-format
-msgid "Force font DPI Wayland"
-msgstr "Wayland üçün məcburi şrift ölçüləri"
-
-#. i18n: ectx: label, entry (forceFontDPI), group (General)
-#: fontsaasettingsbase.kcfg:13
-#, kde-format
-msgid "Force font DPI on X11"
-msgstr "X11-də məcburi şrift DPI ölçüsü"
-
-#. i18n: ectx: label, entry (font), group (General)
-#: fontssettings.kcfg:9
-#, kde-format
-msgid "General font"
-msgstr "Əsas şrift"
-
-#. i18n: ectx: label, entry (fixed), group (General)
-#: fontssettings.kcfg:21
-#, kde-format
-msgid "Fixed width font"
-msgstr "Sabit genişlikli şrift"
-
-#. i18n: ectx: label, entry (smallestReadableFont), group (General)
-#: fontssettings.kcfg:33
-#, kde-format
-msgid "Small font"
-msgstr "Kiçik şrift"
-
-#. i18n: ectx: label, entry (toolBarFont), group (General)
-#: fontssettings.kcfg:45
-#, kde-format
-msgid "Tool bar font"
-msgstr "Başlıq Çubuğu şrifti"
-
-#. i18n: ectx: label, entry (menuFont), group (General)
-#: fontssettings.kcfg:57
-#, kde-format
-msgid "Menu font"
-msgstr "Menyu şrifti"
-
-#. i18n: ectx: label, entry (activeFont), group (WM)
-#: fontssettings.kcfg:71
-#, kde-format
-msgid "Window title font"
-msgstr "Pəncərə Başlığı şrifti"
 
 #: kxftconfig.cpp:458
 #, kde-format
@@ -357,6 +309,30 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "Şrift seçimi"
+
+#~ msgid "Force font DPI Wayland"
+#~ msgstr "Wayland üçün məcburi şrift ölçüləri"
+
+#~ msgid "Force font DPI on X11"
+#~ msgstr "X11-də məcburi şrift DPI ölçüsü"
+
+#~ msgid "General font"
+#~ msgstr "Əsas şrift"
+
+#~ msgid "Fixed width font"
+#~ msgstr "Sabit genişlikli şrift"
+
+#~ msgid "Small font"
+#~ msgstr "Kiçik şrift"
+
+#~ msgid "Tool bar font"
+#~ msgstr "Başlıq Çubuğu şrifti"
+
+#~ msgid "Menu font"
+#~ msgstr "Menyu şrifti"
+
+#~ msgid "Window title font"
+#~ msgstr "Pəncərə Başlığı şrifti"
 
 #~ msgid "Change Display Scaling…"
 #~ msgstr "Ekran miqyasını dəyişin..."

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-29 02:56+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2022-05-12 12:01+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -1610,12 +1610,6 @@ msgstr "Chuỗi xem thử"
 msgid "Please enter new string:"
 msgstr "Vui lòng nhập vào chuỗi mới:"
 
-#. i18n: ectx: ToolBar (mainToolBar)
-#: viewpart/kfontviewpart.rc:4
-#, kde-format
-msgid "&Main Toolbar"
-msgstr "Thanh công cụ &chính"
-
 #: viewpart/PreviewSelectAction.cpp:13
 #, kde-format
 msgid "Preview Type"
@@ -2308,6 +2302,9 @@ msgstr "Phags Pa"
 #: viewpart/UnicodeScripts.h:80
 msgid "Yi"
 msgstr "Lô Lô"
+
+#~ msgid "&Main Toolbar"
+#~ msgstr "Thanh công cụ &chính"
 
 #~ msgid "Print..."
 #~ msgstr "In…"

@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-15 00:48+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2023-12-09 22:11+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -26,54 +26,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 24.01.80\n"
-
-#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
-#: fontsaasettingsbase.kcfg:9
-#, kde-format
-msgid "Force font DPI Wayland"
-msgstr "DPI Wayland yazıtipini zorla"
-
-#. i18n: ectx: label, entry (forceFontDPI), group (General)
-#: fontsaasettingsbase.kcfg:13
-#, kde-format
-msgid "Force font DPI on X11"
-msgstr "X11'de yazıtipi DPI'sini zorla"
-
-#. i18n: ectx: label, entry (font), group (General)
-#: fontssettings.kcfg:9
-#, kde-format
-msgid "General font"
-msgstr "Genel yazıtipi"
-
-#. i18n: ectx: label, entry (fixed), group (General)
-#: fontssettings.kcfg:21
-#, kde-format
-msgid "Fixed width font"
-msgstr "Eş aralıklı yazıtipi"
-
-#. i18n: ectx: label, entry (smallestReadableFont), group (General)
-#: fontssettings.kcfg:33
-#, kde-format
-msgid "Small font"
-msgstr "Küçük yazıtipi"
-
-#. i18n: ectx: label, entry (toolBarFont), group (General)
-#: fontssettings.kcfg:45
-#, kde-format
-msgid "Tool bar font"
-msgstr "Araç çubuğu yazıtipi"
-
-#. i18n: ectx: label, entry (menuFont), group (General)
-#: fontssettings.kcfg:57
-#, kde-format
-msgid "Menu font"
-msgstr "Menü yazıtipi"
-
-#. i18n: ectx: label, entry (activeFont), group (WM)
-#: fontssettings.kcfg:71
-#, kde-format
-msgid "Window title font"
-msgstr "Pencere başlığı yazıtipi"
 
 #: kxftconfig.cpp:458
 #, kde-format
@@ -366,6 +318,30 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "Yazıtipi Seç"
+
+#~ msgid "Force font DPI Wayland"
+#~ msgstr "DPI Wayland yazıtipini zorla"
+
+#~ msgid "Force font DPI on X11"
+#~ msgstr "X11'de yazıtipi DPI'sini zorla"
+
+#~ msgid "General font"
+#~ msgstr "Genel yazıtipi"
+
+#~ msgid "Fixed width font"
+#~ msgstr "Eş aralıklı yazıtipi"
+
+#~ msgid "Small font"
+#~ msgstr "Küçük yazıtipi"
+
+#~ msgid "Tool bar font"
+#~ msgstr "Araç çubuğu yazıtipi"
+
+#~ msgid "Menu font"
+#~ msgstr "Menü yazıtipi"
+
+#~ msgid "Window title font"
+#~ msgstr "Pencere başlığı yazıtipi"
 
 #~ msgid "Change Display Scaling…"
 #~ msgstr "Ekran Ölçeğini Değiştir…"

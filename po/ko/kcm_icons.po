@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-22 00:47+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2023-02-28 23:32+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -37,48 +37,6 @@ msgstr "작은 아이콘"
 #, kde-format
 msgid "Dialogs"
 msgstr "대화 상자"
-
-#. i18n: ectx: label, entry (Theme), group (Icons)
-#: iconssettingsbase.kcfg:9
-#, kde-format
-msgid "Name of the current icon theme"
-msgstr "현재 아이콘 테마 이름"
-
-#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
-#: iconssettingsbase.kcfg:15
-#, kde-format
-msgid "Desktop icons size"
-msgstr "바탕 화면 아이콘 크기"
-
-#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
-#: iconssettingsbase.kcfg:21
-#, kde-format
-msgid "Toolbar icons size"
-msgstr "도구 모음 아이콘 크기"
-
-#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
-#: iconssettingsbase.kcfg:27
-#, kde-format
-msgid "Main toolbar icons size"
-msgstr "주 도구 모음 아이콘 크기"
-
-#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
-#: iconssettingsbase.kcfg:33
-#, kde-format
-msgid "Small icons size"
-msgstr "작은 아이콘 크기"
-
-#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
-#: iconssettingsbase.kcfg:39
-#, kde-format
-msgid "Panel icons size"
-msgstr "패널 아이콘 크기"
-
-#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
-#: iconssettingsbase.kcfg:45
-#, kde-format
-msgid "Dialog icons size"
-msgstr "대화 상자 아이콘 크기"
 
 #: main.cpp:182
 #, kde-format
@@ -188,6 +146,27 @@ msgstr "테마 열기"
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "테마 파일 (*.tar.gz *.tar.bz2)"
+
+#~ msgid "Name of the current icon theme"
+#~ msgstr "현재 아이콘 테마 이름"
+
+#~ msgid "Desktop icons size"
+#~ msgstr "바탕 화면 아이콘 크기"
+
+#~ msgid "Toolbar icons size"
+#~ msgstr "도구 모음 아이콘 크기"
+
+#~ msgid "Main toolbar icons size"
+#~ msgstr "주 도구 모음 아이콘 크기"
+
+#~ msgid "Small icons size"
+#~ msgstr "작은 아이콘 크기"
+
+#~ msgid "Panel icons size"
+#~ msgstr "패널 아이콘 크기"
+
+#~ msgid "Dialog icons size"
+#~ msgstr "대화 상자 아이콘 크기"
 
 #~ msgid "Toolbar"
 #~ msgstr "도구 모음"

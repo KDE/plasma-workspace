@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-31 02:25+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2024-05-12 21:30+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -134,30 +134,6 @@ msgstr "Halda opnu"
 #, kde-format
 msgid "Configure…"
 msgstr "Grunnstilla…"
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:10
-#, kde-format
-msgid "Screen lock enabled"
-msgstr "Skjálæsing virk"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:11
-#, kde-format
-msgid "Sets whether the screen will be locked after the specified time."
-msgstr "Stillir hvort skjárinn verði læstur eftir tiltekinn tíma."
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:16
-#, kde-format
-msgid "Screen saver timeout"
-msgstr "Tímamörk skjáhvílu"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:17
-#, kde-format
-msgid "Sets the minutes after which the screen is locked."
-msgstr "Stillir hversu margar mínútur líða þar til skjárinn er læstur."
 
 #: sessionsprivate/sessionsmodel.cpp:235 sessionsprivate/sessionsmodel.cpp:239
 #, kde-format
@@ -327,3 +303,15 @@ msgstr "Sækja nýjar Plasma-græjur"
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "Setja upp græju úr staðbundinni skrá..."
+
+#~ msgid "Screen lock enabled"
+#~ msgstr "Skjálæsing virk"
+
+#~ msgid "Sets whether the screen will be locked after the specified time."
+#~ msgstr "Stillir hvort skjárinn verði læstur eftir tiltekinn tíma."
+
+#~ msgid "Screen saver timeout"
+#~ msgstr "Tímamörk skjáhvílu"
+
+#~ msgid "Sets the minutes after which the screen is locked."
+#~ msgstr "Stillir hversu margar mínútur líða þar til skjárinn er læstur."

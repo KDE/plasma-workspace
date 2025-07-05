@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2021-08-21 16:25+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -91,12 +91,6 @@ msgstr "पैकेज का नाम"
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
 msgstr "प्लाज्मा डेस्कटॉप अभिन्यास रीसेट करें"
-
-#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
-#: lookandfeelsettings.kcfg:9
-#, kde-format
-msgid "Global look and feel"
-msgstr "वैश्विक रंगरूप और अनुभव"
 
 #: package/contents/ui/main.qml:21
 #, kde-format
@@ -261,6 +255,9 @@ msgid ""
 "This Global Theme does not provide any applicable settings. Please contact "
 "the maintainer of this Global Theme as it might be broken."
 msgstr ""
+
+#~ msgid "Global look and feel"
+#~ msgstr "वैश्विक रंगरूप और अनुभव"
 
 #~ msgid ""
 #~ "Your current layout and configuration of panels, desktop widgets, and "

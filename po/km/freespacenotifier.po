@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: freespacenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-17 00:48+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2010-05-12 08:53+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -38,36 +38,6 @@ msgstr ""
 msgid "Open in File Manager"
 msgstr "បើក​កម្មវិធី​គ្រប់គ្រង​ឯកសារ"
 
-#. i18n: ectx: label, entry (minimumSpace), group (General)
-#: freespacenotifier.kcfg:9
-#, kde-format
-msgid "Minimum free space before user starts being notified."
-msgstr "ទំហំ​ទំនេរ​អប្បបរមា​មុន​អ្នក​ប្រើ​ចាប់ផ្ដើម​ជូន​ដំណឹង ។"
-
-#. i18n: ectx: label, entry (enableNotification), group (General)
-#: freespacenotifier.kcfg:15
-#, kde-format
-msgid "Is the free space notification enabled."
-msgstr "ការ​ជូន​ដំណឹង​ទំហំ​ទំនេរ​ត្រូវ​បានបើក ។"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableNotification)
-#: freespacenotifier_prefs_base.ui:17
-#, kde-format
-msgid "Enable low disk space warning"
-msgstr "អនុញ្ញាត​ការ​ព្រមាន​ទំហំ​ថាស​ទាប"
-
-#. i18n: ectx: property (text), widget (QLabel, label_minimumSpace)
-#: freespacenotifier_prefs_base.ui:27
-#, kde-format
-msgid "Warn when free space is below:"
-msgstr "ព្រមាន​នៅ​ពេល​ដែល​ទំហំ​ទំនេរ​នៅ​​​ក្រោម ៖"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpace)
-#: freespacenotifier_prefs_base.ui:37
-#, kde-format
-msgid " MiB"
-msgstr " មេកាបៃ"
-
 #: module.cpp:37
 #, kde-format
 msgid ""
@@ -87,6 +57,21 @@ msgstr ""
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"
 msgstr "ទូទៅ"
+
+#~ msgid "Minimum free space before user starts being notified."
+#~ msgstr "ទំហំ​ទំនេរ​អប្បបរមា​មុន​អ្នក​ប្រើ​ចាប់ផ្ដើម​ជូន​ដំណឹង ។"
+
+#~ msgid "Is the free space notification enabled."
+#~ msgstr "ការ​ជូន​ដំណឹង​ទំហំ​ទំនេរ​ត្រូវ​បានបើក ។"
+
+#~ msgid "Enable low disk space warning"
+#~ msgstr "អនុញ្ញាត​ការ​ព្រមាន​ទំហំ​ថាស​ទាប"
+
+#~ msgid "Warn when free space is below:"
+#~ msgstr "ព្រមាន​នៅ​ពេល​ដែល​ទំហំ​ទំនេរ​នៅ​​​ក្រោម ៖"
+
+#~ msgid " MiB"
+#~ msgstr " មេកាបៃ"
 
 #~ msgctxt ""
 #~ "Warns the user that the system is running low on space on his home "

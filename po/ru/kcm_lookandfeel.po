@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2022-08-11 15:14+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -94,12 +94,6 @@ msgstr "имя_пакета"
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
 msgstr "Восстановить стандартное расположение виджетов рабочего стола Plasma."
-
-#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
-#: lookandfeelsettings.kcfg:9
-#, kde-format
-msgid "Global look and feel"
-msgstr "Оформление рабочей среды"
 
 #: package/contents/ui/main.qml:21
 #, kde-format
@@ -264,6 +258,9 @@ msgid ""
 msgstr ""
 "Это оформление не сдержит ни одного параметра, который может быть "
 "использован. Сообщите об этой ситуации разработчику."
+
+#~ msgid "Global look and feel"
+#~ msgstr "Оформление рабочей среды"
 
 #~ msgid ""
 #~ "Your current layout and configuration of panels, desktop widgets, and "

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-22 00:47+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2024-03-30 19:46\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -36,48 +36,6 @@ msgstr "小图标"
 #, kde-format
 msgid "Dialogs"
 msgstr "对话框"
-
-#. i18n: ectx: label, entry (Theme), group (Icons)
-#: iconssettingsbase.kcfg:9
-#, kde-format
-msgid "Name of the current icon theme"
-msgstr "当前图标主题名称"
-
-#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
-#: iconssettingsbase.kcfg:15
-#, kde-format
-msgid "Desktop icons size"
-msgstr "桌面图标大小"
-
-#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
-#: iconssettingsbase.kcfg:21
-#, kde-format
-msgid "Toolbar icons size"
-msgstr "工具栏图标大小"
-
-#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
-#: iconssettingsbase.kcfg:27
-#, kde-format
-msgid "Main toolbar icons size"
-msgstr "主工具栏图标大小"
-
-#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
-#: iconssettingsbase.kcfg:33
-#, kde-format
-msgid "Small icons size"
-msgstr "小图标大小"
-
-#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
-#: iconssettingsbase.kcfg:39
-#, kde-format
-msgid "Panel icons size"
-msgstr "面板图标大小"
-
-#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
-#: iconssettingsbase.kcfg:45
-#, kde-format
-msgid "Dialog icons size"
-msgstr "对话框图标大小"
 
 #: main.cpp:182
 #, kde-format
@@ -185,3 +143,24 @@ msgstr "打开主题"
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "主题文件 (*.tar.gz *.tar.bz2)"
+
+#~ msgid "Name of the current icon theme"
+#~ msgstr "当前图标主题名称"
+
+#~ msgid "Desktop icons size"
+#~ msgstr "桌面图标大小"
+
+#~ msgid "Toolbar icons size"
+#~ msgstr "工具栏图标大小"
+
+#~ msgid "Main toolbar icons size"
+#~ msgstr "主工具栏图标大小"
+
+#~ msgid "Small icons size"
+#~ msgstr "小图标大小"
+
+#~ msgid "Panel icons size"
+#~ msgstr "面板图标大小"
+
+#~ msgid "Dialog icons size"
+#~ msgstr "对话框图标大小"

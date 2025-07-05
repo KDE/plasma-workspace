@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-22 00:47+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -37,50 +37,6 @@ msgstr "كىچىك سىنبەلگە"
 #, kde-format
 msgid "Dialogs"
 msgstr "سۆزلىشىش رامكىلىرى"
-
-#. i18n: ectx: label, entry (Theme), group (Icons)
-#: iconssettingsbase.kcfg:9
-#, kde-format
-msgid "Name of the current icon theme"
-msgstr ""
-
-#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
-#: iconssettingsbase.kcfg:15
-#, kde-format
-msgid "Desktop icons size"
-msgstr ""
-
-#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
-#: iconssettingsbase.kcfg:21
-#, kde-format
-msgid "Toolbar icons size"
-msgstr ""
-
-#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
-#: iconssettingsbase.kcfg:27
-#, fuzzy, kde-format
-#| msgid "Main Toolbar"
-msgid "Main toolbar icons size"
-msgstr "ئاساسىي قورال بالداق"
-
-#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
-#: iconssettingsbase.kcfg:33
-#, fuzzy, kde-format
-#| msgid "Small Icons"
-msgid "Small icons size"
-msgstr "كىچىك سىنبەلگە"
-
-#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
-#: iconssettingsbase.kcfg:39
-#, kde-format
-msgid "Panel icons size"
-msgstr ""
-
-#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
-#: iconssettingsbase.kcfg:45
-#, kde-format
-msgid "Dialog icons size"
-msgstr ""
 
 #: main.cpp:182
 #, kde-format
@@ -196,6 +152,16 @@ msgstr "ئۆرنەكنى چىقىرىۋەت"
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Main Toolbar"
+#~ msgid "Main toolbar icons size"
+#~ msgstr "ئاساسىي قورال بالداق"
+
+#, fuzzy
+#~| msgid "Small Icons"
+#~ msgid "Small icons size"
+#~ msgstr "كىچىك سىنبەلگە"
 
 #~ msgid "Toolbar"
 #~ msgstr "قورال بالداق"

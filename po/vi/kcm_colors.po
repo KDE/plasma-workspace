@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-22 02:35+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2022-07-11 19:58+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -58,34 +58,6 @@ msgstr "Chép quy hoạch màu vào thư mục dữ liệu 'color-scheme' thất
 #, kde-format
 msgid "Color scheme installed successfully."
 msgstr "Cài đặt quy hoạch màu thành công."
-
-#. i18n: ectx: label, entry (colorScheme), group (General)
-#: colorssettings.kcfg:9
-#, kde-format
-msgid "Color scheme name"
-msgstr "Tên quy hoạch màu"
-
-#. i18n: ectx: label, entry (accentColor), group (General)
-#: colorssettings.kcfg:13
-#, kde-format
-msgid "Accent color"
-msgstr "Màu chủ đạo"
-
-#. i18n: ectx: label, entry (lastUsedCustomAccentColor), group (General)
-#: colorssettings.kcfg:17
-#, kde-format
-msgid ""
-"The last used custom accent color before user switched to wallpaper "
-"generated color or default color"
-msgstr ""
-"Màu chủ đạo riêng cuối cùng được dùng trước khi người dùng chuyển sang màu "
-"tạo bởi phông nền hoặc màu mặc định"
-
-#. i18n: ectx: label, entry (accentColorFromWallpaper), group (General)
-#: colorssettings.kcfg:21
-#, kde-format
-msgid "Whether accent color from wallpaper should be applied"
-msgstr "Có áp dụng màu chủ đạo lấy từ phông nền hay không"
 
 #: editor/kcolorschemeeditor.cpp:25
 #, kde-format
@@ -147,216 +119,6 @@ msgstr ""
 msgid "Scheme not found, falling back to current one.\n"
 msgstr "Không tìm thấy quy hoạch, trở lại quy hoạch hiện tại.\n"
 
-#. i18n: ectx: property (toolTip), widget (QLabel, label)
-#: editor/preview.ui:29
-#, kde-format
-msgid "Window text on Window Background"
-msgstr "Chữ trong cửa sổ trên nền cửa sổ"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: editor/preview.ui:32
-#, kde-format
-msgctxt "color-kcm-preview"
-msgid "Window text"
-msgstr "Chữ trong cửa sổ"
-
-#. i18n: ectx: property (toolTip), widget (QPushButton, pushButton)
-#: editor/preview.ui:39
-#, kde-format
-msgid "Button text on Button Background"
-msgstr "Chữ trong nút trên nền nút"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QPushButton, pushButton)
-#: editor/preview.ui:42
-#, kde-format
-msgctxt "color-kcm-preview"
-msgid "Push Button"
-msgstr "Nút nhấn"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection0)
-#: editor/preview.ui:123
-#, kde-format
-msgid "Selection Normal Text against Selection Normal Background"
-msgstr "Chữ thường trong phần bôi đen trên nền thường phần bôi đen"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelSelection0)
-#: editor/preview.ui:126
-#, kde-format
-msgctxt "color-kcm-preview"
-msgid "Selected text"
-msgstr "Chữ bôi đen"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection3)
-#: editor/preview.ui:138
-#, kde-format
-msgid "Selection Link Text against Selection Normal Background"
-msgstr "Chữ liên kết trong phần bôi đen trên nền thường phần bôi đen"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelSelection3)
-#. i18n: ectx: property (text), widget (QLabel, labelView3)
-#: editor/preview.ui:141 editor/preview.ui:265
-#, kde-format
-msgctxt "color-kcm-preview"
-msgid "link"
-msgstr "liên kết"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection4)
-#: editor/preview.ui:153
-#, kde-format
-msgid "Selection Visited Text against Selection Normal Background"
-msgstr "Chữ đã mở trong phần bôi đen trên nền thường phần bôi đen"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelSelection4)
-#. i18n: ectx: property (text), widget (QLabel, labelView4)
-#: editor/preview.ui:156 editor/preview.ui:280
-#, kde-format
-msgctxt "color-kcm-preview"
-msgid "visited"
-msgstr "đã mở"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection2)
-#: editor/preview.ui:163
-#, kde-format
-msgid "Selection Active Text against Selection Normal Background"
-msgstr "Chữ hoạt động trong phần bôi đen trên nền thường phần bôi đen"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelSelection2)
-#. i18n: ectx: property (text), widget (QLabel, labelView2)
-#: editor/preview.ui:166 editor/preview.ui:290
-#, kde-format
-msgctxt "color-kcm-preview"
-msgid "a"
-msgstr "h"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection1)
-#: editor/preview.ui:173
-#, kde-format
-msgid "Selection Inactive Text against Selection Normal Background"
-msgstr "Chữ bất hoạt trong phần bôi đen trên nền thường phần bôi đen"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelSelection1)
-#. i18n: ectx: property (text), widget (QLabel, labelView1)
-#: editor/preview.ui:176 editor/preview.ui:300
-#, kde-format
-msgctxt "color-kcm-preview"
-msgid "i"
-msgstr "b"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection5)
-#: editor/preview.ui:183
-#, kde-format
-msgid "Selection Negative Text against Selection Normal Background"
-msgstr "Chữ âm tính trong phần bôi đen trên nền thường phần bôi đen"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelSelection5)
-#. i18n: ectx: property (text), widget (QLabel, labelView5)
-#: editor/preview.ui:186 editor/preview.ui:310
-#, kde-format
-msgctxt "color-kcm-preview"
-msgid "!"
-msgstr "!"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection6)
-#: editor/preview.ui:193
-#, kde-format
-msgid "Selection Neutral Text against Selection Normal Background"
-msgstr "Chữ trung tính trong phần bôi đen trên nền thường phần bôi đen"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelSelection6)
-#. i18n: ectx: property (text), widget (QLabel, labelView6)
-#: editor/preview.ui:196 editor/preview.ui:320
-#, kde-format
-msgctxt "color-kcm-preview"
-msgid "="
-msgstr "="
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection7)
-#: editor/preview.ui:203
-#, kde-format
-msgid "Selection Positive Text against Selection Normal Background"
-msgstr "Chữ dương tính trong phần bôi đen trên nền thường phần bôi đen"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelSelection7)
-#. i18n: ectx: property (text), widget (QLabel, labelView7)
-#: editor/preview.ui:206 editor/preview.ui:330
-#, kde-format
-msgctxt "color-kcm-preview"
-msgid "+"
-msgstr "+"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelView0)
-#: editor/preview.ui:247
-#, kde-format
-msgid "View Normal Text against View Normal Background"
-msgstr "Chữ thường trong mục xem trên nền thường trong mục xem"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelView0)
-#: editor/preview.ui:250
-#, kde-format
-msgctxt "color-kcm-preview"
-msgid "Normal text"
-msgstr "Chữ thường"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelView3)
-#: editor/preview.ui:262
-#, kde-format
-msgid "View Link Text against View Normal Background"
-msgstr "Chữ liên kết trong mục xem trên nền thường trong mục xem"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelView4)
-#: editor/preview.ui:277
-#, kde-format
-msgid "View Visited Text against View Normal Background"
-msgstr "Chữ đã mở trong mục xem trên nền thường trong mục xem"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelView2)
-#: editor/preview.ui:287
-#, kde-format
-msgid "View Active Text against View Normal Background"
-msgstr "Chữ hoạt động trong mục xem trên nền thường trong mục xem"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelView1)
-#: editor/preview.ui:297
-#, kde-format
-msgid "View Inactive Text against View Normal Background"
-msgstr "Chữ bất hoạt trong mục xem trên nền thường trong mục xem"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelView5)
-#: editor/preview.ui:307
-#, kde-format
-msgid "View Negative Text against View Normal Background"
-msgstr "Chữ âm tính trong mục xem trên nền thường trong mục xem"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelView6)
-#: editor/preview.ui:317
-#, kde-format
-msgid "View Neutral Text against View Normal Background"
-msgstr "Chữ trung tính trong mục xem trên nền thường trong mục xem"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelView7)
-#: editor/preview.ui:327
-#, kde-format
-msgid "View Positive Text against View Normal Background"
-msgstr "Chữ dương tính trong mục xem trên nền thường trong mục xem"
-
 #: editor/scmeditorcolors.cpp:62 editor/scmeditorcolors.cpp:76
 #, kde-format
 msgid "Varies"
@@ -377,267 +139,50 @@ msgstr "Nền khác"
 msgid "Normal Text"
 msgstr "Chữ thường"
 
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:102 editor/scmeditorcolors.ui:303
+#: editor/scmeditorcolors.cpp:102
 #, kde-format
 msgid "Inactive Text"
 msgstr "Chữ bất hoạt"
 
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:103 editor/scmeditorcolors.ui:308
+#: editor/scmeditorcolors.cpp:103
 #, kde-format
 msgid "Active Text"
 msgstr "Chữ hoạt động"
 
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:104 editor/scmeditorcolors.ui:313
+#: editor/scmeditorcolors.cpp:104
 #, kde-format
 msgid "Link Text"
 msgstr "Chữ liên kết"
 
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:105 editor/scmeditorcolors.ui:318
+#: editor/scmeditorcolors.cpp:105
 #, kde-format
 msgid "Visited Text"
 msgstr "Chữ đã mở"
 
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:106 editor/scmeditorcolors.ui:323
+#: editor/scmeditorcolors.cpp:106
 #, kde-format
 msgid "Negative Text"
 msgstr "Chữ âm tính"
 
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:107 editor/scmeditorcolors.ui:328
+#: editor/scmeditorcolors.cpp:107
 #, kde-format
 msgid "Neutral Text"
 msgstr "Chữ trung tính"
 
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:108 editor/scmeditorcolors.ui:333
+#: editor/scmeditorcolors.cpp:108
 #, kde-format
 msgid "Positive Text"
 msgstr "Chữ dương tính"
 
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:109 editor/scmeditorcolors.ui:338
+#: editor/scmeditorcolors.cpp:109
 #, kde-format
 msgid "Focus Decoration"
 msgstr "Trang trí khi nhắm"
 
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:110 editor/scmeditorcolors.ui:343
+#: editor/scmeditorcolors.cpp:110
 #, kde-format
 msgid "Hover Decoration"
 msgstr "Trang trí khi đảo chuột"
-
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: editor/scmeditorcolors.ui:23
-#, kde-format
-msgid "Color set:"
-msgstr "Bộ màu:"
-
-#. i18n: ectx: property (toolTip), widget (QComboBox, colorSet)
-#: editor/scmeditorcolors.ui:36
-#, kde-format
-msgid "Colorset to view/modify"
-msgstr "Bộ màu để xem/chỉnh sửa"
-
-#. i18n: 'Common' here means &quot;frequent/not rare&quot;, not &quot;shared&quot;
-#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
-#: editor/scmeditorcolors.ui:40
-#, kde-format
-msgctxt "color-sets"
-msgid "Common Colors"
-msgstr "Màu phổ biến"
-
-#. i18n: see plasma-workspace/kcms/colors/README.i18n
-#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
-#: editor/scmeditorcolors.ui:45
-#, kde-format
-msgctxt "color-sets"
-msgid "View"
-msgstr "Mục Xem"
-
-#. i18n: see plasma-workspace/kcms/colors/README.i18n
-#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
-#: editor/scmeditorcolors.ui:50
-#, kde-format
-msgctxt "color-sets"
-msgid "Window"
-msgstr "Cửa sổ"
-
-#. i18n: see plasma-workspace/kcms/colors/README.i18n
-#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
-#: editor/scmeditorcolors.ui:55
-#, kde-format
-msgctxt "color-sets"
-msgid "Button"
-msgstr "Nút"
-
-#. i18n: see plasma-workspace/kcms/colors/README.i18n
-#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
-#: editor/scmeditorcolors.ui:60
-#, kde-format
-msgctxt "color-sets"
-msgid "Selection"
-msgstr "Phần bôi đen"
-
-#. i18n: see plasma-workspace/kcms/colors/README.i18n
-#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
-#: editor/scmeditorcolors.ui:65
-#, kde-format
-msgctxt "color-sets"
-msgid "Tooltip"
-msgstr "Chú giải"
-
-#. i18n: see plasma-workspace/kcms/colors/README.i18n
-#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
-#: editor/scmeditorcolors.ui:70
-#, kde-format
-msgctxt "color-sets"
-msgid "Complementary"
-msgstr "Bổ sung"
-
-#. i18n: see plasma-workspace/kcms/colors/README.i18n
-#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
-#: editor/scmeditorcolors.ui:75
-#, kde-format
-msgctxt "color-sets"
-msgid "Header"
-msgstr "Đầu cột"
-
-#. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:118 editor/scmeditorcolors.ui:123
-#: editor/scmeditorcolors.ui:128 editor/scmeditorcolors.ui:133
-#: editor/scmeditorcolors.ui:138 editor/scmeditorcolors.ui:143
-#: editor/scmeditorcolors.ui:148 editor/scmeditorcolors.ui:153
-#: editor/scmeditorcolors.ui:158 editor/scmeditorcolors.ui:163
-#: editor/scmeditorcolors.ui:168 editor/scmeditorcolors.ui:173
-#: editor/scmeditorcolors.ui:178 editor/scmeditorcolors.ui:183
-#: editor/scmeditorcolors.ui:188 editor/scmeditorcolors.ui:193
-#: editor/scmeditorcolors.ui:198 editor/scmeditorcolors.ui:203
-#: editor/scmeditorcolors.ui:208 editor/scmeditorcolors.ui:213
-#: editor/scmeditorcolors.ui:218 editor/scmeditorcolors.ui:223
-#: editor/scmeditorcolors.ui:228 editor/scmeditorcolors.ui:233
-#: editor/scmeditorcolors.ui:238 editor/scmeditorcolors.ui:243
-#, kde-format
-msgid "New Row"
-msgstr "Dòng mới"
-
-#. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:248
-#, kde-format
-msgid "0"
-msgstr "0"
-
-#. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:253
-#, kde-format
-msgid "1"
-msgstr "1"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:258
-#, kde-format
-msgid "View Background"
-msgstr "Nền trong mục xem"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:263
-#, kde-format
-msgid "View Text"
-msgstr "Chữ trong mục xem"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:268
-#, kde-format
-msgid "Window Background"
-msgstr "Nền cửa sổ"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:273
-#, kde-format
-msgid "Window Text"
-msgstr "Chữ trong cửa sổ"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:278
-#, kde-format
-msgid "Button Background"
-msgstr "Nền nút"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:283
-#, kde-format
-msgid "Button Text"
-msgstr "Chữ trong nút"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:288
-#, kde-format
-msgid "Selection Background"
-msgstr "Nền phần bôi đen"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:293
-#, kde-format
-msgid "Selection Text"
-msgstr "Chữ trong phần bôi đen"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:298
-#, kde-format
-msgid "Selection Inactive Text"
-msgstr "Chữ bất hoạt trong phần bôi đen"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:348
-#, kde-format
-msgid "Tooltip Background"
-msgstr "Nền chú giải"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:353
-#, kde-format
-msgid "Tooltip Text"
-msgstr "Chữ chú giải"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:358
-#, kde-format
-msgid "Active Titlebar"
-msgstr "Thanh tiêu đề hoạt động"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:363
-#, kde-format
-msgid "Active Titlebar Text"
-msgstr "Chữ trong thanh tiêu đề hoạt động"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:368
-#, kde-format
-msgid "Active Titlebar Secondary"
-msgstr "Phần phụ trong thanh tiêu đề hoạt động"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:373
-#, kde-format
-msgid "Inactive Titlebar"
-msgstr "Thanh tiêu đề bất hoạt"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:378
-#, kde-format
-msgid "Inactive Titlebar Text"
-msgstr "Chữ trong thanh tiêu đề bất hoạt"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:383
-#, kde-format
-msgid "Inactive Titlebar Secondary"
-msgstr "Phần phụ trong thanh tiêu đề bất hoạt"
 
 #: editor/scmeditordialog.cpp:60
 #, kde-format
@@ -697,450 +242,6 @@ msgstr "Lỗi"
 #, kde-format
 msgid "Inactive"
 msgstr "Bất hoạt"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: editor/scmeditoreffects.ui:17
-#, kde-format
-msgid "Color:"
-msgstr "Màu:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: editor/scmeditoreffects.ui:27
-#, kde-format
-msgid "Intensity:"
-msgstr "Cường độ:"
-
-#. i18n: ectx: property (toolTip), widget (QComboBox, colorBox)
-#: editor/scmeditoreffects.ui:37
-#, kde-format
-msgid "Disabled color effect type"
-msgstr "Kiểu hiệu ứng màu vô hiệu"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
-#: editor/scmeditoreffects.ui:41
-#, kde-format
-msgctxt "no disabled color effect"
-msgid "None"
-msgstr "Không"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
-#: editor/scmeditoreffects.ui:46
-#, kde-format
-msgctxt "disabled color effect"
-msgid "Desaturate"
-msgstr "Khử bão hoà"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
-#: editor/scmeditoreffects.ui:51
-#, kde-format
-msgctxt "disabled color effect"
-msgid "Fade"
-msgstr "Phai"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
-#: editor/scmeditoreffects.ui:56
-#, kde-format
-msgctxt "disabled color effect"
-msgid "Tint"
-msgstr "Phủ"
-
-#. i18n: ectx: property (toolTip), widget (QComboBox, intensityBox)
-#: editor/scmeditoreffects.ui:64
-#, kde-format
-msgid "Disabled intensity effect type"
-msgstr "Kiểu hiệu ứng cường độ vô hiệu"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
-#: editor/scmeditoreffects.ui:68
-#, kde-format
-msgctxt "no disabled intensity effect"
-msgid "None"
-msgstr "Không"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
-#: editor/scmeditoreffects.ui:73
-#, kde-format
-msgctxt "disabled intensity effect"
-msgid "Shade"
-msgstr "Đổ bóng"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
-#: editor/scmeditoreffects.ui:78
-#, kde-format
-msgctxt "disabled intensity effect"
-msgid "Darken"
-msgstr "Làm tối"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
-#: editor/scmeditoreffects.ui:83
-#, kde-format
-msgctxt "disabled intensity effect"
-msgid "Lighten"
-msgstr "Làm sáng"
-
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: editor/scmeditoreffects.ui:107
-#, kde-format
-msgid "Contrast:"
-msgstr "Tương phản:"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, colorSlider)
-#: editor/scmeditoreffects.ui:120
-#, kde-format
-msgid "Disabled color effect amount"
-msgstr "Mức hiệu ứng màu vô hiệu"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, intensitySlider)
-#: editor/scmeditoreffects.ui:139
-#, kde-format
-msgid "Disabled intensity effect amount"
-msgstr "Mức hiệu ứng cường độ vô hiệu"
-
-#. i18n: ectx: property (toolTip), widget (KColorButton, colorButton)
-#: editor/scmeditoreffects.ui:158
-#, kde-format
-msgid "Disabled color"
-msgstr "Màu vô hiệu"
-
-#. i18n: ectx: property (toolTip), widget (QComboBox, contrastBox)
-#: editor/scmeditoreffects.ui:181
-#, kde-format
-msgid "Disabled contrast type"
-msgstr "Kiểu tương phản vô hiệu"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
-#: editor/scmeditoreffects.ui:185
-#, kde-format
-msgctxt "no disabled contrast"
-msgid "None"
-msgstr "Không"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
-#: editor/scmeditoreffects.ui:190
-#, kde-format
-msgctxt "disabled contrast"
-msgid "Fade"
-msgstr "Phai"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
-#: editor/scmeditoreffects.ui:195
-#, kde-format
-msgctxt "disabled contrast"
-msgid "Tint"
-msgstr "Phủ"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, contrastSlider)
-#: editor/scmeditoreffects.ui:222
-#, kde-format
-msgid "Disabled contrast amount"
-msgstr "Mức tương phản vô hiệu"
-
-#. i18n: ectx: property (text), widget (QCheckBox, useInactiveEffects)
-#: editor/scmeditoroptions.ui:17
-#, kde-format
-msgid "Apply &effects to inactive windows"
-msgstr "Áp dụng &hiệu ứng cho các cửa sổ bất hoạt"
-
-#. i18n: ectx: property (text), widget (QCheckBox, inactiveSelectionEffect)
-#: editor/scmeditoroptions.ui:24
-#, kde-format
-msgid "Use different colors for in&active selections"
-msgstr "Dùng các màu khác cho các phần bôi đen &bất hoạt"
-
-#. i18n: ectx: property (text), widget (QCheckBox, shadeSortedColumn)
-#: editor/scmeditoroptions.ui:31
-#, kde-format
-msgid "Shade sorted column &in lists"
-msgstr "Đổ bóng lên cột đã sắp xếp &trong danh sách"
-
-#. i18n: ectx: property (text), widget (QCheckBox, tintColors)
-#: editor/scmeditoroptions.ui:38
-#, kde-format
-msgid "Tint all colors with accent color"
-msgstr "Phủ màu chủ đạo lên tất cả các màu"
-
-#. i18n: ectx: property (text), widget (QCheckBox, accentTitlebar)
-#: editor/scmeditoroptions.ui:45
-#, kde-format
-msgid "Make window titlebars a&ccent-colored"
-msgstr "Đặt màu các thanh tiêu đề cửa sổ theo màu &chủ đạo"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: editor/scmeditoroptions.ui:52
-#, kde-format
-msgid "Tint strength:"
-msgstr "Cường độ phủ:"
-
-#. i18n: ectx: property (toolTip), widget (QGroupBox, groupBox_5)
-#: editor/scmeditoroptions.ui:69
-#, kde-format
-msgid "Shading of frames and lighting (\"3D\") effects"
-msgstr "Việc đổ bóng của các khung và các hiệu ứng (\"3D\") chiếu sáng"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
-#: editor/scmeditoroptions.ui:72
-#, kde-format
-msgid "Shading"
-msgstr "Việc đổ bóng"
-
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#: editor/scmeditoroptions.ui:97
-#, kde-format
-msgid "Maximum"
-msgstr "Lớn nhất"
-
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: editor/scmeditoroptions.ui:117
-#, kde-format
-msgid "Minimum"
-msgstr "Nhỏ nhất"
-
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: editor/scmeditoroptions.ui:124
-#, kde-format
-msgid "Contrast"
-msgstr "Tương phản"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelFore0)
-#. i18n: ectx: property (toolTip), widget (QLabel, labelBack0)
-#: editor/setpreview.ui:35 editor/setpreview.ui:189
-#, kde-format
-msgid "Normal Text on Normal Background"
-msgstr "Chữ thường trên nền thường"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore0)
-#. i18n: ectx: property (text), widget (QLabel, labelBack0)
-#: editor/setpreview.ui:38 editor/setpreview.ui:192
-#, kde-format
-msgctxt "color-kcm-set-preview"
-msgid "normal"
-msgstr "thường"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelFore3)
-#: editor/setpreview.ui:56
-#, kde-format
-msgid "Link Text on Normal Background"
-msgstr "Chữ liên kết trên nền thường"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore3)
-#. i18n: ectx: property (text), widget (QLabel, labelBack3)
-#: editor/setpreview.ui:59 editor/setpreview.ui:214
-#, kde-format
-msgctxt "color-kcm-set-preview"
-msgid "link"
-msgstr "liên kết"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelFore4)
-#: editor/setpreview.ui:77
-#, kde-format
-msgid "Visited Text on Normal Background"
-msgstr "Chữ đã mở trên nền thường"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore4)
-#. i18n: ectx: property (text), widget (QLabel, labelBack4)
-#: editor/setpreview.ui:80 editor/setpreview.ui:236
-#, kde-format
-msgctxt "color-kcm-set-preview"
-msgid "visited"
-msgstr "đã mở"
-
-#. i18n: ectx: property (toolTip), widget (QWidget, widgetFore2)
-#: editor/setpreview.ui:90
-#, kde-format
-msgid "Active Text on Normal Background"
-msgstr "Chữ hoạt động trên nền thường"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore2)
-#. i18n: ectx: property (text), widget (QLabel, labelBack2)
-#: editor/setpreview.ui:96 editor/setpreview.ui:253
-#, kde-format
-msgctxt "color-kcm-set-preview"
-msgid "active"
-msgstr "hoạt động"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelFore1)
-#: editor/setpreview.ui:109
-#, kde-format
-msgid "Inactive Text on Normal Background"
-msgstr "Chữ bất hoạt trên nền thường"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore1)
-#: editor/setpreview.ui:112
-#, kde-format
-msgctxt "color-kcm-set-preview"
-msgid "inactive"
-msgstr "bất hoạt"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelFore5)
-#: editor/setpreview.ui:125
-#, kde-format
-msgid "Negative Text on Normal Background"
-msgstr "Chữ âm tính trên nền thường"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore5)
-#. i18n: ectx: property (text), widget (QLabel, labelBack5)
-#: editor/setpreview.ui:128 editor/setpreview.ui:286
-#, kde-format
-msgctxt "color-kcm-set-preview"
-msgid "negative"
-msgstr "âm tính"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelFore6)
-#: editor/setpreview.ui:141
-#, kde-format
-msgid "Neutral Text on Normal Background"
-msgstr "Chữ trung tính trên nền thường"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore6)
-#. i18n: ectx: property (text), widget (QLabel, labelBack6)
-#: editor/setpreview.ui:144 editor/setpreview.ui:303
-#, kde-format
-msgctxt "color-kcm-set-preview"
-msgid "neutral"
-msgstr "trung tính"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelFore7)
-#: editor/setpreview.ui:157
-#, kde-format
-msgid "Positive Text on Normal Background"
-msgstr "Chữ dương tính trên nền thường"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore7)
-#. i18n: ectx: property (text), widget (QLabel, labelBack7)
-#: editor/setpreview.ui:160 editor/setpreview.ui:320
-#, kde-format
-msgctxt "color-kcm-set-preview"
-msgid "positive"
-msgstr "dương tính"
-
-#. i18n: ectx: property (toolTip), widget (QWidget, widgetFore8)
-#: editor/setpreview.ui:170
-#, kde-format
-msgid "Hover on Normal Background"
-msgstr "Đảo chuột trên nền thường"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore8)
-#: editor/setpreview.ui:176
-#, kde-format
-msgctxt "color-kcm-set-preview"
-msgid "hover"
-msgstr "đảo chuột"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelBack3)
-#: editor/setpreview.ui:211
-#, kde-format
-msgid ""
-"Link Text on Link Background\n"
-"(Note: Link Background is derived from Link Text and cannot be separately "
-"configured at this time)"
-msgstr ""
-"Chữ liên kết trên nền liên kết\n"
-"(Lưu ý: Nền liên kết được suy ra từ \"Chữ liên kết\" và hiện tại không thể "
-"cấu hình riêng)"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelBack4)
-#: editor/setpreview.ui:233
-#, kde-format
-msgid ""
-"Visited Text on Visited Background\n"
-"(Note: Visited Background is derived from Visited Text and cannot be "
-"separately configured at this time)"
-msgstr ""
-"Chữ đã mở trên nền đã mở\n"
-"(Lưu ý: Nền đã mở được suy ra từ \"Chữ đã mở\" và hiện tại không thể cấu "
-"hình riêng)"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelBack2)
-#: editor/setpreview.ui:250
-#, kde-format
-msgid ""
-"Active Text on Active Background\n"
-"(Note: Active Background is derived from Active Text and cannot be "
-"separately configured at this time)"
-msgstr ""
-"Chữ hoạt động trên nền hoạt động\n"
-"(Lưu ý: Nền hoạt động được suy ra từ \"Chữ hoạt động\" và hiện tại không thể "
-"cấu hình riêng)"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelBack1)
-#: editor/setpreview.ui:266
-#, kde-format
-msgid "Inactive Text on Alternate Background"
-msgstr "Chữ bất hoạt trên nền khác"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelBack1)
-#: editor/setpreview.ui:269
-#, kde-format
-msgctxt "color-kcm-set-preview"
-msgid "alternate"
-msgstr "khác"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelBack5)
-#: editor/setpreview.ui:283
-#, kde-format
-msgid ""
-"Negative Text on Negative Background\n"
-"(Note: Negative Background is derived from Negative Text and cannot be "
-"separately configured at this time)"
-msgstr ""
-"Chữ âm tính trên nền âm tính\n"
-"(Lưu ý: Nền âm tính được suy ra từ \"Chữ âm tính\" và hiện tại không thể cấu "
-"hình riêng)"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelBack6)
-#: editor/setpreview.ui:300
-#, kde-format
-msgid ""
-"Neutral Text on Neutral Background\n"
-"(Note: Neutral Background is derived from Neutral Text and cannot be "
-"separately configured at this time)"
-msgstr ""
-"Chữ trung tính trên nền trung tính\n"
-"(Lưu ý: Nền trung tính được suy ra từ \"Chữ trung tính\" và hiện tại không "
-"thể cấu hình riêng)"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelBack7)
-#: editor/setpreview.ui:317
-#, kde-format
-msgid ""
-"Positive Text on Positive Background\n"
-"(Note: Positive Background is derived from Positive Text and cannot be "
-"separately configured at this time)"
-msgstr ""
-"Chữ dương tính trên nền dương tính\n"
-"(Lưu ý: Nền dương tính được suy ra từ \"Chữ dương tính\" và hiện tại không "
-"thể cấu hình riêng)"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelFore9)
-#: editor/setpreview.ui:333
-#, kde-format
-msgid "Focus on Normal Background"
-msgstr "Nhắm trên nền thường"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore9)
-#: editor/setpreview.ui:336
-#, kde-format
-msgctxt "color-kcm-set-preview"
-msgid "focus"
-msgstr "nhắm"
 
 #: package/contents/ui/main.qml:23
 #, kde-format
@@ -1369,6 +470,456 @@ msgstr "Bạn có các quy hoạch màu sau trong hệ thống:"
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (quy hoạch màu hiện tại)"
+
+#~ msgid "Color scheme name"
+#~ msgstr "Tên quy hoạch màu"
+
+#~ msgid "Accent color"
+#~ msgstr "Màu chủ đạo"
+
+#~ msgid ""
+#~ "The last used custom accent color before user switched to wallpaper "
+#~ "generated color or default color"
+#~ msgstr ""
+#~ "Màu chủ đạo riêng cuối cùng được dùng trước khi người dùng chuyển sang "
+#~ "màu tạo bởi phông nền hoặc màu mặc định"
+
+#~ msgid "Whether accent color from wallpaper should be applied"
+#~ msgstr "Có áp dụng màu chủ đạo lấy từ phông nền hay không"
+
+#~ msgid "Window text on Window Background"
+#~ msgstr "Chữ trong cửa sổ trên nền cửa sổ"
+
+#~ msgctxt "color-kcm-preview"
+#~ msgid "Window text"
+#~ msgstr "Chữ trong cửa sổ"
+
+#~ msgid "Button text on Button Background"
+#~ msgstr "Chữ trong nút trên nền nút"
+
+#~ msgctxt "color-kcm-preview"
+#~ msgid "Push Button"
+#~ msgstr "Nút nhấn"
+
+#~ msgid "Selection Normal Text against Selection Normal Background"
+#~ msgstr "Chữ thường trong phần bôi đen trên nền thường phần bôi đen"
+
+#~ msgctxt "color-kcm-preview"
+#~ msgid "Selected text"
+#~ msgstr "Chữ bôi đen"
+
+#~ msgid "Selection Link Text against Selection Normal Background"
+#~ msgstr "Chữ liên kết trong phần bôi đen trên nền thường phần bôi đen"
+
+#~ msgctxt "color-kcm-preview"
+#~ msgid "link"
+#~ msgstr "liên kết"
+
+#~ msgid "Selection Visited Text against Selection Normal Background"
+#~ msgstr "Chữ đã mở trong phần bôi đen trên nền thường phần bôi đen"
+
+#~ msgctxt "color-kcm-preview"
+#~ msgid "visited"
+#~ msgstr "đã mở"
+
+#~ msgid "Selection Active Text against Selection Normal Background"
+#~ msgstr "Chữ hoạt động trong phần bôi đen trên nền thường phần bôi đen"
+
+#~ msgctxt "color-kcm-preview"
+#~ msgid "a"
+#~ msgstr "h"
+
+#~ msgid "Selection Inactive Text against Selection Normal Background"
+#~ msgstr "Chữ bất hoạt trong phần bôi đen trên nền thường phần bôi đen"
+
+#~ msgctxt "color-kcm-preview"
+#~ msgid "i"
+#~ msgstr "b"
+
+#~ msgid "Selection Negative Text against Selection Normal Background"
+#~ msgstr "Chữ âm tính trong phần bôi đen trên nền thường phần bôi đen"
+
+#~ msgctxt "color-kcm-preview"
+#~ msgid "!"
+#~ msgstr "!"
+
+#~ msgid "Selection Neutral Text against Selection Normal Background"
+#~ msgstr "Chữ trung tính trong phần bôi đen trên nền thường phần bôi đen"
+
+#~ msgctxt "color-kcm-preview"
+#~ msgid "="
+#~ msgstr "="
+
+#~ msgid "Selection Positive Text against Selection Normal Background"
+#~ msgstr "Chữ dương tính trong phần bôi đen trên nền thường phần bôi đen"
+
+#~ msgctxt "color-kcm-preview"
+#~ msgid "+"
+#~ msgstr "+"
+
+#~ msgid "View Normal Text against View Normal Background"
+#~ msgstr "Chữ thường trong mục xem trên nền thường trong mục xem"
+
+#~ msgctxt "color-kcm-preview"
+#~ msgid "Normal text"
+#~ msgstr "Chữ thường"
+
+#~ msgid "View Link Text against View Normal Background"
+#~ msgstr "Chữ liên kết trong mục xem trên nền thường trong mục xem"
+
+#~ msgid "View Visited Text against View Normal Background"
+#~ msgstr "Chữ đã mở trong mục xem trên nền thường trong mục xem"
+
+#~ msgid "View Active Text against View Normal Background"
+#~ msgstr "Chữ hoạt động trong mục xem trên nền thường trong mục xem"
+
+#~ msgid "View Inactive Text against View Normal Background"
+#~ msgstr "Chữ bất hoạt trong mục xem trên nền thường trong mục xem"
+
+#~ msgid "View Negative Text against View Normal Background"
+#~ msgstr "Chữ âm tính trong mục xem trên nền thường trong mục xem"
+
+#~ msgid "View Neutral Text against View Normal Background"
+#~ msgstr "Chữ trung tính trong mục xem trên nền thường trong mục xem"
+
+#~ msgid "View Positive Text against View Normal Background"
+#~ msgstr "Chữ dương tính trong mục xem trên nền thường trong mục xem"
+
+#~ msgid "Color set:"
+#~ msgstr "Bộ màu:"
+
+#~ msgid "Colorset to view/modify"
+#~ msgstr "Bộ màu để xem/chỉnh sửa"
+
+#~ msgctxt "color-sets"
+#~ msgid "Common Colors"
+#~ msgstr "Màu phổ biến"
+
+#~ msgctxt "color-sets"
+#~ msgid "View"
+#~ msgstr "Mục Xem"
+
+#~ msgctxt "color-sets"
+#~ msgid "Window"
+#~ msgstr "Cửa sổ"
+
+#~ msgctxt "color-sets"
+#~ msgid "Button"
+#~ msgstr "Nút"
+
+#~ msgctxt "color-sets"
+#~ msgid "Selection"
+#~ msgstr "Phần bôi đen"
+
+#~ msgctxt "color-sets"
+#~ msgid "Tooltip"
+#~ msgstr "Chú giải"
+
+#~ msgctxt "color-sets"
+#~ msgid "Complementary"
+#~ msgstr "Bổ sung"
+
+#~ msgctxt "color-sets"
+#~ msgid "Header"
+#~ msgstr "Đầu cột"
+
+#~ msgid "New Row"
+#~ msgstr "Dòng mới"
+
+#~ msgid "0"
+#~ msgstr "0"
+
+#~ msgid "1"
+#~ msgstr "1"
+
+#~ msgid "View Background"
+#~ msgstr "Nền trong mục xem"
+
+#~ msgid "View Text"
+#~ msgstr "Chữ trong mục xem"
+
+#~ msgid "Window Background"
+#~ msgstr "Nền cửa sổ"
+
+#~ msgid "Window Text"
+#~ msgstr "Chữ trong cửa sổ"
+
+#~ msgid "Button Background"
+#~ msgstr "Nền nút"
+
+#~ msgid "Button Text"
+#~ msgstr "Chữ trong nút"
+
+#~ msgid "Selection Background"
+#~ msgstr "Nền phần bôi đen"
+
+#~ msgid "Selection Text"
+#~ msgstr "Chữ trong phần bôi đen"
+
+#~ msgid "Selection Inactive Text"
+#~ msgstr "Chữ bất hoạt trong phần bôi đen"
+
+#~ msgid "Tooltip Background"
+#~ msgstr "Nền chú giải"
+
+#~ msgid "Tooltip Text"
+#~ msgstr "Chữ chú giải"
+
+#~ msgid "Active Titlebar"
+#~ msgstr "Thanh tiêu đề hoạt động"
+
+#~ msgid "Active Titlebar Text"
+#~ msgstr "Chữ trong thanh tiêu đề hoạt động"
+
+#~ msgid "Active Titlebar Secondary"
+#~ msgstr "Phần phụ trong thanh tiêu đề hoạt động"
+
+#~ msgid "Inactive Titlebar"
+#~ msgstr "Thanh tiêu đề bất hoạt"
+
+#~ msgid "Inactive Titlebar Text"
+#~ msgstr "Chữ trong thanh tiêu đề bất hoạt"
+
+#~ msgid "Inactive Titlebar Secondary"
+#~ msgstr "Phần phụ trong thanh tiêu đề bất hoạt"
+
+#~ msgid "Color:"
+#~ msgstr "Màu:"
+
+#~ msgid "Intensity:"
+#~ msgstr "Cường độ:"
+
+#~ msgid "Disabled color effect type"
+#~ msgstr "Kiểu hiệu ứng màu vô hiệu"
+
+#~ msgctxt "no disabled color effect"
+#~ msgid "None"
+#~ msgstr "Không"
+
+#~ msgctxt "disabled color effect"
+#~ msgid "Desaturate"
+#~ msgstr "Khử bão hoà"
+
+#~ msgctxt "disabled color effect"
+#~ msgid "Fade"
+#~ msgstr "Phai"
+
+#~ msgctxt "disabled color effect"
+#~ msgid "Tint"
+#~ msgstr "Phủ"
+
+#~ msgid "Disabled intensity effect type"
+#~ msgstr "Kiểu hiệu ứng cường độ vô hiệu"
+
+#~ msgctxt "no disabled intensity effect"
+#~ msgid "None"
+#~ msgstr "Không"
+
+#~ msgctxt "disabled intensity effect"
+#~ msgid "Shade"
+#~ msgstr "Đổ bóng"
+
+#~ msgctxt "disabled intensity effect"
+#~ msgid "Darken"
+#~ msgstr "Làm tối"
+
+#~ msgctxt "disabled intensity effect"
+#~ msgid "Lighten"
+#~ msgstr "Làm sáng"
+
+#~ msgid "Contrast:"
+#~ msgstr "Tương phản:"
+
+#~ msgid "Disabled color effect amount"
+#~ msgstr "Mức hiệu ứng màu vô hiệu"
+
+#~ msgid "Disabled intensity effect amount"
+#~ msgstr "Mức hiệu ứng cường độ vô hiệu"
+
+#~ msgid "Disabled color"
+#~ msgstr "Màu vô hiệu"
+
+#~ msgid "Disabled contrast type"
+#~ msgstr "Kiểu tương phản vô hiệu"
+
+#~ msgctxt "no disabled contrast"
+#~ msgid "None"
+#~ msgstr "Không"
+
+#~ msgctxt "disabled contrast"
+#~ msgid "Fade"
+#~ msgstr "Phai"
+
+#~ msgctxt "disabled contrast"
+#~ msgid "Tint"
+#~ msgstr "Phủ"
+
+#~ msgid "Disabled contrast amount"
+#~ msgstr "Mức tương phản vô hiệu"
+
+#~ msgid "Apply &effects to inactive windows"
+#~ msgstr "Áp dụng &hiệu ứng cho các cửa sổ bất hoạt"
+
+#~ msgid "Use different colors for in&active selections"
+#~ msgstr "Dùng các màu khác cho các phần bôi đen &bất hoạt"
+
+#~ msgid "Shade sorted column &in lists"
+#~ msgstr "Đổ bóng lên cột đã sắp xếp &trong danh sách"
+
+#~ msgid "Tint all colors with accent color"
+#~ msgstr "Phủ màu chủ đạo lên tất cả các màu"
+
+#~ msgid "Make window titlebars a&ccent-colored"
+#~ msgstr "Đặt màu các thanh tiêu đề cửa sổ theo màu &chủ đạo"
+
+#~ msgid "Tint strength:"
+#~ msgstr "Cường độ phủ:"
+
+#~ msgid "Shading of frames and lighting (\"3D\") effects"
+#~ msgstr "Việc đổ bóng của các khung và các hiệu ứng (\"3D\") chiếu sáng"
+
+#~ msgid "Shading"
+#~ msgstr "Việc đổ bóng"
+
+#~ msgid "Maximum"
+#~ msgstr "Lớn nhất"
+
+#~ msgid "Minimum"
+#~ msgstr "Nhỏ nhất"
+
+#~ msgid "Contrast"
+#~ msgstr "Tương phản"
+
+#~ msgid "Normal Text on Normal Background"
+#~ msgstr "Chữ thường trên nền thường"
+
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "normal"
+#~ msgstr "thường"
+
+#~ msgid "Link Text on Normal Background"
+#~ msgstr "Chữ liên kết trên nền thường"
+
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "link"
+#~ msgstr "liên kết"
+
+#~ msgid "Visited Text on Normal Background"
+#~ msgstr "Chữ đã mở trên nền thường"
+
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "visited"
+#~ msgstr "đã mở"
+
+#~ msgid "Active Text on Normal Background"
+#~ msgstr "Chữ hoạt động trên nền thường"
+
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "active"
+#~ msgstr "hoạt động"
+
+#~ msgid "Inactive Text on Normal Background"
+#~ msgstr "Chữ bất hoạt trên nền thường"
+
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "inactive"
+#~ msgstr "bất hoạt"
+
+#~ msgid "Negative Text on Normal Background"
+#~ msgstr "Chữ âm tính trên nền thường"
+
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "negative"
+#~ msgstr "âm tính"
+
+#~ msgid "Neutral Text on Normal Background"
+#~ msgstr "Chữ trung tính trên nền thường"
+
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "neutral"
+#~ msgstr "trung tính"
+
+#~ msgid "Positive Text on Normal Background"
+#~ msgstr "Chữ dương tính trên nền thường"
+
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "positive"
+#~ msgstr "dương tính"
+
+#~ msgid "Hover on Normal Background"
+#~ msgstr "Đảo chuột trên nền thường"
+
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "hover"
+#~ msgstr "đảo chuột"
+
+#~ msgid ""
+#~ "Link Text on Link Background\n"
+#~ "(Note: Link Background is derived from Link Text and cannot be separately "
+#~ "configured at this time)"
+#~ msgstr ""
+#~ "Chữ liên kết trên nền liên kết\n"
+#~ "(Lưu ý: Nền liên kết được suy ra từ \"Chữ liên kết\" và hiện tại không "
+#~ "thể cấu hình riêng)"
+
+#~ msgid ""
+#~ "Visited Text on Visited Background\n"
+#~ "(Note: Visited Background is derived from Visited Text and cannot be "
+#~ "separately configured at this time)"
+#~ msgstr ""
+#~ "Chữ đã mở trên nền đã mở\n"
+#~ "(Lưu ý: Nền đã mở được suy ra từ \"Chữ đã mở\" và hiện tại không thể cấu "
+#~ "hình riêng)"
+
+#~ msgid ""
+#~ "Active Text on Active Background\n"
+#~ "(Note: Active Background is derived from Active Text and cannot be "
+#~ "separately configured at this time)"
+#~ msgstr ""
+#~ "Chữ hoạt động trên nền hoạt động\n"
+#~ "(Lưu ý: Nền hoạt động được suy ra từ \"Chữ hoạt động\" và hiện tại không "
+#~ "thể cấu hình riêng)"
+
+#~ msgid "Inactive Text on Alternate Background"
+#~ msgstr "Chữ bất hoạt trên nền khác"
+
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "alternate"
+#~ msgstr "khác"
+
+#~ msgid ""
+#~ "Negative Text on Negative Background\n"
+#~ "(Note: Negative Background is derived from Negative Text and cannot be "
+#~ "separately configured at this time)"
+#~ msgstr ""
+#~ "Chữ âm tính trên nền âm tính\n"
+#~ "(Lưu ý: Nền âm tính được suy ra từ \"Chữ âm tính\" và hiện tại không thể "
+#~ "cấu hình riêng)"
+
+#~ msgid ""
+#~ "Neutral Text on Neutral Background\n"
+#~ "(Note: Neutral Background is derived from Neutral Text and cannot be "
+#~ "separately configured at this time)"
+#~ msgstr ""
+#~ "Chữ trung tính trên nền trung tính\n"
+#~ "(Lưu ý: Nền trung tính được suy ra từ \"Chữ trung tính\" và hiện tại "
+#~ "không thể cấu hình riêng)"
+
+#~ msgid ""
+#~ "Positive Text on Positive Background\n"
+#~ "(Note: Positive Background is derived from Positive Text and cannot be "
+#~ "separately configured at this time)"
+#~ msgstr ""
+#~ "Chữ dương tính trên nền dương tính\n"
+#~ "(Lưu ý: Nền dương tính được suy ra từ \"Chữ dương tính\" và hiện tại "
+#~ "không thể cấu hình riêng)"
+
+#~ msgid "Focus on Normal Background"
+#~ msgstr "Nhắm trên nền thường"
+
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "focus"
+#~ msgstr "nhắm"
 
 #~ msgid "Apply a&ccent color to active window titlebars"
 #~ msgstr "Áp dụng &màu chủ đạo cho thanh tiêu đề cửa sổ hoạt động"

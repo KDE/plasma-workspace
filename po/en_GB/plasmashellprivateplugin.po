@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-31 02:25+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2023-06-17 12:25+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -134,30 +134,6 @@ msgstr "Keep Open"
 #, kde-format
 msgid "Configure…"
 msgstr "Configure…"
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:10
-#, kde-format
-msgid "Screen lock enabled"
-msgstr "Screen lock enabled"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:11
-#, kde-format
-msgid "Sets whether the screen will be locked after the specified time."
-msgstr "Sets whether the screen will be locked after the specified time."
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:16
-#, kde-format
-msgid "Screen saver timeout"
-msgstr "Screen saver timeout"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:17
-#, kde-format
-msgid "Sets the minutes after which the screen is locked."
-msgstr "Sets the minutes after which the screen is locked."
 
 #: sessionsprivate/sessionsmodel.cpp:235 sessionsprivate/sessionsmodel.cpp:239
 #, kde-format
@@ -327,6 +303,18 @@ msgstr "Download New Plasma Widgets"
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "Install Widget From Local File…"
+
+#~ msgid "Screen lock enabled"
+#~ msgstr "Screen lock enabled"
+
+#~ msgid "Sets whether the screen will be locked after the specified time."
+#~ msgstr "Sets whether the screen will be locked after the specified time."
+
+#~ msgid "Screen saver timeout"
+#~ msgstr "Screen saver timeout"
+
+#~ msgid "Sets the minutes after which the screen is locked."
+#~ msgstr "Sets the minutes after which the screen is locked."
 
 #~ msgid "&Execute"
 #~ msgstr "&Execute"

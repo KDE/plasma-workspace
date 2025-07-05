@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-15 00:48+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2021-12-07 09:47+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -19,54 +19,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 21.11.90\n"
-
-#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
-#: fontsaasettingsbase.kcfg:9
-#, kde-format
-msgid "Force font DPI Wayland"
-msgstr "A Wayland betűtípusok DPI értéke"
-
-#. i18n: ectx: label, entry (forceFontDPI), group (General)
-#: fontsaasettingsbase.kcfg:13
-#, kde-format
-msgid "Force font DPI on X11"
-msgstr "Az X11 betűtípusok DPI értéke"
-
-#. i18n: ectx: label, entry (font), group (General)
-#: fontssettings.kcfg:9
-#, kde-format
-msgid "General font"
-msgstr "Általános"
-
-#. i18n: ectx: label, entry (fixed), group (General)
-#: fontssettings.kcfg:21
-#, kde-format
-msgid "Fixed width font"
-msgstr "Rögzített szélességű"
-
-#. i18n: ectx: label, entry (smallestReadableFont), group (General)
-#: fontssettings.kcfg:33
-#, kde-format
-msgid "Small font"
-msgstr "Kicsi"
-
-#. i18n: ectx: label, entry (toolBarFont), group (General)
-#: fontssettings.kcfg:45
-#, kde-format
-msgid "Tool bar font"
-msgstr "Eszköztár"
-
-#. i18n: ectx: label, entry (menuFont), group (General)
-#: fontssettings.kcfg:57
-#, kde-format
-msgid "Menu font"
-msgstr "Menü"
-
-#. i18n: ectx: label, entry (activeFont), group (WM)
-#: fontssettings.kcfg:71
-#, kde-format
-msgid "Window title font"
-msgstr "Ablakcím"
 
 #: kxftconfig.cpp:458
 #, kde-format
@@ -362,6 +314,30 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "Betűkészlet kiválasztása"
+
+#~ msgid "Force font DPI Wayland"
+#~ msgstr "A Wayland betűtípusok DPI értéke"
+
+#~ msgid "Force font DPI on X11"
+#~ msgstr "Az X11 betűtípusok DPI értéke"
+
+#~ msgid "General font"
+#~ msgstr "Általános"
+
+#~ msgid "Fixed width font"
+#~ msgstr "Rögzített szélességű"
+
+#~ msgid "Small font"
+#~ msgstr "Kicsi"
+
+#~ msgid "Tool bar font"
+#~ msgstr "Eszköztár"
+
+#~ msgid "Menu font"
+#~ msgstr "Menü"
+
+#~ msgid "Window title font"
+#~ msgstr "Ablakcím"
 
 #~ msgid "Change Display Scaling…"
 #~ msgstr "Képernyőméretezés módosítása…"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-17 00:48+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2021-05-27 18:45+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -32,36 +32,6 @@ msgstr "Öppna i Filelight"
 msgid "Open in File Manager"
 msgstr "Öppna i filhanterare"
 
-#. i18n: ectx: label, entry (minimumSpace), group (General)
-#: freespacenotifier.kcfg:9
-#, kde-format
-msgid "Minimum free space before user starts being notified."
-msgstr "Minimalt ledigt utrymme innan användaren blir underrättad."
-
-#. i18n: ectx: label, entry (enableNotification), group (General)
-#: freespacenotifier.kcfg:15
-#, kde-format
-msgid "Is the free space notification enabled."
-msgstr "Är underrättelse om ledigt utrymme aktiverad."
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableNotification)
-#: freespacenotifier_prefs_base.ui:17
-#, kde-format
-msgid "Enable low disk space warning"
-msgstr "Aktivera varning vid brist på diskutrymme"
-
-#. i18n: ectx: property (text), widget (QLabel, label_minimumSpace)
-#: freespacenotifier_prefs_base.ui:27
-#, kde-format
-msgid "Warn when free space is below:"
-msgstr "Varna när ledigt utrymme är under"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpace)
-#: freespacenotifier_prefs_base.ui:37
-#, kde-format
-msgid " MiB"
-msgstr " MiB"
-
 #: module.cpp:37
 #, kde-format
 msgid ""
@@ -85,6 +55,21 @@ msgstr ""
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"
 msgstr "Allmänt"
+
+#~ msgid "Minimum free space before user starts being notified."
+#~ msgstr "Minimalt ledigt utrymme innan användaren blir underrättad."
+
+#~ msgid "Is the free space notification enabled."
+#~ msgstr "Är underrättelse om ledigt utrymme aktiverad."
+
+#~ msgid "Enable low disk space warning"
+#~ msgstr "Aktivera varning vid brist på diskutrymme"
+
+#~ msgid "Warn when free space is below:"
+#~ msgstr "Varna när ledigt utrymme är under"
+
+#~ msgid " MiB"
+#~ msgstr " MiB"
 
 #~ msgid "Low Disk Space"
 #~ msgstr "Ont om diskutrymme"

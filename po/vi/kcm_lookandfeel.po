@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2022-08-09 21:46+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -92,12 +92,6 @@ msgstr "tên_gói"
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
 msgstr "Đặt lại bố cục Bàn làm việc Plasma"
-
-#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
-#: lookandfeelsettings.kcfg:9
-#, kde-format
-msgid "Global look and feel"
-msgstr "Cách nhìn và cảm toàn cục"
 
 #: package/contents/ui/main.qml:21
 #, kde-format
@@ -262,6 +256,9 @@ msgid ""
 msgstr ""
 "Không có thiết lập nào dùng được trong chủ đề toàn cục này. Vui lòng liên hệ "
 "bảo trì viên của chủ đề toàn cục này, có thể nó đã bị hỏng."
+
+#~ msgid "Global look and feel"
+#~ msgstr "Cách nhìn và cảm toàn cục"
 
 #~ msgid ""
 #~ "Your current layout and configuration of panels, desktop widgets, and "

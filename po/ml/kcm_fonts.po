@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-15 00:48+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2021-09-09 12:59+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -19,54 +19,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Weblate 4.7.2\n"
-
-#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
-#: fontsaasettingsbase.kcfg:9
-#, kde-format
-msgid "Force font DPI Wayland"
-msgstr "വേലൻഡിൽ ഫോണ്ട് ഡിപിഐ നിർബന്ധിക്കുക"
-
-#. i18n: ectx: label, entry (forceFontDPI), group (General)
-#: fontsaasettingsbase.kcfg:13
-#, kde-format
-msgid "Force font DPI on X11"
-msgstr "X11ൽ ഫോണ്ട് ഡിപിഐ നിർബന്ധിക്കുക"
-
-#. i18n: ectx: label, entry (font), group (General)
-#: fontssettings.kcfg:9
-#, kde-format
-msgid "General font"
-msgstr "സാധാരണ ഫോണ്ട്"
-
-#. i18n: ectx: label, entry (fixed), group (General)
-#: fontssettings.kcfg:21
-#, kde-format
-msgid "Fixed width font"
-msgstr "തുല്യ വീതിയുള്ള ഫോണ്ട്"
-
-#. i18n: ectx: label, entry (smallestReadableFont), group (General)
-#: fontssettings.kcfg:33
-#, kde-format
-msgid "Small font"
-msgstr "ചെറിയ ഫോണ്ട്"
-
-#. i18n: ectx: label, entry (toolBarFont), group (General)
-#: fontssettings.kcfg:45
-#, kde-format
-msgid "Tool bar font"
-msgstr "ഉപകരണപ്പട്ടയുടെ ഫോണ്ട്"
-
-#. i18n: ectx: label, entry (menuFont), group (General)
-#: fontssettings.kcfg:57
-#, kde-format
-msgid "Menu font"
-msgstr "മെനു അക്ഷരസഞ്ചയം"
-
-#. i18n: ectx: label, entry (activeFont), group (WM)
-#: fontssettings.kcfg:71
-#, kde-format
-msgid "Window title font"
-msgstr "ജാലകത്തിന്റെ തലക്കെട്ടിനുള്ള ഫോണ്ട്"
 
 #: kxftconfig.cpp:458
 #, kde-format
@@ -352,6 +304,30 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "അക്ഷരസഞ്ചയം തിരഞ്ഞെടുക്കുക"
+
+#~ msgid "Force font DPI Wayland"
+#~ msgstr "വേലൻഡിൽ ഫോണ്ട് ഡിപിഐ നിർബന്ധിക്കുക"
+
+#~ msgid "Force font DPI on X11"
+#~ msgstr "X11ൽ ഫോണ്ട് ഡിപിഐ നിർബന്ധിക്കുക"
+
+#~ msgid "General font"
+#~ msgstr "സാധാരണ ഫോണ്ട്"
+
+#~ msgid "Fixed width font"
+#~ msgstr "തുല്യ വീതിയുള്ള ഫോണ്ട്"
+
+#~ msgid "Small font"
+#~ msgstr "ചെറിയ ഫോണ്ട്"
+
+#~ msgid "Tool bar font"
+#~ msgstr "ഉപകരണപ്പട്ടയുടെ ഫോണ്ട്"
+
+#~ msgid "Menu font"
+#~ msgstr "മെനു അക്ഷരസഞ്ചയം"
+
+#~ msgid "Window title font"
+#~ msgstr "ജാലകത്തിന്റെ തലക്കെട്ടിനുള്ള ഫോണ്ട്"
 
 #~ msgid "Change Display Scaling…"
 #~ msgstr "ഡിസ്പ്ലേ സ്കെയിലിംഗ് മാറ്റുക…"

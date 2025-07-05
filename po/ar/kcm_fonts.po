@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-15 00:48+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2022-10-22 18:58+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -25,54 +25,6 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 "X-Generator: Lokalize 23.08.5\n"
-
-#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
-#: fontsaasettingsbase.kcfg:9
-#, kde-format
-msgid "Force font DPI Wayland"
-msgstr "افرِض عدد النقاط في البوصة للخطوط لويلاند"
-
-#. i18n: ectx: label, entry (forceFontDPI), group (General)
-#: fontsaasettingsbase.kcfg:13
-#, kde-format
-msgid "Force font DPI on X11"
-msgstr "افرِض عدد النقاط في البوصة للخطوط لأكس 11"
-
-#. i18n: ectx: label, entry (font), group (General)
-#: fontssettings.kcfg:9
-#, kde-format
-msgid "General font"
-msgstr "خط عام"
-
-#. i18n: ectx: label, entry (fixed), group (General)
-#: fontssettings.kcfg:21
-#, kde-format
-msgid "Fixed width font"
-msgstr "خط ثابت العرض"
-
-#. i18n: ectx: label, entry (smallestReadableFont), group (General)
-#: fontssettings.kcfg:33
-#, kde-format
-msgid "Small font"
-msgstr "خط صغير"
-
-#. i18n: ectx: label, entry (toolBarFont), group (General)
-#: fontssettings.kcfg:45
-#, kde-format
-msgid "Tool bar font"
-msgstr "خط شريط الأدوات"
-
-#. i18n: ectx: label, entry (menuFont), group (General)
-#: fontssettings.kcfg:57
-#, kde-format
-msgid "Menu font"
-msgstr "خط القائمة"
-
-#. i18n: ectx: label, entry (activeFont), group (WM)
-#: fontssettings.kcfg:71
-#, kde-format
-msgid "Window title font"
-msgstr "خط عنوان النافذة"
 
 #: kxftconfig.cpp:458
 #, kde-format
@@ -360,6 +312,30 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "اختر خطًا"
+
+#~ msgid "Force font DPI Wayland"
+#~ msgstr "افرِض عدد النقاط في البوصة للخطوط لويلاند"
+
+#~ msgid "Force font DPI on X11"
+#~ msgstr "افرِض عدد النقاط في البوصة للخطوط لأكس 11"
+
+#~ msgid "General font"
+#~ msgstr "خط عام"
+
+#~ msgid "Fixed width font"
+#~ msgstr "خط ثابت العرض"
+
+#~ msgid "Small font"
+#~ msgstr "خط صغير"
+
+#~ msgid "Tool bar font"
+#~ msgstr "خط شريط الأدوات"
+
+#~ msgid "Menu font"
+#~ msgstr "خط القائمة"
+
+#~ msgid "Window title font"
+#~ msgstr "خط عنوان النافذة"
 
 #~ msgid "Change Display Scaling…"
 #~ msgstr "غير قياس العرض..."

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-17 00:48+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2021-07-25 13:17+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -33,36 +33,6 @@ msgstr "Deschide în Filelight"
 msgid "Open in File Manager"
 msgstr "Deschide cu gestionar de fișiere"
 
-#. i18n: ectx: label, entry (minimumSpace), group (General)
-#: freespacenotifier.kcfg:9
-#, kde-format
-msgid "Minimum free space before user starts being notified."
-msgstr "Spațiul liber minim, înainte ca utilizatorul să fie notificat."
-
-#. i18n: ectx: label, entry (enableNotification), group (General)
-#: freespacenotifier.kcfg:15
-#, kde-format
-msgid "Is the free space notification enabled."
-msgstr "Dacă este activată notificarea de spațiu liber."
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableNotification)
-#: freespacenotifier_prefs_base.ui:17
-#, kde-format
-msgid "Enable low disk space warning"
-msgstr "Activează avertizarea insuficienței de spațiu"
-
-#. i18n: ectx: property (text), widget (QLabel, label_minimumSpace)
-#: freespacenotifier_prefs_base.ui:27
-#, kde-format
-msgid "Warn when free space is below:"
-msgstr "Avertizează când spațiu liber e mai puțin de:"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpace)
-#: freespacenotifier_prefs_base.ui:37
-#, kde-format
-msgid " MiB"
-msgstr " MiO"
-
 #: module.cpp:37
 #, kde-format
 msgid ""
@@ -82,6 +52,21 @@ msgstr "Partiția rădăcină rămâne fără spațiu pe disc, mai aveți %1 MiO
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"
 msgstr "General"
+
+#~ msgid "Minimum free space before user starts being notified."
+#~ msgstr "Spațiul liber minim, înainte ca utilizatorul să fie notificat."
+
+#~ msgid "Is the free space notification enabled."
+#~ msgstr "Dacă este activată notificarea de spațiu liber."
+
+#~ msgid "Enable low disk space warning"
+#~ msgstr "Activează avertizarea insuficienței de spațiu"
+
+#~ msgid "Warn when free space is below:"
+#~ msgstr "Avertizează când spațiu liber e mai puțin de:"
+
+#~ msgid " MiB"
+#~ msgstr " MiO"
 
 #~ msgctxt ""
 #~ "Warns the user that the system is running low on space on his home "

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-17 00:48+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2011-02-21 22:46+0100\n"
 "Last-Translator: Marko Dimjasevic <marko@dimjasevic.net>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -39,36 +39,6 @@ msgstr ""
 msgid "Open in File Manager"
 msgstr "Otvori upravitelj datoteka"
 
-#. i18n: ectx: label, entry (minimumSpace), group (General)
-#: freespacenotifier.kcfg:9
-#, kde-format
-msgid "Minimum free space before user starts being notified."
-msgstr "Minimum slobodnog mjesta prije nego se obavijesti korisnika."
-
-#. i18n: ectx: label, entry (enableNotification), group (General)
-#: freespacenotifier.kcfg:15
-#, kde-format
-msgid "Is the free space notification enabled."
-msgstr "Je li obavijest o slobodnom mjestu omogućena."
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableNotification)
-#: freespacenotifier_prefs_base.ui:17
-#, kde-format
-msgid "Enable low disk space warning"
-msgstr "Omogući upozorenje o manjku diskovnog mjesta"
-
-#. i18n: ectx: property (text), widget (QLabel, label_minimumSpace)
-#: freespacenotifier_prefs_base.ui:27
-#, kde-format
-msgid "Warn when free space is below:"
-msgstr "Upozori kad je slobodnog mjesta manje od:"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpace)
-#: freespacenotifier_prefs_base.ui:37
-#, kde-format
-msgid " MiB"
-msgstr " MiB"
-
 #: module.cpp:37
 #, kde-format
 msgid ""
@@ -88,6 +58,21 @@ msgstr ""
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"
 msgstr "Opće"
+
+#~ msgid "Minimum free space before user starts being notified."
+#~ msgstr "Minimum slobodnog mjesta prije nego se obavijesti korisnika."
+
+#~ msgid "Is the free space notification enabled."
+#~ msgstr "Je li obavijest o slobodnom mjestu omogućena."
+
+#~ msgid "Enable low disk space warning"
+#~ msgstr "Omogući upozorenje o manjku diskovnog mjesta"
+
+#~ msgid "Warn when free space is below:"
+#~ msgstr "Upozori kad je slobodnog mjesta manje od:"
+
+#~ msgid " MiB"
+#~ msgstr " MiB"
 
 #~ msgctxt ""
 #~ "Warns the user that the system is running low on space on his home "

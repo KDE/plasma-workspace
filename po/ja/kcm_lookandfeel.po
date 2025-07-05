@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2023-02-22 17:00+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -93,12 +93,6 @@ msgstr "packagename"
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
 msgstr "Plasma のデスクトップレイアウトをリセット"
-
-#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
-#: lookandfeelsettings.kcfg:9
-#, kde-format
-msgid "Global look and feel"
-msgstr "グローバル ルックアンドフィール"
 
 #: package/contents/ui/main.qml:21
 #, kde-format
@@ -263,3 +257,6 @@ msgid ""
 msgstr ""
 "このグローバルテーマは適切な設定を提供していません。壊れている可能性があるた"
 "め、このグローバルテーマのメンテナに連絡してください。"
+
+#~ msgid "Global look and feel"
+#~ msgstr "グローバル ルックアンドフィール"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2023-02-28 23:32+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -89,12 +89,6 @@ msgstr "packagename"
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
 msgstr "Plasma 바탕 화면 레이아웃 초기화"
-
-#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
-#: lookandfeelsettings.kcfg:9
-#, kde-format
-msgid "Global look and feel"
-msgstr "전역 모습과 느낌"
 
 #: package/contents/ui/main.qml:21
 #, kde-format
@@ -259,6 +253,9 @@ msgid ""
 msgstr ""
 "이 전역 테마에 변경할 수 있는 설정이 없습니다. 전역 테마에 문제가 있는 것일 "
 "수도 있으므로 테마 관리자에게 연락하십시오."
+
+#~ msgid "Global look and feel"
+#~ msgstr "전역 모습과 느낌"
 
 #~ msgid ""
 #~ "Your current layout and configuration of panels, desktop widgets, and "

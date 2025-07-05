@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2020-07-21 18:29+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -62,35 +62,20 @@ msgstr "inverteret CPU-brug"
 msgid "nothing"
 msgstr "intet"
 
-#. i18n: ectx: property (title), widget (QGroupBox, main)
-#: killrunner_config.ui:30
-#, kde-format
-msgid "Kill Applications Config"
-msgstr "Konfiguration af dræb programmer"
+#~ msgid "Kill Applications Config"
+#~ msgstr "Konfiguration af dræb programmer"
 
-#. i18n: ectx: property (text), widget (QCheckBox, useTriggerWord)
-#: killrunner_config.ui:39
-#, kde-format
-msgid "&Use trigger word"
-msgstr "&Brug udløserord"
+#~ msgid "&Use trigger word"
+#~ msgstr "&Brug udløserord"
 
-#. i18n: ectx: property (text), widget (QLabel, label_trigger)
-#: killrunner_config.ui:51
-#, kde-format
-msgid "&Trigger word:"
-msgstr "&Udløserord:"
+#~ msgid "&Trigger word:"
+#~ msgstr "&Udløserord:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_sorting)
-#: killrunner_config.ui:72
-#, kde-format
-msgid "&Sort by"
-msgstr "&Sortér efter"
+#~ msgid "&Sort by"
+#~ msgstr "&Sortér efter"
 
-#. i18n: ectx: property (toolTip), widget (KComboBox, sorting)
-#: killrunner_config.ui:82
-#, kde-format
-msgid "It is not sure, that this will take effect"
-msgstr "Det er ikke sikkert at dette vil få virkning"
+#~ msgid "It is not sure, that this will take effect"
+#~ msgstr "Det er ikke sikkert at dette vil få virkning"
 
 #~ msgid ""
 #~ "Process ID: %1\n"

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-15 00:48+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2023-04-09 21:48+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -22,54 +22,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 22.12.3\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
-#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
-#: fontsaasettingsbase.kcfg:9
-#, kde-format
-msgid "Force font DPI Wayland"
-msgstr "Behartu letra-tipoen DPI «Wayland»ekin"
-
-#. i18n: ectx: label, entry (forceFontDPI), group (General)
-#: fontsaasettingsbase.kcfg:13
-#, kde-format
-msgid "Force font DPI on X11"
-msgstr "Behartu letra-tipoen DPI «X11»rekin"
-
-#. i18n: ectx: label, entry (font), group (General)
-#: fontssettings.kcfg:9
-#, kde-format
-msgid "General font"
-msgstr "Letra-tipo orokorra"
-
-#. i18n: ectx: label, entry (fixed), group (General)
-#: fontssettings.kcfg:21
-#, kde-format
-msgid "Fixed width font"
-msgstr "Zabalera finkoko letra-tipoa"
-
-#. i18n: ectx: label, entry (smallestReadableFont), group (General)
-#: fontssettings.kcfg:33
-#, kde-format
-msgid "Small font"
-msgstr "Letra-tipo txikia"
-
-#. i18n: ectx: label, entry (toolBarFont), group (General)
-#: fontssettings.kcfg:45
-#, kde-format
-msgid "Tool bar font"
-msgstr "Tresna-barrako letra-tipa"
-
-#. i18n: ectx: label, entry (menuFont), group (General)
-#: fontssettings.kcfg:57
-#, kde-format
-msgid "Menu font"
-msgstr "Menuko letra-tipoa"
-
-#. i18n: ectx: label, entry (activeFont), group (WM)
-#: fontssettings.kcfg:71
-#, kde-format
-msgid "Window title font"
-msgstr "Leiho-tituluko letra-tipoa"
 
 #: kxftconfig.cpp:458
 #, kde-format
@@ -365,6 +317,30 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "Hautatu letra-tipoa"
+
+#~ msgid "Force font DPI Wayland"
+#~ msgstr "Behartu letra-tipoen DPI «Wayland»ekin"
+
+#~ msgid "Force font DPI on X11"
+#~ msgstr "Behartu letra-tipoen DPI «X11»rekin"
+
+#~ msgid "General font"
+#~ msgstr "Letra-tipo orokorra"
+
+#~ msgid "Fixed width font"
+#~ msgstr "Zabalera finkoko letra-tipoa"
+
+#~ msgid "Small font"
+#~ msgstr "Letra-tipo txikia"
+
+#~ msgid "Tool bar font"
+#~ msgstr "Tresna-barrako letra-tipa"
+
+#~ msgid "Menu font"
+#~ msgstr "Menuko letra-tipoa"
+
+#~ msgid "Window title font"
+#~ msgstr "Leiho-tituluko letra-tipoa"
 
 #~ msgid "Change Display Scaling…"
 #~ msgstr "Aldatu bistaratzearen eskalatzea..."

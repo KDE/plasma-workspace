@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-15 00:48+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2023-01-25 15:39+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -16,54 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 21.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-
-#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
-#: fontsaasettingsbase.kcfg:9
-#, kde-format
-msgid "Force font DPI Wayland"
-msgstr "Fortia DPI de font Wayland"
-
-#. i18n: ectx: label, entry (forceFontDPI), group (General)
-#: fontsaasettingsbase.kcfg:13
-#, kde-format
-msgid "Force font DPI on X11"
-msgstr "Fortia DPI de font sur X11"
-
-#. i18n: ectx: label, entry (font), group (General)
-#: fontssettings.kcfg:9
-#, kde-format
-msgid "General font"
-msgstr "Font general"
-
-#. i18n: ectx: label, entry (fixed), group (General)
-#: fontssettings.kcfg:21
-#, kde-format
-msgid "Fixed width font"
-msgstr "Font de largessa fixate"
-
-#. i18n: ectx: label, entry (smallestReadableFont), group (General)
-#: fontssettings.kcfg:33
-#, kde-format
-msgid "Small font"
-msgstr "Font parve"
-
-#. i18n: ectx: label, entry (toolBarFont), group (General)
-#: fontssettings.kcfg:45
-#, kde-format
-msgid "Tool bar font"
-msgstr "Font de Barra de Instrumento"
-
-#. i18n: ectx: label, entry (menuFont), group (General)
-#: fontssettings.kcfg:57
-#, kde-format
-msgid "Menu font"
-msgstr "Font de menu"
-
-#. i18n: ectx: label, entry (activeFont), group (WM)
-#: fontssettings.kcfg:71
-#, kde-format
-msgid "Window title font"
-msgstr "Font de Titulo de fenestra"
 
 #: kxftconfig.cpp:458
 #, kde-format
@@ -357,6 +309,30 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "Selectiona le Font"
+
+#~ msgid "Force font DPI Wayland"
+#~ msgstr "Fortia DPI de font Wayland"
+
+#~ msgid "Force font DPI on X11"
+#~ msgstr "Fortia DPI de font sur X11"
+
+#~ msgid "General font"
+#~ msgstr "Font general"
+
+#~ msgid "Fixed width font"
+#~ msgstr "Font de largessa fixate"
+
+#~ msgid "Small font"
+#~ msgstr "Font parve"
+
+#~ msgid "Tool bar font"
+#~ msgstr "Font de Barra de Instrumento"
+
+#~ msgid "Menu font"
+#~ msgstr "Font de menu"
+
+#~ msgid "Window title font"
+#~ msgstr "Font de Titulo de fenestra"
 
 #~ msgid "Change Display Scaling…"
 #~ msgstr "Modifica scalar  de monstrator..."

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-31 02:25+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2023-05-29 15:18+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -134,30 +134,6 @@ msgstr "Manteni aperite"
 #, kde-format
 msgid "Configure…"
 msgstr "Configura"
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:10
-#, kde-format
-msgid "Screen lock enabled"
-msgstr "Bloco de schermo habilitate"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:11
-#, kde-format
-msgid "Sets whether the screen will be locked after the specified time."
-msgstr "Fixa si le schermo essera blocate post le tempore specificate."
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:16
-#, kde-format
-msgid "Screen saver timeout"
-msgstr "Salvator de schermo expirava"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:17
-#, kde-format
-msgid "Sets the minutes after which the screen is locked."
-msgstr "Fixa le secundas post le quales le salvator de schermo es serrate."
 
 #: sessionsprivate/sessionsmodel.cpp:235 sessionsprivate/sessionsmodel.cpp:239
 #, kde-format
@@ -327,6 +303,18 @@ msgstr "Discarga Nove Widgets de Plasma"
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "Installa Widget ex File Local ..."
+
+#~ msgid "Screen lock enabled"
+#~ msgstr "Bloco de schermo habilitate"
+
+#~ msgid "Sets whether the screen will be locked after the specified time."
+#~ msgstr "Fixa si le schermo essera blocate post le tempore specificate."
+
+#~ msgid "Screen saver timeout"
+#~ msgstr "Salvator de schermo expirava"
+
+#~ msgid "Sets the minutes after which the screen is locked."
+#~ msgstr "Fixa le secundas post le quales le salvator de schermo es serrate."
 
 #~ msgid "&Execute"
 #~ msgstr "&Executa"

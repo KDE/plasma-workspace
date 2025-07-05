@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-29 02:56+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2022-11-10 12:14\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -1657,12 +1657,6 @@ msgstr "Папярэдні прагляд радка"
 msgid "Please enter new string:"
 msgstr "Увядзіце новы радок:"
 
-#. i18n: ectx: ToolBar (mainToolBar)
-#: viewpart/kfontviewpart.rc:4
-#, kde-format
-msgid "&Main Toolbar"
-msgstr "&Галоўная панэль інструментаў"
-
 #: viewpart/PreviewSelectAction.cpp:13
 #, kde-format
 msgid "Preview Type"
@@ -2355,6 +2349,9 @@ msgstr "Фагс-па"
 #: viewpart/UnicodeScripts.h:80
 msgid "Yi"
 msgstr "І"
+
+#~ msgid "&Main Toolbar"
+#~ msgstr "&Галоўная панэль інструментаў"
 
 #~ msgid "Print..."
 #~ msgstr "Друк..."

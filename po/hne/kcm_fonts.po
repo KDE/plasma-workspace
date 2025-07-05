@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-15 00:48+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2009-01-22 15:39+0530\n"
 "Last-Translator: Ravishankar Shrivastava <raviratlami@aol.in>\n"
 "Language-Team: Hindi <kde-i18n-doc@lists.kde.org>\n"
@@ -18,61 +18,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 0.2\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
-
-#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
-#: fontsaasettingsbase.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Force fonts DPI:"
-msgid "Force font DPI Wayland"
-msgstr "फोंट डीपीआई बाध्य करव:"
-
-#. i18n: ectx: label, entry (forceFontDPI), group (General)
-#: fontsaasettingsbase.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Force fonts DPI:"
-msgid "Force font DPI on X11"
-msgstr "फोंट डीपीआई बाध्य करव:"
-
-#. i18n: ectx: label, entry (font), group (General)
-#: fontssettings.kcfg:9
-#, fuzzy, kde-format
-#| msgid "General"
-msgid "General font"
-msgstr "सामान्य"
-
-#. i18n: ectx: label, entry (fixed), group (General)
-#: fontssettings.kcfg:21
-#, fuzzy, kde-format
-#| msgid "Fixed width"
-msgid "Fixed width font"
-msgstr "निस्चित चौड़ाई"
-
-#. i18n: ectx: label, entry (smallestReadableFont), group (General)
-#: fontssettings.kcfg:33
-#, fuzzy, kde-format
-#| msgid "Small"
-msgid "Small font"
-msgstr "छोटे"
-
-#. i18n: ectx: label, entry (toolBarFont), group (General)
-#: fontssettings.kcfg:45
-#, fuzzy, kde-format
-#| msgid "Toolbar"
-msgid "Tool bar font"
-msgstr "औजार पट्टी"
-
-#. i18n: ectx: label, entry (menuFont), group (General)
-#: fontssettings.kcfg:57
-#, kde-format
-msgid "Menu font"
-msgstr ""
-
-#. i18n: ectx: label, entry (activeFont), group (WM)
-#: fontssettings.kcfg:71
-#, fuzzy, kde-format
-#| msgid "Window title"
-msgid "Window title font"
-msgstr "विंडो सीर्सक"
 
 #: kxftconfig.cpp:458
 #, fuzzy, kde-format
@@ -366,6 +311,41 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Force fonts DPI:"
+#~ msgid "Force font DPI Wayland"
+#~ msgstr "फोंट डीपीआई बाध्य करव:"
+
+#, fuzzy
+#~| msgid "Force fonts DPI:"
+#~ msgid "Force font DPI on X11"
+#~ msgstr "फोंट डीपीआई बाध्य करव:"
+
+#, fuzzy
+#~| msgid "General"
+#~ msgid "General font"
+#~ msgstr "सामान्य"
+
+#, fuzzy
+#~| msgid "Fixed width"
+#~ msgid "Fixed width font"
+#~ msgstr "निस्चित चौड़ाई"
+
+#, fuzzy
+#~| msgid "Small"
+#~ msgid "Small font"
+#~ msgstr "छोटे"
+
+#, fuzzy
+#~| msgid "Toolbar"
+#~ msgid "Tool bar font"
+#~ msgstr "औजार पट्टी"
+
+#, fuzzy
+#~| msgid "Window title"
+#~ msgid "Window title font"
+#~ msgstr "विंडो सीर्सक"
 
 #~ msgid "Font Settings Changed"
 #~ msgstr "फोंट सेटिंग बदलिस"

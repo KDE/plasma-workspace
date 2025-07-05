@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-15 00:48+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2022-12-13 15:30\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -22,54 +22,6 @@ msgstr ""
 "X-Crowdin-Language: be\n"
 "X-Crowdin-File: /main/be/plasma-workspace/kcm_fonts.po\n"
 "X-Crowdin-File-ID: 8541\n"
-
-#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
-#: fontsaasettingsbase.kcfg:9
-#, kde-format
-msgid "Force font DPI Wayland"
-msgstr "Прымусовае значэнне DPI шрыфту для Wayland"
-
-#. i18n: ectx: label, entry (forceFontDPI), group (General)
-#: fontsaasettingsbase.kcfg:13
-#, kde-format
-msgid "Force font DPI on X11"
-msgstr "Прымусовае значэнне DPI шрыфту для X11"
-
-#. i18n: ectx: label, entry (font), group (General)
-#: fontssettings.kcfg:9
-#, kde-format
-msgid "General font"
-msgstr "Асноўны шрыфт"
-
-#. i18n: ectx: label, entry (fixed), group (General)
-#: fontssettings.kcfg:21
-#, kde-format
-msgid "Fixed width font"
-msgstr "Монашырынны шрыфт"
-
-#. i18n: ectx: label, entry (smallestReadableFont), group (General)
-#: fontssettings.kcfg:33
-#, kde-format
-msgid "Small font"
-msgstr "Малы шрыфт"
-
-#. i18n: ectx: label, entry (toolBarFont), group (General)
-#: fontssettings.kcfg:45
-#, kde-format
-msgid "Tool bar font"
-msgstr "Шрыфт панэляў інструментаў"
-
-#. i18n: ectx: label, entry (menuFont), group (General)
-#: fontssettings.kcfg:57
-#, kde-format
-msgid "Menu font"
-msgstr "Шрыфт меню"
-
-#. i18n: ectx: label, entry (activeFont), group (WM)
-#: fontssettings.kcfg:71
-#, kde-format
-msgid "Window title font"
-msgstr "Шрыфт загалоўкаў акон"
 
 #: kxftconfig.cpp:458
 #, kde-format
@@ -361,6 +313,30 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "Абраць шрыфт"
+
+#~ msgid "Force font DPI Wayland"
+#~ msgstr "Прымусовае значэнне DPI шрыфту для Wayland"
+
+#~ msgid "Force font DPI on X11"
+#~ msgstr "Прымусовае значэнне DPI шрыфту для X11"
+
+#~ msgid "General font"
+#~ msgstr "Асноўны шрыфт"
+
+#~ msgid "Fixed width font"
+#~ msgstr "Монашырынны шрыфт"
+
+#~ msgid "Small font"
+#~ msgstr "Малы шрыфт"
+
+#~ msgid "Tool bar font"
+#~ msgstr "Шрыфт панэляў інструментаў"
+
+#~ msgid "Menu font"
+#~ msgstr "Шрыфт меню"
+
+#~ msgid "Window title font"
+#~ msgstr "Шрыфт загалоўкаў акон"
 
 #~ msgid "Change Display Scaling…"
 #~ msgstr "Змяніць маштабаванне дысплэя…"

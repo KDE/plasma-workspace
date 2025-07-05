@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-15 00:48+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2022-11-11 15:33+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -26,54 +26,6 @@ msgstr ""
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-
-#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
-#: fontsaasettingsbase.kcfg:9
-#, kde-format
-msgid "Force font DPI Wayland"
-msgstr "Установить DPI для Wayland"
-
-#. i18n: ectx: label, entry (forceFontDPI), group (General)
-#: fontsaasettingsbase.kcfg:13
-#, kde-format
-msgid "Force font DPI on X11"
-msgstr "Установить DPI для X11"
-
-#. i18n: ectx: label, entry (font), group (General)
-#: fontssettings.kcfg:9
-#, kde-format
-msgid "General font"
-msgstr "Обычный шрифт"
-
-#. i18n: ectx: label, entry (fixed), group (General)
-#: fontssettings.kcfg:21
-#, kde-format
-msgid "Fixed width font"
-msgstr "Моноширинный шрфит"
-
-#. i18n: ectx: label, entry (smallestReadableFont), group (General)
-#: fontssettings.kcfg:33
-#, kde-format
-msgid "Small font"
-msgstr "Небольшой шрифт"
-
-#. i18n: ectx: label, entry (toolBarFont), group (General)
-#: fontssettings.kcfg:45
-#, kde-format
-msgid "Tool bar font"
-msgstr "Шрифт панели инструментов"
-
-#. i18n: ectx: label, entry (menuFont), group (General)
-#: fontssettings.kcfg:57
-#, kde-format
-msgid "Menu font"
-msgstr "Шрифт меню"
-
-#. i18n: ectx: label, entry (activeFont), group (WM)
-#: fontssettings.kcfg:71
-#, kde-format
-msgid "Window title font"
-msgstr "Шрифт заголовка окна:"
 
 #: kxftconfig.cpp:458
 #, kde-format
@@ -372,6 +324,30 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "Выбор шрифта"
+
+#~ msgid "Force font DPI Wayland"
+#~ msgstr "Установить DPI для Wayland"
+
+#~ msgid "Force font DPI on X11"
+#~ msgstr "Установить DPI для X11"
+
+#~ msgid "General font"
+#~ msgstr "Обычный шрифт"
+
+#~ msgid "Fixed width font"
+#~ msgstr "Моноширинный шрфит"
+
+#~ msgid "Small font"
+#~ msgstr "Небольшой шрифт"
+
+#~ msgid "Tool bar font"
+#~ msgstr "Шрифт панели инструментов"
+
+#~ msgid "Menu font"
+#~ msgstr "Шрифт меню"
+
+#~ msgid "Window title font"
+#~ msgstr "Шрифт заголовка окна:"
 
 #~ msgid "Change Display Scaling…"
 #~ msgstr "Изменить масштабирование экрана…"

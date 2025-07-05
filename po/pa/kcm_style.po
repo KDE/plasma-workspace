@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-24 03:15+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2021-06-08 22:30-0700\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -144,78 +144,38 @@ msgstr "…GNOME/GTK ਐਪਲੀਕੇਸ਼ਨ ਸਟਾਈਲ ਦੀ ਸੰਰ�
 msgid "Configure %1"
 msgstr "ਸੰਰਚਨਾ %1"
 
-#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
-#: stylepreview.ui:33
-#, kde-format
-msgid "Tab 1"
-msgstr "ਟੈਬ 1"
+#~ msgid "Tab 1"
+#~ msgstr "ਟੈਬ 1"
 
-#. i18n: ectx: property (text), widget (QPushButton, pushButton)
-#: stylepreview.ui:65
-#, kde-format
-msgid "Push Button"
-msgstr "ਪੁਸ਼ ਬਟਨ"
+#~ msgid "Push Button"
+#~ msgstr "ਪੁਸ਼ ਬਟਨ"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
-#: stylepreview.ui:86
-#, kde-format
-msgid "Combo box"
-msgstr "ਕੰਬੋ ਬਕਸਾ"
+#~ msgid "Combo box"
+#~ msgstr "ਕੰਬੋ ਬਕਸਾ"
 
-#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
-#: stylepreview.ui:96
-#, kde-format
-msgid "Checkbox"
-msgstr "ਚੋਣ ਬਕਸਾ"
+#~ msgid "Checkbox"
+#~ msgstr "ਚੋਣ ਬਕਸਾ"
 
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
-#: stylepreview.ui:106 stylepreview.ui:116
-#, kde-format
-msgid "Radio button"
-msgstr "ਰੇਡੀਓ ਬਟਨ"
+#~ msgid "Radio button"
+#~ msgstr "ਰੇਡੀਓ ਬਟਨ"
 
-#. i18n: ectx: property (format), widget (QProgressBar, progressBar)
-#: stylepreview.ui:128
-#, no-c-format, kde-format
-msgid "%p%"
-msgstr ""
+#~ msgid "Tab 2"
+#~ msgstr "ਟੈਬ 2"
 
-#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
-#: stylepreview.ui:136
-#, kde-format
-msgid "Tab 2"
-msgstr "ਟੈਬ 2"
+#~ msgid "Application style"
+#~ msgstr "ਐਪਲੀਕੇਸ਼ਨ ਸਟਾਈਲ"
 
-#. i18n: ectx: label, entry (widgetStyle), group (KDE)
-#: stylesettings.kcfg:9
-#, kde-format
-msgid "Application style"
-msgstr "ਐਪਲੀਕੇਸ਼ਨ ਸਟਾਈਲ"
+#~ msgid "Show icons on buttons"
+#~ msgstr "ਬਟਨ ਉੱਤੇ ਆਈਕਾਨ ਵੇਖੋ"
 
-#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
-#: stylesettings.kcfg:13
-#, kde-format
-msgid "Show icons on buttons"
-msgstr "ਬਟਨ ਉੱਤੇ ਆਈਕਾਨ ਵੇਖੋ"
+#~ msgid "Show icons in menus"
+#~ msgstr "ਮੇਨੂ ਵਿੱਚ ਆਈਕਾਨ ਵੇਖੋ"
 
-#. i18n: ectx: label, entry (iconsInMenus), group (KDE)
-#: stylesettings.kcfg:17
-#, kde-format
-msgid "Show icons in menus"
-msgstr "ਮੇਨੂ ਵਿੱਚ ਆਈਕਾਨ ਵੇਖੋ"
+#~ msgid "Main toolbar label"
+#~ msgstr "ਮੁੱਖ ਟੂਲਬਾਰ ਲੇਬਲ"
 
-#. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
-#: stylesettings.kcfg:23
-#, kde-format
-msgid "Main toolbar label"
-msgstr "ਮੁੱਖ ਟੂਲਬਾਰ ਲੇਬਲ"
-
-#. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
-#: stylesettings.kcfg:27
-#, kde-format
-msgid "Secondary toolbar label"
-msgstr "ਸੈਕੰਡਰੀ ਟੂਲਬਾਰ ਲੇਬਲ"
+#~ msgid "Secondary toolbar label"
+#~ msgstr "ਸੈਕੰਡਰੀ ਟੂਲਬਾਰ ਲੇਬਲ"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

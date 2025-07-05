@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-24 03:15+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2024-05-12 21:35+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -148,78 +148,41 @@ msgstr "Grunnstilla stíl GNOME/GTK-forrita..."
 msgid "Configure %1"
 msgstr "Grunnstilla %1"
 
-#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
-#: stylepreview.ui:33
-#, kde-format
-msgid "Tab 1"
-msgstr "Flipi 1"
+#~ msgid "Tab 1"
+#~ msgstr "Flipi 1"
 
-#. i18n: ectx: property (text), widget (QPushButton, pushButton)
-#: stylepreview.ui:65
-#, kde-format
-msgid "Push Button"
-msgstr "Hnappur"
+#~ msgid "Push Button"
+#~ msgstr "Hnappur"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
-#: stylepreview.ui:86
-#, kde-format
-msgid "Combo box"
-msgstr "Samsettur gluggi"
+#~ msgid "Combo box"
+#~ msgstr "Samsettur gluggi"
 
-#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
-#: stylepreview.ui:96
-#, kde-format
-msgid "Checkbox"
-msgstr "Gátreitur"
+#~ msgid "Checkbox"
+#~ msgstr "Gátreitur"
 
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
-#: stylepreview.ui:106 stylepreview.ui:116
-#, kde-format
-msgid "Radio button"
-msgstr "Valhringur"
+#~ msgid "Radio button"
+#~ msgstr "Valhringur"
 
-#. i18n: ectx: property (format), widget (QProgressBar, progressBar)
-#: stylepreview.ui:128
-#, no-c-format, kde-format
-msgid "%p%"
-msgstr "%p%"
+#~ msgid "%p%"
+#~ msgstr "%p%"
 
-#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
-#: stylepreview.ui:136
-#, kde-format
-msgid "Tab 2"
-msgstr "Flipi 2"
+#~ msgid "Tab 2"
+#~ msgstr "Flipi 2"
 
-#. i18n: ectx: label, entry (widgetStyle), group (KDE)
-#: stylesettings.kcfg:9
-#, kde-format
-msgid "Application style"
-msgstr "Stíll forrits"
+#~ msgid "Application style"
+#~ msgstr "Stíll forrits"
 
-#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
-#: stylesettings.kcfg:13
-#, kde-format
-msgid "Show icons on buttons"
-msgstr "Sýna tákn á hnöppum"
+#~ msgid "Show icons on buttons"
+#~ msgstr "Sýna tákn á hnöppum"
 
-#. i18n: ectx: label, entry (iconsInMenus), group (KDE)
-#: stylesettings.kcfg:17
-#, kde-format
-msgid "Show icons in menus"
-msgstr "Sýna tákn á hnöppum"
+#~ msgid "Show icons in menus"
+#~ msgstr "Sýna tákn á hnöppum"
 
-#. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
-#: stylesettings.kcfg:23
-#, kde-format
-msgid "Main toolbar label"
-msgstr "Texti aðaltækjastiku"
+#~ msgid "Main toolbar label"
+#~ msgstr "Texti aðaltækjastiku"
 
-#. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
-#: stylesettings.kcfg:27
-#, kde-format
-msgid "Secondary toolbar label"
-msgstr "Texti aukatækjastiku"
+#~ msgid "Secondary toolbar label"
+#~ msgstr "Texti aukatækjastiku"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

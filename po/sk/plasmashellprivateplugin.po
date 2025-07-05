@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-31 02:25+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2023-12-11 17:59+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -135,30 +135,6 @@ msgstr "Ponechať otvorené"
 #, kde-format
 msgid "Configure…"
 msgstr "Nastaviť..."
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:10
-#, kde-format
-msgid "Screen lock enabled"
-msgstr "Zamknutie obrazovky povolené"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:11
-#, kde-format
-msgid "Sets whether the screen will be locked after the specified time."
-msgstr "Nastaví, či sa obrazovka zamkne po určenom čase."
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:16
-#, kde-format
-msgid "Screen saver timeout"
-msgstr "Časový limit pre šetrič obrazovky"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:17
-#, kde-format
-msgid "Sets the minutes after which the screen is locked."
-msgstr "Nastaví počet minút, po uplynutí ktorých sa obrazovka zamkne."
 
 #: sessionsprivate/sessionsmodel.cpp:235 sessionsprivate/sessionsmodel.cpp:239
 #, kde-format
@@ -328,6 +304,18 @@ msgstr "Stiahnuť nové Plasma widgety"
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "Inštalovať widget z lokálneho súboru..."
+
+#~ msgid "Screen lock enabled"
+#~ msgstr "Zamknutie obrazovky povolené"
+
+#~ msgid "Sets whether the screen will be locked after the specified time."
+#~ msgstr "Nastaví, či sa obrazovka zamkne po určenom čase."
+
+#~ msgid "Screen saver timeout"
+#~ msgstr "Časový limit pre šetrič obrazovky"
+
+#~ msgid "Sets the minutes after which the screen is locked."
+#~ msgstr "Nastaví počet minút, po uplynutí ktorých sa obrazovka zamkne."
 
 #~ msgid "&Execute"
 #~ msgstr "S&pustiť"

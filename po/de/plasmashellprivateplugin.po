@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-31 02:25+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2025-01-25 16:59+0100\n"
 "Last-Translator: Flori G <Renner03@protonmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -136,31 +136,6 @@ msgstr "Offen halten"
 #, kde-format
 msgid "Configure…"
 msgstr "Einrichten …"
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:10
-#, kde-format
-msgid "Screen lock enabled"
-msgstr "Bildschirmsperre aktiviert"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:11
-#, kde-format
-msgid "Sets whether the screen will be locked after the specified time."
-msgstr ""
-"Legt fest, ob der Bildschirm nach einer angegebenen Zeit gesperrt wird."
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:16
-#, kde-format
-msgid "Screen saver timeout"
-msgstr "Bildschirmschoner-Startzeit"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:17
-#, kde-format
-msgid "Sets the minutes after which the screen is locked."
-msgstr "Legt die Zeit fest, nach der der Bildschirm gesperrt wird."
 
 #: sessionsprivate/sessionsmodel.cpp:235 sessionsprivate/sessionsmodel.cpp:239
 #, kde-format
@@ -330,6 +305,19 @@ msgstr "Neue Miniprogramme herunterladen"
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "Miniprogramm aus lokaler Datei installieren …"
+
+#~ msgid "Screen lock enabled"
+#~ msgstr "Bildschirmsperre aktiviert"
+
+#~ msgid "Sets whether the screen will be locked after the specified time."
+#~ msgstr ""
+#~ "Legt fest, ob der Bildschirm nach einer angegebenen Zeit gesperrt wird."
+
+#~ msgid "Screen saver timeout"
+#~ msgstr "Bildschirmschoner-Startzeit"
+
+#~ msgid "Sets the minutes after which the screen is locked."
+#~ msgstr "Legt die Zeit fest, nach der der Bildschirm gesperrt wird."
 
 #~ msgid "&Execute"
 #~ msgstr "&Ausführen"

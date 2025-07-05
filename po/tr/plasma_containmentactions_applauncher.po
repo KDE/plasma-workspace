@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_containmentactions_applauncher\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2022-02-27 14:08+0100\n"
 "Last-Translator: Volkan Gezer <volkangezer@gmail.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -18,14 +18,11 @@ msgstr ""
 "X-Generator: Lokalize 20.12.3\n"
 "X-POOTLE-MTIME: 1502202428.000000\n"
 
-#. i18n: ectx: property (text), widget (QCheckBox, showAppsByName)
-#: config.ui:17
-#, kde-format
-msgid "Show applications by name"
-msgstr "Uygulamaları ada göre göster"
-
 #: launch.cpp:89
 #, kde-format
 msgctxt "plasma_containmentactions_applauncher"
 msgid "Configure Application Launcher Plugin"
 msgstr "Uygulama Başlatıcı Eklentisini Yapılandır"
+
+#~ msgid "Show applications by name"
+#~ msgstr "Uygulamaları ada göre göster"

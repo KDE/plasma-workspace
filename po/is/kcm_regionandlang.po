@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-10 02:27+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2024-05-12 21:35+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -567,14 +567,8 @@ msgctxt "Phone Numbers"
 msgid "Phone number"
 msgstr "Símanúmer"
 
-#: regionandlangsettingsbase.kcfg:18 regionandlangsettingsbase.kcfg:21
-#: regionandlangsettingsbase.kcfg:24 regionandlangsettingsbase.kcfg:27
-#: regionandlangsettingsbase.kcfg:30 regionandlangsettingsbase.kcfg:33
-#: regionandlangsettingsbase.kcfg:36 regionandlangsettingsbase.kcfg:39
-#: regionandlangsettingsbase.kcfg:42
-#, kde-format
-msgid "Inherit Language"
-msgstr "Erfa tungumál"
+#~ msgid "Inherit Language"
+#~ msgstr "Erfa tungumál"
 
 #~ msgctxt "@info:warning"
 #~ msgid ""

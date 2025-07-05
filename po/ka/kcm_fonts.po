@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-15 00:48+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2023-04-19 05:53+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -17,54 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.2.2\n"
-
-#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
-#: fontsaasettingsbase.kcfg:9
-#, kde-format
-msgid "Force font DPI Wayland"
-msgstr "Wayland-ზე ფონტის DPI-ის ძალით დაყენება"
-
-#. i18n: ectx: label, entry (forceFontDPI), group (General)
-#: fontsaasettingsbase.kcfg:13
-#, kde-format
-msgid "Force font DPI on X11"
-msgstr "X11-ზე ფონტის DPI-ის ძალით დაყენება"
-
-#. i18n: ectx: label, entry (font), group (General)
-#: fontssettings.kcfg:9
-#, kde-format
-msgid "General font"
-msgstr "ზოგადი ფონტი"
-
-#. i18n: ectx: label, entry (fixed), group (General)
-#: fontssettings.kcfg:21
-#, kde-format
-msgid "Fixed width font"
-msgstr "ფიქსირებული სიგანის ფონტი"
-
-#. i18n: ectx: label, entry (smallestReadableFont), group (General)
-#: fontssettings.kcfg:33
-#, kde-format
-msgid "Small font"
-msgstr "პატარა ფონტი"
-
-#. i18n: ectx: label, entry (toolBarFont), group (General)
-#: fontssettings.kcfg:45
-#, kde-format
-msgid "Tool bar font"
-msgstr "ხელსაწყოს ზოლის ფონტი"
-
-#. i18n: ectx: label, entry (menuFont), group (General)
-#: fontssettings.kcfg:57
-#, kde-format
-msgid "Menu font"
-msgstr "მენიუს ფონტი"
-
-#. i18n: ectx: label, entry (activeFont), group (WM)
-#: fontssettings.kcfg:71
-#, kde-format
-msgid "Window title font"
-msgstr "ფანჯრის სათაურის ფონტი"
 
 #: kxftconfig.cpp:458
 #, kde-format
@@ -356,6 +308,30 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "აირჩიეთ ფონტი"
+
+#~ msgid "Force font DPI Wayland"
+#~ msgstr "Wayland-ზე ფონტის DPI-ის ძალით დაყენება"
+
+#~ msgid "Force font DPI on X11"
+#~ msgstr "X11-ზე ფონტის DPI-ის ძალით დაყენება"
+
+#~ msgid "General font"
+#~ msgstr "ზოგადი ფონტი"
+
+#~ msgid "Fixed width font"
+#~ msgstr "ფიქსირებული სიგანის ფონტი"
+
+#~ msgid "Small font"
+#~ msgstr "პატარა ფონტი"
+
+#~ msgid "Tool bar font"
+#~ msgstr "ხელსაწყოს ზოლის ფონტი"
+
+#~ msgid "Menu font"
+#~ msgstr "მენიუს ფონტი"
+
+#~ msgid "Window title font"
+#~ msgstr "ფანჯრის სათაურის ფონტი"
 
 #~ msgid "Change Display Scaling…"
 #~ msgstr "ეკრანის გადიდების შეცვლა…"

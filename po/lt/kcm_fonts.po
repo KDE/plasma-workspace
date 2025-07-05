@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-15 00:48+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2022-12-12 21:03+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -19,54 +19,6 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
 "X-Generator: Poedit 3.2.2\n"
-
-#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
-#: fontsaasettingsbase.kcfg:9
-#, kde-format
-msgid "Force font DPI Wayland"
-msgstr "Priverstinis šriftų DPI Wayland"
-
-#. i18n: ectx: label, entry (forceFontDPI), group (General)
-#: fontsaasettingsbase.kcfg:13
-#, kde-format
-msgid "Force font DPI on X11"
-msgstr "Priverstinis šriftų DPI besinaudojant X11"
-
-#. i18n: ectx: label, entry (font), group (General)
-#: fontssettings.kcfg:9
-#, kde-format
-msgid "General font"
-msgstr "Bendras šriftas"
-
-#. i18n: ectx: label, entry (fixed), group (General)
-#: fontssettings.kcfg:21
-#, kde-format
-msgid "Fixed width font"
-msgstr "Lygiaplotis šriftas"
-
-#. i18n: ectx: label, entry (smallestReadableFont), group (General)
-#: fontssettings.kcfg:33
-#, kde-format
-msgid "Small font"
-msgstr "Mažas šriftas"
-
-#. i18n: ectx: label, entry (toolBarFont), group (General)
-#: fontssettings.kcfg:45
-#, kde-format
-msgid "Tool bar font"
-msgstr "Įrankių juostos šriftas"
-
-#. i18n: ectx: label, entry (menuFont), group (General)
-#: fontssettings.kcfg:57
-#, kde-format
-msgid "Menu font"
-msgstr "Meniu šriftas"
-
-#. i18n: ectx: label, entry (activeFont), group (WM)
-#: fontssettings.kcfg:71
-#, kde-format
-msgid "Window title font"
-msgstr "Lango antraštės šriftas"
 
 #: kxftconfig.cpp:458
 #, kde-format
@@ -336,6 +288,30 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "Pasirinkti šriftą"
+
+#~ msgid "Force font DPI Wayland"
+#~ msgstr "Priverstinis šriftų DPI Wayland"
+
+#~ msgid "Force font DPI on X11"
+#~ msgstr "Priverstinis šriftų DPI besinaudojant X11"
+
+#~ msgid "General font"
+#~ msgstr "Bendras šriftas"
+
+#~ msgid "Fixed width font"
+#~ msgstr "Lygiaplotis šriftas"
+
+#~ msgid "Small font"
+#~ msgstr "Mažas šriftas"
+
+#~ msgid "Tool bar font"
+#~ msgstr "Įrankių juostos šriftas"
+
+#~ msgid "Menu font"
+#~ msgstr "Meniu šriftas"
+
+#~ msgid "Window title font"
+#~ msgstr "Lango antraštės šriftas"
 
 #~ msgid "Change Display Scaling…"
 #~ msgstr "Keisti atvaizdavimo mastelį…"

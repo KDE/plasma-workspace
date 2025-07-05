@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-15 00:48+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2025-05-25 10:30+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -27,55 +27,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 23.08.5\n"
-
-#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
-#: fontsaasettingsbase.kcfg:9
-#, kde-format
-msgid "Force font DPI Wayland"
-msgstr "Pakota fontin DPI (Wayland)"
-
-# Jätetty toistaiseksi kääntämättä, kunnes löytyy, mitä ”display font/typeface” on suomeksi!
-#. i18n: ectx: label, entry (forceFontDPI), group (General)
-#: fontsaasettingsbase.kcfg:13
-#, kde-format
-msgid "Force font DPI on X11"
-msgstr "Pakota fontin DPI X11:ssä"
-
-#. i18n: ectx: label, entry (font), group (General)
-#: fontssettings.kcfg:9
-#, kde-format
-msgid "General font"
-msgstr "Yleisfontti"
-
-#. i18n: ectx: label, entry (fixed), group (General)
-#: fontssettings.kcfg:21
-#, kde-format
-msgid "Fixed width font"
-msgstr "Tasavälinen fontti"
-
-#. i18n: ectx: label, entry (smallestReadableFont), group (General)
-#: fontssettings.kcfg:33
-#, kde-format
-msgid "Small font"
-msgstr "Pieni fontti"
-
-#. i18n: ectx: label, entry (toolBarFont), group (General)
-#: fontssettings.kcfg:45
-#, kde-format
-msgid "Tool bar font"
-msgstr "Työkalurivin fontti"
-
-#. i18n: ectx: label, entry (menuFont), group (General)
-#: fontssettings.kcfg:57
-#, kde-format
-msgid "Menu font"
-msgstr "Valikkofontti"
-
-#. i18n: ectx: label, entry (activeFont), group (WM)
-#: fontssettings.kcfg:71
-#, kde-format
-msgid "Window title font"
-msgstr "Ikkunan otsikon fontti"
 
 #: kxftconfig.cpp:458
 #, kde-format
@@ -361,6 +312,31 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "Valitse fontti"
+
+#~ msgid "Force font DPI Wayland"
+#~ msgstr "Pakota fontin DPI (Wayland)"
+
+# Jätetty toistaiseksi kääntämättä, kunnes löytyy, mitä ”display font/typeface” on suomeksi!
+#~ msgid "Force font DPI on X11"
+#~ msgstr "Pakota fontin DPI X11:ssä"
+
+#~ msgid "General font"
+#~ msgstr "Yleisfontti"
+
+#~ msgid "Fixed width font"
+#~ msgstr "Tasavälinen fontti"
+
+#~ msgid "Small font"
+#~ msgstr "Pieni fontti"
+
+#~ msgid "Tool bar font"
+#~ msgstr "Työkalurivin fontti"
+
+#~ msgid "Menu font"
+#~ msgstr "Valikkofontti"
+
+#~ msgid "Window title font"
+#~ msgstr "Ikkunan otsikon fontti"
 
 #~ msgid "Change Display Scaling…"
 #~ msgstr "Muuta näytön skaalausta…"

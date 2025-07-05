@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-10 00:58+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2023-04-10 19:59+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -16,18 +16,6 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
 "X-Generator: Lokalize 21.12.3\n"
-
-#. i18n: ectx: label, entry (cursorTheme), group (Mouse)
-#: cursorthemesettings.kcfg:9
-#, kde-format
-msgid "Name of the current cursor theme"
-msgstr "Denumirea tematicii de cursori actuale"
-
-#. i18n: ectx: label, entry (cursorSize), group (Mouse)
-#: cursorthemesettings.kcfg:13
-#, kde-format
-msgid "Current cursor size"
-msgstr "Dimensiune actuală cursor"
 
 #: kcmcursortheme.cpp:308
 #, kde-format
@@ -75,13 +63,6 @@ msgstr "Suprascrieți tema?"
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Tematica a fost instalată cu succes."
-
-#. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
-#. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)
-#: launchfeedbacksettings.kcfg:19 launchfeedbacksettings.kcfg:33
-#, kde-format
-msgid "Timeout in seconds"
-msgstr "Expirare în secunde"
 
 #: package/contents/ui/Delegate.qml:54
 #, kde-format
@@ -288,6 +269,15 @@ msgctxt ""
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(Dimensiuni disponibile: %1)"
+
+#~ msgid "Name of the current cursor theme"
+#~ msgstr "Denumirea tematicii de cursori actuale"
+
+#~ msgid "Current cursor size"
+#~ msgstr "Dimensiune actuală cursor"
+
+#~ msgid "Timeout in seconds"
+#~ msgstr "Expirare în secunde"
 
 #~ msgid "Name"
 #~ msgstr "Denumire"

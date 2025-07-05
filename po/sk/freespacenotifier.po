@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: freespacenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-17 00:48+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2021-09-15 18:46+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -34,36 +34,6 @@ msgstr "Otvoriť vo Filelight"
 msgid "Open in File Manager"
 msgstr "Otvoriť v správcovi súborov..."
 
-#. i18n: ectx: label, entry (minimumSpace), group (General)
-#: freespacenotifier.kcfg:9
-#, kde-format
-msgid "Minimum free space before user starts being notified."
-msgstr "Minimálna veľkosť voľného miesta, kedy bude užívateľ upozornený."
-
-#. i18n: ectx: label, entry (enableNotification), group (General)
-#: freespacenotifier.kcfg:15
-#, kde-format
-msgid "Is the free space notification enabled."
-msgstr "Či je upozornenie na voľné miesto zapnuté."
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableNotification)
-#: freespacenotifier_prefs_base.ui:17
-#, kde-format
-msgid "Enable low disk space warning"
-msgstr "Povoliť upozornenie pri nedostatku miesta na disku"
-
-#. i18n: ectx: property (text), widget (QLabel, label_minimumSpace)
-#: freespacenotifier_prefs_base.ui:27
-#, kde-format
-msgid "Warn when free space is below:"
-msgstr "Upozorniť, ak voľné miesto klesne pod:"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpace)
-#: freespacenotifier_prefs_base.ui:37
-#, kde-format
-msgid " MiB"
-msgstr " MiB"
-
 #: module.cpp:37
 #, kde-format
 msgid ""
@@ -85,6 +55,21 @@ msgstr ""
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"
 msgstr "Všeobecné"
+
+#~ msgid "Minimum free space before user starts being notified."
+#~ msgstr "Minimálna veľkosť voľného miesta, kedy bude užívateľ upozornený."
+
+#~ msgid "Is the free space notification enabled."
+#~ msgstr "Či je upozornenie na voľné miesto zapnuté."
+
+#~ msgid "Enable low disk space warning"
+#~ msgstr "Povoliť upozornenie pri nedostatku miesta na disku"
+
+#~ msgid "Warn when free space is below:"
+#~ msgstr "Upozorniť, ak voľné miesto klesne pod:"
+
+#~ msgid " MiB"
+#~ msgstr " MiB"
 
 #~ msgid "Low Disk Space"
 #~ msgstr "Nedostatok miesta na disku"

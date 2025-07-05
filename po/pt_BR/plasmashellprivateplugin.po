@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-31 02:25+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2023-06-02 10:58-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -136,30 +136,6 @@ msgstr "Manter aberto"
 #, kde-format
 msgid "Configure…"
 msgstr "Configurar..."
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:10
-#, kde-format
-msgid "Screen lock enabled"
-msgstr "Bloqueio de tela ativo"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:11
-#, kde-format
-msgid "Sets whether the screen will be locked after the specified time."
-msgstr "Define se a tela será bloqueada após o tempo indicado."
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:16
-#, kde-format
-msgid "Screen saver timeout"
-msgstr "Tempo de espera do protetor de tela"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:17
-#, kde-format
-msgid "Sets the minutes after which the screen is locked."
-msgstr "Define a quantidade de minutos para bloquear a tela."
 
 #: sessionsprivate/sessionsmodel.cpp:235 sessionsprivate/sessionsmodel.cpp:239
 #, kde-format
@@ -329,6 +305,18 @@ msgstr "Baixar novos widgets do Plasma"
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "Instalar widget de arquivo local..."
+
+#~ msgid "Screen lock enabled"
+#~ msgstr "Bloqueio de tela ativo"
+
+#~ msgid "Sets whether the screen will be locked after the specified time."
+#~ msgstr "Define se a tela será bloqueada após o tempo indicado."
+
+#~ msgid "Screen saver timeout"
+#~ msgstr "Tempo de espera do protetor de tela"
+
+#~ msgid "Sets the minutes after which the screen is locked."
+#~ msgstr "Define a quantidade de minutos para bloquear a tela."
 
 #~ msgid "&Execute"
 #~ msgstr "&Executar"

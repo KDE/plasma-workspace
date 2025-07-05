@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: freespacenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-17 00:48+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2021-07-02 19:18+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -33,36 +33,6 @@ msgstr "फाइललाइट में खोलें"
 msgid "Open in File Manager"
 msgstr "फ़ाइल प्रबंधक में खोलें"
 
-#. i18n: ectx: label, entry (minimumSpace), group (General)
-#: freespacenotifier.kcfg:9
-#, kde-format
-msgid "Minimum free space before user starts being notified."
-msgstr "न्यूतम खाली स्धान जिसके उपर उपयोक्ता को चेताना है"
-
-#. i18n: ectx: label, entry (enableNotification), group (General)
-#: freespacenotifier.kcfg:15
-#, kde-format
-msgid "Is the free space notification enabled."
-msgstr "क्या खाली स्थान सूचना सक्षम है"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableNotification)
-#: freespacenotifier_prefs_base.ui:17
-#, kde-format
-msgid "Enable low disk space warning"
-msgstr "सक्षम करें निम्न डिस्क स्थान चेतावनी"
-
-#. i18n: ectx: property (text), widget (QLabel, label_minimumSpace)
-#: freespacenotifier_prefs_base.ui:27
-#, kde-format
-msgid "Warn when free space is below:"
-msgstr "चेतावनी दें जब स्थान नीचे है:"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpace)
-#: freespacenotifier_prefs_base.ui:37
-#, kde-format
-msgid " MiB"
-msgstr "मेबा"
-
 #: module.cpp:37
 #, kde-format
 msgid ""
@@ -82,6 +52,21 @@ msgstr "आपके रूट विभाजन का डिस्क स्�
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"
 msgstr "साधारण"
+
+#~ msgid "Minimum free space before user starts being notified."
+#~ msgstr "न्यूतम खाली स्धान जिसके उपर उपयोक्ता को चेताना है"
+
+#~ msgid "Is the free space notification enabled."
+#~ msgstr "क्या खाली स्थान सूचना सक्षम है"
+
+#~ msgid "Enable low disk space warning"
+#~ msgstr "सक्षम करें निम्न डिस्क स्थान चेतावनी"
+
+#~ msgid "Warn when free space is below:"
+#~ msgstr "चेतावनी दें जब स्थान नीचे है:"
+
+#~ msgid " MiB"
+#~ msgstr "मेबा"
 
 #~ msgctxt "Closes the notification"
 #~ msgid "Do Nothing"

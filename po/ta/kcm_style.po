@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-24 03:15+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2021-10-09 21:36+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -142,78 +142,38 @@ msgstr "GNOME/GTK செயலி தோற்றத்தை அமை…"
 msgid "Configure %1"
 msgstr "%1 அமைத்தல்"
 
-#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
-#: stylepreview.ui:33
-#, kde-format
-msgid "Tab 1"
-msgstr "கீற்று 1"
+#~ msgid "Tab 1"
+#~ msgstr "கீற்று 1"
 
-#. i18n: ectx: property (text), widget (QPushButton, pushButton)
-#: stylepreview.ui:65
-#, kde-format
-msgid "Push Button"
-msgstr "அழுத்தக்கூடிய பட்டன்"
+#~ msgid "Push Button"
+#~ msgstr "அழுத்தக்கூடிய பட்டன்"
 
-#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
-#: stylepreview.ui:86
-#, kde-format
-msgid "Combo box"
-msgstr "கீழிறங்கு பெட்டி"
+#~ msgid "Combo box"
+#~ msgstr "கீழிறங்கு பெட்டி"
 
-#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
-#: stylepreview.ui:96
-#, kde-format
-msgid "Checkbox"
-msgstr "தேர்வுப்பெட்டி"
+#~ msgid "Checkbox"
+#~ msgstr "தேர்வுப்பெட்டி"
 
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
-#. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
-#: stylepreview.ui:106 stylepreview.ui:116
-#, kde-format
-msgid "Radio button"
-msgstr "ஒற்றைத்தேர்வு பட்டன்"
+#~ msgid "Radio button"
+#~ msgstr "ஒற்றைத்தேர்வு பட்டன்"
 
-#. i18n: ectx: property (format), widget (QProgressBar, progressBar)
-#: stylepreview.ui:128
-#, no-c-format, kde-format
-msgid "%p%"
-msgstr ""
+#~ msgid "Tab 2"
+#~ msgstr "கீற்று 2"
 
-#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
-#: stylepreview.ui:136
-#, kde-format
-msgid "Tab 2"
-msgstr "கீற்று 2"
+#~ msgid "Application style"
+#~ msgstr "செயலி தோற்றம்"
 
-#. i18n: ectx: label, entry (widgetStyle), group (KDE)
-#: stylesettings.kcfg:9
-#, kde-format
-msgid "Application style"
-msgstr "செயலி தோற்றம்"
+#~ msgid "Show icons on buttons"
+#~ msgstr "பட்டன்களில் சின்னங்களை காட்டு"
 
-#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
-#: stylesettings.kcfg:13
-#, kde-format
-msgid "Show icons on buttons"
-msgstr "பட்டன்களில் சின்னங்களை காட்டு"
+#~ msgid "Show icons in menus"
+#~ msgstr "பட்டிகளில் சின்னங்களை காட்டு"
 
-#. i18n: ectx: label, entry (iconsInMenus), group (KDE)
-#: stylesettings.kcfg:17
-#, kde-format
-msgid "Show icons in menus"
-msgstr "பட்டிகளில் சின்னங்களை காட்டு"
+#~ msgid "Main toolbar label"
+#~ msgstr "பிரதான கருவிப்பட்டையில் பெயர்கள்"
 
-#. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
-#: stylesettings.kcfg:23
-#, kde-format
-msgid "Main toolbar label"
-msgstr "பிரதான கருவிப்பட்டையில் பெயர்கள்"
-
-#. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
-#: stylesettings.kcfg:27
-#, kde-format
-msgid "Secondary toolbar label"
-msgstr "மற்ற கருவிப்பட்டைகளில் பெயர்கள்"
+#~ msgid "Secondary toolbar label"
+#~ msgstr "மற்ற கருவிப்பட்டைகளில் பெயர்கள்"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

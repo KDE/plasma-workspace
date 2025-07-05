@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2014-08-21 16:12+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -90,13 +90,6 @@ msgstr ""
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
 msgstr ""
-
-#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
-#: lookandfeelsettings.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Configure Splash screen details"
-msgid "Global look and feel"
-msgstr "Startschirmenkelheiten instellen"
 
 #: package/contents/ui/main.qml:21
 #, kde-format
@@ -258,6 +251,11 @@ msgid ""
 "This Global Theme does not provide any applicable settings. Please contact "
 "the maintainer of this Global Theme as it might be broken."
 msgstr ""
+
+#, fuzzy
+#~| msgid "Configure Splash screen details"
+#~ msgid "Global look and feel"
+#~ msgstr "Startschirmenkelheiten instellen"
 
 #, fuzzy
 #~| msgid "Configure Splash screen details"

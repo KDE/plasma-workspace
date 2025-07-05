@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-10 00:58+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2023-07-22 13:30+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -34,18 +34,6 @@ msgstr ""
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-
-#. i18n: ectx: label, entry (cursorTheme), group (Mouse)
-#: cursorthemesettings.kcfg:9
-#, kde-format
-msgid "Name of the current cursor theme"
-msgstr "Название текущего набора курсоров"
-
-#. i18n: ectx: label, entry (cursorSize), group (Mouse)
-#: cursorthemesettings.kcfg:13
-#, kde-format
-msgid "Current cursor size"
-msgstr "Текущий размер курсора"
 
 #: kcmcursortheme.cpp:308
 #, kde-format
@@ -97,13 +85,6 @@ msgstr "Заменить набор?"
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Набор курсоров мыши успешно установлен."
-
-#. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
-#. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)
-#: launchfeedbacksettings.kcfg:19 launchfeedbacksettings.kcfg:33
-#, kde-format
-msgid "Timeout in seconds"
-msgstr "Задержка в секундах"
 
 #: package/contents/ui/Delegate.qml:54
 #, kde-format
@@ -305,6 +286,15 @@ msgctxt ""
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(доступные размеры: %1)"
+
+#~ msgid "Name of the current cursor theme"
+#~ msgstr "Название текущего набора курсоров"
+
+#~ msgid "Current cursor size"
+#~ msgstr "Текущий размер курсора"
+
+#~ msgid "Timeout in seconds"
+#~ msgstr "Задержка в секундах"
 
 #~ msgid "Name"
 #~ msgstr "Имя"

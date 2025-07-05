@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_fonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-15 00:48+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2022-12-20 11:30-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -26,54 +26,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 21.12.3\n"
-
-#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
-#: fontsaasettingsbase.kcfg:9
-#, kde-format
-msgid "Force font DPI Wayland"
-msgstr "Forçar DPI das fontes no Wayland"
-
-#. i18n: ectx: label, entry (forceFontDPI), group (General)
-#: fontsaasettingsbase.kcfg:13
-#, kde-format
-msgid "Force font DPI on X11"
-msgstr "Forçar DPI das fontes no X11"
-
-#. i18n: ectx: label, entry (font), group (General)
-#: fontssettings.kcfg:9
-#, kde-format
-msgid "General font"
-msgstr "Fonte geral"
-
-#. i18n: ectx: label, entry (fixed), group (General)
-#: fontssettings.kcfg:21
-#, kde-format
-msgid "Fixed width font"
-msgstr "Fonte de largura fixa"
-
-#. i18n: ectx: label, entry (smallestReadableFont), group (General)
-#: fontssettings.kcfg:33
-#, kde-format
-msgid "Small font"
-msgstr "Fonte pequena"
-
-#. i18n: ectx: label, entry (toolBarFont), group (General)
-#: fontssettings.kcfg:45
-#, kde-format
-msgid "Tool bar font"
-msgstr "Fonte da barra de ferramentas"
-
-#. i18n: ectx: label, entry (menuFont), group (General)
-#: fontssettings.kcfg:57
-#, kde-format
-msgid "Menu font"
-msgstr "Fonte do menu"
-
-#. i18n: ectx: label, entry (activeFont), group (WM)
-#: fontssettings.kcfg:71
-#, kde-format
-msgid "Window title font"
-msgstr "Fonte do título da janela"
 
 #: kxftconfig.cpp:458
 #, kde-format
@@ -366,6 +318,30 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "Selecionar fonte"
+
+#~ msgid "Force font DPI Wayland"
+#~ msgstr "Forçar DPI das fontes no Wayland"
+
+#~ msgid "Force font DPI on X11"
+#~ msgstr "Forçar DPI das fontes no X11"
+
+#~ msgid "General font"
+#~ msgstr "Fonte geral"
+
+#~ msgid "Fixed width font"
+#~ msgstr "Fonte de largura fixa"
+
+#~ msgid "Small font"
+#~ msgstr "Fonte pequena"
+
+#~ msgid "Tool bar font"
+#~ msgstr "Fonte da barra de ferramentas"
+
+#~ msgid "Menu font"
+#~ msgstr "Fonte do menu"
+
+#~ msgid "Window title font"
+#~ msgstr "Fonte do título da janela"
 
 #~ msgid "Change Display Scaling…"
 #~ msgstr "Alterar escala de exibição..."

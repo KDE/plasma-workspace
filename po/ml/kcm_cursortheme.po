@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-10 00:58+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2021-08-19 13:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc-"
@@ -19,18 +19,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Weblate 4.7.2\n"
-
-#. i18n: ectx: label, entry (cursorTheme), group (Mouse)
-#: cursorthemesettings.kcfg:9
-#, kde-format
-msgid "Name of the current cursor theme"
-msgstr "ഇപ്പോഴത്തെ ചൂണ്ടുവിരലിന്റെ പ്രമേയനാമം"
-
-#. i18n: ectx: label, entry (cursorSize), group (Mouse)
-#: cursorthemesettings.kcfg:13
-#, kde-format
-msgid "Current cursor size"
-msgstr "ഇപ്പോഴത്തെ ചൂണ്ടുവിരൽ വലിപ്പം"
 
 #: kcmcursortheme.cpp:308
 #, kde-format
@@ -76,13 +64,6 @@ msgstr "പ്രമേയം മാറ്റിയെഴുതട്ടെ?"
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "പ്രമേയം വിജയകരമായി ഇൻസ്റ്റാൾ ചെയ്തു."
-
-#. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
-#. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)
-#: launchfeedbacksettings.kcfg:19 launchfeedbacksettings.kcfg:33
-#, kde-format
-msgid "Timeout in seconds"
-msgstr ""
 
 #: package/contents/ui/Delegate.qml:54
 #, kde-format
@@ -283,6 +264,12 @@ msgctxt ""
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(ലഭ്യമായ വലുപ്പങ്ങൾ: %1)"
+
+#~ msgid "Name of the current cursor theme"
+#~ msgstr "ഇപ്പോഴത്തെ ചൂണ്ടുവിരലിന്റെ പ്രമേയനാമം"
+
+#~ msgid "Current cursor size"
+#~ msgstr "ഇപ്പോഴത്തെ ചൂണ്ടുവിരൽ വലിപ്പം"
 
 #~ msgid "Name"
 #~ msgstr "പേര്"

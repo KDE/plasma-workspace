@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-22 00:47+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2022-10-22 09:35+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -44,48 +44,6 @@ msgstr "Icones xicotetes"
 #, kde-format
 msgid "Dialogs"
 msgstr "Diàlegs"
-
-#. i18n: ectx: label, entry (Theme), group (Icons)
-#: iconssettingsbase.kcfg:9
-#, kde-format
-msgid "Name of the current icon theme"
-msgstr "Nom del tema actual d'icones"
-
-#. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
-#: iconssettingsbase.kcfg:15
-#, kde-format
-msgid "Desktop icons size"
-msgstr "Mida de les icones d'escriptori"
-
-#. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
-#: iconssettingsbase.kcfg:21
-#, kde-format
-msgid "Toolbar icons size"
-msgstr "Mida de les icones de les barres d'eines"
-
-#. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
-#: iconssettingsbase.kcfg:27
-#, kde-format
-msgid "Main toolbar icons size"
-msgstr "Mida de les icones de la barra d'eines principal"
-
-#. i18n: ectx: label, entry (smallSize), group (SmallIcons)
-#: iconssettingsbase.kcfg:33
-#, kde-format
-msgid "Small icons size"
-msgstr "Mida xicoteta de les icones"
-
-#. i18n: ectx: label, entry (panelSize), group (PanelIcons)
-#: iconssettingsbase.kcfg:39
-#, kde-format
-msgid "Panel icons size"
-msgstr "Mida de les icones dels quadros"
-
-#. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
-#: iconssettingsbase.kcfg:45
-#, kde-format
-msgid "Dialog icons size"
-msgstr "Mida de les icones dels diàlegs"
 
 #: main.cpp:182
 #, kde-format
@@ -197,3 +155,24 @@ msgstr "Obri un tema"
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Fitxers de tema (*.tar.gz *.tar.bz2)"
+
+#~ msgid "Name of the current icon theme"
+#~ msgstr "Nom del tema actual d'icones"
+
+#~ msgid "Desktop icons size"
+#~ msgstr "Mida de les icones d'escriptori"
+
+#~ msgid "Toolbar icons size"
+#~ msgstr "Mida de les icones de les barres d'eines"
+
+#~ msgid "Main toolbar icons size"
+#~ msgstr "Mida de les icones de la barra d'eines principal"
+
+#~ msgid "Small icons size"
+#~ msgstr "Mida xicoteta de les icones"
+
+#~ msgid "Panel icons size"
+#~ msgstr "Mida de les icones dels quadros"
+
+#~ msgid "Dialog icons size"
+#~ msgstr "Mida de les icones dels diàlegs"

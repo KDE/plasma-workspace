@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-29 02:56+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2021-10-13 08:44+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -1669,12 +1669,6 @@ msgstr "Переглянути текст"
 msgid "Please enter new string:"
 msgstr "Будь ласка, введіть новий текст:"
 
-#. i18n: ectx: ToolBar (mainToolBar)
-#: viewpart/kfontviewpart.rc:4
-#, kde-format
-msgid "&Main Toolbar"
-msgstr "&Головний пенал"
-
 #: viewpart/PreviewSelectAction.cpp:13
 #, kde-format
 msgid "Preview Type"
@@ -2367,6 +2361,9 @@ msgstr "Фагс-Па"
 #: viewpart/UnicodeScripts.h:80
 msgid "Yi"
 msgstr "Ї"
+
+#~ msgid "&Main Toolbar"
+#~ msgstr "&Головний пенал"
 
 #~ msgid "Filter by %1..."
 #~ msgstr "Критерій фільтрування: %1…"

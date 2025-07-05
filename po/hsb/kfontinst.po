@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-29 02:56+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2008-11-16 18:23+0100\n"
 "Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
 "Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
@@ -1692,12 +1692,6 @@ msgstr "Znamjo za předhladku"
 msgid "Please enter new string:"
 msgstr "Prošu zapodajće nowe znamjo:"
 
-#. i18n: ectx: ToolBar (mainToolBar)
-#: viewpart/kfontviewpart.rc:4
-#, kde-format
-msgid "&Main Toolbar"
-msgstr "&Hłowny pas"
-
 #: viewpart/PreviewSelectAction.cpp:13
 #, fuzzy, kde-format
 msgid "Preview Type"
@@ -2390,6 +2384,9 @@ msgstr ""
 #: viewpart/UnicodeScripts.h:80
 msgid "Yi"
 msgstr ""
+
+#~ msgid "&Main Toolbar"
+#~ msgstr "&Hłowny pas"
 
 #~ msgid "Print..."
 #~ msgstr "Ćišćeć"

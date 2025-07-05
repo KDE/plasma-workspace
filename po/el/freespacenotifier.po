@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-17 00:48+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2014-10-08 13:14+0300\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -38,36 +38,6 @@ msgstr ""
 #| msgid "Open File Manager..."
 msgid "Open in File Manager"
 msgstr "Άνοιγμα διαχειριστή αρχείων..."
-
-#. i18n: ectx: label, entry (minimumSpace), group (General)
-#: freespacenotifier.kcfg:9
-#, kde-format
-msgid "Minimum free space before user starts being notified."
-msgstr "Ελάχιστος ελεύθερος χώρος πριν την ειδοποίηση του χρήστη."
-
-#. i18n: ectx: label, entry (enableNotification), group (General)
-#: freespacenotifier.kcfg:15
-#, kde-format
-msgid "Is the free space notification enabled."
-msgstr "Η ειδοποίηση ελεύθερου χώρου είναι ενεργοποιημένη."
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableNotification)
-#: freespacenotifier_prefs_base.ui:17
-#, kde-format
-msgid "Enable low disk space warning"
-msgstr "Ενεργοποίηση προειδοποίησης χαμηλής χωρητικότητας δίσκου"
-
-#. i18n: ectx: property (text), widget (QLabel, label_minimumSpace)
-#: freespacenotifier_prefs_base.ui:27
-#, kde-format
-msgid "Warn when free space is below:"
-msgstr "Προειδοποίηση όταν ο ελεύθερος χώρος είναι κάτω από:"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpace)
-#: freespacenotifier_prefs_base.ui:37
-#, kde-format
-msgid " MiB"
-msgstr " MiB"
 
 #: module.cpp:37
 #, fuzzy, kde-format
@@ -102,6 +72,21 @@ msgstr ""
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"
 msgstr "Γενικά"
+
+#~ msgid "Minimum free space before user starts being notified."
+#~ msgstr "Ελάχιστος ελεύθερος χώρος πριν την ειδοποίηση του χρήστη."
+
+#~ msgid "Is the free space notification enabled."
+#~ msgstr "Η ειδοποίηση ελεύθερου χώρου είναι ενεργοποιημένη."
+
+#~ msgid "Enable low disk space warning"
+#~ msgstr "Ενεργοποίηση προειδοποίησης χαμηλής χωρητικότητας δίσκου"
+
+#~ msgid "Warn when free space is below:"
+#~ msgstr "Προειδοποίηση όταν ο ελεύθερος χώρος είναι κάτω από:"
+
+#~ msgid " MiB"
+#~ msgstr " MiB"
 
 #~ msgid "Low Disk Space"
 #~ msgstr "Ανεπαρκής χώρος στο δίσκο"

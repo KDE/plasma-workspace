@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-17 00:48+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2021-07-01 22:50+0200\n"
 "Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -32,36 +32,6 @@ msgstr "Megnyitás Filelightban"
 msgid "Open in File Manager"
 msgstr "Megnyitás fájlkezelőben"
 
-#. i18n: ectx: label, entry (minimumSpace), group (General)
-#: freespacenotifier.kcfg:9
-#, kde-format
-msgid "Minimum free space before user starts being notified."
-msgstr "Minimum szabad hely a felhasználói értesítések megkezdése előtt."
-
-#. i18n: ectx: label, entry (enableNotification), group (General)
-#: freespacenotifier.kcfg:15
-#, kde-format
-msgid "Is the free space notification enabled."
-msgstr "Be van-e kapcsolva a szabadhely-értesítés."
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableNotification)
-#: freespacenotifier_prefs_base.ui:17
-#, kde-format
-msgid "Enable low disk space warning"
-msgstr "Kevés lemezterületről szóló értesítés bekapcsolása"
-
-#. i18n: ectx: property (text), widget (QLabel, label_minimumSpace)
-#: freespacenotifier_prefs_base.ui:27
-#, kde-format
-msgid "Warn when free space is below:"
-msgstr "Figyelmeztessen, ha a szabad lemez terület kevesebb mint:"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpace)
-#: freespacenotifier_prefs_base.ui:37
-#, kde-format
-msgid " MiB"
-msgstr " MiB"
-
 #: module.cpp:37
 #, kde-format
 msgid ""
@@ -81,6 +51,21 @@ msgstr "A root partíción fogy a hely, %1 MiB van hátra (%2%)."
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"
 msgstr "Általános"
+
+#~ msgid "Minimum free space before user starts being notified."
+#~ msgstr "Minimum szabad hely a felhasználói értesítések megkezdése előtt."
+
+#~ msgid "Is the free space notification enabled."
+#~ msgstr "Be van-e kapcsolva a szabadhely-értesítés."
+
+#~ msgid "Enable low disk space warning"
+#~ msgstr "Kevés lemezterületről szóló értesítés bekapcsolása"
+
+#~ msgid "Warn when free space is below:"
+#~ msgstr "Figyelmeztessen, ha a szabad lemez terület kevesebb mint:"
+
+#~ msgid " MiB"
+#~ msgstr " MiB"
 
 #~ msgid "Low Disk Space"
 #~ msgstr "Kevés a lemezterület"

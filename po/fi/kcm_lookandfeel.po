@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2022-08-19 12:35+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -95,12 +95,6 @@ msgstr "paketinnimi"
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
 msgstr "Palauta Plasma-työpöydän alkuperäinen asettelu"
-
-#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
-#: lookandfeelsettings.kcfg:9
-#, kde-format
-msgid "Global look and feel"
-msgstr "Yleisulkoasu ja -tuntuma"
 
 #: package/contents/ui/main.qml:21
 #, kde-format
@@ -265,6 +259,9 @@ msgid ""
 msgstr ""
 "Tämä yleisteema ei tarjoa käyttöön otettavia asetuksia. Ota yhteyttä sen "
 "ylläpitäjään, koska se on todennäköisesti rikki."
+
+#~ msgid "Global look and feel"
+#~ msgstr "Yleisulkoasu ja -tuntuma"
 
 #~ msgid ""
 #~ "Your current layout and configuration of panels, desktop widgets, and "

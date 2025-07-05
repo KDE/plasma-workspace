@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-17 00:48+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2022-12-13 09:31\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -36,38 +36,6 @@ msgstr "Адкрыць у Filelight"
 msgid "Open in File Manager"
 msgstr "Адкрыць у кіраўніку файлаў"
 
-#. i18n: ectx: label, entry (minimumSpace), group (General)
-#: freespacenotifier.kcfg:9
-#, kde-format
-msgid "Minimum free space before user starts being notified."
-msgstr ""
-"Мінімальны памер вольнага месца перад тым, як карыстальнік пачне атрымліваць "
-"папярэджанні."
-
-#. i18n: ectx: label, entry (enableNotification), group (General)
-#: freespacenotifier.kcfg:15
-#, kde-format
-msgid "Is the free space notification enabled."
-msgstr "Ці ўключана апавяшчэнне пра вольнае месца."
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableNotification)
-#: freespacenotifier_prefs_base.ui:17
-#, kde-format
-msgid "Enable low disk space warning"
-msgstr "Уключыць папярэджанне пра малы памер вольнага месца"
-
-#. i18n: ectx: property (text), widget (QLabel, label_minimumSpace)
-#: freespacenotifier_prefs_base.ui:27
-#, kde-format
-msgid "Warn when free space is below:"
-msgstr "Папярэджваць, калі вольнага месца менш за:"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpace)
-#: freespacenotifier_prefs_base.ui:37
-#, kde-format
-msgid " MiB"
-msgstr " Міб"
-
 #: module.cpp:37
 #, kde-format
 msgid ""
@@ -89,3 +57,20 @@ msgstr ""
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"
 msgstr "Асноўныя"
+
+#~ msgid "Minimum free space before user starts being notified."
+#~ msgstr ""
+#~ "Мінімальны памер вольнага месца перад тым, як карыстальнік пачне "
+#~ "атрымліваць папярэджанні."
+
+#~ msgid "Is the free space notification enabled."
+#~ msgstr "Ці ўключана апавяшчэнне пра вольнае месца."
+
+#~ msgid "Enable low disk space warning"
+#~ msgstr "Уключыць папярэджанне пра малы памер вольнага месца"
+
+#~ msgid "Warn when free space is below:"
+#~ msgstr "Папярэджваць, калі вольнага месца менш за:"
+
+#~ msgid " MiB"
+#~ msgstr " Міб"

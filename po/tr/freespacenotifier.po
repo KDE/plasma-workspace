@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kded_susefreespacenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-17 00:48+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2023-03-31 21:36+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -36,36 +36,6 @@ msgstr "Filelight ile Aç"
 msgid "Open in File Manager"
 msgstr "Dosya Yöneticisinde Aç"
 
-#. i18n: ectx: label, entry (minimumSpace), group (General)
-#: freespacenotifier.kcfg:9
-#, kde-format
-msgid "Minimum free space before user starts being notified."
-msgstr "Kullanıcı uyarılmadan önce kalacak en az boş alan miktarı."
-
-#. i18n: ectx: label, entry (enableNotification), group (General)
-#: freespacenotifier.kcfg:15
-#, kde-format
-msgid "Is the free space notification enabled."
-msgstr "Boş alan uyarısı etkin mi."
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableNotification)
-#: freespacenotifier_prefs_base.ui:17
-#, kde-format
-msgid "Enable low disk space warning"
-msgstr "Düşük disk alanı uyarısını etkinleştir"
-
-#. i18n: ectx: property (text), widget (QLabel, label_minimumSpace)
-#: freespacenotifier_prefs_base.ui:27
-#, kde-format
-msgid "Warn when free space is below:"
-msgstr "Boş alan bu düzeyin altına inerse uyar:"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpace)
-#: freespacenotifier_prefs_base.ui:37
-#, kde-format
-msgid " MiB"
-msgstr " MiB"
-
 #: module.cpp:37
 #, kde-format
 msgid ""
@@ -85,3 +55,18 @@ msgstr "Kök dizininiz dolmak üzere, %1 MiB alanınız kaldı (%​%2)"
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"
 msgstr "Genel"
+
+#~ msgid "Minimum free space before user starts being notified."
+#~ msgstr "Kullanıcı uyarılmadan önce kalacak en az boş alan miktarı."
+
+#~ msgid "Is the free space notification enabled."
+#~ msgstr "Boş alan uyarısı etkin mi."
+
+#~ msgid "Enable low disk space warning"
+#~ msgstr "Düşük disk alanı uyarısını etkinleştir"
+
+#~ msgid "Warn when free space is below:"
+#~ msgstr "Boş alan bu düzeyin altına inerse uyar:"
+
+#~ msgid " MiB"
+#~ msgstr " MiB"

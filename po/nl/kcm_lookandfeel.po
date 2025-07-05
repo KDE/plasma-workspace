@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2022-08-09 12:23+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -95,12 +95,6 @@ msgstr "pakketnaam"
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
 msgstr "De indeling van het Plasma bureaublad resetten"
-
-#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
-#: lookandfeelsettings.kcfg:9
-#, kde-format
-msgid "Global look and feel"
-msgstr "Globaal uiterlijk en gedrag"
 
 #: package/contents/ui/main.qml:21
 #, kde-format
@@ -265,6 +259,9 @@ msgid ""
 msgstr ""
 "Dit globale thema levert geen toe te passen instellingen. Neem contact op "
 "met de onderhouder van dit globale thema omdat het gebroken kan zijn."
+
+#~ msgid "Global look and feel"
+#~ msgstr "Globaal uiterlijk en gedrag"
 
 #~ msgid ""
 #~ "Your current layout and configuration of panels, desktop widgets, and "

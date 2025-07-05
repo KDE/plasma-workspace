@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_containmentactions_switchwindow\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2010-01-29 16:17+0530\n"
 "Last-Translator: Rajesh Ranjan <rajesh672@gmail.com>\n"
 "Language-Team: Maithili <maithili.sf.net>\n"
@@ -21,24 +21,6 @@ msgstr ""
 "\n"
 "\n"
 "\n"
-
-#. i18n: ectx: property (text), widget (QRadioButton, flatButton)
-#: config.ui:16
-#, kde-format
-msgid "Display all windows in one list"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QRadioButton, subButton)
-#: config.ui:23
-#, kde-format
-msgid "Display a submenu for each desktop"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QRadioButton, curButton)
-#: config.ui:30
-#, kde-format
-msgid "Display only the current desktop's windows"
-msgstr ""
 
 #: switch.cpp:75
 #, kde-format

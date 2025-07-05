@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_containmentactions_switchwindow\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2014-06-14 21:37+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -19,24 +19,6 @@ msgstr ""
 "X-Poedit-Country: SPAIN\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 1.5\n"
-
-#. i18n: ectx: property (text), widget (QRadioButton, flatButton)
-#: config.ui:16
-#, kde-format
-msgid "Display all windows in one list"
-msgstr "Mostrar todas las ventanas en una lista"
-
-#. i18n: ectx: property (text), widget (QRadioButton, subButton)
-#: config.ui:23
-#, kde-format
-msgid "Display a submenu for each desktop"
-msgstr "Mostrar un submenú para cada escritorio"
-
-#. i18n: ectx: property (text), widget (QRadioButton, curButton)
-#: config.ui:30
-#, kde-format
-msgid "Display only the current desktop's windows"
-msgstr "Mostrar solo las ventanas del escritorio actual"
 
 #: switch.cpp:75
 #, kde-format
@@ -55,3 +37,12 @@ msgstr "Ventanas"
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "All Desktops"
 msgstr "Todos los escritorios"
+
+#~ msgid "Display all windows in one list"
+#~ msgstr "Mostrar todas las ventanas en una lista"
+
+#~ msgid "Display a submenu for each desktop"
+#~ msgstr "Mostrar un submenú para cada escritorio"
+
+#~ msgid "Display only the current desktop's windows"
+#~ msgstr "Mostrar solo las ventanas del escritorio actual"

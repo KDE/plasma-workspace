@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2010-02-11 22:27+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -16,24 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-
-#. i18n: ectx: property (text), widget (QRadioButton, flatButton)
-#: config.ui:16
-#, kde-format
-msgid "Display all windows in one list"
-msgstr "แสดงหน้าต่างทั้งหมดไว้ในรายการเดียว"
-
-#. i18n: ectx: property (text), widget (QRadioButton, subButton)
-#: config.ui:23
-#, kde-format
-msgid "Display a submenu for each desktop"
-msgstr "แสดงเมนูย่อยสำหรับแต่ละพื้นที่ทำงาน"
-
-#. i18n: ectx: property (text), widget (QRadioButton, curButton)
-#: config.ui:30
-#, kde-format
-msgid "Display only the current desktop's windows"
-msgstr "แสดงเฉพาะหน้าต่างของพื้นที่ทำงานปัจจุบันเท่านั้น"
 
 #: switch.cpp:75
 #, fuzzy, kde-format
@@ -55,3 +37,12 @@ msgstr "หน้าต่างต่าง ๆ"
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "All Desktops"
 msgstr "พื้นที่ทำงานทั้งหมด"
+
+#~ msgid "Display all windows in one list"
+#~ msgstr "แสดงหน้าต่างทั้งหมดไว้ในรายการเดียว"
+
+#~ msgid "Display a submenu for each desktop"
+#~ msgstr "แสดงเมนูย่อยสำหรับแต่ละพื้นที่ทำงาน"
+
+#~ msgid "Display only the current desktop's windows"
+#~ msgstr "แสดงเฉพาะหน้าต่างของพื้นที่ทำงานปัจจุบันเท่านั้น"

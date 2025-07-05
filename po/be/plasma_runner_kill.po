@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2022-12-20 17:01\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -66,32 +66,17 @@ msgstr "адваротнае выкарыстанне працэсара"
 msgid "nothing"
 msgstr "нічога"
 
-#. i18n: ectx: property (title), widget (QGroupBox, main)
-#: killrunner_config.ui:30
-#, kde-format
-msgid "Kill Applications Config"
-msgstr "Канфігурацыя знішчэння працэсаў праграм"
+#~ msgid "Kill Applications Config"
+#~ msgstr "Канфігурацыя знішчэння працэсаў праграм"
 
-#. i18n: ectx: property (text), widget (QCheckBox, useTriggerWord)
-#: killrunner_config.ui:39
-#, kde-format
-msgid "&Use trigger word"
-msgstr "&Выкарыстоўваць трыгернае слова"
+#~ msgid "&Use trigger word"
+#~ msgstr "&Выкарыстоўваць трыгернае слова"
 
-#. i18n: ectx: property (text), widget (QLabel, label_trigger)
-#: killrunner_config.ui:51
-#, kde-format
-msgid "&Trigger word:"
-msgstr "&Трыгернае слова:"
+#~ msgid "&Trigger word:"
+#~ msgstr "&Трыгернае слова:"
 
-#. i18n: ectx: property (text), widget (QLabel, label_sorting)
-#: killrunner_config.ui:72
-#, kde-format
-msgid "&Sort by"
-msgstr "&Сартаванне"
+#~ msgid "&Sort by"
+#~ msgstr "&Сартаванне"
 
-#. i18n: ectx: property (toolTip), widget (KComboBox, sorting)
-#: killrunner_config.ui:82
-#, kde-format
-msgid "It is not sure, that this will take effect"
-msgstr "Няма ўпэўненасці, што гэта падзейнічае"
+#~ msgid "It is not sure, that this will take effect"
+#~ msgstr "Няма ўпэўненасці, што гэта падзейнічае"

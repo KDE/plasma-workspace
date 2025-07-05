@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-15 00:48+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2009-01-16 22:16+0530\n"
 "Last-Translator: Krishna Babu K <kkrothap@redhat.com>\n"
 "Language-Team: Telugu <en@li.org>\n"
@@ -17,61 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-
-#. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
-#: fontsaasettingsbase.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Force fonts DPI:"
-msgid "Force font DPI Wayland"
-msgstr "ఫాంట్ల DPIను పెంచుము:"
-
-#. i18n: ectx: label, entry (forceFontDPI), group (General)
-#: fontsaasettingsbase.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Force fonts DPI:"
-msgid "Force font DPI on X11"
-msgstr "ఫాంట్ల DPIను పెంచుము:"
-
-#. i18n: ectx: label, entry (font), group (General)
-#: fontssettings.kcfg:9
-#, fuzzy, kde-format
-#| msgid "General"
-msgid "General font"
-msgstr "సాధారణ"
-
-#. i18n: ectx: label, entry (fixed), group (General)
-#: fontssettings.kcfg:21
-#, fuzzy, kde-format
-#| msgid "Fixed width"
-msgid "Fixed width font"
-msgstr "నిర్ధిష్ట వెడల్పు"
-
-#. i18n: ectx: label, entry (smallestReadableFont), group (General)
-#: fontssettings.kcfg:33
-#, fuzzy, kde-format
-#| msgid "Small"
-msgid "Small font"
-msgstr "చిన్న"
-
-#. i18n: ectx: label, entry (toolBarFont), group (General)
-#: fontssettings.kcfg:45
-#, fuzzy, kde-format
-#| msgid "Toolbar"
-msgid "Tool bar font"
-msgstr "పనిముట్టుపట్టీ"
-
-#. i18n: ectx: label, entry (menuFont), group (General)
-#: fontssettings.kcfg:57
-#, kde-format
-msgid "Menu font"
-msgstr ""
-
-#. i18n: ectx: label, entry (activeFont), group (WM)
-#: fontssettings.kcfg:71
-#, fuzzy, kde-format
-#| msgid "Window title"
-msgid "Window title font"
-msgstr "విండో శీర్షిక"
 
 #: kxftconfig.cpp:458
 #, fuzzy, kde-format
@@ -364,6 +309,41 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Force fonts DPI:"
+#~ msgid "Force font DPI Wayland"
+#~ msgstr "ఫాంట్ల DPIను పెంచుము:"
+
+#, fuzzy
+#~| msgid "Force fonts DPI:"
+#~ msgid "Force font DPI on X11"
+#~ msgstr "ఫాంట్ల DPIను పెంచుము:"
+
+#, fuzzy
+#~| msgid "General"
+#~ msgid "General font"
+#~ msgstr "సాధారణ"
+
+#, fuzzy
+#~| msgid "Fixed width"
+#~ msgid "Fixed width font"
+#~ msgstr "నిర్ధిష్ట వెడల్పు"
+
+#, fuzzy
+#~| msgid "Small"
+#~ msgid "Small font"
+#~ msgstr "చిన్న"
+
+#, fuzzy
+#~| msgid "Toolbar"
+#~ msgid "Tool bar font"
+#~ msgstr "పనిముట్టుపట్టీ"
+
+#, fuzzy
+#~| msgid "Window title"
+#~ msgid "Window title font"
+#~ msgstr "విండో శీర్షిక"
 
 #~ msgid "Font Settings Changed"
 #~ msgstr "ఫాంటు అమర్పులు మార్చబడినవి"

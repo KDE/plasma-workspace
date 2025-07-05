@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: freespacenotifier trunk\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-17 00:48+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2021-08-07 20:47+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -33,36 +33,6 @@ msgstr "ഫയൽലൈറ്റില്‍ തുറക്കുക"
 msgid "Open in File Manager"
 msgstr "ഫയല്‍ മാനേജറിൽ തുറക്കുക"
 
-#. i18n: ectx: label, entry (minimumSpace), group (General)
-#: freespacenotifier.kcfg:9
-#, kde-format
-msgid "Minimum free space before user starts being notified."
-msgstr "ഡിസ്ക്സ്പെയ്സ് കുറഞ്ഞതിന്റെ മുന്നറിയിപ്പുകള്‍ ഉപയോക്താവിനെ അറിയിച്ചു തുടങ്ങേണ്ട പരിധി."
-
-#. i18n: ectx: label, entry (enableNotification), group (General)
-#: freespacenotifier.kcfg:15
-#, kde-format
-msgid "Is the free space notification enabled."
-msgstr "ഡിസ്ക്സ്പെയ്സ് കറയുമ്പോള്‍ കാണിയ്ക്കുന്ന മുന്നറിയിപ്പ് പ്രവര്‍ത്തനസജ്ജമാണോ."
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableNotification)
-#: freespacenotifier_prefs_base.ui:17
-#, kde-format
-msgid "Enable low disk space warning"
-msgstr "കുറവ് ഡിസ്ക് സ്പെയ്സ് മുന്നറിയിപ്പ് പ്രവര്‍ത്തനസജ്ജമാക്കുക"
-
-#. i18n: ectx: property (text), widget (QLabel, label_minimumSpace)
-#: freespacenotifier_prefs_base.ui:27
-#, kde-format
-msgid "Warn when free space is below:"
-msgstr "ലഭ്യമായ ഡിസ്ക്സ്പെയ്സ് ഇതിലും താഴെയാവുമ്പോള്‍ മുന്നറിയിപ്പ് നല്കുക:"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpace)
-#: freespacenotifier_prefs_base.ui:37
-#, kde-format
-msgid " MiB"
-msgstr " MiB"
-
 #: module.cpp:37
 #, kde-format
 msgid ""
@@ -82,6 +52,21 @@ msgstr "നിങ്ങളുടെ റുട്ട് പാർട്ടീഷ�
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"
 msgstr "പൊതു"
+
+#~ msgid "Minimum free space before user starts being notified."
+#~ msgstr "ഡിസ്ക്സ്പെയ്സ് കുറഞ്ഞതിന്റെ മുന്നറിയിപ്പുകള്‍ ഉപയോക്താവിനെ അറിയിച്ചു തുടങ്ങേണ്ട പരിധി."
+
+#~ msgid "Is the free space notification enabled."
+#~ msgstr "ഡിസ്ക്സ്പെയ്സ് കറയുമ്പോള്‍ കാണിയ്ക്കുന്ന മുന്നറിയിപ്പ് പ്രവര്‍ത്തനസജ്ജമാണോ."
+
+#~ msgid "Enable low disk space warning"
+#~ msgstr "കുറവ് ഡിസ്ക് സ്പെയ്സ് മുന്നറിയിപ്പ് പ്രവര്‍ത്തനസജ്ജമാക്കുക"
+
+#~ msgid "Warn when free space is below:"
+#~ msgstr "ലഭ്യമായ ഡിസ്ക്സ്പെയ്സ് ഇതിലും താഴെയാവുമ്പോള്‍ മുന്നറിയിപ്പ് നല്കുക:"
+
+#~ msgid " MiB"
+#~ msgstr " MiB"
 
 #~ msgctxt ""
 #~ "Warns the user that the system is running low on space on his home "

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-10 00:58+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2023-01-31 06:47+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -17,18 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.2.2\n"
-
-#. i18n: ectx: label, entry (cursorTheme), group (Mouse)
-#: cursorthemesettings.kcfg:9
-#, kde-format
-msgid "Name of the current cursor theme"
-msgstr "კურსორის მიმდინარე ფერის სახელი"
-
-#. i18n: ectx: label, entry (cursorSize), group (Mouse)
-#: cursorthemesettings.kcfg:13
-#, kde-format
-msgid "Current cursor size"
-msgstr "კურსორის მიმდინარე ზომა"
 
 #: kcmcursortheme.cpp:308
 #, kde-format
@@ -72,13 +60,6 @@ msgstr "გადავაწერო თემა?"
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "თემა წარმატებით დადგა."
-
-#. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
-#. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)
-#: launchfeedbacksettings.kcfg:19 launchfeedbacksettings.kcfg:33
-#, kde-format
-msgid "Timeout in seconds"
-msgstr "ვადა წამებში"
 
 #: package/contents/ui/Delegate.qml:54
 #, kde-format
@@ -280,3 +261,12 @@ msgctxt ""
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(ხელმისაწვდომი ზომები: %1)"
+
+#~ msgid "Name of the current cursor theme"
+#~ msgstr "კურსორის მიმდინარე ფერის სახელი"
+
+#~ msgid "Current cursor size"
+#~ msgstr "კურსორის მიმდინარე ზომა"
+
+#~ msgid "Timeout in seconds"
+#~ msgstr "ვადა წამებში"

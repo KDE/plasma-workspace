@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-31 02:25+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2020-10-10 23:11-0700\n"
 "Last-Translator: A S Alam <aalam.yellow@gmail.com>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -133,30 +133,6 @@ msgstr ""
 #: containmentlayoutmanager/qml/BasicAppletContainer.qml:270
 #, kde-format
 msgid "Configure…"
-msgstr ""
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:10
-#, kde-format
-msgid "Screen lock enabled"
-msgstr "ਸਕਰੀਨ ਲਾਕ ਸਮਰੱਥ ਹੈ"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:11
-#, kde-format
-msgid "Sets whether the screen will be locked after the specified time."
-msgstr ""
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:16
-#, kde-format
-msgid "Screen saver timeout"
-msgstr "ਸਕਰੀਨ ਸੇਵਰ ਟਾਈਮ-ਆਉਟ"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:17
-#, kde-format
-msgid "Sets the minutes after which the screen is locked."
 msgstr ""
 
 #: sessionsprivate/sessionsmodel.cpp:235 sessionsprivate/sessionsmodel.cpp:239
@@ -330,6 +306,12 @@ msgstr "ਨਵੇਂ ਪਲਾਜ਼ਮਾ ਵਿਦਜੈਟ ਡਾਊਨਲੋਡ
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr ""
+
+#~ msgid "Screen lock enabled"
+#~ msgstr "ਸਕਰੀਨ ਲਾਕ ਸਮਰੱਥ ਹੈ"
+
+#~ msgid "Screen saver timeout"
+#~ msgstr "ਸਕਰੀਨ ਸੇਵਰ ਟਾਈਮ-ਆਉਟ"
 
 #~ msgid "&Execute"
 #~ msgstr "ਚਲਾਓ(&E)"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-22 02:35+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2024-09-29 07:58+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -59,34 +59,6 @@ msgstr "Gagal menyalin skema warna ke dalam folder data 'color-scheme'."
 #, kde-format
 msgid "Color scheme installed successfully."
 msgstr "Skema warna berhasil diinstal."
-
-#. i18n: ectx: label, entry (colorScheme), group (General)
-#: colorssettings.kcfg:9
-#, kde-format
-msgid "Color scheme name"
-msgstr "Nama skema warna"
-
-#. i18n: ectx: label, entry (accentColor), group (General)
-#: colorssettings.kcfg:13
-#, kde-format
-msgid "Accent color"
-msgstr "Warna aksen"
-
-#. i18n: ectx: label, entry (lastUsedCustomAccentColor), group (General)
-#: colorssettings.kcfg:17
-#, kde-format
-msgid ""
-"The last used custom accent color before user switched to wallpaper "
-"generated color or default color"
-msgstr ""
-"Warna aksen kuston yang terakhir digunakan sebelum pengguna beralih ke warna "
-"yang dihasilkan wallpaper atau warna baku"
-
-#. i18n: ectx: label, entry (accentColorFromWallpaper), group (General)
-#: colorssettings.kcfg:21
-#, kde-format
-msgid "Whether accent color from wallpaper should be applied"
-msgstr "Apakah warna aksen dari wallpaper akan diterapkan"
 
 #: editor/kcolorschemeeditor.cpp:25
 #, kde-format
@@ -150,216 +122,6 @@ msgstr ""
 msgid "Scheme not found, falling back to current one.\n"
 msgstr "Skema tidak ditemukan, kembalikan ke yang saat ini.\n"
 
-#. i18n: ectx: property (toolTip), widget (QLabel, label)
-#: editor/preview.ui:29
-#, kde-format
-msgid "Window text on Window Background"
-msgstr "Teks jendela di Latarbelakang Jendela"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: editor/preview.ui:32
-#, kde-format
-msgctxt "color-kcm-preview"
-msgid "Window text"
-msgstr "Teks jendela"
-
-#. i18n: ectx: property (toolTip), widget (QPushButton, pushButton)
-#: editor/preview.ui:39
-#, kde-format
-msgid "Button text on Button Background"
-msgstr "Teks tombol di Latarbelakang Tombol"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QPushButton, pushButton)
-#: editor/preview.ui:42
-#, kde-format
-msgctxt "color-kcm-preview"
-msgid "Push Button"
-msgstr "Tombol Dorong"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection0)
-#: editor/preview.ui:123
-#, kde-format
-msgid "Selection Normal Text against Selection Normal Background"
-msgstr "Pemilihan Teks Normal kontra Pemilihan Latarbelakang Normal"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelSelection0)
-#: editor/preview.ui:126
-#, kde-format
-msgctxt "color-kcm-preview"
-msgid "Selected text"
-msgstr "Teks terpilih"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection3)
-#: editor/preview.ui:138
-#, kde-format
-msgid "Selection Link Text against Selection Normal Background"
-msgstr "Pemilihan Teks Tautan kontra Pemilihan Latarbelakang Normal"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelSelection3)
-#. i18n: ectx: property (text), widget (QLabel, labelView3)
-#: editor/preview.ui:141 editor/preview.ui:265
-#, kde-format
-msgctxt "color-kcm-preview"
-msgid "link"
-msgstr "tautan"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection4)
-#: editor/preview.ui:153
-#, kde-format
-msgid "Selection Visited Text against Selection Normal Background"
-msgstr "Pemilihan Teks Dikunjungi kontra Pemilihan Latarbelakang Normal"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelSelection4)
-#. i18n: ectx: property (text), widget (QLabel, labelView4)
-#: editor/preview.ui:156 editor/preview.ui:280
-#, kde-format
-msgctxt "color-kcm-preview"
-msgid "visited"
-msgstr "dikunjungi"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection2)
-#: editor/preview.ui:163
-#, kde-format
-msgid "Selection Active Text against Selection Normal Background"
-msgstr "Pemilihan Teks Aktif kontra Pemilihan Latarbelakang Normal"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelSelection2)
-#. i18n: ectx: property (text), widget (QLabel, labelView2)
-#: editor/preview.ui:166 editor/preview.ui:290
-#, kde-format
-msgctxt "color-kcm-preview"
-msgid "a"
-msgstr "a"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection1)
-#: editor/preview.ui:173
-#, kde-format
-msgid "Selection Inactive Text against Selection Normal Background"
-msgstr "Pemilihan Teks Tidak Aktif kontra Pemilihan Latarbelakang Normal"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelSelection1)
-#. i18n: ectx: property (text), widget (QLabel, labelView1)
-#: editor/preview.ui:176 editor/preview.ui:300
-#, kde-format
-msgctxt "color-kcm-preview"
-msgid "i"
-msgstr "i"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection5)
-#: editor/preview.ui:183
-#, kde-format
-msgid "Selection Negative Text against Selection Normal Background"
-msgstr "Pemilihan Teks Negatif kontra Pemilihan Latarbelakang Normal"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelSelection5)
-#. i18n: ectx: property (text), widget (QLabel, labelView5)
-#: editor/preview.ui:186 editor/preview.ui:310
-#, kde-format
-msgctxt "color-kcm-preview"
-msgid "!"
-msgstr "!"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection6)
-#: editor/preview.ui:193
-#, kde-format
-msgid "Selection Neutral Text against Selection Normal Background"
-msgstr "Pemilihan Teks Netral kontra Pemilihan Latarbelakang Normal"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelSelection6)
-#. i18n: ectx: property (text), widget (QLabel, labelView6)
-#: editor/preview.ui:196 editor/preview.ui:320
-#, kde-format
-msgctxt "color-kcm-preview"
-msgid "="
-msgstr "="
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection7)
-#: editor/preview.ui:203
-#, kde-format
-msgid "Selection Positive Text against Selection Normal Background"
-msgstr "Pemilihan Teks Positif kontra Pemilihan Latarbelakang Normal"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelSelection7)
-#. i18n: ectx: property (text), widget (QLabel, labelView7)
-#: editor/preview.ui:206 editor/preview.ui:330
-#, kde-format
-msgctxt "color-kcm-preview"
-msgid "+"
-msgstr "+"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelView0)
-#: editor/preview.ui:247
-#, kde-format
-msgid "View Normal Text against View Normal Background"
-msgstr "Tampilan Teks Normal kontra Tampilan Latarbelakang Normal"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelView0)
-#: editor/preview.ui:250
-#, kde-format
-msgctxt "color-kcm-preview"
-msgid "Normal text"
-msgstr "Teks normal"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelView3)
-#: editor/preview.ui:262
-#, kde-format
-msgid "View Link Text against View Normal Background"
-msgstr "Tampilan Teks Tautan kontra Tampilan Latarbelakang Normal"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelView4)
-#: editor/preview.ui:277
-#, kde-format
-msgid "View Visited Text against View Normal Background"
-msgstr "Tampilan Teks Dikunjungi kontra Tampilan Latarbelakang Normal"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelView2)
-#: editor/preview.ui:287
-#, kde-format
-msgid "View Active Text against View Normal Background"
-msgstr "Tampilan Teks Aktif kontra Tampilan Latarbelakang Normal"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelView1)
-#: editor/preview.ui:297
-#, kde-format
-msgid "View Inactive Text against View Normal Background"
-msgstr "Tampilan Teks Tidak Aktif kontra Tampilan Latarbelakang Normal"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelView5)
-#: editor/preview.ui:307
-#, kde-format
-msgid "View Negative Text against View Normal Background"
-msgstr "Tampilan Teks Negatif kontra Tampilan Latarbelakang Normal"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelView6)
-#: editor/preview.ui:317
-#, kde-format
-msgid "View Neutral Text against View Normal Background"
-msgstr "Tampilan Teks Netral kontra Tampilan Latarbelakang Normal"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelView7)
-#: editor/preview.ui:327
-#, kde-format
-msgid "View Positive Text against View Normal Background"
-msgstr "Tampilan Teks Positif kontra Tampilan Latarbelakang Normal"
-
 #: editor/scmeditorcolors.cpp:62 editor/scmeditorcolors.cpp:76
 #, kde-format
 msgid "Varies"
@@ -380,267 +142,50 @@ msgstr "Latarbelakang Alternatif"
 msgid "Normal Text"
 msgstr "Teks Normal"
 
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:102 editor/scmeditorcolors.ui:303
+#: editor/scmeditorcolors.cpp:102
 #, kde-format
 msgid "Inactive Text"
 msgstr "Teks Tidak Aktif"
 
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:103 editor/scmeditorcolors.ui:308
+#: editor/scmeditorcolors.cpp:103
 #, kde-format
 msgid "Active Text"
 msgstr "Teks Aktif"
 
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:104 editor/scmeditorcolors.ui:313
+#: editor/scmeditorcolors.cpp:104
 #, kde-format
 msgid "Link Text"
 msgstr "Teks Tautan"
 
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:105 editor/scmeditorcolors.ui:318
+#: editor/scmeditorcolors.cpp:105
 #, kde-format
 msgid "Visited Text"
 msgstr "Teks Dikunjungi"
 
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:106 editor/scmeditorcolors.ui:323
+#: editor/scmeditorcolors.cpp:106
 #, kde-format
 msgid "Negative Text"
 msgstr "Teks Negatif"
 
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:107 editor/scmeditorcolors.ui:328
+#: editor/scmeditorcolors.cpp:107
 #, kde-format
 msgid "Neutral Text"
 msgstr "Teks Netral"
 
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:108 editor/scmeditorcolors.ui:333
+#: editor/scmeditorcolors.cpp:108
 #, kde-format
 msgid "Positive Text"
 msgstr "Teks Positif"
 
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:109 editor/scmeditorcolors.ui:338
+#: editor/scmeditorcolors.cpp:109
 #, kde-format
 msgid "Focus Decoration"
 msgstr "Dekorasi Fokus"
 
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:110 editor/scmeditorcolors.ui:343
+#: editor/scmeditorcolors.cpp:110
 #, kde-format
 msgid "Hover Decoration"
 msgstr "Dekorasi Melayang"
-
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: editor/scmeditorcolors.ui:23
-#, kde-format
-msgid "Color set:"
-msgstr "Perangkat warna:"
-
-#. i18n: ectx: property (toolTip), widget (QComboBox, colorSet)
-#: editor/scmeditorcolors.ui:36
-#, kde-format
-msgid "Colorset to view/modify"
-msgstr "Perangkat warna untuk ditampilkan/dimodifikasi"
-
-#. i18n: 'Common' here means &quot;frequent/not rare&quot;, not &quot;shared&quot;
-#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
-#: editor/scmeditorcolors.ui:40
-#, kde-format
-msgctxt "color-sets"
-msgid "Common Colors"
-msgstr "Warna Umum"
-
-#. i18n: see plasma-workspace/kcms/colors/README.i18n
-#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
-#: editor/scmeditorcolors.ui:45
-#, kde-format
-msgctxt "color-sets"
-msgid "View"
-msgstr "Tampilan"
-
-#. i18n: see plasma-workspace/kcms/colors/README.i18n
-#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
-#: editor/scmeditorcolors.ui:50
-#, kde-format
-msgctxt "color-sets"
-msgid "Window"
-msgstr "Jendela"
-
-#. i18n: see plasma-workspace/kcms/colors/README.i18n
-#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
-#: editor/scmeditorcolors.ui:55
-#, kde-format
-msgctxt "color-sets"
-msgid "Button"
-msgstr "Tombol"
-
-#. i18n: see plasma-workspace/kcms/colors/README.i18n
-#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
-#: editor/scmeditorcolors.ui:60
-#, kde-format
-msgctxt "color-sets"
-msgid "Selection"
-msgstr "Pemilihan"
-
-#. i18n: see plasma-workspace/kcms/colors/README.i18n
-#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
-#: editor/scmeditorcolors.ui:65
-#, kde-format
-msgctxt "color-sets"
-msgid "Tooltip"
-msgstr "Tip Alat"
-
-#. i18n: see plasma-workspace/kcms/colors/README.i18n
-#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
-#: editor/scmeditorcolors.ui:70
-#, kde-format
-msgctxt "color-sets"
-msgid "Complementary"
-msgstr "Komplementer"
-
-#. i18n: see plasma-workspace/kcms/colors/README.i18n
-#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
-#: editor/scmeditorcolors.ui:75
-#, kde-format
-msgctxt "color-sets"
-msgid "Header"
-msgstr "Tajuk"
-
-#. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:118 editor/scmeditorcolors.ui:123
-#: editor/scmeditorcolors.ui:128 editor/scmeditorcolors.ui:133
-#: editor/scmeditorcolors.ui:138 editor/scmeditorcolors.ui:143
-#: editor/scmeditorcolors.ui:148 editor/scmeditorcolors.ui:153
-#: editor/scmeditorcolors.ui:158 editor/scmeditorcolors.ui:163
-#: editor/scmeditorcolors.ui:168 editor/scmeditorcolors.ui:173
-#: editor/scmeditorcolors.ui:178 editor/scmeditorcolors.ui:183
-#: editor/scmeditorcolors.ui:188 editor/scmeditorcolors.ui:193
-#: editor/scmeditorcolors.ui:198 editor/scmeditorcolors.ui:203
-#: editor/scmeditorcolors.ui:208 editor/scmeditorcolors.ui:213
-#: editor/scmeditorcolors.ui:218 editor/scmeditorcolors.ui:223
-#: editor/scmeditorcolors.ui:228 editor/scmeditorcolors.ui:233
-#: editor/scmeditorcolors.ui:238 editor/scmeditorcolors.ui:243
-#, kde-format
-msgid "New Row"
-msgstr "Baris Baru"
-
-#. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:248
-#, kde-format
-msgid "0"
-msgstr "0"
-
-#. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:253
-#, kde-format
-msgid "1"
-msgstr "1"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:258
-#, kde-format
-msgid "View Background"
-msgstr "Tampilan Latarbelakang"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:263
-#, kde-format
-msgid "View Text"
-msgstr "Tampilan Teks"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:268
-#, kde-format
-msgid "Window Background"
-msgstr "Latarbelakang Jendela"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:273
-#, kde-format
-msgid "Window Text"
-msgstr "Teks Jendela"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:278
-#, kde-format
-msgid "Button Background"
-msgstr "Latarbelakang Tombol"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:283
-#, kde-format
-msgid "Button Text"
-msgstr "Teks Tombol"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:288
-#, kde-format
-msgid "Selection Background"
-msgstr "Pemilihan Latarbelakang"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:293
-#, kde-format
-msgid "Selection Text"
-msgstr "Pemilihan Teks"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:298
-#, kde-format
-msgid "Selection Inactive Text"
-msgstr "Pemilihan Teks Tidak Aktif"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:348
-#, kde-format
-msgid "Tooltip Background"
-msgstr "Latarbelakang Tip Alat"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:353
-#, kde-format
-msgid "Tooltip Text"
-msgstr "Teks Tip Alat"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:358
-#, kde-format
-msgid "Active Titlebar"
-msgstr "Bilah Judul Aktif"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:363
-#, kde-format
-msgid "Active Titlebar Text"
-msgstr "Teks Bilah Judul Aktif"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:368
-#, kde-format
-msgid "Active Titlebar Secondary"
-msgstr "Bilah Judul Aktif Sekunder"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:373
-#, kde-format
-msgid "Inactive Titlebar"
-msgstr "Bilah Judul Tak Aktif"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:378
-#, kde-format
-msgid "Inactive Titlebar Text"
-msgstr "Teks Bilah Judul Tak Aktif"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:383
-#, kde-format
-msgid "Inactive Titlebar Secondary"
-msgstr "Sekunder Bilah Judul Tak Aktif"
 
 #: editor/scmeditordialog.cpp:60
 #, kde-format
@@ -701,450 +246,6 @@ msgstr "Error"
 #, kde-format
 msgid "Inactive"
 msgstr "Tidak aktif"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: editor/scmeditoreffects.ui:17
-#, kde-format
-msgid "Color:"
-msgstr "Warna:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: editor/scmeditoreffects.ui:27
-#, kde-format
-msgid "Intensity:"
-msgstr "Intensitas:"
-
-#. i18n: ectx: property (toolTip), widget (QComboBox, colorBox)
-#: editor/scmeditoreffects.ui:37
-#, kde-format
-msgid "Disabled color effect type"
-msgstr "Tipe efek warna dinonfungsikan"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
-#: editor/scmeditoreffects.ui:41
-#, kde-format
-msgctxt "no disabled color effect"
-msgid "None"
-msgstr "Nihil"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
-#: editor/scmeditoreffects.ui:46
-#, kde-format
-msgctxt "disabled color effect"
-msgid "Desaturate"
-msgstr "Desaturasi"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
-#: editor/scmeditoreffects.ui:51
-#, kde-format
-msgctxt "disabled color effect"
-msgid "Fade"
-msgstr "Lesap"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
-#: editor/scmeditoreffects.ui:56
-#, kde-format
-msgctxt "disabled color effect"
-msgid "Tint"
-msgstr "Warna"
-
-#. i18n: ectx: property (toolTip), widget (QComboBox, intensityBox)
-#: editor/scmeditoreffects.ui:64
-#, kde-format
-msgid "Disabled intensity effect type"
-msgstr "Tipe efek intensitas dinonfungsikan"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
-#: editor/scmeditoreffects.ui:68
-#, kde-format
-msgctxt "no disabled intensity effect"
-msgid "None"
-msgstr "Nihil"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
-#: editor/scmeditoreffects.ui:73
-#, kde-format
-msgctxt "disabled intensity effect"
-msgid "Shade"
-msgstr "Corak"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
-#: editor/scmeditoreffects.ui:78
-#, kde-format
-msgctxt "disabled intensity effect"
-msgid "Darken"
-msgstr "Pergelap"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
-#: editor/scmeditoreffects.ui:83
-#, kde-format
-msgctxt "disabled intensity effect"
-msgid "Lighten"
-msgstr "Perterang"
-
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: editor/scmeditoreffects.ui:107
-#, kde-format
-msgid "Contrast:"
-msgstr "Kontras:"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, colorSlider)
-#: editor/scmeditoreffects.ui:120
-#, kde-format
-msgid "Disabled color effect amount"
-msgstr "Jumlah efek warna dinonfungsikan"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, intensitySlider)
-#: editor/scmeditoreffects.ui:139
-#, kde-format
-msgid "Disabled intensity effect amount"
-msgstr "Jumlah efek intensitas dinonfungsikan"
-
-#. i18n: ectx: property (toolTip), widget (KColorButton, colorButton)
-#: editor/scmeditoreffects.ui:158
-#, kde-format
-msgid "Disabled color"
-msgstr "Warna dinonfungsikan"
-
-#. i18n: ectx: property (toolTip), widget (QComboBox, contrastBox)
-#: editor/scmeditoreffects.ui:181
-#, kde-format
-msgid "Disabled contrast type"
-msgstr "Tipe kontras dinonfungsikan"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
-#: editor/scmeditoreffects.ui:185
-#, kde-format
-msgctxt "no disabled contrast"
-msgid "None"
-msgstr "Nihil"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
-#: editor/scmeditoreffects.ui:190
-#, kde-format
-msgctxt "disabled contrast"
-msgid "Fade"
-msgstr "Lesap"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
-#: editor/scmeditoreffects.ui:195
-#, kde-format
-msgctxt "disabled contrast"
-msgid "Tint"
-msgstr "Warna"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, contrastSlider)
-#: editor/scmeditoreffects.ui:222
-#, kde-format
-msgid "Disabled contrast amount"
-msgstr "Jumlah kontras dinonfungsikan"
-
-#. i18n: ectx: property (text), widget (QCheckBox, useInactiveEffects)
-#: editor/scmeditoroptions.ui:17
-#, kde-format
-msgid "Apply &effects to inactive windows"
-msgstr "Terapkan &efek untuk jendela tidak aktif"
-
-#. i18n: ectx: property (text), widget (QCheckBox, inactiveSelectionEffect)
-#: editor/scmeditoroptions.ui:24
-#, kde-format
-msgid "Use different colors for in&active selections"
-msgstr "Gunakan warna yang berbeda untuk pemilihan tidak aktif"
-
-#. i18n: ectx: property (text), widget (QCheckBox, shadeSortedColumn)
-#: editor/scmeditoroptions.ui:31
-#, kde-format
-msgid "Shade sorted column &in lists"
-msgstr "Corak kolom yang diurutkan d&i daftar"
-
-#. i18n: ectx: property (text), widget (QCheckBox, tintColors)
-#: editor/scmeditoroptions.ui:38
-#, kde-format
-msgid "Tint all colors with accent color"
-msgstr "Warnai semua warna dengan warna aksen"
-
-#. i18n: ectx: property (text), widget (QCheckBox, accentTitlebar)
-#: editor/scmeditoroptions.ui:45
-#, kde-format
-msgid "Make window titlebars a&ccent-colored"
-msgstr "Jadikan bilah judul jendela berwarna aksen"
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: editor/scmeditoroptions.ui:52
-#, kde-format
-msgid "Tint strength:"
-msgstr "Kekuatan pewarnaan:"
-
-#. i18n: ectx: property (toolTip), widget (QGroupBox, groupBox_5)
-#: editor/scmeditoroptions.ui:69
-#, kde-format
-msgid "Shading of frames and lighting (\"3D\") effects"
-msgstr "Pencorakan efek bingkai dan pencahayaan (\"3D\")"
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
-#: editor/scmeditoroptions.ui:72
-#, kde-format
-msgid "Shading"
-msgstr "Pencorakan"
-
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#: editor/scmeditoroptions.ui:97
-#, kde-format
-msgid "Maximum"
-msgstr "Maksimum"
-
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: editor/scmeditoroptions.ui:117
-#, kde-format
-msgid "Minimum"
-msgstr "Minimum"
-
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: editor/scmeditoroptions.ui:124
-#, kde-format
-msgid "Contrast"
-msgstr "Kontras"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelFore0)
-#. i18n: ectx: property (toolTip), widget (QLabel, labelBack0)
-#: editor/setpreview.ui:35 editor/setpreview.ui:189
-#, kde-format
-msgid "Normal Text on Normal Background"
-msgstr "Teks Normal di Latarbelakang Normal"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore0)
-#. i18n: ectx: property (text), widget (QLabel, labelBack0)
-#: editor/setpreview.ui:38 editor/setpreview.ui:192
-#, kde-format
-msgctxt "color-kcm-set-preview"
-msgid "normal"
-msgstr "normal"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelFore3)
-#: editor/setpreview.ui:56
-#, kde-format
-msgid "Link Text on Normal Background"
-msgstr "Teks Tautan di Latarbelakang Normal"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore3)
-#. i18n: ectx: property (text), widget (QLabel, labelBack3)
-#: editor/setpreview.ui:59 editor/setpreview.ui:214
-#, kde-format
-msgctxt "color-kcm-set-preview"
-msgid "link"
-msgstr "tautan"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelFore4)
-#: editor/setpreview.ui:77
-#, kde-format
-msgid "Visited Text on Normal Background"
-msgstr "Teks Dikunjungi di Latarbelakang Normal"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore4)
-#. i18n: ectx: property (text), widget (QLabel, labelBack4)
-#: editor/setpreview.ui:80 editor/setpreview.ui:236
-#, kde-format
-msgctxt "color-kcm-set-preview"
-msgid "visited"
-msgstr "dikunjungi"
-
-#. i18n: ectx: property (toolTip), widget (QWidget, widgetFore2)
-#: editor/setpreview.ui:90
-#, kde-format
-msgid "Active Text on Normal Background"
-msgstr "Teks Aktif di Latarbelakang Normal"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore2)
-#. i18n: ectx: property (text), widget (QLabel, labelBack2)
-#: editor/setpreview.ui:96 editor/setpreview.ui:253
-#, kde-format
-msgctxt "color-kcm-set-preview"
-msgid "active"
-msgstr "aktif"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelFore1)
-#: editor/setpreview.ui:109
-#, kde-format
-msgid "Inactive Text on Normal Background"
-msgstr "Teks Tidak Aktif di Latarbelakang Normal"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore1)
-#: editor/setpreview.ui:112
-#, kde-format
-msgctxt "color-kcm-set-preview"
-msgid "inactive"
-msgstr "tidak aktif"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelFore5)
-#: editor/setpreview.ui:125
-#, kde-format
-msgid "Negative Text on Normal Background"
-msgstr "Teks Negatif di Latarbelakang Normal"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore5)
-#. i18n: ectx: property (text), widget (QLabel, labelBack5)
-#: editor/setpreview.ui:128 editor/setpreview.ui:286
-#, kde-format
-msgctxt "color-kcm-set-preview"
-msgid "negative"
-msgstr "negatif"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelFore6)
-#: editor/setpreview.ui:141
-#, kde-format
-msgid "Neutral Text on Normal Background"
-msgstr "Teks Netral di Latarbelakang Normal"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore6)
-#. i18n: ectx: property (text), widget (QLabel, labelBack6)
-#: editor/setpreview.ui:144 editor/setpreview.ui:303
-#, kde-format
-msgctxt "color-kcm-set-preview"
-msgid "neutral"
-msgstr "netral"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelFore7)
-#: editor/setpreview.ui:157
-#, kde-format
-msgid "Positive Text on Normal Background"
-msgstr "Teks Positif di Latarbelakang Normal"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore7)
-#. i18n: ectx: property (text), widget (QLabel, labelBack7)
-#: editor/setpreview.ui:160 editor/setpreview.ui:320
-#, kde-format
-msgctxt "color-kcm-set-preview"
-msgid "positive"
-msgstr "positif"
-
-#. i18n: ectx: property (toolTip), widget (QWidget, widgetFore8)
-#: editor/setpreview.ui:170
-#, kde-format
-msgid "Hover on Normal Background"
-msgstr "Melayang di Latarbelakang Normal"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore8)
-#: editor/setpreview.ui:176
-#, kde-format
-msgctxt "color-kcm-set-preview"
-msgid "hover"
-msgstr "melayang"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelBack3)
-#: editor/setpreview.ui:211
-#, kde-format
-msgid ""
-"Link Text on Link Background\n"
-"(Note: Link Background is derived from Link Text and cannot be separately "
-"configured at this time)"
-msgstr ""
-"Teks Tautan di Latarbelakang Tautan\n"
-"(Catatan: Latarbelakang Tautan diturunkan dari Teks Tautan dan tak dapat "
-"dikonfigurasi secara terpisah saat ini)"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelBack4)
-#: editor/setpreview.ui:233
-#, kde-format
-msgid ""
-"Visited Text on Visited Background\n"
-"(Note: Visited Background is derived from Visited Text and cannot be "
-"separately configured at this time)"
-msgstr ""
-"Teks Dikunjungi di Latarbelakang Dikunjungi\n"
-"(Catatan: Latarbelakang Dikunjungi diturunkan dari Teks Dikunjungi dan tidak "
-"dapat dikonfigurasi secara terpisah saat ini)"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelBack2)
-#: editor/setpreview.ui:250
-#, kde-format
-msgid ""
-"Active Text on Active Background\n"
-"(Note: Active Background is derived from Active Text and cannot be "
-"separately configured at this time)"
-msgstr ""
-"Teks Aktif di Latarbelakang Aktif\n"
-"(Catatan: Latarbelakang Aktif diturunkan dari Teks Aktif dan tak dapat "
-"dikonfigurasi secara terpisah saat ini)"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelBack1)
-#: editor/setpreview.ui:266
-#, kde-format
-msgid "Inactive Text on Alternate Background"
-msgstr "Teks Tidak Aktif di Latarbelakang Alternatif"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelBack1)
-#: editor/setpreview.ui:269
-#, kde-format
-msgctxt "color-kcm-set-preview"
-msgid "alternate"
-msgstr "alternatif"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelBack5)
-#: editor/setpreview.ui:283
-#, kde-format
-msgid ""
-"Negative Text on Negative Background\n"
-"(Note: Negative Background is derived from Negative Text and cannot be "
-"separately configured at this time)"
-msgstr ""
-"Teks Negatif di Latarbelakang Negatif\n"
-"(Catatan: Latarbelakang Negatif diturunkan dari Teks Negatif dan tak dapat "
-"dikonfigurasi secara terpisah saat ini)"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelBack6)
-#: editor/setpreview.ui:300
-#, kde-format
-msgid ""
-"Neutral Text on Neutral Background\n"
-"(Note: Neutral Background is derived from Neutral Text and cannot be "
-"separately configured at this time)"
-msgstr ""
-"Teks Netral di Latarbelakang Netral\n"
-"(Catatan: Latarbelakang Netral diturunkan dari Teks Netral dan tak dapat "
-"dikonfigurasi secara terpisah saat ini)"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelBack7)
-#: editor/setpreview.ui:317
-#, kde-format
-msgid ""
-"Positive Text on Positive Background\n"
-"(Note: Positive Background is derived from Positive Text and cannot be "
-"separately configured at this time)"
-msgstr ""
-"Teks Positif di Latarbelakang Positif\n"
-"(Catatan: Latarbelakang Positif diturunkan dari Teks Positif dan tak dapat "
-"dikonfigurasi secara terpisah saat ini)"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelFore9)
-#: editor/setpreview.ui:333
-#, kde-format
-msgid "Focus on Normal Background"
-msgstr "Fokus di Latarbelakang Normal"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore9)
-#: editor/setpreview.ui:336
-#, kde-format
-msgctxt "color-kcm-set-preview"
-msgid "focus"
-msgstr "fokus"
 
 #: package/contents/ui/main.qml:23
 #, kde-format
@@ -1373,6 +474,456 @@ msgstr "Di sistemmu, kamu memiliki skema warna berikut ini:"
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr "* %1 (skema warna saat ini)"
+
+#~ msgid "Color scheme name"
+#~ msgstr "Nama skema warna"
+
+#~ msgid "Accent color"
+#~ msgstr "Warna aksen"
+
+#~ msgid ""
+#~ "The last used custom accent color before user switched to wallpaper "
+#~ "generated color or default color"
+#~ msgstr ""
+#~ "Warna aksen kuston yang terakhir digunakan sebelum pengguna beralih ke "
+#~ "warna yang dihasilkan wallpaper atau warna baku"
+
+#~ msgid "Whether accent color from wallpaper should be applied"
+#~ msgstr "Apakah warna aksen dari wallpaper akan diterapkan"
+
+#~ msgid "Window text on Window Background"
+#~ msgstr "Teks jendela di Latarbelakang Jendela"
+
+#~ msgctxt "color-kcm-preview"
+#~ msgid "Window text"
+#~ msgstr "Teks jendela"
+
+#~ msgid "Button text on Button Background"
+#~ msgstr "Teks tombol di Latarbelakang Tombol"
+
+#~ msgctxt "color-kcm-preview"
+#~ msgid "Push Button"
+#~ msgstr "Tombol Dorong"
+
+#~ msgid "Selection Normal Text against Selection Normal Background"
+#~ msgstr "Pemilihan Teks Normal kontra Pemilihan Latarbelakang Normal"
+
+#~ msgctxt "color-kcm-preview"
+#~ msgid "Selected text"
+#~ msgstr "Teks terpilih"
+
+#~ msgid "Selection Link Text against Selection Normal Background"
+#~ msgstr "Pemilihan Teks Tautan kontra Pemilihan Latarbelakang Normal"
+
+#~ msgctxt "color-kcm-preview"
+#~ msgid "link"
+#~ msgstr "tautan"
+
+#~ msgid "Selection Visited Text against Selection Normal Background"
+#~ msgstr "Pemilihan Teks Dikunjungi kontra Pemilihan Latarbelakang Normal"
+
+#~ msgctxt "color-kcm-preview"
+#~ msgid "visited"
+#~ msgstr "dikunjungi"
+
+#~ msgid "Selection Active Text against Selection Normal Background"
+#~ msgstr "Pemilihan Teks Aktif kontra Pemilihan Latarbelakang Normal"
+
+#~ msgctxt "color-kcm-preview"
+#~ msgid "a"
+#~ msgstr "a"
+
+#~ msgid "Selection Inactive Text against Selection Normal Background"
+#~ msgstr "Pemilihan Teks Tidak Aktif kontra Pemilihan Latarbelakang Normal"
+
+#~ msgctxt "color-kcm-preview"
+#~ msgid "i"
+#~ msgstr "i"
+
+#~ msgid "Selection Negative Text against Selection Normal Background"
+#~ msgstr "Pemilihan Teks Negatif kontra Pemilihan Latarbelakang Normal"
+
+#~ msgctxt "color-kcm-preview"
+#~ msgid "!"
+#~ msgstr "!"
+
+#~ msgid "Selection Neutral Text against Selection Normal Background"
+#~ msgstr "Pemilihan Teks Netral kontra Pemilihan Latarbelakang Normal"
+
+#~ msgctxt "color-kcm-preview"
+#~ msgid "="
+#~ msgstr "="
+
+#~ msgid "Selection Positive Text against Selection Normal Background"
+#~ msgstr "Pemilihan Teks Positif kontra Pemilihan Latarbelakang Normal"
+
+#~ msgctxt "color-kcm-preview"
+#~ msgid "+"
+#~ msgstr "+"
+
+#~ msgid "View Normal Text against View Normal Background"
+#~ msgstr "Tampilan Teks Normal kontra Tampilan Latarbelakang Normal"
+
+#~ msgctxt "color-kcm-preview"
+#~ msgid "Normal text"
+#~ msgstr "Teks normal"
+
+#~ msgid "View Link Text against View Normal Background"
+#~ msgstr "Tampilan Teks Tautan kontra Tampilan Latarbelakang Normal"
+
+#~ msgid "View Visited Text against View Normal Background"
+#~ msgstr "Tampilan Teks Dikunjungi kontra Tampilan Latarbelakang Normal"
+
+#~ msgid "View Active Text against View Normal Background"
+#~ msgstr "Tampilan Teks Aktif kontra Tampilan Latarbelakang Normal"
+
+#~ msgid "View Inactive Text against View Normal Background"
+#~ msgstr "Tampilan Teks Tidak Aktif kontra Tampilan Latarbelakang Normal"
+
+#~ msgid "View Negative Text against View Normal Background"
+#~ msgstr "Tampilan Teks Negatif kontra Tampilan Latarbelakang Normal"
+
+#~ msgid "View Neutral Text against View Normal Background"
+#~ msgstr "Tampilan Teks Netral kontra Tampilan Latarbelakang Normal"
+
+#~ msgid "View Positive Text against View Normal Background"
+#~ msgstr "Tampilan Teks Positif kontra Tampilan Latarbelakang Normal"
+
+#~ msgid "Color set:"
+#~ msgstr "Perangkat warna:"
+
+#~ msgid "Colorset to view/modify"
+#~ msgstr "Perangkat warna untuk ditampilkan/dimodifikasi"
+
+#~ msgctxt "color-sets"
+#~ msgid "Common Colors"
+#~ msgstr "Warna Umum"
+
+#~ msgctxt "color-sets"
+#~ msgid "View"
+#~ msgstr "Tampilan"
+
+#~ msgctxt "color-sets"
+#~ msgid "Window"
+#~ msgstr "Jendela"
+
+#~ msgctxt "color-sets"
+#~ msgid "Button"
+#~ msgstr "Tombol"
+
+#~ msgctxt "color-sets"
+#~ msgid "Selection"
+#~ msgstr "Pemilihan"
+
+#~ msgctxt "color-sets"
+#~ msgid "Tooltip"
+#~ msgstr "Tip Alat"
+
+#~ msgctxt "color-sets"
+#~ msgid "Complementary"
+#~ msgstr "Komplementer"
+
+#~ msgctxt "color-sets"
+#~ msgid "Header"
+#~ msgstr "Tajuk"
+
+#~ msgid "New Row"
+#~ msgstr "Baris Baru"
+
+#~ msgid "0"
+#~ msgstr "0"
+
+#~ msgid "1"
+#~ msgstr "1"
+
+#~ msgid "View Background"
+#~ msgstr "Tampilan Latarbelakang"
+
+#~ msgid "View Text"
+#~ msgstr "Tampilan Teks"
+
+#~ msgid "Window Background"
+#~ msgstr "Latarbelakang Jendela"
+
+#~ msgid "Window Text"
+#~ msgstr "Teks Jendela"
+
+#~ msgid "Button Background"
+#~ msgstr "Latarbelakang Tombol"
+
+#~ msgid "Button Text"
+#~ msgstr "Teks Tombol"
+
+#~ msgid "Selection Background"
+#~ msgstr "Pemilihan Latarbelakang"
+
+#~ msgid "Selection Text"
+#~ msgstr "Pemilihan Teks"
+
+#~ msgid "Selection Inactive Text"
+#~ msgstr "Pemilihan Teks Tidak Aktif"
+
+#~ msgid "Tooltip Background"
+#~ msgstr "Latarbelakang Tip Alat"
+
+#~ msgid "Tooltip Text"
+#~ msgstr "Teks Tip Alat"
+
+#~ msgid "Active Titlebar"
+#~ msgstr "Bilah Judul Aktif"
+
+#~ msgid "Active Titlebar Text"
+#~ msgstr "Teks Bilah Judul Aktif"
+
+#~ msgid "Active Titlebar Secondary"
+#~ msgstr "Bilah Judul Aktif Sekunder"
+
+#~ msgid "Inactive Titlebar"
+#~ msgstr "Bilah Judul Tak Aktif"
+
+#~ msgid "Inactive Titlebar Text"
+#~ msgstr "Teks Bilah Judul Tak Aktif"
+
+#~ msgid "Inactive Titlebar Secondary"
+#~ msgstr "Sekunder Bilah Judul Tak Aktif"
+
+#~ msgid "Color:"
+#~ msgstr "Warna:"
+
+#~ msgid "Intensity:"
+#~ msgstr "Intensitas:"
+
+#~ msgid "Disabled color effect type"
+#~ msgstr "Tipe efek warna dinonfungsikan"
+
+#~ msgctxt "no disabled color effect"
+#~ msgid "None"
+#~ msgstr "Nihil"
+
+#~ msgctxt "disabled color effect"
+#~ msgid "Desaturate"
+#~ msgstr "Desaturasi"
+
+#~ msgctxt "disabled color effect"
+#~ msgid "Fade"
+#~ msgstr "Lesap"
+
+#~ msgctxt "disabled color effect"
+#~ msgid "Tint"
+#~ msgstr "Warna"
+
+#~ msgid "Disabled intensity effect type"
+#~ msgstr "Tipe efek intensitas dinonfungsikan"
+
+#~ msgctxt "no disabled intensity effect"
+#~ msgid "None"
+#~ msgstr "Nihil"
+
+#~ msgctxt "disabled intensity effect"
+#~ msgid "Shade"
+#~ msgstr "Corak"
+
+#~ msgctxt "disabled intensity effect"
+#~ msgid "Darken"
+#~ msgstr "Pergelap"
+
+#~ msgctxt "disabled intensity effect"
+#~ msgid "Lighten"
+#~ msgstr "Perterang"
+
+#~ msgid "Contrast:"
+#~ msgstr "Kontras:"
+
+#~ msgid "Disabled color effect amount"
+#~ msgstr "Jumlah efek warna dinonfungsikan"
+
+#~ msgid "Disabled intensity effect amount"
+#~ msgstr "Jumlah efek intensitas dinonfungsikan"
+
+#~ msgid "Disabled color"
+#~ msgstr "Warna dinonfungsikan"
+
+#~ msgid "Disabled contrast type"
+#~ msgstr "Tipe kontras dinonfungsikan"
+
+#~ msgctxt "no disabled contrast"
+#~ msgid "None"
+#~ msgstr "Nihil"
+
+#~ msgctxt "disabled contrast"
+#~ msgid "Fade"
+#~ msgstr "Lesap"
+
+#~ msgctxt "disabled contrast"
+#~ msgid "Tint"
+#~ msgstr "Warna"
+
+#~ msgid "Disabled contrast amount"
+#~ msgstr "Jumlah kontras dinonfungsikan"
+
+#~ msgid "Apply &effects to inactive windows"
+#~ msgstr "Terapkan &efek untuk jendela tidak aktif"
+
+#~ msgid "Use different colors for in&active selections"
+#~ msgstr "Gunakan warna yang berbeda untuk pemilihan tidak aktif"
+
+#~ msgid "Shade sorted column &in lists"
+#~ msgstr "Corak kolom yang diurutkan d&i daftar"
+
+#~ msgid "Tint all colors with accent color"
+#~ msgstr "Warnai semua warna dengan warna aksen"
+
+#~ msgid "Make window titlebars a&ccent-colored"
+#~ msgstr "Jadikan bilah judul jendela berwarna aksen"
+
+#~ msgid "Tint strength:"
+#~ msgstr "Kekuatan pewarnaan:"
+
+#~ msgid "Shading of frames and lighting (\"3D\") effects"
+#~ msgstr "Pencorakan efek bingkai dan pencahayaan (\"3D\")"
+
+#~ msgid "Shading"
+#~ msgstr "Pencorakan"
+
+#~ msgid "Maximum"
+#~ msgstr "Maksimum"
+
+#~ msgid "Minimum"
+#~ msgstr "Minimum"
+
+#~ msgid "Contrast"
+#~ msgstr "Kontras"
+
+#~ msgid "Normal Text on Normal Background"
+#~ msgstr "Teks Normal di Latarbelakang Normal"
+
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "normal"
+#~ msgstr "normal"
+
+#~ msgid "Link Text on Normal Background"
+#~ msgstr "Teks Tautan di Latarbelakang Normal"
+
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "link"
+#~ msgstr "tautan"
+
+#~ msgid "Visited Text on Normal Background"
+#~ msgstr "Teks Dikunjungi di Latarbelakang Normal"
+
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "visited"
+#~ msgstr "dikunjungi"
+
+#~ msgid "Active Text on Normal Background"
+#~ msgstr "Teks Aktif di Latarbelakang Normal"
+
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "active"
+#~ msgstr "aktif"
+
+#~ msgid "Inactive Text on Normal Background"
+#~ msgstr "Teks Tidak Aktif di Latarbelakang Normal"
+
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "inactive"
+#~ msgstr "tidak aktif"
+
+#~ msgid "Negative Text on Normal Background"
+#~ msgstr "Teks Negatif di Latarbelakang Normal"
+
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "negative"
+#~ msgstr "negatif"
+
+#~ msgid "Neutral Text on Normal Background"
+#~ msgstr "Teks Netral di Latarbelakang Normal"
+
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "neutral"
+#~ msgstr "netral"
+
+#~ msgid "Positive Text on Normal Background"
+#~ msgstr "Teks Positif di Latarbelakang Normal"
+
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "positive"
+#~ msgstr "positif"
+
+#~ msgid "Hover on Normal Background"
+#~ msgstr "Melayang di Latarbelakang Normal"
+
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "hover"
+#~ msgstr "melayang"
+
+#~ msgid ""
+#~ "Link Text on Link Background\n"
+#~ "(Note: Link Background is derived from Link Text and cannot be separately "
+#~ "configured at this time)"
+#~ msgstr ""
+#~ "Teks Tautan di Latarbelakang Tautan\n"
+#~ "(Catatan: Latarbelakang Tautan diturunkan dari Teks Tautan dan tak dapat "
+#~ "dikonfigurasi secara terpisah saat ini)"
+
+#~ msgid ""
+#~ "Visited Text on Visited Background\n"
+#~ "(Note: Visited Background is derived from Visited Text and cannot be "
+#~ "separately configured at this time)"
+#~ msgstr ""
+#~ "Teks Dikunjungi di Latarbelakang Dikunjungi\n"
+#~ "(Catatan: Latarbelakang Dikunjungi diturunkan dari Teks Dikunjungi dan "
+#~ "tidak dapat dikonfigurasi secara terpisah saat ini)"
+
+#~ msgid ""
+#~ "Active Text on Active Background\n"
+#~ "(Note: Active Background is derived from Active Text and cannot be "
+#~ "separately configured at this time)"
+#~ msgstr ""
+#~ "Teks Aktif di Latarbelakang Aktif\n"
+#~ "(Catatan: Latarbelakang Aktif diturunkan dari Teks Aktif dan tak dapat "
+#~ "dikonfigurasi secara terpisah saat ini)"
+
+#~ msgid "Inactive Text on Alternate Background"
+#~ msgstr "Teks Tidak Aktif di Latarbelakang Alternatif"
+
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "alternate"
+#~ msgstr "alternatif"
+
+#~ msgid ""
+#~ "Negative Text on Negative Background\n"
+#~ "(Note: Negative Background is derived from Negative Text and cannot be "
+#~ "separately configured at this time)"
+#~ msgstr ""
+#~ "Teks Negatif di Latarbelakang Negatif\n"
+#~ "(Catatan: Latarbelakang Negatif diturunkan dari Teks Negatif dan tak "
+#~ "dapat dikonfigurasi secara terpisah saat ini)"
+
+#~ msgid ""
+#~ "Neutral Text on Neutral Background\n"
+#~ "(Note: Neutral Background is derived from Neutral Text and cannot be "
+#~ "separately configured at this time)"
+#~ msgstr ""
+#~ "Teks Netral di Latarbelakang Netral\n"
+#~ "(Catatan: Latarbelakang Netral diturunkan dari Teks Netral dan tak dapat "
+#~ "dikonfigurasi secara terpisah saat ini)"
+
+#~ msgid ""
+#~ "Positive Text on Positive Background\n"
+#~ "(Note: Positive Background is derived from Positive Text and cannot be "
+#~ "separately configured at this time)"
+#~ msgstr ""
+#~ "Teks Positif di Latarbelakang Positif\n"
+#~ "(Catatan: Latarbelakang Positif diturunkan dari Teks Positif dan tak "
+#~ "dapat dikonfigurasi secara terpisah saat ini)"
+
+#~ msgid "Focus on Normal Background"
+#~ msgstr "Fokus di Latarbelakang Normal"
+
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "focus"
+#~ msgstr "fokus"
 
 #~ msgid "Apply a&ccent color to active window titlebars"
 #~ msgstr "Terapkan a&ksen warna untuk mengaktifkan bilah judul window"

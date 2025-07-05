@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-17 00:48+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2019-10-06 20:59+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -35,36 +35,6 @@ msgstr ""
 #| msgid "Open File Manager..."
 msgid "Open in File Manager"
 msgstr "Кушодани мудири файлҳо..."
-
-#. i18n: ectx: label, entry (minimumSpace), group (General)
-#: freespacenotifier.kcfg:9
-#, kde-format
-msgid "Minimum free space before user starts being notified."
-msgstr "Ҳадди ақали фазои озод пеш аз корбар огоҳиҳоро қабул мекунад."
-
-#. i18n: ectx: label, entry (enableNotification), group (General)
-#: freespacenotifier.kcfg:15
-#, kde-format
-msgid "Is the free space notification enabled."
-msgstr "Огоҳӣ дар бораи фазои озоди боқимонда фаъол аст"
-
-#. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableNotification)
-#: freespacenotifier_prefs_base.ui:17
-#, kde-format
-msgid "Enable low disk space warning"
-msgstr "Фаъол кардани огоҳӣ барои фазои озоди боқимонда"
-
-#. i18n: ectx: property (text), widget (QLabel, label_minimumSpace)
-#: freespacenotifier_prefs_base.ui:27
-#, kde-format
-msgid "Warn when free space is below:"
-msgstr "Ҳаҷми фазои озоди боқимонда барои огоҳонидан:"
-
-#. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpace)
-#: freespacenotifier_prefs_base.ui:37
-#, kde-format
-msgid " MiB"
-msgstr "МБ"
 
 #: module.cpp:37
 #, fuzzy, kde-format
@@ -101,6 +71,21 @@ msgstr ""
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"
 msgstr "Умумӣ"
+
+#~ msgid "Minimum free space before user starts being notified."
+#~ msgstr "Ҳадди ақали фазои озод пеш аз корбар огоҳиҳоро қабул мекунад."
+
+#~ msgid "Is the free space notification enabled."
+#~ msgstr "Огоҳӣ дар бораи фазои озоди боқимонда фаъол аст"
+
+#~ msgid "Enable low disk space warning"
+#~ msgstr "Фаъол кардани огоҳӣ барои фазои озоди боқимонда"
+
+#~ msgid "Warn when free space is below:"
+#~ msgstr "Ҳаҷми фазои озоди боқимонда барои огоҳонидан:"
+
+#~ msgid " MiB"
+#~ msgstr "МБ"
 
 #~ msgid "Low Disk Space"
 #~ msgstr "Фазои диск кифоя нест"

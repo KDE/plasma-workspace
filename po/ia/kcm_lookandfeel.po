@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2022-12-16 22:41+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -94,12 +94,6 @@ msgstr "nomine de pacchetto"
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
 msgstr "Refixa le disposition de scriptorio de Plasma"
-
-#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
-#: lookandfeelsettings.kcfg:9
-#, kde-format
-msgid "Global look and feel"
-msgstr "Apparentia e semblantia global"
 
 #: package/contents/ui/main.qml:21
 #, kde-format
@@ -264,6 +258,9 @@ msgid ""
 msgstr ""
 "Iste Thema Global non forni ulle preferentias applicabile. Pro favor tu "
 "continge le mantenitorde iste Thema Global proque il poterea esser rupte."
+
+#~ msgid "Global look and feel"
+#~ msgstr "Apparentia e semblantia global"
 
 #~ msgid ""
 #~ "Your current layout and configuration of panels, desktop widgets, and "

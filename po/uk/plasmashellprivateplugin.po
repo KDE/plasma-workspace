@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-31 02:25+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2023-05-28 19:59+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -139,34 +139,6 @@ msgstr "Тримати відкритим"
 #, kde-format
 msgid "Configure…"
 msgstr "Налаштувати…"
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:10
-#, kde-format
-msgid "Screen lock enabled"
-msgstr "Блокування екрана увімкнено"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:11
-#, kde-format
-msgid "Sets whether the screen will be locked after the specified time."
-msgstr ""
-"Встановлює, чи буде заблоковано екран, якщо реєструватиметься бездіяльність "
-"протягом вказаного часу."
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:16
-#, kde-format
-msgid "Screen saver timeout"
-msgstr "Очікування зберігача екрана"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:17
-#, kde-format
-msgid "Sets the minutes after which the screen is locked."
-msgstr ""
-"Визначає проміжок часу бездіяльності у хвилинах, перш ніж буде заблоковано "
-"екран."
 
 #: sessionsprivate/sessionsmodel.cpp:235 sessionsprivate/sessionsmodel.cpp:239
 #, kde-format
@@ -336,6 +308,22 @@ msgstr "Отримати нові віджети Плазми"
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "Встановити віджет з локального файла…"
+
+#~ msgid "Screen lock enabled"
+#~ msgstr "Блокування екрана увімкнено"
+
+#~ msgid "Sets whether the screen will be locked after the specified time."
+#~ msgstr ""
+#~ "Встановлює, чи буде заблоковано екран, якщо реєструватиметься "
+#~ "бездіяльність протягом вказаного часу."
+
+#~ msgid "Screen saver timeout"
+#~ msgstr "Очікування зберігача екрана"
+
+#~ msgid "Sets the minutes after which the screen is locked."
+#~ msgstr ""
+#~ "Визначає проміжок часу бездіяльності у хвилинах, перш ніж буде "
+#~ "заблоковано екран."
 
 #~ msgid "&Execute"
 #~ msgstr "&Виконати"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-29 02:56+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2011-07-01 21:22+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@gmail.com>\n"
 "Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
@@ -1616,12 +1616,6 @@ msgstr "Prapapar Rentetan"
 msgid "Please enter new string:"
 msgstr "Masukkan rentetan baru:"
 
-#. i18n: ectx: ToolBar (mainToolBar)
-#: viewpart/kfontviewpart.rc:4
-#, kde-format
-msgid "&Main Toolbar"
-msgstr "Bar Alatan Uta&ma"
-
 #: viewpart/PreviewSelectAction.cpp:13
 #, fuzzy, kde-format
 msgid "Preview Type"
@@ -2448,6 +2442,9 @@ msgstr ""
 #: viewpart/UnicodeScripts.h:80
 msgid "Yi"
 msgstr ""
+
+#~ msgid "&Main Toolbar"
+#~ msgstr "Bar Alatan Uta&ma"
 
 #~ msgid "Print..."
 #~ msgstr "Cetak..."

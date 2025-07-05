@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-31 02:25+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2023-07-25 23:34+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -133,30 +133,6 @@ msgstr "열린 상태로 유지"
 #, kde-format
 msgid "Configure…"
 msgstr "설정…"
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:10
-#, kde-format
-msgid "Screen lock enabled"
-msgstr "화면 잠금 활성화됨"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:11
-#, kde-format
-msgid "Sets whether the screen will be locked after the specified time."
-msgstr "지정한 시간 이후 화면을 잠글 지 설정합니다."
-
-#. i18n: ectx: label, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:16
-#, kde-format
-msgid "Screen saver timeout"
-msgstr "화면 보호기 시간 제한"
-
-#. i18n: ectx: whatsthis, entry, group (Daemon)
-#: sessionsprivate/kscreenlockersettings.kcfg:17
-#, kde-format
-msgid "Sets the minutes after which the screen is locked."
-msgstr "화면 보호기를 시작할 시간을 분 단위로 설정합니다."
 
 #: sessionsprivate/sessionsmodel.cpp:235 sessionsprivate/sessionsmodel.cpp:239
 #, kde-format
@@ -326,6 +302,18 @@ msgstr "새 Plasma 위젯 다운로드"
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "로컬 파일에서 위젯 설치…"
+
+#~ msgid "Screen lock enabled"
+#~ msgstr "화면 잠금 활성화됨"
+
+#~ msgid "Sets whether the screen will be locked after the specified time."
+#~ msgstr "지정한 시간 이후 화면을 잠글 지 설정합니다."
+
+#~ msgid "Screen saver timeout"
+#~ msgstr "화면 보호기 시간 제한"
+
+#~ msgid "Sets the minutes after which the screen is locked."
+#~ msgstr "화면 보호기를 시작할 시간을 분 단위로 설정합니다."
 
 #~ msgid "&Execute"
 #~ msgstr "실행(&E)"

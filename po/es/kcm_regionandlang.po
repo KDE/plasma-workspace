@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_regionandlang\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-10 02:27+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2022-12-27 11:48+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -568,14 +568,8 @@ msgctxt "Phone Numbers"
 msgid "Phone number"
 msgstr "Número de teléfono"
 
-#: regionandlangsettingsbase.kcfg:18 regionandlangsettingsbase.kcfg:21
-#: regionandlangsettingsbase.kcfg:24 regionandlangsettingsbase.kcfg:27
-#: regionandlangsettingsbase.kcfg:30 regionandlangsettingsbase.kcfg:33
-#: regionandlangsettingsbase.kcfg:36 regionandlangsettingsbase.kcfg:39
-#: regionandlangsettingsbase.kcfg:42
-#, kde-format
-msgid "Inherit Language"
-msgstr "Heredar idioma"
+#~ msgid "Inherit Language"
+#~ msgstr "Heredar idioma"
 
 #~ msgctxt "@info:warning"
 #~ msgid ""

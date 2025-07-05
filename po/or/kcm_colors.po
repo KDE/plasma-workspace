@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-22 02:35+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2009-01-05 15:48+0530\n"
 "Last-Translator: Manoj Kumar Giri <mgiri@redhat.com>\n"
 "Language-Team: Oriya <oriya-it@googlegroups.com>\n"
@@ -61,34 +61,6 @@ msgstr ""
 #: colors.cpp:309
 #, kde-format
 msgid "Color scheme installed successfully."
-msgstr ""
-
-#. i18n: ectx: label, entry (colorScheme), group (General)
-#: colorssettings.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Save Color Scheme"
-msgid "Color scheme name"
-msgstr "ରଙ୍ଗ ଯୋଜନାକୁ ସଂରକ୍ଷଣ କରନ୍ତୁ"
-
-#. i18n: ectx: label, entry (accentColor), group (General)
-#: colorssettings.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Inactive color"
-msgid "Accent color"
-msgstr "ନିଷ୍କ୍ରିୟ ରଙ୍ଗ"
-
-#. i18n: ectx: label, entry (lastUsedCustomAccentColor), group (General)
-#: colorssettings.kcfg:17
-#, kde-format
-msgid ""
-"The last used custom accent color before user switched to wallpaper "
-"generated color or default color"
-msgstr ""
-
-#. i18n: ectx: label, entry (accentColorFromWallpaper), group (General)
-#: colorssettings.kcfg:21
-#, kde-format
-msgid "Whether accent color from wallpaper should be applied"
 msgstr ""
 
 #: editor/kcolorschemeeditor.cpp:25
@@ -151,247 +123,6 @@ msgstr ""
 msgid "Scheme not found, falling back to current one.\n"
 msgstr ""
 
-#. i18n: ectx: property (toolTip), widget (QLabel, label)
-#: editor/preview.ui:29
-#, fuzzy, kde-format
-#| msgid "Window Background"
-msgid "Window text on Window Background"
-msgstr "ୱିଣ୍ଡୋ ପୃଷ୍ଠଭୂମୀ"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: editor/preview.ui:32
-#, fuzzy, kde-format
-#| msgid "Window text"
-msgctxt "color-kcm-preview"
-msgid "Window text"
-msgstr "ୱିଣ୍ଡୋ ପାଠ୍ୟ"
-
-#. i18n: ectx: property (toolTip), widget (QPushButton, pushButton)
-#: editor/preview.ui:39
-#, fuzzy, kde-format
-#| msgid "Button Background"
-msgid "Button text on Button Background"
-msgstr "ବଟନ ପୃଷ୍ଠଭୂମୀ"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QPushButton, pushButton)
-#: editor/preview.ui:42
-#, fuzzy, kde-format
-#| msgid "Push Button"
-msgctxt "color-kcm-preview"
-msgid "Push Button"
-msgstr "ଚାପିବା ବଟନ"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection0)
-#: editor/preview.ui:123
-#, fuzzy, kde-format
-#| msgid "Normal Background"
-msgid "Selection Normal Text against Selection Normal Background"
-msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelSelection0)
-#: editor/preview.ui:126
-#, fuzzy, kde-format
-#| msgid "Selected text"
-msgctxt "color-kcm-preview"
-msgid "Selected text"
-msgstr "ବଚ୍ଛିତ ପାଠ୍ୟ"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection3)
-#: editor/preview.ui:138
-#, fuzzy, kde-format
-#| msgid "Normal Background"
-msgid "Selection Link Text against Selection Normal Background"
-msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelSelection3)
-#. i18n: ectx: property (text), widget (QLabel, labelView3)
-#: editor/preview.ui:141 editor/preview.ui:265
-#, fuzzy, kde-format
-#| msgid "link"
-msgctxt "color-kcm-preview"
-msgid "link"
-msgstr "ସଂଯୋଗ"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection4)
-#: editor/preview.ui:153
-#, fuzzy, kde-format
-#| msgid "Normal Background"
-msgid "Selection Visited Text against Selection Normal Background"
-msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelSelection4)
-#. i18n: ectx: property (text), widget (QLabel, labelView4)
-#: editor/preview.ui:156 editor/preview.ui:280
-#, fuzzy, kde-format
-#| msgid "visited"
-msgctxt "color-kcm-preview"
-msgid "visited"
-msgstr "ପରିଦର୍ଶିତ"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection2)
-#: editor/preview.ui:163
-#, fuzzy, kde-format
-#| msgid "Normal Background"
-msgid "Selection Active Text against Selection Normal Background"
-msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelSelection2)
-#. i18n: ectx: property (text), widget (QLabel, labelView2)
-#: editor/preview.ui:166 editor/preview.ui:290
-#, fuzzy, kde-format
-#| msgctxt "active (abbreviate)"
-#| msgid "a"
-msgctxt "color-kcm-preview"
-msgid "a"
-msgstr "a"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection1)
-#: editor/preview.ui:173
-#, fuzzy, kde-format
-#| msgid "Normal Background"
-msgid "Selection Inactive Text against Selection Normal Background"
-msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelSelection1)
-#. i18n: ectx: property (text), widget (QLabel, labelView1)
-#: editor/preview.ui:176 editor/preview.ui:300
-#, fuzzy, kde-format
-#| msgctxt "inactive (abbreviate)"
-#| msgid "i"
-msgctxt "color-kcm-preview"
-msgid "i"
-msgstr "i"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection5)
-#: editor/preview.ui:183
-#, fuzzy, kde-format
-#| msgid "Normal Background"
-msgid "Selection Negative Text against Selection Normal Background"
-msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelSelection5)
-#. i18n: ectx: property (text), widget (QLabel, labelView5)
-#: editor/preview.ui:186 editor/preview.ui:310
-#, fuzzy, kde-format
-#| msgid "!"
-msgctxt "color-kcm-preview"
-msgid "!"
-msgstr "!"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection6)
-#: editor/preview.ui:193
-#, fuzzy, kde-format
-#| msgid "Normal Background"
-msgid "Selection Neutral Text against Selection Normal Background"
-msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelSelection6)
-#. i18n: ectx: property (text), widget (QLabel, labelView6)
-#: editor/preview.ui:196 editor/preview.ui:320
-#, fuzzy, kde-format
-#| msgid "="
-msgctxt "color-kcm-preview"
-msgid "="
-msgstr "="
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelSelection7)
-#: editor/preview.ui:203
-#, fuzzy, kde-format
-#| msgid "Normal Background"
-msgid "Selection Positive Text against Selection Normal Background"
-msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelSelection7)
-#. i18n: ectx: property (text), widget (QLabel, labelView7)
-#: editor/preview.ui:206 editor/preview.ui:330
-#, fuzzy, kde-format
-#| msgid "+"
-msgctxt "color-kcm-preview"
-msgid "+"
-msgstr "+"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelView0)
-#: editor/preview.ui:247
-#, fuzzy, kde-format
-#| msgid "Normal Background"
-msgid "View Normal Text against View Normal Background"
-msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelView0)
-#: editor/preview.ui:250
-#, fuzzy, kde-format
-#| msgid "Normal text"
-msgctxt "color-kcm-preview"
-msgid "Normal text"
-msgstr "ସାଧାରଣ ପାଠ୍ୟ"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelView3)
-#: editor/preview.ui:262
-#, fuzzy, kde-format
-#| msgid "Normal Background"
-msgid "View Link Text against View Normal Background"
-msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelView4)
-#: editor/preview.ui:277
-#, fuzzy, kde-format
-#| msgid "Normal Background"
-msgid "View Visited Text against View Normal Background"
-msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelView2)
-#: editor/preview.ui:287
-#, fuzzy, kde-format
-#| msgid "Normal Background"
-msgid "View Active Text against View Normal Background"
-msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelView1)
-#: editor/preview.ui:297
-#, fuzzy, kde-format
-#| msgid "Normal Background"
-msgid "View Inactive Text against View Normal Background"
-msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelView5)
-#: editor/preview.ui:307
-#, fuzzy, kde-format
-#| msgid "Normal Background"
-msgid "View Negative Text against View Normal Background"
-msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelView6)
-#: editor/preview.ui:317
-#, fuzzy, kde-format
-#| msgid "Normal Background"
-msgid "View Neutral Text against View Normal Background"
-msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelView7)
-#: editor/preview.ui:327
-#, fuzzy, kde-format
-#| msgid "Normal Background"
-msgid "View Positive Text against View Normal Background"
-msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
-
 #: editor/scmeditorcolors.cpp:62 editor/scmeditorcolors.cpp:76
 #, kde-format
 msgid "Varies"
@@ -412,276 +143,50 @@ msgstr "ବୈକଳ୍ପିକ ପୃଷ୍ଠଭୂମି"
 msgid "Normal Text"
 msgstr "ସାଧାରଣ ପାଠ୍ୟ"
 
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:102 editor/scmeditorcolors.ui:303
+#: editor/scmeditorcolors.cpp:102
 #, kde-format
 msgid "Inactive Text"
 msgstr "ନିଷ୍କ୍ରିୟ ପାଠ୍ୟ"
 
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:103 editor/scmeditorcolors.ui:308
+#: editor/scmeditorcolors.cpp:103
 #, kde-format
 msgid "Active Text"
 msgstr "ସକ୍ରିୟ ପାଠ୍ୟ"
 
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:104 editor/scmeditorcolors.ui:313
+#: editor/scmeditorcolors.cpp:104
 #, kde-format
 msgid "Link Text"
 msgstr "ସଂଯୋଗ ପାଠ୍ୟ"
 
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:105 editor/scmeditorcolors.ui:318
+#: editor/scmeditorcolors.cpp:105
 #, kde-format
 msgid "Visited Text"
 msgstr "ପରିଦର୍ଶିତ ପାଠ୍ୟ"
 
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:106 editor/scmeditorcolors.ui:323
+#: editor/scmeditorcolors.cpp:106
 #, kde-format
 msgid "Negative Text"
 msgstr "ଋଣାତ୍ମକ ପାଠ୍ୟ"
 
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:107 editor/scmeditorcolors.ui:328
+#: editor/scmeditorcolors.cpp:107
 #, kde-format
 msgid "Neutral Text"
 msgstr "ନିରପେକ୍ଷ ପାଠ୍ୟ"
 
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:108 editor/scmeditorcolors.ui:333
+#: editor/scmeditorcolors.cpp:108
 #, kde-format
 msgid "Positive Text"
 msgstr "ଯୁକ୍ତାତ୍ମକ ପାଠ୍ୟ"
 
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:109 editor/scmeditorcolors.ui:338
+#: editor/scmeditorcolors.cpp:109
 #, kde-format
 msgid "Focus Decoration"
 msgstr "କେନ୍ଦ୍ରୀଭୂତ ସାଜସଜ୍ଜା"
 
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:110 editor/scmeditorcolors.ui:343
+#: editor/scmeditorcolors.cpp:110
 #, kde-format
 msgid "Hover Decoration"
 msgstr "ଆଖପାଖ ସାଜସଜ୍ଜା"
-
-#. i18n: ectx: property (text), widget (QLabel, label_7)
-#: editor/scmeditorcolors.ui:23
-#, fuzzy, kde-format
-#| msgid "Color Set:"
-msgid "Color set:"
-msgstr "ରଙ୍ଗ ସେଟ:"
-
-#. i18n: ectx: property (toolTip), widget (QComboBox, colorSet)
-#: editor/scmeditorcolors.ui:36
-#, kde-format
-msgid "Colorset to view/modify"
-msgstr "ଦେଖିବା/ପରିବର୍ତ୍ତନ କରିବା ପାଇଁ ରଙ୍ଗ ସେଟ"
-
-#. i18n: 'Common' here means &quot;frequent/not rare&quot;, not &quot;shared&quot;
-#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
-#: editor/scmeditorcolors.ui:40
-#, fuzzy, kde-format
-#| msgid "Common Colors"
-msgctxt "color-sets"
-msgid "Common Colors"
-msgstr "ସାଧାରଣ ରଙ୍ଗ"
-
-#. i18n: see plasma-workspace/kcms/colors/README.i18n
-#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
-#: editor/scmeditorcolors.ui:45
-#, fuzzy, kde-format
-#| msgid "View"
-msgctxt "color-sets"
-msgid "View"
-msgstr "ଦୃଶ୍ୟ"
-
-#. i18n: see plasma-workspace/kcms/colors/README.i18n
-#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
-#: editor/scmeditorcolors.ui:50
-#, fuzzy, kde-format
-#| msgid "Window"
-msgctxt "color-sets"
-msgid "Window"
-msgstr "ୱିଣ୍ଡୋ"
-
-#. i18n: see plasma-workspace/kcms/colors/README.i18n
-#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
-#: editor/scmeditorcolors.ui:55
-#, fuzzy, kde-format
-#| msgid "Button"
-msgctxt "color-sets"
-msgid "Button"
-msgstr "ବଟନ"
-
-#. i18n: see plasma-workspace/kcms/colors/README.i18n
-#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
-#: editor/scmeditorcolors.ui:60
-#, fuzzy, kde-format
-#| msgid "Selection"
-msgctxt "color-sets"
-msgid "Selection"
-msgstr "ଚୟନ"
-
-#. i18n: see plasma-workspace/kcms/colors/README.i18n
-#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
-#: editor/scmeditorcolors.ui:65
-#, fuzzy, kde-format
-#| msgid "Tooltip"
-msgctxt "color-sets"
-msgid "Tooltip"
-msgstr "ଉପକରଣ ସୂଚନା"
-
-#. i18n: see plasma-workspace/kcms/colors/README.i18n
-#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
-#: editor/scmeditorcolors.ui:70
-#, kde-format
-msgctxt "color-sets"
-msgid "Complementary"
-msgstr ""
-
-#. i18n: see plasma-workspace/kcms/colors/README.i18n
-#. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
-#: editor/scmeditorcolors.ui:75
-#, kde-format
-msgctxt "color-sets"
-msgid "Header"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:118 editor/scmeditorcolors.ui:123
-#: editor/scmeditorcolors.ui:128 editor/scmeditorcolors.ui:133
-#: editor/scmeditorcolors.ui:138 editor/scmeditorcolors.ui:143
-#: editor/scmeditorcolors.ui:148 editor/scmeditorcolors.ui:153
-#: editor/scmeditorcolors.ui:158 editor/scmeditorcolors.ui:163
-#: editor/scmeditorcolors.ui:168 editor/scmeditorcolors.ui:173
-#: editor/scmeditorcolors.ui:178 editor/scmeditorcolors.ui:183
-#: editor/scmeditorcolors.ui:188 editor/scmeditorcolors.ui:193
-#: editor/scmeditorcolors.ui:198 editor/scmeditorcolors.ui:203
-#: editor/scmeditorcolors.ui:208 editor/scmeditorcolors.ui:213
-#: editor/scmeditorcolors.ui:218 editor/scmeditorcolors.ui:223
-#: editor/scmeditorcolors.ui:228 editor/scmeditorcolors.ui:233
-#: editor/scmeditorcolors.ui:238 editor/scmeditorcolors.ui:243
-#, kde-format
-msgid "New Row"
-msgstr "ନୂତନ ଧାଡ଼ି"
-
-#. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:248
-#, kde-format
-msgid "0"
-msgstr "0"
-
-#. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:253
-#, kde-format
-msgid "1"
-msgstr "1"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:258
-#, kde-format
-msgid "View Background"
-msgstr "ପୃଷ୍ଠଭୂମୀ ଦେଖନ୍ତୁ"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:263
-#, kde-format
-msgid "View Text"
-msgstr "ପାଠ୍ୟ ଦେଖନ୍ତୁ"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:268
-#, kde-format
-msgid "Window Background"
-msgstr "ୱିଣ୍ଡୋ ପୃଷ୍ଠଭୂମୀ"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:273
-#, kde-format
-msgid "Window Text"
-msgstr "ୱିଣ୍ଡୋ ପାଠ୍ୟ"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:278
-#, kde-format
-msgid "Button Background"
-msgstr "ବଟନ ପୃଷ୍ଠଭୂମୀ"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:283
-#, kde-format
-msgid "Button Text"
-msgstr "ବଟନ ପାଠ୍ୟ"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:288
-#, kde-format
-msgid "Selection Background"
-msgstr "ଚୟନ ପୃଷ୍ଠଭୂମୀ"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:293
-#, kde-format
-msgid "Selection Text"
-msgstr "ଚୟନ ପାଠ୍ଯ"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:298
-#, kde-format
-msgid "Selection Inactive Text"
-msgstr "ଚୟନ ନିଷ୍କ୍ରିୟ ପାଠ୍ଯ"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:348
-#, kde-format
-msgid "Tooltip Background"
-msgstr "ଉପକରଣ ସୂଚନା ପୃଷ୍ଠଭୂମୀ"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:353
-#, kde-format
-msgid "Tooltip Text"
-msgstr "ଉପକରଣ ସୂଚନା ପାଠ୍ୟ"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:358
-#, kde-format
-msgid "Active Titlebar"
-msgstr "ସକ୍ରିୟ ଶୀର୍ଷକ ପଟି"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:363
-#, kde-format
-msgid "Active Titlebar Text"
-msgstr "ସକ୍ରିୟ ଶୀର୍ଷକ ପଟି ପାଠ୍ୟ"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:368
-#, fuzzy, kde-format
-#| msgid "Active Titlebar Text"
-msgid "Active Titlebar Secondary"
-msgstr "ସକ୍ରିୟ ଶୀର୍ଷକ ପଟି ପାଠ୍ୟ"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:373
-#, kde-format
-msgid "Inactive Titlebar"
-msgstr "ନିଷ୍କ୍ରିୟ ଉପକରଣ ପଟି"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:378
-#, kde-format
-msgid "Inactive Titlebar Text"
-msgstr "ନିଷ୍କ୍ରିୟ ଉପକରଣ ପଟି ପାଠ୍ୟ"
-
-#. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.ui:383
-#, fuzzy, kde-format
-#| msgid "Inactive Titlebar Text"
-msgid "Inactive Titlebar Secondary"
-msgstr "ନିଷ୍କ୍ରିୟ ଉପକରଣ ପଟି ପାଠ୍ୟ"
 
 #: editor/scmeditordialog.cpp:60
 #, kde-format
@@ -743,468 +248,6 @@ msgstr "ତ୍ରୁଟି"
 #| msgid "Inactive"
 msgid "Inactive"
 msgstr "ନିଷ୍କ୍ରିୟ"
-
-#. i18n: ectx: property (text), widget (QLabel, label_4)
-#: editor/scmeditoreffects.ui:17
-#, kde-format
-msgid "Color:"
-msgstr "ରଙ୍ଗ:"
-
-#. i18n: ectx: property (text), widget (QLabel, label_5)
-#: editor/scmeditoreffects.ui:27
-#, kde-format
-msgid "Intensity:"
-msgstr "ତୀବ୍ରତା:"
-
-#. i18n: ectx: property (toolTip), widget (QComboBox, colorBox)
-#: editor/scmeditoreffects.ui:37
-#, kde-format
-msgid "Disabled color effect type"
-msgstr "ନିଷ୍କ୍ରିୟ ରଙ୍ଗ ପ୍ରଭାବ ପ୍ରକାର"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
-#: editor/scmeditoreffects.ui:41
-#, fuzzy, kde-format
-#| msgid "None"
-msgctxt "no disabled color effect"
-msgid "None"
-msgstr "କିଛିନୁହଁ"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
-#: editor/scmeditoreffects.ui:46
-#, fuzzy, kde-format
-#| msgid "Desaturate"
-msgctxt "disabled color effect"
-msgid "Desaturate"
-msgstr "ଅପରିପୃକ୍ତ"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
-#: editor/scmeditoreffects.ui:51
-#, fuzzy, kde-format
-#| msgid "Fade"
-msgctxt "disabled color effect"
-msgid "Fade"
-msgstr "ବିବର୍ଣ୍ଣ ହେବା"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
-#: editor/scmeditoreffects.ui:56
-#, fuzzy, kde-format
-#| msgid "Tint"
-msgctxt "disabled color effect"
-msgid "Tint"
-msgstr "ହାଲୁକା ରଙ୍ଗ"
-
-#. i18n: ectx: property (toolTip), widget (QComboBox, intensityBox)
-#: editor/scmeditoreffects.ui:64
-#, kde-format
-msgid "Disabled intensity effect type"
-msgstr "ନିଷ୍କ୍ରିୟ ତୀବ୍ରତା ପ୍ରଭାବ ପ୍ରକାର"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
-#: editor/scmeditoreffects.ui:68
-#, fuzzy, kde-format
-#| msgid "None"
-msgctxt "no disabled intensity effect"
-msgid "None"
-msgstr "କିଛିନୁହଁ"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
-#: editor/scmeditoreffects.ui:73
-#, fuzzy, kde-format
-#| msgid "Shade"
-msgctxt "disabled intensity effect"
-msgid "Shade"
-msgstr "ଛାୟା"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
-#: editor/scmeditoreffects.ui:78
-#, fuzzy, kde-format
-#| msgid "Darken"
-msgctxt "disabled intensity effect"
-msgid "Darken"
-msgstr "ଅନ୍ଧାର"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
-#: editor/scmeditoreffects.ui:83
-#, fuzzy, kde-format
-#| msgid "Lighten"
-msgctxt "disabled intensity effect"
-msgid "Lighten"
-msgstr "ଆଲୋକିତ"
-
-#. i18n: ectx: property (text), widget (QLabel, label_6)
-#: editor/scmeditoreffects.ui:107
-#, kde-format
-msgid "Contrast:"
-msgstr "ପ୍ରଭେଦ:"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, colorSlider)
-#: editor/scmeditoreffects.ui:120
-#, kde-format
-msgid "Disabled color effect amount"
-msgstr "ନିଷ୍କ୍ରିୟ ତୀବ୍ରତା ପ୍ରଭାବ ପରିମାଣ"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, intensitySlider)
-#: editor/scmeditoreffects.ui:139
-#, kde-format
-msgid "Disabled intensity effect amount"
-msgstr "ନିଷ୍କ୍ରିୟ ତୀବ୍ରତା ପ୍ରଭାବ ପରିମାଣ"
-
-#. i18n: ectx: property (toolTip), widget (KColorButton, colorButton)
-#: editor/scmeditoreffects.ui:158
-#, kde-format
-msgid "Disabled color"
-msgstr "ନିଷ୍କ୍ରିୟ ରଙ୍ଗ"
-
-#. i18n: ectx: property (toolTip), widget (QComboBox, contrastBox)
-#: editor/scmeditoreffects.ui:181
-#, kde-format
-msgid "Disabled contrast type"
-msgstr "ନିଷ୍କ୍ରିୟ ପ୍ରଭେଦ ପ୍ରକାର"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
-#: editor/scmeditoreffects.ui:185
-#, fuzzy, kde-format
-#| msgid "None"
-msgctxt "no disabled contrast"
-msgid "None"
-msgstr "କିଛିନୁହଁ"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
-#: editor/scmeditoreffects.ui:190
-#, fuzzy, kde-format
-#| msgid "Fade"
-msgctxt "disabled contrast"
-msgid "Fade"
-msgstr "ବିବର୍ଣ୍ଣ ହେବା"
-
-#. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
-#: editor/scmeditoreffects.ui:195
-#, fuzzy, kde-format
-#| msgid "Tint"
-msgctxt "disabled contrast"
-msgid "Tint"
-msgstr "ହାଲୁକା ରଙ୍ଗ"
-
-#. i18n: ectx: property (toolTip), widget (QSlider, contrastSlider)
-#: editor/scmeditoreffects.ui:222
-#, kde-format
-msgid "Disabled contrast amount"
-msgstr "ନିଷ୍କ୍ରିୟ ପ୍ରଭେଦ ପରିମାଣ"
-
-#. i18n: ectx: property (text), widget (QCheckBox, useInactiveEffects)
-#: editor/scmeditoroptions.ui:17
-#, fuzzy, kde-format
-#| msgid "Apply inactive window color &effects"
-msgid "Apply &effects to inactive windows"
-msgstr "ନିଷ୍କ୍ରିୟ ୱିଣ୍ଡୋ ଗଙ୍ଗ ପ୍ରଭାବଗୁଡ଼ିକୁ ପ୍ରୟୋଗ କରନ୍ତୁ (&e)"
-
-#. i18n: ectx: property (text), widget (QCheckBox, inactiveSelectionEffect)
-#: editor/scmeditoroptions.ui:24
-#, kde-format
-msgid "Use different colors for in&active selections"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QCheckBox, shadeSortedColumn)
-#: editor/scmeditoroptions.ui:31
-#, kde-format
-msgid "Shade sorted column &in lists"
-msgstr "ତାଲିକାରେ ଛାୟା ସଜ୍ଜିତ ସ୍ତମ୍ଭ (&i)"
-
-#. i18n: ectx: property (text), widget (QCheckBox, tintColors)
-#: editor/scmeditoroptions.ui:38
-#, fuzzy, kde-format
-#| msgid "Inactive color"
-msgid "Tint all colors with accent color"
-msgstr "ନିଷ୍କ୍ରିୟ ରଙ୍ଗ"
-
-#. i18n: ectx: property (text), widget (QCheckBox, accentTitlebar)
-#: editor/scmeditoroptions.ui:45
-#, kde-format
-msgid "Make window titlebars a&ccent-colored"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, label)
-#: editor/scmeditoroptions.ui:52
-#, kde-format
-msgid "Tint strength:"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QGroupBox, groupBox_5)
-#: editor/scmeditoroptions.ui:69
-#, kde-format
-msgid "Shading of frames and lighting (\"3D\") effects"
-msgstr ""
-
-#. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
-#: editor/scmeditoroptions.ui:72
-#, fuzzy, kde-format
-#| msgid "Shade"
-msgid "Shading"
-msgstr "ଛାୟା"
-
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#: editor/scmeditoroptions.ui:97
-#, kde-format
-msgid "Maximum"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: editor/scmeditoroptions.ui:117
-#, kde-format
-msgid "Minimum"
-msgstr ""
-
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: editor/scmeditoroptions.ui:124
-#, kde-format
-msgid "Contrast"
-msgstr "ପ୍ରଭେଦ"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelFore0)
-#. i18n: ectx: property (toolTip), widget (QLabel, labelBack0)
-#: editor/setpreview.ui:35 editor/setpreview.ui:189
-#, fuzzy, kde-format
-#| msgid "Normal Background"
-msgid "Normal Text on Normal Background"
-msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore0)
-#. i18n: ectx: property (text), widget (QLabel, labelBack0)
-#: editor/setpreview.ui:38 editor/setpreview.ui:192
-#, fuzzy, kde-format
-#| msgid "normal"
-msgctxt "color-kcm-set-preview"
-msgid "normal"
-msgstr "ସାଧାରଣ"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelFore3)
-#: editor/setpreview.ui:56
-#, fuzzy, kde-format
-#| msgid "Normal Background"
-msgid "Link Text on Normal Background"
-msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore3)
-#. i18n: ectx: property (text), widget (QLabel, labelBack3)
-#: editor/setpreview.ui:59 editor/setpreview.ui:214
-#, fuzzy, kde-format
-#| msgid "link"
-msgctxt "color-kcm-set-preview"
-msgid "link"
-msgstr "ସଂଯୋଗ"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelFore4)
-#: editor/setpreview.ui:77
-#, fuzzy, kde-format
-#| msgid "Normal Background"
-msgid "Visited Text on Normal Background"
-msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore4)
-#. i18n: ectx: property (text), widget (QLabel, labelBack4)
-#: editor/setpreview.ui:80 editor/setpreview.ui:236
-#, fuzzy, kde-format
-#| msgid "visited"
-msgctxt "color-kcm-set-preview"
-msgid "visited"
-msgstr "ପରିଦର୍ଶିତ"
-
-#. i18n: ectx: property (toolTip), widget (QWidget, widgetFore2)
-#: editor/setpreview.ui:90
-#, fuzzy, kde-format
-#| msgid "Normal Background"
-msgid "Active Text on Normal Background"
-msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore2)
-#. i18n: ectx: property (text), widget (QLabel, labelBack2)
-#: editor/setpreview.ui:96 editor/setpreview.ui:253
-#, fuzzy, kde-format
-#| msgid "active"
-msgctxt "color-kcm-set-preview"
-msgid "active"
-msgstr "ସକ୍ରିୟ"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelFore1)
-#: editor/setpreview.ui:109
-#, fuzzy, kde-format
-#| msgid "Normal Background"
-msgid "Inactive Text on Normal Background"
-msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore1)
-#: editor/setpreview.ui:112
-#, fuzzy, kde-format
-#| msgid "inactive"
-msgctxt "color-kcm-set-preview"
-msgid "inactive"
-msgstr "ନିଷ୍କ୍ରିୟ"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelFore5)
-#: editor/setpreview.ui:125
-#, fuzzy, kde-format
-#| msgid "Normal Background"
-msgid "Negative Text on Normal Background"
-msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore5)
-#. i18n: ectx: property (text), widget (QLabel, labelBack5)
-#: editor/setpreview.ui:128 editor/setpreview.ui:286
-#, fuzzy, kde-format
-#| msgid "negative"
-msgctxt "color-kcm-set-preview"
-msgid "negative"
-msgstr "ଋଣାତ୍ମକ"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelFore6)
-#: editor/setpreview.ui:141
-#, fuzzy, kde-format
-#| msgid "Normal Background"
-msgid "Neutral Text on Normal Background"
-msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore6)
-#. i18n: ectx: property (text), widget (QLabel, labelBack6)
-#: editor/setpreview.ui:144 editor/setpreview.ui:303
-#, fuzzy, kde-format
-#| msgid "neutral"
-msgctxt "color-kcm-set-preview"
-msgid "neutral"
-msgstr "ନିରପେକ୍ଷ"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelFore7)
-#: editor/setpreview.ui:157
-#, fuzzy, kde-format
-#| msgid "Normal Background"
-msgid "Positive Text on Normal Background"
-msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore7)
-#. i18n: ectx: property (text), widget (QLabel, labelBack7)
-#: editor/setpreview.ui:160 editor/setpreview.ui:320
-#, fuzzy, kde-format
-#| msgid "positive"
-msgctxt "color-kcm-set-preview"
-msgid "positive"
-msgstr "ଯୁକ୍ତାତ୍ମକ"
-
-#. i18n: ectx: property (toolTip), widget (QWidget, widgetFore8)
-#: editor/setpreview.ui:170
-#, fuzzy, kde-format
-#| msgid "Normal Background"
-msgid "Hover on Normal Background"
-msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore8)
-#: editor/setpreview.ui:176
-#, fuzzy, kde-format
-#| msgid "hover"
-msgctxt "color-kcm-set-preview"
-msgid "hover"
-msgstr "ଆଖପାଖ"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelBack3)
-#: editor/setpreview.ui:211
-#, kde-format
-msgid ""
-"Link Text on Link Background\n"
-"(Note: Link Background is derived from Link Text and cannot be separately "
-"configured at this time)"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelBack4)
-#: editor/setpreview.ui:233
-#, kde-format
-msgid ""
-"Visited Text on Visited Background\n"
-"(Note: Visited Background is derived from Visited Text and cannot be "
-"separately configured at this time)"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelBack2)
-#: editor/setpreview.ui:250
-#, kde-format
-msgid ""
-"Active Text on Active Background\n"
-"(Note: Active Background is derived from Active Text and cannot be "
-"separately configured at this time)"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelBack1)
-#: editor/setpreview.ui:266
-#, fuzzy, kde-format
-#| msgid "Alternate Background"
-msgid "Inactive Text on Alternate Background"
-msgstr "ବୈକଳ୍ପିକ ପୃଷ୍ଠଭୂମି"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelBack1)
-#: editor/setpreview.ui:269
-#, fuzzy, kde-format
-#| msgid "alternate"
-msgctxt "color-kcm-set-preview"
-msgid "alternate"
-msgstr "ବୈକଳ୍ପିକ"
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelBack5)
-#: editor/setpreview.ui:283
-#, kde-format
-msgid ""
-"Negative Text on Negative Background\n"
-"(Note: Negative Background is derived from Negative Text and cannot be "
-"separately configured at this time)"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelBack6)
-#: editor/setpreview.ui:300
-#, kde-format
-msgid ""
-"Neutral Text on Neutral Background\n"
-"(Note: Neutral Background is derived from Neutral Text and cannot be "
-"separately configured at this time)"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelBack7)
-#: editor/setpreview.ui:317
-#, kde-format
-msgid ""
-"Positive Text on Positive Background\n"
-"(Note: Positive Background is derived from Positive Text and cannot be "
-"separately configured at this time)"
-msgstr ""
-
-#. i18n: ectx: property (toolTip), widget (QLabel, labelFore9)
-#: editor/setpreview.ui:333
-#, fuzzy, kde-format
-#| msgid "Normal Background"
-msgid "Focus on Normal Background"
-msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
-
-#. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
-#. i18n: ectx: property (text), widget (QLabel, labelFore9)
-#: editor/setpreview.ui:336
-#, fuzzy, kde-format
-#| msgid "focus"
-msgctxt "color-kcm-set-preview"
-msgid "focus"
-msgstr "କେନ୍ଦୀଭୂତ"
 
 #: package/contents/ui/main.qml:23
 #, kde-format
@@ -1437,6 +480,520 @@ msgstr ""
 #| msgid "Save the current color scheme"
 msgid " * %1 (current color scheme)"
 msgstr "ପ୍ରଚଳିତ ରଙ୍ଗ ଯୋଜନାକୁ ସଂରକ୍ଷଣ କରନ୍ତୁ"
+
+#, fuzzy
+#~| msgid "Save Color Scheme"
+#~ msgid "Color scheme name"
+#~ msgstr "ରଙ୍ଗ ଯୋଜନାକୁ ସଂରକ୍ଷଣ କରନ୍ତୁ"
+
+#, fuzzy
+#~| msgid "Inactive color"
+#~ msgid "Accent color"
+#~ msgstr "ନିଷ୍କ୍ରିୟ ରଙ୍ଗ"
+
+#, fuzzy
+#~| msgid "Window Background"
+#~ msgid "Window text on Window Background"
+#~ msgstr "ୱିଣ୍ଡୋ ପୃଷ୍ଠଭୂମୀ"
+
+#, fuzzy
+#~| msgid "Window text"
+#~ msgctxt "color-kcm-preview"
+#~ msgid "Window text"
+#~ msgstr "ୱିଣ୍ଡୋ ପାଠ୍ୟ"
+
+#, fuzzy
+#~| msgid "Button Background"
+#~ msgid "Button text on Button Background"
+#~ msgstr "ବଟନ ପୃଷ୍ଠଭୂମୀ"
+
+#, fuzzy
+#~| msgid "Push Button"
+#~ msgctxt "color-kcm-preview"
+#~ msgid "Push Button"
+#~ msgstr "ଚାପିବା ବଟନ"
+
+#, fuzzy
+#~| msgid "Normal Background"
+#~ msgid "Selection Normal Text against Selection Normal Background"
+#~ msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
+
+#, fuzzy
+#~| msgid "Selected text"
+#~ msgctxt "color-kcm-preview"
+#~ msgid "Selected text"
+#~ msgstr "ବଚ୍ଛିତ ପାଠ୍ୟ"
+
+#, fuzzy
+#~| msgid "Normal Background"
+#~ msgid "Selection Link Text against Selection Normal Background"
+#~ msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
+
+#, fuzzy
+#~| msgid "link"
+#~ msgctxt "color-kcm-preview"
+#~ msgid "link"
+#~ msgstr "ସଂଯୋଗ"
+
+#, fuzzy
+#~| msgid "Normal Background"
+#~ msgid "Selection Visited Text against Selection Normal Background"
+#~ msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
+
+#, fuzzy
+#~| msgid "visited"
+#~ msgctxt "color-kcm-preview"
+#~ msgid "visited"
+#~ msgstr "ପରିଦର୍ଶିତ"
+
+#, fuzzy
+#~| msgid "Normal Background"
+#~ msgid "Selection Active Text against Selection Normal Background"
+#~ msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
+
+#, fuzzy
+#~| msgctxt "active (abbreviate)"
+#~| msgid "a"
+#~ msgctxt "color-kcm-preview"
+#~ msgid "a"
+#~ msgstr "a"
+
+#, fuzzy
+#~| msgid "Normal Background"
+#~ msgid "Selection Inactive Text against Selection Normal Background"
+#~ msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
+
+#, fuzzy
+#~| msgctxt "inactive (abbreviate)"
+#~| msgid "i"
+#~ msgctxt "color-kcm-preview"
+#~ msgid "i"
+#~ msgstr "i"
+
+#, fuzzy
+#~| msgid "Normal Background"
+#~ msgid "Selection Negative Text against Selection Normal Background"
+#~ msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
+
+#, fuzzy
+#~| msgid "!"
+#~ msgctxt "color-kcm-preview"
+#~ msgid "!"
+#~ msgstr "!"
+
+#, fuzzy
+#~| msgid "Normal Background"
+#~ msgid "Selection Neutral Text against Selection Normal Background"
+#~ msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
+
+#, fuzzy
+#~| msgid "="
+#~ msgctxt "color-kcm-preview"
+#~ msgid "="
+#~ msgstr "="
+
+#, fuzzy
+#~| msgid "Normal Background"
+#~ msgid "Selection Positive Text against Selection Normal Background"
+#~ msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
+
+#, fuzzy
+#~| msgid "+"
+#~ msgctxt "color-kcm-preview"
+#~ msgid "+"
+#~ msgstr "+"
+
+#, fuzzy
+#~| msgid "Normal Background"
+#~ msgid "View Normal Text against View Normal Background"
+#~ msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
+
+#, fuzzy
+#~| msgid "Normal text"
+#~ msgctxt "color-kcm-preview"
+#~ msgid "Normal text"
+#~ msgstr "ସାଧାରଣ ପାଠ୍ୟ"
+
+#, fuzzy
+#~| msgid "Normal Background"
+#~ msgid "View Link Text against View Normal Background"
+#~ msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
+
+#, fuzzy
+#~| msgid "Normal Background"
+#~ msgid "View Visited Text against View Normal Background"
+#~ msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
+
+#, fuzzy
+#~| msgid "Normal Background"
+#~ msgid "View Active Text against View Normal Background"
+#~ msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
+
+#, fuzzy
+#~| msgid "Normal Background"
+#~ msgid "View Inactive Text against View Normal Background"
+#~ msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
+
+#, fuzzy
+#~| msgid "Normal Background"
+#~ msgid "View Negative Text against View Normal Background"
+#~ msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
+
+#, fuzzy
+#~| msgid "Normal Background"
+#~ msgid "View Neutral Text against View Normal Background"
+#~ msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
+
+#, fuzzy
+#~| msgid "Normal Background"
+#~ msgid "View Positive Text against View Normal Background"
+#~ msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
+
+#, fuzzy
+#~| msgid "Color Set:"
+#~ msgid "Color set:"
+#~ msgstr "ରଙ୍ଗ ସେଟ:"
+
+#~ msgid "Colorset to view/modify"
+#~ msgstr "ଦେଖିବା/ପରିବର୍ତ୍ତନ କରିବା ପାଇଁ ରଙ୍ଗ ସେଟ"
+
+#, fuzzy
+#~| msgid "Common Colors"
+#~ msgctxt "color-sets"
+#~ msgid "Common Colors"
+#~ msgstr "ସାଧାରଣ ରଙ୍ଗ"
+
+#, fuzzy
+#~| msgid "View"
+#~ msgctxt "color-sets"
+#~ msgid "View"
+#~ msgstr "ଦୃଶ୍ୟ"
+
+#, fuzzy
+#~| msgid "Window"
+#~ msgctxt "color-sets"
+#~ msgid "Window"
+#~ msgstr "ୱିଣ୍ଡୋ"
+
+#, fuzzy
+#~| msgid "Button"
+#~ msgctxt "color-sets"
+#~ msgid "Button"
+#~ msgstr "ବଟନ"
+
+#, fuzzy
+#~| msgid "Selection"
+#~ msgctxt "color-sets"
+#~ msgid "Selection"
+#~ msgstr "ଚୟନ"
+
+#, fuzzy
+#~| msgid "Tooltip"
+#~ msgctxt "color-sets"
+#~ msgid "Tooltip"
+#~ msgstr "ଉପକରଣ ସୂଚନା"
+
+#~ msgid "New Row"
+#~ msgstr "ନୂତନ ଧାଡ଼ି"
+
+#~ msgid "0"
+#~ msgstr "0"
+
+#~ msgid "1"
+#~ msgstr "1"
+
+#~ msgid "View Background"
+#~ msgstr "ପୃଷ୍ଠଭୂମୀ ଦେଖନ୍ତୁ"
+
+#~ msgid "View Text"
+#~ msgstr "ପାଠ୍ୟ ଦେଖନ୍ତୁ"
+
+#~ msgid "Window Background"
+#~ msgstr "ୱିଣ୍ଡୋ ପୃଷ୍ଠଭୂମୀ"
+
+#~ msgid "Window Text"
+#~ msgstr "ୱିଣ୍ଡୋ ପାଠ୍ୟ"
+
+#~ msgid "Button Background"
+#~ msgstr "ବଟନ ପୃଷ୍ଠଭୂମୀ"
+
+#~ msgid "Button Text"
+#~ msgstr "ବଟନ ପାଠ୍ୟ"
+
+#~ msgid "Selection Background"
+#~ msgstr "ଚୟନ ପୃଷ୍ଠଭୂମୀ"
+
+#~ msgid "Selection Text"
+#~ msgstr "ଚୟନ ପାଠ୍ଯ"
+
+#~ msgid "Selection Inactive Text"
+#~ msgstr "ଚୟନ ନିଷ୍କ୍ରିୟ ପାଠ୍ଯ"
+
+#~ msgid "Tooltip Background"
+#~ msgstr "ଉପକରଣ ସୂଚନା ପୃଷ୍ଠଭୂମୀ"
+
+#~ msgid "Tooltip Text"
+#~ msgstr "ଉପକରଣ ସୂଚନା ପାଠ୍ୟ"
+
+#~ msgid "Active Titlebar"
+#~ msgstr "ସକ୍ରିୟ ଶୀର୍ଷକ ପଟି"
+
+#~ msgid "Active Titlebar Text"
+#~ msgstr "ସକ୍ରିୟ ଶୀର୍ଷକ ପଟି ପାଠ୍ୟ"
+
+#, fuzzy
+#~| msgid "Active Titlebar Text"
+#~ msgid "Active Titlebar Secondary"
+#~ msgstr "ସକ୍ରିୟ ଶୀର୍ଷକ ପଟି ପାଠ୍ୟ"
+
+#~ msgid "Inactive Titlebar"
+#~ msgstr "ନିଷ୍କ୍ରିୟ ଉପକରଣ ପଟି"
+
+#~ msgid "Inactive Titlebar Text"
+#~ msgstr "ନିଷ୍କ୍ରିୟ ଉପକରଣ ପଟି ପାଠ୍ୟ"
+
+#, fuzzy
+#~| msgid "Inactive Titlebar Text"
+#~ msgid "Inactive Titlebar Secondary"
+#~ msgstr "ନିଷ୍କ୍ରିୟ ଉପକରଣ ପଟି ପାଠ୍ୟ"
+
+#~ msgid "Color:"
+#~ msgstr "ରଙ୍ଗ:"
+
+#~ msgid "Intensity:"
+#~ msgstr "ତୀବ୍ରତା:"
+
+#~ msgid "Disabled color effect type"
+#~ msgstr "ନିଷ୍କ୍ରିୟ ରଙ୍ଗ ପ୍ରଭାବ ପ୍ରକାର"
+
+#, fuzzy
+#~| msgid "None"
+#~ msgctxt "no disabled color effect"
+#~ msgid "None"
+#~ msgstr "କିଛିନୁହଁ"
+
+#, fuzzy
+#~| msgid "Desaturate"
+#~ msgctxt "disabled color effect"
+#~ msgid "Desaturate"
+#~ msgstr "ଅପରିପୃକ୍ତ"
+
+#, fuzzy
+#~| msgid "Fade"
+#~ msgctxt "disabled color effect"
+#~ msgid "Fade"
+#~ msgstr "ବିବର୍ଣ୍ଣ ହେବା"
+
+#, fuzzy
+#~| msgid "Tint"
+#~ msgctxt "disabled color effect"
+#~ msgid "Tint"
+#~ msgstr "ହାଲୁକା ରଙ୍ଗ"
+
+#~ msgid "Disabled intensity effect type"
+#~ msgstr "ନିଷ୍କ୍ରିୟ ତୀବ୍ରତା ପ୍ରଭାବ ପ୍ରକାର"
+
+#, fuzzy
+#~| msgid "None"
+#~ msgctxt "no disabled intensity effect"
+#~ msgid "None"
+#~ msgstr "କିଛିନୁହଁ"
+
+#, fuzzy
+#~| msgid "Shade"
+#~ msgctxt "disabled intensity effect"
+#~ msgid "Shade"
+#~ msgstr "ଛାୟା"
+
+#, fuzzy
+#~| msgid "Darken"
+#~ msgctxt "disabled intensity effect"
+#~ msgid "Darken"
+#~ msgstr "ଅନ୍ଧାର"
+
+#, fuzzy
+#~| msgid "Lighten"
+#~ msgctxt "disabled intensity effect"
+#~ msgid "Lighten"
+#~ msgstr "ଆଲୋକିତ"
+
+#~ msgid "Contrast:"
+#~ msgstr "ପ୍ରଭେଦ:"
+
+#~ msgid "Disabled color effect amount"
+#~ msgstr "ନିଷ୍କ୍ରିୟ ତୀବ୍ରତା ପ୍ରଭାବ ପରିମାଣ"
+
+#~ msgid "Disabled intensity effect amount"
+#~ msgstr "ନିଷ୍କ୍ରିୟ ତୀବ୍ରତା ପ୍ରଭାବ ପରିମାଣ"
+
+#~ msgid "Disabled color"
+#~ msgstr "ନିଷ୍କ୍ରିୟ ରଙ୍ଗ"
+
+#~ msgid "Disabled contrast type"
+#~ msgstr "ନିଷ୍କ୍ରିୟ ପ୍ରଭେଦ ପ୍ରକାର"
+
+#, fuzzy
+#~| msgid "None"
+#~ msgctxt "no disabled contrast"
+#~ msgid "None"
+#~ msgstr "କିଛିନୁହଁ"
+
+#, fuzzy
+#~| msgid "Fade"
+#~ msgctxt "disabled contrast"
+#~ msgid "Fade"
+#~ msgstr "ବିବର୍ଣ୍ଣ ହେବା"
+
+#, fuzzy
+#~| msgid "Tint"
+#~ msgctxt "disabled contrast"
+#~ msgid "Tint"
+#~ msgstr "ହାଲୁକା ରଙ୍ଗ"
+
+#~ msgid "Disabled contrast amount"
+#~ msgstr "ନିଷ୍କ୍ରିୟ ପ୍ରଭେଦ ପରିମାଣ"
+
+#, fuzzy
+#~| msgid "Apply inactive window color &effects"
+#~ msgid "Apply &effects to inactive windows"
+#~ msgstr "ନିଷ୍କ୍ରିୟ ୱିଣ୍ଡୋ ଗଙ୍ଗ ପ୍ରଭାବଗୁଡ଼ିକୁ ପ୍ରୟୋଗ କରନ୍ତୁ (&e)"
+
+#~ msgid "Shade sorted column &in lists"
+#~ msgstr "ତାଲିକାରେ ଛାୟା ସଜ୍ଜିତ ସ୍ତମ୍ଭ (&i)"
+
+#, fuzzy
+#~| msgid "Inactive color"
+#~ msgid "Tint all colors with accent color"
+#~ msgstr "ନିଷ୍କ୍ରିୟ ରଙ୍ଗ"
+
+#, fuzzy
+#~| msgid "Shade"
+#~ msgid "Shading"
+#~ msgstr "ଛାୟା"
+
+#~ msgid "Contrast"
+#~ msgstr "ପ୍ରଭେଦ"
+
+#, fuzzy
+#~| msgid "Normal Background"
+#~ msgid "Normal Text on Normal Background"
+#~ msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
+
+#, fuzzy
+#~| msgid "normal"
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "normal"
+#~ msgstr "ସାଧାରଣ"
+
+#, fuzzy
+#~| msgid "Normal Background"
+#~ msgid "Link Text on Normal Background"
+#~ msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
+
+#, fuzzy
+#~| msgid "link"
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "link"
+#~ msgstr "ସଂଯୋଗ"
+
+#, fuzzy
+#~| msgid "Normal Background"
+#~ msgid "Visited Text on Normal Background"
+#~ msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
+
+#, fuzzy
+#~| msgid "visited"
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "visited"
+#~ msgstr "ପରିଦର୍ଶିତ"
+
+#, fuzzy
+#~| msgid "Normal Background"
+#~ msgid "Active Text on Normal Background"
+#~ msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
+
+#, fuzzy
+#~| msgid "active"
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "active"
+#~ msgstr "ସକ୍ରିୟ"
+
+#, fuzzy
+#~| msgid "Normal Background"
+#~ msgid "Inactive Text on Normal Background"
+#~ msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
+
+#, fuzzy
+#~| msgid "inactive"
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "inactive"
+#~ msgstr "ନିଷ୍କ୍ରିୟ"
+
+#, fuzzy
+#~| msgid "Normal Background"
+#~ msgid "Negative Text on Normal Background"
+#~ msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
+
+#, fuzzy
+#~| msgid "negative"
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "negative"
+#~ msgstr "ଋଣାତ୍ମକ"
+
+#, fuzzy
+#~| msgid "Normal Background"
+#~ msgid "Neutral Text on Normal Background"
+#~ msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
+
+#, fuzzy
+#~| msgid "neutral"
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "neutral"
+#~ msgstr "ନିରପେକ୍ଷ"
+
+#, fuzzy
+#~| msgid "Normal Background"
+#~ msgid "Positive Text on Normal Background"
+#~ msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
+
+#, fuzzy
+#~| msgid "positive"
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "positive"
+#~ msgstr "ଯୁକ୍ତାତ୍ମକ"
+
+#, fuzzy
+#~| msgid "Normal Background"
+#~ msgid "Hover on Normal Background"
+#~ msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
+
+#, fuzzy
+#~| msgid "hover"
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "hover"
+#~ msgstr "ଆଖପାଖ"
+
+#, fuzzy
+#~| msgid "Alternate Background"
+#~ msgid "Inactive Text on Alternate Background"
+#~ msgstr "ବୈକଳ୍ପିକ ପୃଷ୍ଠଭୂମି"
+
+#, fuzzy
+#~| msgid "alternate"
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "alternate"
+#~ msgstr "ବୈକଳ୍ପିକ"
+
+#, fuzzy
+#~| msgid "Normal Background"
+#~ msgid "Focus on Normal Background"
+#~ msgstr "ସାଧାରଣ ପୃଷ୍ଠଭୂମି"
+
+#, fuzzy
+#~| msgid "focus"
+#~ msgctxt "color-kcm-set-preview"
+#~ msgid "focus"
+#~ msgstr "କେନ୍ଦୀଭୂତ"
 
 #, fuzzy
 #~| msgid "Apply inactive window color &effects"

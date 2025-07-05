@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-07 00:51+0000\n"
+"POT-Creation-Date: 2025-07-05 03:22+0000\n"
 "PO-Revision-Date: 2023-04-22 18:56+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -97,12 +97,6 @@ msgstr "pakete-izena"
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
 msgstr "Berrezarri Plasma mahaigainaren antolamendua"
-
-#. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
-#: lookandfeelsettings.kcfg:9
-#, kde-format
-msgid "Global look and feel"
-msgstr "Itxura eta izaera orokorra"
 
 #: package/contents/ui/main.qml:21
 #, kde-format
@@ -268,6 +262,9 @@ msgstr ""
 "Gai orokor honek ez du hornitzen ezar daitekeen ezarpenik. Mesedez, jar "
 "zaitez gai orokor honen mantentzailearekin harremanean hondatua egon bai "
 "daiteke."
+
+#~ msgid "Global look and feel"
+#~ msgstr "Itxura eta izaera orokorra"
 
 #~ msgid ""
 #~ "Your current layout and configuration of panels, desktop widgets, and "
