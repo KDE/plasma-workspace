@@ -33,13 +33,13 @@ KCM.SimpleKCM {
         spacing: 0
 
         QQC2.Label {
+            Layout.fillWidth: true
             Layout.margins: Kirigami.Units.gridUnit
-            Layout.alignment: Qt.AlignHCenter
 
-            Layout.maximumWidth: Math.round(root.width - (Kirigami.Units.gridUnit * 2))
             text: i18n("The blue light filter makes the colors on the screen warmer.")
             textFormat: Text.PlainText
             wrapMode: Text.WordWrap
+            horizontalAlignment: Text.AlignHCenter
         }
 
         Kirigami.FormLayout {
