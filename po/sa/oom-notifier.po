@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-29 00:41+0000\n"
+"POT-Creation-Date: 2025-07-06 00:44+0000\n"
 "PO-Revision-Date: 2024-12-13 19:09+0530\n"
 "Last-Translator: Kali <EMAIL@ADDRESS>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -17,13 +17,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
 
-#: module.cpp:65
+#: module.cpp:68
 #, kde-format
 msgctxt "@title"
 msgid "Memory Shortage Avoided"
 msgstr "स्मृति-अभावः परिहृतः"
 
-#: module.cpp:68
+#: module.cpp:71
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -34,7 +34,7 @@ msgstr ""
 "<command>%1</command> इति Linux कर्नेल् द्वारा समाप्तम् अस्ति यतः प्रणाली स्मृतिः न्यूना "
 "अस्ति । अप्रयुक्तानि अनुप्रयोगाः अथवा ब्राउजर् ट्याब्स् बन्दं कर्तुं विचारयन्तु ।"
 
-#: module.cpp:74
+#: module.cpp:77
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -45,7 +45,7 @@ msgstr ""
 "पृष्ठभूमिसेवा <command>%1</command> Linux कर्नेल् द्वारा समाप्तवती यतः प्रणाली स्मृतिः "
 "न्यूना अस्ति । अप्रयुक्तानि अनुप्रयोगाः अथवा ब्राउजर् ट्याब्स् बन्दं कर्तुं विचारयन्तु ।"
 
-#: module.cpp:82
+#: module.cpp:85
 #, kde-format
 msgctxt "@action"
 msgid "Restart Application"

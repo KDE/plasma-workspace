@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-29 00:41+0000\n"
+"POT-Creation-Date: 2025-07-06 00:44+0000\n"
 "PO-Revision-Date: 2024-11-28 23:54+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -17,13 +17,13 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 23.08.5\n"
 
-#: module.cpp:65
+#: module.cpp:68
 #, kde-format
 msgctxt "@title"
 msgid "Memory Shortage Avoided"
 msgstr "메모리 부족 방지됨"
 
-#: module.cpp:68
+#: module.cpp:71
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -34,7 +34,7 @@ msgstr ""
 "시스템 메모리가 부족하여 리눅스 커널에서 <command>%1</command>을(를) 종료했습"
 "니다. 사용하지 않는 앱이나 브라우저 탭을 종료하십시오."
 
-#: module.cpp:74
+#: module.cpp:77
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -45,7 +45,7 @@ msgstr ""
 "시스템 메모리가 부족하여 리눅스 커널에서 <command>%1</command> 배경 서비스를 "
 "종료했습니다. 사용하지 않는 앱이나 브라우저 탭을 종료하십시오."
 
-#: module.cpp:82
+#: module.cpp:85
 #, kde-format
 msgctxt "@action"
 msgid "Restart Application"
