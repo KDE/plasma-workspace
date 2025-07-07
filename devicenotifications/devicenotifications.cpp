@@ -15,6 +15,7 @@
 
 #include <chrono>
 
+#include <knotification.h>
 #include <wayland-client.h>
 
 K_PLUGIN_CLASS_WITH_JSON(KdedDeviceNotifications, "devicenotifications.json")
@@ -375,13 +376,28 @@ void KdedDeviceNotifications::onDeviceAdded(const UdevDevice &device)
         return;
     }
 
+    // If the user unplugged something and then immediately plugged it in again,
+    // there's no need to keep the unplug notification around.
+    if (m_usbDeviceRemovedNotification) {
+        m_usbDeviceRemovedNotification->close();
+    }
+
+    // Only show one of these at a time. We already suppressed creating a bunch
+    // in quick succession for the dock/hub use case, so any that are created
+    // over that time limit anyway are not necessary to stack up.
+    if (m_usbDeviceAddedNotification) {
+        m_usbDeviceAddedNotification->close();
+    }
+
     const QString text = !displayName.isEmpty() ? i18n("%1 has been connected.", displayName.toHtmlEscaped()) : i18n("A USB device has been connected.");
 
-    KNotification::event(QStringLiteral("deviceAdded"),
-                         i18nc("@title:notifications", "USB Device Detected"),
-                         text,
-                         QStringLiteral("drive-removable-media-usb"),
-                         KNotification::DefaultEvent);
+    m_usbDeviceAddedNotification = new KNotification(QStringLiteral("deviceAdded"));
+    m_usbDeviceAddedNotification->setFlags(KNotification::DefaultEvent);
+    m_usbDeviceAddedNotification->setIconName(QStringLiteral("drive-removable-media-usb"));
+    m_usbDeviceAddedNotification->setTitle(i18nc("@title:notifications", "USB Device Detected"));
+    m_usbDeviceAddedNotification->setText(text);
+    m_usbDeviceAddedNotification->sendEvent();
+
     m_deviceAddedTimer.start();
 }
 
@@ -401,13 +417,28 @@ void KdedDeviceNotifications::onDeviceRemoved(const UdevDevice &device)
         return;
     }
 
+    // If the user plugged something in and then immediately unplugged it again,
+    // there's no need to keep the plug notification around.
+    if (m_usbDeviceAddedNotification) {
+        m_usbDeviceAddedNotification->close();
+    }
+
+    // Only show one of these at a time. We already suppressed removing a bunch
+    // in quick succession for the dock/hub use case, so any that are removed
+    // over that time limit anyway are not necessary to stack up.
+    if (m_usbDeviceRemovedNotification) {
+        m_usbDeviceRemovedNotification->close();
+    }
+
     const QString text = !displayName.isEmpty() ? i18n("%1 has been disconnected.", displayName.toHtmlEscaped()) : i18n("A USB device has been disconnected.");
 
-    KNotification::event(QStringLiteral("deviceRemoved"),
-                         i18nc("@title:notifications", "USB Device Went Away"),
-                         text,
-                         QStringLiteral("drive-removable-media-usb"),
-                         KNotification::DefaultEvent);
+    m_usbDeviceRemovedNotification = new KNotification(QStringLiteral("deviceRemoved"));
+    m_usbDeviceRemovedNotification->setFlags(KNotification::DefaultEvent);
+    m_usbDeviceRemovedNotification->setIconName(QStringLiteral("drive-removable-media-usb"));
+    m_usbDeviceRemovedNotification->setTitle(i18nc("@title:notifications", "USB Device Went Away"));
+    m_usbDeviceRemovedNotification->setText(text);
+    m_usbDeviceRemovedNotification->sendEvent();
+
     m_deviceRemovedTimer.start();
 }
 

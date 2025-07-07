@@ -8,11 +8,13 @@
 
 #include <QHash>
 #include <QList>
+#include <QPointer>
 #include <QSocketNotifier>
 #include <QString>
 #include <QTimer>
 
 #include <KDEDModule>
+#include <KNotification>
 
 #include <libudev.h>
 
@@ -98,4 +100,7 @@ private:
 
     QTimer m_deviceAddedTimer;
     QTimer m_deviceRemovedTimer;
+
+    QPointer<KNotification> m_usbDeviceAddedNotification;
+    QPointer<KNotification> m_usbDeviceRemovedNotification;
 };
