@@ -1,10 +1,10 @@
 # Translation of kcm_fonts.po to Catalan
-# Copyright (C) 1998-2022 This_file_is_part_of_KDE
+# Copyright (C) 1998-2025 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # Sebastià Pla i Sanz <sps@sastia.com>, 1998, 1999, 2000, 2001, 2002, 2004, 2005, 2006.
-# Josep M. Ferrer <txemaq@gmail.com>, 2007, 2008, 2010, 2011, 2012, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
+# Josep M. Ferrer <txemaq@gmail.com>, 2007, 2008, 2010, 2011, 2012, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2025.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2014, 2015, 2017, 2020.
 # Empar Montoro Martín <montoro_mde@gva.es>, 2019.
 msgid ""
@@ -12,72 +12,64 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-05 05:54+0000\n"
-"PO-Revision-Date: 2022-10-19 10:43+0200\n"
+"PO-Revision-Date: 2025-07-06 11:46+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
 #. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
 #: fontsaasettingsbase.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Force font DPI:"
+#, kde-format
 msgid "Force font DPI Wayland"
-msgstr "Força els ppp dels tipus de lletra:"
+msgstr "Força els ppp dels tipus de lletra al Wayland"
 
 #. i18n: ectx: label, entry (forceFontDPI), group (General)
 #: fontsaasettingsbase.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Force font DPI:"
+#, kde-format
 msgid "Force font DPI on X11"
-msgstr "Força els ppp dels tipus de lletra:"
+msgstr "Força els ppp de les lletres a l'X11"
 
 #. i18n: ectx: label, entry (font), group (General)
 #: fontssettings.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Select general font"
+#, kde-format
 msgid "General font"
-msgstr "Selecciona el tipus de lletra general"
+msgstr "Lletra general"
 
 #. i18n: ectx: label, entry (fixed), group (General)
 #: fontssettings.kcfg:21
-#, fuzzy, kde-format
-#| msgid "Fixed width:"
+#, kde-format
 msgid "Fixed width font"
-msgstr "Amplada fixa:"
+msgstr "Lletra d'amplada fixa"
 
 #. i18n: ectx: label, entry (smallestReadableFont), group (General)
 #: fontssettings.kcfg:33
-#, fuzzy, kde-format
-#| msgid "Select small font"
+#, kde-format
 msgid "Small font"
-msgstr "Selecciona el tipus de lletra petita"
+msgstr "Lletra petita"
 
 #. i18n: ectx: label, entry (toolBarFont), group (General)
 #: fontssettings.kcfg:45
-#, fuzzy, kde-format
-#| msgid "Select toolbar font"
+#, kde-format
 msgid "Tool bar font"
-msgstr "Selecciona el tipus de lletra de les barres d'eines"
+msgstr "Lletra de les barres d'eines"
 
 #. i18n: ectx: label, entry (menuFont), group (General)
 #: fontssettings.kcfg:57
-#, fuzzy, kde-format
-#| msgid "Select menu font"
+#, kde-format
 msgid "Menu font"
-msgstr "Selecciona el tipus de lletra dels menús"
+msgstr "Lletra dels menús"
 
 #. i18n: ectx: label, entry (activeFont), group (WM)
 #: fontssettings.kcfg:71
-#, fuzzy, kde-format
-#| msgid "Window title:"
+#, kde-format
 msgid "Window title font"
-msgstr "Títol de la finestra:"
+msgstr "Lletra dels títols de finestra"
 
 #: kxftconfig.cpp:458
 #, kde-format

@@ -1,11 +1,11 @@
 # Translation of kcm_style.po to Catalan
-# Copyright (C) 1998-2023 This_file_is_part_of_KDE
+# Copyright (C) 1998-2025 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # Sebastià Pla i Sanz <sps@sastia.com>, 1998, 1999, 2000, 2001, 2002, 2004, 2006.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2003, 2013, 2015, 2016, 2017.
-# Josep M. Ferrer <txemaq@gmail.com>, 2004, 2007, 2008, 2009, 2010, 2012, 2013, 2015, 2017, 2019, 2020, 2021, 2023.
+# Josep M. Ferrer <txemaq@gmail.com>, 2004, 2007, 2008, 2009, 2010, 2012, 2013, 2015, 2017, 2019, 2020, 2021, 2023, 2025.
 # Albert Astals Cid <aacid@kde.org>, 2005.
 # Empar Montoro Martín <montoro_mde@gva.es>, 2019.
 msgid ""
@@ -13,14 +13,14 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-05 05:54+0000\n"
-"PO-Revision-Date: 2023-04-24 11:45+0200\n"
+"PO-Revision-Date: 2025-07-06 11:47+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
@@ -154,77 +154,71 @@ msgstr "Configura el %1"
 #: stylepreview.ui:33
 #, kde-format
 msgid "Tab 1"
-msgstr ""
+msgstr "Pestanya 1"
 
 #. i18n: ectx: property (text), widget (QPushButton, pushButton)
 #: stylepreview.ui:65
 #, kde-format
 msgid "Push Button"
-msgstr ""
+msgstr "Botó premut"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
 #: stylepreview.ui:86
 #, kde-format
 msgid "Combo box"
-msgstr ""
+msgstr "Quadre combinat"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkBox)
 #: stylepreview.ui:96
 #, kde-format
 msgid "Checkbox"
-msgstr ""
+msgstr "Casella de selecció"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
 #: stylepreview.ui:106 stylepreview.ui:116
-#, fuzzy, kde-format
-#| msgid "On buttons"
+#, kde-format
 msgid "Radio button"
-msgstr "Als botons"
+msgstr "Botó d'opció"
 
 #. i18n: ectx: property (format), widget (QProgressBar, progressBar)
 #: stylepreview.ui:128
 #, no-c-format, kde-format
 msgid "%p%"
-msgstr ""
+msgstr "%p%"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: stylepreview.ui:136
 #, kde-format
 msgid "Tab 2"
-msgstr ""
+msgstr "Pestanya 2"
 
 #. i18n: ectx: label, entry (widgetStyle), group (KDE)
 #: stylesettings.kcfg:9
-#, fuzzy, kde-format
-#| msgid "GNOME/GTK Application Style"
+#, kde-format
 msgid "Application style"
-msgstr "Estil de les aplicacions GNOME/GTK"
+msgstr "Estil de l'aplicació"
 
 #. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
 #: stylesettings.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Show icons:"
+#, kde-format
 msgid "Show icons on buttons"
-msgstr "Mostra les icones:"
+msgstr "Mostra les icones als botons"
 
 #. i18n: ectx: label, entry (iconsInMenus), group (KDE)
 #: stylesettings.kcfg:17
-#, fuzzy, kde-format
-#| msgid "Show icons:"
+#, kde-format
 msgid "Show icons in menus"
-msgstr "Mostra les icones:"
+msgstr "Mostra les icones als menús"
 
 #. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
 #: stylesettings.kcfg:23
-#, fuzzy, kde-format
-#| msgid "Main toolbar label:"
+#, kde-format
 msgid "Main toolbar label"
-msgstr "Etiqueta de la barra d'eines principal:"
+msgstr "Etiqueta de la barra d'eines principal"
 
 #. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
 #: stylesettings.kcfg:27
-#, fuzzy, kde-format
-#| msgid "Secondary toolbar label:"
+#, kde-format
 msgid "Secondary toolbar label"
-msgstr "Etiqueta de la barra d'eines secundària:"
+msgstr "Etiqueta de la barra d'eines secundària"
