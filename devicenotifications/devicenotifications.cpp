@@ -330,7 +330,7 @@ void KdedDeviceNotifications::notifyOutputAdded()
 
     KNotification::event(QStringLiteral("deviceAdded"),
                          i18nc("@title:notifications", "Display Detected"),
-                         i18n("A display has been plugged in."),
+                         i18n("A display has been connected."),
                          QStringLiteral("video-display-add"),
                          KNotification::DefaultEvent);
     m_deviceAddedTimer.start();
@@ -344,7 +344,7 @@ void KdedDeviceNotifications::notifyOutputRemoved()
 
     KNotification::event(QStringLiteral("deviceRemoved"),
                          i18nc("@title:notifications", "Display Removed"),
-                         i18n("A display has been unplugged."),
+                         i18n("A display has been disconnected."),
                          QStringLiteral("video-display-remove"),
                          KNotification::DefaultEvent);
     m_deviceRemovedTimer.start();
@@ -375,7 +375,7 @@ void KdedDeviceNotifications::onDeviceAdded(const UdevDevice &device)
         return;
     }
 
-    const QString text = !displayName.isEmpty() ? i18n("%1 has been plugged in.", displayName.toHtmlEscaped()) : i18n("A USB device has been plugged in.");
+    const QString text = !displayName.isEmpty() ? i18n("%1 has been connected.", displayName.toHtmlEscaped()) : i18n("A USB device has been connected.");
 
     KNotification::event(QStringLiteral("deviceAdded"),
                          i18nc("@title:notifications", "USB Device Detected"),
@@ -401,10 +401,10 @@ void KdedDeviceNotifications::onDeviceRemoved(const UdevDevice &device)
         return;
     }
 
-    const QString text = !displayName.isEmpty() ? i18n("%1 has been unplugged.", displayName.toHtmlEscaped()) : i18n("A USB device has been unplugged.");
+    const QString text = !displayName.isEmpty() ? i18n("%1 has been disconnected.", displayName.toHtmlEscaped()) : i18n("A USB device has been disconnected.");
 
     KNotification::event(QStringLiteral("deviceRemoved"),
-                         i18nc("@title:notifications", "USB Device Removed"),
+                         i18nc("@title:notifications", "USB Device Went Away"),
                          text,
                          QStringLiteral("drive-removable-media-usb"),
                          KNotification::DefaultEvent);
