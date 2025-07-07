@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-29 00:41+0000\n"
+"POT-Creation-Date: 2025-07-07 02:33+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -17,13 +17,13 @@ msgstr ""
 "X-Crowdin-File: /kf6-stable/messages/plasma-workspace/oom-notifier.pot\n"
 "X-Crowdin-File-ID: 57084\n"
 
-#: module.cpp:65
+#: module.cpp:68
 #, kde-format
 msgctxt "@title"
 msgid "Memory Shortage Avoided"
 msgstr "系统已采取措施避免内存不足"
 
-#: module.cpp:68
+#: module.cpp:71
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -34,7 +34,7 @@ msgstr ""
 "<command>%1</command> 已被 Linux 内核终止，因为系统当前的可用内存不足。请考虑"
 "关闭不使用的应用程序或浏览器标签页。"
 
-#: module.cpp:74
+#: module.cpp:77
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -45,7 +45,7 @@ msgstr ""
 "后台服务 <command>%1</command> 已被 Linux 内核终止，因为系统当前的可用内存不"
 "足。请考虑关闭不使用的应用程序或浏览器标签页。"
 
-#: module.cpp:82
+#: module.cpp:85
 #, kde-format
 msgctxt "@action"
 msgid "Restart Application"

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-29 00:41+0000\n"
+"POT-Creation-Date: 2025-07-07 02:33+0000\n"
 "PO-Revision-Date: 2024-10-30 09:56+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -15,13 +15,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 23.08.5\n"
 
-#: module.cpp:65
+#: module.cpp:68
 #, kde-format
 msgctxt "@title"
 msgid "Memory Shortage Avoided"
 msgstr "Pénurie de mémoire évitée"
 
-#: module.cpp:68
+#: module.cpp:71
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -33,7 +33,7 @@ msgstr ""
 "car la mémoire du système est insuffisante. Veuillez envisager la fermeture "
 "des applications inutilisées ou des onglets du navigateur."
 
-#: module.cpp:74
+#: module.cpp:77
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -46,7 +46,7 @@ msgstr ""
 "envisager la fermeture des applications inutilisées ou des onglets du "
 "navigateur."
 
-#: module.cpp:82
+#: module.cpp:85
 #, kde-format
 msgctxt "@action"
 msgid "Restart Application"

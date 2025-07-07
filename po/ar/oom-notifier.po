@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-29 00:41+0000\n"
+"POT-Creation-Date: 2025-07-07 02:33+0000\n"
 "PO-Revision-Date: 2024-11-11 16:57+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -18,13 +18,13 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 "X-Generator: Lokalize 23.08.5\n"
 
-#: module.cpp:65
+#: module.cpp:68
 #, kde-format
 msgctxt "@title"
 msgid "Memory Shortage Avoided"
 msgstr "تجنب نقص الذاكرة"
 
-#: module.cpp:68
+#: module.cpp:71
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -35,7 +35,7 @@ msgstr ""
 "أنهي الأمر <command>%1</command> بواسطة نواة لينكس لأن النظام يعاني من نقص "
 "في الذاكرة. فكر في إغلاق التطبيقات أو علامات تبويب المتصفح غير المستخدمة."
 
-#: module.cpp:74
+#: module.cpp:77
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -47,7 +47,7 @@ msgstr ""
 "يعاني من نقص في الذاكرة. فكر في إغلاق التطبيقات أو علامات تبويب المتصفح غير "
 "المستخدمة."
 
-#: module.cpp:82
+#: module.cpp:85
 #, kde-format
 msgctxt "@action"
 msgid "Restart Application"

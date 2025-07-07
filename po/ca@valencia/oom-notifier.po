@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-29 00:41+0000\n"
+"POT-Creation-Date: 2025-07-07 02:33+0000\n"
 "PO-Revision-Date: 2024-10-29 10:11+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -19,13 +19,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.08.2\n"
 
-#: module.cpp:65
+#: module.cpp:68
 #, kde-format
 msgctxt "@title"
 msgid "Memory Shortage Avoided"
 msgstr "S'ha evitat una escassetat de memòria"
 
-#: module.cpp:68
+#: module.cpp:71
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -37,7 +37,7 @@ msgstr ""
 "poca memòria. Considereu tancar les aplicacions no utilitzades o les "
 "pestanyes del navegador."
 
-#: module.cpp:74
+#: module.cpp:77
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -49,7 +49,7 @@ msgstr ""
 "perquè el sistema tenia poca memòria. Considereu tancar les aplicacions no "
 "utilitzades o les pestanyes del navegador."
 
-#: module.cpp:82
+#: module.cpp:85
 #, kde-format
 msgctxt "@action"
 msgid "Restart Application"

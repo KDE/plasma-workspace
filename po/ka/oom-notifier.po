@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-29 00:41+0000\n"
+"POT-Creation-Date: 2025-07-07 02:33+0000\n"
 "PO-Revision-Date: 2024-10-30 04:31+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -18,13 +18,13 @@ msgstr ""
 "X-Generator: Poedit 3.5\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: module.cpp:65
+#: module.cpp:68
 #, kde-format
 msgctxt "@title"
 msgid "Memory Shortage Avoided"
 msgstr "მეხსიერების დეფიციტი აცილებულია"
 
-#: module.cpp:68
+#: module.cpp:71
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -36,7 +36,7 @@ msgstr ""
 "სისტემას ცოტა მეხსიერებაღა დარჩა. იფიქრეთ გამოუყენებელი პროგრამების ან "
 "ბრაუზერის ჩანართების დახურვაზე."
 
-#: module.cpp:74
+#: module.cpp:77
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -48,7 +48,7 @@ msgstr ""
 "სისტემას ცოტა მეხსიერებაღა დარჩა. იფიქრეთ გამოუყენებელი აპლიკაციების ან "
 "ბრაუზერის ჩანართების დახურვაზე."
 
-#: module.cpp:82
+#: module.cpp:85
 #, kde-format
 msgctxt "@action"
 msgid "Restart Application"
