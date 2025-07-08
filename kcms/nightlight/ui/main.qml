@@ -36,7 +36,7 @@ KCM.SimpleKCM {
             Layout.fillWidth: true
             Layout.margins: Kirigami.Units.gridUnit
 
-            text: i18n("The blue light filter makes the colors on the screen warmer.")
+            text: i18nc("@info", "The blue light filter makes the colors on the screen warmer.")
             textFormat: Text.PlainText
             wrapMode: Text.WordWrap
             horizontalAlignment: Text.AlignHCenter
@@ -46,7 +46,7 @@ KCM.SimpleKCM {
             id: parentLayout
 
             RowLayout {
-                Kirigami.FormData.label: i18n("Switching times:")
+                Kirigami.FormData.label: i18nc("@label:listbox Night Light modes", "Switching times:")
                 spacing: Kirigami.Units.smallSpacing
 
                 QQC2.ComboBox {
@@ -55,9 +55,9 @@ KCM.SimpleKCM {
                     Layout.minimumWidth: Kirigami.Units.gridUnit * 17
                     currentIndex: kcm.nightLightSettings.active ? kcm.nightLightSettings.mode + 1 : 0
                     model: [
-                        i18n("Always off"),  // This is not actually a Mode, but represents Night Light being disabled
-                        i18n("Always on night light"),
-                        i18n("Sunrise and sunset")
+                        i18nc("@item:inlistbox switching times", "Always off"),  // This is not actually a Mode, but represents Night Light being disabled
+                        i18nc("@item:inlistbox switching times", "Always on night light"),
+                        i18nc("@item:inlistbox switching times", "Sunrise and sunset")
                     ]
                     onCurrentIndexChanged: {
                         if (currentIndex !== 0) {
@@ -120,7 +120,7 @@ KCM.SimpleKCM {
             twinFormLayouts: parentLayout
 
             GridLayout {
-                Kirigami.FormData.label: i18n("Day light temperature:")
+                Kirigami.FormData.label: i18nc("@label:slider", "Day light temperature:")
                 Kirigami.FormData.buddyFor: tempSliderDay
                 enabled: kcm.nightLightSettings.active && kcm.nightLightSettings.mode !== Private.NightLightMode.Constant
 
@@ -184,7 +184,7 @@ KCM.SimpleKCM {
             }
 
             GridLayout {
-                Kirigami.FormData.label: i18n("Night light temperature:")
+                Kirigami.FormData.label: i18nc("@label:slider", "Night light temperature:")
                 Kirigami.FormData.buddyFor: tempSliderNight
                 enabled: kcm.nightLightSettings.active
 
