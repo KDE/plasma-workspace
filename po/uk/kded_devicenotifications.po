@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-25 00:43+0000\n"
+"POT-Creation-Date: 2025-07-08 00:44+0000\n"
 "PO-Revision-Date: 2024-07-31 13:43+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -25,9 +25,10 @@ msgid "Display Detected"
 msgstr "Виявлено дисплей"
 
 #: devicenotifications.cpp:333
-#, kde-format
-msgid "A display has been plugged in."
-msgstr "Дисплей з'єднано."
+#, fuzzy, kde-format
+#| msgid "A display has been unplugged."
+msgid "A display has been connected."
+msgstr "Дисплей від'єднано."
 
 #: devicenotifications.cpp:346
 #, kde-format
@@ -36,19 +37,22 @@ msgid "Display Removed"
 msgstr "Дисплей вилучено"
 
 #: devicenotifications.cpp:347
-#, kde-format
-msgid "A display has been unplugged."
+#, fuzzy, kde-format
+#| msgid "A display has been unplugged."
+msgid "A display has been disconnected."
 msgstr "Дисплей від'єднано."
 
 #: devicenotifications.cpp:378
-#, kde-format
-msgid "%1 has been plugged in."
-msgstr "%1 з'єднано."
+#, fuzzy, kde-format
+#| msgid "%1 has been unplugged."
+msgid "%1 has been connected."
+msgstr "%1 було від'єднано."
 
 #: devicenotifications.cpp:378
-#, kde-format
-msgid "A USB device has been plugged in."
-msgstr "З'єднано пристрій USB."
+#, fuzzy, kde-format
+#| msgid "A USB device has been unplugged."
+msgid "A USB device has been connected."
+msgstr "Пристрій USB від'єднано."
 
 #: devicenotifications.cpp:381
 #, kde-format
@@ -57,17 +61,34 @@ msgid "USB Device Detected"
 msgstr "Виявлено пристрій USB"
 
 #: devicenotifications.cpp:404
-#, kde-format
-msgid "%1 has been unplugged."
+#, fuzzy, kde-format
+#| msgid "%1 has been unplugged."
+msgid "%1 has been disconnected."
 msgstr "%1 було від'єднано."
 
 #: devicenotifications.cpp:404
-#, kde-format
-msgid "A USB device has been unplugged."
+#, fuzzy, kde-format
+#| msgid "A USB device has been unplugged."
+msgid "A USB device has been disconnected."
 msgstr "Пристрій USB від'єднано."
 
 #: devicenotifications.cpp:407
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:notifications"
+#| msgid "USB Device Detected"
 msgctxt "@title:notifications"
-msgid "USB Device Removed"
-msgstr "Вилучено пристрій USB"
+msgid "USB Device Went Away"
+msgstr "Виявлено пристрій USB"
+
+#~ msgid "A display has been plugged in."
+#~ msgstr "Дисплей з'єднано."
+
+#~ msgid "%1 has been plugged in."
+#~ msgstr "%1 з'єднано."
+
+#~ msgid "A USB device has been plugged in."
+#~ msgstr "З'єднано пристрій USB."
+
+#~ msgctxt "@title:notifications"
+#~ msgid "USB Device Removed"
+#~ msgstr "Вилучено пристрій USB"

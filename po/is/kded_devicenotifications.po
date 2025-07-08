@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-25 00:43+0000\n"
+"POT-Creation-Date: 2025-07-08 00:44+0000\n"
 "PO-Revision-Date: 2024-12-13 21:16+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -25,9 +25,10 @@ msgid "Display Detected"
 msgstr "Skjár fannst"
 
 #: devicenotifications.cpp:333
-#, kde-format
-msgid "A display has been plugged in."
-msgstr "Skjá var stungið í samband."
+#, fuzzy, kde-format
+#| msgid "A display has been unplugged."
+msgid "A display has been connected."
+msgstr "Skjár var tekinn úr sambandi."
 
 #: devicenotifications.cpp:346
 #, kde-format
@@ -36,19 +37,22 @@ msgid "Display Removed"
 msgstr "Skjár fjarlægður"
 
 #: devicenotifications.cpp:347
-#, kde-format
-msgid "A display has been unplugged."
+#, fuzzy, kde-format
+#| msgid "A display has been unplugged."
+msgid "A display has been disconnected."
 msgstr "Skjár var tekinn úr sambandi."
 
 #: devicenotifications.cpp:378
-#, kde-format
-msgid "%1 has been plugged in."
-msgstr "%1 hefur verið tengt."
+#, fuzzy, kde-format
+#| msgid "%1 has been unplugged."
+msgid "%1 has been connected."
+msgstr "%1 hefur verið aftengt."
 
 #: devicenotifications.cpp:378
-#, kde-format
-msgid "A USB device has been plugged in."
-msgstr "USB-tæki hefur verið tengt."
+#, fuzzy, kde-format
+#| msgid "A USB device has been unplugged."
+msgid "A USB device has been connected."
+msgstr "USB-tæki hefur verið aftengt."
 
 #: devicenotifications.cpp:381
 #, kde-format
@@ -57,17 +61,34 @@ msgid "USB Device Detected"
 msgstr "USB-tæki fannst"
 
 #: devicenotifications.cpp:404
-#, kde-format
-msgid "%1 has been unplugged."
+#, fuzzy, kde-format
+#| msgid "%1 has been unplugged."
+msgid "%1 has been disconnected."
 msgstr "%1 hefur verið aftengt."
 
 #: devicenotifications.cpp:404
-#, kde-format
-msgid "A USB device has been unplugged."
+#, fuzzy, kde-format
+#| msgid "A USB device has been unplugged."
+msgid "A USB device has been disconnected."
 msgstr "USB-tæki hefur verið aftengt."
 
 #: devicenotifications.cpp:407
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:notifications"
+#| msgid "USB Device Detected"
 msgctxt "@title:notifications"
-msgid "USB Device Removed"
-msgstr "USB-tæki fjarlægt"
+msgid "USB Device Went Away"
+msgstr "USB-tæki fannst"
+
+#~ msgid "A display has been plugged in."
+#~ msgstr "Skjá var stungið í samband."
+
+#~ msgid "%1 has been plugged in."
+#~ msgstr "%1 hefur verið tengt."
+
+#~ msgid "A USB device has been plugged in."
+#~ msgstr "USB-tæki hefur verið tengt."
+
+#~ msgctxt "@title:notifications"
+#~ msgid "USB Device Removed"
+#~ msgstr "USB-tæki fjarlægt"

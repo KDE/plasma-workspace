@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-25 00:43+0000\n"
+"POT-Creation-Date: 2025-07-08 00:44+0000\n"
 "PO-Revision-Date: 2024-07-31 06:12+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -25,9 +25,10 @@ msgid "Display Detected"
 msgstr "Zaznan zaslon"
 
 #: devicenotifications.cpp:333
-#, kde-format
-msgid "A display has been plugged in."
-msgstr "Zaslon je bil priključen."
+#, fuzzy, kde-format
+#| msgid "A display has been unplugged."
+msgid "A display has been connected."
+msgstr "Zaslon je bil odklopljen."
 
 #: devicenotifications.cpp:346
 #, kde-format
@@ -36,19 +37,22 @@ msgid "Display Removed"
 msgstr "Zaslon odstranjen"
 
 #: devicenotifications.cpp:347
-#, kde-format
-msgid "A display has been unplugged."
+#, fuzzy, kde-format
+#| msgid "A display has been unplugged."
+msgid "A display has been disconnected."
 msgstr "Zaslon je bil odklopljen."
 
 #: devicenotifications.cpp:378
-#, kde-format
-msgid "%1 has been plugged in."
-msgstr "%1 je bil(a) priključen(a)."
+#, fuzzy, kde-format
+#| msgid "%1 has been unplugged."
+msgid "%1 has been connected."
+msgstr "%1 je bil(a) odklopljen(a)."
 
 #: devicenotifications.cpp:378
-#, kde-format
-msgid "A USB device has been plugged in."
-msgstr "Naprava USB je bila priključena."
+#, fuzzy, kde-format
+#| msgid "A USB device has been unplugged."
+msgid "A USB device has been connected."
+msgstr "Naprava USB je bila odklopljena."
 
 #: devicenotifications.cpp:381
 #, kde-format
@@ -57,17 +61,34 @@ msgid "USB Device Detected"
 msgstr "Zaznana naprava USB"
 
 #: devicenotifications.cpp:404
-#, kde-format
-msgid "%1 has been unplugged."
+#, fuzzy, kde-format
+#| msgid "%1 has been unplugged."
+msgid "%1 has been disconnected."
 msgstr "%1 je bil(a) odklopljen(a)."
 
 #: devicenotifications.cpp:404
-#, kde-format
-msgid "A USB device has been unplugged."
+#, fuzzy, kde-format
+#| msgid "A USB device has been unplugged."
+msgid "A USB device has been disconnected."
 msgstr "Naprava USB je bila odklopljena."
 
 #: devicenotifications.cpp:407
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:notifications"
+#| msgid "USB Device Detected"
 msgctxt "@title:notifications"
-msgid "USB Device Removed"
-msgstr "Naprava USB odstranjena"
+msgid "USB Device Went Away"
+msgstr "Zaznana naprava USB"
+
+#~ msgid "A display has been plugged in."
+#~ msgstr "Zaslon je bil priključen."
+
+#~ msgid "%1 has been plugged in."
+#~ msgstr "%1 je bil(a) priključen(a)."
+
+#~ msgid "A USB device has been plugged in."
+#~ msgstr "Naprava USB je bila priključena."
+
+#~ msgctxt "@title:notifications"
+#~ msgid "USB Device Removed"
+#~ msgstr "Naprava USB odstranjena"

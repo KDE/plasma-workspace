@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-25 00:43+0000\n"
+"POT-Creation-Date: 2025-07-08 00:44+0000\n"
 "PO-Revision-Date: 2024-08-02 22:29+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -24,9 +24,10 @@ msgid "Display Detected"
 msgstr "Ekrano Detektita"
 
 #: devicenotifications.cpp:333
-#, kde-format
-msgid "A display has been plugged in."
-msgstr "Ekrano estis enŝtopita."
+#, fuzzy, kde-format
+#| msgid "A display has been unplugged."
+msgid "A display has been connected."
+msgstr "Ekrano estis malŝtopita."
 
 #: devicenotifications.cpp:346
 #, kde-format
@@ -35,19 +36,22 @@ msgid "Display Removed"
 msgstr "Ekrano Forigita"
 
 #: devicenotifications.cpp:347
-#, kde-format
-msgid "A display has been unplugged."
+#, fuzzy, kde-format
+#| msgid "A display has been unplugged."
+msgid "A display has been disconnected."
 msgstr "Ekrano estis malŝtopita."
 
 #: devicenotifications.cpp:378
-#, kde-format
-msgid "%1 has been plugged in."
-msgstr "%1 estis enŝtopita."
+#, fuzzy, kde-format
+#| msgid "%1 has been unplugged."
+msgid "%1 has been connected."
+msgstr "%1 estis malŝtopita."
 
 #: devicenotifications.cpp:378
-#, kde-format
-msgid "A USB device has been plugged in."
-msgstr "USB-aparato estis enŝtopita."
+#, fuzzy, kde-format
+#| msgid "A USB device has been unplugged."
+msgid "A USB device has been connected."
+msgstr "USB-aparato estis malŝtopita."
 
 #: devicenotifications.cpp:381
 #, kde-format
@@ -56,17 +60,34 @@ msgid "USB Device Detected"
 msgstr "USB-Aparato Detektita"
 
 #: devicenotifications.cpp:404
-#, kde-format
-msgid "%1 has been unplugged."
+#, fuzzy, kde-format
+#| msgid "%1 has been unplugged."
+msgid "%1 has been disconnected."
 msgstr "%1 estis malŝtopita."
 
 #: devicenotifications.cpp:404
-#, kde-format
-msgid "A USB device has been unplugged."
+#, fuzzy, kde-format
+#| msgid "A USB device has been unplugged."
+msgid "A USB device has been disconnected."
 msgstr "USB-aparato estis malŝtopita."
 
 #: devicenotifications.cpp:407
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:notifications"
+#| msgid "USB Device Detected"
 msgctxt "@title:notifications"
-msgid "USB Device Removed"
-msgstr "USB-Aparato Forigita"
+msgid "USB Device Went Away"
+msgstr "USB-Aparato Detektita"
+
+#~ msgid "A display has been plugged in."
+#~ msgstr "Ekrano estis enŝtopita."
+
+#~ msgid "%1 has been plugged in."
+#~ msgstr "%1 estis enŝtopita."
+
+#~ msgid "A USB device has been plugged in."
+#~ msgstr "USB-aparato estis enŝtopita."
+
+#~ msgctxt "@title:notifications"
+#~ msgid "USB Device Removed"
+#~ msgstr "USB-Aparato Forigita"
