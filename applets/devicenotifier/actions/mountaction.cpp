@@ -17,9 +17,9 @@
 
 MountAction::MountAction(const QString &udi, QObject *parent)
     : ActionInterface(udi, parent)
-    , m_stateMonitor(DevicesStateMonitor::instance())
     , m_supportsMTP(false)
     , m_hasStorageAccess(false)
+    , m_stateMonitor(DevicesStateMonitor::instance())
 {
     Solid::Device device(udi);
 
