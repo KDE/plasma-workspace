@@ -6,20 +6,21 @@
 # Burkhard Lück <lueck@hube-lueck.de>, 2012, 2013, 2014, 2015, 2016, 2017, 2019, 2020, 2021.
 # Jannick Kuhr <opensource@kuhr.org>, 2023.
 # SPDX-FileCopyrightText: 2025 Alois Spitzbart <spitz234@hotmail.com>
+# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n@prly.mozmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-17 03:09+0000\n"
-"PO-Revision-Date: 2025-01-26 16:48+0100\n"
-"Last-Translator: Stephan Brunner <s.brunner@stephan-brunner.net>\n"
+"PO-Revision-Date: 2025-07-01 23:02+0200\n"
+"Last-Translator: Philipp Kiemle <l10n@prly.mozmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.04.2\n"
 
 #: package/contents/ui/BatteryItem.qml:106
 #, kde-format
@@ -50,7 +51,7 @@ msgstr "Verbleibende Zeit:"
 #, kde-format
 msgctxt "@info"
 msgid "Estimating…"
-msgstr "Schätzung läuft ..."
+msgstr "Schätzung läuft …"
 
 #: package/contents/ui/BatteryItem.qml:204
 #, kde-format
@@ -222,7 +223,7 @@ msgstr "Modus „%1“ kann nicht aktiviert werden"
 #: package/contents/ui/main.qml:376
 #, kde-format
 msgid "&Show Energy Information…"
-msgstr "Energie-&Informationen anzeigen ..."
+msgstr "Energie-&Informationen anzeigen …"
 
 #: package/contents/ui/main.qml:378
 #, kde-format
@@ -232,7 +233,7 @@ msgstr "Prozentualen Ladestand auf Symbol anzeigen, wenn nicht voll geladen"
 #: package/contents/ui/main.qml:384
 #, kde-format
 msgid "&Configure Energy Saving…"
-msgstr "&Energiespar-Einstellungen einrichten ..."
+msgstr "&Energiespar-Einstellungen einrichten …"
 
 #: package/contents/ui/PopupDialog.qml:117
 #, kde-format
