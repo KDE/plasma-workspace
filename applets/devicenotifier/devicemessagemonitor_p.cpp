@@ -155,128 +155,133 @@ void DeviceMessageMonitor::onStateChanged(const QString &udi)
 
     auto operationInfo = m_deviceStateMonitor->getOperationInfo(udi);
 
-    QString message;
+    // Bit awkward but oh well. The error message construction can defer an error to queryBlockingApps instead.
+    // That makes it a tri-state return value between an error message, no error, and a deferred error.
+    struct DeferredError {
+    };
 
-    switch (operationResult) {
-    case Solid::ErrorType::NoError:
-        if (state == DevicesStateMonitor::CheckDone) {
-            if (!operationInfo.toBool()) {
-                message = i18n("This device has file system errors.");
+    const auto errorVariant = [&] -> std::variant<std::optional<QString>, DeferredError> {
+        switch (operationResult) {
+        case Solid::ErrorType::NoError:
+            if (state == DevicesStateMonitor::CheckDone) {
+                if (!operationInfo.toBool()) {
+                    return i18n("This device has file system errors.");
+                }
+            } else if (state == DevicesStateMonitor::RepairDone) {
+                return i18n("Successfully repaired!");
+            } else if (state != DevicesStateMonitor::MountDone && isSafelyRemovable(udi)) {
+                KNotification::event(QStringLiteral("safelyRemovable"),
+                                     i18n("Device Status"),
+                                     i18n("A device can now be safely removed"),
+                                     u"device-notifier"_s,
+                                     KNotification::CloseOnTimeout,
+                                     u"devicenotifications"_s);
+                return i18n("This device can now be safely removed.");
             }
-        } else if (state == DevicesStateMonitor::RepairDone) {
-            message = i18n("Successfully repaired!");
-        } else if (state != DevicesStateMonitor::MountDone && isSafelyRemovable(udi)) {
-            KNotification::event(QStringLiteral("safelyRemovable"),
-                                 i18n("Device Status"),
-                                 i18n("A device can now be safely removed"),
-                                 u"device-notifier"_s,
-                                 KNotification::CloseOnTimeout,
-                                 u"devicenotifications"_s);
-            message = i18n("This device can now be safely removed.");
-        }
-        break;
+            return std::nullopt;
 
-    case Solid::ErrorType::UnauthorizedOperation:
-        switch (state) {
-        case DevicesStateMonitor::MountDone:
-            message = i18n("You are not authorized to mount this device.");
-            break;
-        case DevicesStateMonitor::UnmountDone: {
-            Solid::Device device(udi);
-            if (device.is<Solid::OpticalDisc>()) {
-                message = i18n("You are not authorized to eject this disc.");
-                break;
+        case Solid::ErrorType::UnauthorizedOperation:
+            switch (state) {
+            case DevicesStateMonitor::MountDone:
+                return i18n("You are not authorized to mount this device.");
+            case DevicesStateMonitor::UnmountDone: {
+                Solid::Device device(udi);
+                if (device.is<Solid::OpticalDisc>()) {
+                    return i18n("You are not authorized to eject this disc.");
+                }
+
+                return i18nc("Remove is less technical for unmount", "You are not authorized to remove this device.");
             }
+            case DevicesStateMonitor::RepairDone:
+                return i18n("You are not authorized to repair this device.");
+            default:
+                return i18n("Unknown error type");
+            }
+        case Solid::ErrorType::DeviceBusy: {
+            if (state == DevicesStateMonitor::MountDone) { // can this even happen?
+                return i18n("Could not mount this device as it is busy.");
+            } else {
+                QString deviceUdi = udi;
+                Solid::Device device(udi);
+                if (state == DevicesStateMonitor::UnmountDone && device.is<Solid::OpticalDisc>()) {
+                    const auto discs = Solid::Device::listFromType(Solid::DeviceInterface::OpticalDisc);
+                    for (const auto &disc : discs) {
+                        if (disc.parentUdi() == udi) {
+                            deviceUdi = disc.udi();
+                            break;
+                        }
+                    }
 
-            message = i18nc("Remove is less technical for unmount", "You are not authorized to remove this device.");
-            break;
-        }
-        case DevicesStateMonitor::RepairDone:
-            message = i18n("You are not authorized to repair this device.");
-            break;
-        default:
-            message = i18n("Unknown error type");
-            break;
-        }
-        break;
-    case Solid::ErrorType::DeviceBusy: {
-        if (state == DevicesStateMonitor::MountDone) { // can this even happen?
-            message = i18n("Could not mount this device as it is busy.");
-        } else {
-            QString deviceUdi = udi;
-            Solid::Device device(udi);
-            if (state == DevicesStateMonitor::UnmountDone && device.is<Solid::OpticalDisc>()) {
-                const auto discs = Solid::Device::listFromType(Solid::DeviceInterface::OpticalDisc);
-                for (const auto &disc : discs) {
-                    if (disc.parentUdi() == udi) {
-                        deviceUdi = disc.udi();
-                        break;
+                    if (deviceUdi.isNull()) {
+                        Q_ASSERT_X(false, Q_FUNC_INFO, "This should not happen, bail out");
                     }
                 }
 
-                if (deviceUdi.isNull()) {
-                    Q_ASSERT_X(false, Q_FUNC_INFO, "This should not happen, bail out");
-                }
+                Solid::StorageAccess *access = device.as<Solid::StorageAccess>();
+
+                // Without that, our lambda function would capture an uninitialized object, resulting in UB
+                // and random crashes
+                QMetaObject::Connection *c = new QMetaObject::Connection();
+                *c =
+                    connect(this, &DeviceMessageMonitor::blockingAppsReady, [c, operationResult, operationInfo, deviceUdi, this](const QStringList &blockApps) {
+                        QString message;
+                        if (blockApps.isEmpty()) {
+                            message = i18n("One or more files on this device are open within an application.");
+                        } else {
+                            message = i18np("One or more files on this device are opened in application \"%2\".",
+                                            "One or more files on this device are opened in following applications: %2.",
+                                            blockApps.size(),
+                                            blockApps.join(i18nc("separator in list of apps blocking device unmount", ", ")));
+                        }
+                        notify(message, operationInfo.toString(), deviceUdi);
+                        qCDebug(APPLETS::DEVICENOTIFIER) << "Device Message Monitor: " << "Message for device " << deviceUdi
+                                                         << " operation result: " << operationResult << "message:" << message;
+                        disconnect(*c);
+                        delete c;
+                    });
+                queryBlockingApps(access->filePath());
+                return DeferredError{};
             }
 
-            Solid::StorageAccess *access = device.as<Solid::StorageAccess>();
-
-            // Without that, our lambda function would capture an uninitialized object, resulting in UB
-            // and random crashes
-            QMetaObject::Connection *c = new QMetaObject::Connection();
-            *c = connect(this, &DeviceMessageMonitor::blockingAppsReady, [c, operationResult, operationInfo, deviceUdi, this](const QStringList &blockApps) {
-                QString message;
-                if (blockApps.isEmpty()) {
-                    message = i18n("One or more files on this device are open within an application.");
-                } else {
-                    message = i18np("One or more files on this device are opened in application \"%2\".",
-                                    "One or more files on this device are opened in following applications: %2.",
-                                    blockApps.size(),
-                                    blockApps.join(i18nc("separator in list of apps blocking device unmount", ", ")));
+            break;
+        }
+        case Solid::ErrorType::UserCanceled: {
+            // don't point out the obvious to the user, do nothing here
+            break;
+        }
+        default: {
+            switch (state) {
+            case DevicesStateMonitor::MountDone:
+                return i18n("Could not mount this device.");
+            case DevicesStateMonitor::UnmountDone: {
+                Solid::Device device(udi);
+                if (device.is<Solid::OpticalDisc>()) {
+                    return i18n("Could not eject this disc.");
                 }
-                notify(message, operationInfo.toString(), deviceUdi);
-                qCDebug(APPLETS::DEVICENOTIFIER) << "Device Message Monitor: " << "Message for device " << deviceUdi << " operation result: " << operationResult
-                                                 << "message:" << message;
-                disconnect(*c);
-                delete c;
-            });
-            queryBlockingApps(access->filePath());
-            return;
+                return i18nc("Remove is less technical for unmount", "Could not remove this device.");
+            }
+            case DevicesStateMonitor::RepairDone:
+                return i18n("Could not repair this device: %1").arg(operationInfo.toString());
+            default:
+                return i18n("Unknown error type");
+            }
+        }
         }
 
-        break;
+        return std::nullopt;
+    }();
+
+    if (std::holds_alternative<DeferredError>(errorVariant)) {
+        qCDebug(APPLETS::DEVICENOTIFIER) << "Device Message Monitor: "
+                                         << "Deferred error for device " << udi;
+        return; // don't notify, we will do it later
     }
-    case Solid::ErrorType::UserCanceled: {
-        // don't point out the obvious to the user, do nothing here
-        break;
-    }
-    default: {
-        switch (state) {
-        case DevicesStateMonitor::MountDone:
-            message = i18n("Could not mount this device.");
-            break;
-        case DevicesStateMonitor::UnmountDone: {
-            Solid::Device device(udi);
-            if (device.is<Solid::OpticalDisc>()) {
-                message = i18n("Could not eject this disc.");
-                break;
-            }
-            message = i18nc("Remove is less technical for unmount", "Could not remove this device.");
-            break;
-        }
-        case DevicesStateMonitor::RepairDone:
-            message = i18n("Could not repair this device: %1").arg(operationInfo.toString());
-            break;
-        default:
-            message = i18n("Unknown error type");
-            break;
-        }
-        break;
-    }
-    }
+
+    const auto &message = std::get<std::optional<QString>>(errorVariant);
+
     qCDebug(APPLETS::DEVICENOTIFIER) << "Device Message Monitor: "
                                      << "message for device " << udi << " operation result: " << operationResult << " message:" << message;
-    notify(message, operationInfo.toString(), udi);
+    notify(message.value_or(QString()), operationInfo.toString(), udi);
 }
 
 void DeviceMessageMonitor::notify(const QString &message, const QString &description, const QString &udi)
