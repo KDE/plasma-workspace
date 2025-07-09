@@ -34,10 +34,6 @@ DeviceMessageMonitor::DeviceMessageMonitor(QObject *parent)
     connect(m_deviceStateMonitor.get(), &DevicesStateMonitor::stateChanged, this, &DeviceMessageMonitor::onStateChanged);
 }
 
-DeviceMessageMonitor::~DeviceMessageMonitor()
-{
-}
-
 std::shared_ptr<DeviceMessageMonitor> DeviceMessageMonitor::instance()
 {
     static std::weak_ptr<DeviceMessageMonitor> s_clip;

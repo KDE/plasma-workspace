@@ -22,7 +22,6 @@ class DeviceMessageMonitor : public QObject
 
 public:
     static std::shared_ptr<DeviceMessageMonitor> instance();
-    ~DeviceMessageMonitor() override;
 
     void addMonitoringDevice(const QString &udi);
     void removeMonitoringDevice(const QString &udi);
