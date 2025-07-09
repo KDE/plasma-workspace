@@ -29,8 +29,8 @@ using namespace Qt::StringLiterals;
 
 DeviceMessageMonitor::DeviceMessageMonitor(QObject *parent)
     : QObject(parent)
+    , m_deviceStateMonitor(DevicesStateMonitor::instance())
 {
-    m_deviceStateMonitor = DevicesStateMonitor::instance();
     connect(m_deviceStateMonitor.get(), &DevicesStateMonitor::stateChanged, this, &DeviceMessageMonitor::onStateChanged);
 }
 
