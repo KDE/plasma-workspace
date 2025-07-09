@@ -39,7 +39,7 @@ Q_SIGNALS:
 
 private Q_SLOTS:
     void onStateChanged(const QString &udi);
-    void notify(const QString &message, const QString &info, const QString &udi);
+    void notify(const std::optional<QString> &message, const QString &info, const QString &udi);
     bool isSafelyRemovable(const QString &udi) const;
     void queryBlockingApps(const QString &devicePath);
     void clearPreviousMessage(const QString &udi);

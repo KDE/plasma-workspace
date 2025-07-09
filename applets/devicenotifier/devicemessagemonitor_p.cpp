@@ -128,7 +128,7 @@ void DeviceMessageMonitor::queryBlockingApps(const QString &devicePath)
 
 void DeviceMessageMonitor::clearPreviousMessage(const QString &udi)
 {
-    notify(QString(), QString(), udi);
+    notify(std::nullopt, QString(), udi);
 }
 
 void DeviceMessageMonitor::onStateChanged(const QString &udi)
@@ -281,15 +281,15 @@ void DeviceMessageMonitor::onStateChanged(const QString &udi)
 
     qCDebug(APPLETS::DEVICENOTIFIER) << "Device Message Monitor: "
                                      << "message for device " << udi << " operation result: " << operationResult << " message:" << message;
-    notify(message.value_or(QString()), operationInfo.toString(), udi);
+    notify(message, operationInfo.toString(), udi);
 }
 
-void DeviceMessageMonitor::notify(const QString &message, const QString &description, const QString &udi)
+void DeviceMessageMonitor::notify(const std::optional<QString> &message, const QString &description, const QString &udi)
 {
     Q_UNUSED(description)
 
-    if (!message.isEmpty()) {
-        m_deviceMessages[udi] = message;
+    if (message.has_value()) {
+        m_deviceMessages[udi] = message.value();
     } else {
         if (auto it = m_deviceMessages.constFind(udi); it != m_deviceMessages.cend()) {
             m_deviceMessages.erase(it);
