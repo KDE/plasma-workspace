@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2023, 2024 Freek de Kruijf <freekdekruijf@kde.nl>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-08 00:44+0000\n"
-"PO-Revision-Date: 2024-07-31 10:06+0200\n"
+"PO-Revision-Date: 2025-07-08 14:40+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #: devicenotifications.cpp:332
 #, kde-format
@@ -24,10 +24,9 @@ msgid "Display Detected"
 msgstr "Scherm gedetecteerd"
 
 #: devicenotifications.cpp:333
-#, fuzzy, kde-format
-#| msgid "A display has been unplugged."
+#, kde-format
 msgid "A display has been connected."
-msgstr "Een scherm is uitgenomen."
+msgstr "Een scherm is verbonden."
 
 #: devicenotifications.cpp:346
 #, kde-format
@@ -36,22 +35,19 @@ msgid "Display Removed"
 msgstr "Scherm verwijderd"
 
 #: devicenotifications.cpp:347
-#, fuzzy, kde-format
-#| msgid "A display has been unplugged."
+#, kde-format
 msgid "A display has been disconnected."
-msgstr "Een scherm is uitgenomen."
+msgstr "Verbinding met een scherm is verbroken."
 
 #: devicenotifications.cpp:378
-#, fuzzy, kde-format
-#| msgid "%1 has been unplugged."
+#, kde-format
 msgid "%1 has been connected."
-msgstr "%1 is ontkoppeld."
+msgstr "%1 is verbonden."
 
 #: devicenotifications.cpp:378
-#, fuzzy, kde-format
-#| msgid "A USB device has been unplugged."
+#, kde-format
 msgid "A USB device has been connected."
-msgstr "Een USB-apparaat is ontkoppeld."
+msgstr "Een USB-apparaat is verbonden."
 
 #: devicenotifications.cpp:381
 #, kde-format
@@ -60,24 +56,20 @@ msgid "USB Device Detected"
 msgstr "USB-apparaat gedetecteerd"
 
 #: devicenotifications.cpp:404
-#, fuzzy, kde-format
-#| msgid "%1 has been unplugged."
+#, kde-format
 msgid "%1 has been disconnected."
-msgstr "%1 is ontkoppeld."
+msgstr "Verbinding met %1 is verbroken."
 
 #: devicenotifications.cpp:404
-#, fuzzy, kde-format
-#| msgid "A USB device has been unplugged."
+#, kde-format
 msgid "A USB device has been disconnected."
-msgstr "Een USB-apparaat is ontkoppeld."
+msgstr "Verbinding met een USB-apparaat is verbroken."
 
 #: devicenotifications.cpp:407
-#, fuzzy, kde-format
-#| msgctxt "@title:notifications"
-#| msgid "USB Device Detected"
+#, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Went Away"
-msgstr "USB-apparaat gedetecteerd"
+msgstr "USB-apparaat is weg"
 
 #~ msgid "A display has been plugged in."
 #~ msgstr "Een scherm is ingeplugd."

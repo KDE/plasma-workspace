@@ -1,15 +1,15 @@
 # Translation of kded_devicenotifications.po to Catalan
-# Copyright (C) 2023-2024 This_file_is_part_of_KDE
+# Copyright (C) 2023-2025 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# SPDX-FileCopyrightText: 2023, 2024 Josep M. Ferrer <txemaq@gmail.com>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 Josep M. Ferrer <txemaq@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-08 00:44+0000\n"
-"PO-Revision-Date: 2024-07-31 09:42+0200\n"
+"PO-Revision-Date: 2025-07-08 11:49+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: devicenotifications.cpp:332
 #, kde-format
@@ -26,10 +26,9 @@ msgid "Display Detected"
 msgstr "S'ha detectat una pantalla"
 
 #: devicenotifications.cpp:333
-#, fuzzy, kde-format
-#| msgid "A display has been unplugged."
+#, kde-format
 msgid "A display has been connected."
-msgstr "S'ha desendollat una pantalla."
+msgstr "S'ha connectat una pantalla."
 
 #: devicenotifications.cpp:346
 #, kde-format
@@ -38,22 +37,19 @@ msgid "Display Removed"
 msgstr "S'ha extret una pantalla"
 
 #: devicenotifications.cpp:347
-#, fuzzy, kde-format
-#| msgid "A display has been unplugged."
+#, kde-format
 msgid "A display has been disconnected."
-msgstr "S'ha desendollat una pantalla."
+msgstr "S'ha desconnectat una pantalla."
 
 #: devicenotifications.cpp:378
-#, fuzzy, kde-format
-#| msgid "%1 has been unplugged."
+#, kde-format
 msgid "%1 has been connected."
-msgstr "%1 s'ha desendollat."
+msgstr "%1 s'ha connectat."
 
 #: devicenotifications.cpp:378
-#, fuzzy, kde-format
-#| msgid "A USB device has been unplugged."
+#, kde-format
 msgid "A USB device has been connected."
-msgstr "S'ha desendollat un dispositiu USB."
+msgstr "S'ha connectat un dispositiu USB."
 
 #: devicenotifications.cpp:381
 #, kde-format
@@ -62,34 +58,17 @@ msgid "USB Device Detected"
 msgstr "S'ha detectat un dispositiu USB"
 
 #: devicenotifications.cpp:404
-#, fuzzy, kde-format
-#| msgid "%1 has been unplugged."
+#, kde-format
 msgid "%1 has been disconnected."
-msgstr "%1 s'ha desendollat."
+msgstr "%1 s'ha desconnectat."
 
 #: devicenotifications.cpp:404
-#, fuzzy, kde-format
-#| msgid "A USB device has been unplugged."
+#, kde-format
 msgid "A USB device has been disconnected."
-msgstr "S'ha desendollat un dispositiu USB."
+msgstr "S'ha desconnectat un dispositiu USB."
 
 #: devicenotifications.cpp:407
-#, fuzzy, kde-format
-#| msgctxt "@title:notifications"
-#| msgid "USB Device Detected"
+#, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Went Away"
-msgstr "S'ha detectat un dispositiu USB"
-
-#~ msgid "A display has been plugged in."
-#~ msgstr "S'ha endollat una pantalla."
-
-#~ msgid "%1 has been plugged in."
-#~ msgstr "%1 s'ha endollat."
-
-#~ msgid "A USB device has been plugged in."
-#~ msgstr "S'ha endollat un dispositiu USB."
-
-#~ msgctxt "@title:notifications"
-#~ msgid "USB Device Removed"
-#~ msgstr "S'ha extret un dispositiu USB"
+msgstr "Ha desaparegut un dispositiu USB"
