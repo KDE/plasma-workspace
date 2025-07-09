@@ -7,6 +7,7 @@
 #pragma once
 
 #include <QDBusReply>
+#include <qqmlregistration.h>
 
 #include "debug.h"
 
@@ -16,6 +17,7 @@ class LayoutNames;
 class KeyboardLayout : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
 
     Q_PROPERTY(uint layout MEMBER mLayout WRITE setLayout NOTIFY layoutChanged)
 

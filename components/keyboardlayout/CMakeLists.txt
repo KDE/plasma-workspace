@@ -1,17 +1,4 @@
-set(keyboardlayoutplugin_SRCS
-    keyboardlayout.cpp keyboardlayout.h
-    keyboardlayoutplugin.cpp keyboardlayoutplugin.h
-    layoutnames.cpp
-    virtualkeyboard.cpp virtualkeyboard.h
-)
-
-ecm_qt_declare_logging_category(keyboardlayoutplugin_SRCS HEADER debug.h
-    IDENTIFIER KEYBOARD_LAYOUT
-    CATEGORY_NAME kde.keyboardlayout
-    DEFAULT_SEVERITY Info
-    DESCRIPTION "keyboard layout plugins"
-    EXPORT PLASMAWORKSPACE
-)
+ecm_add_qml_module(keyboardlayoutplugin URI "org.kde.plasma.workspace.keyboardlayout" VERSION 1.0 GENERATE_PLUGIN_SOURCE)
 
 set_source_files_properties(org.kde.KeyboardLayouts.xml
         PROPERTIES INCLUDE layoutnames.h)
@@ -19,14 +6,23 @@ set_source_files_properties(org.kde.KeyboardLayouts.xml
 qt_add_dbus_interface(keyboardlayoutplugin_SRCS "org.kde.KeyboardLayouts.xml" keyboard_layout_interface)
 qt_add_dbus_interface(keyboardlayoutplugin_SRCS "${KWIN_VIRTUALKEYBOARD_INTERFACE}" virtualkeyboard_interface)
 
-add_library(keyboardlayoutplugin SHARED ${keyboardlayoutplugin_SRCS})
+target_sources(keyboardlayoutplugin PRIVATE
+    keyboardlayout.cpp keyboardlayout.h
+    layoutnames.cpp
+    virtualkeyboard.cpp virtualkeyboard.h
+    ${keyboardlayoutplugin_SRCS}
+)
 
-target_link_libraries(keyboardlayoutplugin Qt::Core
+ecm_qt_declare_logging_category(keyboardlayoutplugin HEADER debug.h
+    IDENTIFIER KEYBOARD_LAYOUT
+    CATEGORY_NAME kde.keyboardlayout
+    DEFAULT_SEVERITY Info
+    DESCRIPTION "keyboard layout plugins"
+    EXPORT PLASMAWORKSPACE
+)
+
+target_link_libraries(keyboardlayoutplugin PRIVATE Qt::Core
                                            Qt::DBus
                                            Qt::Qml)
 
-set(keyboardlayoutplugin_PATH /org/kde/plasma/workspace/keyboardlayout)
-install(TARGETS keyboardlayoutplugin
-  DESTINATION ${KDE_INSTALL_QMLDIR}${keyboardlayoutplugin_PATH})
-install(FILES qmldir
-  DESTINATION ${KDE_INSTALL_QMLDIR}${keyboardlayoutplugin_PATH})
+ecm_finalize_qml_module(keyboardlayoutplugin)

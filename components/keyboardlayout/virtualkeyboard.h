@@ -6,11 +6,16 @@
 
 #pragma once
 
+#include <qqmlregistration.h>
+
 #include "virtualkeyboard_interface.h"
 
 class KwinVirtualKeyboardInterface : public OrgKdeKwinVirtualKeyboardInterface
 {
     Q_OBJECT
+    QML_NAMED_ELEMENT(KWinVirtualKeyboard)
+    QML_SINGLETON
+
     Q_PROPERTY(bool active READ active WRITE setActive NOTIFY activeChanged)
     Q_PROPERTY(bool enabled READ enabled WRITE setEnabled NOTIFY enabledChanged)
     Q_PROPERTY(bool visible READ visible NOTIFY visibleChanged)
