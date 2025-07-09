@@ -8,5 +8,3 @@ add_subdirectory(executable)
 add_subdirectory(notifications)
 
 add_subdirectory(time)
-add_subdirectory(weather)
-
