@@ -59,29 +59,25 @@ KCM.SimpleKCM {
 
     Connections {
         target: kcm
-        function onFirstLoadDone() {
-            if (!kcm.initialDesktopEntry && !kcm.initialNotifyRcName) {
+        function onNavigateToComponent(desktopEntry, notifyRcName, eventId) {
+            if (!desktopEntry && !notifyRcName) {
                 return;
             }
 
             // Detect if we want to open the system notification settings
-            const showSystemNotifications = (kcm.initialNotifyRcName === kcm.plasmaWorkspaceNotifyRcName
-                && (!kcm.initialDesktopEntry || (kcm.initialEventId && kcm.initialEventId !== "notification")));
+            const showSystemNotifications = (notifyRcName === kcm.plasmaWorkspaceNotifyRcName
+                && (!desktopEntry || (eventId && eventId !== "notification")));
 
-            let idx = kcm.sourcesModel.persistentIndexForDesktopEntry(kcm.initialDesktopEntry);
+            let idx = kcm.sourcesModel.persistentIndexForDesktopEntry(desktopEntry);
             if (showSystemNotifications || !idx.valid) {
-                idx = kcm.sourcesModel.persistentIndexForNotifyRcName(kcm.initialNotifyRcName);
+                idx = kcm.sourcesModel.persistentIndexForNotifyRcName(notifyRcName);
             }
 
             root.openSourcesSettings({
                 rootIndex: idx,
                 showOnlyEventsConfig: showSystemNotifications,
-                eventId: kcm.initialNotifyRcName ? kcm.initialEventId : "",
+                eventId: notifyRcName ? eventId : "",
             });
-
-            kcm.initialDesktopEntry = "";
-            kcm.initialNotifyRcName = "";
-            kcm.initialEventId = "";
         }
     }
 

@@ -81,9 +81,9 @@ KCMNotifications::KCMNotifications(QObject *parent, const KPluginMetaData &data,
 
     parser.parse(stringArgs);
 
-    setInitialDesktopEntry(parser.value(desktopEntryOption));
-    setInitialNotifyRcName(parser.value(notifyRcNameOption));
-    setInitialEventId(parser.value(eventIdOption));
+    m_initialDesktopEntry = parser.value(desktopEntryOption);
+    m_initialNotifyRcName = parser.value(notifyRcNameOption);
+    m_initialEventId = parser.value(eventIdOption);
 
     connect(this, &KCMNotifications::toggleDoNotDisturbShortcutChanged, this, &KCMNotifications::settingsChanged);
     connect(m_sourcesModel, &QAbstractItemModel::dataChanged, this, &KCMNotifications::settingsChanged);
@@ -145,45 +145,6 @@ void KCMNotifications::setToggleDoNotDisturbShortcut(const QKeySequence &shortcu
     Q_EMIT toggleDoNotDisturbShortcutChanged();
 }
 
-QString KCMNotifications::initialDesktopEntry() const
-{
-    return m_initialDesktopEntry;
-}
-
-void KCMNotifications::setInitialDesktopEntry(const QString &desktopEntry)
-{
-    if (m_initialDesktopEntry != desktopEntry) {
-        m_initialDesktopEntry = desktopEntry;
-        Q_EMIT initialDesktopEntryChanged();
-    }
-}
-
-QString KCMNotifications::initialNotifyRcName() const
-{
-    return m_initialNotifyRcName;
-}
-
-void KCMNotifications::setInitialNotifyRcName(const QString &notifyRcName)
-{
-    if (m_initialNotifyRcName != notifyRcName) {
-        m_initialNotifyRcName = notifyRcName;
-        Q_EMIT initialNotifyRcNameChanged();
-    }
-}
-
-QString KCMNotifications::initialEventId() const
-{
-    return m_initialEventId;
-}
-
-void KCMNotifications::setInitialEventId(const QString &eventId)
-{
-    if (m_initialEventId != eventId) {
-        m_initialEventId = eventId;
-        Q_EMIT initialEventIdChanged();
-    }
-}
-
 NotificationManager::BehaviorSettings *KCMNotifications::behaviorSettings(const QModelIndex &index)
 {
     if (!index.isValid()) {
@@ -241,8 +202,9 @@ void KCMNotifications::load()
     }
 
     m_toggleDoNotDisturbShortcutDirty = false;
+
     if (firstLoad) {
-        Q_EMIT firstLoadDone();
+        Q_EMIT navigateToComponent(m_initialDesktopEntry, m_initialNotifyRcName, m_initialEventId);
     }
 }
 
