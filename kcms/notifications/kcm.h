@@ -48,11 +48,6 @@ class KCMNotifications : public KQuickManagedConfigModule
     Q_PROPERTY(
         QKeySequence toggleDoNotDisturbShortcut READ toggleDoNotDisturbShortcut WRITE setToggleDoNotDisturbShortcut NOTIFY toggleDoNotDisturbShortcutChanged)
 
-    // So it can show the respective settings module right away
-    Q_PROPERTY(QString initialDesktopEntry READ initialDesktopEntry WRITE setInitialDesktopEntry NOTIFY initialDesktopEntryChanged)
-    Q_PROPERTY(QString initialNotifyRcName READ initialNotifyRcName WRITE setInitialNotifyRcName NOTIFY initialNotifyRcNameChanged)
-    Q_PROPERTY(QString initialEventId READ initialEventId WRITE setInitialEventId NOTIFY initialEventIdChanged)
-
 public:
     KCMNotifications(QObject *parent, const KPluginMetaData &data, const QVariantList &args);
     ~KCMNotifications() override;
@@ -71,15 +66,6 @@ public:
     void setToggleDoNotDisturbShortcut(const QKeySequence &shortcut);
     Q_SIGNAL void toggleDoNotDisturbShortcutChanged();
 
-    QString initialDesktopEntry() const;
-    void setInitialDesktopEntry(const QString &desktopEntry);
-
-    QString initialNotifyRcName() const;
-    void setInitialNotifyRcName(const QString &notifyRcName);
-
-    QString initialEventId() const;
-    void setInitialEventId(const QString &eventId);
-
     Q_INVOKABLE QUrl soundsLocation();
     Q_INVOKABLE void playSound(const QString &soundName);
 
@@ -93,10 +79,7 @@ public Q_SLOTS:
     void defaults() override;
 
 Q_SIGNALS:
-    void initialDesktopEntryChanged();
-    void initialNotifyRcNameChanged();
-    void initialEventIdChanged();
-    void firstLoadDone();
+    void navigateToComponent(const QString &desktopEntry, const QString notifyRcName, const QString eventId);
     void isDefaultsBehaviorSettingsChanged();
 
 private Q_SLOTS:
