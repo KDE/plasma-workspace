@@ -95,7 +95,7 @@ bool DeviceMessageMonitor::isSafelyRemovable(const QString &udi) const
 void DeviceMessageMonitor::queryBlockingApps(const QString &devicePath)
 {
     auto p = new QProcess;
-    connect(p, &QProcess::errorOccurred, [=, this](QProcess::ProcessError) {
+    connect(p, &QProcess::errorOccurred, [p, this](QProcess::ProcessError) {
         Q_EMIT blockingAppsReady({});
         p->deleteLater();
     });
