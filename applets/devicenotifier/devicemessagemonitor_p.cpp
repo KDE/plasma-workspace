@@ -98,7 +98,7 @@ bool DeviceMessageMonitor::isSafelyRemovable(const QString &udi) const
 
 void DeviceMessageMonitor::queryBlockingApps(const QString &devicePath)
 {
-    QProcess *p = new QProcess;
+    auto p = new QProcess;
     connect(p, &QProcess::errorOccurred, [=, this](QProcess::ProcessError) {
         Q_EMIT blockingAppsReady({});
         p->deleteLater();
@@ -218,11 +218,11 @@ void DeviceMessageMonitor::onStateChanged(const QString &udi)
                 }
             }
 
-            Solid::StorageAccess *access = device.as<Solid::StorageAccess>();
+            auto access = device.as<Solid::StorageAccess>();
 
             // Without that, our lambda function would capture an uninitialized object, resulting in UB
             // and random crashes
-            QMetaObject::Connection *c = new QMetaObject::Connection();
+            auto c = new QMetaObject::Connection();
             *c = connect(this, &DeviceMessageMonitor::blockingAppsReady, [c, operationResult, operationInfo, deviceUdi, this](const QStringList &blockApps) {
                 QString message;
                 if (blockApps.isEmpty()) {
