@@ -65,7 +65,8 @@ KCM.SimpleKCM {
             }
 
             // Detect if we want to open the system notification settings
-            const showSystemNotifications = (kcm.initialNotifyRcName === kcm.plasmaWorkspaceNotifyRcName);
+            const showSystemNotifications = (kcm.initialNotifyRcName === kcm.plasmaWorkspaceNotifyRcName
+                && (!kcm.initialDesktopEntry || (kcm.initialEventId && kcm.initialEventId !== "notification")));
 
             let idx = kcm.sourcesModel.persistentIndexForDesktopEntry(kcm.initialDesktopEntry);
             if (showSystemNotifications || !idx.valid) {
