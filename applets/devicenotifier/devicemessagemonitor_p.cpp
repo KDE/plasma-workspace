@@ -163,13 +163,13 @@ void DeviceMessageMonitor::onStateChanged(const QString &udi)
     const auto errorVariant = [&] -> std::variant<std::optional<QString>, DeferredError> {
         switch (operationResult) {
         case Solid::ErrorType::NoError:
-            if (state == DevicesStateMonitor::CheckDone) {
-                if (!operationInfo.toBool()) {
-                    return i18n("This device has file system errors.");
-                }
-            } else if (state == DevicesStateMonitor::RepairDone) {
+            if (state == DevicesStateMonitor::CheckDone && !operationInfo.toBool()) {
+                return i18n("This device has file system errors.");
+            }
+            if (state == DevicesStateMonitor::RepairDone) {
                 return i18n("Successfully repaired!");
-            } else if (state != DevicesStateMonitor::MountDone && isSafelyRemovable(udi)) {
+            }
+            if (state != DevicesStateMonitor::MountDone && isSafelyRemovable(udi)) {
                 KNotification::event(QStringLiteral("safelyRemovable"),
                                      i18n("Device Status"),
                                      i18n("A device can now be safely removed"),
@@ -200,50 +200,47 @@ void DeviceMessageMonitor::onStateChanged(const QString &udi)
         case Solid::ErrorType::DeviceBusy: {
             if (state == DevicesStateMonitor::MountDone) { // can this even happen?
                 return i18n("Could not mount this device as it is busy.");
-            } else {
-                QString deviceUdi = udi;
-                Solid::Device device(udi);
-                if (state == DevicesStateMonitor::UnmountDone && device.is<Solid::OpticalDisc>()) {
-                    const auto discs = Solid::Device::listFromType(Solid::DeviceInterface::OpticalDisc);
-                    for (const auto &disc : discs) {
-                        if (disc.parentUdi() == udi) {
-                            deviceUdi = disc.udi();
-                            break;
-                        }
-                    }
+            }
 
-                    if (deviceUdi.isNull()) {
-                        Q_ASSERT_X(false, Q_FUNC_INFO, "This should not happen, bail out");
+            QString deviceUdi = udi;
+            Solid::Device device(udi);
+            if (state == DevicesStateMonitor::UnmountDone && device.is<Solid::OpticalDisc>()) {
+                const auto discs = Solid::Device::listFromType(Solid::DeviceInterface::OpticalDisc);
+                for (const auto &disc : discs) {
+                    if (disc.parentUdi() == udi) {
+                        deviceUdi = disc.udi();
+                        break;
                     }
                 }
 
-                Solid::StorageAccess *access = device.as<Solid::StorageAccess>();
-
-                // Without that, our lambda function would capture an uninitialized object, resulting in UB
-                // and random crashes
-                QMetaObject::Connection *c = new QMetaObject::Connection();
-                *c =
-                    connect(this, &DeviceMessageMonitor::blockingAppsReady, [c, operationResult, operationInfo, deviceUdi, this](const QStringList &blockApps) {
-                        QString message;
-                        if (blockApps.isEmpty()) {
-                            message = i18n("One or more files on this device are open within an application.");
-                        } else {
-                            message = i18np("One or more files on this device are opened in application \"%2\".",
-                                            "One or more files on this device are opened in following applications: %2.",
-                                            blockApps.size(),
-                                            blockApps.join(i18nc("separator in list of apps blocking device unmount", ", ")));
-                        }
-                        notify(message, operationInfo.toString(), deviceUdi);
-                        qCDebug(APPLETS::DEVICENOTIFIER) << "Device Message Monitor: " << "Message for device " << deviceUdi
-                                                         << " operation result: " << operationResult << "message:" << message;
-                        disconnect(*c);
-                        delete c;
-                    });
-                queryBlockingApps(access->filePath());
-                return DeferredError{};
+                if (deviceUdi.isNull()) {
+                    Q_ASSERT_X(false, Q_FUNC_INFO, "This should not happen, bail out");
+                }
             }
 
-            break;
+            Solid::StorageAccess *access = device.as<Solid::StorageAccess>();
+
+            // Without that, our lambda function would capture an uninitialized object, resulting in UB
+            // and random crashes
+            QMetaObject::Connection *c = new QMetaObject::Connection();
+            *c = connect(this, &DeviceMessageMonitor::blockingAppsReady, [c, operationResult, operationInfo, deviceUdi, this](const QStringList &blockApps) {
+                QString message;
+                if (blockApps.isEmpty()) {
+                    message = i18n("One or more files on this device are open within an application.");
+                } else {
+                    message = i18np("One or more files on this device are opened in application \"%2\".",
+                                    "One or more files on this device are opened in following applications: %2.",
+                                    blockApps.size(),
+                                    blockApps.join(i18nc("separator in list of apps blocking device unmount", ", ")));
+                }
+                notify(message, operationInfo.toString(), deviceUdi);
+                qCDebug(APPLETS::DEVICENOTIFIER) << "Device Message Monitor: " << "Message for device " << deviceUdi << " operation result: " << operationResult
+                                                 << "message:" << message;
+                disconnect(*c);
+                delete c;
+            });
+            queryBlockingApps(access->filePath());
+            return DeferredError{};
         }
         case Solid::ErrorType::UserCanceled: {
             // don't point out the obvious to the user, do nothing here
