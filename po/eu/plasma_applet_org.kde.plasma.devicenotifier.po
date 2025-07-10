@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-27 00:44+0000\n"
+"POT-Creation-Date: 2025-07-10 00:44+0000\n"
 "PO-Revision-Date: 2025-05-25 15:01+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -51,63 +51,68 @@ msgstr "Egotzi"
 msgid "Safely remove"
 msgstr "Kendu arriskurik gabe"
 
-#: deviceerrormonitor_p.cpp:198
+#: devicemessagemonitor_p.cpp:164
 #, kde-format
 msgid "This device has file system errors."
 msgstr "Gailu honek fitxategi-sistemaren erroreak ditu."
 
-#: deviceerrormonitor_p.cpp:201
+#: devicemessagemonitor_p.cpp:167
 #, kde-format
 msgid "Successfully repaired!"
 msgstr "Ondo konpondu da!"
 
-#: deviceerrormonitor_p.cpp:204
+#: devicemessagemonitor_p.cpp:170
 #, kde-format
 msgid "Device Status"
 msgstr "Gailuaren egoera"
 
-#: deviceerrormonitor_p.cpp:205
+#: devicemessagemonitor_p.cpp:171
 #, kde-format
 msgid "A device can now be safely removed"
 msgstr "Orain, gailu bat modu seguruan ken daiteke"
 
-#: deviceerrormonitor_p.cpp:209
+#: devicemessagemonitor_p.cpp:175
 #, kde-format
 msgid "This device can now be safely removed."
 msgstr "Orain, gailu hori modu seguruan ken daiteke."
 
-#: deviceerrormonitor_p.cpp:216
+#: devicemessagemonitor_p.cpp:182
 #, kde-format
 msgid "You are not authorized to mount this device."
 msgstr "Ez zaude gailu hori muntatzera baimenduta."
 
-#: deviceerrormonitor_p.cpp:219
+#: devicemessagemonitor_p.cpp:187
+#, kde-format
+msgid "You are not authorized to eject this disc."
+msgstr "Ez zaude disko hori egoztera baimenduta."
+
+#: devicemessagemonitor_p.cpp:191
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr "Ez zaude gailu hori kentzera baimenduta."
 
-#: deviceerrormonitor_p.cpp:222
-#, kde-format
-msgid "You are not authorized to eject this disc."
-msgstr "Ez zaude disko hori egoztera baimenduta."
-
-#: deviceerrormonitor_p.cpp:225
+#: devicemessagemonitor_p.cpp:195
 #, kde-format
 msgid "You are not authorized to repair this device."
 msgstr "Ez duzu gailu hau konpontzeko baimenik."
 
-#: deviceerrormonitor_p.cpp:232
+#: devicemessagemonitor_p.cpp:198 devicemessagemonitor_p.cpp:271
+#, kde-format
+msgid "Unknown error type"
+msgstr ""
+
+#: devicemessagemonitor_p.cpp:204
 #, kde-format
 msgid "Could not mount this device as it is busy."
 msgstr "Ezin izan da gailu hori muntatu lanpetuta dagoelako."
 
-#: deviceerrormonitor_p.cpp:260
+#: devicemessagemonitor_p.cpp:230
 #, kde-format
 msgid "One or more files on this device are open within an application."
 msgstr "Gailu horretako fitxategi bat gutxienez aplikazio batean irekita dago."
 
-#: deviceerrormonitor_p.cpp:262
+#: devicemessagemonitor_p.cpp:232
 #, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
@@ -117,34 +122,34 @@ msgstr[0] ""
 msgstr[1] ""
 "Gailu horretako fitxategi bat gutxienez ondoko aplikazioetan irekita dago: %2"
 
-#: deviceerrormonitor_p.cpp:265
+#: devicemessagemonitor_p.cpp:235
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ", "
 
-#: deviceerrormonitor_p.cpp:285
+#: devicemessagemonitor_p.cpp:256
 #, kde-format
 msgid "Could not mount this device."
 msgstr "Ezin izan du gailu hori muntatu."
 
-#: deviceerrormonitor_p.cpp:288
+#: devicemessagemonitor_p.cpp:261
+#, kde-format
+msgid "Could not eject this disc."
+msgstr "Ezin izan du disko hori egotzi."
+
+#: devicemessagemonitor_p.cpp:264
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "Ezin izan du gailu hori kendu."
 
-#: deviceerrormonitor_p.cpp:291
-#, kde-format
-msgid "Could not eject this disc."
-msgstr "Ezin izan du disko hori egotzi."
-
-#: deviceerrormonitor_p.cpp:294
+#: devicemessagemonitor_p.cpp:268
 #, kde-format
 msgid "Could not repair this device: %1"
 msgstr "Ezin izan du gailu hau konpondu: %1"
 
-#: qml/DeviceItem.qml:95
+#: qml/DeviceItem.qml:105
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -152,7 +157,7 @@ msgctxt ""
 msgid "Checking…"
 msgstr "Egiaztatzen…"
 
-#: qml/DeviceItem.qml:97
+#: qml/DeviceItem.qml:107
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -160,13 +165,13 @@ msgctxt ""
 msgid "Repairing…"
 msgstr "Konpontzen..."
 
-#: qml/DeviceItem.qml:100
+#: qml/DeviceItem.qml:110
 #, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "%1/%2 hutsik"
 
-#: qml/DeviceItem.qml:104
+#: qml/DeviceItem.qml:114
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -174,7 +179,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr "Atzitzen..."
 
-#: qml/DeviceItem.qml:107
+#: qml/DeviceItem.qml:117
 #, kde-format
 msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
@@ -182,7 +187,7 @@ msgctxt ""
 msgid "Removing…"
 msgstr "Kentzen..."
 
-#: qml/DeviceItem.qml:110
+#: qml/DeviceItem.qml:120
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr ""

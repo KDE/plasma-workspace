@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-27 00:44+0000\n"
+"POT-Creation-Date: 2025-07-10 00:44+0000\n"
 "PO-Revision-Date: 2025-02-23 19:04+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -49,63 +49,68 @@ msgstr "أخرِج"
 msgid "Safely remove"
 msgstr "أزِل بأمان"
 
-#: deviceerrormonitor_p.cpp:198
+#: devicemessagemonitor_p.cpp:164
 #, kde-format
 msgid "This device has file system errors."
 msgstr "يحتوي هذا الجهاز على أخطاء في نظام الملفات."
 
-#: deviceerrormonitor_p.cpp:201
+#: devicemessagemonitor_p.cpp:167
 #, kde-format
 msgid "Successfully repaired!"
 msgstr "نحج في إصلاحه!"
 
-#: deviceerrormonitor_p.cpp:204
+#: devicemessagemonitor_p.cpp:170
 #, kde-format
 msgid "Device Status"
 msgstr "حالة الأجهزة"
 
-#: deviceerrormonitor_p.cpp:205
+#: devicemessagemonitor_p.cpp:171
 #, kde-format
 msgid "A device can now be safely removed"
 msgstr "يمكن إزالة جهاز الآن بأمان."
 
-#: deviceerrormonitor_p.cpp:209
+#: devicemessagemonitor_p.cpp:175
 #, kde-format
 msgid "This device can now be safely removed."
 msgstr "يمكن إزالة هذا الجهاز الآن بأمان."
 
-#: deviceerrormonitor_p.cpp:216
+#: devicemessagemonitor_p.cpp:182
 #, kde-format
 msgid "You are not authorized to mount this device."
 msgstr "لست مستوثقًا لضمّ هذا الجهاز."
 
-#: deviceerrormonitor_p.cpp:219
+#: devicemessagemonitor_p.cpp:187
+#, kde-format
+msgid "You are not authorized to eject this disc."
+msgstr "لست مستوثقًا لإخراج هذا القرص."
+
+#: devicemessagemonitor_p.cpp:191
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr "لست مستوثقًا لإزالة هذا الجهاز."
 
-#: deviceerrormonitor_p.cpp:222
-#, kde-format
-msgid "You are not authorized to eject this disc."
-msgstr "لست مستوثقًا لإخراج هذا القرص."
-
-#: deviceerrormonitor_p.cpp:225
+#: devicemessagemonitor_p.cpp:195
 #, kde-format
 msgid "You are not authorized to repair this device."
 msgstr "ليس لديك الإذن في إصلاح هذا الجهاز."
 
-#: deviceerrormonitor_p.cpp:232
+#: devicemessagemonitor_p.cpp:198 devicemessagemonitor_p.cpp:271
+#, kde-format
+msgid "Unknown error type"
+msgstr ""
+
+#: devicemessagemonitor_p.cpp:204
 #, kde-format
 msgid "Could not mount this device as it is busy."
 msgstr "تعذّر ضمّ هذا الجهاز فهو مشغول."
 
-#: deviceerrormonitor_p.cpp:260
+#: devicemessagemonitor_p.cpp:230
 #, kde-format
 msgid "One or more files on this device are open within an application."
 msgstr "ثمّة ملفّ أو أكثر في هذا الجهاز مفتوح في تطبيق آخر."
 
-#: deviceerrormonitor_p.cpp:262
+#: devicemessagemonitor_p.cpp:232
 #, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
@@ -117,35 +122,35 @@ msgstr[3] "ثمّة ملفّ أو أكثر في هذا الجهاز مفتوح �
 msgstr[4] "ثمّة ملفّ أو أكثر في هذا الجهاز مفتوح في التّطبيقات \"%2\"."
 msgstr[5] "ثمّة ملفّ أو أكثر في هذا الجهاز مفتوح في التّطبيقات \"%2\"."
 
-#: deviceerrormonitor_p.cpp:265
+#: devicemessagemonitor_p.cpp:235
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr "، "
 
-#: deviceerrormonitor_p.cpp:285
+#: devicemessagemonitor_p.cpp:256
 #, kde-format
 msgid "Could not mount this device."
 msgstr "تعذّر ضمّ هذا الجهاز."
 
-#: deviceerrormonitor_p.cpp:288
+#: devicemessagemonitor_p.cpp:261
+#, kde-format
+msgid "Could not eject this disc."
+msgstr "تعذّر إخراج هذا القرص."
+
+#: devicemessagemonitor_p.cpp:264
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "تعذّرت إزالة هذا الجهاز."
 
-#: deviceerrormonitor_p.cpp:291
-#, kde-format
-msgid "Could not eject this disc."
-msgstr "تعذّر إخراج هذا القرص."
-
-#: deviceerrormonitor_p.cpp:294
+#: devicemessagemonitor_p.cpp:268
 #, kde-format
 msgid "Could not repair this device: %1"
 msgstr "لم يتمكن من إصلاح هذا الجهاز: %1"
 
 # هنا للتناسق مع يجري الوصول فقط
-#: qml/DeviceItem.qml:95
+#: qml/DeviceItem.qml:105
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -154,7 +159,7 @@ msgid "Checking…"
 msgstr "يفحص…"
 
 # هنا للتناسق مع يجري الوصول فقط
-#: qml/DeviceItem.qml:97
+#: qml/DeviceItem.qml:107
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -162,14 +167,14 @@ msgctxt ""
 msgid "Repairing…"
 msgstr "يصلح…"
 
-#: qml/DeviceItem.qml:100
+#: qml/DeviceItem.qml:110
 #, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "%1 حرّة من %2"
 
 # يجري هنا أفضل لأن يَصِل قصيرة والنص صغير
-#: qml/DeviceItem.qml:104
+#: qml/DeviceItem.qml:114
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -178,7 +183,7 @@ msgid "Accessing…"
 msgstr "يَصِل..."
 
 # هنا للتناسق مع يجري الوصول فقط
-#: qml/DeviceItem.qml:107
+#: qml/DeviceItem.qml:117
 #, kde-format
 msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
@@ -186,7 +191,7 @@ msgctxt ""
 msgid "Removing…"
 msgstr "يفصل..."
 
-#: qml/DeviceItem.qml:110
+#: qml/DeviceItem.qml:120
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr "لا تفصله! ما زالت الملفات تنقل…"

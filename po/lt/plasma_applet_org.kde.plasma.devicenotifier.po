@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-27 00:44+0000\n"
+"POT-Creation-Date: 2025-07-10 00:44+0000\n"
 "PO-Revision-Date: 2025-03-11 21:40+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -52,64 +52,69 @@ msgstr "Išstumti"
 msgid "Safely remove"
 msgstr "Saugiai pašalinti"
 
-#: deviceerrormonitor_p.cpp:198
+#: devicemessagemonitor_p.cpp:164
 #, kde-format
 msgid "This device has file system errors."
 msgstr "Šiame įrenginyje yra failų sistemos klaidų."
 
-#: deviceerrormonitor_p.cpp:201
+#: devicemessagemonitor_p.cpp:167
 #, kde-format
 msgid "Successfully repaired!"
 msgstr "Sėkmingai pataisyta!"
 
-#: deviceerrormonitor_p.cpp:204
+#: devicemessagemonitor_p.cpp:170
 #, kde-format
 msgid "Device Status"
 msgstr "Įrenginio būsena"
 
-#: deviceerrormonitor_p.cpp:205
+#: devicemessagemonitor_p.cpp:171
 #, kde-format
 msgid "A device can now be safely removed"
 msgstr "Dabar įrenginys gali būti saugiai pašalintas"
 
-#: deviceerrormonitor_p.cpp:209
+#: devicemessagemonitor_p.cpp:175
 #, kde-format
 msgid "This device can now be safely removed."
 msgstr "Dabar šis įrenginys gali būti saugiai pašalintas."
 
-#: deviceerrormonitor_p.cpp:216
+#: devicemessagemonitor_p.cpp:182
 #, kde-format
 msgid "You are not authorized to mount this device."
 msgstr "Jūs neturite įgaliojimų prijungti šį įrenginį."
 
-#: deviceerrormonitor_p.cpp:219
+#: devicemessagemonitor_p.cpp:187
+#, kde-format
+msgid "You are not authorized to eject this disc."
+msgstr "Jūs neturite įgaliojimų išstumti šį diską."
+
+#: devicemessagemonitor_p.cpp:191
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr "Jūs neturite įgaliojimų pašalinti šį įrenginį."
 
-#: deviceerrormonitor_p.cpp:222
-#, kde-format
-msgid "You are not authorized to eject this disc."
-msgstr "Jūs neturite įgaliojimų išstumti šį diską."
-
-#: deviceerrormonitor_p.cpp:225
+#: devicemessagemonitor_p.cpp:195
 #, kde-format
 msgid "You are not authorized to repair this device."
 msgstr "Jūs neturite įgaliojimų pataisyti šį įrenginį."
 
-#: deviceerrormonitor_p.cpp:232
+#: devicemessagemonitor_p.cpp:198 devicemessagemonitor_p.cpp:271
+#, kde-format
+msgid "Unknown error type"
+msgstr ""
+
+#: devicemessagemonitor_p.cpp:204
 #, kde-format
 msgid "Could not mount this device as it is busy."
 msgstr "Nepavyko prijungti šio įrenginio, nes jis yra užimtas."
 
-#: deviceerrormonitor_p.cpp:260
+#: devicemessagemonitor_p.cpp:230
 #, kde-format
 msgid "One or more files on this device are open within an application."
 msgstr ""
 "Vienas ar daugiau failų iš šio įrenginio yra atverta tam tikrose programose."
 
-#: deviceerrormonitor_p.cpp:262
+#: devicemessagemonitor_p.cpp:232
 #, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
@@ -123,34 +128,34 @@ msgstr[2] ""
 msgstr[3] ""
 "Vienas ar daugiau failų iš šio įrenginio yra atverta šiose programose: %2."
 
-#: deviceerrormonitor_p.cpp:265
+#: devicemessagemonitor_p.cpp:235
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ", "
 
-#: deviceerrormonitor_p.cpp:285
+#: devicemessagemonitor_p.cpp:256
 #, kde-format
 msgid "Could not mount this device."
 msgstr "Nepavyko prijungti šio įrenginio."
 
-#: deviceerrormonitor_p.cpp:288
+#: devicemessagemonitor_p.cpp:261
+#, kde-format
+msgid "Could not eject this disc."
+msgstr "Nepavyko išstumti šio disko."
+
+#: devicemessagemonitor_p.cpp:264
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "Nepavyko pašalinti šio įrenginio."
 
-#: deviceerrormonitor_p.cpp:291
-#, kde-format
-msgid "Could not eject this disc."
-msgstr "Nepavyko išstumti šio disko."
-
-#: deviceerrormonitor_p.cpp:294
+#: devicemessagemonitor_p.cpp:268
 #, kde-format
 msgid "Could not repair this device: %1"
 msgstr "Nepavyko pataisyti šio įrenginio: %1"
 
-#: qml/DeviceItem.qml:95
+#: qml/DeviceItem.qml:105
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -158,7 +163,7 @@ msgctxt ""
 msgid "Checking…"
 msgstr "Tikrinama…"
 
-#: qml/DeviceItem.qml:97
+#: qml/DeviceItem.qml:107
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -166,13 +171,13 @@ msgctxt ""
 msgid "Repairing…"
 msgstr "Pataisoma…"
 
-#: qml/DeviceItem.qml:100
+#: qml/DeviceItem.qml:110
 #, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "%1 laisva iš %2"
 
-#: qml/DeviceItem.qml:104
+#: qml/DeviceItem.qml:114
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -180,7 +185,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr "Prijungiama…"
 
-#: qml/DeviceItem.qml:107
+#: qml/DeviceItem.qml:117
 #, kde-format
 msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
@@ -188,7 +193,7 @@ msgctxt ""
 msgid "Removing…"
 msgstr "Atjungiama…"
 
-#: qml/DeviceItem.qml:110
+#: qml/DeviceItem.qml:120
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr "Kol kas neatjunkite! Failai yra vis dar perkeliami…"

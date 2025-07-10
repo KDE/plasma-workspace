@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-27 00:44+0000\n"
+"POT-Creation-Date: 2025-07-10 00:44+0000\n"
 "PO-Revision-Date: 2010-01-05 11:10+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: Kannada <kde-l10n-kn@kde.org>\n"
@@ -48,63 +48,68 @@ msgstr ""
 msgid "Safely remove"
 msgstr ""
 
-#: deviceerrormonitor_p.cpp:198
+#: devicemessagemonitor_p.cpp:164
 #, kde-format
 msgid "This device has file system errors."
 msgstr ""
 
-#: deviceerrormonitor_p.cpp:201
+#: devicemessagemonitor_p.cpp:167
 #, kde-format
 msgid "Successfully repaired!"
 msgstr ""
 
-#: deviceerrormonitor_p.cpp:204
+#: devicemessagemonitor_p.cpp:170
 #, kde-format
 msgid "Device Status"
 msgstr ""
 
-#: deviceerrormonitor_p.cpp:205
+#: devicemessagemonitor_p.cpp:171
 #, kde-format
 msgid "A device can now be safely removed"
 msgstr ""
 
-#: deviceerrormonitor_p.cpp:209
+#: devicemessagemonitor_p.cpp:175
 #, kde-format
 msgid "This device can now be safely removed."
 msgstr ""
 
-#: deviceerrormonitor_p.cpp:216
+#: devicemessagemonitor_p.cpp:182
 #, fuzzy, kde-format
 #| msgid "Click to safely remove this device from the computer."
 msgid "You are not authorized to mount this device."
 msgstr "ಸಾಧನವನ್ನು ಸುರಕ್ಷಿತವಾಗಿ ಗಣಕಯಂತ್ರದಿಂದ ಬೇರ್ಪಡಿಸಲು ಕ್ಲಿಕ್ಕಿಸಿ"
 
-#: deviceerrormonitor_p.cpp:219
+#: devicemessagemonitor_p.cpp:187
+#, fuzzy, kde-format
+#| msgid "Click to safely remove this device from the computer."
+msgid "You are not authorized to eject this disc."
+msgstr "ಸಾಧನವನ್ನು ಸುರಕ್ಷಿತವಾಗಿ ಗಣಕಯಂತ್ರದಿಂದ ಬೇರ್ಪಡಿಸಲು ಕ್ಲಿಕ್ಕಿಸಿ"
+
+#: devicemessagemonitor_p.cpp:191
 #, fuzzy, kde-format
 #| msgid "Click to safely remove this device from the computer."
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr "ಸಾಧನವನ್ನು ಸುರಕ್ಷಿತವಾಗಿ ಗಣಕಯಂತ್ರದಿಂದ ಬೇರ್ಪಡಿಸಲು ಕ್ಲಿಕ್ಕಿಸಿ"
 
-#: deviceerrormonitor_p.cpp:222
-#, fuzzy, kde-format
-#| msgid "Click to safely remove this device from the computer."
-msgid "You are not authorized to eject this disc."
-msgstr "ಸಾಧನವನ್ನು ಸುರಕ್ಷಿತವಾಗಿ ಗಣಕಯಂತ್ರದಿಂದ ಬೇರ್ಪಡಿಸಲು ಕ್ಲಿಕ್ಕಿಸಿ"
-
-#: deviceerrormonitor_p.cpp:225
+#: devicemessagemonitor_p.cpp:195
 #, fuzzy, kde-format
 #| msgid "Click to safely remove this device from the computer."
 msgid "You are not authorized to repair this device."
 msgstr "ಸಾಧನವನ್ನು ಸುರಕ್ಷಿತವಾಗಿ ಗಣಕಯಂತ್ರದಿಂದ ಬೇರ್ಪಡಿಸಲು ಕ್ಲಿಕ್ಕಿಸಿ"
 
-#: deviceerrormonitor_p.cpp:232
+#: devicemessagemonitor_p.cpp:198 devicemessagemonitor_p.cpp:271
+#, kde-format
+msgid "Unknown error type"
+msgstr ""
+
+#: devicemessagemonitor_p.cpp:204
 #, fuzzy, kde-format
 #| msgid "Last plugged in device: %1"
 msgid "Could not mount this device as it is busy."
 msgstr "ಕೊನೆಯ ಬಾರಿಗೆ ಜೋಡಿಸಲಾದ ಸಾಧನ: %1"
 
-#: deviceerrormonitor_p.cpp:260
+#: devicemessagemonitor_p.cpp:230
 #, fuzzy, kde-format
 #| msgid ""
 #| "Cannot eject the disc.\n"
@@ -114,7 +119,7 @@ msgstr ""
 "ಮುದ್ರಿಕೆಯನ್ನು (ಡಿಸ್ಕ್) ಹೊರತಳ್ಳಲು(ಇಜೆಕ್ಟ್) ಸಾಧ್ಯವಾಗಿಲ್ಲ.\n"
 "ಈ ಮುದ್ರಿಕೆಯಲ್ಲಿರುವ ಒಂದು ಅಥವಾ ಹೆಚ್ಚು ಕಡತಗಳು ಒಂದು ಅನ್ವಯದೊಳಗೆ ತೆರೆಯಲ್ಪಟ್ಟಿದೆ."
 
-#: deviceerrormonitor_p.cpp:262
+#: devicemessagemonitor_p.cpp:232
 #, fuzzy, kde-format
 #| msgid ""
 #| "Could not unmount the device.\n"
@@ -129,38 +134,38 @@ msgstr[1] ""
 "ಸಾಧನವನ್ನು ಅವರೋಹಿಸಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ.\n"
 "ಈ ಸಾಧನದಲ್ಲಿರುವ ಒಂದು ಅಥವಾ ಹೆಚ್ಚು ಕಡತಗಳು ಒಂದು ಅನ್ವಯದೊಳಗೆ ತೆರೆಯಲ್ಪಟ್ಟಿದೆ."
 
-#: deviceerrormonitor_p.cpp:265
+#: devicemessagemonitor_p.cpp:235
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ""
 
-#: deviceerrormonitor_p.cpp:285
+#: devicemessagemonitor_p.cpp:256
 #, fuzzy, kde-format
 #| msgid "Last plugged in device: %1"
 msgid "Could not mount this device."
 msgstr "ಕೊನೆಯ ಬಾರಿಗೆ ಜೋಡಿಸಲಾದ ಸಾಧನ: %1"
 
-#: deviceerrormonitor_p.cpp:288
+#: devicemessagemonitor_p.cpp:261
+#, fuzzy, kde-format
+#| msgid "Click to safely remove this device from the computer."
+msgid "Could not eject this disc."
+msgstr "ಸಾಧನವನ್ನು ಸುರಕ್ಷಿತವಾಗಿ ಗಣಕಯಂತ್ರದಿಂದ ಬೇರ್ಪಡಿಸಲು ಕ್ಲಿಕ್ಕಿಸಿ"
+
+#: devicemessagemonitor_p.cpp:264
 #, fuzzy, kde-format
 #| msgid "Last plugged in device: %1"
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "ಕೊನೆಯ ಬಾರಿಗೆ ಜೋಡಿಸಲಾದ ಸಾಧನ: %1"
 
-#: deviceerrormonitor_p.cpp:291
-#, fuzzy, kde-format
-#| msgid "Click to safely remove this device from the computer."
-msgid "Could not eject this disc."
-msgstr "ಸಾಧನವನ್ನು ಸುರಕ್ಷಿತವಾಗಿ ಗಣಕಯಂತ್ರದಿಂದ ಬೇರ್ಪಡಿಸಲು ಕ್ಲಿಕ್ಕಿಸಿ"
-
-#: deviceerrormonitor_p.cpp:294
+#: devicemessagemonitor_p.cpp:268
 #, fuzzy, kde-format
 #| msgid "Last plugged in device: %1"
 msgid "Could not repair this device: %1"
 msgstr "ಕೊನೆಯ ಬಾರಿಗೆ ಜೋಡಿಸಲಾದ ಸಾಧನ: %1"
 
-#: qml/DeviceItem.qml:95
+#: qml/DeviceItem.qml:105
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -168,7 +173,7 @@ msgctxt ""
 msgid "Checking…"
 msgstr ""
 
-#: qml/DeviceItem.qml:97
+#: qml/DeviceItem.qml:107
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -176,7 +181,7 @@ msgctxt ""
 msgid "Repairing…"
 msgstr ""
 
-#: qml/DeviceItem.qml:100
+#: qml/DeviceItem.qml:110
 #, fuzzy, kde-format
 #| msgctxt "@info:status Free disk space"
 #| msgid "%1 free"
@@ -184,7 +189,7 @@ msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "%1 ಖಾಲಿ ಇದೆ"
 
-#: qml/DeviceItem.qml:104
+#: qml/DeviceItem.qml:114
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -192,7 +197,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr ""
 
-#: qml/DeviceItem.qml:107
+#: qml/DeviceItem.qml:117
 #, kde-format
 msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
@@ -200,7 +205,7 @@ msgctxt ""
 msgid "Removing…"
 msgstr ""
 
-#: qml/DeviceItem.qml:110
+#: qml/DeviceItem.qml:120
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr ""
