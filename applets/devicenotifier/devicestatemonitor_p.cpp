@@ -54,15 +54,15 @@ void DevicesStateMonitor::addMonitoringDevice(const QString &udi)
     Solid::Device device(udi);
 
     DeviceInfo deviceInfo{
-        false,
-        false,
-        false,
-        false,
-        false,
-        Solid::NoError,
-        QVariant(),
-        Idle,
-        QDateTime::currentDateTimeUtc(),
+        .isBusy = false,
+        .isRemovable = false,
+        .isMounted = false,
+        .isChecked = false,
+        .needRepair = false,
+        .operationResult = Solid::NoError,
+        .operationInfo = QVariant(),
+        .state = Idle,
+        .deviceTimeStamp = QDateTime::currentDateTimeUtc(),
     };
 
     auto it = m_devicesStates.emplace(udi, deviceInfo);
