@@ -13,6 +13,7 @@
 
 #include <QDBusArgument>
 #include <QDebug>
+#include <QFileInfo>
 #include <QImageReader>
 #include <QRegularExpression>
 #include <QXmlStreamReader>
@@ -36,6 +37,25 @@ Notification::Private::Private()
 Notification::Private::~Private()
 {
     // The image cache is cleared by AbstractNotificationsModel::pendingRemovalTimer
+}
+
+static bool isAllowedImage(const QUrl &url)
+{
+    if (!url.isLocalFile()) {
+        return false;
+    }
+    QFileInfo fileInfo(url.path());
+    if (!fileInfo.isFile()) {
+        return false;
+    }
+    if (fileInfo.size() == 0) {
+        return false;
+    }
+    // an arbitrary upper bound of 40Mb just to stop anything silly
+    if (fileInfo.size() > 40 * 1024 * 1024) {
+        return false;
+    }
+    return true;
 }
 
 QString Notification::Private::sanitize(const QString &text)
@@ -98,7 +118,7 @@ QString Notification::Private::sanitize(const QString &text)
                 const QStringView alt = r.attributes().value("alt");
 
                 const QUrl url(src);
-                if (url.isLocalFile()) {
+                if (isAllowedImage(url)) {
                     out.writeAttribute(QStringLiteral("src"), src);
                 } else {
                     // image denied for security reasons! Do not copy the image src here!
