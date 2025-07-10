@@ -1,20 +1,20 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2024 Yaron Shahrabani <sh.yaron@gmail.com>
+# SPDX-FileCopyrightText: 2024, 2025 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-25 00:43+0000\n"
-"PO-Revision-Date: 2024-07-31 15:52+0300\n"
+"PO-Revision-Date: 2025-07-08 11:45+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.04.2\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
 
@@ -22,7 +22,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Detected"
-msgstr "צג חובר"
+msgstr "זוהה צג"
 
 #: devicenotifications.cpp:333
 #, kde-format
@@ -33,7 +33,7 @@ msgstr "צג התחבר למערכת."
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Removed"
-msgstr "צג נותק"
+msgstr "צג הוסר"
 
 #: devicenotifications.cpp:347
 #, kde-format
