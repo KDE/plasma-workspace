@@ -183,7 +183,7 @@ MouseArea {
                 target: timeLabel
 
                 height: sizehelper.height
-                width: timeLabel.paintedWidth
+                width: sizehelper.contentWidth
 
                 font.pixelSize: timeLabel.height
             }
@@ -284,7 +284,7 @@ MouseArea {
                 target: timeLabel
 
                 height: sizehelper.height
-                width: timeLabel.paintedWidth
+                width: sizehelper.contentWidth
 
                 fontSizeMode: Text.VerticalFit
             }
@@ -717,7 +717,7 @@ MouseArea {
             }
         }
         // replace all placeholders with the widest number (two digits)
-        const format = timeFormat.replace(/(h+|m+|s+)/g, "" + maximumWidthNumber + maximumWidthNumber); // make sure maximumWidthNumber is formatted as string
+        const format = (Plasmoid.configuration.showSeconds === 2 ? main.timeFormatWithSeconds : main.timeFormat).replace(/(h+|m+|s+)/g, "" + maximumWidthNumber + maximumWidthNumber); // make sure maximumWidthNumber is formatted as string
         // build the time string twice, once with an AM time and once with a PM time
         const date = new Date(2000, 0, 1, 1, 0, 0);
         const timeAm = Qt.formatTime(date, format);
