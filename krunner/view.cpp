@@ -81,8 +81,12 @@ View::View(QWindow *)
         }
     };
 
+    connect(rootObject(), SIGNAL(maskChanged()), this, SLOT(updateMask()));
+    connect(rootObject(), SIGNAL(maskPositionChanged()), this, SLOT(updateMask()));
+
     connect(qGuiApp, &QGuiApplication::screenRemoved, this, screenRemoved);
     connect(qGuiApp, &QGuiApplication::focusWindowChanged, this, &View::slotFocusWindowChanged);
+    updateMask();
 }
 
 View::~View()
@@ -137,6 +141,15 @@ void View::showEvent(QShowEvent *event)
     if (KWindowSystem::isPlatformX11()) {
         KX11Extras::forceActiveWindow(winId());
     }
+}
+
+void View::updateMask()
+{
+    QRegion mask = rootObject()->property("mask").value<QRegion>();
+    QPoint pos = rootObject()->property("maskPosition").value<QPointF>().toPoint();
+    mask.translate(pos);
+    KWindowEffects::enableBlurBehind(this, m_theme.blurBehindEnabled(), mask);
+    setMask(mask);
 }
 
 void View::positionOnScreen()

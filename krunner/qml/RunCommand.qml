@@ -27,6 +27,9 @@ Item {
     property string priorSearch: ""
     property alias runnerManager: results.runnerManager
 
+    readonly property var mask: frameBackground.mask
+    readonly property var maskPosition: Qt.point(mainControl.x, mainControl.y)
+
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
@@ -93,6 +96,7 @@ Item {
     }
 
     QQC2.Control {
+        id: mainControl
         anchors {
             top: parent.top
             horizontalCenter: parent.horizontalCenter
@@ -476,6 +480,7 @@ Item {
         }
 
         background: KSvg.FrameSvgItem {
+            id: frameBackground
             imagePath: "dialogs/background"
             enabledBorders: (runnerWindow.freeFloating ? KSvg.FrameSvg.TopBorder : KSvg.FrameSvg.NoBorder)
                             | KSvg.FrameSvg.BottomBorder
