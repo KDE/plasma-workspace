@@ -33,12 +33,13 @@
 
 KCONFIGGROUP_DECLARE_ENUM_QOBJECT(View, HistoryBehavior)
 
-View::View(PlasmaQuick::SharedQmlEngine *engine, QWindow *)
-    : PlasmaQuick::PlasmaWindow()
-    , m_engine(engine)
+View::View(QWindow *)
+    : QQuickView()
+    //, engine()(engine)
     , m_floating(false)
 {
     KCrash::initialize();
+    setColor(Qt::transparent);
     qmlRegisterUncreatableType<View>("org.kde.krunner.private.view", 1, 0, "HistoryBehavior", u"Only for enums"_s);
 
     if (KWindowSystem::isPlatformX11()) {
@@ -70,10 +71,8 @@ View::View(PlasmaQuick::SharedQmlEngine *engine, QWindow *)
     new AppAdaptor(this);
     QDBusConnection::sessionBus().registerObject(u"/App"_s, this);
 
-    connect(m_engine, &PlasmaQuick::SharedQmlEngine::finished, this, &View::objectIncubated);
-    m_engine->engine()->rootContext()->setContextProperty(u"runnerWindow"_s, this);
-    m_engine->setSource(QUrl(u"qrc:/krunner/RunCommand.qml"_s));
-    m_engine->completeInitialization();
+    engine()->rootContext()->setContextProperty(u"runnerWindow"_s, this);
+    setSource(QUrl(u"qrc:/krunner/RunCommand.qml"_s));
 
     auto screenRemoved = [this](QScreen *screen) {
         if (screen == this->screen()) {
@@ -88,20 +87,6 @@ View::View(PlasmaQuick::SharedQmlEngine *engine, QWindow *)
 
 View::~View()
 {
-}
-
-void View::objectIncubated()
-{
-    auto item = qobject_cast<QQuickItem *>(m_engine->rootObject());
-    setMainItem(item);
-
-    auto updateSize = [this]() {
-        resize(QSize(mainItem()->implicitWidth(), mainItem()->implicitHeight()).grownBy(padding()).boundedTo(screen()->availableSize()));
-    };
-
-    connect(item, &QQuickItem::implicitHeightChanged, this, updateSize);
-    connect(this, &View::paddingChanged, this, updateSize);
-    updateSize();
 }
 
 void View::slotFocusWindowChanged()
@@ -123,15 +108,15 @@ bool View::freeFloating() const
 void View::setFreeFloating(bool floating)
 {
     m_floating = floating;
-    if (m_floating) {
-        KWindowEffects::slideWindow(this, KWindowEffects::NoEdge);
-        setBorders(Qt::LeftEdge | Qt::TopEdge | Qt::RightEdge | Qt::BottomEdge);
-    } else {
-        KWindowEffects::slideWindow(this, KWindowEffects::TopEdge);
-        setBorders(Qt::LeftEdge | Qt::RightEdge | Qt::BottomEdge);
-    }
+    /* if (m_floating) {
+         KWindowEffects::slideWindow(this, KWindowEffects::NoEdge);
+         setBorders(Qt::LeftEdge | Qt::TopEdge | Qt::RightEdge | Qt::BottomEdge);
+     } else {
+         KWindowEffects::slideWindow(this, KWindowEffects::TopEdge);
+         setBorders(Qt::LeftEdge | Qt::RightEdge | Qt::BottomEdge);
+     }
 
-    positionOnScreen();
+     positionOnScreen();*/
 }
 
 void View::loadConfig()
@@ -184,14 +169,15 @@ void View::positionOnScreen()
 
     if (KWindowSystem::isPlatformWayland()) {
         auto layerWindow = LayerShellQt::Window::get(this);
-        layerWindow->setAnchors(LayerShellQt::Window::AnchorTop);
+        layerWindow->setAnchors(LayerShellQt::Window::Anchors(LayerShellQt::Window::AnchorLeft | LayerShellQt::Window::AnchorTop
+                                                              | LayerShellQt::Window::AnchorRight | LayerShellQt::Window::AnchorBottom));
         layerWindow->setLayer(LayerShellQt::Window::LayerTop);
         layerWindow->setScope(u"krunner"_s);
         layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityOnDemand);
         layerWindow->setMargins(margins);
         layerWindow->setScreenConfiguration(m_floating ? LayerShellQt::Window::ScreenFromQWindow : LayerShellQt::Window::ScreenFromCompositor);
     } else if (KWindowSystem::isPlatformX11()) {
-        m_x11Positioner->setAnchors(Qt::TopEdge);
+        m_x11Positioner->setAnchors(Qt::LeftEdge | Qt::TopEdge | Qt::RightEdge | Qt::BottomEdge);
         m_x11Positioner->setMargins(margins);
         if (m_floating) {
             KX11Extras::setOnDesktop(winId(), KX11Extras::currentDesktop());
@@ -218,15 +204,15 @@ void View::toggleDisplay()
 void View::display()
 {
     positionOnScreen();
-    setVisible(true);
+    showFullScreen();
 }
 
 void View::displaySingleRunner(const QString &runnerName)
 {
     display();
 
-    m_engine->rootObject()->setProperty("singleRunner", runnerName);
-    m_engine->rootObject()->setProperty("query", QString());
+    rootObject()->setProperty("singleRunner", runnerName);
+    rootObject()->setProperty("query", QString());
 }
 
 void View::displayWithClipboardContents()
@@ -236,8 +222,8 @@ void View::displayWithClipboardContents()
     // On Wayland we cannot retrieve the clipboard selection until we get the focus
     if (QGuiApplication::focusWindow()) {
         m_requestedClipboardSelection = false;
-        m_engine->rootObject()->setProperty("singleRunner", QString());
-        m_engine->rootObject()->setProperty("query", QGuiApplication::clipboard()->text(QClipboard::Selection));
+        rootObject()->setProperty("singleRunner", QString());
+        rootObject()->setProperty("query", QGuiApplication::clipboard()->text(QClipboard::Selection));
     } else {
         m_requestedClipboardSelection = true;
     }
@@ -247,16 +233,16 @@ void View::query(const QString &term)
 {
     display();
 
-    m_engine->rootObject()->setProperty("singleRunner", QString());
-    m_engine->rootObject()->setProperty("query", term);
+    rootObject()->setProperty("singleRunner", QString());
+    rootObject()->setProperty("query", term);
 }
 
 void View::querySingleRunner(const QString &runnerName, const QString &term)
 {
     display();
 
-    m_engine->rootObject()->setProperty("singleRunner", runnerName);
-    m_engine->rootObject()->setProperty("query", term);
+    rootObject()->setProperty("singleRunner", runnerName);
+    rootObject()->setProperty("query", term);
 }
 
 bool View::pinned() const

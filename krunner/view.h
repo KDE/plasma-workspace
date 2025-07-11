@@ -21,18 +21,19 @@ using namespace Qt::StringLiterals;
 class X11WindowScreenRelativePositioner;
 class ViewPrivate;
 
-class View : public PlasmaQuick::PlasmaWindow
+class View : public QQuickView
 {
     Q_OBJECT
     Q_CLASSINFO("D-Bus Interface", "org.kde.krunner.App")
 
     Q_PROPERTY(bool pinned READ pinned WRITE setPinned NOTIFY pinnedChanged)
+    Q_PROPERTY(bool freeFloating READ freeFloating WRITE setFreeFloating NOTIFY freeFloatingChanged)
     Q_PROPERTY(bool helpEnabled READ helpEnabled NOTIFY helpEnabledChanged)
     Q_PROPERTY(bool retainPriorSearch READ retainPriorSearch NOTIFY retainPriorSearchChanged)
     Q_PROPERTY(HistoryBehavior historyBehavior READ historyBehavior NOTIFY historyBehaviorChanged)
 
 public:
-    explicit View(PlasmaQuick::SharedQmlEngine *engine, QWindow *parent = nullptr);
+    explicit View(QWindow *parent = nullptr);
     ~View() override;
 
     enum HistoryBehavior {
@@ -81,6 +82,7 @@ public:
 Q_SIGNALS:
     void pinnedChanged();
     void helpEnabledChanged();
+    void freeFloatingChanged();
     void activityChanged(const QString &activity);
 
 protected:
@@ -96,13 +98,11 @@ public Q_SLOTS:
 
 protected Q_SLOTS:
     void loadConfig();
-    void objectIncubated();
     void slotFocusWindowChanged();
 
 private:
     void writeHistory();
     QPoint m_customPos;
-    PlasmaQuick::SharedQmlEngine *m_engine;
     KConfigGroup m_config;
     KConfigGroup m_stateData;
     KConfigWatcher::Ptr m_configWatcher;
