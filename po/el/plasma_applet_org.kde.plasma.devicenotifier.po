@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-10 00:44+0000\n"
+"POT-Creation-Date: 2025-07-11 00:45+0000\n"
 "PO-Revision-Date: 2024-08-24 10:27+0300\n"
 "Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -54,13 +54,13 @@ msgstr "Εξαγωγή"
 msgid "Safely remove"
 msgstr "Αφαίρεση με ασφάλεια"
 
-#: devicemessagemonitor_p.cpp:164
+#: devicemessagemonitor_p.cpp:163
 #, fuzzy, kde-format
 #| msgid "This device can now be safely removed."
 msgid "This device has file system errors."
 msgstr "Αυτή η συσκευή μπορεί τώρα να αφαιρεθεί με ασφάλεια."
 
-#: devicemessagemonitor_p.cpp:167
+#: devicemessagemonitor_p.cpp:166
 #, kde-format
 msgid "Successfully repaired!"
 msgstr ""
@@ -85,41 +85,41 @@ msgstr "Αυτή η συσκευή μπορεί τώρα να αφαιρεθεί
 msgid "You are not authorized to mount this device."
 msgstr "Δεν είστε εξουσιοδοτημένοι να τοποθετήσετε αυτή τη συσκευή."
 
-#: devicemessagemonitor_p.cpp:187
+#: devicemessagemonitor_p.cpp:186
 #, kde-format
 msgid "You are not authorized to eject this disc."
 msgstr "Δεν είστε εξουσιοδοτημένοι να εξάγετε αυτό το δίσκο."
 
-#: devicemessagemonitor_p.cpp:191
+#: devicemessagemonitor_p.cpp:189
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr "Δεν είστε εξουσιοδοτημένοι να αφαιρέσετε αυτή τη συσκευή."
 
-#: devicemessagemonitor_p.cpp:195
+#: devicemessagemonitor_p.cpp:192
 #, fuzzy, kde-format
 #| msgctxt "Remove is less technical for unmount"
 #| msgid "You are not authorized to remove this device."
 msgid "You are not authorized to repair this device."
 msgstr "Δεν είστε εξουσιοδοτημένοι να αφαιρέσετε αυτή τη συσκευή."
 
-#: devicemessagemonitor_p.cpp:198 devicemessagemonitor_p.cpp:271
+#: devicemessagemonitor_p.cpp:194 devicemessagemonitor_p.cpp:259
 #, kde-format
 msgid "Unknown error type"
 msgstr ""
 
-#: devicemessagemonitor_p.cpp:204
+#: devicemessagemonitor_p.cpp:198
 #, kde-format
 msgid "Could not mount this device as it is busy."
 msgstr "Αδυναμία προσάρτησης αυτής της συσκευής καθώς είναι απασχολημένη."
 
-#: devicemessagemonitor_p.cpp:230
+#: devicemessagemonitor_p.cpp:225
 #, kde-format
 msgid "One or more files on this device are open within an application."
 msgstr ""
 "Ένα ή περισσότερα αρχεία σε αυτή τη συσκευή είναι ανοιχτά σε μια εφαρμογή."
 
-#: devicemessagemonitor_p.cpp:232
+#: devicemessagemonitor_p.cpp:227
 #, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
@@ -130,29 +130,29 @@ msgstr[1] ""
 "Ένα ή περισσότερα αρχεία σε αυτή τη συσκευή έχουν ανοίξει στις ακόλουθες "
 "εφαρμογές: %2."
 
-#: devicemessagemonitor_p.cpp:235
+#: devicemessagemonitor_p.cpp:230
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ", "
 
-#: devicemessagemonitor_p.cpp:256
+#: devicemessagemonitor_p.cpp:248
 #, kde-format
 msgid "Could not mount this device."
 msgstr "Αδυναμία προσάρτησης αυτής της συσκευής."
 
-#: devicemessagemonitor_p.cpp:261
+#: devicemessagemonitor_p.cpp:252
 #, kde-format
 msgid "Could not eject this disc."
 msgstr "Αδυναμία εξαγωγής αυτού του δίσκου."
 
-#: devicemessagemonitor_p.cpp:264
+#: devicemessagemonitor_p.cpp:254
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "Αδυναμία αφαίρεσης αυτής της συσκευής."
 
-#: devicemessagemonitor_p.cpp:268
+#: devicemessagemonitor_p.cpp:257
 #, fuzzy, kde-format
 #| msgctxt "Remove is less technical for unmount"
 #| msgid "Could not remove this device."

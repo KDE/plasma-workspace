@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-10 00:44+0000\n"
+"POT-Creation-Date: 2025-07-11 00:45+0000\n"
 "PO-Revision-Date: 2025-05-31 20:20+0200\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -49,12 +49,12 @@ msgstr "Løs ut"
 msgid "Safely remove"
 msgstr "Fjern trygt"
 
-#: devicemessagemonitor_p.cpp:164
+#: devicemessagemonitor_p.cpp:163
 #, kde-format
 msgid "This device has file system errors."
 msgstr "Denne enheten har feil ved filsystemet."
 
-#: devicemessagemonitor_p.cpp:167
+#: devicemessagemonitor_p.cpp:166
 #, kde-format
 msgid "Successfully repaired!"
 msgstr "Reparert!"
@@ -79,38 +79,38 @@ msgstr "Enheten kan nå trygt fjernes."
 msgid "You are not authorized to mount this device."
 msgstr "Du har ikke tillatelser til å montere denne enheten."
 
-#: devicemessagemonitor_p.cpp:187
+#: devicemessagemonitor_p.cpp:186
 #, kde-format
 msgid "You are not authorized to eject this disc."
 msgstr "Du har ikke tillatelser til å løse ut denne disken."
 
-#: devicemessagemonitor_p.cpp:191
+#: devicemessagemonitor_p.cpp:189
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr "Du har ikke tillatelser til å fjerne denne enheten."
 
-#: devicemessagemonitor_p.cpp:195
+#: devicemessagemonitor_p.cpp:192
 #, kde-format
 msgid "You are not authorized to repair this device."
 msgstr "Du har ikke tillatelser til å reparere denne enheten."
 
-#: devicemessagemonitor_p.cpp:198 devicemessagemonitor_p.cpp:271
+#: devicemessagemonitor_p.cpp:194 devicemessagemonitor_p.cpp:259
 #, kde-format
 msgid "Unknown error type"
 msgstr ""
 
-#: devicemessagemonitor_p.cpp:204
+#: devicemessagemonitor_p.cpp:198
 #, kde-format
 msgid "Could not mount this device as it is busy."
 msgstr "Klarte ikke montere enheten, fordi den er opptatt."
 
-#: devicemessagemonitor_p.cpp:230
+#: devicemessagemonitor_p.cpp:225
 #, kde-format
 msgid "One or more files on this device are open within an application."
 msgstr "En eller flere filer på denne enheten er i bruk av et program."
 
-#: devicemessagemonitor_p.cpp:232
+#: devicemessagemonitor_p.cpp:227
 #, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
@@ -119,29 +119,29 @@ msgstr[0] "En eller flere filer på denne enheten er i bruk av programmet «%2»
 msgstr[1] ""
 "En eller flere filer på denne enheten er i bruk av følgende programmer: «%2»"
 
-#: devicemessagemonitor_p.cpp:235
+#: devicemessagemonitor_p.cpp:230
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ", "
 
-#: devicemessagemonitor_p.cpp:256
+#: devicemessagemonitor_p.cpp:248
 #, kde-format
 msgid "Could not mount this device."
 msgstr "Klarte ikke montere enheten."
 
-#: devicemessagemonitor_p.cpp:261
+#: devicemessagemonitor_p.cpp:252
 #, kde-format
 msgid "Could not eject this disc."
 msgstr "Klarte ikke å løse ut enheten."
 
-#: devicemessagemonitor_p.cpp:264
+#: devicemessagemonitor_p.cpp:254
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "Klarte ikke fjerne enheten."
 
-#: devicemessagemonitor_p.cpp:268
+#: devicemessagemonitor_p.cpp:257
 #, kde-format
 msgid "Could not repair this device: %1"
 msgstr "Kunne ikke reparere denne enheten: %1"

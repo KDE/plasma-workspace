@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-10 00:44+0000\n"
-"PO-Revision-Date: 2025-02-23 08:20+0100\n"
+"POT-Creation-Date: 2025-07-11 00:45+0000\n"
+"PO-Revision-Date: 2025-07-10 07:33+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.6\n"
 
 #: actions/mountaction.cpp:104
 #, kde-format
@@ -53,12 +53,12 @@ msgstr "Izvrzi"
 msgid "Safely remove"
 msgstr "Varno odklopi"
 
-#: devicemessagemonitor_p.cpp:164
+#: devicemessagemonitor_p.cpp:163
 #, kde-format
 msgid "This device has file system errors."
 msgstr "Ta naprava ima napake datotečnega sistema."
 
-#: devicemessagemonitor_p.cpp:167
+#: devicemessagemonitor_p.cpp:166
 #, kde-format
 msgid "Successfully repaired!"
 msgstr "Uspešno popravljeno!"
@@ -83,38 +83,38 @@ msgstr "To napravo je zdaj mogoče varno odstraniti."
 msgid "You are not authorized to mount this device."
 msgstr "Niste pooblaščeni za priklop te naprave."
 
-#: devicemessagemonitor_p.cpp:187
+#: devicemessagemonitor_p.cpp:186
 #, kde-format
 msgid "You are not authorized to eject this disc."
 msgstr "Niste pooblaščeni za izvrženje tega diska."
 
-#: devicemessagemonitor_p.cpp:191
+#: devicemessagemonitor_p.cpp:189
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr "Niste pooblaščeni za odstranitev te naprave."
 
-#: devicemessagemonitor_p.cpp:195
+#: devicemessagemonitor_p.cpp:192
 #, kde-format
 msgid "You are not authorized to repair this device."
 msgstr "Niste pooblaščeni za popravilo te naprave."
 
-#: devicemessagemonitor_p.cpp:198 devicemessagemonitor_p.cpp:271
+#: devicemessagemonitor_p.cpp:194 devicemessagemonitor_p.cpp:259
 #, kde-format
 msgid "Unknown error type"
-msgstr ""
+msgstr "Neznana vrsta napake"
 
-#: devicemessagemonitor_p.cpp:204
+#: devicemessagemonitor_p.cpp:198
 #, kde-format
 msgid "Could not mount this device as it is busy."
 msgstr "Te naprave ni bilo mogoče priklopiti, ker je zasedena."
 
-#: devicemessagemonitor_p.cpp:230
+#: devicemessagemonitor_p.cpp:225
 #, kde-format
 msgid "One or more files on this device are open within an application."
 msgstr "Ena ali več datotek v tej napravi je odprtih v aplikaciji."
 
-#: devicemessagemonitor_p.cpp:232
+#: devicemessagemonitor_p.cpp:227
 #, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
@@ -128,29 +128,29 @@ msgstr[2] ""
 msgstr[3] ""
 "Ena ali več datotek v tej napravi je odprtih v naslednjih aplikacijah: %2."
 
-#: devicemessagemonitor_p.cpp:235
+#: devicemessagemonitor_p.cpp:230
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ", "
 
-#: devicemessagemonitor_p.cpp:256
+#: devicemessagemonitor_p.cpp:248
 #, kde-format
 msgid "Could not mount this device."
 msgstr "Te naprave ni bilo mogoče priklopiti."
 
-#: devicemessagemonitor_p.cpp:261
+#: devicemessagemonitor_p.cpp:252
 #, kde-format
 msgid "Could not eject this disc."
 msgstr "Tega diska ni bilo mogoče izvreči."
 
-#: devicemessagemonitor_p.cpp:264
+#: devicemessagemonitor_p.cpp:254
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "Te naprave ni bilo mogoče odstraniti."
 
-#: devicemessagemonitor_p.cpp:268
+#: devicemessagemonitor_p.cpp:257
 #, kde-format
 msgid "Could not repair this device: %1"
 msgstr "Te naprave ni bilo mogoče popraviti: %1"

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-10 00:44+0000\n"
-"PO-Revision-Date: 2025-02-23 08:45+0100\n"
+"POT-Creation-Date: 2025-07-11 00:45+0000\n"
+"PO-Revision-Date: 2025-07-10 03:43+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.6\n"
 
 #: actions/mountaction.cpp:104
 #, kde-format
@@ -48,12 +48,12 @@ msgstr "გამოღება"
 msgid "Safely remove"
 msgstr "უსაფრთხოდ მოცილება"
 
-#: devicemessagemonitor_p.cpp:164
+#: devicemessagemonitor_p.cpp:163
 #, kde-format
 msgid "This device has file system errors."
 msgstr "ამ მოწყობილობაზე აღმოჩენილია ფაილური სისტემის შეცდომები."
 
-#: devicemessagemonitor_p.cpp:167
+#: devicemessagemonitor_p.cpp:166
 #, kde-format
 msgid "Successfully repaired!"
 msgstr "გასწორება წარმატებით დასრულდა!"
@@ -78,38 +78,38 @@ msgstr "ახლა შესაძლებელია მოწყობი�
 msgid "You are not authorized to mount this device."
 msgstr "ამ მოწყობილობის მისამაგრებლად საჭირო ავტორიზაცია არ გაგაჩნიათ."
 
-#: devicemessagemonitor_p.cpp:187
+#: devicemessagemonitor_p.cpp:186
 #, kde-format
 msgid "You are not authorized to eject this disc."
 msgstr "დისკის გამოსაღებლად ავტორიზაცია არ გაგაჩნიათ."
 
-#: devicemessagemonitor_p.cpp:191
+#: devicemessagemonitor_p.cpp:189
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr "ამ მოწყობილობის მოხსნის ავტორიზაცია არ გაგაჩნიათ."
 
-#: devicemessagemonitor_p.cpp:195
+#: devicemessagemonitor_p.cpp:192
 #, kde-format
 msgid "You are not authorized to repair this device."
 msgstr "ამ მოწყობილობის შეკეთების ავტორიზაცია არ გაგაჩნიათ."
 
-#: devicemessagemonitor_p.cpp:198 devicemessagemonitor_p.cpp:271
+#: devicemessagemonitor_p.cpp:194 devicemessagemonitor_p.cpp:259
 #, kde-format
 msgid "Unknown error type"
-msgstr ""
+msgstr "უცნობი შეცდომის ტიპი"
 
-#: devicemessagemonitor_p.cpp:204
+#: devicemessagemonitor_p.cpp:198
 #, kde-format
 msgid "Could not mount this device as it is busy."
 msgstr "მოწყობილობის მიმაგრების შეცდომა. ის დაკავებულია."
 
-#: devicemessagemonitor_p.cpp:230
+#: devicemessagemonitor_p.cpp:225
 #, kde-format
 msgid "One or more files on this device are open within an application."
 msgstr "აპლიკაციას ამ მოწყობილობაზე მდებარე ერთი ან მეტი ფაილი აქვს გახსნილი."
 
-#: devicemessagemonitor_p.cpp:232
+#: devicemessagemonitor_p.cpp:227
 #, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
@@ -119,29 +119,29 @@ msgstr[0] ""
 msgstr[1] ""
 "აპლიკაციას ამ მოწყობილობაზე მდებარე ერთი ან მეტი ფაილი აქვს გახსნილი: \"%2\"."
 
-#: devicemessagemonitor_p.cpp:235
+#: devicemessagemonitor_p.cpp:230
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ", "
 
-#: devicemessagemonitor_p.cpp:256
+#: devicemessagemonitor_p.cpp:248
 #, kde-format
 msgid "Could not mount this device."
 msgstr "მოწყობილობის მიმაგრების შეცდომა."
 
-#: devicemessagemonitor_p.cpp:261
+#: devicemessagemonitor_p.cpp:252
 #, kde-format
 msgid "Could not eject this disc."
 msgstr "დისკის გამოღების შეცდომა."
 
-#: devicemessagemonitor_p.cpp:264
+#: devicemessagemonitor_p.cpp:254
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "მოწყობილობის მოხსნის შეცდომა."
 
-#: devicemessagemonitor_p.cpp:268
+#: devicemessagemonitor_p.cpp:257
 #, kde-format
 msgid "Could not repair this device: %1"
 msgstr "მოწყობილობის შეკეთება შეუძლებელია: %1"
