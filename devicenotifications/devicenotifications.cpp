@@ -380,6 +380,7 @@ void KdedDeviceNotifications::onDeviceAdded(const UdevDevice &device)
     // there's no need to keep the unplug notification around.
     if (m_usbDeviceRemovedNotification) {
         m_usbDeviceRemovedNotification->close();
+        m_usbDeviceRemovedNotification = nullptr;
     }
 
     // Only show one of these at a time. We already suppressed creating a bunch
@@ -387,6 +388,7 @@ void KdedDeviceNotifications::onDeviceAdded(const UdevDevice &device)
     // over that time limit anyway are not necessary to stack up.
     if (m_usbDeviceAddedNotification) {
         m_usbDeviceAddedNotification->close();
+        m_usbDeviceAddedNotification = nullptr;
     }
 
     const QString text = !displayName.isEmpty() ? i18n("%1 has been connected.", displayName.toHtmlEscaped()) : i18n("A USB device has been connected.");
@@ -421,6 +423,7 @@ void KdedDeviceNotifications::onDeviceRemoved(const UdevDevice &device)
     // there's no need to keep the plug notification around.
     if (m_usbDeviceAddedNotification) {
         m_usbDeviceAddedNotification->close();
+        m_usbDeviceAddedNotification = nullptr;
     }
 
     // Only show one of these at a time. We already suppressed removing a bunch
@@ -428,6 +431,7 @@ void KdedDeviceNotifications::onDeviceRemoved(const UdevDevice &device)
     // over that time limit anyway are not necessary to stack up.
     if (m_usbDeviceRemovedNotification) {
         m_usbDeviceRemovedNotification->close();
+        m_usbDeviceRemovedNotification = nullptr;
     }
 
     const QString text = !displayName.isEmpty() ? i18n("%1 has been disconnected.", displayName.toHtmlEscaped()) : i18n("A USB device has been disconnected.");
