@@ -107,7 +107,7 @@ int main(int argc, char **argv)
     // that needs to use the current plasma theme
     sharedEngine.engine()->setProperty("_kirigamiTheme", u"KirigamiPlasmaStyle"_s);
     sharedEngine.setInitializationDelayed(true);
-    View view(&sharedEngine);
+    View view;
 
     auto updateVisibility = [&]() {
         const QString query = parser.positionalArguments().value(0);
