@@ -13,6 +13,7 @@
 #include <PlasmaActivities/Consumer>
 #include <QQuickView>
 
+#include <Plasma/Theme>
 #include <PlasmaQuick/PlasmaWindow>
 #include <PlasmaQuick/SharedQmlEngine>
 
@@ -99,6 +100,7 @@ public Q_SLOTS:
 protected Q_SLOTS:
     void loadConfig();
     void slotFocusWindowChanged();
+    void updateMask();
 
 private:
     void writeHistory();
@@ -114,4 +116,5 @@ private:
     X11WindowScreenRelativePositioner *m_x11Positioner = nullptr;
     HistoryBehavior m_historyBehavior = HistoryBehavior::CompletionSuggestion;
     KActivities::Consumer m_consumer;
+    Plasma::Theme m_theme;
 };
