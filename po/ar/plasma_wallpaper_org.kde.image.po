@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-31 00:44+0000\n"
+"POT-Creation-Date: 2025-07-12 00:45+0000\n"
 "PO-Revision-Date: 2025-05-27 18:02+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -79,47 +79,49 @@ msgid "Tiled"
 msgstr "مكرّرة"
 
 #: imagepackage/contents/ui/config.qml:194
-#, kde-format
-msgctxt "part of a sentence: 'Switch dynamic wallpapers [based on]'"
+#, fuzzy, kde-format
+#| msgctxt "part of a sentence: 'Switch dynamic wallpapers [based on]'"
+#| msgid "Switch dynamic wallpapers:"
+msgctxt "@label part of a sentence: 'Switch dynamic wallpapers [based on]'"
 msgid "Switch dynamic wallpapers:"
 msgstr "بدّل خلفيات ديناميكية:"
 
 #: imagepackage/contents/ui/config.qml:195
-#, kde-format
-msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
+#, fuzzy, kde-format
+#| msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
+#| msgid "Based on whether the color scheme is dark or light"
+msgctxt "@option:radio part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the color scheme is dark or light"
 msgstr "بناءً على ما إذا كان نظام الألوان مظلمًا أم فاتحًا"
 
-#: imagepackage/contents/ui/config.qml:203
+#: imagepackage/contents/ui/config.qml:206
 #, kde-format
-msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
-msgid "At sunrise and sunset"
-msgstr "عند شروق الشمس وغروبها"
+msgctxt "@option:radio part of a sentence: 'Switch dynamic wallpapers'"
+msgid "Based on the day-night cycle:"
+msgstr ""
 
-#: imagepackage/contents/ui/config.qml:218
+#: imagepackage/contents/ui/config.qml:214
 #, kde-format
-msgctxt ""
-"@label:checkbox Use geolocation services for more accurate sunset and "
-"sunrise times"
-msgid "Use device's current location for more accurate timings"
-msgstr "استخدم الموقع الحالي للجهاز للحصول على توقيتات أكثر دقة"
+msgctxt "@action:button Configure day-night cycle times"
+msgid "Configure…"
+msgstr ""
 
-#: imagepackage/contents/ui/config.qml:229
+#: imagepackage/contents/ui/config.qml:225
 #, kde-format
 msgid "Background:"
 msgstr "الخلفيّة:"
 
-#: imagepackage/contents/ui/config.qml:230
+#: imagepackage/contents/ui/config.qml:226
 #, kde-format
 msgid "Blur"
 msgstr "غشاوة"
 
-#: imagepackage/contents/ui/config.qml:239
+#: imagepackage/contents/ui/config.qml:235
 #, kde-format
 msgid "Solid color"
 msgstr "لون صلب"
 
-#: imagepackage/contents/ui/config.qml:250
+#: imagepackage/contents/ui/config.qml:246
 #, kde-format
 msgid "Select Background Color"
 msgstr "اختر لون الخلفيّة"
@@ -385,6 +387,16 @@ msgstr "حدث خطأ أثناء محاولة تعيين خلفية البلاز
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr "حدث خطأ في أثناء محاولة فتح ملف ضبط kscreenlockerrc."
+
+#~ msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
+#~ msgid "At sunrise and sunset"
+#~ msgstr "عند شروق الشمس وغروبها"
+
+#~ msgctxt ""
+#~ "@label:checkbox Use geolocation services for more accurate sunset and "
+#~ "sunrise times"
+#~ msgid "Use device's current location for more accurate timings"
+#~ msgstr "استخدم الموقع الحالي للجهاز للحصول على توقيتات أكثر دقة"
 
 #~ msgctxt "@title:window"
 #~ msgid "Open Media"

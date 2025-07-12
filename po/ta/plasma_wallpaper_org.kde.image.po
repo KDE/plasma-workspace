@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-31 00:44+0000\n"
+"POT-Creation-Date: 2025-07-12 00:45+0000\n"
 "PO-Revision-Date: 2024-09-01 17:16+0200\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -79,46 +79,44 @@ msgstr "பக்கத்துப்பக்கதில் பலமுற�
 #, fuzzy, kde-format
 #| msgctxt "@action:inmenu"
 #| msgid "Set as Wallpaper"
-msgctxt "part of a sentence: 'Switch dynamic wallpapers [based on]'"
+msgctxt "@label part of a sentence: 'Switch dynamic wallpapers [based on]'"
 msgid "Switch dynamic wallpapers:"
 msgstr "பின்புலப்படமாக அமை"
 
 #: imagepackage/contents/ui/config.qml:195
 #, kde-format
-msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
+msgctxt "@option:radio part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the color scheme is dark or light"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:203
+#: imagepackage/contents/ui/config.qml:206
 #, kde-format
-msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
-msgid "At sunrise and sunset"
+msgctxt "@option:radio part of a sentence: 'Switch dynamic wallpapers'"
+msgid "Based on the day-night cycle:"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:218
+#: imagepackage/contents/ui/config.qml:214
 #, kde-format
-msgctxt ""
-"@label:checkbox Use geolocation services for more accurate sunset and "
-"sunrise times"
-msgid "Use device's current location for more accurate timings"
+msgctxt "@action:button Configure day-night cycle times"
+msgid "Configure…"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:229
+#: imagepackage/contents/ui/config.qml:225
 #, kde-format
 msgid "Background:"
 msgstr "பின்புலம்:"
 
-#: imagepackage/contents/ui/config.qml:230
+#: imagepackage/contents/ui/config.qml:226
 #, kde-format
 msgid "Blur"
 msgstr "மங்கலாக்கு"
 
-#: imagepackage/contents/ui/config.qml:239
+#: imagepackage/contents/ui/config.qml:235
 #, kde-format
 msgid "Solid color"
 msgstr "நிறத்தால் நிரப்பு"
 
-#: imagepackage/contents/ui/config.qml:250
+#: imagepackage/contents/ui/config.qml:246
 #, kde-format
 msgid "Select Background Color"
 msgstr "பின்புல நிறத்தை தேர்ந்தெடுத்தல்"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-31 00:44+0000\n"
+"POT-Creation-Date: 2025-07-12 00:45+0000\n"
 "PO-Revision-Date: 2025-06-10 22:12+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -76,47 +76,49 @@ msgid "Tiled"
 msgstr "바둑판식 배열"
 
 #: imagepackage/contents/ui/config.qml:194
-#, kde-format
-msgctxt "part of a sentence: 'Switch dynamic wallpapers [based on]'"
+#, fuzzy, kde-format
+#| msgctxt "part of a sentence: 'Switch dynamic wallpapers [based on]'"
+#| msgid "Switch dynamic wallpapers:"
+msgctxt "@label part of a sentence: 'Switch dynamic wallpapers [based on]'"
 msgid "Switch dynamic wallpapers:"
 msgstr "동적 배경 그림 전환:"
 
 #: imagepackage/contents/ui/config.qml:195
-#, kde-format
-msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
+#, fuzzy, kde-format
+#| msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
+#| msgid "Based on whether the color scheme is dark or light"
+msgctxt "@option:radio part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the color scheme is dark or light"
 msgstr "색 구성표가 밝음인가 어두움인가에 따라서"
 
-#: imagepackage/contents/ui/config.qml:203
+#: imagepackage/contents/ui/config.qml:206
 #, kde-format
-msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
-msgid "At sunrise and sunset"
-msgstr "일출 및 일몰 시"
+msgctxt "@option:radio part of a sentence: 'Switch dynamic wallpapers'"
+msgid "Based on the day-night cycle:"
+msgstr ""
 
-#: imagepackage/contents/ui/config.qml:218
+#: imagepackage/contents/ui/config.qml:214
 #, kde-format
-msgctxt ""
-"@label:checkbox Use geolocation services for more accurate sunset and "
-"sunrise times"
-msgid "Use device's current location for more accurate timings"
-msgstr "정확한 시간을 위해서 장치의 현재 위치 사용"
+msgctxt "@action:button Configure day-night cycle times"
+msgid "Configure…"
+msgstr ""
 
-#: imagepackage/contents/ui/config.qml:229
+#: imagepackage/contents/ui/config.qml:225
 #, kde-format
 msgid "Background:"
 msgstr "배경:"
 
-#: imagepackage/contents/ui/config.qml:230
+#: imagepackage/contents/ui/config.qml:226
 #, kde-format
 msgid "Blur"
 msgstr "흐리게"
 
-#: imagepackage/contents/ui/config.qml:239
+#: imagepackage/contents/ui/config.qml:235
 #, kde-format
 msgid "Solid color"
 msgstr "단색"
 
-#: imagepackage/contents/ui/config.qml:250
+#: imagepackage/contents/ui/config.qml:246
 #, kde-format
 msgid "Select Background Color"
 msgstr "배경색 선택"
@@ -363,6 +365,16 @@ msgstr "Plasma 바탕 화면 배경 그림을 설정하는 중 오류 발생:<nl
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr "kscreenlockerrc 설정 파일을 여는 중 오류가 발생했습니다."
+
+#~ msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
+#~ msgid "At sunrise and sunset"
+#~ msgstr "일출 및 일몰 시"
+
+#~ msgctxt ""
+#~ "@label:checkbox Use geolocation services for more accurate sunset and "
+#~ "sunrise times"
+#~ msgid "Use device's current location for more accurate timings"
+#~ msgstr "정확한 시간을 위해서 장치의 현재 위치 사용"
 
 #, fuzzy
 #~| msgctxt "@title:window"

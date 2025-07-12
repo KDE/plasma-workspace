@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-31 00:44+0000\n"
+"POT-Creation-Date: 2025-07-12 00:45+0000\n"
 "PO-Revision-Date: 2025-05-24 04:15+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -77,49 +77,49 @@ msgid "Tiled"
 msgstr "მოზაიკა"
 
 #: imagepackage/contents/ui/config.qml:194
-#, kde-format
-msgctxt "part of a sentence: 'Switch dynamic wallpapers [based on]'"
+#, fuzzy, kde-format
+#| msgctxt "part of a sentence: 'Switch dynamic wallpapers [based on]'"
+#| msgid "Switch dynamic wallpapers:"
+msgctxt "@label part of a sentence: 'Switch dynamic wallpapers [based on]'"
 msgid "Switch dynamic wallpapers:"
 msgstr "დინამიკური ფონური სურათების გადართვა:"
 
 #: imagepackage/contents/ui/config.qml:195
-#, kde-format
-msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
+#, fuzzy, kde-format
+#| msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
+#| msgid "Based on whether the color scheme is dark or light"
+msgctxt "@option:radio part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the color scheme is dark or light"
 msgstr "ეფუძნება, არის ფერების სქემა მუქი, თუ ღია"
 
-#: imagepackage/contents/ui/config.qml:203
+#: imagepackage/contents/ui/config.qml:206
 #, kde-format
-msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
-msgid "At sunrise and sunset"
-msgstr "აისისას და დაისისას"
-
-#: imagepackage/contents/ui/config.qml:218
-#, kde-format
-msgctxt ""
-"@label:checkbox Use geolocation services for more accurate sunset and "
-"sunrise times"
-msgid "Use device's current location for more accurate timings"
+msgctxt "@option:radio part of a sentence: 'Switch dynamic wallpapers'"
+msgid "Based on the day-night cycle:"
 msgstr ""
-"მოწყობილობის მიმდინარე მდებარეობის გამოყენება დროის უფრო ზუსტი "
-"განსაზღვრისთვის"
 
-#: imagepackage/contents/ui/config.qml:229
+#: imagepackage/contents/ui/config.qml:214
+#, kde-format
+msgctxt "@action:button Configure day-night cycle times"
+msgid "Configure…"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:225
 #, kde-format
 msgid "Background:"
 msgstr "ფონი:"
 
-#: imagepackage/contents/ui/config.qml:230
+#: imagepackage/contents/ui/config.qml:226
 #, kde-format
 msgid "Blur"
 msgstr "ბუნდოვნება"
 
-#: imagepackage/contents/ui/config.qml:239
+#: imagepackage/contents/ui/config.qml:235
 #, kde-format
 msgid "Solid color"
 msgstr "მუქი ფერი"
 
-#: imagepackage/contents/ui/config.qml:250
+#: imagepackage/contents/ui/config.qml:246
 #, kde-format
 msgid "Select Background Color"
 msgstr "ფონის ფერის არჩევა"
@@ -371,6 +371,18 @@ msgstr "შეცდომა Plasma-ის ფონის სურათი�
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr "შეცდომა kscreenlockerrc-ის გახსნის მცდელობისას."
+
+#~ msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
+#~ msgid "At sunrise and sunset"
+#~ msgstr "აისისას და დაისისას"
+
+#~ msgctxt ""
+#~ "@label:checkbox Use geolocation services for more accurate sunset and "
+#~ "sunrise times"
+#~ msgid "Use device's current location for more accurate timings"
+#~ msgstr ""
+#~ "მოწყობილობის მიმდინარე მდებარეობის გამოყენება დროის უფრო ზუსტი "
+#~ "განსაზღვრისთვის"
 
 #~ msgctxt "@title:window"
 #~ msgid "Open Media"

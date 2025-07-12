@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-13 00:47+0000\n"
+"POT-Creation-Date: 2025-07-12 00:45+0000\n"
 "PO-Revision-Date: 2024-11-28 23:29+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -31,207 +31,187 @@ msgid ""
 "%2"
 msgstr "%1에 주간 색상으로 색 온도 변경이 시작되며 %2에 완전히 변경됨"
 
-#: ui/LocationsFixedView.qml:72
-#, kde-format
-msgctxt ""
-"@label:chooser Tap should be translated to mean touching using a touchscreen"
-msgid "Tap to choose your location on the map."
-msgstr "탭하여 지도에서 위치를 선택하십시오."
-
-#: ui/LocationsFixedView.qml:73
-#, kde-format
-msgctxt ""
-"@label:chooser Click should be translated to mean clicking using a mouse"
-msgid "Click to choose your location on the map."
-msgstr "클릭하여 지도에서 위치를 선택하십시오."
-
-#: ui/LocationsFixedView.qml:112
-#, kde-format
-msgid "Zoom in"
-msgstr "확대"
-
-#: ui/LocationsFixedView.qml:129
-#, kde-format
-msgid "Zoom out"
-msgstr "축소"
-
-#: ui/LocationsFixedView.qml:227
-#, kde-kuit-format
+#: ui/main.qml:39
+#, fuzzy, kde-format
+#| msgid "The blue light filter makes the colors on the screen warmer."
 msgctxt "@info"
-msgid ""
-"Modified from <link url='https://commons.wikimedia.org/wiki/File:"
-"World_location_map_(equirectangular_180).svg'>World location map</link> by "
-"TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
-"by-sa/3.0'>CC BY-SA 3.0</link>"
-msgstr ""
-"위키미디어 공용의 TUBS 사용자가 제작한 <link url='https://commons.wikimedia."
-"org/wiki/File:World_location_map_(equirectangular_180).svg'>세계 위치 지도</"
-"link>에서 수정됨. <link url='https://creativecommons.org/licenses/by-"
-"sa/3.0'>CC BY-SA 3.0</link>으로 라이선스됨"
-
-#: ui/LocationsFixedView.qml:240
-#, kde-format
-msgctxt "@label: textbox"
-msgid "Latitude:"
-msgstr "위도:"
-
-#: ui/LocationsFixedView.qml:271
-#, kde-format
-msgctxt "@label: textbox"
-msgid "Longitude:"
-msgstr "경도:"
-
-#: ui/main.qml:75
-#, kde-format
 msgid "The blue light filter makes the colors on the screen warmer."
 msgstr "블루라이트 필터를 사용하면 화면의 색상이 더 따뜻해집니다."
 
-#: ui/main.qml:128 ui/main.qml:179 ui/main.qml:243
+#: ui/main.qml:49
+#, fuzzy, kde-format
+#| msgid "Switching times:"
+msgctxt "@label:listbox Night Light modes"
+msgid "Switching times:"
+msgstr "전환 시간:"
+
+#: ui/main.qml:58
+#, fuzzy, kde-format
+#| msgid "Always off"
+msgctxt "@item:inlistbox switching times"
+msgid "Always off"
+msgstr "항상 끄기"
+
+#: ui/main.qml:59
+#, fuzzy, kde-format
+#| msgid "Always on night light"
+msgctxt "@item:inlistbox switching times"
+msgid "Always on night light"
+msgstr "항상 야간 조명 사용"
+
+#: ui/main.qml:60
+#, fuzzy, kde-format
+#| msgid "Sunrise begins:"
+msgctxt "@item:inlistbox switching times"
+msgid "Sunrise and sunset"
+msgstr "일출 시작:"
+
+#: ui/main.qml:72
+#, kde-format
+msgctxt "@action:button Configure day-night cycle times"
+msgid "Configure…"
+msgstr ""
+
+#: ui/main.qml:115 ui/main.qml:166 ui/main.qml:230
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1K"
 msgstr "%1 K"
 
-#: ui/main.qml:136
-#, kde-format
+#: ui/main.qml:123
+#, fuzzy, kde-format
+#| msgid "Day light temperature:"
+msgctxt "@label:slider"
 msgid "Day light temperature:"
 msgstr "주간 조명 색온도:"
 
-#: ui/main.qml:186 ui/main.qml:250
+#: ui/main.qml:173 ui/main.qml:237
 #, kde-format
 msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr "차가움(필터 없음)"
 
-#: ui/main.qml:193 ui/main.qml:257
+#: ui/main.qml:180 ui/main.qml:244
 #, kde-format
 msgctxt "Night colour red-ish"
 msgid "Warm"
 msgstr "따뜻함"
 
-#: ui/main.qml:200
-#, kde-format
+#: ui/main.qml:187
+#, fuzzy, kde-format
+#| msgid "Night light temperature:"
+msgctxt "@label:slider"
 msgid "Night light temperature:"
 msgstr "야간 조명 색온도:"
 
-#: ui/main.qml:269
-#, kde-format
-msgid "Switching times:"
-msgstr "전환 시간:"
+#~ msgctxt ""
+#~ "@label:chooser Tap should be translated to mean touching using a "
+#~ "touchscreen"
+#~ msgid "Tap to choose your location on the map."
+#~ msgstr "탭하여 지도에서 위치를 선택하십시오."
 
-#: ui/main.qml:272
-#, kde-format
-msgid "Always off"
-msgstr "항상 끄기"
+#~ msgctxt ""
+#~ "@label:chooser Click should be translated to mean clicking using a mouse"
+#~ msgid "Click to choose your location on the map."
+#~ msgstr "클릭하여 지도에서 위치를 선택하십시오."
 
-#: ui/main.qml:273
-#, kde-format
-msgid "Sunset and sunrise at current location"
-msgstr "현재 위치의 일몰과 일출"
+#~ msgid "Zoom in"
+#~ msgstr "확대"
 
-#: ui/main.qml:274
-#, kde-format
-msgid "Sunset and sunrise at manual location"
-msgstr "수동으로 지정한 위치의 일몰과 일출"
+#~ msgid "Zoom out"
+#~ msgstr "축소"
 
-#: ui/main.qml:275
-#, kde-format
-msgid "Custom times"
-msgstr "사용자 정의 시간"
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Modified from <link url='https://commons.wikimedia.org/wiki/File:"
+#~ "World_location_map_(equirectangular_180).svg'>World location map</link> "
+#~ "by TUBS / Wikimedia Commons / <link url='https://creativecommons.org/"
+#~ "licenses/by-sa/3.0'>CC BY-SA 3.0</link>"
+#~ msgstr ""
+#~ "위키미디어 공용의 TUBS 사용자가 제작한 <link url='https://commons."
+#~ "wikimedia.org/wiki/File:World_location_map_(equirectangular_180).svg'>세"
+#~ "계 위치 지도</link>에서 수정됨. <link url='https://creativecommons.org/"
+#~ "licenses/by-sa/3.0'>CC BY-SA 3.0</link>으로 라이선스됨"
 
-#: ui/main.qml:276
-#, kde-format
-msgid "Always on night light"
-msgstr "항상 야간 조명 사용"
+#~ msgctxt "@label: textbox"
+#~ msgid "Latitude:"
+#~ msgstr "위도:"
 
-#: ui/main.qml:288
-#, kde-format
-msgctxt "@label The coordinates for the current location"
-msgid "Current location:"
-msgstr "현재 위치:"
+#~ msgctxt "@label: textbox"
+#~ msgid "Longitude:"
+#~ msgstr "경도:"
 
-#: ui/main.qml:293
-#, kde-format
-msgid "Latitude: %1°   Longitude: %2°"
-msgstr "위도: %1°   경도: %2°"
+#~ msgid "Sunset and sunrise at current location"
+#~ msgstr "현재 위치의 일몰과 일출"
 
-#: ui/main.qml:318
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"The <application>GeoClue2</application> service will be used to periodically "
-"update the device's location using GPS or cell tower triangulation if "
-"available, or else by sending its IP address to <link url='https://geoip.com/"
-"privacy/'>GeoIP</link>."
-msgstr ""
-"<application>GeoClue2</application> 서비스를 사용하여 장치 위치를 주기적으로 "
-"업데이트합니다. 사용 가능한 경우 GPS, 기지국 측량을 사용하며, <link "
-"url='https://geoip.com/privacy/'>GeoIP</link> 서비스에 현재 IP 주소 정보를 전"
-"송합니다."
+#~ msgid "Sunset and sunrise at manual location"
+#~ msgstr "수동으로 지정한 위치의 일몰과 일출"
 
-#: ui/main.qml:319
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"The <application>%1</application> service will be used to periodically "
-"update the device's location. Please open a bug report at <link url='https://"
-"bugs.kde.org'>https://bugs.kde.org</link> asking KDE developers to write a "
-"detailed description of what this service will do."
-msgstr ""
-"<application>%1</application> 서비스를 사용하여 장치 위치를 주기적으로 업데이"
-"트합니다. KDE 개발자들이 이 서비스가 하는 일의 자세한 설명을 적을 수 있도록 "
-"<link url='https://bugs.kde.org'>https://bugs.kde.org</link> 사이트에 버그 보"
-"고서를 작성해 주십시오."
+#~ msgid "Custom times"
+#~ msgstr "사용자 정의 시간"
 
-#: ui/main.qml:334
-#, kde-format
-msgid "Begin night light at:"
-msgstr "야간 조명 시작 시간:"
+#~ msgctxt "@label The coordinates for the current location"
+#~ msgid "Current location:"
+#~ msgstr "현재 위치:"
 
-#: ui/main.qml:351
-#, kde-format
-msgid "Begin day light at:"
-msgstr "주간 조명 시작 시간:"
+#~ msgid "Latitude: %1°   Longitude: %2°"
+#~ msgstr "위도: %1°   경도: %2°"
 
-#: ui/main.qml:367
-#, kde-format
-msgid "Transition duration:"
-msgstr "전환 시간:"
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The <application>GeoClue2</application> service will be used to "
+#~ "periodically update the device's location using GPS or cell tower "
+#~ "triangulation if available, or else by sending its IP address to <link "
+#~ "url='https://geoip.com/privacy/'>GeoIP</link>."
+#~ msgstr ""
+#~ "<application>GeoClue2</application> 서비스를 사용하여 장치 위치를 주기적으"
+#~ "로 업데이트합니다. 사용 가능한 경우 GPS, 기지국 측량을 사용하며, <link "
+#~ "url='https://geoip.com/privacy/'>GeoIP</link> 서비스에 현재 IP 주소 정보"
+#~ "를 전송합니다."
 
-#: ui/main.qml:378
-#, kde-format
-msgid "%1 minute"
-msgid_plural "%1 minutes"
-msgstr[0] "%1분"
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The <application>%1</application> service will be used to periodically "
+#~ "update the device's location. Please open a bug report at <link "
+#~ "url='https://bugs.kde.org'>https://bugs.kde.org</link> asking KDE "
+#~ "developers to write a detailed description of what this service will do."
+#~ msgstr ""
+#~ "<application>%1</application> 서비스를 사용하여 장치 위치를 주기적으로 업"
+#~ "데이트합니다. KDE 개발자들이 이 서비스가 하는 일의 자세한 설명을 적을 수 "
+#~ "있도록 <link url='https://bugs.kde.org'>https://bugs.kde.org</link> 사이트"
+#~ "에 버그 보고서를 작성해 주십시오."
 
-#: ui/main.qml:391
-#, kde-format
-msgid "Input minutes - min. 1, max. 600"
-msgstr "분 단위로 입력 - 최소 1, 최대 600"
+#~ msgid "Begin night light at:"
+#~ msgstr "야간 조명 시작 시간:"
 
-#: ui/main.qml:412
-#, kde-format
-msgctxt "@info:placeholder"
-msgid "Locating…"
-msgstr "위치 찾는 중…"
+#~ msgid "Begin day light at:"
+#~ msgstr "주간 조명 시작 시간:"
 
-#: ui/TimeField.qml:43
-#, kde-format
-msgctxt "@info:tooltip Part of a control for setting a time"
-msgid "hour"
-msgstr "시"
+#~ msgid "Transition duration:"
+#~ msgstr "전환 시간:"
 
-#: ui/TimeField.qml:50
-#, kde-format
-msgctxt "Time separator between hours and minutes"
-msgid ":"
-msgstr ":"
+#~ msgid "%1 minute"
+#~ msgid_plural "%1 minutes"
+#~ msgstr[0] "%1분"
 
-#: ui/TimeField.qml:56
-#, kde-format
-msgctxt "@info:tooltip Part of a control for setting a time"
-msgid "minute"
-msgstr "분"
+#~ msgid "Input minutes - min. 1, max. 600"
+#~ msgstr "분 단위로 입력 - 최소 1, 최대 600"
+
+#~ msgctxt "@info:placeholder"
+#~ msgid "Locating…"
+#~ msgstr "위치 찾는 중…"
+
+#~ msgctxt "@info:tooltip Part of a control for setting a time"
+#~ msgid "hour"
+#~ msgstr "시"
+
+#~ msgctxt "Time separator between hours and minutes"
+#~ msgid ":"
+#~ msgstr ":"
+
+#~ msgctxt "@info:tooltip Part of a control for setting a time"
+#~ msgid "minute"
+#~ msgstr "분"
 
 #~ msgctxt "@info"
 #~ msgid ""
@@ -326,9 +306,6 @@ msgstr "분"
 
 #~ msgid "Constant"
 #~ msgstr "상수"
-
-#~ msgid "Sunrise begins:"
-#~ msgstr "일출 시작:"
 
 #~ msgid "(Input format: HH:MM)"
 #~ msgstr "(입력 형식: HH:MM)"

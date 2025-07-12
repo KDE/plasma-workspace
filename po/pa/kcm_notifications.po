@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-30 00:43+0000\n"
+"POT-Creation-Date: 2025-07-12 00:45+0000\n"
 "PO-Revision-Date: 2024-10-25 23:37-0500\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
@@ -37,7 +37,7 @@ msgstr "ਪੋਪਅੱਪ ਵੇਖਾਓ"
 msgid "Show in do not disturb mode"
 msgstr "ਤੰਗ ਨਾ ਕਰੋ ਢੰਗ ਵਿੱਚ ਵੇਖਾਓ"
 
-#: ui/ApplicationConfiguration.qml:132 ui/main.qml:193
+#: ui/ApplicationConfiguration.qml:132 ui/main.qml:208
 #, kde-format
 msgid "Show in history"
 msgstr "ਅਤੀਤ ਵਿੱਚ ਵੇਖਾਓ"
@@ -99,7 +99,7 @@ msgctxt "@action:button Application-specific notifications"
 msgid "Application Settings"
 msgstr "ਐਪਲੀਕੇਸ਼ਨ ਸੈਟਿੰਗਾਂ"
 
-#: ui/main.qml:81
+#: ui/main.qml:96
 #, kde-format
 msgid ""
 "Could not find a 'Notifications' widget, which is required for displaying "
@@ -109,42 +109,42 @@ msgstr ""
 "ਨੋਟੀਫਿਕੇਸ਼ਨ ਵਿਖਾਉਣ ਲਈ ਚਾਹੀਦਾ 'ਨੋਟੀਫਿਕੇਸ਼ਨ' ਵਿਜੈਟ ਲੱਭਿਆ ਨਹੀਂ ਜਾ ਸਕਿਆ ਹੈ। ਯਕੀਨੀ ਬਣਾਓ ਕਿ "
 "ਤੁਹਾਡੀ ਸਿਸਟਮ ਟਰੇ ਵਿੱਚ ਜਾਂ ਇਕੱਲੇ ਵਿਜੈਟ ਵਜੋਂ ਸਮਰੱਥ ਹੈ।"
 
-#: ui/main.qml:92
+#: ui/main.qml:107
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2' instead of Plasma."
 msgstr "ਇਸ ਵੇਲੇ ਨੋਟੀਫਿਕੇਸ਼ਨ ਪਲਾਜ਼ਮਾ ਦੀ ਬਜਾਏ '%1 %2' ਵਲੋਂ ਦਿੱਤੇ ਜਾ ਰਹੇ ਹਨ।"
 
-#: ui/main.qml:96
+#: ui/main.qml:111
 #, kde-format
 msgid "Notifications are currently not provided by Plasma."
 msgstr "ਇਸ ਵੇਲੇ ਨੋਟੀਫਿਕੇਸ਼ਨ ਪਲਾਜ਼ਮਾ ਵਲੋਂ ਨਹੀਂ ਦਿੱਤੇ ਜਾ ਰਹੇ ਹਨ।"
 
-#: ui/main.qml:111
+#: ui/main.qml:126
 #, kde-format
 msgctxt "@title:group"
 msgid "Do Not Disturb mode"
 msgstr "ਤੰਗ ਨਾ ਕਰੋ ਮੋਡ"
 
-#: ui/main.qml:116
+#: ui/main.qml:131
 #, kde-format
 msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "Enable automatically:"
 msgstr "ਆਪਣੇ-ਆਪ ਸਮਰੱਥ ਕਰੋ:"
 
-#: ui/main.qml:117
+#: ui/main.qml:132
 #, kde-format
 msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
 msgstr "ਜਦੋਂ ਸਕਰੀਨਾਂ ਨੂੰ ਮਿੱਰਰ ਕੀਤਾ ਜਾਂਦਾ ਹੈ"
 
-#: ui/main.qml:129
+#: ui/main.qml:144
 #, kde-format
 msgctxt "Automatically enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
 msgstr "ਸਕਰੀਨ ਸਾਂਝੀ ਕਰਨ ਦੌਰਾਨ"
 
-#: ui/main.qml:143
+#: ui/main.qml:158
 #, kde-format
 msgctxt ""
 "Automatically enable Do Not Disturb mode while a fullscreen application is "
@@ -152,104 +152,104 @@ msgctxt ""
 msgid "While a fullscreen application is focused"
 msgstr ""
 
-#: ui/main.qml:155
+#: ui/main.qml:170
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
 msgid "Manually toggle with shortcut:"
 msgstr "ਸ਼ਾਰਟਕੱਟ ਨਾਲ ਖੁਦ ਬਦਲੋ:"
 
-#: ui/main.qml:162
+#: ui/main.qml:177
 #, kde-format
 msgctxt "@title:group"
 msgid "Visibility conditions"
 msgstr "ਦੇਖਣ ਦੀਆਂ ਸ਼ਰਤਾਂ"
 
-#: ui/main.qml:167
+#: ui/main.qml:182
 #, kde-format
 msgid "Critical notifications:"
 msgstr "ਗੰਭੀਰ ਨੋਟੀਫਿਕੇਸ਼ਨ:"
 
-#: ui/main.qml:168
+#: ui/main.qml:183
 #, kde-format
 msgid "Show in Do Not Disturb mode"
 msgstr "ਤੰਗ ਨਾ ਕਰੋ ਢੰਗ ਵਿੱਚ ਵੇਖਾਓ"
 
-#: ui/main.qml:180
+#: ui/main.qml:195
 #, kde-format
 msgid "Low priority notifications:"
 msgstr "ਘੱਟ ਤਰਜੀਹ ਨੋਟੀਫਿਕੇਸ਼ਨ:"
 
-#: ui/main.qml:181
+#: ui/main.qml:196
 #, kde-format
 msgid "Show popup"
 msgstr "ਪੌਪਅੱਪ ਵੇਖਾਓ"
 
-#: ui/main.qml:210
+#: ui/main.qml:225
 #, kde-format
 msgctxt "@title:group As in: 'notification popups'"
 msgid "Popups"
 msgstr "ਪੌਪਅੱਪ"
 
-#: ui/main.qml:216
+#: ui/main.qml:231
 #, kde-format
 msgctxt "@label"
 msgid "Location:"
 msgstr "ਟਿਕਾਣਾ: "
 
-#: ui/main.qml:217
+#: ui/main.qml:232
 #, kde-format
 msgctxt "Popup position near notification plasmoid"
 msgid "Near notification icon"
 msgstr "ਨੋਟੀਫਿਕੇਸ਼ਨ ਆਈਕਾਨ ਦੇ ਨੇੜੇ"
 
-#: ui/main.qml:254
+#: ui/main.qml:269
 #, kde-format
 msgctxt "@action:button choose custom notification position"
 msgid "Custom…"
 msgstr ""
 
-#: ui/main.qml:263 ui/main.qml:279
+#: ui/main.qml:278 ui/main.qml:294
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
 msgstr[0] "%1 ਸਕਿੰਟ"
 msgstr[1] "%1 ਸਕਿੰਟ"
 
-#: ui/main.qml:268
+#: ui/main.qml:283
 #, kde-format
 msgctxt "Part of a sentence like, 'Hide popup after n seconds'"
 msgid "Hide after:"
 msgstr "ਇਸ ਦੇ ਬਾਦ ਲੁਕਾਓ:"
 
-#: ui/main.qml:291
+#: ui/main.qml:306
 #, kde-format
 msgctxt "@title:group"
 msgid "Additional feedback"
 msgstr "ਵਧੀਕ ਫੀਡਬੈਂਕ"
 
-#: ui/main.qml:297
+#: ui/main.qml:312
 #, kde-format
 msgctxt "Show application jobs in notification widget"
 msgid "Show in notifications"
 msgstr "ਨੋਟੀਫਿਕੇਸ਼ਨ ਵਿੱਚ ਵੇਖਾਓ"
 
-#: ui/main.qml:298
+#: ui/main.qml:313
 #, kde-format
 msgid "Application progress:"
 msgstr "ਐਪਲੀਕੇਸ਼ਨ ਤਰੱਕੀ:"
 
-#: ui/main.qml:312
+#: ui/main.qml:327
 #, kde-format
 msgctxt "Keep application job popup open for entire duration of job"
 msgid "Keep popup open during progress"
 msgstr "ਤਰੱਕੀ ਦੇ ਦੌਰਾਨ ਪੋਪਅੱਪ ਰੱਖੋ"
 
-#: ui/main.qml:325
+#: ui/main.qml:340
 #, kde-format
 msgid "Notification badges:"
 msgstr "ਨੋਟੀਫਿਕੇਸ਼ਨ ਬਿੱਲੇ:"
 
-#: ui/main.qml:326
+#: ui/main.qml:341
 #, kde-format
 msgid "Show in task manager"
 msgstr "ਟਾਸਕ ਮੈਨੇਜਰ ਵਿੱਚ ਵੇਖਾਓ"
@@ -264,22 +264,22 @@ msgstr "ਪੌਪਅੱਪ ਸਥਿਤੀ"
 msgid "Application Settings"
 msgstr "ਐਪਲੀਕੇਸ਼ਨ ਸੈਟਿੰਗਾਂ"
 
-#: ui/SourcesPage.qml:107
+#: ui/SourcesPage.qml:96
 #, kde-format
 msgid "Applications"
 msgstr "ਐਪਲੀਕੇਸ਼ਨਾਂ"
 
-#: ui/SourcesPage.qml:108
+#: ui/SourcesPage.qml:97
 #, kde-format
 msgid "System Services"
 msgstr "ਸਿਸਟਮ ਸੇਵਾਵਾਂ"
 
-#: ui/SourcesPage.qml:156
+#: ui/SourcesPage.qml:145
 #, kde-format
 msgid "No application or event matches your search term"
 msgstr "ਤੁਹਾਡੇ ਖੋਜ ਸ਼ਬਦ ਨਾਲ ਮਿਲਦੀ ਕੋਈ ਐਪਲੀਕੇਸ਼ਨ ਜਾਂ ਈਵੈਂਟ ਹੈ"
 
-#: ui/SourcesPage.qml:180
+#: ui/SourcesPage.qml:169
 #, kde-format
 msgid ""
 "Select an application from the list to configure its notification settings "

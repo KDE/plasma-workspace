@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-31 00:44+0000\n"
+"POT-Creation-Date: 2025-07-12 00:45+0000\n"
 "PO-Revision-Date: 2025-05-24 12:15+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -76,47 +76,49 @@ msgid "Tiled"
 msgstr "In tegelvorm"
 
 #: imagepackage/contents/ui/config.qml:194
-#, kde-format
-msgctxt "part of a sentence: 'Switch dynamic wallpapers [based on]'"
+#, fuzzy, kde-format
+#| msgctxt "part of a sentence: 'Switch dynamic wallpapers [based on]'"
+#| msgid "Switch dynamic wallpapers:"
+msgctxt "@label part of a sentence: 'Switch dynamic wallpapers [based on]'"
 msgid "Switch dynamic wallpapers:"
 msgstr "Dynamische achtergrondafbeeldingen omschakelen:"
 
 #: imagepackage/contents/ui/config.qml:195
-#, kde-format
-msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
+#, fuzzy, kde-format
+#| msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
+#| msgid "Based on whether the color scheme is dark or light"
+msgctxt "@option:radio part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the color scheme is dark or light"
 msgstr "Gebaseerd op of het kleurenschema donker of licht is"
 
-#: imagepackage/contents/ui/config.qml:203
+#: imagepackage/contents/ui/config.qml:206
 #, kde-format
-msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
-msgid "At sunrise and sunset"
-msgstr "Bij zonsopgang en zonsondergang"
+msgctxt "@option:radio part of a sentence: 'Switch dynamic wallpapers'"
+msgid "Based on the day-night cycle:"
+msgstr ""
 
-#: imagepackage/contents/ui/config.qml:218
+#: imagepackage/contents/ui/config.qml:214
 #, kde-format
-msgctxt ""
-"@label:checkbox Use geolocation services for more accurate sunset and "
-"sunrise times"
-msgid "Use device's current location for more accurate timings"
-msgstr "De huidige locatie gebruiken voor meer accurate timings"
+msgctxt "@action:button Configure day-night cycle times"
+msgid "Configure…"
+msgstr ""
 
-#: imagepackage/contents/ui/config.qml:229
+#: imagepackage/contents/ui/config.qml:225
 #, kde-format
 msgid "Background:"
 msgstr "Achtergrond:"
 
-#: imagepackage/contents/ui/config.qml:230
+#: imagepackage/contents/ui/config.qml:226
 #, kde-format
 msgid "Blur"
 msgstr "Vervagen"
 
-#: imagepackage/contents/ui/config.qml:239
+#: imagepackage/contents/ui/config.qml:235
 #, kde-format
 msgid "Solid color"
 msgstr "Vlakke kleur"
 
-#: imagepackage/contents/ui/config.qml:250
+#: imagepackage/contents/ui/config.qml:246
 #, kde-format
 msgid "Select Background Color"
 msgstr "Achtergrond kleur kiezen"
@@ -384,6 +386,16 @@ msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr ""
 "Er deed zich een fout voor tijdens het openen van het configuratiebestand "
 "kscreenlockerrc."
+
+#~ msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
+#~ msgid "At sunrise and sunset"
+#~ msgstr "Bij zonsopgang en zonsondergang"
+
+#~ msgctxt ""
+#~ "@label:checkbox Use geolocation services for more accurate sunset and "
+#~ "sunrise times"
+#~ msgid "Use device's current location for more accurate timings"
+#~ msgstr "De huidige locatie gebruiken voor meer accurate timings"
 
 #~ msgctxt "@title:window"
 #~ msgid "Open Media"

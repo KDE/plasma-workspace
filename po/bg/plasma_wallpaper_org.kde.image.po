@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-31 00:44+0000\n"
+"POT-Creation-Date: 2025-07-12 00:45+0000\n"
 "PO-Revision-Date: 2025-05-26 19:18+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -76,49 +76,49 @@ msgid "Tiled"
 msgstr "Плочки"
 
 #: imagepackage/contents/ui/config.qml:194
-#, kde-format
-msgctxt "part of a sentence: 'Switch dynamic wallpapers [based on]'"
+#, fuzzy, kde-format
+#| msgctxt "part of a sentence: 'Switch dynamic wallpapers [based on]'"
+#| msgid "Switch dynamic wallpapers:"
+msgctxt "@label part of a sentence: 'Switch dynamic wallpapers [based on]'"
 msgid "Switch dynamic wallpapers:"
 msgstr "Превключване на динамични тапети:"
 
 #: imagepackage/contents/ui/config.qml:195
-#, kde-format
-msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
+#, fuzzy, kde-format
+#| msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
+#| msgid "Based on whether the color scheme is dark or light"
+msgctxt "@option:radio part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the color scheme is dark or light"
 msgstr "Въз основа на това дали цветовата схема е тъмна или светла"
 
-#: imagepackage/contents/ui/config.qml:203
+#: imagepackage/contents/ui/config.qml:206
 #, kde-format
-msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
-msgid "At sunrise and sunset"
-msgstr "При изгрев и залез"
-
-#: imagepackage/contents/ui/config.qml:218
-#, kde-format
-msgctxt ""
-"@label:checkbox Use geolocation services for more accurate sunset and "
-"sunrise times"
-msgid "Use device's current location for more accurate timings"
+msgctxt "@option:radio part of a sentence: 'Switch dynamic wallpapers'"
+msgid "Based on the day-night cycle:"
 msgstr ""
-"Използване на текущото местоположение на устройството за по-точно определяне "
-"на времето за смяна"
 
-#: imagepackage/contents/ui/config.qml:229
+#: imagepackage/contents/ui/config.qml:214
+#, kde-format
+msgctxt "@action:button Configure day-night cycle times"
+msgid "Configure…"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:225
 #, kde-format
 msgid "Background:"
 msgstr "Фон:"
 
-#: imagepackage/contents/ui/config.qml:230
+#: imagepackage/contents/ui/config.qml:226
 #, kde-format
 msgid "Blur"
 msgstr "Замъгляване"
 
-#: imagepackage/contents/ui/config.qml:239
+#: imagepackage/contents/ui/config.qml:235
 #, kde-format
 msgid "Solid color"
 msgstr "Плътен цвят"
 
-#: imagepackage/contents/ui/config.qml:250
+#: imagepackage/contents/ui/config.qml:246
 #, kde-format
 msgid "Select Background Color"
 msgstr "Избиране на цвят на фона"
@@ -375,3 +375,15 @@ msgstr "Възникна грешка при опит за задаване на
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr ""
 "Възникна грешка при опит за отваряне на конфигурационния файл kscreenlockerrc"
+
+#~ msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
+#~ msgid "At sunrise and sunset"
+#~ msgstr "При изгрев и залез"
+
+#~ msgctxt ""
+#~ "@label:checkbox Use geolocation services for more accurate sunset and "
+#~ "sunrise times"
+#~ msgid "Use device's current location for more accurate timings"
+#~ msgstr ""
+#~ "Използване на текущото местоположение на устройството за по-точно "
+#~ "определяне на времето за смяна"

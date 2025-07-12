@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-08 00:44+0000\n"
+"POT-Creation-Date: 2025-07-12 00:45+0000\n"
 "PO-Revision-Date: 2024-08-12 16:25+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -19,61 +19,61 @@ msgstr ""
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
 "X-Generator: Poedit 3.4.2\n"
 
-#: devicenotifications.cpp:332
+#: devicenotifications.cpp:333
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Detected"
 msgstr "Aptiktas ekranas"
 
-#: devicenotifications.cpp:333
+#: devicenotifications.cpp:334
 #, fuzzy, kde-format
 #| msgid "A display has been unplugged."
 msgid "A display has been connected."
 msgstr "Ekranas atjungtas."
 
-#: devicenotifications.cpp:346
+#: devicenotifications.cpp:347
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Removed"
 msgstr "Ekranas pašalintas"
 
-#: devicenotifications.cpp:347
+#: devicenotifications.cpp:348
 #, fuzzy, kde-format
 #| msgid "A display has been unplugged."
 msgid "A display has been disconnected."
 msgstr "Ekranas atjungtas."
 
-#: devicenotifications.cpp:378
+#: devicenotifications.cpp:394
 #, fuzzy, kde-format
 #| msgid "%1 has been unplugged."
 msgid "%1 has been connected."
 msgstr "%1 ištrauktas."
 
-#: devicenotifications.cpp:378
+#: devicenotifications.cpp:394
 #, fuzzy, kde-format
 #| msgid "A USB device has been unplugged."
 msgid "A USB device has been connected."
 msgstr "USB įrenginys ištrauktas."
 
-#: devicenotifications.cpp:381
+#: devicenotifications.cpp:399
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Detected"
 msgstr "Aptiktas USB įrenginys"
 
-#: devicenotifications.cpp:404
+#: devicenotifications.cpp:437
 #, fuzzy, kde-format
 #| msgid "%1 has been unplugged."
 msgid "%1 has been disconnected."
 msgstr "%1 ištrauktas."
 
-#: devicenotifications.cpp:404
+#: devicenotifications.cpp:437
 #, fuzzy, kde-format
 #| msgid "A USB device has been unplugged."
 msgid "A USB device has been disconnected."
 msgstr "USB įrenginys ištrauktas."
 
-#: devicenotifications.cpp:407
+#: devicenotifications.cpp:442
 #, fuzzy, kde-format
 #| msgctxt "@title:notifications"
 #| msgid "USB Device Detected"

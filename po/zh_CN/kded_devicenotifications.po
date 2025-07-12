@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-08 00:44+0000\n"
+"POT-Creation-Date: 2025-07-12 00:45+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -18,61 +18,61 @@ msgstr ""
 "kded_devicenotifications.pot\n"
 "X-Crowdin-File-ID: 44499\n"
 
-#: devicenotifications.cpp:332
+#: devicenotifications.cpp:333
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Detected"
 msgstr "检测到显示器"
 
-#: devicenotifications.cpp:333
+#: devicenotifications.cpp:334
 #, fuzzy, kde-format
 #| msgid "A display has been unplugged."
 msgid "A display has been connected."
 msgstr "一个显示器已被拔出。"
 
-#: devicenotifications.cpp:346
+#: devicenotifications.cpp:347
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Removed"
 msgstr "显示器已移除"
 
-#: devicenotifications.cpp:347
+#: devicenotifications.cpp:348
 #, fuzzy, kde-format
 #| msgid "A display has been unplugged."
 msgid "A display has been disconnected."
 msgstr "一个显示器已被拔出。"
 
-#: devicenotifications.cpp:378
+#: devicenotifications.cpp:394
 #, fuzzy, kde-format
 #| msgid "%1 has been unplugged."
 msgid "%1 has been connected."
 msgstr "%1 已拔出。"
 
-#: devicenotifications.cpp:378
+#: devicenotifications.cpp:394
 #, fuzzy, kde-format
 #| msgid "A USB device has been unplugged."
 msgid "A USB device has been connected."
 msgstr "已拔出 USB 设备。"
 
-#: devicenotifications.cpp:381
+#: devicenotifications.cpp:399
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Detected"
 msgstr "检测到 USB 设备"
 
-#: devicenotifications.cpp:404
+#: devicenotifications.cpp:437
 #, fuzzy, kde-format
 #| msgid "%1 has been unplugged."
 msgid "%1 has been disconnected."
 msgstr "%1 已拔出。"
 
-#: devicenotifications.cpp:404
+#: devicenotifications.cpp:437
 #, fuzzy, kde-format
 #| msgid "A USB device has been unplugged."
 msgid "A USB device has been disconnected."
 msgstr "已拔出 USB 设备。"
 
-#: devicenotifications.cpp:407
+#: devicenotifications.cpp:442
 #, fuzzy, kde-format
 #| msgctxt "@title:notifications"
 #| msgid "USB Device Detected"

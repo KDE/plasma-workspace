@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-13 00:47+0000\n"
+"POT-Creation-Date: 2025-07-12 00:45+0000\n"
 "PO-Revision-Date: 2025-04-01 15:19+0400\n"
 "Last-Translator: Khayyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -36,208 +36,187 @@ msgstr ""
 "Gündüz rejimi üçün rəng temperaturunun dəyişməyə başlama və tam dəyişmə "
 "vaxtı %1 ilə %2 arasında baş verir."
 
-#: ui/LocationsFixedView.qml:72
-#, kde-format
-msgctxt ""
-"@label:chooser Tap should be translated to mean touching using a touchscreen"
-msgid "Tap to choose your location on the map."
-msgstr "Xəritədə yerinizi seçmək üçün toxunun."
-
-#: ui/LocationsFixedView.qml:73
-#, kde-format
-msgctxt ""
-"@label:chooser Click should be translated to mean clicking using a mouse"
-msgid "Click to choose your location on the map."
-msgstr "Xəritədə yerinizi tapmaq üçün vurun."
-
-#: ui/LocationsFixedView.qml:112
-#, kde-format
-msgid "Zoom in"
-msgstr "Böyüdün"
-
-#: ui/LocationsFixedView.qml:129
-#, kde-format
-msgid "Zoom out"
-msgstr "Kiçildin"
-
-#: ui/LocationsFixedView.qml:227
-#, kde-kuit-format
+#: ui/main.qml:39
+#, fuzzy, kde-format
+#| msgid "The blue light filter makes the colors on the screen warmer."
 msgctxt "@info"
-msgid ""
-"Modified from <link url='https://commons.wikimedia.org/wiki/File:"
-"World_location_map_(equirectangular_180).svg'>World location map</link> by "
-"TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
-"by-sa/3.0'>CC BY-SA 3.0</link>"
-msgstr ""
-"<link url='https://commons.wikimedia.org/wiki/File:"
-"World_location_map_(equirectangular_180).svg'>World location map</link> by "
-"TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
-"by-sa/3.0'>CC BY-SA 3.0</link> əsaslanaraq yaradılıb."
-
-#: ui/LocationsFixedView.qml:240
-#, kde-format
-msgctxt "@label: textbox"
-msgid "Latitude:"
-msgstr "En dairəsi:"
-
-#: ui/LocationsFixedView.qml:271
-#, kde-format
-msgctxt "@label: textbox"
-msgid "Longitude:"
-msgstr "Uzunluq dairəsi:"
-
-#: ui/main.qml:75
-#, kde-format
 msgid "The blue light filter makes the colors on the screen warmer."
 msgstr "MAvi rəng süzgəci ekrandakı rəngləri daha isti edir."
 
-#: ui/main.qml:128 ui/main.qml:179 ui/main.qml:243
+#: ui/main.qml:49
+#, fuzzy, kde-format
+#| msgid "Switching times:"
+msgctxt "@label:listbox Night Light modes"
+msgid "Switching times:"
+msgstr "Dəyişmə vaxtı:"
+
+#: ui/main.qml:58
+#, fuzzy, kde-format
+#| msgid "Always off"
+msgctxt "@item:inlistbox switching times"
+msgid "Always off"
+msgstr "Həmişə sönülü"
+
+#: ui/main.qml:59
+#, fuzzy, kde-format
+#| msgid "Always on night light"
+msgctxt "@item:inlistbox switching times"
+msgid "Always on night light"
+msgstr "Həmişə gecə rejimində"
+
+#: ui/main.qml:60
+#, kde-format
+msgctxt "@item:inlistbox switching times"
+msgid "Sunrise and sunset"
+msgstr ""
+
+#: ui/main.qml:72
+#, kde-format
+msgctxt "@action:button Configure day-night cycle times"
+msgid "Configure…"
+msgstr ""
+
+#: ui/main.qml:115 ui/main.qml:166 ui/main.qml:230
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1K"
 msgstr "%1K"
 
-#: ui/main.qml:136
-#, kde-format
+#: ui/main.qml:123
+#, fuzzy, kde-format
+#| msgid "Day light temperature:"
+msgctxt "@label:slider"
 msgid "Day light temperature:"
 msgstr "Gündüz rejimi temperaturu:"
 
-#: ui/main.qml:186 ui/main.qml:250
+#: ui/main.qml:173 ui/main.qml:237
 #, kde-format
 msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr "Soyuq (süzgəci olmadan)"
 
-#: ui/main.qml:193 ui/main.qml:257
+#: ui/main.qml:180 ui/main.qml:244
 #, kde-format
 msgctxt "Night colour red-ish"
 msgid "Warm"
 msgstr "İsti"
 
-#: ui/main.qml:200
-#, kde-format
+#: ui/main.qml:187
+#, fuzzy, kde-format
+#| msgid "Night light temperature:"
+msgctxt "@label:slider"
 msgid "Night light temperature:"
 msgstr "Gecə rejimi temperaturu:"
 
-#: ui/main.qml:269
-#, kde-format
-msgid "Switching times:"
-msgstr "Dəyişmə vaxtı:"
+#~ msgctxt ""
+#~ "@label:chooser Tap should be translated to mean touching using a "
+#~ "touchscreen"
+#~ msgid "Tap to choose your location on the map."
+#~ msgstr "Xəritədə yerinizi seçmək üçün toxunun."
 
-#: ui/main.qml:272
-#, kde-format
-msgid "Always off"
-msgstr "Həmişə sönülü"
+#~ msgctxt ""
+#~ "@label:chooser Click should be translated to mean clicking using a mouse"
+#~ msgid "Click to choose your location on the map."
+#~ msgstr "Xəritədə yerinizi tapmaq üçün vurun."
 
-#: ui/main.qml:273
-#, kde-format
-msgid "Sunset and sunrise at current location"
-msgstr "Mövcud yerin gün çıxmasına və gün batımasına görə"
+#~ msgid "Zoom in"
+#~ msgstr "Böyüdün"
 
-#: ui/main.qml:274
-#, kde-format
-msgid "Sunset and sunrise at manual location"
-msgstr "Daxil edilən kordinatlara görə gün çıxması və batması"
+#~ msgid "Zoom out"
+#~ msgstr "Kiçildin"
 
-#: ui/main.qml:275
-#, kde-format
-msgid "Custom times"
-msgstr "Vaxtları özün təyin et"
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Modified from <link url='https://commons.wikimedia.org/wiki/File:"
+#~ "World_location_map_(equirectangular_180).svg'>World location map</link> "
+#~ "by TUBS / Wikimedia Commons / <link url='https://creativecommons.org/"
+#~ "licenses/by-sa/3.0'>CC BY-SA 3.0</link>"
+#~ msgstr ""
+#~ "<link url='https://commons.wikimedia.org/wiki/File:"
+#~ "World_location_map_(equirectangular_180).svg'>World location map</link> "
+#~ "by TUBS / Wikimedia Commons / <link url='https://creativecommons.org/"
+#~ "licenses/by-sa/3.0'>CC BY-SA 3.0</link> əsaslanaraq yaradılıb."
 
-#: ui/main.qml:276
-#, kde-format
-msgid "Always on night light"
-msgstr "Həmişə gecə rejimində"
+#~ msgctxt "@label: textbox"
+#~ msgid "Latitude:"
+#~ msgstr "En dairəsi:"
 
-#: ui/main.qml:288
-#, kde-format
-msgctxt "@label The coordinates for the current location"
-msgid "Current location:"
-msgstr "Hazırkı yeriniz:"
+#~ msgctxt "@label: textbox"
+#~ msgid "Longitude:"
+#~ msgstr "Uzunluq dairəsi:"
 
-#: ui/main.qml:293
-#, kde-format
-msgid "Latitude: %1°   Longitude: %2°"
-msgstr "En dairəsi: %1°   Üzunluq dairəsi: %2°"
+#~ msgid "Sunset and sunrise at current location"
+#~ msgstr "Mövcud yerin gün çıxmasına və gün batımasına görə"
 
-#: ui/main.qml:318
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"The <application>GeoClue2</application> service will be used to periodically "
-"update the device's location using GPS or cell tower triangulation if "
-"available, or else by sending its IP address to <link url='https://geoip.com/"
-"privacy/'>GeoIP</link>."
-msgstr ""
-"<application>GeoClue2</application> xidməti cihazın yerləşmə yerini GPS-dən, "
-"əlçatan olduqda mobil çəbəkə qülləsindən istifadə etməklə və ya İP ünvanını "
-"<link url='https://geoip.com/privacy/'>GeoIP</link> saytına göndərməklə "
-"yeniləyəcək."
+#~ msgid "Sunset and sunrise at manual location"
+#~ msgstr "Daxil edilən kordinatlara görə gün çıxması və batması"
 
-#: ui/main.qml:319
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"The <application>%1</application> service will be used to periodically "
-"update the device's location. Please open a bug report at <link url='https://"
-"bugs.kde.org'>https://bugs.kde.org</link> asking KDE developers to write a "
-"detailed description of what this service will do."
-msgstr ""
-"<application>%1</application> xidməti cihazın yerləşmə yerini vaxtaşırı "
-"yeniləyəcək. <link url='https://bugs.kde.org'>https://bugs.kde.org</link> "
-"ünvanında bir xəta hesabatı yaradaraq KDE tərtibatçılarından bu xidmətin nə "
-"iş görəcəyini ətraflı yazmalarını xahiş edin."
+#~ msgid "Custom times"
+#~ msgstr "Vaxtları özün təyin et"
 
-#: ui/main.qml:334
-#, kde-format
-msgid "Begin night light at:"
-msgstr "Gecə rejimini başlatma vaxtı:"
+#~ msgctxt "@label The coordinates for the current location"
+#~ msgid "Current location:"
+#~ msgstr "Hazırkı yeriniz:"
 
-#: ui/main.qml:351
-#, kde-format
-msgid "Begin day light at:"
-msgstr "Gündüz rejimini başlatma vaxtı:"
+#~ msgid "Latitude: %1°   Longitude: %2°"
+#~ msgstr "En dairəsi: %1°   Üzunluq dairəsi: %2°"
 
-#: ui/main.qml:367
-#, kde-format
-msgid "Transition duration:"
-msgstr "Keçid müddəti:"
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The <application>GeoClue2</application> service will be used to "
+#~ "periodically update the device's location using GPS or cell tower "
+#~ "triangulation if available, or else by sending its IP address to <link "
+#~ "url='https://geoip.com/privacy/'>GeoIP</link>."
+#~ msgstr ""
+#~ "<application>GeoClue2</application> xidməti cihazın yerləşmə yerini GPS-"
+#~ "dən, əlçatan olduqda mobil çəbəkə qülləsindən istifadə etməklə və ya İP "
+#~ "ünvanını <link url='https://geoip.com/privacy/'>GeoIP</link> saytına "
+#~ "göndərməklə yeniləyəcək."
 
-#: ui/main.qml:378
-#, kde-format
-msgid "%1 minute"
-msgid_plural "%1 minutes"
-msgstr[0] "%1 dəqiqə"
-msgstr[1] "%1 dəqiqə"
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The <application>%1</application> service will be used to periodically "
+#~ "update the device's location. Please open a bug report at <link "
+#~ "url='https://bugs.kde.org'>https://bugs.kde.org</link> asking KDE "
+#~ "developers to write a detailed description of what this service will do."
+#~ msgstr ""
+#~ "<application>%1</application> xidməti cihazın yerləşmə yerini vaxtaşırı "
+#~ "yeniləyəcək. <link url='https://bugs.kde.org'>https://bugs.kde.org</link> "
+#~ "ünvanında bir xəta hesabatı yaradaraq KDE tərtibatçılarından bu xidmətin "
+#~ "nə iş görəcəyini ətraflı yazmalarını xahiş edin."
 
-#: ui/main.qml:391
-#, kde-format
-msgid "Input minutes - min. 1, max. 600"
-msgstr "Dəqiqə ilə - min. 1, max. 600"
+#~ msgid "Begin night light at:"
+#~ msgstr "Gecə rejimini başlatma vaxtı:"
 
-#: ui/main.qml:412
-#, kde-format
-msgctxt "@info:placeholder"
-msgid "Locating…"
-msgstr "Yer müəyyən olunur..."
+#~ msgid "Begin day light at:"
+#~ msgstr "Gündüz rejimini başlatma vaxtı:"
 
-#: ui/TimeField.qml:43
-#, kde-format
-msgctxt "@info:tooltip Part of a control for setting a time"
-msgid "hour"
-msgstr "saat"
+#~ msgid "Transition duration:"
+#~ msgstr "Keçid müddəti:"
 
-#: ui/TimeField.qml:50
-#, kde-format
-msgctxt "Time separator between hours and minutes"
-msgid ":"
-msgstr ":"
+#~ msgid "%1 minute"
+#~ msgid_plural "%1 minutes"
+#~ msgstr[0] "%1 dəqiqə"
+#~ msgstr[1] "%1 dəqiqə"
 
-#: ui/TimeField.qml:56
-#, kde-format
-msgctxt "@info:tooltip Part of a control for setting a time"
-msgid "minute"
-msgstr "dəqiqə"
+#~ msgid "Input minutes - min. 1, max. 600"
+#~ msgstr "Dəqiqə ilə - min. 1, max. 600"
+
+#~ msgctxt "@info:placeholder"
+#~ msgid "Locating…"
+#~ msgstr "Yer müəyyən olunur..."
+
+#~ msgctxt "@info:tooltip Part of a control for setting a time"
+#~ msgid "hour"
+#~ msgstr "saat"
+
+#~ msgctxt "Time separator between hours and minutes"
+#~ msgid ":"
+#~ msgstr ":"
+
+#~ msgctxt "@info:tooltip Part of a control for setting a time"
+#~ msgid "minute"
+#~ msgstr "dəqiqə"
 
 #~ msgctxt "@info"
 #~ msgid ""

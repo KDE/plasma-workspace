@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-13 00:47+0000\n"
+"POT-Creation-Date: 2025-07-12 00:45+0000\n"
 "PO-Revision-Date: 2024-11-06 22:00\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -39,212 +39,191 @@ msgstr ""
 "Колеравая тэмпература пачынае змяняцца на дзённую а %1 і цалкам змяняецца а "
 "%2"
 
-#: ui/LocationsFixedView.qml:72
-#, kde-format
-msgctxt ""
-"@label:chooser Tap should be translated to mean touching using a touchscreen"
-msgid "Tap to choose your location on the map."
-msgstr "Націсніце, каб абраць сваё месцазнаходжанне на мапе."
-
-#: ui/LocationsFixedView.qml:73
-#, kde-format
-msgctxt ""
-"@label:chooser Click should be translated to mean clicking using a mouse"
-msgid "Click to choose your location on the map."
-msgstr "Пстрыкніце, каб абраць сваё месцазнаходжанне на мапе."
-
-#: ui/LocationsFixedView.qml:112
-#, kde-format
-msgid "Zoom in"
-msgstr "Павялічыць"
-
-#: ui/LocationsFixedView.qml:129
-#, kde-format
-msgid "Zoom out"
-msgstr "Паменшыць"
-
-#: ui/LocationsFixedView.qml:227
-#, kde-kuit-format
+#: ui/main.qml:39
+#, fuzzy, kde-format
+#| msgid "The blue light filter makes the colors on the screen warmer."
 msgctxt "@info"
-msgid ""
-"Modified from <link url='https://commons.wikimedia.org/wiki/File:"
-"World_location_map_(equirectangular_180).svg'>World location map</link> by "
-"TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
-"by-sa/3.0'>CC BY-SA 3.0</link>"
-msgstr ""
-"На базе <link url='https://commons.wikimedia.org/wiki/File:"
-"World_location_map_(equirectangular_180).svg'>World location map</link> ад "
-"TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
-"by-sa/3.0'>CC BY-SA 3.0</link>"
-
-#: ui/LocationsFixedView.qml:240
-#, kde-format
-msgctxt "@label: textbox"
-msgid "Latitude:"
-msgstr "Шырата:"
-
-#: ui/LocationsFixedView.qml:271
-#, kde-format
-msgctxt "@label: textbox"
-msgid "Longitude:"
-msgstr "Даўгата:"
-
-#: ui/main.qml:75
-#, kde-format
 msgid "The blue light filter makes the colors on the screen warmer."
 msgstr "Сіні светлавы фільтр робіць колеры на экране больш цёплымі."
 
-#: ui/main.qml:128 ui/main.qml:179 ui/main.qml:243
+#: ui/main.qml:49
+#, fuzzy, kde-format
+#| msgid "Switching times:"
+msgctxt "@label:listbox Night Light modes"
+msgid "Switching times:"
+msgstr "Час пераключэння:"
+
+#: ui/main.qml:58
+#, fuzzy, kde-format
+#| msgid "Always off"
+msgctxt "@item:inlistbox switching times"
+msgid "Always off"
+msgstr "Заўсёды адключана"
+
+#: ui/main.qml:59
+#, fuzzy, kde-format
+#| msgid "Always on night light"
+msgctxt "@item:inlistbox switching times"
+msgid "Always on night light"
+msgstr "Заўсёды ўключаны начны рэжым"
+
+#: ui/main.qml:60
+#, kde-format
+msgctxt "@item:inlistbox switching times"
+msgid "Sunrise and sunset"
+msgstr ""
+
+#: ui/main.qml:72
+#, kde-format
+msgctxt "@action:button Configure day-night cycle times"
+msgid "Configure…"
+msgstr ""
+
+#: ui/main.qml:115 ui/main.qml:166 ui/main.qml:230
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1K"
 msgstr "%1K"
 
-#: ui/main.qml:136
-#, kde-format
+#: ui/main.qml:123
+#, fuzzy, kde-format
+#| msgid "Day light temperature:"
+msgctxt "@label:slider"
 msgid "Day light temperature:"
 msgstr "Дзённая светлавая тэмпература:"
 
-#: ui/main.qml:186 ui/main.qml:250
+#: ui/main.qml:173 ui/main.qml:237
 #, kde-format
 msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr "Халодная (без фільтра)"
 
-#: ui/main.qml:193 ui/main.qml:257
+#: ui/main.qml:180 ui/main.qml:244
 #, kde-format
 msgctxt "Night colour red-ish"
 msgid "Warm"
 msgstr "Цёплы"
 
-#: ui/main.qml:200
-#, kde-format
+#: ui/main.qml:187
+#, fuzzy, kde-format
+#| msgid "Night light temperature:"
+msgctxt "@label:slider"
 msgid "Night light temperature:"
 msgstr "Начная светлавая тэмпература:"
 
-#: ui/main.qml:269
-#, kde-format
-msgid "Switching times:"
-msgstr "Час пераключэння:"
+#~ msgctxt ""
+#~ "@label:chooser Tap should be translated to mean touching using a "
+#~ "touchscreen"
+#~ msgid "Tap to choose your location on the map."
+#~ msgstr "Націсніце, каб абраць сваё месцазнаходжанне на мапе."
 
-#: ui/main.qml:272
-#, kde-format
-msgid "Always off"
-msgstr "Заўсёды адключана"
+#~ msgctxt ""
+#~ "@label:chooser Click should be translated to mean clicking using a mouse"
+#~ msgid "Click to choose your location on the map."
+#~ msgstr "Пстрыкніце, каб абраць сваё месцазнаходжанне на мапе."
 
-#: ui/main.qml:273
-#, kde-format
-msgid "Sunset and sunrise at current location"
-msgstr "Заход і ўзыход сонца ў бягучай мясціне"
+#~ msgid "Zoom in"
+#~ msgstr "Павялічыць"
 
-#: ui/main.qml:274
-#, kde-format
-msgid "Sunset and sunrise at manual location"
-msgstr "Заход і ўзыход сонца ва ўласнаручна вызначанай мясціне"
+#~ msgid "Zoom out"
+#~ msgstr "Паменшыць"
 
-#: ui/main.qml:275
-#, kde-format
-msgid "Custom times"
-msgstr "Адвольны час"
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Modified from <link url='https://commons.wikimedia.org/wiki/File:"
+#~ "World_location_map_(equirectangular_180).svg'>World location map</link> "
+#~ "by TUBS / Wikimedia Commons / <link url='https://creativecommons.org/"
+#~ "licenses/by-sa/3.0'>CC BY-SA 3.0</link>"
+#~ msgstr ""
+#~ "На базе <link url='https://commons.wikimedia.org/wiki/File:"
+#~ "World_location_map_(equirectangular_180).svg'>World location map</link> "
+#~ "ад TUBS / Wikimedia Commons / <link url='https://creativecommons.org/"
+#~ "licenses/by-sa/3.0'>CC BY-SA 3.0</link>"
 
-#: ui/main.qml:276
-#, kde-format
-msgid "Always on night light"
-msgstr "Заўсёды ўключаны начны рэжым"
+#~ msgctxt "@label: textbox"
+#~ msgid "Latitude:"
+#~ msgstr "Шырата:"
 
-#: ui/main.qml:288
-#, kde-format
-msgctxt "@label The coordinates for the current location"
-msgid "Current location:"
-msgstr "Бягучае месцазнаходжанне:"
+#~ msgctxt "@label: textbox"
+#~ msgid "Longitude:"
+#~ msgstr "Даўгата:"
 
-#: ui/main.qml:293
-#, kde-format
-msgid "Latitude: %1°   Longitude: %2°"
-msgstr "Шырата: %1°   Даўгата: %2°"
+#~ msgid "Sunset and sunrise at current location"
+#~ msgstr "Заход і ўзыход сонца ў бягучай мясціне"
 
-#: ui/main.qml:318
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"The <application>GeoClue2</application> service will be used to periodically "
-"update the device's location using GPS or cell tower triangulation if "
-"available, or else by sending its IP address to <link url='https://geoip.com/"
-"privacy/'>GeoIP</link>."
-msgstr ""
-"Служба <application>GeoClue2</application> будзе выкарыстоўвацца для "
-"перыядычнага абнаўлення месцазнаходжання прылады з дапамогай GPS або "
-"трыангуляцыі вышкі сотавай сувязі, калі яна даступная, або спосабам "
-"адпраўлення яе ip-адраса на <link url='https://geoip.com/privacy /'>GeoIP</"
-"link>."
+#~ msgid "Sunset and sunrise at manual location"
+#~ msgstr "Заход і ўзыход сонца ва ўласнаручна вызначанай мясціне"
 
-#: ui/main.qml:319
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"The <application>%1</application> service will be used to periodically "
-"update the device's location. Please open a bug report at <link url='https://"
-"bugs.kde.org'>https://bugs.kde.org</link> asking KDE developers to write a "
-"detailed description of what this service will do."
-msgstr ""
-"Служба <application>%1</application> будзе выкарыстоўвацца для перыядычнага "
-"абнаўлення месцазнаходжання прылады. Адпраўце справаздачу пра хібу на <link "
-"url='https://bugs.kde.org'>https://bugs.kde.org</link> з просьбай да "
-"распрацоўнікаў KDE напісаць падрабязнае апісанне таго, што будзе рабіць "
-"гэтая служба."
+#~ msgid "Custom times"
+#~ msgstr "Адвольны час"
 
-#: ui/main.qml:334
-#, kde-format
-msgid "Begin night light at:"
-msgstr "Час пачатку дзеяння начнога рэжыму:"
+#~ msgctxt "@label The coordinates for the current location"
+#~ msgid "Current location:"
+#~ msgstr "Бягучае месцазнаходжанне:"
 
-#: ui/main.qml:351
-#, kde-format
-msgid "Begin day light at:"
-msgstr "Час пачатку дзеяння дзённага рэжыму:"
+#~ msgid "Latitude: %1°   Longitude: %2°"
+#~ msgstr "Шырата: %1°   Даўгата: %2°"
 
-#: ui/main.qml:367
-#, kde-format
-msgid "Transition duration:"
-msgstr "Працягласць пераходу:"
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The <application>GeoClue2</application> service will be used to "
+#~ "periodically update the device's location using GPS or cell tower "
+#~ "triangulation if available, or else by sending its IP address to <link "
+#~ "url='https://geoip.com/privacy/'>GeoIP</link>."
+#~ msgstr ""
+#~ "Служба <application>GeoClue2</application> будзе выкарыстоўвацца для "
+#~ "перыядычнага абнаўлення месцазнаходжання прылады з дапамогай GPS або "
+#~ "трыангуляцыі вышкі сотавай сувязі, калі яна даступная, або спосабам "
+#~ "адпраўлення яе ip-адраса на <link url='https://geoip.com/"
+#~ "privacy /'>GeoIP</link>."
 
-#: ui/main.qml:378
-#, kde-format
-msgid "%1 minute"
-msgid_plural "%1 minutes"
-msgstr[0] "%1 хвіліна"
-msgstr[1] "%1 хвіліны"
-msgstr[2] "%1 хвілін"
-msgstr[3] "%1 хвіліны"
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The <application>%1</application> service will be used to periodically "
+#~ "update the device's location. Please open a bug report at <link "
+#~ "url='https://bugs.kde.org'>https://bugs.kde.org</link> asking KDE "
+#~ "developers to write a detailed description of what this service will do."
+#~ msgstr ""
+#~ "Служба <application>%1</application> будзе выкарыстоўвацца для "
+#~ "перыядычнага абнаўлення месцазнаходжання прылады. Адпраўце справаздачу "
+#~ "пра хібу на <link url='https://bugs.kde.org'>https://bugs.kde.org</link> "
+#~ "з просьбай да распрацоўнікаў KDE напісаць падрабязнае апісанне таго, што "
+#~ "будзе рабіць гэтая служба."
 
-#: ui/main.qml:391
-#, kde-format
-msgid "Input minutes - min. 1, max. 600"
-msgstr "Увод хвілін - мін. 1, макс. 600"
+#~ msgid "Begin night light at:"
+#~ msgstr "Час пачатку дзеяння начнога рэжыму:"
 
-#: ui/main.qml:412
-#, kde-format
-msgctxt "@info:placeholder"
-msgid "Locating…"
-msgstr "Месцазнаходжанне…"
+#~ msgid "Begin day light at:"
+#~ msgstr "Час пачатку дзеяння дзённага рэжыму:"
 
-#: ui/TimeField.qml:43
-#, kde-format
-msgctxt "@info:tooltip Part of a control for setting a time"
-msgid "hour"
-msgstr "гадзіна"
+#~ msgid "Transition duration:"
+#~ msgstr "Працягласць пераходу:"
 
-#: ui/TimeField.qml:50
-#, kde-format
-msgctxt "Time separator between hours and minutes"
-msgid ":"
-msgstr ":"
+#~ msgid "%1 minute"
+#~ msgid_plural "%1 minutes"
+#~ msgstr[0] "%1 хвіліна"
+#~ msgstr[1] "%1 хвіліны"
+#~ msgstr[2] "%1 хвілін"
+#~ msgstr[3] "%1 хвіліны"
 
-#: ui/TimeField.qml:56
-#, kde-format
-msgctxt "@info:tooltip Part of a control for setting a time"
-msgid "minute"
-msgstr "хвіліна"
+#~ msgid "Input minutes - min. 1, max. 600"
+#~ msgstr "Увод хвілін - мін. 1, макс. 600"
+
+#~ msgctxt "@info:placeholder"
+#~ msgid "Locating…"
+#~ msgstr "Месцазнаходжанне…"
+
+#~ msgctxt "@info:tooltip Part of a control for setting a time"
+#~ msgid "hour"
+#~ msgstr "гадзіна"
+
+#~ msgctxt "Time separator between hours and minutes"
+#~ msgid ":"
+#~ msgstr ":"
+
+#~ msgctxt "@info:tooltip Part of a control for setting a time"
+#~ msgid "minute"
+#~ msgstr "хвіліна"
 
 #~ msgctxt "@info"
 #~ msgid ""

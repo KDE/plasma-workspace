@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-13 00:47+0000\n"
+"POT-Creation-Date: 2025-07-12 00:45+0000\n"
 "PO-Revision-Date: 2024-12-20 21:54+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -35,204 +35,183 @@ msgid ""
 msgstr ""
 "वर्णतापमानं %1 इत्यत्र दिवससमये परिवर्तयितुं आरभते तथा च %2 इत्यनेन पूर्णतया परिवर्तते"
 
-#: ui/LocationsFixedView.qml:72
-#, kde-format
-msgctxt ""
-"@label:chooser Tap should be translated to mean touching using a touchscreen"
-msgid "Tap to choose your location on the map."
-msgstr "नक्शे स्वस्थानं चिन्वन्तु इति ट्याप् कुर्वन्तु ।"
-
-#: ui/LocationsFixedView.qml:73
-#, kde-format
-msgctxt ""
-"@label:chooser Click should be translated to mean clicking using a mouse"
-msgid "Click to choose your location on the map."
-msgstr "नक्शे स्वस्थानं चिन्वन्तु इति क्लिक् कुर्वन्तु ।"
-
-#: ui/LocationsFixedView.qml:112
-#, kde-format
-msgid "Zoom in"
-msgstr "जूम इन करें"
-
-#: ui/LocationsFixedView.qml:129
-#, kde-format
-msgid "Zoom out"
-msgstr "जूम आउट् कुर्वन्तु"
-
-#: ui/LocationsFixedView.qml:227
-#, kde-kuit-format
+#: ui/main.qml:39
+#, fuzzy, kde-format
+#| msgid "The blue light filter makes the colors on the screen warmer."
 msgctxt "@info"
-msgid ""
-"Modified from <link url='https://commons.wikimedia.org/wiki/File:"
-"World_location_map_(equirectangular_180).svg'>World location map</link> by "
-"TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
-"by-sa/3.0'>CC BY-SA 3.0</link>"
-msgstr ""
-"तः परिवर्तितम्<link url='https://commons.wikimedia.org/wiki/File:"
-"World_location_map_(equirectangular_180).svg'> विश्व स्थान मानचित्र</link> by "
-"TUBS / विकिमीडिया कमन्स / .<link url='https://creativecommons.org/licenses/by-"
-"sa/3.0'> सीसी बाय-एसए 3.0</link>"
-
-#: ui/LocationsFixedView.qml:240
-#, kde-format
-msgctxt "@label: textbox"
-msgid "Latitude:"
-msgstr "अक्षांशः :"
-
-#: ui/LocationsFixedView.qml:271
-#, kde-format
-msgctxt "@label: textbox"
-msgid "Longitude:"
-msgstr "देशान्तर :"
-
-#: ui/main.qml:75
-#, kde-format
 msgid "The blue light filter makes the colors on the screen warmer."
 msgstr "नीलवर्णीयप्रकाश-छिद्रकेन पर्दायां वर्णाः उष्णतराः भवन्ति ।"
 
-#: ui/main.qml:128 ui/main.qml:179 ui/main.qml:243
+#: ui/main.qml:49
+#, fuzzy, kde-format
+#| msgid "Switching times:"
+msgctxt "@label:listbox Night Light modes"
+msgid "Switching times:"
+msgstr "स्विचिंग् समयः :"
+
+#: ui/main.qml:58
+#, fuzzy, kde-format
+#| msgid "Always off"
+msgctxt "@item:inlistbox switching times"
+msgid "Always off"
+msgstr "सर्वदा निष्क्रियः"
+
+#: ui/main.qml:59
+#, fuzzy, kde-format
+#| msgid "Always on night light"
+msgctxt "@item:inlistbox switching times"
+msgid "Always on night light"
+msgstr "नित्यं रात्रौ प्रकाशे"
+
+#: ui/main.qml:60
+#, kde-format
+msgctxt "@item:inlistbox switching times"
+msgid "Sunrise and sunset"
+msgstr ""
+
+#: ui/main.qml:72
+#, kde-format
+msgctxt "@action:button Configure day-night cycle times"
+msgid "Configure…"
+msgstr ""
+
+#: ui/main.qml:115 ui/main.qml:166 ui/main.qml:230
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1K"
 msgstr "%1K"
 
-#: ui/main.qml:136
-#, kde-format
+#: ui/main.qml:123
+#, fuzzy, kde-format
+#| msgid "Day light temperature:"
+msgctxt "@label:slider"
 msgid "Day light temperature:"
 msgstr "दिवसस्य प्रकाशस्य तापमानम् :"
 
-#: ui/main.qml:186 ui/main.qml:250
+#: ui/main.qml:173 ui/main.qml:237
 #, kde-format
 msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr "शीतलम् (कोऽपि छानकं नास्ति)"
 
-#: ui/main.qml:193 ui/main.qml:257
+#: ui/main.qml:180 ui/main.qml:244
 #, kde-format
 msgctxt "Night colour red-ish"
 msgid "Warm"
 msgstr "उष्णम्‌"
 
-#: ui/main.qml:200
-#, kde-format
+#: ui/main.qml:187
+#, fuzzy, kde-format
+#| msgid "Night light temperature:"
+msgctxt "@label:slider"
 msgid "Night light temperature:"
 msgstr "रात्रौ प्रकाशस्य तापमानम् :"
 
-#: ui/main.qml:269
-#, kde-format
-msgid "Switching times:"
-msgstr "स्विचिंग् समयः :"
+#~ msgctxt ""
+#~ "@label:chooser Tap should be translated to mean touching using a "
+#~ "touchscreen"
+#~ msgid "Tap to choose your location on the map."
+#~ msgstr "नक्शे स्वस्थानं चिन्वन्तु इति ट्याप् कुर्वन्तु ।"
 
-#: ui/main.qml:272
-#, kde-format
-msgid "Always off"
-msgstr "सर्वदा निष्क्रियः"
+#~ msgctxt ""
+#~ "@label:chooser Click should be translated to mean clicking using a mouse"
+#~ msgid "Click to choose your location on the map."
+#~ msgstr "नक्शे स्वस्थानं चिन्वन्तु इति क्लिक् कुर्वन्तु ।"
 
-#: ui/main.qml:273
-#, kde-format
-msgid "Sunset and sunrise at current location"
-msgstr "वर्तमानस्थाने सूर्यास्तः सूर्योदयः च"
+#~ msgid "Zoom in"
+#~ msgstr "जूम इन करें"
 
-#: ui/main.qml:274
-#, kde-format
-msgid "Sunset and sunrise at manual location"
-msgstr "हस्तगतस्थाने सूर्यास्तः सूर्योदयः च"
+#~ msgid "Zoom out"
+#~ msgstr "जूम आउट् कुर्वन्तु"
 
-#: ui/main.qml:275
-#, kde-format
-msgid "Custom times"
-msgstr "रूढिगत समय"
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Modified from <link url='https://commons.wikimedia.org/wiki/File:"
+#~ "World_location_map_(equirectangular_180).svg'>World location map</link> "
+#~ "by TUBS / Wikimedia Commons / <link url='https://creativecommons.org/"
+#~ "licenses/by-sa/3.0'>CC BY-SA 3.0</link>"
+#~ msgstr ""
+#~ "तः परिवर्तितम्<link url='https://commons.wikimedia.org/wiki/File:"
+#~ "World_location_map_(equirectangular_180).svg'> विश्व स्थान मानचित्र</link> "
+#~ "by TUBS / विकिमीडिया कमन्स / .<link url='https://creativecommons.org/"
+#~ "licenses/by-sa/3.0'> सीसी बाय-एसए 3.0</link>"
 
-#: ui/main.qml:276
-#, kde-format
-msgid "Always on night light"
-msgstr "नित्यं रात्रौ प्रकाशे"
+#~ msgctxt "@label: textbox"
+#~ msgid "Latitude:"
+#~ msgstr "अक्षांशः :"
 
-#: ui/main.qml:288
-#, kde-format
-msgctxt "@label The coordinates for the current location"
-msgid "Current location:"
-msgstr "वर्तमानस्थानम् :"
+#~ msgctxt "@label: textbox"
+#~ msgid "Longitude:"
+#~ msgstr "देशान्तर :"
 
-#: ui/main.qml:293
-#, kde-format
-msgid "Latitude: %1°   Longitude: %2°"
-msgstr "अक्षांश: %1° देशान्तर: %2°"
+#~ msgid "Sunset and sunrise at current location"
+#~ msgstr "वर्तमानस्थाने सूर्यास्तः सूर्योदयः च"
 
-#: ui/main.qml:318
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"The <application>GeoClue2</application> service will be used to periodically "
-"update the device's location using GPS or cell tower triangulation if "
-"available, or else by sending its IP address to <link url='https://geoip.com/"
-"privacy/'>GeoIP</link>."
-msgstr ""
-"द<application> जिओक्लू2</application> सेवा यदा उपलब्धं भवति तर्हि GPS अथवा "
-"सेलगोपुरत्रिकोणीकरणस्य उपयोगेन यन्त्रस्य स्थानं समये समये अद्यतनीकर्तुं उपयुज्यते, अन्यथा तस्य IP-"
-"सङ्केतं प्रेषयित्वा<link url='https://geoip.com/privacy/'> GeoIP</link> ."
+#~ msgid "Sunset and sunrise at manual location"
+#~ msgstr "हस्तगतस्थाने सूर्यास्तः सूर्योदयः च"
 
-#: ui/main.qml:319
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"The <application>%1</application> service will be used to periodically "
-"update the device's location. Please open a bug report at <link url='https://"
-"bugs.kde.org'>https://bugs.kde.org</link> asking KDE developers to write a "
-"detailed description of what this service will do."
-msgstr ""
-"द<application> %1</application> सेवायाः उपयोगः समये समये यन्त्रस्य स्थानं अद्यतनीकर्तुं "
-"भविष्यति। कृपया अत्र दोषप्रतिवेदनं उद्घाटयन्तु<link url='https://bugs.kde.org'> "
-"https://bugs.kde.org इत्यत्र</link> KDE विकासकान् पृच्छन् यत् एषा सेवा किं करिष्यति "
-"इति विस्तृतं विवरणं लिखन्तु ।"
+#~ msgid "Custom times"
+#~ msgstr "रूढिगत समय"
 
-#: ui/main.qml:334
-#, kde-format
-msgid "Begin night light at:"
-msgstr "रात्रौ प्रकाशस्य आरम्भः 1.1."
+#~ msgctxt "@label The coordinates for the current location"
+#~ msgid "Current location:"
+#~ msgstr "वर्तमानस्थानम् :"
 
-#: ui/main.qml:351
-#, kde-format
-msgid "Begin day light at:"
-msgstr "दिवसप्रकाशस्य आरम्भः 1.1."
+#~ msgid "Latitude: %1°   Longitude: %2°"
+#~ msgstr "अक्षांश: %1° देशान्तर: %2°"
 
-#: ui/main.qml:367
-#, kde-format
-msgid "Transition duration:"
-msgstr "संक्रमणकालः :"
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The <application>GeoClue2</application> service will be used to "
+#~ "periodically update the device's location using GPS or cell tower "
+#~ "triangulation if available, or else by sending its IP address to <link "
+#~ "url='https://geoip.com/privacy/'>GeoIP</link>."
+#~ msgstr ""
+#~ "द<application> जिओक्लू2</application> सेवा यदा उपलब्धं भवति तर्हि GPS अथवा "
+#~ "सेलगोपुरत्रिकोणीकरणस्य उपयोगेन यन्त्रस्य स्थानं समये समये अद्यतनीकर्तुं उपयुज्यते, अन्यथा तस्य "
+#~ "IP-सङ्केतं प्रेषयित्वा<link url='https://geoip.com/privacy/'> GeoIP</link> ."
 
-#: ui/main.qml:378
-#, kde-format
-msgid "%1 minute"
-msgid_plural "%1 minutes"
-msgstr[0] "%1 मिनिट्"
-msgstr[1] "%1 निमेषाः"
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The <application>%1</application> service will be used to periodically "
+#~ "update the device's location. Please open a bug report at <link "
+#~ "url='https://bugs.kde.org'>https://bugs.kde.org</link> asking KDE "
+#~ "developers to write a detailed description of what this service will do."
+#~ msgstr ""
+#~ "द<application> %1</application> सेवायाः उपयोगः समये समये यन्त्रस्य स्थानं "
+#~ "अद्यतनीकर्तुं भविष्यति। कृपया अत्र दोषप्रतिवेदनं उद्घाटयन्तु<link url='https://bugs."
+#~ "kde.org'> https://bugs.kde.org इत्यत्र</link> KDE विकासकान् पृच्छन् यत् एषा सेवा "
+#~ "किं करिष्यति इति विस्तृतं विवरणं लिखन्तु ।"
 
-#: ui/main.qml:391
-#, kde-format
-msgid "Input minutes - min. 1, max. 600"
-msgstr "इनपुट निमेष - मि. १, अधिकतमम् । ६००"
+#~ msgid "Begin night light at:"
+#~ msgstr "रात्रौ प्रकाशस्य आरम्भः 1.1."
 
-#: ui/main.qml:412
-#, kde-format
-msgctxt "@info:placeholder"
-msgid "Locating…"
-msgstr "स्थानं ज्ञात्वा..."
+#~ msgid "Begin day light at:"
+#~ msgstr "दिवसप्रकाशस्य आरम्भः 1.1."
 
-#: ui/TimeField.qml:43
-#, kde-format
-msgctxt "@info:tooltip Part of a control for setting a time"
-msgid "hour"
-msgstr "घटकः"
+#~ msgid "Transition duration:"
+#~ msgstr "संक्रमणकालः :"
 
-#: ui/TimeField.qml:50
-#, kde-format
-msgctxt "Time separator between hours and minutes"
-msgid ":"
-msgstr ":"
+#~ msgid "%1 minute"
+#~ msgid_plural "%1 minutes"
+#~ msgstr[0] "%1 मिनिट्"
+#~ msgstr[1] "%1 निमेषाः"
 
-#: ui/TimeField.qml:56
-#, kde-format
-msgctxt "@info:tooltip Part of a control for setting a time"
-msgid "minute"
-msgstr "क्षणं"
+#~ msgid "Input minutes - min. 1, max. 600"
+#~ msgstr "इनपुट निमेष - मि. १, अधिकतमम् । ६००"
+
+#~ msgctxt "@info:placeholder"
+#~ msgid "Locating…"
+#~ msgstr "स्थानं ज्ञात्वा..."
+
+#~ msgctxt "@info:tooltip Part of a control for setting a time"
+#~ msgid "hour"
+#~ msgstr "घटकः"
+
+#~ msgctxt "Time separator between hours and minutes"
+#~ msgid ":"
+#~ msgstr ":"
+
+#~ msgctxt "@info:tooltip Part of a control for setting a time"
+#~ msgid "minute"
+#~ msgstr "क्षणं"

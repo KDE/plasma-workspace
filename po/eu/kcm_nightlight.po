@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-13 00:47+0000\n"
+"POT-Creation-Date: 2025-07-12 00:45+0000\n"
 "PO-Revision-Date: 2024-08-21 12:51+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -38,209 +38,189 @@ msgstr ""
 "Kolorearen tenperatura egunekora %1(e)tan aldatzen hasiko da eta %2(e)tarako "
 "erabat aldatuta egongo da"
 
-#: ui/LocationsFixedView.qml:72
-#, kde-format
-msgctxt ""
-"@label:chooser Tap should be translated to mean touching using a touchscreen"
-msgid "Tap to choose your location on the map."
-msgstr "Tak egin mapan zure kokalekua hautatzeko."
-
-#: ui/LocationsFixedView.qml:73
-#, kde-format
-msgctxt ""
-"@label:chooser Click should be translated to mean clicking using a mouse"
-msgid "Click to choose your location on the map."
-msgstr "Klik egin mapan zure kokalekua hautatzeko."
-
-#: ui/LocationsFixedView.qml:112
-#, kde-format
-msgid "Zoom in"
-msgstr "Zooma gerturatu"
-
-#: ui/LocationsFixedView.qml:129
-#, kde-format
-msgid "Zoom out"
-msgstr "Zooma urrundu"
-
-#: ui/LocationsFixedView.qml:227
-#, kde-kuit-format
+#: ui/main.qml:39
+#, fuzzy, kde-format
+#| msgid "The blue light filter makes the colors on the screen warmer."
 msgctxt "@info"
-msgid ""
-"Modified from <link url='https://commons.wikimedia.org/wiki/File:"
-"World_location_map_(equirectangular_180).svg'>World location map</link> by "
-"TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
-"by-sa/3.0'>CC BY-SA 3.0</link>"
-msgstr ""
-"TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
-"by-sa/3.0'>CC BY-SA 3.0</link> <link url='https://commons.wikimedia.org/wiki/"
-"File:World_location_map_(equirectangular_180).svg'>Munduko kokapen mapatik</"
-"link> aldatua"
-
-#: ui/LocationsFixedView.qml:240
-#, kde-format
-msgctxt "@label: textbox"
-msgid "Latitude:"
-msgstr "Latitudea:"
-
-#: ui/LocationsFixedView.qml:271
-#, kde-format
-msgctxt "@label: textbox"
-msgid "Longitude:"
-msgstr "Longitudea:"
-
-#: ui/main.qml:75
-#, kde-format
 msgid "The blue light filter makes the colors on the screen warmer."
 msgstr "Argi urdinaren iragazkiak pantailako koloreak epelagoak egiten ditu."
 
-#: ui/main.qml:128 ui/main.qml:179 ui/main.qml:243
+#: ui/main.qml:49
+#, fuzzy, kde-format
+#| msgid "Switching times:"
+msgctxt "@label:listbox Night Light modes"
+msgid "Switching times:"
+msgstr "Aldatzeko orduak:"
+
+#: ui/main.qml:58
+#, fuzzy, kde-format
+#| msgid "Always off"
+msgctxt "@item:inlistbox switching times"
+msgid "Always off"
+msgstr "Beti itzalita"
+
+#: ui/main.qml:59
+#, fuzzy, kde-format
+#| msgid "Always on night light"
+msgctxt "@item:inlistbox switching times"
+msgid "Always on night light"
+msgstr "Beti gaueko argiarekin"
+
+#: ui/main.qml:60
+#, fuzzy, kde-format
+#| msgid "Sunrise begins:"
+msgctxt "@item:inlistbox switching times"
+msgid "Sunrise and sunset"
+msgstr "Egunsentia hasten da:"
+
+#: ui/main.qml:72
+#, kde-format
+msgctxt "@action:button Configure day-night cycle times"
+msgid "Configure…"
+msgstr ""
+
+#: ui/main.qml:115 ui/main.qml:166 ui/main.qml:230
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1K"
 msgstr "%1K"
 
-#: ui/main.qml:136
-#, kde-format
+#: ui/main.qml:123
+#, fuzzy, kde-format
+#| msgid "Day light temperature:"
+msgctxt "@label:slider"
 msgid "Day light temperature:"
 msgstr "Eguneko argiaren tenperatura:"
 
-#: ui/main.qml:186 ui/main.qml:250
+#: ui/main.qml:173 ui/main.qml:237
 #, kde-format
 msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr "Hotza (iragazkirik gabe)"
 
-#: ui/main.qml:193 ui/main.qml:257
+#: ui/main.qml:180 ui/main.qml:244
 #, kde-format
 msgctxt "Night colour red-ish"
 msgid "Warm"
 msgstr "Epela"
 
-#: ui/main.qml:200
-#, kde-format
+#: ui/main.qml:187
+#, fuzzy, kde-format
+#| msgid "Night light temperature:"
+msgctxt "@label:slider"
 msgid "Night light temperature:"
 msgstr "Gaueko argiaren tenperatura:"
 
-#: ui/main.qml:269
-#, kde-format
-msgid "Switching times:"
-msgstr "Aldatzeko orduak:"
+#~ msgctxt ""
+#~ "@label:chooser Tap should be translated to mean touching using a "
+#~ "touchscreen"
+#~ msgid "Tap to choose your location on the map."
+#~ msgstr "Tak egin mapan zure kokalekua hautatzeko."
 
-#: ui/main.qml:272
-#, kde-format
-msgid "Always off"
-msgstr "Beti itzalita"
+#~ msgctxt ""
+#~ "@label:chooser Click should be translated to mean clicking using a mouse"
+#~ msgid "Click to choose your location on the map."
+#~ msgstr "Klik egin mapan zure kokalekua hautatzeko."
 
-#: ui/main.qml:273
-#, kde-format
-msgid "Sunset and sunrise at current location"
-msgstr "Iluntzea eta egunsentia uneko kokalekuan"
+#~ msgid "Zoom in"
+#~ msgstr "Zooma gerturatu"
 
-#: ui/main.qml:274
-#, kde-format
-msgid "Sunset and sunrise at manual location"
-msgstr "Iluntzea eta egunsentia eskuz ezarritako kokalekuan"
+#~ msgid "Zoom out"
+#~ msgstr "Zooma urrundu"
 
-#: ui/main.qml:275
-#, kde-format
-msgid "Custom times"
-msgstr "Norberak finkatutako orduak"
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "Modified from <link url='https://commons.wikimedia.org/wiki/File:"
+#~ "World_location_map_(equirectangular_180).svg'>World location map</link> "
+#~ "by TUBS / Wikimedia Commons / <link url='https://creativecommons.org/"
+#~ "licenses/by-sa/3.0'>CC BY-SA 3.0</link>"
+#~ msgstr ""
+#~ "TUBS / Wikimedia Commons / <link url='https://creativecommons.org/"
+#~ "licenses/by-sa/3.0'>CC BY-SA 3.0</link> <link url='https://commons."
+#~ "wikimedia.org/wiki/File:World_location_map_(equirectangular_180)."
+#~ "svg'>Munduko kokapen mapatik</link> aldatua"
 
-#: ui/main.qml:276
-#, kde-format
-msgid "Always on night light"
-msgstr "Beti gaueko argiarekin"
+#~ msgctxt "@label: textbox"
+#~ msgid "Latitude:"
+#~ msgstr "Latitudea:"
 
-#: ui/main.qml:288
-#, kde-format
-msgctxt "@label The coordinates for the current location"
-msgid "Current location:"
-msgstr "Uneko kokalekua:"
+#~ msgctxt "@label: textbox"
+#~ msgid "Longitude:"
+#~ msgstr "Longitudea:"
 
-#: ui/main.qml:293
-#, kde-format
-msgid "Latitude: %1°   Longitude: %2°"
-msgstr "Latitudea: %1°   Longitudea: %2º"
+#~ msgid "Sunset and sunrise at current location"
+#~ msgstr "Iluntzea eta egunsentia uneko kokalekuan"
 
-#: ui/main.qml:318
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"The <application>GeoClue2</application> service will be used to periodically "
-"update the device's location using GPS or cell tower triangulation if "
-"available, or else by sending its IP address to <link url='https://geoip.com/"
-"privacy/'>GeoIP</link>."
-msgstr ""
-"<application>GeoClue2</application> zerbitzua, gailuaren kokapena aldizka "
-"eguneratzeko erabiliko da, erabilgarri badago, GPS edo mugikor-dorre "
-"triangulazioa erabiliz, edo bestela, bere IP helbidea <link url='https://"
-"geoip.com/privacy/'>GeoIP</link>era bidaliz."
+#~ msgid "Sunset and sunrise at manual location"
+#~ msgstr "Iluntzea eta egunsentia eskuz ezarritako kokalekuan"
 
-#: ui/main.qml:319
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"The <application>%1</application> service will be used to periodically "
-"update the device's location. Please open a bug report at <link url='https://"
-"bugs.kde.org'>https://bugs.kde.org</link> asking KDE developers to write a "
-"detailed description of what this service will do."
-msgstr ""
-"<application>%1</application> zerbitzua, gailuaren kokapena aldizka "
-"eguneratzeko erabiliko da. Mesedez, akats txosten bat ireki <link "
-"url='https://bugs.kde.org'>https://bugs.kde.org</link>en KDE garatzaileei "
-"zerbitzu honek egiten duenari buruzko deskribapen zehatz bat idaztea "
-"eskatzeko."
+#~ msgid "Custom times"
+#~ msgstr "Norberak finkatutako orduak"
 
-#: ui/main.qml:334
-#, kde-format
-msgid "Begin night light at:"
-msgstr "Gaueko argiaren hasiera:"
+#~ msgctxt "@label The coordinates for the current location"
+#~ msgid "Current location:"
+#~ msgstr "Uneko kokalekua:"
 
-#: ui/main.qml:351
-#, kde-format
-msgid "Begin day light at:"
-msgstr "Eguneko argiaren hasiera:"
+#~ msgid "Latitude: %1°   Longitude: %2°"
+#~ msgstr "Latitudea: %1°   Longitudea: %2º"
 
-#: ui/main.qml:367
-#, kde-format
-msgid "Transition duration:"
-msgstr "Iragaite iraupena:"
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The <application>GeoClue2</application> service will be used to "
+#~ "periodically update the device's location using GPS or cell tower "
+#~ "triangulation if available, or else by sending its IP address to <link "
+#~ "url='https://geoip.com/privacy/'>GeoIP</link>."
+#~ msgstr ""
+#~ "<application>GeoClue2</application> zerbitzua, gailuaren kokapena aldizka "
+#~ "eguneratzeko erabiliko da, erabilgarri badago, GPS edo mugikor-dorre "
+#~ "triangulazioa erabiliz, edo bestela, bere IP helbidea <link url='https://"
+#~ "geoip.com/privacy/'>GeoIP</link>era bidaliz."
 
-#: ui/main.qml:378
-#, kde-format
-msgid "%1 minute"
-msgid_plural "%1 minutes"
-msgstr[0] "minutu %1"
-msgstr[1] "%1 minutu"
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The <application>%1</application> service will be used to periodically "
+#~ "update the device's location. Please open a bug report at <link "
+#~ "url='https://bugs.kde.org'>https://bugs.kde.org</link> asking KDE "
+#~ "developers to write a detailed description of what this service will do."
+#~ msgstr ""
+#~ "<application>%1</application> zerbitzua, gailuaren kokapena aldizka "
+#~ "eguneratzeko erabiliko da. Mesedez, akats txosten bat ireki <link "
+#~ "url='https://bugs.kde.org'>https://bugs.kde.org</link>en KDE garatzaileei "
+#~ "zerbitzu honek egiten duenari buruzko deskribapen zehatz bat idaztea "
+#~ "eskatzeko."
 
-#: ui/main.qml:391
-#, kde-format
-msgid "Input minutes - min. 1, max. 600"
-msgstr "Sarrera minututan - txikiena 1, handiena 600"
+#~ msgid "Begin night light at:"
+#~ msgstr "Gaueko argiaren hasiera:"
 
-#: ui/main.qml:412
-#, kde-format
-msgctxt "@info:placeholder"
-msgid "Locating…"
-msgstr "Kokatzen..."
+#~ msgid "Begin day light at:"
+#~ msgstr "Eguneko argiaren hasiera:"
 
-#: ui/TimeField.qml:43
-#, kde-format
-msgctxt "@info:tooltip Part of a control for setting a time"
-msgid "hour"
-msgstr "ordu"
+#~ msgid "Transition duration:"
+#~ msgstr "Iragaite iraupena:"
 
-#: ui/TimeField.qml:50
-#, kde-format
-msgctxt "Time separator between hours and minutes"
-msgid ":"
-msgstr ":"
+#~ msgid "%1 minute"
+#~ msgid_plural "%1 minutes"
+#~ msgstr[0] "minutu %1"
+#~ msgstr[1] "%1 minutu"
 
-#: ui/TimeField.qml:56
-#, kde-format
-msgctxt "@info:tooltip Part of a control for setting a time"
-msgid "minute"
-msgstr "minutu"
+#~ msgid "Input minutes - min. 1, max. 600"
+#~ msgstr "Sarrera minututan - txikiena 1, handiena 600"
+
+#~ msgctxt "@info:placeholder"
+#~ msgid "Locating…"
+#~ msgstr "Kokatzen..."
+
+#~ msgctxt "@info:tooltip Part of a control for setting a time"
+#~ msgid "hour"
+#~ msgstr "ordu"
+
+#~ msgctxt "Time separator between hours and minutes"
+#~ msgid ":"
+#~ msgstr ":"
+
+#~ msgctxt "@info:tooltip Part of a control for setting a time"
+#~ msgid "minute"
+#~ msgstr "minutu"
 
 #~ msgctxt "@info"
 #~ msgid ""
@@ -335,9 +315,6 @@ msgstr "minutu"
 
 #~ msgid "Constant"
 #~ msgstr "Konstantea"
-
-#~ msgid "Sunrise begins:"
-#~ msgstr "Egunsentia hasten da:"
 
 #~ msgid "(Input format: HH:MM)"
 #~ msgstr "(Sarrera formatua: HH:MM)"
