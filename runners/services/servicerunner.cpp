@@ -294,7 +294,7 @@ private:
                 relevance += .09;
             }
 
-            if (const auto foundIt = m_runner->m_favourites.constFind(service->desktopEntryName()); foundIt != m_runner->m_favourites.cend()) {
+            if (const auto foundIt = m_runner->m_favorites.constFind(service->desktopEntryName()); foundIt != m_runner->m_favorites.cend()) {
                 if (foundIt->isGlobal || foundIt->linkedActivities.contains(m_currentActivity)) {
                     qCDebug(RUNNER_SERVICES) << "entry is a favorite" << id << match.subtext() << relevance;
                     relevance *= 1.25; // Give favorites a relative boost,
@@ -421,7 +421,7 @@ ServiceRunner::ServiceRunner(QObject *parent, const KPluginMetaData &metaData)
     });
 
     connect(&m_kactivitiesWatcher, &ResultWatcher::resultUnlinked, [this](const QString &resource) {
-        m_favourites.remove(resource);
+        m_favorites.remove(resource);
         // In case it was only unlinked from one activity
         processActivitiesResults(ResultSet(m_kactivitiesQuery | Terms::Url::contains(resource)));
     });
@@ -464,11 +464,11 @@ void ServiceRunner::processActivitiesResults(const ResultSet &results)
     const static QLatin1String applicationScheme("applications");
     for (const ResultSet::Result &result : results) {
         if (result.url().scheme() == applicationScheme) {
-            m_favourites.insert(result.url().path().remove(QLatin1String(".desktop")),
-                                ActivityFavourite{
-                                    result.linkedActivities(),
-                                    result.linkedActivities().contains(globalActivity),
-                                });
+            m_favorites.insert(result.url().path().remove(QLatin1String(".desktop")),
+                               ActivityFavorite{
+                                   result.linkedActivities(),
+                                   result.linkedActivities().contains(globalActivity),
+                               });
         }
     }
 }

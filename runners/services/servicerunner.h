@@ -33,11 +33,11 @@ public:
     void run(const KRunner::RunnerContext &context, const KRunner::QueryMatch &match) override;
     void init() override;
 
-    struct ActivityFavourite {
+    struct ActivityFavorite {
         QStringList linkedActivities;
         bool isGlobal;
     };
-    QMap<QString, ActivityFavourite> m_favourites;
+    QMap<QString, ActivityFavorite> m_favorites;
 
 protected:
     void setupMatch(const KService::Ptr &service, KRunner::QueryMatch &action);
