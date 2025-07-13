@@ -44,15 +44,15 @@ int weightedLength(const QString &query)
 
 inline bool contains(const QString &result, const QList<QStringView> &queryList)
 {
-    return std::all_of(queryList.cbegin(), queryList.cend(), [&result](QStringView query) {
+    return std::ranges::all_of(queryList, [&result](QStringView query) {
         return result.contains(query, Qt::CaseInsensitive);
     });
 }
 
 inline bool contains(const QStringList &results, const QList<QStringView> &queryList)
 {
-    return std::all_of(queryList.cbegin(), queryList.cend(), [&results](QStringView query) {
-        return std::any_of(results.cbegin(), results.cend(), [&query](QStringView result) {
+    return std::ranges::all_of(queryList, [&results](QStringView query) {
+        return std::ranges::any_of(results, [&query](QStringView result) {
             return result.contains(query, Qt::CaseInsensitive);
         });
     });
@@ -325,7 +325,7 @@ private:
             setupMatch(service, match);
 
             qreal relevance = 0.4;
-            if (std::any_of(categories.begin(), categories.end(), [this](const QString &category) {
+            if (std::ranges::any_of(categories, [this](const QString &category) {
                     return category.compare(query, Qt::CaseInsensitive) == 0;
                 })) {
                 relevance = 0.6;
@@ -497,7 +497,7 @@ void ServiceRunner::run(const KRunner::RunnerContext & /*context*/, const KRunne
         job = new KIO::ApplicationLauncherJob(service);
     } else {
         const auto actions = service->actions();
-        auto it = std::find_if(actions.begin(), actions.end(), [&actionName](const KServiceAction &action) {
+        auto it = std::ranges::find_if(actions, [&actionName](const KServiceAction &action) {
             return action.name() == actionName;
         });
         Q_ASSERT(it != actions.end());
