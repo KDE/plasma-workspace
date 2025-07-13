@@ -466,8 +466,8 @@ void ServiceRunner::processActivitiesResults(const ResultSet &results)
         if (result.url().scheme() == applicationScheme) {
             m_favorites.insert(result.url().path().remove(QLatin1String(".desktop")),
                                ActivityFavorite{
-                                   result.linkedActivities(),
-                                   result.linkedActivities().contains(globalActivity),
+                                   .linkedActivities = result.linkedActivities(),
+                                   .isGlobal = result.linkedActivities().contains(globalActivity),
                                });
         }
     }
