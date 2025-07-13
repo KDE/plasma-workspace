@@ -98,11 +98,11 @@ void ServiceRunnerTest::testKonsoleVsYakuakeComment()
         }
 
         if (match.text() == QLatin1String("Konsole ServiceRunnerTest")) {
-            QCOMPARE(match.relevance(), 0.99);
+            QCOMPARE(match.relevance(), 0.9);
             konsoleFound = true;
         } else if (match.text() == QLatin1String("Yakuake ServiceRunnerTest")) {
             // Rates lower because it doesn't have it in the name.
-            QCOMPARE(match.relevance(), 0.59);
+            QCOMPARE(match.relevance(), 0.5);
             yakuakeFound = true;
         }
     }

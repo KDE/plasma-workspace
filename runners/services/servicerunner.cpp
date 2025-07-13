@@ -294,10 +294,6 @@ private:
             KRunner::QueryMatch match(m_runner);
             match.setCategoryRelevance(categoryRelevance);
             setupMatch(service, match);
-            if (service->categories().contains(QLatin1String("KDE"))) {
-                qCDebug(RUNNER_SERVICES) << "found a kde thing" << id << match.subtext() << relevance;
-                relevance += .09;
-            }
 
             if (const auto foundIt = m_runner->m_favorites.constFind(service->desktopEntryName()); foundIt != m_runner->m_favorites.cend()) {
                 if (foundIt->isGlobal || foundIt->linkedActivities.contains(m_currentActivity)) {
