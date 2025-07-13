@@ -27,7 +27,7 @@ private Q_SLOTS:
     void initTestCase();
     void cleanupTestCase();
 
-    void testExcutableExactMatch();
+    void testExecutableExactMatch();
     void testKonsoleVsYakuakeComment();
     void testSystemSettings();
     void testSystemSettings2();
@@ -76,7 +76,7 @@ void ServiceRunnerTest::cleanupTestCase()
 {
 }
 
-void ServiceRunnerTest::testExcutableExactMatch()
+void ServiceRunnerTest::testExecutableExactMatch()
 {
     const auto matches = launchQuery(QStringLiteral("Virtual Machine Manager ServiceRunnerTest")); // virt-manager.desktop
     QVERIFY(std::any_of(matches.cbegin(), matches.cend(), [](const KRunner::QueryMatch &match) {

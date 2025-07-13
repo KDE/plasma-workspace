@@ -124,7 +124,7 @@ private:
         GenericName,
         Comment,
     };
-    qreal increaseMatchRelavance(const QString &serviceProperty, const QList<QStringView> &strList, Category category)
+    qreal increaseMatchRelevance(const QString &serviceProperty, const QList<QStringView> &strList, Category category)
     {
         // Increment the relevance based on all the words (other than the first) of the query list
         qreal relevanceIncrement = 0;
@@ -272,20 +272,20 @@ private:
                 categoryRelevance = KRunner::QueryMatch::CategoryRelevance::Highest;
             } else if (const int idx = name.indexOf(queryList[0], 0, Qt::CaseInsensitive); idx != -1) {
                 relevance = 0.8;
-                relevance += increaseMatchRelavance(name, queryList, Category::Name);
+                relevance += increaseMatchRelevance(name, queryList, Category::Name);
                 if (idx == 0) {
                     relevance += 0.1;
                     categoryRelevance = KRunner::QueryMatch::CategoryRelevance::High;
                 }
             } else if (const int idx = service->genericName().indexOf(queryList[0], 0, Qt::CaseInsensitive); idx != -1) {
                 relevance = 0.65;
-                relevance += increaseMatchRelavance(service->genericName(), queryList, Category::GenericName);
+                relevance += increaseMatchRelevance(service->genericName(), queryList, Category::GenericName);
                 if (idx == 0) {
                     relevance += 0.05;
                 }
             } else if (const int idx = service->comment().indexOf(queryList[0], 0, Qt::CaseInsensitive); idx != -1) {
                 relevance = 0.5;
-                relevance += increaseMatchRelavance(service->comment(), queryList, Category::Comment);
+                relevance += increaseMatchRelevance(service->comment(), queryList, Category::Comment);
                 if (idx == 0) {
                     relevance += 0.05;
                 }
@@ -480,7 +480,7 @@ void ServiceRunner::processActivitiesResults(const ResultSet &results)
 
 void ServiceRunner::match(KRunner::RunnerContext &context)
 {
-    ServiceFinder finder(this, m_services, m_activitiesConsuer.currentActivity());
+    ServiceFinder finder(this, m_services, m_activitiesConsumer.currentActivity());
     finder.match(context);
 }
 

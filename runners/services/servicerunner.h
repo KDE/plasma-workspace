@@ -46,7 +46,7 @@ private:
     void processActivitiesResults(const ResultSet &results);
     const Query m_kactivitiesQuery;
     const ResultWatcher m_kactivitiesWatcher;
-    const KActivities::Consumer m_activitiesConsuer;
+    const KActivities::Consumer m_activitiesConsumer;
     QList<KService::Ptr> m_services;
     bool m_matching = false;
 };
