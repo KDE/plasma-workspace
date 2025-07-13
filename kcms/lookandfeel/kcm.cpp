@@ -522,7 +522,10 @@ void KCMLookandFeel::save()
     }
 
     KQuickManagedConfigModule::save();
-    m_lnf->save(package, m_selectedContents);
+
+    if (!m_config->automaticLookAndFeel()) {
+        m_lnf->save(package, m_selectedContents);
+    }
 }
 
 LookAndFeelManager::Contents KCMLookandFeel::themeContents() const

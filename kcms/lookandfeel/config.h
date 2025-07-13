@@ -14,6 +14,9 @@ class LookAndFeelConfigStore : public QObject
     Q_PROPERTY(QString lookAndFeelPackage READ lookAndFeelPackage WRITE setLookAndFeelPackage NOTIFY lookAndFeelPackageChanged)
     Q_PROPERTY(QString defaultLightLookAndFeel READ defaultLightLookAndFeel WRITE setDefaultLightLookAndFeel NOTIFY defaultLightLookAndFeelChanged)
     Q_PROPERTY(QString defaultDarkLookAndFeel READ defaultDarkLookAndFeel WRITE setDefaultDarkLookAndFeel NOTIFY defaultDarkLookAndFeelChanged)
+    Q_PROPERTY(bool automaticLookAndFeel READ automaticLookAndFeel WRITE setAutomaticLookAndFeel NOTIFY automaticLookAndFeelChanged)
+    Q_PROPERTY(bool automaticLookAndFeelOnIdle READ automaticLookAndFeelOnIdle WRITE setAutomaticLookAndFeelOnIdle NOTIFY automaticLookAndFeelOnIdleChanged)
+    Q_PROPERTY(uint automaticLookAndFeelIdleInterval READ automaticLookAndFeelIdleInterval WRITE setAutomaticLookAndFeelIdleInterval NOTIFY automaticLookAndFeelIdleIntervalChanged)
 
 public:
     explicit LookAndFeelConfigStore(LookAndFeelSettings *settings, QObject *parent = nullptr);
@@ -27,15 +30,30 @@ public:
     QString defaultDarkLookAndFeel() const;
     void setDefaultDarkLookAndFeel(const QString &package);
 
+    bool automaticLookAndFeel() const;
+    void setAutomaticLookAndFeel(bool set);
+
+    bool automaticLookAndFeelOnIdle() const;
+    void setAutomaticLookAndFeelOnIdle(bool set);
+
+    uint automaticLookAndFeelIdleInterval() const;
+    void setAutomaticLookAndFeelIdleInterval(uint interval);
+
 Q_SIGNALS:
     void lookAndFeelPackageChanged();
     void defaultLightLookAndFeelChanged();
     void defaultDarkLookAndFeelChanged();
+    void automaticLookAndFeelChanged();
+    void automaticLookAndFeelOnIdleChanged();
+    void automaticLookAndFeelIdleIntervalChanged();
 
 private:
     QString m_lookAndFeelPackage;
     QString m_defaultLightLookAndFeel;
     QString m_defaultDarkLookAndFeel;
+    bool m_automaticLookAndFeel = false;
+    bool m_automaticLookAndFeelOnIdle = true;
+    uint m_automaticLookAndFeelIdleInterval = 1;
 };
 
 class LookAndFeelConfig : public KCoreConfigSkeleton
@@ -44,6 +62,9 @@ class LookAndFeelConfig : public KCoreConfigSkeleton
     Q_PROPERTY(QString lookAndFeelPackage READ lookAndFeelPackage WRITE setLookAndFeelPackage NOTIFY lookAndFeelPackageChanged)
     Q_PROPERTY(QString defaultLightLookAndFeel READ defaultLightLookAndFeel WRITE setDefaultLightLookAndFeel NOTIFY defaultLightLookAndFeelChanged)
     Q_PROPERTY(QString defaultDarkLookAndFeel READ defaultDarkLookAndFeel WRITE setDefaultDarkLookAndFeel NOTIFY defaultDarkLookAndFeelChanged)
+    Q_PROPERTY(bool automaticLookAndFeel READ automaticLookAndFeel WRITE setAutomaticLookAndFeel NOTIFY automaticLookAndFeelChanged)
+    Q_PROPERTY(bool automaticLookAndFeelOnIdle READ automaticLookAndFeelOnIdle WRITE setAutomaticLookAndFeelOnIdle NOTIFY automaticLookAndFeelOnIdleChanged)
+    Q_PROPERTY(uint automaticLookAndFeelIdleInterval READ automaticLookAndFeelIdleInterval WRITE setAutomaticLookAndFeelIdleInterval NOTIFY automaticLookAndFeelIdleIntervalChanged)
 
 public:
     explicit LookAndFeelConfig(LookAndFeelSettings *settings, QObject *parent = nullptr);
@@ -57,10 +78,22 @@ public:
     QString defaultDarkLookAndFeel() const;
     void setDefaultDarkLookAndFeel(const QString &package);
 
+    bool automaticLookAndFeel() const;
+    void setAutomaticLookAndFeel(bool set);
+
+    bool automaticLookAndFeelOnIdle() const;
+    void setAutomaticLookAndFeelOnIdle(bool set);
+
+    uint automaticLookAndFeelIdleInterval() const;
+    void setAutomaticLookAndFeelIdleInterval(uint interval);
+
 Q_SIGNALS:
     void lookAndFeelPackageChanged();
     void defaultLightLookAndFeelChanged();
     void defaultDarkLookAndFeelChanged();
+    void automaticLookAndFeelChanged();
+    void automaticLookAndFeelOnIdleChanged();
+    void automaticLookAndFeelIdleIntervalChanged();
 
 protected:
     bool usrSave() override;
@@ -75,4 +108,7 @@ private:
     KPropertySkeletonItem *m_lookAndFeelPackageItem = nullptr;
     KPropertySkeletonItem *m_defaultLightLookAndFeelItem = nullptr;
     KPropertySkeletonItem *m_defaultDarkLookAndFeelItem = nullptr;
+    KPropertySkeletonItem *m_automaticLookAndFeelItem = nullptr;
+    KPropertySkeletonItem *m_automaticLookAndFeelOnIdleItem = nullptr;
+    KPropertySkeletonItem *m_automaticLookAndFeelIdleIntervalItem = nullptr;
 };

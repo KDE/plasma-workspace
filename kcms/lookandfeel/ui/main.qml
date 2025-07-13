@@ -90,6 +90,54 @@ KCM.AbstractKCM {
             }
         }
 
+        Kirigami.FormLayout {
+            width: parent.width
+
+            QtControls.CheckBox {
+                text: i18nc("@option:check", "Switch between light and dark global themes depending on time of day")
+                checked: kcm.settings.automaticLookAndFeel
+                onClicked: kcm.settings.automaticLookAndFeel = checked;
+
+                KCM.SettingStateBinding {
+                    configObject: kcm.settings
+                    settingName: "automaticLookAndFeel"
+                }
+            }
+
+            RowLayout {
+                enabled: kcm.settings.automaticLookAndFeel
+                spacing: Kirigami.Units.smallSpacing
+
+                Item {
+                    width: Kirigami.Units.gridUnit
+                }
+
+                QtControls.CheckBox {
+                    text: i18nc("@option:check", "Minimize interruptions by switching between themes when computer is idle:")
+                    checked: kcm.settings.automaticLookAndFeelOnIdle
+                    onClicked: kcm.settings.automaticLookAndFeelOnIdle = checked;
+
+                    KCM.SettingStateBinding {
+                        configObject: kcm.settings
+                        settingName: "automaticLookAndFeelOnIdle"
+                    }
+                }
+
+                QtControls.SpinBox {
+                    from: 1
+                    value: kcm.settings.automaticLookAndFeelIdleInterval
+                    textFromValue: (value, locale) => i18ncp("@item:valuesuffix idle interval", "%1 second", "%1 seconds", value)
+                    valueFromText: (text, locale) => parseInt(text)
+                    onValueModified: kcm.settings.automaticLookAndFeelIdleInterval = value;
+
+                    KCM.SettingStateBinding {
+                        configObject: kcm.settings
+                        settingName: "automaticLookAndFeelIdleInterval"
+                    }
+                }
+            }
+        }
+
         KCM.GridView {
             Layout.fillWidth: true
             Layout.fillHeight: true
