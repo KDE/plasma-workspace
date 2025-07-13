@@ -205,7 +205,7 @@ private:
         static const auto specialArgs = {QStringLiteral("-qwindowtitle"), QStringLiteral("-qwindowicon"), QStringLiteral("--started-from-file")};
 
         for (const auto &specialArg : specialArgs) {
-            int index = resultingArgs.indexOf(specialArg);
+            auto index = resultingArgs.indexOf(specialArg);
             if (index > -1) {
                 if (resultingArgs.count() > index) {
                     resultingArgs.removeAt(index);
@@ -270,20 +270,20 @@ private:
             } else if (name.compare(query, Qt::CaseInsensitive) == 0) {
                 relevance = 1;
                 categoryRelevance = KRunner::QueryMatch::CategoryRelevance::Highest;
-            } else if (const int idx = name.indexOf(queryList[0], 0, Qt::CaseInsensitive); idx != -1) {
+            } else if (const auto idx = name.indexOf(queryList[0], 0, Qt::CaseInsensitive); idx != -1) {
                 relevance = 0.8;
                 relevance += increaseMatchRelevance(name, queryList, Category::Name);
                 if (idx == 0) {
                     relevance += 0.1;
                     categoryRelevance = KRunner::QueryMatch::CategoryRelevance::High;
                 }
-            } else if (const int idx = service->genericName().indexOf(queryList[0], 0, Qt::CaseInsensitive); idx != -1) {
+            } else if (const auto idx = service->genericName().indexOf(queryList[0], 0, Qt::CaseInsensitive); idx != -1) {
                 relevance = 0.65;
                 relevance += increaseMatchRelevance(service->genericName(), queryList, Category::GenericName);
                 if (idx == 0) {
                     relevance += 0.05;
                 }
-            } else if (const int idx = service->comment().indexOf(queryList[0], 0, Qt::CaseInsensitive); idx != -1) {
+            } else if (const auto idx = service->comment().indexOf(queryList[0], 0, Qt::CaseInsensitive); idx != -1) {
                 relevance = 0.5;
                 relevance += increaseMatchRelevance(service->comment(), queryList, Category::Comment);
                 if (idx == 0) {
@@ -363,7 +363,7 @@ private:
                 }
                 seen(action);
 
-                const int matchIndex = action.text().indexOf(query, 0, Qt::CaseInsensitive);
+                const auto matchIndex = action.text().indexOf(query, 0, Qt::CaseInsensitive);
                 if (matchIndex < 0) {
                     continue;
                 }
