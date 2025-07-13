@@ -147,7 +147,7 @@ void AppMenuModule::slotWindowRegistered(WId id, const QString &serviceName, con
 
             auto cookie = xcb_change_property_checked(c, XCB_PROP_MODE_REPLACE, id, atom, XCB_ATOM_STRING, 8, value.length(), value.constData());
             if (xcb_generic_error_t *error = xcb_request_check(c, cookie)) {
-                qCWarning(APPMENU_DEBUG) << "Got an error";
+                qCWarning(APPMENU_DEBUG) << "Error changing property" << name << "on window" << id << "error code:" << error->error_code;
                 free(error);
                 return;
             }
