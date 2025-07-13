@@ -1,17 +1,17 @@
 # Translation of kcm_nightlight.po to Catalan (Valencian)
-# Copyright (C) 2017-2024 This_file_is_part_of_KDE
+# Copyright (C) 2017-2025 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# SPDX-FileCopyrightText: 2017, 2019, 2021, 2022, 2023, 2024 Josep M. Ferrer <txemaq@gmail.com>
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2019, 2020, 2022.
 # Empar Montoro Martín <montoro_mde@gva.es>, 2019.
+# SPDX-FileCopyrightText: 2017, 2019, 2021, 2022, 2023, 2024, 2025 Josep M. Ferrer <txemaq@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-12 00:45+0000\n"
-"PO-Revision-Date: 2024-08-21 10:44+0200\n"
+"PO-Revision-Date: 2025-07-12 12:01+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 "X-Accelerator-Marker: &\n"
 
 #: ui/DayNightView.qml:154
@@ -41,29 +41,25 @@ msgstr ""
 "totalment canviada a les %2"
 
 #: ui/main.qml:39
-#, fuzzy, kde-format
-#| msgid "The blue light filter makes the colors on the screen warmer."
+#, kde-format
 msgctxt "@info"
 msgid "The blue light filter makes the colors on the screen warmer."
 msgstr "El filtre de llum blava fa més càlids els colors de la pantalla."
 
 #: ui/main.qml:49
-#, fuzzy, kde-format
-#| msgid "Switching times:"
+#, kde-format
 msgctxt "@label:listbox Night Light modes"
 msgid "Switching times:"
 msgstr "Hora del canvi:"
 
 #: ui/main.qml:58
-#, fuzzy, kde-format
-#| msgid "Always off"
+#, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Always off"
 msgstr "Sempre apagat"
 
 #: ui/main.qml:59
-#, fuzzy, kde-format
-#| msgid "Always on night light"
+#, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Always on night light"
 msgstr "Llum de nit sempre activa"
@@ -72,13 +68,13 @@ msgstr "Llum de nit sempre activa"
 #, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Sunrise and sunset"
-msgstr ""
+msgstr "A l'alba i la posta de sol"
 
 #: ui/main.qml:72
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
-msgstr ""
+msgstr "Configura…"
 
 #: ui/main.qml:115 ui/main.qml:166 ui/main.qml:230
 #, kde-format
@@ -87,8 +83,7 @@ msgid "%1K"
 msgstr "%1 K"
 
 #: ui/main.qml:123
-#, fuzzy, kde-format
-#| msgid "Day light temperature:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Day light temperature:"
 msgstr "Temperatura de la llum de dia:"
@@ -106,120 +101,7 @@ msgid "Warm"
 msgstr "Càlid"
 
 #: ui/main.qml:187
-#, fuzzy, kde-format
-#| msgid "Night light temperature:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Night light temperature:"
 msgstr "Temperatura de la llum de nit:"
-
-#~ msgctxt ""
-#~ "@label:chooser Tap should be translated to mean touching using a "
-#~ "touchscreen"
-#~ msgid "Tap to choose your location on the map."
-#~ msgstr "Toqueu per a escollir el vostre emplaçament en el mapa."
-
-#~ msgctxt ""
-#~ "@label:chooser Click should be translated to mean clicking using a mouse"
-#~ msgid "Click to choose your location on the map."
-#~ msgstr "Cliqueu per a escollir el vostre emplaçament en el mapa."
-
-#~ msgid "Zoom in"
-#~ msgstr "Acosta"
-
-#~ msgid "Zoom out"
-#~ msgstr "Allunya"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "Modified from <link url='https://commons.wikimedia.org/wiki/File:"
-#~ "World_location_map_(equirectangular_180).svg'>World location map</link> "
-#~ "by TUBS / Wikimedia Commons / <link url='https://creativecommons.org/"
-#~ "licenses/by-sa/3.0'>CC BY-SA 3.0</link>"
-#~ msgstr ""
-#~ "Modificat des del <link url='https://commons.wikimedia.org/wiki/File:"
-#~ "World_location_map_(equirectangular_180).svg'>mapa mundial "
-#~ "d'emplaçaments</link> per TUBS / Wikimedia Commons / <link url='https://"
-#~ "creativecommons.org/licenses/by-sa/3.0'>CC BY-SA 3.0</link>"
-
-#~ msgctxt "@label: textbox"
-#~ msgid "Latitude:"
-#~ msgstr "Latitud:"
-
-#~ msgctxt "@label: textbox"
-#~ msgid "Longitude:"
-#~ msgstr "Longitud:"
-
-#~ msgid "Sunset and sunrise at current location"
-#~ msgstr "Ocàs i alba de la ubicació actual"
-
-#~ msgid "Sunset and sunrise at manual location"
-#~ msgstr "Ocàs i alba de la ubicació manual"
-
-#~ msgid "Custom times"
-#~ msgstr "Hora personalitzada"
-
-#~ msgctxt "@label The coordinates for the current location"
-#~ msgid "Current location:"
-#~ msgstr "Emplaçament actual:"
-
-#~ msgid "Latitude: %1°   Longitude: %2°"
-#~ msgstr "Latitud: %1°   Longitud: %2°"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "The <application>GeoClue2</application> service will be used to "
-#~ "periodically update the device's location using GPS or cell tower "
-#~ "triangulation if available, or else by sending its IP address to <link "
-#~ "url='https://geoip.com/privacy/'>GeoIP</link>."
-#~ msgstr ""
-#~ "El servei <application>GeoClue2</application> es farà servir per a "
-#~ "actualitzar periòdicament la ubicació del dispositiu utilitzant el GPS o "
-#~ "la triangulació de torres de telefonia mòbil si estan disponibles, o bé "
-#~ "enviant la seua adreça IP a <link url='https://geoip.com/privacy/'>GeoIP</"
-#~ "link>."
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "The <application>%1</application> service will be used to periodically "
-#~ "update the device's location. Please open a bug report at <link "
-#~ "url='https://bugs.kde.org'>https://bugs.kde.org</link> asking KDE "
-#~ "developers to write a detailed description of what this service will do."
-#~ msgstr ""
-#~ "El servei <application>%1</application> es farà servir per a actualitzar "
-#~ "periòdicament la ubicació del dispositiu. Obriu un informe d'error a "
-#~ "<link url='https://bugs.kde.org'>https://bugs.kde.org</link> demanant que "
-#~ "els desenvolupadors de KDE escriguen una descripció detallada de què fa "
-#~ "este servei."
-
-#~ msgid "Begin night light at:"
-#~ msgstr "La llum de nit comença a les:"
-
-#~ msgid "Begin day light at:"
-#~ msgstr "La llum de dia comença a les:"
-
-#~ msgid "Transition duration:"
-#~ msgstr "Duració de la transició:"
-
-#~ msgid "%1 minute"
-#~ msgid_plural "%1 minutes"
-#~ msgstr[0] "%1 minut"
-#~ msgstr[1] "%1 minuts"
-
-#~ msgid "Input minutes - min. 1, max. 600"
-#~ msgstr "Entrada en minuts - mín. 1, màx. 600"
-
-#~ msgctxt "@info:placeholder"
-#~ msgid "Locating…"
-#~ msgstr "S'està emplaçant…"
-
-#~ msgctxt "@info:tooltip Part of a control for setting a time"
-#~ msgid "hour"
-#~ msgstr "hora"
-
-#~ msgctxt "Time separator between hours and minutes"
-#~ msgid ":"
-#~ msgstr ":"
-
-#~ msgctxt "@info:tooltip Part of a control for setting a time"
-#~ msgid "minute"
-#~ msgstr "minut"

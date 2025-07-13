@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-12 00:45+0000\n"
-"PO-Revision-Date: 2024-08-21 07:40+0200\n"
+"PO-Revision-Date: 2025-07-12 07:49+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.4.4\n"
+"X-Generator: Poedit 3.6\n"
 
 #: ui/DayNightView.qml:154
 #, kde-format
@@ -37,46 +37,40 @@ msgstr ""
 "Začetek spreminjanja nočnih barv ob %1 in so popolnoma spremenjene ob %2"
 
 #: ui/main.qml:39
-#, fuzzy, kde-format
-#| msgid "The blue light filter makes the colors on the screen warmer."
+#, kde-format
 msgctxt "@info"
 msgid "The blue light filter makes the colors on the screen warmer."
-msgstr ""
-"Modri filter spremeni barve zaslona v toplejše, da zmanjša obremenitve oči."
+msgstr "Filter modre svetlobe naredi barve na zaslonu toplejše."
 
 #: ui/main.qml:49
-#, fuzzy, kde-format
-#| msgid "Switching times:"
+#, kde-format
 msgctxt "@label:listbox Night Light modes"
 msgid "Switching times:"
 msgstr "Časi preklopov:"
 
 #: ui/main.qml:58
-#, fuzzy, kde-format
-#| msgid "Always off"
+#, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Always off"
 msgstr "Vedno izključeno"
 
 #: ui/main.qml:59
-#, fuzzy, kde-format
-#| msgid "Always on night light"
+#, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Always on night light"
 msgstr "Vedno na nočni barvi"
 
 #: ui/main.qml:60
-#, fuzzy, kde-format
-#| msgid "Sunrise begins"
+#, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Sunrise and sunset"
-msgstr "Sončni vzhod se začne"
+msgstr "Sončni vzhod in zahod"
 
 #: ui/main.qml:72
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
-msgstr ""
+msgstr "Konfiguriraj…"
 
 #: ui/main.qml:115 ui/main.qml:166 ui/main.qml:230
 #, kde-format
@@ -85,11 +79,10 @@ msgid "%1K"
 msgstr "%1K"
 
 #: ui/main.qml:123
-#, fuzzy, kde-format
-#| msgid "Day light temperature:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Day light temperature:"
-msgstr "Dnevna temperatura barve:"
+msgstr "Temperatura dnevne svetlobe:"
 
 #: ui/main.qml:173 ui/main.qml:237
 #, kde-format
@@ -104,11 +97,10 @@ msgid "Warm"
 msgstr "Toplo"
 
 #: ui/main.qml:187
-#, fuzzy, kde-format
-#| msgid "Night light temperature:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Night light temperature:"
-msgstr "Nočna temperatura barve:"
+msgstr "Temperatura nočne svetlobe:"
 
 #~ msgctxt ""
 #~ "@label:chooser Tap should be translated to mean touching using a "

@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-12 00:45+0000\n"
-"PO-Revision-Date: 2025-05-24 11:19+0200\n"
+"PO-Revision-Date: 2025-07-12 12:02+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -82,17 +82,13 @@ msgid "Tiled"
 msgstr "En mosaic"
 
 #: imagepackage/contents/ui/config.qml:194
-#, fuzzy, kde-format
-#| msgctxt "part of a sentence: 'Switch dynamic wallpapers [based on]'"
-#| msgid "Switch dynamic wallpapers:"
+#, kde-format
 msgctxt "@label part of a sentence: 'Switch dynamic wallpapers [based on]'"
 msgid "Switch dynamic wallpapers:"
 msgstr "Commuta els fons de pantalla dinàmics:"
 
 #: imagepackage/contents/ui/config.qml:195
-#, fuzzy, kde-format
-#| msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
-#| msgid "Based on whether the color scheme is dark or light"
+#, kde-format
 msgctxt "@option:radio part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the color scheme is dark or light"
 msgstr "En funció de si l'esquema de color és fosc o clar"
@@ -101,13 +97,13 @@ msgstr "En funció de si l'esquema de color és fosc o clar"
 #, kde-format
 msgctxt "@option:radio part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on the day-night cycle:"
-msgstr ""
+msgstr "En funció del cicle dia-nit:"
 
 #: imagepackage/contents/ui/config.qml:214
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
-msgstr ""
+msgstr "Configura…"
 
 #: imagepackage/contents/ui/config.qml:225
 #, kde-format
@@ -390,18 +386,3 @@ msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr ""
 "Hi ha hagut un error en intentar obrir el fitxer de configuració "
 "«kscreenlockerrc»."
-
-#~ msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
-#~ msgid "At sunrise and sunset"
-#~ msgstr "A l'alba i la posta de sol"
-
-#~ msgctxt ""
-#~ "@label:checkbox Use geolocation services for more accurate sunset and "
-#~ "sunrise times"
-#~ msgid "Use device's current location for more accurate timings"
-#~ msgstr ""
-#~ "Fes servir l'emplaçament actual del dispositiu per a un horari més acurat"
-
-#~ msgctxt "@title:window"
-#~ msgid "Open Media"
-#~ msgstr "Obertura d'un fitxer multimèdia"

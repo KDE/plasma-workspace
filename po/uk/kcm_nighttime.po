@@ -1,0 +1,239 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Yuri Chornoivan <yurchor@ukr.net>, 2025.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-07-12 00:45+0000\n"
+"PO-Revision-Date: 2025-07-12 09:01+0300\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Lokalize 23.04.3\n"
+
+#: ui/main.qml:26
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Time-based features such as Night Light and dynamic wallpapers can be "
+"synchronized with the day-night cycle. Choose your preferred cycle here."
+msgstr ""
+"Пов'язані із часом можливості, зокрема перемикання у нічний режим та "
+"динамічні фонові зображення можна синхронізувати із циклом день-ніч. Тут ви "
+"можете вибрати бажаний цикл."
+
+#: ui/main.qml:42
+#, kde-format
+msgctxt ""
+"@label:listbox part of a sentence: 'Determine sunrise and sunset times "
+"[based on]'"
+msgid "Determine sunrise and sunset times:"
+msgstr "Визначати моменти сходу і заходу сонця:"
+
+#: ui/main.qml:47
+#, kde-format
+msgctxt ""
+"@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
+msgid "Based on device's current location"
+msgstr "на основі поточного розташування пристрою"
+
+#: ui/main.qml:48
+#, kde-format
+msgctxt ""
+"@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
+msgid "Based on manual location"
+msgstr "на основі даних місця, які введено вручну"
+
+#: ui/main.qml:49
+#, kde-format
+msgctxt ""
+"@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
+msgid "Using custom times"
+msgstr "Нетипові моменти часу"
+
+#: ui/main.qml:60
+#, kde-format
+msgctxt "@label The coordinates for the current location"
+msgid "Current location:"
+msgstr "Поточне розташування:"
+
+#: ui/main.qml:63
+#, kde-format
+msgctxt "@info"
+msgid "Latitude: %1°   Longitude: %2°"
+msgstr "Широта: %1°     Довгота: %2°"
+
+#: ui/main.qml:80
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The <application>GeoClue2</application> service will be used to periodically "
+"update the device's location using GPS or cell tower triangulation if "
+"available, or else by sending its IP address to <link url='https://geoip.com/"
+"privacy/'>GeoIP</link>."
+msgstr ""
+"Для періодичного оновлення даних щодо перебування пристрою буде використано "
+"службу <application>GeoClue2</application>, роботу якої засновано на даних "
+"GPS або триангуляції розташування веж стільникового зв'язку, або дані, "
+"отримані шляхом надсилання IP-адреси пристрою на <link url='https://geoip."
+"com/privacy/'>GeoIP</link>."
+
+#: ui/main.qml:81
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The <application>%1</application> service will be used to periodically "
+"update the device's location. Please open a bug report at <link url='https://"
+"bugs.kde.org'>https://bugs.kde.org</link> asking KDE developers to write a "
+"detailed description of what this service will do."
+msgstr ""
+"Для періодичного оновлення даних щодо місця перебування пристрою буде "
+"використано службу <application>%1</application>. Будь ласка, створіть "
+"повідомлення про ваду на <link url='https://bugs.kde.org'>https://bugs.kde."
+"org</link>, де попросіть розробників KDE написати докладний опис того, які "
+"дії виконує ця служба."
+
+#: ui/main.qml:93
+#, kde-format
+msgctxt "@label"
+msgid "Sunrise:"
+msgstr "Схід сонця:"
+
+#: ui/main.qml:108
+#, kde-format
+msgctxt "@label"
+msgid "Sunset:"
+msgstr "Захід сонця:"
+
+#: ui/main.qml:122
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Transition duration:"
+msgstr "Тривалість кульмінації:"
+
+#: ui/main.qml:128
+#, kde-format
+msgctxt "@item:valuesuffix transition duration"
+msgid "%1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] "%1 хвилина"
+msgstr[1] "%1 хвилини"
+msgstr[2] "%1 хвилин"
+msgstr[3] "%1 хвилина"
+
+#: ui/main.qml:161
+#, kde-format
+msgctxt "@label"
+msgid "Latitude:"
+msgstr "Широта:"
+
+#: ui/main.qml:179
+#, kde-format
+msgctxt "@label"
+msgid "Longitude:"
+msgstr "Довгота:"
+
+#: ui/SunPath.qml:52
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Sunrise starts at %1 and ends at %2"
+msgstr "Сонце починає сходити о %1 і завершує о %2"
+
+#: ui/SunPath.qml:57
+#, kde-format
+msgctxt "@label"
+msgid "Sunrise"
+msgstr "Схід"
+
+#: ui/SunPath.qml:77
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Sunset starts at %1 and ends at %2"
+msgstr "Сонце починає заходити о %1 і завершує о %2"
+
+#: ui/SunPath.qml:82
+#, kde-format
+msgctxt "@label"
+msgid "Sunset"
+msgstr "Захід"
+
+#: ui/SunPath.qml:107
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Sunrise and sunset times cannot be determined at your location due to polar "
+"day. Choose custom times instead."
+msgstr ""
+"Не можна визначити моменти сходу і заходу сонця у вашій місцевості через "
+"полярний день. Ці моменти слід визначити у нетиповий спосіб."
+
+#: ui/SunPath.qml:109
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Sunrise and sunset times cannot be determined at your location due to polar "
+"night. Choose custom times instead."
+msgstr ""
+"Не можна визначити моменти сходу і заходу сонця у вашій місцевості через "
+"полярну ніч. Ці моменти слід визначити у нетиповий спосіб."
+
+#: ui/SunPath.qml:111
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Sunrise and sunset times cannot be reliably determined at your location. "
+"Choose custom times instead."
+msgstr ""
+"Не можна надійно визначити моменти сходу і заходу сонця у вашій місцевості. "
+"Ці моменти слід визначити у нетиповий спосіб."
+
+#: ui/TimeField.qml:29
+#, kde-format
+msgctxt "Time separator between hours and minutes"
+msgid ":"
+msgstr ":"
+
+#: ui/WorldMap.qml:76
+#, kde-format
+msgctxt ""
+"@label:chooser Tap should be translated to mean touching using a touchscreen"
+msgid "Tap to choose your location on the map."
+msgstr "Торкніться екрана, щоб вибрати ваше розташування на карті."
+
+#: ui/WorldMap.qml:77
+#, kde-format
+msgctxt ""
+"@label:chooser Click should be translated to mean clicking using a mouse"
+msgid "Click to choose your location on the map."
+msgstr "Клацніть, щоб вибрати ваше розташування на карті."
+
+#: ui/WorldMap.qml:116
+#, kde-format
+msgid "Zoom in"
+msgstr "Збільшити"
+
+#: ui/WorldMap.qml:133
+#, kde-format
+msgid "Zoom out"
+msgstr "Зменшити"
+
+#: ui/WorldMap.qml:231
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Modified from <link url='https://commons.wikimedia.org/wiki/File:"
+"World_location_map_(equirectangular_180).svg'>World location map</link> by "
+"TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
+"by-sa/3.0'>CC BY-SA 3.0</link>"
+msgstr ""
+"Створено на основі <link url='https://commons.wikimedia.org/wiki/File:"
+"World_location_map_(equirectangular_180).svg'>карти місць світу</link> від "
+"TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
+"by-sa/3.0'>CC BY-SA 3.0</link>"

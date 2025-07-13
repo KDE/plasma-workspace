@@ -1,0 +1,238 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-07-12 00:45+0000\n"
+"PO-Revision-Date: 2025-07-12 08:06+0200\n"
+"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100>=3 && n"
+"%100<=4 ? 2 : 3);\n"
+"X-Generator: Poedit 3.6\n"
+
+#: ui/main.qml:26
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Time-based features such as Night Light and dynamic wallpapers can be "
+"synchronized with the day-night cycle. Choose your preferred cycle here."
+msgstr ""
+"Časovno omejene funkcije, kot sta nočna svetloba in dinamična ozadja, je "
+"mogoče sinhronizirati s ciklom dneva in noči. Tukaj izberite želeni cikel."
+
+#: ui/main.qml:42
+#, kde-format
+msgctxt ""
+"@label:listbox part of a sentence: 'Determine sunrise and sunset times "
+"[based on]'"
+msgid "Determine sunrise and sunset times:"
+msgstr "Določite čas sončnega vzhoda in sončnega zahoda:"
+
+#: ui/main.qml:47
+#, kde-format
+msgctxt ""
+"@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
+msgid "Based on device's current location"
+msgstr "Na podlagi trenutne lokacije naprave"
+
+#: ui/main.qml:48
+#, kde-format
+msgctxt ""
+"@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
+msgid "Based on manual location"
+msgstr "Na podlagi ročne lokacije"
+
+#: ui/main.qml:49
+#, kde-format
+msgctxt ""
+"@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
+msgid "Using custom times"
+msgstr "Uporaba časov po meri"
+
+#: ui/main.qml:60
+#, kde-format
+msgctxt "@label The coordinates for the current location"
+msgid "Current location:"
+msgstr "Trenutna lokacija:"
+
+#: ui/main.qml:63
+#, kde-format
+msgctxt "@info"
+msgid "Latitude: %1°   Longitude: %2°"
+msgstr "Širina: %1°   Dolžina: %2°"
+
+#: ui/main.qml:80
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The <application>GeoClue2</application> service will be used to periodically "
+"update the device's location using GPS or cell tower triangulation if "
+"available, or else by sending its IP address to <link url='https://geoip.com/"
+"privacy/'>GeoIP</link>."
+msgstr ""
+"Storitev <application>GeoClue2</application> bo uporabljena za občasno "
+"posodabljanje lokacije naprave z uporabo GPS-a ali triangulacije bazne "
+"postaje, če je na voljo, ali pa s pošiljanjem njenega naslova IP na <link "
+"url='https://geoip.com/privacy/'>GeoIP</link>."
+
+#: ui/main.qml:81
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The <application>%1</application> service will be used to periodically "
+"update the device's location. Please open a bug report at <link url='https://"
+"bugs.kde.org'>https://bugs.kde.org</link> asking KDE developers to write a "
+"detailed description of what this service will do."
+msgstr ""
+"Storitev <application>%1</application> bo uporabljena za občasno "
+"posodabljanje lokacije naprave. Odprite poročilo o napaki na <link "
+"url='https://bugs.kde.org'>https://bugs.kde.org</link> in prosite razvijalce "
+"KDE, naj napišejo podroben opis, kaj bo ta storitev počela."
+
+#: ui/main.qml:93
+#, kde-format
+msgctxt "@label"
+msgid "Sunrise:"
+msgstr "Sončni vzhod:"
+
+#: ui/main.qml:108
+#, kde-format
+msgctxt "@label"
+msgid "Sunset:"
+msgstr "Sončni zahod:"
+
+#: ui/main.qml:122
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Transition duration:"
+msgstr "Trajanje prehoda:"
+
+#: ui/main.qml:128
+#, kde-format
+msgctxt "@item:valuesuffix transition duration"
+msgid "%1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] "%1 minuta"
+msgstr[1] "%1 minuti"
+msgstr[2] "%1 minute"
+msgstr[3] "%1 minut"
+
+#: ui/main.qml:161
+#, kde-format
+msgctxt "@label"
+msgid "Latitude:"
+msgstr "Zemljepisna širina:"
+
+#: ui/main.qml:179
+#, kde-format
+msgctxt "@label"
+msgid "Longitude:"
+msgstr "Zemljepisna dolžina:"
+
+#: ui/SunPath.qml:52
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Sunrise starts at %1 and ends at %2"
+msgstr "Sončni vzhod se začne ob %1 in konča ob %2"
+
+#: ui/SunPath.qml:57
+#, kde-format
+msgctxt "@label"
+msgid "Sunrise"
+msgstr "Sončni vzhod"
+
+#: ui/SunPath.qml:77
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Sunset starts at %1 and ends at %2"
+msgstr "Sončni zahod se začne ob %1 in konča ob %2"
+
+#: ui/SunPath.qml:82
+#, kde-format
+msgctxt "@label"
+msgid "Sunset"
+msgstr "Sončni zahod"
+
+#: ui/SunPath.qml:107
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Sunrise and sunset times cannot be determined at your location due to polar "
+"day. Choose custom times instead."
+msgstr ""
+"Časa sončnega vzhoda in sončnega zahoda na vaši lokaciji ni mogoče določiti "
+"zaradi polarnega dne. Izberite čas po meri."
+
+#: ui/SunPath.qml:109
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Sunrise and sunset times cannot be determined at your location due to polar "
+"night. Choose custom times instead."
+msgstr ""
+"Časa sončnega vzhoda in sončnega zahoda na vaši lokaciji ni mogoče določiti "
+"zaradi polarne noči. Izberite čas po meri."
+
+#: ui/SunPath.qml:111
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Sunrise and sunset times cannot be reliably determined at your location. "
+"Choose custom times instead."
+msgstr ""
+"Časa sončnega vzhoda in sončnega zahoda na vaši lokaciji ni mogoče "
+"zanesljivo določiti. Izberite raje čas po meri."
+
+#: ui/TimeField.qml:29
+#, kde-format
+msgctxt "Time separator between hours and minutes"
+msgid ":"
+msgstr ":"
+
+#: ui/WorldMap.qml:76
+#, kde-format
+msgctxt ""
+"@label:chooser Tap should be translated to mean touching using a touchscreen"
+msgid "Tap to choose your location on the map."
+msgstr "Dotaknite se, da izberete svojo lokacijo na zemljevidu."
+
+#: ui/WorldMap.qml:77
+#, kde-format
+msgctxt ""
+"@label:chooser Click should be translated to mean clicking using a mouse"
+msgid "Click to choose your location on the map."
+msgstr "Kliknite, da izberete svojo lokacijo na zemljevidu."
+
+#: ui/WorldMap.qml:116
+#, kde-format
+msgid "Zoom in"
+msgstr "Približaj"
+
+#: ui/WorldMap.qml:133
+#, kde-format
+msgid "Zoom out"
+msgstr "Oddalji"
+
+#: ui/WorldMap.qml:231
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Modified from <link url='https://commons.wikimedia.org/wiki/File:"
+"World_location_map_(equirectangular_180).svg'>World location map</link> by "
+"TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
+"by-sa/3.0'>CC BY-SA 3.0</link>"
+msgstr ""
+"Spremenjeno iz <link url='https://commons.wikimedia.org/wiki/File:"
+"World_location_map_(equirectangular_180).svg'>World location map</link> od "
+"TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
+"by-sa/3.0'>CC BY-SA 3.0</link>"

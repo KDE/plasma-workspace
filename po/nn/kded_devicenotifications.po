@@ -79,16 +79,3 @@ msgstr "Ei USB-eining vart kopla frå."
 msgctxt "@title:notifications"
 msgid "USB Device Went Away"
 msgstr "USB-eining oppdaga"
-
-#~ msgid "A display has been plugged in."
-#~ msgstr "Ein skjerm vart kopla til."
-
-#~ msgid "%1 has been plugged in."
-#~ msgstr "%1 vart kopla til."
-
-#~ msgid "A USB device has been plugged in."
-#~ msgstr "Ei USB-eining vart kopla til."
-
-#~ msgctxt "@title:notifications"
-#~ msgid "USB Device Removed"
-#~ msgstr "USB-eining fjerna"

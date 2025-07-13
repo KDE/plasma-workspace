@@ -79,16 +79,3 @@ msgstr "En USB-enhet ble frakoblet."
 msgctxt "@title:notifications"
 msgid "USB Device Went Away"
 msgstr "USB-enhet oppdaget"
-
-#~ msgid "A display has been plugged in."
-#~ msgstr "En skjerm ble koblet til."
-
-#~ msgid "%1 has been plugged in."
-#~ msgstr "%1 ble koblet til."
-
-#~ msgid "A USB device has been plugged in."
-#~ msgstr "En USB-enhet ble koblet til."
-
-#~ msgctxt "@title:notifications"
-#~ msgid "USB Device Removed"
-#~ msgstr "USB-enhet fjernet"
