@@ -91,22 +91,22 @@ public:
     }
 
 private:
-    inline void seen(const KService::Ptr &service)
+    void seen(const KService::Ptr &service)
     {
         m_seen.insert(service->exec());
     }
 
-    inline void seen(const KServiceAction &action)
+    void seen(const KServiceAction &action)
     {
         m_seen.insert(action.exec());
     }
 
-    inline bool hasSeen(const KService::Ptr &service)
+    bool hasSeen(const KService::Ptr &service)
     {
         return m_seen.contains(service->exec());
     }
 
-    inline bool hasSeen(const KServiceAction &action)
+    bool hasSeen(const KServiceAction &action)
     {
         return m_seen.contains(action.exec());
     }
