@@ -37,6 +37,9 @@
 
 #include "debug.h"
 
+namespace
+{
+
 int weightedLength(const QString &query)
 {
     return KStringHandler::logicalLength(query);
@@ -57,6 +60,8 @@ inline bool contains(const QStringList &results, const QList<QStringView> &query
         });
     });
 }
+
+} // namespace
 
 /**
  * @brief Finds all KServices for a given runner query
