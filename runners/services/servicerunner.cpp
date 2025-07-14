@@ -37,6 +37,8 @@
 
 #include "debug.h"
 
+using namespace Qt::StringLiterals;
+
 int weightedLength(const QString &query)
 {
     return KStringHandler::logicalLength(query);
@@ -420,8 +422,8 @@ ServiceRunner::ServiceRunner(QObject *parent, const KPluginMetaData &metaData)
         processActivitiesResults(ResultSet(m_kactivitiesQuery | Terms::Url::contains(resource)));
     });
 
-    connect(&m_kactivitiesWatcher, &ResultWatcher::resultUnlinked, [this](const QString &resource) {
-        m_favourites.remove(resource);
+    connect(&m_kactivitiesWatcher, &ResultWatcher::resultUnlinked, [this](QString resource) {
+        m_favourites.remove(resource.remove(".desktop"_L1));
         // In case it was only unlinked from one activity
         processActivitiesResults(ResultSet(m_kactivitiesQuery | Terms::Url::contains(resource)));
     });
