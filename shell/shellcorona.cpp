@@ -955,9 +955,8 @@ void ShellCorona::showAlternativesForApplet(Plasma::Applet *applet)
     qmlObj->setSource(alternativesQML);
 
     AlternativesHelper *helper = new AlternativesHelper(applet, qmlObj);
-    qmlObj->rootContext()->setContextProperty(QStringLiteral("alternativesHelper"), helper);
 
-    qmlObj->completeInitialization();
+    qmlObj->completeInitialization({{u"alternativesHelper"_s, QVariant::fromValue(helper)}});
 
     auto dialog = qobject_cast<QQuickWindow *>(qmlObj->rootObject());
     if (!dialog) {

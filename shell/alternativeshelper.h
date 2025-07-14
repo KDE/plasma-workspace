@@ -13,6 +13,8 @@
 class AlternativesHelper : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
+    QML_UNCREATABLE("")
     Q_PROPERTY(QStringList appletProvides READ appletProvides CONSTANT)
     Q_PROPERTY(QString currentPlugin READ currentPlugin CONSTANT)
     Q_PROPERTY(QQuickItem *applet READ applet CONSTANT)

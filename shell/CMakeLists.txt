@@ -66,6 +66,12 @@ kconfig_add_kcfg_files(plasma_shell_SRCS ../kcms/colors/colorssettings.kcfgc GEN
 
 add_executable(plasmashell)
 
+ecm_add_qml_module(plasmashell
+    URI "org.kde.plasma.shell"
+    GENERATE_PLUGIN_SOURCE
+    DEPENDENCIES QtQuick
+)
+
 ecm_add_qml_module(plasmashell_osd
     URI "org.kde.plasma.workspace.osd"
     GENERATE_PLUGIN_SOURCE
@@ -92,7 +98,7 @@ qt_add_dbus_interface(plasma_shell_SRCS ${krunner_xml} krunner_interface)
 
 target_sources(plasmashell PRIVATE ${plasma_shell_SRCS})
 
-target_link_libraries(plasmashell
+target_link_libraries(plasmashell PRIVATE
  KF6::ConfigCore # Activate KRunner on the desktop
  KF6::ConfigGui
  KF6::CoreAddons
@@ -123,9 +129,9 @@ target_link_libraries(plasmashell
  Qt::WaylandClient
  Wayland::Client
 )
-target_link_libraries(plasmashell KF6::ConfigQml)
+target_link_libraries(plasmashell PRIVATE KF6::ConfigQml)
 if (TARGET KF6::UserFeedbackCore)
-    target_link_libraries(plasmashell KF6::UserFeedbackCore)
+    target_link_libraries(plasmashell PRIVATE KF6::UserFeedbackCore)
     target_compile_definitions(plasmashell PRIVATE -DWITH_KUSERFEEDBACKCORE)
 endif()
 
@@ -133,11 +139,11 @@ target_include_directories(plasmashell PRIVATE "${CMAKE_BINARY_DIR}")
 target_compile_definitions(plasmashell PRIVATE -DPROJECT_VERSION="${PROJECT_VERSION}")
 
 if(HAVE_X11)
-  target_link_libraries(plasmashell XCB::XCB XCB::RANDR)
+  target_link_libraries(plasmashell PRIVATE XCB::XCB XCB::RANDR)
 endif()
 
 if(PROJECT_VERSION_PATCH GREATER_EQUAL 80 OR PROJECT_VERSION_MINOR GREATER_EQUAL 80)
-    target_link_libraries(plasmashell KF6::KIOGui)
+    target_link_libraries(plasmashell PRIVATE KF6::KIOGui)
 endif()
 
 configure_file(org.kde.plasmashell.desktop.cmake ${CMAKE_CURRENT_BINARY_DIR}/org.kde.plasmashell.desktop @ONLY)
