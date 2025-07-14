@@ -328,7 +328,7 @@ msgstr "უცნობი"
 #: localelistmodel.cpp:22
 #, kde-format
 msgid "Default for System"
-msgstr "ნაგულისხმები სისტემისთვის"
+msgstr "ნაგულისხმევი სისტემისთვის"
 
 #: localelistmodel.cpp:22 localelistmodel.cpp:71 ui/main.qml:377
 #, kde-format
@@ -355,7 +355,7 @@ msgstr "სისტემის ნაგულიხმები C"
 msgctxt ""
 "@info:title the current locale is the default for %1, %1 is the country name"
 msgid "Default for %1"
-msgstr "ნაგულისხმები %1-სთვის"
+msgstr "ნაგულისხმევი %1-სთვის"
 
 #: optionsmodel.cpp:46
 #, kde-format
@@ -439,7 +439,7 @@ msgstr "კბ, მბ, გბ; %1"
 #, kde-format
 msgctxt "@info:title, the current setting is system default"
 msgid "System Default"
-msgstr "სისტემის ნაგულისხმები"
+msgstr "სისტემის ნაგულისხმევი"
 
 #: optionsmodel.cpp:359
 #, kde-format

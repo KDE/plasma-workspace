@@ -1262,7 +1262,7 @@ msgstr "აქცენტის ფერის ხელით მითით
 msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
 msgstr ""
-"ფერის სქემა '%1' დაყენებული არაა. მის მაგიერ ნაგულისხმები თემა ჩაიტვირთება."
+"ფერის სქემა '%1' დაყენებული არაა. მის მაგიერ ნაგულისხმევი თემა ჩაიტვირთება."
 
 #: ui/main.qml:123
 #, kde-format

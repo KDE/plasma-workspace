@@ -91,7 +91,7 @@ msgstr "პაკეტის სახელი"
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
 msgstr ""
-"Plasma-ის სამუშაო მაგიდის განლაგების ნაგულისხმებ მნიშვნელობებზე დაბრუნება"
+"Plasma-ის სამუშაო მაგიდის განლაგების ნაგულისხმევ მნიშვნელობებზე დაბრუნება"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: lookandfeelsettings.kcfg:9
