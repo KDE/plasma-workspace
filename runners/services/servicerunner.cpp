@@ -37,6 +37,8 @@
 
 #include "debug.h"
 
+using namespace Qt::StringLiterals;
+
 namespace
 {
 
@@ -421,8 +423,8 @@ ServiceRunner::ServiceRunner(QObject *parent, const KPluginMetaData &metaData)
         processActivitiesResults(ResultSet(m_kactivitiesQuery | Terms::Url::contains(resource)));
     });
 
-    connect(&m_kactivitiesWatcher, &ResultWatcher::resultUnlinked, [this](const QString &resource) {
-        m_favorites.remove(resource);
+    connect(&m_kactivitiesWatcher, &ResultWatcher::resultUnlinked, [this](QString resource) {
+        m_favorites.remove(resource.remove(".desktop"_L1));
         // In case it was only unlinked from one activity
         processActivitiesResults(ResultSet(m_kactivitiesQuery | Terms::Url::contains(resource)));
     });
