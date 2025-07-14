@@ -14,7 +14,7 @@
  * This class monitors the full and free size of devices
  */
 
-class QTimer;
+class SpaceUpdateMonitor;
 
 class SpaceMonitor : public QObject
 {
@@ -53,5 +53,6 @@ private:
     };
 
     QHash<QString, SizeInfo> m_sizes;
-    QTimer *m_spaceWatcher;
+
+    std::shared_ptr<SpaceUpdateMonitor> m_spaceUpdateMonitor;
 };

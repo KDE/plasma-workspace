@@ -8,13 +8,14 @@
 
 #include <devicenotifier_debug.h>
 
-#include "devicecontrol.h"
-
 #include <QDBusConnection>
 #include <QDBusMessage>
 
 #include <Solid/Device>
 #include <Solid/OpticalDrive>
+
+#include "devicecontrol.h"
+#include "spaceupdatemonitor_p.h"
 
 using namespace Qt::Literals::StringLiterals;
 
@@ -23,7 +24,7 @@ DeviceFilterControl::DeviceFilterControl(QObject *parent)
     , m_filterType(Removable)
     , m_isVisible(false)
     , m_modelReset(false)
-    , m_spaceMonitor(SpaceMonitor::instance())
+    , m_spaceUpdateMonitor(SpaceUpdateMonitor::instance())
 {
     qCDebug(APPLETS::DEVICENOTIFIER) << "Begin initializing Device Filter Control";
     setSourceModel(new DeviceControl(this));
@@ -174,7 +175,7 @@ bool DeviceFilterControl::isVisible() const
 void DeviceFilterControl::setIsVisible(bool status)
 {
     m_isVisible = status;
-    m_spaceMonitor->setIsVisible(status);
+    m_spaceUpdateMonitor->setIsVisible(status);
 }
 
 void DeviceFilterControl::onDeviceAdded(const QModelIndex &parent, int first, int last)
