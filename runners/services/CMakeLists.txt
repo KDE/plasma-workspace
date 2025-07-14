@@ -19,7 +19,6 @@ target_link_libraries(krunner_services
     KF6::Runner
     KF6::Service
     Plasma::Activities
-    Plasma::ActivitiesStats
 )
 
 if(BUILD_TESTING)

@@ -28,9 +28,6 @@
 #include <KStringHandler>
 #include <KSycoca>
 #include <PlasmaActivities/ResourceInstance>
-#include <PlasmaActivities/Stats/Query>
-#include <PlasmaActivities/Stats/ResultSet>
-#include <PlasmaActivities/Stats/Terms>
 
 #include <KIO/ApplicationLauncherJob>
 #include <KIO/DesktopExecParser>
@@ -71,10 +68,9 @@ inline bool contains(const QStringList &results, const QList<QStringView> &query
 class ServiceFinder
 {
 public:
-    ServiceFinder(ServiceRunner *runner, const QList<KService::Ptr> &list, const QString &currentActivity)
+    ServiceFinder(ServiceRunner *runner, const QList<KService::Ptr> &list)
         : m_runner(runner)
         , m_services(list)
-        , m_currentActivity(currentActivity)
     {
     }
 
@@ -297,13 +293,6 @@ private:
             match.setCategoryRelevance(categoryRelevance);
             setupMatch(service, match);
 
-            if (const auto foundIt = m_runner->m_favorites.constFind(service->desktopEntryName()); foundIt != m_runner->m_favorites.cend()) {
-                if (foundIt->isGlobal || foundIt->linkedActivities.contains(m_currentActivity)) {
-                    qCDebug(RUNNER_SERVICES) << "entry is a favorite" << id << match.subtext() << relevance;
-                    relevance *= 1.25; // Give favorites a relative boost,
-                }
-            }
-
             qCDebug(RUNNER_SERVICES) << name << "is this relevant:" << relevance;
             match.setRelevance(relevance);
 
@@ -404,7 +393,6 @@ private:
     ServiceRunner *m_runner;
     QSet<QString> m_seen;
     const QList<KService::Ptr> m_services;
-    const QString m_currentActivity;
 
     QList<KRunner::QueryMatch> matches;
     QString query;
@@ -414,20 +402,8 @@ private:
 
 ServiceRunner::ServiceRunner(QObject *parent, const KPluginMetaData &metaData)
     : KRunner::AbstractRunner(parent, metaData)
-    , m_kactivitiesQuery(Terms::LinkedResources | Terms::Agent{QStringLiteral("org.kde.plasma.favorites.applications")} | Terms::Type::any()
-                         | Terms::Activity::any() | Terms::Limit(25))
-    , m_kactivitiesWatcher(m_kactivitiesQuery)
 {
     addSyntax(QStringLiteral(":q:"), i18n("Finds applications whose name or description match :q:"));
-    connect(&m_kactivitiesWatcher, &ResultWatcher::resultLinked, [this](const QString &resource) {
-        processActivitiesResults(ResultSet(m_kactivitiesQuery | Terms::Url::contains(resource)));
-    });
-
-    connect(&m_kactivitiesWatcher, &ResultWatcher::resultUnlinked, [this](QString resource) {
-        m_favorites.remove(resource.remove(".desktop"_L1));
-        // In case it was only unlinked from one activity
-        processActivitiesResults(ResultSet(m_kactivitiesQuery | Terms::Url::contains(resource)));
-    });
 
     connect(this, &KRunner::AbstractRunner::prepare, this, [this]() {
         m_matching = true;
@@ -446,8 +422,6 @@ ServiceRunner::ServiceRunner(QObject *parent, const KPluginMetaData &metaData)
 
 void ServiceRunner::init()
 {
-    processActivitiesResults(ResultSet(m_kactivitiesQuery));
-
     //  connect to the thread-local singleton here
     connect(KSycoca::self(), &KSycoca::databaseChanged, this, [this]() {
         if (m_matching) {
@@ -461,24 +435,9 @@ void ServiceRunner::init()
     });
 }
 
-void ServiceRunner::processActivitiesResults(const ResultSet &results)
-{
-    const static QLatin1String globalActivity(":global");
-    const static QLatin1String applicationScheme("applications");
-    for (const ResultSet::Result &result : results) {
-        if (result.url().scheme() == applicationScheme) {
-            m_favorites.insert(result.url().path().remove(QLatin1String(".desktop")),
-                               ActivityFavorite{
-                                   .linkedActivities = result.linkedActivities(),
-                                   .isGlobal = result.linkedActivities().contains(globalActivity),
-                               });
-        }
-    }
-}
-
 void ServiceRunner::match(KRunner::RunnerContext &context)
 {
-    ServiceFinder finder(this, m_services, m_activitiesConsumer.currentActivity());
+    ServiceFinder finder(this, m_services);
     finder.match(context);
 }
 
