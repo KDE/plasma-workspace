@@ -26,42 +26,42 @@ msgstr "სხვა…"
 #: components/componentchooserarchivemanager.cpp:15
 #, kde-format
 msgid "Select default archive manager"
-msgstr "არჩიეთ ნაგულისხმები არქივების მმართველი"
+msgstr "არჩიეთ ნაგულისხმევი არქივების მმართველი"
 
 #: components/componentchooserbrowser.cpp:13
 #, kde-format
 msgid "Select default browser"
-msgstr "აირჩიეთ ნაგულისხმები ბრაუზერი"
+msgstr "აირჩიეთ ნაგულისხმევი ბრაუზერი"
 
 #: components/componentchooseremail.cpp:20
 #, kde-format
 msgid "Select default e-mail client"
-msgstr "აირჩიეთ ელფოსტის ნაგულისხმები კლიენტი"
+msgstr "აირჩიეთ ელფოსტის ნაგულისხმევი კლიენტი"
 
 #: components/componentchooserfilemanager.cpp:15
 #, kde-format
 msgid "Select default file manager"
-msgstr "აირჩიეთ ფაილების ნაგულისხმები მმართველი"
+msgstr "აირჩიეთ ფაილების ნაგულისხმევი მმართველი"
 
 #: components/componentchoosergeo.cpp:13
 #, kde-format
 msgid "Select default map"
-msgstr "აირჩიეთ ნაგულისხმები რუკა"
+msgstr "აირჩიეთ ნაგულისხმევი რუკა"
 
 #: components/componentchooserimageviewer.cpp:15
 #, kde-format
 msgid "Select default image viewer"
-msgstr "აირჩიეთ ნაგულისხმები სურათების გამხსნელი"
+msgstr "აირჩიეთ ნაგულისხმევი სურათების გამხსნელი"
 
 #: components/componentchoosermusicplayer.cpp:15
 #, kde-format
 msgid "Select default music player"
-msgstr "აირჩიეთ ნაგულისხმები მუსიკის დამკვრელი"
+msgstr "აირჩიეთ ნაგულისხმევი მუსიკის დამკვრელი"
 
 #: components/componentchooserpdfviewer.cpp:11
 #, kde-format
 msgid "Select default PDF viewer"
-msgstr "აირჩიეთ ნაგულისხმები PDF-ების გამხსნელი"
+msgstr "აირჩიეთ ნაგულისხმევი PDF-ების გამხსნელი"
 
 #: components/componentchoosertel.cpp:17
 #, kde-format
@@ -71,17 +71,17 @@ msgstr "აირჩიეთ ნაგულიხმები დამრე�
 #: components/componentchooserterminal.cpp:25
 #, kde-format
 msgid "Select default terminal emulator"
-msgstr "აირჩიეთ ტერმინალის ნაგულისხმები ემულატორი"
+msgstr "აირჩიეთ ტერმინალის ნაგულისხმევი ემულატორი"
 
 #: components/componentchoosertexteditor.cpp:15
 #, kde-format
 msgid "Select default text editor"
-msgstr "აირჩიეთ ნაგულისხმები ტექსტური რედაქტორი"
+msgstr "აირჩიეთ ნაგულისხმევი ტექსტური რედაქტორი"
 
 #: components/componentchooservideoplayer.cpp:15
 #, kde-format
 msgid "Select default video player"
-msgstr "აირჩიეთ ნაგულისხმები ვიდეოს დამკვრელი"
+msgstr "აირჩიეთ ნაგულისხმევი ვიდეოს დამკვრელი"
 
 #: ui/ComponentOverlay.qml:54
 #, kde-format
@@ -253,7 +253,7 @@ msgstr "რუკა:"
 #~ msgstr "დამრეკი:"
 
 #~ msgid "Default web browser"
-#~ msgstr "ნაგულისხმები ბრაუზერი"
+#~ msgstr "ნაგულისხმევი ბრაუზერი"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

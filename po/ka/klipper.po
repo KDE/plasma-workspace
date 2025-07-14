@@ -631,7 +631,7 @@ msgstr "რა ემართება შესრულებული ბრ
 #: editcommanddialog.cpp:115
 #, kde-format
 msgid "Reset the icon to the default for the command"
-msgstr "ბრძანების ნაგულისხმებ ხატულაზე დაბრუნება"
+msgstr "ბრძანების ნაგულისხმევ ხატულაზე დაბრუნება"
 
 #: editcommanddialog.cpp:121
 #, kde-format

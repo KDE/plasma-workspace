@@ -32,32 +32,28 @@ msgid ""
 msgstr "%1 开始过渡到日间色温，%2 切换完成"
 
 #: ui/main.qml:39
-#, fuzzy, kde-format
-#| msgid "The blue light filter makes the colors on the screen warmer."
+#, kde-format
 msgctxt "@info"
 msgid "The blue light filter makes the colors on the screen warmer."
-msgstr "夜间颜色功能可以滤除蓝光，使屏幕以偏暖的颜色显示内容。"
+msgstr ""
 
 #: ui/main.qml:49
-#, fuzzy, kde-format
-#| msgid "Switching times:"
+#, kde-format
 msgctxt "@label:listbox Night Light modes"
 msgid "Switching times:"
-msgstr "切换时间："
+msgstr ""
 
 #: ui/main.qml:58
-#, fuzzy, kde-format
-#| msgid "Always off"
+#, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Always off"
-msgstr "总是关闭"
+msgstr ""
 
 #: ui/main.qml:59
-#, fuzzy, kde-format
-#| msgid "Always on night light"
+#, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Always on night light"
-msgstr "总是使用夜间色温"
+msgstr ""
 
 #: ui/main.qml:60
 #, kde-format
@@ -78,11 +74,10 @@ msgid "%1K"
 msgstr "%1K"
 
 #: ui/main.qml:123
-#, fuzzy, kde-format
-#| msgid "Day light temperature:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Day light temperature:"
-msgstr "日间色温："
+msgstr ""
 
 #: ui/main.qml:173 ui/main.qml:237
 #, kde-format
@@ -97,116 +92,7 @@ msgid "Warm"
 msgstr "暖"
 
 #: ui/main.qml:187
-#, fuzzy, kde-format
-#| msgid "Night light temperature:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Night light temperature:"
-msgstr "夜间色温："
-
-#~ msgctxt ""
-#~ "@label:chooser Tap should be translated to mean touching using a "
-#~ "touchscreen"
-#~ msgid "Tap to choose your location on the map."
-#~ msgstr "点击地图以选择您的位置。"
-
-#~ msgctxt ""
-#~ "@label:chooser Click should be translated to mean clicking using a mouse"
-#~ msgid "Click to choose your location on the map."
-#~ msgstr "点击地图以选择您的位置。"
-
-#~ msgid "Zoom in"
-#~ msgstr "放大"
-
-#~ msgid "Zoom out"
-#~ msgstr "缩小"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "Modified from <link url='https://commons.wikimedia.org/wiki/File:"
-#~ "World_location_map_(equirectangular_180).svg'>World location map</link> "
-#~ "by TUBS / Wikimedia Commons / <link url='https://creativecommons.org/"
-#~ "licenses/by-sa/3.0'>CC BY-SA 3.0</link>"
-#~ msgstr ""
-#~ "基于 TUBS 制作的<link url='https://commons.wikimedia.org/wiki/File:"
-#~ "World_location_map_(equirectangular_180).svg'>世界位置地图</link> / "
-#~ "Wikimedia Commons / <link url='https://creativecommons.org/licenses/by-"
-#~ "sa/3.0'>CC BY-SA 3.0</link>"
-
-#~ msgctxt "@label: textbox"
-#~ msgid "Latitude:"
-#~ msgstr "纬度："
-
-#~ msgctxt "@label: textbox"
-#~ msgid "Longitude:"
-#~ msgstr "经度："
-
-#~ msgid "Sunset and sunrise at current location"
-#~ msgstr "当前地理位置的日落到日出"
-
-#~ msgid "Sunset and sunrise at manual location"
-#~ msgstr "手动选定的地理位置的日落到日出"
-
-#~ msgid "Custom times"
-#~ msgstr "自定义时间"
-
-#~ msgctxt "@label The coordinates for the current location"
-#~ msgid "Current location:"
-#~ msgstr "当前位置："
-
-#~ msgid "Latitude: %1°   Longitude: %2°"
-#~ msgstr "纬度：%1°   经度：%2°"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "The <application>GeoClue2</application> service will be used to "
-#~ "periodically update the device's location using GPS or cell tower "
-#~ "triangulation if available, or else by sending its IP address to <link "
-#~ "url='https://geoip.com/privacy/'>GeoIP</link>."
-#~ msgstr ""
-#~ "程序将使用 <application>GeoClue2</application> 服务来定期更新设备的位置。"
-#~ "GeoClue2 将使用 GPS 和移动基站三角测量法来对设备进行定位 (如果可用)，否则"
-#~ "将发送设备的 IP 地址到 <link url='https://geoip.com/privacy/'>GeoIP</"
-#~ "link> 服务来获取定位。"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "The <application>%1</application> service will be used to periodically "
-#~ "update the device's location. Please open a bug report at <link "
-#~ "url='https://bugs.kde.org'>https://bugs.kde.org</link> asking KDE "
-#~ "developers to write a detailed description of what this service will do."
-#~ msgstr ""
-#~ "triangulation<application>%1</application> 服务来定期更新设备的位置。请在 "
-#~ "<link url='https://bugs.kde.org'>https://bugs.kde.org</link> 网站提交一个"
-#~ "程序缺陷报告，提醒 KDE 开发人员撰写关于此服务的工作方式的详细说明。"
-
-#~ msgid "Begin night light at:"
-#~ msgstr "夜间色温开始时间："
-
-#~ msgid "Begin day light at:"
-#~ msgstr "日间颜色开始时间："
-
-#~ msgid "Transition duration:"
-#~ msgstr "过渡时长："
-
-#~ msgid "%1 minute"
-#~ msgid_plural "%1 minutes"
-#~ msgstr[0] "%1 分钟"
-
-#~ msgid "Input minutes - min. 1, max. 600"
-#~ msgstr "输入分钟，最小为 1，最大为 600"
-
-#~ msgctxt "@info:placeholder"
-#~ msgid "Locating…"
-#~ msgstr "正在定位…"
-
-#~ msgctxt "@info:tooltip Part of a control for setting a time"
-#~ msgid "hour"
-#~ msgstr " 小时"
-
-#~ msgctxt "Time separator between hours and minutes"
-#~ msgid ":"
-#~ msgstr ":"
-
-#~ msgctxt "@info:tooltip Part of a control for setting a time"
-#~ msgid "minute"
-#~ msgstr "分钟"
+msgstr ""

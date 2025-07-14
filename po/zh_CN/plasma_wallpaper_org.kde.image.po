@@ -77,20 +77,16 @@ msgid "Tiled"
 msgstr "平铺"
 
 #: imagepackage/contents/ui/config.qml:194
-#, fuzzy, kde-format
-#| msgctxt "part of a sentence: 'Switch dynamic wallpapers [based on]'"
-#| msgid "Switch dynamic wallpapers:"
+#, kde-format
 msgctxt "@label part of a sentence: 'Switch dynamic wallpapers [based on]'"
 msgid "Switch dynamic wallpapers:"
-msgstr "切换动态壁纸："
+msgstr ""
 
 #: imagepackage/contents/ui/config.qml:195
-#, fuzzy, kde-format
-#| msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
-#| msgid "Based on whether the color scheme is dark or light"
+#, kde-format
 msgctxt "@option:radio part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the color scheme is dark or light"
-msgstr "基于配色方案是深色还是浅色"
+msgstr ""
 
 #: imagepackage/contents/ui/config.qml:206
 #, kde-format
@@ -364,13 +360,3 @@ msgstr "尝试设置 Plasma 壁纸时出错：<nl/>%1"
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr "尝试打开 kscreenlockerrc 配置文件时出错。"
-
-#~ msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
-#~ msgid "At sunrise and sunset"
-#~ msgstr "日出和日落时"
-
-#~ msgctxt ""
-#~ "@label:checkbox Use geolocation services for more accurate sunset and "
-#~ "sunrise times"
-#~ msgid "Use device's current location for more accurate timings"
-#~ msgstr "使用设备的当前位置以提高切换时间的准确性"

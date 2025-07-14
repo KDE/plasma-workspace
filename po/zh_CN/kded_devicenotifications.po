@@ -25,10 +25,9 @@ msgid "Display Detected"
 msgstr "检测到显示器"
 
 #: devicenotifications.cpp:334
-#, fuzzy, kde-format
-#| msgid "A display has been unplugged."
+#, kde-format
 msgid "A display has been connected."
-msgstr "一个显示器已被拔出。"
+msgstr "一个显示器已经连接。"
 
 #: devicenotifications.cpp:347
 #, kde-format
@@ -37,22 +36,19 @@ msgid "Display Removed"
 msgstr "显示器已移除"
 
 #: devicenotifications.cpp:348
-#, fuzzy, kde-format
-#| msgid "A display has been unplugged."
+#, kde-format
 msgid "A display has been disconnected."
-msgstr "一个显示器已被拔出。"
+msgstr "一个显示器已经断开连接。"
 
 #: devicenotifications.cpp:394
-#, fuzzy, kde-format
-#| msgid "%1 has been unplugged."
+#, kde-format
 msgid "%1 has been connected."
-msgstr "%1 已拔出。"
+msgstr "%1 已经连接。"
 
 #: devicenotifications.cpp:394
-#, fuzzy, kde-format
-#| msgid "A USB device has been unplugged."
+#, kde-format
 msgid "A USB device has been connected."
-msgstr "已拔出 USB 设备。"
+msgstr "一个 USB 设备已经连接。"
 
 #: devicenotifications.cpp:399
 #, kde-format
@@ -61,34 +57,17 @@ msgid "USB Device Detected"
 msgstr "检测到 USB 设备"
 
 #: devicenotifications.cpp:437
-#, fuzzy, kde-format
-#| msgid "%1 has been unplugged."
+#, kde-format
 msgid "%1 has been disconnected."
-msgstr "%1 已拔出。"
+msgstr "%1 已经断开连接。"
 
 #: devicenotifications.cpp:437
-#, fuzzy, kde-format
-#| msgid "A USB device has been unplugged."
+#, kde-format
 msgid "A USB device has been disconnected."
-msgstr "已拔出 USB 设备。"
+msgstr "一个 USB 设备已经断开连接。"
 
 #: devicenotifications.cpp:442
-#, fuzzy, kde-format
-#| msgctxt "@title:notifications"
-#| msgid "USB Device Detected"
+#, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Went Away"
-msgstr "检测到 USB 设备"
-
-#~ msgid "A display has been plugged in."
-#~ msgstr "一个显示器已被插入。"
-
-#~ msgid "%1 has been plugged in."
-#~ msgstr "%1 已插入。"
-
-#~ msgid "A USB device has been plugged in."
-#~ msgstr "已插入 USB 设备。"
-
-#~ msgctxt "@title:notifications"
-#~ msgid "USB Device Removed"
-#~ msgstr "已移除 USB 设备"
+msgstr "USB 设备已经断开连接"

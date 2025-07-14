@@ -297,7 +297,7 @@ msgstr "კვირის პირველი დღე:"
 #, kde-format
 msgctxt "@item:inlistbox first day of week option"
 msgid "Use region defaults"
-msgstr "რეგიონის ნაგულისხმები მნიშვნელობების გამოყენება"
+msgstr "რეგიონის ნაგულისხმევი მნიშვნელობების გამოყენება"
 
 #: configCalendar.qml:82
 #, kde-format

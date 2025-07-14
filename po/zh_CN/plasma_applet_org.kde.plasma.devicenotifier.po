@@ -97,7 +97,7 @@ msgstr "您没有修复此设备的权限。"
 #: devicemessagemonitor_p.cpp:194 devicemessagemonitor_p.cpp:259
 #, kde-format
 msgid "Unknown error type"
-msgstr ""
+msgstr "未知错误类型"
 
 #: devicemessagemonitor_p.cpp:198
 #, kde-format

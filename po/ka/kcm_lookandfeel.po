@@ -80,7 +80,7 @@ msgstr "პაკეტის სახელი"
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
 msgstr ""
-"Plasma-ის სამუშაო მაგიდის განლაგების ნაგულისხმებ მნიშვნელობებზე დაბრუნება"
+"Plasma-ის სამუშაო მაგიდის განლაგების ნაგულისხმევ მნიშვნელობებზე დაბრუნება"
 
 #: lookandfeelmanager.cpp:883
 #, kde-format

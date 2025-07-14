@@ -115,7 +115,7 @@ msgstr "სისტემაში ხელმისაწვდომი ყ�
 #: plasma-apply-cursortheme.cpp:71
 #, kde-format
 msgid "Use a specific size, rather than the theme default size"
-msgstr "თემის ნაგულისხმების მაგიერ მითითებული ზომის გამოყენება"
+msgstr "თემის ნაგულისხმევის მაგიერ მითითებული ზომის გამოყენება"
 
 #: plasma-apply-cursortheme.cpp:92
 #, kde-format
