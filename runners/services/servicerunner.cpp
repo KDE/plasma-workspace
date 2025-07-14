@@ -1,7 +1,7 @@
 /*
     SPDX-FileCopyrightText: 2006 Aaron Seigo <aseigo@kde.org>
     SPDX-FileCopyrightText: 2014 Vishesh Handa <vhanda@kde.org>
-    SPDX-FileCopyrightText: 2016-2020 Harald Sitter <sitter@kde.org>
+    SPDX-FileCopyrightText: 2016-2025 Harald Sitter <sitter@kde.org>
     SPDX-FileCopyrightText: 2022-2023 Alexander Lohnau <alexander.lohnau@gmx.de>
 
     SPDX-License-Identifier: LGPL-2.0-only
@@ -21,6 +21,7 @@
 #include <QUrlQuery>
 
 #include <KApplicationTrader>
+#include <KFuzzyMatcher>
 #include <KLocalizedString>
 #include <KNotificationJobUiDelegate>
 #include <KServiceAction>
@@ -32,7 +33,9 @@
 #include <KIO/ApplicationLauncherJob>
 #include <KIO/DesktopExecParser>
 
+#include "bitap.h"
 #include "debug.h"
+#include "levenshtein.h"
 
 using namespace Qt::StringLiterals;
 
@@ -42,13 +45,6 @@ namespace
 int weightedLength(const QString &query)
 {
     return KStringHandler::logicalLength(query);
-}
-
-inline bool contains(const QString &result, const QList<QStringView> &queryList)
-{
-    return std::ranges::all_of(queryList, [&result](QStringView query) {
-        return result.contains(query, Qt::CaseInsensitive);
-    });
 }
 
 inline bool contains(const QStringList &results, const QList<QStringView> &queryList)
@@ -76,7 +72,7 @@ public:
 
     void match(KRunner::RunnerContext &context)
     {
-        query = context.query();
+        query = context.query().toLower();
         // Splitting the query term to match using subsequences
         queryList = QStringView(query).split(QLatin1Char(' '));
         weightedTermLength = weightedLength(query);
@@ -115,36 +111,6 @@ private:
         qCDebug(RUNNER_SERVICES) << service->name() << "disqualified?" << ret;
         seen(service);
         return ret;
-    }
-
-    enum class Category {
-        Name,
-        GenericName,
-        Comment,
-    };
-    qreal increaseMatchRelevance(const QString &serviceProperty, const QList<QStringView> &strList, Category category)
-    {
-        // Increment the relevance based on all the words (other than the first) of the query list
-        qreal relevanceIncrement = 0;
-
-        for (int i = 1; i < strList.size(); ++i) {
-            const auto &str = strList.at(i);
-            if (category == Category::Name) {
-                if (serviceProperty.contains(str, Qt::CaseInsensitive)) {
-                    relevanceIncrement += 0.01;
-                }
-            } else if (category == Category::GenericName) {
-                if (serviceProperty.contains(str, Qt::CaseInsensitive)) {
-                    relevanceIncrement += 0.01;
-                }
-            } else if (category == Category::Comment) {
-                if (serviceProperty.contains(str, Qt::CaseInsensitive)) {
-                    relevanceIncrement += 0.01;
-                }
-            }
-        }
-
-        return relevanceIncrement;
     }
 
     void setupMatch(const KService::Ptr &service, KRunner::QueryMatch &match)
@@ -216,85 +182,140 @@ private:
         return resultingArgs.join(QLatin1Char(' '));
     }
 
-    void matchNameKeywordAndGenericName()
+    struct Score {
+        qreal value = 0.0; // The final score, it is the sum of all scores.
+        KRunner::QueryMatch::CategoryRelevance categoryRelevance = KRunner::QueryMatch::CategoryRelevance::Lowest; // The category relevance of the match.
+    };
+
+    struct ScoreCard {
+        qsizetype bitap;
+        qreal bitapScore;
+        int levenshtein;
+        qreal levenshteinScore;
+    };
+
+    using ScoreCards = std::vector<ScoreCard>;
+
+    [[nodiscard]] std::optional<Score> fuzzyScore(KService::Ptr service)
     {
-        const auto nameKeywordAndGenericNameFilter = [this](const KService::Ptr &service) {
-            // Name
-            if (contains(service->name(), queryList)) {
-                return true;
-            }
-            // If the term length is < 3, no real point searching the untranslated Name, Keywords and GenericName
-            if (weightedTermLength < 3) {
-                return false;
-            }
-            if (contains(service->untranslatedName(), queryList)) {
-                return true;
+        if (queryList.isEmpty()) {
+            return std::nullopt; // No query, no score.
+        }
+
+        const auto name = service->name();
+
+        // Absolute match. Can't get any better than this.
+        if (name.compare(query, Qt::CaseInsensitive) == 0) {
+            return Score{.value = std::numeric_limits<decltype(Score::value)>::max(), .categoryRelevance = KRunner::QueryMatch::CategoryRelevance::Highest};
+        }
+
+        auto makeScores = [this, service](const auto &notNormalizedString) {
+            if (notNormalizedString.isEmpty()) {
+                return ScoreCards{}; // No string, no score.
             }
 
-            // Keywords
-            if (contains(service->keywords(), queryList)) {
-                return true;
-            }
-            // GenericName
-            if (contains(service->genericName(), queryList) || contains(service->untranslatedGenericName(), queryList)) {
-                return true;
-            }
-            // Comment
-            if (contains(service->comment(), queryList)) {
-                return true;
-            }
+            const auto string = notNormalizedString.toLower();
 
-            return false;
+            ScoreCards cards;
+            for (const auto &queryItem : queryList) {
+                const auto bitap = Bitap::bitap(string, queryItem, 1);
+                if (!bitap) {
+                    continue; // No match, no score.
+                }
+
+                const auto bitapScore = Bitap::score(string, bitap.value());
+
+                // Run again with a hamming distance of 0 if we have a fairly perfect match.
+                const auto bitapNoSubstition = Bitap::bitap(string, queryItem, 0);
+                const auto noSubstitionBonus = bitapNoSubstition ? 100.0 : 1.0;
+
+                // If we match from the beginning that gets a bonus.
+                const auto index0Bonus = bitap == 0 ? 2.0 : 1.0;
+                // If the string starts with the query item that gets a bonus.
+                const auto startsWithBonus = (string.startsWith(queryItem, Qt::CaseInsensitive)) ? 2.0 : 1.0;
+
+                const auto levenshtein = Levenshtein::distance(string, queryItem);
+
+                cards.emplace_back(ScoreCard{
+                    .bitap = bitap.value(),
+                    .bitapScore = bitapScore * index0Bonus * noSubstitionBonus * startsWithBonus,
+                    .levenshtein = levenshtein,
+                    .levenshteinScore = Levenshtein::score(string, levenshtein),
+                });
+            }
+            return cards;
         };
 
+        auto makeScoreFromList = [&makeScores](const QStringList &strings) {
+            ScoreCards cards;
+            for (const auto &string : strings) {
+                const auto stringyCards = makeScores(string);
+                cards.append_range(stringyCards);
+            }
+            return cards;
+        };
+
+        struct WeightedScoreCard {
+            ScoreCards cards;
+            qreal weight;
+        };
+
+        std::array<WeightedScoreCard, 4> weightedCards = {
+            WeightedScoreCard{.cards = makeScores(name), .weight = 1.0},
+            WeightedScoreCard{.cards = makeScores(service->untranslatedName()), .weight = 0.8},
+            WeightedScoreCard{.cards = makeScores(service->genericName()), .weight = 0.6},
+            WeightedScoreCard{.cards = makeScoreFromList(service->keywords()), .weight = 0.1},
+        };
+
+        qCDebug(RUNNER_SERVICES) << "+++++++ Weighted Cards for" << name;
+        for (const auto &weightedCard : weightedCards) {
+            qCDebug(RUNNER_SERVICES).nospace() << "WeightedCard(";
+            for (const auto &scoreCard : weightedCard.cards) {
+                qCDebug(RUNNER_SERVICES).nospace() << "  ScoreCard(bitap: " << scoreCard.bitap << ", bitapScore: " << scoreCard.bitapScore
+                                                   << ", levenshtein: " << scoreCard.levenshtein << ", levenshteinScore: " << scoreCard.levenshteinScore << ")";
+            }
+            qCDebug(RUNNER_SERVICES).nospace() << ")";
+        }
+        qCDebug(RUNNER_SERVICES) << "-------";
+
+        int scores = 1; // starts at 1 to avoid division by zero
+        qreal finalScore = 0.0;
+        for (const auto &weightedCard : weightedCards) {
+            if (weightedCard.cards.empty()) {
+                continue; // No scores, no match.
+            }
+
+            qreal weightedScore = 0.0;
+            for (const auto &scoreCard : weightedCard.cards) {
+                weightedScore += (scoreCard.bitapScore + scoreCard.levenshteinScore) * weightedCard.weight;
+                scores++;
+            }
+
+            finalScore += weightedScore;
+        }
+        finalScore = finalScore / scores; // Average the score for this card
+
+        qCDebug(RUNNER_SERVICES) << "Final score for" << name << "is" << finalScore;
+        if (finalScore > 0.0) {
+            return Score{.value = finalScore, .categoryRelevance = KRunner::QueryMatch::CategoryRelevance::Moderate};
+        }
+
+        return std::nullopt; // No match found.
+    }
+
+    void matchNameKeywordAndGenericName()
+    {
         for (const KService::Ptr &service : m_services) {
-            if (!nameKeywordAndGenericNameFilter(service) || disqualify(service)) {
+            KRunner::QueryMatch match(m_runner);
+            auto score = fuzzyScore(service);
+            if (!score || disqualify(service)) {
                 continue;
             }
 
-            const QString id = service->storageId();
-            const QString name = service->name();
-
-            KRunner::QueryMatch::CategoryRelevance categoryRelevance = KRunner::QueryMatch::CategoryRelevance::Moderate;
-            qreal relevance(0.6);
-
-            // If the term was < 3 chars and NOT at the beginning of the App's name, then chances are the user doesn't want that app
-            if (weightedTermLength < 3) {
-                if (name.startsWith(query, Qt::CaseInsensitive)) {
-                    relevance = 0.9;
-                } else {
-                    continue;
-                }
-            } else if (name.compare(query, Qt::CaseInsensitive) == 0) {
-                relevance = 1;
-                categoryRelevance = KRunner::QueryMatch::CategoryRelevance::Highest;
-            } else if (const auto idx = name.indexOf(queryList[0], 0, Qt::CaseInsensitive); idx != -1) {
-                relevance = 0.8;
-                relevance += increaseMatchRelevance(name, queryList, Category::Name);
-                if (idx == 0) {
-                    relevance += 0.1;
-                    categoryRelevance = KRunner::QueryMatch::CategoryRelevance::High;
-                }
-            } else if (const auto idx = service->genericName().indexOf(queryList[0], 0, Qt::CaseInsensitive); idx != -1) {
-                relevance = 0.65;
-                relevance += increaseMatchRelevance(service->genericName(), queryList, Category::GenericName);
-                if (idx == 0) {
-                    relevance += 0.05;
-                }
-            } else if (const auto idx = service->comment().indexOf(queryList[0], 0, Qt::CaseInsensitive); idx != -1) {
-                relevance = 0.5;
-                relevance += increaseMatchRelevance(service->comment(), queryList, Category::Comment);
-                if (idx == 0) {
-                    relevance += 0.05;
-                }
-            }
-
-            KRunner::QueryMatch match(m_runner);
-            match.setCategoryRelevance(categoryRelevance);
             setupMatch(service, match);
-
-            qCDebug(RUNNER_SERVICES) << name << "is this relevant:" << relevance;
-            match.setRelevance(relevance);
+            match.setCategoryRelevance(score->categoryRelevance);
+            match.setRelevance(score->value);
+            qCDebug(RUNNER_SERVICES) << match.text() << "is this relevant:" << match.relevance() << "category relevance" << match.categoryRelevance();
 
             matches << match;
         }

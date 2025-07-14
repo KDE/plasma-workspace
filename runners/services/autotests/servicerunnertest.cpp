@@ -89,7 +89,7 @@ void ServiceRunnerTest::testExecutableExactMatch()
 
 void ServiceRunnerTest::testKonsoleVsYakuakeComment()
 {
-    // Yakuake has konsole mentioned in comment, should be rated lower.
+    // Yakuake has konsole mentioned in comment, should not be listed (if it was it should be lower)
     auto matches = launchQuery(QStringLiteral("kons"));
 
     std::ranges::sort(matches, [](const KRunner::QueryMatch &a, const KRunner::QueryMatch &b) {
@@ -107,7 +107,6 @@ void ServiceRunnerTest::testKonsoleVsYakuakeComment()
     QCOMPARE(texts,
              QStringList({
                  u"Konsole ServiceRunnerTest"_s,
-                 u"Yakuake ServiceRunnerTest"_s,
              }));
 }
 
@@ -156,10 +155,8 @@ void ServiceRunnerTest::testSystemSettings2()
         texts.push_back(match.text());
     }
 
-    QCOMPARE(texts,
-             QStringList({
-                 u"System Settings ServiceRunnerTest"_s,
-             }));
+    // The matched texts will contain much more because of the generic search term. Make sure our settings win.
+    QCOMPARE(texts.at(0), u"System Settings ServiceRunnerTest"_s);
 }
 
 void ServiceRunnerTest::testCategories()
@@ -180,10 +177,6 @@ void ServiceRunnerTest::testCategories()
     QVERIFY(std::none_of(matches.cbegin(), matches.cend(), [](const KRunner::QueryMatch &match) {
         return match.text() == QLatin1String("Konsole ServiceRunnerTest");
     }));
-
-    // Query too short to match any category
-    matches = launchQuery(QStringLiteral("Dumm"));
-    QVERIFY(matches.isEmpty());
 }
 
 void ServiceRunnerTest::testJumpListActions()
