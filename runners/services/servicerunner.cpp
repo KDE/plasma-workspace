@@ -1,7 +1,7 @@
 /*
     SPDX-FileCopyrightText: 2006 Aaron Seigo <aseigo@kde.org>
     SPDX-FileCopyrightText: 2014 Vishesh Handa <vhanda@kde.org>
-    SPDX-FileCopyrightText: 2016-2020 Harald Sitter <sitter@kde.org>
+    SPDX-FileCopyrightText: 2016-2025 Harald Sitter <sitter@kde.org>
     SPDX-FileCopyrightText: 2022-2023 Alexander Lohnau <alexander.lohnau@gmx.de>
 
     SPDX-License-Identifier: LGPL-2.0-only
@@ -21,6 +21,7 @@
 #include <QUrlQuery>
 
 #include <KApplicationTrader>
+#include <KFuzzyMatcher>
 #include <KLocalizedString>
 #include <KNotificationJobUiDelegate>
 #include <KServiceAction>
@@ -42,13 +43,6 @@ namespace
 int weightedLength(const QString &query)
 {
     return KStringHandler::logicalLength(query);
-}
-
-inline bool contains(const QString &result, const QList<QStringView> &queryList)
-{
-    return std::ranges::all_of(queryList, [&result](QStringView query) {
-        return result.contains(query, Qt::CaseInsensitive);
-    });
 }
 
 inline bool contains(const QStringList &results, const QList<QStringView> &queryList)
@@ -115,36 +109,6 @@ private:
         qCDebug(RUNNER_SERVICES) << service->name() << "disqualified?" << ret;
         seen(service);
         return ret;
-    }
-
-    enum class Category {
-        Name,
-        GenericName,
-        Comment,
-    };
-    qreal increaseMatchRelevance(const QString &serviceProperty, const QList<QStringView> &strList, Category category)
-    {
-        // Increment the relevance based on all the words (other than the first) of the query list
-        qreal relevanceIncrement = 0;
-
-        for (int i = 1; i < strList.size(); ++i) {
-            const auto &str = strList.at(i);
-            if (category == Category::Name) {
-                if (serviceProperty.contains(str, Qt::CaseInsensitive)) {
-                    relevanceIncrement += 0.01;
-                }
-            } else if (category == Category::GenericName) {
-                if (serviceProperty.contains(str, Qt::CaseInsensitive)) {
-                    relevanceIncrement += 0.01;
-                }
-            } else if (category == Category::Comment) {
-                if (serviceProperty.contains(str, Qt::CaseInsensitive)) {
-                    relevanceIncrement += 0.01;
-                }
-            }
-        }
-
-        return relevanceIncrement;
     }
 
     void setupMatch(const KService::Ptr &service, KRunner::QueryMatch &match)
@@ -216,85 +180,85 @@ private:
         return resultingArgs.join(QLatin1Char(' '));
     }
 
-    void matchNameKeywordAndGenericName()
+    struct Score {
+        int value;
+        KRunner::QueryMatch::CategoryRelevance categoryRelevance;
+    };
+    [[nodiscard]] std::optional<Score> fuzzyScore(KService::Ptr service)
     {
-        const auto nameKeywordAndGenericNameFilter = [this](const KService::Ptr &service) {
-            // Name
-            if (contains(service->name(), queryList)) {
-                return true;
-            }
-            // If the term length is < 3, no real point searching the untranslated Name, Keywords and GenericName
-            if (weightedTermLength < 3) {
-                return false;
-            }
-            if (contains(service->untranslatedName(), queryList)) {
-                return true;
-            }
+        const auto name = service->name();
 
-            // Keywords
-            if (contains(service->keywords(), queryList)) {
-                return true;
-            }
-            // GenericName
-            if (contains(service->genericName(), queryList) || contains(service->untranslatedGenericName(), queryList)) {
-                return true;
-            }
-            // Comment
-            if (contains(service->comment(), queryList)) {
-                return true;
-            }
+        // Absolute match. Can't get any better than this.
+        if (name.compare(query, Qt::CaseInsensitive) == 0) {
+            return Score{.value = std::numeric_limits<decltype(Score::value)>::max(), .categoryRelevance = KRunner::QueryMatch::CategoryRelevance::Highest};
+        }
 
-            return false;
+        auto makeScore = [this](const auto &string) {
+            qreal score = 0;
+            for (const auto &queryItem : queryList) {
+                if (auto result = KFuzzyMatcher::match(queryItem, string); [&] {
+                        qDebug() << "KFuzzyMatcher:" << queryItem << "against" << string << "resulted in" << result.matched << "with score" << result.score;
+                        return result.matched && result.score > 0;
+                    }()) {
+                    score += result.score;
+                    if (string.startsWith(queryItem, Qt::CaseInsensitive)) {
+                        score *= 2;
+                    }
+                }
+            }
+            return score;
         };
 
+        auto makeScoreFromList = [&makeScore](const QStringList &strings) {
+            qreal score = 0;
+            uint matched = 1;
+            for (const auto &string : strings) {
+                score += makeScore(string);
+                matched += 1;
+            }
+            return score / matched; // Average the score. If we have 10 keywords matching we'd get a huge score for no reason
+        };
+
+        // Note for the future: we could multiply the scores by decreasing values from 1.0, 0.9, … but be mindful that this complicates the scoring logic
+        // and, more importantly, skews the results. A poor name match would easily outscore a good keyword match.
+        const std::map<qreal, KRunner::QueryMatch::CategoryRelevance> confidences = {
+            {makeScore(name), KRunner::QueryMatch::CategoryRelevance::High},
+            {makeScore(service->untranslatedName()), KRunner::QueryMatch::CategoryRelevance::High},
+            {makeScore(service->genericName()), KRunner::QueryMatch::CategoryRelevance::Moderate},
+            {makeScoreFromList(service->keywords()), KRunner::QueryMatch::CategoryRelevance::Moderate},
+            {makeScore(service->comment()), KRunner::QueryMatch::CategoryRelevance::Low},
+        };
+
+        const auto finalScore = std::accumulate(confidences.begin(), confidences.end(), 0, [](const auto &acc, const auto &pair) {
+            return acc + pair.first;
+        });
+
+        if (finalScore <= 0) {
+            qCDebug(RUNNER_SERVICES) << "No score for" << name << "with query" << query;
+            return std::nullopt; // No score, no match.
+        }
+
+        qDebug() << "Final score for" << name << "is" << finalScore << "with category relevance" << qToUnderlying(confidences.rbegin()->second);
+        return Score{.value = finalScore, .categoryRelevance = confidences.rbegin()->second};
+    }
+
+    void matchNameKeywordAndGenericName()
+    {
         for (const KService::Ptr &service : m_services) {
-            if (!nameKeywordAndGenericNameFilter(service) || disqualify(service)) {
+            if (disqualify(service)) {
                 continue;
             }
 
-            const QString id = service->storageId();
-            const QString name = service->name();
-
-            KRunner::QueryMatch::CategoryRelevance categoryRelevance = KRunner::QueryMatch::CategoryRelevance::Moderate;
-            qreal relevance(0.6);
-
-            // If the term was < 3 chars and NOT at the beginning of the App's name, then chances are the user doesn't want that app
-            if (weightedTermLength < 3) {
-                if (name.startsWith(query, Qt::CaseInsensitive)) {
-                    relevance = 0.9;
-                } else {
-                    continue;
-                }
-            } else if (name.compare(query, Qt::CaseInsensitive) == 0) {
-                relevance = 1;
-                categoryRelevance = KRunner::QueryMatch::CategoryRelevance::Highest;
-            } else if (const auto idx = name.indexOf(queryList[0], 0, Qt::CaseInsensitive); idx != -1) {
-                relevance = 0.8;
-                relevance += increaseMatchRelevance(name, queryList, Category::Name);
-                if (idx == 0) {
-                    relevance += 0.1;
-                    categoryRelevance = KRunner::QueryMatch::CategoryRelevance::High;
-                }
-            } else if (const auto idx = service->genericName().indexOf(queryList[0], 0, Qt::CaseInsensitive); idx != -1) {
-                relevance = 0.65;
-                relevance += increaseMatchRelevance(service->genericName(), queryList, Category::GenericName);
-                if (idx == 0) {
-                    relevance += 0.05;
-                }
-            } else if (const auto idx = service->comment().indexOf(queryList[0], 0, Qt::CaseInsensitive); idx != -1) {
-                relevance = 0.5;
-                relevance += increaseMatchRelevance(service->comment(), queryList, Category::Comment);
-                if (idx == 0) {
-                    relevance += 0.05;
-                }
+            auto score = fuzzyScore(service);
+            if (!score) {
+                continue;
             }
 
             KRunner::QueryMatch match(m_runner);
-            match.setCategoryRelevance(categoryRelevance);
             setupMatch(service, match);
-
-            qCDebug(RUNNER_SERVICES) << name << "is this relevant:" << relevance;
-            match.setRelevance(relevance);
+            match.setCategoryRelevance(score->categoryRelevance);
+            match.setRelevance(score->value);
+            qCDebug(RUNNER_SERVICES) << match.text() << "is this relevant:" << match.relevance() << "category relevance" << match.categoryRelevance();
 
             matches << match;
         }
