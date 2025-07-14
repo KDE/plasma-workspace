@@ -113,8 +113,6 @@ ShellCorona::ShellCorona(QObject *parent)
     , m_shellContainmentConfig(nullptr)
 {
     setupWaylandIntegration();
-    qmlRegisterUncreatableType<DesktopView>("org.kde.plasma.shell", 2, 0, "Desktop", QStringLiteral("It is not possible to create objects of type Desktop"));
-    qmlRegisterUncreatableType<PanelView>("org.kde.plasma.shell", 2, 0, "Panel", QStringLiteral("It is not possible to create objects of type Panel"));
 
     qDBusRegisterMetaType<QColor>();
 
