@@ -17,21 +17,20 @@
 #include <QTimer>
 #include <QUrl>
 
+#include "spaceupdatemonitor_p.h"
+
 SpaceMonitor::SpaceMonitor(QObject *parent)
     : QObject(parent)
-    , m_spaceWatcher(new QTimer(this))
+    , m_spaceUpdateMonitor(SpaceUpdateMonitor::instance())
 {
     qCDebug(APPLETS::DEVICENOTIFIER) << "Begin initializing Space Monitor";
-    m_spaceWatcher->setSingleShot(true);
-    m_spaceWatcher->setInterval(std::chrono::minutes(1));
-    connect(m_spaceWatcher, &QTimer::timeout, this, &SpaceMonitor::updateAllStorageSpaces);
+    connect(m_spaceUpdateMonitor.get(), &SpaceUpdateMonitor::updateSpace, this, &SpaceMonitor::updateAllStorageSpaces);
     qCDebug(APPLETS::DEVICENOTIFIER) << "Space Monitor initialized";
 }
 
 SpaceMonitor::~SpaceMonitor()
 {
     qCDebug(APPLETS::DEVICENOTIFIER) << "Space Monitor was removed";
-    m_spaceWatcher->stop();
 }
 
 std::shared_ptr<SpaceMonitor> SpaceMonitor::instance()
@@ -59,20 +58,6 @@ double SpaceMonitor::getFreeSize(const QString &udi) const
         return it->freeSize;
     }
     return -1;
-}
-
-void SpaceMonitor::setIsVisible(bool status)
-{
-    qCDebug(APPLETS::DEVICENOTIFIER) << "Space Monitor: is Visible changed to " << status;
-    if (status) {
-        m_spaceWatcher->setSingleShot(false);
-        if (!m_spaceWatcher->isActive()) {
-            updateAllStorageSpaces();
-            m_spaceWatcher->start();
-        }
-    } else {
-        m_spaceWatcher->setSingleShot(true);
-    }
 }
 
 void SpaceMonitor::addMonitoringDevice(const QString &udi, const std::shared_ptr<StateInfo> &info)

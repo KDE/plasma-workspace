@@ -8,6 +8,7 @@
 #include "actionscontrol.h"
 
 #include <QAbstractListModel>
+#include <QTimer>
 #include <qqmlregistration.h>
 
 #include "stateinfo.h"
