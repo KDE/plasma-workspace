@@ -25,14 +25,15 @@
 #include <actions/openwithfilemanageraction.h>
 #include <actions/unmountaction.h>
 
-ActionsControl::ActionsControl(const std::shared_ptr<StorageInfo> &storageInfo, QObject *parent)
+ActionsControl::ActionsControl(const std::shared_ptr<StorageInfo> &storageInfo, const std::shared_ptr<StateInfo> &stateInfo, QObject *parent)
     : QAbstractListModel(parent)
     , m_storageInfo(storageInfo)
+    , m_stateInfo(stateInfo)
     , m_predicatesMonitor(PredicatesMonitor::instance())
 
 {
-    m_defaultAction = new MountAndOpenAction{m_storageInfo, this};
-    m_unmountAction = new UnmountAction{m_storageInfo, this};
+    m_defaultAction = new MountAndOpenAction{m_storageInfo, stateInfo, this};
+    m_unmountAction = new UnmountAction{m_storageInfo, stateInfo, this};
 
     qCDebug(APPLETS::DEVICENOTIFIER) << "begin initializing Action Controller for device: " << m_storageInfo->device().udi()
                                      << "; Default action: " << m_defaultAction->predicate();
@@ -140,7 +141,7 @@ void ActionsControl::actionTriggered(const QString &name)
 
 void ActionsControl::addActions()
 {
-    ActionInterface *action = new CheckAction(m_storageInfo, this);
+    ActionInterface *action = new CheckAction(m_storageInfo, m_stateInfo, this);
     connect(action, &ActionInterface::isValidChanged, this, &ActionsControl::onIsActionValidChanged);
     if (action->isValid()) {
         m_actions.append(action);
@@ -148,7 +149,7 @@ void ActionsControl::addActions()
         m_notValidActions[action->name()] = std::make_pair(m_actions.size(), action);
     }
 
-    action = new MountAction(m_storageInfo, this);
+    action = new MountAction(m_storageInfo, m_stateInfo, this);
     connect(action, &ActionInterface::isValidChanged, this, &ActionsControl::onIsActionValidChanged);
     if (action->isValid()) {
         m_actions.append(action);
@@ -156,7 +157,7 @@ void ActionsControl::addActions()
         m_notValidActions[action->name()] = std::make_pair(m_actions.size(), action);
     }
 
-    action = new OpenWithFileManagerAction(m_storageInfo, this);
+    action = new OpenWithFileManagerAction(m_storageInfo, m_stateInfo, this);
     connect(action, &ActionInterface::isValidChanged, this, &ActionsControl::onIsActionValidChanged);
     if (action->isValid()) {
         m_actions.append(action);

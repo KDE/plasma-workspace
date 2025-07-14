@@ -40,10 +40,10 @@ PlasmaExtras.ExpandableListItem {
     property bool hasMessage: deviceItem.deviceMessage !== ""
 
     //Shows true whenever the device is idle and present in the system.
-    readonly property bool isFree: !deviceItem.deviceIsBusy && deviceItem.deviceState !== DevicesStateMonitor.NotPresent
+    readonly property bool isFree: !deviceItem.deviceIsBusy && deviceItem.deviceState !== StateInfo.NotPresent
 
     //Shows true whenever the device finished some job
-    readonly property bool isOperationFinished: deviceItem.isFree && deviceItem.deviceState !== DevicesStateMonitor.Idle
+    readonly property bool isOperationFinished: deviceItem.isFree && deviceItem.deviceState !== StateInfo.Idle
 
     onIsOperationFinishedChanged: {
         if (deviceItem.isOperationFinished) {
@@ -58,7 +58,7 @@ PlasmaExtras.ExpandableListItem {
     }
 
     onDeviceStateChanged: {
-        if (deviceItem.deviceState === DevicesStateMonitor.Unmounting) {
+        if (deviceItem.deviceState === StateInfo.Unmounting) {
             unmountTimer.restart();
         }
     }
@@ -95,21 +95,21 @@ PlasmaExtras.ExpandableListItem {
         if (deviceItem.isOperationFinished && deviceItem.hasMessage) {
             return deviceItem.deviceMessage
         }
-        if (deviceItem.deviceState === DevicesStateMonitor.Checking) {
+        if (deviceItem.deviceState === StateInfo.Checking) {
             return i18nc("Accessing is a less technical word for Mounting; translation should be short and mean \'Currently mounting this device\'", "Checking…")
-        } else if (deviceItem.deviceState === DevicesStateMonitor.Repairing) {
+        } else if (deviceItem.deviceState === StateInfo.Repairing) {
             return i18nc("Accessing is a less technical word for Mounting; translation should be short and mean \'Currently mounting this device\'", "Repairing…")
         } else if (!deviceItem.deviceIsBusy) {
             if (deviceItem.deviceFreeSpace > 0 && deviceItem.deviceSize > 0) {
                 return i18nc("@info:status Free disk space", "%1 free of %2", deviceItem.deviceFreeSpaceText, deviceItem.deviceSizeText)
             }
             return ""
-        } else if (deviceItem.deviceState === DevicesStateMonitor.Mounting) {
+        } else if (deviceItem.deviceState === StateInfo.Mounting) {
             return i18nc("Accessing is a less technical word for Mounting; translation should be short and mean \'Currently mounting this device\'", "Accessing…")
-        } else if (deviceItem.deviceState === DevicesStateMonitor.Unmounting && unmountTimer.running) {
+        } else if (deviceItem.deviceState === StateInfo.Unmounting && unmountTimer.running) {
             // Unmounting; shown if unmount takes less than 1 second
             return i18nc("Removing is a less technical word for Unmounting; translation should be short and mean \'Currently unmounting this device\'", "Removing…")
-        } else if (deviceItem.deviceState === DevicesStateMonitor.Unmounting) {
+        } else if (deviceItem.deviceState === StateInfo.Unmounting) {
             // Unmounting; shown if unmount takes longer than 1 second
             return i18n("Don't unplug yet! Files are still being transferred…")
         }

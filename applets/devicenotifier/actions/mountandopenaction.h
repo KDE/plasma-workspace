@@ -12,7 +12,7 @@
 
 #include "actioninterface.h"
 
-#include <devicestatemonitor_p.h>
+#include <stateinfo.h>
 
 class MountAndOpenAction : public ActionInterface
 {
@@ -21,7 +21,7 @@ class MountAndOpenAction : public ActionInterface
     Q_INTERFACES(ActionInterface)
 
 public:
-    explicit MountAndOpenAction(const std::shared_ptr<StorageInfo> &storageInfo, QObject *parent = nullptr);
+    explicit MountAndOpenAction(const std::shared_ptr<StorageInfo> &storageInfo, const std::shared_ptr<StateInfo> &stateInfo, QObject *parent = nullptr);
     ~MountAndOpenAction() override;
 
     QString predicate() const override;
@@ -34,8 +34,8 @@ public:
     QString text() const override;
 
 private Q_SLOTS:
-    void updateAction(const QString &udi);
-    void deviceStateChanged(const QString &udi);
+    void updateAction();
+    void deviceStateChanged();
 
 private:
     bool m_hasStorageAccess;
@@ -49,5 +49,5 @@ private:
     QString m_icon;
     QString m_text;
 
-    std::shared_ptr<DevicesStateMonitor> m_stateMonitor;
+    std::shared_ptr<StateInfo> m_stateInfo;
 };

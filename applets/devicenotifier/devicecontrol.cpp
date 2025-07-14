@@ -28,7 +28,6 @@ inline constexpr auto REMOVE_INTERVAL = 5s;
 DeviceControl::DeviceControl(QObject *parent)
     : QAbstractListModel(parent)
     , m_spaceMonitor(SpaceMonitor::instance())
-    , m_stateMonitor(DevicesStateMonitor::instance())
     , m_messageMonitor(DeviceMessageMonitor::instance())
 
 {
@@ -43,7 +42,6 @@ DeviceControl::DeviceControl(QObject *parent)
     connect(Solid::DeviceNotifier::instance(), &Solid::DeviceNotifier::deviceRemoved, this, &DeviceControl::onDeviceRemoved);
 
     connect(m_spaceMonitor.get(), &SpaceMonitor::sizeChanged, this, &DeviceControl::onDeviceSizeChanged);
-    connect(m_stateMonitor.get(), &DevicesStateMonitor::stateChanged, this, &DeviceControl::onDeviceStatusChanged);
     connect(m_messageMonitor.get(), &DeviceMessageMonitor::messageChanged, this, &DeviceControl::onDeviceMessageChanged);
     qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: Initialized";
 }
@@ -78,7 +76,7 @@ QVariant DeviceControl::data(const QModelIndex &index, int role) const
     case Description:
         return deviceInfo.storageInfo ? deviceInfo.storageInfo->description() : QVariant();
     case IsBusy:
-        return m_stateMonitor->isBusy(deviceInfo.storageInfo->device().udi());
+        return deviceInfo.stateInfo ? deviceInfo.stateInfo->isBusy() : QVariant();
     case IsRemovable: {
         return deviceInfo.storageInfo ? deviceInfo.storageInfo->isRemovable() : QVariant();
     }
@@ -94,21 +92,18 @@ QVariant DeviceControl::data(const QModelIndex &index, int role) const
         double freeSpace = m_spaceMonitor->getFreeSize(deviceInfo.storageInfo->device().udi());
         return freeSpace != -1 ? KFormat().formatByteSize(freeSpace) : QString();
     }
-    case Mounted: {
-        return m_stateMonitor->isMounted(deviceInfo.storageInfo->device().udi());
-    }
-
-    case State: {
-        return m_stateMonitor->getState(deviceInfo.storageInfo->device().udi());
-    }
+    case Mounted:
+        return deviceInfo.stateInfo ? deviceInfo.stateInfo->isMounted() : QVariant();
+    case State:
+        return deviceInfo.stateInfo ? deviceInfo.stateInfo->getState() : QVariant();
     case Timestamp: {
-        return m_stateMonitor->getDeviceTimeStamp(deviceInfo.storageInfo->device().udi());
+        return deviceInfo.stateInfo ? deviceInfo.stateInfo->getDeviceTimeStamp() : QVariant();
     }
     case Type: {
         return deviceInfo.storageInfo ? deviceInfo.storageInfo->type() : QVariant();
     }
     case OperationResult:
-        return m_stateMonitor->getOperationResult(deviceInfo.storageInfo->device().udi());
+        return deviceInfo.stateInfo ? deviceInfo.stateInfo->getOperationResult() : QVariant();
     case Message:
         return m_messageMonitor->getMessage(deviceInfo.storageInfo->device().udi());
     case Actions: {
@@ -159,7 +154,10 @@ void DeviceControl::onDeviceAdded(const QString &udi)
         return;
     }
 
-    auto actions = new ActionsControl(storageInfo, this);
+    auto stateInfo = std::make_shared<StateInfo>(storageInfo);
+
+    auto actions = new ActionsControl(storageInfo, stateInfo, this);
+
     if (!storageInfo->isEncrypted() && actions->isEmpty()) {
         qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: device : " << udi << " is not in our interest. Skipping";
         actions->deleteLater();
@@ -178,17 +176,16 @@ void DeviceControl::onDeviceAdded(const QString &udi)
     beginInsertRows(QModelIndex(), position, position);
 
     qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: Add device: " << udi << " to the model at position : " << position;
-    m_stateMonitor->addMonitoringDevice(udi);
-    m_spaceMonitor->addMonitoringDevice(udi);
-    m_messageMonitor->addMonitoringDevice(udi);
+    m_spaceMonitor->addMonitoringDevice(udi, stateInfo);
+    m_messageMonitor->addMonitoringDevice(udi, stateInfo);
 
-    DeviceInfo deviceInfo{
-        storageInfo,
-    };
+    DeviceInfo deviceInfo{storageInfo, stateInfo};
 
     m_devices.append(deviceInfo);
     m_devicesUdi.insert(udi);
     endInsertRows();
+
+    connect(stateInfo.get(), &StateInfo::stateChanged, this, &DeviceControl::onDeviceStatusChanged);
 
     // Save storage drive parent for storage volumes to delay remove it and to properly remove it from device model
     // if device was physically removed from the computer. Storage volume with storage drive parent need to
@@ -306,7 +303,6 @@ void DeviceControl::deviceDelayRemove(const QString &udi, const QString &parentU
                                      << " successfully removed from the model";
     m_devices.removeAt(position.value());
     m_devicesUdi.remove(udi);
-    m_stateMonitor->removeMonitoringDevice(udi);
     m_messageMonitor->removeMonitoringDevice(udi);
     endRemoveRows();
 

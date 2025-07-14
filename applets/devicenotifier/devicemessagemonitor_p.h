@@ -12,8 +12,7 @@
 #include <Solid/SolidNamespace>
 
 #include <storageinfo.h>
-
-class DevicesStateMonitor;
+#include "stateinfo.h"
 
 /**
  * Class that monitors error messages for devices
@@ -25,7 +24,7 @@ class DeviceMessageMonitor : public QObject
 public:
     static std::shared_ptr<DeviceMessageMonitor> instance();
 
-    void addMonitoringDevice(const QString &udi);
+    void addMonitoringDevice(const QString &udi, const std::shared_ptr<StateInfo> &info);
     void removeMonitoringDevice(const QString &udi);
 
     QString getMessage(const QString &udi);
@@ -41,12 +40,14 @@ Q_SIGNALS:
 private Q_SLOTS:
     void onStateChanged(const QString &udi);
     void notify(const std::optional<QString> &message, const QString &info, const QString &udi);
-    bool isSafelyRemovable(const QString &udi) const;
     void queryBlockingApps(const QString &devicePath);
     void clearPreviousMessage(const QString &udi);
 
 private:
-    QHash<QString, QString> m_deviceMessages;
+    struct DeviceInfo {
+        QString message;
+        std::shared_ptr<StateInfo> state;
+    };
 
-    std::shared_ptr<DevicesStateMonitor> m_deviceStateMonitor;
+    QHash<QString, DeviceInfo> m_deviceMessages;
 };

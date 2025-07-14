@@ -23,15 +23,11 @@
 #include <processcore/process.h>
 #include <processcore/processes.h>
 
-#include "devicestatemonitor_p.h"
-
 using namespace Qt::StringLiterals;
 
 DeviceMessageMonitor::DeviceMessageMonitor(QObject *parent)
     : QObject(parent)
-    , m_deviceStateMonitor(DevicesStateMonitor::instance())
 {
-    connect(m_deviceStateMonitor.get(), &DevicesStateMonitor::stateChanged, this, &DeviceMessageMonitor::onStateChanged);
 }
 
 std::shared_ptr<DeviceMessageMonitor> DeviceMessageMonitor::instance()
@@ -45,13 +41,17 @@ std::shared_ptr<DeviceMessageMonitor> DeviceMessageMonitor::instance()
     return s_clip.lock();
 }
 
-void DeviceMessageMonitor::addMonitoringDevice(const QString &udi)
+void DeviceMessageMonitor::addMonitoringDevice(const QString &udi, const std::shared_ptr<StateInfo> &info)
 {
     Solid::Device device(udi);
 
     if (!device.isValid()) {
         return;
     }
+
+    m_deviceMessages.insert(udi, {QString(), info});
+
+    connect(info.get(), &StateInfo::stateChanged, this, &DeviceMessageMonitor::onStateChanged);
 
     // Check for messages that we potentially missed
     onStateChanged(udi);
@@ -67,29 +67,9 @@ void DeviceMessageMonitor::removeMonitoringDevice(const QString &udi)
 QString DeviceMessageMonitor::getMessage(const QString &udi)
 {
     if (auto it = m_deviceMessages.constFind(udi); it != m_deviceMessages.cend()) {
-        return it.value();
+        return it.value().message;
     }
     return {};
-}
-
-bool DeviceMessageMonitor::isSafelyRemovable(const QString &udi) const
-{
-    Solid::Device device(udi);
-    if (device.is<Solid::StorageVolume>()) {
-        auto drive = getAncestorAs<Solid::StorageDrive>(device);
-        if (!drive /* Already removed from elsewhere */ || !drive->isValid()) {
-            return true;
-        }
-        return !drive->isInUse() && (drive->isHotpluggable() || drive->isRemovable());
-    }
-
-    auto access = device.as<Solid::StorageAccess>();
-    if (access) {
-        return !access->isAccessible();
-    }
-    // If this check fails, the device has been already physically
-    // ejected, so no need to say that it is safe to remove it
-    return false;
 }
 
 void DeviceMessageMonitor::queryBlockingApps(const QString &devicePath)
@@ -129,34 +109,38 @@ void DeviceMessageMonitor::clearPreviousMessage(const QString &udi)
 
 void DeviceMessageMonitor::onStateChanged(const QString &udi)
 {
+    if (!m_deviceMessages.contains(udi)) {
+        return;
+    }
+
     qCDebug(APPLETS::DEVICENOTIFIER) << "Device Message Monitor: "
                                      << "State change signal arrived for device " << udi;
 
-    if (m_deviceStateMonitor->isBusy(udi)) {
+    if (m_deviceMessages[udi].state->isBusy()) {
         qCDebug(APPLETS::DEVICENOTIFIER) << "Device Message Monitor: "
                                          << "The device in work. Reset the errors for " << udi;
         notify(QString(), QString(), udi);
         return;
     }
 
-    auto operationResult = m_deviceStateMonitor->getOperationResult(udi);
-    auto state = m_deviceStateMonitor->getState(udi);
+    auto operationResult = m_deviceMessages[udi].state->getOperationResult();
+    auto state = m_deviceMessages[udi].state->getState();
 
-    if (state == DevicesStateMonitor::Idle) {
+    if (state == StateInfo::Idle) {
         notify(QString(), QString(), udi);
         qCDebug(APPLETS::DEVICENOTIFIER) << "Device Message Monitor: "
                                          << "device " << udi << " is in the idle state. No message";
         return;
     }
 
-    if (operationResult == Solid::ErrorType::NoError && state == DevicesStateMonitor::MountDone) {
+    if (operationResult == Solid::ErrorType::NoError && state == StateInfo::MountDone) {
         notify(QString(), QString(), udi);
         qCDebug(APPLETS::DEVICENOTIFIER) << "Device Message Monitor: "
                                          << "No message for device " << udi;
         return;
     }
 
-    auto operationInfo = m_deviceStateMonitor->getOperationInfo(udi);
+    auto operationInfo = m_deviceMessages[udi].state->getOperationInfo();
 
     // Bit awkward but oh well. The error message construction can defer an error to queryBlockingApps instead.
     // That makes it a tri-state return value between an error message, no error, and a deferred error.
@@ -166,16 +150,16 @@ void DeviceMessageMonitor::onStateChanged(const QString &udi)
     const auto errorVariant = [&] -> std::variant<std::optional<QString>, DeferredError> {
         switch (operationResult) {
         case Solid::ErrorType::NoError:
-            if (state == DevicesStateMonitor::CheckDone) {
+            if (state == StateInfo::CheckDone) {
                 if (!operationInfo.toBool()) {
                     return i18n("This device has file system errors.");
                 }
                 return i18nc("@label device is a storage disk", "This device has no errors");
             }
-            if (state == DevicesStateMonitor::RepairDone) {
+            if (state == StateInfo::RepairDone) {
                 return i18n("Successfully repaired!");
             }
-            if (state == DevicesStateMonitor::UnmountDone && isSafelyRemovable(udi)) {
+            if (state == StateInfo::UnmountDone && m_deviceMessages[udi].state->isSafelyRemovable()) {
                 KNotification::event(QStringLiteral("safelyRemovable"),
                                      i18n("Device Status"),
                                      i18n("A device can now be safely removed"),
@@ -188,9 +172,9 @@ void DeviceMessageMonitor::onStateChanged(const QString &udi)
 
         case Solid::ErrorType::UnauthorizedOperation:
             switch (state) {
-            case DevicesStateMonitor::MountDone:
+            case StateInfo::MountDone:
                 return i18n("You are not authorized to mount this device.");
-            case DevicesStateMonitor::UnmountDone: {
+            case StateInfo::UnmountDone: {
                 Solid::Device device(udi);
                 if (device.is<Solid::OpticalDisc>()) {
                     return i18n("You are not authorized to eject this disc.");
@@ -198,19 +182,19 @@ void DeviceMessageMonitor::onStateChanged(const QString &udi)
 
                 return i18nc("Remove is less technical for unmount", "You are not authorized to remove this device.");
             }
-            case DevicesStateMonitor::RepairDone:
+            case StateInfo::RepairDone:
                 return i18n("You are not authorized to repair this device.");
             default:
                 return i18n("Unknown error type");
             }
         case Solid::ErrorType::DeviceBusy: {
-            if (state == DevicesStateMonitor::MountDone) { // can this even happen?
+            if (state == StateInfo::MountDone) { // can this even happen?
                 return i18n("Could not mount this device as it is busy.");
             }
 
             QString deviceUdi = udi;
             Solid::Device device(udi);
-            if (state == DevicesStateMonitor::UnmountDone && device.is<Solid::OpticalDisc>()) {
+            if (state == StateInfo::UnmountDone && device.is<Solid::OpticalDisc>()) {
                 const auto discs = Solid::Device::listFromType(Solid::DeviceInterface::OpticalDisc);
                 for (const auto &disc : discs) {
                     if (disc.parentUdi() == udi) {
@@ -254,16 +238,16 @@ void DeviceMessageMonitor::onStateChanged(const QString &udi)
         }
         default: {
             switch (state) {
-            case DevicesStateMonitor::MountDone:
+            case StateInfo::MountDone:
                 return i18n("Could not mount this device.");
-            case DevicesStateMonitor::UnmountDone: {
+            case StateInfo::UnmountDone: {
                 Solid::Device device(udi);
                 if (device.is<Solid::OpticalDisc>()) {
                     return i18n("Could not eject this disc.");
                 }
                 return i18nc("Remove is less technical for unmount", "Could not remove this device.");
             }
-            case DevicesStateMonitor::RepairDone:
+            case StateInfo::RepairDone:
                 return i18n("Could not repair this device: %1").arg(operationInfo.toString());
             default:
                 return i18n("Unknown error type");
@@ -292,7 +276,7 @@ void DeviceMessageMonitor::notify(const std::optional<QString> &message, const Q
     Q_UNUSED(description)
 
     if (message.has_value()) {
-        m_deviceMessages[udi] = message.value();
+        m_deviceMessages[udi].message = message.value();
     } else {
         if (auto it = m_deviceMessages.constFind(udi); it != m_deviceMessages.cend()) {
             m_deviceMessages.erase(it);

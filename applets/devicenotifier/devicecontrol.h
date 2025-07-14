@@ -10,10 +10,10 @@
 #include <QAbstractListModel>
 #include <qqmlregistration.h>
 
+#include "stateinfo.h"
 #include "storageinfo.h"
 
 #include "devicemessagemonitor_p.h"
-#include "devicestatemonitor_p.h"
 #include "spacemonitor_p.h"
 
 class DeviceControl : public QAbstractListModel
@@ -64,6 +64,7 @@ private:
 
     struct DeviceInfo {
         std::shared_ptr<StorageInfo> storageInfo;
+        std::shared_ptr<StateInfo> stateInfo;
     };
 
     QList<DeviceInfo> m_devices;
@@ -80,6 +81,5 @@ private:
     QHash<QString, RemoveTimerData> m_removeTimers;
 
     std::shared_ptr<SpaceMonitor> m_spaceMonitor;
-    std::shared_ptr<DevicesStateMonitor> m_stateMonitor;
     std::shared_ptr<DeviceMessageMonitor> m_messageMonitor;
 };

@@ -14,6 +14,7 @@
 #include "predicatesmonitor_p.h"
 
 #include "storageinfo.h"
+#include "stateinfo.h"
 
 class ActionsControl : public QAbstractListModel
 {
@@ -36,7 +37,7 @@ public:
 
     Q_INVOKABLE void actionTriggered(const QString &operation);
 
-    explicit ActionsControl(const std::shared_ptr<StorageInfo> &storageInfo, QObject *parent = nullptr);
+    explicit ActionsControl(const std::shared_ptr<StorageInfo> &storageInfo, const std::shared_ptr<StateInfo> &stateInfo, QObject *parent = nullptr);
     ~ActionsControl() override;
 
     bool isEmpty() const;
@@ -79,6 +80,7 @@ private:
     QHash<QString, std::pair<int, ActionInterface *>> m_notValidActions;
 
     std::shared_ptr<StorageInfo> m_storageInfo;
+    std::shared_ptr<StateInfo> m_stateInfo;
 
     std::shared_ptr<PredicatesMonitor> m_predicatesMonitor;
 };

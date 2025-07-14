@@ -8,7 +8,7 @@
 
 #include <QHash>
 
-#include <devicestatemonitor_p.h>
+#include "stateinfo.h"
 
 /**
  * This class monitors the full and free size of devices
@@ -26,7 +26,7 @@ public:
 
     void setIsVisible(bool status);
 
-    void addMonitoringDevice(const QString &udi);
+    void addMonitoringDevice(const QString &udi, const std::shared_ptr<StateInfo> &info);
     void removeMonitoringDevice(const QString &udi);
     void forceUpdateSize(const QString &udi);
 
@@ -46,7 +46,12 @@ Q_SIGNALS:
 private:
     void updateStorageSpace(const QString &udi);
 
-    QHash<QString, std::pair<double, double>> m_sizes;
-    std::shared_ptr<DevicesStateMonitor> m_stateMonitor;
+    struct SizeInfo {
+        double fullSize;
+        double freeSize;
+        std::shared_ptr<StateInfo> info;
+    };
+
+    QHash<QString, SizeInfo> m_sizes;
     QTimer *m_spaceWatcher;
 };

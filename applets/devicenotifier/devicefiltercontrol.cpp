@@ -9,7 +9,6 @@
 #include <devicenotifier_debug.h>
 
 #include "devicecontrol.h"
-#include "devicestatemonitor_p.h"
 
 #include <QDBusConnection>
 #include <QDBusMessage>

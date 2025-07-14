@@ -18,7 +18,7 @@
 /**
  * This class is connected with solid, and monitors state of devices
  */
-class DevicesStateMonitor : public QObject
+class StateInfo : public QObject
 {
     Q_OBJECT
     QML_ELEMENT
@@ -40,18 +40,15 @@ public:
 
     Q_ENUM(State)
 
-    static std::shared_ptr<DevicesStateMonitor> instance();
-    ~DevicesStateMonitor() override;
+    explicit StateInfo(const std::shared_ptr<StorageInfo> &storageInfo, QObject *parent = nullptr);
+    ~StateInfo() override;
 
-    void addMonitoringDevice(const QString &udi);
-    void removeMonitoringDevice(const QString &udi);
-
-    bool isBusy(const QString &udi) const;
-    bool isRemovable(const QString &udi) const;
-    bool isMounted(const QString &udi) const;
-    bool isChecked(const QString &udi) const;
-    bool needRepair(const QString &udi) const;
-    QDateTime getDeviceTimeStamp(const QString &udi) const;
+    bool isBusy() const;
+    bool isMounted() const;
+    bool isChecked() const;
+    bool needRepair() const;
+    bool isSafelyRemovable() const;
+    QDateTime getDeviceTimeStamp() const;
 
     /**
      * Return current status of device:
@@ -63,12 +60,9 @@ public:
      *
      * Successful and unsuccessful states are changed to Idle after some time
      */
-    State getState(const QString &udi) const;
-    Solid::ErrorType getOperationResult(const QString &udi) const;
-    QVariant getOperationInfo(const QString &udi) const;
-
-private:
-    explicit DevicesStateMonitor(QObject *parent = nullptr);
+    State getState() const;
+    Solid::ErrorType getOperationResult() const;
+    QVariant getOperationInfo() const;
 
 private Q_SLOTS:
     void setAccessibilityState(bool isAccessible, const QString &udi);
@@ -86,17 +80,14 @@ Q_SIGNALS:
     void stateChanged(const QString &udi);
 
 private:
-    struct DeviceInfo {
-        bool isBusy;
-        bool isRemovable;
-        bool isMounted;
-        bool isChecked;
-        bool needRepair;
-        Solid::ErrorType operationResult;
-        QVariant operationInfo;
-        State state;
-        QDateTime deviceTimeStamp;
-    };
+    bool m_isBusy;
+    bool m_isMounted;
+    bool m_isChecked;
+    bool m_needRepair;
+    Solid::ErrorType m_operationResult;
+    QVariant m_operationInfo;
+    State m_state;
+    QDateTime m_deviceTimeStamp;
 
-    QHash<QString, DeviceInfo> m_devicesStates;
+    std::shared_ptr<StorageInfo> m_storageInfo;
 };

@@ -12,9 +12,11 @@
 
 #include <QStandardPaths>
 
-OpenWithFileManagerAction::OpenWithFileManagerAction(const std::shared_ptr<StorageInfo> &storageInfo, QObject *parent)
+OpenWithFileManagerAction::OpenWithFileManagerAction(const std::shared_ptr<StorageInfo> &storageInfo,
+                                                     const std::shared_ptr<StateInfo> &stateInfo,
+                                                     QObject *parent)
     : ActionInterface(storageInfo, parent)
-    , m_stateMonitor(DevicesStateMonitor::instance())
+    , m_stateInfo(stateInfo)
 {
     const QString actionUrl = QStandardPaths::locate(QStandardPaths::GenericDataLocation, u"solid/actions/" + predicate());
     auto services = KService(actionUrl).actions();
@@ -25,7 +27,7 @@ OpenWithFileManagerAction::OpenWithFileManagerAction(const std::shared_ptr<Stora
     m_text = services[0].text();
     m_icon = services[0].icon();
 
-    connect(m_stateMonitor.get(), &DevicesStateMonitor::stateChanged, this, &OpenWithFileManagerAction::updateIsValid);
+    connect(m_stateInfo.get(), &StateInfo::stateChanged, this, &OpenWithFileManagerAction::updateIsValid);
 
     m_isActionValid = true;
 }
@@ -39,7 +41,7 @@ QString OpenWithFileManagerAction::predicate() const
 
 bool OpenWithFileManagerAction::isValid() const
 {
-    return m_isActionValid && m_storageInfo->isRemovable() && m_stateMonitor->isMounted(m_storageInfo->device().udi());
+    return m_isActionValid && m_storageInfo->isRemovable() && m_stateInfo->isMounted();
 }
 
 QString OpenWithFileManagerAction::name() const
@@ -59,9 +61,8 @@ QString OpenWithFileManagerAction::text() const
 
 void OpenWithFileManagerAction::updateIsValid(const QString &udi)
 {
-    if (udi != m_storageInfo->device().udi()) {
-        return;
-    }
+    Q_UNUSED(udi);
+
     Q_EMIT isValidChanged(name(), isValid());
 }
 

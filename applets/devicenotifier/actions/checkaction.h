@@ -8,7 +8,7 @@
 
 #include "actioninterface.h"
 
-class DevicesStateMonitor;
+#include "stateinfo.h"
 
 class CheckAction : public ActionInterface
 {
@@ -17,7 +17,7 @@ class CheckAction : public ActionInterface
     Q_INTERFACES(ActionInterface)
 
 public:
-    explicit CheckAction(const std::shared_ptr<StorageInfo> &storageInfo, QObject *parent = nullptr);
+    explicit CheckAction(const std::shared_ptr<StorageInfo> &storageInfo, const std::shared_ptr<StateInfo> &stateInfo, QObject *parent = nullptr);
     ~CheckAction() override;
 
     void triggered() override;
@@ -32,5 +32,5 @@ private Q_SLOTS:
     void updateIsValid(const QString &udi);
 
 private:
-    std::shared_ptr<DevicesStateMonitor> m_stateMonitor;
+    std::shared_ptr<StateInfo> m_stateInfo;
 };

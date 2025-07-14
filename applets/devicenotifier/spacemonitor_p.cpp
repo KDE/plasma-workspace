@@ -25,8 +25,6 @@ SpaceMonitor::SpaceMonitor(QObject *parent)
     m_spaceWatcher->setSingleShot(true);
     m_spaceWatcher->setInterval(std::chrono::minutes(1));
     connect(m_spaceWatcher, &QTimer::timeout, this, &SpaceMonitor::updateAllStorageSpaces);
-    m_stateMonitor = DevicesStateMonitor::instance();
-    connect(m_stateMonitor.get(), &DevicesStateMonitor::stateChanged, this, &SpaceMonitor::deviceStateChanged);
     qCDebug(APPLETS::DEVICENOTIFIER) << "Space Monitor initialized";
 }
 
@@ -50,7 +48,7 @@ std::shared_ptr<SpaceMonitor> SpaceMonitor::instance()
 double SpaceMonitor::getFullSize(const QString &udi) const
 {
     if (auto it = m_sizes.constFind(udi); it != m_sizes.constEnd()) {
-        return it->first;
+        return it->fullSize;
     }
     return -1;
 }
@@ -58,7 +56,7 @@ double SpaceMonitor::getFullSize(const QString &udi) const
 double SpaceMonitor::getFreeSize(const QString &udi) const
 {
     if (auto it = m_sizes.constFind(udi); it != m_sizes.constEnd()) {
-        return it->second;
+        return it->freeSize;
     }
     return -1;
 }
@@ -77,9 +75,10 @@ void SpaceMonitor::setIsVisible(bool status)
     }
 }
 
-void SpaceMonitor::addMonitoringDevice(const QString &udi)
+void SpaceMonitor::addMonitoringDevice(const QString &udi, const std::shared_ptr<StateInfo> &info)
 {
     qCDebug(APPLETS::DEVICENOTIFIER) << "Space Monitor: Adding new device " << udi;
+    m_sizes.insert(udi, {-1, -1, info});
     updateStorageSpace(udi);
 }
 
@@ -132,8 +131,8 @@ void SpaceMonitor::updateStorageSpace(const QString &udi)
     auto *storageaccess = device.as<Solid::StorageAccess>();
     if (!storageaccess || !storageaccess->isAccessible()) {
         qCDebug(APPLETS::DEVICENOTIFIER) << "Space Monitor: failed to get storage access " << udi;
-        m_sizes[udi].first = -1;
-        m_sizes[udi].second = -1;
+        m_sizes[udi].fullSize = -1;
+        m_sizes[udi].freeSize = -1;
         Q_EMIT sizeChanged(udi);
         return;
     }
@@ -149,7 +148,8 @@ void SpaceMonitor::updateStorageSpace(const QString &udi)
             KIO::filesize_t size = job->size();
             KIO::filesize_t available = job->availableSize();
 
-            m_sizes[udi] = {size, available};
+            m_sizes[udi].fullSize = size;
+            m_sizes[udi].freeSize = available;
             qCDebug(APPLETS::DEVICENOTIFIER) << "Space Monitor: storage space update finished for " << udi << "Space: " << size << "FreeSpace: " << available;
             Q_EMIT sizeChanged(udi);
         } else {

@@ -12,9 +12,9 @@
 #include <Solid/OpticalDrive>
 #include <Solid/PortableMediaPlayer>
 
-UnmountAction::UnmountAction(const std::shared_ptr<StorageInfo> &storageInfo, QObject *parent)
+UnmountAction::UnmountAction(const std::shared_ptr<StorageInfo> &storageInfo, const std::shared_ptr<StateInfo> &stateInfo, QObject *parent)
     : ActionInterface(storageInfo, parent)
-    , m_stateMonitor(DevicesStateMonitor::instance())
+    , m_stateInfo(stateInfo)
 {
     m_hasStorageAccess = false;
     m_isRoot = false;
@@ -27,7 +27,7 @@ UnmountAction::UnmountAction(const std::shared_ptr<StorageInfo> &storageInfo, QO
         }
     }
 
-    connect(m_stateMonitor.get(), &DevicesStateMonitor::stateChanged, this, &UnmountAction::updateIsValid);
+    connect(m_stateInfo.get(), &StateInfo::stateChanged, this, &UnmountAction::updateIsValid);
 }
 
 UnmountAction::~UnmountAction() = default;
@@ -49,7 +49,7 @@ QString UnmountAction::text() const
 
 bool UnmountAction::isValid() const
 {
-    return m_hasStorageAccess && m_storageInfo->isRemovable() && !m_isRoot && m_stateMonitor->isMounted(m_storageInfo->device().udi());
+    return m_hasStorageAccess && m_storageInfo->isRemovable() && !m_isRoot && m_stateInfo->isMounted();
 }
 
 void UnmountAction::triggered()
@@ -74,9 +74,7 @@ void UnmountAction::triggered()
 
 void UnmountAction::updateIsValid(const QString &udi)
 {
-    if (udi != m_storageInfo->device().udi()) {
-        return;
-    }
+    Q_UNUSED(udi);
 
     Q_EMIT isValidChanged(name(), isValid());
 }

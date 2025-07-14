@@ -12,7 +12,6 @@
 
 #include <qqmlregistration.h>
 
-#include <devicestatemonitor_p.h>
 #include <spacemonitor_p.h>
 
 class DeviceFilterControl : public QSortFilterProxyModel
