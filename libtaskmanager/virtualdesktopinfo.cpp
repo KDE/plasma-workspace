@@ -438,6 +438,7 @@ void VirtualDesktopInfo::WaylandPrivate::addDesktop(const QString &id, quint32 p
     }
 
     auto desktop = std::make_unique<PlasmaVirtualDesktop>(virtualDesktopManagement->get_virtual_desktop(id), id);
+    desktop->position = position;
 
     connect(desktop.get(), &PlasmaVirtualDesktop::activated, this, [id, this]() {
         currentVirtualDesktop = id;
