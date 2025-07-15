@@ -72,7 +72,7 @@ public:
 
     void match(KRunner::RunnerContext &context)
     {
-        query = context.query();
+        query = context.query().toLower();
         // Splitting the query term to match using subsequences
         queryList = QStringView(query).split(QLatin1Char(' '));
         weightedTermLength = weightedLength(query);
@@ -185,8 +185,39 @@ private:
         return resultingArgs.join(QLatin1Char(' '));
     }
 
+    int levenshteinDistance(const QStringView &name, const QStringView &query)
+    {
+        if (name == query) {
+            return 0;
+        }
+
+        std::vector<int> distance0(query.size() + 1, 0);
+        std::vector<int> distance1(query.size() + 1, 0);
+
+        for (int i = 0; i <= query.size(); ++i) {
+            distance0[i] = i;
+        }
+
+        for (int i = 0; i < name.size(); ++i) {
+            distance1[0] = i + 1;
+            for (int j = 0; j < query.size(); ++j) {
+                auto deletionCost = distance0[j + 1] + 1;
+                auto insertionCost = distance1[j] + 1;
+                auto substitutionCost = [&] {
+                    if (name[i] == query[j]) {
+                        return distance0[j];
+                    }
+                    return distance0[j] + 1;
+                }();
+                distance1[j + 1] = std::min({deletionCost, insertionCost, substitutionCost});
+            }
+            std::swap(distance0, distance1);
+        }
+        return distance0[query.size()];
+    }
+
     struct Score {
-        int value;
+        qreal value;
         KRunner::QueryMatch::CategoryRelevance categoryRelevance;
     };
     [[nodiscard]] std::optional<Score> fuzzyScore(KService::Ptr service, KRunner::QueryMatch &match)
@@ -202,9 +233,17 @@ private:
             return Score{.value = std::numeric_limits<decltype(Score::value)>::max(), .categoryRelevance = KRunner::QueryMatch::CategoryRelevance::Highest};
         }
 
-        auto makeScore = [this, service, &match](const auto &string) {
-            qreal score = 0;
+        auto makeScoreInternal = [this, service, &match](const auto &string) {
+            std::optional<qreal> score;
+            if (string.isEmpty()) {
+                return score; // No string, no score.
+            }
             for (const auto &queryItem : queryList) {
+                if (string.startsWith(queryItem, Qt::CaseInsensitive)) {
+                    score = 1;
+                    continue;
+                }
+
                 if (qEnvironmentVariableIntValue("FZF") == 1) {
                     // FIXME converts queryItem to string; it shouldn't
                     // FIXME make this an option enum we can init by name so the bools become obvious
@@ -212,9 +251,12 @@ private:
                     auto result = x.first;
                     auto pos = x.second;
                     if (result.Score > 0) {
-                        score += result.Score;
+                        if (!score) {
+                            score = 0;
+                        }
+                        *score += result.Score;
                         if (string.startsWith(queryItem, Qt::CaseInsensitive)) {
-                            score *= 2;
+                            *score *= 2;
                         }
 
                         // FIXME huge hacky to suggest where the match is
@@ -231,14 +273,30 @@ private:
                             }
                         }
                     }
+                } else if (qEnvironmentVariableIntValue("LD") == 1) {
+                    const auto distance = levenshteinDistance(string, queryItem);
+                    qDebug() << "LD distance for" << string << "and" << queryItem << "is" << distance << (qreal(distance) / string.size());
+                    if (qreal(distance) / string.size() > 0.3) {
+                        // If the distance is more than 30% of the string length, we don't consider it a match.
+                        qCDebug(RUNNER_SERVICES) << "LD distance for" << string << "and" << queryItem << "is too high, skipping";
+                        continue;
+                    }
+                    if (!score) {
+                        score = 0;
+                    }
+                    *score += distance;
+                    qWarning() << "LD distance for" << string << "and" << queryItem << "is" << distance << "score" << score;
                 } else {
                     if (auto result = KFuzzyMatcher::match(queryItem, string); [&] {
                             qDebug() << "KFuzzyMatcher:" << queryItem << "against" << string << "resulted in" << result.matched << "with score" << result.score;
                             return result.matched && result.score > 0;
                         }()) {
-                        score += result.score;
+                        if (!score) {
+                            score = 0;
+                        }
+                        *score += result.score;
                         if (string.startsWith(queryItem, Qt::CaseInsensitive)) {
-                            score *= 2;
+                            *score *= 2;
                         }
                     }
                 }
@@ -246,35 +304,70 @@ private:
             return score;
         };
 
+        auto makeScore = [&](const auto &string, qreal multiplier) -> std::optional<qreal> {
+            auto score = makeScoreInternal(string);
+            if (score) {
+                return *score * multiplier;
+            }
+            return score;
+        };
+
         auto makeScoreFromList = [&makeScore](const QStringList &strings) {
-            qreal score = 0;
+            std::optional<qreal> score;
             uint matched = 1;
             for (const auto &string : strings) {
-                score += makeScore(string);
+                auto stringScore = makeScore(string, 0.5);
+                if (!stringScore) {
+                    continue;
+                }
+                score = score ? *score + *stringScore : *stringScore;
                 matched += 1;
             }
-            return score / matched; // Average the score. If we have 10 keywords matching we'd get a huge score for no reason
+            return score ? *score / matched : score; // Average the score. If we have 10 keywords matching we'd get a huge score for no reason
         };
 
         // Note for the future: we could multiply the scores by decreasing values from 1.0, 0.9, … but be mindful that this complicates the scoring logic
         // and, more importantly, skews the results. A poor name match would easily outscore a good keyword match.
-        const std::map<qreal, KRunner::QueryMatch::CategoryRelevance> confidences = {
-            {makeScore(name), KRunner::QueryMatch::CategoryRelevance::High},
-            {makeScore(service->untranslatedName()), KRunner::QueryMatch::CategoryRelevance::High},
-            {makeScore(service->genericName()), KRunner::QueryMatch::CategoryRelevance::Moderate},
+        const std::map<std::optional<qreal>, KRunner::QueryMatch::CategoryRelevance> confidences = {
+            {makeScore(name, 1.0), KRunner::QueryMatch::CategoryRelevance::High},
+            {makeScore(service->untranslatedName(), 0.9), KRunner::QueryMatch::CategoryRelevance::High},
+            {makeScore(service->genericName(), 0.7), KRunner::QueryMatch::CategoryRelevance::Moderate},
             {makeScoreFromList(service->keywords()), KRunner::QueryMatch::CategoryRelevance::Moderate},
             // FIXME: drop this since we seem to be leaning away from comments
             // {makeScore(service->comment()), KRunner::QueryMatch::CategoryRelevance::Low},
         };
 
-        const auto finalScore = std::accumulate(confidences.begin(), confidences.end(), 0, [](const auto &acc, const auto &pair) {
-            return acc + pair.first;
-        });
-
-        if (finalScore <= 0) {
+        if (std::ranges::all_of(confidences, [](const auto &pair) {
+                return !pair.first;
+            })) {
             qCDebug(RUNNER_SERVICES) << "No score for" << name << "with query" << query;
             return std::nullopt; // No score, no match.
         }
+
+        for (const auto &[score, relevance] : confidences) {
+            qCDebug(RUNNER_SERVICES) << "Score for" << name << "is" << score << "with category relevance" << qToUnderlying(relevance);
+        }
+
+        const qreal finalScore = [&] {
+            if (qEnvironmentVariableIntValue("LD") == 1) {
+                // FIXME LD behaves differently so we change the way scoring works adding (negative) distances to a base score. Super not ideal
+                qreal score = 1000;
+                for (const auto &[distance, relevance] : confidences) {
+                    if (!distance) {
+                        continue;
+                    }
+                    score += *distance;
+                }
+                return score;
+            }
+
+            return std::accumulate(confidences.begin(), confidences.end(), qreal(0), [](const auto &acc, const auto &pair) {
+                if (!pair.first) {
+                    return acc; // No score, no match.
+                }
+                return acc + *pair.first;
+            });
+        }();
 
         qDebug() << "Final score for" << name << "is" << finalScore << "with category relevance" << qToUnderlying(confidences.rbegin()->second);
         return Score{.value = finalScore, .categoryRelevance = confidences.rbegin()->second};
