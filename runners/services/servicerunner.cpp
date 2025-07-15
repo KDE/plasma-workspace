@@ -40,6 +40,8 @@ using namespace Qt::StringLiterals;
 namespace
 {
 
+#include "fzf.cpp"
+
 int weightedLength(const QString &query)
 {
     return KStringHandler::logicalLength(query);
@@ -116,7 +118,10 @@ private:
         const QString name = service->name();
         const QString exec = service->exec();
 
-        match.setText(name);
+        // FIXME huge hacky to support another huge hacky in fzf matching
+        if (match.text().isEmpty()) {
+            match.setText(name);
+        }
 
         QUrl url(service->storageId());
         url.setScheme(QStringLiteral("applications"));
@@ -184,8 +189,12 @@ private:
         int value;
         KRunner::QueryMatch::CategoryRelevance categoryRelevance;
     };
-    [[nodiscard]] std::optional<Score> fuzzyScore(KService::Ptr service)
+    [[nodiscard]] std::optional<Score> fuzzyScore(KService::Ptr service, KRunner::QueryMatch &match)
     {
+        if (queryList.isEmpty()) {
+            return std::nullopt; // No query, no score.
+        }
+
         const auto name = service->name();
 
         // Absolute match. Can't get any better than this.
@@ -193,16 +202,44 @@ private:
             return Score{.value = std::numeric_limits<decltype(Score::value)>::max(), .categoryRelevance = KRunner::QueryMatch::CategoryRelevance::Highest};
         }
 
-        auto makeScore = [this](const auto &string) {
+        auto makeScore = [this, service, &match](const auto &string) {
             qreal score = 0;
             for (const auto &queryItem : queryList) {
-                if (auto result = KFuzzyMatcher::match(queryItem, string); [&] {
-                        qDebug() << "KFuzzyMatcher:" << queryItem << "against" << string << "resulted in" << result.matched << "with score" << result.score;
-                        return result.matched && result.score > 0;
-                    }()) {
-                    score += result.score;
-                    if (string.startsWith(queryItem, Qt::CaseInsensitive)) {
-                        score *= 2;
+                if (qEnvironmentVariableIntValue("FZF") == 1) {
+                    // FIXME converts queryItem to string; it shouldn't
+                    // FIXME make this an option enum we can init by name so the bools become obvious
+                    auto x = FuzzyMatchV2(false, true, true, string.toLower(), queryItem.toString().toLower(), true);
+                    auto result = x.first;
+                    auto pos = x.second;
+                    if (result.Score > 0) {
+                        score += result.Score;
+                        if (string.startsWith(queryItem, Qt::CaseInsensitive)) {
+                            score *= 2;
+                        }
+
+                        // FIXME huge hacky to suggest where the match is
+                        if (pos) {
+                            QString text = string;
+                            for (auto it = pos->begin(); it != pos->end(); ++it) {
+                                const auto index = *it;
+                                text.insert(index + 1, QChar(0x0331));
+                            }
+                            if (match.text().isEmpty()) {
+                                match.setText(text);
+                            } else {
+                                match.setText(match.text() + " + "_L1 + text);
+                            }
+                        }
+                    }
+                } else {
+                    if (auto result = KFuzzyMatcher::match(queryItem, string); [&] {
+                            qDebug() << "KFuzzyMatcher:" << queryItem << "against" << string << "resulted in" << result.matched << "with score" << result.score;
+                            return result.matched && result.score > 0;
+                        }()) {
+                        score += result.score;
+                        if (string.startsWith(queryItem, Qt::CaseInsensitive)) {
+                            score *= 2;
+                        }
                     }
                 }
             }
@@ -226,7 +263,8 @@ private:
             {makeScore(service->untranslatedName()), KRunner::QueryMatch::CategoryRelevance::High},
             {makeScore(service->genericName()), KRunner::QueryMatch::CategoryRelevance::Moderate},
             {makeScoreFromList(service->keywords()), KRunner::QueryMatch::CategoryRelevance::Moderate},
-            {makeScore(service->comment()), KRunner::QueryMatch::CategoryRelevance::Low},
+            // FIXME: drop this since we seem to be leaning away from comments
+            // {makeScore(service->comment()), KRunner::QueryMatch::CategoryRelevance::Low},
         };
 
         const auto finalScore = std::accumulate(confidences.begin(), confidences.end(), 0, [](const auto &acc, const auto &pair) {
@@ -249,12 +287,12 @@ private:
                 continue;
             }
 
-            auto score = fuzzyScore(service);
+            KRunner::QueryMatch match(m_runner);
+            auto score = fuzzyScore(service, match);
             if (!score) {
                 continue;
             }
 
-            KRunner::QueryMatch match(m_runner);
             setupMatch(service, match);
             match.setCategoryRelevance(score->categoryRelevance);
             match.setRelevance(score->value);
@@ -386,6 +424,7 @@ ServiceRunner::ServiceRunner(QObject *parent, const KPluginMetaData &metaData)
 
 void ServiceRunner::init()
 {
+    Init("default"_L1);
     //  connect to the thread-local singleton here
     connect(KSycoca::self(), &KSycoca::databaseChanged, this, [this]() {
         if (m_matching) {
