@@ -21,7 +21,15 @@ KCM.SimpleKCM {
         verifyField.text = "";
         usertypeBox.currentIndex = 0;
     }
-    Component.onCompleted: realNameField.forceActiveFocus()
+
+    Component.onCompleted: {
+        kcm.mainUi.createUserEnabled = false;
+        realNameField.forceActiveFocus()
+    }
+
+    onBackRequested: {
+        kcm.mainUi.createUserEnabled = true;
+    }
 
     Kirigami.FormLayout {
         anchors.centerIn: parent
@@ -71,20 +79,41 @@ KCM.SimpleKCM {
         Debouncer {
             id: debouncer
         }
-        QQC2.Button {
-            text: i18n("Create")
-            enabled: !passwordWarning.visible
-                && realNameField.text !== ""
-                && userNameField.text !== ""
-                && passwordField.text !== ""
-                && verifyField.text !== ""
 
-            onClicked: {
-                if (passwordField.text !== verifyField.text) {
-                    debouncer.isTriggered = true;
-                    return;
+        RowLayout {
+            spacing: Kirigami.Units.smallSpacing
+            Layout.fillWidth: true
+            QQC2.Button {
+                icon.name: "list-add"
+                text: i18nc("@action:button Create a new user", "Create")
+                enabled: !passwordWarning.visible
+                    && realNameField.text !== ""
+                    && userNameField.text !== ""
+                    && passwordField.text !== ""
+                    && verifyField.text !== ""
+
+                onClicked: {
+                    if (passwordField.text !== verifyField.text) {
+                        debouncer.isTriggered = true;
+                        return;
+                    }
+                    kcm.mainUi.createUser(userNameField.text, realNameField.text, passwordField.text, (usertypeBox.model[usertypeBox.currentIndex]["type"] === "administrator"));
                 }
-                kcm.mainUi.createUser(userNameField.text, realNameField.text, passwordField.text, (usertypeBox.model[usertypeBox.currentIndex]["type"] === "administrator"));
+            }
+            Item {
+                Layout.fillWidth: true
+            }
+            QQC2.Button {
+                // Only displayed in desktop mode
+                icon.name: "dialog-cancel"
+                text: i18nc("@action:button Cancel creating new user", "Cancel")
+                visible: !Kirigami.Settings.isMobile
+
+                onClicked: {
+                    // Do not change page directly as it breaks navigation
+                    kcm.mainUi.createUserEnabled = true;
+                    kcm.mainUi.switchBackToUser();
+                }
             }
         }
     }
