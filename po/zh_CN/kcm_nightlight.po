@@ -84,7 +84,7 @@ msgstr "经度："
 #: ui/main.qml:75
 #, kde-format
 msgid "The blue light filter makes the colors on the screen warmer."
-msgstr ""
+msgstr "夜间颜色功能可以滤除蓝光，使屏幕以偏暖的颜色显示内容。"
 
 #: ui/main.qml:128 ui/main.qml:179 ui/main.qml:243
 #, kde-format
@@ -95,7 +95,7 @@ msgstr "%1K"
 #: ui/main.qml:136
 #, kde-format
 msgid "Day light temperature:"
-msgstr ""
+msgstr "日间色温："
 
 #: ui/main.qml:186 ui/main.qml:250
 #, kde-format
@@ -112,17 +112,17 @@ msgstr "暖"
 #: ui/main.qml:200
 #, kde-format
 msgid "Night light temperature:"
-msgstr ""
+msgstr "夜间色温："
 
 #: ui/main.qml:269
 #, kde-format
 msgid "Switching times:"
-msgstr ""
+msgstr "切换时间："
 
 #: ui/main.qml:272
 #, kde-format
 msgid "Always off"
-msgstr ""
+msgstr "总是关闭"
 
 #: ui/main.qml:273
 #, kde-format
@@ -142,7 +142,7 @@ msgstr "自定义时间"
 #: ui/main.qml:276
 #, kde-format
 msgid "Always on night light"
-msgstr ""
+msgstr "总是使用夜间色温"
 
 #: ui/main.qml:288
 #, kde-format
