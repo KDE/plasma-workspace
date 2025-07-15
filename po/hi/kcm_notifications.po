@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-12 00:45+0000\n"
+"POT-Creation-Date: 2025-07-15 00:46+0000\n"
 "PO-Revision-Date: 2024-12-15 19:31+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -38,7 +38,7 @@ msgstr "पॉपअप दिखाएँ"
 msgid "Show in do not disturb mode"
 msgstr "\"परेशान न करें को\" मोड में दिखाएँ"
 
-#: ui/ApplicationConfiguration.qml:132 ui/main.qml:208
+#: ui/ApplicationConfiguration.qml:132 ui/main.qml:204
 #, kde-format
 msgid "Show in history"
 msgstr "इतिहास में दिखाएँ"
@@ -107,7 +107,7 @@ msgctxt "@action:button Application-specific notifications"
 msgid "Application Settings"
 msgstr "अनुप्रयोग सेट्टिंग"
 
-#: ui/main.qml:96
+#: ui/main.qml:92
 #, kde-format
 msgid ""
 "Could not find a 'Notifications' widget, which is required for displaying "
@@ -117,31 +117,31 @@ msgstr ""
 "एक 'सूचनाएं' विजेट नहीं मिला, जो सूचनाएं प्रदर्शित करने के लिए आवश्यक है। सुनिश्चित करें कि "
 "यह आपके तंत्र तश्तरी में या एक स्वतंत्र विजेट के रूप में सक्षम है।"
 
-#: ui/main.qml:107
+#: ui/main.qml:103
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2' instead of Plasma."
 msgstr "सूचनाएं वर्तमान में प्लाज़्मा के बजाय '%1 %2' द्वारा प्रदान की जाती हैं।"
 
-#: ui/main.qml:111
+#: ui/main.qml:107
 #, kde-format
 msgid "Notifications are currently not provided by Plasma."
 msgstr "सूचनाएं वर्तमान में प्लाज्मा द्वारा प्रदान नहीं की जाती हैं।"
 
-#: ui/main.qml:126
+#: ui/main.qml:122
 #, fuzzy, kde-format
 #| msgid "Do Not Disturb mode:"
 msgctxt "@title:group"
 msgid "Do Not Disturb mode"
 msgstr "\"परेशान न करें\" मोड :"
 
-#: ui/main.qml:131
+#: ui/main.qml:127
 #, kde-format
 msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "Enable automatically:"
 msgstr ""
 
-#: ui/main.qml:132
+#: ui/main.qml:128
 #, fuzzy, kde-format
 #| msgctxt "Do not disturb when screens are mirrored"
 #| msgid "Enable when screens are mirrored"
@@ -149,7 +149,7 @@ msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
 msgstr "स्क्रीन प्रतिबिंबित होने पर सक्षम करें"
 
-#: ui/main.qml:144
+#: ui/main.qml:140
 #, fuzzy, kde-format
 #| msgctxt "Do not disturb while screen sharing"
 #| msgid "Enable while screen sharing"
@@ -157,7 +157,7 @@ msgctxt "Automatically enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
 msgstr "स्क्रीन साझा करते समय सक्षम करें"
 
-#: ui/main.qml:158
+#: ui/main.qml:154
 #, kde-format
 msgctxt ""
 "Automatically enable Do Not Disturb mode while a fullscreen application is "
@@ -165,53 +165,53 @@ msgctxt ""
 msgid "While a fullscreen application is focused"
 msgstr ""
 
-#: ui/main.qml:170
+#: ui/main.qml:166
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
 msgid "Manually toggle with shortcut:"
 msgstr ""
 
-#: ui/main.qml:177
+#: ui/main.qml:173
 #, kde-format
 msgctxt "@title:group"
 msgid "Visibility conditions"
 msgstr ""
 
-#: ui/main.qml:182
+#: ui/main.qml:178
 #, kde-format
 msgid "Critical notifications:"
 msgstr "महत्वपूर्ण सूचनाएं :"
 
-#: ui/main.qml:183
+#: ui/main.qml:179
 #, kde-format
 msgid "Show in Do Not Disturb mode"
 msgstr "\"परेशान न करें को\" मोड में दिखाएँ"
 
-#: ui/main.qml:195
+#: ui/main.qml:191
 #, kde-format
 msgid "Low priority notifications:"
 msgstr "कम प्राथमिकता वाली सूचनाएं :"
 
-#: ui/main.qml:196
+#: ui/main.qml:192
 #, kde-format
 msgid "Show popup"
 msgstr "पाप-अप दिखाएँ"
 
-#: ui/main.qml:225
+#: ui/main.qml:221
 #, fuzzy, kde-format
 #| msgid "Popup:"
 msgctxt "@title:group As in: 'notification popups'"
 msgid "Popups"
 msgstr "पॉप अप :"
 
-#: ui/main.qml:231
+#: ui/main.qml:227
 #, fuzzy, kde-format
 #| msgid "Applications:"
 msgctxt "@label"
 msgid "Location:"
 msgstr "अनुप्रयोग:"
 
-#: ui/main.qml:232
+#: ui/main.qml:228
 #, fuzzy, kde-format
 #| msgctxt "Popup position near notification plasmoid"
 #| msgid "Show near notification icon"
@@ -219,54 +219,54 @@ msgctxt "Popup position near notification plasmoid"
 msgid "Near notification icon"
 msgstr "सूचना प्रतीक के पास दिखाएँ"
 
-#: ui/main.qml:269
+#: ui/main.qml:265
 #, kde-format
 msgctxt "@action:button choose custom notification position"
 msgid "Custom…"
 msgstr ""
 
-#: ui/main.qml:278 ui/main.qml:294
+#: ui/main.qml:274 ui/main.qml:290
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
 msgstr[0] "%1 सेकंड"
 msgstr[1] "%1 सेकंड"
 
-#: ui/main.qml:283
+#: ui/main.qml:279
 #, kde-format
 msgctxt "Part of a sentence like, 'Hide popup after n seconds'"
 msgid "Hide after:"
 msgstr "इसके बाद छुपाएं :"
 
-#: ui/main.qml:306
+#: ui/main.qml:302
 #, kde-format
 msgctxt "@title:group"
 msgid "Additional feedback"
 msgstr ""
 
-#: ui/main.qml:312
+#: ui/main.qml:308
 #, kde-format
 msgctxt "Show application jobs in notification widget"
 msgid "Show in notifications"
 msgstr "सूचनाओं में दिखाएं"
 
-#: ui/main.qml:313
+#: ui/main.qml:309
 #, kde-format
 msgid "Application progress:"
 msgstr "अनुप्रयोग की प्रगति :"
 
-#: ui/main.qml:327
+#: ui/main.qml:323
 #, kde-format
 msgctxt "Keep application job popup open for entire duration of job"
 msgid "Keep popup open during progress"
 msgstr "प्रगति के दौरान पॉपअप खुला रखें"
 
-#: ui/main.qml:340
+#: ui/main.qml:336
 #, kde-format
 msgid "Notification badges:"
 msgstr "सूचना के चिन्ह :"
 
-#: ui/main.qml:341
+#: ui/main.qml:337
 #, kde-format
 msgid "Show in task manager"
 msgstr "कार्य प्रबंधक में दिखाएँ"

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-11 00:45+0000\n"
+"POT-Creation-Date: 2025-07-15 00:46+0000\n"
 "PO-Revision-Date: 2025-03-05 19:48+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -23,7 +23,19 @@ msgstr ""
 "X-Generator: Lokalize 25.03.70\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: actions/mountaction.cpp:104
+#: actions/checkaction.cpp:74
+#, kde-format
+msgctxt "@action:button check a storageAccess (i.e disk) for error"
+msgid "Check for Errors"
+msgstr ""
+
+#: actions/mountaction.cpp:103
+#, kde-format
+msgctxt "@action:button Mount a disk without verifying for errors"
+msgid "Mount without verifying"
+msgstr ""
+
+#: actions/mountaction.cpp:106
 #, kde-format
 msgid "Mount"
 msgstr "掛載"
@@ -53,97 +65,104 @@ msgstr "退出"
 msgid "Safely remove"
 msgstr "安全地移除"
 
-#: devicemessagemonitor_p.cpp:163
+#: devicemessagemonitor_p.cpp:164
 #, kde-format
 msgid "This device has file system errors."
 msgstr "此裝置有檔案系統錯誤。"
 
 #: devicemessagemonitor_p.cpp:166
+#, fuzzy, kde-format
+#| msgid "This device has file system errors."
+msgctxt "@label device is a storage disk"
+msgid "This device has no errors"
+msgstr "此裝置有檔案系統錯誤。"
+
+#: devicemessagemonitor_p.cpp:169
 #, kde-format
 msgid "Successfully repaired!"
 msgstr "成功修復！"
 
-#: devicemessagemonitor_p.cpp:170
+#: devicemessagemonitor_p.cpp:173
 #, kde-format
 msgid "Device Status"
 msgstr "裝置狀態"
 
-#: devicemessagemonitor_p.cpp:171
+#: devicemessagemonitor_p.cpp:174
 #, kde-format
 msgid "A device can now be safely removed"
 msgstr "某裝置現在可以安全移除"
 
-#: devicemessagemonitor_p.cpp:175
+#: devicemessagemonitor_p.cpp:178
 #, kde-format
 msgid "This device can now be safely removed."
 msgstr "此裝置現在可以安全移除。"
 
-#: devicemessagemonitor_p.cpp:182
+#: devicemessagemonitor_p.cpp:185
 #, kde-format
 msgid "You are not authorized to mount this device."
 msgstr "您沒有掛載此裝置的權限。"
 
-#: devicemessagemonitor_p.cpp:186
+#: devicemessagemonitor_p.cpp:189
 #, kde-format
 msgid "You are not authorized to eject this disc."
 msgstr "您沒有退出此碟片的權限。"
 
-#: devicemessagemonitor_p.cpp:189
+#: devicemessagemonitor_p.cpp:192
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr "您沒有移除此裝置的權限。"
 
-#: devicemessagemonitor_p.cpp:192
+#: devicemessagemonitor_p.cpp:195
 #, kde-format
 msgid "You are not authorized to repair this device."
 msgstr "您沒有修復此裝置的權限。"
 
-#: devicemessagemonitor_p.cpp:194 devicemessagemonitor_p.cpp:259
+#: devicemessagemonitor_p.cpp:197 devicemessagemonitor_p.cpp:262
 #, kde-format
 msgid "Unknown error type"
 msgstr ""
 
-#: devicemessagemonitor_p.cpp:198
+#: devicemessagemonitor_p.cpp:201
 #, kde-format
 msgid "Could not mount this device as it is busy."
 msgstr "無法掛載裝置，裝置忙碌中。"
 
-#: devicemessagemonitor_p.cpp:225
+#: devicemessagemonitor_p.cpp:228
 #, kde-format
 msgid "One or more files on this device are open within an application."
 msgstr "裝置上的一或多個檔案正被應用程式開啟。"
 
-#: devicemessagemonitor_p.cpp:227
+#: devicemessagemonitor_p.cpp:230
 #, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
 "One or more files on this device are opened in following applications: %2."
 msgstr[0] "裝置上的一或多個檔案正被以下應用程式開啟：%2。"
 
-#: devicemessagemonitor_p.cpp:230
+#: devicemessagemonitor_p.cpp:233
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr "、"
 
-#: devicemessagemonitor_p.cpp:248
+#: devicemessagemonitor_p.cpp:251
 #, kde-format
 msgid "Could not mount this device."
 msgstr "無法掛載此裝置。"
 
-#: devicemessagemonitor_p.cpp:252
+#: devicemessagemonitor_p.cpp:255
 #, kde-format
 msgid "Could not eject this disc."
 msgstr "無法退出碟片。"
 
-#: devicemessagemonitor_p.cpp:254
+#: devicemessagemonitor_p.cpp:257
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "無法移除此裝置。"
 
-#: devicemessagemonitor_p.cpp:257
+#: devicemessagemonitor_p.cpp:260
 #, kde-format
 msgid "Could not repair this device: %1"
 msgstr "無法修復此裝置：%1"

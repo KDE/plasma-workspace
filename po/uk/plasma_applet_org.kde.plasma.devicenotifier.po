@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-11 00:45+0000\n"
+"POT-Creation-Date: 2025-07-15 00:46+0000\n"
 "PO-Revision-Date: 2025-07-10 16:34+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -20,7 +20,19 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 23.04.3\n"
 
-#: actions/mountaction.cpp:104
+#: actions/checkaction.cpp:74
+#, kde-format
+msgctxt "@action:button check a storageAccess (i.e disk) for error"
+msgid "Check for Errors"
+msgstr ""
+
+#: actions/mountaction.cpp:103
+#, kde-format
+msgctxt "@action:button Mount a disk without verifying for errors"
+msgid "Mount without verifying"
+msgstr ""
+
+#: actions/mountaction.cpp:106
 #, kde-format
 msgid "Mount"
 msgstr "Змонтувати"
@@ -50,70 +62,77 @@ msgstr "Виштовхнути"
 msgid "Safely remove"
 msgstr "Безпечно вилучити"
 
-#: devicemessagemonitor_p.cpp:163
+#: devicemessagemonitor_p.cpp:164
 #, kde-format
 msgid "This device has file system errors."
 msgstr "На цьому пристрої є помилки файлової системи."
 
 #: devicemessagemonitor_p.cpp:166
+#, fuzzy, kde-format
+#| msgid "This device has file system errors."
+msgctxt "@label device is a storage disk"
+msgid "This device has no errors"
+msgstr "На цьому пристрої є помилки файлової системи."
+
+#: devicemessagemonitor_p.cpp:169
 #, kde-format
 msgid "Successfully repaired!"
 msgstr "Успішно відновлено!"
 
-#: devicemessagemonitor_p.cpp:170
+#: devicemessagemonitor_p.cpp:173
 #, kde-format
 msgid "Device Status"
 msgstr "Стан пристрою"
 
-#: devicemessagemonitor_p.cpp:171
+#: devicemessagemonitor_p.cpp:174
 #, kde-format
 msgid "A device can now be safely removed"
 msgstr "Пристрій тепер можна безпечно від’єднувати"
 
-#: devicemessagemonitor_p.cpp:175
+#: devicemessagemonitor_p.cpp:178
 #, kde-format
 msgid "This device can now be safely removed."
 msgstr "Цей пристрій тепер можна безпечно від’єднувати."
 
-#: devicemessagemonitor_p.cpp:182
+#: devicemessagemonitor_p.cpp:185
 #, kde-format
 msgid "You are not authorized to mount this device."
 msgstr "Ви не маєте прав доступу для монтування цього пристрою."
 
-#: devicemessagemonitor_p.cpp:186
+#: devicemessagemonitor_p.cpp:189
 #, kde-format
 msgid "You are not authorized to eject this disc."
 msgstr "Ви не маєте прав доступу до виштовхування цього диска."
 
-#: devicemessagemonitor_p.cpp:189
+#: devicemessagemonitor_p.cpp:192
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr "Ви не маєте прав доступу для вилучення цього пристрою."
 
-#: devicemessagemonitor_p.cpp:192
+#: devicemessagemonitor_p.cpp:195
 #, kde-format
 msgid "You are not authorized to repair this device."
 msgstr "Ви не маєте прав доступу для відновлення цього пристрою."
 
-#: devicemessagemonitor_p.cpp:194 devicemessagemonitor_p.cpp:259
+#: devicemessagemonitor_p.cpp:197 devicemessagemonitor_p.cpp:262
 #, kde-format
 msgid "Unknown error type"
 msgstr "Невідомий тип помилки"
 
-#: devicemessagemonitor_p.cpp:198
+#: devicemessagemonitor_p.cpp:201
 #, kde-format
 msgid "Could not mount this device as it is busy."
 msgstr ""
 "Не вдалося змонтувати цей пристрій, оскільки його зайнято роботою з іншою "
 "програмою."
 
-#: devicemessagemonitor_p.cpp:225
+#: devicemessagemonitor_p.cpp:228
 #, kde-format
 msgid "One or more files on this device are open within an application."
 msgstr "Один або декілька файлів з цього пристрою відкрито у програмі."
 
-#: devicemessagemonitor_p.cpp:227
+#: devicemessagemonitor_p.cpp:230
 #, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
@@ -127,29 +146,29 @@ msgstr[2] ""
 msgstr[3] ""
 "Один або декілька файлів з цього пристрою відкрито у такій програмі: %2."
 
-#: devicemessagemonitor_p.cpp:230
+#: devicemessagemonitor_p.cpp:233
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ", "
 
-#: devicemessagemonitor_p.cpp:248
+#: devicemessagemonitor_p.cpp:251
 #, kde-format
 msgid "Could not mount this device."
 msgstr "Не вдалося змонтувати цей пристрій."
 
-#: devicemessagemonitor_p.cpp:252
+#: devicemessagemonitor_p.cpp:255
 #, kde-format
 msgid "Could not eject this disc."
 msgstr "Не вдалося виштовхнути цей диск."
 
-#: devicemessagemonitor_p.cpp:254
+#: devicemessagemonitor_p.cpp:257
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "Не вдалося вилучити цей пристрій."
 
-#: devicemessagemonitor_p.cpp:257
+#: devicemessagemonitor_p.cpp:260
 #, kde-format
 msgid "Could not repair this device: %1"
 msgstr "Не вдалося відновити цей пристрій: %1"

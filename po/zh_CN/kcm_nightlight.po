@@ -35,37 +35,37 @@ msgstr "%1 开始过渡到日间色温，%2 切换完成"
 #, kde-format
 msgctxt "@info"
 msgid "The blue light filter makes the colors on the screen warmer."
-msgstr ""
+msgstr "夜间颜色功能可以滤除蓝光，使屏幕以偏暖的颜色显示内容。"
 
 #: ui/main.qml:49
 #, kde-format
 msgctxt "@label:listbox Night Light modes"
 msgid "Switching times:"
-msgstr ""
+msgstr "切换时间："
 
 #: ui/main.qml:58
 #, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Always off"
-msgstr ""
+msgstr "总是关闭"
 
 #: ui/main.qml:59
 #, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Always on night light"
-msgstr ""
+msgstr "总是使用夜间色温"
 
 #: ui/main.qml:60
 #, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Sunrise and sunset"
-msgstr ""
+msgstr "日出和日落时"
 
 #: ui/main.qml:72
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
-msgstr ""
+msgstr "配置…"
 
 #: ui/main.qml:115 ui/main.qml:166 ui/main.qml:230
 #, kde-format
@@ -77,7 +77,7 @@ msgstr "%1K"
 #, kde-format
 msgctxt "@label:slider"
 msgid "Day light temperature:"
-msgstr ""
+msgstr "日间色温："
 
 #: ui/main.qml:173 ui/main.qml:237
 #, kde-format
@@ -95,4 +95,4 @@ msgstr "暖"
 #, kde-format
 msgctxt "@label:slider"
 msgid "Night light temperature:"
-msgstr ""
+msgstr "夜间色温："

@@ -80,25 +80,25 @@ msgstr "平铺"
 #, kde-format
 msgctxt "@label part of a sentence: 'Switch dynamic wallpapers [based on]'"
 msgid "Switch dynamic wallpapers:"
-msgstr ""
+msgstr "切换动态壁纸："
 
 #: imagepackage/contents/ui/config.qml:195
 #, kde-format
 msgctxt "@option:radio part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the color scheme is dark or light"
-msgstr ""
+msgstr "基于配色方案是深色还是浅色"
 
 #: imagepackage/contents/ui/config.qml:206
 #, kde-format
 msgctxt "@option:radio part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on the day-night cycle:"
-msgstr ""
+msgstr "基于日夜周期："
 
 #: imagepackage/contents/ui/config.qml:214
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
-msgstr ""
+msgstr "配置…"
 
 #: imagepackage/contents/ui/config.qml:225
 #, kde-format
