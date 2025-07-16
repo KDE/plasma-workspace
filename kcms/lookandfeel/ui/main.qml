@@ -36,70 +36,9 @@ KCM.AbstractKCM {
         }
     ]
 
-    Private.LookAndFeelInformation {
-        id: selectedLookAndFeelInformation
-        model: kcm.model
-        packageId: kcm.settings.lookAndFeelPackage
-    }
-
-    Private.LookAndFeelInformation {
-        id: lightLookAndFeelInformation
-        model: kcm.model
-        packageId: kcm.settings.defaultLightLookAndFeel
-    }
-
-    Private.LookAndFeelInformation {
-        id: darkLookAndFeelInformation
-        model: kcm.model
-        packageId: kcm.settings.defaultDarkLookAndFeel
-    }
-
     ColumnLayout {
         anchors.fill: parent
         spacing: Kirigami.Units.smallSpacing
-
-        Row {
-            Layout.alignment: Qt.AlignHCenter
-            spacing: Kirigami.Units.largeSpacing
-
-            QtControls.ButtonGroup { id: themeGroup }
-
-            LookAndFeelBox {
-                id: lightLookAndFeelRadioButton
-                preview: lightLookAndFeelInformation.preview
-                text: i18nc("@option:radio Light global theme", "Light")
-                checked: selectedLookAndFeelInformation.variant !== "dark"
-                group: themeGroup
-
-                onToggled: {
-                    kcm.settings.lookAndFeelPackage = kcm.settings.defaultLightLookAndFeel;
-                }
-
-                onExpanded: {
-                    kcm.push("LookAndFeelSelector.qml", {
-                        "variant": "light",
-                    });
-                }
-            }
-
-            LookAndFeelBox {
-                id: darkLookAndFeelRadioButton
-                preview: darkLookAndFeelInformation.preview
-                text: i18nc("@option:radio Dark global theme", "Dark")
-                checked: selectedLookAndFeelInformation.variant === "dark"
-                group: themeGroup
-
-                onToggled: {
-                    kcm.settings.lookAndFeelPackage = kcm.settings.defaultDarkLookAndFeel;
-                }
-
-                onExpanded: {
-                    kcm.push("LookAndFeelSelector.qml", {
-                        "variant": "dark",
-                    });
-                }
-            }
-        }
 
         Kirigami.FormLayout {
             width: parent.width
@@ -114,43 +53,37 @@ KCM.AbstractKCM {
                     settingName: "automaticLookAndFeel"
                 }
             }
+        }
 
-            RowLayout {
-                enabled: kcm.settings.automaticLookAndFeel
-                spacing: Kirigami.Units.smallSpacing
+        QtControls.StackView {
+            id: stackView
+            Layout.fillWidth: true
+            Layout.fillHeight: true
 
-                Item {
-                    width: Kirigami.Units.gridUnit
+            property bool complete: false
+
+            function reload() {
+                if (kcm.settings.automaticLookAndFeel) {
+                    replace(null, "DayNightOptions.qml");
+                } else {
+                    replace(null, "SingleOptions.qml");
                 }
+            }
 
-                QtControls.CheckBox {
-                    text: i18nc("@option:check", "Minimize interruptions by switching between themes when computer is idle:")
-                    checked: kcm.settings.automaticLookAndFeelOnIdle
-                    onClicked: kcm.settings.automaticLookAndFeelOnIdle = checked;
+            Connections {
+                target: kcm.settings
 
-                    KCM.SettingStateBinding {
-                        configObject: kcm.settings
-                        settingName: "automaticLookAndFeelOnIdle"
-                    }
-                }
-
-                QtControls.SpinBox {
-                    from: 1
-                    value: kcm.settings.automaticLookAndFeelIdleInterval
-                    textFromValue: (value, locale) => i18ncp("@item:valuesuffix idle interval", "%1 second", "%1 seconds", value)
-                    valueFromText: (text, locale) => parseInt(text)
-                    onValueModified: kcm.settings.automaticLookAndFeelIdleInterval = value;
-
-                    KCM.SettingStateBinding {
-                        configObject: kcm.settings
-                        settingName: "automaticLookAndFeelIdleInterval"
+                function onAutomaticLookAndFeelChanged() {
+                    if (stackView.complete) {
+                        stackView.reload();
                     }
                 }
             }
-        }
 
-        Item {
-            Layout.fillHeight: true
+            Component.onCompleted: {
+                reload();
+                complete = true;
+            }
         }
     }
 }
