@@ -216,6 +216,94 @@ private:
         return distance0[query.size()];
     }
 
+    qreal jaroDistance(const QStringView &name, const QStringView &query)
+    {
+        if (name == query) {
+            return 1.0;
+        }
+
+        auto matchCount = 0.0;
+        qsizetype range = std::floor(std::max(name.size(), query.size()) / qsizetype(2.0)) - 1;
+        std::vector<int> hashName(name.size(), 0);
+        std::vector<int> hashQuery(query.size(), 0);
+
+        for (auto i = 0; i < name.size(); ++i) {
+            auto low = std::max(qsizetype(0), i - range);
+            auto high = std::min(query.size() - 1, i + range);
+
+            for (auto j = low; j <= high; ++j) {
+                if (name[i] == query[j] && hashQuery[j] == 0) {
+                    matchCount += 1;
+                    hashName[i] = 1;
+                    hashQuery[j] = 1;
+                    break;
+                }
+            }
+        }
+
+        if (matchCount == 0) {
+            return 0.0;
+        }
+
+        auto transpositionCount = 0.0;
+        auto hashQueryIndex = 0;
+
+        // Transpositions are the number of characters that are in the wrong order.
+        // We walk the entire name, if the character was matched we check how many characters did not match in the query.
+        for (auto i = 0; i < name.size(); ++i) {
+            if (hashName[i] == 1) {
+                // I contemplated a std algorithm dance but realistically it's not more readable than this.
+                // Find the next matched character in the query hash.
+                while (hashQueryIndex < query.size() && hashQuery[hashQueryIndex] != 1) {
+                    hashQueryIndex++;
+                }
+
+                // Do they match?
+                if (name[i] != query[hashQueryIndex]) {
+                    transpositionCount += 1;
+                }
+
+                hashQueryIndex++;
+            }
+        }
+
+        transpositionCount = transpositionCount / 2; // Each transposition is counted twice, once for each character.
+
+        constexpr auto components = 3.0;
+        return (matchCount / qreal(name.size()) + matchCount / qreal(query.size()) + (matchCount - transpositionCount) / matchCount) / components;
+    }
+
+    qreal jaroWinklerDistance(const QStringView &name, const QStringView &query)
+    {
+        if (name == query) {
+            return 1.0;
+        }
+
+        auto distance = jaroDistance(name, query);
+
+        constexpr auto threshold = 0.7;
+        constexpr auto weight = 0.1;
+        constexpr auto maxPrefixLength = 4;
+
+        if (distance < threshold) {
+            return distance; // Jaro-Winkler is only applied if the distance is above a threshold.
+        }
+
+        auto prefix = 0;
+
+        for (int i = 0; i < std::min(name.size(), query.size()); ++i) {
+            if (name[i] == query[i]) {
+                prefix++;
+            } else {
+                break;
+            }
+        }
+
+        prefix = std::min(prefix, maxPrefixLength);
+
+        return distance + (prefix * weight * (1.0 - distance));
+    }
+
     struct Score {
         qreal value;
         KRunner::QueryMatch::CategoryRelevance categoryRelevance;
@@ -286,6 +374,36 @@ private:
                     }
                     *score += distance;
                     qWarning() << "LD distance for" << string << "and" << queryItem << "is" << distance << "score" << score;
+                } else if (qEnvironmentVariableIntValue("DYM") == 1) {
+                    // This is based on Ruby's did_you_mean gem.
+                    const auto jaroWinklerThreshold = weightedTermLength > 3 ? 0.834 : 0.77;
+                    const auto jaroWinkler = jaroWinklerDistance(string, queryItem);
+                    const auto jaroWinklerFail = jaroWinkler < jaroWinklerThreshold;
+
+                    if (jaroWinklerFail) { // give up
+                        qCDebug(RUNNER_SERVICES) << "Jaro-Winkler distance for" << string << "and" << queryItem << "is too low, skipping";
+                        continue;
+                    }
+
+                    const auto levenshteinThreshold = std::ceil(weightedTermLength * 0.25);
+                    const auto levenshtein = levenshteinDistance(string, queryItem);
+                    const auto levenshteinFail = levenshtein > levenshteinThreshold;
+
+                    if (levenshteinFail) {
+                        qCDebug(RUNNER_SERVICES) << "LD distance for" << string << "and" << queryItem << "is too high, skipping";
+                        continue;
+                    }
+
+                    // TODO: There is a critical piece missing here because of the current architecture. We'll want to let a **name** match iff we had no other
+                    // matches even when that name matches incredibly poorly. This is done by using the string size itself as levenshteinThreshold.
+                    // This would then match typos a la `dicsover` -> `discover`.
+                    // Only one match may be returned in this scenario
+
+                    if (!score) {
+                        score = 0;
+                    }
+                    *score += jaroWinkler;
+                    qWarning() << "DYM distance for" << string << "and" << queryItem << "is" << levenshtein << "score" << score;
                 } else {
                     if (auto result = KFuzzyMatcher::match(queryItem, string); [&] {
                             qDebug() << "KFuzzyMatcher:" << queryItem << "against" << string << "resulted in" << result.matched << "with score" << result.score;
@@ -312,7 +430,7 @@ private:
             return score;
         };
 
-        auto makeScoreFromList = [&makeScore](const QStringList &strings) {
+        auto makeScoreFromList = [this, &makeScore](const QStringList &strings) {
             std::optional<qreal> score;
             uint matched = 1;
             for (const auto &string : strings) {
