@@ -1,0 +1,17 @@
+# SPDX-FileCopyrightText: None
+# SPDX-License-Identifier: CC0-1.0
+[Desktop Entry]
+X-SnapInstanceName=code
+Name=Visual Studio Code ServiceRunnerTest
+Comment=Code Editing. Redefined.
+GenericName=Text Editor
+X-SnapAppName=code
+Exec=env BAMF_DESKTOP_FILE_HINT=/var/lib/snapd/desktop/applications/code_code.desktop /snap/bin/code --force-user-env %F
+Icon=/snap/code/198/meta/gui/vscode.png
+Type=Application
+StartupNotify=false
+StartupWMClass=Code
+Categories=TextEditor;Development;IDE;
+MimeType=application/x-code-workspace;
+Actions=new-empty-window;
+Keywords=vscode;

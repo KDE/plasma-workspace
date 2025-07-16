@@ -1,0 +1,16 @@
+# SPDX-FileCopyrightText: None
+# SPDX-License-Identifier: CC0-1.0
+[Desktop Entry]
+Name=Code - OSS ServiceRunnerTest
+Comment=Code Editing. Redefined.
+GenericName=Text Editor
+Exec=code-oss %F
+Icon=com.visualstudio.code.oss
+Type=Application
+StartupNotify=false
+StartupWMClass=code-oss
+Categories=TextEditor;Development;IDE;
+MimeType=application/x-code-oss-workspace;
+Actions=new-empty-window;
+Keywords=vscode;
+X-Desktop-File-Install-Version=0.28

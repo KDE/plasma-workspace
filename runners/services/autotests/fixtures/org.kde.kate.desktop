@@ -1,0 +1,17 @@
+# SPDX-FileCopyrightText: None
+# SPDX-License-Identifier: CC0-1.0
+[Desktop Entry]
+GenericName=Advanced Text Editor
+Name=Kate ServiceRunnerTest
+Comment=KDE Advanced Text Editor
+MimeType=text/plain;inode/directory;
+Exec=kate -b %U
+StartupNotify=true
+X-KDE-HasTempFileOption=true
+Icon=kate
+X-DocPath=kate/index.html
+Type=Application
+InitialPreference=9
+Categories=Qt;KDE;Utility;TextEditor;Development;
+Keywords=text;txt;editor;programming;programmer;development;developer;code;
+StartupWMClass=kate

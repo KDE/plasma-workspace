@@ -38,6 +38,7 @@ private Q_SLOTS:
     void testINotifyUsage();
     void testSpecialArgs();
     void testEnv();
+    void testCodeVsKateVsEmojier();
 };
 
 void ServiceRunnerTest::initTestCase()
@@ -239,6 +240,34 @@ void ServiceRunnerTest::testEnv()
         // Because we use DesktopExecParser, we have a "true" as an exec which is available on all systems
         return match.id().endsWith(QLatin1String("/bin/true"));
     }));
+}
+
+void ServiceRunnerTest::testCodeVsKateVsEmojier()
+{
+    // Kate has code mentioned in comment, should be rated lower.
+    auto matches = launchQuery(u"code"_s);
+
+    std::ranges::sort(matches, [](const KRunner::QueryMatch &a, const KRunner::QueryMatch &b) {
+        return a.relevance() > b.relevance();
+    });
+
+    QStringList texts;
+    for (const auto &match : matches) {
+        if (!match.text().contains("ServiceRunnerTest"_L1)) {
+            continue;
+        }
+        texts.push_back(match.text());
+    }
+
+    QCOMPARE(texts,
+             QStringList({
+                 u"Code - OSS ServiceRunnerTest"_s,
+                 u"Visual Studio Code ServiceRunnerTest"_s,
+                 // keyword match
+                 u"Kate ServiceRunnerTest"_s,
+                 // keyword match on unicode
+                 u"Emoji Selector ServiceRunnerTest"_s,
+             }));
 }
 
 QTEST_MAIN(ServiceRunnerTest)
