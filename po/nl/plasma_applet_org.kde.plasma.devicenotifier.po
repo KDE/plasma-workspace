@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-15 00:46+0000\n"
-"PO-Revision-Date: 2025-07-10 13:24+0200\n"
+"PO-Revision-Date: 2025-07-15 10:20+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -23,13 +23,13 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button check a storageAccess (i.e disk) for error"
 msgid "Check for Errors"
-msgstr ""
+msgstr "Controleer op fouten"
 
 #: actions/mountaction.cpp:103
 #, kde-format
 msgctxt "@action:button Mount a disk without verifying for errors"
 msgid "Mount without verifying"
-msgstr ""
+msgstr "Aankoppelen zonder verificatie"
 
 #: actions/mountaction.cpp:106
 #, kde-format
@@ -67,11 +67,10 @@ msgid "This device has file system errors."
 msgstr "Dit apparaat heeft fouten in het bestandssysteem."
 
 #: devicemessagemonitor_p.cpp:166
-#, fuzzy, kde-format
-#| msgid "This device has file system errors."
+#, kde-format
 msgctxt "@label device is a storage disk"
 msgid "This device has no errors"
-msgstr "Dit apparaat heeft fouten in het bestandssysteem."
+msgstr "Dit apparaat heeft geen fouten"
 
 #: devicemessagemonitor_p.cpp:169
 #, kde-format

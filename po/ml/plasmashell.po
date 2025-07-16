@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-02 10:14+0000\n"
+"POT-Creation-Date: 2025-07-16 00:45+0000\n"
 "PO-Revision-Date: 2021-08-12 11:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -367,63 +367,63 @@ msgstr ""
 msgid "Disconnected Screen %1"
 msgstr ""
 
-#: shellcorona.cpp:215 shellcorona.cpp:217
+#: shellcorona.cpp:213 shellcorona.cpp:215
 #, kde-format
 msgid "Show Desktop"
 msgstr "പണിയിടം കാണിക്കുക"
 
-#: shellcorona.cpp:217
+#: shellcorona.cpp:215
 #, kde-format
 msgid "Hide Desktop"
 msgstr "പണിയിടം ഒളിപ്പിക്കുക"
 
-#: shellcorona.cpp:232
+#: shellcorona.cpp:230
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr ""
 
-#: shellcorona.cpp:240
+#: shellcorona.cpp:238
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "പ്രവൃത്തി സ്വിച്ചർ കാണിക്കുക"
 
-#: shellcorona.cpp:250
+#: shellcorona.cpp:248
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "ഇപ്പോഴത്തെ പ്രവർത്തനം നിർത്തുക"
 
-#: shellcorona.cpp:258
+#: shellcorona.cpp:256
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "മുമ്പത്തെ പ്രവർത്തനത്തിലേക്ക് മാറുക"
 
-#: shellcorona.cpp:266
+#: shellcorona.cpp:264
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "അടുത്ത പ്രവർത്തനത്തിലേക്ക് മാറുക"
 
-#: shellcorona.cpp:281
+#: shellcorona.cpp:279
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "ടാസ്ക് മാനേജർ ഇനം %1 സജീവമാക്കുക"
 
-#: shellcorona.cpp:313
+#: shellcorona.cpp:311
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr ""
 
-#: shellcorona.cpp:335
+#: shellcorona.cpp:333
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr ""
 
-#: shellcorona.cpp:2189
+#: shellcorona.cpp:2186
 #, kde-format
 msgid "Add Panel"
 msgstr "പാളി ചേർക്കുക"
 
-#: shellcorona.cpp:2250
+#: shellcorona.cpp:2247
 #, fuzzy, kde-format
 #| msgid "Empty %1"
 msgctxt "Creates an empty containment (%1 is the containment name)"

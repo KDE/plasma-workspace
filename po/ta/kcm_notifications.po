@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-15 00:46+0000\n"
+"POT-Creation-Date: 2025-07-16 00:45+0000\n"
 "PO-Revision-Date: 2025-04-27 12:42+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -37,7 +37,7 @@ msgstr "தெரித்தெழும் அறிவிப்புகள�
 msgid "Show in do not disturb mode"
 msgstr "தொந்தரவு செய்யாத பயன்முறையில் காட்டு"
 
-#: ui/ApplicationConfiguration.qml:132 ui/main.qml:204
+#: ui/ApplicationConfiguration.qml:132 ui/main.qml:208
 #, kde-format
 msgid "Show in history"
 msgstr "வரலாற்றில் காட்டு"
@@ -99,7 +99,7 @@ msgctxt "@action:button Application-specific notifications"
 msgid "Application Settings"
 msgstr "செயலி அமைப்புகள்"
 
-#: ui/main.qml:92
+#: ui/main.qml:96
 #, kde-format
 msgid ""
 "Could not find a 'Notifications' widget, which is required for displaying "
@@ -109,42 +109,42 @@ msgstr ""
 "அறிவிப்புகளைக் காட்ட தேவையான 'அறிவிப்புகள்' பிளாஸ்மாய்டை கண்டுபிடிக்க முடியவில்லை. "
 "உங்கள் சாதனத் தட்டிலோ தனிப்பட்ட பிளாஸ்மாய்டாகவோ இயக்கப்பட்டுள்ளதா என்று சரிபாருங்கள்."
 
-#: ui/main.qml:103
+#: ui/main.qml:107
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2' instead of Plasma."
 msgstr "பிளாஸ்மாவுக்கு பதிலாக தற்போது '%1 %2' அறிவிப்புகளை வழங்குகிறது."
 
-#: ui/main.qml:107
+#: ui/main.qml:111
 #, kde-format
 msgid "Notifications are currently not provided by Plasma."
 msgstr "தற்போது அறிவிப்புகளை பிளாஸ்மா வழங்கவில்லை."
 
-#: ui/main.qml:122
+#: ui/main.qml:126
 #, kde-format
 msgctxt "@title:group"
 msgid "Do Not Disturb mode"
 msgstr "தொந்தரவு செய்யாத பயன்முறை"
 
-#: ui/main.qml:127
+#: ui/main.qml:131
 #, kde-format
 msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "Enable automatically:"
 msgstr "தானாக செயல்படுத்துவது:"
 
-#: ui/main.qml:128
+#: ui/main.qml:132
 #, kde-format
 msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
 msgstr "திரைகள் பிரதிபலிக்கப்படும்போது"
 
-#: ui/main.qml:140
+#: ui/main.qml:144
 #, kde-format
 msgctxt "Automatically enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
 msgstr "திரையைப் பகிரும்போது"
 
-#: ui/main.qml:154
+#: ui/main.qml:158
 #, kde-format
 msgctxt ""
 "Automatically enable Do Not Disturb mode while a fullscreen application is "
@@ -152,104 +152,104 @@ msgctxt ""
 msgid "While a fullscreen application is focused"
 msgstr "செயலிலுள்ள செயலி முழுத்திரை பயன்முறையில் உள்ளபோது"
 
-#: ui/main.qml:166
+#: ui/main.qml:170
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
 msgid "Manually toggle with shortcut:"
 msgstr "இச்சுருக்குவழியால் கைமுறையாக நிலைமாற்று:"
 
-#: ui/main.qml:173
+#: ui/main.qml:177
 #, kde-format
 msgctxt "@title:group"
 msgid "Visibility conditions"
 msgstr "எப்போது காட்ட வேண்டும்"
 
-#: ui/main.qml:178
+#: ui/main.qml:182
 #, kde-format
 msgid "Critical notifications:"
 msgstr "முக்கியமான அறிவிப்புகள்:"
 
-#: ui/main.qml:179
+#: ui/main.qml:183
 #, kde-format
 msgid "Show in Do Not Disturb mode"
 msgstr "தொந்தரவு செய்யாத பயன்முறையில் காட்டு"
 
-#: ui/main.qml:191
+#: ui/main.qml:195
 #, kde-format
 msgid "Low priority notifications:"
 msgstr "அற்பமான அறிவிப்புகள்:"
 
-#: ui/main.qml:192
+#: ui/main.qml:196
 #, kde-format
 msgid "Show popup"
 msgstr "தெரித்தெழும் அறிவிப்பை காட்டு"
 
-#: ui/main.qml:221
+#: ui/main.qml:225
 #, kde-format
 msgctxt "@title:group As in: 'notification popups'"
 msgid "Popups"
 msgstr "தெரித்தெழும் அறிவிப்புகள்"
 
-#: ui/main.qml:227
+#: ui/main.qml:231
 #, kde-format
 msgctxt "@label"
 msgid "Location:"
 msgstr "இருப்பிடம்:"
 
-#: ui/main.qml:228
+#: ui/main.qml:232
 #, kde-format
 msgctxt "Popup position near notification plasmoid"
 msgid "Near notification icon"
 msgstr "அறிவிப்பு சின்னத்திற்கு அருகில்"
 
-#: ui/main.qml:265
+#: ui/main.qml:269
 #, kde-format
 msgctxt "@action:button choose custom notification position"
 msgid "Custom…"
 msgstr "விருப்பமானது…"
 
-#: ui/main.qml:274 ui/main.qml:290
+#: ui/main.qml:278 ui/main.qml:294
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
 msgstr[0] "%1 நொடி"
 msgstr[1] "%1 நொடிகள்"
 
-#: ui/main.qml:279
+#: ui/main.qml:283
 #, kde-format
 msgctxt "Part of a sentence like, 'Hide popup after n seconds'"
 msgid "Hide after:"
 msgstr "இதற்கு பிறகு மறை:"
 
-#: ui/main.qml:302
+#: ui/main.qml:306
 #, kde-format
 msgctxt "@title:group"
 msgid "Additional feedback"
 msgstr "மேம்பட்ட பின்னூட்டம்"
 
-#: ui/main.qml:308
+#: ui/main.qml:312
 #, kde-format
 msgctxt "Show application jobs in notification widget"
 msgid "Show in notifications"
 msgstr "அறிவிப்புகளில் காட்டு"
 
-#: ui/main.qml:309
+#: ui/main.qml:313
 #, kde-format
 msgid "Application progress:"
 msgstr "செயலி முன்னேற்றம்"
 
-#: ui/main.qml:323
+#: ui/main.qml:327
 #, kde-format
 msgctxt "Keep application job popup open for entire duration of job"
 msgid "Keep popup open during progress"
 msgstr "நடைபெறும்போது திறந்தே வைத்திரு"
 
-#: ui/main.qml:336
+#: ui/main.qml:340
 #, kde-format
 msgid "Notification badges:"
 msgstr "அறிவிப்பு அடையாளக்குறிகள்:"
 
-#: ui/main.qml:337
+#: ui/main.qml:341
 #, kde-format
 msgid "Show in task manager"
 msgstr "பணி மேலாளரில் காட்டு"

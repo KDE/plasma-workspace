@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-15 00:46+0000\n"
-"PO-Revision-Date: 2025-07-11 09:54+0300\n"
+"PO-Revision-Date: 2025-07-15 07:58+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -25,13 +25,13 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button check a storageAccess (i.e disk) for error"
 msgid "Check for Errors"
-msgstr ""
+msgstr "בדיקה לאיתור שגיאות"
 
 #: actions/mountaction.cpp:103
 #, kde-format
 msgctxt "@action:button Mount a disk without verifying for errors"
 msgid "Mount without verifying"
-msgstr ""
+msgstr "לעגן בלי לאמת"
 
 #: actions/mountaction.cpp:106
 #, kde-format
@@ -69,11 +69,10 @@ msgid "This device has file system errors."
 msgstr "למכשיר הזה יש שגיאות במערכת הקבצים."
 
 #: devicemessagemonitor_p.cpp:166
-#, fuzzy, kde-format
-#| msgid "This device has file system errors."
+#, kde-format
 msgctxt "@label device is a storage disk"
 msgid "This device has no errors"
-msgstr "למכשיר הזה יש שגיאות במערכת הקבצים."
+msgstr "למכשיר אין שגיאות"
 
 #: devicemessagemonitor_p.cpp:169
 #, kde-format

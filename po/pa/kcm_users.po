@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-23 00:44+0000\n"
+"POT-Creation-Date: 2025-07-16 00:45+0000\n"
 "PO-Revision-Date: 2024-10-25 23:42-0500\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
@@ -84,7 +84,7 @@ msgstr "ਪਾਸਵਰਡ"
 msgid "Confirm password"
 msgstr "ਪਾਸਵਰਡ ਤਸਦੀਕ ਕਰੋ"
 
-#: src/ui/ChangePassword.qml:90 src/ui/CreateUser.qml:65
+#: src/ui/ChangePassword.qml:90 src/ui/CreateUser.qml:73
 #, kde-format
 msgid "Passwords must match"
 msgstr "ਪਾਸਵਰਡ ਮਿਲਦੇ ਹੋਣੇ ਚਾਹੀਦੇ ਹਨ"
@@ -142,45 +142,54 @@ msgstr "ਨਾ-ਬਦਲਿਆ ਹੀ ਛੱਡੋ"
 msgid "Create User"
 msgstr "ਵਰਤੋਂਕਾਰ ਬਣਾਓ"
 
-#: src/ui/CreateUser.qml:30 src/ui/UserDetailsPage.qml:165
+#: src/ui/CreateUser.qml:38 src/ui/UserDetailsPage.qml:165
 #, kde-format
 msgid "Name:"
 msgstr "ਨਾਂ:"
 
-#: src/ui/CreateUser.qml:34 src/ui/UserDetailsPage.qml:173
+#: src/ui/CreateUser.qml:42 src/ui/UserDetailsPage.qml:173
 #, kde-format
 msgid "Username:"
 msgstr "ਵਰਤੋਂਕਾਰ-ਨਾਂ:"
 
-#: src/ui/CreateUser.qml:44 src/ui/UserDetailsPage.qml:190
+#: src/ui/CreateUser.qml:52 src/ui/UserDetailsPage.qml:190
 #, kde-format
 msgid "Standard"
 msgstr "ਸਟੈਂਡਰਡ"
 
-#: src/ui/CreateUser.qml:45 src/ui/UserDetailsPage.qml:191
+#: src/ui/CreateUser.qml:53 src/ui/UserDetailsPage.qml:191
 #, kde-format
 msgid "Administrator"
 msgstr "ਪਰਸ਼ਾਸ਼ਕ"
 
-#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:180
+#: src/ui/CreateUser.qml:56 src/ui/UserDetailsPage.qml:180
 #, kde-format
 msgid "Account type:"
 msgstr "ਖਾਤੇ ਦੀ ਕਿਸਮ:"
 
-#: src/ui/CreateUser.qml:53
+#: src/ui/CreateUser.qml:61
 #, kde-format
 msgid "Password:"
 msgstr "ਪਾਸਵਰਡ:"
 
-#: src/ui/CreateUser.qml:58
+#: src/ui/CreateUser.qml:66
 #, kde-format
 msgid "Confirm password:"
 msgstr "ਪਾਸਵਰਡ ਤਸਦੀਕ ਕਰੋ:"
 
-#: src/ui/CreateUser.qml:75
-#, kde-format
+#: src/ui/CreateUser.qml:88
+#, fuzzy, kde-format
+#| msgid "Create"
+msgctxt "@action:button Create a new user"
 msgid "Create"
 msgstr "ਬਣਾਓ"
+
+#: src/ui/CreateUser.qml:109
+#, fuzzy, kde-format
+#| msgid "Cancel"
+msgctxt "@action:button Cancel creating new user"
+msgid "Cancel"
+msgstr "ਰੱਦ ਕਰੋ"
 
 #: src/ui/CropSheet.qml:28
 #, kde-format
@@ -350,19 +359,19 @@ msgstr "ਕੋਈ ਫਿੰਗਰ-ਪਰਿੰਟ ਨਹੀਂ ਜੋੜੇ"
 msgid "Users"
 msgstr "ਵਰਤੋਂਕਾਰ"
 
-#: src/ui/main.qml:28
+#: src/ui/main.qml:31
 #, kde-format
 msgctxt "@action:button As in, 'add new user'"
 msgid "Add New…"
 msgstr "ਨਵਾਂ ਜੋੜੋ…"
 
-#: src/ui/main.qml:29
+#: src/ui/main.qml:32
 #, kde-format
 msgctxt "@action:button"
 msgid "Add New User…"
 msgstr "ਨਵਾਂ ਵਰਤੋਂਕਾਰ ਜੋੜੋ…"
 
-#: src/ui/main.qml:121
+#: src/ui/main.qml:137
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Press Space to edit the user profile"

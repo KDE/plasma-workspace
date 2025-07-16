@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-02 10:14+0000\n"
+"POT-Creation-Date: 2025-07-16 00:45+0000\n"
 "PO-Revision-Date: 2025-01-23 09:48+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -368,63 +368,63 @@ msgstr "%1 %2 a %3"
 msgid "Disconnected Screen %1"
 msgstr "Pantalla desconnectada %1"
 
-#: shellcorona.cpp:215 shellcorona.cpp:217
+#: shellcorona.cpp:213 shellcorona.cpp:215
 #, kde-format
 msgid "Show Desktop"
 msgstr "Mostra l'escriptori"
 
-#: shellcorona.cpp:217
+#: shellcorona.cpp:215
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Oculta l'escriptori"
 
-#: shellcorona.cpp:232
+#: shellcorona.cpp:230
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr "Activa el llançador d'aplicacions"
 
-#: shellcorona.cpp:240
+#: shellcorona.cpp:238
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Mostra el commutador d'activitats"
 
-#: shellcorona.cpp:250
+#: shellcorona.cpp:248
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "Atura l'activitat actual"
 
-#: shellcorona.cpp:258
+#: shellcorona.cpp:256
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Canvia a l'activitat anterior"
 
-#: shellcorona.cpp:266
+#: shellcorona.cpp:264
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Canvia a l'activitat següent"
 
-#: shellcorona.cpp:281
+#: shellcorona.cpp:279
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "Activa l'entrada %1 del gestor de tasques"
 
-#: shellcorona.cpp:313
+#: shellcorona.cpp:311
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "Gestiona escriptoris i plafons…"
 
-#: shellcorona.cpp:335
+#: shellcorona.cpp:333
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Mou el focus del teclat entre els plafons"
 
-#: shellcorona.cpp:2189
+#: shellcorona.cpp:2186
 #, kde-format
 msgid "Add Panel"
 msgstr "Afegeix un plafó"
 
-#: shellcorona.cpp:2250
+#: shellcorona.cpp:2247
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-15 00:46+0000\n"
+"POT-Creation-Date: 2025-07-16 00:45+0000\n"
 "PO-Revision-Date: 2025-04-30 15:05+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -40,7 +40,7 @@ msgstr "Afficher des fenêtres contextuelles"
 msgid "Show in do not disturb mode"
 msgstr "Afficher dans le mode « Ne pas déranger »"
 
-#: ui/ApplicationConfiguration.qml:132 ui/main.qml:204
+#: ui/ApplicationConfiguration.qml:132 ui/main.qml:208
 #, kde-format
 msgid "Show in history"
 msgstr "Afficher dans l'historique"
@@ -104,7 +104,7 @@ msgctxt "@action:button Application-specific notifications"
 msgid "Application Settings"
 msgstr "Configuration des applications"
 
-#: ui/main.qml:92
+#: ui/main.qml:96
 #, kde-format
 msgid ""
 "Could not find a 'Notifications' widget, which is required for displaying "
@@ -115,43 +115,43 @@ msgstr ""
 "pour afficher les notifications. Veuillez vous assurer qu'il est activé soit "
 "dans la boîte à miniatures, soit comme un composant graphique autonome."
 
-#: ui/main.qml:103
+#: ui/main.qml:107
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2' instead of Plasma."
 msgstr ""
 "Les notifications sont actuellement fournies par « %1 %2 » au lieu de Plasma."
 
-#: ui/main.qml:107
+#: ui/main.qml:111
 #, kde-format
 msgid "Notifications are currently not provided by Plasma."
 msgstr "Les notifications ne sont pas fournies actuellement par Plasma."
 
-#: ui/main.qml:122
+#: ui/main.qml:126
 #, kde-format
 msgctxt "@title:group"
 msgid "Do Not Disturb mode"
 msgstr "Mode « Ne pas déranger »"
 
-#: ui/main.qml:127
+#: ui/main.qml:131
 #, kde-format
 msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "Enable automatically:"
 msgstr "Activer automatiquement  :"
 
-#: ui/main.qml:128
+#: ui/main.qml:132
 #, kde-format
 msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
 msgstr "Lorsque les écrans sont en mode miroir"
 
-#: ui/main.qml:140
+#: ui/main.qml:144
 #, kde-format
 msgctxt "Automatically enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
 msgstr "Durant un partage d'écran"
 
-#: ui/main.qml:154
+#: ui/main.qml:158
 #, kde-format
 msgctxt ""
 "Automatically enable Do Not Disturb mode while a fullscreen application is "
@@ -159,104 +159,104 @@ msgctxt ""
 msgid "While a fullscreen application is focused"
 msgstr "Lorsque qu’une application en mode « Plein écran » possède le focus"
 
-#: ui/main.qml:166
+#: ui/main.qml:170
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
 msgid "Manually toggle with shortcut:"
 msgstr "Basculer manuellement avec un raccourci :"
 
-#: ui/main.qml:173
+#: ui/main.qml:177
 #, kde-format
 msgctxt "@title:group"
 msgid "Visibility conditions"
 msgstr "Conditions de visibilité"
 
-#: ui/main.qml:178
+#: ui/main.qml:182
 #, kde-format
 msgid "Critical notifications:"
 msgstr "Notifications importantes :"
 
-#: ui/main.qml:179
+#: ui/main.qml:183
 #, kde-format
 msgid "Show in Do Not Disturb mode"
 msgstr "Afficher dans le mode « Ne pas déranger »"
 
-#: ui/main.qml:191
+#: ui/main.qml:195
 #, kde-format
 msgid "Low priority notifications:"
 msgstr "Notifications de faible priorité :"
 
-#: ui/main.qml:192
+#: ui/main.qml:196
 #, kde-format
 msgid "Show popup"
 msgstr "Afficher des infobulles"
 
-#: ui/main.qml:221
+#: ui/main.qml:225
 #, kde-format
 msgctxt "@title:group As in: 'notification popups'"
 msgid "Popups"
 msgstr "Infobulles"
 
-#: ui/main.qml:227
+#: ui/main.qml:231
 #, kde-format
 msgctxt "@label"
 msgid "Location:"
 msgstr "Emplacement :"
 
-#: ui/main.qml:228
+#: ui/main.qml:232
 #, kde-format
 msgctxt "Popup position near notification plasmoid"
 msgid "Near notification icon"
 msgstr "A côté de l'icône de notification"
 
-#: ui/main.qml:265
+#: ui/main.qml:269
 #, kde-format
 msgctxt "@action:button choose custom notification position"
 msgid "Custom…"
 msgstr "Personnaliser..."
 
-#: ui/main.qml:274 ui/main.qml:290
+#: ui/main.qml:278 ui/main.qml:294
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
 msgstr[0] "%1 seconde"
 msgstr[1] "%1 secondes"
 
-#: ui/main.qml:279
+#: ui/main.qml:283
 #, kde-format
 msgctxt "Part of a sentence like, 'Hide popup after n seconds'"
 msgid "Hide after:"
 msgstr "Cacher après :"
 
-#: ui/main.qml:302
+#: ui/main.qml:306
 #, kde-format
 msgctxt "@title:group"
 msgid "Additional feedback"
 msgstr "Retour additionnel d'utilisation"
 
-#: ui/main.qml:308
+#: ui/main.qml:312
 #, kde-format
 msgctxt "Show application jobs in notification widget"
 msgid "Show in notifications"
 msgstr "Afficher dans les notifications"
 
-#: ui/main.qml:309
+#: ui/main.qml:313
 #, kde-format
 msgid "Application progress:"
 msgstr "Progression d'une tâche dans une application :"
 
-#: ui/main.qml:323
+#: ui/main.qml:327
 #, kde-format
 msgctxt "Keep application job popup open for entire duration of job"
 msgid "Keep popup open during progress"
 msgstr "Conserver les infobulles ouvertes pendant la progression"
 
-#: ui/main.qml:336
+#: ui/main.qml:340
 #, kde-format
 msgid "Notification badges:"
 msgstr "Badges de notifications :"
 
-#: ui/main.qml:337
+#: ui/main.qml:341
 #, kde-format
 msgid "Show in task manager"
 msgstr "Afficher dans le gestionnaire des tâches"

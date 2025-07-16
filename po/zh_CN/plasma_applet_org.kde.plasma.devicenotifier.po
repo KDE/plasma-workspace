@@ -66,11 +66,10 @@ msgid "This device has file system errors."
 msgstr "此设备有文件系统错误。"
 
 #: devicemessagemonitor_p.cpp:166
-#, fuzzy, kde-format
-#| msgid "This device has file system errors."
+#, kde-format
 msgctxt "@label device is a storage disk"
 msgid "This device has no errors"
-msgstr "此设备有文件系统错误。"
+msgstr ""
 
 #: devicemessagemonitor_p.cpp:169
 #, kde-format

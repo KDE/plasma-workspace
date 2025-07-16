@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-23 00:44+0000\n"
+"POT-Creation-Date: 2025-07-16 00:45+0000\n"
 "PO-Revision-Date: 2023-01-08 16:06+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -86,7 +86,7 @@ msgstr "Mật khẩu"
 msgid "Confirm password"
 msgstr "Xác nhận mật khẩu"
 
-#: src/ui/ChangePassword.qml:90 src/ui/CreateUser.qml:65
+#: src/ui/ChangePassword.qml:90 src/ui/CreateUser.qml:73
 #, kde-format
 msgid "Passwords must match"
 msgstr "Mật khẩu phải khớp"
@@ -145,45 +145,54 @@ msgstr "Giữ nguyên"
 msgid "Create User"
 msgstr "Tạo người dùng"
 
-#: src/ui/CreateUser.qml:30 src/ui/UserDetailsPage.qml:165
+#: src/ui/CreateUser.qml:38 src/ui/UserDetailsPage.qml:165
 #, kde-format
 msgid "Name:"
 msgstr "Tên:"
 
-#: src/ui/CreateUser.qml:34 src/ui/UserDetailsPage.qml:173
+#: src/ui/CreateUser.qml:42 src/ui/UserDetailsPage.qml:173
 #, kde-format
 msgid "Username:"
 msgstr "Tên người dùng:"
 
-#: src/ui/CreateUser.qml:44 src/ui/UserDetailsPage.qml:190
+#: src/ui/CreateUser.qml:52 src/ui/UserDetailsPage.qml:190
 #, kde-format
 msgid "Standard"
 msgstr "Thông thường"
 
-#: src/ui/CreateUser.qml:45 src/ui/UserDetailsPage.qml:191
+#: src/ui/CreateUser.qml:53 src/ui/UserDetailsPage.qml:191
 #, kde-format
 msgid "Administrator"
 msgstr "Quản trị viên"
 
-#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:180
+#: src/ui/CreateUser.qml:56 src/ui/UserDetailsPage.qml:180
 #, kde-format
 msgid "Account type:"
 msgstr "Kiểu danh khoản:"
 
-#: src/ui/CreateUser.qml:53
+#: src/ui/CreateUser.qml:61
 #, kde-format
 msgid "Password:"
 msgstr "Mật khẩu:"
 
-#: src/ui/CreateUser.qml:58
+#: src/ui/CreateUser.qml:66
 #, kde-format
 msgid "Confirm password:"
 msgstr "Xác nhận mật khẩu:"
 
-#: src/ui/CreateUser.qml:75
-#, kde-format
+#: src/ui/CreateUser.qml:88
+#, fuzzy, kde-format
+#| msgid "Create"
+msgctxt "@action:button Create a new user"
 msgid "Create"
 msgstr "Tạo"
+
+#: src/ui/CreateUser.qml:109
+#, fuzzy, kde-format
+#| msgid "Cancel"
+msgctxt "@action:button Cancel creating new user"
+msgid "Cancel"
+msgstr "Huỷ"
 
 #: src/ui/CropSheet.qml:28
 #, kde-format
@@ -414,21 +423,21 @@ msgstr "Không thêm dấu vân tay nào"
 msgid "Users"
 msgstr ""
 
-#: src/ui/main.qml:28
+#: src/ui/main.qml:31
 #, fuzzy, kde-format
 #| msgid "Add New User"
 msgctxt "@action:button As in, 'add new user'"
 msgid "Add New…"
 msgstr "Thêm người dùng mới"
 
-#: src/ui/main.qml:29
+#: src/ui/main.qml:32
 #, fuzzy, kde-format
 #| msgid "Add New User"
 msgctxt "@action:button"
 msgid "Add New User…"
 msgstr "Thêm người dùng mới"
 
-#: src/ui/main.qml:121
+#: src/ui/main.qml:137
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Press Space to edit the user profile"
