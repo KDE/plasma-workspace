@@ -2,6 +2,7 @@
     "KPlugin": {
         "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=systemsettings&component=kcm_nighttime",
         "Description": "Configure the day-night cycle times",
+        "Description[ar]": "ضبط أوقات دورات الليل والنهار",
         "Description[ca@valencia]": "Configura les hores dels cicles dia-nit",
         "Description[ca]": "Configura les hores dels cicles dia-nit",
         "Description[es]": "Configurar las horas del ciclo día-noche",
@@ -9,8 +10,10 @@
         "Description[ka]": "დღეღამის ციკლის დროების მორგება",
         "Description[nl]": "Configureer de cyclustijden van de dag-nachtcyclus",
         "Description[sl]": "Konfiguriraj čase cikla dneva in noči",
+        "Description[tr]": "Gece–gündüz döngüsü zamanlarını yapılandırın",
         "Description[uk]": "Налаштовування моментів перемикання у циклі день-ніч",
         "Description[x-test]": "xxConfigure the day-night cycle timesxx",
+        "Description[zh_CN]": "配置日夜周期时间",
         "FormFactors": [
             "tablet",
             "handset",
@@ -18,6 +21,7 @@
         ],
         "Icon": "lighttable",
         "Name": "Day-Night Cycle",
+        "Name[ar]": "دورة الليل والنهار",
         "Name[ca@valencia]": "Cicle dia-nit",
         "Name[ca]": "Cicle dia-nit",
         "Name[es]": "Ciclo día-noche",
@@ -25,10 +29,13 @@
         "Name[ka]": "დღეღამის ციკლი",
         "Name[nl]": "Dag-nachtcyclus",
         "Name[sl]": "Dnevno-nočni cikel",
+        "Name[tr]": "Gece–Gündüz Döngüsü",
         "Name[uk]": "Цикл день-ніч",
-        "Name[x-test]": "xxDay-Night Cyclexx"
+        "Name[x-test]": "xxDay-Night Cyclexx",
+        "Name[zh_CN]": "日夜周期"
     },
     "X-KDE-Keywords": "dark,light,night,day",
+    "X-KDE-Keywords[ar]": "ظلام,ضوء,ليل,نهار",
     "X-KDE-Keywords[ca@valencia]": "fosc,clar,nit,dia",
     "X-KDE-Keywords[ca]": "fosc,clar,nit,dia",
     "X-KDE-Keywords[es]": "oscuridad,claridad,noche,día",
@@ -36,8 +43,10 @@
     "X-KDE-Keywords[ka]": "მუქი,ნათელი,ღამე,დღე",
     "X-KDE-Keywords[nl]": "donker,licht,nacht,dag",
     "X-KDE-Keywords[sl]": "temno,svetlo,noč,dan",
+    "X-KDE-Keywords[tr]": "koyu,açık,gece,gündüz,karanlık,aydınlık,akşam,sabah",
     "X-KDE-Keywords[uk]": "dark,light,night,day,темно,світло,ніч,день",
     "X-KDE-Keywords[x-test]": "xxdarkxx,xxlightxx,xxnightxx,xxdayxx",
+    "X-KDE-Keywords[zh_CN]": "dark,light,night,day,shense,anse,heian,liangse,qianse,mingliang,yejian,yewan,wanshang,rijian,baitian,深色,暗色,黑暗,亮色,浅色,明亮,夜间,夜晚,晚上,日间,白天",
     "X-KDE-System-Settings-Parent-Category": "regionalsettings",
     "X-KDE-Weight": 70
 }
