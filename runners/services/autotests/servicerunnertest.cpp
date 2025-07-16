@@ -1,5 +1,5 @@
 /*
-    SPDX-FileCopyrightText: 2016-2021 Harald Sitter <sitter@kde.org>
+    SPDX-FileCopyrightText: 2016-2025 Harald Sitter <sitter@kde.org>
     SPDX-FileCopyrightText: 2022 Alexander Lohnau <alexander.lohnau@gmx.de>
 
     SPDX-License-Identifier: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
@@ -19,6 +19,8 @@
 #include <clocale>
 #include <sys/types.h>
 #include <unistd.h>
+
+using namespace Qt::StringLiterals;
 
 class ServiceRunnerTest : public KRunner::AbstractRunnerTest
 {
@@ -80,34 +82,32 @@ void ServiceRunnerTest::testExecutableExactMatch()
 {
     const auto matches = launchQuery(QStringLiteral("Virtual Machine Manager ServiceRunnerTest")); // virt-manager.desktop
     QVERIFY(std::any_of(matches.cbegin(), matches.cend(), [](const KRunner::QueryMatch &match) {
-        return match.text() == QLatin1String("Virtual Machine Manager ServiceRunnerTest") && match.relevance() == 1;
+        return match.text() == QLatin1String("Virtual Machine Manager ServiceRunnerTest") && match.relevance() >= 1;
     }));
 }
 
 void ServiceRunnerTest::testKonsoleVsYakuakeComment()
 {
     // Yakuake has konsole mentioned in comment, should be rated lower.
-    const auto matches = launchQuery(QStringLiteral("kons"));
+    auto matches = launchQuery(QStringLiteral("kons"));
 
-    bool konsoleFound = false;
-    bool yakuakeFound = false;
+    std::ranges::sort(matches, [](const KRunner::QueryMatch &a, const KRunner::QueryMatch &b) {
+        return a.relevance() > b.relevance();
+    });
+
+    QStringList texts;
     for (const auto &match : matches) {
-        qDebug() << "matched" << match.text();
-        if (!match.text().contains(QLatin1String("ServiceRunnerTest"))) {
+        if (!match.text().contains("ServiceRunnerTest"_L1)) {
             continue;
         }
-
-        if (match.text() == QLatin1String("Konsole ServiceRunnerTest")) {
-            QCOMPARE(match.relevance(), 0.9);
-            konsoleFound = true;
-        } else if (match.text() == QLatin1String("Yakuake ServiceRunnerTest")) {
-            // Rates lower because it doesn't have it in the name.
-            QCOMPARE(match.relevance(), 0.5);
-            yakuakeFound = true;
-        }
+        texts.push_back(match.text());
     }
-    QVERIFY(konsoleFound);
-    QVERIFY(yakuakeFound);
+
+    QCOMPARE(texts,
+             QStringList({
+                 u"Konsole ServiceRunnerTest"_s,
+                 u"Yakuake ServiceRunnerTest"_s,
+             }));
 }
 
 void ServiceRunnerTest::testSystemSettings()
@@ -118,40 +118,47 @@ void ServiceRunnerTest::testSystemSettings()
     // may then also disqualify the KDE version of system settings on account of having already
     // seen it. This test makes sure we find the right version.
     manager->matchSessionComplete();
-    const auto matches = launchQuery(QStringLiteral("settings"));
+    auto matches = launchQuery(QStringLiteral("settings"));
 
-    bool systemSettingsFound = false;
-    bool foreignSystemSettingsFound = false;
+    std::ranges::sort(matches, [](const KRunner::QueryMatch &a, const KRunner::QueryMatch &b) {
+        return a.relevance() > b.relevance();
+    });
+
+    QStringList texts;
     for (const auto &match : matches) {
-        qDebug() << "matched" << match;
-        if (match.text() == QLatin1String("System Settings ServiceRunnerTest")) {
-            systemSettingsFound = true;
+        if (!match.text().contains("ServiceRunnerTest"_L1)) {
+            continue;
         }
-        if (match.text() == QLatin1String("KDE System Settings ServiceRunnerTest")) {
-            foreignSystemSettingsFound = true;
-        }
+        texts.push_back(match.text());
     }
-    QVERIFY(systemSettingsFound);
-    QVERIFY(!foreignSystemSettingsFound);
+
+    QCOMPARE(texts,
+             QStringList({
+                 u"System Settings ServiceRunnerTest"_s,
+                 u"VirtThings ServiceRunnerTest"_s, // is in settings category
+             }));
 }
 
 void ServiceRunnerTest::testSystemSettings2()
 {
-    const auto matches = launchQuery(QStringLiteral("sy"));
+    auto matches = launchQuery(QStringLiteral("sy"));
 
-    bool systemSettingsFound = false;
-    bool foreignSystemSettingsFound = false;
+    std::ranges::sort(matches, [](const KRunner::QueryMatch &a, const KRunner::QueryMatch &b) {
+        return a.relevance() > b.relevance();
+    });
+
+    QStringList texts;
     for (const auto &match : matches) {
-        qDebug() << "matched" << match.text();
-        if (match.text() == QLatin1String("System Settings ServiceRunnerTest")) {
-            systemSettingsFound = true;
+        if (!match.text().contains("ServiceRunnerTest"_L1)) {
+            continue;
         }
-        if (match.text() == QLatin1String("KDE System Settings ServiceRunnerTest")) {
-            foreignSystemSettingsFound = true;
-        }
+        texts.push_back(match.text());
     }
-    QVERIFY(systemSettingsFound);
-    QVERIFY(!foreignSystemSettingsFound);
+
+    QCOMPARE(texts,
+             QStringList({
+                 u"System Settings ServiceRunnerTest"_s,
+             }));
 }
 
 void ServiceRunnerTest::testCategories()
