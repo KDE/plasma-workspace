@@ -23,6 +23,8 @@
 
 #include "configdialog.h"
 
+using namespace Qt::StringLiterals;
+
 static void setIconForCommand(ClipCommand *cmd)
 {
     // let's try to update icon of the item according to command
@@ -128,7 +130,9 @@ captured texts from the match pattern."),
 
     create();
     windowHandle()->resize(560, 440); // default, if there is no saved size
-    const KConfigGroup grp = KSharedConfig::openConfig()->group(QLatin1String(metaObject()->className()));
+    KConfigGroup oldGrp = KSharedConfig::openConfig()->group(u"EditCommandDialog"_s);
+    KConfigGroup grp = KSharedConfig::openStateConfig()->group(u"klipper"_s).group(u"EditCommandDialog"_s);
+    oldGrp.moveValuesTo(grp);
     KWindowConfig::restoreWindowSize(windowHandle(), grp);
     resize(windowHandle()->size());
 
@@ -179,7 +183,7 @@ void EditCommandDialog::slotAccepted()
 {
     saveCommand();
 
-    KConfigGroup grp = KSharedConfig::openConfig()->group(QLatin1String(metaObject()->className()));
+    KConfigGroup grp = KSharedConfig::openStateConfig()->group(u"klipper"_s).group(u"EditCommandDialog"_s);
     KWindowConfig::saveWindowSize(windowHandle(), grp);
     accept();
 }
