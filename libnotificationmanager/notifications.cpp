@@ -40,6 +40,7 @@
 using namespace Qt::StringLiterals;
 using namespace NotificationManager;
 
+#if QT_VERSION < QT_VERSION_CHECK(6, 9, 1)
 // This class is a workaround to https://bugreports.qt.io/browse/QTBUG-134210
 // and https://bugs.kde.org/show_bug.cgi?id=500749
 // if a model is added to an empty QConcatenateTablesProxyModel
@@ -47,6 +48,7 @@ using namespace NotificationManager;
 // which causes an infinite recursion in NotificationFilterProxyModel::filterAcceptsRow
 // We fix the number of columns to always be 1
 // remove when the upstream bug is fixed
+// However, this breaks sorting the model :-(
 class SingleColumnConcatenateTables : public QConcatenateTablesProxyModel
 {
 public:
@@ -58,6 +60,7 @@ public:
         return 1;
     }
 };
+#endif
 
 class Q_DECL_HIDDEN Notifications::Private
 {
@@ -186,7 +189,11 @@ void Notifications::Private::initProxyModels()
      */
 
     if (!notificationsAndJobsModel) {
+#if QT_VERSION < QT_VERSION_CHECK(6, 9, 1)
         notificationsAndJobsModel = new SingleColumnConcatenateTables(q);
+#else
+        notificationsAndJobsModel = new QConcatenateTablesProxyModel(q);
+#endif
     }
 
     if (!filterModel) {
