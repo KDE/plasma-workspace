@@ -27,6 +27,8 @@
 #include "configdialog.h"
 #include "editcommanddialog.h"
 
+using namespace Qt::StringLiterals;
+
 static QString output2text(ClipCommand::Output output)
 {
     switch (output) {
@@ -291,7 +293,9 @@ popup is activated manually with the <shortcut>%1</shortcut> key shortcut.",
 
     create();
     windowHandle()->resize(540, 560); // default, if there is no saved size
-    const KConfigGroup grp = KSharedConfig::openConfig()->group(QLatin1String(metaObject()->className()));
+    KConfigGroup oldConfig = KSharedConfig::openConfig()->group(u"EditActionDialog"_s);
+    KConfigGroup grp = KSharedConfig::openStateConfig()->group(u"klipper"_s).group(u"EditActionDialog"_s);
+    oldConfig.moveValuesTo(grp);
     KWindowConfig::restoreWindowSize(windowHandle(), grp);
     resize(windowHandle()->size());
 
@@ -355,7 +359,7 @@ void EditActionDialog::slotAccepted()
     saveAction();
 
     qCDebug(KLIPPER_LOG) << "Saving dialogue state";
-    KConfigGroup grp = KSharedConfig::openConfig()->group(QLatin1String(metaObject()->className()));
+    KConfigGroup grp = KSharedConfig::openStateConfig()->group(u"klipper"_s).group(u"EditActionDialog"_s);
     KWindowConfig::saveWindowSize(windowHandle(), grp);
     grp.writeEntry("ColumnState", m_commandList->horizontalHeader()->saveState().toBase64());
     accept();

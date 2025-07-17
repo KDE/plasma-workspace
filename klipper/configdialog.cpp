@@ -38,6 +38,8 @@
 #include "klipper.h"
 #include "klippersettings.h"
 
+using namespace Qt::StringLiterals;
+
 /* static */ QLabel *ConfigDialog::createHintLabel(const QString &text, QWidget *parent)
 {
     QLabel *hintLabel = new QLabel(text, parent);
@@ -407,8 +409,10 @@ which can be configured on the <interface>Action Menu</interface> page."),
     // Add some vertical space between our buttons and the dialogue buttons
     layout->setRowMinimumHeight(4, 16);
 
-    const KConfigGroup grp = KSharedConfig::openConfig()->group(QLatin1String(metaObject()->className()));
-    QByteArray hdrState = grp.readEntry("ColumnState", QByteArray());
+    KConfigGroup oldConfig = KSharedConfig::openConfig()->group(u"ActionsWidget"_s);
+    KConfigGroup state = KSharedConfig::openStateConfig()->group(u"klipper"_s).group(u"ActionsWidget"_s);
+    oldConfig.moveValuesTo(state);
+    QByteArray hdrState = state.readEntry("ColumnState", QByteArray());
     if (!hdrState.isEmpty()) {
         qCDebug(KLIPPER_LOG) << "Restoring column state";
         m_actionsTree->header()->restoreState(QByteArray::fromBase64(hdrState));
@@ -503,7 +507,7 @@ void ActionsWidget::resetModifiedState()
     m_actionsTree->resetModifiedState();
 
     qCDebug(KLIPPER_LOG) << "Saving column state";
-    KConfigGroup grp = KSharedConfig::openConfig()->group(QLatin1String(metaObject()->className()));
+    KConfigGroup grp = KSharedConfig::openStateConfig()->group(u"klipper"_s).group(u"ActionsWidget"_s);
     grp.writeEntry("ColumnState", m_actionsTree->header()->saveState().toBase64());
 }
 
@@ -618,8 +622,12 @@ ConfigDialog::ConfigDialog(QWidget *parent, KConfigSkeleton *skeleton, Klipper *
 
     // from KWindowConfig::restoreWindowSize() API documentation
     (void)winId();
-    const KConfigGroup grp = KSharedConfig::openConfig()->group(QLatin1String(metaObject()->className()));
-    KWindowConfig::restoreWindowSize(windowHandle(), grp);
+
+    auto oldConfig = KSharedConfig::openConfig()->group(u"ConfigDialog"_s);
+    auto windowStateGroup = KSharedConfig::openStateConfig()->group(u"klipper"_s).group(u"ConfigDialog"_s);
+    oldConfig.moveValuesTo(windowStateGroup);
+
+    KWindowConfig::restoreWindowSize(windowHandle(), windowStateGroup);
     resize(windowHandle()->size());
     connect(collection, &QObject::destroyed, this, &ConfigDialog::close);
     setMinimumHeight(550);
@@ -645,7 +653,7 @@ void ConfigDialog::updateSettings()
 
     KlipperSettings::self()->save();
 
-    KConfigGroup grp = KSharedConfig::openConfig()->group(QStringLiteral("ConfigDialog"));
+    KConfigGroup grp = KSharedConfig::openStateConfig()->group(u"klipper"_s).group(u"ConfigDialog"_s);
     KWindowConfig::saveWindowSize(windowHandle(), grp);
 }
 
