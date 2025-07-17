@@ -58,14 +58,16 @@ if(HAVE_KExiv2)
 endif()
 configure_file(config-KExiv2.h.in ${CMAKE_CURRENT_BINARY_DIR}/config-KExiv2.h)
 
-add_library(plasma_wallpaper_imageplugin SHARED imageplugin.cpp imageplugin.h)
-target_link_libraries(plasma_wallpaper_imageplugin
+ecm_add_qml_module(plasma_wallpaper_image URI "org.kde.plasma.wallpapers.image" VERSION 2.0 CLASS_NAME ImagePlugin)
+
+target_sources(plasma_wallpaper_image PRIVATE imageplugin.cpp imageplugin.h)
+
+target_link_libraries(plasma_wallpaper_image PRIVATE
     plasma_wallpaper_imageplugin_static
 )
+
+ecm_finalize_qml_module(plasma_wallpaper_image)
 
 if(BUILD_TESTING)
    add_subdirectory(autotests)
 endif()
-
-install(TARGETS plasma_wallpaper_imageplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/wallpapers/image)
-install(FILES qmldir DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/wallpapers/image)
