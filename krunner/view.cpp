@@ -100,7 +100,7 @@ void View::slotFocusWindowChanged()
     }
 
     if (!QGuiApplication::focusWindow() && !m_pinned) {
-        setVisible(false);
+        rootObject()->setProperty("open", false);
     }
 }
 
@@ -141,6 +141,7 @@ void View::showEvent(QShowEvent *event)
     if (KWindowSystem::isPlatformX11()) {
         KX11Extras::forceActiveWindow(winId());
     }
+    rootObject()->setProperty("open", true);
 }
 
 void View::updateMask()
@@ -208,7 +209,7 @@ void View::toggleDisplay()
         return;
     }
     if (isVisible()) {
-        setVisible(false);
+        rootObject()->setProperty("open", false);
     } else {
         display();
     }

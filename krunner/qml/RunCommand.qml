@@ -21,6 +21,7 @@ import org.kde.kirigami as Kirigami
 Item {
     id: root
     anchors.fill: parent
+    property bool open: false
     property string query
     property string singleRunner
     property bool showHistory: false
@@ -100,7 +101,9 @@ Item {
         anchors {
             top: parent.top
             horizontalCenter: parent.horizontalCenter
+            topMargin: -height
         }
+        opacity: 0
         leftPadding: background.fixedMargins.left
         topPadding: background.fixedMargins.top
         rightPadding: background.fixedMargins.right
@@ -114,7 +117,7 @@ Item {
                 PlasmaComponents3.ToolButton {
                     icon.name: "configure"
                     onClicked: {
-                        runnerWindow.visible = false
+                        root.open = false
                         KCMLauncher.open("plasma/kcms/desktop/kcm_krunnersettings")
                     }
                     Accessible.name: i18n("Configure")
@@ -278,7 +281,7 @@ Item {
                     function closeOrRun(event) {
                         // Close KRunner if no text was typed and enter was pressed, FEATURE: 211225
                         if (!root.query) {
-                            runnerWindow.visible = false
+                            root.open = false
                         } else {
                             results.runCurrentIndex(event)
                         }
@@ -287,7 +290,7 @@ Item {
                     Keys.onReturnPressed: event => closeOrRun(event)
 
                     Keys.onEscapePressed: {
-                        runnerWindow.visible = false
+                        root.open = false
                     }
 
                     Kirigami.Icon {
@@ -358,12 +361,12 @@ Item {
                     singleRunner: root.singleRunner
 
                     Keys.onEscapePressed: {
-                        runnerWindow.visible = false
+                        root.open = false
                     }
 
                     onActivated: {
                         if (!runnerWindow.pinned) {
-                            runnerWindow.visible = false
+                            root.open = false
                         }
                     }
 
@@ -497,6 +500,56 @@ Item {
                 imagePath: "dialogs/background"
                 prefix: "shadow"
                 enabledBorders: parent.enabledBorders
+            }
+        }
+
+        states: [
+            State {
+                when: root.open
+                PropertyChanges {
+                    target: mainControl
+                    opacity: 1
+                }
+                PropertyChanges {
+                    target: mainControl.anchors
+                    topMargin: 0
+                }
+            },
+            State {
+                when: !root.open
+                PropertyChanges {
+                    target: mainControl
+                    opacity: 0
+                }
+                PropertyChanges {
+                    target: mainControl.anchors
+                    topMargin: -mainControl.height
+                }
+            }
+        ]
+        transitions: Transition {
+            SequentialAnimation {
+                ParallelAnimation {
+                    NumberAnimation {
+                        target: mainControl
+                        property: "opacity"
+                        duration: Kirigami.Units.longDuration
+                        easing.type: Easing.InOutQuad
+                    }
+                    NumberAnimation {
+                        target: mainControl.anchors
+                        property: "topMargin"
+                        duration: Kirigami.Units.longDuration
+                        easing.type: Easing.OutQuad
+                    }
+                }
+                ScriptAction {
+                    script: {
+                        if (!root.open) {
+                            runnerWindow.visible = false;
+                        }
+                    }
+                }
             }
         }
     }
