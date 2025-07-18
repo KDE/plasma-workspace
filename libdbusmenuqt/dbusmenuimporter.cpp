@@ -80,7 +80,7 @@ public:
 
     QDBusPendingCallWatcher *refresh(int id)
     {
-        auto call = m_interface->GetLayout(id, 1, QStringList());
+        auto call = m_interface->GetLayout(id, 2, QStringList());
         QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(call, q);
         watcher->setProperty(DBUSMENU_PROPERTY_ID, id);
         QObject::connect(watcher, &QDBusPendingCallWatcher::finished, q, &DBusMenuImporter::slotGetLayoutFinished);
@@ -239,6 +239,71 @@ public:
         action->setShortcut(keySequence);
     }
 
+    void updateLayout(QMenu *menu, const DBusMenuLayoutItem &item)
+    {
+        // remove outdated actions
+        QSet<int> newDBusMenuItemIds;
+        newDBusMenuItemIds.reserve(item.children.count());
+        for (const DBusMenuLayoutItem &item : std::as_const(item.children)) {
+            newDBusMenuItemIds << item.id;
+        }
+        for (QAction *action : menu->actions()) {
+            int id = action->property(DBUSMENU_PROPERTY_ID).toInt();
+            if (!newDBusMenuItemIds.contains(id)) {
+                // Not calling removeAction() as QMenu will immediately close when it becomes empty,
+                // which can happen when an application completely reloads this menu.
+                // When the action is deleted deferred, it is removed from the menu.
+                action->deleteLater();
+                if (action->menu()) {
+                    action->menu()->deleteLater();
+                }
+                m_actionForId.remove(id);
+            }
+        }
+
+        // insert or update new actions into our menu
+        for (const DBusMenuLayoutItem &dbusMenuItem : std::as_const(item.children)) {
+            DBusMenuImporterPrivate::ActionForId::Iterator it = m_actionForId.find(dbusMenuItem.id);
+            QAction *action = nullptr;
+            if (it == m_actionForId.end()) {
+                int id = dbusMenuItem.id;
+                action = createAction(id, dbusMenuItem.properties, menu);
+                m_actionForId.insert(id, action);
+
+                QObject::connect(action, &QObject::destroyed, q, [this, id]() {
+                    m_actionForId.remove(id);
+                });
+
+                QObject::connect(action, &QAction::triggered, q, [id, this]() {
+                    q->sendClickedEvent(id);
+                });
+
+                if (QMenu *menuAction = action->menu()) {
+                    QObject::connect(menuAction, &QMenu::aboutToShow, q, &DBusMenuImporter::slotMenuAboutToShow, Qt::UniqueConnection);
+                }
+                QObject::connect(menu, &QMenu::aboutToHide, q, &DBusMenuImporter::slotMenuAboutToHide, Qt::UniqueConnection);
+
+                menu->addAction(action);
+            } else {
+                action = *it;
+                QStringList filteredKeys = dbusMenuItem.properties.keys();
+                filteredKeys.removeOne(QStringLiteral("type"));
+                filteredKeys.removeOne(QStringLiteral("toggle-type"));
+                filteredKeys.removeOne(QStringLiteral("children-display"));
+                updateAction(*it, dbusMenuItem.properties, filteredKeys);
+                // Move the action to the tail so we can keep the order same as the dbus request.
+                menu->removeAction(action);
+                menu->addAction(action);
+            }
+
+            if (action->menu()) {
+                updateLayout(action->menu(), dbusMenuItem);
+            }
+        }
+
+        Q_EMIT q->menuUpdated(menu);
+    }
+
     QMenu *menuForId(int id) const
     {
         if (id == 0) {
@@ -391,63 +456,7 @@ void DBusMenuImporter::slotGetLayoutFinished(QDBusPendingCallWatcher *watcher)
         return;
     }
 
-    // remove outdated actions
-    QSet<int> newDBusMenuItemIds;
-    newDBusMenuItemIds.reserve(rootItem.children.count());
-    for (const DBusMenuLayoutItem &item : std::as_const(rootItem.children)) {
-        newDBusMenuItemIds << item.id;
-    }
-    for (QAction *action : menu->actions()) {
-        int id = action->property(DBUSMENU_PROPERTY_ID).toInt();
-        if (!newDBusMenuItemIds.contains(id)) {
-            // Not calling removeAction() as QMenu will immediately close when it becomes empty,
-            // which can happen when an application completely reloads this menu.
-            // When the action is deleted deferred, it is removed from the menu.
-            action->deleteLater();
-            if (action->menu()) {
-                action->menu()->deleteLater();
-            }
-            d->m_actionForId.remove(id);
-        }
-    }
-
-    // insert or update new actions into our menu
-    for (const DBusMenuLayoutItem &dbusMenuItem : std::as_const(rootItem.children)) {
-        DBusMenuImporterPrivate::ActionForId::Iterator it = d->m_actionForId.find(dbusMenuItem.id);
-        QAction *action = nullptr;
-        if (it == d->m_actionForId.end()) {
-            int id = dbusMenuItem.id;
-            action = d->createAction(id, dbusMenuItem.properties, menu);
-            d->m_actionForId.insert(id, action);
-
-            connect(action, &QObject::destroyed, this, [this, id]() {
-                d->m_actionForId.remove(id);
-            });
-
-            connect(action, &QAction::triggered, this, [id, this]() {
-                sendClickedEvent(id);
-            });
-
-            if (QMenu *menuAction = action->menu()) {
-                connect(menuAction, &QMenu::aboutToShow, this, &DBusMenuImporter::slotMenuAboutToShow, Qt::UniqueConnection);
-            }
-            connect(menu, &QMenu::aboutToHide, this, &DBusMenuImporter::slotMenuAboutToHide, Qt::UniqueConnection);
-
-            menu->addAction(action);
-        } else {
-            action = *it;
-            QStringList filteredKeys = dbusMenuItem.properties.keys();
-            filteredKeys.removeOne(QStringLiteral("type"));
-            filteredKeys.removeOne(QStringLiteral("toggle-type"));
-            filteredKeys.removeOne(QStringLiteral("children-display"));
-            d->updateAction(*it, dbusMenuItem.properties, filteredKeys);
-            // Move the action to the tail so we can keep the order same as the dbus request.
-            menu->removeAction(action);
-            menu->addAction(action);
-        }
-    }
-
-    Q_EMIT menuUpdated(menu);
+    d->updateLayout(menu, rootItem);
 }
 
 void DBusMenuImporter::sendClickedEvent(int id)
