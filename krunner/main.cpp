@@ -31,6 +31,42 @@
 
 using namespace Qt::StringLiterals;
 
+static void setQmlTextRenderType()
+{
+#ifndef Q_OS_ANDROID
+    /* QtTextRendering uses less memory, so use it in low power mode.
+     *
+     * For scale factors greater than 2, native rendering doesn't actually do much.
+     * Does native rendering even work when scaleFactor >= 2?
+     */
+
+    // NativeTextRendering is still distorted sometimes with fractional scale factors
+    // Given Qt disables all hinting with native rendering when any scaling is used anyway
+    // we can use Qt's rendering throughout
+    // QTBUG-126577
+    qreal devicePixelRatio = qGuiApp->devicePixelRatio();
+    QQuickWindow::TextRenderType defaultTextRenderType = devicePixelRatio == devicePixelRatio //
+        ? QQuickWindow::NativeTextRendering
+        : QQuickWindow::QtTextRendering;
+
+    // Allow setting the text rendering type with an environment variable
+    QByteArrayList validInputs = {"qttextrendering", "qtrendering", "nativetextrendering", "nativerendering"};
+    QByteArray input = qgetenv("QT_QUICK_DEFAULT_TEXT_RENDER_TYPE").toLower();
+    if (validInputs.contains(input)) {
+        if (input == validInputs[0] || input == validInputs[1]) {
+            defaultTextRenderType = QQuickWindow::QtTextRendering;
+        } else {
+            defaultTextRenderType = QQuickWindow::NativeTextRendering;
+        }
+    }
+    QQuickWindow::setTextRenderType(defaultTextRenderType);
+#else
+    // Native rendering on android is broken, so prefer Qt rendering in
+    // this case.
+    QQuickWindow::setTextRenderType(QQuickWindow::QtTextRendering);
+#endif
+}
+
 int main(int argc, char **argv)
 {
     auto format = QSurfaceFormat::defaultFormat();
@@ -46,6 +82,7 @@ int main(int argc, char **argv)
     qunsetenv("QT_WAYLAND_RECONNECT");
     QQuickWindow::setDefaultAlphaBuffer(true);
     QApplication app(argc, argv);
+    setQmlTextRenderType();
     qunsetenv("QT_WAYLAND_DISABLE_FIXED_POSITIONS");
     qputenv("QT_WAYLAND_RECONNECT", "1");
 
