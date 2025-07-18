@@ -310,10 +310,6 @@ void AppMenuModel::updateApplicationMenu(const QString &serviceName, const QStri
                 });
 
                 connect(a, &QAction::destroyed, this, &AppMenuModel::modelNeedsUpdate);
-
-                if (a->menu()) {
-                    m_importer->updateMenu(a->menu());
-                }
             }
 
             setMenuAvailable(true);
