@@ -310,6 +310,14 @@ void AppMenuModel::updateApplicationMenu(const QString &serviceName, const QStri
                 });
 
                 connect(a, &QAction::destroyed, this, &AppMenuModel::modelNeedsUpdate);
+
+                // Electron-based applications don't return proper layout with GetLayout(depth=2),
+                // so pretend that submenus are open.
+                if (QMenu *menu = a->menu()) {
+                    if (menu->isEmpty()) {
+                        m_importer->updateMenu(menu);
+                    }
+                }
             }
 
             setMenuAvailable(true);
