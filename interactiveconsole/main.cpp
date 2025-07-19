@@ -11,6 +11,7 @@
 
 int main(int argc, char **argv)
 {
+    QApplication::setDesktopFileName(QStringLiteral("org.kde.plasma-interactiveconsole"));
     QApplication app(argc, argv);
     InteractiveConsole::ConsoleMode mode = InteractiveConsole::PlasmaConsole;
 
