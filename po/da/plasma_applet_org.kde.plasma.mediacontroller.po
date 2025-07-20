@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Martin Schlander <mschlander@opensuse.org>, 2014, 2016, 2017, 2018, 2021.
-# SPDX-FileCopyrightText: 2024 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
+# SPDX-FileCopyrightText: 2024, 2025 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-09 00:43+0000\n"
-"PO-Revision-Date: 2024-07-08 12:14+0200\n"
+"PO-Revision-Date: 2025-07-11 12:05+0200\n"
 "Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #: AlbumArtStackView.qml:202
 #, kde-format
@@ -37,27 +37,25 @@ msgstr "-%1"
 #: ExpandedRepresentation.qml:592
 #, kde-format
 msgid "Playback rate %1"
-msgstr ""
+msgstr "Afspilningshastighed %1"
 
 #: ExpandedRepresentation.qml:595
-#, fuzzy, kde-format
-#| msgctxt "Remaining time for song e.g -5:42"
-#| msgid "-%1"
+#, kde-format
 msgctxt "Playback rate"
 msgid "%1x"
-msgstr "-%1"
+msgstr "%1x"
 
 #: ExpandedRepresentation.qml:599
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Playback rate"
-msgstr ""
+msgstr "Afspilningshastighed"
 
 #: ExpandedRepresentation.qml:645
 #, kde-format
 msgctxt "@action:inmenu Playback speed (Normal)"
 msgid "%1 (Normal)"
-msgstr ""
+msgstr "%1 (normal)"
 
 #: ExpandedRepresentation.qml:684
 #, kde-format
@@ -100,8 +98,7 @@ msgid "Repeat"
 msgstr "Gentag"
 
 #: ExpandedRepresentation.qml:839
-#, fuzzy, kde-format
-#| msgid "Choose player automatically"
+#, kde-format
 msgctxt "@action:button"
 msgid "Choose player automatically"
 msgstr "Vælg automatisk afspiller"

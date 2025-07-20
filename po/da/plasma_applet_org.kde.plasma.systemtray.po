@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Martin Schlander <mschlander@opensuse.org>, 2014, 2015, 2017, 2019, 2020, 2021.
-# SPDX-FileCopyrightText: 2024 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
+# SPDX-FileCopyrightText: 2024, 2025 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-15 00:44+0000\n"
-"PO-Revision-Date: 2024-10-26 11:05+0200\n"
+"PO-Revision-Date: 2025-07-11 12:02+0200\n"
 "Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -83,12 +83,17 @@ msgid ""
 "><nl/>Use this setting at your own risk, and do not report issues to KDE or "
 "the app’s author."
 msgstr ""
+"Led efter en indstilling i <application>%1</application> for at deaktivere "
+"dens statusikon før du gør det her. Nogle programmers statusikoner er ikke "
+"designet til at blive deaktiveret, og ved at bruge denne indstilling kan det "
+"skabe uventet opførsel.<nl/><nl/>Brug denne indstilling på eget ansvar, og "
+"rapportér ikke problemer til KDE eller programmets udvikler."
 
 #: package/contents/ui/ConfigEntries.qml:164
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
-msgstr ""
+msgstr "Jeg forstår risici"
 
 #: package/contents/ui/ConfigEntries.qml:176
 #, kde-kuit-format
@@ -99,6 +104,10 @@ msgid ""
 "consider configuring the clipboard to disable its history, or only remember "
 "one item at a time."
 msgstr ""
+"At deaktivere udklipsholderen anbefales ikke, da det vil medføre, at "
+"kopierede data går tabt, når det program, de blev kopieret fra, lukkes.<nl/"
+"><nl/>Overvej i stedet at indstille udklipsholderen til at deaktivere dens "
+"historik eller kun at huske ét element ad gangen."
 
 #: package/contents/ui/ConfigEntries.qml:204
 #, kde-format
@@ -217,7 +226,7 @@ msgstr "Vis skjulte ikoner"
 #, kde-format
 msgctxt "@info:whatsthis accessible description for popup grid"
 msgid "Grid with %1 items in %2 columns"
-msgstr ""
+msgstr "Gitter med %1 elementer i %2 kolonner"
 
 #: package/contents/ui/HiddenItemsView.qml:46
 #, kde-format

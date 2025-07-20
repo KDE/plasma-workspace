@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Martin Schlander <mschlander@opensuse.org>, 2014, 2015, 2016, 2019, 2021.
-# SPDX-FileCopyrightText: 2024 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
+# SPDX-FileCopyrightText: 2024, 2025 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-22 02:46+0000\n"
-"PO-Revision-Date: 2024-10-26 11:40+0200\n"
+"PO-Revision-Date: 2025-07-19 12:10+0200\n"
 "Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -300,12 +300,9 @@ msgid "Online Services"
 msgstr "Online tjenester"
 
 #: shellprivate/widgetexplorer.cpp:125
-#, fuzzy
-#| msgctxt "applet category"
-#| msgid "System Information"
 msgctxt "applet category"
 msgid "Personal Information"
-msgstr "Systeminformation"
+msgstr "Personlig information"
 
 #: shellprivate/widgetexplorer.cpp:126
 msgctxt "applet category"
@@ -348,18 +345,13 @@ msgid "Running"
 msgstr "Kører"
 
 #: shellprivate/widgetexplorer.cpp:157
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inmenu used in the widget filter. Filter widgets that can be un-"
-#| "installed from the system, which are usually installed by the user to a "
-#| "local place."
-#| msgid "Uninstallable"
+#, kde-format
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can be un-"
 "installed from the system, which are usually installed by the user to a "
 "local place."
 msgid "User-installed"
-msgstr "Kan afinstalleres"
+msgstr "Brugerinstalleret"
 
 #: shellprivate/widgetexplorer.cpp:161
 #, kde-format
@@ -413,46 +405,48 @@ msgid ""
 "The currently selected time zone is not available for visualization on this "
 "map"
 msgstr ""
+"Den aktuelt valgte tidszone er ikke tilgængelig for visualisering på dette "
+"kort"
 
 #: timezoneselector/TimezoneSelector.qml:196
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom in"
-msgstr ""
+msgstr "Zoom ind"
 
 #: timezoneselector/TimezoneSelector.qml:212
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom out"
-msgstr ""
+msgstr "Zoom ud"
 
 #: timezoneselector/TimezoneSelector.qml:241
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Region:"
-msgstr ""
+msgstr "Region:"
 
 #: timezoneselector/TimezoneSelector.qml:248
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
-msgstr ""
+msgstr "Vælg..."
 
 #: timezoneselector/TimezoneSelector.qml:252
 #, kde-format
 msgid "Timezone region selector"
-msgstr ""
+msgstr "Tidszone regionvælger"
 
 #: timezoneselector/TimezoneSelector.qml:272
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
-msgstr ""
+msgstr "Tidszone:"
 
 #: timezoneselector/TimezoneSelector.qml:282
 #, kde-format
 msgid "Timezone location selector"
-msgstr ""
+msgstr "Tidszone placeringsvælger"
 
 #~ msgid "&Execute"
 #~ msgstr "&Kør"

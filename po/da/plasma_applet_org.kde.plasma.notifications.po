@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Martin Schlander <mschlander@opensuse.org>, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021.
-# SPDX-FileCopyrightText: 2024 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
+# SPDX-FileCopyrightText: 2024, 2025 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-21 02:41+0000\n"
-"PO-Revision-Date: 2024-07-08 12:14+0200\n"
+"PO-Revision-Date: 2025-07-11 12:04+0200\n"
 "Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #: fileinfo.cpp:170
 #, kde-format
@@ -266,12 +266,12 @@ msgstr "Send"
 #: package/contents/ui/components/SpeedChart.qml:142
 #, kde-format
 msgid "Speed"
-msgstr ""
+msgstr "Hastighed"
 
 #: package/contents/ui/components/SpeedChart.qml:192
 #, kde-format
 msgid "Average Speed"
-msgstr ""
+msgstr "Gennemsnitshastighed"
 
 #: package/contents/ui/components/SpeedChart.qml:249
 #, kde-format
@@ -370,14 +370,14 @@ msgstr "Skærmene er spejlede"
 #, kde-format
 msgctxt "Do not disturb because fullscreen app is focused"
 msgid "Fullscreen app is focused"
-msgstr ""
+msgstr "Program i fuldskærm er fokuseret"
 
 #: package/contents/ui/FullRepresentation.qml:469
 #: package/contents/ui/FullRepresentation.qml:475
 #, kde-format
 msgctxt "@action:button"
 msgid "View"
-msgstr ""
+msgstr "Se"
 
 #: package/contents/ui/FullRepresentation.qml:556
 #, kde-format
@@ -441,13 +441,11 @@ msgstr[0] "%1 ulæst bekendtgørelse"
 msgstr[1] "%1 ulæste bekendtgørelser"
 
 #: package/contents/ui/main.qml:91
-#, fuzzy, kde-format
-#| msgid "%1 unread notification"
-#| msgid_plural "%1 unread notifications"
+#, kde-format
 msgid "%1 active notification"
 msgid_plural "%1 active notifications"
-msgstr[0] "%1 ulæst bekendtgørelse"
-msgstr[1] "%1 ulæste bekendtgørelser"
+msgstr[0] "%1 aktiv notifikation"
+msgstr[1] "%1 aktive notifikationer"
 
 #: package/contents/ui/main.qml:104
 #, kde-format

@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Martin Schlander <mschlander@opensuse.org>, 2014, 2015, 2016, 2018, 2019, 2020, 2021, 2022.
-# SPDX-FileCopyrightText: 2024 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
+# SPDX-FileCopyrightText: 2024, 2025 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-04 02:35+0000\n"
-"PO-Revision-Date: 2024-10-26 11:05+0200\n"
+"PO-Revision-Date: 2025-07-19 12:17+0200\n"
 "Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #: package/contents/config/config.qml:20
 #, kde-format
@@ -151,11 +151,10 @@ msgid "Offset from UTC time"
 msgstr "Forskydning fra UTC-tid"
 
 #: package/contents/ui/configAppearance.qml:141
-#, fuzzy, kde-format
-#| msgid "Switch Systemwide Time Zone…"
+#, kde-format
 msgctxt "@action:button opens kcm"
 msgid "Switch Time Zone…"
-msgstr "Skift tidszone for hele systemet..."
+msgstr "Skift tidszone…"
 
 #: package/contents/ui/configAppearance.qml:153
 #, kde-format
@@ -270,7 +269,7 @@ msgstr "%1pt %2"
 #, kde-format
 msgctxt "@info"
 msgid "Note: size may be reduced if the panel is not thick enough."
-msgstr ""
+msgstr "Bemærk: størrelsen kan blive reduceret, hvis panelet ikke er tykt nok."
 
 #: package/contents/ui/configAppearance.qml:341
 #, kde-format
@@ -306,23 +305,19 @@ msgid "Available Plugins:"
 msgstr "Tilgængelige plugins:"
 
 #: package/contents/ui/configTimeZones.qml:70
-#, fuzzy, kde-format
-#| msgctxt "This is a city associated with particular time zone"
-#| msgid "Cancun"
+#, kde-format
 msgid "Cancel"
-msgstr "Cancun"
+msgstr "Annullér"
 
 #: package/contents/ui/configTimeZones.qml:77
-#, fuzzy, kde-format
-#| msgid "Add More Time Zones"
+#, kde-format
 msgid "Add Selected Time Zone"
-msgstr "Tilføj flere tidszoner"
+msgstr "Tilføj valgte tidszone"
 
 #: package/contents/ui/configTimeZones.qml:94
-#, fuzzy, kde-format
-#| msgid "Add Time Zones…"
+#, kde-format
 msgid "Add Time Zone…"
-msgstr "Tilføj tidszoner..."
+msgstr "Tilføj tidszone..."
 
 #: package/contents/ui/configTimeZones.qml:153
 #, kde-format
@@ -374,6 +369,8 @@ msgid ""
 "Tip: Add your home time zone to this list to see the time there even when "
 "you're traveling. It will not be shown twice while at home."
 msgstr ""
+"Tip: Tilføj din hjemmetidszone til denne liste for at se tiden der, selv når "
+"du er ude og rejse. Den vil ikke blive vist to gange, når du er hjemme."
 
 #: package/contents/ui/configTimeZones.qml:245
 #, kde-format
@@ -390,10 +387,9 @@ msgstr ""
 "rejser, skifter tidszonen for hele systemet i stedet for."
 
 #: package/contents/ui/configTimeZones.qml:264
-#, fuzzy, kde-format
-#| msgid "Time Zones"
+#, kde-format
 msgid "Choose Time Zone"
-msgstr "Tidszoner"
+msgstr "Vælg tidszone"
 
 #: package/contents/ui/main.qml:217
 #, kde-format
@@ -406,6 +402,8 @@ msgctxt "@label Shown in place of digital clock when no timezone is set"
 msgid ""
 "Time zone is not set; click here to open Date & Time settings and set one"
 msgstr ""
+"Tidszone er ikke indstillet; klik her for at åbne indstillingerne for Dato & "
+"Klokkeslæt for at indstille en"
 
 #: package/contents/ui/Tooltip.qml:34
 #, kde-format
@@ -414,12 +412,11 @@ msgid "Today is %1"
 msgstr "I dag er %1"
 
 #: package/contents/ui/Tooltip.qml:65
-#, fuzzy, kde-format
-#| msgid "Time zone city"
+#, kde-format
 msgctxt ""
 "@label main text shown in digital clock's tooltip when timezone is missing"
 msgid "Time zone is not set"
-msgstr "Tidszone-by"
+msgstr "Tidszonen er ikke indstillet"
 
 #: package/contents/ui/Tooltip.qml:86
 #, kde-format
@@ -427,6 +424,8 @@ msgctxt ""
 "@label sub text shown in digital clock's tooltip when timezone is missing"
 msgid "Click the clock icon to open Date & Time settings and set a time zone."
 msgstr ""
+"Klik på ur-ikonet for at åbne indstillingerne for Dato & Klokkeslæt og "
+"indstil en tidszone."
 
 #: package/contents/ui/Tooltip.qml:131
 #, kde-format
