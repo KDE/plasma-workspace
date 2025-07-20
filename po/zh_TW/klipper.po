@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-25 00:44+0000\n"
+"POT-Creation-Date: 2025-07-20 00:44+0000\n"
 "PO-Revision-Date: 2025-07-01 19:35+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -41,24 +41,24 @@ msgstr ""
 "ycheng@sinica.edu.tw,s9321028@ncnu.edu.tw,iitze@hotmail.com,mail@kisaragi-"
 "hiu.com"
 
-#: configdialog.cpp:83
+#: configdialog.cpp:85
 #, kde-format
 msgid "Clipboard history:"
 msgstr "剪貼簿歷史紀錄："
 
-#: configdialog.cpp:89
+#: configdialog.cpp:91
 #, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
 msgid_plural "%v entries"
 msgstr[0] "%v 個項目"
 
-#: configdialog.cpp:98
+#: configdialog.cpp:100
 #, kde-format
 msgid "Selection and Clipboard:"
 msgstr "選取區與剪貼簿："
 
-#: configdialog.cpp:105
+#: configdialog.cpp:107
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -81,49 +81,49 @@ msgstr ""
 "可以馬上用任何方式貼上它。關閉這個選項的話，選取區可能還是會被儲存到剪貼簿歷"
 "史紀錄裡（根據下方選項），但它只能被使用滑鼠中鍵貼上。"
 
-#: configdialog.cpp:134 configdialog.cpp:172
+#: configdialog.cpp:136 configdialog.cpp:174
 #, kde-format
 msgid "Always save in history"
 msgstr "總是儲存到歷史紀錄中"
 
-#: configdialog.cpp:138
+#: configdialog.cpp:140
 #, kde-format
 msgid "Text selection:"
 msgstr "文字選取區："
 
-#: configdialog.cpp:140 configdialog.cpp:178
+#: configdialog.cpp:142 configdialog.cpp:180
 #, kde-format
 msgid "Only when explicitly copied"
 msgstr "只在明確複製時"
 
-#: configdialog.cpp:145
+#: configdialog.cpp:147
 #, kde-format
 msgid "Whether text selections are saved in the clipboard history."
 msgstr "文字選取區是否應該要儲存到剪貼簿歷史紀錄中。"
 
-#: configdialog.cpp:176
+#: configdialog.cpp:178
 #, kde-format
 msgid "Non-text selection:"
 msgstr "非文字的選取區："
 
-#: configdialog.cpp:183
+#: configdialog.cpp:185
 #, kde-format
 msgid "Never save in history"
 msgstr "不要儲存到歷史紀錄"
 
-#: configdialog.cpp:188
+#: configdialog.cpp:190
 #, kde-format
 msgid ""
 "Whether non-text selections (such as images) are saved in the clipboard "
 "history."
 msgstr "非文字的選取區（例如影像等）是否應該要儲存到剪貼簿歷史紀錄中。"
 
-#: configdialog.cpp:262
+#: configdialog.cpp:264
 #, kde-format
 msgid "Show action popup menu:"
 msgstr "顯示動作彈出式選單："
 
-#: configdialog.cpp:272
+#: configdialog.cpp:274
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -137,35 +137,35 @@ msgstr ""
 "動作的彈出式選單。如果這個自動選單被從這裡關掉，或因為在已排除的視窗中而沒有"
 "顯示它時，可以使用 <shortcut>%1</shortcut> 鍵盤快捷鍵來顯示它。"
 
-#: configdialog.cpp:281
+#: configdialog.cpp:283
 #, kde-format
 msgid "Exclude Windows..."
 msgstr "排除視窗…"
 
-#: configdialog.cpp:295
+#: configdialog.cpp:297
 #, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
 msgid_plural "%v seconds"
 msgstr[0] "%v 秒"
 
-#: configdialog.cpp:296
+#: configdialog.cpp:298
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "無"
 
-#: configdialog.cpp:305
+#: configdialog.cpp:307
 #, kde-format
 msgid "Options:"
 msgstr "選項："
 
-#: configdialog.cpp:332
+#: configdialog.cpp:334
 #, kde-format
 msgid "Exclude Windows"
 msgstr "排除視窗"
 
-#: configdialog.cpp:362
+#: configdialog.cpp:364
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -176,34 +176,34 @@ msgstr ""
 "當 <interface>比對樣式</interface> 與剪貼簿內容符合時，它的 <interface>命令</"
 "interface> 將會出現在 Klipper 的彈出式視窗而可被執行。"
 
-#: configdialog.cpp:371
+#: configdialog.cpp:373
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "比對樣式與命令"
 
-#: configdialog.cpp:371
+#: configdialog.cpp:373
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "描述"
 
-#: configdialog.cpp:377
+#: configdialog.cpp:379
 #, kde-format
 msgid "Add Action..."
 msgstr "新增動作..."
 
-#: configdialog.cpp:381
+#: configdialog.cpp:383
 #, kde-format
 msgid "Edit Action..."
 msgstr "編輯動作..."
 
-#: configdialog.cpp:386
+#: configdialog.cpp:388
 #, kde-format
 msgid "Delete Action"
 msgstr "刪除動作"
 
-#: configdialog.cpp:393
+#: configdialog.cpp:395
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -213,7 +213,7 @@ msgstr ""
 "這些動作會出現在一個彈出式選單裡，可以在 <interface>動作選單</interface> 頁面"
 "進行設定。"
 
-#: configdialog.cpp:577
+#: configdialog.cpp:581
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -221,56 +221,56 @@ msgid ""
 "commands?"
 msgstr "確定要刪除已選動作 <resource>%1</resource><nl/>以及它的所有命令嗎？"
 
-#: configdialog.cpp:578
+#: configdialog.cpp:582
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "確認刪除動作"
 
-#: configdialog.cpp:607
+#: configdialog.cpp:611
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "一般"
 
-#: configdialog.cpp:607
+#: configdialog.cpp:611
 #, kde-format
 msgid "General Configuration"
 msgstr "一般設定"
 
-#: configdialog.cpp:608
+#: configdialog.cpp:612
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "動作選單"
 
-#: configdialog.cpp:608
+#: configdialog.cpp:612
 #, kde-format
 msgid "Action Menu"
 msgstr "動作選單"
 
-#: configdialog.cpp:609
+#: configdialog.cpp:613
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "動作設定"
 
-#: configdialog.cpp:609
+#: configdialog.cpp:613
 #, kde-format
 msgid "Actions Configuration"
 msgstr "動作設定"
 
-#: configdialog.cpp:612
+#: configdialog.cpp:616
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "捷徑"
 
-#: configdialog.cpp:612
+#: configdialog.cpp:616
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "捷徑設定"
 
-#: configdialog.cpp:693
+#: configdialog.cpp:701
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -286,7 +286,7 @@ msgstr ""
 "一次鍵就出現一次。<nl/><nl/>如果動作選單在使用某個應用程式時突然自動出現，則"
 "請將它加入到這個列表裡。<link>如何尋找要輸入的名稱</link>。"
 
-#: configdialog.cpp:706
+#: configdialog.cpp:714
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -443,42 +443,42 @@ msgctxt ""
 msgid "+%1"
 msgstr "+%1"
 
-#: editactiondialog.cpp:34 editcommanddialog.cpp:89
+#: editactiondialog.cpp:36 editcommanddialog.cpp:91
 #, kde-format
 msgid "Ignore"
 msgstr "忽略"
 
-#: editactiondialog.cpp:36
+#: editactiondialog.cpp:38
 #, kde-format
 msgid "Replace Clipboard"
 msgstr "取代剪貼簿"
 
-#: editactiondialog.cpp:38
+#: editactiondialog.cpp:40
 #, kde-format
 msgid "Add to Clipboard"
 msgstr "新增到剪貼簿"
 
-#: editactiondialog.cpp:126
+#: editactiondialog.cpp:128
 #, kde-format
 msgid "Command"
 msgstr "命令"
 
-#: editactiondialog.cpp:128
+#: editactiondialog.cpp:130
 #, kde-format
 msgid "Output"
 msgstr "輸出"
 
-#: editactiondialog.cpp:130
+#: editactiondialog.cpp:132
 #, kde-format
 msgid "Description"
 msgstr "描述"
 
-#: editactiondialog.cpp:183
+#: editactiondialog.cpp:185
 #, kde-format
 msgid "Action Properties"
 msgstr "動作屬性"
 
-#: editactiondialog.cpp:196
+#: editactiondialog.cpp:198
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -491,17 +491,17 @@ msgstr ""
 "時，動作的 <interface>命令</interface> 會出現在 Klipper 彈出式視窗中；若選取"
 "其中一個，則該命令將被執行。"
 
-#: editactiondialog.cpp:208
+#: editactiondialog.cpp:210
 #, kde-format
 msgid "Enter a pattern to match against the clipboard"
 msgstr "輸入要與剪貼簿比對的樣式"
 
-#: editactiondialog.cpp:210
+#: editactiondialog.cpp:212
 #, kde-format
 msgid "Match pattern:"
 msgstr "比對樣式："
 
-#: editactiondialog.cpp:213
+#: editactiondialog.cpp:215
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -512,22 +512,22 @@ msgstr ""
 "比對樣式是一個正則表達式。關於正則表達式的更多資訊請參考它的<link url="
 "\"https://zh.wikipedia.org/zh-tw/正則表達式\">維基百科條目</link>。"
 
-#: editactiondialog.cpp:224
+#: editactiondialog.cpp:226
 #, kde-format
 msgid "Enter a description for the action"
 msgstr "輸入動作的描述"
 
-#: editactiondialog.cpp:225 editcommanddialog.cpp:83
+#: editactiondialog.cpp:227 editcommanddialog.cpp:85
 #, kde-format
 msgid "Description:"
 msgstr "描述："
 
-#: editactiondialog.cpp:228
+#: editactiondialog.cpp:230
 #, kde-format
 msgid "Include in automatic popup"
 msgstr "包含在自動彈出選單裡"
 
-#: editactiondialog.cpp:232
+#: editactiondialog.cpp:234
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -542,48 +542,48 @@ msgstr ""
 "單中，但手動使用 <shortcut>%1</shortcut> 鍵盤快捷鍵叫出動作選單時則還是會包"
 "含。"
 
-#: editactiondialog.cpp:267
+#: editactiondialog.cpp:269
 #, kde-format
 msgid "Add Command..."
 msgstr "新增命令…"
 
-#: editactiondialog.cpp:272
+#: editactiondialog.cpp:274
 #, kde-format
 msgid "Edit Command..."
 msgstr "編輯命令…"
 
-#: editactiondialog.cpp:278
+#: editactiondialog.cpp:280
 #, kde-format
 msgid "Delete Command"
 msgstr "刪除命令"
 
-#: editactiondialog.cpp:393
+#: editactiondialog.cpp:397
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Delete the selected command <resource>%1</resource>?"
 msgstr "確定要刪除已選命令 <resource>%1</resource> 嗎？"
 
-#: editactiondialog.cpp:394
+#: editactiondialog.cpp:398
 #, kde-format
 msgid "Confirm Delete Command"
 msgstr "確認刪除命令"
 
-#: editcommanddialog.cpp:46
+#: editcommanddialog.cpp:48
 #, kde-format
 msgid "Command Properties"
 msgstr "命令屬性"
 
-#: editcommanddialog.cpp:59
+#: editcommanddialog.cpp:61
 #, kde-format
 msgid "Enter the command and arguments"
 msgstr "輸入命令與參數"
 
-#: editcommanddialog.cpp:62
+#: editcommanddialog.cpp:64
 #, kde-format
 msgid "Command:"
 msgstr "命令："
 
-#: editcommanddialog.cpp:71
+#: editcommanddialog.cpp:73
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -596,37 +596,37 @@ msgstr ""
 "<placeholder>&#37;0</placeholder> 到 <placeholder>&#37;9</placeholder> 將被替"
 "換為比對樣式中相對應的擷取文字。"
 
-#: editcommanddialog.cpp:81
+#: editcommanddialog.cpp:83
 #, kde-format
 msgid "Enter a description for the command"
 msgstr "輸入命令的描述"
 
-#: editcommanddialog.cpp:91
+#: editcommanddialog.cpp:93
 #, kde-format
 msgid "Output from command:"
 msgstr "命令的輸出："
 
-#: editcommanddialog.cpp:93
+#: editcommanddialog.cpp:95
 #, kde-format
 msgid "Replace current clipboard"
 msgstr "取代目前剪貼簿"
 
-#: editcommanddialog.cpp:97
+#: editcommanddialog.cpp:99
 #, kde-format
 msgid "Append to clipboard"
 msgstr "加到剪貼簿後方"
 
-#: editcommanddialog.cpp:101
+#: editcommanddialog.cpp:103
 #, kde-format
 msgid "What happens to the standard output of the command executed."
 msgstr "執行命令後它的標準輸出要如何處理。"
 
-#: editcommanddialog.cpp:115
+#: editcommanddialog.cpp:117
 #, kde-format
 msgid "Reset the icon to the default for the command"
 msgstr "為命令重設圖示為預設值"
 
-#: editcommanddialog.cpp:121
+#: editcommanddialog.cpp:123
 #, kde-format
 msgid "Icon:"
 msgstr "圖示："

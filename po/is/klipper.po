@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-25 00:44+0000\n"
+"POT-Creation-Date: 2025-07-20 00:44+0000\n"
 "PO-Revision-Date: 2024-12-13 21:20+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -40,12 +40,12 @@ msgstr ""
 "logir@logi.org, ra@ra.is, svanurpalsson@hotmail.com, sv1@fellsnet.is,"
 "gudmundure@gmail.com"
 
-#: configdialog.cpp:83
+#: configdialog.cpp:85
 #, kde-format
 msgid "Clipboard history:"
 msgstr "Ferilskrá klippispjalds:"
 
-#: configdialog.cpp:89
+#: configdialog.cpp:91
 #, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
@@ -53,12 +53,12 @@ msgid_plural "%v entries"
 msgstr[0] "%v færsla"
 msgstr[1] "%v færslur"
 
-#: configdialog.cpp:98
+#: configdialog.cpp:100
 #, kde-format
 msgid "Selection and Clipboard:"
 msgstr "Val og klippispjald:"
 
-#: configdialog.cpp:105
+#: configdialog.cpp:107
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -84,37 +84,37 @@ msgstr ""
 "samt sem áður vistað í ferilskrá klippispjaldsins (allt eftir valkostunum "
 "fyrir neðan) en einungis hægt að líma með miðjuhnappi músarinnar."
 
-#: configdialog.cpp:134 configdialog.cpp:172
+#: configdialog.cpp:136 configdialog.cpp:174
 #, kde-format
 msgid "Always save in history"
 msgstr "Alltaf vista í ferilskráningu"
 
-#: configdialog.cpp:138
+#: configdialog.cpp:140
 #, kde-format
 msgid "Text selection:"
 msgstr "Valinn texti:"
 
-#: configdialog.cpp:140 configdialog.cpp:178
+#: configdialog.cpp:142 configdialog.cpp:180
 #, kde-format
 msgid "Only when explicitly copied"
 msgstr "Bara þegar afritað sérstaklega"
 
-#: configdialog.cpp:145
+#: configdialog.cpp:147
 #, kde-format
 msgid "Whether text selections are saved in the clipboard history."
 msgstr "Hvort valdir textar séu vistaðir í ferilskrá klippispjalds."
 
-#: configdialog.cpp:176
+#: configdialog.cpp:178
 #, kde-format
 msgid "Non-text selection:"
 msgstr "Val sem ekki er texti:"
 
-#: configdialog.cpp:183
+#: configdialog.cpp:185
 #, kde-format
 msgid "Never save in history"
 msgstr "Aldrei vista í ferilskráningu"
 
-#: configdialog.cpp:188
+#: configdialog.cpp:190
 #, kde-format
 msgid ""
 "Whether non-text selections (such as images) are saved in the clipboard "
@@ -123,12 +123,12 @@ msgstr ""
 "Hvort val sem ekki er texti (eins og myndir) er vistað í ferilskrá "
 "klippispjaldsins."
 
-#: configdialog.cpp:262
+#: configdialog.cpp:264
 #, kde-format
 msgid "Show action popup menu:"
 msgstr "Birta sprettivalmynd aðgerða:"
 
-#: configdialog.cpp:272
+#: configdialog.cpp:274
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -144,12 +144,12 @@ msgstr ""
 "er undanskilinn þá er hægt að kalla hana fram með því að nota flýtilyklana "
 "<shortcut>%1</shortcut>."
 
-#: configdialog.cpp:281
+#: configdialog.cpp:283
 #, kde-format
 msgid "Exclude Windows..."
 msgstr "Undanskilja glugga..."
 
-#: configdialog.cpp:295
+#: configdialog.cpp:297
 #, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
@@ -157,23 +157,23 @@ msgid_plural "%v seconds"
 msgstr[0] "%v sekúnda"
 msgstr[1] "%v sekúndur"
 
-#: configdialog.cpp:296
+#: configdialog.cpp:298
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "Ekkert"
 
-#: configdialog.cpp:305
+#: configdialog.cpp:307
 #, kde-format
 msgid "Options:"
 msgstr "Valkostir:"
 
-#: configdialog.cpp:332
+#: configdialog.cpp:334
 #, kde-format
 msgid "Exclude Windows"
 msgstr "Undanskilja glugga"
 
-#: configdialog.cpp:362
+#: configdialog.cpp:364
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -185,34 +185,34 @@ msgstr ""
 "klippispjaldsins birtast <interface>aðgerðir</interface> fyrir það í Klipper-"
 "sprettivalmyndinni og hægt er að keyra þær."
 
-#: configdialog.cpp:371
+#: configdialog.cpp:373
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "Leitarmynstur og skipanir"
 
-#: configdialog.cpp:371
+#: configdialog.cpp:373
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Lýsing"
 
-#: configdialog.cpp:377
+#: configdialog.cpp:379
 #, kde-format
 msgid "Add Action..."
 msgstr "Bæta við aðgerð..."
 
-#: configdialog.cpp:381
+#: configdialog.cpp:383
 #, kde-format
 msgid "Edit Action..."
 msgstr "Breyta aðgerð..."
 
-#: configdialog.cpp:386
+#: configdialog.cpp:388
 #, kde-format
 msgid "Delete Action"
 msgstr "Eyða aðgerð"
 
-#: configdialog.cpp:393
+#: configdialog.cpp:395
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -222,7 +222,7 @@ msgstr ""
 "Þessar aðgerðir birtast í sprettivalmyndinni sem hægt er að grunnstilla á "
 "síðunni <interface>Aðgerðavalmynd</interface>."
 
-#: configdialog.cpp:577
+#: configdialog.cpp:581
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -231,56 +231,56 @@ msgid ""
 msgstr ""
 "Eyða völdu aðgerðinni <resource>%1</resource><nl/>og öllum skipunum hennar?"
 
-#: configdialog.cpp:578
+#: configdialog.cpp:582
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "Staðfesta eyðingu aðgerðar"
 
-#: configdialog.cpp:607
+#: configdialog.cpp:611
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Almennt"
 
-#: configdialog.cpp:607
+#: configdialog.cpp:611
 #, kde-format
 msgid "General Configuration"
 msgstr "Almennar grunnstillingar"
 
-#: configdialog.cpp:608
+#: configdialog.cpp:612
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Aðgerðavalmynd"
 
-#: configdialog.cpp:608
+#: configdialog.cpp:612
 #, kde-format
 msgid "Action Menu"
 msgstr "Aðgerðavalmynd"
 
-#: configdialog.cpp:609
+#: configdialog.cpp:613
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Grunnstilling aðgerða"
 
-#: configdialog.cpp:609
+#: configdialog.cpp:613
 #, kde-format
 msgid "Actions Configuration"
 msgstr "Grunnstilling aðgerða"
 
-#: configdialog.cpp:612
+#: configdialog.cpp:616
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Flýtilyklar"
 
-#: configdialog.cpp:612
+#: configdialog.cpp:616
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Flýtilyklastillingar"
 
-#: configdialog.cpp:693
+#: configdialog.cpp:701
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -298,7 +298,7 @@ msgstr ""
 "birtist óvænt þegar tiltekið forrit er notað skaltu bæta því við þennan "
 "lista. <link>Hvernig á að finna heiti sem á að slá inn</link>."
 
-#: configdialog.cpp:706
+#: configdialog.cpp:714
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -459,42 +459,42 @@ msgctxt ""
 msgid "+%1"
 msgstr "+%1"
 
-#: editactiondialog.cpp:34 editcommanddialog.cpp:89
+#: editactiondialog.cpp:36 editcommanddialog.cpp:91
 #, kde-format
 msgid "Ignore"
 msgstr "Hunsa"
 
-#: editactiondialog.cpp:36
+#: editactiondialog.cpp:38
 #, kde-format
 msgid "Replace Clipboard"
 msgstr "Skipta út klippispjaldi"
 
-#: editactiondialog.cpp:38
+#: editactiondialog.cpp:40
 #, kde-format
 msgid "Add to Clipboard"
 msgstr "Bæta við klippispjaldið"
 
-#: editactiondialog.cpp:126
+#: editactiondialog.cpp:128
 #, kde-format
 msgid "Command"
 msgstr "Skipun"
 
-#: editactiondialog.cpp:128
+#: editactiondialog.cpp:130
 #, kde-format
 msgid "Output"
 msgstr "Úttak"
 
-#: editactiondialog.cpp:130
+#: editactiondialog.cpp:132
 #, kde-format
 msgid "Description"
 msgstr "Lýsing"
 
-#: editactiondialog.cpp:183
+#: editactiondialog.cpp:185
 #, kde-format
 msgid "Action Properties"
 msgstr "Eiginleikar aðgerðar"
 
-#: editactiondialog.cpp:196
+#: editactiondialog.cpp:198
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -508,17 +508,17 @@ msgstr ""
 "interface> aðgerðarinnar í Klipper-sprettivalmyndinni. Ef ein þeirra er "
 "valin er sú skipun keyrð."
 
-#: editactiondialog.cpp:208
+#: editactiondialog.cpp:210
 #, kde-format
 msgid "Enter a pattern to match against the clipboard"
 msgstr "Sláðu inn mynstur sem á að passa við klippispjaldið"
 
-#: editactiondialog.cpp:210
+#: editactiondialog.cpp:212
 #, kde-format
 msgid "Match pattern:"
 msgstr "Leitarmynstur:"
 
-#: editactiondialog.cpp:213
+#: editactiondialog.cpp:215
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -530,22 +530,22 @@ msgstr ""
 "efnið á <link url=\"https://en.wikipedia.org/wiki/Regular_expression"
 "\">Wikipedia</link>."
 
-#: editactiondialog.cpp:224
+#: editactiondialog.cpp:226
 #, kde-format
 msgid "Enter a description for the action"
 msgstr "Sláðu inn lýsingu á aðgerðinni"
 
-#: editactiondialog.cpp:225 editcommanddialog.cpp:83
+#: editactiondialog.cpp:227 editcommanddialog.cpp:85
 #, kde-format
 msgid "Description:"
 msgstr "Lýsing:"
 
-#: editactiondialog.cpp:228
+#: editactiondialog.cpp:230
 #, kde-format
 msgid "Include in automatic popup"
 msgstr "Taka með í sjálfvirkri sprettivalmynd"
 
-#: editactiondialog.cpp:232
+#: editactiondialog.cpp:234
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -562,48 +562,48 @@ msgstr ""
 "með ef valmyndin er virkjuð handvirkt með flýtilyklinum <shortcut>%1</"
 "shortcut>."
 
-#: editactiondialog.cpp:267
+#: editactiondialog.cpp:269
 #, kde-format
 msgid "Add Command..."
 msgstr "Bæta við skipun..."
 
-#: editactiondialog.cpp:272
+#: editactiondialog.cpp:274
 #, kde-format
 msgid "Edit Command..."
 msgstr "Breyta skipun..."
 
-#: editactiondialog.cpp:278
+#: editactiondialog.cpp:280
 #, kde-format
 msgid "Delete Command"
 msgstr "Eyða skipun"
 
-#: editactiondialog.cpp:393
+#: editactiondialog.cpp:397
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Delete the selected command <resource>%1</resource>?"
 msgstr "Eyða völdu skipuninni <resource>%1</resource>?"
 
-#: editactiondialog.cpp:394
+#: editactiondialog.cpp:398
 #, kde-format
 msgid "Confirm Delete Command"
 msgstr "Staðfesta eyðingu skipunar"
 
-#: editcommanddialog.cpp:46
+#: editcommanddialog.cpp:48
 #, kde-format
 msgid "Command Properties"
 msgstr "Eiginleikar skipunar"
 
-#: editcommanddialog.cpp:59
+#: editcommanddialog.cpp:61
 #, kde-format
 msgid "Enter the command and arguments"
 msgstr "Slá inn skipun og viðföng"
 
-#: editcommanddialog.cpp:62
+#: editcommanddialog.cpp:64
 #, kde-format
 msgid "Command:"
 msgstr "Skipun:"
 
-#: editcommanddialog.cpp:71
+#: editcommanddialog.cpp:73
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -617,37 +617,37 @@ msgstr ""
 "<placeholder>&#37;9</placeholder> verður skipt út fyrir samsvarandi fangaðan "
 "texta úr leitarmynstrinu."
 
-#: editcommanddialog.cpp:81
+#: editcommanddialog.cpp:83
 #, kde-format
 msgid "Enter a description for the command"
 msgstr "Sláðu inn lýsingu á skipuninni"
 
-#: editcommanddialog.cpp:91
+#: editcommanddialog.cpp:93
 #, kde-format
 msgid "Output from command:"
 msgstr "Úttak frá skipun:"
 
-#: editcommanddialog.cpp:93
+#: editcommanddialog.cpp:95
 #, kde-format
 msgid "Replace current clipboard"
 msgstr "Skipta út núverandi klippispjaldi"
 
-#: editcommanddialog.cpp:97
+#: editcommanddialog.cpp:99
 #, kde-format
 msgid "Append to clipboard"
 msgstr "Bæta við klippispjaldið"
 
-#: editcommanddialog.cpp:101
+#: editcommanddialog.cpp:103
 #, kde-format
 msgid "What happens to the standard output of the command executed."
 msgstr "Hvað verður um staðlað úttak skipunarinnar þegar hún er keyrð."
 
-#: editcommanddialog.cpp:115
+#: editcommanddialog.cpp:117
 #, kde-format
 msgid "Reset the icon to the default for the command"
 msgstr "Endurstilla táknið á sjálfgildi fyrir skipunina"
 
-#: editcommanddialog.cpp:121
+#: editcommanddialog.cpp:123
 #, kde-format
 msgid "Icon:"
 msgstr "Tákn:"

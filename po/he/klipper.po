@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-25 00:44+0000\n"
+"POT-Creation-Date: 2025-07-20 00:44+0000\n"
 "PO-Revision-Date: 2025-06-26 09:37+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -40,12 +40,12 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde-l10n-he@kde.org"
 
-#: configdialog.cpp:83
+#: configdialog.cpp:85
 #, kde-format
 msgid "Clipboard history:"
 msgstr "היסטוריית לוח הגזירים:"
 
-#: configdialog.cpp:89
+#: configdialog.cpp:91
 #, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
@@ -55,12 +55,12 @@ msgstr[1] "שתי רשומות"
 msgstr[2] "%v רשומות"
 msgstr[3] "%v רשומות"
 
-#: configdialog.cpp:98
+#: configdialog.cpp:100
 #, kde-format
 msgid "Selection and Clipboard:"
 msgstr "בחירה ולוח גזירים:"
 
-#: configdialog.cpp:105
+#: configdialog.cpp:107
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -85,49 +85,49 @@ msgstr ""
 "בהיסטוריית לוח הגזירים (בכפוף לאפשרויות שלהלן), אך ניתן יהיה להדביק אותה רק "
 "באמצעות לחצן העכבר האמצעי."
 
-#: configdialog.cpp:134 configdialog.cpp:172
+#: configdialog.cpp:136 configdialog.cpp:174
 #, kde-format
 msgid "Always save in history"
 msgstr "תמיד לשמור בהיסטוריה"
 
-#: configdialog.cpp:138
+#: configdialog.cpp:140
 #, kde-format
 msgid "Text selection:"
 msgstr "בחירת טקסט:"
 
-#: configdialog.cpp:140 configdialog.cpp:178
+#: configdialog.cpp:142 configdialog.cpp:180
 #, kde-format
 msgid "Only when explicitly copied"
 msgstr "רק כשהועתק במפורש"
 
-#: configdialog.cpp:145
+#: configdialog.cpp:147
 #, kde-format
 msgid "Whether text selections are saved in the clipboard history."
 msgstr "האם בחירות טקסט נשמרות בהיסטוריית לוח הגזירים."
 
-#: configdialog.cpp:176
+#: configdialog.cpp:178
 #, kde-format
 msgid "Non-text selection:"
 msgstr "בחירה שאינה טקסט:"
 
-#: configdialog.cpp:183
+#: configdialog.cpp:185
 #, kde-format
 msgid "Never save in history"
 msgstr "לעולם לא לשמור בהיסטוריה"
 
-#: configdialog.cpp:188
+#: configdialog.cpp:190
 #, kde-format
 msgid ""
 "Whether non-text selections (such as images) are saved in the clipboard "
 "history."
 msgstr "האם בחירות שאינן טקסט (כגון תמונות) תישמרנה בהיסטוריית לוח הגזירים."
 
-#: configdialog.cpp:262
+#: configdialog.cpp:264
 #, kde-format
 msgid "Show action popup menu:"
 msgstr "הצגת תפריט פעולות קופץ:"
 
-#: configdialog.cpp:272
+#: configdialog.cpp:274
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -142,12 +142,12 @@ msgstr ""
 "כאן, או שאינו מופיע לחלון מוחרג, אפשר להציג אותו באמצעות מקשי הקיצור "
 "<shortcut>%1</shortcut>."
 
-#: configdialog.cpp:281
+#: configdialog.cpp:283
 #, kde-format
 msgid "Exclude Windows..."
 msgstr "החרגת חלונות…"
 
-#: configdialog.cpp:295
+#: configdialog.cpp:297
 #, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
@@ -157,23 +157,23 @@ msgstr[1] "שתי שניות"
 msgstr[2] "%v שניות"
 msgstr[3] "%v שניות"
 
-#: configdialog.cpp:296
+#: configdialog.cpp:298
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "ללא"
 
-#: configdialog.cpp:305
+#: configdialog.cpp:307
 #, kde-format
 msgid "Options:"
 msgstr "אפשרויות:"
 
-#: configdialog.cpp:332
+#: configdialog.cpp:334
 #, kde-format
 msgid "Exclude Windows"
 msgstr "החרגת חלונות"
 
-#: configdialog.cpp:362
+#: configdialog.cpp:364
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -185,34 +185,34 @@ msgstr ""
 "ה<interface>פקודות</interface> שלה תופענה בתפריט הקופץ של Klipper וניתן יהיה "
 "להפעיל אותו."
 
-#: configdialog.cpp:371
+#: configdialog.cpp:373
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "תבניות לכידה ופקודות"
 
-#: configdialog.cpp:371
+#: configdialog.cpp:373
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "תיאור"
 
-#: configdialog.cpp:377
+#: configdialog.cpp:379
 #, kde-format
 msgid "Add Action..."
 msgstr "הוספת פעולה…"
 
-#: configdialog.cpp:381
+#: configdialog.cpp:383
 #, kde-format
 msgid "Edit Action..."
 msgstr "עריכת פעולה…"
 
-#: configdialog.cpp:386
+#: configdialog.cpp:388
 #, kde-format
 msgid "Delete Action"
 msgstr "מחיקת פעולה"
 
-#: configdialog.cpp:393
+#: configdialog.cpp:395
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -222,7 +222,7 @@ msgstr ""
 "הפעולות האלו מופיעות בתפריט הקופץ שאותו ניתן להגדיר בעמוד <interface>תפריט "
 "הפעולות</interface>."
 
-#: configdialog.cpp:577
+#: configdialog.cpp:581
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -231,56 +231,56 @@ msgid ""
 msgstr ""
 "למחוק את הפעולה <resource>%1</resource><nl/> הנבחרת ואת כל הפקודות שלה?"
 
-#: configdialog.cpp:578
+#: configdialog.cpp:582
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "אישור פעולת מחיקה"
 
-#: configdialog.cpp:607
+#: configdialog.cpp:611
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "כללי"
 
-#: configdialog.cpp:607
+#: configdialog.cpp:611
 #, kde-format
 msgid "General Configuration"
 msgstr "הגדרות כלליות"
 
-#: configdialog.cpp:608
+#: configdialog.cpp:612
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "תפריט פעולות"
 
-#: configdialog.cpp:608
+#: configdialog.cpp:612
 #, kde-format
 msgid "Action Menu"
 msgstr "תפריט פעולות"
 
-#: configdialog.cpp:609
+#: configdialog.cpp:613
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "הגדרת פעולות"
 
-#: configdialog.cpp:609
+#: configdialog.cpp:613
 #, kde-format
 msgid "Actions Configuration"
 msgstr "הגדרת פעולות"
 
-#: configdialog.cpp:612
+#: configdialog.cpp:616
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "קיצורי מקשים"
 
-#: configdialog.cpp:612
+#: configdialog.cpp:616
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "הגדרות קיצורי מקשים"
 
-#: configdialog.cpp:693
+#: configdialog.cpp:701
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -297,7 +297,7 @@ msgstr ""
 "שימוש ביישום כלשהו, כדי להוסיף אותו לרשימה. <link>איך למצוא איזה שם להכניס</"
 "link>."
 
-#: configdialog.cpp:706
+#: configdialog.cpp:714
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -454,42 +454,42 @@ msgctxt ""
 msgid "+%1"
 msgstr "+%1"
 
-#: editactiondialog.cpp:34 editcommanddialog.cpp:89
+#: editactiondialog.cpp:36 editcommanddialog.cpp:91
 #, kde-format
 msgid "Ignore"
 msgstr "התעלמות"
 
-#: editactiondialog.cpp:36
+#: editactiondialog.cpp:38
 #, kde-format
 msgid "Replace Clipboard"
 msgstr "החלפת לוח גזירים"
 
-#: editactiondialog.cpp:38
+#: editactiondialog.cpp:40
 #, kde-format
 msgid "Add to Clipboard"
 msgstr "הוספה ללוח הגזירים"
 
-#: editactiondialog.cpp:126
+#: editactiondialog.cpp:128
 #, kde-format
 msgid "Command"
 msgstr "פקודה"
 
-#: editactiondialog.cpp:128
+#: editactiondialog.cpp:130
 #, kde-format
 msgid "Output"
 msgstr "פלט"
 
-#: editactiondialog.cpp:130
+#: editactiondialog.cpp:132
 #, kde-format
 msgid "Description"
 msgstr "תיאור"
 
-#: editactiondialog.cpp:183
+#: editactiondialog.cpp:185
 #, kde-format
 msgid "Action Properties"
 msgstr "מאפייני הפקודה"
 
-#: editactiondialog.cpp:196
+#: editactiondialog.cpp:198
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -502,17 +502,17 @@ msgstr ""
 "הגזירים. כשזה קורה, ה<interface>פקודות</interface> של הפעולה מופיעות בתפריט "
 "הקובץ של Klipper, אם אחת מהן נבחרה, הפקודה מופעלת."
 
-#: editactiondialog.cpp:208
+#: editactiondialog.cpp:210
 #, kde-format
 msgid "Enter a pattern to match against the clipboard"
 msgstr "נא למלא תבנית ללכידה מול לוח הגזירים"
 
-#: editactiondialog.cpp:210
+#: editactiondialog.cpp:212
 #, kde-format
 msgid "Match pattern:"
 msgstr "תבנית לכידה:"
 
-#: editactiondialog.cpp:213
+#: editactiondialog.cpp:215
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -523,22 +523,22 @@ msgstr ""
 "תבנית הלכידה היא ביטוי רגולרי. למידע נוסף ניתן לעיין ב<link url=\"https://he."
 "wikipedia.org/wiki/ביטוי_רגולרי\">ערך בוויקיפדיה</link> על הנושא הזה."
 
-#: editactiondialog.cpp:224
+#: editactiondialog.cpp:226
 #, kde-format
 msgid "Enter a description for the action"
 msgstr "נא למלא תיאור לפעולה"
 
-#: editactiondialog.cpp:225 editcommanddialog.cpp:83
+#: editactiondialog.cpp:227 editcommanddialog.cpp:85
 #, kde-format
 msgid "Description:"
 msgstr "תיאור:"
 
-#: editactiondialog.cpp:228
+#: editactiondialog.cpp:230
 #, kde-format
 msgid "Include in automatic popup"
 msgstr "לכלול בחלונית הקופצת האוטומטית"
 
-#: editactiondialog.cpp:232
+#: editactiondialog.cpp:234
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -553,48 +553,48 @@ msgstr ""
 "לא ייכללו בחלונית הקופצת האוטומטית אך הן תיכללנה אם החלונית הקופצת תופעל "
 "ידנית עם מקשי הקיצור <shortcut>%1</shortcut>."
 
-#: editactiondialog.cpp:267
+#: editactiondialog.cpp:269
 #, kde-format
 msgid "Add Command..."
 msgstr "הוספת פקודה…"
 
-#: editactiondialog.cpp:272
+#: editactiondialog.cpp:274
 #, kde-format
 msgid "Edit Command..."
 msgstr "עריכת פקודה…"
 
-#: editactiondialog.cpp:278
+#: editactiondialog.cpp:280
 #, kde-format
 msgid "Delete Command"
 msgstr "מחיקת פקודה"
 
-#: editactiondialog.cpp:393
+#: editactiondialog.cpp:397
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Delete the selected command <resource>%1</resource>?"
 msgstr "למחוק את הפקודה <resource>%1</resource> שנבחרה?"
 
-#: editactiondialog.cpp:394
+#: editactiondialog.cpp:398
 #, kde-format
 msgid "Confirm Delete Command"
 msgstr "אישור מחיקת פקודה"
 
-#: editcommanddialog.cpp:46
+#: editcommanddialog.cpp:48
 #, kde-format
 msgid "Command Properties"
 msgstr "מאפייני פקודה"
 
-#: editcommanddialog.cpp:59
+#: editcommanddialog.cpp:61
 #, kde-format
 msgid "Enter the command and arguments"
 msgstr "נא למלא את הפקודה ואת המשתנים"
 
-#: editcommanddialog.cpp:62
+#: editcommanddialog.cpp:64
 #, kde-format
 msgid "Command:"
 msgstr "פקודה:"
 
-#: editcommanddialog.cpp:71
+#: editcommanddialog.cpp:73
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -607,37 +607,37 @@ msgstr ""
 "<placeholder>&#37;0</placeholder> עד <placeholder>&#37;9</placeholder> יוחלף "
 "בטקסטים שנלכדו עם תבנית הלכידה."
 
-#: editcommanddialog.cpp:81
+#: editcommanddialog.cpp:83
 #, kde-format
 msgid "Enter a description for the command"
 msgstr "נא למלא תיאור לפקודה"
 
-#: editcommanddialog.cpp:91
+#: editcommanddialog.cpp:93
 #, kde-format
 msgid "Output from command:"
 msgstr "פלט מפקודה:"
 
-#: editcommanddialog.cpp:93
+#: editcommanddialog.cpp:95
 #, kde-format
 msgid "Replace current clipboard"
 msgstr "החלפת לוח גזירים נוכחי"
 
-#: editcommanddialog.cpp:97
+#: editcommanddialog.cpp:99
 #, kde-format
 msgid "Append to clipboard"
 msgstr "הוספה ללוח הגזירים"
 
-#: editcommanddialog.cpp:101
+#: editcommanddialog.cpp:103
 #, kde-format
 msgid "What happens to the standard output of the command executed."
 msgstr "מה שקורה לפלט התקני של הפקודה שתופעל."
 
-#: editcommanddialog.cpp:115
+#: editcommanddialog.cpp:117
 #, kde-format
 msgid "Reset the icon to the default for the command"
 msgstr "איפוס הסמל לברירת המחדל לפקודה"
 
-#: editcommanddialog.cpp:121
+#: editcommanddialog.cpp:123
 #, kde-format
 msgid "Icon:"
 msgstr "סמל:"

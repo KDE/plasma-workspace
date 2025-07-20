@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-25 00:44+0000\n"
+"POT-Creation-Date: 2025-07-20 00:44+0000\n"
 "PO-Revision-Date: 2025-06-26 10:18+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -34,12 +34,12 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "zayed.alsaidi@gmail.com,metehyi@free.fr"
 
-#: configdialog.cpp:83
+#: configdialog.cpp:85
 #, kde-format
 msgid "Clipboard history:"
 msgstr "تاريخ الحافظة:"
 
-#: configdialog.cpp:89
+#: configdialog.cpp:91
 #, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
@@ -51,12 +51,12 @@ msgstr[3] "%v مدخلات"
 msgstr[4] "%v مدخلة"
 msgstr[5] "%v مدخلة"
 
-#: configdialog.cpp:98
+#: configdialog.cpp:100
 #, kde-format
 msgid "Selection and Clipboard:"
 msgstr "التحديد والحافظة:"
 
-#: configdialog.cpp:105
+#: configdialog.cpp:107
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -81,37 +81,37 @@ msgstr ""
 "محفوظًا في محفوظات الحافظة (وفقًا للخيارات أدناه) ، ولكن لا يمكن لصقه إلا "
 "باستخدام زر الفأرة الأوسط."
 
-#: configdialog.cpp:134 configdialog.cpp:172
+#: configdialog.cpp:136 configdialog.cpp:174
 #, kde-format
 msgid "Always save in history"
 msgstr "دائما احفظ في المحفوظات"
 
-#: configdialog.cpp:138
+#: configdialog.cpp:140
 #, kde-format
 msgid "Text selection:"
 msgstr "تحديد النص:"
 
-#: configdialog.cpp:140 configdialog.cpp:178
+#: configdialog.cpp:142 configdialog.cpp:180
 #, kde-format
 msgid "Only when explicitly copied"
 msgstr "فقط عند النسخ بصراحة"
 
-#: configdialog.cpp:145
+#: configdialog.cpp:147
 #, kde-format
 msgid "Whether text selections are saved in the clipboard history."
 msgstr "ما إذا كان يتم حفظ تحديدات النص في محفوظات الحافظة."
 
-#: configdialog.cpp:176
+#: configdialog.cpp:178
 #, kde-format
 msgid "Non-text selection:"
 msgstr "التحديد غير النصي:"
 
-#: configdialog.cpp:183
+#: configdialog.cpp:185
 #, kde-format
 msgid "Never save in history"
 msgstr "لا تحفظه في المحفوظات"
 
-#: configdialog.cpp:188
+#: configdialog.cpp:190
 #, kde-format
 msgid ""
 "Whether non-text selections (such as images) are saved in the clipboard "
@@ -119,12 +119,12 @@ msgid ""
 msgstr ""
 "ما إذا كان يتم حفظ التحديدات غير النصية (مثل الصور) في محفوظات الحافظة."
 
-#: configdialog.cpp:262
+#: configdialog.cpp:264
 #, kde-format
 msgid "Show action popup menu:"
 msgstr "اعرض قائمة الإجراءات المنبثقة:"
 
-#: configdialog.cpp:272
+#: configdialog.cpp:274
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -139,12 +139,12 @@ msgstr ""
 "التلقائية هنا، أو لم تظهر لنافذة مستبعدة، فيمكن عرضها باستخدام اختصار "
 "المفتاح <shortcut>%1 </shortcut>."
 
-#: configdialog.cpp:281
+#: configdialog.cpp:283
 #, kde-format
 msgid "Exclude Windows..."
 msgstr "استثنِ النوافذ..."
 
-#: configdialog.cpp:295
+#: configdialog.cpp:297
 #, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
@@ -156,23 +156,23 @@ msgstr[3] "%v ثواني"
 msgstr[4] "%v ثانية"
 msgstr[5] "%v ثانية"
 
-#: configdialog.cpp:296
+#: configdialog.cpp:298
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "بلا"
 
-#: configdialog.cpp:305
+#: configdialog.cpp:307
 #, kde-format
 msgid "Options:"
 msgstr "الخيارات:"
 
-#: configdialog.cpp:332
+#: configdialog.cpp:334
 #, kde-format
 msgid "Exclude Windows"
 msgstr "استثنِ النوافذ"
 
-#: configdialog.cpp:362
+#: configdialog.cpp:364
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -183,34 +183,34 @@ msgstr ""
 "عندما يطابق <interface>نمط المطابقة</interface> محتويات من الحافظة؛ ستظهر "
 "<interface>أوامرها</interface> في قائمة كليبر المنبثقة ويمكن استبعدها."
 
-#: configdialog.cpp:371
+#: configdialog.cpp:373
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "نمط المطابقة والأوامر"
 
-#: configdialog.cpp:371
+#: configdialog.cpp:373
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "الوصف"
 
-#: configdialog.cpp:377
+#: configdialog.cpp:379
 #, kde-format
 msgid "Add Action..."
 msgstr "أضف إجراء..."
 
-#: configdialog.cpp:381
+#: configdialog.cpp:383
 #, kde-format
 msgid "Edit Action..."
 msgstr "حرر إجراء..."
 
-#: configdialog.cpp:386
+#: configdialog.cpp:388
 #, kde-format
 msgid "Delete Action"
 msgstr "احذف إجراء "
 
-#: configdialog.cpp:393
+#: configdialog.cpp:395
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -220,7 +220,7 @@ msgstr ""
 "هذه الإجراءات تظهر في القائمة المنبثقة والتي يمكن ضبطها في صفحة "
 "<interface>قائمة الإجراءات</interface>."
 
-#: configdialog.cpp:577
+#: configdialog.cpp:581
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -228,56 +228,56 @@ msgid ""
 "commands?"
 msgstr "أأحذف الإجراء المحددة <resource>%1</resource><nl/> وجميع أوامره؟"
 
-#: configdialog.cpp:578
+#: configdialog.cpp:582
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "أكّد إجراء الحذف"
 
-#: configdialog.cpp:607
+#: configdialog.cpp:611
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "عام"
 
-#: configdialog.cpp:607
+#: configdialog.cpp:611
 #, kde-format
 msgid "General Configuration"
 msgstr "ضبط عام"
 
-#: configdialog.cpp:608
+#: configdialog.cpp:612
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "قائمة الإجراءات"
 
-#: configdialog.cpp:608
+#: configdialog.cpp:612
 #, kde-format
 msgid "Action Menu"
 msgstr "قائمة الإجراءات"
 
-#: configdialog.cpp:609
+#: configdialog.cpp:613
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "ضبط الإجراءات"
 
-#: configdialog.cpp:609
+#: configdialog.cpp:613
 #, kde-format
 msgid "Actions Configuration"
 msgstr "ضبط الإجراءات"
 
-#: configdialog.cpp:612
+#: configdialog.cpp:616
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "الاختصارات"
 
-#: configdialog.cpp:612
+#: configdialog.cpp:616
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "ضبط الاختصارات"
 
-#: configdialog.cpp:693
+#: configdialog.cpp:701
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -294,7 +294,7 @@ msgstr ""
 "الإجراء بشكل غير متوقع عند استخدام تطبيق معين، عندها قم بإضافته إلى هذه "
 "القائمة. <link> كيفية العثور على الاسم المراد إدخاله </link>."
 
-#: configdialog.cpp:706
+#: configdialog.cpp:714
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -452,42 +452,42 @@ msgctxt ""
 msgid "+%1"
 msgstr "+%1"
 
-#: editactiondialog.cpp:34 editcommanddialog.cpp:89
+#: editactiondialog.cpp:36 editcommanddialog.cpp:91
 #, kde-format
 msgid "Ignore"
 msgstr "تجاهل"
 
-#: editactiondialog.cpp:36
+#: editactiondialog.cpp:38
 #, kde-format
 msgid "Replace Clipboard"
 msgstr "استبدل الحافظة"
 
-#: editactiondialog.cpp:38
+#: editactiondialog.cpp:40
 #, kde-format
 msgid "Add to Clipboard"
 msgstr "أضف للحافظة"
 
-#: editactiondialog.cpp:126
+#: editactiondialog.cpp:128
 #, kde-format
 msgid "Command"
 msgstr "الأمر "
 
-#: editactiondialog.cpp:128
+#: editactiondialog.cpp:130
 #, kde-format
 msgid "Output"
 msgstr "الخرج"
 
-#: editactiondialog.cpp:130
+#: editactiondialog.cpp:132
 #, kde-format
 msgid "Description"
 msgstr "الوصف"
 
-#: editactiondialog.cpp:183
+#: editactiondialog.cpp:185
 #, kde-format
 msgid "Action Properties"
 msgstr "خصائص الإجراء"
 
-#: editactiondialog.cpp:196
+#: editactiondialog.cpp:198
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -500,17 +500,17 @@ msgstr ""
 "الحافظة. عندما يحدث هذا ، تظهر إجراءات <interface>الأمر</interface> في قائمة "
 "كليبر المنبثقة، إذا تم اختيار واحد منهم ، يتم تنفيذ الأمر."
 
-#: editactiondialog.cpp:208
+#: editactiondialog.cpp:210
 #, kde-format
 msgid "Enter a pattern to match against the clipboard"
 msgstr "أدخل نمط ليطابق على الحافظة"
 
-#: editactiondialog.cpp:210
+#: editactiondialog.cpp:212
 #, kde-format
 msgid "Match pattern:"
 msgstr "نمط المطابقة:"
 
-#: editactiondialog.cpp:213
+#: editactiondialog.cpp:215
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -521,22 +521,22 @@ msgstr ""
 "نمط المطابقة هو التعبيرات النمطية. يمكنك معرفة المزيد بالنظر إلى <link url="
 "\"https://en.wikipedia.org/wiki/Regular_expression\">مدخلة ويكيبديا</link>"
 
-#: editactiondialog.cpp:224
+#: editactiondialog.cpp:226
 #, kde-format
 msgid "Enter a description for the action"
 msgstr "أدخل وصف للإجراء"
 
-#: editactiondialog.cpp:225 editcommanddialog.cpp:83
+#: editactiondialog.cpp:227 editcommanddialog.cpp:85
 #, kde-format
 msgid "Description:"
 msgstr "الوصف:"
 
-#: editactiondialog.cpp:228
+#: editactiondialog.cpp:230
 #, kde-format
 msgid "Include in automatic popup"
 msgstr "ضمّن في المنبثقة التلقائية"
 
-#: editactiondialog.cpp:232
+#: editactiondialog.cpp:234
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -551,48 +551,48 @@ msgstr ""
 "فلن تضمن أوامر هذه المطابقة في النافذة المنبثقة التلقائية ولكن  ستضمن إذا "
 "نشطت النافذة المنبثقة يدويًا باستخدام اختصار المفتاح <shortcut>%1 </shortcut>."
 
-#: editactiondialog.cpp:267
+#: editactiondialog.cpp:269
 #, kde-format
 msgid "Add Command..."
 msgstr "أضف أمر ..."
 
-#: editactiondialog.cpp:272
+#: editactiondialog.cpp:274
 #, kde-format
 msgid "Edit Command..."
 msgstr "حرر أمر…"
 
-#: editactiondialog.cpp:278
+#: editactiondialog.cpp:280
 #, kde-format
 msgid "Delete Command"
 msgstr "احذف أمر …"
 
-#: editactiondialog.cpp:393
+#: editactiondialog.cpp:397
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Delete the selected command <resource>%1</resource>?"
 msgstr "هل أحذف الأمر المحددة <resource>%1</resource>؟"
 
-#: editactiondialog.cpp:394
+#: editactiondialog.cpp:398
 #, kde-format
 msgid "Confirm Delete Command"
 msgstr "أكد حذف الأمر"
 
-#: editcommanddialog.cpp:46
+#: editcommanddialog.cpp:48
 #, kde-format
 msgid "Command Properties"
 msgstr "خصائص الأمر"
 
-#: editcommanddialog.cpp:59
+#: editcommanddialog.cpp:61
 #, kde-format
 msgid "Enter the command and arguments"
 msgstr "أدخل الأمر ومعاملاته"
 
-#: editcommanddialog.cpp:62
+#: editcommanddialog.cpp:64
 #, kde-format
 msgid "Command:"
 msgstr "الأمر:"
 
-#: editcommanddialog.cpp:71
+#: editcommanddialog.cpp:73
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -605,37 +605,37 @@ msgstr ""
 "سيتم استبدال <placeholder>&#37;0</placeholder>عبر <placeholder>&#37;9</"
 "placeholder> بالنصوص الملتقطة المقابلة من نمط المطابقة."
 
-#: editcommanddialog.cpp:81
+#: editcommanddialog.cpp:83
 #, kde-format
 msgid "Enter a description for the command"
 msgstr "أدخل وصف للأمر"
 
-#: editcommanddialog.cpp:91
+#: editcommanddialog.cpp:93
 #, kde-format
 msgid "Output from command:"
 msgstr "خَرْج الأمر:"
 
-#: editcommanddialog.cpp:93
+#: editcommanddialog.cpp:95
 #, kde-format
 msgid "Replace current clipboard"
 msgstr "استبدل الحافظة الحالية"
 
-#: editcommanddialog.cpp:97
+#: editcommanddialog.cpp:99
 #, kde-format
 msgid "Append to clipboard"
 msgstr "أضف للحافظة"
 
-#: editcommanddialog.cpp:101
+#: editcommanddialog.cpp:103
 #, kde-format
 msgid "What happens to the standard output of the command executed."
 msgstr "ماذا يحدث للإخراج القياسي للأمر المنفذ."
 
-#: editcommanddialog.cpp:115
+#: editcommanddialog.cpp:117
 #, kde-format
 msgid "Reset the icon to the default for the command"
 msgstr "أعد تعيين الأيقونة إلى الإعداد الافتراضي للأمر"
 
-#: editcommanddialog.cpp:121
+#: editcommanddialog.cpp:123
 #, kde-format
 msgid "Icon:"
 msgstr "الأيقونة:"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-25 00:44+0000\n"
+"POT-Creation-Date: 2025-07-20 00:44+0000\n"
 "PO-Revision-Date: 2025-02-13 22:10+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -30,12 +30,12 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "andhika.padmawan@gmail.com,wantoyek@gmail.com"
 
-#: configdialog.cpp:83
+#: configdialog.cpp:85
 #, kde-format
 msgid "Clipboard history:"
 msgstr "Riwayat papan klip:"
 
-#: configdialog.cpp:89
+#: configdialog.cpp:91
 #, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
@@ -43,12 +43,12 @@ msgid_plural "%v entries"
 msgstr[0] "%v entri"
 msgstr[1] "%v entri"
 
-#: configdialog.cpp:98
+#: configdialog.cpp:100
 #, kde-format
 msgid "Selection and Clipboard:"
 msgstr "Pemilihan dan Papan Klip:"
 
-#: configdialog.cpp:105
+#: configdialog.cpp:107
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -75,37 +75,37 @@ msgstr ""
 "pada opsi di bawah), tetapi hanya bisa ditempelkan menggunakan tombol tengah "
 "mouse."
 
-#: configdialog.cpp:134 configdialog.cpp:172
+#: configdialog.cpp:136 configdialog.cpp:174
 #, kde-format
 msgid "Always save in history"
 msgstr "Selalu simpan di riwayat"
 
-#: configdialog.cpp:138
+#: configdialog.cpp:140
 #, kde-format
 msgid "Text selection:"
 msgstr "Pemilihan teks:"
 
-#: configdialog.cpp:140 configdialog.cpp:178
+#: configdialog.cpp:142 configdialog.cpp:180
 #, kde-format
 msgid "Only when explicitly copied"
 msgstr "Hanya ketika disalin secara gamblang"
 
-#: configdialog.cpp:145
+#: configdialog.cpp:147
 #, kde-format
 msgid "Whether text selections are saved in the clipboard history."
 msgstr "Apakah pemilihan teks akan disimpan di riwayat papan klip."
 
-#: configdialog.cpp:176
+#: configdialog.cpp:178
 #, kde-format
 msgid "Non-text selection:"
 msgstr "Pemilihan non-teks:"
 
-#: configdialog.cpp:183
+#: configdialog.cpp:185
 #, kde-format
 msgid "Never save in history"
 msgstr "Tidak usah simpan di riwayat"
 
-#: configdialog.cpp:188
+#: configdialog.cpp:190
 #, kde-format
 msgid ""
 "Whether non-text selections (such as images) are saved in the clipboard "
@@ -114,12 +114,12 @@ msgstr ""
 "Apakah pemilihan non teks (sepertihalnya citra) disimpan di riwayat papan "
 "klip."
 
-#: configdialog.cpp:262
+#: configdialog.cpp:264
 #, kde-format
 msgid "Show action popup menu:"
 msgstr "Tampilkan sembulan menu tindakan:"
 
-#: configdialog.cpp:272
+#: configdialog.cpp:274
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -135,12 +135,12 @@ msgstr ""
 "ditampilkan untuk jendela yang dikecualikan, maka menu tersebut bisa "
 "ditampilkan dengan menggunakan pintasan tombol <shortcut>%1</shortcut>."
 
-#: configdialog.cpp:281
+#: configdialog.cpp:283
 #, kde-format
 msgid "Exclude Windows..."
 msgstr "Kecualikan Jendela..."
 
-#: configdialog.cpp:295
+#: configdialog.cpp:297
 #, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
@@ -148,23 +148,23 @@ msgid_plural "%v seconds"
 msgstr[0] "%v detik"
 msgstr[1] "%v detik"
 
-#: configdialog.cpp:296
+#: configdialog.cpp:298
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "Nihil"
 
-#: configdialog.cpp:305
+#: configdialog.cpp:307
 #, kde-format
 msgid "Options:"
 msgstr "Opsi:"
 
-#: configdialog.cpp:332
+#: configdialog.cpp:334
 #, kde-format
 msgid "Exclude Windows"
 msgstr "Kecualikan Jendela"
 
-#: configdialog.cpp:362
+#: configdialog.cpp:364
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -176,34 +176,34 @@ msgstr ""
 "<interface>perintah</interface> tersebut muncul di menu sembul Klipper dan "
 "bisa dieksekusi."
 
-#: configdialog.cpp:371
+#: configdialog.cpp:373
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "Perintah dan pola cocok"
 
-#: configdialog.cpp:371
+#: configdialog.cpp:373
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Deskripsi"
 
-#: configdialog.cpp:377
+#: configdialog.cpp:379
 #, kde-format
 msgid "Add Action..."
 msgstr "Tambah Tindakan..."
 
-#: configdialog.cpp:381
+#: configdialog.cpp:383
 #, kde-format
 msgid "Edit Action..."
 msgstr "Edit Tindakan..."
 
-#: configdialog.cpp:386
+#: configdialog.cpp:388
 #, kde-format
 msgid "Delete Action"
 msgstr "Hapus Tindakan"
 
-#: configdialog.cpp:393
+#: configdialog.cpp:395
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -213,7 +213,7 @@ msgstr ""
 "Tindakan tersebut muncul di menu sembul yang mana bisa dikonfigurasi di "
 "halaman <interface>Menu Tindakan</interface>."
 
-#: configdialog.cpp:577
+#: configdialog.cpp:581
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -223,56 +223,56 @@ msgstr ""
 "Hapus tindakan <resource>%1</resource><nl/> yang dipilihdan semua perintah-"
 "perintahnya?"
 
-#: configdialog.cpp:578
+#: configdialog.cpp:582
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "Konfirmasi Tindakan Menghapus"
 
-#: configdialog.cpp:607
+#: configdialog.cpp:611
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Umum"
 
-#: configdialog.cpp:607
+#: configdialog.cpp:611
 #, kde-format
 msgid "General Configuration"
 msgstr "Konfigurasi Umum"
 
-#: configdialog.cpp:608
+#: configdialog.cpp:612
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Menu Tindakan"
 
-#: configdialog.cpp:608
+#: configdialog.cpp:612
 #, kde-format
 msgid "Action Menu"
 msgstr "Menu Tindakan"
 
-#: configdialog.cpp:609
+#: configdialog.cpp:613
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Konfigurasi Tindakan"
 
-#: configdialog.cpp:609
+#: configdialog.cpp:613
 #, kde-format
 msgid "Actions Configuration"
 msgstr "Konfigurasi Tindakan"
 
-#: configdialog.cpp:612
+#: configdialog.cpp:616
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Pintasan"
 
-#: configdialog.cpp:612
+#: configdialog.cpp:616
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Konfigurasi Pintasan"
 
-#: configdialog.cpp:693
+#: configdialog.cpp:701
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -291,7 +291,7 @@ msgstr ""
 "tertentu, maka tambahkanlah ke daftar ini. <link>Bagaimana menemukan nama "
 "untuk memasukkan</link>."
 
-#: configdialog.cpp:706
+#: configdialog.cpp:714
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -453,42 +453,42 @@ msgctxt ""
 msgid "+%1"
 msgstr "+%1"
 
-#: editactiondialog.cpp:34 editcommanddialog.cpp:89
+#: editactiondialog.cpp:36 editcommanddialog.cpp:91
 #, kde-format
 msgid "Ignore"
 msgstr "Abaikan"
 
-#: editactiondialog.cpp:36
+#: editactiondialog.cpp:38
 #, kde-format
 msgid "Replace Clipboard"
 msgstr "Ganti Papan Klip"
 
-#: editactiondialog.cpp:38
+#: editactiondialog.cpp:40
 #, kde-format
 msgid "Add to Clipboard"
 msgstr "Tambah ke Papan Klip"
 
-#: editactiondialog.cpp:126
+#: editactiondialog.cpp:128
 #, kde-format
 msgid "Command"
 msgstr "Perintah"
 
-#: editactiondialog.cpp:128
+#: editactiondialog.cpp:130
 #, kde-format
 msgid "Output"
 msgstr "Keluaran"
 
-#: editactiondialog.cpp:130
+#: editactiondialog.cpp:132
 #, kde-format
 msgid "Description"
 msgstr "Deskripsi"
 
-#: editactiondialog.cpp:183
+#: editactiondialog.cpp:185
 #, kde-format
 msgid "Action Properties"
 msgstr "Properti Tindakan"
 
-#: editactiondialog.cpp:196
+#: editactiondialog.cpp:198
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -502,17 +502,17 @@ msgstr ""
 "interface> muncul di menu sembul, jika salah satu dari mereka dipilih, "
 "perintah akan dieksekusi."
 
-#: editactiondialog.cpp:208
+#: editactiondialog.cpp:210
 #, kde-format
 msgid "Enter a pattern to match against the clipboard"
 msgstr "Masukkan pola untuk mencocokkan kembali papan klip"
 
-#: editactiondialog.cpp:210
+#: editactiondialog.cpp:212
 #, kde-format
 msgid "Match pattern:"
 msgstr "Pola kecocokan:"
 
-#: editactiondialog.cpp:213
+#: editactiondialog.cpp:215
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -524,22 +524,22 @@ msgstr ""
 "lihatlah entri <link url=\"https://en.wikipedia.org/wiki/Regular_expression"
 "\">Wikipedia</link> untuk topik ini."
 
-#: editactiondialog.cpp:224
+#: editactiondialog.cpp:226
 #, kde-format
 msgid "Enter a description for the action"
 msgstr "Masukkan deskripsi untuk tindakan"
 
-#: editactiondialog.cpp:225 editcommanddialog.cpp:83
+#: editactiondialog.cpp:227 editcommanddialog.cpp:85
 #, kde-format
 msgid "Description:"
 msgstr "Deskripsi:"
 
-#: editactiondialog.cpp:228
+#: editactiondialog.cpp:230
 #, kde-format
 msgid "Include in automatic popup"
 msgstr "Termasuk dalam sembulan otomatis"
 
-#: editactiondialog.cpp:232
+#: editactiondialog.cpp:234
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -555,48 +555,48 @@ msgstr ""
 "disertakan dalam sembulan otomatis, tetapi akan disertakan jika sembulan "
 "diaktifkan secara manual dengan pintasan tombol <shortcut>%1</shortcut>."
 
-#: editactiondialog.cpp:267
+#: editactiondialog.cpp:269
 #, kde-format
 msgid "Add Command..."
 msgstr "Tambahkan Perintah..."
 
-#: editactiondialog.cpp:272
+#: editactiondialog.cpp:274
 #, kde-format
 msgid "Edit Command..."
 msgstr "Edit Perintah..."
 
-#: editactiondialog.cpp:278
+#: editactiondialog.cpp:280
 #, kde-format
 msgid "Delete Command"
 msgstr "Hapus Perintah"
 
-#: editactiondialog.cpp:393
+#: editactiondialog.cpp:397
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Delete the selected command <resource>%1</resource>?"
 msgstr "Hapus perintah <resource>%1</resource> yang dipilih?"
 
-#: editactiondialog.cpp:394
+#: editactiondialog.cpp:398
 #, kde-format
 msgid "Confirm Delete Command"
 msgstr "Konfirmasi Penghapusan Perintah"
 
-#: editcommanddialog.cpp:46
+#: editcommanddialog.cpp:48
 #, kde-format
 msgid "Command Properties"
 msgstr "Properti Perintah"
 
-#: editcommanddialog.cpp:59
+#: editcommanddialog.cpp:61
 #, kde-format
 msgid "Enter the command and arguments"
 msgstr "Masukkan perintah dan argumen"
 
-#: editcommanddialog.cpp:62
+#: editcommanddialog.cpp:64
 #, kde-format
 msgid "Command:"
 msgstr "Perintah:"
 
-#: editcommanddialog.cpp:71
+#: editcommanddialog.cpp:73
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -610,38 +610,38 @@ msgstr ""
 "<placeholder>&#37;9</placeholder> akan digantikan oleh teks tangkapan yang "
 "sesuai dari pola pencocokan."
 
-#: editcommanddialog.cpp:81
+#: editcommanddialog.cpp:83
 #, kde-format
 msgid "Enter a description for the command"
 msgstr "Masukkan deskripsi untuk perintah"
 
-#: editcommanddialog.cpp:91
+#: editcommanddialog.cpp:93
 #, kde-format
 msgid "Output from command:"
 msgstr "Keluaran dari perintah:"
 
-#: editcommanddialog.cpp:93
+#: editcommanddialog.cpp:95
 #, kde-format
 msgid "Replace current clipboard"
 msgstr "Ganti papan klip saat ini"
 
-#: editcommanddialog.cpp:97
+#: editcommanddialog.cpp:99
 #, kde-format
 msgid "Append to clipboard"
 msgstr "Tambahkan ke papan klip"
 
-#: editcommanddialog.cpp:101
+#: editcommanddialog.cpp:103
 #, kde-format
 msgid "What happens to the standard output of the command executed."
 msgstr ""
 "Apa yang terjadi terhadap keluaran standar dari perintah yang dieksekusi."
 
-#: editcommanddialog.cpp:115
+#: editcommanddialog.cpp:117
 #, kde-format
 msgid "Reset the icon to the default for the command"
 msgstr "Set ulang ikon ke baku untuk perintah"
 
-#: editcommanddialog.cpp:121
+#: editcommanddialog.cpp:123
 #, kde-format
 msgid "Icon:"
 msgstr "Ikon:"

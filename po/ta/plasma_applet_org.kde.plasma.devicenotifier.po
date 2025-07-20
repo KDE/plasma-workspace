@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-15 00:46+0000\n"
-"PO-Revision-Date: 2025-03-09 12:50+0530\n"
+"PO-Revision-Date: 2025-07-19 14:45+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,19 +15,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #: actions/checkaction.cpp:74
 #, kde-format
 msgctxt "@action:button check a storageAccess (i.e disk) for error"
 msgid "Check for Errors"
-msgstr ""
+msgstr "சிக்கல்கள் உள்ளனவா என பார்"
 
 #: actions/mountaction.cpp:103
 #, kde-format
 msgctxt "@action:button Mount a disk without verifying for errors"
 msgid "Mount without verifying"
-msgstr ""
+msgstr "சரிபார்க்காமல் ஏற்று"
 
 #: actions/mountaction.cpp:106
 #, kde-format
@@ -65,11 +65,10 @@ msgid "This device has file system errors."
 msgstr "இச்சாதனத்தின் கோப்பு முறைமை பழுதடைந்துள்ளது."
 
 #: devicemessagemonitor_p.cpp:166
-#, fuzzy, kde-format
-#| msgid "This device has file system errors."
+#, kde-format
 msgctxt "@label device is a storage disk"
 msgid "This device has no errors"
-msgstr "இச்சாதனத்தின் கோப்பு முறைமை பழுதடைந்துள்ளது."
+msgstr "இச்சாதனத்தில் எந்த சிக்கலும் இல்லை."
 
 #: devicemessagemonitor_p.cpp:169
 #, kde-format
@@ -115,7 +114,7 @@ msgstr "இந்த சாதனத்தில் பழுதுநீக்�
 #: devicemessagemonitor_p.cpp:197 devicemessagemonitor_p.cpp:262
 #, kde-format
 msgid "Unknown error type"
-msgstr ""
+msgstr "தெரியாத வகையான சிக்கல்"
 
 #: devicemessagemonitor_p.cpp:201
 #, kde-format

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-12 00:45+0000\n"
-"PO-Revision-Date: 2025-06-10 22:12+0200\n"
+"PO-Revision-Date: 2025-07-20 01:19+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -76,17 +76,13 @@ msgid "Tiled"
 msgstr "바둑판식 배열"
 
 #: imagepackage/contents/ui/config.qml:194
-#, fuzzy, kde-format
-#| msgctxt "part of a sentence: 'Switch dynamic wallpapers [based on]'"
-#| msgid "Switch dynamic wallpapers:"
+#, kde-format
 msgctxt "@label part of a sentence: 'Switch dynamic wallpapers [based on]'"
 msgid "Switch dynamic wallpapers:"
 msgstr "동적 배경 그림 전환:"
 
 #: imagepackage/contents/ui/config.qml:195
-#, fuzzy, kde-format
-#| msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
-#| msgid "Based on whether the color scheme is dark or light"
+#, kde-format
 msgctxt "@option:radio part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the color scheme is dark or light"
 msgstr "색 구성표가 밝음인가 어두움인가에 따라서"
@@ -95,13 +91,13 @@ msgstr "색 구성표가 밝음인가 어두움인가에 따라서"
 #, kde-format
 msgctxt "@option:radio part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on the day-night cycle:"
-msgstr ""
+msgstr "주간-야간 전환에 따라서:"
 
 #: imagepackage/contents/ui/config.qml:214
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
-msgstr ""
+msgstr "설정…"
 
 #: imagepackage/contents/ui/config.qml:225
 #, kde-format
