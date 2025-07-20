@@ -91,10 +91,6 @@ int main(int argc, char **argv)
     // It is not called after shutdown/restart
     waitForKonqi();
     out << "startplasma-wayland: Shutting down...\n";
-
-    // Keep for KF5; remove in KF6 (KInit will be gone then)
-    runSync(QStringLiteral("kdeinit5_shutdown"), {});
-
     out << "startplasmacompositor: Shutting down...\n";
     stopSystemdSession();
     cleanupPlasmaEnvironment(oldSystemdEnvironment);

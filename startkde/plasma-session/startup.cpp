@@ -173,9 +173,6 @@ Startup::Startup(QObject *parent)
         }
     }
 
-    // Keep for KF5; remove in KF6 (KInit will be gone then)
-    QProcess::execute(QStringLiteral(CMAKE_INSTALL_FULL_LIBEXECDIR_KF6 "/start_kdeinit_wrapper"), QStringList());
-
     KJob *phase1 = nullptr;
     m_lock.reset(new QEventLoopLocker);
 

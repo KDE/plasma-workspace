@@ -85,8 +85,6 @@ int main(int argc, char **argv)
     waitForKonqi();
 
     out << "startkde: Shutting down...\n";
-    // Keep for KF5; remove in KF6 (KInit will be gone then)
-    runSync(QStringLiteral("kdeinit5_shutdown"), {});
 
     stopSystemdSession();
     cleanupPlasmaEnvironment(oldSystemdEnvironment);
