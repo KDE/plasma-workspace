@@ -120,7 +120,6 @@ private:
     enum class Category {
         Name,
         GenericName,
-        Comment,
     };
     qreal increaseMatchRelevance(const QString &serviceProperty, const QList<QStringView> &strList, Category category)
     {
@@ -134,10 +133,6 @@ private:
                     relevanceIncrement += 0.01;
                 }
             } else if (category == Category::GenericName) {
-                if (serviceProperty.contains(str, Qt::CaseInsensitive)) {
-                    relevanceIncrement += 0.01;
-                }
-            } else if (category == Category::Comment) {
                 if (serviceProperty.contains(str, Qt::CaseInsensitive)) {
                     relevanceIncrement += 0.01;
                 }
@@ -167,8 +162,6 @@ private:
         match.setId(QString(u"exec://" + urlPath));
         if (!service->genericName().isEmpty() && service->genericName() != name) {
             match.setSubtext(service->genericName());
-        } else if (!service->comment().isEmpty()) {
-            match.setSubtext(service->comment());
         }
 
         if (!service->icon().isEmpty()) {
@@ -239,10 +232,6 @@ private:
             if (contains(service->genericName(), queryList) || contains(service->untranslatedGenericName(), queryList)) {
                 return true;
             }
-            // Comment
-            if (contains(service->comment(), queryList)) {
-                return true;
-            }
 
             return false;
         };
@@ -278,12 +267,6 @@ private:
             } else if (const auto idx = service->genericName().indexOf(queryList[0], 0, Qt::CaseInsensitive); idx != -1) {
                 relevance = 0.65;
                 relevance += increaseMatchRelevance(service->genericName(), queryList, Category::GenericName);
-                if (idx == 0) {
-                    relevance += 0.05;
-                }
-            } else if (const auto idx = service->comment().indexOf(queryList[0], 0, Qt::CaseInsensitive); idx != -1) {
-                relevance = 0.5;
-                relevance += increaseMatchRelevance(service->comment(), queryList, Category::Comment);
                 if (idx == 0) {
                     relevance += 0.05;
                 }

@@ -30,7 +30,6 @@ private Q_SLOTS:
     void cleanupTestCase();
 
     void testExecutableExactMatch();
-    void testKonsoleVsYakuakeComment();
     void testSystemSettings();
     void testSystemSettings2();
     void testCategories();
@@ -85,30 +84,6 @@ void ServiceRunnerTest::testExecutableExactMatch()
     QVERIFY(std::any_of(matches.cbegin(), matches.cend(), [](const KRunner::QueryMatch &match) {
         return match.text() == QLatin1String("Virtual Machine Manager ServiceRunnerTest") && match.relevance() >= 1;
     }));
-}
-
-void ServiceRunnerTest::testKonsoleVsYakuakeComment()
-{
-    // Yakuake has konsole mentioned in comment, should be rated lower.
-    auto matches = launchQuery(QStringLiteral("kons"));
-
-    std::ranges::sort(matches, [](const KRunner::QueryMatch &a, const KRunner::QueryMatch &b) {
-        return a.relevance() > b.relevance();
-    });
-
-    QStringList texts;
-    for (const auto &match : matches) {
-        if (!match.text().contains("ServiceRunnerTest"_L1)) {
-            continue;
-        }
-        texts.push_back(match.text());
-    }
-
-    QCOMPARE(texts,
-             QStringList({
-                 u"Konsole ServiceRunnerTest"_s,
-                 u"Yakuake ServiceRunnerTest"_s,
-             }));
 }
 
 void ServiceRunnerTest::testSystemSettings()
