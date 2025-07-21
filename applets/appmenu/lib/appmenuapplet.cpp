@@ -234,9 +234,7 @@ void AppMenuApplet::trigger(QQuickItem *ctx, int idx)
                 m_currentMenu->windowHandle()->setTransientParent(ctx->window());
                 m_currentMenu->popup(pos);
             }
-        }
-
-        if (KWindowSystem::isPlatformWayland() && view() == CompactView) {
+        } else if (view() == CompactView) {
             m_currentMenu->popup(pos);
             connect(actionMenu, &QMenu::aboutToHide, this, &AppMenuApplet::onMenuAboutToHide, Qt::UniqueConnection);
         }
