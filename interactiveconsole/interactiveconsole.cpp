@@ -38,6 +38,7 @@
 #include <KTextEditor/Document>
 #include <KTextEditor/View>
 #include <KToolBar>
+#include <KWindowConfig>
 
 #include <KPackage/Package>
 #include <KPackage/PackageLoader>
@@ -174,11 +175,17 @@ InteractiveConsole::InteractiveConsole(ConsoleMode mode, QWidget *parent)
     QVBoxLayout *l = new QVBoxLayout(this);
     l->addWidget(m_splitter);
 
+    // Clean up old values
     KConfigGroup cg(KSharedConfig::openConfig(), u"InteractiveConsole"_s);
-    restoreGeometry(cg.readEntry<QByteArray>("Geometry", QByteArray()));
+    cg.revertToDefault("Geometry");
+    cg.revertToDefault("SplitterState");
+    winId();
+    const KConfigGroup windowConfig = KSharedConfig::openStateConfig()->group(u"MainWindow"_s);
+    KWindowConfig::restoreWindowSize(windowHandle(), windowConfig);
+    resize(windowHandle()->size()); // workaround for QTBUG-40584
 
     m_splitter->setStretchFactor(0, 10);
-    m_splitter->restoreState(cg.readEntry("SplitterState", QByteArray()));
+    m_splitter->restoreState(windowConfig.readEntry("SplitterState", QByteArray()));
 
     scriptTextChanged();
 
@@ -193,9 +200,9 @@ InteractiveConsole::InteractiveConsole(ConsoleMode mode, QWidget *parent)
 
 InteractiveConsole::~InteractiveConsole()
 {
-    KConfigGroup cg(KSharedConfig::openConfig(), u"InteractiveConsole"_s);
-    cg.writeEntry("Geometry", saveGeometry());
-    cg.writeEntry("SplitterState", m_splitter->saveState());
+    KConfigGroup windowConfig = KSharedConfig::openStateConfig()->group(u"MainWindow"_s);
+    KWindowConfig::saveWindowSize(windowHandle(), windowConfig);
+    windowConfig.writeEntry("SplitterState", m_splitter->saveState());
 }
 
 void InteractiveConsole::setMode(const QString &mode)
