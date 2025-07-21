@@ -130,7 +130,7 @@ private:
             const auto &str = strList.at(i);
             if (category == Category::Name) {
                 if (serviceProperty.contains(str, Qt::CaseInsensitive)) {
-                    relevanceIncrement += 0.01;
+                    relevanceIncrement += 0.05;
                 }
             } else if (category == Category::GenericName) {
                 if (serviceProperty.contains(str, Qt::CaseInsensitive)) {
