@@ -139,6 +139,8 @@ QMenu *AppMenuApplet::createMenu(int idx) const
 
 void AppMenuApplet::onMenuAboutToHide()
 {
+    auto menuAction = m_currentMenu->menuAction();
+    menuAction->setMenu(m_sourceMenu);
     setCurrentIndex(-1);
 }
 
@@ -192,16 +194,20 @@ void AppMenuApplet::trigger(QQuickItem *ctx, int idx)
                 m_currentMenu = new QMenu(qobject_cast<QWidget *>(actionMenu->parent()));
                 connect(m_currentMenu, &QMenu::aboutToHide, this, &AppMenuApplet::onMenuAboutToHide, Qt::UniqueConnection);
             } else if (m_sourceMenu != actionMenu) {
+                auto menuAction = m_currentMenu->menuAction();
                 for (QAction *action : m_currentMenu->actions()) {
                     m_currentMenu->removeAction(action);
                     m_sourceMenu->addAction(action);
                 }
+                menuAction->setMenu(m_sourceMenu);
             }
             m_sourceMenu = actionMenu;
+            auto menuAction = m_sourceMenu->menuAction();
             for (QAction *action : m_sourceMenu->actions()) {
                 m_sourceMenu->removeAction(action);
                 m_currentMenu->addAction(action);
             }
+            menuAction->setMenu(m_currentMenu);
         } else {
             m_currentMenu = actionMenu;
         }
