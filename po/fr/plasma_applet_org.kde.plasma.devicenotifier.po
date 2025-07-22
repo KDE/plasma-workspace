@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_notifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-15 00:46+0000\n"
-"PO-Revision-Date: 2025-02-24 09:27+0100\n"
+"PO-Revision-Date: 2025-07-16 09:27+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -30,20 +30,20 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 24.12.2\n"
+"X-Generator: Lokalize 25.07.80\n"
 "X-Text-Markup: kde4\n"
 
 #: actions/checkaction.cpp:74
 #, kde-format
 msgctxt "@action:button check a storageAccess (i.e disk) for error"
 msgid "Check for Errors"
-msgstr ""
+msgstr "Vérifier s’il y a des erreurs"
 
 #: actions/mountaction.cpp:103
 #, kde-format
 msgctxt "@action:button Mount a disk without verifying for errors"
 msgid "Mount without verifying"
-msgstr ""
+msgstr "Monter sans vérifier"
 
 #: actions/mountaction.cpp:106
 #, kde-format
@@ -81,11 +81,10 @@ msgid "This device has file system errors."
 msgstr "Ce périphérique présente des erreurs de fichiers système."
 
 #: devicemessagemonitor_p.cpp:166
-#, fuzzy, kde-format
-#| msgid "This device has file system errors."
+#, kde-format
 msgctxt "@label device is a storage disk"
 msgid "This device has no errors"
-msgstr "Ce périphérique présente des erreurs de fichiers système."
+msgstr "Ce périphérique ne présente aucune erreur."
 
 #: devicemessagemonitor_p.cpp:169
 #, kde-format
@@ -131,7 +130,7 @@ msgstr "Vous n'êtes pas autorisé à réparer ce périphérique."
 #: devicemessagemonitor_p.cpp:197 devicemessagemonitor_p.cpp:262
 #, kde-format
 msgid "Unknown error type"
-msgstr ""
+msgstr "Type inconnu d’erreur"
 
 #: devicemessagemonitor_p.cpp:201
 #, kde-format
