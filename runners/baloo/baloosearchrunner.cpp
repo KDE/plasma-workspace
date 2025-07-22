@@ -176,7 +176,14 @@ void SearchRunner::Run(const QString &id, const QString &actionId)
     auto *job = new KIO::OpenUrlJob(url);
     job->setUiDelegate(KIO::createDefaultJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled, QApplication::activeWindow()));
     job->setShowOpenOrExecuteDialog(true);
+    job->setStartupId(m_activationToken.toUtf8());
+    m_activationToken.clear();
     job->start();
+}
+
+void SearchRunner::SetActivationToken(const QString &token)
+{
+    m_activationToken = token;
 }
 
 #include "moc_baloosearchrunner.cpp"

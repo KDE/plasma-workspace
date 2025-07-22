@@ -18,6 +18,15 @@
     </method>
 
     <!--
+        Called with an XDG Activation Token.
+        This is called just before Run in order for the DBusRunner to receive the XDG Activation Token
+        necessary to pass focus to another window when e.g. launching an application or opening a document.
+    -->
+    <method name="SetActivationToken">
+      <arg name="token" type="s" direction="in"/>
+    </method>
+
+    <!--
         Execute an action
     -->
     <method name="Run">

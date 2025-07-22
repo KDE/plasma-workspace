@@ -24,7 +24,9 @@ public:
     RemoteActions Actions();
     RemoteMatches Match(const QString &searchTerm);
     void Run(const QString &id, const QString &actionId);
+    void SetActivationToken(const QString &token);
 
 private:
     RemoteMatches matchInternal(const QString &searchTerm, const QStringList &types, const QString &category, QSet<QUrl> &foundUrls);
+    QString m_activationToken;
 };
