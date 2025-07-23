@@ -31,6 +31,7 @@ set(kickerplugin_SRCS
     windowsystem.cpp
     funnelmodel.cpp
     sectionsmodel.cpp
+    utils.cpp
 )
 
 ecm_qt_declare_logging_category(kickerplugin_SRCS
