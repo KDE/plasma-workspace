@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-23 00:44+0000\n"
-"PO-Revision-Date: 2025-05-25 14:54+0200\n"
+"PO-Revision-Date: 2025-07-23 14:17+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #: src/fingerprintmodel.cpp:145 src/fingerprintmodel.cpp:229
 #, kde-format
@@ -397,7 +397,7 @@ msgstr "Erabiltzaileak"
 #, kde-format
 msgctxt "@action:button As in, 'add new user'"
 msgid "Add New…"
-msgstr "Gehitu ...berria"
+msgstr "Gehitu …berria"
 
 #: src/ui/main.qml:29
 #, kde-format
@@ -540,7 +540,7 @@ msgstr "Inizialak"
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose File…"
-msgstr "Hautatu fitxategia..."
+msgstr "Hautatu fitxategia…"
 
 #: src/ui/PicturesSheet.qml:140
 #, kde-format
@@ -650,12 +650,12 @@ msgstr "Mantendu fitxategiak"
 #: src/ui/UserDetailsPage.qml:252
 #, kde-format
 msgid "Delete User…"
-msgstr "Ezabatu erabiltzailea..."
+msgstr "Ezabatu erabiltzailea…"
 
 #: src/ui/UserDetailsPage.qml:264
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
-msgstr "Konfiguratu hatz-marka autentifikazioa..."
+msgstr "Konfiguratu hatz-marka autentifikazioa…"
 
 #: src/ui/UserDetailsPage.qml:296
 #, kde-kuit-format
