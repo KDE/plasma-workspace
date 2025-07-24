@@ -16,14 +16,12 @@ QUrl Utils::resolvedFile(const QUrl &url)
 
     QFileInfo info(url.path());
     if (info.isSymLink()) {
-        QString target = info.symLinkTarget();
+        const QString target = info.symLinkTarget();
 
         // If the target is relative, make it absolute relative to the link's directory
         if (QFileInfo(target).isRelative()) {
-            target = QDir(info.absolutePath()).absoluteFilePath(target);
+            return QUrl::fromLocalFile(QDir(info.absolutePath()).absoluteFilePath(target));
         }
-
-        return QUrl::fromLocalFile(target);
     }
 
     return url;
