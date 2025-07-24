@@ -72,6 +72,20 @@ void NotificationFilterProxyModel::setShowAddedDuringInhibition(bool show)
     }
 }
 
+bool NotificationFilterProxyModel::ignoreBlacklistDuringInhibition() const
+{
+    return m_ignoreBlacklistDuringInhibition;
+}
+
+void NotificationFilterProxyModel::setIgnoreBlacklistDuringInhibition(bool ignore)
+{
+    if (m_ignoreBlacklistDuringInhibition != ignore) {
+        m_ignoreBlacklistDuringInhibition = ignore;
+        invalidateFilter();
+        Q_EMIT ignoreBlacklistDuringInhibitionChanged();
+    }
+}
+
 QStringList NotificationFilterProxyModel::blacklistedDesktopEntries() const
 {
     return m_blacklistedDesktopEntries;
@@ -154,14 +168,16 @@ bool NotificationFilterProxyModel::filterAcceptsRow(int source_row, const QModel
         }
     }
 
+    bool ignoreBlacklist = m_ignoreBlacklistDuringInhibition && sourceIdx.data(Notifications::WasAddedDuringInhibitionRole).toBool();
+
     // Blacklist takes precedence over whitelist, i.e. when in doubt don't show
-    if (!m_blacklistedDesktopEntries.isEmpty()) {
+    if (!m_blacklistedDesktopEntries.isEmpty() && !ignoreBlacklist) {
         if (!desktopEntry.isEmpty() && m_blacklistedDesktopEntries.contains(desktopEntry)) {
             return false;
         }
     }
 
-    if (!m_blacklistedNotifyRcNames.isEmpty()) {
+    if (!m_blacklistedNotifyRcNames.isEmpty() && !ignoreBlacklist) {
         const QString notifyRcName = sourceIdx.data(Notifications::NotifyRcNameRole).toString();
         if (!notifyRcName.isEmpty() && m_blacklistedNotifyRcNames.contains(notifyRcName)) {
             return false;
@@ -189,7 +205,7 @@ bool NotificationFilterProxyModel::filterAcceptsRow(int source_row, const QModel
     bool ok;
     const auto urgency = static_cast<Notifications::Urgency>(sourceIdx.data(Notifications::UrgencyRole).toInt(&ok));
     if (ok) {
-        if (!m_urgencies.testFlag(urgency)) {
+        if (!m_urgencies.testFlag(urgency) && !ignoreBlacklist) {
             return false;
         }
     }
