@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-25 00:44+0000\n"
+"POT-Creation-Date: 2025-07-24 00:44+0000\n"
 "PO-Revision-Date: 2025-06-25 04:08+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -103,7 +103,7 @@ msgstr "%1-ი %2-დან"
 msgid "Application closed unexpectedly."
 msgstr "აპლიკაცია მოულოდნელად დაიხურა."
 
-#: notifications.cpp:907
+#: notifications.cpp:914
 #, kde-format
 msgctxt "@title"
 msgid "Unread Notification"
@@ -111,7 +111,7 @@ msgid_plural "Unread Notifications"
 msgstr[0] "წაუკითხავი შეტყობინებება"
 msgstr[1] "წაუკითხავი შეტყობინებები"
 
-#: notifications.cpp:909
+#: notifications.cpp:916
 #, kde-format
 msgctxt "@info"
 msgid "%1 notification was received while Do Not Disturb was active."
@@ -119,10 +119,12 @@ msgid_plural "%1 notifications were received while Do Not Disturb was active."
 msgstr[0] "როცა აქტიური იყო 'არ შემაწუხო', მიღებულია %1 გაფრთხილება."
 msgstr[1] "როცა აქტიური იყო 'არ შემაწუხო', მიღებულია %1 გაფრთხილება."
 
-#: notifications.cpp:918
-#, kde-format
-msgctxt ""
-"@action:button Show the notifications popup; translate this in as short a "
-"form as possible"
+#: notifications.cpp:923
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@action:button Show the notifications popup; translate this in as short a "
+#| "form as possible"
+#| msgid "Show Notifications"
+msgctxt "@action:button Show the notifications popup"
 msgid "Show Notifications"
 msgstr "გაფრთხილებების ჩვენება"

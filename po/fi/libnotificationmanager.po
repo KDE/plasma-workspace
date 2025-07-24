@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-25 00:44+0000\n"
+"POT-Creation-Date: 2025-07-24 00:44+0000\n"
 "PO-Revision-Date: 2025-05-25 10:33+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -103,7 +103,7 @@ msgstr "%1 työstä %2"
 msgid "Application closed unexpectedly."
 msgstr "Sovellus sulkeutui odottamatta."
 
-#: notifications.cpp:907
+#: notifications.cpp:914
 #, kde-format
 msgctxt "@title"
 msgid "Unread Notification"
@@ -111,7 +111,7 @@ msgid_plural "Unread Notifications"
 msgstr[0] "Lukematta oleva ilmoitus"
 msgstr[1] "Lukematta olevat ilmoitukset"
 
-#: notifications.cpp:909
+#: notifications.cpp:916
 #, kde-format
 msgctxt "@info"
 msgid "%1 notification was received while Do Not Disturb was active."
@@ -120,13 +120,11 @@ msgstr[0] "Vastaanotettiin %1 ilmoitus Älä häiritse -tilan ollessa aktiivinen
 msgstr[1] ""
 "Vastaanotettiin %1 ilmoitusta Älä häiritse -tilan ollessa aktiivinen."
 
-#: notifications.cpp:918
+#: notifications.cpp:923
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "Unread Notification"
 #| msgid_plural "Unread Notifications"
-msgctxt ""
-"@action:button Show the notifications popup; translate this in as short a "
-"form as possible"
+msgctxt "@action:button Show the notifications popup"
 msgid "Show Notifications"
 msgstr "Lukematta oleva ilmoitus"

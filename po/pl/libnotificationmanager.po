@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-25 00:44+0000\n"
+"POT-Creation-Date: 2025-07-24 00:44+0000\n"
 "PO-Revision-Date: 2025-01-11 11:27+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -109,7 +109,7 @@ msgstr "%1 z %2"
 msgid "Application closed unexpectedly."
 msgstr "Aplikacja została nieoczekiwanie zamknięta."
 
-#: notifications.cpp:907
+#: notifications.cpp:914
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "Unread Notifications"
@@ -120,7 +120,7 @@ msgstr[0] "Nieprzeczytane powiadomienia"
 msgstr[1] "Nieprzeczytane powiadomienia"
 msgstr[2] "Nieprzeczytane powiadomienia"
 
-#: notifications.cpp:909
+#: notifications.cpp:916
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid "%1 notifications were received while Do Not Disturb was active."
@@ -131,12 +131,10 @@ msgstr[0] "Otrzymano %1 powiadomień w trybie nieprzeszkadzania."
 msgstr[1] "Otrzymano %1 powiadomień w trybie nieprzeszkadzania."
 msgstr[2] "Otrzymano %1 powiadomień w trybie nieprzeszkadzania."
 
-#: notifications.cpp:918
+#: notifications.cpp:923
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "Unread Notifications"
-msgctxt ""
-"@action:button Show the notifications popup; translate this in as short a "
-"form as possible"
+msgctxt "@action:button Show the notifications popup"
 msgid "Show Notifications"
 msgstr "Nieprzeczytane powiadomienia"

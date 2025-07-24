@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-25 00:44+0000\n"
+"POT-Creation-Date: 2025-07-24 00:44+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -96,24 +96,26 @@ msgstr "%1 来自 %2"
 msgid "Application closed unexpectedly."
 msgstr "应用程序意外关闭。"
 
-#: notifications.cpp:907
+#: notifications.cpp:914
 #, kde-format
 msgctxt "@title"
 msgid "Unread Notification"
 msgid_plural "Unread Notifications"
 msgstr[0] "未读通知"
 
-#: notifications.cpp:909
+#: notifications.cpp:916
 #, kde-format
 msgctxt "@info"
 msgid "%1 notification was received while Do Not Disturb was active."
 msgid_plural "%1 notifications were received while Do Not Disturb was active."
 msgstr[0] "勿扰模式开启期间收到了 %1 条通知。"
 
-#: notifications.cpp:918
-#, kde-format
-msgctxt ""
-"@action:button Show the notifications popup; translate this in as short a "
-"form as possible"
+#: notifications.cpp:923
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@action:button Show the notifications popup; translate this in as short a "
+#| "form as possible"
+#| msgid "Show Notifications"
+msgctxt "@action:button Show the notifications popup"
 msgid "Show Notifications"
 msgstr "显示通知"

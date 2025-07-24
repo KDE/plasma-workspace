@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-25 00:44+0000\n"
+"POT-Creation-Date: 2025-07-24 00:44+0000\n"
 "PO-Revision-Date: 2025-06-29 15:10+0200\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -102,7 +102,7 @@ msgstr "%1 da %2"
 msgid "Application closed unexpectedly."
 msgstr "L'applicazione si è chiusa in maniera inaspettata."
 
-#: notifications.cpp:907
+#: notifications.cpp:914
 #, kde-format
 msgctxt "@title"
 msgid "Unread Notification"
@@ -110,7 +110,7 @@ msgid_plural "Unread Notifications"
 msgstr[0] "Notifica non letta"
 msgstr[1] "Notifiche non lette"
 
-#: notifications.cpp:909
+#: notifications.cpp:916
 #, kde-format
 msgctxt "@info"
 msgid "%1 notification was received while Do Not Disturb was active."
@@ -121,10 +121,12 @@ msgstr[1] ""
 "Sono state ricevute %1 notifiche mentre era attiva la modalità Non "
 "disturbare."
 
-#: notifications.cpp:918
-#, kde-format
-msgctxt ""
-"@action:button Show the notifications popup; translate this in as short a "
-"form as possible"
+#: notifications.cpp:923
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@action:button Show the notifications popup; translate this in as short a "
+#| "form as possible"
+#| msgid "Show Notifications"
+msgctxt "@action:button Show the notifications popup"
 msgid "Show Notifications"
 msgstr "Mostra notifiche"

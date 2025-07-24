@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libnotificationmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-25 00:44+0000\n"
+"POT-Creation-Date: 2025-07-24 00:44+0000\n"
 "PO-Revision-Date: 2025-04-16 03:04+0200\n"
 "Last-Translator: Flori G <Renner03@protonmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -105,7 +105,7 @@ msgstr "%1 von %2"
 msgid "Application closed unexpectedly."
 msgstr "Die Anwendung wurde unerwartet beendet."
 
-#: notifications.cpp:907
+#: notifications.cpp:914
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "Unread Notifications"
@@ -115,7 +115,7 @@ msgid_plural "Unread Notifications"
 msgstr[0] "Ungelesene Benachrichtigungen"
 msgstr[1] "Ungelesene Benachrichtigungen"
 
-#: notifications.cpp:909
+#: notifications.cpp:916
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid "%1 notifications were received while Do Not Disturb was active."
@@ -127,12 +127,10 @@ msgstr[0] ""
 msgstr[1] ""
 "Es sind %1 Benachrichtigungen eingegangen, während „Nicht stören“ aktiv war."
 
-#: notifications.cpp:918
+#: notifications.cpp:923
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "Unread Notifications"
-msgctxt ""
-"@action:button Show the notifications popup; translate this in as short a "
-"form as possible"
+msgctxt "@action:button Show the notifications popup"
 msgid "Show Notifications"
 msgstr "Ungelesene Benachrichtigungen"
