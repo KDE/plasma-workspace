@@ -324,6 +324,7 @@ SystemTrayModel *SystemTray::systemTrayModel()
 
         m_systemTrayModel->addSourceModel(m_plasmoidModel);
         m_systemTrayModel->addSourceModel(m_statusNotifierModel);
+        m_systemTrayModel->addSourceModel(new BackgroundAppsFilteredModel(new BackgroundAppsModel(m_settings, m_systemTrayModel), m_systemTrayModel));
     }
 
     return m_systemTrayModel;

@@ -20,6 +20,9 @@ Loader {
         } else if (model.itemType === "StatusNotifier") {
             return Qt.resolvedUrl("StatusNotifierItem.qml")
         }
+        else if (model.itemType === "BackgroundApp") {
+            return Qt.resolvedUrl("BackgroundAppItem.qml")
+        }
         console.warn("SystemTray ItemLoader: Invalid state, cannot determine source!")
         return ""
     }

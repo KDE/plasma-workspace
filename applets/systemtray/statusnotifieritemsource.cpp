@@ -33,6 +33,8 @@
 
 #include <dbusmenuimporter.h>
 
+using namespace Qt::StringLiterals;
+
 Q_GLOBAL_STATIC(Plasma::Theme, s_theme)
 
 class PlasmaDBusMenuImporter : public DBusMenuImporter
@@ -107,6 +109,17 @@ StatusNotifierItemSource::StatusNotifierItemSource(const QString &notifierItemId
         connect(m_statusNotifierItemInterface.get(), &OrgKdeStatusNotifierItem::NewStatus, this, &StatusNotifierItemSource::syncStatus);
         connect(m_statusNotifierItemInterface.get(), &OrgKdeStatusNotifierItem::NewMenu, this, &StatusNotifierItemSource::refreshMenu);
         refresh();
+    }
+
+    auto pid = QDBusConnection::sessionBus().interface()->servicePid(service);
+    if (pid.isValid()) {
+        const QString flatpakInfoPath = "/proc/"_L1 + QString::number(pid.value()) + "/root/.flatpak-info"_L1;
+        const QSettings flatpakInfo(flatpakInfoPath, QSettings::IniFormat);
+        const auto instance = flatpakInfo.value("Instance/instance-id").toString();
+        m_flatpakInstance = instance;
+        if (!instance.isEmpty()) {
+            qCDebug(SYSTEM_TRAY) << "StatusNotifierItem" << notifierItemId << "is a flatpak" << instance;
+        }
     }
 
     connect(s_theme, &Plasma::Theme::themeChanged, this, &StatusNotifierItemSource::reloadIcon);
@@ -547,6 +560,11 @@ void StatusNotifierItemSource::provideXdgActivationToken(const QString &token)
     if (m_statusNotifierItemInterface && m_statusNotifierItemInterface->isValid()) {
         m_statusNotifierItemInterface->ProvideXdgActivationToken(token);
     }
+}
+
+QString StatusNotifierItemSource::flatpakInstance() const
+{
+    return m_flatpakInstance;
 }
 
 #include "moc_statusnotifieritemsource.cpp"
