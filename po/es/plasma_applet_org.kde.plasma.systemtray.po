@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.systemtray\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-01 00:43+0000\n"
+"POT-Creation-Date: 2025-07-25 00:44+0000\n"
 "PO-Revision-Date: 2025-06-04 19:39+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -28,52 +28,52 @@ msgstr "General"
 msgid "Entries"
 msgstr "Entradas"
 
-#: package/contents/ui/ConfigEntries.qml:36
+#: package/contents/ui/ConfigEntries.qml:39
 #, kde-format
 msgid "Shown when relevant"
 msgstr "Mostrar cuando sea importante"
 
-#: package/contents/ui/ConfigEntries.qml:40
+#: package/contents/ui/ConfigEntries.qml:43
 #, kde-format
 msgid "Always shown"
 msgstr "Mostrar siempre"
 
-#: package/contents/ui/ConfigEntries.qml:44
+#: package/contents/ui/ConfigEntries.qml:47
 #, kde-format
 msgid "Always hidden"
 msgstr "Ocultar siempre"
 
-#: package/contents/ui/ConfigEntries.qml:48
+#: package/contents/ui/ConfigEntries.qml:51
 #, kde-format
 msgid "Disabled"
 msgstr "Desactivado"
 
-#: package/contents/ui/ConfigEntries.qml:119
+#: package/contents/ui/ConfigEntries.qml:122
 #, kde-format
 msgid "Application Status"
 msgstr "Estado de las aplicaciones"
 
-#: package/contents/ui/ConfigEntries.qml:121
+#: package/contents/ui/ConfigEntries.qml:124
 #, kde-format
 msgid "Communications"
 msgstr "Comunicaciones"
 
-#: package/contents/ui/ConfigEntries.qml:123
+#: package/contents/ui/ConfigEntries.qml:126
 #, kde-format
 msgid "System Services"
 msgstr "Servicios del sistema"
 
-#: package/contents/ui/ConfigEntries.qml:125
+#: package/contents/ui/ConfigEntries.qml:128
 #, kde-format
 msgid "Hardware Control"
 msgstr "Control del hardware"
 
-#: package/contents/ui/ConfigEntries.qml:128
+#: package/contents/ui/ConfigEntries.qml:131
 #, kde-format
 msgid "Miscellaneous"
 msgstr "Varios"
 
-#: package/contents/ui/ConfigEntries.qml:171
+#: package/contents/ui/ConfigEntries.qml:174
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -91,13 +91,13 @@ msgstr ""
 "preferencia bajo su propio riesgo y no informe de problemas a KDE ni al "
 "autor de la aplicación."
 
-#: package/contents/ui/ConfigEntries.qml:174
+#: package/contents/ui/ConfigEntries.qml:177
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
 msgstr "Entiendo los riesgos"
 
-#: package/contents/ui/ConfigEntries.qml:186
+#: package/contents/ui/ConfigEntries.qml:189
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -111,23 +111,23 @@ msgstr ""
 "copiaron.<nl/><nl/>En su lugar, considere configurar el portapapeles para "
 "desactivar su historial o para que solo recuerde un elemento a la vez."
 
-#: package/contents/ui/ConfigEntries.qml:214
+#: package/contents/ui/ConfigEntries.qml:217
 #, kde-format
 msgctxt "Name of the system tray entry"
 msgid "Entry"
 msgstr "Entrada"
 
-#: package/contents/ui/ConfigEntries.qml:221
+#: package/contents/ui/ConfigEntries.qml:224
 #, kde-format
 msgid "Visibility"
 msgstr "Visibilidad"
 
-#: package/contents/ui/ConfigEntries.qml:228
+#: package/contents/ui/ConfigEntries.qml:231
 #, kde-format
 msgid "Keyboard Shortcut"
 msgstr "Atajo de teclado"
 
-#: package/contents/ui/ConfigEntries.qml:399
+#: package/contents/ui/ConfigEntries.qml:263
 #, kde-format
 msgid "Always show all entries"
 msgstr "Mostrar siempre todas las entradas"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-21 00:44+0000\n"
+"POT-Creation-Date: 2025-07-25 00:44+0000\n"
 "PO-Revision-Date: 2024-08-14 15:39+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -475,12 +475,12 @@ msgstr "Režim Nerušit;ukončit prostředním tlačítkem"
 msgid "Middle-click to enter do not disturb mode"
 msgstr "Prostředním tlačítkem vstoupíte do režimu Nerušit"
 
-#: package/contents/ui/main.qml:235
+#: package/contents/ui/main.qml:236
 #, kde-format
 msgid "Clear All Notifications"
 msgstr "Vymazat všechna oznámení"
 
-#: package/contents/ui/main.qml:254
+#: package/contents/ui/main.qml:255
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "Nastavit upozornění na události a činnosti…"

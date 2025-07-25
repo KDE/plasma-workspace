@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-21 00:44+0000\n"
+"POT-Creation-Date: 2025-07-25 00:44+0000\n"
 "PO-Revision-Date: 2025-04-18 12:04+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -467,12 +467,12 @@ msgstr "Stillingin 'Ekki ónáða' er virk. Miðjusmelltu til að hætta"
 msgid "Middle-click to enter do not disturb mode"
 msgstr "Miðjusmelltu til að stilla á 'Ekki ónáða'"
 
-#: package/contents/ui/main.qml:235
+#: package/contents/ui/main.qml:236
 #, kde-format
 msgid "Clear All Notifications"
 msgstr "Hreinsa allar tilkynningar"
 
-#: package/contents/ui/main.qml:254
+#: package/contents/ui/main.qml:255
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "Stilla til&kynningar um viðburði og aðgerðir…"

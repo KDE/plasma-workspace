@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-12 00:45+0000\n"
-"PO-Revision-Date: 2025-07-23 14:18+0200\n"
+"PO-Revision-Date: 2025-07-24 18:17+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -30,7 +30,7 @@ msgstr "Iñigo Salvador Azurmendi"
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "xalba@euskalnet.net"
+msgstr "xalba@ni.eus"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:58
 #, kde-format
@@ -81,17 +81,13 @@ msgid "Tiled"
 msgstr "Lauzatuta"
 
 #: imagepackage/contents/ui/config.qml:194
-#, fuzzy, kde-format
-#| msgctxt "part of a sentence: 'Switch dynamic wallpapers [based on]'"
-#| msgid "Switch dynamic wallpapers:"
+#, kde-format
 msgctxt "@label part of a sentence: 'Switch dynamic wallpapers [based on]'"
 msgid "Switch dynamic wallpapers:"
-msgstr "Horma-paper aldaketa dinamikoa:"
+msgstr "Aldatu horma-paper dinamikoak:"
 
 #: imagepackage/contents/ui/config.qml:195
-#, fuzzy, kde-format
-#| msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
-#| msgid "Based on whether the color scheme is dark or light"
+#, kde-format
 msgctxt "@option:radio part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the color scheme is dark or light"
 msgstr "Kolore-antolaera iluna edo argia den oinarri hartuta"
@@ -100,13 +96,13 @@ msgstr "Kolore-antolaera iluna edo argia den oinarri hartuta"
 #, kde-format
 msgctxt "@option:radio part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on the day-night cycle:"
-msgstr ""
+msgstr "Eguna-gaua zikloa oinarri hartuta:"
 
 #: imagepackage/contents/ui/config.qml:214
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
-msgstr ""
+msgstr "Konfiguratu..."
 
 #: imagepackage/contents/ui/config.qml:225
 #, kde-format

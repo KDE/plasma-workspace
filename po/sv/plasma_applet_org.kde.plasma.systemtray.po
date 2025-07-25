@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-01 00:43+0000\n"
+"POT-Creation-Date: 2025-07-25 00:44+0000\n"
 "PO-Revision-Date: 2025-05-31 15:18+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -27,52 +27,52 @@ msgstr "Allmänt"
 msgid "Entries"
 msgstr "Poster"
 
-#: package/contents/ui/ConfigEntries.qml:36
+#: package/contents/ui/ConfigEntries.qml:39
 #, kde-format
 msgid "Shown when relevant"
 msgstr "Visas om relevant"
 
-#: package/contents/ui/ConfigEntries.qml:40
+#: package/contents/ui/ConfigEntries.qml:43
 #, kde-format
 msgid "Always shown"
 msgstr "Visa alltid"
 
-#: package/contents/ui/ConfigEntries.qml:44
+#: package/contents/ui/ConfigEntries.qml:47
 #, kde-format
 msgid "Always hidden"
 msgstr "Alltid dold"
 
-#: package/contents/ui/ConfigEntries.qml:48
+#: package/contents/ui/ConfigEntries.qml:51
 #, kde-format
 msgid "Disabled"
 msgstr "Aktiverad"
 
-#: package/contents/ui/ConfigEntries.qml:119
+#: package/contents/ui/ConfigEntries.qml:122
 #, kde-format
 msgid "Application Status"
 msgstr "Programstatus"
 
-#: package/contents/ui/ConfigEntries.qml:121
+#: package/contents/ui/ConfigEntries.qml:124
 #, kde-format
 msgid "Communications"
 msgstr "Kommunikation"
 
-#: package/contents/ui/ConfigEntries.qml:123
+#: package/contents/ui/ConfigEntries.qml:126
 #, kde-format
 msgid "System Services"
 msgstr "Systemtjänster"
 
-#: package/contents/ui/ConfigEntries.qml:125
+#: package/contents/ui/ConfigEntries.qml:128
 #, kde-format
 msgid "Hardware Control"
 msgstr "Maskinvarukontroll"
 
-#: package/contents/ui/ConfigEntries.qml:128
+#: package/contents/ui/ConfigEntries.qml:131
 #, kde-format
 msgid "Miscellaneous"
 msgstr "Diverse"
 
-#: package/contents/ui/ConfigEntries.qml:171
+#: package/contents/ui/ConfigEntries.qml:174
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -88,13 +88,13 @@ msgstr ""
 "de bete sig på oväntat sätt.<nl/><nl/>Använd inställningen på egen risk och "
 "rapportera inte problem till KDE eller programmets upphovsman."
 
-#: package/contents/ui/ConfigEntries.qml:174
+#: package/contents/ui/ConfigEntries.qml:177
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
 msgstr "Jag förstår riskerna"
 
-#: package/contents/ui/ConfigEntries.qml:186
+#: package/contents/ui/ConfigEntries.qml:189
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -108,23 +108,23 @@ msgstr ""
 ">Överväg istället att ställa in klippbordet så att dess historik "
 "inaktiveras, eller att det bara kommer ihåg ett objekt åt gången."
 
-#: package/contents/ui/ConfigEntries.qml:214
+#: package/contents/ui/ConfigEntries.qml:217
 #, kde-format
 msgctxt "Name of the system tray entry"
 msgid "Entry"
 msgstr "Post"
 
-#: package/contents/ui/ConfigEntries.qml:221
+#: package/contents/ui/ConfigEntries.qml:224
 #, kde-format
 msgid "Visibility"
 msgstr "Synlighet"
 
-#: package/contents/ui/ConfigEntries.qml:228
+#: package/contents/ui/ConfigEntries.qml:231
 #, kde-format
 msgid "Keyboard Shortcut"
 msgstr "Snabbtangent"
 
-#: package/contents/ui/ConfigEntries.qml:399
+#: package/contents/ui/ConfigEntries.qml:263
 #, kde-format
 msgid "Always show all entries"
 msgstr "Visa alltid alla poster"

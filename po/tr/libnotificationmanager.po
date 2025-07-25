@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-24 00:44+0000\n"
-"PO-Revision-Date: 2025-06-25 09:04+0300\n"
+"POT-Creation-Date: 2025-07-25 00:44+0000\n"
+"PO-Revision-Date: 2025-07-24 20:23+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -103,7 +103,7 @@ msgstr "%1, %2 işinden"
 msgid "Application closed unexpectedly."
 msgstr "Uygulama beklenmedik bir biçimde kapatıldı."
 
-#: notifications.cpp:914
+#: notifications.cpp:912
 #, kde-format
 msgctxt "@title"
 msgid "Unread Notification"
@@ -111,7 +111,7 @@ msgid_plural "Unread Notifications"
 msgstr[0] "Okunmamış Bildirim"
 msgstr[1] "Okunmamış Bildirimler"
 
-#: notifications.cpp:916
+#: notifications.cpp:914
 #, kde-format
 msgctxt "@info"
 msgid "%1 notification was received while Do Not Disturb was active."
@@ -119,12 +119,8 @@ msgid_plural "%1 notifications were received while Do Not Disturb was active."
 msgstr[0] "Rahatsız Etmeyin kipi etkinken %1 bildirim alındı."
 msgstr[1] "Rahatsız Etmeyin kipi etkinken %1 bildirim alındı."
 
-#: notifications.cpp:923
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@action:button Show the notifications popup; translate this in as short a "
-#| "form as possible"
-#| msgid "Show Notifications"
+#: notifications.cpp:921
+#, kde-format
 msgctxt "@action:button Show the notifications popup"
 msgid "Show Notifications"
 msgstr "Bildirimleri Göster"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-24 00:44+0000\n"
+"POT-Creation-Date: 2025-07-25 00:44+0000\n"
 "PO-Revision-Date: 2025-04-18 11:16+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -102,7 +102,7 @@ msgstr "%1 frá %2"
 msgid "Application closed unexpectedly."
 msgstr "Forritið hætti óvænt."
 
-#: notifications.cpp:914
+#: notifications.cpp:912
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "Unread Notifications"
@@ -112,7 +112,7 @@ msgid_plural "Unread Notifications"
 msgstr[0] "Ólesnar tilkynningar"
 msgstr[1] "Ólesnar tilkynningar"
 
-#: notifications.cpp:916
+#: notifications.cpp:914
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid "%1 notifications were received while Do Not Disturb was active."
@@ -122,7 +122,7 @@ msgid_plural "%1 notifications were received while Do Not Disturb was active."
 msgstr[0] "%1 tilkynningar bárust á meðan stillt er á Ekki ónáða."
 msgstr[1] "%1 tilkynningar bárust á meðan stillt er á Ekki ónáða."
 
-#: notifications.cpp:923
+#: notifications.cpp:921
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "Unread Notifications"

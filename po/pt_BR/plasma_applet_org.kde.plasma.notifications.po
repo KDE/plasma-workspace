@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-21 00:44+0000\n"
+"POT-Creation-Date: 2025-07-25 00:44+0000\n"
 "PO-Revision-Date: 2025-05-24 23:37-0300\n"
 "Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -465,12 +465,12 @@ msgstr "Modo não perturbe ativo; clique com o botão do meio para sair"
 msgid "Middle-click to enter do not disturb mode"
 msgstr "Clique com o botão do meio para entrar no modo não perturbe"
 
-#: package/contents/ui/main.qml:235
+#: package/contents/ui/main.qml:236
 #, kde-format
 msgid "Clear All Notifications"
 msgstr "Limpar todas as notificações"
 
-#: package/contents/ui/main.qml:254
+#: package/contents/ui/main.qml:255
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "&Configurar as notificações e ações dos eventos..."

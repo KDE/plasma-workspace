@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-01 00:43+0000\n"
+"POT-Creation-Date: 2025-07-25 00:44+0000\n"
 "PO-Revision-Date: 2025-05-15 17:47+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -28,52 +28,52 @@ msgstr "Загальне"
 msgid "Entries"
 msgstr "Записи"
 
-#: package/contents/ui/ConfigEntries.qml:36
+#: package/contents/ui/ConfigEntries.qml:39
 #, kde-format
 msgid "Shown when relevant"
 msgstr "Показувати, якщо потрібно"
 
-#: package/contents/ui/ConfigEntries.qml:40
+#: package/contents/ui/ConfigEntries.qml:43
 #, kde-format
 msgid "Always shown"
 msgstr "Завжди показувати"
 
-#: package/contents/ui/ConfigEntries.qml:44
+#: package/contents/ui/ConfigEntries.qml:47
 #, kde-format
 msgid "Always hidden"
 msgstr "Завжди ховати"
 
-#: package/contents/ui/ConfigEntries.qml:48
+#: package/contents/ui/ConfigEntries.qml:51
 #, kde-format
 msgid "Disabled"
 msgstr "Вимкнено"
 
-#: package/contents/ui/ConfigEntries.qml:119
+#: package/contents/ui/ConfigEntries.qml:122
 #, kde-format
 msgid "Application Status"
 msgstr "Стан програм"
 
-#: package/contents/ui/ConfigEntries.qml:121
+#: package/contents/ui/ConfigEntries.qml:124
 #, kde-format
 msgid "Communications"
 msgstr "Обмін даними"
 
-#: package/contents/ui/ConfigEntries.qml:123
+#: package/contents/ui/ConfigEntries.qml:126
 #, kde-format
 msgid "System Services"
 msgstr "Служби системи"
 
-#: package/contents/ui/ConfigEntries.qml:125
+#: package/contents/ui/ConfigEntries.qml:128
 #, kde-format
 msgid "Hardware Control"
 msgstr "Керування обладнанням"
 
-#: package/contents/ui/ConfigEntries.qml:128
+#: package/contents/ui/ConfigEntries.qml:131
 #, kde-format
 msgid "Miscellaneous"
 msgstr "Різне"
 
-#: package/contents/ui/ConfigEntries.qml:171
+#: package/contents/ui/ConfigEntries.qml:174
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -89,13 +89,13 @@ msgstr ""
 "наслідків.<nl/><nl/>Використовуючи цей пункт ви берете відповідальність на "
 "себе — не повідомляйте про вади до KDE або автору програми."
 
-#: package/contents/ui/ConfigEntries.qml:174
+#: package/contents/ui/ConfigEntries.qml:177
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
 msgstr "Хочу ризикнути"
 
-#: package/contents/ui/ConfigEntries.qml:186
+#: package/contents/ui/ConfigEntries.qml:189
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -109,23 +109,23 @@ msgstr ""
 ">Замість цього, варто налаштувати вимикання журналу буфера обміну або "
 "наказати програмі запам'ятовувати лише один запис одночасно."
 
-#: package/contents/ui/ConfigEntries.qml:214
+#: package/contents/ui/ConfigEntries.qml:217
 #, kde-format
 msgctxt "Name of the system tray entry"
 msgid "Entry"
 msgstr "Пункт"
 
-#: package/contents/ui/ConfigEntries.qml:221
+#: package/contents/ui/ConfigEntries.qml:224
 #, kde-format
 msgid "Visibility"
 msgstr "Видимість"
 
-#: package/contents/ui/ConfigEntries.qml:228
+#: package/contents/ui/ConfigEntries.qml:231
 #, kde-format
 msgid "Keyboard Shortcut"
 msgstr "Клавіатурне скорочення"
 
-#: package/contents/ui/ConfigEntries.qml:399
+#: package/contents/ui/ConfigEntries.qml:263
 #, kde-format
 msgid "Always show all entries"
 msgstr "Завжди показувати усі записи"

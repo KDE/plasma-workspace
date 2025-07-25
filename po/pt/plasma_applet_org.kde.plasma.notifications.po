@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-21 00:44+0000\n"
+"POT-Creation-Date: 2025-07-25 00:44+0000\n"
 "PO-Revision-Date: 2022-10-16 11:44+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -464,12 +464,12 @@ msgstr "Modo de 'não incomodar' activo; botão do meio para sair"
 msgid "Middle-click to enter do not disturb mode"
 msgstr "Botão do meio para entrar no modo 'não incomodar'"
 
-#: package/contents/ui/main.qml:235
+#: package/contents/ui/main.qml:236
 #, kde-format
 msgid "Clear All Notifications"
 msgstr "Limpar Todas as Notificações"
 
-#: package/contents/ui/main.qml:254
+#: package/contents/ui/main.qml:255
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "&Configurar as Notificações e Acções do Evento…"

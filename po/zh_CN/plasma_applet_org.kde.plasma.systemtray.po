@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-01 00:43+0000\n"
+"POT-Creation-Date: 2025-07-25 00:44+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -28,52 +28,52 @@ msgstr "常规"
 msgid "Entries"
 msgstr "项目"
 
-#: package/contents/ui/ConfigEntries.qml:36
+#: package/contents/ui/ConfigEntries.qml:39
 #, kde-format
 msgid "Shown when relevant"
 msgstr "有作用时显示"
 
-#: package/contents/ui/ConfigEntries.qml:40
+#: package/contents/ui/ConfigEntries.qml:43
 #, kde-format
 msgid "Always shown"
 msgstr "总是显示"
 
-#: package/contents/ui/ConfigEntries.qml:44
+#: package/contents/ui/ConfigEntries.qml:47
 #, kde-format
 msgid "Always hidden"
 msgstr "总是隐藏"
 
-#: package/contents/ui/ConfigEntries.qml:48
+#: package/contents/ui/ConfigEntries.qml:51
 #, kde-format
 msgid "Disabled"
 msgstr "已禁用"
 
-#: package/contents/ui/ConfigEntries.qml:119
+#: package/contents/ui/ConfigEntries.qml:122
 #, kde-format
 msgid "Application Status"
 msgstr "应用程序状态"
 
-#: package/contents/ui/ConfigEntries.qml:121
+#: package/contents/ui/ConfigEntries.qml:124
 #, kde-format
 msgid "Communications"
 msgstr "通信"
 
-#: package/contents/ui/ConfigEntries.qml:123
+#: package/contents/ui/ConfigEntries.qml:126
 #, kde-format
 msgid "System Services"
 msgstr "系统服务"
 
-#: package/contents/ui/ConfigEntries.qml:125
+#: package/contents/ui/ConfigEntries.qml:128
 #, kde-format
 msgid "Hardware Control"
 msgstr "硬件控制"
 
-#: package/contents/ui/ConfigEntries.qml:128
+#: package/contents/ui/ConfigEntries.qml:131
 #, kde-format
 msgid "Miscellaneous"
 msgstr "其他"
 
-#: package/contents/ui/ConfigEntries.qml:171
+#: package/contents/ui/ConfigEntries.qml:174
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -88,13 +88,13 @@ msgstr ""
 "会导致它们工作异常。<nl/><nl/>使用此设置需自行承担风险，如果您遇到问题，请不"
 "要向 KDE 或应用程序作者报告。"
 
-#: package/contents/ui/ConfigEntries.qml:174
+#: package/contents/ui/ConfigEntries.qml:177
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
 msgstr "我明白上述风险"
 
-#: package/contents/ui/ConfigEntries.qml:186
+#: package/contents/ui/ConfigEntries.qml:189
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -106,23 +106,23 @@ msgstr ""
 "不建议禁用剪贴板，因为这会导致应用程序关闭时丢失已复制的数据。<nl/><nl/>您可"
 "以考虑禁用剪贴板历史记录，或设置为仅记忆一条内容。"
 
-#: package/contents/ui/ConfigEntries.qml:214
+#: package/contents/ui/ConfigEntries.qml:217
 #, kde-format
 msgctxt "Name of the system tray entry"
 msgid "Entry"
 msgstr "项目"
 
-#: package/contents/ui/ConfigEntries.qml:221
+#: package/contents/ui/ConfigEntries.qml:224
 #, kde-format
 msgid "Visibility"
 msgstr "可见性"
 
-#: package/contents/ui/ConfigEntries.qml:228
+#: package/contents/ui/ConfigEntries.qml:231
 #, kde-format
 msgid "Keyboard Shortcut"
 msgstr "键盘快捷键"
 
-#: package/contents/ui/ConfigEntries.qml:399
+#: package/contents/ui/ConfigEntries.qml:263
 #, kde-format
 msgid "Always show all entries"
 msgstr "总是显示所有项目"

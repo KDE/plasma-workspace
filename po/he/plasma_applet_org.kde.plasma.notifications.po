@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-21 00:44+0000\n"
+"POT-Creation-Date: 2025-07-25 00:44+0000\n"
 "PO-Revision-Date: 2025-04-24 20:49+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -493,12 +493,12 @@ msgstr "מצב ‚לא להפריע’ פעיל, לחיצה אמצעית כדי 
 msgid "Middle-click to enter do not disturb mode"
 msgstr "לחיצה אמצעית כדי להיכנס למצב ‚לא להפריע’"
 
-#: package/contents/ui/main.qml:235
+#: package/contents/ui/main.qml:236
 #, kde-format
 msgid "Clear All Notifications"
 msgstr "פינוי כל ההתראות"
 
-#: package/contents/ui/main.qml:254
+#: package/contents/ui/main.qml:255
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "ה&גדרת התראות ופעולות אירועים…"

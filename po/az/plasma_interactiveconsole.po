@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-20 00:39+0000\n"
+"POT-Creation-Date: 2025-07-25 00:44+0000\n"
 "PO-Revision-Date: 2024-06-11 17:24+0400\n"
 "Last-Translator: Kheyyam Godjayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -17,74 +17,74 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 24.07.70\n"
 
-#: interactiveconsole.cpp:63
+#: interactiveconsole.cpp:62
 #, kde-format
 msgid "&Execute"
 msgstr "&İcra etmək"
 
-#: interactiveconsole.cpp:64
+#: interactiveconsole.cpp:63
 #, kde-format
 msgctxt "Toolbar Button to switch to Plasma Scripting Mode"
 msgid "Plasma"
 msgstr "Plasma"
 
-#: interactiveconsole.cpp:65
+#: interactiveconsole.cpp:64
 #, kde-format
 msgctxt "Toolbar Button to switch to KWin Scripting Mode"
 msgid "KWin"
 msgstr "KWin"
 
-#: interactiveconsole.cpp:66
+#: interactiveconsole.cpp:65
 #, kde-format
 msgid "Templates"
 msgstr "Şablonlar"
 
-#: interactiveconsole.cpp:75
+#: interactiveconsole.cpp:74
 #, kde-format
 msgid "Desktop Shell Scripting Console"
 msgstr "İş masası üzlüyü skript konsolu"
 
-#: interactiveconsole.cpp:82
+#: interactiveconsole.cpp:81
 #, kde-format
 msgid "Editor"
 msgstr "redaktor"
 
-#: interactiveconsole.cpp:93
+#: interactiveconsole.cpp:92
 #, kde-format
 msgid "Load"
 msgstr "Yükləmək"
 
-#: interactiveconsole.cpp:99
+#: interactiveconsole.cpp:98
 #, kde-format
 msgid "Use"
 msgstr "istifadə etmək"
 
-#: interactiveconsole.cpp:159
+#: interactiveconsole.cpp:158
 #, kde-format
 msgid "Output"
 msgstr "Çıxış"
 
-#: interactiveconsole.cpp:266
+#: interactiveconsole.cpp:265
 #, kde-format
 msgid "Unable to load script file <b>%1</b>"
 msgstr "<b>%1</b> skript faylını yükləmək mümkün olmadı"
 
-#: interactiveconsole.cpp:316
+#: interactiveconsole.cpp:314
 #, kde-format
 msgid "Open Script File"
 msgstr "Skript faylını açamaq"
 
-#: interactiveconsole.cpp:431
+#: interactiveconsole.cpp:429
 #, kde-format
 msgid "Save Script File"
 msgstr "Skript faylını saxıamaq"
 
-#: interactiveconsole.cpp:520
+#: interactiveconsole.cpp:518
 #, kde-format
 msgid "Executing script at %1"
 msgstr "Skripti burada icra etmək: %1"
 
-#: interactiveconsole.cpp:572
+#: interactiveconsole.cpp:570
 #, no-c-format, kde-format
 msgid "Runtime: %1ms"
 msgstr "İcra olunma vaxtı: %1ms"

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-20 00:39+0000\n"
+"POT-Creation-Date: 2025-07-25 00:44+0000\n"
 "PO-Revision-Date: 2025-02-22 07:46+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -18,74 +18,74 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: interactiveconsole.cpp:63
+#: interactiveconsole.cpp:62
 #, kde-format
 msgid "&Execute"
 msgstr "&Kjør"
 
-#: interactiveconsole.cpp:64
+#: interactiveconsole.cpp:63
 #, kde-format
 msgctxt "Toolbar Button to switch to Plasma Scripting Mode"
 msgid "Plasma"
 msgstr "Plasma"
 
-#: interactiveconsole.cpp:65
+#: interactiveconsole.cpp:64
 #, kde-format
 msgctxt "Toolbar Button to switch to KWin Scripting Mode"
 msgid "KWin"
 msgstr "KWin"
 
-#: interactiveconsole.cpp:66
+#: interactiveconsole.cpp:65
 #, kde-format
 msgid "Templates"
 msgstr "Maler"
 
-#: interactiveconsole.cpp:75
+#: interactiveconsole.cpp:74
 #, kde-format
 msgid "Desktop Shell Scripting Console"
 msgstr "Konsoll for skrivebordsskall-skript"
 
-#: interactiveconsole.cpp:82
+#: interactiveconsole.cpp:81
 #, kde-format
 msgid "Editor"
 msgstr "Skriveprogram"
 
-#: interactiveconsole.cpp:93
+#: interactiveconsole.cpp:92
 #, kde-format
 msgid "Load"
 msgstr "Åpne"
 
-#: interactiveconsole.cpp:99
+#: interactiveconsole.cpp:98
 #, kde-format
 msgid "Use"
 msgstr "Bruk"
 
-#: interactiveconsole.cpp:159
+#: interactiveconsole.cpp:158
 #, kde-format
 msgid "Output"
 msgstr "Utdata"
 
-#: interactiveconsole.cpp:266
+#: interactiveconsole.cpp:265
 #, kde-format
 msgid "Unable to load script file <b>%1</b>"
 msgstr "Klarte ikke åpne skriptfila <b>%1</b>"
 
-#: interactiveconsole.cpp:316
+#: interactiveconsole.cpp:314
 #, kde-format
 msgid "Open Script File"
 msgstr "Åpne skriptfil"
 
-#: interactiveconsole.cpp:431
+#: interactiveconsole.cpp:429
 #, kde-format
 msgid "Save Script File"
 msgstr "Lagre skriptfil"
 
-#: interactiveconsole.cpp:520
+#: interactiveconsole.cpp:518
 #, kde-format
 msgid "Executing script at %1"
 msgstr "Kjører skript %1"
 
-#: interactiveconsole.cpp:572
+#: interactiveconsole.cpp:570
 #, no-c-format, kde-format
 msgid "Runtime: %1ms"
 msgstr "Kjøretid: %1 ms"

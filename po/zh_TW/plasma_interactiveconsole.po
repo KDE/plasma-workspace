@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-20 00:39+0000\n"
+"POT-Creation-Date: 2025-07-25 00:44+0000\n"
 "PO-Revision-Date: 2024-03-20 18:15+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -17,74 +17,74 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 24.04.70\n"
 
-#: interactiveconsole.cpp:63
+#: interactiveconsole.cpp:62
 #, kde-format
 msgid "&Execute"
 msgstr "執行(&E)"
 
-#: interactiveconsole.cpp:64
+#: interactiveconsole.cpp:63
 #, kde-format
 msgctxt "Toolbar Button to switch to Plasma Scripting Mode"
 msgid "Plasma"
 msgstr "Plasma"
 
-#: interactiveconsole.cpp:65
+#: interactiveconsole.cpp:64
 #, kde-format
 msgctxt "Toolbar Button to switch to KWin Scripting Mode"
 msgid "KWin"
 msgstr "KWin"
 
-#: interactiveconsole.cpp:66
+#: interactiveconsole.cpp:65
 #, kde-format
 msgid "Templates"
 msgstr "樣本"
 
-#: interactiveconsole.cpp:75
+#: interactiveconsole.cpp:74
 #, kde-format
 msgid "Desktop Shell Scripting Console"
 msgstr "桌面殼層文稿主控台"
 
-#: interactiveconsole.cpp:82
+#: interactiveconsole.cpp:81
 #, kde-format
 msgid "Editor"
 msgstr "編輯器"
 
-#: interactiveconsole.cpp:93
+#: interactiveconsole.cpp:92
 #, kde-format
 msgid "Load"
 msgstr "載入"
 
-#: interactiveconsole.cpp:99
+#: interactiveconsole.cpp:98
 #, kde-format
 msgid "Use"
 msgstr "使用"
 
-#: interactiveconsole.cpp:159
+#: interactiveconsole.cpp:158
 #, kde-format
 msgid "Output"
 msgstr "輸出"
 
-#: interactiveconsole.cpp:266
+#: interactiveconsole.cpp:265
 #, kde-format
 msgid "Unable to load script file <b>%1</b>"
 msgstr "無法載入文稿檔案 <b>%1</b>"
 
-#: interactiveconsole.cpp:316
+#: interactiveconsole.cpp:314
 #, kde-format
 msgid "Open Script File"
 msgstr "開啟文稿檔案"
 
-#: interactiveconsole.cpp:431
+#: interactiveconsole.cpp:429
 #, kde-format
 msgid "Save Script File"
 msgstr "儲存文稿檔案"
 
-#: interactiveconsole.cpp:520
+#: interactiveconsole.cpp:518
 #, kde-format
 msgid "Executing script at %1"
 msgstr "在 %1 執行文稿中"
 
-#: interactiveconsole.cpp:572
+#: interactiveconsole.cpp:570
 #, no-c-format, kde-format
 msgid "Runtime: %1ms"
 msgstr "執行時間：%1ms"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-21 00:44+0000\n"
+"POT-Creation-Date: 2025-07-25 00:44+0000\n"
 "PO-Revision-Date: 2025-04-27 12:52+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -461,12 +461,12 @@ msgstr "தொந்தரவு செய்யா பயன்முறை ச
 msgid "Middle-click to enter do not disturb mode"
 msgstr "தொந்தரவு செய்யா பயன்முறையில் நுழைய நடு-கிளிக் செய்யவும்"
 
-#: package/contents/ui/main.qml:235
+#: package/contents/ui/main.qml:236
 #, kde-format
 msgid "Clear All Notifications"
 msgstr "அனைத்து அறிவிப்புகளையும் நீக்கு"
 
-#: package/contents/ui/main.qml:254
+#: package/contents/ui/main.qml:255
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "நிகழ்வுகளுக்கான அறிவிப்புகள் மற்றும் செயல்களை &அமை…"

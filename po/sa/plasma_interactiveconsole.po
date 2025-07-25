@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-20 00:39+0000\n"
+"POT-Creation-Date: 2025-07-25 00:44+0000\n"
 "PO-Revision-Date: 2024-12-13 19:09+0530\n"
 "Last-Translator: Kali <EMAIL@ADDRESS>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -17,74 +17,74 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
 
-#: interactiveconsole.cpp:63
+#: interactiveconsole.cpp:62
 #, kde-format
 msgid "&Execute"
 msgstr "&प्रभज्"
 
-#: interactiveconsole.cpp:64
+#: interactiveconsole.cpp:63
 #, kde-format
 msgctxt "Toolbar Button to switch to Plasma Scripting Mode"
 msgid "Plasma"
 msgstr "प्लाज्मा"
 
-#: interactiveconsole.cpp:65
+#: interactiveconsole.cpp:64
 #, kde-format
 msgctxt "Toolbar Button to switch to KWin Scripting Mode"
 msgid "KWin"
 msgstr "केविन्"
 
-#: interactiveconsole.cpp:66
+#: interactiveconsole.cpp:65
 #, kde-format
 msgid "Templates"
 msgstr "टेम्पलेट्स"
 
-#: interactiveconsole.cpp:75
+#: interactiveconsole.cpp:74
 #, kde-format
 msgid "Desktop Shell Scripting Console"
 msgstr "डेस्कटॉप शेल् स्क्रिप्टिङ्ग् कन्सोल्"
 
-#: interactiveconsole.cpp:82
+#: interactiveconsole.cpp:81
 #, kde-format
 msgid "Editor"
 msgstr "सम्पादक"
 
-#: interactiveconsole.cpp:93
+#: interactiveconsole.cpp:92
 #, kde-format
 msgid "Load"
 msgstr "भार"
 
-#: interactiveconsole.cpp:99
+#: interactiveconsole.cpp:98
 #, kde-format
 msgid "Use"
 msgstr "उपयुञ्जताम्‌"
 
-#: interactiveconsole.cpp:159
+#: interactiveconsole.cpp:158
 #, kde-format
 msgid "Output"
 msgstr "उत्पादनम्"
 
-#: interactiveconsole.cpp:266
+#: interactiveconsole.cpp:265
 #, kde-format
 msgid "Unable to load script file <b>%1</b>"
 msgstr "स्क्रिप्ट् सञ्चिका <b>%1</b> लोड् कर्तुं असमर्थः"
 
-#: interactiveconsole.cpp:316
+#: interactiveconsole.cpp:314
 #, kde-format
 msgid "Open Script File"
 msgstr "स्क्रिप्ट् सञ्चिका उद्घाटयन्तु"
 
-#: interactiveconsole.cpp:431
+#: interactiveconsole.cpp:429
 #, kde-format
 msgid "Save Script File"
 msgstr "स्क्रिप्ट् सञ्चिकां रक्षन्तु"
 
-#: interactiveconsole.cpp:520
+#: interactiveconsole.cpp:518
 #, kde-format
 msgid "Executing script at %1"
 msgstr "%1 इत्यत्र स्क्रिप्ट् निष्पादयन्"
 
-#: interactiveconsole.cpp:572
+#: interactiveconsole.cpp:570
 #, no-c-format, kde-format
 msgid "Runtime: %1ms"
 msgstr "रनटाइम्: %1ms"
