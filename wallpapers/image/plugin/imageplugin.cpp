@@ -15,6 +15,7 @@
 #include "provider/packageimageprovider.h"
 #include "provider/wallpaperpreviewimageprovider.h"
 #include "sortingmode.h"
+#include "utils/dynamicmode.h"
 #include "utils/maximizedwindowmonitor.h"
 #include "utils/mediaproxy.h"
 #include "utils/wallpaperurl.h"
@@ -42,6 +43,7 @@ void ImagePlugin::registerTypes(const char *uri)
     qmlRegisterUncreatableMetaObject(Provider::staticMetaObject, uri, 2, 0, "Provider", reason);
     qmlRegisterUncreatableMetaObject(BackgroundType::staticMetaObject, uri, 2, 0, "BackgroundType", reason);
     qmlRegisterUncreatableMetaObject(SortingMode::staticMetaObject, uri, 2, 0, "SortingMode", reason);
+    qmlRegisterUncreatableMetaObject(DynamicMode::staticMetaObject, uri, 2, 0, "DynamicMode", reason);
 
     qmlRegisterSingletonType<WallpaperUrl>(uri, 2, 0, "WallpaperUrl", [](QQmlEngine *, QJSEngine *) -> QObject * {
         return new WallpaperUrl;

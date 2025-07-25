@@ -77,8 +77,15 @@ ColumnLayout {
     function selectWallpaper(wallpaper: string, selectors: list<string>): void {
         let selector = "";
         if (selectors.includes("day-night")) {
-            if (cfg_DynamicMode == 1) {
+            if (cfg_DynamicMode == PlasmaWallpaper.DynamicMode.DayNight) {
                 selector = "day-night";
+            }
+        }
+        if (selectors.includes("dark-light")) {
+            if (cfg_DynamicMode == PlasmaWallpaper.DynamicMode.AlwaysLight) {
+                selector = "light"
+            } else if (cfg_DynamicMode == PlasmaWallpaper.DynamicMode.AlwaysDark) {
+                selector = "dark"
             }
         }
 
@@ -86,7 +93,7 @@ ColumnLayout {
         wallpaperConfiguration.PreviewImage = cfg_Image;
     }
 
-    function selectDynamicMode(mode: int): void {
+    function selectDynamicMode(mode: PlasmaWallpaper.DynamicMode): void {
         cfg_DynamicMode = mode;
 
         selectWallpaper(thumbnailsLoader.item.view.currentItem.key,
@@ -190,27 +197,37 @@ ColumnLayout {
 
         QtControls2.ButtonGroup { id: dayNightModeGroup }
 
-        QtControls2.RadioButton {
-            Kirigami.FormData.label: i18ndc("plasma_wallpaper_org.kde.image", "@label part of a sentence: 'Switch dynamic wallpapers [based on]'", "Switch dynamic wallpapers:")
-            text: i18ndc("plasma_wallpaper_org.kde.image", "@option:radio part of a sentence: 'Switch dynamic wallpapers'", "Based on whether the color scheme is dark or light")
-            QtControls2.ButtonGroup.group: dayNightModeGroup
-            checked: cfg_DynamicMode === 0
-            onToggled: selectDynamicMode(0)
-        }
 
         RowLayout {
             spacing: Kirigami.Units.smallSpacing
+            Kirigami.FormData.label: i18ndc("plasma_wallpaper_org.kde.image", "@label:listbox part of a sentence: 'Switch dynamic wallpapers [based on]'", "Switch dynamic wallpapers:")
 
-            QtControls2.RadioButton {
-                id: dayNightTimeOfDayButton
-                text: i18ndc("plasma_wallpaper_org.kde.image", "@option:radio part of a sentence: 'Switch dynamic wallpapers'", "Based on the day-night cycle:")
-                QtControls2.ButtonGroup.group: dayNightModeGroup
-                checked: cfg_DynamicMode === 1
-                onToggled: selectDynamicMode(1)
+            QtControls2.ComboBox {
+                valueRole: "dynamicMode"
+                textRole: "text"
+                model: [
+                    {
+                        dynamicMode: PlasmaWallpaper.DynamicMode.Automatic,
+                        text: i18ndc("plasma_wallpaper_org.kde.image", "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'", "Based on whether the color scheme is dark or light")},
+                    {
+                        dynamicMode: PlasmaWallpaper.DynamicMode.DayNight, text: i18ndc("plasma_wallpaper_org.kde.image", "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'", "Based on the day-night cycle")
+                    },
+                    {
+                        dynamicMode: PlasmaWallpaper.DynamicMode.AlwaysLight,
+                        text: i18ndc("plasma_wallpaper_org.kde.image", "@item:inlistbox", "Always use light variant")
+                    },
+                    {
+                        dynamicMode: PlasmaWallpaper.DynamicMode.AlwaysDark,
+                        text: i18ndc("plasma_wallpaper_org.kde.image", "@item:inlistbox", "Always use dark variant")
+                    }
+                ]
+                onActivated: root.selectDynamicMode(currentValue)
+                Component.onCompleted: currentIndex = indexOfValue(root.cfg_DynamicMode)
             }
 
             QtControls2.Button {
-                enabled: dayNightTimeOfDayButton.checked && KConfig.KAuthorized.authorizeControlModule("kcm_nighttime")
+                visible: root.cfg_DynamicMode == 1 
+                enabled: KConfig.KAuthorized.authorizeControlModule("kcm_nighttime")
                 text: i18nc("@action:button Configure day-night cycle times", "Configure…")
                 icon.name: "configure"
                 onClicked: KCM.KCMLauncher.open("kcm_nighttime")

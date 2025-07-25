@@ -353,10 +353,13 @@ QUrl MediaProxy::findPreferredImageInPackage(KPackage::Package &package)
         return url;
     }
 
+    const bool useDarkColorScheme =
+        m_source.fragment().contains(QLatin1StringView("dark")) || (m_isDarkColorScheme && !m_source.fragment().contains(QLatin1StringView("light")));
+
     PackageFinder::findPreferredImageInPackage(package, m_targetSize);
     url = package.fileUrl("preferred");
 
-    if (m_isDarkColorScheme) {
+    if (useDarkColorScheme) {
         const QUrl darkUrl = package.fileUrl("preferredDark");
 
         if (!darkUrl.isEmpty()) {
