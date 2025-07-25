@@ -46,6 +46,7 @@ public:
     QString toolTipSubTitle() const;
     QString toolTipTitle() const;
     QString windowId() const;
+    QString flatpakInstance() const;
 
 Q_SIGNALS:
     void contextMenuReady(QMenu *menu);
@@ -94,4 +95,5 @@ private:
     QString m_toolTipSubTitle;
     QString m_toolTipTitle;
     QString m_windowId;
+    QString m_flatpakInstance;
 };
