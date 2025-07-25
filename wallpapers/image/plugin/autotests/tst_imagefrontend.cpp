@@ -14,10 +14,15 @@
 #include <QStandardPaths>
 #include <QTest>
 
+#include <KConfig>
+#include <KConfigGroup>
 #include <KPackage/PackageLoader>
+#include <Plasma/Theme>
 
 #include "../utils/mediaproxy.h"
 #include "commontestdata.h"
+
+using namespace Qt::StringLiterals;
 
 namespace
 {
@@ -313,6 +318,15 @@ void ImageFrontendTest::testReloadWallpaperOnScreenSizeChanged()
 
 void ImageFrontendTest::testCustomAccentColorFromWallpaperMetaData()
 {
+    auto changeTheme = [](Qt::ColorScheme scheme) {
+        Plasma::Theme theme;
+        QSignalSpy themeChangedSpy(&theme, &Plasma::Theme::themeChanged);
+        KConfig("plasmarc"_L1)
+            .group("Theme"_L1)
+            .writeEntry("name"_L1, scheme == Qt::ColorScheme::Light ? u"breeze-light"_s : u"breeze-dark"_s, KConfig::Notify);
+        QVERIFY(themeChangedSpy.wait());
+    };
+
     // Case 1: value is a dict
     auto package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Wallpaper/Images"));
     package.setPath(QFINDTESTDATA(ImageBackendTestData::customAccentColorPackage1));
@@ -320,14 +334,12 @@ void ImageFrontendTest::testCustomAccentColorFromWallpaperMetaData()
 
     QPalette palette;
     // Light variant
-    palette.setColor(QPalette::Normal, QPalette::Window, Qt::white);
-    qGuiApp->setPalette(palette);
+    changeTheme(Qt::ColorScheme::Light);
     QColor customColor = MediaProxy::getAccentColorFromMetaData(package);
     QCOMPARE(customColor, Qt::red);
 
     // Dark variant
-    palette.setColor(QPalette::Normal, QPalette::Window, Qt::black);
-    qGuiApp->setPalette(palette);
+    changeTheme(Qt::ColorScheme::Dark);
     customColor = MediaProxy::getAccentColorFromMetaData(package);
     QCOMPARE(customColor, Qt::cyan);
 
@@ -338,8 +350,7 @@ void ImageFrontendTest::testCustomAccentColorFromWallpaperMetaData()
     QCOMPARE(customColor, QColor("green")); // Qt::green is not QColor("green")
 
     // Real-life test
-    palette.setColor(QPalette::Normal, QPalette::Window, Qt::white);
-    qGuiApp->setPalette(palette);
+    changeTheme(Qt::ColorScheme::Light);
     QVariantMap initialProperties;
     initialProperties.insert(QStringLiteral("fillMode"), 1 /* PreserveAspectFit */);
     initialProperties.insert(QStringLiteral("configColor"), QStringLiteral("black"));
@@ -362,8 +373,7 @@ void ImageFrontendTest::testCustomAccentColorFromWallpaperMetaData()
     QVERIFY(repaintSpy.wait());
     QCOMPARE(m_wallpaperInterface->m_accentColor, Qt::red);
 
-    palette.setColor(QPalette::Normal, QPalette::Window, Qt::black);
-    qGuiApp->setPalette(palette);
+    changeTheme(Qt::ColorScheme::Dark);
     QVERIFY(repaintSpy.wait());
     QCOMPARE(m_wallpaperInterface->m_accentColor, Qt::cyan);
 

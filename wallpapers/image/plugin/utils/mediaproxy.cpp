@@ -27,6 +27,8 @@
 
 #include "debug.h"
 
+Q_GLOBAL_STATIC(Plasma::Theme, s_theme);
+
 namespace
 {
 static const QString s_wallpaperPackageName = QStringLiteral("Wallpaper/Images");
@@ -35,7 +37,7 @@ static const QString s_wallpaperPackageName = QStringLiteral("Wallpaper/Images")
 MediaProxy::MediaProxy(QObject *parent)
     : QObject(parent)
     , m_targetSize(qGuiApp->primaryScreen()->size() * qGuiApp->primaryScreen()->devicePixelRatio())
-    , m_isDarkColorScheme(isDarkColorScheme())
+    , m_isDarkColorScheme(isDarkColorScheme(s_theme->palette()))
 {
     connect(&m_dirWatch, &KDirWatch::created, this, &MediaProxy::slotSourceFileUpdated);
 }
@@ -52,7 +54,7 @@ void MediaProxy::componentComplete()
     m_ready = true;
 
     // Follow system color scheme
-    connect(qGuiApp, &QGuiApplication::paletteChanged, this, &MediaProxy::slotSystemPaletteChanged);
+    connect(s_theme, &Plasma::Theme::themeChanged, this, &MediaProxy::slotPlasmaThemeChanged);
 
     processSource();
 }
@@ -179,14 +181,14 @@ void MediaProxy::useSingleImageDefaults()
     processSource(&package);
 }
 
-void MediaProxy::slotSystemPaletteChanged(const QPalette &palette)
+void MediaProxy::slotPlasmaThemeChanged()
 {
     if (m_providerType != Provider::Type::Package) {
         // Currently only KPackage supports adaptive wallpapers
         return;
     }
 
-    const bool dark = isDarkColorScheme(palette);
+    const bool dark = isDarkColorScheme(s_theme->palette());
 
     if (dark == m_isDarkColorScheme) {
         return;
@@ -241,7 +243,7 @@ QColor MediaProxy::getAccentColorFromMetaData(const KPackage::Package &package)
 
     case QJsonValue::Object: {
         const QJsonObject accentColorDict = accentColorValue.toObject();
-        if (isDarkColorScheme()) {
+        if (isDarkColorScheme(s_theme->palette())) {
             const auto darkIt = accentColorDict.constFind(QLatin1String("Dark"));
             if (darkIt != accentColorDict.constEnd()) {
                 colorString = darkIt.value().toString();
@@ -354,7 +356,7 @@ QUrl MediaProxy::findPreferredImageInPackage(KPackage::Package &package)
     PackageFinder::findPreferredImageInPackage(package, m_targetSize);
     url = package.fileUrl("preferred");
 
-    if (isDarkColorScheme()) {
+    if (m_isDarkColorScheme) {
         const QUrl darkUrl = package.fileUrl("preferredDark");
 
         if (!darkUrl.isEmpty()) {
@@ -411,7 +413,7 @@ void MediaProxy::updateModelImage(KPackage::Package *package, bool doesBlockSign
         // To make modelImageChaged work
         urlQuery.addQueryItem(QStringLiteral("targetWidth"), QString::number(m_targetSize.width()));
         urlQuery.addQueryItem(QStringLiteral("targetHeight"), QString::number(m_targetSize.height()));
-        urlQuery.addQueryItem(QStringLiteral("darkMode"), QString::number(isDarkColorScheme() ? 1 : 0));
+        urlQuery.addQueryItem(QStringLiteral("darkMode"), QString::number(m_isDarkColorScheme ? 1 : 0));
 
         composedUrl.setQuery(urlQuery);
         newRealSource = composedUrl;

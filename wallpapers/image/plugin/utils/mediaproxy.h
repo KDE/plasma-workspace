@@ -125,7 +125,7 @@ private Q_SLOTS:
      *
      * @since 5.26
      */
-    void slotSystemPaletteChanged(const QPalette &palette);
+    void slotPlasmaThemeChanged();
 
     /**
      * Reloads the current wallpaper if the current source file has changed on disk.
