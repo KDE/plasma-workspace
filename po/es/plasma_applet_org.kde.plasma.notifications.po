@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-21 02:41+0000\n"
+"POT-Creation-Date: 2025-07-25 02:40+0000\n"
 "PO-Revision-Date: 2025-06-04 19:52+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -468,12 +468,12 @@ msgstr ""
 msgid "Middle-click to enter do not disturb mode"
 msgstr "Pulse con el botón central para entrar en el modo «no molestar»"
 
-#: package/contents/ui/main.qml:235
+#: package/contents/ui/main.qml:236
 #, kde-format
 msgid "Clear All Notifications"
 msgstr "Borrar todas las notificaciones"
 
-#: package/contents/ui/main.qml:254
+#: package/contents/ui/main.qml:255
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "&Configurar notificaciones de eventos y acciones…"

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-21 02:41+0000\n"
+"POT-Creation-Date: 2025-07-25 02:40+0000\n"
 "PO-Revision-Date: 2025-04-28 00:37+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -501,12 +501,12 @@ msgid "Middle-click to enter do not disturb mode"
 msgstr ""
 "Spustelėkite viduriniuoju pelės mygtuku norėdami įjungti netrukdymo veikseną"
 
-#: package/contents/ui/main.qml:235
+#: package/contents/ui/main.qml:236
 #, kde-format
 msgid "Clear All Notifications"
 msgstr "Išvalyti visus pranešimus"
 
-#: package/contents/ui/main.qml:254
+#: package/contents/ui/main.qml:255
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "&Konfigūruoti pranešimus apie įvykius ir veiksmus…"
