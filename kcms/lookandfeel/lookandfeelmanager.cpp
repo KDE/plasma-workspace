@@ -533,6 +533,7 @@ void LookAndFeelManager::save(const KPackage::Package &package, Contents applyMa
             group = KConfigGroup(&group, u"General"_s);
             QString colorScheme = group.readEntry("ColorScheme", QString());
 
+            // TODO: Port to KLookAndFeel::colorSchemeFilePath().
             if (!colorsFile.isEmpty()) {
                 if (!colorScheme.isEmpty()) {
                     setColors(colorScheme, colorsFile);
