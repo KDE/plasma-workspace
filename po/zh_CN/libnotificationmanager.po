@@ -114,4 +114,4 @@ msgstr[0] "勿扰模式开启期间收到了 %1 条通知。"
 #, kde-format
 msgctxt "@action:button Show the notifications popup"
 msgid "Show Notifications"
-msgstr ""
+msgstr "显示通知"
