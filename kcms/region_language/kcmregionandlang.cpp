@@ -24,6 +24,7 @@
 #include <KSharedConfig>
 
 #include "binarydialectmodel.h"
+#include "glibclocaleconstructor.h"
 #include "languagelistmodel.h"
 #include "localegenerator.h"
 #include "localegeneratorbase.h"
@@ -70,6 +71,8 @@ KCMRegionAndLang::KCMRegionAndLang(QObject *parent, const KPluginMetaData &data)
     connect(m_generator, &LocaleGeneratorBase::success, this, &KCMRegionAndLang::saveToConfigFile);
     connect(m_generator, &LocaleGeneratorBase::userHasToGenerateManually, this, &KCMRegionAndLang::saveToConfigFile);
     connect(m_generator, &LocaleGeneratorBase::needsFont, this, &KCMRegionAndLang::saveToConfigFile);
+    connect(GlibcLocaleConstructor::instance(), &GlibcLocaleConstructor::encountedError, this, &KCMRegionAndLang::encountedError);
+    connect(GlibcLocaleConstructor::instance(), &GlibcLocaleConstructor::enabledChanged, this, &KCMRegionAndLang::enabledChanged);
 
     // if we don't support auto locale generation for current system (BSD, musl etc.), userHasToGenerateManually regarded as success
     if (strcmp(m_generator->metaObject()->className(), "LocaleGeneratorBase") != 0) {
@@ -92,47 +95,12 @@ KCMRegionAndLang::KCMRegionAndLang(QObject *parent, const KPluginMetaData &data)
                                      "SettingType",
                                      QStringLiteral("Error: SettingType is an enum"));
 
-    // fedora pre generate locales, fetch available locales from localectl. /usr/share/i18n/locales is empty in fedora
-    QDir glibcLocaleDir(localeFileDirPath());
-    if (glibcLocaleDir.isEmpty()) {
-        auto localectlPath = QStandardPaths::findExecutable(QStringLiteral("localectl"));
-        if (!localectlPath.isEmpty()) {
-            m_localectl = new QProcess(this);
-            m_localectl->setProgram(localectlPath);
-            m_localectl->setArguments({QStringLiteral("list-locales"), QStringLiteral("--no-pager")});
-            connect(m_localectl, &QProcess::finished, this, [this](int exitCode, QProcess::ExitStatus status) {
-                m_enabled = true; // set to true even if failed. otherwise our failed notification is also grey out
-                if (exitCode != 0 || status != QProcess::NormalExit) {
-                    Q_EMIT encountedError(failedFindLocalesMessage());
-                }
-                Q_EMIT enabledChanged();
-            });
-            m_localectl->start();
-        } else {
-            m_enabled = true;
-        }
-    } else {
-        m_enabled = true;
-    }
-
     m_loadedBinaryDialect = m_optionsModel->binaryDialect();
 
     connect(m_optionsModel, &OptionsModel::binaryDialectChanged, this, [this]() {
         setNeedsSave(m_settings->isSaveNeeded() || m_loadedBinaryDialect != m_optionsModel->binaryDialect());
         setRepresentsDefaults(m_settings->isDefaults() && m_optionsModel->binaryDialect() == KFormat::BinaryUnitDialect::IECBinaryDialect);
     });
-}
-
-QString KCMRegionAndLang::failedFindLocalesMessage()
-{
-    return xi18nc("@info this will be shown as an error message",
-                  "Could not find the system's available locales using the <command>localectl</command> tool. Please file a bug report about this at "
-                  "<link>https://bugs.kde.org</link>");
-}
-
-QString KCMRegionAndLang::localeFileDirPath()
-{
-    return QStringLiteral("/usr/share/i18n/locales");
 }
 
 void KCMRegionAndLang::save()
@@ -171,7 +139,7 @@ void KCMRegionAndLang::save()
         if (!settings()->language().isEmpty()) {
             QStringList languages = settings()->language().split(QLatin1Char(':'));
             for (const QString &lang : languages) {
-                auto glibcLocale = toGlibcLocale(lang);
+                auto glibcLocale = GlibcLocaleConstructor::instance()->toGlibcLocale(lang);
                 if (glibcLocale.has_value()) {
                     locales.append(glibcLocale.value());
                 }
@@ -313,136 +281,8 @@ void KCMRegionAndLang::reboot()
 
 bool KCMRegionAndLang::enabled() const
 {
-    return m_enabled;
+    return GlibcLocaleConstructor::instance()->enabled();
 }
-
-#ifdef GLIBC_LOCALE
-std::optional<QString> KCMRegionAndLang::toGlibcLocale(const QString &lang)
-{
-    static std::unordered_map<QString, QString> map = constructGlibcLocaleMap();
-
-    if (map.contains(lang)) {
-        return map[lang];
-    }
-    return std::nullopt;
-}
-#endif
-
-QString KCMRegionAndLang::toUTF8Locale(const QString &locale)
-{
-    if (locale.contains(QLatin1String("UTF-8"))) {
-        return locale;
-    }
-
-    if (locale.contains(QLatin1Char('@'))) {
-        // uz_UZ@cyrillic to uz_UZ.UTF-8@cyrillic
-        auto localeDup = locale;
-        localeDup.replace(QLatin1Char('@'), QLatin1String(".UTF-8@"));
-        return localeDup;
-    }
-
-    return locale + QLatin1String(".UTF-8");
-}
-
-#ifdef GLIBC_LOCALE
-std::unordered_map<QString, QString> KCMRegionAndLang::constructGlibcLocaleMap()
-{
-    std::unordered_map<QString, QString> localeMap = {{QStringLiteral("C"), QStringLiteral("C")}};
-
-    QDir glibcLocaleDir(localeFileDirPath());
-    auto availableLocales = glibcLocaleDir.entryList(QDir::Files);
-    // not glibc system or corrupted system
-    if (availableLocales.isEmpty()) {
-        if (m_localectl) {
-            availableLocales = QString::fromLocal8Bit(m_localectl->readAllStandardOutput()).split(u'\n');
-        }
-        if (availableLocales.isEmpty()) {
-            Q_EMIT encountedError(failedFindLocalesMessage());
-            return localeMap;
-        }
-    }
-
-    // map base locale code to actual glibc locale filename: "en" => ["en_US", "en_GB"]
-    std::unordered_map<QString, std::vector<QString>> baseLocaleMap(availableLocales.size());
-    for (const auto &glibcLocale : availableLocales) {
-        // we want only absolute base locale code, for sr@ijekavian and en_US, we get sr and en
-        auto baseLocale = glibcLocale.split(u'_')[0].split(u'@')[0];
-        // clear glibcLocale from .UTF-8 and other similar items since it can break comparison
-        auto glibcLocaleName = glibcLocale.split(u'.')[0];
-        if (baseLocaleMap.contains(baseLocale)) {
-            baseLocaleMap[baseLocale].push_back(glibcLocaleName);
-        } else {
-            baseLocaleMap.insert({baseLocale, {glibcLocaleName}});
-        }
-    }
-
-    const auto addToMap = [&localeMap](const QString &plasmaLocale, const QString &glibcLocale) {
-        // We map the locale name and the plasma name to a valid locale. This gives us flexibility for resolution
-        // as we can resolve pt=>pt_PT but also pt_PT=>pt_PT.
-        // https://mail.kde.org/pipermail/kde-i18n-doc/2023-January/001340.html
-        // https://bugs.kde.org/show_bug.cgi?id=478120
-        localeMap.insert({glibcLocale, toUTF8Locale(glibcLocale)});
-        localeMap.insert({plasmaLocale, toUTF8Locale(glibcLocale)});
-    };
-
-    auto plasmaLocales = KLocalizedString::availableDomainTranslations(QByteArrayLiteral("plasmashell")).values();
-    for (const auto &plasmaLocale : plasmaLocales) {
-        auto baseLocale = plasmaLocale.split(u'_')[0].split(u'@')[0];
-        if (baseLocaleMap.contains(baseLocale)) {
-            const auto &prefixedLocales = baseLocaleMap[baseLocale];
-
-            // if we have one to one match, use that. Eg. en_US to en_US
-            auto fullMatch = std::find(prefixedLocales.begin(), prefixedLocales.end(), plasmaLocale);
-            if (fullMatch != prefixedLocales.end()) {
-                addToMap(plasmaLocale, *fullMatch);
-                continue;
-            }
-
-            // language name with same country code has higher priority, eg. es_ES > es_PA, de_DE > de_DE@euro
-            auto mainLocale = plasmaLocale + u'_' + plasmaLocale.toUpper();
-            fullMatch = std::find(prefixedLocales.begin(), prefixedLocales.end(), mainLocale);
-            if (fullMatch != prefixedLocales.end()) {
-                addToMap(plasmaLocale, *fullMatch);
-                continue;
-            }
-
-            // we try to match the locale with least characters diff (compare language code with country code, "sv" with "SE".lower() for "sv_SE"),
-            // so ca@valencia matches with ca_ES@valencia
-            // bad case: ca matches with ca_AD but not ca_ES
-            int closestMatchIndex = 0;
-            float minDiffPercentage = 1.0;
-            std::array<int, 255> frequencyMap = {0};
-            for (QChar c : plasmaLocale) {
-                // to lower so "sv_SE" has higher priority than "sv_FI" for language "sv"
-                frequencyMap[int(c.toLower().toLatin1())]++;
-            }
-
-            int i = 0;
-            for (const auto &glibcLocale : prefixedLocales) {
-                auto duplicated = frequencyMap;
-                auto skipBase = baseLocale.size() + 1; // we skip "sv_" part of "sv_SE", eg. compare "SE" part with "sv"
-                for (QChar c : glibcLocale) {
-                    if (skipBase--) {
-                        continue;
-                    }
-                    duplicated[int(c.toLower().toLatin1())]--;
-                }
-                int diffChars = std::reduce(duplicated.begin(), duplicated.end(), 0, [](int sum, int diff) {
-                    return sum + std::abs(diff);
-                });
-                float diffPercentage = float(diffChars) / glibcLocale.size();
-                if (diffPercentage < minDiffPercentage) {
-                    minDiffPercentage = diffPercentage;
-                    closestMatchIndex = i;
-                }
-                i++;
-            }
-            addToMap(plasmaLocale, prefixedLocales[closestMatchIndex]);
-        }
-    }
-    return localeMap;
-}
-#endif
 
 bool KCMRegionAndLang::isDefaults() const
 {

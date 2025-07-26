@@ -8,8 +8,9 @@
 */
 
 #include "languagelistmodel.h"
+#include "config-workspace.h"
 #include "exampleutility.h"
-#include "kcm_regionandlang_debug.h"
+#include "glibclocaleconstructor.h"
 #include "kcmregionandlang.h"
 #include "regionandlangsettings.h"
 
@@ -399,14 +400,14 @@ void SelectedLanguageModel::saveLanguages()
             }
 
 #ifdef GLIBC_LOCALE
-            auto glibcLang = m_kcm->toGlibcLocale(m_selectedLanguages.front());
+            auto glibcLang = GlibcLocaleConstructor::instance()->toGlibcLocale(m_selectedLanguages.front());
             // TODO: don't silently discard failed mappings
             if (glibcLang.has_value()) {
                 m_settings->setLang(glibcLang.value());
             }
 #else
             auto selectedLocale = QLocale(m_selectedLanguages.front());
-            auto utf8Lang = KCMRegionAndLang::toUTF8Locale(selectedLocale.name());
+            auto utf8Lang = GlibcLocaleConstructor::instance()->toUTF8Locale(selectedLocale.name());
             m_settings->setLang(utf8Lang);
 #endif
         }

@@ -42,10 +42,6 @@ public:
 
     OptionsModel *optionsModel() const;
     bool enabled() const;
-    static QString toUTF8Locale(const QString &locale);
-#ifdef GLIBC_LOCALE
-    std::optional<QString> toGlibcLocale(const QString &lang);
-#endif
     Q_INVOKABLE void unset(KCM_RegionAndLang::SettingType setting) const;
     Q_INVOKABLE void reboot();
 
@@ -65,16 +61,8 @@ private Q_SLOTS:
     void saveToConfigFile();
 
 private:
-#ifdef GLIBC_LOCALE
-    std::unordered_map<QString, QString> constructGlibcLocaleMap();
-#endif
-    static QString failedFindLocalesMessage();
-    static QString localeFileDirPath();
-
     RegionAndLangSettings *m_settings;
     OptionsModel *m_optionsModel;
     LocaleGeneratorBase *m_generator = nullptr;
-    QProcess *m_localectl = nullptr;
-    bool m_enabled = false;
     int m_loadedBinaryDialect;
 };
