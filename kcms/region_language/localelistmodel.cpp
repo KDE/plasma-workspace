@@ -8,7 +8,9 @@
 
 #include "localelistmodel.h"
 #include "exampleutility.h"
-#include "kcmregionandlang.h"
+
+#include "config-workspace.h"
+#include "glibclocaleconstructor.h"
 
 using namespace Qt::StringLiterals;
 using namespace KCM_RegionAndLang;
@@ -21,6 +23,13 @@ LocaleListModel::LocaleListModel(QObject *parent)
     // we use first QString for title in Unset option
     m_localeData.push_back(LocaleData{i18n("Default for System"), QString(), QString(), QString(), i18n("Default"), QLocale()});
     for (auto &locale : m_locales) {
+#ifdef GLIBC_LOCALE
+        // filter out invalid glibc locales from icu locales
+        if (!GlibcLocaleConstructor::instance()->hasGlibcLocale(locale.name())) {
+            continue;
+        }
+#endif
+
         m_localeData.push_back(LocaleData{.nativeName = locale.nativeLanguageName(),
                                           .englishName = QLocale::languageToString(locale.language()),
                                           .nativeCountryName = locale.nativeCountryName(),

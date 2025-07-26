@@ -23,6 +23,7 @@ set(kcm_regionandlang_PART_SRCS
     localegeneratorgeneratedglibc.cpp localegeneratorgeneratedglibc.h
     regionandlangsettings.cpp regionandlangsettings.h
     binarydialectmodel.h binarydialectmodel.cpp
+    glibclocaleconstructor.h glibclocaleconstructor.cpp
 )
 kconfig_add_kcfg_files(kcm_regionandlang_PART_SRCS regionandlangsettingsbase.kcfgc GENERATE_MOC)
 
