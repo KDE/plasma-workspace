@@ -464,6 +464,11 @@ void Notification::Private::processHints(const QVariantMap &hints)
     }
 
     this->hints = hints;
+
+    // Delete image-data from hints sice we have this cached to avoid duplicate data storage
+    if (!this->hints.remove(QStringLiteral("image-data"))) {
+        this->hints.remove(QStringLiteral("image_data"));
+    }
 }
 
 void Notification::Private::setUrgency(Notifications::Urgency urgency)
