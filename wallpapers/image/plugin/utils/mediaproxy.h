@@ -29,6 +29,7 @@ class MediaProxy : public QObject, public QQmlParserStatus
 {
     Q_OBJECT
     Q_INTERFACES(QQmlParserStatus)
+    QML_ELEMENT
 
     /**
      * Package path from the saved configuration, can be an image file, a url with

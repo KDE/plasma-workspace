@@ -5,10 +5,13 @@
 
 #pragma once
 
+#include <QObject>
+#include <qqmlregistration.h>
+
 namespace DynamicMode
 {
 Q_NAMESPACE
-
+QML_ELEMENT
 enum class Mode : unsigned int {
     Automatic = 0,
     DayNight,

@@ -6,9 +6,12 @@
 
 #pragma once
 
+#include <qqmlintegration.h>
+
 namespace Provider
 {
 Q_NAMESPACE
+QML_ELEMENT
 
 enum class Type {
     Unknown,

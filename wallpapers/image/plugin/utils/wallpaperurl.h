@@ -8,6 +8,7 @@
 
 #include <QObject>
 #include <QUrl>
+#include <qqmlintegration.h>
 
 /**
  * The WallpaperUrl type provides a way to construct wallpaper urls that can be stored in the config.
@@ -15,6 +16,8 @@
 class WallpaperUrl : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
+    QML_SINGLETON
 
 public:
     explicit WallpaperUrl(QObject *parent = nullptr);

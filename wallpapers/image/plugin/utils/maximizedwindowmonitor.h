@@ -19,6 +19,7 @@
 class MaximizedWindowMonitor : public TaskManager::TasksModel
 {
     Q_OBJECT
+    QML_ELEMENT
 
 public:
     explicit MaximizedWindowMonitor(QObject *parent = nullptr);

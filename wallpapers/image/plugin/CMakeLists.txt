@@ -61,6 +61,10 @@ configure_file(config-KExiv2.h.in ${CMAKE_CURRENT_BINARY_DIR}/config-KExiv2.h)
 
 ecm_add_qml_module(plasma_wallpaper_image URI "org.kde.plasma.wallpapers.image" VERSION 2.0 CLASS_NAME ImagePlugin)
 
+qt_generate_foreign_qml_types(plasma_wallpaper_imageplugin_static plasma_wallpaper_image)
+
+target_include_directories(plasma_wallpaper_image PRIVATE  utils provider)
+
 target_sources(plasma_wallpaper_image PRIVATE imageplugin.cpp imageplugin.h)
 
 target_link_libraries(plasma_wallpaper_image PRIVATE

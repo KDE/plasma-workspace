@@ -6,9 +6,13 @@
 
 #pragma once
 
+#include <QObject>
+#include <qqmlintegration.h>
+
 namespace BackgroundType
 {
 Q_NAMESPACE
+QML_ELEMENT
 
 enum class Type {
     Unknown,

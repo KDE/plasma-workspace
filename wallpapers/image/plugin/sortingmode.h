@@ -6,9 +6,13 @@
 
 #pragma once
 
+#include <QObject>
+#include <qqmlintegration.h>
+
 namespace SortingMode
 {
 Q_NAMESPACE
+QML_ELEMENT
 
 enum Mode {
     Random,
