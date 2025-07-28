@@ -86,8 +86,10 @@ void RecentDocuments::match(KRunner::RunnerContext &context)
         const QMimeType mimeType = db.mimeTypeForName(m_resultsModel->data(index, ResultModel::MimeType).toString());
         match.setIconName(mimeType.iconName());
         const QUrl url = QUrl::fromLocalFile(m_resultsModel->data(index, ResultModel::ResourceRole).toString());
-        match.setData(QVariant(url));
         match.setUrls({url});
+        if (mimeType.isValid() && !mimeType.isDefault()) {
+            match.setData(mimeType.name());
+        }
         match.setId(url.toString());
         if (url.isLocalFile()) {
             match.setActions(m_actions);
@@ -104,14 +106,15 @@ void RecentDocuments::match(KRunner::RunnerContext &context)
 
 void RecentDocuments::run(const KRunner::RunnerContext & /*context*/, const KRunner::QueryMatch &match)
 {
-    const QUrl url = match.data().toUrl();
+    const QUrl url = match.urls().first();
 
     if (match.selectedAction()) {
         KIO::highlightInFileManager({url});
         return;
     }
 
-    auto *job = new KIO::OpenUrlJob(url);
+    const QString mimeType = match.data().toString();
+    auto *job = new KIO::OpenUrlJob(url, mimeType);
     job->setUiDelegate(KIO::createDefaultJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled, QApplication::activeWindow()));
     job->setShowOpenOrExecuteDialog(true);
     job->start();
