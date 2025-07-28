@@ -56,7 +56,9 @@ class DeviceNotifierTest(unittest.TestCase):
         """
         Tests the widget can be opened
         """
-        self.driver.find_element(AppiumBy.NAME, "No removable devices attached")
+
+        # In the CI environment, there's a virtual optical disk available
+        self.driver.find_element(AppiumBy.NAME, "Mount and Open")
 
 
 if __name__ == '__main__':
