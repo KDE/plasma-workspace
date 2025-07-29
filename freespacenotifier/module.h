@@ -24,7 +24,7 @@ public:
 private:
     void showConfiguration();
     void onNewSolidDevice(const QString &udi);
-    void startTracking(const QString &udi, Solid::StorageAccess *access);
+    void startTracking(const QString &udi);
     void stopTracking(const QString &udi);
 
     QMap<QString, FreeSpaceNotifier *> m_notifiers;
