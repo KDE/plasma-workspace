@@ -20,6 +20,7 @@
 
 #include <QDir>
 #include <QFile>
+#include <QtConcurrent>
 
 #include "kded_interface.h"
 
@@ -79,31 +80,44 @@ void FreeSpaceNotifierModule::onNewSolidDevice(const QString &udi)
         return;
     }
 
-    if (access->isAccessible()) {
-        // Cache devices should be marked through a
-        // CACHEDIR.TAG file to avoid indexing; see
-        // https://bford.info/cachedir/ for reference.
-        if (QFile::exists(QDir(access->filePath()).filePath(QStringLiteral("CACHEDIR.TAG")))) {
-            return;
-        }
+    auto tryStartTracking = [this, access](const QString &udi) {
+        // This is run concurrently in case the partition
+        // is not local and fetching the file requires time.
+        QString cachedirTag = QDir(access->filePath()).filePath(QStringLiteral("CACHEDIR.TAG"));
+        QtConcurrent::run([this, cachedirTag]() {
+            // Cache devices should be marked through a
+            // CACHEDIR.TAG file to avoid indexing; see
+            // https://bford.info/cachedir/ for reference.
+            return QFile::exists(cachedirTag);
+        }).then(this, [this, udi](bool isCache) {
+            if (!isCache) {
+                startTracking(udi);
+            }
+        });
+    };
 
-        startTracking(udi, access);
+    if (access->isAccessible()) {
+        tryStartTracking(udi);
     }
-    connect(access, &Solid::StorageAccess::accessibilityChanged, this, [this, udi, access](bool available) {
+    connect(access, &Solid::StorageAccess::accessibilityChanged, this, [this, udi, access, tryStartTracking](bool available) {
         if (available) {
-            startTracking(udi, access);
+            tryStartTracking(udi);
         } else {
             stopTracking(udi);
         }
     });
 }
 
-void FreeSpaceNotifierModule::startTracking(const QString &udi, Solid::StorageAccess *access)
+void FreeSpaceNotifierModule::startTracking(const QString &udi)
 {
     if (m_notifiers.contains(udi)) {
         return;
     }
     Solid::Device device(udi);
+    Solid::StorageAccess *access = device.as<Solid::StorageAccess>();
+    if (!access) {
+        return;
+    }
 
     KLocalizedString message = ki18n("Your %1 partition is running out of disk space; %2 MiB of space remaining (%3%).").subs(device.displayName());
     if (access->filePath() == QStringLiteral("/")) {
