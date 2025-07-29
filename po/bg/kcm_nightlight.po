@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Mincho Kondarev <mkondarev@yahoo.de>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-12 00:45+0000\n"
-"PO-Revision-Date: 2024-09-13 20:44+0200\n"
+"PO-Revision-Date: 2025-07-28 18:00+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.07.70\n"
+"X-Generator: Lokalize 25.07.70\n"
 
 #: ui/DayNightView.qml:154
 #, kde-format
@@ -33,29 +33,25 @@ msgid ""
 msgstr "Промените към дневни цветове започват в %1 и са напълно завършени в %2"
 
 #: ui/main.qml:39
-#, fuzzy, kde-format
-#| msgid "The blue light filter makes the colors on the screen warmer."
+#, kde-format
 msgctxt "@info"
 msgid "The blue light filter makes the colors on the screen warmer."
 msgstr "Филтъра за синя светлина прави цветовете на екрана по-топли."
 
 #: ui/main.qml:49
-#, fuzzy, kde-format
-#| msgid "Switching times:"
+#, kde-format
 msgctxt "@label:listbox Night Light modes"
 msgid "Switching times:"
 msgstr "Време за активиране:"
 
 #: ui/main.qml:58
-#, fuzzy, kde-format
-#| msgid "Always off"
+#, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Always off"
 msgstr "Винаги изключен"
 
 #: ui/main.qml:59
-#, fuzzy, kde-format
-#| msgid "Always on night light"
+#, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Always on night light"
 msgstr "Вечерни цветове са винаги включени"
@@ -64,13 +60,13 @@ msgstr "Вечерни цветове са винаги включени"
 #, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Sunrise and sunset"
-msgstr ""
+msgstr "Изгрев и залез"
 
 #: ui/main.qml:72
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
-msgstr ""
+msgstr "Конфигуриране…"
 
 #: ui/main.qml:115 ui/main.qml:166 ui/main.qml:230
 #, kde-format
@@ -79,8 +75,7 @@ msgid "%1K"
 msgstr "%1K"
 
 #: ui/main.qml:123
-#, fuzzy, kde-format
-#| msgid "Day light temperature:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Day light temperature:"
 msgstr "Температура на дневни цветове:"
@@ -98,11 +93,10 @@ msgid "Warm"
 msgstr "Топло"
 
 #: ui/main.qml:187
-#, fuzzy, kde-format
-#| msgid "Night light temperature:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Night light temperature:"
-msgstr "Температура на Вечерни цветове:"
+msgstr "Температура на вечерни цветове:"
 
 #~ msgctxt ""
 #~ "@label:chooser Tap should be translated to mean touching using a "

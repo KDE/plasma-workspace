@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
+# SPDX-FileCopyrightText: 2024, 2025 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-12 00:45+0000\n"
-"PO-Revision-Date: 2024-07-31 07:23+0200\n"
+"PO-Revision-Date: 2025-07-28 18:49+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.04.2\n"
 
 #: devicenotifications.cpp:333
 #, kde-format
@@ -24,10 +24,9 @@ msgid "Display Detected"
 msgstr "Bildskärm detekterad"
 
 #: devicenotifications.cpp:334
-#, fuzzy, kde-format
-#| msgid "A display has been unplugged."
+#, kde-format
 msgid "A display has been connected."
-msgstr "En bildskärm har kopplats ur."
+msgstr "En bildskärm har anslutits."
 
 #: devicenotifications.cpp:347
 #, kde-format
@@ -36,22 +35,19 @@ msgid "Display Removed"
 msgstr "Bildskärm borttagen"
 
 #: devicenotifications.cpp:348
-#, fuzzy, kde-format
-#| msgid "A display has been unplugged."
+#, kde-format
 msgid "A display has been disconnected."
-msgstr "En bildskärm har kopplats ur."
+msgstr "En bildskärm har bortkopplats."
 
 #: devicenotifications.cpp:394
-#, fuzzy, kde-format
-#| msgid "%1 has been unplugged."
+#, kde-format
 msgid "%1 has been connected."
-msgstr "%1 har kopplats ur."
+msgstr "%1 har bortkopplats."
 
 #: devicenotifications.cpp:394
-#, fuzzy, kde-format
-#| msgid "A USB device has been unplugged."
+#, kde-format
 msgid "A USB device has been connected."
-msgstr "En USB-enhet har kopplats ur."
+msgstr "En USB-enhet har anslutits."
 
 #: devicenotifications.cpp:399
 #, kde-format
@@ -60,24 +56,20 @@ msgid "USB Device Detected"
 msgstr "USB-enhet detekterad"
 
 #: devicenotifications.cpp:437
-#, fuzzy, kde-format
-#| msgid "%1 has been unplugged."
+#, kde-format
 msgid "%1 has been disconnected."
-msgstr "%1 har kopplats ur."
+msgstr "%1 har bortkopplats."
 
 #: devicenotifications.cpp:437
-#, fuzzy, kde-format
-#| msgid "A USB device has been unplugged."
+#, kde-format
 msgid "A USB device has been disconnected."
-msgstr "En USB-enhet har kopplats ur."
+msgstr "En USB-enhet har bortkopplats."
 
 #: devicenotifications.cpp:442
-#, fuzzy, kde-format
-#| msgctxt "@title:notifications"
-#| msgid "USB Device Detected"
+#, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Went Away"
-msgstr "USB-enhet detekterad"
+msgstr "USB-enhet försvann"
 
 #~ msgid "A display has been plugged in."
 #~ msgstr "En bildskärm har kopplats in."

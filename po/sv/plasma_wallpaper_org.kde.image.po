@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-12 00:45+0000\n"
-"PO-Revision-Date: 2025-05-31 15:19+0200\n"
+"PO-Revision-Date: 2025-07-28 18:45+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.04.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -76,17 +76,13 @@ msgid "Tiled"
 msgstr "Sida vid sida"
 
 #: imagepackage/contents/ui/config.qml:194
-#, fuzzy, kde-format
-#| msgctxt "part of a sentence: 'Switch dynamic wallpapers [based on]'"
-#| msgid "Switch dynamic wallpapers:"
+#, kde-format
 msgctxt "@label part of a sentence: 'Switch dynamic wallpapers [based on]'"
 msgid "Switch dynamic wallpapers:"
 msgstr "Byt dynamiska skrivbordsunderlägg:"
 
 #: imagepackage/contents/ui/config.qml:195
-#, fuzzy, kde-format
-#| msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
-#| msgid "Based on whether the color scheme is dark or light"
+#, kde-format
 msgctxt "@option:radio part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the color scheme is dark or light"
 msgstr "Baserat på om färgschemat är mörkt eller ljust"
@@ -95,13 +91,13 @@ msgstr "Baserat på om färgschemat är mörkt eller ljust"
 #, kde-format
 msgctxt "@option:radio part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on the day-night cycle:"
-msgstr ""
+msgstr "Baserat på dag och nattcykel:"
 
 #: imagepackage/contents/ui/config.qml:214
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
-msgstr ""
+msgstr "Anpassa…"
 
 #: imagepackage/contents/ui/config.qml:225
 #, kde-format

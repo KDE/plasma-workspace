@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2024 Mincho Kondarev <mkondarev@yahoo.de>
+# SPDX-FileCopyrightText: 2024, 2025 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-12 00:45+0000\n"
-"PO-Revision-Date: 2024-08-07 09:47+0200\n"
+"PO-Revision-Date: 2025-07-28 18:06+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.07.70\n"
+"X-Generator: Lokalize 25.07.70\n"
 
 #: devicenotifications.cpp:333
 #, kde-format
@@ -24,10 +24,9 @@ msgid "Display Detected"
 msgstr "Открит е екран"
 
 #: devicenotifications.cpp:334
-#, fuzzy, kde-format
-#| msgid "A display has been unplugged."
+#, kde-format
 msgid "A display has been connected."
-msgstr "Екранът е изключен."
+msgstr "Установено е свързване на екран."
 
 #: devicenotifications.cpp:347
 #, kde-format
@@ -36,22 +35,19 @@ msgid "Display Removed"
 msgstr "Екранът e премахнат"
 
 #: devicenotifications.cpp:348
-#, fuzzy, kde-format
-#| msgid "A display has been unplugged."
+#, kde-format
 msgid "A display has been disconnected."
-msgstr "Екранът е изключен."
+msgstr "Установено е изключване на екран."
 
 #: devicenotifications.cpp:394
-#, fuzzy, kde-format
-#| msgid "%1 has been unplugged."
+#, kde-format
 msgid "%1 has been connected."
-msgstr "Устройство %1 е отделено."
+msgstr "Устройство %1 е свързано."
 
 #: devicenotifications.cpp:394
-#, fuzzy, kde-format
-#| msgid "A USB device has been unplugged."
+#, kde-format
 msgid "A USB device has been connected."
-msgstr "USB устройство е отделено."
+msgstr "USB устройство е свързано."
 
 #: devicenotifications.cpp:399
 #, kde-format
@@ -60,24 +56,20 @@ msgid "USB Device Detected"
 msgstr "Открито е USB устройство"
 
 #: devicenotifications.cpp:437
-#, fuzzy, kde-format
-#| msgid "%1 has been unplugged."
+#, kde-format
 msgid "%1 has been disconnected."
 msgstr "Устройство %1 е отделено."
 
 #: devicenotifications.cpp:437
-#, fuzzy, kde-format
-#| msgid "A USB device has been unplugged."
+#, kde-format
 msgid "A USB device has been disconnected."
 msgstr "USB устройство е отделено."
 
 #: devicenotifications.cpp:442
-#, fuzzy, kde-format
-#| msgctxt "@title:notifications"
-#| msgid "USB Device Detected"
+#, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Went Away"
-msgstr "Открито е USB устройство"
+msgstr "USB устройство е извадено"
 
 #~ msgid "A display has been plugged in."
 #~ msgstr "Включен е екран."

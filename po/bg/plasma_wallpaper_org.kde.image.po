@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-12 00:45+0000\n"
-"PO-Revision-Date: 2025-05-26 19:18+0200\n"
+"PO-Revision-Date: 2025-07-28 17:55+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -76,17 +76,13 @@ msgid "Tiled"
 msgstr "Плочки"
 
 #: imagepackage/contents/ui/config.qml:194
-#, fuzzy, kde-format
-#| msgctxt "part of a sentence: 'Switch dynamic wallpapers [based on]'"
-#| msgid "Switch dynamic wallpapers:"
+#, kde-format
 msgctxt "@label part of a sentence: 'Switch dynamic wallpapers [based on]'"
 msgid "Switch dynamic wallpapers:"
 msgstr "Превключване на динамични тапети:"
 
 #: imagepackage/contents/ui/config.qml:195
-#, fuzzy, kde-format
-#| msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
-#| msgid "Based on whether the color scheme is dark or light"
+#, kde-format
 msgctxt "@option:radio part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the color scheme is dark or light"
 msgstr "Въз основа на това дали цветовата схема е тъмна или светла"
@@ -95,13 +91,13 @@ msgstr "Въз основа на това дали цветовата схема
 #, kde-format
 msgctxt "@option:radio part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on the day-night cycle:"
-msgstr ""
+msgstr "Според цикъла ден–нощ:"
 
 #: imagepackage/contents/ui/config.qml:214
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
-msgstr ""
+msgstr "Конфигуриране…"
 
 #: imagepackage/contents/ui/config.qml:225
 #, kde-format

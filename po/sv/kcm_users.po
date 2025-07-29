@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-16 00:45+0000\n"
-"PO-Revision-Date: 2025-05-31 15:16+0200\n"
+"PO-Revision-Date: 2025-07-28 18:46+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.04.2\n"
 
 #: src/fingerprintmodel.cpp:145 src/fingerprintmodel.cpp:229
 #, kde-format
@@ -177,15 +177,13 @@ msgid "Confirm password:"
 msgstr "Bekräfta lösenord:"
 
 #: src/ui/CreateUser.qml:88
-#, fuzzy, kde-format
-#| msgid "Create"
+#, kde-format
 msgctxt "@action:button Create a new user"
 msgid "Create"
 msgstr "Skapa"
 
 #: src/ui/CreateUser.qml:109
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action:button Cancel creating new user"
 msgid "Cancel"
 msgstr "Avbryt"
