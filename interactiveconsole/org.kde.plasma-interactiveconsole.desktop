@@ -1,6 +1,7 @@
 [Desktop Entry]
 Type=Application
 Name=Desktop Shell Scripting Console
+Name[bg]=Конзола на работната среда за изпълнение на скриптове
 Name[ca]=Consola de creació de scripts de l'intèrpret d'ordres d'escriptori
 Name[ca@valencia]=Consola de creació de scripts de l'intèrpret d'ordres d'escriptori
 Name[es]=Consola de scripts para el escritorio
@@ -11,6 +12,7 @@ Name[ka]=სამუშაო მაგიდის გარსის სკ�
 Name[nl]=Bureaubladconsole voor shell-scripts
 Name[pt_BR]=Console da área de trabalho para shell scripts
 Name[sl]=Desktop Shell Scripting Console
+Name[sv]=Skrivbordets skalskriptsterminal
 Name[tr]=Masaüstü Kabuk Betik Yazımı Konsolu
 Name[uk]=Консоль скриптів оболонки стільниці
 Name[x-test]=xxDesktop Shell Scripting Consolexx
