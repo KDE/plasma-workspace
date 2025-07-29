@@ -238,7 +238,7 @@ bool ComputerModel::trigger(int row, const QString &actionId, const QVariant &ar
         const QUrl &url = m_filteredPlacesModel->url(sourceIndex);
 
         if (url.isValid()) {
-            auto job = new KIO::OpenUrlJob(url);
+            auto job = new KIO::OpenUrlJob(url, QStringLiteral("inode/directory"));
             job->start();
 
             return true;
@@ -281,7 +281,7 @@ void ComputerModel::onSetupDone(Solid::ErrorType error, QVariant errorData, cons
 
     Q_ASSERT(access);
 
-    auto job = new KIO::OpenUrlJob(QUrl::fromLocalFile(access->filePath()));
+    auto job = new KIO::OpenUrlJob(QUrl::fromLocalFile(access->filePath()), QStringLiteral("inode/directory"));
     job->start();
 }
 
