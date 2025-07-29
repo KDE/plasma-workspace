@@ -4,7 +4,7 @@
     SPDX-FileCopyrightText: 2009 Ivo Anjo <knuckles@gmail.com>
 
     SPDX-License-Identifier: GPL-2.0-or-later
- */
+*/
 
 #include "module.h"
 
@@ -75,15 +75,18 @@ void FreeSpaceNotifierModule::onNewSolidDevice(const QString &udi)
     if (auto generic = device.as<Solid::GenericInterface>()) {
         isReadOnly = generic->property(QStringLiteral("ReadOnly")).toBool();
     }
-    // Cache devices should be marked through a
-    // CACHEDIR.TAG file to avoid indexing; see
-    // https://bford.info/cachedir/ for reference.
-    const bool isCache = QFile::exists(QDir(access->filePath()).filePath(QStringLiteral("CACHEDIR.TAG")));
-    if (isReadOnly || isCache) {
+    if (isReadOnly) {
         return;
     }
 
     if (access->isAccessible()) {
+        // Cache devices should be marked through a
+        // CACHEDIR.TAG file to avoid indexing; see
+        // https://bford.info/cachedir/ for reference.
+        if (QFile::exists(QDir(access->filePath()).filePath(QStringLiteral("CACHEDIR.TAG")))) {
+            return;
+        }
+
         startTracking(udi, access);
     }
     connect(access, &Solid::StorageAccess::accessibilityChanged, this, [this, udi, access](bool available) {
