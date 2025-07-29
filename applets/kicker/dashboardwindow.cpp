@@ -175,8 +175,6 @@ void DashboardWindow::keyPressEvent(QKeyEvent *e)
         && !(e->key() == Qt::Key_Tab)
         && !(e->key() == Qt::Key_Backtab)) {
         // clang-format on
-        QPointer<QQuickItem> previousFocusItem = activeFocusItem();
-
         m_keyEventProxy->forceActiveFocus();
         QEvent *eventCopy = new QKeyEvent(e->type(),
                                           e->key(),
@@ -188,15 +186,6 @@ void DashboardWindow::keyPressEvent(QKeyEvent *e)
                                           e->isAutoRepeat(),
                                           e->count());
         QCoreApplication::postEvent(this, eventCopy);
-
-        // We _need_ to do it twice to make sure the event ping-pong needed
-        // for delivery happens before we sap focus again.
-        QCoreApplication::processEvents();
-        QCoreApplication::processEvents();
-
-        if (previousFocusItem) {
-            previousFocusItem->forceActiveFocus();
-        }
 
         return;
     }
