@@ -377,7 +377,7 @@ bool RecentUsageModel::trigger(int row, const QString &actionId, const QVariant 
         if (!resource.startsWith(QLatin1String("applications:"))) {
             const QUrl resourceUrl = docData(resource, Kicker::UrlRole, mimeType).toUrl();
 
-            auto job = new KIO::OpenUrlJob(resourceUrl);
+            auto job = new KIO::OpenUrlJob(resourceUrl, mimeType);
             job->setUiDelegate(KIO::createDefaultJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled, QApplication::activeWindow()));
             job->setShowOpenOrExecuteDialog(true);
             job->start();
