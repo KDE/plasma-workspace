@@ -62,61 +62,68 @@ KCM.ScrollViewKCM {
 
     Component {
         id: languagesListItemComponent
-        Item {
+        QQC2.ItemDelegate {
+            id: listItem
             width: ListView.view.width
-            height: listItem.implicitHeight
 
-            Kirigami.SwipeListItem {
-                id: listItem
+            text: model.display
 
-                contentItem: RowLayout {
-                    spacing: Kirigami.Units.smallSpacing
+            QQC2.ToolTip.text: text
+            QQC2.ToolTip.visible: languageLabel.truncated && (hovered || activeFocus)
+            QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
 
-                    Kirigami.ListItemDragHandle {
-                        listItem: listItem
-                        listView: languageListView
-                        visible: languageListView.count > 1
-                        onMoveRequested: (oldIndex, newIndex) => {
-                            languageListModel.selectedLanguageModel.move(oldIndex, newIndex);
-                        }
-                    }
+            // There's no click action, so disable the hover effect too
+            background: null
 
-                    QQC2.Label {
-                        Layout.alignment: Qt.AlignLeft
-                        Layout.fillWidth: true
-                        text: model.display
-                        textFormat: Text.PlainText
+            contentItem: RowLayout {
+                spacing: Kirigami.Units.smallSpacing
 
-                        color: listItem.checked || (listItem.pressed && !listItem.checked && !listItem.sectionDelegate) ? listItem.activeTextColor : listItem.textColor;
-                    }
-
-                    QQC2.Button {
-                        Layout.alignment: Qt.AlignRight
-                        visible: languageListView.count <= 1
-                        text: i18nc("@info:tooltip", "Change Language")
-                        icon.name: "configure"
-                        onClicked: {
-                            replaceLangIndex = index;
-                            addLanguagesSheet.titleText = i18nc("@title:window", "Change Language");
-                            addLanguagesSheet.open();
-                        }
+                Kirigami.ListItemDragHandle {
+                    listItem: listItem
+                    listView: languageListView
+                    visible: languageListView.count > 1
+                    onMoveRequested: (oldIndex, newIndex) => {
+                        languageListModel.selectedLanguageModel.move(oldIndex, newIndex);
                     }
                 }
 
-                actions: [
-                    Kirigami.Action {
-                        enabled: index > 0
-                        visible: languageListView.count > 1
-                        icon.name: "go-top"
-                        tooltip: i18nc("@info:tooltip", "Move to top")
-                        onTriggered: languageListModel.selectedLanguageModel.move(index, 0)
-                    },
-                    Kirigami.Action {
-                        visible: languageListView.count > 1
-                        icon.name: "edit-delete"
-                        tooltip: i18nc("@info:tooltip", "Remove")
-                        onTriggered: languageListModel.selectedLanguageModel.remove(index);
-                    }]
+                QQC2.Label {
+                    id: languageLabel
+                    Layout.fillWidth: true
+                    text: listItem.text
+                    elide: Text.ElideRight
+                    textFormat: Text.PlainText
+                }
+
+                QQC2.Button {
+                    visible: languageListView.count <= 1
+                    text: i18nc("@info:tooltip", "Change Language")
+                    icon.name: "configure"
+                    onClicked: {
+                        replaceLangIndex = index;
+                        addLanguagesSheet.titleText = i18nc("@title:window", "Change Language");
+                        addLanguagesSheet.open();
+                    }
+                }
+                QQC2.Button {
+                    enabled: index > 0
+                    visible: languageListView.count > 1
+                    display: QQC2.AbstractButton.IconOnly
+                    icon.name: "go-top"
+                    QQC2.ToolTip.text: i18nc("@info:tooltip", "Move to top")
+                    QQC2.ToolTip.visible: hovered || activeFocus
+                    QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
+                    onClicked: languageListModel.selectedLanguageModel.move(index, 0)
+                }
+                QQC2.Button {
+                    visible: languageListView.count > 1
+                    display: QQC2.AbstractButton.IconOnly
+                    icon.name: "edit-delete"
+                    QQC2.ToolTip.text: i18nc("@info:tooltip", "Remove")
+                    QQC2.ToolTip.visible: hovered || activeFocus
+                    QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
+                    onClicked: languageListModel.selectedLanguageModel.remove(index);
+                }
             }
         }
     }
