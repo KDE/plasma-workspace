@@ -60,6 +60,7 @@ class ShellCorona : public Plasma::Corona, QDBusContext
     Q_PROPERTY(QString shell READ shell NOTIFY shellChanged)
     Q_PROPERTY(int numScreens READ numScreens)
     Q_PROPERTY(PanelView *panelBeingConfigured READ panelBeingConfigured NOTIFY panelBeingConfiguredChanged)
+    Q_PROPERTY(int panelsToBeLoaded READ panelsToBeLoaded)
     Q_CLASSINFO("D-Bus Interface", "org.kde.PlasmaShell")
 
 public:
@@ -142,6 +143,8 @@ public:
     PanelView *panelBeingConfigured() const;
 
     Q_INVOKABLE bool enteredEditModeViaDesktop();
+
+    int panelsToBeLoaded() const;
 
 Q_SIGNALS:
     void glInitializationFailed();
@@ -300,6 +303,7 @@ private:
     QHash<const Plasma::Containment *, int> m_pendingScreenChanges;
     KConfigGroup m_desktopDefaultsConfig;
     KConfigGroup m_lnfDefaultsConfig;
+    int m_panelsToBeLoadedCount = 99;
     QList<Plasma::Containment *> m_waitingPanels;
     QHash<QString, QString> m_activityContainmentPlugins;
     QAction *m_addPanelAction;

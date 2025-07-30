@@ -846,6 +846,7 @@ void ShellCorona::load()
                     && !m_waitingPanels.contains(containment) && containment->lastScreen() >= 0 && !m_panelViews.contains(containment));
         });
     }
+    m_panelsToBeLoadedCount = m_waitingPanels.count();
 
     // NOTE: this is needed in case loadLayout() did *not* call loadDefaultLayout()
     // it needs to be after of loadLayout() as it would always create new
@@ -1589,6 +1590,8 @@ void ShellCorona::createWaitingPanels()
 {
     QList<Plasma::Containment *> stillWaitingPanels;
 
+    m_panelsToBeLoadedCount = m_waitingPanels.count();
+
     for (Plasma::Containment *cont : std::as_const(m_waitingPanels)) {
         // ignore non existing (yet?) screens
         int requestedScreen = cont->lastScreen();
@@ -1611,6 +1614,9 @@ void ShellCorona::createWaitingPanels()
         }
         auto rectNotify = [this, panel]() {
             Q_ASSERT(qobject_cast<PanelView *>(panel)); // https://bugreports.qt.io/browse/QTBUG-118841
+            if (panel->isVisible()) {
+                m_panelsToBeLoadedCount -= 1;
+            }
             if (!m_screenReorderInProgress && panel->containment()) {
                 Q_EMIT availableScreenRectChanged(panel->containment()->screen());
             }
@@ -2968,6 +2974,14 @@ void ShellCorona::refreshCurrentShell()
     KSharedConfig::openConfig(QStringLiteral("plasmashellrc"))->reparseConfiguration();
     //  FIXME:   setShell(defaultShell());
     QProcess::startDetached(u"plasmashell"_s, {u"--replace"_s});
+}
+
+int ShellCorona::panelsToBeLoaded() const
+{
+    if (m_panelsToBeLoadedCount < 0) {
+        return 0;
+    }
+    return m_panelsToBeLoadedCount;
 }
 
 // Desktop corona handler
