@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-25 00:44+0000\n"
+"POT-Creation-Date: 2025-07-30 00:45+0000\n"
 "PO-Revision-Date: 2010-10-29 12:37+0530\n"
 "Last-Translator: Kartik Mistry <kartik.mistry@gmail.com>\n"
 "Language-Team: Gujarati\n"
@@ -19,6 +19,273 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Generator: KBabel 1.11.4\n"
 
+#: components/ActionContainer.qml:80
+#, kde-format
+msgctxt "Reply to message"
+msgid "Reply"
+msgstr ""
+
+#: components/EditContextMenu.qml:32
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Copy Link Address"
+msgstr ""
+
+#: components/EditContextMenu.qml:44
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Copy"
+msgstr ""
+
+#: components/EditContextMenu.qml:61
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Select All"
+msgstr ""
+
+#: components/HeadingButtons.qml:76
+#, kde-format
+msgctxt "Notification was added less than a minute ago, keep short"
+msgid "Just now"
+msgstr ""
+
+#: components/HeadingButtons.qml:82
+#, kde-format
+msgctxt "Notification was added minutes ago, keep short"
+msgid "%1 min ago"
+msgid_plural "%1 min ago"
+msgstr[0] ""
+msgstr[1] ""
+
+#: components/HeadingButtons.qml:116
+#, fuzzy, kde-format
+#| msgid "%1 (%2 remaining)"
+msgctxt "seconds remaining, keep short"
+msgid "%1 s remaining"
+msgid_plural "%1 s remaining"
+msgstr[0] "%1 (%2 બાકી)"
+msgstr[1] "%1 (%2 બાકી)"
+
+#: components/HeadingButtons.qml:120
+#, fuzzy, kde-format
+#| msgid "%1 (%2 remaining)"
+msgctxt "minutes remaining, keep short"
+msgid "%1 min remaining"
+msgid_plural "%1 min remaining"
+msgstr[0] "%1 (%2 બાકી)"
+msgstr[1] "%1 (%2 બાકી)"
+
+#: components/HeadingButtons.qml:125
+#, fuzzy, kde-format
+#| msgid "%1 (%2 remaining)"
+msgctxt "hours remaining, keep short"
+msgid "%1 h remaining"
+msgid_plural "%1 h remaining"
+msgstr[0] "%1 (%2 બાકી)"
+msgstr[1] "%1 (%2 બાકી)"
+
+#: components/HeadingButtons.qml:145
+#, kde-format
+msgid "Configure"
+msgstr ""
+
+#: components/HeadingButtons.qml:162
+#, kde-format
+msgctxt "Opposite of minimize"
+msgid "Restore"
+msgstr ""
+
+#: components/HeadingButtons.qml:163
+#, kde-format
+msgid "Minimize"
+msgstr ""
+
+#: components/HeadingButtons.qml:186
+#, kde-format
+msgid "Close"
+msgstr ""
+
+#: components/JobDetails.qml:34
+#, kde-format
+msgctxt "Row description, e.g. Source"
+msgid "%1:"
+msgstr ""
+
+#: components/JobDetails.qml:109
+#, kde-format
+msgctxt "How many bytes have been copied"
+msgid "%2 of %1"
+msgstr ""
+
+#: components/JobDetails.qml:113
+#, fuzzy, kde-format
+#| msgid "%2 / 1 file"
+#| msgid_plural "%2 / %1 files"
+msgctxt "How many files have been copied"
+msgid "%2 of %1 file"
+msgid_plural "%2 of %1 files"
+msgstr[0] "%2 / 1 ફાઇલ"
+msgstr[1] "%2 / %1 ફાઇલો"
+
+#: components/JobDetails.qml:116
+#, fuzzy, kde-format
+#| msgid "%2 / 1 folder"
+#| msgid_plural "%2 / %1 folders"
+msgctxt "How many dirs have been copied"
+msgid "%2 of %1 folder"
+msgid_plural "%2 of %1 folders"
+msgstr[0] "%2 / 1 ફોલ્ડર"
+msgstr[1] "%2 / %1 ફોલ્ડરો"
+
+#: components/JobDetails.qml:119
+#, fuzzy, kde-format
+#| msgid "%2 / 1 file"
+#| msgid_plural "%2 / %1 files"
+msgctxt "How many items (that includes files and dirs) have been copied"
+msgid "%2 of %1 item"
+msgid_plural "%2 of %1 items"
+msgstr[0] "%2 / 1 ફાઇલ"
+msgstr[1] "%2 / %1 ફાઇલો"
+
+#: components/JobDetails.qml:127
+#, fuzzy, kde-format
+#| msgid "%2 / 1 file"
+#| msgid_plural "%2 / %1 files"
+msgid "%1 file"
+msgid_plural "%1 files"
+msgstr[0] "%2 / 1 ફાઇલ"
+msgstr[1] "%2 / %1 ફાઇલો"
+
+#: components/JobDetails.qml:129
+#, fuzzy, kde-format
+#| msgid "%2 / 1 folder"
+#| msgid_plural "%2 / %1 folders"
+msgid "%1 folder"
+msgid_plural "%1 folders"
+msgstr[0] "%2 / 1 ફોલ્ડર"
+msgstr[1] "%2 / %1 ફોલ્ડરો"
+
+#: components/JobDetails.qml:131
+#, kde-format
+msgid "%1 item"
+msgid_plural "%1 items"
+msgstr[0] ""
+msgstr[1] ""
+
+#: components/JobDetails.qml:148 components/SpeedChart.qml:70
+#: components/SpeedChart.qml:95 components/SpeedChart.qml:185
+#: components/SpeedChart.qml:196
+#, kde-format
+msgctxt "Bytes per second"
+msgid "%1/s"
+msgstr ""
+
+#: components/JobItem.qml:56
+#, kde-format
+msgctxt "Hides/expands item details"
+msgid "Details"
+msgstr ""
+
+#: components/JobItem.qml:77
+#, fuzzy, kde-format
+#| msgid "Resume job"
+msgctxt "Resume paused job"
+msgid "Resume"
+msgstr "કાર્યને પુન:શરૂ કરો"
+
+#: components/JobItem.qml:78
+#, fuzzy, kde-format
+#| msgid "Paused"
+msgctxt "Pause running job"
+msgid "Pause"
+msgstr "અટકાવ્યુ"
+
+#: components/JobItem.qml:92
+#, fuzzy, kde-format
+#| msgid "Cancel job"
+msgctxt "Cancel running job"
+msgid "Cancel"
+msgstr "કાર્યને રદ કરો"
+
+#: components/JobItem.qml:124 components/ThumbnailStrip.qml:158
+#, kde-format
+msgid "More Options…"
+msgstr ""
+
+#: components/JobItem.qml:152
+#, fuzzy, kde-format
+#| msgid "Open"
+msgid "Open"
+msgstr "ખોલો"
+
+#: components/JobItem.qml:160 filemenu.cpp:117
+#, kde-format
+msgid "Open Containing Folder"
+msgstr ""
+
+#: components/NotificationReplyField.qml:39
+#, kde-format
+msgctxt "Text field placeholder"
+msgid "Type a reply…"
+msgstr ""
+
+#: components/NotificationReplyField.qml:66
+#, kde-format
+msgctxt "@action:button"
+msgid "Send"
+msgstr ""
+
+#: components/SpeedChart.qml:142
+#, kde-format
+msgid "Speed"
+msgstr ""
+
+#: components/SpeedChart.qml:192
+#, kde-format
+msgid "Average Speed"
+msgstr ""
+
+#: components/SpeedChart.qml:249
+#, kde-format
+msgctxt "Percentage of a job"
+msgid "%1%"
+msgstr ""
+
+#: components/Summary.qml:36
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1 is the name of the job, can be things like Copying, deleting, moving"
+#| msgid "%1 [Paused]"
+msgctxt "Job name, e.g. Copying is paused"
+msgid "%1 (Paused)"
+msgstr "%1 [અટકાવ્યુ]"
+
+#: components/Summary.qml:41
+#, fuzzy, kde-format
+#| msgid "%1 [Finished]"
+msgctxt "Job name, e.g. Copying has failed"
+msgid "%1 (Failed)"
+msgstr "%1 [સમાપ્ત]"
+
+#: components/Summary.qml:43
+#, fuzzy, kde-format
+#| msgid "%1 [Finished]"
+msgid "Job Failed"
+msgstr "%1 [સમાપ્ત]"
+
+#: components/Summary.qml:47
+#, fuzzy, kde-format
+#| msgid "%1 [Finished]"
+msgctxt "Job name, e.g. Copying has finished"
+msgid "%1 (Finished)"
+msgstr "%1 [સમાપ્ત]"
+
+#: components/Summary.qml:49
+#, fuzzy, kde-format
+#| msgid "%1 [Finished]"
+msgid "Job Finished"
+msgstr "%1 [સમાપ્ત]"
+
 #: fileinfo.cpp:170
 #, kde-format
 msgid "Open with %1"
@@ -27,11 +294,6 @@ msgstr ""
 #: fileinfo.cpp:174
 #, kde-format
 msgid "Open with…"
-msgstr ""
-
-#: filemenu.cpp:117 package/contents/ui/components/JobItem.qml:162
-#, kde-format
-msgid "Open Containing Folder"
 msgstr ""
 
 #: filemenu.cpp:131
@@ -48,6 +310,112 @@ msgstr ""
 #: filemenu.cpp:198
 #, kde-format
 msgid "Properties"
+msgstr ""
+
+#: FullRepresentation.qml:81
+#, kde-format
+msgid "Do not disturb"
+msgstr ""
+
+#: FullRepresentation.qml:131
+#, kde-format
+msgid "For 1 hour"
+msgstr ""
+
+#: FullRepresentation.qml:136
+#, kde-format
+msgid "For 4 hours"
+msgstr ""
+
+#: FullRepresentation.qml:145
+#, kde-format
+msgid "Until this evening"
+msgstr ""
+
+#: FullRepresentation.qml:155
+#, kde-format
+msgid "Until tomorrow morning"
+msgstr ""
+
+#: FullRepresentation.qml:167
+#, kde-format
+msgid "Until Monday"
+msgstr ""
+
+#: FullRepresentation.qml:174
+#, kde-format
+msgid "Until manually disabled"
+msgstr ""
+
+#: FullRepresentation.qml:226
+#, fuzzy, kde-format
+#| msgid "Automatically hide"
+msgctxt "Do not disturb until date"
+msgid "Automatically ends: %1"
+msgstr "આપમેળે છુપાવો"
+
+#: FullRepresentation.qml:238
+#, kde-format
+msgctxt "Do not disturb until app has finished (reason)"
+msgid "While %1 is active (%2)"
+msgstr ""
+
+#: FullRepresentation.qml:240
+#, kde-format
+msgctxt "Do not disturb until app has finished"
+msgid "While %1 is active"
+msgstr ""
+
+#: FullRepresentation.qml:246
+#, kde-format
+msgctxt "Do not disturb because external mirrored screens connected"
+msgid "Screens are mirrored"
+msgstr ""
+
+#: FullRepresentation.qml:250
+#, kde-format
+msgctxt "Do not disturb because fullscreen app is focused"
+msgid "Fullscreen app is focused"
+msgstr ""
+
+#: FullRepresentation.qml:509 FullRepresentation.qml:515
+#, kde-format
+msgctxt "@action:button"
+msgid "View"
+msgstr ""
+
+#: FullRepresentation.qml:596
+#, kde-format
+msgid "Close Group"
+msgstr ""
+
+#: FullRepresentation.qml:618
+#, kde-format
+msgid "Show Fewer"
+msgstr ""
+
+#: FullRepresentation.qml:620
+#, kde-format
+msgctxt "Expand to show n more notifications"
+msgid "Show %1 More"
+msgstr ""
+
+#: FullRepresentation.qml:649 main.qml:108
+#, fuzzy, kde-format
+#| msgid "Notifications"
+msgid "No unread notifications"
+msgstr "સૂચનો"
+
+#: FullRepresentation.qml:664 main.qml:77
+#, fuzzy, kde-format
+#| msgid "Notifications and jobs"
+msgid "Notification service not available"
+msgstr "નોંધણીઓ અને કાર્યો"
+
+#: FullRepresentation.qml:666
+#, kde-format
+msgctxt "Vendor and product name"
+msgid "Notifications are currently provided by '%1 %2'"
 msgstr ""
 
 #: globalshortcuts.cpp:23
@@ -69,381 +437,7 @@ msgctxt "OSD popup, keep short"
 msgid "Notifications On"
 msgstr "નોંધણીઓ"
 
-#: package/contents/ui/components/ActionContainer.qml:80
-#, kde-format
-msgctxt "Reply to message"
-msgid "Reply"
-msgstr ""
-
-#: package/contents/ui/components/EditContextMenu.qml:32
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "Copy Link Address"
-msgstr ""
-
-#: package/contents/ui/components/EditContextMenu.qml:44
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "Copy"
-msgstr ""
-
-#: package/contents/ui/components/EditContextMenu.qml:61
-#, kde-format
-msgctxt "@action:inmenu"
-msgid "Select All"
-msgstr ""
-
-#: package/contents/ui/components/HeadingButtons.qml:76
-#, kde-format
-msgctxt "Notification was added less than a minute ago, keep short"
-msgid "Just now"
-msgstr ""
-
-#: package/contents/ui/components/HeadingButtons.qml:82
-#, kde-format
-msgctxt "Notification was added minutes ago, keep short"
-msgid "%1 min ago"
-msgid_plural "%1 min ago"
-msgstr[0] ""
-msgstr[1] ""
-
-#: package/contents/ui/components/HeadingButtons.qml:116
-#, fuzzy, kde-format
-#| msgid "%1 (%2 remaining)"
-msgctxt "seconds remaining, keep short"
-msgid "%1 s remaining"
-msgid_plural "%1 s remaining"
-msgstr[0] "%1 (%2 બાકી)"
-msgstr[1] "%1 (%2 બાકી)"
-
-#: package/contents/ui/components/HeadingButtons.qml:120
-#, fuzzy, kde-format
-#| msgid "%1 (%2 remaining)"
-msgctxt "minutes remaining, keep short"
-msgid "%1 min remaining"
-msgid_plural "%1 min remaining"
-msgstr[0] "%1 (%2 બાકી)"
-msgstr[1] "%1 (%2 બાકી)"
-
-#: package/contents/ui/components/HeadingButtons.qml:125
-#, fuzzy, kde-format
-#| msgid "%1 (%2 remaining)"
-msgctxt "hours remaining, keep short"
-msgid "%1 h remaining"
-msgid_plural "%1 h remaining"
-msgstr[0] "%1 (%2 બાકી)"
-msgstr[1] "%1 (%2 બાકી)"
-
-#: package/contents/ui/components/HeadingButtons.qml:145
-#, kde-format
-msgid "Configure"
-msgstr ""
-
-#: package/contents/ui/components/HeadingButtons.qml:162
-#, kde-format
-msgctxt "Opposite of minimize"
-msgid "Restore"
-msgstr ""
-
-#: package/contents/ui/components/HeadingButtons.qml:163
-#, kde-format
-msgid "Minimize"
-msgstr ""
-
-#: package/contents/ui/components/HeadingButtons.qml:186
-#, kde-format
-msgid "Close"
-msgstr ""
-
-#: package/contents/ui/components/JobDetails.qml:34
-#, kde-format
-msgctxt "Row description, e.g. Source"
-msgid "%1:"
-msgstr ""
-
-#: package/contents/ui/components/JobDetails.qml:109
-#, kde-format
-msgctxt "How many bytes have been copied"
-msgid "%2 of %1"
-msgstr ""
-
-#: package/contents/ui/components/JobDetails.qml:113
-#, fuzzy, kde-format
-#| msgid "%2 / 1 file"
-#| msgid_plural "%2 / %1 files"
-msgctxt "How many files have been copied"
-msgid "%2 of %1 file"
-msgid_plural "%2 of %1 files"
-msgstr[0] "%2 / 1 ફાઇલ"
-msgstr[1] "%2 / %1 ફાઇલો"
-
-#: package/contents/ui/components/JobDetails.qml:116
-#, fuzzy, kde-format
-#| msgid "%2 / 1 folder"
-#| msgid_plural "%2 / %1 folders"
-msgctxt "How many dirs have been copied"
-msgid "%2 of %1 folder"
-msgid_plural "%2 of %1 folders"
-msgstr[0] "%2 / 1 ફોલ્ડર"
-msgstr[1] "%2 / %1 ફોલ્ડરો"
-
-#: package/contents/ui/components/JobDetails.qml:119
-#, fuzzy, kde-format
-#| msgid "%2 / 1 file"
-#| msgid_plural "%2 / %1 files"
-msgctxt "How many items (that includes files and dirs) have been copied"
-msgid "%2 of %1 item"
-msgid_plural "%2 of %1 items"
-msgstr[0] "%2 / 1 ફાઇલ"
-msgstr[1] "%2 / %1 ફાઇલો"
-
-#: package/contents/ui/components/JobDetails.qml:127
-#, fuzzy, kde-format
-#| msgid "%2 / 1 file"
-#| msgid_plural "%2 / %1 files"
-msgid "%1 file"
-msgid_plural "%1 files"
-msgstr[0] "%2 / 1 ફાઇલ"
-msgstr[1] "%2 / %1 ફાઇલો"
-
-#: package/contents/ui/components/JobDetails.qml:129
-#, fuzzy, kde-format
-#| msgid "%2 / 1 folder"
-#| msgid_plural "%2 / %1 folders"
-msgid "%1 folder"
-msgid_plural "%1 folders"
-msgstr[0] "%2 / 1 ફોલ્ડર"
-msgstr[1] "%2 / %1 ફોલ્ડરો"
-
-#: package/contents/ui/components/JobDetails.qml:131
-#, kde-format
-msgid "%1 item"
-msgid_plural "%1 items"
-msgstr[0] ""
-msgstr[1] ""
-
-#: package/contents/ui/components/JobDetails.qml:148
-#: package/contents/ui/components/SpeedChart.qml:70
-#: package/contents/ui/components/SpeedChart.qml:95
-#: package/contents/ui/components/SpeedChart.qml:185
-#: package/contents/ui/components/SpeedChart.qml:196
-#, kde-format
-msgctxt "Bytes per second"
-msgid "%1/s"
-msgstr ""
-
-#: package/contents/ui/components/JobItem.qml:58
-#, kde-format
-msgctxt "Hides/expands item details"
-msgid "Details"
-msgstr ""
-
-#: package/contents/ui/components/JobItem.qml:79
-#, fuzzy, kde-format
-#| msgid "Resume job"
-msgctxt "Resume paused job"
-msgid "Resume"
-msgstr "કાર્યને પુન:શરૂ કરો"
-
-#: package/contents/ui/components/JobItem.qml:80
-#, fuzzy, kde-format
-#| msgid "Paused"
-msgctxt "Pause running job"
-msgid "Pause"
-msgstr "અટકાવ્યુ"
-
-#: package/contents/ui/components/JobItem.qml:94
-#, fuzzy, kde-format
-#| msgid "Cancel job"
-msgctxt "Cancel running job"
-msgid "Cancel"
-msgstr "કાર્યને રદ કરો"
-
-#: package/contents/ui/components/JobItem.qml:126
-#: package/contents/ui/components/ThumbnailStrip.qml:160
-#, kde-format
-msgid "More Options…"
-msgstr ""
-
-#: package/contents/ui/components/JobItem.qml:154
-#, fuzzy, kde-format
-#| msgid "Open"
-msgid "Open"
-msgstr "ખોલો"
-
-#: package/contents/ui/components/NotificationReplyField.qml:39
-#, kde-format
-msgctxt "Text field placeholder"
-msgid "Type a reply…"
-msgstr ""
-
-#: package/contents/ui/components/NotificationReplyField.qml:66
-#, kde-format
-msgctxt "@action:button"
-msgid "Send"
-msgstr ""
-
-#: package/contents/ui/components/SpeedChart.qml:142
-#, kde-format
-msgid "Speed"
-msgstr ""
-
-#: package/contents/ui/components/SpeedChart.qml:192
-#, kde-format
-msgid "Average Speed"
-msgstr ""
-
-#: package/contents/ui/components/SpeedChart.qml:249
-#, kde-format
-msgctxt "Percentage of a job"
-msgid "%1%"
-msgstr ""
-
-#: package/contents/ui/components/Summary.qml:36
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "%1 is the name of the job, can be things like Copying, deleting, moving"
-#| msgid "%1 [Paused]"
-msgctxt "Job name, e.g. Copying is paused"
-msgid "%1 (Paused)"
-msgstr "%1 [અટકાવ્યુ]"
-
-#: package/contents/ui/components/Summary.qml:41
-#, fuzzy, kde-format
-#| msgid "%1 [Finished]"
-msgctxt "Job name, e.g. Copying has failed"
-msgid "%1 (Failed)"
-msgstr "%1 [સમાપ્ત]"
-
-#: package/contents/ui/components/Summary.qml:43
-#, fuzzy, kde-format
-#| msgid "%1 [Finished]"
-msgid "Job Failed"
-msgstr "%1 [સમાપ્ત]"
-
-#: package/contents/ui/components/Summary.qml:47
-#, fuzzy, kde-format
-#| msgid "%1 [Finished]"
-msgctxt "Job name, e.g. Copying has finished"
-msgid "%1 (Finished)"
-msgstr "%1 [સમાપ્ત]"
-
-#: package/contents/ui/components/Summary.qml:49
-#, fuzzy, kde-format
-#| msgid "%1 [Finished]"
-msgid "Job Finished"
-msgstr "%1 [સમાપ્ત]"
-
-#: package/contents/ui/FullRepresentation.qml:75
-#, kde-format
-msgid "Do not disturb"
-msgstr ""
-
-#: package/contents/ui/FullRepresentation.qml:125
-#, kde-format
-msgid "For 1 hour"
-msgstr ""
-
-#: package/contents/ui/FullRepresentation.qml:130
-#, kde-format
-msgid "For 4 hours"
-msgstr ""
-
-#: package/contents/ui/FullRepresentation.qml:139
-#, kde-format
-msgid "Until this evening"
-msgstr ""
-
-#: package/contents/ui/FullRepresentation.qml:149
-#, kde-format
-msgid "Until tomorrow morning"
-msgstr ""
-
-#: package/contents/ui/FullRepresentation.qml:161
-#, kde-format
-msgid "Until Monday"
-msgstr ""
-
-#: package/contents/ui/FullRepresentation.qml:168
-#, kde-format
-msgid "Until manually disabled"
-msgstr ""
-
-#: package/contents/ui/FullRepresentation.qml:220
-#, fuzzy, kde-format
-#| msgid "Automatically hide"
-msgctxt "Do not disturb until date"
-msgid "Automatically ends: %1"
-msgstr "આપમેળે છુપાવો"
-
-#: package/contents/ui/FullRepresentation.qml:232
-#, kde-format
-msgctxt "Do not disturb until app has finished (reason)"
-msgid "While %1 is active (%2)"
-msgstr ""
-
-#: package/contents/ui/FullRepresentation.qml:234
-#, kde-format
-msgctxt "Do not disturb until app has finished"
-msgid "While %1 is active"
-msgstr ""
-
-#: package/contents/ui/FullRepresentation.qml:240
-#, kde-format
-msgctxt "Do not disturb because external mirrored screens connected"
-msgid "Screens are mirrored"
-msgstr ""
-
-#: package/contents/ui/FullRepresentation.qml:244
-#, kde-format
-msgctxt "Do not disturb because fullscreen app is focused"
-msgid "Fullscreen app is focused"
-msgstr ""
-
-#: package/contents/ui/FullRepresentation.qml:469
-#: package/contents/ui/FullRepresentation.qml:475
-#, kde-format
-msgctxt "@action:button"
-msgid "View"
-msgstr ""
-
-#: package/contents/ui/FullRepresentation.qml:556
-#, kde-format
-msgid "Close Group"
-msgstr ""
-
-#: package/contents/ui/FullRepresentation.qml:578
-#, kde-format
-msgid "Show Fewer"
-msgstr ""
-
-#: package/contents/ui/FullRepresentation.qml:580
-#, kde-format
-msgctxt "Expand to show n more notifications"
-msgid "Show %1 More"
-msgstr ""
-
-#: package/contents/ui/FullRepresentation.qml:609
-#: package/contents/ui/main.qml:111
-#, fuzzy, kde-format
-#| msgid "Notifications"
-msgid "No unread notifications"
-msgstr "સૂચનો"
-
-#: package/contents/ui/FullRepresentation.qml:624
-#: package/contents/ui/main.qml:80
-#, fuzzy, kde-format
-#| msgid "Notifications and jobs"
-msgid "Notification service not available"
-msgstr "નોંધણીઓ અને કાર્યો"
-
-#: package/contents/ui/FullRepresentation.qml:626
-#, kde-format
-msgctxt "Vendor and product name"
-msgid "Notifications are currently provided by '%1 %2'"
-msgstr ""
-
-#: package/contents/ui/main.qml:64
+#: main.qml:61
 #, fuzzy, kde-format
 #| msgid "no running jobs"
 msgid "%1 running job"
@@ -451,13 +445,13 @@ msgid_plural "%1 running jobs"
 msgstr[0] "કોઈ કાર્યો ચાલી રહ્યાં નથી"
 msgstr[1] "કોઈ કાર્યો ચાલી રહ્યાં નથી"
 
-#: package/contents/ui/main.qml:68
+#: main.qml:65
 #, kde-format
 msgctxt "Job title (percentage)"
 msgid "%1 (%2%)"
 msgstr ""
 
-#: package/contents/ui/main.qml:73
+#: main.qml:70
 #, fuzzy, kde-format
 #| msgid "%1 running job"
 #| msgid_plural "%1 running jobs"
@@ -466,7 +460,7 @@ msgid_plural "%1 running jobs (%2%)"
 msgstr[0] "%1 ચાલતું કાર્ય"
 msgstr[1] "%1 ચાલતાં કાર્યો"
 
-#: package/contents/ui/main.qml:86
+#: main.qml:83
 #, fuzzy, kde-format
 #| msgid "%1 notification"
 #| msgid_plural "%1 notifications"
@@ -475,7 +469,7 @@ msgid_plural "%1 unread notifications"
 msgstr[0] "%1 નોંધણી"
 msgstr[1] "%1 નોંધણીઓ"
 
-#: package/contents/ui/main.qml:91
+#: main.qml:88
 #, fuzzy, kde-format
 #| msgid "%1 notification"
 #| msgid_plural "%1 notifications"
@@ -484,28 +478,28 @@ msgid_plural "%1 active notifications"
 msgstr[0] "%1 નોંધણી"
 msgstr[1] "%1 નોંધણીઓ"
 
-#: package/contents/ui/main.qml:104
+#: main.qml:101
 #, kde-format
 msgid "Do not disturb until %1; middle-click to exit now"
 msgstr ""
 
-#: package/contents/ui/main.qml:107
+#: main.qml:104
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
 msgstr ""
 
-#: package/contents/ui/main.qml:113
+#: main.qml:110
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
 msgstr ""
 
-#: package/contents/ui/main.qml:236
+#: main.qml:236
 #, fuzzy, kde-format
 #| msgid "Notifications"
 msgid "Clear All Notifications"
 msgstr "નોંધણીઓ"
 
-#: package/contents/ui/main.qml:255
+#: main.qml:255
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr ""
