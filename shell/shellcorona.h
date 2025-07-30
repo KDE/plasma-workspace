@@ -143,6 +143,8 @@ public:
 
     Q_INVOKABLE bool enteredEditModeViaDesktop();
 
+    Q_INVOKABLE bool allPanelsVisible(int screenId) const;
+
 Q_SIGNALS:
     void glInitializationFailed();
     // A preview for this containment has been rendered and saved to disk

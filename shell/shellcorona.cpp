@@ -2970,6 +2970,34 @@ void ShellCorona::refreshCurrentShell()
     QProcess::startDetached(u"plasmashell"_s, {u"--replace"_s});
 }
 
+bool ShellCorona::allPanelsVisible(int screenId) const
+{
+    // check if we're waiting for panels at all
+    if (!m_waitingPanels.empty() && m_panelViews.empty()) {
+        return false;
+    }
+
+    // check if we're waiting for panels for this screen
+    for (const auto &panel : m_waitingPanels) {
+        if (panel->screen() == screenId) {
+            return false;
+        }
+    }
+
+    // Then check if any panels on our screen are visible
+    for (auto it = m_panelViews.constBegin(), end = m_panelViews.constEnd(); it != end; ++it) {
+        if (it.key()->screen() != screenId) {
+            continue;
+        } else {
+            if (!it.value()->isVisible()) {
+                return false;
+            }
+        }
+    }
+
+    return true;
+}
+
 // Desktop corona handler
 
 #include "moc_shellcorona.cpp"
