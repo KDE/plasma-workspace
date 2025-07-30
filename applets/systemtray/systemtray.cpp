@@ -58,12 +58,7 @@ void SystemTray::init()
 
     Containment::init();
 
-    m_settings = new SystemTraySettings(configScheme(), this);
-    connect(m_settings, &SystemTraySettings::enabledPluginsChanged, this, &SystemTray::onEnabledAppletsChanged);
-
-    m_plasmoidRegistry = new PlasmoidRegistry(m_settings, this);
-    connect(m_plasmoidRegistry, &PlasmoidRegistry::plasmoidEnabled, this, &SystemTray::startApplet);
-    connect(m_plasmoidRegistry, &PlasmoidRegistry::plasmoidStopped, this, &SystemTray::stopApplet);
+    initSettingsAndRegistry();
 
     // we don't want to automatically propagate the activated signal from the Applet to the Containment
     // even if SystemTray is of type Containment, it is de facto Applet and should act like one
@@ -82,6 +77,20 @@ void SystemTray::init()
                 m_xwaylandClientsScale = group.readEntry("XwaylandClientsScale", true);
             }
         });
+    }
+}
+
+void SystemTray::initSettingsAndRegistry()
+{
+    if (!m_settings) {
+        m_settings = new SystemTraySettings(configScheme(), this);
+        connect(m_settings, &SystemTraySettings::enabledPluginsChanged, this, &SystemTray::onEnabledAppletsChanged);
+    }
+
+    if (!m_plasmoidRegistry) {
+        m_plasmoidRegistry = new PlasmoidRegistry(m_settings, this);
+        connect(m_plasmoidRegistry, &PlasmoidRegistry::plasmoidEnabled, this, &SystemTray::startApplet);
+        connect(m_plasmoidRegistry, &PlasmoidRegistry::plasmoidStopped, this, &SystemTray::stopApplet);
     }
 }
 
@@ -168,6 +177,7 @@ void SystemTray::restoreContents(KConfigGroup &group)
         }
     }
 
+    initSettingsAndRegistry();
     m_plasmoidRegistry->init();
 }
 

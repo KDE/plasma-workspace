@@ -86,6 +86,7 @@ private Q_SLOTS:
 private:
     void migrateFromSystrayContainer();
     SystemTrayModel *systemTrayModel();
+    void initSettingsAndRegistry();
 
     KConfigWatcher::Ptr m_configWatcher;
     bool m_xwaylandClientsScale = true;

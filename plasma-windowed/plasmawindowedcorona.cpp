@@ -62,6 +62,9 @@ void PlasmaWindowedCorona::loadApplet(const QString &applet, const QVariantList 
                 m_view = nullptr;
                 return;
             }
+            // Some applets call corona() in their restore function,
+            // which requires a set parent.
+            a->setParent(this);
             a->restore(cg);
 
             // Access a->config() before adding to containment
