@@ -85,7 +85,8 @@ private:
     QString m_genericName;
 
     QList<QAction *> m_jumpListActions;
-    QAction *m_separatorAction = nullptr;
+    QAction *m_firstSeparatorAction = nullptr;
+    QAction *m_secondSeparatorAction = nullptr;
     QList<QAction *> m_openWithActions;
 
     QAction *m_openContainingFolderAction = nullptr;

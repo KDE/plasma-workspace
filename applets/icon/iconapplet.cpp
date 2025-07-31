@@ -390,17 +390,25 @@ QList<QAction *> IconApplet::extraActions()
         actions << m_jumpListActions;
     }
 
-    if (!actions.isEmpty()) {
-        if (!m_separatorAction) {
-            m_separatorAction = new QAction(this);
-            m_separatorAction->setSeparator(true);
-        }
-        actions << m_separatorAction;
-    }
-
     if (m_openContainingFolderAction) {
         actions << m_openContainingFolderAction;
     }
+
+    if (!actions.isEmpty()) {
+        if (!m_firstSeparatorAction) {
+            m_firstSeparatorAction = new QAction(this);
+            m_firstSeparatorAction->setSeparator(true);
+        }
+        actions << m_firstSeparatorAction;
+    }
+
+    actions << internalAction(QStringLiteral("remove"));
+
+    if (!m_secondSeparatorAction) {
+        m_secondSeparatorAction = new QAction(this);
+        m_secondSeparatorAction->setSeparator(true);
+    }
+    actions << m_secondSeparatorAction;
 
     return actions;
 }
