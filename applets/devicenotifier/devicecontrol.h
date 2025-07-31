@@ -11,11 +11,10 @@
 #include <QTimer>
 #include <qqmlregistration.h>
 
+#include "messageinfo.h"
 #include "spaceinfo.h"
 #include "stateinfo.h"
 #include "storageinfo.h"
-
-#include "devicemessagemonitor_p.h"
 
 class DeviceControl : public QAbstractListModel
 {
@@ -66,6 +65,7 @@ private:
         std::shared_ptr<StorageInfo> storageInfo;
         std::shared_ptr<StateInfo> stateInfo;
         std::shared_ptr<SpaceInfo> spaceInfo;
+        std::shared_ptr<MessageInfo> messageInfo;
     };
 
     QList<DeviceInfo> m_devices;
@@ -80,6 +80,4 @@ private:
         QString parentUdi;
     };
     QHash<QString, RemoveTimerData> m_removeTimers;
-
-    std::shared_ptr<DeviceMessageMonitor> m_messageMonitor;
 };

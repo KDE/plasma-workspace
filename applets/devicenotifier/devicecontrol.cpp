@@ -27,7 +27,6 @@ inline constexpr auto REMOVE_INTERVAL = 5s;
 
 DeviceControl::DeviceControl(QObject *parent)
     : QAbstractListModel(parent)
-    , m_messageMonitor(DeviceMessageMonitor::instance())
 
 {
     qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: Begin initializing";
@@ -40,7 +39,6 @@ DeviceControl::DeviceControl(QObject *parent)
     connect(Solid::DeviceNotifier::instance(), &Solid::DeviceNotifier::deviceAdded, this, &DeviceControl::onDeviceAdded);
     connect(Solid::DeviceNotifier::instance(), &Solid::DeviceNotifier::deviceRemoved, this, &DeviceControl::onDeviceRemoved);
 
-    connect(m_messageMonitor.get(), &DeviceMessageMonitor::messageChanged, this, &DeviceControl::onDeviceMessageChanged);
     qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: Initialized";
 }
 
@@ -107,7 +105,7 @@ QVariant DeviceControl::data(const QModelIndex &index, int role) const
     case OperationResult:
         return deviceInfo.stateInfo ? deviceInfo.stateInfo->getOperationResult() : QVariant();
     case Message:
-        return m_messageMonitor->getMessage(deviceInfo.storageInfo->device().udi());
+        return deviceInfo.messageInfo ? deviceInfo.messageInfo->getMessage() : QVariant();
     case Actions: {
         if (auto it = m_actions.constFind(deviceInfo.storageInfo->device().udi()); it != m_actions.end()) {
             return QVariant::fromValue(*it);
@@ -178,14 +176,15 @@ void DeviceControl::onDeviceAdded(const QString &udi)
     beginInsertRows(QModelIndex(), position, position);
 
     qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: Add device: " << udi << " to the model at position : " << position;
-    m_messageMonitor->addMonitoringDevice(udi, stateInfo);
 
+    auto messageInfo = std::make_shared<MessageInfo>(storageInfo, stateInfo);
     auto spaceInfo = std::make_shared<SpaceInfo>(storageInfo, stateInfo);
 
     DeviceInfo deviceInfo{
         .storageInfo = storageInfo,
         .stateInfo = stateInfo,
         .spaceInfo = spaceInfo,
+        .messageInfo = messageInfo,
     };
 
     m_devices.append(deviceInfo);
@@ -194,6 +193,7 @@ void DeviceControl::onDeviceAdded(const QString &udi)
 
     connect(stateInfo.get(), &StateInfo::stateChanged, this, &DeviceControl::onDeviceStatusChanged);
     connect(spaceInfo.get(), &SpaceInfo::sizeChanged, this, &DeviceControl::onDeviceSizeChanged);
+    connect(messageInfo.get(), &MessageInfo::messageChanged, this, &DeviceControl::onDeviceMessageChanged);
 
     // Save storage drive parent for storage volumes to delay remove it and to properly remove it from device model
     // if device was physically removed from the computer. Storage volume with storage drive parent need to
@@ -311,7 +311,6 @@ void DeviceControl::deviceDelayRemove(const QString &udi, const QString &parentU
                                      << " successfully removed from the model";
     m_devices.removeAt(position.value());
     m_devicesUdi.remove(udi);
-    m_messageMonitor->removeMonitoringDevice(udi);
     endRemoveRows();
 
     if (auto it = m_removeTimers.find(udi); it != m_removeTimers.end()) {

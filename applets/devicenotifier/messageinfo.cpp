@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: GPL-2.0-or-later
  */
 
-#include "devicemessagemonitor_p.h"
+#include "messageinfo.h"
 
 #include <QProcess>
 #include <QRegularExpression>
@@ -25,54 +25,20 @@
 
 using namespace Qt::StringLiterals;
 
-DeviceMessageMonitor::DeviceMessageMonitor(QObject *parent)
+MessageInfo::MessageInfo(const std::shared_ptr<StorageInfo> &storageInfo, const std::shared_ptr<StateInfo> &stateInfo, QObject *parent)
     : QObject(parent)
+    , m_storageInfo(storageInfo)
+    , m_stateInfo(stateInfo)
 {
+    connect(m_stateInfo.get(), &StateInfo::stateChanged, this, &MessageInfo::onStateChanged);
 }
 
-std::shared_ptr<DeviceMessageMonitor> DeviceMessageMonitor::instance()
+QString MessageInfo::getMessage() const
 {
-    static std::weak_ptr<DeviceMessageMonitor> s_clip;
-    if (s_clip.expired()) {
-        std::shared_ptr<DeviceMessageMonitor> ptr{new DeviceMessageMonitor};
-        s_clip = ptr;
-        return ptr;
-    }
-    return s_clip.lock();
+    return m_message;
 }
 
-void DeviceMessageMonitor::addMonitoringDevice(const QString &udi, const std::shared_ptr<StateInfo> &info)
-{
-    Solid::Device device(udi);
-
-    if (!device.isValid()) {
-        return;
-    }
-
-    m_deviceMessages.insert(udi, {QString(), info});
-
-    connect(info.get(), &StateInfo::stateChanged, this, &DeviceMessageMonitor::onStateChanged);
-
-    // Check for messages that we potentially missed
-    onStateChanged(udi);
-}
-
-void DeviceMessageMonitor::removeMonitoringDevice(const QString &udi)
-{
-    if (auto it = m_deviceMessages.constFind(udi); it != m_deviceMessages.cend()) {
-        m_deviceMessages.erase(it);
-    }
-}
-
-QString DeviceMessageMonitor::getMessage(const QString &udi)
-{
-    if (auto it = m_deviceMessages.constFind(udi); it != m_deviceMessages.cend()) {
-        return it.value().message;
-    }
-    return {};
-}
-
-void DeviceMessageMonitor::queryBlockingApps(const QString &devicePath)
+void MessageInfo::queryBlockingApps(const QString &devicePath)
 {
     auto p = new QProcess;
     connect(p, &QProcess::errorOccurred, [p, this](QProcess::ProcessError) {
@@ -102,45 +68,31 @@ void DeviceMessageMonitor::queryBlockingApps(const QString &devicePath)
     //    p.start(QStringLiteral("fuser"), {QStringLiteral("-m"), devicePath});
 }
 
-void DeviceMessageMonitor::clearPreviousMessage(const QString &udi)
+void MessageInfo::clearPreviousMessage()
 {
-    notify(std::nullopt, QString(), udi);
+    notify(std::nullopt);
 }
 
-void DeviceMessageMonitor::onStateChanged(const QString &udi)
+void MessageInfo::onStateChanged()
 {
-    if (!m_deviceMessages.contains(udi)) {
+    qCDebug(APPLETS::DEVICENOTIFIER) << "Message Info " << m_storageInfo->device().udi() << " : State change signal arrived";
+
+    if (m_stateInfo->isBusy()) {
+        qCDebug(APPLETS::DEVICENOTIFIER) << "Message Info " << m_storageInfo->device().udi() << " : The device in work. Reset the errors";
+        notify(QString());
         return;
     }
 
-    qCDebug(APPLETS::DEVICENOTIFIER) << "Device Message Monitor: "
-                                     << "State change signal arrived for device " << udi;
-
-    if (m_deviceMessages[udi].state->isBusy()) {
-        qCDebug(APPLETS::DEVICENOTIFIER) << "Device Message Monitor: "
-                                         << "The device in work. Reset the errors for " << udi;
-        notify(QString(), QString(), udi);
-        return;
-    }
-
-    auto operationResult = m_deviceMessages[udi].state->getOperationResult();
-    auto state = m_deviceMessages[udi].state->getState();
-
-    if (state == StateInfo::Idle) {
-        notify(QString(), QString(), udi);
-        qCDebug(APPLETS::DEVICENOTIFIER) << "Device Message Monitor: "
-                                         << "device " << udi << " is in the idle state. No message";
-        return;
-    }
+    auto operationResult = m_stateInfo->getOperationResult();
+    auto state = m_stateInfo->getState();
 
     if (operationResult == Solid::ErrorType::NoError && state == StateInfo::MountDone) {
-        notify(QString(), QString(), udi);
-        qCDebug(APPLETS::DEVICENOTIFIER) << "Device Message Monitor: "
-                                         << "No message for device " << udi;
+        notify(QString());
+        qCDebug(APPLETS::DEVICENOTIFIER) << "Message Info " << m_storageInfo->device().udi() << " : No message for device";
         return;
     }
 
-    auto operationInfo = m_deviceMessages[udi].state->getOperationInfo();
+    auto operationInfo = m_stateInfo->getOperationInfo();
 
     // Bit awkward but oh well. The error message construction can defer an error to queryBlockingApps instead.
     // That makes it a tri-state return value between an error message, no error, and a deferred error.
@@ -159,7 +111,7 @@ void DeviceMessageMonitor::onStateChanged(const QString &udi)
             if (state == StateInfo::RepairDone) {
                 return i18n("Successfully repaired!");
             }
-            if (state == StateInfo::UnmountDone && m_deviceMessages[udi].state->isSafelyRemovable()) {
+            if (state == StateInfo::UnmountDone && m_stateInfo->isSafelyRemovable()) {
                 KNotification::event(QStringLiteral("safelyRemovable"),
                                      i18n("Device Status"),
                                      i18n("A device can now be safely removed"),
@@ -175,7 +127,7 @@ void DeviceMessageMonitor::onStateChanged(const QString &udi)
             case StateInfo::MountDone:
                 return i18n("You are not authorized to mount this device.");
             case StateInfo::UnmountDone: {
-                Solid::Device device(udi);
+                const Solid::Device &device = m_storageInfo->device();
                 if (device.is<Solid::OpticalDisc>()) {
                     return i18n("You are not authorized to eject this disc.");
                 }
@@ -192,12 +144,13 @@ void DeviceMessageMonitor::onStateChanged(const QString &udi)
                 return i18n("Could not mount this device as it is busy.");
             }
 
-            QString deviceUdi = udi;
-            Solid::Device device(udi);
+            QString deviceUdi = m_storageInfo->device().udi();
+            Solid::Device device = m_storageInfo->device();
+
             if (state == StateInfo::UnmountDone && device.is<Solid::OpticalDisc>()) {
                 const auto discs = Solid::Device::listFromType(Solid::DeviceInterface::OpticalDisc);
                 for (const auto &disc : discs) {
-                    if (disc.parentUdi() == udi) {
+                    if (disc.parentUdi() == m_storageInfo->device().udi()) {
                         deviceUdi = disc.udi();
                         break;
                     }
@@ -213,7 +166,7 @@ void DeviceMessageMonitor::onStateChanged(const QString &udi)
             // Without that, our lambda function would capture an uninitialized object, resulting in UB
             // and random crashes
             auto c = new QMetaObject::Connection();
-            *c = connect(this, &DeviceMessageMonitor::blockingAppsReady, [c, operationResult, operationInfo, deviceUdi, this](const QStringList &blockApps) {
+            *c = connect(this, &MessageInfo::blockingAppsReady, [c, operationResult, operationInfo, deviceUdi, this](const QStringList &blockApps) {
                 QString message;
                 if (blockApps.isEmpty()) {
                     message = i18n("One or more files on this device are open within an application.");
@@ -223,12 +176,13 @@ void DeviceMessageMonitor::onStateChanged(const QString &udi)
                                     blockApps.size(),
                                     blockApps.join(i18nc("separator in list of apps blocking device unmount", ", ")));
                 }
-                notify(message, operationInfo.toString(), deviceUdi);
-                qCDebug(APPLETS::DEVICENOTIFIER) << "Device Message Monitor: " << "Message for device " << deviceUdi << " operation result: " << operationResult
+                notify(message);
+                qCDebug(APPLETS::DEVICENOTIFIER) << "Message Info " << m_storageInfo->device().udi() << " : operation result: " << operationResult
                                                  << "message:" << message;
                 disconnect(*c);
                 delete c;
             });
+            qCDebug(APPLETS::DEVICENOTIFIER) << "Message Info " << m_storageInfo->device().udi() << " : Querying for blocking apps";
             queryBlockingApps(access->filePath());
             return DeferredError{};
         }
@@ -241,7 +195,7 @@ void DeviceMessageMonitor::onStateChanged(const QString &udi)
             case StateInfo::MountDone:
                 return i18n("Could not mount this device.");
             case StateInfo::UnmountDone: {
-                Solid::Device device(udi);
+                const Solid::Device &device = m_storageInfo->device();
                 if (device.is<Solid::OpticalDisc>()) {
                     return i18n("Could not eject this disc.");
                 }
@@ -259,31 +213,26 @@ void DeviceMessageMonitor::onStateChanged(const QString &udi)
     }();
 
     if (std::holds_alternative<DeferredError>(errorVariant)) {
-        qCDebug(APPLETS::DEVICENOTIFIER) << "Device Message Monitor: "
-                                         << "Deferred error for device " << udi;
+        qCDebug(APPLETS::DEVICENOTIFIER) << "Message Info " << m_storageInfo->device().udi() << " : Deferred error for device";
         return; // don't notify, we will do it later
     }
 
     const auto &message = std::get<std::optional<QString>>(errorVariant);
 
-    qCDebug(APPLETS::DEVICENOTIFIER) << "Device Message Monitor: "
-                                     << "message for device " << udi << " operation result: " << operationResult << " message:" << message;
-    notify(message, operationInfo.toString(), udi);
+    qCDebug(APPLETS::DEVICENOTIFIER) << "Message Info " << m_storageInfo->device().udi() << " : operation result: " << operationResult
+                                     << " message:" << message;
+    notify(message);
 }
 
-void DeviceMessageMonitor::notify(const std::optional<QString> &message, const QString &description, const QString &udi)
+void MessageInfo::notify(const std::optional<QString> &message)
 {
-    Q_UNUSED(description)
-
     if (message.has_value()) {
-        m_deviceMessages[udi].message = message.value();
+        m_message = message.value();
     } else {
-        if (auto it = m_deviceMessages.constFind(udi); it != m_deviceMessages.cend()) {
-            m_deviceMessages.erase(it);
-        }
+        m_message.clear();
     }
 
-    Q_EMIT messageChanged(udi);
+    Q_EMIT messageChanged(m_storageInfo->device().udi());
 }
 
-#include "moc_devicemessagemonitor_p.cpp"
+#include "moc_messageinfo.cpp"
