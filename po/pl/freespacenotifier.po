@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-30 00:44+0000\n"
+"POT-Creation-Date: 2025-07-31 00:44+0000\n"
 "PO-Revision-Date: 2025-07-26 20:15+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -95,7 +95,7 @@ msgstr ""
 "System powiadomi cię, gdy wolne miejsce spadnie poniżej podanych MiB i "
 "podanego procentu dostępnej przestrzeni."
 
-#: module.cpp:105
+#: module.cpp:122
 #, kde-format
 msgid ""
 "Your %1 partition is running out of disk space; %2 MiB of space remaining "
@@ -103,7 +103,7 @@ msgid ""
 msgstr ""
 "Zaczyna brakować miejsca na twojej partycji %1, pozostało ci %2 MiB (%3%)."
 
-#: module.cpp:107
+#: module.cpp:124
 #, kde-format
 msgid ""
 "Your Root partition is running out of disk space; %1 MiB of space remaining "
@@ -112,7 +112,7 @@ msgstr ""
 "Zaczyna brakować miejsca na twojej partycji głównej, pozostało ci %1 MiB "
 "(%2%)."
 
-#: module.cpp:109
+#: module.cpp:126
 #, kde-format
 msgid ""
 "Your Home folder is running out of disk space; %1 MiB of space remaining "
@@ -120,7 +120,7 @@ msgid ""
 msgstr ""
 "Zaczyna brakować miejsca w twoim katalogu domowym, pozostało ci %1 MiB (%2%)."
 
-#: module.cpp:134
+#: module.cpp:151
 #, kde-format
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"

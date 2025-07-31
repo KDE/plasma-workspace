@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-25 00:44+0000\n"
+"POT-Creation-Date: 2025-07-31 00:44+0000\n"
 "PO-Revision-Date: 2025-07-04 18:07+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -487,43 +487,43 @@ msgstr "Язык «%1» не поддерживается"
 msgid "Add languages in the order you want to see them in your applications."
 msgstr "Добавьте языки в том порядке, в котором они должны быть в приложениях."
 
-#: ui/AdvancedLanguageSelectPage.qml:96
+#: ui/AdvancedLanguageSelectPage.qml:100
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Language"
 msgstr "Сменить язык"
 
-#: ui/AdvancedLanguageSelectPage.qml:100
+#: ui/AdvancedLanguageSelectPage.qml:104
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Language"
 msgstr "Смена языка"
 
-#: ui/AdvancedLanguageSelectPage.qml:111
+#: ui/AdvancedLanguageSelectPage.qml:113
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move to top"
 msgstr "Переместить вверх"
 
-#: ui/AdvancedLanguageSelectPage.qml:117
+#: ui/AdvancedLanguageSelectPage.qml:122
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove"
 msgstr "Удалить"
 
-#: ui/AdvancedLanguageSelectPage.qml:130
+#: ui/AdvancedLanguageSelectPage.qml:137
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No Language Configured"
 msgstr "Язык не настроен"
 
-#: ui/AdvancedLanguageSelectPage.qml:172 ui/AdvancedLanguageSelectPage.qml:206
+#: ui/AdvancedLanguageSelectPage.qml:179 ui/AdvancedLanguageSelectPage.qml:213
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Languages"
 msgstr "Добавление языков"
 
-#: ui/AdvancedLanguageSelectPage.qml:229
+#: ui/AdvancedLanguageSelectPage.qml:236
 #, kde-format
 msgctxt "@action:button"
 msgid "Add More…"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-30 00:44+0000\n"
+"POT-Creation-Date: 2025-07-31 00:44+0000\n"
 "PO-Revision-Date: 2024-08-13 15:29+0300\n"
 "Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -94,7 +94,7 @@ msgid ""
 "and the specified percentage of available space."
 msgstr ""
 
-#: module.cpp:105
+#: module.cpp:122
 #, fuzzy, kde-format
 #| msgid ""
 #| "Your Root partition is running out of disk space, you have %1 MiB "
@@ -105,7 +105,7 @@ msgid ""
 msgstr ""
 "Ο ελεύθερος χώρος στη Ριζική Κατάτμηση σας τελειώνει, απομένουν %1 MiB (%2%)."
 
-#: module.cpp:107
+#: module.cpp:124
 #, fuzzy, kde-format
 #| msgid ""
 #| "Your Root partition is running out of disk space, you have %1 MiB "
@@ -116,7 +116,7 @@ msgid ""
 msgstr ""
 "Ο ελεύθερος χώρος στη Ριζική Κατάτμηση σας τελειώνει, απομένουν %1 MiB (%2%)."
 
-#: module.cpp:109
+#: module.cpp:126
 #, fuzzy, kde-format
 #| msgid ""
 #| "Your Home folder is running out of disk space, you have %1 MiB remaining "
@@ -128,7 +128,7 @@ msgstr ""
 "Ο ελεύθερος χώρος στον Προσωπικό φάκελο σας τελειώνει, απομένουν %1 MiB "
 "(%2%)."
 
-#: module.cpp:134
+#: module.cpp:151
 #, kde-format
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-30 00:44+0000\n"
+"POT-Creation-Date: 2025-07-31 00:44+0000\n"
 "PO-Revision-Date: 2015-02-14 22:41+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -97,7 +97,7 @@ msgid ""
 "and the specified percentage of available space."
 msgstr ""
 
-#: module.cpp:105
+#: module.cpp:122
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Warns the user that the system is running low on space on his home "
@@ -111,7 +111,7 @@ msgid ""
 msgstr ""
 "Na vašem ličnom direktoriju nema prostora, imate %1 MiB preostalo (%2%)"
 
-#: module.cpp:107
+#: module.cpp:124
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Warns the user that the system is running low on space on his home "
@@ -125,7 +125,7 @@ msgid ""
 msgstr ""
 "Na vašem ličnom direktoriju nema prostora, imate %1 MiB preostalo (%2%)"
 
-#: module.cpp:109
+#: module.cpp:126
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Warns the user that the system is running low on space on his home "
@@ -139,7 +139,7 @@ msgid ""
 msgstr ""
 "Na vašem ličnom direktoriju nema prostora, imate %1 MiB preostalo (%2%)"
 
-#: module.cpp:134
+#: module.cpp:151
 #, kde-format
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"

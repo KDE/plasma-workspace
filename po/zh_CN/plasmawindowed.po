@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-22 00:43+0000\n"
+"POT-Creation-Date: 2025-07-31 00:44+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -17,7 +17,7 @@ msgstr ""
 "X-Crowdin-File: /kf6-trunk/messages/plasma-workspace/plasmawindowed.pot\n"
 "X-Crowdin-File-ID: 46295\n"
 
-#: main.cpp:52 plasmawindowedcorona.cpp:103
+#: main.cpp:52 plasmawindowedcorona.cpp:106
 #, kde-format
 msgid "Plasma Windowed"
 msgstr "窗口化 Plasma"
@@ -27,7 +27,7 @@ msgstr "窗口化 Plasma"
 msgid "Enable QML Javascript debugger"
 msgstr "启用 QML Javascript 调试器"
 
-#: main.cpp:57 plasmawindowedcorona.cpp:105
+#: main.cpp:57 plasmawindowedcorona.cpp:108
 #, kde-format
 msgid ""
 "Makes the plasmoid stay alive in the Notification Area, even when the window "
@@ -39,12 +39,12 @@ msgstr "保持 Plasma 小程序在通知区域中存在，即使它的窗口已�
 msgid "Force loading the given shell plugin"
 msgstr "强制加载指定的外壳插件"
 
-#: main.cpp:63 plasmawindowedcorona.cpp:106
+#: main.cpp:63 plasmawindowedcorona.cpp:109
 #, kde-format
 msgid "The applet to open."
 msgstr "要打开的小程序。"
 
-#: main.cpp:64 plasmawindowedcorona.cpp:107
+#: main.cpp:64 plasmawindowedcorona.cpp:110
 #, kde-format
 msgid "Arguments to pass to the plasmoid."
 msgstr "要传递到 Plasma 小程序的参数。"

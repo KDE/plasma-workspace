@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kded_susefreespacenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-30 00:44+0000\n"
+"POT-Creation-Date: 2025-07-31 00:44+0000\n"
 "PO-Revision-Date: 2024-01-03 14:17+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -90,7 +90,7 @@ msgid ""
 "and the specified percentage of available space."
 msgstr ""
 
-#: module.cpp:105
+#: module.cpp:122
 #, fuzzy, kde-format
 #| msgid ""
 #| "Your Root partition is running out of disk space, you have %1 MiB "
@@ -102,7 +102,7 @@ msgstr ""
 "Via 'Root' subdisko estas perdanta diskospacon, vi havas ankoraŭ %1 MiB "
 "(%2%)."
 
-#: module.cpp:107
+#: module.cpp:124
 #, fuzzy, kde-format
 #| msgid ""
 #| "Your Root partition is running out of disk space, you have %1 MiB "
@@ -114,7 +114,7 @@ msgstr ""
 "Via 'Root' subdisko estas perdanta diskospacon, vi havas ankoraŭ %1 MiB "
 "(%2%)."
 
-#: module.cpp:109
+#: module.cpp:126
 #, fuzzy, kde-format
 #| msgid ""
 #| "Your Home folder is running out of disk space, you have %1 MiB remaining "
@@ -125,7 +125,7 @@ msgid ""
 msgstr ""
 "Via 'Home' teko estas perdanta diskospacon, vi havas ankoraŭ %1 MiB (%2%)."
 
-#: module.cpp:134
+#: module.cpp:151
 #, kde-format
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"

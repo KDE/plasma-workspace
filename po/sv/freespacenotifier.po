@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-30 00:44+0000\n"
+"POT-Creation-Date: 2025-07-31 00:44+0000\n"
 "PO-Revision-Date: 2025-05-31 15:14+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -90,7 +90,7 @@ msgstr ""
 "Systemet meddelar dig om det lediga utrymmet sjunker under angivet MiB och "
 "den angivna procentandelen av tillgängligt utrymme."
 
-#: module.cpp:105
+#: module.cpp:122
 #, kde-format
 msgid ""
 "Your %1 partition is running out of disk space; %2 MiB of space remaining "
@@ -99,7 +99,7 @@ msgstr ""
 "Utrymmet på partitionen %1 håller på att ta slut, %2 MiB utrymme finns kvar "
 "(%3 %)"
 
-#: module.cpp:107
+#: module.cpp:124
 #, kde-format
 msgid ""
 "Your Root partition is running out of disk space; %1 MiB of space remaining "
@@ -108,7 +108,7 @@ msgstr ""
 "Utrymmet på rotpartitionen håller på att ta slut, %1 MiB utrymme finns kvar "
 "(%2 %)."
 
-#: module.cpp:109
+#: module.cpp:126
 #, kde-format
 msgid ""
 "Your Home folder is running out of disk space; %1 MiB of space remaining "
@@ -117,7 +117,7 @@ msgstr ""
 "Diskutrymmet i din hemkatalog håller på att ta slut, %1 MiB utrymme finns "
 "kvar (%2 %)."
 
-#: module.cpp:134
+#: module.cpp:151
 #, kde-format
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"

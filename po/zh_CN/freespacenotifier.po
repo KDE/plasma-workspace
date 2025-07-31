@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-30 00:44+0000\n"
+"POT-Creation-Date: 2025-07-31 00:44+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -88,28 +88,28 @@ msgid ""
 "and the specified percentage of available space."
 msgstr "如果可用空间低于指定的 MiB 值和可用空间的指定百分比，系统将通知用户。"
 
-#: module.cpp:105
+#: module.cpp:122
 #, kde-format
 msgid ""
 "Your %1 partition is running out of disk space; %2 MiB of space remaining "
 "(%3%)."
 msgstr "本机的 %1 分区磁盘空间即将用尽；剩余空间 %2 MiB (%3%)。"
 
-#: module.cpp:107
+#: module.cpp:124
 #, kde-format
 msgid ""
 "Your Root partition is running out of disk space; %1 MiB of space remaining "
 "(%2%)."
 msgstr "本机的根分区磁盘空间即将用尽；剩余空间 %1 MiB (%2%)。"
 
-#: module.cpp:109
+#: module.cpp:126
 #, kde-format
 msgid ""
 "Your Home folder is running out of disk space; %1 MiB of space remaining "
 "(%2%)."
 msgstr "当前用户的主文件夹磁盘空间即将用尽；剩余空间 %1 MiB (%2%)。"
 
-#: module.cpp:134
+#: module.cpp:151
 #, kde-format
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"

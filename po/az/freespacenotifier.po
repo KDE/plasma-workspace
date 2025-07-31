@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-30 00:44+0000\n"
+"POT-Creation-Date: 2025-07-31 00:44+0000\n"
 "PO-Revision-Date: 2025-05-19 16:34+0400\n"
 "Last-Translator: linux <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -91,7 +91,7 @@ msgstr ""
 "Əgər boş disk sahəsini MiB və faiz ilə göstərilmiş ölçüdən aşağı düşərsə "
 "sistem sizi xəbərdar edəcək."
 
-#: module.cpp:105
+#: module.cpp:122
 #, kde-format
 msgid ""
 "Your %1 partition is running out of disk space; %2 MiB of space remaining "
@@ -99,7 +99,7 @@ msgid ""
 msgstr ""
 "%1 bölməsində boş disk sahəsi tükənir; hazırkı boş disk sahəsi: %2 MiB (%3)."
 
-#: module.cpp:107
+#: module.cpp:124
 #, kde-format
 msgid ""
 "Your Root partition is running out of disk space; %1 MiB of space remaining "
@@ -108,14 +108,14 @@ msgstr ""
 "Kök (root) qovluöunda boş disk sahəsi tükınmək üzrədir; qalan boş disk "
 "sahəsi: %1 MiB (%2)."
 
-#: module.cpp:109
+#: module.cpp:126
 #, kde-format
 msgid ""
 "Your Home folder is running out of disk space; %1 MiB of space remaining "
 "(%2%)."
 msgstr "Ev qovluğunda diskin boş sahəsi tükənir, qalan boş sahə: %1 MiB (%2)."
 
-#: module.cpp:134
+#: module.cpp:151
 #, kde-format
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"

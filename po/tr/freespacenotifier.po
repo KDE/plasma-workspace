@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kded_susefreespacenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-30 00:44+0000\n"
+"POT-Creation-Date: 2025-07-31 00:44+0000\n"
 "PO-Revision-Date: 2025-05-11 18:31+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -94,21 +94,21 @@ msgstr ""
 "Boş alan belirtilen MiB düzeyinin ve kullanılabilir yüzdenin altına "
 "düştüğünde sistem size bildirecektir."
 
-#: module.cpp:105
+#: module.cpp:122
 #, kde-format
 msgid ""
 "Your %1 partition is running out of disk space; %2 MiB of space remaining "
 "(%3%)."
 msgstr "%1 bölüntünüzdeki boş alan azalıyor, %2 MiB kadar alan kaldı (%​%3)."
 
-#: module.cpp:107
+#: module.cpp:124
 #, kde-format
 msgid ""
 "Your Root partition is running out of disk space; %1 MiB of space remaining "
 "(%2%)."
 msgstr "Kök bölüntünüzdeki boş alan azalıyor, %1 MiB kadar alan kaldı (%​%2)."
 
-#: module.cpp:109
+#: module.cpp:126
 #, kde-format
 msgid ""
 "Your Home folder is running out of disk space; %1 MiB of space remaining "
@@ -116,7 +116,7 @@ msgid ""
 msgstr ""
 "Ana klasörünüz için olan boş alan azalıyor, %1 MiB kadar alan kaldı (%​%2)."
 
-#: module.cpp:134
+#: module.cpp:151
 #, kde-format
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"
