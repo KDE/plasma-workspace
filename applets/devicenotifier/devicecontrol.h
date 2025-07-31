@@ -11,11 +11,11 @@
 #include <QTimer>
 #include <qqmlregistration.h>
 
+#include "spaceinfo.h"
 #include "stateinfo.h"
 #include "storageinfo.h"
 
 #include "devicemessagemonitor_p.h"
-#include "spacemonitor_p.h"
 
 class DeviceControl : public QAbstractListModel
 {
@@ -54,7 +54,6 @@ public:
 private Q_SLOTS:
     void onDeviceAdded(const QString &udi);
     void onDeviceRemoved(const QString &udi);
-    void onDeviceChanged(const QMap<QString, int> &props);
 
     void onDeviceSizeChanged(const QString &udi);
     void onDeviceStatusChanged(const QString &udi);
@@ -66,6 +65,7 @@ private:
     struct DeviceInfo {
         std::shared_ptr<StorageInfo> storageInfo;
         std::shared_ptr<StateInfo> stateInfo;
+        std::shared_ptr<SpaceInfo> spaceInfo;
     };
 
     QList<DeviceInfo> m_devices;
@@ -81,6 +81,5 @@ private:
     };
     QHash<QString, RemoveTimerData> m_removeTimers;
 
-    std::shared_ptr<SpaceMonitor> m_spaceMonitor;
     std::shared_ptr<DeviceMessageMonitor> m_messageMonitor;
 };
