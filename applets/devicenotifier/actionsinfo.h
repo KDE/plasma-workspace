@@ -11,12 +11,13 @@
 #include <qqmlregistration.h>
 
 #include "actioninterface.h"
-#include "predicatesmonitor_p.h"
 
-#include "storageinfo.h"
 #include "stateinfo.h"
+#include "storageinfo.h"
 
-class ActionsControl : public QAbstractListModel
+class PredicatesMonitor;
+
+class ActionsInfo : public QAbstractListModel
 {
     Q_OBJECT
     QML_ELEMENT
@@ -37,8 +38,8 @@ public:
 
     Q_INVOKABLE void actionTriggered(const QString &operation);
 
-    explicit ActionsControl(const std::shared_ptr<StorageInfo> &storageInfo, const std::shared_ptr<StateInfo> &stateInfo, QObject *parent = nullptr);
-    ~ActionsControl() override;
+    explicit ActionsInfo(const std::shared_ptr<StorageInfo> &storageInfo, const std::shared_ptr<StateInfo> &stateInfo, QObject *parent = nullptr);
+    ~ActionsInfo() override;
 
     bool isEmpty() const;
 

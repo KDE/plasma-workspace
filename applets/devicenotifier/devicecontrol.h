@@ -5,12 +5,11 @@
  */
 #pragma once
 
-#include "actionscontrol.h"
-
 #include <QAbstractListModel>
 #include <QTimer>
 #include <qqmlregistration.h>
 
+#include "actionsinfo.h"
 #include "messageinfo.h"
 #include "spaceinfo.h"
 #include "stateinfo.h"
@@ -66,11 +65,11 @@ private:
         std::shared_ptr<StateInfo> stateInfo;
         std::shared_ptr<SpaceInfo> spaceInfo;
         std::shared_ptr<MessageInfo> messageInfo;
+        std::shared_ptr<ActionsInfo> actionsInfo;
     };
 
     QList<DeviceInfo> m_devices;
     QSet<QString> m_devicesUdi;
-    QHash<QString, ActionsControl *> m_actions;
 
     QHash<QString, QList<std::shared_ptr<StorageInfo>>> m_parentDevices;
 

@@ -107,10 +107,7 @@ QVariant DeviceControl::data(const QModelIndex &index, int role) const
     case Message:
         return deviceInfo.messageInfo ? deviceInfo.messageInfo->getMessage() : QVariant();
     case Actions: {
-        if (auto it = m_actions.constFind(deviceInfo.storageInfo->device().udi()); it != m_actions.end()) {
-            return QVariant::fromValue(*it);
-        }
-        return {};
+        return deviceInfo.actionsInfo ? QVariant::fromValue(deviceInfo.actionsInfo.get()) : QVariant();
     }
     }
 
@@ -156,11 +153,11 @@ void DeviceControl::onDeviceAdded(const QString &udi)
 
     auto stateInfo = std::make_shared<StateInfo>(storageInfo);
 
-    auto actions = new ActionsControl(storageInfo, stateInfo, this);
+    auto actionsInfo = std::make_shared<ActionsInfo>(storageInfo, stateInfo);
 
-    if (!storageInfo->isEncrypted() && actions->isEmpty()) {
+    if (!storageInfo->isEncrypted() && actionsInfo->isEmpty()) {
         qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: device : " << udi << " is not in our interest. Skipping";
-        actions->deleteLater();
+        actionsInfo->deleteLater();
         return;
     }
 
@@ -168,7 +165,6 @@ void DeviceControl::onDeviceAdded(const QString &udi)
         deviceDelayRemove(it->udi, it->parentUdi); // A device is removed and added back immediately, can happen during formatting
     }
 
-    m_actions[udi] = actions;
     qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: New device added : " << udi;
 
     int position = m_devices.size();
@@ -185,6 +181,7 @@ void DeviceControl::onDeviceAdded(const QString &udi)
         .stateInfo = stateInfo,
         .spaceInfo = spaceInfo,
         .messageInfo = messageInfo,
+        .actionsInfo = actionsInfo,
     };
 
     m_devices.append(deviceInfo);
@@ -236,13 +233,12 @@ void DeviceControl::onDeviceRemoved(const QString &udi)
         if (m_devices[position].storageInfo->device().udi() == udi) {
             qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: Begin remove device: " << udi << " from the model at position : " << position;
 
-            ActionsControl *actions = m_actions.take(udi);
-            QModelIndex index = DeviceControl::index(position);
-            Q_EMIT dataChanged(index, index, {Actions});
-            delete actions;
-
             // remove space monitoring because device not mounted
             m_devices[position].spaceInfo.reset();
+            m_devices[position].actionsInfo.reset();
+
+            QModelIndex index = DeviceControl::index(position);
+            Q_EMIT dataChanged(index, index, {Actions});
 
             for (auto it = m_parentDevices.begin(); it != m_parentDevices.end(); ++it) {
                 for (int childPosition = 0; childPosition < it->size(); ++childPosition) {

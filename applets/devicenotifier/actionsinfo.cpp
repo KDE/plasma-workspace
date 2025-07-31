@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: GPL-2.0-or-later
  */
 
-#include "actionscontrol.h"
+#include "actionsinfo.h"
 
 #include "devicenotifier_debug.h"
 
@@ -25,7 +25,9 @@
 #include <actions/openwithfilemanageraction.h>
 #include <actions/unmountaction.h>
 
-ActionsControl::ActionsControl(const std::shared_ptr<StorageInfo> &storageInfo, const std::shared_ptr<StateInfo> &stateInfo, QObject *parent)
+#include "predicatesmonitor_p.h"
+
+ActionsInfo::ActionsInfo(const std::shared_ptr<StorageInfo> &storageInfo, const std::shared_ptr<StateInfo> &stateInfo, QObject *parent)
     : QAbstractListModel(parent)
     , m_storageInfo(storageInfo)
     , m_stateInfo(stateInfo)
@@ -35,47 +37,46 @@ ActionsControl::ActionsControl(const std::shared_ptr<StorageInfo> &storageInfo, 
     m_defaultAction = new MountAndOpenAction{m_storageInfo, stateInfo, this};
     m_unmountAction = new UnmountAction{m_storageInfo, stateInfo, this};
 
-    qCDebug(APPLETS::DEVICENOTIFIER) << "begin initializing Action Controller for device: " << m_storageInfo->device().udi()
-                                     << "; Default action: " << m_defaultAction->predicate();
+    qCDebug(APPLETS::DEVICENOTIFIER) << "Actions Info " << m_storageInfo->device().udi() << " : Begin initializing";
 
     updateActionsForPredicates(m_predicatesMonitor->predicates());
 
-    connect(m_predicatesMonitor.get(), &PredicatesMonitor::predicatesChanged, this, &ActionsControl::onPredicatesChanged);
+    connect(m_predicatesMonitor.get(), &PredicatesMonitor::predicatesChanged, this, &ActionsInfo::onPredicatesChanged);
 
-    connect(m_unmountAction, &ActionInterface::isValidChanged, this, &ActionsControl::onIsActionValidChanged);
+    connect(m_unmountAction, &ActionInterface::isValidChanged, this, &ActionsInfo::onIsActionValidChanged);
 
-    connect(m_defaultAction, &ActionInterface::iconChanged, this, &ActionsControl::defaultActionIconChanged);
-    connect(m_defaultAction, &ActionInterface::textChanged, this, &ActionsControl::defaultActionTextChanged);
+    connect(m_defaultAction, &ActionInterface::iconChanged, this, &ActionsInfo::defaultActionIconChanged);
+    connect(m_defaultAction, &ActionInterface::textChanged, this, &ActionsInfo::defaultActionTextChanged);
 
-    qCDebug(APPLETS::DEVICENOTIFIER) << "Action Controller for " << m_storageInfo->device().udi() << " : Initializing complete";
+    qCDebug(APPLETS::DEVICENOTIFIER) << "Actions Info " << m_storageInfo->device().udi() << " : Initializing complete";
 }
 
-ActionsControl::~ActionsControl()
+ActionsInfo::~ActionsInfo()
 {
-    qCDebug(APPLETS::DEVICENOTIFIER) << "Action Controller for: " << m_storageInfo->device().udi() << "was destroyed";
+    qCDebug(APPLETS::DEVICENOTIFIER) << "Actions Info " << m_storageInfo->device().udi() << " : destroyed";
 }
 
-bool ActionsControl::isEmpty() const
+bool ActionsInfo::isEmpty() const
 {
     return m_isEmpty;
 }
 
-QString ActionsControl::defaultActionName() const
+QString ActionsInfo::defaultActionName() const
 {
     return m_defaultAction->name();
 }
 
-QString ActionsControl::defaultActionIcon() const
+QString ActionsInfo::defaultActionIcon() const
 {
     return m_defaultAction->icon();
 }
 
-QString ActionsControl::defaultActionText() const
+QString ActionsInfo::defaultActionText() const
 {
     return m_defaultAction->text();
 }
 
-int ActionsControl::rowCount(const QModelIndex &parent) const
+int ActionsInfo::rowCount(const QModelIndex &parent) const
 {
     if (parent.isValid()) {
         return 0;
@@ -83,7 +84,7 @@ int ActionsControl::rowCount(const QModelIndex &parent) const
     return m_actions.size();
 }
 
-QVariant ActionsControl::data(const QModelIndex &index, int role) const
+QVariant ActionsInfo::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid()) {
         return {};
@@ -98,12 +99,11 @@ QVariant ActionsControl::data(const QModelIndex &index, int role) const
         return m_actions[index.row()]->text();
     }
 
-    qCWarning(APPLETS::DEVICENOTIFIER) << "Action Controller for " << m_storageInfo->device().udi() << " : "
-                                       << "Role not valid";
+    qCWarning(APPLETS::DEVICENOTIFIER) << "Actions Info " << m_storageInfo->device().udi() << " : Role not valid";
     return {};
 }
 
-QHash<int, QByteArray> ActionsControl::roleNames() const
+QHash<int, QByteArray> ActionsInfo::roleNames() const
 {
     QHash<int, QByteArray> roles;
     roles[Name] = QByteArrayLiteral("Name");
@@ -112,21 +112,20 @@ QHash<int, QByteArray> ActionsControl::roleNames() const
     return roles;
 }
 
-bool ActionsControl::isUnmountable() const
+bool ActionsInfo::isUnmountable() const
 {
     return m_unmountAction->isValid();
 }
 
-void ActionsControl::unmount()
+void ActionsInfo::unmount()
 {
     m_unmountAction->triggered();
 }
 
-void ActionsControl::actionTriggered(const QString &name)
+void ActionsInfo::actionTriggered(const QString &name)
 {
     if (m_defaultAction->name() == name) {
-        qCDebug(APPLETS::DEVICENOTIFIER) << "Action Controller for " << m_storageInfo->device().udi() << " : "
-                                         << "Default action triggered";
+        qCDebug(APPLETS::DEVICENOTIFIER) << "Actions Info " << m_storageInfo->device().udi() << " : Default action triggered";
         m_defaultAction->triggered();
         return;
     }
@@ -139,10 +138,10 @@ void ActionsControl::actionTriggered(const QString &name)
     }
 }
 
-void ActionsControl::addActions()
+void ActionsInfo::addActions()
 {
     ActionInterface *action = new CheckAction(m_storageInfo, m_stateInfo, this);
-    connect(action, &ActionInterface::isValidChanged, this, &ActionsControl::onIsActionValidChanged);
+    connect(action, &ActionInterface::isValidChanged, this, &ActionsInfo::onIsActionValidChanged);
     if (action->isValid()) {
         m_actions.append(action);
     } else {
@@ -150,7 +149,7 @@ void ActionsControl::addActions()
     }
 
     action = new MountAction(m_storageInfo, m_stateInfo, this);
-    connect(action, &ActionInterface::isValidChanged, this, &ActionsControl::onIsActionValidChanged);
+    connect(action, &ActionInterface::isValidChanged, this, &ActionsInfo::onIsActionValidChanged);
     if (action->isValid()) {
         m_actions.append(action);
     } else {
@@ -158,7 +157,7 @@ void ActionsControl::addActions()
     }
 
     action = new OpenWithFileManagerAction(m_storageInfo, m_stateInfo, this);
-    connect(action, &ActionInterface::isValidChanged, this, &ActionsControl::onIsActionValidChanged);
+    connect(action, &ActionInterface::isValidChanged, this, &ActionsInfo::onIsActionValidChanged);
     if (action->isValid()) {
         m_actions.append(action);
     } else {
@@ -166,14 +165,14 @@ void ActionsControl::addActions()
     }
 
     for (auto action : m_actions) {
-        connect(action, &ActionInterface::iconChanged, this, &ActionsControl::onActionIconChanged);
-        connect(action, &ActionInterface::textChanged, this, &ActionsControl::onActionTextChanged);
-        connect(action, &ActionInterface::isValidChanged, this, &ActionsControl::onIsActionValidChanged);
-        qCDebug(APPLETS::DEVICENOTIFIER) << "Action Controller for " << m_storageInfo->device().udi() << " : Custom action " << action->name() << "was added";
+        connect(action, &ActionInterface::iconChanged, this, &ActionsInfo::onActionIconChanged);
+        connect(action, &ActionInterface::textChanged, this, &ActionsInfo::onActionTextChanged);
+        connect(action, &ActionInterface::isValidChanged, this, &ActionsInfo::onIsActionValidChanged);
+        qCDebug(APPLETS::DEVICENOTIFIER) << "Actions Info " << m_storageInfo->device().udi() << " : Custom action " << action->name() << "was added";
     }
 }
 
-bool ActionsControl::blockActions(const QString &action)
+bool ActionsInfo::blockActions(const QString &action)
 {
     if (action == QLatin1String("openWithFileManager.desktop")) {
         return false;
@@ -194,7 +193,7 @@ bool ActionsControl::blockActions(const QString &action)
     return true;
 }
 
-void ActionsControl::updateActionsForPredicates(const QHash<QString, Solid::Predicate> &predicates)
+void ActionsInfo::updateActionsForPredicates(const QHash<QString, Solid::Predicate> &predicates)
 {
     if (!m_actions.isEmpty()) {
         for (auto action : m_actions) {
@@ -220,13 +219,13 @@ void ActionsControl::updateActionsForPredicates(const QHash<QString, Solid::Pred
             if (blockActions(it.key())) {
                 interestingDesktopFiles << it.key();
             } else {
-                qCDebug(APPLETS::DEVICENOTIFIER) << "Action Controller for " << device.udi() << " : " << it.key() << " action was blocked";
+                qCDebug(APPLETS::DEVICENOTIFIER) << "Actions Info " << device.udi() << " : " << it.key() << " action was blocked";
             }
         }
     }
 
     if (m_isEmpty) {
-        qCDebug(APPLETS::DEVICENOTIFIER) << "Action Controller for " << device.udi() << " : "
+        qCDebug(APPLETS::DEVICENOTIFIER) << "Actions Info " << device.udi() << " : "
                                          << "Don't have default actions";
         return;
     }
@@ -235,35 +234,35 @@ void ActionsControl::updateActionsForPredicates(const QHash<QString, Solid::Pred
         auto newAction = new DefaultAction(m_storageInfo, desktop, this);
         if (newAction->isValid()) {
             m_actions.append(newAction);
-            connect(newAction, &ActionInterface::iconChanged, this, &ActionsControl::onActionIconChanged);
-            connect(newAction, &ActionInterface::textChanged, this, &ActionsControl::onActionTextChanged);
-            connect(newAction, &ActionInterface::isValidChanged, this, &ActionsControl::onIsActionValidChanged);
-            qCDebug(APPLETS::DEVICENOTIFIER) << "Action Controller for " << device.udi() << " : "
+            connect(newAction, &ActionInterface::iconChanged, this, &ActionsInfo::onActionIconChanged);
+            connect(newAction, &ActionInterface::textChanged, this, &ActionsInfo::onActionTextChanged);
+            connect(newAction, &ActionInterface::isValidChanged, this, &ActionsInfo::onIsActionValidChanged);
+            qCDebug(APPLETS::DEVICENOTIFIER) << "Actions Info " << device.udi() << " : "
                                              << " action " << desktop << " added";
         }
     }
 }
 
-void ActionsControl::onPredicatesChanged(const QHash<QString, Solid::Predicate> &predicates)
+void ActionsInfo::onPredicatesChanged(const QHash<QString, Solid::Predicate> &predicates)
 {
-    qCDebug(APPLETS::DEVICENOTIFIER) << "Action Controller for " << m_storageInfo->device().udi() << " : "
+    qCDebug(APPLETS::DEVICENOTIFIER) << "Actions Info " << m_storageInfo->device().udi() << " : "
                                      << "predicatesChanged signal arrived. Begin resetting model";
     beginResetModel();
     updateActionsForPredicates(predicates);
     endResetModel();
-    qCDebug(APPLETS::DEVICENOTIFIER) << "Action Controller for " << m_storageInfo->device().udi() << " : "
+    qCDebug(APPLETS::DEVICENOTIFIER) << "Actions Info " << m_storageInfo->device().udi() << " : "
                                      << "resetting ended";
 }
 
-void ActionsControl::onIsActionValidChanged(const QString &name, bool status)
+void ActionsInfo::onIsActionValidChanged(const QString &name, bool status)
 {
-    qCDebug(APPLETS::DEVICENOTIFIER) << "Action Controller for " << m_storageInfo->device().udi() << " : "
+    qCDebug(APPLETS::DEVICENOTIFIER) << "Actions Info " << m_storageInfo->device().udi() << " : "
                                      << "isActionValidChanged signal arrived for action " << name << " with status " << status;
     if (name == u"Unmount") {
         Q_EMIT unmountActionIsValidChanged(m_storageInfo->device().udi(), status);
     } else if (status) {
         if (auto it = m_notValidActions.find(name); it != m_notValidActions.end()) {
-            qCDebug(APPLETS::DEVICENOTIFIER) << "Action Controller for " << m_storageInfo->device().udi() << " : "
+            qCDebug(APPLETS::DEVICENOTIFIER) << "Actions Info " << m_storageInfo->device().udi() << " : "
                                              << "adding new action " << name;
             beginInsertRows(QModelIndex(), 0, 0);
             m_actions.prepend(it->second);
@@ -273,7 +272,7 @@ void ActionsControl::onIsActionValidChanged(const QString &name, bool status)
     } else {
         for (int position = 0; position < m_actions.size(); ++position) {
             if (m_actions[position]->name() == name) {
-                qCDebug(APPLETS::DEVICENOTIFIER) << "Action Controller for " << m_storageInfo->device().udi() << " : "
+                qCDebug(APPLETS::DEVICENOTIFIER) << "Actions Info " << m_storageInfo->device().udi() << " : "
                                                  << "remove action " << name;
                 beginRemoveRows(QModelIndex(), position, position);
                 m_notValidActions[m_actions[position]->name()] = std::make_pair(position, m_actions[position]);
@@ -285,36 +284,36 @@ void ActionsControl::onIsActionValidChanged(const QString &name, bool status)
     }
 }
 
-void ActionsControl::onActionIconChanged(const QString &action)
+void ActionsInfo::onActionIconChanged(const QString &action)
 {
     if (m_defaultAction->name() == action) {
-        qCDebug(APPLETS::DEVICENOTIFIER) << "Action Controller for " << m_storageInfo->device().udi() << " : "
+        qCDebug(APPLETS::DEVICENOTIFIER) << "Actions Info " << m_storageInfo->device().udi() << " : "
                                          << "Icon for default action changed";
         Q_EMIT defaultActionIconChanged(m_defaultAction->icon());
     } else {
         for (int position = 0; position < m_actions.size(); ++position) {
-            qCDebug(APPLETS::DEVICENOTIFIER) << "Action Controller for " << m_storageInfo->device().udi() << " : "
+            qCDebug(APPLETS::DEVICENOTIFIER) << "Actions Info " << m_storageInfo->device().udi() << " : "
                                              << "Icon for " << action << " changed";
-            QModelIndex index = ActionsControl::index(position);
+            QModelIndex index = ActionsInfo::index(position);
             Q_EMIT dataChanged(index, index, {Icon});
         }
     }
 }
 
-void ActionsControl::onActionTextChanged(const QString &action)
+void ActionsInfo::onActionTextChanged(const QString &action)
 {
     if (m_defaultAction->name() == action) {
-        qCDebug(APPLETS::DEVICENOTIFIER) << "Action Controller for " << m_storageInfo->device().udi() << " : "
+        qCDebug(APPLETS::DEVICENOTIFIER) << "Actions Info " << m_storageInfo->device().udi() << " : "
                                          << "Text for default action changed";
         Q_EMIT defaultActionTextChanged(m_defaultAction->text());
     } else {
         for (int position = 0; position < m_actions.size(); ++position) {
-            qCDebug(APPLETS::DEVICENOTIFIER) << "Action Controller for " << m_storageInfo->device().udi() << " : "
+            qCDebug(APPLETS::DEVICENOTIFIER) << "Actions Info " << m_storageInfo->device().udi() << " : "
                                              << "Text for " << action << " changed";
-            QModelIndex index = ActionsControl::index(position);
+            QModelIndex index = ActionsInfo::index(position);
             Q_EMIT dataChanged(index, index, {Text});
         }
     }
 }
 
-#include "moc_actionscontrol.cpp"
+#include "moc_actionsinfo.cpp"

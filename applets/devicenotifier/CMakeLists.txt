@@ -9,12 +9,12 @@ plasma_add_applet(org.kde.plasma.devicenotifier
         qml/FullRepresentation.qml
         qml/main.qml
         CPP_SOURCES
-        actionscontrol.cpp
         devicecontrol.cpp
         storageinfo.cpp
         stateinfo.cpp
         spaceinfo.cpp
         messageinfo.cpp
+        actionsinfo.cpp
         spaceupdatemonitor_p.cpp
         deviceserviceaction.cpp
         predicatesmonitor_p.cpp

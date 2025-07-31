@@ -48,7 +48,7 @@ void DeviceFilterControl::unmountAllRemovables()
         auto index = DeviceFilterControl::index(position, 0);
         auto actionData = data(index, DeviceControl::Actions);
         if (!actionData.isNull()) {
-            auto actions = qvariant_cast<ActionsControl *>(actionData);
+            auto actions = qvariant_cast<ActionsInfo *>(actionData);
             if (actions->isUnmountable()) {
                 actions->unmount();
             }
@@ -326,8 +326,8 @@ void DeviceFilterControl::handleDeviceAdded(const QModelIndex &index)
         qCDebug(APPLETS::DEVICENOTIFIER) << "Device Filter Control: filter type is not Unremovable. updating unmountAll Action";
         auto actionData = data(index, DeviceControl::Actions);
         if (!actionData.isNull()) {
-            auto actions = qvariant_cast<ActionsControl *>(actionData);
-            connect(actions, &ActionsControl::unmountActionIsValidChanged, this, &DeviceFilterControl::onDeviceActionUnmountableChanged);
+            auto actions = qvariant_cast<ActionsInfo *>(actionData);
+            connect(actions, &ActionsInfo::unmountActionIsValidChanged, this, &DeviceFilterControl::onDeviceActionUnmountableChanged);
             if (actions->isUnmountable()) {
                 qCDebug(APPLETS::DEVICENOTIFIER) << "Device Filter Control: add device " << data(index, DeviceControl::Udi).toString()
                                                  << " to unmountable devices";
