@@ -32,7 +32,7 @@ InstallerRunner::InstallerRunner(QObject *parent, const KPluginMetaData &metaDat
     : KRunner::AbstractRunner(parent, metaData)
 {
     addSyntax(u":q:"_s, i18n("Looks for non-installed components according to :q:"));
-    setMinLetterCount(3);
+    setMinLetterCount(2);
 }
 
 static QIcon componentIcon(const AppStream::Component &comp)

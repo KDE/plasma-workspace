@@ -106,6 +106,6 @@ X-Plasma-API=DBus
 X-Plasma-DBusRunner-Service=org.kde.runners.baloo
 X-Plasma-DBusRunner-Path=/runner
 X-Plasma-Request-Actions-Once=true
-X-Plasma-Runner-Min-Letter-Count=3
+X-Plasma-Runner-Min-Letter-Count=2
 X-Plasma-Runner-Unique-Results=true
 X-Plasma-Runner-Weak-Results=true

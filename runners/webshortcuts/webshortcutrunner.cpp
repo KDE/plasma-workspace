@@ -35,7 +35,6 @@ WebshortcutRunner::WebshortcutRunner(QObject *parent, const KPluginMetaData &met
     QDBusConnection sessionDbus = QDBusConnection::sessionBus();
     sessionDbus.connect(QString(), QStringLiteral("/"), QStringLiteral("org.kde.KUriFilterPlugin"), QStringLiteral("configure"), this, SLOT(loadSyntaxes()));
     connect(KSycoca::self(), &KSycoca::databaseChanged, this, &WebshortcutRunner::configurePrivateBrowsingActions);
-    setMinLetterCount(3);
 
     connect(qobject_cast<KRunner::RunnerManager *>(parent), &KRunner::RunnerManager::queryFinished, this, [this]() {
         if (m_lastUsedContext.isValid() && !m_defaultKey.isEmpty() && m_lastUsedContext.matches().isEmpty()) {

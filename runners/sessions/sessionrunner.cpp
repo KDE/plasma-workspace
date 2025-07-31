@@ -51,7 +51,6 @@ SessionRunner::SessionRunner(QObject *parent, const KPluginMetaData &metaData)
     if (m_session.canSwitchUser()) {
         addSyntax(m_usersKeywords, i18n("Switch to a session as a different user"));
     }
-    setMinLetterCount(3);
 }
 
 static inline bool anyKeywordMatches(const QStringList &keywords, const QString &term)

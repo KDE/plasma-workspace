@@ -38,7 +38,6 @@ BookmarksRunner::BookmarksRunner(QObject *parent, const KPluginMetaData &metaDat
     addSyntax(i18nc("list of all web browser bookmarks", "bookmarks"), i18n("List all web browser bookmarks"));
 
     connect(this, &KRunner::AbstractRunner::prepare, this, &BookmarksRunner::prep);
-    setMinLetterCount(3);
 }
 
 void BookmarksRunner::prep()

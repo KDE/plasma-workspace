@@ -26,8 +26,6 @@ PlacesRunner::PlacesRunner(QObject *parent, const KPluginMetaData &metaData)
 {
     addSyntax(i18n("places"), i18n("Lists all file manager locations"));
     addSyntax(QStringLiteral(":q:"), i18n("Finds file manager locations that match :q:"));
-
-    setMinLetterCount(3);
 }
 
 void PlacesRunner::init()

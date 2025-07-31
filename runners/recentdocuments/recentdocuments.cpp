@@ -35,16 +35,15 @@ RecentDocuments::RecentDocuments(QObject *parent, const KPluginMetaData &metaDat
     , m_actions({KRunner::Action(QStringLiteral("open-folder"), QStringLiteral("document-open-folder"), i18n("Open Containing Folder"))})
 {
     addSyntax(QStringLiteral(":q:"), i18n("Looks for documents recently used with names matching :q:."));
-    setMinLetterCount(m_minLetterCount);
 }
 
 void RecentDocuments::match(KRunner::RunnerContext &context)
 {
     const QString term = context.query();
 
-    if (!m_resultsModel || m_resultsModel->rowCount() == m_maxResults || m_lastLoadedQuery.size() < m_minLetterCount || !term.startsWith(m_lastLoadedQuery)) {
+    if (!m_resultsModel || m_resultsModel->rowCount() == m_maxResults || !term.startsWith(m_lastLoadedQuery)) {
         constexpr QLatin1String asterix("*");
-        const QString termPattern = (term.size() < m_minLetterCount ? QLatin1String() : asterix) + term + asterix;
+        const QString termPattern = asterix + term + asterix;
         auto query = UsedResources | Activity::current() | Order::RecentlyUsedFirst | Agent::any() //
             | Type::files() // Only show files and not folders
             | Limit(m_maxResults) // In case we are in single runner mode, we could get tons of results for one or two letter queries
