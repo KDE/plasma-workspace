@@ -27,7 +27,6 @@ inline constexpr auto REMOVE_INTERVAL = 5s;
 
 DeviceControl::DeviceControl(QObject *parent)
     : QAbstractListModel(parent)
-    , m_spaceMonitor(SpaceMonitor::instance())
     , m_messageMonitor(DeviceMessageMonitor::instance())
 
 {
@@ -41,7 +40,6 @@ DeviceControl::DeviceControl(QObject *parent)
     connect(Solid::DeviceNotifier::instance(), &Solid::DeviceNotifier::deviceAdded, this, &DeviceControl::onDeviceAdded);
     connect(Solid::DeviceNotifier::instance(), &Solid::DeviceNotifier::deviceRemoved, this, &DeviceControl::onDeviceRemoved);
 
-    connect(m_spaceMonitor.get(), &SpaceMonitor::sizeChanged, this, &DeviceControl::onDeviceSizeChanged);
     connect(m_messageMonitor.get(), &DeviceMessageMonitor::messageChanged, this, &DeviceControl::onDeviceMessageChanged);
     qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: Initialized";
 }
@@ -80,17 +78,21 @@ QVariant DeviceControl::data(const QModelIndex &index, int role) const
     case IsRemovable: {
         return deviceInfo.storageInfo ? deviceInfo.storageInfo->isRemovable() : QVariant();
     }
-    case Size:
-        return m_spaceMonitor->getFullSize(deviceInfo.storageInfo->device().udi());
-    case FreeSpace:
-        return m_spaceMonitor->getFreeSize(deviceInfo.storageInfo->device().udi());
+    case Size: {
+        std::optional<double> size = deviceInfo.spaceInfo ? deviceInfo.spaceInfo->getFullSize() : std::nullopt;
+        return size.has_value() ? size.value() : QVariant();
+    }
+    case FreeSpace: {
+        std::optional<double> freeSpace = deviceInfo.spaceInfo ? deviceInfo.spaceInfo->getFreeSize() : std::nullopt;
+        return freeSpace.has_value() ? freeSpace.value() : QVariant();
+    }
     case SizeText: {
-        double size = m_spaceMonitor->getFullSize(deviceInfo.storageInfo->device().udi());
-        return size != -1 ? KFormat().formatByteSize(size) : QString();
+        std::optional<double> size = deviceInfo.spaceInfo ? deviceInfo.spaceInfo->getFullSize() : std::nullopt;
+        return size.has_value() ? KFormat().formatByteSize(size.value()) : QVariant();
     }
     case FreeSpaceText: {
-        double freeSpace = m_spaceMonitor->getFreeSize(deviceInfo.storageInfo->device().udi());
-        return freeSpace != -1 ? KFormat().formatByteSize(freeSpace) : QString();
+        std::optional<double> freeSpace = deviceInfo.spaceInfo ? deviceInfo.spaceInfo->getFreeSize() : std::nullopt;
+        return freeSpace.has_value() ? KFormat().formatByteSize(freeSpace.value()) : QVariant();
     }
     case Mounted:
         return deviceInfo.stateInfo ? deviceInfo.stateInfo->isMounted() : QVariant();
@@ -176,16 +178,22 @@ void DeviceControl::onDeviceAdded(const QString &udi)
     beginInsertRows(QModelIndex(), position, position);
 
     qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: Add device: " << udi << " to the model at position : " << position;
-    m_spaceMonitor->addMonitoringDevice(udi, stateInfo);
     m_messageMonitor->addMonitoringDevice(udi, stateInfo);
 
-    DeviceInfo deviceInfo{storageInfo, stateInfo};
+    auto spaceInfo = std::make_shared<SpaceInfo>(storageInfo, stateInfo);
+
+    DeviceInfo deviceInfo{
+        .storageInfo = storageInfo,
+        .stateInfo = stateInfo,
+        .spaceInfo = spaceInfo,
+    };
 
     m_devices.append(deviceInfo);
     m_devicesUdi.insert(udi);
     endInsertRows();
 
     connect(stateInfo.get(), &StateInfo::stateChanged, this, &DeviceControl::onDeviceStatusChanged);
+    connect(spaceInfo.get(), &SpaceInfo::sizeChanged, this, &DeviceControl::onDeviceSizeChanged);
 
     // Save storage drive parent for storage volumes to delay remove it and to properly remove it from device model
     // if device was physically removed from the computer. Storage volume with storage drive parent need to
@@ -234,7 +242,7 @@ void DeviceControl::onDeviceRemoved(const QString &udi)
             delete actions;
 
             // remove space monitoring because device not mounted
-            m_spaceMonitor->removeMonitoringDevice(udi);
+            m_devices[position].spaceInfo.reset();
 
             for (auto it = m_parentDevices.begin(); it != m_parentDevices.end(); ++it) {
                 for (int childPosition = 0; childPosition < it->size(); ++childPosition) {
@@ -316,40 +324,8 @@ void DeviceControl::deviceDelayRemove(const QString &udi, const QString &parentU
     }
 }
 
-void DeviceControl::onDeviceChanged(const QMap<QString, int> &props)
-{
-    auto iface = qobject_cast<Solid::GenericInterface *>(sender());
-    if (iface && iface->isValid() && props.contains(QLatin1String("Size")) && iface->property(QStringLiteral("Size")).toInt() > 0) {
-        const QString udi = qobject_cast<QObject *>(iface)->property("udi").toString();
-        m_spaceMonitor->forceUpdateSize(udi);
-        qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: 2-stage device successfully initialized : " << udi;
-    }
-}
-
 void DeviceControl::onDeviceSizeChanged(const QString &udi)
 {
-    // update the volume in case of 2-stage devices
-    Solid::Device device(udi);
-    if (device.is<Solid::StorageVolume>()) {
-        bool isDeviceValid = false;
-
-        for (const auto &findingDevice : m_devices) {
-            if (findingDevice.storageInfo && findingDevice.storageInfo->device().udi() == udi) {
-                isDeviceValid = true;
-            }
-        }
-
-        if (isDeviceValid && m_spaceMonitor->getFullSize(udi) == 0) {
-            qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: 2-stage device arrived : " << udi;
-            auto *iface = device.as<Solid::GenericInterface>();
-            if (iface) {
-                iface->setProperty("udi", device.udi());
-                connect(iface, &Solid::GenericInterface::propertyChanged, this, &DeviceControl::onDeviceChanged);
-                return;
-            }
-        }
-    }
-
     for (int position = 0; position < m_devices.size(); ++position) {
         if (m_devices[position].storageInfo && m_devices[position].storageInfo->device().udi() == udi) {
             qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: Size for device : " << udi << " changed";
