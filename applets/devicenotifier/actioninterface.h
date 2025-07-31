@@ -74,7 +74,3 @@ Q_SIGNALS:
 protected:
     std::shared_ptr<StorageInfo> m_storageInfo;
 };
-
-#define ActionInterface_iid "com.plasma.private.ActionInterface"
-
-Q_DECLARE_INTERFACE(ActionInterface, ActionInterface_iid)

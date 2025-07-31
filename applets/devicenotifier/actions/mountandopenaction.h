@@ -18,8 +18,6 @@ class MountAndOpenAction : public ActionInterface
 {
     Q_OBJECT
 
-    Q_INTERFACES(ActionInterface)
-
 public:
     explicit MountAndOpenAction(const std::shared_ptr<StorageInfo> &storageInfo, const std::shared_ptr<StateInfo> &stateInfo, QObject *parent = nullptr);
     ~MountAndOpenAction() override;
