@@ -197,8 +197,21 @@ KIO::WorkerResult DesktopProtocol::rename(const QUrl &_src, const QUrl &_dest, K
     QUrl reported_dest = _dest;
 
     if (KDesktopFile::isDesktopFile(srcPath)) {
-        QString friendlyName;
+        QFileInfo fileInfo(srcPath);
+        // If we cant write to the file, create a copy to QStandardPaths::ApplicationsLocation
+        if (!fileInfo.isWritable()) {
+            KDesktopFile orig(src.toLocalFile());
+            QFile(srcPath).remove();
+            const auto newPath = QStandardPaths::writableLocation(QStandardPaths::ApplicationsLocation) + QDir::separator() + src.fileName();
+            if (!QFileInfo(newPath).exists()) {
+                auto writableDesktopFile = orig.copyTo(newPath);
+                writableDesktopFile->sync();
+                delete writableDesktopFile;
+            }
+            QFile::link(newPath, srcPath);
+        }
 
+        QString friendlyName;
         if (destPath.endsWith(QLatin1String(".desktop"))) {
             const QString fileName = dest.fileName();
             friendlyName = KIO::decodeFileName(fileName.left(fileName.length() - 8));
