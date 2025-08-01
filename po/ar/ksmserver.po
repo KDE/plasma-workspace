@@ -8,13 +8,13 @@
 # محمد سعد  Mohamed SAAD <metehyi@free.fr>, 2006.
 # AbdulAziz AlSharif <a.a-a.s@hotmail.com>, 2007.
 # Youssef Chahibi <chahibi@gmail.com>, 2007.
-# SPDX-FileCopyrightText: 2008, 2021, 2023, 2024 zayed <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2008, 2021, 2023, 2024, 2025 zayed <zayed.alsaidi@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-21 03:16+0000\n"
-"PO-Revision-Date: 2021-06-19 20:20+0400\n"
+"PO-Revision-Date: 2025-07-31 18:35+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -138,7 +138,7 @@ msgstr "تبدأ الجلسة في النمط المقفل"
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
 "the lock screen."
-msgstr "تبدأ بدون دعم غلق الشاشة. تحتاجها فقط إذا كان المكون يقدم شاشة القفل."
+msgstr "تبدأ بلا دعم قفل الشاشة. تحتاجها فقط إذا كان المكون يقدم شاشة القفل."
 
 #: server.cpp:857
 #, kde-format
@@ -153,17 +153,17 @@ msgstr "اخرج"
 #: server.cpp:865
 #, kde-format
 msgid "Log Out Without Confirmation"
-msgstr "اخرج بدون تأكيد"
+msgstr "اخرج بلا تأكيد"
 
 #: server.cpp:870
 #, kde-format
 msgid "Halt Without Confirmation"
-msgstr "أوقف بدون تأكيد"
+msgstr "أوقف بلا تأكيد"
 
 #: server.cpp:875
 #, kde-format
 msgid "Reboot Without Confirmation"
-msgstr "أعد التشغيل بدون تأكيد"
+msgstr "أعد التشغيل بلا تأكيد"
 
 #, fuzzy
 #~| msgid ""
