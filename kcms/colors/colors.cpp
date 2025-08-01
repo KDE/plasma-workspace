@@ -336,7 +336,6 @@ void KCMColors::editScheme(const QString &schemeName, QQuickItem *ctx)
 
     // TODO use CommandLauncherJob.
     m_editDialogProcess = new QProcess(this);
-    m_editDialogProcess->setProcessChannelMode(QProcess::ForwardedChannels);
     m_editDialogProcess->setProgram(QStringLiteral("kcolorschemeeditor"));
     connect(m_editDialogProcess, &QProcess::finished, this, [this](int exitCode, QProcess::ExitStatus exitStatus) {
         Q_UNUSED(exitCode);
