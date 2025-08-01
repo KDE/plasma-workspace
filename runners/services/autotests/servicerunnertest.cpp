@@ -25,6 +25,21 @@ using namespace Qt::StringLiterals;
 class ServiceRunnerTest : public KRunner::AbstractRunnerTest
 {
     Q_OBJECT
+
+    template<typename... Args>
+    auto launchQueryAndSort(Args &&...args)
+    {
+        auto matches = launchQuery(std::forward<Args>(args)...);
+        // Make sure overlapping scores still result in a stable sorting order. Avoids flakes
+        std::ranges::sort(matches, [](const KRunner::QueryMatch &a, const KRunner::QueryMatch &b) {
+            return a.text() > b.text();
+        });
+        std::ranges::stable_sort(matches, [](const KRunner::QueryMatch &a, const KRunner::QueryMatch &b) {
+            return a.relevance() > b.relevance();
+        });
+        return matches;
+    }
+
 private Q_SLOTS:
     void initTestCase();
     void cleanupTestCase();
@@ -90,11 +105,7 @@ void ServiceRunnerTest::testExecutableExactMatch()
 void ServiceRunnerTest::testKonsoleVsYakuakeComment()
 {
     // Yakuake has konsole mentioned in comment, should be rated lower.
-    auto matches = launchQuery(QStringLiteral("kons"));
-
-    std::ranges::sort(matches, [](const KRunner::QueryMatch &a, const KRunner::QueryMatch &b) {
-        return a.relevance() > b.relevance();
-    });
+    auto matches = launchQueryAndSort(QStringLiteral("kons"));
 
     QStringList texts;
     for (const auto &match : matches) {
@@ -119,11 +130,7 @@ void ServiceRunnerTest::testSystemSettings()
     // may then also disqualify the KDE version of system settings on account of having already
     // seen it. This test makes sure we find the right version.
     manager->matchSessionComplete();
-    auto matches = launchQuery(QStringLiteral("settings"));
-
-    std::ranges::sort(matches, [](const KRunner::QueryMatch &a, const KRunner::QueryMatch &b) {
-        return a.relevance() > b.relevance();
-    });
+    auto matches = launchQueryAndSort(QStringLiteral("settings"));
 
     QStringList texts;
     for (const auto &match : matches) {
@@ -142,11 +149,7 @@ void ServiceRunnerTest::testSystemSettings()
 
 void ServiceRunnerTest::testSystemSettings2()
 {
-    auto matches = launchQuery(QStringLiteral("sy"));
-
-    std::ranges::sort(matches, [](const KRunner::QueryMatch &a, const KRunner::QueryMatch &b) {
-        return a.relevance() > b.relevance();
-    });
+    auto matches = launchQueryAndSort(QStringLiteral("sy"));
 
     QStringList texts;
     for (const auto &match : matches) {
@@ -245,11 +248,7 @@ void ServiceRunnerTest::testEnv()
 void ServiceRunnerTest::testCodeVsKateVsEmojier()
 {
     // Kate has code mentioned in comment, should be rated lower.
-    auto matches = launchQuery(u"code"_s);
-
-    std::ranges::sort(matches, [](const KRunner::QueryMatch &a, const KRunner::QueryMatch &b) {
-        return a.relevance() > b.relevance();
-    });
+    auto matches = launchQueryAndSort(u"code"_s);
 
     QStringList texts;
     for (const auto &match : matches) {
