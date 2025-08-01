@@ -213,7 +213,7 @@ ColumnLayout {
                 enabled: dayNightTimeOfDayButton.checked && KConfig.KAuthorized.authorizeControlModule("kcm_nighttime")
                 text: i18nc("@action:button Configure day-night cycle times", "Configure…")
                 icon.name: "configure"
-                onClicked: KCM.KCMLauncher.openSystemSettings("kcm_nighttime")
+                onClicked: KCM.KCMLauncher.open("kcm_nighttime")
             }
         }
 
