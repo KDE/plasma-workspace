@@ -110,6 +110,5 @@ private:
         QDateTime deviceTimeStamp;
     };
 
-    QHash<QString, QString> m_encryptedContainerMap;
     QHash<QString, DeviceInfo> m_devicesStates;
 };
