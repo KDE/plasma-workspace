@@ -27,6 +27,18 @@ namespace KIO
 class FileCopyJob;
 }
 
+struct CursorThemeSettingsForeign {
+    Q_GADGET
+    QML_FOREIGN(CursorThemeSettings)
+    QML_ANONYMOUS
+};
+
+struct LaunchFeedbackSettingsForeign {
+    Q_GADGET
+    QML_FOREIGN(LaunchFeedbackSettings)
+    QML_ANONYMOUS
+};
+
 class CursorThemeConfig : public KQuickManagedConfigModule
 {
     Q_OBJECT

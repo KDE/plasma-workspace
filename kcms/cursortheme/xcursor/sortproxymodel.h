@@ -7,6 +7,7 @@
 #pragma once
 
 #include <QSortFilterProxyModel>
+#include <qqmlintegration.h>
 #include <thememodel.h>
 
 /**
@@ -21,6 +22,7 @@
 class SortProxyModel : public QSortFilterProxyModel
 {
     Q_OBJECT
+    QML_ANONYMOUS
 public:
     explicit SortProxyModel(QObject *parent = nullptr)
         : QSortFilterProxyModel(parent)

@@ -53,10 +53,6 @@ CursorThemeConfig::CursorThemeConfig(QObject *parent, const KPluginMetaData &dat
 {
     m_preferredSize = cursorThemeSettings()->cursorSize();
     connect(cursorThemeSettings(), &CursorThemeSettings::cursorThemeChanged, this, &CursorThemeConfig::updateSizeComboBox);
-    qmlRegisterType<PreviewWidget>("org.kde.private.kcm_cursortheme", 1, 0, "PreviewWidget");
-    qmlRegisterAnonymousType<SortProxyModel>("SortProxyModel", 1);
-    qmlRegisterAnonymousType<CursorThemeSettings>("CursorThemeSettings", 1);
-    qmlRegisterAnonymousType<LaunchFeedbackSettings>("LaunchFeedbackSettings", 1);
 
     m_themeModel = new CursorThemeModel(this);
 

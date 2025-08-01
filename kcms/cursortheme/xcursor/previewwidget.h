@@ -17,6 +17,7 @@ class PreviewCursor;
 class PreviewWidget : public QQuickPaintedItem
 {
     Q_OBJECT
+    QML_ELEMENT
     Q_PROPERTY(SortProxyModel *themeModel READ themeModel WRITE setThemeModel NOTIFY themeModelChanged)
     Q_PROPERTY(int currentIndex READ currentIndex WRITE setCurrentIndex NOTIFY currentIndexChanged)
     Q_PROPERTY(int currentSize READ currentSize WRITE setCurrentSize NOTIFY currentSizeChanged)

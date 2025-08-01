@@ -1,8 +1,9 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_cursortheme\")
 
-kcmutils_add_qml_kcm(kcm_cursortheme SOURCES ${kcm_cursortheme_PART_SRCS})
+add_library(kcm_cursortheme_sources OBJECT)
+set_target_properties(kcm_cursortheme_sources PROPERTIES POSITION_INDEPENDENT_CODE ON)
 
-target_sources(kcm_cursortheme PRIVATE
+target_sources(kcm_cursortheme_sources PRIVATE
     xcursor/thememodel.cpp
     xcursor/themeapplicator.cpp
     xcursor/cursortheme.cpp
@@ -15,7 +16,7 @@ target_sources(kcm_cursortheme PRIVATE
 
 include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/xcursor/ ${CMAKE_CURRENT_BINARY_DIR}/../krdb/ )
 
-kcmutils_generate_module_data(kcm_cursortheme
+kcmutils_generate_module_data(kcm_cursortheme_sources
     MODULE_DATA_HEADER cursorthemedata.h
     MODULE_DATA_CLASS_NAME CursorThemeData
     SETTINGS_HEADERS cursorthemesettings.h launchfeedbacksettings.h
@@ -23,10 +24,10 @@ kcmutils_generate_module_data(kcm_cursortheme
 )
 
 
-kconfig_add_kcfg_files(kcm_cursortheme cursorthemesettings.kcfgc GENERATE_MOC)
-kconfig_add_kcfg_files(kcm_cursortheme launchfeedbacksettings.kcfgc GENERATE_MOC)
+kconfig_add_kcfg_files(kcm_cursortheme_sources cursorthemesettings.kcfgc GENERATE_MOC)
+kconfig_add_kcfg_files(kcm_cursortheme_sources launchfeedbacksettings.kcfgc GENERATE_MOC)
 
-target_link_libraries(kcm_cursortheme PRIVATE
+target_link_libraries(kcm_cursortheme_sources PUBLIC
     Qt::DBus
     Qt::Quick
     KF6::Archive
@@ -43,8 +44,17 @@ target_link_libraries(kcm_cursortheme PRIVATE
 )
 
 if (HAVE_X11)
-   target_link_libraries(kcm_cursortheme PRIVATE X11::Xcursor X11::Xfixes Qt::GuiPrivate)
+   target_link_libraries(kcm_cursortheme_sources PRIVATE X11::Xcursor X11::Xfixes Qt::GuiPrivate)
 endif ()
+
+add_library(qml STATIC)
+ecm_add_qml_module(qml URI "org.kde.private.kcm_cursortheme" VERSION 1.0 GENERATE_PLUGIN_SOURCE PLUGIN_TARGET qmlplugin)
+set_target_properties(qml PROPERTIES POSITION_INDEPENDENT_CODE ON)
+target_link_libraries(qml PRIVATE kcm_cursortheme_sources)
+qt_generate_foreign_qml_types(kcm_cursortheme_sources qml)
+
+kcmutils_add_qml_kcm(kcm_cursortheme)
+target_link_libraries(kcm_cursortheme PRIVATE kcm_cursortheme_sources qml qmlplugin)
 
 # plasma-apply-cursortheme utility
 
