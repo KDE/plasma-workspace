@@ -77,7 +77,7 @@ KCM.SimpleKCM {
                     QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
 
                     enabled: kcm.nightLightSettings.active && kcm.nightLightSettings.mode === Private.NightLightMode.DarkLight && KConfig.KAuthorized.authorizeControlModule("kcm_nighttime")
-                    onClicked: KCM.KCMLauncher.openSystemSettings("kcm_nighttime")
+                    onClicked: KCM.KCMLauncher.open("kcm_nighttime")
                 }
             }
         }
