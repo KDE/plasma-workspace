@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-16 00:45+0000\n"
+"POT-Creation-Date: 2025-08-01 00:45+0000\n"
 "PO-Revision-Date: 2025-05-31 15:16+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "Toggle do not disturb"
 msgstr "Ändra stör ej"
 
-#: sourcesmodel.cpp:412
+#: sourcesmodel.cpp:407
 #, kde-format
 msgid "Other Applications"
 msgstr "Övriga program"
@@ -266,22 +266,22 @@ msgstr "Meddelanderutans position"
 msgid "Application Settings"
 msgstr "Programinställningar"
 
-#: ui/SourcesPage.qml:96
+#: ui/SourcesPage.qml:104
 #, kde-format
 msgid "Applications"
 msgstr "Program"
 
-#: ui/SourcesPage.qml:97
+#: ui/SourcesPage.qml:105
 #, kde-format
 msgid "System Services"
 msgstr "Systemtjänster"
 
-#: ui/SourcesPage.qml:145
+#: ui/SourcesPage.qml:153
 #, kde-format
 msgid "No application or event matches your search term"
 msgstr "Inget program eller händelse motsvarar sökbegreppet"
 
-#: ui/SourcesPage.qml:169
+#: ui/SourcesPage.qml:177
 #, kde-format
 msgid ""
 "Select an application from the list to configure its notification settings "

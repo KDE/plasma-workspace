@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-15 00:39+0000\n"
+"POT-Creation-Date: 2025-08-01 00:45+0000\n"
 "PO-Revision-Date: 2022-10-17 16:14+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -33,7 +33,7 @@ msgstr "Mistókst að afrita skjáborðsskrá tákns fyrir græju úr '%1' yfir 
 msgid "Open Containing Folder"
 msgstr "Opna möppu sem inniheldur skrána"
 
-#: iconapplet.cpp:571
+#: iconapplet.cpp:579
 #, kde-format
 msgid "Properties for %1"
 msgstr "Eiginleikar fyrir %1"

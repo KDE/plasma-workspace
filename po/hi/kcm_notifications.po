@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-16 00:45+0000\n"
+"POT-Creation-Date: 2025-08-01 00:45+0000\n"
 "PO-Revision-Date: 2024-12-15 19:31+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -23,7 +23,7 @@ msgstr ""
 msgid "Toggle do not disturb"
 msgstr "\"परेशान न करें\" को टॉगल करें"
 
-#: sourcesmodel.cpp:412
+#: sourcesmodel.cpp:407
 #, kde-format
 msgid "Other Applications"
 msgstr "अन्य अनुप्रयोग"
@@ -281,23 +281,23 @@ msgstr "पॉपअप स्थिति"
 msgid "Application Settings"
 msgstr "अनुप्रयोग सेट्टिंग"
 
-#: ui/SourcesPage.qml:96
+#: ui/SourcesPage.qml:104
 #, kde-format
 msgid "Applications"
 msgstr "अनुप्रयोग"
 
-#: ui/SourcesPage.qml:97
+#: ui/SourcesPage.qml:105
 #, kde-format
 msgid "System Services"
 msgstr "तंत्र सेवाएँ"
 
-#: ui/SourcesPage.qml:145
+#: ui/SourcesPage.qml:153
 #, fuzzy, kde-format
 #| msgid "No application or event matches your search term."
 msgid "No application or event matches your search term"
 msgstr "कोई भी अनुप्रयोग या घटना आपके खोज शब्द से मेल नहीं खाता।"
 
-#: ui/SourcesPage.qml:169
+#: ui/SourcesPage.qml:177
 #, fuzzy, kde-format
 #| msgid ""
 #| "Select an application from the list to configure its notification "

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-15 00:39+0000\n"
+"POT-Creation-Date: 2025-08-01 00:45+0000\n"
 "PO-Revision-Date: 2019-12-03 18:06+0100\n"
 "Last-Translator: Kristóf Kiszel <ulysses@kubuntu.org>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -33,7 +33,7 @@ msgstr ""
 msgid "Open Containing Folder"
 msgstr "Tartalmazó mappa megnyitása"
 
-#: iconapplet.cpp:571
+#: iconapplet.cpp:579
 #, kde-format
 msgid "Properties for %1"
 msgstr "A(z) %1 tulajdonságai"

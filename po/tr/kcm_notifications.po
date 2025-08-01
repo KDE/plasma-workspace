@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-16 00:45+0000\n"
+"POT-Creation-Date: 2025-08-01 00:45+0000\n"
 "PO-Revision-Date: 2025-04-25 09:54+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -23,7 +23,7 @@ msgstr ""
 msgid "Toggle do not disturb"
 msgstr "Rahatsız Etmeyin kipini aç/kapat"
 
-#: sourcesmodel.cpp:412
+#: sourcesmodel.cpp:407
 #, kde-format
 msgid "Other Applications"
 msgstr "Başka Uygulamalar"
@@ -267,22 +267,22 @@ msgstr "Açılır Pencere Konumu"
 msgid "Application Settings"
 msgstr "Uygulama Ayarları"
 
-#: ui/SourcesPage.qml:96
+#: ui/SourcesPage.qml:104
 #, kde-format
 msgid "Applications"
 msgstr "Uygulamalar"
 
-#: ui/SourcesPage.qml:97
+#: ui/SourcesPage.qml:105
 #, kde-format
 msgid "System Services"
 msgstr "Sistem Hizmetleri"
 
-#: ui/SourcesPage.qml:145
+#: ui/SourcesPage.qml:153
 #, kde-format
 msgid "No application or event matches your search term"
 msgstr "Arama teriminizle hiçbir uygulama veya olay eşleşmiyor."
 
-#: ui/SourcesPage.qml:169
+#: ui/SourcesPage.qml:177
 #, kde-format
 msgid ""
 "Select an application from the list to configure its notification settings "

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-15 00:39+0000\n"
+"POT-Creation-Date: 2025-08-01 00:45+0000\n"
 "PO-Revision-Date: 2024-05-19 21:15\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -37,7 +37,7 @@ msgstr "Не ўдалося скапіяваць файл значка відж�
 msgid "Open Containing Folder"
 msgstr "Адкрыць каталог змесціва"
 
-#: iconapplet.cpp:571
+#: iconapplet.cpp:579
 #, kde-format
 msgid "Properties for %1"
 msgstr "Уласцівасці для %1"

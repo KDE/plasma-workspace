@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-16 00:45+0000\n"
+"POT-Creation-Date: 2025-08-01 00:45+0000\n"
 "PO-Revision-Date: 2024-03-14 23:27+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: Assamese <alministradores@softastur.org>\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "Toggle do not disturb"
 msgstr ""
 
-#: sourcesmodel.cpp:412
+#: sourcesmodel.cpp:407
 #, kde-format
 msgid "Other Applications"
 msgstr "Otres aplicaciones"
@@ -266,22 +266,22 @@ msgstr ""
 msgid "Application Settings"
 msgstr "Configuración de les aplicaciones"
 
-#: ui/SourcesPage.qml:96
+#: ui/SourcesPage.qml:104
 #, kde-format
 msgid "Applications"
 msgstr "Aplicaciones"
 
-#: ui/SourcesPage.qml:97
+#: ui/SourcesPage.qml:105
 #, kde-format
 msgid "System Services"
 msgstr "Servicios del sistema"
 
-#: ui/SourcesPage.qml:145
+#: ui/SourcesPage.qml:153
 #, kde-format
 msgid "No application or event matches your search term"
 msgstr ""
 
-#: ui/SourcesPage.qml:169
+#: ui/SourcesPage.qml:177
 #, kde-format
 msgid ""
 "Select an application from the list to configure its notification settings "

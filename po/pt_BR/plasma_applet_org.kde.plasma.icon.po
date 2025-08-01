@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-15 00:39+0000\n"
+"POT-Creation-Date: 2025-08-01 00:45+0000\n"
 "PO-Revision-Date: 2017-09-14 16:34-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -33,7 +33,7 @@ msgstr ""
 msgid "Open Containing Folder"
 msgstr "Abrir pasta que contém"
 
-#: iconapplet.cpp:571
+#: iconapplet.cpp:579
 #, kde-format
 msgid "Properties for %1"
 msgstr "Propriedades de %1"

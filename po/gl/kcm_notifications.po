@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-16 00:45+0000\n"
+"POT-Creation-Date: 2025-08-01 00:45+0000\n"
 "PO-Revision-Date: 2025-05-03 07:09+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "Toggle do not disturb"
 msgstr "Conmutar non molestar"
 
-#: sourcesmodel.cpp:412
+#: sourcesmodel.cpp:407
 #, kde-format
 msgid "Other Applications"
 msgstr "Outras aplicacións"
@@ -265,22 +265,22 @@ msgstr "Posición da xanela emerxente"
 msgid "Application Settings"
 msgstr "Configuración da aplicación"
 
-#: ui/SourcesPage.qml:96
+#: ui/SourcesPage.qml:104
 #, kde-format
 msgid "Applications"
 msgstr "Aplicacións"
 
-#: ui/SourcesPage.qml:97
+#: ui/SourcesPage.qml:105
 #, kde-format
 msgid "System Services"
 msgstr "Servizos do sistema"
 
-#: ui/SourcesPage.qml:145
+#: ui/SourcesPage.qml:153
 #, kde-format
 msgid "No application or event matches your search term"
 msgstr "Ningunha aplicación ou evento coincide co termo de busca."
 
-#: ui/SourcesPage.qml:169
+#: ui/SourcesPage.qml:177
 #, kde-format
 msgid ""
 "Select an application from the list to configure its notification settings "

@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-20 00:44+0000\n"
-"PO-Revision-Date: 2025-04-12 06:56-0300\n"
+"PO-Revision-Date: 2025-07-31 11:20-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -26,17 +26,18 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "André Marcelo Alvarenga, Guilherme Marçal Silva"
+msgstr "André Marcelo Alvarenga, Guilherme Marçal Silva, Geraldo Simião"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "alvarenga@kde.org, guimarcalsilva@gmail.com"
+msgstr ""
+"alvarenga@kde.org, guimarcalsilva@gmail.com, geraldosimiao@fedoraproject.org"
 
 #: configdialog.cpp:85
 #, kde-format
@@ -354,20 +355,19 @@ msgstr "Retornar a área de transferência"
 #, kde-format
 msgctxt "@action:button Copy to clipboard"
 msgid "Copy"
-msgstr ""
+msgstr "Copiar"
 
 #: declarative/qml/BarcodePage.qml:95
 #, kde-format
 msgctxt "@info:status"
 msgid "An image of the QR code has been copied to clipboard"
-msgstr ""
+msgstr "Uma imagem do código QR foi copiada para a área de transferência"
 
 #: declarative/qml/BarcodePage.qml:101
-#, fuzzy, kde-format
-#| msgid "Append to clipboard"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Copy QR code image to clipboard"
-msgstr "Adicionar à área de transferência"
+msgstr "Copiar a imagem do código QR para a área de transferência"
 
 #: declarative/qml/BarcodePage.qml:112
 #, kde-format

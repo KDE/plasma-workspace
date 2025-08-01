@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-16 00:45+0000\n"
+"POT-Creation-Date: 2025-08-01 00:45+0000\n"
 "PO-Revision-Date: 2025-04-27 12:42+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "Toggle do not disturb"
 msgstr "தொந்தரவு செய்யாமையை நிலைமாற்று"
 
-#: sourcesmodel.cpp:412
+#: sourcesmodel.cpp:407
 #, kde-format
 msgid "Other Applications"
 msgstr "மற்ற செயலிகள்"
@@ -264,22 +264,22 @@ msgstr "தெரித்தெழும் அறிவிப்பின் �
 msgid "Application Settings"
 msgstr "செயலி அமைப்புகள்"
 
-#: ui/SourcesPage.qml:96
+#: ui/SourcesPage.qml:104
 #, kde-format
 msgid "Applications"
 msgstr "செயலிகள்"
 
-#: ui/SourcesPage.qml:97
+#: ui/SourcesPage.qml:105
 #, kde-format
 msgid "System Services"
 msgstr "கணினி சேவைகள்"
 
-#: ui/SourcesPage.qml:145
+#: ui/SourcesPage.qml:153
 #, kde-format
 msgid "No application or event matches your search term"
 msgstr "உங்கள் தேடலுக்கு எந்த செயலியோ நிகழ்வோ பொருந்தவில்லை"
 
-#: ui/SourcesPage.qml:169
+#: ui/SourcesPage.qml:177
 #, kde-format
 msgid ""
 "Select an application from the list to configure its notification settings "

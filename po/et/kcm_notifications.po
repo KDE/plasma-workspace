@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-16 00:45+0000\n"
+"POT-Creation-Date: 2025-08-01 00:45+0000\n"
 "PO-Revision-Date: 2020-01-06 12:09+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "Toggle do not disturb"
 msgstr "Mittehäirimise lülitamine"
 
-#: sourcesmodel.cpp:412
+#: sourcesmodel.cpp:407
 #, kde-format
 msgid "Other Applications"
 msgstr "Muud rakendused"
@@ -282,23 +282,23 @@ msgstr "Hüpiku asukoht"
 msgid "Application Settings"
 msgstr "Rakenduste seadistused"
 
-#: ui/SourcesPage.qml:96
+#: ui/SourcesPage.qml:104
 #, kde-format
 msgid "Applications"
 msgstr "Rakendused"
 
-#: ui/SourcesPage.qml:97
+#: ui/SourcesPage.qml:105
 #, kde-format
 msgid "System Services"
 msgstr "Süsteemi teenused"
 
-#: ui/SourcesPage.qml:145
+#: ui/SourcesPage.qml:153
 #, fuzzy, kde-format
 #| msgid "No application or event matches your search term."
 msgid "No application or event matches your search term"
 msgstr "Otsingule ei vasta ükski rakendus ega sündmus."
 
-#: ui/SourcesPage.qml:169
+#: ui/SourcesPage.qml:177
 #, fuzzy, kde-format
 #| msgid ""
 #| "Select an application from the list to configure its notification "

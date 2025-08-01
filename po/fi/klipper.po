@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-20 00:44+0000\n"
-"PO-Revision-Date: 2025-01-12 17:10+0200\n"
+"PO-Revision-Date: 2025-07-13 23:10+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -354,20 +354,19 @@ msgstr "Palaa leikepöydälle"
 #, kde-format
 msgctxt "@action:button Copy to clipboard"
 msgid "Copy"
-msgstr ""
+msgstr "Kopioi"
 
 #: declarative/qml/BarcodePage.qml:95
 #, kde-format
 msgctxt "@info:status"
 msgid "An image of the QR code has been copied to clipboard"
-msgstr ""
+msgstr "QR-koodin kuva kopioitiin leikepöydälle"
 
 #: declarative/qml/BarcodePage.qml:101
-#, fuzzy, kde-format
-#| msgid "Append to clipboard"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Copy QR code image to clipboard"
-msgstr "Lisää leikepöydälle"
+msgstr "Kopioi QR-koodin kuva leikepöydälle"
 
 #: declarative/qml/BarcodePage.qml:112
 #, kde-format

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-15 00:39+0000\n"
+"POT-Creation-Date: 2025-08-01 00:45+0000\n"
 "PO-Revision-Date: 2025-03-03 22:49+0700\n"
 "Last-Translator: Pongsakorn S. <kde@xerusion.me>\n"
 "Language-Team: Thai\n"
@@ -31,7 +31,7 @@ msgstr "ไม่สามารถคัดลอกไฟล์เดสก์
 msgid "Open Containing Folder"
 msgstr "เปิดโฟลเดอร์ที่บรรจุ"
 
-#: iconapplet.cpp:571
+#: iconapplet.cpp:579
 #, kde-format
 msgid "Properties for %1"
 msgstr "คุณสมบัติของ %1"
