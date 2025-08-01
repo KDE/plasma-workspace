@@ -1178,9 +1178,7 @@ msgstr "没有找到字符。"
 #, kde-format
 msgctxt "A sentence that uses all of the letters of the alphabet"
 msgid "The quick brown fox jumps over the lazy dog"
-msgstr ""
-"The Quick Brown Fox Jumps Over The Lazy Dog\n"
-"龙跳天门，虎卧凰阁"
+msgstr "The Quick Brown Fox Jumps Over The Lazy Dog 龙跳天门 虎卧凰阁"
 
 #: lib/FcEngine.cpp:1076
 #, kde-format
