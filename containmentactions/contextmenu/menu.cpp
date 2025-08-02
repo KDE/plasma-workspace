@@ -266,10 +266,9 @@ void ContextMenu::startLogout()
 
 void ContextMenu::configureDisplays()
 {
-    if (auto service = KService::serviceByDesktopName(QStringLiteral("kcm_kscreen"))) {
-        auto job = new KIO::ApplicationLauncherJob(service);
-        job->start();
-    }
+    auto job = new KIO::CommandLauncherJob(QStringLiteral("systemsettings"),
+                                           {QStringLiteral("kcm_kscreen"), QStringLiteral("--args"), QString::number(containment()->screen())});
+    job->start();
 }
 
 QWidget *ContextMenu::createConfigurationInterface(QWidget *parent)
