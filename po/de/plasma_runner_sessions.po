@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-19 00:44+0000\n"
+"POT-Creation-Date: 2025-08-02 00:45+0000\n"
 "PO-Revision-Date: 2025-04-15 02:37+0200\n"
 "Last-Translator: Flori G <Renner03@protonmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -96,36 +96,36 @@ msgstr "benutzer wechseln; neue sitzung"
 msgid "Switch to a session as a different user"
 msgstr "Zu einer Sitzung als ein anderer Benutzer wechseln"
 
-#: sessionrunner.cpp:74
+#: sessionrunner.cpp:73
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
 msgstr "Abmelden"
 
-#: sessionrunner.cpp:82
+#: sessionrunner.cpp:81
 #, kde-format
 msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "Herunterfahren"
 
-#: sessionrunner.cpp:89
+#: sessionrunner.cpp:88
 #, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
 msgstr "Neu starten"
 
-#: sessionrunner.cpp:96
+#: sessionrunner.cpp:95
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr "Sperren"
 
-#: sessionrunner.cpp:103
+#: sessionrunner.cpp:102
 #, kde-format
 msgid "Save Session"
 msgstr "Sitzung speichern"
 
-#: sessionrunner.cpp:110
+#: sessionrunner.cpp:109
 #, kde-format
 msgid "Switch User"
 msgstr "Benutzer wechseln"

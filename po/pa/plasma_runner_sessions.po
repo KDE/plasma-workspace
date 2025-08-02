@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-19 00:44+0000\n"
+"POT-Creation-Date: 2025-08-02 00:45+0000\n"
 "PO-Revision-Date: 2025-03-24 14:50-0500\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -95,36 +95,36 @@ msgstr "ਵਰਤੋਂਕਾਰ ਬਦਲੋ;ਯੂਜ਼ਰ ਬਦਲੋ;ਨਵ�
 msgid "Switch to a session as a different user"
 msgstr "ਵੱਖਰੇ ਵਰਤੋਂਕਾਰ ਲਈ ਸ਼ੈਸ਼ਨ ਲਈ ਬਦਲੋ"
 
-#: sessionrunner.cpp:74
+#: sessionrunner.cpp:73
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
 msgstr "ਲਾਗ ਆਉਟ"
 
-#: sessionrunner.cpp:82
+#: sessionrunner.cpp:81
 #, kde-format
 msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "ਬੰਦ ਕਰੋ"
 
-#: sessionrunner.cpp:89
+#: sessionrunner.cpp:88
 #, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
 msgstr "ਮੁੜ-ਸ਼ੁਰੂ ਕਰੋ"
 
-#: sessionrunner.cpp:96
+#: sessionrunner.cpp:95
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr "ਲਾਕ"
 
-#: sessionrunner.cpp:103
+#: sessionrunner.cpp:102
 #, kde-format
 msgid "Save Session"
 msgstr "ਸ਼ੈਸ਼ਨ ਸੰਭਾਲੋ"
 
-#: sessionrunner.cpp:110
+#: sessionrunner.cpp:109
 #, kde-format
 msgid "Switch User"
 msgstr "ਵਰਤੋਂਕਾਰ ਬਦਲੋ"

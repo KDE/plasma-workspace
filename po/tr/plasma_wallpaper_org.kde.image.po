@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-12 00:45+0000\n"
+"POT-Creation-Date: 2025-08-02 00:45+0000\n"
 "PO-Revision-Date: 2025-07-14 13:54+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-i18n-doc@kde.org>\n"
@@ -43,82 +43,101 @@ msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Slayt için Klasör Aç"
 
-#: imagepackage/contents/ui/config.qml:149
+#: imagepackage/contents/ui/config.qml:156
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Positioning:"
 msgstr "Konumlandırma:"
 
-#: imagepackage/contents/ui/config.qml:152
+#: imagepackage/contents/ui/config.qml:159
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled and cropped"
 msgstr "Ölçeklendirilmiş ve kırpılmış"
 
-#: imagepackage/contents/ui/config.qml:156
+#: imagepackage/contents/ui/config.qml:163
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled"
 msgstr "Ölçeklendirilmiş"
 
-#: imagepackage/contents/ui/config.qml:160
+#: imagepackage/contents/ui/config.qml:167
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled, keep proportions"
 msgstr "Ölçeklendirilmiş, oranları koru"
 
-#: imagepackage/contents/ui/config.qml:164
+#: imagepackage/contents/ui/config.qml:171
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "Ortalanmış"
 
-#: imagepackage/contents/ui/config.qml:168
+#: imagepackage/contents/ui/config.qml:175
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Tiled"
 msgstr "Döşenmiş"
 
-#: imagepackage/contents/ui/config.qml:194
-#, kde-format
-msgctxt "@label part of a sentence: 'Switch dynamic wallpapers [based on]'"
+#: imagepackage/contents/ui/config.qml:203
+#, fuzzy, kde-format
+#| msgctxt "@label part of a sentence: 'Switch dynamic wallpapers [based on]'"
+#| msgid "Switch dynamic wallpapers:"
+msgctxt ""
+"@label:listbox part of a sentence: 'Switch dynamic wallpapers [based on]'"
 msgid "Switch dynamic wallpapers:"
 msgstr "Devingen duvar kâğıtlarını ayarla:"
 
-#: imagepackage/contents/ui/config.qml:195
-#, kde-format
-msgctxt "@option:radio part of a sentence: 'Switch dynamic wallpapers'"
+#: imagepackage/contents/ui/config.qml:211
+#, fuzzy, kde-format
+#| msgctxt "@option:radio part of a sentence: 'Switch dynamic wallpapers'"
+#| msgid "Based on whether the color scheme is dark or light"
+msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the color scheme is dark or light"
 msgstr "Renk şemasının koyu veya açık olmasına bağlı olarak"
 
-#: imagepackage/contents/ui/config.qml:206
-#, kde-format
-msgctxt "@option:radio part of a sentence: 'Switch dynamic wallpapers'"
-msgid "Based on the day-night cycle:"
+#: imagepackage/contents/ui/config.qml:213
+#, fuzzy, kde-format
+#| msgctxt "@option:radio part of a sentence: 'Switch dynamic wallpapers'"
+#| msgid "Based on the day-night cycle:"
+msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
+msgid "Based on the day-night cycle"
 msgstr "Gece–gündüz döngüsüne bağlı olarak"
 
-#: imagepackage/contents/ui/config.qml:214
+#: imagepackage/contents/ui/config.qml:217
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Always use light variant"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:221
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Always use dark variant"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:231
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
 msgstr "Yapılandır…"
 
-#: imagepackage/contents/ui/config.qml:225
+#: imagepackage/contents/ui/config.qml:242
 #, kde-format
 msgid "Background:"
 msgstr "Arka plan:"
 
-#: imagepackage/contents/ui/config.qml:226
+#: imagepackage/contents/ui/config.qml:243
 #, kde-format
 msgid "Blur"
 msgstr "Bulanık"
 
-#: imagepackage/contents/ui/config.qml:235
+#: imagepackage/contents/ui/config.qml:252
 #, kde-format
 msgid "Solid color"
 msgstr "Katı renk"
 
-#: imagepackage/contents/ui/config.qml:246
+#: imagepackage/contents/ui/config.qml:263
 #, kde-format
 msgid "Select Background Color"
 msgstr "Arka Plan Rengini Seç"

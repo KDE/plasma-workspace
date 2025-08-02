@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-19 00:44+0000\n"
+"POT-Creation-Date: 2025-08-02 00:45+0000\n"
 "PO-Revision-Date: 2025-02-24 16:27+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -94,36 +94,36 @@ msgstr "switch user;new session"
 msgid "Switch to a session as a different user"
 msgstr "Commuta a un session con un differente usator"
 
-#: sessionrunner.cpp:74
+#: sessionrunner.cpp:73
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
 msgstr "Claude session"
 
-#: sessionrunner.cpp:82
+#: sessionrunner.cpp:81
 #, kde-format
 msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "Arresto (shut down)"
 
-#: sessionrunner.cpp:89
+#: sessionrunner.cpp:88
 #, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
 msgstr "Re-Initia"
 
-#: sessionrunner.cpp:96
+#: sessionrunner.cpp:95
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr "Bloca"
 
-#: sessionrunner.cpp:103
+#: sessionrunner.cpp:102
 #, kde-format
 msgid "Save Session"
 msgstr "Salveguarda session"
 
-#: sessionrunner.cpp:110
+#: sessionrunner.cpp:109
 #, kde-format
 msgid "Switch User"
 msgstr "Commuta usator"

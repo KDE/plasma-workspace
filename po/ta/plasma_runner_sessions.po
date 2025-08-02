@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-19 00:44+0000\n"
+"POT-Creation-Date: 2025-08-02 00:45+0000\n"
 "PO-Revision-Date: 2025-03-09 12:51+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -94,36 +94,36 @@ msgstr "switch user;new session;பயனரை மாற்று;புதி�
 msgid "Switch to a session as a different user"
 msgstr "வேறு பயனராக உள்ள அமர்விற்கு தாவும்"
 
-#: sessionrunner.cpp:74
+#: sessionrunner.cpp:73
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
 msgstr "அமர்விலிருந்து வெளியேறு"
 
-#: sessionrunner.cpp:82
+#: sessionrunner.cpp:81
 #, kde-format
 msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "கணினியை நிறுத்து"
 
-#: sessionrunner.cpp:89
+#: sessionrunner.cpp:88
 #, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
 msgstr "மீள்துவக்கு"
 
-#: sessionrunner.cpp:96
+#: sessionrunner.cpp:95
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr "பூட்டு"
 
-#: sessionrunner.cpp:103
+#: sessionrunner.cpp:102
 #, kde-format
 msgid "Save Session"
 msgstr "அமர்வை சேமி"
 
-#: sessionrunner.cpp:110
+#: sessionrunner.cpp:109
 #, kde-format
 msgid "Switch User"
 msgstr "பயனரை மாற்று"

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-19 00:44+0000\n"
+"POT-Creation-Date: 2025-08-02 00:45+0000\n"
 "PO-Revision-Date: 2024-08-24 14:37+0300\n"
 "Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -101,36 +101,36 @@ msgstr "εναλλαγή χρήστη;νέα συνεδρία"
 msgid "Switch to a session as a different user"
 msgstr "Εκκίνηση μιας νέας συνεδρίας ως διαφορετικός χρήστης"
 
-#: sessionrunner.cpp:74
+#: sessionrunner.cpp:73
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
 msgstr "Αποσύνδεση"
 
-#: sessionrunner.cpp:82
+#: sessionrunner.cpp:81
 #, kde-format
 msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "Τερματισμός"
 
-#: sessionrunner.cpp:89
+#: sessionrunner.cpp:88
 #, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
 msgstr "Επανεκκίνηση"
 
-#: sessionrunner.cpp:96
+#: sessionrunner.cpp:95
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr "Κλείδωμα"
 
-#: sessionrunner.cpp:103
+#: sessionrunner.cpp:102
 #, kde-format
 msgid "Save Session"
 msgstr "Αποθήκευση συνεδρίας"
 
-#: sessionrunner.cpp:110
+#: sessionrunner.cpp:109
 #, kde-format
 msgid "Switch User"
 msgstr "Εναλλαγή χρήστη"

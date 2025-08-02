@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-sdk\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-25 00:44+0000\n"
+"POT-Creation-Date: 2025-08-02 00:45+0000\n"
 "PO-Revision-Date: 2021-08-20 15:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -52,12 +52,12 @@ msgstr "മാർക്കോ മാർട്ടിൻ"
 msgid "Maintainer"
 msgstr "പരിപാലകൻ"
 
-#: lnftool.cpp:45
+#: lnftool.cpp:46
 #, kde-format
 msgid "List available global theme packages"
 msgstr "ലഭ്യമായ പൊതു പ്രമേയങ്ങളുടെ പാക്കേജുകൾ കാണുക"
 
-#: lnftool.cpp:48
+#: lnftool.cpp:49
 #, kde-format
 msgid ""
 "Apply a global theme package. This can be the name of a package, or a full "
@@ -68,23 +68,28 @@ msgstr ""
 "പാക്കേജിലേക്കുള്ള ഒരു പൂർണ്ണ പാതയോ ആകാം, ഈ ഘട്ടത്തിൽ ഇത് ഒരു ആഗോള തീം പാക്കേജ് ആണെന്ന് "
 "ഉറപ്പുവരുത്തുകയും തുടർന്ന് അത് പ്രയോഗിക്കാൻ ശ്രമിക്കുകയും ചെയ്യും"
 
-#: lnftool.cpp:50
+#: lnftool.cpp:51
 #, kde-format
 msgid "packagename"
 msgstr "പാക്കേജിന്റെ പേര്"
 
-#: lnftool.cpp:51
+#: lnftool.cpp:52
+#, kde-format
+msgid "Prevent --apply from disabling the automatic mode"
+msgstr ""
+
+#: lnftool.cpp:53
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
 msgstr "പ്ലാസ്മ ഡെസ്ക്ടോപ്പ് ലേഔട്ട് പുനർസജ്ജമാക്കുക"
 
-#: lookandfeelmanager.cpp:883
+#: lookandfeelmanager.cpp:884
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr "ഈ മാറ്റങ്ങൾ പ്രാബല്യത്തിൽ വരാൻ നിങ്ങൾ പ്ലാസ്മ സെഷൻ പുനരാരംഭിക്കണം."
 
-#: lookandfeelmanager.cpp:884
+#: lookandfeelmanager.cpp:885
 #, kde-format
 msgid "Cursor Settings Changed"
 msgstr "കഴ്‌സർ ക്രമീകരണങ്ങൾ മാറ്റി"
@@ -95,81 +100,154 @@ msgstr "കഴ്‌സർ ക്രമീകരണങ്ങൾ മാറ്റ�
 msgid "Global look and feel"
 msgstr "പൊതുവായുള്ള കെട്ടും മട്ടും"
 
-#: ui/main.qml:62
+#. i18n: ectx: label, entry (defaultLightLookAndFeel), group (KDE)
+#. i18n: ectx: label, entry (defaultDarkLookAndFeel), group (KDE)
+#: lookandfeelsettings.kcfg:13 lookandfeelsettings.kcfg:17
+#, fuzzy, kde-format
+#| msgid "Global look and feel"
+msgid "Global Look and Feel package, alternate"
+msgstr "പൊതുവായുള്ള കെട്ടും മട്ടും"
+
+#. i18n: ectx: label, entry (automaticLookAndFeel), group (KDE)
+#: lookandfeelsettings.kcfg:21
+#, kde-format
+msgid "Switch between dark and light global themes depending on time of day"
+msgstr ""
+
+#. i18n: ectx: label, entry (automaticLookAndFeelOnIdle), group (KDE)
+#: lookandfeelsettings.kcfg:25
+#, kde-format
+msgid "Switch between dark and light global themes when the computer is idle"
+msgstr ""
+
+#. i18n: ectx: label, entry (automaticLookAndFeelIdleInterval), group (KDE)
+#: lookandfeelsettings.kcfg:29
+#, kde-format
+msgid ""
+"How long the computer should be idle in order to switch between dark and "
+"light global themes, in seconds"
+msgstr ""
+
+#: ui/ConfirmDeletionDialog.qml:16
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Permanently"
 msgstr ""
 
-#: ui/main.qml:63
+#: ui/ConfirmDeletionDialog.qml:17
 #, kde-format
 msgctxt "@label"
 msgid "Do you really want to permanently delete this theme?"
 msgstr ""
 
-#: ui/main.qml:67
+#: ui/ConfirmDeletionDialog.qml:21
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete Permanently"
 msgstr ""
 
-#: ui/main.qml:72
+#: ui/ConfirmDeletionDialog.qml:26
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr ""
 
-#: ui/main.qml:88
+#: ui/DayNightLookAndFeel.qml:46
 #, kde-format
-msgid "Get New…"
+msgctxt "@info"
+msgid ""
+"The chosen light Global Theme will be used during the day, and the dark one "
+"will be used at night."
 msgstr ""
 
-#: ui/main.qml:103
-#, fuzzy, kde-format
-#| msgid "Reset the Plasma Desktop layout"
-msgid "Contains Desktop layout"
-msgstr "പ്ലാസ്മ ഡെസ്ക്ടോപ്പ് ലേഔട്ട് പുനർസജ്ജമാക്കുക"
-
-#: ui/main.qml:117
+#: ui/DayNightLookAndFeel.qml:55
 #, kde-format
+msgctxt "@action:button Configure day-night cycle times"
+msgid "Configure Day/Night Cycle…"
+msgstr ""
+
+#: ui/DayNightLookAndFeel.qml:68
+#, kde-format
+msgctxt "@option:radio Light global theme"
+msgid "Light"
+msgstr ""
+
+#: ui/DayNightLookAndFeel.qml:80
+#, kde-format
+msgctxt "@option:radio Dark global theme"
+msgid "Dark"
+msgstr ""
+
+#: ui/DayNightLookAndFeel.qml:97
+#, kde-format
+msgctxt "@option:check"
+msgid "Wait until idleness before switching:"
+msgstr ""
+
+#: ui/DayNightLookAndFeel.qml:110
+#, kde-format
+msgctxt "@item:valuesuffix idle interval"
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ui/DayNightLookAndFeel.qml:122
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Minimizes interruptions when actively using the computer."
+msgstr ""
+
+#: ui/LookAndFeelSelector.qml:24
+#, fuzzy, kde-format
+#| msgid "Global Theme"
+msgctxt "@title:window"
+msgid "Choose Light Global Theme"
+msgstr "ആഗോള തീം"
+
+#: ui/LookAndFeelSelector.qml:26
+#, fuzzy, kde-format
+#| msgid "Global Theme"
+msgctxt "@title:window"
+msgid "Choose Dark Global Theme"
+msgstr "ആഗോള തീം"
+
+#: ui/LookAndFeelSelector.qml:49 ui/StaticLookAndFeel.qml:67
+#, fuzzy, kde-format
+#| msgid "Preview Theme"
+msgctxt "@info:tooltip"
 msgid "Preview Theme"
 msgstr "തീം പ്രിവ്യു"
 
-#: ui/main.qml:126
+#: ui/LookAndFeelSelector.qml:57 ui/StaticLookAndFeel.qml:75
 #, fuzzy, kde-format
 #| msgid "Preview Theme"
 msgctxt "@info:tooltip"
 msgid "Remove theme"
 msgstr "തീം പ്രിവ്യു"
 
-#: ui/main.qml:128
+#: ui/LookAndFeelSelector.qml:59 ui/StaticLookAndFeel.qml:77
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active theme"
 msgstr ""
 
-#: ui/main.qml:130
+#: ui/LookAndFeelSelector.qml:61 ui/StaticLookAndFeel.qml:79
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed themes"
 msgstr ""
 
-#: ui/main.qml:147
+#: ui/main.qml:22
 #, kde-format
-msgctxt ""
-"Confirmation question about applying the Global Theme - %1 is the Global "
-"Theme's name"
-msgid "Apply %1?"
+msgctxt "@option:check"
+msgid "Switch to Dark Mode at Night"
 msgstr ""
 
-#: ui/main.qml:178
+#: ui/main.qml:40
 #, kde-format
-msgid "Choose what to apply…"
-msgstr ""
-
-#: ui/main.qml:178
-#, kde-format
-msgid "Show fewer options…"
+msgctxt "@action:intoolbar"
+msgid "Get New…"
 msgstr ""
 
 #: ui/MoreOptions.qml:24
@@ -286,6 +364,31 @@ msgid ""
 "the maintainer of this Global Theme as it might be broken."
 msgstr ""
 
+#: ui/StaticLookAndFeel.qml:53
+#, fuzzy, kde-format
+#| msgid "Reset the Plasma Desktop layout"
+msgctxt "@label"
+msgid "Contains Desktop layout"
+msgstr "പ്ലാസ്മ ഡെസ്ക്ടോപ്പ് ലേഔട്ട് പുനർസജ്ജമാക്കുക"
+
+#: ui/StaticLookAndFeel.qml:112
+#, kde-format
+msgctxt ""
+"Confirmation question about applying the Global Theme - %1 is the Global "
+"Theme's name"
+msgid "Apply %1?"
+msgstr ""
+
+#: ui/StaticLookAndFeel.qml:143
+#, kde-format
+msgid "Choose what to apply…"
+msgstr ""
+
+#: ui/StaticLookAndFeel.qml:143
+#, kde-format
+msgid "Show fewer options…"
+msgstr ""
+
 #~ msgid "Get New Global Themes…"
 #~ msgstr "പുതിയ ആഗോള തീമുകൾ നേടുക…"
 
@@ -303,9 +406,6 @@ msgstr ""
 
 #~ msgid "Use desktop layout from theme"
 #~ msgstr "തീമിൽ നിന്ന് ഡെസ്ക്ടോപ്പ് ലേ ഔട്ട് ഉപയോഗിക്കുക"
-
-#~ msgid "Global Theme"
-#~ msgstr "ആഗോള തീം"
 
 #~ msgid "Apply a global theme package"
 #~ msgstr "ഒരു പൊതു പ്രമേയത്തിന്റെ പാക്കേജ് പ്രയോഗിക്കുക"

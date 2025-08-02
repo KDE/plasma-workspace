@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-19 00:44+0000\n"
+"POT-Creation-Date: 2025-08-02 00:45+0000\n"
 "PO-Revision-Date: 2011-02-15 16:41+0100\n"
 "Last-Translator: Marko Dimjasevic <marko@dimjasevic.net>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -109,13 +109,13 @@ msgstr "promijeni korisnika"
 msgid "Switch to a session as a different user"
 msgstr "Pokreni novu sesiju kao drugi korisnik"
 
-#: sessionrunner.cpp:74
+#: sessionrunner.cpp:73
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
 msgstr ""
 
-#: sessionrunner.cpp:82
+#: sessionrunner.cpp:81
 #, fuzzy, kde-format
 #| msgctxt "shutdown computer command"
 #| msgid "shutdown"
@@ -123,7 +123,7 @@ msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "isključi"
 
-#: sessionrunner.cpp:89
+#: sessionrunner.cpp:88
 #, fuzzy, kde-format
 #| msgctxt "restart computer command"
 #| msgid "restart"
@@ -131,19 +131,19 @@ msgctxt "restart computer command"
 msgid "Restart"
 msgstr "ponovo pokreni"
 
-#: sessionrunner.cpp:96
+#: sessionrunner.cpp:95
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr ""
 
-#: sessionrunner.cpp:103
+#: sessionrunner.cpp:102
 #, fuzzy, kde-format
 #| msgid "new session"
 msgid "Save Session"
 msgstr "nova sesija"
 
-#: sessionrunner.cpp:110
+#: sessionrunner.cpp:109
 #, fuzzy, kde-format
 #| msgid "switch user"
 msgid "Switch User"

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-12 00:45+0000\n"
+"POT-Creation-Date: 2025-08-02 00:45+0000\n"
 "PO-Revision-Date: 2017-12-15 12:38+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -44,7 +44,7 @@ msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Fascikla iz koje se povlače tapeti."
 
-#: imagepackage/contents/ui/config.qml:149
+#: imagepackage/contents/ui/config.qml:156
 #, fuzzy, kde-format
 #| msgid "Positioning:"
 msgctxt "@label:listbox"
@@ -52,7 +52,7 @@ msgid "Positioning:"
 msgstr "Postavljanje:"
 
 # >> @item:inlistbox Positioning
-#: imagepackage/contents/ui/config.qml:152
+#: imagepackage/contents/ui/config.qml:159
 #, fuzzy, kde-format
 #| msgid "Scaled and Cropped"
 msgctxt "@item:inlistbox"
@@ -60,7 +60,7 @@ msgid "Scaled and cropped"
 msgstr "skalirano i opsječeno"
 
 # >> @item:inlistbox Positioning
-#: imagepackage/contents/ui/config.qml:156
+#: imagepackage/contents/ui/config.qml:163
 #, fuzzy, kde-format
 #| msgid "Scaled"
 msgctxt "@item:inlistbox"
@@ -68,7 +68,7 @@ msgid "Scaled"
 msgstr "skalirano"
 
 # >> @item:inlistbox Positioning
-#: imagepackage/contents/ui/config.qml:160
+#: imagepackage/contents/ui/config.qml:167
 #, fuzzy, kde-format
 #| msgid "Scaled, Keep Proportions"
 msgctxt "@item:inlistbox"
@@ -76,7 +76,7 @@ msgid "Scaled, keep proportions"
 msgstr "skalirano, očuvana proporcija"
 
 # >> @item:inlistbox Positioning
-#: imagepackage/contents/ui/config.qml:164
+#: imagepackage/contents/ui/config.qml:171
 #, fuzzy, kde-format
 #| msgid "Centered"
 msgctxt "@item:inlistbox"
@@ -84,56 +84,69 @@ msgid "Centered"
 msgstr "centrirano"
 
 # >> @item:inlistbox Positioning
-#: imagepackage/contents/ui/config.qml:168
+#: imagepackage/contents/ui/config.qml:175
 #, fuzzy, kde-format
 #| msgid "Tiled"
 msgctxt "@item:inlistbox"
 msgid "Tiled"
 msgstr "popločano"
 
-#: imagepackage/contents/ui/config.qml:194
+#: imagepackage/contents/ui/config.qml:203
 #, fuzzy, kde-format
 #| msgid "Get New Wallpapers..."
-msgctxt "@label part of a sentence: 'Switch dynamic wallpapers [based on]'"
+msgctxt ""
+"@label:listbox part of a sentence: 'Switch dynamic wallpapers [based on]'"
 msgid "Switch dynamic wallpapers:"
 msgstr "Dobavi nove tapete..."
 
-#: imagepackage/contents/ui/config.qml:195
+#: imagepackage/contents/ui/config.qml:211
 #, kde-format
-msgctxt "@option:radio part of a sentence: 'Switch dynamic wallpapers'"
+msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the color scheme is dark or light"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:206
+#: imagepackage/contents/ui/config.qml:213
 #, kde-format
-msgctxt "@option:radio part of a sentence: 'Switch dynamic wallpapers'"
-msgid "Based on the day-night cycle:"
+msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
+msgid "Based on the day-night cycle"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:214
+#: imagepackage/contents/ui/config.qml:217
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Always use light variant"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:221
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Always use dark variant"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:231
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:225
+#: imagepackage/contents/ui/config.qml:242
 #, kde-format
 msgid "Background:"
 msgstr "Pozadina:"
 
 # >> @option:radio Blur the background
-#: imagepackage/contents/ui/config.qml:226
+#: imagepackage/contents/ui/config.qml:243
 #, kde-format
 msgid "Blur"
 msgstr "Zamućena"
 
-#: imagepackage/contents/ui/config.qml:235
+#: imagepackage/contents/ui/config.qml:252
 #, kde-format
 msgid "Solid color"
 msgstr "Puna boja"
 
 # >> @title:window
-#: imagepackage/contents/ui/config.qml:246
+#: imagepackage/contents/ui/config.qml:263
 #, kde-format
 msgid "Select Background Color"
 msgstr "Izbor boje pozadine"

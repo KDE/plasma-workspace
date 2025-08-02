@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-19 00:44+0000\n"
+"POT-Creation-Date: 2025-08-02 00:45+0000\n"
 "PO-Revision-Date: 2010-01-06 14:51+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -104,13 +104,13 @@ msgstr "ប្ដូ​រអ្នក​ប្រើ"
 msgid "Switch to a session as a different user"
 msgstr "ចាប់ផ្ដើម​សម័យ​ថ្មី​ជា​អ្នក​ប្រើ​ផ្សេង"
 
-#: sessionrunner.cpp:74
+#: sessionrunner.cpp:73
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
 msgstr ""
 
-#: sessionrunner.cpp:82
+#: sessionrunner.cpp:81
 #, fuzzy, kde-format
 #| msgctxt "shutdown computer command"
 #| msgid "shutdown"
@@ -118,7 +118,7 @@ msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "បិទ"
 
-#: sessionrunner.cpp:89
+#: sessionrunner.cpp:88
 #, fuzzy, kde-format
 #| msgctxt "restart computer command"
 #| msgid "restart"
@@ -126,19 +126,19 @@ msgctxt "restart computer command"
 msgid "Restart"
 msgstr "ចាប់ផ្ដើម​ឡើង​វិញ"
 
-#: sessionrunner.cpp:96
+#: sessionrunner.cpp:95
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr ""
 
-#: sessionrunner.cpp:103
+#: sessionrunner.cpp:102
 #, fuzzy, kde-format
 #| msgid "new session"
 msgid "Save Session"
 msgstr "សម័យ​ថ្មី"
 
-#: sessionrunner.cpp:110
+#: sessionrunner.cpp:109
 #, fuzzy, kde-format
 #| msgid "switch user"
 msgid "Switch User"

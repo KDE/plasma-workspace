@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-19 00:44+0000\n"
+"POT-Creation-Date: 2025-08-02 00:45+0000\n"
 "PO-Revision-Date: 2008-06-11 14:45+0200\n"
 "Last-Translator: Erdal Ronahi <erdal.ronahi@nospam.gmail.com>\n"
 "Language-Team: ku <ubuntu-l10n-kur@lists.ubuntu.com>\n"
@@ -105,13 +105,13 @@ msgstr "guherandina bikarhênerê/î"
 msgid "Switch to a session as a different user"
 msgstr ""
 
-#: sessionrunner.cpp:74
+#: sessionrunner.cpp:73
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
 msgstr ""
 
-#: sessionrunner.cpp:82
+#: sessionrunner.cpp:81
 #, fuzzy, kde-format
 #| msgctxt "shutdown computer command"
 #| msgid "shutdown"
@@ -119,7 +119,7 @@ msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "girtin"
 
-#: sessionrunner.cpp:89
+#: sessionrunner.cpp:88
 #, fuzzy, kde-format
 #| msgctxt "restart computer command"
 #| msgid "restart"
@@ -127,19 +127,19 @@ msgctxt "restart computer command"
 msgid "Restart"
 msgstr "nûdestpêkirin"
 
-#: sessionrunner.cpp:96
+#: sessionrunner.cpp:95
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr ""
 
-#: sessionrunner.cpp:103
+#: sessionrunner.cpp:102
 #, fuzzy, kde-format
 #| msgid "new session"
 msgid "Save Session"
 msgstr "danişîna nû"
 
-#: sessionrunner.cpp:110
+#: sessionrunner.cpp:109
 #, fuzzy, kde-format
 #| msgid "switch user"
 msgid "Switch User"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-19 00:44+0000\n"
+"POT-Creation-Date: 2025-08-02 00:45+0000\n"
 "PO-Revision-Date: 2011-06-23 03:35+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -103,13 +103,13 @@ msgstr "switch user"
 msgid "Switch to a session as a different user"
 msgstr "Басқа пайдаланушы ретінде жаңа сеансты бастау"
 
-#: sessionrunner.cpp:74
+#: sessionrunner.cpp:73
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
 msgstr ""
 
-#: sessionrunner.cpp:82
+#: sessionrunner.cpp:81
 #, fuzzy, kde-format
 #| msgctxt "shutdown computer command"
 #| msgid "shutdown"
@@ -117,7 +117,7 @@ msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "shutdown"
 
-#: sessionrunner.cpp:89
+#: sessionrunner.cpp:88
 #, fuzzy, kde-format
 #| msgctxt "restart computer command"
 #| msgid "restart"
@@ -125,19 +125,19 @@ msgctxt "restart computer command"
 msgid "Restart"
 msgstr "restart"
 
-#: sessionrunner.cpp:96
+#: sessionrunner.cpp:95
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr ""
 
-#: sessionrunner.cpp:103
+#: sessionrunner.cpp:102
 #, fuzzy, kde-format
 #| msgid "new session"
 msgid "Save Session"
 msgstr "new session"
 
-#: sessionrunner.cpp:110
+#: sessionrunner.cpp:109
 #, fuzzy, kde-format
 #| msgid "switch user"
 msgid "Switch User"
