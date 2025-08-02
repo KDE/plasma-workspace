@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-30 02:40+0000\n"
+"POT-Creation-Date: 2025-08-02 02:36+0000\n"
 "PO-Revision-Date: 2025-07-19 12:00+0200\n"
 "Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -91,7 +91,7 @@ msgstr ""
 "Systemet advarer dig, hvis den ledige plads falder under den specificerede "
 "MiB-grænse og den angivne procentdel af tilgængelig plads."
 
-#: module.cpp:105
+#: module.cpp:126
 #, kde-format
 msgid ""
 "Your %1 partition is running out of disk space; %2 MiB of space remaining "
@@ -99,7 +99,7 @@ msgid ""
 msgstr ""
 "Din %1-partition er ved at løbe tør for diskplads; %2 MiB plads tilbage (%3%)"
 
-#: module.cpp:107
+#: module.cpp:128
 #, kde-format
 msgid ""
 "Your Root partition is running out of disk space; %1 MiB of space remaining "
@@ -108,7 +108,7 @@ msgstr ""
 "Din rod-partition er ved at løbe tør for diskplads; %1 MiB plads tilbage "
 "(%2%)"
 
-#: module.cpp:109
+#: module.cpp:130
 #, kde-format
 msgid ""
 "Your Home folder is running out of disk space; %1 MiB of space remaining "
@@ -116,7 +116,7 @@ msgid ""
 msgstr ""
 "Din hjemmemappe er ved at løbe tør for diskplads; %1 MiB plads tilbage (%2%)"
 
-#: module.cpp:134
+#: module.cpp:155
 #, kde-format
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"

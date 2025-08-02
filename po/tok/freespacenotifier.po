@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-30 02:40+0000\n"
+"POT-Creation-Date: 2025-08-02 02:36+0000\n"
 "PO-Revision-Date: 2024-01-09 16:57-0500\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -90,7 +90,7 @@ msgid ""
 "and the specified percentage of available space."
 msgstr ""
 
-#: module.cpp:105
+#: module.cpp:126
 #, fuzzy, kde-format
 #| msgid ""
 #| "Your Root partition is running out of disk space, you have %1 MiB "
@@ -102,7 +102,7 @@ msgstr ""
 "poki open sina li jo pi lili ike e poki pi ken kepeken. poki pi ken kepeken "
 "li %1 MiB taso. (%2%)"
 
-#: module.cpp:107
+#: module.cpp:128
 #, fuzzy, kde-format
 #| msgid ""
 #| "Your Root partition is running out of disk space, you have %1 MiB "
@@ -114,7 +114,7 @@ msgstr ""
 "poki open sina li jo pi lili ike e poki pi ken kepeken. poki pi ken kepeken "
 "li %1 MiB taso. (%2%)"
 
-#: module.cpp:109
+#: module.cpp:130
 #, fuzzy, kde-format
 #| msgid ""
 #| "Your Home folder is running out of disk space, you have %1 MiB remaining "
@@ -126,7 +126,7 @@ msgstr ""
 "poki tomo sina li jo pi lili ike e poki pi ken kepeken. poki pi ken kepeken "
 "li %1 MiB taso. (%2%)"
 
-#: module.cpp:134
+#: module.cpp:155
 #, kde-format
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"

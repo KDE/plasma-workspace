@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-30 02:40+0000\n"
+"POT-Creation-Date: 2025-08-02 02:36+0000\n"
 "PO-Revision-Date: 2025-05-25 14:22+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -97,7 +97,7 @@ msgstr ""
 "Sistemak jakinaraziko dizu leku-hutsa adierazitako MiB kopurutik eta "
 "adierazitako leku-erabilgarriaren ehunekotik behera jaisten den."
 
-#: module.cpp:105
+#: module.cpp:126
 #, kde-format
 msgid ""
 "Your %1 partition is running out of disk space; %2 MiB of space remaining "
@@ -106,7 +106,7 @@ msgstr ""
 "Zure %1 partizioa disko-lekurik gabe geratzen ari da; %2 MiB geratzen dira (%"
 "%3)."
 
-#: module.cpp:107
+#: module.cpp:128
 #, kde-format
 msgid ""
 "Your Root partition is running out of disk space; %1 MiB of space remaining "
@@ -115,7 +115,7 @@ msgstr ""
 "Zure erroko partizioa disko-lekurik gabe geratzen ari da; %1 MiB geratzen "
 "dira (%%2)."
 
-#: module.cpp:109
+#: module.cpp:130
 #, kde-format
 msgid ""
 "Your Home folder is running out of disk space; %1 MiB of space remaining "
@@ -124,7 +124,7 @@ msgstr ""
 "Zure etxeko karpeta disko-lekurik gabe geratzen ari da; %1 MiB geratzen dira "
 "(%%2)."
 
-#: module.cpp:134
+#: module.cpp:155
 #, kde-format
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"
