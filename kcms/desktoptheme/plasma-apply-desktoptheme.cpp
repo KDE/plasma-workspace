@@ -6,8 +6,8 @@
 
 #include "themesmodel.h"
 
-#include <Plasma/Theme>
-
+#include <KConfig>
+#include <KConfigGroup>
 #include <KLocalizedString>
 
 #include <QApplication>
@@ -41,13 +41,17 @@ int main(int argc, char **argv)
     int errorCode{0};
     QTextStream ts(stdout);
     ThemesModel *model{new ThemesModel(&app)};
+
+    KConfig plasmarc(u"plasmarc"_s);
+    KConfigGroup themeGroup = plasmarc.group(u"Theme"_s);
+
     if (!parser->positionalArguments().isEmpty()) {
         QString requestedTheme{parser->positionalArguments().first()};
         constexpr QLatin1Char dirSplit{'/'};
         if (requestedTheme.contains(dirSplit)) {
             requestedTheme = requestedTheme.split(dirSplit, Qt::SkipEmptyParts).last();
         }
-        if (Plasma::Theme().themeName() == requestedTheme) {
+        if (themeGroup.readEntry("name", u"default"_s) == requestedTheme) {
             ts << i18n("The requested theme \"%1\" is already set as the theme for the current Plasma session.", requestedTheme) << Qt::endl;
             // Not an error condition really, let's just ignore that
         } else {
@@ -57,7 +61,12 @@ int main(int argc, char **argv)
             for (int i = 0; i < model->rowCount(); ++i) {
                 QString currentTheme{model->data(model->index(i), ThemesModel::PluginNameRole).toString()};
                 if (currentTheme == requestedTheme) {
-                    Plasma::Theme().setThemeName(requestedTheme);
+                    if (requestedTheme == u"default" && !themeGroup.hasDefault(u"name"_s)) {
+                        themeGroup.revertToDefault("name", KConfig::Notify);
+                    } else {
+                        themeGroup.writeEntry("name", requestedTheme, KConfig::Notify);
+                    }
+
                     found = true;
                     break;
                 }
@@ -78,7 +87,7 @@ int main(int argc, char **argv)
         model->load();
         for (int i = 0; i < model->rowCount(); ++i) {
             QString themeName{model->data(model->index(i), ThemesModel::PluginNameRole).toString()};
-            if (Plasma::Theme().themeName() == themeName) {
+            if (themeGroup.readEntry("name", u"default"_s) == themeName) {
                 ts << u" * %1 (current theme for this Plasma session)"_s.arg(themeName) << Qt::endl;
             } else {
                 ts << u" * %1"_s.arg(themeName) << Qt::endl;
