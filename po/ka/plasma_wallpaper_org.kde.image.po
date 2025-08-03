@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-02 00:45+0000\n"
-"PO-Revision-Date: 2025-07-12 04:00+0200\n"
+"PO-Revision-Date: 2025-08-02 05:16+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -77,41 +77,35 @@ msgid "Tiled"
 msgstr "მოზაიკა"
 
 #: imagepackage/contents/ui/config.qml:203
-#, fuzzy, kde-format
-#| msgctxt "@label part of a sentence: 'Switch dynamic wallpapers [based on]'"
-#| msgid "Switch dynamic wallpapers:"
+#, kde-format
 msgctxt ""
 "@label:listbox part of a sentence: 'Switch dynamic wallpapers [based on]'"
 msgid "Switch dynamic wallpapers:"
 msgstr "დინამიკური ფონის გადართვა:"
 
 #: imagepackage/contents/ui/config.qml:211
-#, fuzzy, kde-format
-#| msgctxt "@option:radio part of a sentence: 'Switch dynamic wallpapers'"
-#| msgid "Based on whether the color scheme is dark or light"
+#, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the color scheme is dark or light"
-msgstr "ეფუძნება, ფერების სქემა მუქია, თუ ღია"
+msgstr "ეფუძნება, არის ფერების სქემა მუქი, თუ ღია"
 
 #: imagepackage/contents/ui/config.qml:213
-#, fuzzy, kde-format
-#| msgctxt "@option:radio part of a sentence: 'Switch dynamic wallpapers'"
-#| msgid "Based on the day-night cycle:"
+#, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on the day-night cycle"
-msgstr "დაფუძნებული დღეღამის ციკლზე:"
+msgstr "დაფუძნებული დღეღამის ციკლზე"
 
 #: imagepackage/contents/ui/config.qml:217
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always use light variant"
-msgstr ""
+msgstr "ყოველთვის ღია ვარიანტის გამოყენება"
 
 #: imagepackage/contents/ui/config.qml:221
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always use dark variant"
-msgstr ""
+msgstr "ყოველთვის მუქი ვარიანტის გამოყენება"
 
 #: imagepackage/contents/ui/config.qml:231
 #, kde-format

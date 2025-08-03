@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-02 00:45+0000\n"
-"PO-Revision-Date: 2025-03-07 23:31+0300\n"
-"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
+"PO-Revision-Date: 2025-08-02 17:51+0300\n"
+"Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.03.70\n"
+"X-Generator: Lokalize 25.04.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -31,7 +31,7 @@ msgstr "volkangezer@gmail.com, emir_sari@icloud.com"
 #: lnftool.cpp:32
 #, kde-format
 msgid "Global Theme Tool"
-msgstr "Genel Tema Aracı"
+msgstr "Global Tema Aracı"
 
 #: lnftool.cpp:34
 #, kde-format
@@ -39,7 +39,7 @@ msgid ""
 "Command line tool to apply global theme packages for changing the look and "
 "feel."
 msgstr ""
-"Görünümü ve hissi değiştirmek ile genel tema paketlerini uygulamak için "
+"Görünümü ve hissi değiştirmek ile global tema paketlerini uygulamak için "
 "komut satırı aracı."
 
 #: lnftool.cpp:36
@@ -60,7 +60,7 @@ msgstr "Bakımcı"
 #: lnftool.cpp:46
 #, kde-format
 msgid "List available global theme packages"
-msgstr "Kullanılabilir genel tema paketlerini listele"
+msgstr "Kullanılabilir global tema paketlerini listele"
 
 #: lnftool.cpp:49
 #, kde-format
@@ -69,8 +69,8 @@ msgid ""
 "path to an installed package, at which point this tool will ensure it is a "
 "global theme package and then attempt to apply it"
 msgstr ""
-"Genel bir tema paketi uygula. Bu, bir paketin adı veya kurulu bir paketin "
-"tam yolu olabilir; bu noktada bu araç, bunun genel bir tema paketi "
+"Bir global tema paketi uygulayın. Bu, bir paketin adı veya kurulu bir "
+"paketin tam yolu olabilir; bu noktada bu araç, bunun global bir tema paketi "
 "olduğundan emin olur ve ardından uygulamaya çalışır."
 
 #: lnftool.cpp:51
@@ -81,7 +81,7 @@ msgstr "paketadı"
 #: lnftool.cpp:52
 #, kde-format
 msgid "Prevent --apply from disabling the automatic mode"
-msgstr ""
+msgstr "“--apply”ın kendiliğinden geçiş kipini devre dışı bırakmasını önle"
 
 #: lnftool.cpp:53
 #, kde-format
@@ -105,27 +105,26 @@ msgstr "İmleç Ayarları Değiştirildi"
 #: lookandfeelsettings.kcfg:9
 #, kde-format
 msgid "Global look and feel"
-msgstr "Genel görünüm ve his"
+msgstr "Global görünüm ve his"
 
 #. i18n: ectx: label, entry (defaultLightLookAndFeel), group (KDE)
 #. i18n: ectx: label, entry (defaultDarkLookAndFeel), group (KDE)
 #: lookandfeelsettings.kcfg:13 lookandfeelsettings.kcfg:17
-#, fuzzy, kde-format
-#| msgid "Global look and feel"
+#, kde-format
 msgid "Global Look and Feel package, alternate"
-msgstr "Genel görünüm ve his"
+msgstr "Global görünüm ve his paketi, alternatif"
 
 #. i18n: ectx: label, entry (automaticLookAndFeel), group (KDE)
 #: lookandfeelsettings.kcfg:21
 #, kde-format
 msgid "Switch between dark and light global themes depending on time of day"
-msgstr ""
+msgstr "Açık ve koyu global temalar arasında günün saatine göre geçiş yap"
 
 #. i18n: ectx: label, entry (automaticLookAndFeelOnIdle), group (KDE)
 #: lookandfeelsettings.kcfg:25
 #, kde-format
 msgid "Switch between dark and light global themes when the computer is idle"
-msgstr ""
+msgstr "Açık ve koyu global temalar arasında bilgisayar boştayken geçiş yap"
 
 #. i18n: ectx: label, entry (automaticLookAndFeelIdleInterval), group (KDE)
 #: lookandfeelsettings.kcfg:29
@@ -134,6 +133,8 @@ msgid ""
 "How long the computer should be idle in order to switch between dark and "
 "light global themes, in seconds"
 msgstr ""
+"Açık ve koyu global temalar arasında geçiş yapmak için bilgisayarın ne kadar "
+"süre boşta kalması gerektiği; saniye türünden"
 
 #: ui/ConfirmDeletionDialog.qml:16
 #, kde-format
@@ -145,7 +146,7 @@ msgstr "Kalıcı Olarak Sil"
 #, kde-format
 msgctxt "@label"
 msgid "Do you really want to permanently delete this theme?"
-msgstr "Bu temayı kalıcı olarak silmek istediğinizden emin misiniz?"
+msgstr "Bu temayı kalıcı olarak silmeyi gerçekten istiyor musunuz?"
 
 #: ui/ConfirmDeletionDialog.qml:21
 #, kde-format
@@ -166,60 +167,61 @@ msgid ""
 "The chosen light Global Theme will be used during the day, and the dark one "
 "will be used at night."
 msgstr ""
+"Seçili açık global tema gündüz iken, koyu olan ise gece iken kullanılır."
 
 #: ui/DayNightLookAndFeel.qml:55
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure Day/Night Cycle…"
-msgstr ""
+msgstr "Gece/Gündüz Döngüsünü Yapılandır…"
 
 #: ui/DayNightLookAndFeel.qml:68
 #, kde-format
 msgctxt "@option:radio Light global theme"
 msgid "Light"
-msgstr ""
+msgstr "Açık"
 
 #: ui/DayNightLookAndFeel.qml:80
 #, kde-format
 msgctxt "@option:radio Dark global theme"
 msgid "Dark"
-msgstr ""
+msgstr "Koyu"
 
 #: ui/DayNightLookAndFeel.qml:97
 #, kde-format
 msgctxt "@option:check"
 msgid "Wait until idleness before switching:"
-msgstr ""
+msgstr "Geçiş yapmadan önce şu kadar boşta kalmayı bekle:"
 
 #: ui/DayNightLookAndFeel.qml:110
 #, kde-format
 msgctxt "@item:valuesuffix idle interval"
 msgid "%1 second"
 msgid_plural "%1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 saniye"
+msgstr[1] "%1 saniye"
 
 #: ui/DayNightLookAndFeel.qml:122
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Minimizes interruptions when actively using the computer."
 msgstr ""
+"Bilgisayarı etkin bir biçimde kullanırken dikkati dağıtacak şeyleri azaltır."
 
 #: ui/LookAndFeelSelector.qml:24
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Light Global Theme"
-msgstr ""
+msgstr "Açık Global Tema Seç"
 
 #: ui/LookAndFeelSelector.qml:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Dark Global Theme"
-msgstr ""
+msgstr "Koyu Global Tema Seç"
 
 #: ui/LookAndFeelSelector.qml:49 ui/StaticLookAndFeel.qml:67
-#, fuzzy, kde-format
-#| msgid "Preview Theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview Theme"
 msgstr "Temayı önizle"
@@ -240,17 +242,16 @@ msgstr "Etkin tema silinemez"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed themes"
-msgstr "Sistem tarafından kurulu tema silinemez"
+msgstr "Sistem tarafından kurulmuş olan tema silinemez"
 
 #: ui/main.qml:22
 #, kde-format
 msgctxt "@option:check"
 msgid "Switch to Dark Mode at Night"
-msgstr ""
+msgstr "Gece olduğunda koyu kipe geçiş yap"
 
 #: ui/main.qml:40
-#, fuzzy, kde-format
-#| msgid "Get New…"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Get New…"
 msgstr "Yeni Al…"
@@ -371,8 +372,7 @@ msgstr ""
 "lütfen bakımcısını durumdan haberdar edin."
 
 #: ui/StaticLookAndFeel.qml:53
-#, fuzzy, kde-format
-#| msgid "Contains Desktop layout"
+#, kde-format
 msgctxt "@label"
 msgid "Contains Desktop layout"
 msgstr "Masaüstü yerleşimi içerir"

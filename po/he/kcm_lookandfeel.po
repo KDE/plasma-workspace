@@ -3,13 +3,13 @@
 #
 # Elkana Bardugo <ttv200@gmail.com>, 2016.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
-# SPDX-FileCopyrightText: 2024 Yaron Shahrabani <sh.yaron@gmail.com>
+# SPDX-FileCopyrightText: 2024, 2025 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-02 00:45+0000\n"
-"PO-Revision-Date: 2025-01-24 09:27+0200\n"
+"PO-Revision-Date: 2025-08-02 23:29+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -33,14 +33,14 @@ msgstr "ttv200@gmail.com,kde-l10n-he@kde.org.il"
 #: lnftool.cpp:32
 #, kde-format
 msgid "Global Theme Tool"
-msgstr "כלי ערכות עיצוב כלליות"
+msgstr "כלי ערכות עיצוב מקיפות"
 
 #: lnftool.cpp:34
 #, kde-format
 msgid ""
 "Command line tool to apply global theme packages for changing the look and "
 "feel."
-msgstr "כלי שורת פקודה להחלת חבילות ערכות עיצוב כלליות לריענון התחושה והמראה."
+msgstr "כלי שורת פקודה להחלת חבילות ערכות עיצוב מקיפות לריענון התחושה והמראה."
 
 #: lnftool.cpp:36
 #, kde-format
@@ -60,7 +60,7 @@ msgstr "מתחזק"
 #: lnftool.cpp:46
 #, kde-format
 msgid "List available global theme packages"
-msgstr "הצגת חבילות ערכות נושא כלליות זמינות"
+msgstr "הצגת חבילות ערכות עיצוב מקיפות זמינות"
 
 #: lnftool.cpp:49
 #, kde-format
@@ -69,8 +69,8 @@ msgid ""
 "path to an installed package, at which point this tool will ensure it is a "
 "global theme package and then attempt to apply it"
 msgstr ""
-"החלת חבילת ערכת עיצוב כללית. יכול להיות שם של חבילה או נתיב מלא לחבילה "
-"מותקנת, בנקודה כלשהי הכלי הזה יוודא שזאת אכן חבילת ערכת עיצוב כללי ואז ינסה "
+"החלת חבילת ערכת עיצוב מקיפה. יכול להיות שם של חבילה או נתיב מלא לחבילה "
+"מותקנת, בנקודה כלשהי הכלי הזה יוודא שזאת אכן חבילת ערכת עיצוב מקיפה ואז ינסה "
 "להחיל אותה"
 
 #: lnftool.cpp:51
@@ -81,7 +81,7 @@ msgstr "שם_חבילה"
 #: lnftool.cpp:52
 #, kde-format
 msgid "Prevent --apply from disabling the automatic mode"
-msgstr ""
+msgstr "למנוע מ־‎--apply להשבית את המצב האוטומטי"
 
 #: lnftool.cpp:53
 #, kde-format
@@ -103,27 +103,26 @@ msgstr "הגדרות סמן העכבר"
 #: lookandfeelsettings.kcfg:9
 #, kde-format
 msgid "Global look and feel"
-msgstr "מראה ותחושה כלליים"
+msgstr "מראה ותחושה מקיפים"
 
 #. i18n: ectx: label, entry (defaultLightLookAndFeel), group (KDE)
 #. i18n: ectx: label, entry (defaultDarkLookAndFeel), group (KDE)
 #: lookandfeelsettings.kcfg:13 lookandfeelsettings.kcfg:17
-#, fuzzy, kde-format
-#| msgid "Global look and feel"
+#, kde-format
 msgid "Global Look and Feel package, alternate"
-msgstr "מראה ותחושה כלליים"
+msgstr "חבילת מראה ותחושה מקיפים, חלופית"
 
 #. i18n: ectx: label, entry (automaticLookAndFeel), group (KDE)
 #: lookandfeelsettings.kcfg:21
 #, kde-format
 msgid "Switch between dark and light global themes depending on time of day"
-msgstr ""
+msgstr "החלפה בין ערכות העיצוב הכהה והבהירה המקיפות לפי השעה ביום"
 
 #. i18n: ectx: label, entry (automaticLookAndFeelOnIdle), group (KDE)
 #: lookandfeelsettings.kcfg:25
 #, kde-format
 msgid "Switch between dark and light global themes when the computer is idle"
-msgstr ""
+msgstr "החלפה בין ערכות העיצוב הכהה והבהירה כשהמחשב לא בשימוש"
 
 #. i18n: ectx: label, entry (automaticLookAndFeelIdleInterval), group (KDE)
 #: lookandfeelsettings.kcfg:29
@@ -132,6 +131,8 @@ msgid ""
 "How long the computer should be idle in order to switch between dark and "
 "light global themes, in seconds"
 msgstr ""
+"למשך כמה זמן על המחשב להיות לא פעיל כדי לעבור בין ערכות העיצוב הכהה והבהירה "
+"המקיפות, בשניות"
 
 #: ui/ConfirmDeletionDialog.qml:16
 #, kde-format
@@ -163,65 +164,62 @@ msgctxt "@info"
 msgid ""
 "The chosen light Global Theme will be used during the day, and the dark one "
 "will be used at night."
-msgstr ""
+msgstr "ערכת העיצוב הבהירה המקיפה שנבחרה תשמש במהלך היום, והכהה במהלך הלילה."
 
 #: ui/DayNightLookAndFeel.qml:55
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure Day/Night Cycle…"
-msgstr ""
+msgstr "הגדרת מחזור יום/לילה…"
 
 #: ui/DayNightLookAndFeel.qml:68
 #, kde-format
 msgctxt "@option:radio Light global theme"
 msgid "Light"
-msgstr ""
+msgstr "בהיר"
 
 #: ui/DayNightLookAndFeel.qml:80
 #, kde-format
 msgctxt "@option:radio Dark global theme"
 msgid "Dark"
-msgstr ""
+msgstr "כהה"
 
 #: ui/DayNightLookAndFeel.qml:97
 #, kde-format
 msgctxt "@option:check"
 msgid "Wait until idleness before switching:"
-msgstr ""
+msgstr "להמתין לחוסר פעילות טרם ההחלפה:"
 
 #: ui/DayNightLookAndFeel.qml:110
 #, kde-format
 msgctxt "@item:valuesuffix idle interval"
 msgid "%1 second"
 msgid_plural "%1 seconds"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "שנייה"
+msgstr[1] "שתי שניות"
+msgstr[2] "%1 שניות"
+msgstr[3] "%1 שניות"
 
 #: ui/DayNightLookAndFeel.qml:122
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Minimizes interruptions when actively using the computer."
-msgstr ""
+msgstr "מזעור ההפרעות בזמן השימוש במחשב."
 
 #: ui/LookAndFeelSelector.qml:24
-#, fuzzy, kde-format
-#| msgid "Get New Looks..."
+#, kde-format
 msgctxt "@title:window"
 msgid "Choose Light Global Theme"
-msgstr "קבל עיצובים חדשים..."
+msgstr "בחירת ערכת עיצוב בהירה מקיפה"
 
 #: ui/LookAndFeelSelector.qml:26
-#, fuzzy, kde-format
-#| msgid "Get New Looks..."
+#, kde-format
 msgctxt "@title:window"
 msgid "Choose Dark Global Theme"
-msgstr "קבל עיצובים חדשים..."
+msgstr "בחירת ערכת עיצוב כהה מקיפה"
 
 #: ui/LookAndFeelSelector.qml:49 ui/StaticLookAndFeel.qml:67
-#, fuzzy, kde-format
-#| msgid "Preview Theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview Theme"
 msgstr "הצגה מקדימה של ערכת העיצוב"
@@ -248,11 +246,10 @@ msgstr "לא ניתן למחוק ערכות עיצוב מערכתיות"
 #, kde-format
 msgctxt "@option:check"
 msgid "Switch to Dark Mode at Night"
-msgstr ""
+msgstr "החלפה למצב כהה בלילה"
 
 #: ui/main.qml:40
-#, fuzzy, kde-format
-#| msgid "Get New…"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Get New…"
 msgstr "קבלת חדשות…"
@@ -339,7 +336,7 @@ msgstr "מסך פתיח"
 #: ui/SimpleOptions.qml:19
 #, kde-format
 msgid "The following will be applied by this Global Theme:"
-msgstr "ההגדרה הבאה תחול על ערכת העיצוב הכללית הזאת:"
+msgstr "ההגדרה הבאה תחול על ערכת העיצוב המקיפה הזאת:"
 
 #: ui/SimpleOptions.qml:33
 #, kde-format
@@ -370,11 +367,10 @@ msgid ""
 "the maintainer of this Global Theme as it might be broken."
 msgstr ""
 "ערכת העיצוב הכללית לא מספקת הגדרות מתאימות. נא ליצור קשר עם מתחזק הערכה "
-"הכללית הזאת כיוון שהיא כנראה פגומה."
+"המקיפה הזאת כיוון שהיא כנראה פגומה."
 
 #: ui/StaticLookAndFeel.qml:53
-#, fuzzy, kde-format
-#| msgid "Contains Desktop layout"
+#, kde-format
 msgctxt "@label"
 msgid "Contains Desktop layout"
 msgstr "מכילה פריסת שולחן עבודה"

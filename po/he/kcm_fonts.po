@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-07 00:44+0000\n"
-"PO-Revision-Date: 2025-06-08 11:14+0300\n"
+"PO-Revision-Date: 2025-08-02 21:45+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -30,7 +30,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #. i18n: ectx: label, entry (forceFontDPI), group (General)
 #: fontsaasettingsbase.kcfg:9
@@ -155,7 +155,7 @@ msgstr "תצוגה"
 #: ui/main.qml:42
 #, kde-format
 msgid "Adjust Global Scale…"
-msgstr "התאמת קנה מידה כללי…"
+msgstr "התאמת קנה מידה מקיף…"
 
 #: ui/main.qml:56
 #, kde-format
@@ -173,7 +173,7 @@ msgid ""
 "large font size, consider adjusting the global screen scale."
 msgstr ""
 "גופנים גדולים מאוד יכולים להוליד תוצאות שנראות מוזר. במקום להשתמש בגופנים "
-"גדולים מאוד, כדאי להתאים את קנה המידה הכללי של המסך."
+"גדולים מאוד, כדאי להתאים את קנה המידה המקיף של המסך."
 
 #: ui/main.qml:90
 #, kde-kuit-format
@@ -194,7 +194,7 @@ msgid ""
 "scaling feature."
 msgstr ""
 "הדרך המומלצת לשנות את קנה המידה של ממשק המשתמש היא באמצעות יכולת קנה המידה "
-"הכללי של המסך."
+"המקיף של המסך."
 
 #: ui/main.qml:117
 #, kde-format
@@ -212,7 +212,7 @@ msgid ""
 "small font size, consider adjusting the global screen scale."
 msgstr ""
 "גופנים קטנים מאוד יכולים להוליד תוצאות שנראות מוזר. במקום להשתמש בגופנים "
-"קטנים מאוד, כדאי להתאים את קנה המידה הכללי של המסך."
+"קטנים מאוד, כדאי להתאים את קנה המידה המקיף של המסך."
 
 #: ui/main.qml:154
 #, kde-format
