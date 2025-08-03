@@ -50,6 +50,7 @@ DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
         m_layerWindow->setLayer(LayerShellQt::Window::LayerBackground);
         m_layerWindow->setScope(QStringLiteral("desktop"));
         m_layerWindow->setCloseOnDismissed(false);
+        m_layerWindow->setActivateOnShow(false);
     } else {
         KX11Extras::setType(winId(), NET::Desktop);
         KX11Extras::setState(winId(), NET::KeepBelow);
