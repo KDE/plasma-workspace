@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-12 02:31+0000\n"
-"PO-Revision-Date: 2025-07-31 18:00+0400\n"
+"PO-Revision-Date: 2025-08-03 12:32+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -202,7 +202,7 @@ msgstr "فكّ القفل"
 #: contents/lockscreen/MediaControls.qml:109
 #, kde-format
 msgid "No title"
-msgstr "بدون عنوان"
+msgstr "بلا عنوان"
 
 #: contents/lockscreen/MediaControls.qml:110
 #, kde-format

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-17 03:09+0000\n"
-"PO-Revision-Date: 2024-09-05 10:35+0400\n"
+"PO-Revision-Date: 2025-08-03 14:00+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -173,7 +173,7 @@ msgstr "لا تشحن"
 #: package/contents/ui/main.qml:186
 #, kde-format
 msgid "Automatic sleep and screen locking are disabled"
-msgstr "عُطل السكون التلقائي وقفل الشاشة"
+msgstr "عُطل التعليق الآلي وقفل الشاشة"
 
 #: package/contents/ui/main.qml:191
 #, kde-format
@@ -205,7 +205,7 @@ msgstr[5] "%1 تطبيق طلب تنشيط وضع حفظ الطاقة"
 #: package/contents/ui/main.qml:203
 #, kde-format
 msgid "System is in Power Save mode"
-msgstr "النطام في وضع توفير الطاقة"
+msgstr "النظام في وضع توفير الطاقة"
 
 #: package/contents/ui/main.qml:208
 #, kde-format
@@ -251,7 +251,7 @@ msgstr "سطوع لوحة المفاتيح"
 #, kde-format
 msgctxt "Minimize the length of this string as much as possible"
 msgid "Manually block sleep and screen locking"
-msgstr "منع السكون يدوي وقفل الشاشة"
+msgstr "منع التعليق يدوي وقفل الشاشة"
 
 #: package/contents/ui/PowerManagementItem.qml:75
 #, kde-format
@@ -266,22 +266,22 @@ msgstr ""
 #, kde-format
 msgid "%1 application is currently blocking sleep and screen locking:"
 msgid_plural "%1 applications are currently blocking sleep and screen locking:"
-msgstr[0] "‏%1 يمنع وضع السكون وقفل الشاشة:"
-msgstr[1] "تطبيق يمنع وضع السكون وقفل الشاشة:"
-msgstr[2] "تطبيقان يمنعان وضع السكون وقفل الشاشة:"
-msgstr[3] "%1 تطبيقات يمنعن وضع السكون وقفل الشاشة:"
-msgstr[4] "%1 تطبيقا يمنع وضع السكون وقفل الشاشة:"
-msgstr[5] "%1 تطبيق يمنع وضع السكون وقفل الشاشة:"
+msgstr[0] "‏%1 يمنع وضع التعليق وقفل الشاشة:"
+msgstr[1] "تطبيق يمنع وضع التعليق وقفل الشاشة:"
+msgstr[2] "تطبيقان يمنعان وضع التعليق وقفل الشاشة:"
+msgstr[3] "%1 تطبيقات يمنعن وضع التعليق وقفل الشاشة:"
+msgstr[4] "%1 تطبيقا يمنع وضع التعليق وقفل الشاشة:"
+msgstr[5] "%1 تطبيق يمنع وضع التعليق وقفل الشاشة:"
 
 #: package/contents/ui/PowerManagementItem.qml:109
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (%2)"
-msgstr "‏%1 يمنع وضع السكون وقفل الشاشة (%2)"
+msgstr "‏%1 يمنع وضع التعليق وقفل الشاشة (%2)"
 
 #: package/contents/ui/PowerManagementItem.qml:110
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
-msgstr "‏%1 يمنع وضع السكون وقفل الشاشة (سبب مجهول)"
+msgstr "‏%1 يمنع وضع التعليق وقفل الشاشة (سبب مجهول)"
 
 #: package/contents/ui/PowerManagementItem.qml:112
 #, kde-format

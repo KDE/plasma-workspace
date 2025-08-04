@@ -10,7 +10,7 @@
 # AbdulAziz AlSharif <a.a-a.s@hotmail.com>, 2007.
 # Youssef Chahibi <chahibi@gmail.com>, 2007.
 # Amine Roukh <amineroukh@gmail.com>, 2008.
-# SPDX-FileCopyrightText: 2008, 2010, 2024 zayed <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2008, 2010, 2024, 2025 zayed <zayed.alsaidi@gmail.com>
 # Hajur Alasefer <frostbutterfly@gmail.com>, 2012.
 # Abdalrahim Fakhouri <abdilra7eem@yahoo.com>, 2012.
 msgid ""
@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-05 05:54+0000\n"
-"PO-Revision-Date: 2022-06-30 17:30+0400\n"
+"PO-Revision-Date: 2025-08-03 11:15+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -730,7 +730,7 @@ msgstr "نوع تأثير اللون المعطل"
 #, kde-format
 msgctxt "no disabled color effect"
 msgid "None"
-msgstr "بدون"
+msgstr "لا شيء"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
 #: editor/scmeditoreffects.ui:46
@@ -764,7 +764,7 @@ msgstr "نوع تأثير الكثافة المعطلة"
 #, kde-format
 msgctxt "no disabled intensity effect"
 msgid "None"
-msgstr "بدون"
+msgstr "بلا"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
 #: editor/scmeditoreffects.ui:73
@@ -822,7 +822,7 @@ msgstr "نوع التباين معطل"
 #, kde-format
 msgctxt "no disabled contrast"
 msgid "None"
-msgstr "بدون"
+msgstr "لا شيء"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
 #: editor/scmeditoreffects.ui:190

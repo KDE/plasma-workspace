@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-05 05:54+0000\n"
-"PO-Revision-Date: 2021-11-16 20:16+0400\n"
+"PO-Revision-Date: 2024-04-07 11:46+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -710,7 +710,7 @@ msgstr "ابحث عن المتكرّر…"
 #: kcmfontinst/KCmFontInst.cpp:249
 #, kde-format
 msgid "Scan for Duplicate Fonts…"
-msgstr "امسح عن الخطوط المكررة..."
+msgstr "امحُ عن الخطوط المكررة..."
 
 #: kcmfontinst/KCmFontInst.cpp:251
 #, kde-format

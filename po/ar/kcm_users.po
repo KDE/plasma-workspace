@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-08 02:42+0000\n"
-"PO-Revision-Date: 2025-07-31 18:38+0400\n"
+"PO-Revision-Date: 2025-08-03 15:51+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -58,7 +58,7 @@ msgid ""
 "the password on your default KWallet to match it."
 msgstr ""
 "الآن بعد أن قمت بتغيير كلمة مرور الولوج الخاصة بك، قد ترغب أيضًا في تغيير "
-"كلمة المرور على حافظة ك المبدئية لمطابقتها."
+"كلمة السر على حافظة ك المبدئية لمطابقتها."
 
 #: package/contents/ui/ChangeWalletPassword.qml:31
 #, kde-format
@@ -74,10 +74,10 @@ msgid ""
 "be unlocked at login automatically so you don't have to enter the KWallet "
 "password yourself."
 msgstr ""
-"حافظة ك هي مدير كلمات مرور يخزن كلمات المرور الخاصة بك للشبكات اللاسلكية "
-"والموارد المشفرة الأخرى. إنه مؤمن بكلمة المرور الخاصة به والتي تختلف عن كلمة "
-"مرور الولوج الخاصة بك. إذا كانت كلمتا المرور متطابقتين ، فيمكن إلغاء قفله "
-"عند الولوج تلقائيًا حتى لا تضطر إلى إدخال كلمة مرور حافظة ك بنفسك. "
+"حافظة ك هي مدير كلمات مرور يخزن كلمات السر الخاصة بك للشبكات اللاسلكية "
+"والموارد المعماة الأخرى. إنه مؤمن بكلمة السر الخاصة به والتي تختلف عن كلمة "
+"مرور الولوج الخاصة بك. إذا كانت كلمتا السر متطابقتين ، فيمكن إلغاء قفله عند "
+"الولوج تلقائيًا حتى لا تضطر إلى إدخال كلمة سر حافظة ك بنفسك. "
 
 #: package/contents/ui/ChangeWalletPassword.qml:57
 #, kde-format
@@ -148,7 +148,7 @@ msgstr "اضبط البصمات"
 #, kde-format
 msgctxt "@action:button 'all' refers to fingerprints"
 msgid "Clear All"
-msgstr "امسح الكل"
+msgstr "امحُ الكل"
 
 #: package/contents/ui/FingerprintDialog.qml:75
 #, kde-format
@@ -232,59 +232,59 @@ msgstr "الرجاء اضغط بالإبهام الأيسر بشكل متكرر 
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right index finger on the fingerprint sensor."
-msgstr "الرجاء امسح بالسبابة اليمنى بشكل متكرر على متحسس البصمات."
+msgstr "الرجاء امحُ بالسبابة اليمنى بشكل متكرر على متحسس البصمات."
 
 #: package/contents/ui/FingerprintDialog.qml:149
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right middle finger on the fingerprint sensor."
-msgstr "الرجاء امسح بالوسطى اليمنى بشكل متكرر على متحسس البصمات."
+msgstr "الرجاء امحُ بالوسطى اليمنى بشكل متكرر على متحسس البصمات."
 
 #: package/contents/ui/FingerprintDialog.qml:151
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right ring finger on the fingerprint sensor."
-msgstr "الرجاء امسح بالبنصر اليمين بشكل متكرر على متحسس البصمات."
+msgstr "الرجاء امحُ بالبنصر اليمين بشكل متكرر على متحسس البصمات."
 
 #: package/contents/ui/FingerprintDialog.qml:153
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right little finger on the fingerprint sensor."
-msgstr "الرجاء امسح بالخنصر اليمين بشكل متكرر على متحسس البصمات."
+msgstr "الرجاء امحُ بالخنصر اليمين بشكل متكرر على متحسس البصمات."
 
 #: package/contents/ui/FingerprintDialog.qml:155
 #, kde-format
 msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
-msgstr "الرجاء امسح بالإبهام اليمين بشكل متكرر على متحسس البصمات."
+msgstr "الرجاء امحُ بالإبهام اليمين بشكل متكرر على متحسس البصمات."
 
 #: package/contents/ui/FingerprintDialog.qml:157
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left index finger on the fingerprint sensor."
-msgstr "الرجاء امسح بالسبابة اليسرى بشكل متكرر على متحسس البصمات."
+msgstr "الرجاء امحُ بالسبابة اليسرى بشكل متكرر على متحسس البصمات."
 
 #: package/contents/ui/FingerprintDialog.qml:159
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left middle finger on the fingerprint sensor."
-msgstr "الرجاء امسح بالوسطى اليسرى بشكل متكرر على متحسس البصمات."
+msgstr "الرجاء امحُ بالوسطى اليسرى بشكل متكرر على متحسس البصمات."
 
 #: package/contents/ui/FingerprintDialog.qml:161
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left ring finger on the fingerprint sensor."
-msgstr "الرجاء امسح بالبنصر الأيسر بشكل متكرر على متحسس البصمات."
+msgstr "الرجاء امحُ بالبنصر الأيسر بشكل متكرر على متحسس البصمات."
 
 #: package/contents/ui/FingerprintDialog.qml:163
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left little finger on the fingerprint sensor."
-msgstr "الرجاء امسح بالخنصر الأيسر بشكل متكرر على متحسس البصمات."
+msgstr "الرجاء امحُ بالخنصر الأيسر بشكل متكرر على متحسس البصمات."
 
 #: package/contents/ui/FingerprintDialog.qml:165
 #, kde-format
 msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
-msgstr "الرجاء امسح بالإبهام الأيسر بشكل متكرر على متحسس البصمات."
+msgstr "الرجاء امحُ بالإبهام الأيسر بشكل متكرر على متحسس البصمات."
 
 #: package/contents/ui/FingerprintDialog.qml:179
 #, kde-format
@@ -480,7 +480,7 @@ msgid ""
 "programs that request them.<nl/><nl/>Logging into the system with your "
 "fingerprint is not yet supported."
 msgstr ""
-"يمكن استخدام بصمات الأصابع بدلاً من كلمة المرور عند إلغاء قفل الشاشة وتوفير "
+"يمكن استخدام بصمات الأصابع بدلاً من كلمة السر عند إلغاء قفل الشاشة وتوفير "
 "أذونات المسؤول للتطبيقات وبرامج سطر الأوامر التي تطلبها. <nl/><nl/> الولوج "
 "إلى النظام باستخدام البصمة غير مدعوم لحد الآن."
 

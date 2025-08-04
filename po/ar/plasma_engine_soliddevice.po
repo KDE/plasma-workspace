@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the KDE package.
 # Safa Alfulaij <safa1996alfulaij@gmail.com>, 2014.
 # Abdalrahim G. Fakhouri <abdilra7eem@yahoo.com>, 2014.
-# SPDX-FileCopyrightText: 2021, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2024, 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-04 03:11+0000\n"
-"PO-Revision-Date: 2021-06-21 20:38+0400\n"
+"PO-Revision-Date: 2025-08-03 15:46+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -18,6 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: soliddeviceengine.cpp:112
 msgid "Parent UDI"
@@ -301,7 +302,7 @@ msgstr "Raid"
 #: soliddeviceengine.cpp:276
 #, kde-format
 msgid "Encrypted"
-msgstr "مشفّر"
+msgstr "معمى"
 
 #: soliddeviceengine.cpp:279 soliddeviceengine.cpp:281
 msgid "Usage"
@@ -330,7 +331,7 @@ msgstr "UUID"
 
 #: soliddeviceengine.cpp:296
 msgid "Encrypted Container"
-msgstr "حاوي مشفّر"
+msgstr "حاوية معماة"
 
 #: soliddeviceengine.cpp:308
 msgid "OpticalDisc"
