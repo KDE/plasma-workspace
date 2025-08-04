@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-25 00:44+0000\n"
-"PO-Revision-Date: 2025-06-29 15:10+0200\n"
+"PO-Revision-Date: 2025-07-27 23:02+0200\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.2\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #: abstractnotificationsmodel.cpp:340
 #, kde-format
@@ -122,11 +122,7 @@ msgstr[1] ""
 "disturbare."
 
 #: notifications.cpp:921
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@action:button Show the notifications popup; translate this in as short a "
-#| "form as possible"
-#| msgid "Show Notifications"
+#, kde-format
 msgctxt "@action:button Show the notifications popup"
 msgid "Show Notifications"
 msgstr "Mostra notifiche"

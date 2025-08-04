@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-16 00:45+0000\n"
-"PO-Revision-Date: 2025-01-28 19:04+0400\n"
+"POT-Creation-Date: 2025-08-04 00:43+0000\n"
+"PO-Revision-Date: 2025-08-03 14:01+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -34,103 +34,103 @@ msgstr "safa1996alfulaij@gmail.com"
 msgid "Configure Mouse Actions Plugin"
 msgstr "اضبط ملحقة إجراءات الفأرة"
 
-#: desktopview.cpp:220
+#: desktopview.cpp:221
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Dev"
 msgstr "كِيدِي بلازما 6.0 تطويرية"
 
-#: desktopview.cpp:223
+#: desktopview.cpp:224
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Alpha"
 msgstr "كِيدِي بلازما  6.0 ألفا"
 
-#: desktopview.cpp:226
+#: desktopview.cpp:227
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 1"
 msgstr "بلازما كِيدِي 6.0  بيتا 1"
 
-#: desktopview.cpp:229
+#: desktopview.cpp:230
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 2"
 msgstr "بلازما كِيدِي 6.0  بيتا 2"
 
-#: desktopview.cpp:232
+#: desktopview.cpp:233
 #, kde-format
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC1"
 msgstr "كِيدِي بلازما 6.0 RC1"
 
-#: desktopview.cpp:235
+#: desktopview.cpp:236
 #, kde-format
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC2"
 msgstr "كِيدِي بلازما 6.0 RC2"
 
-#: desktopview.cpp:261
+#: desktopview.cpp:262
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Dev"
 msgstr "كِيدِي بلازما %1 تطويرية"
 
-#: desktopview.cpp:265
+#: desktopview.cpp:266
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Beta"
 msgstr "بلازما كِيدِي %1 بيتا"
 
-#: desktopview.cpp:268
+#: desktopview.cpp:269
 #, kde-format
 msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
 msgid "KDE Plasma %1 Beta %2"
 msgstr "بلازما كِيدِي %1 بيتا %2"
 
-#: desktopview.cpp:272
+#: desktopview.cpp:273
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1"
 msgstr "كِيدِي بلازما %1"
 
-#: desktopview.cpp:278
+#: desktopview.cpp:279
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
 msgstr "رجاءً استخدم bugs.kde.org للإبلاغ عن العلل"
 
-#: desktopview.cpp:286
+#: desktopview.cpp:287
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy Plasma Version"
 msgstr "انسخ إصدارة بلازما"
 
-#: desktopview.cpp:292
+#: desktopview.cpp:293
 #, kde-format
 msgctxt "@action:button"
 msgid "Report a Bug…"
 msgstr "بلغ عن علة…"
 
-#: desktopview.cpp:302
+#: desktopview.cpp:303
 #, kde-format
 msgctxt "@title:menu"
 msgid "Hide Preview Banner"
 msgstr "أخف لافتة المعاينة"
 
-#: desktopview.cpp:305
+#: desktopview.cpp:306
 #, kde-format
 msgctxt "@action:button Hide the preview banner until the system is restarted"
 msgid "Hide Until Restart"
 msgstr "أخف حتى إعادة التشغيل"
 
-#: desktopview.cpp:312
+#: desktopview.cpp:313
 #, kde-format
 msgctxt "@action:button Hide the preview banner permanently"
 msgid "Hide Permanently…"
 msgstr "أخفِ نهائيًّا…"
 
-#: desktopview.cpp:318
+#: desktopview.cpp:319
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -144,18 +144,18 @@ msgstr ""
 "<icode>ShowDesktopPreviewBanner</icode> في ملف الضبط <filename>kdeglobals</"
 "filename>."
 
-#: desktopview.cpp:320
+#: desktopview.cpp:321
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide Preview Banner?"
 msgstr "أأخف لافتة المعاينة؟"
 
-#: desktopview.cpp:518 desktopview.cpp:534
+#: desktopview.cpp:519 desktopview.cpp:535
 #, kde-format
 msgid "Enter Edit Mode"
 msgstr "ادخل نمط التحرير"
 
-#: desktopview.cpp:532
+#: desktopview.cpp:533
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "اخرج من نمط التحرير"
@@ -298,13 +298,13 @@ msgstr "عُطّلت لوحة المفاتيح على الشّاشة"
 #, kde-format
 msgctxt "power management was inhibited, keep short"
 msgid "Sleep and Screen Locking Blocked"
-msgstr "مُنع السكون وقفل الشاشة"
+msgstr "مُنع وضع التعليق وقفل الشاشة"
 
 #: osd.cpp:197
 #, kde-format
 msgctxt "power management was uninhibited, keep short"
 msgid "Sleep and Screen Locking Unblocked"
-msgstr "رفع حظر السكون وقفل الشاشة"
+msgstr "رفع حظر وضع التعليق وقفل الشاشة"
 
 #: osd.cpp:207
 #, kde-format

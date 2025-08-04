@@ -695,7 +695,7 @@ msgstr "ابحث عن المتكرّر…"
 #: kcmfontinst/KCmFontInst.cpp:260
 #, kde-format
 msgid "Scan for Duplicate Fonts…"
-msgstr "امسح عن الخطوط المكررة..."
+msgstr "امحُ عن الخطوط المكررة..."
 
 #: kcmfontinst/KCmFontInst.cpp:262
 #, kde-format

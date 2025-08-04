@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Kishore G <kishore96@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-02 00:45+0000\n"
-"PO-Revision-Date: 2024-08-04 17:06+0530\n"
+"PO-Revision-Date: 2025-08-03 11:58+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -79,7 +79,7 @@ msgstr "தொகுப்புப்பெயர்"
 #: lnftool.cpp:52
 #, kde-format
 msgid "Prevent --apply from disabling the automatic mode"
-msgstr ""
+msgstr "--apply தனைப் பயன்படுத்தும்போது தானியக்க பயன்முறையை முடக்காதே"
 
 #: lnftool.cpp:53
 #, kde-format
@@ -101,27 +101,26 @@ msgstr "சுட்டிக்குறி அமைப்புகள் ம�
 #: lookandfeelsettings.kcfg:9
 #, kde-format
 msgid "Global look and feel"
-msgstr "பொதுவான தோற்றம் "
+msgstr "பொதுவான தோற்றத்திட்டம்"
 
 #. i18n: ectx: label, entry (defaultLightLookAndFeel), group (KDE)
 #. i18n: ectx: label, entry (defaultDarkLookAndFeel), group (KDE)
 #: lookandfeelsettings.kcfg:13 lookandfeelsettings.kcfg:17
-#, fuzzy, kde-format
-#| msgid "Global look and feel"
+#, kde-format
 msgid "Global Look and Feel package, alternate"
-msgstr "பொதுவான தோற்றம் "
+msgstr "பொதுவான தோற்றத்திட்டம் (திரிபு)"
 
 #. i18n: ectx: label, entry (automaticLookAndFeel), group (KDE)
 #: lookandfeelsettings.kcfg:21
 #, kde-format
 msgid "Switch between dark and light global themes depending on time of day"
-msgstr ""
+msgstr "நேரத்திற்கேற்ப தோற்றத்திட்டத்தை கருமையானதாக அல்லது வெளிர்ந்ததாக அமை"
 
 #. i18n: ectx: label, entry (automaticLookAndFeelOnIdle), group (KDE)
 #: lookandfeelsettings.kcfg:25
 #, kde-format
 msgid "Switch between dark and light global themes when the computer is idle"
-msgstr ""
+msgstr "கணினி பயனிலில்லாதபோது மட்டும் தோற்றத்திட்டத்தை மாற்று"
 
 #. i18n: ectx: label, entry (automaticLookAndFeelIdleInterval), group (KDE)
 #: lookandfeelsettings.kcfg:29
@@ -130,6 +129,7 @@ msgid ""
 "How long the computer should be idle in order to switch between dark and "
 "light global themes, in seconds"
 msgstr ""
+"தோற்றத்திட்டத்தை மாற்றுமுன் கணினி எத்தனை நொடிகளுக்கு பயனிலில்லாமல் இருந்திருக்க வேண்டும்"
 
 #: ui/ConfirmDeletionDialog.qml:16
 #, kde-format
@@ -162,62 +162,61 @@ msgid ""
 "The chosen light Global Theme will be used during the day, and the dark one "
 "will be used at night."
 msgstr ""
+"தேர்ந்தெடுக்கும் வெளிர்ந்த தோற்றத்திட்டம் பகல் நேரத்திலும், கருமையான தோற்றத்திட்டம் இரவிலும், "
+"பயன்படுத்தப்படும்."
 
 #: ui/DayNightLookAndFeel.qml:55
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure Day/Night Cycle…"
-msgstr ""
+msgstr "பகல்-இரவு மாற்றத்தை அமை…"
 
 #: ui/DayNightLookAndFeel.qml:68
 #, kde-format
 msgctxt "@option:radio Light global theme"
 msgid "Light"
-msgstr ""
+msgstr "வெளிர்ந்தது"
 
 #: ui/DayNightLookAndFeel.qml:80
 #, kde-format
 msgctxt "@option:radio Dark global theme"
 msgid "Dark"
-msgstr ""
+msgstr "கருமையானது"
 
 #: ui/DayNightLookAndFeel.qml:97
 #, kde-format
 msgctxt "@option:check"
 msgid "Wait until idleness before switching:"
-msgstr ""
+msgstr "இவ்வளவு நேரம் சும்மா இருந்தபின் மட்டும் மாற்று:"
 
 #: ui/DayNightLookAndFeel.qml:110
 #, kde-format
 msgctxt "@item:valuesuffix idle interval"
 msgid "%1 second"
 msgid_plural "%1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 நொடி"
+msgstr[1] "%1 நொடி"
 
 #: ui/DayNightLookAndFeel.qml:122
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Minimizes interruptions when actively using the computer."
-msgstr ""
+msgstr "கணினியைப் பயன்படுத்தம்போதான இடையூறுகளைக் குறைக்கும்"
 
 #: ui/LookAndFeelSelector.qml:24
-#, fuzzy, kde-format
-#| msgid "Global Theme"
+#, kde-format
 msgctxt "@title:window"
 msgid "Choose Light Global Theme"
-msgstr "பொதுவான தோற்றத்திட்டம்"
+msgstr "வெளிர்ந்த பொது தோற்றத்திட்டத்தை அமைப்பது"
 
 #: ui/LookAndFeelSelector.qml:26
-#, fuzzy, kde-format
-#| msgid "Global Theme"
+#, kde-format
 msgctxt "@title:window"
 msgid "Choose Dark Global Theme"
-msgstr "பொதுவான தோற்றத்திட்டம்"
+msgstr "கருமையான பொது தோற்றத்திட்டத்தை அமைப்பது"
 
 #: ui/LookAndFeelSelector.qml:49 ui/StaticLookAndFeel.qml:67
-#, fuzzy, kde-format
-#| msgid "Preview Theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview Theme"
 msgstr "தோற்றத்திட்டத்தின் முன்னோட்டம்"
@@ -244,11 +243,10 @@ msgstr "கணினி முழுவதற்கும் நிறுவப�
 #, kde-format
 msgctxt "@option:check"
 msgid "Switch to Dark Mode at Night"
-msgstr ""
+msgstr "இரவில் கருமையான பயன்முறைக்கு மாறு"
 
 #: ui/main.qml:40
-#, fuzzy, kde-format
-#| msgid "Get New…"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Get New…"
 msgstr "புதியவற்றை பெறு…"
@@ -369,8 +367,7 @@ msgstr ""
 "பராமரிப்பாளரைத் தொடர்புகொள்ளுங்கள்."
 
 #: ui/StaticLookAndFeel.qml:53
-#, fuzzy, kde-format
-#| msgid "Contains Desktop layout"
+#, kde-format
 msgctxt "@label"
 msgid "Contains Desktop layout"
 msgstr "பணிமேடைத் தளவமைப்பைக் கொண்டுள்ளது"
