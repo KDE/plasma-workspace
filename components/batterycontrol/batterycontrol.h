@@ -27,7 +27,9 @@ class BatteryControlModel : public QAbstractListModel
     Q_PROPERTY(bool pluggedIn READ default NOTIFY pluggedInChanged BINDABLE bindablePluggedIn)
     Q_PROPERTY(bool hasInternalBatteries READ default NOTIFY hasInternalBatteriesChanged BINDABLE bindableHasInternalBatteries)
     Q_PROPERTY(Solid::Battery::ChargeState state READ default NOTIFY stateChanged BINDABLE bindableState)
+    // TODO API break: remove chargeStopThreshold and usePerBatteryChargeLimits, always assume true for the latter
     Q_PROPERTY(int chargeStopThreshold READ default NOTIFY chargeStopThresholdChanged BINDABLE bindableChargeStopThresholdChanged)
+    Q_PROPERTY(bool usePerBatteryChargeLimits READ default NOTIFY usePerBatteryChargeLimitsChanged BINDABLE bindableUsePerBatteryChargeLimits)
     Q_PROPERTY(qulonglong remainingMsec READ default NOTIFY remainingMsecChanged BINDABLE bindableRemainingMsec)
     Q_PROPERTY(qulonglong smoothedRemainingMsec READ default NOTIFY smoothedRemainingMsecChanged BINDABLE bindableSmoothedRemainingMsec)
     Q_PROPERTY(int percent READ default NOTIFY percentChanged BINDABLE bindablePercent)
@@ -42,6 +44,12 @@ public:
         ChargeState,
         PrettyName,
         Type,
+        ChargeLimitSupported,
+        ChargeLimitEnabled,
+        ChargeStartThresholdSupported,
+        ChargeStartThreshold,
+        ChargeEndThresholdSupported,
+        ChargeEndThreshold,
     };
     Q_ENUM(BatteryRoles)
 
@@ -59,6 +67,7 @@ private:
     QBindable<bool> bindableHasInternalBatteries();
     QBindable<Solid::Battery::ChargeState> bindableState();
     QBindable<int> bindableChargeStopThresholdChanged();
+    QBindable<bool> bindableUsePerBatteryChargeLimits();
     QBindable<qulonglong> bindableRemainingMsec();
     QBindable<qulonglong> bindableSmoothedRemainingMsec();
     QBindable<int> bindablePercent();
@@ -73,6 +82,7 @@ private Q_SLOTS:
     void batteryRemainingTimeChanged(qulonglong time);
     void smoothedBatteryRemainingTimeChanged(qulonglong time);
     void updateBatteryChargeStopThreshold(int threshold);
+    void updateUsePerBatteryChargeLimits(bool perBattery);
     void updateAcPlugState(bool onBattery);
     void updateOverallBattery();
 
@@ -82,6 +92,12 @@ private Q_SLOTS:
     void updateBatteryEnergy(double newValue, const QString &udi);
     void updateBatteryPowerSupplyState(bool newState, const QString &udi);
     void updatePluggedInState(bool onBattery, const QString &udi);
+    void updateBatteryChargeLimitSupported(bool newState, const QString &udi);
+    void updateBatteryChargeLimitEnabled(bool newState, const QString &udi);
+    void updateBatteryChargeStartThresholdSupported(bool newState, const QString &udi);
+    void updateBatteryChargeStartThreshold(int newValue, const QString &udi);
+    void updateBatteryChargeEndThresholdSupported(bool newState, const QString &udi);
+    void updateBatteryChargeEndThreshold(int newValue, const QString &udi);
 
     void deviceAdded(const QString &udi);
     void deviceRemoved(const QString &udi);
@@ -93,6 +109,7 @@ Q_SIGNALS:
     void hasInternalBatteriesChanged(bool status);
     void stateChanged(Solid::Battery::ChargeState state);
     void chargeStopThresholdChanged(int threshold);
+    void usePerBatteryChargeLimitsChanged(bool perBattery);
     void remainingMsecChanged(qulonglong time);
     void smoothedRemainingMsecChanged(qulonglong time);
     void percentChanged(int percent);
@@ -103,6 +120,7 @@ private:
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(BatteryControlModel, bool, m_hasInternalBatteries, false, &BatteryControlModel::hasInternalBatteriesChanged)
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(BatteryControlModel, bool, m_pluggedIn, false, &BatteryControlModel::pluggedInChanged)
     Q_OBJECT_BINDABLE_PROPERTY(BatteryControlModel, Solid::Battery::ChargeState, m_state, &BatteryControlModel::stateChanged)
+    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(BatteryControlModel, bool, m_usePerBatteryChargeLimits, false, &BatteryControlModel::usePerBatteryChargeLimitsChanged)
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(BatteryControlModel, int, m_chargeStopThreshold, 0, &BatteryControlModel::chargeStopThresholdChanged)
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(BatteryControlModel, qulonglong, m_remainingMsec, 0, &BatteryControlModel::remainingMsecChanged)
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(BatteryControlModel, qulonglong, m_smoothedRemainingMsec, 0, &BatteryControlModel::smoothedRemainingMsecChanged)

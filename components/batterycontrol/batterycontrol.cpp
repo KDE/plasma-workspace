@@ -103,13 +103,29 @@ void BatteryControlModel::onServiceRegistered(const QString &serviceName)
         connect(Solid::DeviceNotifier::instance(), &Solid::DeviceNotifier::deviceAdded, this, &BatteryControlModel::deviceAdded);
         connect(Solid::DeviceNotifier::instance(), &Solid::DeviceNotifier::deviceRemoved, this, &BatteryControlModel::deviceRemoved);
 
+        QDBusMessage chargeLimitInfoObsoleteMessage = QDBusMessage::createMethodCall(SOLID_POWERMANAGEMENT_SERVICE,
+                                                                                     SOLID_POWERMANAGEMENT_PATH,
+                                                                                     SOLID_POWERMANAGEMENT_IFACE,
+                                                                                     QStringLiteral("isChargeLimitInfoObsolete"));
+        QDBusPendingCall chargeLimitInfoObsoleteCall = QDBusConnection::sessionBus().asyncCall(chargeLimitInfoObsoleteMessage);
+        auto chargeLimitInfoObsoleteWatcher = new QDBusPendingCallWatcher(chargeLimitInfoObsoleteCall, this);
+        connect(chargeLimitInfoObsoleteWatcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {
+            QDBusReply<int> reply = *watcher;
+            if (reply.isValid()) {
+                m_usePerBatteryChargeLimits = reply.value(); // i.e. use Solid/UPower instead of this obsolete stuff
+            } else {
+                qCDebug(COMPONENTS::BATTERYCONTROL) << "error querying whether charge limit info is obsolete";
+            }
+            watcher->deleteLater();
+        });
+
         QDBusMessage chargeStopThresholdMessage = QDBusMessage::createMethodCall(SOLID_POWERMANAGEMENT_SERVICE,
                                                                                  SOLID_POWERMANAGEMENT_PATH,
                                                                                  SOLID_POWERMANAGEMENT_IFACE,
                                                                                  QStringLiteral("chargeStopThreshold"));
         QDBusPendingCall chargeStopThresholdCall = QDBusConnection::sessionBus().asyncCall(chargeStopThresholdMessage);
-        auto watcher = new QDBusPendingCallWatcher(chargeStopThresholdCall, this);
-        connect(watcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {
+        auto chargeStopThresholdWatcher = new QDBusPendingCallWatcher(chargeStopThresholdCall, this);
+        connect(chargeStopThresholdWatcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {
             QDBusReply<int> reply = *watcher;
             if (reply.isValid()) {
                 m_chargeStopThreshold = reply.value();
@@ -255,6 +271,18 @@ QVariant BatteryControlModel::data(const QModelIndex &index, int role) const
         return QVariant::fromValue(m_namesMonitor->updateBatteryName(deviceBattery, battery));
     case Type:
         return QVariant::fromValue(batteryTypeToString(battery));
+    case ChargeLimitSupported:
+        return QVariant::fromValue(battery->chargeLimitSupported());
+    case ChargeLimitEnabled:
+        return QVariant::fromValue(battery->chargeLimitEnabled());
+    case ChargeStartThresholdSupported:
+        return QVariant::fromValue(battery->chargeStartThresholdSupported());
+    case ChargeStartThreshold:
+        return QVariant::fromValue(battery->chargeStartThreshold());
+    case ChargeEndThresholdSupported:
+        return QVariant::fromValue(battery->chargeEndThresholdSupported());
+    case ChargeEndThreshold:
+        return QVariant::fromValue(battery->chargeEndThreshold());
     }
     return {};
 }
@@ -270,6 +298,12 @@ QHash<int, QByteArray> BatteryControlModel::roleNames() const
     roles[ChargeState] = QByteArrayLiteral("ChargeState");
     roles[PrettyName] = QByteArrayLiteral("PrettyName");
     roles[Type] = QByteArrayLiteral("Type");
+    roles[ChargeLimitSupported] = QByteArrayLiteral("ChargeLimitSupported");
+    roles[ChargeLimitEnabled] = QByteArrayLiteral("ChargeLimitEnabled");
+    roles[ChargeStartThresholdSupported] = QByteArrayLiteral("ChargeStartThresholdSupported");
+    roles[ChargeStartThreshold] = QByteArrayLiteral("ChargeStartThreshold");
+    roles[ChargeEndThresholdSupported] = QByteArrayLiteral("ChargeEndThresholdSupported");
+    roles[ChargeEndThreshold] = QByteArrayLiteral("ChargeEndThreshold");
     return roles;
 }
 
@@ -307,6 +341,12 @@ void BatteryControlModel::deviceAdded(const QString &udi)
     connect(battery, &Solid::Battery::presentStateChanged, this, &BatteryControlModel::updatePluggedInState);
     connect(battery, &Solid::Battery::powerSupplyStateChanged, this, &BatteryControlModel::updateBatteryPowerSupplyState);
     connect(battery, &Solid::Battery::capacityChanged, this, &BatteryControlModel::updateBatteryCapacity);
+    connect(battery, &Solid::Battery::chargeLimitSupportedChanged, this, &BatteryControlModel::updateBatteryChargeLimitSupported);
+    connect(battery, &Solid::Battery::chargeLimitEnabledChanged, this, &BatteryControlModel::updateBatteryChargeLimitEnabled);
+    connect(battery, &Solid::Battery::chargeStartThresholdSupportedChanged, this, &BatteryControlModel::updateBatteryChargeStartThresholdSupported);
+    connect(battery, &Solid::Battery::chargeStartThresholdChanged, this, &BatteryControlModel::updateBatteryChargeStartThreshold);
+    connect(battery, &Solid::Battery::chargeEndThresholdSupportedChanged, this, &BatteryControlModel::updateBatteryChargeEndThresholdSupported);
+    connect(battery, &Solid::Battery::chargeEndThresholdChanged, this, &BatteryControlModel::updateBatteryChargeEndThreshold);
 
     int position = m_batterySources.size();
 
@@ -409,6 +449,48 @@ void BatteryControlModel::updatePluggedInState(bool onBattery, const QString &ud
     Q_EMIT dataChanged(index, index, {PluggedIn});
 }
 
+void BatteryControlModel::updateBatteryChargeLimitSupported(bool newState, const QString &udi)
+{
+    Q_UNUSED(newState);
+    QModelIndex index = BatteryControlModel::index(m_batteryPositions[udi]);
+    Q_EMIT dataChanged(index, index, {ChargeLimitSupported});
+}
+
+void BatteryControlModel::updateBatteryChargeLimitEnabled(bool newState, const QString &udi)
+{
+    Q_UNUSED(newState);
+    QModelIndex index = BatteryControlModel::index(m_batteryPositions[udi]);
+    Q_EMIT dataChanged(index, index, {ChargeLimitEnabled});
+}
+
+void BatteryControlModel::updateBatteryChargeStartThresholdSupported(bool newState, const QString &udi)
+{
+    Q_UNUSED(newState);
+    QModelIndex index = BatteryControlModel::index(m_batteryPositions[udi]);
+    Q_EMIT dataChanged(index, index, {ChargeStartThresholdSupported});
+}
+
+void BatteryControlModel::updateBatteryChargeStartThreshold(int newValue, const QString &udi)
+{
+    Q_UNUSED(newValue);
+    QModelIndex index = BatteryControlModel::index(m_batteryPositions[udi]);
+    Q_EMIT dataChanged(index, index, {ChargeStartThreshold});
+}
+
+void BatteryControlModel::updateBatteryChargeEndThresholdSupported(bool newState, const QString &udi)
+{
+    Q_UNUSED(newState);
+    QModelIndex index = BatteryControlModel::index(m_batteryPositions[udi]);
+    Q_EMIT dataChanged(index, index, {ChargeEndThresholdSupported});
+}
+
+void BatteryControlModel::updateBatteryChargeEndThreshold(int newValue, const QString &udi)
+{
+    Q_UNUSED(newValue);
+    QModelIndex index = BatteryControlModel::index(m_batteryPositions[udi]);
+    Q_EMIT dataChanged(index, index, {ChargeEndThreshold});
+}
+
 void BatteryControlModel::batteryRemainingTimeChanged(qulonglong time)
 {
     m_remainingMsec = time;
@@ -422,6 +504,11 @@ void BatteryControlModel::smoothedBatteryRemainingTimeChanged(qulonglong time)
 void BatteryControlModel::updateBatteryChargeStopThreshold(int threshold)
 {
     m_chargeStopThreshold = threshold;
+}
+
+void BatteryControlModel::updateUsePerBatteryChargeLimits(bool perBattery)
+{
+    m_usePerBatteryChargeLimits = perBattery;
 }
 
 void BatteryControlModel::updateAcPlugState(bool onBattery)
@@ -448,10 +535,24 @@ void BatteryControlModel::updateOverallBattery()
         if (battery && battery->isPresent()) {
             hasCumulative = true;
 
+            // When we are using a charge threshold, the kernel
+            // may stop charging within a percentage point of the actual threshold
+            // and this is considered correct behavior, so we have to handle
+            // that. See https://bugzilla.kernel.org/show_bug.cgi?id=215531.
+            // Also, UPower may give us a status of "Not charging" rather than
+            // "Fully charged", so we need to account for that as well. See
+            // https://gitlab.freedesktop.org/upower/upower/-/issues/142.
+            const bool fullyCharged = battery->chargeState() == Solid::Battery::FullyCharged;
+            const bool chargedToThreshold = battery->chargeState() == Solid::Battery::NoCharge && //
+                m_pluggedIn && //
+                battery->chargeEndThresholdSupported() && //
+                battery->chargePercent() >= battery->chargeEndThreshold() - 1 && //
+                battery->chargePercent() <= battery->chargeEndThreshold() + 1;
+
             energy += battery->energy();
             totalEnergy += battery->energyFull();
             totalPercentage += battery->chargePercent();
-            allFullyCharged = allFullyCharged && (battery->chargeState() == Solid::Battery::FullyCharged);
+            allFullyCharged = allFullyCharged && (fullyCharged || chargedToThreshold);
             charging = charging || (battery->chargeState() == Solid::Battery::Charging);
             discharging = discharging || (battery->chargeState() == Solid::Battery::Discharging);
             noCharge = noCharge || (battery->chargeState() == Solid::Battery::NoCharge);
@@ -479,19 +580,13 @@ void BatteryControlModel::updateOverallBattery()
             m_state = Solid::Battery::Charging;
         } else if (discharging) {
             m_state = Solid::Battery::Discharging;
+        } else if (noCharge && !m_usePerBatteryChargeLimits && m_pluggedIn && m_percent >= m_chargeStopThreshold - 1
+                   && m_percent <= m_chargeStopThreshold + 1) {
+            // See discussion of https://gitlab.freedesktop.org/upower/upower/-/issues/142 just above.
+            // This code branch can go away once users have fully migrated to per-battery charge limits.
+            m_state = Solid::Battery::FullyCharged;
         } else if (noCharge) {
-            // When we are using a charge threshold, the kernel
-            // may stop charging within a percentage point of the actual threshold
-            // and this is considered correct behavior, so we have to handle
-            // that. See https://bugzilla.kernel.org/show_bug.cgi?id=215531.
-            // Also, Upower may give us a status of "Not charging" rather than
-            // "Fullycharged", so we need to account for that as well. See
-            // https://gitlab.freedesktop.org/upower/upower/-/issues/142.
-            if (m_pluggedIn && (m_percent >= m_chargeStopThreshold - 1 && m_percent <= m_chargeStopThreshold + 1)) {
-                m_state = Solid::Battery::FullyCharged;
-            } else {
-                m_state = Solid::Battery::NoCharge;
-            }
+            m_state = Solid::Battery::NoCharge;
         }
     } else {
         m_state = Solid::Battery::NoCharge;
@@ -499,12 +594,13 @@ void BatteryControlModel::updateOverallBattery()
 
     m_hasCumulative = hasCumulative;
 
-    qCDebug(COMPONENTS::BATTERYCONTROL) << "____ Overal battery updated ____ \n"
+    qCDebug(COMPONENTS::BATTERYCONTROL) << "____ Overall battery updated ____ \n"
                                         << "Has cumulative          : " << (hasCumulative ? "Yes" : "No") << "\n"
                                         << "Has battery             : " << (m_hasBatteries ? "Yes" : "No") << "\n"
                                         << "Plugged In              : " << (m_pluggedIn ? "Yes" : "No") << "\n"
                                         << "State                   : " << m_state << "\n"
                                         << "Charge Stop Threshold   : " << m_chargeStopThreshold << "\n"
+                                        << "Charge Stop Relevant    : " << !m_usePerBatteryChargeLimits << "\n"
                                         << "Remaining Msec          : " << m_remainingMsec << "\n"
                                         << "Smoothed Remaining Msec : " << m_smoothedRemainingMsec << "\n"
                                         << "Percent                 : " << m_percent << "\n";
@@ -538,6 +634,11 @@ QBindable<Solid::Battery::ChargeState> BatteryControlModel::bindableState()
 QBindable<int> BatteryControlModel::bindableChargeStopThresholdChanged()
 {
     return &m_chargeStopThreshold;
+}
+
+QBindable<bool> BatteryControlModel::bindableUsePerBatteryChargeLimits()
+{
+    return &m_usePerBatteryChargeLimits;
 }
 
 QBindable<qulonglong> BatteryControlModel::bindableRemainingMsec()
