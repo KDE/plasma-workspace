@@ -123,7 +123,7 @@ msgstr "取消"
 #: ui/main.qml:88
 #, kde-format
 msgid "Get New…"
-msgstr "获取新全局主题…"
+msgstr ""
 
 #: ui/main.qml:103
 #, kde-format

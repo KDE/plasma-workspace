@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-23 00:44+0000\n"
-"PO-Revision-Date: 2025-07-31 18:38+0400\n"
+"PO-Revision-Date: 2025-08-03 15:51+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -119,10 +119,10 @@ msgid ""
 "be unlocked at login automatically so you don't have to enter the KWallet "
 "password yourself."
 msgstr ""
-"حافظة ك هي مدير كلمات مرور يخزن كلمات المرور الخاصة بك للشبكات اللاسلكية "
-"والموارد المشفرة الأخرى. إنه مؤمن بكلمة المرور الخاصة به والتي تختلف عن كلمة "
-"مرور الولوج الخاصة بك. إذا كانت كلمتا المرور متطابقتين ، فيمكن إلغاء قفله "
-"عند الولوج تلقائيًا حتى لا تضطر إلى إدخال كلمة مرور حافظة ك بنفسك. "
+"حافظة ك هي مدير كلمات مرور يخزن كلمات السر الخاصة بك للشبكات اللاسلكية "
+"والموارد المعماة الأخرى. إنه مؤمن بكلمة السر الخاصة به والتي تختلف عن كلمة "
+"مرور الولوج الخاصة بك. إذا كانت كلمتا السر متطابقتين ، فيمكن إلغاء قفله عند "
+"الولوج تلقائيًا حتى لا تضطر إلى إدخال كلمة سر حافظة ك بنفسك. "
 
 #: src/ui/ChangeWalletPassword.qml:60
 #, kde-format
@@ -253,59 +253,59 @@ msgstr "الرجاء اضغط بالإبهام الأيسر بشكل متكرر 
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right index finger on the fingerprint sensor."
-msgstr "الرجاء امسح بالسبابة اليمنى بشكل متكرر على متحسس البصمات."
+msgstr "الرجاء امحُ بالسبابة اليمنى بشكل متكرر على متحسس البصمات."
 
 #: src/ui/EnrollFeedback.qml:52
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right middle finger on the fingerprint sensor."
-msgstr "الرجاء امسح بالوسطى اليمنى بشكل متكرر على متحسس البصمات."
+msgstr "الرجاء امحُ بالوسطى اليمنى بشكل متكرر على متحسس البصمات."
 
 #: src/ui/EnrollFeedback.qml:54
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right ring finger on the fingerprint sensor."
-msgstr "الرجاء امسح بالبنصر اليمين بشكل متكرر على متحسس البصمات."
+msgstr "الرجاء امحُ بالبنصر اليمين بشكل متكرر على متحسس البصمات."
 
 #: src/ui/EnrollFeedback.qml:56
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right little finger on the fingerprint sensor."
-msgstr "الرجاء امسح بالخنصر اليمين بشكل متكرر على متحسس البصمات."
+msgstr "الرجاء امحُ بالخنصر اليمين بشكل متكرر على متحسس البصمات."
 
 #: src/ui/EnrollFeedback.qml:58
 #, kde-format
 msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
-msgstr "الرجاء امسح بالإبهام اليمين بشكل متكرر على متحسس البصمات."
+msgstr "الرجاء امحُ بالإبهام اليمين بشكل متكرر على متحسس البصمات."
 
 #: src/ui/EnrollFeedback.qml:60
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left index finger on the fingerprint sensor."
-msgstr "الرجاء امسح بالسبابة اليسرى بشكل متكرر على متحسس البصمات."
+msgstr "الرجاء امحُ بالسبابة اليسرى بشكل متكرر على متحسس البصمات."
 
 #: src/ui/EnrollFeedback.qml:62
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left middle finger on the fingerprint sensor."
-msgstr "الرجاء امسح بالوسطى اليسرى بشكل متكرر على متحسس البصمات."
+msgstr "الرجاء امحُ بالوسطى اليسرى بشكل متكرر على متحسس البصمات."
 
 #: src/ui/EnrollFeedback.qml:64
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left ring finger on the fingerprint sensor."
-msgstr "الرجاء امسح بالبنصر الأيسر بشكل متكرر على متحسس البصمات."
+msgstr "الرجاء امحُ بالبنصر الأيسر بشكل متكرر على متحسس البصمات."
 
 #: src/ui/EnrollFeedback.qml:66
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left little finger on the fingerprint sensor."
-msgstr "الرجاء امسح بالخنصر الأيسر بشكل متكرر على متحسس البصمات."
+msgstr "الرجاء امحُ بالخنصر الأيسر بشكل متكرر على متحسس البصمات."
 
 #: src/ui/EnrollFeedback.qml:68
 #, kde-format
 msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
-msgstr "الرجاء امسح بالإبهام الأيسر بشكل متكرر على متحسس البصمات."
+msgstr "الرجاء امحُ بالإبهام الأيسر بشكل متكرر على متحسس البصمات."
 
 #: src/ui/FingerprintDialog.qml:28
 #, kde-format
@@ -618,7 +618,7 @@ msgid ""
 "programs that request them.<nl/><nl/>Logging into the system with your "
 "fingerprint is not yet supported."
 msgstr ""
-"يمكن استخدام بصمات الأصابع بدلاً من كلمة المرور عند إلغاء قفل الشاشة وتوفير "
+"يمكن استخدام بصمات الأصابع بدلاً من كلمة السر عند إلغاء قفل الشاشة وتوفير "
 "أذونات المسؤول للتطبيقات وبرامج سطر الأوامر التي تطلبها. <nl/><nl/> الولوج "
 "إلى النظام باستخدام البصمة غير مدعوم لحد الآن."
 

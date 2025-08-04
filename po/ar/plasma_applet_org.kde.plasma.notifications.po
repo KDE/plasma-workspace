@@ -522,7 +522,7 @@ msgstr "انقر بالزر الأوسط للدخول إلى نمط عدم ال�
 #: package/contents/ui/main.qml:236
 #, kde-format
 msgid "Clear All Notifications"
-msgstr "امسح جميع الإشعارات"
+msgstr "امحُ جميع الإشعارات"
 
 #: package/contents/ui/main.qml:255
 #, kde-format
