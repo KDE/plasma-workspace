@@ -77,12 +77,15 @@ private:
 class KdedDeviceNotifications : public KDEDModule
 {
     Q_OBJECT
+    Q_CLASSINFO("D-Bus Interface", "org.kde.plasma.devicenotifications")
 
 public:
     KdedDeviceNotifications(QObject *parent, const QVariantList &args);
     ~KdedDeviceNotifications() override;
 
     void setupWaylandOutputListener();
+
+    Q_SCRIPTABLE void dismissUsbDeviceAdded();
 
 private:
     void notifyOutputAdded();

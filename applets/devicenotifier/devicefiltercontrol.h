@@ -41,6 +41,7 @@ public:
     Q_ENUM(DevicesType)
 
     Q_INVOKABLE void unmountAllRemovables();
+    Q_INVOKABLE void dismissUsbDeviceAddedNotification();
 
     explicit DeviceFilterControl(QObject *parent = nullptr);
     ~DeviceFilterControl() override;

@@ -11,8 +11,13 @@
 #include "devicecontrol.h"
 #include "devicestatemonitor_p.h"
 
+#include <QDBusConnection>
+#include <QDBusMessage>
+
 #include <Solid/Device>
 #include <Solid/OpticalDrive>
+
+using namespace Qt::Literals::StringLiterals;
 
 DeviceFilterControl::DeviceFilterControl(QObject *parent)
     : QSortFilterProxyModel(parent)
@@ -52,6 +57,15 @@ void DeviceFilterControl::unmountAllRemovables()
         }
     }
     qCDebug(APPLETS::DEVICENOTIFIER) << "Device Filter Control: unmount all removables function finished";
+}
+
+void DeviceFilterControl::dismissUsbDeviceAddedNotification()
+{
+    QDBusMessage msg = QDBusMessage::createMethodCall(u"org.kde.kded6"_s,
+                                                      u"/modules/devicenotifications"_s,
+                                                      u"org.kde.plasma.devicenotifications"_s,
+                                                      u"dismissUsbDeviceAdded"_s);
+    QDBusConnection::sessionBus().call(msg, QDBus::NoBlock);
 }
 
 QBindable<QString> DeviceFilterControl::bindableLastUdi()

@@ -323,6 +323,14 @@ void KdedDeviceNotifications::setupWaylandOutputListener()
     wl_callback_add_listener(syncCallback, &syncCallbackListener, this);
 }
 
+void KdedDeviceNotifications::dismissUsbDeviceAdded()
+{
+    if (m_usbDeviceAddedNotification) {
+        m_usbDeviceAddedNotification->close();
+        m_usbDeviceAddedNotification = nullptr;
+    }
+}
+
 void KdedDeviceNotifications::notifyOutputAdded()
 {
     if (m_deviceAddedTimer.isActive()) {

@@ -31,6 +31,7 @@ plasma_add_applet(org.kde.plasma.devicenotifier
 
 target_link_libraries(org.kde.plasma.devicenotifier
     PRIVATE
+        Qt::DBus
         Qt::Qml
         Plasma::Plasma
         KF6::Solid
