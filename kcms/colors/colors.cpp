@@ -18,6 +18,7 @@
 #include <QFileInfo>
 #include <QGuiApplication>
 #include <QProcess>
+#include <QProcessEnvironment>
 #include <QQuickItem>
 #include <QQuickRenderControl>
 #include <QQuickWindow>
@@ -332,9 +333,10 @@ void KCMColors::editScheme(const QString &schemeName, QQuickItem *ctx)
         return;
     }
 
+    m_waitForXdgForeign = false;
+    m_waitForXdgActivation = false;
     QModelIndex idx = m_model->index(m_model->indexOfScheme(schemeName), 0);
 
-    // TODO use CommandLauncherJob.
     m_editDialogProcess = new QProcess(this);
     m_editDialogProcess->setProgram(QStringLiteral("kcolorschemeeditor"));
     connect(m_editDialogProcess, &QProcess::finished, this, [this](int exitCode, QProcess::ExitStatus exitStatus) {
@@ -365,7 +367,6 @@ void KCMColors::editScheme(const QString &schemeName, QQuickItem *ctx)
         args << QStringLiteral("--overwrite");
     }
 
-    bool waitForXdgForeign = false;
     if (ctx && ctx->window()) {
         // QQuickWidget, used for embedding QML KCMs, renders everything into an offscreen window
         // Qt is able to resolve this on its own when setting transient parents in-process.
@@ -375,6 +376,7 @@ void KCMColors::editScheme(const QString &schemeName, QQuickItem *ctx)
             if (KWindowSystem::isPlatformX11()) {
                 args << QStringLiteral("--attach") << QString::number(actualWindow->winId());
             } else if (KWindowSystem::isPlatformWayland()) {
+                m_waitForXdgForeign = true;
                 KWaylandExtras::exportWindow(actualWindow);
                 connect(
                     KWaylandExtras::self(),
@@ -388,18 +390,45 @@ void KCMColors::editScheme(const QString &schemeName, QQuickItem *ctx)
                         QStringList args = m_editDialogProcess->arguments();
                         args << QStringLiteral("--attach") << handle;
                         m_editDialogProcess->setArguments(args);
-                        m_editDialogProcess->start();
+                        m_waitForXdgForeign = false;
+
+                        if (!m_waitForXdgActivation) {
+                            m_editDialogProcess->start();
+                        }
                     },
                     Qt::SingleShotConnection);
 
-                waitForXdgForeign = true;
+                m_waitForXdgActivation = true;
+                const int lastSerial = KWaylandExtras::lastInputSerial(actualWindow);
+                KWaylandExtras::requestXdgActivationToken(actualWindow, lastSerial, QStringLiteral("org.kde.kcolorschemeeditor"));
+                connect(
+                    KWaylandExtras::self(),
+                    &KWaylandExtras::xdgActivationTokenArrived,
+                    this,
+                    [this, lastSerial](int serial, const QString &token) {
+                        if (serial != lastSerial) {
+                            return;
+                        }
+
+                        if (!token.isEmpty()) {
+                            QProcessEnvironment environment = QProcessEnvironment::systemEnvironment();
+                            environment.insert(QStringLiteral("XDG_ACTIVATION_TOKEN"), token);
+                            m_editDialogProcess->setProcessEnvironment(environment);
+                        }
+
+                        m_waitForXdgActivation = false;
+                        if (!m_waitForXdgForeign) {
+                            m_editDialogProcess->start();
+                        }
+                    },
+                    Qt::SingleShotConnection);
             }
         }
     }
 
     m_editDialogProcess->setArguments(args);
 
-    if (!waitForXdgForeign) {
+    if (!m_waitForXdgForeign && !m_waitForXdgActivation) {
         m_editDialogProcess->start();
     }
 }

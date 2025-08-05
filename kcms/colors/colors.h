@@ -120,6 +120,8 @@ private:
     bool m_activeSchemeEdited = false;
 
     QProcess *m_editDialogProcess = nullptr;
+    bool m_waitForXdgForeign = false;
+    bool m_waitForXdgActivation = false;
 
     KSharedConfigPtr m_config;
     KConfigWatcher::Ptr m_configWatcher;
