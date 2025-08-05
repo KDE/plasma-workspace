@@ -3,7 +3,7 @@
 
 [Global]
 Name=Notification Manager
-Name[ar]=مدير الإخطارات
+Name[ar]=مدير الإشعارات
 Name[az]=Bildirilş meneceri
 Name[bg]=Управление на известията
 Name[ca]=Gestor de notificacions
@@ -43,7 +43,7 @@ IconName=preferences-desktop-notification-bell
 
 [Event/inhibitionSummary]
 Name=Summary for unread inhibited notifications
-Name[ar]=ملخص للإخطارات المحظورة غير المقروءة
+Name[ar]=ملخص للإشعارات المحظورة غير المقروءة
 Name[az]=Oxunmamış bidirişlər üçün xülasə
 Name[bg]=Обобщение на непрочетени и заглушени известия
 Name[ca]=Resum de les notificacions inhibides sense llegir
