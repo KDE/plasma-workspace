@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-05 02:37+0000\n"
-"PO-Revision-Date: 2024-05-04 11:40+0400\n"
+"PO-Revision-Date: 2025-06-26 10:17+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -440,7 +440,7 @@ msgstr "ك.بايت، م.بايت، غ.بايت ؛ %1"
 #, kde-format
 msgctxt "@info:title, the current setting is system default"
 msgid "System Default"
-msgstr "افتراضيات النظام"
+msgstr "مبدئيات النظام"
 
 #: optionsmodel.cpp:359
 #, kde-format
@@ -556,8 +556,8 @@ msgid ""
 "they are and install them yourself."
 msgstr ""
 "أنشئت ملفات دعم الإعدادات المحلية واللغات، ولكن تعذر تثبيت الخطوط الخاصة "
-"باللغة تلقائيًا. إذا كانت لغتك تتطلب خطوطًا متخصصة ليتم عرضها بشكل صحيح؛ "
-"فستحتاج إلى اكتشاف ماهيتها وتثبيتها بنفسك."
+"باللغة آليًّا. إذا كانت لغتك تتطلب خطوطًا متخصصة ليتم عرضها بشكل صحيح؛ فستحتاج "
+"إلى اكتشاف ماهيتها وتثبيتها بنفسك."
 
 #: ui/main.qml:81
 #, kde-format

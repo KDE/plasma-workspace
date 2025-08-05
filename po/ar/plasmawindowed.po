@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
+# SPDX-FileCopyrightText: 2024, 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 #
-# SPDX-FileCopyrightText: 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-22 00:43+0000\n"
-"PO-Revision-Date: 2024-02-10 20:51+0400\n"
+"PO-Revision-Date: 2025-08-03 23:19+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: main.cpp:52 plasmawindowedcorona.cpp:103
 #, kde-format
@@ -25,7 +26,7 @@ msgstr "بلازما المؤطرة"
 #: main.cpp:54
 #, kde-format
 msgid "Enable QML Javascript debugger"
-msgstr "فعّل منقّح جافاسكربت QML"
+msgstr "مكّن منقّح جافاسكربت QML"
 
 #: main.cpp:57 plasmawindowedcorona.cpp:105
 #, kde-format

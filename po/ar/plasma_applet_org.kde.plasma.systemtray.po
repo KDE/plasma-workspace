@@ -153,7 +153,7 @@ msgstr "تكبير مع عرض اللوحة"
 #: package/contents/ui/ConfigGeneral.qml:39
 #, kde-format
 msgid "Automatically enabled when in Touch Mode"
-msgstr "يفعل آليا في وضع اللمس"
+msgstr "يفعل آليّا في وضع اللمس"
 
 #: package/contents/ui/ConfigGeneral.qml:49
 #, kde-format
@@ -183,7 +183,7 @@ msgstr "كبير"
 #, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
-msgstr "اجعله كبيراً آلياً في وضع اللمس"
+msgstr "اجعله كبيراً آليّاً في وضع اللمس"
 
 #: package/contents/ui/ExpandedRepresentation.qml:59
 #, kde-format

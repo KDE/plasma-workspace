@@ -518,7 +518,7 @@ msgstr "تخطّى"
 #: kcmfontinst/JobRunner.cpp:141
 #, kde-format
 msgid "AutoSkip"
-msgstr "تخطى آليا"
+msgstr "تخطى آليّا"
 
 #: kcmfontinst/JobRunner.cpp:186
 #, kde-format

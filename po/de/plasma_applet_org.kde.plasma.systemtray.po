@@ -2,20 +2,21 @@
 # Burkhard Lück <lueck@hube-lueck.de>, 2013, 2014, 2015, 2017, 2018, 2019, 2020, 2021.
 # Frederik Schwarzer <schwarzer@kde.org>, 2013, 2020, 2022.
 # Jannick Kuhr <opensource@kuhr.org>, 2023.
+# SPDX-FileCopyrightText: 2025 Flori G <Renner03@protonmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.private.systemtray\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-15 00:44+0000\n"
-"PO-Revision-Date: 2024-09-08 20:29+0200\n"
-"Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
+"PO-Revision-Date: 2025-05-18 13:51+0200\n"
+"Last-Translator: Flori G <Renner03@protonmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.11.70\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -82,12 +83,19 @@ msgid ""
 "><nl/>Use this setting at your own risk, and do not report issues to KDE or "
 "the app’s author."
 msgstr ""
+"Suchen Sie nach einer Einstellung in <application>%1</application>, um das "
+"Symbol im Systemabschnitt der Kontrollleiste zu deaktivieren, bevor Sie dies "
+"hier tun. Diese Symbole sind bei einigen Anwendungen nicht dafür ausgelegt, "
+"deaktiviert zu werden und die Verwendung dieser Einstellung kann dazu "
+"führen, dass sie sich unerwartet verhalten.<nl/><nl/>Verwenden Sie diese "
+"Einstellung auf eigene Gefahr und melden Sie Probleme nicht an KDE oder den "
+"Autor der Anwendung."
 
 #: package/contents/ui/ConfigEntries.qml:164
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
-msgstr ""
+msgstr "Ich verstehe die Risiken"
 
 #: package/contents/ui/ConfigEntries.qml:176
 #, kde-kuit-format
@@ -98,6 +106,10 @@ msgid ""
 "consider configuring the clipboard to disable its history, or only remember "
 "one item at a time."
 msgstr ""
+"Es wird nicht empfohlen, die Zwischenablage zu deaktivieren. Kopierte Daten "
+"gehen sonst verloren, sobald die Quellanwendung geschlossen wird.<nl/><nl/"
+">Stattdessen sollten Sie die Zwischenablage so einrichten, dass ihr Verlauf "
+"deaktiviert wird oder nur ein Element auf einmal gespeichert wird."
 
 #: package/contents/ui/ConfigEntries.qml:204
 #, kde-format
@@ -216,7 +228,7 @@ msgstr "Ausgeblendete Symbole anzeigen"
 #, kde-format
 msgctxt "@info:whatsthis accessible description for popup grid"
 msgid "Grid with %1 items in %2 columns"
-msgstr ""
+msgstr "Raster mit %1 Element(en) in %2 Spalte(n)"
 
 #: package/contents/ui/HiddenItemsView.qml:46
 #, kde-format

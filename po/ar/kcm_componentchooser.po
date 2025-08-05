@@ -72,7 +72,7 @@ msgstr "اختر عارض بي دي اف المبدئي"
 #: components/componentchoosertel.cpp:17
 #, kde-format
 msgid "Select default dialer application"
-msgstr "حدد تطبيق الاتصال الافتراضي"
+msgstr "حدد تطبيق الاتصال المبدئي"
 
 #: components/componentchooserterminal.cpp:25
 #, kde-format

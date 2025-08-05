@@ -1,49 +1,50 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
+# SPDX-FileCopyrightText: 2021, 2022, 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 #
-# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-14 00:44+0000\n"
-"PO-Revision-Date: 2022-09-10 09:54+0400\n"
+"PO-Revision-Date: 2025-08-04 21:10+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
-"Language-Team: \n"
+"Language-Team: ar\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: contents/ui/main.qml:70
 #, kde-format
 msgctxt "Opens the system settings module"
 msgid "Configure Virtual Keyboards..."
-msgstr "اضبط لوحات المفاتيح الوهمية..."
+msgstr "اضبط لوحات المفاتيح الافتراضية..."
 
 #: contents/ui/main.qml:91
 #, kde-format
 msgid "Virtual Keyboard: unavailable"
-msgstr "لوحة المفاتيح الوهميّة: غير متوفرة"
+msgstr "لوحة المفاتيح الافتراضيّة: غير متوفرة"
 
 #: contents/ui/main.qml:104
 #, kde-format
 msgid "Virtual Keyboard: disabled"
-msgstr "لوحة المفاتيح الوهميّة: معطلة"
+msgstr "لوحة المفاتيح الافتراضيّة: معطلة"
 
 #: contents/ui/main.qml:120
 #, kde-format
 msgid "Show Virtual Keyboard"
-msgstr "أظهر لوحة المفاتيح الوهمية"
+msgstr "أظهر لوحة المفاتيح الافتراضية"
 
 #: contents/ui/main.qml:135
 #, kde-format
 msgid "Virtual Keyboard: visible"
-msgstr "لوحة المفاتيح الوهميّة: مرئية"
+msgstr "لوحة المفاتيح الافتراضيّة: مرئية"
 
 #: contents/ui/main.qml:149
 #, kde-format
 msgid "Virtual Keyboard: enabled"
-msgstr "لوحة المفاتيح الوهميّة: مفعلة"
+msgstr "لوحة المفاتيح الافتراضيّة: مفعلة"

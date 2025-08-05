@@ -132,14 +132,14 @@ msgstr "سكربت خروج…"
 msgid ""
 "%1 has not been autostarted yet. Details will be available after the system "
 "is restarted."
-msgstr "لم تجعل %1 في حالة بدء آلي. ستتوفر التفاصيل بعد إعادة تشغيل النظام."
+msgstr "لم تجعل %1 في حالة بدء آليّ. ستتوفر التفاصيل بعد إعادة تشغيل النظام."
 
 #: ui/main.qml:149
 #, kde-format
 msgctxt ""
 "@label Entry hasn't been autostarted because system hasn't been restarted"
 msgid "Not autostarted yet"
-msgstr "لم تجعل تبدأ آليا بعد"
+msgstr "لم تجعل تبدأ آليّا بعد"
 
 #: ui/main.qml:158
 #, kde-format
@@ -176,7 +176,7 @@ msgstr "سكربتات الخروج"
 #: ui/main.qml:203
 #, kde-format
 msgid "No user-specified autostart items"
-msgstr "لا توجد عناصر بدء آلي حددها المستخدم"
+msgstr "لا توجد عناصر بدء آليّ حددها المستخدم"
 
 #: ui/main.qml:204
 #, kde-kuit-format

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-02 02:36+0000\n"
-"PO-Revision-Date: 2025-05-14 17:39+0400\n"
+"PO-Revision-Date: 2025-08-03 23:23+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -51,13 +51,13 @@ msgstr ""
 #: freespacenotifier.kcfg:21
 #, kde-format
 msgid "Is the free space notification enabled."
-msgstr "هل إخطار المساحة الحرّة مفعّل."
+msgstr "هل إخطار المساحة الحرّة ممكّن."
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_enableNotification)
 #: freespacenotifier_prefs_base.ui:17
 #, kde-format
 msgid "Enable low disk space warning"
-msgstr "فعّل التّحذير عند انخفاض المساحة الحرّة"
+msgstr "مكّن التّحذير عند انخفاض المساحة الحرّة"
 
 #. i18n: ectx: property (text), widget (QLabel, label_minimumSpace)
 #: freespacenotifier_prefs_base.ui:27
