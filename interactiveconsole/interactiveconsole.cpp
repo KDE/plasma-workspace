@@ -25,6 +25,7 @@
 #include <QTextBrowser>
 #include <QToolButton>
 #include <QVBoxLayout>
+#include <QWindow>
 
 #include <KConfigGroup>
 #include <KIO/TransferJob>
