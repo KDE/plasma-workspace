@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-02 00:45+0000\n"
-"PO-Revision-Date: 2025-08-03 08:24+0400\n"
+"PO-Revision-Date: 2025-08-04 12:38+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -80,12 +80,12 @@ msgstr "اسم الحزمة"
 #: lnftool.cpp:52
 #, kde-format
 msgid "Prevent --apply from disabling the automatic mode"
-msgstr "امنع --apply من تعطيل الوضع الآلي"
+msgstr "امنع --apply من تعطيل الوضع الآليّ"
 
 #: lnftool.cpp:53
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
-msgstr "أعد ضبط تخطيط سطح مكتب بلازما"
+msgstr "صفّر تخطيط سطح مكتب بلازما"
 
 #: lookandfeelmanager.cpp:884
 #, kde-format

@@ -77,7 +77,7 @@ msgstr "主题包名称"
 #: lnftool.cpp:52
 #, kde-format
 msgid "Prevent --apply from disabling the automatic mode"
-msgstr ""
+msgstr "阻止——通过禁用自动模式应用"
 
 #: lnftool.cpp:53
 #, kde-format
@@ -106,19 +106,19 @@ msgstr "全局界面外观"
 #: lookandfeelsettings.kcfg:13 lookandfeelsettings.kcfg:17
 #, kde-format
 msgid "Global Look and Feel package, alternate"
-msgstr ""
+msgstr "全局界面外观主题包，交替"
 
 #. i18n: ectx: label, entry (automaticLookAndFeel), group (KDE)
 #: lookandfeelsettings.kcfg:21
 #, kde-format
 msgid "Switch between dark and light global themes depending on time of day"
-msgstr ""
+msgstr "根据一天的不同时间段切换深色和浅色全局主题"
 
 #. i18n: ectx: label, entry (automaticLookAndFeelOnIdle), group (KDE)
 #: lookandfeelsettings.kcfg:25
 #, kde-format
 msgid "Switch between dark and light global themes when the computer is idle"
-msgstr ""
+msgstr "当计算机闲置时切换深色和浅色全局主题"
 
 #. i18n: ectx: label, entry (automaticLookAndFeelIdleInterval), group (KDE)
 #: lookandfeelsettings.kcfg:29
@@ -126,7 +126,7 @@ msgstr ""
 msgid ""
 "How long the computer should be idle in order to switch between dark and "
 "light global themes, in seconds"
-msgstr ""
+msgstr "计算机闲置此时间长度后切换深色和浅色全局主题，以秒为单位"
 
 #: ui/ConfirmDeletionDialog.qml:16
 #, kde-format
@@ -158,56 +158,56 @@ msgctxt "@info"
 msgid ""
 "The chosen light Global Theme will be used during the day, and the dark one "
 "will be used at night."
-msgstr ""
+msgstr "选定的浅色全局主题将在白天使用，深色主题将在夜间使用。"
 
 #: ui/DayNightLookAndFeel.qml:55
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure Day/Night Cycle…"
-msgstr ""
+msgstr "配置日夜周期…"
 
 #: ui/DayNightLookAndFeel.qml:68
 #, kde-format
 msgctxt "@option:radio Light global theme"
 msgid "Light"
-msgstr ""
+msgstr "浅色"
 
 #: ui/DayNightLookAndFeel.qml:80
 #, kde-format
 msgctxt "@option:radio Dark global theme"
 msgid "Dark"
-msgstr ""
+msgstr "深色"
 
 #: ui/DayNightLookAndFeel.qml:97
 #, kde-format
 msgctxt "@option:check"
 msgid "Wait until idleness before switching:"
-msgstr ""
+msgstr "等待空闲后切换："
 
 #: ui/DayNightLookAndFeel.qml:110
 #, kde-format
 msgctxt "@item:valuesuffix idle interval"
 msgid "%1 second"
 msgid_plural "%1 seconds"
-msgstr[0] ""
+msgstr[0] "空闲 %1 秒后"
 
 #: ui/DayNightLookAndFeel.qml:122
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Minimizes interruptions when actively using the computer."
-msgstr ""
+msgstr "用户正在使用计算机时尽量减少干扰"
 
 #: ui/LookAndFeelSelector.qml:24
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Light Global Theme"
-msgstr ""
+msgstr "选择全局浅色主题"
 
 #: ui/LookAndFeelSelector.qml:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Dark Global Theme"
-msgstr ""
+msgstr "选择全局深色主题"
 
 #: ui/LookAndFeelSelector.qml:49 ui/StaticLookAndFeel.qml:67
 #, kde-format
@@ -237,13 +237,13 @@ msgstr "无法删除系统安装的主题"
 #, kde-format
 msgctxt "@option:check"
 msgid "Switch to Dark Mode at Night"
-msgstr ""
+msgstr "夜间切换到深色模式"
 
 #: ui/main.qml:40
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Get New…"
-msgstr ""
+msgstr "获取新全局主题…"
 
 #: ui/MoreOptions.qml:24
 #, kde-format

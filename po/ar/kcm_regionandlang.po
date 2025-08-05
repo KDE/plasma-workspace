@@ -440,7 +440,7 @@ msgstr "ك.بايت، م.بايت، غ.بايت ؛ %1"
 #, kde-format
 msgctxt "@info:title, the current setting is system default"
 msgid "System Default"
-msgstr "افتراضيات النظام"
+msgstr "مبدئيات النظام"
 
 #: optionsmodel.cpp:359
 #, kde-format
@@ -556,8 +556,8 @@ msgid ""
 "they are and install them yourself."
 msgstr ""
 "أنشئت ملفات دعم الإعدادات المحلية واللغات، ولكن تعذر تثبيت الخطوط الخاصة "
-"باللغة تلقائيًا. إذا كانت لغتك تتطلب خطوطًا متخصصة ليتم عرضها بشكل صحيح؛ "
-"فستحتاج إلى اكتشاف ماهيتها وتثبيتها بنفسك."
+"باللغة آليًّا. إذا كانت لغتك تتطلب خطوطًا متخصصة ليتم عرضها بشكل صحيح؛ فستحتاج "
+"إلى اكتشاف ماهيتها وتثبيتها بنفسك."
 
 #: ui/main.qml:81
 #, kde-format
