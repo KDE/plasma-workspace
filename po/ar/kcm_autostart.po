@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-29 02:56+0000\n"
-"PO-Revision-Date: 2022-08-08 22:14+0400\n"
+"PO-Revision-Date: 2025-06-28 17:07+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -90,7 +90,7 @@ msgstr "سكربتات الخروج"
 #: package/contents/ui/main.qml:129
 #, kde-format
 msgid "No user-specified autostart items"
-msgstr "لا توجد عناصر بدء آلي حددها المستخدم"
+msgstr "لا توجد عناصر بدء آليّ حددها المستخدم"
 
 #: package/contents/ui/main.qml:130
 #, kde-kuit-format

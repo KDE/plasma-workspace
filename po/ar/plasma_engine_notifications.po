@@ -19,7 +19,7 @@ msgstr ""
 #: notificationaction.cpp:24
 #, kde-format
 msgid "The notification dataEngine is not set."
-msgstr "محرّك بيانات الإخطارات غير معيّن."
+msgstr "محرّك بيانات الإشعارات غير معيّن."
 
 #: notificationaction.cpp:34
 #, kde-format

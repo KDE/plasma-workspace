@@ -2,6 +2,7 @@
 # Burkhard Lück <lueck@hube-lueck.de>, 2013, 2014, 2015, 2017, 2018, 2019, 2020, 2021.
 # Frederik Schwarzer <schwarzer@kde.org>, 2013, 2020, 2022.
 # Jannick Kuhr <opensource@kuhr.org>, 2023.
+# SPDX-FileCopyrightText: 2025 Flori G <Renner03@protonmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.private.systemtray\n"
@@ -15,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.11.70\n"
+"X-Generator: Lokalize 25.04.1\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format

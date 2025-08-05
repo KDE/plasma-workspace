@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-17 03:09+0000\n"
-"PO-Revision-Date: 2025-08-03 14:00+0400\n"
+"PO-Revision-Date: 2025-08-03 23:28+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -173,7 +173,7 @@ msgstr "لا تشحن"
 #: package/contents/ui/main.qml:186
 #, kde-format
 msgid "Automatic sleep and screen locking are disabled"
-msgstr "عُطل التعليق الآلي وقفل الشاشة"
+msgstr "عُطل التعليق الآليّ وقفل الشاشة"
 
 #: package/contents/ui/main.qml:191
 #, kde-format
@@ -215,7 +215,7 @@ msgstr "مرر لتضبط سطوع الشاشة"
 #: package/contents/ui/main.qml:310
 #, kde-format
 msgid "The battery applet has enabled system-wide inhibition"
-msgstr "فعّل بريمج البطّاريّة الكبت على مستوى النّظام"
+msgstr "مكّنَ بريمج البطّاريّة الكبت على مستوى النّظام"
 
 #: package/contents/ui/main.qml:364
 #, kde-format

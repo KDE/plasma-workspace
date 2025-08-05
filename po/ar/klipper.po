@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-05 05:54+0000\n"
-"PO-Revision-Date: 2025-08-03 14:26+0400\n"
+"PO-Revision-Date: 2025-08-04 12:40+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -124,10 +124,10 @@ msgid ""
 "excluded window, then it can be shown by using the <shortcut>%1</shortcut> "
 "key shortcut."
 msgstr ""
-"عندما يحدد نص يطابق نمط إجراء أو يتم اختياره من محفوظات الحافظة، قم تلقائيًا "
+"عندما يحدد نص يطابق نمط إجراء أو يتم اختياره من محفوظات الحافظة، قم آليًّا "
 "بإظهار القائمة المنبثقة بالإجراءات القابلة للتطبيق. إذا أوقف تشغيل القائمة "
-"التلقائية هنا، أو لم تظهر لنافذة مستبعدة، فيمكن عرضها باستخدام اختصار "
-"المفتاح <shortcut>%1 </shortcut>."
+"الآليّة هنا، أو لم تظهر لنافذة مستبعدة، فيمكن عرضها باستخدام اختصار المفتاح "
+"<shortcut>%1 </shortcut>."
 
 #: configdialog.cpp:278
 #, kde-format
@@ -278,7 +278,7 @@ msgid ""
 "particular application, then add it to this list. <link>How to find the name "
 "to enter</link>."
 msgstr ""
-"لن تعرض نافذة الإجراء المنبثقة تلقائيًا لهذه النوافذ ولو مكنت. هذا لأنه، على "
+"لن تعرض نافذة الإجراء المنبثقة آليًّا لهذه النوافذ ولو مكنت. هذا لأنه، على "
 "سبيل المثال، قد يقوم مستعرض الويب بتمييز عنوان URL في شريط العناوين أثناء "
 "الكتابة، لذلك ستظهر القائمة لكل ضغطة مفتاح. <nl/> <nl/> إذا ظهرت قائمة "
 "الإجراء بشكل غير متوقع عند استخدام تطبيق معين، عندها قم بإضافته إلى هذه "
@@ -382,7 +382,7 @@ msgstr "الوصف:"
 #: editactiondialog.cpp:223
 #, kde-format
 msgid "Include in automatic popup"
-msgstr "ضمّن في المنبثقة التلقائية"
+msgstr "ضمّن في المنبثقة الآليّة"
 
 #: editactiondialog.cpp:227
 #, kde-kuit-format
@@ -394,10 +394,10 @@ msgid ""
 "the automatic popup but they will be included if the popup is activated "
 "manually with the <shortcut>%1</shortcut> key shortcut."
 msgstr ""
-"ستضمن أوامر هذه المطابقة في النافذة المنبثقة للإجراء التلقائي، إذا مكنت في "
-"صفحة <interface> قائمة الإجراءات </interface>. إذا أوقف تشغيل هذا الخيار ، "
-"فلن تضمن أوامر هذه المطابقة في النافذة المنبثقة التلقائية ولكن  ستضمن إذا "
-"نشطت النافذة المنبثقة يدويًا باستخدام اختصار المفتاح <shortcut>%1 </shortcut>."
+"ستضمن أوامر هذه المطابقة في النافذة المنبثقة للإجراء الآليّ، إذا مكنت في صفحة "
+"<interface> قائمة الإجراءات </interface>. إذا أوقف تشغيل هذا الخيار ، فلن "
+"تضمن أوامر هذه المطابقة في النافذة المنبثقة الآليّة ولكن  ستضمن إذا نشطت "
+"النافذة المنبثقة يدويًا باستخدام اختصار المفتاح <shortcut>%1 </shortcut>."
 
 #: editactiondialog.cpp:262
 #, kde-format
@@ -481,7 +481,7 @@ msgstr "ماذا يحدث للإخراج القياسي للأمر المنفذ.
 #: editcommanddialog.cpp:115
 #, kde-format
 msgid "Reset the icon to the default for the command"
-msgstr "أعد تعيين الأيقونة إلى الإعداد الافتراضي للأمر"
+msgstr "صفّر الأيقونة إلى الإعداد المبدئي للأمر"
 
 #: editcommanddialog.cpp:121
 #, kde-format
@@ -497,7 +497,7 @@ msgstr "%1×%2 %3ب.ل.ب"
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
-msgstr "قائمة الإجراءات المنبثقة التلقائية"
+msgstr "قائمة الإجراءات المنبثقة الآليّة"
 
 #: klipper.cpp:196
 #, kde-format
@@ -572,12 +572,12 @@ msgstr ""
 #: klipper.cpp:606
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
-msgstr "هل يجب أن يبدأ Klipper تلقائيا عند الولوج؟"
+msgstr "هل يجب أن يبدأ Klipper آليّا عند الولوج؟"
 
 #: klipper.cpp:607
 #, kde-format
 msgid "Automatically Start Klipper?"
-msgstr "تشغيل Klipper تلقائياً ؟"
+msgstr "تشغيل Klipper آليّاً ؟"
 
 #: klipper.cpp:608
 #, kde-format
@@ -679,9 +679,9 @@ msgid ""
 "that it can be pasted with either a Paste action or a middle-click.<br/><a "
 "href=\"1\">More about the selection and clipboard</a>."
 msgstr ""
-"يُنسخ المحتوى المحدد بالمؤشر تلقائيًا إلى الحافظة بحيث يمكن لصقه بإجراء \"لصق"
-"\" أو نقرة متوسطة. <br/> <a href=\"1\"> مزيد من المعلومات حول التحديد "
-"والحافظة </a> ."
+"يُنسخ المحتوى المحدد بالمؤشر آليًّا إلى الحافظة بحيث يمكن لصقه بإجراء \"لصق\" "
+"أو نقرة متوسطة. <br/> <a href=\"1\"> مزيد من المعلومات حول التحديد والحافظة "
+"</a> ."
 
 #. i18n: ectx: label, entry (IgnoreSelection), group (General)
 #: klipper.kcfg:32
@@ -697,8 +697,8 @@ msgid ""
 "is not automatically stored in the clipboard history, and can only be pasted "
 "using a middle-click."
 msgstr ""
-"المحتوى المحدد بالمؤشر ولكن لم يُنسخ صراحة إلى الحافظة لا يتم تخزينه تلقائيًا "
-"في محفوظات الحافظة، ولا يمكن لصقه إلا باستخدام نقرة متوسطة."
+"المحتوى المحدد بالمؤشر ولكن لم يُنسخ صراحة إلى الحافظة لا يتم تخزينه آليًّا في "
+"محفوظات الحافظة، ولا يمكن لصقه إلا باستخدام نقرة متوسطة."
 
 #. i18n: ectx: label, entry (SelectionTextOnly), group (General)
 #: klipper.kcfg:37
@@ -764,7 +764,7 @@ msgstr "مدة ظهور قائمة الإجراءات:"
 #: klipper.kcfg:64
 #, kde-format
 msgid "Display the automatic action popup menu for this time."
-msgstr "اعرض قائمة الإجراءات التلقائية المنبثقة مدة هذا الوقت."
+msgstr "اعرض قائمة الإجراءات الآليّة المنبثقة مدة هذا الوقت."
 
 #. i18n: ectx: label, entry (MaxClipItems), group (General)
 #: klipper.kcfg:67

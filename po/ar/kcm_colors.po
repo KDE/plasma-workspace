@@ -89,7 +89,7 @@ msgid ""
 "generated color or default color"
 msgstr ""
 "آخر لون تمييز مخصص استخدم قبل أن ينتقل المستخدم إلى لون خلفية الشاشة أو "
-"اللون الافتراضي"
+"اللون المبدئي"
 
 #. i18n: ectx: label, entry (accentColorFromWallpaper), group (General)
 #: colorssettings.kcfg:21
@@ -1154,7 +1154,7 @@ msgstr "هذه الوحدة تجعلك تختار تشكيلة الألوان"
 #, kde-format
 msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
-msgstr "تشكيلة الألوان '%1' غير مثبتة. سيختار سمة الافتراضية  بدلا من ذلك."
+msgstr "تشكيلة الألوان '%1' غير مثبتة. سيختار سمة المبدئية  بدلا من ذلك."
 
 #: package/contents/ui/main.qml:108
 #, kde-format

@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-#
 # Safa Alfulaij <safa1996alfulaij@gmail.com>, 2015.
-# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2021, 2022.
+# SPDX-FileCopyrightText: 2021, 2022, 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-01-22 00:46+0000\n"
-"PO-Revision-Date: 2022-01-23 18:52+0400\n"
+"PO-Revision-Date: 2025-08-04 18:48+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -17,6 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: shellpackage.cpp:26 shellpackage.cpp:27
 #, kde-format
@@ -36,13 +37,13 @@ msgstr "واجهة رسوميّة للمنظورات الّتي ستظهر ال�
 #: shellpackage.cpp:37
 #, kde-format
 msgid "Default layout file"
-msgstr "ملفّ التّصميم الافتراضيّ"
+msgstr "ملفّ التخطيط المبدئيّ"
 
 #: shellpackage.cpp:38
 #, kde-format
 msgid "Default plugins for containments, containmentActions, etc."
 msgstr ""
-"المكونات الإضافية الافتراضية لعمليات الاحتواء ، وإجراءات الاحتواء ، وما إلى "
+"المكونات الإضافية المبدئية لعمليات الاحتواء ، وإجراءات الاحتواء ، وما إلى "
 "ذلك. "
 
 #: shellpackage.cpp:43

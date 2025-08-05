@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-23 03:30+0000\n"
-"PO-Revision-Date: 2025-04-28 17:27+0400\n"
+"PO-Revision-Date: 2025-08-03 22:00+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -121,7 +121,7 @@ msgstr "حتى تعطل يدوياً"
 #, kde-format
 msgctxt "Do not disturb until date"
 msgid "Automatically ends: %1"
-msgstr "ينتهي آليا: %1"
+msgstr "ينتهي آليّا: %1"
 
 #: package/contents/ui/FullRepresentation.qml:220
 #, kde-format
@@ -161,7 +161,7 @@ msgstr "اعرض أكثر بـ%1"
 #: package/contents/ui/main.qml:92
 #, kde-format
 msgid "No unread notifications"
-msgstr "لا يوجد تنبيهات غير مقروءة"
+msgstr "لا يوجد إشعارات غير مقروءة"
 
 #: package/contents/ui/FullRepresentation.qml:641
 #: package/contents/ui/main.qml:66

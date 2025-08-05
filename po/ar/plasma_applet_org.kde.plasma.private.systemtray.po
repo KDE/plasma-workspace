@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-19 00:59+0000\n"
-"PO-Revision-Date: 2022-08-08 21:59+0400\n"
+"PO-Revision-Date: 2025-05-15 18:05+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -119,7 +119,7 @@ msgstr "تكبير مع عرض اللوحة"
 #: package/contents/ui/ConfigGeneral.qml:39
 #, kde-format
 msgid "Automatically enabled when in Touch Mode"
-msgstr "يفعل آليا في وضع اللمس"
+msgstr "يفعل آليّا في وضع اللمس"
 
 #: package/contents/ui/ConfigGeneral.qml:48
 #, kde-format
@@ -149,7 +149,7 @@ msgstr "كبير"
 #, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
-msgstr "اجعله كبيراً آلياً في وضع اللمس"
+msgstr "اجعله كبيراً آليّاً في وضع اللمس"
 
 #: package/contents/ui/ExpandedRepresentation.qml:64
 #, kde-format
