@@ -2,7 +2,7 @@
     "KPlugin": {
         "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=systemsettings&component=kcm_notify",
         "Description": "Event Notifications and Actions",
-        "Description[ar]": "إخطارات وإجراءات الحدث",
+        "Description[ar]": "إشعارات وإجراءات الحدث",
         "Description[az]": "Tədbir Bildirişləri və Əməllər",
         "Description[be]": "Апавяшчэнні пра падзеі і дзеянні",
         "Description[bg]": "Известия и действия на събития",
@@ -56,7 +56,7 @@
         ],
         "Icon": "preferences-desktop-notification-bell",
         "Name": "Notifications",
-        "Name[ar]": "إخطارات",
+        "Name[ar]": "إشعارات",
         "Name[az]": "Bildirilşlər",
         "Name[be@latin]": "Infarmavańnie",
         "Name[be]": "Апавяшчэнні",
