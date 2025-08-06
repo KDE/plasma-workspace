@@ -33,6 +33,4 @@ private:
     QString m_text;
 
     bool m_isActionValid;
-
-    std::shared_ptr<StateInfo> m_stateInfo;
 };

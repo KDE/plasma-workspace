@@ -16,7 +16,6 @@ plasma_add_applet(org.kde.plasma.devicenotifier
         messageinfo.cpp
         actionsinfo.cpp
         spaceupdatemonitor_p.cpp
-        deviceserviceaction.cpp
         predicatesmonitor_p.cpp
         actioninterface.cpp
         devicefiltercontrol.cpp

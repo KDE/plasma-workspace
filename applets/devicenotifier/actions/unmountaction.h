@@ -32,6 +32,4 @@ private Q_SLOTS:
 private:
     bool m_hasStorageAccess;
     bool m_isRoot;
-
-    std::shared_ptr<StateInfo> m_stateInfo;
 };

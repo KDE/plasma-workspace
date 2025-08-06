@@ -13,8 +13,7 @@
 #include "stateinfo.h"
 
 CheckAction::CheckAction(const std::shared_ptr<StorageInfo> &storageInfo, const std::shared_ptr<StateInfo> &stateInfo, QObject *parent)
-    : ActionInterface(storageInfo, parent)
-    , m_stateInfo(stateInfo)
+    : ActionInterface(storageInfo, stateInfo, parent)
 {
     const Solid::Device &device = m_storageInfo->device();
 

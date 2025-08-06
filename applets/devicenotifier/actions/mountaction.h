@@ -32,6 +32,4 @@ private Q_SLOTS:
 private:
     bool m_supportsMTP;
     bool m_hasStorageAccess;
-
-    std::shared_ptr<StateInfo> m_stateInfo;
 };
