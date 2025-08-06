@@ -16,10 +16,9 @@
 #include <KLocalizedString>
 
 MountAction::MountAction(const std::shared_ptr<StorageInfo> &storageInfo, const std::shared_ptr<StateInfo> &stateInfo, QObject *parent)
-    : ActionInterface(storageInfo, parent)
+    : ActionInterface(storageInfo, stateInfo, parent)
     , m_supportsMTP(false)
     , m_hasStorageAccess(false)
-    , m_stateInfo(stateInfo)
 {
     const Solid::Device &device = m_storageInfo->device();
 

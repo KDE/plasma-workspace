@@ -15,8 +15,7 @@
 OpenWithFileManagerAction::OpenWithFileManagerAction(const std::shared_ptr<StorageInfo> &storageInfo,
                                                      const std::shared_ptr<StateInfo> &stateInfo,
                                                      QObject *parent)
-    : ActionInterface(storageInfo, parent)
-    , m_stateInfo(stateInfo)
+    : ActionInterface(storageInfo, stateInfo, parent)
 {
     const QString actionUrl = QStandardPaths::locate(QStandardPaths::GenericDataLocation, u"solid/actions/" + predicate());
     auto services = KService(actionUrl).actions();

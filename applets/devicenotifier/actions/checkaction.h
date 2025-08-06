@@ -28,7 +28,4 @@ public:
 
 private Q_SLOTS:
     void updateIsValid(const QString &udi);
-
-private:
-    std::shared_ptr<StateInfo> m_stateInfo;
 };

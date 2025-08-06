@@ -13,8 +13,7 @@
 #include <Solid/PortableMediaPlayer>
 
 UnmountAction::UnmountAction(const std::shared_ptr<StorageInfo> &storageInfo, const std::shared_ptr<StateInfo> &stateInfo, QObject *parent)
-    : ActionInterface(storageInfo, parent)
-    , m_stateInfo(stateInfo)
+    : ActionInterface(storageInfo, stateInfo, parent)
 {
     m_hasStorageAccess = false;
     m_isRoot = false;

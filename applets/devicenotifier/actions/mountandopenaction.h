@@ -46,6 +46,4 @@ private:
 
     QString m_icon;
     QString m_text;
-
-    std::shared_ptr<StateInfo> m_stateInfo;
 };

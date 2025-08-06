@@ -231,7 +231,7 @@ void ActionsInfo::updateActionsForPredicates(const QHash<QString, Solid::Predica
     }
 
     for (const QString &desktop : interestingDesktopFiles) {
-        auto newAction = new DefaultAction(m_storageInfo, desktop, this);
+        auto newAction = new DefaultAction(m_storageInfo, m_stateInfo, desktop, this);
         if (newAction->isValid()) {
             m_actions.append(newAction);
             connect(newAction, &ActionInterface::iconChanged, this, &ActionsInfo::onActionIconChanged);

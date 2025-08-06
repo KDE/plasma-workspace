@@ -8,7 +8,10 @@
 
 #include <QObject>
 
+#include "stateinfo.h"
 #include "storageinfo.h"
+
+class KServiceAction;
 
 /**
  * Interface to add custom actions for devices
@@ -18,7 +21,7 @@ class ActionInterface : public QObject
     Q_OBJECT
 
 public:
-    explicit ActionInterface(std::shared_ptr<StorageInfo> storageInfo, QObject *parent = nullptr);
+    explicit ActionInterface(const std::shared_ptr<StorageInfo> &storageInfo, const std::shared_ptr<StateInfo> &stateInfo, QObject *parent = nullptr);
     ~ActionInterface() override;
 
     /**
@@ -54,6 +57,12 @@ public:
      */
     virtual bool isValid() const;
 
+private:
+    void delayedExecute();
+
+private Q_SLOTS:
+    void storageSetupDone(const QString &udi);
+
 Q_SIGNALS:
 
     /**
@@ -72,5 +81,8 @@ Q_SIGNALS:
     void isValidChanged(const QString &name, bool status);
 
 protected:
+    std::unique_ptr<KServiceAction> m_service;
+
     std::shared_ptr<StorageInfo> m_storageInfo;
+    std::shared_ptr<StateInfo> m_stateInfo;
 };
