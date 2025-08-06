@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: freespacenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-02 02:36+0000\n"
-"PO-Revision-Date: 2021-06-16 00:39+0300\n"
+"PO-Revision-Date: 2025-08-05 16:23+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.6\n"
 
 #: freespacenotifier.cpp:121
 #, kde-format
@@ -46,12 +46,11 @@ msgstr ""
 
 #. i18n: ectx: label, entry (minimumSpacePercentage), group (General)
 #: freespacenotifier.kcfg:15
-#, fuzzy, kde-format
-#| msgid "Minimum free space before user starts being notified."
+#, kde-format
 msgid "Minimum percentage free space before user starts being notified."
 msgstr ""
-"Minimalus laisvos vietos kiekis, po kurio naudotojas pradeda gauti "
-"pranešimus."
+"Minimali laisvos vietos procentinė dalis, kuriai sumažėjus, naudotojas "
+"pradės gauti pranešimus."
 
 #. i18n: ectx: label, entry (enableNotification), group (General)
 #: freespacenotifier.kcfg:21
@@ -79,16 +78,15 @@ msgstr " MiB"
 
 #. i18n: ectx: property (text), widget (QLabel, label_minimumSpacePercentage)
 #: freespacenotifier_prefs_base.ui:44
-#, fuzzy, kde-format
-#| msgid "Warn when free space is below:"
+#, kde-format
 msgid "And when free space is under:"
-msgstr "Įspėti, kai laisvos vietos diske yra mažiau nei:"
+msgstr "Ir kai laisvos vietos diske yra mažiau nei:"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpacePercentage)
 #: freespacenotifier_prefs_base.ui:54
 #, no-c-format, kde-format
 msgid "%"
-msgstr ""
+msgstr "%"
 
 #. i18n: ectx: property (text), widget (QLabel, label_info)
 #: freespacenotifier_prefs_base.ui:67
@@ -97,36 +95,30 @@ msgid ""
 "The system will notify you if the free space drops below the specified MiB "
 "and the specified percentage of available space."
 msgstr ""
+"Sistema praneš, jei laisvos vietos kiekis taps mažesnis nei nurodytas MiB "
+"kiekis ir nurodyta prieinamos vietos procentinė dalis."
 
 #: module.cpp:126
-#, fuzzy, kde-format
-#| msgid ""
-#| "Your Root partition is running out of disk space, you have %1 MiB "
-#| "remaining (%2%)."
+#, kde-format
 msgid ""
 "Your %1 partition is running out of disk space; %2 MiB of space remaining "
 "(%3%)."
-msgstr "Jūsų „Šaknies“ skaidinyje mažėja vietos. Jums liko %1 MiB (%2%)."
+msgstr "Jūsų „%1“ skaidinyje mažėja vietos; liko %2 MiB laisvos vietos (%3%)."
 
 #: module.cpp:128
-#, fuzzy, kde-format
-#| msgid ""
-#| "Your Root partition is running out of disk space, you have %1 MiB "
-#| "remaining (%2%)."
+#, kde-format
 msgid ""
 "Your Root partition is running out of disk space; %1 MiB of space remaining "
 "(%2%)."
-msgstr "Jūsų „Šaknies“ skaidinyje mažėja vietos. Jums liko %1 MiB (%2%)."
+msgstr ""
+"Jūsų „Šaknies“ skaidinyje mažėja vietos; liko %1 MiB laisvos vietos (%2%)."
 
 #: module.cpp:130
-#, fuzzy, kde-format
-#| msgid ""
-#| "Your Home folder is running out of disk space, you have %1 MiB remaining "
-#| "(%2%)."
+#, kde-format
 msgid ""
 "Your Home folder is running out of disk space; %1 MiB of space remaining "
 "(%2%)."
-msgstr "Jūsų „Namų“ aplanke mažėja vietos. Jums liko %1 MiB (%2%)."
+msgstr "Jūsų „Namų“ aplanke mažėja vietos; liko %1 MiB laisvos vietos (%2%)."
 
 #: module.cpp:155
 #, kde-format

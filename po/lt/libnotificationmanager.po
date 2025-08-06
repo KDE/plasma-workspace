@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-25 02:40+0000\n"
-"PO-Revision-Date: 2025-01-10 01:17+0200\n"
+"PO-Revision-Date: 2025-08-05 15:44+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.6\n"
 
 #: abstractnotificationsmodel.cpp:340
 #, kde-format
@@ -119,25 +119,21 @@ msgid "Application closed unexpectedly."
 msgstr "Programa netikėtai užsivėrė."
 
 #: notifications.cpp:912
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Unread Notifications"
+#, kde-format
 msgctxt "@title"
 msgid "Unread Notification"
 msgid_plural "Unread Notifications"
-msgstr[0] "Neskaityti pranešimai"
+msgstr[0] "Neskaitytas pranešimas"
 msgstr[1] "Neskaityti pranešimai"
 msgstr[2] "Neskaityti pranešimai"
 msgstr[3] "Neskaityti pranešimai"
 
 #: notifications.cpp:914
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "%1 notifications were received while Do Not Disturb was active."
+#, kde-format
 msgctxt "@info"
 msgid "%1 notification was received while Do Not Disturb was active."
 msgid_plural "%1 notifications were received while Do Not Disturb was active."
-msgstr[0] "Kol buvo įjungta „Netrukdyti“ veiksena, buvo gauta pranešimų: %1."
-msgstr[1] "Kol buvo įjungta „Netrukdyti“ veiksena, buvo gauta pranešimų: %1."
-msgstr[2] "Kol buvo įjungta „Netrukdyti“ veiksena, buvo gauta pranešimų: %1."
-msgstr[3] "Kol buvo įjungta „Netrukdyti“ veiksena, buvo gauta pranešimų: %1."
+msgstr[0] "Kol buvo įjungta „Netrukdyti“ veiksena, buvo gautas %1 pranešimas."
+msgstr[1] "Kol buvo įjungta „Netrukdyti“ veiksena, buvo gauti %1 pranešimai."
+msgstr[2] "Kol buvo įjungta „Netrukdyti“ veiksena, buvo gauta %1 pranešimų."
+msgstr[3] "Kol buvo įjungta „Netrukdyti“ veiksena, buvo gautas %1 pranešimas."

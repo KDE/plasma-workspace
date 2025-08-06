@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-15 00:44+0000\n"
-"PO-Revision-Date: 2025-08-03 11:15+0400\n"
+"PO-Revision-Date: 2025-08-05 17:48+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -778,7 +778,7 @@ msgstr "ظلّل"
 #, kde-format
 msgctxt "disabled intensity effect"
 msgid "Darken"
-msgstr "تقتيم"
+msgstr "تعتيم"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
 #: editor/scmeditoreffects.ui:83
@@ -896,13 +896,13 @@ msgstr "ظلّل"
 #: editor/scmeditoroptions.ui:97
 #, kde-format
 msgid "Maximum"
-msgstr "الحد الاعلى"
+msgstr "الحد الأعلى"
 
 #. i18n: ectx: property (text), widget (QLabel, label_9)
 #: editor/scmeditoroptions.ui:117
 #, kde-format
 msgid "Minimum"
-msgstr "الحد الادنى"
+msgstr "الحد الأدنى"
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: editor/scmeditoroptions.ui:124
@@ -1153,7 +1153,7 @@ msgid ""
 "which is already set."
 msgstr ""
 "تتيح لك هذه الأداة ضبط نظام الألوان لجلسة البلازما الحالية، دون ضبطه عن طريق "
-"الخطأ على نظام إما غير متوفر ، أو تم تعيينه بالفعل."
+"الخطأ على نظام إما غير متوفر ، أو معين من قبل."
 
 #: plasma-apply-colorscheme.cpp:45
 #, kde-format
@@ -1187,7 +1187,7 @@ msgstr ""
 msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
 "Plasma session."
-msgstr "تم بالفعل تعيين السمة المطلوبة \"%1\" كسمة لجلسة البلازما الحالية."
+msgstr "عُينت السمة المطلوبة \"%1\" كسمة لجلسة البلازما الحالية من قبل."
 
 #: plasma-apply-colorscheme.cpp:113
 #, kde-format

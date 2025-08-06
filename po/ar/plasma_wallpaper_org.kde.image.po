@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-05 02:37+0000\n"
-"PO-Revision-Date: 2024-09-05 09:48+0400\n"
+"PO-Revision-Date: 2025-08-05 15:03+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -182,7 +182,7 @@ msgid ""
 "yourself: %1"
 msgstr ""
 "يوجد اقتباس فردي طائش في اسم ملف هذه الخلفية (') - يرجى الاتصال بمؤلف خلفية "
-"الشاشة لإصلاح ذلك ، أو إعادة تسمية الملفبنفسك: %1"
+"الشاشة لإصلاح ذلك ، أو إعادة تسمية الملف بنفسك: %1"
 
 #: plasma-apply-wallpaperimage.cpp:99
 #, kde-format
@@ -210,9 +210,7 @@ msgstr "نجح في تعيين الخلفية لجميع أجهزة سطح ال�
 msgid ""
 "The file passed to be set as wallpaper does not exist, or we cannot identify "
 "it as a wallpaper: %1"
-msgstr ""
-"الملف الذي تم تمريره ليتم تعيينه كخلفية غير موجود ، أو لا يمكننا تحديده "
-"كخلفية: %1"
+msgstr "الملف المُمرر ليعين كخلفية غير موجود، أو لا يمكننا تعريفه كخلفية: %1"
 
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
 #: plugin/imagebackend.cpp:340
