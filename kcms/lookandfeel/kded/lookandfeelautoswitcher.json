@@ -16,8 +16,9 @@
         "Description[tr]": "Günün saatine bağlı olarak açık ve koyu global temalar arasında geçiş yapar",
         "Description[uk]": "Перемикає систему між темною і світлою загальними темами на основі часу доби",
         "Description[x-test]": "xxSwitches between dark and light Global Themes based on time of dayxx",
+        "Description[zh_CN]": "根据一天的不同时间段切换深色和浅色全局主题",
         "Name": "Global Theme Auto-Switcher",
-        "Name[ar]": "مبدل آلي للسمات العامة",
+        "Name[ar]": "مبدل آليّ للسمات العامة",
         "Name[ca@valencia]": "Commutador automàtic de tema global",
         "Name[ca]": "Commutador automàtic de tema global",
         "Name[es]": "Selector automático del tema global",
@@ -31,7 +32,8 @@
         "Name[ta]": "பொது தோற்றத்திட்ட தானியக்க மாற்றி",
         "Name[tr]": "Global Tema Değiştiricisi",
         "Name[uk]": "Автоперемикач загальної теми",
-        "Name[x-test]": "xxGlobal Theme Auto-Switcherxx"
+        "Name[x-test]": "xxGlobal Theme Auto-Switcherxx",
+        "Name[zh_CN]": "全局主题自动切换程序"
     },
     "X-KDE-Kded-autoload": true
 }
