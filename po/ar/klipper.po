@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-05 05:54+0000\n"
-"PO-Revision-Date: 2025-08-04 12:40+0400\n"
+"PO-Revision-Date: 2025-08-05 17:51+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -47,12 +47,12 @@ msgstr ""
 "عندما يميّز نص أو منطقة من الشاشة بالفأرة أو لوحة المفاتيح، فهذا هو التحديد "
 "<emphasis> </emphasis>. يمكن لصقها باستخدام زر الفأرة الأوسط. <nl/> <nl/> "
 "إذا نُسخ التحديد بشكل صريح باستخدام إجراء <interface> نسخ </interface> أو "
-"<interface> قص </interface> ، يتم حفظه في <emphasis> الحافظة </emphasis>. "
-"يمكن لصقها باستخدام إجراء <interface> ألصق </interface>. <nl/> <nl/> عند "
-"تشغيل هذا الخيار يحافظ على التحديد والحافظة كما هي ، بحيث يكون أي تحديد "
-"متاحًا للصقه على الفور بأي وسيلة. إذا تم إيقاف تشغيله ، فقد يظل التحديد "
-"محفوظًا في محفوظات الحافظة (وفقًا للخيارات أدناه) ، ولكن لا يمكن لصقه إلا "
-"باستخدام زر الفأرة الأوسط."
+"<interface> قص </interface> ، يُحفظ في <emphasis> الحافظة </emphasis>. يمكن "
+"لصقها باستخدام إجراء <interface> ألصق </interface>. <nl/> <nl/> عند تشغيل "
+"هذا الخيار يحافظ على التحديد والحافظة كما هي ، بحيث يكون أي تحديد متاحًا "
+"للصقه على الفور بأي وسيلة. إذا أوقف تشغيله ، فقد يظل التحديد محفوظًا في "
+"محفوظات الحافظة (وفقًا للخيارات أدناه) ، ولكن لا يمكن لصقه إلا باستخدام زر "
+"الفأرة الأوسط."
 
 #: configdialog.cpp:106
 #, kde-format
@@ -89,7 +89,7 @@ msgstr "فقط عند النسخ بصراحة"
 #: configdialog.cpp:142
 #, kde-format
 msgid "Whether text selections are saved in the clipboard history."
-msgstr "ما إذا كان يتم حفظ تحديدات النص في محفوظات الحافظة."
+msgstr "إذا كان سيحفظ تحديدات النص في محفوظات الحافظة."
 
 #: configdialog.cpp:173
 #, kde-format
@@ -106,8 +106,7 @@ msgstr "لا تحفظه في المحفوظات"
 msgid ""
 "Whether non-text selections (such as images) are saved in the clipboard "
 "history."
-msgstr ""
-"ما إذا كان يتم حفظ التحديدات غير النصية (مثل الصور) في محفوظات الحافظة."
+msgstr "إذا كان سيحفظ التحديدات غير النصية (مثل الصور) في محفوظات الحافظة."
 
 #: configdialog.cpp:259
 #, kde-format
@@ -124,9 +123,9 @@ msgid ""
 "excluded window, then it can be shown by using the <shortcut>%1</shortcut> "
 "key shortcut."
 msgstr ""
-"عندما يحدد نص يطابق نمط إجراء أو يتم اختياره من محفوظات الحافظة، قم آليًّا "
-"بإظهار القائمة المنبثقة بالإجراءات القابلة للتطبيق. إذا أوقف تشغيل القائمة "
-"الآليّة هنا، أو لم تظهر لنافذة مستبعدة، فيمكن عرضها باستخدام اختصار المفتاح "
+"عندما يحدد نص يطابق نمط إجراء أو يختار من محفوظات الحافظة، أظهر القائمة "
+"آليًّا  المنبثقة بالإجراءات القابلة للتطبيق. إذا أوقف تشغيل القائمة الآليّة "
+"هنا، أو لم تظهر لنافذة مستبعدة، فيمكن عرضها باستخدام اختصار المفتاح "
 "<shortcut>%1 </shortcut>."
 
 #: configdialog.cpp:278
@@ -150,7 +149,7 @@ msgstr[5] " ثانية"
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
-msgstr "بلا"
+msgstr "لا شيء"
 
 #: configdialog.cpp:302
 #, kde-format
@@ -297,7 +296,7 @@ msgstr ""
 "الاسم الذي يجب إدخاله هنا هو اسم WM_CLASS للنافذة المراد استبعادها. للعثور "
 "على اسم WM_CLASS لإطار ما، أدخل الأمر التالي في نافذة طرفية أخرى: <nl/><nl/"
 ">&nbsp;&nbsp;<icode>xprop | grep WM_CLASS</icode><nl/><nl/> وانقر على "
-"النافذة التي تريد استبعادها. الاسم الأول الذي يتم عرضه بعد علامة التساوي هو "
+"النافذة التي تريد استبعادها. الاسم الأول الذي سيعرض بعد علامة التساوي هو "
 "الاسم الذي تريد إدخاله."
 
 #: editactiondialog.cpp:34 editcommanddialog.cpp:89
@@ -346,7 +345,7 @@ msgid ""
 msgstr ""
 "يسري مفعول الإجراء عندما يطابق <interface> نمط المطابقة </interface> محتويات "
 "الحافظة. عندما يحدث هذا ، تظهر إجراءات <interface>الأمر</interface> في قائمة "
-"كليبر المنبثقة، إذا تم اختيار واحد منهم ، يتم تنفيذ الأمر."
+"كليبر المنبثقة، إذا اخُتير واحد منهم ،سينفذ الأمر."
 
 #: editactiondialog.cpp:203
 #, kde-format
@@ -450,7 +449,7 @@ msgid ""
 "captured texts from the match pattern."
 msgstr ""
 "سيستبدل <placeholder>&#37;s</placeholder> في الأمر بمحتويات الحافظة الكاملة. "
-"سيتم استبدال <placeholder>&#37;0</placeholder>عبر <placeholder>&#37;9</"
+"سيستبدل <placeholder>&#37;0</placeholder>عبر <placeholder>&#37;9</"
 "placeholder> بالنصوص الملتقطة المقابلة من نمط المطابقة."
 
 #: editcommanddialog.cpp:81
@@ -533,7 +532,7 @@ msgstr "&حرّر المحتويات"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
-msgstr "أظهر ال&باركود..."
+msgstr "أظهر &شفرة شريطية..."
 
 #: klipper.cpp:239
 #, kde-format
@@ -597,7 +596,7 @@ msgstr "حرّر المحتويات"
 #: klipper.cpp:1024
 #, kde-format
 msgid "Mobile Barcode"
-msgstr "باركود الجوال"
+msgstr "شفرة شريطية للجوال"
 
 #: klipper.cpp:1071
 #, kde-format
@@ -697,8 +696,8 @@ msgid ""
 "is not automatically stored in the clipboard history, and can only be pasted "
 "using a middle-click."
 msgstr ""
-"المحتوى المحدد بالمؤشر ولكن لم يُنسخ صراحة إلى الحافظة لا يتم تخزينه آليًّا في "
-"محفوظات الحافظة، ولا يمكن لصقه إلا باستخدام نقرة متوسطة."
+"المحتوى المحدد بالمؤشر ولكن لم يُنسخ صراحة إلى الحافظة سيخزن آليًّا في محفوظات "
+"الحافظة، ولا يمكن لصقه إلا باستخدام نقرة متوسطة."
 
 #. i18n: ectx: label, entry (SelectionTextOnly), group (General)
 #: klipper.kcfg:37
@@ -869,7 +868,7 @@ msgstr "كليبر"
 #: main.cpp:29
 #, kde-format
 msgid "Plasma cut & paste history utility"
-msgstr "أداة كِيدِي لمحفوظات اللقص واللصق"
+msgstr "أداة كِيدِي لمحفوظات القص واللصق"
 
 #: main.cpp:31
 #, kde-format
@@ -915,7 +914,7 @@ msgstr "المساهِم"
 #: main.cpp:40
 #, kde-format
 msgid "Luboš Luňák"
-msgstr "Luboš Luňák"
+msgstr "لوبوس لوناك"
 
 #: main.cpp:40
 #, kde-format
@@ -935,7 +934,7 @@ msgstr "المشرف السابق"
 #: main.cpp:44
 #, kde-format
 msgid "Martin Gräßlin"
-msgstr "Martin Gräßlin"
+msgstr "مارتن جراجلين"
 
 #: main.cpp:44
 #, kde-format

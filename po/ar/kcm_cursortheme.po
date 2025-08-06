@@ -8,14 +8,14 @@
 # محمد سعد  Mohamed SAAD <metehyi@free.fr>, 2006.
 # AbdulAziz AlSharif <a.a-a.s@hotmail.com>, 2007.
 # Youssef Chahibi <chahibi@gmail.com>, 2007.
-# SPDX-FileCopyrightText: 2008, 2021, 2022, 2023, 2024 zayed <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2008, 2021, 2022, 2023, 2024, 2025 zayed <zayed.alsaidi@gmail.com>
 # Abdalrahim Fakhouri <abdilra7eem@yahoo.com>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-05 05:54+0000\n"
-"PO-Revision-Date: 2023-01-07 17:05+0400\n"
+"PO-Revision-Date: 2025-08-05 17:49+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -24,6 +24,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #. i18n: ectx: label, entry (cursorTheme), group (Mouse)
 #: cursorthemesettings.kcfg:9
@@ -218,7 +219,7 @@ msgid ""
 "available, or which is already set."
 msgstr ""
 "تتيح لك هذه الأداة ضبط سمة مؤشر الفأرة لجلسة البلازما الحالية، دون ضبطه عن "
-"طريق الخطأ على نظام إما غير متوفر ، أو تم تعيينه بالفعل."
+"طريق الخطأ على نظام إما غير متوفر ، أو معين من قبل."
 
 #: plasma-apply-cursortheme.cpp:67
 #, kde-format
@@ -245,13 +246,13 @@ msgstr "استخدم حجم المحدد عوضاً عن الحجم المبدئ
 msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
 "Plasma session."
-msgstr "تم بالفعل تعيين السمة المطلوبة \"%1\" كسمة لجلسة البلازما الحالية."
+msgstr "عُينت السمة المطلوبة \"%1\" كسمة لجلسة البلازما الحالية من قبل."
 
 #: plasma-apply-cursortheme.cpp:101
 #, kde-format
 msgid ""
 "Successfully applied the mouse cursor theme %1 to your current Plasma session"
-msgstr "تم بنجاح تطبيق سمة مؤشر الفأرة %1 على جلسة بلازما الحاليةز"
+msgstr "تم بنجاح تطبيق سمة مؤشر الفأرة %1 على جلسة بلازما الحالية"
 
 #: plasma-apply-cursortheme.cpp:103
 #, kde-format
