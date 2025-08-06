@@ -271,7 +271,9 @@ QDBusObjectPath JobsModelPrivate::requestView(const QString &desktopEntry, int c
     // No application name? Try to figure out the process name using the sender's PID
     const QString serviceName = message().service();
     if (job->applicationName().isEmpty()) {
-        qCInfo(NOTIFICATIONMANAGER) << "JobView request from" << serviceName << "didn't contain any identification information, this is an application bug!";
+        qCInfo(NOTIFICATIONMANAGER) << "JobView request from" << serviceName
+                                    << "didn't contain any identification information. This is a bug in the application with the desktop file name"
+                                    << desktopEntry;
 
         QDBusReply<uint> pidReply = connection().interface()->servicePid(serviceName);
         if (pidReply.isValid()) {

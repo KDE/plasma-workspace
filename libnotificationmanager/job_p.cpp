@@ -419,7 +419,7 @@ void JobPrivate::setDestUrl(const QDBusVariant &urlVariant)
     QUrl destUrl = QUrl(urlVariant.variant().toUrl().adjusted(QUrl::StripTrailingSlash)); // urgh
     if (destUrl.scheme().isEmpty()) {
         qCInfo(NOTIFICATIONMANAGER) << "Job from" << m_applicationName << "set a destUrl" << destUrl
-                                    << "without a scheme (assuming 'file'), this is an application bug!";
+                                    << "without a scheme (assuming 'file'). This is a bug in the application!";
         destUrl.setScheme(QStringLiteral("file"));
     }
 

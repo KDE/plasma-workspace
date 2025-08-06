@@ -183,7 +183,7 @@ uint ServerPrivate::Notify(const QString &app_name,
     if (notification.desktopEntry().isEmpty() || notification.applicationName().isEmpty()) {
         if (notification.desktopEntry().isEmpty() && notification.applicationName().isEmpty()) {
             qCInfo(NOTIFICATIONMANAGER) << "Notification from service" << message().service()
-                                        << "didn't contain any identification information, this is an application bug!";
+                                        << "didn't contain any identification information. This is a bug in the application" << app_name;
         }
         QDBusReply<uint> pidReply = connection().interface()->servicePid(message().service());
         if (pidReply.isValid()) {

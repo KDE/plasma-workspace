@@ -109,7 +109,7 @@ void AbstractNotificationsModel::Private::onNotificationReplaced(uint replacedId
 
     if (row == -1) {
         qCWarning(NOTIFICATIONMANAGER) << "Trying to replace notification with id" << replacedId
-                                       << "which doesn't exist, creating a new one. This is an application bug!";
+                                       << "which doesn't exist, creating a new one. This is a bug in the application" << notification.applicationName();
         onNotificationAdded(notification);
         return;
     }
