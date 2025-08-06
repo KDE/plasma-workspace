@@ -46,20 +46,21 @@ PlasmaExtras.ExpandableListItem {
     //Shows true whenever the device finished some job
     readonly property bool isOperationFinished: deviceItem.isFree && deviceItem.deviceState !== DevicesStateMonitor.Idle
 
-    onDeviceStateChanged: {
-        //No need to update anything if device is not present in the system
-        if (deviceItem.deviceState === DevicesStateMonitor.NotPresent) {
-            return;
+    onIsOperationFinishedChanged: {
+        if (deviceItem.isOperationFinished) {
+            if (deviceItem.deviceOperationResult === 0) {
+                devicenotifier.popupIcon = "dialog-ok"
+                popupIconTimer.restart()
+            } else if (deviceItem.deviceOperationResult !== 0) {
+                devicenotifier.popupIcon = "dialog-error"
+                popupIconTimer.restart()
+            }
         }
+    }
 
+    onDeviceStateChanged: {
         if (deviceItem.deviceState === DevicesStateMonitor.Unmounting) {
             unmountTimer.restart();
-        } else if (deviceItem.deviceOperationResult === 0) {
-            devicenotifier.popupIcon = "dialog-ok"
-            popupIconTimer.restart()
-        } else if (deviceItem.deviceOperationResult !== 0) {
-            devicenotifier.popupIcon = "dialog-error"
-            popupIconTimer.restart()
         }
     }
 
