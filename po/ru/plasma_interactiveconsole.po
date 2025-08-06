@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-25 00:44+0000\n"
+"POT-Creation-Date: 2025-08-06 00:46+0000\n"
 "PO-Revision-Date: 2024-08-11 07:41+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -19,74 +19,74 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 21.08.3\n"
 
-#: interactiveconsole.cpp:62
+#: interactiveconsole.cpp:64
 #, kde-format
 msgid "&Execute"
 msgstr "Зап&устить"
 
-#: interactiveconsole.cpp:63
+#: interactiveconsole.cpp:65
 #, kde-format
 msgctxt "Toolbar Button to switch to Plasma Scripting Mode"
 msgid "Plasma"
 msgstr "Plasma"
 
-#: interactiveconsole.cpp:64
+#: interactiveconsole.cpp:66
 #, kde-format
 msgctxt "Toolbar Button to switch to KWin Scripting Mode"
 msgid "KWin"
 msgstr "KWin"
 
-#: interactiveconsole.cpp:65
+#: interactiveconsole.cpp:67
 #, kde-format
 msgid "Templates"
 msgstr "Шаблоны"
 
-#: interactiveconsole.cpp:74
+#: interactiveconsole.cpp:76
 #, kde-format
 msgid "Desktop Shell Scripting Console"
 msgstr "Консоль сценариев для рабочего стола"
 
-#: interactiveconsole.cpp:81
+#: interactiveconsole.cpp:83
 #, kde-format
 msgid "Editor"
 msgstr "Редактор"
 
-#: interactiveconsole.cpp:92
+#: interactiveconsole.cpp:94
 #, kde-format
 msgid "Load"
 msgstr "Загрузить"
 
-#: interactiveconsole.cpp:98
+#: interactiveconsole.cpp:100
 #, kde-format
 msgid "Use"
 msgstr "Использовать"
 
-#: interactiveconsole.cpp:158
+#: interactiveconsole.cpp:160
 #, kde-format
 msgid "Output"
 msgstr "Вывод"
 
-#: interactiveconsole.cpp:265
+#: interactiveconsole.cpp:273
 #, kde-format
 msgid "Unable to load script file <b>%1</b>"
 msgstr "Не удалось загрузить файл сценария <b>%1</b>"
 
-#: interactiveconsole.cpp:314
+#: interactiveconsole.cpp:322
 #, kde-format
 msgid "Open Script File"
 msgstr "Открытие файл сценария"
 
-#: interactiveconsole.cpp:429
+#: interactiveconsole.cpp:437
 #, kde-format
 msgid "Save Script File"
 msgstr "Сохранить файл сценария"
 
-#: interactiveconsole.cpp:518
+#: interactiveconsole.cpp:526
 #, kde-format
 msgid "Executing script at %1"
 msgstr "Сценарий запущен в %1"
 
-#: interactiveconsole.cpp:570
+#: interactiveconsole.cpp:578
 #, no-c-format, kde-format
 msgid "Runtime: %1ms"
 msgstr "Время выполнения: %1 мс"

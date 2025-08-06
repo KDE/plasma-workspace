@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-15 00:46+0000\n"
+"POT-Creation-Date: 2025-08-06 00:46+0000\n"
 "PO-Revision-Date: 2010-05-11 19:09+0200\n"
 "Last-Translator: Jean Cayron <jean.cayron@gmail.com>\n"
 "Language-Team: Walloon <linux-wa@walon.org>\n"
@@ -222,7 +222,7 @@ msgstr "Dji dismonte..."
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr ""
 
-#: qml/FullRepresentation.qml:45 qml/main.qml:124
+#: qml/FullRepresentation.qml:45 qml/main.qml:125
 #, kde-format
 msgid "Remove All"
 msgstr ""
@@ -245,43 +245,43 @@ msgstr "Seulmint les éndjins nén bodjåves"
 msgid "No disks available"
 msgstr "I gn a pont d' éndjin."
 
-#: qml/main.qml:71
+#: qml/main.qml:72
 #, fuzzy, kde-format
 #| msgid "Most recent device: %1"
 msgid "Most Recent Device"
 msgstr "Li tot dierin éndjin : %1"
 
-#: qml/main.qml:71
+#: qml/main.qml:72
 #, kde-format
 msgid "No Devices Available"
 msgstr "I gn a pont d' éndjin"
 
-#: qml/main.qml:107
+#: qml/main.qml:108
 #, fuzzy, kde-format
 #| msgid "Non-removable devices only"
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Seulmint les éndjins nén bodjåves"
 
-#: qml/main.qml:132
+#: qml/main.qml:133
 #, fuzzy, kde-format
 #| msgid "Removable devices only"
 msgid "Removable Devices"
 msgstr "Seulmint les éndjins bodjåves"
 
-#: qml/main.qml:147
+#: qml/main.qml:148
 #, fuzzy, kde-format
 #| msgid "Non-removable devices only"
 msgid "Non Removable Devices"
 msgstr "Seulmint les éndjins nén bodjåves"
 
-#: qml/main.qml:162
+#: qml/main.qml:163
 #, fuzzy, kde-format
 #| msgid "All devices"
 msgid "All Devices"
 msgstr "Tos les éndjins"
 
-#: qml/main.qml:179
+#: qml/main.qml:180
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr ""

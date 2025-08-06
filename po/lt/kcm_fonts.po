@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-07 00:44+0000\n"
-"PO-Revision-Date: 2024-09-15 00:59+0300\n"
+"PO-Revision-Date: 2025-08-05 17:12+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.6\n"
 
 #. i18n: ectx: label, entry (forceFontDPI), group (General)
 #: fontsaasettingsbase.kcfg:9
@@ -138,7 +138,7 @@ msgctxt ""
 "Sub-string in a font name; 'Display' as in display font — a type of font "
 "inappropriate for computer screens"
 msgid "Display"
-msgstr ""
+msgstr "Akcidentinis"
 
 #: ui/main.qml:42
 #, kde-format
@@ -161,7 +161,7 @@ msgid ""
 "large font size, consider adjusting the global screen scale."
 msgstr ""
 "Labai dideli šriftai gali pateikti keistai atrodančius rezultatus. "
-"Apsvarstykite galimybę, vietoj labai didelio šrifto dydžio, reguliuoti "
+"Apsvarstykite galimybę, užuot naudoję labai didelį šrifto dydį, reguliuoti "
 "visuotinį mastelį."
 
 #: ui/main.qml:90
@@ -172,6 +172,9 @@ msgid ""
 "Display_typeface'>not intended for use on computer displays</link>, and may "
 "produce odd results. Consider using a different font."
 msgstr ""
+"„Akcidentiniai“ šriftai <link url='https://wikipedia.org/wiki/"
+"Display_typeface'>nėra skirti naudoti kompiuterių ekranuose</link> ir gali "
+"sąlygoti keistus rezultatus. Apsvarstykite galimybę naudoti kitą šriftą."
 
 #: ui/main.qml:107
 #, kde-format
@@ -189,19 +192,18 @@ msgid ""
 "Plasma is not designed to be usable with fonts smaller than 4pt. Size has "
 "been reset to 4pt."
 msgstr ""
+"Plasma nebus praktiška naudotis, jei naudosite šriftus, kurie mažesni nei "
+"4tšk. Dydis atstatytas į 4tšk."
 
 #: ui/main.qml:133
-#, fuzzy, kde-format
-#| msgid ""
-#| "Very large fonts may produce odd-looking results. Instead of using a very "
-#| "large font size, consider adjusting the global screen scale."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "Very small fonts may produce odd-looking results. Instead of using a very "
 "small font size, consider adjusting the global screen scale."
 msgstr ""
-"Labai dideli šriftai gali pateikti keistai atrodančius rezultatus. "
-"Apsvarstykite galimybę, vietoj labai didelio šrifto dydžio, reguliuoti "
+"Labai maži šriftai gali pateikti keistai atrodančius rezultatus. "
+"Apsvarstykite galimybę, užuot naudoję labai mažą šrifto dydį, reguliuoti "
 "visuotinį mastelį."
 
 #: ui/main.qml:154

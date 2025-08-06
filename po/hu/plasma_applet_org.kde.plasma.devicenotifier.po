@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-15 00:46+0000\n"
+"POT-Creation-Date: 2025-08-06 00:46+0000\n"
 "PO-Revision-Date: 2025-05-21 22:07+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -211,7 +211,7 @@ msgstr "Kiadás…"
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr "Ne húzza ki! A fájlok átvitele még folyamatban van…"
 
-#: qml/FullRepresentation.qml:45 qml/main.qml:124
+#: qml/FullRepresentation.qml:45 qml/main.qml:125
 #, kde-format
 msgid "Remove All"
 msgstr "Összes kiadása"
@@ -231,38 +231,38 @@ msgstr "Nincsenek csatlakoztatva cserélhető eszközök"
 msgid "No disks available"
 msgstr "Nem érhetők el lemezek"
 
-#: qml/main.qml:71
+#: qml/main.qml:72
 #, kde-format
 msgid "Most Recent Device"
 msgstr "Legutóbbi eszköz"
 
-#: qml/main.qml:71
+#: qml/main.qml:72
 #, kde-format
 msgid "No Devices Available"
 msgstr "Nem érhetők el eszközök"
 
-#: qml/main.qml:107
+#: qml/main.qml:108
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Cserélhető eszközök beállítása…"
 
-#: qml/main.qml:132
+#: qml/main.qml:133
 #, kde-format
 msgid "Removable Devices"
 msgstr "Cserélhető eszközök"
 
-#: qml/main.qml:147
+#: qml/main.qml:148
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "Nem cserélhető eszközök"
 
-#: qml/main.qml:162
+#: qml/main.qml:163
 #, kde-format
 msgid "All Devices"
 msgstr "Minden eszköz"
 
-#: qml/main.qml:179
+#: qml/main.qml:180
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "Felugró ablak új eszköz csatlakoztatásakor"

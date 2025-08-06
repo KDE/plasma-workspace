@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-15 00:46+0000\n"
+"POT-Creation-Date: 2025-08-06 00:46+0000\n"
 "PO-Revision-Date: 2024-12-13 19:09+0530\n"
 "Last-Translator: Kali <EMAIL@ADDRESS>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -220,7 +220,7 @@ msgstr "निष्कासयन्..."
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr "अद्यापि प्लगं न विच्छेदयन्तु! अद्यापि सञ्चिकाः स्थानान्तरिताः सन्ति..."
 
-#: qml/FullRepresentation.qml:45 qml/main.qml:124
+#: qml/FullRepresentation.qml:45 qml/main.qml:125
 #, kde-format
 msgid "Remove All"
 msgstr "सर्वं निष्कासयतु"
@@ -240,38 +240,38 @@ msgstr "न हटनीयानि यन्त्राणि संलग्
 msgid "No disks available"
 msgstr "डिस्काः उपलब्धाः न सन्ति"
 
-#: qml/main.qml:71
+#: qml/main.qml:72
 #, kde-format
 msgid "Most Recent Device"
 msgstr "अद्यतनतमं यन्त्रम्"
 
-#: qml/main.qml:71
+#: qml/main.qml:72
 #, kde-format
 msgid "No Devices Available"
 msgstr "कोऽपि उपकरणः उपलब्धः नास्ति"
 
-#: qml/main.qml:107
+#: qml/main.qml:108
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "हटनीयानि उपकरणानि विन्यस्यताम्..."
 
-#: qml/main.qml:132
+#: qml/main.qml:133
 #, kde-format
 msgid "Removable Devices"
 msgstr "हटनीयानि उपकरणानि"
 
-#: qml/main.qml:147
+#: qml/main.qml:148
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "अहटनीयानि उपकरणानि"
 
-#: qml/main.qml:162
+#: qml/main.qml:163
 #, kde-format
 msgid "All Devices"
 msgstr "सर्वाणि यन्त्राणि"
 
-#: qml/main.qml:179
+#: qml/main.qml:180
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "यदा नूतनं यन्त्रं प्लग्-इन् भवति तदा popup दर्शयतु"

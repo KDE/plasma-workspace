@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-15 00:46+0000\n"
+"POT-Creation-Date: 2025-08-06 00:46+0000\n"
 "PO-Revision-Date: 2025-03-03 17:02+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -211,7 +211,7 @@ msgstr "Izņem…"
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr "Vēl neatvieno! Joprojām notiek datņu pārsūtīšana…"
 
-#: qml/FullRepresentation.qml:45 qml/main.qml:124
+#: qml/FullRepresentation.qml:45 qml/main.qml:125
 #, kde-format
 msgid "Remove All"
 msgstr "Noņemt visus"
@@ -231,38 +231,38 @@ msgstr "Noņemamas ierīces nav pievienotas"
 msgid "No disks available"
 msgstr "Nav pieejamu disku"
 
-#: qml/main.qml:71
+#: qml/main.qml:72
 #, kde-format
 msgid "Most Recent Device"
 msgstr "Pēdējā lietotā ierīce"
 
-#: qml/main.qml:71
+#: qml/main.qml:72
 #, kde-format
 msgid "No Devices Available"
 msgstr "Nav pieejamu ierīču"
 
-#: qml/main.qml:107
+#: qml/main.qml:108
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Konfigurēt noņemamās ierīces…"
 
-#: qml/main.qml:132
+#: qml/main.qml:133
 #, kde-format
 msgid "Removable Devices"
 msgstr "Noņemamās ierīces"
 
-#: qml/main.qml:147
+#: qml/main.qml:148
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "Nenoņemamās ierīces"
 
-#: qml/main.qml:162
+#: qml/main.qml:163
 #, kde-format
 msgid "All Devices"
 msgstr "Visas ierīces"
 
-#: qml/main.qml:179
+#: qml/main.qml:180
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "Pievienojot jaunu ierīci, rādīt uzlecošo paziņojumu"

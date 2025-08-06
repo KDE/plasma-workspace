@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-15 00:46+0000\n"
+"POT-Creation-Date: 2025-08-06 00:46+0000\n"
 "PO-Revision-Date: 2023-02-23 18:21+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -216,7 +216,7 @@ msgstr "取り外し中…"
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr "まだ取り外さないでください。ファイルが転送されています..."
 
-#: qml/FullRepresentation.qml:45 qml/main.qml:124
+#: qml/FullRepresentation.qml:45 qml/main.qml:125
 #, kde-format
 msgid "Remove All"
 msgstr "すべて取り外し"
@@ -236,38 +236,38 @@ msgstr "リムーバブルデバイスが挿入されていません"
 msgid "No disks available"
 msgstr "ディスクがありません"
 
-#: qml/main.qml:71
+#: qml/main.qml:72
 #, kde-format
 msgid "Most Recent Device"
 msgstr "最近のデバイス"
 
-#: qml/main.qml:71
+#: qml/main.qml:72
 #, kde-format
 msgid "No Devices Available"
 msgstr "デバイスがありません"
 
-#: qml/main.qml:107
+#: qml/main.qml:108
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "リムーバブルデバイスを設定…"
 
-#: qml/main.qml:132
+#: qml/main.qml:133
 #, kde-format
 msgid "Removable Devices"
 msgstr "リムーバブルデバイス"
 
-#: qml/main.qml:147
+#: qml/main.qml:148
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "取り外しできないデバイス"
 
-#: qml/main.qml:162
+#: qml/main.qml:163
 #, kde-format
 msgid "All Devices"
 msgstr "すべてのデバイス"
 
-#: qml/main.qml:179
+#: qml/main.qml:180
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "新しいデバイスが挿入された時ポップアップを開く"

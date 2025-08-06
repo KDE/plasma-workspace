@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-25 00:44+0000\n"
+"POT-Creation-Date: 2025-08-06 00:46+0000\n"
 "PO-Revision-Date: 2024-04-15 15:33+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -17,74 +17,74 @@ msgstr ""
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 22.04.3\n"
 
-#: interactiveconsole.cpp:62
+#: interactiveconsole.cpp:64
 #, kde-format
 msgid "&Execute"
 msgstr "K&eyra"
 
-#: interactiveconsole.cpp:63
+#: interactiveconsole.cpp:65
 #, kde-format
 msgctxt "Toolbar Button to switch to Plasma Scripting Mode"
 msgid "Plasma"
 msgstr "Plasma"
 
-#: interactiveconsole.cpp:64
+#: interactiveconsole.cpp:66
 #, kde-format
 msgctxt "Toolbar Button to switch to KWin Scripting Mode"
 msgid "KWin"
 msgstr "KWin"
 
-#: interactiveconsole.cpp:65
+#: interactiveconsole.cpp:67
 #, kde-format
 msgid "Templates"
 msgstr "Sniðskrár"
 
-#: interactiveconsole.cpp:74
+#: interactiveconsole.cpp:76
 #, kde-format
 msgid "Desktop Shell Scripting Console"
 msgstr "Stjórnborð skjáborðsskriftunar"
 
-#: interactiveconsole.cpp:81
+#: interactiveconsole.cpp:83
 #, kde-format
 msgid "Editor"
 msgstr "Ritill"
 
-#: interactiveconsole.cpp:92
+#: interactiveconsole.cpp:94
 #, kde-format
 msgid "Load"
 msgstr "Hlaða inn"
 
-#: interactiveconsole.cpp:98
+#: interactiveconsole.cpp:100
 #, kde-format
 msgid "Use"
 msgstr "Nota"
 
-#: interactiveconsole.cpp:158
+#: interactiveconsole.cpp:160
 #, kde-format
 msgid "Output"
 msgstr "Úttak"
 
-#: interactiveconsole.cpp:265
+#: interactiveconsole.cpp:273
 #, kde-format
 msgid "Unable to load script file <b>%1</b>"
 msgstr "Tókst ekki að hlaða inn skriftuskránni <b>%1</b>"
 
-#: interactiveconsole.cpp:314
+#: interactiveconsole.cpp:322
 #, kde-format
 msgid "Open Script File"
 msgstr "Opna skriftuskrá"
 
-#: interactiveconsole.cpp:429
+#: interactiveconsole.cpp:437
 #, kde-format
 msgid "Save Script File"
 msgstr "Vista skriftuskrá"
 
-#: interactiveconsole.cpp:518
+#: interactiveconsole.cpp:526
 #, kde-format
 msgid "Executing script at %1"
 msgstr "Keyri skriftu á %1"
 
-#: interactiveconsole.cpp:570
+#: interactiveconsole.cpp:578
 #, no-c-format, kde-format
 msgid "Runtime: %1ms"
 msgstr "Keyrslutími: %1ms"

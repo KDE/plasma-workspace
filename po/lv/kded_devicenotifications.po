@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-12 00:45+0000\n"
+"POT-Creation-Date: 2025-08-06 00:46+0000\n"
 "PO-Revision-Date: 2024-08-15 19:06+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -18,61 +18,61 @@ msgstr ""
 "2);\n"
 "X-Generator: Lokalize 24.05.2\n"
 
-#: devicenotifications.cpp:333
+#: devicenotifications.cpp:341
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Detected"
 msgstr "Konstatēts displejs"
 
-#: devicenotifications.cpp:334
+#: devicenotifications.cpp:342
 #, fuzzy, kde-format
 #| msgid "A display has been unplugged."
 msgid "A display has been connected."
 msgstr "Displejs ir atvienots."
 
-#: devicenotifications.cpp:347
+#: devicenotifications.cpp:355
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Removed"
 msgstr "Displejs ir noņemts"
 
-#: devicenotifications.cpp:348
+#: devicenotifications.cpp:356
 #, fuzzy, kde-format
 #| msgid "A display has been unplugged."
 msgid "A display has been disconnected."
 msgstr "Displejs ir atvienots."
 
-#: devicenotifications.cpp:394
+#: devicenotifications.cpp:402
 #, fuzzy, kde-format
 #| msgid "%1 has been unplugged."
 msgid "%1 has been connected."
 msgstr "Ierīce „%1“ ir atvienota."
 
-#: devicenotifications.cpp:394
+#: devicenotifications.cpp:402
 #, fuzzy, kde-format
 #| msgid "A USB device has been unplugged."
 msgid "A USB device has been connected."
 msgstr "USB ierīce ir atvienota."
 
-#: devicenotifications.cpp:399
+#: devicenotifications.cpp:407
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Detected"
 msgstr "Konstatēta USB ierīce"
 
-#: devicenotifications.cpp:437
+#: devicenotifications.cpp:445
 #, fuzzy, kde-format
 #| msgid "%1 has been unplugged."
 msgid "%1 has been disconnected."
 msgstr "Ierīce „%1“ ir atvienota."
 
-#: devicenotifications.cpp:437
+#: devicenotifications.cpp:445
 #, fuzzy, kde-format
 #| msgid "A USB device has been unplugged."
 msgid "A USB device has been disconnected."
 msgstr "USB ierīce ir atvienota."
 
-#: devicenotifications.cpp:442
+#: devicenotifications.cpp:450
 #, fuzzy, kde-format
 #| msgctxt "@title:notifications"
 #| msgid "USB Device Detected"

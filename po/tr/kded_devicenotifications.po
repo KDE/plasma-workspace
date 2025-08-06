@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-12 00:45+0000\n"
+"POT-Creation-Date: 2025-08-06 00:46+0000\n"
 "PO-Revision-Date: 2025-07-08 13:17+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -17,55 +17,55 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 25.04.2\n"
 
-#: devicenotifications.cpp:333
+#: devicenotifications.cpp:341
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Detected"
 msgstr "Ekran Algılandı"
 
-#: devicenotifications.cpp:334
+#: devicenotifications.cpp:342
 #, kde-format
 msgid "A display has been connected."
 msgstr "Bir ekran bağlandı."
 
-#: devicenotifications.cpp:347
+#: devicenotifications.cpp:355
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Removed"
 msgstr "Ekran Kaldırıldı"
 
-#: devicenotifications.cpp:348
+#: devicenotifications.cpp:356
 #, kde-format
 msgid "A display has been disconnected."
 msgstr "Bir ekranın bağlantısı kesildi."
 
-#: devicenotifications.cpp:394
+#: devicenotifications.cpp:402
 #, kde-format
 msgid "%1 has been connected."
 msgstr "%1 bağlandı."
 
-#: devicenotifications.cpp:394
+#: devicenotifications.cpp:402
 #, kde-format
 msgid "A USB device has been connected."
 msgstr "Bir USB aygıtı bağlandı."
 
-#: devicenotifications.cpp:399
+#: devicenotifications.cpp:407
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Detected"
 msgstr "USB Aygıtı Algılandı"
 
-#: devicenotifications.cpp:437
+#: devicenotifications.cpp:445
 #, kde-format
 msgid "%1 has been disconnected."
 msgstr "%1 bağlantısı kesildi."
 
-#: devicenotifications.cpp:437
+#: devicenotifications.cpp:445
 #, kde-format
 msgid "A USB device has been disconnected."
 msgstr "Bir USB aygıtının bağlantısı kesildi."
 
-#: devicenotifications.cpp:442
+#: devicenotifications.cpp:450
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Went Away"

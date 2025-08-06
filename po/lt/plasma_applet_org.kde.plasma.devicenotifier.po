@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-15 00:46+0000\n"
-"PO-Revision-Date: 2025-03-11 21:40+0200\n"
+"POT-Creation-Date: 2025-08-06 00:46+0000\n"
+"PO-Revision-Date: 2025-08-05 15:33+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -20,19 +20,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.6\n"
 
 #: actions/checkaction.cpp:74
 #, kde-format
 msgctxt "@action:button check a storageAccess (i.e disk) for error"
 msgid "Check for Errors"
-msgstr ""
+msgstr "Tikrinti, ar yra klaidų"
 
 #: actions/mountaction.cpp:103
 #, kde-format
 msgctxt "@action:button Mount a disk without verifying for errors"
 msgid "Mount without verifying"
-msgstr ""
+msgstr "Prijungti netikrinant"
 
 #: actions/mountaction.cpp:106
 #, kde-format
@@ -70,11 +70,10 @@ msgid "This device has file system errors."
 msgstr "Šiame įrenginyje yra failų sistemos klaidų."
 
 #: devicemessagemonitor_p.cpp:166
-#, fuzzy, kde-format
-#| msgid "This device has file system errors."
+#, kde-format
 msgctxt "@label device is a storage disk"
 msgid "This device has no errors"
-msgstr "Šiame įrenginyje yra failų sistemos klaidų."
+msgstr "Šiame įrenginyje nėra klaidų"
 
 #: devicemessagemonitor_p.cpp:169
 #, kde-format
@@ -120,7 +119,7 @@ msgstr "Jūs neturite įgaliojimų pataisyti šį įrenginį."
 #: devicemessagemonitor_p.cpp:197 devicemessagemonitor_p.cpp:262
 #, kde-format
 msgid "Unknown error type"
-msgstr ""
+msgstr "Nežinomas klaidos tipas"
 
 #: devicemessagemonitor_p.cpp:201
 #, kde-format
@@ -217,7 +216,7 @@ msgstr "Atjungiama…"
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr "Kol kas neatjunkite! Failai yra vis dar perkeliami…"
 
-#: qml/FullRepresentation.qml:45 qml/main.qml:124
+#: qml/FullRepresentation.qml:45 qml/main.qml:125
 #, kde-format
 msgid "Remove All"
 msgstr "Pašalinti visus"
@@ -237,38 +236,38 @@ msgstr "Nėra prijungta jokių keičiamųjų įrenginių"
 msgid "No disks available"
 msgstr "Nėra prieinamų diskų"
 
-#: qml/main.qml:71
+#: qml/main.qml:72
 #, kde-format
 msgid "Most Recent Device"
 msgstr "Paskiausiai prijungtas įrenginys"
 
-#: qml/main.qml:71
+#: qml/main.qml:72
 #, kde-format
 msgid "No Devices Available"
 msgstr "Nėra prieinamų įrenginių"
 
-#: qml/main.qml:107
+#: qml/main.qml:108
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Konfigūruoti keičiamuosius įrenginius…"
 
-#: qml/main.qml:132
+#: qml/main.qml:133
 #, kde-format
 msgid "Removable Devices"
 msgstr "Keičiamieji įrenginiai"
 
-#: qml/main.qml:147
+#: qml/main.qml:148
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "Nekeičiamieji įrenginiai"
 
-#: qml/main.qml:162
+#: qml/main.qml:163
 #, kde-format
 msgid "All Devices"
 msgstr "Visi įrenginiai"
 
-#: qml/main.qml:179
+#: qml/main.qml:180
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "Įkišus naują įrenginį, rodyti iškylantįjį langą"

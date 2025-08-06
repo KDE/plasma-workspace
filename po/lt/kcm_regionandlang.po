@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-31 00:44+0000\n"
-"PO-Revision-Date: 2024-05-08 22:19+0300\n"
+"PO-Revision-Date: 2025-08-05 15:55+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.6\n"
 
 #: binarydialectmodel.cpp:52
 #, kde-format
@@ -285,12 +285,10 @@ msgid "Can't locate executable `check-language-support`"
 msgstr "Nepavyksta nustatyti „check-language-support“ vykdomojo vietos"
 
 #: localegeneratorubuntu.cpp:56
-#, fuzzy, kde-format
-#| msgctxt "the arg is the output of failed check-language-support call"
-#| msgid "check-language-support failed, output: %1"
+#, kde-format
 msgctxt "the arg is the output of failed check-language-support call"
 msgid "check-language-support failed, output: %1 %2"
-msgstr "check-language-support patyrė nesėkmę, išvestis: %1"
+msgstr "check-language-support patyrė nesėkmę, išvestis: %1 %2"
 
 #: localegeneratorubuntu.cpp:88
 #, kde-format
@@ -299,12 +297,10 @@ msgid "Not all missing packages managed to resolve! %1"
 msgstr "Ne visus trūkstamus paketus pavyko nustatyti! %1"
 
 #: localegeneratorubuntu.cpp:96
-#, fuzzy, kde-format
-#| msgctxt "%1 is a list of package names"
-#| msgid "Failed to install package %1"
+#, kde-format
 msgctxt "%1 is a list of package names, %2 is the error explanation"
 msgid "Failed to install language packages (%1): %2"
-msgstr "Nepavyko įdiegti paketo %1"
+msgstr "Nepavyko įdiegti kalbos paketų (%1): %2"
 
 #: localegenhelper/localegenhelper.cpp:45
 #, kde-format

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-02 00:45+0000\n"
-"PO-Revision-Date: 2024-08-12 16:19+0300\n"
+"PO-Revision-Date: 2025-08-05 16:51+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.6\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -83,7 +83,7 @@ msgstr "paketo_pavadinimas"
 #: lnftool.cpp:52
 #, kde-format
 msgid "Prevent --apply from disabling the automatic mode"
-msgstr ""
+msgstr "Neleisti --apply išjungti automatinės veiksenos"
 
 #: lnftool.cpp:53
 #, kde-format
@@ -111,22 +111,25 @@ msgstr "Visuotinė išvaizda ir turinys"
 #. i18n: ectx: label, entry (defaultLightLookAndFeel), group (KDE)
 #. i18n: ectx: label, entry (defaultDarkLookAndFeel), group (KDE)
 #: lookandfeelsettings.kcfg:13 lookandfeelsettings.kcfg:17
-#, fuzzy, kde-format
-#| msgid "Global look and feel"
+#, kde-format
 msgid "Global Look and Feel package, alternate"
-msgstr "Visuotinė išvaizda ir turinys"
+msgstr "Visuotinės išvaizdos ir turinio paketas, papildomas"
 
 #. i18n: ectx: label, entry (automaticLookAndFeel), group (KDE)
 #: lookandfeelsettings.kcfg:21
 #, kde-format
 msgid "Switch between dark and light global themes depending on time of day"
 msgstr ""
+"Perjungti tamsų ir šviesų visuotinį apipavidalinimą, priklausomai nuo paros "
+"meto"
 
 #. i18n: ectx: label, entry (automaticLookAndFeelOnIdle), group (KDE)
 #: lookandfeelsettings.kcfg:25
 #, kde-format
 msgid "Switch between dark and light global themes when the computer is idle"
 msgstr ""
+"Perjungti tamsų ir šviesų visuotinį apipavidalinimą, kai kompiuteris yra "
+"neveiklus"
 
 #. i18n: ectx: label, entry (automaticLookAndFeelIdleInterval), group (KDE)
 #: lookandfeelsettings.kcfg:29
@@ -135,6 +138,8 @@ msgid ""
 "How long the computer should be idle in order to switch between dark and "
 "light global themes, in seconds"
 msgstr ""
+"Kiek laiko kompiuteris turi būti neveiklus, kad būtų perjungtas tamsus ar "
+"šviesus visuotinis apipavidalinimas, sekundėmis"
 
 #: ui/ConfirmDeletionDialog.qml:16
 #, kde-format
@@ -167,64 +172,63 @@ msgid ""
 "The chosen light Global Theme will be used during the day, and the dark one "
 "will be used at night."
 msgstr ""
+"Pasirinktas šviesus visuotinis apipavidalinimas bus naudojamas dienos metu, "
+"o tamsus apipavidalinimas bus naudojamas naktį."
 
 #: ui/DayNightLookAndFeel.qml:55
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure Day/Night Cycle…"
-msgstr ""
+msgstr "Konfigūruoti dienos ir nakties ciklą…"
 
 #: ui/DayNightLookAndFeel.qml:68
 #, kde-format
 msgctxt "@option:radio Light global theme"
 msgid "Light"
-msgstr ""
+msgstr "Šviesus"
 
 #: ui/DayNightLookAndFeel.qml:80
 #, kde-format
 msgctxt "@option:radio Dark global theme"
 msgid "Dark"
-msgstr ""
+msgstr "Tamsus"
 
 #: ui/DayNightLookAndFeel.qml:97
 #, kde-format
 msgctxt "@option:check"
 msgid "Wait until idleness before switching:"
-msgstr ""
+msgstr "Prieš perjungiant sulaukti štai tokio laikotarpio neveiklumo:"
 
 #: ui/DayNightLookAndFeel.qml:110
 #, kde-format
 msgctxt "@item:valuesuffix idle interval"
 msgid "%1 second"
 msgid_plural "%1 seconds"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%1 sekundės"
+msgstr[1] "%1 sekundžių"
+msgstr[2] "%1 sekundžių"
+msgstr[3] "%1 sekundės"
 
 #: ui/DayNightLookAndFeel.qml:122
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Minimizes interruptions when actively using the computer."
-msgstr ""
+msgstr "Sumažina trukdymus, kai aktyviai naudojamasi kompiuteriu."
 
 #: ui/LookAndFeelSelector.qml:24
-#, fuzzy, kde-format
-#| msgid "Global Theme"
+#, kde-format
 msgctxt "@title:window"
 msgid "Choose Light Global Theme"
-msgstr "Visuotinis apipavidalinimas"
+msgstr "Pasirinkite šviesų visuotinį apipavidalinimą"
 
 #: ui/LookAndFeelSelector.qml:26
-#, fuzzy, kde-format
-#| msgid "Global Theme"
+#, kde-format
 msgctxt "@title:window"
 msgid "Choose Dark Global Theme"
-msgstr "Visuotinis apipavidalinimas"
+msgstr "Pasirinkite tamsų visuotinį apipavidalinimą"
 
 #: ui/LookAndFeelSelector.qml:49 ui/StaticLookAndFeel.qml:67
-#, fuzzy, kde-format
-#| msgid "Preview Theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview Theme"
 msgstr "Peržiūrėti apipavidalinimą"
@@ -251,11 +255,10 @@ msgstr "Negalima ištrinti sistemos mastu įdiegtų apipavidalinimų"
 #, kde-format
 msgctxt "@option:check"
 msgid "Switch to Dark Mode at Night"
-msgstr ""
+msgstr "Naktį perjungti į tamsią veikseną"
 
 #: ui/main.qml:40
-#, fuzzy, kde-format
-#| msgid "Get New…"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Get New…"
 msgstr "Gauti naują…"
@@ -378,8 +381,7 @@ msgstr ""
 "nes gali būti, jog apipavidalinimas yra sugadintas."
 
 #: ui/StaticLookAndFeel.qml:53
-#, fuzzy, kde-format
-#| msgid "Contains Desktop layout"
+#, kde-format
 msgctxt "@label"
 msgid "Contains Desktop layout"
 msgstr "Turi darbalaukio išdėstymą"
