@@ -30,7 +30,9 @@ Item {
     property int previousSpeed: 0
     property int previousProcessed: 0
 
-    readonly property real resolution: modelInterface.jobDetails.totalBytes / chart.xRange.to
+    readonly property real xRange: 100
+
+    readonly property real resolution: modelInterface.jobDetails.totalBytes / xRange
 
     ListModel {
         id: dataSource
@@ -56,7 +58,7 @@ Item {
         }
     }
 
-    Layout.minimumHeight: chart.visible ? Kirigami.Units.gridUnit * 10 :
+    Layout.minimumHeight: chartContainer.active ? Kirigami.Units.gridUnit * 10 :
         // Even when indeterminate, we want to reserve the height for the text, otherwise it's too tightly spaced
         progressText.implicitHeight
 
@@ -78,122 +80,124 @@ Item {
 
         anchors.fill: parent
 
-        ChartsControls.AxisLabels {
-            id: axisLabels
+        sourceComponent: Item {
+            ChartsControls.AxisLabels {
+                id: axisLabels
 
-            anchors {
-                left: parent.left
-                top: chart.top
-                bottom: chart.bottom
+                anchors {
+                    left: parent.left
+                    top: chart.top
+                    bottom: chart.bottom
+                }
+
+                width: metricsLabel.implicitWidth
+                constrainToBounds: false
+                direction: ChartsControls.AxisLabels.VerticalBottomTop
+
+                delegate: PlasmaComponents3.Label {
+                    text:  i18ndc("plasma_applet_org.kde.plasma.notifications", "Bytes per second", "%1/s", KCoreAddons.Format.formatByteSize(ChartsControls.AxisLabels.label))
+                    font: Kirigami.Theme.smallFont
+                }
+
+                source: Charts.ChartAxisSource {
+                    chart: chart
+                    axis: Charts.ChartAxisSource.YAxis
+                    itemCount: 5
+                }
             }
 
-            width: metricsLabel.implicitWidth
-            constrainToBounds: false
-            direction: ChartsControls.AxisLabels.VerticalBottomTop
-
-            delegate: PlasmaComponents3.Label {
-                text:  i18ndc("plasma_applet_org.kde.plasma.notifications", "Bytes per second", "%1/s", KCoreAddons.Format.formatByteSize(ChartsControls.AxisLabels.label))
-                font: Kirigami.Theme.smallFont
+            ChartsControls.GridLines {
+                anchors.fill: chart
+                direction: ChartsControls.GridLines.Vertical
+                minor.visible: false
+                major.count: 3
+                major.lineWidth: 1
+                // Same calculation as Kirigami Separator
+                major.color: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.4)
             }
 
-            source: Charts.ChartAxisSource {
+            Charts.LineChart {
+                id: chart
+
+                anchors {
+                    left: axisLabels.right
+                    leftMargin: Kirigami.Units.smallSpacing
+                    right: parent.right
+                    top: parent.top
+                    topMargin: Math.round(metricsLabel.implicitHeight / 2) + Kirigami.Units.smallSpacing
+                    bottom: legend.top
+                    bottomMargin: Math.round(metricsLabel.implicitHeight / 2) + Kirigami.Units.smallSpacing
+                }
+
+                xRange.from: 0
+                xRange.to: root.xRange
+                xRange.automatic: false
+
+                lineWidth: 1
+                interpolate: true
+
+                valueSources: Charts.ModelSource {
+                    model: dataSource
+                    roleName: "data"
+                }
+
+                nameSource: Charts.SingleValueSource {
+                    value: i18n("Speed")
+                }
+
+                colorSource: Charts.SingleValueSource {
+                    value: Kirigami.Theme.highlightColor
+                }
+
+                fillColorSource: Charts.SingleValueSource {
+                    value: Qt.lighter(Kirigami.Theme.highlightColor, 1.5)
+                }
+
+                Accessible.role: Accessible.Chart
+            }
+
+            ChartsControls.Legend {
+                id: legend
+
+                anchors {
+                    left: parent.left
+                    right: parent.right
+                    bottom: parent.bottom
+                }
+
                 chart: chart
-                axis: Charts.ChartAxisSource.YAxis
-                itemCount: 5
-            }
-        }
 
-        ChartsControls.GridLines {
-            anchors.fill: chart
-            direction: ChartsControls.GridLines.Vertical
-            minor.visible: false
-            major.count: 3
-            major.lineWidth: 1
-            // Same calculation as Kirigami Separator
-            major.color: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.4)
-        }
+                spacing: Kirigami.Units.largeSpacing
+                delegate: RowLayout {
+                    spacing: Kirigami.Units.smallSpacing
 
-        Charts.LineChart {
-            id: chart
+                    ChartsControls.LegendLayout.maximumWidth: implicitWidth
 
-            anchors {
-                left: axisLabels.right
-                leftMargin: Kirigami.Units.smallSpacing
-                right: parent.right
-                top: parent.top
-                topMargin: Math.round(metricsLabel.implicitHeight / 2) + Kirigami.Units.smallSpacing
-                bottom: legend.top
-                bottomMargin: Math.round(metricsLabel.implicitHeight / 2) + Kirigami.Units.smallSpacing
-            }
-
-            xRange.from: 0
-            xRange.to: 100
-            xRange.automatic: false
-
-            lineWidth: 1
-            interpolate: true
-
-            valueSources: Charts.ModelSource {
-                model: dataSource
-                roleName: "data"
-            }
-
-            nameSource: Charts.SingleValueSource {
-                value: i18n("Speed")
-            }
-
-            colorSource: Charts.SingleValueSource {
-                value: Kirigami.Theme.highlightColor
-            }
-
-            fillColorSource: Charts.SingleValueSource {
-                value: Qt.lighter(Kirigami.Theme.highlightColor, 1.5)
-            }
-
-            Accessible.role: Accessible.Chart
-        }
-
-        ChartsControls.Legend {
-            id: legend
-
-            anchors {
-                left: parent.left
-                right: parent.right
-                bottom: parent.bottom
-            }
-
-            chart: chart
-
-            spacing: Kirigami.Units.largeSpacing
-            delegate: RowLayout {
-                spacing: Kirigami.Units.smallSpacing
-
-                ChartsControls.LegendLayout.maximumWidth: implicitWidth
-
-                Rectangle {
-                    color: model.color
-                    width: Kirigami.Units.smallSpacing
-                    height: legendLabel.height
+                    Rectangle {
+                        color: model.color
+                        width: Kirigami.Units.smallSpacing
+                        height: legendLabel.height
+                    }
+                    PlasmaComponents3.Label {
+                        id: legendLabel
+                        font: Kirigami.Theme.smallFont
+                        text: model.name
+                    }
+                    PlasmaComponents3.Label {
+                        font: Kirigami.Theme.smallFont
+                        text: i18ndc("plasma_applet_org.kde.plasma.notifications", "Bytes per second", "%1/s", KCoreAddons.Format.formatByteSize(root.speed))
+                    }
                 }
-                PlasmaComponents3.Label {
-                    id: legendLabel
-                    font: Kirigami.Theme.smallFont
-                    text: model.name
-                }
-                PlasmaComponents3.Label {
-                    font: Kirigami.Theme.smallFont
-                    text: i18ndc("plasma_applet_org.kde.plasma.notifications", "Bytes per second", "%1/s", KCoreAddons.Format.formatByteSize(root.speed))
-                }
-            }
 
-            RowLayout {
-                PlasmaComponents3.Label {
-                    font: Kirigami.Theme.smallFont
-                    text: i18n("Average Speed")
-                }
-                PlasmaComponents3.Label {
-                    font: Kirigami.Theme.smallFont
-                    text: i18ndc("plasma_applet_org.kde.plasma.notifications", "Bytes per second", "%1/s", KCoreAddons.Format.formatByteSize(root.averageSpeed))
+                RowLayout {
+                    PlasmaComponents3.Label {
+                        font: Kirigami.Theme.smallFont
+                        text: i18n("Average Speed")
+                    }
+                    PlasmaComponents3.Label {
+                        font: Kirigami.Theme.smallFont
+                        text: i18ndc("plasma_applet_org.kde.plasma.notifications", "Bytes per second", "%1/s", KCoreAddons.Format.formatByteSize(root.averageSpeed))
+                    }
                 }
             }
         }
