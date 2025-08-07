@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-30 00:45+0000\n"
+"POT-Creation-Date: 2025-08-07 18:31+0000\n"
 "PO-Revision-Date: 2024-02-09 02:52+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -148,9 +148,9 @@ msgid "%1 item"
 msgid_plural "%1 items"
 msgstr[0] "%1 アイテム"
 
-#: components/JobDetails.qml:148 components/SpeedChart.qml:70
-#: components/SpeedChart.qml:95 components/SpeedChart.qml:185
-#: components/SpeedChart.qml:196
+#: components/JobDetails.qml:148 components/SpeedChart.qml:72
+#: components/SpeedChart.qml:98 components/SpeedChart.qml:188
+#: components/SpeedChart.qml:199
 #, kde-format
 msgctxt "Bytes per second"
 msgid "%1/s"
@@ -207,17 +207,17 @@ msgctxt "@action:button"
 msgid "Send"
 msgstr "送信"
 
-#: components/SpeedChart.qml:142
+#: components/SpeedChart.qml:145
 #, kde-format
 msgid "Speed"
 msgstr ""
 
-#: components/SpeedChart.qml:192
+#: components/SpeedChart.qml:195
 #, kde-format
 msgid "Average Speed"
 msgstr ""
 
-#: components/SpeedChart.qml:249
+#: components/SpeedChart.qml:253
 #, kde-format
 msgctxt "Percentage of a job"
 msgid "%1%"

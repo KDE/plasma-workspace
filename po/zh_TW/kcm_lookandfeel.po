@@ -5,13 +5,13 @@
 # Jeff Huang <s8321414@gmail.com>, 2016, 2017.
 # pan93412 <pan93412@gmail.com>, 2018, 2019.
 # Chaoting Liu <brli@chakralinux.org>, 2021.
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-02 00:45+0000\n"
-"PO-Revision-Date: 2024-08-06 05:19+0900\n"
+"PO-Revision-Date: 2025-08-08 02:20+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.04.70\n"
+"X-Generator: Lokalize 25.07.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -81,7 +81,7 @@ msgstr "packagename"
 #: lnftool.cpp:52
 #, kde-format
 msgid "Prevent --apply from disabling the automatic mode"
-msgstr ""
+msgstr "防止 --apply 停用自動模式"
 
 #: lnftool.cpp:53
 #, kde-format
@@ -108,22 +108,21 @@ msgstr "全域視覺與使用體驗"
 #. i18n: ectx: label, entry (defaultLightLookAndFeel), group (KDE)
 #. i18n: ectx: label, entry (defaultDarkLookAndFeel), group (KDE)
 #: lookandfeelsettings.kcfg:13 lookandfeelsettings.kcfg:17
-#, fuzzy, kde-format
-#| msgid "Global look and feel"
+#, kde-format
 msgid "Global Look and Feel package, alternate"
-msgstr "全域視覺與使用體驗"
+msgstr "全域「外觀與感覺」套件（替代）"
 
 #. i18n: ectx: label, entry (automaticLookAndFeel), group (KDE)
 #: lookandfeelsettings.kcfg:21
 #, kde-format
 msgid "Switch between dark and light global themes depending on time of day"
-msgstr ""
+msgstr "依時間切換亮色或暗色主題"
 
 #. i18n: ectx: label, entry (automaticLookAndFeelOnIdle), group (KDE)
 #: lookandfeelsettings.kcfg:25
 #, kde-format
 msgid "Switch between dark and light global themes when the computer is idle"
-msgstr ""
+msgstr "電腦閒置時切換亮色或暗色主題"
 
 #. i18n: ectx: label, entry (automaticLookAndFeelIdleInterval), group (KDE)
 #: lookandfeelsettings.kcfg:29
@@ -131,7 +130,7 @@ msgstr ""
 msgid ""
 "How long the computer should be idle in order to switch between dark and "
 "light global themes, in seconds"
-msgstr ""
+msgstr "電腦要閒置多久之後再切換亮色或暗色全域主題，單位為秒"
 
 #: ui/ConfirmDeletionDialog.qml:16
 #, kde-format
@@ -163,62 +162,59 @@ msgctxt "@info"
 msgid ""
 "The chosen light Global Theme will be used during the day, and the dark one "
 "will be used at night."
-msgstr ""
+msgstr "所選的亮色全域主題會在白天使用，暗色全域主題則會在晚上使用。"
 
 #: ui/DayNightLookAndFeel.qml:55
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure Day/Night Cycle…"
-msgstr ""
+msgstr "設定日夜過渡…"
 
 #: ui/DayNightLookAndFeel.qml:68
 #, kde-format
 msgctxt "@option:radio Light global theme"
 msgid "Light"
-msgstr ""
+msgstr "亮色"
 
 #: ui/DayNightLookAndFeel.qml:80
 #, kde-format
 msgctxt "@option:radio Dark global theme"
 msgid "Dark"
-msgstr ""
+msgstr "暗色"
 
 #: ui/DayNightLookAndFeel.qml:97
 #, kde-format
 msgctxt "@option:check"
 msgid "Wait until idleness before switching:"
-msgstr ""
+msgstr "切換前先等待閒置："
 
 #: ui/DayNightLookAndFeel.qml:110
 #, kde-format
 msgctxt "@item:valuesuffix idle interval"
 msgid "%1 second"
 msgid_plural "%1 seconds"
-msgstr[0] ""
+msgstr[0] "%1 秒"
 
 #: ui/DayNightLookAndFeel.qml:122
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Minimizes interruptions when actively using the computer."
-msgstr ""
+msgstr "避免正在使用電腦時打擾。"
 
 #: ui/LookAndFeelSelector.qml:24
-#, fuzzy, kde-format
-#| msgid "Global Theme"
+#, kde-format
 msgctxt "@title:window"
 msgid "Choose Light Global Theme"
-msgstr "全域主題"
+msgstr "選擇亮色全域主題"
 
 #: ui/LookAndFeelSelector.qml:26
-#, fuzzy, kde-format
-#| msgid "Global Theme"
+#, kde-format
 msgctxt "@title:window"
 msgid "Choose Dark Global Theme"
-msgstr "全域主題"
+msgstr "選擇深色全域主題"
 
 #: ui/LookAndFeelSelector.qml:49 ui/StaticLookAndFeel.qml:67
-#, fuzzy, kde-format
-#| msgid "Preview Theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview Theme"
 msgstr "預覽主題"
@@ -245,11 +241,10 @@ msgstr "無法刪除系統安裝的主題"
 #, kde-format
 msgctxt "@option:check"
 msgid "Switch to Dark Mode at Night"
-msgstr ""
+msgstr "晚上的時候切換到暗色模式"
 
 #: ui/main.qml:40
-#, fuzzy, kde-format
-#| msgid "Get New…"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Get New…"
 msgstr "取得新的…"
@@ -368,8 +363,7 @@ msgid ""
 msgstr "這個全域主題沒有提供任何適用的設定。它可能是損毀的，請聯絡它的維護者。"
 
 #: ui/StaticLookAndFeel.qml:53
-#, fuzzy, kde-format
-#| msgid "Contains Desktop layout"
+#, kde-format
 msgctxt "@label"
 msgid "Contains Desktop layout"
 msgstr "含有桌面佈局"

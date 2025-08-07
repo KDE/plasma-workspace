@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-02 00:45+0000\n"
-"PO-Revision-Date: 2025-05-24 21:28+0900\n"
+"PO-Revision-Date: 2025-08-08 02:21+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -81,45 +81,41 @@ msgid "Tiled"
 msgstr "並排"
 
 #: imagepackage/contents/ui/config.qml:203
-#, fuzzy, kde-format
-#| msgctxt "part of a sentence: 'Switch dynamic wallpapers [based on]'"
-#| msgid "Switch dynamic wallpapers:"
+#, kde-format
 msgctxt ""
 "@label:listbox part of a sentence: 'Switch dynamic wallpapers [based on]'"
 msgid "Switch dynamic wallpapers:"
 msgstr "切換動態桌布："
 
 #: imagepackage/contents/ui/config.qml:211
-#, fuzzy, kde-format
-#| msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
-#| msgid "Based on whether the color scheme is dark or light"
+#, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the color scheme is dark or light"
-msgstr "依目前配色方案是亮色還是暗色"
+msgstr "依照目前配色方案是亮色還是暗色"
 
 #: imagepackage/contents/ui/config.qml:213
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on the day-night cycle"
-msgstr ""
+msgstr "依照日夜時間"
 
 #: imagepackage/contents/ui/config.qml:217
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always use light variant"
-msgstr ""
+msgstr "總是使用亮色版本"
 
 #: imagepackage/contents/ui/config.qml:221
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always use dark variant"
-msgstr ""
+msgstr "總是使用暗色版本"
 
 #: imagepackage/contents/ui/config.qml:231
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
-msgstr ""
+msgstr "設定…"
 
 #: imagepackage/contents/ui/config.qml:242
 #, kde-format

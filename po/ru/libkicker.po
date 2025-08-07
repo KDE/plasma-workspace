@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-24 00:44+0000\n"
+"POT-Creation-Date: 2025-08-07 18:31+0000\n"
 "PO-Revision-Date: 2025-04-08 09:32+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -68,18 +68,18 @@ msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
 msgstr "Удалить или настроить дополнения…"
 
-#: appentry.cpp:343
+#: appentry.cpp:360
 #, kde-format
 msgid "Hide Application"
 msgstr "Скрыть приложение"
 
-#: appentry.cpp:405
+#: appentry.cpp:422
 #, kde-format
 msgctxt "App name (Comment or Generic name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: appentry.cpp:407
+#: appentry.cpp:424
 #, kde-format
 msgctxt "Generic name (App name)"
 msgid "%1 (%2)"

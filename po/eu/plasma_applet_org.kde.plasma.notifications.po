@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-30 00:45+0000\n"
+"POT-Creation-Date: 2025-08-07 18:31+0000\n"
 "PO-Revision-Date: 2025-05-25 15:08+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -160,9 +160,9 @@ msgid_plural "%1 items"
 msgstr[0] "elementu %1"
 msgstr[1] "%1 elementu"
 
-#: components/JobDetails.qml:148 components/SpeedChart.qml:70
-#: components/SpeedChart.qml:95 components/SpeedChart.qml:185
-#: components/SpeedChart.qml:196
+#: components/JobDetails.qml:148 components/SpeedChart.qml:72
+#: components/SpeedChart.qml:98 components/SpeedChart.qml:188
+#: components/SpeedChart.qml:199
 #, kde-format
 msgctxt "Bytes per second"
 msgid "%1/s"
@@ -219,17 +219,17 @@ msgctxt "@action:button"
 msgid "Send"
 msgstr "Bidali"
 
-#: components/SpeedChart.qml:142
+#: components/SpeedChart.qml:145
 #, kde-format
 msgid "Speed"
 msgstr "Abiadura"
 
-#: components/SpeedChart.qml:192
+#: components/SpeedChart.qml:195
 #, kde-format
 msgid "Average Speed"
 msgstr "Batez besteko abiadura"
 
-#: components/SpeedChart.qml:249
+#: components/SpeedChart.qml:253
 #, kde-format
 msgctxt "Percentage of a job"
 msgid "%1%"

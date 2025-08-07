@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-24 00:44+0000\n"
+"POT-Creation-Date: 2025-08-07 18:31+0000\n"
 "PO-Revision-Date: 2014-08-21 16:22+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -64,12 +64,12 @@ msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
 msgstr ""
 
-#: appentry.cpp:343
+#: appentry.cpp:360
 #, fuzzy, kde-format
 msgid "Hide Application"
 msgstr "Programm vergeten"
 
-#: appentry.cpp:405
+#: appentry.cpp:422
 #, fuzzy, kde-format
 #| msgctxt "App name (Generic name)"
 #| msgid "%1 (%2)"
@@ -77,7 +77,7 @@ msgctxt "App name (Comment or Generic name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: appentry.cpp:407
+#: appentry.cpp:424
 #, kde-format
 msgctxt "Generic name (App name)"
 msgid "%1 (%2)"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-30 00:45+0000\n"
+"POT-Creation-Date: 2025-08-07 18:31+0000\n"
 "PO-Revision-Date: 2025-04-27 12:52+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -157,9 +157,9 @@ msgid_plural "%1 items"
 msgstr[0] "%1 உருப்படி"
 msgstr[1] "%1 உருப்படிகள்"
 
-#: components/JobDetails.qml:148 components/SpeedChart.qml:70
-#: components/SpeedChart.qml:95 components/SpeedChart.qml:185
-#: components/SpeedChart.qml:196
+#: components/JobDetails.qml:148 components/SpeedChart.qml:72
+#: components/SpeedChart.qml:98 components/SpeedChart.qml:188
+#: components/SpeedChart.qml:199
 #, kde-format
 msgctxt "Bytes per second"
 msgid "%1/s"
@@ -216,17 +216,17 @@ msgctxt "@action:button"
 msgid "Send"
 msgstr "அனுப்பு"
 
-#: components/SpeedChart.qml:142
+#: components/SpeedChart.qml:145
 #, kde-format
 msgid "Speed"
 msgstr "வேகம்"
 
-#: components/SpeedChart.qml:192
+#: components/SpeedChart.qml:195
 #, kde-format
 msgid "Average Speed"
 msgstr "சராசரி வேகம்"
 
-#: components/SpeedChart.qml:249
+#: components/SpeedChart.qml:253
 #, kde-format
 msgctxt "Percentage of a job"
 msgid "%1%"

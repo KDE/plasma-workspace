@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-06 00:46+0000\n"
-"PO-Revision-Date: 2024-08-06 05:18+0900\n"
+"PO-Revision-Date: 2025-08-08 02:27+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.04.70\n"
+"X-Generator: Lokalize 25.07.70\n"
 
 #: devicenotifications.cpp:341
 #, kde-format
@@ -24,10 +24,9 @@ msgid "Display Detected"
 msgstr "偵測到顯示器"
 
 #: devicenotifications.cpp:342
-#, fuzzy, kde-format
-#| msgid "A display has been unplugged."
+#, kde-format
 msgid "A display has been connected."
-msgstr "已移除一個顯示器。"
+msgstr "已連接一個顯示器。"
 
 #: devicenotifications.cpp:355
 #, kde-format
@@ -36,22 +35,19 @@ msgid "Display Removed"
 msgstr "顯示器已移除"
 
 #: devicenotifications.cpp:356
-#, fuzzy, kde-format
-#| msgid "A display has been unplugged."
+#, kde-format
 msgid "A display has been disconnected."
-msgstr "已移除一個顯示器。"
+msgstr "已中斷一個顯示器的連接。"
 
 #: devicenotifications.cpp:402
-#, fuzzy, kde-format
-#| msgid "%1 has been unplugged."
+#, kde-format
 msgid "%1 has been connected."
-msgstr "%1 已拔出。"
+msgstr "%1 已連接。"
 
 #: devicenotifications.cpp:402
-#, fuzzy, kde-format
-#| msgid "A USB device has been unplugged."
+#, kde-format
 msgid "A USB device has been connected."
-msgstr "已拔出一個 USB 裝置。"
+msgstr "已連接一個 USB 裝置。"
 
 #: devicenotifications.cpp:407
 #, kde-format
@@ -60,24 +56,23 @@ msgid "USB Device Detected"
 msgstr "偵測到 USB 裝置"
 
 #: devicenotifications.cpp:445
-#, fuzzy, kde-format
-#| msgid "%1 has been unplugged."
+#, kde-format
 msgid "%1 has been disconnected."
-msgstr "%1 已拔出。"
+msgstr "%1 已中斷連接。"
 
 #: devicenotifications.cpp:445
-#, fuzzy, kde-format
-#| msgid "A USB device has been unplugged."
+#, kde-format
 msgid "A USB device has been disconnected."
-msgstr "已拔出一個 USB 裝置。"
+msgstr "已中斷一個 USB 裝置的連接。"
 
+# 這是 m_usbDeviceRemovedNotification。
+# 我不知道為什麼要講 "went away". 「不見了」感覺有點太怪。
+# --Kisaragi
 #: devicenotifications.cpp:450
-#, fuzzy, kde-format
-#| msgctxt "@title:notifications"
-#| msgid "USB Device Detected"
+#, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Went Away"
-msgstr "偵測到 USB 裝置"
+msgstr "USB 裝置已移除"
 
 #~ msgid "A display has been plugged in."
 #~ msgstr "已插入一個顯示器。"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-24 00:44+0000\n"
+"POT-Creation-Date: 2025-08-07 18:31+0000\n"
 "PO-Revision-Date: 2022-07-08 04:45+0000\n"
 "Last-Translator: Weblate Admin <admin@example.com>\n"
 "Language-Team: Toki Pona <http://weblate.blackquill.cc/projects/ante-toki-pi-"
@@ -65,18 +65,18 @@ msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
 msgstr ""
 
-#: appentry.cpp:343
+#: appentry.cpp:360
 #, kde-format
 msgid "Hide Application"
 msgstr ""
 
-#: appentry.cpp:405
+#: appentry.cpp:422
 #, kde-format
 msgctxt "App name (Comment or Generic name)"
 msgid "%1 (%2)"
 msgstr ""
 
-#: appentry.cpp:407
+#: appentry.cpp:424
 #, kde-format
 msgctxt "Generic name (App name)"
 msgid "%1 (%2)"

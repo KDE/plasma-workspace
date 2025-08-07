@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-24 00:44+0000\n"
+"POT-Creation-Date: 2025-08-07 18:31+0000\n"
 "PO-Revision-Date: 2025-04-01 15:00+0400\n"
 "Last-Translator: Khayyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -64,18 +64,18 @@ msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
 msgstr "Əlavələri silmək və ya idarə etmək..."
 
-#: appentry.cpp:343
+#: appentry.cpp:360
 #, kde-format
 msgid "Hide Application"
 msgstr "Tətbiqi gizlətmək"
 
-#: appentry.cpp:405
+#: appentry.cpp:422
 #, kde-format
 msgctxt "App name (Comment or Generic name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: appentry.cpp:407
+#: appentry.cpp:424
 #, kde-format
 msgctxt "Generic name (App name)"
 msgid "%1 (%2)"

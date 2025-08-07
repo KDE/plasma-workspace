@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-25 00:44+0000\n"
-"PO-Revision-Date: 2025-07-01 19:34+0900\n"
+"PO-Revision-Date: 2025-08-08 02:23+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -114,11 +114,7 @@ msgid_plural "%1 notifications were received while Do Not Disturb was active."
 msgstr[0] "勿擾模式開啟期間收到了 %1 個通知。"
 
 #: notifications.cpp:921
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@action:button Show the notifications popup; translate this in as short a "
-#| "form as possible"
-#| msgid "Show Notifications"
+#, kde-format
 msgctxt "@action:button Show the notifications popup"
 msgid "Show Notifications"
 msgstr "顯示通知"

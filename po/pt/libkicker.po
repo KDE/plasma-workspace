@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-24 00:44+0000\n"
+"POT-Creation-Date: 2025-08-07 18:31+0000\n"
 "PO-Revision-Date: 2021-06-08 19:40+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -59,12 +59,12 @@ msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
 msgstr "Desinstalar ou Gerir as Extensões…"
 
-#: appentry.cpp:343
+#: appentry.cpp:360
 #, kde-format
 msgid "Hide Application"
 msgstr "Esconder a Aplicação"
 
-#: appentry.cpp:405
+#: appentry.cpp:422
 #, fuzzy, kde-format
 #| msgctxt "App name (Generic name)"
 #| msgid "%1 (%2)"
@@ -72,7 +72,7 @@ msgctxt "App name (Comment or Generic name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: appentry.cpp:407
+#: appentry.cpp:424
 #, kde-format
 msgctxt "Generic name (App name)"
 msgid "%1 (%2)"
