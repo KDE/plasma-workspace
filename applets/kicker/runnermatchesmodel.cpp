@@ -10,6 +10,8 @@
 #include "runnermodel.h"
 
 #include <QAction>
+#include <QDir>
+#include <QFileInfo>
 #include <QPluginLoader>
 #include <QUrlQuery>
 
@@ -90,9 +92,31 @@ QVariant RunnerMatchesModel::data(const QModelIndex &index, int role) const
         }
     } else if (role == Kicker::UrlRole) {
         const QList<QUrl> urls = match.urls();
-        if (!urls.isEmpty()) {
-            return urls.first();
+        if (urls.isEmpty()) {
+            return QUrl();
         }
+        QUrl url = urls.first();
+
+        if (!url.isLocalFile()) {
+            return url;
+        }
+
+        QString path = url.path();
+        QFileInfo info(path);
+
+        if (!info.exists()) {
+            return {};
+        }
+
+        if (info.isSymLink()) {
+            path = info.symLinkTarget();
+
+            // If the target is relative, make it absolute relative to the link's directory
+            if (QFileInfo(path).isRelative()) {
+                path = QDir(info.absolutePath()).absoluteFilePath(path);
+            }
+        }
+        return QUrl::fromLocalFile(path);
     } else if (role == Kicker::HasActionListRole) {
         return match.runner()->id() == QLatin1String("krunner_services") || !match.runner()->findChildren<QAction *>().isEmpty();
     } else if (role == Kicker::IsMultilineTextRole) {

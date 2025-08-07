@@ -11,6 +11,7 @@
 #include "containmentinterface.h"
 #include <config-workspace.h>
 
+#include <QDir>
 #include <QFileInfo>
 #include <QProcess>
 #include <QQmlPropertyMap>
@@ -267,7 +268,23 @@ QString AppEntry::menuId() const
 
 QUrl AppEntry::url() const
 {
-    return QUrl::fromLocalFile(m_service->entryPath());
+    QString path = m_service->entryPath();
+    QFileInfo info(path);
+
+    if (!info.exists()) {
+        return {};
+    }
+
+    if (info.isSymLink()) {
+        path = info.symLinkTarget();
+
+        // If the target is relative, make it absolute relative to the link's directory
+        if (QFileInfo(path).isRelative()) {
+            path = QDir(info.absolutePath()).absoluteFilePath(path);
+        }
+    }
+
+    return QUrl::fromLocalFile(path);
 }
 
 QDate AppEntry::firstSeen() const
