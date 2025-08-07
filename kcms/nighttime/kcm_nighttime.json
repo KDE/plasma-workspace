@@ -24,6 +24,7 @@
         "Description[uk]": "Налаштовування моментів перемикання у циклі день-ніч",
         "Description[x-test]": "xxConfigure the day-night cycle timesxx",
         "Description[zh_CN]": "配置日夜周期时间",
+        "Description[zh_TW]": "設定日夜過渡時間",
         "FormFactors": [
             "tablet",
             "handset",
@@ -52,7 +53,8 @@
         "Name[tr]": "Gece–Gündüz Döngüsü",
         "Name[uk]": "Цикл день-ніч",
         "Name[x-test]": "xxDay-Night Cyclexx",
-        "Name[zh_CN]": "日夜周期"
+        "Name[zh_CN]": "日夜周期",
+        "Name[zh_TW]": "日夜過渡"
     },
     "X-KDE-Keywords": "dark,light,night,day",
     "X-KDE-Keywords[ar]": "ظلام,ضوء,ليل,نهار",
@@ -77,6 +79,7 @@
     "X-KDE-Keywords[uk]": "dark,light,night,day,темно,світло,ніч,день",
     "X-KDE-Keywords[x-test]": "xxdarkxx,xxlightxx,xxnightxx,xxdayxx",
     "X-KDE-Keywords[zh_CN]": "dark,light,night,day,shense,anse,heian,liangse,qianse,mingliang,yejian,yewan,wanshang,rijian,baitian,深色,暗色,黑暗,亮色,浅色,明亮,夜间,夜晚,晚上,日间,白天",
+    "X-KDE-Keywords[zh_TW]": "暗色,亮色,晚上,白天",
     "X-KDE-System-Settings-Parent-Category": "regionalsettings",
     "X-KDE-Weight": 70
 }

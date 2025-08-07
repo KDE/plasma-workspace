@@ -11,6 +11,7 @@
         "Description[ka]": "მუქ და ღია გლობალურ თემებს შორის გადართვა დღის დროზე დამოკიდებულებით",
         "Description[lt]": "Perjungia tamsų ir šviesų visuotinį apipavidalinimą remiantis paros metu",
         "Description[nl]": "Wisselt tussen donkere en lichte globale thema's gebaseerd op de tijd gedurende de dag",
+        "Description[pt_BR]": "Alterna entre temas globais claros e escuros com base na hora do dia",
         "Description[sl]": "Preklaplja med temnimi in svetlimi globalnimi temami glede na čas dneva",
         "Description[sv]": "Byter mellan mörka och ljusa globala teman baserat på tid på dygnet",
         "Description[ta]": "நேரத்திற்கேற்ப தோற்றத்திட்டத்தை கருமையானதாக அல்லது வெளிர்ந்ததாக அமைக்கும்",
@@ -18,6 +19,7 @@
         "Description[uk]": "Перемикає систему між темною і світлою загальними темами на основі часу доби",
         "Description[x-test]": "xxSwitches between dark and light Global Themes based on time of dayxx",
         "Description[zh_CN]": "根据一天的不同时间段切换深色和浅色全局主题",
+        "Description[zh_TW]": "依時間切換亮色或暗色全域主題",
         "Name": "Global Theme Auto-Switcher",
         "Name[ar]": "مبدل آليّ للسمات العامة",
         "Name[ca@valencia]": "Commutador automàtic de tema global",
@@ -29,13 +31,15 @@
         "Name[ka]": "გლობალური თემის ავტომატური გადამრთველი",
         "Name[lt]": "Automatinis visuotinio apipavidalinimo perjungiklis",
         "Name[nl]": "Automatische wisselaar van globaal thema",
+        "Name[pt_BR]": "Auto seleção de tema global",
         "Name[sl]": "Samodejni preklopnik globalne teme",
         "Name[sv]": "Automatiskt byte av globalt tema",
         "Name[ta]": "பொது தோற்றத்திட்ட தானியக்க மாற்றி",
         "Name[tr]": "Global Tema Değiştiricisi",
         "Name[uk]": "Автоперемикач загальної теми",
         "Name[x-test]": "xxGlobal Theme Auto-Switcherxx",
-        "Name[zh_CN]": "全局主题自动切换程序"
+        "Name[zh_CN]": "全局主题自动切换程序",
+        "Name[zh_TW]": "全域主題自動切換器"
     },
     "X-KDE-Kded-autoload": true
 }
