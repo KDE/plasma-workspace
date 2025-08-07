@@ -268,7 +268,7 @@ protected:
     {
         this->name = name;
     }
-    void org_kde_plasma_virtual_desktop_position(uint32_t index) override
+    void org_kde_plasma_virtual_desktop_position(uint32_t index)
     {
         this->position = index;
     }
