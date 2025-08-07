@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-05 05:54+0000\n"
-"PO-Revision-Date: 2025-08-04 13:38+0400\n"
+"PO-Revision-Date: 2025-08-06 17:39+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -67,7 +67,7 @@ msgstr[5] "%1 حدث"
 #: calendar/qml/DayDelegate.qml:43
 #, kde-format
 msgid "No events"
-msgstr "لا أحداث"
+msgstr "لا يوجد أحداث"
 
 #: calendar/qml/MonthViewHeader.qml:67
 #, kde-format
@@ -151,7 +151,7 @@ msgstr "قفل الشاشة مفعل"
 #: sessionsprivate/kscreenlockersettings.kcfg:11
 #, kde-format
 msgid "Sets whether the screen will be locked after the specified time."
-msgstr "يضبط ما إذا كان سيتم قفل الشاشة بعد الوقت المحدد."
+msgstr "يضبط إذا كان سيقفل الشاشة بعد الوقت المحدد أم لا."
 
 #. i18n: ectx: label, entry, group (Daemon)
 #: sessionsprivate/kscreenlockersettings.kcfg:16
