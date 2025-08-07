@@ -42,7 +42,7 @@ public:
 
     Q_ENUM(DeviceModels)
 
-    explicit DeviceControl(QObject *parent = nullptr);
+    static std::shared_ptr<DeviceControl> instance();
     ~DeviceControl() override;
 
     int rowCount(const QModelIndex &parent) const override;
@@ -58,6 +58,8 @@ private Q_SLOTS:
     void onDeviceMessageChanged(const QString &udi);
 
 private:
+    explicit DeviceControl(QObject *parent = nullptr);
+
     void deviceDelayRemove(const QString &udi, const QString &parentUdi);
 
     struct DeviceInfo {

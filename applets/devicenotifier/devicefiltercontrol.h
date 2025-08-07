@@ -12,6 +12,7 @@
 
 #include <qqmlregistration.h>
 
+class DeviceControl;
 class SpaceUpdateMonitor;
 
 class DeviceFilterControl : public QSortFilterProxyModel
@@ -96,5 +97,6 @@ private:
     QSet<QString> m_unmountableDevices;
     QStack<QString> m_deviceOrder;
 
+    std::shared_ptr<DeviceControl> m_deviceControl;
     std::shared_ptr<SpaceUpdateMonitor> m_spaceUpdateMonitor;
 };

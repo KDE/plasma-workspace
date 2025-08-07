@@ -24,10 +24,11 @@ DeviceFilterControl::DeviceFilterControl(QObject *parent)
     , m_filterType(Removable)
     , m_isVisible(false)
     , m_modelReset(false)
+    , m_deviceControl(DeviceControl::instance())
     , m_spaceUpdateMonitor(SpaceUpdateMonitor::instance())
 {
     qCDebug(APPLETS::DEVICENOTIFIER) << "Begin initializing Device Filter Control";
-    setSourceModel(new DeviceControl(this));
+    setSourceModel(m_deviceControl.get());
     setDynamicSortFilter(false);
 
     onModelReset();

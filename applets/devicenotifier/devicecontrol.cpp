@@ -25,6 +25,17 @@ using namespace std::chrono_literals;
 
 inline constexpr auto REMOVE_INTERVAL = 5s;
 
+std::shared_ptr<DeviceControl> DeviceControl::instance()
+{
+    static std::weak_ptr<DeviceControl> s_clip;
+    if (s_clip.expired()) {
+        std::shared_ptr<DeviceControl> ptr{new DeviceControl};
+        s_clip = ptr;
+        return ptr;
+    }
+    return s_clip.lock();
+}
+
 DeviceControl::DeviceControl(QObject *parent)
     : QAbstractListModel(parent)
 
