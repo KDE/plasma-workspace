@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-25 02:40+0000\n"
+"POT-Creation-Date: 2025-08-07 20:27+0000\n"
 "PO-Revision-Date: 2025-05-24 23:37-0300\n"
 "Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -210,10 +210,10 @@ msgstr[0] "%1 item"
 msgstr[1] "%1 itens"
 
 #: package/contents/ui/components/JobDetails.qml:148
-#: package/contents/ui/components/SpeedChart.qml:70
-#: package/contents/ui/components/SpeedChart.qml:95
-#: package/contents/ui/components/SpeedChart.qml:185
-#: package/contents/ui/components/SpeedChart.qml:196
+#: package/contents/ui/components/SpeedChart.qml:72
+#: package/contents/ui/components/SpeedChart.qml:98
+#: package/contents/ui/components/SpeedChart.qml:188
+#: package/contents/ui/components/SpeedChart.qml:199
 #, kde-format
 msgctxt "Bytes per second"
 msgid "%1/s"
@@ -266,17 +266,17 @@ msgctxt "@action:button"
 msgid "Send"
 msgstr "Enviar"
 
-#: package/contents/ui/components/SpeedChart.qml:142
+#: package/contents/ui/components/SpeedChart.qml:145
 #, kde-format
 msgid "Speed"
 msgstr "Velocidade"
 
-#: package/contents/ui/components/SpeedChart.qml:192
+#: package/contents/ui/components/SpeedChart.qml:195
 #, kde-format
 msgid "Average Speed"
 msgstr "Velocidade média"
 
-#: package/contents/ui/components/SpeedChart.qml:249
+#: package/contents/ui/components/SpeedChart.qml:253
 #, kde-format
 msgctxt "Percentage of a job"
 msgid "%1%"
