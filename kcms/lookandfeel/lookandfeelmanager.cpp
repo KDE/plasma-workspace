@@ -845,39 +845,36 @@ void LookAndFeelManager::applyCursorTheme(const QString &themeName)
         return;
     }
 
-    XCursorTheme theme(themeDir);
+    if (CursorTheme::haveXfixes()) {
+        // Update the Xcursor X resources
+        runRdb(0);
 
-    if (!CursorTheme::haveXfixes()) {
-        return;
+        // Reload the standard cursors
+        QStringList names;
+
+        // Qt cursors
+        names << QStringLiteral("left_ptr") << QStringLiteral("up_arrow") << QStringLiteral("cross") << QStringLiteral("wait")
+              << QStringLiteral("left_ptr_watch") << QStringLiteral("ibeam") << QStringLiteral("size_ver") << QStringLiteral("size_hor")
+              << QStringLiteral("size_bdiag") << QStringLiteral("size_fdiag") << QStringLiteral("size_all") << QStringLiteral("split_v")
+              << QStringLiteral("split_h") << QStringLiteral("pointing_hand") << QStringLiteral("openhand") << QStringLiteral("closedhand")
+              << QStringLiteral("forbidden") << QStringLiteral("whats_this") << QStringLiteral("copy") << QStringLiteral("move") << QStringLiteral("link");
+
+        // X core cursors
+        names << QStringLiteral("X_cursor") << QStringLiteral("right_ptr") << QStringLiteral("hand1") << QStringLiteral("hand2") << QStringLiteral("watch")
+              << QStringLiteral("xterm") << QStringLiteral("crosshair") << QStringLiteral("left_ptr_watch") << QStringLiteral("center_ptr")
+              << QStringLiteral("sb_h_double_arrow") << QStringLiteral("sb_v_double_arrow") << QStringLiteral("fleur") << QStringLiteral("top_left_corner")
+              << QStringLiteral("top_side") << QStringLiteral("top_right_corner") << QStringLiteral("right_side") << QStringLiteral("bottom_right_corner")
+              << QStringLiteral("bottom_side") << QStringLiteral("bottom_left_corner") << QStringLiteral("left_side") << QStringLiteral("question_arrow")
+              << QStringLiteral("pirate");
+
+        XCursorTheme theme(themeDir);
+        for (const QString &name : std::as_const(names)) {
+            XFixesChangeCursorByName(QX11Info::display(), theme.loadCursor(name, cursorSize), QFile::encodeName(name).constData());
+        }
     }
-
-    // Update the Xcursor X resources
-    runRdb(0);
 
     // Notify all applications that the cursor theme has changed
     notifyKcmChange(GlobalChangeType::CursorChanged);
-
-    // Reload the standard cursors
-    QStringList names;
-
-    // Qt cursors
-    names << QStringLiteral("left_ptr") << QStringLiteral("up_arrow") << QStringLiteral("cross") << QStringLiteral("wait") << QStringLiteral("left_ptr_watch")
-          << QStringLiteral("ibeam") << QStringLiteral("size_ver") << QStringLiteral("size_hor") << QStringLiteral("size_bdiag") << QStringLiteral("size_fdiag")
-          << QStringLiteral("size_all") << QStringLiteral("split_v") << QStringLiteral("split_h") << QStringLiteral("pointing_hand")
-          << QStringLiteral("openhand") << QStringLiteral("closedhand") << QStringLiteral("forbidden") << QStringLiteral("whats_this") << QStringLiteral("copy")
-          << QStringLiteral("move") << QStringLiteral("link");
-
-    // X core cursors
-    names << QStringLiteral("X_cursor") << QStringLiteral("right_ptr") << QStringLiteral("hand1") << QStringLiteral("hand2") << QStringLiteral("watch")
-          << QStringLiteral("xterm") << QStringLiteral("crosshair") << QStringLiteral("left_ptr_watch") << QStringLiteral("center_ptr")
-          << QStringLiteral("sb_h_double_arrow") << QStringLiteral("sb_v_double_arrow") << QStringLiteral("fleur") << QStringLiteral("top_left_corner")
-          << QStringLiteral("top_side") << QStringLiteral("top_right_corner") << QStringLiteral("right_side") << QStringLiteral("bottom_right_corner")
-          << QStringLiteral("bottom_side") << QStringLiteral("bottom_left_corner") << QStringLiteral("left_side") << QStringLiteral("question_arrow")
-          << QStringLiteral("pirate");
-
-    for (const QString &name : std::as_const(names)) {
-        XFixesChangeCursorByName(QX11Info::display(), theme.loadCursor(name, cursorSize), QFile::encodeName(name).constData());
-    }
 
 #else
     KMessageBox::information(this,
