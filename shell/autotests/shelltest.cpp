@@ -341,7 +341,7 @@ void ShellTest::testScreenRemoval()
     QCOMPARE(cont2->screen(), 2);
 
     QCOMPARE(m_corona->m_panelViews.size(), 0);
-    auto panelCont = m_corona->addPanel(QStringLiteral("org.kde.plasma.panel"));
+    auto panelCont = m_corona->addPanel(QStringLiteral("org.kde.plasma.testpanel"));
     m_corona->m_panelViews[panelCont]->setScreenToFollow(m_corona->m_screenPool->screenForId(2));
     QCOMPARE(panelCont->screen(), 2);
     QCOMPARE(m_corona->m_panelViews[panelCont]->screen(), m_corona->m_screenPool->screenForId(2));
@@ -418,7 +418,7 @@ void ShellTest::testScreenRemovalRecyclingViews()
 
     // Create a panel on screen 1
     QCOMPARE(m_corona->m_panelViews.size(), 0);
-    auto panelCont = m_corona->addPanel(QStringLiteral("org.kde.plasma.panel"));
+    auto panelCont = m_corona->addPanel(QStringLiteral("org.kde.plasma.testpanel"));
     QCOMPARE(m_corona->m_panelViews.size(), 1);
     auto panelView = m_corona->m_panelViews[panelCont];
     panelView->setScreenToFollow(m_corona->m_screenPool->screenForId(1));
@@ -531,7 +531,7 @@ void ShellTest::testReorderScreens()
     // Add a panel for each screen
     for (int i = 0; i < screens.size(); ++i) {
         QScreen *s = screens[i];
-        auto panelCont = m_corona->addPanel(QStringLiteral("org.kde.plasma.panel"));
+        auto panelCont = m_corona->addPanel(QStringLiteral("org.kde.plasma.testpanel"));
         // If the panel fails to load (on ci plasma-desktop isn't here) we want the "failed" containment to be of panel type anyways
         QVERIFY(m_corona->m_panelViews.contains(panelCont));
         QCOMPARE(panelCont->screen(), 0);
