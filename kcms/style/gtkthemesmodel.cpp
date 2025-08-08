@@ -35,7 +35,12 @@ void GtkThemesModel::load()
             if (possibleThemeDirectory.dirName() == u"Breeze-Dark") {
                 continue;
             }
-
+            if (possibleThemeDirectory.dirName() == u"Default") {
+                // Adwaita is a special case, since it is implemented inside GTK itself
+                // also setting gtk-theme-name to "Default" breaks dark theme
+                gtk3ThemesNames.insert(QStringLiteral("Adwaita"), possibleThemeDirectory.path());
+                continue;
+            }
             gtk3ThemesNames.insert(possibleThemeDirectory.dirName(), possibleThemeDirectory.path());
         }
     }
