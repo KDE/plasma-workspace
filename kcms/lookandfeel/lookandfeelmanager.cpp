@@ -744,7 +744,8 @@ bool LookAndFeelManager::remove(const KPackage::Package &package, LookAndFeelMan
     return packageRootDir.removeRecursively();
 }
 
-QDir LookAndFeelManager::cursorThemeDir(const QString &theme, const int depth)
+#ifdef HAVE_XCURSOR
+static QDir cursorThemeDir(const QString &theme, const QStringList cursorSearchPaths, const int depth = 0)
 {
     // Prevent infinite recursion
     if (depth > 10) {
@@ -752,7 +753,7 @@ QDir LookAndFeelManager::cursorThemeDir(const QString &theme, const int depth)
     }
 
     // Search each icon theme directory for 'theme'
-    for (const QString &baseDir : cursorSearchPaths()) {
+    for (const QString &baseDir : cursorSearchPaths) {
         QDir dir(baseDir);
         if (!dir.exists() || !dir.cd(theme)) {
             continue;
@@ -781,7 +782,7 @@ QDir LookAndFeelManager::cursorThemeDir(const QString &theme, const int depth)
                 continue;
             }
 
-            if (cursorThemeDir(inherit, depth + 1).exists()) {
+            if (cursorThemeDir(inherit, cursorSearchPaths, depth + 1).exists()) {
                 return dir;
             }
         }
@@ -790,13 +791,9 @@ QDir LookAndFeelManager::cursorThemeDir(const QString &theme, const int depth)
     return QDir();
 }
 
-QStringList LookAndFeelManager::cursorSearchPaths()
+static QStringList cursorSearchPaths()
 {
-#ifdef HAVE_XCURSOR
 #if XCURSOR_LIB_MAJOR == 1 && XCURSOR_LIB_MINOR < 1
-
-    if (!m_cursorSearchPaths.isEmpty())
-        return m_cursorSearchPaths;
     // These are the default paths Xcursor will scan for cursor themes
     QString path("~/.icons:/usr/share/icons:/usr/share/pixmaps:/usr/X11R6/lib/X11/icons");
 
@@ -810,10 +807,10 @@ QStringList LookAndFeelManager::cursorSearchPaths()
 #endif
 
     // Separate the paths
-    m_cursorSearchPaths = path.split(QLatin1Char(':'), Qt::SkipEmptyParts);
+    QStringList searchPaths = path.split(QLatin1Char(':'), Qt::SkipEmptyParts);
 
     // Remove duplicates
-    QMutableStringListIterator i(m_cursorSearchPaths);
+    QMutableStringListIterator i(searchPaths);
     while (i.hasNext()) {
         const QString path = i.next();
         QMutableStringListIterator j(i);
@@ -823,55 +820,48 @@ QStringList LookAndFeelManager::cursorSearchPaths()
     }
 
     // Expand all occurrences of ~/ to the home dir
-    m_cursorSearchPaths.replaceInStrings(QRegularExpression(QStringLiteral("^~\\/")), QString(QDir::home().path() + QDir::separator()));
-#endif
-    return m_cursorSearchPaths;
+    searchPaths.replaceInStrings(QRegularExpression(QStringLiteral("^~\\/")), QString(QDir::home().path() + QDir::separator()));
+    return searchPaths;
 }
 
-void LookAndFeelManager::applyCursorTheme(const QString &themeName)
+static void applyCursorThemeX11(const QString &themeName)
 {
-#ifdef HAVE_XCURSOR
     KSharedConfigPtr config = KSharedConfig::openConfig(QStringLiteral("kcminputrc"));
     KConfigGroup cg(config, QStringLiteral("Mouse"));
     const int cursorSize = cg.readEntry("cursorSize", 24);
 
-    QDir themeDir = cursorThemeDir(themeName, 0);
+    QDir themeDir = cursorThemeDir(themeName, cursorSearchPaths(), 0);
     if (!themeDir.exists()) {
         return;
     }
 
-    if (CursorTheme::haveXfixes()) {
-        // Update the Xcursor X resources
-        runRdb(0);
+    // Update the Xcursor X resources
+    runRdb(0);
 
-        // Reload the standard cursors
-        QStringList names;
+    // Reload the standard cursors
+    QStringList names;
 
-        // Qt cursors
-        names << QStringLiteral("left_ptr") << QStringLiteral("up_arrow") << QStringLiteral("cross") << QStringLiteral("wait")
-              << QStringLiteral("left_ptr_watch") << QStringLiteral("ibeam") << QStringLiteral("size_ver") << QStringLiteral("size_hor")
-              << QStringLiteral("size_bdiag") << QStringLiteral("size_fdiag") << QStringLiteral("size_all") << QStringLiteral("split_v")
-              << QStringLiteral("split_h") << QStringLiteral("pointing_hand") << QStringLiteral("openhand") << QStringLiteral("closedhand")
-              << QStringLiteral("forbidden") << QStringLiteral("whats_this") << QStringLiteral("copy") << QStringLiteral("move") << QStringLiteral("link");
+    // Qt cursors
+    names << QStringLiteral("left_ptr") << QStringLiteral("up_arrow") << QStringLiteral("cross") << QStringLiteral("wait") << QStringLiteral("left_ptr_watch")
+          << QStringLiteral("ibeam") << QStringLiteral("size_ver") << QStringLiteral("size_hor") << QStringLiteral("size_bdiag") << QStringLiteral("size_fdiag")
+          << QStringLiteral("size_all") << QStringLiteral("split_v") << QStringLiteral("split_h") << QStringLiteral("pointing_hand")
+          << QStringLiteral("openhand") << QStringLiteral("closedhand") << QStringLiteral("forbidden") << QStringLiteral("whats_this") << QStringLiteral("copy")
+          << QStringLiteral("move") << QStringLiteral("link");
 
-        // X core cursors
-        names << QStringLiteral("X_cursor") << QStringLiteral("right_ptr") << QStringLiteral("hand1") << QStringLiteral("hand2") << QStringLiteral("watch")
-              << QStringLiteral("xterm") << QStringLiteral("crosshair") << QStringLiteral("left_ptr_watch") << QStringLiteral("center_ptr")
-              << QStringLiteral("sb_h_double_arrow") << QStringLiteral("sb_v_double_arrow") << QStringLiteral("fleur") << QStringLiteral("top_left_corner")
-              << QStringLiteral("top_side") << QStringLiteral("top_right_corner") << QStringLiteral("right_side") << QStringLiteral("bottom_right_corner")
-              << QStringLiteral("bottom_side") << QStringLiteral("bottom_left_corner") << QStringLiteral("left_side") << QStringLiteral("question_arrow")
-              << QStringLiteral("pirate");
+    // X core cursors
+    names << QStringLiteral("X_cursor") << QStringLiteral("right_ptr") << QStringLiteral("hand1") << QStringLiteral("hand2") << QStringLiteral("watch")
+          << QStringLiteral("xterm") << QStringLiteral("crosshair") << QStringLiteral("left_ptr_watch") << QStringLiteral("center_ptr")
+          << QStringLiteral("sb_h_double_arrow") << QStringLiteral("sb_v_double_arrow") << QStringLiteral("fleur") << QStringLiteral("top_left_corner")
+          << QStringLiteral("top_side") << QStringLiteral("top_right_corner") << QStringLiteral("right_side") << QStringLiteral("bottom_right_corner")
+          << QStringLiteral("bottom_side") << QStringLiteral("bottom_left_corner") << QStringLiteral("left_side") << QStringLiteral("question_arrow")
+          << QStringLiteral("pirate");
 
-        XCursorTheme theme(themeDir);
-        for (const QString &name : std::as_const(names)) {
-            XFixesChangeCursorByName(QX11Info::display(), theme.loadCursor(name, cursorSize), QFile::encodeName(name).constData());
-        }
+    XCursorTheme theme(themeDir);
+    for (const QString &name : std::as_const(names)) {
+        XFixesChangeCursorByName(QX11Info::display(), theme.loadCursor(name, cursorSize), QFile::encodeName(name).constData());
     }
-
-    // Notify all applications that the cursor theme has changed
-    notifyKcmChange(GlobalChangeType::CursorChanged);
-#endif
 }
+#endif
 
 void LookAndFeelManager::setCursorTheme(const QString themeName)
 {
@@ -882,7 +872,14 @@ void LookAndFeelManager::setCursorTheme(const QString themeName)
 
     writeNewDefaults(QStringLiteral("kcminputrc"), QStringLiteral("Mouse"), QStringLiteral("cursorTheme"), themeName, KConfig::Notify);
     if (m_mode == Mode::Apply) {
-        applyCursorTheme(themeName);
+#ifdef HAVE_XCURSOR
+        if (CursorTheme::haveXfixes()) {
+            applyCursorThemeX11(themeName);
+        }
+#endif
+
+        // Notify all applications that the cursor theme has changed
+        notifyKcmChange(GlobalChangeType::CursorChanged);
     }
 
     Q_EMIT cursorsChanged(themeName);
