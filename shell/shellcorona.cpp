@@ -2823,7 +2823,7 @@ QString ShellCorona::defaultContainmentPlugin() const
 {
     QString plugin = m_lnfDefaultsConfig.readEntry("Containment", QString());
     if (plugin.isEmpty()) {
-        plugin = m_desktopDefaultsConfig.readEntry("Containment", "org.kde.desktopcontainment");
+        plugin = m_desktopDefaultsConfig.readEntry("Containment", "org.kde.plasma.testcontainment");
     }
     return plugin;
 }

@@ -1,4 +1,7 @@
+set(PLASMA_SKIP_APPLET_INSTALL ON)
+
 add_subdirectory(mockserver)
+add_subdirectory(simplecontainment)
 
 include_directories(${CMAKE_CURRENT_BINARY_DIR}/.. ${CMAKE_CURRENT_SOURCE_DIR}/..)
 

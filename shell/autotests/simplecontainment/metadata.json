@@ -1,0 +1,21 @@
+{
+    "KPlugin": {
+        "Authors": [
+            {
+                "Email": "konqi@kde.org",
+                "Name": "Konqi Konqueror"
+            }
+        ],
+        "Category": "",
+        "Description": "A test containment",
+        "Icon": "user-desktop",
+        "License": "GPL-2.0+",
+        "Name": "Test containment",
+        "Version": "",
+        "Website": "https://www.kde.org/plasma-desktop"
+    },
+    "Keywords": "",
+    "X-KDE-ParentApp": "org.kde.plasmashell",
+    "X-Plasma-APIVersion": "2",
+    "X-Plasma-ContainmentType": "Desktop"
+}
