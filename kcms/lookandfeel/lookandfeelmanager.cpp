@@ -16,7 +16,6 @@
 #include "krdb.h"
 #include <KIO/CommandLauncherJob>
 #include <KIconLoader>
-#include <KMessageBox>
 #include <KPackage/PackageLoader>
 #include <KSharedConfig>
 #include <QDBusConnection>
@@ -832,10 +831,6 @@ QStringList LookAndFeelManager::cursorSearchPaths()
 void LookAndFeelManager::applyCursorTheme(const QString &themeName)
 {
 #ifdef HAVE_XCURSOR
-    // Require the Xcursor version that shipped with X11R6.9 or greater, since
-    // in previous versions the Xfixes code wasn't enabled due to a bug in the
-    // build system (freedesktop bug #975).
-#if defined(HAVE_XFIXES) && XFIXES_MAJOR >= 2 && XCURSOR_LIB_VERSION >= 10105
     KSharedConfigPtr config = KSharedConfig::openConfig(QStringLiteral("kcminputrc"));
     KConfigGroup cg(config, QStringLiteral("Mouse"));
     const int cursorSize = cg.readEntry("cursorSize", 24);
@@ -875,13 +870,6 @@ void LookAndFeelManager::applyCursorTheme(const QString &themeName)
 
     // Notify all applications that the cursor theme has changed
     notifyKcmChange(GlobalChangeType::CursorChanged);
-
-#else
-    KMessageBox::information(this,
-                             i18n("You have to restart the Plasma session for these changes to take effect."),
-                             i18n("Cursor Settings Changed"),
-                             "CursorSettingsChanged");
-#endif
 #endif
 }
 
