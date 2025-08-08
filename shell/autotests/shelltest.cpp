@@ -15,6 +15,8 @@
 #include <plasmaactivities/controller.h>
 #include <qtestcase.h>
 
+#include <KLocalizedString>
+
 #include "../desktopview.h"
 #include "../panelview.h"
 #include "../screenpool.h"
@@ -151,6 +153,8 @@ void ShellTest::initTestCase()
 {
     QStandardPaths::setTestModeEnabled(true);
     qRegisterMetaType<QScreen *>();
+
+    KLocalizedString::setApplicationDomain(QByteArrayLiteral("plasmashell"));
 
     m_plasmaDir = QDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + u'/' + u"plasma");
     m_plasmaDir.removeRecursively();
