@@ -301,14 +301,14 @@ void SourcesModel::load()
     // Search for notifyrc files in `/knotifications6` folders first, but also in `/knotifications5` for compatibility with KF5 applications
     const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("knotifications6"), QStandardPaths::LocateDirectory)
         + QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("knotifications5"), QStandardPaths::LocateDirectory);
-    const QStringList files = KFileUtils::findAllUniqueFiles(dirs, {QStringLiteral("*.notifyrc")});
+    const QStringList filePaths = KFileUtils::findAllUniqueFiles(dirs, {QStringLiteral("*.notifyrc")});
 
-    for (const QString &file : files) {
-        const QFileInfo fileInfo(file);
+    for (const QString &filePath : filePaths) {
+        const QFileInfo fileInfo(filePath);
         const QString fileName = fileInfo.fileName();
         const QString dirName = fileInfo.dir().dirName(); // "knotifications6" or "knotifications5"
 
-        KSharedConfig::Ptr config = KSharedConfig::openConfig(file, KConfig::NoGlobals);
+        KSharedConfig::Ptr config = KSharedConfig::openConfig(fileName, KConfig::NoGlobals);
         // `QStandardPaths` follows the order of precedence given by `$XDG_DATA_DIRS
         // (more priority goest first), but for `addConfigSources() it is the opposite
         QStringList configSources = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("%2/%1").arg(fileName).arg(dirName));
