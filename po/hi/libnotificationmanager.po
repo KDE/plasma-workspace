@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-25 00:44+0000\n"
+"POT-Creation-Date: 2025-08-10 00:45+0000\n"
 "PO-Revision-Date: 2021-07-01 18:43+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -109,7 +109,7 @@ msgctxt "@info %1 notification body %2 job name"
 msgid "%1 from %2"
 msgstr "%2 में %1 फ़ाइल"
 
-#: jobsmodel_p.cpp:485
+#: jobsmodel_p.cpp:487
 #, kde-format
 msgid "Application closed unexpectedly."
 msgstr "अनुप्रयोग अप्रत्याशित रूप से बंद हो गया।"

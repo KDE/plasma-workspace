@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-25 00:44+0000\n"
+"POT-Creation-Date: 2025-08-10 00:45+0000\n"
 "PO-Revision-Date: 2025-05-29 16:37+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -107,7 +107,7 @@ msgctxt "@info %1 notification body %2 job name"
 msgid "%1 from %2"
 msgstr "%1 no %2"
 
-#: jobsmodel_p.cpp:485
+#: jobsmodel_p.cpp:487
 #, kde-format
 msgid "Application closed unexpectedly."
 msgstr "Programma negaidīti aizvērās."

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libnotificationmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-25 00:44+0000\n"
+"POT-Creation-Date: 2025-08-10 00:45+0000\n"
 "PO-Revision-Date: 2025-07-24 09:51+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -114,7 +114,7 @@ msgctxt "@info %1 notification body %2 job name"
 msgid "%1 from %2"
 msgstr "%1 від %2"
 
-#: jobsmodel_p.cpp:485
+#: jobsmodel_p.cpp:487
 #, kde-format
 msgid "Application closed unexpectedly."
 msgstr "Програма неочікувано завершила роботу."
