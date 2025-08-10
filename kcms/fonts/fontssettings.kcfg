@@ -8,60 +8,40 @@
     <entry name="font" type="Font">
       <label>General font</label>
       <code>
-      #ifdef Q_OS_MAC
-      QFont generalFont = QFont(QStringLiteral("Lucida Grande"), 13);
-      #else
       QFont generalFont = QFont(QStringLiteral("Noto Sans"), 10);
       generalFont.setStyleName(QStringLiteral("Regular"));
-      #endif
       </code>
       <default code="true">generalFont</default>
     </entry>
     <entry name="fixed" type="Font">
       <label>Fixed width font</label>
       <code>
-      #ifdef Q_OS_MAC
-      QFont fixedWidthFont = QFont(QStringLiteral("Monaco"), 10);
-      #else
       QFont fixedWidthFont = QFont(QStringLiteral("Hack"), 10);
       fixedWidthFont.setStyleName(QStringLiteral("Regular"));
-      #endif
       </code>
       <default code="true">fixedWidthFont</default>
     </entry>
     <entry name="smallestReadableFont" type="Font">
       <label>Small font</label>
       <code>
-      #ifdef Q_OS_MAC
-      QFont smallFont = QFont(QStringLiteral("Lucida Grande"), 9);
-      #else
       QFont smallFont = QFont(QStringLiteral("Noto Sans"), 8);
       smallFont.setStyleName(QStringLiteral("Regular"));
-      #endif
       </code>
       <default code="true">smallFont</default>
     </entry>
     <entry name="toolBarFont" type="Font">
       <label>Tool bar font</label>
       <code>
-      #ifdef Q_OS_MAC
-      QFont toolBarFont = QFont(QStringLiteral("Lucida Grande"), 11);
-      #else
       QFont toolBarFont = QFont(QStringLiteral("Noto Sans"), 10);
       toolBarFont.setStyleName(QStringLiteral("Regular"));
-      #endif
       </code>
       <default code="true">toolBarFont</default>
     </entry>
     <entry name="menuFont" type="Font">
       <label>Menu font</label>
       <code>
-      #ifdef Q_OS_MAC
-      QFont menuFont = QFont(QStringLiteral("Lucida Grande"), 13);
-      #else
       QFont menuFont = QFont(QStringLiteral("Noto Sans"), 10);
       menuFont.setStyleName(QStringLiteral("Regular"));
-      #endif
       </code>
       <default code="true">menuFont</default>
     </entry>
@@ -70,12 +50,8 @@
     <entry name="activeFont" type="Font">
       <label>Window title font</label>
       <code>
-      #ifdef Q_OS_MAC
-      QFont windowTitleFont = QFont(QStringLiteral("Lucida Grande"), 14);
-      #else
       QFont windowTitleFont = QFont(QStringLiteral("Noto Sans"), 10);
       windowTitleFont.setStyleName(QStringLiteral("Regular"));
-      #endif
       </code>
       <default code="true">windowTitleFont</default>
     </entry>
