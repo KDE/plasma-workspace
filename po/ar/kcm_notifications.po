@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-24 00:43+0000\n"
-"PO-Revision-Date: 2025-08-05 13:02+0400\n"
+"PO-Revision-Date: 2025-08-09 22:25+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -59,7 +59,7 @@ msgstr "اضبط الأحداث"
 msgid ""
 "This application does not support configuring notifications on a per-event "
 "basis"
-msgstr "لا يدعم هذا التطبيق تكوين الإشعارات على أساس كل حدث"
+msgstr "لا يدعم هذا التطبيق ضبط الإشعارات على أساس كل حدث"
 
 #: ui/ApplicationConfiguration.qml:282
 #, kde-format
@@ -289,7 +289,7 @@ msgstr "لا يوجد تطبيق أو حدث يطابق مصطلح البحث ا
 msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior"
-msgstr "حدد تطبيقًا من القائمة لتكوين إعدادات الإشعارات وسلوكه"
+msgstr "حدد تطبيقًا من القائمة لضبط إعدادات الإشعارات وسلوكه"
 
 #~ msgid "Normal notifications:"
 #~ msgstr "إشعارات عادية:"
