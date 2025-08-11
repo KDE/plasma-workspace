@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-02 00:45+0000\n"
+"POT-Creation-Date: 2025-08-11 00:44+0000\n"
 "PO-Revision-Date: 2017-12-24 21:47+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -84,20 +84,6 @@ msgstr ""
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
 msgstr "Resetuj raspored plasma površi"
-
-# rewrite-msgid: /cursor/pointer/
-#: lookandfeelmanager.cpp:884
-#, fuzzy, kde-format
-#| msgid "You have to restart KDE for cursor changes to take effect."
-msgid ""
-"You have to restart the Plasma session for these changes to take effect."
-msgstr "Ponovo pokrenite KDE da bi izmene pokazivača stupile na snagu."
-
-# rewrite-msgid: /Cursor/Pointer/
-#: lookandfeelmanager.cpp:885
-#, kde-format
-msgid "Cursor Settings Changed"
-msgstr "Izmenjene postavke pokazivača"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: lookandfeelsettings.kcfg:9
@@ -390,6 +376,17 @@ msgstr ""
 #, kde-format
 msgid "Show fewer options…"
 msgstr ""
+
+# rewrite-msgid: /cursor/pointer/
+#, fuzzy
+#~| msgid "You have to restart KDE for cursor changes to take effect."
+#~ msgid ""
+#~ "You have to restart the Plasma session for these changes to take effect."
+#~ msgstr "Ponovo pokrenite KDE da bi izmene pokazivača stupile na snagu."
+
+# rewrite-msgid: /Cursor/Pointer/
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "Izmenjene postavke pokazivača"
 
 #, fuzzy
 #~| msgid ""

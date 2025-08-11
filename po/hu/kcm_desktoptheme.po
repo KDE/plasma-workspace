@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-29 00:41+0000\n"
+"POT-Creation-Date: 2025-08-11 00:44+0000\n"
 "PO-Revision-Date: 2024-09-18 21:16+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -80,7 +80,7 @@ msgstr ""
 "A rendszer összes elérhető témájának megjelenítése (és hogy melyik a "
 "jelenlegi téma)"
 
-#: plasma-apply-desktoptheme.cpp:51
+#: plasma-apply-desktoptheme.cpp:55
 #, kde-format
 msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
@@ -89,12 +89,12 @@ msgstr ""
 "A kért „%1” téma már be van állítva, mint aktuálisa téma a jelenlegi Plasma "
 "munkamenetben."
 
-#: plasma-apply-desktoptheme.cpp:67
+#: plasma-apply-desktoptheme.cpp:76
 #, kde-format
 msgid "The current Plasma session's theme has been set to %1"
 msgstr "A jelenlegi Plasma munkamenet témája beállítva erre: %1"
 
-#: plasma-apply-desktoptheme.cpp:69
+#: plasma-apply-desktoptheme.cpp:78
 #, kde-format
 msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
@@ -103,7 +103,7 @@ msgstr ""
 "A(z) „%1” téma nem található. A téma a következő opciók egyike kell, hogy "
 "legyen: %2"
 
-#: plasma-apply-desktoptheme.cpp:77
+#: plasma-apply-desktoptheme.cpp:86
 #, kde-format
 msgid "You have the following Plasma themes on your system:"
 msgstr "Az alábbi Plasma témák találhatók meg a rendszeren:"

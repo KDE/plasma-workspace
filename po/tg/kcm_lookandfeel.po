@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-02 00:45+0000\n"
+"POT-Creation-Date: 2025-08-11 00:44+0000\n"
 "PO-Revision-Date: 2021-09-05 11:25-0700\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: Tajik Language Support\n"
@@ -83,19 +83,6 @@ msgstr ""
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
 msgstr "Барқарор кардани тарҳбандии мизи кории Плазма"
-
-#: lookandfeelmanager.cpp:884
-#, kde-format
-msgid ""
-"You have to restart the Plasma session for these changes to take effect."
-msgstr ""
-"Барои татбиқ кардани тағйироти нав, шумо бояд ҷаласаи Плазмаро аз нав оғоз "
-"намоед."
-
-#: lookandfeelmanager.cpp:885
-#, kde-format
-msgid "Cursor Settings Changed"
-msgstr "Танзимоти курсор тағйир ёфт"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: lookandfeelsettings.kcfg:9
@@ -391,6 +378,15 @@ msgstr ""
 #, kde-format
 msgid "Show fewer options…"
 msgstr ""
+
+#~ msgid ""
+#~ "You have to restart the Plasma session for these changes to take effect."
+#~ msgstr ""
+#~ "Барои татбиқ кардани тағйироти нав, шумо бояд ҷаласаи Плазмаро аз нав "
+#~ "оғоз намоед."
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "Танзимоти курсор тағйир ёфт"
 
 #~ msgid "Get New Global Themes…"
 #~ msgstr "Гирифтани мавзӯъҳои умумии нав..."

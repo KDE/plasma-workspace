@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-02 00:45+0000\n"
+"POT-Creation-Date: 2025-08-11 00:44+0000\n"
 "PO-Revision-Date: 2024-10-16 18:49+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -87,19 +87,6 @@ msgstr ""
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
 msgstr "Palauta Plasma-työpöydän alkuperäinen asettelu"
-
-#: lookandfeelmanager.cpp:884
-#, kde-format
-msgid ""
-"You have to restart the Plasma session for these changes to take effect."
-msgstr ""
-"Plasma-istunto on käynnistettävä uudestaan, jotta muutokset tulisivat "
-"voimaan."
-
-#: lookandfeelmanager.cpp:885
-#, kde-format
-msgid "Cursor Settings Changed"
-msgstr "Osoitinasetuksia muutettiin"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: lookandfeelsettings.kcfg:9
@@ -396,6 +383,15 @@ msgstr "Valitse, mitä otetaan käyttöön…"
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Näytä vähemmän valintoja…"
+
+#~ msgid ""
+#~ "You have to restart the Plasma session for these changes to take effect."
+#~ msgstr ""
+#~ "Plasma-istunto on käynnistettävä uudestaan, jotta muutokset tulisivat "
+#~ "voimaan."
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "Osoitinasetuksia muutettiin"
 
 #~ msgid "Apply"
 #~ msgstr "Käytä"

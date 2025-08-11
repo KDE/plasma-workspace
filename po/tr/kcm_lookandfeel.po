@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-02 00:45+0000\n"
+"POT-Creation-Date: 2025-08-11 00:44+0000\n"
 "PO-Revision-Date: 2025-08-02 17:51+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -87,19 +87,6 @@ msgstr "“--apply”ın kendiliğinden geçiş kipini devre dışı bırakması
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
 msgstr "Plasma Masaüstü yerleşimini sıfırla"
-
-#: lookandfeelmanager.cpp:884
-#, kde-format
-msgid ""
-"You have to restart the Plasma session for these changes to take effect."
-msgstr ""
-"Bu değişikliklerin etkili olması için Plasma oturumunu yeniden başlatmanız "
-"gerekir."
-
-#: lookandfeelmanager.cpp:885
-#, kde-format
-msgid "Cursor Settings Changed"
-msgstr "İmleç Ayarları Değiştirildi"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: lookandfeelsettings.kcfg:9
@@ -394,6 +381,15 @@ msgstr "Neyin Uygulanacağını Seç…"
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Daha Az Seçenek Göster…"
+
+#~ msgid ""
+#~ "You have to restart the Plasma session for these changes to take effect."
+#~ msgstr ""
+#~ "Bu değişikliklerin etkili olması için Plasma oturumunu yeniden "
+#~ "başlatmanız gerekir."
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "İmleç Ayarları Değiştirildi"
 
 #~ msgid "Apply"
 #~ msgstr "Uygula"

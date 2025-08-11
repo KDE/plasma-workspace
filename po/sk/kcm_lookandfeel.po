@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-02 00:45+0000\n"
+"POT-Creation-Date: 2025-08-11 00:44+0000\n"
 "PO-Revision-Date: 2023-08-06 11:27+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -88,17 +88,6 @@ msgstr ""
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
 msgstr "Obnoviť rozloženie plochy Plasma"
-
-#: lookandfeelmanager.cpp:884
-#, kde-format
-msgid ""
-"You have to restart the Plasma session for these changes to take effect."
-msgstr "Musíte reštartovať Plasmu, aby sa tieto zmeny prejavili."
-
-#: lookandfeelmanager.cpp:885
-#, kde-format
-msgid "Cursor Settings Changed"
-msgstr "Nastavenia kurzora zmenené"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: lookandfeelsettings.kcfg:9
@@ -401,6 +390,13 @@ msgstr "Vyberte si, čo chcete použiť..."
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Zobraziť menej možností..."
+
+#~ msgid ""
+#~ "You have to restart the Plasma session for these changes to take effect."
+#~ msgstr "Musíte reštartovať Plasmu, aby sa tieto zmeny prejavili."
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "Nastavenia kurzora zmenené"
 
 #~ msgid "Apply"
 #~ msgstr "Použiť"

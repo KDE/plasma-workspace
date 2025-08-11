@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-29 00:41+0000\n"
+"POT-Creation-Date: 2025-08-11 00:44+0000\n"
 "PO-Revision-Date: 2024-09-21 11:43+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -81,19 +81,19 @@ msgid ""
 "Show all the themes available on the system (and which is the current theme)"
 msgstr "Просмотр используемого оформления и списка доступных оформлений"
 
-#: plasma-apply-desktoptheme.cpp:51
+#: plasma-apply-desktoptheme.cpp:55
 #, kde-format
 msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
 "Plasma session."
 msgstr "Оформление «%1» уже используется в Plasma."
 
-#: plasma-apply-desktoptheme.cpp:67
+#: plasma-apply-desktoptheme.cpp:76
 #, kde-format
 msgid "The current Plasma session's theme has been set to %1"
 msgstr "Используемое в текущем сеансе Plasma оформление изменено на «%1»"
 
-#: plasma-apply-desktoptheme.cpp:69
+#: plasma-apply-desktoptheme.cpp:78
 #, kde-format
 msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
@@ -102,7 +102,7 @@ msgstr ""
 "Не удалось найти оформление «%1». Необходимо указать одно из следующих "
 "оформлений: %2"
 
-#: plasma-apply-desktoptheme.cpp:77
+#: plasma-apply-desktoptheme.cpp:86
 #, kde-format
 msgid "You have the following Plasma themes on your system:"
 msgstr "В системе установлены следующие оформления Plasma:"

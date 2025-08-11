@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-02 00:45+0000\n"
+"POT-Creation-Date: 2025-08-11 00:44+0000\n"
 "PO-Revision-Date: 2025-08-03 02:17-0300\n"
 "Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -93,18 +93,6 @@ msgstr "Prevenir que --apply desabilite o modo automático"
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
 msgstr "Redefinir o layout da área de trabalho Plasma"
-
-#: lookandfeelmanager.cpp:884
-#, kde-format
-msgid ""
-"You have to restart the Plasma session for these changes to take effect."
-msgstr ""
-"A sessão do Plasma deve ser reiniciada para que as alterações tenham efeito."
-
-#: lookandfeelmanager.cpp:885
-#, kde-format
-msgid "Cursor Settings Changed"
-msgstr "Configurações do cursor alteradas"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: lookandfeelsettings.kcfg:9
@@ -403,6 +391,15 @@ msgstr "Escolha o que aplicar..."
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Mostrar menos opções…"
+
+#~ msgid ""
+#~ "You have to restart the Plasma session for these changes to take effect."
+#~ msgstr ""
+#~ "A sessão do Plasma deve ser reiniciada para que as alterações tenham "
+#~ "efeito."
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "Configurações do cursor alteradas"
 
 #~ msgid "Apply"
 #~ msgstr "Aplicar"

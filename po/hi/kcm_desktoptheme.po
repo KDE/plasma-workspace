@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-29 00:41+0000\n"
+"POT-Creation-Date: 2025-08-11 00:44+0000\n"
 "PO-Revision-Date: 2024-12-15 19:31+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -76,7 +76,7 @@ msgid ""
 "Show all the themes available on the system (and which is the current theme)"
 msgstr "तंत्र पर उपलब्ध सभी प्रसंग दिखाएं (और जो वर्तमान प्रसंग है)"
 
-#: plasma-apply-desktoptheme.cpp:51
+#: plasma-apply-desktoptheme.cpp:55
 #, kde-format
 msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
@@ -84,19 +84,19 @@ msgid ""
 msgstr ""
 "अनुरोधित प्रसंग \"%1\" पहले से ही वर्तमान प्लाज़्मा सत्र के लिए प्रसंग के रूप में नियत है ।"
 
-#: plasma-apply-desktoptheme.cpp:67
+#: plasma-apply-desktoptheme.cpp:76
 #, kde-format
 msgid "The current Plasma session's theme has been set to %1"
 msgstr "वर्तमान प्लाज़्मा सत्र का प्रसंग %1 पर नियत किया गया है"
 
-#: plasma-apply-desktoptheme.cpp:69
+#: plasma-apply-desktoptheme.cpp:78
 #, kde-format
 msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
 "options: %2"
 msgstr "प्रसंग \"%1\" नहीं मिल सका। प्रसंग निम्न विकल्पों में से एक होनी चाहिए: %2"
 
-#: plasma-apply-desktoptheme.cpp:77
+#: plasma-apply-desktoptheme.cpp:86
 #, kde-format
 msgid "You have the following Plasma themes on your system:"
 msgstr "आपके तंत्र पर निम्न प्लाज्मा थीम हैं:"

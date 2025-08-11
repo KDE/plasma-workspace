@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-02 00:45+0000\n"
+"POT-Creation-Date: 2025-08-11 00:44+0000\n"
 "PO-Revision-Date: 2021-08-21 16:25+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -84,18 +84,6 @@ msgstr ""
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
 msgstr "प्लाज्मा डेस्कटॉप अभिन्यास रीसेट करें"
-
-#: lookandfeelmanager.cpp:884
-#, kde-format
-msgid ""
-"You have to restart the Plasma session for these changes to take effect."
-msgstr ""
-"इन परिवर्तनों को प्रभावी करने के लिए आपको प्लाज़्मा सत्र को फिर से प्रारंभ करना होगा।"
-
-#: lookandfeelmanager.cpp:885
-#, kde-format
-msgid "Cursor Settings Changed"
-msgstr "कर्सर सेटिंग्स बदल गए"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: lookandfeelsettings.kcfg:9
@@ -391,6 +379,14 @@ msgstr ""
 #, kde-format
 msgid "Show fewer options…"
 msgstr ""
+
+#~ msgid ""
+#~ "You have to restart the Plasma session for these changes to take effect."
+#~ msgstr ""
+#~ "इन परिवर्तनों को प्रभावी करने के लिए आपको प्लाज़्मा सत्र को फिर से प्रारंभ करना होगा।"
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "कर्सर सेटिंग्स बदल गए"
 
 #~ msgid "Get New Global Themes…"
 #~ msgstr "नई वैश्विक प्रसंग प्राप्त करें…"

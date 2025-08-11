@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-02 00:45+0000\n"
+"POT-Creation-Date: 2025-08-11 00:44+0000\n"
 "PO-Revision-Date: 2014-08-21 16:12+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -82,19 +82,6 @@ msgstr ""
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
 msgstr ""
-
-#: lookandfeelmanager.cpp:884
-#, fuzzy, kde-format
-#| msgid "You have to restart KDE for cursor changes to take effect."
-msgid ""
-"You have to restart the Plasma session for these changes to take effect."
-msgstr ""
-"Du muttst KDE nieg starten, anners warrt de Wieserännern nich övernahmen."
-
-#: lookandfeelmanager.cpp:885
-#, kde-format
-msgid "Cursor Settings Changed"
-msgstr "Wieserinstellen ännert"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: lookandfeelsettings.kcfg:9
@@ -385,6 +372,16 @@ msgstr ""
 #, kde-format
 msgid "Show fewer options…"
 msgstr ""
+
+#, fuzzy
+#~| msgid "You have to restart KDE for cursor changes to take effect."
+#~ msgid ""
+#~ "You have to restart the Plasma session for these changes to take effect."
+#~ msgstr ""
+#~ "Du muttst KDE nieg starten, anners warrt de Wieserännern nich övernahmen."
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "Wieserinstellen ännert"
 
 #, fuzzy
 #~| msgid "Configure Splash screen details"

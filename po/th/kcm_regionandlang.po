@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-31 00:44+0000\n"
+"POT-Creation-Date: 2025-08-11 00:44+0000\n"
 "PO-Revision-Date: 2025-03-03 23:08+0700\n"
 "Last-Translator: Pongsakorn S. <kde@xerusion.me>\n"
 "Language-Team: Thai\n"
@@ -250,7 +250,7 @@ msgctxt ""
 msgid "Could not find an example for this locale"
 msgstr "ไม่พบตัวอย่างสําหรับ locale นี้"
 
-#: kcmregionandlang.cpp:129
+#: glibclocaleconstructor.cpp:164
 #, kde-kuit-format
 msgctxt "@info this will be shown as an error message"
 msgid ""
@@ -261,13 +261,13 @@ msgstr ""
 "ไม่พบ locale ที่พร้อมใช้งานของระบบโดยใช้ เครื่องมือคําสั่ง <command>localectl</command> "
 "โปรดยื่นรายงานข้อบกพร่องเกี่ยวกับเรื่องนี้ที่ <link>https://bugs.kde.org</link>"
 
-#: languagelistmodel.cpp:94
+#: languagelistmodel.cpp:95
 #, kde-format
 msgctxt "%1 is language name, %2 is language code name"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: languagelistmodel.cpp:100
+#: languagelistmodel.cpp:101
 #, kde-format
 msgctxt ""
 "%1 is português in system locale name, Brazil is to distinguish European "
@@ -328,17 +328,17 @@ msgstr "ไม่พบไฟล์ปฏิบัติการ 'locale-gen'"
 msgid "Unknown"
 msgstr "ไม่ทราบ"
 
-#: localelistmodel.cpp:22
+#: localelistmodel.cpp:24
 #, kde-format
 msgid "Default for System"
 msgstr "ค่าเริ่มต้นสําหรับระบบ"
 
-#: localelistmodel.cpp:22 localelistmodel.cpp:71 ui/main.qml:377
+#: localelistmodel.cpp:24 localelistmodel.cpp:80 ui/main.qml:377
 #, kde-format
 msgid "Default"
 msgstr "ค่าเริ่มต้น"
 
-#: localelistmodel.cpp:67
+#: localelistmodel.cpp:76
 #, kde-format
 msgctxt ""
 "the first is language name, the second is the country name, like 'English "
@@ -346,14 +346,14 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: localelistmodel.cpp:154
+#: localelistmodel.cpp:163
 #, kde-format
 msgctxt ""
 "@info:title, meaning the current locale is system default(which is `C`)"
 msgid "System Default C"
 msgstr "ค่าเริ่มต้นของระบบ C"
 
-#: localelistmodel.cpp:157
+#: localelistmodel.cpp:166
 #, kde-format
 msgctxt ""
 "@info:title the current locale is the default for %1, %1 is the country name"

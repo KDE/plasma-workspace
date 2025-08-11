@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-31 00:44+0000\n"
+"POT-Creation-Date: 2025-08-11 00:44+0000\n"
 "PO-Revision-Date: 2025-06-28 00:00-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -252,7 +252,7 @@ msgctxt ""
 msgid "Could not find an example for this locale"
 msgstr "Não foi possível encontrar um exemplo para esta localidade"
 
-#: kcmregionandlang.cpp:129
+#: glibclocaleconstructor.cpp:164
 #, kde-kuit-format
 msgctxt "@info this will be shown as an error message"
 msgid ""
@@ -264,13 +264,13 @@ msgstr ""
 "ferramenta <command>localectl</command>. Por favor, registre um relatório de "
 "bug sobre isso em <link>https://bugs.kde.org</link>"
 
-#: languagelistmodel.cpp:94
+#: languagelistmodel.cpp:95
 #, kde-format
 msgctxt "%1 is language name, %2 is language code name"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: languagelistmodel.cpp:100
+#: languagelistmodel.cpp:101
 #, kde-format
 msgctxt ""
 "%1 is português in system locale name, Brazil is to distinguish European "
@@ -327,17 +327,17 @@ msgstr "Não foi possível encontrar o executável 'locale-gen'"
 msgid "Unknown"
 msgstr "Desconhecido"
 
-#: localelistmodel.cpp:22
+#: localelistmodel.cpp:24
 #, kde-format
 msgid "Default for System"
 msgstr "Padrão do sistema"
 
-#: localelistmodel.cpp:22 localelistmodel.cpp:71 ui/main.qml:377
+#: localelistmodel.cpp:24 localelistmodel.cpp:80 ui/main.qml:377
 #, kde-format
 msgid "Default"
 msgstr "Padrão"
 
-#: localelistmodel.cpp:67
+#: localelistmodel.cpp:76
 #, kde-format
 msgctxt ""
 "the first is language name, the second is the country name, like 'English "
@@ -345,14 +345,14 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: localelistmodel.cpp:154
+#: localelistmodel.cpp:163
 #, kde-format
 msgctxt ""
 "@info:title, meaning the current locale is system default(which is `C`)"
 msgid "System Default C"
 msgstr "Padrão do sistema C"
 
-#: localelistmodel.cpp:157
+#: localelistmodel.cpp:166
 #, kde-format
 msgctxt ""
 "@info:title the current locale is the default for %1, %1 is the country name"

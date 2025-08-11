@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-02 00:45+0000\n"
+"POT-Creation-Date: 2025-08-11 00:44+0000\n"
 "PO-Revision-Date: 2025-03-24 14:58-0500\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -81,17 +81,6 @@ msgstr ""
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
 msgstr "ਪਲਾਜ਼ਮਾ ਡੈਸਕਟਾਪ ਖਾਕਾ ਮੁੜ-ਸੈੱਟ ਕਰੋ"
-
-#: lookandfeelmanager.cpp:884
-#, kde-format
-msgid ""
-"You have to restart the Plasma session for these changes to take effect."
-msgstr "ਇਹਨਾਂ ਤਬਦੀਲੀਆਂ ਨੂੰ ਲਾਗੂ ਕਰਨ ਲਈ ਤੁਹਾਨੂੰ ਪਲਾਜ਼ਮਾ ਸ਼ੈਸ਼ਨ ਮੁੜ ਚਾਲੂ ਕਰਨਾ ਪਵੇਗਾ।"
-
-#: lookandfeelmanager.cpp:885
-#, kde-format
-msgid "Cursor Settings Changed"
-msgstr "ਕਰਸਰ ਸੈਟਿੰਗਾਂ ਬਦਲੀਆਂ ਗਈਆਂ"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: lookandfeelsettings.kcfg:9
@@ -386,6 +375,13 @@ msgstr "ਚੁਣੋ ਕਿ ਕੀ ਲਾਗੂ ਕਰਨਾ ਹੈ…"
 #, kde-format
 msgid "Show fewer options…"
 msgstr "ਘੱਟ ਚੋਣਾਂ ਵੇਖਾਓ…"
+
+#~ msgid ""
+#~ "You have to restart the Plasma session for these changes to take effect."
+#~ msgstr "ਇਹਨਾਂ ਤਬਦੀਲੀਆਂ ਨੂੰ ਲਾਗੂ ਕਰਨ ਲਈ ਤੁਹਾਨੂੰ ਪਲਾਜ਼ਮਾ ਸ਼ੈਸ਼ਨ ਮੁੜ ਚਾਲੂ ਕਰਨਾ ਪਵੇਗਾ।"
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "ਕਰਸਰ ਸੈਟਿੰਗਾਂ ਬਦਲੀਆਂ ਗਈਆਂ"
 
 #~ msgid "Apply"
 #~ msgstr "ਲਾਗੂ ਕਰੋ"

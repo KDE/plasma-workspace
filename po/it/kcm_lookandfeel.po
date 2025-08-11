@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-02 00:45+0000\n"
+"POT-Creation-Date: 2025-08-11 00:44+0000\n"
 "PO-Revision-Date: 2025-08-03 07:50+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -87,18 +87,6 @@ msgstr "Impedisci a --apply di disabilitare la modalità automatica"
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
 msgstr "Ripristina la disposizione di Plasma Desktop"
-
-#: lookandfeelmanager.cpp:884
-#, kde-format
-msgid ""
-"You have to restart the Plasma session for these changes to take effect."
-msgstr ""
-"Devi riavviare la sessione di Plasma affinché le modifiche abbiano effetto."
-
-#: lookandfeelmanager.cpp:885
-#, kde-format
-msgid "Cursor Settings Changed"
-msgstr "Impostazioni dei puntatori modificate"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: lookandfeelsettings.kcfg:9
@@ -399,6 +387,15 @@ msgstr "Scegli cosa applicare…"
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Mostra meno opzioni…"
+
+#~ msgid ""
+#~ "You have to restart the Plasma session for these changes to take effect."
+#~ msgstr ""
+#~ "Devi riavviare la sessione di Plasma affinché le modifiche abbiano "
+#~ "effetto."
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "Impostazioni dei puntatori modificate"
 
 #~ msgid "Apply"
 #~ msgstr "Applica"

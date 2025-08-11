@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-02 00:45+0000\n"
+"POT-Creation-Date: 2025-08-11 00:44+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -86,17 +86,6 @@ msgstr ""
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
 msgstr "Plasma Desktop लेआउट् पुनः सेट् कुर्वन्तु"
-
-#: lookandfeelmanager.cpp:884
-#, kde-format
-msgid ""
-"You have to restart the Plasma session for these changes to take effect."
-msgstr "एतेषां परिवर्तनानां प्रभावाय भवद्भिः Plasma सत्रं पुनः आरभणीयम् ।"
-
-#: lookandfeelmanager.cpp:885
-#, kde-format
-msgid "Cursor Settings Changed"
-msgstr "कर्सर सेटिंग्स् परिवर्तिताः"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: lookandfeelsettings.kcfg:9
@@ -391,6 +380,13 @@ msgstr "किं प्रयोक्तव्यम् इति चिनो
 #, kde-format
 msgid "Show fewer options…"
 msgstr "न्यूनानि विकल्पानि दर्शयतु..."
+
+#~ msgid ""
+#~ "You have to restart the Plasma session for these changes to take effect."
+#~ msgstr "एतेषां परिवर्तनानां प्रभावाय भवद्भिः Plasma सत्रं पुनः आरभणीयम् ।"
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "कर्सर सेटिंग्स् परिवर्तिताः"
 
 #~ msgid "Apply"
 #~ msgstr "आचरतु"

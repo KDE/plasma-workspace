@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-02 00:45+0000\n"
+"POT-Creation-Date: 2025-08-11 00:44+0000\n"
 "PO-Revision-Date: 2024-07-26 23:13+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -88,18 +88,6 @@ msgstr ""
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
 msgstr "Restabelecer a disposición do escritorio de Plasma."
-
-#: lookandfeelmanager.cpp:884
-#, kde-format
-msgid ""
-"You have to restart the Plasma session for these changes to take effect."
-msgstr ""
-"Debe reiniciar a sesión de Plasma para que estes cambios xurdan efecto."
-
-#: lookandfeelmanager.cpp:885
-#, kde-format
-msgid "Cursor Settings Changed"
-msgstr "Cambiouse a configuración do cursor"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: lookandfeelsettings.kcfg:9
@@ -397,6 +385,14 @@ msgstr "Escolla que aplicar…"
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Amosar menos opcións…"
+
+#~ msgid ""
+#~ "You have to restart the Plasma session for these changes to take effect."
+#~ msgstr ""
+#~ "Debe reiniciar a sesión de Plasma para que estes cambios xurdan efecto."
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "Cambiouse a configuración do cursor"
 
 #~ msgid "Apply"
 #~ msgstr "Aplicar"

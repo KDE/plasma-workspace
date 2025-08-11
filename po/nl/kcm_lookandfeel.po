@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-02 00:45+0000\n"
+"POT-Creation-Date: 2025-08-11 00:44+0000\n"
 "PO-Revision-Date: 2025-08-02 17:36+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -87,19 +87,6 @@ msgstr "Voorkom dat --apply de automatische modus uitschakelt"
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
 msgstr "De indeling van het Plasma bureaublad resetten"
-
-#: lookandfeelmanager.cpp:884
-#, kde-format
-msgid ""
-"You have to restart the Plasma session for these changes to take effect."
-msgstr ""
-"Om deze wijzigingen te bekrachtigen dient u de Plasma sessie opnieuw op te "
-"starten."
-
-#: lookandfeelmanager.cpp:885
-#, kde-format
-msgid "Cursor Settings Changed"
-msgstr "Aanwijzerinstellingen aangepast"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: lookandfeelsettings.kcfg:9
@@ -399,6 +386,15 @@ msgstr "Kies wat toe te passen…"
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Minder opties tonen…"
+
+#~ msgid ""
+#~ "You have to restart the Plasma session for these changes to take effect."
+#~ msgstr ""
+#~ "Om deze wijzigingen te bekrachtigen dient u de Plasma sessie opnieuw op "
+#~ "te starten."
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "Aanwijzerinstellingen aangepast"
 
 #~ msgid "Apply"
 #~ msgstr "Toepassen"

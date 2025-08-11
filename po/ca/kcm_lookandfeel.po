@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-02 00:45+0000\n"
+"POT-Creation-Date: 2025-08-11 00:44+0000\n"
 "PO-Revision-Date: 2025-08-02 11:37+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -91,19 +91,6 @@ msgstr "Evita que --apply desactivi el mode automàtic"
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
 msgstr "Reinicia la disposició de l'escriptori Plasma"
-
-#: lookandfeelmanager.cpp:884
-#, kde-format
-msgid ""
-"You have to restart the Plasma session for these changes to take effect."
-msgstr ""
-"Cal tornar a engegar la sessió del Plasma perquè aquests canvis tinguin "
-"efecte."
-
-#: lookandfeelmanager.cpp:885
-#, kde-format
-msgid "Cursor Settings Changed"
-msgstr "Ha canviat l'arranjament del cursor"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: lookandfeelsettings.kcfg:9
@@ -401,6 +388,15 @@ msgstr "Trieu què aplicar…"
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Mostra menys opcions…"
+
+#~ msgid ""
+#~ "You have to restart the Plasma session for these changes to take effect."
+#~ msgstr ""
+#~ "Cal tornar a engegar la sessió del Plasma perquè aquests canvis tinguin "
+#~ "efecte."
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "Ha canviat l'arranjament del cursor"
 
 #~ msgid "Apply"
 #~ msgstr "Aplica"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-02 00:45+0000\n"
+"POT-Creation-Date: 2025-08-11 00:44+0000\n"
 "PO-Revision-Date: 2025-08-04 12:38+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -86,17 +86,6 @@ msgstr "امنع --apply من تعطيل الوضع الآليّ"
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
 msgstr "صفّر تخطيط سطح مكتب بلازما"
-
-#: lookandfeelmanager.cpp:884
-#, kde-format
-msgid ""
-"You have to restart the Plasma session for these changes to take effect."
-msgstr "عليك إعادة تشغيل جلسة بلازما  لتأخذ التغييرات تأثيرها."
-
-#: lookandfeelmanager.cpp:885
-#, kde-format
-msgid "Cursor Settings Changed"
-msgstr "تغيّرت إعدادات المؤشّر"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: lookandfeelsettings.kcfg:9
@@ -396,6 +385,13 @@ msgstr "اختر ماذا تريد أن تطبق..."
 #, kde-format
 msgid "Show fewer options…"
 msgstr "اعرض خيارات أقل…"
+
+#~ msgid ""
+#~ "You have to restart the Plasma session for these changes to take effect."
+#~ msgstr "عليك إعادة تشغيل جلسة بلازما  لتأخذ التغييرات تأثيرها."
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "تغيّرت إعدادات المؤشّر"
 
 #~ msgid "Apply"
 #~ msgstr "طبّق"

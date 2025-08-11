@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-02 00:45+0000\n"
+"POT-Creation-Date: 2025-08-11 00:44+0000\n"
 "PO-Revision-Date: 2024-06-09 15:07+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -86,19 +86,6 @@ msgstr ""
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
 msgstr "Reinițializează aranjamentul biroului Plasma"
-
-#: lookandfeelmanager.cpp:884
-#, kde-format
-msgid ""
-"You have to restart the Plasma session for these changes to take effect."
-msgstr ""
-"Trebuie să reporniți sesiunea Plasma pentru ca modificările să intre în "
-"vigoare."
-
-#: lookandfeelmanager.cpp:885
-#, kde-format
-msgid "Cursor Settings Changed"
-msgstr "Configurările cursorului s-au schimbat"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: lookandfeelsettings.kcfg:9
@@ -400,6 +387,15 @@ msgstr "Alegeți ce să fie aplicat…"
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Arată mai puține opțiuni…"
+
+#~ msgid ""
+#~ "You have to restart the Plasma session for these changes to take effect."
+#~ msgstr ""
+#~ "Trebuie să reporniți sesiunea Plasma pentru ca modificările să intre în "
+#~ "vigoare."
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "Configurările cursorului s-au schimbat"
 
 #~ msgid "Apply"
 #~ msgstr "Aplică"

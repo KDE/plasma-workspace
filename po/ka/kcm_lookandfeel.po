@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-02 00:45+0000\n"
+"POT-Creation-Date: 2025-08-11 00:44+0000\n"
 "PO-Revision-Date: 2025-08-02 05:15+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -86,17 +86,6 @@ msgstr "--apply-სთვის ავტომატური რეჟიმ�
 msgid "Reset the Plasma Desktop layout"
 msgstr ""
 "Plasma-ის სამუშაო მაგიდის განლაგების ნაგულისხმევ მნიშვნელობებზე დაბრუნება"
-
-#: lookandfeelmanager.cpp:884
-#, kde-format
-msgid ""
-"You have to restart the Plasma session for these changes to take effect."
-msgstr "ცვლილებების ძალაში შესასვლელად საჭიროა Plasma-ის სესიის გადატვირთვა."
-
-#: lookandfeelmanager.cpp:885
-#, kde-format
-msgid "Cursor Settings Changed"
-msgstr "კურსორის პარამეტრები შეიცვალა"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: lookandfeelsettings.kcfg:9
@@ -390,6 +379,14 @@ msgstr "აირჩიეთ, რა გადავატარო…"
 #, kde-format
 msgid "Show fewer options…"
 msgstr "ნაკლები პარამეტრის ჩვენება…"
+
+#~ msgid ""
+#~ "You have to restart the Plasma session for these changes to take effect."
+#~ msgstr ""
+#~ "ცვლილებების ძალაში შესასვლელად საჭიროა Plasma-ის სესიის გადატვირთვა."
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "კურსორის პარამეტრები შეიცვალა"
 
 #~ msgid "Apply"
 #~ msgstr "გამოყენება"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-02 00:45+0000\n"
+"POT-Creation-Date: 2025-08-11 00:44+0000\n"
 "PO-Revision-Date: 2024-09-29 18:25+0200\n"
 "Last-Translator: Flori G <Renner03@protonmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -87,19 +87,6 @@ msgstr ""
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
 msgstr "Das Plasma-Arbeitsflächen-Layout zurücksetzen"
-
-#: lookandfeelmanager.cpp:884
-#, kde-format
-msgid ""
-"You have to restart the Plasma session for these changes to take effect."
-msgstr ""
-"Die Plasma-Sitzung muss neu gestartet werden, damit die Änderungen wirksam "
-"werden."
-
-#: lookandfeelmanager.cpp:885
-#, kde-format
-msgid "Cursor Settings Changed"
-msgstr "Zeiger-Einstellungen geändert"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: lookandfeelsettings.kcfg:9
@@ -398,6 +385,15 @@ msgstr "Wählen Sie, was angewendet werden soll …"
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Weniger Optionen anzeigen …"
+
+#~ msgid ""
+#~ "You have to restart the Plasma session for these changes to take effect."
+#~ msgstr ""
+#~ "Die Plasma-Sitzung muss neu gestartet werden, damit die Änderungen "
+#~ "wirksam werden."
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "Zeiger-Einstellungen geändert"
 
 #~ msgid "Apply"
 #~ msgstr "Anwenden"

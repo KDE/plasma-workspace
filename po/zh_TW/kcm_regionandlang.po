@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-31 00:44+0000\n"
+"POT-Creation-Date: 2025-08-11 00:44+0000\n"
 "PO-Revision-Date: 2025-07-01 19:35+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -253,7 +253,7 @@ msgctxt ""
 msgid "Could not find an example for this locale"
 msgstr "找不到這個地域的例子"
 
-#: kcmregionandlang.cpp:129
+#: glibclocaleconstructor.cpp:164
 #, kde-kuit-format
 msgctxt "@info this will be shown as an error message"
 msgid ""
@@ -264,13 +264,13 @@ msgstr ""
 "無法使用 <command>localectl</command> 工具尋找系統上可用的地域。請至 "
 "<link>https://bugs.kde.org</link> 提交關於此現象的問題回報。"
 
-#: languagelistmodel.cpp:94
+#: languagelistmodel.cpp:95
 #, kde-format
 msgctxt "%1 is language name, %2 is language code name"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: languagelistmodel.cpp:100
+#: languagelistmodel.cpp:101
 #, kde-format
 msgctxt ""
 "%1 is português in system locale name, Brazil is to distinguish European "
@@ -327,17 +327,17 @@ msgstr "找不到 `locale-gen` 執行檔"
 msgid "Unknown"
 msgstr "未知"
 
-#: localelistmodel.cpp:22
+#: localelistmodel.cpp:24
 #, kde-format
 msgid "Default for System"
 msgstr "系統預設值"
 
-#: localelistmodel.cpp:22 localelistmodel.cpp:71 ui/main.qml:377
+#: localelistmodel.cpp:24 localelistmodel.cpp:80 ui/main.qml:377
 #, kde-format
 msgid "Default"
 msgstr "預設值"
 
-#: localelistmodel.cpp:67
+#: localelistmodel.cpp:76
 #, kde-format
 msgctxt ""
 "the first is language name, the second is the country name, like 'English "
@@ -345,14 +345,14 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: localelistmodel.cpp:154
+#: localelistmodel.cpp:163
 #, kde-format
 msgctxt ""
 "@info:title, meaning the current locale is system default(which is `C`)"
 msgid "System Default C"
 msgstr "系統 C 預設值"
 
-#: localelistmodel.cpp:157
+#: localelistmodel.cpp:166
 #, kde-format
 msgctxt ""
 "@info:title the current locale is the default for %1, %1 is the country name"

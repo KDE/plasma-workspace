@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-31 00:44+0000\n"
+"POT-Creation-Date: 2025-08-11 00:44+0000\n"
 "PO-Revision-Date: 2025-06-19 09:46+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -250,7 +250,7 @@ msgctxt ""
 msgid "Could not find an example for this locale"
 msgstr "Non foi posíbel atopar un exemplo para esta configuración rexional."
 
-#: kcmregionandlang.cpp:129
+#: glibclocaleconstructor.cpp:164
 #, kde-kuit-format
 msgctxt "@info this will be shown as an error message"
 msgid ""
@@ -262,13 +262,13 @@ msgstr ""
 "coa ferramenta <command>localectl</command>. Envíe un informe de fallo en "
 "<link>https://bugs.kde.org</link>."
 
-#: languagelistmodel.cpp:94
+#: languagelistmodel.cpp:95
 #, kde-format
 msgctxt "%1 is language name, %2 is language code name"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: languagelistmodel.cpp:100
+#: languagelistmodel.cpp:101
 #, kde-format
 msgctxt ""
 "%1 is português in system locale name, Brazil is to distinguish European "
@@ -329,17 +329,17 @@ msgstr "Non é posíbel atopar o executábel «locale-gen»."
 msgid "Unknown"
 msgstr "Descoñecida"
 
-#: localelistmodel.cpp:22
+#: localelistmodel.cpp:24
 #, kde-format
 msgid "Default for System"
 msgstr "Predeterminada do sistema"
 
-#: localelistmodel.cpp:22 localelistmodel.cpp:71 ui/main.qml:377
+#: localelistmodel.cpp:24 localelistmodel.cpp:80 ui/main.qml:377
 #, kde-format
 msgid "Default"
 msgstr "Predeterminada"
 
-#: localelistmodel.cpp:67
+#: localelistmodel.cpp:76
 #, kde-format
 msgctxt ""
 "the first is language name, the second is the country name, like 'English "
@@ -347,14 +347,14 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: localelistmodel.cpp:154
+#: localelistmodel.cpp:163
 #, kde-format
 msgctxt ""
 "@info:title, meaning the current locale is system default(which is `C`)"
 msgid "System Default C"
 msgstr "Predeterminada do sistema (C)"
 
-#: localelistmodel.cpp:157
+#: localelistmodel.cpp:166
 #, kde-format
 msgctxt ""
 "@info:title the current locale is the default for %1, %1 is the country name"

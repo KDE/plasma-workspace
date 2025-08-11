@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-02 00:45+0000\n"
+"POT-Creation-Date: 2025-08-11 00:44+0000\n"
 "PO-Revision-Date: 2024-11-17 22:41+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -87,17 +87,6 @@ msgstr ""
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
 msgstr "Plasma のデスクトップレイアウトをリセット"
-
-#: lookandfeelmanager.cpp:884
-#, kde-format
-msgid ""
-"You have to restart the Plasma session for these changes to take effect."
-msgstr "変更を有効にするには Plasma セッションを再起動する必要があります。"
-
-#: lookandfeelmanager.cpp:885
-#, kde-format
-msgid "Cursor Settings Changed"
-msgstr "カーソル設定が変更されました"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: lookandfeelsettings.kcfg:9
@@ -391,6 +380,13 @@ msgstr "適用するものを選んでください..."
 #, kde-format
 msgid "Show fewer options…"
 msgstr "表示するオプションを減らす..."
+
+#~ msgid ""
+#~ "You have to restart the Plasma session for these changes to take effect."
+#~ msgstr "変更を有効にするには Plasma セッションを再起動する必要があります。"
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "カーソル設定が変更されました"
 
 #~ msgid "Apply"
 #~ msgstr "適用"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-02 00:45+0000\n"
+"POT-Creation-Date: 2025-08-11 00:44+0000\n"
 "PO-Revision-Date: 2025-08-02 16:56+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -89,18 +89,6 @@ msgstr "Запобігає вимиканню автоматичного реж�
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
 msgstr "Повернутися до компонування стільниці Плазми"
-
-#: lookandfeelmanager.cpp:884
-#, kde-format
-msgid ""
-"You have to restart the Plasma session for these changes to take effect."
-msgstr ""
-"Вам потрібно перезапустити сеанс Плазми, щоб внесені зміни набули чинності."
-
-#: lookandfeelmanager.cpp:885
-#, kde-format
-msgid "Cursor Settings Changed"
-msgstr "Параметри курсора змінено"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: lookandfeelsettings.kcfg:9
@@ -400,6 +388,15 @@ msgstr "Виберіть, що застосовувати…"
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Показати скорочений список…"
+
+#~ msgid ""
+#~ "You have to restart the Plasma session for these changes to take effect."
+#~ msgstr ""
+#~ "Вам потрібно перезапустити сеанс Плазми, щоб внесені зміни набули "
+#~ "чинності."
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "Параметри курсора змінено"
 
 #~ msgid "Apply"
 #~ msgstr "Застосувати"

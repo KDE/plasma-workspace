@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-02 00:45+0000\n"
+"POT-Creation-Date: 2025-08-11 00:44+0000\n"
 "PO-Revision-Date: 2025-08-02 23:29+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -87,17 +87,6 @@ msgstr "למנוע מ־‎--apply להשבית את המצב האוטומטי"
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
 msgstr "איפוס פריסת שולחן העבודה פלזמה"
-
-#: lookandfeelmanager.cpp:884
-#, kde-format
-msgid ""
-"You have to restart the Plasma session for these changes to take effect."
-msgstr "יש להפעיל את הפעלת הפלזמה מחדש כדי שהשינויים האלו יחולו."
-
-#: lookandfeelmanager.cpp:885
-#, kde-format
-msgid "Cursor Settings Changed"
-msgstr "הגדרות סמן העכבר"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: lookandfeelsettings.kcfg:9
@@ -392,6 +381,13 @@ msgstr "בחירה מה להחיל…"
 #, kde-format
 msgid "Show fewer options…"
 msgstr "הצגת פחות אפשרויות…"
+
+#~ msgid ""
+#~ "You have to restart the Plasma session for these changes to take effect."
+#~ msgstr "יש להפעיל את הפעלת הפלזמה מחדש כדי שהשינויים האלו יחולו."
+
+#~ msgid "Cursor Settings Changed"
+#~ msgstr "הגדרות סמן העכבר"
 
 #~ msgid "Apply"
 #~ msgstr "החלה"
