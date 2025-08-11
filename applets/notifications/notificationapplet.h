@@ -40,8 +40,6 @@ public:
     QWindow *focussedPlasmaDialog() const;
     QQuickItem *systemTrayRepresentation() const;
 
-    Q_INVOKABLE bool isPrimaryScreen(const QRect &rect) const;
-
     Q_INVOKABLE void forceActivateWindow(QWindow *window);
 
 Q_SIGNALS:

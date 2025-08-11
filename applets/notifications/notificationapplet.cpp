@@ -83,17 +83,6 @@ QQuickItem *NotificationApplet::systemTrayRepresentation() const
     return PlasmaQuick::AppletQuickItem::itemForApplet(c);
 }
 
-bool NotificationApplet::isPrimaryScreen(const QRect &rect) const
-{
-    QScreen *screen = QGuiApplication::primaryScreen();
-    if (!screen) {
-        return false;
-    }
-
-    // HACK
-    return rect == screen->geometry();
-}
-
 void NotificationApplet::forceActivateWindow(QWindow *window)
 {
     if (window && window->winId()) {
