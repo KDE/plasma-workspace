@@ -115,9 +115,13 @@ KCM.SimpleKCM {
         }
     }
 
-    PopupPositionDialog {
-        id: popupPositionDialog
-        parent: root
+    Component {
+        id: popupPositionDialogComponent
+
+        PopupPositionDialog {
+            parent: root
+            onClosed: destroy()
+        }
     }
 
     Kirigami.FormLayout {
@@ -268,7 +272,10 @@ KCM.SimpleKCM {
                 id: positionCustomButton
                 text: i18nc("@action:button choose custom notification position", "Custom…")
                 icon.name: "preferences-desktop-display"
-                onClicked: popupPositionDialog.open()
+                onClicked: {
+                    const dialog = popupPositionDialogComponent.createObject(root);
+                    dialog.open();
+                }
             }
         }
 

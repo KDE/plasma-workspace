@@ -16,24 +16,16 @@ Kirigami.Dialog {
     showCloseButton: false
     padding: Kirigami.Units.largeSpacing
 
-    property var newPosition
-
     ScreenPositionSelector {
         id: positionSelector
         anchors.horizontalCenter: parent.horizontalCenter
         selectedPosition: kcm.notificationSettings.popupPosition
-        onSelectedPositionChanged: positionPopup.newPosition = selectedPosition
     }
 
     footer: QtControls.DialogButtonBox {
         standardButtons: QtControls.DialogButtonBox.Ok | QtControls.DialogButtonBox.Cancel
         onAccepted: {
-            kcm.notificationSettings.popupPosition = positionPopup.newPosition
-            positionPopup.close()
-        }
-        onRejected: {
-            positionSelector.selectedPosition = kcm.notificationSettings.popupPosition
-            positionPopup.close()
+            kcm.notificationSettings.popupPosition = positionSelector.selectedPosition;
         }
     }
 }
