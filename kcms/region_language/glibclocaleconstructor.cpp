@@ -75,11 +75,11 @@ void GlibcLocaleConstructor::constructGlibcLocaleMap()
     std::unordered_map<QString, std::vector<QString>> basem_map(availableLocales.size());
     m_availableLocales.reserve(availableLocales.size());
     for (const auto &glibcLocale : availableLocales) {
-        m_availableLocales.insert(glibcLocale);
         // we want only absolute base locale code, for sr@ijekavian and en_US, we get sr and en
         auto baseLocale = glibcLocale.split(u'_')[0].split(u'@')[0];
         // clear glibcLocale from .UTF-8 and other similar items since it can break comparison
         auto glibcLocaleName = glibcLocale.split(u'.')[0];
+        m_availableLocales.insert(glibcLocaleName);
         if (basem_map.contains(baseLocale)) {
             basem_map[baseLocale].push_back(glibcLocaleName);
         } else {
