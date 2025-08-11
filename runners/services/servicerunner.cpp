@@ -150,7 +150,6 @@ private:
     void setupMatch(const KService::Ptr &service, KRunner::QueryMatch &match)
     {
         const QString name = service->name();
-        const QString exec = service->exec();
 
         match.setText(name);
 
@@ -159,10 +158,10 @@ private:
         match.setData(url);
         match.setUrls({QUrl::fromLocalFile(service->entryPath())});
 
-        QString urlPath = resolvedArgs(exec);
+        QString urlPath = resolvedArgs(service);
         if (urlPath.isEmpty()) {
             // Otherwise we might filter out broken services. Rather than hiding them, it is better to show an error message on launch (as done by KIO's jobs)
-            urlPath = exec;
+            urlPath = service->exec();
         }
         match.setId(QString(u"exec://" + urlPath));
         if (!service->genericName().isEmpty() && service->genericName() != name) {
@@ -176,10 +175,9 @@ private:
         }
     }
 
-    QString resolvedArgs(const QString &exec)
+    QString resolvedArgs(const KService::Ptr &service)
     {
-        const KService syntheticService(QString(), exec, QString());
-        KIO::DesktopExecParser parser(syntheticService, {});
+        KIO::DesktopExecParser parser(*service, {});
         QStringList resultingArgs = parser.resultingArguments();
         if (const auto error = parser.errorMessage(); resultingArgs.isEmpty() && !error.isEmpty()) {
             qCWarning(RUNNER_SERVICES) << "Failed to resolve executable from service. Error:" << error;
@@ -187,7 +185,7 @@ private:
         }
 
         // Remove any environment variables.
-        if (KIO::DesktopExecParser::executableName(exec) == QLatin1String("env")) {
+        if (KIO::DesktopExecParser::executableName(service->exec()) == QLatin1String("env")) {
             resultingArgs.removeFirst(); // remove "env".
 
             while (!resultingArgs.isEmpty() && resultingArgs.first().contains(QLatin1Char('='))) {
