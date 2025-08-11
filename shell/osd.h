@@ -46,6 +46,7 @@ public Q_SLOTS:
     void virtualKeyboardEnabledChanged(bool virtualKeyboardEnabled);
     void powerManagementInhibitedChanged(bool inhibited);
     void powerProfileChanged(const QString &profile);
+    void batteryChargingStatusChanged(bool charging);
     void showText(const QString &icon, const QString &text);
 
 Q_SIGNALS:

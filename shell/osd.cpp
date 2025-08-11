@@ -215,6 +215,15 @@ void Osd::powerProfileChanged(const QString &profile)
     showText(icon, name);
 }
 
+void Osd::batteryChargingStatusChanged(bool charging)
+{
+    if (charging) {
+        showText(QStringLiteral("battery-good-charging"), i18nc("Battery charging started, keep short", "Batteery Charging"));
+    } else {
+        showText(QStringLiteral("battery-good"), i18nc("Battery charging stopped, keep short", "Charging Stopped"));
+    }
+}
+
 bool Osd::init()
 {
     if (!m_osdConfigGroup.readEntry("Enabled", true)) {
