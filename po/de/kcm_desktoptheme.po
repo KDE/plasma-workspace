@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktoptheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-29 00:41+0000\n"
+"POT-Creation-Date: 2025-08-11 02:42+0000\n"
 "PO-Revision-Date: 2024-09-22 14:00+0200\n"
 "Last-Translator: Flori G <Renner03@protonmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -79,7 +79,7 @@ msgstr ""
 "Alle auf dem System verfügbaren Designs anzeigen (und welches das aktuelle "
 "ist)"
 
-#: plasma-apply-desktoptheme.cpp:51
+#: plasma-apply-desktoptheme.cpp:55
 #, kde-format
 msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
@@ -88,12 +88,12 @@ msgstr ""
 "Das gewählte Design „%1“ wird bereits für die aktuelle Plasma-Sitzung "
 "verwendet."
 
-#: plasma-apply-desktoptheme.cpp:67
+#: plasma-apply-desktoptheme.cpp:76
 #, kde-format
 msgid "The current Plasma session's theme has been set to %1"
 msgstr "Als Design für die aktuelle Plasma-Sitzung wurde „%1“ festgelegt"
 
-#: plasma-apply-desktoptheme.cpp:69
+#: plasma-apply-desktoptheme.cpp:78
 #, kde-format
 msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
@@ -102,7 +102,7 @@ msgstr ""
 "Das Design „%1“ wurde nicht gefunden. Es sollte eines der folgenden Designs "
 "gewählt werden: %2"
 
-#: plasma-apply-desktoptheme.cpp:77
+#: plasma-apply-desktoptheme.cpp:86
 #, kde-format
 msgid "You have the following Plasma themes on your system:"
 msgstr "Sie haben die folgenden Plasma-Designs auf Ihrem System:"
