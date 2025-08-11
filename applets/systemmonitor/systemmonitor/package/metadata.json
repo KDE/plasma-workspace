@@ -55,7 +55,7 @@
         "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=System%20Monitor",
         "Category": "System Information",
         "Description": "Displays a configurable chart of a system monitor sensor",
-        "Description[ar]": "يعرض مخططًا قابلًا للتكوين لمتحسسات مراقبة النظام",
+        "Description[ar]": "يعرض مخططًا قابلًا للضبط لمتحسسات مراقبة النظام",
         "Description[az]": "Sistem monitoru sensorunun ayarlana bilən zolaqlarını göstərir",
         "Description[be]": "Паказвае наладжвальную дыяграму сэнсара сістэмнага назіральніка",
         "Description[bg]": "Показва конфигурируема диаграма на сензор за системен монитор",
