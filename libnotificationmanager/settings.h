@@ -51,6 +51,17 @@ class NOTIFICATIONMANAGER_EXPORT Settings : public QObject
     Q_PROPERTY(bool lowPriorityHistory READ lowPriorityHistory WRITE setLowPriorityHistory NOTIFY settingsChanged)
 
     /**
+     * The screen index where notification popups will show.
+     *
+     * This matches QGuiApplication::screens().
+     *
+     * -1 means "Automatic" and places the popup where the plasmoid is. The default is -1.
+     *
+     * @since 6.5
+     */
+    Q_PROPERTY(int popupScreen READ popupScreen WRITE setPopupScreen RESET resetPopupScreen NOTIFY settingsChanged)
+
+    /**
      * The notification popup position on screen.
      * CloseToWidget means they should be positioned closely to where the plasmoid is located on screen.
      */
@@ -271,6 +282,10 @@ public:
 
     bool lowPriorityHistory() const;
     void setLowPriorityHistory(bool enable);
+
+    int popupScreen() const;
+    void setPopupScreen(int popupScreen);
+    void resetPopupScreen();
 
     PopupPosition popupPosition() const;
     void setPopupPosition(PopupPosition popupPosition);

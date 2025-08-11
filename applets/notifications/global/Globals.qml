@@ -122,9 +122,49 @@ QtObject {
         }
     }
 
+    readonly property int popupScreen: {
+        const corona = globals.plasmoid?.containment?.corona;
+        if (!corona) {
+            return -1;
+        }
+
+        let popupScreen = notificationSettings.popupScreen;
+
+        // Screen unavailable, use primary.
+        if (popupScreen >= Application.screens.length) {
+            popupScreen = 0;
+        }
+
+        return popupScreen;
+    }
+    onPopupScreenChanged: {
+        updateCoronaAvailableScreenRect();
+        repositionTimer.start()
+    }
+
+    property var coronaAvailableScreenRect
+    function updateCoronaAvailableScreenRect() {
+        if (popupScreen < 0) {
+            coronaAvailableScreenRect = undefined;
+            return;
+        }
+
+        const corona = globals.plasmoid?.containment?.corona;
+        if (!corona) {
+            coronaAvailableScreenRect = undefined;
+            return;
+        }
+
+        coronaAvailableScreenRect = corona.availableScreenRect(popupScreen);
+    }
+
     readonly property rect screenRect: {
         if (!plasmoid) {
             return Qt.rect(0, 0, -1, -1);
+        }
+
+        if (popupScreen > -1 && coronaAvailableScreenRect) {
+            return coronaAvailableScreenRect;
         }
 
         const containment = plasmoid.containment;
@@ -733,6 +773,24 @@ QtObject {
     property Timer repositionTimer: Timer {
         interval: 250
         onTriggered: globals.positionPopups()
+    }
+
+    property Connections screenRectChangedConnections: Connections {
+        target: globals.plasmoid?.containment?.corona
+        function onAvailableScreenRectChanged(screenId : int) : void {
+            if (screenId === globals.popupScreen) {
+                globals.updateCoronaAvailableScreenRect();
+                repositionTimer.start();
+            }
+        }
+    }
+
+    property Connections applicationScreensChangedConnections: Connections {
+        target: Application
+        function onScreensChanged() {
+            globals.updateCoronaAvailableScreenRect();
+            repositionTimer.start();
+        }
     }
 
     // Tracks the visual parent's window since mapToItem cannot signal

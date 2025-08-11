@@ -15,6 +15,9 @@
         <entry name="LowPriorityHistory" type="Bool">
             <default>false</default>
         </entry>
+        <entry name="PopupScreen" type="Int">
+            <default>-1</default>
+        </entry>
         <entry name="PopupPosition" type="Enum">
             <choices name="Settings::PopupPosition">
                 <choice name="CloseToWidget" />

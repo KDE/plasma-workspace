@@ -237,7 +237,10 @@ KCM.SimpleKCM {
             checked: kcm.notificationSettings.popupPosition === NotificationManager.Settings.CloseToWidget
                 // Force binding re-evaluation when user returns from position selector
                 + kcm.currentIndex * 0
-            onClicked: kcm.notificationSettings.popupPosition = NotificationManager.Settings.CloseToWidget
+            onClicked: {
+                kcm.notificationSettings.popupPosition = NotificationManager.Settings.CloseToWidget
+                kcm.notificationSettings.popupScreen = -1;
+            }
 
             KCM.SettingStateBinding {
                 configObject: kcm.notificationSettings

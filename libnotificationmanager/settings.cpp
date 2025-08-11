@@ -395,6 +395,36 @@ void Settings::setLowPriorityHistory(bool enable)
     d->setDirty(true);
 }
 
+int Settings::popupScreen() const
+{
+    return d->notificationSettings.popupScreen();
+}
+
+void Settings::setPopupScreen(int popupScreen)
+{
+    if (this->popupScreen() == popupScreen) {
+        return;
+    }
+
+    // const auto screensCount = qGuiApp->screens().count();
+    // if (popupScreen >= screensCount) {
+    //     qCWarning(NOTIFICATIONMANAGER) << "Cannot set popupScreen to" << popupScreen << "as there are only" << screensCount << "screens";
+    //     return;
+    // }
+    if (popupScreen < -1) {
+        qCWarning(NOTIFICATIONMANAGER) << popupScreen << "is not a valid popupScreen, it can only be -1 or an index into QGuiApplication::screens()";
+        return;
+    }
+
+    d->notificationSettings.setPopupScreen(popupScreen);
+    d->setDirty(true);
+}
+
+void Settings::resetPopupScreen()
+{
+    setPopupScreen(-1);
+}
+
 Settings::PopupPosition Settings::popupPosition() const
 {
     return static_cast<Settings::PopupPosition>(d->notificationSettings.popupPosition());
