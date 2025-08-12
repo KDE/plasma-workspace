@@ -39,8 +39,8 @@
 #include "startplasma.h"
 
 #include "../config-workspace.h"
-#include "../kcms/lookandfeel/lookandfeelmanager.h"
 #include "debug.h"
+#include "lookandfeelmanager.h"
 
 using namespace Qt::StringLiterals;
 

@@ -1,6 +1,23 @@
 # SPDX-FileCopyrightText: 2025 Vlad Zahorodnii <vlad.zahorodnii@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
 
+if(BUILD_TESTING)
+   find_package(Qt6Test ${QT_MIN_VERSION} CONFIG REQUIRED)
+   add_subdirectory(autotests)
+endif()
+
+if(HAVE_X11)
+    set(HAVE_XCURSOR TRUE)
+endif()
+
+if(Breeze_FOUND)
+    if(BREEZE_WITH_KDECORATION)
+        set(HAVE_BREEZE_DECO TRUE)
+    endif()
+endif()
+
+configure_file(config-klookandfeel.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-klookandfeel.h)
+
 add_library(klookandfeel)
 add_library(PW::KLookAndFeel ALIAS klookandfeel)
 
@@ -12,17 +29,39 @@ set_target_properties(klookandfeel PROPERTIES
 )
 
 target_sources(klookandfeel PRIVATE
+    ../kcms/colors/colorsapplicator.cpp
+    ../kcms/kcms-common.cpp
+
     klookandfeel.cpp
+    lookandfeelmanager.cpp
 )
 
 target_link_libraries(klookandfeel
     PUBLIC
         Qt::Core
         Qt::Gui
-    PRIVATE
         KF6::ConfigCore
         KF6::Package
+        KF6::Service
+    PRIVATE
+        Qt::DBus
+        Qt::GuiPrivate
+        Qt::Widgets
+        KF6::ColorScheme
+        KF6::GuiAddons
+        KF6::I18n
+        KF6::IconThemes
+        KF6::KIOGui
+        krdb
 )
+
+if (HAVE_X11)
+    target_sources(klookandfeel PRIVATE
+        ../kcms/cursortheme/xcursor/cursortheme.cpp
+        ../kcms/cursortheme/xcursor/xcursortheme.cpp
+    )
+   target_link_libraries(klookandfeel PRIVATE X11::Xcursor X11::Xfixes)
+endif ()
 
 target_include_directories(klookandfeel
     PUBLIC
@@ -38,6 +77,7 @@ install(TARGETS klookandfeel EXPORT libklookandfeelLibraryTargets ${KDE_INSTALL_
 install(
     FILES
         klookandfeel.h
+        lookandfeelmanager.h
         ${CMAKE_CURRENT_BINARY_DIR}/klookandfeel_export.h
     DESTINATION
         ${KDE_INSTALL_INCLUDEDIR}/klookandfeel

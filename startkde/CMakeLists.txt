@@ -22,8 +22,8 @@ target_link_libraries(startplasma PUBLIC
     KF6::Notifications
     KF6::Package
     Canberra::Canberra
+    PW::KLookAndFeel
     PW::KWorkspace
-    lookandfeelmanager
 )
 
 add_executable(startplasma-x11 ${START_PLASMA_COMMON_SRCS} startplasma-x11.cpp kcheckrunning/kcheckrunning.cpp)

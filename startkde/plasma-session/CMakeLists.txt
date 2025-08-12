@@ -28,6 +28,7 @@ target_include_directories(plasma_session PRIVATE ${CMAKE_SOURCE_DIR}/startkde $
 target_link_libraries(plasma_session
     startplasma
     KF6::KIOCore
+    KF6::KIOGui
     PlasmaAutostart
 )
 

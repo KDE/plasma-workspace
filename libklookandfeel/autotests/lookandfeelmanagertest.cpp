@@ -5,7 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#include "../lookandfeelmanager.h"
+#include "lookandfeelmanager.h"
 // Qt
 #include <KJob>
 #include <KPackage/Package>
