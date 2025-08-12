@@ -14,12 +14,9 @@
 #include "klookandfeel.h"
 #include "klookandfeelmanager.h"
 
-#include <KConfig>
-#include <KConfigGroup>
 #include <KNSCore/Entry>
 #include <KPackage/Package>
 #include <KQuickManagedConfigModule>
-#include <KSharedConfig>
 
 #include <QStandardItemModel>
 

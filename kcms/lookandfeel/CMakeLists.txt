@@ -8,16 +8,11 @@ target_sources(kcm_lookandfeel PRIVATE
     kcm.cpp
 )
 target_link_libraries(kcm_lookandfeel PRIVATE
-    Qt::Quick
     KF6::ConfigGui
-    KF6::I18n
-    KF6::JobWidgets
-    KF6::KIOGui
     KF6::KCMUtils
     KF6::KCMUtilsQuick
     KF6::NewStuffCore
     PW::KLookAndFeel
-    PW::KWorkspace
 )
 
 kcmutils_generate_module_data(kcm_lookandfeel
