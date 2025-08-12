@@ -14,7 +14,33 @@ endif()
 
 install(TARGETS krdb ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)
 
+install(TARGETS krdb EXPORT krdbLibraryTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
+
 install(FILES krdb.h
     ${CMAKE_CURRENT_BINARY_DIR}/krdb_export.h
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/krdb COMPONENT Devel
+)
+
+set(CMAKECONFIG_INSTALL_DIR ${KDE_INSTALL_CMAKEPACKAGEDIR}/Krdb)
+configure_package_config_file(KrdbConfig.cmake.in "${CMAKE_CURRENT_BINARY_DIR}/KrdbConfig.cmake"
+    INSTALL_DESTINATION ${CMAKECONFIG_INSTALL_DIR}
+)
+
+write_basic_config_version_file(${CMAKE_CURRENT_BINARY_DIR}/KrdbConfigVersion.cmake
+    VERSION "${PROJECT_VERSION}"
+    COMPATIBILITY AnyNewerVersion
+)
+
+install(
+    FILES
+        ${CMAKE_CURRENT_BINARY_DIR}/KrdbConfig.cmake
+        ${CMAKE_CURRENT_BINARY_DIR}/KrdbConfigVersion.cmake
+    DESTINATION ${CMAKECONFIG_INSTALL_DIR}
+)
+
+install(
+    EXPORT krdbLibraryTargets
+    NAMESPACE PW::
+    DESTINATION ${CMAKECONFIG_INSTALL_DIR}
+    FILE krdbLibraryTargets.cmake
 )
