@@ -39,6 +39,8 @@
 #ifdef HAVE_XFIXES
 #include <X11/extensions/Xfixes.h>
 #endif
+
+#include <fixx11h.h>
 #endif
 
 using namespace Qt::StringLiterals;
@@ -889,3 +891,5 @@ void KLookAndFeelManager::setMode(Mode mode)
 {
     m_mode = mode;
 }
+
+#include "moc_klookandfeelmanager.cpp"

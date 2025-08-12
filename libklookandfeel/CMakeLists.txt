@@ -60,7 +60,7 @@ if (HAVE_X11)
         ../kcms/cursortheme/xcursor/cursortheme.cpp
         ../kcms/cursortheme/xcursor/xcursortheme.cpp
     )
-   target_link_libraries(klookandfeel PRIVATE X11::Xcursor X11::Xfixes)
+   target_link_libraries(klookandfeel PRIVATE KF6::WindowSystem X11::Xcursor X11::Xfixes)
 endif ()
 
 target_include_directories(klookandfeel
