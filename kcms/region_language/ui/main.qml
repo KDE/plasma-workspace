@@ -158,7 +158,6 @@ KCM.ScrollViewKCM {
             }
 
             Kirigami.Theme.useAlternateBackgroundColor: true
-            hoverEnabled: false
             down: false
 
             contentItem: RowLayout {
@@ -234,6 +233,7 @@ KCM.ScrollViewKCM {
                     text: model.name
                     
                     checked: model.index === kcm.optionsModel.binaryDialect
+                    highlighted: checked || pressed
                     QQC2.ButtonGroup.group: buttonGroup
                     
                     contentItem:RowLayout {
@@ -245,10 +245,12 @@ KCM.ScrollViewKCM {
                             Layout.fillWidth: true
                             title: binaryDialectDelegate.text
                             subtitle: model.example ? model.example : ""
+                            selected: binaryDialectDelegate.highlighted
                         }
 
                         QQC2.Label {
                             text: model.description
+                            color: titleSubtitle.color
                         }
                     }
 
@@ -333,6 +335,32 @@ KCM.ScrollViewKCM {
                     subtitle: model.example ? model.example : ""
 
                     Kirigami.Theme.useAlternateBackgroundColor: true
+                    highlighted: {
+                        if (pressed) {
+                            return true;
+                        }
+                        switch (setting) {
+                        case SettingType.Lang:
+                            return kcm.settings.lang === model.localeName;
+                        case SettingType.Numeric:
+                            return kcm.settings.numeric === model.localeName;
+                        case SettingType.Time:
+                            return kcm.settings.time === model.localeName;
+                        case SettingType.Currency:
+                            return kcm.settings.monetary === model.localeName;
+                        case SettingType.Measurement:
+                            return kcm.settings.measurement === model.localeName;
+                        case SettingType.PaperSize:
+                            return kcm.settings.paperSize === model.localeName;
+                        case SettingType.Address:
+                            return kcm.settings.address === model.localeName;
+                        case SettingType.NameStyle:
+                            return kcm.settings.nameStyle === model.localeName;
+                        case SettingType.PhoneNumbers:
+                            return kcm.settings.phoneNumbers === model.localeName;
+                        }
+                        return false;
+                    }
 
                     contentItem: RowLayout {
                         Kirigami.IconTitleSubtitle {
@@ -341,33 +369,11 @@ KCM.ScrollViewKCM {
                             icon: icon.fromControlsIcon(localeDelegate.icon)
                             title: localeDelegate.text
                             subtitle: localeDelegate.subtitle
-                            selected: {
-                                switch (setting) {
-                                case SettingType.Lang:
-                                    return kcm.settings.lang === model.localeName;
-                                case SettingType.Numeric:
-                                    return kcm.settings.numeric === model.localeName;
-                                case SettingType.Time:
-                                    return kcm.settings.time === model.localeName;
-                                case SettingType.Currency:
-                                    return kcm.settings.monetary === model.localeName;
-                                case SettingType.Measurement:
-                                    return kcm.settings.measurement === model.localeName;
-                                case SettingType.PaperSize:
-                                    return kcm.settings.paperSize === model.localeName;
-                                case SettingType.Address:
-                                    return kcm.settings.address === model.localeName;
-                                case SettingType.NameStyle:
-                                    return kcm.settings.nameStyle === model.localeName;
-                                case SettingType.PhoneNumbers:
-                                    return kcm.settings.phoneNumbers === model.localeName;
-                                }
-                                return false;
-                            }
+                            selected: localeDelegate.highlighted
                         }
 
                         QQC2.Label {
-                            color: !icontTitle.selected ? Kirigami.Theme.disabledTextColor: icontTitle.color
+                            color: !localeDelegate.highlighted ? Kirigami.Theme.disabledTextColor: icontTitle.color
                             text: model.localeName
                             textFormat: Text.PlainText
                         }
