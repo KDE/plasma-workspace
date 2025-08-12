@@ -5,7 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#include "lookandfeelmanager.h"
+#include "klookandfeelmanager.h"
 // Qt
 #include <KJob>
 #include <KPackage/Package>
@@ -42,7 +42,7 @@ private Q_SLOTS:
 private:
     QDir m_configDir;
     QDir m_dataDir;
-    LookAndFeelManager *m_lookAndFeel;
+    KLookAndFeelManager *m_lookAndFeel;
 };
 
 void LookAndFeelManagerTest::initTestCase()
@@ -79,7 +79,7 @@ void LookAndFeelManagerTest::initTestCase()
     KConfigGroup cg(&config, u"KDE"_s);
     cg.writeEntry("LookAndFeelPackage", "org.kde.test");
     cg.sync();
-    m_lookAndFeel = new LookAndFeelManager(this);
+    m_lookAndFeel = new KLookAndFeelManager(this);
 }
 
 void LookAndFeelManagerTest::cleanupTestCase()
@@ -191,7 +191,7 @@ void LookAndFeelManagerTest::testWindowSwitcher()
 void LookAndFeelManagerTest::testSave()
 {
     KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"), QStringLiteral("org.kde.test"));
-    m_lookAndFeel->save(package, LookAndFeelManager::Empty);
+    m_lookAndFeel->save(package, KLookAndFeelManager::Empty);
 
     // On real setup we read entries from kdedefaults directory (XDG_CONFIG_DIRS is modified but not in test scenario)
 

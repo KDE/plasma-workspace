@@ -5,7 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#include "lookandfeelmanager.h"
+#include "klookandfeelmanager.h"
 #include "lookandfeelsettings.h"
 
 #include <iostream>
@@ -96,9 +96,9 @@ int main(int argc, char **argv)
         }
 
         // By default do not modify the layout, unless explicitely specified
-        LookAndFeelManager::Contents selection = LookAndFeelManager::AppearanceSettings;
+        KLookAndFeelManager::Contents selection = KLookAndFeelManager::AppearanceSettings;
         if (parser.isSet(_resetLayout)) {
-            selection |= LookAndFeelManager::LayoutSettings;
+            selection |= KLookAndFeelManager::LayoutSettings;
         }
 
         LookAndFeelSettings settings;
@@ -108,7 +108,7 @@ int main(int argc, char **argv)
         settings.setLookAndFeelPackage(requestedTheme);
         settings.save();
 
-        LookAndFeelManager manager;
+        KLookAndFeelManager manager;
         manager.save(p, selection);
     }
 

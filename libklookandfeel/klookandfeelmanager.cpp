@@ -9,7 +9,7 @@
     SPDX-License-Identifier: LGPL-2.0-only
 */
 
-#include "lookandfeelmanager.h"
+#include "klookandfeelmanager.h"
 #include "../kcms/colors/colorsapplicator.h"
 #include "../kcms/kcms-common_p.h"
 #include "config-klookandfeel.h"
@@ -73,7 +73,7 @@ bool configProvides(KSharedConfigPtr config, const QString &groupPath, const QSt
 
 } // Anonymouse namespace
 
-LookAndFeelManager::LookAndFeelManager(QObject *parent)
+KLookAndFeelManager::KLookAndFeelManager(QObject *parent)
     : QObject(parent)
     , m_plasmashellChanged(false)
     , m_fontsChanged(false)
@@ -107,12 +107,12 @@ LookAndFeelManager::LookAndFeelManager(QObject *parent)
     });
 }
 
-bool LookAndFeelManager::isPlasmaLocked() const
+bool KLookAndFeelManager::isPlasmaLocked() const
 {
     return m_plasmaLocked;
 }
 
-LookAndFeelManager::Contents LookAndFeelManager::packageContents(const KPackage::Package &pkg) const
+KLookAndFeelManager::Contents KLookAndFeelManager::packageContents(const KPackage::Package &pkg) const
 {
     Contents contents = Empty;
 
@@ -157,7 +157,7 @@ LookAndFeelManager::Contents LookAndFeelManager::packageContents(const KPackage:
     return contents;
 }
 
-void LookAndFeelManager::setSplashScreen(const QString &theme)
+void KLookAndFeelManager::setSplashScreen(const QString &theme)
 {
     if (theme.isEmpty()) {
         return;
@@ -173,7 +173,7 @@ void LookAndFeelManager::setSplashScreen(const QString &theme)
     writeNewDefaults(group, defaultGroup, QStringLiteral("Engine"), QStringLiteral("KSplashQML"));
 }
 
-void LookAndFeelManager::setWindowSwitcher(const QString &theme)
+void KLookAndFeelManager::setWindowSwitcher(const QString &theme)
 {
     if (theme.isEmpty()) {
         return;
@@ -182,7 +182,7 @@ void LookAndFeelManager::setWindowSwitcher(const QString &theme)
     writeNewDefaults(QStringLiteral("kwinrc"), QStringLiteral("TabBox"), QStringLiteral("LayoutName"), theme);
 }
 
-void LookAndFeelManager::setWindowPlacement(const QString &value)
+void KLookAndFeelManager::setWindowPlacement(const QString &value)
 {
     if (value.isEmpty()) {
         return;
@@ -191,7 +191,7 @@ void LookAndFeelManager::setWindowPlacement(const QString &value)
     writeNewDefaults(QStringLiteral("kwinrc"), QStringLiteral("Windows"), QStringLiteral("Placement"), value);
 }
 
-void LookAndFeelManager::setShellPackage(const QString &value)
+void KLookAndFeelManager::setShellPackage(const QString &value)
 {
     if (value.isEmpty()) {
         return;
@@ -201,7 +201,7 @@ void LookAndFeelManager::setShellPackage(const QString &value)
     m_plasmashellChanged = true;
 }
 
-void LookAndFeelManager::setWindowDecoration(const QString &library, const QString &theme, bool noPlugin)
+void KLookAndFeelManager::setWindowDecoration(const QString &library, const QString &theme, bool noPlugin)
 {
     if (library.isEmpty()) {
         return;
@@ -217,7 +217,7 @@ void LookAndFeelManager::setWindowDecoration(const QString &library, const QStri
     writeNewDefaults(group, defaultGroup, QStringLiteral("NoPlugin"), noPlugin ? u"true"_s : u"false"_s, KConfig::Notify);
 }
 
-void LookAndFeelManager::setTitlebarLayout(const QString &leftbtns, const QString &rightbtns)
+void KLookAndFeelManager::setTitlebarLayout(const QString &leftbtns, const QString &rightbtns)
 {
     if (leftbtns.isEmpty() && rightbtns.isEmpty()) {
         return;
@@ -227,7 +227,7 @@ void LookAndFeelManager::setTitlebarLayout(const QString &leftbtns, const QStrin
     writeNewDefaults(QStringLiteral("kwinrc"), QStringLiteral("org.kde.kdecoration2"), QStringLiteral("ButtonsOnRight"), rightbtns, KConfig::Notify);
 }
 
-void LookAndFeelManager::setBorderSize(const QString &size)
+void KLookAndFeelManager::setBorderSize(const QString &size)
 {
     if (size.isEmpty()) {
         return;
@@ -236,7 +236,7 @@ void LookAndFeelManager::setBorderSize(const QString &size)
     writeNewDefaults(QStringLiteral("kwinrc"), QStringLiteral("org.kde.kdecoration2"), QStringLiteral("BorderSize"), size, KConfig::Notify);
 }
 
-void LookAndFeelManager::setBorderlessMaximized(const QString &value)
+void KLookAndFeelManager::setBorderlessMaximized(const QString &value)
 {
     if (value.isEmpty()) { // Turn borderless off for unsupported LNFs to prevent issues
         writeNewDefaults(QStringLiteral("kwinrc"), QStringLiteral("Windows"), QStringLiteral("BorderlessMaximizedWindows"), u"false"_s, KConfig::Notify);
@@ -246,7 +246,7 @@ void LookAndFeelManager::setBorderlessMaximized(const QString &value)
     writeNewDefaults(QStringLiteral("kwinrc"), QStringLiteral("Windows"), QStringLiteral("BorderlessMaximizedWindows"), value, KConfig::Notify);
 }
 
-void LookAndFeelManager::setWidgetStyle(const QString &style)
+void KLookAndFeelManager::setWidgetStyle(const QString &style)
 {
     if (style.isEmpty()) {
         return;
@@ -270,7 +270,7 @@ void LookAndFeelManager::setWidgetStyle(const QString &style)
     Q_EMIT styleChanged(style);
 }
 
-void LookAndFeelManager::setColors(const QString &scheme, const QString &colorFile)
+void KLookAndFeelManager::setColors(const QString &scheme, const QString &colorFile)
 {
     if (scheme.isEmpty() && colorFile.isEmpty()) {
         return;
@@ -292,7 +292,7 @@ void LookAndFeelManager::setColors(const QString &scheme, const QString &colorFi
     Q_EMIT colorsChanged();
 }
 
-void LookAndFeelManager::setIcons(const QString &theme)
+void KLookAndFeelManager::setIcons(const QString &theme)
 {
     if (theme.isEmpty()) {
         return;
@@ -308,7 +308,7 @@ void LookAndFeelManager::setIcons(const QString &theme)
     Q_EMIT iconsChanged();
 }
 
-void LookAndFeelManager::setLatteLayout(const QString &filepath, const QString &name)
+void KLookAndFeelManager::setLatteLayout(const QString &filepath, const QString &name)
 {
     if (filepath.isEmpty()) {
         // there is no latte layout
@@ -330,7 +330,7 @@ void LookAndFeelManager::setLatteLayout(const QString &filepath, const QString &
     }
 }
 
-void LookAndFeelManager::setPlasmaTheme(const QString &theme)
+void KLookAndFeelManager::setPlasmaTheme(const QString &theme)
 {
     if (theme.isEmpty()) {
         return;
@@ -339,7 +339,7 @@ void LookAndFeelManager::setPlasmaTheme(const QString &theme)
     writeNewDefaults(QStringLiteral("plasmarc"), QStringLiteral("Theme"), QStringLiteral("name"), theme, KConfig::Notify);
 }
 
-void LookAndFeelManager::setGeneralFont(const QString &font)
+void KLookAndFeelManager::setGeneralFont(const QString &font)
 {
     if (font.isEmpty()) {
         return;
@@ -349,7 +349,7 @@ void LookAndFeelManager::setGeneralFont(const QString &font)
     m_fontsChanged = true;
 }
 
-void LookAndFeelManager::setFixedFont(const QString &font)
+void KLookAndFeelManager::setFixedFont(const QString &font)
 {
     if (font.isEmpty()) {
         return;
@@ -359,7 +359,7 @@ void LookAndFeelManager::setFixedFont(const QString &font)
     m_fontsChanged = true;
 }
 
-void LookAndFeelManager::setSmallestReadableFont(const QString &font)
+void KLookAndFeelManager::setSmallestReadableFont(const QString &font)
 {
     if (font.isEmpty()) {
         return;
@@ -369,7 +369,7 @@ void LookAndFeelManager::setSmallestReadableFont(const QString &font)
     m_fontsChanged = true;
 }
 
-void LookAndFeelManager::setToolbarFont(const QString &font)
+void KLookAndFeelManager::setToolbarFont(const QString &font)
 {
     if (font.isEmpty()) {
         return;
@@ -379,7 +379,7 @@ void LookAndFeelManager::setToolbarFont(const QString &font)
     m_fontsChanged = true;
 }
 
-void LookAndFeelManager::setMenuFont(const QString &font)
+void KLookAndFeelManager::setMenuFont(const QString &font)
 {
     if (font.isEmpty()) {
         return;
@@ -389,7 +389,7 @@ void LookAndFeelManager::setMenuFont(const QString &font)
     m_fontsChanged = true;
 }
 
-void LookAndFeelManager::setWindowTitleFont(const QString &font)
+void KLookAndFeelManager::setWindowTitleFont(const QString &font)
 {
     if (font.isEmpty()) {
         return;
@@ -399,11 +399,11 @@ void LookAndFeelManager::setWindowTitleFont(const QString &font)
     m_fontsChanged = true;
 }
 
-void LookAndFeelManager::writeNewDefaults(const QString &filename,
-                                          const QString &group,
-                                          const QString &key,
-                                          const QString &value,
-                                          KConfig::WriteConfigFlags writeFlags)
+void KLookAndFeelManager::writeNewDefaults(const QString &filename,
+                                           const QString &group,
+                                           const QString &key,
+                                           const QString &value,
+                                           KConfig::WriteConfigFlags writeFlags)
 {
     KSharedConfigPtr config = KSharedConfig::openConfig(filename);
     KConfigGroup configGroup(config, group);
@@ -414,12 +414,12 @@ void LookAndFeelManager::writeNewDefaults(const QString &filename,
     writeNewDefaults(configGroup, defaultGroup, key, value, writeFlags);
 }
 
-void LookAndFeelManager::writeNewDefaults(KConfig &config,
-                                          KConfig &configDefault,
-                                          const QString &group,
-                                          const QString &key,
-                                          const QString &value,
-                                          KConfig::WriteConfigFlags writeFlags)
+void KLookAndFeelManager::writeNewDefaults(KConfig &config,
+                                           KConfig &configDefault,
+                                           const QString &group,
+                                           const QString &key,
+                                           const QString &value,
+                                           KConfig::WriteConfigFlags writeFlags)
 {
     KConfigGroup configGroup(&config, group);
     KConfigGroup defaultGroup(&configDefault, group);
@@ -427,11 +427,11 @@ void LookAndFeelManager::writeNewDefaults(KConfig &config,
     writeNewDefaults(configGroup, defaultGroup, key, value, writeFlags);
 }
 
-void LookAndFeelManager::writeNewDefaults(KConfigGroup &group,
-                                          KConfigGroup &defaultGroup,
-                                          const QString &key,
-                                          const QString &value,
-                                          KConfig::WriteConfigFlags writeFlags)
+void KLookAndFeelManager::writeNewDefaults(KConfigGroup &group,
+                                           KConfigGroup &defaultGroup,
+                                           const QString &key,
+                                           const QString &value,
+                                           KConfig::WriteConfigFlags writeFlags)
 {
     defaultGroup.writeEntry(key, value, writeFlags);
     defaultGroup.sync();
@@ -442,12 +442,12 @@ void LookAndFeelManager::writeNewDefaults(KConfigGroup &group,
     }
 }
 
-KConfig LookAndFeelManager::configDefaults(const QString &filename)
+KConfig KLookAndFeelManager::configDefaults(const QString &filename)
 {
     return KConfig(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QLatin1String("/kdedefaults/") + filename, KConfig::SimpleConfig);
 }
 
-QString LookAndFeelManager::colorSchemeFile(const QString &schemeName) const
+QString KLookAndFeelManager::colorSchemeFile(const QString &schemeName) const
 {
     QString colorScheme(schemeName);
     colorScheme.remove(QLatin1Char('\'')); // So Foo's does not become FooS
@@ -475,7 +475,7 @@ QString LookAndFeelManager::colorSchemeFile(const QString &schemeName) const
     return QString();
 }
 
-void LookAndFeelManager::save(const KPackage::Package &package, Contents applyMask)
+void KLookAndFeelManager::save(const KPackage::Package &package, Contents applyMask)
 {
     // The items to apply are the package contents filtered with the user selection mask
     const QString packageId = package.metadata().pluginId();
@@ -659,7 +659,7 @@ void LookAndFeelManager::save(const KPackage::Package &package, Contents applyMa
     }
 }
 
-bool LookAndFeelManager::remove(const KPackage::Package &package, LookAndFeelManager::Contents contentsMask)
+bool KLookAndFeelManager::remove(const KPackage::Package &package, KLookAndFeelManager::Contents contentsMask)
 {
     QDir packageRootDir(package.path());
     if (!packageRootDir.isReadable()) {
@@ -863,7 +863,7 @@ static void applyCursorThemeX11(const QString &themeName)
 }
 #endif
 
-void LookAndFeelManager::setCursorTheme(const QString themeName)
+void KLookAndFeelManager::setCursorTheme(const QString themeName)
 {
     // TODO: use pieces of cursor kcm when moved to plasma-desktop
     if (themeName.isEmpty()) {
@@ -885,7 +885,7 @@ void LookAndFeelManager::setCursorTheme(const QString themeName)
     Q_EMIT cursorsChanged(themeName);
 }
 
-void LookAndFeelManager::setMode(Mode mode)
+void KLookAndFeelManager::setMode(Mode mode)
 {
     m_mode = mode;
 }
