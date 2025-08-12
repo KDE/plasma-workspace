@@ -5,7 +5,7 @@
 # Lisiane Sztoltz <lisiane@conectiva.com.br>, 2002, 2003.
 # Henrique Pinto <stampede@coltec.ufmg.br>, 2003.
 # Lisiane Sztoltz Teixeira <lisiane@conectiva.com.br>, 2004.
-# Marcus Gama <marcus_gama@uol.com.br>, 2004, 2012.
+# SPDX-FileCopyrightText: 2004, 2012, 2025 Marcus Gama <marcus_gama@uol.com.br>
 # Lisiane Sztoltz Teixeira <lisiane@kdemail.net>, 2005.
 # Diniz Bortolotto <diniz.bortolotto@gmail.com>, 2007, 2008.
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2008, 2009, 2016, 2017, 2018, 2020, 2021, 2022.
@@ -15,15 +15,15 @@ msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-05 05:54+0000\n"
-"PO-Revision-Date: 2022-12-20 11:31-0300\n"
-"Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
-"Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
+"PO-Revision-Date: 2025-08-11 18:08-0300\n"
+"Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
+"Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #: iconsizecategorymodel.cpp:14
 #, kde-format
@@ -135,6 +135,10 @@ msgid ""
 "you find that objects on screen are generally too small or too large, "
 "consider adjusting the global scale instead."
 msgstr ""
+"Aqui você pode configurar os tamanhos padrão de vários tipos de ícones em "
+"todo o sistema. Observe que nem todos os aplicativos respeitarão essas "
+"configurações.<nl/><nl/>Se você achar que os objetos na tela são geralmente "
+"muito pequenos ou muito grandes, considere ajustar a escala global."
 
 #: package/contents/ui/IconSizePopup.qml:41
 #, kde-format
