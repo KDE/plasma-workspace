@@ -10,8 +10,6 @@
 */
 
 #include "kcm.h"
-#include "config-kcm.h"
-#include "config-workspace.h"
 #include "klookandfeel.h"
 #include "lookandfeeldata.h"
 #include "lookandfeelsettings.h"

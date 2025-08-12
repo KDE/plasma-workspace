@@ -11,6 +11,8 @@
 
 #pragma once
 
+#include "klookandfeel_export.h"
+
 #include <KConfig>
 #include <KConfigGroup>
 #include <KPackage/Package>
@@ -18,7 +20,7 @@
 #include <QDir>
 #include <QObject>
 
-class LookAndFeelManager : public QObject
+class KLOOKANDFEEL_EXPORT LookAndFeelManager : public QObject
 {
     Q_OBJECT
 public:

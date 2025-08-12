@@ -10,9 +10,9 @@
 */
 
 #include "lookandfeelmanager.h"
-#include "../colors/colorsapplicator.h"
-#include "../kcms-common_p.h"
-#include "config-kcm.h"
+#include "../kcms/colors/colorsapplicator.h"
+#include "../kcms/kcms-common_p.h"
+#include "config-klookandfeel.h"
 #include "krdb.h"
 #include <KIO/CommandLauncherJob>
 #include <KIconLoader>
@@ -32,7 +32,7 @@
 #include <private/qtx11extras_p.h>
 
 #ifdef HAVE_XCURSOR
-#include "../cursortheme/xcursor/xcursortheme.h"
+#include "../kcms/cursortheme/xcursor/xcursortheme.h"
 #include <X11/Xcursor/Xcursor.h>
 #endif
 
