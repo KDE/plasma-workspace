@@ -476,6 +476,7 @@ PlasmaExtras.Representation {
                     }
 
                     readonly property Components.ModelInterface modelInterface: Components.ModelInterface {
+                        index: delegate.index
                         notificationType: delegate.type
 
                         hasSomeActions: (delegate.hasDefaultAction || false) || (delegate.actionLabels || []).length > 0 || (delegate.configureActionLabel || "").length > 0 || (delegate.hasReplyAction || false)
