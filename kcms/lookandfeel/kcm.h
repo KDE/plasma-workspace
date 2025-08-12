@@ -12,7 +12,7 @@
 #pragma once
 
 #include "klookandfeel.h"
-#include "lookandfeelmanager.h"
+#include "klookandfeelmanager.h"
 
 #include <KConfig>
 #include <KConfigGroup>
@@ -125,8 +125,8 @@ class KCMLookandFeel : public KQuickManagedConfigModule
     Q_PROPERTY(LookAndFeelSettings *settings READ settings CONSTANT)
     Q_PROPERTY(QStandardItemModel *model READ model CONSTANT)
 
-    Q_PROPERTY(LookAndFeelManager::Contents themeContents READ themeContents NOTIFY themeContentsChanged)
-    Q_PROPERTY(LookAndFeelManager::Contents selectedContents READ selectedContents WRITE setSelectedContents RESET resetSelectedContents NOTIFY
+    Q_PROPERTY(KLookAndFeelManager::Contents themeContents READ themeContents NOTIFY themeContentsChanged)
+    Q_PROPERTY(KLookAndFeelManager::Contents selectedContents READ selectedContents WRITE setSelectedContents RESET resetSelectedContents NOTIFY
                    selectedContentsChanged)
 
     Q_PROPERTY(bool plasmaLocked READ isPlasmaLocked NOTIFY plasmaLockedChanged)
@@ -166,7 +166,7 @@ public:
         KQuickManagedConfigModule::load();
     }
 
-    LookAndFeelManager *lookAndFeel() const
+    KLookAndFeelManager *lookAndFeel() const
     {
         return m_lnf;
     };
@@ -174,10 +174,10 @@ public:
 
     bool isSaveNeeded() const override;
 
-    LookAndFeelManager::Contents themeContents() const;
+    KLookAndFeelManager::Contents themeContents() const;
 
-    LookAndFeelManager::Contents selectedContents() const;
-    void setSelectedContents(LookAndFeelManager::Contents items);
+    KLookAndFeelManager::Contents selectedContents() const;
+    void setSelectedContents(KLookAndFeelManager::Contents items);
     void resetSelectedContents();
 
     bool isPlasmaLocked() const;
@@ -199,10 +199,10 @@ private:
     int pluginIndex(const QString &pluginName) const;
 
     LookAndFeelData *const m_data;
-    LookAndFeelManager *const m_lnf;
+    KLookAndFeelManager *const m_lnf;
 
-    LookAndFeelManager::Contents m_themeContents;
-    LookAndFeelManager::Contents m_selectedContents;
+    KLookAndFeelManager::Contents m_themeContents;
+    KLookAndFeelManager::Contents m_selectedContents;
 
     QStandardItemModel *m_model;
 };

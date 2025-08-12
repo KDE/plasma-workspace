@@ -40,7 +40,7 @@
 
 #include "../config-workspace.h"
 #include "debug.h"
-#include "lookandfeelmanager.h"
+#include "klookandfeelmanager.h"
 
 using namespace Qt::StringLiterals;
 
@@ -376,14 +376,14 @@ void setupPlasmaEnvironment()
     activeLnf.open(QIODevice::ReadOnly);
     if (activeLnf.readLine() != currentLnf.toUtf8()) {
         KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"), currentLnf);
-        LookAndFeelManager lnfManager;
-        lnfManager.setMode(LookAndFeelManager::Mode::Defaults);
+        KLookAndFeelManager lnfManager;
+        lnfManager.setMode(KLookAndFeelManager::Mode::Defaults);
         lnfManager.save(package);
     }
     // check if colors changed, if so apply them and discard plasma cache
     {
-        LookAndFeelManager lnfManager;
-        lnfManager.setMode(LookAndFeelManager::Mode::Apply);
+        KLookAndFeelManager lnfManager;
+        lnfManager.setMode(KLookAndFeelManager::Mode::Apply);
         KConfig globals(QStringLiteral("kdeglobals")); // Reload the config
         KConfigGroup generalGroup(&globals, QStringLiteral("General"));
         const QString colorScheme = generalGroup.readEntry("ColorScheme", QStringLiteral("BreezeLight"));

@@ -20,7 +20,7 @@
 #include <QDir>
 #include <QObject>
 
-class KLOOKANDFEEL_EXPORT LookAndFeelManager : public QObject
+class KLOOKANDFEEL_EXPORT KLookAndFeelManager : public QObject
 {
     Q_OBJECT
 public:
@@ -60,7 +60,7 @@ public:
     Q_DECLARE_FLAGS(Contents, ContentFlags)
     Q_FLAG(Contents)
 
-    LookAndFeelManager(QObject *parent = nullptr);
+    KLookAndFeelManager(QObject *parent = nullptr);
 
     void setMode(Mode mode);
     /**
@@ -132,4 +132,4 @@ private:
     bool m_plasmaLocked : 1;
 };
 
-Q_DECLARE_OPERATORS_FOR_FLAGS(LookAndFeelManager::Contents)
+Q_DECLARE_OPERATORS_FOR_FLAGS(KLookAndFeelManager::Contents)

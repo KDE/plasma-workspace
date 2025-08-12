@@ -255,15 +255,15 @@ void LookAndFeelInformation::refresh()
 KCMLookandFeel::KCMLookandFeel(QObject *parent, const KPluginMetaData &data)
     : KQuickManagedConfigModule(parent, data)
     , m_data(new LookAndFeelData(this))
-    , m_lnf(new LookAndFeelManager(this))
-    , m_themeContents(LookAndFeelManager::Empty)
-    , m_selectedContents(LookAndFeelManager::AppearanceSettings)
+    , m_lnf(new KLookAndFeelManager(this))
+    , m_themeContents(KLookAndFeelManager::Empty)
+    , m_selectedContents(KLookAndFeelManager::AppearanceSettings)
 {
     constexpr char uri[] = "org.kde.private.kcms.lookandfeel";
     qmlRegisterAnonymousType<LookAndFeelSettings>("", 1);
     qmlRegisterAnonymousType<QStandardItemModel>("", 1);
     qmlRegisterUncreatableType<KCMLookandFeel>(uri, 1, 0, "KCMLookandFeel", u"Can't create KCMLookandFeel"_s);
-    qmlRegisterUncreatableType<LookAndFeelManager>(uri, 1, 0, "LookandFeelManager", u"Can't create LookandFeelManager"_s);
+    qmlRegisterUncreatableType<KLookAndFeelManager>(uri, 1, 0, "LookandFeelManager", u"Can't create LookandFeelManager"_s);
     qmlRegisterType<LookAndFeelInformation>(uri, 1, 0, "LookAndFeelInformation");
     qmlRegisterType<ItemModelRow>(uri, 1, 0, "ItemModelRow");
     qmlRegisterUncreatableMetaObject(KLookAndFeel::staticMetaObject, uri, 1, 0, "LookAndFeel", QStringLiteral("for enums"));
@@ -285,7 +285,7 @@ KCMLookandFeel::KCMLookandFeel(QObject *parent, const KPluginMetaData &data)
     auto handleLookAndFeelPackageChanged = [this]() {
         // When the selected LNF package changes, update the available theme contents
         const int index = pluginIndex(settings()->lookAndFeelPackage());
-        const LookAndFeelManager::Contents packageContents = m_model->index(index, 0).data(ContentsRole).value<LookAndFeelManager::Contents>();
+        const KLookAndFeelManager::Contents packageContents = m_model->index(index, 0).data(ContentsRole).value<KLookAndFeelManager::Contents>();
         if (m_themeContents != packageContents) {
             m_themeContents = packageContents;
             Q_EMIT themeContentsChanged();
@@ -297,7 +297,7 @@ KCMLookandFeel::KCMLookandFeel(QObject *parent, const KPluginMetaData &data)
     connect(settings(), &LookAndFeelSettings::lookAndFeelPackageChanged, handleLookAndFeelPackageChanged);
     handleLookAndFeelPackageChanged();
 
-    connect(m_lnf, &LookAndFeelManager::plasmaLockedChanged, this, &KCMLookandFeel::plasmaLockedChanged);
+    connect(m_lnf, &KLookAndFeelManager::plasmaLockedChanged, this, &KCMLookandFeel::plasmaLockedChanged);
 }
 
 KCMLookandFeel::~KCMLookandFeel()
@@ -356,7 +356,7 @@ bool KCMLookandFeel::removeRow(const QString &pluginId, bool removeDependencies)
         return false;
     }
 
-    const auto contentsToRemove = removeDependencies ? index.data(ContentsRole).value<LookAndFeelManager::Contents>() : LookAndFeelManager::Empty;
+    const auto contentsToRemove = removeDependencies ? index.data(ContentsRole).value<KLookAndFeelManager::Contents>() : KLookAndFeelManager::Empty;
     const bool isRemoved = m_lnf->remove(package, contentsToRemove);
 
     if (isRemoved) {
@@ -473,17 +473,17 @@ void KCMLookandFeel::apply()
     }
 }
 
-LookAndFeelManager::Contents KCMLookandFeel::themeContents() const
+KLookAndFeelManager::Contents KCMLookandFeel::themeContents() const
 {
     return m_themeContents;
 }
 
-LookAndFeelManager::Contents KCMLookandFeel::selectedContents() const
+KLookAndFeelManager::Contents KCMLookandFeel::selectedContents() const
 {
     return m_selectedContents;
 }
 
-void KCMLookandFeel::setSelectedContents(LookAndFeelManager::Contents items)
+void KCMLookandFeel::setSelectedContents(KLookAndFeelManager::Contents items)
 {
     if (selectedContents() == items) {
         return;
@@ -496,10 +496,10 @@ void KCMLookandFeel::setSelectedContents(LookAndFeelManager::Contents items)
 void KCMLookandFeel::resetSelectedContents()
 {
     // Reset the user selection to those contents provided by the theme.
-    LookAndFeelManager::Contents resetContents = m_themeContents;
+    KLookAndFeelManager::Contents resetContents = m_themeContents;
     // But do not select layout contents by default if there appaerance settings
-    if (m_themeContents & LookAndFeelManager::AppearanceSettings) {
-        resetContents &= ~LookAndFeelManager::LayoutSettings;
+    if (m_themeContents & KLookAndFeelManager::AppearanceSettings) {
+        resetContents &= ~KLookAndFeelManager::LayoutSettings;
     }
     setSelectedContents(resetContents);
 }
