@@ -20,14 +20,13 @@ target_link_libraries(kcm_lookandfeel PRIVATE
     PW::KWorkspace
 )
 
-kcmutils_generate_module_data(
-    lookandfeeldata
+kcmutils_generate_module_data(kcm_lookandfeel
     MODULE_DATA_HEADER lookandfeeldata.h
     MODULE_DATA_CLASS_NAME LookAndFeelData
     SETTINGS_HEADERS lookandfeelsettings.h
     SETTINGS_CLASSES LookAndFeelSettings
 )
-target_sources(kcm_lookandfeel PRIVATE ${lookandfeeldata})
+
 kconfig_add_kcfg_files(kcm_lookandfeel lookandfeelsettings.kcfgc GENERATE_MOC)
 
 install(FILES lookandfeelsettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
