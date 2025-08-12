@@ -14,22 +14,11 @@
 #include "lookandfeeldata.h"
 #include "lookandfeelsettings.h"
 
-#include <KDialogJobUiDelegate>
-#include <KIO/ApplicationLauncherJob>
-#include <KLocalizedString>
 #include <KPackage/PackageLoader>
-#include <KPluginFactory>
-#include <KService>
 
 #include <QCollator>
-#include <QDBusConnection>
-#include <QDBusMessage>
 #include <QDebug>
 #include <QFileInfo>
-#include <QProcess>
-#include <QQuickItem>
-#include <QQuickWindow>
-#include <QStandardItemModel>
 #include <QStandardPaths>
 
 using namespace Qt::StringLiterals;
