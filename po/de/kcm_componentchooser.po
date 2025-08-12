@@ -6,25 +6,26 @@
 # Frederik Schwarzer <schwarzer@kde.org>, 2016.
 # Burkhard Lück <lueck@hube-lueck.de>, 2016, 2017, 2020, 2021.
 # Jannick Kuhr <opensource@kuhr.org>, 2023.
+# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n@prly.mozmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_componentchooser\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-16 00:43+0000\n"
-"PO-Revision-Date: 2025-05-29 18:48+0200\n"
-"Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
+"PO-Revision-Date: 2025-08-03 21:48+0200\n"
+"Last-Translator: Philipp Kiemle <l10n@prly.mozmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #: applicationmodel.cpp:67
 #, kde-format
 msgid "Other…"
-msgstr "Andere ..."
+msgstr "Andere …"
 
 #: components/componentchooserarchivemanager.cpp:15
 #, kde-format
@@ -126,7 +127,7 @@ msgstr "Erzwingen, alle in %1 zu öffnen"
 #: ui/ComponentOverlay.qml:159
 #, kde-format
 msgid "Configure Manually…"
-msgstr "Manuell einrichten ..."
+msgstr "Manuell einrichten …"
 
 #: ui/main.qml:17
 #, kde-format
@@ -134,8 +135,8 @@ msgid ""
 "’%1’ seems to not support the following mimetypes associated with this kind "
 "of application: %2"
 msgstr ""
-"„%1“ scheint die folgenden mit dieser Art von Anwendungen zugeordneten MIME-"
-"Typen nicht zu unterstützen: %2"
+"„%1“ scheint folgende MIME-Typen nicht zu unterstützen, die dieser Art von "
+"Anwendungen zugeordnet sind: %2"
 
 #: ui/main.qml:34
 #, kde-format
