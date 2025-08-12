@@ -372,10 +372,3 @@ msgstr "选择要应用的内容…"
 #, kde-format
 msgid "Show fewer options…"
 msgstr "显示更少选项…"
-
-#~ msgid ""
-#~ "You have to restart the Plasma session for these changes to take effect."
-#~ msgstr "您必须重新启动 Plasma 会话才能使这些更改生效。"
-
-#~ msgid "Cursor Settings Changed"
-#~ msgstr "光标设置已更改"
