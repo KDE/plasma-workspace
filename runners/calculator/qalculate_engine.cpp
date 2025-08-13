@@ -82,25 +82,6 @@ QalculateEngine::~QalculateEngine()
     }
 }
 
-void QalculateEngine::updateExchangeRates()
-{
-    QUrl source = QUrl(u"http://www.ecb.int/stats/eurofxref/eurofxref-daily.xml"_s);
-    QUrl dest = QUrl::fromLocalFile(QFile::decodeName(CALCULATOR->getExchangeRatesFileName().c_str()));
-
-    KIO::Job *getJob = KIO::file_copy(source, dest, -1, KIO::Overwrite | KIO::HideProgressInfo);
-    connect(getJob, &KJob::result, this, &QalculateEngine::updateResult);
-}
-
-void QalculateEngine::updateResult(KJob *job)
-{
-    if (job->error()) {
-        qDebug() << "The exchange rates could not be updated. The following error has been reported:" << job->errorString();
-    } else {
-        // the exchange rates have been successfully updated, now load them
-        CALCULATOR->loadExchangeRates();
-    }
-}
-
 #if QALCULATE_MAJOR_VERSION > 2 || QALCULATE_MINOR_VERSION > 6
 bool has_error()
 {

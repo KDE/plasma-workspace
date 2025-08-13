@@ -30,10 +30,6 @@ public:
 
 public Q_SLOTS:
     QString evaluate(const QString &expression, bool *isApproximate = nullptr, int base = 10, const QString &customBase = QString());
-    void updateExchangeRates();
-
-protected Q_SLOTS:
-    void updateResult(KJob *);
 
 private:
     QString m_lastResult;
