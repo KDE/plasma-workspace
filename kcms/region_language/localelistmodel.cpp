@@ -19,6 +19,7 @@ LocaleListModel::LocaleListModel(QObject *parent)
     : QAbstractListModel(parent)
 {
     const QList<QLocale> m_locales = QLocale::matchingLocales(QLocale::AnyLanguage, QLocale::AnyScript, QLocale::AnyCountry);
+    std::unordered_map<QString, QLocale> map;
     m_localeData.reserve(m_locales.size() + 1);
     // we use first QString for title in Unset option
     m_localeData.push_back(LocaleData{i18n("Default for System"), QString(), QString(), QString(), i18n("Default"), QLocale()});
@@ -29,7 +30,11 @@ LocaleListModel::LocaleListModel(QObject *parent)
             continue;
         }
 #endif
-
+        if (map.contains(locale.name())) {
+            qDebug() << "same locale: " << map[locale.name()] << " " << locale;
+        } else {
+            map[locale.name()] = locale;
+        }
         m_localeData.push_back(LocaleData{.nativeName = locale.nativeLanguageName(),
                                           .englishName = QLocale::languageToString(locale.language()),
                                           .nativeCountryName = locale.nativeCountryName(),
@@ -82,7 +87,7 @@ QVariant LocaleListModel::data(const QModelIndex &index, int role) const
             // otherwise Qt doesn't accept dead keys and garbles the output as well
             cvalue.append(QLatin1String(".UTF-8"));
         }
-        return cvalue;
+        return data.locale.bcp47Name();
     }
     case Example: {
         switch (m_configType) {
