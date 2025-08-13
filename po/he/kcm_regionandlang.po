@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-05 02:37+0000\n"
+"POT-Creation-Date: 2025-08-13 02:39+0000\n"
 "PO-Revision-Date: 2024-05-05 11:54+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -330,7 +330,7 @@ msgstr "לא ידוע"
 msgid "Default for System"
 msgstr "ברירת המחדל למערכת"
 
-#: localelistmodel.cpp:22 localelistmodel.cpp:71 ui/main.qml:377
+#: localelistmodel.cpp:22 localelistmodel.cpp:71 ui/main.qml:383
 #, kde-format
 msgid "Default"
 msgstr "ברירת מחדל"
@@ -567,56 +567,56 @@ msgstr ""
 "הגדרות אזוריות וקובצי תמיכה בשפה חיוניים הותקנו. עכשיו אפשר לכבות את המחשב "
 "בבטחה."
 
-#: ui/main.qml:176
+#: ui/main.qml:175
 #, kde-format
 msgctxt "@action:button for change the locale used"
 msgid "Modify…"
 msgstr "שינוי…"
 
-#: ui/main.qml:212
+#: ui/main.qml:211
 #, kde-format
 msgctxt "@title:window"
 msgid "Data and Storage Sizes"
 msgstr "גודלי נתונים ואחסון"
 
-#: ui/main.qml:275
+#: ui/main.qml:277
 #, kde-format
 msgid "Numbers"
 msgstr "מספרים"
 
-#: ui/main.qml:277
+#: ui/main.qml:279
 #, kde-format
 msgid "Time"
 msgstr "שעה"
 
-#: ui/main.qml:279
+#: ui/main.qml:281
 #, kde-format
 msgid "Currency"
 msgstr "מטבע"
 
-#: ui/main.qml:281
+#: ui/main.qml:283
 #, kde-format
 msgid "Measurements"
 msgstr "מדידות"
 
-#: ui/main.qml:283
+#: ui/main.qml:285
 #, kde-format
 msgid "Paper Size"
 msgstr "גודל נייר"
 
-#: ui/main.qml:285
+#: ui/main.qml:287
 #, kde-format
 msgctxt "Postal Address"
 msgid "Address"
 msgstr "כתובת"
 
-#: ui/main.qml:287
+#: ui/main.qml:289
 #, kde-format
 msgctxt "Name Style"
 msgid "Name"
 msgstr "שם"
 
-#: ui/main.qml:289
+#: ui/main.qml:291
 #, kde-format
 msgctxt "Phone Numbers"
 msgid "Phone number"
