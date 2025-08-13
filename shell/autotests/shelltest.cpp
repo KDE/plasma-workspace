@@ -245,6 +245,8 @@ void ShellTest::testScreenInsertion()
 
 void ShellTest::testPanelInsertion()
 {
+    insertScreen(QRect(1920, 0, 1920, 1080), QStringLiteral("WL-1"));
+    setScreenOrder({u"WL-1"_s}, false);
     QCOMPARE(m_corona->m_panelViews.size(), 0);
     auto panelCont = m_corona->addPanel(QStringLiteral("org.kde.plasma.testpanel"));
     QCOMPARE(panelCont->pluginMetaData().pluginId(), QStringLiteral("org.kde.plasma.testpanel"));
@@ -604,9 +606,35 @@ void ShellTest::testReorderScreens()
 void ShellTest::testReorderContainments()
 {
     // this tests assigning different screens to containments without the actual order changing
-    testSecondScreenInsertion();
-    testPanelInsertion();
+    // Add screens
+    auto geom1 = QRect(1920, 0, 1920, 1080);
+    auto name1 = QStringLiteral("DP-1");
+    auto result1 = insertScreen(geom1, name1);
 
+    auto geom2 = QRect(3840, 0, 1920, 1080);
+    auto name2 = QStringLiteral("DP-2");
+    auto result2 = insertScreen(geom2, name2);
+
+    setScreenOrder({u"WL-1"_s, u"DP-1"_s, u"DP-2"_s}, true);
+
+    QCOMPARE(qApp->screens().size(), 3);
+    QCOMPARE(result1->geometry(), geom1);
+    QCOMPARE(result1->name(), name1);
+
+    QCOMPARE(result2->geometry(), geom2);
+    QCOMPARE(result2->name(), name2);
+
+    // Add panel
+    QCOMPARE(m_corona->m_panelViews.size(), 0);
+    auto panelCont = m_corona->addPanel(QStringLiteral("org.kde.plasma.testpanel"));
+    QCOMPARE(panelCont->pluginMetaData().pluginId(), QStringLiteral("org.kde.plasma.testpanel"));
+    // If the panel fails to load (on ci plasma-desktop isn't here) we want the "failed" containment to be of panel type anyways
+    QCOMPARE(m_corona->m_panelViews.size(), 1);
+    QVERIFY(m_corona->m_panelViews.contains(panelCont));
+    QCOMPARE(panelCont->screen(), 0);
+    QCOMPARE(m_corona->m_panelViews[panelCont]->screen(), qApp->primaryScreen());
+
+    // Run the actual test
     QList<DesktopView *> desktopViews;
     QList<Plasma::Containment *> desktopContainments;
     QList<QScreen *> screens = m_corona->m_screenPool->screenOrder().toVector();
@@ -651,6 +679,8 @@ void ShellTest::testPanelSizeModes()
     int thickness = 96;
     int lengthMax = 300;
     int lengthMin = lengthMax / 2;
+    insertScreen(QRect(1920, 0, 1920, 1080), QStringLiteral("WL-1"));
+    setScreenOrder({u"WL-1"_s}, false);
 
     // Create a panel and prepare it for testing
     QCOMPARE(m_corona->m_panelViews.size(), 0);
