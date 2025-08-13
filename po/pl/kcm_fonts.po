@@ -1,6 +1,6 @@
 # translation of kcmfonts.po to Polish
 # translation of kcmfonts.po to
-# Version: $Revision: 1714256 $
+# Version: $Revision: 1715922 $
 # SPDX-FileCopyrightText: 2012, 2014, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2025 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 # Michał Rudolf <mrudolf@kdewebdev.org>, 2002.
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2002, 2003, 2004, 2005, 2006, 2008.
@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-07 00:44+0000\n"
+"POT-Creation-Date: 2025-08-13 00:45+0000\n"
 "PO-Revision-Date: 2025-07-26 20:18+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -36,31 +36,31 @@ msgid "General font"
 msgstr "Ogólna czcionka"
 
 #. i18n: ectx: label, entry (fixed), group (General)
-#: fontssettings.kcfg:21
+#: fontssettings.kcfg:17
 #, kde-format
 msgid "Fixed width font"
 msgstr "Czcionka o stałej szerokości"
 
 #. i18n: ectx: label, entry (smallestReadableFont), group (General)
-#: fontssettings.kcfg:33
+#: fontssettings.kcfg:25
 #, kde-format
 msgid "Small font"
 msgstr "Mała czcionka"
 
 #. i18n: ectx: label, entry (toolBarFont), group (General)
-#: fontssettings.kcfg:45
+#: fontssettings.kcfg:33
 #, kde-format
 msgid "Tool bar font"
 msgstr "Czcionka paska narzędzi"
 
 #. i18n: ectx: label, entry (menuFont), group (General)
-#: fontssettings.kcfg:57
+#: fontssettings.kcfg:41
 #, kde-format
 msgid "Menu font"
 msgstr "Czcionka menu"
 
 #. i18n: ectx: label, entry (activeFont), group (WM)
-#: fontssettings.kcfg:71
+#: fontssettings.kcfg:51
 #, kde-format
 msgid "Window title font"
 msgstr "Czcionka nazwy okna"

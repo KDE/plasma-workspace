@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-07 00:44+0000\n"
+"POT-Creation-Date: 2025-08-13 00:45+0000\n"
 "PO-Revision-Date: 2024-03-23 13:45+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -35,31 +35,31 @@ msgid "General font"
 msgstr "Generell skrift"
 
 #. i18n: ectx: label, entry (fixed), group (General)
-#: fontssettings.kcfg:21
+#: fontssettings.kcfg:17
 #, kde-format
 msgid "Fixed width font"
 msgstr "Fastbreiddskrift"
 
 #. i18n: ectx: label, entry (smallestReadableFont), group (General)
-#: fontssettings.kcfg:33
+#: fontssettings.kcfg:25
 #, kde-format
 msgid "Small font"
 msgstr "Lita skrift"
 
 #. i18n: ectx: label, entry (toolBarFont), group (General)
-#: fontssettings.kcfg:45
+#: fontssettings.kcfg:33
 #, kde-format
 msgid "Tool bar font"
 msgstr "Verktøylinjeknapp"
 
 #. i18n: ectx: label, entry (menuFont), group (General)
-#: fontssettings.kcfg:57
+#: fontssettings.kcfg:41
 #, kde-format
 msgid "Menu font"
 msgstr "Menyskrift"
 
 #. i18n: ectx: label, entry (activeFont), group (WM)
-#: fontssettings.kcfg:71
+#: fontssettings.kcfg:51
 #, kde-format
 msgid "Window title font"
 msgstr "Vindaugstittel-skrift"

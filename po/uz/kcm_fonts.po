@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-07 00:44+0000\n"
+"POT-Creation-Date: 2025-08-13 00:45+0000\n"
 "PO-Revision-Date: 2006-12-17 12:09+0000\n"
 "Last-Translator: Mashrab Kuvatov <kmashrab@uni-bremen.de>\n"
 "Language-Team: Uzbek <floss-uz-l10n@googlegroups.com>\n"
@@ -31,33 +31,33 @@ msgid "General font"
 msgstr "Umumiy"
 
 #. i18n: ectx: label, entry (fixed), group (General)
-#: fontssettings.kcfg:21
+#: fontssettings.kcfg:17
 #, fuzzy, kde-format
 #| msgid "Fixed width"
 msgid "Fixed width font"
 msgstr "Eni oʻzgarmaydigan"
 
 #. i18n: ectx: label, entry (smallestReadableFont), group (General)
-#: fontssettings.kcfg:33
+#: fontssettings.kcfg:25
 #, kde-format
 msgid "Small font"
 msgstr ""
 
 #. i18n: ectx: label, entry (toolBarFont), group (General)
-#: fontssettings.kcfg:45
+#: fontssettings.kcfg:33
 #, fuzzy, kde-format
 #| msgid "Toolbar"
 msgid "Tool bar font"
 msgstr "Asboblar paneli"
 
 #. i18n: ectx: label, entry (menuFont), group (General)
-#: fontssettings.kcfg:57
+#: fontssettings.kcfg:41
 #, kde-format
 msgid "Menu font"
 msgstr ""
 
 #. i18n: ectx: label, entry (activeFont), group (WM)
-#: fontssettings.kcfg:71
+#: fontssettings.kcfg:51
 #, fuzzy, kde-format
 #| msgid "Window title"
 msgid "Window title font"

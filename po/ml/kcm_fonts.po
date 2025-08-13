@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-07 00:44+0000\n"
+"POT-Creation-Date: 2025-08-13 00:45+0000\n"
 "PO-Revision-Date: 2021-09-09 12:59+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -33,31 +33,31 @@ msgid "General font"
 msgstr "സാധാരണ ഫോണ്ട്"
 
 #. i18n: ectx: label, entry (fixed), group (General)
-#: fontssettings.kcfg:21
+#: fontssettings.kcfg:17
 #, kde-format
 msgid "Fixed width font"
 msgstr "തുല്യ വീതിയുള്ള ഫോണ്ട്"
 
 #. i18n: ectx: label, entry (smallestReadableFont), group (General)
-#: fontssettings.kcfg:33
+#: fontssettings.kcfg:25
 #, kde-format
 msgid "Small font"
 msgstr "ചെറിയ ഫോണ്ട്"
 
 #. i18n: ectx: label, entry (toolBarFont), group (General)
-#: fontssettings.kcfg:45
+#: fontssettings.kcfg:33
 #, kde-format
 msgid "Tool bar font"
 msgstr "ഉപകരണപ്പട്ടയുടെ ഫോണ്ട്"
 
 #. i18n: ectx: label, entry (menuFont), group (General)
-#: fontssettings.kcfg:57
+#: fontssettings.kcfg:41
 #, kde-format
 msgid "Menu font"
 msgstr "മെനു അക്ഷരസഞ്ചയം"
 
 #. i18n: ectx: label, entry (activeFont), group (WM)
-#: fontssettings.kcfg:71
+#: fontssettings.kcfg:51
 #, kde-format
 msgid "Window title font"
 msgstr "ജാലകത്തിന്റെ തലക്കെട്ടിനുള്ള ഫോണ്ട്"

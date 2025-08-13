@@ -384,10 +384,3 @@ msgstr "Vel kva du vil ta i bruk …"
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Vis færre val …"
-
-#~ msgid ""
-#~ "You have to restart the Plasma session for these changes to take effect."
-#~ msgstr "Du må starta økta på nytt for at endringane skal tre i kraft."
-
-#~ msgid "Cursor Settings Changed"
-#~ msgstr "Peikarinnstillingar endra"

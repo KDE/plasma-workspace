@@ -2,7 +2,7 @@
 # Translation of kcmfonts.po to Slovenian
 # KDEBASE TRANSLATION TO SLOVENIAN LANGUAGE.
 # Copyright (C) 2001, 2003, 2004, 2006, 2007 Free Software Foundation, Inc.
-# $Id: kcm_fonts.po 1713195 2025-07-11 01:24:21Z scripty $
+# $Id: kcm_fonts.po 1715922 2025-08-13 01:24:53Z scripty $
 # $Source$
 #
 # Roman Maurer <roman.maurer@amis.net>, 2001.
@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-07 00:44+0000\n"
+"POT-Creation-Date: 2025-08-13 00:45+0000\n"
 "PO-Revision-Date: 2025-07-10 14:16+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -41,31 +41,31 @@ msgid "General font"
 msgstr "Splošna pisava"
 
 #. i18n: ectx: label, entry (fixed), group (General)
-#: fontssettings.kcfg:21
+#: fontssettings.kcfg:17
 #, kde-format
 msgid "Fixed width font"
 msgstr "Pisava stalne širine"
 
 #. i18n: ectx: label, entry (smallestReadableFont), group (General)
-#: fontssettings.kcfg:33
+#: fontssettings.kcfg:25
 #, kde-format
 msgid "Small font"
 msgstr "Majhna pisava"
 
 #. i18n: ectx: label, entry (toolBarFont), group (General)
-#: fontssettings.kcfg:45
+#: fontssettings.kcfg:33
 #, kde-format
 msgid "Tool bar font"
 msgstr "Pisava orodne letvice"
 
 #. i18n: ectx: label, entry (menuFont), group (General)
-#: fontssettings.kcfg:57
+#: fontssettings.kcfg:41
 #, kde-format
 msgid "Menu font"
 msgstr "Pisava menija"
 
 #. i18n: ectx: label, entry (activeFont), group (WM)
-#: fontssettings.kcfg:71
+#: fontssettings.kcfg:51
 #, kde-format
 msgid "Window title font"
 msgstr "Pisava naslova okna"

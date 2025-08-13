@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-07 00:44+0000\n"
+"POT-Creation-Date: 2025-08-13 00:45+0000\n"
 "PO-Revision-Date: 2017-10-30 23:08+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -37,7 +37,7 @@ msgid "General font"
 msgstr "Општи"
 
 #. i18n: ectx: label, entry (fixed), group (General)
-#: fontssettings.kcfg:21
+#: fontssettings.kcfg:17
 #, fuzzy, kde-format
 #| msgctxt "font usage"
 #| msgid "Fixed width"
@@ -45,7 +45,7 @@ msgid "Fixed width font"
 msgstr "Фиксне ширине"
 
 #. i18n: ectx: label, entry (smallestReadableFont), group (General)
-#: fontssettings.kcfg:33
+#: fontssettings.kcfg:25
 #, fuzzy, kde-format
 #| msgctxt "font usage"
 #| msgid "Small"
@@ -53,7 +53,7 @@ msgid "Small font"
 msgstr "Мали"
 
 #. i18n: ectx: label, entry (toolBarFont), group (General)
-#: fontssettings.kcfg:45
+#: fontssettings.kcfg:33
 #, fuzzy, kde-format
 #| msgctxt "font usage"
 #| msgid "Toolbar"
@@ -61,13 +61,13 @@ msgid "Tool bar font"
 msgstr "Трака алатки"
 
 #. i18n: ectx: label, entry (menuFont), group (General)
-#: fontssettings.kcfg:57
+#: fontssettings.kcfg:41
 #, kde-format
 msgid "Menu font"
 msgstr ""
 
 #. i18n: ectx: label, entry (activeFont), group (WM)
-#: fontssettings.kcfg:71
+#: fontssettings.kcfg:51
 #, fuzzy, kde-format
 #| msgctxt "font usage"
 #| msgid "Window title"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-11 00:44+0000\n"
+"POT-Creation-Date: 2025-08-13 00:45+0000\n"
 "PO-Revision-Date: 2025-07-19 13:05+0200\n"
 "Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -334,7 +334,7 @@ msgstr "Ukendt"
 msgid "Default for System"
 msgstr "Standard for system"
 
-#: localelistmodel.cpp:24 localelistmodel.cpp:80 ui/main.qml:377
+#: localelistmodel.cpp:24 localelistmodel.cpp:80 ui/main.qml:383
 #, kde-format
 msgid "Default"
 msgstr "Standard"
@@ -576,56 +576,56 @@ msgstr ""
 "Nødvendige lokalitets- og sprogunderstøttelsesfiler er blevet installeret. "
 "Det er nu sikkert at slukke computeren."
 
-#: ui/main.qml:176
+#: ui/main.qml:175
 #, kde-format
 msgctxt "@action:button for change the locale used"
 msgid "Modify…"
 msgstr "Ændr…"
 
-#: ui/main.qml:212
+#: ui/main.qml:211
 #, kde-format
 msgctxt "@title:window"
 msgid "Data and Storage Sizes"
 msgstr "Data- og lagringsfiler"
 
-#: ui/main.qml:275
+#: ui/main.qml:277
 #, kde-format
 msgid "Numbers"
 msgstr "Tal"
 
-#: ui/main.qml:277
+#: ui/main.qml:279
 #, kde-format
 msgid "Time"
 msgstr "Tid"
 
-#: ui/main.qml:279
+#: ui/main.qml:281
 #, kde-format
 msgid "Currency"
 msgstr "Valuta"
 
-#: ui/main.qml:281
+#: ui/main.qml:283
 #, kde-format
 msgid "Measurements"
 msgstr "Målinger"
 
-#: ui/main.qml:283
+#: ui/main.qml:285
 #, kde-format
 msgid "Paper Size"
 msgstr "Papirstørrelse"
 
-#: ui/main.qml:285
+#: ui/main.qml:287
 #, kde-format
 msgctxt "Postal Address"
 msgid "Address"
 msgstr "Adresse"
 
-#: ui/main.qml:287
+#: ui/main.qml:289
 #, kde-format
 msgctxt "Name Style"
 msgid "Name"
 msgstr "Navn"
 
-#: ui/main.qml:289
+#: ui/main.qml:291
 #, kde-format
 msgctxt "Phone Numbers"
 msgid "Phone number"
