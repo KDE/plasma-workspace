@@ -1,11 +1,13 @@
 set(libdbusmenu_SRCS
-dbusmenuimporter.cpp
-dbusmenushortcut_p.cpp
-dbusmenutypes_p.cpp
-utils.cpp
-dbusmenuimporter.h
-dbusmenushortcut_p.h
-dbusmenutypes_p.h
+    dbusmenuimporter.cpp
+    dbusmenuimporter.h
+    dbusmenumodel.cpp
+    dbusmenushortcut_p.cpp
+    dbusmenushortcut_p.h
+    dbusmenutypes_p.cpp
+    dbusmenutypes_p.h
+    dbusmenuview.cpp
+    utils.cpp
 )
 
 ecm_qt_declare_logging_category(libdbusmenu_SRCS HEADER debug.h
