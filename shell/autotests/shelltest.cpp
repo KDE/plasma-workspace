@@ -47,6 +47,7 @@ class ShellTest : public QObject, DefaultCompositor
 
     QScreen *insertScreen(const QRect &geometry, const QString &name);
     void setScreenOrder(const QStringList &order, bool expectOrderChanged);
+    void resetScreen();
 
 private Q_SLOTS:
     void initTestCase();
@@ -147,6 +148,15 @@ void ShellTest::setScreenOrder(const QStringList &order, bool expectOrderChanged
     }
 }
 
+void ShellTest::resetScreen()
+{
+    QSignalSpy screenOrderChangedSpy(m_corona, &ShellCorona::screenOrderChanged);
+    exec([=, this] {
+        outputOrder()->setList({u"WL-1"_s});
+    });
+    screenOrderChangedSpy.wait(1000);
+}
+
 void ShellTest::initTestCase()
 {
     QStandardPaths::setTestModeEnabled(true);
@@ -245,8 +255,7 @@ void ShellTest::testScreenInsertion()
 
 void ShellTest::testPanelInsertion()
 {
-    insertScreen(QRect(0, 0, 1920, 1080), QStringLiteral("WL-1"));
-    setScreenOrder({u"WL-1"_s}, false);
+    resetScreen();
     QCOMPARE(m_corona->m_panelViews.size(), 0);
     auto panelCont = m_corona->addPanel(QStringLiteral("org.kde.plasma.testpanel"));
     QCOMPARE(panelCont->pluginMetaData().pluginId(), QStringLiteral("org.kde.plasma.testpanel"));
@@ -607,6 +616,7 @@ void ShellTest::testReorderContainments()
 {
     // this tests assigning different screens to containments without the actual order changing
     // Add screens
+    resetScreen();
     auto geom1 = QRect(1920, 0, 1920, 1080);
     auto name1 = QStringLiteral("DP-1");
     auto result1 = insertScreen(geom1, name1);
@@ -679,8 +689,7 @@ void ShellTest::testPanelSizeModes()
     int thickness = 96;
     int lengthMax = 300;
     int lengthMin = lengthMax / 2;
-    insertScreen(QRect(0, 0, 1920, 1080), QStringLiteral("WL-1"));
-    setScreenOrder({u"WL-1"_s}, false);
+    resetScreen();
 
     // Create a panel and prepare it for testing
     QCOMPARE(m_corona->m_panelViews.size(), 0);
