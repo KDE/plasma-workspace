@@ -188,6 +188,9 @@ void ShellTest::initTestCase()
 
     m_plasmaDir = QDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + u'/' + u"plasma");
     m_plasmaDir.removeRecursively();
+    qWarning() << m_plasmaDir;
+
+    qWarning() << QFINDTESTDATA("data/testpanel");
 
     copyDirectory(QFINDTESTDATA("data/testpanel"), m_plasmaDir.absolutePath() + u"/plasmoids/org.kde.plasma.testpanel");
 
@@ -196,8 +199,11 @@ void ShellTest::initTestCase()
     cg.sync();
 
     qApp->setProperty("org.kde.KActivities.core.disableAutostart", true);
+    qWarning() << "setting corona";
     m_corona = new ShellCorona();
+    qWarning() << "setting shell";
     m_corona->setShell(u"org.kde.plasma.nano"_s);
+    qWarning() << "init";
     m_corona->init();
 
     QTRY_COMPARE(QGuiApplication::screens().size(), 1);

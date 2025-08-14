@@ -377,6 +377,7 @@ void ShellCorona::setShell(const QString &shell)
     }
 
     m_shell = shell;
+    qWarning() << "loading package" << shell;
     KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/Shell"));
     package.setPath(shell);
     package.setAllowExternalPaths(true);
