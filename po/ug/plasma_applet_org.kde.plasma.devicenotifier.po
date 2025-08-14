@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-06 00:46+0000\n"
+"POT-Creation-Date: 2025-08-14 00:44+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -171,7 +171,7 @@ msgstr "چېكىلسە بۇ ئۈسكۈنىنى بىخەتەر چىقىرىۋېت
 msgid "Could not repair this device: %1"
 msgstr "چېكىلسە بۇ ئۈسكۈنىنى بىخەتەر چىقىرىۋېتىدۇ."
 
-#: qml/DeviceItem.qml:105
+#: qml/DeviceItem.qml:106
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Removing is a less technical word for Unmounting; translation shoud be "
@@ -183,7 +183,7 @@ msgctxt ""
 msgid "Checking…"
 msgstr "ئۆچۈرۈۋاتىدۇ..."
 
-#: qml/DeviceItem.qml:107
+#: qml/DeviceItem.qml:108
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Removing is a less technical word for Unmounting; translation shoud be "
@@ -195,7 +195,7 @@ msgctxt ""
 msgid "Repairing…"
 msgstr "ئۆچۈرۈۋاتىدۇ..."
 
-#: qml/DeviceItem.qml:110
+#: qml/DeviceItem.qml:111
 #, fuzzy, kde-format
 #| msgctxt "@info:status Free disk space"
 #| msgid "%1 free"
@@ -203,7 +203,7 @@ msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "%1 بوش"
 
-#: qml/DeviceItem.qml:114
+#: qml/DeviceItem.qml:115
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Accessing is a less technical word for Mounting; translation should be "
@@ -215,7 +215,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr "زىيارەت قىلىۋاتىدۇ…"
 
-#: qml/DeviceItem.qml:117
+#: qml/DeviceItem.qml:118
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Removing is a less technical word for Unmounting; translation shoud be "
@@ -227,7 +227,7 @@ msgctxt ""
 msgid "Removing…"
 msgstr "ئۆچۈرۈۋاتىدۇ..."
 
-#: qml/DeviceItem.qml:120
+#: qml/DeviceItem.qml:121
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr ""

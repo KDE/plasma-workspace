@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# SPDX-FileCopyrightText: 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2024, 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-06 00:44+0000\n"
-"PO-Revision-Date: 2024-11-11 16:57+0400\n"
+"PO-Revision-Date: 2025-08-13 18:25+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -32,8 +32,8 @@ msgid ""
 "system is low on memory. Consider closing unused applications or browser "
 "tabs."
 msgstr ""
-"أنهي الأمر <command>%1</command> بواسطة نواة لينكس لأن النظام يعاني من نقص "
-"في الذاكرة. فكر في إغلاق التطبيقات أو علامات تبويب المتصفح غير المستخدمة."
+"أُنهي الأمر <command>%1</command> بواسطة نواة لينكس لأن النظام يعاني من نقص "
+"في الذاكرة. فكّر في إغلاق التطبيقات أو ألسنة المتصفح غير المستخدمة."
 
 #: module.cpp:77
 #, kde-kuit-format
@@ -44,7 +44,7 @@ msgid ""
 "applications or browser tabs."
 msgstr ""
 "أنهيت الخدمة الخلفية <command>%1</command> بواسطة نواة لينكس لأن النظام "
-"يعاني من نقص في الذاكرة. فكر في إغلاق التطبيقات أو علامات تبويب المتصفح غير "
+"يعاني من نقص في الذاكرة. فكر في إغلاق التطبيقات أو ألسنة المتصفح غير "
 "المستخدمة."
 
 #: module.cpp:85

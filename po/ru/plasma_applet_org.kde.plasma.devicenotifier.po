@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-06 00:46+0000\n"
+"POT-Creation-Date: 2025-08-14 00:44+0000\n"
 "PO-Revision-Date: 2025-07-18 18:47+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -181,7 +181,7 @@ msgstr "Не удалось отключить это устройство."
 msgid "Could not repair this device: %1"
 msgstr "Не удалось устранить проблему с работой этого устройства: %1"
 
-#: qml/DeviceItem.qml:105
+#: qml/DeviceItem.qml:106
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -189,7 +189,7 @@ msgctxt ""
 msgid "Checking…"
 msgstr "Проверка…"
 
-#: qml/DeviceItem.qml:107
+#: qml/DeviceItem.qml:108
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -197,13 +197,13 @@ msgctxt ""
 msgid "Repairing…"
 msgstr "Устранение проблемы…"
 
-#: qml/DeviceItem.qml:110
+#: qml/DeviceItem.qml:111
 #, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "Свободно %1 из %2"
 
-#: qml/DeviceItem.qml:114
+#: qml/DeviceItem.qml:115
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -211,7 +211,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr "Подключение…"
 
-#: qml/DeviceItem.qml:117
+#: qml/DeviceItem.qml:118
 #, kde-format
 msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
@@ -219,7 +219,7 @@ msgctxt ""
 msgid "Removing…"
 msgstr "Отключение…"
 
-#: qml/DeviceItem.qml:120
+#: qml/DeviceItem.qml:121
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr "Не отключайте оборудование, выполняется передача файлов…"

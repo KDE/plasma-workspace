@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: desktop_kdebase\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-06 00:46+0000\n"
+"POT-Creation-Date: 2025-08-14 00:44+0000\n"
 "PO-Revision-Date: 2008-11-13 00:55+0100\n"
 "Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
 "Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
@@ -193,7 +193,7 @@ msgstr "Posledni přizamknjeny grat: %1"
 msgid "Could not repair this device: %1"
 msgstr "Posledni přizamknjeny grat: %1"
 
-#: qml/DeviceItem.qml:105
+#: qml/DeviceItem.qml:106
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Removing is a less technical word for Unmounting; translation should be "
@@ -205,7 +205,7 @@ msgctxt ""
 msgid "Checking…"
 msgstr "Wotwjazuju..."
 
-#: qml/DeviceItem.qml:107
+#: qml/DeviceItem.qml:108
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Removing is a less technical word for Unmounting; translation should be "
@@ -217,13 +217,13 @@ msgctxt ""
 msgid "Repairing…"
 msgstr "Wotwjazuju..."
 
-#: qml/DeviceItem.qml:110
+#: qml/DeviceItem.qml:111
 #, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "%1 swobodne z %2"
 
-#: qml/DeviceItem.qml:114
+#: qml/DeviceItem.qml:115
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -231,7 +231,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr "Wočinjam..."
 
-#: qml/DeviceItem.qml:117
+#: qml/DeviceItem.qml:118
 #, kde-format
 msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
@@ -239,7 +239,7 @@ msgctxt ""
 msgid "Removing…"
 msgstr "Wotwjazuju..."
 
-#: qml/DeviceItem.qml:120
+#: qml/DeviceItem.qml:121
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr ""

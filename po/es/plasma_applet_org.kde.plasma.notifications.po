@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-07 18:31+0000\n"
+"POT-Creation-Date: 2025-08-14 00:44+0000\n"
 "PO-Revision-Date: 2025-06-04 19:39+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -356,39 +356,39 @@ msgctxt "Do not disturb because fullscreen app is focused"
 msgid "Fullscreen app is focused"
 msgstr "Aplicación a pantalla completa tiene el foco"
 
-#: FullRepresentation.qml:509 FullRepresentation.qml:515
+#: FullRepresentation.qml:510 FullRepresentation.qml:516
 #, kde-format
 msgctxt "@action:button"
 msgid "View"
 msgstr "Ver"
 
-#: FullRepresentation.qml:596
+#: FullRepresentation.qml:597
 #, kde-format
 msgid "Close Group"
 msgstr "Cerrar grupo"
 
-#: FullRepresentation.qml:618
+#: FullRepresentation.qml:619
 #, kde-format
 msgid "Show Fewer"
 msgstr "Mostrar menos"
 
-#: FullRepresentation.qml:620
+#: FullRepresentation.qml:621
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr "Mostrar %1 más"
 
-#: FullRepresentation.qml:649 main.qml:108
+#: FullRepresentation.qml:650 main.qml:108
 #, kde-format
 msgid "No unread notifications"
 msgstr "No hay notificaciones sin leer"
 
-#: FullRepresentation.qml:664 main.qml:77
+#: FullRepresentation.qml:665 main.qml:77
 #, kde-format
 msgid "Notification service not available"
 msgstr "Servicio de notificaciones no disponible"
 
-#: FullRepresentation.qml:666
+#: FullRepresentation.qml:667
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"

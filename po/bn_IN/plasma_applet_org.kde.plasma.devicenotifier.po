@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-06 00:46+0000\n"
+"POT-Creation-Date: 2025-08-14 00:44+0000\n"
 "PO-Revision-Date: 2008-07-04 12:04+0530\n"
 "Last-Translator: Runa Bhattacharjee <runab@fedoraproject.org>\n"
 "Language-Team: Bengali INDIA <discuss@ankur.org.in>\n"
@@ -192,7 +192,7 @@ msgstr "চিহ্নিত ডিভাইসের জন্য ১-টি �
 msgid "Could not repair this device: %1"
 msgstr "চিহ্নিত ডিভাইসের জন্য ১-টি কর্ম"
 
-#: qml/DeviceItem.qml:105
+#: qml/DeviceItem.qml:106
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -200,7 +200,7 @@ msgctxt ""
 msgid "Checking…"
 msgstr ""
 
-#: qml/DeviceItem.qml:107
+#: qml/DeviceItem.qml:108
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -208,13 +208,13 @@ msgctxt ""
 msgid "Repairing…"
 msgstr ""
 
-#: qml/DeviceItem.qml:110
+#: qml/DeviceItem.qml:111
 #, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr ""
 
-#: qml/DeviceItem.qml:114
+#: qml/DeviceItem.qml:115
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -222,7 +222,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr ""
 
-#: qml/DeviceItem.qml:117
+#: qml/DeviceItem.qml:118
 #, kde-format
 msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
@@ -230,7 +230,7 @@ msgctxt ""
 msgid "Removing…"
 msgstr ""
 
-#: qml/DeviceItem.qml:120
+#: qml/DeviceItem.qml:121
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr ""

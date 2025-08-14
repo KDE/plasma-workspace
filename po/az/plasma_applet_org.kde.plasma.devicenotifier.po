@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-06 00:46+0000\n"
+"POT-Creation-Date: 2025-08-14 00:44+0000\n"
 "PO-Revision-Date: 2025-04-23 00:15+0400\n"
 "Last-Translator: linux <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -163,7 +163,7 @@ msgstr "Bu cihazı ayırmaq mümkün olmadı."
 msgid "Could not repair this device: %1"
 msgstr "Bu cihazdakı xətaları düzəltmək mümkün olmadı: %1"
 
-#: qml/DeviceItem.qml:105
+#: qml/DeviceItem.qml:106
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -171,7 +171,7 @@ msgctxt ""
 msgid "Checking…"
 msgstr "Yoxlanılır..."
 
-#: qml/DeviceItem.qml:107
+#: qml/DeviceItem.qml:108
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -179,13 +179,13 @@ msgctxt ""
 msgid "Repairing…"
 msgstr "Xətalar düzəldilir..."
 
-#: qml/DeviceItem.qml:110
+#: qml/DeviceItem.qml:111
 #, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "%1/%2 boş"
 
-#: qml/DeviceItem.qml:114
+#: qml/DeviceItem.qml:115
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -193,7 +193,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr "Giriş..."
 
-#: qml/DeviceItem.qml:117
+#: qml/DeviceItem.qml:118
 #, kde-format
 msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
@@ -201,7 +201,7 @@ msgctxt ""
 msgid "Removing…"
 msgstr "Çıxarılır..."
 
-#: qml/DeviceItem.qml:120
+#: qml/DeviceItem.qml:121
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr "Elektrik şəbəkəsindən ayırmayın! Hələ də fayllar köçürülür..."

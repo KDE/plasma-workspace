@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-07 18:31+0000\n"
+"POT-Creation-Date: 2025-08-14 00:44+0000\n"
 "PO-Revision-Date: 2024-11-04 22:01\n"
 "Last-Translator: Antikruk <nashtlumach@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -376,39 +376,39 @@ msgctxt "Do not disturb because fullscreen app is focused"
 msgid "Fullscreen app is focused"
 msgstr ""
 
-#: FullRepresentation.qml:509 FullRepresentation.qml:515
+#: FullRepresentation.qml:510 FullRepresentation.qml:516
 #, kde-format
 msgctxt "@action:button"
 msgid "View"
 msgstr ""
 
-#: FullRepresentation.qml:596
+#: FullRepresentation.qml:597
 #, kde-format
 msgid "Close Group"
 msgstr "Закрыць групу"
 
-#: FullRepresentation.qml:618
+#: FullRepresentation.qml:619
 #, kde-format
 msgid "Show Fewer"
 msgstr "Паказваць менш"
 
-#: FullRepresentation.qml:620
+#: FullRepresentation.qml:621
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr "Паказаць яшчэ %1"
 
-#: FullRepresentation.qml:649 main.qml:108
+#: FullRepresentation.qml:650 main.qml:108
 #, kde-format
 msgid "No unread notifications"
 msgstr "Няма непрачытаных апавяшчэнняў"
 
-#: FullRepresentation.qml:664 main.qml:77
+#: FullRepresentation.qml:665 main.qml:77
 #, kde-format
 msgid "Notification service not available"
 msgstr "Служба апавяшчэнняў недаступная"
 
-#: FullRepresentation.qml:666
+#: FullRepresentation.qml:667
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-07 18:31+0000\n"
+"POT-Creation-Date: 2025-08-14 00:44+0000\n"
 "PO-Revision-Date: 2025-04-27 12:52+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -351,39 +351,39 @@ msgctxt "Do not disturb because fullscreen app is focused"
 msgid "Fullscreen app is focused"
 msgstr "தற்போதைய செயலி முழுத்திரை பயன்முறையிலுள்ளது"
 
-#: FullRepresentation.qml:509 FullRepresentation.qml:515
+#: FullRepresentation.qml:510 FullRepresentation.qml:516
 #, kde-format
 msgctxt "@action:button"
 msgid "View"
 msgstr "காட்டு"
 
-#: FullRepresentation.qml:596
+#: FullRepresentation.qml:597
 #, kde-format
 msgid "Close Group"
 msgstr "குழுவை மூடு"
 
-#: FullRepresentation.qml:618
+#: FullRepresentation.qml:619
 #, kde-format
 msgid "Show Fewer"
 msgstr "சிலவற்றையே காட்டு"
 
-#: FullRepresentation.qml:620
+#: FullRepresentation.qml:621
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr "இன்னும் %1 காட்டு"
 
-#: FullRepresentation.qml:649 main.qml:108
+#: FullRepresentation.qml:650 main.qml:108
 #, kde-format
 msgid "No unread notifications"
 msgstr "படிக்காத அறிவிப்புகள் இல்லை"
 
-#: FullRepresentation.qml:664 main.qml:77
+#: FullRepresentation.qml:665 main.qml:77
 #, kde-format
 msgid "Notification service not available"
 msgstr "அறிவிப்பு சேவை கிடைக்கவில்லை"
 
-#: FullRepresentation.qml:666
+#: FullRepresentation.qml:667
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"
