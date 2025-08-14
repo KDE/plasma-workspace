@@ -85,6 +85,7 @@ RuntimeDependencies:
     'sdk/selenium-webdriver-at-spi': '@latest-kf6'
  - 'on': ['Linux', 'FreeBSD']
    'require':
+    'plasma/kactivitymanagerd': '@same'
     'frameworks/qqc2-desktop-style': '@latest-kf6'
     'plasma/milou': '@same'
 
