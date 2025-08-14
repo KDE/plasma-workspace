@@ -605,6 +605,8 @@ void ShellTest::testReorderScreens()
         QCOMPARE(view->screenToFollow(), qScreenOrderFormSignal[i]);
         QCOMPARE(view->screen()->name(), orderAfter[i]);
         QCOMPARE(view->containment()->screen(), i);
+        // Panels should be visible at this point
+        QVERIFY(m_corona->allPanelsVisible(i));
     }
 
     {
