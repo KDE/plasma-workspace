@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma_engine_weather\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-10 03:31+0000\n"
-"PO-Revision-Date: 2021-12-11 20:38+0400\n"
+"PO-Revision-Date: 2024-06-13 09:22+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -2962,13 +2962,13 @@ msgstr "غ/م"
 #, kde-format
 msgctxt "Geographical location: city, state, ISO-country-code"
 msgid "%1, %2, %3"
-msgstr "%1 ،  %2 ، %3"
+msgstr "%1،  %2، %3"
 
 #: ions/wetter.com/ion_wettercom.cpp:363
 #, kde-format
 msgctxt "Geographical location: quarter (city), state, ISO-country-code"
 msgid "%1 (%2), %3, %4"
-msgstr "%1 (%2) ، %3 ، %4"
+msgstr "%1 (%2)، %3، %4"
 
 #: ions/wetter.com/ion_wettercom.cpp:684
 #, kde-format

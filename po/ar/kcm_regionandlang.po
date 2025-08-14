@@ -263,7 +263,7 @@ msgstr "لا يمكن تحديد موقع برنامج `check-language-support`"
 #, kde-format
 msgctxt "the arg is the output of failed check-language-support call"
 msgid "check-language-support failed, output: %1"
-msgstr "فشل check-language-support ، الخرج: %1"
+msgstr "فشل check-language-support، الخرج: %1"
 
 #: localegeneratorubuntu.cpp:83
 #, kde-format

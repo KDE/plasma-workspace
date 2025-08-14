@@ -57,7 +57,7 @@ msgstr "استبدل نسخة موجودة"
 #: main.cpp:69
 #, kde-format
 msgid "The query to run, only used if -c is not provided"
-msgstr "الاستعلام المراد تشغيله ، يُستخدم فقط إذا لم يتوفر -c"
+msgstr "الاستعلام المراد تشغيله، يُستخدم فقط إذا لم يتوفر -c"
 
 #: qml/RunCommand.qml:75
 #, kde-format

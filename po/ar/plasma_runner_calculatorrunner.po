@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KDE 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-20 00:52+0000\n"
-"PO-Revision-Date: 2021-06-21 20:04+0400\n"
+"PO-Revision-Date: 2023-05-04 10:42+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -24,7 +24,7 @@ msgid ""
 "Calculates the value of :q: when :q: is made up of numbers and mathematical "
 "symbols such as +, -, /, *, ! and ^."
 msgstr ""
-"يحسب قيمة :q: عندما يكون :q: مكوّنًا من أرقام ورموز رياضية مثل +، -، * ، ! ، ^."
+"يحسب قيمة :q: عندما يكون :q: مكوّنًا من أرقام ورموز رياضية مثل +، -، *، !، ^."
 
 #: calculatorrunner.cpp:39
 #, kde-format

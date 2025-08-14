@@ -43,8 +43,7 @@ msgstr "ملفّ التخطيط المبدئيّ"
 #, kde-format
 msgid "Default plugins for containments, containmentActions, etc."
 msgstr ""
-"المكونات الإضافية المبدئية لعمليات الاحتواء ، وإجراءات الاحتواء ، وما إلى "
-"ذلك. "
+"المكونات الإضافية المبدئية لعمليات الاحتواء، وإجراءات الاحتواء، وما إلى ذلك. "
 
 #: shellpackage.cpp:43
 #, kde-format
@@ -62,8 +61,8 @@ msgid ""
 "Compact representation of an applet when collapsed in a popup, for instance "
 "as an icon. Applets can override this component."
 msgstr ""
-"تمثيل مضغوط لبرنامج صغير عند تصغيره في نافذة منبثقة ، على سبيل المثال "
-"أيقونة. يمكن أن تتجاوز التطبيقات الصغيرة هذا المكون. "
+"تمثيل مضغوط لبرنامج صغير عند تصغيره في نافذة منبثقة، على سبيل المثال أيقونة. "
+"يمكن أن تتجاوز التطبيقات الصغيرة هذا المكون. "
 
 #: shellpackage.cpp:53
 #, kde-format

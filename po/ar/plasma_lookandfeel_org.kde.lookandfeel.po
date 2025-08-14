@@ -233,7 +233,7 @@ msgid_plural ""
 "%1 other users are currently logged in. If the computer is shut down or "
 "restarted, those users may lose work."
 msgstr[0] ""
-"يوجد مستخدم آخر يعمل على هذا الجهاز. إذا أوقف تشغيل الجهاز أو إعادة تشغيله ، "
+"يوجد مستخدم آخر يعمل على هذا الجهاز. إذا أوقف تشغيل الجهاز أو إعادة تشغيله، "
 "فقد يفقد هذا المستخدم عمله."
 msgstr[1] ""
 "يوجد مستخدم آخر يعمل على هذا الجهاز. إذا أوقف تشغيل الجهاز أو إعادة تشغيله، "
@@ -254,7 +254,7 @@ msgstr[5] ""
 #: contents/logout/Logout.qml:153
 #, kde-format
 msgid "When restarted, the computer will enter the firmware setup screen."
-msgstr "عند إعادة التشغيل ، سيدخل الحاسوب إلى شاشة إعداد البرنامج الثابت."
+msgstr "عند إعادة التشغيل، سيدخل الحاسوب إلى شاشة إعداد البرنامج الثابت."
 
 #: contents/logout/Logout.qml:201
 #, kde-format
