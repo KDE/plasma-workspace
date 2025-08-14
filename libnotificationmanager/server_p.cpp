@@ -170,9 +170,10 @@ uint ServerPrivate::Notify(const QString &app_name,
     notification.d->processHints(hints);
 
     // If we got a pixmap, use app_icon as application icon,
-    // otherwise use it as the notification icon.
+    // otherwise use it as the notification icon, except for default events
+    // since the generic Plasma icon isn't any better than the application icon.
     if (!app_icon.isEmpty()) {
-        if (notification.d->s_imageCache.contains(notificationId)) {
+        if (notification.d->s_imageCache.contains(notificationId) && !notification.isDefaultEvent()) {
             notification.setApplicationIconName(app_icon);
         } else {
             notification.setIcon(app_icon);

@@ -517,6 +517,7 @@ QtObject {
             required property bool resident
             required property string notifyRcName
             required property string desktopEntry
+            required property bool isDefaultEvent
 
             readonly property bool hasSomeActions: (hasDefaultAction || false) || (actionLabels || []).length > 0 || (configureActionLabel || "").length > 0 || (hasReplyAction || false)
 
@@ -684,7 +685,8 @@ QtObject {
                 if (type === NotificationManager.Notifications.NotificationType && desktopEntry) {
                     // Register apps that were seen spawning a popup so they can be configured later
                     // Apps with notifyrc can already be configured anyway
-                    if (!notifyRcName) {
+                    // xdg-desktop-portal-kde sends them as default event, so we ignore the fact that it has a notifyrcname.
+                    if (!notifyRcName || isDefaultEvent) {
                         globals.notificationSettings.registerKnownApplication(desktopEntry);
                         globals.notificationSettings.save();
                     }
