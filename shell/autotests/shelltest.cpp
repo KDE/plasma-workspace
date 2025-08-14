@@ -245,7 +245,7 @@ void ShellTest::testScreenInsertion()
 
 void ShellTest::testPanelInsertion()
 {
-    insertScreen(QRect(1920, 0, 1920, 1080), QStringLiteral("WL-1"));
+    insertScreen(QRect(0, 0, 1920, 1080), QStringLiteral("WL-1"));
     setScreenOrder({u"WL-1"_s}, false);
     QCOMPARE(m_corona->m_panelViews.size(), 0);
     auto panelCont = m_corona->addPanel(QStringLiteral("org.kde.plasma.testpanel"));
@@ -679,7 +679,7 @@ void ShellTest::testPanelSizeModes()
     int thickness = 96;
     int lengthMax = 300;
     int lengthMin = lengthMax / 2;
-    insertScreen(QRect(1920, 0, 1920, 1080), QStringLiteral("WL-1"));
+    insertScreen(QRect(0, 0, 1920, 1080), QStringLiteral("WL-1"));
     setScreenOrder({u"WL-1"_s}, false);
 
     // Create a panel and prepare it for testing
