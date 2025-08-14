@@ -48,6 +48,7 @@ class ShellTest : public QObject, DefaultCompositor
     QScreen *insertScreen(const QRect &geometry, const QString &name);
     void setScreenOrder(const QStringList &order, bool expectOrderChanged);
     void resetScreen();
+    Plasma::Containment *addTestPanel(const QString &plugin);
 
 private Q_SLOTS:
     void initTestCase();
@@ -148,13 +149,36 @@ void ShellTest::setScreenOrder(const QStringList &order, bool expectOrderChanged
     }
 }
 
+// Resets the screen order and waits for the ui to be ready
 void ShellTest::resetScreen()
 {
-    QSignalSpy screenOrderChangedSpy(m_corona, &ShellCorona::screenOrderChanged);
-    exec([=, this] {
-        outputOrder()->setList({u"WL-1"_s});
-    });
-    screenOrderChangedSpy.wait(1000);
+    setScreenOrder({u"WL-1"_s}, false);
+    for (int i = 0; i < 100; i++) {
+        if (!m_corona->m_desktopViewForScreen.isEmpty()) {
+            auto desktopView = m_corona->m_desktopViewForScreen[0];
+            if (desktopView && desktopView->containment()->isUiReady()) {
+                break;
+            }
+        }
+        QTest::qWait(100);
+    }
+}
+
+// Adds a panel and waits for the waitingPanels to be empty
+Plasma::Containment *ShellTest::addTestPanel(const QString &plugin)
+{
+    auto panelCont = m_corona->addPanel(plugin);
+    for (int i = 0; i < 100; i++) {
+        if (m_corona->m_waitingPanels.isEmpty()) {
+            break;
+        }
+        m_corona->createWaitingPanels();
+        QTest::qWait(100);
+    }
+    if (!m_corona->m_waitingPanels.isEmpty()) {
+        qWarning() << "There are still waiting panels in m_waitingPanels, test may fail.";
+    }
+    return panelCont;
 }
 
 void ShellTest::initTestCase()
@@ -257,7 +281,7 @@ void ShellTest::testPanelInsertion()
 {
     resetScreen();
     QCOMPARE(m_corona->m_panelViews.size(), 0);
-    auto panelCont = m_corona->addPanel(QStringLiteral("org.kde.plasma.testpanel"));
+    auto panelCont = addTestPanel(QStringLiteral("org.kde.plasma.testpanel"));
     QCOMPARE(panelCont->pluginMetaData().pluginId(), QStringLiteral("org.kde.plasma.testpanel"));
     // If the panel fails to load (on ci plasma-desktop isn't here) we want the "failed" containment to be of panel type anyways
     QCOMPARE(m_corona->m_panelViews.size(), 1);
@@ -348,7 +372,7 @@ void ShellTest::testScreenRemoval()
     QCOMPARE(cont2->screen(), 2);
 
     QCOMPARE(m_corona->m_panelViews.size(), 0);
-    auto panelCont = m_corona->addPanel(QStringLiteral("org.kde.plasma.panel"));
+    auto panelCont = addTestPanel(QStringLiteral("org.kde.plasma.panel"));
     m_corona->m_panelViews[panelCont]->setScreenToFollow(m_corona->m_screenPool->screenForId(2));
     QCOMPARE(panelCont->screen(), 2);
     QCOMPARE(m_corona->m_panelViews[panelCont]->screen(), m_corona->m_screenPool->screenForId(2));
@@ -425,7 +449,7 @@ void ShellTest::testScreenRemovalRecyclingViews()
 
     // Create a panel on screen 1
     QCOMPARE(m_corona->m_panelViews.size(), 0);
-    auto panelCont = m_corona->addPanel(QStringLiteral("org.kde.plasma.panel"));
+    auto panelCont = addTestPanel(QStringLiteral("org.kde.plasma.panel"));
     QCOMPARE(m_corona->m_panelViews.size(), 1);
     auto panelView = m_corona->m_panelViews[panelCont];
     panelView->setScreenToFollow(m_corona->m_screenPool->screenForId(1));
@@ -538,7 +562,7 @@ void ShellTest::testReorderScreens()
     // Add a panel for each screen
     for (int i = 0; i < screens.size(); ++i) {
         QScreen *s = screens[i];
-        auto panelCont = m_corona->addPanel(QStringLiteral("org.kde.plasma.panel"));
+        auto panelCont = addTestPanel(QStringLiteral("org.kde.plasma.panel"));
         // If the panel fails to load (on ci plasma-desktop isn't here) we want the "failed" containment to be of panel type anyways
         QVERIFY(m_corona->m_panelViews.contains(panelCont));
         QCOMPARE(panelCont->screen(), 0);
@@ -636,7 +660,7 @@ void ShellTest::testReorderContainments()
 
     // Add panel
     QCOMPARE(m_corona->m_panelViews.size(), 0);
-    auto panelCont = m_corona->addPanel(QStringLiteral("org.kde.plasma.testpanel"));
+    auto panelCont = addTestPanel(QStringLiteral("org.kde.plasma.testpanel"));
     QCOMPARE(panelCont->pluginMetaData().pluginId(), QStringLiteral("org.kde.plasma.testpanel"));
     // If the panel fails to load (on ci plasma-desktop isn't here) we want the "failed" containment to be of panel type anyways
     QCOMPARE(m_corona->m_panelViews.size(), 1);
@@ -693,7 +717,7 @@ void ShellTest::testPanelSizeModes()
 
     // Create a panel and prepare it for testing
     QCOMPARE(m_corona->m_panelViews.size(), 0);
-    auto panelCont = m_corona->addPanel(QStringLiteral("org.kde.plasma.testpanel"));
+    auto panelCont = addTestPanel(QStringLiteral("org.kde.plasma.testpanel"));
     // If the panel fails to load (on ci plasma-desktop isn't here) we want the "failed" containment to be of panel type anyways
     QCOMPARE(m_corona->m_panelViews.size(), 1);
     QVERIFY(m_corona->m_panelViews.contains(panelCont));
