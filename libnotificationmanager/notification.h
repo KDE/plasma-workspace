@@ -73,6 +73,7 @@ public:
     void setDesktopEntry(const QString &desktopEntry);
 
     QString notifyRcName() const;
+    bool isDefaultEvent() const;
     QString eventId() const;
 
     QString applicationName() const;

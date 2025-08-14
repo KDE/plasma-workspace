@@ -30,7 +30,6 @@ public:
 
     void loadImagePath(const QString &path);
 
-    static QString defaultComponentName();
     static constexpr QSize maximumImageSize();
 
     static KService::Ptr serviceForDesktopEntry(const QString &desktopEntry);

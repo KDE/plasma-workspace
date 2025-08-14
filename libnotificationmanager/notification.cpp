@@ -260,7 +260,7 @@ void Notification::Private::loadImagePath(const QString &path)
     }
 }
 
-QString Notification::Private::defaultComponentName()
+static QString defaultComponentName()
 {
     // NOTE Keep in sync with KNotification
     return QStringLiteral("plasma_workspace");
@@ -629,6 +629,11 @@ QString Notification::notifyRcName() const
     return d->notifyRcName;
 }
 
+bool Notification::isDefaultEvent() const
+{
+    return d->notifyRcName == defaultComponentName();
+}
+
 QString Notification::eventId() const
 {
     return d->eventId;
@@ -678,7 +683,7 @@ QString Notification::defaultActionLabel() const
 {
     // Most apps don't expect the default action be visible to the user.
     // For KDE apps we can assume KNotification does something reasonable.
-    if (!d->notifyRcName.isEmpty() && d->notifyRcName != Private::defaultComponentName()) {
+    if (!d->notifyRcName.isEmpty() && d->notifyRcName != defaultComponentName()) {
         return d->defaultActionLabel;
     } else {
         return QString(); // Let the UI pick a sensible default.

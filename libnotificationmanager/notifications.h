@@ -317,6 +317,7 @@ public:
         WasAddedDuringInhibitionRole, ///< Whether the notification was added while inhibition was active. @since 6.3
         HintsRole, ///< To provide extra data to a notification server that the server may be able to make use of. @since 6.4
         DismissableRole, ///< Whether a notification can be dismissed (minimized). @since 6.4
+        IsDefaultEventRole, ///< Whether this is a KNotification::DefaultEvent. @since 6.5
     };
     Q_ENUM(Roles)
 

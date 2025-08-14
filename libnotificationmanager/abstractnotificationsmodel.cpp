@@ -421,6 +421,8 @@ QVariant AbstractNotificationsModel::data(const QModelIndex &index, int role) co
         return notification.dismissed();
     case Notifications::DismissableRole:
         return notification.resident() && notification.timeout() == 0;
+    case Notifications::IsDefaultEventRole:
+        return notification.isDefaultEvent();
     }
 
     return QVariant();
