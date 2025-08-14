@@ -79,9 +79,8 @@ msgid ""
 "path to an installed package, at which point this tool will ensure it is a "
 "global theme package and then attempt to apply it"
 msgstr ""
-"تطبق حزمة السمة الشاملة. يمكن أن يكون هذا اسم الحزمة ، أو المسار الكامل "
-"لحزمة مثبتة ، وعند هذه النقطة ستضمن هذه الأداة أنها حزمة سمة شاملة ثم تحاول "
-"تطبيقها"
+"تطبق حزمة السمة الشاملة. يمكن أن يكون هذا اسم الحزمة، أو المسار الكامل لحزمة "
+"مثبتة، وعند هذه النقطة ستضمن هذه الأداة أنها حزمة سمة شاملة ثم تحاول تطبيقها"
 
 #: lnftool.cpp:51
 #, kde-format

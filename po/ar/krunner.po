@@ -67,7 +67,7 @@ msgstr "قائمة الملحقات المتوفرة"
 #: main.cpp:74
 #, kde-format
 msgid "The query to run, only used if -c is not provided"
-msgstr "الاستعلام المراد تشغيله ، يُستخدم فقط إذا لم يتوفر -c"
+msgstr "الاستعلام المراد تشغيله، يُستخدم فقط إذا لم يتوفر -c"
 
 #: main.cpp:83
 #, kde-format

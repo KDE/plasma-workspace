@@ -29,7 +29,7 @@ msgid ""
 "Calculates the value of :q: when :q: is made up of numbers and mathematical "
 "symbols such as +, -, /, *, ! and ^."
 msgstr ""
-"يحسب قيمة :q: عندما يكون :q: مكوّنًا من أرقام ورموز رياضية مثل +، -، * ، ! ، ^."
+"يحسب قيمة :q: عندما يكون :q: مكوّنًا من أرقام ورموز رياضية مثل +، -، *، !، ^."
 
 #: calculatorrunner.cpp:36
 #, kde-format

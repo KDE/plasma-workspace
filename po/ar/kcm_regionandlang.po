@@ -287,7 +287,7 @@ msgstr "لا يمكن تحديد موقع برنامج `check-language-support`"
 #, kde-format
 msgctxt "the arg is the output of failed check-language-support call"
 msgid "check-language-support failed, output: %1"
-msgstr "فشل check-language-support ، الخرج: %1"
+msgstr "فشل check-language-support، الخرج: %1"
 
 #: localegeneratorubuntu.cpp:87
 #, kde-format
@@ -422,19 +422,19 @@ msgstr "أحجام تخزين البيانات"
 #, kde-format
 msgctxt "the prefix for IECBinaryDialect, %1 is an example for 1 KiB"
 msgid "KiB, MiB, GiB; %1"
-msgstr "كي.بايت، مي.بايت، غي.بايت ؛ %1"
+msgstr "كي.بايت، مي.بايت، غي.بايت؛ %1"
 
 #: optionsmodel.cpp:282
 #, kde-format
 msgctxt "the prefix for JEDECBinaryDialect, %1 is an example for 1 KB"
 msgid "KB, MB, GB; %1"
-msgstr "ك.بايت، م.بايت، غ.بايت ؛ %1"
+msgstr "ك.بايت، م.بايت، غ.بايت؛ %1"
 
 #: optionsmodel.cpp:285
 #, kde-format
 msgctxt "the prefix for MetricBinaryDialect, %1 is an example for 1 kB"
 msgid "kB, MB, GB; %1"
-msgstr "ك.بايت، م.بايت، غ.بايت ؛ %1"
+msgstr "ك.بايت، م.بايت، غ.بايت؛ %1"
 
 #: optionsmodel.cpp:357
 #, kde-format

@@ -39,7 +39,7 @@ msgid ""
 "Do you wish to install the font(s) for personal use (only available to you), "
 "or system-wide (available to all users)?"
 msgstr ""
-"هل تريد تثبيت الخط (الخطوط) لاستخدامك الشخصي (ستكون متوفرة لحسابك فقط) ، أم "
+"هل تريد تثبيت الخط (الخطوط) لاستخدامك الشخصي (ستكون متوفرة لحسابك فقط)، أم "
 "تريد لكل النظام (متوفرة لك الحسابات و المستخدمين)؟"
 
 #: apps/Installer.cpp:37 kcmfontinst/KCmFontInst.cpp:952
@@ -443,12 +443,12 @@ msgid ""
 "remove a family from the group, drag the font onto the \"All Fonts\" group.</"
 "li></ul></p>"
 msgstr ""
-"<h3>مجموعات الخطوط</h3><p>تعرض هذه القائمة مجموعات الخطوط الموجودة على "
-"نظام ، توجد مجموعتين من الخطوط:<ul><li><b>قياسية</b>  وهي مجموعات خاصة "
-"تستخدم بواسطة مدير الخطوط.<ul>%1</ul></li><li><b>مخصصة</b> وهي المجموعات "
-"التي قمت بإنشائها . لتضيف عائلة خطوط إلى إحدى هاتين المجموعتين قم بسحبها من "
-"قائمة الخطوط و أفلتها إلى المجموعة التي تريدها. ولتزيل عائلة خطوط من مجموعة "
-"ما ، قم بسحبها إلى مجموعة \"كل الخطوط\" .</li></ul></p>"
+"<h3>مجموعات الخطوط</h3><p>تعرض هذه القائمة مجموعات الخطوط الموجودة على نظام، "
+"توجد مجموعتين من الخطوط:<ul><li><b>قياسية</b>  وهي مجموعات خاصة تستخدم "
+"بواسطة مدير الخطوط.<ul>%1</ul></li><li><b>مخصصة</b> وهي المجموعات التي قمت "
+"بإنشائها . لتضيف عائلة خطوط إلى إحدى هاتين المجموعتين قم بسحبها من قائمة "
+"الخطوط و أفلتها إلى المجموعة التي تريدها. ولتزيل عائلة خطوط من مجموعة ما، قم "
+"بسحبها إلى مجموعة \"كل الخطوط\" .</li></ul></p>"
 
 #: kcmfontinst/GroupList.cpp:596
 #, kde-format
@@ -587,7 +587,7 @@ msgstr "غير قادر على بدء الخلفية."
 #: kcmfontinst/JobRunner.cpp:453
 #, kde-format
 msgid "Backend died, but has been restarted. Please try again."
-msgstr "ماتت الخلفية ، ولكن أعيد تشغيلها. حاول مرة أخرى."
+msgstr "ماتت الخلفية، ولكن أعيد تشغيلها. حاول مرة أخرى."
 
 #: kcmfontinst/JobRunner.cpp:618 kcmfontinst/JobRunner.cpp:624
 #, kde-format
@@ -993,7 +993,7 @@ msgid ""
 "<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
 "'<b>%2</b>'?</p>"
 msgstr ""
-"<p>هل تريد تمكين</p><p>'<b>%1</b>' ، المتضمن داخل مجموعة '<b>%2</b>'؟</p>"
+"<p>هل تريد تمكين</p><p>'<b>%1</b>'، المتضمن داخل مجموعة '<b>%2</b>'؟</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:1113
 #, kde-format
@@ -1406,12 +1406,12 @@ msgstr "تناسبي"
 #: viewpart/CharTip.cpp:44
 #, kde-format
 msgid "Other, Control"
-msgstr "آخر ، التحكم"
+msgstr "آخر، التحكم"
 
 #: viewpart/CharTip.cpp:46
 #, kde-format
 msgid "Other, Format"
-msgstr "آخر ، التنسيق"
+msgstr "آخر، التنسيق"
 
 #: viewpart/CharTip.cpp:48
 #, kde-format

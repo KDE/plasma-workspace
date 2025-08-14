@@ -2955,13 +2955,13 @@ msgstr "غ/م"
 #, kde-format
 msgctxt "Geographical location: city, state, ISO-country-code"
 msgid "%1, %2, %3"
-msgstr "%1 ،  %2 ، %3"
+msgstr "%1،  %2، %3"
 
 #: ions/wetter.com/ion_wettercom.cpp:364
 #, kde-format
 msgctxt "Geographical location: quarter (city), state, ISO-country-code"
 msgid "%1 (%2), %3, %4"
-msgstr "%1 (%2) ، %3 ، %4"
+msgstr "%1 (%2)، %3، %4"
 
 #: ions/wetter.com/ion_wettercom.cpp:670
 #, kde-format
