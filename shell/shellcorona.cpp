@@ -1332,6 +1332,7 @@ void ShellCorona::removeDesktop(DesktopView *desktopView)
 
     desktopView->destroy();
     desktopView->containment()->reactToScreenChange();
+    layoutReadyChanged(screenId, false);
 
     checkAllDesktopsUiReady();
 }
@@ -1632,6 +1633,13 @@ void ShellCorona::createWaitingPanels()
         connect(panel, &PanelView::visibilityModeChanged, this, rectNotify);
         connect(panel, &PanelView::thicknessChanged, this, rectNotify);
         connect(panel, &PanelView::userConfiguringChanged, this, &ShellCorona::panelBeingConfiguredChanged);
+        connect(panel, &QWindow::visibleChanged, this, [this, panel](bool visible) {
+            if (!panel->containment()) {
+                return;
+            }
+            const int screen = panel->containment()->lastScreen();
+            Q_EMIT layoutReadyChanged(screen, isLayoutReady(screen));
+        });
     }
     m_waitingPanels = stillWaitingPanels;
 }
@@ -2216,6 +2224,28 @@ bool ShellCorona::enteredEditModeViaDesktop()
     return false;
 }
 
+bool ShellCorona::isLayoutReady(int screen)
+{
+    DesktopView *dv = m_desktopViewForScreen.value(screen);
+    if (!dv || !dv->isVisible()) {
+        return false;
+    }
+
+    for (Plasma::Containment *cont : std::as_const(m_waitingPanels)) {
+        if (cont->lastScreen() == screen) {
+            return false;
+        }
+    }
+
+    for (auto it = m_panelViews.constBegin(); it != m_panelViews.constEnd(); ++it) {
+        if (it.key()->lastScreen() == screen && it.value()->isVisible() == false) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
 void ShellCorona::populateAddPanelsMenu()
 {
     m_addPanelsMenu->clear();
@@ -2514,12 +2544,16 @@ void ShellCorona::setScreenForContainment(Plasma::Containment *containment, int 
             if (newScreen) {
                 panelView->setScreenToFollow(newScreen);
             } else {
+                const bool wasReady = isLayoutReady(newScreenId);
                 // Not on a connected screen: destroy the panel
                 if (!m_waitingPanels.contains(containment)) {
                     m_waitingPanels << containment;
                 }
                 m_panelViews.remove(containment);
                 panelView->destroy();
+                if (wasReady) {
+                    Q_EMIT layoutReadyChanged(newScreenId, false);
+                }
             }
         } else {
             // Didn't have a view, createWaitingPanels() will create it if needed
@@ -2561,7 +2595,11 @@ void ShellCorona::setScreenForContainment(Plasma::Containment *containment, int 
                     containmentView->setScreenToFollow(newScreen);
                     m_desktopViewForScreen[newScreenId] = containmentView;
                 } else {
+                    const bool wasReady = isLayoutReady(newScreenId);
                     containmentView->destroy();
+                    if (wasReady) {
+                        Q_EMIT layoutReadyChanged(newScreenId, false);
+                    }
                 }
             } else if (newScreen) {
                 addOutput(newScreen);
@@ -2572,7 +2610,11 @@ void ShellCorona::setScreenForContainment(Plasma::Containment *containment, int 
                     contSwapView->setScreenToFollow(oldScreen);
                     m_desktopViewForScreen[oldScreenId] = contSwapView;
                 } else {
+                    const bool wasReady = isLayoutReady(oldScreenId);
                     contSwapView->destroy();
+                    if (wasReady) {
+                        Q_EMIT layoutReadyChanged(newScreenId, false);
+                    }
                 }
             } else if (oldScreen) {
                 addOutput(oldScreen);

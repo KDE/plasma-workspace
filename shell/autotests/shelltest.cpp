@@ -152,32 +152,19 @@ void ShellTest::setScreenOrder(const QStringList &order, bool expectOrderChanged
 // Resets the screen order and waits for the ui to be ready
 void ShellTest::resetScreen()
 {
+    QSignalSpy coronaScreenOrderSpy(m_corona, &ShellCorona::screenOrderChanged);
     setScreenOrder({u"WL-1"_s}, false);
-    for (int i = 0; i < 100; i++) {
-        if (!m_corona->m_desktopViewForScreen.isEmpty()) {
-            auto desktopView = m_corona->m_desktopViewForScreen[0];
-            if (desktopView && desktopView->containment()->isUiReady()) {
-                break;
-            }
-        }
-        QTest::qWait(100);
-    }
+    QVERIFY(coronaScreenOrderSpy.wait());
 }
 
 // Adds a panel and waits for the waitingPanels to be empty
 Plasma::Containment *ShellTest::addTestPanel(const QString &plugin)
 {
+    QSignalSpy layoutReadySpy(m_corona, &ShellCorona::layoutReadyChanged);
     auto panelCont = m_corona->addPanel(plugin);
-    for (int i = 0; i < 100; i++) {
-        if (m_corona->m_waitingPanels.isEmpty()) {
-            break;
-        }
-        m_corona->createWaitingPanels();
-        QTest::qWait(100);
-    }
-    if (!m_corona->m_waitingPanels.isEmpty()) {
-        qWarning() << "There are still waiting panels in m_waitingPanels, test may fail.";
-    }
+    qWarning() << "BBBBBBBBBBBBBB" << m_corona->isLayoutReady(0);
+    QVERIFY(layoutReadySpy.wait());
+    qWarning() << "CCCCCCCCCCCCCC" << m_corona->isLayoutReady(0) << layoutReadySpy;
     return panelCont;
 }
 

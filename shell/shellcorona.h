@@ -143,6 +143,8 @@ public:
 
     Q_INVOKABLE bool enteredEditModeViaDesktop();
 
+    Q_INVOKABLE bool isLayoutReady(int screen);
+
 Q_SIGNALS:
     void glInitializationFailed();
     // A preview for this containment has been rendered and saved to disk
@@ -158,6 +160,7 @@ Q_SIGNALS:
     void shellAboutToChange(const QString &shell);
     // Emitted after the new shell has loaded
     void shellChanged(const QString &shell);
+    void layoutReadyChanged(int screen, bool ready);
 
 public Q_SLOTS:
     /**
