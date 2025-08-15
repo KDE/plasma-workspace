@@ -6,4 +6,5 @@ target_link_libraries(org.kde.plasma.appmenu
                       Qt::DBus
                       Plasma::Plasma
                       KF6::WindowSystem
-                      PW::LibTaskManager)
+                      PW::LibTaskManager
+                      dbusmenuqt)

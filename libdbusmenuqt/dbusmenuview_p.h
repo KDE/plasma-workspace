@@ -13,5 +13,6 @@ class DBusMenuViewPrivate
 public:
     DBusMenuModel *model = nullptr;
     QPersistentModelIndex rootIndex;
+    bool rootIndexValid = false;
     QHash<QPersistentModelIndex, QAction *> actions;
 };

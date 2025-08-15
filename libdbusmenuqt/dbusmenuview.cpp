@@ -62,6 +62,7 @@ void DBusMenuView::setRoot(DBusMenuModel *model, const QPersistentModelIndex &in
 
     d->model = model;
     d->rootIndex = index;
+    d->rootIndexValid = index.isValid();
 
     onModelReset();
 }
@@ -73,7 +74,7 @@ QAction *DBusMenuView::actionByIndex(const QModelIndex &index) const
 
 QMenu *DBusMenuView::menuByIndex(const QModelIndex &index)
 {
-    if (d->rootIndex == index) {
+    if (d->rootIndex == index && d->rootIndexValid == index.isValid()) {
         return this;
     } else if (auto action = actionByIndex(index)) {
         return action->menu();

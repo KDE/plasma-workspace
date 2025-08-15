@@ -7,19 +7,20 @@
 #pragma once
 
 #include <Plasma/Applet>
+#include <Plasma/Containment>
 
-#include <QAbstractItemModel>
 #include <QPointer>
 
+class DBusMenuModel;
+class DBusMenuView;
 class QQuickItem;
-class QMenu;
 
 class AppMenuApplet : public Plasma::Applet
 {
     Q_OBJECT
 
     Q_PROPERTY(QObject *containment READ containment CONSTANT)
-    Q_PROPERTY(QAbstractItemModel *model READ model WRITE setModel NOTIFY modelChanged)
+    Q_PROPERTY(DBusMenuModel *model READ model WRITE setModel NOTIFY modelChanged)
 
     Q_PROPERTY(int view READ view WRITE setView NOTIFY viewChanged)
 
@@ -43,8 +44,8 @@ public:
     QQuickItem *buttonGrid() const;
     void setButtonGrid(QQuickItem *buttonGrid);
 
-    QAbstractItemModel *model() const;
-    void setModel(QAbstractItemModel *model);
+    DBusMenuModel *model() const;
+    void setModel(DBusMenuModel *model);
 
     int view() const;
     void setView(int type);
@@ -63,15 +64,13 @@ protected:
     bool eventFilter(QObject *watched, QEvent *event) override;
 
 private:
-    QMenu *createMenu(int idx) const;
     void setCurrentIndex(int currentIndex);
     void onMenuAboutToHide();
 
     int m_currentIndex = -1;
     int m_viewType = FullView;
-    QPointer<QMenu> m_currentMenu;
-    QPointer<QMenu> m_sourceMenu;
     QPointer<QQuickItem> m_buttonGrid;
-    QPointer<QAbstractItemModel> m_model;
+    QPointer<DBusMenuModel> m_model;
+    QPointer<DBusMenuView> m_view;
     static int s_refs;
 };

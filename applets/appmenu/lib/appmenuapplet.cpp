@@ -5,7 +5,8 @@
 */
 
 #include "appmenuapplet.h"
-#include "../plugin/appmenumodel.h"
+#include "dbusmenumodel.h"
+#include "dbusmenuview.h"
 
 #include <QAction>
 #include <QDBusConnection>
@@ -67,12 +68,12 @@ void AppMenuApplet::init()
 {
 }
 
-QAbstractItemModel *AppMenuApplet::model() const
+DBusMenuModel *AppMenuApplet::model() const
 {
     return m_model;
 }
 
-void AppMenuApplet::setModel(QAbstractItemModel *model)
+void AppMenuApplet::setModel(DBusMenuModel *model)
 {
     if (m_model != model) {
         m_model = model;
@@ -119,28 +120,8 @@ void AppMenuApplet::setButtonGrid(QQuickItem *buttonGrid)
     }
 }
 
-QMenu *AppMenuApplet::createMenu(int idx) const
-{
-    QMenu *menu = nullptr;
-
-    if (view() == CompactView) {
-        if (QAction *menuAction = m_model->data(QModelIndex(), AppMenuModel::ActionRole).value<QAction *>()) {
-            menu = menuAction->menu();
-        }
-    } else if (view() == FullView) {
-        const QModelIndex index = m_model->index(idx, 0);
-        if (QAction *action = m_model->data(index, AppMenuModel::ActionRole).value<QAction *>()) {
-            menu = action->menu();
-        }
-    }
-
-    return menu;
-}
-
 void AppMenuApplet::onMenuAboutToHide()
 {
-    auto menuAction = m_currentMenu->menuAction();
-    menuAction->setMenu(m_sourceMenu);
     setCurrentIndex(-1);
 }
 
@@ -173,8 +154,12 @@ void AppMenuApplet::trigger(QQuickItem *ctx, int idx)
         return;
     }
 
-    QMenu *actionMenu = createMenu(idx);
-    if (actionMenu) {
+    if (!m_model) {
+        return;
+    }
+
+    const QModelIndex index = m_model->index(idx, 0);
+    if (index.data(DBusMenuModel::SubmenuRole).toBool()) {
         // this is a workaround where Qt will fail to realize a mouse has been released
         // this happens if a window which does not accept focus spawns a new window that takes focus and X grab
         // whilst the mouse is depressed
@@ -182,77 +167,45 @@ void AppMenuApplet::trigger(QQuickItem *ctx, int idx)
         // this causes the next click to go missing
 
         // by releasing manually we avoid that situation
-        auto ungrabMouseHack = [ctx]() {
+        QTimer::singleShot(0, ctx, [ctx]() {
             if (ctx && ctx->window() && ctx->window()->mouseGrabberItem()) {
                 // FIXME event forge thing enters press and hold move mode :/
                 ctx->window()->mouseGrabberItem()->ungrabMouse();
             }
-        };
+        });
 
-        if (view() == FullView) {
-            if (!m_currentMenu) {
-                m_currentMenu = new QMenu(qobject_cast<QWidget *>(actionMenu->parent()));
-                connect(m_currentMenu, &QMenu::aboutToHide, this, &AppMenuApplet::onMenuAboutToHide, Qt::UniqueConnection);
-            } else if (m_sourceMenu != actionMenu) {
-                auto menuAction = m_currentMenu->menuAction();
-                for (QAction *action : m_currentMenu->actions()) {
-                    m_currentMenu->removeAction(action);
-                    m_sourceMenu->addAction(action);
-                }
-                menuAction->setMenu(m_sourceMenu);
-            }
-            m_sourceMenu = actionMenu;
-            auto menuAction = m_sourceMenu->menuAction();
-            for (QAction *action : m_sourceMenu->actions()) {
-                m_sourceMenu->removeAction(action);
-                m_currentMenu->addAction(action);
-            }
-            menuAction->setMenu(m_currentMenu);
-        } else {
-            m_currentMenu = actionMenu;
+        if (!m_view) {
+            m_view = new DBusMenuView();
+            connect(m_view, &QMenu::aboutToHide, this, &AppMenuApplet::onMenuAboutToHide);
+            m_view->setAttribute(Qt::WA_DeleteOnClose);
         }
 
-        QTimer::singleShot(0, ctx, ungrabMouseHack);
-        // end workaround
-
-        const auto &geo = ctx->window()->screen()->availableVirtualGeometry();
+        const Qt::Edges edges = edgeFromLocation(location());
+        m_view->setProperty("_breeze_menu_seamless_edges", QVariant::fromValue(edges));
 
         QPoint pos = ctx->window()->mapToGlobal(ctx->mapToScene(QPointF()).toPoint());
-
-        const Qt::Edges edges = edgeFromLocation(location());
-        m_currentMenu->setProperty("_breeze_menu_seamless_edges", QVariant::fromValue(edges));
-
         if (location() == Plasma::Types::TopEdge) {
             pos.setY(pos.y() + ctx->height());
         }
 
-        m_currentMenu->adjustSize();
-
-        pos = QPoint(qBound(geo.x(), pos.x(), geo.x() + geo.width() - m_currentMenu->width()),
-                     qBound(geo.y(), pos.y(), geo.y() + geo.height() - m_currentMenu->height()));
+        m_view->setRoot(m_model, index);
 
         if (view() == FullView) {
-            if (m_currentMenu->isVisible()) {
-                m_currentMenu->move(pos);
+            if (m_view->isVisible()) {
+                m_view->move(pos);
             } else {
-                m_currentMenu->installEventFilter(this);
-                m_currentMenu->winId(); // create window handle
-                m_currentMenu->windowHandle()->setTransientParent(ctx->window());
-                m_currentMenu->popup(pos);
+                m_view->installEventFilter(this);
+                m_view->winId(); // create window handle
+                m_view->windowHandle()->setTransientParent(ctx->window());
+                m_view->popup(pos);
             }
         } else if (view() == CompactView) {
-            m_currentMenu->popup(pos);
-            connect(actionMenu, &QMenu::aboutToHide, this, &AppMenuApplet::onMenuAboutToHide, Qt::UniqueConnection);
+            m_view->popup(pos);
         }
 
         setCurrentIndex(idx);
-
-        // FIXME TODO connect only once
-    } else { // is it just an action without a menu?
-        if (QAction *action = m_model->index(idx, 0).data(AppMenuModel::ActionRole).value<QAction *>()) {
-            Q_ASSERT(!action->menu());
-            action->trigger();
-        }
+    } else {
+        m_model->click(index);
     }
 }
 
