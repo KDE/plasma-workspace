@@ -6,6 +6,8 @@
 
 #pragma once
 
+#include "dbusmenuqt_export.h"
+
 #include <QAbstractItemModel>
 
 class DBusMenuInterface;
@@ -34,7 +36,7 @@ typedef QList<DBusMenuItemKeys> DBusMenuItemKeysList;
  *
  * @note This model never emits the dataChanged() signal with an empty roles list.
  */
-class DBusMenuModel : public QAbstractItemModel
+class DBUSMENUQT_EXPORT DBusMenuModel : public QAbstractItemModel
 {
     Q_OBJECT
 

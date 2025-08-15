@@ -6,6 +6,8 @@
 
 #pragma once
 
+#include "dbusmenuqt_export.h"
+
 #include <QMenu>
 #include <QPersistentModelIndex>
 
@@ -26,7 +28,7 @@ class DBusMenuViewPrivate;
  * popup->popup(globalPos);
  * @endcode
  */
-class DBusMenuView : public QMenu
+class DBUSMENUQT_EXPORT DBusMenuView : public QMenu
 {
     Q_OBJECT
 

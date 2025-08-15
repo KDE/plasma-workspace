@@ -6,6 +6,8 @@
 */
 #pragma once
 
+#include "dbusmenuqt_export.h"
+
 // Qt
 #include <QObject>
 
@@ -20,7 +22,7 @@ class DBusMenuImporterPrivate;
  * A DBusMenuImporter instance can recreate a menu serialized over DBus by
  * DBusMenuExporter
  */
-class DBusMenuImporter : public QObject
+class DBUSMENUQT_EXPORT DBusMenuImporter : public QObject
 {
     Q_OBJECT
 public:
