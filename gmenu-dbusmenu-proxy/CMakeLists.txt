@@ -19,7 +19,6 @@ set(GMENU_DBUSMENU_PROXY_SRCS
     gdbusmenutypes_p.cpp
     icons.cpp icons.h
     utils.cpp utils.h
-    ../libdbusmenuqt/dbusmenutypes_p.cpp
 )
 
 qt_add_dbus_adaptor(GMENU_DBUSMENU_PROXY_SRCS ../libdbusmenuqt/com.canonical.dbusmenu.xml window.h Window)
@@ -57,6 +56,7 @@ target_link_libraries(gmenudbusmenuproxy
     KF6::WindowSystem
     KF6::Crash
     XCB::XCB
+    dbusmenuqt
 )
 target_link_libraries(gmenudbusmenuproxy Qt::GuiPrivate)
 

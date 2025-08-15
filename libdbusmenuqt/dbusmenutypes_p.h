@@ -6,6 +6,8 @@
 */
 #pragma once
 
+#include "dbusmenuqt_export.h"
+
 // Qt
 #include <QList>
 #include <QStringList>
@@ -22,8 +24,8 @@ struct DBusMenuItem {
     QVariantMap properties;
 };
 
-QDBusArgument &operator<<(QDBusArgument &argument, const DBusMenuItem &item);
-const QDBusArgument &operator>>(const QDBusArgument &argument, DBusMenuItem &item);
+DBUSMENUQT_EXPORT QDBusArgument &operator<<(QDBusArgument &argument, const DBusMenuItem &item);
+DBUSMENUQT_EXPORT const QDBusArgument &operator>>(const QDBusArgument &argument, DBusMenuItem &item);
 
 typedef QList<DBusMenuItem> DBusMenuItemList;
 
@@ -36,8 +38,8 @@ struct DBusMenuItemKeys {
     QStringList properties;
 };
 
-QDBusArgument &operator<<(QDBusArgument &argument, const DBusMenuItemKeys &);
-const QDBusArgument &operator>>(const QDBusArgument &argument, DBusMenuItemKeys &);
+DBUSMENUQT_EXPORT QDBusArgument &operator<<(QDBusArgument &argument, const DBusMenuItemKeys &);
+DBUSMENUQT_EXPORT const QDBusArgument &operator>>(const QDBusArgument &argument, DBusMenuItemKeys &);
 
 typedef QList<DBusMenuItemKeys> DBusMenuItemKeysList;
 
@@ -53,8 +55,8 @@ struct DBusMenuLayoutItem {
     QList<DBusMenuLayoutItem> children;
 };
 
-QDBusArgument &operator<<(QDBusArgument &argument, const DBusMenuLayoutItem &);
-const QDBusArgument &operator>>(const QDBusArgument &argument, DBusMenuLayoutItem &);
+DBUSMENUQT_EXPORT QDBusArgument &operator<<(QDBusArgument &argument, const DBusMenuLayoutItem &);
+DBUSMENUQT_EXPORT const QDBusArgument &operator>>(const QDBusArgument &argument, DBusMenuLayoutItem &);
 
 typedef QList<DBusMenuLayoutItem> DBusMenuLayoutItemList;
 
@@ -62,7 +64,7 @@ typedef QList<DBusMenuLayoutItem> DBusMenuLayoutItemList;
 
 class DBusMenuShortcut;
 
-QDBusArgument &operator<<(QDBusArgument &argument, const DBusMenuShortcut &);
-const QDBusArgument &operator>>(const QDBusArgument &argument, DBusMenuShortcut &);
+DBUSMENUQT_EXPORT QDBusArgument &operator<<(QDBusArgument &argument, const DBusMenuShortcut &);
+DBUSMENUQT_EXPORT const QDBusArgument &operator>>(const QDBusArgument &argument, DBusMenuShortcut &);
 
-void DBusMenuTypes_register();
+DBUSMENUQT_EXPORT void DBusMenuTypes_register();
