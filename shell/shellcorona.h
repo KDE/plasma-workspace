@@ -143,7 +143,7 @@ public:
 
     Q_INVOKABLE bool enteredEditModeViaDesktop();
 
-    Q_INVOKABLE bool allPanelsVisible(int screenId) const;
+    bool allPanelsVisible(int screenId) const;
 
 Q_SIGNALS:
     void glInitializationFailed();
@@ -160,6 +160,9 @@ Q_SIGNALS:
     void shellAboutToChange(const QString &shell);
     // Emitted after the new shell has loaded
     void shellChanged(const QString &shell);
+    // Emitted after all panels are loaded and visible, so the availableScreenRect
+    // has settled down from changing.
+    void allPanelsReady();
 
 public Q_SLOTS:
     /**

@@ -1614,6 +1614,9 @@ void ShellCorona::createWaitingPanels()
             if (!m_screenReorderInProgress && panel->containment()) {
                 Q_EMIT availableScreenRectChanged(panel->containment()->screen());
             }
+            if (allPanelsVisible(panel->containment()->screen())) {
+                Q_EMIT allPanelsReady();
+            }
         };
 
         m_panelViews[cont] = panel;
