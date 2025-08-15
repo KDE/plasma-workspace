@@ -41,8 +41,7 @@ PlasmoidItem {
         Layout.fillHeight: false
         Layout.minimumWidth: implicitWidth
         Layout.maximumWidth: implicitWidth
-        enabled: appMenuModel.menuAvailable
-        checkable: appMenuModel.menuAvailable && Plasmoid.currentIndex === fakeIndex
+        checkable: Plasmoid.currentIndex === fakeIndex
         checked: checkable
         icon.name: "application-menu"
 
@@ -57,7 +56,7 @@ PlasmoidItem {
         id: buttonGrid
 
         Plasmoid.status: {
-            if (appMenuModel.menuAvailable && Plasmoid.currentIndex > -1 && buttonRepeater.count > 0) {
+            if (Plasmoid.currentIndex > -1 && buttonRepeater.count > 0) {
                 return PlasmaCore.Types.NeedsAttentionStatus;
             } else {
                 return buttonRepeater.count > 0 || Plasmoid.configuration.compactView ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.HiddenStatus;
@@ -109,18 +108,18 @@ PlasmoidItem {
 
         Repeater {
             id: buttonRepeater
-            model: appMenuModel.visible ? appMenuModel : null
+            model: appMenuProvider.model
 
             MenuDelegate {
                 readonly property int buttonIndex: index
 
                 Layout.fillWidth: root.vertical
                 Layout.fillHeight: !root.vertical
-                text: activeMenu
+                text: model.display
                 Kirigami.MnemonicData.active: altState.pressed
 
                 down: Plasmoid.currentIndex === index
-                visible: text !== "" && model.activeActions.visible
+                visible: text !== "" && model.visible
 
                 menuIsOpen: Plasmoid.currentIndex !== -1
                 onActivated: Plasmoid.trigger(this, index)
@@ -140,13 +139,15 @@ PlasmoidItem {
         }
     }
 
-    AppMenuPrivate.AppMenuModel {
-        id: appMenuModel
-        containmentStatus: Plasmoid.containment.status
+    AppMenuPrivate.AppMenuProvider {
+        id: appMenuProvider
         screenGeometry: root.screenGeometry
-        onRequestActivateIndex: Plasmoid.requestActivateIndex(index)
-        Component.onCompleted: {
-            Plasmoid.model = appMenuModel;
+        onActivateRequested: (index) => {
+            if (index.valid && !index.parent.valid) {
+                Plasmoid.requestActivateIndex(index.row);
+            }
         }
+        onModelChanged: Plasmoid.model = model;
+        Component.onCompleted: Plasmoid.model = model;
     }
 }

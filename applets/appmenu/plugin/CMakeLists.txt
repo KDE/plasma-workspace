@@ -6,16 +6,13 @@ ecm_add_qml_module(appmenuplugin
 )
 
 target_sources(appmenuplugin PRIVATE
-    appmenumodel.cpp
-    appmenumodel.h
+    appmenuprovider.cpp
 )
 
 target_link_libraries(appmenuplugin PRIVATE
                       Qt::Core
-                      Qt::Widgets
                       Qt::Quick
                       Plasma::Plasma
-                      KF6::WindowSystem
                       KF6::I18n
                       PW::LibTaskManager
                       dbusmenuqt)
