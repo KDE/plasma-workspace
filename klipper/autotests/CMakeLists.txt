@@ -12,7 +12,6 @@ target_link_libraries(testHistoryModel
 )
 add_test(NAME klipper-testHistoryModel COMMAND testHistoryModel)
 ecm_mark_as_test(testHistoryModel)
-set_tests_properties(klipper-testHistoryModel PROPERTIES RUN_SERIAL ON)
 
 # Test Utils
 add_executable(testKlipperUtils utilstest.cpp)
@@ -25,7 +24,6 @@ ecm_mark_as_test(testKlipperUtils)
 # Klipper test
 ecm_add_test(klippertest.cpp TEST_NAME klippertest
     LINK_LIBRARIES Qt::Test KF6::KIOCore klipper)
-set_tests_properties(klippertest PROPERTIES RUN_SERIAL ON)
 
 add_test(
     NAME klipper_v3migrationtest

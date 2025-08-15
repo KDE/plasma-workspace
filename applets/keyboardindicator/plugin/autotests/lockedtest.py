@@ -5,6 +5,7 @@
 
 import os
 import subprocess
+import time
 import unittest
 
 from appium import webdriver
@@ -20,7 +21,7 @@ class LockedTest(unittest.TestCase):
     def setUpClass(cls) -> None:
         options = AppiumOptions()
         options.set_capability("app", f"{os.getenv('QML_EXEC')} {os.path.dirname(os.path.realpath(__file__))}/lockedtest.qml")
-        cls.driver = webdriver.Remote(command_executor=f'http://127.0.0.1:{os.getenv("FLASK_PORT", "4723")}', options=options)
+        cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', options=options)
         options.set_capability("timeouts", {'implicit': 10000})
 
     @classmethod

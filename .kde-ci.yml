@@ -89,7 +89,7 @@ RuntimeDependencies:
     'plasma/milou': '@same'
 
 Options:
- ctest-arguments: '--repeat until-pass:5 --parallel 2'
+ ctest-arguments: '--repeat until-pass:5'
  use-ccache: True
  require-passing-tests-on: ['Linux/Qt6', 'FreeBSD/Qt6']
  clang-format-versions: [14, 18]
