@@ -478,6 +478,11 @@ void DBusMenuModel::open(const QModelIndex &index)
         QDBusPendingReply<bool> reply = *watcher;
         if (reply.isError()) {
             qCWarning(DBUSMENUQT) << "AboutToShow() failed:" << reply.error();
+            // Temporary workaround for Chromium mishandling AboutToShow(id: 0).
+            // https://chromium-review.googlesource.com/c/chromium/src/+/6854001
+            if (guard->id() == 0) {
+                fetchLayout(0);
+            }
             return;
         }
 
