@@ -183,7 +183,7 @@ class SystemTrayTests(unittest.TestCase):
         options.set_capability("environ", {
             "LC_ALL": "en_US.UTF-8",
         })
-        cls.driver = webdriver.Remote(command_executor=f'http://127.0.0.1:{os.getenv("FLASK_PORT", "4723")}', options=options)
+        cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', options=options)
 
         cls.kded = subprocess.Popen([f"kded{KDE_VERSION}"])
         # Doc: https://lazka.github.io/pgi-docs/Gio-2.0/classes/DBusConnection.html
@@ -223,6 +223,12 @@ class SystemTrayTests(unittest.TestCase):
         Make sure to terminate the driver again, lest it dangles.
         """
         subprocess.check_call([f"kquitapp{KDE_VERSION}", "plasmawindowed"])
+        for _ in range(10):
+            try:
+                subprocess.check_call(["pidof", "plasmawindowed"])
+            except subprocess.CalledProcessError:
+                break
+            time.sleep(1)
 
         if cls.kded is not None:
             subprocess.check_call([f"kquitapp{KDE_VERSION}", f"kded{KDE_VERSION}"])
@@ -270,8 +276,8 @@ class SystemTrayTests(unittest.TestCase):
         action.perform()
         if self.xembed_tray_icon is None:
             return
-        WebDriverWait(self.driver, 10).until(lambda _: self.xembed_tray_icon.button_press_event.is_set())
-        WebDriverWait(self.driver, 10).until(lambda _: self.xembed_tray_icon.button_release_event.is_set())
+        self.assertTrue(self.xembed_tray_icon.button_press_event.is_set())
+        self.assertTrue(self.xembed_tray_icon.button_release_event.is_set())
         # the button which was pressed or released, numbered from 1 to 5. Normally button 1 is the left mouse button, 2 is the middle button, and 3 is the right button. On 2-button mice, the middle button can often be simulated by pressing both mouse buttons together.
         if mouse_button == MouseButton.LEFT:
             self.assertEqual(self.xembed_tray_icon.pressed_button, 1)
@@ -290,7 +296,7 @@ class SystemTrayTests(unittest.TestCase):
         action.wheel_action.scroll(int(rect["x"] + rect["width"] / 2), int(rect["y"] + rect["height"] / 2), delta_x, delta_y).pause(1)
         action.perform()
         if self.xembed_tray_icon is not None:
-            WebDriverWait(self.driver, 10).until(lambda _: self.xembed_tray_icon.scroll_event.is_set())
+            self.assertTrue(self.xembed_tray_icon.scroll_event.is_set())
 
     def test_1_xembed_tray_icon(self) -> None:
         """
@@ -515,7 +521,7 @@ class SystemTrayTests(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    assert "USE_CUSTOM_BUS" in os.environ or "KDECI_BUILD" in os.environ
+    assert "USE_CUSTOM_BUS" in os.environ
     assert "GDK_BACKEND" in os.environ or "TEST_WITH_KWIN_WAYLAND" in os.environ
     logging.getLogger().setLevel(logging.INFO)
     unittest.main()

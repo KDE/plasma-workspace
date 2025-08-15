@@ -70,7 +70,7 @@ class TestApplication(Gtk.Application):
                 "QT_LOGGING_RULES": "qt.accessibility.atspi.warning=false;qt.qml.typeresolution.cycle.warning=false;kf.plasma.core.warning=false;kf.windowsystem.warning=false;kf.kirigami.platform.warning=false;org.kde.klipper.debug=true",
             })
         options.set_capability("timeouts", {'implicit': 5000})
-        self.driver = webdriver.Remote(command_executor=f'http://127.0.0.1:{os.getenv("FLASK_PORT", "4723")}', options=options)
+        self.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', options=options)
         self.driver_ready_event.set()
 
     def klipper_signal_handler(self, d_bus_proxy: Gio.DBusProxy, sender_name: str, signal_name: str, parameters: GLib.Variant) -> None:
@@ -184,6 +184,12 @@ class ClipboardTest(unittest.TestCase):
         Make sure to terminate the driver again, lest it dangles.
         """
         subprocess.check_call([f"kquitapp{KDE_VERSION}", "plasmawindowed"])
+        for _ in range(10):
+            try:
+                subprocess.check_call(["pidof", "plasmawindowed"])
+            except subprocess.CalledProcessError:
+                break
+            time.sleep(1)
         app.driver.quit()
         app.quit()
 

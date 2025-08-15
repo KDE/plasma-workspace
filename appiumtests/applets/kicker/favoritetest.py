@@ -157,6 +157,6 @@ class KickerTest(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    assert "USE_CUSTOM_BUS" in os.environ or "KDECI_BUILD" in os.environ
+    assert "USE_CUSTOM_BUS" in os.environ
     logging.getLogger().setLevel(logging.INFO)
     unittest.main()

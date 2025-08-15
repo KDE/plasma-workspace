@@ -25,7 +25,7 @@ class LogoutGreeterTests(unittest.TestCase):
         options.set_capability("environ", {
             "LC_ALL": "en_US.UTF-8",
         })
-        self.driver = webdriver.Remote(command_executor=f'http://127.0.0.1:{os.getenv("FLASK_PORT", "4723")}', options=options)
+        self.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', options=options)
 
     def tearDown(self):
         self.driver.quit()
