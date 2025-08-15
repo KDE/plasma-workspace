@@ -185,6 +185,10 @@ bool ActionsControl::blockActions(const QString &action)
         return false;
     }
 
+    if (action == QLatin1String("solid_camera.desktop")) {
+        return false;
+    }
+
     return true;
 }
 
