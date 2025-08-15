@@ -18,7 +18,7 @@ add_test(
     NAME kcm_cursortheme_test
     COMMAND sh -c "mkdir -p /tmp/appium/kcm_cursortheme_test;dbus-launch selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/kcm_cursortheme_test.py"
 )
-set_tests_properties(kcm_cursortheme_test PROPERTIES TIMEOUT 120 ENVIRONMENT "XDG_RUNTIME_DIR=/tmp/appium/kcm_colors_test;FLASK_PORT=4741")
+set_tests_properties(kcm_cursortheme_test PROPERTIES TIMEOUT 120 ENVIRONMENT "XDG_RUNTIME_DIR=/tmp/appium/kcm_cursortheme_test;FLASK_PORT=4741")
 
 add_test(
     NAME kcm_desktoptheme_test
