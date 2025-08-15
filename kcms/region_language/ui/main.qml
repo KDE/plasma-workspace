@@ -158,6 +158,10 @@ KCM.ScrollViewKCM {
             }
 
             Kirigami.Theme.useAlternateBackgroundColor: true
+
+            // No hover effects wanted here
+            hoverEnabled: false
+            highlighted: false
             down: false
 
             contentItem: RowLayout {
