@@ -142,6 +142,13 @@ void DeviceMessageMonitor::onStateChanged(const QString &udi)
     auto operationResult = m_deviceStateMonitor->getOperationResult(udi);
     auto state = m_deviceStateMonitor->getState(udi);
 
+    if (state == DevicesStateMonitor::Idle) {
+        notify(QString(), QString(), udi);
+        qCDebug(APPLETS::DEVICENOTIFIER) << "Device Message Monitor: "
+                                         << "device " << udi << " is in the idle state. No message";
+        return;
+    }
+
     if (operationResult == Solid::ErrorType::NoError && state == DevicesStateMonitor::MountDone) {
         notify(QString(), QString(), udi);
         qCDebug(APPLETS::DEVICENOTIFIER) << "Device Message Monitor: "
