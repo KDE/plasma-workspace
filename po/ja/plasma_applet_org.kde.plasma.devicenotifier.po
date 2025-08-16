@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-15 00:44+0000\n"
+"POT-Creation-Date: 2025-08-16 02:42+0000\n"
 "PO-Revision-Date: 2023-02-23 18:21+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -132,27 +132,27 @@ msgstr "新しいデバイスが挿入された時ポップアップを開く"
 msgid "Mount"
 msgstr "マウント"
 
-#: plugin/actions/mountandopenaction.cpp:179
+#: plugin/actions/mountandopenaction.cpp:183
 #, kde-format
 msgid "Open in File Manager"
 msgstr "ファイルマネージャで開く"
 
-#: plugin/actions/mountandopenaction.cpp:182
+#: plugin/actions/mountandopenaction.cpp:186
 #, kde-format
 msgid "Try to Fix"
 msgstr ""
 
-#: plugin/actions/mountandopenaction.cpp:182
+#: plugin/actions/mountandopenaction.cpp:186
 #, kde-format
 msgid "Mount and Open"
 msgstr "マウントして開く"
 
-#: plugin/actions/mountandopenaction.cpp:184
+#: plugin/actions/mountandopenaction.cpp:188
 #, kde-format
 msgid "Eject"
 msgstr "イジェクト"
 
-#: plugin/actions/mountandopenaction.cpp:186
+#: plugin/actions/mountandopenaction.cpp:190
 #, kde-format
 msgid "Safely remove"
 msgstr "安全に取り外し"

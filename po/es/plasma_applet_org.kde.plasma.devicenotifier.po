@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-15 00:44+0000\n"
+"POT-Creation-Date: 2025-08-16 02:42+0000\n"
 "PO-Revision-Date: 2025-06-04 19:51+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -127,27 +127,27 @@ msgstr "Mostrar una ventana emergente al conectar un nuevo dispositivo"
 msgid "Mount"
 msgstr "Montar"
 
-#: plugin/actions/mountandopenaction.cpp:179
+#: plugin/actions/mountandopenaction.cpp:183
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Abrir en el gestor de archivos"
 
-#: plugin/actions/mountandopenaction.cpp:182
+#: plugin/actions/mountandopenaction.cpp:186
 #, kde-format
 msgid "Try to Fix"
 msgstr "Intentar reparar"
 
-#: plugin/actions/mountandopenaction.cpp:182
+#: plugin/actions/mountandopenaction.cpp:186
 #, kde-format
 msgid "Mount and Open"
 msgstr "Montar y abrir"
 
-#: plugin/actions/mountandopenaction.cpp:184
+#: plugin/actions/mountandopenaction.cpp:188
 #, kde-format
 msgid "Eject"
 msgstr "Expulsar"
 
-#: plugin/actions/mountandopenaction.cpp:186
+#: plugin/actions/mountandopenaction.cpp:190
 #, kde-format
 msgid "Safely remove"
 msgstr "Extraer con seguridad"

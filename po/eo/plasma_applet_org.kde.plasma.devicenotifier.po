@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-15 00:44+0000\n"
+"POT-Creation-Date: 2025-08-16 02:42+0000\n"
 "PO-Revision-Date: 2025-02-23 13:36+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -125,27 +125,27 @@ msgstr "Montri ŝprucfenestron kiam nova aparato estas enŝtopata."
 msgid "Mount"
 msgstr "Munti"
 
-#: plugin/actions/mountandopenaction.cpp:179
+#: plugin/actions/mountandopenaction.cpp:183
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Malfermi en Dosiermastrumilo"
 
-#: plugin/actions/mountandopenaction.cpp:182
+#: plugin/actions/mountandopenaction.cpp:186
 #, kde-format
 msgid "Try to Fix"
 msgstr "Provi Ripari"
 
-#: plugin/actions/mountandopenaction.cpp:182
+#: plugin/actions/mountandopenaction.cpp:186
 #, kde-format
 msgid "Mount and Open"
 msgstr "Munti kaj Malfermi"
 
-#: plugin/actions/mountandopenaction.cpp:184
+#: plugin/actions/mountandopenaction.cpp:188
 #, kde-format
 msgid "Eject"
 msgstr "Elĵeti"
 
-#: plugin/actions/mountandopenaction.cpp:186
+#: plugin/actions/mountandopenaction.cpp:190
 #, kde-format
 msgid "Safely remove"
 msgstr "Sekure demeti"

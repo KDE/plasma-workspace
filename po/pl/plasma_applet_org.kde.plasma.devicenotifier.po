@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-15 00:44+0000\n"
+"POT-Creation-Date: 2025-08-16 02:42+0000\n"
 "PO-Revision-Date: 2024-07-20 09:05+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -132,27 +132,27 @@ msgstr "Wysuń okno, po podłączeniu nowego urządzenia"
 msgid "Mount"
 msgstr "Podepnij"
 
-#: plugin/actions/mountandopenaction.cpp:179
+#: plugin/actions/mountandopenaction.cpp:183
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Otwórz w przeglądarce plików"
 
-#: plugin/actions/mountandopenaction.cpp:182
+#: plugin/actions/mountandopenaction.cpp:186
 #, kde-format
 msgid "Try to Fix"
 msgstr ""
 
-#: plugin/actions/mountandopenaction.cpp:182
+#: plugin/actions/mountandopenaction.cpp:186
 #, kde-format
 msgid "Mount and Open"
 msgstr "Podepnij i otwórz"
 
-#: plugin/actions/mountandopenaction.cpp:184
+#: plugin/actions/mountandopenaction.cpp:188
 #, kde-format
 msgid "Eject"
 msgstr "Wysuń"
 
-#: plugin/actions/mountandopenaction.cpp:186
+#: plugin/actions/mountandopenaction.cpp:190
 #, kde-format
 msgid "Safely remove"
 msgstr "Wysuń bezpiecznie"

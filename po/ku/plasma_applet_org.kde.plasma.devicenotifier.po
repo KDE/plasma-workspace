@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-15 00:44+0000\n"
+"POT-Creation-Date: 2025-08-16 02:42+0000\n"
 "PO-Revision-Date: 2008-12-25 02:34+0200\n"
 "Last-Translator: Omer Ensari <oensari@gmail.com>\n"
 "Language-Team: Kurdish <kde-i18n-doc@lists.kde.org>\n"
@@ -133,27 +133,27 @@ msgstr "Tu cîhaz nehatiye girêdan"
 msgid "Mount"
 msgstr ""
 
-#: plugin/actions/mountandopenaction.cpp:179
+#: plugin/actions/mountandopenaction.cpp:183
 #, kde-format
 msgid "Open in File Manager"
 msgstr ""
 
-#: plugin/actions/mountandopenaction.cpp:182
+#: plugin/actions/mountandopenaction.cpp:186
 #, kde-format
 msgid "Try to Fix"
 msgstr ""
 
-#: plugin/actions/mountandopenaction.cpp:182
+#: plugin/actions/mountandopenaction.cpp:186
 #, kde-format
 msgid "Mount and Open"
 msgstr ""
 
-#: plugin/actions/mountandopenaction.cpp:184
+#: plugin/actions/mountandopenaction.cpp:188
 #, kde-format
 msgid "Eject"
 msgstr ""
 
-#: plugin/actions/mountandopenaction.cpp:186
+#: plugin/actions/mountandopenaction.cpp:190
 #, kde-format
 msgid "Safely remove"
 msgstr ""
