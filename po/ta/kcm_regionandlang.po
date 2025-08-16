@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-13 00:45+0000\n"
+"POT-Creation-Date: 2025-08-16 00:45+0000\n"
 "PO-Revision-Date: 2025-07-19 15:15+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -330,7 +330,7 @@ msgstr "தெரியாதது"
 msgid "Default for System"
 msgstr "இயங்குதளத்தின் இயல்பிருப்பு"
 
-#: localelistmodel.cpp:24 localelistmodel.cpp:80 ui/main.qml:383
+#: localelistmodel.cpp:24 localelistmodel.cpp:80 ui/main.qml:387
 #, kde-format
 msgid "Default"
 msgstr "இயல்பிருப்பு"
@@ -569,56 +569,56 @@ msgstr ""
 "தேவையான மொழி மற்றும் வட்டார ஆதரவுக்கோப்புகள் நிறுவப்பட்டுள்ளன. கணினியை இப்போது "
 "நிறுத்தலாம்."
 
-#: ui/main.qml:175
+#: ui/main.qml:179
 #, kde-format
 msgctxt "@action:button for change the locale used"
 msgid "Modify…"
 msgstr "மாற்று…"
 
-#: ui/main.qml:211
+#: ui/main.qml:215
 #, kde-format
 msgctxt "@title:window"
 msgid "Data and Storage Sizes"
 msgstr "சேமிப்பக அளவுகள்"
 
-#: ui/main.qml:277
+#: ui/main.qml:281
 #, kde-format
 msgid "Numbers"
 msgstr "எண்கள்"
 
-#: ui/main.qml:279
+#: ui/main.qml:283
 #, kde-format
 msgid "Time"
 msgstr "நேரம்"
 
-#: ui/main.qml:281
+#: ui/main.qml:285
 #, kde-format
 msgid "Currency"
 msgstr "செலாவணி"
 
-#: ui/main.qml:283
+#: ui/main.qml:287
 #, kde-format
 msgid "Measurements"
 msgstr "அலகுகள்"
 
-#: ui/main.qml:285
+#: ui/main.qml:289
 #, kde-format
 msgid "Paper Size"
 msgstr "தாளின் அளவு"
 
-#: ui/main.qml:287
+#: ui/main.qml:291
 #, kde-format
 msgctxt "Postal Address"
 msgid "Address"
 msgstr "முகவரி"
 
-#: ui/main.qml:289
+#: ui/main.qml:293
 #, kde-format
 msgctxt "Name Style"
 msgid "Name"
 msgstr "பெயர்"
 
-#: ui/main.qml:291
+#: ui/main.qml:295
 #, kde-format
 msgctxt "Phone Numbers"
 msgid "Phone number"

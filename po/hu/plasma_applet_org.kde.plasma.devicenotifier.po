@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-14 00:44+0000\n"
+"POT-Creation-Date: 2025-08-16 00:45+0000\n"
 "PO-Revision-Date: 2025-05-21 22:07+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -37,27 +37,27 @@ msgstr ""
 msgid "Mount"
 msgstr "Csatlakoztatás"
 
-#: actions/mountandopenaction.cpp:179
+#: actions/mountandopenaction.cpp:183
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Megnyitás fájlkezelőben"
 
-#: actions/mountandopenaction.cpp:182
+#: actions/mountandopenaction.cpp:186
 #, kde-format
 msgid "Try to Fix"
 msgstr "Javítás megkísérlése"
 
-#: actions/mountandopenaction.cpp:182
+#: actions/mountandopenaction.cpp:186
 #, kde-format
 msgid "Mount and Open"
 msgstr "Csatolás és megnyitás"
 
-#: actions/mountandopenaction.cpp:184
+#: actions/mountandopenaction.cpp:188
 #, kde-format
 msgid "Eject"
 msgstr "Kiadás"
 
-#: actions/mountandopenaction.cpp:186
+#: actions/mountandopenaction.cpp:190
 #, kde-format
 msgid "Safely remove"
 msgstr "Biztonságos eltávolítás"

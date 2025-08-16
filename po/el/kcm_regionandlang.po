@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-13 00:45+0000\n"
+"POT-Creation-Date: 2025-08-16 00:45+0000\n"
 "PO-Revision-Date: 2024-09-19 16:50+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -337,7 +337,7 @@ msgstr "Άγνωστο"
 msgid "Default for System"
 msgstr "Προεπιλογή για το σύστημα"
 
-#: localelistmodel.cpp:24 localelistmodel.cpp:80 ui/main.qml:383
+#: localelistmodel.cpp:24 localelistmodel.cpp:80 ui/main.qml:387
 #, kde-format
 msgid "Default"
 msgstr "Προεπιλογή"
@@ -580,56 +580,56 @@ msgstr ""
 "Έχουν εγκατασταθεί τα απαραίτητα αρχεία υποστήριξης τοπικών και γλωσσικών "
 "ρυθμίσεων. Είναι πλέον ασφαλές να απενεργοποιήσετε τον υπολογιστή."
 
-#: ui/main.qml:175
+#: ui/main.qml:179
 #, kde-format
 msgctxt "@action:button for change the locale used"
 msgid "Modify…"
 msgstr "Τροποποίηση…"
 
-#: ui/main.qml:211
+#: ui/main.qml:215
 #, kde-format
 msgctxt "@title:window"
 msgid "Data and Storage Sizes"
 msgstr "Μεγέθη δεδομένων και αποθήκευσης"
 
-#: ui/main.qml:277
+#: ui/main.qml:281
 #, kde-format
 msgid "Numbers"
 msgstr "Αριθμοί"
 
-#: ui/main.qml:279
+#: ui/main.qml:283
 #, kde-format
 msgid "Time"
 msgstr "Ώρα"
 
-#: ui/main.qml:281
+#: ui/main.qml:285
 #, kde-format
 msgid "Currency"
 msgstr "Νόμισμα"
 
-#: ui/main.qml:283
+#: ui/main.qml:287
 #, kde-format
 msgid "Measurements"
 msgstr "Μετρήσεις"
 
-#: ui/main.qml:285
+#: ui/main.qml:289
 #, kde-format
 msgid "Paper Size"
 msgstr "Μέγεθος χαρτιού"
 
-#: ui/main.qml:287
+#: ui/main.qml:291
 #, kde-format
 msgctxt "Postal Address"
 msgid "Address"
 msgstr "Διεύθυνση"
 
-#: ui/main.qml:289
+#: ui/main.qml:293
 #, kde-format
 msgctxt "Name Style"
 msgid "Name"
 msgstr "Όνομα"
 
-#: ui/main.qml:291
+#: ui/main.qml:295
 #, kde-format
 msgctxt "Phone Numbers"
 msgid "Phone number"

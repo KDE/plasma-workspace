@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-14 00:44+0000\n"
+"POT-Creation-Date: 2025-08-16 00:45+0000\n"
 "PO-Revision-Date: 2022-02-09 18:26+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -35,27 +35,27 @@ msgstr ""
 msgid "Mount"
 msgstr "Gắn kết"
 
-#: actions/mountandopenaction.cpp:179
+#: actions/mountandopenaction.cpp:183
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Mở trong trình quản lí tệp"
 
-#: actions/mountandopenaction.cpp:182
+#: actions/mountandopenaction.cpp:186
 #, kde-format
 msgid "Try to Fix"
 msgstr ""
 
-#: actions/mountandopenaction.cpp:182
+#: actions/mountandopenaction.cpp:186
 #, kde-format
 msgid "Mount and Open"
 msgstr "Gắn kết và mở"
 
-#: actions/mountandopenaction.cpp:184
+#: actions/mountandopenaction.cpp:188
 #, kde-format
 msgid "Eject"
 msgstr "Rút"
 
-#: actions/mountandopenaction.cpp:186
+#: actions/mountandopenaction.cpp:190
 #, kde-format
 msgid "Safely remove"
 msgstr "Rút an toàn"

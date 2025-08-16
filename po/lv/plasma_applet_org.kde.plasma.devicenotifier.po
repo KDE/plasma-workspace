@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-14 00:44+0000\n"
+"POT-Creation-Date: 2025-08-16 00:45+0000\n"
 "PO-Revision-Date: 2025-03-03 17:02+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -39,27 +39,27 @@ msgstr ""
 msgid "Mount"
 msgstr "Piemontēt"
 
-#: actions/mountandopenaction.cpp:179
+#: actions/mountandopenaction.cpp:183
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Atvērt datņu pārvaldniekā"
 
-#: actions/mountandopenaction.cpp:182
+#: actions/mountandopenaction.cpp:186
 #, kde-format
 msgid "Try to Fix"
 msgstr "Mēģināt labot"
 
-#: actions/mountandopenaction.cpp:182
+#: actions/mountandopenaction.cpp:186
 #, kde-format
 msgid "Mount and Open"
 msgstr "Piemontēt un atvērt"
 
-#: actions/mountandopenaction.cpp:184
+#: actions/mountandopenaction.cpp:188
 #, kde-format
 msgid "Eject"
 msgstr "Izņemt"
 
-#: actions/mountandopenaction.cpp:186
+#: actions/mountandopenaction.cpp:190
 #, kde-format
 msgid "Safely remove"
 msgstr "Droši izņemt"

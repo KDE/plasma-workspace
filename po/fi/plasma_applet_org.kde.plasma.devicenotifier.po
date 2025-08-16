@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-14 00:44+0000\n"
+"POT-Creation-Date: 2025-08-16 00:45+0000\n"
 "PO-Revision-Date: 2025-07-13 23:10+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -43,27 +43,27 @@ msgstr ""
 msgid "Mount"
 msgstr "Liitä"
 
-#: actions/mountandopenaction.cpp:179
+#: actions/mountandopenaction.cpp:183
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Avaa tiedostonhallintaan"
 
-#: actions/mountandopenaction.cpp:182
+#: actions/mountandopenaction.cpp:186
 #, kde-format
 msgid "Try to Fix"
 msgstr "Yritä korjata"
 
-#: actions/mountandopenaction.cpp:182
+#: actions/mountandopenaction.cpp:186
 #, kde-format
 msgid "Mount and Open"
 msgstr "Liitä ja avaa"
 
-#: actions/mountandopenaction.cpp:184
+#: actions/mountandopenaction.cpp:188
 #, kde-format
 msgid "Eject"
 msgstr "Irrota"
 
-#: actions/mountandopenaction.cpp:186
+#: actions/mountandopenaction.cpp:190
 #, kde-format
 msgid "Safely remove"
 msgstr "Poista turvallisesti"
