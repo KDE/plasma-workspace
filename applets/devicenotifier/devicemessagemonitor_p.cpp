@@ -175,7 +175,7 @@ void DeviceMessageMonitor::onStateChanged(const QString &udi)
             if (state == DevicesStateMonitor::RepairDone) {
                 return i18n("Successfully repaired!");
             }
-            if (state != DevicesStateMonitor::MountDone && isSafelyRemovable(udi)) {
+            if (state == DevicesStateMonitor::UnmountDone && isSafelyRemovable(udi)) {
                 KNotification::event(QStringLiteral("safelyRemovable"),
                                      i18n("Device Status"),
                                      i18n("A device can now be safely removed"),
