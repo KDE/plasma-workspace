@@ -4,8 +4,6 @@
 # SPDX-License-Identifier: MIT
 
 import os
-import subprocess
-import time
 import unittest
 from typing import Final
 
@@ -56,7 +54,8 @@ class KCMFontsTest(unittest.TestCase):
         """
         Tests the KCM can be opened
         """
-        self.driver.find_element(AppiumBy.NAME, "&Adjust All Fonts…")
+        # Since Qt 6.10 ampersand is stripped, so use contains instead of equals
+        self.driver.find_element(AppiumBy.XPATH, "//button[contains(@name, 'Adjust All Fonts…')]")
 
 
 if __name__ == '__main__':
