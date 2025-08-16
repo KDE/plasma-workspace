@@ -12,6 +12,8 @@
 #include <KFileItem>
 #include <KIO/PreviewJob>
 
+using namespace Qt::StringLiterals;
+
 class AsyncPreviewImageResponse : public QQuickImageResponse
 {
     Q_OBJECT
@@ -29,16 +31,17 @@ protected:
 AsyncPreviewImageResponse::AsyncPreviewImageResponse(const QString &path, const QSize &requestedSize)
 {
     auto saveIcon = [this, requestedSize](const KFileItem &item) {
-        saveImage(QIcon::fromTheme(item.determineMimeType().iconName()).pixmap(requestedSize.isValid() ? requestedSize : QSize(128, 128)).toImage());
+        saveImage(QIcon::fromTheme(item.currentMimeType().iconName()).pixmap(requestedSize.isValid() ? requestedSize : QSize(128, 128)).toImage());
     };
 
-    QUrl url = QUrl::fromUserInput(path);
-    if (!url.isValid() || !url.isLocalFile()) { // no remote files
-        saveIcon(KFileItem(url));
+    const QUrl url = QUrl::fromUserInput(path);
+    const KFileItem fileItem(url);
+    if (!url.isValid() || fileItem.isSlow()) { // no remote files
+        saveIcon(fileItem);
         return;
     }
 
-    KIO::PreviewJob *job = KIO::filePreview(KFileItemList{KFileItem(url)}, requestedSize);
+    KIO::PreviewJob *job = KIO::filePreview(KFileItemList{fileItem}, requestedSize);
     job->setIgnoreMaximumSize(true);
     connect(job, &KIO::PreviewJob::gotPreview, this, [this](const KFileItem &, const QPixmap &preview) {
         saveImage(preview.toImage());
