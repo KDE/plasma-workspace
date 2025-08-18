@@ -7,15 +7,16 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-10 02:54+0000\n"
-"PO-Revision-Date: 2022-12-10 11:36+0100\n"
+"PO-Revision-Date: 2025-08-17 12:06+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
-"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"Language-Team: pl\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #: abstractnotificationsmodel.cpp:315
 #, kde-format
@@ -64,18 +65,18 @@ msgstr[2] "%1 plików"
 msgctxt "Copying n of m items"
 msgid "%2 of %1 item"
 msgid_plural "%2 of %1 items"
-msgstr[0] "%2 z %1 rzeczy"
-msgstr[1] "%2 z %1 rzeczy"
-msgstr[2] "%2 z %1 rzeczy"
+msgstr[0] "%2 z %1 elementu"
+msgstr[1] "%2 z %1 elementów"
+msgstr[2] "%2 z %1 elementów"
 
 #: job_p.cpp:204 job_p.cpp:224
 #, kde-format
 msgctxt "Copying n items"
 msgid "%1 item"
 msgid_plural "%1 items"
-msgstr[0] "%1 rzecz"
-msgstr[1] "%1 rzeczy"
-msgstr[2] "%1 rzeczy"
+msgstr[0] "%1 element"
+msgstr[1] "%1 elementy"
+msgstr[2] "%1 elementów"
 
 #: job_p.cpp:211
 #, kde-format
