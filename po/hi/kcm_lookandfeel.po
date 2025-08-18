@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-11 00:44+0000\n"
+"POT-Creation-Date: 2025-08-18 00:44+0000\n"
 "PO-Revision-Date: 2021-08-21 16:25+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -26,64 +26,6 @@ msgstr "राघवेंद्र कामत"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "raghu@raghukamath.com"
-
-#: lnftool.cpp:32
-#, kde-format
-msgid "Global Theme Tool"
-msgstr "वैश्विक प्रसंग साधन"
-
-#: lnftool.cpp:34
-#, kde-format
-msgid ""
-"Command line tool to apply global theme packages for changing the look and "
-"feel."
-msgstr "रंगरूप और अनुभव बदलने हेतु वैश्विक प्रसंग पैकेज लागू करने के लिए एक कमांड लाइन साधन।"
-
-#: lnftool.cpp:36
-#, kde-format
-msgid "Copyright 2017, Marco Martin"
-msgstr "सर्वाधिकार २०१७, मार्को मार्टिन"
-
-#: lnftool.cpp:37
-#, kde-format
-msgid "Marco Martin"
-msgstr "मार्को मार्टिन"
-
-#: lnftool.cpp:37
-#, kde-format
-msgid "Maintainer"
-msgstr "प्रबंधक"
-
-#: lnftool.cpp:46
-#, kde-format
-msgid "List available global theme packages"
-msgstr "उपलब्ध वैश्विक प्रसंग पैकेजों की सूची दिखाएँ"
-
-#: lnftool.cpp:49
-#, kde-format
-msgid ""
-"Apply a global theme package. This can be the name of a package, or a full "
-"path to an installed package, at which point this tool will ensure it is a "
-"global theme package and then attempt to apply it"
-msgstr ""
-"वैश्विक थीम पैकेज लागू करें। यह एक पैकेज का नाम हो सकता है, या एक स्थापित पैकेज के लिए एक "
-"पूर्ण पथ हो सकता है, उस स्तिथी में यह साधन सुनिश्चित करेगा कि यह एक वैश्विक थीम पैकेज है "
-"और फिर इसे लागू करने का प्रयास करेगा।"
-
-#: lnftool.cpp:51
-#, kde-format
-msgid "packagename"
-msgstr "पैकेज का नाम"
-
-#: lnftool.cpp:52
-#, kde-format
-msgid "Prevent --apply from disabling the automatic mode"
-msgstr ""
-
-#: lnftool.cpp:53
-#, kde-format
-msgid "Reset the Plasma Desktop layout"
-msgstr "प्लाज्मा डेस्कटॉप अभिन्यास रीसेट करें"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: lookandfeelsettings.kcfg:9
@@ -118,6 +60,64 @@ msgid ""
 "How long the computer should be idle in order to switch between dark and "
 "light global themes, in seconds"
 msgstr ""
+
+#: tool/lnftool.cpp:32
+#, kde-format
+msgid "Global Theme Tool"
+msgstr "वैश्विक प्रसंग साधन"
+
+#: tool/lnftool.cpp:34
+#, kde-format
+msgid ""
+"Command line tool to apply global theme packages for changing the look and "
+"feel."
+msgstr "रंगरूप और अनुभव बदलने हेतु वैश्विक प्रसंग पैकेज लागू करने के लिए एक कमांड लाइन साधन।"
+
+#: tool/lnftool.cpp:36
+#, kde-format
+msgid "Copyright 2017, Marco Martin"
+msgstr "सर्वाधिकार २०१७, मार्को मार्टिन"
+
+#: tool/lnftool.cpp:37
+#, kde-format
+msgid "Marco Martin"
+msgstr "मार्को मार्टिन"
+
+#: tool/lnftool.cpp:37
+#, kde-format
+msgid "Maintainer"
+msgstr "प्रबंधक"
+
+#: tool/lnftool.cpp:46
+#, kde-format
+msgid "List available global theme packages"
+msgstr "उपलब्ध वैश्विक प्रसंग पैकेजों की सूची दिखाएँ"
+
+#: tool/lnftool.cpp:49
+#, kde-format
+msgid ""
+"Apply a global theme package. This can be the name of a package, or a full "
+"path to an installed package, at which point this tool will ensure it is a "
+"global theme package and then attempt to apply it"
+msgstr ""
+"वैश्विक थीम पैकेज लागू करें। यह एक पैकेज का नाम हो सकता है, या एक स्थापित पैकेज के लिए एक "
+"पूर्ण पथ हो सकता है, उस स्तिथी में यह साधन सुनिश्चित करेगा कि यह एक वैश्विक थीम पैकेज है "
+"और फिर इसे लागू करने का प्रयास करेगा।"
+
+#: tool/lnftool.cpp:51
+#, kde-format
+msgid "packagename"
+msgstr "पैकेज का नाम"
+
+#: tool/lnftool.cpp:52
+#, kde-format
+msgid "Prevent --apply from disabling the automatic mode"
+msgstr ""
+
+#: tool/lnftool.cpp:53
+#, kde-format
+msgid "Reset the Plasma Desktop layout"
+msgstr "प्लाज्मा डेस्कटॉप अभिन्यास रीसेट करें"
 
 #: ui/ConfirmDeletionDialog.qml:16
 #, kde-format

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-11 00:44+0000\n"
+"POT-Creation-Date: 2025-08-18 00:44+0000\n"
 "PO-Revision-Date: 2025-08-02 11:37+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -32,66 +32,6 @@ msgstr ""
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "montoro_mde@gva.es,sps@sastia.com,antonibella5@yahoo.com,aacid@kde.org"
-
-#: lnftool.cpp:32
-#, kde-format
-msgid "Global Theme Tool"
-msgstr "Eina de tema global"
-
-#: lnftool.cpp:34
-#, kde-format
-msgid ""
-"Command line tool to apply global theme packages for changing the look and "
-"feel."
-msgstr ""
-"Eina de la línia d'ordres per a aplicar paquets de tema global per a canviar "
-"l'aspecte i el comportament."
-
-#: lnftool.cpp:36
-#, kde-format
-msgid "Copyright 2017, Marco Martin"
-msgstr "Copyright 2017, Marco Martin"
-
-#: lnftool.cpp:37
-#, kde-format
-msgid "Marco Martin"
-msgstr "Marco Martin"
-
-#: lnftool.cpp:37
-#, kde-format
-msgid "Maintainer"
-msgstr "Mantenidor"
-
-#: lnftool.cpp:46
-#, kde-format
-msgid "List available global theme packages"
-msgstr "Llista de paquets disponibles de tema global"
-
-#: lnftool.cpp:49
-#, kde-format
-msgid ""
-"Apply a global theme package. This can be the name of a package, or a full "
-"path to an installed package, at which point this tool will ensure it is a "
-"global theme package and then attempt to apply it"
-msgstr ""
-"Aplica un paquet de tema global. Açò pot ser el nom d'un paquet, o un camí "
-"complet cap a un paquet instal·lat. En este punt, esta eina comprovarà que "
-"és un paquet de tema global i intentarà aplicar-lo"
-
-#: lnftool.cpp:51
-#, kde-format
-msgid "packagename"
-msgstr "nomdepaquet"
-
-#: lnftool.cpp:52
-#, kde-format
-msgid "Prevent --apply from disabling the automatic mode"
-msgstr "Evita que --apply desactive el mode automàtic"
-
-#: lnftool.cpp:53
-#, kde-format
-msgid "Reset the Plasma Desktop layout"
-msgstr "Reinicia la disposició de l'escriptori Plasma"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: lookandfeelsettings.kcfg:9
@@ -128,6 +68,66 @@ msgid ""
 msgstr ""
 "Quant de temps ha d'estar desocupat l'ordinador per a canviar entre temes "
 "globals foscos i clars, en segons"
+
+#: tool/lnftool.cpp:32
+#, kde-format
+msgid "Global Theme Tool"
+msgstr "Eina de tema global"
+
+#: tool/lnftool.cpp:34
+#, kde-format
+msgid ""
+"Command line tool to apply global theme packages for changing the look and "
+"feel."
+msgstr ""
+"Eina de la línia d'ordres per a aplicar paquets de tema global per a canviar "
+"l'aspecte i el comportament."
+
+#: tool/lnftool.cpp:36
+#, kde-format
+msgid "Copyright 2017, Marco Martin"
+msgstr "Copyright 2017, Marco Martin"
+
+#: tool/lnftool.cpp:37
+#, kde-format
+msgid "Marco Martin"
+msgstr "Marco Martin"
+
+#: tool/lnftool.cpp:37
+#, kde-format
+msgid "Maintainer"
+msgstr "Mantenidor"
+
+#: tool/lnftool.cpp:46
+#, kde-format
+msgid "List available global theme packages"
+msgstr "Llista de paquets disponibles de tema global"
+
+#: tool/lnftool.cpp:49
+#, kde-format
+msgid ""
+"Apply a global theme package. This can be the name of a package, or a full "
+"path to an installed package, at which point this tool will ensure it is a "
+"global theme package and then attempt to apply it"
+msgstr ""
+"Aplica un paquet de tema global. Açò pot ser el nom d'un paquet, o un camí "
+"complet cap a un paquet instal·lat. En este punt, esta eina comprovarà que "
+"és un paquet de tema global i intentarà aplicar-lo"
+
+#: tool/lnftool.cpp:51
+#, kde-format
+msgid "packagename"
+msgstr "nomdepaquet"
+
+#: tool/lnftool.cpp:52
+#, kde-format
+msgid "Prevent --apply from disabling the automatic mode"
+msgstr "Evita que --apply desactive el mode automàtic"
+
+#: tool/lnftool.cpp:53
+#, kde-format
+msgid "Reset the Plasma Desktop layout"
+msgstr "Reinicia la disposició de l'escriptori Plasma"
 
 #: ui/ConfirmDeletionDialog.qml:16
 #, kde-format

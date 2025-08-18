@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-11 00:44+0000\n"
+"POT-Creation-Date: 2025-08-18 00:44+0000\n"
 "PO-Revision-Date: 2025-08-04 12:38+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -28,63 +28,6 @@ msgstr "صفا الفليج,زايد السعيدي"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "safa1996alfulaij@gmail.com,zayed.alsaidi@gmail.com"
-
-#: lnftool.cpp:32
-#, kde-format
-msgid "Global Theme Tool"
-msgstr "أداة السمة الشاملة"
-
-#: lnftool.cpp:34
-#, kde-format
-msgid ""
-"Command line tool to apply global theme packages for changing the look and "
-"feel."
-msgstr "أداة سطر الأوامر لتطبيق حزم السمات الشاملة لتغيير الشكل والمظهر."
-
-#: lnftool.cpp:36
-#, kde-format
-msgid "Copyright 2017, Marco Martin"
-msgstr "حقوق الطبع 2017، ماركو مارتن"
-
-#: lnftool.cpp:37
-#, kde-format
-msgid "Marco Martin"
-msgstr "ماركو مارتن"
-
-#: lnftool.cpp:37
-#, kde-format
-msgid "Maintainer"
-msgstr "الصائن"
-
-#: lnftool.cpp:46
-#, kde-format
-msgid "List available global theme packages"
-msgstr "تسرد جميع حزم السمات الشاملة المتوفرة"
-
-#: lnftool.cpp:49
-#, kde-format
-msgid ""
-"Apply a global theme package. This can be the name of a package, or a full "
-"path to an installed package, at which point this tool will ensure it is a "
-"global theme package and then attempt to apply it"
-msgstr ""
-"تطبق حزمة السمة الشاملة. يمكن أن يكون هذا اسم الحزمة، أو المسار الكامل لحزمة "
-"مثبتة، وعند هذه النقطة ستضمن هذه الأداة أنها حزمة سمة شاملة ثم تحاول تطبيقها"
-
-#: lnftool.cpp:51
-#, kde-format
-msgid "packagename"
-msgstr "اسم الحزمة"
-
-#: lnftool.cpp:52
-#, kde-format
-msgid "Prevent --apply from disabling the automatic mode"
-msgstr "امنع --apply من تعطيل الوضع الآليّ"
-
-#: lnftool.cpp:53
-#, kde-format
-msgid "Reset the Plasma Desktop layout"
-msgstr "صفّر تخطيط سطح مكتب بلازما"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: lookandfeelsettings.kcfg:9
@@ -121,6 +64,63 @@ msgid ""
 msgstr ""
 "المدة التي يجب أن يظل فيها الحاسوب في وضع الخمول للتبديل بين السمات العامة "
 "الداكنة والفاتحة، بالثواني"
+
+#: tool/lnftool.cpp:32
+#, kde-format
+msgid "Global Theme Tool"
+msgstr "أداة السمة الشاملة"
+
+#: tool/lnftool.cpp:34
+#, kde-format
+msgid ""
+"Command line tool to apply global theme packages for changing the look and "
+"feel."
+msgstr "أداة سطر الأوامر لتطبيق حزم السمات الشاملة لتغيير الشكل والمظهر."
+
+#: tool/lnftool.cpp:36
+#, kde-format
+msgid "Copyright 2017, Marco Martin"
+msgstr "حقوق الطبع 2017، ماركو مارتن"
+
+#: tool/lnftool.cpp:37
+#, kde-format
+msgid "Marco Martin"
+msgstr "ماركو مارتن"
+
+#: tool/lnftool.cpp:37
+#, kde-format
+msgid "Maintainer"
+msgstr "الصائن"
+
+#: tool/lnftool.cpp:46
+#, kde-format
+msgid "List available global theme packages"
+msgstr "تسرد جميع حزم السمات الشاملة المتوفرة"
+
+#: tool/lnftool.cpp:49
+#, kde-format
+msgid ""
+"Apply a global theme package. This can be the name of a package, or a full "
+"path to an installed package, at which point this tool will ensure it is a "
+"global theme package and then attempt to apply it"
+msgstr ""
+"تطبق حزمة السمة الشاملة. يمكن أن يكون هذا اسم الحزمة، أو المسار الكامل لحزمة "
+"مثبتة، وعند هذه النقطة ستضمن هذه الأداة أنها حزمة سمة شاملة ثم تحاول تطبيقها"
+
+#: tool/lnftool.cpp:51
+#, kde-format
+msgid "packagename"
+msgstr "اسم الحزمة"
+
+#: tool/lnftool.cpp:52
+#, kde-format
+msgid "Prevent --apply from disabling the automatic mode"
+msgstr "امنع --apply من تعطيل الوضع الآليّ"
+
+#: tool/lnftool.cpp:53
+#, kde-format
+msgid "Reset the Plasma Desktop layout"
+msgstr "صفّر تخطيط سطح مكتب بلازما"
 
 #: ui/ConfirmDeletionDialog.qml:16
 #, kde-format

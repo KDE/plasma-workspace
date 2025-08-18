@@ -1,21 +1,22 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 #
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-16 00:45+0000\n"
-"PO-Revision-Date: 2024-04-28 12:09+0200\n"
+"PO-Revision-Date: 2025-08-17 12:00+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
-"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"Language-Team: pl\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #: binarydialectmodel.cpp:52
 #, kde-format
@@ -283,12 +284,10 @@ msgid "Can't locate executable `check-language-support`"
 msgstr "Nie można namierzyć piku `check-language-support`"
 
 #: localegeneratorubuntu.cpp:56
-#, fuzzy, kde-format
-#| msgctxt "the arg is the output of failed check-language-support call"
-#| msgid "check-language-support failed, output: %1"
+#, kde-format
 msgctxt "the arg is the output of failed check-language-support call"
 msgid "check-language-support failed, output: %1 %2"
-msgstr "Niepowodzenie check-language-support, wynik: %1"
+msgstr "Niepowodzenie check-language-support, wynik: %1 %2"
 
 #: localegeneratorubuntu.cpp:88
 #, kde-format
@@ -297,12 +296,10 @@ msgid "Not all missing packages managed to resolve! %1"
 msgstr "Nie udało się rozwiązać wszystkich brakujących pakietów! %1"
 
 #: localegeneratorubuntu.cpp:96
-#, fuzzy, kde-format
-#| msgctxt "%1 is a list of package names"
-#| msgid "Failed to install package %1"
+#, kde-format
 msgctxt "%1 is a list of package names, %2 is the error explanation"
 msgid "Failed to install language packages (%1): %2"
-msgstr "Nie udało się wgrać pakietu %1"
+msgstr "Nie udało się wgrać pakietów językowych (%1): %2"
 
 #: localegenhelper/localegenhelper.cpp:45
 #, kde-format

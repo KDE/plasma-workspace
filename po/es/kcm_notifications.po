@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-01 00:45+0000\n"
-"PO-Revision-Date: 2025-06-04 19:32+0100\n"
+"PO-Revision-Date: 2025-08-17 11:36+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.0\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #: kcm.cpp:62
 #, kde-format
@@ -207,7 +207,7 @@ msgstr "Ubicación:"
 #, kde-format
 msgctxt "Popup position near notification plasmoid"
 msgid "Near notification icon"
-msgstr "Junto al icono de la notificación"
+msgstr "Junto al icono de notificaciones"
 
 #: ui/main.qml:269
 #, kde-format

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-11 00:44+0000\n"
+"POT-Creation-Date: 2025-08-18 00:44+0000\n"
 "PO-Revision-Date: 2025-08-02 16:56+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -29,66 +29,6 @@ msgstr "Юрій Чорноіван"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "yurchor@ukr.net"
-
-#: lnftool.cpp:32
-#, kde-format
-msgid "Global Theme Tool"
-msgstr "Засіб роботи із загальними темами"
-
-#: lnftool.cpp:34
-#, kde-format
-msgid ""
-"Command line tool to apply global theme packages for changing the look and "
-"feel."
-msgstr ""
-"Засіб командного рядка для застосування пакунків загальних тем для зміни "
-"вигляду і поведінки робочого простору."
-
-#: lnftool.cpp:36
-#, kde-format
-msgid "Copyright 2017, Marco Martin"
-msgstr "© Marco Martin, 2017"
-
-#: lnftool.cpp:37
-#, kde-format
-msgid "Marco Martin"
-msgstr "Marco Martin"
-
-#: lnftool.cpp:37
-#, kde-format
-msgid "Maintainer"
-msgstr "Супровідник"
-
-#: lnftool.cpp:46
-#, kde-format
-msgid "List available global theme packages"
-msgstr "Показати список доступних пакунків загальних тем"
-
-#: lnftool.cpp:49
-#, kde-format
-msgid ""
-"Apply a global theme package. This can be the name of a package, or a full "
-"path to an installed package, at which point this tool will ensure it is a "
-"global theme package and then attempt to apply it"
-msgstr ""
-"Застосувати пакунок загальної теми. Можна вказати назву пакунка або повний "
-"шлях до встановленого пакунка, для якого цей інструмент встановить "
-"відповідність загальній темі, а потім спробує її застосувати."
-
-#: lnftool.cpp:51
-#, kde-format
-msgid "packagename"
-msgstr "назва_пакунка"
-
-#: lnftool.cpp:52
-#, kde-format
-msgid "Prevent --apply from disabling the automatic mode"
-msgstr "Запобігає вимиканню автоматичного режиму за допомогою --apply"
-
-#: lnftool.cpp:53
-#, kde-format
-msgid "Reset the Plasma Desktop layout"
-msgstr "Повернутися до компонування стільниці Плазми"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: lookandfeelsettings.kcfg:9
@@ -127,6 +67,66 @@ msgid ""
 msgstr ""
 "Період, протягом якого комп'ютер має перебувати у бездіяльності, щоб можна "
 "було перемкнутися між темною та світлою загальними темами, у секундах"
+
+#: tool/lnftool.cpp:32
+#, kde-format
+msgid "Global Theme Tool"
+msgstr "Засіб роботи із загальними темами"
+
+#: tool/lnftool.cpp:34
+#, kde-format
+msgid ""
+"Command line tool to apply global theme packages for changing the look and "
+"feel."
+msgstr ""
+"Засіб командного рядка для застосування пакунків загальних тем для зміни "
+"вигляду і поведінки робочого простору."
+
+#: tool/lnftool.cpp:36
+#, kde-format
+msgid "Copyright 2017, Marco Martin"
+msgstr "© Marco Martin, 2017"
+
+#: tool/lnftool.cpp:37
+#, kde-format
+msgid "Marco Martin"
+msgstr "Marco Martin"
+
+#: tool/lnftool.cpp:37
+#, kde-format
+msgid "Maintainer"
+msgstr "Супровідник"
+
+#: tool/lnftool.cpp:46
+#, kde-format
+msgid "List available global theme packages"
+msgstr "Показати список доступних пакунків загальних тем"
+
+#: tool/lnftool.cpp:49
+#, kde-format
+msgid ""
+"Apply a global theme package. This can be the name of a package, or a full "
+"path to an installed package, at which point this tool will ensure it is a "
+"global theme package and then attempt to apply it"
+msgstr ""
+"Застосувати пакунок загальної теми. Можна вказати назву пакунка або повний "
+"шлях до встановленого пакунка, для якого цей інструмент встановить "
+"відповідність загальній темі, а потім спробує її застосувати."
+
+#: tool/lnftool.cpp:51
+#, kde-format
+msgid "packagename"
+msgstr "назва_пакунка"
+
+#: tool/lnftool.cpp:52
+#, kde-format
+msgid "Prevent --apply from disabling the automatic mode"
+msgstr "Запобігає вимиканню автоматичного режиму за допомогою --apply"
+
+#: tool/lnftool.cpp:53
+#, kde-format
+msgid "Reset the Plasma Desktop layout"
+msgstr "Повернутися до компонування стільниці Плазми"
 
 #: ui/ConfirmDeletionDialog.qml:16
 #, kde-format

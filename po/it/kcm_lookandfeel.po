@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-11 00:44+0000\n"
+"POT-Creation-Date: 2025-08-18 00:44+0000\n"
 "PO-Revision-Date: 2025-08-03 07:50+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -26,67 +26,6 @@ msgstr "Vincenzo Reale"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "smart2128vr@gmail.com"
-
-#: lnftool.cpp:32
-#, kde-format
-msgid "Global Theme Tool"
-msgstr "Strumento dei temi globali"
-
-#: lnftool.cpp:34
-#, kde-format
-msgid ""
-"Command line tool to apply global theme packages for changing the look and "
-"feel."
-msgstr ""
-"Strumento da riga di comando per applicare i pacchetti dei temi globali e "
-"cambiare l'aspetto."
-
-#: lnftool.cpp:36
-#, kde-format
-msgid "Copyright 2017, Marco Martin"
-msgstr "Copyright 2017, Marco Martin"
-
-#: lnftool.cpp:37
-#, kde-format
-msgid "Marco Martin"
-msgstr "Marco Martin"
-
-#: lnftool.cpp:37
-#, kde-format
-msgid "Maintainer"
-msgstr "Responsabile"
-
-#: lnftool.cpp:46
-#, kde-format
-msgid "List available global theme packages"
-msgstr "Elenca i pacchetti dei temi globali disponibili"
-
-#: lnftool.cpp:49
-#, kde-format
-msgid ""
-"Apply a global theme package. This can be the name of a package, or a full "
-"path to an installed package, at which point this tool will ensure it is a "
-"global theme package and then attempt to apply it"
-msgstr ""
-"Applica un pacchetto di temi globali. Può essere il nome di un pacchetto o "
-"un percorso completo a un pacchetto installato, a quel punto questo "
-"strumento si assicurerà che sia un pacchetto di temi globali e quindi "
-"tenterà di applicarlo"
-
-#: lnftool.cpp:51
-#, kde-format
-msgid "packagename"
-msgstr "nomepacchetto"
-
-#: lnftool.cpp:52
-#, kde-format
-msgid "Prevent --apply from disabling the automatic mode"
-msgstr "Impedisci a --apply di disabilitare la modalità automatica"
-
-#: lnftool.cpp:53
-#, kde-format
-msgid "Reset the Plasma Desktop layout"
-msgstr "Ripristina la disposizione di Plasma Desktop"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: lookandfeelsettings.kcfg:9
@@ -126,6 +65,67 @@ msgid ""
 msgstr ""
 "Per quanto tempo il computer deve rimanere inattivo per passare dal tema "
 "globale scuro a quello chiaro, in secondi"
+
+#: tool/lnftool.cpp:32
+#, kde-format
+msgid "Global Theme Tool"
+msgstr "Strumento dei temi globali"
+
+#: tool/lnftool.cpp:34
+#, kde-format
+msgid ""
+"Command line tool to apply global theme packages for changing the look and "
+"feel."
+msgstr ""
+"Strumento da riga di comando per applicare i pacchetti dei temi globali e "
+"cambiare l'aspetto."
+
+#: tool/lnftool.cpp:36
+#, kde-format
+msgid "Copyright 2017, Marco Martin"
+msgstr "Copyright 2017, Marco Martin"
+
+#: tool/lnftool.cpp:37
+#, kde-format
+msgid "Marco Martin"
+msgstr "Marco Martin"
+
+#: tool/lnftool.cpp:37
+#, kde-format
+msgid "Maintainer"
+msgstr "Responsabile"
+
+#: tool/lnftool.cpp:46
+#, kde-format
+msgid "List available global theme packages"
+msgstr "Elenca i pacchetti dei temi globali disponibili"
+
+#: tool/lnftool.cpp:49
+#, kde-format
+msgid ""
+"Apply a global theme package. This can be the name of a package, or a full "
+"path to an installed package, at which point this tool will ensure it is a "
+"global theme package and then attempt to apply it"
+msgstr ""
+"Applica un pacchetto di temi globali. Può essere il nome di un pacchetto o "
+"un percorso completo a un pacchetto installato, a quel punto questo "
+"strumento si assicurerà che sia un pacchetto di temi globali e quindi "
+"tenterà di applicarlo"
+
+#: tool/lnftool.cpp:51
+#, kde-format
+msgid "packagename"
+msgstr "nomepacchetto"
+
+#: tool/lnftool.cpp:52
+#, kde-format
+msgid "Prevent --apply from disabling the automatic mode"
+msgstr "Impedisci a --apply di disabilitare la modalità automatica"
+
+#: tool/lnftool.cpp:53
+#, kde-format
+msgid "Reset the Plasma Desktop layout"
+msgstr "Ripristina la disposizione di Plasma Desktop"
 
 #: ui/ConfirmDeletionDialog.qml:16
 #, kde-format

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-sdk\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-11 00:44+0000\n"
+"POT-Creation-Date: 2025-08-18 00:44+0000\n"
 "PO-Revision-Date: 2021-08-20 15:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -23,65 +23,6 @@ msgstr "Amrithanath M"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "amrithanadhm@gmail.com"
-
-#: lnftool.cpp:32
-#, kde-format
-msgid "Global Theme Tool"
-msgstr "ആഗോള തീം ഉപകരണം"
-
-#: lnftool.cpp:34
-#, kde-format
-msgid ""
-"Command line tool to apply global theme packages for changing the look and "
-"feel."
-msgstr ""
-"കെട്ടും മട്ടും മാറ്റാനുള്ള പൊതു പ്രമേയത്തിന്റെ പാക്കേജുകൾ പ്രയോഗിക്കാനുള്ള കമാൻഡ് ലൈൻ ഉപകരണം."
-
-#: lnftool.cpp:36
-#, kde-format
-msgid "Copyright 2017, Marco Martin"
-msgstr "പകർപ്പവകാശം 2017, മാർക്കോ മാർട്ടിൻ"
-
-#: lnftool.cpp:37
-#, kde-format
-msgid "Marco Martin"
-msgstr "മാർക്കോ മാർട്ടിൻ"
-
-#: lnftool.cpp:37
-#, kde-format
-msgid "Maintainer"
-msgstr "പരിപാലകൻ"
-
-#: lnftool.cpp:46
-#, kde-format
-msgid "List available global theme packages"
-msgstr "ലഭ്യമായ പൊതു പ്രമേയങ്ങളുടെ പാക്കേജുകൾ കാണുക"
-
-#: lnftool.cpp:49
-#, kde-format
-msgid ""
-"Apply a global theme package. This can be the name of a package, or a full "
-"path to an installed package, at which point this tool will ensure it is a "
-"global theme package and then attempt to apply it"
-msgstr ""
-"ഒരു ആഗോള തീം പാക്കേജ് പ്രയോഗിക്കുക. ഇത് ഒരു പാക്കേജിന്റെ പേരോ അല്ലെങ്കിൽ ഒരു ഇൻസ്റ്റാൾ ചെയ്ത "
-"പാക്കേജിലേക്കുള്ള ഒരു പൂർണ്ണ പാതയോ ആകാം, ഈ ഘട്ടത്തിൽ ഇത് ഒരു ആഗോള തീം പാക്കേജ് ആണെന്ന് "
-"ഉറപ്പുവരുത്തുകയും തുടർന്ന് അത് പ്രയോഗിക്കാൻ ശ്രമിക്കുകയും ചെയ്യും"
-
-#: lnftool.cpp:51
-#, kde-format
-msgid "packagename"
-msgstr "പാക്കേജിന്റെ പേര്"
-
-#: lnftool.cpp:52
-#, kde-format
-msgid "Prevent --apply from disabling the automatic mode"
-msgstr ""
-
-#: lnftool.cpp:53
-#, kde-format
-msgid "Reset the Plasma Desktop layout"
-msgstr "പ്ലാസ്മ ഡെസ്ക്ടോപ്പ് ലേഔട്ട് പുനർസജ്ജമാക്കുക"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: lookandfeelsettings.kcfg:9
@@ -116,6 +57,65 @@ msgid ""
 "How long the computer should be idle in order to switch between dark and "
 "light global themes, in seconds"
 msgstr ""
+
+#: tool/lnftool.cpp:32
+#, kde-format
+msgid "Global Theme Tool"
+msgstr "ആഗോള തീം ഉപകരണം"
+
+#: tool/lnftool.cpp:34
+#, kde-format
+msgid ""
+"Command line tool to apply global theme packages for changing the look and "
+"feel."
+msgstr ""
+"കെട്ടും മട്ടും മാറ്റാനുള്ള പൊതു പ്രമേയത്തിന്റെ പാക്കേജുകൾ പ്രയോഗിക്കാനുള്ള കമാൻഡ് ലൈൻ ഉപകരണം."
+
+#: tool/lnftool.cpp:36
+#, kde-format
+msgid "Copyright 2017, Marco Martin"
+msgstr "പകർപ്പവകാശം 2017, മാർക്കോ മാർട്ടിൻ"
+
+#: tool/lnftool.cpp:37
+#, kde-format
+msgid "Marco Martin"
+msgstr "മാർക്കോ മാർട്ടിൻ"
+
+#: tool/lnftool.cpp:37
+#, kde-format
+msgid "Maintainer"
+msgstr "പരിപാലകൻ"
+
+#: tool/lnftool.cpp:46
+#, kde-format
+msgid "List available global theme packages"
+msgstr "ലഭ്യമായ പൊതു പ്രമേയങ്ങളുടെ പാക്കേജുകൾ കാണുക"
+
+#: tool/lnftool.cpp:49
+#, kde-format
+msgid ""
+"Apply a global theme package. This can be the name of a package, or a full "
+"path to an installed package, at which point this tool will ensure it is a "
+"global theme package and then attempt to apply it"
+msgstr ""
+"ഒരു ആഗോള തീം പാക്കേജ് പ്രയോഗിക്കുക. ഇത് ഒരു പാക്കേജിന്റെ പേരോ അല്ലെങ്കിൽ ഒരു ഇൻസ്റ്റാൾ ചെയ്ത "
+"പാക്കേജിലേക്കുള്ള ഒരു പൂർണ്ണ പാതയോ ആകാം, ഈ ഘട്ടത്തിൽ ഇത് ഒരു ആഗോള തീം പാക്കേജ് ആണെന്ന് "
+"ഉറപ്പുവരുത്തുകയും തുടർന്ന് അത് പ്രയോഗിക്കാൻ ശ്രമിക്കുകയും ചെയ്യും"
+
+#: tool/lnftool.cpp:51
+#, kde-format
+msgid "packagename"
+msgstr "പാക്കേജിന്റെ പേര്"
+
+#: tool/lnftool.cpp:52
+#, kde-format
+msgid "Prevent --apply from disabling the automatic mode"
+msgstr ""
+
+#: tool/lnftool.cpp:53
+#, kde-format
+msgid "Reset the Plasma Desktop layout"
+msgstr "പ്ലാസ്മ ഡെസ്ക്ടോപ്പ് ലേഔട്ട് പുനർസജ്ജമാക്കുക"
 
 #: ui/ConfirmDeletionDialog.qml:16
 #, kde-format

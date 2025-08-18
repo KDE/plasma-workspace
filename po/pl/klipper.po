@@ -1,6 +1,6 @@
 # translation of klipper.po to Polish
 # translation of klipper.po to
-# Version: $Revision: 1713761 $
+# Version: $Revision: 1716276 $
 # Copyright (C) 2002, 2003, 2004, 2005, 2006, 2008, 2009 Free Software Foundation, Inc.
 # Norbert Popiołek <norbert@kde.com.pl>
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2002, 2003.
@@ -8,22 +8,23 @@
 # Krzysztof Lichota <lichota@mimuw.edu.pl>, 2005, 2006.
 # Robert Gomulka <rgom@o2.pl>, 2006.
 # Marta Rybczyńska <kde-i18n@rybczynska.net>, 2008.
-# SPDX-FileCopyrightText: 2011, 2012, 2014, 2015, 2016, 2017, 2019, 2020, 2021, 2022, 2023, 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+# SPDX-FileCopyrightText: 2011, 2012, 2014, 2015, 2016, 2017, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-20 00:44+0000\n"
-"PO-Revision-Date: 2024-12-21 11:42+0100\n"
+"PO-Revision-Date: 2025-08-17 12:04+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
-"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"Language-Team: pl\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -352,20 +353,19 @@ msgstr "Wróć do schowka"
 #, kde-format
 msgctxt "@action:button Copy to clipboard"
 msgid "Copy"
-msgstr ""
+msgstr "Skopiuj"
 
 #: declarative/qml/BarcodePage.qml:95
 #, kde-format
 msgctxt "@info:status"
 msgid "An image of the QR code has been copied to clipboard"
-msgstr ""
+msgstr "Skopiowano do schowka kod QR obrazu"
 
 #: declarative/qml/BarcodePage.qml:101
-#, fuzzy, kde-format
-#| msgid "Append to clipboard"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Copy QR code image to clipboard"
-msgstr "Dodaj do schowka"
+msgstr "Skopiuj do schowka kod QR obrazu"
 
 #: declarative/qml/BarcodePage.qml:112
 #, kde-format

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-11 00:44+0000\n"
+"POT-Creation-Date: 2025-08-18 00:44+0000\n"
 "PO-Revision-Date: 2025-08-03 01:28+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -29,67 +29,6 @@ msgstr "Iñigo Salvador Azurmendi"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "xalba@ni.eus"
-
-#: lnftool.cpp:32
-#, kde-format
-msgid "Global Theme Tool"
-msgstr "Gai orokorren tresnak"
-
-#: lnftool.cpp:34
-#, kde-format
-msgid ""
-"Command line tool to apply global theme packages for changing the look and "
-"feel."
-msgstr ""
-"Itxura eta izaera aldatzeko gai orokorreko paketeak ezartzeko komando-"
-"lerroko tresna."
-
-#: lnftool.cpp:36
-#, kde-format
-msgid "Copyright 2017, Marco Martin"
-msgstr "Copyright 2017, Marco Martin"
-
-#: lnftool.cpp:37
-#, kde-format
-msgid "Marco Martin"
-msgstr "Marco Martin"
-
-#: lnftool.cpp:37
-#, kde-format
-msgid "Maintainer"
-msgstr "Arduraduna"
-
-#: lnftool.cpp:46
-#, kde-format
-msgid "List available global theme packages"
-msgstr "Zerrendatu gai orokorreko pakete erabilgarriak"
-
-#: lnftool.cpp:49
-#, kde-format
-msgid ""
-"Apply a global theme package. This can be the name of a package, or a full "
-"path to an installed package, at which point this tool will ensure it is a "
-"global theme package and then attempt to apply it"
-msgstr ""
-"Ezarri gai orokorreko pakete bat. Hau, pakete baten izena izan daiteke, edo "
-"instalatuta dagoen pakete baterako bide-izen oso bat; orduan, tresna honek, "
-"gai pakete orokor bat dela ziurtatuko du, eta, ondoren, aplikatzen saiatuko "
-"da"
-
-#: lnftool.cpp:51
-#, kde-format
-msgid "packagename"
-msgstr "pakete-izena"
-
-#: lnftool.cpp:52
-#, kde-format
-msgid "Prevent --apply from disabling the automatic mode"
-msgstr "Eragotzi --apply aukerak modu automatikoa ezgaitzea"
-
-#: lnftool.cpp:53
-#, kde-format
-msgid "Reset the Plasma Desktop layout"
-msgstr "Berrezarri Plasma mahaigainaren antolamendua"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: lookandfeelsettings.kcfg:9
@@ -128,6 +67,67 @@ msgid ""
 msgstr ""
 "Ordenagailua jardunik gabe zenbat denbora egon behar duen, segundotan, gai "
 "global ilunaren eta argiaren artean aldatzeko"
+
+#: tool/lnftool.cpp:32
+#, kde-format
+msgid "Global Theme Tool"
+msgstr "Gai orokorren tresnak"
+
+#: tool/lnftool.cpp:34
+#, kde-format
+msgid ""
+"Command line tool to apply global theme packages for changing the look and "
+"feel."
+msgstr ""
+"Itxura eta izaera aldatzeko gai orokorreko paketeak ezartzeko komando-"
+"lerroko tresna."
+
+#: tool/lnftool.cpp:36
+#, kde-format
+msgid "Copyright 2017, Marco Martin"
+msgstr "Copyright 2017, Marco Martin"
+
+#: tool/lnftool.cpp:37
+#, kde-format
+msgid "Marco Martin"
+msgstr "Marco Martin"
+
+#: tool/lnftool.cpp:37
+#, kde-format
+msgid "Maintainer"
+msgstr "Arduraduna"
+
+#: tool/lnftool.cpp:46
+#, kde-format
+msgid "List available global theme packages"
+msgstr "Zerrendatu gai orokorreko pakete erabilgarriak"
+
+#: tool/lnftool.cpp:49
+#, kde-format
+msgid ""
+"Apply a global theme package. This can be the name of a package, or a full "
+"path to an installed package, at which point this tool will ensure it is a "
+"global theme package and then attempt to apply it"
+msgstr ""
+"Ezarri gai orokorreko pakete bat. Hau, pakete baten izena izan daiteke, edo "
+"instalatuta dagoen pakete baterako bide-izen oso bat; orduan, tresna honek, "
+"gai pakete orokor bat dela ziurtatuko du, eta, ondoren, aplikatzen saiatuko "
+"da"
+
+#: tool/lnftool.cpp:51
+#, kde-format
+msgid "packagename"
+msgstr "pakete-izena"
+
+#: tool/lnftool.cpp:52
+#, kde-format
+msgid "Prevent --apply from disabling the automatic mode"
+msgstr "Eragotzi --apply aukerak modu automatikoa ezgaitzea"
+
+#: tool/lnftool.cpp:53
+#, kde-format
+msgid "Reset the Plasma Desktop layout"
+msgstr "Berrezarri Plasma mahaigainaren antolamendua"
 
 #: ui/ConfirmDeletionDialog.qml:16
 #, kde-format

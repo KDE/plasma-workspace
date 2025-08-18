@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-11 00:44+0000\n"
+"POT-Creation-Date: 2025-08-18 00:44+0000\n"
 "PO-Revision-Date: 2025-08-02 23:29+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -29,64 +29,6 @@ msgstr "אלקנה ברדוגו,צוות התרגום של KDE ישראל"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "ttv200@gmail.com,kde-l10n-he@kde.org.il"
-
-#: lnftool.cpp:32
-#, kde-format
-msgid "Global Theme Tool"
-msgstr "כלי ערכות עיצוב מקיפות"
-
-#: lnftool.cpp:34
-#, kde-format
-msgid ""
-"Command line tool to apply global theme packages for changing the look and "
-"feel."
-msgstr "כלי שורת פקודה להחלת חבילות ערכות עיצוב מקיפות לריענון התחושה והמראה."
-
-#: lnftool.cpp:36
-#, kde-format
-msgid "Copyright 2017, Marco Martin"
-msgstr "כל הזכויות שמורות 2017, למרקו מרטין"
-
-#: lnftool.cpp:37
-#, kde-format
-msgid "Marco Martin"
-msgstr "מרקו מרטין"
-
-#: lnftool.cpp:37
-#, kde-format
-msgid "Maintainer"
-msgstr "מתחזק"
-
-#: lnftool.cpp:46
-#, kde-format
-msgid "List available global theme packages"
-msgstr "הצגת חבילות ערכות עיצוב מקיפות זמינות"
-
-#: lnftool.cpp:49
-#, kde-format
-msgid ""
-"Apply a global theme package. This can be the name of a package, or a full "
-"path to an installed package, at which point this tool will ensure it is a "
-"global theme package and then attempt to apply it"
-msgstr ""
-"החלת חבילת ערכת עיצוב מקיפה. יכול להיות שם של חבילה או נתיב מלא לחבילה "
-"מותקנת, בנקודה כלשהי הכלי הזה יוודא שזאת אכן חבילת ערכת עיצוב מקיפה ואז ינסה "
-"להחיל אותה"
-
-#: lnftool.cpp:51
-#, kde-format
-msgid "packagename"
-msgstr "שם_חבילה"
-
-#: lnftool.cpp:52
-#, kde-format
-msgid "Prevent --apply from disabling the automatic mode"
-msgstr "למנוע מ־‎--apply להשבית את המצב האוטומטי"
-
-#: lnftool.cpp:53
-#, kde-format
-msgid "Reset the Plasma Desktop layout"
-msgstr "איפוס פריסת שולחן העבודה פלזמה"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: lookandfeelsettings.kcfg:9
@@ -122,6 +64,64 @@ msgid ""
 msgstr ""
 "למשך כמה זמן על המחשב להיות לא פעיל כדי לעבור בין ערכות העיצוב הכהה והבהירה "
 "המקיפות, בשניות"
+
+#: tool/lnftool.cpp:32
+#, kde-format
+msgid "Global Theme Tool"
+msgstr "כלי ערכות עיצוב מקיפות"
+
+#: tool/lnftool.cpp:34
+#, kde-format
+msgid ""
+"Command line tool to apply global theme packages for changing the look and "
+"feel."
+msgstr "כלי שורת פקודה להחלת חבילות ערכות עיצוב מקיפות לריענון התחושה והמראה."
+
+#: tool/lnftool.cpp:36
+#, kde-format
+msgid "Copyright 2017, Marco Martin"
+msgstr "כל הזכויות שמורות 2017, למרקו מרטין"
+
+#: tool/lnftool.cpp:37
+#, kde-format
+msgid "Marco Martin"
+msgstr "מרקו מרטין"
+
+#: tool/lnftool.cpp:37
+#, kde-format
+msgid "Maintainer"
+msgstr "מתחזק"
+
+#: tool/lnftool.cpp:46
+#, kde-format
+msgid "List available global theme packages"
+msgstr "הצגת חבילות ערכות עיצוב מקיפות זמינות"
+
+#: tool/lnftool.cpp:49
+#, kde-format
+msgid ""
+"Apply a global theme package. This can be the name of a package, or a full "
+"path to an installed package, at which point this tool will ensure it is a "
+"global theme package and then attempt to apply it"
+msgstr ""
+"החלת חבילת ערכת עיצוב מקיפה. יכול להיות שם של חבילה או נתיב מלא לחבילה "
+"מותקנת, בנקודה כלשהי הכלי הזה יוודא שזאת אכן חבילת ערכת עיצוב מקיפה ואז ינסה "
+"להחיל אותה"
+
+#: tool/lnftool.cpp:51
+#, kde-format
+msgid "packagename"
+msgstr "שם_חבילה"
+
+#: tool/lnftool.cpp:52
+#, kde-format
+msgid "Prevent --apply from disabling the automatic mode"
+msgstr "למנוע מ־‎--apply להשבית את המצב האוטומטי"
+
+#: tool/lnftool.cpp:53
+#, kde-format
+msgid "Reset the Plasma Desktop layout"
+msgstr "איפוס פריסת שולחן העבודה פלזמה"
 
 #: ui/ConfirmDeletionDialog.qml:16
 #, kde-format

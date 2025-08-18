@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-11 00:44+0000\n"
+"POT-Creation-Date: 2025-08-18 00:44+0000\n"
 "PO-Revision-Date: 2025-08-03 11:58+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -26,65 +26,6 @@ msgstr "கோ. கிஷோர்"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "Kde-l10n-ta@kde.org"
-
-#: lnftool.cpp:32
-#, kde-format
-msgid "Global Theme Tool"
-msgstr "பொது தோற்றத்திட்ட கருவி"
-
-#: lnftool.cpp:34
-#, kde-format
-msgid ""
-"Command line tool to apply global theme packages for changing the look and "
-"feel."
-msgstr ""
-"பணிமேடையின் தோற்றத்தை மாற்றும் பொது தோற்றத்திட்ட தொகுப்புகளை நிறுவு உதவும் முனைய நிரல்."
-
-#: lnftool.cpp:36
-#, kde-format
-msgid "Copyright 2017, Marco Martin"
-msgstr "பதிப்புரிமை 2017, மார்க்கோ மார்ட்டின்"
-
-#: lnftool.cpp:37
-#, kde-format
-msgid "Marco Martin"
-msgstr "மார்க்கோ மார்ட்டின்"
-
-#: lnftool.cpp:37
-#, kde-format
-msgid "Maintainer"
-msgstr "பராமரிப்பாளர்"
-
-#: lnftool.cpp:46
-#, kde-format
-msgid "List available global theme packages"
-msgstr "கிட்டுகின்ற பொது தோற்றத்திட்ட தொகுப்புகளை பட்டியலிடு"
-
-#: lnftool.cpp:49
-#, kde-format
-msgid ""
-"Apply a global theme package. This can be the name of a package, or a full "
-"path to an installed package, at which point this tool will ensure it is a "
-"global theme package and then attempt to apply it"
-msgstr ""
-"பொது தோற்றத்திட்டத் தொகுப்பை செயல்படுத்தும். இது ஓர் தொகுப்பின் பெயராகவோ, நிறுவியுள்ள "
-"தொகுப்புக்கான முழுப் பாதையாகவோ இருக்கலாம். கொடுக்கப்பட்டுள்ளது ஓர் முறையான தோற்றத்திட்டமா "
-"என்பதை உறுதி செய்தபின் இந்நிரல் அதை செயல்படுத்தும்"
-
-#: lnftool.cpp:51
-#, kde-format
-msgid "packagename"
-msgstr "தொகுப்புப்பெயர்"
-
-#: lnftool.cpp:52
-#, kde-format
-msgid "Prevent --apply from disabling the automatic mode"
-msgstr "--apply தனைப் பயன்படுத்தும்போது தானியக்க பயன்முறையை முடக்காதே"
-
-#: lnftool.cpp:53
-#, kde-format
-msgid "Reset the Plasma Desktop layout"
-msgstr "பிளாஸ்மா பணிமேடையின் தளவமைப்பை இயல்பிருப்புக்கு மீட்டமை"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: lookandfeelsettings.kcfg:9
@@ -119,6 +60,65 @@ msgid ""
 "light global themes, in seconds"
 msgstr ""
 "தோற்றத்திட்டத்தை மாற்றுமுன் கணினி எத்தனை நொடிகளுக்கு பயனிலில்லாமல் இருந்திருக்க வேண்டும்"
+
+#: tool/lnftool.cpp:32
+#, kde-format
+msgid "Global Theme Tool"
+msgstr "பொது தோற்றத்திட்ட கருவி"
+
+#: tool/lnftool.cpp:34
+#, kde-format
+msgid ""
+"Command line tool to apply global theme packages for changing the look and "
+"feel."
+msgstr ""
+"பணிமேடையின் தோற்றத்தை மாற்றும் பொது தோற்றத்திட்ட தொகுப்புகளை நிறுவு உதவும் முனைய நிரல்."
+
+#: tool/lnftool.cpp:36
+#, kde-format
+msgid "Copyright 2017, Marco Martin"
+msgstr "பதிப்புரிமை 2017, மார்க்கோ மார்ட்டின்"
+
+#: tool/lnftool.cpp:37
+#, kde-format
+msgid "Marco Martin"
+msgstr "மார்க்கோ மார்ட்டின்"
+
+#: tool/lnftool.cpp:37
+#, kde-format
+msgid "Maintainer"
+msgstr "பராமரிப்பாளர்"
+
+#: tool/lnftool.cpp:46
+#, kde-format
+msgid "List available global theme packages"
+msgstr "கிட்டுகின்ற பொது தோற்றத்திட்ட தொகுப்புகளை பட்டியலிடு"
+
+#: tool/lnftool.cpp:49
+#, kde-format
+msgid ""
+"Apply a global theme package. This can be the name of a package, or a full "
+"path to an installed package, at which point this tool will ensure it is a "
+"global theme package and then attempt to apply it"
+msgstr ""
+"பொது தோற்றத்திட்டத் தொகுப்பை செயல்படுத்தும். இது ஓர் தொகுப்பின் பெயராகவோ, நிறுவியுள்ள "
+"தொகுப்புக்கான முழுப் பாதையாகவோ இருக்கலாம். கொடுக்கப்பட்டுள்ளது ஓர் முறையான தோற்றத்திட்டமா "
+"என்பதை உறுதி செய்தபின் இந்நிரல் அதை செயல்படுத்தும்"
+
+#: tool/lnftool.cpp:51
+#, kde-format
+msgid "packagename"
+msgstr "தொகுப்புப்பெயர்"
+
+#: tool/lnftool.cpp:52
+#, kde-format
+msgid "Prevent --apply from disabling the automatic mode"
+msgstr "--apply தனைப் பயன்படுத்தும்போது தானியக்க பயன்முறையை முடக்காதே"
+
+#: tool/lnftool.cpp:53
+#, kde-format
+msgid "Reset the Plasma Desktop layout"
+msgstr "பிளாஸ்மா பணிமேடையின் தளவமைப்பை இயல்பிருப்புக்கு மீட்டமை"
 
 #: ui/ConfirmDeletionDialog.qml:16
 #, kde-format
