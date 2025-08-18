@@ -144,6 +144,64 @@ Qt::Edges edgeFromLocation(Plasma::Types::Location location)
     return Qt::Edges();
 }
 
+static void configurePositioner(QMenu *menu, const QQuickItem *anchorItem, Plasma::Types::Location location)
+{
+    menu->winId();
+    QWindow *windowHandle = menu->windowHandle();
+    if (!windowHandle) {
+        return;
+    }
+
+    const QRect anchorRect = anchorItem->mapRectToScene(QRectF(0, 0, anchorItem->width(), anchorItem->height())).toRect();
+
+    QVariant anchor;
+    QVariant gravity;
+    switch (location) {
+    case Plasma::Types::TopEdge:
+        anchor = QVariant::fromValue(Qt::Edges(Qt::BottomEdge | Qt::LeftEdge));
+        gravity = QVariant::fromValue(Qt::Edges(Qt::BottomEdge | Qt::RightEdge));
+        break;
+    case Plasma::Types::BottomEdge:
+        anchor = QVariant::fromValue(Qt::Edges(Qt::TopEdge | Qt::LeftEdge));
+        gravity = QVariant::fromValue(Qt::Edges(Qt::TopEdge | Qt::RightEdge));
+        break;
+    case Plasma::Types::LeftEdge:
+        anchor = QVariant::fromValue(Qt::Edges(Qt::TopEdge | Qt::RightEdge));
+        gravity = QVariant::fromValue(Qt::Edges(Qt::BottomEdge | Qt::RightEdge));
+        break;
+    case Plasma::Types::RightEdge:
+        anchor = QVariant::fromValue(Qt::Edges(Qt::TopEdge | Qt::LeftEdge));
+        gravity = QVariant::fromValue(Qt::Edges(Qt::BottomEdge | Qt::LeftEdge));
+        break;
+    case Plasma::Types::Floating:
+    case Plasma::Types::Desktop:
+    case Plasma::Types::FullScreen:
+        break;
+    }
+
+    windowHandle->setProperty("_q_waylandPopupAnchor", anchor);
+    windowHandle->setProperty("_q_waylandPopupGravity", gravity);
+    windowHandle->setProperty("_q_waylandPopupAnchorRect", anchorRect);
+}
+
+static QPoint absolutePosition(QMenu *menu, const QQuickItem *anchorItem, Plasma::Types::Location location)
+{
+    switch (location) {
+    case Plasma::Types::TopEdge:
+        return anchorItem->mapToGlobal(0, anchorItem->height()).toPoint();
+    case Plasma::Types::BottomEdge:
+        return anchorItem->mapToGlobal(0, -menu->height()).toPoint();
+    case Plasma::Types::LeftEdge:
+        return anchorItem->mapToGlobal(anchorItem->width(), 0).toPoint();
+    case Plasma::Types::RightEdge:
+        return anchorItem->mapToGlobal(-menu->width(), 0).toPoint();
+    case Plasma::Types::Floating:
+    case Plasma::Types::Desktop:
+    case Plasma::Types::FullScreen:
+        return anchorItem->mapToGlobal(0, 0).toPoint();
+    }
+}
+
 void AppMenuApplet::trigger(QQuickItem *ctx, int idx)
 {
     if (m_currentIndex == idx) {
@@ -180,16 +238,13 @@ void AppMenuApplet::trigger(QQuickItem *ctx, int idx)
             m_view->setAttribute(Qt::WA_DeleteOnClose);
         }
 
+        configurePositioner(m_view, ctx, location());
+
         const Qt::Edges edges = edgeFromLocation(location());
         m_view->setProperty("_breeze_menu_seamless_edges", QVariant::fromValue(edges));
-
-        QPoint pos = ctx->window()->mapToGlobal(ctx->mapToScene(QPointF()).toPoint());
-        if (location() == Plasma::Types::TopEdge) {
-            pos.setY(pos.y() + ctx->height());
-        }
-
         m_view->setRoot(m_model, index);
 
+        const QPoint pos = absolutePosition(m_view, ctx, location());
         if (view() == FullView) {
             if (m_view->isVisible()) {
                 m_view->move(pos);
