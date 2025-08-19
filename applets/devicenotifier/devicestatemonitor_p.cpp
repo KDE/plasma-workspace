@@ -318,23 +318,4 @@ void DevicesStateMonitor::setIdleState(Solid::ErrorType operationResult, QVarian
     }
 }
 
-void DevicesStateMonitor::updateEncryptedContainer(const QString &udi)
-{
-    if (auto it = m_devicesStates.find(udi); it != m_devicesStates.end()) {
-        Solid::Device device(udi);
-        if (!device.isValid()) {
-            return;
-        }
-
-        it->state = Idle;
-
-        Solid::StorageAccess *storageaccess = device.as<Solid::StorageAccess>();
-        if (storageaccess) {
-            it->isMounted = storageaccess->isAccessible();
-        }
-
-        Q_EMIT stateChanged(udi);
-    }
-}
-
 #include "moc_devicestatemonitor_p.cpp"

@@ -80,8 +80,6 @@ public:
 private:
     explicit DevicesStateMonitor(QObject *parent = nullptr);
 
-    void updateEncryptedContainer(const QString &udi);
-
 private Q_SLOTS:
     void setAccessibilityState(bool isAccessible, const QString &udi);
     void setMountingState(const QString &udi);
