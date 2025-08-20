@@ -132,8 +132,8 @@ void ShellTest::setScreenOrder(const QStringList &order, bool expectOrderChanged
         coronaScreenOrderSpy.wait();
         Q_ASSERT(coronaScreenOrderSpy.count() == 1);
         QCOMPARE(coronaScreenOrderSpy.count(), 1);
-        auto order = coronaScreenOrderSpy.takeFirst().at(0).value<QList<QScreen *>>();
-        QCOMPARE(m_corona->m_desktopViewForScreen.size(), order.size());
+        auto newOrder = coronaScreenOrderSpy.takeFirst().at(0).value<QList<QScreen *>>();
+        QCOMPARE(m_corona->m_desktopViewForScreen.size(), newOrder.size());
     } else {
         coronaScreenOrderSpy.wait(250);
         Q_ASSERT(coronaScreenOrderSpy.count() == 0);
@@ -146,38 +146,27 @@ void ShellTest::setScreenOrder(const QStringList &order, bool expectOrderChanged
         QVERIFY(m_corona->m_desktopViewForScreen.contains(i));
         QCOMPARE(m_corona->m_desktopViewForScreen[i]->containment()->screen(), i);
         QCOMPARE(m_corona->m_desktopViewForScreen[i]->screenToFollow(), m_corona->m_screenPool->screenOrder()[i]);
+        QCOMPARE(m_corona->m_screenPool->screenOrder()[i]->name(), order[i]);
     }
 }
 
 // Resets the screen order and waits for the ui to be ready
 void ShellTest::resetScreen()
 {
+    QSignalSpy screenOrderChangedSpy(m_corona, &ShellCorona::screenOrderChanged);
     setScreenOrder({u"WL-1"_s}, false);
-    for (int i = 0; i < 100; i++) {
-        if (!m_corona->m_desktopViewForScreen.isEmpty()) {
-            auto desktopView = m_corona->m_desktopViewForScreen[0];
-            if (desktopView && desktopView->containment()->isUiReady()) {
-                break;
-            }
-        }
-        QTest::qWait(100);
-    }
+    screenOrderChangedSpy.wait();
 }
 
 // Adds a panel and waits for the waitingPanels to be empty
 Plasma::Containment *ShellTest::addTestPanel(const QString &plugin)
 {
+    QSignalSpy uiReadySpy(m_corona, &ShellCorona::screenUiReadyChanged);
     auto panelCont = m_corona->addPanel(plugin);
-    for (int i = 0; i < 100; i++) {
-        if (m_corona->m_waitingPanels.isEmpty()) {
-            break;
-        }
-        m_corona->createWaitingPanels();
-        QTest::qWait(100);
+    if (!m_corona->isScreenUiReady(panelCont->screen())) {
+        QVERIFY(uiReadySpy.wait());
     }
-    if (!m_corona->m_waitingPanels.isEmpty()) {
-        qWarning() << "There are still waiting panels in m_waitingPanels, test may fail.";
-    }
+
     return panelCont;
 }
 
@@ -603,7 +592,7 @@ void ShellTest::testReorderScreens()
         screensAfter.append(view->screenToFollow());
 
         QCOMPARE(view->screenToFollow(), qScreenOrderFormSignal[i]);
-        QCOMPARE(view->screen()->name(), orderAfter[i]);
+        QCOMPARE(view->screenToFollow()->name(), orderAfter[i]);
         QCOMPARE(view->containment()->screen(), i);
     }
 

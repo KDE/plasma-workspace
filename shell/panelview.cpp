@@ -1699,6 +1699,9 @@ void PanelView::refreshContainment()
             cont->setStatus(Plasma::Types::ActiveStatus);
         }
     });
+    if (m_screenToFollow) {
+        setVisible(true);
+    }
 }
 
 void PanelView::handleQmlStatusChange(QQmlComponent::Status status)

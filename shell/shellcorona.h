@@ -143,6 +143,8 @@ public:
 
     Q_INVOKABLE bool enteredEditModeViaDesktop();
 
+    Q_INVOKABLE bool isScreenUiReady(int screen);
+
 Q_SIGNALS:
     void glInitializationFailed();
     // A preview for this containment has been rendered and saved to disk
@@ -158,6 +160,7 @@ Q_SIGNALS:
     void shellAboutToChange(const QString &shell);
     // Emitted after the new shell has loaded
     void shellChanged(const QString &shell);
+    void screenUiReadyChanged(int screen, bool ready);
 
 public Q_SLOTS:
     /**
@@ -326,6 +329,8 @@ private:
 
     StrutManager *m_strutManager;
     QPointer<ShellContainmentConfig> m_shellContainmentConfig;
+    // The set of all the screens which have both the desktop and all panels (if any) fully loaded
+    QSet<int> m_screensWithUiReady;
     friend class ShellTest;
 };
 
