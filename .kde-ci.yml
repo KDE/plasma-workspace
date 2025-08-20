@@ -93,3 +93,4 @@ Options:
  use-ccache: True
  require-passing-tests-on: ['@all']
  clang-format-versions: [14, 18]
+ run-qmllint: True
