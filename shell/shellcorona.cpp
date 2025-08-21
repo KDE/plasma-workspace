@@ -2367,6 +2367,7 @@ void ShellCorona::clonePanelTo(PanelView *oldPanelView, Plasma::Types::Location 
                 Q_EMIT newTrayApplet->configScheme()->configChanged();
                 oldTrayAppletConfig.deleteGroup();
             }
+            Q_EMIT newTrayContainment->configScheme()->configChanged();
         } else {
             // All the applet ids are different, so we re-parent their settings.
             oldAppletConfig.copyTo(&newAppletConfig);
