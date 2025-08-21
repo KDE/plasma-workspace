@@ -1,40 +1,41 @@
-set(libdbusmenu_SRCS
-    dbusmenuimporter.cpp
-    dbusmenuimporter.h
-    dbusmenumodel.cpp
-    dbusmenushortcut_p.cpp
-    dbusmenushortcut_p.h
-    dbusmenutypes_p.cpp
-    dbusmenutypes_p.h
-    dbusmenuview.cpp
-    utils.cpp
-)
-
-ecm_qt_declare_logging_category(libdbusmenu_SRCS HEADER debug.h
-                                            IDENTIFIER DBUSMENUQT
-                                            CATEGORY_NAME org.kde.libdbusmenuqt
-                                            DEFAULT_SEVERITY Info
-                                            DESCRIPTION "libdbusmenu debug"
-                                            EXPORT PLASMAWORKSPACE
-                                        )
+# SPDX-FileCopyrightText: 2025 Vlad Zahorodnii <vlad.zahorodnii@kde.org>
+# SPDX-License-Identifier: BSD-3-Clause
 
 set_source_files_properties(com.canonical.dbusmenu.xml PROPERTIES
    NO_NAMESPACE true
    INCLUDE "dbusmenutypes_p.h"
    CLASSNAME DBusMenuInterface
 )
-qt_add_dbus_interface(libdbusmenu_SRCS com.canonical.dbusmenu.xml dbusmenu_interface)
+qt_add_dbus_interface(libdbusmenu_GENERATED com.canonical.dbusmenu.xml dbusmenu_interface)
 
+add_library(dbusmenuqt SHARED
+    dbusmenuimporter.cpp
+    dbusmenumodel.cpp
+    dbusmenushortcut_p.cpp
+    dbusmenutypes_p.cpp
+    dbusmenuview.cpp
+    utils.cpp
 
-add_library(dbusmenuqt SHARED ${libdbusmenu_SRCS})
-target_link_libraries(dbusmenuqt
+    ${libdbusmenu_GENERATED}
+)
+
+generate_export_header(dbusmenuqt)
+
+ecm_qt_declare_logging_category(dbusmenuqt
+    HEADER debug.h
+    IDENTIFIER DBUSMENUQT
+    CATEGORY_NAME org.kde.libdbusmenuqt
+    DEFAULT_SEVERITY Info
+    DESCRIPTION "libdbusmenu debug"
+    EXPORT PLASMAWORKSPACE
+)
+
+target_link_libraries(dbusmenuqt PUBLIC
     Qt::DBus
     Qt::Widgets
 )
 
 target_include_directories(dbusmenuqt PUBLIC "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>" "$<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}>")
-
-generate_export_header(dbusmenuqt)
 
 install(TARGETS dbusmenuqt ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)
 
