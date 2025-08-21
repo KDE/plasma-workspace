@@ -26,7 +26,7 @@ class BatteryControlModel : public QAbstractListModel
     Q_PROPERTY(bool hasBatteries READ default NOTIFY hasBatteriesChanged BINDABLE bindableHasBatteries)
     Q_PROPERTY(bool pluggedIn READ default NOTIFY pluggedInChanged BINDABLE bindablePluggedIn)
     Q_PROPERTY(bool hasInternalBatteries READ default NOTIFY hasInternalBatteriesChanged BINDABLE bindableHasInternalBatteries)
-    Q_PROPERTY(Solid::Battery::ChargeState state READ default NOTIFY stateChanged BINDABLE bindableState)
+    Q_PROPERTY(ChargeStateEnum state READ default NOTIFY stateChanged BINDABLE bindableState)
     Q_PROPERTY(int chargeStopThreshold READ default NOTIFY chargeStopThresholdChanged BINDABLE bindableChargeStopThresholdChanged)
     Q_PROPERTY(qulonglong remainingMsec READ default NOTIFY remainingMsecChanged BINDABLE bindableRemainingMsec)
     Q_PROPERTY(qulonglong smoothedRemainingMsec READ default NOTIFY smoothedRemainingMsecChanged BINDABLE bindableSmoothedRemainingMsec)
@@ -45,6 +45,14 @@ public:
     };
     Q_ENUM(BatteryRoles)
 
+    enum ChargeStateEnum {
+        NoCharge,
+        Charging,
+        Discharging,
+        FullyCharged,
+    };
+    Q_ENUM(ChargeStateEnum)
+
     int rowCount(const QModelIndex &parent) const override;
     QVariant data(const QModelIndex &index, int role) const override;
     QHash<int, QByteArray> roleNames() const override;
@@ -57,13 +65,13 @@ private:
     QBindable<bool> bindableHasBatteries();
     QBindable<bool> bindablePluggedIn();
     QBindable<bool> bindableHasInternalBatteries();
-    QBindable<Solid::Battery::ChargeState> bindableState();
+    QBindable<ChargeStateEnum> bindableState();
     QBindable<int> bindableChargeStopThresholdChanged();
     QBindable<qulonglong> bindableRemainingMsec();
     QBindable<qulonglong> bindableSmoothedRemainingMsec();
     QBindable<int> bindablePercent();
 
-    Solid::Battery::ChargeState updateBatteryState(const Solid::Battery *battery) const;
+    ChargeStateEnum updateBatteryState(const Solid::Battery *battery) const;
     QString batteryTypeToString(const Solid::Battery *battery) const;
 
 private Q_SLOTS:
@@ -91,7 +99,7 @@ Q_SIGNALS:
     void hasBatteriesChanged(bool statuts);
     void pluggedInChanged(bool status);
     void hasInternalBatteriesChanged(bool status);
-    void stateChanged(Solid::Battery::ChargeState state);
+    void stateChanged(ChargeStateEnum state);
     void chargeStopThresholdChanged(int threshold);
     void remainingMsecChanged(qulonglong time);
     void smoothedRemainingMsecChanged(qulonglong time);
@@ -102,7 +110,7 @@ private:
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(BatteryControlModel, bool, m_hasBatteries, false, &BatteryControlModel::hasBatteriesChanged)
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(BatteryControlModel, bool, m_hasInternalBatteries, false, &BatteryControlModel::hasInternalBatteriesChanged)
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(BatteryControlModel, bool, m_pluggedIn, false, &BatteryControlModel::pluggedInChanged)
-    Q_OBJECT_BINDABLE_PROPERTY(BatteryControlModel, Solid::Battery::ChargeState, m_state, &BatteryControlModel::stateChanged)
+    Q_OBJECT_BINDABLE_PROPERTY(BatteryControlModel, ChargeStateEnum, m_state, &BatteryControlModel::stateChanged)
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(BatteryControlModel, int, m_chargeStopThreshold, 0, &BatteryControlModel::chargeStopThresholdChanged)
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(BatteryControlModel, qulonglong, m_remainingMsec, 0, &BatteryControlModel::remainingMsecChanged)
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(BatteryControlModel, qulonglong, m_smoothedRemainingMsec, 0, &BatteryControlModel::smoothedRemainingMsecChanged)

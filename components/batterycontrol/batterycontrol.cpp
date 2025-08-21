@@ -213,7 +213,7 @@ void BatteryControlModel::onServiceUnregistered(const QString &serviceName)
         m_hasInternalBatteries = false;
         m_hasCumulative = false;
         m_pluggedIn = false;
-        m_state = Solid::Battery::NoCharge;
+        m_state = NoCharge;
         m_chargeStopThreshold = 0;
         m_remainingMsec = 0;
         m_smoothedRemainingMsec = 0;
@@ -474,11 +474,11 @@ void BatteryControlModel::updateOverallBattery()
 
     if (hasCumulative) {
         if (allFullyCharged) {
-            m_state = Solid::Battery::FullyCharged;
+            m_state = FullyCharged;
         } else if (charging) {
-            m_state = Solid::Battery::Charging;
+            m_state = Charging;
         } else if (discharging) {
-            m_state = Solid::Battery::Discharging;
+            m_state = Discharging;
         } else if (noCharge) {
             // When we are using a charge threshold, the kernel
             // may stop charging within a percentage point of the actual threshold
@@ -488,13 +488,13 @@ void BatteryControlModel::updateOverallBattery()
             // "Fullycharged", so we need to account for that as well. See
             // https://gitlab.freedesktop.org/upower/upower/-/issues/142.
             if (m_pluggedIn && (m_percent >= m_chargeStopThreshold - 1 && m_percent <= m_chargeStopThreshold + 1)) {
-                m_state = Solid::Battery::FullyCharged;
+                m_state = FullyCharged;
             } else {
-                m_state = Solid::Battery::NoCharge;
+                m_state = NoCharge;
             }
         }
     } else {
-        m_state = Solid::Battery::NoCharge;
+        m_state = NoCharge;
     }
 
     m_hasCumulative = hasCumulative;
@@ -530,7 +530,7 @@ QBindable<bool> BatteryControlModel::bindableHasInternalBatteries()
     return &m_hasInternalBatteries;
 }
 
-QBindable<Solid::Battery::ChargeState> BatteryControlModel::bindableState()
+QBindable<BatteryControlModel::ChargeStateEnum> BatteryControlModel::bindableState()
 {
     return &m_state;
 }
@@ -555,7 +555,7 @@ QBindable<int> BatteryControlModel::bindablePercent()
     return &m_percent;
 }
 
-Solid::Battery::ChargeState BatteryControlModel::updateBatteryState(const Solid::Battery *battery) const
+BatteryControlModel::ChargeStateEnum BatteryControlModel::updateBatteryState(const Solid::Battery *battery) const
 {
     // When we are using a charge threshold, the kernel
     // may stop charging within a percentage point of the actual threshold
@@ -566,11 +566,21 @@ Solid::Battery::ChargeState BatteryControlModel::updateBatteryState(const Solid:
         // "Fully charged", so we need to account for that as well. See
         // https://gitlab.freedesktop.org/upower/upower/-/issues/142.
         && (battery->chargeState() == Solid::Battery::NoCharge || battery->chargeState() == Solid::Battery::FullyCharged)) {
-        return Solid::Battery::FullyCharged;
+        return FullyCharged;
     }
 
     // Otherwise, just look at the charge state
-    return battery->chargeState();
+    switch (battery->chargeState()) {
+    case Solid::Battery::ChargeState::NoCharge:
+        return NoCharge;
+    case Solid::Battery::ChargeState::FullyCharged:
+        return FullyCharged;
+    case Solid::Battery::ChargeState::Charging:
+        return Charging;
+    case Solid::Battery::ChargeState::Discharging:
+        return Discharging;
+    }
+    Q_UNREACHABLE_RETURN(NoCharge);
 }
 
 QString BatteryControlModel::batteryTypeToString(const Solid::Battery *battery) const
