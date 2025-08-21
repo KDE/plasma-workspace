@@ -40,8 +40,7 @@
         "FormFactors": [
             "desktop",
             "handset",
-            "tablet",
-            "mediacenter"
+            "tablet"
         ],
         "Icon": "preferences-desktop-default-applications",
         "Name": "Default Applications",
