@@ -112,7 +112,7 @@ void ContextMenu::restore(const KConfigGroup &config)
         connect(m_runCommandAction, &QAction::triggered, this, &ContextMenu::runCommand);
 
         m_openTerminalAction = new QAction(i18n("Open Terminal"), this);
-        m_openTerminalAction->setIcon(QIcon::fromTheme(u"utilities-terminal"_s));
+        m_openTerminalAction->setIcon(QIcon::fromTheme(u"utilities-terminal-symbolic"_s));
         connect(m_openTerminalAction, &QAction::triggered, this, &ContextMenu::openTerminal);
 
         m_lockScreenAction = new QAction(i18nc("plasma_containmentactions_contextmenu", "Lock Screen"), this);
