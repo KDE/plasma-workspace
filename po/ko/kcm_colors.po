@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-15 00:44+0000\n"
+"POT-Creation-Date: 2025-08-22 00:44+0000\n"
 "PO-Revision-Date: 2024-11-28 23:26+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -30,32 +30,32 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde@peremen.name"
 
-#: colors.cpp:252
+#: colors.cpp:253
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "임시 파일을 만들 수 없습니다."
 
-#: colors.cpp:265
+#: colors.cpp:266
 #, kde-format
 msgid "Unable to download the color scheme: %1"
 msgstr "색 구성표를 다운로드할 수 없음: %1"
 
-#: colors.cpp:283
+#: colors.cpp:284
 #, kde-format
 msgid "This file is not a color scheme file."
 msgstr "이 파일은 색 구성표 파일이 아닙니다."
 
-#: colors.cpp:302
+#: colors.cpp:303
 #, kde-format
 msgid "Failed to create 'color-scheme' data folder."
 msgstr "'color-scheme' 데이터 폴더를 만들 수 없습니다."
 
-#: colors.cpp:309
+#: colors.cpp:310
 #, kde-format
 msgid "Failed to copy color scheme into 'color-scheme' data folder."
 msgstr "색 구성표를 'color-scheme' 데이터 폴더로 복사할 수 없습니다."
 
-#: colors.cpp:326
+#: colors.cpp:327
 #, kde-format
 msgid "Color scheme installed successfully."
 msgstr "색 구성표를 설치했습니다."

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-15 00:44+0000\n"
+"POT-Creation-Date: 2025-08-22 00:44+0000\n"
 "PO-Revision-Date: 2024-01-11 14:23-0500\n"
 "Last-Translator: Weblate Admin <admin@example.com>\n"
 "Language-Team: Toki Pona <http://weblate.blackquill.cc/projects/ante-toki-pi-"
@@ -29,32 +29,32 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "uhhadd@gmail.com"
 
-#: colors.cpp:252
+#: colors.cpp:253
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "mi ken ala lon e lipu pi tenpo lili."
 
-#: colors.cpp:265
+#: colors.cpp:266
 #, kde-format
 msgid "Unable to download the color scheme: %1"
 msgstr "mi ken ala kama jo e nasin kule: %1"
 
-#: colors.cpp:283
+#: colors.cpp:284
 #, kde-format
 msgid "This file is not a color scheme file."
 msgstr "lipu ni li nasin kule ala."
 
-#: colors.cpp:302
+#: colors.cpp:303
 #, kde-format
 msgid "Failed to create 'color-scheme' data folder."
 msgstr "mi ken ala lon e poki 'color-scheme' pi nasin kule."
 
-#: colors.cpp:309
+#: colors.cpp:310
 #, kde-format
 msgid "Failed to copy color scheme into 'color-scheme' data folder."
 msgstr "mi ken ala tu e nasin kule ni lon poki 'color-scheme'."
 
-#: colors.cpp:326
+#: colors.cpp:327
 #, kde-format
 msgid "Color scheme installed successfully."
 msgstr "mi jo e nasin kule."
