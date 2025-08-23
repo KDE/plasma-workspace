@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-10 00:45+0000\n"
-"PO-Revision-Date: 2025-05-29 16:37+0300\n"
+"POT-Creation-Date: 2025-08-23 00:45+0000\n"
+"PO-Revision-Date: 2025-08-18 17:32+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #: abstractnotificationsmodel.cpp:340
 #, kde-format
@@ -130,11 +130,8 @@ msgstr[0] "Netraucēšanas režīma laikā saņēmāt %1 paziņojumu."
 msgstr[1] "Netraucēšanas režīma laikā saņēmāt %1 paziņojumus."
 msgstr[2] "Netraucēšanas režīma laikā saņēmāt %1 paziņojumu."
 
-#: notifications.cpp:921
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Unread Notification"
-#| msgid_plural "Unread Notifications"
+#: notifications.cpp:924
+#, kde-format
 msgctxt "@action:button Show the notifications popup"
 msgid "Show Notifications"
-msgstr "Nelasīts paziņojums"
+msgstr "Rādīt paziņojumus"

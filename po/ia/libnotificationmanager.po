@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-10 00:45+0000\n"
+"POT-Creation-Date: 2025-08-23 00:45+0000\n"
 "PO-Revision-Date: 2025-05-12 15:59+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -121,7 +121,7 @@ msgstr[0] ""
 msgstr[1] ""
 "%1 notificationes esseva recipite durante que Non Disturbar esseva active."
 
-#: notifications.cpp:921
+#: notifications.cpp:924
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "Unread Notification"

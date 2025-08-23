@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-10 00:45+0000\n"
+"POT-Creation-Date: 2025-08-23 00:45+0000\n"
 "PO-Revision-Date: 2025-07-27 16:53-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -122,7 +122,7 @@ msgid_plural "%1 notifications were received while Do Not Disturb was active."
 msgstr[0] "%1 notificação foi recebida enquanto Não Perturbe estava ativo."
 msgstr[1] "%1 notificações foram recebidas enquanto Não Perturbe estava ativo."
 
-#: notifications.cpp:921
+#: notifications.cpp:924
 #, kde-format
 msgctxt "@action:button Show the notifications popup"
 msgid "Show Notifications"

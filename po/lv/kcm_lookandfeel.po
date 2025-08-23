@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-18 00:44+0000\n"
-"PO-Revision-Date: 2025-06-27 15:43+0300\n"
+"PO-Revision-Date: 2025-08-18 16:58+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 25.04.2\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -37,22 +37,23 @@ msgstr "Globālais izskats un uzvedība"
 #. i18n: ectx: label, entry (defaultLightLookAndFeel), group (KDE)
 #. i18n: ectx: label, entry (defaultDarkLookAndFeel), group (KDE)
 #: lookandfeelsettings.kcfg:13 lookandfeelsettings.kcfg:17
-#, fuzzy, kde-format
-#| msgid "Global look and feel"
+#, kde-format
 msgid "Global Look and Feel package, alternate"
-msgstr "Globālais izskats un uzvedība"
+msgstr "Globālais izskats un uzvedība (alternatīvais)"
 
 #. i18n: ectx: label, entry (automaticLookAndFeel), group (KDE)
 #: lookandfeelsettings.kcfg:21
 #, kde-format
 msgid "Switch between dark and light global themes depending on time of day"
 msgstr ""
+"Pārslēgties starp tumšo un gaišo globālo motīvu atkarībā no diennakts laika"
 
 #. i18n: ectx: label, entry (automaticLookAndFeelOnIdle), group (KDE)
 #: lookandfeelsettings.kcfg:25
 #, kde-format
 msgid "Switch between dark and light global themes when the computer is idle"
 msgstr ""
+"Pārslēgties starp tumšo un gaišo globālo motīvu, ierīcei atrodoties dīkstāvē"
 
 #. i18n: ectx: label, entry (automaticLookAndFeelIdleInterval), group (KDE)
 #: lookandfeelsettings.kcfg:29
@@ -61,6 +62,8 @@ msgid ""
 "How long the computer should be idle in order to switch between dark and "
 "light global themes, in seconds"
 msgstr ""
+"Cik ilgi datoram jābūt dīkstāvē, lai pārslēgtos starp tumšo un gaišo globālo "
+"motīvu (sekundēs)"
 
 #: tool/lnftool.cpp:32
 #, kde-format
@@ -115,7 +118,7 @@ msgstr "pakotnes nosaukums"
 #: tool/lnftool.cpp:52
 #, kde-format
 msgid "Prevent --apply from disabling the automatic mode"
-msgstr ""
+msgstr "Neļaut „--apply“ slēdzim izslēgt automātisko režīmu"
 
 #: tool/lnftool.cpp:53
 #, kde-format
@@ -153,64 +156,64 @@ msgid ""
 "The chosen light Global Theme will be used during the day, and the dark one "
 "will be used at night."
 msgstr ""
+"Diena laikā sistēma lietos izvēlēto gaišo globālu motīvu, bet naktī — tumšo."
 
 #: ui/DayNightLookAndFeel.qml:55
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure Day/Night Cycle…"
-msgstr ""
+msgstr "Konfigurējiet dienas/nakts ciklu…"
 
 #: ui/DayNightLookAndFeel.qml:68
 #, kde-format
 msgctxt "@option:radio Light global theme"
 msgid "Light"
-msgstr ""
+msgstr "Gaišais"
 
 #: ui/DayNightLookAndFeel.qml:80
 #, kde-format
 msgctxt "@option:radio Dark global theme"
 msgid "Dark"
-msgstr ""
+msgstr "Tumšais"
 
 #: ui/DayNightLookAndFeel.qml:97
 #, kde-format
 msgctxt "@option:check"
 msgid "Wait until idleness before switching:"
-msgstr ""
+msgstr "Pirms pārslēgšanas gaidīt dīkstāvi:"
 
 #: ui/DayNightLookAndFeel.qml:110
 #, kde-format
 msgctxt "@item:valuesuffix idle interval"
 msgid "%1 second"
 msgid_plural "%1 seconds"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%1 sekundi"
+msgstr[1] "%1 sekundes"
+msgstr[2] "%1 sekunžu"
 
 #: ui/DayNightLookAndFeel.qml:122
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Minimizes interruptions when actively using the computer."
-msgstr ""
+msgstr "Samazinā traucēšanu, ja ierīci aktīvi lietojat."
 
 #: ui/LookAndFeelSelector.qml:24
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Light Global Theme"
-msgstr ""
+msgstr "Izvēlēties gaišo globālo motīvu"
 
 #: ui/LookAndFeelSelector.qml:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Dark Global Theme"
-msgstr ""
+msgstr "Izvēlieties tumšo globālo motīvu"
 
 #: ui/LookAndFeelSelector.qml:49 ui/StaticLookAndFeel.qml:67
-#, fuzzy, kde-format
-#| msgid "Preview Theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview Theme"
-msgstr "Tēmas priekšskatījums"
+msgstr "Motīva priekšskatījums"
 
 #: ui/LookAndFeelSelector.qml:57 ui/StaticLookAndFeel.qml:75
 #, kde-format
@@ -234,11 +237,10 @@ msgstr "Nevar dzēst sistēmas līmenī instalētus motīvus"
 #, kde-format
 msgctxt "@option:check"
 msgid "Switch to Dark Mode at Night"
-msgstr ""
+msgstr "Naktī pārslēgties uz tumšo režīmu"
 
 #: ui/main.qml:40
-#, fuzzy, kde-format
-#| msgid "Get New…"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Get New…"
 msgstr "Iegūt jaunus…"
@@ -359,8 +361,7 @@ msgstr ""
 "Sazinieties ar tā uzturētāju, jo, iespējams, motīvs nestrādā."
 
 #: ui/StaticLookAndFeel.qml:53
-#, fuzzy, kde-format
-#| msgid "Contains Desktop layout"
+#, kde-format
 msgctxt "@label"
 msgid "Contains Desktop layout"
 msgstr "Satur darbvirsmas izkārtojumu"

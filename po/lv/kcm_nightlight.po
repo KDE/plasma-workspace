@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2024, 2025 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-12 00:45+0000\n"
-"PO-Revision-Date: 2024-10-29 11:59+0200\n"
+"PO-Revision-Date: 2025-08-18 17:00+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #: ui/DayNightView.qml:154
 #, kde-format
@@ -37,44 +37,40 @@ msgstr ""
 "nomainās līdz plkst. %2"
 
 #: ui/main.qml:39
-#, fuzzy, kde-format
-#| msgid "The blue light filter makes the colors on the screen warmer."
+#, kde-format
 msgctxt "@info"
 msgid "The blue light filter makes the colors on the screen warmer."
 msgstr "Zilās gaismas filtrs krāsas ekrānā padara siltākas."
 
 #: ui/main.qml:49
-#, fuzzy, kde-format
-#| msgid "Switching times:"
+#, kde-format
 msgctxt "@label:listbox Night Light modes"
 msgid "Switching times:"
 msgstr "Izmaiņu laiki:"
 
 #: ui/main.qml:58
-#, fuzzy, kde-format
-#| msgid "Always off"
+#, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Always off"
-msgstr "Vienmēr izslēgts"
+msgstr "Vienmēr izslēgta"
 
 #: ui/main.qml:59
-#, fuzzy, kde-format
-#| msgid "Always on night light"
+#, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Always on night light"
-msgstr "Nakts gaismu ieslēgt vienmēr"
+msgstr "Nakts gaisma vienmēr ir ieslēgta"
 
 #: ui/main.qml:60
 #, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Sunrise and sunset"
-msgstr ""
+msgstr "Saullēkts un saulriets"
 
 #: ui/main.qml:72
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
-msgstr ""
+msgstr "Pielāgot…"
 
 #: ui/main.qml:115 ui/main.qml:166 ui/main.qml:230
 #, kde-format
@@ -83,8 +79,7 @@ msgid "%1K"
 msgstr "%1K"
 
 #: ui/main.qml:123
-#, fuzzy, kde-format
-#| msgid "Day light temperature:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Day light temperature:"
 msgstr "Dienas gaismas temperatūra:"
@@ -102,8 +97,7 @@ msgid "Warm"
 msgstr "Silta"
 
 #: ui/main.qml:187
-#, fuzzy, kde-format
-#| msgid "Night light temperature:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Night light temperature:"
 msgstr "Nakts gaismas temperatūra:"

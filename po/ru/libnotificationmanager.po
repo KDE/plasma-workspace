@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-10 00:45+0000\n"
+"POT-Creation-Date: 2025-08-23 00:45+0000\n"
 "PO-Revision-Date: 2025-07-04 18:09+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -142,7 +142,7 @@ msgstr[2] ""
 msgstr[3] ""
 "Во время работы режима «Не беспокоить» было получено %1 уведомление."
 
-#: notifications.cpp:921
+#: notifications.cpp:924
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "@action:button Show the notifications popup; translate this in as short a "
