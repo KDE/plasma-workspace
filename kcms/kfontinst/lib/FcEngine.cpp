@@ -866,9 +866,10 @@ QImage CFcEngine::draw(const QString &name,
                 QRect used(0, 0, 0, 0);
 
                 if (thumb) {
-                    QString text(m_scalable ? i18nc("First letter of the alphabet (in upper then lower case)", "Aa")
-                                            : i18nc("All letters of the alphabet (in upper/lower case pairs), followed by numbers",
-                                                    "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789"));
+                    QString text(m_scalable ? i18ndc("kfontinst", "First letter of the alphabet (in upper then lower case)", "Aa")
+                                            : i18ndc("kfontinst",
+                                                     "All letters of the alphabet (in upper/lower case pairs), followed by numbers",
+                                                     "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789"));
                     //
                     // Calculate size of text...
                     int fSize = h;
@@ -1030,7 +1031,7 @@ QImage CFcEngine::draw(const QString &name,
 
                         if (x == xOrig && y == yOrig) {
                             // No characters found within the selected range...
-                            xft()->drawString(i18n("No characters found."), x, y, h);
+                            xft()->drawString(i18nd("kfontinst", "No characters found."), x, y, h);
                             rv = true;
                         }
                         closeFont(xftFont);
@@ -1068,22 +1069,22 @@ QImage CFcEngine::draw(const QString &name,
 
 QString CFcEngine::getDefaultPreviewString()
 {
-    return i18nc("A sentence that uses all of the letters of the alphabet", "The quick brown fox jumps over the lazy dog");
+    return i18ndc("kfontinst", "A sentence that uses all of the letters of the alphabet", "The quick brown fox jumps over the lazy dog");
 }
 
 QString CFcEngine::getUppercaseLetters()
 {
-    return i18nc("All of the letters of the alphabet, uppercase", "ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+    return i18ndc("kfontinst", "All of the letters of the alphabet, uppercase", "ABCDEFGHIJKLMNOPQRSTUVWXYZ");
 }
 
 QString CFcEngine::getLowercaseLetters()
 {
-    return i18nc("All of the letters of the alphabet, lowercase", "abcdefghijklmnopqrstuvwxyz");
+    return i18ndc("kfontinst", "All of the letters of the alphabet, lowercase", "abcdefghijklmnopqrstuvwxyz");
 }
 
 QString CFcEngine::getPunctuation()
 {
-    return i18nc("Numbers and characters", "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"); // krazy:exclude=i18ncheckarg
+    return i18ndc("kfontinst", "Numbers and characters", "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"); // krazy:exclude=i18ncheckarg
 }
 
 #ifdef KFI_USE_TRANSLATED_FAMILY_NAME
@@ -1481,10 +1482,10 @@ void CFcEngine::getSizes()
 
 void CFcEngine::drawName(int x, int &y, int h)
 {
-    QString title(m_descriptiveName.isEmpty() ? i18n("ERROR: Could not determine font's name.") : m_descriptiveName);
+    QString title(m_descriptiveName.isEmpty() ? i18nd("kfontinst", "ERROR: Could not determine font's name.") : m_descriptiveName);
 
     if (1 == m_sizes.size()) {
-        title = i18np("%2 [1 pixel]", "%2 [%1 pixels]", m_sizes[0], title);
+        title = i18ndp("kfontinst", "%2 [1 pixel]", "%2 [%1 pixels]", m_sizes[0], title);
     }
 
     xft()->drawString(title, x, y, h);
