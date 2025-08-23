@@ -30,6 +30,72 @@ LocaleListModel::LocaleListModel(QObject *parent)
         }
 #endif
 
+        if (locale == QLocale::system()) {
+            continue;
+        }
+
+        switch (locale.language()) {
+        case QLocale::Chinese:
+            if (locale.script() == QLocale::LatinScript || (locale.territory() == QLocale::HongKong && locale.script() == QLocale::SimplifiedChineseScript)) {
+                continue;
+            }
+            break;
+        case QLocale::Hindi:
+        case QLocale::Inuktitut:
+        case QLocale::Konkani:
+            if (locale.script() == QLocale::LatinScript) {
+                continue;
+            }
+            break;
+        case QLocale::Serbian:
+            if (locale.script() == QLocale::LatinScript) {
+                if (locale.territory() == QLocale::Serbia) {
+                    m_localeData.push_back(LocaleData{.nativeName = locale.nativeLanguageName(),
+                                                      .englishName = QLocale::languageToString(locale.language()),
+                                                      .nativeCountryName = locale.nativeCountryName(),
+                                                      .englishCountryName = QLocale::countryToString(locale.country()),
+                                                      .countryCode = QStringLiteral("sr_RS@latin.UTF-8"),
+                                                      .locale = locale});
+                }
+                continue;
+            }
+            break;
+        case QLocale::Kashmiri:
+            if (locale.script() != QLocale::ArabicScript) {
+                continue;
+            }
+            break;
+        case QLocale::Manipuri:
+            if (locale.script() != QLocale::BanglaScript) {
+                continue;
+            }
+            break;
+        case QLocale::Mongolian:
+            if (locale.script() != QLocale::CyrillicScript) {
+                continue;
+            }
+            break;
+        case QLocale::Santali:
+            if (locale.script() != QLocale::DevanagariScript) {
+                continue;
+            }
+            break;
+        case QLocale::Azerbaijani:
+        case QLocale::Bosnian:
+        case QLocale::English:
+        case QLocale::Fulah:
+        case QLocale::Hausa:
+        case QLocale::Malay:
+        case QLocale::Uzbek:
+            if (locale.script() != QLocale::LatinScript) {
+                continue;
+            }
+            break;
+
+        default:
+            break;
+        }
+
         m_localeData.push_back(LocaleData{.nativeName = locale.nativeLanguageName(),
                                           .englishName = QLocale::languageToString(locale.language()),
                                           .nativeCountryName = locale.nativeCountryName(),
