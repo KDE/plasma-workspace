@@ -262,6 +262,7 @@ Item {
                         if (regionComboBox.currentText === chooseText) return;
                         if (regionComboBox.currentText !== root.split(root.selectedTimeZone)[0]) {
                             let locations = root.areasByRegion[regionComboBox.currentText]
+                            locationComboBox.forceActiveFocus();
                             locationComboBox.model = locations
                             locationComboBox.popup.visible = true
                         }
