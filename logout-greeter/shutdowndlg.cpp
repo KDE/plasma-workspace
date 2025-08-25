@@ -184,6 +184,11 @@ KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype,
                 return;
             }
 
+            if (bootEntryId.contains(u"reboot-to-firmware-setup"_s)) {
+                context->setContextProperty(u"rebootToFirmwareSetup"_s, true);
+                return;
+            }
+
             QProcess *bootctl = new QProcess(this);
 
             connect(bootctl, &QProcess::finished, context, [context, bootEntryId, bootctl](int exitCode, QProcess::ExitStatus) {
