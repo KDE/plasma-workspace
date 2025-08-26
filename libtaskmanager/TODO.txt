@@ -1,7 +1,0 @@
-Larger outstanding tasks:
-- Implement missing kwayland bits (e.g. transient handling, virtual desktop logic).
-
-Other:
-- Tests tests tests.
-- Code cleanup and addressing FIXMEs.
-- Reconsider the library exports.
