@@ -79,8 +79,6 @@ public:
     QHash<WId, QDateTime> lastActivated;
     QList<WId> cachedStackingOrder;
     WId activeWindow = -1;
-    KSharedConfig::Ptr rulesConfig;
-    KDirWatch *configWatcher = nullptr;
     QTimer sycocaChangeTimer;
 
     void init();
@@ -149,22 +147,6 @@ void XWindowTasksModel::Private::init()
     QObject::connect(KSycoca::self(), &KSycoca::databaseChanged, q, [this]() {
         sycocaChangeTimer.start();
     });
-
-    rulesConfig = KSharedConfig::openConfig(QStringLiteral("taskmanagerrulesrc"));
-    configWatcher = new KDirWatch(q);
-
-    for (const auto locations = QStandardPaths::standardLocations(QStandardPaths::ConfigLocation); const QString &location : locations) {
-        configWatcher->addFile(location + QLatin1String("/taskmanagerrulesrc"));
-    }
-
-    auto rulesConfigChange = [this, clearCacheAndRefresh] {
-        rulesConfig->reparseConfiguration();
-        clearCacheAndRefresh();
-    };
-
-    QObject::connect(configWatcher, &KDirWatch::dirty, rulesConfigChange);
-    QObject::connect(configWatcher, &KDirWatch::created, rulesConfigChange);
-    QObject::connect(configWatcher, &KDirWatch::deleted, rulesConfigChange);
 
     auto windowSystem = new XWindowSystemEventBatcher(q);
 
@@ -550,7 +532,7 @@ QUrl XWindowTasksModel::Private::windowUrl(WId window)
         }
     }
 
-    return windowUrlFromMetadata(QString::fromLocal8Bit(info->windowClassClass()), info->pid(), rulesConfig, QString::fromLocal8Bit(info->windowClassName()));
+    return windowUrlFromMetadata(QString::fromLocal8Bit(info->windowClassClass()), info->pid(), QString::fromLocal8Bit(info->windowClassName()));
 }
 
 QUrl XWindowTasksModel::Private::launcherUrl(WId window, bool encodeFallbackIcon)
@@ -700,7 +682,7 @@ QVariant XWindowTasksModel::data(const QModelIndex &index, int role) const
         const KWindowInfo *info = d->windowInfo(window);
         // _NET_WM_WINDOW_TYPE_UTILITY type windows should not be on task bars,
         // but they should be shown on pagers.
-        return (info->hasState(NET::SkipTaskbar) || info->windowType(NET::UtilityMask) == NET::Utility || d->appData(window).skipTaskbar);
+        return (info->hasState(NET::SkipTaskbar) || info->windowType(NET::UtilityMask) == NET::Utility);
     } else if (role == SkipPager) {
         return d->windowInfo(window)->hasState(NET::SkipPager);
     } else if (role == AppPid) {

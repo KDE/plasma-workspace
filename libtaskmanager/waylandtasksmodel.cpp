@@ -445,8 +445,6 @@ public:
     // key=leader, values=transient children
     QMultiHash<PlasmaWindow *, PlasmaWindow *> transientsDemandingAttention;
     std::unique_ptr<PlasmaWindowManagement> windowManagement;
-    KSharedConfig::Ptr rulesConfig;
-    KDirWatch *configWatcher = nullptr;
     VirtualDesktopInfo *virtualDesktopInfo = nullptr;
     static QUuid uuid;
     QList<QString> stackingOrder;
@@ -479,42 +477,6 @@ WaylandTasksModel::Private::Private(WaylandTasksModel *q)
 
 void WaylandTasksModel::Private::init()
 {
-    auto clearCacheAndRefresh = [this] {
-        if (windows.empty()) {
-            return;
-        }
-
-        appDataCache.clear();
-
-        // Emit changes of all roles satisfied from app data cache.
-        Q_EMIT q->dataChanged(q->index(0, 0),
-                              q->index(windows.size() - 1, 0),
-                              QList<int>{Qt::DecorationRole,
-                                         AbstractTasksModel::AppId,
-                                         AbstractTasksModel::AppName,
-                                         AbstractTasksModel::GenericName,
-                                         AbstractTasksModel::LauncherUrl,
-                                         AbstractTasksModel::LauncherUrlWithoutIcon,
-                                         AbstractTasksModel::CanLaunchNewInstance,
-                                         AbstractTasksModel::SkipTaskbar});
-    };
-
-    rulesConfig = KSharedConfig::openConfig(QStringLiteral("taskmanagerrulesrc"));
-    configWatcher = new KDirWatch(q);
-
-    for (const QString &location : QStandardPaths::standardLocations(QStandardPaths::ConfigLocation)) {
-        configWatcher->addFile(location + QLatin1String("/taskmanagerrulesrc"));
-    }
-
-    auto rulesConfigChange = [this, clearCacheAndRefresh] {
-        rulesConfig->reparseConfiguration();
-        clearCacheAndRefresh();
-    };
-
-    QObject::connect(configWatcher, &KDirWatch::dirty, rulesConfigChange);
-    QObject::connect(configWatcher, &KDirWatch::created, rulesConfigChange);
-    QObject::connect(configWatcher, &KDirWatch::deleted, rulesConfigChange);
-
     virtualDesktopInfo = new VirtualDesktopInfo(q);
 
     initWayland();
@@ -821,7 +783,7 @@ const AppData &WaylandTasksModel::Private::appData(PlasmaWindow *window)
         return *it;
     }
 
-    return *appDataCache.emplace(window, appDataFromUrl(windowUrlFromMetadata(window->appId, window->pid, rulesConfig, window->resourceName)));
+    return *appDataCache.emplace(window, appDataFromUrl(windowUrlFromMetadata(window->appId, window->pid, window->resourceName)));
 }
 
 QIcon WaylandTasksModel::Private::icon(PlasmaWindow *window)
@@ -967,7 +929,7 @@ QVariant WaylandTasksModel::data(const QModelIndex &index, int role) const
     } else if (role == IsDemandingAttention) {
         return window->windowState.testFlag(PlasmaWindow::state::state_demands_attention) || d->transientsDemandingAttention.contains(window);
     } else if (role == SkipTaskbar) {
-        return window->windowState.testFlag(PlasmaWindow::state::state_skiptaskbar) || d->appData(window).skipTaskbar || d->transients.contains(window);
+        return window->windowState.testFlag(PlasmaWindow::state::state_skiptaskbar) || d->transients.contains(window);
     } else if (role == SkipPager) {
         // FIXME Implement.
     } else if (role == AppPid) {

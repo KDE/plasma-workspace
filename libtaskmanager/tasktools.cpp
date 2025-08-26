@@ -65,11 +65,6 @@ AppData appDataFromUrl(const QUrl &url, const QIcon &fallbackIcon)
             pixmap.loadFromData(bytes);
             data.icon.addPixmap(pixmap);
         }
-
-        if (uQuery.hasQueryItem(QLatin1String("skipTaskbar"))) {
-            QString skipTaskbar(uQuery.queryItemValue(QLatin1String("skipTaskbar")));
-            data.skipTaskbar = (skipTaskbar == QLatin1String("true"));
-        }
     }
 
     // applications: URLs are used to refer to applications by their KService::menuId
@@ -185,13 +180,8 @@ AppData appDataFromUrl(const QUrl &url, const QIcon &fallbackIcon)
     return data;
 }
 
-QUrl windowUrlFromMetadata(const QString &appId, quint32 pid, const KSharedConfig::Ptr &rulesConfig, const QString &xWindowsWMClassName)
+QUrl windowUrlFromMetadata(const QString &appId, quint32 pid, const QString &xWindowsWMClassName)
 {
-    static_assert(!std::is_trivially_copy_assignable_v<KSharedConfig::Ptr>);
-    if (!rulesConfig) {
-        return {};
-    }
-
     QUrl url;
     KService::List services;
     bool triedPid = false;
@@ -229,51 +219,7 @@ QUrl windowUrlFromMetadata(const QString &appId, quint32 pid, const KSharedConfi
     };
 
     if (!(appId.isEmpty() && xWindowsWMClassName.isEmpty())) {
-        // Check to see if this wmClass matched a saved one ...
-        KConfigGroup grp(rulesConfig, u"Mapping"_s);
-        KConfigGroup set(rulesConfig, u"Settings"_s);
-
-        // Evaluate MatchCommandLineFirst directives from config first.
-        // Some apps have different launchers depending upon command line ...
-        QStringList matchCommandLineFirst = set.readEntry("MatchCommandLineFirst", QStringList());
-
-        if (!appId.isEmpty() && matchCommandLineFirst.contains(appId)) {
-            triedPid = true;
-            services = servicesFromPid(pid, rulesConfig);
-        }
-
-        // Try to match using xWindowsWMClassName also.
-        if (!xWindowsWMClassName.isEmpty() && matchCommandLineFirst.contains(u"::" + xWindowsWMClassName)) {
-            triedPid = true;
-            services = servicesFromPid(pid, rulesConfig);
-        }
-
         if (!appId.isEmpty()) {
-            // Evaluate any mapping rules that map to a specific .desktop file.
-            QString mapped(grp.readEntry(appId + u"::" + xWindowsWMClassName, QString()));
-
-            if (mapped.endsWith(QLatin1String(".desktop"))) {
-                url = QUrl(mapped);
-                return url;
-            }
-
-            if (mapped.isEmpty()) {
-                mapped = grp.readEntry(appId, QString());
-
-                if (mapped.endsWith(QLatin1String(".desktop"))) {
-                    url = QUrl(mapped);
-                    return url;
-                }
-            }
-
-            // Some apps, such as Wine, cannot use xWindowsWMClassName to map to launcher name - as Wine itself is not a GUI app
-            // So, Settings/ManualOnly lists window classes where the user will always have to manually set the launcher ...
-            QStringList manualOnly = set.readEntry("ManualOnly", QStringList());
-
-            if (!appId.isEmpty() && manualOnly.contains(appId)) {
-                return url;
-            }
-
             // Try matching both appId and xWindowsWMClassName against StartupWMClass.
             // We do this before evaluating the mapping rules further, because StartupWMClass
             // is essentially a mapping rule, and we expect it to be set deliberately and
@@ -299,62 +245,6 @@ QUrl windowUrlFromMetadata(const QString &appId, quint32 pid, const KSharedConfi
                 sortServicesByMenuId(services, appId);
             }
 
-            // Evaluate rewrite rules from config.
-            if (services.isEmpty()) {
-                KConfigGroup rewriteRulesGroup(rulesConfig, QStringLiteral("Rewrite Rules"));
-                if (rewriteRulesGroup.hasGroup(appId)) {
-                    KConfigGroup rewriteGroup(&rewriteRulesGroup, appId);
-
-                    const QStringList &rules = rewriteGroup.groupList();
-                    for (const QString &rule : rules) {
-                        KConfigGroup ruleGroup(&rewriteGroup, rule);
-
-                        const QString propertyConfig = ruleGroup.readEntry(QStringLiteral("Property"), QString());
-
-                        QString matchProperty;
-                        if (propertyConfig == QLatin1String("ClassClass")) {
-                            matchProperty = appId;
-                        } else if (propertyConfig == QLatin1String("ClassName")) {
-                            matchProperty = xWindowsWMClassName;
-                        }
-
-                        if (matchProperty.isEmpty()) {
-                            continue;
-                        }
-
-                        const QString serviceSearchIdentifier = ruleGroup.readEntry(QStringLiteral("Identifier"), QString());
-                        if (serviceSearchIdentifier.isEmpty()) {
-                            continue;
-                        }
-
-                        QRegularExpression regExp(ruleGroup.readEntry(QStringLiteral("Match")));
-                        const auto match = regExp.match(matchProperty);
-
-                        if (match.hasMatch()) {
-                            const QString actualMatch = match.captured(QStringLiteral("match"));
-                            if (actualMatch.isEmpty()) {
-                                continue;
-                            }
-
-                            QString rewrittenString = ruleGroup.readEntry(QStringLiteral("Target")).arg(actualMatch);
-                            // If no "Target" is provided, instead assume the matched property (appId/xWindowsWMClassName).
-                            if (rewrittenString.isEmpty()) {
-                                rewrittenString = matchProperty;
-                            }
-
-                            services = KApplicationTrader::query([&rewrittenString, &serviceSearchIdentifier](const KService::Ptr &service) {
-                                return service->property<QString>(serviceSearchIdentifier).compare(rewrittenString, Qt::CaseInsensitive) == 0;
-                            });
-                            sortServicesByMenuId(services, serviceSearchIdentifier);
-
-                            if (!services.isEmpty()) {
-                                break;
-                            }
-                        }
-                    }
-                }
-            }
-
             // The appId looks like a path.
             if (services.isEmpty() && appId.startsWith(QLatin1String("/"))) {
                 // Check if it's a path to a .desktop file.
@@ -368,22 +258,6 @@ QUrl windowUrlFromMetadata(const QString &appId, quint32 pid, const KSharedConfi
                 if (KDesktopFile::isDesktopFile(appIdPlusExtension) && QFile::exists(appIdPlusExtension)) {
                     return QUrl::fromLocalFile(appIdPlusExtension);
                 }
-            }
-
-            // Try matching mapped name against DesktopEntryName.
-            if (!mapped.isEmpty() && services.isEmpty()) {
-                services = KApplicationTrader::query([&mapped](const KService::Ptr &service) {
-                    return !service->noDisplay() && service->desktopEntryName().compare(mapped, Qt::CaseInsensitive) == 0;
-                });
-                sortServicesByMenuId(services, mapped);
-            }
-
-            // Try matching mapped name against 'Name'.
-            if (!mapped.isEmpty() && services.isEmpty()) {
-                services = KApplicationTrader::query([&mapped](const KService::Ptr &service) {
-                    return !service->noDisplay() && service->name().compare(mapped, Qt::CaseInsensitive) == 0;
-                });
-                sortServicesByMenuId(services, mapped);
             }
 
             // Try matching appId against DesktopEntryName.
@@ -402,28 +276,11 @@ QUrl windowUrlFromMetadata(const QString &appId, quint32 pid, const KSharedConfi
                 });
                 sortServicesByMenuId(services, appId);
             }
-
-            // Check rules configuration for whether we want to hide this task.
-            // Some window tasks update from bogus to useful metadata early during startup.
-            // This config key allows listing the bogus metadata, and the matching window
-            // tasks are hidden until they perform a metadate update that stops them from
-            // matching.
-            QStringList skipTaskbar = set.readEntry("SkipTaskbar", QStringList());
-
-            if (skipTaskbar.contains(appId)) {
-                QUrlQuery query(url);
-                query.addQueryItem(QStringLiteral("skipTaskbar"), QStringLiteral("true"));
-                url.setQuery(query);
-            } else if (skipTaskbar.contains(mapped)) {
-                QUrlQuery query(url);
-                query.addQueryItem(QStringLiteral("skipTaskbar"), QStringLiteral("true"));
-                url.setQuery(query);
-            }
         }
 
         // Ok, absolute *last* chance, try matching via pid (but only if we have not already tried this!) ...
         if (services.isEmpty() && !triedPid) {
-            services = servicesFromPid(pid, rulesConfig);
+            services = servicesFromPid(pid);
         }
     }
 
@@ -488,13 +345,9 @@ QUrl windowUrlFromMetadata(const QString &appId, quint32 pid, const KSharedConfi
     return url;
 }
 
-KService::List servicesFromPid(quint32 pid, const KSharedConfig::Ptr &rulesConfig)
+KService::List servicesFromPid(quint32 pid)
 {
     if (pid == 0) {
-        return {};
-    }
-
-    if (!rulesConfig) {
         return {};
     }
 
@@ -544,17 +397,13 @@ KService::List servicesFromPid(quint32 pid, const KSharedConfig::Ptr &rulesConfi
         return {};
     }
 
-    return servicesFromCmdLine(cmdLine, proc.name(), rulesConfig);
+    return servicesFromCmdLine(cmdLine, proc.name());
 }
 
-KService::List servicesFromCmdLine(const QString &_cmdLine, const QString &processName, const KSharedConfig::Ptr &rulesConfig)
+KService::List servicesFromCmdLine(const QString &_cmdLine, const QString &processName)
 {
     QString cmdLine = _cmdLine;
     KService::List services;
-
-    if (!rulesConfig) {
-        return services;
-    }
 
     const int firstSpace = cmdLine.indexOf(u' ');
     int slash = 0;
@@ -596,8 +445,7 @@ KService::List servicesFromCmdLine(const QString &_cmdLine, const QString &proce
     }
 
     if (services.isEmpty()) {
-        KConfigGroup set(rulesConfig, u"Settings"_s);
-        const QStringList &runtimes = set.readEntry("TryIgnoreRuntimes", QStringList());
+        const QStringList runtimes = {u"perl"_s};
 
         bool ignore = runtimes.contains(cmdLine);
 
@@ -606,7 +454,7 @@ KService::List servicesFromCmdLine(const QString &_cmdLine, const QString &proce
         }
 
         if (ignore) {
-            return servicesFromCmdLine(_cmdLine.mid(firstSpace + 1), processName, rulesConfig);
+            return servicesFromCmdLine(_cmdLine.mid(firstSpace + 1), processName);
         }
     }
 

@@ -159,7 +159,7 @@ void TaskToolsTest::testWindowUrlFromMetadata()
     QFETCH(QString, xWindowsWMClassName);
     QFETCH(QUrl, resultUrl);
 
-    const QUrl actualResult = windowUrlFromMetadata(appId, 0, KSharedConfig::openConfig(QStringLiteral("taskmanagerrulestestrc")), xWindowsWMClassName);
+    const QUrl actualResult = windowUrlFromMetadata(appId, 0, xWindowsWMClassName);
 
     QCOMPARE(actualResult, resultUrl);
 }
