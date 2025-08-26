@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-22 02:46+0000\n"
+"POT-Creation-Date: 2025-08-26 02:37+0000\n"
 "PO-Revision-Date: 2022-05-23 14:19+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -436,13 +436,13 @@ msgstr ""
 msgid "Timezone region selector"
 msgstr ""
 
-#: timezoneselector/TimezoneSelector.qml:272
+#: timezoneselector/TimezoneSelector.qml:273
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
 msgstr ""
 
-#: timezoneselector/TimezoneSelector.qml:282
+#: timezoneselector/TimezoneSelector.qml:283
 #, kde-format
 msgid "Timezone location selector"
 msgstr ""

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-22 02:46+0000\n"
+"POT-Creation-Date: 2025-08-26 02:37+0000\n"
 "PO-Revision-Date: 2025-04-07 00:31+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -432,13 +432,13 @@ msgstr "선택…"
 msgid "Timezone region selector"
 msgstr "시간대 지역 선택기"
 
-#: timezoneselector/TimezoneSelector.qml:272
+#: timezoneselector/TimezoneSelector.qml:273
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
 msgstr "시간대:"
 
-#: timezoneselector/TimezoneSelector.qml:282
+#: timezoneselector/TimezoneSelector.qml:283
 #, kde-format
 msgid "Timezone location selector"
 msgstr "시간대 위치 선택기"

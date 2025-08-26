@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-22 02:46+0000\n"
+"POT-Creation-Date: 2025-08-26 02:37+0000\n"
 "PO-Revision-Date: 2025-04-21 18:44+0400\n"
 "Last-Translator: linux <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -435,13 +435,13 @@ msgstr "Seçin..."
 msgid "Timezone region selector"
 msgstr "Saat qurşağı bölgəsi seçicisi"
 
-#: timezoneselector/TimezoneSelector.qml:272
+#: timezoneselector/TimezoneSelector.qml:273
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
 msgstr "Saat qurşağı:"
 
-#: timezoneselector/TimezoneSelector.qml:282
+#: timezoneselector/TimezoneSelector.qml:283
 #, kde-format
 msgid "Timezone location selector"
 msgstr "Saat qurşağı yeri seçicisi"

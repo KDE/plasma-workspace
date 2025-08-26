@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-22 02:46+0000\n"
+"POT-Creation-Date: 2025-08-26 02:37+0000\n"
 "PO-Revision-Date: 2025-05-24 17:15+0200\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -436,13 +436,13 @@ msgstr "Vybrať..."
 msgid "Timezone region selector"
 msgstr ""
 
-#: timezoneselector/TimezoneSelector.qml:272
+#: timezoneselector/TimezoneSelector.qml:273
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
 msgstr "Časové pásmo:"
 
-#: timezoneselector/TimezoneSelector.qml:282
+#: timezoneselector/TimezoneSelector.qml:283
 #, kde-format
 msgid "Timezone location selector"
 msgstr ""

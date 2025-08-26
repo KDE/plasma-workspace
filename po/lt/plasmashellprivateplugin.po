@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-22 02:46+0000\n"
+"POT-Creation-Date: 2025-08-26 02:37+0000\n"
 "PO-Revision-Date: 2025-04-27 23:27+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -444,13 +444,13 @@ msgstr "Pasirinkti…"
 msgid "Timezone region selector"
 msgstr "Laiko juostos regiono parinkiklis"
 
-#: timezoneselector/TimezoneSelector.qml:272
+#: timezoneselector/TimezoneSelector.qml:273
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
 msgstr "Laiko juosta:"
 
-#: timezoneselector/TimezoneSelector.qml:282
+#: timezoneselector/TimezoneSelector.qml:283
 #, kde-format
 msgid "Timezone location selector"
 msgstr "Laiko juostos vietovės parinkiklis"
