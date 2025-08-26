@@ -23,7 +23,6 @@ struct AppData {
     QString genericName; // Generic application name.
     QIcon icon;
     QUrl url;
-    bool skipTaskbar = false;
 };
 
 enum UrlComparisonMode {
@@ -78,10 +77,7 @@ TASKMANAGER_EXPORT AppData appDataFromUrl(const QUrl &url, const QIcon &fallback
  * @returns A .desktop file or executable path for the application
  * owning the window.
  */
-TASKMANAGER_EXPORT QUrl windowUrlFromMetadata(const QString &appId,
-                                              quint32 pid = 0,
-                                              const KSharedConfig::Ptr &config = KSharedConfig::Ptr(),
-                                              const QString &xWindowsWMClassName = QString());
+TASKMANAGER_EXPORT QUrl windowUrlFromMetadata(const QString &appId, quint32 pid = 0, const QString &xWindowsWMClassName = QString());
 
 /**
  * Returns a list of (usually application) KService instances for the
@@ -89,11 +85,10 @@ TASKMANAGER_EXPORT QUrl windowUrlFromMetadata(const QString &appId,
  * database for process metadata.
  *
  * @param pid A process id.
- * @param rulesConfig A KConfig object parameterizing the matching
  * behavior.
  * @returns A list of KService instances.
  */
-TASKMANAGER_EXPORT KService::List servicesFromPid(quint32 pid, const KSharedConfig::Ptr &rulesConfig = KSharedConfig::Ptr());
+TASKMANAGER_EXPORT KService::List servicesFromPid(quint32 pid);
 
 /**
  * Returns a list of (usually application) KService instances for the
@@ -102,22 +97,12 @@ TASKMANAGER_EXPORT KService::List servicesFromPid(quint32 pid, const KSharedConf
  * the service database. Mangling is done e.g. to check for executable
  * names with and without paths leading to them and to ignore arguments.
  * if needed.
- *
- * The [Settings]TryIgnoreRuntimes key in the supplied config object can
- * hold a comma-separated list of runtime executables that this code will
- * try to ignore in the process command line. This is useful in cases where
- * the command line has the contents of a .desktop Exec key prefixed with
- * a runtime executable. The code tries to strip the path to the runtime
- * executable if needed.
- *
+ * *
  * @param cmdLine A process command line.
  * @param processName The process name.
- * @param rulesConfig A KConfig object parameterizing the matching
- * behavior.
  * @returns A list of KService instances.
  */
-TASKMANAGER_EXPORT KService::List
-servicesFromCmdLine(const QString &cmdLine, const QString &processName, const KSharedConfig::Ptr &rulesConfig = KSharedConfig::Ptr());
+TASKMANAGER_EXPORT KService::List servicesFromCmdLine(const QString &cmdLine, const QString &processName);
 
 /**
  * Returns an application id for an URL using the preferred:// scheme.

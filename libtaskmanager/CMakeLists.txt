@@ -149,6 +149,3 @@ install(EXPORT libtaskmanagerLibraryTargets
         NAMESPACE PW::
         DESTINATION ${CMAKECONFIG_INSTALL_DIR}
         FILE LibTaskManagerLibraryTargets.cmake )
-
-install(FILES taskmanagerrulesrc
-        DESTINATION ${KDE_INSTALL_CONFDIR})
