@@ -142,11 +142,7 @@ auto makeScoreFromList(const auto &queryList, const QStringList &strings) {
                     continue; // Not a good match, skip it. We are very strict with keywords
                 }
                 found = true;
-#ifdef __cpp_lib_containers_ranges
-                queryCards.append_range(stringCards);
-#else
-                queryCards.insert(queryCards.end(), stringCards.cbegin(), stringCards.cend());
-#endif
+                queryCards.push_back(scoreCard);
             }
             // We do not break because other string might also match, improving the score.
         }
