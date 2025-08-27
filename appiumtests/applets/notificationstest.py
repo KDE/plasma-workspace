@@ -221,9 +221,18 @@ class NotificationsTest(unittest.TestCase):
         notification_closed = False
         params_3: list[Any] = []
 
+        def reset_state() -> None:
+            nonlocal params_2, params_3, params_1, activation_token, action_invoked, notification_closed
+            activation_token = False
+            params_1 = []
+            action_invoked = False
+            params_2 = []
+            notification_closed = False
+            params_3 = []
+
         def notification_signal_handler(d_bus_proxy: Gio.DBusProxy, sender_name: str, signal_name: str, parameters: GLib.Variant) -> None:
             nonlocal params_2, params_3, params_1, activation_token, action_invoked, notification_closed
-            logging.info(f"received signal {signal_name}")
+            logging.info(f"Notification (Id: {parameters.unpack()[0]}) received signal {signal_name}")
             match signal_name:
                 case "ActivationToken":
                     params_1 = parameters.unpack()
@@ -259,6 +268,38 @@ class NotificationsTest(unittest.TestCase):
         self.assertEqual(params_3[0], notification_id)
         self.assertEqual(params_3[1], 3)  # reason: Revoked
         WebDriverWait(self.driver, 5).until_not(lambda _: element.is_displayed())
+
+        # Test actions in the history list
+        # Consolidates https://invent.kde.org/plasma/plasma-workspace/-/commit/568f4c6cb2a2e0716538350cb9b1a4469838575b
+        notification_ids: list[int] = []
+        for i in range(2):
+            notification_id = send_notification({
+                "app_name": f"Appium Test {i}",
+                "body": f"A notification with actions {i}",
+                "actions": ["action1", f"FooAction {i}", "action2", f"BarAction {i}"],
+                "hints": {
+                    "desktop-entry": GLib.Variant("s", "org.kde.plasmashell"),
+                },
+                "timeout": 100,
+            })
+            notification_ids.append(notification_id)
+            self.driver.find_element(AppiumBy.XPATH, f"//button[@name='FooAction {i}' and contains(@accessibility-id, 'FullRepresentation')]")
+
+        # Click the button in the second(oldest) history item
+        for i in range(2):
+            reset_state()
+            element = self.driver.find_element(AppiumBy.XPATH, f"//button[@name='BarAction {i}' and contains(@accessibility-id, 'FullRepresentation')]")
+            element.click()
+            loop.run()
+            self.assertTrue(activation_token)
+            self.assertEqual(params_1[0], notification_ids[i])
+            self.assertTrue(action_invoked)
+            self.assertEqual(params_2[0], notification_ids[i])
+            self.assertEqual(params_2[1], "action2")
+            self.assertTrue(notification_closed)
+            self.assertEqual(params_3[0], notification_ids[i])
+            self.assertEqual(params_3[1], 3)  # reason: Revoked
+            WebDriverWait(self.driver, 5).until_not(lambda _: element.is_displayed())
 
     def test_5_inline_reply(self) -> None:
         """
