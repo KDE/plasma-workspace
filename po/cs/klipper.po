@@ -795,12 +795,11 @@ msgstr ""
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:91
-#, fuzzy, kde-format
-#| msgid "Whether text selections are saved in the clipboard history."
+#, kde-format
 msgid ""
 "Show the popup menu of applicable actions if an entry is chosen from the "
 "clipboard history."
-msgstr "Zda je vybraný text uložen v historii schránky."
+msgstr ""
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
 #: klipper.kcfg:94
