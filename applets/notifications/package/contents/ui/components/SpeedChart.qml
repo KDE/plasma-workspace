@@ -142,7 +142,7 @@ Item {
                 }
 
                 nameSource: Charts.SingleValueSource {
-                    value: i18n("Speed")
+                    value: i18nd("plasma_applet_org.kde.plasma.notifications", "Speed")
                 }
 
                 colorSource: Charts.SingleValueSource {
@@ -192,7 +192,7 @@ Item {
                 RowLayout {
                     PlasmaComponents3.Label {
                         font: Kirigami.Theme.smallFont
-                        text: i18n("Average Speed")
+                        text: i18nd("plasma_applet_org.kde.plasma.notifications", "Average Speed")
                     }
                     PlasmaComponents3.Label {
                         font: Kirigami.Theme.smallFont
