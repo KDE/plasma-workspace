@@ -121,7 +121,11 @@ int MacroExpander::expandEscapedMacro(const QString &str, int pos, QStringList &
 DelayedExecutor::DelayedExecutor(const KServiceAction &service, Solid::Device &device)
     : m_service(service)
 {
-    if (device.is<Solid::StorageAccess>() && !device.as<Solid::StorageAccess>()->isAccessible()) {
+    // If this device is an accessible (aka mountable) storage device and it's available
+    const bool storageIsAccessible = device.is<Solid::StorageAccess>() && !device.as<Solid::StorageAccess>()->isAccessible();
+    // Skip mounting for actions that explicitly request we don't do that (e.g. editing partitions)
+    const bool mountingRequired = !service.service()->property<bool>(QStringLiteral("X-KDE-SkipMount"));
+    if (storageIsAccessible && mountingRequired) {
         Solid::StorageAccess *access = device.as<Solid::StorageAccess>();
 
         connect(access, &Solid::StorageAccess::setupDone, this, &DelayedExecutor::_k_storageSetupDone);
