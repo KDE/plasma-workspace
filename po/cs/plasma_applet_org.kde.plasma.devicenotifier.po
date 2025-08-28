@@ -70,11 +70,10 @@ msgid "This device has file system errors."
 msgstr ""
 
 #: devicemessagemonitor_p.cpp:166
-#, fuzzy, kde-format
-#| msgid "This device can now be safely removed."
+#, kde-format
 msgctxt "@label device is a storage disk"
 msgid "This device has no errors"
-msgstr "Toto zařízení může být nyní bezpečně odebráno."
+msgstr ""
 
 #: devicemessagemonitor_p.cpp:169
 #, kde-format

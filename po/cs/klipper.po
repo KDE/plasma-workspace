@@ -343,11 +343,10 @@ msgid "An image of the QR code has been copied to clipboard"
 msgstr ""
 
 #: declarative/qml/BarcodePage.qml:101
-#, fuzzy, kde-format
-#| msgid "Append to clipboard"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Copy QR code image to clipboard"
-msgstr "Připojit do schránky"
+msgstr ""
 
 #: declarative/qml/BarcodePage.qml:112
 #, kde-format
@@ -930,10 +929,3 @@ msgstr ""
 #, kde-format
 msgid "&Cancel"
 msgstr "Z&rušit"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "&Configure Klipper…"
-#~ msgstr "Nastavit &Klipper…"
-
-#~ msgid "Disable This Popup"
-#~ msgstr "Zakázat toto okno"

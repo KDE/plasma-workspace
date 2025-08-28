@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-26 00:42+0000\n"
+"POT-Creation-Date: 2025-08-28 00:44+0000\n"
 "PO-Revision-Date: 2025-06-04 19:34+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -1219,48 +1219,48 @@ msgctxt "First letter of the alphabet (in upper then lower case)"
 msgid "Aa"
 msgstr "Aa"
 
-#: lib/FcEngine.cpp:871
+#: lib/FcEngine.cpp:872
 #, kde-format
 msgctxt ""
 "All letters of the alphabet (in upper/lower case pairs), followed by numbers"
 msgid "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789"
 msgstr "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789"
 
-#: lib/FcEngine.cpp:1033
+#: lib/FcEngine.cpp:1034
 #, kde-format
 msgid "No characters found."
 msgstr "No se encontraron caracteres."
 
-#: lib/FcEngine.cpp:1071
+#: lib/FcEngine.cpp:1072
 #, kde-format
 msgctxt "A sentence that uses all of the letters of the alphabet"
 msgid "The quick brown fox jumps over the lazy dog"
 msgstr "Jovencillo emponzoñado de whisky: ¡qué figurota exhibe!"
 
-#: lib/FcEngine.cpp:1076
+#: lib/FcEngine.cpp:1077
 #, kde-format
 msgctxt "All of the letters of the alphabet, uppercase"
 msgid "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 msgstr "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-#: lib/FcEngine.cpp:1081
+#: lib/FcEngine.cpp:1082
 #, kde-format
 msgctxt "All of the letters of the alphabet, lowercase"
 msgid "abcdefghijklmnopqrstuvwxyz"
 msgstr "abcdefghijklmnopqrstuvwxyz"
 
-#: lib/FcEngine.cpp:1086
+#: lib/FcEngine.cpp:1087
 #, kde-format
 msgctxt "Numbers and characters"
 msgid "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
 msgstr "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
 
-#: lib/FcEngine.cpp:1484
+#: lib/FcEngine.cpp:1485
 #, kde-format
 msgid "ERROR: Could not determine font's name."
 msgstr "ERROR: No fue posible determinar el nombre del tipo de letra."
 
-#: lib/FcEngine.cpp:1487
+#: lib/FcEngine.cpp:1488
 #, kde-format
 msgid "%2 [1 pixel]"
 msgid_plural "%2 [%1 pixels]"

@@ -81,13 +81,11 @@ msgid "Tiled"
 msgstr "Vydlážděná"
 
 #: imagepackage/contents/ui/config.qml:203
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Set as Wallpaper"
+#, kde-format
 msgctxt ""
 "@label:listbox part of a sentence: 'Switch dynamic wallpapers [based on]'"
 msgid "Switch dynamic wallpapers:"
-msgstr "Nastavit jako tapetu"
+msgstr ""
 
 #: imagepackage/contents/ui/config.qml:211
 #, kde-format

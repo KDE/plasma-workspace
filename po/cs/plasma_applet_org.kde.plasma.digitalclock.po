@@ -278,18 +278,16 @@ msgid "Choose a Font"
 msgstr "Zvolte písmo..."
 
 #: configCalendar.qml:50
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@option:check formdata label"
 msgid "General:"
-msgstr "Obecné:"
+msgstr ""
 
 #: configCalendar.qml:51
-#, fuzzy, kde-format
-#| msgid "Show week numbers"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show week numbers"
-msgstr "Zobrazovat čísla týdnů"
+msgstr ""
 
 #: configCalendar.qml:58
 #, kde-format
@@ -304,11 +302,10 @@ msgid "Use region defaults"
 msgstr "Použít místní výchozí hodnoty"
 
 #: configCalendar.qml:82
-#, fuzzy, kde-format
-#| msgid "Available Plugins:"
+#, kde-format
 msgctxt "@title:column"
 msgid "Available Add-Ons"
-msgstr "Dostupné moduly:"
+msgstr ""
 
 #: configTimeZones.qml:70
 #, kde-format

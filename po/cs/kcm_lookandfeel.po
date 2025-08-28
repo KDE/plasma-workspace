@@ -37,10 +37,9 @@ msgstr "Celkový vzhled a chování"
 #. i18n: ectx: label, entry (defaultLightLookAndFeel), group (KDE)
 #. i18n: ectx: label, entry (defaultDarkLookAndFeel), group (KDE)
 #: lookandfeelsettings.kcfg:13 lookandfeelsettings.kcfg:17
-#, fuzzy, kde-format
-#| msgid "Global look and feel"
+#, kde-format
 msgid "Global Look and Feel package, alternate"
-msgstr "Celkový vzhled a chování"
+msgstr "Balíček pro celkový vzhled a chování (alternativní)"
 
 #. i18n: ectx: label, entry (automaticLookAndFeel), group (KDE)
 #: lookandfeelsettings.kcfg:21
@@ -205,11 +204,10 @@ msgid "Choose Dark Global Theme"
 msgstr ""
 
 #: ui/LookAndFeelSelector.qml:49 ui/StaticLookAndFeel.qml:67
-#, fuzzy, kde-format
-#| msgid "Preview Theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview Theme"
-msgstr "Náhled motivu"
+msgstr ""
 
 #: ui/LookAndFeelSelector.qml:57 ui/StaticLookAndFeel.qml:75
 #, kde-format
@@ -236,11 +234,10 @@ msgid "Switch to Dark Mode at Night"
 msgstr ""
 
 #: ui/main.qml:40
-#, fuzzy, kde-format
-#| msgid "Get New…"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Get New…"
-msgstr "Získat nové…"
+msgstr ""
 
 #: ui/MoreOptions.qml:24
 #, kde-format
@@ -356,11 +353,10 @@ msgstr ""
 "kontaktujte správce tohoto globálního motivu, jelikož může být poškozen."
 
 #: ui/StaticLookAndFeel.qml:53
-#, fuzzy, kde-format
-#| msgid "Contains Desktop layout"
+#, kde-format
 msgctxt "@label"
 msgid "Contains Desktop layout"
-msgstr "Obsahuje rozvržení pracovní plochy"
+msgstr ""
 
 #: ui/StaticLookAndFeel.qml:112
 #, kde-format
@@ -379,10 +375,3 @@ msgstr "Vyberte co použít..."
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Zobrazit méně možností..."
-
-#~ msgid ""
-#~ "You have to restart the Plasma session for these changes to take effect."
-#~ msgstr "Pro provedení změn musíte restartovat sezení Plasma."
-
-#~ msgid "Cursor Settings Changed"
-#~ msgstr "Změna v nastavení kurzoru"

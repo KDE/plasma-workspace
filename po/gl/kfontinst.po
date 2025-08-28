@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-26 00:42+0000\n"
+"POT-Creation-Date: 2025-08-28 00:44+0000\n"
 "PO-Revision-Date: 2024-04-14 15:19+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -1204,51 +1204,51 @@ msgid "Aa"
 msgstr "Aa"
 
 # |,no-check-spell
-#: lib/FcEngine.cpp:871
+#: lib/FcEngine.cpp:872
 #, kde-format
 msgctxt ""
 "All letters of the alphabet (in upper/lower case pairs), followed by numbers"
 msgid "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789"
 msgstr "AaÁáBbCcÇçDdEeÉéFfGgHhIiÍíJjKkLlMmNnÑñOoÓóPpQqRrSsTtUuÚúÜüVvWwXxYyZz0123456789"
 
-#: lib/FcEngine.cpp:1033
+#: lib/FcEngine.cpp:1034
 #, kde-format
 msgid "No characters found."
 msgstr "Non se atopou ningún carácter."
 
 # https://gl.wikipedia.org/wiki/Pangrama
-#: lib/FcEngine.cpp:1071
+#: lib/FcEngine.cpp:1072
 #, kde-format
 msgctxt "A sentence that uses all of the letters of the alphabet"
 msgid "The quick brown fox jumps over the lazy dog"
 msgstr "Fíxate, o mesquiño bacharel pide vinganza"
 
 # |,no-check-spell
-#: lib/FcEngine.cpp:1076
+#: lib/FcEngine.cpp:1077
 #, kde-format
 msgctxt "All of the letters of the alphabet, uppercase"
 msgid "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 msgstr "ABCÇDEFGHIKLMNÑOPQRSTUVWXZ"
 
 # well-spelled: abcçdefghijklmnñopqrstuvwxz
-#: lib/FcEngine.cpp:1081
+#: lib/FcEngine.cpp:1082
 #, kde-format
 msgctxt "All of the letters of the alphabet, lowercase"
 msgid "abcdefghijklmnopqrstuvwxyz"
 msgstr "abcçdefghijklmnñopqrstuvwxz"
 
-#: lib/FcEngine.cpp:1086
+#: lib/FcEngine.cpp:1087
 #, kde-format
 msgctxt "Numbers and characters"
 msgid "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
 msgstr "0123456789.:,;(*!?'/\\\"«»)£$€%^&-+@~#<>{}[]"
 
-#: lib/FcEngine.cpp:1484
+#: lib/FcEngine.cpp:1485
 #, kde-format
 msgid "ERROR: Could not determine font's name."
 msgstr "ERRO: Non foi posíbel determinar o nome da fonte."
 
-#: lib/FcEngine.cpp:1487
+#: lib/FcEngine.cpp:1488
 #, kde-format
 msgid "%2 [1 pixel]"
 msgid_plural "%2 [%1 pixels]"

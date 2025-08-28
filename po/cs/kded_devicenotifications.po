@@ -24,10 +24,9 @@ msgid "Display Detected"
 msgstr "Zjištěna obrazovka"
 
 #: devicenotifications.cpp:342
-#, fuzzy, kde-format
-#| msgid "A display has been unplugged."
+#, kde-format
 msgid "A display has been connected."
-msgstr "Obrazovka byla odpojeno."
+msgstr ""
 
 #: devicenotifications.cpp:355
 #, kde-format
@@ -36,22 +35,19 @@ msgid "Display Removed"
 msgstr "Obrazovka odpojena"
 
 #: devicenotifications.cpp:356
-#, fuzzy, kde-format
-#| msgid "A display has been unplugged."
+#, kde-format
 msgid "A display has been disconnected."
-msgstr "Obrazovka byla odpojeno."
+msgstr ""
 
 #: devicenotifications.cpp:402
-#, fuzzy, kde-format
-#| msgid "%1 has been unplugged."
+#, kde-format
 msgid "%1 has been connected."
-msgstr "%1 bylo odpojeno."
+msgstr ""
 
 #: devicenotifications.cpp:402
-#, fuzzy, kde-format
-#| msgid "A USB device has been unplugged."
+#, kde-format
 msgid "A USB device has been connected."
-msgstr "Zařízení USB bylo odpojeno."
+msgstr ""
 
 #: devicenotifications.cpp:407
 #, kde-format
@@ -60,34 +56,17 @@ msgid "USB Device Detected"
 msgstr "Bylo nalezeno zařízení USB"
 
 #: devicenotifications.cpp:445
-#, fuzzy, kde-format
-#| msgid "%1 has been unplugged."
+#, kde-format
 msgid "%1 has been disconnected."
-msgstr "%1 bylo odpojeno."
+msgstr ""
 
 #: devicenotifications.cpp:445
-#, fuzzy, kde-format
-#| msgid "A USB device has been unplugged."
+#, kde-format
 msgid "A USB device has been disconnected."
-msgstr "Zařízení USB bylo odpojeno."
+msgstr ""
 
 #: devicenotifications.cpp:450
-#, fuzzy, kde-format
-#| msgctxt "@title:notifications"
-#| msgid "USB Device Detected"
+#, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Went Away"
-msgstr "Bylo nalezeno zařízení USB"
-
-#~ msgid "A display has been plugged in."
-#~ msgstr "Obrazovka byla připojena."
-
-#~ msgid "%1 has been plugged in."
-#~ msgstr "%1 bylo připojeno."
-
-#~ msgid "A USB device has been plugged in."
-#~ msgstr "Zařízení USB bylo připojeno."
-
-#~ msgctxt "@title:notifications"
-#~ msgid "USB Device Removed"
-#~ msgstr "Zařízení USB bylo odebráno"
+msgstr ""

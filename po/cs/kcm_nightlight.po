@@ -32,32 +32,28 @@ msgid ""
 msgstr "Teplota barvy se začne měnit na denní v %1 a plně změněna je v %2"
 
 #: ui/main.qml:39
-#, fuzzy, kde-format
-#| msgid "The blue light filter makes the colors on the screen warmer."
+#, kde-format
 msgctxt "@info"
 msgid "The blue light filter makes the colors on the screen warmer."
-msgstr "Filtr modré barvy způsobí, že barvy na monitoru jsou teplejší."
+msgstr ""
 
 #: ui/main.qml:49
-#, fuzzy, kde-format
-#| msgid "Switching times:"
+#, kde-format
 msgctxt "@label:listbox Night Light modes"
 msgid "Switching times:"
-msgstr "Časy přepínání:"
+msgstr ""
 
 #: ui/main.qml:58
-#, fuzzy, kde-format
-#| msgid "Always off"
+#, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Always off"
-msgstr "Vždy vypnuto"
+msgstr ""
 
 #: ui/main.qml:59
-#, fuzzy, kde-format
-#| msgid "Always on night light"
+#, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Always on night light"
-msgstr "Vždy noční světlo"
+msgstr ""
 
 #: ui/main.qml:60
 #, kde-format
@@ -78,11 +74,10 @@ msgid "%1K"
 msgstr "%1K"
 
 #: ui/main.qml:123
-#, fuzzy, kde-format
-#| msgid "Day light temperature:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Day light temperature:"
-msgstr "Teplota denního světla:"
+msgstr ""
 
 #: ui/main.qml:173 ui/main.qml:237
 #, kde-format
@@ -97,95 +92,7 @@ msgid "Warm"
 msgstr "Teplá"
 
 #: ui/main.qml:187
-#, fuzzy, kde-format
-#| msgid "Night light temperature:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Night light temperature:"
-msgstr "Teplota nočního světla:"
-
-#~ msgctxt ""
-#~ "@label:chooser Tap should be translated to mean touching using a "
-#~ "touchscreen"
-#~ msgid "Tap to choose your location on the map."
-#~ msgstr "Ťukni na svoji polohu na mapě."
-
-#~ msgctxt ""
-#~ "@label:chooser Click should be translated to mean clicking using a mouse"
-#~ msgid "Click to choose your location on the map."
-#~ msgstr "Klikni na svoji polohu na mapě."
-
-#~ msgid "Zoom in"
-#~ msgstr "Přiblížit"
-
-#~ msgid "Zoom out"
-#~ msgstr "Oddálit"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "Modified from <link url='https://commons.wikimedia.org/wiki/File:"
-#~ "World_location_map_(equirectangular_180).svg'>World location map</link> "
-#~ "by TUBS / Wikimedia Commons / <link url='https://creativecommons.org/"
-#~ "licenses/by-sa/3.0'>CC BY-SA 3.0</link>"
-#~ msgstr ""
-#~ "Upraveno z <link url='https://commons.wikimedia.org/wiki/File:"
-#~ "World_location_map_(equirectangular_180).svg'>Světová mapa poloh</link> "
-#~ "od TUBS / Wikimedia Commons / <link url='https://creativecommons.org/"
-#~ "licenses/by-sa/3.0'>CC BY-SA 3.0</link>"
-
-#~ msgctxt "@label: textbox"
-#~ msgid "Latitude:"
-#~ msgstr "Zeměpisná šířka:"
-
-#~ msgctxt "@label: textbox"
-#~ msgid "Longitude:"
-#~ msgstr "Zeměpisná délka:"
-
-#~ msgid "Sunset and sunrise at current location"
-#~ msgstr "Východ a západ slunce v současné poloze"
-
-#~ msgid "Sunset and sunrise at manual location"
-#~ msgstr "Východ a západ slunce v ručně vybraném místě"
-
-#~ msgid "Custom times"
-#~ msgstr "Vlastní časy"
-
-#~ msgctxt "@label The coordinates for the current location"
-#~ msgid "Current location:"
-#~ msgstr "Současná poloha:"
-
-#~ msgid "Latitude: %1°   Longitude: %2°"
-#~ msgstr "Zeměpisná šířka: %1° Zeměpisná délka: %2°"
-
-#~ msgid "Begin night light at:"
-#~ msgstr "Spustit noční světlo v:"
-
-#~ msgid "Begin day light at:"
-#~ msgstr "Spustit denní světlo v:"
-
-#~ msgid "Transition duration:"
-#~ msgstr "Délka přechodu"
-
-#~ msgid "%1 minute"
-#~ msgid_plural "%1 minutes"
-#~ msgstr[0] "%1 minuta"
-#~ msgstr[1] "%1 minuty"
-#~ msgstr[2] "%1 minut"
-
-#~ msgid "Input minutes - min. 1, max. 600"
-#~ msgstr "V minutách od 1-600"
-
-#~ msgctxt "@info:placeholder"
-#~ msgid "Locating…"
-#~ msgstr "Hledám umístění..."
-
-#~ msgctxt "@info:tooltip Part of a control for setting a time"
-#~ msgid "hour"
-#~ msgstr "hodina"
-
-#~ msgctxt "Time separator between hours and minutes"
-#~ msgid ":"
-#~ msgstr ":"
-
-#~ msgctxt "@info:tooltip Part of a control for setting a time"
-#~ msgid "minute"
-#~ msgstr "minuta"
+msgstr ""

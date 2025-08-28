@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-14 00:44+0000\n"
-"PO-Revision-Date: 2025-04-25 09:51+0300\n"
+"PO-Revision-Date: 2025-08-27 09:10+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.04.0\n"
+"X-Generator: Lokalize 25.08.0\n"
 "X-POOTLE-MTIME: 1413102238.000000\n"
 
 #: components/ActionContainer.qml:80
@@ -463,12 +463,12 @@ msgstr "Rahatsız etmeyin kipine girmek için orta tıklayın"
 #: main.qml:236
 #, kde-format
 msgid "Clear All Notifications"
-msgstr "Tüm Bildirimleri Temizle"
+msgstr "Tüm bildirimleri temizle"
 
 #: main.qml:255
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
-msgstr "&Olay Bildirimlerini ve Eylemleri Yapılandır…"
+msgstr "&Olay bildirimlerini ve eylemlerini yapılandır…"
 
 #~ msgctxt "A button tooltip; expands the item to show details"
 #~ msgid "Show Details"
