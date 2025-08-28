@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-26 02:37+0000\n"
-"PO-Revision-Date: 2025-03-24 22:37+0300\n"
-"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
+"PO-Revision-Date: 2025-08-27 09:12+0300\n"
+"Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.03.70\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -140,7 +140,7 @@ msgstr "Sonraki On Yıl"
 #: calendar/qml/MonthViewHeader.qml:272
 #, kde-format
 msgid "Keep Open"
-msgstr "Açık Tut"
+msgstr "Açık tut"
 
 #: containmentlayoutmanager/qml/BasicAppletContainer.qml:286
 #, kde-format

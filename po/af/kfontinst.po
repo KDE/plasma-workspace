@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst stable\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-26 00:42+0000\n"
+"POT-Creation-Date: 2025-08-28 02:49+0000\n"
 "PO-Revision-Date: 2005-11-25 21:56+0200\n"
 "Last-Translator: AFRIKAANS <translate-discuss-af@lists.sourceforge.net>\n"
 "Language-Team: Afrikaans <af@li.org>\n"
@@ -1180,19 +1180,19 @@ msgctxt "First letter of the alphabet (in upper then lower case)"
 msgid "Aa"
 msgstr ""
 
-#: lib/FcEngine.cpp:871
+#: lib/FcEngine.cpp:872
 #, fuzzy, kde-format
 msgctxt ""
 "All letters of the alphabet (in upper/lower case pairs), followed by numbers"
 msgid "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789"
 msgstr "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789"
 
-#: lib/FcEngine.cpp:1033
+#: lib/FcEngine.cpp:1034
 #, kde-format
 msgid "No characters found."
 msgstr ""
 
-#: lib/FcEngine.cpp:1071
+#: lib/FcEngine.cpp:1072
 #, fuzzy, kde-format
 msgctxt "A sentence that uses all of the letters of the alphabet"
 msgid "The quick brown fox jumps over the lazy dog"
@@ -1200,7 +1200,7 @@ msgstr ""
 "_: 'n Engelse sin wat alle letters van die alfabet gebruik\n"
 "The quick brown fox jumps over the lazy dog"
 
-#: lib/FcEngine.cpp:1076
+#: lib/FcEngine.cpp:1077
 #, fuzzy, kde-format
 msgctxt "All of the letters of the alphabet, uppercase"
 msgid "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -1208,7 +1208,7 @@ msgstr ""
 "_: Al die hoofletters van die alfabet\n"
 "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-#: lib/FcEngine.cpp:1081
+#: lib/FcEngine.cpp:1082
 #, fuzzy, kde-format
 msgctxt "All of the letters of the alphabet, lowercase"
 msgid "abcdefghijklmnopqrstuvwxyz"
@@ -1216,7 +1216,7 @@ msgstr ""
 "_: Al die klein letters van die alfabet\n"
 "abcdefghijklmnopqrstuvwxyz"
 
-#: lib/FcEngine.cpp:1086
+#: lib/FcEngine.cpp:1087
 #, fuzzy, kde-format
 msgctxt "Numbers and characters"
 msgid "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
@@ -1224,12 +1224,12 @@ msgstr ""
 "_: Nommers en karakters\n"
 "0123456789.:,;(*!?'/\\\")&-+@~#<>{}[]"
 
-#: lib/FcEngine.cpp:1484
+#: lib/FcEngine.cpp:1485
 #, kde-format
 msgid "ERROR: Could not determine font's name."
 msgstr "FOUT: Kan nie die lettertipe se naam bepaal nie."
 
-#: lib/FcEngine.cpp:1487
+#: lib/FcEngine.cpp:1488
 #, fuzzy, kde-format
 msgid "%2 [1 pixel]"
 msgid_plural "%2 [%1 pixels]"
