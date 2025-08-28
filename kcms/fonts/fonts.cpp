@@ -205,6 +205,7 @@ void KFonts::adjustAllFonts()
         if (QFontInfo(adjustedFont).fixedPitch()) {
             fontsSettings()->setFixed(adjustedFont);
         }
+        Q_EMIT fontsHaveChanged();
     }
 }
 
