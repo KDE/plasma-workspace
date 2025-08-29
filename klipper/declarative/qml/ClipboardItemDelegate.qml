@@ -118,8 +118,8 @@ PlasmaComponents.ItemDelegate {
 
             gradient: Gradient {
                 GradientStop { position: 0.0; color: "white" }
-                GradientStop { position: gradientThreshold - 0.25; color: "white"}
-                GradientStop { position: gradientThreshold; color: "transparent"}
+                GradientStop { position: menuItem.gradientThreshold - 0.25; color: "white"}
+                GradientStop { position: menuItem.gradientThreshold; color: "transparent"}
                 GradientStop { position: 1; color: "transparent"}
             }
         }
