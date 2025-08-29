@@ -21,7 +21,7 @@ import org.kde.plasma.private.clipboard 0.1 as Private
 PlasmoidItem {
     id: main
 
-    readonly property bool isClipboardEmpty: historyModel.count === 0
+    readonly property bool isClipboardEmpty: historyModel.sourceCount === 0
 
     switchWidth: Kirigami.Units.gridUnit * 5
     switchHeight: Kirigami.Units.gridUnit * 5

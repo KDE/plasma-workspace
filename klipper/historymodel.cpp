@@ -206,18 +206,114 @@ void HistoryModel::clear()
     }
 }
 
+void HistoryModel::clearNonStarredHistory()
+{
+    if (!m_db.isOpen()) {
+        return;
+    }
+    
+    // Get UUIDs of all non-starred items
+    QStringList nonStarredUuids;
+    QSqlQuery query(m_db);
+    query.exec(u"SELECT uuid FROM main WHERE starred = 0 OR starred IS NULL"_s);
+    while (query.next()) {
+        nonStarredUuids.append(query.value(0).toString());
+    }
+    
+    if (nonStarredUuids.isEmpty()) {
+        return; // No non-starred items to remove
+    }
+    
+    // Delete non-starred items from database
+    {
+        TransactionGuard transaction(&m_db);
+        QStringList quotedUuids;
+        for (const QString &uuid : std::as_const(nonStarredUuids)) {
+            quotedUuids.append(u'\'' + uuid + u'\'');
+        }
+        const QString uuidList = quotedUuids.join(u',');
+        
+        if (!transaction.exec(u"DELETE FROM main WHERE uuid IN (%1)"_s.arg(uuidList))) {
+            return;
+        }
+        if (!transaction.exec(u"DELETE FROM aux WHERE uuid IN (%1)"_s.arg(uuidList))) {
+            return;
+        }
+    }
+    
+    // Delete associated data folders
+    QList<QUrl> deletedDataFolders;
+    deletedDataFolders.reserve(nonStarredUuids.size());
+    for (const QString &uuid : std::as_const(nonStarredUuids)) {
+        deletedDataFolders.append(QUrl::fromLocalFile(m_dbFolder + u"/data/" + uuid + u'/'));
+    }
+    auto job = KIO::del(deletedDataFolders, KIO::HideProgressInfo);
+    ++m_pendingJobs;
+    connect(job, &KJob::finished, this, [this] {
+        --m_pendingJobs;
+    });
+    
+    // Remove items from the model that were deleted
+    // We need to work backwards to maintain correct indices
+    for (qsizetype i = m_items.size() - 1; i >= 0; --i) {
+        if (nonStarredUuids.contains(m_items[i]->uuid())) {
+            beginRemoveRows(QModelIndex(), i, i);
+            m_items.removeAt(i);
+            endRemoveRows();
+        }
+    }
+    
+    QSqlQuery(u"VACUUM"_s, m_db).exec();
+}
+
 void HistoryModel::clearHistory()
 {
-    int clearHist = KMessageBox::warningContinueCancel(nullptr,
-                                                       i18n("Do you really want to clear and delete the entire clipboard history?"),
-                                                       i18n("Clear Clipboard History"),
-                                                       KStandardGuiItem::del(),
-                                                       KStandardGuiItem::cancel(),
-                                                       QStringLiteral("klipperClearHistoryAskAgain"),
-                                                       KMessageBox::Dangerous);
-    if (clearHist == KMessageBox::Continue) {
-        clear();
+    // First check if there are any starred items
+    QSqlQuery starredQuery(m_db);
+    starredQuery.exec(u"SELECT COUNT(*) FROM main WHERE starred = 1"_s);
+    bool hasStarredItems = false;
+    if (starredQuery.next()) {
+        hasStarredItems = starredQuery.value(0).toInt() > 0;
     }
+    
+    if (hasStarredItems) {
+        // Offer choice to keep starred items or clear everything
+        // TODO: Consider adding a setting in Klipper configuration UI to customize this behavior
+        // (e.g., always ask, always keep starred, always clear all)
+        int clearChoice = KMessageBox::questionTwoActionsCancel(nullptr,
+                                                               i18n("The clipboard history contains starred items. Clear them too?"),
+                                                               i18n("Clear Clipboard History"),
+                                                               KGuiItem(i18n("Clear Everything"), QStringLiteral("edit-clear-history")),
+                                                               KGuiItem(i18n("Keep Starred Items"), QStringLiteral("starred-symbolic")),
+                                                               KStandardGuiItem::cancel(),
+                                                               QStringLiteral("klipperClearHistoryStarredChoice"));
+        
+        if (clearChoice == KMessageBox::Cancel) {
+            return; // User cancelled
+        } else if (clearChoice == KMessageBox::ButtonCode::SecondaryAction) {
+            // Keep starred items - delete only non-starred
+            clearNonStarredHistory();
+            return;
+        }
+        // If FirstAction (Clear All), fall through to normal clear()
+    } else {
+        // No starred items, show normal confirmation
+        // TODO: Consider adding a "Reset 'Don't ask again' dialogs" button in Klipper settings
+        // to help users recover from accidentally dismissed confirmations
+        int clearHist = KMessageBox::warningContinueCancel(nullptr,
+                                                           i18n("Do you really want to clear and delete the entire clipboard history?"),
+                                                           i18n("Clear Clipboard History"),
+                                                           KStandardGuiItem::del(),
+                                                           KStandardGuiItem::cancel(),
+                                                           QStringLiteral("klipperClearHistoryAskAgain"),
+                                                           KMessageBox::Dangerous);
+        if (clearHist != KMessageBox::Continue) {
+            return; // User cancelled
+        }
+    }
+    
+    // Clear everything (including starred items)
+    clear();
 }
 
 qsizetype HistoryModel::maxSize() const
@@ -232,7 +328,32 @@ void HistoryModel::setMaxSize(qsizetype size)
     }
     m_maxSize = size;
     if (m_items.size() > m_maxSize) {
-        removeRows(m_maxSize, m_items.size() - m_maxSize);
+        // Remove non-starred items from the end until we're within the size limit
+        // or until no more non-starred items are available
+        // TODO: Consider adding a separate maxStarredItems setting in the future
+        // to prevent starred items from causing unlimited history growth
+        qsizetype itemsToRemove = m_items.size() - m_maxSize;
+        qsizetype removedCount = 0;
+        
+        for (qsizetype i = m_items.size() - 1; i >= 0 && removedCount < itemsToRemove; --i) {
+            // Check if item is starred
+            QSqlQuery query(m_db);
+            query.prepare(u"SELECT starred FROM main WHERE uuid = ?"_s);
+            query.addBindValue(m_items[i]->uuid());
+            bool isStarred = false;
+            if (query.exec() && query.isSelect() && query.next()) {
+                isStarred = query.value(0).toBool();
+            }
+            
+            if (!isStarred) {
+                removeRow(i);
+                removedCount++;
+                // Note: After removeRow, indices shift, but since we're going backwards
+                // and only removing from the current position, this is safe
+            }
+        }
+        // If we couldn't remove enough non-starred items, the history may exceed maxSize
+        // This is acceptable as starred items are protected
     }
 }
 
@@ -292,6 +413,18 @@ QVariant HistoryModel::data(const QModelIndex &index, int role) const
         return QVariant::fromValue<HistoryItemType>(item->type());
     case TypeIntRole:
         return int(item->type());
+    case StarredRole:
+        // TODO: Consider adding QHash<QString, bool> cache for starred status to avoid 
+        // frequent database queries if performance becomes an issue with large histories
+        QSqlQuery query(m_db);
+        // Use prepared statement for safety
+        query.prepare(u"SELECT starred FROM main WHERE uuid = ?"_s);
+        query.addBindValue(item->uuid());
+        if (query.exec() && query.isSelect() && query.next()) {
+            return query.value(0).toBool();
+        }
+        // Return default value on error or if item not found (shouldn't happen ideally)
+        return false;
     }
     return QVariant();
 }
@@ -347,6 +480,23 @@ bool HistoryModel::setData(const QModelIndex &index, const QVariant &value, int 
         Q_EMIT dataChanged(index, index, {Qt::DisplayRole, UuidRole});
         return true;
     }
+    case StarredRole: {
+        bool newValue = value.toBool();
+        QSqlQuery query(m_db);
+        // Use prepared statement for safety
+        query.prepare(u"UPDATE main SET starred = ? WHERE uuid = ?"_s);
+        query.addBindValue(newValue);
+        query.addBindValue(item->uuid());
+
+        if (query.exec()) {
+            // Notify views that this specific role has changed for the item
+            Q_EMIT dataChanged(index, index, {StarredRole});
+            return true;
+        }
+        // TODO: Add user feedback/notification when starring/unstarring fails
+        // Currently users have no indication if the star operation was unsuccessful
+        break;
+    }
     }
 
     return false;
@@ -399,6 +549,23 @@ bool HistoryModel::remove(const QString &uuid)
     if (index < 0) {
         return false;
     }
+    
+    // Check if the item is starred before removing
+    bool isStarred = isItemStarred(uuid);
+    
+    // Show confirmation dialog for starred items
+    if (isStarred) {
+        int result = KMessageBox::warningContinueCancel(nullptr,
+                                                       i18n("This item is starred. Do you really want to remove it from history?"),
+                                                       i18n("Remove Starred Item"),
+                                                       KStandardGuiItem::del(),
+                                                       KStandardGuiItem::cancel(),
+                                                       QStringLiteral("klipperRemoveStarredItemAskAgain"));
+        if (result != KMessageBox::Continue) {
+            return false; // User cancelled deletion
+        }
+    }
+    
     return removeRow(index, QModelIndex());
 }
 
@@ -477,7 +644,30 @@ bool HistoryModel::insert(const QMimeData *mimeData, qreal timestamp)
 
     // BUG 417590: Remove only after an item is inserted to avoid clearing clipboard
     if (m_items.size() > m_maxSize) {
-        removeRow(m_items.size() - 1);
+        // Find the first non-starred item from the end to remove, skipping starred items
+        int itemToRemove = -1;
+        for (qsizetype i = m_items.size() - 1; i >= 0; --i) {
+            // Check if item is starred
+            QSqlQuery query(m_db);
+            query.prepare(u"SELECT starred FROM main WHERE uuid = ?"_s);
+            query.addBindValue(m_items[i]->uuid());
+            bool isStarred = false;
+            if (query.exec() && query.isSelect() && query.next()) {
+                isStarred = query.value(0).toBool();
+            }
+            
+            if (!isStarred) {
+                itemToRemove = i;
+                break;
+            }
+        }
+        
+        if (itemToRemove >= 0) {
+            removeRow(itemToRemove);
+        }
+        // If no non-starred items found, we don't remove anything
+        // This means starred items can cause the history to exceed maxSize
+        // TODO: Consider implementing a separate starred item limit or warning mechanism
     }
 
     ++m_pendingJobs;
@@ -686,6 +876,7 @@ QHash<int, QByteArray> HistoryModel::roleNames() const
     hash.insert(ImageSizeRole, QByteArrayLiteral("imageSize"));
     hash.insert(UuidRole, QByteArrayLiteral("uuid"));
     hash.insert(TypeIntRole, QByteArrayLiteral("type"));
+    hash.insert(StarredRole, QByteArrayLiteral("starred"));
     return hash;
 }
 
@@ -747,6 +938,17 @@ void HistoryModel::slotReceivedEmptyClipboard(QClipboard::Mode mode)
                             mode == QClipboard::Selection ? SystemClipboard::Selection : SystemClipboard::Clipboard,
                             SystemClipboard::ClipboardUpdateReason::PreventEmptyClipboard);
     }
+}
+
+bool HistoryModel::isItemStarred(const QString &uuid) const
+{
+    QSqlQuery query(m_db);
+    query.prepare(u"SELECT starred FROM main WHERE uuid = ?"_s);
+    query.addBindValue(uuid);
+    if (query.exec() && query.isSelect() && query.next()) {
+        return query.value(0).toBool();
+    }
+    return false;
 }
 
 #include "moc_historymodel.cpp"

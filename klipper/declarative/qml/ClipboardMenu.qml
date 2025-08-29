@@ -67,16 +67,21 @@ PlasmaComponents3.ScrollView {
     }
     onTriggerAction: uuid => model.invokeAction(uuid)
 
+    onExpandedChanged: {
+        if (expanded) {
+            menuListView.forceActiveFocus();
+        }
+    }
+
     Keys.forwardTo: [clipboardMenu.T.StackView.view.currentItem]
     Keys.onPressed: event => {
-        if (menuListView.count === 0 || clipboardMenu.T.StackView.view.currentItem !== clipboardMenu) {
+        if (clipboardMenu.T.StackView.view.currentItem !== clipboardMenu) {
             event.accepted = false;
             return;
         }
 
         function forwardToFilter() {
             if (filter.enabled && event.text !== "" && !filter.activeFocus) {
-                clipboardMenu.view.currentIndex = -1
                 if (event.matches(StandardKey.Paste)) {
                     filter.paste();
                 } else {
@@ -108,104 +113,219 @@ PlasmaComponents3.ScrollView {
         }
         case Qt.Key_Tab:
         case Qt.Key_Backtab: {
-            // prevent search filter from getting Tab key events
+            // Let natural KeyNavigation handle Tab/Backtab
+            event.accepted = false;
             break;
         }
         case Qt.Key_Backspace: {
             // filter.text += event.text wil break if the key is backspace
-            filter.forceActiveFocus();
-            filter.text = filter.text.slice(0, -1);
-            event.accepted = true;
+            if (!filter.activeFocus) {
+                // Forward backspace to filter when not focused
+                filter.forceActiveFocus();
+                filter.text = filter.text.slice(0, -1);
+                event.accepted = true;
+            } else {
+                // Filter is focused, let the SearchField handle it natively
+                event.accepted = false;
+            }
             break;
         }
         case Qt.Key_Home: {
-            menuListView.currentIndex = 0;
-            event.accepted = true;
+            if (menuListView.count > 0) {
+                menuListView.currentIndex = 0;
+                event.accepted = true;
+            } else {
+                event.accepted = false;
+            }
             break;
         }
         case Qt.Key_End: {
-            menuListView.currentIndex = menuListView.count - 1;
-            event.accepted = true;
+            if (menuListView.count > 0) {
+                menuListView.currentIndex = menuListView.count - 1;
+                event.accepted = true;
+            } else {
+                event.accepted = false;
+            }
             break;
         }
         case Qt.Key_PageUp: {
-            menuListView.currentIndex = Math.max(menuListView.currentIndex - pageUpPageDownSkipCount, 0);
-            menuListView.positionViewAtIndex(menuListView.currentIndex, ListView.Beginning)
-            menuListView.currentItem.forceActiveFocus()
-            event.accepted = true;
+            if (event.modifiers & Qt.ControlModifier) {
+                // Ctrl+PgUp: Previous tab
+                tabBar.setCurrentIndex(Math.max(0, tabBar.currentIndex - 1));
+                event.accepted = true;
+            } else if (menuListView.count > 0) {
+                // Regular PgUp: Navigate list
+                menuListView.currentIndex = Math.max(menuListView.currentIndex - pageUpPageDownSkipCount, 0);
+                menuListView.positionViewAtIndex(menuListView.currentIndex, ListView.Beginning)
+                if (menuListView.currentItem) {
+                    menuListView.currentItem.forceActiveFocus()
+                }
+                event.accepted = true;
+            }
             break;
         }
         case Qt.Key_PageDown: {
-            menuListView.currentIndex = Math.min(menuListView.currentIndex + pageUpPageDownSkipCount, menuListView.count - 1);
-            menuListView.positionViewAtIndex(menuListView.currentIndex, ListView.Beginning)
-            menuListView.currentItem.forceActiveFocus()
-            event.accepted = true;
+            if (event.modifiers & Qt.ControlModifier) {
+                // Ctrl+PgDn: Next tab
+                tabBar.setCurrentIndex(Math.min(tabBar.count - 1, tabBar.currentIndex + 1));
+                event.accepted = true;
+            } else if (menuListView.count > 0) {
+                // Regular PgDn: Navigate list
+                menuListView.currentIndex = Math.min(menuListView.currentIndex + pageUpPageDownSkipCount, menuListView.count - 1);
+                menuListView.positionViewAtIndex(menuListView.currentIndex, ListView.Beginning)
+                if (menuListView.currentItem) {
+                    menuListView.currentItem.forceActiveFocus()
+                }
+                event.accepted = true;
+            }
+            break;
+        }
+        case Qt.Key_1:
+        case Qt.Key_2: {
+            if (event.modifiers & Qt.AltModifier) {
+                // Alt+1/Alt+2: Switch to specific tab
+                const tabIndex = event.key - Qt.Key_1;
+                if (tabIndex < tabBar.count) {
+                    tabBar.setCurrentIndex(tabIndex);
+                    event.accepted = true;
+                }
+            } else {
+                forwardToFilter();
+            }
             break;
         }
         default: {
-            forwardToFilter();
+            // Only forward printable characters to filter
+            if (event.text.length > 0 && event.text.charCodeAt(0) >= 32) {
+                forwardToFilter();
+            } else {
+                event.accepted = false;
+            }
             break;
         }
         }
     }
 
+    // Hidden PlasmoidHeading for metrics purposes
+    PlasmaExtras.PlasmoidHeading {
+        id: metricsPlasmoidHeading
+        visible: false
+    }
+
+    // Hidden metrics ToolButton for delegates to reference implicit sizing
+    // Avoids creating one per delegate which would waste memory
+    PlasmaComponents3.ToolButton {
+        id: metricsStarButton
+        visible: false
+        display: PlasmaComponents3.AbstractButton.IconOnly
+        icon.name: "starred-symbolic"
+    }
+
+    // Exported metrics for delegates
+    readonly property int starMetricsImplicitWidth: metricsStarButton.implicitWidth
+    readonly property int starMetricsImplicitHeight: metricsStarButton.implicitHeight
+
     property PlasmaExtras.PlasmoidHeading header: PlasmaExtras.PlasmoidHeading {
-        focus: true
+        bottomPadding: tabBar.visible ? 0 : metricsPlasmoidHeading.bottomPadding
+        contentItem: ColumnLayout {
+            // No extra spacing between rows; individual rows set their own spacing
+            spacing: 0
 
-        contentItem: RowLayout {
-            enabled: menuListView.count > 0 || filter.text.length > 0
-
-            PlasmaExtras.SearchField {
-                id: filter
-                Layout.fillWidth: true
-
-                // reset focus when popup becomes visible so down arrow always moves to first entry
-                focus: (clipboardMenu.Window.window?.visible && !Kirigami.InputMethod.willShowOnActive) ?? false
-
-                KeyNavigation.up: clipboardMenu.dialogItem.KeyNavigation.up /* ToolBar */
-                KeyNavigation.down: menuListView.count > 0 ? menuListView : null
-                KeyNavigation.right: clearHistoryButton.visible ? clearHistoryButton : null
-                Keys.onDownPressed: event => {
-                    clipboardMenu.view.incrementCurrentIndex();
-                    menuListView.positionViewAtIndex(menuListView.currentIndex, ListView.Visible)
-                    event.accepted = false;
+            RowLayout {
+                spacing: Kirigami.Units.smallSpacing
+                PlasmaExtras.SearchField {
+                    id: filter
+                    Layout.fillWidth: true
+                    enabled: menuListView.count > 0 || filter.text.length > 0
+                    KeyNavigation.up: clipboardMenu.dialogItem.KeyNavigation.up /* ToolBar */
+                    KeyNavigation.right: clearHistoryButton.visible ? clearHistoryButton : (tabBar.visible ? tabBar : null)
+                    Keys.onDownPressed: event => {
+                        if (tabBar.visible) {
+                            tabBar.forceActiveFocus();
+                        } else {
+                            menuListView.forceActiveFocus();
+                        }
+                        event.accepted = true;
+                    }
+                    Keys.onEnterPressed: event => Keys.returnPressed(event)
+                    Keys.onReturnPressed: event => {
+                        if (menuListView.currentItem !== null) {
+                            menuListView.currentItem.Keys.returnPressed(event);
+                        } else if (menuListView.count > 0) {
+                            menuListView.itemAtIndex(0).Keys.returnPressed(event);
+                        } else {
+                            event.accepted = false;
+                        }
+                    }
                 }
-                Keys.onEnterPressed: event => Keys.returnPressed(event)
-                Keys.onReturnPressed: event => {
-                    if (menuListView.currentItem !== null) {
-                        menuListView.currentItem.Keys.returnPressed(event);
-                    } else if (menuListView.count > 0) {
-                        menuListView.itemAtIndex(0).Keys.returnPressed(event);
-                    } else {
-                        event.accepted = false;
+
+                PlasmaComponents3.ToolButton {
+                    id: clearHistoryButton
+                    visible: clipboardMenu.showsClearHistoryButton
+
+                    icon.name: "edit-clear-history"
+
+                    display: PlasmaComponents3.AbstractButton.IconOnly
+                    text: i18nd("klipper", "Clear History")
+
+                    KeyNavigation.left: filter
+                    KeyNavigation.down: tabBar.visible ? tabBar : menuListView
+
+                    onClicked: {
+                        clipboardMenu.model.clearHistory();
+                        filter.clear();
+                    }
+
+                    PlasmaComponents3.ToolTip {
+                        text: clearHistoryButton.text
                     }
                 }
             }
 
-            PlasmaComponents3.ToolButton {
-                id: clearHistoryButton
-                visible: clipboardMenu.showsClearHistoryButton
-
-                icon.name: "edit-clear-history"
-
-                display: PlasmaComponents3.AbstractButton.IconOnly
-                text: i18nd("klipper", "Clear History")
-
-                Keys.onDownPressed: { // can't KeyNavigation or Up from the ListView goes here
+            PlasmaComponents3.TabBar {
+                id: tabBar
+                Layout.fillWidth: true
+                visible: clipboardMenu.model.hasStarredItems
+                
+                // TabBar focus handling
+                activeFocusOnTab: true
+                Keys.onUpPressed: event => {
+                    filter.forceActiveFocus();
+                    event.accepted = true;
+                }
+                Keys.onDownPressed: event => {
+                    menuListView.forceActiveFocus();
+                    event.accepted = true;
+                }
+                Keys.onLeftPressed: event => {
+                    if (tabBar.currentIndex > 0) {
+                        tabBar.currentIndex--;
+                    }
+                    event.accepted = true;
+                }
+                Keys.onRightPressed: event => {
+                    if (tabBar.currentIndex < tabBar.count - 1) {
+                        tabBar.currentIndex++;
+                    }
+                    event.accepted = true;
+                }
+                
+                currentIndex: clipboardMenu.model.starredOnly ? 1 : 0
+                onCurrentIndexChanged: {
+                    clipboardMenu.model.starredOnly = (currentIndex === 1)
+                    // Reset selection to first item when switching tabs
                     if (menuListView.count > 0) {
-                        clipboardMenu.view.incrementCurrentIndex();
-                        menuListView.positionViewAtIndex(menuListView.currentIndex, ListView.Visible)
-                        menuListView.forceActiveFocus(Qt.TabFocusReason)
+                        menuListView.currentIndex = 0;
+                        menuListView.positionViewAtBeginning();
                     }
                 }
 
-                onClicked: {
-                    clipboardMenu.model.clearHistory();
-                    filter.clear();
+                PlasmaComponents3.TabButton {
+                    text: i18nd("klipper", "All History")
                 }
 
-                PlasmaComponents3.ToolTip {
-                    text: clearHistoryButton.text
+                PlasmaComponents3.TabButton {
+                    text: i18nd("klipper", "Starred Only")
                 }
             }
         }
@@ -218,6 +338,7 @@ PlasmaComponents3.ScrollView {
         visible: false
     }
 
+    // TODO: Deal with this magic string roleValue here, should be enum from historyitem.h
     DelegateChooser {
         id: chooser
         role: "type"
@@ -248,6 +369,10 @@ PlasmaComponents3.ScrollView {
 
         highlightFollowsCurrentItem: false
         currentIndex: 0
+        
+        // ListView KeyNavigation for when no items have focus
+        KeyNavigation.left: tabBar.visible ? tabBar : filter
+
         model: KItemModels.KSortFilterProxyModel {
             sourceModel: clipboardMenu.model
             filterRoleName: "display"
@@ -265,23 +390,30 @@ PlasmaComponents3.ScrollView {
         delegate: chooser
 
         Keys.onUpPressed: event => {
-            if (menuListView.currentIndex === 0) {
-                menuListView.currentIndex = -1;
-                filter.selectAll();
-                event.accepted = false; // Forward to KeyNavigation.up
-
+            if (menuListView.currentIndex > 0) {
+                menuListView.decrementCurrentIndex();
+                menuListView.positionViewAtIndex(menuListView.currentIndex, ListView.Visible);
+                event.accepted = true;
             } else {
-                menuListView.decrementCurrentIndex()
-                menuListView.positionViewAtIndex(menuListView.currentIndex, ListView.Visible)
+                // At top of list, or list is empty. Focus TabBar or filter depending on visibility.
+                if (tabBar.visible) {
+                    tabBar.forceActiveFocus();
+                } else {
+                    filter.forceActiveFocus();
+                }
+                event.accepted = true;
             }
         }
 
         Keys.onDownPressed: event => {
-            if (menuListView.currentIndex >= menuListView.count) {
-                event.accepted = false; // no target, but we may add one in the future
+            if (menuListView.currentIndex < menuListView.count - 1) {
+                menuListView.incrementCurrentIndex();
+                menuListView.positionViewAtIndex(menuListView.currentIndex, ListView.Visible);
+                event.accepted = true;
             } else {
-                menuListView.incrementCurrentIndex()
-                menuListView.positionViewAtIndex(menuListView.currentIndex, ListView.Visible)
+                // At bottom of list, or list is empty.
+                // If list is not empty, stay here. If empty, let nav happen.
+                event.accepted = menuListView.count > 0;
             }
         }
 

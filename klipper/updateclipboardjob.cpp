@@ -123,7 +123,7 @@ void UpdateDatabaseJob::start()
     }
 
     QSqlQuery query(*m_db);
-    query.prepare(u"INSERT INTO main (uuid, added_time, last_used_time, mimetypes, text) VALUES (?, ?, ?, ?, ?)"_s);
+    query.prepare(u"INSERT INTO main (uuid, added_time, last_used_time, mimetypes, text, starred) VALUES (?, ?, ?, ?, ?, ?)"_s);
     query.addBindValue(m_uuid);
     if (m_timestamp == 0) [[likely]] {
         query.addBindValue(QDateTime::currentMSecsSinceEpoch() / 1000.0);
@@ -137,6 +137,7 @@ void UpdateDatabaseJob::start()
             return a + u',' + b.type;
         }));
     query.addBindValue(m_text);
+    query.addBindValue(false); // New items are not starred by default
     if (!query.exec()) {
         setErrorText(query.lastError().text());
         setError(DatabaseError);

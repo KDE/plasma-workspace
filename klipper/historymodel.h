@@ -31,6 +31,7 @@ public:
         TypeIntRole,
         ImageUrlRole,
         ImageSizeRole,
+        StarredRole
     };
     Q_ENUM(RoleType)
 
@@ -117,6 +118,15 @@ private:
     void moveToTop(qsizetype row);
 
     static void saveToFile(QStringView dbFolder, const QByteArray &data, QStringView newUuid, QStringView dataUuid);
+
+    void clearNonStarredHistory();
+
+    /**
+     * Check if the item is starred before removing
+     * @param uuid The UUID of the item to check
+     * @return true if the item is starred, false otherwise
+     */
+    bool isItemStarred(const QString &uuid) const;
 
     std::shared_ptr<SystemClipboard> m_clip;
     QList<std::shared_ptr<HistoryItem>> m_items;
