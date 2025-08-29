@@ -6,6 +6,7 @@
 
 #pragma once
 
+#include <QPropertyNotifier>
 #include <QSortFilterProxyModel>
 #include <qqmlregistration.h>
 
@@ -21,7 +22,7 @@ class DeclarativeHistoryModel : public QSortFilterProxyModel
 
     Q_PROPERTY(int count READ rowCount NOTIFY countChanged)
     Q_PROPERTY(int sourceCount READ sourceCount NOTIFY sourceCountChanged)
-    Q_PROPERTY(bool hasStarredItems READ hasStarredItems NOTIFY hasStarredItemsChanged)
+    Q_PROPERTY(int starredCount READ starredCount NOTIFY starredCountChanged)
     Q_PROPERTY(QString currentText READ currentText NOTIFY currentTextChanged)
 
     Q_PROPERTY(bool starredOnly READ starredOnly WRITE setStarredOnly NOTIFY starredOnlyChanged)
@@ -32,7 +33,7 @@ public:
 
     QString currentText() const;
     int sourceCount() const;
-    bool hasStarredItems() const;
+    int starredCount() const;
 
     bool starredOnly() const;
     void setStarredOnly(bool value);
@@ -47,7 +48,7 @@ public:
 Q_SIGNALS:
     void countChanged();
     void sourceCountChanged();
-    void hasStarredItemsChanged();
+    void starredCountChanged();
     void currentTextChanged();
     void starredOnlyChanged();
 
@@ -57,4 +58,5 @@ protected:
 private:
     std::shared_ptr<HistoryModel> m_model;
     bool m_starredOnly = false;
+    QPropertyNotifier m_starredCountNotifier;
 };

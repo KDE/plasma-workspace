@@ -202,6 +202,7 @@ void HistoryModel::clear()
     if (!m_items.empty()) { // Is empty when m_bKeepContents is false
         beginResetModel();
         m_items.clear();
+        m_starredCount = 0;
         endResetModel();
     }
 }
@@ -211,7 +212,7 @@ void HistoryModel::clearNonStarredHistory()
     if (!m_db.isOpen()) {
         return;
     }
-    
+
     // Get UUIDs of all non-starred items
     QStringList nonStarredUuids;
     QSqlQuery query(m_db);
@@ -219,11 +220,11 @@ void HistoryModel::clearNonStarredHistory()
     while (query.next()) {
         nonStarredUuids.append(query.value(0).toString());
     }
-    
+
     if (nonStarredUuids.isEmpty()) {
         return; // No non-starred items to remove
     }
-    
+
     // Delete non-starred items from database
     {
         TransactionGuard transaction(&m_db);
@@ -232,7 +233,7 @@ void HistoryModel::clearNonStarredHistory()
             quotedUuids.append(u'\'' + uuid + u'\'');
         }
         const QString uuidList = quotedUuids.join(u',');
-        
+
         if (!transaction.exec(u"DELETE FROM main WHERE uuid IN (%1)"_s.arg(uuidList))) {
             return;
         }
@@ -240,7 +241,7 @@ void HistoryModel::clearNonStarredHistory()
             return;
         }
     }
-    
+
     // Delete associated data folders
     QList<QUrl> deletedDataFolders;
     deletedDataFolders.reserve(nonStarredUuids.size());
@@ -252,7 +253,7 @@ void HistoryModel::clearNonStarredHistory()
     connect(job, &KJob::finished, this, [this] {
         --m_pendingJobs;
     });
-    
+
     // Remove items from the model that were deleted
     // We need to work backwards to maintain correct indices
     for (qsizetype i = m_items.size() - 1; i >= 0; --i) {
@@ -262,21 +263,14 @@ void HistoryModel::clearNonStarredHistory()
             endRemoveRows();
         }
     }
-    
+
     QSqlQuery(u"VACUUM"_s, m_db).exec();
 }
 
 void HistoryModel::clearHistory()
 {
     // First check if there are any starred items
-    QSqlQuery starredQuery(m_db);
-    starredQuery.exec(u"SELECT COUNT(*) FROM main WHERE starred = 1"_s);
-    bool hasStarredItems = false;
-    if (starredQuery.next()) {
-        hasStarredItems = starredQuery.value(0).toInt() > 0;
-    }
-    
-    if (hasStarredItems) {
+    if (m_starredCount > 0) {
         // Offer choice to keep starred items or clear everything
         // TODO: Consider adding a setting in Klipper configuration UI to customize this behavior
         // (e.g., always ask, always keep starred, always clear all)
@@ -287,7 +281,7 @@ void HistoryModel::clearHistory()
                                                                KGuiItem(i18n("Keep Starred Items"), QStringLiteral("starred-symbolic")),
                                                                KStandardGuiItem::cancel(),
                                                                QStringLiteral("klipperClearHistoryStarredChoice"));
-        
+
         if (clearChoice == KMessageBox::Cancel) {
             return; // User cancelled
         } else if (clearChoice == KMessageBox::ButtonCode::SecondaryAction) {
@@ -311,7 +305,7 @@ void HistoryModel::clearHistory()
             return; // User cancelled
         }
     }
-    
+
     // Clear everything (including starred items)
     clear();
 }
@@ -334,7 +328,7 @@ void HistoryModel::setMaxSize(qsizetype size)
         // to prevent starred items from causing unlimited history growth
         qsizetype itemsToRemove = m_items.size() - m_maxSize;
         qsizetype removedCount = 0;
-        
+
         for (qsizetype i = m_items.size() - 1; i >= 0 && removedCount < itemsToRemove; --i) {
             // Check if item is starred
             QSqlQuery query(m_db);
@@ -344,7 +338,7 @@ void HistoryModel::setMaxSize(qsizetype size)
             if (query.exec() && query.isSelect() && query.next()) {
                 isStarred = query.value(0).toBool();
             }
-            
+
             if (!isStarred) {
                 removeRow(i);
                 removedCount++;
@@ -363,6 +357,11 @@ int HistoryModel::rowCount(const QModelIndex &parent) const
         return 0;
     }
     return m_items.size();
+}
+
+QBindable<int> HistoryModel::bindableStarredCount() const
+{
+    return &m_starredCount;
 }
 
 QVariant HistoryModel::data(const QModelIndex &index, int role) const
@@ -414,7 +413,7 @@ QVariant HistoryModel::data(const QModelIndex &index, int role) const
     case TypeIntRole:
         return int(item->type());
     case StarredRole:
-        // TODO: Consider adding QHash<QString, bool> cache for starred status to avoid 
+        // TODO: Consider adding QHash<QString, bool> cache for starred status to avoid
         // frequent database queries if performance becomes an issue with large histories
         return isItemStarred(item->uuid());
     }
@@ -474,6 +473,10 @@ bool HistoryModel::setData(const QModelIndex &index, const QVariant &value, int 
     }
     case StarredRole: {
         bool newValue = value.toBool();
+        if (newValue == isItemStarred(item->uuid())) {
+            return false;
+        }
+
         QSqlQuery query(m_db);
         // Use prepared statement for safety
         query.prepare(u"UPDATE main SET starred = ? WHERE uuid = ?"_s);
@@ -482,6 +485,7 @@ bool HistoryModel::setData(const QModelIndex &index, const QVariant &value, int 
 
         if (query.exec()) {
             // Notify views that this specific role has changed for the item
+            m_starredCount = m_starredCount + (newValue ? 1 : -1);
             Q_EMIT dataChanged(index, index, {StarredRole});
             return true;
         }
@@ -502,6 +506,12 @@ bool HistoryModel::removeRows(int row, int count, const QModelIndex &parent)
     if (qsizetype(row + count) > m_items.size()) {
         return false;
     }
+
+    auto first = std::next(m_items.cbegin(), row);
+    auto last = std::next(m_items.cbegin(), row + count);
+    const int newStarredCount = m_starredCount - std::accumulate(first, last, 0, [this](int count, const std::shared_ptr<HistoryItem> &item) {
+                                    return isItemStarred(item->uuid()) ? (count + 1) : count;
+                                });
 
     {
         TransactionGuard transaction(&m_db);
@@ -530,7 +540,8 @@ bool HistoryModel::removeRows(int row, int count, const QModelIndex &parent)
     });
 
     beginRemoveRows(QModelIndex(), row, row + count - 1);
-    m_items.erase(std::next(m_items.cbegin(), row), std::next(m_items.cbegin(), row + count));
+    m_items.erase(first, last);
+    m_starredCount = newStarredCount;
     endRemoveRows();
     return true;
 }
@@ -541,10 +552,10 @@ bool HistoryModel::remove(const QString &uuid)
     if (index < 0) {
         return false;
     }
-    
+
     // Check if the item is starred before removing
     bool isStarred = isItemStarred(uuid);
-    
+
     // Show confirmation dialog for starred items
     if (isStarred) {
         int result = KMessageBox::warningContinueCancel(nullptr,
@@ -557,7 +568,7 @@ bool HistoryModel::remove(const QString &uuid)
             return false; // User cancelled deletion
         }
     }
-    
+
     return removeRow(index, QModelIndex());
 }
 
@@ -647,13 +658,13 @@ bool HistoryModel::insert(const QMimeData *mimeData, qreal timestamp)
             if (query.exec() && query.isSelect() && query.next()) {
                 isStarred = query.value(0).toBool();
             }
-            
+
             if (!isStarred) {
                 itemToRemove = i;
                 break;
             }
         }
-        
+
         if (itemToRemove >= 0) {
             removeRow(itemToRemove);
         }
@@ -742,11 +753,13 @@ bool HistoryModel::loadHistory()
 
     // The last row is either items.size() - 1 or m_maxSize - 1.
     decltype(m_items) items;
+    int starredCount = 0;
     if (query.exec(u"SELECT * FROM main ORDER BY last_used_time DESC, added_time DESC LIMIT %1"_s.arg(QString::number(m_maxSize))) && query.isSelect()) {
         items.reserve(std::max(query.size(), 1));
         while (query.next()) {
             if (HistoryItemPtr item = HistoryItem::create(query)) {
                 items.emplace_back(std::move(item));
+                starredCount += query.value(u"starred"_s).toBool() ? 1 : 0;
             }
         }
     }
@@ -758,6 +771,7 @@ bool HistoryModel::loadHistory()
 
     beginResetModel();
     m_items = std::move(items);
+    m_starredCount = starredCount;
     endResetModel();
 
     m_clip->setMimeData(m_items[0], SystemClipboard::SelectionMode(SystemClipboard::Clipboard | SystemClipboard::Selection));

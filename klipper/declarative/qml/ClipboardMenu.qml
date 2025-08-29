@@ -285,8 +285,8 @@ PlasmaComponents3.ScrollView {
             PlasmaComponents3.TabBar {
                 id: tabBar
                 Layout.fillWidth: true
-                visible: clipboardMenu.model.hasStarredItems
-                
+                visible: clipboardMenu.model.starredCount > 0
+
                 // TabBar focus handling
                 activeFocusOnTab: true
                 Keys.onUpPressed: event => {
@@ -309,7 +309,7 @@ PlasmaComponents3.ScrollView {
                     }
                     event.accepted = true;
                 }
-                
+
                 currentIndex: clipboardMenu.model.starredOnly ? 1 : 0
                 onCurrentIndexChanged: {
                     clipboardMenu.model.starredOnly = (currentIndex === 1)
@@ -369,7 +369,7 @@ PlasmaComponents3.ScrollView {
 
         highlightFollowsCurrentItem: false
         currentIndex: 0
-        
+
         // ListView KeyNavigation for when no items have focus
         KeyNavigation.left: tabBar.visible ? tabBar : filter
 
