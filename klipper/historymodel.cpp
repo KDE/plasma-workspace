@@ -416,15 +416,7 @@ QVariant HistoryModel::data(const QModelIndex &index, int role) const
     case StarredRole:
         // TODO: Consider adding QHash<QString, bool> cache for starred status to avoid 
         // frequent database queries if performance becomes an issue with large histories
-        QSqlQuery query(m_db);
-        // Use prepared statement for safety
-        query.prepare(u"SELECT starred FROM main WHERE uuid = ?"_s);
-        query.addBindValue(item->uuid());
-        if (query.exec() && query.isSelect() && query.next()) {
-            return query.value(0).toBool();
-        }
-        // Return default value on error or if item not found (shouldn't happen ideally)
-        return false;
+        return isItemStarred(item->uuid());
     }
     return QVariant();
 }
