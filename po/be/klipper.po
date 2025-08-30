@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-20 00:44+0000\n"
+"POT-Creation-Date: 2025-08-30 00:44+0000\n"
 "PO-Revision-Date: 2024-11-04 22:00\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -385,52 +385,75 @@ msgstr ""
 msgid "Creating QR code failed"
 msgstr "Не ўдалося стварыць QR-код"
 
-#: declarative/qml/ClipboardItemDelegate.qml:180
+#: declarative/qml/ClipboardItemDelegate.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
 msgstr "Згарнуць"
 
-#: declarative/qml/ClipboardItemDelegate.qml:180
+#: declarative/qml/ClipboardItemDelegate.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
 msgstr "Разгарнуць"
 
-#: declarative/qml/ClipboardMenu.qml:192
+#: declarative/qml/ClipboardMenu.qml:269
 #, kde-format
 msgid "Clear History"
 msgstr "Ачысціць гісторыю"
 
-#: declarative/qml/ClipboardMenu.qml:302
+#: declarative/qml/ClipboardMenu.qml:324
+#, fuzzy, kde-format
+#| msgid "Clear History"
+msgid "All History"
+msgstr "Ачысціць гісторыю"
+
+#: declarative/qml/ClipboardMenu.qml:328
+#, kde-format
+msgid "Starred Only"
+msgstr ""
+
+#: declarative/qml/ClipboardMenu.qml:434
 #, kde-format
 msgid "No matches"
 msgstr "Няма супадзенняў"
 
-#: declarative/qml/ClipboardMenu.qml:302
+#: declarative/qml/ClipboardMenu.qml:434
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Буфер абмену пусты"
 
-#: declarative/qml/DelegateToolButtons.qml:31
-#, kde-format
-msgid "Edit contents"
-msgstr "Рэдагаваць змесціва"
-
-#: declarative/qml/DelegateToolButtons.qml:32
+#: declarative/qml/DelegateToolButtons.qml:37
 #, kde-format
 msgid "Invoke action"
 msgstr "Выклікаць дзеянне"
 
-#: declarative/qml/DelegateToolButtons.qml:33
+#: declarative/qml/DelegateToolButtons.qml:42
 #, kde-format
 msgid "Show QR code"
 msgstr "Паказваць QR-код"
 
-#: declarative/qml/DelegateToolButtons.qml:34
+#: declarative/qml/DelegateToolButtons.qml:47
+#, kde-format
+msgid "Edit contents"
+msgstr "Рэдагаваць змесціва"
+
+#: declarative/qml/DelegateToolButtons.qml:53
 #, kde-format
 msgid "Remove from history"
 msgstr "Выдаліць з гісторыі"
+
+#: declarative/qml/DelegateToolButtons.qml:58
+#, fuzzy, kde-format
+#| msgid "Remove from history"
+msgid "Remove Star"
+msgstr "Выдаліць з гісторыі"
+
+#: declarative/qml/DelegateToolButtons.qml:58
+#, fuzzy, kde-format
+#| msgid "Start"
+msgid "Star"
+msgstr "Запускаць"
 
 #: declarative/qml/EditPage.qml:64
 #, kde-format
@@ -648,22 +671,49 @@ msgstr "Скінуць значок каманды да прадвызначан
 msgid "Icon:"
 msgstr "Значок:"
 
-#: historymodel.cpp:212
-#, kde-format
-msgid "Do you really want to clear and delete the entire clipboard history?"
-msgstr "Сапраўды хочаце ачысціць усю гісторыю буфера абмену?"
+#: historymodel.cpp:284
+#, fuzzy, kde-format
+#| msgid "The clipboard history will store up to this many items."
+msgid "The clipboard history contains starred items. Clear them too?"
+msgstr "Колькасць элементаў гісторыі буфера абмену."
 
-#: historymodel.cpp:213
+#: historymodel.cpp:285 historymodel.cpp:305
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Ачысціць гісторыю буфера абмену"
 
-#: historymodel.cpp:262
+#: historymodel.cpp:286
+#, kde-format
+msgid "Clear Everything"
+msgstr ""
+
+#: historymodel.cpp:287
+#, fuzzy, kde-format
+#| msgid "Clipboard Items"
+msgid "Keep Starred Items"
+msgstr "Элементы буфера абмену"
+
+#: historymodel.cpp:304
+#, kde-format
+msgid "Do you really want to clear and delete the entire clipboard history?"
+msgstr "Сапраўды хочаце ачысціць усю гісторыю буфера абмену?"
+
+#: historymodel.cpp:383
 #, fuzzy, kde-format
 #| msgid "%1x%2 %3bpp"
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2 %3 бітаў/піксель"
+
+#: historymodel.cpp:559
+#, kde-format
+msgid "This item is starred. Do you really want to remove it from history?"
+msgstr ""
+
+#: historymodel.cpp:560
+#, kde-format
+msgid "Remove Starred Item"
+msgstr ""
 
 #: klipper.cpp:91
 #, kde-format
@@ -972,9 +1022,6 @@ msgstr "&Скасаваць"
 #~ msgid "Disable This Popup"
 #~ msgstr "Адключыць гэтае выплыўнае акно"
 
-#~ msgid "Clipboard Items"
-#~ msgstr "Элементы буфера абмену"
-
 #~ msgid "Search…"
 #~ msgstr "Пошук…"
 
@@ -989,9 +1036,6 @@ msgstr "&Скасаваць"
 
 #~ msgid "Automatically Start Klipper?"
 #~ msgstr "Запускаць Klipper аўтаматычна?"
-
-#~ msgid "Start"
-#~ msgstr "Запускаць"
 
 #~ msgid "Do Not Start"
 #~ msgstr "Не запускаць"

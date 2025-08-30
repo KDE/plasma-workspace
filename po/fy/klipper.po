@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-20 00:44+0000\n"
+"POT-Creation-Date: 2025-08-30 00:44+0000\n"
 "PO-Revision-Date: 2010-07-16 13:01+0100\n"
 "Last-Translator: Berend Ytsma <berendy@gmail.com>\n"
 "Language-Team: Frysk <kde-i18n-fry@kde.org>\n"
@@ -365,57 +365,80 @@ msgstr ""
 msgid "Creating QR code failed"
 msgstr ""
 
-#: declarative/qml/ClipboardItemDelegate.qml:180
+#: declarative/qml/ClipboardItemDelegate.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
 msgstr ""
 
-#: declarative/qml/ClipboardItemDelegate.qml:180
+#: declarative/qml/ClipboardItemDelegate.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:192
+#: declarative/qml/ClipboardMenu.qml:269
 #, fuzzy, kde-format
 #| msgid "Clipboard history"
 msgid "Clear History"
 msgstr "Klamboerdskiednis"
 
-#: declarative/qml/ClipboardMenu.qml:302
+#: declarative/qml/ClipboardMenu.qml:324
+#, fuzzy, kde-format
+#| msgid "Clipboard history"
+msgid "All History"
+msgstr "Klamboerdskiednis"
+
+#: declarative/qml/ClipboardMenu.qml:328
+#, kde-format
+msgid "Starred Only"
+msgstr ""
+
+#: declarative/qml/ClipboardMenu.qml:434
 #, fuzzy, kde-format
 #| msgid "<no matches>"
 msgid "No matches"
 msgstr "<gjin oerienkomsten>"
 
-#: declarative/qml/ClipboardMenu.qml:302
+#: declarative/qml/ClipboardMenu.qml:434
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Klamboerd is leech"
 
-#: declarative/qml/DelegateToolButtons.qml:31
-#, fuzzy, kde-format
-#| msgid "Edit Contents"
-msgid "Edit contents"
-msgstr "Bewurkje ynhâld"
-
-#: declarative/qml/DelegateToolButtons.qml:32
+#: declarative/qml/DelegateToolButtons.qml:37
 #, fuzzy, kde-format
 #| msgid "Ignore Selection"
 msgid "Invoke action"
 msgstr "Seleksje negearje"
 
-#: declarative/qml/DelegateToolButtons.qml:33
+#: declarative/qml/DelegateToolButtons.qml:42
 #, kde-format
 msgid "Show QR code"
 msgstr ""
 
-#: declarative/qml/DelegateToolButtons.qml:34
+#: declarative/qml/DelegateToolButtons.qml:47
+#, fuzzy, kde-format
+#| msgid "Edit Contents"
+msgid "Edit contents"
+msgstr "Bewurkje ynhâld"
+
+#: declarative/qml/DelegateToolButtons.qml:53
 #, fuzzy, kde-format
 #| msgid "Replay actions on an item selected from history"
 msgid "Remove from history"
 msgstr "Aksjes opnij útfiere op in item selektearre út de skiednis"
+
+#: declarative/qml/DelegateToolButtons.qml:58
+#, fuzzy, kde-format
+#| msgid "Replay actions on an item selected from history"
+msgid "Remove Star"
+msgstr "Aksjes opnij útfiere op in item selektearre út de skiednis"
+
+#: declarative/qml/DelegateToolButtons.qml:58
+#, fuzzy, kde-format
+#| msgid "Start"
+msgid "Star"
+msgstr "Begjinne"
 
 #: declarative/qml/EditPage.qml:64
 #, kde-format
@@ -627,22 +650,48 @@ msgstr ""
 msgid "Icon:"
 msgstr ""
 
-#: historymodel.cpp:212
-#, fuzzy, kde-format
-#| msgid "Really delete entire clipboard history?"
-msgid "Do you really want to clear and delete the entire clipboard history?"
-msgstr "Totale klamboerdskiednis wiskje?"
+#: historymodel.cpp:284
+#, kde-format
+msgid "The clipboard history contains starred items. Clear them too?"
+msgstr ""
 
-#: historymodel.cpp:213
+#: historymodel.cpp:285 historymodel.cpp:305
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Clear Clipboard History"
 msgstr "Klamboerdskiednis &leechje"
 
-#: historymodel.cpp:262
+#: historymodel.cpp:286
+#, kde-format
+msgid "Clear Everything"
+msgstr ""
+
+#: historymodel.cpp:287
+#, fuzzy, kde-format
+#| msgid "Clipboard Contents"
+msgid "Keep Starred Items"
+msgstr "Klamboerd ynhâld"
+
+#: historymodel.cpp:304
+#, fuzzy, kde-format
+#| msgid "Really delete entire clipboard history?"
+msgid "Do you really want to clear and delete the entire clipboard history?"
+msgstr "Totale klamboerdskiednis wiskje?"
+
+#: historymodel.cpp:383
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
+msgstr ""
+
+#: historymodel.cpp:559
+#, kde-format
+msgid "This item is starred. Do you really want to remove it from history?"
+msgstr ""
+
+#: historymodel.cpp:560
+#, kde-format
+msgid "Remove Starred Item"
 msgstr ""
 
 #: klipper.cpp:91
@@ -949,11 +998,6 @@ msgstr "Ofbre&kke"
 #~ msgstr "Dizze popup útsette"
 
 #, fuzzy
-#~| msgid "Clipboard Contents"
-#~ msgid "Clipboard Items"
-#~ msgstr "Klamboerd ynhâld"
-
-#, fuzzy
 #~| msgid "Regular expression:"
 #~ msgid "Invalid regular expression, %1"
 #~ msgstr "Reguliere ekspresje:"
@@ -966,9 +1010,6 @@ msgstr "Ofbre&kke"
 
 #~ msgid "Automatically Start Klipper?"
 #~ msgstr "Automatysk Klipper útfiere?"
-
-#~ msgid "Start"
-#~ msgstr "Begjinne"
 
 #~ msgid "Do Not Start"
 #~ msgstr "Net begjinne"

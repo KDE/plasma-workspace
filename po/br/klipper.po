@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper-1.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-20 00:44+0000\n"
+"POT-Creation-Date: 2025-08-30 00:44+0000\n"
 "PO-Revision-Date: 1999-03-03 11:57+0100\n"
 "Last-Translator: Jañ-Mai Drapier <jdrapier@club-internet.fr>\n"
 "Language-Team: Brezhoneg <Suav.Icb@wanadoo.fr>\n"
@@ -360,56 +360,78 @@ msgstr ""
 msgid "Creating QR code failed"
 msgstr ""
 
-#: declarative/qml/ClipboardItemDelegate.qml:180
+#: declarative/qml/ClipboardItemDelegate.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
 msgstr ""
 
-#: declarative/qml/ClipboardItemDelegate.qml:180
+#: declarative/qml/ClipboardItemDelegate.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:192
+#: declarative/qml/ClipboardMenu.qml:269
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgid "Clear History"
 msgstr "Ment istor ar go&lver :"
 
-#: declarative/qml/ClipboardMenu.qml:302
+#: declarative/qml/ClipboardMenu.qml:324
+#, fuzzy, kde-format
+#| msgid "C&lipboard history size:"
+msgid "All History"
+msgstr "Ment istor ar go&lver :"
+
+#: declarative/qml/ClipboardMenu.qml:328
+#, kde-format
+msgid "Starred Only"
+msgstr ""
+
+#: declarative/qml/ClipboardMenu.qml:434
 #, fuzzy, kde-format
 #| msgid "<no matches>"
 msgid "No matches"
 msgstr "<kendoare ebet>"
 
-#: declarative/qml/ClipboardMenu.qml:302
+#: declarative/qml/ClipboardMenu.qml:434
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgid "Clipboard is empty"
 msgstr "Ment istor ar go&lver :"
 
-#: declarative/qml/DelegateToolButtons.qml:31
-#, kde-format
-msgid "Edit contents"
-msgstr ""
-
-#: declarative/qml/DelegateToolButtons.qml:32
+#: declarative/qml/DelegateToolButtons.qml:37
 #, fuzzy, kde-format
 #| msgid "<new action>"
 msgid "Invoke action"
 msgstr "<ober nevez>"
 
-#: declarative/qml/DelegateToolButtons.qml:33
+#: declarative/qml/DelegateToolButtons.qml:42
 #, kde-format
 msgid "Show QR code"
 msgstr ""
 
-#: declarative/qml/DelegateToolButtons.qml:34
+#: declarative/qml/DelegateToolButtons.qml:47
+#, kde-format
+msgid "Edit contents"
+msgstr ""
+
+#: declarative/qml/DelegateToolButtons.qml:53
 #, kde-format
 msgid "Remove from history"
 msgstr ""
+
+#: declarative/qml/DelegateToolButtons.qml:58
+#, kde-format
+msgid "Remove Star"
+msgstr ""
+
+#: declarative/qml/DelegateToolButtons.qml:58
+#, fuzzy, kde-format
+#| msgid "Start"
+msgid "Star"
+msgstr "Loc'hañ"
 
 #: declarative/qml/EditPage.qml:64
 #, kde-format
@@ -624,22 +646,48 @@ msgstr ""
 msgid "Icon:"
 msgstr ""
 
-#: historymodel.cpp:212
-#, fuzzy, kde-format
-#| msgid "C&lear Clipboard History"
-msgid "Do you really want to clear and delete the entire clipboard history?"
-msgstr "Gou&llonderiñ istorig ar golver"
+#: historymodel.cpp:284
+#, kde-format
+msgid "The clipboard history contains starred items. Clear them too?"
+msgstr ""
 
-#: historymodel.cpp:213
+#: historymodel.cpp:285 historymodel.cpp:305
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Clear Clipboard History"
 msgstr "Gou&llonderiñ istorig ar golver"
 
-#: historymodel.cpp:262
+#: historymodel.cpp:286
+#, kde-format
+msgid "Clear Everything"
+msgstr ""
+
+#: historymodel.cpp:287
+#, fuzzy, kde-format
+#| msgid "Save clipboard contents on e&xit"
+msgid "Keep Starred Items"
+msgstr "Enrollañ endalc'had ar golver pa gui&ttat"
+
+#: historymodel.cpp:304
+#, fuzzy, kde-format
+#| msgid "C&lear Clipboard History"
+msgid "Do you really want to clear and delete the entire clipboard history?"
+msgstr "Gou&llonderiñ istorig ar golver"
+
+#: historymodel.cpp:383
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
+msgstr ""
+
+#: historymodel.cpp:559
+#, kde-format
+msgid "This item is starred. Do you really want to remove it from history?"
+msgstr ""
+
+#: historymodel.cpp:560
+#, kde-format
+msgid "Remove Starred Item"
 msgstr ""
 
 #: klipper.cpp:91
@@ -936,16 +984,8 @@ msgstr "&Nullañ"
 #~ msgid "&Configure Klipper…"
 #~ msgstr "&Kefluniañ Klipper ..."
 
-#, fuzzy
-#~| msgid "Save clipboard contents on e&xit"
-#~ msgid "Clipboard Items"
-#~ msgstr "Enrollañ endalc'had ar golver pa gui&ttat"
-
 #~ msgid "&More"
 #~ msgstr "&Mui"
-
-#~ msgid "Start"
-#~ msgstr "Loc'hañ"
 
 #~ msgid "Do Not Start"
 #~ msgstr "Ne loc'hit ket"

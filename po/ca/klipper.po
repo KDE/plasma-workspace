@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-20 00:44+0000\n"
+"POT-Creation-Date: 2025-08-30 00:44+0000\n"
 "PO-Revision-Date: 2025-06-25 16:56+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -384,52 +384,74 @@ msgstr ""
 msgid "Creating QR code failed"
 msgstr "Ha fallat la creació del codi QR"
 
-#: declarative/qml/ClipboardItemDelegate.qml:180
+#: declarative/qml/ClipboardItemDelegate.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
 msgstr "Redueix"
 
-#: declarative/qml/ClipboardItemDelegate.qml:180
+#: declarative/qml/ClipboardItemDelegate.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
 msgstr "Expandeix"
 
-#: declarative/qml/ClipboardMenu.qml:192
+#: declarative/qml/ClipboardMenu.qml:269
 #, kde-format
 msgid "Clear History"
 msgstr "Neteja l'historial"
 
-#: declarative/qml/ClipboardMenu.qml:302
+#: declarative/qml/ClipboardMenu.qml:324
+#, fuzzy, kde-format
+#| msgid "Clear History"
+msgid "All History"
+msgstr "Neteja l'historial"
+
+#: declarative/qml/ClipboardMenu.qml:328
+#, kde-format
+msgid "Starred Only"
+msgstr ""
+
+#: declarative/qml/ClipboardMenu.qml:434
 #, kde-format
 msgid "No matches"
 msgstr "Sense coincidències"
 
-#: declarative/qml/ClipboardMenu.qml:302
+#: declarative/qml/ClipboardMenu.qml:434
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "El porta-retalls està buit"
 
-#: declarative/qml/DelegateToolButtons.qml:31
-#, kde-format
-msgid "Edit contents"
-msgstr "Edita el contingut"
-
-#: declarative/qml/DelegateToolButtons.qml:32
+#: declarative/qml/DelegateToolButtons.qml:37
 #, kde-format
 msgid "Invoke action"
 msgstr "Invoca una acció"
 
-#: declarative/qml/DelegateToolButtons.qml:33
+#: declarative/qml/DelegateToolButtons.qml:42
 #, kde-format
 msgid "Show QR code"
 msgstr "Mostra el codi QR"
 
-#: declarative/qml/DelegateToolButtons.qml:34
+#: declarative/qml/DelegateToolButtons.qml:47
+#, kde-format
+msgid "Edit contents"
+msgstr "Edita el contingut"
+
+#: declarative/qml/DelegateToolButtons.qml:53
 #, kde-format
 msgid "Remove from history"
 msgstr "Elimina de l'historial"
+
+#: declarative/qml/DelegateToolButtons.qml:58
+#, fuzzy, kde-format
+#| msgid "Remove from history"
+msgid "Remove Star"
+msgstr "Elimina de l'historial"
+
+#: declarative/qml/DelegateToolButtons.qml:58
+#, kde-format
+msgid "Star"
+msgstr ""
 
 #: declarative/qml/EditPage.qml:64
 #, kde-format
@@ -649,21 +671,48 @@ msgstr "Reinicia la icona al valor predeterminat per a l'ordre"
 msgid "Icon:"
 msgstr "Icona:"
 
-#: historymodel.cpp:212
-#, kde-format
-msgid "Do you really want to clear and delete the entire clipboard history?"
-msgstr "Realment voleu netejar i suprimir tot l'historial del porta-retalls?"
+#: historymodel.cpp:284
+#, fuzzy, kde-format
+#| msgid "The clipboard history will store up to this many items."
+msgid "The clipboard history contains starred items. Clear them too?"
+msgstr ""
+"L'historial del porta-retalls emmagatzemarà aquesta quantitat d'elements."
 
-#: historymodel.cpp:213
+#: historymodel.cpp:285 historymodel.cpp:305
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Neteja l'historial del porta-retalls"
 
-#: historymodel.cpp:262
+#: historymodel.cpp:286
+#, kde-format
+msgid "Clear Everything"
+msgstr ""
+
+#: historymodel.cpp:287
+#, kde-format
+msgid "Keep Starred Items"
+msgstr ""
+
+#: historymodel.cpp:304
+#, kde-format
+msgid "Do you really want to clear and delete the entire clipboard history?"
+msgstr "Realment voleu netejar i suprimir tot l'historial del porta-retalls?"
+
+#: historymodel.cpp:383
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
+
+#: historymodel.cpp:559
+#, kde-format
+msgid "This item is starred. Do you really want to remove it from history?"
+msgstr ""
+
+#: historymodel.cpp:560
+#, kde-format
+msgid "Remove Starred Item"
+msgstr ""
 
 #: klipper.cpp:91
 #, kde-format

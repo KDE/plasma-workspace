@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-20 00:44+0000\n"
+"POT-Creation-Date: 2025-08-30 00:44+0000\n"
 "PO-Revision-Date: 2012-06-14 13:47+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer\n"
@@ -359,58 +359,81 @@ msgstr ""
 msgid "Creating QR code failed"
 msgstr ""
 
-#: declarative/qml/ClipboardItemDelegate.qml:180
+#: declarative/qml/ClipboardItemDelegate.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
 msgstr ""
 
-#: declarative/qml/ClipboardItemDelegate.qml:180
+#: declarative/qml/ClipboardItemDelegate.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:192
+#: declarative/qml/ClipboardMenu.qml:269
 #, fuzzy, kde-format
 #| msgid "Clipboard history"
 msgid "Clear History"
 msgstr "ប្រវត្តិ​ក្ដារតម្បៀតខ្ទាស់"
 
-#: declarative/qml/ClipboardMenu.qml:302
+#: declarative/qml/ClipboardMenu.qml:324
+#, fuzzy, kde-format
+#| msgid "Clipboard history"
+msgid "All History"
+msgstr "ប្រវត្តិ​ក្ដារតម្បៀតខ្ទាស់"
+
+#: declarative/qml/ClipboardMenu.qml:328
+#, kde-format
+msgid "Starred Only"
+msgstr ""
+
+#: declarative/qml/ClipboardMenu.qml:434
 #, fuzzy, kde-format
 #| msgid "<no matches>"
 msgid "No matches"
 msgstr "<គ្មាន​ដំណូច>"
 
-#: declarative/qml/ClipboardMenu.qml:302
+#: declarative/qml/ClipboardMenu.qml:434
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "រវត្តិ​​ក្ដារ​តម្បៀត​ទទេ​ខ្ទាស់"
 
-#: declarative/qml/DelegateToolButtons.qml:31
-#, fuzzy, kde-format
-#| msgid "Edit Contents"
-msgid "Edit contents"
-msgstr "កែ​សម្រួល​មាតិកា"
-
-#: declarative/qml/DelegateToolButtons.qml:32
+#: declarative/qml/DelegateToolButtons.qml:37
 #, fuzzy, kde-format
 #| msgid "Ignore Selection"
 msgid "Invoke action"
 msgstr "មិន​អើពើនឹង​​ការ​ជ្រើស​រើស"
 
-#: declarative/qml/DelegateToolButtons.qml:33
+#: declarative/qml/DelegateToolButtons.qml:42
 #, fuzzy, kde-format
 #| msgid "&Show Barcode..."
 msgid "Show QR code"
 msgstr "បង្ហាញ​កូដ​ផលិតផល..."
 
-#: declarative/qml/DelegateToolButtons.qml:34
+#: declarative/qml/DelegateToolButtons.qml:47
+#, fuzzy, kde-format
+#| msgid "Edit Contents"
+msgid "Edit contents"
+msgstr "កែ​សម្រួល​មាតិកា"
+
+#: declarative/qml/DelegateToolButtons.qml:53
 #, fuzzy, kde-format
 #| msgid "Replay actions on an item selected from history"
 msgid "Remove from history"
 msgstr "ចាក់​សកម្មភាព​នៅពេល​ដែល​​បានជ្រើស​ធាតុ​ពី​ប្រវត្តិ"
+
+#: declarative/qml/DelegateToolButtons.qml:58
+#, fuzzy, kde-format
+#| msgid "Replay actions on an item selected from history"
+msgid "Remove Star"
+msgstr "ចាក់​សកម្មភាព​នៅពេល​ដែល​​បានជ្រើស​ធាតុ​ពី​ប្រវត្តិ"
+
+#: declarative/qml/DelegateToolButtons.qml:58
+#, fuzzy, kde-format
+#| msgid "Start"
+msgid "Star"
+msgstr "ចាប់ផ្ដើម"
 
 #: declarative/qml/EditPage.qml:64
 #, kde-format
@@ -621,22 +644,48 @@ msgstr ""
 msgid "Icon:"
 msgstr ""
 
-#: historymodel.cpp:212
-#, fuzzy, kde-format
-#| msgid "Really delete entire clipboard history?"
-msgid "Do you really want to clear and delete the entire clipboard history?"
-msgstr "ពិតជា​លុប​ប្រវត្តិ​ក្ដារតម្បៀតខ្ទាស់​ទាំង​​អស់​ឬ ?"
+#: historymodel.cpp:284
+#, kde-format
+msgid "The clipboard history contains starred items. Clear them too?"
+msgstr ""
 
-#: historymodel.cpp:213
+#: historymodel.cpp:285 historymodel.cpp:305
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Clear Clipboard History"
 msgstr "ជម្រះ​ប្រវត្តិ​ក្ដារ​តម្បៀត​ខ្ទាស់"
 
-#: historymodel.cpp:262
+#: historymodel.cpp:286
+#, kde-format
+msgid "Clear Everything"
+msgstr ""
+
+#: historymodel.cpp:287
+#, fuzzy, kde-format
+#| msgid "Clipboard Contents"
+msgid "Keep Starred Items"
+msgstr "​​មាតិកា​ក្ដារតម្បៀត​ខ្ទាស់"
+
+#: historymodel.cpp:304
+#, fuzzy, kde-format
+#| msgid "Really delete entire clipboard history?"
+msgid "Do you really want to clear and delete the entire clipboard history?"
+msgstr "ពិតជា​លុប​ប្រវត្តិ​ក្ដារតម្បៀតខ្ទាស់​ទាំង​​អស់​ឬ ?"
+
+#: historymodel.cpp:383
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
+msgstr ""
+
+#: historymodel.cpp:559
+#, kde-format
+msgid "This item is starred. Do you really want to remove it from history?"
+msgstr ""
+
+#: historymodel.cpp:560
+#, kde-format
+msgid "Remove Starred Item"
 msgstr ""
 
 #: klipper.cpp:91
@@ -943,11 +992,6 @@ msgstr "បោះបង់​"
 #~ msgstr "មិន​អនុញ្ញាត​ការ​លេច​ឡើង​នេះ"
 
 #, fuzzy
-#~| msgid "Clipboard Contents"
-#~ msgid "Clipboard Items"
-#~ msgstr "​​មាតិកា​ក្ដារតម្បៀត​ខ្ទាស់"
-
-#, fuzzy
 #~| msgid "Regular expression:"
 #~ msgid "Invalid regular expression, %1"
 #~ msgstr "កន្សោម​ធម្មតា ៖"
@@ -960,9 +1004,6 @@ msgstr "បោះបង់​"
 
 #~ msgid "Automatically Start Klipper?"
 #~ msgstr "ចាប់​ផ្ដើម Klipper ដោយ​​ស្វ័យ​ប្រវត្តិ?"
-
-#~ msgid "Start"
-#~ msgstr "ចាប់ផ្ដើម"
 
 #~ msgid "Do Not Start"
 #~ msgstr "កុំ​ចាប់ផ្ដើម"

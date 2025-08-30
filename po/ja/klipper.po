@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-20 00:44+0000\n"
+"POT-Creation-Date: 2025-08-30 00:44+0000\n"
 "PO-Revision-Date: 2010-09-25 16:37-0700\n"
 "Last-Translator: Fumiaki Okushi <okushi@kde.gr.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -373,57 +373,80 @@ msgstr ""
 msgid "Creating QR code failed"
 msgstr ""
 
-#: declarative/qml/ClipboardItemDelegate.qml:180
+#: declarative/qml/ClipboardItemDelegate.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
 msgstr ""
 
-#: declarative/qml/ClipboardItemDelegate.qml:180
+#: declarative/qml/ClipboardItemDelegate.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:192
+#: declarative/qml/ClipboardMenu.qml:269
 #, fuzzy, kde-format
 #| msgid "Clipboard history"
 msgid "Clear History"
 msgstr "クリップボードの履歴"
 
-#: declarative/qml/ClipboardMenu.qml:302
+#: declarative/qml/ClipboardMenu.qml:324
+#, fuzzy, kde-format
+#| msgid "Clipboard history"
+msgid "All History"
+msgstr "クリップボードの履歴"
+
+#: declarative/qml/ClipboardMenu.qml:328
+#, kde-format
+msgid "Starred Only"
+msgstr ""
+
+#: declarative/qml/ClipboardMenu.qml:434
 #, fuzzy, kde-format
 #| msgid "<no matches>"
 msgid "No matches"
 msgstr "<一致なし>"
 
-#: declarative/qml/ClipboardMenu.qml:302
+#: declarative/qml/ClipboardMenu.qml:434
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "クリップボードは空です"
 
-#: declarative/qml/DelegateToolButtons.qml:31
-#, kde-format
-msgid "Edit contents"
-msgstr ""
-
-#: declarative/qml/DelegateToolButtons.qml:32
+#: declarative/qml/DelegateToolButtons.qml:37
 #, fuzzy, kde-format
 #| msgid "Enable MIME-based actions"
 msgid "Invoke action"
 msgstr "MIME タイプに基くアクションを有効にする"
 
-#: declarative/qml/DelegateToolButtons.qml:33
+#: declarative/qml/DelegateToolButtons.qml:42
 #, fuzzy, kde-format
 #| msgid "&Show Barcode..."
 msgid "Show QR code"
 msgstr "バーコードを表示する(&S)..."
 
-#: declarative/qml/DelegateToolButtons.qml:34
+#: declarative/qml/DelegateToolButtons.qml:47
+#, kde-format
+msgid "Edit contents"
+msgstr ""
+
+#: declarative/qml/DelegateToolButtons.qml:53
 #, fuzzy, kde-format
 #| msgid "Replay actions on an item selected from history"
 msgid "Remove from history"
 msgstr "履歴から選択した項目に対してもアクションを有効にする"
+
+#: declarative/qml/DelegateToolButtons.qml:58
+#, fuzzy, kde-format
+#| msgid "Replay actions on an item selected from history"
+msgid "Remove Star"
+msgstr "履歴から選択した項目に対してもアクションを有効にする"
+
+#: declarative/qml/DelegateToolButtons.qml:58
+#, fuzzy, kde-format
+#| msgid "Start"
+msgid "Star"
+msgstr "開始する"
 
 #: declarative/qml/EditPage.qml:64
 #, kde-format
@@ -634,22 +657,48 @@ msgstr ""
 msgid "Icon:"
 msgstr ""
 
-#: historymodel.cpp:212
-#, fuzzy, kde-format
-#| msgid "Really delete entire clipboard history?"
-msgid "Do you really want to clear and delete the entire clipboard history?"
-msgstr "本当にクリップボードの全履歴を消去しますか？"
+#: historymodel.cpp:284
+#, kde-format
+msgid "The clipboard history contains starred items. Clear them too?"
+msgstr ""
 
-#: historymodel.cpp:213
+#: historymodel.cpp:285 historymodel.cpp:305
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Clear Clipboard History"
 msgstr "クリップボードの履歴を消去(&L)"
 
-#: historymodel.cpp:262
+#: historymodel.cpp:286
+#, kde-format
+msgid "Clear Everything"
+msgstr ""
+
+#: historymodel.cpp:287
+#, fuzzy, kde-format
+#| msgid "Clipboard Contents"
+msgid "Keep Starred Items"
+msgstr "クリップボードの内容"
+
+#: historymodel.cpp:304
+#, fuzzy, kde-format
+#| msgid "Really delete entire clipboard history?"
+msgid "Do you really want to clear and delete the entire clipboard history?"
+msgstr "本当にクリップボードの全履歴を消去しますか？"
+
+#: historymodel.cpp:383
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
+msgstr ""
+
+#: historymodel.cpp:559
+#, kde-format
+msgid "This item is starred. Do you really want to remove it from history?"
+msgstr ""
+
+#: historymodel.cpp:560
+#, kde-format
+msgid "Remove Starred Item"
 msgstr ""
 
 #: klipper.cpp:91
@@ -954,11 +1003,6 @@ msgstr "キャンセル(&C)"
 #~ msgstr "このポップアップを無効にする"
 
 #, fuzzy
-#~| msgid "Clipboard Contents"
-#~ msgid "Clipboard Items"
-#~ msgstr "クリップボードの内容"
-
-#, fuzzy
 #~| msgid "Regular expression:"
 #~ msgid "Invalid regular expression, %1"
 #~ msgstr "正規表現:"
@@ -971,9 +1015,6 @@ msgstr "キャンセル(&C)"
 
 #~ msgid "Automatically Start Klipper?"
 #~ msgstr "Klipper を自動的に開始しますか？"
-
-#~ msgid "Start"
-#~ msgstr "開始する"
 
 #~ msgid "Do Not Start"
 #~ msgstr "開始しない"

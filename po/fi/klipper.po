@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-20 00:44+0000\n"
+"POT-Creation-Date: 2025-08-30 00:44+0000\n"
 "PO-Revision-Date: 2025-07-13 23:10+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -385,52 +385,75 @@ msgstr ""
 msgid "Creating QR code failed"
 msgstr "QR-koodin luominen epäonnistui"
 
-#: declarative/qml/ClipboardItemDelegate.qml:180
+#: declarative/qml/ClipboardItemDelegate.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
 msgstr "Supista"
 
-#: declarative/qml/ClipboardItemDelegate.qml:180
+#: declarative/qml/ClipboardItemDelegate.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
 msgstr "Laajenna"
 
-#: declarative/qml/ClipboardMenu.qml:192
+#: declarative/qml/ClipboardMenu.qml:269
 #, kde-format
 msgid "Clear History"
 msgstr "Tyhjennä historia"
 
-#: declarative/qml/ClipboardMenu.qml:302
+#: declarative/qml/ClipboardMenu.qml:324
+#, fuzzy, kde-format
+#| msgid "Clear History"
+msgid "All History"
+msgstr "Tyhjennä historia"
+
+#: declarative/qml/ClipboardMenu.qml:328
+#, kde-format
+msgid "Starred Only"
+msgstr ""
+
+#: declarative/qml/ClipboardMenu.qml:434
 #, kde-format
 msgid "No matches"
 msgstr "Ei osumia"
 
-#: declarative/qml/ClipboardMenu.qml:302
+#: declarative/qml/ClipboardMenu.qml:434
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Leikepöytä on tyhjä"
 
-#: declarative/qml/DelegateToolButtons.qml:31
-#, kde-format
-msgid "Edit contents"
-msgstr "Muokkaa sisältöä"
-
-#: declarative/qml/DelegateToolButtons.qml:32
+#: declarative/qml/DelegateToolButtons.qml:37
 #, kde-format
 msgid "Invoke action"
 msgstr "Kutsu toimintoa"
 
-#: declarative/qml/DelegateToolButtons.qml:33
+#: declarative/qml/DelegateToolButtons.qml:42
 #, kde-format
 msgid "Show QR code"
 msgstr "Näytä QR-koodi"
 
-#: declarative/qml/DelegateToolButtons.qml:34
+#: declarative/qml/DelegateToolButtons.qml:47
+#, kde-format
+msgid "Edit contents"
+msgstr "Muokkaa sisältöä"
+
+#: declarative/qml/DelegateToolButtons.qml:53
 #, kde-format
 msgid "Remove from history"
 msgstr "Poista historiasta"
+
+#: declarative/qml/DelegateToolButtons.qml:58
+#, fuzzy, kde-format
+#| msgid "Remove from history"
+msgid "Remove Star"
+msgstr "Poista historiasta"
+
+#: declarative/qml/DelegateToolButtons.qml:58
+#, fuzzy, kde-format
+#| msgid "Start"
+msgid "Star"
+msgstr "Käynnistä"
 
 #: declarative/qml/EditPage.qml:64
 #, kde-format
@@ -648,21 +671,48 @@ msgstr "Palauta komennon kuvake oletuksekseen"
 msgid "Icon:"
 msgstr "Kuvake:"
 
-#: historymodel.cpp:212
-#, kde-format
-msgid "Do you really want to clear and delete the entire clipboard history?"
-msgstr "Haluatko varmasti tyhjentää ja poistaa leikepöydän koko historian?"
+#: historymodel.cpp:284
+#, fuzzy, kde-format
+#| msgid "The clipboard history will store up to this many items."
+msgid "The clipboard history contains starred items. Clear them too?"
+msgstr "Leikepöytähistoria tallentaa enintään näin monta tietuetta."
 
-#: historymodel.cpp:213
+#: historymodel.cpp:285 historymodel.cpp:305
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Tyhjennä leikepöydän historia"
 
-#: historymodel.cpp:262
+#: historymodel.cpp:286
+#, kde-format
+msgid "Clear Everything"
+msgstr ""
+
+#: historymodel.cpp:287
+#, fuzzy, kde-format
+#| msgid "Clipboard Items"
+msgid "Keep Starred Items"
+msgstr "Leikepöydän sisältö"
+
+#: historymodel.cpp:304
+#, kde-format
+msgid "Do you really want to clear and delete the entire clipboard history?"
+msgstr "Haluatko varmasti tyhjentää ja poistaa leikepöydän koko historian?"
+
+#: historymodel.cpp:383
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1 x %2"
+
+#: historymodel.cpp:559
+#, kde-format
+msgid "This item is starred. Do you really want to remove it from history?"
+msgstr ""
+
+#: historymodel.cpp:560
+#, kde-format
+msgid "Remove Starred Item"
+msgstr ""
 
 #: klipper.cpp:91
 #, kde-format
@@ -972,9 +1022,6 @@ msgstr "&Peru"
 #~ msgid "Disable This Popup"
 #~ msgstr "Älä näytä tätä ponnahdusikkunaa"
 
-#~ msgid "Clipboard Items"
-#~ msgstr "Leikepöydän sisältö"
-
 #~ msgid "Search…"
 #~ msgstr "Etsi…"
 
@@ -989,9 +1036,6 @@ msgstr "&Peru"
 
 #~ msgid "Automatically Start Klipper?"
 #~ msgstr "Käynnistä Klipper automaattisesti?"
-
-#~ msgid "Start"
-#~ msgstr "Käynnistä"
 
 #~ msgid "Do Not Start"
 #~ msgstr "Älä käynnistä"

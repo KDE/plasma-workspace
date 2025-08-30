@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper-gu\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-20 00:44+0000\n"
+"POT-Creation-Date: 2025-08-30 00:44+0000\n"
 "PO-Revision-Date: 2009-04-07 22:47+0530\n"
 "Last-Translator: Kartik Mistry <kartik.mistry@gmail.com>\n"
 "Language-Team: Gujarati <kde-i18n-doc@kde.org>\n"
@@ -363,58 +363,81 @@ msgstr ""
 msgid "Creating QR code failed"
 msgstr ""
 
-#: declarative/qml/ClipboardItemDelegate.qml:180
+#: declarative/qml/ClipboardItemDelegate.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
 msgstr ""
 
-#: declarative/qml/ClipboardItemDelegate.qml:180
+#: declarative/qml/ClipboardItemDelegate.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:192
+#: declarative/qml/ClipboardMenu.qml:269
 #, fuzzy, kde-format
 #| msgid "Clipboard history size"
 msgid "Clear History"
 msgstr "ક્લિપબોર્ડ ઇતિહાસ માપ"
 
-#: declarative/qml/ClipboardMenu.qml:302
+#: declarative/qml/ClipboardMenu.qml:324
+#, fuzzy, kde-format
+#| msgid "Clipboard history size"
+msgid "All History"
+msgstr "ક્લિપબોર્ડ ઇતિહાસ માપ"
+
+#: declarative/qml/ClipboardMenu.qml:328
+#, kde-format
+msgid "Starred Only"
+msgstr ""
+
+#: declarative/qml/ClipboardMenu.qml:434
 #, fuzzy, kde-format
 #| msgid "<no matches>"
 msgid "No matches"
 msgstr "<કોઇ સરખું મળ્યું નહી>"
 
-#: declarative/qml/ClipboardMenu.qml:302
+#: declarative/qml/ClipboardMenu.qml:434
 #, fuzzy, kde-format
 #| msgid "Clipboard history size"
 msgid "Clipboard is empty"
 msgstr "ક્લિપબોર્ડ ઇતિહાસ માપ"
 
-#: declarative/qml/DelegateToolButtons.qml:31
-#, fuzzy, kde-format
-#| msgid "Edit Contents"
-msgid "Edit contents"
-msgstr "વિગતો ફેરફાર કરો"
-
-#: declarative/qml/DelegateToolButtons.qml:32
+#: declarative/qml/DelegateToolButtons.qml:37
 #, fuzzy, kde-format
 #| msgid "<new action>"
 msgid "Invoke action"
 msgstr "<નવી ક્રિયા>"
 
-#: declarative/qml/DelegateToolButtons.qml:33
+#: declarative/qml/DelegateToolButtons.qml:42
 #, kde-format
 msgid "Show QR code"
 msgstr ""
 
-#: declarative/qml/DelegateToolButtons.qml:34
+#: declarative/qml/DelegateToolButtons.qml:47
+#, fuzzy, kde-format
+#| msgid "Edit Contents"
+msgid "Edit contents"
+msgstr "વિગતો ફેરફાર કરો"
+
+#: declarative/qml/DelegateToolButtons.qml:53
 #, fuzzy, kde-format
 #| msgid "Replay action in history"
 msgid "Remove from history"
 msgstr "ઇતિહાસમાં ક્રિયાઓ ફરી ચલાવો"
+
+#: declarative/qml/DelegateToolButtons.qml:58
+#, fuzzy, kde-format
+#| msgid "Replay action in history"
+msgid "Remove Star"
+msgstr "ઇતિહાસમાં ક્રિયાઓ ફરી ચલાવો"
+
+#: declarative/qml/DelegateToolButtons.qml:58
+#, fuzzy, kde-format
+#| msgid "Start"
+msgid "Star"
+msgstr "શરૂ કરો"
 
 #: declarative/qml/EditPage.qml:64
 #, kde-format
@@ -628,22 +651,48 @@ msgstr ""
 msgid "Icon:"
 msgstr ""
 
-#: historymodel.cpp:212
-#, fuzzy, kde-format
-#| msgid "C&lear Clipboard History"
-msgid "Do you really want to clear and delete the entire clipboard history?"
-msgstr "ક્લિપબોર્ડ ઇતિહાસ સાફ કરો (&l)"
+#: historymodel.cpp:284
+#, kde-format
+msgid "The clipboard history contains starred items. Clear them too?"
+msgstr ""
 
-#: historymodel.cpp:213
+#: historymodel.cpp:285 historymodel.cpp:305
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Clear Clipboard History"
 msgstr "ક્લિપબોર્ડ ઇતિહાસ સાફ કરો (&l)"
 
-#: historymodel.cpp:262
+#: historymodel.cpp:286
+#, kde-format
+msgid "Clear Everything"
+msgstr ""
+
+#: historymodel.cpp:287
+#, fuzzy, kde-format
+#| msgid "Keep clipboard contents"
+msgid "Keep Starred Items"
+msgstr "ક્લિપબોર્ડની વિગતો રાખો"
+
+#: historymodel.cpp:304
+#, fuzzy, kde-format
+#| msgid "C&lear Clipboard History"
+msgid "Do you really want to clear and delete the entire clipboard history?"
+msgstr "ક્લિપબોર્ડ ઇતિહાસ સાફ કરો (&l)"
+
+#: historymodel.cpp:383
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
+msgstr ""
+
+#: historymodel.cpp:559
+#, kde-format
+msgid "This item is starred. Do you really want to remove it from history?"
+msgstr ""
+
+#: historymodel.cpp:560
+#, kde-format
+msgid "Remove Starred Item"
 msgstr ""
 
 #: klipper.cpp:91
@@ -949,11 +998,6 @@ msgstr "રદ કરો (&C)"
 #~ msgstr "આ પોપઅપ નિષ્ક્રિય કરો"
 
 #, fuzzy
-#~| msgid "Keep clipboard contents"
-#~ msgid "Clipboard Items"
-#~ msgstr "ક્લિપબોર્ડની વિગતો રાખો"
-
-#, fuzzy
 #~| msgid "Regular Expression:"
 #~ msgid "Invalid regular expression, %1"
 #~ msgstr "રેગ્યુલર એક્સપ્રેશન:"
@@ -966,9 +1010,6 @@ msgstr "રદ કરો (&C)"
 
 #~ msgid "Automatically Start Klipper?"
 #~ msgstr "ક્લિપર આપમેળે શરૂ કરશો?"
-
-#~ msgid "Start"
-#~ msgstr "શરૂ કરો"
 
 #~ msgid "Do Not Start"
 #~ msgstr "શરૂ ન કરો"

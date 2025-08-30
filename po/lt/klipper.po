@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-20 00:44+0000\n"
+"POT-Creation-Date: 2025-08-30 00:44+0000\n"
 "PO-Revision-Date: 2025-08-05 15:46+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
@@ -384,52 +384,75 @@ msgstr ""
 msgid "Creating QR code failed"
 msgstr "Nepavyko sukurti QR kodo"
 
-#: declarative/qml/ClipboardItemDelegate.qml:180
+#: declarative/qml/ClipboardItemDelegate.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
 msgstr "Suskleisti"
 
-#: declarative/qml/ClipboardItemDelegate.qml:180
+#: declarative/qml/ClipboardItemDelegate.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
 msgstr "Išskleisti"
 
-#: declarative/qml/ClipboardMenu.qml:192
+#: declarative/qml/ClipboardMenu.qml:269
 #, kde-format
 msgid "Clear History"
 msgstr "Išvalyti istoriją"
 
-#: declarative/qml/ClipboardMenu.qml:302
+#: declarative/qml/ClipboardMenu.qml:324
+#, fuzzy, kde-format
+#| msgid "Clear History"
+msgid "All History"
+msgstr "Išvalyti istoriją"
+
+#: declarative/qml/ClipboardMenu.qml:328
+#, kde-format
+msgid "Starred Only"
+msgstr ""
+
+#: declarative/qml/ClipboardMenu.qml:434
 #, kde-format
 msgid "No matches"
 msgstr "Nėra atitikmenų"
 
-#: declarative/qml/ClipboardMenu.qml:302
+#: declarative/qml/ClipboardMenu.qml:434
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Iškarpinė tuščia"
 
-#: declarative/qml/DelegateToolButtons.qml:31
-#, kde-format
-msgid "Edit contents"
-msgstr "Taisyti turinį"
-
-#: declarative/qml/DelegateToolButtons.qml:32
+#: declarative/qml/DelegateToolButtons.qml:37
 #, kde-format
 msgid "Invoke action"
 msgstr "Vykdyti veiksmą"
 
-#: declarative/qml/DelegateToolButtons.qml:33
+#: declarative/qml/DelegateToolButtons.qml:42
 #, kde-format
 msgid "Show QR code"
 msgstr "Rodyti QR kodą"
 
-#: declarative/qml/DelegateToolButtons.qml:34
+#: declarative/qml/DelegateToolButtons.qml:47
+#, kde-format
+msgid "Edit contents"
+msgstr "Taisyti turinį"
+
+#: declarative/qml/DelegateToolButtons.qml:53
 #, kde-format
 msgid "Remove from history"
 msgstr "Šalinti iš istorijos"
+
+#: declarative/qml/DelegateToolButtons.qml:58
+#, fuzzy, kde-format
+#| msgid "Remove from history"
+msgid "Remove Star"
+msgstr "Šalinti iš istorijos"
+
+#: declarative/qml/DelegateToolButtons.qml:58
+#, fuzzy, kde-format
+#| msgid "Start"
+msgid "Star"
+msgstr "Paleisti"
 
 #: declarative/qml/EditPage.qml:64
 #, kde-format
@@ -648,21 +671,49 @@ msgstr "Atstatyti komandai skirtą piktogramą į numatytąją"
 msgid "Icon:"
 msgstr "Piktograma:"
 
-#: historymodel.cpp:212
-#, kde-format
-msgid "Do you really want to clear and delete the entire clipboard history?"
-msgstr "Ar tikrai norite išvalyti ir ištrinti visą iškarpinės istoriją?"
+#: historymodel.cpp:284
+#, fuzzy, kde-format
+#| msgid "The clipboard history will store up to this many items."
+msgid "The clipboard history contains starred items. Clear them too?"
+msgstr "Iškarpinės istorijoje bus laikoma štai tiek elementų."
 
-#: historymodel.cpp:213
+#: historymodel.cpp:285 historymodel.cpp:305
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Išvalyti iškarpinės istoriją"
 
-#: historymodel.cpp:262
+#: historymodel.cpp:286
+#, kde-format
+msgid "Clear Everything"
+msgstr ""
+
+#: historymodel.cpp:287
+#, fuzzy, kde-format
+#| msgctxt "%1 is application display name"
+#| msgid "%1 - Clipboard Items"
+msgid "Keep Starred Items"
+msgstr "%1 - Iškarpinės elementai"
+
+#: historymodel.cpp:304
+#, kde-format
+msgid "Do you really want to clear and delete the entire clipboard history?"
+msgstr "Ar tikrai norite išvalyti ir ištrinti visą iškarpinės istoriją?"
+
+#: historymodel.cpp:383
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
+
+#: historymodel.cpp:559
+#, kde-format
+msgid "This item is starred. Do you really want to remove it from history?"
+msgstr ""
+
+#: historymodel.cpp:560
+#, kde-format
+msgid "Remove Starred Item"
+msgstr ""
 
 #: klipper.cpp:91
 #, kde-format
@@ -976,12 +1027,6 @@ msgstr "&Atsisakyti"
 #~ msgid "Disable This Popup"
 #~ msgstr "Išjungti šį iškylantįjį langą"
 
-#, fuzzy
-#~| msgctxt "%1 is application display name"
-#~| msgid "%1 - Clipboard Items"
-#~ msgid "Clipboard Items"
-#~ msgstr "%1 - Iškarpinės elementai"
-
 #~ msgid "Search…"
 #~ msgstr "Ieškoti…"
 
@@ -996,9 +1041,6 @@ msgstr "&Atsisakyti"
 
 #~ msgid "Automatically Start Klipper?"
 #~ msgstr "Automatiškai paleisti Klipper?"
-
-#~ msgid "Start"
-#~ msgstr "Paleisti"
 
 #~ msgid "Do Not Start"
 #~ msgstr "Nepaleisti"

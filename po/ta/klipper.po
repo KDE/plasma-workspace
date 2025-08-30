@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-20 00:44+0000\n"
+"POT-Creation-Date: 2025-08-30 00:44+0000\n"
 "PO-Revision-Date: 2025-07-19 15:10+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -350,52 +350,75 @@ msgstr "QR குறியை காட்ட போதிய இடம் இ�
 msgid "Creating QR code failed"
 msgstr "QR குறியை உருவாக்குவது தோல்வியடைந்தது"
 
-#: declarative/qml/ClipboardItemDelegate.qml:180
+#: declarative/qml/ClipboardItemDelegate.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
 msgstr "சுருக்கு"
 
-#: declarative/qml/ClipboardItemDelegate.qml:180
+#: declarative/qml/ClipboardItemDelegate.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
 msgstr "விரி"
 
-#: declarative/qml/ClipboardMenu.qml:192
+#: declarative/qml/ClipboardMenu.qml:269
 #, kde-format
 msgid "Clear History"
 msgstr "வரலாற்றை காலியாக்கு"
 
-#: declarative/qml/ClipboardMenu.qml:302
+#: declarative/qml/ClipboardMenu.qml:324
+#, fuzzy, kde-format
+#| msgid "Clear History"
+msgid "All History"
+msgstr "வரலாற்றை காலியாக்கு"
+
+#: declarative/qml/ClipboardMenu.qml:328
+#, kde-format
+msgid "Starred Only"
+msgstr ""
+
+#: declarative/qml/ClipboardMenu.qml:434
 #, kde-format
 msgid "No matches"
 msgstr "பொருத்தங்கள் இல்லை"
 
-#: declarative/qml/ClipboardMenu.qml:302
+#: declarative/qml/ClipboardMenu.qml:434
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "பிடிப்புப்பலகை காலியாக உள்ளது"
 
-#: declarative/qml/DelegateToolButtons.qml:31
-#, kde-format
-msgid "Edit contents"
-msgstr "உள்ளடக்கத்தை திருத்து"
-
-#: declarative/qml/DelegateToolButtons.qml:32
+#: declarative/qml/DelegateToolButtons.qml:37
 #, kde-format
 msgid "Invoke action"
 msgstr "செயலை இயக்கு"
 
-#: declarative/qml/DelegateToolButtons.qml:33
+#: declarative/qml/DelegateToolButtons.qml:42
 #, kde-format
 msgid "Show QR code"
 msgstr "QR குறியைக் காட்டு"
 
-#: declarative/qml/DelegateToolButtons.qml:34
+#: declarative/qml/DelegateToolButtons.qml:47
+#, kde-format
+msgid "Edit contents"
+msgstr "உள்ளடக்கத்தை திருத்து"
+
+#: declarative/qml/DelegateToolButtons.qml:53
 #, kde-format
 msgid "Remove from history"
 msgstr "வரலாற்றிலிருந்து நீக்கு"
+
+#: declarative/qml/DelegateToolButtons.qml:58
+#, fuzzy, kde-format
+#| msgid "Remove from history"
+msgid "Remove Star"
+msgstr "வரலாற்றிலிருந்து நீக்கு"
+
+#: declarative/qml/DelegateToolButtons.qml:58
+#, fuzzy, kde-format
+#| msgid "Start"
+msgid "Star"
+msgstr "துவக்கு"
 
 #: declarative/qml/EditPage.qml:64
 #, kde-format
@@ -601,21 +624,48 @@ msgstr "கட்டளைக்கான இயல்பிருப்பு�
 msgid "Icon:"
 msgstr "சின்னம்:"
 
-#: historymodel.cpp:212
-#, kde-format
-msgid "Do you really want to clear and delete the entire clipboard history?"
-msgstr "பிடிப்புப்பலகையின் வரலாற்றை முழுதாக அழிக்க வேண்டுமா?"
+#: historymodel.cpp:284
+#, fuzzy, kde-format
+#| msgid "The clipboard history will store up to this many items."
+msgid "The clipboard history contains starred items. Clear them too?"
+msgstr "பிடிப்புப்பலகையின் வரலாறு இத்தனை உருப்படிகளை கொண்டிருக்கும்."
 
-#: historymodel.cpp:213
+#: historymodel.cpp:285 historymodel.cpp:305
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "பிடிப்புப்பலகையின் வரலாற்றை காலியாக்கு"
 
-#: historymodel.cpp:262
+#: historymodel.cpp:286
+#, kde-format
+msgid "Clear Everything"
+msgstr ""
+
+#: historymodel.cpp:287
+#, fuzzy, kde-format
+#| msgid "Clipboard Items"
+msgid "Keep Starred Items"
+msgstr "பிடிப்புப்பலகையில் உள்ளவை"
+
+#: historymodel.cpp:304
+#, kde-format
+msgid "Do you really want to clear and delete the entire clipboard history?"
+msgstr "பிடிப்புப்பலகையின் வரலாற்றை முழுதாக அழிக்க வேண்டுமா?"
+
+#: historymodel.cpp:383
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
+
+#: historymodel.cpp:559
+#, kde-format
+msgid "This item is starred. Do you really want to remove it from history?"
+msgstr ""
+
+#: historymodel.cpp:560
+#, kde-format
+msgid "Remove Starred Item"
+msgstr ""
 
 #: klipper.cpp:91
 #, kde-format
@@ -925,9 +975,6 @@ msgstr "&ரத்து செய்"
 #~ msgid "Disable This Popup"
 #~ msgstr "இந்த மேல்தோன்றும் துப்பை முடக்கு"
 
-#~ msgid "Clipboard Items"
-#~ msgstr "பிடிப்புப்பலகையில் உள்ளவை"
-
 #~ msgid "Search…"
 #~ msgstr "தேடு…"
 
@@ -942,9 +989,6 @@ msgstr "&ரத்து செய்"
 
 #~ msgid "Automatically Start Klipper?"
 #~ msgstr "க்ளிப்பரை தானாகவே துவக்கலாமா?"
-
-#~ msgid "Start"
-#~ msgstr "துவக்கு"
 
 #~ msgid "Do Not Start"
 #~ msgstr "துவக்காதே"

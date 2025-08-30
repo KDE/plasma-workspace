@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-20 00:44+0000\n"
+"POT-Creation-Date: 2025-08-30 00:44+0000\n"
 "PO-Revision-Date: 2024-10-25 23:34-0500\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
@@ -342,52 +342,75 @@ msgstr ""
 msgid "Creating QR code failed"
 msgstr "QR ਕੋਡ ਬਣਾਉਣਾ ਫੇਲ੍ਹ ਹੈ"
 
-#: declarative/qml/ClipboardItemDelegate.qml:180
+#: declarative/qml/ClipboardItemDelegate.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
 msgstr "ਸਮੇਟੋ"
 
-#: declarative/qml/ClipboardItemDelegate.qml:180
+#: declarative/qml/ClipboardItemDelegate.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
 msgstr "ਫੈਲਾਓ"
 
-#: declarative/qml/ClipboardMenu.qml:192
+#: declarative/qml/ClipboardMenu.qml:269
 #, kde-format
 msgid "Clear History"
 msgstr "ਅਤੀਤ ਨੂੰ ਮਿਟਾਓ"
 
-#: declarative/qml/ClipboardMenu.qml:302
+#: declarative/qml/ClipboardMenu.qml:324
+#, fuzzy, kde-format
+#| msgid "Clear History"
+msgid "All History"
+msgstr "ਅਤੀਤ ਨੂੰ ਮਿਟਾਓ"
+
+#: declarative/qml/ClipboardMenu.qml:328
+#, kde-format
+msgid "Starred Only"
+msgstr ""
+
+#: declarative/qml/ClipboardMenu.qml:434
 #, kde-format
 msgid "No matches"
 msgstr "ਕੋਈ ਮੇਲ ਨਹੀਂ"
 
-#: declarative/qml/ClipboardMenu.qml:302
+#: declarative/qml/ClipboardMenu.qml:434
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "ਕਲਿੱਪਬੋਰਡ ਖਾਲੀ ਹੈ"
 
-#: declarative/qml/DelegateToolButtons.qml:31
-#, kde-format
-msgid "Edit contents"
-msgstr "ਸਮੱਗਰੀਆਂ ਨੂੰ ਸੋਧੋ"
-
-#: declarative/qml/DelegateToolButtons.qml:32
+#: declarative/qml/DelegateToolButtons.qml:37
 #, kde-format
 msgid "Invoke action"
 msgstr "ਸ਼ਾਮਲ ਕਾਰਵਾਈ"
 
-#: declarative/qml/DelegateToolButtons.qml:33
+#: declarative/qml/DelegateToolButtons.qml:42
 #, kde-format
 msgid "Show QR code"
 msgstr "QR ਕੋਡ ਵੇਖਾਓ"
 
-#: declarative/qml/DelegateToolButtons.qml:34
+#: declarative/qml/DelegateToolButtons.qml:47
+#, kde-format
+msgid "Edit contents"
+msgstr "ਸਮੱਗਰੀਆਂ ਨੂੰ ਸੋਧੋ"
+
+#: declarative/qml/DelegateToolButtons.qml:53
 #, kde-format
 msgid "Remove from history"
 msgstr "ਅਤੀਤ ਤੋਂ ਹਟਾਓ"
+
+#: declarative/qml/DelegateToolButtons.qml:58
+#, fuzzy, kde-format
+#| msgid "Remove from history"
+msgid "Remove Star"
+msgstr "ਅਤੀਤ ਤੋਂ ਹਟਾਓ"
+
+#: declarative/qml/DelegateToolButtons.qml:58
+#, fuzzy, kde-format
+#| msgid "Start"
+msgid "Star"
+msgstr "ਸ਼ੁਰੂ"
 
 #: declarative/qml/EditPage.qml:64
 #, kde-format
@@ -590,22 +613,49 @@ msgstr ""
 msgid "Icon:"
 msgstr "ਆਈਕਾਨ:"
 
-#: historymodel.cpp:212
-#, kde-format
-msgid "Do you really want to clear and delete the entire clipboard history?"
-msgstr "ਕੀ ਤੁਸੀਂ ਪੂਰੇ ਕਲਿੱਪਬੋਰਡ ਅਤੀਤ ਨੂੰ ਮਿਟਾਉਣਾ ਅਤੇ ਹਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
+#: historymodel.cpp:284
+#, fuzzy, kde-format
+#| msgid "The clipboard history will store up to this many items."
+msgid "The clipboard history contains starred items. Clear them too?"
+msgstr "ਕਲਿੱਪਬੋਰਡ ਅਤੀਤ ਐਨੀਆਂ ਚੀਜ਼ਾਂ ਨੂੰ ਸੰਭਾਲੇਗਾ।"
 
-#: historymodel.cpp:213
+#: historymodel.cpp:285 historymodel.cpp:305
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "ਕਲਿੱਪਬੋਰਡ ਅਤੀਤ ਨੂੰ ਮਿਟਾਓ"
 
-#: historymodel.cpp:262
+#: historymodel.cpp:286
+#, kde-format
+msgid "Clear Everything"
+msgstr ""
+
+#: historymodel.cpp:287
+#, fuzzy, kde-format
+#| msgid "Clipboard Items"
+msgid "Keep Starred Items"
+msgstr "ਕਲਿੱਪਬੋਰਡ ਚੀਜ਼ਾਂ"
+
+#: historymodel.cpp:304
+#, kde-format
+msgid "Do you really want to clear and delete the entire clipboard history?"
+msgstr "ਕੀ ਤੁਸੀਂ ਪੂਰੇ ਕਲਿੱਪਬੋਰਡ ਅਤੀਤ ਨੂੰ ਮਿਟਾਉਣਾ ਅਤੇ ਹਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
+
+#: historymodel.cpp:383
 #, fuzzy, kde-format
 #| msgid "%1x%2 %3bpp"
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2 %3bpp"
+
+#: historymodel.cpp:559
+#, kde-format
+msgid "This item is starred. Do you really want to remove it from history?"
+msgstr ""
+
+#: historymodel.cpp:560
+#, kde-format
+msgid "Remove Starred Item"
+msgstr ""
 
 #: klipper.cpp:91
 #, kde-format
@@ -889,9 +939,6 @@ msgstr "ਰੱਦ ਕਰੋ(&C)"
 #~ msgid "Disable This Popup"
 #~ msgstr "ਇਹ ਪੋਪਅੱਪ ਅਯੋਗ"
 
-#~ msgid "Clipboard Items"
-#~ msgstr "ਕਲਿੱਪਬੋਰਡ ਚੀਜ਼ਾਂ"
-
 #~ msgid "Search…"
 #~ msgstr "ਖੋਜੋ…"
 
@@ -906,9 +953,6 @@ msgstr "ਰੱਦ ਕਰੋ(&C)"
 
 #~ msgid "Automatically Start Klipper?"
 #~ msgstr "ਕੇਲਿੱਪਰ ਆਟੋਮੈਟਿਕ ਸ਼ੁਰੂ ਕਰਨਾ ਹੈ?"
-
-#~ msgid "Start"
-#~ msgstr "ਸ਼ੁਰੂ"
 
 #~ msgid "Do Not Start"
 #~ msgstr "ਸ਼ੁਰੂ ਨਾ ਕਰੋ"

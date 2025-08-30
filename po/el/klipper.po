@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-20 00:44+0000\n"
+"POT-Creation-Date: 2025-08-30 00:44+0000\n"
 "PO-Revision-Date: 2024-09-19 16:56+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -390,52 +390,75 @@ msgstr ""
 msgid "Creating QR code failed"
 msgstr "Αποτυχία δημιουργίας κώδικα QR"
 
-#: declarative/qml/ClipboardItemDelegate.qml:180
+#: declarative/qml/ClipboardItemDelegate.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
 msgstr ""
 
-#: declarative/qml/ClipboardItemDelegate.qml:180
+#: declarative/qml/ClipboardItemDelegate.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:192
+#: declarative/qml/ClipboardMenu.qml:269
 #, kde-format
 msgid "Clear History"
 msgstr "Εκκαθάριση ιστορικού"
 
-#: declarative/qml/ClipboardMenu.qml:302
+#: declarative/qml/ClipboardMenu.qml:324
+#, fuzzy, kde-format
+#| msgid "Clear History"
+msgid "All History"
+msgstr "Εκκαθάριση ιστορικού"
+
+#: declarative/qml/ClipboardMenu.qml:328
+#, kde-format
+msgid "Starred Only"
+msgstr ""
+
+#: declarative/qml/ClipboardMenu.qml:434
 #, kde-format
 msgid "No matches"
 msgstr "Κανένα αντίστοιχο"
 
-#: declarative/qml/ClipboardMenu.qml:302
+#: declarative/qml/ClipboardMenu.qml:434
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Το πρόχειρο είναι άδειο"
 
-#: declarative/qml/DelegateToolButtons.qml:31
-#, kde-format
-msgid "Edit contents"
-msgstr "Επεξεργασία περιεχομένων"
-
-#: declarative/qml/DelegateToolButtons.qml:32
+#: declarative/qml/DelegateToolButtons.qml:37
 #, kde-format
 msgid "Invoke action"
 msgstr "Ανάκληση δράσης"
 
-#: declarative/qml/DelegateToolButtons.qml:33
+#: declarative/qml/DelegateToolButtons.qml:42
 #, kde-format
 msgid "Show QR code"
 msgstr "Εμφάνιση κώδικα QR"
 
-#: declarative/qml/DelegateToolButtons.qml:34
+#: declarative/qml/DelegateToolButtons.qml:47
+#, kde-format
+msgid "Edit contents"
+msgstr "Επεξεργασία περιεχομένων"
+
+#: declarative/qml/DelegateToolButtons.qml:53
 #, kde-format
 msgid "Remove from history"
 msgstr "Αφαίρεση από το ιστορικό"
+
+#: declarative/qml/DelegateToolButtons.qml:58
+#, fuzzy, kde-format
+#| msgid "Remove from history"
+msgid "Remove Star"
+msgstr "Αφαίρεση από το ιστορικό"
+
+#: declarative/qml/DelegateToolButtons.qml:58
+#, fuzzy, kde-format
+#| msgid "Start"
+msgid "Star"
+msgstr "Εκκίνηση"
 
 #: declarative/qml/EditPage.qml:64
 #, kde-format
@@ -655,24 +678,51 @@ msgstr "Επαναφορά του εικονιδίου στην προεπιλο
 msgid "Icon:"
 msgstr "Εικονίδιο:"
 
-#: historymodel.cpp:212
+#: historymodel.cpp:284
+#, fuzzy, kde-format
+#| msgid "The clipboard history will store up to this many items."
+msgid "The clipboard history contains starred items. Clear them too?"
+msgstr "Το ιστορικό του πρόχειρου θα αποθηκεύσει έως και τόσα αντικείμενα."
+
+#: historymodel.cpp:285 historymodel.cpp:305
+#, kde-format
+msgid "Clear Clipboard History"
+msgstr "Εκκαθάριση ιστορικού πρόχειρου"
+
+#: historymodel.cpp:286
+#, kde-format
+msgid "Clear Everything"
+msgstr ""
+
+#: historymodel.cpp:287
+#, fuzzy, kde-format
+#| msgid "Clipboard Contents"
+msgid "Keep Starred Items"
+msgstr "Περιεχόμενα του προχείρου"
+
+#: historymodel.cpp:304
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr ""
 "Θέλετε πραγματικά να καθαρίσετε και να διαγράψετε ολόκληρο το ιστορικό του "
 "πρόχειρου;"
 
-#: historymodel.cpp:213
-#, kde-format
-msgid "Clear Clipboard History"
-msgstr "Εκκαθάριση ιστορικού πρόχειρου"
-
-#: historymodel.cpp:262
+#: historymodel.cpp:383
 #, fuzzy, kde-format
 #| msgid "%1x%2 %3bpp"
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2 %3bpp"
+
+#: historymodel.cpp:559
+#, kde-format
+msgid "This item is starred. Do you really want to remove it from history?"
+msgstr ""
+
+#: historymodel.cpp:560
+#, kde-format
+msgid "Remove Starred Item"
+msgstr ""
 
 #: klipper.cpp:91
 #, kde-format
@@ -992,11 +1042,6 @@ msgstr "&Ακύρωση"
 #~ msgstr "Απενεργοποίηση αυτού του αναδυόμενου μενού"
 
 #, fuzzy
-#~| msgid "Clipboard Contents"
-#~ msgid "Clipboard Items"
-#~ msgstr "Περιεχόμενα του προχείρου"
-
-#, fuzzy
 #~| msgid "Search..."
 #~ msgid "Search…"
 #~ msgstr "Αναζήτηση…"
@@ -1014,9 +1059,6 @@ msgstr "&Ακύρωση"
 
 #~ msgid "Automatically Start Klipper?"
 #~ msgstr "Αυτόματη εκκίνηση Klipper;"
-
-#~ msgid "Start"
-#~ msgstr "Εκκίνηση"
 
 #~ msgid "Do Not Start"
 #~ msgstr "Να μην εκκινηθεί"

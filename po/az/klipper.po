@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-20 00:44+0000\n"
+"POT-Creation-Date: 2025-08-30 00:44+0000\n"
 "PO-Revision-Date: 2025-04-01 15:05+0400\n"
 "Last-Translator: Khayyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -374,52 +374,75 @@ msgstr "QR kodu göstərmək üçün yer kifayət etmir. Əlavəinin ölçüsün
 msgid "Creating QR code failed"
 msgstr "QR kod yaratmaq mümkün olmadı"
 
-#: declarative/qml/ClipboardItemDelegate.qml:180
+#: declarative/qml/ClipboardItemDelegate.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
 msgstr "Yəğmaq"
 
-#: declarative/qml/ClipboardItemDelegate.qml:180
+#: declarative/qml/ClipboardItemDelegate.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
 msgstr "Genişləndirmək"
 
-#: declarative/qml/ClipboardMenu.qml:192
+#: declarative/qml/ClipboardMenu.qml:269
 #, kde-format
 msgid "Clear History"
 msgstr "Tarixçəni silmək"
 
-#: declarative/qml/ClipboardMenu.qml:302
+#: declarative/qml/ClipboardMenu.qml:324
+#, fuzzy, kde-format
+#| msgid "Clear History"
+msgid "All History"
+msgstr "Tarixçəni silmək"
+
+#: declarative/qml/ClipboardMenu.qml:328
+#, kde-format
+msgid "Starred Only"
+msgstr ""
+
+#: declarative/qml/ClipboardMenu.qml:434
 #, kde-format
 msgid "No matches"
 msgstr "Oxşarları yoxdur"
 
-#: declarative/qml/ClipboardMenu.qml:302
+#: declarative/qml/ClipboardMenu.qml:434
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Mübadilə buferi boşdur"
 
-#: declarative/qml/DelegateToolButtons.qml:31
-#, kde-format
-msgid "Edit contents"
-msgstr "Tərkiblərinə düzəliş etmək"
-
-#: declarative/qml/DelegateToolButtons.qml:32
+#: declarative/qml/DelegateToolButtons.qml:37
 #, kde-format
 msgid "Invoke action"
 msgstr "Əməli çağırmaq"
 
-#: declarative/qml/DelegateToolButtons.qml:33
+#: declarative/qml/DelegateToolButtons.qml:42
 #, kde-format
 msgid "Show QR code"
 msgstr "QR kodu göstərmək"
 
-#: declarative/qml/DelegateToolButtons.qml:34
+#: declarative/qml/DelegateToolButtons.qml:47
+#, kde-format
+msgid "Edit contents"
+msgstr "Tərkiblərinə düzəliş etmək"
+
+#: declarative/qml/DelegateToolButtons.qml:53
 #, kde-format
 msgid "Remove from history"
 msgstr "Tarixçədən silmək"
+
+#: declarative/qml/DelegateToolButtons.qml:58
+#, fuzzy, kde-format
+#| msgid "Remove from history"
+msgid "Remove Star"
+msgstr "Tarixçədən silmək"
+
+#: declarative/qml/DelegateToolButtons.qml:58
+#, fuzzy, kde-format
+#| msgid "Start"
+msgid "Star"
+msgstr "Başlatmaq"
 
 #: declarative/qml/EditPage.qml:64
 #, kde-format
@@ -639,22 +662,49 @@ msgstr "Əmr üçün nişanı standart vəziyyətinə qaytarın"
 msgid "Icon:"
 msgstr "Nişan:"
 
-#: historymodel.cpp:212
+#: historymodel.cpp:284
+#, fuzzy, kde-format
+#| msgid "The clipboard history will store up to this many items."
+msgid "The clipboard history contains starred items. Clear them too?"
+msgstr "Mübadilə yaddaşı tarixçəsində saxlanılacaq elementlərin miqdarı."
+
+#: historymodel.cpp:285 historymodel.cpp:305
+#, kde-format
+msgid "Clear Clipboard History"
+msgstr "Mübadilə yaddaşı tarixçəsini təmizləyin"
+
+#: historymodel.cpp:286
+#, kde-format
+msgid "Clear Everything"
+msgstr ""
+
+#: historymodel.cpp:287
+#, fuzzy, kde-format
+#| msgid "Clipboard Items"
+msgid "Keep Starred Items"
+msgstr "Mübadilə yaddaşı"
+
+#: historymodel.cpp:304
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr ""
 "Siz bütün mübadilə yaddaşı tarixçəsini təmizləmək və silmək istəyirsiniz?"
 
-#: historymodel.cpp:213
-#, kde-format
-msgid "Clear Clipboard History"
-msgstr "Mübadilə yaddaşı tarixçəsini təmizləyin"
-
-#: historymodel.cpp:262
+#: historymodel.cpp:383
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
+
+#: historymodel.cpp:559
+#, kde-format
+msgid "This item is starred. Do you really want to remove it from history?"
+msgstr ""
+
+#: historymodel.cpp:560
+#, kde-format
+msgid "Remove Starred Item"
+msgstr ""
 
 #: klipper.cpp:91
 #, kde-format
@@ -968,9 +1018,6 @@ msgstr "&İmtina etmək"
 #~ msgid "Disable This Popup"
 #~ msgstr "Bu menyu pəncərəsini bağlamaq"
 
-#~ msgid "Clipboard Items"
-#~ msgstr "Mübadilə yaddaşı"
-
 #~ msgid "Search…"
 #~ msgstr "Axtarış..."
 
@@ -985,9 +1032,6 @@ msgstr "&İmtina etmək"
 
 #~ msgid "Automatically Start Klipper?"
 #~ msgstr "Kipper avtomatik başladılsın?"
-
-#~ msgid "Start"
-#~ msgstr "Başlatmaq"
 
 #~ msgid "Do Not Start"
 #~ msgstr "Başlatmamaq"
