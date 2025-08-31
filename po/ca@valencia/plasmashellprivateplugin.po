@@ -176,7 +176,7 @@ msgstr "Filtres"
 #: shellprivate/widgetexplorer/openwidgetassistant.cpp:41
 #, kde-format
 msgid "Select Plasmoid File"
-msgstr "Seleccioneu un fitxer de Plasmoide"
+msgstr "Trieu un fitxer de Plasmoide"
 
 #: shellprivate/widgetexplorer/openwidgetassistant.cpp:65
 #, kde-format

@@ -185,7 +185,7 @@ msgstr "Prop de la icona de la notificació"
 #: package/contents/ui/main.qml:209
 #, kde-format
 msgid "Choose Custom Position…"
-msgstr "Seleccioneu una posició personalitzada…"
+msgstr "Trieu una posició personalitzada…"
 
 #: package/contents/ui/main.qml:218 package/contents/ui/main.qml:234
 #, kde-format
@@ -275,8 +275,8 @@ msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior."
 msgstr ""
-"Seleccioneu una aplicació de la llista per a configurar el seu configuració "
-"de notificacions i el comportament."
+"Trieu una aplicació de la llista per a configurar el seu configuració de "
+"notificacions i el comportament."
 
 #: sourcesmodel.cpp:363
 #, kde-format

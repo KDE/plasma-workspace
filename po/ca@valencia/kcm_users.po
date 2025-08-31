@@ -337,7 +337,7 @@ msgstr "S'ha registrat el dit"
 #: package/contents/ui/FingerprintDialog.qml:209
 #, kde-format
 msgid "Pick a finger to enroll"
-msgstr "Seleccioneu un dit per a registrar"
+msgstr "Trieu un dit per a registrar"
 
 #: package/contents/ui/FingerprintDialog.qml:326
 #, kde-format

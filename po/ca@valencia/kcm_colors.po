@@ -1204,7 +1204,7 @@ msgstr "Personalitzat:"
 #: package/contents/ui/main.qml:273
 #, kde-format
 msgid "Choose custom accent color"
-msgstr "Seleccioneu el color d'accent personalitzat"
+msgstr "Trieu el color d'accent personalitzat"
 
 #: package/contents/ui/main.qml:361
 #, kde-format

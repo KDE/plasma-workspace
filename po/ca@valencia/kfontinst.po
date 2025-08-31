@@ -133,7 +133,7 @@ msgstr "Imprimix la vista prèvia del tipus de lletra"
 #: apps/Viewer.cpp:66
 #, kde-format
 msgid "Select Font to View"
-msgstr "Seleccioneu el tipus de lletra per a visualitzar"
+msgstr "Trieu el tipus de lletra per a visualitzar"
 
 #: apps/Viewer.cpp:109
 #, kde-format
@@ -1143,7 +1143,7 @@ msgstr "Imprimix exemples dels tipus de lletra"
 #: kcmfontinst/PrintDialog.cpp:37
 #, kde-format
 msgid "Select size to print font:"
-msgstr "Seleccioneu la mida per a imprimir el tipus de lletra:"
+msgstr "Trieu la mida per a imprimir el tipus de lletra:"
 
 #: kcmfontinst/PrintDialog.cpp:41
 #, kde-format

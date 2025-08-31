@@ -82,7 +82,7 @@ msgstr "Copia"
 #: package/contents/ui/EditContextMenu.qml:62
 #, kde-format
 msgid "Select All"
-msgstr "Selecciona-ho tot"
+msgstr "Tria-ho tot"
 
 #: package/contents/ui/FullRepresentation.qml:73
 #, kde-format

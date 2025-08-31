@@ -80,7 +80,7 @@ msgstr "Color sòlid"
 #: imagepackage/contents/ui/config.qml:161
 #, kde-format
 msgid "Select Background Color"
-msgstr "Seleccioneu el color de fons"
+msgstr "Trieu el color de fons"
 
 #: imagepackage/contents/ui/config.qml:207
 #, kde-format
