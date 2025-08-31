@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-30 00:44+0000\n"
+"POT-Creation-Date: 2025-08-31 00:44+0000\n"
 "PO-Revision-Date: 2025-07-13 23:10+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -671,45 +671,45 @@ msgstr "Palauta komennon kuvake oletuksekseen"
 msgid "Icon:"
 msgstr "Kuvake:"
 
-#: historymodel.cpp:284
+#: historymodel.cpp:278
 #, fuzzy, kde-format
 #| msgid "The clipboard history will store up to this many items."
 msgid "The clipboard history contains starred items. Clear them too?"
 msgstr "Leikepöytähistoria tallentaa enintään näin monta tietuetta."
 
-#: historymodel.cpp:285 historymodel.cpp:305
+#: historymodel.cpp:279 historymodel.cpp:299
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Tyhjennä leikepöydän historia"
 
-#: historymodel.cpp:286
+#: historymodel.cpp:280
 #, kde-format
 msgid "Clear Everything"
 msgstr ""
 
-#: historymodel.cpp:287
+#: historymodel.cpp:281
 #, fuzzy, kde-format
 #| msgid "Clipboard Items"
 msgid "Keep Starred Items"
 msgstr "Leikepöydän sisältö"
 
-#: historymodel.cpp:304
+#: historymodel.cpp:298
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Haluatko varmasti tyhjentää ja poistaa leikepöydän koko historian?"
 
-#: historymodel.cpp:383
+#: historymodel.cpp:382
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1 x %2"
 
-#: historymodel.cpp:559
+#: historymodel.cpp:562
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 
-#: historymodel.cpp:560
+#: historymodel.cpp:563
 #, kde-format
 msgid "Remove Starred Item"
 msgstr ""

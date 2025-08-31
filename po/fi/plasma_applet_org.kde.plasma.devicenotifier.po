@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-16 00:45+0000\n"
-"PO-Revision-Date: 2025-07-13 23:10+0300\n"
+"POT-Creation-Date: 2025-08-31 00:44+0000\n"
+"PO-Revision-Date: 2025-08-14 18:37+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -24,19 +24,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: actions/checkaction.cpp:74
 #, kde-format
 msgctxt "@action:button check a storageAccess (i.e disk) for error"
 msgid "Check for Errors"
-msgstr ""
+msgstr "Tarkista virheet"
 
 #: actions/mountaction.cpp:103
 #, kde-format
 msgctxt "@action:button Mount a disk without verifying for errors"
 msgid "Mount without verifying"
-msgstr ""
+msgstr "Liitä tarkistamatta"
 
 #: actions/mountaction.cpp:106
 #, kde-format
@@ -68,75 +68,74 @@ msgstr "Irrota"
 msgid "Safely remove"
 msgstr "Poista turvallisesti"
 
-#: devicemessagemonitor_p.cpp:164
+#: devicemessagemonitor_p.cpp:171
 #, kde-format
 msgid "This device has file system errors."
 msgstr "Laitteen tiedostojärjestelmässä on virheitä."
 
-#: devicemessagemonitor_p.cpp:166
-#, fuzzy, kde-format
-#| msgid "This device has file system errors."
+#: devicemessagemonitor_p.cpp:173
+#, kde-format
 msgctxt "@label device is a storage disk"
 msgid "This device has no errors"
-msgstr "Laitteen tiedostojärjestelmässä on virheitä."
+msgstr "Laitteella ei ole virheitä"
 
-#: devicemessagemonitor_p.cpp:169
+#: devicemessagemonitor_p.cpp:176
 #, kde-format
 msgid "Successfully repaired!"
 msgstr "Korjaus onnistui!"
 
-#: devicemessagemonitor_p.cpp:173
+#: devicemessagemonitor_p.cpp:180
 #, kde-format
 msgid "Device Status"
 msgstr "Laitteen tila"
 
-#: devicemessagemonitor_p.cpp:174
+#: devicemessagemonitor_p.cpp:181
 #, kde-format
 msgid "A device can now be safely removed"
 msgstr "Laite voidaan nyt poistaa turvallisesti"
 
-#: devicemessagemonitor_p.cpp:178
+#: devicemessagemonitor_p.cpp:185
 #, kde-format
 msgid "This device can now be safely removed."
 msgstr "Tämä laite voidaan nyt poistaa turvallisesti."
 
-#: devicemessagemonitor_p.cpp:185
+#: devicemessagemonitor_p.cpp:192
 #, kde-format
 msgid "You are not authorized to mount this device."
 msgstr "Sinulla ei ole oikeutta liittää tätä laitetta."
 
-#: devicemessagemonitor_p.cpp:189
+#: devicemessagemonitor_p.cpp:196
 #, kde-format
 msgid "You are not authorized to eject this disc."
 msgstr "Sinulla ei ole oikeutta poistaa tätä levyä."
 
-#: devicemessagemonitor_p.cpp:192
+#: devicemessagemonitor_p.cpp:199
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr "Sinulla ei ole oikeutta poistaa tätä laitetta."
 
-#: devicemessagemonitor_p.cpp:195
+#: devicemessagemonitor_p.cpp:202
 #, kde-format
 msgid "You are not authorized to repair this device."
 msgstr "Sinulla ei ole oikeutta korjata tätä laitetta."
 
-#: devicemessagemonitor_p.cpp:197 devicemessagemonitor_p.cpp:262
+#: devicemessagemonitor_p.cpp:204 devicemessagemonitor_p.cpp:269
 #, kde-format
 msgid "Unknown error type"
 msgstr "Tuntematon virhetyyppi"
 
-#: devicemessagemonitor_p.cpp:201
+#: devicemessagemonitor_p.cpp:208
 #, kde-format
 msgid "Could not mount this device as it is busy."
 msgstr "Tätä laitetta ei voitu liittää, koska se on varattu."
 
-#: devicemessagemonitor_p.cpp:228
+#: devicemessagemonitor_p.cpp:235
 #, kde-format
 msgid "One or more files on this device are open within an application."
 msgstr "Yksi tai useampia laitteen tiedostoista on auki jossain ohjelmassa."
 
-#: devicemessagemonitor_p.cpp:230
+#: devicemessagemonitor_p.cpp:237
 #, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
@@ -146,29 +145,29 @@ msgstr[1] ""
 "Yksi tai useampia laitteen tiedostoista on auki seuraavissa sovelluksissa: "
 "%2."
 
-#: devicemessagemonitor_p.cpp:233
+#: devicemessagemonitor_p.cpp:240
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ", "
 
-#: devicemessagemonitor_p.cpp:251
+#: devicemessagemonitor_p.cpp:258
 #, kde-format
 msgid "Could not mount this device."
 msgstr "Tätä laitetta ei voitu liittää."
 
-#: devicemessagemonitor_p.cpp:255
+#: devicemessagemonitor_p.cpp:262
 #, kde-format
 msgid "Could not eject this disc."
 msgstr "Tätä levyä ei voitu poistaa."
 
-#: devicemessagemonitor_p.cpp:257
+#: devicemessagemonitor_p.cpp:264
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "Tätä laitetta ei voitu poistaa."
 
-#: devicemessagemonitor_p.cpp:260
+#: devicemessagemonitor_p.cpp:267
 #, kde-format
 msgid "Could not repair this device: %1"
 msgstr "Tätä laitetta ei voitu korjata: %1"

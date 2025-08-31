@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-30 00:44+0000\n"
-"PO-Revision-Date: 2025-08-14 13:13+0400\n"
+"POT-Creation-Date: 2025-08-31 00:44+0000\n"
+"PO-Revision-Date: 2025-08-30 19:34+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -397,15 +397,14 @@ msgid "Clear History"
 msgstr "امحُ التاريخ"
 
 #: declarative/qml/ClipboardMenu.qml:324
-#, fuzzy, kde-format
-#| msgid "Clear History"
+#, kde-format
 msgid "All History"
-msgstr "امحُ التاريخ"
+msgstr "كل التأريخ"
 
 #: declarative/qml/ClipboardMenu.qml:328
 #, kde-format
 msgid "Starred Only"
-msgstr ""
+msgstr "المُفضّل فقط"
 
 #: declarative/qml/ClipboardMenu.qml:434
 #, kde-format
@@ -438,16 +437,14 @@ msgid "Remove from history"
 msgstr "أزل من التّاريخ"
 
 #: declarative/qml/DelegateToolButtons.qml:58
-#, fuzzy, kde-format
-#| msgid "Remove from history"
+#, kde-format
 msgid "Remove Star"
-msgstr "أزل من التّاريخ"
+msgstr "أزل المُفضّل"
 
 #: declarative/qml/DelegateToolButtons.qml:58
-#, fuzzy, kde-format
-#| msgid "Start"
+#, kde-format
 msgid "Star"
-msgstr "ابدأ"
+msgstr "النجم"
 
 #: declarative/qml/EditPage.qml:64
 #, kde-format
@@ -662,48 +659,46 @@ msgstr "صفّر الأيقونة إلى الإعداد المبدئي للأم�
 msgid "Icon:"
 msgstr "الأيقونة:"
 
-#: historymodel.cpp:284
-#, fuzzy, kde-format
-#| msgid "The clipboard history will store up to this many items."
+#: historymodel.cpp:278
+#, kde-format
 msgid "The clipboard history contains starred items. Clear them too?"
-msgstr "سوف يحوي محفوظات الحافظة ما يصل إلى هذه العناصر."
+msgstr "يحتوي سجل الحافظة على عناصر مميزة بنجمة. هل تريد مسحها أيضًا؟"
 
-#: historymodel.cpp:285 historymodel.cpp:305
+#: historymodel.cpp:279 historymodel.cpp:299
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "امحُ تاريخ الحافظة"
 
-#: historymodel.cpp:286
+#: historymodel.cpp:280
 #, kde-format
 msgid "Clear Everything"
-msgstr ""
+msgstr "امحُ كلّ شيء"
 
-#: historymodel.cpp:287
-#, fuzzy, kde-format
-#| msgid "Clipboard Items"
+#: historymodel.cpp:281
+#, kde-format
 msgid "Keep Starred Items"
-msgstr " - عناصر الحافظة"
+msgstr "أبقِ على العناصر المُفضّلة"
 
-#: historymodel.cpp:304
+#: historymodel.cpp:298
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "أحقا أمحو وأحذف كامل تاريخ الحافظة؟"
 
-#: historymodel.cpp:383
+#: historymodel.cpp:382
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1×%2"
 
-#: historymodel.cpp:559
+#: historymodel.cpp:562
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
-msgstr ""
+msgstr "هذا العنصر مميز بنجمة. هل تريد حقا إزالته من السجل؟"
 
-#: historymodel.cpp:560
+#: historymodel.cpp:563
 #, kde-format
 msgid "Remove Starred Item"
-msgstr ""
+msgstr "أزل العنصر مُفضّل"
 
 #: klipper.cpp:91
 #, kde-format

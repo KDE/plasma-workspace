@@ -18,15 +18,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-30 00:44+0000\n"
-"PO-Revision-Date: 2025-06-25 11:38+0200\n"
+"POT-Creation-Date: 2025-08-31 00:44+0000\n"
+"PO-Revision-Date: 2025-08-30 11:58+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.04.2\n"
+"X-Generator: Lokalize 25.08.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -408,15 +408,14 @@ msgid "Clear History"
 msgstr "Geschiedenis wissen"
 
 #: declarative/qml/ClipboardMenu.qml:324
-#, fuzzy, kde-format
-#| msgid "Clear History"
+#, kde-format
 msgid "All History"
-msgstr "Geschiedenis wissen"
+msgstr "Gehele geschiedenis"
 
 #: declarative/qml/ClipboardMenu.qml:328
 #, kde-format
 msgid "Starred Only"
-msgstr ""
+msgstr "Alleen met ster"
 
 #: declarative/qml/ClipboardMenu.qml:434
 #, kde-format
@@ -449,16 +448,14 @@ msgid "Remove from history"
 msgstr "Uit geschiedenis verwijderen"
 
 #: declarative/qml/DelegateToolButtons.qml:58
-#, fuzzy, kde-format
-#| msgid "Remove from history"
+#, kde-format
 msgid "Remove Star"
-msgstr "Uit geschiedenis verwijderen"
+msgstr "Ster verwijderen"
 
 #: declarative/qml/DelegateToolButtons.qml:58
-#, fuzzy, kde-format
-#| msgid "Start"
+#, kde-format
 msgid "Star"
-msgstr "Starten"
+msgstr "Ster"
 
 #: declarative/qml/EditPage.qml:64
 #, kde-format
@@ -678,48 +675,47 @@ msgstr "Het pictogram resetten naar de standaard voor het commando"
 msgid "Icon:"
 msgstr "Pictogram:"
 
-#: historymodel.cpp:284
-#, fuzzy, kde-format
-#| msgid "The clipboard history will store up to this many items."
+#: historymodel.cpp:278
+#, kde-format
 msgid "The clipboard history contains starred items. Clear them too?"
-msgstr "De geschiedenis van het klembord zal dit aantal items opslaan."
+msgstr ""
+"De geschiedenis van het klembord heeft items met een ster. Ze nu wissen?"
 
-#: historymodel.cpp:285 historymodel.cpp:305
+#: historymodel.cpp:279 historymodel.cpp:299
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Klembordgeschiedenis wissen"
 
-#: historymodel.cpp:286
+#: historymodel.cpp:280
 #, kde-format
 msgid "Clear Everything"
-msgstr ""
+msgstr "Alles wissen"
 
-#: historymodel.cpp:287
-#, fuzzy, kde-format
-#| msgid "Clipboard Items"
+#: historymodel.cpp:281
+#, kde-format
 msgid "Keep Starred Items"
-msgstr "Klemborditems"
+msgstr "Items met ster behouden"
 
-#: historymodel.cpp:304
+#: historymodel.cpp:298
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Wilt u echt de gehele klembordgeschiedenis wissen en verwijderen?"
 
-#: historymodel.cpp:383
+#: historymodel.cpp:382
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:559
+#: historymodel.cpp:562
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
-msgstr ""
+msgstr "Dit item heeft een ster. Wilt u deze uit de geschiedenis verwijderen?"
 
-#: historymodel.cpp:560
+#: historymodel.cpp:563
 #, kde-format
 msgid "Remove Starred Item"
-msgstr ""
+msgstr "Item met ster verwijderen"
 
 #: klipper.cpp:91
 #, kde-format

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-16 00:45+0000\n"
+"POT-Creation-Date: 2025-08-31 00:44+0000\n"
 "PO-Revision-Date: 2023-02-23 18:21+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -60,105 +60,105 @@ msgstr "イジェクト"
 msgid "Safely remove"
 msgstr "安全に取り外し"
 
-#: devicemessagemonitor_p.cpp:164
+#: devicemessagemonitor_p.cpp:171
 #, kde-format
 msgid "This device has file system errors."
 msgstr ""
 
-#: devicemessagemonitor_p.cpp:166
+#: devicemessagemonitor_p.cpp:173
 #, kde-format
 msgctxt "@label device is a storage disk"
 msgid "This device has no errors"
 msgstr ""
 
-#: devicemessagemonitor_p.cpp:169
+#: devicemessagemonitor_p.cpp:176
 #, kde-format
 msgid "Successfully repaired!"
 msgstr ""
 
-#: devicemessagemonitor_p.cpp:173
+#: devicemessagemonitor_p.cpp:180
 #, kde-format
 msgid "Device Status"
 msgstr ""
 
-#: devicemessagemonitor_p.cpp:174
+#: devicemessagemonitor_p.cpp:181
 #, kde-format
 msgid "A device can now be safely removed"
 msgstr ""
 
-#: devicemessagemonitor_p.cpp:178
+#: devicemessagemonitor_p.cpp:185
 #, kde-format
 msgid "This device can now be safely removed."
 msgstr ""
 
-#: devicemessagemonitor_p.cpp:185
+#: devicemessagemonitor_p.cpp:192
 #, kde-format
 msgid "You are not authorized to mount this device."
 msgstr ""
 
-#: devicemessagemonitor_p.cpp:189
+#: devicemessagemonitor_p.cpp:196
 #, kde-format
 msgid "You are not authorized to eject this disc."
 msgstr ""
 
-#: devicemessagemonitor_p.cpp:192
+#: devicemessagemonitor_p.cpp:199
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr ""
 
-#: devicemessagemonitor_p.cpp:195
+#: devicemessagemonitor_p.cpp:202
 #, fuzzy, kde-format
 #| msgid "Click to safely remove all devices"
 msgid "You are not authorized to repair this device."
 msgstr "クリックしてすべてのデバイスを安全に取り外す"
 
-#: devicemessagemonitor_p.cpp:197 devicemessagemonitor_p.cpp:262
+#: devicemessagemonitor_p.cpp:204 devicemessagemonitor_p.cpp:269
 #, kde-format
 msgid "Unknown error type"
 msgstr ""
 
-#: devicemessagemonitor_p.cpp:201
+#: devicemessagemonitor_p.cpp:208
 #, kde-format
 msgid "Could not mount this device as it is busy."
 msgstr ""
 
-#: devicemessagemonitor_p.cpp:228
+#: devicemessagemonitor_p.cpp:235
 #, kde-format
 msgid "One or more files on this device are open within an application."
 msgstr ""
 
-#: devicemessagemonitor_p.cpp:230
+#: devicemessagemonitor_p.cpp:237
 #, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
 "One or more files on this device are opened in following applications: %2."
 msgstr[0] ""
 
-#: devicemessagemonitor_p.cpp:233
+#: devicemessagemonitor_p.cpp:240
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ""
 
-#: devicemessagemonitor_p.cpp:251
+#: devicemessagemonitor_p.cpp:258
 #, kde-format
 msgid "Could not mount this device."
 msgstr ""
 
-#: devicemessagemonitor_p.cpp:255
+#: devicemessagemonitor_p.cpp:262
 #, kde-format
 msgid "Could not eject this disc."
 msgstr ""
 
-#: devicemessagemonitor_p.cpp:257
+#: devicemessagemonitor_p.cpp:264
 #, fuzzy, kde-format
 #| msgid "Click to safely remove all devices"
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "クリックしてすべてのデバイスを安全に取り外す"
 
-#: devicemessagemonitor_p.cpp:260
+#: devicemessagemonitor_p.cpp:267
 #, fuzzy, kde-format
 #| msgid "Click to safely remove all devices"
 msgid "Could not repair this device: %1"

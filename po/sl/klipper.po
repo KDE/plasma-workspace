@@ -15,8 +15,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-30 00:44+0000\n"
-"PO-Revision-Date: 2025-06-25 06:40+0200\n"
+"POT-Creation-Date: 2025-08-31 00:44+0000\n"
+"PO-Revision-Date: 2025-08-30 09:51+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -26,7 +26,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.7\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -406,15 +406,14 @@ msgid "Clear History"
 msgstr "Počisti zgodovino"
 
 #: declarative/qml/ClipboardMenu.qml:324
-#, fuzzy, kde-format
-#| msgid "Clear History"
+#, kde-format
 msgid "All History"
-msgstr "Počisti zgodovino"
+msgstr "Vso zgodovino"
 
 #: declarative/qml/ClipboardMenu.qml:328
 #, kde-format
 msgid "Starred Only"
-msgstr ""
+msgstr "Samo označeno z zvezdicami"
 
 #: declarative/qml/ClipboardMenu.qml:434
 #, kde-format
@@ -447,16 +446,14 @@ msgid "Remove from history"
 msgstr "Odstrani iz zgodovine"
 
 #: declarative/qml/DelegateToolButtons.qml:58
-#, fuzzy, kde-format
-#| msgid "Remove from history"
+#, kde-format
 msgid "Remove Star"
-msgstr "Odstrani iz zgodovine"
+msgstr "Odstrani zvezdico"
 
 #: declarative/qml/DelegateToolButtons.qml:58
-#, fuzzy, kde-format
-#| msgid "Start"
+#, kde-format
 msgid "Star"
-msgstr "Zaženi"
+msgstr "Zvezdica"
 
 #: declarative/qml/EditPage.qml:64
 #, kde-format
@@ -674,48 +671,47 @@ msgstr "Ponastavi ikono na privzeto za ukaz"
 msgid "Icon:"
 msgstr "Ikona:"
 
-#: historymodel.cpp:284
-#, fuzzy, kde-format
-#| msgid "The clipboard history will store up to this many items."
+#: historymodel.cpp:278
+#, kde-format
 msgid "The clipboard history contains starred items. Clear them too?"
-msgstr "V zgodovini odložišča bo shranjeno največ toliko elementov."
+msgstr "Zgodovina odložišča vsebuje elemente z zvezdico. Naj očistim tudi te?"
 
-#: historymodel.cpp:285 historymodel.cpp:305
+#: historymodel.cpp:279 historymodel.cpp:299
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Počisti zgodovino odložišča"
 
-#: historymodel.cpp:286
+#: historymodel.cpp:280
 #, kde-format
 msgid "Clear Everything"
-msgstr ""
+msgstr "Očisti vse"
 
-#: historymodel.cpp:287
-#, fuzzy, kde-format
-#| msgid "Clipboard Items"
+#: historymodel.cpp:281
+#, kde-format
 msgid "Keep Starred Items"
-msgstr "Predmeti odložišča"
+msgstr "Ohrani elemente z zvezdico"
 
-#: historymodel.cpp:304
+#: historymodel.cpp:298
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Ali res želite očistiti in izbrisati celotno zgodovino odložišča?"
 
-#: historymodel.cpp:383
+#: historymodel.cpp:382
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:559
+#: historymodel.cpp:562
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
+"Ta element je označen z zvezdico. Ali ga res želite odstraniti iz zgodovine?"
 
-#: historymodel.cpp:560
+#: historymodel.cpp:563
 #, kde-format
 msgid "Remove Starred Item"
-msgstr ""
+msgstr "Odstrani element z zvezdico"
 
 #: klipper.cpp:91
 #, kde-format

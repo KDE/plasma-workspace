@@ -13,15 +13,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-30 00:44+0000\n"
-"PO-Revision-Date: 2025-06-25 20:29+0200\n"
+"POT-Creation-Date: 2025-08-31 00:44+0000\n"
+"PO-Revision-Date: 2025-08-30 07:48+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.04.2\n"
+"X-Generator: Lokalize 25.08.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #, kde-format
@@ -401,15 +401,14 @@ msgid "Clear History"
 msgstr "Garbitu historia"
 
 #: declarative/qml/ClipboardMenu.qml:324
-#, fuzzy, kde-format
-#| msgid "Clear History"
+#, kde-format
 msgid "All History"
-msgstr "Garbitu historia"
+msgstr "Historia osoa"
 
 #: declarative/qml/ClipboardMenu.qml:328
 #, kde-format
 msgid "Starred Only"
-msgstr ""
+msgstr "Izardunak bakarrik"
 
 #: declarative/qml/ClipboardMenu.qml:434
 #, kde-format
@@ -442,16 +441,14 @@ msgid "Remove from history"
 msgstr "Kendu historiatik"
 
 #: declarative/qml/DelegateToolButtons.qml:58
-#, fuzzy, kde-format
-#| msgid "Remove from history"
+#, kde-format
 msgid "Remove Star"
-msgstr "Kendu historiatik"
+msgstr "Kendu izarra"
 
 #: declarative/qml/DelegateToolButtons.qml:58
-#, fuzzy, kde-format
-#| msgid "Start"
+#, kde-format
 msgid "Star"
-msgstr "Abiarazi"
+msgstr "Izarra"
 
 #: declarative/qml/EditPage.qml:64
 #, kde-format
@@ -670,48 +667,48 @@ msgstr "Berrezarri komandoaren ikonoa lehenetsitakora"
 msgid "Icon:"
 msgstr "Ikonoa:"
 
-#: historymodel.cpp:284
-#, fuzzy, kde-format
-#| msgid "The clipboard history will store up to this many items."
+#: historymodel.cpp:278
+#, kde-format
 msgid "The clipboard history contains starred items. Clear them too?"
-msgstr "Arbeleko historiak gehienez elementu kopuru hau gordeko du."
+msgstr "Arbeleko historiak elementu izardunak ditu. Haiek ere garbitu?"
 
-#: historymodel.cpp:285 historymodel.cpp:305
+#: historymodel.cpp:279 historymodel.cpp:299
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Garbitu arbeleko historia"
 
-#: historymodel.cpp:286
+#: historymodel.cpp:280
 #, kde-format
 msgid "Clear Everything"
-msgstr ""
+msgstr "Garbitu dena"
 
-#: historymodel.cpp:287
-#, fuzzy, kde-format
-#| msgid "Clipboard Items"
+#: historymodel.cpp:281
+#, kde-format
 msgid "Keep Starred Items"
-msgstr "Arbeleko elementuak"
+msgstr "Mantendu elementu izardunak"
 
-#: historymodel.cpp:304
+#: historymodel.cpp:298
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Benetan garbitu eta ezabatu nahi duzu arbeleko historia osoa?"
 
-#: historymodel.cpp:383
+#: historymodel.cpp:382
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:559
+#: historymodel.cpp:562
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
+"Elementu honek izarra du. Ziur zaude hura historiatik benetan kendu nahi "
+"duzula?"
 
-#: historymodel.cpp:560
+#: historymodel.cpp:563
 #, kde-format
 msgid "Remove Starred Item"
-msgstr ""
+msgstr "Kendu elementu izarduna"
 
 #: klipper.cpp:91
 #, kde-format

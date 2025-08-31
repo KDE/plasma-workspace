@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-16 00:45+0000\n"
+"POT-Creation-Date: 2025-08-31 00:44+0000\n"
 "PO-Revision-Date: 2025-04-18 16:29+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -63,75 +63,75 @@ msgstr "Henda út"
 msgid "Safely remove"
 msgstr "Fjarlæga á öruggan máta"
 
-#: devicemessagemonitor_p.cpp:164
+#: devicemessagemonitor_p.cpp:171
 #, kde-format
 msgid "This device has file system errors."
 msgstr "Það eru skráakerfisvillur á þessu tæki."
 
-#: devicemessagemonitor_p.cpp:166
+#: devicemessagemonitor_p.cpp:173
 #, fuzzy, kde-format
 #| msgid "This device has file system errors."
 msgctxt "@label device is a storage disk"
 msgid "This device has no errors"
 msgstr "Það eru skráakerfisvillur á þessu tæki."
 
-#: devicemessagemonitor_p.cpp:169
+#: devicemessagemonitor_p.cpp:176
 #, kde-format
 msgid "Successfully repaired!"
 msgstr "Tókst að lagfæra!"
 
-#: devicemessagemonitor_p.cpp:173
+#: devicemessagemonitor_p.cpp:180
 #, kde-format
 msgid "Device Status"
 msgstr "Staða tækis"
 
-#: devicemessagemonitor_p.cpp:174
+#: devicemessagemonitor_p.cpp:181
 #, kde-format
 msgid "A device can now be safely removed"
 msgstr "Nú er óhætt að fjarlægja tæki"
 
-#: devicemessagemonitor_p.cpp:178
+#: devicemessagemonitor_p.cpp:185
 #, kde-format
 msgid "This device can now be safely removed."
 msgstr "Nú er óhætt að fjarlægja þetta tæki."
 
-#: devicemessagemonitor_p.cpp:185
+#: devicemessagemonitor_p.cpp:192
 #, kde-format
 msgid "You are not authorized to mount this device."
 msgstr "Þú hefur ekki heimild til að tengjast þessu tæki."
 
-#: devicemessagemonitor_p.cpp:189
+#: devicemessagemonitor_p.cpp:196
 #, kde-format
 msgid "You are not authorized to eject this disc."
 msgstr "Þú hefur ekki heimild til að ýta þessum diski úr."
 
-#: devicemessagemonitor_p.cpp:192
+#: devicemessagemonitor_p.cpp:199
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr "Þú hefur ekki heimild til að fjarlægja þetta tæki."
 
-#: devicemessagemonitor_p.cpp:195
+#: devicemessagemonitor_p.cpp:202
 #, kde-format
 msgid "You are not authorized to repair this device."
 msgstr "Þú hefur ekki heimild til að lagfæra þetta tæki."
 
-#: devicemessagemonitor_p.cpp:197 devicemessagemonitor_p.cpp:262
+#: devicemessagemonitor_p.cpp:204 devicemessagemonitor_p.cpp:269
 #, kde-format
 msgid "Unknown error type"
 msgstr ""
 
-#: devicemessagemonitor_p.cpp:201
+#: devicemessagemonitor_p.cpp:208
 #, kde-format
 msgid "Could not mount this device as it is busy."
 msgstr "Gat ekki tengt þetta tæki því það er upptekið."
 
-#: devicemessagemonitor_p.cpp:228
+#: devicemessagemonitor_p.cpp:235
 #, kde-format
 msgid "One or more files on this device are open within an application."
 msgstr "Ein eða fleiri skrár á þessu tæki eru opnar í forriti."
 
-#: devicemessagemonitor_p.cpp:230
+#: devicemessagemonitor_p.cpp:237
 #, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
@@ -140,29 +140,29 @@ msgstr[0] "Ein eða fleiri skrár á þessu tæki eru opnar í forritinu \"%2\".
 msgstr[1] ""
 "Ein eða fleiri skrár á þessu tæki eru opnar í eftirtöldum forritum: %2."
 
-#: devicemessagemonitor_p.cpp:233
+#: devicemessagemonitor_p.cpp:240
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ", "
 
-#: devicemessagemonitor_p.cpp:251
+#: devicemessagemonitor_p.cpp:258
 #, kde-format
 msgid "Could not mount this device."
 msgstr "Gat ekki tengt þetta tæki."
 
-#: devicemessagemonitor_p.cpp:255
+#: devicemessagemonitor_p.cpp:262
 #, kde-format
 msgid "Could not eject this disc."
 msgstr "Gat ekki ýtt þessum diski úr."
 
-#: devicemessagemonitor_p.cpp:257
+#: devicemessagemonitor_p.cpp:264
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "Gat ekki fjarlægt þetta tæki."
 
-#: devicemessagemonitor_p.cpp:260
+#: devicemessagemonitor_p.cpp:267
 #, kde-format
 msgid "Could not repair this device: %1"
 msgstr "Gat ekki lagfært þetta tæki: %1"

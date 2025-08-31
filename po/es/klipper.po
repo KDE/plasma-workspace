@@ -16,8 +16,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-30 00:44+0000\n"
-"PO-Revision-Date: 2025-06-26 00:45+0100\n"
+"POT-Creation-Date: 2025-08-31 00:44+0000\n"
+"PO-Revision-Date: 2025-08-30 14:45+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "First-Translator: Valux (Manuel Soriano) <manu@europa3.com>\n"
-"X-Generator: Lokalize 25.04.2\n"
+"X-Generator: Lokalize 25.08.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -409,15 +409,14 @@ msgid "Clear History"
 msgstr "Borrar el historial"
 
 #: declarative/qml/ClipboardMenu.qml:324
-#, fuzzy, kde-format
-#| msgid "Clear History"
+#, kde-format
 msgid "All History"
-msgstr "Borrar el historial"
+msgstr "Todo el historial"
 
 #: declarative/qml/ClipboardMenu.qml:328
 #, kde-format
 msgid "Starred Only"
-msgstr ""
+msgstr "Solo favoritos"
 
 #: declarative/qml/ClipboardMenu.qml:434
 #, kde-format
@@ -450,15 +449,14 @@ msgid "Remove from history"
 msgstr "Eliminar del historial"
 
 #: declarative/qml/DelegateToolButtons.qml:58
-#, fuzzy, kde-format
-#| msgid "Remove from history"
+#, kde-format
 msgid "Remove Star"
-msgstr "Eliminar del historial"
+msgstr "No marcar como favorito"
 
 #: declarative/qml/DelegateToolButtons.qml:58
 #, kde-format
 msgid "Star"
-msgstr ""
+msgstr "Marcar como favorito"
 
 #: declarative/qml/EditPage.qml:64
 #, kde-format
@@ -679,47 +677,50 @@ msgstr "Reiniciar el icono al predeterminado para la orden"
 msgid "Icon:"
 msgstr "Icono:"
 
-#: historymodel.cpp:284
-#, fuzzy, kde-format
-#| msgid "The clipboard history will store up to this many items."
+#: historymodel.cpp:278
+#, kde-format
 msgid "The clipboard history contains starred items. Clear them too?"
-msgstr "El historial del portapapeles guardará este número de elementos."
+msgstr ""
+"El historial del portapapeles contiene elementos marcados como favoritos. "
+"¿Se deben borrar también?"
 
-#: historymodel.cpp:285 historymodel.cpp:305
+#: historymodel.cpp:279 historymodel.cpp:299
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Limpiar el historial del portapapeles"
 
-#: historymodel.cpp:286
+#: historymodel.cpp:280
 #, kde-format
 msgid "Clear Everything"
-msgstr ""
+msgstr "Borrar todo"
 
-#: historymodel.cpp:287
+#: historymodel.cpp:281
 #, kde-format
 msgid "Keep Starred Items"
-msgstr ""
+msgstr "Conservar elementos marcados como favoritos"
 
-#: historymodel.cpp:304
+#: historymodel.cpp:298
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "¿Realmente desea limpiar y borrar todo el historial del portapapeles?"
 
-#: historymodel.cpp:383
+#: historymodel.cpp:382
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:559
+#: historymodel.cpp:562
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
+"Este elemento está marcado como favorito. ¿Realmente quiere eliminarlo del "
+"historial?"
 
-#: historymodel.cpp:560
+#: historymodel.cpp:563
 #, kde-format
 msgid "Remove Starred Item"
-msgstr ""
+msgstr "Eliminar elemento marcado como favorito"
 
 #: klipper.cpp:91
 #, kde-format

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-16 00:45+0000\n"
+"POT-Creation-Date: 2025-08-31 00:44+0000\n"
 "PO-Revision-Date: 2011-04-07 10:09+0200\n"
 "Last-Translator: Marko Dimjašević <marko@dimjasevic.net>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -67,75 +67,75 @@ msgstr ""
 msgid "Safely remove"
 msgstr ""
 
-#: devicemessagemonitor_p.cpp:164
+#: devicemessagemonitor_p.cpp:171
 #, kde-format
 msgid "This device has file system errors."
 msgstr ""
 
-#: devicemessagemonitor_p.cpp:166
+#: devicemessagemonitor_p.cpp:173
 #, fuzzy, kde-format
 #| msgid "This device is currently accessible."
 msgctxt "@label device is a storage disk"
 msgid "This device has no errors"
 msgstr "Ovaj je uređaj trenutno dostupan."
 
-#: devicemessagemonitor_p.cpp:169
+#: devicemessagemonitor_p.cpp:176
 #, kde-format
 msgid "Successfully repaired!"
 msgstr ""
 
-#: devicemessagemonitor_p.cpp:173
+#: devicemessagemonitor_p.cpp:180
 #, kde-format
 msgid "Device Status"
 msgstr ""
 
-#: devicemessagemonitor_p.cpp:174
+#: devicemessagemonitor_p.cpp:181
 #, kde-format
 msgid "A device can now be safely removed"
 msgstr ""
 
-#: devicemessagemonitor_p.cpp:178
+#: devicemessagemonitor_p.cpp:185
 #, kde-format
 msgid "This device can now be safely removed."
 msgstr ""
 
-#: devicemessagemonitor_p.cpp:185
+#: devicemessagemonitor_p.cpp:192
 #, fuzzy, kde-format
 #| msgid "Click to unmount this device."
 msgid "You are not authorized to mount this device."
 msgstr "Kliknite kako biste uklonili ovaj uređaj."
 
-#: devicemessagemonitor_p.cpp:189
+#: devicemessagemonitor_p.cpp:196
 #, fuzzy, kde-format
 #| msgid "Click to eject this disc."
 msgid "You are not authorized to eject this disc."
 msgstr "Kliknite kako biste izbacili ovaj disk."
 
-#: devicemessagemonitor_p.cpp:192
+#: devicemessagemonitor_p.cpp:199
 #, fuzzy, kde-format
 #| msgid "It is currently safe to remove this device."
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr "Sada je sigurno ukloniti ovaj uređaj."
 
-#: devicemessagemonitor_p.cpp:195
+#: devicemessagemonitor_p.cpp:202
 #, fuzzy, kde-format
 #| msgid "It is currently safe to remove this device."
 msgid "You are not authorized to repair this device."
 msgstr "Sada je sigurno ukloniti ovaj uređaj."
 
-#: devicemessagemonitor_p.cpp:197 devicemessagemonitor_p.cpp:262
+#: devicemessagemonitor_p.cpp:204 devicemessagemonitor_p.cpp:269
 #, kde-format
 msgid "Unknown error type"
 msgstr ""
 
-#: devicemessagemonitor_p.cpp:201
+#: devicemessagemonitor_p.cpp:208
 #, fuzzy, kde-format
 #| msgid "Could not mount device %1."
 msgid "Could not mount this device as it is busy."
 msgstr "Nije moguće montirati uređaj %1."
 
-#: devicemessagemonitor_p.cpp:228
+#: devicemessagemonitor_p.cpp:235
 #, fuzzy, kde-format
 #| msgid ""
 #| "Cannot eject the disc.\n"
@@ -145,7 +145,7 @@ msgstr ""
 "Ne mogu izbaciti disk.\n"
 "Otvorena je jedna ili više datoteka sa ovog uređaja u nekoj aplikaciji."
 
-#: devicemessagemonitor_p.cpp:230
+#: devicemessagemonitor_p.cpp:237
 #, fuzzy, kde-format
 #| msgid ""
 #| "Could not unmount device %1.\n"
@@ -163,32 +163,32 @@ msgstr[2] ""
 "Nije moguće odmontirati uređaj %1.\n"
 "Otvorena je jedna ili više datoteka s ovog uređaja u nekoj aplikaciji."
 
-#: devicemessagemonitor_p.cpp:233
+#: devicemessagemonitor_p.cpp:240
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ""
 
-#: devicemessagemonitor_p.cpp:251
+#: devicemessagemonitor_p.cpp:258
 #, fuzzy, kde-format
 #| msgid "Could not mount device %1."
 msgid "Could not mount this device."
 msgstr "Nije moguće montirati uređaj %1."
 
-#: devicemessagemonitor_p.cpp:255
+#: devicemessagemonitor_p.cpp:262
 #, fuzzy, kde-format
 #| msgid "Click to eject this disc."
 msgid "Could not eject this disc."
 msgstr "Kliknite kako biste izbacili ovaj disk."
 
-#: devicemessagemonitor_p.cpp:257
+#: devicemessagemonitor_p.cpp:264
 #, fuzzy, kde-format
 #| msgid "Could not mount device %1."
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "Nije moguće montirati uređaj %1."
 
-#: devicemessagemonitor_p.cpp:260
+#: devicemessagemonitor_p.cpp:267
 #, fuzzy, kde-format
 #| msgid "Could not mount device %1."
 msgid "Could not repair this device: %1"
