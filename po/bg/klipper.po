@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-31 00:44+0000\n"
-"PO-Revision-Date: 2025-06-29 20:31+0200\n"
+"PO-Revision-Date: 2025-09-01 00:01+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -397,15 +397,14 @@ msgid "Clear History"
 msgstr "Изчистване на историята"
 
 #: declarative/qml/ClipboardMenu.qml:324
-#, fuzzy, kde-format
-#| msgid "Clear History"
+#, kde-format
 msgid "All History"
-msgstr "Изчистване на историята"
+msgstr "Цялата история"
 
 #: declarative/qml/ClipboardMenu.qml:328
 #, kde-format
 msgid "Starred Only"
-msgstr ""
+msgstr "Само със звезда"
 
 #: declarative/qml/ClipboardMenu.qml:434
 #, kde-format
@@ -438,15 +437,14 @@ msgid "Remove from history"
 msgstr "Премахване от историята"
 
 #: declarative/qml/DelegateToolButtons.qml:58
-#, fuzzy, kde-format
-#| msgid "Remove from history"
+#, kde-format
 msgid "Remove Star"
-msgstr "Премахване от историята"
+msgstr "Премахване на звезда"
 
 #: declarative/qml/DelegateToolButtons.qml:58
 #, kde-format
 msgid "Star"
-msgstr ""
+msgstr "Звезда"
 
 #: declarative/qml/EditPage.qml:64
 #, kde-format
@@ -667,10 +665,10 @@ msgid "Icon:"
 msgstr "Икона:"
 
 #: historymodel.cpp:278
-#, fuzzy, kde-format
-#| msgid "The clipboard history will store up to this many items."
+#, kde-format
 msgid "The clipboard history contains starred items. Clear them too?"
-msgstr "Историята на клипборда ще съхранява елементи до посочения брой."
+msgstr ""
+"Историята на клипборда съдържа елементи със звезда. Да се ​​изчистят ли и те?"
 
 #: historymodel.cpp:279 historymodel.cpp:299
 #, kde-format
@@ -680,12 +678,12 @@ msgstr "&Изчистване историята на клипборда"
 #: historymodel.cpp:280
 #, kde-format
 msgid "Clear Everything"
-msgstr ""
+msgstr "Изчистване на всичко"
 
 #: historymodel.cpp:281
 #, kde-format
 msgid "Keep Starred Items"
-msgstr ""
+msgstr "Запазване на елементи, значени със звезда"
 
 #: historymodel.cpp:298
 #, kde-format
@@ -702,11 +700,13 @@ msgstr "%1x%2"
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
+"Този елемент е маркиран със звезда. Наистина ли искате да го премахнете от "
+"историята?"
 
 #: historymodel.cpp:563
 #, kde-format
 msgid "Remove Starred Item"
-msgstr ""
+msgstr "Премахване на елемент, означен със звезда"
 
 #: klipper.cpp:91
 #, kde-format
