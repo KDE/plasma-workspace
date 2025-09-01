@@ -181,7 +181,7 @@ msgstr "General:"
 #: ui/main.qml:99
 #, kde-format
 msgid "Select general font"
-msgstr "Selecciona la lletra general"
+msgstr "Tria la lletra general"
 
 #: ui/main.qml:110
 #, kde-format
@@ -191,7 +191,7 @@ msgstr "Amplària fixa:"
 #: ui/main.qml:111
 #, kde-format
 msgid "Select fixed width font"
-msgstr "Selecciona la lletra d'amplària fixa"
+msgstr "Tria la lletra d'amplària fixa"
 
 #: ui/main.qml:122
 #, kde-format
@@ -201,7 +201,7 @@ msgstr "Xicoteta:"
 #: ui/main.qml:123
 #, kde-format
 msgid "Select small font"
-msgstr "Selecciona la lletra xicoteta"
+msgstr "Tria la lletra xicoteta"
 
 #: ui/main.qml:134
 #, kde-format
@@ -211,7 +211,7 @@ msgstr "Barra d'eines:"
 #: ui/main.qml:135
 #, kde-format
 msgid "Select toolbar font"
-msgstr "Selecciona la lletra de les barres d'eines"
+msgstr "Tria la lletra de les barres d'eines"
 
 #: ui/main.qml:146
 #, kde-format
@@ -221,7 +221,7 @@ msgstr "Menú:"
 #: ui/main.qml:147
 #, kde-format
 msgid "Select menu font"
-msgstr "Selecciona la lletra dels menús"
+msgstr "Tria la lletra dels menús"
 
 #: ui/main.qml:157
 #, kde-format
@@ -231,7 +231,7 @@ msgstr "Títol de la finestra:"
 #: ui/main.qml:158
 #, kde-format
 msgid "Select window title font"
-msgstr "Selecciona la lletra dels títols de finestra"
+msgstr "Tria la lletra dels títols de finestra"
 
 #: ui/main.qml:173
 #, kde-format
@@ -349,14 +349,3 @@ msgstr ""
 "la mida de la lletra. Per a canviar tot d'escala, utilitzeu el control "
 "lliscant de canvi d'escala a la pàgina <interface>Pantalla i monitor</"
 "interface>.</para>"
-
-#~ msgid "Select Font"
-#~ msgstr "Seleccioneu la lletra"
-
-#~ msgid ""
-#~ "Decimal font sizes can cause text layout problems in some applications. "
-#~ "Consider using only integer font sizes."
-#~ msgstr ""
-#~ "Les mides amb decimals de les lletres poden provocar problemes de "
-#~ "disposició del text en algunes aplicacions. Considereu utilitzar només "
-#~ "mides enteres de lletres."

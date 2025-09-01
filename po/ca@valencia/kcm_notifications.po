@@ -92,7 +92,7 @@ msgstr "Restablix"
 #: ui/ApplicationConfiguration.qml:340
 #, kde-format
 msgid "Choose sound file"
-msgstr "Escolliu un fitxer de so"
+msgstr "Trieu un fitxer de so"
 
 #: ui/main.qml:46
 #, kde-format
@@ -295,5 +295,5 @@ msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior"
 msgstr ""
-"Seleccioneu una aplicació de la llista per a configurar el seu configuració "
-"de notificacions i el comportament"
+"Trieu una aplicació de la llista per a configurar el seu configuració de "
+"notificacions i el comportament"

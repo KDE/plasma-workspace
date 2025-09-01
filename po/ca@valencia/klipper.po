@@ -102,7 +102,7 @@ msgstr "Si les seleccions de text es guarden en l'historial del porta-retalls."
 #: configdialog.cpp:176
 #, kde-format
 msgid "Non-text selection:"
-msgstr "Seleccioneu el no text:"
+msgstr "Selecció de no text:"
 
 #: configdialog.cpp:183
 #, kde-format
@@ -798,7 +798,7 @@ msgstr ""
 #: klipper.kcfg:37
 #, kde-format
 msgid "Text selection only"
-msgstr "Selecciona només el text"
+msgstr "Tria només el text"
 
 #. i18n: ectx: whatsthis, entry (SelectionTextOnly), group (General)
 #: klipper.kcfg:39
@@ -931,8 +931,8 @@ msgid ""
 "If a file name or URL is selected, include applications that can accept its "
 "MIME type in the popup menu."
 msgstr ""
-"Si se selecciona un nom de fitxer o URL, s'inclouen les aplicacions que "
-"poden gestionar el seu tipus MIME en el menú emergent."
+"Si es tria un nom de fitxer o URL, s'inclouen les aplicacions que poden "
+"gestionar el seu tipus MIME en el menú emergent."
 
 #: klipperpopup.cpp:36
 #, kde-format
@@ -943,7 +943,3 @@ msgstr "Menú emergent del porta-retalls"
 #, kde-format
 msgid "&Cancel"
 msgstr "C&ancel·la"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "&Configure Klipper…"
-#~ msgstr "&Configura Klipper…"

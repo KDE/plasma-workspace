@@ -32,62 +32,62 @@ msgstr "Altres…"
 #: components/componentchooserarchivemanager.cpp:15
 #, kde-format
 msgid "Select default archive manager"
-msgstr "Seleccioneu el gestor d'arxius predeterminat"
+msgstr "Trieu el gestor d'arxius predeterminat"
 
 #: components/componentchooserbrowser.cpp:13
 #, kde-format
 msgid "Select default browser"
-msgstr "Seleccioneu el navegador predeterminat"
+msgstr "Trieu el navegador predeterminat"
 
 #: components/componentchooseremail.cpp:20
 #, kde-format
 msgid "Select default e-mail client"
-msgstr "Seleccioneu el client de correu predeterminat"
+msgstr "Trieu el client de correu predeterminat"
 
 #: components/componentchooserfilemanager.cpp:15
 #, kde-format
 msgid "Select default file manager"
-msgstr "Seleccioneu el gestor de fitxers predeterminat"
+msgstr "Trieu el gestor de fitxers predeterminat"
 
 #: components/componentchoosergeo.cpp:13
 #, kde-format
 msgid "Select default map"
-msgstr "Seleccioneu el mapa predeterminat"
+msgstr "Trieu el mapa predeterminat"
 
 #: components/componentchooserimageviewer.cpp:15
 #, kde-format
 msgid "Select default image viewer"
-msgstr "Seleccioneu el visor d'imatges predeterminat"
+msgstr "Trieu el visor d'imatges predeterminat"
 
 #: components/componentchoosermusicplayer.cpp:15
 #, kde-format
 msgid "Select default music player"
-msgstr "Seleccioneu el reproductor musical predeterminat"
+msgstr "Trieu el reproductor musical predeterminat"
 
 #: components/componentchooserpdfviewer.cpp:11
 #, kde-format
 msgid "Select default PDF viewer"
-msgstr "Seleccioneu el visor PDF predeterminat"
+msgstr "Trieu el visor PDF predeterminat"
 
 #: components/componentchoosertel.cpp:17
 #, kde-format
 msgid "Select default dialer application"
-msgstr "Seleccioneu l'aplicació predeterminada de marcatge"
+msgstr "Trieu l'aplicació predeterminada de marcatge"
 
 #: components/componentchooserterminal.cpp:25
 #, kde-format
 msgid "Select default terminal emulator"
-msgstr "Seleccioneu l'aplicació predeterminada de terminal"
+msgstr "Trieu l'aplicació predeterminada de terminal"
 
 #: components/componentchoosertexteditor.cpp:15
 #, kde-format
 msgid "Select default text editor"
-msgstr "Seleccioneu l'editor de text predeterminat"
+msgstr "Trieu l'editor de text predeterminat"
 
 #: components/componentchooservideoplayer.cpp:15
 #, kde-format
 msgid "Select default video player"
-msgstr "Seleccioneu el reproductor de vídeo predeterminat"
+msgstr "Trieu el reproductor de vídeo predeterminat"
 
 #: ui/ComponentOverlay.qml:54
 #, kde-format
