@@ -388,7 +388,7 @@ msgstr "Obtín ginys nous"
 #: shellprivate/widgetexplorer.cpp:513
 #, kde-format
 msgid "Select Plasmoid File"
-msgstr "Seleccioneu un fitxer de Plasmoide"
+msgstr "Trieu un fitxer de Plasmoide"
 
 #: shellprivate/widgetexplorer.cpp:529
 #, kde-format
@@ -433,7 +433,7 @@ msgstr "Regió:"
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
-msgstr "Seleccioneu…"
+msgstr "Trieu…"
 
 #: timezoneselector/TimezoneSelector.qml:252
 #, kde-format

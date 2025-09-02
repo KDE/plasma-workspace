@@ -222,7 +222,7 @@ msgstr "General:"
 #: ui/main.qml:168
 #, kde-format
 msgid "Select general font"
-msgstr "Selecciona la lletra general"
+msgstr "Tria la lletra general"
 
 #: ui/main.qml:179
 #, kde-format
@@ -232,7 +232,7 @@ msgstr "Amplària fixa:"
 #: ui/main.qml:180
 #, kde-format
 msgid "Select fixed width font"
-msgstr "Selecciona la lletra d'amplària fixa"
+msgstr "Tria la lletra d'amplària fixa"
 
 #: ui/main.qml:191
 #, kde-format
@@ -242,7 +242,7 @@ msgstr "Xicoteta:"
 #: ui/main.qml:192
 #, kde-format
 msgid "Select small font"
-msgstr "Selecciona la lletra xicoteta"
+msgstr "Tria la lletra xicoteta"
 
 #: ui/main.qml:203
 #, kde-format
@@ -252,7 +252,7 @@ msgstr "Barra d'eines:"
 #: ui/main.qml:204
 #, kde-format
 msgid "Select toolbar font"
-msgstr "Selecciona la lletra de les barres d'eines"
+msgstr "Tria la lletra de les barres d'eines"
 
 #: ui/main.qml:215
 #, kde-format
@@ -262,7 +262,7 @@ msgstr "Menú:"
 #: ui/main.qml:216
 #, kde-format
 msgid "Select menu font"
-msgstr "Selecciona la lletra dels menús"
+msgstr "Tria la lletra dels menús"
 
 #: ui/main.qml:226
 #, kde-format
@@ -272,7 +272,7 @@ msgstr "Títol de la finestra:"
 #: ui/main.qml:227
 #, kde-format
 msgid "Select window title font"
-msgstr "Selecciona la lletra dels títols de finestra"
+msgstr "Tria la lletra dels títols de finestra"
 
 #: ui/main.qml:242
 #, kde-format

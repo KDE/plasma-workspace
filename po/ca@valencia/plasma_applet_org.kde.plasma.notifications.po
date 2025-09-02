@@ -43,7 +43,7 @@ msgstr "Copia"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Select All"
-msgstr "Selecciona-ho tot"
+msgstr "Tria-ho tot"
 
 #: components/HeadingButtons.qml:76
 #, kde-format

@@ -197,7 +197,7 @@ msgstr "Cancel·la"
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Picture Area"
-msgstr "Seleccioneu un àrea de la imatge"
+msgstr "Trieu un àrea de la imatge"
 
 #: src/ui/EnrolledConfirmation.qml:20
 #, kde-format
@@ -422,7 +422,7 @@ msgstr "Premeu «Espai» per a editar el perfil d'usuari"
 #: src/ui/PickFinger.qml:28
 #, kde-format
 msgid "Pick a finger to enroll"
-msgstr "Seleccioneu un dit per a registrar"
+msgstr "Trieu un dit per a registrar"
 
 #: src/ui/PicturesSheet.qml:18
 #, kde-format

@@ -29,4 +29,4 @@ msgstr "Color:"
 #: contents/ui/config.qml:22
 #, kde-format
 msgid "Select Background Color"
-msgstr "Seleccioneu el color de fons"
+msgstr "Trieu el color de fons"

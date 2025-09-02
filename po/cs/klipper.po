@@ -383,10 +383,9 @@ msgid "Clear History"
 msgstr "Vyprázdnit historii"
 
 #: declarative/qml/ClipboardMenu.qml:324
-#, fuzzy, kde-format
-#| msgid "Clear History"
+#, kde-format
 msgid "All History"
-msgstr "Vyprázdnit historii"
+msgstr ""
 
 #: declarative/qml/ClipboardMenu.qml:328
 #, kde-format
@@ -424,15 +423,14 @@ msgid "Remove from history"
 msgstr "Odstranit z historie"
 
 #: declarative/qml/DelegateToolButtons.qml:58
-#, fuzzy, kde-format
-#| msgid "Remove from history"
+#, kde-format
 msgid "Remove Star"
-msgstr "Odstranit z historie"
+msgstr ""
 
 #: declarative/qml/DelegateToolButtons.qml:58
 #, kde-format
 msgid "Star"
-msgstr ""
+msgstr "Hvězda"
 
 #: declarative/qml/EditPage.qml:64
 #, kde-format

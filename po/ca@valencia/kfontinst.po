@@ -138,7 +138,7 @@ msgstr "Imprimix la vista prèvia de la font"
 #: apps/Viewer.cpp:68
 #, kde-format
 msgid "Select Font to View"
-msgstr "Seleccioneu la font que es visualitzarà"
+msgstr "Trieu la font que es visualitzarà"
 
 #: apps/Viewer.cpp:108
 #, kde-format
@@ -1084,7 +1084,7 @@ msgstr "Imprimix exemples de la font"
 #: kcmfontinst/PrintDialog.cpp:37
 #, kde-format
 msgid "Select size to print font:"
-msgstr "Seleccioneu la mida per a imprimir la font:"
+msgstr "Trieu la mida per a imprimir la font:"
 
 #: kcmfontinst/PrintDialog.cpp:41
 #, kde-format
