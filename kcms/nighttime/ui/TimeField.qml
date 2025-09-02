@@ -11,9 +11,9 @@ import QtQuick.Layouts
 RowLayout {
     id: root
 
-    property string value: "00:00"
+    property date value: new Date()
 
-    signal activated(value: string)
+    signal activated(value: date)
 
     onValueChanged: refresh();
 
@@ -41,13 +41,12 @@ RowLayout {
     function notify(): void {
         const date = new Date();
         date.setHours(hoursSpinBox.value, minutesSpinBox.value, 0, 0);
-        activated(date.toLocaleString(Qt.locale("C"), "hh:mm"));
+        activated(date);
     }
 
     function refresh(): void {
-        const date = Date.fromLocaleString(Qt.locale("C"), value, "hh:mm")
-        hoursSpinBox.value = date.getHours();
-        minutesSpinBox.value = date.getMinutes();
+        hoursSpinBox.value = value.getHours();
+        minutesSpinBox.value = value.getMinutes();
     }
 
     Component.onCompleted: refresh();

@@ -19,8 +19,8 @@ class DarkLightSchedulePreview : public QObject, public QQmlParserStatus
     Q_INTERFACES(QQmlParserStatus)
 
     Q_PROPERTY(QGeoCoordinate coordinate READ coordinate WRITE setCoordinate RESET resetCoordinate NOTIFY coordinateChanged)
-    Q_PROPERTY(QString sunsetStart READ sunsetStart WRITE setSunsetStart NOTIFY sunsetStartChanged)
-    Q_PROPERTY(QString sunriseStart READ sunriseStart WRITE setSunriseStart NOTIFY sunriseStartChanged)
+    Q_PROPERTY(QTime sunsetStart READ sunsetStart WRITE setSunsetStart NOTIFY sunsetStartChanged)
+    Q_PROPERTY(QTime sunriseStart READ sunriseStart WRITE setSunriseStart NOTIFY sunriseStartChanged)
     Q_PROPERTY(int transitionDuration READ transitionDuration WRITE setTransitionDuration NOTIFY transitionDurationChanged)
     Q_PROPERTY(QDateTime startSunriseDateTime READ startSunriseDateTime NOTIFY startSunriseDateTimeChanged)
     Q_PROPERTY(QDateTime endSunriseDateTime READ endSunriseDateTime NOTIFY endSunriseDateTimeChanged)
@@ -46,11 +46,11 @@ public:
     void setCoordinate(const QGeoCoordinate &coordinate);
     void resetCoordinate();
 
-    QString sunsetStart() const;
-    void setSunsetStart(const QString &start);
+    QTime sunsetStart() const;
+    void setSunsetStart(const QTime &start);
 
-    QString sunriseStart() const;
-    void setSunriseStart(const QString &start);
+    QTime sunriseStart() const;
+    void setSunriseStart(const QTime &start);
 
     int transitionDuration() const;
     void setTransitionDuration(int duration);
@@ -86,8 +86,8 @@ private:
     void apply(const KDarkLightTransition &transition);
 
     QGeoCoordinate m_coordinate;
-    QString m_sunsetStart;
-    QString m_sunriseStart;
+    QTime m_sunsetStart;
+    QTime m_sunriseStart;
     std::chrono::milliseconds m_transitionDuration = std::chrono::milliseconds::zero();
     QDateTime m_startSunriseDateTime;
     QDateTime m_endSunriseDateTime;

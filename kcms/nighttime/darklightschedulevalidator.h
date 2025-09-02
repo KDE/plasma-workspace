@@ -15,5 +15,5 @@ class DarkLightScheduleValidator : public QObject
 public:
     explicit DarkLightScheduleValidator(QObject *parent = nullptr);
 
-    Q_INVOKABLE QString validate(const QString &input, const QString &other, int transitionDuration) const;
+    Q_INVOKABLE QTime validate(const QTime &input, const QTime &other, int transitionDuration) const;
 };

@@ -51,12 +51,12 @@ void DarkLightSchedulePreview::resetCoordinate()
     }
 }
 
-QString DarkLightSchedulePreview::sunsetStart() const
+QTime DarkLightSchedulePreview::sunsetStart() const
 {
     return m_sunsetStart;
 }
 
-void DarkLightSchedulePreview::setSunsetStart(const QString &start)
+void DarkLightSchedulePreview::setSunsetStart(const QTime &start)
 {
     if (m_sunsetStart != start) {
         m_sunsetStart = start;
@@ -67,12 +67,12 @@ void DarkLightSchedulePreview::setSunsetStart(const QString &start)
     }
 }
 
-QString DarkLightSchedulePreview::sunriseStart() const
+QTime DarkLightSchedulePreview::sunriseStart() const
 {
     return m_sunriseStart;
 }
 
-void DarkLightSchedulePreview::setSunriseStart(const QString &start)
+void DarkLightSchedulePreview::setSunriseStart(const QTime &start)
 {
     if (m_sunriseStart != start) {
         m_sunriseStart = start;
@@ -184,9 +184,7 @@ void DarkLightSchedulePreview::recalculate()
         }
     }
     if (!schedule) {
-        const QTime sunriseStart = QTime::fromString(m_sunriseStart, QStringLiteral("hh:mm"));
-        const QTime sunsetStart = QTime::fromString(m_sunsetStart, QStringLiteral("hh:mm"));
-        schedule = KDarkLightSchedule::forecast(now, sunriseStart, sunsetStart, m_transitionDuration);
+        schedule = KDarkLightSchedule::forecast(now, m_sunriseStart, m_sunsetStart, m_transitionDuration);
     }
 
     apply(*schedule->previousTransition(now));

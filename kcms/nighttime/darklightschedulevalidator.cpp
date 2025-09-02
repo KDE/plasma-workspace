@@ -15,24 +15,21 @@ DarkLightScheduleValidator::DarkLightScheduleValidator(QObject *parent)
 {
 }
 
-QString DarkLightScheduleValidator::validate(const QString &input, const QString &other, int transitionDuration) const
+QTime DarkLightScheduleValidator::validate(const QTime &inputTime, const QTime &otherTime, int transitionDuration) const
 {
-    const QTime inputTime = QTime::fromString(input, QStringLiteral("hh:mm"));
     if (!inputTime.isValid()) {
-        return input;
+        return inputTime;
     }
 
-    const QTime otherTime = QTime::fromString(other, QStringLiteral("hh:mm"));
     if (!otherTime.isValid()) {
-        return input;
+        return inputTime;
     }
 
     const int daylightDuration = std::abs(inputTime.secsTo(otherTime));
     const int maximumTransitionDuration = std::min(daylightDuration, secondsInDay - daylightDuration);
     if (transitionDuration < maximumTransitionDuration) {
-        return input;
+        return inputTime;
     }
 
-    const QTime correctedTime = otherTime.addSecs((inputTime < otherTime ? -1 : 1) * transitionDuration);
-    return correctedTime.toString(QStringLiteral("hh:mm"));
+    return otherTime.addSecs((inputTime < otherTime ? -1 : 1) * transitionDuration);
 }

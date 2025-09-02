@@ -34,12 +34,12 @@
     </group>
 
     <group name="Times">
-        <entry name="sunsetStart" key="SunsetStart" type="String">
-            <default>18:00</default>
+        <entry name="sunsetStart" key="SunsetStart" type="Time">
+            <default>18:00:00</default>
         </entry>
 
-        <entry name="sunriseStart" key="SunriseStart" type="String">
-            <default>06:00</default>
+        <entry name="sunriseStart" key="SunriseStart" type="Time">
+            <default>06:00:00</default>
         </entry>
 
         <entry name="transitionDuration" key="TransitionDuration" type="UInt">
