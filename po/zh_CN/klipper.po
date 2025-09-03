@@ -359,7 +359,7 @@ msgstr "清除历史记录"
 #: declarative/qml/ClipboardMenu.qml:302
 #, kde-format
 msgid "No matches"
-msgstr "无匹配条目"
+msgstr "没有匹配的内容"
 
 #: declarative/qml/ClipboardMenu.qml:302
 #, kde-format
