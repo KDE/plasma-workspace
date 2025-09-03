@@ -16,8 +16,6 @@
       <arg type="s" direction="in"/>
     </method>
 
-    <method name="openSwitchUserDialog" />
-
     <method name="restoreSession">
         <!-- Restore the main session. Should only be called once on startup -->
     </method>

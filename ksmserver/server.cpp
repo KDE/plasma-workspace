@@ -77,7 +77,6 @@
 #include <qstandardpaths.h>
 #include <startup_interface.h>
 
-#include "kscreenlocker_interface.h"
 #include "kwinsession_interface.h"
 
 #include <KUpdateLaunchEnvironmentJob>
@@ -1095,13 +1094,6 @@ void KSMServer::tryRestore()
 void KSMServer::startupDone()
 {
     state = Idle;
-}
-
-void KSMServer::openSwitchUserDialog()
-{
-    // this method exists only for compatibility. Users should ideally call this directly
-    OrgKdeScreensaverInterface iface(QStringLiteral("org.freedesktop.ScreenSaver"), QStringLiteral("/ScreenSaver"), QDBusConnection::sessionBus());
-    iface.SwitchUser();
 }
 
 #include "moc_server.cpp"
