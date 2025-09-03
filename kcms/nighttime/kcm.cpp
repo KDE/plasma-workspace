@@ -38,5 +38,10 @@ NightTimeSettings *KCMNightTime::settings() const
     return m_data->settings();
 }
 
+QString KCMNightTime::escapeRegExp(const QString &string) const
+{
+    return QRegularExpression::escape(string);
+}
+
 #include "kcm.moc"
 #include "moc_kcm.cpp"

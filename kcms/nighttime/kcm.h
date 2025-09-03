@@ -22,6 +22,9 @@ public:
 
     NightTimeSettings *settings() const;
 
+    // Drop it when https://bugreports.qt.io/browse/QTBUG-139933 gets fixed.
+    Q_INVOKABLE QString escapeRegExp(const QString &string) const;
+
 private:
     NightTimeData *m_data;
 };
