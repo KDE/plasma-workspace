@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2016, 2020, 2021, 2022, 2023, 2024 Giovanni Sora <g.sora@tiscali.it>
+# SPDX-FileCopyrightText: 2016, 2020, 2021, 2022, 2023, 2024, 2025 Giovanni Sora <g.sora@tiscali.it>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-18 00:44+0000\n"
-"PO-Revision-Date: 2024-07-26 12:17+0200\n"
+"PO-Revision-Date: 2025-09-02 17:41+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -161,16 +161,16 @@ msgid "Configure Day/Night Cycle…"
 msgstr ""
 
 #: ui/DayNightLookAndFeel.qml:68
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@option:radio Light global theme"
 msgid "Light"
-msgstr ""
+msgstr "Legier"
 
 #: ui/DayNightLookAndFeel.qml:80
 #, kde-format
 msgctxt "@option:radio Dark global theme"
 msgid "Dark"
-msgstr ""
+msgstr "Obscur"
 
 #: ui/DayNightLookAndFeel.qml:97
 #, kde-format
@@ -179,12 +179,12 @@ msgid "Wait until idleness before switching:"
 msgstr ""
 
 #: ui/DayNightLookAndFeel.qml:110
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@item:valuesuffix idle interval"
 msgid "%1 second"
 msgid_plural "%1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 secunda"
+msgstr[1] "%1 secundas"
 
 #: ui/DayNightLookAndFeel.qml:122
 #, kde-format
@@ -207,8 +207,7 @@ msgid "Choose Dark Global Theme"
 msgstr "Thema Global"
 
 #: ui/LookAndFeelSelector.qml:49 ui/StaticLookAndFeel.qml:67
-#, fuzzy, kde-format
-#| msgid "Preview Theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview Theme"
 msgstr "Vide de forma preliminr le thema"
@@ -361,8 +360,7 @@ msgstr ""
 "continge le mantenitorde iste Thema Global proque il poterea esser rupte."
 
 #: ui/StaticLookAndFeel.qml:53
-#, fuzzy, kde-format
-#| msgid "Contains Desktop layout"
+#, kde-format
 msgctxt "@label"
 msgid "Contains Desktop layout"
 msgstr "Contine le disposition de scriptorio"
