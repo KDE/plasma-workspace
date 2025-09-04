@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-12 00:45+0000\n"
+"POT-Creation-Date: 2025-09-04 00:44+0000\n"
 "PO-Revision-Date: 2025-08-08 02:17+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -36,20 +36,16 @@ msgid "Determine sunrise and sunset times:"
 msgstr "判斷日出與日落時間的方式："
 
 #: ui/main.qml:47
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
+#| msgid "Based on device's current location"
 msgctxt ""
 "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
-msgid "Based on device's current location"
+msgid "Based on device's location"
 msgstr "基於裝置目前的位置"
 
 #: ui/main.qml:48
-#, kde-format
-msgctxt ""
-"@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
-msgid "Based on manual location"
-msgstr "基於手動輸入的位置"
-
-#: ui/main.qml:49
 #, kde-format
 msgctxt ""
 "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
@@ -58,17 +54,36 @@ msgstr "使用自訂時間"
 
 #: ui/main.qml:60
 #, kde-format
-msgctxt "@label The coordinates for the current location"
-msgid "Current location:"
-msgstr "目前位置："
+msgctxt "@label"
+msgid "Sunrise:"
+msgstr "日出："
 
-#: ui/main.qml:63
+#: ui/main.qml:75
 #, kde-format
-msgctxt "@info"
-msgid "Latitude: %1°   Longitude: %2°"
-msgstr "緯度：%1°  經度：%2°"
+msgctxt "@label"
+msgid "Sunset:"
+msgstr "日落："
 
-#: ui/main.qml:80
+#: ui/main.qml:89
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Transition duration:"
+msgstr "過渡時間："
+
+#: ui/main.qml:95
+#, kde-format
+msgctxt "@item:valuesuffix transition duration"
+msgid "%1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] "%1 分鐘"
+
+#: ui/main.qml:119
+#, kde-format
+msgctxt "@option:radio"
+msgid "Automatically detect location"
+msgstr ""
+
+#: ui/main.qml:146
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -81,7 +96,7 @@ msgstr ""
 "嘗試利用 GPS 或基地台定位，如不可用則會傳送裝置的 IP 位址到 <link "
 "url='https://geoip.com/privacy/'>GeoIP</link> 來取得位置資訊。"
 
-#: ui/main.qml:81
+#: ui/main.qml:147
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -94,38 +109,22 @@ msgstr ""
 "<link url='https://bugs.kde.org'>https://bugs.kde.org</link> 撰寫問題回報來"
 "請 KDE 的開發者為這個服務會做的事情撰寫詳細的描述。"
 
-#: ui/main.qml:93
-#, kde-format
-msgctxt "@label"
-msgid "Sunrise:"
-msgstr "日出："
+#: ui/main.qml:164
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
+#| msgid "Based on manual location"
+msgctxt "@option:radio"
+msgid "Use manual location:"
+msgstr "基於手動輸入的位置"
 
-#: ui/main.qml:108
-#, kde-format
-msgctxt "@label"
-msgid "Sunset:"
-msgstr "日落："
-
-#: ui/main.qml:122
-#, kde-format
-msgctxt "@label:spinbox"
-msgid "Transition duration:"
-msgstr "過渡時間："
-
-#: ui/main.qml:128
-#, kde-format
-msgctxt "@item:valuesuffix transition duration"
-msgid "%1 minute"
-msgid_plural "%1 minutes"
-msgstr[0] "%1 分鐘"
-
-#: ui/main.qml:161
+#: ui/main.qml:176
 #, kde-format
 msgctxt "@label"
 msgid "Latitude:"
 msgstr "緯度："
 
-#: ui/main.qml:179
+#: ui/main.qml:196
 #, kde-format
 msgctxt "@label"
 msgid "Longitude:"
@@ -224,3 +223,11 @@ msgstr ""
 "licenses/by-sa/3.0'>CC BY-SA 3.0</link>) 所做的 <link url='https://commons."
 "wikimedia.org/wiki/File:World_location_map_(equirectangular_180).svg'>World "
 "location map</link> 修改"
+
+#~ msgctxt "@label The coordinates for the current location"
+#~ msgid "Current location:"
+#~ msgstr "目前位置："
+
+#~ msgctxt "@info"
+#~ msgid "Latitude: %1°   Longitude: %2°"
+#~ msgstr "緯度：%1°  經度：%2°"

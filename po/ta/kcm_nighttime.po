@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-12 00:45+0000\n"
+"POT-Creation-Date: 2025-09-04 00:44+0000\n"
 "PO-Revision-Date: 2025-07-19 15:35+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -37,20 +37,16 @@ msgid "Determine sunrise and sunset times:"
 msgstr "சூரிய தோற்றம் மற்றும் மறைவு நேரத்தை இவ்வாறு கணி:"
 
 #: ui/main.qml:47
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
+#| msgid "Based on device's current location"
 msgctxt ""
 "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
-msgid "Based on device's current location"
+msgid "Based on device's location"
 msgstr "சாதன இருப்பிடத்திற்கேற்ப"
 
 #: ui/main.qml:48
-#, kde-format
-msgctxt ""
-"@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
-msgid "Based on manual location"
-msgstr "குறிப்பிட்ட இடத்தின் அடிப்படையில்"
-
-#: ui/main.qml:49
 #, kde-format
 msgctxt ""
 "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
@@ -59,17 +55,37 @@ msgstr "கைமுறையாக அமைக்கப்படும் ந�
 
 #: ui/main.qml:60
 #, kde-format
-msgctxt "@label The coordinates for the current location"
-msgid "Current location:"
-msgstr "தற்போதைய இருப்பிடம்:"
+msgctxt "@label"
+msgid "Sunrise:"
+msgstr "சூரிய உதயம்:"
 
-#: ui/main.qml:63
+#: ui/main.qml:75
 #, kde-format
-msgctxt "@info"
-msgid "Latitude: %1°   Longitude: %2°"
-msgstr "அட்சரேகை: %1°   தீர்க்கரேகை: %2°"
+msgctxt "@label"
+msgid "Sunset:"
+msgstr "சூரியன் மறைவு:"
 
-#: ui/main.qml:80
+#: ui/main.qml:89
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Transition duration:"
+msgstr "நிலைமாற்றம் நீடிக்கும் காலம்:"
+
+#: ui/main.qml:95
+#, kde-format
+msgctxt "@item:valuesuffix transition duration"
+msgid "%1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] "%1 நிமிடம்"
+msgstr[1] "%1 நிமிடம்"
+
+#: ui/main.qml:119
+#, kde-format
+msgctxt "@option:radio"
+msgid "Automatically detect location"
+msgstr ""
+
+#: ui/main.qml:146
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -83,7 +99,7 @@ msgstr ""
 "இருப்பிடத்தைத் தெரிந்துகொள்ள <application>GeoClue2</application> சேவை அவ்வப்போது "
 "பயன்படுத்தப்படும்."
 
-#: ui/main.qml:81
+#: ui/main.qml:147
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -96,39 +112,22 @@ msgstr ""
 "பயன்படுத்தப்படும். இச்சேவையின் விவரணத்தை வழங்குமாறு கோரி <link url='https://bugs.kde."
 "org'>https://bugs.kde.org</link> என்ற தளத்தில் ஓர் பிழையறிக்கையை சமர்ப்பிக்கவும்."
 
-#: ui/main.qml:93
-#, kde-format
-msgctxt "@label"
-msgid "Sunrise:"
-msgstr "சூரிய உதயம்:"
+#: ui/main.qml:164
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
+#| msgid "Based on manual location"
+msgctxt "@option:radio"
+msgid "Use manual location:"
+msgstr "குறிப்பிட்ட இடத்தின் அடிப்படையில்"
 
-#: ui/main.qml:108
-#, kde-format
-msgctxt "@label"
-msgid "Sunset:"
-msgstr "சூரியன் மறைவு:"
-
-#: ui/main.qml:122
-#, kde-format
-msgctxt "@label:spinbox"
-msgid "Transition duration:"
-msgstr "நிலைமாற்றம் நீடிக்கும் காலம்:"
-
-#: ui/main.qml:128
-#, kde-format
-msgctxt "@item:valuesuffix transition duration"
-msgid "%1 minute"
-msgid_plural "%1 minutes"
-msgstr[0] "%1 நிமிடம்"
-msgstr[1] "%1 நிமிடம்"
-
-#: ui/main.qml:161
+#: ui/main.qml:176
 #, kde-format
 msgctxt "@label"
 msgid "Latitude:"
 msgstr "அட்சரேகை:"
 
-#: ui/main.qml:179
+#: ui/main.qml:196
 #, kde-format
 msgctxt "@label"
 msgid "Longitude:"
@@ -231,3 +230,11 @@ msgstr ""
 "by-sa/3.0'>CC BY-SA 3.0</link> உருவாக்கிய <link url='https://commons."
 "wikimedia.org/wiki/File:World_location_map_(equirectangular_180).svg'>உலக "
 "நிலப்படத்தை</link> மாற்றி உருவாக்கப்பட்டது"
+
+#~ msgctxt "@label The coordinates for the current location"
+#~ msgid "Current location:"
+#~ msgstr "தற்போதைய இருப்பிடம்:"
+
+#~ msgctxt "@info"
+#~ msgid "Latitude: %1°   Longitude: %2°"
+#~ msgstr "அட்சரேகை: %1°   தீர்க்கரேகை: %2°"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-12 00:45+0000\n"
+"POT-Creation-Date: 2025-09-04 00:44+0000\n"
 "PO-Revision-Date: 2025-07-13 08:21+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -37,20 +37,16 @@ msgid "Determine sunrise and sunset times:"
 msgstr "קביעת זמני זריחה ושקיעה:"
 
 #: ui/main.qml:47
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
+#| msgid "Based on device's current location"
 msgctxt ""
 "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
-msgid "Based on device's current location"
+msgid "Based on device's location"
 msgstr "לפי מקום המכשיר הנוכחי"
 
 #: ui/main.qml:48
-#, kde-format
-msgctxt ""
-"@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
-msgid "Based on manual location"
-msgstr "לפי מקום ידני"
-
-#: ui/main.qml:49
 #, kde-format
 msgctxt ""
 "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
@@ -59,17 +55,39 @@ msgstr "זמנים שהוגדרו ידנית"
 
 #: ui/main.qml:60
 #, kde-format
-msgctxt "@label The coordinates for the current location"
-msgid "Current location:"
-msgstr "מקום נוכחי:"
+msgctxt "@label"
+msgid "Sunrise:"
+msgstr "זריחה:"
 
-#: ui/main.qml:63
+#: ui/main.qml:75
 #, kde-format
-msgctxt "@info"
-msgid "Latitude: %1°   Longitude: %2°"
-msgstr "קו רוחב: %1°   קו גובה: %2°"
+msgctxt "@label"
+msgid "Sunset:"
+msgstr "שקיעה:"
 
-#: ui/main.qml:80
+#: ui/main.qml:89
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Transition duration:"
+msgstr "משך מעבר:"
+
+#: ui/main.qml:95
+#, kde-format
+msgctxt "@item:valuesuffix transition duration"
+msgid "%1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] "דקה"
+msgstr[1] "שתי דקות"
+msgstr[2] "%1 דקות"
+msgstr[3] "%1 דקות"
+
+#: ui/main.qml:119
+#, kde-format
+msgctxt "@option:radio"
+msgid "Automatically detect location"
+msgstr ""
+
+#: ui/main.qml:146
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -82,7 +100,7 @@ msgstr ""
 "בפעם דרך נווטן/GPS או טריאנגולציה/משלוש של אנטנות סלולריות אם ניתן, ואם לא "
 "אז שליחת כתובת ה־IP אל <link url='https://geoip.com/privacy/'>GeoIP</link>."
 
-#: ui/main.qml:81
+#: ui/main.qml:147
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -95,41 +113,22 @@ msgstr ""
 "נא לדווח על תקלות דרך <link url='https://bugs.kde.org'>https://bugs.kde.org</"
 "link> ולבקש מהמפתחים של KDE לכתוב תיאור מפורט של מהות פעולת השירות הזה."
 
-#: ui/main.qml:93
-#, kde-format
-msgctxt "@label"
-msgid "Sunrise:"
-msgstr "זריחה:"
+#: ui/main.qml:164
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
+#| msgid "Based on manual location"
+msgctxt "@option:radio"
+msgid "Use manual location:"
+msgstr "לפי מקום ידני"
 
-#: ui/main.qml:108
-#, kde-format
-msgctxt "@label"
-msgid "Sunset:"
-msgstr "שקיעה:"
-
-#: ui/main.qml:122
-#, kde-format
-msgctxt "@label:spinbox"
-msgid "Transition duration:"
-msgstr "משך מעבר:"
-
-#: ui/main.qml:128
-#, kde-format
-msgctxt "@item:valuesuffix transition duration"
-msgid "%1 minute"
-msgid_plural "%1 minutes"
-msgstr[0] "דקה"
-msgstr[1] "שתי דקות"
-msgstr[2] "%1 דקות"
-msgstr[3] "%1 דקות"
-
-#: ui/main.qml:161
+#: ui/main.qml:176
 #, kde-format
 msgctxt "@label"
 msgid "Latitude:"
 msgstr "קו רוחב:"
 
-#: ui/main.qml:179
+#: ui/main.qml:196
 #, kde-format
 msgctxt "@label"
 msgid "Longitude:"
@@ -232,3 +231,11 @@ msgstr ""
 "World_location_map_(equirectangular_180).svg'>מפת המקומות העולמית</link> מאת "
 "TUBS / ויקישיתוף / <link url='https://creativecommons.org/licenses/by-"
 "sa/3.0'>קריאייטיב קומונס ייחוס-שיתוף דומה 3.0</link>"
+
+#~ msgctxt "@label The coordinates for the current location"
+#~ msgid "Current location:"
+#~ msgstr "מקום נוכחי:"
+
+#~ msgctxt "@info"
+#~ msgid "Latitude: %1°   Longitude: %2°"
+#~ msgstr "קו רוחב: %1°   קו גובה: %2°"

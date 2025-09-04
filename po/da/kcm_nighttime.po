@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-12 00:45+0000\n"
+"POT-Creation-Date: 2025-09-04 00:44+0000\n"
 "PO-Revision-Date: 2025-07-19 13:21+0200\n"
 "Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -36,20 +36,16 @@ msgid "Determine sunrise and sunset times:"
 msgstr "Bestem tidspunkterne for solopgang og solnedgang:"
 
 #: ui/main.qml:47
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
+#| msgid "Based on device's current location"
 msgctxt ""
 "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
-msgid "Based on device's current location"
+msgid "Based on device's location"
 msgstr "Baseret på enhedens nuværende lokation"
 
 #: ui/main.qml:48
-#, kde-format
-msgctxt ""
-"@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
-msgid "Based on manual location"
-msgstr "Baseret på manuel lokation"
-
-#: ui/main.qml:49
 #, kde-format
 msgctxt ""
 "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
@@ -58,17 +54,37 @@ msgstr "Brug tilpassede tider"
 
 #: ui/main.qml:60
 #, kde-format
-msgctxt "@label The coordinates for the current location"
-msgid "Current location:"
-msgstr "Vælg lokation:"
+msgctxt "@label"
+msgid "Sunrise:"
+msgstr "Solopgang:"
 
-#: ui/main.qml:63
+#: ui/main.qml:75
 #, kde-format
-msgctxt "@info"
-msgid "Latitude: %1°   Longitude: %2°"
-msgstr "Breddegrade: %1°   Længdegrad: %2°"
+msgctxt "@label"
+msgid "Sunset:"
+msgstr "Solnedgang:"
 
-#: ui/main.qml:80
+#: ui/main.qml:89
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Transition duration:"
+msgstr "Overgangensvarighed:"
+
+#: ui/main.qml:95
+#, kde-format
+msgctxt "@item:valuesuffix transition duration"
+msgid "%1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] "%1 minut"
+msgstr[1] "%1 minutter"
+
+#: ui/main.qml:119
+#, kde-format
+msgctxt "@option:radio"
+msgid "Automatically detect location"
+msgstr ""
+
+#: ui/main.qml:146
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -82,7 +98,7 @@ msgstr ""
 "mobilmasttriangulering, hvis det er tilgængeligt, eller ved at sende dens IP-"
 "adresse til <link url='https://geoip.com/privacy/'>GeoIP</link>."
 
-#: ui/main.qml:81
+#: ui/main.qml:147
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -96,39 +112,22 @@ msgstr ""
 "url='https://bugs.kde.org'>https://bugs.kde.org</link> og bed KDE-udviklerne "
 "om at skrive en detaljeret beskrivelse af, hvad tjeneste vil gøre."
 
-#: ui/main.qml:93
-#, kde-format
-msgctxt "@label"
-msgid "Sunrise:"
-msgstr "Solopgang:"
+#: ui/main.qml:164
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
+#| msgid "Based on manual location"
+msgctxt "@option:radio"
+msgid "Use manual location:"
+msgstr "Baseret på manuel lokation"
 
-#: ui/main.qml:108
-#, kde-format
-msgctxt "@label"
-msgid "Sunset:"
-msgstr "Solnedgang:"
-
-#: ui/main.qml:122
-#, kde-format
-msgctxt "@label:spinbox"
-msgid "Transition duration:"
-msgstr "Overgangensvarighed:"
-
-#: ui/main.qml:128
-#, kde-format
-msgctxt "@item:valuesuffix transition duration"
-msgid "%1 minute"
-msgid_plural "%1 minutes"
-msgstr[0] "%1 minut"
-msgstr[1] "%1 minutter"
-
-#: ui/main.qml:161
+#: ui/main.qml:176
 #, kde-format
 msgctxt "@label"
 msgid "Latitude:"
 msgstr "Breddegrad:"
 
-#: ui/main.qml:179
+#: ui/main.qml:196
 #, kde-format
 msgctxt "@label"
 msgid "Longitude:"
@@ -231,3 +230,11 @@ msgstr ""
 "World_location_map_(equirectangular_180).svg'>Verdenskort over placeringer</"
 "link> af TUBS / Wikimedia Commons / <link url='https://creativecommons.org/"
 "licenses/by-sa/3.0'>CC BY-SA 3.0</link>"
+
+#~ msgctxt "@label The coordinates for the current location"
+#~ msgid "Current location:"
+#~ msgstr "Vælg lokation:"
+
+#~ msgctxt "@info"
+#~ msgid "Latitude: %1°   Longitude: %2°"
+#~ msgstr "Breddegrade: %1°   Længdegrad: %2°"

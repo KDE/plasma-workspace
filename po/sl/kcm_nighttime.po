@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-12 00:45+0000\n"
+"POT-Creation-Date: 2025-09-04 00:44+0000\n"
 "PO-Revision-Date: 2025-07-12 08:06+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <kde-i18n-doc@kde.org>\n"
@@ -38,20 +38,16 @@ msgid "Determine sunrise and sunset times:"
 msgstr "Določite čas sončnega vzhoda in sončnega zahoda:"
 
 #: ui/main.qml:47
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
+#| msgid "Based on device's current location"
 msgctxt ""
 "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
-msgid "Based on device's current location"
+msgid "Based on device's location"
 msgstr "Na podlagi trenutne lokacije naprave"
 
 #: ui/main.qml:48
-#, kde-format
-msgctxt ""
-"@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
-msgid "Based on manual location"
-msgstr "Na podlagi ročne lokacije"
-
-#: ui/main.qml:49
 #, kde-format
 msgctxt ""
 "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
@@ -60,17 +56,39 @@ msgstr "Uporaba časov po meri"
 
 #: ui/main.qml:60
 #, kde-format
-msgctxt "@label The coordinates for the current location"
-msgid "Current location:"
-msgstr "Trenutna lokacija:"
+msgctxt "@label"
+msgid "Sunrise:"
+msgstr "Sončni vzhod:"
 
-#: ui/main.qml:63
+#: ui/main.qml:75
 #, kde-format
-msgctxt "@info"
-msgid "Latitude: %1°   Longitude: %2°"
-msgstr "Širina: %1°   Dolžina: %2°"
+msgctxt "@label"
+msgid "Sunset:"
+msgstr "Sončni zahod:"
 
-#: ui/main.qml:80
+#: ui/main.qml:89
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Transition duration:"
+msgstr "Trajanje prehoda:"
+
+#: ui/main.qml:95
+#, kde-format
+msgctxt "@item:valuesuffix transition duration"
+msgid "%1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] "%1 minuta"
+msgstr[1] "%1 minuti"
+msgstr[2] "%1 minute"
+msgstr[3] "%1 minut"
+
+#: ui/main.qml:119
+#, kde-format
+msgctxt "@option:radio"
+msgid "Automatically detect location"
+msgstr ""
+
+#: ui/main.qml:146
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -84,7 +102,7 @@ msgstr ""
 "postaje, če je na voljo, ali pa s pošiljanjem njenega naslova IP na <link "
 "url='https://geoip.com/privacy/'>GeoIP</link>."
 
-#: ui/main.qml:81
+#: ui/main.qml:147
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -98,41 +116,22 @@ msgstr ""
 "url='https://bugs.kde.org'>https://bugs.kde.org</link> in prosite razvijalce "
 "KDE, naj napišejo podroben opis, kaj bo ta storitev počela."
 
-#: ui/main.qml:93
-#, kde-format
-msgctxt "@label"
-msgid "Sunrise:"
-msgstr "Sončni vzhod:"
+#: ui/main.qml:164
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
+#| msgid "Based on manual location"
+msgctxt "@option:radio"
+msgid "Use manual location:"
+msgstr "Na podlagi ročne lokacije"
 
-#: ui/main.qml:108
-#, kde-format
-msgctxt "@label"
-msgid "Sunset:"
-msgstr "Sončni zahod:"
-
-#: ui/main.qml:122
-#, kde-format
-msgctxt "@label:spinbox"
-msgid "Transition duration:"
-msgstr "Trajanje prehoda:"
-
-#: ui/main.qml:128
-#, kde-format
-msgctxt "@item:valuesuffix transition duration"
-msgid "%1 minute"
-msgid_plural "%1 minutes"
-msgstr[0] "%1 minuta"
-msgstr[1] "%1 minuti"
-msgstr[2] "%1 minute"
-msgstr[3] "%1 minut"
-
-#: ui/main.qml:161
+#: ui/main.qml:176
 #, kde-format
 msgctxt "@label"
 msgid "Latitude:"
 msgstr "Zemljepisna širina:"
 
-#: ui/main.qml:179
+#: ui/main.qml:196
 #, kde-format
 msgctxt "@label"
 msgid "Longitude:"
@@ -235,3 +234,11 @@ msgstr ""
 "World_location_map_(equirectangular_180).svg'>World location map</link> od "
 "TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
 "by-sa/3.0'>CC BY-SA 3.0</link>"
+
+#~ msgctxt "@label The coordinates for the current location"
+#~ msgid "Current location:"
+#~ msgstr "Trenutna lokacija:"
+
+#~ msgctxt "@info"
+#~ msgid "Latitude: %1°   Longitude: %2°"
+#~ msgstr "Širina: %1°   Dolžina: %2°"
