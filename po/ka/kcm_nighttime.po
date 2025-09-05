@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-04 00:44+0000\n"
-"PO-Revision-Date: 2025-07-13 03:30+0200\n"
+"PO-Revision-Date: 2025-09-04 06:43+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.7\n"
 
 #: ui/main.qml:26
 #, kde-format
@@ -38,14 +38,11 @@ msgid "Determine sunrise and sunset times:"
 msgstr "აისისა და დაისის დროების დადგენა:"
 
 #: ui/main.qml:47
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
-#| msgid "Based on device's current location"
+#, kde-format
 msgctxt ""
 "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
 msgid "Based on device's location"
-msgstr "მოწყობილობის ამჟამინდელი მდებარეობის მიხედვით"
+msgstr "მოწყობილობის მდებარეობის მიხედვით"
 
 #: ui/main.qml:48
 #, kde-format
@@ -84,7 +81,7 @@ msgstr[1] "%1 წუთი"
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatically detect location"
-msgstr ""
+msgstr "ადგილმდებარეობის ავტომატური დადგენა"
 
 #: ui/main.qml:146
 #, kde-kuit-format
@@ -116,13 +113,10 @@ msgstr ""
 "სერვისი."
 
 #: ui/main.qml:164
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
-#| msgid "Based on manual location"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Use manual location:"
-msgstr "ხელით მითითებული მდებარეობის მიხედვით"
+msgstr "ხელით მითითებული მდებარეობის მიხედვით:"
 
 #: ui/main.qml:176
 #, kde-format

@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-31 00:44+0000\n"
-"PO-Revision-Date: 2025-08-05 15:46+0300\n"
+"PO-Revision-Date: 2025-09-04 13:15+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -402,15 +402,14 @@ msgid "Clear History"
 msgstr "Išvalyti istoriją"
 
 #: declarative/qml/ClipboardMenu.qml:324
-#, fuzzy, kde-format
-#| msgid "Clear History"
+#, kde-format
 msgid "All History"
-msgstr "Išvalyti istoriją"
+msgstr "Visa istorija"
 
 #: declarative/qml/ClipboardMenu.qml:328
 #, kde-format
 msgid "Starred Only"
-msgstr ""
+msgstr "Tik žvaigždute pažymėti elementai"
 
 #: declarative/qml/ClipboardMenu.qml:434
 #, kde-format
@@ -443,16 +442,14 @@ msgid "Remove from history"
 msgstr "Šalinti iš istorijos"
 
 #: declarative/qml/DelegateToolButtons.qml:58
-#, fuzzy, kde-format
-#| msgid "Remove from history"
+#, kde-format
 msgid "Remove Star"
-msgstr "Šalinti iš istorijos"
+msgstr "Nebežymėti žvaigždute"
 
 #: declarative/qml/DelegateToolButtons.qml:58
-#, fuzzy, kde-format
-#| msgid "Start"
+#, kde-format
 msgid "Star"
-msgstr "Paleisti"
+msgstr "Pažymėti žvaigždute"
 
 #: declarative/qml/EditPage.qml:64
 #, kde-format
@@ -672,10 +669,11 @@ msgid "Icon:"
 msgstr "Piktograma:"
 
 #: historymodel.cpp:278
-#, fuzzy, kde-format
-#| msgid "The clipboard history will store up to this many items."
+#, kde-format
 msgid "The clipboard history contains starred items. Clear them too?"
-msgstr "Iškarpinės istorijoje bus laikoma štai tiek elementų."
+msgstr ""
+"Iškarpinės istorijoje yra žvaigždute pažymėtų elementų. Ar išvalyti taip pat "
+"ir juos?"
 
 #: historymodel.cpp:279 historymodel.cpp:299
 #, kde-format
@@ -685,14 +683,12 @@ msgstr "Išvalyti iškarpinės istoriją"
 #: historymodel.cpp:280
 #, kde-format
 msgid "Clear Everything"
-msgstr ""
+msgstr "Išvalyti viską"
 
 #: historymodel.cpp:281
-#, fuzzy, kde-format
-#| msgctxt "%1 is application display name"
-#| msgid "%1 - Clipboard Items"
+#, kde-format
 msgid "Keep Starred Items"
-msgstr "%1 - Iškarpinės elementai"
+msgstr "Palikti žvaigždute pažymėtus elementus"
 
 #: historymodel.cpp:298
 #, kde-format
@@ -709,11 +705,13 @@ msgstr "%1x%2"
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
+"Šis elementas pažymėtas žvaigždute. Ar tikrai norite pašalinti jį iš "
+"istorijos?"
 
 #: historymodel.cpp:563
 #, kde-format
 msgid "Remove Starred Item"
-msgstr ""
+msgstr "Šalinti žvaigždute pažymėtą elementą"
 
 #: klipper.cpp:91
 #, kde-format

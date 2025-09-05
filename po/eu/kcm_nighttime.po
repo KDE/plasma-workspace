@@ -1,7 +1,7 @@
 # Translation for kcm_nighttime.po to Euskara/Basque (eu).
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>.
+# SPDX-FileCopyrightText: 2025 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
 # SPDX-FileCopyrightText: 2025 Iñigo Salvador Azurmendi <xalba@ni.eus>
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-04 00:44+0000\n"
-"PO-Revision-Date: 2025-07-24 17:52+0200\n"
+"PO-Revision-Date: 2025-09-04 21:18+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #: ui/main.qml:26
 #, kde-format
@@ -40,14 +40,11 @@ msgid "Determine sunrise and sunset times:"
 msgstr "Zehatu egunsentiaren eta iluntzearen orduak:"
 
 #: ui/main.qml:47
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
-#| msgid "Based on device's current location"
+#, kde-format
 msgctxt ""
 "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
 msgid "Based on device's location"
-msgstr "Gailuaren uneko kokapenean oinarritua"
+msgstr "Gailuaren kokapenean oinarritua"
 
 #: ui/main.qml:48
 #, kde-format
@@ -86,7 +83,7 @@ msgstr[1] "%1 minutu"
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatically detect location"
-msgstr ""
+msgstr "Kokapen automatikoki antzeman"
 
 #: ui/main.qml:146
 #, kde-kuit-format
@@ -117,13 +114,10 @@ msgstr ""
 "egingo duenaren deskribapen zehatz bat idazteko eskatuz."
 
 #: ui/main.qml:164
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
-#| msgid "Based on manual location"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Use manual location:"
-msgstr "Eskuzko kokapenean oinarritua"
+msgstr "Erabili eskuzko kokapena:"
 
 #: ui/main.qml:176
 #, kde-format

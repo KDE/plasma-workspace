@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_nighttime\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-04 00:44+0000\n"
-"PO-Revision-Date: 2025-07-12 21:12+0100\n"
+"PO-Revision-Date: 2025-09-04 18:54+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #: ui/main.qml:26
 #, kde-format
@@ -39,14 +39,11 @@ msgid "Determine sunrise and sunset times:"
 msgstr "Determinar las horas del amanecer y del anochecer:"
 
 #: ui/main.qml:47
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
-#| msgid "Based on device's current location"
+#, kde-format
 msgctxt ""
 "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
 msgid "Based on device's location"
-msgstr "Según la ubicación actual del dispositivo"
+msgstr "Según la ubicación del dispositivo"
 
 #: ui/main.qml:48
 #, kde-format
@@ -85,7 +82,7 @@ msgstr[1] "%1 minutos"
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatically detect location"
-msgstr ""
+msgstr "Detectar la ubicación automáticamente"
 
 #: ui/main.qml:146
 #, kde-kuit-format
@@ -117,13 +114,10 @@ msgstr ""
 "este servicio."
 
 #: ui/main.qml:164
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
-#| msgid "Based on manual location"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Use manual location:"
-msgstr "Según la ubicación manual"
+msgstr "Usar ubicación manual:"
 
 #: ui/main.qml:176
 #, kde-format
@@ -234,11 +228,3 @@ msgstr ""
 "World_location_map_(equirectangular_180).svg'>Mapa de ubicación mundial</"
 "link> por TUBS / Wikimedia Commons / <link url='https://creativecommons.org/"
 "licenses/by-sa/3.0'>CC BY-SA 3.0</link>"
-
-#~ msgctxt "@label The coordinates for the current location"
-#~ msgid "Current location:"
-#~ msgstr "Ubicación actual:"
-
-#~ msgctxt "@info"
-#~ msgid "Latitude: %1°   Longitude: %2°"
-#~ msgstr "Latitud: %1°   Longitud: %2°"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-04 00:44+0000\n"
-"PO-Revision-Date: 2025-07-12 08:06+0200\n"
+"PO-Revision-Date: 2025-09-04 07:01+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <kde-i18n-doc@kde.org>\n"
 "Language: sl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.7\n"
 
 #: ui/main.qml:26
 #, kde-format
@@ -38,14 +38,11 @@ msgid "Determine sunrise and sunset times:"
 msgstr "Določite čas sončnega vzhoda in sončnega zahoda:"
 
 #: ui/main.qml:47
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
-#| msgid "Based on device's current location"
+#, kde-format
 msgctxt ""
 "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
 msgid "Based on device's location"
-msgstr "Na podlagi trenutne lokacije naprave"
+msgstr "Na podlagi lokacije naprave"
 
 #: ui/main.qml:48
 #, kde-format
@@ -86,7 +83,7 @@ msgstr[3] "%1 minut"
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatically detect location"
-msgstr ""
+msgstr "Samodejno zaznaj lokacijo"
 
 #: ui/main.qml:146
 #, kde-kuit-format
@@ -117,13 +114,10 @@ msgstr ""
 "KDE, naj napišejo podroben opis, kaj bo ta storitev počela."
 
 #: ui/main.qml:164
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
-#| msgid "Based on manual location"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Use manual location:"
-msgstr "Na podlagi ročne lokacije"
+msgstr "Uporabi ročno lokacijo:"
 
 #: ui/main.qml:176
 #, kde-format

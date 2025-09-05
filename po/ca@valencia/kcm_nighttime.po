@@ -3,13 +3,13 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2025.
+# SPDX-FileCopyrightText: 2025 Josep M. Ferrer <txemaq@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-04 00:44+0000\n"
-"PO-Revision-Date: 2025-07-12 12:14+0200\n"
+"PO-Revision-Date: 2025-09-04 09:52+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: ui/main.qml:26
 #, kde-format
@@ -27,8 +27,8 @@ msgid ""
 "synchronized with the day-night cycle. Choose your preferred cycle here."
 msgstr ""
 "Les característiques basades en l'hora com la llum de nit i els fons de "
-"pantalla dinàmics es poden sincronitzar amb el cicle dia-nit. Seleccioneu "
-"ací el vostre cicle preferit."
+"pantalla dinàmics es poden sincronitzar amb el cicle dia-nit. Trieu ací el "
+"vostre cicle preferit."
 
 #: ui/main.qml:42
 #, kde-format
@@ -39,14 +39,11 @@ msgid "Determine sunrise and sunset times:"
 msgstr "Determina l'hora d'eixida i de posta de sol:"
 
 #: ui/main.qml:47
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
-#| msgid "Based on device's current location"
+#, kde-format
 msgctxt ""
 "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
 msgid "Based on device's location"
-msgstr "En funció de la ubicació actual del dispositiu"
+msgstr "En funció de la ubicació del dispositiu"
 
 #: ui/main.qml:48
 #, kde-format
@@ -85,7 +82,7 @@ msgstr[1] "%1 minuts"
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatically detect location"
-msgstr ""
+msgstr "Detecta automàticament la ubicació"
 
 #: ui/main.qml:146
 #, kde-kuit-format
@@ -117,13 +114,10 @@ msgstr ""
 "servei."
 
 #: ui/main.qml:164
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
-#| msgid "Based on manual location"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Use manual location:"
-msgstr "En funció de la ubicació manual"
+msgstr "Utilitza una ubicació manual:"
 
 #: ui/main.qml:176
 #, kde-format
@@ -235,11 +229,3 @@ msgstr ""
 "World_location_map_(equirectangular_180).svg'>mapa mundial d'emplaçaments</"
 "link> per TUBS / Wikimedia Commons / <link url='https://creativecommons.org/"
 "licenses/by-sa/3.0'>CC BY-SA 3.0</link>"
-
-#~ msgctxt "@label The coordinates for the current location"
-#~ msgid "Current location:"
-#~ msgstr "Emplaçament actual:"
-
-#~ msgctxt "@info"
-#~ msgid "Latitude: %1°   Longitude: %2°"
-#~ msgstr "Latitud: %1°   Longitud: %2°"
