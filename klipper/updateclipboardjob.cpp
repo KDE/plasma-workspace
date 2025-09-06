@@ -132,10 +132,12 @@ void UpdateDatabaseJob::start()
         query.addBindValue(qreal(m_timestamp));
         query.addBindValue(qreal(m_timestamp));
     }
-    query.addBindValue(
-        std::accumulate(std::next(m_mimeDataList.begin()), m_mimeDataList.end(), m_mimeDataList.begin()->type, [](const QString &a, const MimeData &b) {
-            return a + u',' + b.type;
-        }));
+    query.addBindValue(std::accumulate(std::next(m_mimeDataList.begin()),
+                                       m_mimeDataList.end(),
+                                       m_mimeDataList.begin()->type,
+                                       [](const QString &a, const MimeData &b) -> QString {
+                                           return a + u',' + b.type;
+                                       }));
     query.addBindValue(m_text);
     query.addBindValue(false); // New items are not starred by default
     if (!query.exec()) {

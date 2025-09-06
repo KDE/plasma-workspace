@@ -125,7 +125,7 @@ void Multiplexer::updateIndex()
     const auto beginIt = sourceModel->m_containers.cbegin();
     const auto endIt = sourceModel->m_containers.cend();
     qCWarning(MPRIS2) << "Current active player:" << m_activePlayer->identity();
-    qCWarning(MPRIS2) << "Available players:" << std::accumulate(beginIt, endIt, QString(), [](QString left, PlayerContainer *right) {
+    qCWarning(MPRIS2) << "Available players:" << std::accumulate(beginIt, endIt, QString(), [](QString left, PlayerContainer *right) -> QString {
         return std::move(left) + QLatin1Char(',') + right->identity();
     });
     qCWarning(MPRIS2) << "Pending players:"
