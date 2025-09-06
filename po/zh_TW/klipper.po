@@ -19,14 +19,14 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-31 00:44+0000\n"
-"PO-Revision-Date: 2025-07-01 19:35+0900\n"
+"PO-Revision-Date: 2025-09-05 17:17+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.07.70\n"
+"X-Generator: Lokalize 25.11.70\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #, kde-format
@@ -389,15 +389,14 @@ msgid "Clear History"
 msgstr "清除歷史"
 
 #: declarative/qml/ClipboardMenu.qml:324
-#, fuzzy, kde-format
-#| msgid "Clear History"
+#, kde-format
 msgid "All History"
-msgstr "清除歷史"
+msgstr "所有歷史"
 
 #: declarative/qml/ClipboardMenu.qml:328
 #, kde-format
 msgid "Starred Only"
-msgstr ""
+msgstr "僅已固定"
 
 #: declarative/qml/ClipboardMenu.qml:434
 #, kde-format
@@ -430,16 +429,17 @@ msgid "Remove from history"
 msgstr "從歷史紀錄中移除"
 
 #: declarative/qml/DelegateToolButtons.qml:58
-#, fuzzy, kde-format
-#| msgid "Remove from history"
+#, kde-format
 msgid "Remove Star"
-msgstr "從歷史紀錄中移除"
+msgstr "取消固定"
 
+# 學 Gboard 用「固定」。
+# 其他選項是釘選、加星號、收藏，這個情境下固定/釘選應該最符合預期。
+# --Kisaragi
 #: declarative/qml/DelegateToolButtons.qml:58
-#, fuzzy, kde-format
-#| msgid "Start"
+#, kde-format
 msgid "Star"
-msgstr "開始"
+msgstr "固定"
 
 #: declarative/qml/EditPage.qml:64
 #, kde-format
@@ -655,10 +655,9 @@ msgid "Icon:"
 msgstr "圖示："
 
 #: historymodel.cpp:278
-#, fuzzy, kde-format
-#| msgid "The clipboard history will store up to this many items."
+#, kde-format
 msgid "The clipboard history contains starred items. Clear them too?"
-msgstr "剪貼簿歷史紀錄最多儲存的項目數量。"
+msgstr "剪貼簿歷史紀錄中包含已固定的項目。要清除它們嗎？"
 
 #: historymodel.cpp:279 historymodel.cpp:299
 #, kde-format
@@ -668,13 +667,12 @@ msgstr "清空剪貼簿歷史紀錄"
 #: historymodel.cpp:280
 #, kde-format
 msgid "Clear Everything"
-msgstr ""
+msgstr "清除全部"
 
 #: historymodel.cpp:281
-#, fuzzy, kde-format
-#| msgid "Clipboard Items"
+#, kde-format
 msgid "Keep Starred Items"
-msgstr "剪貼簿項目"
+msgstr "保留已固定的項目"
 
 #: historymodel.cpp:298
 #, kde-format
@@ -690,12 +688,12 @@ msgstr "%1x%2"
 #: historymodel.cpp:562
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
-msgstr ""
+msgstr "此項目已固定。您確定要將它從歷史紀錄中移除嗎？"
 
 #: historymodel.cpp:563
 #, kde-format
 msgid "Remove Starred Item"
-msgstr ""
+msgstr "移除已固定的項目"
 
 #: klipper.cpp:91
 #, kde-format

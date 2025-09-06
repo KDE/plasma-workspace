@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-04 00:44+0000\n"
+"POT-Creation-Date: 2025-09-06 00:44+0000\n"
 "PO-Revision-Date: 2025-07-20 01:29+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -186,7 +186,7 @@ msgstr ""
 "현재 위치에서의 일출과 일몰 시간을 안정적으로 결정할 수 없습니다. 사용자 정"
 "의 시간을 지정하십시오."
 
-#: ui/TimeField.qml:29
+#: ui/TimeField.qml:31
 #, kde-format
 msgctxt "Time separator between hours and minutes"
 msgid ":"

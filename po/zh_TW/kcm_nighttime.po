@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-04 00:44+0000\n"
-"PO-Revision-Date: 2025-08-08 02:17+0900\n"
+"POT-Creation-Date: 2025-09-06 00:44+0000\n"
+"PO-Revision-Date: 2025-09-05 17:18+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 25.07.70\n"
+"X-Generator: Lokalize 25.11.70\n"
 
 #: ui/main.qml:26
 #, kde-format
@@ -36,14 +36,11 @@ msgid "Determine sunrise and sunset times:"
 msgstr "判斷日出與日落時間的方式："
 
 #: ui/main.qml:47
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
-#| msgid "Based on device's current location"
+#, kde-format
 msgctxt ""
 "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
 msgid "Based on device's location"
-msgstr "基於裝置目前的位置"
+msgstr "基於裝置的位置"
 
 #: ui/main.qml:48
 #, kde-format
@@ -81,7 +78,7 @@ msgstr[0] "%1 分鐘"
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatically detect location"
-msgstr ""
+msgstr "自動偵測位置"
 
 #: ui/main.qml:146
 #, kde-kuit-format
@@ -110,13 +107,10 @@ msgstr ""
 "請 KDE 的開發者為這個服務會做的事情撰寫詳細的描述。"
 
 #: ui/main.qml:164
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
-#| msgid "Based on manual location"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Use manual location:"
-msgstr "基於手動輸入的位置"
+msgstr "使用手動輸入的位置："
 
 #: ui/main.qml:176
 #, kde-format
@@ -180,7 +174,7 @@ msgid ""
 "Choose custom times instead."
 msgstr "無法為您的位置穩定的判斷日出與日落的時間。請改為選擇自訂時間。"
 
-#: ui/TimeField.qml:29
+#: ui/TimeField.qml:31
 #, kde-format
 msgctxt "Time separator between hours and minutes"
 msgid ":"
