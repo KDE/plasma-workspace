@@ -770,7 +770,7 @@ void KSMServer::newConnection(int /*socket*/)
         for (const auto &client : clients) {
             QString program = client->program();
             if (program.isEmpty() && !client->restartCommand().isEmpty()) {
-                program = client->restartCommand().first();
+                program = client->restartCommand().constFirst();
             }
             if (program.isEmpty()) {
                 program = i18nc("@label an unknown executable is using resources", "[unknown]");

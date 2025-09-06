@@ -17,7 +17,7 @@ using namespace NotificationManager;
 void NotificationAction::start()
 {
     qCDebug(NOTIFICATIONS) << "Trying to perform the action " << operationName() << " on " << destination();
-    qCDebug(NOTIFICATIONS) << "actionId: " << parameters()["actionId"].toString();
+    qCDebug(NOTIFICATIONS) << "actionId: " << parameters().value("actionId").toString();
     qCDebug(NOTIFICATIONS) << "params: " << parameters();
 
     if (!m_engine) {
@@ -41,7 +41,7 @@ void NotificationAction::start()
 
     if (operationName() == QLatin1String("invokeAction")) {
         qCDebug(NOTIFICATIONS) << "invoking action on " << id;
-        Server::self().invokeAction(id, parameters()[QStringLiteral("actionId")].toString(), {}, Notifications::None, nullptr);
+        Server::self().invokeAction(id, parameters().value(QStringLiteral("actionId")).toString(), {}, Notifications::None, nullptr);
     } else if (operationName() == QLatin1String("userClosed")) {
         // userClosedNotification deletes the job, so we have to invoke it queued, in this case emitResult() can be called
         m_engine->metaObject()->invokeMethod(m_engine, "removeNotification", Qt::QueuedConnection, Q_ARG(uint, id), Q_ARG(uint, 2));
@@ -67,10 +67,10 @@ void NotificationAction::start()
         setResult(rv);
         return;
     } else if (operationName() == QLatin1String("configureNotification")) {
-        m_engine->configureNotification(parameters()[QStringLiteral("appRealName")].toString(), parameters()[QStringLiteral("eventId")].toString());
+        m_engine->configureNotification(parameters().value(QStringLiteral("appRealName")).toString(), parameters().value(QStringLiteral("eventId")).toString());
     } else if (operationName() == QLatin1String("inhibit")) {
-        const QString hint = parameters()[QStringLiteral("hint")].toString();
-        const QString value = parameters()[QStringLiteral("value")].toString();
+        const QString hint = parameters().value(QStringLiteral("hint")).toString();
+        const QString value = parameters().value(QStringLiteral("value")).toString();
         auto t = m_engine->createInhibition(hint, value);
         setResult(QVariant::fromValue(t));
         return;

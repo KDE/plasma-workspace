@@ -85,7 +85,7 @@ QString ScriptEngine::onlyExec(const QString &commandLine)
         return commandLine;
     }
 
-    return KShell::splitArgs(commandLine, KShell::TildeExpand).first();
+    return KShell::splitArgs(commandLine, KShell::TildeExpand).constFirst();
 }
 
 void ScriptEngine::setupEngine()

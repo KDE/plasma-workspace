@@ -46,15 +46,16 @@ void StatusNotifierItemJob::start()
 
 void StatusNotifierItemJob::performJob()
 {
+    const QVariantMap params = parameters();
     if (operationName() == QString::fromLatin1("Activate")) {
-        m_source->activate(parameters()[QStringLiteral("x")].toInt(), parameters()[QStringLiteral("y")].toInt());
+        m_source->activate(params[QStringLiteral("x")].toInt(), params[QStringLiteral("y")].toInt());
     } else if (operationName() == QString::fromLatin1("SecondaryActivate")) {
-        m_source->secondaryActivate(parameters()[QStringLiteral("x")].toInt(), parameters()[QStringLiteral("y")].toInt());
+        m_source->secondaryActivate(params[QStringLiteral("x")].toInt(), parameters()[QStringLiteral("y")].toInt());
         setResult(0);
     } else if (operationName() == QString::fromLatin1("ContextMenu")) {
-        m_source->contextMenu(parameters()[QStringLiteral("x")].toInt(), parameters()[QStringLiteral("y")].toInt());
+        m_source->contextMenu(params[QStringLiteral("x")].toInt(), params[QStringLiteral("y")].toInt());
     } else if (operationName() == QString::fromLatin1("Scroll")) {
-        m_source->scroll(parameters()[QStringLiteral("delta")].toInt(), parameters()[QStringLiteral("direction")].toString());
+        m_source->scroll(params[QStringLiteral("delta")].toInt(), params[QStringLiteral("direction")].toString());
         setResult(0);
     }
 }

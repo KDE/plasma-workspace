@@ -63,7 +63,7 @@ int main(int argc, char **argv)
     model->load();
     model->setSelectedScheme(settings->colorScheme());
     if (!parser->positionalArguments().isEmpty() && !parser->isSet(QStringLiteral("accent-color"))) {
-        QString requestedScheme{parser->positionalArguments().first()};
+        QString requestedScheme{parser->positionalArguments().constFirst()};
         constexpr QLatin1Char dirSplit{'/'};
         if (requestedScheme.contains(dirSplit)) {
             QStringList splitScheme = requestedScheme.split(dirSplit, Qt::SkipEmptyParts);
@@ -124,7 +124,8 @@ int main(int argc, char **argv)
                 exitCode = -1;
             }
         } else {
-            ts << i18n("The file you attempted to set as your scheme, %1, could not be identified as a color scheme.", parser->positionalArguments().first())
+            ts << i18n("The file you attempted to set as your scheme, %1, could not be identified as a color scheme.",
+                       parser->positionalArguments().constFirst())
                << Qt::endl;
             exitCode = -1;
         }

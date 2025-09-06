@@ -79,7 +79,7 @@ QImage PreviewImageProvider::requestImage(const QString &id, QSize *size, const 
     int subPixelIndex = 0;
     int hintingIndex = 0;
 
-    const auto idpart = QStringView(id).split(QLatin1Char('.'))[0];
+    const auto idpart = QStringView(id).split(QLatin1Char('.')).at(0);
     const auto sections = idpart.split(QLatin1Char('_'));
 
     if (sections.size() >= 2) {

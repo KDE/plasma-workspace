@@ -50,7 +50,7 @@ int main(int argc, char **argv)
     };
 
     if (!parser.positionalArguments().isEmpty()) {
-        QString wallpaperFile{parser.positionalArguments().first()};
+        QString wallpaperFile{parser.positionalArguments().constFirst()};
         QFileInfo wallpaperInfo{wallpaperFile};
         bool isWallpaper{false};
         bool isKPackage{false};

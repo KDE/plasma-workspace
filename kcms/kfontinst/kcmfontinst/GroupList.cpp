@@ -935,7 +935,7 @@ void CGroupListView::dropEvent(QDropEvent *event)
         QSet<QString> families;
         QByteArray encodedData(event->mimeData()->data(KFI_FONT_DRAG_MIME));
         QDataStream ds(&encodedData, QIODevice::ReadOnly);
-        QModelIndex from(selectedIndexes().last()), to(indexAt(event->position().toPoint()));
+        QModelIndex from(selectedIndexes().constLast()), to(indexAt(event->position().toPoint()));
 
         ds >> families;
         // Are we moving/copying, removing a font from the current group?

@@ -46,7 +46,7 @@ int main(int argc, char **argv)
     KConfigGroup themeGroup = plasmarc.group(u"Theme"_s);
 
     if (!parser->positionalArguments().isEmpty()) {
-        QString requestedTheme{parser->positionalArguments().first()};
+        QString requestedTheme{parser->positionalArguments().constFirst()};
         constexpr QLatin1Char dirSplit{'/'};
         if (requestedTheme.contains(dirSplit)) {
             requestedTheme = requestedTheme.split(dirSplit, Qt::SkipEmptyParts).last();

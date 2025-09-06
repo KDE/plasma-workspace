@@ -105,7 +105,7 @@ void RecentDocuments::match(KRunner::RunnerContext &context)
 
 void RecentDocuments::run(const KRunner::RunnerContext & /*context*/, const KRunner::QueryMatch &match)
 {
-    const QUrl url = match.urls().first();
+    const QUrl url = match.urls().constFirst();
 
     if (match.selectedAction()) {
         KIO::highlightInFileManager({url});

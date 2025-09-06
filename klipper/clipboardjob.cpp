@@ -59,7 +59,7 @@ void ClipboardJob::start()
         setResult(true);
     } else if (operation == QLatin1String("edit")) {
         if (parameters().contains(QLatin1String("text"))) {
-            const QString text = parameters()[QLatin1String("text")].toString();
+            const QString text = parameters().value(QLatin1String("text")).toString();
             m_model->remove(item->uuid());
             m_model->insert(text);
             if (m_klipper->urlGrabber()) {

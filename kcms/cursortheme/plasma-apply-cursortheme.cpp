@@ -76,7 +76,7 @@ int main(int argc, char **argv)
     QTextStream ts(stdout);
     CursorThemeModel *model = new CursorThemeModel(&app);
     if (!parser->positionalArguments().isEmpty()) {
-        QString requestedTheme{parser->positionalArguments().first()};
+        QString requestedTheme{parser->positionalArguments().constFirst()};
         constexpr QLatin1Char dirSplit{'/'};
         if (requestedTheme.contains(dirSplit)) {
             QStringList splitTheme = requestedTheme.split(dirSplit, Qt::SkipEmptyParts);

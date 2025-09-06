@@ -474,7 +474,7 @@ void ShellContainmentConfig::init()
     load(m_corona->kPackage().fileUrl("containmentmanagementui"));
 
     if (!rootObjects().isEmpty()) {
-        auto *obj = qobject_cast<QWindow *>(rootObjects().first());
+        auto *obj = qobject_cast<QWindow *>(rootObjects().constFirst());
         connect(obj, &QWindow::visibleChanged, this, [this] {
             deleteLater();
         });

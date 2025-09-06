@@ -36,7 +36,7 @@ void PlasmaWindowedCorona::loadApplet(const QString &applet, const QVariantList 
         return;
     }
 
-    Plasma::Containment *cont = containments().first();
+    Plasma::Containment *cont = containments().constFirst();
 
     // forbid more instances per applet (todo: activate the corresponding already loaded applet)
     for (Plasma::Applet *a : cont->applets()) {

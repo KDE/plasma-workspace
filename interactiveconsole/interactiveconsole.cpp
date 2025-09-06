@@ -545,7 +545,7 @@ void InteractiveConsole::evaluateScript()
         if (reply.type() == QDBusMessage::ErrorMessage) {
             print(reply.errorMessage());
         } else {
-            print(reply.arguments().first().toString());
+            print(reply.arguments().constFirst().toString());
         }
     } else if (m_mode == KWinConsole) {
         const QString path = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + u'/' + s_autosaveFileName;

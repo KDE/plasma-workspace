@@ -288,7 +288,8 @@ void KCMNotifications::createConnections(NotificationManager::BehaviorSettings *
 
 QUrl KCMNotifications::soundsLocation()
 {
-    const QString soundsPath = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("sounds"), QStandardPaths::LocateDirectory).last();
+    const QString soundsPath =
+        QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("sounds"), QStandardPaths::LocateDirectory).constLast();
     return QUrl::fromLocalFile(soundsPath);
 }
 
