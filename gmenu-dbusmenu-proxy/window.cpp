@@ -408,8 +408,7 @@ DBusMenuItemList Window::GetGroupProperties(const QList<int> &ids, const QString
 
 uint Window::GetLayout(int parentId, int recursionDepth, const QStringList &propertyNames, DBusMenuLayoutItem &dbusItem)
 {
-    Q_UNUSED(recursionDepth); // TODO
-    Q_UNUSED(propertyNames);
+    // TODO recursionDepth
 
     int subscription;
     int sectionId;

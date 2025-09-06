@@ -583,8 +583,6 @@ void ItemContainer::mousePressEvent(QMouseEvent *event)
 
 void ItemContainer::mouseReleaseEvent(QMouseEvent *event)
 {
-    Q_UNUSED(event);
-
     if (!m_layout || (!m_editMode && m_editModeCondition == Manual)) {
         return;
     }

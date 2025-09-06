@@ -688,7 +688,6 @@ void RootModel::onResourceScoresChanged(const QString &activity,
 {
     Q_UNUSED(activity);
     Q_UNUSED(client);
-    Q_UNUSED(resource);
     Q_UNUSED(score);
     Q_UNUSED(lastUpdate);
     Q_UNUSED(firstUpdate);

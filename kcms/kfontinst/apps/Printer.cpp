@@ -314,7 +314,6 @@ void CPrinter::slotCancelClicked()
 
 void CPrinter::closeEvent(QCloseEvent *e)
 {
-    Q_UNUSED(e)
     e->ignore();
     slotCancelClicked();
 }

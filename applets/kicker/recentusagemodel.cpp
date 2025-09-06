@@ -366,8 +366,6 @@ QVariant RecentUsageModel::docData(const QString &resource, int role, const QStr
 
 bool RecentUsageModel::trigger(int row, const QString &actionId, const QVariant &argument)
 {
-    Q_UNUSED(argument)
-
     bool withinBounds = row >= 0 && row < rowCount();
 
     if (actionId.isEmpty() && withinBounds) {
