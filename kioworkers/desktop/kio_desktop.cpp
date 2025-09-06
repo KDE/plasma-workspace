@@ -203,7 +203,7 @@ KIO::WorkerResult DesktopProtocol::rename(const QUrl &_src, const QUrl &_dest, K
             KDesktopFile orig(src.toLocalFile());
             QFile(srcPath).remove();
             const auto newPath = QStandardPaths::writableLocation(QStandardPaths::ApplicationsLocation) + QDir::separator() + src.fileName();
-            if (!QFileInfo(newPath).exists()) {
+            if (!QFileInfo::exists(newPath)) {
                 auto writableDesktopFile = orig.copyTo(newPath);
                 writableDesktopFile->sync();
                 delete writableDesktopFile;
