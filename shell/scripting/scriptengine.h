@@ -80,6 +80,9 @@ private:
     AppInterface *m_appInterface;
     QJSValue m_scriptSelf;
     QString m_errorString;
+
+    QThread m_watchdogThread;
+    QTimer *m_watchdogTimer = nullptr;
 };
 
 static const int PLASMA_DESKTOP_SCRIPTING_VERSION = 20;
