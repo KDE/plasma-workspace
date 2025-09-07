@@ -66,30 +66,25 @@ KCM.ScrollViewKCM {
         Kirigami.Action {
             icon.name: "list-add-symbolic"
             text: i18nc("@action:button menu button; add new application etc", "Add New")
-            Accessible.name: text // https://bugreports.qt.io/browse/QTBUG-130360
-            // TODO: enable once Kirigami actions can have Accessible.name set (Qt 6.8)
-            // Accessible.name: i18nc("@action:button accessible menu button", "Add new application or script")
+            Accessible.name: i18nc("@title:menu accessible menu button", "Add new application or script")
             displayHint: Kirigami.DisplayHint.KeepVisible
 
             Kirigami.Action {
                 text: i18nc("@action:inmenu completes: add new application", "Application…")
                 icon.name: "list-add-symbolic"
-                // TODO: enable once Kirigami actions can have Accessible.name set (Qt 6.8)
-                // Accessible.name: i18nc("@action:inmenu accessible", "Add new application")
+                Accessible.name: i18nc("@action:inmenu accessible", "Add application")
                 onTriggered: kcm.model.showApplicationDialog(root)
             }
             Kirigami.Action {
                 text: i18nc("@action:inmenu completes: add new login script", "Login Script…")
                 icon.name: "list-add-symbolic"
-                // TODO: enable once Kirigami actions can have Accessible.name set (Qt 6.8)
-                // Accessible.name: i18nc("@action:inmenu accessible", "Add login script")
+                Accessible.name: i18nc("@action:inmenu accessible", "Add login script")
                 onTriggered: loginFileDialogLoader.active = true
             }
             Kirigami.Action {
                 text: i18nc("@action:inmenu completes: add new logout script", "Logout Script…")
                 icon.name: "list-add-symbolic"
-                // TODO: enable once Kirigami actions can have Accessible.name set (Qt 6.8)
-                // Accessible.name: i18nc("@action:inmenu accessible", "Add new logout script")
+                Accessible.name: i18nc("@action:inmenu accessible", "Add logout script")
                 onTriggered: logoutFileDialogLoader.active = true
             }
         }
