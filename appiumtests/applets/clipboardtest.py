@@ -276,6 +276,27 @@ class ClipboardTest(unittest.TestCase):
         WebDriverWait(app.driver, 5).until_not(lambda _: delete_button.is_displayed())
         self.assertNotEqual(app.gtk_get_clipboard_mime_data()["text/plain;charset=utf-8"].get_data().decode("utf-8"), new_text)
 
+    def test_2_list_3_star(self) -> None:
+        """
+        Star/Pin feature
+        """
+        app.klipper_proxy.clearClipboardHistory()
+        app.spin()
+        for new_text in ("star 1", "normal 1"):
+            content_text = Gdk.ContentProvider.new_for_bytes("text/plain;charset=utf-8", GLib.Bytes.new(bytes(new_text, "utf-8")))
+            app.gtk_copy(content_text)
+        app.driver.find_element(AppiumBy.NAME, "normal 1")
+        ActionChains(app.driver).send_keys(Keys.DOWN).send_keys(Keys.DOWN).perform()
+        app.driver.find_element(AppiumBy.NAME, "Star").click()
+        tabbar_element = app.driver.find_element(AppiumBy.NAME, "Starred Only")
+        tabbar_element.click()
+        app.driver.find_element(AppiumBy.NAME, "star 1")
+        self.assertRaises((WebDriverException, NoSuchElementException), app.driver.find_element, AppiumBy.NAME, "normal 1")
+        ActionChains(app.driver).send_keys(Keys.DOWN).perform()
+        app.driver.find_element(AppiumBy.NAME, "Remove Star").click()
+        app.driver.find_element(AppiumBy.NAME, "normal 1")
+        WebDriverWait(app.driver, 5).until_not(lambda _: tabbar_element.is_displayed())
+
     def test_3_dbus_interface(self) -> None:
         """
         D-Bus interface for Klipper
@@ -524,6 +545,8 @@ class ClipboardTest(unittest.TestCase):
 
 if __name__ == '__main__':
     assert subprocess.call(["pidof", "plasmashell"]) != 0, "The test requires plasmashell to quit"
+    assert os.getenv("GDK_BACKEND") == "wayland", "The test requires wayland GDK_BACKEND"
+    assert os.getenv("QT_QPA_PLATFORM") == "wayland", "The test requires wayland QT_QPA_PLATFORM"
     logging.getLogger().setLevel(logging.INFO)
     app = TestApplication()
     app.run(None)

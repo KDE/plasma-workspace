@@ -322,10 +322,12 @@ PlasmaComponents3.ScrollView {
 
                 PlasmaComponents3.TabButton {
                     text: i18nd("klipper", "All History")
+                    Accessible.onPressAction: tabBar.currentIndex = PlasmaComponents3.TabBar.index
                 }
 
                 PlasmaComponents3.TabButton {
                     text: i18nd("klipper", "Starred Only")
+                    Accessible.onPressAction: tabBar.currentIndex = PlasmaComponents3.TabBar.index
                 }
             }
         }
