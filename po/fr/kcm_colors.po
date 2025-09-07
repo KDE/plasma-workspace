@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-22 00:44+0000\n"
+"POT-Creation-Date: 2025-09-07 00:44+0000\n"
 "PO-Revision-Date: 2024-08-30 13:42+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -1259,22 +1259,22 @@ msgstr ""
 "Le fichier que vous avez tenté d'utiliser pour la définition de votre thème "
 "%1, pourrait ne pas être considéré comme un schéma de couleurs."
 
-#: plasma-apply-colorscheme.cpp:150
+#: plasma-apply-colorscheme.cpp:151
 #, kde-format
 msgid "Successfully applied the accent color %1"
 msgstr "La couleur d'accentuation %1 a été appliquée avec succès."
 
-#: plasma-apply-colorscheme.cpp:152
+#: plasma-apply-colorscheme.cpp:153
 #, kde-format
 msgid "Invalid accent color "
 msgstr "Couleur d'accentuation non valable"
 
-#: plasma-apply-colorscheme.cpp:157
+#: plasma-apply-colorscheme.cpp:158
 #, kde-format
 msgid "You have the following color schemes on your system:"
 msgstr "Vous possédez les thèmes suivants de couleurs sur votre système :"
 
-#: plasma-apply-colorscheme.cpp:162
+#: plasma-apply-colorscheme.cpp:163
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (Thème courant de couleurs)"

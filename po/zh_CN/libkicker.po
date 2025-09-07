@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-07 18:31+0000\n"
+"POT-Creation-Date: 2025-09-07 00:44+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -147,17 +147,17 @@ msgstr "打开所在文件夹"
 msgid "Forget File"
 msgstr "忘记文件"
 
-#: recentusagemodel.cpp:492
+#: recentusagemodel.cpp:490
 #, kde-format
 msgid "Forget All"
 msgstr "忘记全部"
 
-#: recentusagemodel.cpp:494
+#: recentusagemodel.cpp:492
 #, kde-format
 msgid "Forget All Applications"
 msgstr "忘记全部应用程序"
 
-#: recentusagemodel.cpp:497
+#: recentusagemodel.cpp:495
 #, kde-format
 msgid "Forget All Files"
 msgstr "忘记全部文件"

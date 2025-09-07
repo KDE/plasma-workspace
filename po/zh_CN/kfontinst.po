@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-28 00:44+0000\n"
+"POT-Creation-Date: 2025-09-07 00:44+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -49,7 +49,7 @@ msgstr "字体安装管理程序"
 msgid "Simple font installer"
 msgstr "简易字体安装程序"
 
-#: apps/Installer.cpp:117 apps/Printer.cpp:332
+#: apps/Installer.cpp:117 apps/Printer.cpp:331
 #, kde-format
 msgid "(C) Craig Drummond, 2007"
 msgstr "(C) Craig Drummond，2007"
@@ -74,27 +74,27 @@ msgstr "打印"
 msgid "Canceling…"
 msgstr "正在取消…"
 
-#: apps/Printer.cpp:328
+#: apps/Printer.cpp:327
 #, kde-format
 msgid "Font Printer"
 msgstr "字体打印程序"
 
-#: apps/Printer.cpp:330
+#: apps/Printer.cpp:329
 #, kde-format
 msgid "Simple font printer"
 msgstr "简易字体打印程序"
 
-#: apps/Printer.cpp:338
+#: apps/Printer.cpp:337
 #, kde-format
 msgid "Makes the dialog transient for an X app specified by winid"
 msgstr "让 X 应用程序的对话框瞬变值由 winid 指定"
 
-#: apps/Printer.cpp:340
+#: apps/Printer.cpp:339
 #, kde-format
 msgid "Size index to print fonts"
 msgstr "字体的打印尺寸"
 
-#: apps/Printer.cpp:344
+#: apps/Printer.cpp:343
 #, kde-format
 msgid ""
 "Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
@@ -103,12 +103,12 @@ msgstr ""
 "指定要打印的字体，格式为“字体,样式”。样式字段为一串 24 位的十进制数值，格式"
 "为：<字重><宽度><倾斜度>"
 
-#: apps/Printer.cpp:347
+#: apps/Printer.cpp:346
 #, kde-format
 msgid "File containing list of fonts to print"
 msgstr "打印字体列表文件"
 
-#: apps/Printer.cpp:349
+#: apps/Printer.cpp:348
 #, kde-format
 msgid "Remove file containing list of fonts to print"
 msgstr "移除打印字体列表文件"

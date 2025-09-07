@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontviewpart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-28 00:44+0000\n"
+"POT-Creation-Date: 2025-09-07 00:44+0000\n"
 "PO-Revision-Date: 2011-04-28 15:17+0200\n"
 "Last-Translator: Marko Dimjašević <marko@dimjasevic.net>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -59,7 +59,7 @@ msgstr "Instalater pisama"
 msgid "Simple font installer"
 msgstr "Jednostavan instalater pisama"
 
-#: apps/Installer.cpp:117 apps/Printer.cpp:332
+#: apps/Installer.cpp:117 apps/Printer.cpp:331
 #, kde-format
 msgid "(C) Craig Drummond, 2007"
 msgstr "(C) Craig Drummond, 2007"
@@ -86,27 +86,27 @@ msgstr "Ispiši"
 msgid "Canceling…"
 msgstr "Prekidanje…"
 
-#: apps/Printer.cpp:328
+#: apps/Printer.cpp:327
 #, kde-format
 msgid "Font Printer"
 msgstr "Ispisivač pisama"
 
-#: apps/Printer.cpp:330
+#: apps/Printer.cpp:329
 #, kde-format
 msgid "Simple font printer"
 msgstr "Jednostavan ispisivač pisama"
 
-#: apps/Printer.cpp:338
+#: apps/Printer.cpp:337
 #, kde-format
 msgid "Makes the dialog transient for an X app specified by winid"
 msgstr "Učini dijalog prolaznim za X aplikaciju označenu od winId-a"
 
-#: apps/Printer.cpp:340
+#: apps/Printer.cpp:339
 #, kde-format
 msgid "Size index to print fonts"
 msgstr "Promijeni veličinu indeksa da bi ispisao pisma"
 
-#: apps/Printer.cpp:344
+#: apps/Printer.cpp:343
 #, kde-format
 msgid ""
 "Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
@@ -115,12 +115,12 @@ msgstr ""
 "Pismo za ispis, određeno kao \"Obitelj,Stil\" gdje je Stil 24-bitni "
 "decimalni broj sastavljen kao: <weight><width><slant>"
 
-#: apps/Printer.cpp:347
+#: apps/Printer.cpp:346
 #, kde-format
 msgid "File containing list of fonts to print"
 msgstr "Datoteka sadrži listu pisama za ispis"
 
-#: apps/Printer.cpp:349
+#: apps/Printer.cpp:348
 #, kde-format
 msgid "Remove file containing list of fonts to print"
 msgstr "Ukloni datoteku koja sadrži listu pisama za ispis"

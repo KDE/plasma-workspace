@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-28 00:44+0000\n"
+"POT-Creation-Date: 2025-09-07 00:44+0000\n"
 "PO-Revision-Date: 2010-10-25 17:15+0700\n"
 "Last-Translator: Phuwanat Sakornsakolpat <narachai@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -53,7 +53,7 @@ msgstr "ติดตั้งแบบอักษร"
 msgid "Simple font installer"
 msgstr "ตัวติดตั้งแบบอักษรอย่างง่าย ๆ"
 
-#: apps/Installer.cpp:117 apps/Printer.cpp:332
+#: apps/Installer.cpp:117 apps/Printer.cpp:331
 #, kde-format
 msgid "(C) Craig Drummond, 2007"
 msgstr "(C) Craig Drummond, 2007"
@@ -80,27 +80,27 @@ msgstr "พิมพ์"
 msgid "Canceling…"
 msgstr "กำลังยกเลิก..."
 
-#: apps/Printer.cpp:328
+#: apps/Printer.cpp:327
 #, kde-format
 msgid "Font Printer"
 msgstr "โปรแกรมพิมพ์แบบอักษร"
 
-#: apps/Printer.cpp:330
+#: apps/Printer.cpp:329
 #, kde-format
 msgid "Simple font printer"
 msgstr "โปรแกรมพิมพ์แบบอักษรอย่างง่าย ๆ"
 
-#: apps/Printer.cpp:338
+#: apps/Printer.cpp:337
 #, kde-format
 msgid "Makes the dialog transient for an X app specified by winid"
 msgstr "ทำให้กล่องโต้ตอบเป็นของโปรแกรม X ชั่วคราว ซึ่งจะระบุโดยหมายเลขหน้าต่าง"
 
-#: apps/Printer.cpp:340
+#: apps/Printer.cpp:339
 #, kde-format
 msgid "Size index to print fonts"
 msgstr "ดัชนีขนาดที่จะพิมพ์แบบอักษร"
 
-#: apps/Printer.cpp:344
+#: apps/Printer.cpp:343
 #, kde-format
 msgid ""
 "Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
@@ -109,12 +109,12 @@ msgstr ""
 "แบบอักษรที่จะพิมพ์, ระบุเป็น \"ตระกูล,แบบ\" ซึ่งแบบคือเลขฐานสิบแบบ 24 บิต ประกอบด้วย: "
 "<weight><width><slant>"
 
-#: apps/Printer.cpp:347
+#: apps/Printer.cpp:346
 #, kde-format
 msgid "File containing list of fonts to print"
 msgstr "แฟ้มที่บรรจุรายชื่อของแบบอักษรที่จะพิมพ์"
 
-#: apps/Printer.cpp:349
+#: apps/Printer.cpp:348
 #, kde-format
 msgid "Remove file containing list of fonts to print"
 msgstr "ลบแฟ้มที่มีรายการแบบอักษรที่จะพิมพ์"

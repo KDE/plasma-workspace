@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-07 18:31+0000\n"
+"POT-Creation-Date: 2025-09-07 00:44+0000\n"
 "PO-Revision-Date: 2020-09-28 01:43+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -154,17 +154,17 @@ msgstr "Ava sisaldav kataloog"
 msgid "Forget File"
 msgstr "Unusta fail"
 
-#: recentusagemodel.cpp:492
+#: recentusagemodel.cpp:490
 #, kde-format
 msgid "Forget All"
 msgstr "Unusta kõik"
 
-#: recentusagemodel.cpp:494
+#: recentusagemodel.cpp:492
 #, kde-format
 msgid "Forget All Applications"
 msgstr "Unusta kõik rakendused"
 
-#: recentusagemodel.cpp:497
+#: recentusagemodel.cpp:495
 #, kde-format
 msgid "Forget All Files"
 msgstr "Unusta kõik failid"

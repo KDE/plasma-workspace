@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-28 00:44+0000\n"
+"POT-Creation-Date: 2025-09-07 00:44+0000\n"
 "PO-Revision-Date: 2024-08-24 20:01-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -66,7 +66,7 @@ msgstr "Instalador de fontes"
 msgid "Simple font installer"
 msgstr "Instalador de fontes simples"
 
-#: apps/Installer.cpp:117 apps/Printer.cpp:332
+#: apps/Installer.cpp:117 apps/Printer.cpp:331
 #, kde-format
 msgid "(C) Craig Drummond, 2007"
 msgstr "(C) Craig Drummond, 2007"
@@ -92,28 +92,28 @@ msgstr "Imprimir"
 msgid "Canceling…"
 msgstr "Cancelando..."
 
-#: apps/Printer.cpp:328
+#: apps/Printer.cpp:327
 #, kde-format
 msgid "Font Printer"
 msgstr "Impressão de fontes"
 
-#: apps/Printer.cpp:330
+#: apps/Printer.cpp:329
 #, kde-format
 msgid "Simple font printer"
 msgstr "Impressão simples de fontes"
 
-#: apps/Printer.cpp:338
+#: apps/Printer.cpp:337
 #, kde-format
 msgid "Makes the dialog transient for an X app specified by winid"
 msgstr ""
 "Torna o diálogo transitório para um aplicativo X especificado pelo winid"
 
-#: apps/Printer.cpp:340
+#: apps/Printer.cpp:339
 #, kde-format
 msgid "Size index to print fonts"
 msgstr "Tamanho do índice para imprimir fontes"
 
-#: apps/Printer.cpp:344
+#: apps/Printer.cpp:343
 #, kde-format
 msgid ""
 "Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
@@ -122,12 +122,12 @@ msgstr ""
 "Fonte a ser impressa, especificada como \"Família,Estilo\", onde Estilo é um "
 "número decimal de 24 bits, composto por: <altura><largura><inclinação>"
 
-#: apps/Printer.cpp:347
+#: apps/Printer.cpp:346
 #, kde-format
 msgid "File containing list of fonts to print"
 msgstr "Arquivo contendo a lista de fontes a ser impressa"
 
-#: apps/Printer.cpp:349
+#: apps/Printer.cpp:348
 #, kde-format
 msgid "Remove file containing list of fonts to print"
 msgstr "Remover arquivo contendo a lista de fontes a ser impressa"

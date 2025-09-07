@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-07 18:31+0000\n"
+"POT-Creation-Date: 2025-09-07 00:44+0000\n"
 "PO-Revision-Date: 2025-01-08 16:38+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -150,17 +150,17 @@ msgstr "פתיחת התיקייה המכילה"
 msgid "Forget File"
 msgstr "לשכוח קובץ"
 
-#: recentusagemodel.cpp:492
+#: recentusagemodel.cpp:490
 #, kde-format
 msgid "Forget All"
 msgstr "לשכוח הכול"
 
-#: recentusagemodel.cpp:494
+#: recentusagemodel.cpp:492
 #, kde-format
 msgid "Forget All Applications"
 msgstr "לשכוח את כל היישומים"
 
-#: recentusagemodel.cpp:497
+#: recentusagemodel.cpp:495
 #, kde-format
 msgid "Forget All Files"
 msgstr "לשכוח את כל הקבצים"

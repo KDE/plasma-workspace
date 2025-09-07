@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-22 00:44+0000\n"
+"POT-Creation-Date: 2025-09-07 00:44+0000\n"
 "PO-Revision-Date: 2024-08-29 18:26+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -1236,22 +1236,22 @@ msgstr ""
 "Non foi posíbel identificar como esquema de cores o ficheiro que intentou "
 "definir como tal, «%1»."
 
-#: plasma-apply-colorscheme.cpp:150
+#: plasma-apply-colorscheme.cpp:151
 #, kde-format
 msgid "Successfully applied the accent color %1"
 msgstr "Aplicouse a cor de énfase «%1»."
 
-#: plasma-apply-colorscheme.cpp:152
+#: plasma-apply-colorscheme.cpp:153
 #, kde-format
 msgid "Invalid accent color "
 msgstr "A cor de énfase non é válida."
 
-#: plasma-apply-colorscheme.cpp:157
+#: plasma-apply-colorscheme.cpp:158
 #, kde-format
 msgid "You have the following color schemes on your system:"
 msgstr "Ten os seguintes esquemas de cores no sistema:"
 
-#: plasma-apply-colorscheme.cpp:162
+#: plasma-apply-colorscheme.cpp:163
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (esquema de cores actual)"

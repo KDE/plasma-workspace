@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-07 18:31+0000\n"
+"POT-Creation-Date: 2025-09-07 00:44+0000\n"
 "PO-Revision-Date: 2022-02-26 11:47+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -149,17 +149,17 @@ msgstr "युक्त फोल्डर खोलें"
 msgid "Forget File"
 msgstr "फ़ाइल भूलें"
 
-#: recentusagemodel.cpp:492
+#: recentusagemodel.cpp:490
 #, kde-format
 msgid "Forget All"
 msgstr "सभी को भुलें"
 
-#: recentusagemodel.cpp:494
+#: recentusagemodel.cpp:492
 #, kde-format
 msgid "Forget All Applications"
 msgstr "सभी अनुप्रयोगों को भुलें"
 
-#: recentusagemodel.cpp:497
+#: recentusagemodel.cpp:495
 #, kde-format
 msgid "Forget All Files"
 msgstr "सभी फाइलों को भुलें"

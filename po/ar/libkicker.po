@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-07 18:31+0000\n"
+"POT-Creation-Date: 2025-09-07 00:44+0000\n"
 "PO-Revision-Date: 2025-05-17 18:12+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -149,17 +149,17 @@ msgstr "افتح المجلد الحاوي"
 msgid "Forget File"
 msgstr "انسَ الملف"
 
-#: recentusagemodel.cpp:492
+#: recentusagemodel.cpp:490
 #, kde-format
 msgid "Forget All"
 msgstr "انسَ الكلّ"
 
-#: recentusagemodel.cpp:494
+#: recentusagemodel.cpp:492
 #, kde-format
 msgid "Forget All Applications"
 msgstr "انسَ كلّ التّطبيقات"
 
-#: recentusagemodel.cpp:497
+#: recentusagemodel.cpp:495
 #, kde-format
 msgid "Forget All Files"
 msgstr "انسَ كلّ الملفات"

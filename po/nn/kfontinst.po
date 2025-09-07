@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-28 00:44+0000\n"
+"POT-Creation-Date: 2025-09-07 00:44+0000\n"
 "PO-Revision-Date: 2025-03-20 20:06+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -56,7 +56,7 @@ msgstr "Skriftinstallering"
 msgid "Simple font installer"
 msgstr "Enkel skriftinstallering"
 
-#: apps/Installer.cpp:117 apps/Printer.cpp:332
+#: apps/Installer.cpp:117 apps/Printer.cpp:331
 #, kde-format
 msgid "(C) Craig Drummond, 2007"
 msgstr "© 2007 Craig Drummond"
@@ -83,29 +83,29 @@ msgstr "Skriv ut"
 msgid "Canceling…"
 msgstr "Avbryt …"
 
-#: apps/Printer.cpp:328
+#: apps/Printer.cpp:327
 #, kde-format
 msgid "Font Printer"
 msgstr "Utskrift av skriftprøve"
 
-#: apps/Printer.cpp:330
+#: apps/Printer.cpp:329
 #, kde-format
 msgid "Simple font printer"
 msgstr "Enkel utskrift av skriftprøve"
 
-#: apps/Printer.cpp:338
+#: apps/Printer.cpp:337
 #, kde-format
 msgid "Makes the dialog transient for an X app specified by winid"
 msgstr ""
 "Gjer dialogvindauget gjennomgåande for eit X-program spesifisert med "
 "vindaugs-ID"
 
-#: apps/Printer.cpp:340
+#: apps/Printer.cpp:339
 #, kde-format
 msgid "Size index to print fonts"
 msgstr "Storleiksindeks på utskrift av skrift"
 
-#: apps/Printer.cpp:344
+#: apps/Printer.cpp:343
 #, kde-format
 msgid ""
 "Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
@@ -114,12 +114,12 @@ msgstr ""
 "Skrifta som skal skrivast ut, oppgjeve som «Familie, stil», der stil er eit "
 "24-bitars desimaltal som inneheld <vekt><breidd><skråstilling>"
 
-#: apps/Printer.cpp:347
+#: apps/Printer.cpp:346
 #, kde-format
 msgid "File containing list of fonts to print"
 msgstr "Fila som inneheld lista over skrifter som skal skrivast ut"
 
-#: apps/Printer.cpp:349
+#: apps/Printer.cpp:348
 #, kde-format
 msgid "Remove file containing list of fonts to print"
 msgstr "Fjern fila som inneheld lista over skrifter som skal skrivast ut"

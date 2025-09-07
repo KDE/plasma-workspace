@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-28 00:44+0000\n"
+"POT-Creation-Date: 2025-09-07 00:44+0000\n"
 "PO-Revision-Date: 2024-01-03 14:00-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -55,7 +55,7 @@ msgstr "ਫੋਂਟ ਇੰਸਟਾਲਰ"
 msgid "Simple font installer"
 msgstr "ਸਧਾਰਨ ਫੋਂਟ ਇੰਸਟਾਲਰ"
 
-#: apps/Installer.cpp:117 apps/Printer.cpp:332
+#: apps/Installer.cpp:117 apps/Printer.cpp:331
 #, kde-format
 msgid "(C) Craig Drummond, 2007"
 msgstr "(C) Craig Drummond, 2007"
@@ -81,39 +81,39 @@ msgstr "ਪਰਿੰਟ ਕਰੋ"
 msgid "Canceling…"
 msgstr "…ਰੱਦ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ"
 
-#: apps/Printer.cpp:328
+#: apps/Printer.cpp:327
 #, kde-format
 msgid "Font Printer"
 msgstr "ਫੋਂਟ ਪਰਿੰਟਰ"
 
-#: apps/Printer.cpp:330
+#: apps/Printer.cpp:329
 #, kde-format
 msgid "Simple font printer"
 msgstr "ਸੈਂਪਲ ਫੋਂਟ ਇੰਸਟਾਲਰ"
 
-#: apps/Printer.cpp:338
+#: apps/Printer.cpp:337
 #, kde-format
 msgid "Makes the dialog transient for an X app specified by winid"
 msgstr "winid ਰਾਹੀਂ ਦਿੱਤੀ X ਐਪਲੀਕੇਸ਼ਨ ਲਈ ਅਸਥਾਈ ਡਾਈਲਾਗ ਬਣਾਓ"
 
-#: apps/Printer.cpp:340
+#: apps/Printer.cpp:339
 #, kde-format
 msgid "Size index to print fonts"
 msgstr "ਫੋਂਟ ਛਾਪਣ ਲਈ ਇੰਡੈਕਸ ਆਕਾਰ"
 
-#: apps/Printer.cpp:344
+#: apps/Printer.cpp:343
 #, kde-format
 msgid ""
 "Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
 "number composed as: <weight><width><slant>"
 msgstr ""
 
-#: apps/Printer.cpp:347
+#: apps/Printer.cpp:346
 #, kde-format
 msgid "File containing list of fonts to print"
 msgstr "ਪਰਿੰਟ ਕਰਨ ਲਈ ਫੋਂਟਾਂ ਦੀ ਲਿਸਟ ਰੱਖਣ ਵਾਲੀ ਫਾਇਲ"
 
-#: apps/Printer.cpp:349
+#: apps/Printer.cpp:348
 #, kde-format
 msgid "Remove file containing list of fonts to print"
 msgstr "ਪਰਿੰਟ ਕਰਨ ਲਈ ਫੋਂਟਾਂ ਦੀ ਲਿਸਟ ਰੱਖਣ ਵਾਲੀ ਫਾਇਲ ਹਟਾਓ"

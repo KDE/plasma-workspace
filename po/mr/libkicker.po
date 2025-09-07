@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-07 18:31+0000\n"
+"POT-Creation-Date: 2025-09-07 00:44+0000\n"
 "PO-Revision-Date: 2013-04-13 16:15+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -151,17 +151,17 @@ msgstr ""
 msgid "Forget File"
 msgstr "दस्तऐवज विसरा"
 
-#: recentusagemodel.cpp:492
+#: recentusagemodel.cpp:490
 #, fuzzy, kde-format
 msgid "Forget All"
 msgstr "दस्तऐवज विसरा"
 
-#: recentusagemodel.cpp:494
+#: recentusagemodel.cpp:492
 #, fuzzy, kde-format
 msgid "Forget All Applications"
 msgstr "पसंत अनुप्रयोग"
 
-#: recentusagemodel.cpp:497
+#: recentusagemodel.cpp:495
 #, fuzzy, kde-format
 msgid "Forget All Files"
 msgstr "दस्तऐवज विसरा"

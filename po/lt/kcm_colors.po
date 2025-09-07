@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-22 00:44+0000\n"
+"POT-Creation-Date: 2025-09-07 00:44+0000\n"
 "PO-Revision-Date: 2024-09-01 00:56+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -1225,22 +1225,22 @@ msgstr ""
 "Failo, kurį bandėte nustatyti kaip rinkinį, %1, nepavyko atpažinti kaip "
 "spalvų rinkinio."
 
-#: plasma-apply-colorscheme.cpp:150
+#: plasma-apply-colorscheme.cpp:151
 #, kde-format
 msgid "Successfully applied the accent color %1"
 msgstr "Sėkmingai pritaikyta %1 paryškinimo spalva"
 
-#: plasma-apply-colorscheme.cpp:152
+#: plasma-apply-colorscheme.cpp:153
 #, kde-format
 msgid "Invalid accent color "
 msgstr "Neteisinga paryškinimo spalvą "
 
-#: plasma-apply-colorscheme.cpp:157
+#: plasma-apply-colorscheme.cpp:158
 #, kde-format
 msgid "You have the following color schemes on your system:"
 msgstr "Savo sistemoje turite šiuos spalvų rinkinius:"
 
-#: plasma-apply-colorscheme.cpp:162
+#: plasma-apply-colorscheme.cpp:163
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (dabartinis spalvų rinkinys)"

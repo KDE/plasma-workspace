@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-28 00:44+0000\n"
+"POT-Creation-Date: 2025-09-07 00:44+0000\n"
 "PO-Revision-Date: 2008-11-21 16:37+0530\n"
 "Last-Translator: Kartik Mistry <kartik.mistry@gmail.com>\n"
 "Language-Team: Gujarati <kde-i18n-doc@kde.org>\n"
@@ -51,7 +51,7 @@ msgstr "ફોન્ટ સ્થાપક"
 msgid "Simple font installer"
 msgstr "સરળ ફોન્ટ સ્થાપક"
 
-#: apps/Installer.cpp:117 apps/Printer.cpp:332
+#: apps/Installer.cpp:117 apps/Printer.cpp:331
 #, kde-format
 msgid "(C) Craig Drummond, 2007"
 msgstr "(C) ક્રેગ ડ્રમ્મોન્ડ, ૨૦૦૭"
@@ -78,39 +78,39 @@ msgstr "છાપો"
 msgid "Canceling…"
 msgstr "રદ કરે છે..."
 
-#: apps/Printer.cpp:328
+#: apps/Printer.cpp:327
 #, kde-format
 msgid "Font Printer"
 msgstr "ફોન્ટ પ્રિન્ટર"
 
-#: apps/Printer.cpp:330
+#: apps/Printer.cpp:329
 #, kde-format
 msgid "Simple font printer"
 msgstr "સરળ ફોન્ટ પ્રિન્ટર"
 
-#: apps/Printer.cpp:338
+#: apps/Printer.cpp:337
 #, kde-format
 msgid "Makes the dialog transient for an X app specified by winid"
 msgstr "winid વડે સ્પષ્ટ કરેલ X કાર્યક્રમ માટે સંવાદ અડગ બનાવે છે"
 
-#: apps/Printer.cpp:340
+#: apps/Printer.cpp:339
 #, kde-format
 msgid "Size index to print fonts"
 msgstr "ફોન્ટ છાપવા માટેની માપ અનુક્રમણિકા"
 
-#: apps/Printer.cpp:344
+#: apps/Printer.cpp:343
 #, kde-format
 msgid ""
 "Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
 "number composed as: <weight><width><slant>"
 msgstr ""
 
-#: apps/Printer.cpp:347
+#: apps/Printer.cpp:346
 #, kde-format
 msgid "File containing list of fonts to print"
 msgstr "છાપવા માટેનાં ફોન્ટની યાદી ધરાવતી ફાઇલ"
 
-#: apps/Printer.cpp:349
+#: apps/Printer.cpp:348
 #, kde-format
 msgid "Remove file containing list of fonts to print"
 msgstr "છાપવા માટેનાં ફોન્ટની યાદી ધરાવતી ફાઇલ દૂર કરો"

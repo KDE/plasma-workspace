@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-22 00:44+0000\n"
+"POT-Creation-Date: 2025-09-07 00:44+0000\n"
 "PO-Revision-Date: 2009-01-06 14:36+0200\n"
 "Last-Translator: Erdal Ronahi <erdal.ronahi@nospam.gmail.com>\n"
 "Language-Team: Kurdish <kde-i18n-doc@lists.kde.org>\n"
@@ -1273,23 +1273,23 @@ msgid ""
 "a color scheme."
 msgstr ""
 
-#: plasma-apply-colorscheme.cpp:150
+#: plasma-apply-colorscheme.cpp:151
 #, kde-format
 msgid "Successfully applied the accent color %1"
 msgstr ""
 
-#: plasma-apply-colorscheme.cpp:152
+#: plasma-apply-colorscheme.cpp:153
 #, fuzzy, kde-format
 #| msgid "Inactive color"
 msgid "Invalid accent color "
 msgstr "Rengê neçalak"
 
-#: plasma-apply-colorscheme.cpp:157
+#: plasma-apply-colorscheme.cpp:158
 #, kde-format
 msgid "You have the following color schemes on your system:"
 msgstr ""
 
-#: plasma-apply-colorscheme.cpp:162
+#: plasma-apply-colorscheme.cpp:163
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid " * %1 (current color scheme)"

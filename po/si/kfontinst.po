@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-28 00:44+0000\n"
+"POT-Creation-Date: 2025-09-07 00:44+0000\n"
 "PO-Revision-Date: 2009-12-31 21:17+0530\n"
 "Last-Translator: Danishka Navin <danishka@gmail.com>\n"
 "Language-Team: Sinhala <danishka@gmail.com>\n"
@@ -51,7 +51,7 @@ msgstr "අකුරු ස්ථාපකය"
 msgid "Simple font installer"
 msgstr "සරල අකුරු ස්ථාපකය"
 
-#: apps/Installer.cpp:117 apps/Printer.cpp:332
+#: apps/Installer.cpp:117 apps/Printer.cpp:331
 #, kde-format
 msgid "(C) Craig Drummond, 2007"
 msgstr "(C) Craig Drummond, 2007"
@@ -78,27 +78,27 @@ msgstr "මුද්‍රණය"
 msgid "Canceling…"
 msgstr "අහෝසි කරමින්..."
 
-#: apps/Printer.cpp:328
+#: apps/Printer.cpp:327
 #, kde-format
 msgid "Font Printer"
 msgstr "අකුරු මුද්‍රකය"
 
-#: apps/Printer.cpp:330
+#: apps/Printer.cpp:329
 #, kde-format
 msgid "Simple font printer"
 msgstr "සරල අකුරු මුද්‍රකය"
 
-#: apps/Printer.cpp:338
+#: apps/Printer.cpp:337
 #, kde-format
 msgid "Makes the dialog transient for an X app specified by winid"
 msgstr "winid මගින් දෙන ලද X වැඩසටහනට සංවාද කොටුව පවතින සේ සකසන්න"
 
-#: apps/Printer.cpp:340
+#: apps/Printer.cpp:339
 #, kde-format
 msgid "Size index to print fonts"
 msgstr "අකුරු මුද්‍රණය සඳහා ප්‍රමාණ"
 
-#: apps/Printer.cpp:344
+#: apps/Printer.cpp:343
 #, kde-format
 msgid ""
 "Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
@@ -107,12 +107,12 @@ msgstr ""
 "මුද්‍රණය සඳහා අකුරු, \"කාණ්ඩය,රටාව\" ලෙස ලබාදේ , රටාව 24-බිටු දශම අංක ලෙස සම්පාදනය "
 "වේ: <weight><width><slant>"
 
-#: apps/Printer.cpp:347
+#: apps/Printer.cpp:346
 #, kde-format
 msgid "File containing list of fonts to print"
 msgstr "මුද්‍රණය සඳහා අකුරු ලැයිස්තුව ඇති ගොනුව"
 
-#: apps/Printer.cpp:349
+#: apps/Printer.cpp:348
 #, kde-format
 msgid "Remove file containing list of fonts to print"
 msgstr "මුද්‍රණය සඳහා අකුරු ලැයිස්තුව ඇති ගොනුව ඉවත් කරන්න"

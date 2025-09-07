@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-22 00:44+0000\n"
+"POT-Creation-Date: 2025-09-07 00:44+0000\n"
 "PO-Revision-Date: 2021-08-27 12:19+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -1218,23 +1218,23 @@ msgstr ""
 "നിങ്ങളുടെ സ്കീമായി സജ്ജീകരിക്കാൻ ശ്രമിച്ച ഫയൽ, %1, ഒരു വർണ്ണ സ്കീമായി തിരിച്ചറിയാൻ "
 "കഴിഞ്ഞില്ല."
 
-#: plasma-apply-colorscheme.cpp:150
+#: plasma-apply-colorscheme.cpp:151
 #, kde-format
 msgid "Successfully applied the accent color %1"
 msgstr ""
 
-#: plasma-apply-colorscheme.cpp:152
+#: plasma-apply-colorscheme.cpp:153
 #, fuzzy, kde-format
 #| msgid "Inactive color"
 msgid "Invalid accent color "
 msgstr "സജീവമല്ലാത്തവയുടെ നിറം"
 
-#: plasma-apply-colorscheme.cpp:157
+#: plasma-apply-colorscheme.cpp:158
 #, kde-format
 msgid "You have the following color schemes on your system:"
 msgstr "നിങ്ങളുടെ സിസ്റ്റത്തിൽ ഇനിപ്പറയുന്ന വർണ്ണ സ്കീമുകൾ ഉണ്ട്:"
 
-#: plasma-apply-colorscheme.cpp:162
+#: plasma-apply-colorscheme.cpp:163
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (നിലവിലെ കളർ സ്കീം)"

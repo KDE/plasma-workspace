@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-28 00:44+0000\n"
+"POT-Creation-Date: 2025-09-07 00:44+0000\n"
 "PO-Revision-Date: 2024-11-04 22:07\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -57,7 +57,7 @@ msgstr "Сродак усталявання шрыфтоў"
 msgid "Simple font installer"
 msgstr "Просты сродак для ўсталявання шрыфтоў"
 
-#: apps/Installer.cpp:117 apps/Printer.cpp:332
+#: apps/Installer.cpp:117 apps/Printer.cpp:331
 #, kde-format
 msgid "(C) Craig Drummond, 2007"
 msgstr "(c) Craig Drummond, 2007"
@@ -82,27 +82,27 @@ msgstr "Друкаванне"
 msgid "Canceling…"
 msgstr "Скасаванне…"
 
-#: apps/Printer.cpp:328
+#: apps/Printer.cpp:327
 #, kde-format
 msgid "Font Printer"
 msgstr "Друкаванне шрыфту"
 
-#: apps/Printer.cpp:330
+#: apps/Printer.cpp:329
 #, kde-format
 msgid "Simple font printer"
 msgstr "Просты сродак друкавання шрыфтоў"
 
-#: apps/Printer.cpp:338
+#: apps/Printer.cpp:337
 #, kde-format
 msgid "Makes the dialog transient for an X app specified by winid"
 msgstr "Робіць дыялогавае акно часовым для праграмы X, вызначанай winid"
 
-#: apps/Printer.cpp:340
+#: apps/Printer.cpp:339
 #, kde-format
 msgid "Size index to print fonts"
 msgstr "Індэкс памеру для друкавання шрыфтоў"
 
-#: apps/Printer.cpp:344
+#: apps/Printer.cpp:343
 #, kde-format
 msgid ""
 "Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
@@ -111,12 +111,12 @@ msgstr ""
 "Шрыфт для друкавання, пазначаны як \"Сямейства,Стыль\", дзе \"Стыль\" - гэта "
 "24-бітавы дзесятковы лік, які складаецца як: <weight><width><slant>"
 
-#: apps/Printer.cpp:347
+#: apps/Printer.cpp:346
 #, kde-format
 msgid "File containing list of fonts to print"
 msgstr "Файл са спісам шрыфтоў для друкавання"
 
-#: apps/Printer.cpp:349
+#: apps/Printer.cpp:348
 #, kde-format
 msgid "Remove file containing list of fonts to print"
 msgstr "Выдаліць файл са спісам шрыфтоў для друкавання"

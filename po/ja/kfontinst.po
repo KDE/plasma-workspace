@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-28 00:44+0000\n"
+"POT-Creation-Date: 2025-09-07 00:44+0000\n"
 "PO-Revision-Date: 2023-08-13 17:52-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -63,7 +63,7 @@ msgstr "フォントインストーラ"
 msgid "Simple font installer"
 msgstr "簡易フォントインストーラ"
 
-#: apps/Installer.cpp:117 apps/Printer.cpp:332
+#: apps/Installer.cpp:117 apps/Printer.cpp:331
 #, kde-format
 msgid "(C) Craig Drummond, 2007"
 msgstr "(c) Craig Drummond, 2007"
@@ -93,19 +93,19 @@ msgstr "印刷"
 msgid "Canceling…"
 msgstr "キャンセルします..."
 
-#: apps/Printer.cpp:328
+#: apps/Printer.cpp:327
 #, kde-format
 msgid "Font Printer"
 msgstr "フォントプリンタ"
 
-#: apps/Printer.cpp:330
+#: apps/Printer.cpp:329
 #, kde-format
 msgid "Simple font printer"
 msgstr "簡易フォントプリンタ"
 
 # KCmdLineOptions: embed <winid>
 # 自信なし
-#: apps/Printer.cpp:338
+#: apps/Printer.cpp:337
 #, kde-format
 msgid "Makes the dialog transient for an X app specified by winid"
 msgstr ""
@@ -113,13 +113,13 @@ msgstr ""
 "する"
 
 # KCmdLineOptions: size <index>
-#: apps/Printer.cpp:340
+#: apps/Printer.cpp:339
 #, kde-format
 msgid "Size index to print fonts"
 msgstr "フォントを印刷する際のサイズ"
 
 # KCmdLineOptions: pfont <font>
-#: apps/Printer.cpp:344
+#: apps/Printer.cpp:343
 #, kde-format
 msgid ""
 "Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
@@ -129,13 +129,13 @@ msgstr ""
 "ント> で構成された 24 ビットの十進数。"
 
 # KCmdLineOptions: listfile <file>
-#: apps/Printer.cpp:347
+#: apps/Printer.cpp:346
 #, kde-format
 msgid "File containing list of fonts to print"
 msgstr "印刷するフォントのリストを含むファイル"
 
 # KCmdLineOptions: deletefile
-#: apps/Printer.cpp:349
+#: apps/Printer.cpp:348
 #, kde-format
 msgid "Remove file containing list of fonts to print"
 msgstr "印刷するフォントのリストを含むファイルを削除"

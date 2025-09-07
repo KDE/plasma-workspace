@@ -1,6 +1,6 @@
 # translation of klipper.po to Polish
 # translation of klipper.po to
-# Version: $Revision: 1717143 $
+# Version: $Revision: 1717593 $
 # Copyright (C) 2002, 2003, 2004, 2005, 2006, 2008, 2009 Free Software Foundation, Inc.
 # Norbert Popiołek <norbert@kde.com.pl>
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2002, 2003.
@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-31 00:44+0000\n"
-"PO-Revision-Date: 2025-08-17 12:04+0200\n"
+"PO-Revision-Date: 2025-09-06 05:17+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -401,15 +401,14 @@ msgid "Clear History"
 msgstr "Wyczyść historię"
 
 #: declarative/qml/ClipboardMenu.qml:324
-#, fuzzy, kde-format
-#| msgid "Clear History"
+#, kde-format
 msgid "All History"
-msgstr "Wyczyść historię"
+msgstr "Całą historię"
 
 #: declarative/qml/ClipboardMenu.qml:328
 #, kde-format
 msgid "Starred Only"
-msgstr ""
+msgstr "Tylko z gwiazdkami"
 
 #: declarative/qml/ClipboardMenu.qml:434
 #, kde-format
@@ -442,16 +441,14 @@ msgid "Remove from history"
 msgstr "Usuń z historii"
 
 #: declarative/qml/DelegateToolButtons.qml:58
-#, fuzzy, kde-format
-#| msgid "Remove from history"
+#, kde-format
 msgid "Remove Star"
-msgstr "Usuń z historii"
+msgstr "Usuń gwiazdkę"
 
 #: declarative/qml/DelegateToolButtons.qml:58
-#, fuzzy, kde-format
-#| msgid "Start"
+#, kde-format
 msgid "Star"
-msgstr "Uruchom"
+msgstr "Gwiazdka"
 
 #: declarative/qml/EditPage.qml:64
 #, kde-format
@@ -671,10 +668,9 @@ msgid "Icon:"
 msgstr "Ikona:"
 
 #: historymodel.cpp:278
-#, fuzzy, kde-format
-#| msgid "The clipboard history will store up to this many items."
+#, kde-format
 msgid "The clipboard history contains starred items. Clear them too?"
-msgstr "Historia schowka przechowa do tylu rzeczy."
+msgstr "Historia schowka zawiera rzeczy z gwiazdkami. Czy je też wyczyścić?"
 
 #: historymodel.cpp:279 historymodel.cpp:299
 #, kde-format
@@ -684,13 +680,12 @@ msgstr "Wyczyść historię schowka"
 #: historymodel.cpp:280
 #, kde-format
 msgid "Clear Everything"
-msgstr ""
+msgstr "Wyczyść wszystko"
 
 #: historymodel.cpp:281
-#, fuzzy, kde-format
-#| msgid "Clipboard Items"
+#, kde-format
 msgid "Keep Starred Items"
-msgstr "Rzeczy w schowku"
+msgstr "Zachowaj rzeczy z gwiazdkami"
 
 #: historymodel.cpp:298
 #, kde-format
@@ -706,12 +701,12 @@ msgstr "%1x%2"
 #: historymodel.cpp:562
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
-msgstr ""
+msgstr "Ta rzecz zawiera gwiazdkę. Czy na pewno usunąć ją z historii?"
 
 #: historymodel.cpp:563
 #, kde-format
 msgid "Remove Starred Item"
-msgstr ""
+msgstr "Usuń rzecz z gwiazdką"
 
 #: klipper.cpp:91
 #, kde-format

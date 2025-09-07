@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-28 00:44+0000\n"
+"POT-Creation-Date: 2025-09-07 00:44+0000\n"
 "PO-Revision-Date: 2005-01-27 20:19+0000\n"
 "Last-Translator: Kevin Donnelly <kevin@dotmon.com>\n"
 "Language-Team: Cymraeg\n"
@@ -52,7 +52,7 @@ msgstr "Arsefydlydd Wynebfathau KDE"
 msgid "Simple font installer"
 msgstr "Gwelydd wynebfathau syml"
 
-#: apps/Installer.cpp:117 apps/Printer.cpp:332
+#: apps/Installer.cpp:117 apps/Printer.cpp:331
 #, fuzzy, kde-format
 #| msgid "(c) Craig Drummond, 2004"
 msgid "(C) Craig Drummond, 2007"
@@ -80,40 +80,40 @@ msgstr "Argraffu"
 msgid "Canceling…"
 msgstr ""
 
-#: apps/Printer.cpp:328
+#: apps/Printer.cpp:327
 #, fuzzy, kde-format
 msgid "Font Printer"
 msgstr "Gwelydd Wynebfathau"
 
-#: apps/Printer.cpp:330
+#: apps/Printer.cpp:329
 #, fuzzy, kde-format
 #| msgid "Simple font viewer"
 msgid "Simple font printer"
 msgstr "Gwelydd wynebfathau syml"
 
-#: apps/Printer.cpp:338
+#: apps/Printer.cpp:337
 #, kde-format
 msgid "Makes the dialog transient for an X app specified by winid"
 msgstr ""
 
-#: apps/Printer.cpp:340
+#: apps/Printer.cpp:339
 #, kde-format
 msgid "Size index to print fonts"
 msgstr ""
 
-#: apps/Printer.cpp:344
+#: apps/Printer.cpp:343
 #, kde-format
 msgid ""
 "Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
 "number composed as: <weight><width><slant>"
 msgstr ""
 
-#: apps/Printer.cpp:347
+#: apps/Printer.cpp:346
 #, kde-format
 msgid "File containing list of fonts to print"
 msgstr ""
 
-#: apps/Printer.cpp:349
+#: apps/Printer.cpp:348
 #, kde-format
 msgid "Remove file containing list of fonts to print"
 msgstr ""

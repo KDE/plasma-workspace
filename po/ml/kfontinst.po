@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-28 00:44+0000\n"
+"POT-Creation-Date: 2025-09-07 00:44+0000\n"
 "PO-Revision-Date: 2021-09-26 16:00+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -52,7 +52,7 @@ msgstr "അക്ഷരസഞ്ചയത്തിനുള്ള ഇന്‍�
 msgid "Simple font installer"
 msgstr "ലളിതമായ അക്ഷരസഞ്ചയത്തിനുള്ള ഇന്‍സ്റ്റോളര്‍"
 
-#: apps/Installer.cpp:117 apps/Printer.cpp:332
+#: apps/Installer.cpp:117 apps/Printer.cpp:331
 #, kde-format
 msgid "(C) Craig Drummond, 2007"
 msgstr "(C) ക്രെയിഗ് ഡ്രമണ്ട്, 2007"
@@ -78,27 +78,27 @@ msgstr "അച്ചടിയ്ക്കുക"
 msgid "Canceling…"
 msgstr "റദ്ദാക്കുന്നു…"
 
-#: apps/Printer.cpp:328
+#: apps/Printer.cpp:327
 #, kde-format
 msgid "Font Printer"
 msgstr "അക്ഷരസഞ്ചയം അച്ചടിയ്ക്കാന്‍"
 
-#: apps/Printer.cpp:330
+#: apps/Printer.cpp:329
 #, kde-format
 msgid "Simple font printer"
 msgstr "ലളിതമായ അക്ഷരസഞ്ചയം അച്ചടിയ്ക്കാനുള്ളതു്"
 
-#: apps/Printer.cpp:338
+#: apps/Printer.cpp:337
 #, kde-format
 msgid "Makes the dialog transient for an X app specified by winid"
 msgstr "വിനിഡ് വ്യക്തമാക്കിയ X അപ്ലിക്കേഷനായി ഡയലോഗ് താത്കാലികമാക്കുന്നു"
 
-#: apps/Printer.cpp:340
+#: apps/Printer.cpp:339
 #, kde-format
 msgid "Size index to print fonts"
 msgstr "അക്ഷരസഞ്ചയം അച്ചടിയ്ക്കുന്നതിനുള്ള വലിപ്പം"
 
-#: apps/Printer.cpp:344
+#: apps/Printer.cpp:343
 #, kde-format
 msgid ""
 "Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
@@ -107,12 +107,12 @@ msgstr ""
 "അച്ചടിക്കാനുള്ള ഫോണ്ട്, \"ഫാമിലി, സ്റ്റൈൽ\" എന്ന് വ്യക്തമാക്കുന്നു, ഇവിടെ സ്റ്റൈൽ ഒരു 24-ബിറ്റ് "
 "ദശാംശ സംഖ്യയാണ്: <weight><width><slant>"
 
-#: apps/Printer.cpp:347
+#: apps/Printer.cpp:346
 #, kde-format
 msgid "File containing list of fonts to print"
 msgstr "അച്ചടിയ്ക്കുന്നതിനുള്ള അക്ഷരസഞ്ചയങ്ങളടങ്ങുന്ന ഫയല്‍"
 
-#: apps/Printer.cpp:349
+#: apps/Printer.cpp:348
 #, kde-format
 msgid "Remove file containing list of fonts to print"
 msgstr "അച്ചടിയ്ക്കുന്നതിനുള്ള അക്ഷരസഞ്ചയങ്ങളടങ്ങുന്ന ഫയല്‍ നീക്കം ചെയ്യുക"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-28 00:44+0000\n"
+"POT-Creation-Date: 2025-09-07 00:44+0000\n"
 "PO-Revision-Date: 2011-07-01 21:22+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@gmail.com>\n"
 "Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
@@ -51,7 +51,7 @@ msgstr "Pemasang Font"
 msgid "Simple font installer"
 msgstr "Pemasang font mudah"
 
-#: apps/Installer.cpp:117 apps/Printer.cpp:332
+#: apps/Installer.cpp:117 apps/Printer.cpp:331
 #, kde-format
 msgid "(C) Craig Drummond, 2007"
 msgstr "(c) Craig Drummond, 2007"
@@ -78,39 +78,39 @@ msgstr "Cetak"
 msgid "Canceling…"
 msgstr "Membatalkan..."
 
-#: apps/Printer.cpp:328
+#: apps/Printer.cpp:327
 #, kde-format
 msgid "Font Printer"
 msgstr "Pencetak Font"
 
-#: apps/Printer.cpp:330
+#: apps/Printer.cpp:329
 #, kde-format
 msgid "Simple font printer"
 msgstr "Pencetak font mudah"
 
-#: apps/Printer.cpp:338
+#: apps/Printer.cpp:337
 #, kde-format
 msgid "Makes the dialog transient for an X app specified by winid"
 msgstr "Jadikan dialog transient untuk aplikasi X dinyatakan oleh winid"
 
-#: apps/Printer.cpp:340
+#: apps/Printer.cpp:339
 #, fuzzy, kde-format
 msgid "Size index to print fonts"
 msgstr "Saiz ke "
 
-#: apps/Printer.cpp:344
+#: apps/Printer.cpp:343
 #, fuzzy, kde-format
 msgid ""
 "Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
 "number composed as: <weight><width><slant>"
 msgstr "Font ke  Keluarga Gaya Gaya a<weight><width><slant>"
 
-#: apps/Printer.cpp:347
+#: apps/Printer.cpp:346
 #, fuzzy, kde-format
 msgid "File containing list of fonts to print"
 msgstr "Fail ke "
 
-#: apps/Printer.cpp:349
+#: apps/Printer.cpp:348
 #, fuzzy, kde-format
 msgid "Remove file containing list of fonts to print"
 msgstr "Buang fail ke "

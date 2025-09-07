@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-28 00:44+0000\n"
+"POT-Creation-Date: 2025-09-07 00:44+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -51,7 +51,7 @@ msgstr "خەت نۇسخا ئورناتقۇچ"
 msgid "Simple font installer"
 msgstr "ئاددىي خەت نۇسخىسى ئورناتقۇچ"
 
-#: apps/Installer.cpp:117 apps/Printer.cpp:332
+#: apps/Installer.cpp:117 apps/Printer.cpp:331
 #, kde-format
 msgid "(C) Craig Drummond, 2007"
 msgstr "(C) Craig Drummond، 2007"
@@ -80,29 +80,29 @@ msgstr "بېسىپ چىقار"
 msgid "Canceling…"
 msgstr "ۋاز كېچىۋاتىدۇ…"
 
-#: apps/Printer.cpp:328
+#: apps/Printer.cpp:327
 #, kde-format
 msgid "Font Printer"
 msgstr "خەت نۇسخا پرىنتېرى"
 
-#: apps/Printer.cpp:330
+#: apps/Printer.cpp:329
 #, kde-format
 msgid "Simple font printer"
 msgstr "ئاددىي خەت نۇسخىسى پرىنتېرى"
 
-#: apps/Printer.cpp:338
+#: apps/Printer.cpp:337
 #, kde-format
 msgid "Makes the dialog transient for an X app specified by winid"
 msgstr ""
 "winid كۆرسەتكەن X پروگراممىلىرىنىڭ سۆزلەشكۈسى تېز سۈرئەتتە قىممىتىنى "
 "ئۆزگەرتىدۇ"
 
-#: apps/Printer.cpp:340
+#: apps/Printer.cpp:339
 #, kde-format
 msgid "Size index to print fonts"
 msgstr "باسىدىغان خەتنىڭ چوڭلۇق ئىندېكسى"
 
-#: apps/Printer.cpp:344
+#: apps/Printer.cpp:343
 #, kde-format
 msgid ""
 "Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
@@ -111,12 +111,12 @@ msgstr ""
 "باسىدىغان خەت نۇسخا، «خەت نۇسخا ئائىلىسى، ئۇسلۇب»تىن بەلگىلىنىدۇ. بۇ جايدىكى "
 "ئۇسلۇب 24 بىتلىق ئونلۇق سان قىممىتى، ئىپادىلەيدىغىنى:"
 
-#: apps/Printer.cpp:347
+#: apps/Printer.cpp:346
 #, kde-format
 msgid "File containing list of fonts to print"
 msgstr "باسىدىغان خەت نۇسخىلىرىنىڭ تىزىم ھۆججىتى"
 
-#: apps/Printer.cpp:349
+#: apps/Printer.cpp:348
 #, kde-format
 msgid "Remove file containing list of fonts to print"
 msgstr "باسىدىغان خەت نۇسخىلىرىنىڭ تىزىم ھۆججىتى چىقىرىۋەت"
