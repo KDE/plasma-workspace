@@ -19,9 +19,7 @@
 
 using namespace Qt::StringLiterals;
 
-namespace KFI
-{
-namespace FC
+namespace KFI::FC
 {
 inline constexpr QLatin1String FC_PROTOCOL("fontconfig");
 inline constexpr QLatin1String FC_STYLE_QUERY("style");
@@ -623,8 +621,6 @@ bool bitmapsEnabled()
     }
 
     return enabled;
-}
-
 }
 
 }

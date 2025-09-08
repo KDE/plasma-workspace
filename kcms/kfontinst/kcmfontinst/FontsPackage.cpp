@@ -10,9 +10,7 @@
 #include <QDir>
 #include <QTemporaryDir>
 
-namespace KFI
-{
-namespace FontsPackage
+namespace KFI::FontsPackage
 {
 QSet<QUrl> extract(const QString &fileName, QTemporaryDir **tempDir)
 {
@@ -62,8 +60,6 @@ QSet<QUrl> extract(const QString &fileName, QTemporaryDir **tempDir)
     }
 
     return urls;
-}
-
 }
 
 }

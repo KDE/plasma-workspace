@@ -47,9 +47,7 @@
         constexpr static const char *signature = DBUSSIGNATURE;                                                                                                \
     };
 
-namespace Plasma
-{
-namespace DBus
+namespace Plasma::DBus
 {
 DBUS_QML_TYPE(BOOL, bool, bool, bool, "b")
 DBUS_QML_TYPE(INT16, int16, int, short, "n")
@@ -99,5 +97,4 @@ public:
     QDBusVariant value;
     constexpr static const char *signature = "v";
 };
-}
 }

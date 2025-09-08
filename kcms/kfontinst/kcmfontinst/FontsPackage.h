@@ -10,11 +10,7 @@ class QTemporaryDir;
 #include <QSet>
 #include <QUrl>
 
-namespace KFI
-{
-namespace FontsPackage
+namespace KFI::FontsPackage
 {
 QSet<QUrl> extract(const QString &fileName, QTemporaryDir **tempDir);
-}
-
 }

@@ -19,9 +19,7 @@
 
 using namespace Qt::StringLiterals;
 
-namespace KFI
-{
-namespace Misc
+namespace KFI::Misc
 {
 QString prettyUrl(const QUrl &url)
 {
@@ -446,4 +444,4 @@ QString app(const QString &name, const char *path)
 
 } // Misc::
 
-} // KFI::
+// KFI::

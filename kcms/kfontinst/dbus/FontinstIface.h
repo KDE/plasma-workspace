@@ -139,10 +139,7 @@ Q_SIGNALS: // SIGNALS
     void status(int pid, int value);
 };
 
-namespace org
-{
-namespace kde
+namespace org::kde
 {
 typedef ::OrgKdeFontinstInterface fontinst;
-}
 }

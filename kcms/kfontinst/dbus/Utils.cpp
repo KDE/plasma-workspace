@@ -16,9 +16,7 @@
 
 using namespace Qt::StringLiterals;
 
-namespace KFI
-{
-namespace Utils
+namespace KFI::Utils
 {
 bool isAAfm(const QString &fname)
 {
@@ -198,8 +196,6 @@ EFileType check(const QString &file, Family &fam)
         }
     }
     return FILE_INVALID;
-}
-
 }
 
 }

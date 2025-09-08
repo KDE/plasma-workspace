@@ -45,13 +45,10 @@ namespace Plasma
 class Applet;
 } // namespace Plasma
 
-namespace KWayland
-{
-namespace Client
+namespace KWayland::Client
 {
 class PlasmaWindow;
 class PlasmaWindowManagement;
-}
 }
 
 class ShellCorona : public Plasma::Corona, QDBusContext

@@ -19,9 +19,7 @@
 
 using namespace Qt::StringLiterals;
 
-namespace KFI
-{
-namespace FcConfig
+namespace KFI::FcConfig
 {
 inline QString xDirSyntax(const QString &d)
 {
@@ -169,8 +167,6 @@ void addDir(const QString &dir, bool system)
             FcAtomicDestroy(atomic);
         }
     }
-}
-
 }
 
 }

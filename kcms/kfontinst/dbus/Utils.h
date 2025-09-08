@@ -8,9 +8,7 @@
 #include "Family.h"
 #include <QString>
 
-namespace KFI
-{
-namespace Utils
+namespace KFI::Utils
 {
 enum EFileType {
     FILE_INVALID,
@@ -25,7 +23,5 @@ extern bool isAPfm(const QString &fname);
 extern bool isAType1(const QString &fname);
 extern void createAfm(const QString &file, EFileType type);
 extern EFileType check(const QString &file, Family &fam);
-
-}
 
 }

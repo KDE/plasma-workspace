@@ -7,11 +7,7 @@
 
 class QString;
 
-namespace KFI
-{
-namespace FcConfig
+namespace KFI::FcConfig
 {
 void addDir(const QString &dir, bool system);
-}
-
 }

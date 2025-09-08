@@ -13,18 +13,11 @@ class QWindow;
 
 class HistoryModel;
 
-namespace KWayland
-{
-namespace Client
+namespace KWayland::Client
 {
 class PlasmaShell;
 }
-}
 
-/**
- * Default view of clipboard history.
- *
- */
 class KlipperPopup : public PlasmaQuick::PlasmaWindow
 {
     Q_OBJECT

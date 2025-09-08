@@ -19,13 +19,12 @@ class PlaceholderModel;
 namespace KActivities
 {
 class Consumer;
-namespace Stats
-{
-namespace Terms
+
+namespace Stats::Terms
 {
 class Activity;
-} // namespace Terms
-} // namespace Stats
+} // namespace Stats::Terms
+
 } // namespace KActivities
 
 class KAStatsFavoritesModel : public PlaceholderModel

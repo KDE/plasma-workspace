@@ -14,12 +14,10 @@
 #include <functional>
 
 class OrgFreedesktopScreenSaverInterface;
-namespace org
-{
-namespace freedesktop
+
+namespace org::freedesktop
 {
 using ScreenSaver = ::OrgFreedesktopScreenSaverInterface;
-}
 }
 
 struct SessionEntry {

@@ -31,12 +31,9 @@ class HistoryModel;
 class KNotification;
 class SystemClipboard;
 
-namespace KWayland
-{
-namespace Client
+namespace KWayland::Client
 {
 class PlasmaShell;
-}
 }
 
 class KLIPPER_EXPORT Klipper : public QObject, public QDBusContext

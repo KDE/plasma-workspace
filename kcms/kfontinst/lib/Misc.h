@@ -20,9 +20,7 @@
 class QTextStream;
 class QByteArray;
 
-namespace KFI
-{
-namespace Misc
+namespace KFI::Misc
 {
 enum EConstants {
     FILE_PERMS = 0644,
@@ -124,8 +122,6 @@ inline QString getDestFolder(const QString &folder, const QString &file)
     return folder + file[0].toLower() + u'/';
 }
 extern KFONTINST_EXPORT QString app(const QString &name, const char *path = nullptr);
-}
-
 }
 
 inline KFONTINST_EXPORT QDataStream &operator<<(QDataStream &ds, const KFI::Misc::TFont &font)

@@ -11,9 +11,7 @@
 
 class QAbstractItemModel;
 
-namespace NotificationManager
-{
-namespace Utils
+namespace NotificationManager::Utils
 {
 QHash<int, QByteArray> roleNames();
 
@@ -25,6 +23,4 @@ QModelIndex mapToModel(const QModelIndex &idx, const QAbstractItemModel *sourceM
 
 bool isDBusMaster();
 
-} // namespace Utils
-
-} // namespace NotificationManager
+} // namespace NotificationManager::Utils

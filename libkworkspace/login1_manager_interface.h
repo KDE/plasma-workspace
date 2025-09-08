@@ -403,14 +403,9 @@ Q_SIGNALS: // SIGNALS
     void UserRemoved(uint in0, const QDBusObjectPath &in1);
 };
 
-namespace org
-{
-namespace freedesktop
-{
-namespace login1
+namespace org::freedesktop::login1
 {
 using Manager = ::OrgFreedesktopLogin1ManagerInterface;
 }
-}
-}
+
 #endif
