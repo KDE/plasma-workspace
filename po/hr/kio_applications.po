@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kio_applications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-11 00:43+0000\n"
+"POT-Creation-Date: 2025-09-08 03:17+0000\n"
 "PO-Revision-Date: 2009-08-17 13:17+0200\n"
 "Last-Translator: \n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -19,17 +19,17 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: kio_applications.cpp:126
+#: kio_applications.cpp:127
 #, kde-format
 msgid "Applications"
 msgstr "Aplikacije"
 
-#: kio_applications.cpp:126
+#: kio_applications.cpp:127
 #, kde-format
 msgid "Programs"
 msgstr "Programi"
 
-#: kio_applications.cpp:135
+#: kio_applications.cpp:136
 #, kde-format
 msgid "Unknown application folder"
 msgstr "Nepoznata aplikacijska mapa"

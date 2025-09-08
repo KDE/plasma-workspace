@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-11 00:43+0000\n"
+"POT-Creation-Date: 2025-09-08 03:17+0000\n"
 "PO-Revision-Date: 2024-06-11 20:16\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -23,17 +23,17 @@ msgstr ""
 "kio_applications.po\n"
 "X-Crowdin-File-ID: 10784\n"
 
-#: kio_applications.cpp:126
+#: kio_applications.cpp:127
 #, kde-format
 msgid "Applications"
 msgstr "Праграмы"
 
-#: kio_applications.cpp:126
+#: kio_applications.cpp:127
 #, kde-format
 msgid "Programs"
 msgstr "Праграмы"
 
-#: kio_applications.cpp:135
+#: kio_applications.cpp:136
 #, kde-format
 msgid "Unknown application folder"
 msgstr "Каталог невядомай праграмы"
