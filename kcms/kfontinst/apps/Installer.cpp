@@ -31,7 +31,7 @@ int CInstaller::install(const QSet<QUrl> &urls)
     CJobRunner::startDbusService();
 
     if (!Misc::root()) {
-        KMessageDialog *dlg =
+        auto *dlg =
             new KMessageDialog(KMessageDialog::QuestionTwoActionsCancel,
                                i18n("Do you wish to install the font(s) for personal use (only available to you), or system-wide (available to all users)?"));
         dlg->setCaption(i18n("Where to Install"));

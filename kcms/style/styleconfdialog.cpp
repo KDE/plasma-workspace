@@ -19,10 +19,10 @@ StyleConfigDialog::StyleConfigDialog(QWidget *parent, const QString &styleName)
     setObjectName(QStringLiteral("StyleConfigDialog"));
     setModal(true);
     setWindowTitle(i18n("Configure %1", styleName));
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    auto *mainLayout = new QVBoxLayout(this);
 
-    QWidget *mainWidget = new QWidget(this);
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::RestoreDefaults, this);
+    auto *mainWidget = new QWidget(this);
+    auto *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::RestoreDefaults, this);
     mainLayout->addWidget(mainWidget);
 
     mMainLayout = new QHBoxLayout(mainWidget);

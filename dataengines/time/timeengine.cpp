@@ -58,7 +58,7 @@ void TimeEngine::clockSkewed()
 void TimeEngine::tzConfigChanged()
 {
     qCDebug(DATAENGINE_TIME) << "Local timezone changed signaled";
-    TimeSource *s = qobject_cast<TimeSource *>(containerForSource(QStringLiteral("Local")));
+    auto *s = qobject_cast<TimeSource *>(containerForSource(QStringLiteral("Local")));
 
     if (s) {
         s->setTimeZone(QStringLiteral("Local"));
@@ -86,7 +86,7 @@ bool TimeEngine::sourceRequestEvent(const QString &name)
 
 bool TimeEngine::updateSourceEvent(const QString &tz)
 {
-    TimeSource *s = qobject_cast<TimeSource *>(containerForSource(tz));
+    auto *s = qobject_cast<TimeSource *>(containerForSource(tz));
 
     if (s) {
         s->updateTime();

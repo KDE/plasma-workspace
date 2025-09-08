@@ -126,7 +126,7 @@ void ImageListModel::load(const QStringList &customPaths)
 
     AbstractImageListModel::load(customPaths);
 
-    ImageFinder *finder = new ImageFinder(m_customPaths);
+    auto *finder = new ImageFinder(m_customPaths);
     connect(finder, &ImageFinder::imageFound, this, &ImageListModel::slotHandleImageFound);
     QThreadPool::globalInstance()->start(finder);
 }

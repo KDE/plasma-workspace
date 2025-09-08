@@ -21,7 +21,7 @@ QString ForwardingModel::description() const
         return QString();
     }
 
-    AbstractModel *abstractModel = qobject_cast<AbstractModel *>(m_sourceModel);
+    auto *abstractModel = qobject_cast<AbstractModel *>(m_sourceModel);
 
     if (!abstractModel) {
         return QString();
@@ -119,7 +119,7 @@ bool ForwardingModel::trigger(int row, const QString &actionId, const QVariant &
         return false;
     }
 
-    AbstractModel *abstractModel = qobject_cast<AbstractModel *>(m_sourceModel);
+    auto *abstractModel = qobject_cast<AbstractModel *>(m_sourceModel);
 
     if (!abstractModel) {
         return false;
@@ -134,7 +134,7 @@ QString ForwardingModel::labelForRow(int row)
         return QString();
     }
 
-    AbstractModel *abstractModel = qobject_cast<AbstractModel *>(m_sourceModel);
+    auto *abstractModel = qobject_cast<AbstractModel *>(m_sourceModel);
 
     if (!abstractModel) {
         return QString();
@@ -149,7 +149,7 @@ AbstractModel *ForwardingModel::modelForRow(int row)
         return nullptr;
     }
 
-    AbstractModel *abstractModel = qobject_cast<AbstractModel *>(m_sourceModel);
+    auto *abstractModel = qobject_cast<AbstractModel *>(m_sourceModel);
 
     if (!abstractModel) {
         return nullptr;
@@ -160,7 +160,7 @@ AbstractModel *ForwardingModel::modelForRow(int row)
 
 AbstractModel *ForwardingModel::favoritesModel()
 {
-    AbstractModel *sourceModel = qobject_cast<AbstractModel *>(m_sourceModel);
+    auto *sourceModel = qobject_cast<AbstractModel *>(m_sourceModel);
 
     if (sourceModel) {
         return sourceModel->favoritesModel();
@@ -175,7 +175,7 @@ int ForwardingModel::separatorCount() const
         return 0;
     }
 
-    AbstractModel *abstractModel = qobject_cast<AbstractModel *>(m_sourceModel);
+    auto *abstractModel = qobject_cast<AbstractModel *>(m_sourceModel);
 
     if (!abstractModel) {
         return 0;

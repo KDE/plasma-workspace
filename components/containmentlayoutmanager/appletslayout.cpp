@@ -548,7 +548,7 @@ void AppletsLayout::componentComplete()
     // layout all extra non applet items
     if (width() > 0 && height() > 0) {
         for (auto *child : childItems()) {
-            ItemContainer *item = qobject_cast<ItemContainer *>(child);
+            auto *item = qobject_cast<ItemContainer *>(child);
             if (item && item != m_placeHolder && !m_layoutManager->itemIsManaged(item)) {
                 m_layoutManager->positionItemAndAssign(item);
             }
@@ -807,7 +807,7 @@ void AppletsLayout::handleReleaseEvent(const QPointF &scenePosition)
 
     // Click any empty area to exit the edit mode
     for (const auto children = childItems(); auto *child : children) {
-        if (ItemContainer *item = qobject_cast<ItemContainer *>(child); item && item != m_placeHolder) {
+        if (auto *item = qobject_cast<ItemContainer *>(child); item && item != m_placeHolder) {
             item->setEditMode(false);
         }
     }

@@ -157,7 +157,7 @@ QVariant AppsModel::data(const QModelIndex &index, int role) const
     } else if (role == Kicker::HasChildrenRole) {
         return entry->hasChildren();
     } else if (role == Kicker::HasActionListRole) {
-        const AppsModel *appsModel = qobject_cast<const AppsModel *>(entry->childModel());
+        const auto *appsModel = qobject_cast<const AppsModel *>(entry->childModel());
 
         return entry->hasActions() || (appsModel && !appsModel->hiddenEntries().isEmpty());
     } else if (role == Kicker::ActionListRole) {
@@ -171,7 +171,7 @@ QVariant AppsModel::data(const QModelIndex &index, int role) const
             actionList << unhideSiblingApplicationsAction;
         }
 
-        const AppsModel *appsModel = qobject_cast<const AppsModel *>(entry->childModel());
+        const auto *appsModel = qobject_cast<const AppsModel *>(entry->childModel());
 
         if (appsModel && !appsModel->hiddenEntries().isEmpty()) {
             QVariantMap unhideChildApplicationsAction = Kicker::createActionItem(i18n("Unhide Applications in '%1'", entry->name()),
@@ -210,7 +210,7 @@ bool AppsModel::trigger(int row, const QString &actionId, const QVariant &argume
     const QString hiddenConfigEntryName = QStringLiteral("hiddenApplications");
 
     if (actionId == QLatin1String("hideApplication") && entry->type() == AbstractEntry::RunnableType) {
-        QObject *appletInterface = rootModel()->property("appletInterface").value<QObject *>();
+        auto *appletInterface = rootModel()->property("appletInterface").value<QObject *>();
         QQmlPropertyMap *appletConfig = nullptr;
         if (appletInterface) {
             appletConfig = qobject_cast<QQmlPropertyMap *>(appletInterface->property("configuration").value<QObject *>());
@@ -239,7 +239,7 @@ bool AppsModel::trigger(int row, const QString &actionId, const QVariant &argume
 
         return false;
     } else if (actionId == QLatin1String("unhideSiblingApplications")) {
-        QObject *appletInterface = rootModel()->property("appletInterface").value<QObject *>();
+        auto *appletInterface = rootModel()->property("appletInterface").value<QObject *>();
         QQmlPropertyMap *appletConfig = nullptr;
         if (appletInterface) {
             appletConfig = qobject_cast<QQmlPropertyMap *>(appletInterface->property("configuration").value<QObject *>());
@@ -264,14 +264,14 @@ bool AppsModel::trigger(int row, const QString &actionId, const QVariant &argume
 
         return false;
     } else if (actionId == QLatin1String("unhideChildApplications")) {
-        QObject *appletInterface = rootModel()->property("appletInterface").value<QObject *>();
+        auto *appletInterface = rootModel()->property("appletInterface").value<QObject *>();
         QQmlPropertyMap *appletConfig = nullptr;
         if (appletInterface) {
             appletConfig = qobject_cast<QQmlPropertyMap *>(appletInterface->property("configuration").value<QObject *>());
         }
 
         if (entry->type() == AbstractEntry::GroupType && appletConfig && appletConfig->contains(hiddenConfigEntryName)) {
-            const AppsModel *appsModel = qobject_cast<const AppsModel *>(entry->childModel());
+            const auto *appsModel = qobject_cast<const AppsModel *>(entry->childModel());
 
             if (!appsModel) {
                 return false;
@@ -535,7 +535,7 @@ void AppsModel::refreshInternal()
                 KServiceGroup::Ptr subGroup(static_cast<KServiceGroup *>(p.data()));
 
                 if (!subGroup->noDisplay() && subGroup->childCount() > 0) {
-                    AppGroupEntry *groupEntry = new AppGroupEntry(this, subGroup, m_paginate, m_pageSize, m_flat, m_sorted, m_showSeparators, m_appNameFormat);
+                    auto *groupEntry = new AppGroupEntry(this, subGroup, m_paginate, m_pageSize, m_flat, m_sorted, m_showSeparators, m_appNameFormat);
                     m_entryList << groupEntry;
                 }
             } else if (p->isType(KST_KService) && m_showTopLevelItems) {
@@ -598,7 +598,7 @@ void AppsModel::refreshInternal()
 
                 if (at == (m_pageSize - 1)) {
                     at = 0;
-                    AppsModel *model = new AppsModel(page, true, this);
+                    auto *model = new AppsModel(page, true, this);
                     groups.append(new GroupEntry(this, QString(), QString(), model));
                     page.clear();
                 } else {
@@ -607,7 +607,7 @@ void AppsModel::refreshInternal()
             }
 
             if (page.count()) {
-                AppsModel *model = new AppsModel(page, true, this);
+                auto *model = new AppsModel(page, true, this);
                 groups.append(new GroupEntry(this, QString(), QString(), model));
             }
 
@@ -682,7 +682,7 @@ void AppsModel::processServiceGroup(KServiceGroup::Ptr group)
 
     QStringList hiddenApps;
 
-    QObject *appletInterface = rootModel()->property("appletInterface").value<QObject *>();
+    auto *appletInterface = rootModel()->property("appletInterface").value<QObject *>();
     QQmlPropertyMap *appletConfig = nullptr;
     if (appletInterface) {
         appletConfig = qobject_cast<QQmlPropertyMap *>(appletInterface->property("configuration").value<QObject *>());
@@ -733,7 +733,7 @@ void AppsModel::processServiceGroup(KServiceGroup::Ptr group)
                 const KServiceGroup::Ptr serviceGroup(static_cast<KServiceGroup *>(p.data()));
                 processServiceGroup(serviceGroup);
             } else {
-                AppGroupEntry *groupEntry = new AppGroupEntry(this, subGroup, m_paginate, m_pageSize, m_flat, m_sorted, m_showSeparators, m_appNameFormat);
+                auto *groupEntry = new AppGroupEntry(this, subGroup, m_paginate, m_pageSize, m_flat, m_sorted, m_showSeparators, m_appNameFormat);
                 m_entryList << groupEntry;
             }
         }

@@ -207,7 +207,7 @@ void ShellCorona::init()
 
     connect(this, &ShellCorona::containmentAdded, this, &ShellCorona::handleContainmentAdded);
 
-    QAction *dashboardAction = new QAction(this);
+    auto *dashboardAction = new QAction(this);
     setAction(QStringLiteral("show dashboard"), dashboardAction);
     QObject::connect(dashboardAction, &QAction::triggered, this, &ShellCorona::setDashboardShown);
     dashboardAction->setText(i18n("Show Desktop"));
@@ -224,7 +224,7 @@ void ShellCorona::init()
     checkAddPanelAction();
     connect(KSycoca::self(), &KSycoca::databaseChanged, this, &ShellCorona::checkAddPanelAction);
 
-    QAction *activateLauncherAction = new QAction(this);
+    auto *activateLauncherAction = new QAction(this);
     setAction(QStringLiteral("activate application launcher"), activateLauncherAction);
     connect(activateLauncherAction, &QAction::triggered, this, qOverload<>(&ShellCorona::activateLauncherMenu));
     activateLauncherAction->setText(i18n("Activate Application Launcher"));
@@ -232,7 +232,7 @@ void ShellCorona::init()
                                             QList<QKeySequence>() << QKeySequence(Qt::Key_Meta) << QKeySequence(Qt::AltModifier | Qt::Key_F1));
 
     // Activity stuff
-    QAction *activityAction = new QAction(this);
+    auto *activityAction = new QAction(this);
     setAction(QStringLiteral("manage activities"), activityAction);
     connect(activityAction, &QAction::triggered, this, &ShellCorona::toggleActivityManager);
     activityAction->setText(i18n("Show Activity Switcher"));
@@ -241,7 +241,7 @@ void ShellCorona::init()
 
     KGlobalAccel::self()->setGlobalShortcut(activityAction, Qt::META | Qt::Key_Q);
 
-    QAction *previousActivityAction = new QAction(this);
+    auto *previousActivityAction = new QAction(this);
     setAction(QStringLiteral("switch to previous activity"), previousActivityAction);
     connect(previousActivityAction, &QAction::triggered, this, &ShellCorona::previousActivity);
     previousActivityAction->setText(i18n("Switch to Previous Activity"));
@@ -249,7 +249,7 @@ void ShellCorona::init()
 
     KGlobalAccel::self()->setGlobalShortcut(previousActivityAction, QKeySequence());
 
-    QAction *nextActivityAction = new QAction(this);
+    auto *nextActivityAction = new QAction(this);
     setAction(QStringLiteral("switch to next activity"), nextActivityAction);
     connect(nextActivityAction, &QAction::triggered, this, &ShellCorona::nextActivity);
     nextActivityAction->setText(i18n("Switch to Next Activity"));
@@ -261,10 +261,10 @@ void ShellCorona::init()
     connect(m_activityController, &KActivities::Controller::activityAdded, this, &ShellCorona::activityAdded);
     connect(m_activityController, &KActivities::Controller::activityRemoved, this, &ShellCorona::activityRemoved);
 
-    KActionCollection *taskbarActions = new KActionCollection(this);
+    auto *taskbarActions = new KActionCollection(this);
     for (int i = 0; i < 10; ++i) {
         const int entryNumber = i + 1;
-        const Qt::Key key = static_cast<Qt::Key>(Qt::Key_0 + (entryNumber % 10));
+        const auto key = static_cast<Qt::Key>(Qt::Key_0 + (entryNumber % 10));
 
         QAction *action = taskbarActions->addAction(QStringLiteral("activate task manager entry %1").arg(QString::number(entryNumber)));
         action->setText(i18n("Activate Task Manager Entry %1", entryNumber));
@@ -296,7 +296,7 @@ void ShellCorona::init()
         }
     });
 
-    QAction *manageContainmentsAction = new QAction(this);
+    auto *manageContainmentsAction = new QAction(this);
     setAction(QStringLiteral("manage-containments"), manageContainmentsAction);
     manageContainmentsAction->setIcon(QIcon::fromTheme(QStringLiteral("preferences-system-windows-effect-fadedesktop")));
     manageContainmentsAction->setText(i18nc("@action:button", "Manage Desktops and Panels…"));
@@ -319,7 +319,7 @@ void ShellCorona::init()
     connect(this, &ShellCorona::screenRemoved, this, updateManageContainmentsVisiblility);
     updateManageContainmentsVisiblility();
 
-    QAction *cyclePanelFocusAction = new QAction(this);
+    auto *cyclePanelFocusAction = new QAction(this);
     setAction(QStringLiteral("cycle-panels"), cyclePanelFocusAction);
     cyclePanelFocusAction->setText(i18n("Move keyboard focus between panels"));
     KGlobalAccel::self()->setGlobalShortcut(cyclePanelFocusAction, Qt::META | Qt::ALT | Qt::Key_P);
@@ -390,7 +390,7 @@ void ShellCorona::setShell(const QString &shell)
     }
 
     if (!themeName.isEmpty()) {
-        Plasma::Theme *t = new Plasma::Theme(this);
+        auto *t = new Plasma::Theme(this);
         t->setThemeName(themeName);
     }
 
@@ -947,7 +947,7 @@ void ShellCorona::showAlternativesForApplet(Plasma::Applet *applet)
     qmlObj->setInitializationDelayed(true);
     qmlObj->setSource(alternativesQML);
 
-    AlternativesHelper *helper = new AlternativesHelper(applet, qmlObj);
+    auto *helper = new AlternativesHelper(applet, qmlObj);
 
     qmlObj->completeInitialization({{u"alternativesHelper"_s, QVariant::fromValue(helper)}});
 
@@ -1032,7 +1032,7 @@ void ShellCorona::slotCyclePanelFocus()
         return;
     }
 
-    PanelView *activePanel = qobject_cast<PanelView *>(qGuiApp->focusWindow());
+    auto *activePanel = qobject_cast<PanelView *>(qGuiApp->focusWindow());
     if (!activePanel) {
         // Activate the first panel and save the previous window
         activePanel = m_panelViews.begin().value();
@@ -1471,7 +1471,7 @@ void ShellCorona::addOutput(QScreen *screen)
     int insertPosition = m_screenPool->idForScreen(screen);
     Q_ASSERT(insertPosition >= 0);
 
-    DesktopView *view = new DesktopView(this, screen);
+    auto *view = new DesktopView(this, screen);
 
     if (view->rendererInterface()->graphicsApi() != QSGRendererInterface::Software) {
         connect(view, &QQuickWindow::sceneGraphError, this, &ShellCorona::glInitializationFailed);
@@ -1525,9 +1525,9 @@ void ShellCorona::checkAllDesktopsUiReady()
 
     qCDebug(PLASMASHELL) << "Plasma Shell startup completed";
     QDBusMessage ksplashProgressMessage = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KSplash"),
-                                                                            QStringLiteral("/KSplash"),
-                                                                            QStringLiteral("org.kde.KSplash"),
-                                                                            QStringLiteral("setStage"));
+                                                                         QStringLiteral("/KSplash"),
+                                                                         QStringLiteral("org.kde.KSplash"),
+                                                                         QStringLiteral("setStage"));
     ksplashProgressMessage.setArguments(QList<QVariant>() << QStringLiteral("desktop"));
     QDBusConnection::sessionBus().asyncCall(ksplashProgressMessage);
 
@@ -1598,7 +1598,7 @@ void ShellCorona::createWaitingPanels()
 
         // TODO: does a similar check make sense?
         // Q_ASSERT(qBound(0, requestedScreen, m_screenPool->count() - 1) == requestedScreen);
-        PanelView *panel = new PanelView(this, screen);
+        auto *panel = new PanelView(this, screen);
         if (panel->rendererInterface()->graphicsApi() != QSGRendererInterface::Software) {
             connect(panel, &QQuickWindow::sceneGraphError, this, &ShellCorona::glInitializationFailed);
         }
@@ -1856,7 +1856,7 @@ QVariantMap ShellCorona::wallpaper(uint screenNum)
     // add wallpaperPlugin
     parameters.insert(QStringLiteral("wallpaperPlugin"), containment->wallpaperPlugin());
 
-    QObject *wallpaperGraphicsObject = containment->property("wallpaperGraphicsObject").value<QObject *>();
+    auto *wallpaperGraphicsObject = containment->property("wallpaperGraphicsObject").value<QObject *>();
     // If the wallpaper plugin is broken, there is no wallpaperGraphicsObject
     if (!wallpaperGraphicsObject) {
         return parameters;
@@ -1896,7 +1896,7 @@ void ShellCorona::setWallpaper(const QString &wallpaperPlugin, const QVariantMap
         config = new KConfigPropertyMap(new KConfigLoader(cfg, &file, this), this);
     } else {
         // update current wallpaper to allow animations
-        QObject *wallpaperGraphicsObject = containment->property("wallpaperGraphicsObject").value<QObject *>();
+        auto *wallpaperGraphicsObject = containment->property("wallpaperGraphicsObject").value<QObject *>();
         // If the wallpaper plugin is broken, there is no wallpaperGraphicsObject
         if (wallpaperGraphicsObject) {
             config = wallpaperGraphicsObject->property("configuration").value<KConfigPropertyMap *>();
@@ -1911,7 +1911,7 @@ void ShellCorona::setWallpaper(const QString &wallpaperPlugin, const QVariantMap
                 // for some reason QColor is not properly unmarshalled despite my efforts
                 qCDebug(PLASMASHELL) << "setWallpaper: setting" << itemName << it.value() << screenNum;
                 if (it.value().metaType() == QMetaType::fromType<QDBusArgument>()) {
-                    const QDBusArgument &dbusArg = get<QDBusArgument>(it.value());
+                    const auto &dbusArg = get<QDBusArgument>(it.value());
                     if (dbusArg.currentSignature() == QLatin1String("(u)")) {
                         QColor color;
                         dbusArg >> color;
@@ -2383,8 +2383,8 @@ void ShellCorona::clonePanelTo(PanelView *oldPanelView, Plasma::Types::Location 
         KConfigGroup oldAppletConfig = targetAppletsConfig.group(QString::number(applet->id()));
         KConfigGroup newAppletConfig = targetAppletsConfig.group(QString::number(newApplet->id()));
 
-        Plasma::Containment *oldTrayContainment = qobject_cast<Plasma::Containment *>(applet);
-        Plasma::Containment *newTrayContainment = qobject_cast<Plasma::Containment *>(newApplet);
+        auto *oldTrayContainment = qobject_cast<Plasma::Containment *>(applet);
+        auto *newTrayContainment = qobject_cast<Plasma::Containment *>(newApplet);
         if (oldTrayContainment && newTrayContainment && newTrayContainment->pluginName() == u"org.kde.plasma.systemtray") {
             auto newTrayConfig = newTrayContainment->config();
             auto oldTrayConfig = oldTrayContainment->config();
@@ -2662,7 +2662,7 @@ int ShellCorona::screenForContainment(const Plasma::Containment *containment) co
     }
 
     // case in which this containment is child of an applet, hello systray :)
-    if (Plasma::Applet *parentApplet = qobject_cast<Plasma::Applet *>(containment->parent())) {
+    if (auto *parentApplet = qobject_cast<Plasma::Applet *>(containment->parent())) {
         if (Plasma::Containment *cont = parentApplet->containment()) {
             return screenForContainment(cont);
         } else {
@@ -2835,7 +2835,7 @@ bool DismissPopupEventFilter::eventFilter(QObject *watched, QEvent *event)
     } else if (event->type() == QEvent::MouseButtonRelease) {
         if (m_filterMouseEvents) {
             // Eat events until all mouse buttons are released.
-            QMouseEvent *mouseEvent = static_cast<QMouseEvent *>(event);
+            auto *mouseEvent = static_cast<QMouseEvent *>(event);
             if (mouseEvent->buttons() == Qt::NoButton) {
                 m_filterMouseEvents = false;
             }
@@ -2856,7 +2856,7 @@ void ShellCorona::setupWaylandIntegration()
     if (!connection) {
         return;
     }
-    Registry *registry = new Registry(this);
+    auto *registry = new Registry(this);
     registry->create(connection);
     connect(registry, &KWayland::Client::Registry::plasmaWindowManagementAnnounced, this, [this, registry](quint32 name, quint32 version) {
         m_waylandWindowManagement = registry->createPlasmaWindowManagement(name, version, this);

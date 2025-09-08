@@ -44,7 +44,7 @@ int main(int argc, char **argv)
         QDBusMessage resultMessage = QDBusConnection::systemBus().call(message);
         if (resultMessage.type() == QDBusMessage::ReplyMessage) {
             QVariantMap result;
-            QDBusArgument dbusArgument = resultMessage.arguments().at(0).value<QDBusArgument>();
+            auto dbusArgument = resultMessage.arguments().at(0).value<QDBusArgument>();
             while (!dbusArgument.atEnd()) {
                 dbusArgument >> result;
             }

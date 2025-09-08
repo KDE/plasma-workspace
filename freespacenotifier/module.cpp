@@ -41,7 +41,7 @@ FreeSpaceNotifierModule::FreeSpaceNotifierModule(QObject *parent, const QList<QV
 
         // Required for two stage devices
         if (auto volume = device.as<Solid::StorageVolume>()) {
-            Solid::GenericInterface *iface = device.as<Solid::GenericInterface>();
+            auto *iface = device.as<Solid::GenericInterface>();
             if (iface) {
                 iface->setProperty("udi", udi);
                 connect(iface, &Solid::GenericInterface::propertyChanged, this, [this, udi]() {
@@ -64,7 +64,7 @@ FreeSpaceNotifierModule::FreeSpaceNotifierModule(QObject *parent, const QList<QV
 void FreeSpaceNotifierModule::onNewSolidDevice(const QString &udi)
 {
     Solid::Device device(udi);
-    Solid::StorageAccess *access = device.as<Solid::StorageAccess>();
+    auto *access = device.as<Solid::StorageAccess>();
     if (!access) {
         return;
     }
@@ -113,7 +113,7 @@ void FreeSpaceNotifierModule::startTracking(const QString &udi)
         return;
     }
     Solid::Device device(udi);
-    Solid::StorageAccess *access = device.as<Solid::StorageAccess>();
+    auto *access = device.as<Solid::StorageAccess>();
     if (!access) {
         return;
     }
@@ -141,8 +141,8 @@ void FreeSpaceNotifierModule::showConfiguration()
         return;
     }
 
-    KConfigDialog *dialog = new KConfigDialog(nullptr, QStringLiteral("settings"), FreeSpaceNotifierSettings::self());
-    QWidget *generalSettingsDlg = new QWidget();
+    auto *dialog = new KConfigDialog(nullptr, QStringLiteral("settings"), FreeSpaceNotifierSettings::self());
+    auto *generalSettingsDlg = new QWidget();
 
     Ui::freespacenotifier_prefs_base preferences;
     preferences.setupUi(generalSettingsDlg);

@@ -1267,7 +1267,7 @@ void WaylandTasksModel::requestPublishDelegateGeometry(const QModelIndex &index,
         return;
     }
 
-    const QQuickItem *item = qobject_cast<const QQuickItem *>(delegate);
+    const auto *item = qobject_cast<const QQuickItem *>(delegate);
 
     if (!item || !item->parentItem()) {
         return;

@@ -299,7 +299,7 @@ void MenuProxy::onWindowAdded(WId id)
         return;
     }
 
-    Window *window = new Window(serviceName);
+    auto *window = new Window(serviceName);
     window->setWinId(id);
     window->setApplicationObjectPath(applicationObjectPath);
     window->setUnityObjectPath(unityObjectPath);

@@ -309,7 +309,7 @@ void Klipper::slotConfigure()
         return;
     }
 
-    ConfigDialog *dlg = new ConfigDialog(nullptr, KlipperSettings::self(), this, m_collection);
+    auto *dlg = new ConfigDialog(nullptr, KlipperSettings::self(), this, m_collection);
     QMetaObject::invokeMethod(dlg, "setHelp", Qt::DirectConnection, Q_ARG(QString, QString::fromLatin1("preferences")));
     // This is necessary to ensure that the dialog is recreated
     // and therefore the controls are initialised from the current
@@ -427,13 +427,13 @@ void Klipper::showBarcode(std::shared_ptr<const HistoryItem> item)
 {
     QPointer<QDialog> dlg(new QDialog());
     dlg->setWindowTitle(i18n("Mobile Barcode"));
-    QDialogButtonBox *buttons = new QDialogButtonBox(QDialogButtonBox::Ok, dlg);
+    auto *buttons = new QDialogButtonBox(QDialogButtonBox::Ok, dlg);
     buttons->button(QDialogButtonBox::Ok)->setShortcut(Qt::CTRL | Qt::Key_Return);
     connect(buttons, &QDialogButtonBox::accepted, dlg.data(), &QDialog::accept);
     connect(dlg.data(), &QDialog::finished, dlg.data(), &QDialog::deleteLater);
 
-    QWidget *mw = new QWidget(dlg);
-    QHBoxLayout *layout = new QHBoxLayout(mw);
+    auto *mw = new QWidget(dlg);
+    auto *layout = new QHBoxLayout(mw);
 
     {
         auto qrCode = Prison::Barcode::create(Prison::QRCode);
@@ -441,7 +441,7 @@ void Klipper::showBarcode(std::shared_ptr<const HistoryItem> item)
             if (item) {
                 qrCode->setData(item->text());
             }
-            BarcodeLabel *qrCodeLabel = new BarcodeLabel(std::move(*qrCode), mw);
+            auto *qrCodeLabel = new BarcodeLabel(std::move(*qrCode), mw);
             layout->addWidget(qrCodeLabel);
         }
     }
@@ -451,13 +451,13 @@ void Klipper::showBarcode(std::shared_ptr<const HistoryItem> item)
             if (item) {
                 dataMatrix->setData(item->text());
             }
-            BarcodeLabel *dataMatrixLabel = new BarcodeLabel(std::move(*dataMatrix), mw);
+            auto *dataMatrixLabel = new BarcodeLabel(std::move(*dataMatrix), mw);
             layout->addWidget(dataMatrixLabel);
         }
     }
 
     mw->setFocus();
-    QVBoxLayout *vBox = new QVBoxLayout(dlg);
+    auto *vBox = new QVBoxLayout(dlg);
     vBox->addWidget(mw);
     vBox->addWidget(buttons);
     dlg->adjustSize();

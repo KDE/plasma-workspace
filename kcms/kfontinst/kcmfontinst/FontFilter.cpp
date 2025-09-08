@@ -139,7 +139,7 @@ CFontFilter::CFontFilter(QWidget *parent)
     addAction(CRIT_FAMILY, true);
     addAction(CRIT_STYLE, false);
 
-    KSelectAction *foundryMenu = new KSelectAction(m_icons[CRIT_FOUNDRY], m_texts[CRIT_FOUNDRY], this);
+    auto *foundryMenu = new KSelectAction(m_icons[CRIT_FOUNDRY], m_texts[CRIT_FOUNDRY], this);
     m_actions[CRIT_FOUNDRY] = foundryMenu;
     m_menu->addAction(m_actions[CRIT_FOUNDRY]);
     foundryMenu->setData((int)CRIT_FOUNDRY);
@@ -148,7 +148,7 @@ CFontFilter::CFontFilter(QWidget *parent)
 
     addAction(CRIT_FONTCONFIG, false);
 
-    KSelectAction *ftMenu = new KSelectAction(m_icons[CRIT_FILETYPE], m_texts[CRIT_FILETYPE], this);
+    auto *ftMenu = new KSelectAction(m_icons[CRIT_FILETYPE], m_texts[CRIT_FILETYPE], this);
     m_actions[CRIT_FILETYPE] = ftMenu;
     m_menu->addAction(m_actions[CRIT_FILETYPE]);
     ftMenu->setData((int)CRIT_FILETYPE);
@@ -159,7 +159,7 @@ CFontFilter::CFontFilter(QWidget *parent)
         if ((*it) != u"application/vnd.kde.fontspackage") {
             QMimeType mime = db.mimeTypeForName(*it);
 
-            KToggleAction *act = new KToggleAction(QIcon::fromTheme(mime.iconName()), mime.comment(), this);
+            auto *act = new KToggleAction(QIcon::fromTheme(mime.iconName()), mime.comment(), this);
 
             ftMenu->addAction(act);
             act->setChecked(false);
@@ -178,14 +178,14 @@ CFontFilter::CFontFilter(QWidget *parent)
     addAction(CRIT_FILENAME, false);
     addAction(CRIT_LOCATION, false);
 
-    KSelectAction *wsMenu = new KSelectAction(m_icons[CRIT_WS], m_texts[CRIT_WS], this);
+    auto *wsMenu = new KSelectAction(m_icons[CRIT_WS], m_texts[CRIT_WS], this);
     m_actions[CRIT_WS] = wsMenu;
     m_menu->addAction(m_actions[CRIT_WS]);
     wsMenu->setData((int)CRIT_WS);
 
     m_currentWs = QFontDatabase::Any;
     for (int i = QFontDatabase::Latin; i < QFontDatabase::WritingSystemsCount; ++i) {
-        KToggleAction *wsAct =
+        auto *wsAct =
             new KToggleAction(QFontDatabase::Other == i ? i18n("Symbol/Other") : QFontDatabase::writingSystemName((QFontDatabase::WritingSystem)i), this);
 
         wsMenu->addAction(wsAct);

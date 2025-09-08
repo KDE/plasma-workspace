@@ -16,7 +16,7 @@ ResizeHandle::ResizeHandle(QQuickItem *parent)
 
     QQuickItem *candidate = parent;
     while (candidate) {
-        ConfigOverlay *overlay = qobject_cast<ConfigOverlay *>(candidate);
+        auto *overlay = qobject_cast<ConfigOverlay *>(candidate);
         if (overlay) {
             setConfigOverlay(overlay);
             break;
@@ -28,7 +28,7 @@ ResizeHandle::ResizeHandle(QQuickItem *parent)
     connect(this, &QQuickItem::parentChanged, this, [this]() {
         QQuickItem *candidate = parentItem();
         while (candidate) {
-            ConfigOverlay *overlay = qobject_cast<ConfigOverlay *>(candidate);
+            auto *overlay = qobject_cast<ConfigOverlay *>(candidate);
             if (overlay) {
                 setConfigOverlay(overlay);
                 break;

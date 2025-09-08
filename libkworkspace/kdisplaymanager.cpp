@@ -134,8 +134,7 @@ public:
 
         QVariantList args = reply.arguments();
         if (!args.isEmpty()) {
-            QList<NamedDBusObjectPath> namedPathList =
-                qdbus_cast<QList<NamedDBusObjectPath>>(args.at(0).value<QDBusVariant>().variant().value<QDBusArgument>());
+            auto namedPathList = qdbus_cast<QList<NamedDBusObjectPath>>(args.at(0).value<QDBusVariant>().variant().value<QDBusArgument>());
             return namedPathList;
         }
         return QList<NamedDBusObjectPath>();

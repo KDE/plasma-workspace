@@ -71,7 +71,7 @@ void WindowSystem::monitorWindowVisibility(QQuickItem *item)
 void WindowSystem::monitoredWindowVisibilityChanged(QWindow::Visibility visibility) const
 {
     const bool visible = (visibility != QWindow::Hidden);
-    QQuickWindow *w = static_cast<QQuickWindow *>(QObject::sender());
+    auto *w = static_cast<QQuickWindow *>(QObject::sender());
 
     if (!visible) {
         Q_EMIT hidden(w);

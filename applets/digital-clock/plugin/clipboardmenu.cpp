@@ -47,7 +47,7 @@ void ClipboardMenu::setSecondsIncluded(bool secondsIncluded)
 
 void ClipboardMenu::setupMenu(QAction *action)
 {
-    QMenu *menu = new QMenu;
+    auto *menu = new QMenu;
 
     /*
      * The refresh rate of m_currentDate depends of what is shown in the plasmoid.

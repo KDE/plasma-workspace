@@ -138,7 +138,7 @@ void KCMDesktopTheme::installTheme(const QString &path)
     const QStringList arguments = {QStringLiteral("--type"), QStringLiteral("Plasma/Theme"), QStringLiteral("--install"), path};
 
     qCDebug(KCM_DESKTOP_THEME) << program << arguments.join(QLatin1Char(' '));
-    QProcess *myProcess = new QProcess(this);
+    auto *myProcess = new QProcess(this);
     connect(myProcess,
             static_cast<void (QProcess::*)(int, QProcess::ExitStatus)>(&QProcess::finished),
             this,

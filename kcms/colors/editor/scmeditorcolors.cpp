@@ -73,7 +73,7 @@ void SchemeEditorColors::setupColorTable()
     }
 
     for (int i = 0; i < commonColorTable->rowCount(); ++i) {
-        KColorButton *button = new KColorButton(this);
+        auto *button = new KColorButton(this);
         commonColorTable->setRowHeight(i, button->sizeHint().height());
         button->setObjectName(QString::number(i));
         connect(button, &KColorButton::changed, this, &SchemeEditorColors::colorChanged);
@@ -81,12 +81,12 @@ void SchemeEditorColors::setupColorTable()
 
         if (i > 8 && i < 18) {
             // Inactive Text row through Positive Text role all need a varies button
-            QPushButton *variesButton = new QPushButton(nullptr);
+            auto *variesButton = new QPushButton(nullptr);
             variesButton->setText(i18n("Varies"));
             variesButton->setObjectName(QString::number(i));
             connect(variesButton, &QPushButton::clicked, this, &SchemeEditorColors::variesClicked);
 
-            QStackedWidget *widget = new QStackedWidget(this);
+            auto *widget = new QStackedWidget(this);
             widget->addWidget(button);
             widget->addWidget(variesButton);
             m_stackedWidgets.append(widget);
@@ -127,14 +127,14 @@ void SchemeEditorColors::setupColorTable()
 
 void SchemeEditorColors::createColorEntry(const QString &text, const QString &key, QList<KColorButton *> &list, int index)
 {
-    KColorButton *button = new KColorButton(this);
+    auto *button = new KColorButton(this);
     button->setObjectName(QString::number(index));
     connect(button, &KColorButton::changed, this, &SchemeEditorColors::colorChanged);
     list.append(button);
 
     m_colorKeys.insert(index, key);
 
-    QTableWidgetItem *label = new QTableWidgetItem(text);
+    auto *label = new QTableWidgetItem(text);
     colorTable->setItem(index, 0, label);
     colorTable->setCellWidget(index, 1, button);
     colorTable->setRowHeight(index, button->sizeHint().height());

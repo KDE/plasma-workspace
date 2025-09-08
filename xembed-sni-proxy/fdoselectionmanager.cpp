@@ -108,7 +108,7 @@ bool FdoSelectionManager::nativeEventFilter(const QByteArray &eventType, void *m
         return false;
     }
 
-    xcb_generic_event_t *ev = static_cast<xcb_generic_event_t *>(message);
+    auto *ev = static_cast<xcb_generic_event_t *>(message);
 
     const auto responseType = XCB_EVENT_RESPONSE_TYPE(ev);
     if (responseType == XCB_CLIENT_MESSAGE) {

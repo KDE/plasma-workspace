@@ -20,21 +20,21 @@ CPrintDialog::CPrintDialog(QWidget *parent)
     setModal(true);
     setWindowTitle(i18n("Print Font Samples"));
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
+    auto *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &CPrintDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &CPrintDialog::reject);
 
-    QVBoxLayout *mainLayout = new QVBoxLayout;
+    auto *mainLayout = new QVBoxLayout;
     setLayout(mainLayout);
 
-    QFrame *page = new QFrame(this);
-    QGridLayout *layout = new QGridLayout(page);
+    auto *page = new QFrame(this);
+    auto *layout = new QGridLayout(page);
     layout->setContentsMargins(0, 0, 0, 0);
 
-    QLabel *lbl = new QLabel(i18n("Select size to print font:"), page);
+    auto *lbl = new QLabel(i18n("Select size to print font:"), page);
     lbl->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Maximum);
     layout->addWidget(lbl, 0, 0);
     m_size = new QComboBox(page);

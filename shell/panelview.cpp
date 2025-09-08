@@ -479,7 +479,7 @@ QRect PanelView::relativeConfigRect() const
     if (!m_screenToFollow) {
         return QRect();
     }
-    PanelConfigView *panelConfigView = qobject_cast<PanelConfigView *>(m_panelConfigView);
+    auto *panelConfigView = qobject_cast<PanelConfigView *>(m_panelConfigView);
     if (!panelConfigView || !panelConfigView->isVisible()) {
         return QRect();
     }
@@ -936,7 +936,7 @@ void PanelView::showConfigurationInterface(Plasma::Applet *applet)
         return;
     }
 
-    Plasma::Containment *cont = qobject_cast<Plasma::Containment *>(applet);
+    auto *cont = qobject_cast<Plasma::Containment *>(applet);
 
     const bool isPanelConfig = (cont && cont == containment() && cont->isContainment());
 
@@ -955,7 +955,7 @@ void PanelView::showConfigurationInterface(Plasma::Applet *applet)
             m_panelConfigView->show();
             m_panelConfigView->requestActivate();
         } else {
-            PanelConfigView *configView = new PanelConfigView(cont, this);
+            auto *configView = new PanelConfigView(cont, this);
             connect(configView, &PanelConfigView::visibleChanged, this, &PanelView::relativeConfigRectChanged);
             connect(configView, &PanelConfigView::visibleChanged, this, &PanelView::userConfiguringChanged);
             connect(configView, &PanelConfigView::geometryChanged, this, &PanelView::relativeConfigRectChanged);
@@ -1001,7 +1001,7 @@ void PanelView::showConfigurationInterface(Plasma::Applet *applet)
 void PanelView::positionConfigView()
 {
     QQuickItem *contObject = PlasmaQuick::AppletQuickItem::itemForApplet(containment());
-    QQuickItem *tb = contObject->property("toolBox").value<QQuickItem *>();
+    auto *tb = contObject->property("toolBox").value<QQuickItem *>();
     if (tb && containment()->formFactor() != Plasma::Types::Vertical) {
         m_panelConfigView->setVisualParent(tb);
     } else {
@@ -1244,7 +1244,7 @@ bool PanelView::event(QEvent *e)
     case QEvent::MouseMove:
     case QEvent::MouseButtonPress:
     case QEvent::MouseButtonRelease: {
-        QMouseEvent *me = static_cast<QMouseEvent *>(e);
+        auto *me = static_cast<QMouseEvent *>(e);
 
         // first, don't mess with position if the cursor is actually outside the view:
         // somebody is doing a click and drag that must not break when the cursor i outside
@@ -1273,7 +1273,7 @@ bool PanelView::event(QEvent *e)
     }
 
     case QEvent::Wheel: {
-        QWheelEvent *we = static_cast<QWheelEvent *>(e);
+        auto *we = static_cast<QWheelEvent *>(e);
 
         if (!containmentContainsPosition(we->position()) && !m_fakeEventPending) {
             QWheelEvent we2(positionAdjustedForContainment(we->position()),
@@ -1299,7 +1299,7 @@ bool PanelView::event(QEvent *e)
         if (edgeActivated()) {
             m_unhideTimer.stop();
         }
-        QDragEnterEvent *de = static_cast<QDragEnterEvent *>(e);
+        auto *de = static_cast<QDragEnterEvent *>(e);
         if (!containmentContainsPosition(de->position()) && !m_fakeEventPending) {
             QDragEnterEvent de2(positionAdjustedForContainment(de->position()).toPoint(),
                                 de->possibleActions(),
@@ -1322,7 +1322,7 @@ bool PanelView::event(QEvent *e)
         }
         break;
     case QEvent::DragMove: {
-        QDragMoveEvent *de = static_cast<QDragMoveEvent *>(e);
+        auto *de = static_cast<QDragMoveEvent *>(e);
         if (!containmentContainsPosition(de->position()) && !m_fakeEventPending) {
             QDragMoveEvent de2(positionAdjustedForContainment(de->position()).toPoint(), de->possibleActions(), de->mimeData(), de->buttons(), de->modifiers());
 
@@ -1335,7 +1335,7 @@ bool PanelView::event(QEvent *e)
     }
     case QEvent::Drop: {
         m_containsDrag = false;
-        QDropEvent *de = static_cast<QDropEvent *>(e);
+        auto *de = static_cast<QDropEvent *>(e);
         if (!containmentContainsPosition(de->position()) && !m_fakeEventPending) {
             QDropEvent de2(positionAdjustedForContainment(de->position()).toPoint(), de->possibleActions(), de->mimeData(), de->buttons(), de->modifiers());
 
@@ -1360,12 +1360,12 @@ bool PanelView::event(QEvent *e)
     // PanelView does not take focus, but we want any users tracking focus
     // to act like they've lost focus when the panel is clicked and it was not used by another other mouse item
     if (e->type() == QEvent::MouseButtonPress) {
-        QMouseEvent *me = static_cast<QMouseEvent *>(e);
+        auto *me = static_cast<QMouseEvent *>(e);
         if (!me->allPointsGrabbed()) {
             QWindow *focusWindow = qGuiApp->focusWindow();
             if (focusWindow && focusWindow != this && focusWindow->flags().testFlag(Qt::FramelessWindowHint)) {
                 // postEvent takes ownership of the event
-                QFocusEvent *fe = new QFocusEvent(QEvent::FocusOut);
+                auto *fe = new QFocusEvent(QEvent::FocusOut);
                 qGuiApp->postEvent(focusWindow, fe);
             }
         }
@@ -1819,7 +1819,7 @@ void PanelView::showTemporarily()
 {
     setAutoHideEnabled(false);
 
-    QTimer *t = new QTimer(this);
+    auto *t = new QTimer(this);
     t->setSingleShot(true);
     t->setInterval(3s);
     connect(t, &QTimer::timeout, this, &PanelView::restoreAutoHide);

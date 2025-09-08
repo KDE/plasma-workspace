@@ -76,7 +76,7 @@ void AbstractImageListModel::asyncGetMediaMetadata(const QString &path, const QP
         return;
     }
 
-    MediaMetadataFinder *finder = new MediaMetadataFinder(path);
+    auto *finder = new MediaMetadataFinder(path);
     connect(finder, &MediaMetadataFinder::metadataFound, this, &AbstractImageListModel::slotMediaMetadataFound);
     QThreadPool::globalInstance()->start(finder);
 

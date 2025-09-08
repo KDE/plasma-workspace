@@ -907,7 +907,7 @@ void Notifications::showInhibitionSummary(Urgency urgency, const QStringList &bl
         return;
     }
 
-    KNotification *notification = new KNotification(u"inhibitionSummary"_s);
+    auto *notification = new KNotification(u"inhibitionSummary"_s);
     notification->setTitle(i18ncp("@title", "Unread Notification", "Unread Notifications", inhibited));
     notification->setText(i18ncp("@info",
                                  "%1 notification was received while Do Not Disturb was active.",

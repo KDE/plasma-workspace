@@ -26,14 +26,14 @@ MountAction::MountAction(const QString &udi, QObject *parent)
     QStringList supportedProtocols;
 
     if (device.is<Solid::Camera>()) {
-        Solid::Camera *camera = device.as<Solid::Camera>();
+        auto *camera = device.as<Solid::Camera>();
         if (camera) {
             supportedProtocols = camera->supportedProtocols();
         }
     }
 
     if (device.is<Solid::PortableMediaPlayer>()) {
-        Solid::PortableMediaPlayer *mediaplayer = device.as<Solid::PortableMediaPlayer>();
+        auto *mediaplayer = device.as<Solid::PortableMediaPlayer>();
         if (mediaplayer) {
             supportedProtocols = mediaplayer->supportedProtocols();
         }
@@ -43,7 +43,7 @@ MountAction::MountAction(const QString &udi, QObject *parent)
 
     // It's possible for there to be no StorageAccess (e.g. MTP devices don't have one)
     if (device.is<Solid::StorageAccess>()) {
-        Solid::StorageAccess *access = device.as<Solid::StorageAccess>();
+        auto *access = device.as<Solid::StorageAccess>();
         if (access) {
             qCDebug(APPLETS::DEVICENOTIFIER) << "Mount action: have storage access";
             m_hasStorageAccess = true;
@@ -69,7 +69,7 @@ void MountAction::triggered()
     Solid::Device device(m_udi);
 
     if (device.is<Solid::StorageAccess>()) {
-        Solid::StorageAccess *access = device.as<Solid::StorageAccess>();
+        auto *access = device.as<Solid::StorageAccess>();
         if (access && !access->isAccessible()) {
             access->setup();
         }
@@ -98,7 +98,7 @@ QString MountAction::text() const
 {
     Solid::Device device(m_udi);
     if (device.is<Solid::StorageAccess>()) {
-        Solid::StorageAccess *access = device.as<Solid::StorageAccess>();
+        auto *access = device.as<Solid::StorageAccess>();
         if (access && access->canCheck() && !m_stateMonitor->isChecked(m_udi)) {
             return i18nc("@action:button Mount a disk without verifying for errors", "Mount without verifying");
         }

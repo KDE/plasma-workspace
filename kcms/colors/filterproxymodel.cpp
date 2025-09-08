@@ -101,7 +101,7 @@ bool FilterProxyModel::filterAcceptsRow(int source_row, const QModelIndex &sourc
     }
 
     if (m_filter != KCMColors::AllSchemes) {
-        const QPalette palette = idx.data(ColorsModel::PaletteRole).value<QPalette>();
+        const auto palette = idx.data(ColorsModel::PaletteRole).value<QPalette>();
 
         const int windowBackgroundGray = qGray(palette.window().color().rgb());
 

@@ -356,7 +356,7 @@ void ItemContainer::setConfigOverlayVisible(bool visible)
 
 void ItemContainer::contentData_append(QQmlListProperty<QObject> *prop, QObject *object)
 {
-    ItemContainer *container = static_cast<ItemContainer *>(prop->object);
+    auto *container = static_cast<ItemContainer *>(prop->object);
     if (!container) {
         return;
     }
@@ -367,7 +367,7 @@ void ItemContainer::contentData_append(QQmlListProperty<QObject> *prop, QObject 
 
 qsizetype ItemContainer::contentData_count(QQmlListProperty<QObject> *prop)
 {
-    ItemContainer *container = static_cast<ItemContainer *>(prop->object);
+    auto *container = static_cast<ItemContainer *>(prop->object);
     if (!container) {
         return 0;
     }
@@ -377,7 +377,7 @@ qsizetype ItemContainer::contentData_count(QQmlListProperty<QObject> *prop)
 
 QObject *ItemContainer::contentData_at(QQmlListProperty<QObject> *prop, qsizetype index)
 {
-    ItemContainer *container = static_cast<ItemContainer *>(prop->object);
+    auto *container = static_cast<ItemContainer *>(prop->object);
     if (!container) {
         return nullptr;
     }
@@ -390,7 +390,7 @@ QObject *ItemContainer::contentData_at(QQmlListProperty<QObject> *prop, qsizetyp
 
 void ItemContainer::contentData_clear(QQmlListProperty<QObject> *prop)
 {
-    ItemContainer *container = static_cast<ItemContainer *>(prop->object);
+    auto *container = static_cast<ItemContainer *>(prop->object);
     if (!container) {
         return;
     }
@@ -498,7 +498,7 @@ bool ItemContainer::childMouseEventFilter(QQuickItem *item, QEvent *event)
         m_closeEditModeTimer->start();
     }
     if (event->type() == QEvent::MouseButtonPress) {
-        QMouseEvent *me = static_cast<QMouseEvent *>(event);
+        auto *me = static_cast<QMouseEvent *>(event);
         if (me->button() != Qt::LeftButton && !(me->buttons() & Qt::LeftButton)) {
             return QQuickItem::childMouseEventFilter(item, event);
         }
@@ -524,7 +524,7 @@ bool ItemContainer::childMouseEventFilter(QQuickItem *item, QEvent *event)
         }
 
     } else if (event->type() == QEvent::MouseMove) {
-        QMouseEvent *me = static_cast<QMouseEvent *>(event);
+        auto *me = static_cast<QMouseEvent *>(event);
 
         if (!m_editMode && QPointF(me->scenePosition() - m_mouseDownPosition).manhattanLength() >= QGuiApplication::styleHints()->startDragDistance()) {
             m_editModeTimer->stop();

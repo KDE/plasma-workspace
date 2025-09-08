@@ -110,7 +110,7 @@ QVariantList createActionListForFileItem(const KFileItem &fileItem)
 bool handleFileItemAction(const KFileItem &fileItem, const QString &actionId, const QVariant &argument, bool *close)
 {
     if (actionId == QLatin1String("_kicker_fileItem_properties")) {
-        KPropertiesDialog *dlg = new KPropertiesDialog(fileItem, QApplication::activeWindow());
+        auto *dlg = new KPropertiesDialog(fileItem, QApplication::activeWindow());
         dlg->setAttribute(Qt::WA_DeleteOnClose);
         dlg->show();
 

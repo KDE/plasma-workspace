@@ -21,10 +21,10 @@ FontInstInterface::FontInstInterface()
 {
     FontInst::registerTypes();
 
-    QDBusServiceWatcher *watcher = new QDBusServiceWatcher(QLatin1String(OrgKdeFontinstInterface::staticInterfaceName()),
-                                                           QDBusConnection::sessionBus(),
-                                                           QDBusServiceWatcher::WatchForOwnerChange,
-                                                           this);
+    auto *watcher = new QDBusServiceWatcher(QLatin1String(OrgKdeFontinstInterface::staticInterfaceName()),
+                                            QDBusConnection::sessionBus(),
+                                            QDBusServiceWatcher::WatchForOwnerChange,
+                                            this);
 
     connect(watcher, &QDBusServiceWatcher::serviceOwnerChanged, this, &FontInstInterface::dbusServiceOwnerChanged);
     connect(m_interface, &OrgKdeFontinstInterface::status, this, &FontInstInterface::status);

@@ -24,7 +24,7 @@ static QWidget *createParent(int xid)
     if (!xid)
         return nullptr;
 
-    QWidget *parent = new QWidget(nullptr, Qt::FramelessWindowHint);
+    auto *parent = new QWidget(nullptr, Qt::FramelessWindowHint);
 
     parent->resize(1, 1);
     parent->show();

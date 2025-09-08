@@ -880,8 +880,8 @@ bool TasksModel::Private::lessThan(const QModelIndex &left, const QModelIndex &r
             return *result;
         }
 
-        const QRect leftGeom = left.data(AbstractTasksModel::Geometry).value<QRect>();
-        const QRect rightGeom = right.data(AbstractTasksModel::Geometry).value<QRect>();
+        const auto leftGeom = left.data(AbstractTasksModel::Geometry).value<QRect>();
+        const auto rightGeom = right.data(AbstractTasksModel::Geometry).value<QRect>();
 
         if (leftGeom.x() != rightGeom.x()) {
             if (QGuiApplication::isRightToLeft()) {

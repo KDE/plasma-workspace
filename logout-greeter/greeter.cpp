@@ -74,7 +74,7 @@ void Greeter::adoptScreen(QScreen *screen)
         return;
     }
     // TODO: last argument is the theme, maybe add command line option for it?
-    KSMShutdownDlg *w = new KSMShutdownDlg(nullptr, m_shutdownType, screen);
+    auto *w = new KSMShutdownDlg(nullptr, m_shutdownType, screen);
     w->setWindowed(m_windowed);
     w->installEventFilter(this);
     m_dialogs << w;
@@ -102,7 +102,7 @@ bool Greeter::eventFilter(QObject *watched, QEvent *event)
     if (qobject_cast<KSMShutdownDlg *>(watched)) {
         if (event->type() == QEvent::MouseButtonPress) {
             // check that the position is on no window
-            QMouseEvent *me = static_cast<QMouseEvent *>(event);
+            auto *me = static_cast<QMouseEvent *>(event);
             if (std::any_of(m_dialogs.cbegin(), m_dialogs.cend(), [me](KSMShutdownDlg *dialog) {
                     return dialog->geometry().contains(me->globalPosition().toPoint());
                 })) {

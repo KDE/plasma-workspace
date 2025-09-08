@@ -124,12 +124,12 @@ QMenu *AppMenuApplet::createMenu(int idx) const
     QMenu *menu = nullptr;
 
     if (view() == CompactView) {
-        if (QAction *menuAction = m_model->data(QModelIndex(), AppMenuModel::ActionRole).value<QAction *>()) {
+        if (auto *menuAction = m_model->data(QModelIndex(), AppMenuModel::ActionRole).value<QAction *>()) {
             menu = menuAction->menu();
         }
     } else if (view() == FullView) {
         const QModelIndex index = m_model->index(idx, 0);
-        if (QAction *action = m_model->data(index, AppMenuModel::ActionRole).value<QAction *>()) {
+        if (auto *action = m_model->data(index, AppMenuModel::ActionRole).value<QAction *>()) {
             menu = action->menu();
         }
     }
@@ -249,7 +249,7 @@ void AppMenuApplet::trigger(QQuickItem *ctx, int idx)
 
         // FIXME TODO connect only once
     } else { // is it just an action without a menu?
-        if (QAction *action = m_model->index(idx, 0).data(AppMenuModel::ActionRole).value<QAction *>()) {
+        if (auto *action = m_model->index(idx, 0).data(AppMenuModel::ActionRole).value<QAction *>()) {
             Q_ASSERT(!action->menu());
             action->trigger();
         }

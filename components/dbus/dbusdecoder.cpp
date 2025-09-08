@@ -20,7 +20,7 @@ namespace Decoder
 QVariant dbusToVariant(const QVariant &variant)
 {
     if (variant.metaType() == QMetaType::fromType<QDBusArgument>()) {
-        const QDBusArgument argument = variant.value<QDBusArgument>();
+        const auto argument = variant.value<QDBusArgument>();
         switch (argument.currentType()) {
         case QDBusArgument::BasicType:
         case QDBusArgument::MapEntryType:
@@ -92,7 +92,7 @@ QVariant dbusToVariant(const QVariant &variant)
         case QMetaType::QString:
             return Plasma::DBus::STRING(get<QString>(variant));
         case QMetaType::QByteArray: {
-            const QByteArray &bytes = get<QByteArray>(variant);
+            const auto &bytes = get<QByteArray>(variant);
             return QVariant::fromValue(QList<Plasma::DBus::BYTE>{bytes.cbegin(), bytes.cend()});
         }
         }

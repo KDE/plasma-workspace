@@ -173,7 +173,7 @@ void WaylandStartupTasksModel::Private::addActivation(PlasmaActivation *activati
         q->endInsertRows();
 
         // Remove the activation if it doesn't finish within certain time interval.
-        QTimer *timeoutTimer = new QTimer(activation);
+        auto *timeoutTimer = new QTimer(activation);
         QObject::connect(timeoutTimer, &QTimer::timeout, q, [this, activation]() {
             removeActivation(activation);
         });

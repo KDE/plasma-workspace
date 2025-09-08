@@ -55,7 +55,7 @@ void SolidUiServer::showPassphraseDialog(const QString &udi, const QString &retu
 
     Solid::Device device(udi);
 
-    KPasswordDialog *dialog = new KPasswordDialog(nullptr, KPasswordDialog::ShowKeepPassword);
+    auto *dialog = new KPasswordDialog(nullptr, KPasswordDialog::ShowKeepPassword);
 
     QString label = device.vendor();
     if (!label.isEmpty())
@@ -101,7 +101,7 @@ void SolidUiServer::showPassphraseDialog(const QString &udi, const QString &retu
 
 void SolidUiServer::onPassphraseDialogCompleted(const QString &pass, bool keep)
 {
-    KPasswordDialog *dialog = qobject_cast<KPasswordDialog *>(sender());
+    auto *dialog = qobject_cast<KPasswordDialog *>(sender());
 
     if (dialog) {
         QString returnService = dialog->property("soliduiserver.returnService").toString();

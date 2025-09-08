@@ -31,7 +31,7 @@ QVariant CPreviewList::data(const QModelIndex &index, int role) const
         return QVariant();
     }
 
-    CPreviewListItem *item = static_cast<CPreviewListItem *>(index.internalPointer());
+    auto *item = static_cast<CPreviewListItem *>(index.internalPointer());
 
     if (item) {
         switch (role) {
@@ -80,7 +80,7 @@ void CPreviewList::showFonts(const QModelIndexList &fonts)
     clear();
     Q_EMIT layoutAboutToBeChanged();
     for (const QModelIndex &index : fonts) {
-        CFontModelItem *mi = static_cast<CFontModelItem *>(index.internalPointer());
+        auto *mi = static_cast<CFontModelItem *>(index.internalPointer());
         CFontItem *font = mi->parent() ? static_cast<CFontItem *>(mi) : (static_cast<CFamilyItem *>(mi))->regularFont();
 
         if (font) {
@@ -105,7 +105,7 @@ public:
 
     void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &idx) const override
     {
-        CPreviewListItem *item = static_cast<CPreviewListItem *>(idx.internalPointer());
+        auto *item = static_cast<CPreviewListItem *>(idx.internalPointer());
         QStyleOptionViewItem opt(option);
 
         opt.rect.adjust(1, constBorder - 3, 0, -(1 + m_previewSize));

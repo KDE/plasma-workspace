@@ -129,7 +129,7 @@ void SpaceMonitor::updateStorageSpace(const QString &udi)
 {
     Solid::Device device(udi);
 
-    Solid::StorageAccess *storageaccess = device.as<Solid::StorageAccess>();
+    auto *storageaccess = device.as<Solid::StorageAccess>();
     if (!storageaccess || !storageaccess->isAccessible()) {
         qCDebug(APPLETS::DEVICENOTIFIER) << "Space Monitor: failed to get storage access " << udi;
         m_sizes[udi].first = -1;

@@ -55,7 +55,7 @@ void FreeSpaceNotifier::checkFreeDiskSpace()
 
     Solid::Device device(m_udi);
 
-    Solid::StorageAccess *storageaccess = device.as<Solid::StorageAccess>();
+    auto *storageaccess = device.as<Solid::StorageAccess>();
     if (!storageaccess || !storageaccess->isAccessible()) {
         qCDebug(FSN) << "Space Monitor: failed to get storage access " << m_udi;
         return;

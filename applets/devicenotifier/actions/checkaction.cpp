@@ -20,7 +20,7 @@ CheckAction::CheckAction(const QString &udi, QObject *parent)
 
     // It's possible for there to be no StorageAccess (e.g. MTP devices don't have one)
     if (device.is<Solid::StorageAccess>()) {
-        Solid::StorageAccess *access = device.as<Solid::StorageAccess>();
+        auto *access = device.as<Solid::StorageAccess>();
         if (access) {
             qCDebug(APPLETS::DEVICENOTIFIER) << "Check action: have storage access";
             connect(m_stateMonitor.get(), &DevicesStateMonitor::stateChanged, this, &CheckAction::updateIsValid);
@@ -39,7 +39,7 @@ void CheckAction::triggered()
     Solid::Device device(m_udi);
 
     if (device.is<Solid::StorageAccess>()) {
-        Solid::StorageAccess *access = device.as<Solid::StorageAccess>();
+        auto *access = device.as<Solid::StorageAccess>();
         if (access && access->canCheck()) {
             access->check();
         }
@@ -51,7 +51,7 @@ bool CheckAction::isValid() const
     Solid::Device device(m_udi);
 
     if (device.is<Solid::StorageAccess>()) {
-        Solid::StorageAccess *access = device.as<Solid::StorageAccess>();
+        auto *access = device.as<Solid::StorageAccess>();
         if (access && access->canCheck() && !access->isAccessible() && !m_stateMonitor->isChecked(m_udi)) {
             return true;
         }

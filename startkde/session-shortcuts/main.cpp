@@ -26,9 +26,9 @@ SessionShortcutsModule::SessionShortcutsModule(QObject *parent, const KPluginMet
 {
     Q_UNUSED(args)
     Q_UNUSED(metaData)
-    SessionManagement *sessionManagement = new SessionManagement(this);
+    auto *sessionManagement = new SessionManagement(this);
 
-    KActionCollection *actionCollection = new KActionCollection(this);
+    auto *actionCollection = new KActionCollection(this);
     actionCollection->setComponentDisplayName(i18n("Session Management"));
     actionCollection->setComponentName(QStringLiteral("ksmserver")); // for migration purposes
     QAction *a;

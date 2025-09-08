@@ -206,14 +206,14 @@ int CGroupList::columnCount(const QModelIndex &) const
 void CGroupList::update(const QModelIndex &unHighlight, const QModelIndex &highlight)
 {
     if (unHighlight.isValid()) {
-        CGroupListItem *grp = static_cast<CGroupListItem *>(unHighlight.internalPointer());
+        auto *grp = static_cast<CGroupListItem *>(unHighlight.internalPointer());
         if (grp) {
             grp->setHighlighted(false);
         }
         Q_EMIT dataChanged(unHighlight, unHighlight);
     }
     if (highlight.isValid()) {
-        CGroupListItem *grp = static_cast<CGroupListItem *>(highlight.internalPointer());
+        auto *grp = static_cast<CGroupListItem *>(highlight.internalPointer());
         if (grp) {
             grp->setHighlighted(true);
         }
@@ -245,7 +245,7 @@ QVariant CGroupList::data(const QModelIndex &index, int role) const
         return QVariant();
     }
 
-    CGroupListItem *grp = static_cast<CGroupListItem *>(index.internalPointer());
+    auto *grp = static_cast<CGroupListItem *>(index.internalPointer());
 
     if (grp) {
         switch (index.column()) {
@@ -318,7 +318,7 @@ bool CGroupList::setData(const QModelIndex &index, const QVariant &value, int ro
         QString name(value.toString().trimmed());
 
         if (!name.isEmpty()) {
-            CGroupListItem *grp = static_cast<CGroupListItem *>(index.internalPointer());
+            auto *grp = static_cast<CGroupListItem *>(index.internalPointer());
 
             if (grp && grp->isCustom() && grp->name() != name && !exists(name, false)) {
                 grp->setName(name);
@@ -338,7 +338,7 @@ Qt::ItemFlags CGroupList::flags(const QModelIndex &index) const
         return Qt::ItemIsEnabled;
     }
 
-    CGroupListItem *grp = static_cast<CGroupListItem *>(index.internalPointer());
+    auto *grp = static_cast<CGroupListItem *>(index.internalPointer());
 
     return Qt::ItemIsEnabled | Qt::ItemIsSelectable | Qt::ItemIsDropEnabled
         | (grp && grp->type() == CGroupListItem::CUSTOM ? Qt::ItemIsEditable : Qt::NoItemFlags);
@@ -529,7 +529,7 @@ void CGroupList::createGroup(const QString &name)
 bool CGroupList::removeGroup(const QModelIndex &idx)
 {
     if (idx.isValid()) {
-        CGroupListItem *grp = static_cast<CGroupListItem *>(idx.internalPointer());
+        auto *grp = static_cast<CGroupListItem *>(idx.internalPointer());
 
         if (grp && grp->isCustom()
             && KMessageBox::Continue
@@ -563,7 +563,7 @@ bool CGroupList::removeGroup(const QModelIndex &idx)
 void CGroupList::removeFromGroup(const QModelIndex &group, const QSet<QString> &families)
 {
     if (group.isValid()) {
-        CGroupListItem *grp = static_cast<CGroupListItem *>(group.internalPointer());
+        auto *grp = static_cast<CGroupListItem *>(group.internalPointer());
 
         if (grp && grp->isCustom()) {
             QSet<QString>::ConstIterator it(families.begin()), end(families.end());
@@ -608,7 +608,7 @@ QString CGroupList::whatsThis() const
 void CGroupList::addToGroup(const QModelIndex &group, const QSet<QString> &families)
 {
     if (group.isValid()) {
-        CGroupListItem *grp = static_cast<CGroupListItem *>(group.internalPointer());
+        auto *grp = static_cast<CGroupListItem *>(group.internalPointer());
 
         if (grp && grp->isCustom()) {
             QSet<QString>::ConstIterator it(families.begin()), end(families.end());
@@ -721,7 +721,7 @@ public:
 
     void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &idx) const override
     {
-        CGroupListItem *grp = static_cast<CGroupListItem *>(idx.internalPointer());
+        auto *grp = static_cast<CGroupListItem *>(idx.internalPointer());
         QStyleOptionViewItem opt(option);
 
         if (grp && grp->isUnclassified()) {
@@ -741,7 +741,7 @@ public:
     {
         QSize sz(QStyledItemDelegate::sizeHint(option, idx));
 
-        CGroupListItem *grp = static_cast<CGroupListItem *>(idx.internalPointer());
+        auto *grp = static_cast<CGroupListItem *>(idx.internalPointer());
 
         if (grp && grp->isUnclassified()) {
             sz.setHeight(sz.height() + 1);
@@ -813,7 +813,7 @@ CGroupListItem::EType CGroupListView::getType()
     QModelIndexList selectedItems(selectedIndexes());
 
     if (!selectedItems.isEmpty() && selectedItems.last().isValid()) {
-        CGroupListItem *grp = static_cast<CGroupListItem *>(selectedItems.last().internalPointer());
+        auto *grp = static_cast<CGroupListItem *>(selectedItems.last().internalPointer());
 
         return grp->type();
     }
@@ -886,7 +886,7 @@ void CGroupListView::dragMoveEvent(QDragMoveEvent *event)
                 index = ((CGroupList *)model())->createIdx(index.row(), COL_GROUP_NAME, index.internalPointer());
             }
 
-            CGroupListItem *dest = static_cast<CGroupListItem *>(index.internalPointer());
+            auto *dest = static_cast<CGroupListItem *>(index.internalPointer());
             CGroupListItem::EType type = getType();
 
             if (dest) {

@@ -547,7 +547,7 @@ bool KXftConfig::parseConfigFile(const QString &filename)
         // Check exclude range values - i.e. size and pixel size...
         // If "size" range is set, ensure "pixelsize" matches...
         if (!equal(0, m_excludeRange.from) || !equal(0, m_excludeRange.to)) {
-            double pFrom = (double)point2Pixel(m_excludeRange.from), pTo = (double)point2Pixel(m_excludeRange.to);
+            auto pFrom = (double)point2Pixel(m_excludeRange.from), pTo = (double)point2Pixel(m_excludeRange.to);
 
             if (!equal(pFrom, m_excludePixelRange.from) || !equal(pTo, m_excludePixelRange.to)) {
                 m_excludePixelRange.from = pFrom;

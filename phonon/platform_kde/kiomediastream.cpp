@@ -65,7 +65,7 @@ KioMediaStream::~KioMediaStream()
     Q_D(KioMediaStream);
     if (d->kiojob) {
         d->kiojob->disconnect(this);
-        KIO::FileJob *filejob = qobject_cast<KIO::FileJob *>(d->kiojob);
+        auto *filejob = qobject_cast<KIO::FileJob *>(d->kiojob);
         if (filejob) {
             filejob->close();
         }
@@ -81,7 +81,7 @@ void KioMediaStream::needData()
         // no job => job is finished and endOfData was already sent
         return;
     }
-    KIO::FileJob *filejob = qobject_cast<KIO::FileJob *>(d->kiojob);
+    auto *filejob = qobject_cast<KIO::FileJob *>(d->kiojob);
     if (filejob) {
         // while d->seeking the backend won't get any data
         if (d->seeking || !d->open) {
@@ -125,7 +125,7 @@ void KioMediaStream::seekStream(qint64 position)
     d->seeking = true;
     d->seekPosition = position;
     if (d->open) {
-        KIO::FileJob *filejob = qobject_cast<KIO::FileJob *>(d->kiojob);
+        auto *filejob = qobject_cast<KIO::FileJob *>(d->kiojob);
         filejob->seek(position);
     }
 }
@@ -171,7 +171,7 @@ void KioMediaStreamPrivate::_k_bytestreamResult(KJob *job)
         qCDebug(PLATFORM) << "KIO Job error: " << kioErrorString;
         QObject::disconnect(kiojob, SIGNAL(data(KIO::Job *, const QByteArray &)), q, SLOT(_k_bytestreamData(KIO::Job *, const QByteArray &)));
         QObject::disconnect(kiojob, SIGNAL(result(KJob *)), q, SLOT(_k_bytestreamResult(KJob *)));
-        KIO::FileJob *filejob = qobject_cast<KIO::FileJob *>(kiojob);
+        auto *filejob = qobject_cast<KIO::FileJob *>(kiojob);
         if (filejob) {
             QObject::disconnect(kiojob, SIGNAL(open(KIO::Job *)), q, SLOT(_k_bytestreamFileJobOpen(KIO::Job *)));
             QObject::disconnect(kiojob, SIGNAL(position(KIO::Job *, KIO::filesize_t)), q, SLOT(_k_bytestreamSeekDone(KIO::Job *, KIO::filesize_t)));
@@ -209,7 +209,7 @@ void KioMediaStreamPrivate::_k_bytestreamFileJobOpen(KIO::Job *)
     Q_ASSERT(kiojob);
     open = true;
     endOfDataSent = false;
-    KIO::FileJob *filejob = static_cast<KIO::FileJob *>(kiojob);
+    auto *filejob = static_cast<KIO::FileJob *>(kiojob);
     qCDebug(PLATFORM) << filejob->size();
     q->setStreamSize(filejob->size() > 0 ? filejob->size() : -1);
 
@@ -236,7 +236,7 @@ void KioMediaStreamPrivate::_k_bytestreamSeekDone(KIO::Job *, KIO::filesize_t of
 
 void KioMediaStreamPrivate::_k_read()
 {
-    KIO::FileJob *filejob = qobject_cast<KIO::FileJob *>(kiojob);
+    auto *filejob = qobject_cast<KIO::FileJob *>(kiojob);
     Q_ASSERT(filejob);
     filejob->read(32768);
 }

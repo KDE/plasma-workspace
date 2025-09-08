@@ -246,7 +246,7 @@ void CursorThemeModel::processThemeDir(const QDir &themeDir, const QStringList &
         return;
 
     // Create a cursor theme object for the theme dir
-    XCursorTheme *theme = new XCursorTheme(themeDir);
+    auto *theme = new XCursorTheme(themeDir);
 
     // Skip this theme if it's hidden.
     if (theme->isHidden()) {
@@ -295,7 +295,7 @@ void CursorThemeModel::insertThemes()
 
 bool CursorThemeModel::addTheme(const QDir &dir)
 {
-    XCursorTheme *theme = new XCursorTheme(dir);
+    auto *theme = new XCursorTheme(dir);
 
     // Don't add the theme to the list if it's hidden
     if (theme->isHidden()) {

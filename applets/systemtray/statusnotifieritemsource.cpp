@@ -225,7 +225,7 @@ void StatusNotifierItemSource::performRefresh()
 
     message << m_statusNotifierItemInterface->interface();
     QDBusPendingCall call = m_statusNotifierItemInterface->connection().asyncCall(message);
-    QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(call, this);
+    auto *watcher = new QDBusPendingCallWatcher(call, this);
     connect(watcher, &QDBusPendingCallWatcher::finished, this, &StatusNotifierItemSource::refreshCallback);
 }
 
@@ -504,7 +504,7 @@ void StatusNotifierItemSource::activate(int x, int y)
 
         message << x << y;
         QDBusPendingCall call = m_statusNotifierItemInterface->connection().asyncCall(message);
-        QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(call, this);
+        auto *watcher = new QDBusPendingCallWatcher(call, this);
         connect(watcher, &QDBusPendingCallWatcher::finished, this, &StatusNotifierItemSource::activateCallback);
     }
 }

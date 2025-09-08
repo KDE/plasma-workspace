@@ -41,7 +41,7 @@ QImage CursorTheme::autoCropImage(const QImage &image) const
 {
     // Compute an autocrop rectangle for the image
     QRect r(image.rect().bottomRight(), image.rect().topLeft());
-    const quint32 *pixels = reinterpret_cast<const quint32 *>(image.bits());
+    const auto *pixels = reinterpret_cast<const quint32 *>(image.bits());
 
     for (int y = 0; y < image.height(); y++) {
         for (int x = 0; x < image.width(); x++) {

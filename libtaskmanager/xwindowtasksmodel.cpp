@@ -446,7 +446,7 @@ KWindowInfo *XWindowTasksModel::Private::windowInfo(WId window)
         return *it;
     }
 
-    KWindowInfo *info = new KWindowInfo(window, windowInfoFlags, windowInfoFlags2);
+    auto *info = new KWindowInfo(window, windowInfoFlags, windowInfoFlags2);
     windowInfoCache.insert(window, info);
 
     return info;

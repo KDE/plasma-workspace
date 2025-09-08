@@ -84,7 +84,7 @@ QHash<int, QByteArray> DefaultFilterModel::roleNames() const
 void DefaultFilterModel::addFilter(const QString &caption, const Filter &filter, const QIcon &icon)
 {
     QList<QStandardItem *> newRow;
-    QStandardItem *item = new QStandardItem(caption);
+    auto *item = new QStandardItem(caption);
     item->setData(QVariant::fromValue<Filter>(filter));
     if (!icon.isNull()) {
         item->setIcon(icon);
@@ -99,7 +99,7 @@ void DefaultFilterModel::addFilter(const QString &caption, const Filter &filter,
 void DefaultFilterModel::addSeparator(const QString &caption)
 {
     QList<QStandardItem *> newRow;
-    QStandardItem *item = new QStandardItem(caption);
+    auto *item = new QStandardItem(caption);
     item->setEnabled(false);
     item->setData(true, SeparatorRole);
 
@@ -129,7 +129,7 @@ DefaultItemFilterProxyModel::DefaultItemFilterProxyModel(QObject *parent)
 
 void DefaultItemFilterProxyModel::setSourceModel(QAbstractItemModel *sourceModel)
 {
-    QStandardItemModel *model = qobject_cast<QStandardItemModel *>(sourceModel);
+    auto *model = qobject_cast<QStandardItemModel *>(sourceModel);
 
     if (!model) {
         qWarning() << "Expecting a QStandardItemModel!";
@@ -160,11 +160,11 @@ QVariant DefaultItemFilterProxyModel::data(const QModelIndex &index, int role) c
 
 bool DefaultItemFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const
 {
-    QStandardItemModel *model = (QStandardItemModel *)sourceModel();
+    auto *model = (QStandardItemModel *)sourceModel();
 
     QModelIndex index = sourceModel()->index(sourceRow, 0, sourceParent);
 
-    AbstractItem *item = (AbstractItem *)model->itemFromIndex(index);
+    auto *item = (AbstractItem *)model->itemFromIndex(index);
     // qDebug() << "ITEM " << (item ? "IS NOT " : "IS") << " NULL\n";
 
     return item && (m_filter.first.isEmpty() || item->passesFiltering(m_filter)) && (m_searchPattern.isEmpty() || item->matches(m_searchPattern));

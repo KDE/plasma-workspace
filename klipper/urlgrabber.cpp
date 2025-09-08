@@ -108,7 +108,7 @@ void URLGrabber::matchingMimeActions(const QString &clipData)
     if (!mimetype.isDefault()) {
         const KService::List lst = KApplicationTrader::queryByMimeType(mimetype.name());
         if (!lst.isEmpty()) {
-            ClipAction *action = new ClipAction(QString(), mimetype.comment());
+            auto *action = new ClipAction(QString(), mimetype.comment());
             for (const KService::Ptr &service : lst) {
                 action->addCommand(ClipCommand(QString(), service->name(), true, service->icon(), ClipCommand::IGNORE, service->storageId()));
             }
@@ -186,7 +186,7 @@ void URLGrabber::actionMenu(HistoryItemConstPtr item, bool automatically_invoked
                     item = command.command;
 
                 QString id = QUuid::createUuid().toString();
-                QAction *action = new QAction(this);
+                auto *action = new QAction(this);
                 action->setData(id);
                 action->setText(item);
 
@@ -199,7 +199,7 @@ void URLGrabber::actionMenu(HistoryItemConstPtr item, bool automatically_invoked
         }
         m_myMenu->addSeparator();
 
-        QAction *cancelAction = new QAction(QIcon::fromTheme(QStringLiteral("dialog-cancel")), i18n("&Cancel"), this);
+        auto *cancelAction = new QAction(QIcon::fromTheme(QStringLiteral("dialog-cancel")), i18n("&Cancel"), this);
         connect(cancelAction, &QAction::triggered, m_myMenu, &QMenu::hide);
         m_myMenu->addAction(cancelAction);
         m_myClipItem = item;
@@ -253,7 +253,7 @@ void URLGrabber::execute(const ClipAction *action, int cmdIdx) const
             job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
             job->start();
         } else {
-            ClipCommandProcess *proc = new ClipCommandProcess(*action, command, text, m_myClipItem);
+            auto *proc = new ClipCommandProcess(*action, command, text, m_myClipItem);
             if (proc->program().isEmpty()) {
                 delete proc;
                 proc = nullptr;

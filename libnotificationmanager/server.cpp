@@ -39,7 +39,7 @@ Server::~Server() = default;
 
 Server &Server::self()
 {
-    static Server *s_self = new Server(qApp);
+    static auto *s_self = new Server(qApp);
     return *s_self;
 }
 

@@ -105,7 +105,7 @@ void Applet::writeConfig(const QString &key, const QJSValue &value)
     if (d->configGroup.isValid()) {
         if (d->inWallpaperConfig) {
             // hacky, but only way to make the wallpaper react immediately
-            QObject *wallpaperGraphicsObject = applet()->property("wallpaperGraphicsObject").value<QObject *>();
+            auto *wallpaperGraphicsObject = applet()->property("wallpaperGraphicsObject").value<QObject *>();
             if (wallpaperGraphicsObject) {
                 auto *config = static_cast<QQmlPropertyMap *>(wallpaperGraphicsObject->property("configuration").value<QObject *>());
                 config->setProperty(key.toLatin1().constData(), value.toVariant());

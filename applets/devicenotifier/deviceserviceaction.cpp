@@ -126,7 +126,7 @@ DelayedExecutor::DelayedExecutor(const KServiceAction &service, Solid::Device &d
     // Skip mounting for actions that explicitly request we don't do that (e.g. editing partitions)
     const bool mountingRequired = !service.service()->property<bool>(QStringLiteral("X-KDE-SkipMount"));
     if (storageIsAccessible && mountingRequired) {
-        Solid::StorageAccess *access = device.as<Solid::StorageAccess>();
+        auto *access = device.as<Solid::StorageAccess>();
 
         connect(access, &Solid::StorageAccess::setupDone, this, &DelayedExecutor::_k_storageSetupDone);
 
@@ -142,7 +142,7 @@ void DelayedExecutor::delayedExecute(const QString &udi)
     MacroExpander mx(udi);
     mx.expandMacrosShellQuote(exec);
 
-    KIO::CommandLauncherJob *job = new KIO::CommandLauncherJob(exec);
+    auto *job = new KIO::CommandLauncherJob(exec);
     job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
 
     // To make xdg-activation and startup feedback work we need to pass the desktop file name of what we are launching

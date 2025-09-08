@@ -65,15 +65,15 @@ CFontViewPart::CFontViewPart(QWidget *parentWidget, QObject *parent, const KPlug
 
     m_frame = new QFrame(parentWidget);
 
-    QFrame *previewFrame = new QFrame(m_frame);
-    QWidget *controls = new QWidget(m_frame);
+    auto *previewFrame = new QFrame(m_frame);
+    auto *controls = new QWidget(m_frame);
 
     m_faceWidget = new QWidget(controls);
 
-    QBoxLayout *mainLayout = new QBoxLayout(QBoxLayout::TopToBottom, m_frame);
+    auto *mainLayout = new QBoxLayout(QBoxLayout::TopToBottom, m_frame);
 
-    QBoxLayout *previewLayout = new QBoxLayout(QBoxLayout::LeftToRight, previewFrame), *controlsLayout = new QBoxLayout(QBoxLayout::LeftToRight, controls),
-               *faceLayout = new QBoxLayout(QBoxLayout::LeftToRight, m_faceWidget);
+    auto *previewLayout = new QBoxLayout(QBoxLayout::LeftToRight, previewFrame), *controlsLayout = new QBoxLayout(QBoxLayout::LeftToRight, controls),
+         *faceLayout = new QBoxLayout(QBoxLayout::LeftToRight, m_faceWidget);
     previewLayout->setContentsMargins(0, 0, 0, 0);
     previewLayout->setSpacing(0);
     faceLayout->setContentsMargins(0, 0, 0, 0);
@@ -114,7 +114,7 @@ CFontViewPart::CFontViewPart(QWidget *parentWidget, QObject *parent, const KPlug
     m_changeTextAction->setText(i18n("Change Text…"));
     connect(m_changeTextAction, &QAction::triggered, this, &CFontViewPart::changeText);
 
-    CPreviewSelectAction *displayTypeAction = new CPreviewSelectAction(this, CPreviewSelectAction::BlocksAndScripts);
+    auto *displayTypeAction = new CPreviewSelectAction(this, CPreviewSelectAction::BlocksAndScripts);
     actionCollection()->addAction(u"displayType"_s, displayTypeAction);
     connect(displayTypeAction, &CPreviewSelectAction::range, this, &CFontViewPart::displayType);
 

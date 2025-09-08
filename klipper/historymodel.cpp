@@ -93,7 +93,7 @@ QString computeUuid(const QMimeData *data)
         }
     }
     if (data->hasImage()) {
-        const QImage image = data->imageData().value<QImage>();
+        const auto image = data->imageData().value<QImage>();
         hash.addData(QByteArrayView(reinterpret_cast<const char *>(image.constBits()), image.sizeInBytes()));
     }
     return QString::fromLatin1(hash.result().toHex());

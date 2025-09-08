@@ -138,7 +138,7 @@ void PackageListModel::load(const QStringList &customPaths)
 
     AbstractImageListModel::load(customPaths);
 
-    PackageFinder *finder = new PackageFinder(m_customPaths, m_targetSize);
+    auto *finder = new PackageFinder(m_customPaths, m_targetSize);
     connect(finder, &PackageFinder::packageFound, this, &PackageListModel::slotHandlePackageFound);
     QThreadPool::globalInstance()->start(finder);
 }

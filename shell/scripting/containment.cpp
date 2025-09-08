@@ -207,7 +207,7 @@ QJSValue Containment::addWidget(const QJSValue &v, qreal x, qreal y, qreal w, qr
         }
 
         return engine()->newError(i18n("Could not create the %1 widget!", v.toString()));
-    } else if (Widget *widget = qobject_cast<Widget *>(v.toQObject())) {
+    } else if (auto *widget = qobject_cast<Widget *>(v.toQObject())) {
         applet = widget->applet();
         d->containment->addApplet(applet);
         return v;

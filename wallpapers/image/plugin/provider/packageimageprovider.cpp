@@ -128,7 +128,7 @@ PackageImageProvider::PackageImageProvider()
 
 QQuickImageResponse *PackageImageProvider::requestImageResponse(const QString &id, const QSize &requestedSize)
 {
-    AsyncPackageImageResponse *response = new AsyncPackageImageResponse(id, requestedSize, &m_pool);
+    auto *response = new AsyncPackageImageResponse(id, requestedSize, &m_pool);
 
     return response;
 }

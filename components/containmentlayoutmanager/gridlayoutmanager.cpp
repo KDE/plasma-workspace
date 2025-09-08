@@ -24,7 +24,7 @@ QString GridLayoutManager::serializeLayout() const
     QString result;
 
     for (auto *item : layout()->childItems()) {
-        ItemContainer *itemCont = qobject_cast<ItemContainer *>(item);
+        auto *itemCont = qobject_cast<ItemContainer *>(item);
         if (itemCont && itemCont != layout()->placeHolder()) {
             result += itemCont->key() + QLatin1Char(':') + QString::number(itemCont->x()) + QLatin1Char(',') + QString::number(itemCont->y()) + QLatin1Char(',')
                 + QString::number(itemCont->width()) + QLatin1Char(',') + QString::number(itemCont->height()) + QLatin1Char(',')
@@ -115,7 +115,7 @@ void GridLayoutManager::resetLayout()
     m_grid.clear();
     m_pointsForItem.clear();
     for (auto *item : layout()->childItems()) {
-        ItemContainer *itemCont = qobject_cast<ItemContainer *>(item);
+        auto *itemCont = qobject_cast<ItemContainer *>(item);
         if (itemCont && itemCont != layout()->placeHolder()) {
             // NOTE: do not use positionItemAndAssign here, because we do not want to Q_EMIT layoutNeedsSaving, to not save after resize
             assignSpaceImpl(itemCont, positionItem(itemCont));
@@ -130,7 +130,7 @@ void GridLayoutManager::resetLayoutFromConfig(const QRectF &newGeom, const QRect
     QList<ItemContainer *> missingItems;
 
     for (auto *item : layout()->childItems()) {
-        ItemContainer *itemCont = qobject_cast<ItemContainer *>(item);
+        auto *itemCont = qobject_cast<ItemContainer *>(item);
         if (itemCont && itemCont != layout()->placeHolder()) {
             if (!restoreItem(itemCont)) {
                 missingItems << itemCont;
@@ -212,7 +212,7 @@ bool GridLayoutManager::assignSpaceImpl(ItemContainer *item, QRectF geometry)
 
     // Reorder items tab order
     for (auto *i2 : layout()->childItems()) {
-        ItemContainer *item2 = qobject_cast<ItemContainer *>(i2);
+        auto *item2 = qobject_cast<ItemContainer *>(i2);
         if (item2 && item2->parentItem() == item->parentItem() && item != item2 && item2 != layout()->placeHolder() && item->y() < item2->y() + item2->height()
             && item->x() <= item2->x()) {
             item->stackBefore(item2);

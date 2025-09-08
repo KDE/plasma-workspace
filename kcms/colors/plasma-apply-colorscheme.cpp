@@ -35,7 +35,7 @@ int main(int argc, char **argv)
     QCoreApplication::setOrganizationDomain(QStringLiteral("kde.org"));
     KLocalizedString::setApplicationDomain(QByteArrayLiteral("plasma-apply-colorscheme"));
 
-    QCommandLineParser *parser = new QCommandLineParser;
+    auto *parser = new QCommandLineParser;
     parser->addHelpOption();
     parser->setApplicationDescription(
         i18n("This tool allows you to set the color scheme for the current Plasma session, without accidentally setting it to one that is either not "
@@ -57,9 +57,9 @@ int main(int argc, char **argv)
     parser->process(app);
 
     int exitCode{0};
-    ColorsSettings *settings = new ColorsSettings(&app);
+    auto *settings = new ColorsSettings(&app);
     QTextStream ts(stdout);
-    ColorsModel *model = new ColorsModel(&app);
+    auto *model = new ColorsModel(&app);
     model->load();
     model->setSelectedScheme(settings->colorScheme());
     if (!parser->positionalArguments().isEmpty() && !parser->isSet(QStringLiteral("accent-color"))) {

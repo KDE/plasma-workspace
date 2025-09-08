@@ -49,16 +49,16 @@ CDuplicatesDialog::CDuplicatesDialog(QWidget *parent, CFontList *fl)
     setWindowTitle(i18n("Duplicate Fonts"));
     m_buttonBox = new QDialogButtonBox(QDialogButtonBox::Cancel);
     connect(m_buttonBox, &QDialogButtonBox::clicked, this, &CDuplicatesDialog::slotButtonClicked);
-    QVBoxLayout *mainLayout = new QVBoxLayout;
+    auto *mainLayout = new QVBoxLayout;
     setLayout(mainLayout);
 
     setModal(true);
 
-    QFrame *page = new QFrame(this);
+    auto *page = new QFrame(this);
     mainLayout->addWidget(page);
     mainLayout->addWidget(m_buttonBox);
 
-    QGridLayout *layout = new QGridLayout(page);
+    auto *layout = new QGridLayout(page);
     layout->setContentsMargins(0, 0, 0, 0);
 
     m_label = new QLabel(page);
@@ -118,7 +118,7 @@ void CDuplicatesDialog::scanFinished()
 
                 details << FC::createName(it.key().family, it.key().styleInfo);
 
-                CFontFileListView::StyleItem *top = new CFontFileListView::StyleItem(m_view, details, it.key().family, it.key().styleInfo);
+                auto *top = new CFontFileListView::StyleItem(m_view, details, it.key().family, it.key().styleInfo);
 
                 QSet<QString>::ConstIterator fit((*it).begin()), fend((*it).end());
                 int tt(0), t1(0);
@@ -436,7 +436,7 @@ CJobRunner::ItemList CFontFileListView::getMarkedItems()
     QString home(Misc::dirSyntax(QDir::homePath()));
 
     for (int t = 0; t < root->childCount(); ++t) {
-        StyleItem *style = (StyleItem *)root->child(t);
+        auto *style = (StyleItem *)root->child(t);
 
         for (int c = 0; c < style->childCount(); ++c) {
             QTreeWidgetItem *file = style->child(c);

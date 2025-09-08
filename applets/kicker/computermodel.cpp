@@ -202,7 +202,7 @@ QVariant ComputerModel::data(const QModelIndex &index, int role) const
         if (role == Kicker::DescriptionRole) {
             if (m_filteredPlacesModel->isDevice(sourceIndex)) {
                 Solid::Device device = m_filteredPlacesModel->deviceForIndex(sourceIndex);
-                Solid::StorageAccess *access = device.as<Solid::StorageAccess>();
+                auto *access = device.as<Solid::StorageAccess>();
 
                 if (access) {
                     return access->filePath();
@@ -245,7 +245,7 @@ bool ComputerModel::trigger(int row, const QString &actionId, const QVariant &ar
         }
 
         Solid::Device device = m_filteredPlacesModel->deviceForIndex(sourceIndex);
-        Solid::StorageAccess *access = device.as<Solid::StorageAccess>();
+        auto *access = device.as<Solid::StorageAccess>();
 
         if (access && !access->isAccessible()) {
             connect(access, &Solid::StorageAccess::setupDone, this, &ComputerModel::onSetupDone);
@@ -277,7 +277,7 @@ void ComputerModel::onSetupDone(Solid::ErrorType error, QVariant errorData, cons
     }
 
     Solid::Device device(udi);
-    Solid::StorageAccess *access = device.as<Solid::StorageAccess>();
+    auto *access = device.as<Solid::StorageAccess>();
 
     Q_ASSERT(access);
 

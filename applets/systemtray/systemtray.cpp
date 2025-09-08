@@ -187,7 +187,7 @@ void SystemTray::showPlasmoidMenu(QQuickItem *appletInterface, int x, int y)
         return;
     }
 
-    Plasma::Applet *applet = appletInterface->property("_plasma_applet").value<Plasma::Applet *>();
+    auto *applet = appletInterface->property("_plasma_applet").value<Plasma::Applet *>();
 
     QPointF pos = appletInterface->mapToScene(QPointF(x, y));
 
@@ -197,7 +197,7 @@ void SystemTray::showPlasmoidMenu(QQuickItem *appletInterface, int x, int y)
         pos = QPoint();
     }
 
-    QMenu *desktopMenu = new QMenu;
+    auto *desktopMenu = new QMenu;
     connect(this, &QObject::destroyed, desktopMenu, &QMenu::close);
     desktopMenu->setAttribute(Qt::WA_DeleteOnClose);
 
@@ -258,12 +258,12 @@ void SystemTray::showStatusNotifierContextMenu(KJob *job, QQuickItem *statusNoti
         return;
     }
 
-    Plasma5Support::ServiceJob *sjob = qobject_cast<Plasma5Support::ServiceJob *>(job);
+    auto *sjob = qobject_cast<Plasma5Support::ServiceJob *>(job);
     if (!sjob) {
         return;
     }
 
-    QMenu *menu = qobject_cast<QMenu *>(sjob->result().value<QObject *>());
+    auto *menu = qobject_cast<QMenu *>(sjob->result().value<QObject *>());
 
     if (menu && !menu->isEmpty()) {
         menu->adjustSize();

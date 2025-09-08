@@ -103,10 +103,10 @@ QImage PreviewImageProvider::requestImage(const QString &id, QSize *size, const 
     xft.setAntiAliasing(KXftConfig::AntiAliasing::Enabled);
     xft.setExcludeRange(0, 0);
 
-    KXftConfig::SubPixel::Type subPixelType = (KXftConfig::SubPixel::Type)subPixelIndex;
+    auto subPixelType = (KXftConfig::SubPixel::Type)subPixelIndex;
     xft.setSubPixelType(subPixelType);
 
-    KXftConfig::Hint::Style hintStyle = (KXftConfig::Hint::Style)hintingIndex;
+    auto hintStyle = (KXftConfig::Hint::Style)hintingIndex;
     xft.setHintStyle(hintStyle);
 
     xft.apply();

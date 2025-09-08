@@ -66,7 +66,7 @@ void DevicesStateMonitor::addMonitoringDevice(const QString &udi)
     auto it = m_devicesStates.emplace(udi, deviceInfo);
 
     if (device.is<Solid::OpticalDisc>()) {
-        Solid::OpticalDrive *drive = getAncestorAs<Solid::OpticalDrive>(device);
+        auto *drive = getAncestorAs<Solid::OpticalDrive>(device);
         if (drive) {
             connect(drive, &Solid::OpticalDrive::ejectRequested, this, &DevicesStateMonitor::setUnmountingState);
             connect(drive, &Solid::OpticalDrive::ejectDone, this, &DevicesStateMonitor::setIdleState);
@@ -74,7 +74,7 @@ void DevicesStateMonitor::addMonitoringDevice(const QString &udi)
     }
 
     if (device.is<Solid::StorageVolume>()) {
-        Solid::StorageAccess *access = device.as<Solid::StorageAccess>();
+        auto *access = device.as<Solid::StorageAccess>();
         if (access) {
             connect(access, &Solid::StorageAccess::accessibilityChanged, this, &DevicesStateMonitor::setAccessibilityState);
             connect(access, &Solid::StorageAccess::setupRequested, this, &DevicesStateMonitor::setMountingState);
@@ -95,27 +95,27 @@ void DevicesStateMonitor::addMonitoringDevice(const QString &udi)
     }
 
     if (device.is<Solid::StorageDrive>()) {
-        Solid::StorageDrive *storagedrive = device.as<Solid::StorageDrive>();
+        auto *storagedrive = device.as<Solid::StorageDrive>();
         if (storagedrive) {
             it->isRemovable = storagedrive->isRemovable();
         }
     }
 
-    Solid::StorageDrive *drive = getAncestorAs<Solid::StorageDrive>(device);
+    auto *drive = getAncestorAs<Solid::StorageDrive>(device);
     if (drive) {
         // remove check for isHotpluggable() when plasmoids are changed to check for both properties
         it->isRemovable = drive->isRemovable() || drive->isHotpluggable();
     }
 
     if (device.is<Solid::Camera>()) {
-        Solid::Camera *camera = device.as<Solid::Camera>();
+        auto *camera = device.as<Solid::Camera>();
         if (camera) {
             it->isRemovable = true;
         }
     }
 
     if (device.is<Solid::PortableMediaPlayer>()) {
-        Solid::PortableMediaPlayer *mediaplayer = device.as<Solid::PortableMediaPlayer>();
+        auto *mediaplayer = device.as<Solid::PortableMediaPlayer>();
         if (mediaplayer) {
             it->isRemovable = true;
         }
@@ -133,12 +133,12 @@ void DevicesStateMonitor::removeMonitoringDevice(const QString &udi)
 
         Solid::Device device(udi);
         if (device.is<Solid::StorageVolume>()) {
-            Solid::StorageAccess *access = device.as<Solid::StorageAccess>();
+            auto *access = device.as<Solid::StorageAccess>();
             if (access) {
                 disconnect(access, nullptr, this, nullptr);
             }
         } else if (device.is<Solid::OpticalDisc>()) {
-            Solid::OpticalDrive *drive = getAncestorAs<Solid::OpticalDrive>(device);
+            auto *drive = getAncestorAs<Solid::OpticalDrive>(device);
             if (drive) {
                 disconnect(drive, nullptr, this, nullptr);
             }
@@ -289,7 +289,7 @@ void DevicesStateMonitor::setIdleState(Solid::ErrorType operationResult, QVarian
         qCDebug(APPLETS::DEVICENOTIFIER) << "Devices State Monitor : Device " << udi << " Operation result is: " << operationResult
                                          << " operation info: " << it->operationInfo;
         if (it->state == Checking) {
-            Solid::StorageAccess *access = device.as<Solid::StorageAccess>();
+            auto *access = device.as<Solid::StorageAccess>();
             it->isChecked = true;
             it->needRepair = (operationResult == Solid::NoError) ? !operationInfo.toBool() && access->canRepair() : false;
             qCDebug(APPLETS::DEVICENOTIFIER) << "Devices State Monitor : Device " << udi << " check done, need repair : " << it->needRepair;

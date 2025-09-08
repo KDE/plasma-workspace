@@ -70,7 +70,7 @@ int main(int argc, char **argv)
         parser.showHelp(1);
     }
 
-    PlasmaWindowedCorona *corona = new PlasmaWindowedCorona(parser.value(shellPluginOption));
+    auto *corona = new PlasmaWindowedCorona(parser.value(shellPluginOption));
 
     const QStringList arguments = parser.positionalArguments();
     QVariantList args;

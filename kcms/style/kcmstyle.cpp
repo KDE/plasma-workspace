@@ -185,7 +185,7 @@ void KCMStyle::configure(const QString &title, const QString &styleName, QQuickI
     typedef QWidget *(*factoryRoutine)(QWidget *);
 
     // Get the factory, and make the widget.
-    factoryRoutine factory = (factoryRoutine)(allocPtr); // Grmbl. So here I am on my
+    auto factory = (factoryRoutine)(allocPtr); // Grmbl. So here I am on my
     //"never use C casts" moralizing streak, and I find that one can't go void* -> function ptr
     // even with a reinterpret_cast.
 

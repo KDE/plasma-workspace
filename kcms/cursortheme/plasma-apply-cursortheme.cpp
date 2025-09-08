@@ -59,7 +59,7 @@ int main(int argc, char **argv)
     QCoreApplication::setOrganizationDomain(QStringLiteral("kde.org"));
     KLocalizedString::setApplicationDomain(QByteArrayLiteral("plasma-apply-cursortheme"));
 
-    QCommandLineParser *parser = new QCommandLineParser;
+    auto *parser = new QCommandLineParser;
     parser->addHelpOption();
     parser->setApplicationDescription(
         i18n("This tool allows you to set the mouse cursor theme for the current Plasma session, without accidentally setting it to one that is either not "
@@ -72,9 +72,9 @@ int main(int argc, char **argv)
     parser->process(app);
 
     int errorCode{0};
-    CursorThemeSettings *settings = new CursorThemeSettings(&app);
+    auto *settings = new CursorThemeSettings(&app);
     QTextStream ts(stdout);
-    CursorThemeModel *model = new CursorThemeModel(&app);
+    auto *model = new CursorThemeModel(&app);
     if (!parser->positionalArguments().isEmpty()) {
         QString requestedTheme{parser->positionalArguments().constFirst()};
         constexpr QLatin1Char dirSplit{'/'};

@@ -29,14 +29,14 @@ MountAndOpenAction::MountAndOpenAction(const QString &udi, QObject *parent)
     m_hasCamera = false;
 
     if (device.is<Solid::StorageAccess>()) {
-        Solid::StorageAccess *storageaccess = device.as<Solid::StorageAccess>();
+        auto *storageaccess = device.as<Solid::StorageAccess>();
         if (storageaccess) {
             m_hasStorageAccess = true;
             m_isRoot = storageaccess->filePath() == u"/";
         }
 
         if (device.is<Solid::OpticalDisc>()) {
-            Solid::OpticalDisc *opticaldisc = device.as<Solid::OpticalDisc>();
+            auto *opticaldisc = device.as<Solid::OpticalDisc>();
             if (opticaldisc) {
                 m_isOpticalDisk = true;
             }
@@ -44,7 +44,7 @@ MountAndOpenAction::MountAndOpenAction(const QString &udi, QObject *parent)
     }
 
     if (device.is<Solid::PortableMediaPlayer>()) {
-        Solid::PortableMediaPlayer *mediaplayer = device.as<Solid::PortableMediaPlayer>();
+        auto *mediaplayer = device.as<Solid::PortableMediaPlayer>();
         if (mediaplayer) {
             qCDebug(APPLETS::DEVICENOTIFIER) << "MountAndOpenAction: Device " << udi << " has a media player";
             m_hasPortableMediaPlayer = true;
@@ -54,7 +54,7 @@ MountAndOpenAction::MountAndOpenAction(const QString &udi, QObject *parent)
     }
 
     if (device.is<Solid::Camera>()) {
-        Solid::Camera *camera = device.as<Solid::Camera>();
+        auto *camera = device.as<Solid::Camera>();
         if (camera) {
             qCDebug(APPLETS::DEVICENOTIFIER) << "MountAndOpenAction: Device " << udi << " has a camera";
             m_hasCamera = true;
@@ -140,7 +140,7 @@ void MountAndOpenAction::triggered()
         }
     } else {
         if (device.is<Solid::OpticalDisc>()) {
-            Solid::OpticalDrive *drive = device.as<Solid::OpticalDrive>();
+            auto *drive = device.as<Solid::OpticalDrive>();
             if (!drive) {
                 drive = device.parent().as<Solid::OpticalDrive>();
             }
@@ -151,7 +151,7 @@ void MountAndOpenAction::triggered()
         }
 
         if (device.is<Solid::StorageAccess>()) {
-            Solid::StorageAccess *access = device.as<Solid::StorageAccess>();
+            auto *access = device.as<Solid::StorageAccess>();
             if (access && access->isAccessible()) {
                 access->teardown();
             }

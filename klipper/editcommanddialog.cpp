@@ -46,14 +46,14 @@ EditCommandDialog::EditCommandDialog(const ClipCommand &command, QWidget *parent
     , m_command(command)
 {
     setWindowTitle(i18n("Command Properties"));
-    QDialogButtonBox *buttons = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    auto *buttons = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     m_okButton = buttons->button(QDialogButtonBox::Ok);
     m_okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
     connect(buttons, &QDialogButtonBox::accepted, this, &EditCommandDialog::slotAccepted);
     connect(buttons, &QDialogButtonBox::rejected, this, &QDialog::reject);
 
-    QWidget *optionsWidget = new QWidget(this);
-    QFormLayout *optionsLayout = new QFormLayout(optionsWidget);
+    auto *optionsWidget = new QWidget(this);
+    auto *optionsLayout = new QFormLayout(optionsWidget);
 
     // Command
     m_commandEdit = new QLineEdit(optionsWidget);
@@ -86,7 +86,7 @@ captured texts from the match pattern."),
     optionsLayout->addRow(QString(), new QLabel(this));
 
     // Radio button group: Output handling
-    QButtonGroup *buttonGroup = new QButtonGroup(this);
+    auto *buttonGroup = new QButtonGroup(this);
 
     m_ignoreRadio = new QRadioButton(i18n("Ignore"), this);
     buttonGroup->addButton(m_ignoreRadio);
@@ -105,14 +105,14 @@ captured texts from the match pattern."),
     optionsLayout->addRow(QString(), new QLabel(this));
 
     // Icon and reset button
-    QHBoxLayout *hb = new QHBoxLayout;
+    auto *hb = new QHBoxLayout;
     hb->setContentsMargins(0, 0, 0, 0);
 
     m_iconButton = new KIconButton(this);
     m_iconButton->setIconSize(KIconLoader::SizeSmall);
     hb->addWidget(m_iconButton);
 
-    QPushButton *resetButton = new QPushButton(this);
+    auto *resetButton = new QPushButton(this);
     KStandardGuiItem::assign(resetButton, KStandardGuiItem::Reset);
     resetButton->setToolTip(i18n("Reset the icon to the default for the command"));
     connect(resetButton, &QAbstractButton::clicked, this, [this]() {
@@ -123,7 +123,7 @@ captured texts from the match pattern."),
     optionsLayout->addRow(i18n("Icon:"), hb);
 
     // Main dialogue layout
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    auto *mainLayout = new QVBoxLayout(this);
     mainLayout->addWidget(optionsWidget);
     mainLayout->addStretch();
     mainLayout->addWidget(buttons);

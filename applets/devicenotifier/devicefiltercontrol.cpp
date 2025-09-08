@@ -48,7 +48,7 @@ void DeviceFilterControl::unmountAllRemovables()
     qCDebug(APPLETS::DEVICENOTIFIER) << "Device Filter Control: unmount all removables function invoked";
     for (int position = 0; position < rowCount(); ++position) {
         auto index = DeviceFilterControl::index(position, 0);
-        auto actionData = data(index, {DeviceControl::Actions});
+        auto actionData = data(index, DeviceControl::Actions);
         if (!actionData.isNull()) {
             auto actions = qvariant_cast<ActionsControl *>(actionData);
             if (actions->isUnmountable()) {
@@ -217,12 +217,12 @@ void DeviceFilterControl::onDeviceRemoved(const QModelIndex &parent, int first, 
     if (m_filterType != Unremovable) {
         qCDebug(APPLETS::DEVICENOTIFIER) << "Device Filter Control: filter type is not Unremovable. updating unmountAll Action";
 
-        if (auto it = m_unmountableDevices.constFind(data(index, {DeviceControl::Udi}).toString()); it != m_unmountableDevices.constEnd()) {
-            qCDebug(APPLETS::DEVICENOTIFIER) << "Device Filter Control: remove device " << data(index, {DeviceControl::Udi}).toString()
+        if (auto it = m_unmountableDevices.constFind(data(index, DeviceControl::Udi).toString()); it != m_unmountableDevices.constEnd()) {
+            qCDebug(APPLETS::DEVICENOTIFIER) << "Device Filter Control: remove device " << data(index, DeviceControl::Udi).toString()
                                              << " from unmountable devices";
             m_unmountableDevices.erase(it);
         } else {
-            qCDebug(APPLETS::DEVICENOTIFIER) << "Device Filter Control: device " << data(index, {DeviceControl::Udi}).toString()
+            qCDebug(APPLETS::DEVICENOTIFIER) << "Device Filter Control: device " << data(index, DeviceControl::Udi).toString()
                                              << "device is not unmountable. Skipping";
         }
     }
@@ -230,8 +230,8 @@ void DeviceFilterControl::onDeviceRemoved(const QModelIndex &parent, int first, 
     m_unmountableCount = m_unmountableDevices.count();
     qCDebug(APPLETS::DEVICENOTIFIER) << "Device Filter Control: Unmountable count updated: " << m_unmountableCount.value();
 
-    if (m_lastUdi.value() == data(index, {DeviceControl::Udi}).toString()) {
-        qCDebug(APPLETS::DEVICENOTIFIER) << "Device Filter Control: device " << data(index, {DeviceControl::Udi}).toString()
+    if (m_lastUdi.value() == data(index, DeviceControl::Udi).toString()) {
+        qCDebug(APPLETS::DEVICENOTIFIER) << "Device Filter Control: device " << data(index, DeviceControl::Udi).toString()
                                          << "was last added device. Set new last device";
 
         if (!m_deviceOrder.isEmpty()) {
@@ -249,19 +249,19 @@ void DeviceFilterControl::onDeviceRemoved(const QModelIndex &parent, int first, 
             m_lastUdi = QString();
         }
     } else {
-        qCDebug(APPLETS::DEVICENOTIFIER) << "Device Filter Control: device " << data(index, {DeviceControl::Udi}).toString()
+        qCDebug(APPLETS::DEVICENOTIFIER) << "Device Filter Control: device " << data(index, DeviceControl::Udi).toString()
                                          << "is not last. Begin removing from device order";
         for (int position = 0; position < m_deviceOrder.size(); ++position) {
-            if (m_deviceOrder[position] == data(index, {DeviceControl::Udi}).toString()) {
+            if (m_deviceOrder[position] == data(index, DeviceControl::Udi).toString()) {
                 m_deviceOrder.removeAt(position);
-                qCDebug(APPLETS::DEVICENOTIFIER) << "Device Filter Control: device " << data(index, {DeviceControl::Udi}).toString() << "removed at position "
+                qCDebug(APPLETS::DEVICENOTIFIER) << "Device Filter Control: device " << data(index, DeviceControl::Udi).toString() << "removed at position "
                                                  << position;
                 break;
             }
         }
     }
 
-    qCDebug(APPLETS::DEVICENOTIFIER) << "Device Filter Control: device " << data(index, {DeviceControl::Udi}).toString() << "successfully removed";
+    qCDebug(APPLETS::DEVICENOTIFIER) << "Device Filter Control: device " << data(index, DeviceControl::Udi).toString() << "successfully removed";
 }
 
 void DeviceFilterControl::onModelReset()
@@ -318,24 +318,24 @@ void DeviceFilterControl::handleDeviceAdded(const QModelIndex &index)
         qCDebug(APPLETS::DEVICENOTIFIER) << "Device Filter Control: no last udi present. Skipping";
     }
 
-    qCDebug(APPLETS::DEVICENOTIFIER) << "Device Filter Control: Set new last Device " << data(index, {DeviceControl::Udi}).toString();
+    qCDebug(APPLETS::DEVICENOTIFIER) << "Device Filter Control: Set new last Device " << data(index, DeviceControl::Udi).toString();
 
-    m_lastIcon = data(index, {DeviceControl::Icon}).toString();
-    m_lastDescription = data(index, {DeviceControl::Description}).toString();
-    m_lastUdi = data(index, {DeviceControl::Udi}).toString();
+    m_lastIcon = data(index, DeviceControl::Icon).toString();
+    m_lastDescription = data(index, DeviceControl::Description).toString();
+    m_lastUdi = data(index, DeviceControl::Udi).toString();
 
     if (m_filterType != Unremovable) {
         qCDebug(APPLETS::DEVICENOTIFIER) << "Device Filter Control: filter type is not Unremovable. updating unmountAll Action";
-        auto actionData = data(index, {DeviceControl::Actions});
+        auto actionData = data(index, DeviceControl::Actions);
         if (!actionData.isNull()) {
             auto actions = qvariant_cast<ActionsControl *>(actionData);
             connect(actions, &ActionsControl::unmountActionIsValidChanged, this, &DeviceFilterControl::onDeviceActionUnmountableChanged);
             if (actions->isUnmountable()) {
-                qCDebug(APPLETS::DEVICENOTIFIER) << "Device Filter Control: add device " << data(index, {DeviceControl::Udi}).toString()
+                qCDebug(APPLETS::DEVICENOTIFIER) << "Device Filter Control: add device " << data(index, DeviceControl::Udi).toString()
                                                  << " to unmountable devices";
-                m_unmountableDevices.insert(data(index, {DeviceControl::Udi}).toString());
+                m_unmountableDevices.insert(data(index, DeviceControl::Udi).toString());
             } else {
-                qCDebug(APPLETS::DEVICENOTIFIER) << "Device Filter Control: device " << data(index, {DeviceControl::Udi}).toString()
+                qCDebug(APPLETS::DEVICENOTIFIER) << "Device Filter Control: device " << data(index, DeviceControl::Udi).toString()
                                                  << "device is not unmountable. Skipping";
             }
         }

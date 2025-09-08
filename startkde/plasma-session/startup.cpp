@@ -241,7 +241,7 @@ void KCMInitJob::start()
     kcminit.setTimeout(10 * 1000);
 
     QDBusPendingReply<void> pending = kcminit.runPhase1();
-    QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(pending, this);
+    auto *watcher = new QDBusPendingCallWatcher(pending, this);
     connect(watcher, &QDBusPendingCallWatcher::finished, this, [this]() {
         emitResult();
     });
@@ -258,7 +258,7 @@ void RestoreSessionJob::start()
     OrgKdeKSMServerInterfaceInterface ksmserverIface(QStringLiteral("org.kde.ksmserver"), QStringLiteral("/KSMServer"), QDBusConnection::sessionBus());
     auto pending = ksmserverIface.restoreSession();
 
-    QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(pending, this);
+    auto *watcher = new QDBusPendingCallWatcher(pending, this);
     connect(watcher, &QDBusPendingCallWatcher::finished, this, [this]() {
         emitResult();
     });

@@ -450,7 +450,7 @@ uint Window::GetLayout(int parentId, int recursionDepth, const QStringList &prop
 
         auto it = requestedItem.constFind(QStringLiteral(":submenu"));
         if (it != requestedItem.constEnd()) {
-            const GMenuSection gmenuSection = qdbus_cast<GMenuSection>(it->value<QDBusArgument>());
+            const auto gmenuSection = qdbus_cast<GMenuSection>(it->value<QDBusArgument>());
             return GetLayout(Utils::treeStructureToInt(gmenuSection.subscription, gmenuSection.menu, 0), recursionDepth, propertyNames, dbusItem);
         } else {
             // TODO
@@ -476,7 +476,7 @@ uint Window::GetLayout(int parentId, int recursionDepth, const QStringList &prop
         auto it = item.constFind(QStringLiteral(":section"));
         if (it != item.constEnd()) {
             // references another place, add it instead
-            GMenuSection gmenuSection = qdbus_cast<GMenuSection>(it->value<QDBusArgument>());
+            auto gmenuSection = qdbus_cast<GMenuSection>(it->value<QDBusArgument>());
 
             // remember where the item came from and give it an appropriate ID
             // so updates signalled by the app will map to the right place
@@ -492,7 +492,7 @@ uint Window::GetLayout(int parentId, int recursionDepth, const QStringList &prop
                 const auto &aliasedItem = items.constFirst();
                 auto findIt = aliasedItem.constFind(QStringLiteral(":section"));
                 if (findIt != aliasedItem.constEnd()) {
-                    GMenuSection gmenuSection2 = qdbus_cast<GMenuSection>(findIt->value<QDBusArgument>());
+                    auto gmenuSection2 = qdbus_cast<GMenuSection>(findIt->value<QDBusArgument>());
                     items = m_currentMenu->getSection(gmenuSection2.subscription, gmenuSection2.menu).items;
 
                     originalSubscription = gmenuSection2.subscription;

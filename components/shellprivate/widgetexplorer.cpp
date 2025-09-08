@@ -172,7 +172,7 @@ void WidgetExplorerPrivate::initFilters()
     std::vector<CategoryInfo> categories;
     categories.reserve(itemModel.rowCount());
     for (int i = 0; i < itemModel.rowCount(); ++i) {
-        if (PlasmaAppletItem *p = dynamic_cast<PlasmaAppletItem *>(itemModel.item(i))) {
+        if (auto *p = dynamic_cast<PlasmaAppletItem *>(itemModel.item(i))) {
             const QString translated = readTranslatedCategory(p->category(), p->pluginName());
             if (!translated.isEmpty()) {
                 categories.push_back({p->category(), translated});
@@ -334,7 +334,7 @@ void WidgetExplorerPrivate::removeContainment(Plasma::Containment *containment)
     const QList<Applet *> applets = containment->applets();
     for (auto applet : applets) {
         if (applet->pluginMetaData().isValid()) {
-            Containment *childContainment = applet->property("containment").value<Containment *>();
+            auto *childContainment = applet->property("containment").value<Containment *>();
             if (childContainment) {
                 removeContainment(childContainment);
             }
@@ -502,7 +502,7 @@ void WidgetExplorer::downloadWidgets()
 
 void WidgetExplorer::openWidgetFile()
 {
-    QFileDialog *dialog = new QFileDialog;
+    auto *dialog = new QFileDialog;
     dialog->setMimeTypeFilters({u"application/x-plasma"_s,
                                 u"application/zip"_s,
                                 u"application/x-xz"_s,

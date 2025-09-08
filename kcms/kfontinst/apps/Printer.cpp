@@ -240,14 +240,14 @@ CPrinter::CPrinter(QWidget *parent)
 {
     setWindowTitle(i18n("Print"));
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Cancel);
+    auto *buttonBox = new QDialogButtonBox(QDialogButtonBox::Cancel);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &CPrinter::slotCancelClicked);
 
-    QVBoxLayout *mainLayout = new QVBoxLayout;
+    auto *mainLayout = new QVBoxLayout;
     setLayout(mainLayout);
 
-    QFrame *page = new QFrame(this);
-    QGridLayout *layout = new QGridLayout(page);
+    auto *page = new QFrame(this);
+    auto *layout = new QGridLayout(page);
     m_statusLabel = new QLabel(page);
     m_progress = new QProgressBar(page);
     layout->addWidget(m_actionLabel = new CActionLabel(this), 0, 0, 2, 1);
@@ -272,10 +272,10 @@ void CPrinter::print(const QList<Misc::TFont> &items, int size)
 #endif
 
     QPrinter printer;
-    QPrintDialog *dialog = new QPrintDialog(&printer, parentWidget());
+    auto *dialog = new QPrintDialog(&printer, parentWidget());
 
     if (dialog->exec()) {
-        CPrintThread *thread = new CPrintThread(&printer, items, size, this);
+        auto *thread = new CPrintThread(&printer, items, size, this);
 
         m_progress->setRange(0, items.count());
         m_progress->setValue(0);

@@ -38,7 +38,7 @@ void ComponentChooserEmail::save()
     }
     const bool kmailSelected = storageId == QStringLiteral("org.kde.kmail2.desktop");
 
-    KEMailSettings *emailSettings = new KEMailSettings();
+    auto *emailSettings = new KEMailSettings();
 
     if (kmailSelected) {
         emailSettings->setSetting(KEMailSettings::ClientProgram, QString());

@@ -175,7 +175,7 @@ void CalculatorRunner::run(const KRunner::RunnerContext &context, const KRunner:
 
 QMimeData *CalculatorRunner::mimeDataForMatch(const KRunner::QueryMatch &match)
 {
-    QMimeData *result = new QMimeData();
+    auto *result = new QMimeData();
     result->setText(match.text());
     return result;
 }

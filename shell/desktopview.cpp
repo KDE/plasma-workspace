@@ -69,7 +69,7 @@ DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
 
     QObject::connect(corona, &Plasma::Corona::kPackageChanged, this, &DesktopView::coronaPackageChanged);
 
-    KActivities::Controller *m_activityController = new KActivities::Controller(this);
+    auto *m_activityController = new KActivities::Controller(this);
 
     QObject::connect(m_activityController, &KActivities::Controller::activityAdded, this, &DesktopView::candidateContainmentsChanged);
     QObject::connect(m_activityController, &KActivities::Controller::activityRemoved, this, &DesktopView::candidateContainmentsChanged);
@@ -285,13 +285,13 @@ void DesktopView::showPreviewBannerMenu(const QPoint &pos)
     auto menu = new QMenu();
     menu->setAttribute(Qt::WA_DeleteOnClose);
 
-    QAction *copyVersionAction = new QAction(QIcon::fromTheme(u"edit-copy-symbolic"_s), i18nc("@action:button", "Copy Plasma Version"));
+    auto *copyVersionAction = new QAction(QIcon::fromTheme(u"edit-copy-symbolic"_s), i18nc("@action:button", "Copy Plasma Version"));
     connect(copyVersionAction, &QAction::triggered, [] {
         QGuiApplication::clipboard()->setText(QStringLiteral(WORKSPACE_VERSION_STRING));
     });
     menu->addAction(copyVersionAction);
 
-    QAction *reportBugAction = new QAction(QIcon::fromTheme(u"tools-report-bug-symbolic"_s), i18nc("@action:button", "Report a Bug…"));
+    auto *reportBugAction = new QAction(QIcon::fromTheme(u"tools-report-bug-symbolic"_s), i18nc("@action:button", "Report a Bug…"));
     connect(reportBugAction, &QAction::triggered, [] {
         auto job = new KIO::OpenUrlJob(QUrl(u"https://bugs.kde.org/"_s));
         job->setUiDelegate(KIO::createDefaultJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled, nullptr));
@@ -303,15 +303,14 @@ void DesktopView::showPreviewBannerMenu(const QPoint &pos)
 
     auto hideMenu = menu->addMenu(QIcon::fromTheme(u"view-hidden-symbolic"_s), i18nc("@title:menu", "Hide Preview Banner"));
 
-    QAction *hidePreviewBannerTemporarilyAction =
-        new QAction(i18nc("@action:button Hide the preview banner until the system is restarted", "Hide Until Restart"));
+    auto *hidePreviewBannerTemporarilyAction = new QAction(i18nc("@action:button Hide the preview banner until the system is restarted", "Hide Until Restart"));
     connect(hidePreviewBannerTemporarilyAction, &QAction::triggered, [&]() {
         m_showPreviewBanner = false;
         Q_EMIT showPreviewBannerChanged();
     });
     hideMenu->addAction(hidePreviewBannerTemporarilyAction);
 
-    QAction *hidePreviewBannerPermenanentlyAction = new QAction(i18nc("@action:button Hide the preview banner permanently", "Hide Permanently…"));
+    auto *hidePreviewBannerPermenanentlyAction = new QAction(i18nc("@action:button Hide the preview banner permanently", "Hide Permanently…"));
     connect(hidePreviewBannerPermenanentlyAction, &QAction::triggered, [&]() {
         if (KMessageBox::warningContinueCancel(
                 nullptr,
@@ -505,7 +504,7 @@ void DesktopView::showConfigurationInterface(Plasma::Applet *applet)
 
     applet->containment()->corona()->setEditMode(false);
 
-    Plasma::Containment *cont = qobject_cast<Plasma::Containment *>(applet);
+    auto *cont = qobject_cast<Plasma::Containment *>(applet);
 
     if (cont && cont->isContainment() && cont->containmentType() == Plasma::Containment::Desktop) {
         m_configView = new ContainmentConfigView(cont);
@@ -554,7 +553,7 @@ void DesktopView::slotContainmentChanged()
         slotScreenChanged(m_containment->screen());
         connect(m_containment, &Plasma::Containment::availableRelativeScreenRectChanged, this, &DesktopView::strictAvailableScreenRectChanged);
 
-        QAction *desktopEditMode = new QAction(QIcon::fromTheme(QStringLiteral("document-edit")), i18n("Enter Edit Mode"), m_containment);
+        auto *desktopEditMode = new QAction(QIcon::fromTheme(QStringLiteral("document-edit")), i18n("Enter Edit Mode"), m_containment);
         QAction *editMode = m_containment->corona()->action(QStringLiteral("edit mode"));
         m_containment->setInternalAction(QStringLiteral("desktop edit mode"), desktopEditMode);
         connect(desktopEditMode, &QAction::triggered, editMode, &QAction::triggered);

@@ -42,7 +42,7 @@ using namespace Qt::StringLiterals;
 
 /* static */ QLabel *ConfigDialog::createHintLabel(const QString &text, QWidget *parent)
 {
-    QLabel *hintLabel = new QLabel(text, parent);
+    auto *hintLabel = new QLabel(text, parent);
     hintLabel->setFont(QFontDatabase::systemFont(QFontDatabase::SmallestReadableFont));
     hintLabel->setWordWrap(true);
     hintLabel->setAlignment(Qt::AlignLeft | Qt::AlignTop);
@@ -75,7 +75,7 @@ using namespace Qt::StringLiterals;
 GeneralWidget::GeneralWidget(QWidget *parent)
     : QWidget(parent)
 {
-    QFormLayout *layout = new QFormLayout(this);
+    auto *layout = new QFormLayout(this);
 
     // Retain clipboard history
     const KConfigSkeletonItem *item = KlipperSettings::self()->keepClipboardContentsItem();
@@ -128,7 +128,7 @@ If it is turned off, the selection may still be saved in the clipboard history (
     // is turned off - in this case the selection is never automatically saved
     // in the clipboard history.
 
-    QButtonGroup *buttonGroup = new QButtonGroup(this);
+    auto *buttonGroup = new QButtonGroup(this);
 
     // This widget is not managed by KConfigDialogManager, but
     // the other radio button is.  That is sufficient for the
@@ -255,7 +255,7 @@ void GeneralWidget::slotWidgetModified()
 PopupWidget::PopupWidget(QWidget *parent)
     : QWidget(parent)
 {
-    QFormLayout *layout = new QFormLayout(this);
+    auto *layout = new QFormLayout(this);
 
     // Automatic popup
     const KConfigSkeletonItem *item = KlipperSettings::self()->uRLGrabberEnabledItem();
@@ -280,11 +280,11 @@ then it can be shown by using the <shortcut>%1</shortcut> key shortcut.",
     layout->addRow(QString(), hint);
 
     // Exclusions
-    QPushButton *exclusionsButton = new QPushButton(QIcon::fromTheme(QStringLiteral("configure")), i18n("Exclude Windows..."), this);
+    auto *exclusionsButton = new QPushButton(QIcon::fromTheme(QStringLiteral("configure")), i18n("Exclude Windows..."), this);
     connect(exclusionsButton, &QPushButton::clicked, this, &PopupWidget::onAdvanced);
 
     // Right align the push button, regardless of the QFormLayout style
-    QHBoxLayout *hb = new QHBoxLayout;
+    auto *hb = new QHBoxLayout;
     hb->setContentsMargins(0, 0, 0, 0);
     hb->addStretch(1);
     hb->addWidget(exclusionsButton);
@@ -332,15 +332,15 @@ void PopupWidget::onAdvanced()
     QDialog dlg(this);
     dlg.setModal(true);
     dlg.setWindowTitle(i18n("Exclude Windows"));
-    QDialogButtonBox *buttons = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, &dlg);
+    auto *buttons = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, &dlg);
     buttons->button(QDialogButtonBox::Ok)->setShortcut(Qt::CTRL | Qt::Key_Return);
     connect(buttons, &QDialogButtonBox::accepted, &dlg, &QDialog::accept);
     connect(buttons, &QDialogButtonBox::rejected, &dlg, &QDialog::reject);
 
-    AdvancedWidget *widget = new AdvancedWidget(&dlg);
+    auto *widget = new AdvancedWidget(&dlg);
     widget->setWMClasses(m_exclWMClasses);
 
-    QVBoxLayout *layout = new QVBoxLayout(&dlg);
+    auto *layout = new QVBoxLayout(&dlg);
     layout->addWidget(widget);
     layout->addWidget(buttons);
 
@@ -356,7 +356,7 @@ void PopupWidget::onAdvanced()
 ActionsWidget::ActionsWidget(QWidget *parent)
     : QWidget(parent)
 {
-    QGridLayout *layout = new QGridLayout(this);
+    auto *layout = new QGridLayout(this);
     layout->setContentsMargins(0, 0, 0, 0);
 
     // General information label
@@ -391,10 +391,10 @@ appear in the Klipper popup menu and can be executed."),
 
     // Where to configure the action options
     if (KlipperSettings::actionsInfoMessageShown()) {
-        KMessageWidget *msg = new KMessageWidget(xi18nc("@info",
-                                                        "These actions appear in the popup menu \
+        auto *msg = new KMessageWidget(xi18nc("@info",
+                                              "These actions appear in the popup menu \
 which can be configured on the <interface>Action Menu</interface> page."),
-                                                 this);
+                                       this);
         msg->setMessageType(KMessageWidget::Information);
         msg->setIcon(QIcon::fromTheme(QStringLiteral("dialog-information")));
         msg->setWordWrap(true);
@@ -455,7 +455,7 @@ void ActionsWidget::updateActionListView()
             continue;
         }
 
-        QTreeWidgetItem *item = new QTreeWidgetItem;
+        auto *item = new QTreeWidgetItem;
         item->setFlags(item->flags() | Qt::ItemIsUserCheckable);
         updateActionItem(item, action);
 
@@ -488,7 +488,7 @@ void ActionsWidget::updateActionItem(QTreeWidgetItem *item, const ClipAction *ac
     for (const ClipCommand &command : action->commands()) {
         QStringList cmdProps;
         cmdProps << command.command << command.description;
-        QTreeWidgetItem *child = new QTreeWidgetItem(item, cmdProps);
+        auto *child = new QTreeWidgetItem(item, cmdProps);
         child->setIcon(0, QIcon::fromTheme(command.icon.isEmpty() ? QStringLiteral("system-run") : command.icon));
         child->setFlags(child->flags() | Qt::ItemIsUserCheckable | Qt::ItemNeverHasChildren);
         child->setCheckState(0, (command.isEnabled ? Qt::Checked : Qt::Unchecked));
@@ -530,13 +530,13 @@ void ActionsWidget::onSelectionChanged()
 void ActionsWidget::onAddAction()
 {
     EditActionDialog dlg(this);
-    ClipAction *newAct = new ClipAction;
+    auto *newAct = new ClipAction;
     dlg.setAction(newAct);
 
     if (dlg.exec() == QDialog::Accepted) {
         m_actionList.append(newAct);
 
-        QTreeWidgetItem *item = new QTreeWidgetItem;
+        auto *item = new QTreeWidgetItem;
         updateActionItem(item, newAct);
         m_actionsTree->addTopLevelItem(item);
         Q_EMIT widgetChanged();
@@ -729,7 +729,7 @@ bool ConfigDialog::hasChanged()
 AdvancedWidget::AdvancedWidget(QWidget *parent)
     : QWidget(parent)
 {
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    auto *mainLayout = new QVBoxLayout(this);
 
     QLabel *hint = ConfigDialog::createHintLabel(xi18nc("@info",
                                                         "The action popup will not be shown automatically for these windows, \

@@ -104,7 +104,7 @@ void FileMenu::open(int x, int y)
 
     KFileItem fileItem(m_url);
 
-    QMenu *menu = new QMenu();
+    auto *menu = new QMenu();
     menu->setAttribute(Qt::WA_DeleteOnClose, true);
     connect(menu, &QMenu::triggered, this, &FileMenu::actionTriggered);
 
@@ -120,7 +120,7 @@ void FileMenu::open(int x, int y)
         });
     }
 
-    KFileItemActions *actions = new KFileItemActions(menu);
+    auto *actions = new KFileItemActions(menu);
     KFileItemListProperties itemProperties(KFileItemList({fileItem}));
     actions->setItemListProperties(itemProperties);
     actions->setParentWidget(menu);
@@ -131,7 +131,7 @@ void FileMenu::open(int x, int y)
     QAction *copyAction = menu->addAction(QIcon::fromTheme(QStringLiteral("edit-copy")), i18n("&Copy"));
     connect(copyAction, &QAction::triggered, this, [fileItem] {
         // inspired by KDirModel::mimeData()
-        QMimeData *data = new QMimeData(); // who cleans it up?
+        auto *data = new QMimeData(); // who cleans it up?
         KUrlMimeData::setUrls({fileItem.url()}, {fileItem.mostLocalUrl()}, data);
         KUrlMimeData::exportUrlsToPortal(data);
         QApplication::clipboard()->setMimeData(data);
@@ -197,7 +197,7 @@ void FileMenu::open(int x, int y)
 
     QAction *propertiesAction = menu->addAction(QIcon::fromTheme(QStringLiteral("document-properties")), i18n("Properties"));
     connect(propertiesAction, &QAction::triggered, [fileItem] {
-        KPropertiesDialog *dialog = new KPropertiesDialog(fileItem.url());
+        auto *dialog = new KPropertiesDialog(fileItem.url());
         dialog->setAttribute(Qt::WA_DeleteOnClose);
         dialog->show();
     });

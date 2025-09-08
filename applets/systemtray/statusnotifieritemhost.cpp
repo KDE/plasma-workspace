@@ -59,8 +59,7 @@ void StatusNotifierItemHost::init()
         m_serviceName = u"org.kde.StatusNotifierHost-" + QString::number(QCoreApplication::applicationPid());
         QDBusConnection::sessionBus().registerService(m_serviceName);
 
-        QDBusServiceWatcher *watcher =
-            new QDBusServiceWatcher(s_watcherServiceName, QDBusConnection::sessionBus(), QDBusServiceWatcher::WatchForOwnerChange, this);
+        auto *watcher = new QDBusServiceWatcher(s_watcherServiceName, QDBusConnection::sessionBus(), QDBusServiceWatcher::WatchForOwnerChange, this);
         connect(watcher, &QDBusServiceWatcher::serviceOwnerChanged, this, &StatusNotifierItemHost::serviceChange);
 
         registerWatcher(s_watcherServiceName);
@@ -105,7 +104,7 @@ void StatusNotifierItemHost::registerWatcher(const QString &service)
 
             QDBusPendingReply<QDBusVariant> pendingItems = propetriesIface.Get(m_statusNotifierWatcher->interface(), u"RegisteredStatusNotifierItems"_s);
 
-            QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(pendingItems, this);
+            auto *watcher = new QDBusPendingCallWatcher(pendingItems, this);
             connect(watcher, &QDBusPendingCallWatcher::finished, this, [=, this]() {
                 watcher->deleteLater();
                 QDBusReply<QDBusVariant> reply = *watcher;
@@ -172,7 +171,7 @@ void StatusNotifierItemHost::removeAllSNIServices()
 
 void StatusNotifierItemHost::addSNIService(const QString &service)
 {
-    StatusNotifierItemSource *item = new StatusNotifierItemSource(service, this);
+    auto *item = new StatusNotifierItemSource(service, this);
     m_sniServices.insert(service, item);
     Q_EMIT itemAdded(service);
 }

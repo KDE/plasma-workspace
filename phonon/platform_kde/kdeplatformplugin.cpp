@@ -47,7 +47,7 @@ void KdePlatformPlugin::notification(const char *notificationName,
                                      QObject *receiver,
                                      const char *actionSlot) const
 {
-    KNotification *notification = new KNotification(QString::fromUtf8(notificationName));
+    auto *notification = new KNotification(QString::fromUtf8(notificationName));
     notification->setComponentName(QLatin1String("phonon"));
     notification->setText(text);
     if (!actions.isEmpty() && receiver && actionSlot) {

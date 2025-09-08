@@ -70,7 +70,7 @@ void SwitchWindow::restore(const KConfigGroup &config)
 
 QWidget *SwitchWindow::createConfigurationInterface(QWidget *parent)
 {
-    QWidget *widget = new QWidget(parent);
+    auto *widget = new QWidget(parent);
     m_ui.setupUi(widget);
     widget->setWindowTitle(i18nc("plasma_containmentactions_switchwindow", "Configure Switch Window Plugin"));
     switch (m_mode) {
@@ -129,7 +129,7 @@ void SwitchWindow::makeMenu()
             continue;
         }
 
-        QAction *action = new QAction(name, this);
+        auto *action = new QAction(name, this);
         action->setIcon(idx.data(Qt::DecorationRole).value<QIcon>());
         action->setData(idx.data(AbstractTasksModel::WinIdList).toList());
 
@@ -152,7 +152,7 @@ void SwitchWindow::makeMenu()
     if (m_mode == CurrentDesktop) {
         const QString &currentDesktop = m_virtualDesktopInfo->currentDesktop().toString();
 
-        QAction *a = new QAction(i18nc("plasma_containmentactions_switchwindow", "Windows"), this);
+        auto *a = new QAction(i18nc("plasma_containmentactions_switchwindow", "Windows"), this);
         a->setSeparator(true);
         m_actions << a;
         m_actions << desktops.values(currentDesktop);
@@ -168,7 +168,7 @@ void SwitchWindow::makeMenu()
 
                 if (desktops.contains(desktop)) {
                     const QString &name = QStringLiteral("%1: %2").arg(QString::number(i + 1), desktopNames.at(i));
-                    QAction *a = new QAction(name, this);
+                    auto *a = new QAction(name, this);
                     a->setSeparator(true);
                     m_actions << a;
                     m_actions << desktops.values(desktop);
@@ -176,7 +176,7 @@ void SwitchWindow::makeMenu()
             }
 
             if (allDesktops.count()) {
-                QAction *a = new QAction(i18nc("plasma_containmentactions_switchwindow", "All Desktops"), this);
+                auto *a = new QAction(i18nc("plasma_containmentactions_switchwindow", "All Desktops"), this);
                 a->setSeparator(true);
                 m_actions << a;
                 m_actions << allDesktops;
@@ -187,19 +187,19 @@ void SwitchWindow::makeMenu()
 
                 if (desktops.contains(desktop)) {
                     const QString &name = QStringLiteral("%1: %2").arg(QString::number(i + 1), desktopNames.at(i));
-                    QMenu *subMenu = new QMenu(name);
+                    auto *subMenu = new QMenu(name);
                     subMenu->addActions(desktops.values(desktop));
 
-                    QAction *a = new QAction(name, this);
+                    auto *a = new QAction(name, this);
                     a->setMenu(subMenu);
                     m_actions << a;
                 }
             }
 
             if (allDesktops.count()) {
-                QMenu *subMenu = new QMenu(i18nc("plasma_containmentactions_switchwindow", "All Desktops"));
+                auto *subMenu = new QMenu(i18nc("plasma_containmentactions_switchwindow", "All Desktops"));
                 subMenu->addActions(allDesktops);
-                QAction *a = new QAction(i18nc("plasma_containmentactions_switchwindow", "All Desktops"), this);
+                auto *a = new QAction(i18nc("plasma_containmentactions_switchwindow", "All Desktops"), this);
                 a->setMenu(subMenu);
                 m_actions << a;
             }

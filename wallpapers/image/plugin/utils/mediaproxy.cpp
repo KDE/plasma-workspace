@@ -151,7 +151,7 @@ void MediaProxy::openModelImage()
         return;
     }
 
-    KIO::OpenUrlJob *job = new KIO::OpenUrlJob(url);
+    auto *job = new KIO::OpenUrlJob(url);
     job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
     job->start();
 }

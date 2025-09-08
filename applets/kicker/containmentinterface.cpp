@@ -35,7 +35,7 @@ bool ContainmentInterface::mayAddLauncher(QObject *appletInterface, ContainmentI
         return false;
     }
 
-    Plasma::Applet *applet = appletInterface->property("_plasma_applet").value<Plasma::Applet *>();
+    auto *applet = appletInterface->property("_plasma_applet").value<Plasma::Applet *>();
     Plasma::Containment *containment = applet->containment();
 
     if (!containment) {
@@ -99,7 +99,7 @@ bool ContainmentInterface::hasLauncher(QObject *appletInterface, ContainmentInte
         return false;
     }
 
-    Plasma::Applet *applet = appletInterface->property("_plasma_applet").value<Plasma::Applet *>();
+    auto *applet = appletInterface->property("_plasma_applet").value<Plasma::Applet *>();
     Plasma::Containment *containment = applet->containment();
 
     if (!containment) {
@@ -136,7 +136,7 @@ void ContainmentInterface::addLauncher(QObject *appletInterface, ContainmentInte
         return;
     }
 
-    Plasma::Applet *applet = appletInterface->property("_plasma_applet").value<Plasma::Applet *>();
+    auto *applet = appletInterface->property("_plasma_applet").value<Plasma::Applet *>();
     Plasma::Containment *containment = applet->containment();
 
     if (!containment) {
@@ -226,7 +226,7 @@ QObject *ContainmentInterface::screenContainment(QObject *appletInterface)
 
 bool ContainmentInterface::screenContainmentMutable(QObject *appletInterface)
 {
-    const Plasma::Containment *containment = static_cast<const Plasma::Containment *>(screenContainment(appletInterface));
+    const auto *containment = static_cast<const Plasma::Containment *>(screenContainment(appletInterface));
 
     if (containment) {
         return (containment->immutability() == Plasma::Types::Mutable);

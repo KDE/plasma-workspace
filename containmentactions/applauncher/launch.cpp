@@ -50,7 +50,7 @@ void AppLauncher::makeMenu(QMenu *menu, const KServiceGroup::Ptr &group)
                 text = service->genericName();
             }
             text.replace(u'&', u"&&"_s);
-            QAction *action = new QAction(QIcon::fromTheme(service->icon()), text, this);
+            auto *action = new QAction(QIcon::fromTheme(service->icon()), text, this);
             connect(action, &QAction::triggered, [action]() {
                 KService::Ptr service = KService::serviceByStorageId(action->data().toString());
                 auto job = new KIO::ApplicationLauncherJob(service);
@@ -68,8 +68,8 @@ void AppLauncher::makeMenu(QMenu *menu, const KServiceGroup::Ptr &group)
                 continue;
             }
             const QString caption = service->caption().replace(u'&', u"&&"_s);
-            QAction *action = new QAction(QIcon::fromTheme(service->icon()), caption, this);
-            QMenu *subMenu = new QMenu();
+            auto *action = new QAction(QIcon::fromTheme(service->icon()), caption, this);
+            auto *subMenu = new QMenu();
             makeMenu(subMenu, service);
             action->setMenu(subMenu);
             if (menu) {
@@ -87,7 +87,7 @@ void AppLauncher::makeMenu(QMenu *menu, const KServiceGroup::Ptr &group)
 
 QWidget *AppLauncher::createConfigurationInterface(QWidget *parent)
 {
-    QWidget *widget = new QWidget(parent);
+    auto *widget = new QWidget(parent);
     m_ui.setupUi(widget);
     widget->setWindowTitle(i18nc("plasma_containmentactions_applauncher", "Configure Application Launcher Plugin"));
 

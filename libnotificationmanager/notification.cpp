@@ -315,7 +315,7 @@ KService::Ptr Notification::Private::serviceForDesktopEntry(const QString &deskt
         const QString desktopId = desktopEntry + QLatin1String(".desktop");
 
         const auto services = KApplicationTrader::query([&desktopId](const KService::Ptr &app) -> bool {
-            const QStringList renamedFrom = app->property<QStringList>(QStringLiteral("X-Flatpak-RenamedFrom"));
+            const auto renamedFrom = app->property<QStringList>(QStringLiteral("X-Flatpak-RenamedFrom"));
             return renamedFrom.contains(desktopId);
         });
 

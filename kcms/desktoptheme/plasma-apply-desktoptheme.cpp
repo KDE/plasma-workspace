@@ -27,7 +27,7 @@ int main(int argc, char **argv)
     QCoreApplication::setOrganizationDomain(QStringLiteral("kde.org"));
     KLocalizedString::setApplicationDomain(QByteArrayLiteral("plasma-apply-desktoptheme"));
 
-    QCommandLineParser *parser = new QCommandLineParser;
+    auto *parser = new QCommandLineParser;
     parser->addHelpOption();
     parser->setApplicationDescription(
         i18n("This tool allows you to set the theme of the current Plasma session, without accidentally setting it to one that is either not available, or "

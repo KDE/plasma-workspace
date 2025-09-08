@@ -500,7 +500,7 @@ void runRdb(unsigned int flags)
 
     /* Qt exports */
     if (exportQtColors || exportQtSettings) {
-        QSettings *settings = new QSettings(QStringLiteral("Trolltech"));
+        auto *settings = new QSettings(QStringLiteral("Trolltech"));
 
         if (exportQtColors)
             applyQtColors(kglobalcfg, *settings, newPal); // For kcmcolors

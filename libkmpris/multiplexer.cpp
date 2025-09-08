@@ -30,7 +30,7 @@ Multiplexer::Multiplexer(QObject *parent)
     , m_filterModel(Mpris2FilterProxyModel::self())
 {
     for (int i = 0, size = m_filterModel->rowCount(); i < size; ++i) {
-        PlayerContainer *const container = m_filterModel->index(i, 0).data(Mpris2SourceModel::ContainerRole).value<PlayerContainer *>();
+        auto *const container = m_filterModel->index(i, 0).data(Mpris2SourceModel::ContainerRole).value<PlayerContainer *>();
         connect(container, &PlayerContainer::playbackStatusChanged, this, &Multiplexer::onPlaybackStatusChanged);
     }
 
@@ -56,7 +56,7 @@ QBindable<PlayerContainer *> Multiplexer::activePlayer() const
 
 void Multiplexer::onRowsInserted(const QModelIndex &, int first, int)
 {
-    PlayerContainer *const container = m_filterModel->index(first, 0).data(Mpris2SourceModel::ContainerRole).value<PlayerContainer *>();
+    auto *const container = m_filterModel->index(first, 0).data(Mpris2SourceModel::ContainerRole).value<PlayerContainer *>();
     connect(container, &PlayerContainer::playbackStatusChanged, this, &Multiplexer::onPlaybackStatusChanged);
 
     if (!m_activePlayer || (m_activePlayer->playbackStatus() != PlaybackStatus::Playing && container->playbackStatus() == PlaybackStatus::Playing)) {
@@ -71,7 +71,7 @@ void Multiplexer::onRowsInserted(const QModelIndex &, int first, int)
 void Multiplexer::onRowsAboutToBeRemoved(const QModelIndex &, int first, int)
 {
     Q_ASSERT_X(m_activePlayer, Q_FUNC_INFO, qUtf8Printable(QString::number(first)));
-    PlayerContainer *const container = m_filterModel->index(first, 0).data(Mpris2SourceModel::ContainerRole).value<PlayerContainer *>();
+    auto *const container = m_filterModel->index(first, 0).data(Mpris2SourceModel::ContainerRole).value<PlayerContainer *>();
     // Need to manually disconnect from the container because the source can be filtered out but not gone (e.g. a browser)
     disconnect(container, &PlayerContainer::playbackStatusChanged, this, &Multiplexer::onPlaybackStatusChanged);
     if (m_activePlayerIndex == first) {
@@ -102,7 +102,7 @@ void Multiplexer::onPlaybackStatusChanged()
         return;
     }
 
-    PlayerContainer *container = static_cast<PlayerContainer *>(sender());
+    auto *container = static_cast<PlayerContainer *>(sender());
     if (container->playbackStatus() == PlaybackStatus::Playing) {
         // Use the new player
         m_activePlayer = container;
@@ -143,7 +143,7 @@ void Multiplexer::evaluatePlayers()
 {
     PlayerContainer *container = nullptr;
     for (int i = 0, size = m_filterModel->rowCount(); i < size; ++i) {
-        PlayerContainer *c = m_filterModel->index(i, 0).data(Mpris2SourceModel::ContainerRole).value<PlayerContainer *>();
+        auto *c = m_filterModel->index(i, 0).data(Mpris2SourceModel::ContainerRole).value<PlayerContainer *>();
         if (c->playbackStatus() == PlaybackStatus::Playing) {
             container = c;
             break;

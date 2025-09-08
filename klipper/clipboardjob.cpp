@@ -50,7 +50,7 @@ void ClipboardJob::start()
         setResult(false);
         return;
     }
-    HistoryItemConstPtr item = m_model->index(itemIndex).data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>();
+    auto item = m_model->index(itemIndex).data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>();
     if (operation == QLatin1String("select")) {
         m_model->moveToTop(item->uuid());
         setResult(true);

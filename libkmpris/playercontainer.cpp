@@ -609,7 +609,7 @@ void PlayerContainer::updateFromMap(const QVariantMap &map)
             m_position = it->toLongLong();
         } else if (propName == QLatin1String("Metadata")) {
             oldTrackId = m_trackId.value();
-            QDBusArgument arg = it->value<QDBusArgument>();
+            auto arg = it->value<QDBusArgument>();
             if (arg.currentType() != QDBusArgument::MapType || arg.currentSignature() != QLatin1String("a{sv}")) {
                 continue;
             }

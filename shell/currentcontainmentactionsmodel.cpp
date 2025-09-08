@@ -39,7 +39,7 @@ CurrentContainmentActionsModel::CurrentContainmentActionsModel(Plasma::Containme
     while (i.hasNext()) {
         i.next();
 
-        QStandardItem *item = new QStandardItem();
+        auto *item = new QStandardItem();
         item->setData(i.key(), ActionRole);
         item->setData(i.value()->id(), PluginNameRole);
 
@@ -68,7 +68,7 @@ QHash<int, QByteArray> CurrentContainmentActionsModel::roleNames() const
 
 QString CurrentContainmentActionsModel::mouseEventString(int mouseButton, int modifiers)
 {
-    QMouseEvent *mouse =
+    auto *mouse =
         new QMouseEvent(QEvent::MouseButtonRelease, QPoint(), (Qt::MouseButton)mouseButton, (Qt::MouseButton)mouseButton, (Qt::KeyboardModifiers)modifiers);
 
     const QString string = Plasma::ContainmentActions::eventToString(mouse);
@@ -100,7 +100,7 @@ bool CurrentContainmentActionsModel::append(const QString &action, const QString
         return false;
     }
 
-    QStandardItem *item = new QStandardItem();
+    auto *item = new QStandardItem();
     item->setData(action, ActionRole);
     item->setData(plugin, PluginNameRole);
 
@@ -181,7 +181,7 @@ void CurrentContainmentActionsModel::showConfiguration(int row, QQuickItem *ctx)
         return;
     }
 
-    QDialog *configDlg = new QDialog();
+    auto *configDlg = new QDialog();
     configDlg->setAttribute(Qt::WA_DeleteOnClose);
     QLayout *lay = new QVBoxLayout(configDlg);
     configDlg->setLayout(lay);
@@ -202,7 +202,7 @@ void CurrentContainmentActionsModel::showConfiguration(int row, QQuickItem *ctx)
 
     configDlg->setWindowTitle(title.isEmpty() ? i18n("Configure Mouse Actions Plugin") : title);
     // put buttons below
-    QDialogButtonBox *buttons = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, Qt::Horizontal, configDlg);
+    auto *buttons = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, Qt::Horizontal, configDlg);
     lay->addWidget(buttons);
 
     connect(buttons, &QDialogButtonBox::accepted, configDlg, &QDialog::accept);

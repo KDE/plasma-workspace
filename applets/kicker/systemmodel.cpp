@@ -95,7 +95,7 @@ void SystemModel::populate()
     m_invalidEntries.clear();
 
     auto addIfValid = [=, this](const SystemEntry::Action action) {
-        SystemEntry *entry = new SystemEntry(this, action);
+        auto *entry = new SystemEntry(this, action);
         QObject::connect(entry, &SystemEntry::sessionManagementStateChanged, this, &SystemModel::sessionManagementStateChanged);
 
         if (entry->isValid()) {

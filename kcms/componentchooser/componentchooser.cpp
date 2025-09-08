@@ -65,7 +65,7 @@ void ComponentChooser::select(int index)
 {
     // Other selection
     if (index == m_model->rowCount() - 1) {
-        KOpenWithDialog *dialog = new KOpenWithDialog(QList<QUrl>(), m_mimeType, m_dialogText, QString(), QApplication::activeWindow());
+        auto *dialog = new KOpenWithDialog(QList<QUrl>(), m_mimeType, m_dialogText, QString(), QApplication::activeWindow());
         dialog->setSaveNewApplications(true);
         dialog->setAttribute(Qt::WA_DeleteOnClose);
         connect(dialog, &KOpenWithDialog::finished, this, [this, dialog](int result) {

@@ -68,7 +68,7 @@ InvalidAppsFilterProxy::~InvalidAppsFilterProxy()
 
 void InvalidAppsFilterProxy::connectNewFavoritesModel()
 {
-    KAStatsFavoritesModel *favoritesModel = static_cast<KAStatsFavoritesModel *>(m_parentModel->favoritesModel());
+    auto *favoritesModel = static_cast<KAStatsFavoritesModel *>(m_parentModel->favoritesModel());
     if (favoritesModel) {
         connect(favoritesModel, &KAStatsFavoritesModel::favoritesChanged, this, &QSortFilterProxyModel::invalidate);
     }
@@ -176,7 +176,7 @@ QString RecentUsageModel::resourceAt(int row) const
 
 QVariant RecentUsageModel::rowValueAt(int row, ResultModel::Roles role) const
 {
-    QSortFilterProxyModel *sourceProxy = qobject_cast<QSortFilterProxyModel *>(sourceModel());
+    auto *sourceProxy = qobject_cast<QSortFilterProxyModel *>(sourceModel());
 
     if (sourceProxy) {
         return sourceProxy->sourceModel()->data(sourceProxy->mapToSource(sourceProxy->index(row, 0)), role).toString();
@@ -213,7 +213,7 @@ QVariant RecentUsageModel::appData(const QString &resource, int role) const
     }
 
     if (role == Qt::DisplayRole) {
-        AppsModel *parentModel = qobject_cast<AppsModel *>(QObject::parent());
+        auto *parentModel = qobject_cast<AppsModel *>(QObject::parent());
 
         if (parentModel) {
             return AppEntry::nameFromService(service, (AppEntry::NameFormat)qobject_cast<AppsModel *>(QObject::parent())->appNameFormat());
@@ -416,7 +416,7 @@ bool RecentUsageModel::trigger(int row, const QString &actionId, const QVariant 
     } else if (actionId == QLatin1String("forget") && withinBounds) {
         if (m_activitiesModel) {
             QModelIndex idx = sourceModel()->index(row, 0);
-            QSortFilterProxyModel *sourceProxy = qobject_cast<QSortFilterProxyModel *>(sourceModel());
+            auto *sourceProxy = qobject_cast<QSortFilterProxyModel *>(sourceModel());
 
             while (sourceProxy) {
                 idx = sourceProxy->mapToSource(idx);
@@ -437,7 +437,7 @@ bool RecentUsageModel::trigger(int row, const QString &actionId, const QVariant 
 
         return false;
     } else if (actionId == QLatin1String("_kicker_jumpListAction")) {
-        KIO::ApplicationLauncherJob *job = new KIO::ApplicationLauncherJob(argument.value<KServiceAction>());
+        auto *job = new KIO::ApplicationLauncherJob(argument.value<KServiceAction>());
         job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
         job->start();
         return true;

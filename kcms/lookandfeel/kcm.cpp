@@ -273,7 +273,7 @@ KCMLookandFeel::KCMLookandFeel(QObject *parent, const KPluginMetaData &data)
     auto handleLookAndFeelPackageChanged = [this]() {
         // When the selected LNF package changes, update the available theme contents
         const int index = pluginIndex(settings()->lookAndFeelPackage());
-        const KLookAndFeelManager::Contents packageContents = m_model->index(index, 0).data(ContentsRole).value<KLookAndFeelManager::Contents>();
+        const auto packageContents = m_model->index(index, 0).data(ContentsRole).value<KLookAndFeelManager::Contents>();
         if (m_themeContents != packageContents) {
             m_themeContents = packageContents;
             Q_EMIT themeContentsChanged();
@@ -417,7 +417,7 @@ void KCMLookandFeel::addKPackageToModel(const KPackage::Package &pkg)
     if (!pkg.metadata().isValid()) {
         return;
     }
-    QStandardItem *row = new QStandardItem(pkg.metadata().name());
+    auto *row = new QStandardItem(pkg.metadata().name());
     row->setData(pkg.metadata().pluginId(), PluginNameRole);
     row->setData(pkg.metadata().description(), DescriptionRole);
     row->setData(QUrl::fromLocalFile(pkg.filePath("preview")), ScreenshotRole);

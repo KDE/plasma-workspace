@@ -90,7 +90,7 @@ KLookAndFeelManager::KLookAndFeelManager(QObject *parent)
     QDBusPendingCall async = QDBusConnection::sessionBus().asyncCall(message);
 
     // Create watcher for the pending call
-    QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(async, this);
+    auto *watcher = new QDBusPendingCallWatcher(async, this);
 
     // Connect watcher finished signal to our slot
     connect(watcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *call) {

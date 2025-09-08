@@ -159,9 +159,9 @@ QList<QAction *> ContextMenu::contextualActions()
         }
         if (name == QLatin1String("_wallpaper")) {
             if (!cont->wallpaperPlugin().isEmpty()) {
-                QObject *wallpaperGraphicsObject = cont->property("wallpaperGraphicsObject").value<QObject *>();
+                auto *wallpaperGraphicsObject = cont->property("wallpaperGraphicsObject").value<QObject *>();
                 if (wallpaperGraphicsObject) {
-                    QQmlListProperty<QAction> l = wallpaperGraphicsObject->property("contextualActions").value<QQmlListProperty<QAction>>();
+                    auto l = wallpaperGraphicsObject->property("contextualActions").value<QQmlListProperty<QAction>>();
                     int nActions = l.count(&l);
                     for (int i = 0; i < nActions; ++i) {
                         actions << l.at(&l, i);
@@ -274,8 +274,8 @@ void ContextMenu::configureDisplays()
 
 QWidget *ContextMenu::createConfigurationInterface(QWidget *parent)
 {
-    QWidget *widget = new QWidget(parent);
-    QVBoxLayout *lay = new QVBoxLayout();
+    auto *widget = new QWidget(parent);
+    auto *lay = new QVBoxLayout();
     widget->setLayout(lay);
     widget->setWindowTitle(i18nc("plasma_containmentactions_contextmenu", "Configure Contextual Menu Plugin"));
     m_buttons = new QButtonGroup(widget);

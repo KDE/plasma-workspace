@@ -75,7 +75,7 @@ Waiter::Waiter(int argc, char **argv)
 bool Waiter::waitForService()
 {
     QDBusConnection sessionBus = QDBusConnection::sessionBus();
-    QDBusServiceWatcher *watcher = new QDBusServiceWatcher(this);
+    auto *watcher = new QDBusServiceWatcher(this);
     watcher->setConnection(sessionBus);
     watcher->addWatchedService(mService);
 

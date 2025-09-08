@@ -281,7 +281,7 @@ void BatteryControlModel::deviceAdded(const QString &udi)
     if (!deviceBattery.isValid()) {
         return;
     }
-    Solid::Battery *battery = deviceBattery.as<Solid::Battery>();
+    auto *battery = deviceBattery.as<Solid::Battery>();
 
     if (!battery) {
         return;

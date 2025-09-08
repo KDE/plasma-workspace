@@ -61,7 +61,7 @@ void GtkPage::installGtkThemeFromFile(const QUrl &fileUrl)
     QString firstEntryName = themeArchive.directory()->entries().first();
     const KArchiveEntry *possibleThemeDirectory = themeArchive.directory()->entry(firstEntryName);
     if (possibleThemeDirectory->isDirectory()) {
-        const KArchiveDirectory *themeDirectory = static_cast<const KArchiveDirectory *>(possibleThemeDirectory);
+        const auto *themeDirectory = static_cast<const KArchiveDirectory *>(possibleThemeDirectory);
         QStringList archiveSubitems = themeDirectory->entries();
 
         if (!archiveSubitems.contains(u"gtk-2.0") && archiveSubitems.indexOf(QRegularExpression(QStringLiteral("gtk-3.*"))) == -1) {

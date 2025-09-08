@@ -39,7 +39,7 @@ void Paste::doPaste()
         return;
     }
 
-    QPoint pos = m_action->data().value<QPoint>();
+    auto pos = m_action->data().value<QPoint>();
     Plasma::Containment *c = containment();
     Q_ASSERT(c);
 
@@ -51,7 +51,7 @@ void Paste::doPaste()
 
     QClipboard *clipboard = QGuiApplication::clipboard();
     // FIXME: can be the const_cast avoided?
-    QMimeData *mimeData = const_cast<QMimeData *>(clipboard->mimeData(QClipboard::Selection));
+    auto *mimeData = const_cast<QMimeData *>(clipboard->mimeData(QClipboard::Selection));
     // TODO if that's not supported (ie non-linux) should we try clipboard instead of selection?
 
     graphicObject->metaObject()

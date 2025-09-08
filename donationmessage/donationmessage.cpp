@@ -74,7 +74,7 @@ DonationMessage::DonationMessage(QObject *parent, const QList<QVariant> &)
 
     qCDebug(DONATION_MESSAGE) << "Haven't suppressed the donation message or donated this year, and it's month" << SHOW_IN_MONTH << "; asking now!";
 
-    KNotification *notification = new KNotification(u"ShowDonationMessage"_s);
+    auto *notification = new KNotification(u"ShowDonationMessage"_s);
     notification->setComponentName(u"donationmessage"_s);
     notification->setFlags(KNotification::NotificationFlag::Persistent);
     notification->setTitle(i18nc("@title of a system notification", "Donate to KDE"));

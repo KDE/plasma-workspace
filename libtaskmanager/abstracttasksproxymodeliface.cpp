@@ -18,7 +18,7 @@ void AbstractTasksProxyModelIface::requestActivate(const QModelIndex &index)
     }
 
     const QModelIndex &sourceIndex = mapIfaceToSource(index);
-    const AbstractTasksModelIface *m = dynamic_cast<const AbstractTasksModelIface *>(sourceIndex.model());
+    const auto *m = dynamic_cast<const AbstractTasksModelIface *>(sourceIndex.model());
 
     if (m) {
         const_cast<AbstractTasksModelIface *>(m)->requestActivate(sourceIndex);
@@ -32,7 +32,7 @@ void AbstractTasksProxyModelIface::requestNewInstance(const QModelIndex &index)
     }
 
     const QModelIndex &sourceIndex = mapIfaceToSource(index);
-    const AbstractTasksModelIface *m = dynamic_cast<const AbstractTasksModelIface *>(sourceIndex.model());
+    const auto *m = dynamic_cast<const AbstractTasksModelIface *>(sourceIndex.model());
 
     if (m) {
         const_cast<AbstractTasksModelIface *>(m)->requestNewInstance(sourceIndex);
@@ -46,7 +46,7 @@ void AbstractTasksProxyModelIface::requestOpenUrls(const QModelIndex &index, con
     }
 
     const QModelIndex &sourceIndex = mapIfaceToSource(index);
-    const AbstractTasksModelIface *m = dynamic_cast<const AbstractTasksModelIface *>(sourceIndex.model());
+    const auto *m = dynamic_cast<const AbstractTasksModelIface *>(sourceIndex.model());
 
     if (m) {
         const_cast<AbstractTasksModelIface *>(m)->requestOpenUrls(sourceIndex, urls);
@@ -60,7 +60,7 @@ void AbstractTasksProxyModelIface::requestClose(const QModelIndex &index)
     }
 
     const QModelIndex &sourceIndex = mapIfaceToSource(index);
-    const AbstractTasksModelIface *m = dynamic_cast<const AbstractTasksModelIface *>(sourceIndex.model());
+    const auto *m = dynamic_cast<const AbstractTasksModelIface *>(sourceIndex.model());
 
     if (m) {
         const_cast<AbstractTasksModelIface *>(m)->requestClose(sourceIndex);
@@ -73,7 +73,7 @@ void AbstractTasksProxyModelIface::requestMove(const QModelIndex &index)
     }
 
     const QModelIndex &sourceIndex = mapIfaceToSource(index);
-    const AbstractTasksModelIface *m = dynamic_cast<const AbstractTasksModelIface *>(sourceIndex.model());
+    const auto *m = dynamic_cast<const AbstractTasksModelIface *>(sourceIndex.model());
 
     if (m) {
         const_cast<AbstractTasksModelIface *>(m)->requestMove(sourceIndex);
@@ -87,7 +87,7 @@ void AbstractTasksProxyModelIface::requestResize(const QModelIndex &index)
     }
 
     const QModelIndex &sourceIndex = mapIfaceToSource(index);
-    const AbstractTasksModelIface *m = dynamic_cast<const AbstractTasksModelIface *>(sourceIndex.model());
+    const auto *m = dynamic_cast<const AbstractTasksModelIface *>(sourceIndex.model());
 
     if (m) {
         const_cast<AbstractTasksModelIface *>(m)->requestResize(sourceIndex);
@@ -101,7 +101,7 @@ void AbstractTasksProxyModelIface::requestToggleMinimized(const QModelIndex &ind
     }
 
     const QModelIndex &sourceIndex = mapIfaceToSource(index);
-    const AbstractTasksModelIface *m = dynamic_cast<const AbstractTasksModelIface *>(sourceIndex.model());
+    const auto *m = dynamic_cast<const AbstractTasksModelIface *>(sourceIndex.model());
 
     if (m) {
         const_cast<AbstractTasksModelIface *>(m)->requestToggleMinimized(sourceIndex);
@@ -115,7 +115,7 @@ void AbstractTasksProxyModelIface::requestToggleMaximized(const QModelIndex &ind
     }
 
     const QModelIndex &sourceIndex = mapIfaceToSource(index);
-    const AbstractTasksModelIface *m = dynamic_cast<const AbstractTasksModelIface *>(sourceIndex.model());
+    const auto *m = dynamic_cast<const AbstractTasksModelIface *>(sourceIndex.model());
 
     if (m) {
         const_cast<AbstractTasksModelIface *>(m)->requestToggleMaximized(sourceIndex);
@@ -129,7 +129,7 @@ void AbstractTasksProxyModelIface::requestToggleKeepAbove(const QModelIndex &ind
     }
 
     const QModelIndex &sourceIndex = mapIfaceToSource(index);
-    const AbstractTasksModelIface *m = dynamic_cast<const AbstractTasksModelIface *>(sourceIndex.model());
+    const auto *m = dynamic_cast<const AbstractTasksModelIface *>(sourceIndex.model());
 
     if (m) {
         const_cast<AbstractTasksModelIface *>(m)->requestToggleKeepAbove(sourceIndex);
@@ -143,7 +143,7 @@ void AbstractTasksProxyModelIface::requestToggleKeepBelow(const QModelIndex &ind
     }
 
     const QModelIndex &sourceIndex = mapIfaceToSource(index);
-    const AbstractTasksModelIface *m = dynamic_cast<const AbstractTasksModelIface *>(sourceIndex.model());
+    const auto *m = dynamic_cast<const AbstractTasksModelIface *>(sourceIndex.model());
 
     if (m) {
         const_cast<AbstractTasksModelIface *>(m)->requestToggleKeepBelow(sourceIndex);
@@ -157,7 +157,7 @@ void AbstractTasksProxyModelIface::requestToggleFullScreen(const QModelIndex &in
     }
 
     const QModelIndex &sourceIndex = mapIfaceToSource(index);
-    const AbstractTasksModelIface *m = dynamic_cast<const AbstractTasksModelIface *>(sourceIndex.model());
+    const auto *m = dynamic_cast<const AbstractTasksModelIface *>(sourceIndex.model());
 
     if (m) {
         const_cast<AbstractTasksModelIface *>(m)->requestToggleFullScreen(sourceIndex);
@@ -171,7 +171,7 @@ void AbstractTasksProxyModelIface::requestToggleShaded(const QModelIndex &index)
     }
 
     const QModelIndex &sourceIndex = mapIfaceToSource(index);
-    const AbstractTasksModelIface *m = dynamic_cast<const AbstractTasksModelIface *>(sourceIndex.model());
+    const auto *m = dynamic_cast<const AbstractTasksModelIface *>(sourceIndex.model());
 
     if (m) {
         const_cast<AbstractTasksModelIface *>(m)->requestToggleShaded(sourceIndex);
@@ -185,7 +185,7 @@ void AbstractTasksProxyModelIface::requestToggleNoBorder(const QModelIndex &inde
     }
 
     const QModelIndex &sourceIndex = mapIfaceToSource(index);
-    const AbstractTasksModelIface *m = dynamic_cast<const AbstractTasksModelIface *>(sourceIndex.model());
+    const auto *m = dynamic_cast<const AbstractTasksModelIface *>(sourceIndex.model());
 
     if (m) {
         const_cast<AbstractTasksModelIface *>(m)->requestToggleNoBorder(sourceIndex);
@@ -199,7 +199,7 @@ void AbstractTasksProxyModelIface::requestVirtualDesktops(const QModelIndex &ind
     }
 
     const QModelIndex &sourceIndex = mapIfaceToSource(index);
-    const AbstractTasksModelIface *m = dynamic_cast<const AbstractTasksModelIface *>(sourceIndex.model());
+    const auto *m = dynamic_cast<const AbstractTasksModelIface *>(sourceIndex.model());
 
     if (m) {
         const_cast<AbstractTasksModelIface *>(m)->requestVirtualDesktops(sourceIndex, desktops);
@@ -213,7 +213,7 @@ void AbstractTasksProxyModelIface::requestNewVirtualDesktop(const QModelIndex &i
     }
 
     const QModelIndex &sourceIndex = mapIfaceToSource(index);
-    const AbstractTasksModelIface *m = dynamic_cast<const AbstractTasksModelIface *>(sourceIndex.model());
+    const auto *m = dynamic_cast<const AbstractTasksModelIface *>(sourceIndex.model());
 
     if (m) {
         const_cast<AbstractTasksModelIface *>(m)->requestNewVirtualDesktop(sourceIndex);
@@ -227,7 +227,7 @@ void AbstractTasksProxyModelIface::requestActivities(const QModelIndex &index, c
     }
 
     const QModelIndex &sourceIndex = mapIfaceToSource(index);
-    const AbstractTasksModelIface *m = dynamic_cast<const AbstractTasksModelIface *>(sourceIndex.model());
+    const auto *m = dynamic_cast<const AbstractTasksModelIface *>(sourceIndex.model());
 
     if (m) {
         const_cast<AbstractTasksModelIface *>(m)->requestActivities(sourceIndex, activities);
@@ -241,7 +241,7 @@ void AbstractTasksProxyModelIface::requestPublishDelegateGeometry(const QModelIn
     }
 
     const QModelIndex &sourceIndex = mapIfaceToSource(index);
-    const AbstractTasksModelIface *m = dynamic_cast<const AbstractTasksModelIface *>(sourceIndex.model());
+    const auto *m = dynamic_cast<const AbstractTasksModelIface *>(sourceIndex.model());
 
     if (m) {
         const_cast<AbstractTasksModelIface *>(m)->requestPublishDelegateGeometry(sourceIndex, geometry, delegate);

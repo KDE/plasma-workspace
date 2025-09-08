@@ -161,7 +161,7 @@ bool AppInterface::hasBattery() const
     QList<Solid::Device> batteryDevices = Solid::Device::listFromType(Solid::DeviceInterface::Battery);
 
     for (auto device : batteryDevices) {
-        Solid::Battery *battery = device.as<Solid::Battery>();
+        auto *battery = device.as<Solid::Battery>();
         // check for _both_ primary and power supply status
         // apparently some devices misreport as "primary", and we don't
         // want to trigger on just having UPC connected to a desktop box

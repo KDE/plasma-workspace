@@ -221,7 +221,7 @@ void ContainmentConfigView::onWallpaperChanged(uint /*screenIdx*/)
 
 void ContainmentConfigView::syncWallpaperObjects()
 {
-    QObject *wallpaperGraphicsObject = m_containment->property("wallpaperGraphicsObject").value<QObject *>();
+    auto *wallpaperGraphicsObject = m_containment->property("wallpaperGraphicsObject").value<QObject *>();
 
     if (!wallpaperGraphicsObject) {
         return;

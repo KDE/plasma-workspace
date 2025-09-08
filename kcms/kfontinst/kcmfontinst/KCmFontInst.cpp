@@ -170,7 +170,7 @@ CKCmFontInst::CKCmFontInst(QObject *parent, const KPluginMetaData &data)
 
     m_groupSplitter = new QSplitter(widget());
     m_groupSplitter->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Expanding);
-    QWidget *groupWidget = new QWidget(m_groupSplitter), *fontWidget = new QWidget(m_groupSplitter);
+    auto *groupWidget = new QWidget(m_groupSplitter), *fontWidget = new QWidget(m_groupSplitter);
 
     m_previewSplitter = new QSplitter(fontWidget);
     m_previewSplitter->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Expanding);
@@ -182,7 +182,7 @@ CKCmFontInst::CKCmFontInst(QObject *parent, const KPluginMetaData &data)
         cg.writeEntry(CFG_GROUP_SPLITTER_SIZES, m_groupSplitter->sizes());
     });
 
-    QWidget *fontControlWidget = new QWidget(fontWidget);
+    auto *fontControlWidget = new QWidget(fontWidget);
     auto mainLayout = new QVBoxLayout(widget());
     auto fontsLayout = new QVBoxLayout(fontWidget);
     auto fontControlLayout = new QHBoxLayout(fontControlWidget);
@@ -230,8 +230,8 @@ CKCmFontInst::CKCmFontInst(QObject *parent, const KPluginMetaData &data)
     previewWidgetLayout->setSpacing(0);
 
     // Preview
-    QFrame *previewFrame = new QFrame(m_previewWidget);
-    QBoxLayout *previewFrameLayout = new QBoxLayout(QBoxLayout::LeftToRight, previewFrame);
+    auto *previewFrame = new QFrame(m_previewWidget);
+    auto *previewFrameLayout = new QBoxLayout(QBoxLayout::LeftToRight, previewFrame);
 
     previewFrameLayout->setContentsMargins(0, 0, 0, 0);
     previewFrameLayout->setSpacing(0);
@@ -326,9 +326,9 @@ CKCmFontInst::CKCmFontInst(QObject *parent, const KPluginMetaData &data)
     m_previewMenu->addAction(zoomIn);
     m_previewMenu->addAction(zoomOut);
     m_previewMenu->addSeparator();
-    CPreviewSelectAction *prevSel = new CPreviewSelectAction(m_previewMenu);
+    auto *prevSel = new CPreviewSelectAction(m_previewMenu);
     m_previewMenu->addAction(prevSel);
-    QAction *changeTextAct = new QAction(QIcon::fromTheme(u"edit-rename"_s), i18n("Change Preview Text…"), this);
+    auto *changeTextAct = new QAction(QIcon::fromTheme(u"edit-rename"_s), i18n("Change Preview Text…"), this);
     m_previewMenu->addAction(changeTextAct),
 
         m_previewListMenu = new QMenu(m_previewList);
@@ -408,7 +408,7 @@ void CKCmFontInst::fontsSelected(const QModelIndexList &list)
     if (!m_previewHidden) {
         if (!list.isEmpty()) {
             if (list.count() < 2) {
-                CFontModelItem *mi = static_cast<CFontModelItem *>(list.last().internalPointer());
+                auto *mi = static_cast<CFontModelItem *>(list.last().internalPointer());
                 CFontItem *font = mi->parent() ? static_cast<CFontItem *>(mi) : (static_cast<CFamilyItem *>(mi))->regularFont();
 
                 if (font) {
@@ -687,7 +687,7 @@ void CKCmFontInst::zipGroup()
     QModelIndex idx(m_groupListView->currentIndex());
 
     if (idx.isValid()) {
-        CGroupListItem *grp = static_cast<CGroupListItem *>(idx.internalPointer());
+        auto *grp = static_cast<CGroupListItem *>(idx.internalPointer());
 
         if (grp) {
             QFileDialog dlg(widget(), i18n("Export Group"));
@@ -1052,7 +1052,7 @@ void CKCmFontInst::selectGroup(CGroupListItem::EType grp)
     QModelIndex current(m_groupListView->currentIndex());
 
     if (current.isValid()) {
-        CGroupListItem *grpItem = static_cast<CGroupListItem *>(current.internalPointer());
+        auto *grpItem = static_cast<CGroupListItem *>(current.internalPointer());
 
         if (grpItem && grp == grpItem->type()) {
             return;
@@ -1075,7 +1075,7 @@ void CKCmFontInst::toggleGroup(bool enable)
     QModelIndex idx(m_groupListView->currentIndex());
 
     if (idx.isValid()) {
-        CGroupListItem *grp = static_cast<CGroupListItem *>(idx.internalPointer());
+        auto *grp = static_cast<CGroupListItem *>(idx.internalPointer());
 
         if (grp) {
             toggleFonts(enable, grp->name());

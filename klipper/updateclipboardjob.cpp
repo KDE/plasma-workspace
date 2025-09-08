@@ -50,7 +50,7 @@ UpdateDatabaseJob *UpdateDatabaseJob::updateClipboard(QObject *parent,
     }
 
     if (mimeData->hasImage()) {
-        QImage image = mimeData->imageData().value<QImage>();
+        auto image = mimeData->imageData().value<QImage>();
         hash.reset();
         hash.addData(QByteArrayView(reinterpret_cast<const char *>(image.constBits()), image.sizeInBytes()));
         QByteArray data;

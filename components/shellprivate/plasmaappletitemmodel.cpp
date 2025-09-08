@@ -282,7 +282,7 @@ bool PlasmaAppletItem::passesFiltering(const KCategorizedItemsViewModels::Filter
 
 QMimeData *PlasmaAppletItem::mimeData() const
 {
-    QMimeData *data = new QMimeData();
+    auto *data = new QMimeData();
     QByteArray appletName;
     appletName += pluginName().toUtf8();
     data->setData(mimeTypes().at(0), appletName);
@@ -425,7 +425,7 @@ void PlasmaAppletItemModel::setRunningApplets(const QHash<QString, int> &apps)
     // for each item, find that string and set the count
     for (int r = 0; r < rowCount(); ++r) {
         QStandardItem *i = item(r);
-        PlasmaAppletItem *p = dynamic_cast<PlasmaAppletItem *>(i);
+        auto *p = dynamic_cast<PlasmaAppletItem *>(i);
 
         if (p) {
             const int running = apps.value(p->pluginName());
@@ -438,7 +438,7 @@ void PlasmaAppletItemModel::setRunningApplets(const QString &name, int count)
 {
     for (int r = 0; r < rowCount(); ++r) {
         QStandardItem *i = item(r);
-        PlasmaAppletItem *p = dynamic_cast<PlasmaAppletItem *>(i);
+        auto *p = dynamic_cast<PlasmaAppletItem *>(i);
         if (p && p->pluginName() == name) {
             p->setRunning(count);
         }
@@ -464,7 +464,7 @@ QMimeData *PlasmaAppletItemModel::mimeData(const QModelIndexList &indexes) const
         return nullptr;
     }
 
-    QMimeData *data = new QMimeData();
+    auto *data = new QMimeData();
 
     QString format = types.at(0);
 
@@ -476,7 +476,7 @@ QMimeData *PlasmaAppletItemModel::mimeData(const QModelIndexList &indexes) const
         }
 
         lastRow = index.row();
-        PlasmaAppletItem *selectedItem = (PlasmaAppletItem *)itemFromIndex(index);
+        auto *selectedItem = (PlasmaAppletItem *)itemFromIndex(index);
         appletNames += '\n' + selectedItem->pluginName().toUtf8();
         // qDebug() << selectedItem->pluginName() << index.column() << index.row();
     }

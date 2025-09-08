@@ -30,7 +30,7 @@ PlasmaWindowedView::PlasmaWindowedView(QWindow *parent)
 {
     engine()->rootContext()->setContextProperty(QStringLiteral("root"), contentItem());
     // access appletInterface.Layout.minimumWidth, to create the Layout attached object for appletInterface as a sideeffect
-    QQmlExpression *expr = new QQmlExpression(
+    auto *expr = new QQmlExpression(
         engine()->rootContext(),
         contentItem(),
         QStringLiteral("Qt.createQmlObject('import QtQuick; import QtQuick.Layouts; import org.kde.kirigami as Kirigami; "
@@ -118,7 +118,7 @@ void PlasmaWindowedView::setApplet(Plasma::Applet *applet)
             m_statusNotifier->contextMenu()->addAction(a);
         }
         m_statusNotifier->contextMenu()->addSeparator();
-        QAction *closeAction = new QAction(QIcon::fromTheme(QStringLiteral("window-close")), i18n("Close %1", applet->title()), this);
+        auto *closeAction = new QAction(QIcon::fromTheme(QStringLiteral("window-close")), i18n("Close %1", applet->title()), this);
         connect(closeAction, &QAction::triggered, this, [this]() {
             m_statusNotifier->deleteLater();
             close();

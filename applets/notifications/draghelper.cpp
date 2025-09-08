@@ -57,9 +57,9 @@ void DragHelper::startDrag(QQuickItem *item, const QUrl &url, const QPixmap &pix
 
             // NOTE Do not use "item" as parent/source since it will be destroyed
             // when the notification history closes and the model is unloaded!
-            QDrag *drag = new QDrag(this);
+            auto *drag = new QDrag(this);
 
-            QMimeData *mimeData = new QMimeData();
+            auto *mimeData = new QMimeData();
 
             if (!url.isEmpty()) {
                 mimeData->setUrls(QList<QUrl>{url});

@@ -26,7 +26,7 @@ FaviconFromBlob *FaviconFromBlob::chrome(const QString &profileDirectory, QObjec
     QString profileName = QFileInfo(profileDirectory).fileName();
     QString faviconCache = QStringLiteral("%1/bookmarksrunner/KRunner-Chrome-Favicons-%2.sqlite")
                                .arg(QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation), profileName);
-    FetchSqlite *fetchSqlite = new FetchSqlite(faviconCache, parent);
+    auto *fetchSqlite = new FetchSqlite(faviconCache, parent);
 
     QString faviconQuery;
     if (fetchSqlite->tables().contains(QLatin1String("favicon_bitmaps"))) {
@@ -58,7 +58,7 @@ FaviconFromBlob *FaviconFromBlob::firefox(FetchSqlite *fetchSqlite, QObject *par
 FaviconFromBlob *FaviconFromBlob::falkon(const QString &profileDirectory, QObject *parent)
 {
     const QString dbPath = profileDirectory + QStringLiteral("/browsedata.db");
-    FetchSqlite *fetchSqlite = new FetchSqlite(dbPath, parent);
+    auto *fetchSqlite = new FetchSqlite(dbPath, parent);
     const QString faviconQuery = QStringLiteral("SELECT icon FROM icons WHERE url = :url LIMIT 1;");
     return new FaviconFromBlob(QStringLiteral("falkon-default"), faviconQuery, QStringLiteral("icon"), fetchSqlite, parent);
 }

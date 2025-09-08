@@ -178,7 +178,7 @@ int numTransports = 0;
 
 Status KSMRegisterClientProc(SmsConn /* smsConn */, SmPointer managerData, char *previousId)
 {
-    KSMClient *client = (KSMClient *)managerData;
+    auto *client = (KSMClient *)managerData;
     client->registerClient(previousId);
     return 1;
 }
@@ -351,7 +351,7 @@ Status SetAuthentication(int count, IceListenObj *listenObjs, IceAuthDataEntry *
 
         // ICE Auth File
         {
-            IceAuthFileEntry *file_entry = (IceAuthFileEntry *)malloc(sizeof(IceAuthFileEntry));
+            auto *file_entry = (IceAuthFileEntry *)malloc(sizeof(IceAuthFileEntry));
             file_entry->protocol_name = strdup("ICE");
             file_entry->protocol_data = NULL;
             file_entry->protocol_data_length = 0;
@@ -377,7 +377,7 @@ Status SetAuthentication(int count, IceListenObj *listenObjs, IceAuthDataEntry *
 
         // XSMP Auth file
         {
-            IceAuthFileEntry *file_entry = (IceAuthFileEntry *)malloc(sizeof(IceAuthFileEntry));
+            auto *file_entry = (IceAuthFileEntry *)malloc(sizeof(IceAuthFileEntry));
             file_entry->protocol_name = strdup("XSMP");
             file_entry->protocol_data = NULL;
             file_entry->protocol_data_length = 0;

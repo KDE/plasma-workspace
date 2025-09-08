@@ -100,7 +100,7 @@ void KCMSoundTheme::loadThemes()
             }
             themeIds << dirName;
 
-            ThemeInfo *theme = new ThemeInfo(dirName, this);
+            auto *theme = new ThemeInfo(dirName, this);
             if (!theme->isValid || theme->isHidden) {
                 delete theme;
                 continue;

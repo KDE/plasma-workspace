@@ -102,7 +102,7 @@ void HelpRunner::run(const RunnerContext &context, const QueryMatch &match)
         job = new KIO::CommandLauncherJob(QStringLiteral("systemsettings"), args);
         job->start();
     } else if (match.categoryRelevance() == qToUnderlying(QueryMatch::CategoryRelevance::Low)) {
-        const KPluginMetaData data = match.data().value<KPluginMetaData>();
+        const auto data = match.data().value<KPluginMetaData>();
         const QString completedRunnerName = u'?' + data.name();
         context.requestQueryStringUpdate(completedRunnerName, -1);
     } else {

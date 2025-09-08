@@ -385,7 +385,7 @@ void Mpris2SourceModel::addMediaPlayer(const QString &serviceName, const QString
 {
     Q_ASSERT_X(!m_pendingContainers.contains(sourceName), Q_FUNC_INFO, qUtf8Printable(sourceName));
 
-    PlayerContainer *const container = new PlayerContainer(serviceName, this);
+    auto *const container = new PlayerContainer(serviceName, this);
     container->setObjectName(sourceName);
     m_pendingContainers.emplace(sourceName, container);
 

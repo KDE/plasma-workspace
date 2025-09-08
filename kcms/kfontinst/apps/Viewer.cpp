@@ -116,7 +116,7 @@ public:
 public Q_SLOTS:
     void activate(const QStringList &args, const QString &workingDirectory)
     {
-        KFI::CViewer *viewer = new KFI::CViewer;
+        auto *viewer = new KFI::CViewer;
         viewer->show();
 
         if (!args.isEmpty()) {

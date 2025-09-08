@@ -115,7 +115,7 @@ enum Response {
 
 static void addIcon(QGridLayout *layout, QFrame *page, const QString &iconName, int iconSize)
 {
-    QLabel *icon = new QLabel(page);
+    auto *icon = new QLabel(page);
     icon->setPixmap(QIcon::fromTheme(iconName).pixmap(iconSize));
     icon->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Maximum);
     layout->addWidget(icon, 0, 0);
@@ -143,7 +143,7 @@ CJobRunner::CJobRunner(QWidget *parent)
     m_autoSkipButton->hide();
 
     m_stack = new QStackedWidget(this);
-    QVBoxLayout *mainLayout = new QVBoxLayout;
+    auto *mainLayout = new QVBoxLayout;
     setLayout(mainLayout);
     mainLayout->addWidget(m_stack);
     mainLayout->addWidget(m_buttonBox);
@@ -152,8 +152,8 @@ CJobRunner::CJobRunner(QWidget *parent)
     option.initFrom(this);
     int iconSize = style()->pixelMetric(QStyle::PM_MessageBoxIconSize, &option, this);
 
-    QFrame *page = new QFrame(m_stack);
-    QGridLayout *layout = new QGridLayout(page);
+    auto *page = new QFrame(m_stack);
+    auto *layout = new QGridLayout(page);
     m_statusLabel = new QLabel(page);
     m_progress = new QProgressBar(page);
     //     m_statusLabel->setWordWrap(true);
@@ -183,7 +183,7 @@ CJobRunner::CJobRunner(QWidget *parent)
 
     page = new QFrame(m_stack);
     layout = new QGridLayout(page);
-    QLabel *cancelLabel = new QLabel(i18n("<h3>Cancel?</h3><p>Are you sure you wish to cancel?</p>"), page);
+    auto *cancelLabel = new QLabel(i18n("<h3>Cancel?</h3><p>Are you sure you wish to cancel?</p>"), page);
     cancelLabel->setWordWrap(true);
     addIcon(layout, page, u"dialog-warning"_s, iconSize);
     layout->addWidget(cancelLabel, 0, 1);
@@ -195,10 +195,10 @@ CJobRunner::CJobRunner(QWidget *parent)
     } else {
         page = new QFrame(m_stack);
         layout = new QGridLayout(page);
-        QLabel *finishedLabel = new QLabel(i18n("<h3>Finished</h3>"
-                                                "<p>Please note that any open applications will need to be "
-                                                "restarted in order for any changes to be noticed.</p>"),
-                                           page);
+        auto *finishedLabel = new QLabel(i18n("<h3>Finished</h3>"
+                                              "<p>Please note that any open applications will need to be "
+                                              "restarted in order for any changes to be noticed.</p>"),
+                                         page);
         finishedLabel->setWordWrap(true);
         addIcon(layout, page, u"dialog-information"_s, iconSize);
         layout->addWidget(finishedLabel, 0, 1);
@@ -211,10 +211,10 @@ CJobRunner::CJobRunner(QWidget *parent)
         m_stack->insertWidget(PAGE_COMPLETE, page);
     }
 
-    QDBusServiceWatcher *watcher = new QDBusServiceWatcher(QLatin1String(OrgKdeFontinstInterface::staticInterfaceName()),
-                                                           QDBusConnection::sessionBus(),
-                                                           QDBusServiceWatcher::WatchForOwnerChange,
-                                                           this);
+    auto *watcher = new QDBusServiceWatcher(QLatin1String(OrgKdeFontinstInterface::staticInterfaceName()),
+                                            QDBusConnection::sessionBus(),
+                                            QDBusServiceWatcher::WatchForOwnerChange,
+                                            this);
 
     connect(watcher, &QDBusServiceWatcher::serviceOwnerChanged, this, &CJobRunner::dbusServiceOwnerChanged);
     connect(dbus(), &OrgKdeFontinstInterface::status, this, &CJobRunner::dbusStatus);
