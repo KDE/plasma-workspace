@@ -7,6 +7,7 @@
 
 #include "outputorderwatcher.h"
 
+#include <algorithm>
 #include <ranges>
 #include <version>
 
@@ -125,7 +126,7 @@ void OutputOrderWatcher::refresh()
             return c1 < c2;
         }
     };
-    std::sort(pendingOutputOrder.begin(), pendingOutputOrder.end(), outputLess);
+    std::ranges::sort(pendingOutputOrder, outputLess);
 
     if (m_outputOrder != pendingOutputOrder) {
         m_outputOrder = pendingOutputOrder;
@@ -235,10 +236,10 @@ void X11OutputOrderWatcher::refresh()
     const auto screens = qGuiApp->screens();
     std::vector<QString> screenNames;
     screenNames.reserve(screens.size());
-    std::transform(screens.begin(), screens.end(), std::back_inserter(screenNames), [](const QScreen *screen) {
+    std::ranges::transform(screens, std::back_inserter(screenNames), [](const QScreen *screen) {
         return screen->name();
     });
-    const bool isScreenPresent = std::all_of(orderMap.cbegin(), orderMap.cend(), [&screenNames](const auto &pr) {
+    const bool isScreenPresent = std::ranges::all_of(orderMap, [&screenNames](const auto &pr) {
         return std::ranges::find(screenNames, std::get<QString>(pr)) != screenNames.end();
     });
     if (!isScreenPresent) [[unlikely]] {
@@ -249,7 +250,7 @@ void X11OutputOrderWatcher::refresh()
         return;
     }
 
-    std::sort(orderMap.begin(), orderMap.end());
+    std::ranges::sort(orderMap);
 
     // Rather verbose ifdef due to clang support of ranges API
 #if defined(__clang__) && __clang_major__ < 16

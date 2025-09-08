@@ -9,6 +9,7 @@
 #include <KLocalizedString>
 #include <QDir>
 #include <QStandardPaths>
+#include <algorithm>
 
 GlibcLocaleConstructor::GlibcLocaleConstructor()
     : m_localectl()
@@ -103,7 +104,7 @@ void GlibcLocaleConstructor::constructGlibcLocaleMap()
             const auto &prefixedLocales = basem_map[baseLocale];
 
             // if we have one to one match, use that. Eg. en_US to en_US
-            auto fullMatch = std::find(prefixedLocales.begin(), prefixedLocales.end(), plasmaLocale);
+            auto fullMatch = std::ranges::find(prefixedLocales, plasmaLocale);
             if (fullMatch != prefixedLocales.end()) {
                 addToMap(plasmaLocale, *fullMatch);
                 continue;
@@ -111,7 +112,7 @@ void GlibcLocaleConstructor::constructGlibcLocaleMap()
 
             // language name with same country code has higher priority, eg. es_ES > es_PA, de_DE > de_DE@euro
             const QString mainLocale = plasmaLocale + u'_' + plasmaLocale.toUpper();
-            fullMatch = std::find(prefixedLocales.begin(), prefixedLocales.end(), mainLocale);
+            fullMatch = std::ranges::find(prefixedLocales, mainLocale);
             if (fullMatch != prefixedLocales.end()) {
                 addToMap(plasmaLocale, *fullMatch);
                 continue;

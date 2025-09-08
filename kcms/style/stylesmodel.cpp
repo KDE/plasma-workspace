@@ -91,7 +91,7 @@ void StylesModel::setSelectedStyle(const QString &style)
 
 int StylesModel::indexOfStyle(const QString &style) const
 {
-    auto it = std::find_if(m_data.begin(), m_data.end(), [&style](const StylesModelData &item) {
+    auto it = std::ranges::find_if(m_data, [&style](const StylesModelData &item) {
         return item.styleName == style;
     });
 
@@ -148,7 +148,7 @@ void StylesModel::load()
         }
     }
 
-    std::transform(themeFiles.begin(), themeFiles.end(), themeFiles.begin(), [](const QString &item) {
+    std::ranges::transform(themeFiles, themeFiles.begin(), [](const QString &item) {
         return QStandardPaths::locate(QStandardPaths::GenericDataLocation, item);
     });
 
@@ -191,7 +191,7 @@ void StylesModel::load()
     // Sort case-insensitively
     QCollator collator;
     collator.setCaseSensitivity(Qt::CaseInsensitive);
-    std::sort(m_data.begin(), m_data.end(), [&collator](const StylesModelData &a, const StylesModelData &b) {
+    std::ranges::sort(m_data, [&collator](const StylesModelData &a, const StylesModelData &b) {
         const QString aDisplay = !a.display.isEmpty() ? a.display : a.styleName;
         const QString bDisplay = !b.display.isEmpty() ? b.display : b.styleName;
         return collator.compare(aDisplay, bDisplay) < 0;

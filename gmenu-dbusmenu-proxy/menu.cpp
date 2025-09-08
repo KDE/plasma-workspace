@@ -127,7 +127,7 @@ GMenuItem Menu::getSection(int subscription, int section, bool *ok) const
 {
     const auto menu = m_menus.value(subscription);
 
-    auto it = std::find_if(menu.begin(), menu.end(), [section](const GMenuItem &item) {
+    auto it = std::ranges::find_if(menu, [section](const GMenuItem &item) {
         return static_cast<int>(item.section) == section;
     });
 

@@ -12,6 +12,7 @@
 
 #include <canberra.h>
 
+#include <algorithm>
 #include <ranges>
 
 #include <QDir>
@@ -65,7 +66,7 @@ QStringList allServices(const QLatin1String &prefix)
     const QStringList services = QDBusConnection::sessionBus().interface()->registeredServiceNames();
     QStringList names;
 
-    std::copy_if(services.cbegin(), services.cend(), std::back_inserter(names), [&prefix](const QString &serviceName) {
+    std::ranges::copy_if(services, std::back_inserter(names), [&prefix](const QString &serviceName) {
         return serviceName.startsWith(prefix);
     });
 
@@ -139,7 +140,7 @@ void setEnvironmentVariable(const char *name, QByteArrayView value)
 void sourceFiles(const QStringList &files)
 {
     QStringList filteredFiles;
-    std::copy_if(files.begin(), files.end(), std::back_inserter(filteredFiles), [](const QString &i) {
+    std::ranges::copy_if(files, std::back_inserter(filteredFiles), [](const QString &i) {
         return QFileInfo(i).isReadable();
     });
 

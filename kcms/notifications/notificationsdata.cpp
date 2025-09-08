@@ -12,6 +12,8 @@
 #include <libnotificationmanager/jobsettings.h>
 #include <libnotificationmanager/notificationsettings.h>
 
+#include <algorithm>
+
 using namespace Qt::StringLiterals;
 
 NotificationsData::NotificationsData(QObject *parent)
@@ -78,7 +80,7 @@ void NotificationsData::defaultsBehaviorSettings()
 
 bool NotificationsData::isSaveNeededBehaviorSettings() const
 {
-    bool needSave = std::any_of(m_behaviorSettingsList.cbegin(), m_behaviorSettingsList.cend(), [](const NotificationManager::BehaviorSettings *settings) {
+    bool needSave = std::ranges::any_of(m_behaviorSettingsList, [](const NotificationManager::BehaviorSettings *settings) {
         return settings->isSaveNeeded();
     });
     return needSave;
@@ -86,7 +88,7 @@ bool NotificationsData::isSaveNeededBehaviorSettings() const
 
 bool NotificationsData::isDefaultsBehaviorSettings() const
 {
-    bool notDefault = std::any_of(m_behaviorSettingsList.cbegin(), m_behaviorSettingsList.cend(), [](const NotificationManager::BehaviorSettings *settings) {
+    bool notDefault = std::ranges::any_of(m_behaviorSettingsList, [](const NotificationManager::BehaviorSettings *settings) {
         return !settings->isDefaults();
     });
     return !notDefault;

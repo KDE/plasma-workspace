@@ -9,6 +9,7 @@
 #include <QDBusArgument>
 #include <QDBusObjectPath>
 #include <QDBusSignature>
+#include <algorithm>
 
 #include "dbustype.h"
 
@@ -81,7 +82,7 @@ QVariant encode(const QVariant &arg, const char *signature)
             return listArg.toStringList();
         case DBUS_TYPE_OBJECT_PATH: {
             QList<QDBusObjectPath> list;
-            std::transform(argList.cbegin(), argList.cend(), std::back_inserter(list), [](const QVariant &variant) {
+            std::ranges::transform(argList, std::back_inserter(list), [](const QVariant &variant) {
                 if (variant.canConvert<QDBusObjectPath>()) {
                     return variant.value<QDBusObjectPath>();
                 }
@@ -91,7 +92,7 @@ QVariant encode(const QVariant &arg, const char *signature)
         }
         case DBUS_TYPE_SIGNATURE: {
             QList<QDBusSignature> list;
-            std::transform(argList.cbegin(), argList.cend(), std::back_inserter(list), [](const QVariant &variant) {
+            std::ranges::transform(argList, std::back_inserter(list), [](const QVariant &variant) {
                 if (variant.canConvert<QDBusSignature>()) {
                     return variant.value<QDBusSignature>();
                 }

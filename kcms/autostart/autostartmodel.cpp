@@ -31,6 +31,7 @@
 #include <KLocalizedString>
 #include <KOpenWithDialog>
 #include <KPropertiesDialog>
+#include <algorithm>
 #include <autostartscriptdesktopfile.h>
 
 using namespace Qt::StringLiterals;
@@ -620,7 +621,7 @@ QList<AutostartEntry> AutostartModel::sortedEntries(const QList<AutostartEntry> 
     QCollator collator;
     collator.setCaseSensitivity(Qt::CaseInsensitive);
 
-    std::sort(sortedEntries.begin(), sortedEntries.end(), [&collator](const AutostartEntry &a, const AutostartEntry &b) {
+    std::ranges::sort(sortedEntries, [&collator](const AutostartEntry &a, const AutostartEntry &b) {
         if (a.source != b.source) {
             return a.source < b.source;
         }

@@ -8,11 +8,13 @@
 */
 
 #include "languagelistmodel.h"
+
 #include "config-workspace.h"
 #include "exampleutility.h"
 #include "glibclocaleconstructor.h"
 #include "kcmregionandlang.h"
 #include "regionandlangsettings.h"
+#include <algorithm>
 
 using namespace Qt::StringLiterals;
 using namespace KCM_RegionAndLang;
@@ -36,7 +38,7 @@ LanguageListModel::LanguageListModel(QObject *parent)
     }
 
     m_availableLanguages = availableLanguages.values();
-    std::sort(m_availableLanguages.begin(), m_availableLanguages.end(), [](const QString &a, const QString &b) {
+    std::ranges::sort(m_availableLanguages, [](const QString &a, const QString &b) {
         const QString languageNameA = languageCodeToName(a);
         const QString languageNameB = languageCodeToName(b);
         return languageNameA.localeAwareCompare(languageNameB) < 0;

@@ -11,6 +11,7 @@
 #include <QCursor>
 #include <QDir>
 #include <QImage>
+#include <algorithm>
 #include <private/qtx11extras_p.h>
 
 #include <X11/Xcursor/Xcursor.h>
@@ -43,7 +44,7 @@ XCursorTheme::XCursorTheme(const QDir &themeDir)
                 sizeList.append(images->images[i]->size);
         };
         XcursorImagesDestroy(images);
-        std::sort(sizeList.begin(), sizeList.end());
+        std::ranges::sort(sizeList);
         m_availableSizes = sizeList;
     }
     if (!sizeList.isEmpty()) {

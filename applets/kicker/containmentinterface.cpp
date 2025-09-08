@@ -10,6 +10,7 @@
 #include <Plasma/Containment>
 #include <Plasma/Corona>
 #include <PlasmaQuick/AppletQuickItem>
+#include <algorithm>
 
 // FIXME HACK TODO: Unfortunately we have no choice but to hard-code a list of
 // applets we know to expose the correct interface right now -- this is slated
@@ -243,7 +244,7 @@ void ContainmentInterface::ensureMutable(Plasma::Containment *containment)
 Plasma::Applet *ContainmentInterface::findTaskManagerApplet(Plasma::Containment *containment)
 {
     const QList<Plasma::Applet *> applets = containment->applets();
-    const auto found = std::find_if(applets.cbegin(), applets.cend(), [](const Plasma::Applet *applet) {
+    const auto found = std::ranges::find_if(applets, [](const Plasma::Applet *applet) {
         return m_knownTaskManagers.contains(applet->pluginMetaData().pluginId());
     });
     return found != applets.cend() ? *found : nullptr;

@@ -15,6 +15,7 @@
 #include <QUrlQuery>
 
 #include <KIO/PreviewJob>
+#include <algorithm>
 
 #include "../finder/imagefinder.h"
 #include "../finder/suffixcheck.h"
@@ -110,7 +111,7 @@ bool ImageListModel::setData(const QModelIndex &index, const QVariant &value, in
 
 int ImageListModel::indexOf(const QUrl &url) const
 {
-    const auto it = std::find(m_data.cbegin(), m_data.cend(), url.toLocalFile());
+    const auto it = std::ranges::find(m_data, url.toLocalFile());
     if (it == m_data.cend()) {
         return -1;
     }

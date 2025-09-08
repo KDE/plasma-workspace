@@ -19,6 +19,7 @@
 
 #include <KWindowSystem>
 #include <LayerShellQt/Shell>
+#include <algorithm>
 
 using namespace Qt::StringLiterals;
 
@@ -103,7 +104,7 @@ bool Greeter::eventFilter(QObject *watched, QEvent *event)
         if (event->type() == QEvent::MouseButtonPress) {
             // check that the position is on no window
             auto *me = static_cast<QMouseEvent *>(event);
-            if (std::any_of(m_dialogs.cbegin(), m_dialogs.cend(), [me](KSMShutdownDlg *dialog) {
+            if (std::ranges::any_of(m_dialogs, [me](KSMShutdownDlg *dialog) {
                     return dialog->geometry().contains(me->globalPosition().toPoint());
                 })) {
                 return false;

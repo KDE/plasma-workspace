@@ -18,6 +18,7 @@
 
 #include <KUserFeedback/FeedbackConfigUiController>
 #include <KUserFeedback/Provider>
+#include <algorithm>
 
 #include "feedbackdata.h"
 #include "feedbacksettings.h"

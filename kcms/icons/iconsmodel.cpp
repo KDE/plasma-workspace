@@ -16,6 +16,7 @@
 #include <QFileIconProvider>
 
 #include <KIconTheme>
+#include <algorithm>
 
 #include "iconssettings.h"
 
@@ -144,7 +145,7 @@ void IconsModel::load()
     // Sort case-insensitively
     QCollator collator;
     collator.setCaseSensitivity(Qt::CaseInsensitive);
-    std::sort(m_data.begin(), m_data.end(), [&collator](const IconsModelData &a, const IconsModelData &b) {
+    std::ranges::sort(m_data, [&collator](const IconsModelData &a, const IconsModelData &b) {
         return collator.compare(a.display, b.display) < 0;
     });
 

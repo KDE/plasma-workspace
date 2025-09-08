@@ -27,6 +27,7 @@
 #include <PlasmaActivities/Stats/ResultSet>
 #include <PlasmaActivities/Stats/ResultWatcher>
 #include <PlasmaActivities/Stats/Terms>
+#include <algorithm>
 #include <qnamespace.h>
 
 #include "config-KDECI_BUILD.h"
@@ -222,7 +223,7 @@ public:
 
         QStringList ordering = thisCfgGroup.readEntry("ordering", QStringList()) + globalCfgGroup.readEntry("ordering", QStringList());
         // Normalizing all the ids
-        std::transform(ordering.begin(), ordering.end(), ordering.begin(), [&](const QString &item) {
+        std::ranges::transform(ordering, ordering.begin(), [&](const QString &item) {
             return normalizedId(item).value();
         });
 
@@ -256,7 +257,7 @@ public:
                         if (groupOrdering.length() != m_items.length()) {
                             continue;
                         }
-                        std::transform(groupOrdering.begin(), groupOrdering.end(), groupOrdering.begin(), [&](const QString &item) {
+                        std::ranges::transform(groupOrdering, groupOrdering.begin(), [&](const QString &item) {
                             return normalizedId(item).value();
                         });
                         for (const auto &item : m_items) {
@@ -284,10 +285,13 @@ public:
         }
 
         // Sorting the items in the cache
-        std::sort(m_items.begin(), m_items.end(), [&](const NormalizedId &left, const NormalizedId &right) {
-            auto leftIndex = ordering.indexOf(left.value());
-            auto rightIndex = ordering.indexOf(right.value());
-            // clang-format off
+        std::ranges::
+            sort(
+                m_items,
+                [&](const NormalizedId &left, const NormalizedId &right) {
+                    auto leftIndex = ordering.indexOf(left.value());
+                    auto rightIndex = ordering.indexOf(right.value());
+                    // clang-format off
                     return (leftIndex == -1 && rightIndex == -1) ?
                                left.value() < right.value() :
 
@@ -299,12 +303,12 @@ public:
 
                            // otherwise
                                leftIndex < rightIndex;
-            // clang-format on
-        });
+                    // clang-format on
+                });
 
         // Debugging:
         QList<QString> itemStrings(m_items.size());
-        std::transform(m_items.cbegin(), m_items.cend(), itemStrings.begin(), [](const NormalizedId &item) {
+        std::ranges::transform(m_items, itemStrings.begin(), [](const NormalizedId &item) {
             return item.value();
         });
         qCDebug(KICKER_DEBUG) << "After ordering: " << itemStrings;
@@ -629,7 +633,7 @@ void KAStatsFavoritesModel::portOldFavorites(const QStringList &_ids)
     qCDebug(KICKER_DEBUG) << "portOldFavorites" << ids;
 
     const QString activityId = QStringLiteral(":global");
-    std::for_each(ids.begin(), ids.end(), [&](const QString &id) {
+    std::ranges::for_each(ids, [&](const QString &id) {
         addFavoriteTo(id, activityId);
     });
 

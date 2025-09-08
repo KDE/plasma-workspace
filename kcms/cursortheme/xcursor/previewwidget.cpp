@@ -10,6 +10,7 @@
 #include <QQuickWindow>
 
 #include <KWindowSystem>
+#include <algorithm>
 
 #include "previewwidget.h"
 
@@ -297,7 +298,7 @@ void PreviewWidget::hoverMoveEvent(QHoverEvent *e)
         devicePixelRatio = window()->devicePixelRatio();
     }
 #endif
-    auto it = std::find_if(list.cbegin(), list.cend(), [e, devicePixelRatio](const PreviewCursor *c) {
+    auto it = std::ranges::find_if(list, [e, devicePixelRatio](const PreviewCursor *c) {
         return c->rect().contains(e->position() * devicePixelRatio);
     });
     const PreviewCursor *cursor = it != list.cend() ? *it : nullptr;

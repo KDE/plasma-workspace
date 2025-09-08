@@ -11,6 +11,7 @@
 #include <KConfigGroup>
 #include <KIO/OpenFileManagerWindowJob>
 #include <KSharedConfig>
+#include <algorithm>
 
 #include "../finder/suffixcheck.h"
 #include "imagelistmodel.h"
@@ -20,7 +21,7 @@ namespace
 {
 inline bool isChildItem(const QStringList &customPathsInKDirWatch, const QString &childPath)
 {
-    return std::any_of(customPathsInKDirWatch.cbegin(), customPathsInKDirWatch.cend(), [&childPath](const QString &customPath) {
+    return std::ranges::any_of(customPathsInKDirWatch, [&childPath](const QString &customPath) {
         if (customPath.endsWith(QDir::separator())) {
             return childPath.startsWith(customPath);
         } else {
@@ -222,7 +223,7 @@ void ImageProxyModel::commitDeletion()
     QStringList updatedList;
 
     // Check if the file still exists
-    std::copy_if(list.cbegin(), list.cend(), std::back_inserter(updatedList), [&pendingList](const QString &_p) {
+    std::ranges::copy_if(list, std::back_inserter(updatedList), [&pendingList](const QString &_p) {
         QString p = _p;
         if (constexpr QLatin1String prefix{"file://"}; p.startsWith(prefix)) {
             p.remove(0, prefix.size());

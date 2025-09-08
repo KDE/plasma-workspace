@@ -13,6 +13,7 @@
 #include <QDebug>
 #include <QDir>
 #include <QMetaObject>
+#include <algorithm>
 
 class DaysModelPrivate
 {
@@ -338,7 +339,7 @@ QVariantList DaysModel::eventsForDate(const QDate &date)
     d->qmlData.reserve(events.size());
 
     // sort events by their time and type
-    std::sort(events.begin(), events.end(), [](const CalendarEvents::EventData &a, const CalendarEvents::EventData &b) {
+    std::ranges::sort(events, [](const CalendarEvents::EventData &a, const CalendarEvents::EventData &b) {
         if (a.type() != b.type()) {
             return a.type() < b.type();
         }

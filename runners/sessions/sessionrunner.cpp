@@ -8,6 +8,7 @@
 #include "sessionrunner.h"
 
 #include <KLocalizedString>
+#include <algorithm>
 
 K_PLUGIN_CLASS_WITH_JSON(SessionRunner, "plasma-runner-sessions.json")
 
@@ -56,7 +57,7 @@ SessionRunner::SessionRunner(QObject *parent, const KPluginMetaData &metaData)
 
 static inline bool anyKeywordMatches(const QStringList &keywords, const QString &term)
 {
-    return std::any_of(keywords.cbegin(), keywords.cend(), [&term](const QString &keyword) {
+    return std::ranges::any_of(keywords, [&term](const QString &keyword) {
         return term.compare(keyword, Qt::CaseInsensitive) == 0;
     });
 }

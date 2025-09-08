@@ -25,6 +25,7 @@
 #include <QUrlQuery>
 
 #include "launchertasksmodel_p.h"
+#include <algorithm>
 #include <chrono>
 
 using namespace std::chrono_literals;
@@ -414,7 +415,7 @@ void LauncherTasksModel::setLauncherList(const QStringList &serializedLaunchers)
         }
 
         // Is the url a duplicate?
-        const auto location = std::find_if(newLaunchersOrder.begin(), newLaunchersOrder.end(), [&url](const QUrl &item) {
+        const auto location = std::ranges::find_if(newLaunchersOrder, [&url](const QUrl &item) {
             return launcherUrlsMatch(url, item, IgnoreQueryItems);
         });
 
@@ -445,11 +446,11 @@ void LauncherTasksModel::setLauncherList(const QStringList &serializedLaunchers)
     }
 
     if (newLaunchersOrder != d->launchersOrder) {
-        const bool isOrderChanged = std::all_of(newLaunchersOrder.cbegin(),
-                                                newLaunchersOrder.cend(),
-                                                [this](const QUrl &url) {
-                                                    return d->launchersOrder.contains(url);
-                                                })
+        const bool isOrderChanged = std::ranges::all_of(newLaunchersOrder,
+
+                                                        [this](const QUrl &url) {
+                                                            return d->launchersOrder.contains(url);
+                                                        })
             && newLaunchersOrder.size() == d->launchersOrder.size();
 
         if (isOrderChanged) {

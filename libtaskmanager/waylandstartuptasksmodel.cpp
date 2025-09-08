@@ -17,6 +17,7 @@
 #include <QTimer>
 #include <QUrl>
 #include <QtWaylandClient/QWaylandClientExtensionTemplate>
+#include <algorithm>
 
 using namespace Qt::StringLiterals;
 
@@ -188,7 +189,7 @@ void WaylandStartupTasksModel::Private::addActivation(PlasmaActivation *activati
 
 void WaylandStartupTasksModel::Private::removeActivation(PlasmaActivation *activation)
 {
-    auto it = std::find_if(startups.begin(), startups.end(), [activation](const Startup &startup) {
+    auto it = std::ranges::find_if(startups, [activation](const Startup &startup) {
         return startup.activation.get() == activation;
     });
     if (it == startups.end()) {

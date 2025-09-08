@@ -17,6 +17,7 @@
 
 #include <KAboutData>
 #include <KPackage/PackageLoader>
+#include <algorithm>
 
 #include "../finder/packagefinder.h"
 #include "../finder/suffixcheck.h"
@@ -119,7 +120,7 @@ static QString normalizeDirName(const QString &filePath)
 int PackageListModel::indexOf(const QUrl &url) const
 {
     const QString path = normalizeDirName(url.toLocalFile());
-    const auto it = std::find_if(m_packages.cbegin(), m_packages.cend(), [&path](const WallpaperPackage &p) {
+    const auto it = std::ranges::find_if(m_packages, [&path](const WallpaperPackage &p) {
         return path == p.package().path();
     });
 

@@ -10,6 +10,7 @@
 
 #include <QDateTime>
 #include <QSet>
+#include <algorithm>
 
 namespace TaskManager
 {
@@ -1016,7 +1017,7 @@ void TaskGroupingProxyModel::requestToggleMaximized(const QModelIndex &index)
             }
         }
 
-        std::sort(inStackingOrder.begin(), inStackingOrder.end(), [](const QModelIndex &a, const QModelIndex &b) {
+        std::ranges::sort(inStackingOrder, [](const QModelIndex &a, const QModelIndex &b) {
             return (a.data(AbstractTasksModel::StackingOrder).toInt() < b.data(AbstractTasksModel::StackingOrder).toInt());
         });
 

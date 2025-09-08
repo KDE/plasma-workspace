@@ -8,6 +8,7 @@
 #include "plasmaappletitemmodel_p.h"
 #include <KLocalizedString>
 #include <QDebug>
+#include <algorithm>
 
 #define COLUMN_COUNT 4
 
@@ -52,7 +53,7 @@ bool AbstractItem::matches(const QString &pattern) const
         return true;
     }
     const QStringList itemKeywords = keywords();
-    return std::any_of(itemKeywords.begin(), itemKeywords.end(), [&pattern](const QString &keyword) {
+    return std::ranges::any_of(itemKeywords, [&pattern](const QString &keyword) {
         return keyword.startsWith(pattern, Qt::CaseInsensitive);
     });
 }

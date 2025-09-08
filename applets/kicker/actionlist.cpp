@@ -27,6 +27,7 @@
 #include <PlasmaActivities/Stats/Cleaning>
 #include <PlasmaActivities/Stats/ResultSet>
 #include <PlasmaActivities/Stats/Terms>
+#include <algorithm>
 
 #include "containmentinterface.h"
 
@@ -481,7 +482,7 @@ bool handleAdditionalAppActions(const QString &actionId, const KService::Ptr &se
         return false;
     }
     const auto actions = actionProvider.actions();
-    auto action = std::find_if(actions.begin(), actions.end(), [&actionId](const KServiceAction &action) {
+    auto action = std::ranges::find_if(actions, [&actionId](const KServiceAction &action) {
         return action.name() == actionId;
     });
     if (action == actions.end()) {

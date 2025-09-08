@@ -43,6 +43,7 @@
 
 #include <KPackage/Package>
 #include <KPackage/PackageLoader>
+#include <algorithm>
 
 using namespace Qt::StringLiterals;
 
@@ -373,7 +374,7 @@ void InteractiveConsole::populateTemplatesMenu()
     auto templates = KPackage::PackageLoader::self()->findPackages(QStringLiteral("Plasma/LayoutTemplate"), QString(), [](const KPluginMetaData &metaData) {
         return metaData.value(u"X-Plasma-Shell") == qApp->applicationName();
     });
-    std::sort(templates.begin(), templates.end(), [](const KPluginMetaData &left, const KPluginMetaData &right) {
+    std::ranges::sort(templates, [](const KPluginMetaData &left, const KPluginMetaData &right) {
         return left.name() < right.name();
     });
     KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LayoutTemplate"));

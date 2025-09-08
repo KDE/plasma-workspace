@@ -12,6 +12,7 @@
 #include <QDBusConnection>
 #include <QStringMatcher>
 #include <QTimeZone>
+#include <algorithm>
 
 TimeZoneFilterProxy::TimeZoneFilterProxy(QObject *parent)
     : QSortFilterProxyModel(parent)
@@ -222,7 +223,7 @@ QHash<int, QByteArray> TimeZoneModel::roleNames() const
 
 void TimeZoneModel::sortTimeZones()
 {
-    std::sort(m_selectedTimeZones.begin(), m_selectedTimeZones.end(), [this](const QString &a, const QString &b) {
+    std::ranges::sort(m_selectedTimeZones, [this](const QString &a, const QString &b) {
         return m_offsetData.value(a) < m_offsetData.value(b);
     });
 }

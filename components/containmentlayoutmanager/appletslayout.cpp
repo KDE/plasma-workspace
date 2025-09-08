@@ -19,6 +19,7 @@
 #include <Plasma/Containment>
 #include <Plasma/Corona>
 #include <PlasmaQuick/AppletQuickItem>
+#include <algorithm>
 #include <chrono>
 
 using namespace std::chrono_literals;
@@ -602,7 +603,7 @@ void AppletsLayout::mousePressEvent(QMouseEvent *event)
     // If any container is in edit mode, accept the press event so we can
     // cancel the edit mode. If not, don't accept the event so it can be
     // passed on to other parts.
-    if (const auto children = childItems(); std::none_of(children.begin(), children.end(), [](QQuickItem *child) {
+    if (const auto children = childItems(); std::ranges::none_of(children, [](QQuickItem *child) {
             auto container = qobject_cast<ItemContainer *>(child);
             return container ? container->editMode() : false;
         })) {

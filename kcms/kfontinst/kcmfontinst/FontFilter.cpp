@@ -19,6 +19,7 @@
 #include <QSet>
 #include <QString>
 #include <QStyleOption>
+#include <algorithm>
 
 using namespace Qt::StringLiterals;
 

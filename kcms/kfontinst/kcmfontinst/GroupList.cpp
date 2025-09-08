@@ -23,6 +23,7 @@
 #include <QStyledItemDelegate>
 #include <QTextStream>
 #include <QTimer>
+#include <algorithm>
 #include <stdlib.h>
 #include <unistd.h>
 #include <utime.h>
@@ -663,7 +664,7 @@ void CGroupList::sort(int, Qt::SortOrder order)
 {
     m_sortOrder = order;
 
-    std::sort(m_groups.begin(), m_groups.end(), Qt::AscendingOrder == order ? groupNameLessThan : groupNameGreaterThan);
+    std::ranges::sort(m_groups, Qt::AscendingOrder == order ? groupNameLessThan : groupNameGreaterThan);
 
     Q_EMIT layoutChanged();
 }

@@ -18,6 +18,7 @@
 
 #include <KIO/MkdirJob>
 #include <KIO/StoredTransferJob>
+#include <algorithm>
 
 using namespace Qt::StringLiterals;
 
@@ -69,7 +70,7 @@ UpdateDatabaseJob *UpdateDatabaseJob::updateClipboard(QObject *parent,
             continue; // Already saved
         }
 
-        if (std::none_of(s_acceptableTextFormatPrefixes.begin(), s_acceptableTextFormatPrefixes.end(), [&format](QStringView prefix) {
+        if (std::ranges::none_of(s_acceptableTextFormatPrefixes, [&format](QStringView prefix) {
                 return format.startsWith(prefix);
             })) {
             // Don't create un-asked for DDE links in LibreOffice apps;

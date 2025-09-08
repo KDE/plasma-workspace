@@ -25,6 +25,7 @@
 #include <QGuiApplication>
 #include <QStyle>
 #include <QStyleFactory>
+#include <algorithm>
 
 #include "config-X11.h"
 #if HAVE_X11
@@ -63,7 +64,7 @@ QString configValue(KSharedConfigPtr config, const QString &groupPath, const QSt
 
 bool configProvides(KSharedConfigPtr config, const QString &groupPath, const QStringList &entries)
 {
-    return std::any_of(entries.cbegin(), entries.cend(), [config, groupPath](const QString &entry) {
+    return std::ranges::any_of(entries, [config, groupPath](const QString &entry) {
         return !configValue(config, groupPath, entry).isEmpty();
     });
 }

@@ -34,6 +34,7 @@
 #include <sys/socket.h>
 #include <sys/un.h>
 
+#include <algorithm>
 #include <cassert>
 #include <cerrno>
 #include <climits>
@@ -1060,14 +1061,14 @@ void KSMServer::tryRestore()
         // We only discard the entries here because a violating app will get all entries disabled, not just the ones in
         // excess. So we need to loop all entries twice: once to establish the in-excess apps, and again to actually start
         // (or not).
-        const bool dontStart = std::any_of(dontStartEntries.cbegin(), dontStartEntries.cend(), [&entry](const auto &dontStartEntry) {
+        const bool dontStart = std::ranges::any_of(dontStartEntries, [&entry](const auto &dontStartEntry) {
             return dontStartEntry.clientId == entry.clientId;
         });
         if (dontStart) {
             continue;
         }
 
-        const bool alreadyStarted = std::any_of(clients.cbegin(), clients.cend(), [&entry](const auto &client) {
+        const bool alreadyStarted = std::ranges::any_of(clients, [&entry](const auto &client) {
             return QString::fromLocal8Bit(client->clientId()) == entry.clientId;
         });
         if (alreadyStarted) {

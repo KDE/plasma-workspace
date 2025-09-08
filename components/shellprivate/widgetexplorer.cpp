@@ -31,6 +31,7 @@
 
 #include <KPackage/Package>
 #include <KPackage/PackageJob>
+#include <algorithm>
 
 #include "config-workspace.h"
 #include "kcategorizeditemsviewmodels_p.h"
@@ -130,7 +131,7 @@ QString readTranslatedCategory(const QString &category, const QString &plugin)
         kli18nc("applet category", "Clipboard"),
         kli18nc("applet category", "Tasks"),
     };
-    const auto it = std::find_if(possibleTranslatslations.begin(), possibleTranslatslations.end(), [&category](const KLazyLocalizedString &str) {
+    const auto it = std::ranges::find_if(possibleTranslatslations, [&category](const KLazyLocalizedString &str) {
         return category == QLatin1String(str.untranslatedText());
     });
     if (it == possibleTranslatslations.cend()) {
@@ -179,7 +180,7 @@ void WidgetExplorerPrivate::initFilters()
             }
         }
     }
-    std::sort(categories.begin(), categories.end(), [](const CategoryInfo &left, const CategoryInfo &right) {
+    std::ranges::sort(categories, [](const CategoryInfo &left, const CategoryInfo &right) {
         return QString::localeAwareCompare(left.translated, right.translated) < 0;
     });
     auto end = std::unique(categories.begin(), categories.end(), [](const CategoryInfo left, const CategoryInfo right) {

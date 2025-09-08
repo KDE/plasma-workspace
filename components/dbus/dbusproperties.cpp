@@ -11,6 +11,7 @@
 #include <QDBusPendingCallWatcher>
 #include <QDBusPendingReply>
 #include <QXmlStreamReader>
+#include <algorithm>
 
 #include "dbusdecoder.h"
 #include "dbusencoder.h"
@@ -204,7 +205,7 @@ void DBusPropertyMap::refreshCallback(QDBusPendingCallWatcher *watcher)
     }
 
     QStringList invalidatedProperties;
-    std::copy_if(lastKeys.begin(), lastKeys.end(), std::back_inserter(invalidatedProperties), [&properties](const QString &key) {
+    std::ranges::copy_if(lastKeys, std::back_inserter(invalidatedProperties), [&properties](const QString &key) {
         return !properties.contains(key);
     });
 

@@ -18,6 +18,7 @@
 #include <QLineEdit>
 #include <QListView>
 #include <QWidgetAction>
+#include <algorithm>
 
 #include <abstracttasksmodel.h>
 #include <dbusmenuimporter.h>
@@ -327,7 +328,7 @@ void AppMenuModel::updateApplicationMenu(const QString &serviceName, const QStri
             }
 
             const auto actions = m_menu->actions();
-            auto it = std::find(actions.begin(), actions.end(), action);
+            auto it = std::ranges::find(actions, action);
             if (it != actions.end()) {
                 Q_EMIT requestActivateIndex(it - actions.begin());
             }

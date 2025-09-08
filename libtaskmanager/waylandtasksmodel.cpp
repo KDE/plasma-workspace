@@ -28,6 +28,7 @@
 #include <QWaylandClientExtension>
 #include <QWindow>
 #include <QtConcurrentRun>
+#include <algorithm>
 #include <qpa/qplatformwindow_p.h>
 
 #include <fcntl.h>
@@ -549,7 +550,7 @@ void WaylandTasksModel::Private::initWayland()
 
 auto WaylandTasksModel::Private::findWindow(PlasmaWindow *window) const
 {
-    return std::find_if(windows.begin(), windows.end(), [window](const std::unique_ptr<PlasmaWindow> &candidate) {
+    return std::ranges::find_if(windows, [window](const std::unique_ptr<PlasmaWindow> &candidate) {
         return candidate.get() == window;
     });
 }
@@ -562,7 +563,7 @@ void WaylandTasksModel::Private::addWindow(PlasmaWindow *window)
 
     auto removeWindow = [window, this] {
         // findWindow() is const, we need a non-const iterator for the "take" below.
-        auto it = std::find_if(windows.begin(), windows.end(), [window](const std::unique_ptr<PlasmaWindow> &candidate) {
+        auto it = std::ranges::find_if(windows, [window](const std::unique_ptr<PlasmaWindow> &candidate) {
             return candidate.get() == window;
         });
 

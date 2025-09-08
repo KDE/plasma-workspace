@@ -26,6 +26,7 @@
 #include <KX11Extras>
 
 #include <LayerShellQt/Window>
+#include <algorithm>
 #include <qnamespace.h>
 
 #include "appadaptor.h"
@@ -171,12 +172,12 @@ void View::positionOnScreen()
         QDBusReply<QString> reply = QDBusConnection::sessionBus().call(message);
         if (reply.isValid()) {
             const QString activeOutputName = reply.value();
-            screenIt = std::find_if(screens.cbegin(), screens.cend(), [&activeOutputName](QScreen *screen) {
+            screenIt = std::ranges::find_if(screens, [&activeOutputName](QScreen *screen) {
                 return screen->name() == activeOutputName;
             });
         }
     } else if (KWindowSystem::isPlatformX11()) {
-        screenIt = std::find_if(screens.cbegin(), screens.cend(), [](QScreen *screen) {
+        screenIt = std::ranges::find_if(screens, [](QScreen *screen) {
             return screen->geometry().contains(QCursor::pos(screen));
         });
     }

@@ -19,6 +19,7 @@
 #include <QDBusPendingReply>
 #include <QGuiApplication>
 #include <QWaylandClientExtension>
+#include <algorithm>
 
 #include <config-X11.h>
 
@@ -359,7 +360,7 @@ VirtualDesktopInfo::WaylandPrivate::WaylandPrivate()
 
 auto VirtualDesktopInfo::WaylandPrivate::findDesktop(const QString &id) const
 {
-    return std::find_if(virtualDesktops.begin(), virtualDesktops.end(), [&id](const std::unique_ptr<PlasmaVirtualDesktop> &desktop) {
+    return std::ranges::find_if(virtualDesktops, [&id](const std::unique_ptr<PlasmaVirtualDesktop> &desktop) {
         return desktop->id == id;
     });
 }
@@ -420,7 +421,7 @@ void VirtualDesktopInfo::WaylandPrivate::init()
         }
 
         if (reordered) {
-            std::sort(virtualDesktops.begin(), virtualDesktops.end(), [](std::unique_ptr<PlasmaVirtualDesktop> &a, std::unique_ptr<PlasmaVirtualDesktop> &b) {
+            std::ranges::sort(virtualDesktops, [](std::unique_ptr<PlasmaVirtualDesktop> &a, std::unique_ptr<PlasmaVirtualDesktop> &b) {
                 return a->position < b->position;
             });
 
@@ -478,7 +479,7 @@ QVariantList VirtualDesktopInfo::WaylandPrivate::desktopIds() const
     QVariantList ids;
     ids.reserve(virtualDesktops.size());
 
-    std::transform(virtualDesktops.cbegin(), virtualDesktops.cend(), std::back_inserter(ids), [](const std::unique_ptr<PlasmaVirtualDesktop> &desktop) {
+    std::ranges::transform(virtualDesktops, std::back_inserter(ids), [](const std::unique_ptr<PlasmaVirtualDesktop> &desktop) {
         return desktop->id;
     });
     return ids;
@@ -492,7 +493,7 @@ QStringList VirtualDesktopInfo::WaylandPrivate::desktopNames() const
     QStringList names;
     names.reserve(virtualDesktops.size());
 
-    std::transform(virtualDesktops.cbegin(), virtualDesktops.cend(), std::back_inserter(names), [](const std::unique_ptr<PlasmaVirtualDesktop> &desktop) {
+    std::ranges::transform(virtualDesktops, std::back_inserter(names), [](const std::unique_ptr<PlasmaVirtualDesktop> &desktop) {
         return desktop->name;
     });
     return names;

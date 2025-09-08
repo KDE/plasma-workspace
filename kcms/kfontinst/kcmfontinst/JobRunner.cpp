@@ -33,6 +33,7 @@
 #include <QTimer>
 #include <QUrlQuery>
 #include <QVBoxLayout>
+#include <algorithm>
 
 #include <private/qtx11extras_p.h>
 
@@ -337,7 +338,7 @@ int CJobRunner::exec(ECommand cmd, const ItemList &urls, bool destIsSystem)
     m_destIsSystem = destIsSystem;
     m_urls = urls;
     if (CMD_INSTALL == cmd) {
-        std::sort(m_urls.begin(), m_urls.end()); // Sort list of fonts so that we have type1 fonts followed by their metrics...
+        std::ranges::sort(m_urls); // Sort list of fonts so that we have type1 fonts followed by their metrics...
     } else if (CMD_MOVE == cmd) {
         addEnableActions(m_urls);
     }

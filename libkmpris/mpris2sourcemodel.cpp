@@ -13,6 +13,7 @@
 #include <QDBusPendingReply>
 #include <QDBusServiceWatcher>
 #include <QStringList>
+#include <algorithm>
 
 #include "libkmpris_debug.h"
 #include "playercontainer.h"
@@ -237,7 +238,7 @@ void Mpris2SourceModel::onServiceNamesFetched(QDBusPendingCallWatcher *watcher)
             // NB: _disappearing_ between sending this call and doing
             // this processing is fine
             const QString sourceName = serviceName.sliced(MPRIS2_PREFIX.size());
-            const bool exist = std::any_of(m_containers.cbegin(), m_containers.cend(), [&sourceName](PlayerContainer *c) {
+            const bool exist = std::ranges::any_of(m_containers, [&sourceName](PlayerContainer *c) {
                 return c->objectName() == sourceName;
             });
             if (!exist && !m_pendingContainers.contains(sourceName)) {
@@ -267,99 +268,99 @@ void Mpris2SourceModel::onInitialFetchFinished(PlayerContainer *container)
 
     // Property bindings
     connect(container, &AbstractPlayerContainer::canControlChanged, this, [this] {
-        const int row = std::distance(m_containers.cbegin(), std::find(m_containers.cbegin(), m_containers.cend(), sender()));
+        const int row = std::distance(m_containers.begin(), std::ranges::find(m_containers, sender()));
         Q_EMIT dataChanged(index(row, 0), index(row, 0), {CanControlRole});
     });
     connect(container, &AbstractPlayerContainer::trackChanged, this, [this] {
-        const int row = std::distance(m_containers.cbegin(), std::find(m_containers.cbegin(), m_containers.cend(), sender()));
+        const int row = std::distance(m_containers.begin(), std::ranges::find(m_containers, sender()));
         Q_EMIT dataChanged(index(row, 0), index(row, 0), {TrackRole});
     });
     connect(container, &AbstractPlayerContainer::canGoNextChanged, this, [this] {
-        const int row = std::distance(m_containers.cbegin(), std::find(m_containers.cbegin(), m_containers.cend(), sender()));
+        const int row = std::distance(m_containers.begin(), std::ranges::find(m_containers, sender()));
         Q_EMIT dataChanged(index(row, 0), index(row, 0), {CanGoNextRole});
     });
     connect(container, &AbstractPlayerContainer::canGoPreviousChanged, this, [this] {
-        const int row = std::distance(m_containers.cbegin(), std::find(m_containers.cbegin(), m_containers.cend(), sender()));
+        const int row = std::distance(m_containers.begin(), std::ranges::find(m_containers, sender()));
         Q_EMIT dataChanged(index(row, 0), index(row, 0), {CanGoPreviousRole});
     });
     connect(container, &AbstractPlayerContainer::canPlayChanged, this, [this] {
-        const int row = std::distance(m_containers.cbegin(), std::find(m_containers.cbegin(), m_containers.cend(), sender()));
+        const int row = std::distance(m_containers.begin(), std::ranges::find(m_containers, sender()));
         Q_EMIT dataChanged(index(row, 0), index(row, 0), {CanPlayRole});
     });
     connect(container, &AbstractPlayerContainer::canPauseChanged, this, [this] {
-        const int row = std::distance(m_containers.cbegin(), std::find(m_containers.cbegin(), m_containers.cend(), sender()));
+        const int row = std::distance(m_containers.begin(), std::ranges::find(m_containers, sender()));
         Q_EMIT dataChanged(index(row, 0), index(row, 0), {CanPauseRole});
     });
     connect(container, &AbstractPlayerContainer::canStopChanged, this, [this] {
-        const int row = std::distance(m_containers.cbegin(), std::find(m_containers.cbegin(), m_containers.cend(), sender()));
+        const int row = std::distance(m_containers.begin(), std::ranges::find(m_containers, sender()));
         Q_EMIT dataChanged(index(row, 0), index(row, 0), {CanStopRole});
     });
     connect(container, &AbstractPlayerContainer::canSeekChanged, this, [this] {
-        const int row = std::distance(m_containers.cbegin(), std::find(m_containers.cbegin(), m_containers.cend(), sender()));
+        const int row = std::distance(m_containers.begin(), std::ranges::find(m_containers, sender()));
         Q_EMIT dataChanged(index(row, 0), index(row, 0), {CanSeekRole});
     });
     connect(container, &AbstractPlayerContainer::loopStatusChanged, this, [this] {
-        const int row = std::distance(m_containers.cbegin(), std::find(m_containers.cbegin(), m_containers.cend(), sender()));
+        const int row = std::distance(m_containers.begin(), std::ranges::find(m_containers, sender()));
         Q_EMIT dataChanged(index(row, 0), index(row, 0), {LoopStatusRole});
     });
     connect(container, &AbstractPlayerContainer::playbackStatusChanged, this, [this] {
-        const int row = std::distance(m_containers.cbegin(), std::find(m_containers.cbegin(), m_containers.cend(), sender()));
+        const int row = std::distance(m_containers.begin(), std::ranges::find(m_containers, sender()));
         Q_EMIT dataChanged(index(row, 0), index(row, 0), {PlaybackStatusRole});
     });
     connect(container, &AbstractPlayerContainer::positionChanged, this, [this] {
-        const int row = std::distance(m_containers.cbegin(), std::find(m_containers.cbegin(), m_containers.cend(), sender()));
+        const int row = std::distance(m_containers.begin(), std::ranges::find(m_containers, sender()));
         Q_EMIT dataChanged(index(row, 0), index(row, 0), {PositionRole});
     });
     connect(container, &AbstractPlayerContainer::rateChanged, this, [this] {
-        const int row = std::distance(m_containers.cbegin(), std::find(m_containers.cbegin(), m_containers.cend(), sender()));
+        const int row = std::distance(m_containers.begin(), std::ranges::find(m_containers, sender()));
         Q_EMIT dataChanged(index(row, 0), index(row, 0), {RateRole});
     });
     connect(container, &AbstractPlayerContainer::shuffleChanged, this, [this] {
-        const int row = std::distance(m_containers.cbegin(), std::find(m_containers.cbegin(), m_containers.cend(), sender()));
+        const int row = std::distance(m_containers.begin(), std::ranges::find(m_containers, sender()));
         Q_EMIT dataChanged(index(row, 0), index(row, 0), {ShuffleRole});
     });
     connect(container, &AbstractPlayerContainer::volumeChanged, this, [this] {
-        const int row = std::distance(m_containers.cbegin(), std::find(m_containers.cbegin(), m_containers.cend(), sender()));
+        const int row = std::distance(m_containers.begin(), std::ranges::find(m_containers, sender()));
         Q_EMIT dataChanged(index(row, 0), index(row, 0), {VolumeRole});
     });
     connect(container, &AbstractPlayerContainer::artUrlChanged, this, [this] {
-        const int row = std::distance(m_containers.cbegin(), std::find(m_containers.cbegin(), m_containers.cend(), sender()));
+        const int row = std::distance(m_containers.begin(), std::ranges::find(m_containers, sender()));
         Q_EMIT dataChanged(index(row, 0), index(row, 0), {ArtUrlRole});
     });
     connect(container, &AbstractPlayerContainer::artistChanged, this, [this] {
-        const int row = std::distance(m_containers.cbegin(), std::find(m_containers.cbegin(), m_containers.cend(), sender()));
+        const int row = std::distance(m_containers.begin(), std::ranges::find(m_containers, sender()));
         Q_EMIT dataChanged(index(row, 0), index(row, 0), {ArtistRole});
     });
     connect(container, &AbstractPlayerContainer::albumChanged, this, [this] {
-        const int row = std::distance(m_containers.cbegin(), std::find(m_containers.cbegin(), m_containers.cend(), sender()));
+        const int row = std::distance(m_containers.begin(), std::ranges::find(m_containers, sender()));
         Q_EMIT dataChanged(index(row, 0), index(row, 0), {AlbumRole});
     });
     connect(container, &AbstractPlayerContainer::lengthChanged, this, [this] {
-        const int row = std::distance(m_containers.cbegin(), std::find(m_containers.cbegin(), m_containers.cend(), sender()));
+        const int row = std::distance(m_containers.begin(), std::ranges::find(m_containers, sender()));
         Q_EMIT dataChanged(index(row, 0), index(row, 0), {LengthRole});
     });
     connect(container, &AbstractPlayerContainer::canQuitChanged, this, [this] {
-        const int row = std::distance(m_containers.cbegin(), std::find(m_containers.cbegin(), m_containers.cend(), sender()));
+        const int row = std::distance(m_containers.begin(), std::ranges::find(m_containers, sender()));
         Q_EMIT dataChanged(index(row, 0), index(row, 0), {CanQuitRole});
     });
     connect(container, &AbstractPlayerContainer::canRaiseChanged, this, [this] {
-        const int row = std::distance(m_containers.cbegin(), std::find(m_containers.cbegin(), m_containers.cend(), sender()));
+        const int row = std::distance(m_containers.begin(), std::ranges::find(m_containers, sender()));
         Q_EMIT dataChanged(index(row, 0), index(row, 0), {CanRaiseRole});
     });
     connect(container, &AbstractPlayerContainer::canSetFullscreenChanged, this, [this] {
-        const int row = std::distance(m_containers.cbegin(), std::find(m_containers.cbegin(), m_containers.cend(), sender()));
+        const int row = std::distance(m_containers.begin(), std::ranges::find(m_containers, sender()));
         Q_EMIT dataChanged(index(row, 0), index(row, 0), {CanSetFullscreenRole});
     });
     connect(container, &AbstractPlayerContainer::desktopEntryChanged, this, [this] {
-        const int row = std::distance(m_containers.cbegin(), std::find(m_containers.cbegin(), m_containers.cend(), sender()));
+        const int row = std::distance(m_containers.begin(), std::ranges::find(m_containers, sender()));
         Q_EMIT dataChanged(index(row, 0), index(row, 0), {DesktopEntryRole, IconNameRole});
     });
     connect(container, &AbstractPlayerContainer::identityChanged, this, [this] {
-        const int row = std::distance(m_containers.cbegin(), std::find(m_containers.cbegin(), m_containers.cend(), sender()));
+        const int row = std::distance(m_containers.begin(), std::ranges::find(m_containers, sender()));
         Q_EMIT dataChanged(index(row, 0), index(row, 0), {IdentityRole});
     });
     connect(container, &AbstractPlayerContainer::kdePidChanged, this, [this] {
-        const int row = std::distance(m_containers.cbegin(), std::find(m_containers.cbegin(), m_containers.cend(), sender()));
+        const int row = std::distance(m_containers.begin(), std::ranges::find(m_containers, sender()));
         Q_EMIT dataChanged(index(row, 0), index(row, 0), {KDEPidRole});
     });
 }
@@ -393,7 +394,7 @@ void Mpris2SourceModel::addMediaPlayer(const QString &serviceName, const QString
 
 void Mpris2SourceModel::removeMediaPlayer(const QString &sourceName)
 {
-    auto it = std::find_if(m_containers.begin(), m_containers.end(), [&sourceName](PlayerContainer *c) {
+    auto it = std::ranges::find_if(m_containers, [&sourceName](PlayerContainer *c) {
         return c->objectName() == sourceName;
     });
     if (it == m_containers.end()) {

@@ -30,6 +30,7 @@
 #include <QStandardItemModel>
 #include <QStandardPaths>
 #include <QTemporaryFile>
+#include <algorithm>
 
 #include "desktopthemedata.h"
 #include "filterproxymodel.h"
@@ -235,7 +236,7 @@ void KCMDesktopTheme::processPendingDeletions()
     const auto pendingDeletions = m_model->match(m_model->index(0, 0), ThemesModel::PendingDeletionRole, true, -1 /*all*/);
     QList<QPersistentModelIndex> persistentPendingDeletions;
     // turn into persistent model index so we can delete as we go
-    std::transform(pendingDeletions.begin(), pendingDeletions.end(), std::back_inserter(persistentPendingDeletions), [](const QModelIndex &idx) {
+    std::ranges::transform(pendingDeletions, std::back_inserter(persistentPendingDeletions), [](const QModelIndex &idx) {
         return QPersistentModelIndex(idx);
     });
 

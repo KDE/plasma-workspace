@@ -19,6 +19,7 @@
 #include <KWayland/Client/surface.h>
 #include <KWindowSystem>
 #include <KX11Extras>
+#include <algorithm>
 
 #include "historymodel.h"
 #include "klipper.h"
@@ -108,7 +109,7 @@ void KlipperPopup::positionOnScreen()
 {
     const QList<QScreen *> screens = QGuiApplication::screens();
     if (KWindowSystem::isPlatformX11()) {
-        auto screenIt = std::find_if(screens.cbegin(), screens.cend(), [](QScreen *screen) {
+        auto screenIt = std::ranges::find_if(screens, [](QScreen *screen) {
             return screen->geometry().contains(QCursor::pos(screen));
         });
         QScreen *const shownOnScreen = screenIt != screens.cend() ? *screenIt : QGuiApplication::primaryScreen();
@@ -128,7 +129,7 @@ void KlipperPopup::positionOnScreen()
             QDBusReply<QString> reply = QDBusConnection::sessionBus().call(message);
             if (reply.isValid()) {
                 const QString activeOutputName = reply.value();
-                auto screenIt = std::find_if(screens.cbegin(), screens.cend(), [&activeOutputName](QScreen *screen) {
+                auto screenIt = std::ranges::find_if(screens, [&activeOutputName](QScreen *screen) {
                     return screen->name() == activeOutputName;
                 });
                 setScreen(screenIt != screens.cend() ? *screenIt : QGuiApplication::primaryScreen());

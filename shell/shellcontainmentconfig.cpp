@@ -19,6 +19,7 @@
 
 #include "screenpool.h"
 #include "shellcorona.h"
+#include <algorithm>
 #include <chrono>
 
 using namespace std::chrono_literals;
@@ -126,7 +127,7 @@ void ScreenPoolModel::load()
     }
 
     QList sortedIds = unknownScreenIds.values();
-    std::sort(sortedIds.begin(), sortedIds.end());
+    std::ranges::sort(sortedIds);
     for (int id : sortedIds) {
         Data d;
         d.id = id;
@@ -291,7 +292,7 @@ void ShellContainmentModel::moveContainementToScreen(unsigned int contId, int ne
         return;
     }
 
-    auto containmentIt = std::find_if(m_containments.begin(), m_containments.end(), [contId](Data &d) {
+    auto containmentIt = std::ranges::find_if(m_containments, [contId](Data &d) {
         return d.id == contId;
     });
     if (containmentIt == m_containments.end()) {
@@ -318,7 +319,7 @@ void ShellContainmentModel::moveContainementToScreen(unsigned int contId, int ne
 
 bool ShellContainmentModel::findContainment(unsigned int containmentId) const
 {
-    return m_containments.cend() != std::find_if(m_containments.cbegin(), m_containments.cend(), [containmentId](const Data &d) {
+    return m_containments.cend() != std::ranges::find_if(m_containments, [containmentId](const Data &d) {
                return d.id == containmentId;
            });
 }

@@ -68,6 +68,7 @@
 #include "scripting/scriptengine.h"
 #endif
 
+#include <algorithm>
 #include <chrono>
 
 #ifndef NDEBUG
@@ -1052,7 +1053,7 @@ void ShellCorona::slotCyclePanelFocus()
         // More than one panel and the current panel is not the last panel,
         // move focus to next panel.
         if (activePanel != m_panelViews.last()) {
-            auto viewIt = std::find_if(m_panelViews.cbegin(), m_panelViews.cend(), [activePanel](const PanelView *panel) {
+            auto viewIt = std::ranges::find_if(m_panelViews, [activePanel](const PanelView *panel) {
                 return activePanel == panel;
             });
 
@@ -1300,7 +1301,7 @@ void ShellCorona::removeDesktop(DesktopView *desktopView)
 {
     const int screenId = desktopView->containment()->lastScreen();
 
-    auto result = std::find_if(m_desktopViewForScreen.begin(), m_desktopViewForScreen.end(), [desktopView](DesktopView *v) {
+    auto result = std::ranges::find_if(m_desktopViewForScreen, [desktopView](DesktopView *v) {
         return v == desktopView;
     });
 
@@ -2101,7 +2102,7 @@ Plasma::Containment *ShellCorona::setContainmentTypeForScreen(int screen, const 
         return oldContainment;
     }
 
-    auto viewIt = std::find_if(m_desktopViewForScreen.cbegin(), m_desktopViewForScreen.cend(), [oldContainment](const DesktopView *v) {
+    auto viewIt = std::ranges::find_if(m_desktopViewForScreen, [oldContainment](const DesktopView *v) {
         return v->containment() == oldContainment;
     });
 
@@ -2487,7 +2488,7 @@ Plasma::Containment *ShellCorona::addPanel(const QString &plugin)
         const auto screens = QGuiApplication::screens();
         auto screenIt = screens.cend();
         const QString activeOutputName = reply.value();
-        screenIt = std::find_if(screens.cbegin(), screens.cend(), [&activeOutputName](QScreen *screen) {
+        screenIt = std::ranges::find_if(screens, [&activeOutputName](QScreen *screen) {
             return screen->name() == activeOutputName;
         });
         if (screenIt != screens.cend()) {

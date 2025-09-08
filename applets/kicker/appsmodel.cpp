@@ -18,6 +18,7 @@
 #include <KLocalizedString>
 #include <KSharedConfig>
 #include <KSycoca>
+#include <algorithm>
 #include <chrono>
 
 using namespace std::chrono_literals;
@@ -84,7 +85,7 @@ AppsModel::AppsModel(const QList<AbstractEntry *> &entryList, bool deleteEntries
                 && static_cast<const AppEntry *>(entry)->service()->storageId() == static_cast<const AppEntry *>(suggestedEntry)->service()->storageId();
         };
 
-        const bool found = std::find_if(m_entryList.cbegin(), m_entryList.cend(), sameStorageId) != m_entryList.cend();
+        const bool found = std::ranges::find_if(m_entryList, sameStorageId) != m_entryList.cend();
 
         if (!found) {
             m_entryList << suggestedEntry;
@@ -497,7 +498,7 @@ void AppsModel::refresh()
 
 static bool containsSameStorageId(const QList<AbstractEntry *> &entryList, const KService::Ptr &service)
 {
-    return std::any_of(entryList.cbegin(), entryList.cend(), [=](const AbstractEntry *entry) {
+    return std::ranges::any_of(entryList, [=](const AbstractEntry *entry) {
         return entry->type() == AbstractEntry::RunnableType && static_cast<const AppEntry *>(entry)->service()->storageId() == service->storageId();
     });
 }
@@ -744,7 +745,7 @@ void AppsModel::sortEntries(QList<AbstractEntry *> &entryList)
 {
     QCollator c;
 
-    std::sort(entryList.begin(), entryList.end(), [&c](AbstractEntry *a, AbstractEntry *b) {
+    std::ranges::sort(entryList, [&c](AbstractEntry *a, AbstractEntry *b) {
         if (a->type() != b->type()) {
             return a->type() > b->type();
         } else {

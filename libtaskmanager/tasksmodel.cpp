@@ -25,6 +25,7 @@
 #include <QTimer>
 #include <QUrl>
 
+#include <algorithm>
 #include <numeric>
 #include <optional>
 
@@ -510,7 +511,7 @@ void TasksModel::Private::updateManualSortMap()
 
         // Full sort.
         TasksModelLessThan lt(concatProxyModel, q, false);
-        std::stable_sort(sortedPreFilterRows.begin(), sortedPreFilterRows.end(), lt);
+        std::ranges::stable_sort(sortedPreFilterRows, lt);
 
         // Consolidate sort map entries for groups.
         if (q->groupMode() != GroupDisabled) {
@@ -530,7 +531,7 @@ void TasksModel::Private::updateManualSortMap()
     if (separateLaunchers) {
         // Sort only launchers.
         TasksModelLessThan lt(concatProxyModel, q, true);
-        std::stable_sort(sortedPreFilterRows.begin(), sortedPreFilterRows.end(), lt);
+        std::ranges::stable_sort(sortedPreFilterRows, lt);
         // Otherwise process any entries in the insert queue and move them intelligently
         // in the sort map.
     } else {
@@ -1940,7 +1941,7 @@ void TasksModel::syncLaunchers()
         // We're going to write back launcher model entries in the sort
         // map in concat model order, matching the reordered launcher list
         // we're about to pass down.
-        std::sort(sortMapIndices.begin(), sortMapIndices.end());
+        std::ranges::sort(sortMapIndices);
 
         for (int i = 0; i < sortMapIndices.count(); ++i) {
             d->sortedPreFilterRows.replace(sortMapIndices.at(i), preFilterRows.at(i));

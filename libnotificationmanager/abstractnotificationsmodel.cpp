@@ -214,7 +214,7 @@ void AbstractNotificationsModel::Private::removeRows(const QList<int> &rows)
     }
 
     QList<int> rowsToBeRemoved(rows);
-    std::sort(rowsToBeRemoved.begin(), rowsToBeRemoved.end());
+    std::ranges::sort(rowsToBeRemoved);
 
     QList<QPair<int, int>> clearQueue;
 

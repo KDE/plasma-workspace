@@ -141,7 +141,7 @@ QVariant SourcesModel::data(const QModelIndex &index, int role) const
             return event->isDefaults();
         case ShowIconsRole:
             // We show the icons when at least one of the events specifies an icon name
-            return std::any_of(events.cbegin(), events.cend(), [](auto *event) {
+            return std::ranges::any_of(events, [](auto *event) {
                 return !event->iconName().isEmpty();
             });
         }
@@ -163,7 +163,7 @@ QVariant SourcesModel::data(const QModelIndex &index, int role) const
     case DesktopEntryRole:
         return source.desktopEntry;
     case IsDefaultRole:
-        return source.isDefault && std::all_of(source.events.cbegin(), source.events.cend(), [](auto event) {
+        return source.isDefault && std::ranges::all_of(source.events, [](auto event) {
                    return event->isDefaults();
                });
     }
@@ -311,7 +311,7 @@ void SourcesModel::load()
         // `QStandardPaths` follows the order of precedence given by `$XDG_DATA_DIRS
         // (more priority goest first), but for `addConfigSources() it is the opposite
         QStringList configSources = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("%2/%1").arg(fileName).arg(dirName));
-        std::reverse(configSources.begin(), configSources.end());
+        std::ranges::reverse(configSources);
         config->addConfigSources(configSources);
 
         KConfigGroup globalGroup(config, QLatin1String("Global"));
@@ -347,7 +347,7 @@ void SourcesModel::load()
             const QString eventId = s_eventGroupRegExp.match(group).captured(1);
             events.append(new NotificationManager::EventSettings(config, eventId, this));
         }
-        std::sort(events.begin(), events.end(), [&collator](NotificationManager::EventSettings *a, NotificationManager::EventSettings *b) {
+        std::ranges::sort(events, [&collator](NotificationManager::EventSettings *a, NotificationManager::EventSettings *b) {
             return collator.compare(a->name(), b->name()) < 0;
         });
         source.events = events;
@@ -397,7 +397,7 @@ void SourcesModel::load()
         desktopEntries.append(service->desktopEntryName());
     }
 
-    std::sort(appsData.begin(), appsData.end(), [&collator](const SourceData &a, const SourceData &b) {
+    std::ranges::sort(appsData, [&collator](const SourceData &a, const SourceData &b) {
         return collator.compare(a.display(), b.display()) < 0;
     });
 
@@ -412,7 +412,7 @@ void SourcesModel::load()
         .events = {},
     };
 
-    std::sort(servicesData.begin(), servicesData.end(), [&collator](const SourceData &a, const SourceData &b) {
+    std::ranges::sort(servicesData, [&collator](const SourceData &a, const SourceData &b) {
         return collator.compare(a.display(), b.display()) < 0;
     });
 

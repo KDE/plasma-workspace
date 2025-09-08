@@ -7,6 +7,7 @@
 #include <KConfigGroup>
 #include <KGlobalAccel>
 #include <KSharedConfig>
+#include <algorithm>
 #include <cstdlib>
 
 #include <QAction>

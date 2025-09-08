@@ -7,6 +7,7 @@
 
 #include <QMimeData>
 #include <QSqlQuery>
+#include <algorithm>
 
 #include "historymodel.h"
 
@@ -16,7 +17,7 @@ HistoryItem::HistoryItem(const QString &uuid, const QStringList &mimeTypes, cons
     : m_uuid(uuid)
     , m_text(text)
 {
-    if (std::any_of(mimeTypes.cbegin(), mimeTypes.cend(), [](const QString &mimeType) {
+    if (std::ranges::any_of(mimeTypes, [](const QString &mimeType) {
             return mimeType.startsWith(u"text/");
         })) {
         m_types |= HistoryItemType::Text;
@@ -24,7 +25,7 @@ HistoryItem::HistoryItem(const QString &uuid, const QStringList &mimeTypes, cons
     if (mimeTypes.contains(u"text/uri-list"_s)) {
         m_types |= HistoryItemType::Url;
     }
-    if (std::any_of(mimeTypes.cbegin(), mimeTypes.cend(), [](const QString &mimeType) {
+    if (std::ranges::any_of(mimeTypes, [](const QString &mimeType) {
             return mimeType.startsWith(u"image/") || mimeType == u"application/x-qt-image";
         })) {
         m_types |= HistoryItemType::Image;

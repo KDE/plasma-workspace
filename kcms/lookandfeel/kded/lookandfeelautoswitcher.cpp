@@ -15,6 +15,7 @@
 #include <QDateTime>
 #include <QDebug>
 #include <QProcess>
+#include <algorithm>
 
 K_PLUGIN_CLASS_WITH_JSON(LookAndFeelAutoSwitcher, "lookandfeelautoswitcher.json")
 
@@ -39,7 +40,7 @@ bool LookAndFeelAutoSwitcher::changesConfig(const KConfigGroup &group, const QBy
             QByteArrayLiteral("DefaultLightLookAndFeel"),
             QByteArrayLiteral("DefaultDarkLookAndFeel"),
         };
-        return std::any_of(keys.begin(), keys.end(), [names](const QByteArray &name) {
+        return std::ranges::any_of(keys, [names](const QByteArray &name) {
             return names.contains(name);
         });
     }

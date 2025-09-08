@@ -7,6 +7,7 @@
 
 #include "historymodel.h"
 
+#include <algorithm>
 #include <chrono>
 #include <zlib.h>
 
@@ -192,7 +193,7 @@ void HistoryModel::clear()
     }
     QList<QUrl> deletedDataFolders;
     deletedDataFolders.reserve(m_items.size());
-    std::transform(m_items.cbegin(), m_items.cend(), std::back_inserter(deletedDataFolders), [this](const auto &item) {
+    std::ranges::transform(m_items, std::back_inserter(deletedDataFolders), [this](const auto &item) {
         return QUrl::fromLocalFile(m_dbFolder + u"/data/" + item->uuid() + u'/');
     });
     auto job = KIO::del(deletedDataFolders, KIO::HideProgressInfo);
@@ -576,7 +577,7 @@ bool HistoryModel::remove(const QString &uuid)
 
 int HistoryModel::indexOf(const QString &uuid) const
 {
-    auto it = std::find_if(m_items.cbegin(), m_items.cend(), [&uuid](const auto &item) {
+    auto it = std::ranges::find_if(m_items, [&uuid](const auto &item) {
         return item->uuid() == uuid;
     });
     return it == m_items.cend() ? -1 : std::distance(m_items.cbegin(), it);

@@ -24,6 +24,7 @@
 #include <private/qtx11extras_p.h>
 
 #include <KLocalizedString>
+#include <algorithm>
 
 #include <fontconfig/fontconfig.h>
 
@@ -223,7 +224,7 @@ bool KXftConfig::reset()
     m_hintHasLocalConfig = false;
 
     bool ok = false;
-    std::for_each(m_globalFiles.cbegin(), m_globalFiles.cend(), [this, &ok](const QString &file) {
+    std::ranges::for_each(m_globalFiles, [this, &ok](const QString &file) {
         ok |= parseConfigFile(file);
     });
 

@@ -6,6 +6,7 @@
 
 #include "appstreamrunner.h"
 
+#include <algorithm>
 #include <unordered_set>
 
 #include <AppStreamQt/icon.h>
@@ -77,7 +78,7 @@ void InstallerRunner::match(KRunner::RunnerContext &context)
     // Check if other plugins have already found an executable, if that is the case we do
     // not want to ask the user to install anything else
     const QList<KRunner::QueryMatch> matches = context.matches();
-    const bool execFound = std::any_of(matches.cbegin(), matches.cend(), [](const KRunner::QueryMatch &match) {
+    const bool execFound = std::ranges::any_of(matches, [](const KRunner::QueryMatch &match) {
         return match.id().startsWith(QLatin1String("exec://"));
     });
     if (execFound) {

@@ -23,6 +23,7 @@
 #include <X11/Xlib.h>
 #endif
 
+#include <algorithm>
 #include <chrono>
 
 using namespace std::chrono_literals;
@@ -193,7 +194,7 @@ void ScreenPool::insertSortedScreen(QScreen *screen)
         // This should happen only when a fake screen isn't anymore
         return;
     }
-    auto before = std::find_if(m_sizeSortedScreens.begin(), m_sizeSortedScreens.end(), [this, screen](QScreen *otherScreen) {
+    auto before = std::ranges::find_if(m_sizeSortedScreens, [this, screen](QScreen *otherScreen) {
         return (screen->geometry().width() > otherScreen->geometry().width() && screen->geometry().height() > otherScreen->geometry().height())
             || idForName(screen->name()) < idForName(otherScreen->name());
     });

@@ -22,6 +22,7 @@
 #include <KRuntimePlatform>
 
 #include <Plasma/PluginLoader>
+#include <algorithm>
 
 using namespace Qt::StringLiterals;
 
@@ -358,7 +359,7 @@ void PlasmaAppletItemModel::populateModel()
         const QStringList provides = plugin.value(u"X-Plasma-Provides", QStringList());
 
         if (!m_provides.isEmpty()) {
-            const bool providesFulfilled = std::any_of(m_provides.cbegin(), m_provides.cend(), [&provides](const QString &p) {
+            const bool providesFulfilled = std::ranges::any_of(m_provides, [&provides](const QString &p) {
                 return provides.contains(p);
             });
 
@@ -393,7 +394,7 @@ void PlasmaAppletItemModel::populateModel()
     QList<KPluginMetaData> unfilteredPackages = Plasma::PluginLoader::self()->listAppletMetaData(QString());
 
     QList<KPluginMetaData> packages;
-    std::copy_if(unfilteredPackages.begin(), unfilteredPackages.end(), std::back_inserter(packages), filter);
+    std::ranges::copy_if(unfilteredPackages, std::back_inserter(packages), filter);
 
     // NOTE: Those 2 extra searches are for pure retrocompatibility, to list old plasmoids
     // Just to give the user the possibility to remove them.

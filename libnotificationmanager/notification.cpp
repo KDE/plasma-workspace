@@ -365,7 +365,7 @@ void Notification::Private::setDesktopEntry(const QString &desktopEntry)
         }
         // `QStandardPaths` follows the order of precedence given by `$XDG_DATA_DIRS
         // (more priority goest first), but for `addConfigSources() it is the opposite
-        std::reverse(configSources.begin(), configSources.end());
+        std::ranges::reverse(configSources);
         config.addConfigSources(configSources);
 
         KConfigGroup globalGroup(&config, u"Global"_s);

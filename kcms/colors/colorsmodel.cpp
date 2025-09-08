@@ -145,7 +145,7 @@ void ColorsModel::setSelectedScheme(const QString &scheme)
 
 int ColorsModel::indexOfScheme(const QString &scheme) const
 {
-    auto it = std::find_if(m_data.begin(), m_data.end(), [&scheme](const ColorsModelData &item) {
+    auto it = std::ranges::find_if(m_data, [&scheme](const ColorsModelData &item) {
         return item.schemeName == scheme;
     });
 
@@ -184,7 +184,7 @@ void ColorsModel::load()
         }
     }
 
-    std::transform(schemeFiles.begin(), schemeFiles.end(), schemeFiles.begin(), [](const QString &item) {
+    std::ranges::transform(schemeFiles, schemeFiles.begin(), [](const QString &item) {
         return QStandardPaths::locate(QStandardPaths::GenericDataLocation, item);
     });
 
@@ -240,7 +240,7 @@ void ColorsModel::load()
     // Sort case-insensitively
     QCollator collator;
     collator.setCaseSensitivity(Qt::CaseInsensitive);
-    std::sort(m_data.begin(), m_data.end(), [&collator](const ColorsModelData &a, const ColorsModelData &b) {
+    std::ranges::sort(m_data, [&collator](const ColorsModelData &a, const ColorsModelData &b) {
         return collator.compare(a.display, b.display) < 0;
     });
 
