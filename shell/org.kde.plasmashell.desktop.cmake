@@ -61,7 +61,6 @@ Name[th]=พื้นที่ทำงานเดสก์ท็อป Plasma
 Name[tr]=Plasma Masaüstü Çalışma Alanı
 Name[uk]=Робочий простір Плазми для комп’ютерів
 Name[vi]=Không gian bàn làm việc Plasma
-Name[x-test]=xxPlasma Desktop Workspacexx
 Name[zh_CN]=Plasma 桌面工作空间
 Name[zh_TW]=Plasma 桌面工作空間
 Type=Application
