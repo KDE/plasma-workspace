@@ -48,7 +48,7 @@ void CalculatorRunner::userFriendlySubstitutions(QString &cmd)
         // If we are sure that the user does not want to use vectors we can replace this char
         // Especially when switching between locales that use a different decimal separator
         // this ensures that the results are valid, see BUG: 406388
-        cmd.replace(QLatin1Char(','), QLatin1Char('.'), Qt::CaseInsensitive);
+        cmd.remove(QLocale().groupSeparator()).replace(QLatin1Char(','), QLatin1Char('.'), Qt::CaseInsensitive);
     }
 }
 
