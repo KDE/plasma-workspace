@@ -102,6 +102,7 @@ protected Q_SLOTS:
 private:
     void writeHistory();
     QPoint m_customPos;
+    QMargins margins();
     PlasmaQuick::SharedQmlEngine *m_engine;
     KConfigGroup m_config;
     KConfigGroup m_stateData;

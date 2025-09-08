@@ -90,13 +90,23 @@ View::~View()
 {
 }
 
+QMargins View::margins()
+{
+    if (m_floating) {
+        const QRect r = screen()->availableGeometry();
+        return QMargins({0, r.height() / 3, 0, 0});
+    } else {
+        return QMargins(); // Zeros
+    }
+}
+
 void View::objectIncubated()
 {
     auto item = qobject_cast<QQuickItem *>(m_engine->rootObject());
     setMainItem(item);
 
     auto updateSize = [this]() {
-        resize(QSize(mainItem()->implicitWidth(), mainItem()->implicitHeight()).grownBy(padding()).boundedTo(screen()->availableSize()));
+        resize(QSize(mainItem()->implicitWidth(), mainItem()->implicitHeight()).grownBy(padding()).boundedTo(screen()->availableSize().shrunkBy(margins())));
     };
 
     connect(item, &QQuickItem::implicitHeightChanged, this, updateSize);
@@ -176,23 +186,17 @@ void View::positionOnScreen()
     QScreen *const shownOnScreen = screenIt != screens.cend() ? *screenIt : QGuiApplication::primaryScreen();
     setScreen(shownOnScreen);
 
-    QMargins margins;
-    if (m_floating) {
-        const QRect r = shownOnScreen->availableGeometry();
-        margins = QMargins({0, r.height() / 3, 0, 0});
-    }
-
     if (KWindowSystem::isPlatformWayland()) {
         auto layerWindow = LayerShellQt::Window::get(this);
         layerWindow->setAnchors(LayerShellQt::Window::AnchorTop);
         layerWindow->setLayer(LayerShellQt::Window::LayerTop);
         layerWindow->setScope(u"krunner"_s);
         layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityOnDemand);
-        layerWindow->setMargins(margins);
+        layerWindow->setMargins(margins());
         layerWindow->setScreenConfiguration(m_floating ? LayerShellQt::Window::ScreenFromQWindow : LayerShellQt::Window::ScreenFromCompositor);
     } else if (KWindowSystem::isPlatformX11()) {
         m_x11Positioner->setAnchors(Qt::TopEdge);
-        m_x11Positioner->setMargins(margins);
+        m_x11Positioner->setMargins(margins());
         if (m_floating) {
             KX11Extras::setOnDesktop(winId(), KX11Extras::currentDesktop());
         } else {
