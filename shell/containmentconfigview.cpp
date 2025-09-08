@@ -56,9 +56,7 @@ ContainmentConfigView::ContainmentConfigView(Plasma::Containment *cont, QWindow 
     syncWallpaperObjects();
 }
 
-ContainmentConfigView::~ContainmentConfigView()
-{
-}
+ContainmentConfigView::~ContainmentConfigView() = default;
 
 void ContainmentConfigView::init()
 {

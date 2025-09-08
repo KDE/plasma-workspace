@@ -19,9 +19,7 @@ DragHelper::DragHelper(QObject *parent)
 {
 }
 
-DragHelper::~DragHelper()
-{
-}
+DragHelper::~DragHelper() = default;
 
 int DragHelper::dragIconSize() const
 {

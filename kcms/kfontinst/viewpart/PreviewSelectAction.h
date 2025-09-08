@@ -22,9 +22,7 @@ public:
     };
 
     explicit CPreviewSelectAction(QObject *parent, Mode mode = Basic);
-    ~CPreviewSelectAction() override
-    {
-    }
+    ~CPreviewSelectAction() override = default;
 
     void setStd();
     void setMode(Mode mode);

@@ -133,9 +133,7 @@ public:
     {
     }
 
-    ~CProgressBar() override
-    {
-    }
+    ~CProgressBar() override = default;
 
     int height() const
     {

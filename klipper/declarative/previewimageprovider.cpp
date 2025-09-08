@@ -62,9 +62,7 @@ QQuickTextureFactory *AsyncPreviewImageResponse::textureFactory() const
     return QQuickTextureFactory::textureFactoryForImage(m_image);
 }
 
-PreviewImageProvider::PreviewImageProvider()
-{
-}
+PreviewImageProvider::PreviewImageProvider() = default;
 
 QQuickImageResponse *PreviewImageProvider::requestImageResponse(const QString &id, const QSize &requestedSize)
 {

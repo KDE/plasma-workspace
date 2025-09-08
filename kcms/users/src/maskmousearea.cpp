@@ -22,9 +22,7 @@ MaskMouseArea::MaskMouseArea(QQuickItem *parent)
     connect(this, &QQuickItem::parentChanged, this, &MaskMouseArea::updateMask);
 }
 
-MaskMouseArea::~MaskMouseArea()
-{
-}
+MaskMouseArea::~MaskMouseArea() = default;
 
 void MaskMouseArea::updateMask()
 {

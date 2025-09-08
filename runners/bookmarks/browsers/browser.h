@@ -20,9 +20,7 @@
 class Browser
 {
 public:
-    virtual ~Browser()
-    {
-    }
+    virtual ~Browser() = default;
     virtual QList<BookmarkMatch> match(const QString &term, bool addEveryThing) = 0;
     virtual void prepare()
     {

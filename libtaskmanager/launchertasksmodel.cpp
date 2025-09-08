@@ -282,9 +282,7 @@ LauncherTasksModel::LauncherTasksModel(QObject *parent)
     d->init();
 }
 
-LauncherTasksModel::~LauncherTasksModel()
-{
-}
+LauncherTasksModel::~LauncherTasksModel() = default;
 
 QVariant LauncherTasksModel::data(const QModelIndex &index, int role) const
 {

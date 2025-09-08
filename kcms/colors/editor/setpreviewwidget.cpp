@@ -59,9 +59,7 @@ SetPreviewWidget::SetPreviewWidget(QWidget *parent)
     }
 }
 
-SetPreviewWidget::~SetPreviewWidget()
-{
-}
+SetPreviewWidget::~SetPreviewWidget() = default;
 
 bool SetPreviewWidget::eventFilter(QObject *, QEvent *ev)
 {

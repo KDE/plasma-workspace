@@ -11,9 +11,7 @@ ForwardingModel::ForwardingModel(QObject *parent)
 {
 }
 
-ForwardingModel::~ForwardingModel()
-{
-}
+ForwardingModel::~ForwardingModel() = default;
 
 QString ForwardingModel::description() const
 {

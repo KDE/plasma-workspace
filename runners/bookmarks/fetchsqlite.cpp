@@ -22,9 +22,7 @@ FetchSqlite::FetchSqlite(const QString &databaseFile, QObject *parent)
 {
 }
 
-FetchSqlite::~FetchSqlite()
-{
-}
+FetchSqlite::~FetchSqlite() = default;
 
 void FetchSqlite::prepare()
 {

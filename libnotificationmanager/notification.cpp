@@ -30,9 +30,7 @@ using namespace Qt::StringLiterals;
 
 QCache<uint, QImage> Notification::Private::s_imageCache = QCache<uint, QImage>{};
 
-Notification::Private::Private()
-{
-}
+Notification::Private::Private() = default;
 
 Notification::Private::~Private()
 {

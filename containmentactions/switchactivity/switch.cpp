@@ -20,9 +20,7 @@ SwitchActivity::SwitchActivity(QObject *parent, const QVariantList &args)
 {
 }
 
-SwitchActivity::~SwitchActivity()
-{
-}
+SwitchActivity::~SwitchActivity() = default;
 
 void SwitchActivity::makeMenu()
 {

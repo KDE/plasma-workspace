@@ -32,9 +32,7 @@ StatusNotifierWatcher::StatusNotifierWatcher(QObject *parent, const QList<QVaria
     connect(m_serviceWatcher, &QDBusServiceWatcher::serviceUnregistered, this, &StatusNotifierWatcher::serviceUnregistered);
 }
 
-StatusNotifierWatcher::~StatusNotifierWatcher()
-{
-}
+StatusNotifierWatcher::~StatusNotifierWatcher() = default;
 
 void StatusNotifierWatcher::RegisterStatusNotifierItem(const QString &serviceOrPath)
 {

@@ -33,9 +33,7 @@ void PlaceholderModel::inhibitTriggering()
     m_triggerInhibitor.start();
 }
 
-PlaceholderModel::~PlaceholderModel()
-{
-}
+PlaceholderModel::~PlaceholderModel() = default;
 
 QString PlaceholderModel::description() const
 {

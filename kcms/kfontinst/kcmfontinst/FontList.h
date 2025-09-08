@@ -155,9 +155,7 @@ public:
         , m_isSystem(false)
     {
     }
-    virtual ~CFontModelItem()
-    {
-    }
+    virtual ~CFontModelItem() = default;
 
     CFontModelItem *parent() const
     {
@@ -264,9 +262,7 @@ class CFontItem : public CFontModelItem
 {
 public:
     CFontItem(CFontModelItem *p, const Style &s, bool sys);
-    ~CFontItem() override
-    {
-    }
+    ~CFontItem() override = default;
 
     void refresh();
     QString name() const
@@ -350,9 +346,7 @@ class CFontListSortFilterProxy : public QSortFilterProxyModel
 
 public:
     CFontListSortFilterProxy(QObject *parent, QAbstractItemModel *model);
-    ~CFontListSortFilterProxy() override
-    {
-    }
+    ~CFontListSortFilterProxy() override = default;
 
     QVariant data(const QModelIndex &idx, int role) const override;
     bool acceptFont(CFontItem *fnt, bool checkFontText) const;
@@ -399,9 +393,7 @@ class CFontListView : public QTreeView
 
 public:
     CFontListView(QWidget *parent, CFontList *model);
-    ~CFontListView() override
-    {
-    }
+    ~CFontListView() override = default;
 
     void getFonts(CJobRunner::ItemList &urls, QStringList &fontNames, QSet<Misc::TFont> *fonts, bool selected, bool getEnabled = true, bool getDisabled = true);
     QSet<QString> getFiles();

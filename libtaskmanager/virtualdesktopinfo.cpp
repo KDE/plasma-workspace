@@ -42,9 +42,7 @@ class Q_DECL_HIDDEN VirtualDesktopInfo::Private : public QObject
 
 public:
     Private();
-    virtual ~Private()
-    {
-    }
+    virtual ~Private() = default;
 
     uint refCount = 1;
     // Fall back to true if we get an invalid DBus response when asking for the

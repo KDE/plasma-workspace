@@ -73,9 +73,7 @@ WindowTasksModel::WindowTasksModel(QObject *parent)
     d->initSourceTasksModel();
 }
 
-WindowTasksModel::~WindowTasksModel()
-{
-}
+WindowTasksModel::~WindowTasksModel() = default;
 
 QHash<int, QByteArray> WindowTasksModel::roleNames() const
 {

@@ -70,9 +70,7 @@ KCMNotifications::KCMNotifications(QObject *parent, const KPluginMetaData &data,
     connect(this, &KCMNotifications::activationRequested, this, &KCMNotifications::parseArguments);
 }
 
-KCMNotifications::~KCMNotifications()
-{
-}
+KCMNotifications::~KCMNotifications() = default;
 
 void KCMNotifications::parseArguments(const QVariantList &args)
 {

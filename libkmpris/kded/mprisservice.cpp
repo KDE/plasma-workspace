@@ -29,9 +29,7 @@ MprisService::MprisService(QObject *parent, const QList<QVariant> &)
     enableGlobalShortcuts();
 }
 
-MprisService::~MprisService()
-{
-}
+MprisService::~MprisService() = default;
 
 void MprisService::onPlayPause()
 {

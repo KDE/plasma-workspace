@@ -109,9 +109,7 @@ UpdateDatabaseJob::UpdateDatabaseJob(QObject *parent,
 {
 }
 
-UpdateDatabaseJob::~UpdateDatabaseJob()
-{
-}
+UpdateDatabaseJob::~UpdateDatabaseJob() = default;
 
 void UpdateDatabaseJob::start()
 {

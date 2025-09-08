@@ -75,9 +75,7 @@ TimeZoneModel::TimeZoneModel(QObject *parent)
                                           SLOT(slotUpdate()));
 }
 
-TimeZoneModel::~TimeZoneModel()
-{
-}
+TimeZoneModel::~TimeZoneModel() = default;
 
 int TimeZoneModel::rowCount(const QModelIndex &parent) const
 {

@@ -37,9 +37,7 @@ PredicatesMonitor::PredicatesMonitor(QObject *parent)
     qCDebug(APPLETS::DEVICENOTIFIER) << "initializing predicates monitor ended";
 }
 
-PredicatesMonitor::~PredicatesMonitor()
-{
-}
+PredicatesMonitor::~PredicatesMonitor() = default;
 
 std::shared_ptr<PredicatesMonitor> PredicatesMonitor::instance()
 {

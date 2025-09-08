@@ -431,9 +431,7 @@ KService::Ptr AppEntry::defaultAppByName(const QString &name)
     return DefaultService::browser();
 }
 
-AppEntry::~AppEntry()
-{
-}
+AppEntry::~AppEntry() = default;
 
 AppGroupEntry::AppGroupEntry(AppsModel *parentModel,
                              KServiceGroup::Ptr group,

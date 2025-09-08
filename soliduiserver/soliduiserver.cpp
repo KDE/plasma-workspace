@@ -41,9 +41,7 @@ SolidUiServer::SolidUiServer(QObject *parent, const QList<QVariant> &)
 {
 }
 
-SolidUiServer::~SolidUiServer()
-{
-}
+SolidUiServer::~SolidUiServer() = default;
 
 void SolidUiServer::showPassphraseDialog(const QString &udi, const QString &returnService, const QString &returnObject, uint wId, const QString &appId)
 {

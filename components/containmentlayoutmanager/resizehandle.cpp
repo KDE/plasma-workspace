@@ -63,9 +63,7 @@ ResizeHandle::ResizeHandle(QQuickItem *parent)
     connect(this, &ResizeHandle::resizeCornerChanged, this, syncCursor);
 }
 
-ResizeHandle::~ResizeHandle()
-{
-}
+ResizeHandle::~ResizeHandle() = default;
 
 bool ResizeHandle::resizeBlocked() const
 {

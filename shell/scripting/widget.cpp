@@ -21,9 +21,7 @@ namespace WorkspaceScripting
 class Widget::Private
 {
 public:
-    Private()
-    {
-    }
+    Private() = default;
 
     QPointer<Plasma::Applet> applet;
 };

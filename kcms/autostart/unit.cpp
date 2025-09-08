@@ -36,9 +36,7 @@ Unit::Unit(QObject *parent, bool invalid)
     m_invalid = invalid;
 }
 
-Unit::~Unit()
-{
-}
+Unit::~Unit() = default;
 
 void Unit::setId(const QString &id)
 {

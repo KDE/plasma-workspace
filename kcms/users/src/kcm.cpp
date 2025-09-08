@@ -93,9 +93,7 @@ bool KCMUser::deleteUser(qint64 id, bool deleteHome)
     }
 }
 
-KCMUser::~KCMUser()
-{
-}
+KCMUser::~KCMUser() = default;
 
 void KCMUser::save()
 {

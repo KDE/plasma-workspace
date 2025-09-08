@@ -110,9 +110,7 @@ public:
     };
 
     CFontFileListView(QWidget *parent);
-    ~CFontFileListView() override
-    {
-    }
+    ~CFontFileListView() override = default;
 
     QSet<QString> getMarkedFiles();
     CJobRunner::ItemList getMarkedItems();

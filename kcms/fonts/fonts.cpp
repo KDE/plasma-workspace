@@ -72,9 +72,7 @@ KFonts::KFonts(QObject *parent, const KPluginMetaData &metaData)
     connect(fontsAASettings(), &FontsAASettings::subPixelChanged, this, &KFonts::subPixelCurrentIndexChanged);
 }
 
-KFonts::~KFonts()
-{
-}
+KFonts::~KFonts() = default;
 
 FontsSettings *KFonts::fontsSettings() const
 {

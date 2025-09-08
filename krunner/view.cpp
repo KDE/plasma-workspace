@@ -86,9 +86,7 @@ View::View(PlasmaQuick::SharedQmlEngine *engine, QWindow *)
     connect(qGuiApp, &QGuiApplication::focusWindowChanged, this, &View::slotFocusWindowChanged);
 }
 
-View::~View()
-{
-}
+View::~View() = default;
 
 QMargins View::margins()
 {

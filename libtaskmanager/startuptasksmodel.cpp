@@ -74,9 +74,7 @@ StartupTasksModel::StartupTasksModel(QObject *parent)
     d->initSourceTasksModel();
 }
 
-StartupTasksModel::~StartupTasksModel()
-{
-}
+StartupTasksModel::~StartupTasksModel() = default;
 
 QHash<int, QByteArray> StartupTasksModel::roleNames() const
 {

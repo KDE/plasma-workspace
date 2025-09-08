@@ -47,9 +47,7 @@ GroupSortProxy::GroupSortProxy(AbstractModel *parentModel, QAbstractItemModel *s
     sort(0);
 }
 
-GroupSortProxy::~GroupSortProxy()
-{
-}
+GroupSortProxy::~GroupSortProxy() = default;
 
 InvalidAppsFilterProxy::InvalidAppsFilterProxy(AbstractModel *parentModel, QAbstractItemModel *sourceModel)
     : QSortFilterProxyModel(parentModel)
@@ -62,9 +60,7 @@ InvalidAppsFilterProxy::InvalidAppsFilterProxy(AbstractModel *parentModel, QAbst
     setSourceModel(sourceModel);
 }
 
-InvalidAppsFilterProxy::~InvalidAppsFilterProxy()
-{
-}
+InvalidAppsFilterProxy::~InvalidAppsFilterProxy() = default;
 
 void InvalidAppsFilterProxy::connectNewFavoritesModel()
 {
@@ -135,9 +131,7 @@ RecentUsageModel::RecentUsageModel(QObject *parent, IncludeUsage usage, int orde
     refresh();
 }
 
-RecentUsageModel::~RecentUsageModel()
-{
-}
+RecentUsageModel::~RecentUsageModel() = default;
 
 void RecentUsageModel::setShownItems(IncludeUsage usage)
 {

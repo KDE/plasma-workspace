@@ -207,9 +207,7 @@ WaylandStartupTasksModel::WaylandStartupTasksModel(QObject *parent)
     d->init();
 }
 
-WaylandStartupTasksModel::~WaylandStartupTasksModel()
-{
-}
+WaylandStartupTasksModel::~WaylandStartupTasksModel() = default;
 
 QVariant WaylandStartupTasksModel::data(const QModelIndex &index, int role) const
 {

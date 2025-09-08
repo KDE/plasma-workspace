@@ -13,9 +13,7 @@ KlipperInterface::KlipperInterface(QObject *parent)
 {
 }
 
-KlipperInterface::~KlipperInterface()
-{
-}
+KlipperInterface::~KlipperInterface() = default;
 
 void KlipperInterface::configure()
 {

@@ -68,9 +68,7 @@ MountAndOpenAction::MountAndOpenAction(const QString &udi, QObject *parent)
     updateAction(udi);
 }
 
-MountAndOpenAction::~MountAndOpenAction()
-{
-}
+MountAndOpenAction::~MountAndOpenAction() = default;
 
 QString MountAndOpenAction::predicate() const
 {

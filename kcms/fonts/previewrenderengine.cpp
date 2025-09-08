@@ -92,9 +92,7 @@ PreviewRenderEngine::PreviewRenderEngine(bool init)
         FcInitReinitialize();
 }
 
-PreviewRenderEngine::~PreviewRenderEngine()
-{
-}
+PreviewRenderEngine::~PreviewRenderEngine() = default;
 
 QImage PreviewRenderEngine::drawAutoSize(const QFont &font, const QColor &txt, const QColor &bgnd, const QString &text)
 {

@@ -13,9 +13,7 @@ WheelInterceptor::WheelInterceptor(QQuickItem *parent)
 {
 }
 
-WheelInterceptor::~WheelInterceptor()
-{
-}
+WheelInterceptor::~WheelInterceptor() = default;
 
 QQuickItem *WheelInterceptor::destination() const
 {

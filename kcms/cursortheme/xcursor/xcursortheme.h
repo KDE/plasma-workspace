@@ -29,9 +29,7 @@ public:
      * index.theme file if the dir has one.
      */
     XCursorTheme(const QDir &dir);
-    ~XCursorTheme() override
-    {
-    }
+    ~XCursorTheme() override = default;
 
     const QStringList inherits() const
     {

@@ -42,9 +42,7 @@ PreviewWidget::PreviewWidget(QWidget *parent)
     }
 }
 
-PreviewWidget::~PreviewWidget()
-{
-}
+PreviewWidget::~PreviewWidget() = default;
 
 bool PreviewWidget::eventFilter(QObject *, QEvent *ev)
 {

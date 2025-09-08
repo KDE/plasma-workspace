@@ -32,9 +32,7 @@ Mpris2Model::Mpris2Model(QObject *parent)
     }
 }
 
-Mpris2Model::~Mpris2Model()
-{
-}
+Mpris2Model::~Mpris2Model() = default;
 
 QHash<int, QByteArray> Mpris2Model::roleNames() const
 {

@@ -53,9 +53,7 @@ CurrentContainmentActionsModel::CurrentContainmentActionsModel(Plasma::Containme
     }
 }
 
-CurrentContainmentActionsModel::~CurrentContainmentActionsModel()
-{
-}
+CurrentContainmentActionsModel::~CurrentContainmentActionsModel() = default;
 
 QHash<int, QByteArray> CurrentContainmentActionsModel::roleNames() const
 {

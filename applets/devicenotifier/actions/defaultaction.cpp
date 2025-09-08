@@ -29,9 +29,7 @@ DefaultAction::DefaultAction(const QString &udi, const QString &desktopFile, QOb
     qCDebug(APPLETS::DEVICENOTIFIER) << "default action with " << desktopFile << " predicate successfully initialized";
 }
 
-DefaultAction::~DefaultAction()
-{
-}
+DefaultAction::~DefaultAction() = default;
 
 QString DefaultAction::name() const
 {

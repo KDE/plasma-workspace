@@ -31,9 +31,7 @@ HistoryItem::HistoryItem(const QString &uuid, const QStringList &mimeTypes, cons
     }
 }
 
-HistoryItem::~HistoryItem()
-{
-}
+HistoryItem::~HistoryItem() = default;
 
 HistoryItemType HistoryItem::type() const
 {

@@ -65,9 +65,7 @@ public:
     class NormalizedId
     {
     public:
-        NormalizedId()
-        {
-        }
+        NormalizedId() = default;
 
         NormalizedId(const Private *parent, const QString &id)
         {

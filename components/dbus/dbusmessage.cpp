@@ -13,9 +13,7 @@ using namespace Qt::StringLiterals;
 namespace Plasma
 {
 
-DBusMessage::DBusMessage()
-{
-}
+DBusMessage::DBusMessage() = default;
 
 DBusMessage::DBusMessage(const QDBusMessage &message)
     : m_service(message.service())

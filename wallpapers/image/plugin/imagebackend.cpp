@@ -49,9 +49,7 @@ ImageBackend::ImageBackend(QObject *parent)
     connect(&m_timer, &QTimer::timeout, this, &ImageBackend::nextSlide);
 }
 
-ImageBackend::~ImageBackend()
-{
-}
+ImageBackend::~ImageBackend() = default;
 
 void ImageBackend::classBegin()
 {

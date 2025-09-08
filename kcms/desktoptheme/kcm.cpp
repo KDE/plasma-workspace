@@ -72,9 +72,7 @@ KCMDesktopTheme::KCMDesktopTheme(QObject *parent, const KPluginMetaData &data)
     m_filteredModel->setSourceModel(m_model);
 }
 
-KCMDesktopTheme::~KCMDesktopTheme()
-{
-}
+KCMDesktopTheme::~KCMDesktopTheme() = default;
 
 DesktopThemeSettings *KCMDesktopTheme::desktopThemeSettings() const
 {

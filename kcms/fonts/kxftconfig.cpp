@@ -162,9 +162,7 @@ KXftConfig::KXftConfig(const QString &path)
     reset();
 }
 
-KXftConfig::~KXftConfig()
-{
-}
+KXftConfig::~KXftConfig() = default;
 
 //
 // Obtain location of config file to use.

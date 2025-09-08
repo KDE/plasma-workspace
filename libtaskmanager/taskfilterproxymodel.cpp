@@ -55,9 +55,7 @@ TaskFilterProxyModel::TaskFilterProxyModel(QObject *parent)
 {
 }
 
-TaskFilterProxyModel::~TaskFilterProxyModel()
-{
-}
+TaskFilterProxyModel::~TaskFilterProxyModel() = default;
 
 void TaskFilterProxyModel::setSourceModel(QAbstractItemModel *sourceModel)
 {

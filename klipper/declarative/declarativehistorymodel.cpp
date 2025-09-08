@@ -34,9 +34,7 @@ DeclarativeHistoryModel::DeclarativeHistoryModel(QObject *parent)
     connect(m_model.get(), &HistoryModel::changed, this, &DeclarativeHistoryModel::currentTextChanged);
 }
 
-DeclarativeHistoryModel::~DeclarativeHistoryModel()
-{
-}
+DeclarativeHistoryModel::~DeclarativeHistoryModel() = default;
 
 QString DeclarativeHistoryModel::currentText() const
 {

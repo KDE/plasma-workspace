@@ -123,9 +123,7 @@ ScriptEngine::V1::V1(ScriptEngine *parent)
 {
 }
 
-ScriptEngine::V1::~V1()
-{
-}
+ScriptEngine::V1::~V1() = default;
 
 QJSValue ScriptEngine::V1::getApiVersion(const QJSValue &param)
 {

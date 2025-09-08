@@ -26,9 +26,7 @@ public:
         : QSortFilterProxyModel(parent)
     {
     }
-    ~SortProxyModel() override
-    {
-    }
+    ~SortProxyModel() override = default;
     QHash<int, QByteArray> roleNames() const override;
     inline const CursorTheme *theme(const QModelIndex &index) const;
     inline QModelIndex findIndex(const QString &name) const;

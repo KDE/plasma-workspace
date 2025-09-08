@@ -16,9 +16,7 @@ WindowSystem::WindowSystem(QObject *parent)
 {
 }
 
-WindowSystem::~WindowSystem()
-{
-}
+WindowSystem::~WindowSystem() = default;
 
 bool WindowSystem::eventFilter(QObject *watched, QEvent *event)
 {

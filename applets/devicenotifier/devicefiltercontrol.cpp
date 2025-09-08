@@ -39,9 +39,7 @@ DeviceFilterControl::DeviceFilterControl(QObject *parent)
     qCDebug(APPLETS::DEVICENOTIFIER) << "Device Filter Control successfully initialized";
 }
 
-DeviceFilterControl::~DeviceFilterControl()
-{
-}
+DeviceFilterControl::~DeviceFilterControl() = default;
 
 void DeviceFilterControl::unmountAllRemovables()
 {

@@ -86,9 +86,7 @@ class CPreviewListView : public QTreeView
 
 public:
     CPreviewListView(CFcEngine *eng, QWidget *parent);
-    ~CPreviewListView() override
-    {
-    }
+    ~CPreviewListView() override = default;
 
     void refreshPreviews();
     void showFonts(const QModelIndexList &fonts);

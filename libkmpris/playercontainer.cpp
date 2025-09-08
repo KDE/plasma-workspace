@@ -24,9 +24,7 @@ AbstractPlayerContainer::AbstractPlayerContainer(QObject *parent)
 {
 }
 
-AbstractPlayerContainer::~AbstractPlayerContainer()
-{
-}
+AbstractPlayerContainer::~AbstractPlayerContainer() = default;
 
 bool AbstractPlayerContainer::canControl() const
 {
@@ -184,9 +182,7 @@ PlayerContainer::PlayerContainer(const QString &busAddress, QObject *parent)
     refresh();
 }
 
-PlayerContainer::~PlayerContainer()
-{
-}
+PlayerContainer::~PlayerContainer() = default;
 
 void PlayerContainer::setLoopStatus(LoopStatus::Status value)
 {

@@ -19,9 +19,7 @@ AutoStart::AutoStart()
     loadAutoStartList();
 }
 
-AutoStart::~AutoStart()
-{
-}
+AutoStart::~AutoStart() = default;
 
 void AutoStart::setPhase(int phase)
 {

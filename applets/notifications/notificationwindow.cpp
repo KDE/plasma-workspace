@@ -21,9 +21,7 @@ NotificationWindow::NotificationWindow()
     }
 }
 
-NotificationWindow::~NotificationWindow()
-{
-}
+NotificationWindow::~NotificationWindow() = default;
 
 bool NotificationWindow::takeFocus() const
 {

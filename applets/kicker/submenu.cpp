@@ -23,9 +23,7 @@ SubMenu::SubMenu(QQuickItem *parent)
     setType(AppletPopup);
 }
 
-SubMenu::~SubMenu()
-{
-}
+SubMenu::~SubMenu() = default;
 
 int SubMenu::offset() const
 {

@@ -616,9 +616,7 @@ XWindowTasksModel::XWindowTasksModel(QObject *parent)
     d->init();
 }
 
-XWindowTasksModel::~XWindowTasksModel()
-{
-}
+XWindowTasksModel::~XWindowTasksModel() = default;
 
 QVariant XWindowTasksModel::data(const QModelIndex &index, int role) const
 {

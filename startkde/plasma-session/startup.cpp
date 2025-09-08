@@ -119,9 +119,7 @@ public:
     }
 };
 
-SleepJob::SleepJob()
-{
-}
+SleepJob::SleepJob() = default;
 
 void SleepJob::start()
 {

@@ -25,9 +25,7 @@ ContainmentInterface::ContainmentInterface(QObject *parent)
 {
 }
 
-ContainmentInterface::~ContainmentInterface()
-{
-}
+ContainmentInterface::~ContainmentInterface() = default;
 
 bool ContainmentInterface::mayAddLauncher(QObject *appletInterface, ContainmentInterface::Target target, const KService::Ptr &service)
 {

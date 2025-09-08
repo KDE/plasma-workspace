@@ -125,9 +125,7 @@ CCharTip::CCharTip(CFontPreview *parent)
     hide();
 }
 
-CCharTip::~CCharTip()
-{
-}
+CCharTip::~CCharTip() = default;
 
 void CCharTip::setItem(const CFcEngine::TChar &ch)
 {

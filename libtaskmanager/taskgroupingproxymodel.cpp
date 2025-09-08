@@ -475,9 +475,7 @@ TaskGroupingProxyModel::TaskGroupingProxyModel(QObject *parent)
 {
 }
 
-TaskGroupingProxyModel::~TaskGroupingProxyModel()
-{
-}
+TaskGroupingProxyModel::~TaskGroupingProxyModel() = default;
 
 QModelIndex TaskGroupingProxyModel::index(int row, int column, const QModelIndex &parent) const
 {

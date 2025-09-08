@@ -49,9 +49,7 @@ public:
         Families build(bool system) const;
     };
 
-    Folder()
-    {
-    }
+    Folder() = default;
     ~Folder();
 
     void init(bool system, bool systemBus);

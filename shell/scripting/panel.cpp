@@ -27,9 +27,7 @@ Panel::Panel(Plasma::Containment *containment, ScriptEngine *engine)
 {
 }
 
-Panel::~Panel()
-{
-}
+Panel::~Panel() = default;
 
 QString Panel::location() const
 {

@@ -19,9 +19,7 @@ StatusNotifierItemJob::StatusNotifierItemJob(StatusNotifierItemSource *source, c
     connect(source, &StatusNotifierItemSource::activateResult, this, &StatusNotifierItemJob::activateCallback);
 }
 
-StatusNotifierItemJob::~StatusNotifierItemJob()
-{
-}
+StatusNotifierItemJob::~StatusNotifierItemJob() = default;
 
 void StatusNotifierItemJob::start()
 {

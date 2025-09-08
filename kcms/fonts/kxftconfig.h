@@ -40,9 +40,7 @@ public:
 
         QDomNode node;
 
-        virtual ~Item()
-        {
-        }
+        virtual ~Item() = default;
         bool toBeRemoved;
     };
 

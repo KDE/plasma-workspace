@@ -111,9 +111,7 @@ DatabaseRecordToMimeDataJob::DatabaseRecordToMimeDataJob(QObject *parent, const 
 {
 }
 
-DatabaseRecordToMimeDataJob::~DatabaseRecordToMimeDataJob()
-{
-}
+DatabaseRecordToMimeDataJob::~DatabaseRecordToMimeDataJob() = default;
 
 void DatabaseRecordToMimeDataJob::start()
 {
@@ -199,9 +197,7 @@ SystemClipboard::SystemClipboard()
     connect(&m_overflowClearTimer, &QTimer::timeout, this, &SystemClipboard::slotClearOverflow);
 }
 
-SystemClipboard::~SystemClipboard()
-{
-}
+SystemClipboard::~SystemClipboard() = default;
 
 void SystemClipboard::checkClipData(QClipboard::Mode mode, const QMimeData *data)
 {

@@ -25,9 +25,7 @@ namespace TaskManager
 class TASKMANAGER_EXPORT AbstractTasksModelIface
 {
 public:
-    virtual ~AbstractTasksModelIface()
-    {
-    }
+    virtual ~AbstractTasksModelIface() = default;
 
     /**
      * Request activation of the task at the given index. Implementing classes

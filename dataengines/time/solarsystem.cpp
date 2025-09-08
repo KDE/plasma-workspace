@@ -182,9 +182,7 @@ SolarSystemObject::SolarSystemObject()
 {
 }
 
-SolarSystemObject::~SolarSystemObject()
-{
-}
+SolarSystemObject::~SolarSystemObject() = default;
 
 void SolarSystemObject::setPosition(double latitude, double longitude)
 {

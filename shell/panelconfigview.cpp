@@ -59,9 +59,7 @@ PanelRulerView::PanelRulerView(Plasma::Containment *containment, PanelView *pane
     connect(this, &PanelRulerView::mainItemChanged, this, &PanelRulerView::syncPanelLocation);
 }
 
-PanelRulerView::~PanelRulerView()
-{
-}
+PanelRulerView::~PanelRulerView() = default;
 
 void PanelRulerView::syncPanelLocation()
 {
@@ -238,9 +236,7 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
     m_focusWindow = qApp->focusWindow();
 }
 
-PanelConfigView::~PanelConfigView()
-{
-}
+PanelConfigView::~PanelConfigView() = default;
 
 void PanelConfigView::init()
 {

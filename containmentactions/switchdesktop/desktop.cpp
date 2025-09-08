@@ -21,9 +21,7 @@ SwitchDesktop::SwitchDesktop(QObject *parent, const QVariantList &args)
 {
 }
 
-SwitchDesktop::~SwitchDesktop()
-{
-}
+SwitchDesktop::~SwitchDesktop() = default;
 
 QList<QAction *> SwitchDesktop::contextualActions()
 {

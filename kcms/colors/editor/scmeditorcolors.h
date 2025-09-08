@@ -59,13 +59,9 @@ private:
             InactiveBlend = 5,
         };
 
-        WindecoColors()
-        {
-        }
+        WindecoColors() = default;
         WindecoColors(const KSharedConfigPtr &);
-        virtual ~WindecoColors()
-        {
-        }
+        virtual ~WindecoColors() = default;
 
         void load(const KSharedConfigPtr &);
         QColor color(Role) const;

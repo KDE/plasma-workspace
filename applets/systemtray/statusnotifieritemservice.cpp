@@ -17,9 +17,7 @@ StatusNotifierItemService::StatusNotifierItemService(StatusNotifierItemSource *s
     setName(QStringLiteral("statusnotifieritem"));
 }
 
-StatusNotifierItemService::~StatusNotifierItemService()
-{
-}
+StatusNotifierItemService::~StatusNotifierItemService() = default;
 
 Plasma5Support::ServiceJob *StatusNotifierItemService::createJob(const QString &operation, QMap<QString, QVariant> &parameters)
 {

@@ -59,9 +59,7 @@ ScreenPool::ScreenPool(QObject *parent)
     reconsiderOutputOrder();
 }
 
-ScreenPool::~ScreenPool()
-{
-}
+ScreenPool::~ScreenPool() = default;
 
 int ScreenPool::idForName(const QString &connector) const
 {

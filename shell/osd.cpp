@@ -32,9 +32,7 @@ Osd::Osd(const KSharedConfig::Ptr &config, ShellCorona *corona)
     QDBusConnection::sessionBus().registerObject(u"/org/kde/osdService"_s, this, QDBusConnection::ExportAllSlots | QDBusConnection::ExportAllSignals);
 }
 
-Osd::~Osd()
-{
-}
+Osd::~Osd() = default;
 
 void Osd::screenBrightnessChanged(int percent, const QString &displayId, const QString &displayLabel, int priority, const QRect &screenRect)
 {

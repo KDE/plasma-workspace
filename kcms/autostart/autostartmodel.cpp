@@ -104,9 +104,7 @@ AutostartModel::AutostartModel(QObject *parent)
     QDBusConnection::sessionBus().send(message);
 }
 
-AutostartModel::~AutostartModel()
-{
-}
+AutostartModel::~AutostartModel() = default;
 
 void AutostartModel::load()
 {

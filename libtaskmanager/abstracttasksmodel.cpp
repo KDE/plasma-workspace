@@ -15,9 +15,7 @@ AbstractTasksModel::AbstractTasksModel(QObject *parent)
 {
 }
 
-AbstractTasksModel::~AbstractTasksModel()
-{
-}
+AbstractTasksModel::~AbstractTasksModel() = default;
 
 QHash<int, QByteArray> AbstractTasksModel::roleNames() const
 {

@@ -16,9 +16,7 @@ DBusServiceWatcher::DBusServiceWatcher(QObject *parent)
     m_watcher.setWatchMode(QDBusServiceWatcher::WatchForRegistration | QDBusServiceWatcher::WatchForUnregistration);
 }
 
-DBusServiceWatcher::~DBusServiceWatcher()
-{
-}
+DBusServiceWatcher::~DBusServiceWatcher() = default;
 
 BusType::Type DBusServiceWatcher::busType() const
 {

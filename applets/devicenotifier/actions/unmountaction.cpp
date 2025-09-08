@@ -32,9 +32,7 @@ UnmountAction::UnmountAction(const QString &udi, QObject *parent)
     connect(m_stateMonitor.get(), &DevicesStateMonitor::stateChanged, this, &UnmountAction::updateIsValid);
 }
 
-UnmountAction::~UnmountAction()
-{
-}
+UnmountAction::~UnmountAction() = default;
 
 QString UnmountAction::name() const
 {

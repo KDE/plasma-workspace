@@ -34,9 +34,7 @@ WallpaperFileItemAction::WallpaperFileItemAction(QObject *parent, const QVariant
 {
 }
 
-WallpaperFileItemAction::~WallpaperFileItemAction()
-{
-}
+WallpaperFileItemAction::~WallpaperFileItemAction() = default;
 
 QList<QAction *> WallpaperFileItemAction::actions(const KFileItemListProperties &fileItemInfos, QWidget *parentWidget)
 {

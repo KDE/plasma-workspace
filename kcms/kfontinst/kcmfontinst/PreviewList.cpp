@@ -99,9 +99,7 @@ public:
         , m_previewSize(previewSize)
     {
     }
-    ~CPreviewListViewDelegate() override
-    {
-    }
+    ~CPreviewListViewDelegate() override = default;
 
     void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &idx) const override
     {

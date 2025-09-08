@@ -22,9 +22,7 @@ ConfigOverlay::ConfigOverlay(QQuickItem *parent)
     });
 }
 
-ConfigOverlay::~ConfigOverlay()
-{
-}
+ConfigOverlay::~ConfigOverlay() = default;
 
 bool ConfigOverlay::open() const
 {

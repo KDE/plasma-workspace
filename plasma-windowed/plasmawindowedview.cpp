@@ -39,9 +39,7 @@ PlasmaWindowedView::PlasmaWindowedView(QWindow *parent)
     m_rootObject = expr->evaluate().value<QQuickItem *>();
 }
 
-PlasmaWindowedView::~PlasmaWindowedView()
-{
-}
+PlasmaWindowedView::~PlasmaWindowedView() = default;
 
 void PlasmaWindowedView::setHasStatusNotifier(bool stay)
 {

@@ -13,9 +13,7 @@
 
 // mostly copied from KStatusNotiferItemDbus.cpps from knotification
 
-KDbusImageStruct::KDbusImageStruct()
-{
-}
+KDbusImageStruct::KDbusImageStruct() = default;
 
 KDbusImageStruct::KDbusImageStruct(const QImage &image)
 {

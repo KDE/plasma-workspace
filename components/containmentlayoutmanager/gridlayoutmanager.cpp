@@ -15,9 +15,7 @@ GridLayoutManager::GridLayoutManager(AppletsLayout *layout)
 {
 }
 
-GridLayoutManager::~GridLayoutManager()
-{
-}
+GridLayoutManager::~GridLayoutManager() = default;
 
 QString GridLayoutManager::serializeLayout() const
 {

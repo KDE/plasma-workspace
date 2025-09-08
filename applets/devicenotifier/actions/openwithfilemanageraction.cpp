@@ -32,9 +32,7 @@ OpenWithFileManagerAction::OpenWithFileManagerAction(const QString &udi, QObject
     m_isActionValid = true;
 }
 
-OpenWithFileManagerAction::~OpenWithFileManagerAction()
-{
-}
+OpenWithFileManagerAction::~OpenWithFileManagerAction() = default;
 
 QString OpenWithFileManagerAction::predicate() const
 {

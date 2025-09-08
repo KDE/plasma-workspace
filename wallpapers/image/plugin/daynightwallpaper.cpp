@@ -72,9 +72,7 @@ DayNightPhase DayNightPhase::from(const QDateTime &dateTime, const KDarkLightTra
     Q_UNREACHABLE();
 }
 
-DayNightSnapshot::DayNightSnapshot()
-{
-}
+DayNightSnapshot::DayNightSnapshot() = default;
 
 DayNightSnapshot::DayNightSnapshot(const QDateTime &timestamp, const QUrl &bottom, const QUrl &top, qreal blendFactor, bool disjoint)
     : m_timestamp(timestamp)

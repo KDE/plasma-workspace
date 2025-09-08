@@ -8,9 +8,7 @@
 
 namespace Plasma
 {
-DBusError::DBusError()
-{
-}
+DBusError::DBusError() = default;
 
 DBusError::DBusError(const QDBusMessage &message)
     : m_isValid(message.type() == QDBusMessage::ErrorMessage || message.type() == QDBusMessage::InvalidMessage)

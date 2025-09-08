@@ -121,9 +121,7 @@ void WallpaperPreviewImageResponse::onPreviewFailed(const KFileItem &item)
     Q_EMIT finished();
 }
 
-WallpaperPreviewImageProvider::WallpaperPreviewImageProvider()
-{
-}
+WallpaperPreviewImageProvider::WallpaperPreviewImageProvider() = default;
 
 QQuickImageResponse *WallpaperPreviewImageProvider::requestImageResponse(const QString &id, const QSize &requestedSize)
 {

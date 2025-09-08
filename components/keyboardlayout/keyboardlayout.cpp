@@ -38,9 +38,7 @@ KeyboardLayout::KeyboardLayout(QObject *parent)
     initialize();
 }
 
-KeyboardLayout::~KeyboardLayout()
-{
-}
+KeyboardLayout::~KeyboardLayout() = default;
 
 void KeyboardLayout::initialize()
 {

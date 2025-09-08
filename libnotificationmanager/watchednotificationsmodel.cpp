@@ -122,9 +122,7 @@ WatchedNotificationsModel::WatchedNotificationsModel()
 {
 }
 
-WatchedNotificationsModel::~WatchedNotificationsModel()
-{
-}
+WatchedNotificationsModel::~WatchedNotificationsModel() = default;
 
 void WatchedNotificationsModel::close(uint notificationId)
 {

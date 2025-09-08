@@ -19,9 +19,7 @@ class CViewer : public KParts::MainWindow
 
 public:
     CViewer();
-    ~CViewer() override
-    {
-    }
+    ~CViewer() override = default;
     void showUrl(const QUrl &url);
 
 public Q_SLOTS:

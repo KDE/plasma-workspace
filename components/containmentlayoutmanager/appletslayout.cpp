@@ -105,9 +105,7 @@ AppletsLayout::AppletsLayout(QQuickItem *parent)
     });
 }
 
-AppletsLayout::~AppletsLayout()
-{
-}
+AppletsLayout::~AppletsLayout() = default;
 
 Plasma::Containment *AppletsLayout::containment() const
 {

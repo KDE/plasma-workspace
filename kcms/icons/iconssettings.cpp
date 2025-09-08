@@ -21,9 +21,7 @@ IconsSettings::IconsSettings(QObject *parent)
     connect(this, &IconsSettings::ThemeChanged, this, &IconsSettings::updateThemeDirty);
 }
 
-IconsSettings::~IconsSettings()
-{
-}
+IconsSettings::~IconsSettings() = default;
 
 void IconsSettings::updateThemeDirty()
 {

@@ -37,9 +37,7 @@ ContextMenu::ContextMenu(QObject *parent, const QVariantList &args)
 {
 }
 
-ContextMenu::~ContextMenu()
-{
-}
+ContextMenu::~ContextMenu() = default;
 
 void ContextMenu::restore(const KConfigGroup &config)
 {

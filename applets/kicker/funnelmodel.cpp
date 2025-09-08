@@ -11,9 +11,7 @@ FunnelModel::FunnelModel(QObject *parent)
 {
 }
 
-FunnelModel::~FunnelModel()
-{
-}
+FunnelModel::~FunnelModel() = default;
 
 void FunnelModel::setSourceModel(QAbstractItemModel *model)
 {

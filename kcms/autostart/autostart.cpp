@@ -21,9 +21,7 @@ Autostart::Autostart(QObject *parent, const KPluginMetaData &data)
     qmlRegisterUncreatableType<Unit>("org.kde.plasma.kcm.autostart", 1, 0, "Unit", QStringLiteral("Unit object is not creatable"));
 }
 
-Autostart::~Autostart()
-{
-}
+Autostart::~Autostart() = default;
 
 AutostartModel *Autostart::model() const
 {

@@ -34,9 +34,7 @@ NotificationsEngine::NotificationsEngine(QObject *parent)
     init();
 }
 
-NotificationsEngine::~NotificationsEngine()
-{
-}
+NotificationsEngine::~NotificationsEngine() = default;
 
 void NotificationsEngine::init()
 {

@@ -59,9 +59,7 @@ DeviceControl::DeviceControl(QObject *parent)
     qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: Initialized";
 }
 
-DeviceControl::~DeviceControl()
-{
-}
+DeviceControl::~DeviceControl() = default;
 
 int DeviceControl::rowCount(const QModelIndex &parent) const
 {

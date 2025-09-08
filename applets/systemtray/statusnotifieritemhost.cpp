@@ -34,9 +34,7 @@ StatusNotifierItemHost::StatusNotifierItemHost()
     init();
 }
 
-StatusNotifierItemHost::~StatusNotifierItemHost()
-{
-}
+StatusNotifierItemHost::~StatusNotifierItemHost() = default;
 
 StatusNotifierItemHost *StatusNotifierItemHost::self()
 {

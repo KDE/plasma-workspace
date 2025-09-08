@@ -39,9 +39,7 @@ Mpris2SourceModel::Mpris2SourceModel(QObject *parent)
     fetchServiceNames();
 }
 
-Mpris2SourceModel::~Mpris2SourceModel()
-{
-}
+Mpris2SourceModel::~Mpris2SourceModel() = default;
 
 QVariant Mpris2SourceModel::dataFromPlayer(PlayerContainer *container, int role)
 {

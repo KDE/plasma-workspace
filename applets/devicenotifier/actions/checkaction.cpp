@@ -28,9 +28,7 @@ CheckAction::CheckAction(const QString &udi, QObject *parent)
     }
 }
 
-CheckAction::~CheckAction()
-{
-}
+CheckAction::~CheckAction() = default;
 
 void CheckAction::triggered()
 {

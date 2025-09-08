@@ -25,9 +25,7 @@ KuiserverEngine::KuiserverEngine(QObject *parent)
     init();
 }
 
-KuiserverEngine::~KuiserverEngine()
-{
-}
+KuiserverEngine::~KuiserverEngine() = default;
 
 QString KuiserverEngine::sourceName(Job *job)
 {

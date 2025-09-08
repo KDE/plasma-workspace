@@ -13,9 +13,7 @@ ConcatenateTasksProxyModel::ConcatenateTasksProxyModel(QObject *parent)
 {
 }
 
-ConcatenateTasksProxyModel::~ConcatenateTasksProxyModel()
-{
-}
+ConcatenateTasksProxyModel::~ConcatenateTasksProxyModel() = default;
 
 QModelIndex ConcatenateTasksProxyModel::mapIfaceToSource(const QModelIndex &index) const
 {

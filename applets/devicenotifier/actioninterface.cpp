@@ -22,9 +22,7 @@ ActionInterface::ActionInterface(const QString &udi, QObject *parent)
 {
 }
 
-ActionInterface::~ActionInterface()
-{
-}
+ActionInterface::~ActionInterface() = default;
 
 QString ActionInterface::predicate() const
 {

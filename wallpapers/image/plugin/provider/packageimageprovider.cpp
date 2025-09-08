@@ -122,9 +122,7 @@ QQuickTextureFactory *AsyncPackageImageResponse::textureFactory() const
     return QQuickTextureFactory::textureFactoryForImage(m_image);
 }
 
-PackageImageProvider::PackageImageProvider()
-{
-}
+PackageImageProvider::PackageImageProvider() = default;
 
 QQuickImageResponse *PackageImageProvider::requestImageResponse(const QString &id, const QSize &requestedSize)
 {

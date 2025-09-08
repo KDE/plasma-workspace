@@ -106,9 +106,7 @@ RootModel::RootModel(QObject *parent)
 {
 }
 
-RootModel::~RootModel()
-{
-}
+RootModel::~RootModel() = default;
 
 QVariant RootModel::data(const QModelIndex &index, int role) const
 {

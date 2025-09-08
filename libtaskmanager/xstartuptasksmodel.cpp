@@ -215,9 +215,7 @@ XStartupTasksModel::XStartupTasksModel(QObject *parent)
     d->init();
 }
 
-XStartupTasksModel::~XStartupTasksModel()
-{
-}
+XStartupTasksModel::~XStartupTasksModel() = default;
 
 QVariant XStartupTasksModel::data(const QModelIndex &index, int role) const
 {

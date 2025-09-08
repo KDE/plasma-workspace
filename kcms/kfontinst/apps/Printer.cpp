@@ -101,9 +101,7 @@ CPrintThread::CPrintThread(QPrinter *printer, const QList<Misc::TFont> &items, i
 {
 }
 
-CPrintThread::~CPrintThread()
-{
-}
+CPrintThread::~CPrintThread() = default;
 
 void CPrintThread::cancel()
 {
@@ -261,9 +259,7 @@ CPrinter::CPrinter(QWidget *parent)
     setMinimumSize(420, 80);
 }
 
-CPrinter::~CPrinter()
-{
-}
+CPrinter::~CPrinter() = default;
 
 void CPrinter::print(const QList<Misc::TFont> &items, int size)
 {

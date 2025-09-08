@@ -53,9 +53,7 @@ DesktopProtocol::DesktopProtocol(const QByteArray &protocol, const QByteArray &p
     pending.waitForFinished();
 }
 
-DesktopProtocol::~DesktopProtocol()
-{
-}
+DesktopProtocol::~DesktopProtocol() = default;
 
 void DesktopProtocol::checkLocalInstall()
 {

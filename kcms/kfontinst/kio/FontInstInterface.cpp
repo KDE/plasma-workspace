@@ -36,9 +36,7 @@ FontInstInterface::FontInstInterface()
     }
 }
 
-FontInstInterface::~FontInstInterface()
-{
-}
+FontInstInterface::~FontInstInterface() = default;
 
 int FontInstInterface::install(const QString &file, bool toSystem)
 {

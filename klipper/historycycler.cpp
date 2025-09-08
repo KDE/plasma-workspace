@@ -51,9 +51,7 @@ HistoryCycler::HistoryCycler(QObject *parent)
     });
 }
 
-HistoryCycler::~HistoryCycler()
-{
-}
+HistoryCycler::~HistoryCycler() = default;
 
 void HistoryCycler::cycleNext()
 {

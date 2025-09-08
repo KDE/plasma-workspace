@@ -53,9 +53,7 @@ MountAction::MountAction(const QString &udi, QObject *parent)
     connect(m_stateMonitor.get(), &DevicesStateMonitor::stateChanged, this, &MountAction::updateIsValid);
 }
 
-MountAction::~MountAction()
-{
-}
+MountAction::~MountAction() = default;
 
 QString MountAction::name() const
 {

@@ -23,13 +23,9 @@
 
 namespace Phonon
 {
-KdePlatformPlugin::KdePlatformPlugin()
-{
-}
+KdePlatformPlugin::KdePlatformPlugin() = default;
 
-KdePlatformPlugin::~KdePlatformPlugin()
-{
-}
+KdePlatformPlugin::~KdePlatformPlugin() = default;
 
 AbstractMediaStream *KdePlatformPlugin::createMediaStream(const QUrl &url, QObject *parent)
 {

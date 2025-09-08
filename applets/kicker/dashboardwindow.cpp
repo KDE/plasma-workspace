@@ -32,9 +32,7 @@ DashboardWindow::DashboardWindow(QQuickItem *parent)
     PlasmaShellWaylandIntegration::get(this);
 }
 
-DashboardWindow::~DashboardWindow()
-{
-}
+DashboardWindow::~DashboardWindow() = default;
 
 QQuickItem *DashboardWindow::mainItem() const
 {

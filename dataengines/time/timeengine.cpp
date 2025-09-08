@@ -34,9 +34,7 @@ TimeEngine::TimeEngine(QObject *parent)
     QTimer::singleShot(0, this, &TimeEngine::init);
 }
 
-TimeEngine::~TimeEngine()
-{
-}
+TimeEngine::~TimeEngine() = default;
 
 void TimeEngine::init()
 {

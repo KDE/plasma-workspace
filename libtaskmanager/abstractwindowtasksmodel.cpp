@@ -39,10 +39,7 @@ AbstractWindowTasksModel::AbstractWindowTasksModel(QObject *parent)
     }
 }
 
-AbstractWindowTasksModel::~AbstractWindowTasksModel()
-{
-}
-
+AbstractWindowTasksModel::~AbstractWindowTasksModel() = default;
 }
 
 #include "moc_abstractwindowtasksmodel.cpp"

@@ -20,9 +20,7 @@ AppmenuDBus::AppmenuDBus(QObject *parent)
 {
 }
 
-AppmenuDBus::~AppmenuDBus()
-{
-}
+AppmenuDBus::~AppmenuDBus() = default;
 
 bool AppmenuDBus::connectToBus(const QString &service, const QString &path)
 {

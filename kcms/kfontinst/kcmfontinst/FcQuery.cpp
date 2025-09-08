@@ -24,9 +24,7 @@ static int getInt(const QString &str)
     return rv;
 }
 
-CFcQuery::~CFcQuery()
-{
-}
+CFcQuery::~CFcQuery() = default;
 
 void CFcQuery::run(const QString &query)
 {

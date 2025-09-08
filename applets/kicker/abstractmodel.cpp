@@ -12,9 +12,7 @@ AbstractModel::AbstractModel(QObject *parent)
 {
 }
 
-AbstractModel::~AbstractModel()
-{
-}
+AbstractModel::~AbstractModel() = default;
 
 QHash<int, QByteArray> AbstractModel::staticRoleNames()
 {

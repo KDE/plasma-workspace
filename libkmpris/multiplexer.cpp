@@ -40,9 +40,7 @@ Multiplexer::Multiplexer(QObject *parent)
     connect(m_filterModel.get(), &QAbstractItemModel::rowsRemoved, this, &Multiplexer::onRowsRemoved);
 }
 
-Multiplexer::~Multiplexer()
-{
-}
+Multiplexer::~Multiplexer() = default;
 
 QBindable<int> Multiplexer::activePlayerIndex() const
 {

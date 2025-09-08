@@ -15,9 +15,7 @@ ProcessRunner::ProcessRunner(QObject *parent)
 {
 }
 
-ProcessRunner::~ProcessRunner()
-{
-}
+ProcessRunner::~ProcessRunner() = default;
 
 void ProcessRunner::runMenuEditor(QString arg)
 {

@@ -44,9 +44,7 @@ BatteryControlModel::BatteryControlModel(QObject *parent)
     }
 }
 
-BatteryControlModel::~BatteryControlModel()
-{
-}
+BatteryControlModel::~BatteryControlModel() = default;
 
 void BatteryControlModel::onServiceRegistered(const QString &serviceName)
 {

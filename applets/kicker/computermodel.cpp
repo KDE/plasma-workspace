@@ -27,9 +27,7 @@ FilteredPlacesModel::FilteredPlacesModel(QObject *parent)
     sort(0);
 }
 
-FilteredPlacesModel::~FilteredPlacesModel()
-{
-}
+FilteredPlacesModel::~FilteredPlacesModel() = default;
 
 QUrl FilteredPlacesModel::url(const QModelIndex &index) const
 {
@@ -72,9 +70,7 @@ RunCommandModel::RunCommandModel(QObject *parent)
 {
 }
 
-RunCommandModel::~RunCommandModel()
-{
-}
+RunCommandModel::~RunCommandModel() = default;
 
 QString RunCommandModel::description() const
 {
@@ -139,9 +135,7 @@ ComputerModel::ComputerModel(QObject *parent)
     setSourceModel(m_concatProxy);
 }
 
-ComputerModel::~ComputerModel()
-{
-}
+ComputerModel::~ComputerModel() = default;
 
 QString ComputerModel::description() const
 {

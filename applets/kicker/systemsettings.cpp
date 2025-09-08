@@ -13,9 +13,7 @@ SystemSettings::SystemSettings(QObject *parent)
 {
 }
 
-SystemSettings::~SystemSettings()
-{
-}
+SystemSettings::~SystemSettings() = default;
 
 QString SystemSettings::picturesLocation() const
 {

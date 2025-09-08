@@ -30,9 +30,7 @@ KeyState::KeyState(QObject *parent)
 {
 }
 
-KeyState::~KeyState()
-{
-}
+KeyState::~KeyState() = default;
 
 Qt::Key KeyState::key() const
 {
@@ -151,9 +149,7 @@ MouseButtonState::MouseButtonState(QObject *parent)
 {
 }
 
-MouseButtonState::~MouseButtonState()
-{
-}
+MouseButtonState::~MouseButtonState() = default;
 
 Qt::MouseButton MouseButtonState::button() const
 {

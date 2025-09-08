@@ -288,9 +288,7 @@ KCMLookandFeel::KCMLookandFeel(QObject *parent, const KPluginMetaData &data)
     connect(m_lnf, &KLookAndFeelManager::plasmaLockedChanged, this, &KCMLookandFeel::plasmaLockedChanged);
 }
 
-KCMLookandFeel::~KCMLookandFeel()
-{
-}
+KCMLookandFeel::~KCMLookandFeel() = default;
 
 void KCMLookandFeel::knsEntryChanged(const KNSCore::Entry &entry)
 {

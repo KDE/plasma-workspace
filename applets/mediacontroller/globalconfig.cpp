@@ -14,9 +14,7 @@ GlobalConfig::GlobalConfig(QObject *parent)
     configChanged();
 }
 
-GlobalConfig::~GlobalConfig()
-{
-}
+GlobalConfig::~GlobalConfig() = default;
 
 void GlobalConfig::configChanged()
 {

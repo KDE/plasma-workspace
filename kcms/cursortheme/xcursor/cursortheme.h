@@ -48,13 +48,9 @@ public:
         std::chrono::milliseconds delay;
     };
 
-    CursorTheme()
-    {
-    }
+    CursorTheme() = default;
     CursorTheme(const QString &title, const QString &description = QString());
-    virtual ~CursorTheme()
-    {
-    }
+    virtual ~CursorTheme() = default;
 
     const QString title() const
     {

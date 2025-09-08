@@ -26,9 +26,7 @@ FlattenTaskGroupsProxyModel::FlattenTaskGroupsProxyModel(QObject *parent)
 {
 }
 
-FlattenTaskGroupsProxyModel::~FlattenTaskGroupsProxyModel()
-{
-}
+FlattenTaskGroupsProxyModel::~FlattenTaskGroupsProxyModel() = default;
 
 void FlattenTaskGroupsProxyModel::setSourceModel(QAbstractItemModel *sourceModel)
 {

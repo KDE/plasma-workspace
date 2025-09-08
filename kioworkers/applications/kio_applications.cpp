@@ -94,9 +94,7 @@ ApplicationsProtocol::ApplicationsProtocol(const QByteArray &protocol, const QBy
         m_runMode = ApplicationsMode;
 }
 
-ApplicationsProtocol::~ApplicationsProtocol()
-{
-}
+ApplicationsProtocol::~ApplicationsProtocol() = default;
 
 KIO::WorkerResult ApplicationsProtocol::get(const QUrl &url)
 {

@@ -100,9 +100,7 @@ DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
 #endif
 }
 
-DesktopView::~DesktopView()
-{
-}
+DesktopView::~DesktopView() = default;
 
 void DesktopView::showEvent(QShowEvent *e)
 {

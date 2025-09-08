@@ -47,6 +47,4 @@ OrgFreedesktopLogin1ManagerInterface::OrgFreedesktopLogin1ManagerInterface(const
 {
 }
 
-OrgFreedesktopLogin1ManagerInterface::~OrgFreedesktopLogin1ManagerInterface()
-{
-}
+OrgFreedesktopLogin1ManagerInterface::~OrgFreedesktopLogin1ManagerInterface() = default;

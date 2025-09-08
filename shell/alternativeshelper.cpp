@@ -21,9 +21,7 @@ AlternativesHelper::AlternativesHelper(Plasma::Applet *applet, QObject *parent)
 {
 }
 
-AlternativesHelper::~AlternativesHelper()
-{
-}
+AlternativesHelper::~AlternativesHelper() = default;
 
 QStringList AlternativesHelper::appletProvides() const
 {

@@ -43,9 +43,7 @@ RunnerModel::RunnerModel(QObject *parent)
     readFavorites();
 }
 
-RunnerModel::~RunnerModel()
-{
-}
+RunnerModel::~RunnerModel() = default;
 
 QHash<int, QByteArray> RunnerModel::roleNames() const
 {

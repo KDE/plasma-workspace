@@ -715,9 +715,7 @@ public:
         : QStyledItemDelegate(p)
     {
     }
-    ~CGroupListViewDelegate() override
-    {
-    }
+    ~CGroupListViewDelegate() override = default;
 
     void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &idx) const override
     {

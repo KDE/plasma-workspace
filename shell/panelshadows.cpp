@@ -18,9 +18,7 @@ public:
     {
     }
 
-    ~Private()
-    {
-    }
+    ~Private() = default;
 
     void clearTiles();
     void setupTiles();
@@ -41,9 +39,7 @@ public:
 class PanelShadowsSingleton
 {
 public:
-    PanelShadowsSingleton()
-    {
-    }
+    PanelShadowsSingleton() = default;
 
     PanelShadows self;
 };

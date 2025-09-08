@@ -21,9 +21,7 @@ AppLauncher::AppLauncher(QObject *parent, const QVariantList &args)
 {
 }
 
-AppLauncher::~AppLauncher()
-{
-}
+AppLauncher::~AppLauncher() = default;
 
 void AppLauncher::init(const KConfigGroup &)
 {

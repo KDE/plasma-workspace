@@ -11,9 +11,7 @@
 #include <QScreen>
 #include <qpa/qplatformnativeinterface.h>
 
-ScreencastingStream::ScreencastingStream()
-{
-}
+ScreencastingStream::ScreencastingStream() = default;
 
 ScreencastingStream::~ScreencastingStream()
 {

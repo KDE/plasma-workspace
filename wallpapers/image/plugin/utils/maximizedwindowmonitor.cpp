@@ -34,9 +34,7 @@ MaximizedWindowMonitor::MaximizedWindowMonitor(QObject *parent)
     setFilterByRegion(RegionFilterMode::Mode::Intersect);
 }
 
-MaximizedWindowMonitor::~MaximizedWindowMonitor()
-{
-}
+MaximizedWindowMonitor::~MaximizedWindowMonitor() = default;
 
 bool MaximizedWindowMonitor::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const
 {

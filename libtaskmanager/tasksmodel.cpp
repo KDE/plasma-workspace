@@ -1028,9 +1028,7 @@ TasksModel::TasksModel(QObject *parent)
     });
 }
 
-TasksModel::~TasksModel()
-{
-}
+TasksModel::~TasksModel() = default;
 
 QHash<int, QByteArray> TasksModel::roleNames() const
 {

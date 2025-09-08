@@ -31,9 +31,7 @@ AppletContainer::AppletContainer(QQuickItem *parent)
     });
 }
 
-AppletContainer::~AppletContainer()
-{
-}
+AppletContainer::~AppletContainer() = default;
 
 void AppletContainer::componentComplete()
 {

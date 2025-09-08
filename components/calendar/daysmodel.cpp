@@ -32,9 +32,7 @@ public:
     EventPluginsManager *pluginsManager = nullptr;
 };
 
-DaysModelPrivate::DaysModelPrivate()
-{
-}
+DaysModelPrivate::DaysModelPrivate() = default;
 
 DaysModel::DaysModel(QObject *parent)
     : QAbstractItemModel(parent)

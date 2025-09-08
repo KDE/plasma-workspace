@@ -35,9 +35,7 @@ Mpris2FilterProxyModel::Mpris2FilterProxyModel(QObject *parent)
     connect(m_sourceModel.get(), &QAbstractListModel::dataChanged, this, &Mpris2FilterProxyModel::invalidateRowsFilter);
 }
 
-Mpris2FilterProxyModel::~Mpris2FilterProxyModel()
-{
-}
+Mpris2FilterProxyModel::~Mpris2FilterProxyModel() = default;
 
 bool Mpris2FilterProxyModel::filterAcceptsRow(int sourceRow, const QModelIndex &) const
 {

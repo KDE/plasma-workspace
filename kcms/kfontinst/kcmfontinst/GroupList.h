@@ -205,9 +205,7 @@ class CGroupListView : public QTreeView
 
 public:
     CGroupListView(QWidget *parent, CGroupList *model);
-    ~CGroupListView() override
-    {
-    }
+    ~CGroupListView() override = default;
 
     QSize sizeHint() const override
     {

@@ -36,9 +36,7 @@ public:
     };
 
     CFontFilter(QWidget *parent);
-    ~CFontFilter() override
-    {
-    }
+    ~CFontFilter() override = default;
 
     void setFoundries(const QSet<QString> &currentFoundries);
 

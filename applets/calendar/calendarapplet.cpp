@@ -13,9 +13,7 @@ CalendarApplet::CalendarApplet(QObject *parent, const KPluginMetaData &data, con
 {
 }
 
-CalendarApplet::~CalendarApplet()
-{
-}
+CalendarApplet::~CalendarApplet() = default;
 
 int CalendarApplet::weekNumber(const QDateTime &dateTime) const
 {
