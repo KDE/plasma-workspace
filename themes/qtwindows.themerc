@@ -85,7 +85,6 @@ Name[uz]=MS Windows 9x
 Name[uz@cyrillic]=MS Windows 9x
 Name[vi]=MS Windows 9x
 Name[wa]=MS Windows 9x
-Name[x-test]=xxMS Windows 9xxx
 Name[zh_CN]=MS Windows 9x 风格
 Name[zh_TW]=MS Windows 9x
 Comment=Built-in unthemed Windows 9x style
@@ -166,7 +165,6 @@ Comment[ug]=ئىچكى ئۆرنەكسىز Windows 9x ئۇسلۇبى
 Comment[uk]=Вбудований стиль Windows 9x без теми
 Comment[vi]=Kiểu cách Windows 9x không chủ đề tích hợp sẵn
 Comment[wa]=Stîle Windows 9x tchôkî-dvins sins tinme
-Comment[x-test]=xxBuilt-in unthemed Windows 9x stylexx
 Comment[zh_CN]=内建的无主题的 Windows 9x 风格
 Comment[zh_TW]=內建的 Windows 9x 樣式
 [KDE]
