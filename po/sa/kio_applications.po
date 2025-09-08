@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-11 00:43+0000\n"
+"POT-Creation-Date: 2025-09-08 00:46+0000\n"
 "PO-Revision-Date: 2024-12-13 19:09+0530\n"
 "Last-Translator: Kali <EMAIL@ADDRESS>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -17,17 +17,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
 
-#: kio_applications.cpp:126
+#: kio_applications.cpp:127
 #, kde-format
 msgid "Applications"
 msgstr "अनुप्रयोगाः"
 
-#: kio_applications.cpp:126
+#: kio_applications.cpp:127
 #, kde-format
 msgid "Programs"
 msgstr "कार्यक्रमाः"
 
-#: kio_applications.cpp:135
+#: kio_applications.cpp:136
 #, kde-format
 msgid "Unknown application folder"
 msgstr "अज्ञात अनुप्रयोगपुटम्"

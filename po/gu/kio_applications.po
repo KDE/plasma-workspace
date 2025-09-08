@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kio_settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-11 00:43+0000\n"
+"POT-Creation-Date: 2025-09-08 00:46+0000\n"
 "PO-Revision-Date: 2008-11-04 08:20+0530\n"
 "Last-Translator: Kartik Mistry <kartik.mistry@gmail.com>\n"
 "Language-Team: Gujarati\n"
@@ -18,17 +18,17 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: kio_applications.cpp:126
+#: kio_applications.cpp:127
 #, kde-format
 msgid "Applications"
 msgstr "કાર્યક્રમો"
 
-#: kio_applications.cpp:126
+#: kio_applications.cpp:127
 #, kde-format
 msgid "Programs"
 msgstr "કાર્યક્રમો"
 
-#: kio_applications.cpp:135
+#: kio_applications.cpp:136
 #, kde-format
 msgid "Unknown application folder"
 msgstr "અજાણ્યું કાર્યક્રમ ફોલ્ડર"

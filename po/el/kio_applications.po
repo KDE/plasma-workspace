@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kio_settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-11 00:43+0000\n"
+"POT-Creation-Date: 2025-09-08 00:46+0000\n"
 "PO-Revision-Date: 2008-10-30 14:05+0200\n"
 "Last-Translator: Toussis Manolis <manolis@koppermind.homelinux.org>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -19,17 +19,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 0.2\n"
 
-#: kio_applications.cpp:126
+#: kio_applications.cpp:127
 #, kde-format
 msgid "Applications"
 msgstr "Εφαρμογές"
 
-#: kio_applications.cpp:126
+#: kio_applications.cpp:127
 #, kde-format
 msgid "Programs"
 msgstr "Προγράμματα"
 
-#: kio_applications.cpp:135
+#: kio_applications.cpp:136
 #, kde-format
 msgid "Unknown application folder"
 msgstr "Άγνωστος φάκελος εφαρμογής"
