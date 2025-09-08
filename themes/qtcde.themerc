@@ -86,7 +86,6 @@ Name[uz@cyrillic]=CDE
 Name[vi]=CDE
 Name[wa]=CDE
 Name[xh]=CDE
-Name[x-test]=xxCDExx
 Name[zh_CN]=CDE 风格
 Name[zh_TW]=CDE
 Comment=Built-in unthemed CDE style
@@ -166,7 +165,6 @@ Comment[ug]=ئىچكى ئۆرنەكسىز CDE ئۇسلۇبى
 Comment[uk]=Вбудований стиль CDE без теми
 Comment[vi]=Kiểu cách CDE không chủ đề tích hợp sẵn
 Comment[wa]=Stîle CDE tchôkî-dvins sins tinme
-Comment[x-test]=xxBuilt-in unthemed CDE stylexx
 Comment[zh_CN]=内建的无主题的 CDE 风格
 Comment[zh_TW]=內建的 CDE 樣式
 [KDE]

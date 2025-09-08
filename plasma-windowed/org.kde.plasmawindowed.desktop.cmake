@@ -51,7 +51,6 @@ Name[ta]=சாளர பிளாஸ்மாய்டுகள்
 Name[tr]=Plasma Penceresi
 Name[uk]=Плазма у вікні
 Name[vi]=Plasma cửa sổ hoá
-Name[x-test]=xxPlasma Windowedxx
 Name[zh_CN]=窗口化 Plasma
 Name[zh_TW]=Plasma 視窗
 Comment=Run Plasmoids as simple applications
@@ -105,7 +104,6 @@ Comment[ta]=பிளாஸ்மாய்டுகளை தனிப்பட�
 Comment[tr]=Plasmoid'leri basit uygulamalar olarak çalıştır
 Comment[uk]=Запуск плазмоїдів як простих програм
 Comment[vi]=Chạy các Plasmoid như các ứng dụng đơn giản
-Comment[x-test]=xxRun Plasmoids as simple applicationsxx
 Comment[zh_CN]=将小部件当作简单应用程序运行
 Comment[zh_TW]=以簡單應用程式執行 Plasma 小元件
 
