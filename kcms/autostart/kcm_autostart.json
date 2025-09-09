@@ -49,7 +49,6 @@
         "Description[tr]": "Otomatik Başlatılan Uygulamalar",
         "Description[uk]": "Програми, що запускаються автоматично",
         "Description[vi]": "Các ứng dụng được khởi động tự động",
-        "Description[x-test]": "xxAutomatically Started Applicationsxx",
         "Description[zh_CN]": "自动启动的应用程序",
         "Description[zh_TW]": "自動啟動的應用程式",
         "FormFactors": [
@@ -110,7 +109,6 @@
         "Name[tr]": "Kendiliğinden Başlatım",
         "Name[uk]": "Автозапуск",
         "Name[vi]": "Khởi động tự động",
-        "Name[x-test]": "xxAutostartxx",
         "Name[zh_CN]": "自动启动",
         "Name[zh_TW]": "自動啟動"
     },
@@ -155,7 +153,6 @@
     "X-KDE-Keywords[tr]": "otomatik başlat yöneticisi,kendiliğinden başlat yöneticisi,sistem başlangıcı,cron,oto,otomatik,kendiliğinden,önyükle,yükle,oturum,başlangıç,oturum aç,giriş yap",
     "X-KDE-Keywords[uk]": "AAutostart Manager,system startup,plasma start,cron,auto,start,start up,boot,load,session,startup,launch,login,керування автозапуском,автозапуск,запуск,запуск системи,запуск плазми,завантаження,сеанс,запуск,вхід,логін,лоґін",
     "X-KDE-Keywords[vi]": "trình quản lí khởi động tự động,khởi động hệ thống,khởi động plasma,cron,khởi động,tự động,tải,phiên,đăng nhập",
-    "X-KDE-Keywords[x-test]": "xxAutostart Managerxx,xxsystem startupxx,xxplasma startxx,xxcronxx,xxautoxx,xxstartxx,xxstart upxx,xxbootxx,xxloadxx,xxsessionxx,xxstartupxx,xxlaunchxx,xxloginxx",
     "X-KDE-Keywords[zh_CN]": "Autostart Manager,system startup,plasma start,cron,auto,start,start up,boot,load,session,startup,launch,login,zidongqidongguanliqi,xitongqidong,kaiji,plasma qidong,dingshirenwu,jihuarenwu,qidong,jiazai,huihua,denglu,自动启动管理器,系统启动,开机,plasma 启动,定时任务,计划任务,启动,加载,会话,登录",
     "X-KDE-Keywords[zh_TW]": "自動啟動管理器,系統啟動,cron,自動,啟動,開機,載入,工作階段,作業階段,開啟,登入",
     "X-KDE-System-Settings-Parent-Category": "system-administration",

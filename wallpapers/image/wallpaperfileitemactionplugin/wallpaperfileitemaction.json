@@ -47,7 +47,6 @@
                 "Name[ta]": "ஜூலியசு ஃஜிண்ட்",
                 "Name[tr]": "Julius Zint",
                 "Name[uk]": "Julius Zint",
-                "Name[x-test]": "xxJulius Zintxx",
                 "Name[zh_CN]": "Julius Zint",
                 "Name[zh_TW]": "Julius Zint"
             }
@@ -98,7 +97,6 @@
         "Description[ta]": "படத்தை பூட்டுதிரை பின்புலப்படமாக அமை",
         "Description[tr]": "Görseli, kilit ekranı duvar kâğıdı olarak ayarlayın",
         "Description[uk]": "Встановити зображення як фонове (для вікна блокування)",
-        "Description[x-test]": "xxSet image as (lockscreen) wallpaperxx",
         "Description[zh_CN]": "设置图像为 (锁屏) 壁纸",
         "Description[zh_TW]": "設定影像為（鎖定螢幕）桌布",
         "License": "GPL",
@@ -159,7 +157,6 @@
         "Name[ta]": "இதுவாக அமை",
         "Name[tr]": "Ayarla",
         "Name[uk]": "Встановити як",
-        "Name[x-test]": "xxSet asxx",
         "Name[zh_CN]": "设为",
         "Name[zh_TW]": "設為"
     }

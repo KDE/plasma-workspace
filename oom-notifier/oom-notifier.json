@@ -35,7 +35,6 @@
         "Description[ta]": "நினைவு மீதமில்லாததைத் தவிர்க்க செயலிகள் மூடப்பட்டிருந்தால் அறிவிக்கும்",
         "Description[tr]": "Uygulamalar var olan belleğin tükenmesinden ötürü sonlandırıldığında bildirir",
         "Description[uk]": "Інформує про переривання роботи програм для запобігання нестачі пам'яті",
-        "Description[x-test]": "xxInforms when applications get terminated to prevent out of memory conditionsxx",
         "Description[zh_CN]": "当应用程序被终止以防止内存不足时通知用户",
         "Description[zh_TW]": "在應用程式因為記憶體不足而被終止時告知",
         "Name": "Out of Memory Notifier",
@@ -73,7 +72,6 @@
         "Name[ta]": "நினைவு மீதமின்மை அறிவிப்பி",
         "Name[tr]": "Bellek Tükendi Bildiricisi",
         "Name[uk]": "Сповіщувач про нестачу пам'яті",
-        "Name[x-test]": "xxOut of Memory Notifierxx",
         "Name[zh_CN]": "内存不足通知程序",
         "Name[zh_TW]": "記憶體不足狀態通知工具"
     },

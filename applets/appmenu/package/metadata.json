@@ -53,7 +53,6 @@
                 "Name[tr]": "Kai Uwe Broulik",
                 "Name[uk]": "Kai Uwe Broulik",
                 "Name[vi]": "Kai Uwe Broulik",
-                "Name[x-test]": "xxKai Uwe Broulikxx",
                 "Name[zh_CN]": "Kai Uwe Broulik",
                 "Name[zh_TW]": "Kai Uwe Broulik"
             }
@@ -108,7 +107,6 @@
         "Description[tr]": "Plasma Masaüstü’nüzde global menü çubuğu",
         "Description[uk]": "Загальна панель меню у вашій стільниці Плазми",
         "Description[vi]": "Thanh trình đơn toàn cục ở bàn làm việc Plasma của bạn",
-        "Description[x-test]": "xxGlobal menubar in your Plasma Desktopxx",
         "Description[zh_CN]": "Plasma 桌面上的全局菜单",
         "Description[zh_TW]": "您的 Plasma 桌面用的全域選單列",
         "FormFactors": [
@@ -174,7 +172,6 @@
         "Name[tr]": "Global Menü",
         "Name[uk]": "Загальне меню",
         "Name[vi]": "Trình đơn toàn cục",
-        "Name[x-test]": "xxGlobal Menuxx",
         "Name[zh_CN]": "全局菜单",
         "Name[zh_TW]": "全域選單",
         "Website": "https://kde.org/plasma-desktop"

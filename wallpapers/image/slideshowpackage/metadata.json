@@ -53,7 +53,6 @@
                 "Name[tr]": "Marco Martin",
                 "Name[uk]": "Marco Martin",
                 "Name[vi]": "Marco Martin",
-                "Name[x-test]": "xxMarco Martinxx",
                 "Name[zh_CN]": "Marco Martin",
                 "Name[zh_TW]": "Marco Martin"
             }
@@ -107,7 +106,6 @@
         "Description[tr]": "Slayt gösterisi duvar kâğıdı",
         "Description[uk]": "Тло у форматі показу слайдів",
         "Description[vi]": "Phông nền dạng chuỗi trình chiếu",
-        "Description[x-test]": "xxSlideshow wallpaperxx",
         "Description[zh_CN]": "幻灯片壁纸",
         "Description[zh_TW]": "投影播放桌布",
         "Icon": "folder-image",
@@ -198,7 +196,6 @@
         "Name[uk]": "Показ слайдів",
         "Name[vi]": "Chuỗi trình chiếu",
         "Name[wa]": "Diaporama",
-        "Name[x-test]": "xxSlideshowxx",
         "Name[zh_CN]": "幻灯片",
         "Name[zh_TW]": "投影播放",
         "Website": "https://kde.org/plasma-desktop"

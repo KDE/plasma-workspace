@@ -48,7 +48,6 @@
         "Description[tr]": "Durum bildirimi kullanıcı arayüzünü sunan hizmetleri yönetir",
         "Description[uk]": "Керує службами інтерфейсів користувача для сповіщення про стан",
         "Description[vi]": "Quản lí các dịch vụ cung cấp giao diện thông báo trạng thái",
-        "Description[x-test]": "xxManages services that provide status notifier user interfacesxx",
         "Description[zh_CN]": "管理提供状态通知用户界面的服务",
         "Description[zh_TW]": "管理提供狀態通知使用者介面的服務",
         "Name": "Status Notifier Manager",
@@ -116,7 +115,6 @@
         "Name[uk]": "Керування сповіщенням про стан",
         "Name[vi]": "Trình quản lí thông báo trạng thái",
         "Name[wa]": "Manaedjeu do notifiaedje d' estat",
-        "Name[x-test]": "xxStatus Notifier Managerxx",
         "Name[zh_CN]": "状态通知管理器",
         "Name[zh_TW]": "狀態通知管理員"
     },

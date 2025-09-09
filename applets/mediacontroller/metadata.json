@@ -53,7 +53,6 @@
                 "Name[tr]": "Sebastian Kügler",
                 "Name[uk]": "Sebastian Kügler",
                 "Name[vi]": "Sebastian Kügler",
-                "Name[x-test]": "xxSebastian Küglerxx",
                 "Name[zh_CN]": "Sebastian Kügler",
                 "Name[zh_TW]": "Sebastian Kügler"
             }
@@ -102,7 +101,6 @@
         "Description[ta]": "ஊடக இயக்கி கட்டுப்படுத்தி",
         "Description[tr]": "Ortam oynatıcısı denetimleri",
         "Description[uk]": "Керування мультимедійним програвачем",
-        "Description[x-test]": "xxMedia player controlsxx",
         "Description[zh_CN]": "媒体播放器控制",
         "Description[zh_TW]": "媒體播放器控制",
         "EnabledByDefault": true,
@@ -172,7 +170,6 @@
         "Name[tr]": "Ortam Oynatıcısı",
         "Name[uk]": "Програвач",
         "Name[vi]": "Trình phát phương tiện",
-        "Name[x-test]": "xxMedia Playerxx",
         "Name[zh_CN]": "媒体播放器",
         "Name[zh_TW]": "媒體播放器",
         "Website": "https://www.kde.org/plasma-desktop"

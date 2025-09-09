@@ -52,7 +52,6 @@
                 "Name[tr]": "Plasma Takımı",
                 "Name[uk]": "Команда розробників Плазми",
                 "Name[vi]": "Đội Plasma",
-                "Name[x-test]": "xxPlasma Teamxx",
                 "Name[zh_CN]": "Plasma 开发团队",
                 "Name[zh_TW]": "Plasma 團隊"
             }
@@ -105,7 +104,6 @@
         "Description[tr]": "İfadeleri hesapla",
         "Description[uk]": "Обчислення виразів",
         "Description[vi]": "Tính biểu thức",
-        "Description[x-test]": "xxCalculate expressionsxx",
         "Description[zh_CN]": "计算表达式",
         "Description[zh_TW]": "進行算式的計算",
         "EnabledByDefault": true,
@@ -195,7 +193,6 @@
         "Name[uz]": "Kalkulyator",
         "Name[vi]": "Máy tính bỏ túi",
         "Name[wa]": "Carculete",
-        "Name[x-test]": "xxCalculatorxx",
         "Name[zh_CN]": "计算器",
         "Name[zh_TW]": "計算機"
     }

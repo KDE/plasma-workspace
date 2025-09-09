@@ -52,7 +52,6 @@
                 "Name[tr]": "Kai Uwe Broulik",
                 "Name[uk]": "Kai Uwe Broulik",
                 "Name[vi]": "Kai Uwe Broulik",
-                "Name[x-test]": "xxKai Uwe Broulikxx",
                 "Name[zh_CN]": "Kai Uwe Broulik",
                 "Name[zh_TW]": "Kai Uwe Broulik"
             }
@@ -106,7 +105,6 @@
         "Description[tr]": "Renk şeması seçin",
         "Description[uk]": "Вибір схеми кольорів",
         "Description[vi]": "Chọn quy hoạch màu",
-        "Description[x-test]": "xxChoose color schemexx",
         "Description[zh_CN]": "选择配色方案",
         "Description[zh_TW]": "選擇配色方案",
         "FormFactors": [
@@ -169,7 +167,6 @@
         "Name[tr]": "Renkler",
         "Name[uk]": "Кольори",
         "Name[vi]": "Màu",
-        "Name[x-test]": "xxColorsxx",
         "Name[zh_CN]": "颜色",
         "Name[zh_TW]": "顏色",
         "Website": "https://www.kde.org/plasma-desktop"
@@ -216,7 +213,6 @@
     "X-KDE-Keywords[tr]": "renk,şema,düzen,kontrast,karşıtlık,araç takımı renkleri,renk şeması,renk stili,renk tarzı,renk biçemi,renk teması,gölge,açıklık,vurgu rengi,aksan rengi,koyu kip,koyu mod,karanlık kip,karanlık mod,açık mod,açık kip,aydınlık mod,aydınlık kip,vurgu",
     "X-KDE-Keywords[uk]": "кольори,кольори,схема,контраст,кольори віджетів,схема кольорів,стиль кольорів,тема кольорів,відтінок,акцент,схема,темний режим,світлий режим,підсвічування,colors,colours,scheme,contrast,Widget colors,Color Scheme,color style,color theme,tint,accent color,color scheme,dark mode,light mode,accent colour,accent,highlight,colour",
     "X-KDE-Keywords[vi]": "color,colour,scheme,contrast,Widget colors,Color Scheme,color style,color theme,tint,accent color,color scheme,dark mode,light mode,accent colour,accent,highlight,colour,màu,sắc,quy hoạch,tương phản,màu phụ kiện,quy hoạch màu,kiểu cách màu,chủ đề màu,phủ,màu chủ đạo,chế độ tối,chế độ sáng,chủ đạo,tô sáng",
-    "X-KDE-Keywords[x-test]": "xxcolorxx,xxcolourxx,xxschemexx,xxcontrastxx,xxWidget colorsxx,xxColor Schemexx,xxcolor stylexx,xxcolor themexx,xxtintxx,xxaccent colorxx,xxcolor schemexx,xxdark modexx,xxlight modexx,xxaccent colourxx,xxaccentxx,xxhighlightxx,xxcolourxx",
     "X-KDE-Keywords[zh_CN]": "color,colour,scheme,contrast,Widget colors,Color Scheme,color style,color theme,tint,accent color,color scheme,dark mode,light mode,accent colour,accent,highlight,colour,yanse,yansefangan,peisefangan,duibidu,bujianyanse,yansefengge,yanseyangshi,peiseyangshi,peisefengge,yansezhuti,zhuose,zhutise,zhongdianse,qiangdiaose,ansemoshi,shense,shensemoshi,anheimoshi,heianmoshi,qianse,qiansemoshi,liangsemoshi,mingliangmoshi,gaoguang,gaoliang,颜色,颜色方案,配色方案,对比度,部件颜色,颜色风格,颜色样式,配色样式,配色风格,颜色主题,着色,主题色,重点色,强调色,暗色模式,深色,深色模式,暗黑模式,黑暗模式,浅色,浅色模式,亮色模式,明亮模式,高光,高亮",
     "X-KDE-Keywords[zh_TW]": "色彩,顏色,配色方案,顏色主題,顏色風格,色彩風格,強調色,深色模式,暗色,亮色,明亮模式,突顯",
     "X-KDE-System-Settings-Parent-Category": "themes",

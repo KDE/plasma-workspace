@@ -21,7 +21,6 @@
         "Description[ta]": "நேரத்திற்கேற்ப தோற்றத்திட்டத்தை கருமையானதாக அல்லது வெளிர்ந்ததாக அமைக்கும்",
         "Description[tr]": "Günün saatine bağlı olarak açık ve koyu global temalar arasında geçiş yapar",
         "Description[uk]": "Перемикає систему між темною і світлою загальними темами на основі часу доби",
-        "Description[x-test]": "xxSwitches between dark and light Global Themes based on time of dayxx",
         "Description[zh_CN]": "根据一天的不同时间段切换深色和浅色全局主题",
         "Description[zh_TW]": "依時間切換亮色或暗色全域主題",
         "Name": "Global Theme Auto-Switcher",
@@ -45,7 +44,6 @@
         "Name[ta]": "பொது தோற்றத்திட்ட தானியக்க மாற்றி",
         "Name[tr]": "Global Tema Değiştiricisi",
         "Name[uk]": "Автоперемикач загальної теми",
-        "Name[x-test]": "xxGlobal Theme Auto-Switcherxx",
         "Name[zh_CN]": "全局主题自动切换程序",
         "Name[zh_TW]": "全域主題自動切換器"
     },
