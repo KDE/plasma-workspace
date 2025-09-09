@@ -43,7 +43,6 @@
         "Description[ta]": "சாதனங்கள் செருகப்படும்போதும் கழற்றப்படும்போதும் ஒலியெழுப்பு",
         "Description[tr]": "Aygıtlar takıldığında veya çıkarıldığında sesle geri bildirim ver",
         "Description[uk]": "Відтворювати звуковий сигнал при з'єднанні або від'єднанні пристроїв",
-        "Description[x-test]": "xxPlay audible feedback when devices are inserted or removedxx",
         "Description[zh_CN]": "插入/移除设备时发出声音提示",
         "Description[zh_TW]": "插入或移除裝置時播放音效回饋",
         "Name": "Device Notifications",
@@ -115,7 +114,6 @@
         "Name[uk]": "Сповіщення про пристрої",
         "Name[vi]": "Thông báo của thiết bị",
         "Name[wa]": "Notifiaedjes des éndjins",
-        "Name[x-test]": "xxDevice Notificationsxx",
         "Name[zh_CN]": "设备通知",
         "Name[zh_TW]": "裝置通知"
     },

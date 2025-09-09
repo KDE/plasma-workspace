@@ -53,7 +53,6 @@
                 "Name[tr]": "Marco Martin",
                 "Name[uk]": "Marco Martin",
                 "Name[vi]": "Marco Martin",
-                "Name[x-test]": "xxMarco Martinxx",
                 "Name[zh_CN]": "Marco Martin",
                 "Name[zh_TW]": "Marco Martin"
             }
@@ -103,7 +102,6 @@
         "Description[ta]": "ரூட் வகிர்வின் பயன்பாட்டைக் காட்டும் பிளாஸ்மாய்ட்",
         "Description[tr]": "Kök bölüntünün kullanımını gösteren sistem monitörü araç takımı",
         "Description[uk]": "Віджет нагляду за системою, який показує використання кореневого розділу",
-        "Description[x-test]": "xxSystem monitor widget that shows the usage of the root partitionxx",
         "Description[zh_CN]": "显示根分区占用率的系统监视挂件",
         "Description[zh_TW]": "顯示 root 分割區用量的系統監控元件",
         "EnabledByDefault": true,
@@ -165,7 +163,6 @@
         "Name[tr]": "Disk Kullanımı",
         "Name[uk]": "Використання диска",
         "Name[vi]": "Lượng dùng đĩa",
-        "Name[x-test]": "xxDisk Usagexx",
         "Name[zh_CN]": "磁盘使用情况",
         "Name[zh_TW]": "磁碟用量",
         "Website": "https://www.kde.org/plasma-desktop"

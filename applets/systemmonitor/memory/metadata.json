@@ -53,7 +53,6 @@
                 "Name[tr]": "Kai Uwe Broulik",
                 "Name[uk]": "Kai Uwe Broulik",
                 "Name[vi]": "Kai Uwe Broulik",
-                "Name[x-test]": "xxKai Uwe Broulikxx",
                 "Name[zh_CN]": "Kai Uwe Broulik",
                 "Name[zh_TW]": "Kai Uwe Broulik"
             }
@@ -103,7 +102,6 @@
         "Description[ta]": "நினைவகத்தின் பயன்பாட்டைக் காட்டும் பிளாஸ்மாய்ட்",
         "Description[tr]": "Fiziksel bellek kullanımını gösteren sistem monitörü araç takımı",
         "Description[uk]": "Віджет нагляду за системою, який показує використання фізичної пам'яті",
-        "Description[x-test]": "xxSystem monitor widget that shows physical memory usagexx",
         "Description[zh_CN]": "显示物理内存占用率的系统监视挂件",
         "Description[zh_TW]": "顯示實體記憶體用量的系統監控元件",
         "EnabledByDefault": true,
@@ -166,7 +164,6 @@
         "Name[tr]": "Bellek Kullanımı",
         "Name[uk]": "Використання пам'яті",
         "Name[vi]": "Lượng dùng bộ nhớ",
-        "Name[x-test]": "xxMemory Usagexx",
         "Name[zh_CN]": "内存使用情况",
         "Name[zh_TW]": "記憶體用量",
         "Website": "https://www.kde.org/plasma-desktop"

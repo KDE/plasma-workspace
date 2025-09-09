@@ -50,7 +50,6 @@
                 "Name[tr]": "Martin Klapetek",
                 "Name[uk]": "Martin Klapetek",
                 "Name[vi]": "Martin Klapetek",
-                "Name[x-test]": "xxMartin Klapetekxx",
                 "Name[zh_CN]": "Martin Klapetek",
                 "Name[zh_TW]": "Martin Klapetek"
             }
@@ -102,7 +101,6 @@
         "Description[tr]": "Genel tatilleri görüntülemek için takvim eklentisi",
         "Description[uk]": "Додаток календаря для показу офіційних свят",
         "Description[vi]": "Phần cài cắm lịch để hiển thị các ngày lễ quốc gia",
-        "Description[x-test]": "xxCalendar plugin for displaying public holidaysxx",
         "Description[zh_CN]": "显示公共节假日的日历插件",
         "Description[zh_TW]": "用於顯示例假日的行事曆外掛程式",
         "Icon": "view-calendar-holiday",
@@ -156,7 +154,6 @@
         "Name[tr]": "Tatiller",
         "Name[uk]": "Свята",
         "Name[vi]": "Ngày lễ",
-        "Name[x-test]": "xxHolidaysxx",
         "Name[zh_CN]": "节假日",
         "Name[zh_TW]": "假日"
     },

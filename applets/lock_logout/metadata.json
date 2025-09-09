@@ -52,7 +52,6 @@
                 "Name[tr]": "Viranch Mehta",
                 "Name[uk]": "Viranch Mehta",
                 "Name[vi]": "Viranch Mehta",
-                "Name[x-test]": "xxViranch Mehtaxx",
                 "Name[zh_CN]": "Viranch Mehta",
                 "Name[zh_TW]": "Viranch Mehta"
             }
@@ -107,7 +106,6 @@
         "Description[tr]": "Ekranı kilitleyin veya oturumu kapatın",
         "Description[uk]": "Заблокуйте екран або вийдіть",
         "Description[vi]": "Khoá màn hình hoặc đăng xuất",
-        "Description[x-test]": "xxLock the screen or log outxx",
         "Description[zh_CN]": "锁屏或注销",
         "Description[zh_TW]": "鎖定螢幕或登出",
         "EnabledByDefault": true,
@@ -201,7 +199,6 @@
         "Name[uz]": "Qulflash/Chiqish",
         "Name[vi]": "Khoá/Đăng xuất",
         "Name[wa]": "Serer/Dislodjî",
-        "Name[x-test]": "xxLock/Logoutxx",
         "Name[zh_CN]": "锁屏/注销",
         "Name[zh_TW]": "鎖定/登出",
         "Website": "https://www.kde.org/plasma-desktop"

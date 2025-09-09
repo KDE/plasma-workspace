@@ -32,7 +32,6 @@
         "Description[ta]": "தற்போதைய இருப்பிடத்தைப் பொறுத்து கணினியின் நேர மண்டலத்தைத் தானாக மாற்றும்",
         "Description[tr]": "Geçerli konuma bağlı olarak sistem zamanını kendiliğinden değiştirin",
         "Description[uk]": "Автоматично змінювати часовий пояс на основі поточного місця перебування",
-        "Description[x-test]": "xxAutomatically change the system time zone based on the current locationxx",
         "Description[zh_CN]": "基于当前位置自动更改系统时区",
         "Description[zh_TW]": "自動依目前地理位置變更系統時區",
         "Name": "Location-based System Time Zone",
@@ -67,7 +66,6 @@
         "Name[ta]": "இருப்பிடத்தை சாரந்த கணினி நேரமண்டலம்",
         "Name[tr]": "Konum Tabanlı Sistem Zaman Dilimi",
         "Name[uk]": "Часовий пояс системи на основі місця перебування",
-        "Name[x-test]": "xxLocation-based System Time Zonexx",
         "Name[zh_CN]": "基于位置的系统时区",
         "Name[zh_TW]": "基於地點的系統時區"
     }

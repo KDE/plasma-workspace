@@ -51,7 +51,6 @@
                 "Name[tr]": "Viranch Mehta, Jacopo De Simoi",
                 "Name[uk]": "Viranch Mehta, Jacopo De Simoi",
                 "Name[vi]": "Viranch Mehta, Jacopo De Simoi",
-                "Name[x-test]": "xxViranch Mehta, Jacopo De Simoixx",
                 "Name[zh_CN]": "Viranch Mehta, Jacopo De Simoi",
                 "Name[zh_TW]": "Viranch Mehta, Jacopo De Simoi"
             }
@@ -106,7 +105,6 @@
         "Description[tr]": "Aygıt erişimi ve bildirimler",
         "Description[uk]": "Сповіщення і доступ до пристроїв",
         "Description[vi]": "Thông báo và cách truy cập cho các thiết bị",
-        "Description[x-test]": "xxNotifications and access for devicesxx",
         "Description[zh_CN]": "设备的通知和访问",
         "Description[zh_TW]": "新裝置的通知與存取",
         "EnabledByDefault": true,
@@ -170,7 +168,6 @@
         "Name[tr]": "Diskler ve Aygıtlar",
         "Name[uk]": "Диски і пристрої",
         "Name[vi]": "Đĩa & Thiết bị",
-        "Name[x-test]": "xxDisks & Devicesxx",
         "Name[zh_CN]": "磁盘和设备",
         "Name[zh_TW]": "硬碟與裝置",
         "Website": "https://userbase.kde.org/Plasma/DeviceNotifier"

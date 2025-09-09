@@ -53,7 +53,6 @@
                 "Name[tr]": "Marco Martin",
                 "Name[uk]": "Marco Martin",
                 "Name[vi]": "Marco Martin",
-                "Name[x-test]": "xxMarco Martinxx",
                 "Name[zh_CN]": "Marco Martin",
                 "Name[zh_TW]": "Marco Martin"
             }
@@ -107,7 +106,6 @@
         "Description[tr]": "Düz renk duvar kağıdı",
         "Description[uk]": "Звичайне одноколірне тло",
         "Description[vi]": "Phông nền dạng màu trơn",
-        "Description[x-test]": "xxPlain color wallpaperxx",
         "Description[zh_CN]": "纯色壁纸",
         "Description[zh_TW]": "純色桌布",
         "Icon": "preferences-desktop-color",
@@ -169,7 +167,6 @@
         "Name[tr]": "Düz Renk",
         "Name[uk]": "Звичайний колір",
         "Name[vi]": "Màu trơn",
-        "Name[x-test]": "xxPlain Colorxx",
         "Name[zh_CN]": "纯色",
         "Name[zh_TW]": "純色",
         "Website": "https://kde.org/plasma-desktop"

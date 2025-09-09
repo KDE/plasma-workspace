@@ -53,7 +53,6 @@
                 "Name[tr]": "Sebastian Kügler",
                 "Name[uk]": "Sebastian Kügler",
                 "Name[vi]": "Sebastian Kügler",
-                "Name[x-test]": "xxSebastian Küglerxx",
                 "Name[zh_CN]": "Sebastian Kügler",
                 "Name[zh_TW]": "Sebastian Kügler"
             }
@@ -108,7 +107,6 @@
         "Description[tr]": "Randevularınız ve etkinliklerinizle birlikte ay görünümü",
         "Description[uk]": "Показ розкладу місяця із вашими записами зустрічей і подій",
         "Description[vi]": "Hiển thị tháng với các buổi hẹn và sự kiện của bạn",
-        "Description[x-test]": "xxMonth display with your appointments and eventsxx",
         "Description[zh_CN]": "按月显示您的预约和事件",
         "Description[zh_TW]": "顯示您的約定與事件的月曆",
         "FormFactors": [
@@ -199,7 +197,6 @@
         "Name[uk]": "Календар",
         "Name[vi]": "Lịch",
         "Name[wa]": "Calindrî",
-        "Name[x-test]": "xxCalendarxx",
         "Name[zh_CN]": "日历",
         "Name[zh_TW]": "行事曆",
         "Website": "https://kde.org/plasma-desktop"

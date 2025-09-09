@@ -49,7 +49,6 @@
         "Description[tr]": "Kullanıcı geri bildirim ayarlarını yapılandırın",
         "Description[uk]": "Налаштовування системи відгуків користувача",
         "Description[vi]": "Cấu hình các thiết lập phản hồi của người dùng",
-        "Description[x-test]": "xxConfigure user feedback settingsxx",
         "Description[zh_CN]": "配置用户反馈设置",
         "Description[zh_TW]": "設定使用者回饋",
         "FormFactors": [
@@ -109,7 +108,6 @@
         "Name[tr]": "Kullanıcı Geri Bildirimi",
         "Name[uk]": "Відгуки користувача",
         "Name[vi]": "Phản hồi của người dùng",
-        "Name[x-test]": "xxUser Feedbackxx",
         "Name[zh_CN]": "用户反馈",
         "Name[zh_TW]": "使用者回饋"
     },
@@ -154,7 +152,6 @@
     "X-KDE-Keywords[tr]": "geri bildirim,rapor,raporla,rapor et,bildir,iletişim,veri toplama,istatistik,kullanım,günlük,günlükleme,telemetri",
     "X-KDE-Keywords[uk]": "feedback,report,contact,data collection,statistics,usage,log,logging,telemetry,відгук,звіт,зв'язок,контакт,збирання даних,статистика,користування,журнал,журналювання,телеметрія",
     "X-KDE-Keywords[vi]": "feedback,report,contact,data collection,statistics,usage,log,logging,telemetry,phản hồi,báo cáo,liên hệ,thu thập dữ liệu,thống kê,sử dụng,nhật kí,ghi nhật kí,viễn trắc",
-    "X-KDE-Keywords[x-test]": "xxfeedbackxx,xxreportxx,xxcontactxx,xxdata collectionxx,xxstatisticsxx,xxusagexx,xxlogxx,xxloggingxx,xxtelemetryxx",
     "X-KDE-Keywords[zh_CN]": "feedback,report,contact,data collection,statistics,usage,log,logging,telemetry,fankui,huikui,fanying,baogao,lianxi,shujushouji,shujutongji,tongjishuju,shiyongshuju,yongliang,shiyonglv,shiyongshuiping,rizhi,rizhijilu,shangbao,yaoce,反馈,回馈,反映,报告,联系,数据收集,数据统计,统计数据,使用数据,用量,使用率,使用水平,日志,日志记录,上报,遥测",
     "X-KDE-Keywords[zh_TW]": "回饋,資料蒐集,資料收集,統計資料,使用量,記錄,紀錄",
     "X-KDE-System-Settings-Parent-Category": "security-privacy",

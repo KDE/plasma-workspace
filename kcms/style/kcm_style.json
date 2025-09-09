@@ -49,7 +49,6 @@
         "Description[tr]": "Uygulama biçemini ve davranışını yapılandırın",
         "Description[uk]": "Налаштовування стилю і поведінки вікон програм",
         "Description[vi]": "Cấu hình kiểu cách và ứng xử của ứng dụng",
-        "Description[x-test]": "xxConfigure application style and behaviorxx",
         "Description[zh_CN]": "配置应用程序外观样式和行为",
         "Description[zh_TW]": "設定應用程式風格與行為",
         "Icon": "preferences-desktop-theme-applications",
@@ -104,7 +103,6 @@
         "Name[tr]": "Uygulama Biçemi",
         "Name[uk]": "Стиль вікон програм",
         "Name[vi]": "Kiểu cách ứng dụng",
-        "Name[x-test]": "xxApplication Stylexx",
         "Name[zh_CN]": "应用程序外观样式",
         "Name[zh_TW]": "應用程式風格"
     },
@@ -148,7 +146,6 @@
     "X-KDE-Keywords[ta]": "style,styles,look,widget,icons,toolbars,text,highlight,apps,windows,KDE applications,theme,plasma,menu,global menu,GTK,GNOME, application style,app,programs, appearance,skin,themes,light mode,dark mode, பிளாஸ்மா, தோற்றம், தோற்றத்திட்டம், கருவிப்பட்டை,செயலிகள், சாளரங்கள், பொதுவான பட்டி, செயலி, பயன்பாடு, வெளிர்ந்த பயன்முறை, கருமையான பயன்முறை",
     "X-KDE-Keywords[tr]": "stil,stiller,tarz,tarzlar,biçem,biçemler,görünüş,his,bakış,araç takımı,simge,simgeler,araç çubuğu,araç çubukları,metin,yazı,vurgu,uygulama,uygulamalar,app,KDE uygulamaları,tema,temalar,plasma,menü,global menü,GTK,GNOME,uygulama biçemi,uygulama tarzı,uygulama stili,programlar,program,tema,temalar,açık kip, koyu kip,açık mod,koyu mod,aydınlık kip,aydınlık mod,karanlık mod,karanlık kip,windows,pencereler,pencere",
     "X-KDE-Keywords[uk]": "style,styles,look,widget,icons,toolbars,text,highlight,apps,windows,KDE applications,theme,plasma,menu,global menu,GTK,GNOME,application style,app,programs,appearance,skin,themes,light mode,dark mode,стиль,стилі,вигляд,віджет,піктограма,піктограми,значок,значки,іконки,панель,панель інструментів,текст,підсвічування,позначення,програма,програми,вікна,тема,плазма,меню,загальне меню,жтк,жетека,гном,гноме,стиль програм,програма,застосунок,аплікація,вигляд,оболонка,шкірка,теми,світлий режим,темний режим",
-    "X-KDE-Keywords[x-test]": "xxstylexx,xxstylesxx,xxlookxx,xxwidgetxx,xxiconsxx,xxtoolbarsxx,xxtextxx,xxhighlightxx,xxappsxx,xxwindowsxx,xxKDE applicationsxx,xxthemexx,xxplasmaxx,xxmenuxx,xxglobal menuxx,xxGTKxx,xxGNOMExx,xxapplication stylexx,xxappxx,xxprogramsxx,xxappearancexx,xxskinxx,xxthemesxx,xxlight modexx,xxdark modexx",
     "X-KDE-Keywords[zh_CN]": "style,styles,look,widget,icons,toolbars,text,highlight,apps,KDE applications,theme,plasma,menu,global menu,GTK,GNOME,application style,app,programs,appearance,skin,themes,light mode,dark mode,windows,yangshi,fengge,waiguan,shijue,shijuexiaoguo,shixiao,xiaobujian,bujian,chuangkoubujian,kongjian,zujian,tubiao,gongjulan,wenzi,wenben,gaoliang,gaoguang,zhongdianxianshi,yingyong,yingyongchengxu,kde,zhuti,caidan,quanjucaidan,yingyongchengxufengge,yingyongchengxuyangshi,chengxu,pifu,qiansemoshi,liangsemoshi,minglkiangmoshi,baisemoshi,shensemoshi,ansemoshi,anheimoshi,heianmoshi,heisemoshi,样式,风格,外观,视觉,视觉效果,视效,小部件,部件,窗口部件,控件,组件,图标,工具栏,文字,文本,高亮,高光,重点显示,应用,应用程序,KDE 应用程序,主题,菜单,全局菜单,应用程序风格,应用程序样式,程序,皮肤,浅色模式,亮色模式,明亮模式,白色模式,深色模式,暗色模式,暗黑模式,黑暗模式,黑色模式",
     "X-KDE-Keywords[zh_TW]": "風格,樣式,外觀,元件,工具,圖示,工具列,文字,突顯,應用程式,程式,主題,選單,全域選單,應用程式風格,亮色模式,暗色模式,深色模式,明亮模式,視窗",
     "X-KDE-System-Settings-Parent-Category": "themes",

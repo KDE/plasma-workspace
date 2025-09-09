@@ -52,7 +52,6 @@
                 "Name[tr]": "Martin Gräßlin",
                 "Name[uk]": "Martin Gräßlin",
                 "Name[vi]": "Martin Gräßlin",
-                "Name[x-test]": "xxMartin Gräßlinxx",
                 "Name[zh_CN]": "Martin Gräßlin",
                 "Name[zh_TW]": "Martin Gräßlin"
             }
@@ -107,7 +106,6 @@
         "Description[tr]": "Pano geçmişine erişim sağlar",
         "Description[uk]": "Надає доступ до журналу буфера обміну даними",
         "Description[vi]": "Cho phép truy cập lịch sử bảng nháp",
-        "Description[x-test]": "xxProvides access to the clipboard historyxx",
         "Description[zh_CN]": "访问剪贴板历史",
         "Description[zh_TW]": "提供剪貼簿歷史紀錄的存取",
         "EnabledByDefault": true,
@@ -176,7 +174,6 @@
         "Name[tr]": "Pano",
         "Name[uk]": "Буфер обміну",
         "Name[vi]": "Bảng nháp",
-        "Name[x-test]": "xxClipboardxx",
         "Name[zh_CN]": "剪贴板",
         "Name[zh_TW]": "剪貼簿",
         "Website": "https://kde.org/plasma-desktop/"
@@ -219,7 +216,6 @@
     "X-KDE-Keywords[ta]": "klipper,clipboard,copy,paste,நினைவகம்,பிடிப்புப்பலகை,நகல்,நகலெடு,ஒட்டு,வெட்டு,ஒட்டுபலகை",
     "X-KDE-Keywords[tr]": "klipper,pano,kopyala,yapıştır,kes",
     "X-KDE-Keywords[uk]": "klipper,clipboard,copy,paste,кліпер,буфер,копіювання,вставлення",
-    "X-KDE-Keywords[x-test]": "xxklipperxx,xxclipboardxx,xxcopyxx,xxpastexx",
     "X-KDE-Keywords[zh_CN]": "klipper,clipboard,copy,paste,jiantieban,fuzhi,zhantie,剪贴板,复制,粘贴",
     "X-KDE-Keywords[zh_TW]": "剪貼簿,複製,貼上",
     "X-Plasma-API-Minimum-Version": "6.0",

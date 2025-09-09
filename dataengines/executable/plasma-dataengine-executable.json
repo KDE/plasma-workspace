@@ -55,7 +55,6 @@
         "Description[tr]": "Yürütülebilir Veri İşletkesini Başlat",
         "Description[uk]": "Виконати програму рушія даних",
         "Description[vi]": "Chạy dụng cụ \"Dữ liệu\" thực thi được",
-        "Description[x-test]": "xxRun Executable Data Enginexx",
         "Description[zh_CN]": "运行程序数据引擎",
         "Description[zh_TW]": "執行可執行檔的資料引擎",
         "Icon": "application-x-executable-script",
@@ -136,7 +135,6 @@
         "Name[uk]": "Виконання команд",
         "Name[vi]": "Chạy lệnh",
         "Name[wa]": "Enonder des cmandes",
-        "Name[x-test]": "xxRun Commandsxx",
         "Name[zh_CN]": "运行命令",
         "Name[zh_TW]": "執行指令",
         "Website": "https://kde.org/plasma-desktop"

@@ -48,7 +48,6 @@
         "Description[tr]": "NOAA Ulusal Hava Durumu Hizmeti’nden XML Verisi",
         "Description[uk]": "Дані XML з національної служби погоди NOAA",
         "Description[vi]": "Dữ liệu XML từ Dịch vụ Thời tiết Quốc gia của NOAA",
-        "Description[x-test]": "xxXML Data from NOAA's National Weather Servicexx",
         "Description[zh_CN]": "NOAA 国家天气服务提供的 XML 数据",
         "Description[zh_TW]": "來自 NOAA 國家天氣服務的 XML 資料",
         "Icon": "noneyet",
@@ -126,7 +125,6 @@
         "Name[uk]": "Національна служба погоди NOAA",
         "Name[vi]": "Dịch vụ Thời tiết Quốc gia của NOAA",
         "Name[wa]": "NOAA's National Weather Service",
-        "Name[x-test]": "xxNOAA's National Weather Servicexx",
         "Name[zh_CN]": "NOAA 美国天气服务",
         "Name[zh_TW]": "NOAA 的國家天氣服務"
     },

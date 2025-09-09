@@ -52,7 +52,6 @@
                 "Name[tr]": "Sebastian Kügler",
                 "Name[uk]": "Sebastian Kügler",
                 "Name[vi]": "Sebastian Kügler",
-                "Name[x-test]": "xxSebastian Küglerxx",
                 "Name[zh_CN]": "Sebastian Kügler",
                 "Name[zh_TW]": "Sebastian Kügler"
             }
@@ -113,7 +112,6 @@
         "Name[tr]": "Son Dosyalar",
         "Name[uk]": "Нещодавні файли",
         "Name[vi]": "Tệp gần đây",
-        "Name[x-test]": "xxRecent Filesxx",
         "Name[zh_CN]": "最近文件",
         "Name[zh_TW]": "最近使用的文件"
     },

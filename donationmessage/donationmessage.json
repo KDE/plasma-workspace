@@ -39,7 +39,6 @@
         "Description[ta]": "கே.டீ.யீ.க்கு நன்கொடையளிக்குமாறு ஆண்டுக்கு ஒருமுறை கோரும்",
         "Description[tr]": "KDE’ye bağış yapılması için yılda bir kez bir talep gösterir",
         "Description[uk]": "Показує щорічний запит щодо фінансової підтримки KDE",
-        "Description[x-test]": "xxShows a yearly request to donate to KDExx",
         "Description[zh_CN]": "每年显示一次 KDE 捐款请求",
         "Description[zh_TW]": "每年一次顯示贊助 KDE 的請求",
         "Name": "Donation Request",
@@ -83,7 +82,6 @@
         "Name[ta]": "நன்கொடை கோரிக்கை",
         "Name[tr]": "Bağış Talebi",
         "Name[uk]": "Запит щодо фінансової підтримки",
-        "Name[x-test]": "xxDonation Requestxx",
         "Name[zh_CN]": "显示捐款请求",
         "Name[zh_TW]": "贊助請求"
     },

@@ -49,7 +49,6 @@
         "Description[tr]": "Etkinlik Bildirimleri ve Eylemler",
         "Description[uk]": "Сповіщення щодо подій та дії",
         "Description[vi]": "Thông báo và hành động cho sự kiện",
-        "Description[x-test]": "xxEvent Notifications and Actionsxx",
         "Description[zh_CN]": "事件通知和操作",
         "Description[zh_TW]": "事件通知與動作",
         "FormFactors": [
@@ -147,7 +146,6 @@
         "Name[uz]": "Xabarnomalar",
         "Name[vi]": "Thông báo",
         "Name[wa]": "Notifiaedjes",
-        "Name[x-test]": "xxNotificationsxx",
         "Name[zh_CN]": "通知",
         "Name[zh_TW]": "通知"
     },
@@ -189,7 +187,6 @@
     "X-KDE-Keywords[ta]": "System sounds,Audio,Sound,Notify,Alerts,Notification,popups,disturb,do not disturb,quiet,concentrate,concentration,alarm,popup,pop up,progress,badges,alert sounds,warning sounds,dnd,mute, கணினி ஒலி, ஒலி, சத்தம், அறிவிப்பு, அறிவி, மேல்தோன்றும், மேல்தோன்றுவது, மேல்தோன்றல், தொல்லை, தொந்தரவு செய்ய வேண்டாம், அலாரம், முன்னேற்றம், ஒலியடக்கு, முடக்கு",
     "X-KDE-Keywords[tr]": "sistem sesleri,ses,bildirim,uyarı,ikaz,açılır pencere,rahatsız et,rahatsız etme,sessiz,konsantre,konsantrasyon,alarm,açılır,ilerleme,sürüş,rozet,rozetler,ikaz sesleri,uyarı sesleri,dnd,sessiz,sessize al,sesi kapat",
     "X-KDE-Keywords[uk]": "System sounds,Audio,Sound,Notify,Alerts,Notification,popups,disturb,do not disturb,quiet,concentrate,concentration,alarm,popup,pop up,progress,badges,alert sounds,warning sounds,dnd,mute,системні звуки,звук,аудіо,сповіщення,нагадування,сповіщати,контекстні,панелі,турбувати,не турбувати,тихо,концентрація,концентруватися,тривога,поступ,бедж,звуки тривоги,тиша",
-    "X-KDE-Keywords[x-test]": "xxSystem soundsxx,xxAudioxx,xxSoundxx,xxNotifyxx,xxAlertsxx,xxNotificationxx,xxpopupsxx,xxdisturbxx,xxdo not disturbxx,xxquietxx,xxconcentratexx,xxconcentrationxx,xxalarmxx,xxpopupxx,xxpop upxx,xxprogressxx,xxbadgesxx,xxalert soundsxx,xxwarning soundsxx,xxdndxx,xxmutexx",
     "X-KDE-Keywords[zh_CN]": "System sounds,Audio,Sound,Notify,Alerts,Notification,popups,disturb,do not disturb,quiet,concentrate,concentration,alarm,popup,pop up,progress,badges,alert sounds,warning sounds,dnd,mute,xitongshengyin,yinpin,shengyin,tongzhi,jingbao,jinggao,tishi,tongzhi,danchuchuangkou,danchuang,darao,wuraomoshi,wurao,anjing,jizhongzhuyili,jizhongmoshi,zhuanzhu,zhuanzhumoshi,zhuanzhuli,naozhong,naoling,jindu,jindutiao,huizhang,jiaobiao,jingbaoshengyin,jinggaoshengyin,DND,jingyin,系统声音,音频,声音,通知,警报,警告,提示,通知,弹出窗口,弹窗,打扰,勿扰模式,勿扰,安静,集中注意力,集中模式,专注,专注模式,专注力,闹钟,闹铃,进度,进度条,徽章,角标,警报声音,警告声音,DND,静音",
     "X-KDE-Keywords[zh_TW]": "系統音效,聲音,音效,通知,警示,警告,彈出視窗,勿擾,打擾,請勿打擾,專注,專注模式,鬧鐘,進度",
     "X-KDE-System-Settings-Parent-Category": "applications",
