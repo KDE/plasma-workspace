@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-06 00:44+0000\n"
-"PO-Revision-Date: 2025-07-29 12:45+0200\n"
+"PO-Revision-Date: 2025-09-08 18:34+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #: ui/main.qml:26
 #, kde-format
@@ -36,14 +36,11 @@ msgid "Determine sunrise and sunset times:"
 msgstr "Bestäm tider för soluppgång och solnedgång:"
 
 #: ui/main.qml:47
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
-#| msgid "Based on device's current location"
+#, kde-format
 msgctxt ""
 "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
 msgid "Based on device's location"
-msgstr "Baserat på enhetens nuvarande plats"
+msgstr "Baserat på enhetens plats"
 
 #: ui/main.qml:48
 #, kde-format
@@ -82,7 +79,7 @@ msgstr[1] "%1 minuter"
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatically detect location"
-msgstr ""
+msgstr "Detektera plats automatiskt"
 
 #: ui/main.qml:146
 #, kde-kuit-format
@@ -113,13 +110,10 @@ msgstr ""
 "detaljerad beskrivning av vad tjänsten gör."
 
 #: ui/main.qml:164
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
-#| msgid "Based on manual location"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Use manual location:"
-msgstr "Baserat på manuellt angiven plats"
+msgstr "Använd manuell plats:"
 
 #: ui/main.qml:176
 #, kde-format
