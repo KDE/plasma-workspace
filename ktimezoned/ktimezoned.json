@@ -45,7 +45,6 @@
         "Description[tr]": "Sistem zaman dilimini uygulamalara sunar",
         "Description[uk]": "Надає дані щодо часового поясу системи програмам",
         "Description[vi]": "Cung cấp múi giờ hệ thống cho các ứng dụng",
-        "Description[x-test]": "xxProvides the system's time zone to applicationsxx",
         "Description[zh_CN]": "为应用程序提供系统时区信息",
         "Description[zh_TW]": "提供系統的時區給應用程式",
         "Name": "Time Zone",
@@ -118,7 +117,6 @@
         "Name[uk]": "Часовий пояс",
         "Name[vi]": "Múi giờ",
         "Name[wa]": "Coisse ås eures",
-        "Name[x-test]": "xxTime Zonexx",
         "Name[zh_CN]": "时区",
         "Name[zh_TW]": "時區"
     },

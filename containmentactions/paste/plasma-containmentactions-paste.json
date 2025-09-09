@@ -46,7 +46,6 @@
                 "Name[tr]": "Chani",
                 "Name[uk]": "Chani",
                 "Name[vi]": "Chani",
-                "Name[x-test]": "xxChanixx",
                 "Name[zh_CN]": "Chani"
             }
         ],
@@ -94,7 +93,6 @@
         "Description[tr]": "Pano içeriğinden bir araç takımı oluşturur",
         "Description[uk]": "Створює віджет з вмістом буфера обміну даними",
         "Description[vi]": "Tạo một phụ kiện từ nội dung của bảng nháp",
-        "Description[x-test]": "xxCreates a widget from the contents of the clipboardxx",
         "Description[zh_CN]": "创建基于剪贴板内容的挂件",
         "Description[zh_TW]": "會使用剪貼簿內容建立一個新元件",
         "EnabledByDefault": true,
@@ -172,7 +170,6 @@
         "Name[uk]": "Вставка",
         "Name[vi]": "Dán",
         "Name[wa]": "Aclaper",
-        "Name[x-test]": "xxPastexx",
         "Name[zh_CN]": "粘贴",
         "Name[zh_TW]": "貼上",
         "Version": "pre0.1",

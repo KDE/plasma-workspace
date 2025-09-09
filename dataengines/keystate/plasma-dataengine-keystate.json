@@ -47,7 +47,6 @@
                 "Name[tr]": "Aaron Seigo",
                 "Name[uk]": "Aaron Seigo",
                 "Name[vi]": "Aaron Seigo",
-                "Name[x-test]": "xxAaron Seigoxx",
                 "Name[zh_CN]": "Aaron Seigo"
             }
         ],
@@ -96,7 +95,6 @@
         "Description[tr]": "Fare ve klavye niteleyicileri durumu",
         "Description[uk]": "Стан модифікаторів клавіатури і кнопок миші",
         "Description[vi]": "Trạng thái phím bổ trợ và nút chuột",
-        "Description[x-test]": "xxKeyboard modifier and mouse buttons statesxx",
         "Description[zh_CN]": "显示键盘修饰健及鼠标按键状态",
         "Description[zh_TW]": "鍵盤組合鍵與滑鼠按鍵狀態",
         "EnabledByDefault": true,
@@ -174,7 +172,6 @@
         "Name[uk]": "Стан клавіатури і миші",
         "Name[vi]": "Trạng thái bàn phím và chuột",
         "Name[wa]": "Estat del taprece et del sori",
-        "Name[x-test]": "xxKeyboard and Mouse Statexx",
         "Name[zh_CN]": "键盘和鼠标状态",
         "Name[zh_TW]": "鍵盤與滑鼠狀態",
         "Website": "https://www.kde.org/plasma-desktop"

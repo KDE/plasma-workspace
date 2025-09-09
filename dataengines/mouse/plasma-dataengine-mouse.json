@@ -51,7 +51,6 @@
         "Description[tr]": "Fare konumu ve imleci",
         "Description[uk]": "Позиція вказівника миші і курсора",
         "Description[vi]": "Vị trí và con trỏ chuột",
-        "Description[x-test]": "xxMouse position and cursorxx",
         "Description[zh_CN]": "鼠标位置和光标",
         "Description[zh_TW]": "滑鼠位置與游標",
         "Icon": "input-mouse",
@@ -128,7 +127,6 @@
         "Name[uk]": "Позиція вказівника",
         "Name[vi]": "Vị trí con trỏ",
         "Name[wa]": "Eplaeçmint do pwinteu",
-        "Name[x-test]": "xxPointer Positionxx",
         "Name[zh_CN]": "指针位置",
         "Name[zh_TW]": "指標位置",
         "Website": "https://kde.org/plasma-desktop"

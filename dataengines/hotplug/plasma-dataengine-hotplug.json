@@ -47,7 +47,6 @@
                 "Name[tr]": "Plasma Takımı",
                 "Name[uk]": "Команда розробників Плазми",
                 "Name[vi]": "Đội Plasma",
-                "Name[x-test]": "xxThe Plasma Teamxx",
                 "Name[zh_CN]": "Plasma 开发团队",
                 "Name[zh_TW]": "Plasma 團隊"
             }
@@ -97,7 +96,6 @@
         "Description[tr]": "Takıldıklarında ve çıkarıldıklarında tak çalıştır aygıtlarını izler.",
         "Description[uk]": "Стежить за з’єднанням і від’єднанням портативних пристроїв.",
         "Description[vi]": "Theo dõi các thiết bị cắm nóng được khi chúng xuất hiện và biến mất.",
-        "Description[x-test]": "xxTracks hot-pluggable devices as they appear and disappear.xx",
         "Description[zh_CN]": "跟踪热插拔设备的出现与消失。",
         "Description[zh_TW]": "追蹤熱插拔裝置的插入與拔除。",
         "Icon": "drive-removable-media-usb",
@@ -174,7 +172,6 @@
         "Name[uk]": "Події гарячого підключення",
         "Name[vi]": "Các sự kiện cắm nóng",
         "Name[wa]": "Evenmints tchôd-tchôkîs",
-        "Name[x-test]": "xxHotplug Eventsxx",
         "Name[zh_CN]": "热插拔事件",
         "Name[zh_TW]": "熱插拔事件",
         "Website": "https://kde.org/plasma-desktop"

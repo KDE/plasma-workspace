@@ -47,7 +47,6 @@
                 "Name[tr]": "Plasma Takımı",
                 "Name[uk]": "Команда розробників Плазми",
                 "Name[vi]": "Đội Plasma",
-                "Name[x-test]": "xxThe Plasma Teamxx",
                 "Name[zh_CN]": "Plasma 开发团队",
                 "Name[zh_TW]": "Plasma 團隊"
             }
@@ -99,7 +98,6 @@
         "Description[tr]": "Genel bir simge",
         "Description[uk]": "Загальна піктограма",
         "Description[vi]": "Một biểu tượng chung",
-        "Description[x-test]": "xxA generic iconxx",
         "Description[zh_CN]": "通用图标",
         "Description[zh_TW]": "通用圖示",
         "EnabledByDefault": true,
@@ -190,7 +188,6 @@
         "Name[uz]": "Nishoncha",
         "Name[vi]": "Biểu tượng",
         "Name[wa]": "Imådjete",
-        "Name[x-test]": "xxIconxx",
         "Name[zh_CN]": "图标",
         "Name[zh_TW]": "圖示",
         "ServiceTypes": [

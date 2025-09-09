@@ -46,7 +46,6 @@
                 "Name[tr]": "Chani",
                 "Name[uk]": "Chani",
                 "Name[vi]": "Chani",
-                "Name[x-test]": "xxChanixx",
                 "Name[zh_CN]": "Chani"
             }
         ],
@@ -94,7 +93,6 @@
         "Description[tr]": "Başka bir sanal masaüstüne geç",
         "Description[uk]": "Перемкнутися на іншу віртуальну стільницю",
         "Description[vi]": "Chuyển sang một bàn làm việc ảo khác",
-        "Description[x-test]": "xxSwitch to another virtual desktopxx",
         "Description[zh_CN]": "切换到另一个虚拟桌面",
         "Description[zh_TW]": "切換到其他虛擬桌面",
         "EnabledByDefault": true,
@@ -171,7 +169,6 @@
         "Name[uk]": "Перемкнути стільницю",
         "Name[vi]": "Chuyển bàn làm việc",
         "Name[wa]": "Potchî a èn ôte sicribanne",
-        "Name[x-test]": "xxSwitch Desktopxx",
         "Name[zh_CN]": "切换桌面",
         "Name[zh_TW]": "切換桌面",
         "Version": "pre0.1",

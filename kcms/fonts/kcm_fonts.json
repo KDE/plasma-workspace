@@ -46,7 +46,6 @@
         "Description[tr]": "Kullanıcı arayüzü yazıtiplerini yapılandır",
         "Description[uk]": "Налаштовування шрифтів у інтерфейсі користувача",
         "Description[vi]": "Cấu hình phông chữ trong giao diện người dùng",
-        "Description[x-test]": "xxConfigure user interface fontsxx",
         "Description[zh_CN]": "配置用户界面字体",
         "Description[zh_TW]": "設定使用者介面所使用的字型",
         "FormFactors": [
@@ -103,7 +102,6 @@
         "Name[tr]": "Yazıtipleri",
         "Name[uk]": "Шрифти",
         "Name[vi]": "Phông chữ",
-        "Name[x-test]": "xxFontsxx",
         "Name[zh_CN]": "字体",
         "Name[zh_TW]": "字型"
     },
@@ -141,7 +139,6 @@
     "X-KDE-Keywords[ta]": "fonts,font size,styles,charsets, character sets,panel,control panel,desktops,FileManager, Toolbars,Menu, Window Title,Title,DPI,anti-aliasing,desktop fonts,toolbar fonts,character,general fonts, typography,type, letters,character, hinting,sub-pixel, text,big text, change font,size, எழுத்துரு,எழுத்து, அளவு, பெரிய உரை, தட்டச்சு, உரை",
     "X-KDE-Keywords[uk]": "fonts,font size,styles,charsets,character sets,panel,control panel,desktops,FileManager,Toolbars,Menu,Window Title,Title,DPI,anti-aliasing,desktop fonts,toolbar fonts,character,general fonts,typography,type,letters,character,hinting,sub-pixel,text,big text,change font,size,шрифт,шрифти,розмір,розмір шрифту,стиль,стилі,гарнітура,гарнітури,кодування,набір,символ,символи,набір символів,панель,панель керування,стільниця,стільниці,файл,керування,керування файлами,менеджер,панель інструментів,меню,заголовок,заголовок вікна,роздільність,згладжування,шрифти стільниці,шрифти панелі,символ,загальні шрифти,типографія,друк,тип,літери,символ,хінтінг,гінтінґ,субпіксель,текст,великий текст,змінити шрифт,розмір",
     "X-KDE-Keywords[vi]": "fonts,font size,styles,charsets,character sets,panel,control panel,desktops,FileManager,Toolbars,Menu,Window Title,Title,DPI,anti-aliasing,desktop fonts,toolbar fonts,character,general fonts,typography,type,letters,character,hinting,sub-pixel,text,big text,change font,size,phông chữ,cỡ phông chữ,kiểu cách,bộ mã tự,bảng,bảng điều khiển,bàn làm việc,trình quản lí tệp,thanh công cụ,trình đơn,tiêu đề cửa sổ,tiêu đề,khử răng cưa,phông chữ bàn làm việc,phông chữ thanh công cụ,chữ,phông chữ chung,thuật in,kiểu,chữ cái,dẫn phông,hạ điểm ảnh,chữ to,thay đổi phông chữ,kích cỡ",
-    "X-KDE-Keywords[x-test]": "xxfontsxx,xxfont sizexx,xxstylesxx,xxcharsetsxx,xxcharacter setsxx,xxpanelxx,xxcontrol panelxx,xxdesktopsxx,xxFileManagerxx,xxToolbarsxx,xxMenuxx,xxWindow Titlexx,xxTitlexx,xxDPIxx,xxanti-aliasingxx,xxdesktop fontsxx,xxtoolbar fontsxx,xxcharacterxx,xxgeneral fontsxx,xxtypographyxx,xxtypexx,xxlettersxx,xxcharacterxx,xxhintingxx,xxsub-pixelxx,xxtextxx,xxbig textxx,xxchange fontxx,xxsizexx",
     "X-KDE-System-Settings-Parent-Category": "appearance",
     "X-KDE-Weight": 50
 }

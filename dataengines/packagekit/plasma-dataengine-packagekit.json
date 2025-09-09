@@ -46,7 +46,6 @@
                 "Name[tr]": "Gregor Taetzner",
                 "Name[uk]": "Gregor Taetzner",
                 "Name[vi]": "Gregor Taetzner",
-                "Name[x-test]": "xxGregor Taetznerxx",
                 "Name[zh_CN]": "Gregor Taetzner"
             }
         ],
@@ -95,7 +94,6 @@
         "Description[tr]": "PackageKit Veri İşletkesi",
         "Description[uk]": "Рушій даних PackageKit",
         "Description[vi]": "Dụng cụ dữ liệu PackageKit",
-        "Description[x-test]": "xxPackageKit Data Enginexx",
         "Description[zh_CN]": "PackageKit 数据引擎",
         "Description[zh_TW]": "PackageKit 資料引擎",
         "Icon": "package-x-generic",
@@ -155,7 +153,6 @@
         "Name[tr]": "PackageKit",
         "Name[uk]": "PackageKit",
         "Name[vi]": "PackageKit",
-        "Name[x-test]": "xxPackageKitxx",
         "Name[zh_CN]": "PackageKit",
         "Name[zh_TW]": "PackageKit",
         "Website": "https://www.kde.org/plasma-desktop"

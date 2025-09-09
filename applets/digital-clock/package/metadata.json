@@ -47,7 +47,6 @@
                 "Name[tr]": "Martin Klapetek",
                 "Name[uk]": "Martin Klapetek",
                 "Name[vi]": "Martin Klapetek",
-                "Name[x-test]": "xxMartin Klapetekxx",
                 "Name[zh_CN]": "Martin Klapetek"
             }
         ],
@@ -98,7 +97,6 @@
         "Description[tr]": "Sayısal biçimde gösterilen saat",
         "Description[uk]": "Час, показаний у цифровому форматі",
         "Description[vi]": "Thời gian hiển thị ở dạng số",
-        "Description[x-test]": "xxTime displayed in a digital formatxx",
         "Description[zh_CN]": "用数字格式显示时间的小程序",
         "Description[zh_TW]": "以數位格式顯示時間",
         "FormFactors": [
@@ -193,7 +191,6 @@
         "Name[uz]": "Raqamli soat",
         "Name[vi]": "Đồng hồ số",
         "Name[wa]": "Ôrlodje didjitåle",
-        "Name[x-test]": "xxDigital Clockxx",
         "Name[zh_CN]": "数字时钟",
         "Name[zh_TW]": "數位時鐘",
         "ServiceTypes": [

@@ -46,7 +46,6 @@
         "Description[tr]": "Yazıtiplerini kur, yönet ve önizle",
         "Description[uk]": "Встановлення, керування та попередній перегляд шрифтів",
         "Description[vi]": "Cài đặt, quản lí và xem thử phông chữ",
-        "Description[x-test]": "xxInstall, manage and preview fontsxx",
         "Description[zh_CN]": "安装、管理和预览字体",
         "Description[zh_TW]": "字型安裝、管理及預覽",
         "Icon": "preferences-desktop-font-installer",
@@ -97,7 +96,6 @@
         "Name[tr]": "Yazıtipi Yönetimi",
         "Name[uk]": "Керування шрифтами",
         "Name[vi]": "Quản lí phông chữ",
-        "Name[x-test]": "xxFont Managementxx",
         "Name[zh_CN]": "字体管理",
         "Name[zh_TW]": "字型管理"
     },
@@ -140,6 +138,5 @@
     "X-KDE-Keywords[ta]": "font,fonts,installer,truetype,type1,bitmap, எழுத்துரு, எழுத்துருக்கள், நிறுவி, நிறுவு",
     "X-KDE-Keywords[uk]": "font,fonts,installer,truetype,type1,bitmap,шрифт,шрифти,встановлювач,растрові",
     "X-KDE-Keywords[vi]": "font,fonts,phông chữ,installer,trình cài đặt,truetype,type1,bitmap,bản đồ bit",
-    "X-KDE-Keywords[x-test]": "xxfontxx,xxfontsxx,xxinstallerxx,xxtruetypexx,xxtype1xx,xxbitmapxx",
     "X-KDE-System-Settings-Parent-Category": "appearance"
 }

@@ -42,7 +42,6 @@
         "Description[tr]": "Dil Ayarı, Sayı, Para Birimi ve Zaman Biçimleri",
         "Description[uk]": "Параметри мови, формати запису чисел, грошових сум та часу",
         "Description[vi]": "Thiết lập ngôn ngữ, định dạng số, tiền tệ và thời gian",
-        "Description[x-test]": "xxLanguage Setting, Numeric, Currency and Time Formatsxx",
         "Description[zh_CN]": "语言设置、数字、货币和时间格式",
         "Description[zh_TW]": "語言設定、數值、貨幣與時間格式",
         "FormFactors": [
@@ -94,7 +93,6 @@
         "Name[tr]": "Bölge ve Dil",
         "Name[uk]": "Регіон та мова",
         "Name[vi]": "Vùng & ngôn ngữ",
-        "Name[x-test]": "xxRegion & Languagexx",
         "Name[zh_CN]": "区域和语言",
         "Name[zh_TW]": "區域與語言"
     },
@@ -129,7 +127,6 @@
     "X-KDE-Keywords[ta]": "language,translation,number format,locale,Country,charsets,character sets,Decimal symbol,Thousands separator,symbol,separator,sign,positive,negative,currency,money,fractional digits,calendar,time,date,formats,week,week start,first,paper,size,letter,A4,measure,metric,English,Imperial,region,measurement units,collation,sorting,date format, மொழி, மொழிபெயர்ப்பு, எண் வடிவம், நாடு, ஊர், ஆயிரம் பிரிப்பான், அளவு, அலகுகள், வாரம், நாள்காட்டி, நாட்காட்டி, மெட்ரிக், வரிசைப்படுத்தல், தொகுப்பு, தேதி",
     "X-KDE-Keywords[uk]": "language,translation,number format,locale,Country,charsets,character sets,Decimal symbol,Thousands separator,symbol,separator,sign,positive,negative,currency,money,fractional digits,calendar,time,date,formats,week,week start,first,paper,size,letter,A4,measure,metric,English,Imperial,region,measurement units,collation,sorting,date format,мова,мови,переклад,переклади,числа,формат,число,локаль,країна,набір,символ,кодування,розряд,тисяч,дробовий,дробова частина,роздільник,символ,знак,додатне,додатний,додатній,від’ємний,від’ємне,валюта,гроші,грошова одиниця,календар,час,дата,формати,тиждень,робочий тиждень,початок тижня,перший,папір,аркуш,вимір,виміри,вимірювання,одиниці вимірювання,метричний,метричні,метр,англійські,імперські,регіон,одиниці виміру,об'єднання,упорядкування,упорядковування,формат дати",
     "X-KDE-Keywords[vi]": "language,translation,number format,locale,Country,charsets,character sets,Decimal symbol,Thousands separator,symbol,separator,sign,positive,negative,currency,money,fractional digits,calendar,time,date,formats,week,week start,first,paper,size,letter,A4,measure,metric,English,Imperial,region,measurement units,collation,sorting,date format,ngôn ngữ,biên dịch,dạng thức số,vùng,quốc gia,bộ mã tự,bộ chữ,dấu thập phân,dấu phân cách hàng nghìn,kí hiệu,phần phân cách,dấu,dương,âm,tiền tệ,tiền,chữ số thập phân,lịch,thời gian,ngày,dạng thức,tuần,bắt đầu tuần,đầu tiên,giấy,cỡ,thư,đo,theo hệ mét,theo hệ Anh,vùng,đơn vị đo,đối chiếu,sắp xếp,dạng thức thời gian",
-    "X-KDE-Keywords[x-test]": "xxlanguagexx,xxtranslationxx,xxnumber formatxx,xxlocalexx,xxCountryxx,xxcharsetsxx,xxcharacter setsxx,xxDecimal symbolxx,xxThousands separatorxx,xxsymbolxx,xxseparatorxx,xxsignxx,xxpositivexx,xxnegativexx,xxcurrencyxx,xxmoneyxx,xxfractional digitsxx,xxcalendarxx,xxtimexx,xxdatexx,xxformatsxx,xxweekxx,xxweek startxx,xxfirstxx,xxpaperxx,xxsizexx,xxletterxx,xxA4xx,xxmeasurexx,xxmetricxx,xxEnglishxx,xxImperialxx,xxregionxx,xxmeasurement unitsxx,xxcollationxx,xxsortingxx,xxdate formatxx",
     "X-KDE-System-Settings-Parent-Category": "regionalsettings",
     "X-KDE-Weight": 50
 }

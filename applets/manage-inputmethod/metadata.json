@@ -48,7 +48,6 @@
                 "Name[tr]": "Aleix Pol Gonzalez",
                 "Name[uk]": "Aleix Pol Gonzalez",
                 "Name[vi]": "Aleix Pol Gonzalez",
-                "Name[x-test]": "xxAleix Pol Gonzalezxx",
                 "Name[zh_CN]": "Aleix Pol Gonzalez"
             }
         ],
@@ -97,7 +96,6 @@
         "Description[tr]": "Giriş yöntemlerinizi yönetin",
         "Description[uk]": "Керування вашими способами введення",
         "Description[vi]": "Quản lí các phương thức nhập",
-        "Description[x-test]": "xxManage your Input Methodsxx",
         "Description[zh_CN]": "管理输入法",
         "Description[zh_TW]": "管理您的輸入法",
         "EnabledByDefault": true,
@@ -156,7 +154,6 @@
         "Name[tr]": "Giriş Yöntemi",
         "Name[uk]": "Спосіб введення",
         "Name[vi]": "Phương thức nhập",
-        "Name[x-test]": "xxInput Methodxx",
         "Name[zh_CN]": "输入法",
         "Name[zh_TW]": "輸入法",
         "ServiceTypes": [

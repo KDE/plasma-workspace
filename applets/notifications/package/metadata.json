@@ -47,7 +47,6 @@
                 "Name[tr]": "Kai Uwe Broulik",
                 "Name[uk]": "Kai Uwe Broulik",
                 "Name[vi]": "Kai Uwe Broulik",
-                "Name[x-test]": "xxKai Uwe Broulikxx",
                 "Name[zh_CN]": "Kai Uwe Broulik"
             }
         ],
@@ -98,7 +97,6 @@
         "Description[tr]": "Görevleri ve bildirimleri görüntüle",
         "Description[uk]": "Показ сповіщень і завдань",
         "Description[vi]": "Hiển thị thông báo và công việc",
-        "Description[x-test]": "xxDisplay notifications and jobsxx",
         "Description[zh_CN]": "显示通知和任务",
         "Description[zh_TW]": "顯示通知與工作",
         "EnabledByDefault": true,
@@ -194,7 +192,6 @@
         "Name[uz]": "Xabarnomalar",
         "Name[vi]": "Thông báo",
         "Name[wa]": "Notifiaedjes",
-        "Name[x-test]": "xxNotificationsxx",
         "Name[zh_CN]": "通知",
         "Name[zh_TW]": "通知",
         "ServiceTypes": [

@@ -46,7 +46,6 @@
         "Description[tr]": "Plasma biçemini seçin",
         "Description[uk]": "Вибір стилю Плазми",
         "Description[vi]": "Chọn kiểu cách Plasma",
-        "Description[x-test]": "xxChoose Plasma stylexx",
         "Description[zh_CN]": "选择 Plasma 视觉风格",
         "Description[zh_TW]": "選擇 Plasma 風格",
         "FormFactors": [
@@ -103,7 +102,6 @@
         "Name[tr]": "Plasma Biçemi",
         "Name[uk]": "Стиль Плазми",
         "Name[vi]": "Kiểu cách Plasma",
-        "Name[x-test]": "xxPlasma Stylexx",
         "Name[zh_CN]": "Plasma 视觉风格",
         "Name[zh_TW]": "Plasma 風格"
     },
@@ -138,7 +136,6 @@
     "X-KDE-Keywords[ta]": "Desktop Theme,Plasma Theme,plasma style,desktop style,plasma skin,desktop skin,theme, பிளாஸ்மா தோற்றத்திட்டம், பிளாஸ்மா திட்டம், பணிமேடை தோற்றத்திட்டம், பணிமேடை திட்டம்",
     "X-KDE-Keywords[uk]": "Desktop Theme,Plasma Theme,plasma style,desktop style,plasma skin,desktop skin,theme,тема стільниці,тема плазми,стиль плазми,стиль стільниці,оболонка плазми,шкірка плазми,скін плазми,оболонка стільниці,шкірка стільниці,скін стільниці,тема",
     "X-KDE-Keywords[vi]": "Desktop Theme,Plasma Theme,plasma style,desktop style,plasma skin,desktop skin,theme,Chủ đề Bàn làm việc,Chủ đề Plasma,kiểu cách plasma,kiểu cách bàn làm việc,da plasma,da bàn làm việc,chủ đề",
-    "X-KDE-Keywords[x-test]": "xxDesktop Themexx,xxPlasma Themexx,xxplasma stylexx,xxdesktop stylexx,xxplasma skinxx,xxdesktop skinxx,xxthemexx",
     "X-KDE-System-Settings-Parent-Category": "appearance",
     "X-KDE-Weight": 20
 }

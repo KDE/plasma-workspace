@@ -48,7 +48,6 @@
                 "Name[tr]": "Marco Martin",
                 "Name[uk]": "Marco Martin",
                 "Name[vi]": "Marco Martin",
-                "Name[x-test]": "xxMarco Martinxx",
                 "Name[zh_CN]": "Marco Martin"
             }
         ],
@@ -97,7 +96,6 @@
         "Description[tr]": "Veri indirme ve karşıya yükleme hızını gösteren sistem monitörü araç takımı",
         "Description[uk]": "Віджет нагляду за системою, який показує швидкість отримання та вивантаження даних",
         "Description[vi]": "Phụ kiện giám sát hệ thống cho biết tốc độ tải dữ liệu về và lên",
-        "Description[x-test]": "xxSystem monitor Widget that shows the download and upload data ratexx",
         "Description[zh_CN]": "显示下载和上传速率的系统监视挂件",
         "Description[zh_TW]": "顯示下載與上傳之資料速率的系統監控元件",
         "EnabledByDefault": true,
@@ -154,7 +152,6 @@
         "Name[tr]": "Ağ Hızı",
         "Name[uk]": "Швидкість мережі",
         "Name[vi]": "Tốc độ mạng",
-        "Name[x-test]": "xxNetwork speedxx",
         "Name[zh_CN]": "网络速度",
         "Name[zh_TW]": "網路速度",
         "ServiceTypes": [

@@ -52,7 +52,6 @@
         "Description[tr]": "Uygulama görevi güncellemeleri (kuiserver ile)",
         "Description[uk]": "Оновлення завдань програми (через kuiserver)",
         "Description[vi]": "Các cập nhật về công việc của ứng dụng (thông qua kuiserver)",
-        "Description[x-test]": "xxApplication job updates (via kuiserver)xx",
         "Description[zh_CN]": "程序任务更新信息 (通过 kuiserver)",
         "Description[zh_TW]": "應用程式工作更新（透過 kuiserver）",
         "Icon": "tool-animator",
@@ -128,7 +127,6 @@
         "Name[uk]": "Відомості про завдання програми",
         "Name[vi]": "Thông tin về công việc của ứng dụng",
         "Name[wa]": "Pondants et djondants so les bouyes des programes",
-        "Name[x-test]": "xxApplication Job Informationxx",
         "Name[zh_CN]": "程序任务信息",
         "Name[zh_TW]": "應用程式工作資訊",
         "Website": "https://kde.org/plasma-desktop"

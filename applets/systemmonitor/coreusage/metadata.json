@@ -47,7 +47,6 @@
                 "Name[tr]": "Kai Uwe Broulik",
                 "Name[uk]": "Kai Uwe Broulik",
                 "Name[vi]": "Kai Uwe Broulik",
-                "Name[x-test]": "xxKai Uwe Broulikxx",
                 "Name[zh_CN]": "Kai Uwe Broulik"
             }
         ],
@@ -97,7 +96,6 @@
         "Description[tr]": "Bireysel CPU çekirdeklerini gösteren sistem monitörü araç takımı",
         "Description[uk]": "Віджет нагляду за системою, який показує використання окремих ядер процесора",
         "Description[vi]": "Phụ kiện giám sát hệ thống cho biết lượng dùng các lõi CPU riêng lẻ",
-        "Description[x-test]": "xxSystem monitor Widget that shows usage of individual CPU coresxx",
         "Description[zh_CN]": "显示单个 CPU 核心使用情况的系统监视挂件",
         "Description[zh_TW]": "顯示個別 CPU 核心用量的系統監控元件",
         "EnabledByDefault": true,
@@ -152,7 +150,6 @@
         "Name[tr]": "Bireysel Çekirdek Kullanımı",
         "Name[uk]": "Використання окремих ядер",
         "Name[vi]": "Lượng dùng mỗi lõi riêng lẻ",
-        "Name[x-test]": "xxIndividual Core Usagexx",
         "Name[zh_CN]": "单个核心使用率",
         "Name[zh_TW]": "獨立核心用量",
         "ServiceTypes": [

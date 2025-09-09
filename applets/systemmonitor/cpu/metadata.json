@@ -47,7 +47,6 @@
                 "Name[tr]": "Kai Uwe Broulik",
                 "Name[uk]": "Kai Uwe Broulik",
                 "Name[vi]": "Kai Uwe Broulik",
-                "Name[x-test]": "xxKai Uwe Broulikxx",
                 "Name[zh_CN]": "Kai Uwe Broulik"
             }
         ],
@@ -97,7 +96,6 @@
         "Description[tr]": "Toplam CPU kullanımını gösteren sistem monitörü araç takımı",
         "Description[uk]": "Віджет нагляду за системою, який показує загальне використання процесора",
         "Description[vi]": "Phụ kiện giám sát hệ thống cho biết tổng lượng dùng CPU",
-        "Description[x-test]": "xxSystem monitor Widget that shows the total CPU usagexx",
         "Description[zh_CN]": "显示总 CPU 使用率的系统监视挂件",
         "Description[zh_TW]": "顯示總 CPU 用量的系統監控元件",
         "EnabledByDefault": true,
@@ -153,7 +151,6 @@
         "Name[tr]": "Toplam CPU kullanımı",
         "Name[uk]": "Загальне використання процесора",
         "Name[vi]": "Tổng lượng dùng CPU",
-        "Name[x-test]": "xxTotal CPU Usexx",
         "Name[zh_CN]": "总 CPU 使用情况",
         "Name[zh_TW]": "總 CPU 用量",
         "ServiceTypes": [

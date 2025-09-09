@@ -51,7 +51,6 @@
         "Description[tr]": "Sözcük anlamlarına bak",
         "Description[uk]": "Пошук значень слів",
         "Description[vi]": "Tra nghĩa của từ",
-        "Description[x-test]": "xxLook up word meaningsxx",
         "Description[zh_CN]": "查询单词含义",
         "Description[zh_TW]": "查詢單字的定義",
         "Icon": "accessories-dictionary",
@@ -136,7 +135,6 @@
         "Name[uk]": "Словник",
         "Name[vi]": "Từ điển",
         "Name[wa]": "Motî",
-        "Name[x-test]": "xxDictionaryxx",
         "Name[zh_CN]": "词典",
         "Name[zh_TW]": "字典",
         "Website": "https://kde.org/plasma-desktop"

@@ -44,7 +44,6 @@
         "Description[tr]": "GPS adresinden coğrafi konum.",
         "Description[uk]": "Геопозиціювання за GPS-адресою",
         "Description[vi]": "Định vị địa lí từ địa chỉ GPS.",
-        "Description[x-test]": "xxGeolocation from GPS address.xx",
         "Description[zh_CN]": "通过 GPS 地址确定的地理位置。",
         "Description[zh_TW]": "從 GPS 位址取得地理位置。",
         "Icon": "applications-internet",
@@ -119,7 +118,6 @@
         "Name[uk]": "Геопозиціювання за GPS",
         "Name[vi]": "Định vị địa lí GPS",
         "Name[wa]": "GPS di djeyoplaeçmint",
-        "Name[x-test]": "xxGeolocation GPSxx",
         "Name[zh_CN]": "GPS 地理位置",
         "Name[zh_TW]": "Geolocation GPS"
     },

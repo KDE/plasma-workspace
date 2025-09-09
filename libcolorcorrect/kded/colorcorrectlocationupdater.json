@@ -41,7 +41,6 @@
         "Description[tr]": "Gece Rengi için konum güncellemeleri sağlar",
         "Description[uk]": "Надає оновлення даних щодо місця перебування для «Нічних кольорів»",
         "Description[vi]": "Cung cấp cập nhật địa điểm cho \"Màu buổi tối\"",
-        "Description[x-test]": "xxProvides location updates for Night Colorxx",
         "Description[zh_CN]": "提供夜间颜色的位置更新",
         "Description[zh_TW]": "提供地點更新給夜色模式",
         "Name": "Automatic Location for Night Color",
@@ -85,7 +84,6 @@
         "Name[tr]": "Gece Rengi için Otomatik Konum",
         "Name[uk]": "Автоматичне місце для «Нічних кольорів»",
         "Name[vi]": "Địa điểm tự động cho \"Màu buổi tối\"",
-        "Name[x-test]": "xxAutomatic Location for Night Colorxx",
         "Name[zh_CN]": "夜间颜色自动位置",
         "Name[zh_TW]": "夜色模式用的自動地點"
     },

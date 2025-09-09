@@ -48,7 +48,6 @@
                 "Name[tr]": "Marco Martin",
                 "Name[uk]": "Marco Martin",
                 "Name[vi]": "Marco Martin",
-                "Name[x-test]": "xxMarco Martinxx",
                 "Name[zh_CN]": "Marco Martin"
             }
         ],
@@ -99,7 +98,6 @@
         "Description[tr]": "Sistem tepsisine küçültülen uygulamalara erişin",
         "Description[uk]": "Доступ до прихованих програм, мінімізованих до системного лотка",
         "Description[vi]": "Truy cập các ứng dụng ẩn được thu nhỏ trong khay hệ thống",
-        "Description[x-test]": "xxAccess hidden applications minimized in the system trayxx",
         "Description[zh_CN]": "访问在系统托盘中最小化隐藏的应用程序",
         "Description[zh_TW]": "存取最小化後隱藏在系統匣內的應用程式",
         "EnabledByDefault": true,
@@ -193,7 +191,6 @@
         "Name[uk]": "Системний лоток",
         "Name[vi]": "Khay hệ thống",
         "Name[wa]": "Boesse ås imådjetes sistinme",
-        "Name[x-test]": "xxSystem Trayxx",
         "Name[xh]": "Itreyi Yendlela yokusebenza",
         "Name[zh_CN]": "系统托盘",
         "Name[zh_TW]": "系統匣",

@@ -46,7 +46,6 @@
                 "Name[tr]": "Chani",
                 "Name[uk]": "Chani",
                 "Name[vi]": "Chani",
-                "Name[x-test]": "xxChanixx",
                 "Name[zh_CN]": "Chani"
             }
         ],
@@ -93,7 +92,6 @@
         "Description[tr]": "Geçmek için pencereler listesini göster",
         "Description[uk]": "Показує список вікон для перемикання",
         "Description[vi]": "Hiện một danh sách các cửa sổ để chuyển",
-        "Description[x-test]": "xxShow a list of windows to switch toxx",
         "Description[zh_CN]": "显示可供切换的窗口列表",
         "Description[zh_TW]": "列出視窗並切換",
         "EnabledByDefault": true,
@@ -168,7 +166,6 @@
         "Name[uk]": "Перемкнути вікно",
         "Name[vi]": "Chuyển cửa sổ",
         "Name[wa]": "Passer a ene ôte finiesse",
-        "Name[x-test]": "xxSwitch Windowxx",
         "Name[zh_CN]": "切换窗口",
         "Name[zh_TW]": "切換視窗",
         "Version": "pre0.1",

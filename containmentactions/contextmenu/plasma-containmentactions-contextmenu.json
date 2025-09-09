@@ -46,7 +46,6 @@
                 "Name[tr]": "Chani",
                 "Name[uk]": "Chani",
                 "Name[vi]": "Chani",
-                "Name[x-test]": "xxChanixx",
                 "Name[zh_CN]": "Chani"
             }
         ],
@@ -94,7 +93,6 @@
         "Description[tr]": "Normalde sağ tıklama ile gösterilen menü",
         "Description[uk]": "Меню, яке буде показано у відповідь на клацання правою кнопкою миші",
         "Description[vi]": "Trình đơn thường thấy khi bấm phải",
-        "Description[x-test]": "xxThe menu that normally shows on right-clickxx",
         "Description[zh_CN]": "通常在点击右键时显示的菜单",
         "Description[zh_TW]": "通常由滑鼠右鍵叫出的選單",
         "EnabledByDefault": true,
@@ -170,7 +168,6 @@
         "Name[uk]": "Стандартне меню",
         "Name[vi]": "Trình đơn chuẩn",
         "Name[wa]": "Dressêye sitandård",
-        "Name[x-test]": "xxStandard Menuxx",
         "Name[zh_CN]": "标准菜单",
         "Name[zh_TW]": "標準選單",
         "Version": "pre0.1",

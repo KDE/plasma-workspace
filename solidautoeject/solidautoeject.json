@@ -45,7 +45,6 @@
         "Description[tr]": "Çıkar düğmesine basıldığında sürücüleri otomatik olarak ayırır",
         "Description[uk]": "Автоматичне вилучення файли пристроїв, після натискання на них кнопки виштовхування",
         "Description[vi]": "Tự động xuất các ổ ra khi nút rút của chúng được ấn",
-        "Description[x-test]": "xxAutomatically releases drives when their eject button is pushedxx",
         "Description[zh_CN]": "当按下弹出按钮时自动释放驱动器",
         "Description[zh_TW]": "在按下退出鍵時自動釋放碟片",
         "Name": "Drive Ejector",
@@ -114,7 +113,6 @@
         "Name[uk]": "Вилучення дисків",
         "Name[vi]": "Trình rút ổ",
         "Name[wa]": "Rexheu d' plake",
-        "Name[x-test]": "xxDrive Ejectorxx",
         "Name[zh_CN]": "驱动器弹出程序",
         "Name[zh_TW]": "碟片跳出管理"
     },

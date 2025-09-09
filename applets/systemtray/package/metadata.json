@@ -48,7 +48,6 @@
                 "Name[tr]": "Marco Martin",
                 "Name[uk]": "Marco Martin",
                 "Name[vi]": "Marco Martin",
-                "Name[x-test]": "xxMarco Martinxx",
                 "Name[zh_CN]": "Marco Martin"
             }
         ],
@@ -145,7 +144,6 @@
         "Name[uk]": "Системний лоток",
         "Name[vi]": "Khay hệ thống",
         "Name[wa]": "Boesse ås imådjetes sistinme",
-        "Name[x-test]": "xxSystem Trayxx",
         "Name[xh]": "Itreyi Yendlela yokusebenza",
         "Name[zh_CN]": "系统托盘",
         "Name[zh_TW]": "系統匣",

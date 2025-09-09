@@ -47,7 +47,6 @@
                 "Name[tr]": "Jan Gerrit Marker",
                 "Name[uk]": "Jan Gerrit Marker",
                 "Name[vi]": "Jan Gerrit Marker",
-                "Name[x-test]": "xxJan Gerrit Markerxx",
                 "Name[zh_CN]": "Jan Gerrit Marker"
             }
         ],
@@ -96,7 +95,6 @@
         "Description[tr]": "Şu anda çalışan uygulamaları durdur",
         "Description[uk]": "Завершує роботу запущених програм",
         "Description[vi]": "Dừng các ứng dụng đang chạy",
-        "Description[x-test]": "xxStop applications that are currently runningxx",
         "Description[zh_CN]": "停止正在运行的应用程序",
         "Description[zh_TW]": "停止目前執行中的應用程式",
         "EnabledByDefault": true,
@@ -173,7 +171,6 @@
         "Name[uk]": "Переривання програм",
         "Name[vi]": "Kết thúc ứng dụng",
         "Name[wa]": "Fé fini des programes",
-        "Name[x-test]": "xxTerminate Applicationsxx",
         "Name[zh_CN]": "终止程序",
         "Name[zh_TW]": "終端機應用程式"
     },

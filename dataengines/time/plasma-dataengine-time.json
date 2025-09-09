@@ -47,7 +47,6 @@
                 "Name[tr]": "Aaron Seigo",
                 "Name[uk]": "Aaron Seigo",
                 "Name[vi]": "Aaron Seigo",
-                "Name[x-test]": "xxAaron Seigoxx",
                 "Name[zh_CN]": "Aaron Seigo"
             }
         ],
@@ -97,7 +96,6 @@
         "Description[tr]": "Zaman dilimine göre tarih ve zaman",
         "Description[uk]": "Дата і час за часовими поясами",
         "Description[vi]": "Ngày giờ theo múi giờ",
-        "Description[x-test]": "xxDate and time by timezonexx",
         "Description[zh_CN]": "根据时区提供日期和时间",
         "Description[zh_TW]": "各時區的日期和時間",
         "EnabledByDefault": true,
@@ -183,7 +181,6 @@
         "Name[uk]": "Дата і час",
         "Name[vi]": "Ngày giờ",
         "Name[wa]": "Date eyet eure",
-        "Name[x-test]": "xxDate and Timexx",
         "Name[zh_CN]": "日期和时间",
         "Name[zh_TW]": "日期與時間",
         "Website": "https://www.kde.org/plasma-desktop"

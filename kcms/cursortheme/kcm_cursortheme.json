@@ -46,7 +46,6 @@
         "Description[tr]": "Fare imleci teması seçin",
         "Description[uk]": "Вибір теми вказівника миші",
         "Description[vi]": "Chọn chủ đề của con trỏ chuột",
-        "Description[x-test]": "xxChoose mouse cursor themexx",
         "Description[zh_CN]": "选择鼠标光标主题",
         "Description[zh_TW]": "選擇滑鼠游標主題",
         "Icon": "preferences-desktop-cursors",
@@ -98,7 +97,6 @@
         "Name[tr]": "İmleçler",
         "Name[uk]": "Вказівники",
         "Name[vi]": "Con trỏ",
-        "Name[x-test]": "xxCursorsxx",
         "Name[zh_CN]": "光标",
         "Name[zh_TW]": "游標"
     },
@@ -127,7 +125,6 @@
     "X-KDE-Keywords[sl]": "Miška,Kazalec,Tema,Videz kazalca,Barva kazalca,Tema kazalca,Tema miške,Videz miške,Preobleka miške,Barve kazalca,Videz kazalca,preobleka kazalca,slog kazalca,velikost kazalca,slog miške,kazalec,začetek,zagon,zaseden,povratne informacije,miška,kazalec, odbijanje,poskakovanje,vrtenje,rotiranje,zagon,zaganjanje, program,poročilo,opravilna vrstica,animacija,nalaganje",
     "X-KDE-Keywords[sv]": "Mus,Pekare,Tema,Utseende,Pekarfärg,Pekartema,Mustema,Musutseende,Musskal,Pekarfärger,Pekarutseende,färgskal,pekarstil,pekarstorlek,musstil,pekare,start,upptagen,återkoppling,mus,pekare,studsa,studsande,roterande,spinnande,start,program,rapportera,aktivitetsrad,animering,inläsning",
     "X-KDE-Keywords[uk]": "миша,вказівник,тема,вигляд вказівника,колір вказівника,тема вказівника,тема миші,вигляд миші,стиль вказівника,розмір вказівника,супровід,обертання,запуск,програма,звіт,панель,анімація,завантаження,стиль миші,Mouse,Cursor,Theme,Cursor Appearance,Cursor Color,Cursor Theme,Mouse Theme,Mouse Appearance,Mouse Skin,Pointer Colors,Pointer Appearance,cursor skin,cursor style,cursor size,mouse style,pointer,start,launch,busy,feedback,mouse,pointer,bounce,bouncing,rotating,spinning,startup,start-up,program,report,taskbar,animation,loading",
-    "X-KDE-Keywords[x-test]": "xxMousexx,xxCursorxx,xxThemexx,xxCursor Appearancexx,xxCursor Colorxx,xxCursor Themexx,xxMouse Themexx,xxMouse Appearancexx,xxMouse Skinxx,xxPointer Colorsxx,xxPointer Appearancexx,xxcursor skinxx,xxcursor stylexx,xxcursor sizexx,xxmouse stylexx,xxpointerxx,xxstartxx,xxlaunchxx,xxbusyxx,xxfeedbackxx,xxmousexx,xxpointerxx,xxbouncexx,xxbouncingxx,xxrotatingxx,xxspinningxx,xxstartupxx,xxstart-upxx,xxprogramxx,xxreportxx,xxtaskbarxx,xxanimationxx,xxloadingxx",
     "X-KDE-System-Settings-Parent-Category": "appearance",
     "X-KDE-Weight": 70
 }

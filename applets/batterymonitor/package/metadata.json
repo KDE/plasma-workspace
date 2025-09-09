@@ -45,7 +45,6 @@
                 "Name[tr]": "Sebastian Kügler, Kai Uwe Broulik",
                 "Name[uk]": "Sebastian Kügler, Kai Uwe Broulik",
                 "Name[vi]": "Sebastian Kügler, Kai Uwe Broulik",
-                "Name[x-test]": "xxSebastian Kügler, Kai Uwe Broulikxx",
                 "Name[zh_CN]": "Sebastian Kügler, Kai Uwe Broulik"
             }
         ],
@@ -95,7 +94,6 @@
         "Description[tr]": "Pilinizin güç durumunu görün",
         "Description[uk]": "Перегляньте стан заряду акумулятора",
         "Description[vi]": "Xem tình trạng nguồn điện của pin",
-        "Description[x-test]": "xxSee the power status of your batteryxx",
         "Description[zh_CN]": "查看电池的电量状态",
         "Description[zh_TW]": "查看您的電池的電力狀態",
         "EnabledByDefault": true,
@@ -159,7 +157,6 @@
         "Name[tr]": "Pil ve Ekran Parlaklığı",
         "Name[uk]": "Акумулятор і яскравість дисплея",
         "Name[vi]": "Pin và độ sáng",
-        "Name[x-test]": "xxBattery and Brightnessxx",
         "Name[zh_CN]": "电池和亮度",
         "Name[zh_TW]": "電池與亮度",
         "ServiceTypes": [

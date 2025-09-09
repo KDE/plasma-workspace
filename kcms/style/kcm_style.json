@@ -46,7 +46,6 @@
         "Description[tr]": "Uygulama biçemini ve davranışını yapılandır",
         "Description[uk]": "Налаштовування стилю і поведінки вікон програм",
         "Description[vi]": "Cấu hình kiểu cách và ứng xử của ứng dụng",
-        "Description[x-test]": "xxConfigure application style and behaviorxx",
         "Description[zh_CN]": "配置应用程序视觉风格和行为",
         "Description[zh_TW]": "設定應用程式風格與行為",
         "Icon": "preferences-desktop-theme-applications",
@@ -97,7 +96,6 @@
         "Name[tr]": "Uygulama Biçemi",
         "Name[uk]": "Стиль вікон програм",
         "Name[vi]": "Kiểu cách ứng dụng",
-        "Name[x-test]": "xxApplication Stylexx",
         "Name[zh_CN]": "应用程序风格",
         "Name[zh_TW]": "應用程式風格"
     },
@@ -134,7 +132,6 @@
     "X-KDE-Keywords[ta]": "style,styles,look,widget,icons,toolbars,text,highlight,apps,KDE applications,theme,plasma,menu,global menu,GTK,GNOME, application style,app,programs, appearance,skin,themes,light mode,dark mode, பிளாஸ்மா, தோற்றம், தோற்றத்திட்டம், கருவிப்பட்டை,செயலிகள், பொதுவான பட்டி, செயலி, பயன்பாடு, வெளிர்ந்த பயன்முறை, கருமையான பயன்முறை",
     "X-KDE-Keywords[uk]": "style,styles,look,widget,icons,toolbars,text,highlight,apps,KDE applications,theme,plasma,menu,global menu,GTK,GNOME,application style,app,programs,appearance,skin,themes,light mode,dark mode,стиль,стилі,вигляд,віджет,піктограма,піктограми,значок,значки,іконки,панель,панель інструментів,текст,підсвічування,позначення,програма,програми,тема,плазма,меню,загальне меню,жтк,жетека,гном,гноме,стиль програм,програма,застосунок,аплікація,вигляд,оболонка,шкірка,теми,світлий режим,темний режим",
     "X-KDE-Keywords[vi]": "style,styles,look,widget,icons,toolbars,text,highlight,apps,KDE applications,theme,plasma,menu,global menu,GTK,GNOME,application style,app,programs,appearance,skin,themes,light mode,dark mode,kiểu cách,nhìn,phụ kiện,biểu tượng,thanh công cụ,chữ,văn bản,tô sáng,ứng dụng,ứng dụng KDE,chủ đề,trình đơn,trình đơn toàn cục,kiểu cách ứng dụng,chương trình,diện mạo,da,chế độ sáng,chế độ tối",
-    "X-KDE-Keywords[x-test]": "xxstylexx,xxstylesxx,xxlookxx,xxwidgetxx,xxiconsxx,xxtoolbarsxx,xxtextxx,xxhighlightxx,xxappsxx,xxKDE applicationsxx,xxthemexx,xxplasmaxx,xxmenuxx,xxglobal menuxx,xxGTKxx,xxGNOMExx,xxapplication stylexx,xxappxx,xxprogramsxx,xxappearancexx,xxskinxx,xxthemesxx,xxlight modexx,xxdark modexx",
     "X-KDE-System-Settings-Parent-Category": "appearance",
     "X-KDE-Weight": 0
 }

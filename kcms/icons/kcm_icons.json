@@ -46,7 +46,6 @@
         "Description[tr]": "Simge teması seçin",
         "Description[uk]": "Вибір теми піктограм",
         "Description[vi]": "Chọn chủ đề của biểu tượng",
-        "Description[x-test]": "xxChoose icon themexx",
         "Description[zh_CN]": "选择图标主题",
         "Description[zh_TW]": "選擇圖示主題",
         "FormFactors": [
@@ -103,7 +102,6 @@
         "Name[tr]": "Simgeler",
         "Name[uk]": "Піктограми",
         "Name[vi]": "Biểu tượng",
-        "Name[x-test]": "xxIconsxx",
         "Name[zh_CN]": "图标",
         "Name[zh_TW]": "圖示"
     },
@@ -138,7 +136,6 @@
     "X-KDE-Keywords[ta]": "icons,effects,size,hicolor,locolor,change icons,buttons,button theme,icon theme,theme,iconography, சின்னம், சின்னங்கள், பட்டன், பட்டன்கள், மென்மேடு, பொத்தான், தோற்றத்திட்டம், திட்டம், திட்டமுறை",
     "X-KDE-Keywords[uk]": "icons,effects,size,hicolor,locolor,change icons,buttons,button theme,icon theme,theme,iconography,піктограми,значки,іконки,ефекти,розмір,колір,змінити піктограми,кнопки,тема кнопок,тема піктограм,тема значків,тема,піктографія",
     "X-KDE-Keywords[vi]": "icons,effects,size,hicolor,locolor,change icons,buttons,button theme,icon theme,theme,iconography,biểu tượng,hiệu ứng,cỡ,màu cao,màu thấp,thay đổi biểu tượng,nút,chủ đề nút,chủ đề biểu tượng,chủ đề,biểu tượng học",
-    "X-KDE-Keywords[x-test]": "xxiconsxx,xxeffectsxx,xxsizexx,xxhicolorxx,xxlocolorxx,xxchange iconsxx,xxbuttonsxx,xxbutton themexx,xxicon themexx,xxthemexx,xxiconographyxx",
     "X-KDE-System-Settings-Parent-Category": "appearance",
     "X-KDE-Weight": 60
 }

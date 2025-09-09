@@ -45,7 +45,6 @@
         "Description[tr]": "Ana klasörünüzdeki boş alan azaldığı zaman uyarır",
         "Description[uk]": "Попереджає, якщо у домашній теці залишається мало місця",
         "Description[vi]": "Cảnh báo khi sắp hết không gian cho thư mục nhà của bạn",
-        "Description[x-test]": "xxWarns when running out of space on your home folderxx",
         "Description[zh_CN]": "在主目录磁盘空间不足时发出警告",
         "Description[zh_TW]": "當您的家目錄剩餘空間即將不足時警告您",
         "Name": "Free Space Notifier",
@@ -113,7 +112,6 @@
         "Name[uk]": "Сповіщення про вільне місце",
         "Name[vi]": "Trình thông báo không gian trống",
         "Name[wa]": "Notifieu del plaece di libe",
-        "Name[x-test]": "xxFree Space Notifierxx",
         "Name[zh_CN]": "空闲空间通知器",
         "Name[zh_TW]": "剩餘空間通知"
     },

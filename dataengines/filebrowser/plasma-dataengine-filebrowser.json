@@ -51,7 +51,6 @@
         "Description[tr]": "Dosyalar ve dizinler hakkında bilgiler.",
         "Description[uk]": "Інформація про файли і каталоги.",
         "Description[vi]": "Thông tin về các tệp và thư mục.",
-        "Description[x-test]": "xxInformation about files and directories.xx",
         "Description[zh_CN]": "关于文件和目录的信息。",
         "Description[zh_TW]": "關於檔案與目錄的資訊。",
         "Icon": "system-file-manager",
@@ -133,7 +132,6 @@
         "Name[uk]": "Файли і каталоги",
         "Name[vi]": "Tệp và thư mục",
         "Name[wa]": "Fitchîs eyet ridants",
-        "Name[x-test]": "xxFiles and Directoriesxx",
         "Name[zh_CN]": "文件和目录",
         "Name[zh_TW]": "檔案與目錄",
         "Website": "https://kde.org/plasma-desktop"

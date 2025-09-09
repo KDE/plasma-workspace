@@ -46,7 +46,6 @@
         "Description[tr]": "Etkinlik Bildirimleri ve Eylemler",
         "Description[uk]": "Сповіщення щодо подій та дії",
         "Description[vi]": "Thông báo và hành động cho sự kiện",
-        "Description[x-test]": "xxEvent Notifications and Actionsxx",
         "Description[zh_CN]": "事件通知和操作",
         "Description[zh_TW]": "事件通知與動作",
         "FormFactors": [
@@ -141,7 +140,6 @@
         "Name[uz]": "Xabarnomalar",
         "Name[vi]": "Thông báo",
         "Name[wa]": "Notifiaedjes",
-        "Name[x-test]": "xxNotificationsxx",
         "Name[zh_CN]": "通知",
         "Name[zh_TW]": "通知"
     },

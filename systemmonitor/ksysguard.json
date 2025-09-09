@@ -43,7 +43,6 @@
         "Description[tr]": "Kontrol + Vazgeç ile KSysguard'ı başlatır",
         "Description[uk]": "Запускає KSysguard у відповідь на натискання Ctrl + Esc",
         "Description[vi]": "Khởi chạy KSysguard khi ấn Ctrl + Escape",
-        "Description[x-test]": "xxLaunches KSysguard on Ctrl + Escapexx",
         "Description[zh_CN]": "Ctrl + Esc 启动系统守护程序",
         "Description[zh_TW]": "使用 Ctrl + Escape 啟動 KSysguard",
         "Icon": "preferences-system-power-management",
@@ -99,7 +98,6 @@
         "Name[tr]": "KSysGuard",
         "Name[uk]": "KSysguard",
         "Name[vi]": "KSysguard",
-        "Name[x-test]": "xxKSysguardxx",
         "Name[zh_CN]": "KDE 系统守护程序",
         "Name[zh_TW]": "KSysguard"
     },

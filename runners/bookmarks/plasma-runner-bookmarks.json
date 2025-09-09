@@ -47,7 +47,6 @@
                 "Name[tr]": "Glenn Ergeerts, Marco Gulino",
                 "Name[uk]": "Glenn Ergeerts, Marco Gulino",
                 "Name[vi]": "Glenn Ergeerts, Marco Gulino",
-                "Name[x-test]": "xxGlenn Ergeerts, Marco Gulinoxx",
                 "Name[zh_CN]": "Glenn Ergeerts, Marco Gulino"
             }
         ],
@@ -96,7 +95,6 @@
         "Description[tr]": "Yer imlerini bul ve aç",
         "Description[uk]": "Знайти і відкрити закладки",
         "Description[vi]": "Tìm và mở dấu nhớ",
-        "Description[x-test]": "xxFind and open bookmarksxx",
         "Description[zh_CN]": "查找并打开书签",
         "Description[zh_TW]": "尋找並開啟書籤",
         "EnabledByDefault": true,
@@ -148,7 +146,6 @@
         "Name[tr]": "Yer İmleri",
         "Name[uk]": "Закладки",
         "Name[vi]": "Dấu nhớ",
-        "Name[x-test]": "xxBookmarksxx",
         "Name[zh_CN]": "书签",
         "Name[zh_TW]": "書籤"
     },

@@ -50,7 +50,6 @@
         "Description[tr]": "Web sitelerinin simgelerini almak için bir Veri İşletkesi",
         "Description[uk]": "Рушій даних для отримання піктограм для вебсайтів",
         "Description[vi]": "Dụng cụ dữ liệu để lấy các biểu tượng địa điểm web",
-        "Description[x-test]": "xxData Engine for getting favicons of web sitesxx",
         "Description[zh_CN]": "用于获取网站图标的数据引擎",
         "Description[zh_TW]": "取得網站圖示用的資料引擎",
         "Icon": "view-web-browser-dom-tree",
@@ -130,7 +129,6 @@
         "Name[uk]": "Піктограми «Вибраного»",
         "Name[vi]": "Biểu tượng trang",
         "Name[wa]": "Pititès imådjetes favicons",
-        "Name[x-test]": "xxFaviconsxx",
         "Name[zh_CN]": "网站图标",
         "Name[zh_TW]": "網站圖示",
         "Website": "https://kde.org/plasma-desktop"

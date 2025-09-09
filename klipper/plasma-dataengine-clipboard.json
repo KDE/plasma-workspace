@@ -47,7 +47,6 @@
                 "Name[tr]": "Martin Gräßlin",
                 "Name[uk]": "Martin Gräßlin",
                 "Name[vi]": "Martin Gräßlin",
-                "Name[x-test]": "xxMartin Gräßlinxx",
                 "Name[zh_CN]": "Martin Gräßlin"
             }
         ],
@@ -97,7 +96,6 @@
         "Description[tr]": "Pano Aracı.",
         "Description[uk]": "Утиліта буфера даних.",
         "Description[vi]": "Công cụ bảng nháp.",
-        "Description[x-test]": "xxClipboard Tool.xx",
         "Description[zh_CN]": "剪贴板工具。",
         "Description[zh_TW]": "剪貼簿工具。",
         "EnabledByDefault": true,
@@ -160,7 +158,6 @@
         "Name[tr]": "Pano",
         "Name[uk]": "Буфер обміну",
         "Name[vi]": "Bảng nháp",
-        "Name[x-test]": "xxClipboardxx",
         "Name[zh_CN]": "剪贴板",
         "Name[zh_TW]": "剪貼簿",
         "Version": "0.1",

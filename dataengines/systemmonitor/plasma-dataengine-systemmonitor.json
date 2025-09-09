@@ -51,7 +51,6 @@
         "Description[tr]": "Sistem durum bilgileri",
         "Description[uk]": "Інформація про стан системи",
         "Description[vi]": "Thông tin về trạng thái hệ thống",
-        "Description[x-test]": "xxSystem status informationxx",
         "Description[zh_CN]": "系统状态信息",
         "Description[zh_TW]": "系統狀態資訊",
         "Icon": "utilities-system-monitor",
@@ -138,7 +137,6 @@
         "Name[uk]": "Монітор системи",
         "Name[vi]": "Trình giám sát hệ thống",
         "Name[wa]": "Corwaitoe do sistinme",
-        "Name[x-test]": "xxSystem Monitorxx",
         "Name[zh_CN]": "系统监视器",
         "Name[zh_TW]": "系統監視器",
         "Website": "https://kde.org/plasma-desktop"
