@@ -32,7 +32,7 @@ QHash<int, QByteArray> SlideModel::roleNames() const
 QVariant SlideModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid()) {
-        return QVariant();
+        return {};
     }
 
     if (role == ToggleRole) {
@@ -118,7 +118,7 @@ QString SlideModel::removeDir(const QString &_dir)
     const QString dir = _dir.endsWith(QDir::separator()) ? _dir : _dir + QDir::separator();
 
     if (!m_models.contains(dir)) {
-        return QString();
+        return {};
     }
 
     auto *m = m_models.take(dir);

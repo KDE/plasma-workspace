@@ -122,7 +122,7 @@ static QString getEntry(QDomElement element, const char *type, unsigned int numA
         }
     }
 
-    return QString();
+    return {};
 }
 
 static KXftConfig::SubPixel::Type strToType(QStringView str)
@@ -470,7 +470,7 @@ QString KXftConfig::toStr(SubPixel::Type t)
     switch (t) {
     default:
     case SubPixel::NotSet:
-        return QString();
+        return {};
     case SubPixel::None:
         return u"none"_s;
     case SubPixel::Rgb:
@@ -506,7 +506,7 @@ QString KXftConfig::toStr(Hint::Style s)
     switch (s) {
     default:
     case Hint::NotSet:
-        return QString();
+        return {};
     case Hint::Medium:
         return u"hintmedium"_s;
     case Hint::None:

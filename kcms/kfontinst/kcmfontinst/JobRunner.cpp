@@ -62,7 +62,7 @@ FontInstInterface *CJobRunner::dbus()
 QString CJobRunner::folderName(bool sys)
 {
     if (!theInterface) {
-        return QString();
+        return {};
     }
 
     QDBusPendingReply<QString> reply = theInterface->folderName(sys);
@@ -667,7 +667,7 @@ QString CJobRunner::fileName(const QUrl &url)
             if (job->exec()) {
                 return tempName;
             } else {
-                return QString();
+                return {};
             }
         }
     }

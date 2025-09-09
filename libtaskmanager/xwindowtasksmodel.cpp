@@ -564,7 +564,7 @@ QUrl XWindowTasksModel::Private::launcherUrl(WId window, bool encodeFallbackIcon
 
     // Forego adding the window icon pixmap if the URL is otherwise empty.
     if (!url.isValid()) {
-        return QUrl();
+        return {};
     }
 
     // Only serialize pixmap data if the window pixmap is actually being used.
@@ -621,7 +621,7 @@ XWindowTasksModel::~XWindowTasksModel() = default;
 QVariant XWindowTasksModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid() || index.row() >= d->windows.count()) {
-        return QVariant();
+        return {};
     }
 
     const WId window = d->windows.at(index.row());

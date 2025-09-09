@@ -138,7 +138,7 @@ bool UserModel::hasMoreThanOneAdminUser() const
 QVariant UserModel::data(const QModelIndex &index, int role) const
 {
     if (!checkIndex(index)) {
-        return QVariant();
+        return {};
     }
 
     User *user = m_userList.at(index.row());
@@ -170,7 +170,7 @@ QVariant UserModel::data(const QModelIndex &index, int role) const
         return user->isCurrentUser() ? i18n("Your Account") : i18n("Other Accounts");
     }
 
-    return QVariant();
+    return {};
 }
 
 int UserModel::rowCount(const QModelIndex &parent) const

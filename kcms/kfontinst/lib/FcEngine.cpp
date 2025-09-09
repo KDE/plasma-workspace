@@ -567,11 +567,11 @@ QImage CFcEngine::Xft::toImage(int w, int h) const
     Q_UNUSED(h)
 
     if (!XftDrawPicture(m_draw)) {
-        return QImage();
+        return {};
     }
     auto xImage = XGetImage(xDisplay(), m_pix.x11, 0, 0, m_pix.currentW, m_pix.currentH, ~0, ZPixmap);
     if (!xImage) {
-        return QImage();
+        return {};
     }
     if (imageFormat == QImage::Format_RGB32) {
         // the RGB32 format requires data format 0xffRRGGBB, ensure that this fourth byte really is 0xff
@@ -582,7 +582,7 @@ QImage CFcEngine::Xft::toImage(int w, int h) const
             lData[iIter] |= 0xff000000;
         }
     }
-    return QImage((const uchar *)xImage->data, xImage->width, xImage->height, xImage->bytes_per_line, imageFormat, &cleanupXImage, xImage);
+    return {(const uchar *)xImage->data, xImage->width, xImage->height, xImage->bytes_per_line, imageFormat, &cleanupXImage, xImage};
 }
 
 inline int point2Pixel(int point)

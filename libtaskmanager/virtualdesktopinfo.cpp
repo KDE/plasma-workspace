@@ -488,7 +488,7 @@ QVariantList VirtualDesktopInfo::WaylandPrivate::desktopIds() const
 QStringList VirtualDesktopInfo::WaylandPrivate::desktopNames() const
 {
     if (!virtualDesktopManagement->isActive()) {
-        return QStringList();
+        return {};
     }
     QStringList names;
     names.reserve(virtualDesktops.size());

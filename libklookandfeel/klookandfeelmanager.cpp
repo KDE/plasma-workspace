@@ -475,7 +475,7 @@ QString KLookAndFeelManager::colorSchemeFile(const QString &schemeName) const
             }
         }
     }
-    return QString();
+    return {};
 }
 
 void KLookAndFeelManager::save(const KPackage::Package &package, Contents applyMask)

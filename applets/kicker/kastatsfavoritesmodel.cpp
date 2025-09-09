@@ -405,7 +405,7 @@ public:
     QVariant data(const QModelIndex &item, int role = Qt::DisplayRole) const override
     {
         if (item.parent().isValid())
-            return QVariant();
+            return {};
 
         const auto index = item.row();
 
@@ -413,7 +413,7 @@ public:
         // In that case, m_itemEntries.value will return default constructed value which is nullptr.
         auto it = m_itemEntries.find(m_items.value(index).value());
         if (it == m_itemEntries.cend()) {
-            return QVariant();
+            return {};
         }
         const auto &entry = it->second;
         // clang-format off
@@ -591,7 +591,7 @@ void KAStatsFavoritesModel::setEnabled(bool enable)
 QStringList KAStatsFavoritesModel::favorites() const
 {
     qCWarning(KICKER_DEBUG) << "KAStatsFavoritesModel::favorites returns nothing, it is here just to keep the API backwards-compatible";
-    return QStringList();
+    return {};
 }
 
 void KAStatsFavoritesModel::setFavorites(const QStringList &favorites)

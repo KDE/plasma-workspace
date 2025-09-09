@@ -149,12 +149,12 @@ void CFontPreview::wheelEvent(QWheelEvent *e)
 
 QSize CFontPreview::sizeHint() const
 {
-    return QSize(132, 132);
+    return {132, 132};
 }
 
 QSize CFontPreview::minimumSizeHint() const
 {
-    return QSize(32, 32);
+    return {32, 32};
 }
 
 }

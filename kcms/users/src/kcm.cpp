@@ -105,7 +105,7 @@ void KCMUser::save()
 QString KCMUser::initializeString(const QString &stringToGrabInitialsOf)
 {
     if (stringToGrabInitialsOf.isEmpty()) {
-        return QString();
+        return {};
     }
 
     auto normalized = stringToGrabInitialsOf.normalized(QString::NormalizationForm_D);
@@ -114,14 +114,14 @@ QString KCMUser::initializeString(const QString &stringToGrabInitialsOf)
         auto first = split.first();
         auto last = split.last();
         if (first.isEmpty()) {
-            return QString(last.front());
+            return {last.front()};
         }
         if (last.isEmpty()) {
-            return QString(first.front());
+            return {first.front()};
         }
         return QString(first.front()) + last.front();
     } else {
-        return QString(normalized.front());
+        return {normalized.front()};
     }
 }
 
@@ -141,7 +141,7 @@ QUrl KCMUser::recolorSVG(const QUrl &url, const QColor &color)
     if (!s_cache.contains(url)) {
         QFile at(url.toString().sliced(QLatin1String("qrc").size()));
         if (at.fileName().isEmpty() || !at.open(QFile::ReadOnly)) {
-            return QUrl();
+            return {};
         }
         s_cache[url] = QString::fromUtf8(at.readAll());
     }

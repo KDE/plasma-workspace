@@ -415,7 +415,7 @@ QPixmap StatusNotifierItemSource::KDbusImageStructToPixmap(const KDbusImageStruc
         }
     }
     if (image.width == 0 || image.height == 0) {
-        return QPixmap();
+        return {};
     }
 
     // avoid a deep copy of the image data

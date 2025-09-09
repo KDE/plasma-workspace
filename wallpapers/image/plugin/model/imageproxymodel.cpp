@@ -116,12 +116,12 @@ void ImageProxyModel::reload()
 QStringList ImageProxyModel::addBackground(const QUrl &url)
 {
     if (!url.isLocalFile()) {
-        return QStringList();
+        return {};
     }
 
     const QFileInfo info(url.toLocalFile());
     if (!info.exists()) {
-        return QStringList();
+        return {};
     }
 
     QStringList results;

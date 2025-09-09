@@ -336,7 +336,7 @@ bool GridLayoutManager::isCellAvailable(const QPair<int, int> &cell) const
 
 QRectF GridLayoutManager::itemGeometry(QQuickItem *item) const
 {
-    return QRectF(item->property("x").toReal(), item->property("y").toReal(), item->width(), item->height());
+    return {item->property("x").toReal(), item->property("y").toReal(), item->width(), item->height()};
 }
 
 QPair<int, int> GridLayoutManager::nextCell(const QPair<int, int> &cell, AppletsLayout::PreferredLayoutDirection direction) const
@@ -488,7 +488,6 @@ QRectF GridLayoutManager::nextAvailableSpace(ItemContainer *item, const QSizeF &
                     break;
                 }
             }
-
         } else if (direction == AppletsLayout::TopToBottom || direction == AppletsLayout::BottomToTop) {
             partialSize = QSize(0, INT_MAX);
 
@@ -517,7 +516,6 @@ QRectF GridLayoutManager::nextAvailableSpace(ItemContainer *item, const QSizeF &
         if (partialSize.width() >= minimumGridSize.width() && partialSize.height() >= minimumGridSize.height()) {
             const int width = qMin(itemCellGeom.width(), partialSize.width()) * cellSize().width();
             const int height = qMin(itemCellGeom.height(), partialSize.height()) * cellSize().height();
-
             switch (direction) {
             case AppletsLayout::AppletsLayout::BottomToTop:
                 return QRectF(cell.second * cellSize().width(), (cell.first + 1) * cellSize().height() - height, width, height);
@@ -539,7 +537,7 @@ QRectF GridLayoutManager::nextAvailableSpace(ItemContainer *item, const QSizeF &
     }
 
     // We didn't manage to find layout space, return invalid geometry
-    return QRectF();
+    return {};
 }
 
 #include "moc_gridlayoutmanager.cpp"

@@ -387,7 +387,7 @@ QString ImageBackend::addUsersWallpaper(const QUrl &url)
     }
 
     if (results.empty()) {
-        return QString();
+        return {};
     }
 
     Q_EMIT settingsChanged();

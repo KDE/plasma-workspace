@@ -205,7 +205,7 @@ bool JobsModelPrivate::requiresJobTracker() const
 
 QStringList JobsModelPrivate::registeredJobContacts() const
 {
-    return QStringList();
+    return {};
 }
 
 QDBusObjectPath JobsModelPrivate::requestView(const QString &appName, const QString &appIconName, int capabilities)

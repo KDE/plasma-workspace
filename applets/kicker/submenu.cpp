@@ -42,7 +42,7 @@ void SubMenu::setOffset(int offset)
 QPoint SubMenu::popupPosition(QQuickItem *item, const QSize &size)
 {
     if (!item || !item->window()) {
-        return QPoint(0, 0);
+        return {0, 0};
     }
 
     const bool isRightToLeft = QApplication::layoutDirection() == Qt::RightToLeft;

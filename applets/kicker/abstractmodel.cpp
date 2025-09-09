@@ -91,7 +91,7 @@ bool AbstractModel::hasActions() const
 
 QVariantList AbstractModel::actions() const
 {
-    return QVariantList();
+    return {};
 }
 
 AbstractModel *AbstractModel::favoritesModel()

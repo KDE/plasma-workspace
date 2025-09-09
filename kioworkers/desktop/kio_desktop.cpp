@@ -132,7 +132,7 @@ QString DesktopProtocol::desktopFile(KIO::UDSEntry &entry) const
 {
     const QString name = entry.stringValue(KIO::UDSEntry::UDS_NAME);
     if (name == QLatin1Char('.') || name == QLatin1String(".."))
-        return QString();
+        return {};
 
     QUrl url = processedUrl();
     url.setPath(QStringLiteral("%1/%2").arg(url.path(), name));
@@ -140,7 +140,7 @@ QString DesktopProtocol::desktopFile(KIO::UDSEntry &entry) const
     if (entry.isDir()) {
         url.setPath(QStringLiteral("%1/.directory").arg(url.path()));
         if (!QFileInfo::exists(url.path()))
-            return QString();
+            return {};
 
         return url.path();
     }
@@ -148,7 +148,7 @@ QString DesktopProtocol::desktopFile(KIO::UDSEntry &entry) const
     if (KDesktopFile::isDesktopFile(url.path()))
         return url.path();
 
-    return QString();
+    return {};
 }
 
 void DesktopProtocol::adjustUDSEntry(KIO::UDSEntry &entry, UDSEntryCreationMode creationMode) const

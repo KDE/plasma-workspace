@@ -101,7 +101,7 @@ static QString toStr(EUnicodeCategory cat)
     case UNICODE_SPACE_SEPARATOR:
         return i18n("Separator, Space");
     default:
-        return QString();
+        return {};
     }
 }
 

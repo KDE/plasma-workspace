@@ -149,7 +149,7 @@ QColor KCMColors::accentColor() const
 {
     const QColor color = colorsSettings()->accentColor();
     if (!color.isValid()) {
-        return QColor(Qt::transparent);
+        return {Qt::transparent};
     }
     return color;
 }

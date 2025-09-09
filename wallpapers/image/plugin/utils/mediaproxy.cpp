@@ -227,7 +227,7 @@ QColor MediaProxy::getAccentColorFromMetaData(const KPackage::Package &package)
     const QJsonObject metaData = package.metadata().rawData();
     const auto jsonIt = metaData.constFind(QLatin1String("X-KDE-PlasmaImageWallpaper-AccentColor"));
     if (jsonIt == metaData.constEnd()) {
-        return QColor();
+        return {};
     }
 
     QString colorString = QStringLiteral("transparent");

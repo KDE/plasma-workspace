@@ -41,10 +41,10 @@ QSize resSize(QStringView str)
     const int index = str.indexOf(QLatin1Char('x'));
 
     if (index != -1) {
-        return QSize(str.left(index).toInt(), str.mid(index + 1).toInt());
+        return {str.left(index).toInt(), str.mid(index + 1).toInt()};
     }
 
-    return QSize();
+    return {};
 }
 }
 

@@ -370,7 +370,7 @@ QBindable<int> HistoryModel::bindableStarredCount() const
 QVariant HistoryModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid() || index.row() >= m_items.size() || index.column() != 0) {
-        return QVariant();
+        return {};
     }
 
     Q_ASSERT_X(m_db.isOpen(), Q_FUNC_INFO, qPrintable(m_db.lastError().text()));
@@ -420,7 +420,7 @@ QVariant HistoryModel::data(const QModelIndex &index, int role) const
         // frequent database queries if performance becomes an issue with large histories
         return isItemStarred(item->uuid());
     }
-    return QVariant();
+    return {};
 }
 
 bool HistoryModel::setData(const QModelIndex &index, const QVariant &value, int role)
@@ -594,7 +594,7 @@ int HistoryModel::indexOf(const HistoryItem *item) const
 HistoryItemConstPtr HistoryModel::first() const
 {
     if (m_items.empty()) {
-        return HistoryItemConstPtr();
+        return {};
     }
     return m_items[0];
 }

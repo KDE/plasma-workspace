@@ -124,7 +124,7 @@ void ConfigGroup::setGroup(const QString &groupname)
 QStringList ConfigGroup::keyList() const
 {
     if (!d->configGroup) {
-        return QStringList();
+        return {};
     }
     return d->configGroup->keyList();
 }
@@ -132,7 +132,7 @@ QStringList ConfigGroup::keyList() const
 QStringList ConfigGroup::groupList() const
 {
     if (!d->configGroup) {
-        return QStringList();
+        return {};
     }
     return d->configGroup->groupList();
 }
@@ -187,7 +187,7 @@ bool ConfigGroup::writeEntry(const QString &key, const QJSValue &value)
 QVariant ConfigGroup::readEntry(const QString &key)
 {
     if (!d->configGroup) {
-        return QVariant();
+        return {};
     }
     const QVariant value = d->configGroup->readEntry(key, QVariant(QString()));
     // qDebug() << " reading setting: " << key << value;

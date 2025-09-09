@@ -489,7 +489,7 @@ int CFontList::columnCount(const QModelIndex &) const
 
 QVariant CFontList::data(const QModelIndex &, int) const
 {
-    return QVariant();
+    return {};
 }
 
 Qt::ItemFlags CFontList::flags(const QModelIndex &index) const
@@ -557,7 +557,7 @@ QVariant CFontList::headerData(int section, Qt::Orientation orientation, int rol
             //                     return QIcon::fromTheme("fontstatus");
             //                 break;
         case Qt::TextAlignmentRole:
-            return QVariant(Qt::AlignLeft | Qt::AlignVCenter);
+            return {Qt::AlignLeft | Qt::AlignVCenter};
         case Qt::ToolTipRole:
             if (COL_STATUS == section) {
                 return i18n(
@@ -572,7 +572,7 @@ QVariant CFontList::headerData(int section, Qt::Orientation orientation, int rol
         }
     }
 
-    return QVariant();
+    return {};
 }
 
 QModelIndex CFontList::index(int row, int column, const QModelIndex &parent) const
@@ -589,19 +589,19 @@ QModelIndex CFontList::index(int row, int column, const QModelIndex &parent) con
             return createIndex(row, column, m_families.at(row));
         }
 
-    return QModelIndex();
+    return {};
 }
 
 QModelIndex CFontList::parent(const QModelIndex &index) const
 {
     if (!index.isValid()) {
-        return QModelIndex();
+        return {};
     }
 
     auto *mi = static_cast<CFontModelItem *>(index.internalPointer());
 
     if (mi->isFamily()) {
-        return QModelIndex();
+        return {};
     } else {
         auto *font = static_cast<CFontItem *>(index.internalPointer());
 
@@ -908,7 +908,7 @@ CFontListSortFilterProxy::CFontListSortFilterProxy(QObject *parent, QAbstractIte
 QVariant CFontListSortFilterProxy::data(const QModelIndex &idx, int role) const
 {
     if (!idx.isValid()) {
-        return QVariant();
+        return {};
     }
 
     static const int constMaxFiles = 20;
@@ -917,7 +917,7 @@ QVariant CFontListSortFilterProxy::data(const QModelIndex &idx, int role) const
     auto *mi = static_cast<CFontModelItem *>(index.internalPointer());
 
     if (!mi) {
-        return QVariant();
+        return {};
     }
 
     switch (role) {
@@ -1034,7 +1034,7 @@ QVariant CFontListSortFilterProxy::data(const QModelIndex &idx, int role) const
     default:
         break;
     }
-    return QVariant();
+    return {};
 }
 
 bool CFontListSortFilterProxy::acceptFont(CFontItem *fnt, bool checkFontText) const

@@ -220,13 +220,13 @@ XStartupTasksModel::~XStartupTasksModel() = default;
 QVariant XStartupTasksModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid() || index.row() >= d->startups.count()) {
-        return QVariant();
+        return {};
     }
 
     const QByteArray &id = d->startups.at(index.row()).id();
 
     if (!d->startupData.contains(id)) {
-        return QVariant();
+        return {};
     }
 
     const KStartupInfoData &data = d->startupData.value(id);

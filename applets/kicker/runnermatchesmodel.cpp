@@ -70,7 +70,7 @@ QVariant RunnerMatchesModel::data(const QModelIndex &index, int role) const
 {
     KRunner::QueryMatch match = getQueryMatch(index);
     if (!match.isValid()) {
-        return QVariant();
+        return {};
     }
 
     // Since we have different enums than the KRunner model, we have to implement reading all the data manually
@@ -211,7 +211,7 @@ QVariant RunnerMatchesModel::data(const QModelIndex &index, int role) const
         return actionList;
     }
 
-    return QVariant();
+    return {};
 }
 
 bool RunnerMatchesModel::trigger(int row, const QString &actionId, const QVariant &argument)

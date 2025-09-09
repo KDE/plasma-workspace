@@ -44,7 +44,7 @@ ScreenPoolModel::~ScreenPoolModel() = default;
 QVariant ScreenPoolModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid() || index.column() != 0 || index.row() < 0 || index.row() >= int(m_screens.size())) {
-        return QVariant();
+        return {};
     }
     const Data &d = m_screens.at(index.row());
     switch (role) {
@@ -61,7 +61,7 @@ QVariant ScreenPoolModel::data(const QModelIndex &index, int role) const
     case EnabledRole:
         return d.enabled;
     }
-    return QVariant();
+    return {};
 }
 
 int ScreenPoolModel::rowCount(const QModelIndex &parent) const
@@ -199,7 +199,7 @@ ShellContainmentModel::~ShellContainmentModel() = default;
 QVariant ShellContainmentModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid() || index.column() != 0 || index.row() < 0 || index.row() >= int(m_containments.size())) {
-        return QVariant();
+        return {};
     }
     const Data &d = m_containments.at(index.row());
     switch (role) {
@@ -233,7 +233,7 @@ QVariant ShellContainmentModel::data(const QModelIndex &index, int role) const
     case DestroyedRole:
         return d.containment->destroyed();
     }
-    return QVariant();
+    return {};
 }
 
 int ShellContainmentModel::rowCount(const QModelIndex &parent) const
@@ -448,7 +448,7 @@ QString ShellContainmentModel::containmentPreview(Plasma::Containment *containme
         return backgroundColor.name();
     }
 
-    return QString();
+    return {};
 }
 
 // ---

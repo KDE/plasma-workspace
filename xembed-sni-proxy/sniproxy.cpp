@@ -307,7 +307,7 @@ QImage SNIProxy::getImageNonComposite() const
         naiveConversion = QImage(image->data, image->width, image->height, QImage::Format_ARGB32);
     } else {
         qCDebug(SNIPROXY) << "Skip NULL image returned from xcb_image_get() for" << m_windowId << Title();
-        return QImage();
+        return {};
     }
 
     if (isTransparentImage(naiveConversion)) {
@@ -319,12 +319,12 @@ QImage SNIProxy::getImageNonComposite() const
         // with WINE applications.
         if (isTransparentImage(elaborateConversion)) {
             qCDebug(SNIPROXY) << "Skip transparent xembed icon for" << m_windowId << Title();
-            return QImage();
+            return {};
         } else
             return elaborateConversion;
     } else {
         // Now we are sure we can eventually delete the xcb_image_t with this version
-        return QImage(image->data, image->width, image->height, image->stride, QImage::Format_ARGB32, sni_cleanup_xcb_image, image);
+        return {image->data, image->width, image->height, image->stride, QImage::Format_ARGB32, sni_cleanup_xcb_image, image};
     }
 }
 
@@ -359,13 +359,13 @@ QImage SNIProxy::convertFromNative(xcb_image_t *xcbImage) const
         format = QImage::Format_ARGB32_Premultiplied;
         break;
     default:
-        return QImage(); // we don't know
+        return {}; // we don't know
     }
 
     QImage image(xcbImage->data, xcbImage->width, xcbImage->height, xcbImage->stride, format, sni_cleanup_xcb_image, xcbImage);
 
     if (image.isNull()) {
-        return QImage();
+        return {};
     }
 
     if (format == QImage::Format_RGB32 && xcbImage->bpp == 32) {

@@ -27,12 +27,12 @@ static int positiveMod(int m, int n)
 
 DayNightPhase DayNightPhase::previous() const
 {
-    return DayNightPhase(Kind(positiveMod(int(m_kind) - 1, 4)));
+    return {Kind(positiveMod(int(m_kind) - 1, 4))};
 }
 
 DayNightPhase DayNightPhase::next() const
 {
-    return DayNightPhase(Kind(positiveMod(int(m_kind) + 1, 4)));
+    return {Kind(positiveMod(int(m_kind) + 1, 4))};
 }
 
 DayNightPhase DayNightPhase::from(KDarkLightTransition::Type type)

@@ -55,11 +55,11 @@ HistoryItemPtr HistoryItem::create(const QSqlQuery &query)
 {
     QString uuid = query.value(u"uuid"_s).toString();
     if (uuid.isEmpty()) {
-        return HistoryItemPtr();
+        return {};
     }
     QStringList mimeTypes = query.value(u"mimetypes"_s).toString().split(u',');
     if (mimeTypes.empty()) {
-        return HistoryItemPtr();
+        return {};
     }
     QString text = query.value(u"text"_s).toString();
 

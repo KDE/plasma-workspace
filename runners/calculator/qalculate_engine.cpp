@@ -123,7 +123,7 @@ bool check_valid_before(const std::string &expression, const EvaluationOptions &
 QString QalculateEngine::evaluate(const QString &expression, bool *isApproximate, int base, const QString &customBase)
 {
     if (expression.isEmpty()) {
-        return QString();
+        return {};
     }
 
     QString input = expression;
@@ -147,7 +147,7 @@ QString QalculateEngine::evaluate(const QString &expression, bool *isApproximate
 
 #if QALCULATE_MAJOR_VERSION > 2 || QALCULATE_MINOR_VERSION > 6
     if (!check_valid_before(expression.toStdString(), eo)) {
-        return QString(); // See https://github.com/Qalculate/libqalculate/issues/442
+        return {}; // See https://github.com/Qalculate/libqalculate/issues/442
     }
 #endif
 

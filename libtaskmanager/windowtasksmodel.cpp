@@ -81,7 +81,7 @@ QHash<int, QByteArray> WindowTasksModel::roleNames() const
         return d->sourceTasksModel->roleNames();
     }
 
-    return QHash<int, QByteArray>();
+    return {};
 }
 
 QModelIndex WindowTasksModel::mapIfaceToSource(const QModelIndex &index) const

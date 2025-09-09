@@ -74,13 +74,13 @@ RunCommandModel::~RunCommandModel() = default;
 
 QString RunCommandModel::description() const
 {
-    return QString();
+    return {};
 }
 
 QVariant RunCommandModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid()) {
-        return QVariant();
+        return {};
     }
 
     if (role == Qt::DisplayRole) {
@@ -93,7 +93,7 @@ QVariant RunCommandModel::data(const QModelIndex &index, int role) const
         return i18n("Applications");
     }
 
-    return QVariant();
+    return {};
 }
 
 int RunCommandModel::rowCount(const QModelIndex &parent) const
@@ -185,7 +185,7 @@ void ComputerModel::setSystemApplications(const QStringList &apps)
 QVariant ComputerModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid()) {
-        return QVariant();
+        return {};
     }
 
     const QModelIndex sourceIndex = m_concatProxy->mapToSource(m_concatProxy->index(index.row(), index.column()));
@@ -221,7 +221,7 @@ QVariant ComputerModel::data(const QModelIndex &index, int role) const
         return sourceIndex.data(role);
     }
 
-    return QVariant();
+    return {};
 }
 
 bool ComputerModel::trigger(int row, const QString &actionId, const QVariant &argument)

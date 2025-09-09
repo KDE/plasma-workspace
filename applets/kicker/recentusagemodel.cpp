@@ -182,7 +182,7 @@ QVariant RecentUsageModel::rowValueAt(int row, ResultModel::Roles role) const
 QVariant RecentUsageModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid()) {
-        return QVariant();
+        return {};
     }
 
     const QString &resource = resourceAt(index.row());
@@ -203,7 +203,7 @@ QVariant RecentUsageModel::appData(const QString &resource, int role) const
     QStringList allowedTypes({QLatin1String("Service"), QLatin1String("Application")});
 
     if (!service || !allowedTypes.contains(service->property<QString>(QLatin1String("Type"))) || service->exec().isEmpty()) {
-        return QVariant();
+        return {};
     }
 
     if (role == Qt::DisplayRole) {
@@ -250,7 +250,7 @@ QVariant RecentUsageModel::appData(const QString &resource, int role) const
         return actionList;
     }
 
-    return QVariant();
+    return {};
 }
 
 QModelIndex RecentUsageModel::findPlaceForKFileItem(const KFileItem &fileItem) const
@@ -262,7 +262,7 @@ QModelIndex RecentUsageModel::findPlaceForKFileItem(const KFileItem &fileItem) c
             return index;
         }
     }
-    return QModelIndex();
+    return {};
 }
 
 QVariant RecentUsageModel::docData(const QString &resource, int role, const QString &mimeType) const
@@ -285,7 +285,7 @@ QVariant RecentUsageModel::docData(const QString &resource, int role, const QStr
     };
 
     if (!url.isValid()) {
-        return QVariant();
+        return {};
     }
 
     if (role == Qt::DisplayRole) {
@@ -355,7 +355,7 @@ QVariant RecentUsageModel::docData(const QString &resource, int role, const QStr
         return actionList;
     }
 
-    return QVariant();
+    return {};
 }
 
 bool RecentUsageModel::trigger(int row, const QString &actionId, const QVariant &argument)

@@ -159,7 +159,7 @@ QJSValue Containment::widgetById(const QJSValue &paramId) const
         }
     }
 
-    return QJSValue();
+    return {};
 }
 
 QJSValue Containment::addWidget(const QJSValue &v, qreal x, qreal y, qreal w, qreal h, const QVariantList &args)
@@ -169,7 +169,7 @@ QJSValue Containment::addWidget(const QJSValue &v, qreal x, qreal y, qreal w, qr
     }
 
     if (!d->containment) {
-        return QJSValue();
+        return {};
     }
 
     QRectF geometry(x, y, w, h);
@@ -213,13 +213,13 @@ QJSValue Containment::addWidget(const QJSValue &v, qreal x, qreal y, qreal w, qr
         return v;
     }
 
-    return QJSValue();
+    return {};
 }
 
 QJSValue Containment::widgets(const QString &widgetType) const
 {
     if (!d->containment) {
-        return QJSValue();
+        return {};
     }
 
     QJSValue widgets = engine()->newArray();
@@ -248,7 +248,7 @@ uint Containment::id() const
 QString Containment::type() const
 {
     if (!d->containment) {
-        return QString();
+        return {};
     }
 
     return d->containment->pluginMetaData().pluginId();

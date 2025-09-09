@@ -48,7 +48,7 @@ int IconsModel::rowCount(const QModelIndex &parent) const
 QVariant IconsModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid() || index.row() >= m_data.count()) {
-        return QVariant();
+        return {};
     }
 
     const auto &item = m_data.at(index.row());
@@ -66,7 +66,7 @@ QVariant IconsModel::data(const QModelIndex &index, int role) const
         return item.pendingDeletion;
     }
 
-    return QVariant();
+    return {};
 }
 
 bool IconsModel::setData(const QModelIndex &index, const QVariant &value, int role)

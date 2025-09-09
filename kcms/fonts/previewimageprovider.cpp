@@ -35,7 +35,7 @@
 QImage combineImages(const QList<QImage> &images, const QColor &bgnd, int _spacing = 0)
 {
     if (images.empty()) {
-        return QImage();
+        return {};
     }
 
     int width = 0;
@@ -86,7 +86,7 @@ QImage PreviewImageProvider::requestImage(const QString &id, QSize *size, const 
         subPixelIndex = sections[0].toInt() + KXftConfig::SubPixel::None;
         hintingIndex = sections[1].toInt() + KXftConfig::Hint::None;
     } else {
-        return QImage();
+        return {};
     }
 
     KXftConfig xft;

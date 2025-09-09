@@ -137,7 +137,7 @@ public:
             auto namedPathList = qdbus_cast<QList<NamedDBusObjectPath>>(args.at(0).value<QDBusVariant>().variant().value<QDBusArgument>());
             return namedPathList;
         }
-        return QList<NamedDBusObjectPath>();
+        return {};
     }
 };
 
@@ -161,7 +161,7 @@ public:
             args.at(0).value<QDBusVariant>().variant().value<QDBusArgument>() >> namedPath;
             return namedPath;
         }
-        return NamedDBusObjectPath();
+        return {};
     }
     NumberedDBusObjectPath getUser()
     {
@@ -175,7 +175,7 @@ public:
             args.at(0).value<QDBusVariant>().variant().value<QDBusArgument>() >> numberedPath;
             return numberedPath;
         }
-        return NumberedDBusObjectPath();
+        return {};
     }
     void getSessionLocation(SessEnt &se)
     {
@@ -480,7 +480,7 @@ static QList<QDBusObjectPath> getSessionsForSeat(const QDBusObjectPath &path)
             }
         }
     }
-    return QList<QDBusObjectPath>();
+    return {};
 }
 
 #ifndef KDM_NO_SHUTDOWN

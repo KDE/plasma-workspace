@@ -82,7 +82,7 @@ QHash<int, QByteArray> StartupTasksModel::roleNames() const
         return d->sourceTasksModel->roleNames();
     }
 
-    return QHash<int, QByteArray>();
+    return {};
 }
 
 QModelIndex StartupTasksModel::mapIfaceToSource(const QModelIndex &index) const

@@ -158,7 +158,7 @@ QJSValue ScriptEngine::V1::desktopById(const QJSValue &param) const
         }
     }
 
-    return QJSValue();
+    return {};
 }
 
 QJSValue ScriptEngine::V1::desktopsForActivity(const QJSValue &actId) const
@@ -272,7 +272,7 @@ QJSValue ScriptEngine::V1::setActivityName(const QJSValue &idParam, const QJSVal
 
     QFuture<void> task = controller.setActivityName(id, name);
     awaitFuture(task);
-    return QJSValue();
+    return {};
 }
 
 QJSValue ScriptEngine::V1::activityName(const QJSValue &idParam) const
@@ -423,7 +423,7 @@ QJSValue ScriptEngine::V1::loadSerializedLayout(const QJSValue &data)
         };
     };
 
-    return QJSValue();
+    return {};
 }
 
 QJSValue ScriptEngine::V1::newPanel(const QString &plugin)
@@ -446,7 +446,7 @@ QJSValue ScriptEngine::V1::panelById(const QJSValue &idParam) const
         }
     }
 
-    return QJSValue();
+    return {};
 }
 
 QJSValue ScriptEngine::V1::desktops() const

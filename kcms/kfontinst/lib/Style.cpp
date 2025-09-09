@@ -127,7 +127,7 @@ QString Style::toXml(bool disabled, const QString &family) const
         return str;
     }
 
-    return QString();
+    return {};
 }
 
 }

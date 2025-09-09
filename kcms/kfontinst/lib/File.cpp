@@ -49,7 +49,7 @@ QString File::toXml(bool disabled) const
         return str;
     }
 
-    return QString();
+    return {};
 }
 
 }

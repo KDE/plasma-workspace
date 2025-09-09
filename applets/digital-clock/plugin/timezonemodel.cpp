@@ -105,7 +105,7 @@ QVariant TimeZoneModel::data(const QModelIndex &index, int role) const
         }
     }
 
-    return QVariant();
+    return {};
 }
 
 bool TimeZoneModel::setData(const QModelIndex &index, const QVariant &value, int role)

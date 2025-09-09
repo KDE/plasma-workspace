@@ -135,7 +135,7 @@ GMenuItem Menu::getSection(int subscription, int section, bool *ok) const
         if (ok) {
             *ok = false;
         }
-        return GMenuItem();
+        return {};
     }
 
     if (ok) {
@@ -159,14 +159,14 @@ QVariantMap Menu::getItem(int subscription, int sectionId, int index) const
     const GMenuItem section = getSection(subscription, sectionId, &ok);
 
     if (!ok) {
-        return QVariantMap();
+        return {};
     }
 
     const auto items = section.items;
 
     if (items.count() < index) {
         qCWarning(DBUSMENUPROXY) << "Cannot get action" << subscription << sectionId << index << "which is out of bounds";
-        return QVariantMap();
+        return {};
     }
 
     // 0 is the menu itself, items start at 1

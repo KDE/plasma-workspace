@@ -29,7 +29,7 @@ QSizeF AbstractLayoutManager::cellSize() const
 
 QSizeF AbstractLayoutManager::cellAlignedContainingSize(const QSizeF &size) const
 {
-    return QSizeF(m_cellSize.width() * ceil(size.width() / m_cellSize.width()), m_cellSize.height() * ceil(size.height() / m_cellSize.height()));
+    return {m_cellSize.width() * ceil(size.width() / m_cellSize.width()), m_cellSize.height() * ceil(size.height() / m_cellSize.height())};
 }
 
 void AbstractLayoutManager::setCellSize(const QSizeF &size)

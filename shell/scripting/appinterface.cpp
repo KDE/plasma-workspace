@@ -91,7 +91,7 @@ QString AppInterface::applicationVersion() const
 
 QString AppInterface::platformVersion() const
 {
-    return QString(); // KDE::versionString();
+    return {}; // KDE::versionString();
 }
 
 int AppInterface::scriptingVersion() const

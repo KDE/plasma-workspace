@@ -221,13 +221,13 @@ QStringList FingerprintModel::enrolledFingerprintsRaw()
                 qDebug() << "error listing enrolled fingers:" << reply.error().message();
                 setCurrentError(reply.error().message());
             }
-            return QStringList();
+            return {};
         }
         return reply.value();
     } else {
         setCurrentError(i18n("No fingerprint device found."));
         setDialogState(DialogState::FingerprintList);
-        return QStringList();
+        return {};
     }
 }
 

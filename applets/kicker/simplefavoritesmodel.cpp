@@ -36,14 +36,14 @@ QString SimpleFavoritesModel::description() const
 QVariant SimpleFavoritesModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid() || index.row() >= rowCount()) {
-        return QVariant();
+        return {};
     }
 
     if (index.row() == m_dropPlaceholderIndex) {
         if (role == Kicker::IsDropPlaceholderRole) {
             return true;
         } else {
-            return QVariant();
+            return {};
         }
     }
 
@@ -81,7 +81,7 @@ QVariant SimpleFavoritesModel::data(const QModelIndex &index, int role) const
         return entry->actions();
     }
 
-    return QVariant();
+    return {};
 }
 
 int SimpleFavoritesModel::rowCount(const QModelIndex &parent) const

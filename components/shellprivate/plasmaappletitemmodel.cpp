@@ -116,7 +116,7 @@ QString PlasmaAppletItem::version() const
 QString PlasmaAppletItem::author() const
 {
     if (m_info.authors().isEmpty()) {
-        return QString();
+        return {};
     }
 
     return m_info.authors().constFirst().name();
@@ -125,7 +125,7 @@ QString PlasmaAppletItem::author() const
 QString PlasmaAppletItem::email() const
 {
     if (m_info.authors().isEmpty()) {
-        return QString();
+        return {};
     }
 
     return m_info.authors().constFirst().emailAddress();
@@ -213,7 +213,7 @@ QString PlasmaAppletItem::unsupportedMessage() const
             versionString);
     }
 
-    return QString();
+    return {};
 }
 
 static bool matchesKeywords(QStringView keywords, const QString &pattern)
@@ -312,7 +312,7 @@ QVariant PlasmaAppletItem::data(int role) const
                 const_cast<PlasmaAppletItem *>(this)->m_screenshot = QString();
             }
         } else if (m_screenshot.isEmpty()) {
-            return QVariant();
+            return {};
         }
         return m_screenshot;
     default:

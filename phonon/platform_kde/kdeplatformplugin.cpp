@@ -128,7 +128,7 @@ QList<int> KdePlatformPlugin::objectDescriptionIndexes(ObjectDescriptionType typ
     case AudioCaptureDeviceType:
     case VideoCaptureDeviceType:
     default:
-        return QList<int>();
+        return {};
     }
 }
 
@@ -140,7 +140,7 @@ QHash<QByteArray, QVariant> KdePlatformPlugin::objectDescriptionProperties(Objec
     case AudioCaptureDeviceType:
     case VideoCaptureDeviceType:
     default:
-        return QHash<QByteArray, QVariant>();
+        return {};
     }
 }
 

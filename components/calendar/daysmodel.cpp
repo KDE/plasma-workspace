@@ -358,7 +358,7 @@ QVariantList DaysModel::eventsForDate(const QDate &date)
 QModelIndex DaysModel::indexForDate(const QDate &date)
 {
     if (!d->data) {
-        return QModelIndex();
+        return {};
     }
 
     const DayData &firstDay = d->data->at(0);
@@ -455,7 +455,7 @@ QModelIndex DaysModel::parent(const QModelIndex &child) const
     if (child.internalId()) {
         return createIndex(child.internalId(), 0, nullptr);
     }
-    return QModelIndex();
+    return {};
 }
 
 #include "moc_daysmodel.cpp"

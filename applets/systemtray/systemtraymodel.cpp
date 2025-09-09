@@ -105,7 +105,7 @@ PlasmoidModel::PlasmoidModel(const QPointer<SystemTraySettings> &settings, const
 QVariant PlasmoidModel::data(const QModelIndex &index, int role) const
 {
     if (!checkIndex(index, CheckIndexOption::IndexIsValid)) {
-        return QVariant();
+        return {};
     }
 
     const PlasmoidModel::Item &item = m_items[index.row()];
@@ -122,7 +122,7 @@ QVariant PlasmoidModel::data(const QModelIndex &index, int role) const
             return icon.isNull() ? QVariant() : icon;
         }
         default:
-            return QVariant();
+            return {};
         }
     }
 
@@ -146,7 +146,7 @@ QVariant PlasmoidModel::data(const QModelIndex &index, int role) const
         case BaseRole::EffectiveStatus:
             return calculateEffectiveStatus(applet != nullptr, status, pluginMetaData.pluginId());
         default:
-            return QVariant();
+            return {};
         }
     }
 
@@ -156,7 +156,7 @@ QVariant PlasmoidModel::data(const QModelIndex &index, int role) const
     case Role::HasApplet:
         return applet != nullptr;
     default:
-        return QVariant();
+        return {};
     }
 }
 
@@ -285,7 +285,7 @@ static QString extractItemId(const StatusNotifierItemSource *sniData)
 QVariant StatusNotifierModel::data(const QModelIndex &index, int role) const
 {
     if (!checkIndex(index, CheckIndexOption::IndexIsValid)) {
-        return QVariant();
+        return {};
     }
 
     const StatusNotifierModel::Item &item = m_items[index.row()];
@@ -302,7 +302,7 @@ QVariant StatusNotifierModel::data(const QModelIndex &index, int role) const
                 return extractIcon(sniData->icon());
             }
         default:
-            return QVariant();
+            return {};
         }
     }
 
@@ -325,7 +325,7 @@ QVariant StatusNotifierModel::data(const QModelIndex &index, int role) const
         case BaseRole::EffectiveStatus:
             return calculateEffectiveStatus(true, extractStatus(sniData), itemId);
         default:
-            return QVariant();
+            return {};
         }
     }
 
@@ -365,7 +365,7 @@ QVariant StatusNotifierModel::data(const QModelIndex &index, int role) const
     case Role::WindowId:
         return sniData->windowId();
     default:
-        return QVariant();
+        return {};
     }
 }
 

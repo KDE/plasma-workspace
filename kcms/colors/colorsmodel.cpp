@@ -42,7 +42,7 @@ int ColorsModel::rowCount(const QModelIndex &parent) const
 QVariant ColorsModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid() || index.row() >= m_data.count()) {
-        return QVariant();
+        return {};
     }
 
     const auto &item = m_data.at(index.row());
@@ -74,7 +74,7 @@ QVariant ColorsModel::data(const QModelIndex &index, int role) const
         return item.tintFactor;
     }
 
-    return QVariant();
+    return {};
 }
 
 bool ColorsModel::setData(const QModelIndex &index, const QVariant &value, int role)

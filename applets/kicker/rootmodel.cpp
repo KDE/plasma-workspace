@@ -111,7 +111,7 @@ RootModel::~RootModel() = default;
 QVariant RootModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid() || index.row() >= m_entryList.count()) {
-        return QVariant();
+        return {};
     }
 
     if (role == Kicker::HasActionListRole || role == Kicker::ActionListRole) {

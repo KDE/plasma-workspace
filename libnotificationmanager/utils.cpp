@@ -60,7 +60,7 @@ QString Utils::processNameFromPid(uint pid)
     auto processInfo = KProcessList::processInfo(pid);
 
     if (!processInfo.isValid()) {
-        return QString();
+        return {};
     }
 
     return processInfo.name();
@@ -78,7 +78,7 @@ QString Utils::desktopEntryFromPid(uint pid)
         }
 
         // If it's a flatpak, can't be a snap, bail out.
-        return QString();
+        return {};
     }
 
     QFile environFile(QStringLiteral("/proc/%1/environ").arg(QString::number(pid)));
@@ -103,7 +103,7 @@ QString Utils::desktopEntryFromPid(uint pid)
         }
     }
 
-    return QString();
+    return {};
 }
 
 QModelIndex Utils::mapToModel(const QModelIndex &idx, const QAbstractItemModel *sourceModel)

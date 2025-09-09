@@ -113,7 +113,7 @@ KConfigGroup Panel::panelConfig() const
     int screenNum = qMax(screen(), 0); // if we don't have a screen (-1) we'll be put on screen 0
 
     if (QGuiApplication::screens().size() < screenNum) {
-        return KConfigGroup();
+        return {};
     }
     QScreen *s = QGuiApplication::screens().at(screenNum);
     return PanelView::panelConfig(corona(), containment(), s);
@@ -125,7 +125,7 @@ KConfigGroup Panel::panelConfigDefaults() const
     int screenNum = qMax(screen(), 0); // if we don't have a screen (-1) we'll be put on screen 0
 
     if (QGuiApplication::screens().size() < screenNum) {
-        return KConfigGroup();
+        return {};
     }
     QScreen *s = QGuiApplication::screens().at(screenNum);
     return PanelView::panelConfigDefaults(corona(), containment(), s);

@@ -160,7 +160,7 @@ Qt::Edges edgeFromLocation(Plasma::Types::Location location)
     case Plasma::Types::FullScreen:
         break;
     }
-    return Qt::Edges();
+    return {};
 }
 
 void AppMenuApplet::trigger(QQuickItem *ctx, int idx)

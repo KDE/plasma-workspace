@@ -41,7 +41,7 @@ static QString resolveColorSchemeFilePath(const QString &schemeName)
             }
         }
     }
-    return QString();
+    return {};
 }
 
 QString KLookAndFeel::colorSchemeFilePath(const KPackage::Package &package)

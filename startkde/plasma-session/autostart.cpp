@@ -82,7 +82,7 @@ void AutoStart::loadAutoStartList()
 QString AutoStart::startService()
 {
     if (m_startList.isEmpty()) {
-        return QString();
+        return {};
     }
 
     while (!m_started.isEmpty()) {
@@ -125,7 +125,7 @@ QString AutoStart::startService()
         }
     }
 
-    return QString();
+    return {};
 }
 
 QList<AutoStartItem> AutoStart::startList() const

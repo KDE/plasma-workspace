@@ -75,7 +75,7 @@ bool JobsModel::isValid() const
 QVariant JobsModel::data(const QModelIndex &index, int role) const
 {
     if (!checkIndex(index, QAbstractItemModel::CheckIndexOption::IndexIsValid)) {
-        return QVariant();
+        return {};
     }
 
     Job *job = d->m_jobViews.at(index.row());
@@ -149,7 +149,7 @@ QVariant JobsModel::data(const QModelIndex &index, int role) const
         return QStringList();
     }
 
-    return QVariant();
+    return {};
 }
 
 bool JobsModel::setData(const QModelIndex &index, const QVariant &value, int role)

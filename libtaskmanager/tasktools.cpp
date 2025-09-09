@@ -189,7 +189,7 @@ QUrl windowUrlFromMetadata(const QString &appId, quint32 pid, const KSharedConfi
 {
     static_assert(!std::is_trivially_copy_assignable_v<KSharedConfig::Ptr>);
     if (!rulesConfig) {
-        return QUrl();
+        return {};
     }
 
     QUrl url;
@@ -491,11 +491,11 @@ QUrl windowUrlFromMetadata(const QString &appId, quint32 pid, const KSharedConfi
 KService::List servicesFromPid(quint32 pid, const KSharedConfig::Ptr &rulesConfig)
 {
     if (pid == 0) {
-        return KService::List();
+        return {};
     }
 
     if (!rulesConfig) {
-        return KService::List();
+        return {};
     }
 
     // Read the BAMF_DESKTOP_FILE_HINT environment variable which contains the actual desktop file path for Snaps.
@@ -535,13 +535,13 @@ KService::List servicesFromPid(quint32 pid, const KSharedConfig::Ptr &rulesConfi
 
     auto proc = KProcessList::processInfo(pid);
     if (!proc.isValid()) {
-        return KService::List();
+        return {};
     }
 
     const QString cmdLine = proc.command();
 
     if (cmdLine.isEmpty()) {
-        return KService::List();
+        return {};
     }
 
     return servicesFromCmdLine(cmdLine, proc.name(), rulesConfig);
@@ -621,13 +621,13 @@ KService::List servicesFromCmdLine(const QString &_cmdLine, const QString &proce
 QString defaultApplication(const QUrl &url)
 {
     if (url.scheme() != QLatin1String("preferred")) {
-        return QString();
+        return {};
     }
 
     const QString &application = url.host();
 
     if (application.isEmpty()) {
-        return QString();
+        return {};
     }
 
     if (application.compare(QLatin1String("mailer"), Qt::CaseInsensitive) == 0) {
@@ -733,7 +733,7 @@ bool appsMatch(const QModelIndex &a, const QModelIndex &b)
 QRect screenGeometry(const QPoint &pos)
 {
     if (pos.isNull()) {
-        return QRect();
+        return {};
     }
 
     const QList<QScreen *> &screens = QGuiApplication::screens();

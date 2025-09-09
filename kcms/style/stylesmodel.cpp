@@ -37,7 +37,7 @@ int StylesModel::rowCount(const QModelIndex &parent) const
 QVariant StylesModel::data(const QModelIndex &index, int role) const
 {
     if (!checkIndex(index)) {
-        return QVariant();
+        return {};
     }
 
     const auto &item = m_data.at(index.row());
@@ -56,7 +56,7 @@ QVariant StylesModel::data(const QModelIndex &index, int role) const
         return !item.configPage.isEmpty();
     }
 
-    return QVariant();
+    return {};
 }
 
 QHash<int, QByteArray> StylesModel::roleNames() const
@@ -111,7 +111,7 @@ QString StylesModel::styleConfigPage(const QString &style) const
 {
     const int idx = indexOfStyle(style);
     if (idx == -1) {
-        return QString();
+        return {};
     }
 
     return m_data.at(idx).configPage;

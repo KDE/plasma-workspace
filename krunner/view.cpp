@@ -95,7 +95,7 @@ QMargins View::margins()
         const QRect r = screen()->availableGeometry();
         return QMargins({0, r.height() / 3, 0, 0});
     } else {
-        return QMargins(); // Zeros
+        return {}; // Zeros
     }
 }
 

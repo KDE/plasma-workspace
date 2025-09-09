@@ -288,7 +288,7 @@ LauncherTasksModel::~LauncherTasksModel() = default;
 QVariant LauncherTasksModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid() || index.row() >= d->launchersOrder.count()) {
-        return QVariant();
+        return {};
     }
 
     const QUrl &url = d->launchersOrder.at(index.row());

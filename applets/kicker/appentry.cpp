@@ -69,7 +69,7 @@ std::unique_ptr<icu::Transliterator> getICUTransliterator(const QLocale &locale)
 QString groupName(const QString &name)
 {
     if (name.isEmpty()) {
-        return QString();
+        return {};
     }
 
     const QChar firstChar = name[0];

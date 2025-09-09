@@ -27,12 +27,12 @@ bool AbstractEntry::isValid() const
 
 QString AbstractEntry::icon() const
 {
-    return QString();
+    return {};
 }
 
 QString AbstractEntry::name() const
 {
-    return QString();
+    return {};
 }
 
 QString AbstractEntry::compactName() const
@@ -42,27 +42,27 @@ QString AbstractEntry::compactName() const
 
 QString AbstractEntry::group() const
 {
-    return QString();
+    return {};
 }
 
 QString AbstractEntry::description() const
 {
-    return QString();
+    return {};
 }
 
 QString AbstractEntry::id() const
 {
-    return QString();
+    return {};
 }
 
 QUrl AbstractEntry::url() const
 {
-    return QUrl();
+    return {};
 }
 
 QDate AbstractEntry::firstSeen() const
 {
-    return QDate();
+    return {};
 }
 
 bool AbstractEntry::isNewlyInstalled() const
@@ -87,7 +87,7 @@ bool AbstractEntry::hasActions() const
 
 QVariantList AbstractEntry::actions() const
 {
-    return QVariantList();
+    return {};
 }
 
 bool AbstractEntry::run(const QString &actionId, const QVariant &argument)

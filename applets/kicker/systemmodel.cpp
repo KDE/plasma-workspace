@@ -34,7 +34,7 @@ QString SystemModel::description() const
 QVariant SystemModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid() || index.row() >= m_entries.count()) {
-        return QVariant();
+        return {};
     }
 
     const SystemEntry *entry = m_entries.value(index.row());
@@ -59,7 +59,7 @@ QVariant SystemModel::data(const QModelIndex &index, int role) const
         return !entry->isValid();
     }
 
-    return QVariant();
+    return {};
 }
 
 int SystemModel::rowCount(const QModelIndex &parent) const

@@ -182,7 +182,7 @@ QUrl Job::destUrl() const
 QUrl Job::effectiveDestUrl() const
 {
     if (d->m_state != Notifications::JobState::JobStateStopped || d->m_error != 0) {
-        return QUrl();
+        return {};
     }
 
     QUrl url;
@@ -196,7 +196,7 @@ QUrl Job::effectiveDestUrl() const
 
     // Don't offer opening files in Trash
     if (url.scheme() == u"trash") {
-        return QUrl();
+        return {};
     }
 
     return url;

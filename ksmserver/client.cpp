@@ -119,7 +119,7 @@ QString KSMClient::program() const
 {
     SmProp *p = property(SmProgram);
     if (!p || qstrcmp(p->type, SmARRAY8) || p->num_vals < 1)
-        return QString();
+        return {};
     return QLatin1String((const char *)p->vals[0].value);
 }
 
@@ -157,6 +157,6 @@ QString KSMClient::userId() const
 {
     SmProp *p = property(SmUserID);
     if (!p || qstrcmp(p->type, SmARRAY8) || p->num_vals < 1)
-        return QString();
+        return {};
     return QLatin1String((const char *)p->vals[0].value);
 }

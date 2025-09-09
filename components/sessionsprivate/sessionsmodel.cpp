@@ -246,7 +246,7 @@ void SessionsModel::setShowNewSessionEntry(bool showNewSessionEntry)
 QVariant SessionsModel::data(const QModelIndex &index, int role) const
 {
     if (index.row() < 0 || index.row() > rowCount(QModelIndex())) {
-        return QVariant();
+        return {};
     }
 
     if (index.row() == m_data.count()) {
@@ -266,7 +266,7 @@ QVariant SessionsModel::data(const QModelIndex &index, int role) const
         case IsTtyRole:
             return false; // NA
         default:
-            return QVariant();
+            return {};
         }
     }
 
@@ -288,7 +288,7 @@ QVariant SessionsModel::data(const QModelIndex &index, int role) const
     case IsTtyRole:
         return item.isTty;
     default:
-        return QVariant();
+        return {};
     }
 }
 

@@ -141,7 +141,7 @@ public:
     }
     QSize sizeHint() const override
     {
-        return QSize(100, m_height);
+        return {100, m_height};
     }
 
 private:

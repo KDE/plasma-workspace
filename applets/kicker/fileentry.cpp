@@ -49,7 +49,7 @@ QString FileEntry::name() const
         return m_fileItem->text();
     }
 
-    return QString();
+    return {};
 }
 
 QString FileEntry::description() const
@@ -58,7 +58,7 @@ QString FileEntry::description() const
         return m_fileItem->url().toString(QUrl::PreferLocalFile);
     }
 
-    return QString();
+    return {};
 }
 
 QString FileEntry::id() const
@@ -67,7 +67,7 @@ QString FileEntry::id() const
         return m_fileItem->url().toString();
     }
 
-    return QString();
+    return {};
 }
 
 QUrl FileEntry::url() const
@@ -76,7 +76,7 @@ QUrl FileEntry::url() const
         return m_fileItem->url();
     }
 
-    return QUrl();
+    return {};
 }
 
 bool FileEntry::hasActions() const
@@ -90,7 +90,7 @@ QVariantList FileEntry::actions() const
         return Kicker::createActionListForFileItem(*m_fileItem);
     }
 
-    return QVariantList();
+    return {};
 }
 
 bool FileEntry::run(const QString &actionId, const QVariant &argument)

@@ -242,7 +242,7 @@ bool AutostartModel::reloadEntry(const QModelIndex &index, const QString &fileNa
 QVariant AutostartModel::data(const QModelIndex &index, int role) const
 {
     if (!checkIndex(index)) {
-        return QVariant();
+        return {};
     }
 
     const auto &entry = m_entries.at(index.row());
@@ -266,7 +266,7 @@ QVariant AutostartModel::data(const QModelIndex &index, int role) const
         return QVariant::fromValue(entry.systemdUnit);
     }
 
-    return QVariant();
+    return {};
 }
 
 void AutostartModel::addApplication(const KService::Ptr &service)

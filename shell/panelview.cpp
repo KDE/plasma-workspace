@@ -183,7 +183,7 @@ PanelView::OpacityMode PanelView::defaultOpacityMode() const
 KConfigGroup PanelView::panelConfig(ShellCorona *corona, Plasma::Containment *containment, QScreen *screen)
 {
     if (!containment || !screen) {
-        return KConfigGroup();
+        return {};
     }
     KConfigGroup views(corona->applicationConfig(), u"PlasmaViews"_s);
     views = KConfigGroup(&views, QStringLiteral("Panel %1").arg(containment->id()));
@@ -199,7 +199,7 @@ KConfigGroup PanelView::panelConfig(ShellCorona *corona, Plasma::Containment *co
 KConfigGroup PanelView::panelConfigDefaults(ShellCorona *corona, Plasma::Containment *containment, QScreen *screen)
 {
     if (!containment || !screen) {
-        return KConfigGroup();
+        return {};
     }
 
     KConfigGroup views(corona->applicationConfig(), u"PlasmaViews"_s);
@@ -458,7 +458,7 @@ QString PanelView::unsupportedConfigurationDescription() const
             "With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode are known to cause poor window drag and resize performance. Consider "
             "using other settings.");
     }
-    return QString();
+    return {};
 }
 
 void PanelView::fixUnsupportedConfiguration()
@@ -477,11 +477,11 @@ void PanelView::clonePanelTo(Plasma::Types::Location location, QScreen *screen)
 QRect PanelView::relativeConfigRect() const
 {
     if (!m_screenToFollow) {
-        return QRect();
+        return {};
     }
     auto *panelConfigView = qobject_cast<PanelConfigView *>(m_panelConfigView);
     if (!panelConfigView || !panelConfigView->isVisible()) {
-        return QRect();
+        return {};
     }
     const QRect screenGeo = m_screenToFollow->geometry();
     QRect rect = m_panelConfigView->geometry();
@@ -760,7 +760,7 @@ void PanelView::positionAndResizePanel()
 QRect PanelView::dogdeGeometryByDistance(int distance) const
 {
     if (!containment() || !m_screenToFollow) {
-        return QRect();
+        return {};
     }
     const QRect dodgeGeometry = geometryByDistance(distance);
     return dodgeGeometry & m_screenToFollow->geometry();
@@ -769,7 +769,7 @@ QRect PanelView::dogdeGeometryByDistance(int distance) const
 QRect PanelView::geometryByDistance(int distance) const
 {
     if (!containment() || !m_screenToFollow) {
-        return QRect();
+        return {};
     }
 
     const QRect screenGeometry = m_screenToFollow->geometry();
@@ -830,14 +830,14 @@ QRect PanelView::geometryByDistance(int distance) const
 QSize PanelView::preferredSize() const
 {
     if (!m_initCompleted) {
-        return QSize();
+        return {};
     }
 
     // On Wayland when a screen is disconnected and the panel is migrating to a newscreen
     // it can happen a moment where the qscreen gets destroyed before it gets reassigned
     // to the new screen
     if (!m_screenToFollow) {
-        return QSize();
+        return {};
     }
 
     QSize targetSize;
@@ -1406,8 +1406,10 @@ QPointF PanelView::positionAdjustedForContainment(const QPointF &point) const
     // We are removing 1 to the e.g. containmentRect.right() - m_rightPadding because the last pixel would otherwise
     // the first one in the margin, and thus the mouse event would be discarded. Instead, the first pixel given by
     // containmentRect.left() + m_leftPadding the first one *not* in the margin, so it work.
-    return QPointF(qBound(containmentRect.left() + m_leftPadding, point.x(), containmentRect.right() - m_rightPadding - 1),
-                   qBound(containmentRect.top() + m_topPadding, point.y(), containmentRect.bottom() - m_bottomPadding - 1));
+    return {
+        qBound(containmentRect.left() + m_leftPadding, point.x(), containmentRect.right() - m_rightPadding - 1),
+        qBound(containmentRect.top() + m_topPadding, point.y(), containmentRect.bottom() - m_bottomPadding - 1),
+    };
 }
 
 void PanelView::updateMask()

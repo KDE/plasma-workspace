@@ -33,7 +33,7 @@ int ImageListModel::rowCount(const QModelIndex &parent) const
 QVariant ImageListModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid()) {
-        return QVariant();
+        return {};
     }
 
     const int row = index.row();

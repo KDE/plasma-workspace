@@ -237,13 +237,13 @@ void CGroupList::updateStatus(QSet<QString> &enabled, QSet<QString> &disabled, Q
 
 inline QColor midColour(const QColor &a, const QColor &b)
 {
-    return QColor((a.red() + b.red()) >> 1, (a.green() + b.green()) >> 1, (a.blue() + b.blue()) >> 1);
+    return {(a.red() + b.red()) >> 1, (a.green() + b.green()) >> 1, (a.blue() + b.blue()) >> 1};
 }
 
 QVariant CGroupList::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid()) {
-        return QVariant();
+        return {};
     }
 
     auto *grp = static_cast<CGroupListItem *>(index.internalPointer());
@@ -310,7 +310,7 @@ QVariant CGroupList::data(const QModelIndex &index, int role) const
             break;
         }
     }
-    return QVariant();
+    return {};
 }
 
 bool CGroupList::setData(const QModelIndex &index, const QVariant &value, int role)
@@ -352,7 +352,7 @@ QVariant CGroupList::headerData(int section, Qt::Orientation orientation, int ro
         case Qt::DisplayRole:
             return i18n("Group");
         case Qt::TextAlignmentRole:
-            return QVariant(Qt::AlignLeft | Qt::AlignVCenter);
+            return {Qt::AlignLeft | Qt::AlignVCenter};
         case Qt::WhatsThisRole:
             return whatsThis();
         default:
@@ -360,7 +360,7 @@ QVariant CGroupList::headerData(int section, Qt::Orientation orientation, int ro
         }
     }
 
-    return QVariant();
+    return {};
 }
 
 QModelIndex CGroupList::index(int row, int column, const QModelIndex &parent) const
@@ -373,12 +373,12 @@ QModelIndex CGroupList::index(int row, int column, const QModelIndex &parent) co
         }
     }
 
-    return QModelIndex();
+    return {};
 }
 
 QModelIndex CGroupList::parent(const QModelIndex &) const
 {
-    return QModelIndex();
+    return {};
 }
 
 int CGroupList::rowCount(const QModelIndex &) const

@@ -36,7 +36,7 @@ int PackageListModel::rowCount(const QModelIndex &parent) const
 QVariant PackageListModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid()) {
-        return QVariant();
+        return {};
     }
 
     const WallpaperPackage &b = m_packages.at(index.row());

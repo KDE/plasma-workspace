@@ -138,7 +138,7 @@ QRect PlasmaWindowedCorona::screenGeometry(int id) const
 {
     Q_UNUSED(id);
     // TODO?
-    return QRect();
+    return {};
 }
 
 void PlasmaWindowedCorona::load()

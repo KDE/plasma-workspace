@@ -1037,7 +1037,7 @@ QHash<int, QByteArray> TasksModel::roleNames() const
         return d->windowTasksModel->roleNames();
     }
 
-    return QHash<int, QByteArray>();
+    return {};
 }
 
 int TasksModel::rowCount(const QModelIndex &parent) const
@@ -1382,7 +1382,7 @@ void TasksModel::setGroupingWindowTasksThreshold(int threshold)
 QStringList TasksModel::groupingAppIdBlacklist() const
 {
     if (!d->groupingProxyModel) {
-        return QStringList();
+        return {};
     }
 
     return d->groupingProxyModel->blacklistedAppIds();
@@ -1398,7 +1398,7 @@ void TasksModel::setGroupingAppIdBlacklist(const QStringList &list)
 QStringList TasksModel::groupingLauncherUrlBlacklist() const
 {
     if (!d->groupingProxyModel) {
-        return QStringList();
+        return {};
     }
 
     return d->groupingProxyModel->blacklistedLauncherUrls();
@@ -1429,7 +1429,7 @@ QStringList TasksModel::launcherList() const
         return d->launcherTasksModel->launcherList();
     }
 
-    return QStringList();
+    return {};
 }
 
 void TasksModel::setLauncherList(const QStringList &launchers)
@@ -1977,13 +1977,13 @@ QModelIndex TasksModel::activeTask() const
         }
     }
 
-    return QModelIndex();
+    return {};
 }
 
 QModelIndex TasksModel::makeModelIndex(int row, int childRow) const
 {
     if (row < 0 || row >= rowCount()) {
-        return QModelIndex();
+        return {};
     }
 
     if (childRow == -1) {
@@ -1996,7 +1996,7 @@ QModelIndex TasksModel::makeModelIndex(int row, int childRow) const
         }
     }
 
-    return QModelIndex();
+    return {};
 }
 
 QPersistentModelIndex TasksModel::makePersistentModelIndex(int row, int childCount) const

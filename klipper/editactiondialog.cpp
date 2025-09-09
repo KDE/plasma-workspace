@@ -39,7 +39,7 @@ static QString output2text(ClipCommand::Output output)
     case ClipCommand::ADD:
         return i18n("Add to Clipboard");
     }
-    return QString();
+    return {};
 }
 
 //////////////////////////
@@ -105,7 +105,7 @@ QVariant ActionDetailModel::displayData(ClipCommand *command, ActionDetailModel:
     case DESCRIPTION_COL:
         return command->description;
     }
-    return QVariant();
+    return {};
 }
 
 QVariant ActionDetailModel::decorationData(ClipCommand *command, ActionDetailModel::column_t column) const
@@ -117,7 +117,7 @@ QVariant ActionDetailModel::decorationData(ClipCommand *command, ActionDetailMod
     case DESCRIPTION_COL:
         break;
     }
-    return QVariant();
+    return {};
 }
 
 QVariant ActionDetailModel::headerData(int section, Qt::Orientation orientation, int role) const
@@ -146,7 +146,7 @@ QVariant ActionDetailModel::data(const QModelIndex &index, int role) const
     case Qt::DecorationRole:
         return decorationData(&cmd, static_cast<column_t>(column));
     }
-    return QVariant();
+    return {};
 }
 
 void ActionDetailModel::addCommand(const ClipCommand &command)

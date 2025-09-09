@@ -79,7 +79,7 @@ QStringList Applet::configKeys() const
         return d->configGroup.keyList();
     }
 
-    return QStringList();
+    return {};
 }
 
 QStringList Applet::configGroups() const
@@ -88,7 +88,7 @@ QStringList Applet::configGroups() const
         return d->configGroup.groupList();
     }
 
-    return QStringList();
+    return {};
 }
 
 QVariant Applet::readConfig(const QString &key, const QJSValue &def) const
@@ -96,7 +96,7 @@ QVariant Applet::readConfig(const QString &key, const QJSValue &def) const
     if (d->configGroup.isValid()) {
         return d->configGroup.readEntry(key, def.toVariant());
     } else {
-        return QVariant();
+        return {};
     }
 }
 
@@ -157,7 +157,7 @@ QStringList Applet::globalConfigKeys() const
         return d->globalConfigGroup.keyList();
     }
 
-    return QStringList();
+    return {};
 }
 
 QStringList Applet::globalConfigGroups() const
@@ -166,7 +166,7 @@ QStringList Applet::globalConfigGroups() const
         return d->globalConfigGroup.groupList();
     }
 
-    return QStringList();
+    return {};
 }
 
 QVariant Applet::readGlobalConfig(const QString &key, const QJSValue &def) const
@@ -174,7 +174,7 @@ QVariant Applet::readGlobalConfig(const QString &key, const QJSValue &def) const
     if (d->globalConfigGroup.isValid()) {
         return d->globalConfigGroup.readEntry(key, def.toVariant());
     } else {
-        return QVariant();
+        return {};
     }
 }
 
@@ -217,7 +217,7 @@ QString Applet::version() const
 {
     Plasma::Applet *app = applet();
     if (!app) {
-        return QString();
+        return {};
     }
 
     return app->pluginMetaData().version();

@@ -678,7 +678,7 @@ QDateTime Notifications::lastRead() const
     if (d->notificationsModel) {
         return d->notificationsModel->lastRead();
     }
-    return QDateTime();
+    return {};
 }
 
 void Notifications::setLastRead(const QDateTime &lastRead)
@@ -872,7 +872,7 @@ QModelIndex Notifications::groupIndex(const QModelIndex &idx) const
     }
 
     qCWarning(NOTIFICATIONMANAGER) << "Cannot get group index for item that isn't a group or inside one";
-    return QModelIndex();
+    return {};
 }
 
 void Notifications::collapseAllGroups()

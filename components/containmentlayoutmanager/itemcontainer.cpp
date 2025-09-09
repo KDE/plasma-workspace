@@ -400,7 +400,7 @@ void ItemContainer::contentData_clear(QQmlListProperty<QObject> *prop)
 
 QQmlListProperty<QObject> ItemContainer::contentData()
 {
-    return QQmlListProperty<QObject>(this, nullptr, contentData_append, contentData_count, contentData_at, contentData_clear);
+    return {this, nullptr, contentData_append, contentData_count, contentData_at, contentData_clear};
 }
 
 void ItemContainer::geometryChange(const QRectF &newGeometry, const QRectF &oldGeometry)

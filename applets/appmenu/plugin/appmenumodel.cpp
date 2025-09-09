@@ -232,7 +232,7 @@ QList<QAction *> AppMenuModel::flatActionList()
 QVariant AppMenuModel::data(const QModelIndex &index, int role) const
 {
     if (!m_menuAvailable || !m_menu) {
-        return QVariant();
+        return {};
     }
 
     if (!index.isValid()) {
@@ -253,7 +253,7 @@ QVariant AppMenuModel::data(const QModelIndex &index, int role) const
         }
     }
     if (row >= actions.count()) {
-        return QVariant();
+        return {};
     }
 
     if (role == MenuRole) { // TODO this should be Qt::DisplayRole
@@ -262,7 +262,7 @@ QVariant AppMenuModel::data(const QModelIndex &index, int role) const
         return QVariant::fromValue(actions.at(row));
     }
 
-    return QVariant();
+    return {};
 }
 
 void AppMenuModel::updateApplicationMenu(const QString &serviceName, const QString &menuObjectPath)

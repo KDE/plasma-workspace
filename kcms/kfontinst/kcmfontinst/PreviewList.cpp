@@ -28,7 +28,7 @@ CPreviewList::CPreviewList(QObject *parent)
 QVariant CPreviewList::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid()) {
-        return QVariant();
+        return {};
     }
 
     auto *item = static_cast<CPreviewListItem *>(index.internalPointer());
@@ -41,7 +41,7 @@ QVariant CPreviewList::data(const QModelIndex &index, int role) const
             break;
         }
     }
-    return QVariant();
+    return {};
 }
 
 Qt::ItemFlags CPreviewList::flags(const QModelIndex &) const
@@ -59,12 +59,12 @@ QModelIndex CPreviewList::index(int row, int column, const QModelIndex &parent) 
         }
     }
 
-    return QModelIndex();
+    return {};
 }
 
 QModelIndex CPreviewList::parent(const QModelIndex &) const
 {
-    return QModelIndex();
+    return {};
 }
 
 void CPreviewList::clear()
@@ -126,7 +126,7 @@ public:
         // int   pWidth(getPixmap(static_cast<CPreviewListItem *>(idx.internalPointer())).width());
         int pWidth(1536);
 
-        return QSize((constBorder * 2) + pWidth, sz.height() + 1 + constBorder + m_previewSize);
+        return {(constBorder * 2) + pWidth, sz.height() + 1 + constBorder + m_previewSize};
     }
 
     QPixmap getPixmap(CPreviewListItem *item) const

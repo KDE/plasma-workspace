@@ -118,14 +118,14 @@ void RunnerModel::setMergeResults(bool merge)
 QVariant RunnerModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid() || index.row() >= m_models.count()) {
-        return QVariant();
+        return {};
     }
 
     if (role == Qt::DisplayRole) {
         return m_models.at(index.row())->name();
     }
 
-    return QVariant();
+    return {};
 }
 
 int RunnerModel::rowCount(const QModelIndex &parent) const

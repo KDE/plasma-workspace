@@ -277,12 +277,12 @@ int CursorThemeConfig::cursorSizeFromIndex(int index)
 QSize CursorThemeConfig::iconSizeFromIndex(int index)
 {
     if (index < 0 || index >= m_sizesModel->rowCount()) {
-        return QSize();
+        return {};
     }
 
     const auto availableSizes = m_sizesModel->item(index)->icon().availableSizes();
     if (availableSizes.isEmpty()) {
-        return QSize();
+        return {};
     }
     return availableSizes.first();
 }

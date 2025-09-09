@@ -361,7 +361,7 @@ QPixmap IconModule::getBestIcon(KIconTheme &theme, const QStringList &iconNames,
         }
     }
 
-    return QPixmap();
+    return {};
 }
 
 int IconModule::pluginIndex(const QString &themeName) const

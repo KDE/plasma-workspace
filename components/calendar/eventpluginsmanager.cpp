@@ -78,7 +78,7 @@ public:
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override
     {
         if (!index.isValid() || !d) {
-            return QVariant();
+            return {};
         }
 
         const auto it = std::next(d->availablePlugins.cbegin(), index.row());
@@ -101,7 +101,7 @@ public:
             return d->enabledPlugins.contains(currentPlugin);
         }
 
-        return QVariant();
+        return {};
     }
 
     bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole) override

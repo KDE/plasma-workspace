@@ -81,7 +81,7 @@ Family FontInstInterface::statFont(const QString &file, bool system)
 QString FontInstInterface::folderName(bool sys)
 {
     if (!m_interface) {
-        return QString();
+        return {};
     }
 
     QDBusPendingReply<QString> reply = m_interface->folderName(sys);

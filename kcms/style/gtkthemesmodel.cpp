@@ -51,7 +51,7 @@ void GtkThemesModel::load()
 QString GtkThemesModel::themePath(const QString &themeName)
 {
     if (themeName.isEmpty()) {
-        return QString();
+        return {};
     } else {
         return m_themes.constFind(themeName).value();
     }
@@ -60,7 +60,7 @@ QString GtkThemesModel::themePath(const QString &themeName)
 QVariant GtkThemesModel::data(const QModelIndex &index, int role) const
 {
     if (!checkIndex(index)) {
-        return QVariant();
+        return {};
     }
 
     auto it = m_themes.constBegin();
@@ -73,7 +73,7 @@ QVariant GtkThemesModel::data(const QModelIndex &index, int role) const
     case Roles::ThemePathRole:
         return it.value();
     default:
-        return QVariant();
+        return {};
     }
 }
 

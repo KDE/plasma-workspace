@@ -68,7 +68,7 @@ QUrl JobPrivate::localFileOrUrl(const QString &urlString)
     if (url.scheme().isEmpty()) {
         // Likely not a path at all (e.g. just a device name).
         if (!url.path().startsWith(QLatin1Char('/'))) {
-            return QUrl();
+            return {};
         }
 
         url = QUrl::fromLocalFile(urlString);
@@ -96,7 +96,7 @@ QString JobPrivate::prettyUrl(const QUrl &_url) const
     QUrl url(_url);
 
     if (!url.isValid()) {
-        return QString();
+        return {};
     }
 
     if (url.path().endsWith(QLatin1String("/."))) {
@@ -251,7 +251,7 @@ QString JobPrivate::text() const
     qCInfo(NOTIFICATIONMANAGER).nospace() << "  label1 = " << m_descriptionLabel1 << ", value1 = " << m_descriptionValue1;
     qCInfo(NOTIFICATIONMANAGER).nospace() << "  label2 = " << m_descriptionLabel2 << ", value2 = " << m_descriptionValue2;
 
-    return QString();
+    return {};
 }
 
 void JobPrivate::delayedShow(std::chrono::milliseconds delay, ShowConditions showConditions)

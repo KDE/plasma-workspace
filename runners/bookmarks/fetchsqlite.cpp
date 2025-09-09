@@ -70,7 +70,7 @@ QList<QVariantMap> FetchSqlite::query(const QString &sql, QMap<QString, QVariant
 {
     auto db = openDbConnection(m_databaseFile);
     if (!db.isValid()) {
-        return QList<QVariantMap>();
+        return {};
     }
 
     // qDebug() << "query: " << sql;

@@ -66,7 +66,7 @@ UdevDevice::UdevDevice(struct udev_device *device, bool ref)
 
 UdevDevice UdevDevice::fromDevice(struct udev_device *device)
 {
-    return UdevDevice(device, false /*ref*/);
+    return {device, false /*ref*/};
 }
 
 UdevDevice::~UdevDevice()
@@ -140,7 +140,7 @@ QString UdevDevice::getDeviceString(const char *(*getter)(udev_device *)) const
     if (m_device) {
         return QString::fromLatin1((*getter)(m_device));
     }
-    return QString();
+    return {};
 }
 
 QString UdevDevice::model() const

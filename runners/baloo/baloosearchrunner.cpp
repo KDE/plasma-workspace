@@ -81,7 +81,7 @@ RemoteMatches SearchRunner::Match(const QString &searchTerm)
     // this should trigger the calculator, but the AdvancedQueryParser::parse method
     // in baloo interpreted it as an operator, BUG 345134
     if (searchTerm.startsWith(QLatin1Char('='))) {
-        return RemoteMatches();
+        return {};
     }
 
     // Filter out duplicates

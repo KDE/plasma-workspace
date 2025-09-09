@@ -261,7 +261,7 @@ QStringList ScriptEngine::pendingUpdateScripts(Plasma::Corona *corona)
 {
     if (!corona->kPackage().isValid()) {
         qCWarning(PLASMASHELL) << "Warning: corona package invalid";
-        return QStringList();
+        return {};
     }
 
     const QString appName = corona->kPackage().metadata().pluginId();

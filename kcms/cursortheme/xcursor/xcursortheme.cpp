@@ -197,7 +197,7 @@ QImage XCursorTheme::loadImage(const QString &name, int size) const
         xcimage = xcLoadImage(findAlternative(name), size);
 
     if (!xcimage) {
-        return QImage();
+        return {};
     }
 
     // Convert the XcursorImage to a QImage, and auto-crop it

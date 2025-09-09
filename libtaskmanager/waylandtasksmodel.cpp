@@ -889,7 +889,7 @@ QVariant WaylandTasksModel::data(const QModelIndex &index, int role) const
 {
     // Note: when index is valid, its row >= 0, so casting to unsigned is safe
     if (!index.isValid() || static_cast<size_t>(index.row()) >= d->windows.size()) {
-        return QVariant();
+        return {};
     }
 
     PlasmaWindow *window = d->windows.at(index.row()).get();

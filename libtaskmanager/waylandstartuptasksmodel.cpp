@@ -214,7 +214,7 @@ QVariant WaylandStartupTasksModel::data(const QModelIndex &index, int role) cons
 {
     // Note: when index is valid, its row >= 0, so casting to unsigned is safe
     if (!index.isValid() || static_cast<size_t>(index.row()) >= d->startups.size()) {
-        return QVariant();
+        return {};
     }
 
     const auto &data = d->startups[index.row()];

@@ -310,7 +310,7 @@ void AbstractNotificationsModel::setWindow(QWindow *window)
 QVariant AbstractNotificationsModel::data(const QModelIndex &index, int role) const
 {
     if (!checkIndex(index, QAbstractItemModel::CheckIndexOption::IndexIsValid)) {
-        return QVariant();
+        return {};
     }
 
     const Notification &notification = d->notifications.at(index.row());
@@ -423,7 +423,7 @@ QVariant AbstractNotificationsModel::data(const QModelIndex &index, int role) co
         return notification.resident() && notification.timeout() == 0;
     }
 
-    return QVariant();
+    return {};
 }
 
 bool AbstractNotificationsModel::setData(const QModelIndex &index, const QVariant &value, int role)

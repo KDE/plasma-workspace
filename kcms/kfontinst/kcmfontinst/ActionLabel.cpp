@@ -18,7 +18,7 @@ static QTransform matrixWithZeroOrigin(const QTransform &matrix, int width, int 
 {
     QRect newRect(matrix.mapRect(QRect(0, 0, width, height)));
 
-    return QTransform(matrix.m11(), matrix.m12(), matrix.m21(), matrix.m22(), matrix.dx() - newRect.left(), matrix.dy() - newRect.top());
+    return {matrix.m11(), matrix.m12(), matrix.m21(), matrix.m22(), matrix.dx() - newRect.left(), matrix.dy() - newRect.top()};
 }
 
 static QTransform rotateMatrix(int width, int height, double angle)

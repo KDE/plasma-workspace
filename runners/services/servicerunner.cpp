@@ -268,7 +268,7 @@ private:
         QStringList resultingArgs = parser.resultingArguments();
         if (const auto error = parser.errorMessage(); resultingArgs.isEmpty() && !error.isEmpty()) {
             qCWarning(RUNNER_SERVICES) << "Failed to resolve executable from service. Error:" << error;
-            return QString();
+            return {};
         }
 
         // Remove any environment variables.

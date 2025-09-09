@@ -134,7 +134,7 @@ void AppsModel::setDescription(const QString &text)
 QVariant AppsModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid() || index.row() >= m_entryList.count()) {
-        return QVariant();
+        return {};
     }
 
     const AbstractEntry *entry = m_entryList.at(index.row());
@@ -188,7 +188,7 @@ QVariant AppsModel::data(const QModelIndex &index, int role) const
         return entry->isNewlyInstalled();
     }
 
-    return QVariant();
+    return {};
 }
 
 QModelIndex AppsModel::index(int row, int column, const QModelIndex &parent) const
