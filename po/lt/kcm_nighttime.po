@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-06 00:44+0000\n"
-"PO-Revision-Date: 2025-09-02 21:49+0300\n"
+"PO-Revision-Date: 2025-09-10 02:10+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -39,14 +39,11 @@ msgid "Determine sunrise and sunset times:"
 msgstr "Nustatyti saulėtekio ir saulėlydžio laikus:"
 
 #: ui/main.qml:47
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
-#| msgid "Based on device's current location"
+#, kde-format
 msgctxt ""
 "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
 msgid "Based on device's location"
-msgstr "Remiantis dabartine įrenginio vieta"
+msgstr "Remiantis įrenginio vieta"
 
 #: ui/main.qml:48
 #, kde-format
@@ -87,7 +84,7 @@ msgstr[3] "%1 minutė"
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatically detect location"
-msgstr ""
+msgstr "Automatiškai aptikti vietą"
 
 #: ui/main.qml:146
 #, kde-kuit-format
@@ -118,13 +115,10 @@ msgstr ""
 "plėtotojų, kad parašytų išsamų aprašą apie tai, ką darys ši tarnyba."
 
 #: ui/main.qml:164
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
-#| msgid "Based on manual location"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Use manual location:"
-msgstr "Remiantis rankiniu būdu nustatyta vieta"
+msgstr "Naudoti rankiniu būdu nustatytą vietą:"
 
 #: ui/main.qml:176
 #, kde-format
