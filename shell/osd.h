@@ -58,7 +58,7 @@ private Q_SLOTS:
 private:
     bool init();
 
-    void showProgress(const QString &icon, const int percent, const int maximumPercent, const QString &additionalText = QString());
+    void showProgress(const QString &icon, const int percent, const int maximumPercent, const QString &additionalText = QString(), bool showOnMobile = true);
     void showOsd();
 
     ShellCorona *const m_corona;
