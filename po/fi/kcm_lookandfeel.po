@@ -1,7 +1,7 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2014, 2015, 2017.
-# SPDX-FileCopyrightText: 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Tommi Nieminen <translator@legisign.org>
+# SPDX-FileCopyrightText: 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Tommi Nieminen <translator@legisign.org>
 #
 # Larso, 2014.
 msgid ""
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-18 00:44+0000\n"
-"PO-Revision-Date: 2024-10-16 18:49+0300\n"
+"PO-Revision-Date: 2025-09-11 17:33+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -38,22 +38,21 @@ msgstr "Yleisulkoasu ja -tuntuma"
 #. i18n: ectx: label, entry (defaultLightLookAndFeel), group (KDE)
 #. i18n: ectx: label, entry (defaultDarkLookAndFeel), group (KDE)
 #: lookandfeelsettings.kcfg:13 lookandfeelsettings.kcfg:17
-#, fuzzy, kde-format
-#| msgid "Global look and feel"
+#, kde-format
 msgid "Global Look and Feel package, alternate"
-msgstr "Yleisulkoasu ja -tuntuma"
+msgstr "Vaihtoehtoinen yleisulkoasu- ja tuntumapaketti"
 
 #. i18n: ectx: label, entry (automaticLookAndFeel), group (KDE)
 #: lookandfeelsettings.kcfg:21
 #, kde-format
 msgid "Switch between dark and light global themes depending on time of day"
-msgstr ""
+msgstr "Vaihda tumman ja vaalean yleisteeman välillä kellonajan mukaan"
 
 #. i18n: ectx: label, entry (automaticLookAndFeelOnIdle), group (KDE)
 #: lookandfeelsettings.kcfg:25
 #, kde-format
 msgid "Switch between dark and light global themes when the computer is idle"
-msgstr ""
+msgstr "Vaihda tumman ja vaalean yleisteeman välillä tietokoneen joutoaikana"
 
 #. i18n: ectx: label, entry (automaticLookAndFeelIdleInterval), group (KDE)
 #: lookandfeelsettings.kcfg:29
@@ -62,6 +61,8 @@ msgid ""
 "How long the computer should be idle in order to switch between dark and "
 "light global themes, in seconds"
 msgstr ""
+"Kauanko koneen tulisi olla jouten (sekunteina) ennen tumman ja vaalean "
+"yleisteeman välillä vaihtamista"
 
 #: tool/lnftool.cpp:32
 #, kde-format
@@ -115,7 +116,7 @@ msgstr "paketinnimi"
 #: tool/lnftool.cpp:52
 #, kde-format
 msgid "Prevent --apply from disabling the automatic mode"
-msgstr ""
+msgstr "Estä --apply-valitsinta poistamista automaattista tilaa käytöstä"
 
 #: tool/lnftool.cpp:53
 #, kde-format
@@ -152,63 +153,60 @@ msgctxt "@info"
 msgid ""
 "The chosen light Global Theme will be used during the day, and the dark one "
 "will be used at night."
-msgstr ""
+msgstr "Valittua vaaleaa yleisteemaa käytetään päivisin, tummaa öisin."
 
 #: ui/DayNightLookAndFeel.qml:55
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure Day/Night Cycle…"
-msgstr ""
+msgstr "Aseta päivän ja yön vaihtelu…"
 
 #: ui/DayNightLookAndFeel.qml:68
 #, kde-format
 msgctxt "@option:radio Light global theme"
 msgid "Light"
-msgstr ""
+msgstr "Vaalea"
 
 #: ui/DayNightLookAndFeel.qml:80
 #, kde-format
 msgctxt "@option:radio Dark global theme"
 msgid "Dark"
-msgstr ""
+msgstr "Tumma"
 
 #: ui/DayNightLookAndFeel.qml:97
 #, kde-format
 msgctxt "@option:check"
 msgid "Wait until idleness before switching:"
-msgstr ""
+msgstr "Odota joutenoloa ennen vaihtoa:"
 
 #: ui/DayNightLookAndFeel.qml:110
 #, kde-format
 msgctxt "@item:valuesuffix idle interval"
 msgid "%1 second"
 msgid_plural "%1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 sekunti"
+msgstr[1] "%1 sekuntia"
 
 #: ui/DayNightLookAndFeel.qml:122
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Minimizes interruptions when actively using the computer."
-msgstr ""
+msgstr "Minimoi keskeytykset käytettäessä tietokonetta aktiivisesti."
 
 #: ui/LookAndFeelSelector.qml:24
-#, fuzzy, kde-format
-#| msgid "Global Theme"
+#, kde-format
 msgctxt "@title:window"
 msgid "Choose Light Global Theme"
-msgstr "Yleisteema"
+msgstr "Valitse vaalea yleisteema"
 
 #: ui/LookAndFeelSelector.qml:26
-#, fuzzy, kde-format
-#| msgid "Global Theme"
+#, kde-format
 msgctxt "@title:window"
 msgid "Choose Dark Global Theme"
-msgstr "Yleisteema"
+msgstr "Valitse tumma yleisteema"
 
 #: ui/LookAndFeelSelector.qml:49 ui/StaticLookAndFeel.qml:67
-#, fuzzy, kde-format
-#| msgid "Preview Theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview Theme"
 msgstr "Esikatsele teemaa"
@@ -235,11 +233,10 @@ msgstr "Järjestelmän asentamia teemoja ei voi poistaa"
 #, kde-format
 msgctxt "@option:check"
 msgid "Switch to Dark Mode at Night"
-msgstr ""
+msgstr "Vaihda öisin tummaan tilaan"
 
 #: ui/main.qml:40
-#, fuzzy, kde-format
-#| msgid "Get New…"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Get New…"
 msgstr "Hae uusia…"
@@ -360,8 +357,7 @@ msgstr ""
 "ylläpitäjään, koska se on todennäköisesti rikki."
 
 #: ui/StaticLookAndFeel.qml:53
-#, fuzzy, kde-format
-#| msgid "Contains Desktop layout"
+#, kde-format
 msgctxt "@label"
 msgid "Contains Desktop layout"
 msgstr "Sisältää työpöytäasettelun"
