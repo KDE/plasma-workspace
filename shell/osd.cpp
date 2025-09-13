@@ -16,6 +16,7 @@
 #include <QTimer>
 #include <QWindow>
 
+#include <KRuntimePlatform>
 #include <PlasmaQuick/SharedQmlEngine>
 #include <klocalizedstring.h>
 
@@ -99,7 +100,12 @@ void Osd::volumeChanged(int percent, int maximumPercent)
         icon = u"audio-volume-high-danger"_s;
     }
 
-    showProgress(icon, percent, maximumPercent);
+    if (KRuntimePlatform::runtimePlatform().contains(u"phone"_s)) {
+        // Plasma Mobile supplies its own OSD, so just emit the signal but don't show it here.
+        Q_EMIT osdProgress(icon, percent, maximumPercent, {});
+    } else {
+        showProgress(icon, percent, maximumPercent);
+    }
 }
 
 void Osd::microphoneVolumeChanged(int percent)
