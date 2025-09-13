@@ -16,6 +16,7 @@
 #include <QTimer>
 #include <QWindow>
 
+#include <KRuntimePlatform>
 #include <PlasmaQuick/SharedQmlEngine>
 #include <klocalizedstring.h>
 
@@ -47,10 +48,12 @@ void Osd::screenBrightnessChanged(int percent, const QString &displayId, const Q
                                       .percent = percent,
                                   });
 
+    // Don't show screen brightness OSD on mobile, only emit event (specified in showProgress parameters)
+
     if (m_corona->numScreens() == 1 && m_screenBrightnessInfo.size() == 1 && screenRect == m_corona->screenGeometry(0)) {
-        showProgress(u"video-display-brightness"_s, percent, 100);
+        showProgress(u"video-display-brightness"_s, percent, 100, {}, false);
     } else if (m_screenBrightnessInfo.size() == 1) {
-        showProgress(u"video-display-brightness"_s, percent, 100, displayLabel);
+        showProgress(u"video-display-brightness"_s, percent, 100, displayLabel, false);
     } else {
         // TODO: show one progress OSD on each corresponding screen
         QList<ScreenBrightnessInfo> sortedByPriority = m_screenBrightnessInfo.values();
@@ -61,13 +64,15 @@ void Osd::screenBrightnessChanged(int percent, const QString &displayId, const Q
         for (const auto &info : std::as_const(sortedByPriority)) {
             percentages += i18nc("Brightness OSD: display name and brightness percentage", "%1: %2%", info.label, info.percent);
         }
+
         showText(u"video-display-brightness"_s, percentages.join(u"\n"_s));
     }
 }
 
 void Osd::brightnessChanged(int percent)
 {
-    showProgress(u"video-display-brightness"_s, percent, 100);
+    // Only emit event, don't show OSD on Plasma Mobile
+    showProgress(u"video-display-brightness"_s, percent, 100, {}, false);
 }
 
 void Osd::keyboardBrightnessChanged(int percent)
@@ -99,7 +104,8 @@ void Osd::volumeChanged(int percent, int maximumPercent)
         icon = u"audio-volume-high-danger"_s;
     }
 
-    showProgress(icon, percent, maximumPercent);
+    // Plasma Mobile supplies its own OSD, so just emit the signal but don't show it here.
+    showProgress(icon, percent, maximumPercent, {}, false);
 }
 
 void Osd::microphoneVolumeChanged(int percent)
@@ -247,15 +253,21 @@ bool Osd::init()
     return true;
 }
 
-void Osd::showProgress(const QString &icon, const int percent, const int maximumPercent, const QString &additionalText)
+void Osd::showProgress(const QString &icon, const int percent, const int maximumPercent, const QString &additionalText, bool showOnMobile)
 {
     if (!init()) {
         return;
     }
 
-    auto *rootObject = m_osdObject->rootObject();
     int value = qBound(0, percent, maximumPercent);
+
+    if (!showOnMobile && KRuntimePlatform::runtimePlatform().contains(u"phone"_s)) {
+        Q_EMIT osdProgress(icon, value, maximumPercent, additionalText);
+        return;
+    }
+
     // Update max value first to prevent value from being clamped
+    auto *rootObject = m_osdObject->rootObject();
     rootObject->setProperty("osdMaxValue", maximumPercent);
     rootObject->setProperty("osdValue", value);
     rootObject->setProperty("osdAdditionalText", additionalText);
