@@ -280,8 +280,8 @@ void XWindowTasksModelTest::test_modelData()
     QVERIFY(screenGeometry.width() > 0 && screenGeometry.height() > 0);
 
     KActivities::Consumer activityConsumer;
-    qDebug() << "Start testing AbstractTasksModel::Activities. Current activity number:" << activityConsumer.runningActivities().size();
-    if (activityConsumer.runningActivities().size() > 0) {
+    qDebug() << "Start testing AbstractTasksModel::Activities. Current activity number:" << activityConsumer.activities().size();
+    if (activityConsumer.activities().size() > 0) {
         QCOMPARE(index.data(AbstractTasksModel::Activities).toStringList(), info.activities());
     } else {
         // In CI the window manager is openbox, so there could be no running activity.
