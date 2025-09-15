@@ -302,9 +302,13 @@ void TaskGroupingProxyModel::Private::checkGrouping(bool silent)
             }
 
             if (tryToGroup(q->sourceModel()->index(rowMap.at(i)->constFirst(), 0), silent)) {
-                q->beginRemoveRows(QModelIndex(), i, i);
+                if (!silent) {
+                    q->beginRemoveRows(QModelIndex(), i, i);
+                }
                 delete rowMap.takeAt(i); // Safe since we're iterating backwards.
-                q->endRemoveRows();
+                if (!silent) {
+                    q->endRemoveRows();
+                }
             }
         }
     } else {
