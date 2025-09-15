@@ -28,7 +28,7 @@ void SwitchActivity::makeMenu()
 {
     qDeleteAll(m_actions);
     m_actions.clear();
-    for (const auto activities = m_consumer.activities(KActivities::Info::Running); const QString &id : activities) {
+    for (const auto activities = m_consumer.activities(); const QString &id : activities) {
         KActivities::Info info(id);
         QAction *action = new QAction(QIcon::fromTheme(info.icon()), info.name(), this);
         action->setData(id);
@@ -65,7 +65,7 @@ void SwitchActivity::switchTo(QAction *action)
 
 void SwitchActivity::performNextAction()
 {
-    const QStringList activities = m_consumer.activities(KActivities::Info::Running);
+    const QStringList activities = m_consumer.activities();
 
     int i = activities.indexOf(m_consumer.currentActivity());
 
@@ -75,7 +75,7 @@ void SwitchActivity::performNextAction()
 
 void SwitchActivity::performPreviousAction()
 {
-    const QStringList activities = m_consumer.activities(KActivities::Info::Running);
+    const QStringList activities = m_consumer.activities();
 
     int i = activities.indexOf(m_consumer.currentActivity());
 
