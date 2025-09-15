@@ -46,7 +46,6 @@ PlasmoidItem {
         Repeater {
             model: Activities.ActivityModel {
                 id: activityModel
-                shownStates: "Running"
             }
             delegate: PlasmaComponents.TabButton {
                 id: tab
