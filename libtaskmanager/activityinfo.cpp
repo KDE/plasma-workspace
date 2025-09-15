@@ -52,12 +52,9 @@ ActivityInfo::ActivityInfo(QObject *parent)
     }
 
     connect(d->activityConsumer, &KActivities::Consumer::currentActivityChanged, this, &ActivityInfo::currentActivityChanged);
-    connect(d->activityConsumer, &KActivities::Consumer::runningActivitiesChanged, this, &ActivityInfo::numberOfRunningActivitiesChanged);
-    connect(d->activityConsumer, &KActivities::Consumer::runningActivitiesChanged, this, &ActivityInfo::namesOfRunningActivitiesChanged);
 
     if (!d->activitiesModel) {
         d->activitiesModel = new KActivities::ActivitiesModel();
-        d->activitiesModel->setShownStates(QList<KActivities::Info::State>{KActivities::Info::Running});
     }
 
     connect(d->activitiesModel, &KActivities::ActivitiesModel::modelReset, this, &ActivityInfo::namesOfRunningActivitiesChanged);
@@ -86,34 +83,24 @@ QString ActivityInfo::currentActivity() const
 
 int ActivityInfo::numberOfRunningActivities() const
 {
-    return d->activityConsumer->activities(KActivities::Info::State::Running).count();
+    return d->activityConsumer->activities().count();
 }
 
 QStringList ActivityInfo::runningActivities() const
 {
-    return d->activityConsumer->activities(KActivities::Info::State::Running);
+    return d->activityConsumer->activities();
 }
 
 QString ActivityInfo::activityName(const QString &id)
 {
     KActivities::Info info(id);
-
-    if (info.state() != KActivities::Info::Invalid) {
-        return info.name();
-    }
-
-    return QString();
+    return info.name();
 }
 
 QString ActivityInfo::activityIcon(const QString &id)
 {
     KActivities::Info info(id);
-
-    if (info.state() != KActivities::Info::Invalid) {
-        return info.icon();
-    }
-
-    return QString();
+    return info.icon();
 }
 }
 
