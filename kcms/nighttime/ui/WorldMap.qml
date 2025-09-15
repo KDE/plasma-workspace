@@ -98,53 +98,6 @@ Kirigami.FormLayout {
             property double zoomFactor: 1.2
             property double currentScale: 1.0
 
-            /* Zoom in/out buttons */
-            RowLayout {
-                anchors {
-                    right: parent.right
-                    rightMargin: Kirigami.Units.smallSpacing * 2
-                    bottom: parent.bottom
-                    bottomMargin: Kirigami.Units.smallSpacing * 2
-                }
-
-                // Always show above thumbnail content
-                z: 9999
-
-                QQC2.Button {
-                    id: zoomInButton
-
-                    text: i18n("Zoom in")
-                    display: QQC2.AbstractButton.IconOnly
-                    icon.name: "zoom-in-map-symbolic"
-                    activeFocusOnTab: false
-                    enabled: mapRect.currentScale < 5
-
-                    onClicked: root.zoomIn()
-                    onDoubleClicked: root.zoomIn()
-
-                    QQC2.ToolTip {
-                        text: zoomInButton.text
-                    }
-                }
-
-                QQC2.Button {
-                    id: zoomOutButton
-
-                    text: i18n("Zoom out")
-                    display: QQC2.AbstractButton.IconOnly
-                    icon.name: "zoom-out-map-symbolic"
-                    activeFocusOnTab: false
-                    enabled: mapRect.currentScale > 1
-
-                    onClicked: root.zoomOut()
-                    onDoubleClicked: root.zoomOut()
-
-                    QQC2.ToolTip {
-                        text: zoomOutButton.text
-                    }
-                }
-            }
-
             Flickable {
                 id: mapFlick
                 anchors {
@@ -211,6 +164,57 @@ Kirigami.FormLayout {
                     Component.onCompleted: {
                         width = mapFlick.width;
                         height = mapFlick.height;
+                    }
+                }
+            }
+
+            // MouseArea is needed to catch mouse clicks for disabled zoom buttons.
+            MouseArea {
+                implicitWidth: zoomButtons.implicitWidth
+                implicitHeight: zoomButtons.implicitHeight
+
+                anchors {
+                    right: parent.right
+                    rightMargin: Kirigami.Units.smallSpacing * 2
+                    bottom: parent.bottom
+                    bottomMargin: Kirigami.Units.smallSpacing * 2
+                }
+
+                Row {
+                    id: zoomButtons
+
+                    QQC2.Button {
+                        id: zoomInButton
+
+                        text: i18n("Zoom in")
+                        display: QQC2.AbstractButton.IconOnly
+                        icon.name: "zoom-in-map-symbolic"
+                        activeFocusOnTab: false
+                        enabled: mapRect.currentScale < 5
+
+                        onClicked: root.zoomIn()
+                        onDoubleClicked: root.zoomIn()
+
+                        QQC2.ToolTip {
+                            text: zoomInButton.text
+                        }
+                    }
+
+                    QQC2.Button {
+                        id: zoomOutButton
+
+                        text: i18n("Zoom out")
+                        display: QQC2.AbstractButton.IconOnly
+                        icon.name: "zoom-out-map-symbolic"
+                        activeFocusOnTab: false
+                        enabled: mapRect.currentScale > 1
+
+                        onClicked: root.zoomOut()
+                        onDoubleClicked: root.zoomOut()
+
+                        QQC2.ToolTip {
+                            text: zoomOutButton.text
+                        }
                     }
                 }
             }
