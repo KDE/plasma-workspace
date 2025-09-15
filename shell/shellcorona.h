@@ -211,7 +211,6 @@ public Q_SLOTS:
 
     void nextActivity();
     void previousActivity();
-    void stopCurrentActivity();
 
     void setTestModeLayout(const QString &layout)
     {

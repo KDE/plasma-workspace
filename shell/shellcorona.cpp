@@ -241,15 +241,6 @@ void ShellCorona::init()
 
     KGlobalAccel::self()->setGlobalShortcut(activityAction, Qt::META | Qt::Key_Q);
 
-    QAction *stopActivityAction = new QAction(this);
-    setAction(QStringLiteral("stop current activity"), stopActivityAction);
-    QObject::connect(stopActivityAction, &QAction::triggered, this, &ShellCorona::stopCurrentActivity);
-
-    stopActivityAction->setText(i18n("Stop Current Activity"));
-    stopActivityAction->setVisible(false);
-
-    KGlobalAccel::self()->setGlobalShortcut(stopActivityAction, Qt::META | Qt::Key_S);
-
     QAction *previousActivityAction = new QAction(this);
     setAction(QStringLiteral("switch to previous activity"), previousActivityAction);
     connect(previousActivityAction, &QAction::triggered, this, &ShellCorona::previousActivity);
@@ -2736,16 +2727,6 @@ void ShellCorona::nextActivity()
 void ShellCorona::previousActivity()
 {
     m_activityController->previousActivity();
-}
-
-void ShellCorona::stopCurrentActivity()
-{
-    const QStringList list = m_activityController->activities(KActivities::Info::Running);
-    if (list.isEmpty()) {
-        return;
-    }
-
-    m_activityController->stopActivity(m_activityController->currentActivity());
 }
 
 /**
