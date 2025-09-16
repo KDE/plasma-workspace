@@ -23,6 +23,7 @@
 
 #include <KAuthorized>
 #include <KStartupInfo>
+#include <KWaylandExtras>
 #include <KX11Extras>
 #include <klocalizedstring.h>
 #include <kwindowsystem.h>
@@ -384,9 +385,52 @@ bool DesktopView::event(QEvent *e)
 {
     if (e->type() == QEvent::FocusOut) {
         m_krunnerText.clear();
+
+        if (!m_krunnerFuture.isCanceled()) {
+            m_krunnerFuture.cancel();
+            m_krunnerFuture = {};
+        }
     }
 
     return PlasmaQuick::ContainmentView::event(e);
+}
+
+class ActivationTokenRequest : public QObject
+{
+    Q_OBJECT
+
+public:
+    explicit ActivationTokenRequest(QWindow *window)
+        : m_serial(KWaylandExtras::lastInputSerial(window))
+    {
+        m_promise.start();
+
+        connect(KWaylandExtras::self(), &KWaylandExtras::xdgActivationTokenArrived, this, [this](int serial, const QString &token) {
+            if (m_serial == serial) {
+                if (!m_promise.isCanceled()) {
+                    m_promise.addResult(token);
+                }
+                m_promise.finish();
+                delete this;
+            }
+        });
+        KWaylandExtras::requestXdgActivationToken(window, m_serial, QString());
+    }
+
+    QFuture<QString> future() const
+    {
+        return m_promise.future();
+    }
+
+private:
+    QPromise<QString> m_promise;
+    int m_serial;
+};
+
+static QFuture<QString> fetchActivationToken(QWindow *window)
+{
+    auto request = new ActivationTokenRequest(window);
+    return request->future();
 }
 
 bool DesktopView::handleKRunnerTextInput(QKeyEvent *e)
@@ -408,12 +452,22 @@ bool DesktopView::handleKRunnerTextInput(QKeyEvent *e)
         krunnerTextChanged = true;
     }
     if (krunnerTextChanged) {
-        const QString interface(QStringLiteral("org.kde.krunner"));
         if (!KAuthorized::authorize(QStringLiteral("run_command"))) {
             return false;
         }
-        org::kde::krunner::App krunner(interface, QStringLiteral("/App"), QDBusConnection::sessionBus());
-        krunner.query(m_krunnerText);
+        if (KWindowSystem::isPlatformWayland()) {
+            if (!m_krunnerFuture.isCanceled()) {
+                m_krunnerFuture.cancel();
+            }
+            m_krunnerFuture = fetchActivationToken(this);
+            m_krunnerFuture.then(this, [this](const QString &token) {
+                org::kde::krunner::App krunner(QStringLiteral("org.kde.krunner"), QStringLiteral("/App"), QDBusConnection::sessionBus());
+                krunner.queryWithActivationToken(m_krunnerText, token);
+            });
+        } else {
+            org::kde::krunner::App krunner(QStringLiteral("org.kde.krunner"), QStringLiteral("/App"), QDBusConnection::sessionBus());
+            krunner.query(m_krunnerText);
+        }
         return true;
     }
     return false;
@@ -596,4 +650,5 @@ void DesktopView::setAccentColorFromWallpaper(const QColor &accentColor)
     QDBusConnection::sessionBus().send(applyAccentColor);
 }
 
+#include "desktopview.moc"
 #include "moc_desktopview.cpp"
