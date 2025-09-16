@@ -1,26 +1,26 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2020, 2021, 2023, 2024 A S Alam <aalam.yellow@gmail.com>
+# SPDX-FileCopyrightText: 2020, 2021, 2023, 2024, 2025 A S Alam <aalam.yellow@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-16 00:45+0000\n"
-"PO-Revision-Date: 2024-10-25 23:42-0500\n"
-"Last-Translator: A S Alam <aman@punlinux.org>\n"
-"Language-Team: pa\n"
+"PO-Revision-Date: 2025-09-15 10:02-0500\n"
+"Last-Translator: A S Alam <aalam@punlinux.org>\n"
+"Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #: src/fingerprintmodel.cpp:145 src/fingerprintmodel.cpp:229
 #, kde-format
 msgid "No fingerprint device found."
-msgstr "ਕੋਈ ਫਿੰਗਰਪਰਿੰਟ ਡਿਵਾਈਸ ਨਹੀਂ ਹੈ।"
+msgstr "ਕੋਈ ਫਿੰਗਰਪਰਿੰਟ ਡਿਵਾਈਸ ਨਹੀਂ ਮਿਲਿਆ।"
 
 #: src/fingerprintmodel.cpp:302
 #, kde-format
@@ -95,18 +95,14 @@ msgid "Change Wallet Password?"
 msgstr "ਵਾਲਟ ਪਾਸਵਰਡ ਬਦਲਣਾ ਹੈ?"
 
 #: src/ui/ChangeWalletPassword.qml:29
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Now that you have changed your login password, you may also want to "
-#| "change the password on your default KWallet to match it."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Now that you have changed your login password, consider changing the "
 "password on your default KWallet to match it."
 msgstr ""
 "ਹੁਣ ਤੁਸੀਂ ਆਪਣਾ ਲਾਗਇਨ ਪਾਸਵਰਡ ਬਦਲ ਲਿਆ ਹੈ ਤਾਂ ਤੁਸੀਂ ਆਪਣੇ ਮੂਲ ਕੇ-ਵਾਲਟ ਲਈ ਵੀ ਪਾਸਵਰਡ ਨੂੰ ਮਿਲਦੇ "
-"ਪਾਸਵਰਡ ਲਈ ਬਦਲ ਸਕਦੇ ਹੋ।"
+"ਪਾਸਵਰਡ ਲਈ ਬਦਲਣ ਬਾਰੇ ਵਿਚਾਰ ਕਰੋ।"
 
 #: src/ui/ChangeWalletPassword.qml:35
 #, kde-format
@@ -178,15 +174,13 @@ msgid "Confirm password:"
 msgstr "ਪਾਸਵਰਡ ਤਸਦੀਕ ਕਰੋ:"
 
 #: src/ui/CreateUser.qml:88
-#, fuzzy, kde-format
-#| msgid "Create"
+#, kde-format
 msgctxt "@action:button Create a new user"
 msgid "Create"
 msgstr "ਬਣਾਓ"
 
 #: src/ui/CreateUser.qml:109
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action:button Cancel creating new user"
 msgid "Cancel"
 msgstr "ਰੱਦ ਕਰੋ"
@@ -544,14 +538,13 @@ msgstr "ਵਰਤੋਂਕਾਰ ਅਵਤਾਰ ਥਾਂ ਆਈਕਾਨ"
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User Without Deleting Files?"
-msgstr ""
+msgstr "ਬਿਨਾਂ ਫ਼ਾਇਲਾਂ ਨੂੰ ਹਟਾਏ ਲਾਗਇਨ ਹੋਏ ਵਰਤੋਂਕਾਰ ਨੂੰ ਹਟਾਉਣਾ ਹੈ?"
 
 #: src/ui/UserDetailsPage.qml:115
-#, fuzzy, kde-format
-#| msgid "Delete User…"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User?"
-msgstr "…ਵਰਤੋਂਕਾਰ ਨੂੰ ਹਟਾਓ"
+msgstr "ਲਾਗਇਨ ਕੀਤੇ ਵਰਤੋਂਕਾਰ ਨੂੰ ਹਟਾਉਣਾ ਹੈ?"
 
 #: src/ui/UserDetailsPage.qml:117
 #, kde-kuit-format
@@ -571,16 +564,15 @@ msgid ""
 msgstr ""
 
 #: src/ui/UserDetailsPage.qml:125
-#, fuzzy, kde-format
-#| msgid "Delete files"
+#, kde-format
 msgctxt "@action: button"
 msgid "Delete %1"
-msgstr "ਫ਼ਾਇਲਾਂ ਨੂੰ ਹਟਾਓ"
+msgstr "%1 ਨੂੰ ਹਟਾਓ"
 
 #: src/ui/UserDetailsPage.qml:144
 #, kde-format
 msgid "Change avatar"
-msgstr "ਅਵਤਾਰ ਬਦਲੋ"
+msgstr "ਅਵਤਾਰ ਨੂੰ ਬਦਲੋ"
 
 #: src/ui/UserDetailsPage.qml:201
 #, kde-format
@@ -632,7 +624,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Failed to crop image: %1"
-msgstr ""
+msgstr "ਚਿੱਤਰ ਨੂੰ ਕਰੋਪ ਕਰਨ ਲਈ ਅਸਫ਼ਲ ਹੈ: %1"
 
 #: src/user.cpp:337
 #, kde-format

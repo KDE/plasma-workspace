@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-06 00:44+0000\n"
-"PO-Revision-Date: 2025-07-14 20:05+0400\n"
+"PO-Revision-Date: 2025-09-15 12:22+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -37,14 +37,11 @@ msgid "Determine sunrise and sunset times:"
 msgstr "حدد أوقات شروق الشمس وغروبها:"
 
 #: ui/main.qml:47
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
-#| msgid "Based on device's current location"
+#, kde-format
 msgctxt ""
 "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
 msgid "Based on device's location"
-msgstr "بناءً على الموقع الحالي للجهاز"
+msgstr "بناءً على موقع الجهاز"
 
 #: ui/main.qml:48
 #, kde-format
@@ -87,7 +84,7 @@ msgstr[5] "%1 دقيقة"
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatically detect location"
-msgstr ""
+msgstr "الكشف الآليّ للموقع"
 
 #: ui/main.qml:146
 #, kde-kuit-format
@@ -117,13 +114,10 @@ msgstr ""
 "kde.org</link> وطلب من مطوري كيدي كتابة وصف تفصيلي لما ستفعله هذه الخدمة."
 
 #: ui/main.qml:164
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
-#| msgid "Based on manual location"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Use manual location:"
-msgstr "بناءً على الموقع اليدوي"
+msgstr "استعمل موقع يدوي"
 
 #: ui/main.qml:176
 #, kde-format

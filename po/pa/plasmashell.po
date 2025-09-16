@@ -1,21 +1,21 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2020, 2021, 2022, 2023, 2024 A S Alam <aalam@users.sf.net>
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2020, 2021, 2022, 2023, 2024, 2025 A S Alam <aalam@users.sf.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-21 00:45+0000\n"
-"PO-Revision-Date: 2024-10-01 21:20-0500\n"
-"Last-Translator: A S Alam <aman@punlinux.org>\n"
-"Language-Team: pa\n"
+"PO-Revision-Date: 2025-09-15 09:40-0500\n"
+"Last-Translator: A S Alam <aalam@punlinux.org>\n"
+"Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -150,10 +150,9 @@ msgid "Enter Edit Mode"
 msgstr "ਸੋਧ ਢੰਗ ਵਿੱਚ ਜਾਓ"
 
 #: desktopview.cpp:533
-#, fuzzy, kde-format
-#| msgid "Enter Edit Mode"
+#, kde-format
 msgid "Exit Edit Mode"
-msgstr "ਸੋਧ ਢੰਗ ਵਿੱਚ ਜਾਓ"
+msgstr "ਸੋਧ ਢੰਗ ਵਿੱਚੋਂ ਬਾਹਰ"
 
 #: main.cpp:86
 #, kde-format
@@ -393,11 +392,10 @@ msgid "Activate Task Manager Entry %1"
 msgstr "ਟਾਸਕ ਮੈਨੇਜਰ ਐਂਟਰੀ %1 ਸਰਗਰਮ ਕਰੋ"
 
 #: shellcorona.cpp:311
-#, fuzzy, kde-format
-#| msgid "Manage Desktops And Panels..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
-msgstr "...ਡੈਸਕਟਾਪ ਅਤੇ ਪੈਨਲਾਂ ਦਾ ਇੰਤਜ਼ਾਮ"
+msgstr "…ਡੈਸਕਟਾਪ ਅਤੇ ਪੈਨਲਾਂ ਦਾ ਇੰਤਜ਼ਾਮ"
 
 #: shellcorona.cpp:333
 #, kde-format

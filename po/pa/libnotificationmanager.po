@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2020, 2023 A S Alam <aalam.yellow@gmail.com>
+# SPDX-FileCopyrightText: 2020, 2023, 2025 A S Alam <aalam.yellow@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-23 00:45+0000\n"
-"PO-Revision-Date: 2023-12-22 22:04-0600\n"
+"PO-Revision-Date: 2025-09-15 09:58-0500\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #: abstractnotificationsmodel.cpp:340
 #, kde-format
@@ -107,8 +107,8 @@ msgstr "ਐਪਲੀਕੇਸ਼ਨ ਅਚਾਨਕ ਬੰਦ ਹੋ ਗਈ ਹੈ�
 msgctxt "@title"
 msgid "Unread Notification"
 msgid_plural "Unread Notifications"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "ਨਾ-ਪੜ੍ਹਿਆ ਨੋਟੀਫਿਕੇਸ਼ਨ"
+msgstr[1] "ਨਾ-ਪੜ੍ਹੇ ਨੋਟੀਫਿਕੇਸ਼ਨ"
 
 #: notifications.cpp:914
 #, kde-format
@@ -122,4 +122,4 @@ msgstr[1] ""
 #, kde-format
 msgctxt "@action:button Show the notifications popup"
 msgid "Show Notifications"
-msgstr ""
+msgstr "ਨੋਟੀਫਿਕੇਸ਼ਨ ਵੇਖਾਓ"
