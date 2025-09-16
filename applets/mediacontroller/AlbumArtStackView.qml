@@ -162,6 +162,8 @@ Item {
                 // Given it's such a heavy item, try to cleanup as early as possible
                 StackView.onDeactivated: destroy()
                 StackView.onRemoved: destroy()
+
+                onStatusChanged: { } // QTBUG-140018
             }
         }
 
