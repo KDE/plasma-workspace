@@ -263,6 +263,20 @@ void View::querySingleRunner(const QString &runnerName, const QString &term)
     m_engine->rootObject()->setProperty("query", term);
 }
 
+void View::queryWithActivationToken(const QString &term, const QString &activationToken)
+{
+    qputenv("XDG_ACTIVATION_TOKEN", activationToken.toUtf8());
+
+    if (!isVisible()) {
+        display();
+    } else {
+        requestActivate();
+    }
+
+    m_engine->rootObject()->setProperty("singleRunner", QString());
+    m_engine->rootObject()->setProperty("query", term);
+}
+
 bool View::pinned() const
 {
     return m_pinned;
