@@ -10,6 +10,7 @@
 
 #include <PlasmaQuick/ConfigView>
 #include <PlasmaQuick/ContainmentView>
+#include <QFuture>
 #include <QPointer>
 
 #include <KConfigWatcher>
@@ -127,6 +128,7 @@ private:
     QPointer<QScreen> m_screenToFollow;
     LayerShellQt::Window *m_layerWindow = nullptr;
     QString m_krunnerText;
+    QFuture<QString> m_krunnerFuture;
 
     // KRunner config
     KConfigWatcher::Ptr m_configWatcher;
