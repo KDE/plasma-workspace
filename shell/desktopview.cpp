@@ -6,12 +6,12 @@
 
 #include "desktopview.h"
 #include "containmentconfigview.h"
-#include "krunner_interface.h"
 #include "screenpool.h"
 #include "shellcorona.h"
 
 #include <QDBusConnection>
 #include <QDBusMessage>
+#include <QDBusPendingCall>
 #include <QGuiApplication>
 #include <QQmlContext>
 #include <QQmlEngine>
@@ -461,12 +461,34 @@ bool DesktopView::handleKRunnerTextInput(QKeyEvent *e)
             }
             m_krunnerFuture = fetchActivationToken(this);
             m_krunnerFuture.then(this, [this](const QString &token) {
-                org::kde::krunner::App krunner(QStringLiteral("org.kde.krunner"), QStringLiteral("/App"), QDBusConnection::sessionBus());
-                krunner.queryWithActivationToken(m_krunnerText, token);
+                auto message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.krunner"),
+                                                              QStringLiteral("/org/kde/krunner"),
+                                                              QStringLiteral("org.freedesktop.Application"),
+                                                              QStringLiteral("ActivateAction"));
+                message.setArguments({
+                    QStringLiteral("Query"),
+                    QVariantList{
+                        m_krunnerText,
+                    },
+                    QVariantMap{
+                        {QStringLiteral("activation-token"), token},
+                    },
+                });
+                QDBusConnection::sessionBus().asyncCall(message);
             });
         } else {
-            org::kde::krunner::App krunner(QStringLiteral("org.kde.krunner"), QStringLiteral("/App"), QDBusConnection::sessionBus());
-            krunner.query(m_krunnerText);
+            auto message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.krunner"),
+                                                          QStringLiteral("/org/kde/krunner"),
+                                                          QStringLiteral("org.freedesktop.Application"),
+                                                          QStringLiteral("ActivateAction"));
+            message.setArguments({
+                QStringLiteral("Query"),
+                QVariantList{
+                    m_krunnerText,
+                },
+                QVariantMap{},
+            });
+            QDBusConnection::sessionBus().asyncCall(message);
         }
         return true;
     }

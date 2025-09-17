@@ -17,9 +17,5 @@
       <arg name="runnerName" type="s" direction="in"/>
       <arg name="term" type="s" direction="in"/>
     </method>
-    <method name="queryWithActivationToken">
-      <arg name="term" type="s" direction="in"/>
-      <arg name="activationToken" type="s" direction="in"/>
-    </method>
   </interface>
 </node>

@@ -92,10 +92,6 @@ qt6_generate_wayland_protocol_client_sources(plasmashell
         ${PLASMA_WAYLAND_PROTOCOLS_DIR}/plasma-shell.xml
 )
 
-set(krunner_xml ${plasma-workspace_SOURCE_DIR}/krunner/dbus/org.kde.krunner.App.xml)
-qt_add_dbus_interface(plasma_shell_SRCS ${krunner_xml} krunner_interface)
-
-
 target_sources(plasmashell PRIVATE ${plasma_shell_SRCS})
 
 target_link_libraries(plasmashell PRIVATE
