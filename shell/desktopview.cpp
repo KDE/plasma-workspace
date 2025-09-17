@@ -395,44 +395,6 @@ bool DesktopView::event(QEvent *e)
     return PlasmaQuick::ContainmentView::event(e);
 }
 
-class ActivationTokenRequest : public QObject
-{
-    Q_OBJECT
-
-public:
-    explicit ActivationTokenRequest(QWindow *window)
-        : m_serial(KWaylandExtras::lastInputSerial(window))
-    {
-        m_promise.start();
-
-        connect(KWaylandExtras::self(), &KWaylandExtras::xdgActivationTokenArrived, this, [this](int serial, const QString &token) {
-            if (m_serial == serial) {
-                if (!m_promise.isCanceled()) {
-                    m_promise.addResult(token);
-                }
-                m_promise.finish();
-                delete this;
-            }
-        });
-        KWaylandExtras::requestXdgActivationToken(window, m_serial, QString());
-    }
-
-    QFuture<QString> future() const
-    {
-        return m_promise.future();
-    }
-
-private:
-    QPromise<QString> m_promise;
-    int m_serial;
-};
-
-static QFuture<QString> fetchActivationToken(QWindow *window)
-{
-    auto request = new ActivationTokenRequest(window);
-    return request->future();
-}
-
 bool DesktopView::handleKRunnerTextInput(QKeyEvent *e)
 {
     // allow only Shift and GroupSwitch modifiers
@@ -459,7 +421,7 @@ bool DesktopView::handleKRunnerTextInput(QKeyEvent *e)
             if (!m_krunnerFuture.isCanceled()) {
                 m_krunnerFuture.cancel();
             }
-            m_krunnerFuture = fetchActivationToken(this);
+            m_krunnerFuture = KWaylandExtras::xdgActivationToken(this, QString());
             m_krunnerFuture.then(this, [this](const QString &token) {
                 auto message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.krunner"),
                                                               QStringLiteral("/org/kde/krunner"),
@@ -672,5 +634,4 @@ void DesktopView::setAccentColorFromWallpaper(const QColor &accentColor)
     QDBusConnection::sessionBus().send(applyAccentColor);
 }
 
-#include "desktopview.moc"
 #include "moc_desktopview.cpp"
