@@ -57,8 +57,7 @@ void KlipperTest::testBug465225()
 {
     const QString folderPath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QDir::separator() + u"klipper" + QDir::separator();
     QVERIFY(QDir().mkpath(folderPath));
-    KIO::CopyJob *job =
-        KIO::copy(QUrl::fromLocalFile(QFINDTESTDATA("./data/bug465225/")), QUrl::fromLocalFile(folderPath), KIO::HideProgressInfo | KIO::Overwrite);
+    KIO::CopyJob *job = KIO::copy(QUrl::fromLocalFile(QFINDTESTDATA("./data/bug465225/")), QUrl::fromLocalFile(folderPath), KIO::HideProgressInfo);
     QVERIFY(job->exec());
 
     const QString fileName = QStringLiteral("klipperrc");

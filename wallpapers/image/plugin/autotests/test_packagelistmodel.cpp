@@ -220,9 +220,7 @@ void PackageListModelTest::testPackageListModelRemoveLocalBackground()
     const QString standardPath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + u"/wallpapers/";
 
     QVERIFY(QDir(standardPath).mkpath(standardPath));
-    KIO::CopyJob *job = KIO::copy(m_dummyPackagePath,
-                                  QUrl::fromLocalFile(QString(standardPath + u"dummy" + QDir::separator())),
-                                  KIO::HideProgressInfo | KIO::Overwrite);
+    KIO::CopyJob *job = KIO::copy(m_dummyPackagePath, QUrl::fromLocalFile(QString(standardPath + u"dummy" + QDir::separator())), KIO::HideProgressInfo);
     QVERIFY(job->exec());
 
     m_model->load({standardPath});

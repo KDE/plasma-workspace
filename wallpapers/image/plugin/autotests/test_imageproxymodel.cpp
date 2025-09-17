@@ -274,9 +274,7 @@ void ImageProxyModelTest::testImageProxyModelDirWatch()
     QVERIFY(!m_model->m_dirWatch.contains(standardPath + u"image.jpg"));
 
     // Copy a package to the folder
-    auto job = KIO::copy(m_dummyPackagePath,
-                         QUrl::fromLocalFile(QString(standardPath + u"dummy" + QDir::separator())),
-                         KIO::HideProgressInfo | KIO::Overwrite);
+    auto job = KIO::copy(m_dummyPackagePath, QUrl::fromLocalFile(QString(standardPath + u"dummy" + QDir::separator())), KIO::HideProgressInfo);
     job->start();
 
     if (m_countSpy->empty()) {
