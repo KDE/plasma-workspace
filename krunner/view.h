@@ -93,7 +93,6 @@ public Q_SLOTS:
     void displayWithClipboardContents();
     void query(const QString &term);
     void querySingleRunner(const QString &runnerName, const QString &term);
-    void queryWithActivationToken(const QString &term, const QString &activationToken);
 
 protected Q_SLOTS:
     void loadConfig();

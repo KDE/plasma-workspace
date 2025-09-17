@@ -136,9 +136,11 @@ int main(int argc, char **argv)
         parser.parse(arguments);
         updateVisibility();
     });
-    QObject::connect(&service, &KDBusService::activateActionRequested, &view, [&view](const QString &action) {
+    QObject::connect(&service, &KDBusService::activateActionRequested, &view, [&view](const QString &action, const QVariant &parameter) {
         if (action == QLatin1String("RunClipboard")) {
             view.displayWithClipboardContents();
+        } else if (action == QLatin1String("Query")) {
+            view.query(parameter.toString());
         }
     });
 
