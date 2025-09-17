@@ -48,6 +48,8 @@ struct Score {
 };
 
 struct ScoreCard {
+    QStringView search;
+    QString term;
     Bitap::Match bitap;
     qreal bitapScore;
     int levenshtein;
@@ -56,8 +58,8 @@ struct ScoreCard {
 
 QDebug operator<<(QDebug dbg, const ScoreCard &card)
 {
-    dbg.nospace() << "Scorecard(" << "bitap: " << card.bitap << ", bitapScore: " << card.bitapScore << ", levenshtein: " << card.levenshtein
-                    << ", levenshteinScore: " << card.levenshteinScore << ")";
+    dbg.nospace() << "Scorecard(" << "search: " << card.search << ", term: " << card.term << "bitap: " << card.bitap << ", bitapScore: " << card.bitapScore
+                  << ", levenshtein: " << card.levenshtein << ", levenshteinScore: " << card.levenshteinScore << ")";
     return dbg;
 }
 
@@ -113,6 +115,8 @@ auto makeScores(const auto &notNormalizedString, const auto &queryList) {
         const auto levenshtein = Levenshtein::distance(string, queryItem);
 
         cards.emplace_back(ScoreCard{
+            .search = queryItem,
+            .term = string,
             .bitap = *bitap,
             .bitapScore = bitapScore + completeMatchBonus + noSubstitionBonus + startsWithBonus,
             .levenshtein = levenshtein,
