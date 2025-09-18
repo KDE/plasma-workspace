@@ -155,7 +155,10 @@ Item {
                 verticalAlignment: Image.AlignVCenter
                 fillMode: container.inCompactRepresentation ? Image.PreserveAspectCrop : Image.PreserveAspectFit
 
-                asynchronous: true
+                // NOTE: Workaround for QTBUG-140018, we want this to be asynchronous otherwise
+                //       See also BUG: 509192
+                asynchronous: false
+
                 cache: false
 
                 // onRemoved only fires when all transitions end. If a user switches songs quickly this adds up
