@@ -406,7 +406,7 @@ QModelIndex Notifications::Private::mapFromModel(const QModelIndex &idx) const
 std::shared_ptr<Settings> Notifications::Private::settings() const
 {
     static std::weak_ptr<Settings> s_instance;
-    if (!s_instance.expired()) {
+    if (s_instance.expired()) {
         std::shared_ptr<Settings> ptr(new Settings());
         s_instance = ptr;
         return ptr;
