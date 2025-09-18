@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-16 00:45+0000\n"
-"PO-Revision-Date: 2025-04-18 11:07+0000\n"
+"PO-Revision-Date: 2025-09-17 13:06+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #: src/fingerprintmodel.cpp:145 src/fingerprintmodel.cpp:229
 #, kde-format
@@ -177,15 +177,13 @@ msgid "Confirm password:"
 msgstr "Staðfesta lykilorð:"
 
 #: src/ui/CreateUser.qml:88
-#, fuzzy, kde-format
-#| msgid "Create"
+#, kde-format
 msgctxt "@action:button Create a new user"
 msgid "Create"
 msgstr "Búa til"
 
 #: src/ui/CreateUser.qml:109
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action:button Cancel creating new user"
 msgid "Cancel"
 msgstr "Hætta við"
@@ -543,14 +541,13 @@ msgstr "Staðgengilstákn notandamyndar"
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User Without Deleting Files?"
-msgstr ""
+msgstr "Eyða innskráðum notanda án þess að eyða skrám?"
 
 #: src/ui/UserDetailsPage.qml:115
-#, fuzzy, kde-format
-#| msgid "Delete User…"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User?"
-msgstr "Eyða notanda…"
+msgstr "Eyða innskráðum notanda?"
 
 #: src/ui/UserDetailsPage.qml:117
 #, kde-kuit-format
@@ -560,6 +557,10 @@ msgid ""
 "account instead?<nl/><nl/>This will make %1 unable to log in again, and they "
 "may experience strange behaviors until they log out."
 msgstr ""
+"Notandinn %1 er skráður inn í kerfið og því er ekki hægt að eyða skránum "
+"þeirra. Eyða bara reikningnum í staðinn?<nl/><nl/>Þá getur %1 ekki skráð sig "
+"inn aftur og gæti upplifað undarlega hegðun í kerfinu þar til hann hefur "
+"skráð sig út."
 
 #: src/ui/UserDetailsPage.qml:118
 #, kde-format
@@ -568,13 +569,15 @@ msgid ""
 "%1 is currently logged in. Deleting the account will make them unable to log "
 "in again, and they may experience strange behaviors until they log out."
 msgstr ""
+"Notandinn %1 er skráður inn. Ef reikningi hans er eytt getur hann ekki skráð "
+"sig inn aftur og gæti upplifað undarlega hegðun í kerfinu þar til hann "
+"skráir sig út."
 
 #: src/ui/UserDetailsPage.qml:125
-#, fuzzy, kde-format
-#| msgid "Delete files"
+#, kde-format
 msgctxt "@action: button"
 msgid "Delete %1"
-msgstr "Eyða skrám"
+msgstr "Eyða %1"
 
 #: src/ui/UserDetailsPage.qml:144
 #, kde-format

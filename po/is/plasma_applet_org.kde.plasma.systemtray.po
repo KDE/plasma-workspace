@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-25 00:44+0000\n"
-"PO-Revision-Date: 2025-04-18 12:59+0000\n"
+"PO-Revision-Date: 2025-09-17 12:59+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -105,6 +105,10 @@ msgid ""
 "consider configuring the clipboard to disable its history, or only remember "
 "one item at a time."
 msgstr ""
+"Ekki er ráðlagt að slökkva á klippispjaldinu því þá glatast afrituð gögn "
+"þegar forritinu sem þau voru afrituð úr er lokað.<nl/><nl/>Í staðinn skaltu "
+"prófa að grunnstilla klippispjaldið og afvirkja ferilskráningu eða láta það "
+"muna bara eitt atriði í einu."
 
 #: package/contents/ui/ConfigEntries.qml:217
 #, kde-format
@@ -223,7 +227,7 @@ msgstr "Sýna falin tákn"
 #, kde-format
 msgctxt "@info:whatsthis accessible description for popup grid"
 msgid "Grid with %1 items in %2 columns"
-msgstr ""
+msgstr "Reitir með %1 hlutum í %2 dálkum"
 
 #: package/contents/ui/HiddenItemsView.qml:46
 #, kde-format

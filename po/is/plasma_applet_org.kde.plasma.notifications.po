@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-14 00:44+0000\n"
-"PO-Revision-Date: 2025-04-18 12:04+0000\n"
+"PO-Revision-Date: 2025-09-17 13:01+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
@@ -21,7 +21,7 @@ msgstr ""
 "\n"
 "\n"
 "\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #: components/ActionContainer.qml:80
 #, kde-format
@@ -355,7 +355,7 @@ msgstr "Skjáir eru speglaðir"
 #, kde-format
 msgctxt "Do not disturb because fullscreen app is focused"
 msgid "Fullscreen app is focused"
-msgstr ""
+msgstr "Forrit sem fyllir skjá er í fókus"
 
 #: FullRepresentation.qml:510 FullRepresentation.qml:516
 #, kde-format

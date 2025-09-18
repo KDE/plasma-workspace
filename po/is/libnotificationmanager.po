@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-23 00:45+0000\n"
-"PO-Revision-Date: 2025-04-18 11:16+0000\n"
+"PO-Revision-Date: 2025-09-17 13:03+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.04.3\n"
 
 #: abstractnotificationsmodel.cpp:340
 #, kde-format
@@ -103,29 +103,23 @@ msgid "Application closed unexpectedly."
 msgstr "Forritið hætti óvænt."
 
 #: notifications.cpp:912
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Unread Notifications"
+#, kde-format
 msgctxt "@title"
 msgid "Unread Notification"
 msgid_plural "Unread Notifications"
-msgstr[0] "Ólesnar tilkynningar"
+msgstr[0] "Ólesin tilkynning"
 msgstr[1] "Ólesnar tilkynningar"
 
 #: notifications.cpp:914
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid "%1 notifications were received while Do Not Disturb was active."
+#, kde-format
 msgctxt "@info"
 msgid "%1 notification was received while Do Not Disturb was active."
 msgid_plural "%1 notifications were received while Do Not Disturb was active."
-msgstr[0] "%1 tilkynningar bárust á meðan stillt er á Ekki ónáða."
-msgstr[1] "%1 tilkynningar bárust á meðan stillt er á Ekki ónáða."
+msgstr[0] "%1 tilkynning barst á meðan stillt var á Ekki ónáða."
+msgstr[1] "%1 tilkynningar bárust á meðan stillt var á Ekki ónáða."
 
 #: notifications.cpp:924
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Unread Notifications"
+#, kde-format
 msgctxt "@action:button Show the notifications popup"
 msgid "Show Notifications"
-msgstr "Ólesnar tilkynningar"
+msgstr "Sýna tilkynningar"

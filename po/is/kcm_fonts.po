@@ -7,20 +7,20 @@
 # Dofri Jonsson <imp@hell.is>, 2004.
 # Arnar Leosson <leosson@frisurf.no>, 2005.
 # Sveinn í Felli <sveinki@nett.is>, 2007, 2008, 2010, 2022, 2023.
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Guðmundur Erlingsson <gudmundure@gmail.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Guðmundur Erlingsson <gudmundure@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-13 00:45+0000\n"
-"PO-Revision-Date: 2024-01-26 20:52+0000\n"
-"Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
+"PO-Revision-Date: 2025-09-17 13:12+0000\n"
+"Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 25.04.3\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
@@ -144,7 +144,7 @@ msgctxt ""
 "Sub-string in a font name; 'Display' as in display font — a type of font "
 "inappropriate for computer screens"
 msgid "Display"
-msgstr ""
+msgstr "Skrautletur"
 
 #: ui/main.qml:42
 #, kde-format
@@ -177,6 +177,9 @@ msgid ""
 "Display_typeface'>not intended for use on computer displays</link>, and may "
 "produce odd results. Consider using a different font."
 msgstr ""
+"Skrautletur er <link url='https://wikipedia.org/wiki/Display_typeface'>ekki "
+"ætlað til notkunar á tölvuskjám</link> og útkoman getur verið skrítin. "
+"Prófaðu að nota annað letur."
 
 #: ui/main.qml:107
 #, kde-format
@@ -194,19 +197,18 @@ msgid ""
 "Plasma is not designed to be usable with fonts smaller than 4pt. Size has "
 "been reset to 4pt."
 msgstr ""
+"Plasma er ekki hannað til að vera nothæft með letri sem er minna en 4 pt. "
+"Stærðin var endurstillt í 4 pt."
 
 #: ui/main.qml:133
-#, fuzzy, kde-format
-#| msgid ""
-#| "Very large fonts may produce odd-looking results. Instead of using a very "
-#| "large font size, consider adjusting the global screen scale."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "Very small fonts may produce odd-looking results. Instead of using a very "
 "small font size, consider adjusting the global screen scale."
 msgstr ""
-"Það kemur ekki alltaf vel út að nota mjög stórt letur. Prófaðu að breyta "
-"skjáupplausninni í staðinn fyrir að nota mjög stórt letur."
+"Það kemur ekki alltaf vel út að nota mjög smátt letur. Prófaðu að breyta "
+"skjáupplausninni í staðinn fyrir að nota mjög smátt letur."
 
 #: ui/main.qml:154
 #, kde-format
