@@ -370,6 +370,12 @@ void KdedDeviceNotifications::onDeviceAdded(const UdevDevice &device)
         return;
     }
 
+    // 09 = USB Hub. Ignore those as they are often also built into monitors
+    // and would appear/disappear whenever the display is turned on/off.
+    if (device.sysfsProperty("bDeviceClass") == QLatin1String("09")) {
+        return;
+    }
+
     // By the time we receive the "removed" signal, the device's properties
     // are already discarded, so we need to remember whether it is removable
     // here, so we know that when the device is removed, likewise remember its name.
