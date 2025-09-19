@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-31 00:44+0000\n"
+"POT-Creation-Date: 2025-09-19 02:39+0000\n"
 "PO-Revision-Date: 2025-02-13 22:10+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -404,17 +404,17 @@ msgstr "Bersihkan Riwayat"
 msgid "All History"
 msgstr "Bersihkan Riwayat"
 
-#: declarative/qml/ClipboardMenu.qml:328
+#: declarative/qml/ClipboardMenu.qml:329
 #, kde-format
 msgid "Starred Only"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:434
+#: declarative/qml/ClipboardMenu.qml:436
 #, kde-format
 msgid "No matches"
 msgstr "Tidak ada yang cocok"
 
-#: declarative/qml/ClipboardMenu.qml:434
+#: declarative/qml/ClipboardMenu.qml:436
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Papan Klip kosong"

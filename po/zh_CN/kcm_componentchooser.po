@@ -14,9 +14,9 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/plasma-workspace/kcm_componentchooser."
+"X-Crowdin-File: /kf6-stable/messages/plasma-workspace/kcm_componentchooser."
 "pot\n"
-"X-Crowdin-File-ID: 57178\n"
+"X-Crowdin-File-ID: 57590\n"
 
 #: applicationmodel.cpp:67
 #, kde-format

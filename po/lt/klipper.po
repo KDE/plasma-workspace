@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-31 00:44+0000\n"
+"POT-Creation-Date: 2025-09-19 02:39+0000\n"
 "PO-Revision-Date: 2025-09-04 13:15+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
@@ -406,17 +406,17 @@ msgstr "Išvalyti istoriją"
 msgid "All History"
 msgstr "Visa istorija"
 
-#: declarative/qml/ClipboardMenu.qml:328
+#: declarative/qml/ClipboardMenu.qml:329
 #, kde-format
 msgid "Starred Only"
 msgstr "Tik žvaigždute pažymėti elementai"
 
-#: declarative/qml/ClipboardMenu.qml:434
+#: declarative/qml/ClipboardMenu.qml:436
 #, kde-format
 msgid "No matches"
 msgstr "Nėra atitikmenų"
 
-#: declarative/qml/ClipboardMenu.qml:434
+#: declarative/qml/ClipboardMenu.qml:436
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Iškarpinė tuščia"

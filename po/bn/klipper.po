@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-31 00:44+0000\n"
+"POT-Creation-Date: 2025-09-19 02:39+0000\n"
 "PO-Revision-Date: 2010-06-01 11:22-0700\n"
 "Last-Translator: Deepayan Sarkar <deepayan.sarkar@gmail.com>\n"
 "Language-Team: Bengali <kde-translation@bengalinux.org>\n"
@@ -378,18 +378,18 @@ msgstr "ক্লিপবোর্ড ইতিহাস"
 msgid "All History"
 msgstr "ক্লিপবোর্ড ইতিহাস"
 
-#: declarative/qml/ClipboardMenu.qml:328
+#: declarative/qml/ClipboardMenu.qml:329
 #, kde-format
 msgid "Starred Only"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:434
+#: declarative/qml/ClipboardMenu.qml:436
 #, fuzzy, kde-format
 #| msgid "<no matches>"
 msgid "No matches"
 msgstr "<কোন মিল পাওয়া যায়নি>"
 
-#: declarative/qml/ClipboardMenu.qml:434
+#: declarative/qml/ClipboardMenu.qml:436
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "ক্লিপবোর্ড ফাঁকা"

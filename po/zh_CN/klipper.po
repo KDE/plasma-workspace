@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-31 00:44+0000\n"
+"POT-Creation-Date: 2025-09-19 02:39+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -14,8 +14,8 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/plasma-workspace/klipper.pot\n"
-"X-Crowdin-File-ID: 42995\n"
+"X-Crowdin-File: /kf6-stable/messages/plasma-workspace/klipper.pot\n"
+"X-Crowdin-File-ID: 50888\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -375,22 +375,21 @@ msgid "Clear History"
 msgstr "清除历史记录"
 
 #: declarative/qml/ClipboardMenu.qml:324
-#, fuzzy, kde-format
-#| msgid "Clear History"
+#, kde-format
 msgid "All History"
-msgstr "清除历史记录"
+msgstr "所有历史记录"
 
-#: declarative/qml/ClipboardMenu.qml:328
+#: declarative/qml/ClipboardMenu.qml:329
 #, kde-format
 msgid "Starred Only"
-msgstr ""
+msgstr "仅星标项目"
 
-#: declarative/qml/ClipboardMenu.qml:434
+#: declarative/qml/ClipboardMenu.qml:436
 #, kde-format
 msgid "No matches"
-msgstr "无匹配条目"
+msgstr "没有匹配的内容"
 
-#: declarative/qml/ClipboardMenu.qml:434
+#: declarative/qml/ClipboardMenu.qml:436
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "剪贴板为空"
@@ -416,15 +415,14 @@ msgid "Remove from history"
 msgstr "移出历史记录"
 
 #: declarative/qml/DelegateToolButtons.qml:58
-#, fuzzy, kde-format
-#| msgid "Remove from history"
+#, kde-format
 msgid "Remove Star"
-msgstr "移出历史记录"
+msgstr "移除星标"
 
 #: declarative/qml/DelegateToolButtons.qml:58
 #, kde-format
 msgid "Star"
-msgstr ""
+msgstr "星标"
 
 #: declarative/qml/EditPage.qml:64
 #, kde-format
@@ -639,10 +637,9 @@ msgid "Icon:"
 msgstr "图标："
 
 #: historymodel.cpp:278
-#, fuzzy, kde-format
-#| msgid "The clipboard history will store up to this many items."
+#, kde-format
 msgid "The clipboard history contains starred items. Clear them too?"
-msgstr "剪贴板历史记录保存的记录条数。"
+msgstr "剪贴板历史记录包含星标项目。也要清除它们吗？"
 
 #: historymodel.cpp:279 historymodel.cpp:299
 #, kde-format
@@ -652,12 +649,12 @@ msgstr "清除剪贴板历史记录"
 #: historymodel.cpp:280
 #, kde-format
 msgid "Clear Everything"
-msgstr ""
+msgstr "清除所有内容"
 
 #: historymodel.cpp:281
 #, kde-format
 msgid "Keep Starred Items"
-msgstr ""
+msgstr "保留星标项目"
 
 #: historymodel.cpp:298
 #, kde-format
@@ -673,12 +670,12 @@ msgstr "%1x%2"
 #: historymodel.cpp:562
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
-msgstr ""
+msgstr "此项目已加星标。您确定要将其从历史记录中移除吗？"
 
 #: historymodel.cpp:563
 #, kde-format
 msgid "Remove Starred Item"
-msgstr ""
+msgstr "移除星标项目"
 
 #: klipper.cpp:91
 #, kde-format

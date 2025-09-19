@@ -14,8 +14,8 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/plasma-workspace/kcm_lookandfeel.pot\n"
-"X-Crowdin-File-ID: 43717\n"
+"X-Crowdin-File: /kf6-stable/messages/plasma-workspace/kcm_lookandfeel.pot\n"
+"X-Crowdin-File-ID: 52256\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -316,7 +316,7 @@ msgstr "欢迎屏幕"
 #: ui/SimpleOptions.qml:19
 #, kde-format
 msgid "The following will be applied by this Global Theme:"
-msgstr "此全局主题将应用以下配置："
+msgstr "应用此全局主题的以下设置："
 
 #: ui/SimpleOptions.qml:33
 #, kde-format
@@ -366,7 +366,7 @@ msgstr "应用 %1 吗？"
 #: ui/StaticLookAndFeel.qml:143
 #, kde-format
 msgid "Choose what to apply…"
-msgstr "选择要应用的内容…"
+msgstr "选择要应用的设置…"
 
 #: ui/StaticLookAndFeel.qml:143
 #, kde-format
