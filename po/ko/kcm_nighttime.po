@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-06 00:44+0000\n"
+"POT-Creation-Date: 2025-09-19 00:44+0000\n"
 "PO-Revision-Date: 2025-07-20 01:29+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -206,17 +206,17 @@ msgctxt ""
 msgid "Click to choose your location on the map."
 msgstr "클릭하여 지도에서 위치를 선택하십시오."
 
-#: ui/WorldMap.qml:116
+#: ui/WorldMap.qml:189
 #, kde-format
 msgid "Zoom in"
 msgstr "확대"
 
-#: ui/WorldMap.qml:133
+#: ui/WorldMap.qml:206
 #, kde-format
 msgid "Zoom out"
 msgstr "축소"
 
-#: ui/WorldMap.qml:231
+#: ui/WorldMap.qml:235
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""

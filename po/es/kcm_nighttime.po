@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_nighttime\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-06 00:44+0000\n"
+"POT-Creation-Date: 2025-09-19 00:44+0000\n"
 "PO-Revision-Date: 2025-09-04 18:54+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -205,17 +205,17 @@ msgctxt ""
 msgid "Click to choose your location on the map."
 msgstr "Haga clic para escoger su ubicación en el mapa."
 
-#: ui/WorldMap.qml:116
+#: ui/WorldMap.qml:189
 #, kde-format
 msgid "Zoom in"
 msgstr "Ampliar"
 
-#: ui/WorldMap.qml:133
+#: ui/WorldMap.qml:206
 #, kde-format
 msgid "Zoom out"
 msgstr "Reducir"
 
-#: ui/WorldMap.qml:231
+#: ui/WorldMap.qml:235
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""

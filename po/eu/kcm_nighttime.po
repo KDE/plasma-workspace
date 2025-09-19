@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-06 00:44+0000\n"
+"POT-Creation-Date: 2025-09-19 00:44+0000\n"
 "PO-Revision-Date: 2025-09-04 21:18+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -205,17 +205,17 @@ msgctxt ""
 msgid "Click to choose your location on the map."
 msgstr "Egin klik mapan zure kokapena hautatzeko."
 
-#: ui/WorldMap.qml:116
+#: ui/WorldMap.qml:189
 #, kde-format
 msgid "Zoom in"
 msgstr "Zooma gerturatu"
 
-#: ui/WorldMap.qml:133
+#: ui/WorldMap.qml:206
 #, kde-format
 msgid "Zoom out"
 msgstr "Zooma urrundu"
 
-#: ui/WorldMap.qml:231
+#: ui/WorldMap.qml:235
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""

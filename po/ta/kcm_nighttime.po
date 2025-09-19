@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-06 00:44+0000\n"
+"POT-Creation-Date: 2025-09-19 00:44+0000\n"
 "PO-Revision-Date: 2025-09-07 18:04+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -201,17 +201,17 @@ msgctxt ""
 msgid "Click to choose your location on the map."
 msgstr "நிலப்படத்தில் இருப்பிடத்தை தேர்ந்தெடுக்க கிளிக் செய்யவும்."
 
-#: ui/WorldMap.qml:116
+#: ui/WorldMap.qml:189
 #, kde-format
 msgid "Zoom in"
 msgstr "பெரிதாக்கு"
 
-#: ui/WorldMap.qml:133
+#: ui/WorldMap.qml:206
 #, kde-format
 msgid "Zoom out"
 msgstr "சிறிதாக்கு"
 
-#: ui/WorldMap.qml:231
+#: ui/WorldMap.qml:235
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
