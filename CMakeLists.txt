@@ -43,6 +43,7 @@ include(ECMDeprecationSettings)
 include(ECMQmlModule)
 
 find_package(PkgConfig REQUIRED)
+pkg_check_modules(Flatpak IMPORTED_TARGET flatpak>=0.11.8)
 pkg_check_modules(PipeWire QUIET IMPORTED_TARGET libpipewire-0.3)
 add_feature_info(PipeWire PipeWire_FOUND "Required for camera indicator applet and Wayland screencasting testing")
 set(BUILD_CAMERAINDICATOR_DEFAULT OFF)
