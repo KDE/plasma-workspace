@@ -9,6 +9,7 @@
 */
 
 #include "sourcesmodel.h"
+#include "notifyrcpaths.h"
 
 #include <QCollator>
 #include <QDBusConnection>
@@ -297,11 +298,7 @@ void SourcesModel::load()
 
     QStringList desktopEntries;
 
-    // Search for notifyrc files in `/knotifications6` folders first, but also in `/knotifications5` for compatibility with KF5 applications
-    const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("knotifications6"), QStandardPaths::LocateDirectory)
-        + QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("knotifications5"), QStandardPaths::LocateDirectory);
-    const QStringList filePaths = KFileUtils::findAllUniqueFiles(dirs, {QStringLiteral("*.notifyrc")});
-
+    const QStringList filePaths = KFileUtils::findAllUniqueFiles(NotifyRcPaths::allSearchPaths(), {QStringLiteral("*.notifyrc")});
     for (const QString &filePath : filePaths) {
         const QFileInfo fileInfo(filePath);
         const QString fileName = fileInfo.fileName();
@@ -312,7 +309,8 @@ void SourcesModel::load()
         // (more priority goest first), but for `addConfigSources() it is the opposite
         QStringList configSources = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("%2/%1").arg(fileName).arg(dirName));
         std::reverse(configSources.begin(), configSources.end());
-        config->addConfigSources(configSources);
+        // if this didn't find anything, it's a notifyrc file from a Flatpak
+        config->addConfigSources(configSources.isEmpty() ? QStringList{filePath} : configSources);
 
         KConfigGroup globalGroup(config, QLatin1String("Global"));
 

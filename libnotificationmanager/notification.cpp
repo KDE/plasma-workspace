@@ -24,6 +24,7 @@
 #include <KService>
 
 #include "debug.h"
+#include "notifyrcpaths.h"
 
 using namespace NotificationManager;
 using namespace Qt::StringLiterals;
@@ -357,19 +358,7 @@ void Notification::Private::setDesktopEntry(const QString &desktopEntry)
     configurableNotifyRc = false;
     if (!notifyRcName.isEmpty()) {
         // Check whether the application actually has notifications we can configure
-        KConfig config(notifyRcName + QStringLiteral(".notifyrc"), KConfig::NoGlobals);
-
-        QStringList configSources =
-            QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("knotifications6/%1.notifyrc").arg(notifyRcName));
-        // Keep compatibility with KF5 applications
-        if (configSources.isEmpty()) {
-            configSources = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("knotifications5/%1.notifyrc").arg(notifyRcName));
-        }
-        // `QStandardPaths` follows the order of precedence given by `$XDG_DATA_DIRS
-        // (more priority goest first), but for `addConfigSources() it is the opposite
-        std::reverse(configSources.begin(), configSources.end());
-        config.addConfigSources(configSources);
-
+        KConfig config(NotifyRcPaths::locate(notifyRcName), KConfig::NoGlobals);
         KConfigGroup globalGroup(&config, u"Global"_s);
 
         const QString iconName = globalGroup.readEntry("IconName");

@@ -1,5 +1,12 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"libnotificationmanager\")
 
+if (TARGET PkgConfig::Flatpak)
+    set(HAVE_FLATPAK ON)
+else()
+    set(HAVE_FLATPAK OFF)
+endif()
+configure_file(libnotificationmanager-config.h.in ${CMAKE_CURRENT_BINARY_DIR}/libnotificationmanager-config.h)
+
 if(BUILD_TESTING)
    add_subdirectory(autotests)
 endif()
@@ -13,6 +20,7 @@ set(notificationmanager_LIB_SRCS
     fullscreentracker.cpp
     notifications.cpp
     notification.cpp
+    notifyrcpaths.cpp
 
     abstractnotificationsmodel.cpp
     notificationsmodel.cpp
@@ -93,6 +101,9 @@ target_link_libraries(notificationmanager
         KF6::Service
         Canberra::Canberra
 )
+if (TARGET PkgConfig::Flatpak)
+    target_link_libraries(notificationmanager PRIVATE PkgConfig::Flatpak)
+endif()
 
 set_target_properties(notificationmanager PROPERTIES
                       VERSION ${PROJECT_VERSION}
