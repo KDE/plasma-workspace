@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-26 00:43+0000\n"
+"POT-Creation-Date: 2025-09-20 00:44+0000\n"
 "PO-Revision-Date: 2021-04-11 13:39+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc-"
@@ -101,13 +101,13 @@ msgstr ""
 "ലോക്ക് സ്ക്രീൻ പിന്തുണയില്ലാതെ ആരംഭിക്കുന്നു. മറ്റ് ഘടകങ്ങൾ ലോക്ക് സ്ക്രീൻ നൽകുന്നുവെങ്കിൽ മാത്രം "
 "ആവശ്യമാണ്."
 
-#: server.cpp:776
+#: server.cpp:775
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr ""
 
-#: server.cpp:799
+#: server.cpp:798
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -116,7 +116,7 @@ msgid ""
 "%1"
 msgstr ""
 
-#: server.cpp:1059
+#: server.cpp:1058
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""

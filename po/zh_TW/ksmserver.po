@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-26 00:43+0000\n"
+"POT-Creation-Date: 2025-09-20 00:44+0000\n"
 "PO-Revision-Date: 2024-10-02 17:26+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -111,13 +111,13 @@ msgid ""
 "the lock screen."
 msgstr "以不支援鎖定螢幕的方式啟動。只在有其他組件提供鎖定螢幕時才需要。"
 
-#: server.cpp:776
+#: server.cpp:775
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "［未知］"
 
-#: server.cpp:799
+#: server.cpp:798
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -129,7 +129,7 @@ msgstr ""
 "三名使用者：\n"
 "%1"
 
-#: server.cpp:1059
+#: server.cpp:1058
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""

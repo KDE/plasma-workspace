@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-26 00:43+0000\n"
+"POT-Creation-Date: 2025-09-20 00:44+0000\n"
 "PO-Revision-Date: 2015-02-04 14:12+0000\n"
 "Last-Translator: Dino Babahmetovic <dbabahmeto1@etf.unsa.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -114,13 +114,13 @@ msgid ""
 "the lock screen."
 msgstr ""
 
-#: server.cpp:776
+#: server.cpp:775
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr ""
 
-#: server.cpp:799
+#: server.cpp:798
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -129,7 +129,7 @@ msgid ""
 "%1"
 msgstr ""
 
-#: server.cpp:1059
+#: server.cpp:1058
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""

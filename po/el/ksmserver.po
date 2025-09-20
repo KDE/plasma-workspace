@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-26 00:43+0000\n"
+"POT-Creation-Date: 2025-09-20 00:44+0000\n"
 "PO-Revision-Date: 2024-08-20 10:57+0300\n"
 "Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -111,13 +111,13 @@ msgstr ""
 "Εκκίνηση χωρίς υποστήριξη κλειδώματος οθόνης. Χρειάζεται μόνο αν κάποιο άλλο "
 "συστατικό παρέχει το κλείδωμα της οθόνης."
 
-#: server.cpp:776
+#: server.cpp:775
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[άγνωστο]"
 
-#: server.cpp:799
+#: server.cpp:798
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -130,7 +130,7 @@ msgstr ""
 "κυριότεροι καταναλωτές πόρων συνεδρίας:\n"
 "%1"
 
-#: server.cpp:1059
+#: server.cpp:1058
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""

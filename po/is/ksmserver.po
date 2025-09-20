@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-26 00:43+0000\n"
+"POT-Creation-Date: 2025-09-20 00:44+0000\n"
 "PO-Revision-Date: 2024-12-13 21:20+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -114,13 +114,13 @@ msgstr ""
 "Byrjar án stuðnings við lásskjá. Einungis er þörf á þessu ef aðrir hlutar "
 "útvega lásskjáinn."
 
-#: server.cpp:776
+#: server.cpp:775
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[óþekkt]"
 
-#: server.cpp:799
+#: server.cpp:798
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -133,7 +133,7 @@ msgstr ""
 "setutilfanga:\n"
 "%1"
 
-#: server.cpp:1059
+#: server.cpp:1058
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""
