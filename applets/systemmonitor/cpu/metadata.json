@@ -160,7 +160,7 @@
         "Name[tr]": "Toplam CPU Kullanımı",
         "Name[uk]": "Загальне використання процесора",
         "Name[vi]": "Tổng lượng dùng CPU",
-        "Name[zh_CN]": "总 CPU 使用情况",
+        "Name[zh_CN]": "总 CPU 使用率",
         "Name[zh_TW]": "總 CPU 用量",
         "Website": "https://www.kde.org/plasma-desktop"
     },
