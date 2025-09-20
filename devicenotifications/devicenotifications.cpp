@@ -372,11 +372,18 @@ void KdedDeviceNotifications::notifyOutputAdded()
         return;
     }
 
-    KNotification::event(QStringLiteral("deviceAdded"),
-                         i18nc("@title:notifications", "Display Detected"),
-                         i18n("A display has been connected."),
-                         QStringLiteral("video-display-add"),
-                         KNotification::DefaultEvent);
+    if (m_displayRemovedNotification) {
+        m_displayRemovedNotification->close();
+        m_displayRemovedNotification = nullptr;
+    }
+
+    m_displayAddedNotification = new KNotification(QStringLiteral("deviceAdded"));
+    m_displayAddedNotification->setFlags(KNotification::DefaultEvent);
+    m_displayAddedNotification->setIconName(QStringLiteral("video-display-add"));
+    m_displayAddedNotification->setTitle(i18nc("@title:notifications", "Display Detected"));
+    m_displayAddedNotification->setText(i18n("A display has been connected."));
+    m_displayAddedNotification->sendEvent();
+
     m_deviceAddedTimer.start();
 }
 
@@ -386,11 +393,18 @@ void KdedDeviceNotifications::notifyOutputRemoved()
         return;
     }
 
-    KNotification::event(QStringLiteral("deviceRemoved"),
-                         i18nc("@title:notifications", "Display Removed"),
-                         i18n("A display has been disconnected."),
-                         QStringLiteral("video-display-remove"),
-                         KNotification::DefaultEvent);
+    if (m_displayAddedNotification) {
+        m_displayAddedNotification->close();
+        m_displayAddedNotification = nullptr;
+    }
+
+    m_displayRemovedNotification = new KNotification(QStringLiteral("deviceRemoved"));
+    m_displayRemovedNotification->setFlags(KNotification::DefaultEvent);
+    m_displayRemovedNotification->setIconName(QStringLiteral("video-display-remove"));
+    m_displayRemovedNotification->setTitle(i18nc("@title:notifications", "Display Removed"));
+    m_displayRemovedNotification->setText(i18n("A display has been disconnected."));
+    m_displayRemovedNotification->sendEvent();
+
     m_deviceRemovedTimer.start();
 }
 

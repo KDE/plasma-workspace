@@ -134,4 +134,7 @@ private:
 
     QPointer<KNotification> m_usbDeviceAddedNotification;
     QPointer<KNotification> m_usbDeviceRemovedNotification;
+
+    QPointer<KNotification> m_displayAddedNotification;
+    QPointer<KNotification> m_displayRemovedNotification;
 };
