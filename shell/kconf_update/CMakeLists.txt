@@ -21,3 +21,10 @@ install(TARGETS plasmashell-6.0-keep-default-floating-setting-for-plasma-5-panel
 
 install(FILES plasmashell-6.0-keep-custom-position-of-panels.upd DESTINATION ${KDE_INSTALL_KCONFUPDATEDIR})
 install(TARGETS plasmashell-6.0-keep-custom-position-of-panels DESTINATION ${KDE_INSTALL_LIBDIR}/kconf_update_bin/)
+
+add_executable(plasmashell-6.5-remove-stop-activity-shortcut)
+target_sources(plasmashell-6.5-remove-stop-activity-shortcut PRIVATE plasmashell-6.5-remove-stop-activity-shortcut.cpp)
+target_link_libraries(plasmashell-6.5-remove-stop-activity-shortcut PRIVATE KF6::ConfigCore KF6::GlobalAccel)
+
+install(FILES plasmashell-6.5-remove-stop-activity-shortcut.upd DESTINATION ${KDE_INSTALL_KCONFUPDATEDIR})
+install(TARGETS plasmashell-6.5-remove-stop-activity-shortcut DESTINATION ${KDE_INSTALL_LIBDIR}/kconf_update_bin/)
