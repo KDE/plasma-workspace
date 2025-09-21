@@ -1,14 +1,15 @@
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
+# Spanish translations for freespacenotifier.po package.
+# Copyright (C) 2010-2025 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
 #
-# Kira J. Fernandez <kirajfdez@gmail.com>, 2010.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2014, 2020, 2021.
+# SPDX-FileCopyrightText: 2010 Kira J. Fernandez <kirajfdez@gmail.com>
+# SPDX-FileCopyrightText: 2014, 2020, 2021, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
-"Project-Id-Version: kded_susefreespacenotifier\n"
+"Project-Id-Version: freespacenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-05 05:54+0000\n"
-"PO-Revision-Date: 2021-05-27 01:04+0200\n"
+"PO-Revision-Date: 2025-09-20 20:44+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -18,12 +19,12 @@ msgstr ""
 "X-Poedit-Language: Spanish\n"
 "X-Poedit-Country: SPAIN\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.04.1\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: freespacenotifier.cpp:91
 #, kde-format
 msgid "Configure Warning…"
-msgstr "Configurar advertencia..."
+msgstr "Configurar advertencia…"
 
 #: freespacenotifier.cpp:95
 #, kde-format
@@ -73,7 +74,7 @@ msgid ""
 "(%2%)."
 msgstr ""
 "Su carpeta personal se está quedando sin espacio en disco: le quedan %1 MiB "
-"(%2%)."
+"(%2 %)."
 
 #: module.cpp:45
 #, kde-format
@@ -81,38 +82,11 @@ msgid ""
 "Your Root partition is running out of disk space, you have %1 MiB remaining "
 "(%2%)."
 msgstr ""
-"Su carpeta raíz se está quedando sin espacio en disco: le quedan %1 MiB "
-"(%2%)."
+"Su carpeta raíz se está quedando sin espacio en disco: le quedan %1 MiB (%2 "
+"%)."
 
 #: module.cpp:62
 #, kde-format
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"
 msgstr "General"
-
-#~ msgid "Low Disk Space"
-#~ msgstr "Poco espacio en disco"
-
-#~ msgid "Remaining space in your Home folder: %1 MiB"
-#~ msgstr "Espacio restante en su carpeta personal: %1 MiB"
-
-#~ msgctxt "Allows the user to hide this notifier item"
-#~ msgid "Hide"
-#~ msgstr "Ocultar"
-
-#~ msgctxt ""
-#~ "Warns the user that the system is running low on space on his home "
-#~ "folder, indicating the percentage and absolute MiB size remaining, and "
-#~ "asks if the user wants to do something about it"
-#~ msgid ""
-#~ "You are running low on disk space on your home folder (currently %2%, %1 "
-#~ "MiB free).\n"
-#~ "Would you like to run a file manager to free some disk space?"
-#~ msgstr ""
-#~ "Le queda poco espacio de disco en su carpeta personal (actualmente un "
-#~ "%2%, %1 MiB libres).\n"
-#~ "¿Desea abrir un gestor de archivos para liberar algo de espacio?"
-
-#~ msgctxt "Closes the notification"
-#~ msgid "Do Nothing"
-#~ msgstr "No hacer nada"
