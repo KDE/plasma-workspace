@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-19 00:44+0000\n"
-"PO-Revision-Date: 2025-06-28 17:07+0400\n"
+"PO-Revision-Date: 2025-09-20 20:24+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -113,7 +113,7 @@ msgstr "أضف جديدًا"
 #, kde-format
 msgctxt "@title:menu accessible menu button"
 msgid "Add new application or script"
-msgstr ""
+msgstr "إضافة تطبيق أو سكربت"
 
 #: ui/main.qml:73
 #, kde-format
@@ -122,11 +122,10 @@ msgid "Application…"
 msgstr "تطبيق…"
 
 #: ui/main.qml:75
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgctxt "@action:inmenu accessible"
 msgid "Add application"
-msgstr "التطبيقات"
+msgstr "أضف تطبيق..."
 
 #: ui/main.qml:79
 #, kde-format
@@ -135,11 +134,10 @@ msgid "Login Script…"
 msgstr "سكربت ولوج…"
 
 #: ui/main.qml:81
-#, fuzzy, kde-format
-#| msgid "Login Scripts"
+#, kde-format
 msgctxt "@action:inmenu accessible"
 msgid "Add login script"
-msgstr "سكربتات الولوج"
+msgstr "أضف سكربت الولوج"
 
 #: ui/main.qml:85
 #, kde-format
@@ -148,11 +146,10 @@ msgid "Logout Script…"
 msgstr "سكربت خروج…"
 
 #: ui/main.qml:87
-#, fuzzy, kde-format
-#| msgid "Logout Scripts"
+#, kde-format
 msgctxt "@action:inmenu accessible"
 msgid "Add logout script"
-msgstr "سكربتات الخروج"
+msgstr "أضف سكربت الخروج"
 
 #: ui/main.qml:121
 #, kde-format

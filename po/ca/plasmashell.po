@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-21 00:45+0000\n"
+"POT-Creation-Date: 2025-09-21 00:44+0000\n"
 "PO-Revision-Date: 2025-01-23 09:48+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -388,43 +388,38 @@ msgstr "Activa el llançador d'aplicacions"
 msgid "Show Activity Switcher"
 msgstr "Mostra el commutador d'activitats"
 
-#: shellcorona.cpp:248
-#, kde-format
-msgid "Stop Current Activity"
-msgstr "Atura l'activitat actual"
-
-#: shellcorona.cpp:256
+#: shellcorona.cpp:247
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Canvia a l'activitat anterior"
 
-#: shellcorona.cpp:264
+#: shellcorona.cpp:255
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Canvia a l'activitat següent"
 
-#: shellcorona.cpp:279
+#: shellcorona.cpp:270
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "Activa l'entrada %1 del gestor de tasques"
 
-#: shellcorona.cpp:311
+#: shellcorona.cpp:302
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "Gestiona escriptoris i plafons…"
 
-#: shellcorona.cpp:333
+#: shellcorona.cpp:324
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Mou el focus del teclat entre els plafons"
 
-#: shellcorona.cpp:2204
+#: shellcorona.cpp:2195
 #, kde-format
 msgid "Add Panel"
 msgstr "Afegeix un plafó"
 
-#: shellcorona.cpp:2287
+#: shellcorona.cpp:2278
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
@@ -461,3 +456,6 @@ msgstr "Nombre de plafons"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Compta els plafons"
+
+#~ msgid "Stop Current Activity"
+#~ msgstr "Atura l'activitat actual"

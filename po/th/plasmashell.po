@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-21 00:45+0000\n"
+"POT-Creation-Date: 2025-09-21 00:44+0000\n"
 "PO-Revision-Date: 2025-03-04 14:42+0700\n"
 "Last-Translator: Pongsakorn S. <kde@xerusion.me>\n"
 "Language-Team: Thai\n"
@@ -378,43 +378,38 @@ msgstr "เปิดใช้งานตัวเรียกใช้งาน
 msgid "Show Activity Switcher"
 msgstr "แสดงตัวสลับกิจกรรม"
 
-#: shellcorona.cpp:248
-#, kde-format
-msgid "Stop Current Activity"
-msgstr "หยุดกิจกรรมปัจจุบัน"
-
-#: shellcorona.cpp:256
+#: shellcorona.cpp:247
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "สลับไปยังกิจกรรมก่อนหน้า"
 
-#: shellcorona.cpp:264
+#: shellcorona.cpp:255
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "สลับไปยังกิจกรรมถัดไป"
 
-#: shellcorona.cpp:279
+#: shellcorona.cpp:270
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "เปิดใช้งานรายการ Task manager %1"
 
-#: shellcorona.cpp:311
+#: shellcorona.cpp:302
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "จัดการเดสก์ท็อปและแผง..."
 
-#: shellcorona.cpp:333
+#: shellcorona.cpp:324
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "ย้ายโฟกัสของแป้นพิมพ์ระหว่างแผง"
 
-#: shellcorona.cpp:2204
+#: shellcorona.cpp:2195
 #, kde-format
 msgid "Add Panel"
 msgstr "เพิ่มแผง"
 
-#: shellcorona.cpp:2287
+#: shellcorona.cpp:2278
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
@@ -451,3 +446,6 @@ msgstr "จํานวนแผง"
 #, kde-format
 msgid "Counts the panels"
 msgstr "นับแผง"
+
+#~ msgid "Stop Current Activity"
+#~ msgstr "หยุดกิจกรรมปัจจุบัน"
