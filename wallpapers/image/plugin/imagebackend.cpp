@@ -39,6 +39,8 @@ ImageBackend::ImageBackend(QObject *parent)
 {
     const QString slideActionId = QStringLiteral("Slideshow Wallpaper Next Image");
     m_nextSlideAction->setObjectName(slideActionId);
+    m_nextSlideAction->setProperty("componentName", QStringLiteral("plasmashell"));
+    m_nextSlideAction->setProperty("componentDisplayName", QStringLiteral("plasmashell"));
     KGlobalAccel::self()->setGlobalShortcut(m_nextSlideAction, QKeySequence());
     m_nextSlideAction->setShortcut(KGlobalAccel::self()->globalShortcut(QStringLiteral("plasmashell"), slideActionId).value(0));
     connect(m_nextSlideAction, &QAction::triggered, this, &ImageBackend::nextSlide);
