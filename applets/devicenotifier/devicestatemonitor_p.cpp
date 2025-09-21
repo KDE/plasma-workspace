@@ -11,13 +11,11 @@
 #include <QTimer>
 
 #include <Solid/Camera>
-#include <Solid/Device>
 #include <Solid/DeviceNotifier>
 #include <Solid/GenericInterface>
 #include <Solid/OpticalDisc>
 #include <Solid/OpticalDrive>
 #include <Solid/PortableMediaPlayer>
-#include <Solid/StorageAccess>
 #include <Solid/StorageDrive>
 #include <Solid/StorageVolume>
 

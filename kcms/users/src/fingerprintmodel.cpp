@@ -5,7 +5,6 @@
 */
 
 #include "fingerprintmodel.h"
-#include "fprintdevice.h"
 
 FingerprintModel::FingerprintModel(QObject *parent)
     : QObject(parent)

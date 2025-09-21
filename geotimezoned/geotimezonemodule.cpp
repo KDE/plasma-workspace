@@ -15,7 +15,6 @@
 #include <QDBusPendingCallWatcher>
 #include <QJsonDocument>
 #include <QJsonObject>
-#include <QNetworkAccessManager>
 #include <QNetworkReply>
 #include <QRandomGenerator>
 #include <QScopeGuard>

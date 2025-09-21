@@ -23,7 +23,6 @@
 
 #ifdef PACKAGEKIT_OFFLINE_UPDATES
 #include <PackageKit/Daemon>
-#include <PackageKit/Offline>
 #endif
 
 #include <KLocalizedString>

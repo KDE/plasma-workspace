@@ -7,10 +7,8 @@
 #include "devicenotifications.h"
 
 #include <QGuiApplication>
-#include <QSocketNotifier>
 
 #include <KLocalizedString>
-#include <KNotification>
 #include <KPluginFactory>
 
 #include <chrono>

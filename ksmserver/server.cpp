@@ -57,7 +57,6 @@
 
 #include <KNotification>
 #include <KSharedConfig>
-#include <QTemporaryFile>
 #include <kactioncollection.h>
 #include <kauthorized.h>
 #include <kconfig.h>

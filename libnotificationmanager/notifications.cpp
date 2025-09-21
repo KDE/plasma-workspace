@@ -11,7 +11,6 @@
 #include <QFile>
 #include <QMetaEnum>
 #include <canberra.h>
-#include <memory>
 
 #include <KConfig>
 #include <KConfigGroup>

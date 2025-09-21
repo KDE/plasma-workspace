@@ -15,7 +15,6 @@
 #include <Solid/Device>
 #include <Solid/DeviceNotifier>
 #include <Solid/GenericInterface>
-#include <Solid/StorageAccess>
 #include <Solid/StorageVolume>
 
 #include <QDir>

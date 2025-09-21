@@ -6,7 +6,6 @@
 
 #include "batteriesnamesmonitor_p.h"
 
-#include <Solid/Device>
 #include <klocalizedstring.h>
 
 QString BatteriesNamesMonitor::updateBatteryName(const Solid::Device &deviceBattery, Solid::Battery *battery)

@@ -11,7 +11,6 @@
 
 #include <Plasma/Containment>
 #include <Plasma/Corona>
-#include <PlasmaQuick/AppletQuickItem>
 
 PanelSpacer::PanelSpacer(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
     : Plasma::Applet(parent, data, args)

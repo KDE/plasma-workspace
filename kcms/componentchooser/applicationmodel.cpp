@@ -8,9 +8,6 @@
 
 #include <KApplicationTrader>
 #include <KLocalizedString>
-#include <KService>
-
-#include <optional>
 
 #include "componentchooser.h"
 

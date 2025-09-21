@@ -23,7 +23,6 @@
 #include <KConfigGroup>
 #include <KFileUtils>
 #include <KLocalizedString>
-#include <KService>
 #include <KSharedConfig>
 
 #include <algorithm>

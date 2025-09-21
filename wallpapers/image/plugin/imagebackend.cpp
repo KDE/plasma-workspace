@@ -14,7 +14,6 @@
 
 #include <math.h>
 
-#include <QAction>
 #include <QDateTime>
 #include <QDir>
 #include <QFileInfo>

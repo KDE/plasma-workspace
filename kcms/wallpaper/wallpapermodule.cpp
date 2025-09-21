@@ -14,7 +14,6 @@
 #include <Plasma/PluginLoader>
 
 #include <KConfig>
-#include <KConfigGroup>
 #include <KConfigLoader>
 #include <KLocalizedString>
 #include <KPluginFactory>

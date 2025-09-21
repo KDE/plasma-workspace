@@ -8,7 +8,6 @@
 #include "appsmodel.h"
 #include "actionlist.h"
 #include "rootmodel.h"
-#include "sectionsmodel.h"
 
 #include <QCollator>
 #include <QDebug>

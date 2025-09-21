@@ -13,7 +13,6 @@
 #include <QDBusPendingCallWatcher>
 #include <QDBusPendingReply>
 #include <QDebug>
-#include <QList>
 #include <QMutableListIterator>
 #include <QVariantList>
 

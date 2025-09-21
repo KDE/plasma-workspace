@@ -27,7 +27,6 @@
 ****************************************************************************/
 
 #include "mockcompositor.h"
-#include "layershell.h"
 
 namespace MockCompositor
 {

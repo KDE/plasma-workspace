@@ -8,7 +8,6 @@
 #include "config-X11.h"
 #include "desktopview.h"
 #include "panelshadows_p.h"
-#include "panelview.h"
 #include "shellcorona.h"
 
 #include <LayerShellQt/Window>

@@ -10,7 +10,6 @@
 */
 
 #include "kcm.h"
-#include "klookandfeel.h"
 #include "lookandfeeldata.h"
 #include "lookandfeelsettings.h"
 

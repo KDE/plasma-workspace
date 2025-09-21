@@ -9,7 +9,6 @@
 #include <QGuiApplication>
 #include <QJSEngine>
 #include <QJSValue>
-#include <QQuickItem>
 #include <QQuickWindow>
 #include <QScreen>
 

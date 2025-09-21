@@ -20,7 +20,6 @@
 
 #include <QDBusMessage>
 #include <QDirIterator>
-#include <QFileIconProvider>
 #include <QFileInfo>
 #include <QMimeDatabase>
 #include <QRegularExpression>

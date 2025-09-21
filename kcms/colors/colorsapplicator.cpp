@@ -10,7 +10,6 @@
 #include <KColorScheme>
 #include <KConfigGroup>
 
-#include <KColorUtils>
 #include <QColorSpace>
 #include <QDBusConnection>
 #include <QDBusMessage>
