@@ -139,7 +139,7 @@
 
 <para
 >Para instalar un tipo de letra, pulse el botón <guibutton
->Instalar desde archivo...</guibutton
+>Instalar desde archivo…</guibutton
 > y seleccione los tipos de letra deseados en el diálogo de archivo. El grupo de tipos de letra seleccionado controlará donde se instalarán los tipos de letra.</para>
 <para
 >Para desinstalar tipos de letra, selecciónelas de la lista y pulse el botón <inlinemediaobject
@@ -225,7 +225,7 @@
 > 
 <para
 >Pulse el botón <guilabel
->Buscar duplicados...</guilabel
+>Buscar duplicados…</guilabel
 > para abrir una sencilla herramienta que explorará su sistema en busca de tipos de letra que tenga varios archivos asociados con ellos. Por ejemplo, si tiene «times.ttf» y «times.TTF» instalados en «/usr/local/share/fonts», el mecanismo subyacente bajo los tipos de letra (llamado «FontConfig») solo verá uno de ellos. Por tanto, si desinstala uno de ellos, volverá a aparecer, ya que solo se ha eliminado uno de estos archivos. Ejecutar esta herramienta generará un diálogo listando cada tipo de letra que tiene varios archivos y la correspondiente lista de archivos. Para seleccionar un archivo para su borrado, pulse en la columna que contiene el icono de la papelera.</para>
 </sect2>
 

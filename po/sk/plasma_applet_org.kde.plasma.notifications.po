@@ -6,19 +6,20 @@
 # Mthw <jari_45@hotmail.com>, 2018.
 # SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2023 Matej Mrenica <matejm98mthw@gmail.com>
 # Dusan Kazik <prescott66@gmail.com>, 2020.
+# SPDX-FileCopyrightText: 2025 Lucia Mrenica <lucia.mrenica@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-14 00:44+0000\n"
-"PO-Revision-Date: 2023-11-11 15:16+0100\n"
-"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"PO-Revision-Date: 2025-09-21 10:47+0200\n"
+"Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: components/ActionContainer.qml:80
@@ -180,12 +181,10 @@ msgid "%1/s"
 msgstr "%1/s"
 
 #: components/JobItem.qml:56
-#, fuzzy, kde-format
-#| msgctxt "A button tooltip; hides item details"
-#| msgid "Hide Details"
+#, kde-format
 msgctxt "Hides/expands item details"
 msgid "Details"
-msgstr "Skryť podrobnosti"
+msgstr "Podrobnosti"
 
 #: components/JobItem.qml:77
 #, kde-format
@@ -235,12 +234,12 @@ msgstr "Odoslať"
 #: components/SpeedChart.qml:145
 #, kde-format
 msgid "Speed"
-msgstr ""
+msgstr "Rýchlosť"
 
 #: components/SpeedChart.qml:195
 #, kde-format
 msgid "Average Speed"
-msgstr ""
+msgstr "Priemerná rýchlosť"
 
 #: components/SpeedChart.qml:253
 #, kde-format
@@ -371,7 +370,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "View"
-msgstr ""
+msgstr "Zobraziť"
 
 #: FullRepresentation.qml:597
 #, kde-format

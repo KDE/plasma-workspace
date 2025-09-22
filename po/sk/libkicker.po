@@ -3,20 +3,21 @@
 # Mthw <jari_45@hotmail.com>, 2019.
 # Matej Mrenica <matejm98mthw@gmail.com>, 2019, 2020, 2021, 2023.
 # Dusan Kazik <prescott66@gmail.com>, 2020.
+# SPDX-FileCopyrightText: 2025 Lucia Mrenica <lucia.mrenica@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-07 00:44+0000\n"
-"PO-Revision-Date: 2023-01-10 11:44+0100\n"
-"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"PO-Revision-Date: 2025-09-21 10:53+0200\n"
+"Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: actionlist.cpp:91
 #, kde-format
@@ -70,9 +71,7 @@ msgid "Hide Application"
 msgstr "Skryť aplikáciu"
 
 #: appentry.cpp:422
-#, fuzzy, kde-format
-#| msgctxt "App name (Generic name)"
-#| msgid "%1 (%2)"
+#, kde-format
 msgctxt "App name (Comment or Generic name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
@@ -138,7 +137,7 @@ msgstr "Zabudnúť aplikáciu"
 #: recentusagemodel.cpp:315
 #, kde-format
 msgid "Folders"
-msgstr ""
+msgstr "Priečinky"
 
 #: recentusagemodel.cpp:352
 #, kde-format

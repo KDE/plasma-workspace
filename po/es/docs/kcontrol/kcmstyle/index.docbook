@@ -114,7 +114,7 @@
 
 <para
 >Si desea configurar un tema de &plasma;, use el icono superpuesto <guilabel
->Configurar estilo...</guilabel
+>Configurar estilo…</guilabel
 > que hay en la parte inferior derecha del icono de estilo del elemento gráfico en la cuadrícula.</para>
 
 <para
@@ -197,7 +197,7 @@
 
 <para
 >Puede usar el botón <guibutton
->Configurar el estilo de las aplicaciones GNOME/GTK...</guibutton
+>Configurar el estilo de las aplicaciones GNOME/GTK…</guibutton
 > para abrir la pestaña de configuración donde puede escoger el <guilabel
 >Tema de GTK</guilabel
 >, instalar temas de GTK desde archivos u <guibutton

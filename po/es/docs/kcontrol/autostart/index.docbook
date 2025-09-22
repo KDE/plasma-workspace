@@ -241,7 +241,7 @@
 >Acciones</title>
 <para
 >En la parte inferior tiene el botón combinado <guibutton
->Añadir...</guibutton
+>Añadir…</guibutton
 > para elegir el tipo de elemento que desea añadir. Puede añadir programas y guiones de inicio o cierre de sesión. </para>
 
 <variablelist>
@@ -269,7 +269,7 @@
 <varlistentry
 ><term
 ><guimenuitem
->Añadir guion de inicio de sesión...</guimenuitem
+>Añadir guion de inicio de sesión…</guimenuitem
 ></term>
 <listitem>
 <para
@@ -283,7 +283,7 @@
 <varlistentry
 ><term
 ><guimenuitem
->Añadir guion de cierre de sesión...</guimenuitem
+>Añadir guion de cierre de sesión…</guimenuitem
 ></term>
 <listitem>
 <para

@@ -2,19 +2,20 @@
 # Roman Paholík <wizzardsk@gmail.com>, 2020.
 # SPDX-FileCopyrightText: 2020, 2021, 2022, 2023 Matej Mrenica <matejm98mthw@gmail.com>
 # Ferdinand Galko <galko.ferdinand@gmail.com>, 2023.
+# SPDX-FileCopyrightText: 2025 Lucia Mrenica <lucia.mrenica@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_users\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-16 00:45+0000\n"
-"PO-Revision-Date: 2023-11-11 14:50+0100\n"
-"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"PO-Revision-Date: 2025-09-21 10:58+0200\n"
+"Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: src/fingerprintmodel.cpp:145 src/fingerprintmodel.cpp:229
@@ -180,15 +181,13 @@ msgid "Confirm password:"
 msgstr "Potvrďte heslo:"
 
 #: src/ui/CreateUser.qml:88
-#, fuzzy, kde-format
-#| msgid "Create"
+#, kde-format
 msgctxt "@action:button Create a new user"
 msgid "Create"
 msgstr "Vytvoriť"
 
 #: src/ui/CreateUser.qml:109
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action:button Cancel creating new user"
 msgid "Cancel"
 msgstr "Zrušiť"
@@ -197,11 +196,10 @@ msgstr "Zrušiť"
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Picture Area"
-msgstr ""
+msgstr "Výber oblasti obrákzu"
 
 #: src/ui/EnrolledConfirmation.qml:20
-#, fuzzy, kde-format
-#| msgid "Finger Enrolled"
+#, kde-format
 msgctxt "@info:status"
 msgid "Finger enrolled"
 msgstr "Odtlačok pridaný"
@@ -363,20 +361,16 @@ msgid "Users"
 msgstr "Používatelia"
 
 #: src/ui/main.qml:31
-#, fuzzy, kde-format
-#| msgctxt "@action:button As in, 'add new user'"
-#| msgid "Add New"
+#, kde-format
 msgctxt "@action:button As in, 'add new user'"
 msgid "Add New…"
-msgstr "Pridať nového"
+msgstr "Pridať nového..."
 
 #: src/ui/main.qml:32
-#, fuzzy, kde-format
-#| msgctxt "@action:button As in, 'add new user'"
-#| msgid "Add New"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add New User…"
-msgstr "Pridať nového"
+msgstr "Pridať nového používateľa..."
 
 #: src/ui/main.qml:137
 #, kde-format
@@ -532,6 +526,8 @@ msgid ""
 "Image files (All major file types) (*.avif *.bmp *.gif *.jp2 *.jpeg *.jpg *."
 "pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 msgstr ""
+"Obrázkové súbory (všetky hlavné typy súborov) (*.avif *.bmp *.gif *.jp2 *."
+"jpeg *.jpg *.pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 
 #: src/ui/PicturesSheet.qml:201
 #, kde-format
@@ -576,11 +572,10 @@ msgid ""
 msgstr ""
 
 #: src/ui/UserDetailsPage.qml:125
-#, fuzzy, kde-format
-#| msgid "Delete files"
+#, kde-format
 msgctxt "@action: button"
 msgid "Delete %1"
-msgstr "Vymazať súbory"
+msgstr "Odstrániť %1"
 
 #: src/ui/UserDetailsPage.qml:144
 #, kde-format
@@ -594,6 +589,9 @@ msgid ""
 "other Administrator account on the system. Without one, authentication would "
 "become impossible or require the insecure use of the root password."
 msgstr ""
+"Nie je možné zmeniť typ účtu na štandardný, ak v systéme nie je aspoň jeden "
+"ďalší účet správcu. Bez neho by bolo overovanie nemožné alebo by si "
+"vyžadovalo nezabezpečené použitie hesla root."
 
 #: src/ui/UserDetailsPage.qml:209
 #, kde-format
@@ -638,7 +636,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Failed to crop image: %1"
-msgstr ""
+msgstr "Nepodarilo sa orezať obrázok: %1"
 
 #: src/user.cpp:337
 #, kde-format

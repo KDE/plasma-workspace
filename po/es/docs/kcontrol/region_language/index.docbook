@@ -77,7 +77,7 @@
 
 <para
 >Si pulsa el botón <guilabel
->Añadir más...</guilabel
+>Añadir más…</guilabel
 > en la página del idioma se mostrará la lista de idiomas disponibles y se mostrará inicialmente el idioma actual seleccionado. Si la selección muestra «Ningún idioma configurado», no habrá definido ningún país y los valores predeterminados del idioma serán los del sistema, normalmente C. Si el idioma que quiere usar no aparece en la lista, tendrá que instalarlo usando el método habitual de su sistema. </para>
 
 <para

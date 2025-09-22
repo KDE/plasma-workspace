@@ -164,7 +164,7 @@
 
 <para
 >Cada tipo de letra tiene un botón <guibutton
->Seleccionar...</guibutton
+>Seleccionar…</guibutton
 >. Al pulsarlo se muestra un cuadro de diálogo, que puede utilizar para seleccionar un nuevo tipo de letra, un estilo y un tamaño. Después pulse <guibutton
 >Aceptar</guibutton
 >.</para>
@@ -176,7 +176,7 @@
 
 <para
 >Se mostrará un ejemplo del tipo de letra seleccionado en el espacio situado entre el nombre del grupo de tipos de letra y el botón <guibutton
->Elegir...</guibutton
+>Elegir…</guibutton
 >.</para>
 
 <para
@@ -186,7 +186,7 @@
 
 <para
 >El botón <guibutton
->Ajustar todas las fuentes...</guibutton
+>Ajustar todas las fuentes…</guibutton
 > permite configurar rápidamente una propiedad o conjunto de propiedades comunes a todas los tipos de letra mencionados anteriormente. Aparecerá un diálogo de selección de tipos de letra similar al estándar, pero incluirá algunas casillas que le permitirán cambiar el <guilabel
 >Tipo de letra</guilabel
 >, el <guilabel
@@ -210,7 +210,7 @@
     </imageobject>
     <textobject>
       <phrase
->Diálogo Ajustar todos los tipos de letra...</phrase>
+>Diálogo Ajustar todos los tipos de letra…</phrase>
     </textobject>
   </mediaobject>
 </screenshot>

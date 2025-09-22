@@ -198,19 +198,19 @@
 
 <para
 >Con el botón <guilabel
->Obtener nuevos temas globales...</guilabel
+>Obtener nuevos temas globales…</guilabel
 > puede instalar nuevos temas globales proporcionados por terceras partes. Debe estar conectado a internet para acceder a dichos temas. Si pulsa el botón <guibutton
 >Instalar</guibutton
 > en cualquiera de los temas que se muestran en este diálogo se instalará el tema global seleccionado, que estará disponible en cuanto cierre el diálogo. <screenshot>
   <screeninfo
->Obtener nuevos temas globales...</screeninfo>
+>Obtener nuevos temas globales…</screeninfo>
     <mediaobject>
       <imageobject>
         <imagedata fileref="get-new-stuff.png" format="PNG"/>
       </imageobject>
       <textobject>
         <phrase
->Obtener nuevos temas globales...</phrase>
+>Obtener nuevos temas globales…</phrase>
       </textobject>
     </mediaobject>
   </screenshot>

@@ -1,57 +1,52 @@
 # translation of kded_devicenotifications.po to Slovak
 # SPDX-FileCopyrightText: 2023 Roman Paholík <wizzardsk@gmail.com>
+# SPDX-FileCopyrightText: 2025 Lucia Mrenica <lucia.mrenica@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kded_devicenotifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-06 00:46+0000\n"
-"PO-Revision-Date: 2023-12-09 09:39+0100\n"
-"Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
-"Language-Team: Slovak <kde-sk@linux.sk>\n"
+"PO-Revision-Date: 2025-09-21 10:56+0200\n"
+"Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
+"Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: devicenotifications.cpp:341
-#, fuzzy, kde-format
-#| msgctxt "@title:notifications"
-#| msgid "USB Device Detected"
+#, kde-format
 msgctxt "@title:notifications"
 msgid "Display Detected"
-msgstr "Zistilo sa USB zariadenie"
+msgstr "Displej bol detekovaný"
 
 #: devicenotifications.cpp:342
 #, kde-format
 msgid "A display has been connected."
-msgstr ""
+msgstr "Displej bol pripojený."
 
 #: devicenotifications.cpp:355
-#, fuzzy, kde-format
-#| msgctxt "@title:notifications"
-#| msgid "USB Device Removed"
+#, kde-format
 msgctxt "@title:notifications"
 msgid "Display Removed"
-msgstr "USB zariadenie odstránené"
+msgstr "Displej bol odpojený"
 
 #: devicenotifications.cpp:356
 #, kde-format
 msgid "A display has been disconnected."
-msgstr ""
+msgstr "Displej bo odpojený."
 
 #: devicenotifications.cpp:402
 #, kde-format
 msgid "%1 has been connected."
-msgstr ""
+msgstr "%1 bol pripojený."
 
 #: devicenotifications.cpp:402
-#, fuzzy, kde-format
-#| msgctxt "@title:notifications"
-#| msgid "USB Device Detected"
+#, kde-format
 msgid "A USB device has been connected."
-msgstr "Zistilo sa USB zariadenie"
+msgstr "Zistilo sa USB zariadenie."
 
 #: devicenotifications.cpp:407
 #, kde-format
@@ -62,20 +57,18 @@ msgstr "Zistilo sa USB zariadenie"
 #: devicenotifications.cpp:445
 #, kde-format
 msgid "%1 has been disconnected."
-msgstr ""
+msgstr "%1 bol odpojený."
 
 #: devicenotifications.cpp:445
 #, kde-format
 msgid "A USB device has been disconnected."
-msgstr ""
+msgstr "USB zariadeie bolo odpojené."
 
 #: devicenotifications.cpp:450
-#, fuzzy, kde-format
-#| msgctxt "@title:notifications"
-#| msgid "USB Device Detected"
+#, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Went Away"
-msgstr "Zistilo sa USB zariadenie"
+msgstr "USB zariadenie sa odpojilo"
 
 #~ msgctxt "@title:notifications"
 #~ msgid "USB Device Removed"
