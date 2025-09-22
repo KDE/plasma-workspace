@@ -140,6 +140,12 @@ Kirigami.ScrollablePage {
             }
 
             Connections {
+                enabled: main.currentItem != null
+                target: main.currentItem
+                function onConfigurationChanged() { kcm.needsSave = true; }
+            }
+
+            Connections {
                 enabled: true
                 target: kcm.wallpaperConfigModel
                 function onWallpaperPluginsChanged() { main.loadSourceFile() }
