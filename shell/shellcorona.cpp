@@ -1263,6 +1263,19 @@ QRect ShellCorona::_availableScreenRect(int id) const
         return screen ? screen->availableGeometry() : QRect();
     }
 
+    std::function<int(int, int)> accumulator;
+    if (isEditMode()) {
+        // When in edit mode, all panels stack on top of each other
+        // instead of overlapping for easier editing.
+        accumulator = [](int a, int b) {
+            return a + b;
+        };
+    } else {
+        accumulator = [](int a, int b) {
+            return qMax(a, b);
+        };
+    }
+
     QRect r = screen->geometry();
     int topThickness, leftThickness, rightThickness, bottomThickness;
     topThickness = leftThickness = rightThickness = bottomThickness = 0;
@@ -1270,21 +1283,22 @@ QRect ShellCorona::_availableScreenRect(int id) const
         if (v->isVisible() && v->screen() == screen && v->visibilityMode() != PanelView::AutoHide) {
             switch (v->location()) {
             case Plasma::Types::LeftEdge:
-                leftThickness = qMax(leftThickness, v->totalThickness());
+                leftThickness = accumulator(leftThickness, v->totalThickness());
                 break;
             case Plasma::Types::RightEdge:
-                rightThickness = qMax(rightThickness, v->totalThickness());
+                rightThickness = accumulator(rightThickness, v->totalThickness());
                 break;
             case Plasma::Types::TopEdge:
-                topThickness = qMax(topThickness, v->totalThickness());
+                topThickness = accumulator(topThickness, v->totalThickness());
                 break;
             case Plasma::Types::BottomEdge:
-                bottomThickness = qMax(bottomThickness, v->totalThickness());
+                bottomThickness = accumulator(bottomThickness, v->totalThickness());
             default:
                 break;
             }
         }
     }
+
     r.setLeft(r.left() + leftThickness);
     r.setRight(r.right() - rightThickness);
     r.setTop(r.top() + topThickness);

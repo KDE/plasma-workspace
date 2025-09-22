@@ -201,6 +201,9 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
     connect(m_containment, &Plasma::Containment::screenChanged, this, [this, c](int screen) {
         setProperty("restrictedPopupGeometry", QVariant(c->availableScreenRect(screen)));
     });
+    connect(m_containment->corona(), &Plasma::Corona::availableScreenRectChanged, this, [this, c](int screen) {
+        setProperty("restrictedPopupGeometry", QVariant(c->availableScreenRect(screen)));
+    });
 
     connect(panelView, &QObject::destroyed, this, &QObject::deleteLater);
 
