@@ -1544,10 +1544,12 @@ bool PanelView::canSetStrut() const
 
 void PanelView::updateExclusiveZone()
 {
-    if (containment() && containment()->isUserConfiguring() && m_layerWindow && m_layerWindow->exclusionZone() == -1) {
-        // We set the exclusive zone to make sure the ruler does not
-        // overlap with the panel regardless of the visibility mode;
-        // this won't be updated anymore as long as we are within
+    if (m_corona->isEditMode() && m_layerWindow && m_layerWindow->exclusionZone() == -1) {
+        // We set the exclusve zone to make sure the ruler does not
+        // overlap with the panel regardless of the visibility mode,
+        // and to make all panels possible to interact with even if
+        // they'd overlap outside of edit mode.
+        // This won't be updated anymore as long as we are within
         // the panel configuration.
         switch (containment()->formFactor()) {
         case Plasma::Types::Horizontal:
@@ -1560,7 +1562,7 @@ void PanelView::updateExclusiveZone()
             qWarning() << "Warning: unexpected panel formFactor:" << containment()->formFactor() << "Horizontal or Vertical expected";
         }
     }
-    if (!containment() || containment()->isUserConfiguring() || !m_screenToFollow) {
+    if (m_corona->isEditMode() || !m_screenToFollow) {
         return;
     }
 
@@ -1669,8 +1671,10 @@ void PanelView::refreshContainment()
 {
     restore();
     Plasma::Containment *const cont = containment();
-    connect(cont, &Plasma::Containment::userConfiguringChanged, this, [this](bool configuring) {
+    connect(m_corona, &Plasma::Corona::editModeChanged, this, [this](bool edit) {
         updateExclusiveZone();
+    });
+    connect(cont, &Plasma::Containment::userConfiguringChanged, this, [this](bool configuring) {
         if (configuring) {
             showTemporarily();
         } else {
