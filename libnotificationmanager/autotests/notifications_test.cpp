@@ -24,14 +24,27 @@ public:
     {
     }
 private Q_SLOTS:
+    void initTestCase();
     void parse_data();
     void parse();
 
     void compressNotificationRemoval();
+private:
+    QTemporaryDir m_tempDir ;
 };
+
+void NotificationTest::initTestCase()
+{
+    // notifications test that a real image exists, we need to find one
+    QPixmap pixmap(16, 16);
+    pixmap.fill(Qt::red);
+    pixmap.save(m_tempDir.path() + QStringLiteral("/boo.png"));
+}
 
 void NotificationTest::parse_data()
 {
+    const QString temporaryImageUrl = QStringLiteral("file://%1/boo.png").arg(m_tempDir.path());
+
     QTest::addColumn<QString>("messageIn");
     QTest::addColumn<QString>("expectedOut");
 
@@ -60,10 +73,14 @@ void NotificationTest::parse_data()
 
     QTest::newRow("quotes") << "&apos;foo&apos;" << "'foo'";//as label can't handle this normally valid entity
 
-    QTest::newRow("image normal") << "This is <img src=\"file:://foo/boo.png\" alt=\"cheese\"/> and more text" << "This is <img src=\"file:://foo/boo.png\" alt=\"cheese\"/> and more text";
+    QTest::newRow("image normal")
+    << QString::fromUtf8("This is <img src=\"%1\" alt=\"cheese\"/> and more text").arg(temporaryImageUrl)
+    << QString::fromUtf8("This is <img src=\"%1\" alt=\"cheese\"/> and more text").arg(temporaryImageUrl);
 
     //this input is technically wrong, so the output is also wrong, but QTextHtmlParser does the "right" thing
-    QTest::newRow("image normal no close") << "This is <img src=\"file:://foo/boo.png\" alt=\"cheese\"> and more text" << "This is <img src=\"file:://foo/boo.png\" alt=\"cheese\"> and more text</img>";
+    QTest::newRow("image normal no close")
+    << QString::fromUtf8("This is <img src=\"%1\" alt=\"cheese\"> and more text").arg(temporaryImageUrl)
+    << QString::fromUtf8("This is <img src=\"%1\" alt=\"cheese\"> and more text</img>").arg(temporaryImageUrl);
 
     QTest::newRow("image remote URL") << "This is <img src=\"http://foo.com/boo.png\" alt=\"cheese\" /> and more text" << "This is <img alt=\"cheese\"/> and more text";
 
@@ -152,6 +169,6 @@ void NotificationTest::compressNotificationRemoval()
 
 } // namespace NotificationManager
 
-QTEST_GUILESS_MAIN(NotificationManager::NotificationTest)
+QTEST_MAIN(NotificationManager::NotificationTest)
 
 #include "notifications_test.moc"
