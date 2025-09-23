@@ -346,7 +346,7 @@ void KdedDeviceNotifications::setupWaylandOutputListener()
     static const wl_registry_listener registryListener{globalAdded, globalRemoved};
     wl_registry_add_listener(m_registry, &registryListener, this);
 
-    // Suppress notifications until the inital list of outputs has been received.
+    // Suppress notifications until the initial list of outputs has been received.
     auto syncDone = [](void *data, struct wl_callback *wl_callback, uint32_t callback_data) {
         Q_UNUSED(wl_callback);
         Q_UNUSED(callback_data);

@@ -47,7 +47,7 @@ AbstractItem {
 
         if (mouseArea && mouse.button !== Qt.RightButton) {
             mouseArea.clicked(mouse)
-        } else if (mouse.button === Qt.LeftButton) {//falback
+        } else if (mouse.button === Qt.LeftButton) {//fallback
             activated(null)
         }
     }

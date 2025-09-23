@@ -179,7 +179,7 @@ PlasmaExtras.Representation {
             Layout.minimumHeight: Kirigami.Units.gridUnit * 4
 
             function formatDateWithoutYear(date: date): string {
-                // Unfortunatelly Qt overrides ECMA's Date.toLocaleDateString(),
+                // Unfortunately Qt overrides ECMA's Date.toLocaleDateString(),
                 // which is able to return locale-specific date-and-month-only date
                 // formats, with its dumb version that only supports Qt::DateFormat
                 // enum subset. So to get a day-and-month-only date format string we

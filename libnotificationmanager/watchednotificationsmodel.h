@@ -14,7 +14,7 @@
 
 namespace NotificationManager
 {
-// WARNING: this is unstable API and does not provide any API or ABI gurantee for future Plasma releases and can be removed without any further notice
+// WARNING: this is unstable API and does not provide any API or ABI guarantee for future Plasma releases and can be removed without any further notice
 class NOTIFICATIONMANAGER_EXPORT WatchedNotificationsModel : public AbstractNotificationsModel
 {
     Q_OBJECT

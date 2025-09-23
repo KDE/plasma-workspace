@@ -451,7 +451,7 @@ private:
                 qreal relevance = 0.5;
                 if (action.text().compare(query, Qt::CaseInsensitive) == 0) {
                     relevance = 0.65;
-                    match.setCategoryRelevance(KRunner::QueryMatch::CategoryRelevance::High); // Give it a higer match type to ensure it is shown, BUG: 455436
+                    match.setCategoryRelevance(KRunner::QueryMatch::CategoryRelevance::High); // Give it a higher match type to ensure it is shown, BUG: 455436
                 } else if (matchIndex == 0) {
                     relevance += 0.05;
                 }

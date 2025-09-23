@@ -403,7 +403,7 @@ void MediaProxy::updateModelImage(KPackage::Package *package, bool doesBlockSign
         if (m_backgroundType != BackgroundType::Type::VectorImage) {
             // Is an animated image
             newRealSource = findPreferredImageInPackage(*package);
-            // This is to convince Image to reload wehn we ask for another size
+            // This is to convince Image to reload when we ask for another size
             newRealSource.setQuery(QString::number(QDateTime::currentSecsSinceEpoch()));
             break;
         }

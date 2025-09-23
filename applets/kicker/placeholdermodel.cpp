@@ -302,7 +302,7 @@ void PlaceholderModel::connectSignals()
         Q_EMIT countChanged();
     });
 
-    // We do not have persistant indices
+    // We do not have persistent indices
     // connect(sourceModelPtr, &QAbstractItemModel::layoutAboutToBeChanged),
     //         this, &PlaceholderModel::layoutAboutToBeChanged);
     // connect(sourceModelPtr, &QAbstractItemModel::layoutChanged),

@@ -13,7 +13,7 @@
 class Browser;
 class BrowserFactory;
 
-/** This runner searchs for bookmarks in browsers like Konqueror, Firefox and Opera */
+/** This runner searches for bookmarks in browsers like Konqueror, Firefox and Opera */
 class BookmarksRunner : public KRunner::AbstractRunner
 {
     Q_OBJECT

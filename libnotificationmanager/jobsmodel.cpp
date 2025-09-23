@@ -123,7 +123,7 @@ QVariant JobsModel::data(const QModelIndex &index, int role) const
     case Notifications::JobDetailsRole:
         return QVariant::fromValue(job);
 
-    // successfully finished jobs timeout like a regular notifiation
+    // successfully finished jobs timeout like a regular notification
     // whereas running or error'd jobs are persistent
     case Notifications::TimeoutRole:
         return job->state() == Notifications::JobStateStopped && !job->error() ? -1 : 0;

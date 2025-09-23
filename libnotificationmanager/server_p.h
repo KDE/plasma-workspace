@@ -58,7 +58,7 @@ public:
     void UnInhibit(uint cookie);
     bool inhibited() const; // property getter
 
-    // Notifition watcher
+    // Notification watcher
     void RegisterWatcher();
     void UnRegisterWatcher();
 

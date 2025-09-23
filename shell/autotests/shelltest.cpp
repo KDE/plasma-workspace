@@ -717,7 +717,7 @@ void ShellTest::testPanelSizeModes()
 
     QTRY_VERIFY(panel->isExposed());
 
-    // Plase panel to bottom edge of screen
+    // Place panel at bottom edge of screen
     panel->containment()->setLocation(Plasma::Types::BottomEdge);
     QCOMPARE(panel->containment()->location(), Plasma::Types::BottomEdge);
 

@@ -73,7 +73,7 @@ bool configProvides(KSharedConfigPtr config, const QString &groupPath, const QSt
     return !configValue(config, groupPath, entry).isEmpty();
 }
 
-} // Anonymouse namespace
+} // Anonymous namespace
 
 KLookAndFeelManager::KLookAndFeelManager(QObject *parent)
     : QObject(parent)
@@ -171,7 +171,7 @@ void KLookAndFeelManager::setSplashScreen(const QString &theme)
     KConfig configDefault(configDefaults(QStringLiteral("ksplashrc")));
     KConfigGroup defaultGroup(&configDefault, QStringLiteral("KSplash"));
     writeNewDefaults(group, defaultGroup, QStringLiteral("Theme"), theme);
-    // TODO: a way to set none as spash in the l&f
+    // TODO: a way to set none as splash in the l&f
     writeNewDefaults(group, defaultGroup, QStringLiteral("Engine"), QStringLiteral("KSplashQML"));
 }
 

@@ -69,7 +69,7 @@ inline QStringView unitNameToServiceName(QStringView unitName)
         // Sometimes can be -uuid.scope instead
         name.truncate(index);
     }
-    // At this point the only remaining part could be a launcher prefix, technically desktop names may contain hypens
+    // At this point the only remaining part could be a launcher prefix, technically desktop names may contain hyphens
     // too so we can but hope that it's not a leading part. Otherwise resolution fails, sucks but not the end of the world.
     if (auto separatorIndex = name.indexOf(separator); separatorIndex > 0 && separatorIndex < name.indexOf(QLatin1Char('.'))) {
         name = name.mid(separatorIndex + 1);

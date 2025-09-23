@@ -301,7 +301,7 @@ bool X11OutputOrderWatcher::nativeEventFilter(const QByteArray &eventType, void 
         } else if (randrEvent->subCode == XCB_RANDR_NOTIFY_OUTPUT_CHANGE) {
             // When the ast screen is removed, its qscreen becomes name ":0.0" as the fake screen, but nothing happens really,
             // screenpool doesn't notice (and looking at the assert_x there are, that was expected"
-            // then the screen gets connected again, a new screen gets conencted, the old 0.0 one
+            // then the screen gets connected again, a new screen gets connected, the old 0.0 one
             // gets disconnected, but the screen order stuff doesn't say anything as it's still
             // the same connector name as before
             // so screenpool finds itself with an empty screenorder

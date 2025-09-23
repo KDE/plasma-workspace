@@ -118,7 +118,7 @@ void InstallerRunner::match(KRunner::RunnerContext &context)
         }
 
         KRunner::QueryMatch match(this);
-        match.setCategoryRelevance(KRunner::QueryMatch::CategoryRelevance::Lowest); // Make sure it is less relavant than KCMs or apps
+        match.setCategoryRelevance(KRunner::QueryMatch::CategoryRelevance::Lowest); // Make sure it is less relevant than KCMs or apps
         match.setId(componentId);
         match.setIcon(componentIcon(*it));
         match.setText(i18n("Get %1…", it->name()));

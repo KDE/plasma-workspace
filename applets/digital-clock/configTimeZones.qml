@@ -126,7 +126,7 @@ Kirigami.PageRow {
                 sourceModel: timeZones
                 onlyShowChecked: true
             }
-            // We have no concept of selection in this list, so don't pre-select
+            // We have no concept of selection in this list, so don't preselect
             // the first item
             currentIndex: -1
 

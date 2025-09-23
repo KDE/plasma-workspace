@@ -173,7 +173,7 @@ void KdedGeoTimeZonePlugin::setGeoTimeZone(const QByteArray &geoTimeZoneId)
         QTimeZone timeZone(geoTimeZoneId);
 
         QString timeZoneName = QString::fromLatin1(geoTimeZoneId);
-        if (timeZone.isValid()) { // Can this ever be false since we did suceeded in setting it?
+        if (timeZone.isValid()) { // Can this ever be false since we did succeed in setting it?
             timeZoneName = timeZone.displayName(QDateTime::currentDateTime(), QTimeZone::LongName);
         }
 

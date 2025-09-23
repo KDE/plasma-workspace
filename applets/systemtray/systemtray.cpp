@@ -98,7 +98,7 @@ void SystemTray::migrateFromSystrayContainer()
 {
     // Search the old systray containment config group
     KConfigGroup rootCg(corona()->config(), QStringLiteral("Containments"));
-    // NOTE: this function is called from tyhe constructor, so we can't use config() yet
+    // NOTE: this function is called from the constructor, so we can't use config() yet
     KConfigGroup ownCg = KConfigGroup(config());
     // old Configuration group of the old systray applet
     KConfigGroup oldAppletCg(&ownCg, QStringLiteral("Configuration"));

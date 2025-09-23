@@ -129,7 +129,7 @@ the variable is undefined, nothing happens.
 This means, if you want to start a program that should not participate
 in the session, simply undefine SESSION_MANAGER in your terminal
 window and launch the application. If you want to see an application
-desparately trying to connect to something, try setting it to some
+desperately trying to connect to something, try setting it to some
 bogus value.
 
 In addition, ksmserver propagates both its network address and its

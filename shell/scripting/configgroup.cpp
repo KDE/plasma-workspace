@@ -204,7 +204,7 @@ void ConfigGroup::deleteEntry(const QString &key)
 void ConfigGroup::sync()
 {
     if (d->configGroup) {
-        // qDebug() << "synching config...";
+        // qDebug() << "syncing config...";
         d->configGroup->sync();
     }
 }

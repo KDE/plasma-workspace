@@ -367,7 +367,7 @@ void ScreenPool::screenInvariants()
     // Is the primary screen available? TODO: it can be redundant
     // Q_ASSERT(m_availableScreens.contains(primaryScreen()));
 
-    // QScreen bookeeping integrity
+    // QScreen bookkeeping integrity
     auto allScreens = qGuiApp->screens();
     // Do we actually track every screen?
     // (m_availableScreens.count() + m_redundantScreens.count() must be less or equal

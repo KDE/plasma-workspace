@@ -40,7 +40,7 @@ ContainmentItem {
         // We need all the plasmoiditems to be there for correct working of shortcuts.
         // Instantiators create the plasmoiditems: ensure this is done after
         // this containmentitem actually  exists so they can be immediately parented properly
-        // set active and not the model, as this wil lcause an assert deep in Qt
+        // set active and not the model, as this will cause an assert deep in Qt
         activeInstantiator.active = true;
         hiddenInstantiator.active = true;
     }

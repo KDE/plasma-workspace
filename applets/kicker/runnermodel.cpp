@@ -163,7 +163,7 @@ void RunnerModel::setRunners(const QStringList &runners)
     m_runners = runners;
     Q_EMIT runnersChanged();
 
-    // Update the existing models only, if we have intialized the models
+    // Update the existing models only, if we have initialized the models
     if (!m_models.isEmpty()) {
         if (m_mergeResults) {
             Q_ASSERT(m_models.length() == 1);

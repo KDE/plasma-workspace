@@ -1809,7 +1809,7 @@ QRgb ShellCorona::color() const
 {
     // Colors from wallpaper are not generated when they are turned off in the settings.
     // To return a color we need to fake that the setting is on, and then take the color,
-    // turn off the setting again(or the color engine will keep runnig) and return the color.
+    // turn off the setting again(or the color engine will keep running) and return the color.
 
     // Note that whenever a color is generated, it is also set as accent color. When we fake the
     // setting, we should not apply the generated color. The color applying kded module take care
@@ -2631,7 +2631,7 @@ void ShellCorona::setScreenForContainment(Plasma::Containment *containment, int 
 
 int ShellCorona::screenForContainment(const Plasma::Containment *containment) const
 {
-    // TODO: when we can depend on a new framework, use a p-f method to actuall set lastScreen instead of this?
+    // TODO: when we can depend on a new framework, use a p-f method to actually set lastScreen instead of this?
     // m_pendingScreenChanges controls an explicit user-determined screen change
     if (!m_pendingScreenChanges.isEmpty() && m_pendingScreenChanges.contains(containment)) {
         return m_pendingScreenChanges.value(containment);

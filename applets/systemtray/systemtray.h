@@ -44,7 +44,7 @@ public:
 
     QAbstractItemModel *configSystemTrayModel();
 
-    // Invokable utilities
+    // Invocable utilities
     /**
      * Given an AppletInterface pointer, shows a proper context menu for it
      */

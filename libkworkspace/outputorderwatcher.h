@@ -69,7 +69,7 @@ Q_SIGNALS:
 protected:
     OutputOrderWatcher(QObject *parent);
     /**
-     * Backend failed, use QScreen based implementaion
+     * Backend failed, use QScreen based implementation
      */
     void useFallback(bool fallback, const char *reason = nullptr);
 

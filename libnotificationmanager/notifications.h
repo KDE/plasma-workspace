@@ -360,9 +360,9 @@ public:
      * The state an application job is in.
      */
     enum JobState {
-        JobStateStopped, ///< The job is stopped. It has either finished (error is 0) or failed (error is not 0)
+        JobStateStopped, ///< The job is stopped. It has either finished (error is 0) or failed (error is not 0).
         JobStateRunning, ///< The job is currently running.
-        JobStateSuspended, ///< The job is currentl paused
+        JobStateSuspended, ///< The job is currently paused.
     };
     Q_ENUM(JobState)
 

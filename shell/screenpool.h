@@ -58,7 +58,7 @@ private:
     void screenInvariants();
 
     // List correspondent to qGuiApp->screens(), but sorted first by size then by Id,
-    // determines the screen importance while figuring out the reduntant ones
+    // determines the screen importance while figuring out the redundant ones
     QList<QScreen *> m_sizeSortedScreens;
     // This will always be true: m_availableScreens + m_redundantScreens + m_fakeScreens == qGuiApp->screens()
     QList<QScreen *> m_availableScreens; // Those are all the screen that are available to Corona, ordered by id coming from the protocol
