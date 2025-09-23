@@ -123,6 +123,8 @@ void ImageBackend::setSlideshowMode(SortingMode::Mode slideshowMode)
 
     m_slideshowMode = slideshowMode;
 
+    Q_EMIT slideshowModeChanged();
+
     startSlideshow();
 }
 
@@ -138,6 +140,8 @@ void ImageBackend::setSlideshowFoldersFirst(bool slideshowFoldersFirst)
     }
 
     m_slideshowFoldersFirst = slideshowFoldersFirst;
+
+    Q_EMIT slideshowFoldersFirstChanged();
 
     startSlideshow();
 }
