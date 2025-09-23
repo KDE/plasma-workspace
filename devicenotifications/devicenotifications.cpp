@@ -254,6 +254,24 @@ void Udev::onSocketActivated()
     }
 }
 
+Output::Output(uint32_t id)
+    : QObject()
+    , kde_output_device_v2()
+    , m_id(id)
+{
+}
+
+Output::~Output()
+{
+    kde_output_device_v2_destroy(object());
+}
+
+void Output::kde_output_device_v2_uuid(const QString &uuid)
+{
+    m_uuid = uuid;
+    Q_EMIT uuidAdded();
+}
+
 KdedDeviceNotifications::KdedDeviceNotifications(QObject *parent, const QList<QVariant> &)
     : KDEDModule(parent)
 {
@@ -289,22 +307,41 @@ void KdedDeviceNotifications::setupWaylandOutputListener()
     m_registry = wl_display_get_registry(display);
 
     auto globalAdded = [](void *data, wl_registry *registry, uint32_t name, const char *interface, uint32_t version) {
-        Q_UNUSED(registry)
-        Q_UNUSED(version)
         auto *self = static_cast<KdedDeviceNotifications *>(data);
         if (qstrcmp(interface, "kde_output_device_v2") == 0) {
-            self->m_outputs.append(name);
-
-            if (self->m_initialOutputsReceived) {
-                self->notifyOutputAdded();
-            }
+            const bool initialOutputsReceived = self->m_initialOutputsReceived;
+            auto &out = self->m_outputs.emplace_back(std::make_unique<Output>(name));
+            // Notify after the UUID's are resolved, and add it to our timed list
+            connect(out.get(), &Output::uuidAdded, self, [&out, self, initialOutputsReceived]() {
+                if (initialOutputsReceived) {
+                    const QString uuid = out->uuid();
+                    // If we recently just removed this output, it wasn't actually physically disconnected
+                    if (!self->m_recentlyRemovedOutputs.removeOne(uuid)) {
+                        self->notifyOutputAdded();
+                    }
+                }
+            });
+            out->init(registry, name, version);
         }
     };
     auto globalRemoved = [](void *data, wl_registry *registry, uint32_t name) {
         Q_UNUSED(registry)
         auto *self = static_cast<KdedDeviceNotifications *>(data);
-        if (self->m_outputs.removeOne(name)) {
-            self->notifyOutputRemoved();
+        auto result = std::ranges::find_if(self->m_outputs.begin(), self->m_outputs.end(), [name](std::unique_ptr<Output> &out) {
+            return out.get()->id() == name;
+        });
+        if (result != self->m_outputs.end()) {
+            auto out = result.base()->get();
+            const QString uuid = out->uuid();
+            self->m_recentlyRemovedOutputs.append(uuid);
+            // 2000ms matches the DPMS workaround time in KWin
+            QTimer::singleShot(2000ms, self, [self, uuid]() {
+                // Only notify if the output hasn't been added again in the mean time
+                if (self->m_recentlyRemovedOutputs.removeOne(uuid)) {
+                    self->notifyOutputRemoved();
+                }
+            });
+            self->m_outputs.erase(result);
         }
     };
 
