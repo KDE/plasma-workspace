@@ -146,88 +146,87 @@ Item {
                 duration: Kirigami.Units.longDuration
             }
         }
+    }
 
-        Component {
-            id: albumArtComponent
+    Component {
+        id: albumArtComponent
 
-            Image { // Album Art
-                horizontalAlignment: Image.AlignHCenter
-                verticalAlignment: Image.AlignVCenter
-                fillMode: container.inCompactRepresentation ? Image.PreserveAspectCrop : Image.PreserveAspectFit
+        Image { // Album Art
+            horizontalAlignment: Image.AlignHCenter
+            verticalAlignment: Image.AlignVCenter
+            fillMode: container.inCompactRepresentation ? Image.PreserveAspectCrop : Image.PreserveAspectFit
 
-                asynchronous: true
-                cache: false
+            asynchronous: true
+            cache: false
 
-                // onRemoved only fires when all transitions end. If a user switches songs quickly this adds up
-                // Given it's such a heavy item, try to cleanup as early as possible
-                StackView.onDeactivated: destroy()
-                StackView.onRemoved: destroy()
+            // onRemoved only fires when all transitions end. If a user switches songs quickly this adds up
+            // Given it's such a heavy item, try to cleanup as early as possible
+            StackView.onDeactivated: destroy()
+            StackView.onRemoved: destroy()
+        }
+    }
+
+    Component {
+        id: fallbackIconItem
+
+        Kirigami.Icon { // Fallback
+            id: fallbackIcon
+
+            anchors.margins: Kirigami.Units.gridUnit * 2
+            opacity: 0
+            source: albumArt.icon
+
+            NumberAnimation {
+                duration: Kirigami.Units.longDuration
+                easing.type: Easing.OutCubic
+                property: "opacity"
+                running: true
+                target: fallbackIcon
+                to: 1
             }
         }
+    }
 
-        Component {
-            id: fallbackIconItem
+    // "No media playing" placeholder message
+    Component {
+        id: placeholderMessage
 
-            Kirigami.Icon { // Fallback
-                id: fallbackIcon
+        // Put PlaceholderMessage in Item so PlaceholderMessage will not fill its parent.
+        Item {
+            property alias source: message.iconName
 
-                anchors.margins: Kirigami.Units.gridUnit * 2
-                opacity: 0
-                source: albumArt.icon
+            PlasmaExtras.PlaceholderMessage {
+                id: message
+                anchors.centerIn: parent
+                width: parent.width // For text wrap
+                iconName: albumArt.icon
+                text: root.playbackStatus > Mpris.PlaybackStatus.Stopped ? i18n("No title") : i18n("No media playing")
+            }
+        }
+    }
 
-                NumberAnimation {
+    Component {
+        id: busyComponent
+
+        Item {
+            PC3.BusyIndicator {
+                id: busyIndicator
+                anchors.centerIn: parent
+                running: false
+            }
+
+            SequentialAnimation {
+                running: true
+
+                PauseAnimation {
                     duration: Kirigami.Units.longDuration
-                    easing.type: Easing.OutCubic
-                    property: "opacity"
-                    running: true
-                    target: fallbackIcon
-                    to: 1
+                }
+                PropertyAction {
+                    property: "running"
+                    target: busyIndicator
+                    value: true
                 }
             }
-        }
-
-        // "No media playing" placeholder message
-        Component {
-            id: placeholderMessage
-
-            // Put PlaceholderMessage in Item so PlaceholderMessage will not fill its parent.
-            Item {
-                property alias source: message.iconName
-
-                PlasmaExtras.PlaceholderMessage {
-                    id: message
-                    anchors.centerIn: parent
-                    width: parent.width // For text wrap
-                    iconName: albumArt.icon
-                    text: root.playbackStatus > Mpris.PlaybackStatus.Stopped ? i18n("No title") : i18n("No media playing")
-                }
-            }
-        }
-
-        Component {
-            id: busyComponent
-
-            Item {
-                PC3.BusyIndicator {
-                    id: busyIndicator
-                    anchors.centerIn: parent
-                    running: false
-                }
-
-                SequentialAnimation {
-                    running: true
-
-                    PauseAnimation {
-                        duration: Kirigami.Units.longDuration
-                    }
-                    PropertyAction {
-                        property: "running"
-                        target: busyIndicator
-                        value: true
-                    }
-                }
-            }
-
         }
     }
 
