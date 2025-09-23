@@ -370,9 +370,8 @@ void KSMServer::completeShutdownOrCheckpoint()
         // backends are installed) the closed() signal never happens
         // and logoutSoundFinished() never gets called. Add this timer to make
         // sure the shutdown procedure continues even if sound system is broken.
-        QTimer::singleShot(5000, this, [=, this] {
+        QTimer::singleShot(5000, this, [this] {
             if (state == WaitingForKNotify) {
-                n->deleteLater();
                 startKilling();
             }
         });
