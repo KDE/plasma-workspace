@@ -74,6 +74,16 @@ Item {
             }
 
             pendingImage.statusChanged.disconnect(replaceWhenLoaded);
+
+            // Qtbug
+            // When a parent loader is inactive the engine is dropped, but the context remains until cleanup
+            // StackView uses the engine directly and crashes
+            // use a heuristic to guess when we're in this state and return early
+            if (!albumArt.visible) {
+                pendingImage = null;
+                return;
+            }
+
             albumArt.replace(pendingImage, {}, StackView.ReplaceTransition);
             pendingImage = null;
         }
