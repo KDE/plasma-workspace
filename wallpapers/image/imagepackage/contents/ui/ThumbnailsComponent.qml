@@ -13,6 +13,7 @@ import QtQuick.Controls as QQC2
 import org.kde.kcmutils as KCM
 import org.kde.kirigami as Kirigami
 import org.kde.newstuff as NewStuff
+import org.kde.kitemmodels as KItemModels
 
 Item {
     id: thumbnailsComponent
@@ -21,7 +22,29 @@ Item {
     property alias view: wallpapersGrid.view
     property var screenSize: Qt.size(Screen.width, Screen.height)
 
-    readonly property QtObject imageModel: (configDialog.currentWallpaper === "org.kde.image") ? imageWallpaper.wallpaperModel : imageWallpaper.slideFilterModel
+
+    readonly property QtObject imageModel: (configDialog.currentWallpaper === "org.kde.image") ? sortedWallpaperModel : imageWallpaper.slideFilterModel
+
+    KItemModels.KSortFilterProxyModel  {
+        id: sortedWallpaperModel
+        sortRole: Qt.DisplayRole
+        sortCaseSensitivity: Qt.CaseInsensitive
+        sortColumn: 0
+        sourceModel: (configDialog.currentWallpaper === "org.kde.image") ? imageWallpaper.wallpaperModel : null
+        function indexOf(image : string) : int {
+            if (!sourceModel) {
+                return -1
+            }
+            const sourceIndex = sourceModel.index(sourceModel.indexOf(image), 0)
+            return mapFromSource(sourceIndex).row
+        }
+        function openContainingFolder(listIndex : int) {
+            if (sourceModel) {
+                sourceModel.openContainingFolder(mapToSource(index(listIndex, 0)).row)
+            }
+        }
+    }
+
 
     Connections {
         target: imageWallpaper
