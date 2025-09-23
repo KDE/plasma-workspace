@@ -45,7 +45,8 @@
                 "Name[tr]": "Sebastian Kügler, Kai Uwe Broulik",
                 "Name[uk]": "Sebastian Kügler, Kai Uwe Broulik",
                 "Name[vi]": "Sebastian Kügler, Kai Uwe Broulik",
-                "Name[zh_CN]": "Sebastian Kügler, Kai Uwe Broulik"
+                "Name[zh_CN]": "Sebastian Kügler, Kai Uwe Broulik",
+                "Name[zh_TW]": "Sebastian Kügler、Kai Uwe Broulik"
             }
         ],
         "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=Battery%20Monitor",

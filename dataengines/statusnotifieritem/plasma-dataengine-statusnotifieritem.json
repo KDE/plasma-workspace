@@ -46,7 +46,8 @@
                 "Name[tr]": "Matthieu Gallien",
                 "Name[uk]": "Matthieu Gallien",
                 "Name[vi]": "Matthieu Gallien",
-                "Name[zh_CN]": "Matthieu Gallien"
+                "Name[zh_CN]": "Matthieu Gallien",
+                "Name[zh_TW]": "Matthieu Gallien"
             }
         ],
         "Description": "Engine for applications' status information, based on the Status Notifier protocol.",

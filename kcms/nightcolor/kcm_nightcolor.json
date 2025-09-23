@@ -122,6 +122,7 @@
     "X-KDE-Keywords[sl]": "kwin,okno,upravljalnik,nočne barve,rdeči pomik,oči,nočni način,barve,temni način,temina,zabrisanje,spanje,napenjanje oči,pomik,oranžna,rumena,toplo,odtenek zaslona,temperatura,modra,svetloba",
     "X-KDE-Keywords[sv]": "kwin,fönster,hanterare,natt,färger,rödskift,ögon,nattläge,färg,mörkt läge,mörk,ljussvag,viloläge,ögonbelastning,röd,skift,orange,gul,varm,skärmfärgton,temperatur,blå,ljus",
     "X-KDE-Keywords[uk]": "kwin,window,manager,night,colors,redshift,eyes,night mode,colour,dark mode,dark,dim,sleep,eye strain,red,shift,orange,yellow,warm,screen tint,temperature,blue,light,синє,світло,квін,вікно,керування,менеджер,ніч,кольори,редшифт,редшіфт,очі,нічний режим,колір,темний режим,темний,тьмяний,притлумити,сон,втома очей,червоний,зсув,помаранчевий,жовтий,теплий,відтінок екрана,температура",
+    "X-KDE-Keywords[zh_TW]": "視窗管理員,夜光,夜光模式,夜色,夜色模式,夜晚模式,色彩,顏色,抗藍光,藍光,睡眠,疲勞",
     "X-KDE-System-Settings-Parent-Category": "display",
     "X-KDE-Weight": 120
 }

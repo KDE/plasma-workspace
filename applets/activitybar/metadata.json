@@ -48,7 +48,8 @@
                 "Name[tr]": "Buşan Şah",
                 "Name[uk]": "Bhushan Shah",
                 "Name[vi]": "Bhushan Shah",
-                "Name[zh_CN]": "Bhushan Shah"
+                "Name[zh_CN]": "Bhushan Shah",
+                "Name[zh_TW]": "Bhushan Shah"
             }
         ],
         "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=Activity%20Switcher",

@@ -47,7 +47,8 @@
                 "Name[tr]": "Kai Uwe Broulik",
                 "Name[uk]": "Kai Uwe Broulik",
                 "Name[vi]": "Kai Uwe Broulik",
-                "Name[zh_CN]": "Kai Uwe Broulik"
+                "Name[zh_CN]": "Kai Uwe Broulik",
+                "Name[zh_TW]": "Kai Uwe Broulik"
             }
         ],
         "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=Notifications",

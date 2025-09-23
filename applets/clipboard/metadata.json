@@ -47,7 +47,8 @@
                 "Name[tr]": "Martin Gräßlin",
                 "Name[uk]": "Martin Gräßlin",
                 "Name[vi]": "Martin Gräßlin",
-                "Name[zh_CN]": "Martin Gräßlin"
+                "Name[zh_CN]": "Martin Gräßlin",
+                "Name[zh_TW]": "Martin Gräßlin"
             }
         ],
         "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=Clipboard",
@@ -193,6 +194,7 @@
     "X-KDE-Keywords[sl]": "klipper,odložišče,kopiraj,prilepi",
     "X-KDE-Keywords[sv]": "klipper,klippbord,kopiera,klistra in",
     "X-KDE-Keywords[uk]": "klipper,clipboard,copy,paste,кліпер,буфер,копіювання,вставлення",
+    "X-KDE-Keywords[zh_TW]": "剪貼簿,複製,貼上",
     "X-Plasma-API": "declarativeappletscript",
     "X-Plasma-MainScript": "ui/clipboard.qml",
     "X-Plasma-NotificationArea": "true",

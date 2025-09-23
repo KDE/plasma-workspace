@@ -133,6 +133,7 @@
     "X-KDE-Keywords[sv]": "Hantering av autostart,systemstart,plasma start,cron,auto,start,ladda,session,inloggning",
     "X-KDE-Keywords[uk]": "AAutostart Manager,system startup,plasma start,cron,auto,start,start up,boot,load,session,startup,launch,login,керування автозапуском,автозапуск,запуск,запуск системи,запуск плазми,завантаження,сеанс,запуск,вхід,логін,лоґін",
     "X-KDE-Keywords[vi]": "trình quản lí khởi động tự động,khởi động hệ thống,khởi động plasma,cron,khởi động,tự động,tải,phiên,đăng nhập",
+    "X-KDE-Keywords[zh_TW]": "自動啟動管理器,系統啟動,cron,自動,啟動,開機,載入,工作階段,作業階段,開啟,登入",
     "X-KDE-System-Settings-Parent-Category": "session",
     "X-KDE-Weight": 30
 }

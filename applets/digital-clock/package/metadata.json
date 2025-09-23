@@ -47,7 +47,8 @@
                 "Name[tr]": "Martin Klapetek",
                 "Name[uk]": "Martin Klapetek",
                 "Name[vi]": "Martin Klapetek",
-                "Name[zh_CN]": "Martin Klapetek"
+                "Name[zh_CN]": "Martin Klapetek",
+                "Name[zh_TW]": "Martin Klapetek"
             }
         ],
         "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=Digital%20Clock",

@@ -47,7 +47,8 @@
                 "Name[tr]": "Kai Uwe Broulik",
                 "Name[uk]": "Kai Uwe Broulik",
                 "Name[vi]": "Kai Uwe Broulik",
-                "Name[zh_CN]": "Kai Uwe Broulik"
+                "Name[zh_CN]": "Kai Uwe Broulik",
+                "Name[zh_TW]": "Kai Uwe Broulik"
             }
         ],
         "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=systemsettings&component=kcm_colors",
@@ -191,6 +192,7 @@
     "X-KDE-Keywords[ta]": "color,colour, scheme, contrast, Widget colors,Color Scheme,color style,color theme,tint,accent color,color scheme,dark mode,light mode,accent colour, accent,highlight,colour, நிறம், வண்ணம், நிரங்கள், வண்ணங்கள், நிறத் திட்டம், நிறத்திட்டம், தோற்றத்திட்டம், வண்ணத் திட்டம், வெள்ளை, கருப்பு, இருட்டு, வெளிச்சம், வெளிர்ந்த, கருமையான, சிறப்பு நிறம்",
     "X-KDE-Keywords[uk]": "кольори,кольори,схема,контраст,кольори віджетів,схема кольорів,стиль кольорів,тема кольорів,відтінок,акцент,схема,темний режим,світлий режим,підсвічування,colors,colours,scheme,contrast,Widget colors,Color Scheme,color style,color theme,tint,accent color,color scheme,dark mode,light mode,accent colour,accent,highlight,colour",
     "X-KDE-Keywords[vi]": "color,colour,scheme,contrast,Widget colors,Color Scheme,color style,color theme,tint,accent color,color scheme,dark mode,light mode,accent colour,accent,highlight,colour,màu,sắc,quy hoạch,tương phản,màu phụ kiện,quy hoạch màu,kiểu cách màu,chủ đề màu,phủ,màu chủ đạo,chế độ tối,chế độ sáng,chủ đạo,tô sáng",
+    "X-KDE-Keywords[zh_TW]": "色彩,顏色,配色方案,顏色主題,顏色風格,色彩風格,強調色,深色模式,暗色,亮色,明亮模式,突顯",
     "X-KDE-System-Settings-Parent-Category": "appearance",
     "X-KDE-Weight": 40
 }
