@@ -19,6 +19,11 @@
 
 namespace
 {
+inline QString getDisplayName(const QModelIndex &modelIndex)
+{
+    return modelIndex.data(Qt::DisplayRole).toString();
+}
+
 inline QString getLocalFilePath(const QModelIndex &modelIndex)
 {
     return modelIndex.data(ImageRoles::PathRole).toUrl().toLocalFile();
@@ -145,20 +150,22 @@ bool SlideFilterModel::lessThan(const QModelIndex &source_left, const QModelInde
             QFileInfo rightFile(getLocalFilePath(source_right));
             QString leftFilePath = getFilePathWithDir(leftFile);
             QString rightFilePath = getFilePathWithDir(rightFile);
+            const QString leftImage(getDisplayName(source_left));
+            const QString rightImage(getDisplayName(source_right));
 
             if (leftFilePath == rightFilePath) {
-                return QString::compare(leftFile.fileName(), rightFile.fileName(), cs) < 0;
+                return QString::localeAwareCompare(leftImage, rightImage) < 0;
             } else if (leftFilePath.startsWith(rightFilePath, cs)) {
                 return true;
             } else if (rightFilePath.startsWith(leftFilePath, cs)) {
                 return false;
             } else {
-                return QString::compare(leftFilePath, rightFilePath, cs) < 0;
+                return QString::localeAwareCompare(leftFilePath, rightFilePath) < 0;
             }
         } else {
-            QFileInfo leftFile(getLocalFilePath(source_left));
-            QFileInfo rightFile(getLocalFilePath(source_right));
-            return QString::compare(leftFile.fileName(), rightFile.fileName(), cs) < 0;
+            const QString leftImage(getDisplayName(source_left));
+            const QString rightImage(getDisplayName(source_right));
+            return QString::localeAwareCompare(leftImage, rightImage) < 0;
         }
     case SortingMode::AlphabeticalReversed:
         if (m_SortingFoldersFirst) {
@@ -166,20 +173,22 @@ bool SlideFilterModel::lessThan(const QModelIndex &source_left, const QModelInde
             QFileInfo rightFile(getLocalFilePath(source_right));
             QString leftFilePath = getFilePathWithDir(leftFile);
             QString rightFilePath = getFilePathWithDir(rightFile);
+            const QString leftImage(getDisplayName(source_left));
+            const QString rightImage(getDisplayName(source_right));
 
             if (leftFilePath == rightFilePath) {
-                return QString::compare(leftFile.fileName(), rightFile.fileName(), cs) > 0;
+                return QString::localeAwareCompare(leftImage, rightImage) > 0;
             } else if (leftFilePath.startsWith(rightFilePath, cs)) {
                 return true;
             } else if (rightFilePath.startsWith(leftFilePath, cs)) {
                 return false;
             } else {
-                return QString::compare(leftFilePath, rightFilePath, cs) > 0;
+                return QString::localeAwareCompare(leftFilePath, rightFilePath) > 0;
             }
         } else {
-            QFileInfo leftFile(getLocalFilePath(source_left));
-            QFileInfo rightFile(getLocalFilePath(source_right));
-            return QString::compare(leftFile.fileName(), rightFile.fileName(), cs) > 0;
+            const QString leftImage(getDisplayName(source_left));
+            const QString rightImage(getDisplayName(source_right));
+            return QString::localeAwareCompare(leftImage, rightImage) > 0;
         }
     case SortingMode::Modified: // oldest first
     {
