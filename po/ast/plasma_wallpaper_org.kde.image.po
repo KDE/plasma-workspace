@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-02 00:45+0000\n"
+"POT-Creation-Date: 2025-09-23 02:48+0000\n"
 "PO-Revision-Date: 2023-05-06 22:00+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -241,7 +241,7 @@ msgid "Next Wallpaper Image"
 msgstr ""
 
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
-#: plugin/imagebackend.cpp:349
+#: plugin/imagebackend.cpp:351
 #, kde-format
 msgid "Media Files"
 msgstr ""

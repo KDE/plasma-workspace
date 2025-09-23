@@ -108,7 +108,7 @@ msgstr "添加"
 #, kde-format
 msgctxt "@title:menu accessible menu button"
 msgid "Add new application or script"
-msgstr ""
+msgstr "添加应用程序或脚本"
 
 #: ui/main.qml:73
 #, kde-format
@@ -120,7 +120,7 @@ msgstr "应用程序…"
 #, kde-format
 msgctxt "@action:inmenu accessible"
 msgid "Add application"
-msgstr ""
+msgstr "添加应用程序"
 
 #: ui/main.qml:79
 #, kde-format
@@ -132,7 +132,7 @@ msgstr "登录脚本…"
 #, kde-format
 msgctxt "@action:inmenu accessible"
 msgid "Add login script"
-msgstr ""
+msgstr "添加登录脚本"
 
 #: ui/main.qml:85
 #, kde-format
@@ -144,7 +144,7 @@ msgstr "注销脚本…"
 #, kde-format
 msgctxt "@action:inmenu accessible"
 msgid "Add logout script"
-msgstr ""
+msgstr "添加注销脚本"
 
 #: ui/main.qml:121
 #, kde-format
