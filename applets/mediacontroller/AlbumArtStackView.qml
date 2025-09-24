@@ -58,6 +58,16 @@ Item {
         });
 
         function replaceWhenLoaded() {
+            // HACK: Workaround for QTBUG-140018 (see also: BUG 509192)
+            // When a parent loader is inactive, it'll drop the engine from the context, but this can still run
+            // afterwards which causes a crash in QQuickStackElement::initialize which asserts the engine is not null.
+            // This visiblity heuristic is always the case when we're in this state, returning without pushing
+            // anything to the StackView and avoiding the above. Since the artwork is always updated when expanding,
+            // we don't have to worry about not being visible due to other reasons.
+            if (!albumArt.visible) {
+                return;
+            }
+
             // There can be a potential race: when the previous player is gone but the pending image is just ready in time,
             // pendingImage.destroy() -> QQuickImage::deleteLater(), so in the event queue statusChanged may be emitted
             // before pendingImage is deleted, but pendingImage is already set to null when the previous player is gone.
