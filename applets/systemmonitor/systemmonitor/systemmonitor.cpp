@@ -63,7 +63,8 @@ KSysGuard::SensorFaceController *SystemMonitor::workaroundController(QQuickItem 
 void SystemMonitor::configChanged()
 {
     if (m_sensorFaceController) {
-        m_sensorFaceController->reloadConfig();
+        KConfigGroup cg = config();
+        m_sensorFaceController->loadConfig(cg);
     }
 }
 
