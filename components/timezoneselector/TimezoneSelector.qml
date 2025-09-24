@@ -160,9 +160,9 @@ Item {
             zoomLevel: 0
             minimumZoomLevel: 0
             // Weirdly enough, the included offline maps of zoom level 0-4
-            // only work until a zoom level of ~3.90, whereas zoom level
-            // 4 (or even 3.99) would require offline maps for zoom level 5.
-            maximumZoomLevel: 3.90
+            // only work until a zoom level of ~4.90, whereas zoom level
+            // 5 (or even 4.99) would require offline maps for zoom level 5.
+            maximumZoomLevel: 4.90
             maximumTilt: 0
             // No maximumBearing property exists, apparently
             onBearingChanged: {
