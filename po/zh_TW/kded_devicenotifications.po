@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-06 00:46+0000\n"
+"POT-Creation-Date: 2025-09-24 02:36+0000\n"
 "PO-Revision-Date: 2025-08-08 02:27+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -17,50 +17,50 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 25.07.70\n"
 
-#: devicenotifications.cpp:341
+#: devicenotifications.cpp:378
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Detected"
 msgstr "偵測到顯示器"
 
-#: devicenotifications.cpp:342
+#: devicenotifications.cpp:379
 #, kde-format
 msgid "A display has been connected."
 msgstr "已連接一個顯示器。"
 
-#: devicenotifications.cpp:355
+#: devicenotifications.cpp:392
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Removed"
 msgstr "顯示器已移除"
 
-#: devicenotifications.cpp:356
+#: devicenotifications.cpp:393
 #, kde-format
 msgid "A display has been disconnected."
 msgstr "已中斷一個顯示器的連接。"
 
-#: devicenotifications.cpp:402
+#: devicenotifications.cpp:439
 #, kde-format
 msgid "%1 has been connected."
 msgstr "%1 已連接。"
 
-#: devicenotifications.cpp:402
+#: devicenotifications.cpp:439
 #, kde-format
 msgid "A USB device has been connected."
 msgstr "已連接一個 USB 裝置。"
 
-#: devicenotifications.cpp:407
+#: devicenotifications.cpp:444
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Detected"
 msgstr "偵測到 USB 裝置"
 
-#: devicenotifications.cpp:445
+#: devicenotifications.cpp:482
 #, kde-format
 msgid "%1 has been disconnected."
 msgstr "%1 已中斷連接。"
 
-#: devicenotifications.cpp:445
+#: devicenotifications.cpp:482
 #, kde-format
 msgid "A USB device has been disconnected."
 msgstr "已中斷一個 USB 裝置的連接。"
@@ -68,7 +68,7 @@ msgstr "已中斷一個 USB 裝置的連接。"
 # 這是 m_usbDeviceRemovedNotification。
 # 我不知道為什麼要講 "went away". 「不見了」感覺有點太怪。
 # --Kisaragi
-#: devicenotifications.cpp:450
+#: devicenotifications.cpp:487
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Went Away"

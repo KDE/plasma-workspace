@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-06 00:46+0000\n"
+"POT-Creation-Date: 2025-09-24 02:36+0000\n"
 "PO-Revision-Date: 2024-11-04 22:01\n"
 "Last-Translator: Zmicier Turok <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -22,61 +22,61 @@ msgstr ""
 "kded_devicenotifications.po\n"
 "X-Crowdin-File-ID: 17862\n"
 
-#: devicenotifications.cpp:341
+#: devicenotifications.cpp:378
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Detected"
 msgstr "Выяўлены дысплэй"
 
-#: devicenotifications.cpp:342
+#: devicenotifications.cpp:379
 #, fuzzy, kde-format
 #| msgid "A display has been unplugged."
 msgid "A display has been connected."
 msgstr "Дысплэй быў адлучаны."
 
-#: devicenotifications.cpp:355
+#: devicenotifications.cpp:392
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Removed"
 msgstr "Дысплэй выдалены"
 
-#: devicenotifications.cpp:356
+#: devicenotifications.cpp:393
 #, fuzzy, kde-format
 #| msgid "A display has been unplugged."
 msgid "A display has been disconnected."
 msgstr "Дысплэй быў адлучаны."
 
-#: devicenotifications.cpp:402
+#: devicenotifications.cpp:439
 #, fuzzy, kde-format
 #| msgid "%1 has been unplugged."
 msgid "%1 has been connected."
 msgstr "Прылада \"%1\" адлучаная."
 
-#: devicenotifications.cpp:402
+#: devicenotifications.cpp:439
 #, fuzzy, kde-format
 #| msgid "A USB device has been unplugged."
 msgid "A USB device has been connected."
 msgstr "USB-прылада адлучаная."
 
-#: devicenotifications.cpp:407
+#: devicenotifications.cpp:444
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Detected"
 msgstr "Выяўлена USB-прылада"
 
-#: devicenotifications.cpp:445
+#: devicenotifications.cpp:482
 #, fuzzy, kde-format
 #| msgid "%1 has been unplugged."
 msgid "%1 has been disconnected."
 msgstr "Прылада \"%1\" адлучаная."
 
-#: devicenotifications.cpp:445
+#: devicenotifications.cpp:482
 #, fuzzy, kde-format
 #| msgid "A USB device has been unplugged."
 msgid "A USB device has been disconnected."
 msgstr "USB-прылада адлучаная."
 
-#: devicenotifications.cpp:450
+#: devicenotifications.cpp:487
 #, fuzzy, kde-format
 #| msgctxt "@title:notifications"
 #| msgid "USB Device Detected"
