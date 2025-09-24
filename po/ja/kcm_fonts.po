@@ -8,20 +8,21 @@
 # Yukiko Bando <ybando@k6.dion.ne.jp>, 2007.
 # Fuminobu TAKEYAMA <ftake@geeko.jp>, 2015.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2006, 2015, 2019.
+# SPDX-FileCopyrightText: 2025 Yuma Kakei <yumasansansan@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-05 05:54+0000\n"
-"PO-Revision-Date: 2024-01-14 22:41+0900\n"
-"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
+"PO-Revision-Date: 2025-09-21 16:01+0900\n"
+"Last-Translator: Yuma Kakei <yumasansansan@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 25.08.1\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -267,6 +268,10 @@ msgid ""
 "effect. You generally want to keep this option enabled unless it causes "
 "problems."
 msgstr ""
+"ディスプレイ上のピクセルは、通常グリッド状に並んでいます。そのため、グリッド"
+"に合わないフォントの字形は、<emphasis>アンチエイリアス</emphasis> 技術で補正"
+"しないと、ブロック状に見えて不自然になります。問題が生じない限り、このオプ"
+"ションを有効にしておくことを推奨します。"
 
 #: package/contents/ui/main.qml:217
 #, kde-format
@@ -302,6 +307,14 @@ msgid ""
 "have <emphasis>BGR</emphasis> and some exotic orderings are not supported by "
 "this feature.</para>This does not work with CRT monitors."
 msgstr ""
+"<para>液晶ディスプレイの各ピクセルは、実際には3つまたは4つの小さな単色光で、"
+"できています。これらの<emphasis>サブピクセル</emphasis>は個別に制御できるた"
+"め、この機能を用いるとフォントの表示品質をさらに向上させることができます。</"
+"para> <para>ただし、表示品質が向上するのは、選択したサブピクセルの並びが、"
+"ディスプレイの実際の配列と一致する場合に限られます。多くのディスプレイは、左"
+"から右に <emphasis>RGB</emphasis> の直線的な配列ですが、<emphasis>BGR</"
+"emphasis> の順であるものや、この機能には対応していない特殊な配列であるものも"
+"あります。</para>この機能は CRT モニタには対応していません。"
 
 #: package/contents/ui/main.qml:329
 #, kde-format
@@ -318,6 +331,10 @@ msgid ""
 "leads to sharper edges but the small letters will less closely resemble "
 "their shape at big sizes."
 msgstr ""
+"ヒンティングとは、フォントに埋め込まれたヒント情報を用いて、特に小さいサイズ"
+"での 表示品質を向上させる技術です。ヒンティングを強くすると、一般には輪郭がよ"
+"り鮮明になりますが、小さいサイズでは、大きなサイズでの本来の字形から離れて見"
+"えることがあります。"
 
 #: package/contents/ui/main.qml:380
 #, kde-format
@@ -335,6 +352,12 @@ msgid ""
 "above. To scale everything, use the scaling slider on the <interface>Display "
 "& Monitor</interface> page.</para>"
 msgstr ""
+"<para>画面の DPI を入力すると、画面上のフォントと、印刷時の物理的なサイズを合"
+"わせることができます。このオプションをデフォルト値から変更すると、多くのアプ"
+"リと競合し、一部のアイコンや画像が期待どおりに拡大縮小されない場合がありま"
+"す。</para> <para>文字サイズを大きくするには、上のフォントサイズを変更してく"
+"ださい。すべてを拡大縮小するには、<interface>ディスプレイとモニタ</interface>"
+"ページのスケールスライダーを使用してください。</para>"
 
 #: package/contents/ui/main.qml:428
 #, kde-format
