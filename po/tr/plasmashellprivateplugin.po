@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-25 00:44+0000\n"
+"POT-Creation-Date: 2025-09-24 00:45+0000\n"
 "PO-Revision-Date: 2025-08-27 09:12+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -28,13 +28,13 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "volkangezer@gmail.com, emir_sari@icloud.com"
 
-#: batterycontrol/batteriesnamesmonitor_p.cpp:46
+#: batterycontrol/batteriesnamesmonitor_p.cpp:45
 #, kde-format
 msgctxt "Placeholder is the battery number"
 msgid "Battery %1"
 msgstr "Pil %1"
 
-#: batterycontrol/batteriesnamesmonitor_p.cpp:48
+#: batterycontrol/batteriesnamesmonitor_p.cpp:47
 #, kde-format
 msgid "Battery"
 msgstr "Pil"

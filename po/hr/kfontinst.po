@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontviewpart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-07 00:44+0000\n"
+"POT-Creation-Date: 2025-09-24 00:45+0000\n"
 "PO-Revision-Date: 2011-04-28 15:17+0200\n"
 "Last-Translator: Marko Dimjašević <marko@dimjasevic.net>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -1611,34 +1611,34 @@ msgstr "UTF-8"
 msgid "XML Decimal Entity"
 msgstr "XML decimalni zapis"
 
-#: viewpart/FontViewPart.cpp:91
+#: viewpart/FontViewPart.cpp:90
 #, kde-format
 msgid "Show Face:"
 msgstr "Prikaži lice:"
 
-#: viewpart/FontViewPart.cpp:94
+#: viewpart/FontViewPart.cpp:93
 #, fuzzy, kde-format
 #| msgid "Installing"
 msgid "Install…"
 msgstr "Instaliranje"
 
-#: viewpart/FontViewPart.cpp:115
+#: viewpart/FontViewPart.cpp:114
 #, fuzzy, kde-format
 #| msgid "Change Text..."
 msgid "Change Text…"
 msgstr "Promijeni tekst…"
 
-#: viewpart/FontViewPart.cpp:341
+#: viewpart/FontViewPart.cpp:340
 #, kde-format
 msgid "Could not read font."
 msgstr "Nije moguće očitati pismo."
 
-#: viewpart/FontViewPart.cpp:407
+#: viewpart/FontViewPart.cpp:406
 #, kde-format
 msgid "Preview String"
 msgstr "Pregledni string"
 
-#: viewpart/FontViewPart.cpp:407
+#: viewpart/FontViewPart.cpp:406
 #, kde-format
 msgid "Please enter new string:"
 msgstr "Unesite novi string:"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase/kfontinst.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-07 00:44+0000\n"
+"POT-Creation-Date: 2025-09-24 00:45+0000\n"
 "PO-Revision-Date: 2004-12-03 14:52-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -1628,34 +1628,34 @@ msgstr "UTF-8"
 msgid "XML Decimal Entity"
 msgstr "Aonán Deachúlach XML"
 
-#: viewpart/FontViewPart.cpp:91
+#: viewpart/FontViewPart.cpp:90
 #, kde-format
 msgid "Show Face:"
 msgstr "Taispeáin Cló-aghaidh:"
 
-#: viewpart/FontViewPart.cpp:94
+#: viewpart/FontViewPart.cpp:93
 #, fuzzy, kde-format
 #| msgid "Installing"
 msgid "Install…"
 msgstr "Á Shuiteáil"
 
-#: viewpart/FontViewPart.cpp:115
+#: viewpart/FontViewPart.cpp:114
 #, fuzzy, kde-format
 #| msgid "Change Text..."
 msgid "Change Text…"
 msgstr "Athraigh téacs..."
 
-#: viewpart/FontViewPart.cpp:341
+#: viewpart/FontViewPart.cpp:340
 #, kde-format
 msgid "Could not read font."
 msgstr "Níorbh fhéidir an cló a léamh."
 
-#: viewpart/FontViewPart.cpp:407
+#: viewpart/FontViewPart.cpp:406
 #, kde-format
 msgid "Preview String"
 msgstr "Teaghrán Réamhamhairc"
 
-#: viewpart/FontViewPart.cpp:407
+#: viewpart/FontViewPart.cpp:406
 #, kde-format
 msgid "Please enter new string:"
 msgstr "Iontráil teaghrán nua, le do thoil:"

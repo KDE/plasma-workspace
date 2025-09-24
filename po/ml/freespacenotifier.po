@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: freespacenotifier trunk\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-31 00:44+0000\n"
+"POT-Creation-Date: 2025-09-24 00:45+0000\n"
 "PO-Revision-Date: 2021-08-07 20:47+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -91,7 +91,7 @@ msgid ""
 "and the specified percentage of available space."
 msgstr ""
 
-#: module.cpp:122
+#: module.cpp:121
 #, fuzzy, kde-format
 #| msgid ""
 #| "Your Root partition is running out of disk space, you have %1 MiB "
@@ -101,7 +101,7 @@ msgid ""
 "(%3%)."
 msgstr "നിങ്ങളുടെ റുട്ട് പാർട്ടീഷൻ നിറയാറായിരിക്കുന്നു, %1 MiB മാത്രമേ ബാക്കിയുള്ളു (%2%)."
 
-#: module.cpp:124
+#: module.cpp:123
 #, fuzzy, kde-format
 #| msgid ""
 #| "Your Root partition is running out of disk space, you have %1 MiB "
@@ -111,7 +111,7 @@ msgid ""
 "(%2%)."
 msgstr "നിങ്ങളുടെ റുട്ട് പാർട്ടീഷൻ നിറയാറായിരിക്കുന്നു, %1 MiB മാത്രമേ ബാക്കിയുള്ളു (%2%)."
 
-#: module.cpp:126
+#: module.cpp:125
 #, fuzzy, kde-format
 #| msgid ""
 #| "Your Home folder is running out of disk space, you have %1 MiB remaining "
@@ -121,7 +121,7 @@ msgid ""
 "(%2%)."
 msgstr "നിങ്ങളുടെ ഹോം അറ നിറയാറായിരിക്കുന്നു, %1 MiB മാത്രമേ ബാക്കിയുള്ളു (%2%)."
 
-#: module.cpp:151
+#: module.cpp:150
 #, kde-format
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"

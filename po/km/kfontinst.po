@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-07 00:44+0000\n"
+"POT-Creation-Date: 2025-09-24 00:45+0000\n"
 "PO-Revision-Date: 2012-06-13 15:24+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer\n"
@@ -1548,34 +1548,34 @@ msgstr "UTF-8"
 msgid "XML Decimal Entity"
 msgstr "ធាតុ​ទសភាគ​របស់​ XML "
 
-#: viewpart/FontViewPart.cpp:91
+#: viewpart/FontViewPart.cpp:90
 #, kde-format
 msgid "Show Face:"
 msgstr "បង្ហាញ​ផ្ទៃ​មុខ ៖"
 
-#: viewpart/FontViewPart.cpp:94
+#: viewpart/FontViewPart.cpp:93
 #, fuzzy, kde-format
 #| msgid "Installing"
 msgid "Install…"
 msgstr "ដំឡើង​"
 
-#: viewpart/FontViewPart.cpp:115
+#: viewpart/FontViewPart.cpp:114
 #, fuzzy, kde-format
 #| msgid "Change Text..."
 msgid "Change Text…"
 msgstr "ផ្លាស់​ប្ដូរ​អត្ថបទ..."
 
-#: viewpart/FontViewPart.cpp:341
+#: viewpart/FontViewPart.cpp:340
 #, kde-format
 msgid "Could not read font."
 msgstr "មិនអាច​អាន​ពុម្ពអក្សរ​បាន​ឡើយ ។"
 
-#: viewpart/FontViewPart.cpp:407
+#: viewpart/FontViewPart.cpp:406
 #, kde-format
 msgid "Preview String"
 msgstr "មើល​ខ្សែ​អក្សរ​ជាមុន"
 
-#: viewpart/FontViewPart.cpp:407
+#: viewpart/FontViewPart.cpp:406
 #, kde-format
 msgid "Please enter new string:"
 msgstr "សូម​បញ្ចូល​ខ្សែ​អក្សរ​ថ្មី ៖"

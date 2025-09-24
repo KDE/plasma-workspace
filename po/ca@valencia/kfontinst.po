@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-07 00:44+0000\n"
+"POT-Creation-Date: 2025-09-24 00:45+0000\n"
 "PO-Revision-Date: 2025-02-21 19:56+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -1558,32 +1558,32 @@ msgstr "UTF-8"
 msgid "XML Decimal Entity"
 msgstr "Entitat decimal XML"
 
-#: viewpart/FontViewPart.cpp:91
+#: viewpart/FontViewPart.cpp:90
 #, kde-format
 msgid "Show Face:"
 msgstr "Mostra l'aparença:"
 
-#: viewpart/FontViewPart.cpp:94
+#: viewpart/FontViewPart.cpp:93
 #, kde-format
 msgid "Install…"
 msgstr "Instal·la…"
 
-#: viewpart/FontViewPart.cpp:115
+#: viewpart/FontViewPart.cpp:114
 #, kde-format
 msgid "Change Text…"
 msgstr "Canvia el text…"
 
-#: viewpart/FontViewPart.cpp:341
+#: viewpart/FontViewPart.cpp:340
 #, kde-format
 msgid "Could not read font."
 msgstr "No s'ha pogut llegir la font."
 
-#: viewpart/FontViewPart.cpp:407
+#: viewpart/FontViewPart.cpp:406
 #, kde-format
 msgid "Preview String"
 msgstr "Cadena de vista prèvia"
 
-#: viewpart/FontViewPart.cpp:407
+#: viewpart/FontViewPart.cpp:406
 #, kde-format
 msgid "Please enter new string:"
 msgstr "Introduïu una cadena nova:"

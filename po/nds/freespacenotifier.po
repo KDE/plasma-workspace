@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: freespacenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-31 00:44+0000\n"
+"POT-Creation-Date: 2025-09-24 00:45+0000\n"
 "PO-Revision-Date: 2014-05-28 11:27+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-doc@kde.org>\n"
@@ -96,7 +96,7 @@ msgid ""
 "and the specified percentage of available space."
 msgstr ""
 
-#: module.cpp:122
+#: module.cpp:121
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Warns the user that the system is running low on space on his home "
@@ -111,7 +111,7 @@ msgstr ""
 "Binnen Dien Tohuusorner geiht de fre'e Ruum op de Neeg, dor sünd bloots noch "
 "%1 MiB na (%2%)."
 
-#: module.cpp:124
+#: module.cpp:123
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Warns the user that the system is running low on space on his home "
@@ -126,7 +126,7 @@ msgstr ""
 "Binnen Dien Tohuusorner geiht de fre'e Ruum op de Neeg, dor sünd bloots noch "
 "%1 MiB na (%2%)."
 
-#: module.cpp:126
+#: module.cpp:125
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Warns the user that the system is running low on space on his home "
@@ -141,7 +141,7 @@ msgstr ""
 "Binnen Dien Tohuusorner geiht de fre'e Ruum op de Neeg, dor sünd bloots noch "
 "%1 MiB na (%2%)."
 
-#: module.cpp:151
+#: module.cpp:150
 #, kde-format
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"

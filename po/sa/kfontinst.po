@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-07 00:44+0000\n"
+"POT-Creation-Date: 2025-09-24 00:45+0000\n"
 "PO-Revision-Date: 2024-12-25 19:45+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -1547,32 +1547,32 @@ msgstr "UTF-8"
 msgid "XML Decimal Entity"
 msgstr "XML दशमलव सत्ता"
 
-#: viewpart/FontViewPart.cpp:91
+#: viewpart/FontViewPart.cpp:90
 #, kde-format
 msgid "Show Face:"
 msgstr "मुखं दर्शयतु :"
 
-#: viewpart/FontViewPart.cpp:94
+#: viewpart/FontViewPart.cpp:93
 #, kde-format
 msgid "Install…"
 msgstr "प्रतिस्था…"
 
-#: viewpart/FontViewPart.cpp:115
+#: viewpart/FontViewPart.cpp:114
 #, kde-format
 msgid "Change Text…"
 msgstr "पाठं परिवर्तयतु..."
 
-#: viewpart/FontViewPart.cpp:341
+#: viewpart/FontViewPart.cpp:340
 #, kde-format
 msgid "Could not read font."
 msgstr "फन्ट् पठितुं न शक्तवान्।"
 
-#: viewpart/FontViewPart.cpp:407
+#: viewpart/FontViewPart.cpp:406
 #, kde-format
 msgid "Preview String"
 msgstr "पूर्वावलोकन String"
 
-#: viewpart/FontViewPart.cpp:407
+#: viewpart/FontViewPart.cpp:406
 #, kde-format
 msgid "Please enter new string:"
 msgstr "कृपया नूतनं स्ट्रिंग् प्रविशतु:"

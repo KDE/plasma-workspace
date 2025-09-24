@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-10 09:29+0000\n"
+"POT-Creation-Date: 2025-09-24 00:45+0000\n"
 "PO-Revision-Date: 2025-01-11 13:56+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -18,13 +18,13 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 23.04.3\n"
 
-#: geotimezonemodule.cpp:187
+#: geotimezonemodule.cpp:186
 #, kde-format
 msgctxt "OSD, keep short"
 msgid "Time zone changed to %1"
 msgstr "Часовий пояс змінено на %1"
 
-#: geotimezonemodule.cpp:190
+#: geotimezonemodule.cpp:189
 #, kde-format
 msgctxt ""
 "System clock was changed due to time zone change OSD, keep short: new time "
@@ -32,12 +32,12 @@ msgctxt ""
 msgid "Clock changed to %1 (%2)"
 msgstr "Час змінено на %1 (%2)"
 
-#: geotimezonemodule.cpp:206
+#: geotimezonemodule.cpp:205
 #, kde-format
 msgid "Refresh is already in progress."
 msgstr "Вже виконуємо оновлення."
 
-#: geotimezonemodule.cpp:269
+#: geotimezonemodule.cpp:268
 #, kde-format
 msgid "Received no or an invalid time zone."
 msgstr "Часового поясу немає або часовий пояс є некоректним."

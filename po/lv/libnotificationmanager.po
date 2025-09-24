@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-23 00:45+0000\n"
+"POT-Creation-Date: 2025-09-24 00:45+0000\n"
 "PO-Revision-Date: 2025-08-18 17:32+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -112,7 +112,7 @@ msgstr "%1 no %2"
 msgid "Application closed unexpectedly."
 msgstr "Programma negaidīti aizvērās."
 
-#: notifications.cpp:912
+#: notifications.cpp:911
 #, kde-format
 msgctxt "@title"
 msgid "Unread Notification"
@@ -121,7 +121,7 @@ msgstr[0] "Nelasīts paziņojums"
 msgstr[1] "Nelasīti paziņojumi"
 msgstr[2] "Nelasīti paziņojumi"
 
-#: notifications.cpp:914
+#: notifications.cpp:913
 #, kde-format
 msgctxt "@info"
 msgid "%1 notification was received while Do Not Disturb was active."
@@ -130,7 +130,7 @@ msgstr[0] "Netraucēšanas režīma laikā saņēmāt %1 paziņojumu."
 msgstr[1] "Netraucēšanas režīma laikā saņēmāt %1 paziņojumus."
 msgstr[2] "Netraucēšanas režīma laikā saņēmāt %1 paziņojumu."
 
-#: notifications.cpp:924
+#: notifications.cpp:923
 #, kde-format
 msgctxt "@action:button Show the notifications popup"
 msgid "Show Notifications"

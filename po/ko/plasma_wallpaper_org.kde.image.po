@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-23 00:45+0000\n"
+"POT-Creation-Date: 2025-09-24 00:45+0000\n"
 "PO-Revision-Date: 2025-07-20 01:19+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -245,13 +245,13 @@ msgid ""
 msgstr ""
 "배경 그림으로 설정할 파일이 존재하지 않거나 배경 그림으로 식별할 수 없음: %1"
 
-#: plugin/imagebackend.cpp:38
+#: plugin/imagebackend.cpp:37
 #, kde-format
 msgid "Next Wallpaper Image"
 msgstr "다음 배경 그림 파일"
 
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
-#: plugin/imagebackend.cpp:351
+#: plugin/imagebackend.cpp:350
 #, kde-format
 msgid "Media Files"
 msgstr "미디어 파일"

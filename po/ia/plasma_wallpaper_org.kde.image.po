@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-23 00:45+0000\n"
+"POT-Creation-Date: 2025-09-24 00:45+0000\n"
 "PO-Revision-Date: 2025-05-27 15:10+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -255,13 +255,13 @@ msgstr ""
 "Le file passate per esser fixate como tapete de papiro non exite, o nos non "
 "pote identificar lo como tapete de papiro: %1"
 
-#: plugin/imagebackend.cpp:38
+#: plugin/imagebackend.cpp:37
 #, kde-format
 msgid "Next Wallpaper Image"
 msgstr "Proxime imagine de tapete de papiro"
 
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
-#: plugin/imagebackend.cpp:351
+#: plugin/imagebackend.cpp:350
 #, kde-format
 msgid "Media Files"
 msgstr "Files de Medios"

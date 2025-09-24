@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-19 00:44+0000\n"
+"POT-Creation-Date: 2025-09-24 00:45+0000\n"
 "PO-Revision-Date: 2024-11-04 22:00\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -22,22 +22,22 @@ msgstr ""
 "kcm_autostart.po\n"
 "X-Crowdin-File-ID: 10754\n"
 
-#: autostartmodel.cpp:383
+#: autostartmodel.cpp:382
 #, kde-format
 msgid "\"%1\" is not an absolute url."
 msgstr "\"%1\" - не абсалютны url."
 
-#: autostartmodel.cpp:386
+#: autostartmodel.cpp:385
 #, kde-format
 msgid "\"%1\" does not exist."
 msgstr "\"%1\" не існуе."
 
-#: autostartmodel.cpp:389
+#: autostartmodel.cpp:388
 #, kde-format
 msgid "\"%1\" is not a file."
 msgstr "\"%1\" - не файл."
 
-#: autostartmodel.cpp:392
+#: autostartmodel.cpp:391
 #, kde-format
 msgid "\"%1\" is not readable."
 msgstr "\"%1\" нечытальны."

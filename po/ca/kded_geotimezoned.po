@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-10 09:29+0000\n"
+"POT-Creation-Date: 2025-09-24 00:45+0000\n"
 "PO-Revision-Date: 2025-01-10 09:32+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -19,13 +19,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 22.12.3\n"
 
-#: geotimezonemodule.cpp:187
+#: geotimezonemodule.cpp:186
 #, kde-format
 msgctxt "OSD, keep short"
 msgid "Time zone changed to %1"
 msgstr "La zona horària ha canviat a %1"
 
-#: geotimezonemodule.cpp:190
+#: geotimezonemodule.cpp:189
 #, kde-format
 msgctxt ""
 "System clock was changed due to time zone change OSD, keep short: new time "
@@ -33,12 +33,12 @@ msgctxt ""
 msgid "Clock changed to %1 (%2)"
 msgstr "El rellotge ha canviat a %1 (%2)"
 
-#: geotimezonemodule.cpp:206
+#: geotimezonemodule.cpp:205
 #, kde-format
 msgid "Refresh is already in progress."
 msgstr "L'actualització encara està en curs."
 
-#: geotimezonemodule.cpp:269
+#: geotimezonemodule.cpp:268
 #, kde-format
 msgid "Received no or an invalid time zone."
 msgstr "S'ha rebut una zona horària no vàlida o no s'ha rebut."

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-10 09:29+0000\n"
+"POT-Creation-Date: 2025-09-24 00:45+0000\n"
 "PO-Revision-Date: 2025-01-10 19:20\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -17,13 +17,13 @@ msgstr ""
 "X-Crowdin-File: /kf6-trunk/messages/plasma-workspace/kded_geotimezoned.pot\n"
 "X-Crowdin-File-ID: 57092\n"
 
-#: geotimezonemodule.cpp:187
+#: geotimezonemodule.cpp:186
 #, kde-format
 msgctxt "OSD, keep short"
 msgid "Time zone changed to %1"
 msgstr "时区已更改为 %1"
 
-#: geotimezonemodule.cpp:190
+#: geotimezonemodule.cpp:189
 #, kde-format
 msgctxt ""
 "System clock was changed due to time zone change OSD, keep short: new time "
@@ -31,12 +31,12 @@ msgctxt ""
 msgid "Clock changed to %1 (%2)"
 msgstr "时钟已更改为 %1 (%2)"
 
-#: geotimezonemodule.cpp:206
+#: geotimezonemodule.cpp:205
 #, kde-format
 msgid "Refresh is already in progress."
 msgstr "刷新已在进行中。"
 
-#: geotimezonemodule.cpp:269
+#: geotimezonemodule.cpp:268
 #, kde-format
 msgid "Received no or an invalid time zone."
 msgstr "没有收到时区或收到了无效时区。"

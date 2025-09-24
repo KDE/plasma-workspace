@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-19 00:44+0000\n"
+"POT-Creation-Date: 2025-09-24 00:45+0000\n"
 "PO-Revision-Date: 2024-09-21 11:42+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -28,22 +28,22 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: autostartmodel.cpp:383
+#: autostartmodel.cpp:382
 #, kde-format
 msgid "\"%1\" is not an absolute url."
 msgstr "«%1» не является абсолютным адресом URL."
 
-#: autostartmodel.cpp:386
+#: autostartmodel.cpp:385
 #, kde-format
 msgid "\"%1\" does not exist."
 msgstr "«%1» не существует."
 
-#: autostartmodel.cpp:389
+#: autostartmodel.cpp:388
 #, kde-format
 msgid "\"%1\" is not a file."
 msgstr "«%1» не является файлом."
 
-#: autostartmodel.cpp:392
+#: autostartmodel.cpp:391
 #, kde-format
 msgid "\"%1\" is not readable."
 msgstr "«%1» не может быть прочитано."

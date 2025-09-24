@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-23 00:45+0000\n"
+"POT-Creation-Date: 2025-09-24 00:45+0000\n"
 "PO-Revision-Date: 2025-08-08 02:23+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -99,21 +99,21 @@ msgstr "%1（來自 %2）"
 msgid "Application closed unexpectedly."
 msgstr "應用程式非預期關閉。"
 
-#: notifications.cpp:912
+#: notifications.cpp:911
 #, kde-format
 msgctxt "@title"
 msgid "Unread Notification"
 msgid_plural "Unread Notifications"
 msgstr[0] "未讀通知"
 
-#: notifications.cpp:914
+#: notifications.cpp:913
 #, kde-format
 msgctxt "@info"
 msgid "%1 notification was received while Do Not Disturb was active."
 msgid_plural "%1 notifications were received while Do Not Disturb was active."
 msgstr[0] "勿擾模式開啟期間收到了 %1 個通知。"
 
-#: notifications.cpp:924
+#: notifications.cpp:923
 #, kde-format
 msgctxt "@action:button Show the notifications popup"
 msgid "Show Notifications"

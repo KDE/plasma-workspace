@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-07 00:44+0000\n"
+"POT-Creation-Date: 2025-09-24 00:45+0000\n"
 "PO-Revision-Date: 2025-04-01 15:00+0400\n"
 "Last-Translator: Khayyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -81,18 +81,18 @@ msgctxt "Generic name (App name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: appsmodel.cpp:38 appsmodel.cpp:74 computermodel.cpp:97 computermodel.cpp:225
+#: appsmodel.cpp:37 appsmodel.cpp:73 computermodel.cpp:97 computermodel.cpp:225
 #: recentusagemodel.cpp:165 recentusagemodel.cpp:228
 #, kde-format
 msgid "Applications"
 msgstr "Tətbiqlər"
 
-#: appsmodel.cpp:169
+#: appsmodel.cpp:168
 #, kde-format
 msgid "Unhide Applications in this Submenu"
 msgstr "Bu alt menyudakı Tətbiqləri göstərmək"
 
-#: appsmodel.cpp:178
+#: appsmodel.cpp:177
 #, kde-format
 msgid "Unhide Applications in '%1'"
 msgstr "\"%1\"-dəki tətbiqi göstərmək"

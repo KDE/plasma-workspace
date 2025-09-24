@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-10 09:29+0000\n"
+"POT-Creation-Date: 2025-09-24 00:45+0000\n"
 "PO-Revision-Date: 2025-01-11 10:23+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -15,13 +15,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 24.12.0\n"
 
-#: geotimezonemodule.cpp:187
+#: geotimezonemodule.cpp:186
 #, kde-format
 msgctxt "OSD, keep short"
 msgid "Time zone changed to %1"
 msgstr "Le fuseau horaire a été modifié à %1."
 
-#: geotimezonemodule.cpp:190
+#: geotimezonemodule.cpp:189
 #, kde-format
 msgctxt ""
 "System clock was changed due to time zone change OSD, keep short: new time "
@@ -29,12 +29,12 @@ msgctxt ""
 msgid "Clock changed to %1 (%2)"
 msgstr "L'horloge a été modifiée à %1 (%2)."
 
-#: geotimezonemodule.cpp:206
+#: geotimezonemodule.cpp:205
 #, kde-format
 msgid "Refresh is already in progress."
 msgstr "L'actualisation est déjà en cours."
 
-#: geotimezonemodule.cpp:269
+#: geotimezonemodule.cpp:268
 #, kde-format
 msgid "Received no or an invalid time zone."
 msgstr "N'a reçu aucun fuseau horaire ou un fuseau horaire non valable."

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-20 00:44+0000\n"
+"POT-Creation-Date: 2025-09-24 00:45+0000\n"
 "PO-Revision-Date: 2024-10-18 17:08+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -103,13 +103,13 @@ msgstr ""
 "Starts without lock screen support. Only needed if other component provides "
 "the lock screen."
 
-#: server.cpp:775
+#: server.cpp:774
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[unknown]"
 
-#: server.cpp:798
+#: server.cpp:797
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -121,7 +121,7 @@ msgstr ""
 "are exhausted. Here are the top three consumers of session resources:\n"
 "%1"
 
-#: server.cpp:1058
+#: server.cpp:1057
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""

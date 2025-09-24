@@ -1,13 +1,14 @@
 # SPDX-FileCopyrightText: 2022, 2023, 2024 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # Tomohiro Hyakutake <tomhioo@outlook.jp>, 2019.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2022.
+# SPDX-FileCopyrightText: 2025 Yuma Kakei <yumasansansan@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-18 00:44+0000\n"
-"PO-Revision-Date: 2024-11-17 22:41+0900\n"
-"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
+"PO-Revision-Date: 2025-09-21 15:02+0900\n"
+"Last-Translator: Yuma Kakei <yumasansansan@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -195,17 +196,16 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Light Global Theme"
-msgstr ""
+msgstr "明るいグローバルテーマを選択"
 
 #: ui/LookAndFeelSelector.qml:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Dark Global Theme"
-msgstr ""
+msgstr "暗いグローバルテーマを選択"
 
 #: ui/LookAndFeelSelector.qml:49 ui/StaticLookAndFeel.qml:67
-#, fuzzy, kde-format
-#| msgid "Preview Theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview Theme"
 msgstr "テーマをプレビュー"
@@ -235,8 +235,7 @@ msgid "Switch to Dark Mode at Night"
 msgstr ""
 
 #: ui/main.qml:40
-#, fuzzy, kde-format
-#| msgid "Get New…"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Get New…"
 msgstr "新しいものを入手..."
@@ -357,8 +356,7 @@ msgstr ""
 "め、このグローバルテーマのメンテナに連絡してください。"
 
 #: ui/StaticLookAndFeel.qml:53
-#, fuzzy, kde-format
-#| msgid "Contains Desktop layout"
+#, kde-format
 msgctxt "@label"
 msgid "Contains Desktop layout"
 msgstr "デスクトップレイアウトを含む"
@@ -380,16 +378,3 @@ msgstr "適用するものを選んでください..."
 #, kde-format
 msgid "Show fewer options…"
 msgstr "表示するオプションを減らす..."
-
-#~ msgid ""
-#~ "You have to restart the Plasma session for these changes to take effect."
-#~ msgstr "変更を有効にするには Plasma セッションを再起動する必要があります。"
-
-#~ msgid "Cursor Settings Changed"
-#~ msgstr "カーソル設定が変更されました"
-
-#~ msgid "Apply"
-#~ msgstr "適用"
-
-#~ msgid "Cancel"
-#~ msgstr "キャンセル"

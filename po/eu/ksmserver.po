@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-20 00:44+0000\n"
+"POT-Creation-Date: 2025-09-24 00:45+0000\n"
 "PO-Revision-Date: 2024-09-28 13:30+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -106,13 +106,13 @@ msgstr ""
 "Pantaila giltzatzeko euskarri gabe abiatzen da. Beharrezkoa soilik beste "
 "osagaiek pantaila giltzatzea hornitzen badute."
 
-#: server.cpp:775
+#: server.cpp:774
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[ezezaguna]"
 
-#: server.cpp:798
+#: server.cpp:797
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -125,7 +125,7 @@ msgstr ""
 "kontsumitzaile nagusiak:\n"
 "%1"
 
-#: server.cpp:1058
+#: server.cpp:1057
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""

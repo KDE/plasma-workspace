@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-23 00:45+0000\n"
+"POT-Creation-Date: 2025-09-24 00:45+0000\n"
 "PO-Revision-Date: 2024-09-18 19:03+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -247,13 +247,13 @@ msgstr ""
 "La dosiero metenda kiel ekranfonbildo ne ekzistas aŭ ni ne povas identigi "
 "ĝin kiel ekranfonbildo: %1"
 
-#: plugin/imagebackend.cpp:38
+#: plugin/imagebackend.cpp:37
 #, kde-format
 msgid "Next Wallpaper Image"
 msgstr "Sekva Ekranfona Bildo"
 
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
-#: plugin/imagebackend.cpp:351
+#: plugin/imagebackend.cpp:350
 #, kde-format
 msgid "Media Files"
 msgstr "Aŭdvidaj Dosieroj"

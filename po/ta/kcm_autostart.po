@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-19 00:44+0000\n"
+"POT-Creation-Date: 2025-09-24 00:45+0000\n"
 "PO-Revision-Date: 2025-09-21 13:34+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -17,22 +17,22 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 25.08.1\n"
 
-#: autostartmodel.cpp:383
+#: autostartmodel.cpp:382
 #, kde-format
 msgid "\"%1\" is not an absolute url."
 msgstr "\"%1\" ஒரு முழுமையான முகவரி இல்லை."
 
-#: autostartmodel.cpp:386
+#: autostartmodel.cpp:385
 #, kde-format
 msgid "\"%1\" does not exist."
 msgstr "\"%1\" என்பது இல்லை."
 
-#: autostartmodel.cpp:389
+#: autostartmodel.cpp:388
 #, kde-format
 msgid "\"%1\" is not a file."
 msgstr "\"%1\" ஒரு கோப்பு இல்லை."
 
-#: autostartmodel.cpp:392
+#: autostartmodel.cpp:391
 #, kde-format
 msgid "\"%1\" is not readable."
 msgstr "\"%1\"-ஐ படிக்க முடியவில்லை."

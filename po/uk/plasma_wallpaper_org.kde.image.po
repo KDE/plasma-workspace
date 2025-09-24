@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_org.kde.image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-23 00:45+0000\n"
+"POT-Creation-Date: 2025-09-24 00:45+0000\n"
 "PO-Revision-Date: 2025-08-02 17:03+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -253,13 +253,13 @@ msgstr ""
 "Файла, вказаного як файл зображення тла, не існує або його не вдалося "
 "ідентифікувати як зображення тла: %1"
 
-#: plugin/imagebackend.cpp:38
+#: plugin/imagebackend.cpp:37
 #, kde-format
 msgid "Next Wallpaper Image"
 msgstr "Наступне зображення тла стільниці"
 
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
-#: plugin/imagebackend.cpp:351
+#: plugin/imagebackend.cpp:350
 #, kde-format
 msgid "Media Files"
 msgstr "Мультимедійні файли"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-23 00:45+0000\n"
+"POT-Creation-Date: 2025-09-24 00:45+0000\n"
 "PO-Revision-Date: 2024-10-26 11:27+0200\n"
 "Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -251,13 +251,13 @@ msgstr ""
 "Filen der blev angivet som baggrundsbillede findes ikke, eller vi kan ikke "
 "identificere den som et baggrundsbillede: %1"
 
-#: plugin/imagebackend.cpp:38
+#: plugin/imagebackend.cpp:37
 #, kde-format
 msgid "Next Wallpaper Image"
 msgstr "Næste baggrundsbillede"
 
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
-#: plugin/imagebackend.cpp:351
+#: plugin/imagebackend.cpp:350
 #, kde-format
 msgid "Media Files"
 msgstr "Mediefiler"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-19 00:44+0000\n"
+"POT-Creation-Date: 2025-09-24 00:45+0000\n"
 "PO-Revision-Date: 2024-10-16 18:48+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -22,22 +22,22 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 24.08.2\n"
 
-#: autostartmodel.cpp:383
+#: autostartmodel.cpp:382
 #, kde-format
 msgid "\"%1\" is not an absolute url."
 msgstr "”%1” ei ole absoluuttinen verkko-osoite."
 
-#: autostartmodel.cpp:386
+#: autostartmodel.cpp:385
 #, kde-format
 msgid "\"%1\" does not exist."
 msgstr "Tiedostoa ”%1” ei ole olemassa."
 
-#: autostartmodel.cpp:389
+#: autostartmodel.cpp:388
 #, kde-format
 msgid "\"%1\" is not a file."
 msgstr "”%1” ei ole tiedosto."
 
-#: autostartmodel.cpp:392
+#: autostartmodel.cpp:391
 #, kde-format
 msgid "\"%1\" is not readable."
 msgstr "Tiedostoa ”%1” ei voi lukea."

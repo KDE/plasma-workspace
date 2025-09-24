@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: freespacenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-31 00:44+0000\n"
+"POT-Creation-Date: 2025-09-24 00:45+0000\n"
 "PO-Revision-Date: 2025-09-17 13:12+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -96,7 +96,7 @@ msgstr ""
 "Tölvan lætur þig vita ef laust pláss verður minna en þau MiB sem tilgreind "
 "eru og minna en tilgreind prósenta af lausu plássi."
 
-#: module.cpp:122
+#: module.cpp:121
 #, kde-format
 msgid ""
 "Your %1 partition is running out of disk space; %2 MiB of space remaining "
@@ -105,7 +105,7 @@ msgstr ""
 "Disksneiðin %1 er að verða uppiskroppa með pláss, þú átt aðeins %2 MiB eftir "
 "(%3%)"
 
-#: module.cpp:124
+#: module.cpp:123
 #, kde-format
 msgid ""
 "Your Root partition is running out of disk space; %1 MiB of space remaining "
@@ -114,14 +114,14 @@ msgstr ""
 "Rótardisksneiðin þín er að verða uppiskroppa með pláss, þú átt aðeins %1 MiB "
 "eftir (%2%)"
 
-#: module.cpp:126
+#: module.cpp:125
 #, kde-format
 msgid ""
 "Your Home folder is running out of disk space; %1 MiB of space remaining "
 "(%2%)."
 msgstr "Heimamappan þín er að verða uppiskroppa með pláss, %1 MiB eftir (%2%)"
 
-#: module.cpp:151
+#: module.cpp:150
 #, kde-format
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"

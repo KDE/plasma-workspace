@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-07 00:44+0000\n"
+"POT-Creation-Date: 2025-09-24 00:45+0000\n"
 "PO-Revision-Date: 2010-01-28 23:29+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: kn-IN <>\n"
@@ -1571,34 +1571,34 @@ msgstr "UTF-8"
 msgid "XML Decimal Entity"
 msgstr "XML ದಶಾಂಶ ನಮೂದು"
 
-#: viewpart/FontViewPart.cpp:91
+#: viewpart/FontViewPart.cpp:90
 #, kde-format
 msgid "Show Face:"
 msgstr "ಮುಖವನ್ನು ತೋರಿಸು:"
 
-#: viewpart/FontViewPart.cpp:94
+#: viewpart/FontViewPart.cpp:93
 #, fuzzy, kde-format
 #| msgid "Installing"
 msgid "Install…"
 msgstr "ಅನುಸ್ಥಾಪಿಸಲಾಗುತ್ತಿದೆ"
 
-#: viewpart/FontViewPart.cpp:115
+#: viewpart/FontViewPart.cpp:114
 #, fuzzy, kde-format
 #| msgid "Change Text..."
 msgid "Change Text…"
 msgstr "ಪಠ್ಯವನ್ನು ಬದಲಾಯಿಸು..."
 
-#: viewpart/FontViewPart.cpp:341
+#: viewpart/FontViewPart.cpp:340
 #, kde-format
 msgid "Could not read font."
 msgstr "ಅಕ್ಷರಶೈಲಿಯನ್ನು ಓದಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ."
 
-#: viewpart/FontViewPart.cpp:407
+#: viewpart/FontViewPart.cpp:406
 #, kde-format
 msgid "Preview String"
 msgstr "ವಾಕ್ಯದ ಮುನ್ನೋಟ"
 
-#: viewpart/FontViewPart.cpp:407
+#: viewpart/FontViewPart.cpp:406
 #, kde-format
 msgid "Please enter new string:"
 msgstr "ದಯವಿಟ್ಟು ಹೊಸ ವಾಕ್ಯವನ್ನು ನಮೂದಿಸಿ:"
