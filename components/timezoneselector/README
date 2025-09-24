@@ -6,4 +6,4 @@ The script "timezone_geojson_update.py" automates the download and compress proc
 
 ## offline_tiles
 
-These are the official openstreetmap tiles. The tile named `offline_tiles/osm_100_l_<a>_<b>_<c>.png` has been downloaded from the URL `https://b.tile.openstreetmap.org/<a>/<b>/<c>.png`.
+These tiles are based on the top-most world tile that's available at https://vector.openstreetmap.org/shortbread_v1/0/0/0.mvt, converted to SVG through https://mapbox.github.io/mvt-cruncher/html/mvt2svg.html, replacing the hardcoded red sea color with #AAD3DF; the SVG is then split into sub-tyles using tiles_split.py.
