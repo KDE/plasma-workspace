@@ -96,7 +96,7 @@ private Q_SLOTS:
 
 Q_SIGNALS:
     void hasCumulativeChanged(bool status);
-    void hasBatteriesChanged(bool statuts);
+    void hasBatteriesChanged(bool status);
     void pluggedInChanged(bool status);
     void hasInternalBatteriesChanged(bool status);
     void stateChanged(ChargeStateEnum state);

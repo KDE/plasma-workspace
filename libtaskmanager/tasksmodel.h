@@ -109,12 +109,12 @@ public:
 
     QHash<int, QByteArray> roleNames() const override;
 
-    Q_INVOKABLE int rowCount(const QModelIndex &parent = QModelIndex()) const override; // Invokable.
+    Q_INVOKABLE int rowCount(const QModelIndex &parent = QModelIndex()) const override; // Invocable.
 
     QVariant data(const QModelIndex &proxyIndex, int role) const override;
 
     /**
-     * The number of launcher tasks in the tast list.
+     * The number of launcher tasks in the task list.
      *
      * @returns the number of launcher tasks in the task list.
      **/

@@ -36,7 +36,7 @@ KIO::ThumbnailResult CFontThumbnail::create(const KIO::ThumbnailRequest &request
 
     qCDebug(KCM_KFONTINST_THUMBNAIL) << "Create font thumbnail for:" << path << Qt::endl;
 
-    // Is this a appliaction/vnd.kde.fontspackage file? If so, extract 1 scalable font...
+    // Is this an application/vnd.kde.fontspackage file? If so, extract 1 scalable font...
     QMimeDatabase db;
     if (KFI::Misc::isPackage(path) || u"application/zip" == db.mimeTypeForFile(path, QMimeDatabase::MatchContent).name()) {
         KZip zip(path);

@@ -118,7 +118,7 @@ PlasmaComponents3.ScrollView {
             break;
         }
         case Qt.Key_Backspace: {
-            // filter.text += event.text wil break if the key is backspace
+            // filter.text += event.text will break if the key is backspace
             if (!filter.activeFocus) {
                 // Forward backspace to filter when not focused
                 filter.forceActiveFocus();

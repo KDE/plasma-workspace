@@ -75,7 +75,7 @@ std::optional<AutostartEntry> AutostartModel::loadDesktopEntry(const QString &fi
     const auto kind = AutostartScriptDesktopFile::isAutostartScript(config) ? XdgScripts : XdgAutoStart; // .config/autostart load desktop at startup
     const QString tryCommand = grp.readEntry("TryExec");
 
-    // Try to filter out entries that point to nonexistant programs
+    // Try to filter out entries that point to nonexistent programs
     // If TryExec is either found in $PATH or is an absolute file path that exists
     // This doesn't detect uninstalled Flatpaks for example though
     if (!tryCommand.isEmpty() && QStandardPaths::findExecutable(tryCommand).isEmpty() && !QFile::exists(tryCommand)) {

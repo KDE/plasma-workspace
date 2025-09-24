@@ -13,7 +13,7 @@ namespace ColorCorrect
 Q_NAMESPACE
 enum NightLightMode {
     /**
-     * Color temperature is constant thoughout the day.
+     * Color temperature is constant throughout the day.
      */
     Constant,
     /**

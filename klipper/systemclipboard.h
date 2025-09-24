@@ -113,7 +113,7 @@ private:
     /**
      * Avoid reacting to our own changes, using this
      * lock.
-     * Don't manupulate this object directly... use the Ignore struct
+     * Don't manipulate this object directly... use the Ignore struct
      * instead
      */
     int m_selectionLocklevel = 0;

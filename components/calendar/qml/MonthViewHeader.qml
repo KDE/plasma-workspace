@@ -14,7 +14,7 @@ import org.kde.plasma.components as PlasmaComponents
 import org.kde.plasma.extras as PlasmaExtras
 
 // NOTE : This header is designed to be usable by both the generic calendar component and the digital clock applet
-// which requires a little different layout to accomodate for configure and pin buttons because it may be in panel
+// which requires a little different layout to accommodate for configure and pin buttons because it may be in panel
 
 //                      CALENDAR                                               DIGTAL CLOCK
 // |---------------------------------------------------|  |----------------------------------------------------|

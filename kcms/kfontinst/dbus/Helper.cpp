@@ -110,7 +110,7 @@ ActionReply Helper::manage(const QVariantMap &args)
     } else if (u"saveDisabled" == method) {
         result = saveDisabled();
     } else {
-        // qDebug() << "Uknown action";
+        // qDebug() << "Unknown action";
     }
 
     if (FontInst::STATUS_OK == result) {

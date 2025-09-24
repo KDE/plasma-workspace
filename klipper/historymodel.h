@@ -77,7 +77,7 @@ public:
      * Inserts item into clipboard history top
      * if duplicate entry exist, the older duplicate is deleted.
      * The duplicate concept is "deep", so that two text string
-     * are considerd duplicate if identical.
+     * are considered duplicate if identical.
      */
     bool insert(const QMimeData *mimeData, qreal timestamp = 0);
     bool insert(const QString &text);

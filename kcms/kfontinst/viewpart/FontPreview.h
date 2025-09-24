@@ -33,7 +33,7 @@ public:
     QSize sizeHint() const override;
     QSize minimumSizeHint() const override;
 
-    void showFont(const QString &name, // Thsi is either family name, or filename
+    void showFont(const QString &name, // This is either family name, or filename
                   unsigned long styleInfo = KFI_NO_STYLE_INFO,
                   int face = 0);
     void showFont();

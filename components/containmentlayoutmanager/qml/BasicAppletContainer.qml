@@ -256,7 +256,7 @@ ContainmentLayoutManager.AppletContainer {
             }
 
             source: Effects.MultiEffect {
-                // Blur needs to be a separed MultiEffect because otherwise it blurs
+                // Blur needs to be a separate MultiEffect because otherwise it blurs
                 // the mask as well
                 width: backgroundEffect.appletContainerScreenRect.width
                 height: backgroundEffect.appletContainerScreenRect.height

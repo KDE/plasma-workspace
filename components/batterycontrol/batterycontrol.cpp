@@ -157,7 +157,7 @@ void BatteryControlModel::onServiceRegistered(const QString &serviceName)
             if (reply.isValid()) {
                 updateAcPlugState(reply.value());
             } else {
-                qCDebug(COMPONENTS::BATTERYCONTROL) << "Fail to retrive power save status";
+                qCDebug(COMPONENTS::BATTERYCONTROL) << "Fail to retrieve power save status";
             }
             watcher->deleteLater();
         });
@@ -310,7 +310,7 @@ void BatteryControlModel::deviceAdded(const QString &udi)
 
     int position = m_batterySources.size();
 
-    qCDebug(COMPONENTS::BATTERYCONTROL) << "Position for battery with udi : " << udi << "intitialized : " << position;
+    qCDebug(COMPONENTS::BATTERYCONTROL) << "Position for battery with udi : " << udi << "initialized : " << position;
 
     m_batteryPositions[udi] = position;
 
@@ -499,7 +499,7 @@ void BatteryControlModel::updateOverallBattery()
 
     m_hasCumulative = hasCumulative;
 
-    qCDebug(COMPONENTS::BATTERYCONTROL) << "____ Overal battery updated ____ \n"
+    qCDebug(COMPONENTS::BATTERYCONTROL) << "____ Overall battery updated ____ \n"
                                         << "Has cumulative          : " << (hasCumulative ? "Yes" : "No") << "\n"
                                         << "Has battery             : " << (m_hasBatteries ? "Yes" : "No") << "\n"
                                         << "Plugged In              : " << (m_pluggedIn ? "Yes" : "No") << "\n"

@@ -179,7 +179,7 @@ CGroupList::CGroupList(QWidget *parent)
         m_groups.append(m_specialGroups[CGroupListItem::SYSTEM]);
     }
     m_specialGroups[CGroupListItem::UNCLASSIFIED] = new CGroupListItem(CGroupListItem::UNCLASSIFIED, this);
-    // Locate groups.xml file - normall will be ~/.config/fontgroups.xml
+    // Locate groups.xml file - normally will be ~/.config/fontgroups.xml
     QString path(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + u'/');
 
     if (!Misc::dExists(path)) {

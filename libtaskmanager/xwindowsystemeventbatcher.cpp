@@ -28,7 +28,7 @@ XWindowSystemEventBatcher::XWindowSystemEventBatcher(QObject *parent)
     });
 
     QObject::connect(KX11Extras::self(), &KX11Extras::windowChanged, this, [this](WId window, NET::Properties properties, NET::Properties2 properties2) {
-        // if properties contained only cachable flags
+        // if properties contained only cacheable flags
         if ((properties | s_cachableProperties) == s_cachableProperties && (properties2 | s_cachableProperties2) == s_cachableProperties2) {
             m_cache[window].properties |= properties;
             m_cache[window].properties2 |= properties2;

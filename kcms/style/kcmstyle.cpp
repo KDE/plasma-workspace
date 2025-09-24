@@ -207,7 +207,7 @@ void KCMStyle::configure(const QString &title, const QString &styleName, QQuickI
         // Force re-rendering of the preview, to apply settings
         Q_EMIT styleReconfigured(styleName);
 
-        // For now, ask all KDE apps to recreate their styles to apply the setitngs
+        // For now, ask all KDE apps to recreate their styles to apply the settings
         notifyKcmChange(GlobalChangeType::StyleChanged);
 
         // When user edited a style, assume they want to use it, too

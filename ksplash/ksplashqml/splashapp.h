@@ -23,7 +23,7 @@ public:
     ~SplashApp() override;
 
 public Q_SLOTS:
-    Q_SCRIPTABLE void setStage(const QString &messgae);
+    Q_SCRIPTABLE void setStage(const QString &message);
 
 protected:
     void timerEvent(QTimerEvent *event) override;

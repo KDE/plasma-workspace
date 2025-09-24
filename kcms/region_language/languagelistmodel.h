@@ -49,7 +49,7 @@ public:
 #endif
     QString metric() const;
 
-    // currently unused, but we need it if we want preview examples in add langauge overlay
+    // currently unused, but we need it if we want preview examples in add language overlay
     bool isPreviewExample() const;
     void setIsPreviewExample(bool preview);
 

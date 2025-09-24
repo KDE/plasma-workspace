@@ -323,7 +323,7 @@ public:
      * filtered.
      *
      * @see filterSkipTaskbar
-     * @param filter Whether tasks whichs should not be on the 'task bar'
+     * @param filter Whether tasks which should not be on the 'task bar'
      * should be filtered.
      **/
     void setFilterSkipTaskbar(bool filter);

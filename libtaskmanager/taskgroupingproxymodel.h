@@ -21,7 +21,7 @@ namespace TaskManager
  * @short A proxy tasks model for grouping tasks, forming a tree.
  *
  * This proxy model groups tasks in its source tasks model, forming a tree
- * of tasks. Gouping behavior is influenced by various properties set on
+ * of tasks. Grouping behavior is influenced by various properties set on
  * the proxy model instance.
  *
  * @author Eike Hein <hein@kde.org>

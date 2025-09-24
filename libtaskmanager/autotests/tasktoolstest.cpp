@@ -78,7 +78,7 @@ void TaskToolsTest::initTestCase()
     KSycoca::self()->ensureCacheValid();
     QVERIFY(QFile::exists(KSycoca::absoluteFilePath()));
 
-    // Verify that our enviromnent is as expected and no outside apps leak in
+    // Verify that our environment is as expected and no outside apps leak in
     QVERIFY(!KService::serviceByDesktopName(QStringLiteral("org.kde.ktrip")));
     QVERIFY(KService::serviceByDesktopName(QStringLiteral("org.kde.dolphin")));
     QVERIFY(KService::serviceByDesktopName(QStringLiteral("org.kde.konversation")));

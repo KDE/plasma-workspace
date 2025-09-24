@@ -42,8 +42,8 @@ AppletsLayout::AppletsLayout(QQuickItem *parent)
         if (!m_containment) {
             return;
         }
-        // We can't save the layout during bootup, for performance reasons and to avoid race consitions as much as possible, so if we needto save and still
-        // starting up, don't actually savenow, but we will when Corona::startupCompleted is emitted
+        // We can't save the layout during boot-up, for performance reasons and to avoid race conditions as much as possible, so if we
+        // need to save and still starting up, don't actually save now, but we will when Corona::startupCompleted is emitted
 
         if (!m_configKey.isEmpty() && m_containment && m_containment->corona()->isStartupCompleted()) {
             const QString serializedConfig = m_layoutManager->serializeLayout();

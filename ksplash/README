@@ -38,7 +38,7 @@ Engine = Simple
 
 The group name is [KSplash Theme: <theme name>]. Name, Description, Version and Author
 are shown in the configuration module. Engine selects which splash implementation
-the theme is for (currently 'None', 'Simple' and 'KSplashX' ). There may be futher
+the theme is for (currently 'None', 'Simple' and 'KSplashX' ). There may be further
 implementation-dependent data in Theme.rc .
 
 
