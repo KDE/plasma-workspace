@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Federico Zenith <zenith@chemeng.ntnu.no>, 2008.
 # Federico Zenith <federico.zenith@member.fsf.org>, 2008, 2010, 2012, 2015.
-# SPDX-FileCopyrightText: 2017, 2020, 2021, 2022, 2023, 2024 Paolo Zamponi <feus73@gmail.com>
+# SPDX-FileCopyrightText: 2017, 2020, 2021, 2022, 2023, 2024, 2025 Paolo Zamponi <feus73@gmail.com>
 # Vincenzo Reale <smart2128vr@gmail.com>, 2020.
 #
 msgid ""
@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-24 00:45+0000\n"
-"PO-Revision-Date: 2024-07-30 18:42+0200\n"
+"PO-Revision-Date: 2025-09-23 18:55+0200\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: autostartmodel.cpp:382
 #, kde-format
@@ -114,7 +114,7 @@ msgstr "Aggiungi nuovo"
 #, kde-format
 msgctxt "@title:menu accessible menu button"
 msgid "Add new application or script"
-msgstr ""
+msgstr "Aggiungi nuova applicazione o nuovo script"
 
 #: ui/main.qml:73
 #, kde-format
@@ -123,11 +123,10 @@ msgid "Application…"
 msgstr "Applicazione…"
 
 #: ui/main.qml:75
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgctxt "@action:inmenu accessible"
 msgid "Add application"
-msgstr "Applicazioni"
+msgstr "Aggiungi applicazione"
 
 #: ui/main.qml:79
 #, kde-format
@@ -136,11 +135,10 @@ msgid "Login Script…"
 msgstr "Script di accesso…"
 
 #: ui/main.qml:81
-#, fuzzy, kde-format
-#| msgid "Login Scripts"
+#, kde-format
 msgctxt "@action:inmenu accessible"
 msgid "Add login script"
-msgstr "Script di accesso"
+msgstr "Aggiungi script di accesso"
 
 #: ui/main.qml:85
 #, kde-format
@@ -149,11 +147,10 @@ msgid "Logout Script…"
 msgstr "Script di uscita…"
 
 #: ui/main.qml:87
-#, fuzzy, kde-format
-#| msgid "Logout Scripts"
+#, kde-format
 msgctxt "@action:inmenu accessible"
 msgid "Add logout script"
-msgstr "Script di uscita"
+msgstr "Aggiungi script di uscita"
 
 #: ui/main.qml:121
 #, kde-format

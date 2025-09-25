@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-02 00:45+0000\n"
+"POT-Creation-Date: 2025-09-25 00:44+0000\n"
 "PO-Revision-Date: 2009-01-07 15:16+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: Kannada <en@li.org>\n"
@@ -32,23 +32,23 @@ msgstr "ನಿರ್ಗಮಿಸು"
 msgid "Logs out, exiting the current desktop session"
 msgstr ""
 
-#: sessionrunner.cpp:25
+#: sessionrunner.cpp:26
 #, fuzzy, kde-format
 #| msgctxt "shutdown computer command"
 #| msgid "shutdown"
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to shut down the "
 "computer"
-msgid "shutdown;shut down;power;power off"
+msgid "shutdown;shut down;power;poweroff;power off"
 msgstr "ಸ್ಥಗಿತಗೊಳಿಸು"
 
-#: sessionrunner.cpp:28
+#: sessionrunner.cpp:29
 #, fuzzy, kde-format
 #| msgid "Shutdown the computer"
 msgid "Turns off the computer"
 msgstr "ಗಣಕವನ್ನು ಸ್ಥಗಿತಗೊಳಿಸಿ"
 
-#: sessionrunner.cpp:31
+#: sessionrunner.cpp:32
 #, fuzzy, kde-format
 #| msgctxt "restart computer command"
 #| msgid "restart"
@@ -58,13 +58,13 @@ msgctxt ""
 msgid "restart;reboot"
 msgstr "ಮರಳಿ ಆರಂಭಿಸು"
 
-#: sessionrunner.cpp:34
+#: sessionrunner.cpp:35
 #, fuzzy, kde-format
 #| msgid "Restart the computer"
 msgid "Reboots the computer"
 msgstr "ಗಣಕವನ್ನು ಮರಳಿ ಆರಂಭಿಸಿ"
 
-#: sessionrunner.cpp:38
+#: sessionrunner.cpp:39
 #, fuzzy, kde-format
 #| msgid "Lock the screen"
 msgctxt ""
@@ -72,12 +72,12 @@ msgctxt ""
 msgid "lock;lock screen"
 msgstr "ತೆರೆಯನ್ನು ಲಾಕ್‌ ಮಾಡಿ"
 
-#: sessionrunner.cpp:40
+#: sessionrunner.cpp:41
 #, kde-format
 msgid "Locks the current sessions and starts the screen saver"
 msgstr ""
 
-#: sessionrunner.cpp:43
+#: sessionrunner.cpp:44
 #, fuzzy, kde-format
 #| msgid "new session"
 msgctxt ""
@@ -86,12 +86,12 @@ msgctxt ""
 msgid "save;save session"
 msgstr "ಹೊಸ ಅಧಿವೇಶನ"
 
-#: sessionrunner.cpp:46
+#: sessionrunner.cpp:47
 #, kde-format
 msgid "Saves the current session for session restoration"
 msgstr ""
 
-#: sessionrunner.cpp:49
+#: sessionrunner.cpp:50
 #, fuzzy, kde-format
 #| msgid "switch user"
 msgctxt ""
@@ -100,18 +100,18 @@ msgctxt ""
 msgid "switch user;new session"
 msgstr "ಬಳಕೆದಾರನನ್ನು ಬದಲಾಯಿಸಿ"
 
-#: sessionrunner.cpp:52
+#: sessionrunner.cpp:53
 #, kde-format
 msgid "Switch to a session as a different user"
 msgstr ""
 
-#: sessionrunner.cpp:73
+#: sessionrunner.cpp:74
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
 msgstr ""
 
-#: sessionrunner.cpp:81
+#: sessionrunner.cpp:82
 #, fuzzy, kde-format
 #| msgctxt "shutdown computer command"
 #| msgid "shutdown"
@@ -119,7 +119,7 @@ msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "ಸ್ಥಗಿತಗೊಳಿಸು"
 
-#: sessionrunner.cpp:88
+#: sessionrunner.cpp:89
 #, fuzzy, kde-format
 #| msgctxt "restart computer command"
 #| msgid "restart"
@@ -127,19 +127,19 @@ msgctxt "restart computer command"
 msgid "Restart"
 msgstr "ಮರಳಿ ಆರಂಭಿಸು"
 
-#: sessionrunner.cpp:95
+#: sessionrunner.cpp:96
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr ""
 
-#: sessionrunner.cpp:102
+#: sessionrunner.cpp:103
 #, fuzzy, kde-format
 #| msgid "new session"
 msgid "Save Session"
 msgstr "ಹೊಸ ಅಧಿವೇಶನ"
 
-#: sessionrunner.cpp:109
+#: sessionrunner.cpp:110
 #, fuzzy, kde-format
 #| msgid "switch user"
 msgid "Switch User"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-02 00:45+0000\n"
+"POT-Creation-Date: 2025-09-25 00:44+0000\n"
 "PO-Revision-Date: 2024-02-24 18:27+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -32,20 +32,24 @@ msgstr "ieșire;ieși"
 msgid "Logs out, exiting the current desktop session"
 msgstr "Iese din sistem, părăsind sesiunea de birou curentă"
 
-#: sessionrunner.cpp:25
-#, kde-format
+#: sessionrunner.cpp:26
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "KRunner keywords (split by semicolons without whitespace) to shut down "
+#| "the computer"
+#| msgid "shutdown;shut down;power;power off"
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to shut down the "
 "computer"
-msgid "shutdown;shut down;power;power off"
+msgid "shutdown;shut down;power;poweroff;power off"
 msgstr "deconectare;deconectează;stinge;oprește"
 
-#: sessionrunner.cpp:28
+#: sessionrunner.cpp:29
 #, kde-format
 msgid "Turns off the computer"
 msgstr "Deconectează calculatorul"
 
-#: sessionrunner.cpp:31
+#: sessionrunner.cpp:32
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to restart the "
@@ -53,24 +57,24 @@ msgctxt ""
 msgid "restart;reboot"
 msgstr "repornește;repornire;redemarare"
 
-#: sessionrunner.cpp:34
+#: sessionrunner.cpp:35
 #, kde-format
 msgid "Reboots the computer"
 msgstr "Repornește calculatorul"
 
-#: sessionrunner.cpp:38
+#: sessionrunner.cpp:39
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to lock the screen"
 msgid "lock;lock screen"
 msgstr "blochează;blochează ecranul"
 
-#: sessionrunner.cpp:40
+#: sessionrunner.cpp:41
 #, kde-format
 msgid "Locks the current sessions and starts the screen saver"
 msgstr "Blochează sesiunile curente și pornește economizorul de ecran"
 
-#: sessionrunner.cpp:43
+#: sessionrunner.cpp:44
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to save the "
@@ -78,12 +82,12 @@ msgctxt ""
 msgid "save;save session"
 msgstr "salvează;salvează sesiunea"
 
-#: sessionrunner.cpp:46
+#: sessionrunner.cpp:47
 #, kde-format
 msgid "Saves the current session for session restoration"
 msgstr "Salvează sesiunea actuală pentru restaurarea sesiunii"
 
-#: sessionrunner.cpp:49
+#: sessionrunner.cpp:50
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to switch user "
@@ -91,42 +95,42 @@ msgctxt ""
 msgid "switch user;new session"
 msgstr "schimbă utilizatorul;sesiune nouă;schimbare utilizator;reautentificare"
 
-#: sessionrunner.cpp:52
+#: sessionrunner.cpp:53
 #, fuzzy, kde-format
 #| msgid "Starts a new session as a different user"
 msgid "Switch to a session as a different user"
 msgstr "Pornește a nouă sesiune ca alt utilizator"
 
-#: sessionrunner.cpp:73
+#: sessionrunner.cpp:74
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
 msgstr "Ieși din sistem"
 
-#: sessionrunner.cpp:81
+#: sessionrunner.cpp:82
 #, kde-format
 msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "Oprește"
 
-#: sessionrunner.cpp:88
+#: sessionrunner.cpp:89
 #, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
 msgstr "Repornește"
 
-#: sessionrunner.cpp:95
+#: sessionrunner.cpp:96
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr "Blochează"
 
-#: sessionrunner.cpp:102
+#: sessionrunner.cpp:103
 #, kde-format
 msgid "Save Session"
 msgstr "Salvează sesiunea"
 
-#: sessionrunner.cpp:109
+#: sessionrunner.cpp:110
 #, kde-format
 msgid "Switch User"
 msgstr "Schimbă utilizatorul"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-02 00:45+0000\n"
+"POT-Creation-Date: 2025-09-25 00:44+0000\n"
 "PO-Revision-Date: 2025-02-19 07:26+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -34,20 +34,24 @@ msgstr "odjavi;odjava"
 msgid "Logs out, exiting the current desktop session"
 msgstr "Vas odjavi in konča trenutno namizno sejo"
 
-#: sessionrunner.cpp:25
-#, kde-format
+#: sessionrunner.cpp:26
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "KRunner keywords (split by semicolons without whitespace) to shut down "
+#| "the computer"
+#| msgid "shutdown;shut down;power;power off"
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to shut down the "
 "computer"
-msgid "shutdown;shut down;power;power off"
+msgid "shutdown;shut down;power;poweroff;power off"
 msgstr "izklopi;izklop;napajanje;izklop napajanja"
 
-#: sessionrunner.cpp:28
+#: sessionrunner.cpp:29
 #, kde-format
 msgid "Turns off the computer"
 msgstr "Izklopi računalnik"
 
-#: sessionrunner.cpp:31
+#: sessionrunner.cpp:32
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to restart the "
@@ -55,24 +59,24 @@ msgctxt ""
 msgid "restart;reboot"
 msgstr "znova zaženi;ponovni zagon"
 
-#: sessionrunner.cpp:34
+#: sessionrunner.cpp:35
 #, kde-format
 msgid "Reboots the computer"
 msgstr "Znova zažene računalnik"
 
-#: sessionrunner.cpp:38
+#: sessionrunner.cpp:39
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to lock the screen"
 msgid "lock;lock screen"
 msgstr "zakleni zaslon;zaklep zaslona"
 
-#: sessionrunner.cpp:40
+#: sessionrunner.cpp:41
 #, kde-format
 msgid "Locks the current sessions and starts the screen saver"
 msgstr "Zaklene trenutne seje in zažene ohranjevalnik zaslona"
 
-#: sessionrunner.cpp:43
+#: sessionrunner.cpp:44
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to save the "
@@ -80,12 +84,12 @@ msgctxt ""
 msgid "save;save session"
 msgstr "shrani;shrani sejo"
 
-#: sessionrunner.cpp:46
+#: sessionrunner.cpp:47
 #, kde-format
 msgid "Saves the current session for session restoration"
 msgstr "Shrani trenutno sejo za obnovo seje"
 
-#: sessionrunner.cpp:49
+#: sessionrunner.cpp:50
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to switch user "
@@ -93,41 +97,41 @@ msgctxt ""
 msgid "switch user;new session"
 msgstr "preklopi uporabnika;nova seja"
 
-#: sessionrunner.cpp:52
+#: sessionrunner.cpp:53
 #, kde-format
 msgid "Switch to a session as a different user"
 msgstr "Preklopi na sejo kot drug uporabnik"
 
-#: sessionrunner.cpp:73
+#: sessionrunner.cpp:74
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
 msgstr "Odjavi se"
 
-#: sessionrunner.cpp:81
+#: sessionrunner.cpp:82
 #, kde-format
 msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "Izklopi"
 
-#: sessionrunner.cpp:88
+#: sessionrunner.cpp:89
 #, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
 msgstr "Znova zaženi"
 
-#: sessionrunner.cpp:95
+#: sessionrunner.cpp:96
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr "Zakleni"
 
-#: sessionrunner.cpp:102
+#: sessionrunner.cpp:103
 #, kde-format
 msgid "Save Session"
 msgstr "Shrani sejo"
 
-#: sessionrunner.cpp:109
+#: sessionrunner.cpp:110
 #, kde-format
 msgid "Switch User"
 msgstr "Preklopi uporabnika"
