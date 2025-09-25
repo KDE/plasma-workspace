@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-09 00:43+0000\n"
+"POT-Creation-Date: 2025-09-25 02:41+0000\n"
 "PO-Revision-Date: 2025-08-03 12:30+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -19,12 +19,12 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
 "X-Generator: Lokalize 23.08.5\n"
 
-#: AlbumArtStackView.qml:202
+#: AlbumArtStackView.qml:212
 #, kde-format
 msgid "No title"
 msgstr "بلا عنوان"
 
-#: AlbumArtStackView.qml:202 main.qml:57
+#: AlbumArtStackView.qml:212 main.qml:57
 #, kde-format
 msgid "No media playing"
 msgstr "لا وسائط تعمل"

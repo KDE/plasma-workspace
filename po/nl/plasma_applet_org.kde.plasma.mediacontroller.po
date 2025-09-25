@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-09 00:43+0000\n"
+"POT-Creation-Date: 2025-09-25 02:41+0000\n"
 "PO-Revision-Date: 2025-03-29 13:29+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -17,12 +17,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.12.3\n"
 
-#: AlbumArtStackView.qml:202
+#: AlbumArtStackView.qml:212
 #, kde-format
 msgid "No title"
 msgstr "Geen titel"
 
-#: AlbumArtStackView.qml:202 main.qml:57
+#: AlbumArtStackView.qml:212 main.qml:57
 #, kde-format
 msgid "No media playing"
 msgstr "Er speelt geen medium"

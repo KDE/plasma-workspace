@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-09 00:43+0000\n"
+"POT-Creation-Date: 2025-09-25 02:41+0000\n"
 "PO-Revision-Date: 2022-12-12 18:27+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -12,12 +12,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: AlbumArtStackView.qml:202
+#: AlbumArtStackView.qml:212
 #, kde-format
 msgid "No title"
 msgstr "Sem título"
 
-#: AlbumArtStackView.qml:202 main.qml:57
+#: AlbumArtStackView.qml:212 main.qml:57
 #, kde-format
 msgid "No media playing"
 msgstr "Nada em reprodução"

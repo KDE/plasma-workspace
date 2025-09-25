@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-09 00:43+0000\n"
+"POT-Creation-Date: 2025-09-25 02:41+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -18,12 +18,12 @@ msgstr ""
 "plasma.mediacontroller.pot\n"
 "X-Crowdin-File-ID: 50092\n"
 
-#: AlbumArtStackView.qml:202
+#: AlbumArtStackView.qml:212
 #, kde-format
 msgid "No title"
 msgstr "无标题"
 
-#: AlbumArtStackView.qml:202 main.qml:57
+#: AlbumArtStackView.qml:212 main.qml:57
 #, kde-format
 msgid "No media playing"
 msgstr "没有正在播放的媒体"

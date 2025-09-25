@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-09 00:43+0000\n"
+"POT-Creation-Date: 2025-09-25 02:41+0000\n"
 "PO-Revision-Date: 2025-03-29 11:19+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -22,12 +22,12 @@ msgstr ""
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "X-Generator: Poedit 3.5\n"
 
-#: AlbumArtStackView.qml:202
+#: AlbumArtStackView.qml:212
 #, kde-format
 msgid "No title"
 msgstr "Brez naslova"
 
-#: AlbumArtStackView.qml:202 main.qml:57
+#: AlbumArtStackView.qml:212 main.qml:57
 #, kde-format
 msgid "No media playing"
 msgstr "Nič se ne predvaja"
