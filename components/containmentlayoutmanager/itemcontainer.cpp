@@ -456,6 +456,7 @@ void ItemContainer::sendUngrabRecursive(QQuickItem *item)
     }
 
     for (auto *child : item->childItems()) {
+        qApp->sendEvent(child, new QMouseEvent(QEvent::MouseButtonRelease, {}, {}, {}, Qt::NoButton, Qt::NoButton, Qt::KeyboardModifiers()));
         sendUngrabRecursive(child);
     }
 
