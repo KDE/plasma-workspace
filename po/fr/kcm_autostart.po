@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Mickael Sibelle <kimael@gmail.com>, 2008, 2010.
 # Ludovic Grossard <grossard@kde.org>, 2008.
-# SPDX-FileCopyrightText: 2013, 2024 Xavier Besnard <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2013, 2024, 2025 Xavier Besnard <xavier.besnard@kde.org>
 # Maxime Corteel <mcorteel@gmail.com>, 2015.
 # Vincent Pinon <vpinon@kde.org>, 2017.
 # SPDX-FileCopyrightText: 2020, 2021, 2022, 2023 Xavier Besnard <xavier.besnard@kde.org>
@@ -23,7 +23,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.08.1\n"
 "X-Text-Markup: kde4\n"
 
 #: autostartmodel.cpp:322
