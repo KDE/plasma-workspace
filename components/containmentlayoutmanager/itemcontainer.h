@@ -232,6 +232,9 @@ private:
 
     QPointF m_lastMousePosition = QPoint(-1, -1);
     QPointF m_mouseDownPosition = QPoint(-1, -1);
+    // Mouse position when it enterd in the grid cell we're now
+    QPointF m_lastMousePositionOnGrid = QPoint(-1, -1);
+
     AppletsLayout::PreferredLayoutDirection m_preferredLayoutDirection = AppletsLayout::Closest;
     bool m_editMode = false;
     bool m_mouseDown = false;

@@ -589,6 +589,7 @@ void ItemContainer::mouseReleaseEvent(QMouseEvent *event)
     }
 
     m_mouseDown = false;
+    m_lastMousePositionOnGrid = QPoint(-1, -1);
     m_mouseSynthetizedFromTouch = false;
     m_editModeTimer->stop();
     if (event->exclusiveGrabber(event->point(0)) == this) {
@@ -638,8 +639,11 @@ void ItemContainer::mouseMoveEvent(QMouseEvent *event)
     } else {
         setPosition(QPointF(x() + parentPos.x() - m_lastMousePosition.x(), y() + parentPos.y() - m_lastMousePosition.y()));
 
-        if (m_layout) {
+        if (m_layout
+            && (std::floor(parentPos.x() / m_layout->cellWidth()) != std::floor(m_lastMousePositionOnGrid.x() / m_layout->cellWidth())
+                || std::floor(parentPos.y() / m_layout->cellHeight()) != std::floor(m_lastMousePositionOnGrid.y() / m_layout->cellHeight()))) {
             m_layout->showPlaceHolderForItem(this);
+            m_lastMousePositionOnGrid = parentPos;
         }
 
         Q_EMIT userDrag(QPointF(x(), y()), event->pos());
