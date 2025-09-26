@@ -47,7 +47,7 @@ void ApplicationModel::load(const QString &mimeType,
     }
 
     KApplicationTrader::query([preferredService, applicationCategory, mimeType, defaultApplication, this](const KService::Ptr &service) {
-        if (service->exec().isEmpty() || service->noDisplay() || (!applicationCategory.isEmpty() && !service->categories().contains(applicationCategory))
+        if (service->exec().isEmpty() || (!applicationCategory.isEmpty() && !service->categories().contains(applicationCategory))
             || (!mimeType.isEmpty() && !ComponentChooser::serviceSupportsMimeType(service, mimeType))
             || (preferredService && preferredService->storageId() == service->storageId())) {
             return false;
