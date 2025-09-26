@@ -82,7 +82,7 @@ private:
     QPair<int, int> nextTakenCell(const QPair<int, int> &cell, AppletsLayout::PreferredLayoutDirection direction) const;
 
     // How many cells are available in the row starting from the given cell and direction
-    int freeSpaceInDirection(const QPair<int, int> &cell, AppletsLayout::PreferredLayoutDirection direction) const;
+    int freeSpaceInDirection(const QPair<int, int> &cell, AppletsLayout::PreferredLayoutDirection direction, int maxCellsNeeded) const;
 
     /**
      * This reacts to changes in size hints by an item

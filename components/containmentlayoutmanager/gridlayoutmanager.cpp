@@ -366,28 +366,25 @@ QPair<int, int> GridLayoutManager::nextCell(const QPair<int, int> &cell, Applets
 
 QPair<int, int> GridLayoutManager::nextAvailableCell(const QPair<int, int> &cell, AppletsLayout::PreferredLayoutDirection direction) const
 {
-    QPair<int, int> nCell = cell;
+    // Let's start from the nearest cell in the grid
+    QPair<int, int> nCell = {std::min(cell.first, rows() - 1), std::min(cell.second, columns() - 1)};
     while (!isOutOfBounds(nCell)) {
         nCell = nextCell(nCell, direction);
 
         if (isOutOfBounds(nCell)) {
             switch (direction) {
             case AppletsLayout::AppletsLayout::BottomToTop:
-                nCell.first = rows() - 1;
                 --nCell.second;
                 break;
             case AppletsLayout::AppletsLayout::TopToBottom:
-                nCell.first = 0;
                 ++nCell.second;
                 break;
             case AppletsLayout::AppletsLayout::RightToLeft:
                 --nCell.first;
-                nCell.second = columns() - 1;
                 break;
             case AppletsLayout::AppletsLayout::LeftToRight:
             default:
                 ++nCell.first;
-                nCell.second = 0;
                 break;
             }
         }
@@ -402,28 +399,24 @@ QPair<int, int> GridLayoutManager::nextAvailableCell(const QPair<int, int> &cell
 
 QPair<int, int> GridLayoutManager::nextTakenCell(const QPair<int, int> &cell, AppletsLayout::PreferredLayoutDirection direction) const
 {
-    QPair<int, int> nCell = cell;
+    QPair<int, int> nCell = {std::min(cell.first, rows() - 1), std::min(cell.second, columns() - 1)};
     while (!isOutOfBounds(nCell)) {
         nCell = nextCell(nCell, direction);
 
         if (isOutOfBounds(nCell)) {
             switch (direction) {
             case AppletsLayout::AppletsLayout::BottomToTop:
-                nCell.first = rows() - 1;
                 --nCell.second;
                 break;
             case AppletsLayout::AppletsLayout::TopToBottom:
-                nCell.first = 0;
                 ++nCell.second;
                 break;
             case AppletsLayout::AppletsLayout::RightToLeft:
                 --nCell.first;
-                nCell.second = columns() - 1;
                 break;
             case AppletsLayout::AppletsLayout::LeftToRight:
             default:
                 ++nCell.first;
-                nCell.second = 0;
                 break;
             }
         }
@@ -436,13 +429,16 @@ QPair<int, int> GridLayoutManager::nextTakenCell(const QPair<int, int> &cell, Ap
     return QPair<int, int>(-1, -1);
 }
 
-int GridLayoutManager::freeSpaceInDirection(const QPair<int, int> &cell, AppletsLayout::PreferredLayoutDirection direction) const
+int GridLayoutManager::freeSpaceInDirection(const QPair<int, int> &cell, AppletsLayout::PreferredLayoutDirection direction, int maxCellsNeeded) const
 {
     QPair<int, int> nCell = cell;
 
     int avail = 0;
 
     while (isCellAvailable(nCell)) {
+        if (avail >= maxCellsNeeded) {
+            break;
+        }
         ++avail;
         nCell = nextCell(nCell, direction);
     }
@@ -478,7 +474,7 @@ QRectF GridLayoutManager::nextAvailableSpace(ItemContainer *item, const QSizeF &
 
             int currentRow = cell.first;
             for (; currentRow < cell.first + itemCellGeom.height(); ++currentRow) {
-                const int freeRow = freeSpaceInDirection(QPair<int, int>(currentRow, cell.second), direction);
+                const int freeRow = freeSpaceInDirection(QPair<int, int>(currentRow, cell.second), direction, itemCellGeom.width());
 
                 partialSize.setWidth(qMin(partialSize.width(), freeRow));
 
@@ -495,26 +491,12 @@ QRectF GridLayoutManager::nextAvailableSpace(ItemContainer *item, const QSizeF &
                 }
             }
 
-            if (partialSize.width() >= minimumGridSize.width() && partialSize.height() >= minimumGridSize.height()) {
-                const int width = qMin(itemCellGeom.width(), partialSize.width()) * cellSize().width();
-                const int height = qMin(itemCellGeom.height(), partialSize.height()) * cellSize().height();
-
-                if (direction == AppletsLayout::RightToLeft) {
-                    return QRectF((cell.second + 1) * cellSize().width() - width, cell.first * cellSize().height(), width, height);
-                    // AppletsLayout::LeftToRight
-                } else {
-                    return QRectF(cell.second * cellSize().width(), cell.first * cellSize().height(), width, height);
-                }
-            } else {
-                cell = nextAvailableCell(cell, direction);
-            }
-
         } else if (direction == AppletsLayout::TopToBottom || direction == AppletsLayout::BottomToTop) {
             partialSize = QSize(0, INT_MAX);
 
             int currentColumn = cell.second;
             for (; currentColumn < cell.second + itemCellGeom.width(); ++currentColumn) {
-                const int freeColumn = freeSpaceInDirection(QPair<int, int>(cell.first, currentColumn), direction);
+                const int freeColumn = freeSpaceInDirection(QPair<int, int>(cell.first, currentColumn), direction, itemCellGeom.height());
 
                 partialSize.setHeight(qMin(partialSize.height(), freeColumn));
 
@@ -530,20 +512,31 @@ QRectF GridLayoutManager::nextAvailableSpace(ItemContainer *item, const QSizeF &
                     break;
                 }
             }
+        }
+        if (isOutOfBounds(cell)) {
+            return QRectF();
+        }
+        if (partialSize.width() >= minimumGridSize.width() && partialSize.height() >= minimumGridSize.height()) {
+            const int width = qMin(itemCellGeom.width(), partialSize.width()) * cellSize().width();
+            const int height = qMin(itemCellGeom.height(), partialSize.height()) * cellSize().height();
 
-            if (partialSize.width() >= minimumGridSize.width() && partialSize.height() >= minimumGridSize.height()) {
-                const int width = qMin(itemCellGeom.width(), partialSize.width()) * cellSize().width();
-                const int height = qMin(itemCellGeom.height(), partialSize.height()) * cellSize().height();
-
-                if (direction == AppletsLayout::BottomToTop) {
-                    return QRectF(cell.second * cellSize().width(), (cell.first + 1) * cellSize().height() - height, width, height);
-                    // AppletsLayout::TopToBottom:
-                } else {
-                    return QRectF(cell.second * cellSize().width(), cell.first * cellSize().height(), width, height);
-                }
-            } else {
-                cell = nextAvailableCell(cell, direction);
+            switch (direction) {
+            case AppletsLayout::AppletsLayout::BottomToTop:
+                return QRectF(cell.second * cellSize().width(), (cell.first + 1) * cellSize().height() - height, width, height);
+                break;
+            case AppletsLayout::AppletsLayout::TopToBottom:
+                return QRectF(cell.second * cellSize().width(), cell.first * cellSize().height(), width, height);
+                break;
+            case AppletsLayout::AppletsLayout::RightToLeft:
+                return QRectF((cell.second + 1) * cellSize().width() - width, cell.first * cellSize().height(), width, height);
+                break;
+            case AppletsLayout::AppletsLayout::LeftToRight:
+            default:
+                return QRectF(cell.second * cellSize().width(), cell.first * cellSize().height(), width, height);
+                break;
             }
+        } else {
+            cell = nextAvailableCell(cell, direction);
         }
     }
 
