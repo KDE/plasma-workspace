@@ -3,21 +3,21 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2008, 2009, 2010, 2011, 2018, 2020, 2022, 2023, 2025.
+# SPDX-FileCopyrightText: 2008, 2009, 2010, 2011, 2018, 2020, 2022, 2023, 2025 Josep M. Ferrer <txemaq@gmail.com>
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2020, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-25 00:44+0000\n"
-"PO-Revision-Date: 2025-02-19 09:21+0100\n"
+"PO-Revision-Date: 2025-09-25 15:06+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
@@ -35,16 +35,12 @@ msgid "Logs out, exiting the current desktop session"
 msgstr "Ix, desconnectant la sessió actual d'escriptori"
 
 #: sessionrunner.cpp:26
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "KRunner keywords (split by semicolons without whitespace) to shut down "
-#| "the computer"
-#| msgid "shutdown;shut down;power;power off"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to shut down the "
 "computer"
 msgid "shutdown;shut down;power;poweroff;power off"
-msgstr "parada;parar;energia;apagat;apagar"
+msgstr "parada;parar;energia;corrent;apagat;apagar"
 
 #: sessionrunner.cpp:29
 #, kde-format
@@ -69,7 +65,7 @@ msgstr "Torna a arrancar l'ordinador"
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to lock the screen"
 msgid "lock;lock screen"
-msgstr "bloqueig;bloqueig de pantalla"
+msgstr "bloqueig;bloqueig de la pantalla"
 
 #: sessionrunner.cpp:41
 #, kde-format

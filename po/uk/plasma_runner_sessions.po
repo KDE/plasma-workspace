@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_runner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-25 00:44+0000\n"
-"PO-Revision-Date: 2025-02-19 09:56+0200\n"
+"PO-Revision-Date: 2025-09-25 19:02+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -34,18 +34,14 @@ msgid "Logs out, exiting the current desktop session"
 msgstr "Завершує поточний сеанс стільниці"
 
 #: sessionrunner.cpp:26
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "KRunner keywords (split by semicolons without whitespace) to shut down "
-#| "the computer"
-#| msgid "shutdown;shut down;power;power off"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to shut down the "
 "computer"
 msgid "shutdown;shut down;power;poweroff;power off"
 msgstr ""
-"shutdown;shut down;power;power off;вимкнути;вимикання;живлення;вимкнути "
-"живлення"
+"shutdown;shut down;power;poweroff;power off;вимкнути;вимикання;живлення;"
+"вимкнути живлення"
 
 #: sessionrunner.cpp:29
 #, kde-format
