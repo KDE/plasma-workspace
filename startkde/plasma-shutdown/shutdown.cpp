@@ -72,12 +72,13 @@ void Shutdown::saveSession()
     }
 
     OrgKdeKSMServerInterfaceInterface ksmserver(QStringLiteral("org.kde.ksmserver"), QStringLiteral("/KSMServer"), QDBusConnection::sessionBus());
-    ksmserver.saveCurrentSession();
+    ksmserver.saveCurrentSession(); // note this is an async call, we just don't need to keep in sync or handle the result
 
     int ret = QProcess::execute(QStringLiteral(PLASMA_FALLBACK_SESSION_SAVE_BIN));
     if (ret) {
         qCWarning(PLASMA_SESSION) << "plasma-fallback-session-save failed with return code" << ret;
     }
+    qApp->quit();
 }
 
 void Shutdown::ksmServerComplete()
