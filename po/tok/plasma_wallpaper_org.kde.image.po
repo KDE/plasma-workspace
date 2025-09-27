@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-24 00:45+0000\n"
+"POT-Creation-Date: 2025-09-27 00:44+0000\n"
 "PO-Revision-Date: 2024-01-11 15:10-0500\n"
 "Last-Translator: Janet Blackquill <uhhadd@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -145,31 +145,31 @@ msgstr "o pana e kule sinpin pi wile sina"
 msgid "Open Wallpaper Image"
 msgstr "o lukin e sitelen lon monsi"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:60
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:83
 #, kde-format
 msgid "Images"
 msgstr "sitelen"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:64
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:87
 #, kde-format
 msgctxt "@action:button the thing being added is an image file"
 msgid "Add…"
 msgstr "o pana…"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:65
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:88
 #, fuzzy, kde-format
 #| msgid "Open Wallpaper Image"
 msgctxt "@action:button"
 msgid "Add Wallpaper Image…"
 msgstr "o lukin e sitelen lon monsi"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:71
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:94
 #, kde-format
 msgctxt "@action:button the new things being gotten are wallpapers"
 msgid "Get New…"
 msgstr "o kama jo…"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:72
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:95
 #, fuzzy, kde-format
 #| msgid "Next Wallpaper Image"
 msgctxt "@action:button"
@@ -251,7 +251,7 @@ msgid "Next Wallpaper Image"
 msgstr "o lukin e sitelen poka lon monsi"
 
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
-#: plugin/imagebackend.cpp:350
+#: plugin/imagebackend.cpp:354
 #, kde-format
 msgid "Media Files"
 msgstr ""

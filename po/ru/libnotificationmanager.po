@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-24 00:45+0000\n"
-"PO-Revision-Date: 2025-07-04 18:09+0300\n"
-"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"PO-Revision-Date: 2025-09-26 12:59+0200\n"
+"Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: abstractnotificationsmodel.cpp:340
 #, kde-format
@@ -143,11 +143,7 @@ msgstr[3] ""
 "Во время работы режима «Не беспокоить» было получено %1 уведомление."
 
 #: notifications.cpp:923
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@action:button Show the notifications popup; translate this in as short a "
-#| "form as possible"
-#| msgid "Show Notifications"
+#, kde-format
 msgctxt "@action:button Show the notifications popup"
 msgid "Show Notifications"
 msgstr "Показать уведомления"

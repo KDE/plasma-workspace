@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-24 00:45+0000\n"
-"PO-Revision-Date: 2024-08-12 16:18+0300\n"
+"PO-Revision-Date: 2025-09-26 15:47+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.6\n"
 
 #: autostartmodel.cpp:382
 #, kde-format
@@ -115,7 +115,7 @@ msgstr "Pridėti naują"
 #, kde-format
 msgctxt "@title:menu accessible menu button"
 msgid "Add new application or script"
-msgstr ""
+msgstr "Pridėti naują programą ar scenarijų"
 
 #: ui/main.qml:73
 #, kde-format
@@ -124,11 +124,10 @@ msgid "Application…"
 msgstr "programą…"
 
 #: ui/main.qml:75
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgctxt "@action:inmenu accessible"
 msgid "Add application"
-msgstr "Programos"
+msgstr "Pridėti programą"
 
 #: ui/main.qml:79
 #, kde-format
@@ -137,11 +136,10 @@ msgid "Login Script…"
 msgstr "prisijungimo scenarijų…"
 
 #: ui/main.qml:81
-#, fuzzy, kde-format
-#| msgid "Login Scripts"
+#, kde-format
 msgctxt "@action:inmenu accessible"
 msgid "Add login script"
-msgstr "Prisijungimo scenarijai"
+msgstr "Pridėti prisijungimo scenarijų"
 
 #: ui/main.qml:85
 #, kde-format
@@ -150,11 +148,10 @@ msgid "Logout Script…"
 msgstr "atsijungimo scenarijų…"
 
 #: ui/main.qml:87
-#, fuzzy, kde-format
-#| msgid "Logout Scripts"
+#, kde-format
 msgctxt "@action:inmenu accessible"
 msgid "Add logout script"
-msgstr "Atsijungimo scenarijai"
+msgstr "Pridėti atsijungimo scenarijų"
 
 #: ui/main.qml:121
 #, kde-format

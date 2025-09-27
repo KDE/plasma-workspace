@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-24 00:45+0000\n"
-"PO-Revision-Date: 2025-07-18 18:55+0300\n"
-"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"PO-Revision-Date: 2025-09-26 16:13+0200\n"
+"Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.07.80\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: devicenotifications.cpp:376
 #, kde-format
@@ -42,16 +42,14 @@ msgid "A display has been disconnected."
 msgstr "Экран отключён."
 
 #: devicenotifications.cpp:437
-#, fuzzy, kde-format
-#| msgid "%1 has been unplugged."
+#, kde-format
 msgid "%1 has been connected."
-msgstr "Устройство %1 отключено."
+msgstr "Устройство %1 подключено."
 
 #: devicenotifications.cpp:437
-#, fuzzy, kde-format
-#| msgid "A USB device has been unplugged."
+#, kde-format
 msgid "A USB device has been connected."
-msgstr "Отключено устройство USB."
+msgstr "Подключено устройство USB."
 
 #: devicenotifications.cpp:442
 #, kde-format
@@ -60,24 +58,20 @@ msgid "USB Device Detected"
 msgstr "Обнаружено устройство USB"
 
 #: devicenotifications.cpp:480
-#, fuzzy, kde-format
-#| msgid "%1 has been unplugged."
+#, kde-format
 msgid "%1 has been disconnected."
 msgstr "Устройство %1 отключено."
 
 #: devicenotifications.cpp:480
-#, fuzzy, kde-format
-#| msgid "A USB device has been unplugged."
+#, kde-format
 msgid "A USB device has been disconnected."
 msgstr "Отключено устройство USB."
 
 #: devicenotifications.cpp:485
-#, fuzzy, kde-format
-#| msgctxt "@title:notifications"
-#| msgid "USB Device Detected"
+#, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Went Away"
-msgstr "Обнаружено устройство USB"
+msgstr "Отключено устройство USB"
 
 #~ msgid "A display has been plugged in."
 #~ msgstr "Экран подключён."
