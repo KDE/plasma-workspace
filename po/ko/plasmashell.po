@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-25 02:41+0000\n"
+"POT-Creation-Date: 2025-09-27 02:39+0000\n"
 "PO-Revision-Date: 2025-04-07 00:31+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -380,43 +380,38 @@ msgstr "앱 실행기 활성화"
 msgid "Show Activity Switcher"
 msgstr "활동 전환기 표시"
 
-#: shellcorona.cpp:248
-#, kde-format
-msgid "Stop Current Activity"
-msgstr "현재 활동 중단하기"
-
-#: shellcorona.cpp:256
+#: shellcorona.cpp:247
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "이전 활동으로 전환"
 
-#: shellcorona.cpp:264
+#: shellcorona.cpp:255
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "다음 활동으로 전환"
 
-#: shellcorona.cpp:279
+#: shellcorona.cpp:270
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "활성 작업 관리자 항목 %1"
 
-#: shellcorona.cpp:311
+#: shellcorona.cpp:302
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "바탕 화면과 패널 관리…"
 
-#: shellcorona.cpp:333
+#: shellcorona.cpp:324
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "패널간 키보드 포커스 이동"
 
-#: shellcorona.cpp:2204
+#: shellcorona.cpp:2195
 #, kde-format
 msgid "Add Panel"
 msgstr "패널 추가하기"
 
-#: shellcorona.cpp:2287
+#: shellcorona.cpp:2278
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
@@ -453,6 +448,9 @@ msgstr "패널 개수"
 #, kde-format
 msgid "Counts the panels"
 msgstr "패널 개수를 셉니다"
+
+#~ msgid "Stop Current Activity"
+#~ msgstr "현재 활동 중단하기"
 
 #~ msgid "Panel and Desktop Management"
 #~ msgstr "패널과 바탕 화면 관리"

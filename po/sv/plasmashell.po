@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-25 02:41+0000\n"
+"POT-Creation-Date: 2025-09-27 02:39+0000\n"
 "PO-Revision-Date: 2025-01-25 08:20+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -381,43 +381,38 @@ msgstr "Aktivera startprogram"
 msgid "Show Activity Switcher"
 msgstr "Visa aktivitetsbyte"
 
-#: shellcorona.cpp:248
-#, kde-format
-msgid "Stop Current Activity"
-msgstr "Stoppa nuvarande aktivitet"
-
-#: shellcorona.cpp:256
+#: shellcorona.cpp:247
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Byt till föregående aktivitet"
 
-#: shellcorona.cpp:264
+#: shellcorona.cpp:255
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Byt till nästa aktivitet"
 
-#: shellcorona.cpp:279
+#: shellcorona.cpp:270
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "Aktivera post %1 i aktivitetshanteraren"
 
-#: shellcorona.cpp:311
+#: shellcorona.cpp:302
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "Hantera skrivbord och paneler…"
 
-#: shellcorona.cpp:333
+#: shellcorona.cpp:324
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Byt tangentbordsfokus mellan paneler"
 
-#: shellcorona.cpp:2204
+#: shellcorona.cpp:2195
 #, kde-format
 msgid "Add Panel"
 msgstr "Lägg till panel"
 
-#: shellcorona.cpp:2287
+#: shellcorona.cpp:2278
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
@@ -454,6 +449,9 @@ msgstr "Antal paneler"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Räknar panelerna"
+
+#~ msgid "Stop Current Activity"
+#~ msgstr "Stoppa nuvarande aktivitet"
 
 #~ msgid "Panel and Desktop Management"
 #~ msgstr "Panel och skrivbordshantering"

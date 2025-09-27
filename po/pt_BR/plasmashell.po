@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-25 02:41+0000\n"
+"POT-Creation-Date: 2025-09-27 02:39+0000\n"
 "PO-Revision-Date: 2025-02-08 10:38-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -386,43 +386,38 @@ msgstr "Ativar o lançador de aplicativos"
 msgid "Show Activity Switcher"
 msgstr "Mostrar seletor de atividade"
 
-#: shellcorona.cpp:248
-#, kde-format
-msgid "Stop Current Activity"
-msgstr "Parar a atividade atual"
-
-#: shellcorona.cpp:256
+#: shellcorona.cpp:247
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Trocar para a atividade anterior"
 
-#: shellcorona.cpp:264
+#: shellcorona.cpp:255
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Trocar para a próxima atividade"
 
-#: shellcorona.cpp:279
+#: shellcorona.cpp:270
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "Ativar entrada %1 do gerenciador de tarefas"
 
-#: shellcorona.cpp:311
+#: shellcorona.cpp:302
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "Gerenciar áreas de trabalho e painéis…"
 
-#: shellcorona.cpp:333
+#: shellcorona.cpp:324
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Mover o foco do teclado entre os painéis"
 
-#: shellcorona.cpp:2204
+#: shellcorona.cpp:2195
 #, kde-format
 msgid "Add Panel"
 msgstr "Adicionar painel"
 
-#: shellcorona.cpp:2287
+#: shellcorona.cpp:2278
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
@@ -459,6 +454,9 @@ msgstr "Número de painéis"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Conta os painéis"
+
+#~ msgid "Stop Current Activity"
+#~ msgstr "Parar a atividade atual"
 
 #~ msgid "Panel and Desktop Management"
 #~ msgstr "Gerenciamento do painel e da área de trabalho"

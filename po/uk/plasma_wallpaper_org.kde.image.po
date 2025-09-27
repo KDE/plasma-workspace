@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_org.kde.image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-23 02:48+0000\n"
+"POT-Creation-Date: 2025-09-27 02:39+0000\n"
 "PO-Revision-Date: 2025-08-02 17:03+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -140,30 +140,30 @@ msgstr "Виберіть колір тла"
 msgid "Open Wallpaper Image"
 msgstr "Відкрити зображення тла стільниці"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:60
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:83
 #, kde-format
 msgid "Images"
 msgstr "Зображення"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:64
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:87
 #, kde-format
 msgctxt "@action:button the thing being added is an image file"
 msgid "Add…"
 msgstr "Додати…"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:65
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:88
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Wallpaper Image…"
 msgstr "Додати зображення тла стільниці…"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:71
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:94
 #, kde-format
 msgctxt "@action:button the new things being gotten are wallpapers"
 msgid "Get New…"
 msgstr "Отримати ще…"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:72
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:95
 #, kde-format
 msgctxt "@action:button"
 msgid "Get New Wallpaper Images…"
@@ -259,7 +259,7 @@ msgid "Next Wallpaper Image"
 msgstr "Наступне зображення тла стільниці"
 
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
-#: plugin/imagebackend.cpp:351
+#: plugin/imagebackend.cpp:355
 #, kde-format
 msgid "Media Files"
 msgstr "Мультимедійні файли"

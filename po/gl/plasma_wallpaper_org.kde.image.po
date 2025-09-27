@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-23 02:48+0000\n"
+"POT-Creation-Date: 2025-09-27 02:39+0000\n"
 "PO-Revision-Date: 2025-05-26 08:50+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -146,30 +146,30 @@ msgstr "Escoller a cor do fondo"
 msgid "Open Wallpaper Image"
 msgstr "Abrir a imaxe de fondo"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:60
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:83
 #, kde-format
 msgid "Images"
 msgstr "Imaxes"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:64
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:87
 #, kde-format
 msgctxt "@action:button the thing being added is an image file"
 msgid "Add…"
 msgstr "Engadir…"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:65
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:88
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Wallpaper Image…"
 msgstr "Engadir unha imaxe de fondo…"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:71
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:94
 #, kde-format
 msgctxt "@action:button the new things being gotten are wallpapers"
 msgid "Get New…"
 msgstr "Obter novidades…"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:72
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:95
 #, kde-format
 msgctxt "@action:button"
 msgid "Get New Wallpaper Images…"
@@ -262,7 +262,7 @@ msgid "Next Wallpaper Image"
 msgstr "Seguinte imaxe de fondo"
 
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
-#: plugin/imagebackend.cpp:351
+#: plugin/imagebackend.cpp:355
 #, kde-format
 msgid "Media Files"
 msgstr "Ficheiros multimedia"
