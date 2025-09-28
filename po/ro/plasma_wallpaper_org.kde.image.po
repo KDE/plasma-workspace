@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the plasma-workspace package.
-# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2010, 2011, 2013, 2020, 2021, 2022, 2023, 2024.
+# SPDX-FileCopyrightText: 2008, 2009, 2010, 2011, 2013, 2020, 2021, 2022, 2023, 2024, 2025 Sergiu Bivol <sergiu@cip.md>
 # Cristian Oneț <onet.cristian@gmail.com>, 2011.
 #
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-27 02:39+0000\n"
-"PO-Revision-Date: 2024-06-08 17:17+0100\n"
+"PO-Revision-Date: 2025-09-27 14:18+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -42,85 +42,77 @@ msgid "Directory with the wallpaper to show slides from"
 msgstr "Dosar cu tapete din care să fie arătate diapozitive"
 
 #: imagepackage/contents/ui/config.qml:156
-#, fuzzy, kde-format
-#| msgid "Positioning:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Positioning:"
 msgstr "Poziționare:"
 
 #: imagepackage/contents/ui/config.qml:159
-#, fuzzy, kde-format
-#| msgid "Scaled and Cropped"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled and cropped"
 msgstr "Scalat și decupat"
 
 #: imagepackage/contents/ui/config.qml:163
-#, fuzzy, kde-format
-#| msgid "Scaled"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled"
 msgstr "Scalat"
 
 #: imagepackage/contents/ui/config.qml:167
-#, fuzzy, kde-format
-#| msgid "Scaled, Keep Proportions"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled, keep proportions"
 msgstr "Scalat, păstrare proporții"
 
 #: imagepackage/contents/ui/config.qml:171
-#, fuzzy, kde-format
-#| msgid "Centered"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "Centrat"
 
 #: imagepackage/contents/ui/config.qml:175
-#, fuzzy, kde-format
-#| msgid "Tiled"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Tiled"
 msgstr "Dale"
 
 #: imagepackage/contents/ui/config.qml:203
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Set as Wallpaper"
+#, kde-format
 msgctxt ""
 "@label:listbox part of a sentence: 'Switch dynamic wallpapers [based on]'"
 msgid "Switch dynamic wallpapers:"
-msgstr "Stabilește ca tapet"
+msgstr "Schimbă tapetele dinamice:"
 
 #: imagepackage/contents/ui/config.qml:211
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the color scheme is dark or light"
-msgstr ""
+msgstr "Bazat pe nuanța întunecată sau luminoasă a schemei de culori"
 
 #: imagepackage/contents/ui/config.qml:213
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on the day-night cycle"
-msgstr ""
+msgstr "Bazat pe ciclul diurn"
 
 #: imagepackage/contents/ui/config.qml:217
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always use light variant"
-msgstr ""
+msgstr "Folosește mereu varianta luminoasă"
 
 #: imagepackage/contents/ui/config.qml:221
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always use dark variant"
-msgstr ""
+msgstr "Folosește mereu varianta întunecată"
 
 #: imagepackage/contents/ui/config.qml:231
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
-msgstr ""
+msgstr "Configurează…"
 
 #: imagepackage/contents/ui/config.qml:242
 #, kde-format
@@ -159,11 +151,10 @@ msgid "Add…"
 msgstr "Adaugă…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:88
-#, fuzzy, kde-format
-#| msgid "Open Wallpaper Image"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Wallpaper Image…"
-msgstr "Deschide imagine cu tapet"
+msgstr "Adaugă imagine cu tapet…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:94
 #, kde-format
@@ -172,11 +163,10 @@ msgid "Get New…"
 msgstr "Obține noi…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:95
-#, fuzzy, kde-format
-#| msgid "Next Wallpaper Image"
+#, kde-format
 msgctxt "@action:button"
 msgid "Get New Wallpaper Images…"
-msgstr "Următoarea imagine de fundal"
+msgstr "Obține tapete noi…"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:34
 #, kde-format
@@ -214,6 +204,8 @@ msgstr ""
 #, kde-format
 msgid "Specify the fill mode (e.g., stretch, preserveAspectCrop, etc.)"
 msgstr ""
+"Specifică regimul de umplere (cum ar fi „stretch”, „preserveAspectCrop”, "
+"etc.)"
 
 #: plasma-apply-wallpaperimage.cpp:61
 #, kde-format
@@ -229,7 +221,7 @@ msgstr ""
 #: plasma-apply-wallpaperimage.cpp:99
 #, kde-format
 msgid "Invalid fill mode specified: %1"
-msgstr ""
+msgstr "Regim de umplere nevalid specificat: %1"
 
 #: plasma-apply-wallpaperimage.cpp:115
 #, kde-format
@@ -346,8 +338,7 @@ msgid "Add…"
 msgstr "Adaugă…"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:211
-#, fuzzy, kde-format
-#| msgid "Add Folder…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Folder…"
 msgstr "Adaugă dosar…"

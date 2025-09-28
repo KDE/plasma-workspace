@@ -447,6 +447,3 @@ msgstr "面板数量"
 #, kde-format
 msgid "Counts the panels"
 msgstr "统计面板数量"
-
-#~ msgid "Stop Current Activity"
-#~ msgstr "停止当前活动"
