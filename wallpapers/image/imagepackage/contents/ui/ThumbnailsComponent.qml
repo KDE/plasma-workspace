@@ -35,7 +35,13 @@ Item {
             if (!sourceModel) {
                 return -1
             }
-            const sourceIndex = sourceModel.index(sourceModel.indexOf(image), 0)
+            const idx = sourceModel.indexOf(image)
+
+            if (idx < 0) {
+                return idx
+            }
+
+            const sourceIndex = sourceModel.index(idx, 0)
             return mapFromSource(sourceIndex).row
         }
         function openContainingFolder(listIndex : int) {
