@@ -254,6 +254,7 @@ private Q_SLOTS:
     void handleContainmentAdded(Plasma::Containment *c);
     void syncAppConfig();
     void checkActivities();
+    void cleanupOldPanelConfig();
     void currentActivityChanged(const QString &newActivity);
     void activityAdded(const QString &id);
     void activityRemoved(const QString &id);

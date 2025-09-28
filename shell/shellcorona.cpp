@@ -817,6 +817,8 @@ void ShellCorona::load()
 
     checkActivities();
 
+    cleanupOldPanelConfig();
+
     if (containments().isEmpty()) {
         // Seems like we never really get to this point since loadLayout already
         // (virtually) calls loadDefaultLayout if it does not load anything
@@ -1968,6 +1970,28 @@ QString ShellCorona::evaluateScript(const QString &script)
     Q_UNUSED(script)
     return QString();
 #endif
+}
+
+void ShellCorona::cleanupOldPanelConfig()
+{
+    const QStringList groups = applicationConfig()->group(u"PlasmaViews"_s).groupList();
+    for (const QString &groupName : groups) {
+        static const QRegularExpression reg(u"Panel (\\d+)"_s);
+
+        if (auto match = reg.match(groupName); match.hasMatch()) {
+            const uint id = match.captured(1).toInt();
+
+            const auto conts = containments();
+            const bool exists = std::any_of(conts.begin(), conts.end(), [id](Plasma::Containment *c) {
+                return c->id() == id;
+            });
+
+            if (!exists) {
+                qCDebug(PLASMASHELL) << "Cleaning up config for no longer exisiting panel" << id;
+                applicationConfig()->group(u"PlasmaViews"_s).deleteGroup(groupName);
+            }
+        }
+    }
 }
 
 void ShellCorona::checkActivities()
