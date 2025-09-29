@@ -451,6 +451,3 @@ msgstr "Panelantall"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Antallet på panel"
-
-#~ msgid "Stop Current Activity"
-#~ msgstr "Stopp gjeldende aktivitet"
