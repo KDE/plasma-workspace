@@ -81,6 +81,7 @@ Item {
                 verticalAlignment: Text.AlignVCenter
                 text: modelData
                 textFormat: Text.PlainText
+                font.italic: true
             }
         }
     }
