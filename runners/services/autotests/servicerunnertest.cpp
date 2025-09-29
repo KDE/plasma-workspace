@@ -54,10 +54,6 @@ private Q_SLOTS:
     void testSpecialArgs();
     void testEnv();
     void testCodeVsKateVsEmojier();
-    void testDisassociation();
-    void testMultipleKeywords();
-    void testMultipleNameWords();
-    void testDiscover();
 };
 
 void ServiceRunnerTest::initTestCase()
@@ -108,7 +104,7 @@ void ServiceRunnerTest::testExecutableExactMatch()
 
 void ServiceRunnerTest::testKonsoleVsYakuakeComment()
 {
-    // Yakuake has konsole mentioned in comment, should not be listed (if it was it should be lower)
+    // Yakuake has konsole mentioned in comment, should be rated lower.
     auto matches = launchQueryAndSort(QStringLiteral("kons"));
 
     QStringList texts;
@@ -122,6 +118,7 @@ void ServiceRunnerTest::testKonsoleVsYakuakeComment()
     QCOMPARE(texts,
              QStringList({
                  u"Konsole ServiceRunnerTest"_s,
+                 u"Yakuake ServiceRunnerTest"_s,
              }));
 }
 
@@ -162,8 +159,10 @@ void ServiceRunnerTest::testSystemSettings2()
         texts.push_back(match.text());
     }
 
-    // The matched texts will contain much more because of the generic search term. Make sure our settings win.
-    QCOMPARE(texts.at(0), u"System Settings ServiceRunnerTest"_s);
+    QCOMPARE(texts,
+             QStringList({
+                 u"System Settings ServiceRunnerTest"_s,
+             }));
 }
 
 void ServiceRunnerTest::testCategories()
@@ -184,6 +183,10 @@ void ServiceRunnerTest::testCategories()
     QVERIFY(std::none_of(matches.cbegin(), matches.cend(), [](const KRunner::QueryMatch &match) {
         return match.text() == QLatin1String("Konsole ServiceRunnerTest");
     }));
+
+    // Query too short to match any category
+    matches = launchQuery(QStringLiteral("Dumm"));
+    QVERIFY(matches.isEmpty());
 }
 
 void ServiceRunnerTest::testJumpListActions()
@@ -259,71 +262,10 @@ void ServiceRunnerTest::testCodeVsKateVsEmojier()
              QStringList({
                  u"Code - OSS ServiceRunnerTest"_s,
                  u"Visual Studio Code ServiceRunnerTest"_s,
-                 u"Discover ServiceRunnerTest"_s, // fuzzy match... disCO*Er
                  // keyword match
                  u"Kate ServiceRunnerTest"_s,
-             }));
-}
-
-void ServiceRunnerTest::testDisassociation()
-{
-    // This test makes sure that we do not associate a service with a query that is not relevant.
-    auto matches = launchQueryAndSort(u"new laptop com"_s); // particularly notorious because it has two three letter words; 'com' is an incomplete word
-
-    QStringList texts;
-    for (const auto &match : matches) {
-        texts.push_back(match.text());
-    }
-
-    QCOMPARE(texts, QStringList());
-}
-
-void ServiceRunnerTest::testMultipleKeywords()
-{
-    auto matches = launchQueryAndSort(u"text editor programming"_s);
-
-    QStringList texts;
-    for (const auto &match : matches) {
-        texts.push_back(match.text());
-    }
-
-    QCOMPARE(texts,
-             QStringList({
-                 u"Kate ServiceRunnerTest"_s,
-             }));
-}
-
-void ServiceRunnerTest::testMultipleNameWords()
-{
-    auto matches = launchQueryAndSort(u"system settings"_s);
-
-    QStringList texts;
-    for (const auto &match : matches) {
-        if (!match.text().contains("ServiceRunnerTest"_L1)) {
-            continue;
-        }
-        texts.push_back(match.text());
-    }
-
-    QCOMPARE(texts,
-             QStringList({
-                 u"System Settings ServiceRunnerTest"_s,
-             }));
-}
-
-void ServiceRunnerTest::testDiscover()
-{
-    auto matches = launchQueryAndSort(u"disco"_s);
-
-    QStringList texts;
-    for (const auto &match : matches) {
-        texts.push_back(match.text());
-    }
-
-    qDebug() << texts;
-    QCOMPARE(texts,
-             QStringList({
-                 u"Discover ServiceRunnerTest"_s,
+                 // keyword match on unicode
+                 u"Emoji Selector ServiceRunnerTest"_s,
              }));
 }
 
