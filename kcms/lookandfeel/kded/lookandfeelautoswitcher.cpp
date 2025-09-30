@@ -6,6 +6,7 @@
 
 #include "lookandfeelautoswitcher.h"
 #include "idletimeout.h"
+#include "logging.h"
 #include "lookandfeelautoswitcherstate.h"
 #include "lookandfeelsettings.h"
 
@@ -59,10 +60,13 @@ void LookAndFeelAutoSwitcher::onConfigChanged(const KConfigGroup &group, const Q
 void LookAndFeelAutoSwitcher::reconfigure()
 {
     if (!m_settings->automaticLookAndFeel()) {
+        qCDebug(LOOKANDFEELAUTOSWITCHER) << "Disabling automatic theme switching";
         m_scheduleTimer.reset();
         m_scheduleProvider.reset();
         m_skewMonitor.reset();
     } else {
+        qCDebug(LOOKANDFEELAUTOSWITCHER) << "Enabling automatic theme switching";
+
         if (!m_skewMonitor) {
             m_skewMonitor = std::make_unique<KSystemClockSkewNotifier>();
             connect(m_skewMonitor.get(), &KSystemClockSkewNotifier::skewed, this, &LookAndFeelAutoSwitcher::rescheduleAndUpdateNow);
@@ -112,6 +116,7 @@ QString LookAndFeelAutoSwitcher::lookAndFeelAtDateTime(const QDateTime &dateTime
 
 void LookAndFeelAutoSwitcher::applyLookAndFeel(const QString &id)
 {
+    qCDebug(LOOKANDFEELAUTOSWITCHER) << "Applying" << id << "global theme";
     QProcess::startDetached(QStringLiteral("plasma-apply-lookandfeel"), QStringList({QStringLiteral("--keep-auto"), QStringLiteral("--apply"), id}));
 }
 
@@ -130,6 +135,8 @@ void LookAndFeelAutoSwitcher::reschedule()
         rescheduleDateTime = m_nextTransition->endDateTime();
     }
     m_scheduleTimer->start(rescheduleDateTime - now);
+
+    qCDebug(LOOKANDFEELAUTOSWITCHER) << "Next transition will occur at" << rescheduleDateTime << "in" << (rescheduleDateTime - now).count() << "milliseconds";
 }
 
 void LookAndFeelAutoSwitcher::rescheduleAndUpdateAuto()
@@ -155,12 +162,14 @@ void LookAndFeelAutoSwitcher::rescheduleAndUpdateIdle()
 
 void LookAndFeelAutoSwitcher::updateNow()
 {
+    qCDebug(LOOKANDFEELAUTOSWITCHER) << "Attempting to update the global theme now";
     m_idleTimeout.reset();
     applyLookAndFeel(lookAndFeelAtDateTime(QDateTime::currentDateTime()));
 }
 
 void LookAndFeelAutoSwitcher::updateIdle()
 {
+    qCDebug(LOOKANDFEELAUTOSWITCHER) << "Attempting to update the global theme on idleness";
     const std::chrono::seconds idleInterval(m_settings->automaticLookAndFeelIdleInterval());
     m_idleTimeout = std::make_unique<IdleTimeout>(idleInterval);
     connect(m_idleTimeout.get(), &IdleTimeout::timeout, this, [this]() {

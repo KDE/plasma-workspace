@@ -8,6 +8,14 @@ target_sources(lookandfeelautoswitcher PRIVATE
     lookandfeelautoswitcher.cpp
 )
 
+ecm_qt_declare_logging_category(lookandfeelautoswitcher
+    HEADER logging.h
+    IDENTIFIER LOOKANDFEELAUTOSWITCHER
+    CATEGORY_NAME org.kde.plasma.lookandfeelautoswitcher
+    DESCRIPTION "look-and-feel autoswitcher"
+    DEFAULT_SEVERITY Warning
+)
+
 kconfig_target_kcfg_file(lookandfeelautoswitcher
     FILE ${CMAKE_CURRENT_SOURCE_DIR}/../lookandfeelsettings.kcfg
     CLASS_NAME LookAndFeelSettings
