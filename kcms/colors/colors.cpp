@@ -399,29 +399,19 @@ void KCMColors::editScheme(const QString &schemeName, QQuickItem *ctx)
                     Qt::SingleShotConnection);
 
                 m_waitForXdgActivation = true;
-                const int lastSerial = KWaylandExtras::lastInputSerial(actualWindow);
-                KWaylandExtras::requestXdgActivationToken(actualWindow, lastSerial, QStringLiteral("org.kde.kcolorschemeeditor"));
-                connect(
-                    KWaylandExtras::self(),
-                    &KWaylandExtras::xdgActivationTokenArrived,
-                    this,
-                    [this, lastSerial](int serial, const QString &token) {
-                        if (serial != lastSerial) {
-                            return;
-                        }
+                auto tokenFuture = KWaylandExtras::xdgActivationToken(actualWindow, QStringLiteral("org.kde.kcolorschemeeditor"));
+                tokenFuture.then(this, [this](const QString &token) {
+                    if (!token.isEmpty()) {
+                        QProcessEnvironment environment = QProcessEnvironment::systemEnvironment();
+                        environment.insert(QStringLiteral("XDG_ACTIVATION_TOKEN"), token);
+                        m_editDialogProcess->setProcessEnvironment(environment);
+                    }
 
-                        if (!token.isEmpty()) {
-                            QProcessEnvironment environment = QProcessEnvironment::systemEnvironment();
-                            environment.insert(QStringLiteral("XDG_ACTIVATION_TOKEN"), token);
-                            m_editDialogProcess->setProcessEnvironment(environment);
-                        }
-
-                        m_waitForXdgActivation = false;
-                        if (!m_waitForXdgForeign) {
-                            m_editDialogProcess->start();
-                        }
-                    },
-                    Qt::SingleShotConnection);
+                    m_waitForXdgActivation = false;
+                    if (!m_waitForXdgForeign) {
+                        m_editDialogProcess->start();
+                    }
+                });
             }
         }
     }

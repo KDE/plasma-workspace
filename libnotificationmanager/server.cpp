@@ -77,23 +77,14 @@ void Server::invokeAction(uint notificationId,
                           QWindow *window)
 {
     if (KWindowSystem::isPlatformWayland()) {
-        const quint32 launchedSerial = KWaylandExtras::lastInputSerial(window);
-        auto conn = std::make_shared<QMetaObject::Connection>();
-        *conn = connect(KWaylandExtras::self(),
-                        &KWaylandExtras::xdgActivationTokenArrived,
-                        this,
-                        [this, actionName, notificationId, launchedSerial, conn, behavior](quint32 serial, const QString &token) {
-                            if (serial == launchedSerial) {
-                                disconnect(*conn);
-                                Q_EMIT d->ActivationToken(notificationId, token);
-                                Q_EMIT d->ActionInvoked(notificationId, actionName);
-
-                                if (behavior & Notifications::Close) {
-                                    Q_EMIT d->CloseNotification(notificationId);
-                                }
-                            }
-                        });
-        KWaylandExtras::requestXdgActivationToken(window, launchedSerial, xdgActivationAppId);
+        auto tokenFuture = KWaylandExtras::xdgActivationToken(window, xdgActivationAppId);
+        tokenFuture.then(this, [this, actionName, notificationId, behavior](const QString &token) {
+            Q_EMIT d->ActivationToken(notificationId, token);
+            Q_EMIT d->ActionInvoked(notificationId, actionName);
+            if (behavior & Notifications::Close) {
+                Q_EMIT d->CloseNotification(notificationId);
+            }
+        });
     } else {
         KStartupInfoId startupId;
         startupId.initId();
