@@ -36,14 +36,11 @@ msgid "Determine sunrise and sunset times:"
 msgstr "日出和日落时间的确定："
 
 #: ui/main.qml:47
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
-#| msgid "Based on device's current location"
+#, kde-format
 msgctxt ""
 "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
 msgid "Based on device's location"
-msgstr "基于设备的当前位置"
+msgstr "基于设备的位置"
 
 #: ui/main.qml:48
 #, kde-format
@@ -81,7 +78,7 @@ msgstr[0] "%1 分钟"
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatically detect location"
-msgstr ""
+msgstr "自动检测位置"
 
 #: ui/main.qml:146
 #, kde-kuit-format
@@ -111,13 +108,10 @@ msgstr ""
 "缺陷报告，提醒 KDE 开发人员撰写关于此服务的工作方式的详细说明。"
 
 #: ui/main.qml:164
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
-#| msgid "Based on manual location"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Use manual location:"
-msgstr "基于手动指定的位置"
+msgstr "使用手动指定位置："
 
 #: ui/main.qml:176
 #, kde-format
@@ -222,11 +216,3 @@ msgstr ""
 "World_location_map_(equirectangular_180).svg'>世界位置地图</link> / "
 "Wikimedia Commons / <link url='https://creativecommons.org/licenses/by-"
 "sa/3.0'>CC BY-SA 3.0</link>"
-
-#~ msgctxt "@label The coordinates for the current location"
-#~ msgid "Current location:"
-#~ msgstr "当前位置："
-
-#~ msgctxt "@info"
-#~ msgid "Latitude: %1°   Longitude: %2°"
-#~ msgstr "纬度：%1°   经度：%2°"

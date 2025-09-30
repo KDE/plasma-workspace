@@ -316,7 +316,7 @@ msgstr "欢迎屏幕"
 #: ui/SimpleOptions.qml:19
 #, kde-format
 msgid "The following will be applied by this Global Theme:"
-msgstr "此全局主题将应用以下配置："
+msgstr "应用此全局主题的以下设置："
 
 #: ui/SimpleOptions.qml:33
 #, kde-format
@@ -366,7 +366,7 @@ msgstr "应用 %1 吗？"
 #: ui/StaticLookAndFeel.qml:143
 #, kde-format
 msgid "Choose what to apply…"
-msgstr "选择要应用的内容…"
+msgstr "选择要应用的设置…"
 
 #: ui/StaticLookAndFeel.qml:143
 #, kde-format
