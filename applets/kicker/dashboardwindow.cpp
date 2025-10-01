@@ -118,7 +118,6 @@ void DashboardWindow::toggle()
     if (isVisible()) {
         close();
     } else {
-        resize(screen()->size());
         showFullScreen();
         if (KWindowSystem::isPlatformX11()) {
             KX11Extras::forceActiveWindow(winId());
