@@ -54,6 +54,11 @@ struct ScoreCard {
     qreal bitapScore;
     int levenshtein;
     qreal levenshteinScore;
+    // Compute also the levenshtein distance of the start of the name for the length of the query.
+    // This will overwhelmingly favor matching the start for short queries and will progressively
+    // converge to the normal levenshteinscore for longer queries
+    int levenshteinStart;
+    qreal levenshteinStartScore;
 };
 
 QDebug operator<<(QDebug dbg, const ScoreCard &card)
@@ -114,6 +119,8 @@ auto makeScores(const auto &notNormalizedString, const auto &queryList) {
         // If one is "yolotrollingservice" and the other is "yolo" then we must consider them worse matches than say "yolotroll".
         const auto levenshtein = Levenshtein::distance(string, queryItem);
 
+        const auto levenshteinStart = Levenshtein::distance(string.left(queryItem.length()), queryItem);
+
         cards.emplace_back(ScoreCard{
             .search = queryItem,
             .term = string,
@@ -121,6 +128,8 @@ auto makeScores(const auto &notNormalizedString, const auto &queryList) {
             .bitapScore = bitapScore + completeMatchBonus + noSubstitionBonus + startsWithBonus,
             .levenshtein = levenshtein,
             .levenshteinScore = Levenshtein::score(string, levenshtein),
+            .levenshteinStart = levenshteinStart,
+            .levenshteinStartScore = Levenshtein::score(string.left(queryItem.length()), levenshteinStart),
         });
     }
 
@@ -337,7 +346,7 @@ private:
 
             qreal weightedScore = 0.0;
             for (const auto &scoreCard : weightedCard.cards) {
-                weightedScore += (scoreCard.bitapScore + scoreCard.levenshteinScore) * weightedCard.weight;
+                weightedScore += (scoreCard.bitapScore + scoreCard.levenshteinScore + scoreCard.levenshteinStartScore) * weightedCard.weight;
                 scores++;
             }
 
