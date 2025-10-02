@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-27 00:44+0000\n"
+"POT-Creation-Date: 2025-10-02 00:44+0000\n"
 "PO-Revision-Date: 2008-12-22 17:48+0530\n"
 "Last-Translator: Runa Bhattacharjee <runab@redhat.com>\n"
 "Language-Team: Bengali INDIA <fedora-trans-bn_IN@redhat.com>\n"
@@ -144,33 +144,33 @@ msgstr ""
 msgid "Open Wallpaper Image"
 msgstr "পটভূমির জন্য ছবির ফাইল নির্বাচন করুন"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:83
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:89
 #, fuzzy, kde-format
 #| msgid "Images"
 msgid "Images"
 msgstr "ছবি"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:87
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:93
 #, kde-format
 msgctxt "@action:button the thing being added is an image file"
 msgid "Add…"
 msgstr ""
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:88
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:94
 #, fuzzy, kde-format
 #| msgid "Select Wallpaper Image File"
 msgctxt "@action:button"
 msgid "Add Wallpaper Image…"
 msgstr "পটভূমির জন্য ছবির ফাইল নির্বাচন করুন"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:94
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:100
 #, fuzzy, kde-format
 #| msgid "Get New Wallpapers..."
 msgctxt "@action:button the new things being gotten are wallpapers"
 msgid "Get New…"
 msgstr "পটভূমির জন্য নতুন ছবি প্রাপ্ত করুন..."
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:95
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:101
 #, fuzzy, kde-format
 #| msgid "Select Wallpaper Image File"
 msgctxt "@action:button"

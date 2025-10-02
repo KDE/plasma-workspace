@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-24 00:45+0000\n"
+"POT-Creation-Date: 2025-10-02 00:44+0000\n"
 "PO-Revision-Date: 2025-07-08 12:37+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -18,55 +18,55 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 23.04.3\n"
 
-#: devicenotifications.cpp:376
+#: devicenotifications.cpp:383
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Detected"
 msgstr "Виявлено дисплей"
 
-#: devicenotifications.cpp:377
+#: devicenotifications.cpp:384
 #, kde-format
 msgid "A display has been connected."
 msgstr "Дисплей з'єднано."
 
-#: devicenotifications.cpp:390
+#: devicenotifications.cpp:404
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Removed"
 msgstr "Дисплей вилучено"
 
-#: devicenotifications.cpp:391
+#: devicenotifications.cpp:405
 #, kde-format
 msgid "A display has been disconnected."
 msgstr "Дисплей від'єднано."
 
-#: devicenotifications.cpp:437
+#: devicenotifications.cpp:451
 #, kde-format
 msgid "%1 has been connected."
 msgstr "%1 було з'єднано."
 
-#: devicenotifications.cpp:437
+#: devicenotifications.cpp:451
 #, kde-format
 msgid "A USB device has been connected."
 msgstr "Пристрій USB з'єднано."
 
-#: devicenotifications.cpp:442
+#: devicenotifications.cpp:456
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Detected"
 msgstr "Виявлено пристрій USB"
 
-#: devicenotifications.cpp:480
+#: devicenotifications.cpp:494
 #, kde-format
 msgid "%1 has been disconnected."
 msgstr "%1 було від'єднано."
 
-#: devicenotifications.cpp:480
+#: devicenotifications.cpp:494
 #, kde-format
 msgid "A USB device has been disconnected."
 msgstr "Пристрій USB від'єднано."
 
-#: devicenotifications.cpp:485
+#: devicenotifications.cpp:499
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Went Away"

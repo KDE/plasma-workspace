@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-27 00:44+0000\n"
+"POT-Creation-Date: 2025-10-02 00:44+0000\n"
 "PO-Revision-Date: 2025-09-15 09:50-0500\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -137,30 +137,30 @@ msgstr "ਬੈਕਗਰਾਊਂਡ ਰੰਗ ਚੁਣੋ"
 msgid "Open Wallpaper Image"
 msgstr "ਵਾਲਪੇਪਰ ਚਿੱਤਰ ਖੋਲ੍ਹੋ"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:83
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:89
 #, kde-format
 msgid "Images"
 msgstr "ਚਿੱਤਰ"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:87
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:93
 #, kde-format
 msgctxt "@action:button the thing being added is an image file"
 msgid "Add…"
 msgstr "…ਜੋੜੋ"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:88
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:94
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Wallpaper Image…"
 msgstr "…ਵਾਲਪੇਪਰ ਚਿੱਤਰ ਜੋੜੋ"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:94
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:100
 #, kde-format
 msgctxt "@action:button the new things being gotten are wallpapers"
 msgid "Get New…"
 msgstr "…ਨਵੇਂ ਲਵੋ"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:95
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:101
 #, kde-format
 msgctxt "@action:button"
 msgid "Get New Wallpaper Images…"

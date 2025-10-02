@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-27 00:44+0000\n"
+"POT-Creation-Date: 2025-10-02 00:44+0000\n"
 "PO-Revision-Date: 2008-10-05 11:04+0300\n"
 "Last-Translator: Ihar Hrachyshka <ihar.hrachyshka@gmail.com>\n"
 "Language-Team: Belarusian Latin <i18n@mova.org>\n"
@@ -149,33 +149,33 @@ msgstr ""
 msgid "Open Wallpaper Image"
 msgstr "Vybiery fajł z špalerami"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:83
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:89
 #, fuzzy, kde-format
 #| msgid "Images"
 msgid "Images"
 msgstr "Vyjavy"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:87
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:93
 #, kde-format
 msgctxt "@action:button the thing being added is an image file"
 msgid "Add…"
 msgstr ""
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:88
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:94
 #, fuzzy, kde-format
 #| msgid "Select Wallpaper Image File"
 msgctxt "@action:button"
 msgid "Add Wallpaper Image…"
 msgstr "Vybiery fajł z špalerami"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:94
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:100
 #, fuzzy, kde-format
 #| msgid "Get New Wallpapers..."
 msgctxt "@action:button the new things being gotten are wallpapers"
 msgid "Get New…"
 msgstr "Vaźmi novyja špalery..."
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:95
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:101
 #, fuzzy, kde-format
 #| msgid "Select Wallpaper Image File"
 msgctxt "@action:button"

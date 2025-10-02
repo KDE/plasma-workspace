@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kded_devicenotifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-24 00:45+0000\n"
+"POT-Creation-Date: 2025-10-02 00:44+0000\n"
 "PO-Revision-Date: 2023-12-09 09:39+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "X-Generator: Lokalize 23.08.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-#: devicenotifications.cpp:376
+#: devicenotifications.cpp:383
 #, fuzzy, kde-format
 #| msgctxt "@title:notifications"
 #| msgid "USB Device Detected"
@@ -23,12 +23,12 @@ msgctxt "@title:notifications"
 msgid "Display Detected"
 msgstr "Zistilo sa USB zariadenie"
 
-#: devicenotifications.cpp:377
+#: devicenotifications.cpp:384
 #, kde-format
 msgid "A display has been connected."
 msgstr ""
 
-#: devicenotifications.cpp:390
+#: devicenotifications.cpp:404
 #, fuzzy, kde-format
 #| msgctxt "@title:notifications"
 #| msgid "USB Device Removed"
@@ -36,40 +36,40 @@ msgctxt "@title:notifications"
 msgid "Display Removed"
 msgstr "USB zariadenie odstránené"
 
-#: devicenotifications.cpp:391
+#: devicenotifications.cpp:405
 #, kde-format
 msgid "A display has been disconnected."
 msgstr ""
 
-#: devicenotifications.cpp:437
+#: devicenotifications.cpp:451
 #, kde-format
 msgid "%1 has been connected."
 msgstr ""
 
-#: devicenotifications.cpp:437
+#: devicenotifications.cpp:451
 #, fuzzy, kde-format
 #| msgctxt "@title:notifications"
 #| msgid "USB Device Detected"
 msgid "A USB device has been connected."
 msgstr "Zistilo sa USB zariadenie"
 
-#: devicenotifications.cpp:442
+#: devicenotifications.cpp:456
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Detected"
 msgstr "Zistilo sa USB zariadenie"
 
-#: devicenotifications.cpp:480
+#: devicenotifications.cpp:494
 #, kde-format
 msgid "%1 has been disconnected."
 msgstr ""
 
-#: devicenotifications.cpp:480
+#: devicenotifications.cpp:494
 #, kde-format
 msgid "A USB device has been disconnected."
 msgstr ""
 
-#: devicenotifications.cpp:485
+#: devicenotifications.cpp:499
 #, fuzzy, kde-format
 #| msgctxt "@title:notifications"
 #| msgid "USB Device Detected"

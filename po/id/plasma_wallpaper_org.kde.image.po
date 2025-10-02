@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-27 00:44+0000\n"
+"POT-Creation-Date: 2025-10-02 00:44+0000\n"
 "PO-Revision-Date: 2024-12-09 07:16+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -142,30 +142,30 @@ msgstr "Pilih Warna LatarBelakang:"
 msgid "Open Wallpaper Image"
 msgstr "Buka Gambar Wallpaper"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:83
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:89
 #, kde-format
 msgid "Images"
 msgstr "Gambar"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:87
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:93
 #, kde-format
 msgctxt "@action:button the thing being added is an image file"
 msgid "Add…"
 msgstr "Tambah..."
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:88
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:94
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Wallpaper Image…"
 msgstr "Tambahkan Gambar Wallpaper..."
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:94
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:100
 #, kde-format
 msgctxt "@action:button the new things being gotten are wallpapers"
 msgid "Get New…"
 msgstr "Dapatkan yang Baru..."
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:95
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:101
 #, kde-format
 msgctxt "@action:button"
 msgid "Get New Wallpaper Images…"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-24 00:45+0000\n"
+"POT-Creation-Date: 2025-10-02 00:44+0000\n"
 "PO-Revision-Date: 2025-07-14 20:07+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -18,55 +18,55 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
 "X-Generator: Lokalize 23.08.5\n"
 
-#: devicenotifications.cpp:376
+#: devicenotifications.cpp:383
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Detected"
 msgstr "اكتشف شاشة"
 
-#: devicenotifications.cpp:377
+#: devicenotifications.cpp:384
 #, kde-format
 msgid "A display has been connected."
 msgstr "وُصِلت شاشة"
 
-#: devicenotifications.cpp:390
+#: devicenotifications.cpp:404
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Removed"
 msgstr "أزيلت شاشة"
 
-#: devicenotifications.cpp:391
+#: devicenotifications.cpp:405
 #, kde-format
 msgid "A display has been disconnected."
 msgstr "فُصِلت شاشة"
 
-#: devicenotifications.cpp:437
+#: devicenotifications.cpp:451
 #, kde-format
 msgid "%1 has been connected."
 msgstr "فُصل %1."
 
-#: devicenotifications.cpp:437
+#: devicenotifications.cpp:451
 #, kde-format
 msgid "A USB device has been connected."
 msgstr "وُصِل جهاز يو اس بي."
 
-#: devicenotifications.cpp:442
+#: devicenotifications.cpp:456
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Detected"
 msgstr "اكتشف جهاز يو اس بي"
 
-#: devicenotifications.cpp:480
+#: devicenotifications.cpp:494
 #, kde-format
 msgid "%1 has been disconnected."
 msgstr "فُصل %1."
 
-#: devicenotifications.cpp:480
+#: devicenotifications.cpp:494
 #, kde-format
 msgid "A USB device has been disconnected."
 msgstr "فُصِل جهاز يو اس بي."
 
-#: devicenotifications.cpp:485
+#: devicenotifications.cpp:499
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Went Away"
