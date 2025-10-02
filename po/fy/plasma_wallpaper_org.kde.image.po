@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-27 02:39+0000\n"
+"POT-Creation-Date: 2025-10-02 02:36+0000\n"
 "PO-Revision-Date: 2009-06-27 00:55+0200\n"
 "Last-Translator: Rinse de Vries <rinsedevries@kde.nl>\n"
 "Language-Team: Frysk <kde-i18n-fry@kde.org>\n"
@@ -141,32 +141,32 @@ msgstr ""
 msgid "Open Wallpaper Image"
 msgstr ""
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:83
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:89
 #, kde-format
 msgid "Images"
 msgstr ""
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:87
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:93
 #, kde-format
 msgctxt "@action:button the thing being added is an image file"
 msgid "Add…"
 msgstr ""
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:88
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:94
 #, fuzzy, kde-format
 #| msgid "&Remove Folder"
 msgctxt "@action:button"
 msgid "Add Wallpaper Image…"
 msgstr "Map wi&skje"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:94
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:100
 #, fuzzy, kde-format
 #| msgid "&Remove Folder"
 msgctxt "@action:button the new things being gotten are wallpapers"
 msgid "Get New…"
 msgstr "Map wi&skje"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:95
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:101
 #, fuzzy, kde-format
 #| msgid "&Remove Folder"
 msgctxt "@action:button"
