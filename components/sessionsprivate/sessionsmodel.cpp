@@ -71,6 +71,22 @@ void SessionsModel::setIncludeUnusedSessions(bool includeUnusedSessions)
     }
 }
 
+bool SessionsModel::includeOwnSession() const
+{
+    return m_includeOwnSession;
+}
+
+void SessionsModel::setIncludeOwnSession(bool includeOwnSession)
+{
+    if (m_includeOwnSession != includeOwnSession) {
+        m_includeOwnSession = includeOwnSession;
+
+        reload();
+
+        Q_EMIT includeOwnSessionChanged();
+    }
+}
+
 void SessionsModel::switchUser(int vt, bool shouldLock)
 {
     if (vt < 0) {
@@ -151,7 +167,11 @@ void SessionsModel::reload()
     m_data.reserve(sessions.count());
 
     for (const SessEnt &session : std::as_const(sessions)) {
-        if (!session.vt || session.self) {
+        if (!session.vt) {
+            continue;
+        }
+
+        if (!m_includeOwnSession && session.self) {
             continue;
         }
 

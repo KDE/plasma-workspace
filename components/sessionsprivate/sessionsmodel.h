@@ -45,6 +45,7 @@ class SessionsModel : public QAbstractListModel
     Q_PROPERTY(bool shouldLock READ shouldLock NOTIFY shouldLockChanged)
     Q_PROPERTY(bool showNewSessionEntry MEMBER m_showNewSessionEntry WRITE setShowNewSessionEntry NOTIFY showNewSessionEntryChanged)
     Q_PROPERTY(bool includeUnusedSessions READ includeUnusedSessions WRITE setIncludeUnusedSessions NOTIFY includeUnusedSessionsChanged)
+    Q_PROPERTY(bool includeOwnSession READ includeOwnSession WRITE setIncludeOwnSession NOTIFY includeOwnSessionChanged)
 
     Q_PROPERTY(int count READ rowCount NOTIFY countChanged)
 
@@ -68,9 +69,11 @@ public:
     bool canStartNewSession() const;
     bool shouldLock() const;
     bool includeUnusedSessions() const;
+    bool includeOwnSession() const;
 
     void setShowNewSessionEntry(bool showNewSessionEntry);
     void setIncludeUnusedSessions(bool includeUnusedSessions);
+    void setIncludeOwnSession(bool includeOwnSession);
 
     Q_INVOKABLE void reload();
     Q_INVOKABLE void switchUser(int vt, bool shouldLock = false);
@@ -85,6 +88,7 @@ Q_SIGNALS:
     void showNewSessionEntryChanged();
     void countChanged();
     void includeUnusedSessionsChanged();
+    void includeOwnSessionChanged();
 
     void switchedUser(int vt);
     void startedNewSession();
@@ -104,6 +108,7 @@ private:
 
     bool m_showNewSessionEntry = false;
     bool m_includeUnusedSessions = true;
+    bool m_includeOwnSession = false;
 
     org::freedesktop::ScreenSaver *m_screensaverInterface = nullptr;
 };
