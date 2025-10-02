@@ -68,7 +68,10 @@ Item {
     // For showing an "other users are logged in" hint
     SessionsModel {
         id: otherSessionsModel
+
+        // In case the default values ever change
         includeUnusedSessions: false
+        includeOwnSession: false
     }
 
     QQC2.Action {
