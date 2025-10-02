@@ -67,7 +67,7 @@ Item {
 
     // For showing an "other users are logged in" hint
     SessionsModel {
-        id: sessionsModel
+        id: otherSessionsModel
         includeUnusedSessions: false
     }
 
@@ -174,9 +174,9 @@ Item {
             text: i18ndp("plasma_lookandfeel_org.kde.lookandfeel",
                          "One other user is currently logged in. If the computer is shut down or restarted, that user may lose work.",
                          "%1 other users are currently logged in. If the computer is shut down or restarted, those users may lose work.",
-                         sessionsModel.count - 1)
+                         otherSessionsModel.count)
             textFormat: Text.PlainText
-            visible: sessionsModel.count > 1 && (sdtype !== ShutdownType.ShutdownTypeNone || root.showAllOptions)
+            visible: otherSessionsModel.count > 0 && (sdtype !== ShutdownType.ShutdownTypeNone || root.showAllOptions)
         }
 
         PlasmaComponents.Label {
