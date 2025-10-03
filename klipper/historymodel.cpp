@@ -140,8 +140,10 @@ HistoryModel::HistoryModel()
             [this](const QModelIndex & /*sourceParent*/, int sourceStart, int /*sourceEnd*/, const QModelIndex & /*destinationParent*/, int destinationRow) {
                 Q_EMIT changed(sourceStart == 0 || destinationRow == 0);
             });
-    connect(this, &HistoryModel::dataChanged, this, [this](const QModelIndex &topLeft) {
-        Q_EMIT changed(topLeft.row() == 0); // BUG 494031 the first item does not trigger rowsMoved
+    connect(this, &HistoryModel::dataChanged, this, [this](const QModelIndex &topLeft, const QModelIndex &, const QList<int> &roles) {
+        if (roles.contains(UuidRole)) { // Avoid overriding the current clipboard with async-loaded image data
+            Q_EMIT changed(topLeft.row() == 0); // BUG 494031 the first item does not trigger rowsMoved
+        }
     });
     connect(this, &HistoryModel::modelReset, this, [this] {
         Q_EMIT changed(true);
