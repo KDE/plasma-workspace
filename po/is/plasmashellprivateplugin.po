@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-24 00:45+0000\n"
+"POT-Creation-Date: 2025-10-03 00:46+0000\n"
 "PO-Revision-Date: 2025-04-18 13:07+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -170,7 +170,7 @@ msgstr "Tímamörk skjáhvílu"
 msgid "Sets the minutes after which the screen is locked."
 msgstr "Stillir hversu margar mínútur líða þar til skjárinn er læstur."
 
-#: sessionsprivate/sessionsmodel.cpp:235 sessionsprivate/sessionsmodel.cpp:239
+#: sessionsprivate/sessionsmodel.cpp:255 sessionsprivate/sessionsmodel.cpp:259
 #, kde-format
 msgid "New Session"
 msgstr "Ný seta"

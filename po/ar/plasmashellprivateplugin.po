@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-24 00:45+0000\n"
+"POT-Creation-Date: 2025-10-03 00:46+0000\n"
 "PO-Revision-Date: 2025-08-06 17:39+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -176,7 +176,7 @@ msgstr "مهلة حافظة الشاشة"
 msgid "Sets the minutes after which the screen is locked."
 msgstr "يضبط الدقائق التي تقفل بعدها الشاشة."
 
-#: sessionsprivate/sessionsmodel.cpp:235 sessionsprivate/sessionsmodel.cpp:239
+#: sessionsprivate/sessionsmodel.cpp:255 sessionsprivate/sessionsmodel.cpp:259
 #, kde-format
 msgid "New Session"
 msgstr "جلسة جديدة"

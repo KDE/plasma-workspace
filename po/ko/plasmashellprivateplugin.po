@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-24 00:45+0000\n"
+"POT-Creation-Date: 2025-10-03 00:46+0000\n"
 "PO-Revision-Date: 2025-04-07 00:31+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -169,7 +169,7 @@ msgstr "화면 보호기 시간 제한"
 msgid "Sets the minutes after which the screen is locked."
 msgstr "화면 보호기를 시작할 시간을 분 단위로 설정합니다."
 
-#: sessionsprivate/sessionsmodel.cpp:235 sessionsprivate/sessionsmodel.cpp:239
+#: sessionsprivate/sessionsmodel.cpp:255 sessionsprivate/sessionsmodel.cpp:259
 #, kde-format
 msgid "New Session"
 msgstr "새 세션"

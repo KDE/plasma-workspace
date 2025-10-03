@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-09 00:43+0000\n"
+"POT-Creation-Date: 2025-10-03 00:46+0000\n"
 "PO-Revision-Date: 2021-08-12 11:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -13,42 +13,42 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Weblate 4.7.2\n"
 
-#: contents/logout/Logout.qml:153
+#: contents/logout/Logout.qml:156
 #, kde-format
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
 msgstr[0] ""
 msgstr[1] ""
 
-#: contents/logout/Logout.qml:154
+#: contents/logout/Logout.qml:157
 #, kde-format
 msgid "Restarting in 1 second"
 msgid_plural "Restarting in %1 seconds"
 msgstr[0] "1 സെക്കൻഡിനുള്ളിൽ പുനരാരംഭിക്കുന്നു"
 msgstr[1] "%1 സെക്കൻഡിനുള്ളിൽ പുനരാരംഭിക്കുന്നു"
 
-#: contents/logout/Logout.qml:156
+#: contents/logout/Logout.qml:159
 #, kde-format
 msgid "Logging out in 1 second"
 msgid_plural "Logging out in %1 seconds"
 msgstr[0] "1 സെക്കൻഡിനുള്ളിൽ പുറത്തുകടക്കും"
 msgstr[1] "%1 സെക്കൻഡിനുള്ളിൽ പുറത്തുകടക്കും"
 
-#: contents/logout/Logout.qml:159
+#: contents/logout/Logout.qml:162
 #, kde-format
 msgid "Installing software updates and shutting down in 1 second"
 msgid_plural "Installing software updates and shutting down in %1 seconds"
 msgstr[0] ""
 msgstr[1] ""
 
-#: contents/logout/Logout.qml:160
+#: contents/logout/Logout.qml:163
 #, kde-format
 msgid "Shutting down in 1 second"
 msgid_plural "Shutting down in %1 seconds"
 msgstr[0] "1 സെക്കൻഡിനുള്ളിൽ ഷട്ട്ഡൗൺ ചെയ്യുന്നു"
 msgstr[1] "%1 സെക്കൻഡിനുള്ളിൽ ഷട്ട്ഡൗൺ ചെയ്യുന്നു"
 
-#: contents/logout/Logout.qml:175
+#: contents/logout/Logout.qml:178
 #, kde-format
 msgid ""
 "One other user is currently logged in. If the computer is shut down or "
@@ -63,18 +63,18 @@ msgstr[1] ""
 "%1 ഉപയോക്താക്കൾ  നിലവിൽ ലോഗിൻ ചെയ്തിട്ടുണ്ട്. കമ്പ്യൂട്ടർ ഷട്ട് ഡൗൺ ചെയ്യുകയോ പുനരാരംഭിക്കുകയോ "
 "ചെയ്താൽ, ആ ഉപയോക്താക്കൾ ചെയ്ത ജോലി നഷ്‌ടപ്പെടാം."
 
-#: contents/logout/Logout.qml:190
+#: contents/logout/Logout.qml:193
 #, kde-format
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr "പുനരാരംഭിക്കുമ്പോൾ, കമ്പ്യൂട്ടർ ഫേംവെയർ സജ്ജീകരണ സ്‌ക്രീനിൽ പ്രവേശിക്കും."
 
-#: contents/logout/Logout.qml:203
+#: contents/logout/Logout.qml:206
 #, fuzzy, kde-format
 #| msgid "When restarted, the computer will enter the firmware setup screen."
 msgid "When restarted, the computer will enter the boot loader menu."
 msgstr "പുനരാരംഭിക്കുമ്പോൾ, കമ്പ്യൂട്ടർ ഫേംവെയർ സജ്ജീകരണ സ്‌ക്രീനിൽ പ്രവേശിക്കും."
 
-#: contents/logout/Logout.qml:216
+#: contents/logout/Logout.qml:219
 #, fuzzy, kde-format
 #| msgctxt "Suspend to RAM"
 #| msgid "Sleep"
@@ -82,7 +82,7 @@ msgctxt "Suspend to RAM"
 msgid "Slee&p"
 msgstr "സ്ലീപ്"
 
-#: contents/logout/Logout.qml:217
+#: contents/logout/Logout.qml:220
 #, fuzzy, kde-format
 #| msgctxt "Suspend to RAM"
 #| msgid "Sleep"
@@ -90,67 +90,67 @@ msgctxt "Suspend to RAM"
 msgid "Slee&p Now"
 msgstr "സ്ലീപ്"
 
-#: contents/logout/Logout.qml:226
+#: contents/logout/Logout.qml:229
 #, fuzzy, kde-format
 #| msgid "Hibernate"
 msgid "&Hibernate"
 msgstr "ഹൈബർ‌നേറ്റ്"
 
-#: contents/logout/Logout.qml:227
+#: contents/logout/Logout.qml:230
 #, fuzzy, kde-format
 #| msgid "Hibernate"
 msgid "&Hibernate Now"
 msgstr "ഹൈബർ‌നേറ്റ്"
 
-#: contents/logout/Logout.qml:238
+#: contents/logout/Logout.qml:241
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
 msgstr ""
 
-#: contents/logout/Logout.qml:240 contents/logout/Logout.qml:259
+#: contents/logout/Logout.qml:243 contents/logout/Logout.qml:262
 #, fuzzy, kde-format
 #| msgid "Restart"
 msgid "&Restart"
 msgstr "പുനരാരംഭിക്കുക"
 
-#: contents/logout/Logout.qml:241 contents/logout/Logout.qml:260
+#: contents/logout/Logout.qml:244 contents/logout/Logout.qml:263
 #, fuzzy, kde-format
 #| msgid "Restart"
 msgid "&Restart Now"
 msgstr "പുനരാരംഭിക്കുക"
 
-#: contents/logout/Logout.qml:273
+#: contents/logout/Logout.qml:276
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
 msgstr ""
 
-#: contents/logout/Logout.qml:275 contents/logout/Logout.qml:294
+#: contents/logout/Logout.qml:278 contents/logout/Logout.qml:297
 #, fuzzy, kde-format
 #| msgid "Shut Down"
 msgid "&Shut Down"
 msgstr "ഷട്ട് ഡൌൺ"
 
-#: contents/logout/Logout.qml:276 contents/logout/Logout.qml:295
+#: contents/logout/Logout.qml:279 contents/logout/Logout.qml:298
 #, fuzzy, kde-format
 #| msgid "Shut Down"
 msgid "&Shut Down Now"
 msgstr "ഷട്ട് ഡൌൺ"
 
-#: contents/logout/Logout.qml:307
+#: contents/logout/Logout.qml:310
 #, fuzzy, kde-format
 #| msgid "Log Out"
 msgid "&Log Out"
 msgstr "പുറത്തുകടക്കുക"
 
-#: contents/logout/Logout.qml:308
+#: contents/logout/Logout.qml:311
 #, fuzzy, kde-format
 #| msgid "Log Out"
 msgid "&Log Out Now"
 msgstr "പുറത്തുകടക്കുക"
 
-#: contents/logout/Logout.qml:318
+#: contents/logout/Logout.qml:321
 #, fuzzy, kde-format
 #| msgid "Cancel"
 msgid "&Cancel"

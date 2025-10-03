@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-24 00:45+0000\n"
+"POT-Creation-Date: 2025-10-03 00:46+0000\n"
 "PO-Revision-Date: 2024-09-07 12:04+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -170,7 +170,7 @@ msgstr "Screen saver timeout"
 msgid "Sets the minutes after which the screen is locked."
 msgstr "Sets the minutes after which the screen is locked."
 
-#: sessionsprivate/sessionsmodel.cpp:235 sessionsprivate/sessionsmodel.cpp:239
+#: sessionsprivate/sessionsmodel.cpp:255 sessionsprivate/sessionsmodel.cpp:259
 #, kde-format
 msgid "New Session"
 msgstr "New Session"

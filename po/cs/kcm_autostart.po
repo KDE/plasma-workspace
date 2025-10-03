@@ -118,11 +118,10 @@ msgid "Application…"
 msgstr "Aplikace…"
 
 #: ui/main.qml:75
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgctxt "@action:inmenu accessible"
 msgid "Add application"
-msgstr "Aplikace"
+msgstr ""
 
 #: ui/main.qml:79
 #, kde-format
@@ -131,11 +130,10 @@ msgid "Login Script…"
 msgstr "Přihlašovací skript…"
 
 #: ui/main.qml:81
-#, fuzzy, kde-format
-#| msgid "Login Scripts"
+#, kde-format
 msgctxt "@action:inmenu accessible"
 msgid "Add login script"
-msgstr "Skripty při přihlášení"
+msgstr ""
 
 #: ui/main.qml:85
 #, kde-format
@@ -144,11 +142,10 @@ msgid "Logout Script…"
 msgstr "Skript při odhlášení…"
 
 #: ui/main.qml:87
-#, fuzzy, kde-format
-#| msgid "Logout Scripts"
+#, kde-format
 msgctxt "@action:inmenu accessible"
 msgid "Add logout script"
-msgstr "Skripty při odhlášení"
+msgstr ""
 
 #: ui/main.qml:121
 #, kde-format

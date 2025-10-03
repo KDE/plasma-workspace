@@ -445,6 +445,3 @@ msgstr "Počet panelů"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Počítá panely"
-
-#~ msgid "Stop Current Activity"
-#~ msgstr "Zastavit současnou aktivitu"
