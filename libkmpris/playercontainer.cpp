@@ -507,7 +507,7 @@ void PlayerContainer::initBindings()
             return QString();
         } else {
             const QStringView lastUrlPart = xesamUrl.sliced(lastSlashPos + 1);
-            return QUrl::fromEncoded(lastUrlPart.toLatin1()).toString();
+            return QUrl::fromPercentEncoding(lastUrlPart.toLatin1());
         }
     });
     m_artist.setBinding([this] {
@@ -533,7 +533,7 @@ void PlayerContainer::initBindings()
         }
         // if we play a local file without title and artist, show its containing folder instead
         if (auto lastFolderPathIt = std::next(urlParts.crbegin()); !lastFolderPathIt->isEmpty()) {
-            return QUrl::fromEncoded(lastFolderPathIt->toLatin1()).toString();
+            return QUrl::fromPercentEncoding(lastFolderPathIt->toLatin1());
         }
         return QString();
     });
