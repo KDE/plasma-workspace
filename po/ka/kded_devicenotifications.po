@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-24 02:36+0000\n"
+"POT-Creation-Date: 2025-10-03 02:42+0000\n"
 "PO-Revision-Date: 2025-07-08 04:14+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -18,55 +18,55 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.6\n"
 
-#: devicenotifications.cpp:378
+#: devicenotifications.cpp:385
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Detected"
 msgstr "აღმოჩენილია ეკრანი"
 
-#: devicenotifications.cpp:379
+#: devicenotifications.cpp:386
 #, kde-format
 msgid "A display has been connected."
 msgstr "ეკრანი დაკავშირებულია."
 
-#: devicenotifications.cpp:392
+#: devicenotifications.cpp:406
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Removed"
 msgstr "ეკრანი გამოერთებულია"
 
-#: devicenotifications.cpp:393
+#: devicenotifications.cpp:407
 #, kde-format
 msgid "A display has been disconnected."
 msgstr "ეკრანი გაითიშა."
 
-#: devicenotifications.cpp:439
+#: devicenotifications.cpp:453
 #, kde-format
 msgid "%1 has been connected."
 msgstr "%1 დაკავშირებულია."
 
-#: devicenotifications.cpp:439
+#: devicenotifications.cpp:453
 #, kde-format
 msgid "A USB device has been connected."
 msgstr "USB მოწყობილობა დაკავშირებულია."
 
-#: devicenotifications.cpp:444
+#: devicenotifications.cpp:458
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Detected"
 msgstr "აღმოჩენილია USB მოწყობილობა"
 
-#: devicenotifications.cpp:482
+#: devicenotifications.cpp:496
 #, kde-format
 msgid "%1 has been disconnected."
 msgstr "%1 გაითიშა."
 
-#: devicenotifications.cpp:482
+#: devicenotifications.cpp:496
 #, kde-format
 msgid "A USB device has been disconnected."
 msgstr "USB მოწყობილობა გაითიშა."
 
-#: devicenotifications.cpp:487
+#: devicenotifications.cpp:501
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Went Away"

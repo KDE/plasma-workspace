@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-24 02:36+0000\n"
+"POT-Creation-Date: 2025-10-03 02:42+0000\n"
 "PO-Revision-Date: 2025-07-08 14:40+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -17,55 +17,55 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 25.04.3\n"
 
-#: devicenotifications.cpp:378
+#: devicenotifications.cpp:385
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Detected"
 msgstr "Scherm gedetecteerd"
 
-#: devicenotifications.cpp:379
+#: devicenotifications.cpp:386
 #, kde-format
 msgid "A display has been connected."
 msgstr "Een scherm is verbonden."
 
-#: devicenotifications.cpp:392
+#: devicenotifications.cpp:406
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Removed"
 msgstr "Scherm verwijderd"
 
-#: devicenotifications.cpp:393
+#: devicenotifications.cpp:407
 #, kde-format
 msgid "A display has been disconnected."
 msgstr "Verbinding met een scherm is verbroken."
 
-#: devicenotifications.cpp:439
+#: devicenotifications.cpp:453
 #, kde-format
 msgid "%1 has been connected."
 msgstr "%1 is verbonden."
 
-#: devicenotifications.cpp:439
+#: devicenotifications.cpp:453
 #, kde-format
 msgid "A USB device has been connected."
 msgstr "Een USB-apparaat is verbonden."
 
-#: devicenotifications.cpp:444
+#: devicenotifications.cpp:458
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Detected"
 msgstr "USB-apparaat gedetecteerd"
 
-#: devicenotifications.cpp:482
+#: devicenotifications.cpp:496
 #, kde-format
 msgid "%1 has been disconnected."
 msgstr "Verbinding met %1 is verbroken."
 
-#: devicenotifications.cpp:482
+#: devicenotifications.cpp:496
 #, kde-format
 msgid "A USB device has been disconnected."
 msgstr "Verbinding met een USB-apparaat is verbroken."
 
-#: devicenotifications.cpp:487
+#: devicenotifications.cpp:501
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Went Away"
