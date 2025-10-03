@@ -35,7 +35,6 @@ PlasmaComponents.ItemDelegate {
     readonly property alias dragHandler: dragHandler
     property alias mainItem: label.contentItem
 
-    property int maximumNumberOfPreviews: Math.floor(width / (Kirigami.Units.gridUnit * 4 + Kirigami.Units.smallSpacing))
     readonly property real gradientThreshold: (label.width - toolButtonsLoader.width) / label.width
     // Consider tall to be > about 1.5x the default height for purposes of top-aligning
     // the buttons to preserve Fitts' Law when deleting multiple items in a row,

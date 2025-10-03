@@ -15,6 +15,7 @@ import org.kde.plasma.private.clipboard 0.1 as Private // image provider
 
 ClipboardItemDelegate {
     id: menuItem
+    property int maximumNumberOfPreviews: Math.floor(width / (Kirigami.Units.gridUnit * 4 + Kirigami.Units.smallSpacing))
     Accessible.name: menuItem.model?.display ?? ""
     mainItem: Item {
         id: previewItem
@@ -29,7 +30,7 @@ ClipboardItemDelegate {
 
         ListView {
             id: previewList
-            model: menuItem.model?.display.split(" ", maximumNumberOfPreviews) ?? 0
+            model: menuItem.model?.display.split(" ", menuItem.maximumNumberOfPreviews) ?? 0
             property int itemWidth: Kirigami.Units.gridUnit * 4
             property int itemHeight: Kirigami.Units.gridUnit * 4
             interactive: false
@@ -46,7 +47,7 @@ ClipboardItemDelegate {
             delegate: Item {
                 width: previewList.itemWidth
                 height: previewList.itemHeight
-                y: Math.round((parent.height - previewList.itemHeight) / 2)
+                y: Math.round((previewList.height - previewList.itemHeight) / 2)
                 required property string modelData
                 clip: true
 
@@ -91,7 +92,7 @@ ClipboardItemDelegate {
             }
         }
         PlasmaComponents3.Label {
-            property int additionalItems: menuItem.model?.display.split(" ").length ?? 0 - maximumNumberOfPreviews
+            property int additionalItems: menuItem.model?.display.split(" ").length ?? 0 - menuItem.maximumNumberOfPreviews
             visible: additionalItems > 0
             opacity: 0.75
             text: i18ndc("klipper", "Indicator that there are more urls in the clipboard than previews shown", "+%1", additionalItems)
