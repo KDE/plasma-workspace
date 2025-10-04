@@ -1,6 +1,6 @@
 # translation of klipper.po to Polish
 # translation of klipper.po to
-# Version: $Revision: 1718462 $
+# Version: $Revision: 1719572 $
 # Copyright (C) 2002, 2003, 2004, 2005, 2006, 2008, 2009 Free Software Foundation, Inc.
 # Norbert Popiołek <norbert@kde.com.pl>
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2002, 2003.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-19 00:44+0000\n"
+"POT-Creation-Date: 2025-10-04 00:44+0000\n"
 "PO-Revision-Date: 2025-09-06 05:17+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -383,13 +383,13 @@ msgstr "Za mało miejsca, aby wyświetlić kod QR. Spróbuj powiększyć ten apl
 msgid "Creating QR code failed"
 msgstr "Nie udało się utworzyć kodu QR"
 
-#: declarative/qml/ClipboardItemDelegate.qml:203
+#: declarative/qml/ClipboardItemDelegate.qml:202
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
 msgstr "Zwiń"
 
-#: declarative/qml/ClipboardItemDelegate.qml:203
+#: declarative/qml/ClipboardItemDelegate.qml:202
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
@@ -468,7 +468,7 @@ msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Anuluj"
 
-#: declarative/qml/UrlItemDelegate.qml:97
+#: declarative/qml/UrlItemDelegate.qml:98
 #, kde-format
 msgctxt ""
 "Indicator that there are more urls in the clipboard than previews shown"
@@ -667,43 +667,43 @@ msgstr "Wyzeruj ikonę do domyślnej dla polecenia"
 msgid "Icon:"
 msgstr "Ikona:"
 
-#: historymodel.cpp:278
+#: historymodel.cpp:280
 #, kde-format
 msgid "The clipboard history contains starred items. Clear them too?"
 msgstr "Historia schowka zawiera rzeczy z gwiazdkami. Czy je też wyczyścić?"
 
-#: historymodel.cpp:279 historymodel.cpp:299
+#: historymodel.cpp:281 historymodel.cpp:301
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Wyczyść historię schowka"
 
-#: historymodel.cpp:280
+#: historymodel.cpp:282
 #, kde-format
 msgid "Clear Everything"
 msgstr "Wyczyść wszystko"
 
-#: historymodel.cpp:281
+#: historymodel.cpp:283
 #, kde-format
 msgid "Keep Starred Items"
 msgstr "Zachowaj rzeczy z gwiazdkami"
 
-#: historymodel.cpp:298
+#: historymodel.cpp:300
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Czy na pewno wyczyścić i usunąć całą historię schowka?"
 
-#: historymodel.cpp:382
+#: historymodel.cpp:384
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:562
+#: historymodel.cpp:564
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr "Ta rzecz zawiera gwiazdkę. Czy na pewno usunąć ją z historii?"
 
-#: historymodel.cpp:563
+#: historymodel.cpp:565
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "Usuń rzecz z gwiazdką"

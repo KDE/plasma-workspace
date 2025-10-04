@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-19 00:44+0000\n"
+"POT-Creation-Date: 2025-10-04 00:44+0000\n"
 "PO-Revision-Date: 2025-08-30 13:55+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -385,13 +385,13 @@ msgstr ""
 msgid "Creating QR code failed"
 msgstr "Не вдалося створити QR-код"
 
-#: declarative/qml/ClipboardItemDelegate.qml:203
+#: declarative/qml/ClipboardItemDelegate.qml:202
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
 msgstr "Згорнути"
 
-#: declarative/qml/ClipboardItemDelegate.qml:203
+#: declarative/qml/ClipboardItemDelegate.qml:202
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
@@ -470,7 +470,7 @@ msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Скасувати"
 
-#: declarative/qml/UrlItemDelegate.qml:97
+#: declarative/qml/UrlItemDelegate.qml:98
 #, kde-format
 msgctxt ""
 "Indicator that there are more urls in the clipboard than previews shown"
@@ -670,45 +670,45 @@ msgstr "Скинути піктограму до типової для кома�
 msgid "Icon:"
 msgstr "Піктограма:"
 
-#: historymodel.cpp:278
+#: historymodel.cpp:280
 #, kde-format
 msgid "The clipboard history contains starred items. Clear them too?"
 msgstr "У журналі буфера обміну містяться записи із зірками. Вилучити і їх?"
 
-#: historymodel.cpp:279 historymodel.cpp:299
+#: historymodel.cpp:281 historymodel.cpp:301
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Спорожнити журнал буфера обміну даними"
 
-#: historymodel.cpp:280
+#: historymodel.cpp:282
 #, kde-format
 msgid "Clear Everything"
 msgstr "Очистити все"
 
-#: historymodel.cpp:281
+#: historymodel.cpp:283
 #, kde-format
 msgid "Keep Starred Items"
 msgstr "Зберігати записи із зірочкою"
 
-#: historymodel.cpp:298
+#: historymodel.cpp:300
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr ""
 "Ви справді хочете спорожнити і вилучити увесь журнал буфера обміну даними?"
 
-#: historymodel.cpp:382
+#: historymodel.cpp:384
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1⨯%2"
 
-#: historymodel.cpp:562
+#: historymodel.cpp:564
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 "Цей запис позначено зірочкою. Ви справді хочете вилучити його з журналу?"
 
-#: historymodel.cpp:563
+#: historymodel.cpp:565
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "Вилучити запис із зірочкою"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-19 00:44+0000\n"
+"POT-Creation-Date: 2025-10-04 00:44+0000\n"
 "PO-Revision-Date: 2010-01-29 15:54+0530\n"
 "Last-Translator: Rajesh Ranjan <rajesh672@gmail.com>\n"
 "Language-Team: Maithili <maithili.sf.net>\n"
@@ -366,13 +366,13 @@ msgstr ""
 msgid "Creating QR code failed"
 msgstr ""
 
-#: declarative/qml/ClipboardItemDelegate.qml:203
+#: declarative/qml/ClipboardItemDelegate.qml:202
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
 msgstr ""
 
-#: declarative/qml/ClipboardItemDelegate.qml:203
+#: declarative/qml/ClipboardItemDelegate.qml:202
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
@@ -458,7 +458,7 @@ msgctxt "@action:button"
 msgid "Cancel"
 msgstr "रद्द करू (&C)"
 
-#: declarative/qml/UrlItemDelegate.qml:97
+#: declarative/qml/UrlItemDelegate.qml:98
 #, kde-format
 msgctxt ""
 "Indicator that there are more urls in the clipboard than previews shown"
@@ -648,45 +648,45 @@ msgstr ""
 msgid "Icon:"
 msgstr ""
 
-#: historymodel.cpp:278
+#: historymodel.cpp:280
 #, kde-format
 msgid "The clipboard history contains starred items. Clear them too?"
 msgstr ""
 
-#: historymodel.cpp:279 historymodel.cpp:299
+#: historymodel.cpp:281 historymodel.cpp:301
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Clear Clipboard History"
 msgstr "क्लिपबोर्ड इतिहास साफ करू (&l)"
 
-#: historymodel.cpp:280
+#: historymodel.cpp:282
 #, kde-format
 msgid "Clear Everything"
 msgstr ""
 
-#: historymodel.cpp:281
+#: historymodel.cpp:283
 #, fuzzy, kde-format
 #| msgid "Keep clipboard contents"
 msgid "Keep Starred Items"
 msgstr "क्लिपबोर्ड सामग्री राखू"
 
-#: historymodel.cpp:298
+#: historymodel.cpp:300
 #, fuzzy, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "मेटाबू क्लिपबोर्ड?"
 
-#: historymodel.cpp:382
+#: historymodel.cpp:384
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr ""
 
-#: historymodel.cpp:562
+#: historymodel.cpp:564
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 
-#: historymodel.cpp:563
+#: historymodel.cpp:565
 #, kde-format
 msgid "Remove Starred Item"
 msgstr ""

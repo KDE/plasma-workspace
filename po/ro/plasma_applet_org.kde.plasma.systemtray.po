@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Sergiu Bivol <sergiu@cip.md>, 2013, 2020, 2022, 2023.
+# SPDX-FileCopyrightText: 2013, 2020, 2022, 2023, 2025 Sergiu Bivol <sergiu@cip.md>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-25 00:44+0000\n"
-"PO-Revision-Date: 2023-04-10 19:51+0100\n"
+"PO-Revision-Date: 2025-10-03 14:14+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -83,12 +83,18 @@ msgid ""
 "><nl/>Use this setting at your own risk, and do not report issues to KDE or "
 "the app’s author."
 msgstr ""
+"Căutați o configurare în <application>%1</application> pentru a-i dezactiva "
+"pictograma din tava de sistem înainte de a face acest lucru aici. "
+"Pictogramele din tavă ale unor aplicații nu au fost programate să poată fi "
+"dezactivate și folosirea acestei configurări le poate face să aibă un "
+"comportament neașteptat.<nl/><nl/>Folosiți această configurare pe proprie "
+"răspundere și nu raportați defecte la KDE sau autorului aplicației."
 
 #: package/contents/ui/ConfigEntries.qml:177
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
-msgstr ""
+msgstr "Înțeleg riscurile"
 
 #: package/contents/ui/ConfigEntries.qml:189
 #, kde-kuit-format
@@ -99,6 +105,10 @@ msgid ""
 "consider configuring the clipboard to disable its history, or only remember "
 "one item at a time."
 msgstr ""
+"Dezactivarea clipboard-ului nu e recomandată, deoarece va duce la pierderea "
+"datelor copiate când aplicația din care le-ați copiat e închisă.<nl/><nl/>În "
+"schimb, puteți configura clipboard-ul să nu păstreze istoricul, sau să "
+"rețină doar un element odată."
 
 #: package/contents/ui/ConfigEntries.qml:217
 #, kde-format
@@ -217,13 +227,13 @@ msgstr "Arată pictogramele ascunse"
 #, kde-format
 msgctxt "@info:whatsthis accessible description for popup grid"
 msgid "Grid with %1 items in %2 columns"
-msgstr ""
+msgstr "Grilă cu %1 elemente în %2 coloane"
 
 #: package/contents/ui/HiddenItemsView.qml:46
 #, kde-format
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
-msgstr ""
+msgstr "AÎLlmățgGȚP"
 
 #~ msgid "Expand System Tray"
 #~ msgstr "Desfășoară tava de sistem"

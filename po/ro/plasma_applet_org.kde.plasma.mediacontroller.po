@@ -1,12 +1,12 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Sergiu Bivol <sergiu@cip.md>, 2015, 2020, 2023, 2024.
+# SPDX-FileCopyrightText: 2015, 2020, 2023, 2024, 2025 Sergiu Bivol <sergiu@cip.md>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-25 00:44+0000\n"
-"PO-Revision-Date: 2024-02-24 18:26+0000\n"
+"PO-Revision-Date: 2025-10-03 14:27+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: AlbumArtStackView.qml:212
 #, kde-format
@@ -36,27 +36,25 @@ msgstr "-%1"
 #: ExpandedRepresentation.qml:592
 #, kde-format
 msgid "Playback rate %1"
-msgstr ""
+msgstr "Rată de redare %1"
 
 #: ExpandedRepresentation.qml:595
-#, fuzzy, kde-format
-#| msgctxt "Remaining time for song e.g -5:42"
-#| msgid "-%1"
+#, kde-format
 msgctxt "Playback rate"
 msgid "%1x"
-msgstr "-%1"
+msgstr "%1x"
 
 #: ExpandedRepresentation.qml:599
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Playback rate"
-msgstr ""
+msgstr "Rată de redare"
 
 #: ExpandedRepresentation.qml:645
 #, kde-format
 msgctxt "@action:inmenu Playback speed (Normal)"
 msgid "%1 (Normal)"
-msgstr ""
+msgstr "%1 (normală)"
 
 #: ExpandedRepresentation.qml:684
 #, kde-format
@@ -99,8 +97,7 @@ msgid "Repeat"
 msgstr "Repetă"
 
 #: ExpandedRepresentation.qml:839
-#, fuzzy, kde-format
-#| msgid "Choose player automatically"
+#, kde-format
 msgctxt "@action:button"
 msgid "Choose player automatically"
 msgstr "Alege lectorul automat"

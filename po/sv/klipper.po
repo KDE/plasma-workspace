@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-19 00:44+0000\n"
+"POT-Creation-Date: 2025-10-04 00:44+0000\n"
 "PO-Revision-Date: 2025-09-01 19:11+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -375,13 +375,13 @@ msgstr ""
 msgid "Creating QR code failed"
 msgstr "Misslyckades skapa QR-kod"
 
-#: declarative/qml/ClipboardItemDelegate.qml:203
+#: declarative/qml/ClipboardItemDelegate.qml:202
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
 msgstr "Dra ihop"
 
-#: declarative/qml/ClipboardItemDelegate.qml:203
+#: declarative/qml/ClipboardItemDelegate.qml:202
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
@@ -460,7 +460,7 @@ msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: declarative/qml/UrlItemDelegate.qml:97
+#: declarative/qml/UrlItemDelegate.qml:98
 #, kde-format
 msgctxt ""
 "Indicator that there are more urls in the clipboard than previews shown"
@@ -660,45 +660,45 @@ msgstr "Nollställ ikonen till kommandots standardvärde"
 msgid "Icon:"
 msgstr "Ikon:"
 
-#: historymodel.cpp:278
+#: historymodel.cpp:280
 #, kde-format
 msgid "The clipboard history contains starred items. Clear them too?"
 msgstr ""
 "Klippbordshistoriken innehåller värden med stjärnor. Ta också bort dem?"
 
-#: historymodel.cpp:279 historymodel.cpp:299
+#: historymodel.cpp:281 historymodel.cpp:301
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Töm klippbordshistorik"
 
-#: historymodel.cpp:280
+#: historymodel.cpp:282
 #, kde-format
 msgid "Clear Everything"
 msgstr "Töm allting"
 
-#: historymodel.cpp:281
+#: historymodel.cpp:283
 #, kde-format
 msgid "Keep Starred Items"
 msgstr "Behåll objekt med stjärnor"
 
-#: historymodel.cpp:298
+#: historymodel.cpp:300
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Vill du verkligen tömma och ta bort hela klippbordshistoriken?"
 
-#: historymodel.cpp:382
+#: historymodel.cpp:384
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1 x %2"
 
-#: historymodel.cpp:562
+#: historymodel.cpp:564
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 "Objektet har en stjärna. Vill du verkligen ta bort det från historiken?"
 
-#: historymodel.cpp:563
+#: historymodel.cpp:565
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "Ta bort objekt med stjärnor"

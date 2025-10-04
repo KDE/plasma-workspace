@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-19 00:44+0000\n"
+"POT-Creation-Date: 2025-10-04 00:44+0000\n"
 "PO-Revision-Date: 2022-10-31 11:53+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -382,13 +382,13 @@ msgstr ""
 msgid "Creating QR code failed"
 msgstr ""
 
-#: declarative/qml/ClipboardItemDelegate.qml:203
+#: declarative/qml/ClipboardItemDelegate.qml:202
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
 msgstr ""
 
-#: declarative/qml/ClipboardItemDelegate.qml:203
+#: declarative/qml/ClipboardItemDelegate.qml:202
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
@@ -477,7 +477,7 @@ msgctxt "@action:button"
 msgid "Cancel"
 msgstr "H&uỷ"
 
-#: declarative/qml/UrlItemDelegate.qml:97
+#: declarative/qml/UrlItemDelegate.qml:98
 #, kde-format
 msgctxt ""
 "Indicator that there are more urls in the clipboard than previews shown"
@@ -676,47 +676,47 @@ msgstr "Đặt lại biểu tượng về mặc định cho lệnh"
 msgid "Icon:"
 msgstr "Biểu tượng:"
 
-#: historymodel.cpp:278
+#: historymodel.cpp:280
 #, fuzzy, kde-format
 #| msgid "The clipboard history will store up to this many items."
 msgid "The clipboard history contains starred items. Clear them too?"
 msgstr "Lịch sử bảng nháp sẽ lưu nhiều nhất là từng này mục."
 
-#: historymodel.cpp:279 historymodel.cpp:299
+#: historymodel.cpp:281 historymodel.cpp:301
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Xoá lịch sử bảng nháp"
 
-#: historymodel.cpp:280
+#: historymodel.cpp:282
 #, kde-format
 msgid "Clear Everything"
 msgstr ""
 
-#: historymodel.cpp:281
+#: historymodel.cpp:283
 #, fuzzy, kde-format
 #| msgctxt "%1 is application display name"
 #| msgid "%1 - Clipboard Items"
 msgid "Keep Starred Items"
 msgstr "%1 - Các mục bảng nháp"
 
-#: historymodel.cpp:298
+#: historymodel.cpp:300
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Bạn có thực sự muốn làm trống và xoá toàn bộ lịch sử bảng nháp?"
 
-#: historymodel.cpp:382
+#: historymodel.cpp:384
 #, fuzzy, kde-format
 #| msgid "%1x%2 %3bpp"
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2 %3bpp"
 
-#: historymodel.cpp:562
+#: historymodel.cpp:564
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 
-#: historymodel.cpp:563
+#: historymodel.cpp:565
 #, kde-format
 msgid "Remove Starred Item"
 msgstr ""

@@ -1,12 +1,12 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# Sergiu Bivol <sergiu@cip.md>, 2020, 2022.
+# SPDX-FileCopyrightText: 2020, 2022, 2025 Sergiu Bivol <sergiu@cip.md>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-24 00:45+0000\n"
-"PO-Revision-Date: 2022-12-29 17:33+0000\n"
+"PO-Revision-Date: 2025-10-03 14:28+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: abstractnotificationsmodel.cpp:340
 #, kde-format
@@ -114,21 +114,21 @@ msgstr "Aplicația s-a închis pe neașteptate."
 msgctxt "@title"
 msgid "Unread Notification"
 msgid_plural "Unread Notifications"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Notificare necitită"
+msgstr[1] "Notificări necitite"
+msgstr[2] "Notificări necitite"
 
 #: notifications.cpp:913
 #, kde-format
 msgctxt "@info"
 msgid "%1 notification was received while Do Not Disturb was active."
 msgid_plural "%1 notifications were received while Do Not Disturb was active."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%1 notificare primită în timp ce „Nu deranja” era activ."
+msgstr[1] "%1 notificări primite în timp ce „Nu deranja” era activ."
+msgstr[2] "%1 de notificări primite în timp ce „Nu deranja” era activ."
 
 #: notifications.cpp:923
 #, kde-format
 msgctxt "@action:button Show the notifications popup"
 msgid "Show Notifications"
-msgstr ""
+msgstr "Arată notificările"
