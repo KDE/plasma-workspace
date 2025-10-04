@@ -1,2 +1,2 @@
 #! /bin/sh
-$XGETTEXT *.cpp *.h -o $podir/plasmashell.pot
+$XGETTEXT *.cpp *.h qml/*.qml -o $podir/plasmashell.pot
