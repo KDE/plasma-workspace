@@ -1,22 +1,22 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2023, 2024 Vít Pelčák <vit@pelcak.org>
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Vit Pelcak <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-05-09 00:43+0000\n"
-"PO-Revision-Date: 2024-08-29 13:36+0200\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2025-10-01 17:50+0200\n"
+"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 25.08.1\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
@@ -24,9 +24,9 @@ msgstr ""
 #, kde-format
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Nainstalovat aktualizace softwaru a restartovat za sekundu"
+msgstr[1] "Nainstalovat aktualizace softwaru a restartovat za %1 sekundy"
+msgstr[2] "Nainstalovat aktualizace softwaru a restartovat za %1 sekund"
 
 #: contents/logout/Logout.qml:154
 #, kde-format
@@ -48,9 +48,9 @@ msgstr[2] "Odhlášení za %1 sekund"
 #, kde-format
 msgid "Installing software updates and shutting down in 1 second"
 msgid_plural "Installing software updates and shutting down in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Nainstalovat aktualizace softwaru a vypnout za sekundu"
+msgstr[1] "Nainstalovat aktualizace softwaru a vypnout za %1 sekundy"
+msgstr[2] "Nainstalovat aktualizace softwaru a vypnout za %1 sekund"
 
 #: contents/logout/Logout.qml:160
 #, kde-format
@@ -86,29 +86,29 @@ msgstr "Při restartu počítač vstoupí do obrazovky pro nastavení firmwaru."
 #: contents/logout/Logout.qml:203
 #, kde-format
 msgid "When restarted, the computer will enter the boot loader menu."
-msgstr ""
+msgstr "Při restartu počítač vstoupí do nabídky zavaděče systému."
 
 #: contents/logout/Logout.qml:216
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p"
-msgstr ""
+msgstr "&Uspat"
 
 #: contents/logout/Logout.qml:217
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p Now"
-msgstr ""
+msgstr "&Uspat nyní"
 
 #: contents/logout/Logout.qml:226
 #, kde-format
 msgid "&Hibernate"
-msgstr ""
+msgstr "&Hibernovat"
 
 #: contents/logout/Logout.qml:227
 #, kde-format
 msgid "&Hibernate Now"
-msgstr ""
+msgstr "&Hibernovat nyní"
 
 #: contents/logout/Logout.qml:238
 #, kde-format
@@ -124,7 +124,7 @@ msgstr "&Restartovat"
 #: contents/logout/Logout.qml:241 contents/logout/Logout.qml:260
 #, kde-format
 msgid "&Restart Now"
-msgstr ""
+msgstr "&Restartovat nyní"
 
 #: contents/logout/Logout.qml:273
 #, kde-format
@@ -140,22 +140,22 @@ msgstr "Vy&pnout"
 #: contents/logout/Logout.qml:276 contents/logout/Logout.qml:295
 #, kde-format
 msgid "&Shut Down Now"
-msgstr ""
+msgstr "Vy&pnout nyní"
 
 #: contents/logout/Logout.qml:307
 #, kde-format
 msgid "&Log Out"
-msgstr ""
+msgstr "&Odhlásit"
 
 #: contents/logout/Logout.qml:308
 #, kde-format
 msgid "&Log Out Now"
-msgstr ""
+msgstr "&Odhlásit nyní"
 
 #: contents/logout/Logout.qml:318
 #, kde-format
 msgid "&Cancel"
-msgstr "Z&rušit"
+msgstr "&Zrušit"
 
 #: contents/splash/Splash.qml:79
 #, kde-format

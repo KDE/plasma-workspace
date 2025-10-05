@@ -3,14 +3,14 @@
 # Copyright (C) 2003, 2004, 2005, 2008 Free Software Foundation, Inc.
 # Claudiu Costin <claudiuc@kde.org>, 2003, 2004, 2005.
 # Laurenţiu Buzdugan <lbuz@rolix.org>, 2009.
-# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2010, 2011, 2012, 2020, 2021, 2022, 2024.
+# SPDX-FileCopyrightText: 2008, 2009, 2010, 2011, 2012, 2020, 2021, 2022, 2024, 2025 Sergiu Bivol <sergiu@cip.md>
 # Cristian Oneț <onet.cristian@gmail.com>, 2011, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-19 02:39+0000\n"
-"PO-Revision-Date: 2024-06-09 15:09+0100\n"
+"POT-Creation-Date: 2025-10-05 02:29+0000\n"
+"PO-Revision-Date: 2025-10-03 14:44+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -37,16 +37,13 @@ msgid "Clipboard history:"
 msgstr "Istoric clipboard:"
 
 #: configdialog.cpp:91
-#, fuzzy, kde-format
-#| msgctxt "Number of entries"
-#| msgid " entry"
-#| msgid_plural " entries"
+#, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
 msgid_plural "%v entries"
-msgstr[0] " înregistrare"
-msgstr[1] " înregistrări"
-msgstr[2] " de înregistrări"
+msgstr[0] "%v înregistrare"
+msgstr[1] "%v înregistrări"
+msgstr[2] "%v de înregistrări"
 
 #: configdialog.cpp:100
 #, kde-format
@@ -134,6 +131,11 @@ msgid ""
 "excluded window, then it can be shown by using the <shortcut>%1</shortcut> "
 "key shortcut."
 msgstr ""
+"Când evidențiați sau alegeți din istoricul clipboard-ului text ce se "
+"potrivește unui model de acțiune, arată automat meniul contextual cu "
+"acțiunile corespunzătoare. Dacă meniul automat e dezactivat aici sau nu e "
+"arătat pentru o fereastră exclusă, atunci acesta poate fi arătat cu "
+"scurtătura de taste <shortcut>%1</shortcut>."
 
 #: configdialog.cpp:283
 #, kde-format
@@ -141,16 +143,13 @@ msgid "Exclude Windows..."
 msgstr "Exclude ferestre…"
 
 #: configdialog.cpp:297
-#, fuzzy, kde-format
-#| msgctxt "Unit of time"
-#| msgid " second"
-#| msgid_plural " seconds"
+#, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
 msgid_plural "%v seconds"
-msgstr[0] " secundă"
-msgstr[1] " secunde"
-msgstr[2] " de secunde"
+msgstr[0] "%v secundă"
+msgstr[1] "%v secunde"
+msgstr[2] "%v de secunde"
 
 #: configdialog.cpp:298
 #, kde-format
@@ -287,6 +286,12 @@ msgid ""
 "particular application, then add it to this list. <link>How to find the name "
 "to enter</link>."
 msgstr ""
+"Meniul contextual cu acțiuni nu va fi arătat automat pentru aceste ferestre, "
+"chiar dacă e activ. Aceasta se poate întâmpla, de exemplu, când un navigator "
+"web ar evidenția un URL în bara de adrese la tastare, astfel încât meniul ar "
+"fi arătat la fiecare apăsare de tastă.<nl/><nl/>Dacă meniul cu acțiuni apare "
+"pe neașteptate în timpul folosirii unei aplicații, atunci adăugați-o la "
+"această listă. <link>Cum să găsiți denumirea de introdus</link>."
 
 #: configdialog.cpp:714
 #, kde-kuit-format
@@ -298,107 +303,110 @@ msgid ""
 "icode><nl/><nl/>and click on the window that you want to exclude. The first "
 "name that it displays after the equal sign is the one that you need to enter."
 msgstr ""
+"Aici trebuie introdusă denumirea WM_CLASS a ferestrei de exclus. Pentru a "
+"găsi denumirea WM_CLASS a unei ferestre, introduceți în altă fereastră de "
+"terminal comanda:<nl/><nl/>&nbsp;&nbsp;<icode>xprop | grep WM_CLASS</"
+"icode><nl/><nl/>și apăsați pe fereastra de exclus. Prima denumire afișată "
+"după semnul egal e ceea ce trebuie să introduceți."
 
 #: declarative/qml/BarcodePage.qml:32
 #, kde-format
 msgid "QR Code"
-msgstr ""
+msgstr "Cod QR"
 
 #: declarative/qml/BarcodePage.qml:33
 #, kde-format
 msgid "Data Matrix"
-msgstr ""
+msgstr "Data Matrix"
 
 #: declarative/qml/BarcodePage.qml:34
 #, kde-format
 msgctxt "Aztec barcode"
 msgid "Aztec"
-msgstr ""
+msgstr "Aztec"
 
 #: declarative/qml/BarcodePage.qml:35
 #, kde-format
 msgid "Code 39"
-msgstr ""
+msgstr "Code 39"
 
 #: declarative/qml/BarcodePage.qml:36
 #, kde-format
 msgid "Code 93"
-msgstr ""
+msgstr "Code 93"
 
 #: declarative/qml/BarcodePage.qml:37
 #, kde-format
 msgid "Code 128"
-msgstr ""
+msgstr "Code 128"
 
 #: declarative/qml/BarcodePage.qml:53
-#, fuzzy, kde-format
-#| msgid "Add to Clipboard"
+#, kde-format
 msgid "Return to Clipboard"
-msgstr "Adaugă la clipboard"
+msgstr "Înapoi la clipboard"
 
 #: declarative/qml/BarcodePage.qml:89
 #, kde-format
 msgctxt "@action:button Copy to clipboard"
 msgid "Copy"
-msgstr ""
+msgstr "Copiază"
 
 #: declarative/qml/BarcodePage.qml:95
 #, kde-format
 msgctxt "@info:status"
 msgid "An image of the QR code has been copied to clipboard"
-msgstr ""
+msgstr "O imagine cu codul QR a fost copiată în clipboard"
 
 #: declarative/qml/BarcodePage.qml:101
-#, fuzzy, kde-format
-#| msgid "Append to clipboard"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Copy QR code image to clipboard"
-msgstr "Adaugă în clipboard la final"
+msgstr "Copiază imaginea cu cod QR în clipboard"
 
 #: declarative/qml/BarcodePage.qml:112
 #, kde-format
 msgid "Change the QR code type"
-msgstr ""
+msgstr "Schimbă tipul codului QR"
 
 #: declarative/qml/BarcodePage.qml:197
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr ""
+"Nu există suficient spațiu pentru a afișa codul QR. Încercați să "
+"redimensionați această miniaplicație."
 
 #: declarative/qml/BarcodePage.qml:197
 #, kde-format
 msgid "Creating QR code failed"
-msgstr ""
+msgstr "Crearea codului QR a eșuat"
 
 #: declarative/qml/ClipboardItemDelegate.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
-msgstr ""
+msgstr "Restrânge"
 
 #: declarative/qml/ClipboardItemDelegate.qml:203
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
-msgstr ""
+msgstr "Desfășoară"
 
 #: declarative/qml/ClipboardMenu.qml:269
-#, fuzzy, kde-format
-#| msgid "Clipboard history"
+#, kde-format
 msgid "Clear History"
-msgstr "Istoric clipboard"
+msgstr "Curăță istoricul"
 
 #: declarative/qml/ClipboardMenu.qml:324
-#, fuzzy, kde-format
-#| msgid "Clipboard history"
+#, kde-format
 msgid "All History"
-msgstr "Istoric clipboard"
+msgstr "Tot istoricul"
 
 #: declarative/qml/ClipboardMenu.qml:329
 #, kde-format
 msgid "Starred Only"
-msgstr ""
+msgstr "Doar cu stea"
 
 #: declarative/qml/ClipboardMenu.qml:436
 #, kde-format
@@ -411,67 +419,59 @@ msgid "Clipboard is empty"
 msgstr "Clipboard-ul e gol"
 
 #: declarative/qml/DelegateToolButtons.qml:37
-#, fuzzy, kde-format
-#| msgid "<new action>"
+#, kde-format
 msgid "Invoke action"
-msgstr "<acțiune nouă>"
+msgstr "Invocă acțiunea"
 
 #: declarative/qml/DelegateToolButtons.qml:42
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "&Show Barcode…"
+#, kde-format
 msgid "Show QR code"
-msgstr "Arată cod de &bare…"
+msgstr "Arată cod QR"
 
 #: declarative/qml/DelegateToolButtons.qml:47
-#, fuzzy, kde-format
-#| msgid "Edit Contents"
+#, kde-format
 msgid "Edit contents"
-msgstr "Editare conținut"
+msgstr "Modifică conținutul"
 
 #: declarative/qml/DelegateToolButtons.qml:53
-#, fuzzy, kde-format
-#| msgid "For an item chosen from history"
+#, kde-format
 msgid "Remove from history"
-msgstr "Pentru un element ales din istoric"
+msgstr "Elimină din istoric"
 
 #: declarative/qml/DelegateToolButtons.qml:58
-#, fuzzy, kde-format
-#| msgid "For an item chosen from history"
+#, kde-format
 msgid "Remove Star"
-msgstr "Pentru un element ales din istoric"
+msgstr "Elimină steaua"
 
 #: declarative/qml/DelegateToolButtons.qml:58
-#, fuzzy, kde-format
-#| msgid "Start"
+#, kde-format
 msgid "Star"
-msgstr "Pornește"
+msgstr "Pune stea"
 
 #: declarative/qml/EditPage.qml:64
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Text edit area"
-msgstr ""
+msgstr "Zonă de redactare a textului"
 
 #: declarative/qml/EditPage.qml:82
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
-msgstr ""
+msgstr "Salvează"
 
 #: declarative/qml/EditPage.qml:90
-#, fuzzy, kde-format
-#| msgid "&Cancel"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr "&Renunță"
+msgstr "Renunță"
 
 #: declarative/qml/UrlItemDelegate.qml:97
 #, kde-format
 msgctxt ""
 "Indicator that there are more urls in the clipboard than previews shown"
 msgid "+%1"
-msgstr ""
+msgstr "+%1"
 
 #: editactiondialog.cpp:36 editcommanddialog.cpp:91
 #, kde-format
@@ -666,55 +666,53 @@ msgstr "Reinițializează pictograma la cea implicită pentru comandă"
 msgid "Icon:"
 msgstr "Pictogramă:"
 
-#: historymodel.cpp:278
-#, fuzzy, kde-format
-#| msgid "The clipboard history will store up to this many items."
+#: historymodel.cpp:280
+#, kde-format
 msgid "The clipboard history contains starred items. Clear them too?"
-msgstr "Istoricul clipboard-ului va păstra cel mult atâtea elemente."
+msgstr ""
+"Istoricul clipboard-ului conține elemente cu stea. Le curățați și pe acelea?"
 
-#: historymodel.cpp:279 historymodel.cpp:299
+#: historymodel.cpp:281 historymodel.cpp:301
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Curăță istoricul clipboard-ului"
 
-#: historymodel.cpp:280
+#: historymodel.cpp:282
 #, kde-format
 msgid "Clear Everything"
-msgstr ""
+msgstr "Curăță tot"
 
-#: historymodel.cpp:281
-#, fuzzy, kde-format
-#| msgid "Clipboard Items"
+#: historymodel.cpp:283
+#, kde-format
 msgid "Keep Starred Items"
-msgstr "Elementele clipboard-ului"
+msgstr "Păstrează elementele cu stea"
 
-#: historymodel.cpp:298
+#: historymodel.cpp:300
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Sigur curățați și ștergeți întregul istoric al clipboard-ului?"
 
-#: historymodel.cpp:382
-#, fuzzy, kde-format
-#| msgid "%1x%2 %3bpp"
+#: historymodel.cpp:384
+#, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
-msgstr "%1x%2 %3bpp"
+msgstr "%1x%2"
 
-#: historymodel.cpp:562
+#: historymodel.cpp:564
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
-msgstr ""
+msgstr "Acest element are stea. Sigur doriți să-l eliminați din istoric?"
 
-#: historymodel.cpp:563
+#: historymodel.cpp:565
 #, kde-format
 msgid "Remove Starred Item"
-msgstr ""
+msgstr "Elimină element cu stea"
 
 #: klipper.cpp:91
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
-msgstr "Meniu contextual cu acțiuni automate:"
+msgstr "Meniu contextual cu acțiuni automate"
 
 #: klipper.cpp:109
 #, kde-format
@@ -997,10 +995,9 @@ msgstr ""
 "accepta acest tip MIME în meniul contextual."
 
 #: klipperpopup.cpp:36
-#, fuzzy, kde-format
-#| msgid "Clipboard history"
+#, kde-format
 msgid "Clipboard Popup"
-msgstr "Istoric clipboard"
+msgstr "Meniu contextual pentru clipboard"
 
 #: urlgrabber.cpp:198
 #, kde-format

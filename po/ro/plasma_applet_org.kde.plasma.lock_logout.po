@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Sergiu Bivol <sergiu@cip.md>, 2009, 2012, 2015, 2020, 2021, 2024.
+# SPDX-FileCopyrightText: 2009, 2012, 2015, 2020, 2021, 2024, 2025 Sergiu Bivol <sergiu@cip.md>
 # Cristian Oneț <onet.cristian@gmail.com>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-30 00:43+0000\n"
-"PO-Revision-Date: 2024-02-24 18:28+0000\n"
+"PO-Revision-Date: 2025-10-03 14:08+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: config.qml:13
 #, kde-format
@@ -36,11 +36,10 @@ msgid "Log Out"
 msgstr "Ieșire din sistem"
 
 #: ConfigGeneral.qml:44
-#, fuzzy, kde-format
-#| msgid "Show logout button"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show logout screen"
-msgstr "Arată butonul de ieșire"
+msgstr "Arată ecranul de ieșire"
 
 #: ConfigGeneral.qml:50
 #, kde-format
@@ -119,17 +118,15 @@ msgid "End the session"
 msgstr "Termină sesiunea"
 
 #: data.js:40
-#, fuzzy, kde-format
-#| msgid "Show logout button"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Show logout screen"
-msgstr "Arată butonul de ieșire"
+msgstr "Arată ecranul de ieșire"
 
 #: data.js:41
-#, fuzzy, kde-format
-#| msgid "Turn off the computer"
+#, kde-format
 msgid "Log out, turn off, or restart the computer"
-msgstr "Deconectează calculatorul"
+msgstr "Ieșiți, deconectați sau reporniți calculatorul"
 
 #: data.js:48
 #, kde-format

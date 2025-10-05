@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Sergiu Bivol <sergiu@cip.md>, 2010, 2012, 2013, 2020, 2021, 2022, 2023, 2024.
+# SPDX-FileCopyrightText: 2010, 2012, 2013, 2020, 2021, 2022, 2023, 2024, 2025 Sergiu Bivol <sergiu@cip.md>
 # Cristian Oneț <onet.cristian@gmail.com>, 2011.
 #
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-14 00:44+0000\n"
-"PO-Revision-Date: 2024-02-24 18:30+0000\n"
+"PO-Revision-Date: 2025-10-03 14:26+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: components/ActionContainer.qml:80
 #, kde-format
@@ -231,12 +231,12 @@ msgstr "Trimite"
 #: components/SpeedChart.qml:145
 #, kde-format
 msgid "Speed"
-msgstr ""
+msgstr "Viteză"
 
 #: components/SpeedChart.qml:195
 #, kde-format
 msgid "Average Speed"
-msgstr ""
+msgstr "Viteza medie"
 
 #: components/SpeedChart.qml:253
 #, kde-format
@@ -361,13 +361,13 @@ msgstr "Ecranele sunt oglindite"
 #, kde-format
 msgctxt "Do not disturb because fullscreen app is focused"
 msgid "Fullscreen app is focused"
-msgstr ""
+msgstr "Aplicația pe tot ecranul e focalizată"
 
 #: FullRepresentation.qml:510 FullRepresentation.qml:516
 #, kde-format
 msgctxt "@action:button"
 msgid "View"
-msgstr ""
+msgstr "Vezi"
 
 #: FullRepresentation.qml:597
 #, kde-format
@@ -449,14 +449,12 @@ msgstr[1] "%1 notificări necitite"
 msgstr[2] "%1 de notificări necitite"
 
 #: main.qml:88
-#, fuzzy, kde-format
-#| msgid "%1 unread notification"
-#| msgid_plural "%1 unread notifications"
+#, kde-format
 msgid "%1 active notification"
 msgid_plural "%1 active notifications"
-msgstr[0] "%1 notificare necitită"
-msgstr[1] "%1 notificări necitite"
-msgstr[2] "%1 de notificări necitite"
+msgstr[0] "%1 notificare activă"
+msgstr[1] "%1 notificări active"
+msgstr[2] "%1 de notificări active"
 
 #: main.qml:101
 #, kde-format

@@ -1,12 +1,12 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the plasma-workspace package.
-# Sergiu Bivol <sergiu@cip.md>, 2015, 2020, 2021, 2022, 2023, 2024.
+# SPDX-FileCopyrightText: 2015, 2020, 2021, 2022, 2023, 2024, 2025 Sergiu Bivol <sergiu@cip.md>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-02 07:07+0000\n"
-"PO-Revision-Date: 2024-06-08 17:16+0100\n"
+"PO-Revision-Date: 2025-10-05 00:20+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: CalendarView.qml:148
 #, kde-format
@@ -147,57 +147,49 @@ msgid "Offset from UTC time"
 msgstr "Diferență față de ora UTC"
 
 #: configAppearance.qml:141
-#, fuzzy, kde-format
-#| msgid "Switch Systemwide Time Zone…"
+#, kde-format
 msgctxt "@action:button opens kcm"
 msgid "Switch Time Zone…"
-msgstr "Schimbă fusul orar al sistemului…"
+msgstr "Schimbă fusul orar…"
 
 #: configAppearance.qml:153
-#, fuzzy, kde-format
-#| msgid "Time display:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Time display:"
 msgstr "Afișare oră:"
 
 #: configAppearance.qml:160
-#, fuzzy, kde-format
-#| msgid "12-Hour"
+#, kde-format
 msgctxt "@item:inlistbox time display option"
 msgid "12-Hour"
 msgstr "12 ore"
 
 #: configAppearance.qml:161
-#, fuzzy, kde-format
-#| msgid "Use Region Defaults"
+#, kde-format
 msgctxt "@item:inlistbox time display option"
 msgid "Use region defaults"
 msgstr "Folosește valoarea implicită a regiunii"
 
 #: configAppearance.qml:162
-#, fuzzy, kde-format
-#| msgid "24-Hour"
+#, kde-format
 msgctxt "@item:inlistbox time display option"
 msgid "24-Hour"
 msgstr "24 de ore"
 
 #: configAppearance.qml:171
-#, fuzzy, kde-format
-#| msgid "Change Regional Settings…"
+#, kde-format
 msgctxt "@action:button opens kcm"
 msgid "Change Regional Settings…"
 msgstr "Modifică configurări regionale…"
 
 #: configAppearance.qml:182
-#, fuzzy, kde-format
-#| msgid "Date format:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Date format:"
-msgstr "Format dată:"
+msgstr "Formatul datei:"
 
 #: configAppearance.qml:192
-#, fuzzy, kde-format
-#| msgid "Long Date"
+#, kde-format
 msgctxt ""
 "@item:inlistbox date display option, includes e.g. day of week and month as "
 "word"
@@ -205,23 +197,19 @@ msgid "Long date"
 msgstr "Dată lungă"
 
 #: configAppearance.qml:199
-#, fuzzy, kde-format
-#| msgid "Short Date"
+#, kde-format
 msgctxt "@item:inlistbox date display option, e.g. all numeric"
 msgid "Short date"
 msgstr "Dată scurtă"
 
 #: configAppearance.qml:206
-#, fuzzy, kde-format
-#| msgid "ISO Date"
+#, kde-format
 msgctxt "@item:inlistbox date display option, yyyy-mm-dd"
 msgid "ISO date"
 msgstr "Dată ISO"
 
 #: configAppearance.qml:213
-#, fuzzy, kde-format
-#| msgctxt "custom date format"
-#| msgid "Custom"
+#, kde-format
 msgctxt "@item:inlistbox custom date format"
 msgid "Custom"
 msgstr "Personalizat"
@@ -278,7 +266,7 @@ msgstr "%1pt %2"
 #, kde-format
 msgctxt "@info"
 msgid "Note: size may be reduced if the panel is not thick enough."
-msgstr ""
+msgstr "Notă: dimensiunea poate fi redusă dacă panoul nu e suficient de lung."
 
 #: configAppearance.qml:341
 #, kde-format
@@ -287,58 +275,49 @@ msgid "Choose a Font"
 msgstr "Alege un font"
 
 #: configCalendar.qml:50
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@option:check formdata label"
 msgid "General:"
 msgstr "Generale:"
 
 #: configCalendar.qml:51
-#, fuzzy, kde-format
-#| msgid "Show week numbers"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show week numbers"
-msgstr "Arată numărul săptămânii"
+msgstr "Arată numerele săptămânilor"
 
 #: configCalendar.qml:58
-#, fuzzy, kde-format
-#| msgid "First day of week:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "First day of week:"
 msgstr "Prima zi a săptămânii:"
 
 #: configCalendar.qml:64
-#, fuzzy, kde-format
-#| msgid "Use Region Defaults"
+#, kde-format
 msgctxt "@item:inlistbox first day of week option"
 msgid "Use region defaults"
 msgstr "Folosește valoarea implicită a regiunii"
 
 #: configCalendar.qml:82
-#, fuzzy, kde-format
-#| msgid "Available Plugins:"
+#, kde-format
 msgctxt "@title:column"
 msgid "Available Add-Ons"
-msgstr "Extensii disponibile:"
+msgstr "Extensii disponibile"
 
 #: configTimeZones.qml:70
-#, fuzzy, kde-format
-#| msgctxt "This is a city associated with particular time zone"
-#| msgid "Cancun"
+#, kde-format
 msgid "Cancel"
-msgstr "Cancun"
+msgstr "Renunță"
 
 #: configTimeZones.qml:77
-#, fuzzy, kde-format
-#| msgid "Add More Time Zones"
+#, kde-format
 msgid "Add Selected Time Zone"
-msgstr "Adaugă mai multe fuse orare"
+msgstr "Adaugă fusele orare alese"
 
 #: configTimeZones.qml:94
-#, fuzzy, kde-format
-#| msgid "Add Time Zones…"
+#, kde-format
 msgid "Add Time Zone…"
-msgstr "Adaugă fuse orare…"
+msgstr "Adaugă fus orar…"
 
 #: configTimeZones.qml:153
 #, kde-format
@@ -390,6 +369,9 @@ msgid ""
 "Tip: Add your home time zone to this list to see the time there even when "
 "you're traveling. It will not be shown twice while at home."
 msgstr ""
+"Sfat: adăugați fusul orar de acasă în această listă pentru a vedea ora de "
+"acolo chiar și când călătoriți. Aceasta nu va fi afișată de două ori când "
+"sunteți acasă."
 
 #: configTimeZones.qml:245
 #, kde-format
@@ -406,10 +388,9 @@ msgstr ""
 "călătoriți, schimbați fusul orar al sistemului."
 
 #: configTimeZones.qml:264
-#, fuzzy, kde-format
-#| msgid "Time Zones"
+#, kde-format
 msgid "Choose Time Zone"
-msgstr "Fuse orare"
+msgstr "Alege fusul orar"
 
 #: main.qml:217
 #, kde-format
@@ -422,6 +403,8 @@ msgctxt "@label Shown in place of digital clock when no timezone is set"
 msgid ""
 "Time zone is not set; click here to open Date & Time settings and set one"
 msgstr ""
+"Fusul orar nu e stabilit; apăsați aici pentru a deschide configurările de "
+"dată și oră ca să alegeți unul"
 
 #: plugin/clipboardmenu.cpp:110
 #, kde-format
@@ -458,12 +441,11 @@ msgid "Today is %1"
 msgstr "Azi e %1"
 
 #: Tooltip.qml:65
-#, fuzzy, kde-format
-#| msgid "Time zone city"
+#, kde-format
 msgctxt ""
 "@label main text shown in digital clock's tooltip when timezone is missing"
 msgid "Time zone is not set"
-msgstr "Orașul fusului orar"
+msgstr "Fusul orar nu e stabilit"
 
 #: Tooltip.qml:86
 #, kde-format
@@ -471,6 +453,8 @@ msgctxt ""
 "@label sub text shown in digital clock's tooltip when timezone is missing"
 msgid "Click the clock icon to open Date & Time settings and set a time zone."
 msgstr ""
+"Apăsați pictograma ceasului pentru a deschide configurările de dată și oră "
+"ca să alegeți un fus orar."
 
 #: Tooltip.qml:131
 #, kde-format
