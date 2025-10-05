@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-01 00:48+0000\n"
+"POT-Creation-Date: 2025-10-05 00:41+0000\n"
 "PO-Revision-Date: 2025-04-07 00:31+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -343,6 +343,12 @@ msgstr "패널 설정 숨기기"
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
 msgstr "패널 설정 표시"
+
+#: qml/OsdItem.qml:34
+#, kde-format
+msgctxt "Percentage value"
+msgid "%1%"
+msgstr ""
 
 #: shellcontainmentconfig.cpp:106
 #, kde-format

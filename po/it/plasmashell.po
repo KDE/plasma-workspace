@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-01 00:48+0000\n"
+"POT-Creation-Date: 2025-10-05 00:41+0000\n"
 "PO-Revision-Date: 2025-01-24 10:56+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -345,6 +345,12 @@ msgstr "Nascondi la configurazione del pannello"
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
 msgstr "Mostra la configurazione del pannello"
+
+#: qml/OsdItem.qml:34
+#, kde-format
+msgctxt "Percentage value"
+msgid "%1%"
+msgstr ""
 
 #: shellcontainmentconfig.cpp:106
 #, kde-format

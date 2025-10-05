@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-01 00:48+0000\n"
+"POT-Creation-Date: 2025-10-05 00:41+0000\n"
 "PO-Revision-Date: 2025-01-27 11:22+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -361,6 +361,12 @@ msgstr "Скрыть окно настройки панели"
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
 msgstr "Открыть окно настройки панели"
+
+#: qml/OsdItem.qml:34
+#, kde-format
+msgctxt "Percentage value"
+msgid "%1%"
+msgstr ""
 
 #: shellcontainmentconfig.cpp:106
 #, kde-format
