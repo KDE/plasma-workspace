@@ -420,7 +420,7 @@ void ImageBackend::nextSlide()
     QString next = m_slideFilterModel->index(m_currentSlide, 0).data(ImageRoles::PackageNameRole).toString();
     // And  avoid showing the same picture twice
     if (previousSlide == rowCount - 1 && previousPath == next && rowCount > 1) {
-        m_currentSlide += 1;
+        m_slideFilterModel->swapFirstWithRandom();
         next = m_slideFilterModel->index(m_currentSlide, 0).data(ImageRoles::PackageNameRole).toString();
     }
     if (next.isEmpty()) {

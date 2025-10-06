@@ -220,6 +220,26 @@ void SlideFilterModel::invalidateFilter()
     QSortFilterProxyModel::invalidateFilter();
 }
 
+void SlideFilterModel::swapFirstWithRandom()
+{
+    const int size = rowCount();
+    if (size < 2)
+        return;
+
+    // [start, end)
+    const int pos = QRandomGenerator::global()->bounded(1, size);
+    // get the randomOrder index of the sourceModel index of the proxy index
+    const QModelIndex srcIdxA = mapToSource(index(0, 0));
+    const QModelIndex srcIdxB = mapToSource(index(pos, 0));
+    const int rndIdxA = m_randomOrder.indexOf(srcIdxA.row());
+    const int rndIdxB = m_randomOrder.indexOf(srcIdxB.row());
+    // and finally swap
+    m_randomOrder.swapItemsAt(rndIdxA, rndIdxB);
+
+    QSortFilterProxyModel::invalidate();
+    sort(0);
+}
+
 int SlideFilterModel::indexOf(const QString &path)
 {
     if (!sourceModel())

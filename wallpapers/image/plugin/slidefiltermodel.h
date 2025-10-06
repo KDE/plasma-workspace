@@ -31,6 +31,7 @@ public:
     void setSourceModel(QAbstractItemModel *sourceModel) override;
     void invalidate();
     void invalidateFilter();
+    void swapFirstWithRandom();
 
     Q_INVOKABLE int indexOf(const QString &path);
     Q_INVOKABLE void openContainingFolder(int rowIndex);
