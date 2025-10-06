@@ -24,7 +24,7 @@ import org.kde.plasma.configuration 2.0
 Kirigami.ScrollablePage {
     id: appearanceRoot
 
-    title: i18ndc("plasma_shell_org.kde.plasma.desktop", "@title:window", "Wallpaper")
+    title: i18nc("@title:window", "Wallpaper")
 
     signal configurationChanged
 
@@ -38,7 +38,7 @@ Kirigami.ScrollablePage {
     actions: [
         Kirigami.Action {
             id: allScreensAction
-            text: i18ndc("plasma_shell_org.kde.plasma.desktop", "@option:check Set the wallpaper for all screens", "Set for all screens")
+            text: i18nc("@option:check Set the wallpaper for all screens", "Set for all screens")
             visible: kcm.screens.length > 1
             checkable: true
             checked: kcm.allScreens
@@ -86,7 +86,7 @@ Kirigami.ScrollablePage {
 
             RowLayout {
                 Layout.fillWidth: true
-                Kirigami.FormData.label: i18nd("plasma_shell_org.kde.plasma.desktop", "Wallpaper type:")
+                Kirigami.FormData.label: i18nc("@label:listbox", "Wallpaper type:")
                 Kirigami.FormData.buddyFor: wallpaperComboBox
 
                 QQC2.ComboBox {
@@ -107,7 +107,7 @@ Kirigami.ScrollablePage {
                 }
                 NewStuff.Button {
                     configFile: "wallpaperplugin.knsrc"
-                    text: i18nd("plasma_shell_org.kde.plasma.desktop", "Get New Plugins…")
+                    text: i18nc("@action:button", "Get New Plugins…")
                     visibleWhenDisabled: true // don't hide on disabled
                     Layout.preferredHeight: wallpaperComboBox.height
                 }
