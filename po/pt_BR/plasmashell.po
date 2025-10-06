@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-27 02:39+0000\n"
+"POT-Creation-Date: 2025-10-06 02:45+0000\n"
 "PO-Revision-Date: 2025-02-08 10:38-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -349,6 +349,12 @@ msgstr "Ocultar configuração do painel"
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
 msgstr "Mostrar configuração do painel"
+
+#: qml/OsdItem.qml:34
+#, kde-format
+msgctxt "Percentage value"
+msgid "%1%"
+msgstr ""
 
 #: shellcontainmentconfig.cpp:106
 #, kde-format

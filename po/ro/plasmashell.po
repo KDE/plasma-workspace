@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-27 02:39+0000\n"
+"POT-Creation-Date: 2025-10-06 02:45+0000\n"
 "PO-Revision-Date: 2025-10-01 10:18+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -345,6 +345,12 @@ msgstr "Ascunde configurările panoului"
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
 msgstr "Arată configurările panoului"
+
+#: qml/OsdItem.qml:34
+#, kde-format
+msgctxt "Percentage value"
+msgid "%1%"
+msgstr ""
 
 #: shellcontainmentconfig.cpp:106
 #, kde-format

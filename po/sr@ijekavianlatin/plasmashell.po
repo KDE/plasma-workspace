@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-27 02:39+0000\n"
+"POT-Creation-Date: 2025-10-06 02:45+0000\n"
 "PO-Revision-Date: 2016-12-18 21:56+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -352,6 +352,12 @@ msgstr ""
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
+msgstr ""
+
+#: qml/OsdItem.qml:34
+#, kde-format
+msgctxt "Percentage value"
+msgid "%1%"
 msgstr ""
 
 #: shellcontainmentconfig.cpp:106

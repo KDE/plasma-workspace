@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-27 02:39+0000\n"
+"POT-Creation-Date: 2025-10-06 02:45+0000\n"
 "PO-Revision-Date: 2025-01-23 11:05+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -348,6 +348,12 @@ msgstr "Приховати налаштування панелі"
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
 msgstr "Показати налаштування панелі"
+
+#: qml/OsdItem.qml:34
+#, kde-format
+msgctxt "Percentage value"
+msgid "%1%"
+msgstr ""
 
 #: shellcontainmentconfig.cpp:106
 #, kde-format
