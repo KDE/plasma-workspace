@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-05 00:41+0000\n"
+"POT-Creation-Date: 2025-10-07 00:45+0000\n"
 "PO-Revision-Date: 2025-03-04 14:42+0700\n"
 "Last-Translator: Pongsakorn S. <kde@xerusion.me>\n"
 "Language-Team: Thai\n"
@@ -202,79 +202,79 @@ msgstr ""
 "หรือซอฟต์แวร์สำรองได้อย่างถูกต้อง\n"
 "โปรดตรวจสอบว่าไดรเวอร์กราฟิกของคุณได้รับการตั้งค่าอย่างถูกต้อง"
 
-#: osd.cpp:62
+#: osd.cpp:65
 #, kde-format
 msgctxt "Brightness OSD: display name and brightness percentage"
 msgid "%1: %2%"
 msgstr "%1: %2%"
 
-#: osd.cpp:88
+#: osd.cpp:93
 #, kde-format
 msgctxt "OSD informing that the system is muted, keep short"
 msgid "Audio Muted"
 msgstr "ปิดเสียง"
 
-#: osd.cpp:110
+#: osd.cpp:116
 #, kde-format
 msgctxt "OSD informing that the microphone is muted, keep short"
 msgid "Microphone Muted"
 msgstr "ไมโครโฟนปิดเสียง"
 
-#: osd.cpp:126
+#: osd.cpp:132
 #, kde-format
 msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
 msgid "%1 Muted"
 msgstr "%1 ถูกปิดเสียง"
 
-#: osd.cpp:148
+#: osd.cpp:154
 #, kde-format
 msgctxt "touchpad was enabled, keep short"
 msgid "Touchpad On"
 msgstr "ทัชแพดเปิด"
 
-#: osd.cpp:150
+#: osd.cpp:156
 #, kde-format
 msgctxt "touchpad was disabled, keep short"
 msgid "Touchpad Off"
 msgstr "ทัชแพดปิด"
 
-#: osd.cpp:157
+#: osd.cpp:163
 #, kde-format
 msgctxt "wireless lan was enabled, keep short"
 msgid "Wifi On"
 msgstr "ไวไฟเปิด"
 
-#: osd.cpp:159
+#: osd.cpp:165
 #, kde-format
 msgctxt "wireless lan was disabled, keep short"
 msgid "Wifi Off"
 msgstr "ไวไฟปิด"
 
-#: osd.cpp:166
+#: osd.cpp:172
 #, kde-format
 msgctxt "Bluetooth was enabled, keep short"
 msgid "Bluetooth On"
 msgstr "บลูทูธเปิด"
 
-#: osd.cpp:168
+#: osd.cpp:174
 #, kde-format
 msgctxt "Bluetooth was disabled, keep short"
 msgid "Bluetooth Off"
 msgstr "บลูทูธปิด"
 
-#: osd.cpp:175
+#: osd.cpp:181
 #, kde-format
 msgctxt "mobile internet was enabled, keep short"
 msgid "Mobile Internet On"
 msgstr "เปิดอินเทอร์เน็ตบนมือถือ"
 
-#: osd.cpp:177
+#: osd.cpp:183
 #, kde-format
 msgctxt "mobile internet was disabled, keep short"
 msgid "Mobile Internet Off"
 msgstr "ปิดอินเทอร์เน็ตบนมือถือ"
 
-#: osd.cpp:185
+#: osd.cpp:191
 #, kde-format
 msgctxt ""
 "on screen keyboard was enabled because physical keyboard got unplugged, keep "
@@ -282,7 +282,7 @@ msgctxt ""
 msgid "On-Screen Keyboard Activated"
 msgstr "เปิดใช้งานแป้นพิมพ์บนหน้าจอ"
 
-#: osd.cpp:188
+#: osd.cpp:194
 #, kde-format
 msgctxt ""
 "on screen keyboard was disabled because physical keyboard was plugged in, "
@@ -290,31 +290,31 @@ msgctxt ""
 msgid "On-Screen Keyboard Deactivated"
 msgstr "ปิดใช้งานแป้นพิมพ์บนหน้าจอ"
 
-#: osd.cpp:195
+#: osd.cpp:201
 #, kde-format
 msgctxt "power management was inhibited, keep short"
 msgid "Sleep and Screen Locking Blocked"
 msgstr "การนอนหลับและการล็อกหน้าจอถูกปิดกั้น"
 
-#: osd.cpp:197
+#: osd.cpp:203
 #, kde-format
 msgctxt "power management was uninhibited, keep short"
 msgid "Sleep and Screen Locking Unblocked"
 msgstr "ไม่ปิดกั้นการนอนหลับและการล็อกหน้าจอ"
 
-#: osd.cpp:207
+#: osd.cpp:213
 #, kde-format
 msgctxt "Power profile was changed to power save mode, keep short"
 msgid "Power Save Mode"
 msgstr "โหมดประหยัดพลังงาน"
 
-#: osd.cpp:210
+#: osd.cpp:216
 #, kde-format
 msgctxt "Power profile was changed to balanced mode, keep short"
 msgid "Balanced Power Mode"
 msgstr "โหมดสมดุลพลังงาน"
 
-#: osd.cpp:213
+#: osd.cpp:219
 #, kde-format
 msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"

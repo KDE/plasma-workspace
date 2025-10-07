@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-05 00:41+0000\n"
+"POT-Creation-Date: 2025-10-07 00:45+0000\n"
 "PO-Revision-Date: 2025-10-05 22:09+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -207,79 +207,79 @@ msgstr ""
 "ar programinės įrangos surogatą.\n"
 "Patikrinkite ar jūsų grafikos tvarkyklės yra nustatytos teisingai."
 
-#: osd.cpp:62
+#: osd.cpp:65
 #, kde-format
 msgctxt "Brightness OSD: display name and brightness percentage"
 msgid "%1: %2%"
 msgstr "%1: %2%"
 
-#: osd.cpp:88
+#: osd.cpp:93
 #, kde-format
 msgctxt "OSD informing that the system is muted, keep short"
 msgid "Audio Muted"
 msgstr "Garsas nutildytas"
 
-#: osd.cpp:110
+#: osd.cpp:116
 #, kde-format
 msgctxt "OSD informing that the microphone is muted, keep short"
 msgid "Microphone Muted"
 msgstr "Mikrofonas nutildytas"
 
-#: osd.cpp:126
+#: osd.cpp:132
 #, kde-format
 msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
 msgid "%1 Muted"
 msgstr "%1 nutildyta"
 
-#: osd.cpp:148
+#: osd.cpp:154
 #, kde-format
 msgctxt "touchpad was enabled, keep short"
 msgid "Touchpad On"
 msgstr "Jutiklinis kilimėlis įjungtas"
 
-#: osd.cpp:150
+#: osd.cpp:156
 #, kde-format
 msgctxt "touchpad was disabled, keep short"
 msgid "Touchpad Off"
 msgstr "Jutiklinis kilimėlis išjungtas"
 
-#: osd.cpp:157
+#: osd.cpp:163
 #, kde-format
 msgctxt "wireless lan was enabled, keep short"
 msgid "Wifi On"
 msgstr "Belaidis internetas įjungtas"
 
-#: osd.cpp:159
+#: osd.cpp:165
 #, kde-format
 msgctxt "wireless lan was disabled, keep short"
 msgid "Wifi Off"
 msgstr "Belaidis internetas išjungtas"
 
-#: osd.cpp:166
+#: osd.cpp:172
 #, kde-format
 msgctxt "Bluetooth was enabled, keep short"
 msgid "Bluetooth On"
 msgstr "Bluetooth įjungtas"
 
-#: osd.cpp:168
+#: osd.cpp:174
 #, kde-format
 msgctxt "Bluetooth was disabled, keep short"
 msgid "Bluetooth Off"
 msgstr "Bluetooth išjungtas"
 
-#: osd.cpp:175
+#: osd.cpp:181
 #, kde-format
 msgctxt "mobile internet was enabled, keep short"
 msgid "Mobile Internet On"
 msgstr "Mobilusis internetas įjungtas"
 
-#: osd.cpp:177
+#: osd.cpp:183
 #, kde-format
 msgctxt "mobile internet was disabled, keep short"
 msgid "Mobile Internet Off"
 msgstr "Mobilusis internetas išjungtas"
 
-#: osd.cpp:185
+#: osd.cpp:191
 #, kde-format
 msgctxt ""
 "on screen keyboard was enabled because physical keyboard got unplugged, keep "
@@ -287,7 +287,7 @@ msgctxt ""
 msgid "On-Screen Keyboard Activated"
 msgstr "Ekraninė klaviatūra įjungta"
 
-#: osd.cpp:188
+#: osd.cpp:194
 #, kde-format
 msgctxt ""
 "on screen keyboard was disabled because physical keyboard was plugged in, "
@@ -295,31 +295,31 @@ msgctxt ""
 msgid "On-Screen Keyboard Deactivated"
 msgstr "Ekraninė klaviatūra išjungta"
 
-#: osd.cpp:195
+#: osd.cpp:201
 #, kde-format
 msgctxt "power management was inhibited, keep short"
 msgid "Sleep and Screen Locking Blocked"
 msgstr "Pristabdymas ir ekrano užrakinimas užblokuoti"
 
-#: osd.cpp:197
+#: osd.cpp:203
 #, kde-format
 msgctxt "power management was uninhibited, keep short"
 msgid "Sleep and Screen Locking Unblocked"
 msgstr "Pristabdymas ir ekrano užrakinimas atblokuoti"
 
-#: osd.cpp:207
+#: osd.cpp:213
 #, kde-format
 msgctxt "Power profile was changed to power save mode, keep short"
 msgid "Power Save Mode"
 msgstr "Energijos taupymo veiksena"
 
-#: osd.cpp:210
+#: osd.cpp:216
 #, kde-format
 msgctxt "Power profile was changed to balanced mode, keep short"
 msgid "Balanced Power Mode"
 msgstr "Subalansuota energijos veiksena"
 
-#: osd.cpp:213
+#: osd.cpp:219
 #, kde-format
 msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"

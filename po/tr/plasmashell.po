@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-05 00:41+0000\n"
-"PO-Revision-Date: 2025-10-05 19:17+0300\n"
+"POT-Creation-Date: 2025-10-07 00:45+0000\n"
+"PO-Revision-Date: 2025-10-06 09:54+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -206,79 +206,79 @@ msgstr ""
 "Plasma, OpenGL 2’yi doğru kullanamadığı için başlatılamadı.\n"
 "Lütfen grafik sürücülerinizin doğru şekilde kurulduğundan emin olun."
 
-#: osd.cpp:62
+#: osd.cpp:65
 #, kde-format
 msgctxt "Brightness OSD: display name and brightness percentage"
 msgid "%1: %2%"
 msgstr "%1: %​%2"
 
-#: osd.cpp:88
+#: osd.cpp:93
 #, kde-format
 msgctxt "OSD informing that the system is muted, keep short"
 msgid "Audio Muted"
 msgstr "Ses Kapalı"
 
-#: osd.cpp:110
+#: osd.cpp:116
 #, kde-format
 msgctxt "OSD informing that the microphone is muted, keep short"
 msgid "Microphone Muted"
 msgstr "Mikrofon Kapalı"
 
-#: osd.cpp:126
+#: osd.cpp:132
 #, kde-format
 msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
 msgid "%1 Muted"
 msgstr "%1 Sessiz"
 
-#: osd.cpp:148
+#: osd.cpp:154
 #, kde-format
 msgctxt "touchpad was enabled, keep short"
 msgid "Touchpad On"
 msgstr "Dokunmatik Yüzey Açık"
 
-#: osd.cpp:150
+#: osd.cpp:156
 #, kde-format
 msgctxt "touchpad was disabled, keep short"
 msgid "Touchpad Off"
 msgstr "Dokunmatik Yüzey Kapalı"
 
-#: osd.cpp:157
+#: osd.cpp:163
 #, kde-format
 msgctxt "wireless lan was enabled, keep short"
 msgid "Wifi On"
 msgstr "Wi-Fi Açık"
 
-#: osd.cpp:159
+#: osd.cpp:165
 #, kde-format
 msgctxt "wireless lan was disabled, keep short"
 msgid "Wifi Off"
 msgstr "Wi-Fi Kapalı"
 
-#: osd.cpp:166
+#: osd.cpp:172
 #, kde-format
 msgctxt "Bluetooth was enabled, keep short"
 msgid "Bluetooth On"
 msgstr "Bluetooth Açık"
 
-#: osd.cpp:168
+#: osd.cpp:174
 #, kde-format
 msgctxt "Bluetooth was disabled, keep short"
 msgid "Bluetooth Off"
 msgstr "Bluetooth Kapalı"
 
-#: osd.cpp:175
+#: osd.cpp:181
 #, kde-format
 msgctxt "mobile internet was enabled, keep short"
 msgid "Mobile Internet On"
 msgstr "Taşınabilir İnternet Açık"
 
-#: osd.cpp:177
+#: osd.cpp:183
 #, kde-format
 msgctxt "mobile internet was disabled, keep short"
 msgid "Mobile Internet Off"
 msgstr "Taşınabilir İnternet Kapalı"
 
-#: osd.cpp:185
+#: osd.cpp:191
 #, kde-format
 msgctxt ""
 "on screen keyboard was enabled because physical keyboard got unplugged, keep "
@@ -286,7 +286,7 @@ msgctxt ""
 msgid "On-Screen Keyboard Activated"
 msgstr "Ekran Klavyesi Etkin"
 
-#: osd.cpp:188
+#: osd.cpp:194
 #, kde-format
 msgctxt ""
 "on screen keyboard was disabled because physical keyboard was plugged in, "
@@ -294,31 +294,31 @@ msgctxt ""
 msgid "On-Screen Keyboard Deactivated"
 msgstr "Ekran Klavyesi Kapalı"
 
-#: osd.cpp:195
+#: osd.cpp:201
 #, kde-format
 msgctxt "power management was inhibited, keep short"
 msgid "Sleep and Screen Locking Blocked"
 msgstr "Uyku ve Ekran Kilidi Engelli"
 
-#: osd.cpp:197
+#: osd.cpp:203
 #, kde-format
 msgctxt "power management was uninhibited, keep short"
 msgid "Sleep and Screen Locking Unblocked"
 msgstr "Uyku ve Ekran Kilidi Engeli Açık"
 
-#: osd.cpp:207
+#: osd.cpp:213
 #, kde-format
 msgctxt "Power profile was changed to power save mode, keep short"
 msgid "Power Save Mode"
 msgstr "Güç Tasarrufu Kipi"
 
-#: osd.cpp:210
+#: osd.cpp:216
 #, kde-format
 msgctxt "Power profile was changed to balanced mode, keep short"
 msgid "Balanced Power Mode"
 msgstr "Dengeli Güç Kipi"
 
-#: osd.cpp:213
+#: osd.cpp:219
 #, kde-format
 msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-05 00:41+0000\n"
+"POT-Creation-Date: 2025-10-07 00:45+0000\n"
 "PO-Revision-Date: 2025-01-26 17:07+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -203,79 +203,79 @@ msgstr ""
 "OpenGL 2-ஐயும் மென்பொருள் வரைநிரலையும் பயன்படுத்த முடியாத‍தால் பிளாஸ்மாவால் துவங்க "
 "முடியவில்லை. உங்கள் வரைநிரல் சரியாக அமைக்கப்பட்டுள்ளதா என சரிபார்க்கவும்."
 
-#: osd.cpp:62
+#: osd.cpp:65
 #, kde-format
 msgctxt "Brightness OSD: display name and brightness percentage"
 msgid "%1: %2%"
 msgstr "%1: %2%"
 
-#: osd.cpp:88
+#: osd.cpp:93
 #, kde-format
 msgctxt "OSD informing that the system is muted, keep short"
 msgid "Audio Muted"
 msgstr "ஒலி அடக்கப்பட்டது"
 
-#: osd.cpp:110
+#: osd.cpp:116
 #, kde-format
 msgctxt "OSD informing that the microphone is muted, keep short"
 msgid "Microphone Muted"
 msgstr "ஒலிவாங்கி அடக்கப்பட்டது"
 
-#: osd.cpp:126
+#: osd.cpp:132
 #, kde-format
 msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
 msgid "%1 Muted"
 msgstr "%1 அடக்கப்பட்டது"
 
-#: osd.cpp:148
+#: osd.cpp:154
 #, kde-format
 msgctxt "touchpad was enabled, keep short"
 msgid "Touchpad On"
 msgstr "தொடுபலகை இயக்கப்பட்டது"
 
-#: osd.cpp:150
+#: osd.cpp:156
 #, kde-format
 msgctxt "touchpad was disabled, keep short"
 msgid "Touchpad Off"
 msgstr "தொடுபலகை முடக்கப்பட்டது"
 
-#: osd.cpp:157
+#: osd.cpp:163
 #, kde-format
 msgctxt "wireless lan was enabled, keep short"
 msgid "Wifi On"
 msgstr "Wifi இயக்கப்பட்டது"
 
-#: osd.cpp:159
+#: osd.cpp:165
 #, kde-format
 msgctxt "wireless lan was disabled, keep short"
 msgid "Wifi Off"
 msgstr "Wifi முடக்கப்பட்டது"
 
-#: osd.cpp:166
+#: osd.cpp:172
 #, kde-format
 msgctxt "Bluetooth was enabled, keep short"
 msgid "Bluetooth On"
 msgstr "Bluetooth இயக்கப்பட்டது"
 
-#: osd.cpp:168
+#: osd.cpp:174
 #, kde-format
 msgctxt "Bluetooth was disabled, keep short"
 msgid "Bluetooth Off"
 msgstr "Bluetooth முடக்கப்பட்டது"
 
-#: osd.cpp:175
+#: osd.cpp:181
 #, kde-format
 msgctxt "mobile internet was enabled, keep short"
 msgid "Mobile Internet On"
 msgstr "கைபேசி இணையம் இயக்கப்பட்டது"
 
-#: osd.cpp:177
+#: osd.cpp:183
 #, kde-format
 msgctxt "mobile internet was disabled, keep short"
 msgid "Mobile Internet Off"
 msgstr "கைபேசி இணையம் முடக்கப்பட்டது"
 
-#: osd.cpp:185
+#: osd.cpp:191
 #, kde-format
 msgctxt ""
 "on screen keyboard was enabled because physical keyboard got unplugged, keep "
@@ -283,7 +283,7 @@ msgctxt ""
 msgid "On-Screen Keyboard Activated"
 msgstr "திரை விசைப்பலகை இயக்கப்பட்டது"
 
-#: osd.cpp:188
+#: osd.cpp:194
 #, kde-format
 msgctxt ""
 "on screen keyboard was disabled because physical keyboard was plugged in, "
@@ -291,31 +291,31 @@ msgctxt ""
 msgid "On-Screen Keyboard Deactivated"
 msgstr "திரை விசைப்பலகை முடக்கப்பட்டது"
 
-#: osd.cpp:195
+#: osd.cpp:201
 #, kde-format
 msgctxt "power management was inhibited, keep short"
 msgid "Sleep and Screen Locking Blocked"
 msgstr "தூக்கமும் பூட்டலும் தடுக்கப்பட்டுள்ளன"
 
-#: osd.cpp:197
+#: osd.cpp:203
 #, kde-format
 msgctxt "power management was uninhibited, keep short"
 msgid "Sleep and Screen Locking Unblocked"
 msgstr "தூக்கத்திற்கும் பூட்டலுக்குமான தடை நீக்கப்பட்டது"
 
-#: osd.cpp:207
+#: osd.cpp:213
 #, kde-format
 msgctxt "Power profile was changed to power save mode, keep short"
 msgid "Power Save Mode"
 msgstr "ஆற்றல் சேமிப்பு பயன்முறை"
 
-#: osd.cpp:210
+#: osd.cpp:216
 #, kde-format
 msgctxt "Power profile was changed to balanced mode, keep short"
 msgid "Balanced Power Mode"
 msgstr "நடுநிலை ஆற்றல் பயன்முறை"
 
-#: osd.cpp:213
+#: osd.cpp:219
 #, kde-format
 msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
