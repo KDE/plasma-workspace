@@ -900,9 +900,6 @@ void KSMServer::storeSession()
         if (program.isEmpty() && restartCommand.isEmpty()) {
             continue;
         }
-        if (!clientsToSave.contains(c)) {
-            continue;
-        }
 
         // 'program' might be (mostly) fullpath, or (sometimes) just the name.
         // 'name' is just the name.
