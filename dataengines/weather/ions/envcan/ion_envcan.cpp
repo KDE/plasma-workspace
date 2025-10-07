@@ -561,7 +561,7 @@ void EnvCanadaIon::getWeatherData(const QString &source)
     QString url = u"https://dd.weather.gc.ca/today/citypage_weather/%1/"_s.arg(info.province);
     // 2. When we know the hour folder, we check for the weather report files
     if (!info.hours.isEmpty()) {
-        url += info.hours.at(info.hourIndex) + u"/";
+        url += info.hours.at(info.hourIndex) + u"/"_s;
     }
     // 3. Now we have the full information to compose the URL
     if (!info.fileName.isEmpty()) {
