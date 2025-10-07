@@ -122,11 +122,13 @@ inline std::optional<Match> bitap(const QStringView &name, const QStringView &pa
         for (int k = 0; k <= hammingDistance; ++k) {
             // If the bit at the end of the mask is 0, it means we have a match.
             if (0 == (bits[k] & Mask().set(pattern.size()))) {
-                if (k < match.distance && match.end < i) {
+                const int newEnd = std::min(qsizetype(i), pattern.size() - 1);
+                if (k < match.distance && match.end <= newEnd) {
                     qCDebug(BITAP) << "Match found at index" << i << "with hamming distance" << k << "better than previous match with distance"
                                    << match.distance << "at index" << match.end;
+
                     match = {
-                        .end = i,
+                        .end = newEnd,
                         .distance = k,
                     };
                 }

@@ -30,7 +30,7 @@ private Q_SLOTS:
         QCOMPARE(bitap(u"wireshark", u"di", 1), (Match{.end = 1, .distance = 1}));
         QCOMPARE(bitap(u"discover", u"disk", 1), (Match{.end = 2, .distance = 1}));
         QCOMPARE(bitap(u"discover", u"disc", 1), (Match{.end = 3, .distance = 0}));
-        QCOMPARE(bitap(u"discover", u"scov", 1), (Match{.end = 5, .distance = 0}));
+        QCOMPARE(bitap(u"discover", u"scov", 1), (Match{.end = 3, .distance = 0}));
         QCOMPARE(bitap(u"discover", u"diki", 1), std::nullopt);
         QCOMPARE(bitap(u"discover", u"obo", 1), std::nullopt);
         // With a hamming distance of 1 this may match because it is a single transposition.
@@ -45,7 +45,10 @@ private Q_SLOTS:
         QCOMPARE(bitap(u"discover", u"discover", 1), (Match{.end = 7, .distance = 0}));
         QCOMPARE(bitap(u"discover", u"discovery", 1), (Match{.end = 7, .distance = 1}));
         // Insertion required
-        QCOMPARE(bitap(u"discover", u"dicover", 1), (Match{.end = 7, .distance = 1}));
+        QCOMPARE(bitap(u"discover", u"dicover", 1), (Match{.end = 6, .distance = 1}));
+
+        QCOMPARE(bitap(u"dolphin", u"do", 1), (Match{.end = 1, .distance = 0}));
+        QCOMPARE(bitap(u"RKWard", u"do", 1), (Match{.end = 1, .distance = 1}));
     }
 
     void testScore()

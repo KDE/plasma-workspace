@@ -1,0 +1,17 @@
+# SPDX-FileCopyrightText: None
+# SPDX-License-Identifier: CC0-1.0
+[Desktop Entry]
+Name=Dolphin ServiceRunnerTest
+Exec=dolphin %u
+Icon=org.kde.dolphin
+Type=Application
+X-DocPath=dolphin/index.html
+Categories=Qt;KDE;System;FileTools;FileManager;
+GenericName=File Manager
+Comment=Manage your files
+MimeType=inode/directory;
+InitialPreference=10
+Keywords=files;file management;file browsing;samba;network shares;Explorer;Finder;
+X-DBUS-ServiceName=org.kde.dolphin
+X-KDE-Shortcuts=Meta+E
+StartupWMClass=dolphin
