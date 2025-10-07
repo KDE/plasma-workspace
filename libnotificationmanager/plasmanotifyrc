@@ -19,3 +19,7 @@ ShowInHistory=false
 ShowInHistory=false
 # Badges wouldn't work anyway
 ShowBadges=false
+
+# Keep inhibition summary out of history.
+[Services][libnotificationmanager]
+ShowInHistory=false
