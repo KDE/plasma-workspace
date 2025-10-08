@@ -131,14 +131,23 @@ Item {
                 view.model: thumbnailsComponent.imageModel
 
                 //set the size of the cell, depending on Screen resolution to respect the aspect ratio
-                view.implicitCellWidth: screenSize.width / 10 + Kirigami.Units.smallSpacing * 2
-                view.implicitCellHeight: screenSize.height / 10 + Kirigami.Units.smallSpacing * 2 + Kirigami.Units.gridUnit * 3
+                view.implicitCellWidth: {
+                    const factor = screenSize.width / screenSize.height; // As a pct of screen height
+                    const intendedLength = Kirigami.Units.gridUnit * (Kirigami.Settings.isMobile ? 10 : 6);
+                    return factor * intendedLength + Kirigami.Units.smallSpacing * 2
+                }
+                view.implicitCellHeight: {
+                    const intendedLength = Kirigami.Units.gridUnit * (Kirigami.Settings.isMobile ? 10 : 6);
+                    return intendedLength + Kirigami.Units.smallSpacing * 2 + Kirigami.Units.gridUnit * 3
+                }
 
                 view.reuseItems: true
 
                 view.delegate: WallpaperDelegate {
                     color: cfg_Color
-                    previewSize: Qt.size(thumbnailsComponent.screenSize.width / 8, thumbnailsComponent.screenSize.height / 8)
+                    // Set minimum image sample size, otherwise it's very blurry
+                    previewSize: Qt.size(Math.max(Kirigami.Units.gridUnit * 22, thumbnailsComponent.screenSize.width / 8),
+                                         Math.max(Kirigami.Units.gridUnit * 22, thumbnailsComponent.screenSize.height / 8))
                 }
             }
         }
