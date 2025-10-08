@@ -46,27 +46,10 @@ ScriptEngine::ScriptEngine(Plasma::Corona *corona, QObject *parent)
     m_globalScriptEngineObject = new ScriptEngine::V1(this);
     m_localizedContext = new KLocalizedContext(this);
     setupEngine();
-
-    m_watchdogThread.start();
-    m_watchdogTimer = new QTimer;
-    m_watchdogTimer->setInterval(std::chrono::seconds(2)); // max 2 secs allowed
-    m_watchdogTimer->setSingleShot(true);
-    m_watchdogTimer->moveToThread(&m_watchdogThread);
-    QObject::connect(
-        m_watchdogTimer,
-        &QTimer::timeout,
-        this,
-        [this]() {
-            setInterrupted(true);
-        },
-        Qt::DirectConnection);
 }
 
 ScriptEngine::~ScriptEngine()
 {
-    m_watchdogTimer->deleteLater();
-    m_watchdogThread.quit();
-    m_watchdogThread.wait();
 }
 
 QString ScriptEngine::errorString() const
@@ -254,10 +237,7 @@ bool ScriptEngine::evaluateScript(const QString &script, const QString &path)
 {
     m_errorString = QString();
 
-    QMetaObject::invokeMethod(m_watchdogTimer, qOverload<>(&QTimer::start));
-    setInterrupted(false);
     QJSValue result = evaluate(script, path);
-    QMetaObject::invokeMethod(m_watchdogTimer, qOverload<>(&QTimer::stop));
     if (result.isError()) {
         QString error = i18n("Error: %1 at line %2\n\nBacktrace:\n%3",
                              result.toString(),
