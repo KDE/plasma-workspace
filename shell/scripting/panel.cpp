@@ -179,7 +179,7 @@ QString Panel::lengthMode() const
     if (panel()) {
         lengthMode = panel()->lengthMode();
     } else {
-        lengthMode = panelConfig().readEntry("panelLengthMode", 0);
+        lengthMode = panelConfig().parent().readEntry("panelLengthMode", 0);
     }
 
     switch (lengthMode) {
@@ -206,7 +206,7 @@ void Panel::setLengthMode(const QString &mode)
     if (panel()) {
         panel()->setLengthMode(lengthMode);
     } else {
-        panelConfig().writeEntry("panelLengthMode", (int)lengthMode);
+        panelConfig().parent().writeEntry("panelLengthMode", (int)lengthMode);
     }
 }
 
@@ -308,7 +308,7 @@ QString Panel::hiding() const
     if (panel()) {
         visibility = panel()->visibilityMode();
     } else {
-        visibility = panelConfig().readEntry("panelVisibility", 0);
+        visibility = panelConfig().parent().readEntry("panelVisibility", 0);
     }
 
     switch (visibility) {
@@ -338,7 +338,7 @@ void Panel::setHiding(const QString &mode)
     if (panel()) {
         panel()->setVisibilityMode(visibilityMode);
     } else {
-        panelConfig().writeEntry("panelVisibility", (int)visibilityMode);
+        panelConfig().parent().writeEntry("panelVisibility", (int)visibilityMode);
     }
 }
 
@@ -347,7 +347,7 @@ bool Panel::floating() const
     if (panel()) {
         return panel()->floating();
     } else {
-        return panelConfig().readEntry("floating", true);
+        return panelConfig().parent().readEntry("floating", true);
     }
 }
 
@@ -356,7 +356,7 @@ void Panel::setFloating(bool floating)
     if (panel()) {
         panel()->setFloating(floating);
     } else {
-        panelConfig().writeEntry("floating", (int)floating);
+        panelConfig().parent().writeEntry("floating", (int)floating);
     }
 }
 
@@ -366,7 +366,7 @@ QString Panel::opacity() const
     if (panel()) {
         opacity = panel()->opacityMode();
     } else {
-        opacity = panelConfig().readEntry("panelOpacity", 0);
+        opacity = panelConfig().parent().readEntry("panelOpacity", 0);
     }
 
     switch (opacity) {
@@ -396,7 +396,7 @@ void Panel::setOpacity(const QString &mode)
     if (panel()) {
         panel()->setOpacity(opacityMode);
     } else {
-        panelConfig().writeEntry("panelOpacity", (int)opacityMode);
+        panelConfig().parent().writeEntry("panelOpacity", (int)opacityMode);
     }
 }
 }
