@@ -145,6 +145,8 @@ QVariant JobsModel::data(const QModelIndex &index, int role) const
     // There's hardly a reason why it should show up as "unread".
     case Notifications::ReadRole:
         return true;
+    case Notifications::ActionLabelsRole:
+        return QStringList();
     }
 
     return QVariant();
