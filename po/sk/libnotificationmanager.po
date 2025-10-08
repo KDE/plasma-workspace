@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-23 00:45+0000\n"
+"POT-Creation-Date: 2025-10-08 02:39+0000\n"
 "PO-Revision-Date: 2025-09-21 10:50+0200\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -129,7 +129,7 @@ msgstr[0] "%1 oznámenie bolo prijaté, keď bola aktivovaná funkcia Nerušiť.
 msgstr[1] "%1 oznámenia boli prijaté, keď bola aktivovaná funkcia Nerušiť."
 msgstr[2] "%1 oznámení bolo prijatých, keď bola aktivovaná funkcia Nerušiť."
 
-#: notifications.cpp:924
+#: notifications.cpp:921
 #, kde-format
 msgctxt "@action:button Show the notifications popup"
 msgid "Show Notifications"

@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-26 00:43+0000\n"
+"POT-Creation-Date: 2025-10-08 02:39+0000\n"
 "PO-Revision-Date: 2024-08-20 10:57+0300\n"
 "Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -130,7 +130,7 @@ msgstr ""
 "κυριότεροι καταναλωτές πόρων συνεδρίας:\n"
 "%1"
 
-#: server.cpp:1059
+#: server.cpp:1056
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-26 00:43+0000\n"
+"POT-Creation-Date: 2025-10-08 02:39+0000\n"
 "PO-Revision-Date: 2024-10-09 20:59+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -122,7 +122,7 @@ msgstr ""
 "மேலாண்மை வசதியை அதிகப்படியாக பயன்படுத்தும் மூன்று செயலிகள் பின்வருவன:\n"
 "%1"
 
-#: server.cpp:1059
+#: server.cpp:1056
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""
