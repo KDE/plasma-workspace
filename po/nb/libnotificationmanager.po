@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-24 00:45+0000\n"
+"POT-Creation-Date: 2025-10-08 00:45+0000\n"
 "PO-Revision-Date: 2025-05-31 21:15+0200\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -119,7 +119,7 @@ msgid_plural "%1 notifications were received while Do Not Disturb was active."
 msgstr[0] "%1 varsling ble mottatt mens «Ikke forstyrr» ble brukt."
 msgstr[1] "%1 varslinger ble mottatt mens «Ikke forstyrr» ble brukt."
 
-#: notifications.cpp:923
+#: notifications.cpp:920
 #, fuzzy, kde-format
 #| msgctxt "@title"
 #| msgid "Unread Notification"

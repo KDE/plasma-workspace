@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libnotificationmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-24 00:45+0000\n"
+"POT-Creation-Date: 2025-10-08 00:45+0000\n"
 "PO-Revision-Date: 2025-07-24 20:04+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -123,7 +123,7 @@ msgstr[1] ""
 "Se han recibido %1 notificaciones mientras estaba activo el modo «No "
 "molestar»."
 
-#: notifications.cpp:923
+#: notifications.cpp:920
 #, kde-format
 msgctxt "@action:button Show the notifications popup"
 msgid "Show Notifications"

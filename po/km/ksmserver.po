@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-24 00:45+0000\n"
+"POT-Creation-Date: 2025-10-08 00:45+0000\n"
 "PO-Revision-Date: 2012-06-14 13:44+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer\n"
@@ -113,7 +113,7 @@ msgid ""
 "%1"
 msgstr ""
 
-#: server.cpp:1057
+#: server.cpp:1054
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""

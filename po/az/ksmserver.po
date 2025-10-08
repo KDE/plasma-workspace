@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-24 00:45+0000\n"
+"POT-Creation-Date: 2025-10-08 00:45+0000\n"
 "PO-Revision-Date: 2025-04-01 15:20+0400\n"
 "Last-Translator: Khayyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -121,7 +121,7 @@ msgstr ""
 "sessiyanın resurslarını ən çox istifadə edən üç tətbiq göstərilir\n"
 " %1"
 
-#: server.cpp:1057
+#: server.cpp:1054
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""
