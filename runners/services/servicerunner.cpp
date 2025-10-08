@@ -370,7 +370,12 @@ private:
 
             setupMatch(service, match);
             match.setCategoryRelevance(score->categoryRelevance);
-            match.setRelevance(score->value);
+            // KRunner may apply counter-productive bumps to the score of up to 0.5 points. That can easily produce
+            // unrealistic results where suddenly one thing is top score for no discernable reason. We outscore KRunner
+            // by moving our score range into the hundreds, making the 0.5 bump negligible.
+            // In Plasma 6.6 and later we'll depend on a KRunner that does no longer have this behavior.
+            constexpr qreal outscoreMultiplier = 100.0;
+            match.setRelevance(score->value * outscoreMultiplier);
             qCDebug(RUNNER_SERVICES) << match.text() << "is this relevant:" << match.relevance() << "category relevance" << match.categoryRelevance();
 
             matches << match;
