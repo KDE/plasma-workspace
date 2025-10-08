@@ -61,7 +61,7 @@ RowLayout {
 
     PlasmaComponents3.Button {
         id: replyButton
-        icon.name: replyRow.modelInterface.replySubmitButtonIconName || "document-send"
+        icon.name: replyRow.modelInterface.replySubmitButtonIconName || (mirrored ? "document-send-rtl" : "document-send")
         text: replyRow.modelInterface.replySubmitButtonText
               || i18ndc("plasma_applet_org.kde.plasma.notifications", "@action:button", "Send")
         enabled: replyTextField.length > 0
