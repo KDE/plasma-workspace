@@ -1,43 +1,43 @@
-# Copyright (C) 2025 This file is copyright:
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-# SPDX-FileCopyrightText: 2025 Yaron Shahrabani <sh.yaron@gmail.com>
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-07 02:44+0000\n"
-"PO-Revision-Date: 2025-10-07 08:53+0300\n"
-"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
-"Language-Team: צוות התרגום של KDE ישראל\n"
-"Language: he\n"
+"PO-Revision-Date: 2025-10-09 00:31+0200\n"
+"Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
+"Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
+"Language: ka_GE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
-"n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Poedit 3.7\n"
 
 #: ui/main.qml:27
 #, kde-format
 msgctxt "@title:window"
 msgid "Wallpaper"
-msgstr "תמונת רקע"
+msgstr "ფონის სურათი"
 
 #: ui/main.qml:41
 #, kde-format
 msgctxt "@option:check Set the wallpaper for all screens"
 msgid "Set for all screens"
-msgstr "הגדרה לכל המסכים"
+msgstr "დაყენება ყველა ეკრანისთვის"
 
 #: ui/main.qml:89
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Wallpaper type:"
-msgstr "סוג תמונת רקע:"
+msgstr "ფონური სურათის ტიპი:"
 
 #: ui/main.qml:110
 #, kde-format
 msgctxt "@action:button"
 msgid "Get New Plugins…"
-msgstr "הורדת תוספים חדשים…"
+msgstr "ახალი დამატებების მიღება…"
