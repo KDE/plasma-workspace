@@ -46,6 +46,8 @@ private Q_SLOTS:
         QCOMPARE(bitap(u"discover", u"discovery", 1), (Match{.end = 7, .distance = 1}));
         // Insertion required
         QCOMPARE(bitap(u"discover", u"dicover", 1), (Match{.end = 7, .distance = 1}));
+        // Would have to change the entire pattern -> no match
+        QCOMPARE(bitap(u"discover", u";", 1), std::nullopt);
     }
 
     void testScore()
