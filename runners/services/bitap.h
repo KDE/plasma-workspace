@@ -60,6 +60,9 @@ inline std::optional<Match> bitap(const QStringView &name, const QStringView &pa
         return std::nullopt;
     }
 
+    // With hammingDistance >= pattern.length(), it would always match by changing the entire pattern, so clamp it.
+    hammingDistance = std::min(hammingDistance, int(pattern.length() - 1));
+
     const PatternMask patternMask = [&pattern, &name] {
         PatternMask patternMask;
         // The following is an optimized version of patternMask.fill(Mask().set()); to set all **necessary** bits to 1.
