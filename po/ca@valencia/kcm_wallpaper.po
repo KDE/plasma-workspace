@@ -1,4 +1,4 @@
-# Translation of kcm_wallpaper.po to Catalan
+# Translation of kcm_wallpaper.po to Catalan (Valencian)
 # Copyright (C) 2025 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
@@ -12,11 +12,11 @@ msgstr ""
 "PO-Revision-Date: 2025-10-07 09:28+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
-"Language: ca\n"
+"Language: ca@valencia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 25.04.0\n"
 
 #: ui/main.qml:27
@@ -29,7 +29,7 @@ msgstr "Fons de pantalla"
 #, kde-format
 msgctxt "@option:check Set the wallpaper for all screens"
 msgid "Set for all screens"
-msgstr "Estableix a totes les pantalles"
+msgstr "Establix a totes les pantalles"
 
 #: ui/main.qml:89
 #, kde-format
@@ -41,4 +41,4 @@ msgstr "Tipus de fons de pantalla:"
 #, kde-format
 msgctxt "@action:button"
 msgid "Get New Plugins…"
-msgstr "Obtén connectors nous…"
+msgstr "Obtín connectors nous…"

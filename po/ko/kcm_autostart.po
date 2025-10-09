@@ -1,14 +1,14 @@
 # Translation of kcm_autostart to Korean.
 # Copyright (C) 2008 This_file_is_part_of_KDE
 # This file is distributed under the same license as the kdebase package.
-# SPDX-FileCopyrightText: 2008, 2010, 2013, 2015, 2017, 2020, 2021, 2022, 2023, 2024 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2008, 2010, 2013, 2015, 2017, 2020, 2021, 2022, 2023, 2024, 2025 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-24 00:45+0000\n"
-"PO-Revision-Date: 2024-11-28 23:26+0100\n"
+"PO-Revision-Date: 2025-10-09 01:48+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: autostartmodel.cpp:382
 #, kde-format
@@ -109,7 +109,7 @@ msgstr "새로 추가"
 #, kde-format
 msgctxt "@title:menu accessible menu button"
 msgid "Add new application or script"
-msgstr ""
+msgstr "새 앱이나 스크립트 추가"
 
 #: ui/main.qml:73
 #, kde-format
@@ -118,11 +118,10 @@ msgid "Application…"
 msgstr "앱…"
 
 #: ui/main.qml:75
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgctxt "@action:inmenu accessible"
 msgid "Add application"
-msgstr "앱"
+msgstr "앱 추가"
 
 #: ui/main.qml:79
 #, kde-format
@@ -131,11 +130,10 @@ msgid "Login Script…"
 msgstr "로그인 스크립트…"
 
 #: ui/main.qml:81
-#, fuzzy, kde-format
-#| msgid "Login Scripts"
+#, kde-format
 msgctxt "@action:inmenu accessible"
 msgid "Add login script"
-msgstr "로그인 스크립트"
+msgstr "로그인 스크립트 추가"
 
 #: ui/main.qml:85
 #, kde-format
@@ -144,11 +142,10 @@ msgid "Logout Script…"
 msgstr "로그아웃 스크립트…"
 
 #: ui/main.qml:87
-#, fuzzy, kde-format
-#| msgid "Logout Scripts"
+#, kde-format
 msgctxt "@action:inmenu accessible"
 msgid "Add logout script"
-msgstr "로그아웃 스크립트"
+msgstr "로그아웃 스크립트 추가"
 
 #: ui/main.qml:121
 #, kde-format

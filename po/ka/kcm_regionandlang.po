@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-08 00:45+0000\n"
-"PO-Revision-Date: 2025-06-25 04:07+0200\n"
+"PO-Revision-Date: 2025-10-08 03:48+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,20 +16,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.7\n"
 
 #: binarydialectmodel.cpp:52
-#, fuzzy, kde-format
-#| msgctxt "Binary dialect IEC, with sigle in parentheses"
-#| msgid "International Electrotechnical Commission (IEC)"
+#, kde-format
 msgctxt "Binary dialect IEC, with single in parentheses"
 msgid "International Electrotechnical Commission (IEC)"
 msgstr "საერთაშორისო ელექტროტექნიკური კომისია (IEC)"
 
 #: binarydialectmodel.cpp:56
-#, fuzzy, kde-format
-#| msgctxt "Binary dialect JEDEC, with sigle in parentheses"
-#| msgid "Joint Electron Device Engineering Council (JEDEC)"
+#, kde-format
 msgctxt "Binary dialect JEDEC, with single in parentheses"
 msgid "Joint Electron Device Engineering Council (JEDEC)"
 msgstr "გაერთიანებული ელექტრონული მოწყობილობების ინჟინრების საბჭო (JEDEC)"

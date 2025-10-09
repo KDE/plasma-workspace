@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-19 00:44+0000\n"
-"PO-Revision-Date: 2025-07-20 01:29+0200\n"
+"PO-Revision-Date: 2025-10-09 01:50+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -36,14 +36,11 @@ msgid "Determine sunrise and sunset times:"
 msgstr "일출과 일몰 시간 결정:"
 
 #: ui/main.qml:47
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
-#| msgid "Based on device's current location"
+#, kde-format
 msgctxt ""
 "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
 msgid "Based on device's location"
-msgstr "장치의 현재 위치 기반"
+msgstr "장치의 위치 기반"
 
 #: ui/main.qml:48
 #, kde-format
@@ -81,7 +78,7 @@ msgstr[0] "%1분"
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatically detect location"
-msgstr ""
+msgstr "자동으로 위치 감지"
 
 #: ui/main.qml:146
 #, kde-kuit-format
@@ -112,13 +109,10 @@ msgstr ""
 "고서를 작성해 주십시오."
 
 #: ui/main.qml:164
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
-#| msgid "Based on manual location"
+#, kde-format
 msgctxt "@option:radio"
 msgid "Use manual location:"
-msgstr "수동으로 위치 지정"
+msgstr "수동으로 위치 지정:"
 
 #: ui/main.qml:176
 #, kde-format

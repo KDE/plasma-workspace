@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-18 00:44+0000\n"
-"PO-Revision-Date: 2024-11-28 23:28+0100\n"
+"PO-Revision-Date: 2025-10-09 01:49+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -36,22 +36,21 @@ msgstr "전역 모습과 느낌"
 #. i18n: ectx: label, entry (defaultLightLookAndFeel), group (KDE)
 #. i18n: ectx: label, entry (defaultDarkLookAndFeel), group (KDE)
 #: lookandfeelsettings.kcfg:13 lookandfeelsettings.kcfg:17
-#, fuzzy, kde-format
-#| msgid "Global look and feel"
+#, kde-format
 msgid "Global Look and Feel package, alternate"
-msgstr "전역 모습과 느낌"
+msgstr "모습과 느낌 패키지 적용, 대체"
 
 #. i18n: ectx: label, entry (automaticLookAndFeel), group (KDE)
 #: lookandfeelsettings.kcfg:21
 #, kde-format
 msgid "Switch between dark and light global themes depending on time of day"
-msgstr ""
+msgstr "시간에 따라서 밝음과 어두움 전역 테마 전환"
 
 #. i18n: ectx: label, entry (automaticLookAndFeelOnIdle), group (KDE)
 #: lookandfeelsettings.kcfg:25
 #, kde-format
 msgid "Switch between dark and light global themes when the computer is idle"
-msgstr ""
+msgstr "컴퓨터가 대기 상태일 때 밝음과 어두움 전역 테마 전환"
 
 #. i18n: ectx: label, entry (automaticLookAndFeelIdleInterval), group (KDE)
 #: lookandfeelsettings.kcfg:29
@@ -60,6 +59,8 @@ msgid ""
 "How long the computer should be idle in order to switch between dark and "
 "light global themes, in seconds"
 msgstr ""
+"밝음과 어두움 전역 테마를 전환하기 위해서 컴퓨터가 대기 상태로 유지될 초 단"
+"위 시간"
 
 #: tool/lnftool.cpp:32
 #, kde-format
@@ -111,7 +112,7 @@ msgstr "packagename"
 #: tool/lnftool.cpp:52
 #, kde-format
 msgid "Prevent --apply from disabling the automatic mode"
-msgstr ""
+msgstr "--apply가 자동 모드를 비활성화하는 것 방지"
 
 #: tool/lnftool.cpp:53
 #, kde-format
@@ -148,62 +149,59 @@ msgctxt "@info"
 msgid ""
 "The chosen light Global Theme will be used during the day, and the dark one "
 "will be used at night."
-msgstr ""
+msgstr "선택한 밝음 전역 테마는 주간에, 어두움 전역 테마는 야간에 사용됩니다."
 
 #: ui/DayNightLookAndFeel.qml:55
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure Day/Night Cycle…"
-msgstr ""
+msgstr "주간-야간 전환 설정…"
 
 #: ui/DayNightLookAndFeel.qml:68
 #, kde-format
 msgctxt "@option:radio Light global theme"
 msgid "Light"
-msgstr ""
+msgstr "밝음"
 
 #: ui/DayNightLookAndFeel.qml:80
 #, kde-format
 msgctxt "@option:radio Dark global theme"
 msgid "Dark"
-msgstr ""
+msgstr "어두움"
 
 #: ui/DayNightLookAndFeel.qml:97
 #, kde-format
 msgctxt "@option:check"
 msgid "Wait until idleness before switching:"
-msgstr ""
+msgstr "전환하기 전에 다음 시간 동안 대기 기다리기:"
 
 #: ui/DayNightLookAndFeel.qml:110
 #, kde-format
 msgctxt "@item:valuesuffix idle interval"
 msgid "%1 second"
 msgid_plural "%1 seconds"
-msgstr[0] ""
+msgstr[0] "%1초"
 
 #: ui/DayNightLookAndFeel.qml:122
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Minimizes interruptions when actively using the computer."
-msgstr ""
+msgstr "컴퓨터를 사용하고 있을 때 작업 중단을 최소화합니다."
 
 #: ui/LookAndFeelSelector.qml:24
-#, fuzzy, kde-format
-#| msgid "Global Theme"
+#, kde-format
 msgctxt "@title:window"
 msgid "Choose Light Global Theme"
-msgstr "전역 테마"
+msgstr "밝음 전역 테마 선택"
 
 #: ui/LookAndFeelSelector.qml:26
-#, fuzzy, kde-format
-#| msgid "Global Theme"
+#, kde-format
 msgctxt "@title:window"
 msgid "Choose Dark Global Theme"
-msgstr "전역 테마"
+msgstr "어두움 전역 테마 선택"
 
 #: ui/LookAndFeelSelector.qml:49 ui/StaticLookAndFeel.qml:67
-#, fuzzy, kde-format
-#| msgid "Preview Theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview Theme"
 msgstr "테마 미리 보기"
@@ -230,11 +228,10 @@ msgstr "시스템에서 설치한 테마를 삭제할 수 없음"
 #, kde-format
 msgctxt "@option:check"
 msgid "Switch to Dark Mode at Night"
-msgstr ""
+msgstr "야간에 어두운 테마로 전환"
 
 #: ui/main.qml:40
-#, fuzzy, kde-format
-#| msgid "Get New…"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Get New…"
 msgstr "새 항목 가져오기…"
@@ -355,8 +352,7 @@ msgstr ""
 "수도 있으므로 테마 관리자에게 연락하십시오."
 
 #: ui/StaticLookAndFeel.qml:53
-#, fuzzy, kde-format
-#| msgid "Contains Desktop layout"
+#, kde-format
 msgctxt "@label"
 msgid "Contains Desktop layout"
 msgstr "바탕 화면 레이아웃 포함"

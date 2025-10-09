@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-04 00:44+0000\n"
-"PO-Revision-Date: 2025-07-20 01:19+0200\n"
+"PO-Revision-Date: 2025-10-09 01:51+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -384,15 +384,14 @@ msgid "Clear History"
 msgstr "과거 기록 비우기"
 
 #: declarative/qml/ClipboardMenu.qml:324
-#, fuzzy, kde-format
-#| msgid "Clear History"
+#, kde-format
 msgid "All History"
-msgstr "과거 기록 비우기"
+msgstr "모든 과거 기록"
 
 #: declarative/qml/ClipboardMenu.qml:329
 #, kde-format
 msgid "Starred Only"
-msgstr ""
+msgstr "별표 표시된 것만"
 
 #: declarative/qml/ClipboardMenu.qml:436
 #, kde-format
@@ -425,16 +424,14 @@ msgid "Remove from history"
 msgstr "과거 기록에서 삭제"
 
 #: declarative/qml/DelegateToolButtons.qml:58
-#, fuzzy, kde-format
-#| msgid "Remove from history"
+#, kde-format
 msgid "Remove Star"
-msgstr "과거 기록에서 삭제"
+msgstr "별표 삭제"
 
 #: declarative/qml/DelegateToolButtons.qml:58
-#, fuzzy, kde-format
-#| msgid "Start"
+#, kde-format
 msgid "Star"
-msgstr "시작 사용"
+msgstr "별표"
 
 #: declarative/qml/EditPage.qml:64
 #, kde-format
@@ -650,10 +647,11 @@ msgid "Icon:"
 msgstr "아이콘:"
 
 #: historymodel.cpp:280
-#, fuzzy, kde-format
-#| msgid "The clipboard history will store up to this many items."
+#, kde-format
 msgid "The clipboard history contains starred items. Clear them too?"
-msgstr "클립보드 과거 기록 항목을 저장할 개수입니다."
+msgstr ""
+"클립보드 과거 기록에 별표 표시된 항목이 있습니다. 해당 항목도 삭제하시겠습니"
+"까?"
 
 #: historymodel.cpp:281 historymodel.cpp:301
 #, kde-format
@@ -663,14 +661,12 @@ msgstr "클립보드 기록 비우기"
 #: historymodel.cpp:282
 #, kde-format
 msgid "Clear Everything"
-msgstr ""
+msgstr "모두 삭제"
 
 #: historymodel.cpp:283
-#, fuzzy, kde-format
-#| msgctxt "%1 is application display name"
-#| msgid "%1 - Clipboard Items"
+#, kde-format
 msgid "Keep Starred Items"
-msgstr "%1 - 클립보드 항목"
+msgstr "별표 표시된 항목 유지"
 
 #: historymodel.cpp:300
 #, kde-format
@@ -686,12 +682,12 @@ msgstr "%1x%2"
 #: historymodel.cpp:564
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
-msgstr ""
+msgstr "이 항목에 별표가 표시되어 있습니다. 과거 기록에서 삭제하시겠습니까?"
 
 #: historymodel.cpp:565
 #, kde-format
 msgid "Remove Starred Item"
-msgstr ""
+msgstr "별표 표시된 항목 삭제"
 
 #: klipper.cpp:91
 #, kde-format
