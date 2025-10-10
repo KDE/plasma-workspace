@@ -177,6 +177,10 @@ void URLGrabber::actionMenu(HistoryItemConstPtr item, bool automatically_invoked
             for (int i = 0; i < listSize; ++i) {
                 ClipCommand command = cmdList.at(i);
 
+                if (!command.isEnabled) {
+                    continue;
+                }
+
                 QString item = command.description;
                 if (item.isEmpty())
                     item = command.command;
@@ -269,25 +273,25 @@ void URLGrabber::loadSettings()
     qDeleteAll(m_myActions);
     m_myActions.clear();
 
-    KConfigGroup cg(KSharedConfig::openConfig(), QStringLiteral("General"));
+    const KSharedConfig::Ptr config = KSharedConfig::openConfig();
+    const KConfigGroup cg(config, QStringLiteral("General"));
     int num = cg.readEntry("Number of Actions", 0);
-    QString group;
     for (int i = 0; i < num; i++) {
-        group = QStringLiteral("Action_%1").arg(i);
-        m_myActions.append(new ClipAction(KSharedConfig::openConfig(), group));
+        const QString group = QStringLiteral("Action_%1").arg(i);
+        m_myActions.append(new ClipAction(config, group));
     }
 }
 
 void URLGrabber::saveSettings() const
 {
-    KConfigGroup cg(KSharedConfig::openConfig(), QStringLiteral("General"));
+    KSharedConfig::Ptr config = KSharedConfig::openConfig();
+    KConfigGroup cg(config, QStringLiteral("General"));
     cg.writeEntry("Number of Actions", m_myActions.count());
 
     int i = 0;
-    QString group;
     for (ClipAction *action : std::as_const(m_myActions)) {
-        group = QStringLiteral("Action_%1").arg(i);
-        action->save(KSharedConfig::openConfig(), group);
+        const QString group = QStringLiteral("Action_%1").arg(i);
+        action->save(config, group);
         ++i;
     }
 

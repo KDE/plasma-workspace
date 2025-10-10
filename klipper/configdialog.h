@@ -104,6 +104,7 @@ private Q_SLOTS:
     void onAddAction();
     void onEditAction();
     void onDeleteAction();
+    void onItemChanged(QTreeWidgetItem *item, int col);
 
 private:
     void updateActionItem(QTreeWidgetItem *item, const ClipAction *action);

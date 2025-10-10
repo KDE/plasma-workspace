@@ -422,6 +422,7 @@ which can be configured on the <interface>Action Menu</interface> page."),
 
     connect(m_actionsTree, &QTreeWidget::itemSelectionChanged, this, &ActionsWidget::onSelectionChanged);
     connect(m_actionsTree, &QTreeWidget::itemDoubleClicked, this, &ActionsWidget::onEditAction);
+    connect(m_actionsTree, &QTreeWidget::itemChanged, this, &ActionsWidget::onItemChanged);
 
     onSelectionChanged();
 }
@@ -455,6 +456,7 @@ void ActionsWidget::updateActionListView()
         }
 
         QTreeWidgetItem *item = new QTreeWidgetItem;
+        item->setFlags(item->flags() | Qt::ItemIsUserCheckable);
         updateActionItem(item, action);
 
         m_actionsTree->addTopLevelItem(item);
@@ -478,11 +480,18 @@ void ActionsWidget::updateActionItem(QTreeWidgetItem *item, const ClipAction *ac
     item->setText(0, action->actionRegexPattern());
     item->setText(1, action->description());
 
+    item->setFlags(item->flags() | Qt::ItemIsUserCheckable | Qt::ItemIsAutoTristate);
+    // There is no need to explicitly set the CheckState of the action item,
+    // because with the ItemIsAutoTristate flag it is completely determined
+    // by the state of the child command items.
+
     for (const ClipCommand &command : action->commands()) {
         QStringList cmdProps;
         cmdProps << command.command << command.description;
         QTreeWidgetItem *child = new QTreeWidgetItem(item, cmdProps);
         child->setIcon(0, QIcon::fromTheme(command.icon.isEmpty() ? QStringLiteral("system-run") : command.icon));
+        child->setFlags(child->flags() | Qt::ItemIsUserCheckable | Qt::ItemNeverHasChildren);
+        child->setCheckState(0, (command.isEnabled ? Qt::Checked : Qt::Unchecked));
     }
 }
 
@@ -597,6 +606,30 @@ bool ActionsWidget::hasChanged() const
     return (m_actionsTree->actionsChanged() != -1);
 }
 
+void ActionsWidget::onItemChanged(QTreeWidgetItem *item, int col)
+{
+    QTreeWidgetItem *parentItem = item->parent(); // parent of the command item
+    if (parentItem == nullptr) { // this is a top level action
+        return;
+    }
+
+    int actionIdx = m_actionsTree->indexOfTopLevelItem(parentItem);
+    ClipAction *action = m_actionList.at(actionIdx);
+    int commandIdx = parentItem->indexOfChild(item);
+    ClipCommand command = action->command(commandIdx);
+
+    // Ensure that the change being made really is a check state change.
+    // because this slot is also called for multiple items when they are
+    // updated after the "Edit Action" dialogue is accepted.
+    const bool wasEnabled = command.isEnabled;
+    const bool nowEnabled = (item->checkState(0) == Qt::Checked);
+    if (nowEnabled != wasEnabled) {
+        command.isEnabled = nowEnabled;
+        action->replaceCommand(commandIdx, command);
+        Q_EMIT widgetChanged();
+    }
+}
+
 //////////////////////////
 //  ConfigDialog	//
 //////////////////////////
@@ -617,6 +650,7 @@ ConfigDialog::ConfigDialog(QWidget *parent, KConfigSkeleton *skeleton, Klipper *
 
     connect(m_generalPage, &GeneralWidget::widgetChanged, this, &ConfigDialog::settingsChangedSlot);
     connect(m_actionsPage, &ActionsWidget::widgetChanged, this, &ConfigDialog::settingsChangedSlot);
+
     connect(this, &KConfigDialog::widgetModified, m_generalPage, &GeneralWidget::slotWidgetModified);
     m_generalPage->initWidgetStates();
 
