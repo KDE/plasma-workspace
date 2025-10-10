@@ -11,8 +11,8 @@ include:
       - /gitlab-templates/yaml-lint.yml
       - /gitlab-templates/qml-lint.yml
 
-suse_tumbleweed_qt69_reduced_featureset:
-  extends: suse_tumbleweed_qt69
+suse_tumbleweed_qt610_reduced_featureset:
+  extends: suse_tumbleweed_qt610
   script:
     - git config --global --add safe.directory $CI_PROJECT_DIR
     - python3 -u ci-utilities/run-ci-build.py --project $CI_PROJECT_NAME --branch $CI_COMMIT_REF_NAME --platform Linux --extra-cmake-args="-DWITH_X11=OFF -DCMAKE_DISABLE_FIND_PACKAGE_KSysGuard=ON -DCMAKE_DISABLE_FIND_PACKAGE_QALCULATE=ON" --skip-publishing --only-build
