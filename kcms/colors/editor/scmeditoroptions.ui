@@ -66,10 +66,10 @@
    <item>
     <widget class="QGroupBox" name="groupBox_5">
      <property name="toolTip">
-      <string>Shading of frames and lighting (&quot;3D&quot;) effects</string>
+      <string>Contrast of the frames, separators and outlines</string>
      </property>
      <property name="title">
-      <string>Shading</string>
+      <string>Frames and Outlines</string>
      </property>
      <layout class="QGridLayout" name="gridLayout_3">
       <property name="horizontalSpacing">

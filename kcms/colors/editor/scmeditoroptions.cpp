@@ -62,6 +62,14 @@ void SchemeEditorOptions::on_contrastSlider_valueChanged(int value)
     KConfigGroup group(m_config, u"KDE"_s);
     group.writeEntry("contrast", value);
 
+    // For frames and other separators, convert the value to be between 0 to 1
+    qreal val = 0;
+    if (value > 0) {
+        val = value / 10.0;
+    }
+    KConfigGroup groupTwo(m_config, u"WM"_s);
+    groupTwo.writeEntry("frameContrast", val);
+
     Q_EMIT changed(true);
 }
 
