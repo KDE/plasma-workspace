@@ -291,6 +291,8 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
         ++i;
     }
 
+    groupWMOut.writeEntry(QStringLiteral("separatorContrast"), groupWMTheme.readEntry(QStringLiteral("separatorContrast"), 0.2), writeConfigFlag);
+
     if (hasAccent && (tintAccent || applyAccentToTitlebar)) { // Titlebar accent colouring
         const auto windowBackground = config->group(u"Colors:Window"_s).readEntry<QColor>("BackgroundNormal", QColor());
 
