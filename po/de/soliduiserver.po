@@ -1,4 +1,4 @@
-# Thomas Reitelbach <tr@erdfunkstelle.de>, 2007, 2008.
+# SPDX-FileCopyrightText: 2007, 2008 Thomas Reitelbach <tr@erdfunkstelle.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: soliduiserver\n"

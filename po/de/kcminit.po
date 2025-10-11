@@ -1,5 +1,5 @@
-# Thomas Reitelbach <tr@erdfunkstelle.de>, 2007, 2008.
-# Panagiotis Papadopoulos <pano_90@gmx.net>, 2010.
+# SPDX-FileCopyrightText: 2007, 2008 Thomas Reitelbach <tr@erdfunkstelle.de>
+# SPDX-FileCopyrightText: 2010 Panagiotis Papadopoulos <pano_90@gmx.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcminit\n"

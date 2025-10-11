@@ -2,10 +2,8 @@
 # German translation for plasma-workspace.
 # Copyright (C) 2021 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# Frederik Schwarzer <schwarzer@kde.org>, 2021, 2022.
-# Jannick Kuhr <opensource@kuhr.org>, 2023.
-#
-# Automatically generated, 2021.
+# SPDX-FileCopyrightText: 2021, 2022 Frederik Schwarzer <schwarzer@kde.org>
+# SPDX-FileCopyrightText: 2023 Jannick Kuhr <opensource@kuhr.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.manageinputmethod\n"
