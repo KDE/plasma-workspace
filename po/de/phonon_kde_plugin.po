@@ -1,5 +1,5 @@
-# Stephan Johach <hunsum@gmx.de>, 2007.
-# Frederik Schwarzer <schwarzer@kde.org>, 2008.
+# SPDX-FileCopyrightText: 2007 Stephan Johach <hunsum@gmx.de>
+# SPDX-FileCopyrightText: 2008 Frederik Schwarzer <schwarzer@kde.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: phonon_kde_plugin\n"

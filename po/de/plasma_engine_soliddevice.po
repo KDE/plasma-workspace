@@ -1,9 +1,9 @@
 # SPDX-FileCopyrightText: 2024 Johannes Obermayr <johannesobermayr@gmx.de>
-# Frederik Schwarzer <schwarzer@kde.org>, 2009, 2010, 2011, 2012, 2013.
-# Rolf Eike Beer <kde@opensource.sf-tec.de>, 2009.
-# Thomas Reitelbach <tr@erdfunkstelle.de>, 2010.
-# Panagiotis Papadopoulos <pano_90@gmx.net>, 2010, 2011.
-# Burkhard Lück <lueck@hube-lueck.de>, 2011, 2012, 2013, 2014, 2015, 2016, 2018, 2019, 2020.
+# SPDX-FileCopyrightText: 2009, 2010, 2011, 2012, 2013 Frederik Schwarzer <schwarzer@kde.org>
+# SPDX-FileCopyrightText: 2009 Rolf Eike Beer <kde@opensource.sf-tec.de>
+# SPDX-FileCopyrightText: 2010 Thomas Reitelbach <tr@erdfunkstelle.de>
+# SPDX-FileCopyrightText: 2010, 2011 Panagiotis Papadopoulos <pano_90@gmx.net>
+# SPDX-FileCopyrightText: 2011, 2012, 2013, 2014, 2015, 2016, 2018, 2019, 2020 Burkhard Lück <lueck@hube-lueck.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_engine_soliddevice\n"

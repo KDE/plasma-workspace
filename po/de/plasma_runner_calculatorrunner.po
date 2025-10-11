@@ -1,7 +1,7 @@
-# Thomas Reitelbach <tr@erdfunkstelle.de>, 2009.
-# Johannes Obermayr <johannesobermayr@gmx.de>, 2010.
-# Burkhard Lück <lueck@hube-lueck.de>, 2016, 2017, 2021.
-# Frederik Schwarzer <schwarzer@kde.org>, 2023.
+# SPDX-FileCopyrightText: 2009 Thomas Reitelbach <tr@erdfunkstelle.de>
+# SPDX-FileCopyrightText: 2010 Johannes Obermayr <johannesobermayr@gmx.de>
+# SPDX-FileCopyrightText: 2016, 2017, 2021 Burkhard Lück <lueck@hube-lueck.de>
+# SPDX-FileCopyrightText: 2023 Frederik Schwarzer <schwarzer@kde.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_calculatorrunner\n"

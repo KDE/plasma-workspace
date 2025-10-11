@@ -1,4 +1,4 @@
-# Frederik Schwarzer <schwarzer@kde.org>, 2014.
+# SPDX-FileCopyrightText: 2014 Frederik Schwarzer <schwarzer@kde.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_engine_powermanagement\n"

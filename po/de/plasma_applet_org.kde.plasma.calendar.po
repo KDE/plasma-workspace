@@ -1,5 +1,5 @@
-# Frederik Schwarzer <schwarzer@kde.org>, 2014.
-# Burkhard Lück <lueck@hube-lueck.de>, 2014, 2015, 2016, 2019.
+# SPDX-FileCopyrightText: 2014 Frederik Schwarzer <schwarzer@kde.org>
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2019 Burkhard Lück <lueck@hube-lueck.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.calendar\n"

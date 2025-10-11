@@ -1,5 +1,5 @@
-# Thomas Reitelbach <tr@erdfunkstelle.de>, 2007, 2008.
-# Burkhard Lück <lueck@hube-lueck.de>, 2021.
+# SPDX-FileCopyrightText: 2007, 2008 Thomas Reitelbach <tr@erdfunkstelle.de>
+# SPDX-FileCopyrightText: 2021 Burkhard Lück <lueck@hube-lueck.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: libkworkspace\n"

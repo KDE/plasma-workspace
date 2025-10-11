@@ -1,6 +1,6 @@
 # SPDX-FileCopyrightText: 2024 Flori G <Renner03@protonmail.com>
-# Burkhard Lück <lueck@hube-lueck.de>, 2014, 2015, 2019, 2020, 2021.
-# Frederik Schwarzer <schwarzer@kde.org>, 2018, 2022, 2023.
+# SPDX-FileCopyrightText: 2014, 2015, 2019, 2020, 2021 Burkhard Lück <lueck@hube-lueck.de>
+# SPDX-FileCopyrightText: 2018, 2022, 2023 Frederik Schwarzer <schwarzer@kde.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.clipboard\n"

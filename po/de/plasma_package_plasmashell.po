@@ -1,5 +1,5 @@
-# Burkhard Lück <lueck@hube-lueck.de>, 2014.
-# Jannick Kuhr <opensource@kuhr.org>, 2023.
+# SPDX-FileCopyrightText: 2014 Burkhard Lück <lueck@hube-lueck.de>
+# SPDX-FileCopyrightText: 2023 Jannick Kuhr <opensource@kuhr.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_package_plasmashell\n"

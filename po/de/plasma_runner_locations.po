@@ -1,6 +1,6 @@
-#  <tr@erdfunkstelle.de>, 2008.
-# Thomas Reitelbach <tr@erdfunkstelle.de>, 2008, 2009.
-# Burkhard Lück <lueck@hube-lueck.de>, 2013.
+# SPDX-FileCopyrightText: 2008, 2009 Thomas Reitelbach <tr@erdfunkstelle.de>
+# <tr@erdfunkstelle.de>, 2008.
+# SPDX-FileCopyrightText: 2013 Burkhard Lück <lueck@hube-lueck.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_locations\n"

@@ -1,5 +1,5 @@
-# Panagiotis Papadopoulos <pano_90@gmx.net>, 2010.
-# Johannes Obermayr <johannesobermayr@gmx.de>, 2010.
+# SPDX-FileCopyrightText: 2010 Panagiotis Papadopoulos <pano_90@gmx.net>
+# SPDX-FileCopyrightText: 2010 Johannes Obermayr <johannesobermayr@gmx.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_windowedwidgets\n"

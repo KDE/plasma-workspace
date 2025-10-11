@@ -1,5 +1,5 @@
-# Thomas Reitelbach <tr@erdfunkstelle.de>, 2009.
-# Burkhard Lück <lueck@hube-lueck.de>, 2016.
+# SPDX-FileCopyrightText: 2009 Thomas Reitelbach <tr@erdfunkstelle.de>
+# SPDX-FileCopyrightText: 2016 Burkhard Lück <lueck@hube-lueck.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_placesrunner\n"

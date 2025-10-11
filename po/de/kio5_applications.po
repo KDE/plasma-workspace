@@ -1,6 +1,6 @@
-# Thomas Diehl <thd@kde.org>, 2003.
-# Stephan Johach <hunsum@gmx.de>, 2005.
-# Thomas Reitelbach <tr@erdfunkstelle.de>, 2008.
+# SPDX-FileCopyrightText: 2003 Thomas Diehl <thd@kde.org>
+# SPDX-FileCopyrightText: 2005 Stephan Johach <hunsum@gmx.de>
+# SPDX-FileCopyrightText: 2008 Thomas Reitelbach <tr@erdfunkstelle.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kio_applications\n"

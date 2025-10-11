@@ -1,5 +1,5 @@
-# Thomas Reitelbach <tr@erdfunkstelle.de>, 2009.
-# Frederik Schwarzer <schwarzer@kde.org>, 2009.
+# SPDX-FileCopyrightText: 2009 Thomas Reitelbach <tr@erdfunkstelle.de>
+# SPDX-FileCopyrightText: 2009 Frederik Schwarzer <schwarzer@kde.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_bookmarksrunner\n"

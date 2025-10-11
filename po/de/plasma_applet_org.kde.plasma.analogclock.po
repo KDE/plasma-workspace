@@ -1,6 +1,6 @@
-# Thomas Reitelbach <tr@erdfunkstelle.de>, 2007, 2008.
-# Burkhard Lück <lueck@hube-lueck.de>, 2013, 2019.
-# Jannick Kuhr <opensource@kuhr.org>, 2023.
+# SPDX-FileCopyrightText: 2007, 2008 Thomas Reitelbach <tr@erdfunkstelle.de>
+# SPDX-FileCopyrightText: 2013, 2019 Burkhard Lück <lueck@hube-lueck.de>
+# SPDX-FileCopyrightText: 2023 Jannick Kuhr <opensource@kuhr.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.analogclock\n"

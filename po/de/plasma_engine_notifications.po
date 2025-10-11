@@ -1,5 +1,5 @@
-# Burkhard Lück <lueck@hube-lueck.de>, 2009.
-# Thomas Reitelbach <tr@erdfunkstelle.de>, 2009.
+# SPDX-FileCopyrightText: 2009 Burkhard Lück <lueck@hube-lueck.de>
+# SPDX-FileCopyrightText: 2009 Thomas Reitelbach <tr@erdfunkstelle.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_engine_notifications\n"

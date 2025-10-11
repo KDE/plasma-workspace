@@ -1,6 +1,6 @@
-# Thomas Diehl <thd@kde.org>, 2002.
-# Thomas Reitelbach <tr@erdfunkstelle.de>, 2006, 2007, 2008, 2009.
-# Burkhard Lück <lueck@hube-lueck.de>, 2017, 2020.
+# SPDX-FileCopyrightText: 2002 Thomas Diehl <thd@kde.org>
+# SPDX-FileCopyrightText: 2006, 2007, 2008, 2009 Thomas Reitelbach <tr@erdfunkstelle.de>
+# SPDX-FileCopyrightText: 2017, 2020 Burkhard Lück <lueck@hube-lueck.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: krdb\n"
