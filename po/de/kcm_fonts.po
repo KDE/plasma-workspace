@@ -1,10 +1,10 @@
 # SPDX-FileCopyrightText: 2024 Alois Spitzbart <spitz234@hotmail.com>
-# Thomas Diehl <thd@kde.org>, 2002, 2003, 2004.
-# Stephan Johach <hunsum@gmx.de>, 2005, 2006.
-# Thomas Reitelbach <tr@erdfunkstelle.de>, 2005, 2006, 2007, 2008, 2010.
-# Burkhard Lück <lueck@hube-lueck.de>, 2008, 2014, 2017, 2018, 2019, 2021.
-# Frederik Schwarzer <schwarzer@kde.org>, 2011, 2012, 2018, 2020, 2023.
-# Jannick Kuhr <opensource@kuhr.org>, 2023.
+# SPDX-FileCopyrightText: 2002, 2003, 2004 Thomas Diehl <thd@kde.org>
+# SPDX-FileCopyrightText: 2005, 2006 Stephan Johach <hunsum@gmx.de>
+# SPDX-FileCopyrightText: 2005, 2006, 2007, 2008, 2010 Thomas Reitelbach <tr@erdfunkstelle.de>
+# SPDX-FileCopyrightText: 2008, 2014, 2017, 2018, 2019, 2021 Burkhard Lück <lueck@hube-lueck.de>
+# SPDX-FileCopyrightText: 2011, 2012, 2018, 2020, 2023 Frederik Schwarzer <schwarzer@kde.org>
+# SPDX-FileCopyrightText: 2023 Jannick Kuhr <opensource@kuhr.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_fonts\n"

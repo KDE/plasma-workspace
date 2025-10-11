@@ -3,8 +3,6 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 # SPDX-FileCopyrightText: 2024 Johannes Obermayr <johannesobermayr@gmx.de>
-# Automatically generated, 2024.
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: kded_donationmessage\n"

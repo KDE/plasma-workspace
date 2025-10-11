@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_runner_services\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-08 00:45+0000\n"
-"PO-Revision-Date: 2020-05-16 20:23+0300\n"
+"PO-Revision-Date: 2025-10-11 00:03+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 3.6\n"
 
 #: servicerunner.cpp:442
 #, kde-format
@@ -26,7 +26,7 @@ msgctxt ""
 "Jump list search result, %1 is action (eg. open new tab), %2 is application "
 "(eg. browser)"
 msgid "%1 - %2"
-msgstr "%1 - %2"
+msgstr "%1 – %2"
 
 #: servicerunner.cpp:483
 #, kde-format
