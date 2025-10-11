@@ -917,6 +917,7 @@ void Notifications::showInhibitionSummary(Urgency urgency, const QStringList &bl
     notification->setIconName(u"preferences-desktop-notification-bell"_s);
     notification->setFlags(KNotification::CloseOnTimeout);
     notification->setComponentName(u"libnotificationmanager"_s);
+    notification->setHint(u"transient"_s, true);
 
     const QString showNotificationsText = i18nc("@action:button Show the notifications popup", "Show Notifications");
 

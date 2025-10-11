@@ -518,6 +518,7 @@ QtObject {
             required property string notifyRcName
             required property string desktopEntry
 
+            readonly property bool isTransient: model.transient // "transient" is a reserved keyword, cannot declare it as required property
             readonly property bool hasSomeActions: (hasDefaultAction || false) || (actionLabels || []).length > 0 || (configureActionLabel || "").length > 0 || (hasReplyAction || false)
 
             popupWidth: globals.popupWidth
@@ -663,11 +664,11 @@ QtObject {
 
             onHoverEntered: model.read = true
             onExpired: {
-                if (resident || hasSomeActions) {
+                if (resident || (hasSomeActions && !isTransient)) {
                     // When resident, only mark it as expired so the popup disappears
                     // but don't actually invalidate the notification.
                     // Also don't invalidate if the popup has any actions,
-                    // so it remains usable in history.
+                    // so it remains usable in history, except when explicitly transient.
                     model.expired = true;
                 } else {
                     globals.popupNotificationsModel.expire(globals.popupNotificationsModel.index(index, 0))
