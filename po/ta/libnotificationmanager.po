@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-08 00:45+0000\n"
+"POT-Creation-Date: 2025-10-12 00:44+0000\n"
 "PO-Revision-Date: 2025-08-03 11:41+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -118,7 +118,7 @@ msgid_plural "%1 notifications were received while Do Not Disturb was active."
 msgstr[0] "தொந்தரவு செய்யா பயன்முறையில் இருந்தபோது %1 அறிவிப்பு பெறப்பட்டது."
 msgstr[1] "தொந்தரவு செய்யா பயன்முறையில் இருந்தபோது %1 அறிவிப்புகள் பெறப்பட்டன."
 
-#: notifications.cpp:920
+#: notifications.cpp:921
 #, kde-format
 msgctxt "@action:button Show the notifications popup"
 msgid "Show Notifications"

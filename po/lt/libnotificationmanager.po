@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-08 00:45+0000\n"
+"POT-Creation-Date: 2025-10-12 00:44+0000\n"
 "PO-Revision-Date: 2025-08-05 15:43+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -138,7 +138,7 @@ msgstr[1] "Kol buvo įjungta „Netrukdyti“ veiksena, buvo gauti %1 pranešima
 msgstr[2] "Kol buvo įjungta „Netrukdyti“ veiksena, buvo gauta %1 pranešimų."
 msgstr[3] "Kol buvo įjungta „Netrukdyti“ veiksena, buvo gautas %1 pranešimas."
 
-#: notifications.cpp:920
+#: notifications.cpp:921
 #, kde-format
 msgctxt "@action:button Show the notifications popup"
 msgid "Show Notifications"
