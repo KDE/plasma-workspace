@@ -99,7 +99,7 @@ Q_SIGNALS:
     void hasBatteriesChanged(bool status);
     void pluggedInChanged(bool status);
     void hasInternalBatteriesChanged(bool status);
-    void stateChanged(ChargeStateEnum state);
+    void stateChanged(BatteryControlModel::ChargeStateEnum state);
     void chargeStopThresholdChanged(int threshold);
     void remainingMsecChanged(qulonglong time);
     void smoothedRemainingMsecChanged(qulonglong time);

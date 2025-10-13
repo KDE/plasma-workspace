@@ -224,7 +224,7 @@ Q_SIGNALS:
     void updatedChanged();
     void summaryChanged();
     void textChanged();
-    void stateChanged(Notifications::JobState jobState);
+    void stateChanged(NotificationManager::Notifications::JobState jobState);
     void percentageChanged(int percentage);
     void errorChanged(int error);
     void errorTextChanged(const QString &errorText);

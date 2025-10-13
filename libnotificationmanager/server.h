@@ -187,20 +187,20 @@ Q_SIGNALS:
      * This is emitted regardless of any filtering rules or user settings.
      * @param notification The notification
      */
-    void notificationAdded(const Notification &notification);
+    void notificationAdded(const NotificationManager::Notification &notification);
     /**
      * Emitted when a notification is supposed to be updated
      * This is emitted regardless of any filtering rules or user settings.
      * @param replacedId The ID of the notification it replaces
      * @param notification The new notification to use instead
      */
-    void notificationReplaced(uint replacedId, const Notification &notification);
+    void notificationReplaced(uint replacedId, const NotificationManager::Notification &notification);
     /**
      * Emitted when a notification got removed (closed)
      * @param id The notification ID
      * @param reason The reason why it was closed
      */
-    void notificationRemoved(uint id, CloseReason reason);
+    void notificationRemoved(uint id, NotificationManager::Server::CloseReason reason);
 
     /**
      * Emitted when the inhibited state changed.

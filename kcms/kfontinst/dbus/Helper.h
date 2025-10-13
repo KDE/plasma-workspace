@@ -23,7 +23,7 @@ public:
 
 public Q_SLOTS:
 
-    ActionReply manage(const QVariantMap &args);
+    KAuth::ActionReply manage(const QVariantMap &args);
 
 private:
     int install(const QVariantMap &args);

@@ -250,11 +250,11 @@ public:
     Q_DECLARE_FLAGS(NotificationBehaviors, NotificationBehavior)
     Q_FLAG(NotificationBehaviors)
 
-    Q_INVOKABLE NotificationBehaviors applicationBehavior(const QString &desktopEntry) const;
-    Q_INVOKABLE void setApplicationBehavior(const QString &desktopEntry, NotificationBehaviors behaviors);
+    Q_INVOKABLE NotificationManager::Settings::NotificationBehaviors applicationBehavior(const QString &desktopEntry) const;
+    Q_INVOKABLE void setApplicationBehavior(const QString &desktopEntry, NotificationManager::Settings::NotificationBehaviors behaviors);
 
-    Q_INVOKABLE NotificationBehaviors serviceBehavior(const QString &desktopEntry) const;
-    Q_INVOKABLE void setServiceBehavior(const QString &desktopEntry, NotificationBehaviors behaviors);
+    Q_INVOKABLE NotificationManager::Settings::NotificationBehaviors serviceBehavior(const QString &desktopEntry) const;
+    Q_INVOKABLE void setServiceBehavior(const QString &desktopEntry, NotificationManager::Settings::NotificationBehaviors behaviors);
 
     Q_INVOKABLE void registerKnownApplication(const QString &desktopEntry);
     Q_INVOKABLE void forgetKnownApplication(const QString &desktopEntry);

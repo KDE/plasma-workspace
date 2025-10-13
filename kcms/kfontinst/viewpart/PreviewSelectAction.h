@@ -29,7 +29,7 @@ public:
 
 Q_SIGNALS:
 
-    void range(const QList<CFcEngine::TRange> &range);
+    void range(const QList<KFI::CFcEngine::TRange> &range);
 
 private Q_SLOTS:
 

@@ -420,7 +420,7 @@ public:
         m_pendingStackingOrder.reset();
     }
 Q_SIGNALS:
-    void windowCreated(PlasmaWindow *window);
+    void windowCreated(TaskManager::PlasmaWindow *window);
     void stackingOrderChanged(const QList<QString> &uuids);
 
 private:
