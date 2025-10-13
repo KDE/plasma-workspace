@@ -65,7 +65,7 @@ public:
         \note You need to destroy the pending reply object manually in QML
         if you connect to the \c finished signal.
     */
-    Q_INVOKABLE DBusPendingReply *asyncCall(const DBusMessage &message);
+    Q_INVOKABLE Plasma::DBusPendingReply *asyncCall(const Plasma::DBusMessage &message);
 
     /*!
         \qmlmethod void org.kde.plasma.workspace.dbus::DBusConnection::asyncCall(message, resolve, reject)
@@ -94,7 +94,7 @@ public:
         })
         \endqml
     */
-    Q_INVOKABLE void asyncCall(const DBusMessage &message, const QJSValue &resolve, const QJSValue &reject);
+    Q_INVOKABLE void asyncCall(const Plasma::DBusMessage &message, const QJSValue &resolve, const QJSValue &reject);
 
     static QByteArray parseSignatureFromIntrospection(QStringView introspection, const DBusMessage &message);
 

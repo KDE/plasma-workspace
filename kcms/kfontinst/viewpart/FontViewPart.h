@@ -51,7 +51,7 @@ public Q_SLOTS:
     void fontStat(int pid, const KFI::Family &font);
     void changeText();
     void print();
-    void displayType(const QList<CFcEngine::TRange> &range);
+    void displayType(const QList<KFI::CFcEngine::TRange> &range);
     void showFace(int face);
 
 private:

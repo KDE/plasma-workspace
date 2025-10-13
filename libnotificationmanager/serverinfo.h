@@ -57,7 +57,7 @@ public:
     QString specVersion() const;
 
 Q_SIGNALS:
-    void statusChanged(Status status);
+    void statusChanged(NotificationManager::ServerInfo::Status status);
     void vendorChanged(const QString &vendor);
     void nameChanged(const QString &name);
     void versionChanged(const QString &version);

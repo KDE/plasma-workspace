@@ -68,7 +68,7 @@ public:
         }
     }
 Q_SIGNALS:
-    void newActivation(PlasmaActivation *activation);
+    void newActivation(TaskManager::PlasmaActivation *activation);
 
 protected:
     void org_kde_plasma_activation_feedback_activation(::org_kde_plasma_activation *id) override

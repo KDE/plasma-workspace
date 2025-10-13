@@ -42,13 +42,13 @@ public:
     QDBusObjectPath requestView(const QString &desktopEntry, int capabilities, const QVariantMap &hints);
 
 Q_SIGNALS:
-    void jobViewAboutToBeAdded(int row, Job *job);
-    void jobViewAdded(int row, Job *job);
+    void jobViewAboutToBeAdded(int row, NotificationManager::Job *job);
+    void jobViewAdded(int row, NotificationManager::Job *job);
 
     void jobViewAboutToBeRemoved(int row); //, Job *job);
     void jobViewRemoved(int row);
 
-    void jobViewChanged(int row, Job *job, const QList<int> &roles);
+    void jobViewChanged(int row, NotificationManager::Job *job, const QList<int> &roles);
 
     void serviceOwnershipLost();
 

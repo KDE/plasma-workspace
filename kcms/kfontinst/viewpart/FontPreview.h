@@ -46,7 +46,7 @@ public:
 
 public Q_SLOTS:
 
-    void setUnicodeRange(const QList<CFcEngine::TRange> &r);
+    void setUnicodeRange(const QList<KFI::CFcEngine::TRange> &r);
     void zoomIn();
     void zoomOut();
 

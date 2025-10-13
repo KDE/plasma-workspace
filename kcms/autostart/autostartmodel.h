@@ -57,7 +57,7 @@ public:
 
     Q_INVOKABLE void removeEntry(int row);
     Q_INVOKABLE void editApplication(int row, QQuickItem *context);
-    Q_INVOKABLE void addScript(const QUrl &url, AutostartEntrySource kind);
+    Q_INVOKABLE void addScript(const QUrl &url, AutostartModel::AutostartEntrySource kind);
     Q_INVOKABLE void showApplicationDialog(QQuickItem *context);
     Q_INVOKABLE void makeFileExecutable(const QString &fileName);
     bool usingSystemdBoot() const;

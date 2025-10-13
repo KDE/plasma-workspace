@@ -36,7 +36,7 @@ public:
     QHash<QByteArray, QVariant> objectDescriptionProperties(ObjectDescriptionType type, int index) const override;
 
 Q_SIGNALS:
-    void objectDescriptionChanged(ObjectDescriptionType);
+    void objectDescriptionChanged(Phonon::ObjectDescriptionType);
 };
 
 } // namespace Phonon

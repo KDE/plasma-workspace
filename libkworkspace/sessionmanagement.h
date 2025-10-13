@@ -81,9 +81,9 @@ public Q_SLOTS:
      * These requestX methods will either launch a prompt to shutdown or
      * The user may cancel it at any point in the process
      */
-    void requestShutdown(ConfirmationMode = ConfirmationMode::Default);
-    void requestReboot(ConfirmationMode = ConfirmationMode::Default);
-    void requestLogout(ConfirmationMode = ConfirmationMode::Default);
+    void requestShutdown(SessionManagement::ConfirmationMode = ConfirmationMode::Default);
+    void requestReboot(SessionManagement::ConfirmationMode = ConfirmationMode::Default);
+    void requestLogout(SessionManagement::ConfirmationMode = ConfirmationMode::Default);
 
     /**
      * ...And this one will always show the prompt with all options, irrespective

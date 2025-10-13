@@ -500,7 +500,7 @@ public:
      * Invokes the action that should be triggered when clicking
      * the notification bubble itself.
      */
-    Q_INVOKABLE void invokeDefaultAction(const QModelIndex &idx, InvokeBehavior behavior = None);
+    Q_INVOKABLE void invokeDefaultAction(const QModelIndex &idx, NotificationManager::Notifications::InvokeBehavior behavior = None);
     /**
      * @brief Invoke a notification action
      *
@@ -508,7 +508,7 @@ public:
      * For invoking the default action, i.e. the one that is triggered
      * when clicking the notification bubble, use invokeDefaultAction
      */
-    Q_INVOKABLE void invokeAction(const QModelIndex &idx, const QString &actionId, InvokeBehavior = None);
+    Q_INVOKABLE void invokeAction(const QModelIndex &idx, const QString &actionId, NotificationManager::Notifications::InvokeBehavior = None);
 
     /**
      * @brief Reply to a notification
@@ -516,7 +516,7 @@ public:
      * Replies to the given notification with the given text.
      * @since 5.18
      */
-    Q_INVOKABLE void reply(const QModelIndex &idx, const QString &text, InvokeBehavior behavior);
+    Q_INVOKABLE void reply(const QModelIndex &idx, const QString &text, NotificationManager::Notifications::InvokeBehavior behavior);
 
     /**
      * @brief Start automatic timeout of notifications
@@ -559,7 +559,7 @@ public:
      * Removes the notifications matching th ClearFlags from the model.
      * This can be used for e.g. a "Clear History" action.
      */
-    Q_INVOKABLE void clear(ClearFlags flags);
+    Q_INVOKABLE void clear(NotificationManager::Notifications::ClearFlags flags);
 
     /**
      * Returns a model index pointing to the group of a notification.
@@ -573,7 +573,9 @@ public:
     /**
      * Shows a notification to report the number of unread inhibited notifications.
      */
-    Q_INVOKABLE void showInhibitionSummary(Urgency urgency, const QStringList &blacklistedDesktopEntries, const QStringList &blacklistedNotifyRcNames);
+    Q_INVOKABLE void showInhibitionSummary(NotificationManager::Notifications::Urgency urgency,
+                                           const QStringList &blacklistedDesktopEntries,
+                                           const QStringList &blacklistedNotifyRcNames);
 
     QVariant data(const QModelIndex &index, int role) const override;
     bool setData(const QModelIndex &index, const QVariant &value, int role) override;
