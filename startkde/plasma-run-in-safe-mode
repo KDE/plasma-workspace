@@ -1,0 +1,15 @@
+#!/bin/sh
+set -euo pipefail
+
+# This script creates a new home, in /tmp as that probably has free space
+# and uses that for login
+
+TMP_HOME="$(mktemp -d /tmp/tmp-home.XXXXXX)"
+chmod 700 "$TMP_HOME"
+
+export REAL_HOME=$HOME
+export HOME="$TMP_HOME"
+export PLASMA_SAFE_MODE=1
+
+# Continue with the next script
+exec "$@"
