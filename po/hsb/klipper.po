@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: desktop_kdebase\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-04 00:44+0000\n"
+"POT-Creation-Date: 2025-10-13 00:44+0000\n"
 "PO-Revision-Date: 2008-11-06 22:08+0100\n"
 "Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
 "Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
@@ -202,7 +202,7 @@ msgid ""
 "<interface>Action Menu</interface> page."
 msgstr ""
 
-#: configdialog.cpp:581
+#: configdialog.cpp:590
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -210,24 +210,24 @@ msgid ""
 "commands?"
 msgstr ""
 
-#: configdialog.cpp:582
+#: configdialog.cpp:591
 #, fuzzy, kde-format
 #| msgid "Delete Action"
 msgid "Confirm Delete Action"
 msgstr "Akciju zničić"
 
-#: configdialog.cpp:611
+#: configdialog.cpp:644
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Powšitkownje"
 
-#: configdialog.cpp:611
+#: configdialog.cpp:644
 #, kde-format
 msgid "General Configuration"
 msgstr "Powšitkowne připrawjenje"
 
-#: configdialog.cpp:612
+#: configdialog.cpp:645
 #, fuzzy, kde-format
 #| msgctxt "Actions Config"
 #| msgid "Actions"
@@ -235,37 +235,37 @@ msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Akcije"
 
-#: configdialog.cpp:612
+#: configdialog.cpp:645
 #, fuzzy, kde-format
 #| msgctxt "Actions Config"
 #| msgid "Actions"
 msgid "Action Menu"
 msgstr "Akcije"
 
-#: configdialog.cpp:613
+#: configdialog.cpp:646
 #, fuzzy, kde-format
 #| msgid "Actions Configuration"
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Připrawjenje akcijow"
 
-#: configdialog.cpp:613
+#: configdialog.cpp:646
 #, kde-format
 msgid "Actions Configuration"
 msgstr "Připrawjenje akcijow"
 
-#: configdialog.cpp:616
+#: configdialog.cpp:649
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Skrótšenki"
 
-#: configdialog.cpp:616
+#: configdialog.cpp:649
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Připrawjenje skótšenkow"
 
-#: configdialog.cpp:701
+#: configdialog.cpp:735
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -277,7 +277,7 @@ msgid ""
 "to enter</link>."
 msgstr ""
 
-#: configdialog.cpp:714
+#: configdialog.cpp:748
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -968,7 +968,7 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "Wobsah zapisnika"
 
-#: urlgrabber.cpp:198
+#: urlgrabber.cpp:202
 #, kde-format
 msgid "&Cancel"
 msgstr "&Přetorhnyć"

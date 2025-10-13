@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-04 00:44+0000\n"
+"POT-Creation-Date: 2025-10-13 00:44+0000\n"
 "PO-Revision-Date: 2025-08-30 11:58+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -224,7 +224,7 @@ msgstr ""
 "De acties verschijnen in het pop-up-menu die geconfigureerd kan worden op de "
 "pagina <interface>Menu Actie</interface> page."
 
-#: configdialog.cpp:581
+#: configdialog.cpp:590
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -234,56 +234,56 @@ msgstr ""
 "De geselecteerde actie <resource>%1</resource> verwijderen<nl/>en al zijn "
 "commando's?"
 
-#: configdialog.cpp:582
+#: configdialog.cpp:591
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "Actie verwijderen bevestigen"
 
-#: configdialog.cpp:611
+#: configdialog.cpp:644
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Algemeen"
 
-#: configdialog.cpp:611
+#: configdialog.cpp:644
 #, kde-format
 msgid "General Configuration"
 msgstr "Algemene configuratie"
 
-#: configdialog.cpp:612
+#: configdialog.cpp:645
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Menu Actie"
 
-#: configdialog.cpp:612
+#: configdialog.cpp:645
 #, kde-format
 msgid "Action Menu"
 msgstr "Menu Actie"
 
-#: configdialog.cpp:613
+#: configdialog.cpp:646
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Acties configureren"
 
-#: configdialog.cpp:613
+#: configdialog.cpp:646
 #, kde-format
 msgid "Actions Configuration"
 msgstr "Acties configureren"
 
-#: configdialog.cpp:616
+#: configdialog.cpp:649
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Sneltoetsen"
 
-#: configdialog.cpp:616
+#: configdialog.cpp:649
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Sneltoetsen instellen"
 
-#: configdialog.cpp:701
+#: configdialog.cpp:735
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -301,7 +301,7 @@ msgstr ""
 "verschijnt bij gebruik van een specifieke toepassing, voeg het dan toe aan "
 "deze lijst. <link>Hoe de in te voeren naam te vinden</link>."
 
-#: configdialog.cpp:714
+#: configdialog.cpp:748
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -1008,7 +1008,7 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "Klembordverschijning"
 
-#: urlgrabber.cpp:198
+#: urlgrabber.cpp:202
 #, kde-format
 msgid "&Cancel"
 msgstr "&Annuleren"

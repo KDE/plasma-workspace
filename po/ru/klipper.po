@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-04 00:44+0000\n"
+"POT-Creation-Date: 2025-10-13 00:44+0000\n"
 "PO-Revision-Date: 2025-09-26 20:21+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -236,7 +236,7 @@ msgstr ""
 "Эти действия отображаются во всплывающем меню, которое возможно настроить на "
 "странице <interface>Меню действий</interface>."
 
-#: configdialog.cpp:581
+#: configdialog.cpp:590
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -245,56 +245,56 @@ msgid ""
 msgstr ""
 "Удалить выбранное действие <resource>%1</resource><nl/>и все его команды?"
 
-#: configdialog.cpp:582
+#: configdialog.cpp:591
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "Подтверждение удаления действия"
 
-#: configdialog.cpp:611
+#: configdialog.cpp:644
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Главное"
 
-#: configdialog.cpp:611
+#: configdialog.cpp:644
 #, kde-format
 msgid "General Configuration"
 msgstr "Основные параметры"
 
-#: configdialog.cpp:612
+#: configdialog.cpp:645
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Меню действий"
 
-#: configdialog.cpp:612
+#: configdialog.cpp:645
 #, kde-format
 msgid "Action Menu"
 msgstr "Меню действий"
 
-#: configdialog.cpp:613
+#: configdialog.cpp:646
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Настройка действий"
 
-#: configdialog.cpp:613
+#: configdialog.cpp:646
 #, kde-format
 msgid "Actions Configuration"
 msgstr "Настройка действий"
 
-#: configdialog.cpp:616
+#: configdialog.cpp:649
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Комбинации клавиш"
 
-#: configdialog.cpp:616
+#: configdialog.cpp:649
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Настройка комбинаций клавиш"
 
-#: configdialog.cpp:701
+#: configdialog.cpp:735
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -312,7 +312,7 @@ msgstr ""
 "нежелательно для определённой программы, добавьте её в список. <link>Как "
 "определить название, которое следует ввести</link>."
 
-#: configdialog.cpp:714
+#: configdialog.cpp:748
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -1019,7 +1019,7 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "Всплывающее окно буфера обмена"
 
-#: urlgrabber.cpp:198
+#: urlgrabber.cpp:202
 #, kde-format
 msgid "&Cancel"
 msgstr "О&тмена"

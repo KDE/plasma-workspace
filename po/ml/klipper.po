@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE Malayalam Translation\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-04 00:44+0000\n"
+"POT-Creation-Date: 2025-10-13 00:44+0000\n"
 "PO-Revision-Date: 2021-08-17 12:59+0000\n"
 "Last-Translator: anuraghkp <kpanuragh@gmail.com>\n"
 "Language-Team: Malayalam <Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|"
@@ -205,7 +205,7 @@ msgid ""
 "<interface>Action Menu</interface> page."
 msgstr ""
 
-#: configdialog.cpp:581
+#: configdialog.cpp:590
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -213,24 +213,24 @@ msgid ""
 "commands?"
 msgstr ""
 
-#: configdialog.cpp:582
+#: configdialog.cpp:591
 #, fuzzy, kde-format
 #| msgid "Delete Action"
 msgid "Confirm Delete Action"
 msgstr "പ്രവൃത്തി കളയുക"
 
-#: configdialog.cpp:611
+#: configdialog.cpp:644
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "പൊതുവായത്"
 
-#: configdialog.cpp:611
+#: configdialog.cpp:644
 #, kde-format
 msgid "General Configuration"
 msgstr "പൊതുവായ സജ്ജീകരണങ്ങള്‍"
 
-#: configdialog.cpp:612
+#: configdialog.cpp:645
 #, fuzzy, kde-format
 #| msgctxt "Actions Config"
 #| msgid "Actions"
@@ -238,37 +238,37 @@ msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "പ്രവൃത്തികള്‍"
 
-#: configdialog.cpp:612
+#: configdialog.cpp:645
 #, fuzzy, kde-format
 #| msgctxt "Actions Config"
 #| msgid "Actions"
 msgid "Action Menu"
 msgstr "പ്രവൃത്തികള്‍"
 
-#: configdialog.cpp:613
+#: configdialog.cpp:646
 #, fuzzy, kde-format
 #| msgid "Actions Configuration"
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "പ്രവൃത്തികളുടെ സജ്ജീകരണം"
 
-#: configdialog.cpp:613
+#: configdialog.cpp:646
 #, kde-format
 msgid "Actions Configuration"
 msgstr "പ്രവൃത്തികളുടെ സജ്ജീകരണം"
 
-#: configdialog.cpp:616
+#: configdialog.cpp:649
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "കുറുക്ക്‌വഴികള്‍"
 
-#: configdialog.cpp:616
+#: configdialog.cpp:649
 #, fuzzy, kde-format
 msgid "Shortcuts Configuration"
 msgstr "കുറുക്ക്‌വഴികളുടെ സജ്ജീകരണങ്ങള്‍"
 
-#: configdialog.cpp:701
+#: configdialog.cpp:735
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -280,7 +280,7 @@ msgid ""
 "to enter</link>."
 msgstr ""
 
-#: configdialog.cpp:714
+#: configdialog.cpp:748
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -982,7 +982,7 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "ഓര്‍മ്മച്ചെപ്പ് ചരിത്രം"
 
-#: urlgrabber.cpp:198
+#: urlgrabber.cpp:202
 #, kde-format
 msgid "&Cancel"
 msgstr "&റദ്ദാക്കുക"

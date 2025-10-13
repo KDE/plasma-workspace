@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-04 00:44+0000\n"
+"POT-Creation-Date: 2025-10-13 00:44+0000\n"
 "PO-Revision-Date: 2025-08-30 19:59+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -222,7 +222,7 @@ msgstr ""
 "הפעולות האלו מופיעות בתפריט הקופץ שאותו ניתן להגדיר בעמוד <interface>תפריט "
 "הפעולות</interface>."
 
-#: configdialog.cpp:581
+#: configdialog.cpp:590
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -231,56 +231,56 @@ msgid ""
 msgstr ""
 "למחוק את הפעולה <resource>%1</resource><nl/> הנבחרת ואת כל הפקודות שלה?"
 
-#: configdialog.cpp:582
+#: configdialog.cpp:591
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "אישור פעולת מחיקה"
 
-#: configdialog.cpp:611
+#: configdialog.cpp:644
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "כללי"
 
-#: configdialog.cpp:611
+#: configdialog.cpp:644
 #, kde-format
 msgid "General Configuration"
 msgstr "הגדרות כלליות"
 
-#: configdialog.cpp:612
+#: configdialog.cpp:645
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "תפריט פעולות"
 
-#: configdialog.cpp:612
+#: configdialog.cpp:645
 #, kde-format
 msgid "Action Menu"
 msgstr "תפריט פעולות"
 
-#: configdialog.cpp:613
+#: configdialog.cpp:646
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "הגדרת פעולות"
 
-#: configdialog.cpp:613
+#: configdialog.cpp:646
 #, kde-format
 msgid "Actions Configuration"
 msgstr "הגדרת פעולות"
 
-#: configdialog.cpp:616
+#: configdialog.cpp:649
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "קיצורי מקשים"
 
-#: configdialog.cpp:616
+#: configdialog.cpp:649
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "הגדרות קיצורי מקשים"
 
-#: configdialog.cpp:701
+#: configdialog.cpp:735
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -297,7 +297,7 @@ msgstr ""
 "שימוש ביישום כלשהו, כדי להוסיף אותו לרשימה. <link>איך למצוא איזה שם להכניס</"
 "link>."
 
-#: configdialog.cpp:714
+#: configdialog.cpp:748
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -986,7 +986,7 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "חלונית לוח גזירים צצה"
 
-#: urlgrabber.cpp:198
+#: urlgrabber.cpp:202
 #, kde-format
 msgid "&Cancel"
 msgstr "&ביטול"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-04 00:44+0000\n"
+"POT-Creation-Date: 2025-10-13 00:44+0000\n"
 "PO-Revision-Date: 2024-10-25 23:34-0500\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
@@ -190,7 +190,7 @@ msgid ""
 "<interface>Action Menu</interface> page."
 msgstr ""
 
-#: configdialog.cpp:581
+#: configdialog.cpp:590
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -199,56 +199,56 @@ msgid ""
 msgstr ""
 "ਕੀ <resource>%1</resource> ਕਾਰਵਾਈ<nl/>ਅਤੇ ਇਸ ਦੀਆਂ ਸਾਰੀਆਂ ਕਮਾਂਡਾਂ ਨੂੰ ਹਟਾਉਣਾ ਹੈ?"
 
-#: configdialog.cpp:582
+#: configdialog.cpp:591
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "ਹਟਾਉਣ ਕਾਰਵਾਈ ਦੀ ਤਸਦੀਕ"
 
-#: configdialog.cpp:611
+#: configdialog.cpp:644
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "ਸਧਾਰਨ"
 
-#: configdialog.cpp:611
+#: configdialog.cpp:644
 #, kde-format
 msgid "General Configuration"
 msgstr "ਸਧਾਰਨ ਸੰਰਚਨਾ"
 
-#: configdialog.cpp:612
+#: configdialog.cpp:645
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "ਐਕਸ਼ਨ ਮੇਨੂ"
 
-#: configdialog.cpp:612
+#: configdialog.cpp:645
 #, kde-format
 msgid "Action Menu"
 msgstr "ਐਕਸ਼ਨ ਮੇਨੂ"
 
-#: configdialog.cpp:613
+#: configdialog.cpp:646
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "ਐਕਸ਼ਨਾਂ ਦੀ ਸੰਰਚਨਾ"
 
-#: configdialog.cpp:613
+#: configdialog.cpp:646
 #, kde-format
 msgid "Actions Configuration"
 msgstr "ਐਕਸ਼ਨਾਂ ਦੀ ਸੰਰਚਨਾ"
 
-#: configdialog.cpp:616
+#: configdialog.cpp:649
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "ਸ਼ਾਰਟਕੱਟ"
 
-#: configdialog.cpp:616
+#: configdialog.cpp:649
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "ਸ਼ਾਰਟਕੱਟ ਸੰਰਚਨਾ"
 
-#: configdialog.cpp:701
+#: configdialog.cpp:735
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -260,7 +260,7 @@ msgid ""
 "to enter</link>."
 msgstr ""
 
-#: configdialog.cpp:714
+#: configdialog.cpp:748
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -927,7 +927,7 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "ਕਲਿੱਪਬੋਰਡ ਪੌਪਅੱਪ"
 
-#: urlgrabber.cpp:198
+#: urlgrabber.cpp:202
 #, kde-format
 msgid "&Cancel"
 msgstr "ਰੱਦ ਕਰੋ(&C)"
