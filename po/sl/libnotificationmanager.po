@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-08 02:39+0000\n"
+"POT-Creation-Date: 2025-10-13 02:36+0000\n"
 "PO-Revision-Date: 2025-07-24 06:57+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -138,7 +138,7 @@ msgstr[1] "Prejeto je bilo %1 obvestilo med aktivnim načinom Ne moti."
 msgstr[2] "Prejeti sta bili %1 obvestili med aktivnim načinom Ne moti."
 msgstr[3] "Prejetih je bilo %1 obvestil med aktivnim načinom Ne moti."
 
-#: notifications.cpp:921
+#: notifications.cpp:922
 #, kde-format
 msgctxt "@action:button Show the notifications popup"
 msgid "Show Notifications"

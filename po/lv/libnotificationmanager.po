@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-08 02:39+0000\n"
+"POT-Creation-Date: 2025-10-13 02:36+0000\n"
 "PO-Revision-Date: 2025-08-18 17:32+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -130,7 +130,7 @@ msgstr[0] "Netraucēšanas režīma laikā saņēmāt %1 paziņojumu."
 msgstr[1] "Netraucēšanas režīma laikā saņēmāt %1 paziņojumus."
 msgstr[2] "Netraucēšanas režīma laikā saņēmāt %1 paziņojumu."
 
-#: notifications.cpp:921
+#: notifications.cpp:922
 #, kde-format
 msgctxt "@action:button Show the notifications popup"
 msgid "Show Notifications"

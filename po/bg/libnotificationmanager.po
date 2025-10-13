@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-08 02:39+0000\n"
+"POT-Creation-Date: 2025-10-13 02:36+0000\n"
 "PO-Revision-Date: 2025-07-28 17:55+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -120,7 +120,7 @@ msgstr[0] ""
 msgstr[1] ""
 "%1 известия бяха получени докато режимът „Не безпокой“ беше активен."
 
-#: notifications.cpp:921
+#: notifications.cpp:922
 #, kde-format
 msgctxt "@action:button Show the notifications popup"
 msgid "Show Notifications"
