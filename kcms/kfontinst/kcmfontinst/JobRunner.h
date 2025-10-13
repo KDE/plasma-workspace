@@ -71,7 +71,7 @@ public:
     static QUrl encode(const QString &family, quint32 style, bool system);
 
     static void getAssociatedUrls(const QUrl &url, QList<QUrl> &list, bool afmAndPfm);
-    int exec(ECommand cmd, const ItemList &urls, bool destIsSystem);
+    int execCommand(ECommand cmd, const ItemList &urls, bool destIsSystem);
 
 Q_SIGNALS:
 

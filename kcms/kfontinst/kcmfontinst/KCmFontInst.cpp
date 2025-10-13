@@ -1158,7 +1158,7 @@ void CKCmFontInst::doCmd(CJobRunner::ECommand cmd, const CJobRunner::ItemList &u
     CJobRunner runner(widget());
 
     connect(&runner, &CJobRunner::configuring, m_fontList, &CFontList::unsetSlowUpdates);
-    runner.exec(cmd, urls, system);
+    runner.execCommand(cmd, urls, system);
     m_fontList->setSlowUpdates(false);
     refreshFontList();
     if (CJobRunner::CMD_DELETE == cmd) {

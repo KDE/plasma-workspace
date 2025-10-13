@@ -306,7 +306,7 @@ static void addEnableActions(CJobRunner::ItemList &urls)
     urls = modified;
 }
 
-int CJobRunner::exec(ECommand cmd, const ItemList &urls, bool destIsSystem)
+int CJobRunner::execCommand(ECommand cmd, const ItemList &urls, bool destIsSystem)
 {
     m_autoSkip = m_cancelClicked = m_modified = false;
 

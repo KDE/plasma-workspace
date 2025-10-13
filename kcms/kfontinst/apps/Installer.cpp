@@ -91,7 +91,7 @@ int CInstaller::install(const QSet<QUrl> &urls)
         jobRunner.winId();
         KWindowSystem::setMainWindow(jobRunner.windowHandle(), m_parentWindow);
 
-        return jobRunner.exec(CJobRunner::CMD_INSTALL, list, Misc::root() || sysInstall);
+        return jobRunner.execCommand(CJobRunner::CMD_INSTALL, list, Misc::root() || sysInstall);
     } else {
         return -1;
     }
