@@ -35,8 +35,11 @@ void SchemeEditorOptions::loadOptions()
 
     accentTitlebar->setChecked(generalGroup.readEntry("TitlebarIsAccentColored", generalGroup.readEntry("accentActiveTitlebar", false)));
 
-    KConfigGroup KDEgroup(m_config, u"KDE"_s);
-    contrastSlider->setValue(KDEgroup.readEntry("contrast", KColorScheme::contrastF() * 10));
+    contrastSpinBox->blockSignals(true);
+    KConfigGroup WMGroup(m_config, u"WM"_s);
+    contrastSpinBox->setValue(WMGroup.readEntry("frameContrast", KColorScheme::contrastF()));
+    updateContrastExample();
+    contrastSpinBox->blockSignals(false);
 
     KConfigGroup group(m_config, u"ColorEffects:Inactive"_s);
     useInactiveEffects->setChecked(group.readEntry("Enable", false));
@@ -57,18 +60,17 @@ void SchemeEditorOptions::loadOptions()
 }
 
 // Option slot
-void SchemeEditorOptions::on_contrastSlider_valueChanged(int value)
+void SchemeEditorOptions::on_contrastSpinBox_valueChanged(double value)
 {
+    // For the old value, convert it to integer
+    const int val = qRound(value);
     KConfigGroup group(m_config, u"KDE"_s);
-    group.writeEntry("contrast", value);
+    group.writeEntry("contrast", val);
 
-    // For frames and other separators, convert the value to be between 0 to 1
-    qreal val = 0;
-    if (value > 0) {
-        val = value / 10.0;
-    }
     KConfigGroup groupTwo(m_config, u"WM"_s);
-    groupTwo.writeEntry("frameContrast", val);
+    groupTwo.writeEntry("frameContrast", value);
+
+    updateContrastExample();
 
     Q_EMIT changed(true);
 }
@@ -140,6 +142,12 @@ void SchemeEditorOptions::on_accentTitlebar_stateChanged(int state)
     group.deleteEntry("accentInactiveTitlebar");
 
     Q_EMIT changed(true);
+}
+
+void SchemeEditorOptions::updateContrastExample()
+{
+    const QColor frameColor(KColorUtils::mix(palette().color(QPalette::Window), palette().color(QPalette::WindowText), contrastSpinBox->value()));
+    contrastExample->setStyleSheet(QStringLiteral("background-color: %1").arg(frameColor.name()));
 }
 
 #include "moc_scmeditoroptions.cpp"

@@ -29,7 +29,7 @@ Q_SIGNALS:
 private Q_SLOTS:
 
     // options slots
-    void on_contrastSlider_valueChanged(int value);
+    void on_contrastSpinBox_valueChanged(double value);
     void on_shadeSortedColumn_stateChanged(int state);
     void on_inactiveSelectionEffect_stateChanged(int state);
     void on_useInactiveEffects_stateChanged(int state);
@@ -42,6 +42,7 @@ private:
     void loadOptions();
     void setCommonForeground(KColorScheme::ForegroundRole role, int stackIndex, int buttonIndex);
     void setCommonDecoration(KColorScheme::DecorationRole role, int stackIndex, int buttonIndex);
+    void updateContrastExample();
 
     KSharedConfigPtr m_config;
     bool m_disableUpdates;
