@@ -291,7 +291,9 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
         ++i;
     }
 
-    groupWMOut.writeEntry(QStringLiteral("frameContrast"), groupWMTheme.readEntry(QStringLiteral("frameContrast"), 0.2), writeConfigFlag);
+    groupWMOut.writeEntry(QStringLiteral("frameContrast"),
+                          groupWMTheme.readEntry(QStringLiteral("frameContrast"), 0.2),
+                          writeConfigFlag.setFlag(KConfig::WriteConfigFlag::Notify));
 
     KConfigGroup groupKDETheme(config, u"KDE"_s);
     KConfigGroup groupKDEOut(configOutput, u"KDE"_s);
