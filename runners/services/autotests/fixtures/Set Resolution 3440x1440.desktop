@@ -1,0 +1,14 @@
+[Desktop Entry]
+Comment=
+Exec=kscreen-doctor output.DP-3.mode.3440x1440@165
+GenericName=
+Icon=preferences-desktop-display-color
+MimeType=
+Name=Set Resolution 3440x1440 ServiceRunnerTest
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-KDE-SubstituteUID=false
+X-KDE-Username=

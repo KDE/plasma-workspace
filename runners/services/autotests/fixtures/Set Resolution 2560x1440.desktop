@@ -1,0 +1,14 @@
+[Desktop Entry]
+Comment=
+Exec=kscreen-doctor output.DP-3.mode.2560x1440@165
+GenericName=
+Icon=bomber
+MimeType=
+Name=Set Resolution 2560x1440 ServiceRunnerTest
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-KDE-SubstituteUID=false
+X-KDE-Username=

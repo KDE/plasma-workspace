@@ -1,0 +1,18 @@
+# This file is part of the RKWard project (https://rkward.kde.org)
+# SPDX-FileCopyrightText: by Thomas Friedrichsmeier <thomas.friedrichsmeier@kdemail.net>
+# SPDX-FileContributor: The RKWard Team <rkward-devel@kde.org>
+# SPDX-License-Identifier: GPL-2.0-or-later
+[Desktop Entry]
+X-SuSE-translate=false
+Name=RKWard ServiceRunnerTest
+GenericName=Statistics with R
+Comment=GUI for the R-project
+Icon=rkward
+X-DBUS-ServiceName=org.kde.rkward
+Exec=rkward --autoreuse %F
+Terminal=false
+Type=Application
+X-DocPath=rkward/index.html
+Categories=Qt;KDE;Science;Math;NumericalAnalysis;
+MimeType=text/r;application/rdata;text/vnd.kde.rmarkdown;application/vnd.kde.rkward-output
+Keywords=statistics;data;r;
