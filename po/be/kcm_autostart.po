@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-24 00:45+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2024-11-04 22:00\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -22,22 +22,22 @@ msgstr ""
 "kcm_autostart.po\n"
 "X-Crowdin-File-ID: 10754\n"
 
-#: autostartmodel.cpp:382
+#: autostartmodel.cpp:381
 #, kde-format
 msgid "\"%1\" is not an absolute url."
 msgstr "\"%1\" - не абсалютны url."
 
-#: autostartmodel.cpp:385
+#: autostartmodel.cpp:384
 #, kde-format
 msgid "\"%1\" does not exist."
 msgstr "\"%1\" не існуе."
 
-#: autostartmodel.cpp:388
+#: autostartmodel.cpp:387
 #, kde-format
 msgid "\"%1\" is not a file."
 msgstr "\"%1\" - не файл."
 
-#: autostartmodel.cpp:391
+#: autostartmodel.cpp:390
 #, kde-format
 msgid "\"%1\" is not readable."
 msgstr "\"%1\" нечытальны."
@@ -257,12 +257,12 @@ msgctxt "@label Entry has failed (exited with an error)"
 msgid "Failed"
 msgstr "Не ўдалося"
 
-#: unit.cpp:83
+#: unit.cpp:81
 #, kde-format
 msgid "Error occurred when receiving reply of GetAll call %1"
 msgstr "Пры атрыманні адказу на выклік GetAll \"%1\" адбылася памылка"
 
-#: unit.cpp:155
+#: unit.cpp:153
 #, kde-format
 msgid "Failed to open journal"
 msgstr "Не ўдалося адкрыць журнал"

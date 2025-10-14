@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-11 00:44+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2024-09-18 19:03+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -25,27 +25,27 @@ msgstr ""
 msgid "Name of the current Plasma Style"
 msgstr "Nomo de la aktuala Plasma-Stilo"
 
-#: kcm.cpp:112
+#: kcm.cpp:111
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Nekapabla krei dumtempan dosieron."
 
-#: kcm.cpp:123
+#: kcm.cpp:122
 #, kde-format
 msgid "Unable to download the theme: %1"
 msgstr "Nekapabla elŝuti the etoson: %1"
 
-#: kcm.cpp:148
+#: kcm.cpp:147
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Etoso instaliĝis sukcese."
 
-#: kcm.cpp:151 kcm.cpp:157
+#: kcm.cpp:150 kcm.cpp:156
 #, kde-format
 msgid "Theme installation failed."
 msgstr "Instalado de etoso malsukcesis."
 
-#: kcm.cpp:251
+#: kcm.cpp:250
 #, kde-format
 msgid "Removing theme failed: %1"
 msgstr "Forigado de etoso malsukcesis: %1"

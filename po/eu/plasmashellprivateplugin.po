@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-03 00:46+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2025-05-25 14:08+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -178,12 +178,12 @@ msgstr "Pantaila giltzatzeko minutu kopurua ezartzen du."
 msgid "New Session"
 msgstr "Saio berria"
 
-#: shellprivate/kcategorizeditemsviewmodels.cpp:65
+#: shellprivate/kcategorizeditemsviewmodels.cpp:66
 #, kde-format
 msgid "Filters"
 msgstr "Iragazkiak"
 
-#: shellprivate/plasmaappletitemmodel.cpp:198
+#: shellprivate/plasmaappletitemmodel.cpp:199
 #, kde-format
 msgid ""
 "This Widget was written for an unknown older version of Plasma and is not "
@@ -194,7 +194,7 @@ msgstr ""
 "da Plasma %1(r)ekin bateragarria. Mesedez, jar zaitez trepeta-egilearekin "
 "harremanean bertsio eguneratu baterako."
 
-#: shellprivate/plasmaappletitemmodel.cpp:202
+#: shellprivate/plasmaappletitemmodel.cpp:203
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -204,7 +204,7 @@ msgstr ""
 "bateragarria. Mesedez, jar zaitez trepeta-egilearekin harremanean bertsio "
 "eguneratu baterako."
 
-#: shellprivate/plasmaappletitemmodel.cpp:206
+#: shellprivate/plasmaappletitemmodel.cpp:207
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -213,7 +213,7 @@ msgstr ""
 "Trepeta hori Plasma %1(e)rako idatzi zen eta ez da Plasma %2(r)ekin "
 "bateragarria. Mesedez, eguneratu Plasma trepeta erabili ahal izateko."
 
-#: shellprivate/plasmaappletitemmodel.cpp:211
+#: shellprivate/plasmaappletitemmodel.cpp:212
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "
@@ -223,132 +223,132 @@ msgstr ""
 "berrienarekin bateragarria. Mesedez, eguneratu Plasma trepeta erabili ahal "
 "izateko."
 
-#: shellprivate/widgetexplorer.cpp:109
+#: shellprivate/widgetexplorer.cpp:110
 msgctxt "applet category"
 msgid "Accessibility"
 msgstr "Irisgarritasuna"
 
-#: shellprivate/widgetexplorer.cpp:110
+#: shellprivate/widgetexplorer.cpp:111
 msgctxt "applet category"
 msgid "Application Launchers"
 msgstr "Aplikazio-abiarazleak"
 
-#: shellprivate/widgetexplorer.cpp:111
+#: shellprivate/widgetexplorer.cpp:112
 msgctxt "applet category"
 msgid "Astronomy"
 msgstr "Astronomia"
 
-#: shellprivate/widgetexplorer.cpp:112
+#: shellprivate/widgetexplorer.cpp:113
 msgctxt "applet category"
 msgid "Date and Time"
 msgstr "Data eta ordua"
 
-#: shellprivate/widgetexplorer.cpp:113
+#: shellprivate/widgetexplorer.cpp:114
 msgctxt "applet category"
 msgid "Development Tools"
 msgstr "Garapen-tresnak"
 
-#: shellprivate/widgetexplorer.cpp:114
+#: shellprivate/widgetexplorer.cpp:115
 msgctxt "applet category"
 msgid "Education"
 msgstr "Hezkuntza"
 
-#: shellprivate/widgetexplorer.cpp:115
+#: shellprivate/widgetexplorer.cpp:116
 msgctxt "applet category"
 msgid "Environment and Weather"
 msgstr "Ingurumena eta eguraldia"
 
-#: shellprivate/widgetexplorer.cpp:116
+#: shellprivate/widgetexplorer.cpp:117
 msgctxt "applet category"
 msgid "Examples"
 msgstr "Adibideak"
 
-#: shellprivate/widgetexplorer.cpp:117
+#: shellprivate/widgetexplorer.cpp:118
 msgctxt "applet category"
 msgid "File System"
 msgstr "Fitxategi-sistema"
 
-#: shellprivate/widgetexplorer.cpp:118
+#: shellprivate/widgetexplorer.cpp:119
 msgctxt "applet category"
 msgid "Fun and Games"
 msgstr "Dibertsioa eta jolasak"
 
-#: shellprivate/widgetexplorer.cpp:119
+#: shellprivate/widgetexplorer.cpp:120
 msgctxt "applet category"
 msgid "Graphics"
 msgstr "Grafikoak"
 
-#: shellprivate/widgetexplorer.cpp:120
+#: shellprivate/widgetexplorer.cpp:121
 msgctxt "applet category"
 msgid "Language"
 msgstr "Hizkuntza"
 
-#: shellprivate/widgetexplorer.cpp:121
+#: shellprivate/widgetexplorer.cpp:122
 msgctxt "applet category"
 msgid "Mapping"
 msgstr "Kartografia"
 
-#: shellprivate/widgetexplorer.cpp:122
+#: shellprivate/widgetexplorer.cpp:123
 msgctxt "applet category"
 msgid "Miscellaneous"
 msgstr "Beste zenbait"
 
-#: shellprivate/widgetexplorer.cpp:123
+#: shellprivate/widgetexplorer.cpp:124
 msgctxt "applet category"
 msgid "Multimedia"
 msgstr "Multimedia"
 
-#: shellprivate/widgetexplorer.cpp:124
+#: shellprivate/widgetexplorer.cpp:125
 msgctxt "applet category"
 msgid "Online Services"
 msgstr "Lerroko zerbitzuak"
 
-#: shellprivate/widgetexplorer.cpp:125
+#: shellprivate/widgetexplorer.cpp:126
 msgctxt "applet category"
 msgid "Personal Information"
 msgstr "Norbanakoaren informazioa"
 
-#: shellprivate/widgetexplorer.cpp:126
+#: shellprivate/widgetexplorer.cpp:127
 msgctxt "applet category"
 msgid "Productivity"
 msgstr "Produktibitatea"
 
-#: shellprivate/widgetexplorer.cpp:127
+#: shellprivate/widgetexplorer.cpp:128
 msgctxt "applet category"
 msgid "System Information"
 msgstr "Sistemaren informazioa"
 
-#: shellprivate/widgetexplorer.cpp:128
+#: shellprivate/widgetexplorer.cpp:129
 msgctxt "applet category"
 msgid "Utilities"
 msgstr "Baliagarritasunak"
 
-#: shellprivate/widgetexplorer.cpp:129
+#: shellprivate/widgetexplorer.cpp:130
 msgctxt "applet category"
 msgid "Windows and Tasks"
 msgstr "Leihoak eta atazak"
 
-#: shellprivate/widgetexplorer.cpp:130
+#: shellprivate/widgetexplorer.cpp:131
 msgctxt "applet category"
 msgid "Clipboard"
 msgstr "Arbela"
 
-#: shellprivate/widgetexplorer.cpp:131
+#: shellprivate/widgetexplorer.cpp:132
 msgctxt "applet category"
 msgid "Tasks"
 msgstr "Atazak"
 
-#: shellprivate/widgetexplorer.cpp:147
+#: shellprivate/widgetexplorer.cpp:148
 #, kde-format
 msgid "All Widgets"
 msgstr "Trepeta guztiak"
 
-#: shellprivate/widgetexplorer.cpp:151
+#: shellprivate/widgetexplorer.cpp:152
 #, kde-format
 msgid "Running"
 msgstr "Exekutatzen"
 
-#: shellprivate/widgetexplorer.cpp:157
+#: shellprivate/widgetexplorer.cpp:158
 #, kde-format
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can be un-"
@@ -357,7 +357,7 @@ msgctxt ""
 msgid "User-installed"
 msgstr "Erabiltzaileak instalatua"
 
-#: shellprivate/widgetexplorer.cpp:161
+#: shellprivate/widgetexplorer.cpp:162
 #, kde-format
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can were "
@@ -365,39 +365,39 @@ msgctxt ""
 msgid "Recently installed"
 msgstr "Duela gutxi instalatua"
 
-#: shellprivate/widgetexplorer.cpp:165
+#: shellprivate/widgetexplorer.cpp:166
 #, kde-format
 msgid "Categories:"
 msgstr "Kategoriak: "
 
-#: shellprivate/widgetexplorer.cpp:235
+#: shellprivate/widgetexplorer.cpp:236
 #, kde-format
 msgid "Download New Plasma Widgets"
 msgstr "Jaitsi Plasma trepeta berriak"
 
-#: shellprivate/widgetexplorer.cpp:244
+#: shellprivate/widgetexplorer.cpp:245
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "Instalatu trepeta fitxategi lokal batetik..."
 
-#: shellprivate/widgetexplorer.cpp:494
+#: shellprivate/widgetexplorer.cpp:495
 #, kde-format
 msgctxt "@title:window"
 msgid "Get New Widgets"
 msgstr "Lortu trepeta berriak"
 
-#: shellprivate/widgetexplorer.cpp:513
+#: shellprivate/widgetexplorer.cpp:514
 #, kde-format
 msgid "Select Plasmoid File"
 msgstr "Hautatu Plasmoide fitxategia"
 
-#: shellprivate/widgetexplorer.cpp:529
+#: shellprivate/widgetexplorer.cpp:530
 #, kde-format
 msgctxt "%1 is the name of an applet, %2 is an error message"
 msgid "Installing the package %1 failed: %2."
 msgstr "%1 paketea instalatzea huts egin du: %2."
 
-#: shellprivate/widgetexplorer.cpp:530
+#: shellprivate/widgetexplorer.cpp:531
 #, kde-format
 msgid "Installation Failure"
 msgstr "Instalatze hutsegitea"

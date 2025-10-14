@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-31 00:44+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2014-10-28 10:30+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -25,23 +25,23 @@ msgstr ""
 msgid "Name of the current icon theme"
 msgstr ""
 
-#: main.cpp:149
+#: main.cpp:147
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "तात्पुरती फाईल तयार करता येत नाही."
 
-#: main.cpp:160
+#: main.cpp:158
 #, fuzzy, kde-format
 #| msgid "Unable to find the icon theme archive %1."
 msgid "Unable to download the icon theme archive: %1"
 msgstr "चिन्ह शैली संग्रह %1 शोधू शकला नाही."
 
-#: main.cpp:174
+#: main.cpp:172
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "फाईल वैध चिन्ह शैली संग्रह नाही."
 
-#: main.cpp:179
+#: main.cpp:177
 #, kde-format
 msgid ""
 "A problem occurred during the installation process; however, most of the "
@@ -50,18 +50,18 @@ msgstr ""
 "प्रतिष्ठापन प्रक्रीयावेळी समस्या उत्पन्न झाली, तरी संग्रह मधील बरेचशे शैली प्रतिष्ठापीत झाले "
 "आहे"
 
-#: main.cpp:183
+#: main.cpp:181
 #, kde-format
 msgid "Theme installed successfully."
 msgstr ""
 
-#: main.cpp:227
+#: main.cpp:225
 #, fuzzy, kde-format
 #| msgid "Installing icon themes..."
 msgid "Installing icon themes…"
 msgstr "चिन्ह शैली प्रतिष्ठापीत करत आहे..."
 
-#: main.cpp:237
+#: main.cpp:235
 #, fuzzy, kde-format
 #| msgid "Installing icon themes..."
 msgid "Installing %1 theme…"

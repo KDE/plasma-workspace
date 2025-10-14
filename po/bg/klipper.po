@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-13 00:44+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2025-09-01 00:01+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -664,46 +664,46 @@ msgstr "Възстановяване на иконата по подразбир
 msgid "Icon:"
 msgstr "Икона:"
 
-#: historymodel.cpp:280
+#: historymodel.cpp:281
 #, kde-format
 msgid "The clipboard history contains starred items. Clear them too?"
 msgstr ""
 "Историята на клипборда съдържа елементи със звезда. Да се ​​изчистят ли и те?"
 
-#: historymodel.cpp:281 historymodel.cpp:301
+#: historymodel.cpp:282 historymodel.cpp:302
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "&Изчистване историята на клипборда"
 
-#: historymodel.cpp:282
+#: historymodel.cpp:283
 #, kde-format
 msgid "Clear Everything"
 msgstr "Изчистване на всичко"
 
-#: historymodel.cpp:283
+#: historymodel.cpp:284
 #, kde-format
 msgid "Keep Starred Items"
 msgstr "Запазване на елементи, значени със звезда"
 
-#: historymodel.cpp:300
+#: historymodel.cpp:301
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Наистина ли да се изчисти цялата история на буфера?"
 
-#: historymodel.cpp:384
+#: historymodel.cpp:385
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:564
+#: historymodel.cpp:565
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 "Този елемент е маркиран със звезда. Наистина ли искате да го премахнете от "
 "историята?"
 
-#: historymodel.cpp:565
+#: historymodel.cpp:566
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "Премахване на елемент, означен със звезда"
@@ -995,7 +995,7 @@ msgstr ""
 "При селектирано име на файл или URL адрес, в изскачащото меню от действия се "
 "включват приложения, които могат да обработват неговия MIME тип."
 
-#: klipperpopup.cpp:36
+#: klipperpopup.cpp:37
 #, kde-format
 msgid "Clipboard Popup"
 msgstr "Изчакащ прозорец на клипборд"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-13 00:44+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2022-10-31 11:53+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -676,47 +676,47 @@ msgstr "Đặt lại biểu tượng về mặc định cho lệnh"
 msgid "Icon:"
 msgstr "Biểu tượng:"
 
-#: historymodel.cpp:280
+#: historymodel.cpp:281
 #, fuzzy, kde-format
 #| msgid "The clipboard history will store up to this many items."
 msgid "The clipboard history contains starred items. Clear them too?"
 msgstr "Lịch sử bảng nháp sẽ lưu nhiều nhất là từng này mục."
 
-#: historymodel.cpp:281 historymodel.cpp:301
+#: historymodel.cpp:282 historymodel.cpp:302
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Xoá lịch sử bảng nháp"
 
-#: historymodel.cpp:282
+#: historymodel.cpp:283
 #, kde-format
 msgid "Clear Everything"
 msgstr ""
 
-#: historymodel.cpp:283
+#: historymodel.cpp:284
 #, fuzzy, kde-format
 #| msgctxt "%1 is application display name"
 #| msgid "%1 - Clipboard Items"
 msgid "Keep Starred Items"
 msgstr "%1 - Các mục bảng nháp"
 
-#: historymodel.cpp:300
+#: historymodel.cpp:301
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Bạn có thực sự muốn làm trống và xoá toàn bộ lịch sử bảng nháp?"
 
-#: historymodel.cpp:384
+#: historymodel.cpp:385
 #, fuzzy, kde-format
 #| msgid "%1x%2 %3bpp"
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2 %3bpp"
 
-#: historymodel.cpp:564
+#: historymodel.cpp:565
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 
-#: historymodel.cpp:565
+#: historymodel.cpp:566
 #, kde-format
 msgid "Remove Starred Item"
 msgstr ""
@@ -1006,7 +1006,7 @@ msgstr ""
 "Nếu một tên tệp hoặc URL được bôi đen, thì sẽ thêm các ứng dụng có thể chấp "
 "nhận kiểu MIME của nó vào trình đơn hành động."
 
-#: klipperpopup.cpp:36
+#: klipperpopup.cpp:37
 #, fuzzy, kde-format
 #| msgid "Clipboard history"
 msgid "Clipboard Popup"

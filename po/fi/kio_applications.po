@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kio_applications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-08 00:46+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2013-01-20 20:02:32+0000\n"
 "Last-Translator: Teemu Rytilahti <teemu.rytilahti@d5k.net>\n"
 "Language-Team: Finnish <lokalisointi@lists.coss.fi>\n"
@@ -20,17 +20,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: kio_applications.cpp:127
+#: kio_applications.cpp:125
 #, kde-format
 msgid "Applications"
 msgstr "Sovellukset"
 
-#: kio_applications.cpp:127
+#: kio_applications.cpp:125
 #, kde-format
 msgid "Programs"
 msgstr "Ohjelmat"
 
-#: kio_applications.cpp:136
+#: kio_applications.cpp:134
 #, kde-format
 msgid "Unknown application folder"
 msgstr "Tuntematon ohjelmakansio"

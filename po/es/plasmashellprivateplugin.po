@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-03 00:46+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2025-06-04 19:43+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -177,12 +177,12 @@ msgstr "Indica los minutos tras los que se bloqueará la pantalla."
 msgid "New Session"
 msgstr "Nueva sesión"
 
-#: shellprivate/kcategorizeditemsviewmodels.cpp:65
+#: shellprivate/kcategorizeditemsviewmodels.cpp:66
 #, kde-format
 msgid "Filters"
 msgstr "Filtros"
 
-#: shellprivate/plasmaappletitemmodel.cpp:198
+#: shellprivate/plasmaappletitemmodel.cpp:199
 #, kde-format
 msgid ""
 "This Widget was written for an unknown older version of Plasma and is not "
@@ -193,7 +193,7 @@ msgstr ""
 "de Plasma y no es compatible con Plasma %1. Póngase en contacto con el autor "
 "del elemento gráfico para obtener una versión actualizada."
 
-#: shellprivate/plasmaappletitemmodel.cpp:202
+#: shellprivate/plasmaappletitemmodel.cpp:203
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -203,7 +203,7 @@ msgstr ""
 "Plasma %2. Póngase en contacto con el autor del elemento gráfico para "
 "obtener una versión actualizada."
 
-#: shellprivate/plasmaappletitemmodel.cpp:206
+#: shellprivate/plasmaappletitemmodel.cpp:207
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -212,7 +212,7 @@ msgstr ""
 "Este elemento gráfico se escribió para Plasma %1 y no es compatible con "
 "Plasma %2. Actualice Plasma para poder usar este elemento gráfico."
 
-#: shellprivate/plasmaappletitemmodel.cpp:211
+#: shellprivate/plasmaappletitemmodel.cpp:212
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "
@@ -222,132 +222,132 @@ msgstr ""
 "última versión de Plasma. Actualice Plasma para poder usar este elemento "
 "gráfico."
 
-#: shellprivate/widgetexplorer.cpp:109
+#: shellprivate/widgetexplorer.cpp:110
 msgctxt "applet category"
 msgid "Accessibility"
 msgstr "Accesibilidad"
 
-#: shellprivate/widgetexplorer.cpp:110
+#: shellprivate/widgetexplorer.cpp:111
 msgctxt "applet category"
 msgid "Application Launchers"
 msgstr "Lanzadores de aplicaciones"
 
-#: shellprivate/widgetexplorer.cpp:111
+#: shellprivate/widgetexplorer.cpp:112
 msgctxt "applet category"
 msgid "Astronomy"
 msgstr "Astronomía"
 
-#: shellprivate/widgetexplorer.cpp:112
+#: shellprivate/widgetexplorer.cpp:113
 msgctxt "applet category"
 msgid "Date and Time"
 msgstr "Fecha y hora"
 
-#: shellprivate/widgetexplorer.cpp:113
+#: shellprivate/widgetexplorer.cpp:114
 msgctxt "applet category"
 msgid "Development Tools"
 msgstr "Herramientas de desarrollo"
 
-#: shellprivate/widgetexplorer.cpp:114
+#: shellprivate/widgetexplorer.cpp:115
 msgctxt "applet category"
 msgid "Education"
 msgstr "Educativos"
 
-#: shellprivate/widgetexplorer.cpp:115
+#: shellprivate/widgetexplorer.cpp:116
 msgctxt "applet category"
 msgid "Environment and Weather"
 msgstr "Medio ambiente y clima"
 
-#: shellprivate/widgetexplorer.cpp:116
+#: shellprivate/widgetexplorer.cpp:117
 msgctxt "applet category"
 msgid "Examples"
 msgstr "Ejemplos"
 
-#: shellprivate/widgetexplorer.cpp:117
+#: shellprivate/widgetexplorer.cpp:118
 msgctxt "applet category"
 msgid "File System"
 msgstr "Sistema de archivos"
 
-#: shellprivate/widgetexplorer.cpp:118
+#: shellprivate/widgetexplorer.cpp:119
 msgctxt "applet category"
 msgid "Fun and Games"
 msgstr "Diversión y juegos"
 
-#: shellprivate/widgetexplorer.cpp:119
+#: shellprivate/widgetexplorer.cpp:120
 msgctxt "applet category"
 msgid "Graphics"
 msgstr "Gráficos"
 
-#: shellprivate/widgetexplorer.cpp:120
+#: shellprivate/widgetexplorer.cpp:121
 msgctxt "applet category"
 msgid "Language"
 msgstr "Idiomas"
 
-#: shellprivate/widgetexplorer.cpp:121
+#: shellprivate/widgetexplorer.cpp:122
 msgctxt "applet category"
 msgid "Mapping"
 msgstr "Mapas"
 
-#: shellprivate/widgetexplorer.cpp:122
+#: shellprivate/widgetexplorer.cpp:123
 msgctxt "applet category"
 msgid "Miscellaneous"
 msgstr "Varios"
 
-#: shellprivate/widgetexplorer.cpp:123
+#: shellprivate/widgetexplorer.cpp:124
 msgctxt "applet category"
 msgid "Multimedia"
 msgstr "Multimedia"
 
-#: shellprivate/widgetexplorer.cpp:124
+#: shellprivate/widgetexplorer.cpp:125
 msgctxt "applet category"
 msgid "Online Services"
 msgstr "Servicios en línea"
 
-#: shellprivate/widgetexplorer.cpp:125
+#: shellprivate/widgetexplorer.cpp:126
 msgctxt "applet category"
 msgid "Personal Information"
 msgstr "Información personal"
 
-#: shellprivate/widgetexplorer.cpp:126
+#: shellprivate/widgetexplorer.cpp:127
 msgctxt "applet category"
 msgid "Productivity"
 msgstr "Productividad"
 
-#: shellprivate/widgetexplorer.cpp:127
+#: shellprivate/widgetexplorer.cpp:128
 msgctxt "applet category"
 msgid "System Information"
 msgstr "Información del sistema"
 
-#: shellprivate/widgetexplorer.cpp:128
+#: shellprivate/widgetexplorer.cpp:129
 msgctxt "applet category"
 msgid "Utilities"
 msgstr "Utilidades"
 
-#: shellprivate/widgetexplorer.cpp:129
+#: shellprivate/widgetexplorer.cpp:130
 msgctxt "applet category"
 msgid "Windows and Tasks"
 msgstr "Ventanas y tareas"
 
-#: shellprivate/widgetexplorer.cpp:130
+#: shellprivate/widgetexplorer.cpp:131
 msgctxt "applet category"
 msgid "Clipboard"
 msgstr "Portapapeles"
 
-#: shellprivate/widgetexplorer.cpp:131
+#: shellprivate/widgetexplorer.cpp:132
 msgctxt "applet category"
 msgid "Tasks"
 msgstr "Tareas"
 
-#: shellprivate/widgetexplorer.cpp:147
+#: shellprivate/widgetexplorer.cpp:148
 #, kde-format
 msgid "All Widgets"
 msgstr "Todos los elementos gráficos"
 
-#: shellprivate/widgetexplorer.cpp:151
+#: shellprivate/widgetexplorer.cpp:152
 #, kde-format
 msgid "Running"
 msgstr "Ejecutando"
 
-#: shellprivate/widgetexplorer.cpp:157
+#: shellprivate/widgetexplorer.cpp:158
 #, kde-format
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can be un-"
@@ -356,7 +356,7 @@ msgctxt ""
 msgid "User-installed"
 msgstr "Instalado por el usuario"
 
-#: shellprivate/widgetexplorer.cpp:161
+#: shellprivate/widgetexplorer.cpp:162
 #, kde-format
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can were "
@@ -364,39 +364,39 @@ msgctxt ""
 msgid "Recently installed"
 msgstr "Instalados recientemente"
 
-#: shellprivate/widgetexplorer.cpp:165
+#: shellprivate/widgetexplorer.cpp:166
 #, kde-format
 msgid "Categories:"
 msgstr "Categorías:"
 
-#: shellprivate/widgetexplorer.cpp:235
+#: shellprivate/widgetexplorer.cpp:236
 #, kde-format
 msgid "Download New Plasma Widgets"
 msgstr "Descargar nuevos elementos gráficos de Plasma"
 
-#: shellprivate/widgetexplorer.cpp:244
+#: shellprivate/widgetexplorer.cpp:245
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "Instalar elemento gráfico desde un archivo local…"
 
-#: shellprivate/widgetexplorer.cpp:494
+#: shellprivate/widgetexplorer.cpp:495
 #, kde-format
 msgctxt "@title:window"
 msgid "Get New Widgets"
 msgstr "Obtener nuevos elementos gráficos"
 
-#: shellprivate/widgetexplorer.cpp:513
+#: shellprivate/widgetexplorer.cpp:514
 #, kde-format
 msgid "Select Plasmoid File"
 msgstr "Seleccionar archivo de plasmoide"
 
-#: shellprivate/widgetexplorer.cpp:529
+#: shellprivate/widgetexplorer.cpp:530
 #, kde-format
 msgctxt "%1 is the name of an applet, %2 is an error message"
 msgid "Installing the package %1 failed: %2."
 msgstr "La instalación del paquete %1 ha fallado: %2."
 
-#: shellprivate/widgetexplorer.cpp:530
+#: shellprivate/widgetexplorer.cpp:531
 #, kde-format
 msgid "Installation Failure"
 msgstr "Fallo de instalación"

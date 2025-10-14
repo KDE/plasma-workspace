@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-04 01:01+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2024-08-24 12:12+0300\n"
 "Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -28,7 +28,7 @@ msgstr "Η ειδοποίηση της μηχανής δεδομένων δεν 
 msgid "Invalid destination: %1"
 msgstr "Άγνωστος προορισμός: %1"
 
-#: notificationsengine.cpp:89
+#: notificationsengine.cpp:87
 #, kde-format
 msgid "Unknown Application"
 msgstr "Άγνωστη εφαρμογή"

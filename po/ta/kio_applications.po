@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kio_settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-08 00:46+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2021-04-17 19:46+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -16,17 +16,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 21.03.90\n"
 
-#: kio_applications.cpp:127
+#: kio_applications.cpp:125
 #, kde-format
 msgid "Applications"
 msgstr "செயலிகள்"
 
-#: kio_applications.cpp:127
+#: kio_applications.cpp:125
 #, kde-format
 msgid "Programs"
 msgstr "நிரல்கள்"
 
-#: kio_applications.cpp:136
+#: kio_applications.cpp:134
 #, kde-format
 msgid "Unknown application folder"
 msgstr "தெரியாத பயன்பாடு அடைவு"

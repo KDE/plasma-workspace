@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-06 00:46+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2024-10-25 22:43-0500\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
@@ -17,74 +17,74 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.08.2\n"
 
-#: interactiveconsole.cpp:64
+#: interactiveconsole.cpp:65
 #, kde-format
 msgid "&Execute"
 msgstr "ਚਲਾਓ(&E)"
 
-#: interactiveconsole.cpp:65
+#: interactiveconsole.cpp:66
 #, kde-format
 msgctxt "Toolbar Button to switch to Plasma Scripting Mode"
 msgid "Plasma"
 msgstr "ਪਲਾਜ਼ਮਾ"
 
-#: interactiveconsole.cpp:66
+#: interactiveconsole.cpp:67
 #, kde-format
 msgctxt "Toolbar Button to switch to KWin Scripting Mode"
 msgid "KWin"
 msgstr "KWin"
 
-#: interactiveconsole.cpp:67
+#: interactiveconsole.cpp:68
 #, kde-format
 msgid "Templates"
 msgstr "ਟੈਪਲੇਟ"
 
-#: interactiveconsole.cpp:76
+#: interactiveconsole.cpp:77
 #, kde-format
 msgid "Desktop Shell Scripting Console"
 msgstr "ਡੈਸਕਟਾਪ ਸ਼ੈੱਲ ਸਕ੍ਰਿਪਟਿੰਗ ਕਨਸੋਲ"
 
-#: interactiveconsole.cpp:83
+#: interactiveconsole.cpp:84
 #, kde-format
 msgid "Editor"
 msgstr "ਐਡੀਟਰ"
 
-#: interactiveconsole.cpp:94
+#: interactiveconsole.cpp:95
 #, kde-format
 msgid "Load"
 msgstr "ਲੋਡ"
 
-#: interactiveconsole.cpp:100
+#: interactiveconsole.cpp:101
 #, kde-format
 msgid "Use"
 msgstr "ਵਰਤੋਂ"
 
-#: interactiveconsole.cpp:160
+#: interactiveconsole.cpp:161
 #, kde-format
 msgid "Output"
 msgstr "ਆਉਟਪੁੱਟ"
 
-#: interactiveconsole.cpp:273
+#: interactiveconsole.cpp:274
 #, kde-format
 msgid "Unable to load script file <b>%1</b>"
 msgstr ""
 
-#: interactiveconsole.cpp:322
+#: interactiveconsole.cpp:323
 #, kde-format
 msgid "Open Script File"
 msgstr "ਸਕ੍ਰਿਪਟ ਫਾਇਲ ਨੂੰ ਖੋਲ੍ਹੋ"
 
-#: interactiveconsole.cpp:437
+#: interactiveconsole.cpp:438
 #, kde-format
 msgid "Save Script File"
 msgstr "ਸਕ੍ਰਿਪਟ ਫਾਇਲ ਨੂੰ ਸੰਭਾਲੋ"
 
-#: interactiveconsole.cpp:526
+#: interactiveconsole.cpp:527
 #, kde-format
 msgid "Executing script at %1"
 msgstr "%1 ਉੱਤੇ ਸਕ੍ਰਿਪਟ ਚਲਾਈ ਜਾ ਰਹੀ ਹੈ"
 
-#: interactiveconsole.cpp:578
+#: interactiveconsole.cpp:579
 #, no-c-format, kde-format
 msgid "Runtime: %1ms"
 msgstr "ਰਨਟਾਈਮ: %1ਮਿ.ਸਕਿੰਟ"

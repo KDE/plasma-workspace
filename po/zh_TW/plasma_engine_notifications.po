@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_engine_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-04 01:01+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2024-05-26 16:56+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -28,7 +28,7 @@ msgstr "通知資料引擎尚未設定。"
 msgid "Invalid destination: %1"
 msgstr "無效目的地：%1"
 
-#: notificationsengine.cpp:89
+#: notificationsengine.cpp:87
 #, kde-format
 msgid "Unknown Application"
 msgstr "未知的應用程式"

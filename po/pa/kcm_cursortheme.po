@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-12 00:44+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2024-10-25 23:38-0500\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
@@ -31,33 +31,33 @@ msgstr "ਮੌਜੂਦਾ ਕਰਸਰ ਥੀਮ ਦਾ ਨਾਂ ਹੈ"
 msgid "Current cursor size"
 msgstr "ਮੌਜੂਦਾ ਕਰਸਰ ਆਕਾਰ"
 
-#: kcmcursortheme.cpp:314
+#: kcmcursortheme.cpp:312
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr "ਇਹਨਾਂ ਤਬਦੀਲੀਆਂ ਨੂੰ ਲਾਗੂ ਕਰਨ ਲਈ ਤੁਹਾਨੂੰ ਪਲਾਜ਼ਮਾ ਸ਼ੈਸ਼ਨ ਮੁੜ ਚਾਲੂ ਕਰਨਾ ਪਵੇਗਾ।"
 
-#: kcmcursortheme.cpp:388
+#: kcmcursortheme.cpp:386
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "ਆਰਜ਼ੀ ਫ਼ਾਇਲ ਬਣਾਉਣ ਲਈ ਅਸਮਰੱਥ ਹੈ।"
 
-#: kcmcursortheme.cpp:399
+#: kcmcursortheme.cpp:397
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "ਆਈਕਾਨ ਥੀਮ ਅਕਾਇਵ ਡਾਊਨਲੋਡ ਤੋਂ ਅਸਮਰੱਥ ਹੈ: %1"
 
-#: kcmcursortheme.cpp:430
+#: kcmcursortheme.cpp:428
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "ਇਹ ਫਾਇਲ਼ ਠੀਕ ਆਈਕਾਨ ਥੀਮ ਅਕਾਈਵ ਨਹੀਂ ਹੈ।"
 
-#: kcmcursortheme.cpp:437
+#: kcmcursortheme.cpp:435
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "'icons' ਫੋਲਡਰ ਬਣਾਉਣ ਲਈ ਫੇਲ੍ਹ ਹੈ।"
 
-#: kcmcursortheme.cpp:446
+#: kcmcursortheme.cpp:444
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -65,12 +65,12 @@ msgid ""
 msgstr ""
 "ਤੁਹਾਡੇ ਆਈਕਾਨ ਥੀਮ ਫੋਲਡਰ ਵਿੱਚ ਥੀਮ %1 ਪਹਿਲਾਂ ਹੀ ਮੌਜੂਦ ਹੈ। ਕੀ ਤੁਸੀਂ ਇਸ ਨੂੰ ਤਬਦੀਲ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?"
 
-#: kcmcursortheme.cpp:450
+#: kcmcursortheme.cpp:448
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "ਥੀਮ ਉੱਤੇ ਲਿਖਣਾ ਹੈ?"
 
-#: kcmcursortheme.cpp:474
+#: kcmcursortheme.cpp:472
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "ਥੀਮ ਠੀਕ ਤਰ੍ਹਾਂ ਇੰਸਟਾਲ ਕੀਤਾ ਗਿਆ।"
@@ -261,7 +261,7 @@ msgstr "ਥੀਮ ਖੋਲ੍ਹੋ"
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "ਕਰਸਰ ਥੀਮ ਫਾਇਲਾਂ (*.tar.gz *.tar.bz2)"
 
-#: xcursor/xcursortheme.cpp:58
+#: xcursor/xcursortheme.cpp:59
 #, kde-format
 msgctxt ""
 "@info The argument is the list of available sizes (in pixel). Example: "

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-12 00:44+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2023-08-06 22:35+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -30,45 +30,45 @@ msgstr "현재 커서 테마 이름"
 msgid "Current cursor size"
 msgstr "현재 커서 크기"
 
-#: kcmcursortheme.cpp:314
+#: kcmcursortheme.cpp:312
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr "Plasma 세션을 다시 시작해야 변경 사항이 적용됩니다."
 
-#: kcmcursortheme.cpp:388
+#: kcmcursortheme.cpp:386
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "임시 파일을 만들 수 없습니다."
 
-#: kcmcursortheme.cpp:399
+#: kcmcursortheme.cpp:397
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "아이콘 테마 압축 파일을 다운로드할 수 없음: %1"
 
-#: kcmcursortheme.cpp:430
+#: kcmcursortheme.cpp:428
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "올바른 아이콘 테마 압축 파일이 아닙니다."
 
-#: kcmcursortheme.cpp:437
+#: kcmcursortheme.cpp:435
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "'icons' 폴더를 만들 수 없습니다."
 
-#: kcmcursortheme.cpp:446
+#: kcmcursortheme.cpp:444
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
 "replace it with this one?"
 msgstr "아이콘 테마 폴더에 테마 %1이(가) 이미 존재합니다. 덮어쓰시겠습니까?"
 
-#: kcmcursortheme.cpp:450
+#: kcmcursortheme.cpp:448
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "테마를 덮어쓰시겠습니까?"
 
-#: kcmcursortheme.cpp:474
+#: kcmcursortheme.cpp:472
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "테마를 설치했습니다."
@@ -260,7 +260,7 @@ msgstr "테마 열기"
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "커서 테마 파일 (*.tar.gz *.tar.bz2)"
 
-#: xcursor/xcursortheme.cpp:58
+#: xcursor/xcursortheme.cpp:59
 #, kde-format
 msgctxt ""
 "@info The argument is the list of available sizes (in pixel). Example: "

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput-1.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-12 00:44+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2004-09-19 18:09+0200\n"
 "Last-Translator: Jañ-Mai Drapier <jdrapier@club-internet.fr>\n"
 "Language-Team: Brezhoneg <Suav.Icb@wanadoo.fr>\n"
@@ -30,34 +30,34 @@ msgstr "Ne gemmit ket giz ar reti"
 msgid "Current cursor size"
 msgstr ""
 
-#: kcmcursortheme.cpp:314
+#: kcmcursortheme.cpp:312
 #, fuzzy, kde-format
 #| msgid "You have to restart KDE for these changes to take effect."
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr "Red eo deoc'h da adloc'hañ KDE evit arloañ ar c'hemmoù."
 
-#: kcmcursortheme.cpp:388
+#: kcmcursortheme.cpp:386
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr ""
 
-#: kcmcursortheme.cpp:399
+#: kcmcursortheme.cpp:397
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr ""
 
-#: kcmcursortheme.cpp:430
+#: kcmcursortheme.cpp:428
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr ""
 
-#: kcmcursortheme.cpp:437
+#: kcmcursortheme.cpp:435
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr ""
 
-#: kcmcursortheme.cpp:446
+#: kcmcursortheme.cpp:444
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -66,12 +66,12 @@ msgstr ""
 "Bez eus ur c'hiz gant an anv %1 c'hoazh e ho renkell gizioù arlun. C'hoant "
 "ho peus e rasklañ anezhañ gant an hini nevez ?"
 
-#: kcmcursortheme.cpp:450
+#: kcmcursortheme.cpp:448
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Rasklañ ar c'hiz ?"
 
-#: kcmcursortheme.cpp:474
+#: kcmcursortheme.cpp:472
 #, kde-format
 msgid "Theme installed successfully."
 msgstr ""
@@ -264,7 +264,7 @@ msgstr "Lemel ar c'hiz"
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr ""
 
-#: xcursor/xcursortheme.cpp:58
+#: xcursor/xcursortheme.cpp:59
 #, kde-format
 msgctxt ""
 "@info The argument is the list of available sizes (in pixel). Example: "

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-13 00:44+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2025-10-03 14:44+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -666,44 +666,44 @@ msgstr "Reinițializează pictograma la cea implicită pentru comandă"
 msgid "Icon:"
 msgstr "Pictogramă:"
 
-#: historymodel.cpp:280
+#: historymodel.cpp:281
 #, kde-format
 msgid "The clipboard history contains starred items. Clear them too?"
 msgstr ""
 "Istoricul clipboard-ului conține elemente cu stea. Le curățați și pe acelea?"
 
-#: historymodel.cpp:281 historymodel.cpp:301
+#: historymodel.cpp:282 historymodel.cpp:302
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Curăță istoricul clipboard-ului"
 
-#: historymodel.cpp:282
+#: historymodel.cpp:283
 #, kde-format
 msgid "Clear Everything"
 msgstr "Curăță tot"
 
-#: historymodel.cpp:283
+#: historymodel.cpp:284
 #, kde-format
 msgid "Keep Starred Items"
 msgstr "Păstrează elementele cu stea"
 
-#: historymodel.cpp:300
+#: historymodel.cpp:301
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Sigur curățați și ștergeți întregul istoric al clipboard-ului?"
 
-#: historymodel.cpp:384
+#: historymodel.cpp:385
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:564
+#: historymodel.cpp:565
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr "Acest element are stea. Sigur doriți să-l eliminați din istoric?"
 
-#: historymodel.cpp:565
+#: historymodel.cpp:566
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "Elimină element cu stea"
@@ -994,7 +994,7 @@ msgstr ""
 "Dacă o denumire de fișier sau un URL sunt alese, include aplicații ce pot "
 "accepta acest tip MIME în meniul contextual."
 
-#: klipperpopup.cpp:36
+#: klipperpopup.cpp:37
 #, kde-format
 msgid "Clipboard Popup"
 msgstr "Meniu contextual pentru clipboard"

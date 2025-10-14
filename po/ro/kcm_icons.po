@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-31 00:44+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2024-02-24 18:21+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -24,22 +24,22 @@ msgstr ""
 msgid "Name of the current icon theme"
 msgstr "Denumirea tematicii de pictograme actuale"
 
-#: main.cpp:149
+#: main.cpp:147
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Nu s-a putut crea un fișier temporar."
 
-#: main.cpp:160
+#: main.cpp:158
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Nu s-a putut descărca arhiva cu tematici de pictograme: %1"
 
-#: main.cpp:174
+#: main.cpp:172
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Fișierul nu este o arhivă validă cu tematici de pictograme."
 
-#: main.cpp:179
+#: main.cpp:177
 #, kde-format
 msgid ""
 "A problem occurred during the installation process; however, most of the "
@@ -48,17 +48,17 @@ msgstr ""
 "A apărut o problemă în timpul procesului de instalare. Totuși, majoritatea "
 "tematicilor din arhivă au fost instalate."
 
-#: main.cpp:183
+#: main.cpp:181
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Tematica a fost instalată cu succes."
 
-#: main.cpp:227
+#: main.cpp:225
 #, kde-format
 msgid "Installing icon themes…"
 msgstr "Se instalează tematici de pictograme…"
 
-#: main.cpp:237
+#: main.cpp:235
 #, kde-format
 msgid "Installing %1 theme…"
 msgstr "Se instalează tematica %1…"

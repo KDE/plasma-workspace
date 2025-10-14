@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-13 00:44+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2025-05-18 20:44+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -665,45 +665,45 @@ msgstr "A parancs alapértelmezett ikonjának visszaállítása"
 msgid "Icon:"
 msgstr "Ikon:"
 
-#: historymodel.cpp:280
+#: historymodel.cpp:281
 #, fuzzy, kde-format
 #| msgid "The clipboard history will store up to this many items."
 msgid "The clipboard history contains starred items. Clear them too?"
 msgstr "A vágólap előzményei legfeljebb ennyi elemet tárolnak."
 
-#: historymodel.cpp:281 historymodel.cpp:301
+#: historymodel.cpp:282 historymodel.cpp:302
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Vágólapnapló törlése"
 
-#: historymodel.cpp:282
+#: historymodel.cpp:283
 #, kde-format
 msgid "Clear Everything"
 msgstr ""
 
-#: historymodel.cpp:283
+#: historymodel.cpp:284
 #, fuzzy, kde-format
 #| msgid "Clipboard Items"
 msgid "Keep Starred Items"
 msgstr "Vágólapelemek"
 
-#: historymodel.cpp:300
+#: historymodel.cpp:301
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Biztosan törölni szeretné a vágólap összes előzményét?"
 
-#: historymodel.cpp:384
+#: historymodel.cpp:385
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:564
+#: historymodel.cpp:565
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 
-#: historymodel.cpp:565
+#: historymodel.cpp:566
 #, kde-format
 msgid "Remove Starred Item"
 msgstr ""
@@ -991,7 +991,7 @@ msgstr ""
 "Ha fájlnevet vagy URL-t választanak ki, a műveletmenü tartalmazza a MIME-"
 "típust kezelő alkalmazásokat is."
 
-#: klipperpopup.cpp:36
+#: klipperpopup.cpp:37
 #, kde-format
 msgid "Clipboard Popup"
 msgstr "Felugró vágólap"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-31 00:44+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2023-12-02 19:50+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -21,44 +21,44 @@ msgstr ""
 "X-Generator: Lokalize 24.01.80\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-#: actions/checkaction.cpp:74
+#: actions/checkaction.cpp:72
 #, kde-format
 msgctxt "@action:button check a storageAccess (i.e disk) for error"
 msgid "Check for Errors"
 msgstr ""
 
-#: actions/mountaction.cpp:103
+#: actions/mountaction.cpp:101
 #, kde-format
 msgctxt "@action:button Mount a disk without verifying for errors"
 msgid "Mount without verifying"
 msgstr ""
 
-#: actions/mountaction.cpp:106
+#: actions/mountaction.cpp:104
 #, kde-format
 msgid "Mount"
 msgstr "Pripojiť"
 
-#: actions/mountandopenaction.cpp:183
+#: actions/mountandopenaction.cpp:181
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Otvoriť v správcovi súborov"
 
-#: actions/mountandopenaction.cpp:186
+#: actions/mountandopenaction.cpp:184
 #, kde-format
 msgid "Try to Fix"
 msgstr ""
 
-#: actions/mountandopenaction.cpp:186
+#: actions/mountandopenaction.cpp:184
 #, kde-format
 msgid "Mount and Open"
 msgstr "Pripojiť a otvoriť"
 
-#: actions/mountandopenaction.cpp:188
+#: actions/mountandopenaction.cpp:186
 #, kde-format
 msgid "Eject"
 msgstr "Vysunúť"
 
-#: actions/mountandopenaction.cpp:190
+#: actions/mountandopenaction.cpp:188
 #, kde-format
 msgid "Safely remove"
 msgstr "Bezpečne odstrániť"

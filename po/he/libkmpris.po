@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-29 00:44+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2024-02-09 15:21+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -18,55 +18,55 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
 
-#: kded/mprisservice.cpp:105
+#: kded/mprisservice.cpp:103
 #, kde-format
 msgctxt "@title Name for global shortcuts category"
 msgid "Media Controller"
 msgstr "פקד מדיה"
 
-#: kded/mprisservice.cpp:114
+#: kded/mprisservice.cpp:112
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Play/Pause media playback"
 msgstr "הפעלת/השהיית ניגון מדיה"
 
-#: kded/mprisservice.cpp:115
+#: kded/mprisservice.cpp:113
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback next"
 msgstr "נגינת המדיה הבאה"
 
-#: kded/mprisservice.cpp:116
+#: kded/mprisservice.cpp:114
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback previous"
 msgstr "נגינת המדיה הקודמת"
 
-#: kded/mprisservice.cpp:117
+#: kded/mprisservice.cpp:115
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Stop media playback"
 msgstr "עצירת נגינת המדיה"
 
-#: kded/mprisservice.cpp:118
+#: kded/mprisservice.cpp:116
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Pause media playback"
 msgstr "השהיית נגינת המדיה"
 
-#: kded/mprisservice.cpp:119
+#: kded/mprisservice.cpp:117
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Play media playback"
 msgstr "הפעלת ניגון מדיה"
 
-#: kded/mprisservice.cpp:120
+#: kded/mprisservice.cpp:118
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media volume up"
 msgstr "הגברת עוצמת שמע של מדיה"
 
-#: kded/mprisservice.cpp:121
+#: kded/mprisservice.cpp:119
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media volume down"

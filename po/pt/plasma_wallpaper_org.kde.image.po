@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-02 00:44+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2022-05-23 03:16+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -261,13 +261,13 @@ msgstr ""
 "O ficheiro passado para ser atribuído como papel de parede não existe, ou "
 "então não é possível identificá-lo como um papel de parede: %1"
 
-#: plugin/imagebackend.cpp:37
+#: plugin/imagebackend.cpp:38
 #, kde-format
 msgid "Next Wallpaper Image"
 msgstr "Papel de Parede Seguinte"
 
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
-#: plugin/imagebackend.cpp:354
+#: plugin/imagebackend.cpp:353
 #, fuzzy, kde-format
 #| msgid "Image Files"
 msgid "Media Files"
@@ -368,39 +368,39 @@ msgstr "Abrir a Pasta"
 msgid "There are no wallpaper locations configured"
 msgstr "Não estão configuradas nenhumas localizações com papéis de parede"
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:49
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:47
 #, fuzzy, kde-format
 #| msgid "Get New Wallpapers…"
 msgctxt "@action:inmenu"
 msgid "Set as Wallpaper"
 msgstr "Obter Novos Papéis de Parede…"
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:52
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:50
 #, kde-format
 msgctxt "@action:inmenu Set as Desktop Wallpaper"
 msgid "Desktop"
 msgstr ""
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:58
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:56
 #, kde-format
 msgctxt "@action:inmenu Set as Lockscreen Wallpaper"
 msgid "Lockscreen"
 msgstr ""
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:64
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:62
 #, kde-format
 msgctxt "@action:inmenu Set as both lockscreen and Desktop Wallpaper"
 msgid "Both"
 msgstr ""
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:97
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:95
 #, fuzzy, kde-kuit-format
 #| msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
 msgctxt "@info %1 is the dbus error message"
 msgid "An error occurred while attempting to set the Plasma wallpaper:<nl/>%1"
 msgstr "Ocorreu um erro ao tentar atribuir o papel de parede do Plasma:\n"
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:110
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:108
 #, fuzzy, kde-format
 #| msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
 msgid "An error occurred while attempting to open kscreenlockerrc config file."

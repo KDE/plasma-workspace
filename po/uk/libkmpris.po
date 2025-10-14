@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-29 00:44+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2024-02-09 11:37+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -18,55 +18,55 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 23.04.1\n"
 
-#: kded/mprisservice.cpp:105
+#: kded/mprisservice.cpp:103
 #, kde-format
 msgctxt "@title Name for global shortcuts category"
 msgid "Media Controller"
 msgstr "Керування мультимедійними можливостями"
 
-#: kded/mprisservice.cpp:114
+#: kded/mprisservice.cpp:112
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Play/Pause media playback"
 msgstr "Почати або призупинити відтворення"
 
-#: kded/mprisservice.cpp:115
+#: kded/mprisservice.cpp:113
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback next"
 msgstr "Відтворення наступної композиції"
 
-#: kded/mprisservice.cpp:116
+#: kded/mprisservice.cpp:114
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback previous"
 msgstr "Відтворення попередньої композиції"
 
-#: kded/mprisservice.cpp:117
+#: kded/mprisservice.cpp:115
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Stop media playback"
 msgstr "Припинення відтворення"
 
-#: kded/mprisservice.cpp:118
+#: kded/mprisservice.cpp:116
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Pause media playback"
 msgstr "Призупинити відтворення"
 
-#: kded/mprisservice.cpp:119
+#: kded/mprisservice.cpp:117
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Play media playback"
 msgstr "Почати відтворення"
 
-#: kded/mprisservice.cpp:120
+#: kded/mprisservice.cpp:118
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media volume up"
 msgstr "Гучніше"
 
-#: kded/mprisservice.cpp:121
+#: kded/mprisservice.cpp:119
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media volume down"

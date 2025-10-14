@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-31 00:44+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2023-08-04 07:15+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -24,39 +24,39 @@ msgstr ""
 msgid "Name of the current icon theme"
 msgstr "ხატულების მიმდინარე თემის სახელი"
 
-#: main.cpp:149
+#: main.cpp:147
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "დროებითი ფაილის შექმნის შეცდომა."
 
-#: main.cpp:160
+#: main.cpp:158
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "ხატულების თემის არქივის გადმოწერის შეცდომა: %1"
 
-#: main.cpp:174
+#: main.cpp:172
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "ფაილი ხატულების თემის სწორ არქივს არ წარმოადგენს."
 
-#: main.cpp:179
+#: main.cpp:177
 #, kde-format
 msgid ""
 "A problem occurred during the installation process; however, most of the "
 "themes in the archive have been installed"
 msgstr "დაყენების პროცესის შეცდომა. მაგრამ არქივის ძირითადი თემები დაყენებულია"
 
-#: main.cpp:183
+#: main.cpp:181
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "თემა წარმატებით დადგა."
 
-#: main.cpp:227
+#: main.cpp:225
 #, kde-format
 msgid "Installing icon themes…"
 msgstr "ხატულის თემების დაყენება…"
 
-#: main.cpp:237
+#: main.cpp:235
 #, kde-format
 msgid "Installing %1 theme…"
 msgstr "თემის დაყენება: %1 …"

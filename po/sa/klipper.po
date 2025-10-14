@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-13 00:44+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -653,44 +653,44 @@ msgstr "आदेशस्य कृते चिह्नं पूर्वन
 msgid "Icon:"
 msgstr "चिह्नम् :"
 
-#: historymodel.cpp:280
+#: historymodel.cpp:281
 #, fuzzy, kde-format
 #| msgid "The clipboard history will store up to this many items."
 msgid "The clipboard history contains starred items. Clear them too?"
 msgstr "क्लिप्बोर्ड-इतिहासः एतावता वस्तूनि यावत् संग्रहयिष्यति ।"
 
-#: historymodel.cpp:281 historymodel.cpp:301
+#: historymodel.cpp:282 historymodel.cpp:302
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "क्लिपबोर्ड इतिहासं स्वच्छं कुर्वन्तु"
 
-#: historymodel.cpp:282
+#: historymodel.cpp:283
 #, kde-format
 msgid "Clear Everything"
 msgstr ""
 
-#: historymodel.cpp:283
+#: historymodel.cpp:284
 #, kde-format
 msgid "Keep Starred Items"
 msgstr ""
 
-#: historymodel.cpp:300
+#: historymodel.cpp:301
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "किं भवान् वास्तवमेव सम्पूर्णं क्लिप्बोर्ड-इतिहासं स्वच्छं विलोपयितुम् इच्छति?"
 
-#: historymodel.cpp:384
+#: historymodel.cpp:385
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:564
+#: historymodel.cpp:565
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 
-#: historymodel.cpp:565
+#: historymodel.cpp:566
 #, kde-format
 msgid "Remove Starred Item"
 msgstr ""
@@ -974,7 +974,7 @@ msgstr ""
 "यदि सञ्चिकानाम अथवा URL चयनितम् अस्ति तर्हि पॉपअप मेन्यू मध्ये तस्य MIME प्रकारं "
 "स्वीकुर्वितुं शक्नुवन्ति अनुप्रयोगाः समाविष्टाः कुर्वन्तु ।"
 
-#: klipperpopup.cpp:36
+#: klipperpopup.cpp:37
 #, kde-format
 msgid "Clipboard Popup"
 msgstr "क्लिपबोर्ड पॉपअप"

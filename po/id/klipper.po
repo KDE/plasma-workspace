@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-13 00:44+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2025-02-13 22:10+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -669,46 +669,46 @@ msgstr "Set ulang ikon ke baku untuk perintah"
 msgid "Icon:"
 msgstr "Ikon:"
 
-#: historymodel.cpp:280
+#: historymodel.cpp:281
 #, fuzzy, kde-format
 #| msgid "The clipboard history will store up to this many items."
 msgid "The clipboard history contains starred items. Clear them too?"
 msgstr "Riwayat papan klip akan menyimpan hingga banyak item ini."
 
-#: historymodel.cpp:281 historymodel.cpp:301
+#: historymodel.cpp:282 historymodel.cpp:302
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Bersihkan Riwayat Papan Klip"
 
-#: historymodel.cpp:282
+#: historymodel.cpp:283
 #, kde-format
 msgid "Clear Everything"
 msgstr ""
 
-#: historymodel.cpp:283
+#: historymodel.cpp:284
 #, fuzzy, kde-format
 #| msgctxt "%1 is application display name"
 #| msgid "%1 - Clipboard Items"
 msgid "Keep Starred Items"
 msgstr "%1 - Item Papan Klip"
 
-#: historymodel.cpp:300
+#: historymodel.cpp:301
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Apakah Anda yakin ingin menghapus seluruh riwayat papan klip?"
 
-#: historymodel.cpp:384
+#: historymodel.cpp:385
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:564
+#: historymodel.cpp:565
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 
-#: historymodel.cpp:565
+#: historymodel.cpp:566
 #, kde-format
 msgid "Remove Starred Item"
 msgstr ""
@@ -997,7 +997,7 @@ msgstr ""
 "Jika nama berkas atau URL dipilih, aplikasi yang dapat menerima jenis MIME "
 "di menu sembulan juga termasuk."
 
-#: klipperpopup.cpp:36
+#: klipperpopup.cpp:37
 #, kde-format
 msgid "Clipboard Popup"
 msgstr "Sembulan Papan Klip"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-08 00:45+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2025-06-29 20:29+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -256,7 +256,7 @@ msgctxt ""
 msgid "Could not find an example for this locale"
 msgstr "Неуспешно намиране на  примери за локала"
 
-#: glibclocaleconstructor.cpp:164
+#: glibclocaleconstructor.cpp:165
 #, kde-kuit-format
 msgctxt "@info this will be shown as an error message"
 msgid ""
@@ -268,13 +268,13 @@ msgstr ""
 "<command>localectl</command>. Моля, подайте доклад за грешка за това на "
 "адрес <link>https://bugs.kde.org</link>"
 
-#: languagelistmodel.cpp:95
+#: languagelistmodel.cpp:97
 #, kde-format
 msgctxt "%1 is language name, %2 is language code name"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: languagelistmodel.cpp:101
+#: languagelistmodel.cpp:103
 #, kde-format
 msgctxt ""
 "%1 is português in system locale name, Brazil is to distinguish European "

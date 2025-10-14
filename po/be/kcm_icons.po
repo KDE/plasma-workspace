@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-31 00:44+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2024-05-25 23:55\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -30,22 +30,22 @@ msgstr ""
 msgid "Name of the current icon theme"
 msgstr "Назва бягучай тэмы значкоў"
 
-#: main.cpp:149
+#: main.cpp:147
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Не ўдалося стварыць часовы файл."
 
-#: main.cpp:160
+#: main.cpp:158
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Не ўдалося спампаваць архіў тэмы значкоў: %1"
 
-#: main.cpp:174
+#: main.cpp:172
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Файл не ёсць прыдатным архівам тэмы значкоў."
 
-#: main.cpp:179
+#: main.cpp:177
 #, kde-format
 msgid ""
 "A problem occurred during the installation process; however, most of the "
@@ -54,17 +54,17 @@ msgstr ""
 "Падчас усталявання адбылася памылка; аднак, большасць тэмаў з архіва была "
 "ўсталяваная"
 
-#: main.cpp:183
+#: main.cpp:181
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Тэма паспяхова ўсталяваная."
 
-#: main.cpp:227
+#: main.cpp:225
 #, kde-format
 msgid "Installing icon themes…"
 msgstr "Усталяванне тэмы значкоў…"
 
-#: main.cpp:237
+#: main.cpp:235
 #, kde-format
 msgid "Installing %1 theme…"
 msgstr "Усталяванне тэмы \"%1\"…"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-11 00:44+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2024-12-15 19:31+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -26,27 +26,27 @@ msgstr ""
 msgid "Name of the current Plasma Style"
 msgstr "वर्तमान प्लाज़्मा शैली का नाम"
 
-#: kcm.cpp:112
+#: kcm.cpp:111
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "अस्थायी फ़ाइल बनाने में असफल।"
 
-#: kcm.cpp:123
+#: kcm.cpp:122
 #, kde-format
 msgid "Unable to download the theme: %1"
 msgstr "प्रसंग को डाउनलोड करने में असमर्थ: %1"
 
-#: kcm.cpp:148
+#: kcm.cpp:147
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "प्रसंग सफलतापूर्वक स्थापित।"
 
-#: kcm.cpp:151 kcm.cpp:157
+#: kcm.cpp:150 kcm.cpp:156
 #, kde-format
 msgid "Theme installation failed."
 msgstr "प्रसंग की संस्थापना असफल।"
 
-#: kcm.cpp:251
+#: kcm.cpp:250
 #, kde-format
 msgid "Removing theme failed: %1"
 msgstr "प्रसंग की संस्थापना असफल : %1"

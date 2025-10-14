@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-06 00:46+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2024-06-09 15:10+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -18,74 +18,74 @@ msgstr ""
 "20)) ? 1 : 2;\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: interactiveconsole.cpp:64
+#: interactiveconsole.cpp:65
 #, kde-format
 msgid "&Execute"
 msgstr "&Execută"
 
-#: interactiveconsole.cpp:65
+#: interactiveconsole.cpp:66
 #, kde-format
 msgctxt "Toolbar Button to switch to Plasma Scripting Mode"
 msgid "Plasma"
 msgstr "Plasma"
 
-#: interactiveconsole.cpp:66
+#: interactiveconsole.cpp:67
 #, kde-format
 msgctxt "Toolbar Button to switch to KWin Scripting Mode"
 msgid "KWin"
 msgstr "KWin"
 
-#: interactiveconsole.cpp:67
+#: interactiveconsole.cpp:68
 #, kde-format
 msgid "Templates"
 msgstr "Șabloane"
 
-#: interactiveconsole.cpp:76
+#: interactiveconsole.cpp:77
 #, kde-format
 msgid "Desktop Shell Scripting Console"
 msgstr "Consolă de scripturi pentru învelișul de birou"
 
-#: interactiveconsole.cpp:83
+#: interactiveconsole.cpp:84
 #, kde-format
 msgid "Editor"
 msgstr "Redactor"
 
-#: interactiveconsole.cpp:94
+#: interactiveconsole.cpp:95
 #, kde-format
 msgid "Load"
 msgstr "Încarcă"
 
-#: interactiveconsole.cpp:100
+#: interactiveconsole.cpp:101
 #, kde-format
 msgid "Use"
 msgstr "Folosește"
 
-#: interactiveconsole.cpp:160
+#: interactiveconsole.cpp:161
 #, kde-format
 msgid "Output"
 msgstr "Ieșire"
 
-#: interactiveconsole.cpp:273
+#: interactiveconsole.cpp:274
 #, kde-format
 msgid "Unable to load script file <b>%1</b>"
 msgstr "Nu s-a putut încărca fișierul-script: <b>%1</b>"
 
-#: interactiveconsole.cpp:322
+#: interactiveconsole.cpp:323
 #, kde-format
 msgid "Open Script File"
 msgstr "Deschide fișier cu script"
 
-#: interactiveconsole.cpp:437
+#: interactiveconsole.cpp:438
 #, kde-format
 msgid "Save Script File"
 msgstr "Salvează fișier cu script"
 
-#: interactiveconsole.cpp:526
+#: interactiveconsole.cpp:527
 #, kde-format
 msgid "Executing script at %1"
 msgstr "Se execută script la %1"
 
-#: interactiveconsole.cpp:578
+#: interactiveconsole.cpp:579
 #, no-c-format, kde-format
 msgid "Runtime: %1ms"
 msgstr "Timp de rulare: %1ms"

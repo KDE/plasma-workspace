@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-02 00:44+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2025-08-18 17:35+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -248,13 +248,13 @@ msgstr ""
 "Šī datne, kas ir norādīta kā tapete, nepastāv, vai arī to nevar identificēt "
 "kā tapeti: %1"
 
-#: plugin/imagebackend.cpp:37
+#: plugin/imagebackend.cpp:38
 #, kde-format
 msgid "Next Wallpaper Image"
 msgstr "Nākamais tapetes attēls"
 
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
-#: plugin/imagebackend.cpp:354
+#: plugin/imagebackend.cpp:353
 #, kde-format
 msgid "Media Files"
 msgstr "Multivides datnes"
@@ -355,37 +355,37 @@ msgstr "Atvērt mapi…"
 msgid "There are no wallpaper locations configured"
 msgstr "Nav konfigurēta tapetes atrašanās vieta"
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:49
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:47
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Set as Wallpaper"
 msgstr "Uzlikt jaunu tapeti"
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:52
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:50
 #, kde-format
 msgctxt "@action:inmenu Set as Desktop Wallpaper"
 msgid "Desktop"
 msgstr "Darbvirsma"
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:58
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:56
 #, kde-format
 msgctxt "@action:inmenu Set as Lockscreen Wallpaper"
 msgid "Lockscreen"
 msgstr "Slēgšanas ekrāns"
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:64
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:62
 #, kde-format
 msgctxt "@action:inmenu Set as both lockscreen and Desktop Wallpaper"
 msgid "Both"
 msgstr "Abiem"
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:97
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:95
 #, kde-kuit-format
 msgctxt "@info %1 is the dbus error message"
 msgid "An error occurred while attempting to set the Plasma wallpaper:<nl/>%1"
 msgstr "Kļūda, mēģinot uzlikt „Plasma“ tapeti:<nl/>%1"
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:110
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:108
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr "Kļūda, mēģinot atvērt „kscreenlockerrc“ konfigurācijas datni."

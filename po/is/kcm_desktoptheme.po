@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-11 00:44+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2024-12-13 21:14+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -28,27 +28,27 @@ msgstr ""
 msgid "Name of the current Plasma Style"
 msgstr "Heiti á núverandi stíl Plasma"
 
-#: kcm.cpp:112
+#: kcm.cpp:111
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Mistókst að búa til bráðabirgðaskrá."
 
-#: kcm.cpp:123
+#: kcm.cpp:122
 #, kde-format
 msgid "Unable to download the theme: %1"
 msgstr "Ekki tókst að sækja þemað: %1"
 
-#: kcm.cpp:148
+#: kcm.cpp:147
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Uppsetningu á þema er lokið."
 
-#: kcm.cpp:151 kcm.cpp:157
+#: kcm.cpp:150 kcm.cpp:156
 #, kde-format
 msgid "Theme installation failed."
 msgstr "Uppsetning á þema mistókst."
 
-#: kcm.cpp:251
+#: kcm.cpp:250
 #, kde-format
 msgid "Removing theme failed: %1"
 msgstr "Mistókst að fjarlægja þema: %1"

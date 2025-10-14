@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-24 00:45+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2021-07-25 14:01+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -18,47 +18,47 @@ msgstr ""
 "20)) ? 1 : 2;\n"
 "X-Generator: Lokalize 19.12.3\n"
 
-#: actionlist.cpp:91
+#: actionlist.cpp:92
 #, kde-format
 msgid "Open with:"
 msgstr "Deschide cu:"
 
-#: actionlist.cpp:104
+#: actionlist.cpp:105
 #, kde-format
 msgid "Properties"
 msgstr "Proprietăți"
 
-#: actionlist.cpp:151
+#: actionlist.cpp:152
 #, kde-format
 msgid "Add to Desktop"
 msgstr "Adaugă la birou"
 
-#: actionlist.cpp:158
+#: actionlist.cpp:159
 #, kde-format
 msgid "Pin to Task Manager"
 msgstr "Fixează la gestionarul de sarcini"
 
-#: actionlist.cpp:162
+#: actionlist.cpp:163
 #, kde-format
 msgid "Add to Panel (Widget)"
 msgstr "Adaugă la panou (control grafic)"
 
-#: actionlist.cpp:313 rootmodel.cpp:540
+#: actionlist.cpp:314 rootmodel.cpp:538
 #, kde-format
 msgid "Recent Files"
 msgstr "Fișiere recente"
 
-#: actionlist.cpp:323
+#: actionlist.cpp:324
 #, kde-format
 msgid "Forget Recent Files"
 msgstr "Uită fișierele recente"
 
-#: actionlist.cpp:388
+#: actionlist.cpp:389
 #, kde-format
 msgid "Edit Application…"
 msgstr "Modifică aplicația…"
 
-#: actionlist.cpp:420
+#: actionlist.cpp:421
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
@@ -83,84 +83,84 @@ msgctxt "Generic name (App name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: appsmodel.cpp:37 appsmodel.cpp:73 computermodel.cpp:97 computermodel.cpp:225
-#: recentusagemodel.cpp:165 recentusagemodel.cpp:228
+#: appsmodel.cpp:38 appsmodel.cpp:74 computermodel.cpp:93 computermodel.cpp:219
+#: recentusagemodel.cpp:159 recentusagemodel.cpp:222
 #, kde-format
 msgid "Applications"
 msgstr "Aplicații"
 
-#: appsmodel.cpp:168
+#: appsmodel.cpp:169
 #, kde-format
 msgid "Unhide Applications in this Submenu"
 msgstr "Demaschează aplicațiile din acest submeniu"
 
-#: appsmodel.cpp:177
+#: appsmodel.cpp:178
 #, kde-format
 msgid "Unhide Applications in '%1'"
 msgstr "Demaschează aplicațiile din „%1”"
 
-#: computermodel.cpp:91
+#: computermodel.cpp:87
 #, kde-format
 msgid "Show KRunner"
 msgstr "Arată KRunner"
 
-#: computermodel.cpp:95
+#: computermodel.cpp:91
 #, kde-format
 msgid "Search, calculate, or run a command"
 msgstr "Caută, calculează, sau rulează o comandă"
 
-#: computermodel.cpp:148
+#: computermodel.cpp:142
 #, kde-format
 msgid "Computer"
 msgstr "Calculator"
 
 #. i18n.
-#: kastatsfavoritesmodel.cpp:557 rootmodel.cpp:533 simplefavoritesmodel.cpp:33
+#: kastatsfavoritesmodel.cpp:559 rootmodel.cpp:531 simplefavoritesmodel.cpp:33
 #, kde-format
 msgid "Favorites"
 msgstr "Favorite"
 
-#: recentusagemodel.cpp:163
+#: recentusagemodel.cpp:157
 #, kde-format
 msgid "Recently Used"
 msgstr "Utilizate recent"
 
-#: recentusagemodel.cpp:168 recentusagemodel.cpp:317
+#: recentusagemodel.cpp:162 recentusagemodel.cpp:311
 #, kde-format
 msgid "Files"
 msgstr "Fișiere"
 
-#: recentusagemodel.cpp:250
+#: recentusagemodel.cpp:244
 #, kde-format
 msgid "Forget Application"
 msgstr "Uită aplicația"
 
-#: recentusagemodel.cpp:315
+#: recentusagemodel.cpp:309
 #, kde-format
 msgid "Folders"
 msgstr ""
 
-#: recentusagemodel.cpp:352
+#: recentusagemodel.cpp:346
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Deschide dosarul conținător"
 
-#: recentusagemodel.cpp:355
+#: recentusagemodel.cpp:349
 #, kde-format
 msgid "Forget File"
 msgstr "Uită fișierul"
 
-#: recentusagemodel.cpp:490
+#: recentusagemodel.cpp:484
 #, kde-format
 msgid "Forget All"
 msgstr "Uită tot"
 
-#: recentusagemodel.cpp:492
+#: recentusagemodel.cpp:486
 #, kde-format
 msgid "Forget All Applications"
 msgstr "Uită toate aplicațiile"
 
-#: recentusagemodel.cpp:495
+#: recentusagemodel.cpp:489
 #, kde-format
 msgid "Forget All Files"
 msgstr "Uită toate fișierele"
@@ -170,37 +170,37 @@ msgstr "Uită toate fișierele"
 msgid "All Applications"
 msgstr "Toate aplicațiile"
 
-#: rootmodel.cpp:133
+#: rootmodel.cpp:131
 #, kde-format
 msgid "Hide %1"
 msgstr "Ascunde %1"
 
-#: rootmodel.cpp:527
+#: rootmodel.cpp:525
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "Aceasta nu ar trebui să fie vizibilă! Folosiți KICKER_FAVORITES_MODEL"
 
-#: rootmodel.cpp:540
+#: rootmodel.cpp:538
 #, kde-format
 msgid "Often Used Files"
 msgstr "Fișiere folosite des"
 
-#: rootmodel.cpp:549
+#: rootmodel.cpp:547
 #, kde-format
 msgid "Recent Applications"
 msgstr "Aplicații recente"
 
-#: rootmodel.cpp:549
+#: rootmodel.cpp:547
 #, kde-format
 msgid "Often Used Applications"
 msgstr "Aplicații folosite des"
 
-#: rootmodel.cpp:564
+#: rootmodel.cpp:562
 #, kde-format
 msgid "Power / Session"
 msgstr "Alimentare / Sesiune"
 
-#: runnermodel.cpp:222
+#: runnermodel.cpp:220
 #, kde-format
 msgid "Search results"
 msgstr "Rezultatele căutării"

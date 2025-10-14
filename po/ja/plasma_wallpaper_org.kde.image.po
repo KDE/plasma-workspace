@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-02 00:44+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2025-03-08 19:02+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -246,13 +246,13 @@ msgid ""
 "it as a wallpaper: %1"
 msgstr ""
 
-#: plugin/imagebackend.cpp:37
+#: plugin/imagebackend.cpp:38
 #, kde-format
 msgid "Next Wallpaper Image"
 msgstr "次の壁紙画像"
 
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
-#: plugin/imagebackend.cpp:354
+#: plugin/imagebackend.cpp:353
 #, kde-format
 msgid "Media Files"
 msgstr "メディアファイル"
@@ -347,37 +347,37 @@ msgstr "フォルダを開く..."
 msgid "There are no wallpaper locations configured"
 msgstr "設定された壁紙の場所はありません"
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:49
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:47
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Set as Wallpaper"
 msgstr "壁紙として設定"
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:52
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:50
 #, kde-format
 msgctxt "@action:inmenu Set as Desktop Wallpaper"
 msgid "Desktop"
 msgstr "デスクトップ"
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:58
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:56
 #, kde-format
 msgctxt "@action:inmenu Set as Lockscreen Wallpaper"
 msgid "Lockscreen"
 msgstr "ロック画面"
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:64
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:62
 #, kde-format
 msgctxt "@action:inmenu Set as both lockscreen and Desktop Wallpaper"
 msgid "Both"
 msgstr "両方"
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:97
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:95
 #, kde-kuit-format
 msgctxt "@info %1 is the dbus error message"
 msgid "An error occurred while attempting to set the Plasma wallpaper:<nl/>%1"
 msgstr "壁紙の設定中にエラーが発生しました:<nl/>%1"
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:110
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:108
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr "kscreenlockerrc の設定ファイルを開く際にエラーが発生しました。"

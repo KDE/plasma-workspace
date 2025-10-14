@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-02 00:44+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2025-08-02 11:23+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -257,13 +257,13 @@ msgstr ""
 "El fitxer passat per a definir com a fons de pantalla no existeix, o no s'ha "
 "pogut identificar com a fons de pantalla: %1"
 
-#: plugin/imagebackend.cpp:37
+#: plugin/imagebackend.cpp:38
 #, kde-format
 msgid "Next Wallpaper Image"
 msgstr "Fons de pantalla següent"
 
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
-#: plugin/imagebackend.cpp:354
+#: plugin/imagebackend.cpp:353
 #, kde-format
 msgid "Media Files"
 msgstr "Fitxers multimèdia"
@@ -361,31 +361,31 @@ msgstr "Obre una carpeta…"
 msgid "There are no wallpaper locations configured"
 msgstr "No s'ha configurat cap ubicació de fons de pantalla"
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:49
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:47
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Set as Wallpaper"
 msgstr "Estableix com a fons de pantalla"
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:52
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:50
 #, kde-format
 msgctxt "@action:inmenu Set as Desktop Wallpaper"
 msgid "Desktop"
 msgstr "Escriptori"
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:58
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:56
 #, kde-format
 msgctxt "@action:inmenu Set as Lockscreen Wallpaper"
 msgid "Lockscreen"
 msgstr "Pantalla de bloqueig"
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:64
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:62
 #, kde-format
 msgctxt "@action:inmenu Set as both lockscreen and Desktop Wallpaper"
 msgid "Both"
 msgstr "Ambdós"
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:97
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:95
 #, kde-kuit-format
 msgctxt "@info %1 is the dbus error message"
 msgid "An error occurred while attempting to set the Plasma wallpaper:<nl/>%1"
@@ -393,7 +393,7 @@ msgstr ""
 "Hi ha hagut un error en intentar definir el fons de pantalla del Plasma:<nl/>"
 "%1"
 
-#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:110
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:108
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr ""

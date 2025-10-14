@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-13 00:44+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2025-09-17 13:05+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -671,45 +671,45 @@ msgstr "Endurstilla táknið á sjálfgildi fyrir skipunina"
 msgid "Icon:"
 msgstr "Tákn:"
 
-#: historymodel.cpp:280
+#: historymodel.cpp:281
 #, kde-format
 msgid "The clipboard history contains starred items. Clear them too?"
 msgstr ""
 "Klippispjaldsferillinn inniheldur stjörnumerkt atriði. Hreinsa þau líka?"
 
-#: historymodel.cpp:281 historymodel.cpp:301
+#: historymodel.cpp:282 historymodel.cpp:302
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Hreinsa klippispjaldsferil"
 
-#: historymodel.cpp:282
+#: historymodel.cpp:283
 #, kde-format
 msgid "Clear Everything"
 msgstr "Hreinsa allt"
 
-#: historymodel.cpp:283
+#: historymodel.cpp:284
 #, kde-format
 msgid "Keep Starred Items"
 msgstr "Halda stjörnumerktum atriðum"
 
-#: historymodel.cpp:300
+#: historymodel.cpp:301
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Viltu örugglega hreinsa og eyða öllum ferli klippispjaldsins?"
 
-#: historymodel.cpp:384
+#: historymodel.cpp:385
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:564
+#: historymodel.cpp:565
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 "Þetta atriði er stjörnumerkt. Viltu örugglega fjarlægja það úr ferlinum?"
 
-#: historymodel.cpp:565
+#: historymodel.cpp:566
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "Fjarlægja stjörnumerkt atriði"
@@ -999,7 +999,7 @@ msgstr ""
 "Ef skrá eða slóð er valin verða forrit sem sem samþykkja MIME-gerð þeirra "
 "höfð með í sprettivalmyndinni."
 
-#: klipperpopup.cpp:36
+#: klipperpopup.cpp:37
 #, kde-format
 msgid "Clipboard Popup"
 msgstr "Sprettivalmynd klippispjalds"

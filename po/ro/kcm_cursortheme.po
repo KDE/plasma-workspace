@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-12 00:44+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2024-02-25 18:55+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -29,7 +29,7 @@ msgstr "Denumirea tematicii de cursori actuale"
 msgid "Current cursor size"
 msgstr "Dimensiune actuală cursor"
 
-#: kcmcursortheme.cpp:314
+#: kcmcursortheme.cpp:312
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
@@ -37,27 +37,27 @@ msgstr ""
 "Trebuie să reporniți sesiunea Plasma pentru ca modificările să intre în "
 "vigoare."
 
-#: kcmcursortheme.cpp:388
+#: kcmcursortheme.cpp:386
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Nu s-a putut crea un fișier temporar."
 
-#: kcmcursortheme.cpp:399
+#: kcmcursortheme.cpp:397
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Nu s-a putut descărca arhiva cu tematici de pictograme: %1"
 
-#: kcmcursortheme.cpp:430
+#: kcmcursortheme.cpp:428
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Fișierul nu este o arhivă validă cu tematici de pictograme."
 
-#: kcmcursortheme.cpp:437
+#: kcmcursortheme.cpp:435
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "Eșec la crearea dosarului „icons”."
 
-#: kcmcursortheme.cpp:446
+#: kcmcursortheme.cpp:444
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -66,12 +66,12 @@ msgstr ""
 "O tematică cu denumirea %1 există deja în dosarul cu tematici de pictograme. "
 "Doriți s-o înlocuiți cu aceasta?"
 
-#: kcmcursortheme.cpp:450
+#: kcmcursortheme.cpp:448
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Suprascrieți tema?"
 
-#: kcmcursortheme.cpp:474
+#: kcmcursortheme.cpp:472
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Tematica a fost instalată cu succes."
@@ -275,7 +275,7 @@ msgstr "Deschide tematica"
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Fișiere cu tematici de cursori (*.tar.gz *.tar.bz2)"
 
-#: xcursor/xcursortheme.cpp:58
+#: xcursor/xcursortheme.cpp:59
 #, kde-format
 msgctxt ""
 "@info The argument is the list of available sizes (in pixel). Example: "

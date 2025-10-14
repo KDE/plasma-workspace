@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-31 00:44+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2025-08-18 17:32+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -22,44 +22,44 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
-#: actions/checkaction.cpp:74
+#: actions/checkaction.cpp:72
 #, kde-format
 msgctxt "@action:button check a storageAccess (i.e disk) for error"
 msgid "Check for Errors"
 msgstr "Pārbaudīt kļūdas"
 
-#: actions/mountaction.cpp:103
+#: actions/mountaction.cpp:101
 #, kde-format
 msgctxt "@action:button Mount a disk without verifying for errors"
 msgid "Mount without verifying"
 msgstr "Piemontēt bez pārbaudīšanas"
 
-#: actions/mountaction.cpp:106
+#: actions/mountaction.cpp:104
 #, kde-format
 msgid "Mount"
 msgstr "Piemontēt"
 
-#: actions/mountandopenaction.cpp:183
+#: actions/mountandopenaction.cpp:181
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Atvērt datņu pārvaldniekā"
 
-#: actions/mountandopenaction.cpp:186
+#: actions/mountandopenaction.cpp:184
 #, kde-format
 msgid "Try to Fix"
 msgstr "Mēģināt labot"
 
-#: actions/mountandopenaction.cpp:186
+#: actions/mountandopenaction.cpp:184
 #, kde-format
 msgid "Mount and Open"
 msgstr "Piemontēt un atvērt"
 
-#: actions/mountandopenaction.cpp:188
+#: actions/mountandopenaction.cpp:186
 #, kde-format
 msgid "Eject"
 msgstr "Izņemt"
 
-#: actions/mountandopenaction.cpp:190
+#: actions/mountandopenaction.cpp:188
 #, kde-format
 msgid "Safely remove"
 msgstr "Droši izņemt"

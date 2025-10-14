@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-24 00:45+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2010-07-16 13:02+0100\n"
 "Last-Translator: Berend Ytsma <berendy@gmail.com>\n"
 "Language-Team: Nederlands <kde-i18n-nl@kde.org>\n"
@@ -27,7 +27,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "berendy@gmail.com,rinsedevries@kde.nl"
 
-#: apps/Installer.cpp:36 kcmfontinst/KCmFontInst.cpp:949
+#: apps/Installer.cpp:36 kcmfontinst/KCmFontInst.cpp:947
 #, kde-format
 msgid ""
 "Do you wish to install the font(s) for personal use (only available to you), "
@@ -36,7 +36,7 @@ msgstr ""
 "Wolle jo de lettertypen foar persoanlik gebrûk (dus alline foar jo) of "
 "systeemwiid (beskikber foar allen) ynsteallearje?"
 
-#: apps/Installer.cpp:37 kcmfontinst/KCmFontInst.cpp:952
+#: apps/Installer.cpp:37 kcmfontinst/KCmFontInst.cpp:950
 #, kde-format
 msgid "Where to Install"
 msgstr "Wêr te ynstallearjen"
@@ -51,7 +51,7 @@ msgstr "Lettertype ynstallaasjeprogramma"
 msgid "Simple font installer"
 msgstr "Ienfâldich lettertype-ynstallaasjeteprogramma"
 
-#: apps/Installer.cpp:117 apps/Printer.cpp:331
+#: apps/Installer.cpp:117 apps/Printer.cpp:327
 #, kde-format
 msgid "(C) Craig Drummond, 2007"
 msgstr "(C) Craig Drummond, 2007"
@@ -69,40 +69,40 @@ msgstr ""
 msgid "URL to install"
 msgstr "URL-adres om te ynstallearjen"
 
-#: apps/Printer.cpp:241
+#: apps/Printer.cpp:239
 #, kde-format
 msgid "Print"
 msgstr "Printsje"
 
-#: apps/Printer.cpp:311 kcmfontinst/DuplicatesDialog.cpp:224
+#: apps/Printer.cpp:307 kcmfontinst/DuplicatesDialog.cpp:224
 #, fuzzy, kde-format
 #| msgid "Canceling..."
 msgid "Canceling…"
 msgstr "Ofbrekke..."
 
-#: apps/Printer.cpp:327
+#: apps/Printer.cpp:323
 #, kde-format
 msgid "Font Printer"
 msgstr "Lettertypeprinter"
 
-#: apps/Printer.cpp:329
+#: apps/Printer.cpp:325
 #, kde-format
 msgid "Simple font printer"
 msgstr "Ienfâldich lettertypeprinter"
 
-#: apps/Printer.cpp:337
+#: apps/Printer.cpp:333
 #, kde-format
 msgid "Makes the dialog transient for an X app specified by winid"
 msgstr ""
 "Soarget derfoar dat it finster har gedraacht as dialoochfinster foar in X11-"
 "app dy omskreaun wurdt troch winid."
 
-#: apps/Printer.cpp:339
+#: apps/Printer.cpp:335
 #, kde-format
 msgid "Size index to print fonts"
 msgstr "Grutte-yndex foar it printsjen fan lettertypen"
 
-#: apps/Printer.cpp:343
+#: apps/Printer.cpp:339
 #, kde-format
 msgid ""
 "Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
@@ -111,12 +111,12 @@ msgstr ""
 "Lettertypen om te printsjen, oantsjutte as \"Famylje,styl\", wêrby styl in "
 "24-bits desimaal getal is dat gearfoege is as: <weight><width><slant>"
 
-#: apps/Printer.cpp:346
+#: apps/Printer.cpp:342
 #, kde-format
 msgid "File containing list of fonts to print"
 msgstr "Triem dy 't de list mei te printsjen lettertypen befettet"
 
-#: apps/Printer.cpp:348
+#: apps/Printer.cpp:344
 #, kde-format
 msgid "Remove file containing list of fonts to print"
 msgstr "Triem fuortsmite dy 't de list mei te printsjen lettertypen befettet"
@@ -253,59 +253,59 @@ msgid_plural "Open all %1 fonts in font viewer?"
 msgstr[0] "Alle %1 lettertypen yn lettertypewerjouwer iepenje?"
 msgstr[1] "Alle %1 lettertypen yn lettertypewerjouwer iepenje?"
 
-#: kcmfontinst/FontFilter.cpp:105
+#: kcmfontinst/FontFilter.cpp:106
 #, kde-format
 msgid "Family"
 msgstr "Famylje"
 
-#: kcmfontinst/FontFilter.cpp:107
+#: kcmfontinst/FontFilter.cpp:108
 #, kde-format
 msgid "Style"
 msgstr "Styl"
 
-#: kcmfontinst/FontFilter.cpp:109
+#: kcmfontinst/FontFilter.cpp:110
 #, kde-format
 msgid "Foundry"
 msgstr "Makker"
 
-#: kcmfontinst/FontFilter.cpp:111
+#: kcmfontinst/FontFilter.cpp:112
 #, kde-format
 msgid "FontConfig Match"
 msgstr "Byhearrende FontConfig"
 
-#: kcmfontinst/FontFilter.cpp:113
+#: kcmfontinst/FontFilter.cpp:114
 #, fuzzy, kde-format
 #| msgid "Preview Type"
 msgid "File Type"
 msgstr "Foarbyldtype"
 
-#: kcmfontinst/FontFilter.cpp:115
+#: kcmfontinst/FontFilter.cpp:116
 #, fuzzy, kde-format
 #| msgid "File"
 msgid "File Name"
 msgstr "Triem"
 
-#: kcmfontinst/FontFilter.cpp:117
+#: kcmfontinst/FontFilter.cpp:118
 #, kde-format
 msgid "File Location"
 msgstr "Triemlokaasje"
 
-#: kcmfontinst/FontFilter.cpp:119
+#: kcmfontinst/FontFilter.cpp:120
 #, kde-format
 msgid "Writing System"
 msgstr "Skriuwsysteem"
 
-#: kcmfontinst/FontFilter.cpp:130
+#: kcmfontinst/FontFilter.cpp:131
 #, kde-format
 msgid "Set Criteria"
 msgstr "Kritearia ynstelle"
 
-#: kcmfontinst/FontFilter.cpp:189
+#: kcmfontinst/FontFilter.cpp:190
 #, kde-format
 msgid "Symbol/Other"
 msgstr "Symboal/oaren"
 
-#: kcmfontinst/FontFilter.cpp:267 kcmfontinst/FontFilter.cpp:335
+#: kcmfontinst/FontFilter.cpp:268 kcmfontinst/FontFilter.cpp:336
 #, kde-format
 msgid "Filter by %1…"
 msgstr ""
@@ -359,19 +359,19 @@ msgstr "%1 [%2]"
 msgid "Delete"
 msgstr "Wiskje"
 
-#: kcmfontinst/FontList.cpp:1302 kcmfontinst/GroupList.cpp:791
-#: kcmfontinst/KCmFontInst.cpp:1115 kcmfontinst/KCmFontInst.cpp:1135
+#: kcmfontinst/FontList.cpp:1302 kcmfontinst/GroupList.cpp:790
+#: kcmfontinst/KCmFontInst.cpp:1113 kcmfontinst/KCmFontInst.cpp:1133
 #, kde-format
 msgid "Enable"
 msgstr "Ynskeakelje"
 
-#: kcmfontinst/FontList.cpp:1303 kcmfontinst/GroupList.cpp:792
-#: kcmfontinst/KCmFontInst.cpp:1116 kcmfontinst/KCmFontInst.cpp:1135
+#: kcmfontinst/FontList.cpp:1303 kcmfontinst/GroupList.cpp:791
+#: kcmfontinst/KCmFontInst.cpp:1114 kcmfontinst/KCmFontInst.cpp:1133
 #, kde-format
 msgid "Disable"
 msgstr "Utskeakelje"
 
-#: kcmfontinst/FontList.cpp:1308 kcmfontinst/GroupList.cpp:798
+#: kcmfontinst/FontList.cpp:1308 kcmfontinst/GroupList.cpp:797
 #, fuzzy, kde-format
 #| msgid "Print"
 msgid "Print…"
@@ -387,32 +387,32 @@ msgstr "Op 'e nij lade"
 msgid "Open all %1 fonts in font viewer?"
 msgstr "Alle %1 lettertypen yn lettertypewerjouwer iepenje?"
 
-#: kcmfontinst/GroupList.cpp:61
+#: kcmfontinst/GroupList.cpp:62
 #, kde-format
 msgid "All Fonts"
 msgstr "Alle lettertypen"
 
-#: kcmfontinst/GroupList.cpp:64
+#: kcmfontinst/GroupList.cpp:65
 #, kde-format
 msgid "Personal Fonts"
 msgstr "Persoanlike lettertypen"
 
-#: kcmfontinst/GroupList.cpp:67
+#: kcmfontinst/GroupList.cpp:68
 #, kde-format
 msgid "System Fonts"
 msgstr "Systeem lettertypen"
 
-#: kcmfontinst/GroupList.cpp:70
+#: kcmfontinst/GroupList.cpp:71
 #, kde-format
 msgid "Unclassified"
 msgstr "Net klassifisearre"
 
-#: kcmfontinst/GroupList.cpp:352
+#: kcmfontinst/GroupList.cpp:353
 #, kde-format
 msgid "Group"
 msgstr "Groep"
 
-#: kcmfontinst/GroupList.cpp:537
+#: kcmfontinst/GroupList.cpp:538
 #, kde-format
 msgid ""
 "<p>Do you really want to remove '<b>%1</b>'?</p><p><i>This will only remove "
@@ -421,22 +421,22 @@ msgstr ""
 "<p>Wolle jo '<b>%1</b>' fuortsmite?</p><p><i>Dit sil allinne de groep "
 "fuortsmite, net de lettertypen sels.</i></p>"
 
-#: kcmfontinst/GroupList.cpp:541
+#: kcmfontinst/GroupList.cpp:542
 #, kde-format
 msgid "Remove Group"
 msgstr "Groep wiskje"
 
-#: kcmfontinst/GroupList.cpp:542 kcmfontinst/GroupList.cpp:789
+#: kcmfontinst/GroupList.cpp:543 kcmfontinst/GroupList.cpp:788
 #, kde-format
 msgid "Remove"
 msgstr "Fuortsmite"
 
-#: kcmfontinst/GroupList.cpp:542
+#: kcmfontinst/GroupList.cpp:543
 #, kde-format
 msgid "Remove group"
 msgstr "Groep fuortsmite"
 
-#: kcmfontinst/GroupList.cpp:588
+#: kcmfontinst/GroupList.cpp:589
 #, kde-format
 msgid ""
 "<h3>Font Groups</h3><p>This list displays the font groups available on your "
@@ -456,7 +456,7 @@ msgstr ""
 "nei de juste groep. Om in famylje út de groep fuort te smiten, slepe jo "
 "dizze nei de groep \"Alle lettertypen\".</li></ul></p>"
 
-#: kcmfontinst/GroupList.cpp:596
+#: kcmfontinst/GroupList.cpp:597
 #, kde-format
 msgid ""
 "<li><i>All Fonts</i> contains all the fonts installed on your system.</"
@@ -467,7 +467,7 @@ msgstr ""
 "ynstallearre binne.</li><li><i>Net klasifisearre</i> befettet alle "
 "lettertypen dy't noch net yn in bepaalde groep pleatst binne.</li>"
 
-#: kcmfontinst/GroupList.cpp:599
+#: kcmfontinst/GroupList.cpp:600
 #, kde-format
 msgid ""
 "<li><i>All Fonts</i> contains all the fonts installed on your system - both  "
@@ -485,59 +485,59 @@ msgstr ""
 "befettet alle lettertypen dy't noch net yn in \"oanpaste\" groep pleatst "
 "binne.</li>"
 
-#: kcmfontinst/GroupList.cpp:701
+#: kcmfontinst/GroupList.cpp:702
 #, kde-format
 msgid "<qt>A group named <b>'%1'</b> already exists.</qt>"
 msgstr "<qt>Der bestiet al in groep mei de namme <b>'%1'</b>.</qt>"
 
-#: kcmfontinst/GroupList.cpp:794
+#: kcmfontinst/GroupList.cpp:793
 #, fuzzy, kde-format
 #| msgid "Rename..."
 msgid "Rename…"
 msgstr "Omneame..."
 
-#: kcmfontinst/GroupList.cpp:803
+#: kcmfontinst/GroupList.cpp:802
 #, fuzzy, kde-format
 #| msgid "Export..."
 msgid "Export…"
 msgstr "Eksportearjen..."
 
-#: kcmfontinst/GroupList.cpp:897
+#: kcmfontinst/GroupList.cpp:896
 #, kde-format
 msgid "Add to \"%1\"."
 msgstr "Taheakje oan \"%1\"."
 
-#: kcmfontinst/GroupList.cpp:899
+#: kcmfontinst/GroupList.cpp:898
 #, kde-format
 msgid "Remove from current group."
 msgstr "Fan aktive groep fuortsmite"
 
-#: kcmfontinst/GroupList.cpp:901
+#: kcmfontinst/GroupList.cpp:900
 #, kde-format
 msgid "Move to personal folder."
 msgstr "Nei de persoanlike map ferpleatse."
 
-#: kcmfontinst/GroupList.cpp:903
+#: kcmfontinst/GroupList.cpp:902
 #, kde-format
 msgid "Move to system folder."
 msgstr "Nei de systeem map ferpleatse."
 
-#: kcmfontinst/JobRunner.cpp:138
+#: kcmfontinst/JobRunner.cpp:139
 #, kde-format
 msgid "Skip"
 msgstr "Oerslaan"
 
-#: kcmfontinst/JobRunner.cpp:141
+#: kcmfontinst/JobRunner.cpp:142
 #, kde-format
 msgid "AutoSkip"
 msgstr "Automatysk oerslaan"
 
-#: kcmfontinst/JobRunner.cpp:186
+#: kcmfontinst/JobRunner.cpp:187
 #, kde-format
 msgid "<h3>Cancel?</h3><p>Are you sure you wish to cancel?</p>"
 msgstr "<h3>Ofbrekke?</h3><p>Wolle jo ôfbrekke?</p>"
 
-#: kcmfontinst/JobRunner.cpp:198
+#: kcmfontinst/JobRunner.cpp:199
 #, kde-format
 msgid ""
 "<h3>Finished</h3><p>Please note that any open applications will need to be "
@@ -546,85 +546,85 @@ msgstr ""
 "<h3>Foltôge</h3><p>Tink derom dat om de feroarings sichtber te meitsjen "
 "moatte alle rinnende programma's op 'e nij begjinne.</p>"
 
-#: kcmfontinst/JobRunner.cpp:206
+#: kcmfontinst/JobRunner.cpp:207
 #, kde-format
 msgid "Do not show this message again"
 msgstr "Dit boadskip net wer sjen litte"
 
-#: kcmfontinst/JobRunner.cpp:314
+#: kcmfontinst/JobRunner.cpp:315
 #, kde-format
 msgid "Installing"
 msgstr "Ynstallaasje is geande"
 
-#: kcmfontinst/JobRunner.cpp:317
+#: kcmfontinst/JobRunner.cpp:318
 #, kde-format
 msgid "Uninstalling"
 msgstr "Ynstallaasje wurdt ûngedien makke"
 
-#: kcmfontinst/JobRunner.cpp:320 kcmfontinst/JobRunner.cpp:417
+#: kcmfontinst/JobRunner.cpp:321 kcmfontinst/JobRunner.cpp:418
 #, kde-format
 msgid "Enabling"
 msgstr "Ynskeakelje"
 
-#: kcmfontinst/JobRunner.cpp:323 kcmfontinst/JobRunner.cpp:421
+#: kcmfontinst/JobRunner.cpp:324 kcmfontinst/JobRunner.cpp:422
 #, kde-format
 msgid "Moving"
 msgstr "Ferpleatse"
 
-#: kcmfontinst/JobRunner.cpp:326
+#: kcmfontinst/JobRunner.cpp:327
 #, kde-format
 msgid "Updating"
 msgstr "Fernijen"
 
-#: kcmfontinst/JobRunner.cpp:330
+#: kcmfontinst/JobRunner.cpp:331
 #, kde-format
 msgid "Removing"
 msgstr "Fuortsmite"
 
-#: kcmfontinst/JobRunner.cpp:334
+#: kcmfontinst/JobRunner.cpp:335
 #, kde-format
 msgid "Disabling"
 msgstr "Utskeakelje"
 
-#: kcmfontinst/JobRunner.cpp:372
+#: kcmfontinst/JobRunner.cpp:373
 #, fuzzy, kde-format
 #| msgid "Updating font configuration. Please wait..."
 msgid "Updating font configuration. Please wait…"
 msgstr "Lettertypekonfiguraasje wurdt fernijt. In amerijke..."
 
-#: kcmfontinst/JobRunner.cpp:444
+#: kcmfontinst/JobRunner.cpp:445
 #, kde-format
 msgid "Unable to start backend."
 msgstr "Net mooglik om efterein te starten."
 
-#: kcmfontinst/JobRunner.cpp:453
+#: kcmfontinst/JobRunner.cpp:454
 #, kde-format
 msgid "Backend died, but has been restarted. Please try again."
 msgstr "Efterein gong dea, mar is op 'e nij úteinset. Besykje it nohris."
 
-#: kcmfontinst/JobRunner.cpp:618 kcmfontinst/JobRunner.cpp:624
+#: kcmfontinst/JobRunner.cpp:619 kcmfontinst/JobRunner.cpp:625
 #, kde-format
 msgid "<h3>Error</h3>"
 msgstr "<h3>Flater</h3>"
 
-#: kcmfontinst/JobRunner.cpp:690
+#: kcmfontinst/JobRunner.cpp:691
 #, kde-format
 msgid "Failed to download <i>%1</i>"
 msgstr "It ynladen fan <i>%1</i> mislearre"
 
-#: kcmfontinst/JobRunner.cpp:692
+#: kcmfontinst/JobRunner.cpp:693
 #, kde-format
 msgid "System backend died. Please try again.<br><i>%1</i>"
 msgstr "Systeem efterein gong dea. Besykje it op 'e nij.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:694
+#: kcmfontinst/JobRunner.cpp:695
 #, kde-format
 msgid ""
 "<i>%1</i> is a bitmap font, and these have been disabled on your system."
 msgstr ""
 "<i>%1</i> is in bitmap lettertype en dizzen binne útskeakele op jo systeem."
 
-#: kcmfontinst/JobRunner.cpp:696
+#: kcmfontinst/JobRunner.cpp:697
 #, kde-format
 msgid ""
 "<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
@@ -633,138 +633,138 @@ msgstr ""
 "<i>%1</i> befettet it lettertype <b>%2</b>, hokker al ynstallearre is op jo "
 "systeem."
 
-#: kcmfontinst/JobRunner.cpp:698
+#: kcmfontinst/JobRunner.cpp:699
 #, kde-format
 msgid "<i>%1</i> is not a font."
 msgstr "<i>%1</i> is net in lettertype."
 
-#: kcmfontinst/JobRunner.cpp:700
+#: kcmfontinst/JobRunner.cpp:701
 #, kde-format
 msgid "Could not remove all files associated with <i>%1</i>"
 msgstr "Koe net alle triemmen assosjearre mei <i>%1</i> fuortsmite"
 
-#: kcmfontinst/JobRunner.cpp:702
+#: kcmfontinst/JobRunner.cpp:703
 #, kde-format
 msgid "Failed to start the system daemon.<br><i>%1</i>"
 msgstr "It úteinsetten fa de systeem daemon mislearre.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:705 kio/KioFonts.cpp:719
+#: kcmfontinst/JobRunner.cpp:706 kio/KioFonts.cpp:719
 #, kde-format
 msgid "<i>%1</i> already exists."
 msgstr "<i>%1</i> bestiet al."
 
-#: kcmfontinst/JobRunner.cpp:708
+#: kcmfontinst/JobRunner.cpp:709
 #, kde-format
 msgid "<i>%1</i> does not exist."
 msgstr "<i>%1</i> bestiet net."
 
-#: kcmfontinst/JobRunner.cpp:710
+#: kcmfontinst/JobRunner.cpp:711
 #, kde-format
 msgid "Permission denied.<br><i>%1</i>"
 msgstr "Permisje wegere.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:712
+#: kcmfontinst/JobRunner.cpp:713
 #, kde-format
 msgid "Unsupported action.<br><i>%1</i>"
 msgstr "Net stipe aksje.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:714
+#: kcmfontinst/JobRunner.cpp:715
 #, kde-format
 msgid "Authentication failed.<br><i>%1</i>"
 msgstr "Ferifikaasje is mislearre.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:716
+#: kcmfontinst/JobRunner.cpp:717
 #, fuzzy, kde-format
 #| msgid "Unexpected error whilst processing: <i>%1</i>"
 msgid "Unexpected error while processing: <i>%1</i>"
 msgstr "In ûnferwachte flater ûnder it ferwurkjen fan: <i>%1</i>"
 
-#: kcmfontinst/KCmFontInst.cpp:213
+#: kcmfontinst/KCmFontInst.cpp:211
 #, fuzzy, kde-format
 #| msgid "Create New Group"
 msgid "Create New Group…"
 msgstr "Nije groep oanmeitsje"
 
-#: kcmfontinst/KCmFontInst.cpp:216
+#: kcmfontinst/KCmFontInst.cpp:214
 #, fuzzy, kde-format
 #| msgid "Remove Group"
 msgid "Remove Group…"
 msgstr "Groep wiskje"
 
-#: kcmfontinst/KCmFontInst.cpp:219
+#: kcmfontinst/KCmFontInst.cpp:217
 #, fuzzy, kde-format
 #| msgid "Enable Fonts"
 msgid "Enable Fonts in Group…"
 msgstr "Lettertypen ynskeakelje"
 
-#: kcmfontinst/KCmFontInst.cpp:222
+#: kcmfontinst/KCmFontInst.cpp:220
 #, fuzzy, kde-format
 #| msgid "Disable Fonts"
 msgid "Disable Fonts in Group…"
 msgstr "Lettertypen útskeakelje"
 
-#: kcmfontinst/KCmFontInst.cpp:243
+#: kcmfontinst/KCmFontInst.cpp:241
 #, kde-format
 msgid "This displays a preview of the selected font."
 msgstr "Dit lit in foarbyld sjen fan it selektearre lettertype."
 
-#: kcmfontinst/KCmFontInst.cpp:260
+#: kcmfontinst/KCmFontInst.cpp:258
 #, fuzzy, kde-format
 #| msgid "Scan for Duplicate Fonts..."
 msgid "Find Duplicates…"
 msgstr "Om dûbele lettertypen sykje..."
 
-#: kcmfontinst/KCmFontInst.cpp:260
+#: kcmfontinst/KCmFontInst.cpp:258
 #, fuzzy, kde-format
 #| msgid "Scan for Duplicate Fonts..."
 msgid "Scan for Duplicate Fonts…"
 msgstr "Om dûbele lettertypen sykje..."
 
-#: kcmfontinst/KCmFontInst.cpp:262
+#: kcmfontinst/KCmFontInst.cpp:260
 #, fuzzy, kde-format
 #| msgid "Install..."
 msgid "Install from File…"
 msgstr "Ynstallearje..."
 
-#: kcmfontinst/KCmFontInst.cpp:262
+#: kcmfontinst/KCmFontInst.cpp:260
 #, kde-format
 msgid "Install fonts from a local file"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:263
+#: kcmfontinst/KCmFontInst.cpp:261
 #, fuzzy, kde-format
 #| msgid "Delete Fonts"
 msgid "Get New Fonts…"
 msgstr "Lettertypen wiskje"
 
-#: kcmfontinst/KCmFontInst.cpp:264
+#: kcmfontinst/KCmFontInst.cpp:262
 #, kde-format
 msgid "Download new fonts"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:266
+#: kcmfontinst/KCmFontInst.cpp:264
 #, fuzzy, kde-format
 #| msgid "Delete all selected fonts"
 msgid "Delete Selected Fonts…"
 msgstr "Alle selektearre lettertypen wiskje"
 
-#: kcmfontinst/KCmFontInst.cpp:331
+#: kcmfontinst/KCmFontInst.cpp:329
 #, fuzzy, kde-format
 #| msgid "Change Preview Text..."
 msgid "Change Preview Text…"
 msgstr "Foarbyldtekst feroarje..."
 
-#: kcmfontinst/KCmFontInst.cpp:430
+#: kcmfontinst/KCmFontInst.cpp:428
 #, kde-format
 msgid "Add Fonts"
 msgstr "Lettertypen tafoegje"
 
-#: kcmfontinst/KCmFontInst.cpp:555
+#: kcmfontinst/KCmFontInst.cpp:553
 #, kde-format
 msgid "Failed to save list of fonts to print."
 msgstr "Koe de list met te printsjen lettertypen net bewarje."
 
-#: kcmfontinst/KCmFontInst.cpp:576
+#: kcmfontinst/KCmFontInst.cpp:574
 #, kde-format
 msgid "Failed to start font printer."
 msgstr "Koe lettertypeprinter net úteinsette."
@@ -772,7 +772,7 @@ msgstr "Koe lettertypeprinter net úteinsette."
 # msgid ""
 # "There are no printable fonts.\n
 # "You can only print non-bitmap fonts."
-#: kcmfontinst/KCmFontInst.cpp:583
+#: kcmfontinst/KCmFontInst.cpp:581
 #, kde-format
 msgid ""
 "There are no printable fonts.\n"
@@ -781,60 +781,60 @@ msgstr ""
 "Der binne gjin te printsjen lettertypen.\n"
 "Jo kinne allinne net-bitmap lettertypen printsje."
 
-#: kcmfontinst/KCmFontInst.cpp:585
+#: kcmfontinst/KCmFontInst.cpp:583
 #, kde-format
 msgid "Cannot Print"
 msgstr "Printsje nei mooglik"
 
-#: kcmfontinst/KCmFontInst.cpp:600
+#: kcmfontinst/KCmFontInst.cpp:598
 #, kde-format
 msgid "You did not select anything to delete."
 msgstr "Jo hawwe neat selektearre om fuort te smiten."
 
-#: kcmfontinst/KCmFontInst.cpp:600
+#: kcmfontinst/KCmFontInst.cpp:598
 #, kde-format
 msgid "Nothing to Delete"
 msgstr "Neat om fuort te smiten."
 
-#: kcmfontinst/KCmFontInst.cpp:615
+#: kcmfontinst/KCmFontInst.cpp:613
 #, kde-format
 msgid "<p>Do you really want to delete</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>Wolle jo</p><p> <b>'%1'</b> wiskje?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:618
+#: kcmfontinst/KCmFontInst.cpp:616
 #, kde-format
 msgid "Delete Font"
 msgstr "Lettertype wiskje"
 
-#: kcmfontinst/KCmFontInst.cpp:625
+#: kcmfontinst/KCmFontInst.cpp:623
 #, kde-format
 msgid "Do you really want to delete this font?"
 msgid_plural "Do you really want to delete these %1 fonts?"
 msgstr[0] "Wolle jo dit lettertype wiskje?"
 msgstr[1] "Wolle jo dizze %1 lettertypen wiskje?"
 
-#: kcmfontinst/KCmFontInst.cpp:627
+#: kcmfontinst/KCmFontInst.cpp:625
 #, kde-format
 msgid "Delete Fonts"
 msgstr "Lettertypen wiskje"
 
-#: kcmfontinst/KCmFontInst.cpp:632
+#: kcmfontinst/KCmFontInst.cpp:630
 #, fuzzy, kde-format
 #| msgid "Deleting font(s)..."
 msgid "Deleting font(s)…"
 msgstr "Lettertype(n) oan it wiskjen..."
 
-#: kcmfontinst/KCmFontInst.cpp:647
+#: kcmfontinst/KCmFontInst.cpp:645
 #, kde-format
 msgid "You did not select anything to move."
 msgstr "Jo hawwe neat selektearre om te ferpleatsen."
 
-#: kcmfontinst/KCmFontInst.cpp:647
+#: kcmfontinst/KCmFontInst.cpp:645
 #, kde-format
 msgid "Nothing to Move"
 msgstr "Neat om te ferpleatsen."
 
-#: kcmfontinst/KCmFontInst.cpp:657
+#: kcmfontinst/KCmFontInst.cpp:655
 #, fuzzy, kde-format
 #| msgid "<p>Do you really want to move</p><p>'<b>%1</b>'?</p>"
 msgid ""
@@ -842,17 +842,17 @@ msgid ""
 "%3</i>?</p>"
 msgstr "<p>Wolle jo</p><p>'<b>%1</b>' ferpleatse?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:662
+#: kcmfontinst/KCmFontInst.cpp:660
 #, kde-format
 msgid "Move Font"
 msgstr "Lettertype ferpleatse"
 
-#: kcmfontinst/KCmFontInst.cpp:663 kcmfontinst/KCmFontInst.cpp:675
+#: kcmfontinst/KCmFontInst.cpp:661 kcmfontinst/KCmFontInst.cpp:673
 #, kde-format
 msgid "Move"
 msgstr "Ferpleatse"
 
-#: kcmfontinst/KCmFontInst.cpp:668
+#: kcmfontinst/KCmFontInst.cpp:666
 #, fuzzy, kde-format
 #| msgid "<p>Do you really want to move</p><p>'<b>%1</b>'?</p>"
 msgid ""
@@ -862,77 +862,77 @@ msgid_plural ""
 msgstr[0] "<p>Wolle jo</p><p>'<b>%1</b>' ferpleatse?</p>"
 msgstr[1] "<p>Wolle jo</p><p>'<b>%1</b>' ferpleatse?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:674
+#: kcmfontinst/KCmFontInst.cpp:672
 #, kde-format
 msgid "Move Fonts"
 msgstr "Lettertypen ferpleatse"
 
-#: kcmfontinst/KCmFontInst.cpp:679
+#: kcmfontinst/KCmFontInst.cpp:677
 #, fuzzy, kde-format
 #| msgid "Moving font(s)..."
 msgid "Moving font(s)…"
 msgstr "Lettertype(n) wurde ferpleatst..."
 
-#: kcmfontinst/KCmFontInst.cpp:693
+#: kcmfontinst/KCmFontInst.cpp:691
 #, kde-format
 msgid "Export Group"
 msgstr "Groep eksportearje"
 
-#: kcmfontinst/KCmFontInst.cpp:719
+#: kcmfontinst/KCmFontInst.cpp:717
 #, kde-format
 msgid "No files?"
 msgstr "Gjin triemmen?"
 
-#: kcmfontinst/KCmFontInst.cpp:722
+#: kcmfontinst/KCmFontInst.cpp:720
 #, kde-format
 msgid "Failed to open %1 for writing"
 msgstr "It mislearre om %1 te iepenjen om te skriuwen"
 
-#: kcmfontinst/KCmFontInst.cpp:742
+#: kcmfontinst/KCmFontInst.cpp:740
 #, kde-format
 msgid "Create New Group"
 msgstr "Nije groep oanmeitsje"
 
-#: kcmfontinst/KCmFontInst.cpp:742
+#: kcmfontinst/KCmFontInst.cpp:740
 #, fuzzy, kde-format
 #| msgid "Create New Group"
 msgid "Name of new group:"
 msgstr "Nije groep oanmeitsje"
 
-#: kcmfontinst/KCmFontInst.cpp:742
+#: kcmfontinst/KCmFontInst.cpp:740
 #, kde-format
 msgid "New Group"
 msgstr "Nije groep"
 
-#: kcmfontinst/KCmFontInst.cpp:770
+#: kcmfontinst/KCmFontInst.cpp:768
 #, kde-format
 msgid "Preview Text"
 msgstr "Foarbyldtekst"
 
-#: kcmfontinst/KCmFontInst.cpp:770
+#: kcmfontinst/KCmFontInst.cpp:768
 #, kde-format
 msgid "Please enter new text:"
 msgstr "Nije tekst ynfiere:"
 
-#: kcmfontinst/KCmFontInst.cpp:822
+#: kcmfontinst/KCmFontInst.cpp:820
 #, fuzzy, kde-format
 #| msgid "Scanning font list..."
 msgid "Scanning font list…"
 msgstr "List mei lettertypen skenne..."
 
-#: kcmfontinst/KCmFontInst.cpp:881
+#: kcmfontinst/KCmFontInst.cpp:879
 #, kde-format
 msgid "No fonts"
 msgstr "Gjin lettertypen"
 
-#: kcmfontinst/KCmFontInst.cpp:886
+#: kcmfontinst/KCmFontInst.cpp:884
 #, kde-format
 msgid "1 Font"
 msgid_plural "%1 Fonts"
 msgstr[0] "1 lettertype"
 msgstr[1] "%1 lettertypen"
 
-#: kcmfontinst/KCmFontInst.cpp:895
+#: kcmfontinst/KCmFontInst.cpp:893
 #, fuzzy, kde-format
 #| msgid ""
 #| "<table><tr><td>Enabled fonts:</td><td>%1</td></tr><tr><td>Disabled fonts:"
@@ -949,7 +949,7 @@ msgstr ""
 "ynskeakele lettertypen:</td><td>%3</td></tr><tr><td>Totale lettertypen:</"
 "td><td>%4</td></tr></table>"
 
-#: kcmfontinst/KCmFontInst.cpp:905
+#: kcmfontinst/KCmFontInst.cpp:903
 #, fuzzy, kde-format
 #| msgid ""
 #| "<table><tr><td>Enabled fonts:</td><td>%1</td></tr><tr><td>Disabled fonts:"
@@ -965,66 +965,66 @@ msgstr ""
 "ynskeakele lettertypen:</td><td>%3</td></tr><tr><td>Totale lettertypen:</"
 "td><td>%4</td></tr></table>"
 
-#: kcmfontinst/KCmFontInst.cpp:982
+#: kcmfontinst/KCmFontInst.cpp:980
 #, fuzzy, kde-format
 #| msgid "Looking for any associated files..."
 msgid "Looking for any associated files…"
 msgstr "Siket om assosjearre triemmen..."
 
-#: kcmfontinst/KCmFontInst.cpp:986
+#: kcmfontinst/KCmFontInst.cpp:984
 #, fuzzy, kde-format
 #| msgid "Scanning Files..."
 msgid "Scanning Files…"
 msgstr "Triemmen skenne..."
 
-#: kcmfontinst/KCmFontInst.cpp:987
+#: kcmfontinst/KCmFontInst.cpp:985
 #, fuzzy, kde-format
 #| msgid "Looking for additional files to install..."
 msgid "Looking for additional files to install…"
 msgstr "Siket om oanfoljende triemmen om te ynstallearjen..."
 
-#: kcmfontinst/KCmFontInst.cpp:1002
+#: kcmfontinst/KCmFontInst.cpp:1000
 #, kde-format
 msgid "Looking for files associated with %1"
 msgstr "Siket om triemmen assosjearre mei %1"
 
-#: kcmfontinst/KCmFontInst.cpp:1030
+#: kcmfontinst/KCmFontInst.cpp:1028
 #, fuzzy, kde-format
 #| msgid "Installing font(s)..."
 msgid "Installing font(s)…"
 msgstr "Lettertype(n) wurde ynstallearre..."
 
-#: kcmfontinst/KCmFontInst.cpp:1095
+#: kcmfontinst/KCmFontInst.cpp:1093
 #, kde-format
 msgid "You did not select anything to enable."
 msgstr "Jo hawwe neat selektearre om yn te skeakeljen."
 
-#: kcmfontinst/KCmFontInst.cpp:1095
+#: kcmfontinst/KCmFontInst.cpp:1093
 #, kde-format
 msgid "You did not select anything to disable."
 msgstr "Jo hawwe neat selektearre om út te skeakeljen."
 
-#: kcmfontinst/KCmFontInst.cpp:1096
+#: kcmfontinst/KCmFontInst.cpp:1094
 #, kde-format
 msgid "Nothing to Enable"
 msgstr "Neat om yn te skeakeljen"
 
-#: kcmfontinst/KCmFontInst.cpp:1096
+#: kcmfontinst/KCmFontInst.cpp:1094
 #, kde-format
 msgid "Nothing to Disable"
 msgstr "Neat om út te skeakeljen"
 
-#: kcmfontinst/KCmFontInst.cpp:1110
+#: kcmfontinst/KCmFontInst.cpp:1108
 #, kde-format
 msgid "<p>Do you really want to enable</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>Binne jo wis dat jo</p><p>'<b>%1</b>' ynskeakelje wolle?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1111
+#: kcmfontinst/KCmFontInst.cpp:1109
 #, kde-format
 msgid "<p>Do you really want to disable</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>Binne jo wis dat jo</p><p>'<b>%1</b>' útskeakelje?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1112
+#: kcmfontinst/KCmFontInst.cpp:1110
 #, kde-format
 msgid ""
 "<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
@@ -1033,7 +1033,7 @@ msgstr ""
 "<p>Wolle jo </p><p>'<b>%1</b>' ynskeakelje hokker sich yn de groep '<b>%2</"
 "b>' befynt?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1113
+#: kcmfontinst/KCmFontInst.cpp:1111
 #, kde-format
 msgid ""
 "<p>Do you really want to disable</p><p>'<b>%1</b>', contained within group "
@@ -1042,31 +1042,31 @@ msgstr ""
 "<p>Wolle jo </p><p>'<b>%1</b>' útskeakelje hokker sich yn de groep '<b>%2</"
 "b>' befynt?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1114 kcmfontinst/KCmFontInst.cpp:1115
+#: kcmfontinst/KCmFontInst.cpp:1112 kcmfontinst/KCmFontInst.cpp:1113
 #, kde-format
 msgid "Enable Font"
 msgstr "Lettertype ynskeakelje"
 
-#: kcmfontinst/KCmFontInst.cpp:1114 kcmfontinst/KCmFontInst.cpp:1116
+#: kcmfontinst/KCmFontInst.cpp:1112 kcmfontinst/KCmFontInst.cpp:1114
 #, kde-format
 msgid "Disable Font"
 msgstr "Lettertype ütskeakelje"
 
-#: kcmfontinst/KCmFontInst.cpp:1122
+#: kcmfontinst/KCmFontInst.cpp:1120
 #, kde-format
 msgid "Do you really want to enable this font?"
 msgid_plural "Do you really want to enable these %1 fonts?"
 msgstr[0] "Wolle jo dit lettertype ynskeakelje?"
 msgstr[1] "Wolle jo dizze %1 lettertypen ynskeakelje?"
 
-#: kcmfontinst/KCmFontInst.cpp:1123
+#: kcmfontinst/KCmFontInst.cpp:1121
 #, kde-format
 msgid "Do you really want to disable this font?"
 msgid_plural "Do you really want to disable these %1 fonts?"
 msgstr[0] "Wolle jo dit lettertype útskeakelje?"
 msgstr[1] "Wolle jo dizze %1 lettertypen útskeakelje?"
 
-#: kcmfontinst/KCmFontInst.cpp:1125
+#: kcmfontinst/KCmFontInst.cpp:1123
 #, kde-format
 msgid ""
 "<p>Do you really want to enable this font contained within group '<b>%2</b>'?"
@@ -1080,7 +1080,7 @@ msgstr[1] ""
 "<p>Wolle jo dizze %1 lettertypen ynslettend yn groep '<b>%2</b>' ynskeakelje?"
 "</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1129
+#: kcmfontinst/KCmFontInst.cpp:1127
 #, kde-format
 msgid ""
 "<p>Do you really want to disable this font contained within group '<b>%2</"
@@ -1094,23 +1094,23 @@ msgstr[1] ""
 "<p>Wolle jo dizze %1 lettertypen ynslettend yn groep '<b>%2</b>' útskeakelje?"
 "</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1133 kcmfontinst/KCmFontInst.cpp:1135
+#: kcmfontinst/KCmFontInst.cpp:1131 kcmfontinst/KCmFontInst.cpp:1133
 #, kde-format
 msgid "Enable Fonts"
 msgstr "Lettertypen ynskeakelje"
 
-#: kcmfontinst/KCmFontInst.cpp:1133 kcmfontinst/KCmFontInst.cpp:1135
+#: kcmfontinst/KCmFontInst.cpp:1131 kcmfontinst/KCmFontInst.cpp:1133
 #, kde-format
 msgid "Disable Fonts"
 msgstr "Lettertypen útskeakelje"
 
-#: kcmfontinst/KCmFontInst.cpp:1142
+#: kcmfontinst/KCmFontInst.cpp:1140
 #, fuzzy, kde-format
 #| msgid "Enabling font(s)..."
 msgid "Enabling font(s)…"
 msgstr "Lettertype(n) wurde ynskeakele..."
 
-#: kcmfontinst/KCmFontInst.cpp:1144
+#: kcmfontinst/KCmFontInst.cpp:1142
 #, fuzzy, kde-format
 #| msgid "Disabling font(s)..."
 msgid "Disabling font(s)…"
@@ -1237,7 +1237,7 @@ msgstr "%1 is net in lettertype"
 msgid "Could not remove all files associated with %1"
 msgstr "Koe net alle triemmen assosjearre mei %1 fuortsmite"
 
-#: lib/Fc.cpp:409 lib/KfiConstants.h:108
+#: lib/Fc.cpp:407 lib/KfiConstants.h:108
 #, kde-format
 msgid "Unknown"
 msgstr "Unbekend"
@@ -1578,27 +1578,27 @@ msgstr "Skieder, alinea"
 msgid "Separator, Space"
 msgstr "Skieder, spaasje"
 
-#: viewpart/CharTip.cpp:154
+#: viewpart/CharTip.cpp:152
 #, kde-format
 msgid "Category"
 msgstr "Kategory"
 
-#: viewpart/CharTip.cpp:156
+#: viewpart/CharTip.cpp:154
 #, kde-format
 msgid "UCS-4"
 msgstr "UCS-4"
 
-#: viewpart/CharTip.cpp:159
+#: viewpart/CharTip.cpp:157
 #, kde-format
 msgid "UTF-16"
 msgstr "UTF-16"
 
-#: viewpart/CharTip.cpp:170
+#: viewpart/CharTip.cpp:168
 #, kde-format
 msgid "UTF-8"
 msgstr "UTF-8"
 
-#: viewpart/CharTip.cpp:187
+#: viewpart/CharTip.cpp:185
 #, kde-format
 msgid "XML Decimal Entity"
 msgstr "XML desimale entiteit"

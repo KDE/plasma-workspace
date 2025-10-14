@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-31 00:44+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -18,44 +18,44 @@ msgstr ""
 "plasma.devicenotifier.pot\n"
 "X-Crowdin-File-ID: 43745\n"
 
-#: actions/checkaction.cpp:74
+#: actions/checkaction.cpp:72
 #, kde-format
 msgctxt "@action:button check a storageAccess (i.e disk) for error"
 msgid "Check for Errors"
 msgstr "检查错误"
 
-#: actions/mountaction.cpp:103
+#: actions/mountaction.cpp:101
 #, kde-format
 msgctxt "@action:button Mount a disk without verifying for errors"
 msgid "Mount without verifying"
 msgstr "挂载而不验证错误"
 
-#: actions/mountaction.cpp:106
+#: actions/mountaction.cpp:104
 #, kde-format
 msgid "Mount"
 msgstr "挂载"
 
-#: actions/mountandopenaction.cpp:183
+#: actions/mountandopenaction.cpp:181
 #, kde-format
 msgid "Open in File Manager"
 msgstr "用文件管理器打开"
 
-#: actions/mountandopenaction.cpp:186
+#: actions/mountandopenaction.cpp:184
 #, kde-format
 msgid "Try to Fix"
 msgstr "尝试修复"
 
-#: actions/mountandopenaction.cpp:186
+#: actions/mountandopenaction.cpp:184
 #, kde-format
 msgid "Mount and Open"
 msgstr "挂载并打开"
 
-#: actions/mountandopenaction.cpp:188
+#: actions/mountandopenaction.cpp:186
 #, kde-format
 msgid "Eject"
 msgstr "弹出"
 
-#: actions/mountandopenaction.cpp:190
+#: actions/mountandopenaction.cpp:188
 #, kde-format
 msgid "Safely remove"
 msgstr "安全移除"

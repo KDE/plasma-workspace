@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-31 00:44+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2024-12-15 19:31+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -22,44 +22,44 @@ msgstr ""
 "\n"
 "X-Generator: Lokalize 24.08.2\n"
 
-#: actions/checkaction.cpp:74
+#: actions/checkaction.cpp:72
 #, kde-format
 msgctxt "@action:button check a storageAccess (i.e disk) for error"
 msgid "Check for Errors"
 msgstr ""
 
-#: actions/mountaction.cpp:103
+#: actions/mountaction.cpp:101
 #, kde-format
 msgctxt "@action:button Mount a disk without verifying for errors"
 msgid "Mount without verifying"
 msgstr ""
 
-#: actions/mountaction.cpp:106
+#: actions/mountaction.cpp:104
 #, kde-format
 msgid "Mount"
 msgstr "माउन्ट"
 
-#: actions/mountandopenaction.cpp:183
+#: actions/mountandopenaction.cpp:181
 #, kde-format
 msgid "Open in File Manager"
 msgstr "फ़ाइल प्रबंधक में खोलें"
 
-#: actions/mountandopenaction.cpp:186
+#: actions/mountandopenaction.cpp:184
 #, kde-format
 msgid "Try to Fix"
 msgstr ""
 
-#: actions/mountandopenaction.cpp:186
+#: actions/mountandopenaction.cpp:184
 #, kde-format
 msgid "Mount and Open"
 msgstr "माउन्ट करें व खोलें"
 
-#: actions/mountandopenaction.cpp:188
+#: actions/mountandopenaction.cpp:186
 #, kde-format
 msgid "Eject"
 msgstr "बाहर निकालें"
 
-#: actions/mountandopenaction.cpp:190
+#: actions/mountandopenaction.cpp:188
 #, kde-format
 msgid "Safely remove"
 msgstr "सुरक्षित रूप से निकालें"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-24 00:45+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2025-09-21 13:34+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -17,22 +17,22 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 25.08.1\n"
 
-#: autostartmodel.cpp:382
+#: autostartmodel.cpp:381
 #, kde-format
 msgid "\"%1\" is not an absolute url."
 msgstr "\"%1\" ஒரு முழுமையான முகவரி இல்லை."
 
-#: autostartmodel.cpp:385
+#: autostartmodel.cpp:384
 #, kde-format
 msgid "\"%1\" does not exist."
 msgstr "\"%1\" என்பது இல்லை."
 
-#: autostartmodel.cpp:388
+#: autostartmodel.cpp:387
 #, kde-format
 msgid "\"%1\" is not a file."
 msgstr "\"%1\" ஒரு கோப்பு இல்லை."
 
-#: autostartmodel.cpp:391
+#: autostartmodel.cpp:390
 #, kde-format
 msgid "\"%1\" is not readable."
 msgstr "\"%1\"-ஐ படிக்க முடியவில்லை."
@@ -243,12 +243,12 @@ msgctxt "@label Entry has failed (exited with an error)"
 msgid "Failed"
 msgstr "தோல்வியடைந்தது"
 
-#: unit.cpp:83
+#: unit.cpp:81
 #, kde-format
 msgid "Error occurred when receiving reply of GetAll call %1"
 msgstr ""
 
-#: unit.cpp:155
+#: unit.cpp:153
 #, kde-format
 msgid "Failed to open journal"
 msgstr "பதிவுத்தொகுப்பை (journal தனை) திறக்க முடியவில்லை"

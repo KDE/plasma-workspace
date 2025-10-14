@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-12 00:44+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2025-03-13 23:09+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -42,7 +42,7 @@ msgstr "Geçerli imleç temasının adı"
 msgid "Current cursor size"
 msgstr "Geçerli imleç boyutu"
 
-#: kcmcursortheme.cpp:314
+#: kcmcursortheme.cpp:312
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
@@ -50,27 +50,27 @@ msgstr ""
 "Bu değişikliklerin etkili olması için Plasma oturumunu yeniden başlatmanız "
 "gerekir."
 
-#: kcmcursortheme.cpp:388
+#: kcmcursortheme.cpp:386
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Geçici dosya oluşturulamadı."
 
-#: kcmcursortheme.cpp:399
+#: kcmcursortheme.cpp:397
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Simge tema arşivi indirilemedi: %1"
 
-#: kcmcursortheme.cpp:430
+#: kcmcursortheme.cpp:428
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Dosya geçerli bir ikon tema arşivi değil."
 
-#: kcmcursortheme.cpp:437
+#: kcmcursortheme.cpp:435
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "“icons” klasörü oluşturulamadı."
 
-#: kcmcursortheme.cpp:446
+#: kcmcursortheme.cpp:444
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -79,12 +79,12 @@ msgstr ""
 "%1 adında bir tema, simge temaları klasöründe var. Üzerine yazmak istiyor "
 "musunuz?"
 
-#: kcmcursortheme.cpp:450
+#: kcmcursortheme.cpp:448
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Temanın Üzerine Yazılsın mı?"
 
-#: kcmcursortheme.cpp:474
+#: kcmcursortheme.cpp:472
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Tema başarıyla kuruldu."
@@ -282,7 +282,7 @@ msgstr "Temayı Aç"
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "İmleç Tema Dosyaları (*.tar.gz *.tar.bz2)"
 
-#: xcursor/xcursortheme.cpp:58
+#: xcursor/xcursortheme.cpp:59
 #, kde-format
 msgctxt ""
 "@info The argument is the list of available sizes (in pixel). Example: "

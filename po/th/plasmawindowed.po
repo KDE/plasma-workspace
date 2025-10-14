@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-31 00:44+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2025-03-04 14:50+0700\n"
 "Last-Translator: Pongsakorn S. <kde@xerusion.me>\n"
 "Language-Team: Thai\n"
@@ -48,7 +48,7 @@ msgstr "แอปเพล็ตที่จะเปิด"
 msgid "Arguments to pass to the plasmoid."
 msgstr "อาร์กิวเมนต์ที่จะส่งต่อไปยัง plasmoid"
 
-#: plasmawindowedview.cpp:121
+#: plasmawindowedview.cpp:119
 #, kde-format
 msgid "Close %1"
 msgstr "ปิด %1"

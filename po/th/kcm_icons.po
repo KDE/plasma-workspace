@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-31 00:44+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2025-03-04 15:08+0700\n"
 "Last-Translator: Pongsakorn S. <kde@xerusion.me>\n"
 "Language-Team: Thai\n"
@@ -25,22 +25,22 @@ msgstr ""
 msgid "Name of the current icon theme"
 msgstr "ชื่อของธีมไอคอนปัจจุบัน"
 
-#: main.cpp:149
+#: main.cpp:147
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "ไม่สามารถสร้างไฟล์ชั่วคราวได้"
 
-#: main.cpp:160
+#: main.cpp:158
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "ไม่สามารถดาวน์โหลดไฟล์ธีมไอคอนได้: %1"
 
-#: main.cpp:174
+#: main.cpp:172
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "แฟ้มไม่ใช่แฟ้มจัดเก็บชุดภาพไอคอนที่ถูกต้อง"
 
-#: main.cpp:179
+#: main.cpp:177
 #, kde-format
 msgid ""
 "A problem occurred during the installation process; however, most of the "
@@ -49,17 +49,17 @@ msgstr ""
 "เกิดปัญหาขึ้นในระหว่างการติดตั้ง อย่างไรก็ตาม ส่วนใหญ่ของชุดภาพไอคอนในแฟ้มจัดเก็บ "
 "ได้ถูกติดตั้งไว้แล้ว"
 
-#: main.cpp:183
+#: main.cpp:181
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "ติดตั้งธีมสำเร็จแล้ว"
 
-#: main.cpp:227
+#: main.cpp:225
 #, kde-format
 msgid "Installing icon themes…"
 msgstr "การติดตั้งธีมไอคอน…"
 
-#: main.cpp:237
+#: main.cpp:235
 #, kde-format
 msgid "Installing %1 theme…"
 msgstr "กำลังติดตั้งธีม %1 ..."

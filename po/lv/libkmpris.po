@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-29 00:44+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2024-04-06 21:20+0300\n"
 "Last-Translator: Māris Nartišs <maris.kde@gmail.com>\n"
 "Language-Team: \n"
@@ -19,55 +19,55 @@ msgstr ""
 "2);\n"
 "X-Generator: Lokalize 22.12.3\n"
 
-#: kded/mprisservice.cpp:105
+#: kded/mprisservice.cpp:103
 #, kde-format
 msgctxt "@title Name for global shortcuts category"
 msgid "Media Controller"
 msgstr "Multivides vadība"
 
-#: kded/mprisservice.cpp:114
+#: kded/mprisservice.cpp:112
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Play/Pause media playback"
 msgstr "Atskaņot/pauzēt multivides atskaņošanu"
 
-#: kded/mprisservice.cpp:115
+#: kded/mprisservice.cpp:113
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback next"
 msgstr "Nākamās multivides atskaņošana"
 
-#: kded/mprisservice.cpp:116
+#: kded/mprisservice.cpp:114
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback previous"
 msgstr "Iepriekšējās multivides atskaņošana"
 
-#: kded/mprisservice.cpp:117
+#: kded/mprisservice.cpp:115
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Stop media playback"
 msgstr "Apturēt multivides atskaņošanu"
 
-#: kded/mprisservice.cpp:118
+#: kded/mprisservice.cpp:116
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Pause media playback"
 msgstr "Pauzēt multivides atskaņošanu"
 
-#: kded/mprisservice.cpp:119
+#: kded/mprisservice.cpp:117
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Play media playback"
 msgstr "Atskaņot multividi"
 
-#: kded/mprisservice.cpp:120
+#: kded/mprisservice.cpp:118
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media volume up"
 msgstr "Palielināt multivides skaļumu"
 
-#: kded/mprisservice.cpp:121
+#: kded/mprisservice.cpp:119
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media volume down"

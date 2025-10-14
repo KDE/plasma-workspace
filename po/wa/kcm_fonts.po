@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-13 00:45+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2008-06-25 18:30+0200\n"
 "Last-Translator: Jean Cayron <jean.cayron@gmail.com>\n"
 "Language-Team: Walloon <linux@walon.org>\n"
@@ -68,7 +68,7 @@ msgstr ""
 msgid "Window title font"
 msgstr "Tite do purnea"
 
-#: kxftconfig.cpp:455
+#: kxftconfig.cpp:454
 #, fuzzy, kde-format
 #| msgctxt "Use anti-aliasing"
 #| msgid "System Settings"
@@ -76,34 +76,34 @@ msgctxt "use system subpixel setting"
 msgid "Vendor default"
 msgstr "Tchuzes do sistinme"
 
-#: kxftconfig.cpp:457
+#: kxftconfig.cpp:456
 #, fuzzy, kde-format
 #| msgid "None"
 msgctxt "no subpixel rendering"
 msgid "None"
 msgstr "Nouk"
 
-#: kxftconfig.cpp:459
+#: kxftconfig.cpp:458
 #, kde-format
 msgid "RGB"
 msgstr "RVB (rodje, vert, bleu)"
 
-#: kxftconfig.cpp:461
+#: kxftconfig.cpp:460
 #, kde-format
 msgid "BGR"
 msgstr "BVR (bleu, vert, rodje)"
 
-#: kxftconfig.cpp:463
+#: kxftconfig.cpp:462
 #, kde-format
 msgid "Vertical RGB"
 msgstr "RVB d' astampé"
 
-#: kxftconfig.cpp:465
+#: kxftconfig.cpp:464
 #, kde-format
 msgid "Vertical BGR"
 msgstr "BVR d' astampé"
 
-#: kxftconfig.cpp:493
+#: kxftconfig.cpp:492
 #, fuzzy, kde-format
 #| msgctxt "Use anti-aliasing"
 #| msgid "System Settings"
@@ -111,28 +111,28 @@ msgctxt "use system hinting settings"
 msgid "Vendor default"
 msgstr "Tchuzes do sistinme"
 
-#: kxftconfig.cpp:495
+#: kxftconfig.cpp:494
 #, fuzzy, kde-format
 #| msgid "Medium"
 msgctxt "medium hinting"
 msgid "Medium"
 msgstr "Moyén"
 
-#: kxftconfig.cpp:497
+#: kxftconfig.cpp:496
 #, fuzzy, kde-format
 #| msgid "None"
 msgctxt "no hinting"
 msgid "None"
 msgstr "Nouk"
 
-#: kxftconfig.cpp:499
+#: kxftconfig.cpp:498
 #, fuzzy, kde-format
 #| msgid "Slight"
 msgctxt "slight hinting"
 msgid "Slight"
 msgstr "Ledjir"
 
-#: kxftconfig.cpp:501
+#: kxftconfig.cpp:500
 #, fuzzy, kde-format
 #| msgid "Full"
 msgctxt "full hinting"

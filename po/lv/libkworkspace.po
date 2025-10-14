@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libkworkspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-06 01:42+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2024-01-17 13:59+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -21,36 +21,36 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
-#: kdisplaymanager.cpp:768
+#: kdisplaymanager.cpp:767
 #, kde-format
 msgctxt "user: …"
 msgid "%1: TTY login"
 msgstr "%1: ierakstījies TTY"
 
-#: kdisplaymanager.cpp:773
+#: kdisplaymanager.cpp:772
 #, kde-format
 msgctxt "… location (TTY or X display)"
 msgid "Unused"
 msgstr "Neizmantots"
 
-#: kdisplaymanager.cpp:774
+#: kdisplaymanager.cpp:773
 #, kde-format
 msgid "X login on remote host"
 msgstr "Ierakstījies, izmantojot X uz attālināta resursdatora"
 
-#: kdisplaymanager.cpp:774
+#: kdisplaymanager.cpp:773
 #, kde-format
 msgctxt "… host"
 msgid "X login on %1"
 msgstr "X ierakstīšanās uz %1"
 
-#: kdisplaymanager.cpp:776
+#: kdisplaymanager.cpp:775
 #, kde-format
 msgctxt "user: session type"
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: kdisplaymanager.cpp:787
+#: kdisplaymanager.cpp:786
 #, kde-format
 msgctxt "session (location)"
 msgid "%1 (%2)"

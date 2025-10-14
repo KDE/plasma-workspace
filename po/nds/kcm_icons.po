@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-31 00:44+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2014-04-13 20:21+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -25,23 +25,23 @@ msgstr ""
 msgid "Name of the current icon theme"
 msgstr ""
 
-#: main.cpp:149
+#: main.cpp:147
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Temporeerdatei lett sik nich opstellen."
 
-#: main.cpp:160
+#: main.cpp:158
 #, fuzzy, kde-format
 #| msgid "Unable to find the icon theme archive %1."
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Dat Lüttbildmuster-Archiv \"%1\" lett sik nich finnen!"
 
-#: main.cpp:174
+#: main.cpp:172
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Disse Datei gellt nich as Lüttbildmuster-Archiv!"
 
-#: main.cpp:179
+#: main.cpp:177
 #, kde-format
 msgid ""
 "A problem occurred during the installation process; however, most of the "
@@ -50,18 +50,18 @@ msgstr ""
 "Dat geev en Problem bi't Installeren, man de mehrsten Muster binnen dat "
 "Archiv wöörn installeert."
 
-#: main.cpp:183
+#: main.cpp:181
 #, kde-format
 msgid "Theme installed successfully."
 msgstr ""
 
-#: main.cpp:227
+#: main.cpp:225
 #, fuzzy, kde-format
 #| msgid "Installing icon themes..."
 msgid "Installing icon themes…"
 msgstr "Lüttbildmustern warrt installeert..."
 
-#: main.cpp:237
+#: main.cpp:235
 #, fuzzy, kde-format
 #| msgid "Installing icon themes..."
 msgid "Installing %1 theme…"

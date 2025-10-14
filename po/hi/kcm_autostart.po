@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-24 00:45+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2024-12-15 19:31+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -20,22 +20,22 @@ msgstr ""
 "X-Generator: Lokalize 24.08.2\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: autostartmodel.cpp:382
+#: autostartmodel.cpp:381
 #, kde-format
 msgid "\"%1\" is not an absolute url."
 msgstr "\"%1\" एक पूर्ण यूआरएल नहीं है।"
 
-#: autostartmodel.cpp:385
+#: autostartmodel.cpp:384
 #, kde-format
 msgid "\"%1\" does not exist."
 msgstr "\"%1 अस्तित्व में नहीं है ।"
 
-#: autostartmodel.cpp:388
+#: autostartmodel.cpp:387
 #, kde-format
 msgid "\"%1\" is not a file."
 msgstr "\"%1 फ़ाइल नहीं है ।"
 
-#: autostartmodel.cpp:391
+#: autostartmodel.cpp:390
 #, kde-format
 msgid "\"%1\" is not readable."
 msgstr "\"%1 पढ़ने लायक नहीं है ।"
@@ -260,12 +260,12 @@ msgctxt "@label Entry has failed (exited with an error)"
 msgid "Failed"
 msgstr ""
 
-#: unit.cpp:83
+#: unit.cpp:81
 #, kde-format
 msgid "Error occurred when receiving reply of GetAll call %1"
 msgstr ""
 
-#: unit.cpp:155
+#: unit.cpp:153
 #, kde-format
 msgid "Failed to open journal"
 msgstr ""

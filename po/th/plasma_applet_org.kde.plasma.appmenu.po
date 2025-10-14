@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-19 01:53+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2025-03-04 14:43+0700\n"
 "Last-Translator: Pongsakorn S. <kde@xerusion.me>\n"
 "Language-Team: Thai\n"
@@ -37,12 +37,12 @@ msgctxt "@info:usagetip"
 msgid "Open a menu"
 msgstr "เปิดเมนู"
 
-#: plugin/appmenumodel.cpp:84
+#: plugin/appmenumodel.cpp:85
 #, kde-format
 msgid "Search"
 msgstr "ค้นหา"
 
-#: plugin/appmenumodel.cpp:91
+#: plugin/appmenumodel.cpp:92
 #, kde-format
 msgid "Search…"
 msgstr "ค้นหา..."

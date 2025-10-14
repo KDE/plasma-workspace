@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-24 00:45+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2024-09-19 08:01+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -20,47 +20,47 @@ msgstr ""
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
-#: actionlist.cpp:91
+#: actionlist.cpp:92
 #, kde-format
 msgid "Open with:"
 msgstr "Otevřít pomocí:"
 
-#: actionlist.cpp:104
+#: actionlist.cpp:105
 #, kde-format
 msgid "Properties"
 msgstr "Vlastnosti"
 
-#: actionlist.cpp:151
+#: actionlist.cpp:152
 #, kde-format
 msgid "Add to Desktop"
 msgstr "Přidat na plochu"
 
-#: actionlist.cpp:158
+#: actionlist.cpp:159
 #, kde-format
 msgid "Pin to Task Manager"
 msgstr "Připnout do Správce úloh"
 
-#: actionlist.cpp:162
+#: actionlist.cpp:163
 #, kde-format
 msgid "Add to Panel (Widget)"
 msgstr "Přidat do panelu (Widget)"
 
-#: actionlist.cpp:313 rootmodel.cpp:540
+#: actionlist.cpp:314 rootmodel.cpp:538
 #, kde-format
 msgid "Recent Files"
 msgstr "Nedávné soubory"
 
-#: actionlist.cpp:323
+#: actionlist.cpp:324
 #, kde-format
 msgid "Forget Recent Files"
 msgstr "Zapomenout nedávné soubory"
 
-#: actionlist.cpp:388
+#: actionlist.cpp:389
 #, kde-format
 msgid "Edit Application…"
 msgstr "Upravit aplikaci…"
 
-#: actionlist.cpp:420
+#: actionlist.cpp:421
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
@@ -83,84 +83,84 @@ msgctxt "Generic name (App name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: appsmodel.cpp:37 appsmodel.cpp:73 computermodel.cpp:97 computermodel.cpp:225
-#: recentusagemodel.cpp:165 recentusagemodel.cpp:228
+#: appsmodel.cpp:38 appsmodel.cpp:74 computermodel.cpp:93 computermodel.cpp:219
+#: recentusagemodel.cpp:159 recentusagemodel.cpp:222
 #, kde-format
 msgid "Applications"
 msgstr "Aplikace"
 
-#: appsmodel.cpp:168
+#: appsmodel.cpp:169
 #, kde-format
 msgid "Unhide Applications in this Submenu"
 msgstr "Zobrazit skryté aplikace v této podnabídce"
 
-#: appsmodel.cpp:177
+#: appsmodel.cpp:178
 #, kde-format
 msgid "Unhide Applications in '%1'"
 msgstr "Zobrazit skryté aplikace v '%1'"
 
-#: computermodel.cpp:91
+#: computermodel.cpp:87
 #, kde-format
 msgid "Show KRunner"
 msgstr "Zobrazit KRunner"
 
-#: computermodel.cpp:95
+#: computermodel.cpp:91
 #, kde-format
 msgid "Search, calculate, or run a command"
 msgstr "Hledejte, počítejte nebo spusťte příkaz"
 
-#: computermodel.cpp:148
+#: computermodel.cpp:142
 #, kde-format
 msgid "Computer"
 msgstr "Počítač"
 
 #. i18n.
-#: kastatsfavoritesmodel.cpp:557 rootmodel.cpp:533 simplefavoritesmodel.cpp:33
+#: kastatsfavoritesmodel.cpp:559 rootmodel.cpp:531 simplefavoritesmodel.cpp:33
 #, kde-format
 msgid "Favorites"
 msgstr "Oblíbené"
 
-#: recentusagemodel.cpp:163
+#: recentusagemodel.cpp:157
 #, kde-format
 msgid "Recently Used"
 msgstr "Nedávno použité"
 
-#: recentusagemodel.cpp:168 recentusagemodel.cpp:317
+#: recentusagemodel.cpp:162 recentusagemodel.cpp:311
 #, kde-format
 msgid "Files"
 msgstr "Soubory"
 
-#: recentusagemodel.cpp:250
+#: recentusagemodel.cpp:244
 #, kde-format
 msgid "Forget Application"
 msgstr "Zapomenout aplikaci"
 
-#: recentusagemodel.cpp:315
+#: recentusagemodel.cpp:309
 #, kde-format
 msgid "Folders"
 msgstr "Složky"
 
-#: recentusagemodel.cpp:352
+#: recentusagemodel.cpp:346
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Otevřít odpovídající složku"
 
-#: recentusagemodel.cpp:355
+#: recentusagemodel.cpp:349
 #, kde-format
 msgid "Forget File"
 msgstr "Zapomenout soubor"
 
-#: recentusagemodel.cpp:490
+#: recentusagemodel.cpp:484
 #, kde-format
 msgid "Forget All"
 msgstr "Zapomenout všechny"
 
-#: recentusagemodel.cpp:492
+#: recentusagemodel.cpp:486
 #, kde-format
 msgid "Forget All Applications"
 msgstr "Zapomenout všechny aplikace"
 
-#: recentusagemodel.cpp:495
+#: recentusagemodel.cpp:489
 #, kde-format
 msgid "Forget All Files"
 msgstr "Zapomenout všechny soubory"
@@ -170,37 +170,37 @@ msgstr "Zapomenout všechny soubory"
 msgid "All Applications"
 msgstr "Všechny aplikace"
 
-#: rootmodel.cpp:133
+#: rootmodel.cpp:131
 #, kde-format
 msgid "Hide %1"
 msgstr "Skrýt %1"
 
-#: rootmodel.cpp:527
+#: rootmodel.cpp:525
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr ""
 
-#: rootmodel.cpp:540
+#: rootmodel.cpp:538
 #, kde-format
 msgid "Often Used Files"
 msgstr "Často používané soubory"
 
-#: rootmodel.cpp:549
+#: rootmodel.cpp:547
 #, kde-format
 msgid "Recent Applications"
 msgstr "Nedávné aplikace"
 
-#: rootmodel.cpp:549
+#: rootmodel.cpp:547
 #, kde-format
 msgid "Often Used Applications"
 msgstr "Často používané aplikace"
 
-#: rootmodel.cpp:564
+#: rootmodel.cpp:562
 #, kde-format
 msgid "Power / Session"
 msgstr "Napájení / sezení"
 
-#: runnermodel.cpp:222
+#: runnermodel.cpp:220
 #, kde-format
 msgid "Search results"
 msgstr "Výsledky hledání"

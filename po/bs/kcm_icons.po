@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-31 00:44+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2014-10-20 19:32+0000\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -30,23 +30,23 @@ msgstr ""
 msgid "Name of the current icon theme"
 msgstr ""
 
-#: main.cpp:149
+#: main.cpp:147
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Ne mogu kreirati privremenu datoteku."
 
-#: main.cpp:160
+#: main.cpp:158
 #, fuzzy, kde-format
 #| msgid "Unable to find the icon theme archive %1."
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Ne mogu da pronađem arhivu teme ikona %1."
 
-#: main.cpp:174
+#: main.cpp:172
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Ovaa datoteka nije ispravna arhiva teme ikona."
 
-#: main.cpp:179
+#: main.cpp:177
 #, kde-format
 msgid ""
 "A problem occurred during the installation process; however, most of the "
@@ -55,18 +55,18 @@ msgstr ""
 "Došlo je do problema u toku instalacije. Ipak, veći dio tema iz arhive je "
 "instaliran."
 
-#: main.cpp:183
+#: main.cpp:181
 #, kde-format
 msgid "Theme installed successfully."
 msgstr ""
 
-#: main.cpp:227
+#: main.cpp:225
 #, fuzzy, kde-format
 #| msgid "Installing icon themes..."
 msgid "Installing icon themes…"
 msgstr "Instaliram temu ikona..."
 
-#: main.cpp:237
+#: main.cpp:235
 #, fuzzy, kde-format
 #| msgid "Installing icon themes..."
 msgid "Installing %1 theme…"

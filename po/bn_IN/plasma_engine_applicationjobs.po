@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_engine_applicationjobs\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-08-15 00:20+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2009-07-04 05:51+0530\n"
 "Last-Translator: Arindam Ghosh <arindam.foss@gmail.com>\n"
 "Language-Team: Bengali (India) <fedora-trans-bn_IN@redhat.com>\n"
@@ -25,7 +25,7 @@ msgctxt "%1 is the subject (can be anything) upon which the job is performed"
 msgid "The JobView for %1 cannot be found"
 msgstr "%1-র ক্ষেত্রে JobView পাওয়া যায়নি"
 
-#: kuiserverengine.cpp:209
+#: kuiserverengine.cpp:207
 #, kde-format
 msgctxt "Bytes per second"
 msgid "%1/s"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_engine_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-04 01:01+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2025-06-04 19:40+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -28,7 +28,7 @@ msgstr "No ha establecido un motor de datos para notificaciones."
 msgid "Invalid destination: %1"
 msgstr "Destino no válido: %1"
 
-#: notificationsengine.cpp:89
+#: notificationsengine.cpp:87
 #, kde-format
 msgid "Unknown Application"
 msgstr "Aplicación desconocida"

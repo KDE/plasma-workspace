@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-07 00:45+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2025-05-18 20:43+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -29,108 +29,108 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "ulysses@fsf.hu"
 
-#: currentcontainmentactionsmodel.cpp:203
+#: currentcontainmentactionsmodel.cpp:201
 #, kde-format
 msgid "Configure Mouse Actions Plugin"
 msgstr "Az Egérműveletek bővítmény beállításai"
 
-#: desktopview.cpp:222
+#: desktopview.cpp:220
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Dev"
 msgstr "KDE Plasma 6.0 Dev"
 
-#: desktopview.cpp:225
+#: desktopview.cpp:223
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Alpha"
 msgstr "KDE Plasma 6.0 Alpha"
 
-#: desktopview.cpp:228
+#: desktopview.cpp:226
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 1"
 msgstr "KDE Plasma 6.0 Beta 1"
 
-#: desktopview.cpp:231
+#: desktopview.cpp:229
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 2"
 msgstr "KDE Plasma 6.0 Beta 2"
 
-#: desktopview.cpp:234
+#: desktopview.cpp:232
 #, kde-format
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC1"
 msgstr "KDE Plasma 6.0 RC1"
 
-#: desktopview.cpp:237
+#: desktopview.cpp:235
 #, kde-format
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC2"
 msgstr "KDE Plasma 6.0 RC2"
 
-#: desktopview.cpp:263
+#: desktopview.cpp:261
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Dev"
 msgstr "KDE Plasma %1 Dev"
 
-#: desktopview.cpp:267
+#: desktopview.cpp:265
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Beta"
 msgstr "KDE Plasma %1 Beta"
 
-#: desktopview.cpp:270
+#: desktopview.cpp:268
 #, kde-format
 msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
 msgid "KDE Plasma %1 Beta %2"
 msgstr "KDE Plasma %1 Beta %2"
 
-#: desktopview.cpp:274
+#: desktopview.cpp:272
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1"
 msgstr "KDE Plasma %1"
 
-#: desktopview.cpp:280
+#: desktopview.cpp:278
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
 msgstr "Keresse fel a bugs.kde.org-ot hibák bejelentéséhez"
 
-#: desktopview.cpp:288
+#: desktopview.cpp:286
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy Plasma Version"
 msgstr "Plasma verzió másolása"
 
-#: desktopview.cpp:294
+#: desktopview.cpp:292
 #, kde-format
 msgctxt "@action:button"
 msgid "Report a Bug…"
 msgstr "Hibabejelentés…"
 
-#: desktopview.cpp:304
+#: desktopview.cpp:302
 #, kde-format
 msgctxt "@title:menu"
 msgid "Hide Preview Banner"
 msgstr "Előnézeti sáv elrejtése"
 
-#: desktopview.cpp:307
+#: desktopview.cpp:304
 #, kde-format
 msgctxt "@action:button Hide the preview banner until the system is restarted"
 msgid "Hide Until Restart"
 msgstr "Elrejtés újraindításig"
 
-#: desktopview.cpp:314
+#: desktopview.cpp:311
 #, kde-format
 msgctxt "@action:button Hide the preview banner permanently"
 msgid "Hide Permanently…"
 msgstr "Elrejtés véglegesen…"
 
-#: desktopview.cpp:320
+#: desktopview.cpp:317
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -144,18 +144,18 @@ msgstr ""
 "<icode>ShowDesktopPreviewBanner</icode> kezdetű sorának eltávolításával "
 "vonható vissza."
 
-#: desktopview.cpp:322
+#: desktopview.cpp:319
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide Preview Banner?"
 msgstr "Előnézeti sáv elrejtése?"
 
-#: desktopview.cpp:557 desktopview.cpp:573
+#: desktopview.cpp:554 desktopview.cpp:570
 #, kde-format
 msgid "Enter Edit Mode"
 msgstr "Belépés a szerkesztőmódba"
 
-#: desktopview.cpp:571
+#: desktopview.cpp:568
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "Kilépés a szerkesztőmódból"
@@ -206,79 +206,79 @@ msgstr ""
 "OpenGL 2-t vagy a szoftveres visszaállást.\n"
 "Ellenőrizze, hogy a grafikus illesztőprogram megfelelően van-e beállítva."
 
-#: osd.cpp:65
+#: osd.cpp:63
 #, kde-format
 msgctxt "Brightness OSD: display name and brightness percentage"
 msgid "%1: %2%"
 msgstr "%1: %2%"
 
-#: osd.cpp:93
+#: osd.cpp:91
 #, kde-format
 msgctxt "OSD informing that the system is muted, keep short"
 msgid "Audio Muted"
 msgstr "Hang elnémítva"
 
-#: osd.cpp:116
+#: osd.cpp:114
 #, kde-format
 msgctxt "OSD informing that the microphone is muted, keep short"
 msgid "Microphone Muted"
 msgstr "Mikrofon némítva"
 
-#: osd.cpp:132
+#: osd.cpp:130
 #, kde-format
 msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
 msgid "%1 Muted"
 msgstr "%1 elnémítva"
 
-#: osd.cpp:154
+#: osd.cpp:152
 #, kde-format
 msgctxt "touchpad was enabled, keep short"
 msgid "Touchpad On"
 msgstr "Érintőpárna bekapcsolva"
 
-#: osd.cpp:156
+#: osd.cpp:154
 #, kde-format
 msgctxt "touchpad was disabled, keep short"
 msgid "Touchpad Off"
 msgstr "Érintőpárna kikapcsolva"
 
-#: osd.cpp:163
+#: osd.cpp:161
 #, kde-format
 msgctxt "wireless lan was enabled, keep short"
 msgid "Wifi On"
 msgstr "WiFi bekapcsolva"
 
-#: osd.cpp:165
+#: osd.cpp:163
 #, kde-format
 msgctxt "wireless lan was disabled, keep short"
 msgid "Wifi Off"
 msgstr "WiFi kikapcsolva"
 
-#: osd.cpp:172
+#: osd.cpp:170
 #, kde-format
 msgctxt "Bluetooth was enabled, keep short"
 msgid "Bluetooth On"
 msgstr "Bluetooth bekapcsolva"
 
-#: osd.cpp:174
+#: osd.cpp:172
 #, kde-format
 msgctxt "Bluetooth was disabled, keep short"
 msgid "Bluetooth Off"
 msgstr "Bluetooth kikapcsolva"
 
-#: osd.cpp:181
+#: osd.cpp:179
 #, kde-format
 msgctxt "mobile internet was enabled, keep short"
 msgid "Mobile Internet On"
 msgstr "Mobilinternet bekapcsolva"
 
-#: osd.cpp:183
+#: osd.cpp:181
 #, kde-format
 msgctxt "mobile internet was disabled, keep short"
 msgid "Mobile Internet Off"
 msgstr "Mobilinternet kikapcsolva"
 
-#: osd.cpp:191
+#: osd.cpp:189
 #, kde-format
 msgctxt ""
 "on screen keyboard was enabled because physical keyboard got unplugged, keep "
@@ -286,7 +286,7 @@ msgctxt ""
 msgid "On-Screen Keyboard Activated"
 msgstr "Képernyő-billentyűzet aktiválva"
 
-#: osd.cpp:194
+#: osd.cpp:192
 #, kde-format
 msgctxt ""
 "on screen keyboard was disabled because physical keyboard was plugged in, "
@@ -294,31 +294,31 @@ msgctxt ""
 msgid "On-Screen Keyboard Deactivated"
 msgstr "Képernyő-billentyűzet deaktiválva"
 
-#: osd.cpp:201
+#: osd.cpp:199
 #, kde-format
 msgctxt "power management was inhibited, keep short"
 msgid "Sleep and Screen Locking Blocked"
 msgstr "Alvó állapot és képernyőzárolás tiltva"
 
-#: osd.cpp:203
+#: osd.cpp:201
 #, kde-format
 msgctxt "power management was uninhibited, keep short"
 msgid "Sleep and Screen Locking Unblocked"
 msgstr "Alvó állapot és képernyőzárolás tiltása feloldva"
 
-#: osd.cpp:213
+#: osd.cpp:211
 #, kde-format
 msgctxt "Power profile was changed to power save mode, keep short"
 msgid "Power Save Mode"
 msgstr "Energiatakarékos mód"
 
-#: osd.cpp:216
+#: osd.cpp:214
 #, kde-format
 msgctxt "Power profile was changed to balanced mode, keep short"
 msgid "Balanced Power Mode"
 msgstr "Kiegyensúlyozott mód"
 
-#: osd.cpp:219
+#: osd.cpp:217
 #, kde-format
 msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
@@ -353,74 +353,74 @@ msgctxt "Percentage value"
 msgid "%1%"
 msgstr ""
 
-#: shellcontainmentconfig.cpp:106
+#: shellcontainmentconfig.cpp:107
 #, kde-format
 msgid "Internal Screen on %1"
 msgstr "Belső képernyő itt: %1"
 
-#: shellcontainmentconfig.cpp:110
+#: shellcontainmentconfig.cpp:111
 #, kde-format
 msgctxt "Screen manufacturer and model on connector"
 msgid "%1 %2 on %3"
 msgstr "%1 %2 itt: %3"
 
-#: shellcontainmentconfig.cpp:133
+#: shellcontainmentconfig.cpp:134
 #, kde-format
 msgid "Disconnected Screen %1"
 msgstr "Leválasztott képernyő %1"
 
-#: shellcorona.cpp:213 shellcorona.cpp:215
+#: shellcorona.cpp:214 shellcorona.cpp:216
 #, kde-format
 msgid "Show Desktop"
 msgstr "Asztal megjelenítése"
 
-#: shellcorona.cpp:215
+#: shellcorona.cpp:216
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Asztal elrejtése"
 
-#: shellcorona.cpp:230
+#: shellcorona.cpp:231
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr "Alkalmazásindító aktiválása"
 
-#: shellcorona.cpp:238
+#: shellcorona.cpp:239
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Aktivitásváltó megjelenítése"
 
-#: shellcorona.cpp:247
+#: shellcorona.cpp:248
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Váltás az előző aktivitásra"
 
-#: shellcorona.cpp:255
+#: shellcorona.cpp:256
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Váltás a következő aktivitásra"
 
-#: shellcorona.cpp:270
+#: shellcorona.cpp:271
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "A(z) %1. bejegyzés aktiválása"
 
-#: shellcorona.cpp:302
+#: shellcorona.cpp:303
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "Asztalok és panelek kezelése…"
 
-#: shellcorona.cpp:324
+#: shellcorona.cpp:325
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "A billentyűzet fókuszának váltogatása panelek között"
 
-#: shellcorona.cpp:2219
+#: shellcorona.cpp:2220
 #, kde-format
 msgid "Add Panel"
 msgstr "Panel hozzáadása"
 
-#: shellcorona.cpp:2302
+#: shellcorona.cpp:2303
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

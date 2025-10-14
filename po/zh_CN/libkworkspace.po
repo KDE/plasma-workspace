@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-06 01:42+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -17,36 +17,36 @@ msgstr ""
 "X-Crowdin-File: /kf6-trunk/messages/plasma-workspace/libkworkspace.pot\n"
 "X-Crowdin-File-ID: 42885\n"
 
-#: kdisplaymanager.cpp:768
+#: kdisplaymanager.cpp:767
 #, kde-format
 msgctxt "user: …"
 msgid "%1: TTY login"
 msgstr "%1：TTY 登录"
 
-#: kdisplaymanager.cpp:773
+#: kdisplaymanager.cpp:772
 #, kde-format
 msgctxt "… location (TTY or X display)"
 msgid "Unused"
 msgstr "未使用的"
 
-#: kdisplaymanager.cpp:774
+#: kdisplaymanager.cpp:773
 #, kde-format
 msgid "X login on remote host"
 msgstr "在远程主机上的 X 登录"
 
-#: kdisplaymanager.cpp:774
+#: kdisplaymanager.cpp:773
 #, kde-format
 msgctxt "… host"
 msgid "X login on %1"
 msgstr "%1 上的 X 登录"
 
-#: kdisplaymanager.cpp:776
+#: kdisplaymanager.cpp:775
 #, kde-format
 msgctxt "user: session type"
 msgid "%1: %2"
 msgstr "%1：%2"
 
-#: kdisplaymanager.cpp:787
+#: kdisplaymanager.cpp:786
 #, kde-format
 msgctxt "session (location)"
 msgid "%1 (%2)"

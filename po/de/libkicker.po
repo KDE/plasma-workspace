@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libkicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-24 00:45+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2025-04-20 18:36+0200\n"
 "Last-Translator: Flori G <Renner03@protonmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -18,47 +18,47 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 25.04.0\n"
 
-#: actionlist.cpp:91
+#: actionlist.cpp:92
 #, kde-format
 msgid "Open with:"
 msgstr "Öffnen mit:"
 
-#: actionlist.cpp:104
+#: actionlist.cpp:105
 #, kde-format
 msgid "Properties"
 msgstr "Eigenschaften"
 
-#: actionlist.cpp:151
+#: actionlist.cpp:152
 #, kde-format
 msgid "Add to Desktop"
 msgstr "Zur Arbeitsfläche hinzufügen"
 
-#: actionlist.cpp:158
+#: actionlist.cpp:159
 #, kde-format
 msgid "Pin to Task Manager"
 msgstr "An Fensterleiste anheften"
 
-#: actionlist.cpp:162
+#: actionlist.cpp:163
 #, kde-format
 msgid "Add to Panel (Widget)"
 msgstr "Zur Kontrollleiste hinzufügen (Miniprogramm)"
 
-#: actionlist.cpp:313 rootmodel.cpp:540
+#: actionlist.cpp:314 rootmodel.cpp:538
 #, kde-format
 msgid "Recent Files"
 msgstr "Zuletzt geöffnete Dateien"
 
-#: actionlist.cpp:323
+#: actionlist.cpp:324
 #, kde-format
 msgid "Forget Recent Files"
 msgstr "Zuletzt geöffnete Dateien vergessen"
 
-#: actionlist.cpp:388
+#: actionlist.cpp:389
 #, kde-format
 msgid "Edit Application…"
 msgstr "Anwendung bearbeiten …"
 
-#: actionlist.cpp:420
+#: actionlist.cpp:421
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
@@ -81,84 +81,84 @@ msgctxt "Generic name (App name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: appsmodel.cpp:37 appsmodel.cpp:73 computermodel.cpp:97 computermodel.cpp:225
-#: recentusagemodel.cpp:165 recentusagemodel.cpp:228
+#: appsmodel.cpp:38 appsmodel.cpp:74 computermodel.cpp:93 computermodel.cpp:219
+#: recentusagemodel.cpp:159 recentusagemodel.cpp:222
 #, kde-format
 msgid "Applications"
 msgstr "Anwendungen"
 
-#: appsmodel.cpp:168
+#: appsmodel.cpp:169
 #, kde-format
 msgid "Unhide Applications in this Submenu"
 msgstr "Ausgeblendete Anwendungen in diesem Untermenü wieder anzeigen"
 
-#: appsmodel.cpp:177
+#: appsmodel.cpp:178
 #, kde-format
 msgid "Unhide Applications in '%1'"
 msgstr "Ausgeblendete Anwendungen in „%1“ wieder anzeigen"
 
-#: computermodel.cpp:91
+#: computermodel.cpp:87
 #, kde-format
 msgid "Show KRunner"
 msgstr "KRunner anzeigen"
 
-#: computermodel.cpp:95
+#: computermodel.cpp:91
 #, kde-format
 msgid "Search, calculate, or run a command"
 msgstr "Suchen, Berechnen oder einen Befehl ausführen"
 
-#: computermodel.cpp:148
+#: computermodel.cpp:142
 #, kde-format
 msgid "Computer"
 msgstr "Rechner"
 
 #. i18n.
-#: kastatsfavoritesmodel.cpp:557 rootmodel.cpp:533 simplefavoritesmodel.cpp:33
+#: kastatsfavoritesmodel.cpp:559 rootmodel.cpp:531 simplefavoritesmodel.cpp:33
 #, kde-format
 msgid "Favorites"
 msgstr "Favoriten"
 
-#: recentusagemodel.cpp:163
+#: recentusagemodel.cpp:157
 #, kde-format
 msgid "Recently Used"
 msgstr "Kürzlich benutzt"
 
-#: recentusagemodel.cpp:168 recentusagemodel.cpp:317
+#: recentusagemodel.cpp:162 recentusagemodel.cpp:311
 #, kde-format
 msgid "Files"
 msgstr "Dateien"
 
-#: recentusagemodel.cpp:250
+#: recentusagemodel.cpp:244
 #, kde-format
 msgid "Forget Application"
 msgstr "Anwendung vergessen"
 
-#: recentusagemodel.cpp:315
+#: recentusagemodel.cpp:309
 #, kde-format
 msgid "Folders"
 msgstr "Ordner"
 
-#: recentusagemodel.cpp:352
+#: recentusagemodel.cpp:346
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Ordner mit diesem Inhalt öffnen"
 
-#: recentusagemodel.cpp:355
+#: recentusagemodel.cpp:349
 #, kde-format
 msgid "Forget File"
 msgstr "Datei vergessen"
 
-#: recentusagemodel.cpp:490
+#: recentusagemodel.cpp:484
 #, kde-format
 msgid "Forget All"
 msgstr "Alles vergessen"
 
-#: recentusagemodel.cpp:492
+#: recentusagemodel.cpp:486
 #, kde-format
 msgid "Forget All Applications"
 msgstr "Alle Anwendungen vergessen"
 
-#: recentusagemodel.cpp:495
+#: recentusagemodel.cpp:489
 #, kde-format
 msgid "Forget All Files"
 msgstr "Alle Dateien vergessen"
@@ -168,37 +168,37 @@ msgstr "Alle Dateien vergessen"
 msgid "All Applications"
 msgstr "Alle Anwendungen"
 
-#: rootmodel.cpp:133
+#: rootmodel.cpp:131
 #, kde-format
 msgid "Hide %1"
 msgstr "%1 ausblenden"
 
-#: rootmodel.cpp:527
+#: rootmodel.cpp:525
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "Dies sollte nicht sichtbar sein, benutzen Sie KICKER_FAVORITES_MODEL"
 
-#: rootmodel.cpp:540
+#: rootmodel.cpp:538
 #, kde-format
 msgid "Often Used Files"
 msgstr "Häufig benutzte Dateien"
 
-#: rootmodel.cpp:549
+#: rootmodel.cpp:547
 #, kde-format
 msgid "Recent Applications"
 msgstr "Zuletzt benutzte Anwendungen"
 
-#: rootmodel.cpp:549
+#: rootmodel.cpp:547
 #, kde-format
 msgid "Often Used Applications"
 msgstr "Häufig benutzte Anwendungen"
 
-#: rootmodel.cpp:564
+#: rootmodel.cpp:562
 #, kde-format
 msgid "Power / Session"
 msgstr "Energieverwaltung / Sitzung"
 
-#: runnermodel.cpp:222
+#: runnermodel.cpp:220
 #, kde-format
 msgid "Search results"
 msgstr "Suchergebnisse"

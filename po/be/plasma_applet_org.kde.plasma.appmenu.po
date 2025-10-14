@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-19 01:53+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2024-05-12 20:05\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -43,12 +43,12 @@ msgctxt "@info:usagetip"
 msgid "Open a menu"
 msgstr "Адкрыць меню"
 
-#: plugin/appmenumodel.cpp:84
+#: plugin/appmenumodel.cpp:85
 #, kde-format
 msgid "Search"
 msgstr "Пошук"
 
-#: plugin/appmenumodel.cpp:91
+#: plugin/appmenumodel.cpp:92
 #, kde-format
 msgid "Search…"
 msgstr "Пошук…"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-31 00:44+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2023-08-06 15:04+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -26,22 +26,22 @@ msgstr ""
 msgid "Name of the current icon theme"
 msgstr "தற்போதைய சின்னங்களுக்கான தோற்றத்திட்டத்தின் பெயர்"
 
-#: main.cpp:149
+#: main.cpp:147
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "தற்காலிக கோப்பை உருவாக்க முடியவில்லை.."
 
-#: main.cpp:160
+#: main.cpp:158
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "சின்னங்களுக்கான தோற்றத்திட்ட பெட்டகத்தை பதிவிறக்க முடியவில்லை: %1"
 
-#: main.cpp:174
+#: main.cpp:172
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "கோப்பு, செல்லுபடியாகாத சின்ன தோற்றத்திட்ட பெட்டகம்."
 
-#: main.cpp:179
+#: main.cpp:177
 #, kde-format
 msgid ""
 "A problem occurred during the installation process; however, most of the "
@@ -50,17 +50,17 @@ msgstr ""
 "நிறுவும்போது சிக்கல் ஏற்பட்டது; இருந்தும், பெட்டகத்திலிருந்த பெரும்பாலுமான தோற்றத்திட்டங்கள் "
 "நிறுவப்பட்டன"
 
-#: main.cpp:183
+#: main.cpp:181
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "தோற்றத்திட்டம் வெற்றிகரமாக நிறுவப்பட்டது."
 
-#: main.cpp:227
+#: main.cpp:225
 #, kde-format
 msgid "Installing icon themes…"
 msgstr "சின்னங்களுக்கான திட்டங்கள் நிறுவப்படுகின்றன…"
 
-#: main.cpp:237
+#: main.cpp:235
 #, kde-format
 msgid "Installing %1 theme…"
 msgstr "%1 திட்டம் நிறுவப்படுகிறது…"

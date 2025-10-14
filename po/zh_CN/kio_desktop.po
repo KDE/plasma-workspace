@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -17,7 +17,7 @@ msgstr ""
 "X-Crowdin-File: /kf6-trunk/messages/plasma-workspace/kio_desktop.pot\n"
 "X-Crowdin-File-ID: 42985\n"
 
-#: kio_desktop.cpp:174
+#: kio_desktop.cpp:172
 #, kde-format
 msgid "Desktop Folder"
 msgstr "桌面文件夹"

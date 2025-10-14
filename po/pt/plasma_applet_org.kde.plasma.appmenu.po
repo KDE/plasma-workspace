@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-19 01:53+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2022-07-26 09:27+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -33,12 +33,12 @@ msgctxt "@info:usagetip"
 msgid "Open a menu"
 msgstr "Abrir um menu"
 
-#: plugin/appmenumodel.cpp:84
+#: plugin/appmenumodel.cpp:85
 #, kde-format
 msgid "Search"
 msgstr "Procurar"
 
-#: plugin/appmenumodel.cpp:91
+#: plugin/appmenumodel.cpp:92
 #, kde-format
 msgid "Search…"
 msgstr "Procurar…"

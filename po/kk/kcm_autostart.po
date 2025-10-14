@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-24 00:45+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2013-01-02 07:05+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -21,23 +21,23 @@ msgstr ""
 "\n"
 "\n"
 
-#: autostartmodel.cpp:382
+#: autostartmodel.cpp:381
 #, fuzzy, kde-format
 #| msgid "\"%1\" is not an absolute path."
 msgid "\"%1\" is not an absolute url."
 msgstr "\"%1\" деген абсолюттік жол емес."
 
-#: autostartmodel.cpp:385
+#: autostartmodel.cpp:384
 #, kde-format
 msgid "\"%1\" does not exist."
 msgstr "\"%1\" дегені жоқ."
 
-#: autostartmodel.cpp:388
+#: autostartmodel.cpp:387
 #, kde-format
 msgid "\"%1\" is not a file."
 msgstr "\"%1\" деген файл емес."
 
-#: autostartmodel.cpp:391
+#: autostartmodel.cpp:390
 #, kde-format
 msgid "\"%1\" is not readable."
 msgstr "\"%1\" деген оқылмайды."
@@ -260,12 +260,12 @@ msgctxt "@label Entry has failed (exited with an error)"
 msgid "Failed"
 msgstr ""
 
-#: unit.cpp:83
+#: unit.cpp:81
 #, kde-format
 msgid "Error occurred when receiving reply of GetAll call %1"
 msgstr ""
 
-#: unit.cpp:155
+#: unit.cpp:153
 #, kde-format
 msgid "Failed to open journal"
 msgstr ""

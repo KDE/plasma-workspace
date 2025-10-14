@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-13 00:45+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2009-10-20 13:20+0200\n"
 "Last-Translator: Mark Kwidzińśczi <mark@linuxcsb.org>\n"
 "Language-Team: Kaszëbsczi <i18n-csb@linuxcsb.org>\n"
@@ -66,7 +66,7 @@ msgstr ""
 msgid "Window title font"
 msgstr "Titel òkna"
 
-#: kxftconfig.cpp:455
+#: kxftconfig.cpp:454
 #, fuzzy, kde-format
 #| msgctxt "Use anti-aliasing"
 #| msgid "System Settings"
@@ -74,34 +74,34 @@ msgctxt "use system subpixel setting"
 msgid "Vendor default"
 msgstr "Systemòwi nastôw"
 
-#: kxftconfig.cpp:457
+#: kxftconfig.cpp:456
 #, fuzzy, kde-format
 #| msgid "None"
 msgctxt "no subpixel rendering"
 msgid "None"
 msgstr "Felënk"
 
-#: kxftconfig.cpp:459
+#: kxftconfig.cpp:458
 #, kde-format
 msgid "RGB"
 msgstr "RGB"
 
-#: kxftconfig.cpp:461
+#: kxftconfig.cpp:460
 #, kde-format
 msgid "BGR"
 msgstr "BGR"
 
-#: kxftconfig.cpp:463
+#: kxftconfig.cpp:462
 #, kde-format
 msgid "Vertical RGB"
 msgstr "RGB z górë w dół"
 
-#: kxftconfig.cpp:465
+#: kxftconfig.cpp:464
 #, kde-format
 msgid "Vertical BGR"
 msgstr "BGR z górë w dół"
 
-#: kxftconfig.cpp:493
+#: kxftconfig.cpp:492
 #, fuzzy, kde-format
 #| msgctxt "Use anti-aliasing"
 #| msgid "System Settings"
@@ -109,28 +109,28 @@ msgctxt "use system hinting settings"
 msgid "Vendor default"
 msgstr "Systemòwi nastôw"
 
-#: kxftconfig.cpp:495
+#: kxftconfig.cpp:494
 #, fuzzy, kde-format
 #| msgid "Medium"
 msgctxt "medium hinting"
 msgid "Medium"
 msgstr "Strzény"
 
-#: kxftconfig.cpp:497
+#: kxftconfig.cpp:496
 #, fuzzy, kde-format
 #| msgid "None"
 msgctxt "no hinting"
 msgid "None"
 msgstr "Felënk"
 
-#: kxftconfig.cpp:499
+#: kxftconfig.cpp:498
 #, fuzzy, kde-format
 #| msgid "Slight"
 msgctxt "slight hinting"
 msgid "Slight"
 msgstr "Céńczi"
 
-#: kxftconfig.cpp:501
+#: kxftconfig.cpp:500
 #, fuzzy, kde-format
 #| msgid "Full"
 msgctxt "full hinting"

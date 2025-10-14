@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-29 00:44+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2024-02-10 00:59+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -20,55 +20,55 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 23.08.4\n"
 
-#: kded/mprisservice.cpp:105
+#: kded/mprisservice.cpp:103
 #, kde-format
 msgctxt "@title Name for global shortcuts category"
 msgid "Media Controller"
 msgstr "Komunikabide kontrolatzailea"
 
-#: kded/mprisservice.cpp:114
+#: kded/mprisservice.cpp:112
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Play/Pause media playback"
 msgstr "Ekin/Eten komunikabidea atzera-jotzea"
 
-#: kded/mprisservice.cpp:115
+#: kded/mprisservice.cpp:113
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback next"
 msgstr "Komunikabidea hurrengoa atzera-jotzea"
 
-#: kded/mprisservice.cpp:116
+#: kded/mprisservice.cpp:114
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback previous"
 msgstr "Komunikabidea aurrekoa atzera-jotzea"
 
-#: kded/mprisservice.cpp:117
+#: kded/mprisservice.cpp:115
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Stop media playback"
 msgstr "Gelditu komunikabidea atzera-jotzea"
 
-#: kded/mprisservice.cpp:118
+#: kded/mprisservice.cpp:116
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Pause media playback"
 msgstr "Eten komunikabidea atzera-jotzea"
 
-#: kded/mprisservice.cpp:119
+#: kded/mprisservice.cpp:117
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Play media playback"
 msgstr "Ekin komunikabidea atzera-jotzea"
 
-#: kded/mprisservice.cpp:120
+#: kded/mprisservice.cpp:118
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media volume up"
 msgstr "Komunikabidearen bolumena igo"
 
-#: kded/mprisservice.cpp:121
+#: kded/mprisservice.cpp:119
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media volume down"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-13 00:45+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2007-09-14 12:03+0530\n"
 "Last-Translator: Manu B <iammanu@gmail.com>\n"
 "Language-Team: Kannada\n"
@@ -65,67 +65,67 @@ msgstr ""
 msgid "Window title font"
 msgstr "ಕಿಟಕಿಯ ಶೀರ್ಷಿಕೆ"
 
-#: kxftconfig.cpp:455
+#: kxftconfig.cpp:454
 #, fuzzy, kde-format
 msgctxt "use system subpixel setting"
 msgid "Vendor default"
 msgstr "ವ್ಯವಸ್ಥೆಯ ಸಂಯೋಜನೆಗಳು"
 
-#: kxftconfig.cpp:457
+#: kxftconfig.cpp:456
 #, fuzzy, kde-format
 #| msgid "None"
 msgctxt "no subpixel rendering"
 msgid "None"
 msgstr "ಯಾವುದೂ ಇಲ್ಲ"
 
-#: kxftconfig.cpp:459
+#: kxftconfig.cpp:458
 #, kde-format
 msgid "RGB"
 msgstr "ಕೆ.ಹ.ನೀ(RGB)"
 
-#: kxftconfig.cpp:461
+#: kxftconfig.cpp:460
 #, kde-format
 msgid "BGR"
 msgstr "ನೀ.ಹ.ಕೆ(BGR)"
 
-#: kxftconfig.cpp:463
+#: kxftconfig.cpp:462
 #, kde-format
 msgid "Vertical RGB"
 msgstr "ಲಂಬ ಕೆ.ಹ.ನೀ(RGB)"
 
-#: kxftconfig.cpp:465
+#: kxftconfig.cpp:464
 #, kde-format
 msgid "Vertical BGR"
 msgstr "ಲಂಬ ನೀ.ಹ.ಕೆ(BGR)"
 
-#: kxftconfig.cpp:493
+#: kxftconfig.cpp:492
 #, fuzzy, kde-format
 msgctxt "use system hinting settings"
 msgid "Vendor default"
 msgstr "ವ್ಯವಸ್ಥೆಯ ಸಂಯೋಜನೆಗಳು"
 
-#: kxftconfig.cpp:495
+#: kxftconfig.cpp:494
 #, fuzzy, kde-format
 #| msgid "Medium"
 msgctxt "medium hinting"
 msgid "Medium"
 msgstr "ಮಧ್ಯಮ"
 
-#: kxftconfig.cpp:497
+#: kxftconfig.cpp:496
 #, fuzzy, kde-format
 #| msgid "None"
 msgctxt "no hinting"
 msgid "None"
 msgstr "ಯಾವುದೂ ಇಲ್ಲ"
 
-#: kxftconfig.cpp:499
+#: kxftconfig.cpp:498
 #, fuzzy, kde-format
 #| msgid "Slight"
 msgctxt "slight hinting"
 msgid "Slight"
 msgstr "ಕೊಂಚ"
 
-#: kxftconfig.cpp:501
+#: kxftconfig.cpp:500
 #, fuzzy, kde-format
 #| msgid "Full"
 msgctxt "full hinting"

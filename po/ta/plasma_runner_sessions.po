@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-25 00:44+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2025-09-28 15:17+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 25.08.1\n"
 
-#: sessionrunner.cpp:19
+#: sessionrunner.cpp:20
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to log out of the "
@@ -25,12 +25,12 @@ msgctxt ""
 msgid "logout;log out"
 msgstr "logout;log out;வெளியேறு"
 
-#: sessionrunner.cpp:22
+#: sessionrunner.cpp:23
 #, kde-format
 msgid "Logs out, exiting the current desktop session"
 msgstr "தற்போதைய அமர்விலிருந்து வெளியேறும்."
 
-#: sessionrunner.cpp:26
+#: sessionrunner.cpp:27
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to shut down the "
@@ -38,12 +38,12 @@ msgctxt ""
 msgid "shutdown;shut down;power;poweroff;power off"
 msgstr "shutdown;shut down;power;poweroff;power off;நிறுத்து;அணை;முடக்கு"
 
-#: sessionrunner.cpp:29
+#: sessionrunner.cpp:30
 #, kde-format
 msgid "Turns off the computer"
 msgstr "கணினியை நிறுத்தும்"
 
-#: sessionrunner.cpp:32
+#: sessionrunner.cpp:33
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to restart the "
@@ -51,24 +51,24 @@ msgctxt ""
 msgid "restart;reboot"
 msgstr "restart;reboot;மீள்துவக்கு"
 
-#: sessionrunner.cpp:35
+#: sessionrunner.cpp:36
 #, kde-format
 msgid "Reboots the computer"
 msgstr "கணினியை மறுபடியும் துவக்கும்"
 
-#: sessionrunner.cpp:39
+#: sessionrunner.cpp:40
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to lock the screen"
 msgid "lock;lock screen"
 msgstr "lock;lock screen;பூட்டு;திரையைப் பூட்டு"
 
-#: sessionrunner.cpp:41
+#: sessionrunner.cpp:42
 #, kde-format
 msgid "Locks the current sessions and starts the screen saver"
 msgstr "நடப்பு அமர்வுகளை பூட்டும்"
 
-#: sessionrunner.cpp:44
+#: sessionrunner.cpp:45
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to save the "
@@ -76,12 +76,12 @@ msgctxt ""
 msgid "save;save session"
 msgstr "save;save session;சேமி;அமர்வை சேமி"
 
-#: sessionrunner.cpp:47
+#: sessionrunner.cpp:48
 #, kde-format
 msgid "Saves the current session for session restoration"
 msgstr "தற்போதைய அமர்வை மீட்டமைக்கக்கூடிய வகையில் சேமிக்கும்"
 
-#: sessionrunner.cpp:50
+#: sessionrunner.cpp:51
 #, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to switch user "
@@ -89,41 +89,41 @@ msgctxt ""
 msgid "switch user;new session"
 msgstr "switch user;new session;பயனரை மாற்று;புதிய அமர்வு"
 
-#: sessionrunner.cpp:53
+#: sessionrunner.cpp:54
 #, kde-format
 msgid "Switch to a session as a different user"
 msgstr "வேறு பயனராக உள்ள அமர்விற்கு தாவும்"
 
-#: sessionrunner.cpp:74
+#: sessionrunner.cpp:75
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
 msgstr "அமர்விலிருந்து வெளியேறு"
 
-#: sessionrunner.cpp:82
+#: sessionrunner.cpp:83
 #, kde-format
 msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "கணினியை நிறுத்து"
 
-#: sessionrunner.cpp:89
+#: sessionrunner.cpp:90
 #, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
 msgstr "மீள்துவக்கு"
 
-#: sessionrunner.cpp:96
+#: sessionrunner.cpp:97
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr "பூட்டு"
 
-#: sessionrunner.cpp:103
+#: sessionrunner.cpp:104
 #, kde-format
 msgid "Save Session"
 msgstr "அமர்வை சேமி"
 
-#: sessionrunner.cpp:110
+#: sessionrunner.cpp:111
 #, kde-format
 msgid "Switch User"
 msgstr "பயனரை மாற்று"

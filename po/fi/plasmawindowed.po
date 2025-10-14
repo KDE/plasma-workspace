@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-31 00:44+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2023-10-07 10:48+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -48,7 +48,7 @@ msgstr "Sovelma on auki."
 msgid "Arguments to pass to the plasmoid."
 msgstr "Sovelmalle välitettävät parametrit."
 
-#: plasmawindowedview.cpp:121
+#: plasmawindowedview.cpp:119
 #, kde-format
 msgid "Close %1"
 msgstr "Sulje %1"

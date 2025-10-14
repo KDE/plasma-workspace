@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kio_applications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-08 00:46+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2008-11-02 18:26+0100\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -21,17 +21,17 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: kio_applications.cpp:127
+#: kio_applications.cpp:125
 #, kde-format
 msgid "Applications"
 msgstr "Program"
 
-#: kio_applications.cpp:127
+#: kio_applications.cpp:125
 #, kde-format
 msgid "Programs"
 msgstr "Programmer"
 
-#: kio_applications.cpp:136
+#: kio_applications.cpp:134
 #, kde-format
 msgid "Unknown application folder"
 msgstr "Ukjent programmappe"

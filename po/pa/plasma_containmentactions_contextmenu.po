@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-24 00:43+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2024-10-25 23:19-0500\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
@@ -17,54 +17,54 @@ msgstr ""
 "X-Generator: Lokalize 24.08.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: menu.cpp:109
+#: menu.cpp:107
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Show KRunner"
 msgstr "ਕੇ-ਰਨਰ ਵੇਖਾਓ"
 
-#: menu.cpp:114
+#: menu.cpp:112
 #, kde-format
 msgid "Open Terminal"
 msgstr "ਟਰਮੀਨਲ ਨੂੰ ਖੋਲ੍ਹੋ"
 
-#: menu.cpp:118
+#: menu.cpp:116
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Lock Screen"
 msgstr "ਸਕਰੀਨ ਲਾਕ ਕਰੋ"
 
-#: menu.cpp:127
+#: menu.cpp:125
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Show Logout Screen"
 msgstr "ਲਾਗ-ਆਉਟ ਸਕਰੀਨ ਵੇਖਾਓ"
 
-#: menu.cpp:132
+#: menu.cpp:130
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Display Configuration"
 msgstr "ਡਿਸਪਲੇਅ ਦੀ ਸੰਰਚਨਾ"
 
-#: menu.cpp:280
+#: menu.cpp:278
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Configure Contextual Menu Plugin"
 msgstr "ਪਰਸੰਗ ਮੇਨੂ ਪਲੱਗਇਨ ਸੰਰਚਨਾ"
 
-#: menu.cpp:290
+#: menu.cpp:288
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Other Actions]"
 msgstr "[ਹੋਰ ਐਕਸ਼ਨ]"
 
-#: menu.cpp:293
+#: menu.cpp:291
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Wallpaper Actions"
 msgstr "ਵਾਲਪੇਪਰ ਐਕਸ਼ਨ"
 
-#: menu.cpp:297
+#: menu.cpp:295
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Separator]"

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-04 00:43+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2024-05-25 23:56\n"
 "Last-Translator: Antikruk <nashtlumach@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -22,13 +22,13 @@ msgstr ""
 "kcm_soundtheme.po\n"
 "X-Crowdin-File-ID: 17860\n"
 
-#: kcm_soundtheme.cpp:111
+#: kcm_soundtheme.cpp:112
 #, kde-format
 msgctxt "Name of the fallback \"freedesktop\" sound theme"
 msgid "FreeDesktop"
 msgstr "FreeDesktop"
 
-#: kcm_soundtheme.cpp:112
+#: kcm_soundtheme.cpp:113
 #, kde-format
 msgid "Fallback sound theme from freedesktop.org"
 msgstr "Альтэрнатыўная гукавая тэма з freedesktop.org"

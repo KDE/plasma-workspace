@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-31 00:44+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2002-10-23 12:00SAST\n"
 "Last-Translator: Lwandle Mgidlana <lwandle@translate.org.za>\n"
 "Language-Team: Xhosa <xhosa@translate.org.za>\n"
@@ -25,22 +25,22 @@ msgstr ""
 msgid "Name of the current icon theme"
 msgstr ""
 
-#: main.cpp:149
+#: main.cpp:147
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr ""
 
-#: main.cpp:160
+#: main.cpp:158
 #, fuzzy, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Ayikwazi ukufumana umxholo wendawo yokugcina %1!"
 
-#: main.cpp:174
+#: main.cpp:172
 #, fuzzy, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Ifayile ayingomxholo osebenzayo wendawo yokugcina!"
 
-#: main.cpp:179
+#: main.cpp:177
 #, fuzzy, kde-format
 msgid ""
 "A problem occurred during the installation process; however, most of the "
@@ -49,18 +49,18 @@ msgstr ""
 "Kwenzeke ingxaki ngexesha lenkqubo yofako. Kodwa, kufakwe imixholo emininzi "
 "kwindawo yogcino"
 
-#: main.cpp:183
+#: main.cpp:181
 #, kde-format
 msgid "Theme installed successfully."
 msgstr ""
 
-#: main.cpp:227
+#: main.cpp:225
 #, fuzzy, kde-format
 #| msgid "Installing icon themes"
 msgid "Installing icon themes…"
 msgstr "Ifaka imixholo yophawu lomfanekiso"
 
-#: main.cpp:237
+#: main.cpp:235
 #, fuzzy, kde-format
 #| msgid "Installing icon themes"
 msgid "Installing %1 theme…"

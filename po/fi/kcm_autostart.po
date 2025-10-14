@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Teemu Rytilahti <tpr@d5k.net>, 2008.
 # Teemu Rytilahti <teemu.rytilahti@kde-fi.org>, 2008.
-# SPDX-FileCopyrightText: 2011, 2017, 2020, 2021, 2022, 2023, 2024 Tommi Nieminen <translator@legisign.org>
+# SPDX-FileCopyrightText: 2011, 2017, 2020, 2021, 2022, 2023, 2024, 2025 Tommi Nieminen <translator@legisign.org>
 # Lasse Liehu <lasse.liehu@gmail.com>, 2012, 2013, 2014, 2015.
 #
 # KDE Finnish translation sprint participants:
@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-24 00:45+0000\n"
-"PO-Revision-Date: 2024-10-16 18:48+0300\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
+"PO-Revision-Date: 2025-10-12 17:40+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -20,24 +20,24 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 25.04.0\n"
 
-#: autostartmodel.cpp:382
+#: autostartmodel.cpp:381
 #, kde-format
 msgid "\"%1\" is not an absolute url."
 msgstr "”%1” ei ole absoluuttinen verkko-osoite."
 
-#: autostartmodel.cpp:385
+#: autostartmodel.cpp:384
 #, kde-format
 msgid "\"%1\" does not exist."
 msgstr "Tiedostoa ”%1” ei ole olemassa."
 
-#: autostartmodel.cpp:388
+#: autostartmodel.cpp:387
 #, kde-format
 msgid "\"%1\" is not a file."
 msgstr "”%1” ei ole tiedosto."
 
-#: autostartmodel.cpp:391
+#: autostartmodel.cpp:390
 #, kde-format
 msgid "\"%1\" is not readable."
 msgstr "Tiedostoa ”%1” ei voi lukea."
@@ -117,7 +117,7 @@ msgstr "Lisää uusi"
 #, kde-format
 msgctxt "@title:menu accessible menu button"
 msgid "Add new application or script"
-msgstr ""
+msgstr "Lisää uusi sovellus tai skripti"
 
 #: ui/main.qml:73
 #, kde-format
@@ -126,11 +126,10 @@ msgid "Application…"
 msgstr "Sovellus…"
 
 #: ui/main.qml:75
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgctxt "@action:inmenu accessible"
 msgid "Add application"
-msgstr "Sovellukset"
+msgstr "Lisää sovellus"
 
 #: ui/main.qml:79
 #, kde-format
@@ -139,11 +138,10 @@ msgid "Login Script…"
 msgstr "Kirjautumisskripti…"
 
 #: ui/main.qml:81
-#, fuzzy, kde-format
-#| msgid "Login Scripts"
+#, kde-format
 msgctxt "@action:inmenu accessible"
 msgid "Add login script"
-msgstr "Kirjautumisskriptit"
+msgstr "Lisää kirjautumisskripti"
 
 #: ui/main.qml:85
 #, kde-format
@@ -152,11 +150,10 @@ msgid "Logout Script…"
 msgstr "Uloskirjautumisskripti…"
 
 #: ui/main.qml:87
-#, fuzzy, kde-format
-#| msgid "Logout Scripts"
+#, kde-format
 msgctxt "@action:inmenu accessible"
 msgid "Add logout script"
-msgstr "Uloskirjautumisskriptit"
+msgstr "Lisää uloskirjautumisskripti"
 
 #: ui/main.qml:121
 #, kde-format
@@ -257,12 +254,12 @@ msgctxt "@label Entry has failed (exited with an error)"
 msgid "Failed"
 msgstr "Epäonnistui"
 
-#: unit.cpp:83
+#: unit.cpp:81
 #, kde-format
 msgid "Error occurred when receiving reply of GetAll call %1"
 msgstr "Vastaanotettaessa vastausta GetAll-kutsuun %1 sattui virhe"
 
-#: unit.cpp:155
+#: unit.cpp:153
 #, kde-format
 msgid "Failed to open journal"
 msgstr "Journaalia ei voitu avata"

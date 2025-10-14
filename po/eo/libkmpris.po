@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-29 00:44+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2024-02-09 22:05+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -20,55 +20,55 @@ msgstr ""
 "X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: kded/mprisservice.cpp:105
+#: kded/mprisservice.cpp:103
 #, kde-format
 msgctxt "@title Name for global shortcuts category"
 msgid "Media Controller"
 msgstr "Aŭdvidaĵa Regilo"
 
-#: kded/mprisservice.cpp:114
+#: kded/mprisservice.cpp:112
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Play/Pause media playback"
 msgstr "Ludi/Paŭzi aŭdvidaĵan ludadon"
 
-#: kded/mprisservice.cpp:115
+#: kded/mprisservice.cpp:113
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback next"
 msgstr "Aŭdvidaĵa ludado sekvanta"
 
-#: kded/mprisservice.cpp:116
+#: kded/mprisservice.cpp:114
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback previous"
 msgstr "Aŭdvidaĵa ludado antaŭa"
 
-#: kded/mprisservice.cpp:117
+#: kded/mprisservice.cpp:115
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Stop media playback"
 msgstr "Halti aŭdvidaĵan ludadon"
 
-#: kded/mprisservice.cpp:118
+#: kded/mprisservice.cpp:116
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Pause media playback"
 msgstr "Paŭzi aŭdvidaĵan ludadon"
 
-#: kded/mprisservice.cpp:119
+#: kded/mprisservice.cpp:117
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Play media playback"
 msgstr "Ludi aŭdvidaĵon"
 
-#: kded/mprisservice.cpp:120
+#: kded/mprisservice.cpp:118
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media volume up"
 msgstr "Aŭdvidaĵa laŭteco supren"
 
-#: kded/mprisservice.cpp:121
+#: kded/mprisservice.cpp:119
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media volume down"

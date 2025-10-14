@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-08 00:45+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2025-06-04 19:35+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -114,13 +114,13 @@ msgstr ""
 "Inicia la sesión sin permitir bloquear la pantalla. Solo se necesita si hay "
 "otro componente que proporcione el bloqueo de pantalla."
 
-#: server.cpp:774
+#: server.cpp:775
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[desconocido]"
 
-#: server.cpp:797
+#: server.cpp:798
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -133,7 +133,7 @@ msgstr ""
 "máximos de recursos de la sesión:\n"
 "%1"
 
-#: server.cpp:1054
+#: server.cpp:1055
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-10-06 01:42+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2024-02-11 18:57\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -22,36 +22,36 @@ msgstr ""
 "libkworkspace.po\n"
 "X-Crowdin-File-ID: 10798\n"
 
-#: kdisplaymanager.cpp:768
+#: kdisplaymanager.cpp:767
 #, kde-format
 msgctxt "user: …"
 msgid "%1: TTY login"
 msgstr "%1: Лагін TTY"
 
-#: kdisplaymanager.cpp:773
+#: kdisplaymanager.cpp:772
 #, kde-format
 msgctxt "… location (TTY or X display)"
 msgid "Unused"
 msgstr "Не выкарыстоўваецца"
 
-#: kdisplaymanager.cpp:774
+#: kdisplaymanager.cpp:773
 #, kde-format
 msgid "X login on remote host"
 msgstr "Сеанс X-сервера на адлеглым хосце"
 
-#: kdisplaymanager.cpp:774
+#: kdisplaymanager.cpp:773
 #, kde-format
 msgctxt "… host"
 msgid "X login on %1"
 msgstr "Сеанс X-сервера на %1"
 
-#: kdisplaymanager.cpp:776
+#: kdisplaymanager.cpp:775
 #, kde-format
 msgctxt "user: session type"
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: kdisplaymanager.cpp:787
+#: kdisplaymanager.cpp:786
 #, kde-format
 msgctxt "session (location)"
 msgid "%1 (%2)"

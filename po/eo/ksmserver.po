@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-08 00:45+0000\n"
+"POT-Creation-Date: 2025-10-14 00:44+0000\n"
 "PO-Revision-Date: 2024-12-28 17:41+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -105,13 +105,13 @@ msgstr ""
 "Startas sen ekranŝlosa subteno. Nur bezonata se alia komponanto provizas la "
 "ekranŝloson."
 
-#: server.cpp:774
+#: server.cpp:775
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[nekonata]"
 
-#: server.cpp:797
+#: server.cpp:798
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -122,7 +122,7 @@ msgstr ""
 "Ne eblas administri iujn programojn ĉar la seancadministraj rimedoj de la "
 "sistemo estas elĉerpitaj. Jen la pintaj tri konsumantoj de seancorimedoj:%1"
 
-#: server.cpp:1054
+#: server.cpp:1055
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""
