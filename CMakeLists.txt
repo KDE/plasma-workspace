@@ -133,11 +133,6 @@ find_package(ScreenSaverDBusInterface CONFIG REQUIRED)
 # Used in kcm_autostart
 pkg_check_modules(SYSTEMD "systemd")
 
-find_package(Phonon4Qt6 4.6.60 REQUIRED NO_MODULE)
-set_package_properties(Phonon4Qt6 PROPERTIES
-   DESCRIPTION "Qt-based audio library"
-   TYPE REQUIRED)
-
 find_package(Canberra)
 set_package_properties(Canberra PROPERTIES
     PURPOSE "Needed to preview notification sounds"
@@ -447,7 +442,6 @@ if(TARGET KF6::NetworkManagerQt)
     add_subdirectory(geotimezoned)
 endif()
 add_subdirectory(menu)
-add_subdirectory(phonon)
 add_subdirectory(donationmessage)
 
 add_subdirectory(interactiveconsole)
