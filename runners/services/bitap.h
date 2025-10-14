@@ -17,7 +17,7 @@ Q_DECLARE_LOGGING_CATEGORY(BITAP)
 Q_LOGGING_CATEGORY(BITAP, "org.kde.plasma.runner.services.bitap", QtWarningMsg)
 
 struct Match {
-    qsizetype end;
+    qsizetype size;
     qsizetype distance;
 
     bool operator==(const Match &other) const = default;
@@ -25,7 +25,7 @@ struct Match {
 
 inline QDebug operator<<(QDebug dbg, const Bitap::Match &match)
 {
-    dbg.nospace() << "Bitap::Match(" << match.end << ", " << match.distance << ")";
+    dbg.nospace() << "Bitap::Match(" << match.size << ", " << match.distance << ")";
     return dbg;
 }
 
@@ -38,9 +38,8 @@ inline QDebug operator<<(QDebug dbg, const Bitap::Match &match)
 inline std::optional<Match> bitap(const QStringView &name, const QStringView &pattern, int hammingDistance)
 {
     qCDebug(BITAP) << "Bitap called with name:" << name << "and pattern:" << pattern << "with hamming distance:" << hammingDistance;
-    const auto patternEndIndex = pattern.size() - 1;
     if (name == pattern) {
-        return Match{.end = patternEndIndex, .distance = 0}; // Perfect match
+        return Match{.size = pattern.size(), .distance = 0}; // Perfect match
     }
 
     if (pattern.isEmpty() || name.isEmpty()) {
@@ -89,7 +88,7 @@ inline std::optional<Match> bitap(const QStringView &name, const QStringView &pa
     }();
 
     Match match{
-        .end = -1, // -1 means no match found for convenience
+        .size = 0, // 0 means no match found for convenience
         .distance = name.size(),
     };
 
@@ -125,11 +124,13 @@ inline std::optional<Match> bitap(const QStringView &name, const QStringView &pa
         for (int k = 0; k <= hammingDistance; ++k) {
             // If the bit at the end of the mask is 0, it means we have a match.
             if (0 == (bits[k] & Mask().set(pattern.size()))) {
-                if (k < match.distance && match.end < i) {
+                const int newSize = std::min(qsizetype(i + 1), pattern.size());
+                if (k < match.distance && match.size <= newSize) {
                     qCDebug(BITAP) << "Match found at index" << i << "with hamming distance" << k << "better than previous match with distance"
-                                   << match.distance << "at index" << match.end;
+                                   << match.distance << "with size" << match.size;
+
                     match = {
-                        .end = i,
+                        .size = newSize,
                         .distance = k,
                     };
                 }
@@ -143,7 +144,7 @@ inline std::optional<Match> bitap(const QStringView &name, const QStringView &pa
     // in relation to the max distance. While an end that is closer to the real end is generally favorably. Combining the two into a single value
     // would complicate the meaning of the return value to mean "approximate end with random penalty". This is garbage to reason about so instead we return
     // both values and then assign them meaning in the score function.
-    if (match.end != -1) {
+    if (match.size > 0) {
         return match;
     }
 
@@ -161,7 +162,7 @@ inline qreal score(const QStringView &name, const auto &match, auto hammingDista
         return 0.0; // No name, no score.
     }
 
-    const auto maxEnd = name.size() - 1;
+    const auto maxSize = name.size();
     const auto penalty = [&] {
         if (hammingDistance <= 0) {
             return 1.0; // No penalty for no distance
@@ -170,7 +171,7 @@ inline qreal score(const QStringView &name, const auto &match, auto hammingDista
         constexpr auto half = 2.0;
         return qreal(match.distance) / qreal(hammingDistance) / tenth / half;
     }();
-    auto score = qreal(match.end) / qreal(maxEnd);
+    auto score = qreal(match.size) / qreal(maxSize);
     // Prevent underflows when the penalty is larger than the score.
     score = std::max(0.0, score - penalty);
 

@@ -106,7 +106,7 @@ auto makeScores(const auto &notNormalizedString, const auto &queryList) {
         // If we perfectly match that gives a bonus for not requiring any changes.
         const auto noSubstitionBonus = Bitap::score(string, bitap.value(), 0) == 1.0 ? 4.0 : 1.0;
         // If we match the entire length of the string that gets a bonus (disregarding distance, that was considered above).
-        const auto completeMatchBonus = bitap->end >= (queryItem.size() - 1) ? 3.0 : 1.0;
+        const auto completeMatchBonus = bitap->size >= (queryItem.size()) ? 3.0 : 1.0;
         // If the string starts with the query item that gets a bonus.
         const auto startsWithBonus = (string.startsWith(queryItem, Qt::CaseInsensitive)) ? 2.0 : 1.0;
 
