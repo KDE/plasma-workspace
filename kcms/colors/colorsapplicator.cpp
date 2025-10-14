@@ -293,6 +293,11 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
 
     groupWMOut.writeEntry(QStringLiteral("frameContrast"), groupWMTheme.readEntry(QStringLiteral("frameContrast"), 0.2), writeConfigFlag);
 
+    KConfigGroup groupKDETheme(config, u"KDE"_s);
+    KConfigGroup groupKDEOut(configOutput, u"KDE"_s);
+
+    groupKDEOut.writeEntry(QStringLiteral("contrast"), groupWMTheme.readEntry(QStringLiteral("contrast"), 7), writeConfigFlag);
+
     if (hasAccent && (tintAccent || applyAccentToTitlebar)) { // Titlebar accent colouring
         const auto windowBackground = config->group(u"Colors:Window"_s).readEntry<QColor>("BackgroundNormal", QColor());
 

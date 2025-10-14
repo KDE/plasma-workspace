@@ -63,7 +63,7 @@ void SchemeEditorOptions::loadOptions()
 void SchemeEditorOptions::on_contrastSpinBox_valueChanged(double value)
 {
     // For the old value, convert it to integer
-    const int val = qRound(value);
+    const int val = qRound(value * 10);
     KConfigGroup group(m_config, u"KDE"_s);
     group.writeEntry("contrast", val);
 
