@@ -9,6 +9,7 @@
 
 #include <KConfigGroup>
 #include <QDebug>
+#include <QTimer>
 
 #include "../colorsapplicator.h"
 
@@ -17,10 +18,18 @@ using namespace Qt::StringLiterals;
 SchemeEditorOptions::SchemeEditorOptions(KSharedConfigPtr config, QWidget *parent)
     : QWidget(parent)
     , m_config(config)
+    , m_spinboxUpdateTimer(new QTimer(this))
 {
     setupUi(this);
     m_disableUpdates = false;
+    m_spinboxUpdateTimer->setSingleShot(true);
+    // Smoother spinbox
+    connect(m_spinboxUpdateTimer, &QTimer::timeout, this, [this]() {
+        Q_EMIT changed(true);
+        updateContrastExample();
+    });
     loadOptions();
+    updateContrastExample();
 }
 
 void SchemeEditorOptions::updateValues()
@@ -35,11 +44,10 @@ void SchemeEditorOptions::loadOptions()
 
     accentTitlebar->setChecked(generalGroup.readEntry("TitlebarIsAccentColored", generalGroup.readEntry("accentActiveTitlebar", false)));
 
-    contrastSpinBox->blockSignals(true);
     KConfigGroup WMGroup(m_config, u"WM"_s);
-    contrastSpinBox->setValue(WMGroup.readEntry("frameContrast", KColorScheme::contrastF()));
-    updateContrastExample();
-    contrastSpinBox->blockSignals(false);
+    contrastPercentageSpinBox->blockSignals(true);
+    contrastPercentageSpinBox->setValue((WMGroup.readEntry("frameContrast", KColorScheme::contrastF()) * 100.0));
+    contrastPercentageSpinBox->blockSignals(false);
 
     KConfigGroup group(m_config, u"ColorEffects:Inactive"_s);
     useInactiveEffects->setChecked(group.readEntry("Enable", false));
@@ -60,19 +68,16 @@ void SchemeEditorOptions::loadOptions()
 }
 
 // Option slot
-void SchemeEditorOptions::on_contrastSpinBox_valueChanged(double value)
+void SchemeEditorOptions::on_contrastPercentageSpinBox_valueChanged(int value)
 {
-    // For the old value, convert it to integer
-    const int val = qRound(value * 10);
+    // Convert the old value to something between 1 to 10
     KConfigGroup group(m_config, u"KDE"_s);
-    group.writeEntry("contrast", val);
+    group.writeEntry("Contrast", qRound(value / 10.0));
 
     KConfigGroup groupTwo(m_config, u"WM"_s);
-    groupTwo.writeEntry("frameContrast", value);
+    groupTwo.writeEntry("frameContrast", value / 100.0);
 
-    updateContrastExample();
-
-    Q_EMIT changed(true);
+    m_spinboxUpdateTimer->start();
 }
 
 void SchemeEditorOptions::on_shadeSortedColumn_stateChanged(int state)
@@ -146,7 +151,8 @@ void SchemeEditorOptions::on_accentTitlebar_stateChanged(int state)
 
 void SchemeEditorOptions::updateContrastExample()
 {
-    const QColor frameColor(KColorUtils::mix(palette().color(QPalette::Window), palette().color(QPalette::WindowText), contrastSpinBox->value()));
+    const QColor frameColor(
+        KColorUtils::mix(palette().color(QPalette::Window), palette().color(QPalette::WindowText), contrastPercentageSpinBox->value() / 100.0));
     contrastExample->setStyleSheet(QStringLiteral("background-color: %1").arg(frameColor.name()));
 }
 
