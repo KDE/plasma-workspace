@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-07 02:44+0000\n"
+"POT-Creation-Date: 2025-10-15 02:35+0000\n"
 "PO-Revision-Date: 2025-10-01 10:18+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -414,12 +414,12 @@ msgstr "Gestionează birouri și panouri…"
 msgid "Move keyboard focus between panels"
 msgstr "Mută focalizarea tastaturii între panouri"
 
-#: shellcorona.cpp:2195
+#: shellcorona.cpp:2209
 #, kde-format
 msgid "Add Panel"
 msgstr "Adaugă panou"
 
-#: shellcorona.cpp:2278
+#: shellcorona.cpp:2292
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
