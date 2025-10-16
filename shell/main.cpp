@@ -63,10 +63,6 @@ int main(int argc, char *argv[])
 
     qunsetenv("QT_WAYLAND_DISABLE_FIXED_POSITIONS");
     qputenv("QT_WAYLAND_RECONNECT", "1");
-#if QT_VERSION <= QT_VERSION_CHECK(6, 8, 0)
-    // Incremental gc is causing many crashes, disable it until https://bugreports.qt.io/browse/QTBUG-129241 is resolved
-    qputenv("QV4_GC_TIMELIMIT", "0");
-#endif
 
     // Quit on SIGTERM to properly save state. See systemd.kill(5).
     // https://bugs.kde.org/show_bug.cgi?id=470604
