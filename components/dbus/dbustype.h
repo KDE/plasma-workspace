@@ -73,13 +73,8 @@ public:
     explicit VARIANT()
     {
     }
-#if (QT_VERSION == QT_VERSION_CHECK(6, 8, 0)) // https://bugreports.qt.io/browse/QTBUG-130522
-    Q_INVOKABLE explicit VARIANT(const QVariant &_value)
-        : value(_value)
-#else
     Q_INVOKABLE explicit VARIANT(const QJSValue &value)
         : value(value.toVariant())
-#endif
     {
     }
     operator QVariant() const
