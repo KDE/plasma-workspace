@@ -3,8 +3,8 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2008, 2009, 2010, 2011, 2018, 2020, 2022.
-# Antoni Bella Pérez <antonibella5@yahoo.com>, 2020, 2022.
+# SPDX-FileCopyrightText: 2008, 2009, 2010, 2011, 2018, 2020, 2022 Josep M. Ferrer <txemaq@gmail.com>
+# SPDX-FileCopyrightText: 2020, 2022 Antoni Bella Pérez <antonibella5@yahoo.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
@@ -65,7 +65,7 @@ msgstr "Torna a arrancar l'ordinador"
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to lock the screen"
 msgid "lock;lock screen"
-msgstr "bloqueig;bloqueig de pantalla"
+msgstr "bloqueig;bloqueig de la pantalla"
 
 #: sessionrunner.cpp:56
 #, kde-format

@@ -1,10 +1,10 @@
 # Translation of plasma_engine_weather.po to Catalan
 # Copyright (C) 2009-2021 This_file_is_part_of_KDE
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2009, 2011, 2016, 2017, 2018, 2019, 2021.
-# Manuel Tortosa Moreno <manutortosa@chakra-project.org>, 2009.
-# Orestes Mas <orestes@tsc.upc.edu>, 2009.
-# Antoni Bella Pérez <antonibella5@yahoo.com>, 2018, 2019.
+# SPDX-FileCopyrightText: 2009, 2011, 2016, 2017, 2018, 2019, 2021 Josep M. Ferrer <txemaq@gmail.com>
+# SPDX-FileCopyrightText: 2009 Manuel Tortosa Moreno <manutortosa@chakra-project.org>
+# SPDX-FileCopyrightText: 2009 Orestes Mas <orestes@tsc.upc.edu>
+# SPDX-FileCopyrightText: 2018, 2019 Antoni Bella Pérez <antonibella5@yahoo.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
