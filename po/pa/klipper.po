@@ -3,27 +3,27 @@
 # Amanpreet Singh Brar <amanpreetalam@yahoo.com>, 2005.
 # Amanpreet Singh Brar <aalam@redhat.com>, 2005.
 # Amanpreet Singh Alam <amanpreetalam@yahoo.com>, 2005.
-# SPDX-FileCopyrightText: 2007, 2009, 2010, 2011, 2012, 2014, 2020, 2021, 2023, 2024 A S Alam <aalam@users.sf.net>
+# SPDX-FileCopyrightText: 2007, 2009, 2010, 2011, 2012, 2014, 2020, 2021, 2023, 2024, 2025 A S Alam <aalam@users.sf.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-14 00:44+0000\n"
-"PO-Revision-Date: 2024-10-25 23:34-0500\n"
-"Last-Translator: A S Alam <aman@punlinux.org>\n"
-"Language-Team: pa\n"
+"PO-Revision-Date: 2025-10-16 12:38-0500\n"
+"Last-Translator: A S Alam <aalam@punlinux.org>\n"
+"Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 25.08.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "ਅਮਨਪਰੀਤ ਸਿੰਘ ਆਲਮ ੨੦੨੩"
+msgstr "ਅਮਨਪਰੀਤ ਸਿੰਘ ਆਲਮ ੨੦੨੩-੨੫"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
@@ -279,7 +279,7 @@ msgstr "QR ਕੋਡ"
 #: declarative/qml/BarcodePage.qml:33
 #, kde-format
 msgid "Data Matrix"
-msgstr ""
+msgstr "ਡਾਟਾ ਮੈਟਰ੍ਕਿਸ"
 
 #: declarative/qml/BarcodePage.qml:34
 #, kde-format
@@ -311,7 +311,7 @@ msgstr "ਕਲਿੱਪਬੋਰਡ ਉੱਤੇ ਵਾਪਸ"
 #, kde-format
 msgctxt "@action:button Copy to clipboard"
 msgid "Copy"
-msgstr ""
+msgstr "ਕਾਪੀ ਕਰੋ"
 
 #: declarative/qml/BarcodePage.qml:95
 #, kde-format
@@ -320,11 +320,10 @@ msgid "An image of the QR code has been copied to clipboard"
 msgstr ""
 
 #: declarative/qml/BarcodePage.qml:101
-#, fuzzy, kde-format
-#| msgid "Append to clipboard"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Copy QR code image to clipboard"
-msgstr "ਕਲਿੱਪਬੋਰਡ ਵਿੱਚ ਸ਼ਾਮਲ"
+msgstr "QR ਕੋਡ ਚਿੱਤਰ ਨੂੰ ਕਲਿੱਪਬੋਰਡ ਵਿੱਚ ਕਾਪੀ ਕਰੋ"
 
 #: declarative/qml/BarcodePage.qml:112
 #, kde-format
@@ -335,7 +334,7 @@ msgstr "QR ਕੋਡ ਦੀ ਕਿਸਮ ਨੂੰ ਬਦਲੋ"
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
-msgstr ""
+msgstr "QR ਕੋਡ ਦਿਖਾਉਣ ਲਈ ਲੋੜੀਦੀ ਖਾਲੀ ਥਾਂ ਨਹੀਂ ਹੈ। ਇਸ ਐਪਲਿਟ ਦਾ ਆਕਾਰ ਬਦਲਣ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
 
 #: declarative/qml/BarcodePage.qml:197
 #, kde-format
@@ -360,15 +359,14 @@ msgid "Clear History"
 msgstr "ਅਤੀਤ ਨੂੰ ਮਿਟਾਓ"
 
 #: declarative/qml/ClipboardMenu.qml:324
-#, fuzzy, kde-format
-#| msgid "Clear History"
+#, kde-format
 msgid "All History"
-msgstr "ਅਤੀਤ ਨੂੰ ਮਿਟਾਓ"
+msgstr "ਸਾਰਾ ਅਤੀਤ"
 
 #: declarative/qml/ClipboardMenu.qml:329
 #, kde-format
 msgid "Starred Only"
-msgstr ""
+msgstr "ਤਾਰਾ ਲੱਗੇ ਹੀ"
 
 #: declarative/qml/ClipboardMenu.qml:436
 #, kde-format
@@ -401,16 +399,14 @@ msgid "Remove from history"
 msgstr "ਅਤੀਤ ਤੋਂ ਹਟਾਓ"
 
 #: declarative/qml/DelegateToolButtons.qml:58
-#, fuzzy, kde-format
-#| msgid "Remove from history"
+#, kde-format
 msgid "Remove Star"
-msgstr "ਅਤੀਤ ਤੋਂ ਹਟਾਓ"
+msgstr "ਤਾਰੇ ਨੂੰ ਹਟਾਓ"
 
 #: declarative/qml/DelegateToolButtons.qml:58
-#, fuzzy, kde-format
-#| msgid "Start"
+#, kde-format
 msgid "Star"
-msgstr "ਸ਼ੁਰੂ"
+msgstr "ਤਾਰਾ"
 
 #: declarative/qml/EditPage.qml:64
 #, kde-format
@@ -614,10 +610,9 @@ msgid "Icon:"
 msgstr "ਆਈਕਾਨ:"
 
 #: historymodel.cpp:281
-#, fuzzy, kde-format
-#| msgid "The clipboard history will store up to this many items."
+#, kde-format
 msgid "The clipboard history contains starred items. Clear them too?"
-msgstr "ਕਲਿੱਪਬੋਰਡ ਅਤੀਤ ਐਨੀਆਂ ਚੀਜ਼ਾਂ ਨੂੰ ਸੰਭਾਲੇਗਾ।"
+msgstr "ਕਲਿੱਪਬੋਰਡ ਅਤੀਤ ਵਿੱਚ ਤਾਰਾ ਲੱਗੀਆਂ ਚੀਜ਼ਾਂ ਹਨ। ਕੀ ਉਹਨਾਂ ਨੂੰ ਮਿਟਾਉਣਾ ਹੈ?"
 
 #: historymodel.cpp:282 historymodel.cpp:302
 #, kde-format
@@ -627,13 +622,12 @@ msgstr "ਕਲਿੱਪਬੋਰਡ ਅਤੀਤ ਨੂੰ ਮਿਟਾਓ"
 #: historymodel.cpp:283
 #, kde-format
 msgid "Clear Everything"
-msgstr ""
+msgstr "ਹਰ ਚੀਜ਼ ਨੂੰ ਮਿਟਾਓ"
 
 #: historymodel.cpp:284
-#, fuzzy, kde-format
-#| msgid "Clipboard Items"
+#, kde-format
 msgid "Keep Starred Items"
-msgstr "ਕਲਿੱਪਬੋਰਡ ਚੀਜ਼ਾਂ"
+msgstr "ਤਾਰਾ ਲੱਗੀਆਂ ਚੀਜ਼ਾਂ ਨੂੰ ਰੱਖੋ"
 
 #: historymodel.cpp:301
 #, kde-format
@@ -641,21 +635,20 @@ msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "ਕੀ ਤੁਸੀਂ ਪੂਰੇ ਕਲਿੱਪਬੋਰਡ ਅਤੀਤ ਨੂੰ ਮਿਟਾਉਣਾ ਅਤੇ ਹਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
 
 #: historymodel.cpp:385
-#, fuzzy, kde-format
-#| msgid "%1x%2 %3bpp"
+#, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
-msgstr "%1x%2 %3bpp"
+msgstr "%1x%2"
 
 #: historymodel.cpp:565
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
-msgstr ""
+msgstr "ਇਹ ਚੀਜ਼ ਤਾਰਾ ਲਗਾਈ ਹੈ। ਕੀ ਤੁਸੀਂ ਇਸ ਨੂੰ ਅਤੀਤ ਵਿੱਚੋਂ ਮਿਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
 
 #: historymodel.cpp:566
 #, kde-format
 msgid "Remove Starred Item"
-msgstr ""
+msgstr "ਤਾਰਾ ਲੱਗੀ ਚੀਜ਼ ਨੂੰ ਹਟਾਓ"
 
 #: klipper.cpp:91
 #, kde-format
@@ -676,11 +669,10 @@ msgid "Manually Invoke Action on Current Clipboard"
 msgstr "ਮੌਜੂਦਾ ਕਲਿੱਪਬੋਰਡ ਉੱਤੇ ਕਾਰਵਾਈ ਦਸਤੀ ਸ਼ਾਮਿਲ ਕਰੋ"
 
 #: klipper.cpp:122
-#, fuzzy, kde-format
-#| msgid "&Edit Contents…"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
-msgstr "…ਸਮੱਗਰੀ ਸੋਧੋ(&E)"
+msgstr "…ਸਮੱਗਰੀ ਨੂੰ ਸੋਧੋ(&E)"
 
 #: klipper.cpp:128
 #, kde-format

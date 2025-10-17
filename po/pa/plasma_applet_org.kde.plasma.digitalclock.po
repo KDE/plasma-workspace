@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-14 00:44+0000\n"
-"PO-Revision-Date: 2025-03-24 15:01-0500\n"
+"PO-Revision-Date: 2025-10-16 12:39-0500\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #: CalendarView.qml:148
 #, kde-format
@@ -273,15 +273,13 @@ msgid "Choose a Font"
 msgstr "ਫ਼ੋਂਟ ਚੁਣੋ"
 
 #: configCalendar.qml:50
-#, fuzzy, kde-format
-#| msgid "General:"
+#, kde-format
 msgctxt "@option:check formdata label"
 msgid "General:"
 msgstr "ਆਮ:"
 
 #: configCalendar.qml:51
-#, fuzzy, kde-format
-#| msgid "Show week numbers"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show week numbers"
 msgstr "ਹਫ਼ਤੇ ਦੀ ਗਿਣਤੀ ਨੂੰ ਵੇਖਾਓ"
@@ -299,11 +297,10 @@ msgid "Use region defaults"
 msgstr "ਖੇਤਰੀ ਡਿਫਾਲਟ ਵਰਤੋਂ"
 
 #: configCalendar.qml:82
-#, fuzzy, kde-format
-#| msgid "Available Plugins:"
+#, kde-format
 msgctxt "@title:column"
 msgid "Available Add-Ons"
-msgstr "ਮੌਜੂਦ ਪਲੱਗਇਨ:"
+msgstr "ਮੌਜੂਦ ਪਲੱਗਇਨਾਂ"
 
 #: configTimeZones.qml:70
 #, kde-format

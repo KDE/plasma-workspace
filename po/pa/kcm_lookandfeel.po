@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-18 00:44+0000\n"
-"PO-Revision-Date: 2025-03-24 14:58-0500\n"
+"PO-Revision-Date: 2025-10-16 11:59-0500\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -31,21 +31,20 @@ msgstr "aalam@punlinux.org"
 #: lookandfeelsettings.kcfg:9
 #, kde-format
 msgid "Global look and feel"
-msgstr "ਗਲੋਬਲ ਦਿੱਖ ਤੇ ਛੋਹ"
+msgstr "ਗਲੋਬਲ ਦਿੱਖ ਅਤੇ ਛੋਹ"
 
 #. i18n: ectx: label, entry (defaultLightLookAndFeel), group (KDE)
 #. i18n: ectx: label, entry (defaultDarkLookAndFeel), group (KDE)
 #: lookandfeelsettings.kcfg:13 lookandfeelsettings.kcfg:17
-#, fuzzy, kde-format
-#| msgid "Global look and feel"
+#, kde-format
 msgid "Global Look and Feel package, alternate"
-msgstr "ਗਲੋਬਲ ਦਿੱਖ ਤੇ ਛੋਹ"
+msgstr "ਗਲੋਬਲ ਦਿੱਖ ਅਤੇ ਛੋਹ ਪੈਕੇਜ, ਬਦਲਵਾਂ"
 
 #. i18n: ectx: label, entry (automaticLookAndFeel), group (KDE)
 #: lookandfeelsettings.kcfg:21
 #, kde-format
 msgid "Switch between dark and light global themes depending on time of day"
-msgstr ""
+msgstr "ਦਿਨ ਦੇ ਸਮੇਂ ਮੁਤਾਬਕ ਗੂੜ੍ਹੇ ਅਤੇ ਹਲਕੇ ਗਲੋਬਲ ਥੀਮਾਂ ਵਿੱਚ ਤਬਾਦਲਾ ਕਰੋ"
 
 #. i18n: ectx: label, entry (automaticLookAndFeelOnIdle), group (KDE)
 #: lookandfeelsettings.kcfg:25
@@ -152,19 +151,19 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure Day/Night Cycle…"
-msgstr ""
+msgstr "…ਦਿਨ/ਰਾਤ ਚੱਕਰ ਦੀ ਸੰਰਚਨਾ"
 
 #: ui/DayNightLookAndFeel.qml:68
 #, kde-format
 msgctxt "@option:radio Light global theme"
 msgid "Light"
-msgstr ""
+msgstr "ਹਲਕਾ"
 
 #: ui/DayNightLookAndFeel.qml:80
 #, kde-format
 msgctxt "@option:radio Dark global theme"
 msgid "Dark"
-msgstr ""
+msgstr "ਗੂੜ੍ਹਾ"
 
 #: ui/DayNightLookAndFeel.qml:97
 #, kde-format
@@ -177,8 +176,8 @@ msgstr ""
 msgctxt "@item:valuesuffix idle interval"
 msgid "%1 second"
 msgid_plural "%1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 ਸਕਿੰਟ"
+msgstr[1] "%1 ਸਕਿੰਟ"
 
 #: ui/DayNightLookAndFeel.qml:122
 #, kde-format
@@ -187,22 +186,19 @@ msgid "Minimizes interruptions when actively using the computer."
 msgstr ""
 
 #: ui/LookAndFeelSelector.qml:24
-#, fuzzy, kde-format
-#| msgid "Global Theme"
+#, kde-format
 msgctxt "@title:window"
 msgid "Choose Light Global Theme"
-msgstr "ਗਲੋਬਲ ਥੀਮ"
+msgstr "ਹਲਕੇ ਗਲੋਬਲ ਥੀਮ ਨੂੰ ਚੁਣੋ"
 
 #: ui/LookAndFeelSelector.qml:26
-#, fuzzy, kde-format
-#| msgid "Global Theme"
+#, kde-format
 msgctxt "@title:window"
 msgid "Choose Dark Global Theme"
-msgstr "ਗਲੋਬਲ ਥੀਮ"
+msgstr "ਗੂੜ੍ਹੇ ਗਲੋਬਲ ਥੀਮ ਨੂੰ ਚੁਣੋ"
 
 #: ui/LookAndFeelSelector.qml:49 ui/StaticLookAndFeel.qml:67
-#, fuzzy, kde-format
-#| msgid "Preview Theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview Theme"
 msgstr "ਥੀਮ ਦੀ ਝਲਕ"
@@ -223,17 +219,16 @@ msgstr ""
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed themes"
-msgstr ""
+msgstr "ਸਿਸਟਮ ਵਲੋਂ ਇੰਸਟਾਲ ਕੀਤੇ ਥੀਮ ਹਟਾਏ ਨਹੀਂ ਜਾ ਸਕਦੇ ਹਨ"
 
 #: ui/main.qml:22
 #, kde-format
 msgctxt "@option:check"
 msgid "Switch to Dark Mode at Night"
-msgstr ""
+msgstr "ਰਾਤ ਸਮੇਂ ਗੂੜ੍ਹੇ ਮੋਡ ਵਿੱਚ ਬਦਲੋ"
 
 #: ui/main.qml:40
-#, fuzzy, kde-format
-#| msgid "Get New…"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Get New…"
 msgstr "ਨਵੀਂ ਚੀਜ਼ਾਂ ਲਵੋ…"
@@ -241,7 +236,7 @@ msgstr "ਨਵੀਂ ਚੀਜ਼ਾਂ ਲਵੋ…"
 #: ui/MoreOptions.qml:24
 #, kde-format
 msgid "Layout settings:"
-msgstr "ਖਾਕਾ ਸੈਟਿੰਗਾਂ:"
+msgstr "ਖਾਕੇ ਦੀਆਂ ਸੈਟਿੰਗਾਂ:"
 
 #: ui/MoreOptions.qml:27
 #, kde-format
@@ -352,8 +347,7 @@ msgid ""
 msgstr ""
 
 #: ui/StaticLookAndFeel.qml:53
-#, fuzzy, kde-format
-#| msgid "Contains Desktop layout"
+#, kde-format
 msgctxt "@label"
 msgid "Contains Desktop layout"
 msgstr "ਡੈਸਕਟਾਪ ਖਾਕਾ ਰੱਖਦਾ ਹੈ"
@@ -364,7 +358,7 @@ msgctxt ""
 "Confirmation question about applying the Global Theme - %1 is the Global "
 "Theme's name"
 msgid "Apply %1?"
-msgstr "%1 ਲਾਗੂ ਕਰਨਾ ਹੈ?"
+msgstr "%1 ਨੂੰ ਲਾਗੂ ਕਰਨਾ ਹੈ?"
 
 #: ui/StaticLookAndFeel.qml:143
 #, kde-format
@@ -374,7 +368,7 @@ msgstr "ਚੁਣੋ ਕਿ ਕੀ ਲਾਗੂ ਕਰਨਾ ਹੈ…"
 #: ui/StaticLookAndFeel.qml:143
 #, kde-format
 msgid "Show fewer options…"
-msgstr "ਘੱਟ ਚੋਣਾਂ ਵੇਖਾਓ…"
+msgstr "ਹੋਰ ਘੱਟ ਚੋਣਾਂ ਵੇਖਾਓ…"
 
 #~ msgid ""
 #~ "You have to restart the Plasma session for these changes to take effect."
