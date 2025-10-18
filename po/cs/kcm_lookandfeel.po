@@ -1,22 +1,22 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2023, 2024 Vít Pelčák <vit@pelcak.org>
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Vit Pelcak <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-18 00:44+0000\n"
-"PO-Revision-Date: 2024-07-26 15:26+0200\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2025-10-17 13:19+0200\n"
+"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -46,12 +46,15 @@ msgstr "Balíček pro celkový vzhled a chování (alternativní)"
 #, kde-format
 msgid "Switch between dark and light global themes depending on time of day"
 msgstr ""
+"Přepnout mezi zobrazením tmavého a světlého celkového motivu podle času"
 
 #. i18n: ectx: label, entry (automaticLookAndFeelOnIdle), group (KDE)
 #: lookandfeelsettings.kcfg:25
 #, kde-format
 msgid "Switch between dark and light global themes when the computer is idle"
 msgstr ""
+"Přepnout mezi zobrazením tmavého a světlého celkového motivu pokud je "
+"počítač nečinný"
 
 #. i18n: ectx: label, entry (automaticLookAndFeelIdleInterval), group (KDE)
 #: lookandfeelsettings.kcfg:29
@@ -102,7 +105,7 @@ msgid ""
 "global theme package and then attempt to apply it"
 msgstr ""
 "Použít balíček globálního motivu. Toto může být název balíčku, nebo plná "
-"cesta k nainstalovanému balíčku. Tento nástroj pak ověří, že to je globální "
+"cesta k nainstalovanému balíčku. Tento nástroj pak ověří, že to je celkový "
 "motiv a pokusí se jej použít"
 
 #: tool/lnftool.cpp:51
@@ -113,7 +116,7 @@ msgstr "název balíčku"
 #: tool/lnftool.cpp:52
 #, kde-format
 msgid "Prevent --apply from disabling the automatic mode"
-msgstr ""
+msgstr "Zabránit --apply ve vypnutí automatického režimu"
 
 #: tool/lnftool.cpp:53
 #, kde-format
@@ -156,19 +159,19 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure Day/Night Cycle…"
-msgstr ""
+msgstr "Nastavit cyklus den/noc…"
 
 #: ui/DayNightLookAndFeel.qml:68
 #, kde-format
 msgctxt "@option:radio Light global theme"
 msgid "Light"
-msgstr ""
+msgstr "Světlý"
 
 #: ui/DayNightLookAndFeel.qml:80
 #, kde-format
 msgctxt "@option:radio Dark global theme"
 msgid "Dark"
-msgstr ""
+msgstr "Tmavý"
 
 #: ui/DayNightLookAndFeel.qml:97
 #, kde-format
@@ -181,9 +184,9 @@ msgstr ""
 msgctxt "@item:valuesuffix idle interval"
 msgid "%1 second"
 msgid_plural "%1 seconds"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%1 sekunda"
+msgstr[1] "%1 sekundy"
+msgstr[2] "%1 sekund"
 
 #: ui/DayNightLookAndFeel.qml:122
 #, kde-format
@@ -195,19 +198,19 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Light Global Theme"
-msgstr ""
+msgstr "Zvolte světlý celkový motiv..."
 
 #: ui/LookAndFeelSelector.qml:26
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Dark Global Theme"
-msgstr ""
+msgstr "Zvolte tmavý celkový motiv"
 
 #: ui/LookAndFeelSelector.qml:49 ui/StaticLookAndFeel.qml:67
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview Theme"
-msgstr ""
+msgstr "Náhled motivu"
 
 #: ui/LookAndFeelSelector.qml:57 ui/StaticLookAndFeel.qml:75
 #, kde-format
@@ -231,13 +234,13 @@ msgstr "Nelze smazat motivy nainstalované v systému"
 #, kde-format
 msgctxt "@option:check"
 msgid "Switch to Dark Mode at Night"
-msgstr ""
+msgstr "V noci přepnout na tmavý motiv"
 
 #: ui/main.qml:40
 #, kde-format
 msgctxt "@action:intoolbar"
 msgid "Get New…"
-msgstr ""
+msgstr "Získat nové…"
 
 #: ui/MoreOptions.qml:24
 #, kde-format
@@ -319,7 +322,7 @@ msgstr "Úvodní obrazovka"
 #: ui/SimpleOptions.qml:19
 #, kde-format
 msgid "The following will be applied by this Global Theme:"
-msgstr "Následující bude v globálním motivu použito:"
+msgstr "Následující bude v celkovém motivu použito:"
 
 #: ui/SimpleOptions.qml:33
 #, kde-format
@@ -349,14 +352,14 @@ msgid ""
 "This Global Theme does not provide any applicable settings. Please contact "
 "the maintainer of this Global Theme as it might be broken."
 msgstr ""
-"tento globální motiv neposkytuje jakékoliv použitelné nastavení. Prosím "
-"kontaktujte správce tohoto globálního motivu, jelikož může být poškozen."
+"Tento celkový motiv neposkytuje jakékoliv použitelné nastavení. Prosím "
+"kontaktujte správce tohoto celkového motivu, jelikož může být poškozen."
 
 #: ui/StaticLookAndFeel.qml:53
 #, kde-format
 msgctxt "@label"
 msgid "Contains Desktop layout"
-msgstr ""
+msgstr "Obsahuje rozvržení pracovní plochy"
 
 #: ui/StaticLookAndFeel.qml:112
 #, kde-format

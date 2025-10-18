@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-14 00:44+0000\n"
-"PO-Revision-Date: 2025-10-01 17:48+0200\n"
+"PO-Revision-Date: 2025-10-17 13:23+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -340,13 +340,13 @@ msgstr "Kopírovat"
 #, kde-format
 msgctxt "@info:status"
 msgid "An image of the QR code has been copied to clipboard"
-msgstr ""
+msgstr "Obrázek QR kódu byl zkopírován do schránky"
 
 #: declarative/qml/BarcodePage.qml:101
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Copy QR code image to clipboard"
-msgstr ""
+msgstr "Zkopírovat obrázek QR kódu do schránky"
 
 #: declarative/qml/BarcodePage.qml:112
 #, kde-format
@@ -385,12 +385,12 @@ msgstr "Vyprázdnit historii"
 #: declarative/qml/ClipboardMenu.qml:324
 #, kde-format
 msgid "All History"
-msgstr ""
+msgstr "Celá historie"
 
 #: declarative/qml/ClipboardMenu.qml:329
 #, kde-format
 msgid "Starred Only"
-msgstr ""
+msgstr "Pouze s hvězdičkou"
 
 #: declarative/qml/ClipboardMenu.qml:436
 #, kde-format
@@ -425,7 +425,7 @@ msgstr "Odstranit z historie"
 #: declarative/qml/DelegateToolButtons.qml:58
 #, kde-format
 msgid "Remove Star"
-msgstr ""
+msgstr "Odstranit hvězdičku"
 
 #: declarative/qml/DelegateToolButtons.qml:58
 #, kde-format
@@ -652,7 +652,7 @@ msgstr "Ikona:"
 #: historymodel.cpp:281
 #, kde-format
 msgid "The clipboard history contains starred items. Clear them too?"
-msgstr ""
+msgstr "Tato historie schránky obsahuje položky s hvězdičkou. Smazat i je?"
 
 #: historymodel.cpp:282 historymodel.cpp:302
 #, kde-format
@@ -667,7 +667,7 @@ msgstr "Vymazat vše"
 #: historymodel.cpp:284
 #, kde-format
 msgid "Keep Starred Items"
-msgstr ""
+msgstr "Ponechat položky s hvězdičkou"
 
 #: historymodel.cpp:301
 #, kde-format
@@ -684,11 +684,12 @@ msgstr "%1x%2"
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
+"Tato položka je s hvězdičkou. Opravdu si přejete odstranit ji z historie?"
 
 #: historymodel.cpp:566
 #, kde-format
 msgid "Remove Starred Item"
-msgstr ""
+msgstr "Odstranit položku s hvězdičkou"
 
 #: klipper.cpp:91
 #, kde-format

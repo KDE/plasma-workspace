@@ -3,7 +3,7 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2023, 2024.
+# SPDX-FileCopyrightText: 2023, 2024 Josep M. Ferrer <txemaq@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
@@ -72,7 +72,3 @@ msgstr "Apuja el volum de l'element multimèdia"
 msgctxt "@title shortcut"
 msgid "Media volume down"
 msgstr "Abaixa el volum de l'element multimèdia"
-
-#~ msgctxt "@action:button"
-#~ msgid "Choose player automatically"
-#~ msgstr "Tria el reproductor automàticament"
