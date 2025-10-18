@@ -3,14 +3,14 @@
 # Lukáš Tinkl <ltinkl@redhat.com>, 2010.
 # Vít Pelčák <vit@pelcak.org>, 2010, 2011, 2016, 2018, 2019, 2020.
 # Tomáš Chvátal <tomas.chvatal@gmail.com>, 2012.
-# Vit Pelcak <vit@pelcak.org>, 2021.
+# SPDX-FileCopyrightText: 2021, 2025 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-01 00:48+0000\n"
-"PO-Revision-Date: 2021-06-02 16:29+0200\n"
+"PO-Revision-Date: 2025-10-17 13:27+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.04.1\n"
+"X-Generator: Lokalize 25.08.2\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
@@ -47,7 +47,7 @@ msgstr "Odstraňuje se..."
 #: package/contents/ui/DeviceItem.qml:195
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred..."
-msgstr ""
+msgstr "Ještě nevypojovat. Soubory jsou stále ještě přenášeny..."
 
 #: package/contents/ui/DeviceItem.qml:226
 #, kde-format
