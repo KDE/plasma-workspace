@@ -1,22 +1,22 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2023, 2024 Vít Pelčák <vit@pelcak.org>
-# SPDX-FileCopyrightText: 2021, 2023, 2024 Vit Pelcak <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2021, 2023, 2024, 2025 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-02 07:07+0000\n"
-"PO-Revision-Date: 2024-09-03 08:37+0200\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2025-10-17 13:28+0200\n"
+"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 25.08.2\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
@@ -153,7 +153,7 @@ msgstr "Posun od času UTC"
 #, kde-format
 msgctxt "@action:button opens kcm"
 msgid "Switch Time Zone…"
-msgstr ""
+msgstr "Přepnout časové pásmo…"
 
 #: configAppearance.qml:153
 #, kde-format
@@ -281,13 +281,13 @@ msgstr "Zvolte písmo..."
 #, kde-format
 msgctxt "@option:check formdata label"
 msgid "General:"
-msgstr ""
+msgstr "Obecné:"
 
 #: configCalendar.qml:51
 #, kde-format
 msgctxt "@option:check"
 msgid "Show week numbers"
-msgstr ""
+msgstr "Zobrazovat čísla týdnů"
 
 #: configCalendar.qml:58
 #, kde-format
@@ -305,7 +305,7 @@ msgstr "Použít místní výchozí hodnoty"
 #, kde-format
 msgctxt "@title:column"
 msgid "Available Add-Ons"
-msgstr ""
+msgstr "Dostupné doplňky"
 
 #: configTimeZones.qml:70
 #, kde-format
@@ -315,12 +315,12 @@ msgstr "Zrušit"
 #: configTimeZones.qml:77
 #, kde-format
 msgid "Add Selected Time Zone"
-msgstr ""
+msgstr "Přidat zvolené časové pásmo"
 
 #: configTimeZones.qml:94
 #, kde-format
 msgid "Add Time Zone…"
-msgstr ""
+msgstr "Přidat časová pásmo…"
 
 #: configTimeZones.qml:153
 #, kde-format
@@ -390,7 +390,7 @@ msgstr ""
 #: configTimeZones.qml:264
 #, kde-format
 msgid "Choose Time Zone"
-msgstr ""
+msgstr "Vyberte časové pásmo"
 
 #: main.qml:217
 #, kde-format
@@ -443,7 +443,7 @@ msgstr "Dnes je %1"
 msgctxt ""
 "@label main text shown in digital clock's tooltip when timezone is missing"
 msgid "Time zone is not set"
-msgstr ""
+msgstr "Časové pásmo není nastaveno"
 
 #: Tooltip.qml:86
 #, kde-format

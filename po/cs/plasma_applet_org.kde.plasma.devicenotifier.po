@@ -3,22 +3,22 @@
 # Lukáš Tinkl <ltinkl@redhat.com>, 2010.
 # Vít Pelčák <vit@pelcak.org>, 2010, 2011, 2016, 2018, 2019, 2020.
 # Tomáš Chvátal <tomas.chvatal@gmail.com>, 2012.
-# Vit Pelcak <vit@pelcak.org>, 2021.
+# SPDX-FileCopyrightText: 2021, 2025 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-31 00:44+0000\n"
-"PO-Revision-Date: 2021-06-02 16:29+0200\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2025-10-17 13:27+0200\n"
+"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.04.1\n"
+"X-Generator: Lokalize 25.08.2\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
@@ -26,13 +26,13 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button check a storageAccess (i.e disk) for error"
 msgid "Check for Errors"
-msgstr ""
+msgstr "Zkontrolovat chyby"
 
 #: actions/mountaction.cpp:103
 #, kde-format
 msgctxt "@action:button Mount a disk without verifying for errors"
 msgid "Mount without verifying"
-msgstr ""
+msgstr "Připojit bez ověření"
 
 #: actions/mountaction.cpp:106
 #, kde-format
@@ -47,7 +47,7 @@ msgstr "Otevřít ve správci souborů"
 #: actions/mountandopenaction.cpp:186
 #, kde-format
 msgid "Try to Fix"
-msgstr ""
+msgstr "Pokusit se opravit"
 
 #: actions/mountandopenaction.cpp:186
 #, kde-format
@@ -67,18 +67,18 @@ msgstr "Bezpečně odstranit"
 #: devicemessagemonitor_p.cpp:171
 #, kde-format
 msgid "This device has file system errors."
-msgstr ""
+msgstr "Toto zařízení má chyby v souborovém systému."
 
 #: devicemessagemonitor_p.cpp:173
 #, kde-format
 msgctxt "@label device is a storage disk"
 msgid "This device has no errors"
-msgstr ""
+msgstr "Toto zařízení nemá žádné chyby"
 
 #: devicemessagemonitor_p.cpp:176
 #, kde-format
 msgid "Successfully repaired!"
-msgstr ""
+msgstr "Úspěšně opraveno."
 
 #: devicemessagemonitor_p.cpp:180
 #, kde-format
@@ -114,12 +114,12 @@ msgstr "Nemáte oprávnění odstranit toto zařízení."
 #: devicemessagemonitor_p.cpp:202
 #, kde-format
 msgid "You are not authorized to repair this device."
-msgstr ""
+msgstr "Nemáte oprávnění opravit toto zařízení."
 
 #: devicemessagemonitor_p.cpp:204 devicemessagemonitor_p.cpp:269
 #, kde-format
 msgid "Unknown error type"
-msgstr ""
+msgstr "Neznámý typ chyby"
 
 #: devicemessagemonitor_p.cpp:208
 #, kde-format
@@ -171,7 +171,7 @@ msgstr "Nelze odpojit  toto zařízení."
 #: devicemessagemonitor_p.cpp:267
 #, kde-format
 msgid "Could not repair this device: %1"
-msgstr ""
+msgstr "Nepovedlo se opravit toto zařízení: %1"
 
 #: qml/DeviceItem.qml:106
 #, kde-format
@@ -179,7 +179,7 @@ msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Checking…"
-msgstr ""
+msgstr "Kontroluji…"
 
 #: qml/DeviceItem.qml:108
 #, kde-format
@@ -187,7 +187,7 @@ msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Repairing…"
-msgstr ""
+msgstr "Opravuji…"
 
 #: qml/DeviceItem.qml:111
 #, kde-format
@@ -214,7 +214,7 @@ msgstr "Odstraňuje se..."
 #: qml/DeviceItem.qml:121
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
-msgstr ""
+msgstr "Ještě nevypojovat. Soubory jsou stále ještě přenášeny…"
 
 #: qml/FullRepresentation.qml:45 qml/main.qml:125
 #, kde-format

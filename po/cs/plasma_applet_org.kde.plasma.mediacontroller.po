@@ -1,21 +1,22 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Vít Pelčák <vit@pelcak.org>, 2014, 2016, 2017, 2018, 2023.
+# SPDX-FileCopyrightText: 2025 Vit Pelcak <vpelcak@suse.cz>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-25 02:41+0000\n"
-"PO-Revision-Date: 2023-01-30 14:36+0100\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2025-10-17 13:24+0200\n"
+"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 25.08.2\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
@@ -38,25 +39,25 @@ msgstr "-%1"
 #: ExpandedRepresentation.qml:592
 #, kde-format
 msgid "Playback rate %1"
-msgstr ""
+msgstr "Rychlost přehrávání %1"
 
 #: ExpandedRepresentation.qml:595
 #, kde-format
 msgctxt "Playback rate"
 msgid "%1x"
-msgstr ""
+msgstr "%1x"
 
 #: ExpandedRepresentation.qml:599
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Playback rate"
-msgstr ""
+msgstr "Rychlost přehrávání"
 
 #: ExpandedRepresentation.qml:645
 #, kde-format
 msgctxt "@action:inmenu Playback speed (Normal)"
 msgid "%1 (Normal)"
-msgstr ""
+msgstr "%1 (Normální)"
 
 #: ExpandedRepresentation.qml:684
 #, kde-format

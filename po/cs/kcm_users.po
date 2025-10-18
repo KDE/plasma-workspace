@@ -1,21 +1,21 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024 Vit Pelcak <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024, 2025 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-16 00:45+0000\n"
-"PO-Revision-Date: 2024-08-30 16:31+0200\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2025-10-17 13:32+0200\n"
+"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #: src/fingerprintmodel.cpp:145 src/fingerprintmodel.cpp:229
 #, kde-format
@@ -176,13 +176,13 @@ msgstr "Potvrdit heslo:"
 #, kde-format
 msgctxt "@action:button Create a new user"
 msgid "Create"
-msgstr ""
+msgstr "Vytvořit"
 
 #: src/ui/CreateUser.qml:109
 #, kde-format
 msgctxt "@action:button Cancel creating new user"
 msgid "Cancel"
-msgstr ""
+msgstr "Zrušit"
 
 #: src/ui/CropSheet.qml:28
 #, kde-format
@@ -548,7 +548,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User?"
-msgstr ""
+msgstr "Smazat přihlášeného uživatele?"
 
 #: src/ui/UserDetailsPage.qml:117
 #, kde-kuit-format
@@ -571,7 +571,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action: button"
 msgid "Delete %1"
-msgstr ""
+msgstr "Smazat %1"
 
 #: src/ui/UserDetailsPage.qml:144
 #, kde-format
@@ -625,7 +625,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Failed to crop image: %1"
-msgstr ""
+msgstr "Ořezání obrázku selhalo: %1"
 
 #: src/user.cpp:337
 #, kde-format
