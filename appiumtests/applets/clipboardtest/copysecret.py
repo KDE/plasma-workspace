@@ -4,6 +4,7 @@
 # SPDX-License-Identifier: MIT
 
 import sys
+
 from PySide6.QtCore import QMimeData
 from PySide6.QtWidgets import QApplication, QMainWindow, QPushButton
 
@@ -35,6 +36,7 @@ class ClipboardHelperWindow(QMainWindow):
         mimeData.setText("123456789")
         mimeData.setData("x-kde-passwordManagerHint", b"public")
         QApplication.clipboard().setMimeData(mimeData)
+        self.hide()  # Move focus to plasmawindowed
 
 
 if __name__ == "__main__":

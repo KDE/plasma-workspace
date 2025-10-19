@@ -26,7 +26,7 @@ class MainWindow(QMainWindow):
         self.height = int(height)
 
         self.images = []
-        for color in (QColor(255, 0, 0), QColor(0, 255, 0), QColor(0, 0, 255)):
+        for color in (QColor(255, 0, 0), ):
             image = QImage(self.width, self.height, QImage.Format_ARGB32_Premultiplied)
             painter = QPainter(image)
             painter.fillRect(0, 0, self.width, self.height, color)
@@ -42,7 +42,7 @@ class MainWindow(QMainWindow):
         self.pressed_count += 1
         if self.pressed_count == len(self.images):
             self.hide()
-            QTimer.singleShot(1000, self, app.quit)
+            QTimer.singleShot(1000, self, QApplication.instance().quit)
 
     def generate_image(self):
         mime_data = QMimeData()
