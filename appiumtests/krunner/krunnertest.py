@@ -7,6 +7,7 @@ import subprocess
 import time
 import unittest
 from typing import Final
+import logging
 
 from appium import webdriver
 from appium.options.common.base import AppiumOptions
@@ -66,6 +67,7 @@ class KRunnerTest(unittest.TestCase):
         """
         Tests the main ui can be opened
         """
+        logging.warning(self.driver.page_source)
         button_element = self.driver.find_element(AppiumBy.NAME, "Configure")  # RunCommand.qml
         searchfield_element = self.driver.find_element(AppiumBy.NAME, "Search")
 
