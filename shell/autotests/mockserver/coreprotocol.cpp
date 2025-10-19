@@ -63,8 +63,10 @@ void Surface::surface_destroy_resource(Resource *resource)
     Q_UNUSED(resource);
     for (auto *commit : m_commits)
         delete commit->commitSpecific.frame;
-    bool removed = m_wlCompositor->m_surfaces.removeOne(this);
-    Q_ASSERT(removed);
+    if (m_wlCompositor) {
+        bool removed = m_wlCompositor->m_surfaces.removeOne(this);
+        Q_ASSERT(removed);
+    }
     delete this;
 }
 

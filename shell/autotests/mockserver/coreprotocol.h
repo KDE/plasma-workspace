@@ -30,6 +30,7 @@
 
 #include "corecompositor.h"
 
+#include <QPointer>
 #include <qwayland-server-wayland.h>
 
 namespace MockCompositor
@@ -142,7 +143,7 @@ public:
     void sendLeave(Output *output);
     void send_leave(::wl_resource *output) = delete;
 
-    WlCompositor *m_wlCompositor;
+    QPointer<WlCompositor> m_wlCompositor;
     struct PerCommitData {
         Callback *frame = nullptr;
         QPoint attachOffset;
