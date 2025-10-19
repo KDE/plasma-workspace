@@ -71,7 +71,6 @@ public:
     enum class ClipboardUpdateReason {
         UpdateClipboard,
         SyncSelection,
-        PreventEmptyClipboard,
     };
 
     static std::shared_ptr<SystemClipboard> self();
@@ -96,7 +95,6 @@ Q_SIGNALS:
     // Only emitted when data is valid
     void newClipData(QClipboard::Mode mode, const QMimeData *data);
     void ignored(QClipboard::Mode mode);
-    void receivedEmptyClipboard(QClipboard::Mode mode);
 
 private Q_SLOTS:
     void slotClearOverflow();

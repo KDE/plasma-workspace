@@ -228,7 +228,7 @@ void SystemClipboard::checkClipData(QClipboard::Mode mode, const QMimeData *data
     }
 
     if (!data) {
-        Q_EMIT receivedEmptyClipboard(mode);
+        qCDebug(KLIPPER_LOG) << "Invalid data source";
         return;
     } else if (data->formats().isEmpty()) {
         // Might be a timeout. Try again
@@ -236,12 +236,12 @@ void SystemClipboard::checkClipData(QClipboard::Mode mode, const QMimeData *data
         data = m_clip->mimeData(mode);
         if (!data || data->formats().isEmpty()) {
             qCDebug(KLIPPER_LOG) << "was empty. Retried, now still empty";
-            Q_EMIT receivedEmptyClipboard(mode);
             return;
         }
     }
 
     if (!data->hasUrls() && !data->hasText() && !data->hasImage()) {
+        qCDebug(KLIPPER_LOG) << "No valid data formats";
         return; // unknown, ignore
     }
 
@@ -396,16 +396,11 @@ void SystemClipboard::setMimeDataInternal(QMimeData *selectionMimeData, QMimeDat
     Q_ASSERT(qGuiApp);
     if (selectionMimeData) {
         Ignore lock(m_selectionLocklevel);
-        if (updateReason == ClipboardUpdateReason::PreventEmptyClipboard) {
-            selectionMimeData->setData(QStringLiteral("application/x-kde-onlyReplaceEmpty"), "1");
-        }
         qCDebug(KLIPPER_LOG) << "Setting selection to <" << (selectionMimeData->hasImage() ? u"image"_s : selectionMimeData->text()) << ">";
         m_clip->setMimeData(selectionMimeData, QClipboard::Selection);
     }
     if (clipboardMimeData) {
-        if (updateReason == ClipboardUpdateReason::PreventEmptyClipboard) {
-            clipboardMimeData->setData(QStringLiteral("application/x-kde-onlyReplaceEmpty"), "1");
-        } else if (updateReason == ClipboardUpdateReason::SyncSelection) {
+        if (updateReason == ClipboardUpdateReason::SyncSelection) {
             // When plasmashell is not focused, klipper will not receive new clip data immediately. This type is used to filter out selections.
             clipboardMimeData->setData(QStringLiteral("application/x-kde-syncselection"), "1");
         }

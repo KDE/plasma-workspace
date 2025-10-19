@@ -14,11 +14,6 @@
       <default>true</default>
       <tooltip>Retain the clipboard history, so it will be available the next time you log in.</tooltip>
     </entry>
-    <entry name="PreventEmptyClipboard" key="NoEmptyClipboard" type="Bool">
-      <label>Prevent the clipboard from being cleared</label>
-      <default>true</default>
-      <whatsthis>Do not allow the clipboard to be cleared, for example when an application exits.</whatsthis>
-    </entry>
     <entry name="Synchronize" type="Int">
       <label comment="KDE::DoNotExtract">Backwards compatibility, don't touch.</label>
       <default>3</default>

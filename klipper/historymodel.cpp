@@ -792,18 +792,11 @@ void HistoryModel::loadSettings()
 {
     setMaxSize(KlipperSettings::maxClipItems());
     m_displayImages = !KlipperSettings::ignoreImages();
-    m_bNoNullClipboard = KlipperSettings::preventEmptyClipboard();
     // 0 is the id of "Ignore selection" radiobutton
     m_bIgnoreSelection = KlipperSettings::ignoreSelection();
     m_bKeepContents = KlipperSettings::keepClipboardContents();
     m_bSynchronize = KlipperSettings::syncClipboards();
     m_bSelectionTextOnly = KlipperSettings::selectionTextOnly();
-
-    if (m_bNoNullClipboard) {
-        connect(m_clip.get(), &SystemClipboard::receivedEmptyClipboard, this, &HistoryModel::slotReceivedEmptyClipboard, Qt::UniqueConnection);
-    } else {
-        disconnect(m_clip.get(), &SystemClipboard::receivedEmptyClipboard, this, &HistoryModel::slotReceivedEmptyClipboard);
-    }
 
     // BUG: 142882
     // Security: If user has save clipboard turned off, old data should be deleted from disk
@@ -934,18 +927,6 @@ void HistoryModel::slotIgnored(QClipboard::Mode mode)
     // but we don't track that yet. We will....
     if (auto top = first()) {
         m_clip->setMimeData(top, mode == QClipboard::Selection ? SystemClipboard::Selection : SystemClipboard::Clipboard);
-    }
-}
-
-void HistoryModel::slotReceivedEmptyClipboard(QClipboard::Mode mode)
-{
-    Q_ASSERT(m_bNoNullClipboard);
-    if (auto top = first()) {
-        // keep old clipboard after someone set it to null
-        qCDebug(KLIPPER_LOG) << "Resetting clipboard (Prevent empty clipboard)";
-        m_clip->setMimeData(top,
-                            mode == QClipboard::Selection ? SystemClipboard::Selection : SystemClipboard::Clipboard,
-                            SystemClipboard::ClipboardUpdateReason::PreventEmptyClipboard);
     }
 }
 

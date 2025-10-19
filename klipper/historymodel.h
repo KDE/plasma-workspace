@@ -109,7 +109,6 @@ private Q_SLOTS:
     void checkClipData(QClipboard::Mode mode, const QMimeData *data);
 
     void slotIgnored(QClipboard::Mode mode);
-    void slotReceivedEmptyClipboard(QClipboard::Mode mode);
 
 private:
     explicit HistoryModel();
@@ -137,7 +136,6 @@ private:
     QSqlDatabase m_db;
     qsizetype m_maxSize = 0;
     bool m_displayImages = false;
-    bool m_bNoNullClipboard = true;
     bool m_bIgnoreSelection = true;
     bool m_bKeepContents = true;
     bool m_bSynchronize = false;
