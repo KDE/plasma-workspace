@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma_runner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-14 00:44+0000\n"
-"PO-Revision-Date: 2025-03-15 09:14+0200\n"
+"PO-Revision-Date: 2025-10-15 19:27+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: sessionrunner.cpp:20
 #, kde-format
@@ -34,16 +34,12 @@ msgid "Logs out, exiting the current desktop session"
 msgstr "Kirjautuu ulos päättäen nykyisen työpöytäistunnon"
 
 #: sessionrunner.cpp:27
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "KRunner keywords (split by semicolons without whitespace) to shut down "
-#| "the computer"
-#| msgid "shutdown;shut down;power;power off"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to shut down the "
 "computer"
 msgid "shutdown;shut down;power;poweroff;power off"
-msgstr "sammuta;virta;virta pois"
+msgstr "sammuta;sammutus;virta;virta pois"
 
 #: sessionrunner.cpp:30
 #, kde-format
