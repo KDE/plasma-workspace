@@ -20,9 +20,9 @@ install(FILES
         DESTINATION ${KDE_INSTALL_DATADIR}/wayland-sessions
 )
 
-configure_file(plasmawayland-dev-safemode.desktop.cmake ${CMAKE_CURRENT_BINARY_DIR}/plasmawayland-dev-safemode.desktop)
+configure_file(plasmawayland-safemode.desktop.cmake ${CMAKE_CURRENT_BINARY_DIR}/plasma-safemode.desktop)
 install(FILES
-        ${CMAKE_CURRENT_BINARY_DIR}/plasmawayland-dev-safemode.desktop
+        ${CMAKE_CURRENT_BINARY_DIR}/plasma-safemode.desktop
         DESTINATION ${KDE_INSTALL_DATADIR}/wayland-sessions
 )
 
