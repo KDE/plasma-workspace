@@ -11,7 +11,7 @@ set -euo
 TMP_HOME="$(mktemp -d /tmp/tmp-home.XXXXXX)"
 chmod 700 "$TMP_HOME"
 
-export REAL_HOME=$HOME
+export REAL_HOME="$HOME"
 export HOME="$TMP_HOME"
 export PLASMA_SAFE_MODE=1
 
