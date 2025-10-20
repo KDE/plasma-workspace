@@ -3,7 +3,7 @@
 # SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 # SPDX-FileCopyrightText: 2025 David Edmundson <davidedmundson@kde.org>
 
-set -euo pipefail
+set -euo
 
 # This script creates a new home, in /tmp as that probably has free space
 # and uses that for login
