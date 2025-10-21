@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
-# This file is distributed under the same license as the plasma-workspace package.
-# Sergiu Bivol <sergiu@cip.md>, 2020, 2021, 2022, 2023, 2024.
+# Copyright (C) 2025 This file is copyright:
+# This file is distributed under the same license as the plasma-desktop package.
+# SPDX-FileCopyrightText: 2025 Sergiu Bivol <sergiu@cip.md>
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: plasma-workspace\n"
+"Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-12 02:31+0000\n"
-"PO-Revision-Date: 2024-02-24 18:37+0000\n"
+"PO-Revision-Date: 2025-10-03 12:25+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -16,261 +16,211 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: ../sddm-theme/KeyboardButton.qml:19
-#, fuzzy, kde-format
-#| msgid "Keyboard Layout: %1"
+#, kde-format
 msgid "Keyboard Layout: %1"
 msgstr "Aranjament de tastatură: %1"
 
 #: ../sddm-theme/Login.qml:85
-#, fuzzy, kde-format
-#| msgid "Username"
+#, kde-format
 msgid "Username"
-msgstr "Nume de utilizator"
+msgstr "Utilizator"
 
 #: ../sddm-theme/Login.qml:102 contents/lockscreen/MainBlock.qml:61
-#, fuzzy, kde-format
-#| msgid "Password"
+#, kde-format
 msgid "Password"
 msgstr "Parolă"
 
 #: ../sddm-theme/Login.qml:144 ../sddm-theme/Login.qml:150
-#, fuzzy, kde-format
-#| msgid "Log In"
+#, kde-format
 msgid "Log In"
 msgstr "Autentificare"
 
 #: ../sddm-theme/Main.qml:201 contents/lockscreen/LockScreenUi.qml:318
-#, fuzzy, kde-format
-#| msgid "Caps Lock is on"
+#, kde-format
 msgid "Caps Lock is on"
 msgstr "Caps Lock e activ"
 
 #: ../sddm-theme/Main.qml:213 ../sddm-theme/Main.qml:462
 #: contents/logout/Logout.qml:163
-#, fuzzy, kde-format
-#| msgctxt "Suspend to RAM"
-#| msgid "Sleep"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
-msgstr "Adormire"
+msgstr "Adormi"
 
 #: ../sddm-theme/Main.qml:220 ../sddm-theme/Main.qml:469
 #: contents/logout/Logout.qml:181
-#, fuzzy, kde-format
-#| msgid "Restart"
+#, kde-format
 msgid "Restart"
-msgstr "Repornire"
+msgstr "Repornește"
 
 #: ../sddm-theme/Main.qml:227 ../sddm-theme/Main.qml:476
 #: contents/logout/Logout.qml:191
-#, fuzzy, kde-format
-#| msgid "Shut Down"
+#, kde-format
 msgid "Shut Down"
-msgstr "Deconectare"
+msgstr "Oprește"
 
 #: ../sddm-theme/Main.qml:234
-#, fuzzy, kde-format
-#| msgctxt "For switching to a username and password prompt"
-#| msgid "Other…"
+#, kde-format
 msgctxt "For switching to a username and password prompt"
 msgid "Other…"
 msgstr "Altul…"
 
 #: ../sddm-theme/Main.qml:449
-#, fuzzy, kde-format
-#| msgid "Type in Username and Password"
+#, kde-format
 msgid "Type in Username and Password"
 msgstr "Tastați numele de utilizator și parola"
 
 #: ../sddm-theme/Main.qml:483
-#, fuzzy, kde-format
-#| msgid "List Users"
+#, kde-format
 msgid "List Users"
 msgstr "Enumeră utilizatorii"
 
 #: ../sddm-theme/Main.qml:550 contents/lockscreen/LockScreenUi.qml:576
-#, fuzzy, kde-format
-#| msgctxt "Button to show/hide virtual keyboard"
-#| msgid "Virtual Keyboard"
+#, kde-format
 msgctxt "Button to show/hide virtual keyboard"
 msgid "Virtual Keyboard"
 msgstr "Tastatură virtuală"
 
 #: ../sddm-theme/Main.qml:596
-#, fuzzy, kde-format
-#| msgid "Login Failed"
+#, kde-format
 msgid "Login Failed"
 msgstr "Autentificare eșuată"
 
 #: ../sddm-theme/SessionButton.qml:18
-#, fuzzy, kde-format
-#| msgid "Desktop Session: %1"
+#, kde-format
 msgid "Desktop Session: %1"
 msgstr "Sesiune de birou: %1"
 
 #: contents/components/Battery.qml:53
-#, fuzzy, kde-format
-#| msgid "%1%"
+#, kde-format
 msgid "%1%"
 msgstr "%1%"
 
 #: contents/components/Battery.qml:54
-#, fuzzy, kde-format
-#| msgid "Battery at %1%"
+#, kde-format
 msgid "Battery at %1%"
 msgstr "Acumulator la %1%"
 
 #: contents/components/UserList.qml:71
-#, fuzzy, kde-format
-#| msgctxt "Nobody logged in on that session"
-#| msgid "Unused"
+#, kde-format
 msgctxt "Nobody logged in on that session"
 msgid "Unused"
 msgstr "Neutilizată"
 
 #: contents/components/UserList.qml:77
-#, fuzzy, kde-format
-#| msgctxt "User logged in on console number"
-#| msgid "TTY %1"
+#, kde-format
 msgctxt "User logged in on console number"
 msgid "TTY %1"
 msgstr "TTY %1"
 
 #: contents/components/UserList.qml:79
-#, fuzzy, kde-format
-#| msgctxt "User logged in on console (X display number)"
-#| msgid "on TTY %1 (Display %2)"
+#, kde-format
 msgctxt "User logged in on console (X display number)"
 msgid "on TTY %1 (Display %2)"
 msgstr "pe TTY %1 (ecranul %2)"
 
 #: contents/components/UserList.qml:83
-#, fuzzy, kde-format
-#| msgctxt "Username (location)"
-#| msgid "%1 (%2)"
+#, kde-format
 msgctxt "Username (location)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
 #: contents/lockscreen/config.qml:19
-#, fuzzy, kde-format
-#| msgctxt "@title: group"
-#| msgid "Clock:"
+#, kde-format
 msgctxt "@title: group"
 msgid "Clock:"
 msgstr "Ceas:"
 
 #: contents/lockscreen/config.qml:22
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Keep visible when unlocking prompt disappears"
+#, kde-format
 msgctxt "@option:check"
 msgid "Keep visible when unlocking prompt disappears"
 msgstr "Păstrează vizibil când dispare dialogul de deblocare"
 
 #: contents/lockscreen/config.qml:33
-#, fuzzy, kde-format
-#| msgctxt "@title: group"
-#| msgid "Media controls:"
+#, kde-format
 msgctxt "@title: group"
 msgid "Media controls:"
 msgstr "Controale multimedia:"
 
 #: contents/lockscreen/config.qml:36
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Show under unlocking prompt"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show under unlocking prompt"
 msgstr "Arată sub dialogul de deblocare"
 
 #: contents/lockscreen/LockScreenUi.qml:55
-#, fuzzy, kde-format
-#| msgid "Unlocking failed"
+#, kde-format
 msgid "Unlocking failed"
 msgstr "Deblocare eșuată"
 
 #: contents/lockscreen/LockScreenUi.qml:332
-#, fuzzy, kde-format
-#| msgid "Sleep"
+#, kde-format
 msgid "Sleep"
-msgstr "Adormire"
+msgstr "Adormi"
 
 #: contents/lockscreen/LockScreenUi.qml:338 contents/logout/Logout.qml:172
-#, fuzzy, kde-format
-#| msgid "Hibernate"
+#, kde-format
 msgid "Hibernate"
 msgstr "Hibernează"
 
 #: contents/lockscreen/LockScreenUi.qml:344
-#, fuzzy, kde-format
-#| msgid "Switch User"
+#, kde-format
 msgid "Switch User"
 msgstr "Schimbă utilizatorul"
 
 #: contents/lockscreen/LockScreenUi.qml:523
-#, fuzzy, kde-format
-#| msgid "Switch to This Session"
+#, kde-format
 msgid "Switch to This Session"
 msgstr "Comută la această sesiune"
 
 #: contents/lockscreen/LockScreenUi.qml:531
-#, fuzzy, kde-format
-#| msgid "Start New Session"
+#, kde-format
 msgid "Start New Session"
 msgstr "Începe o sesiune nouă"
 
 #: contents/lockscreen/LockScreenUi.qml:544
-#, fuzzy, kde-format
-#| msgid "Back"
+#, kde-format
 msgid "Back"
 msgstr "Înapoi"
 
 #: contents/lockscreen/LockScreenUi.qml:590
-#, fuzzy, kde-format
-#| msgctxt "Button to change keyboard layout"
-#| msgid "Switch layout"
+#, kde-format
 msgctxt "Button to change keyboard layout"
 msgid "Switch layout"
 msgstr "Schimbă aranjamentul"
 
 #: contents/lockscreen/MainBlock.qml:101
 #: contents/lockscreen/NoPasswordUnlock.qml:17
-#, fuzzy, kde-format
-#| msgid "Unlock"
+#, kde-format
 msgid "Unlock"
 msgstr "Deblochează"
 
 #: contents/lockscreen/MediaControls.qml:109
-#, fuzzy, kde-format
-#| msgid "No title"
+#, kde-format
 msgid "No title"
 msgstr "Fără titlu"
 
 #: contents/lockscreen/MediaControls.qml:110
-#, fuzzy, kde-format
-#| msgid "No media playing"
+#, kde-format
 msgid "No media playing"
 msgstr "Nimic în redare"
 
 #: contents/lockscreen/MediaControls.qml:139
-#, fuzzy, kde-format
-#| msgid "Previous track"
+#, kde-format
 msgid "Previous track"
 msgstr "Pista precedentă"
 
 #: contents/lockscreen/MediaControls.qml:151
-#, fuzzy, kde-format
-#| msgid "Play or Pause media"
+#, kde-format
 msgid "Play or Pause media"
 msgstr "Redă sau întrerupe multimedia"
 
 #: contents/lockscreen/MediaControls.qml:165
-#, fuzzy, kde-format
-#| msgid "Next track"
+#, kde-format
 msgid "Next track"
 msgstr "Pista următoare"
 
@@ -299,8 +249,7 @@ msgstr ""
 "La repornire, calculatorul va intra în ecranul de configurare firmware."
 
 #: contents/logout/Logout.qml:201
-#, fuzzy, kde-format
-#| msgid "Log Out"
+#, kde-format
 msgid "Log Out"
 msgstr "Ieși din sistem"
 
@@ -329,21 +278,17 @@ msgstr[1] "Se iese în %1 secunde"
 msgstr[2] "Se iese în %1 de secunde"
 
 #: contents/logout/Logout.qml:239
-#, fuzzy, kde-format
-#| msgid "OK"
+#, kde-format
 msgid "OK"
 msgstr "Bine"
 
 #: contents/logout/Logout.qml:245
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgid "Cancel"
 msgstr "Renunță"
 
 #: contents/osd/OsdItem.qml:30
-#, fuzzy, kde-format
-#| msgctxt "Percentage value"
-#| msgid "%1%"
+#, kde-format
 msgctxt "Percentage value"
 msgid "%1%"
 msgstr "%1%"

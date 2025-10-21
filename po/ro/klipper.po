@@ -3,14 +3,14 @@
 # Copyright (C) 2003, 2004, 2005, 2008 Free Software Foundation, Inc.
 # Claudiu Costin <claudiuc@kde.org>, 2003, 2004, 2005.
 # Laurenţiu Buzdugan <lbuz@rolix.org>, 2009.
-# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2010, 2011, 2012, 2020, 2021, 2022, 2024.
+# SPDX-FileCopyrightText: 2008, 2009, 2010, 2011, 2012, 2020, 2021, 2022, 2024, 2025 Sergiu Bivol <sergiu@cip.md>
 # Cristian Oneț <onet.cristian@gmail.com>, 2011, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-05 05:54+0000\n"
-"PO-Revision-Date: 2022-12-29 17:31+0000\n"
+"PO-Revision-Date: 2025-10-03 14:44+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: configdialog.cpp:80
 #, kde-format
@@ -121,6 +121,11 @@ msgid ""
 "excluded window, then it can be shown by using the <shortcut>%1</shortcut> "
 "key shortcut."
 msgstr ""
+"Când evidențiați sau alegeți din istoricul clipboard-ului text ce se "
+"potrivește unui model de acțiune, arată automat meniul contextual cu "
+"acțiunile corespunzătoare. Dacă meniul automat e dezactivat aici sau nu e "
+"arătat pentru o fereastră exclusă, atunci acesta poate fi arătat cu "
+"scurtătura de taste <shortcut>%1</shortcut>."
 
 #: configdialog.cpp:278
 #, kde-format
@@ -271,6 +276,12 @@ msgid ""
 "particular application, then add it to this list. <link>How to find the name "
 "to enter</link>."
 msgstr ""
+"Meniul contextual cu acțiuni nu va fi arătat automat pentru aceste ferestre, "
+"chiar dacă e activ. Aceasta se poate întâmpla, de exemplu, când un navigator "
+"web ar evidenția un URL în bara de adrese la tastare, astfel încât meniul ar "
+"fi arătat la fiecare apăsare de tastă.<nl/><nl/>Dacă meniul cu acțiuni apare "
+"pe neașteptate în timpul folosirii unei aplicații, atunci adăugați-o la "
+"această listă. <link>Cum să găsiți denumirea de introdus</link>."
 
 #: configdialog.cpp:703
 #, kde-kuit-format
@@ -282,6 +293,11 @@ msgid ""
 "icode><nl/><nl/>and click on the window that you want to exclude. The first "
 "name that it displays after the equal sign is the one that you need to enter."
 msgstr ""
+"Aici trebuie introdusă denumirea WM_CLASS a ferestrei de exclus. Pentru a "
+"găsi denumirea WM_CLASS a unei ferestre, introduceți în altă fereastră de "
+"terminal comanda:<nl/><nl/>&nbsp;&nbsp;<icode>xprop | grep WM_CLASS</"
+"icode><nl/><nl/>și apăsați pe fereastra de exclus. Prima denumire afișată "
+"după semnul egal e ceea ce trebuie să introduceți."
 
 #: editactiondialog.cpp:34 editcommanddialog.cpp:89
 #, kde-format
@@ -485,7 +501,7 @@ msgstr "%1x%2 %3bpp"
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
-msgstr "Meniu contextual cu acțiuni automate:"
+msgstr "Meniu contextual cu acțiuni automate"
 
 #: klipper.cpp:196
 #, kde-format
