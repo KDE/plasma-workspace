@@ -44,9 +44,9 @@ void SchemeEditorOptions::loadOptions()
 
     accentTitlebar->setChecked(generalGroup.readEntry("TitlebarIsAccentColored", generalGroup.readEntry("accentActiveTitlebar", false)));
 
-    KConfigGroup WMGroup(m_config, u"WM"_s);
+    KConfigGroup KDEGroup(m_config, u"KDE"_s);
     contrastPercentageSpinBox->blockSignals(true);
-    contrastPercentageSpinBox->setValue((WMGroup.readEntry("frameContrast", KColorScheme::contrastF()) * 100.0));
+    contrastPercentageSpinBox->setValue(KDEGroup.readEntry("frameContrast", KColorScheme::frameContrast()) * 100.0);
     contrastPercentageSpinBox->blockSignals(false);
 
     KConfigGroup group(m_config, u"ColorEffects:Inactive"_s);
@@ -74,8 +74,7 @@ void SchemeEditorOptions::on_contrastPercentageSpinBox_valueChanged(int value)
     KConfigGroup group(m_config, u"KDE"_s);
     group.writeEntry("Contrast", qRound(value / 10.0));
 
-    KConfigGroup groupTwo(m_config, u"WM"_s);
-    groupTwo.writeEntry("frameContrast", value / 100.0);
+    group.writeEntry("frameContrast", value / 100.0);
 
     m_spinboxUpdateTimer->start();
 }
