@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-14 00:44+0000\n"
+"POT-Creation-Date: 2025-10-21 00:44+0000\n"
 "PO-Revision-Date: 2025-05-31 07:24+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -20,44 +20,44 @@ msgstr ""
 "n % 10 == 0) ? 2 : 3));\n"
 "X-Generator: Lokalize 25.04.1\n"
 
-#: CalendarView.qml:148
+#: CalendarView.qml:149
 #, kde-format
 msgid "Events"
 msgstr "אירועים"
 
-#: CalendarView.qml:157
+#: CalendarView.qml:158
 #, kde-format
 msgctxt "@action:button Add event"
 msgid "Add…"
 msgstr "הוספה…"
 
-#: CalendarView.qml:161
+#: CalendarView.qml:162
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a new event"
 msgstr "הוספת אירוע חדש"
 
-#: CalendarView.qml:386
+#: CalendarView.qml:387
 #, kde-format
 msgid "No events for today"
 msgstr "אין אירועים היום"
 
-#: CalendarView.qml:387
+#: CalendarView.qml:388
 #, kde-format
 msgid "No events for this day"
 msgstr "אין אירועים ליום הזה"
 
-#: CalendarView.qml:426 config.qml:30
+#: CalendarView.qml:427 config.qml:30
 #, kde-format
 msgid "Time Zones"
 msgstr "אזורי זמן"
 
-#: CalendarView.qml:437
+#: CalendarView.qml:438
 #, kde-format
 msgid "Switch…"
 msgstr "החלפה…"
 
-#: CalendarView.qml:440 CalendarView.qml:441
+#: CalendarView.qml:441 CalendarView.qml:442
 #, kde-format
 msgid "Switch to another time zone"
 msgstr "מעבר לאזור זמן אחר"
@@ -392,7 +392,7 @@ msgstr ""
 msgid "Choose Time Zone"
 msgstr "בחירת אזור זמן"
 
-#: main.qml:217
+#: main.qml:160
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "העתקה ללוח הגזירים"
@@ -433,27 +433,27 @@ msgstr "מקומי"
 msgid "System's local time zone"
 msgstr "אזור הזמן המקומי של המערכת"
 
-#: Tooltip.qml:34
+#: Tooltip.qml:36
 #, kde-format
 msgctxt "@info:tooltip %1 is a localized long date"
 msgid "Today is %1"
 msgstr "היום %1"
 
-#: Tooltip.qml:65
+#: Tooltip.qml:73
 #, kde-format
 msgctxt ""
 "@label main text shown in digital clock's tooltip when timezone is missing"
 msgid "Time zone is not set"
 msgstr "אזור הזמן לא מוגדר"
 
-#: Tooltip.qml:86
+#: Tooltip.qml:94
 #, kde-format
 msgctxt ""
 "@label sub text shown in digital clock's tooltip when timezone is missing"
 msgid "Click the clock icon to open Date & Time settings and set a time zone."
 msgstr "יש ללחוץ על השעון כדי לפתוח את הגדרות השעה והתאריך ולהגדיר אזור זמן."
 
-#: Tooltip.qml:131
+#: Tooltip.qml:139
 #, kde-format
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"

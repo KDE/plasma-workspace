@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-14 00:44+0000\n"
+"POT-Creation-Date: 2025-10-21 00:44+0000\n"
 "PO-Revision-Date: 2024-10-26 11:05+0200\n"
 "Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -18,44 +18,44 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.08.2\n"
 
-#: CalendarView.qml:148
+#: CalendarView.qml:149
 #, kde-format
 msgid "Events"
 msgstr "Begivenheder"
 
-#: CalendarView.qml:157
+#: CalendarView.qml:158
 #, kde-format
 msgctxt "@action:button Add event"
 msgid "Add…"
 msgstr "Tilføj…"
 
-#: CalendarView.qml:161
+#: CalendarView.qml:162
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a new event"
 msgstr "Tilføj en ny begivenhed"
 
-#: CalendarView.qml:386
+#: CalendarView.qml:387
 #, kde-format
 msgid "No events for today"
 msgstr "Ingen begivenheder i dag"
 
-#: CalendarView.qml:387
+#: CalendarView.qml:388
 #, kde-format
 msgid "No events for this day"
 msgstr "Ingen begivenheder på denne dag"
 
-#: CalendarView.qml:426 config.qml:30
+#: CalendarView.qml:427 config.qml:30
 #, kde-format
 msgid "Time Zones"
 msgstr "Tidszoner"
 
-#: CalendarView.qml:437
+#: CalendarView.qml:438
 #, kde-format
 msgid "Switch…"
 msgstr "Skift…"
 
-#: CalendarView.qml:440 CalendarView.qml:441
+#: CalendarView.qml:441 CalendarView.qml:442
 #, kde-format
 msgid "Switch to another time zone"
 msgstr "Skift til en anden tidszone"
@@ -398,7 +398,7 @@ msgstr ""
 msgid "Choose Time Zone"
 msgstr "Tidszoner"
 
-#: main.qml:217
+#: main.qml:160
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "Kopiér til udklipsholderen"
@@ -438,13 +438,13 @@ msgstr "Lokal"
 msgid "System's local time zone"
 msgstr "Systemets lokale tidszone"
 
-#: Tooltip.qml:34
+#: Tooltip.qml:36
 #, kde-format
 msgctxt "@info:tooltip %1 is a localized long date"
 msgid "Today is %1"
 msgstr "I dag er %1"
 
-#: Tooltip.qml:65
+#: Tooltip.qml:73
 #, fuzzy, kde-format
 #| msgid "Time zone city"
 msgctxt ""
@@ -452,14 +452,14 @@ msgctxt ""
 msgid "Time zone is not set"
 msgstr "Tidszone-by"
 
-#: Tooltip.qml:86
+#: Tooltip.qml:94
 #, kde-format
 msgctxt ""
 "@label sub text shown in digital clock's tooltip when timezone is missing"
 msgid "Click the clock icon to open Date & Time settings and set a time zone."
 msgstr ""
 
-#: Tooltip.qml:131
+#: Tooltip.qml:139
 #, kde-format
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"
