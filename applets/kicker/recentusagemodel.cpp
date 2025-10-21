@@ -217,7 +217,13 @@ QVariant RecentUsageModel::appData(const QString &resource, int role) const
     } else if (role == Qt::DecorationRole) {
         return service->icon();
     } else if (role == Kicker::DescriptionRole) {
-        return service->comment();
+        QString description = service->comment();
+
+        if (description.isEmpty()) {
+            description = service->genericName();
+        }
+
+        return description;
     } else if (role == Kicker::GroupRole) {
         return i18n("Applications");
     } else if (role == Kicker::FavoriteIdRole) {
