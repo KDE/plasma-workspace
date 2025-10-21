@@ -63,9 +63,9 @@ endif()
 find_package(QCoro6 REQUIRED COMPONENTS Core)
 find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
                     Archive Auth CoreAddons Crash DBusAddons Declarative GlobalAccel GuiAddons
-                    I18n IconThemes IdleTime ItemModels KCMUtils KDED KIO NewStuff Notifications
-                    NotifyConfig Package Parts Prison Runner StatusNotifierItem Svg TextEditor
-                    TextWidgets Wallet ColorScheme
+                    Holidays I18n IconThemes IdleTime ItemModels KCMUtils KDED KIO NewStuff
+                    Notifications NotifyConfig Package Parts Prison Runner StatusNotifierItem
+                    Svg TextEditor TextWidgets Wallet ColorScheme
                     OPTIONAL_COMPONENTS DocTools)
 find_package(Plasma5Support ${PROJECT_DEP_VERSION} REQUIRED)
 find_package(Plasma ${PROJECT_DEP_VERSION} REQUIRED)
@@ -130,11 +130,6 @@ pkg_check_modules(DBus dbus-1 REQUIRED IMPORTED_TARGET)
 find_package(KWinDBusInterface CONFIG REQUIRED)
 find_package(ScreenSaverDBusInterface CONFIG REQUIRED)
 
-find_package(KF6Holidays)
-set_package_properties(KF6Holidays PROPERTIES DESCRIPTION "Holidays provider for Plasma calendar"
-                       TYPE OPTIONAL
-                       PURPOSE "Needed to for holidays plugin for Plasma Calendar."
-                      )
 # Used in kcm_autostart
 pkg_check_modules(SYSTEMD "systemd")
 
@@ -472,9 +467,7 @@ endif()
 
 add_subdirectory(soliduiserver)
 
-if(KF6Holidays_FOUND)
-    add_subdirectory(plasmacalendarintegration)
-endif()
+add_subdirectory(plasmacalendarintegration)
 
 add_subdirectory(appiumtests)
 
