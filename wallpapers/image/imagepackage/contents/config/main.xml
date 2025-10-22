@@ -47,7 +47,7 @@
         <default>0</default>
     </entry>
     <entry name="DynamicMode" type="UInt">
-        <label>Preferred dynamic wallpaper mode: 0 = switch based on whether the color scheme is dark or light, 1 = switch at sunrise and sunset</label>
+        <label>Preferred dynamic wallpaper mode: 0 = switch based on whether the Plasma style is dark or light, 1 = switch at sunrise and sunset</label>
         <default>0</default>
     </entry>
     <entry name="DarkLightScheduleState" type="String">
