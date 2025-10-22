@@ -145,13 +145,14 @@ void JobPrivate::updateHasDetails()
 {
     // clang-format off
     const bool hasDetails = m_totalBytes > 0
-        || m_totalFiles > 0
-        || m_totalDirectories > 0
-        || m_totalItems > 0
-        || m_processedBytes > 0
-        || m_processedFiles > 0
-        || m_processedDirectories > 0
-        || m_processedItems > 0
+        // No point in showing details for "1 of 1 files/dirs/items" when there's no description.
+        || m_totalFiles > 1
+        || m_totalDirectories > 1
+        || m_totalItems > 1
+        || m_processedBytes > 1
+        || m_processedFiles > 1
+        || m_processedDirectories > 1
+        || m_processedItems > 1
         || !m_descriptionValue1.isEmpty()
         || !m_descriptionValue2.isEmpty()
         || m_speed > 0
