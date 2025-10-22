@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-14 00:44+0000\n"
+"POT-Creation-Date: 2025-10-22 00:45+0000\n"
 "PO-Revision-Date: 2017-09-25 19:53+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -69,12 +69,12 @@ msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
 msgstr ""
 
-#: appentry.cpp:360
+#: appentry.cpp:361
 #, kde-format
 msgid "Hide Application"
 msgstr "Sakrij program"
 
-#: appentry.cpp:422
+#: appentry.cpp:423
 #, fuzzy, kde-format
 #| msgctxt "App name (Generic name)"
 #| msgid "%1 (%2)"
@@ -82,14 +82,14 @@ msgctxt "App name (Comment or Generic name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: appentry.cpp:424
+#: appentry.cpp:425
 #, kde-format
 msgctxt "Generic name (App name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
 #: appsmodel.cpp:38 appsmodel.cpp:74 computermodel.cpp:93 computermodel.cpp:219
-#: recentusagemodel.cpp:159 recentusagemodel.cpp:222
+#: recentusagemodel.cpp:159 recentusagemodel.cpp:228
 #, kde-format
 msgid "Applications"
 msgstr "Programi"
@@ -131,43 +131,43 @@ msgstr "Omiljeno"
 msgid "Recently Used"
 msgstr "Nedavno"
 
-#: recentusagemodel.cpp:162 recentusagemodel.cpp:311
+#: recentusagemodel.cpp:162 recentusagemodel.cpp:317
 #, kde-format
 msgid "Files"
 msgstr ""
 
-#: recentusagemodel.cpp:244
+#: recentusagemodel.cpp:250
 #, kde-format
 msgid "Forget Application"
 msgstr "Zaboravi program"
 
-#: recentusagemodel.cpp:309
+#: recentusagemodel.cpp:315
 #, kde-format
 msgid "Folders"
 msgstr ""
 
-#: recentusagemodel.cpp:346
+#: recentusagemodel.cpp:352
 #, kde-format
 msgid "Open Containing Folder"
 msgstr ""
 
-#: recentusagemodel.cpp:349
+#: recentusagemodel.cpp:355
 #, fuzzy, kde-format
 #| msgid "Forget All"
 msgid "Forget File"
 msgstr "Zaboravi sve"
 
-#: recentusagemodel.cpp:484
+#: recentusagemodel.cpp:490
 #, kde-format
 msgid "Forget All"
 msgstr "Zaboravi sve"
 
-#: recentusagemodel.cpp:486
+#: recentusagemodel.cpp:492
 #, kde-format
 msgid "Forget All Applications"
 msgstr "Zaboravi sve programe"
 
-#: recentusagemodel.cpp:489
+#: recentusagemodel.cpp:495
 #, fuzzy, kde-format
 #| msgid "Forget All"
 msgid "Forget All Files"
