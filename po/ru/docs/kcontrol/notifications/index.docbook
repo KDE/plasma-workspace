@@ -122,6 +122,17 @@
     <varlistentry>
     <term
 ><guiicon
+>При активном полноэкранном приложении</guiicon
+></term>
+    <listitem
+><para
+>Автоматически включать режим «Не беспокоить» при использовании полноэкранного приложения (например, при просмотре видео).</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
 >Выводить критические уведомления</guiicon
 ></term>
     <listitem
@@ -209,7 +220,7 @@
     <varlistentry>
     <term
 ><guiicon
->Задать собственное расположение...</guiicon
+>Задать расположение…</guiicon
 ></term>
     <listitem
 ><para

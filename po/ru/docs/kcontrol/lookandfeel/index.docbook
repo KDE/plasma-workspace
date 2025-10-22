@@ -1,0 +1,244 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Russian "INCLUDE">
+]>
+<article id="lookandfeel" lang="&language;">
+<articleinfo>
+<title
+>Оформление рабочей среды</title>
+<authorgroup>
+<author
+><firstname
+>Natalie</firstname
+> <surname
+>Clarius</surname
+> <email
+>natalie_clarius@yahoo.de</email
+> </author>
+<othercredit role="translator"
+><firstname
+>Мария</firstname
+><surname
+>Шикунова</surname
+><affiliation
+><address
+><email
+>translation-team@basealt.ru</email
+></address
+></affiliation
+><contrib
+>Перевод на русский</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>26 января 2023 г.</date>
+<releaseinfo
+>Plasma 5.27</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Параметры системы</keyword>
+<keyword
+>Внешний вид</keyword>
+<keyword
+>Оформление рабочей среды</keyword>
+<keyword
+>стиль</keyword>
+<keyword
+>тема</keyword>
+<keyword
+>вид</keyword>
+<keyword
+>поведение</keyword>
+<keyword
+>общие параметры</keyword>
+<keyword
+>рабочий стол</keyword>
+<keyword
+>оформление</keyword>
+<keyword
+>дизайн</keyword>
+<keyword
+>UI</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="globaltheme">
+<title
+>Оформления рабочей среды Plasma</title>
+
+<para
+>Оформление рабочей среды Plasma предлагает общее оформление сразу нескольких компонентов: </para>
+<itemizedlist>
+  <listitem
+><para
+>Вид рабочего стола: Настройка расположения панелей и виджетов, например, нижней панели задач и меню запуска приложений, либо верхней панели с общим меню и системным лотком</para
+></listitem>
+  <listitem
+><para
+>Цветовая схема: Цветовая палитра, использующаяся в &plasma; и приложениях</para
+></listitem>
+  <listitem
+><para
+>Оформление приложений: Внешний вид элементов пользовательского интерфейса, таких как кнопки, меню и полосы прокрутки</para
+></listitem>
+  <listitem
+><para
+>Оформление рабочего стола: Внешний вид панелей и виджетов</para
+></listitem>
+  <listitem
+><para
+>Оформление окон: Границы окна и кнопки панели заголовка</para
+></listitem>
+  <listitem
+><para
+>Значки: Значки, используемые в &plasma; и приложениях.</para
+></listitem>
+  <listitem
+><para
+>Курсоры: Указатели мыши</para
+></listitem>
+  <listitem
+><para
+>Переключение окон: приложение, позволяющее переключаться между открытыми окнами, обычно вызываемое комбинацией клавиш Alt+Tab</para
+></listitem>
+  <listitem
+><para
+>Заставка при запуске: Отображение заставки при запуске &plasma;</para
+></listitem>
+  <listitem
+><para
+>Экран входа в систему: Экран с выбором пользователя и окно ввода пароля, показываемые при запуске системы</para
+></listitem>
+  <listitem
+><para
+>Экран блокировки: Экран с окном ввода пользовательского пароля, когда компьютер заблокирован</para
+></listitem>
+  <listitem
+><para
+>Обои: Фоновое изображение рабочего стола</para
+></listitem>
+</itemizedlist>
+
+<para
+>Применяя оформление рабочей среды, возможно изменить сразу все описанные выше элементы. Также возможно применить только некоторые компоненты темы, например, цветовую схему или оформление окон. Выбрать отдельные компоненты возможно либо при применении оформления рабочей среды, либо при настройке её индивидуальных компонентов с помощью подразделов параметров системы. </para>
+
+<sect2 id="globaltheme-manage">
+<title
+>Настройка оформления рабочей среды Plasma</title>
+
+<para
+>Этот модуль позволяет: <itemizedlist>
+    <listitem
+><para
+>применять оформления рабочей среды</para
+></listitem>
+    <listitem
+><para
+>устанавливать новые и удалять установленные стили оформления рабочей среды</para
+></listitem>
+  </itemizedlist>
+  <screenshot>
+    <screeninfo
+>Снимок экрана диспетчера оформления рабочей среды</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="main.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+</para>
+
+</sect2>
+
+<sect2 id="globaltheme-apply">
+<title
+>Применение оформлений рабочей среды</title>
+
+<para
+>Чтобы увидеть предварительный просмотр оформления, нажмите на значок изображения, который появляется при наведении курсора мыши на миниатюру темы. </para>
+
+<para
+>При нажатии на оформление появится диалог, запрашивающий, какие компоненты необходимо применить. Возможно выбрать различные варианты для настройки внешнего вида рабочей среды. <screenshot>
+    <screeninfo
+>Снимок экрана выбора компонентов оформления</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="component-chooser_1.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+  <screenshot>
+    <screeninfo
+>Снимок экрана выбора компонентов оформления</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="component-chooser_2.png" format="PNG"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+</para>
+
+<para
+>Сделав выбор, нажмите кнопку <guibutton
+>Применить</guibutton
+>, чтобы подтвердить изменения. </para>
+
+</sect2>
+
+<sect2 id="globaltheme-install">
+<title
+>Установка оформления рабочей среды</title>
+
+<para
+>Кнопка <guilabel
+>Загрузить оформления…</guilabel
+> позволяет устанавливать оформления, подготовленные сторонними авторами. Для этого необходимо иметь доступ в Интернет. Чтобы установить оформление, нажмите кнопку <guibutton
+>Установить</guibutton
+> в диалоге темы, после закрытия диалога тема будет сразу же доступна. <screenshot>
+  <screeninfo
+>Загрузить оформления…</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="get-new-stuff.png" format="PNG"/>
+      </imageobject>
+      <textobject>
+        <phrase
+>Загрузить оформления…</phrase>
+      </textobject>
+    </mediaobject>
+  </screenshot>
+</para>
+
+<para
+>Чтобы удалить установленное оформление, нажмите на кнопку со значком корзины, которая появляется при наведении курсора на миниатюру темы. Обратите внимание, что удалить возможно только те оформления, которые были установлены самим пользователем. </para>
+
+<para
+>Чтобы узнать, как создавать собственные оформления, ознакомьтесь с <ulink url="https://develop.kde.org/docs/extend/plasma/"
+>этой информацией</ulink
+>. </para>
+
+</sect2>
+
+</sect1>
+
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->
