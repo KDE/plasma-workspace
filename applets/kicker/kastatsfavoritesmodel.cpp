@@ -132,10 +132,7 @@ public:
             return m_id;
         }
 
-        bool operator==(const NormalizedId &other) const
-        {
-            return m_id == other.m_id;
-        }
+        bool operator==(const NormalizedId &other) const = default;
 
     private:
         QString m_id;

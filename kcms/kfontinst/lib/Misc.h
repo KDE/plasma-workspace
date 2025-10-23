@@ -34,10 +34,7 @@ struct TFont {
     {
     }
 
-    bool operator==(const TFont &o) const
-    {
-        return o.styleInfo == styleInfo && o.family == family;
-    }
+    bool operator==(const TFont &) const = default;
 
     QString family;
     quint32 styleInfo;
