@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-14 00:44+0000\n"
+"POT-Creation-Date: 2025-10-23 00:44+0000\n"
 "PO-Revision-Date: 2025-08-05 16:42+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -89,9 +89,11 @@ msgid "Switch dynamic wallpapers:"
 msgstr "Perjungti dinaminius darbalaukio fonus:"
 
 #: imagepackage/contents/ui/config.qml:211
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
+#| msgid "Based on whether the color scheme is dark or light"
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
-msgid "Based on whether the color scheme is dark or light"
+msgid "Based on whether the Plasma style is light or dark "
 msgstr "Remiantis tuo, ar spalvų rinkinys yra tamsus, ar šviesus"
 
 #: imagepackage/contents/ui/config.qml:213

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-14 00:44+0000\n"
+"POT-Creation-Date: 2025-10-23 00:44+0000\n"
 "PO-Revision-Date: 2024-11-04 22:01\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -92,7 +92,7 @@ msgstr "Зрабіць шпалерамі"
 #: imagepackage/contents/ui/config.qml:211
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
-msgid "Based on whether the color scheme is dark or light"
+msgid "Based on whether the Plasma style is light or dark "
 msgstr ""
 
 #: imagepackage/contents/ui/config.qml:213

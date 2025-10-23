@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-14 00:44+0000\n"
+"POT-Creation-Date: 2025-10-23 00:44+0000\n"
 "PO-Revision-Date: 2024-12-15 15:31+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -92,7 +92,7 @@ msgstr "Velja sem veggfóður"
 #: imagepackage/contents/ui/config.qml:211
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
-msgid "Based on whether the color scheme is dark or light"
+msgid "Based on whether the Plasma style is light or dark "
 msgstr ""
 
 #: imagepackage/contents/ui/config.qml:213

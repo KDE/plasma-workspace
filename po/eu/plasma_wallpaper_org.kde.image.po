@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-14 00:44+0000\n"
+"POT-Creation-Date: 2025-10-23 00:44+0000\n"
 "PO-Revision-Date: 2025-08-03 01:03+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -88,9 +88,11 @@ msgid "Switch dynamic wallpapers:"
 msgstr "Aldatu horma-paper dinamikoak:"
 
 #: imagepackage/contents/ui/config.qml:211
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
+#| msgid "Based on whether the color scheme is dark or light"
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
-msgid "Based on whether the color scheme is dark or light"
+msgid "Based on whether the Plasma style is light or dark "
 msgstr "Kolore-antolaera iluna edo argia den oinarri hartuta"
 
 #: imagepackage/contents/ui/config.qml:213
