@@ -59,6 +59,12 @@ int main(int argc, char *argv[])
     // this variable controls whether to reconnect or exit if the compositor dies, given plasmashell does a lot of
     // bespoke wayland code disable for now. consider disabling when layer-shell lands
     qunsetenv("QT_WAYLAND_RECONNECT");
+
+    // Qt has a complex to try and v-sync to drive the main-thread animations forward.
+    // this mechanism breaks completely in multi-window applications and it ends up being driven by a simple timer.
+    // given we know we end up using a timer anyway, we can use one directly
+    // This avoids issues with animators
+    qputenv("QSG_USE_SIMPLE_ANIMATION_DRIVER");
     QApplication app(argc, argv);
 
     qunsetenv("QT_WAYLAND_DISABLE_FIXED_POSITIONS");
