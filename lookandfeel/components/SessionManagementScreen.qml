@@ -148,10 +148,17 @@ FocusScope {
             Layout.alignment: Qt.AlignHCenter
             implicitHeight: actionItemsLayout.implicitHeight
             implicitWidth: actionItemsLayout.implicitWidth
-            Row { //deliberately not rowlayout as I'm not trying to resize child items
+            GridLayout {
                 id: actionItemsLayout
-                anchors.verticalCenter: parent.top
-                spacing: Kirigami.Units.largeSpacing
+                anchors.centerIn: parent
+
+                readonly property int spacing: Kirigami.Units.largeSpacing
+                rowSpacing: spacing
+                columnSpacing: spacing
+
+                readonly property int buttonCount: visibleChildren.length
+                readonly property int singleRowWidth: (children[0].implicitWidth * buttonCount) + (spacing * (buttonCount - 1))
+                columns: singleRowWidth < root.width ? buttonCount : Math.ceil(buttonCount / 2)
             }
         }
         Item {
