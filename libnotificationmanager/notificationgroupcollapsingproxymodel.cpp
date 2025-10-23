@@ -189,9 +189,9 @@ bool NotificationGroupCollapsingProxyModel::filterAcceptsRow(int source_row, con
             return true;
         }
 
-        if (m_expandUnread && m_lastRead.isValid()) {
-            const QModelIndex sourceIdx = sourceModel()->index(source_row, 0, source_parent);
+        const QModelIndex sourceIdx = sourceModel()->index(source_row, 0, source_parent);
 
+        if (m_expandUnread && m_lastRead.isValid()) {
             if (!sourceIdx.data(Notifications::ReadRole).toBool()) {
                 QDateTime time = sourceIdx.data(Notifications::UpdatedRole).toDateTime();
                 if (!time.isValid()) {
@@ -202,6 +202,12 @@ bool NotificationGroupCollapsingProxyModel::filterAcceptsRow(int source_row, con
                     return true;
                 }
             }
+        }
+
+        // Always keep running jobs visible.
+        if (sourceIdx.data(Notifications::TypeRole).toInt() == Notifications::JobType
+            && sourceIdx.data(Notifications::JobStateRole).toInt() != Notifications::JobStateStopped) {
+            return true;
         }
 
         // should we raise the limit when there's just one group?
