@@ -2,6 +2,7 @@
     "KPlugin": {
         "Description": "Switches between dark and light Global Themes based on time of day",
         "Description[ar]": "تبدل بين السمات العامة المظلمة والفاتحة بناءً على الوقت من اليوم",
+        "Description[az]": "Stkanın vaxtına əsasən qaranlıq və işıqlı Ümumi xarici görünüşü dəyişir",
         "Description[bg]": "Превключва между тъмни и светли глобални теми в зависимост от часа на деня",
         "Description[ca@valencia]": "Canvia entre temes globals foscos i clars en funció de l'hora del dia",
         "Description[ca]": "Commuta entre temes globals foscos i clars en funció de l'hora del dia",
@@ -31,6 +32,7 @@
         "Description[zh_TW]": "依時間切換亮色或暗色全域主題",
         "Name": "Global Theme Auto-Switcher",
         "Name[ar]": "مبدل آليّ للسمات العامة",
+        "Name[az]": "Ümumi xarici görünüşun avtomatik dəyişməsi",
         "Name[bg]": "Автоматично превключване на глобални теми",
         "Name[ca@valencia]": "Commutador automàtic de tema global",
         "Name[ca]": "Commutador automàtic de tema global",
