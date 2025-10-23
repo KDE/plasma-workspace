@@ -134,13 +134,15 @@ void SplashWindow::setGeometry(const QRect &rect)
         if (status() == QQmlComponent::Error) {
             qCWarning(KSPLASHQML_DEBUG) << "Failed loading" << source();
             qCWarning(KSPLASHQML_DEBUG) << errors();
-            const auto fallbackUrl = package.fallbackPackage().fileUrl("splashmainscript");
-            if (!fallbackUrl.isEmpty() && source() != fallbackUrl) {
-                qCWarning(KSPLASHQML_DEBUG) << "Loading default theme" << fallbackUrl;
-                setSource(fallbackUrl);
-                if (status() == QQmlComponent::Error) {
-                    qCCritical(KSPLASHQML_DEBUG) << "Failed loading default theme";
-                    exit(1);
+            if (!m_testing) {
+                const auto fallbackUrl = package.fallbackPackage().fileUrl("splashmainscript");
+                if (!fallbackUrl.isEmpty() && source() != fallbackUrl) {
+                    qCWarning(KSPLASHQML_DEBUG) << "Loading default theme" << fallbackUrl;
+                    setSource(fallbackUrl);
+                    if (status() == QQmlComponent::Error) {
+                        qCCritical(KSPLASHQML_DEBUG) << "Failed loading default theme";
+                        exit(1);
+                    }
                 }
             } else {
                 exit(1);
