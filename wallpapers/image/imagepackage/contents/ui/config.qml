@@ -208,7 +208,7 @@ ColumnLayout {
                 model: [
                     {
                         dynamicMode: PlasmaWallpaper.DynamicMode.Automatic,
-                        text: i18ndc("plasma_wallpaper_org.kde.image", "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'", "Based on whether the color scheme is dark or light")},
+                        text: i18ndc("plasma_wallpaper_org.kde.image", "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'", "Based on whether the Plasma style is light or dark ")},
                     {
                         dynamicMode: PlasmaWallpaper.DynamicMode.DayNight, text: i18ndc("plasma_wallpaper_org.kde.image", "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'", "Based on the day-night cycle")
                     },
