@@ -74,7 +74,8 @@ void SchemeEditorOptions::on_contrastPercentageSpinBox_valueChanged(int value)
     KConfigGroup group(m_config, u"KDE"_s);
     group.writeEntry("Contrast", qRound(value / 10.0));
 
-    group.writeEntry("frameContrast", value / 100.0);
+    // We need to make sure we always write a double
+    group.writeEntry("frameContrast", qreal(value / 100.0));
 
     m_spinboxUpdateTimer->start();
 }
