@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-02 02:36+0000\n"
+"POT-Creation-Date: 2025-10-24 02:35+0000\n"
 "PO-Revision-Date: 2025-10-09 01:53+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -83,9 +83,11 @@ msgid "Switch dynamic wallpapers:"
 msgstr "동적 배경 그림 전환:"
 
 #: imagepackage/contents/ui/config.qml:211
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
+#| msgid "Based on whether the color scheme is dark or light"
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
-msgid "Based on whether the color scheme is dark or light"
+msgid "Based on whether the Plasma style is light or dark "
 msgstr "색 구성표가 밝음인가 어두움인가에 따라서"
 
 #: imagepackage/contents/ui/config.qml:213

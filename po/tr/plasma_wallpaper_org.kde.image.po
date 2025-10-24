@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-02 02:36+0000\n"
+"POT-Creation-Date: 2025-10-24 02:35+0000\n"
 "PO-Revision-Date: 2025-08-02 17:41+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -87,9 +87,11 @@ msgid "Switch dynamic wallpapers:"
 msgstr "Devingen duvar kâğıtları arasında geçiş yap:"
 
 #: imagepackage/contents/ui/config.qml:211
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
+#| msgid "Based on whether the color scheme is dark or light"
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
-msgid "Based on whether the color scheme is dark or light"
+msgid "Based on whether the Plasma style is light or dark "
 msgstr "Renk şemasının koyu veya açık olmasına bağlı olarak"
 
 #: imagepackage/contents/ui/config.qml:213
