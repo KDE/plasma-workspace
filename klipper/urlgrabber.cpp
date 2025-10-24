@@ -146,8 +146,6 @@ const ActionList &URLGrabber::matchingActions(const QString &clipData, bool auto
 {
     m_myMatches.clear();
 
-    matchingMimeActions(clipData);
-
     // now look for matches in custom user actions
     for (ClipAction *action : std::as_const(m_myActions)) {
         const QRegularExpressionMatch match = action->match(clipData);
@@ -156,6 +154,8 @@ const ActionList &URLGrabber::matchingActions(const QString &clipData, bool auto
             m_myMatches.append(action);
         }
     }
+
+    matchingMimeActions(clipData);
 
     return m_myMatches;
 }
