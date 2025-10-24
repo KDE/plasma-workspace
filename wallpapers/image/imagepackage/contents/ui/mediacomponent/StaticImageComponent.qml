@@ -7,6 +7,7 @@
 */
 
 import QtQuick
+import org.kde.plasma.wallpapers.image as Wallpaper
 
 BaseMediaComponent {
     id: staticImageComponent
@@ -15,17 +16,12 @@ BaseMediaComponent {
 
     blurSource: blurLoader.item
 
-    Image {
+    Wallpaper.TransientImage {
         id: mainImage
         anchors.fill: parent
-        asynchronous: true
-        cache: false
-        autoTransform: true
 
         fillMode: staticImageComponent.fillMode
         source: staticImageComponent.source
-        // For centered and tiled images,
-        sourceSize: fillMode === Image.Pad ? undefined : staticImageComponent.sourceSize
     }
 
     Loader {

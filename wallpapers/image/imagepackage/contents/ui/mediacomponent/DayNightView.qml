@@ -14,7 +14,6 @@ StackView {
 
     property var snapshot
     property int fillMode
-    property size sourceSize
 
     property var nextItem: null
     readonly property int status: nextItem ? nextItem.status : Image.Null
@@ -24,9 +23,6 @@ StackView {
         tryReset();
     }
     onFillModeChanged: if (complete) {
-        reset();
-    }
-    onSourceSizeChanged: if (complete) {
         reset();
     }
 
@@ -82,7 +78,6 @@ StackView {
             topUrl: snapshot.top,
             blendFactor: snapshot.blendFactor,
             fillMode: fillMode,
-            sourceSize: sourceSize,
             implicitWidth: root.width,
             implicitHeight: root.height,
             visible: false,
