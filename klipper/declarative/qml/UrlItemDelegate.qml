@@ -25,12 +25,12 @@ ClipboardItemDelegate {
         Drag.dragType: Drag.Automatic
         Drag.supportedActions: Qt.CopyAction
         Drag.mimeData: {
-            "text/uri-list": menuItem.model?.display.split(" ") ?? [],
+            "text/uri-list": menuItem.model?.display?.split(" ") ?? [],
         }
 
         ListView {
             id: previewList
-            model: menuItem.model?.display.split(" ", menuItem.maximumNumberOfPreviews) ?? 0
+            model: menuItem.model?.display?.split(" ", menuItem.maximumNumberOfPreviews) ?? 0
             property int itemWidth: Kirigami.Units.gridUnit * 4
             property int itemHeight: Kirigami.Units.gridUnit * 4
             interactive: false
