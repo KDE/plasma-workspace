@@ -18,7 +18,6 @@ BaseMediaComponent {
         id: dayNightView
         anchors.fill: parent
         fillMode: dayNightComponent.fillMode
-        sourceSize: dayNightComponent.sourceSize
         snapshot: dayNightWallpaper.snapshot
     }
 

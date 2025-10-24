@@ -5,6 +5,7 @@
 */
 
 import QtQuick
+import org.kde.plasma.wallpapers.image as Wallpaper
 
 Item {
     id: root
@@ -12,7 +13,6 @@ Item {
     property url bottomUrl
     property url topUrl
     property real blendFactor
-    property size sourceSize
     property int fillMode
 
     readonly property int status: {
@@ -27,24 +27,16 @@ Item {
         }
     }
 
-    Image {
+    Wallpaper.TransientImage {
         id: firstImage
         anchors.fill: parent
-        asynchronous: true
-        cache: false
-        retainWhileLoading: true
         fillMode: root.fillMode
-        sourceSize: root.sourceSize
     }
 
-    Image {
+    Wallpaper.TransientImage {
         id: secondImage
         anchors.fill: parent
-        asynchronous: true
-        cache: false
-        retainWhileLoading: true
         fillMode: root.fillMode
-        sourceSize: root.sourceSize
     }
 
     function sync(): void {
