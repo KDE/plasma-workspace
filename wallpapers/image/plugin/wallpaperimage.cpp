@@ -287,9 +287,10 @@ static QImage loadImage(const TransientImageOptions &options)
 
 void TransientImageReader::start()
 {
-    QtConcurrent::run(loadImage, m_options).then(this, [this](const QImage &image) {
-        Q_EMIT finished(image);
-    });
+    // QtConcurrent::run(loadImage, m_options).then(this, [this](const QImage &image) {
+    //     Q_EMIT finished(image);
+    // });
+    Q_EMIT finished(loadImage(options()));
 }
 
 void TransientImage::refresh()
