@@ -10,12 +10,10 @@
 #include <KFileItem>
 
 #include "finder/mediametadatafinder.h"
-#include "provider/packageimageprovider.h"
 #include "provider/wallpaperpreviewimageprovider.h"
 
 void ImagePlugin::initializeEngine(QQmlEngine *engine, const char *)
 {
-    engine->addImageProvider(QStringLiteral("package"), new PackageImageProvider);
     engine->addImageProvider(QStringLiteral("wallpaper-preview"), new WallpaperPreviewImageProvider);
 }
 
