@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-24 02:35+0000\n"
-"PO-Revision-Date: 2025-08-16 22:41+0200\n"
+"PO-Revision-Date: 2025-10-24 20:54+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -83,12 +83,10 @@ msgid "Switch dynamic wallpapers:"
 msgstr "Превключване на динамични тапети:"
 
 #: imagepackage/contents/ui/config.qml:211
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
-#| msgid "Based on whether the color scheme is dark or light"
+#, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the Plasma style is light or dark "
-msgstr "Въз основа на това дали цветовата схема е тъмна или светла"
+msgstr "В зависимост от това, дали стилът на Plasma е тъмен или светъл "
 
 #: imagepackage/contents/ui/config.qml:213
 #, kde-format

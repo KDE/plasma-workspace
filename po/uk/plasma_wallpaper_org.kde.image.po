@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_wallpaper_org.kde.image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-24 02:35+0000\n"
-"PO-Revision-Date: 2025-08-02 17:03+0300\n"
+"PO-Revision-Date: 2025-10-24 13:32+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -86,12 +86,10 @@ msgid "Switch dynamic wallpapers:"
 msgstr "Перемикати динамічні фонові зображення:"
 
 #: imagepackage/contents/ui/config.qml:211
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
-#| msgid "Based on whether the color scheme is dark or light"
+#, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the Plasma style is light or dark "
-msgstr "На основі того, є схема кольорів темною чи світлою"
+msgstr "На основі того, є стиль Плазми темним чи світлим "
 
 #: imagepackage/contents/ui/config.qml:213
 #, kde-format

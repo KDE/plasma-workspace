@@ -5,20 +5,21 @@
 # SPDX-FileCopyrightText: 2023 Jannick Kuhr <opensource@kuhr.org>
 # SPDX-FileCopyrightText: 2023 Johannes Obermayr <johannesobermayr@gmx.de>
 # SPDX-FileCopyrightText: 2024 Flori G <Renner03@protonmail.com>
+# SPDX-FileCopyrightText: 2025 Alois Spitzbart <spitz234@hotmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_users\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-16 00:45+0000\n"
-"PO-Revision-Date: 2024-09-29 18:48+0200\n"
-"Last-Translator: Flori G <Renner03@protonmail.com>\n"
+"PO-Revision-Date: 2025-09-19 21:06+0200\n"
+"Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.1\n"
+"X-Generator: Lokalize 25.08.0\n"
 
 #: src/fingerprintmodel.cpp:145 src/fingerprintmodel.cpp:229
 #, kde-format
@@ -100,11 +101,7 @@ msgid "Change Wallet Password?"
 msgstr "Passwort für Passwortspeicher ändern?"
 
 #: src/ui/ChangeWalletPassword.qml:29
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Now that you have changed your login password, you may also want to "
-#| "change the password on your default KWallet to match it."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Now that you have changed your login password, consider changing the "
@@ -185,15 +182,13 @@ msgid "Confirm password:"
 msgstr "Passwort bestätigen:"
 
 #: src/ui/CreateUser.qml:88
-#, fuzzy, kde-format
-#| msgid "Create"
+#, kde-format
 msgctxt "@action:button Create a new user"
 msgid "Create"
 msgstr "Erstellen"
 
 #: src/ui/CreateUser.qml:109
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action:button Cancel creating new user"
 msgid "Cancel"
 msgstr "Abbrechen"
@@ -576,14 +571,13 @@ msgstr "Platzhaltersymbol für Benutzeravatar"
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User Without Deleting Files?"
-msgstr ""
+msgstr "Angemeldeten Benutzer ohne dessen Dateien löschen?"
 
 #: src/ui/UserDetailsPage.qml:115
-#, fuzzy, kde-format
-#| msgid "Delete User…"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User?"
-msgstr "Benutzer löschen …"
+msgstr "Angemeldeten Benutzer löschen?"
 
 #: src/ui/UserDetailsPage.qml:117
 #, kde-kuit-format
@@ -593,6 +587,10 @@ msgid ""
 "account instead?<nl/><nl/>This will make %1 unable to log in again, and they "
 "may experience strange behaviors until they log out."
 msgstr ""
+"%1 ist derzeit angemeldet, daher können dessen Dateien nicht gelöscht "
+"werden. Möchten Sie stattdessen nur das Konto löschen?<nl/><nl/>Dadurch kann "
+"sich %1 nicht mehr anmelden und es kann zu ungewöhnlichen Verhaltensweisen "
+"kommen, bis die Person sich abmeldet."
 
 #: src/ui/UserDetailsPage.qml:118
 #, kde-format
@@ -601,13 +599,15 @@ msgid ""
 "%1 is currently logged in. Deleting the account will make them unable to log "
 "in again, and they may experience strange behaviors until they log out."
 msgstr ""
+"%1 ist derzeit angemeldet. Durch das Löschen des Kontos kann sich die Person "
+"nicht mehr anmelden und es kann zu ungewöhnlichen Verhaltensweisen kommen, "
+"bis sie sich abmeldet."
 
 #: src/ui/UserDetailsPage.qml:125
-#, fuzzy, kde-format
-#| msgid "Delete files"
+#, kde-format
 msgctxt "@action: button"
 msgid "Delete %1"
-msgstr "Dateien löschen"
+msgstr "%1 löschen"
 
 #: src/ui/UserDetailsPage.qml:144
 #, kde-format
@@ -669,7 +669,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Failed to crop image: %1"
-msgstr ""
+msgstr "Bild kann nicht zugeschnitten werden: %1"
 
 #: src/user.cpp:337
 #, kde-format
