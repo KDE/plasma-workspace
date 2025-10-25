@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-15 00:45+0000\n"
+"POT-Creation-Date: 2025-10-25 00:44+0000\n"
 "PO-Revision-Date: 2025-10-05 16:03+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -158,43 +158,43 @@ msgstr "Bewerkingsmodus ingaan"
 msgid "Exit Edit Mode"
 msgstr "Bewerkingsmodus sluiten"
 
-#: main.cpp:86
+#: main.cpp:82
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Plasma Shell"
 
-#: main.cpp:99
+#: main.cpp:95
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "QML Javascript debugger inschakelen"
 
-#: main.cpp:102
+#: main.cpp:98
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "Plasma-shell niet automatisch opnieuw starten na een crash"
 
-#: main.cpp:105
+#: main.cpp:101
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Laden van de gegeven shell-plug-in afdwingen"
 
-#: main.cpp:109
+#: main.cpp:105
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Een bestaand exemplaar vervangen"
 
-#: main.cpp:112
+#: main.cpp:108
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr ""
 "Geeft een lijst met de beschikbare opties voor terugkoppeling van gebruiker"
 
-#: main.cpp:174
+#: main.cpp:170
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Plasma starten is mislukt"
 
-#: main.cpp:175
+#: main.cpp:171
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "

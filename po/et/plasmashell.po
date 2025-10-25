@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-15 00:45+0000\n"
+"POT-Creation-Date: 2025-10-25 00:44+0000\n"
 "PO-Revision-Date: 2020-10-08 10:40+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -164,42 +164,42 @@ msgstr ""
 msgid "Exit Edit Mode"
 msgstr ""
 
-#: main.cpp:86
+#: main.cpp:82
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Plasma shell"
 
-#: main.cpp:99
+#: main.cpp:95
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "QML-i JavaScripti siluri lubamine"
 
-#: main.cpp:102
+#: main.cpp:98
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "Plasma shelli ei käivitata pärast krahhi automaatselt"
 
-#: main.cpp:105
+#: main.cpp:101
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Määratud shelli plugina laadimine jõuga"
 
-#: main.cpp:109
+#: main.cpp:105
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Töötava isendi asendamine"
 
-#: main.cpp:112
+#: main.cpp:108
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "Kasutaja tagasiside saadaolevate valikute loend"
 
-#: main.cpp:174
+#: main.cpp:170
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Plasma käivitamine nurjus"
 
-#: main.cpp:175
+#: main.cpp:171
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "

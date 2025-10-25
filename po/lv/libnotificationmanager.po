@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-14 00:44+0000\n"
+"POT-Creation-Date: 2025-10-25 00:44+0000\n"
 "PO-Revision-Date: 2025-08-18 17:32+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -26,7 +26,7 @@ msgctxt "@info %1 notification body %2 application name"
 msgid "%1 from %2"
 msgstr "%1 no %2"
 
-#: job_p.cpp:189
+#: job_p.cpp:190
 #, kde-format
 msgctxt "Copying n of m files to locaton"
 msgid "%2 of %1 file to %3"
@@ -35,7 +35,7 @@ msgstr[0] "%2. no %1 datnes uz %3"
 msgstr[1] "%2. no %1 datnēm uz %3"
 msgstr[2] "%2. no %1 datnēm uz %3"
 
-#: job_p.cpp:192 job_p.cpp:222 job_p.cpp:238
+#: job_p.cpp:193 job_p.cpp:223 job_p.cpp:239
 #, kde-format
 msgctxt "Copying n files to location"
 msgid "%1 file to %2"
@@ -44,7 +44,7 @@ msgstr[0] "%1 datni uz %2"
 msgstr[1] "%1 datnes uz %2"
 msgstr[2] "%1 datņu uz %2"
 
-#: job_p.cpp:199
+#: job_p.cpp:200
 #, kde-format
 msgctxt "Copying n of m files"
 msgid "%2 of %1 file"
@@ -53,7 +53,7 @@ msgstr[0] "%2 datni no %1"
 msgstr[1] "%2 datnes no %1"
 msgstr[2] "%2 datņu no %1"
 
-#: job_p.cpp:202 job_p.cpp:232 job_p.cpp:242
+#: job_p.cpp:203 job_p.cpp:233 job_p.cpp:243
 #, kde-format
 msgctxt "Copying n files"
 msgid "%1 file"
@@ -62,7 +62,7 @@ msgstr[0] "%1 datni"
 msgstr[1] "%1 datnes"
 msgstr[2] "%1 datņu"
 
-#: job_p.cpp:207
+#: job_p.cpp:208
 #, kde-format
 msgctxt "Copying n of m items"
 msgid "%2 of %1 item"
@@ -71,7 +71,7 @@ msgstr[0] "%2 vienums no %1"
 msgstr[1] "%2 vienumi no %1"
 msgstr[2] "%2 vienumu no %1"
 
-#: job_p.cpp:210 job_p.cpp:230
+#: job_p.cpp:211 job_p.cpp:231
 #, kde-format
 msgctxt "Copying n items"
 msgid "%1 item"
@@ -80,13 +80,13 @@ msgstr[0] "%1 vienumu"
 msgstr[1] "%1 vienumus"
 msgstr[2] "%1 vienumu"
 
-#: job_p.cpp:217
+#: job_p.cpp:218
 #, kde-format
 msgctxt "Copying file to location"
 msgid "%1 to %2"
 msgstr "%1 uz %2"
 
-#: job_p.cpp:220
+#: job_p.cpp:221
 #, kde-format
 msgctxt "Copying n items to location"
 msgid "%1 file to %2"
@@ -95,7 +95,7 @@ msgstr[0] "%1 datni uz %2"
 msgstr[1] "%1 datnes uz %2"
 msgstr[2] "%1 datņu uz %2"
 
-#: job_p.cpp:240
+#: job_p.cpp:241
 #, kde-format
 msgctxt "Copying unknown amount of files to location"
 msgid "to %1"

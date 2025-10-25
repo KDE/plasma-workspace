@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-15 00:45+0000\n"
+"POT-Creation-Date: 2025-10-25 00:44+0000\n"
 "PO-Revision-Date: 2025-09-15 09:40-0500\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -154,42 +154,42 @@ msgstr "ਸੋਧ ਢੰਗ ਵਿੱਚ ਜਾਓ"
 msgid "Exit Edit Mode"
 msgstr "ਸੋਧ ਢੰਗ ਵਿੱਚੋਂ ਬਾਹਰ"
 
-#: main.cpp:86
+#: main.cpp:82
 #, kde-format
 msgid "Plasma Shell"
 msgstr "ਪਲਾਜ਼ਮਾ ਸ਼ੈਲ"
 
-#: main.cpp:99
+#: main.cpp:95
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "QML ਜਾਵਾ-ਸਕਰਿਪਟ ਡੀਬੱਗਰ ਸਮਰੱਥ ਕਰੋ"
 
-#: main.cpp:102
+#: main.cpp:98
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "ਕਰੈਸ਼ ਹੋਣ ਦੇ ਬਾਅਦ ਪਲਾਜ਼ਮਾ-ਸ਼ੈਲ ਮੁੜ-ਚਾਲੂ ਨਾ ਕਰੋ"
 
-#: main.cpp:105
+#: main.cpp:101
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "ਦਿੱਤੀ ਸ਼ੈਲ ਪਲੱਗਇਨ ਨੂੰ ਲੋਡ ਕਰਨ ਲਈ ਮਜ਼ਬੂਰ ਕਰਦਾ ਹੈ"
 
-#: main.cpp:109
+#: main.cpp:105
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "ਮੌਜੂਦਾ ਮੌਕੇ ਨੂੰ ਬਦਲੋ"
 
-#: main.cpp:112
+#: main.cpp:108
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr ""
 
-#: main.cpp:174
+#: main.cpp:170
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "ਪਲਾਜ਼ਮਾ ਸ਼ੁਰੂ ਹੋਣ ਲਈ ਫੇਲ੍ਹ ਹੈ"
 
-#: main.cpp:175
+#: main.cpp:171
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "
