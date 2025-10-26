@@ -41,7 +41,7 @@ KCM.GridDelegate {
             onTriggered: model.pendingDeletion = false
         },
         Kirigami.Action {
-            icon.name: "edit-delete"
+            icon.name: "edit-delete-remove"
             tooltip: i18nd("plasma_wallpaper_org.kde.image", "Remove Wallpaper")
             visible: model.removable && !model.pendingDeletion && configDialog.currentWallpaper == "org.kde.image"
             onTriggered: {
