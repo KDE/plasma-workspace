@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-23 00:44+0000\n"
-"PO-Revision-Date: 2025-08-05 15:03+0400\n"
+"PO-Revision-Date: 2025-10-25 16:50+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -86,12 +86,10 @@ msgid "Switch dynamic wallpapers:"
 msgstr "بدّل خلفيات ديناميكية:"
 
 #: imagepackage/contents/ui/config.qml:211
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
-#| msgid "Based on whether the color scheme is dark or light"
+#, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the Plasma style is light or dark "
-msgstr "بناءً على ما إذا كان نظام الألوان مظلمًا أم فاتحًا"
+msgstr "بناءً على ما إذا كان نمط بلازما مظلمًا أم فاتحًا"
 
 #: imagepackage/contents/ui/config.qml:213
 #, kde-format

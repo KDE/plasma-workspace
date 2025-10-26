@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-14 00:44+0000\n"
-"PO-Revision-Date: 2025-08-17 12:00+0200\n"
+"PO-Revision-Date: 2025-10-25 09:06+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -16,20 +16,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #: binarydialectmodel.cpp:52
-#, fuzzy, kde-format
-#| msgctxt "Binary dialect IEC, with sigle in parentheses"
-#| msgid "International Electrotechnical Commission (IEC)"
+#, kde-format
 msgctxt "Binary dialect IEC, with single in parentheses"
 msgid "International Electrotechnical Commission (IEC)"
 msgstr "International Electrotechnical Commission (IEC)"
 
 #: binarydialectmodel.cpp:56
-#, fuzzy, kde-format
-#| msgctxt "Binary dialect JEDEC, with sigle in parentheses"
-#| msgid "Joint Electron Device Engineering Council (JEDEC)"
+#, kde-format
 msgctxt "Binary dialect JEDEC, with single in parentheses"
 msgid "Joint Electron Device Engineering Council (JEDEC)"
 msgstr "Joint Electron Device Engineering Council (JEDEC)"

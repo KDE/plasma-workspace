@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-23 00:44+0000\n"
-"PO-Revision-Date: 2025-08-17 12:19+0200\n"
+"PO-Revision-Date: 2025-10-25 09:04+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -84,12 +84,10 @@ msgid "Switch dynamic wallpapers:"
 msgstr "Przełącz dynamiczne tapety:"
 
 #: imagepackage/contents/ui/config.qml:211
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
-#| msgid "Based on whether the color scheme is dark or light"
+#, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the Plasma style is light or dark "
-msgstr "Na podstawie tego czy zestaw barw jest ciemny czy jasny"
+msgstr "Na podstawie tego czy zestaw barw jest jasny czy ciemny"
 
 #: imagepackage/contents/ui/config.qml:213
 #, kde-format
