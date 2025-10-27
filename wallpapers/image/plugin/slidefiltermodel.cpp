@@ -254,6 +254,20 @@ void SlideFilterModel::openContainingFolder(int rowIndex)
     KIO::highlightInFileManager({index(rowIndex, 0).data(ImageRoles::PathRole).toUrl()});
 }
 
+void SlideFilterModel::selectAllSlides()
+{
+    for (int rowIndex = 0; rowIndex < sourceModel()->rowCount(); rowIndex++) {
+        setData(index(rowIndex, 0), true, ImageRoles::ToggleRole);
+    }
+}
+
+void SlideFilterModel::deselectAllSlides()
+{
+    for (int rowIndex = 0; rowIndex < sourceModel()->rowCount(); rowIndex++) {
+        setData(index(rowIndex, 0), false, ImageRoles::ToggleRole);
+    }
+}
+
 void SlideFilterModel::buildRandomOrder()
 {
     if (sourceModel()) {

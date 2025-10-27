@@ -99,7 +99,26 @@ Item {
                     configFile: Kirigami.Settings.isMobile ? "wallpaper-mobile.knsrc" : "wallpaper.knsrc"
                     text: i18ndc("plasma_wallpaper_org.kde.image", "@action:button the new things being gotten are wallpapers", "Get New…")
                     Accessible.name: i18ndc("plasma_wallpaper_org.kde.image", "@action:button", "Get New Wallpaper Images…")
+                    displayHint: Kirigami.DisplayHint.KeepVisible
                     viewMode: NewStuff.Page.ViewMode.Preview
+                },
+                Kirigami.Action {   
+                    icon.name: "edit-select-all-symbolic"
+                    shortcut: StandardKey.SelectAll
+                    text: i18ndc("plasma_wallpaper_org.kde.image", "@action:button the things being selected are wallpapers", "Select All") 
+                    Accessible.name: i18ndc("plasma_wallpaper_org.kde.image", "@action:button", "Select All Slides")
+                    displayHint: Kirigami.DisplayHint.KeepVisible
+                    visible: configDialog.currentWallpaper == "org.kde.slideshow"
+                    onTriggered: thumbnailsComponent.imageModel.selectAllSlides();
+                },
+                Kirigami.Action {
+                    icon.name: "edit-select-none-symbolic"
+                    shortcut: StandardKey.Deselect
+                    text: i18ndc("plasma_wallpaper_org.kde.image", "@action:button the things being unselected are wallpapers", "Select None") 
+                    Accessible.name: i18ndc("plasma_wallpaper_org.kde.image", "@action:button", "Unselect All Slides")
+                    displayHint: Kirigami.DisplayHint.KeepVisible
+                    visible: configDialog.currentWallpaper == "org.kde.slideshow"
+                    onTriggered: thumbnailsComponent.imageModel.deselectAllSlides();
                 }
             ]
         }

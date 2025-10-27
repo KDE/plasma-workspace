@@ -35,6 +35,8 @@ public:
 
     Q_INVOKABLE int indexOf(const QString &path);
     Q_INVOKABLE void openContainingFolder(int rowIndex);
+    Q_INVOKABLE void selectAllSlides();
+    Q_INVOKABLE void deselectAllSlides();
 
 private:
     void buildRandomOrder();
