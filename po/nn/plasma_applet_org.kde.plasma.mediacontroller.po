@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-25 02:41+0000\n"
-"PO-Revision-Date: 2024-03-09 18:13+0100\n"
+"PO-Revision-Date: 2025-10-26 12:53+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -17,7 +17,7 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #: AlbumArtStackView.qml:212
 #, kde-format
@@ -38,25 +38,25 @@ msgstr "−%1"
 #: ExpandedRepresentation.qml:592
 #, kde-format
 msgid "Playback rate %1"
-msgstr ""
+msgstr "Avspelingsfart %1"
 
 #: ExpandedRepresentation.qml:595
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "Playback rate"
 msgid "%1x"
-msgstr "−%1"
+msgstr "%1x"
 
 #: ExpandedRepresentation.qml:599
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Playback rate"
-msgstr ""
+msgstr "Avspelingsfart"
 
 #: ExpandedRepresentation.qml:645
 #, kde-format
 msgctxt "@action:inmenu Playback speed (Normal)"
 msgid "%1 (Normal)"
-msgstr ""
+msgstr "%1 (vanleg)"
 
 #: ExpandedRepresentation.qml:684
 #, kde-format
@@ -102,7 +102,7 @@ msgstr "Gjenta"
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose player automatically"
-msgstr ""
+msgstr "Vel spelar automatisk"
 
 #: main.qml:60
 #, kde-format

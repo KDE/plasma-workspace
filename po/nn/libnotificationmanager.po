@@ -1,13 +1,12 @@
 # Translation of libnotificationmanager to Norwegian Nynorsk
 #
-# Karl Ove Hufthammer <karl@huftis.org>, 2019, 2023.
 # Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-25 02:41+0000\n"
-"PO-Revision-Date: 2023-01-15 12:52+0100\n"
+"PO-Revision-Date: 2025-10-26 13:07+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -15,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 25.08.2\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -110,19 +109,19 @@ msgstr "Programmet vart uventa lukka."
 msgctxt "@title"
 msgid "Unread Notification"
 msgid_plural "Unread Notifications"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Ulesen varsling"
+msgstr[1] "Ulesne varslingar"
 
 #: notifications.cpp:914
 #, kde-format
 msgctxt "@info"
 msgid "%1 notification was received while Do Not Disturb was active."
 msgid_plural "%1 notifications were received while Do Not Disturb was active."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 varsling vart motteken under «Ikkje forstyrr»-modus."
+msgstr[1] "%1 varslingar vart mottekne under «Ikkje forstyrr»-modus."
 
 #: notifications.cpp:922
 #, kde-format
 msgctxt "@action:button Show the notifications popup"
 msgid "Show Notifications"
-msgstr ""
+msgstr "Vis varslingar"

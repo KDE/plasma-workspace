@@ -1,0 +1,45 @@
+# Translation of kded_geotimezoned to Norwegian Nynorsk
+#
+# SPDX-FileCopyrightText: 2025 Karl Ove Hufthammer <karl@huftis.org>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-01-10 09:29+0000\n"
+"PO-Revision-Date: 2025-10-26 12:45+0100\n"
+"Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
+"Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
+"Language: nn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 25.08.2\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: geotimezonemodule.cpp:187
+#, kde-format
+msgctxt "OSD, keep short"
+msgid "Time zone changed to %1"
+msgstr "Tidssona er endra til %1"
+
+#: geotimezonemodule.cpp:190
+#, kde-format
+msgctxt ""
+"System clock was changed due to time zone change OSD, keep short: new time "
+"(time zone)"
+msgid "Clock changed to %1 (%2)"
+msgstr "Klokka er endra til %1 (%2)"
+
+#: geotimezonemodule.cpp:206
+#, kde-format
+msgid "Refresh is already in progress."
+msgstr "Oppdatering pågår framleis."
+
+#: geotimezonemodule.cpp:269
+#, kde-format
+msgid "Received no or an invalid time zone."
+msgstr "Fekk ikkje tidssone eller ei ugyldig tidssone."

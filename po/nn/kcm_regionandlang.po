@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-07 00:44+0000\n"
-"PO-Revision-Date: 2024-07-07 14:10+0200\n"
+"PO-Revision-Date: 2025-10-26 12:59+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 25.08.2\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -284,12 +284,10 @@ msgid "Can't locate executable `check-language-support`"
 msgstr "Fann ikkje programfila «check-language-support»"
 
 #: localegeneratorubuntu.cpp:56
-#, fuzzy, kde-format
-#| msgctxt "the arg is the output of failed check-language-support call"
-#| msgid "check-language-support failed, output: %1"
+#, kde-format
 msgctxt "the arg is the output of failed check-language-support call"
 msgid "check-language-support failed, output: %1 %2"
-msgstr "Feil frå «check-language-support». Melding: %1"
+msgstr "Feil frå «check-language-support». Melding: %1 %2"
 
 #: localegeneratorubuntu.cpp:88
 #, kde-format
@@ -298,12 +296,10 @@ msgid "Not all missing packages managed to resolve! %1"
 msgstr "Klarte ikkje finn løysing for alle manglande pakkar. %1"
 
 #: localegeneratorubuntu.cpp:96
-#, fuzzy, kde-format
-#| msgctxt "%1 is a list of package names"
-#| msgid "Failed to install package %1"
+#, kde-format
 msgctxt "%1 is a list of package names, %2 is the error explanation"
 msgid "Failed to install language packages (%1): %2"
-msgstr "Klarte ikkje installera pakken %1"
+msgstr "Klarte ikkje installera språkpakkane (%1): %2"
 
 #: localegenhelper/localegenhelper.cpp:45
 #, kde-format

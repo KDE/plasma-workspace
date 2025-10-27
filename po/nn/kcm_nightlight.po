@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-12 00:45+0000\n"
-"PO-Revision-Date: 2024-09-24 19:23+0200\n"
+"PO-Revision-Date: 2025-10-26 12:48+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.11.70\n"
+"X-Generator: Lokalize 25.08.2\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -34,29 +34,25 @@ msgid ""
 msgstr "Endring til dagfargar tek til kl. %1 og er klar kl. %2"
 
 #: ui/main.qml:39
-#, fuzzy, kde-format
-#| msgid "The blue light filter makes the colors on the screen warmer."
+#, kde-format
 msgctxt "@info"
 msgid "The blue light filter makes the colors on the screen warmer."
 msgstr "Blålysfilteret gjer at fargane på skjermen framstår varmare."
 
 #: ui/main.qml:49
-#, fuzzy, kde-format
-#| msgid "Switching times:"
+#, kde-format
 msgctxt "@label:listbox Night Light modes"
 msgid "Switching times:"
 msgstr "Bytetidspunkt:"
 
 #: ui/main.qml:58
-#, fuzzy, kde-format
-#| msgid "Always off"
+#, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Always off"
 msgstr "Alltid av"
 
 #: ui/main.qml:59
-#, fuzzy, kde-format
-#| msgid "Always on night light"
+#, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Always on night light"
 msgstr "Alltid kveldsfargar"
@@ -65,13 +61,13 @@ msgstr "Alltid kveldsfargar"
 #, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Sunrise and sunset"
-msgstr ""
+msgstr "Soloppgang og solnedgang"
 
 #: ui/main.qml:72
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
-msgstr ""
+msgstr "Set opp …"
 
 #: ui/main.qml:115 ui/main.qml:166 ui/main.qml:230
 #, kde-format
@@ -80,8 +76,7 @@ msgid "%1K"
 msgstr "%1 K"
 
 #: ui/main.qml:123
-#, fuzzy, kde-format
-#| msgid "Day light temperature:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Day light temperature:"
 msgstr "Dagfarge-temperatur:"
@@ -99,8 +94,7 @@ msgid "Warm"
 msgstr "Varm"
 
 #: ui/main.qml:187
-#, fuzzy, kde-format
-#| msgid "Night light temperature:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Night light temperature:"
 msgstr "Kveldsfarge-temperatur:"
