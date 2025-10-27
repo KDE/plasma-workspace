@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-14 00:44+0000\n"
-"PO-Revision-Date: 2025-06-22 11:10+0200\n"
+"PO-Revision-Date: 2025-10-26 12:59+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.2\n"
+"X-Generator: Lokalize 25.08.2\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -24,13 +24,13 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button check a storageAccess (i.e disk) for error"
 msgid "Check for Errors"
-msgstr ""
+msgstr "Kontroller for feil"
 
 #: actions/mountaction.cpp:101
 #, kde-format
 msgctxt "@action:button Mount a disk without verifying for errors"
 msgid "Mount without verifying"
-msgstr ""
+msgstr "Monter utan kontrollering"
 
 #: actions/mountaction.cpp:104
 #, kde-format
@@ -68,11 +68,10 @@ msgid "This device has file system errors."
 msgstr "Einiga har feil i filsystemet."
 
 #: devicemessagemonitor_p.cpp:173
-#, fuzzy, kde-format
-#| msgid "This device has file system errors."
+#, kde-format
 msgctxt "@label device is a storage disk"
 msgid "This device has no errors"
-msgstr "Einiga har feil i filsystemet."
+msgstr "Einiga har ingen feil"
 
 #: devicemessagemonitor_p.cpp:176
 #, kde-format
@@ -118,7 +117,7 @@ msgstr "Du har ikkje løyve til å reparera eininga."
 #: devicemessagemonitor_p.cpp:204 devicemessagemonitor_p.cpp:269
 #, kde-format
 msgid "Unknown error type"
-msgstr ""
+msgstr "Ukjend type feil"
 
 #: devicemessagemonitor_p.cpp:208
 #, kde-format

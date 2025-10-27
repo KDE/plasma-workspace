@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-25 00:44+0000\n"
-"PO-Revision-Date: 2024-09-01 15:04+0200\n"
+"PO-Revision-Date: 2025-10-26 13:06+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -17,7 +17,7 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -156,9 +156,9 @@ msgid "Enter Edit Mode"
 msgstr "Start tilpassing"
 
 #: desktopview.cpp:568
-#, fuzzy, kde-format
+#, kde-format
 msgid "Exit Edit Mode"
-msgstr "Start tilpassing"
+msgstr "Avslutt tilpassing"
 
 #: main.cpp:82
 #, kde-format
@@ -353,7 +353,7 @@ msgstr "Vis panelinnstillingar"
 #, kde-format
 msgctxt "Percentage value"
 msgid "%1%"
-msgstr ""
+msgstr "%1 %"
 
 #: shellcontainmentconfig.cpp:107
 #, kde-format
@@ -410,7 +410,7 @@ msgstr "Gå til oppføring %1 på oppgåvelinja"
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
-msgstr ""
+msgstr "Handsam skrivebord og panel …"
 
 #: shellcorona.cpp:325
 #, kde-format

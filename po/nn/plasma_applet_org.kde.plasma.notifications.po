@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-14 00:44+0000\n"
-"PO-Revision-Date: 2024-03-09 18:13+0100\n"
+"PO-Revision-Date: 2025-10-26 12:53+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 25.08.2\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -222,12 +222,12 @@ msgstr "Send"
 #: components/SpeedChart.qml:145
 #, kde-format
 msgid "Speed"
-msgstr ""
+msgstr "Fart"
 
 #: components/SpeedChart.qml:195
 #, kde-format
 msgid "Average Speed"
-msgstr ""
+msgstr "Gjennomsnittsfart"
 
 #: components/SpeedChart.qml:253
 #, kde-format
@@ -352,13 +352,13 @@ msgstr "Skjermspegling pågår"
 #, kde-format
 msgctxt "Do not disturb because fullscreen app is focused"
 msgid "Fullscreen app is focused"
-msgstr ""
+msgstr "Fullskjermprogram er i fokus"
 
 #: FullRepresentation.qml:510 FullRepresentation.qml:516
 #, kde-format
 msgctxt "@action:button"
 msgid "View"
-msgstr ""
+msgstr "Vis"
 
 #: FullRepresentation.qml:597
 #, kde-format
@@ -437,11 +437,11 @@ msgstr[0] "%1 ulesen varsling"
 msgstr[1] "%1 ulesne varslingar"
 
 #: main.qml:88
-#, fuzzy, kde-format
+#, kde-format
 msgid "%1 active notification"
 msgid_plural "%1 active notifications"
-msgstr[0] "%1 ulesen varsling"
-msgstr[1] "%1 ulesne varslingar"
+msgstr[0] "%1 aktiv varsling"
+msgstr[1] "%1 aktive varslingar"
 
 #: main.qml:101
 #, kde-format
