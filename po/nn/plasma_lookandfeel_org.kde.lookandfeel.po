@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-12 02:31+0000\n"
-"PO-Revision-Date: 2024-03-09 18:30+0100\n"
+"PO-Revision-Date: 2025-10-26 12:28+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 25.08.2\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -165,7 +165,7 @@ msgid "Sleep"
 msgstr "Kvilemodus"
 
 #: contents/lockscreen/LockScreenUi.qml:338 contents/logout/Logout.qml:172
-#, fuzzy, kde-format
+#, kde-format
 msgid "Hibernate"
 msgstr "Dvalemodus"
 
@@ -249,7 +249,7 @@ msgstr ""
 "oppsett av fastvara."
 
 #: contents/logout/Logout.qml:201
-#, fuzzy, kde-format
+#, kde-format
 msgid "Log Out"
 msgstr "Logg ut"
 
@@ -280,14 +280,12 @@ msgid "OK"
 msgstr "OK"
 
 #: contents/logout/Logout.qml:245
-#, fuzzy, kde-format
+#, kde-format
 msgid "Cancel"
 msgstr "Avbryt"
 
 #: contents/osd/OsdItem.qml:30
-#, fuzzy, kde-format
-#| msgctxt "Percentage value"
-#| msgid "%1%"
+#, kde-format
 msgctxt "Percentage value"
 msgid "%1%"
 msgstr "%1 %"
