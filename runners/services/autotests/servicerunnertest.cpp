@@ -268,6 +268,11 @@ void ServiceRunnerTest::testCodeVsKateVsEmojier()
                  u"Discover ServiceRunnerTest"_s, // fuzzy match... disCO*Er
                  u"Welcome Center ServiceRunnerTest"_s, // nobody knows why this matches, but it is a very poor match
              }));
+
+    // Ensure a decent gap between code and discover. discover requires fuzzying
+    constexpr auto firstIndex = 0;
+    constexpr auto discoverIndex = 2;
+    QVERIFY(matches[firstIndex].relevance() - matches[discoverIndex].relevance() > 1.0);
 }
 
 void ServiceRunnerTest::testDisassociation()

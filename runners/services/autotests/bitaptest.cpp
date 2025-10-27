@@ -62,13 +62,9 @@ private Q_SLOTS:
         QCOMPARE(score(u"aperfectten", Match{.size = 11, .distance = 0}, 1), 1.0);
         QCOMPARE(score(u"aperfectten", Match{.size = 5, .distance = 0}, 1), 5.0 / 11.0); // 0.454545...
         QCOMPARE(score(u"aperfectten", Match{.size = 5, .distance = 1}, 1), (5.0 / 11.0) - 0.05); // 0.404545...
-        QCOMPARE(score(u"aperfectten", Match{.size = 0, .distance = 0}, 0), 0);
-        QCOMPARE(score(u"aperfectten", Match{.size = 0, .distance = 0}, 1), 0);
         QCOMPARE(score(u"aperfectten", Match{.size = 2, .distance = 1}, 1), (2.0 / 11) - 0.05);
 
         QCOMPARE(score(u"abc", Match{.size = 3, .distance = 1}, 1), 0.95);
-        // Ask for distance 0 but it has a distance so this is a super bad match.
-        QCOMPARE(score(u"abc", Match{.size = 3, .distance = 1}, 0), 0);
     }
 };
 

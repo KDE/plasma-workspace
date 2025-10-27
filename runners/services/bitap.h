@@ -161,12 +161,10 @@ inline qreal score(const QStringView &name, const auto &match, auto hammingDista
     if (name.size() == 0) {
         return 0.0; // No name, no score.
     }
+    Q_ASSERT(hammingDistance > 0); // The semantics for distance 0 are undefined at this time! If you need this come up with something
 
     const auto maxSize = name.size();
     const auto penalty = [&] {
-        if (hammingDistance <= 0) {
-            return 1.0; // No penalty for no distance
-        }
         constexpr auto tenth = 10.0;
         constexpr auto half = 2.0;
         return qreal(match.distance) / qreal(hammingDistance) / tenth / half;
