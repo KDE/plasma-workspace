@@ -263,9 +263,10 @@ class ClipboardTest(unittest.TestCase):
         app.driver.find_element(AppiumBy.NAME, "clip medium")
 
         ActionChains(app.driver).send_keys(Keys.DOWN).send_keys(Keys.DOWN).perform()
+        time.sleep(2) # Make sure key presses are registered. More ideally we should check that the correct entry is highlighted.
         app.driver.find_element(AppiumBy.NAME, "Edit contents").click()
         app.driver.find_element(AppiumBy.NAME, "Text edit area")
-        time.sleep(1)
+        time.sleep(2) # Make sure page transition has run before we start typing
 
         # By default the text area is focused, so typing anything will appear in the text area.
         new_text = "clip bold"
