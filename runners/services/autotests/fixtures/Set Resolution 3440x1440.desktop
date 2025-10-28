@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: None
+# SPDX-License-Identifier: CC0-1.0
 [Desktop Entry]
 Comment=
 Exec=kscreen-doctor output.DP-3.mode.3440x1440@165
