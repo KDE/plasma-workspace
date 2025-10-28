@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-23 00:44+0000\n"
+"POT-Creation-Date: 2025-10-28 00:44+0000\n"
 "PO-Revision-Date: 2024-11-04 22:01\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -172,6 +172,30 @@ msgstr "Атрымаць новыя…"
 msgctxt "@action:button"
 msgid "Get New Wallpaper Images…"
 msgstr "Атрымаць новыя шпалеры…"
+
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:108
+#, kde-format
+msgctxt "@action:button the things being selected are wallpapers"
+msgid "Select All"
+msgstr ""
+
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:109
+#, kde-format
+msgctxt "@action:button"
+msgid "Select All Slides"
+msgstr ""
+
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:117
+#, kde-format
+msgctxt "@action:button the things being unselected are wallpapers"
+msgid "Select None"
+msgstr ""
+
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:118
+#, kde-format
+msgctxt "@action:button"
+msgid "Unselect All Slides"
+msgstr ""
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:34
 #, kde-format

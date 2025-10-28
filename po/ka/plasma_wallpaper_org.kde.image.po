@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-23 00:44+0000\n"
+"POT-Creation-Date: 2025-10-28 00:44+0000\n"
 "PO-Revision-Date: 2025-10-23 06:34+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -166,6 +166,30 @@ msgstr "ახლის მიღება…"
 msgctxt "@action:button"
 msgid "Get New Wallpaper Images…"
 msgstr "ახალი ფონურის გამოსახულებების მიღება…"
+
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:108
+#, kde-format
+msgctxt "@action:button the things being selected are wallpapers"
+msgid "Select All"
+msgstr ""
+
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:109
+#, kde-format
+msgctxt "@action:button"
+msgid "Select All Slides"
+msgstr ""
+
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:117
+#, kde-format
+msgctxt "@action:button the things being unselected are wallpapers"
+msgid "Select None"
+msgstr ""
+
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:118
+#, kde-format
+msgctxt "@action:button"
+msgid "Unselect All Slides"
+msgstr ""
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:34
 #, kde-format
