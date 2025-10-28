@@ -316,32 +316,40 @@ private:
         std::array<WeightedScoreCard, 4> weightedCards = {
             WeightedScoreCard{.cards = makeScores(name, queryList), .weight = 1.0},
             WeightedScoreCard{.cards = makeScores(service->untranslatedName(), queryList), .weight = 0.8},
-            WeightedScoreCard{.cards = makeScores(service->genericName(), queryList), .weight = 0.6},
+            WeightedScoreCard{.cards = makeScores(service->genericName(), queryList), .weight = 1.0},
             WeightedScoreCard{.cards = makeScoreFromList(queryList, service->keywords()), .weight = 0.1},
         };
+
+        std::ranges::stable_sort(weightedCards, [](const WeightedScoreCard &a, const WeightedScoreCard &b) {
+            return a.weight > b.weight;
+        });
 
         if (RUNNER_SERVICES().isDebugEnabled()) {
             qCDebug(RUNNER_SERVICES) << "+++++++ Weighted Cards for" << name;
             for (const auto &weightedCard : weightedCards) {
                 qCDebug(RUNNER_SERVICES) << weightedCard;
             }
+            qCDebug(RUNNER_SERVICES) << "(duplicated terms only use the highest score!)";
             qCDebug(RUNNER_SERVICES) << "-------";
         }
 
         int scores = 1; // starts at 1 to avoid division by zero
-        qreal finalScore = 0.0;
+        QHash<QString, qreal> seenTermsWeightedScore;
         for (const auto &weightedCard : weightedCards) {
             if (weightedCard.cards.empty()) {
                 continue; // No scores, no match.
             }
 
-            qreal weightedScore = 0.0;
             for (const auto &scoreCard : weightedCard.cards) {
-                weightedScore += (scoreCard.bitapScore + scoreCard.levenshteinScore) * weightedCard.weight;
+                const auto weightedScore = (scoreCard.bitapScore + scoreCard.levenshteinScore) * weightedCard.weight;
+                auto &score = seenTermsWeightedScore[scoreCard.term];
+                score = std::max(score, weightedScore);
                 scores++;
             }
-
-            finalScore += weightedScore;
+        }
+        qreal finalScore = 0.0;
+        for (const auto &score : seenTermsWeightedScore) {
+            finalScore += score;
         }
         finalScore = finalScore / scores; // Average the score for this card
 

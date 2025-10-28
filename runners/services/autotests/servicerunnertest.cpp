@@ -60,6 +60,7 @@ private Q_SLOTS:
     void testDiscover();
     void testDolphinShortQuery();
     void testNumbersQuery();
+    void testGenericNameTerm();
 };
 
 void ServiceRunnerTest::initTestCase()
@@ -351,6 +352,18 @@ void ServiceRunnerTest::testNumbersQuery()
     }
 
     QCOMPARE(texts.first(), u"Set Resolution 3440x1440 ServiceRunnerTest"_s);
+}
+
+void ServiceRunnerTest::testGenericNameTerm()
+{
+    auto matches = launchQueryAndSort(u"term"_s);
+
+    QStringList texts;
+    for (const auto &match : matches) {
+        texts.push_back(match.text());
+    }
+
+    QCOMPARE(texts.first(), u"Konsole ServiceRunnerTest"_s);
 }
 
 QTEST_MAIN(ServiceRunnerTest)
