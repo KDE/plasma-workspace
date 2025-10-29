@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-07 00:44+0000\n"
+"POT-Creation-Date: 2025-10-29 00:45+0000\n"
 "PO-Revision-Date: 2024-10-16 18:48+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -891,32 +891,26 @@ msgstr "Sävytyksen voimakkuus:"
 #. i18n: ectx: property (toolTip), widget (QGroupBox, groupBox_5)
 #: editor/scmeditoroptions.ui:69
 #, kde-format
-msgid "Shading of frames and lighting (\"3D\") effects"
-msgstr "Kehys- ja valotehosteiden (”3D”) varjostus"
+msgid "Contrast of the frames, separators and outlines"
+msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
 #: editor/scmeditoroptions.ui:72
 #, kde-format
-msgid "Shading"
-msgstr "Varjostus"
-
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#: editor/scmeditoroptions.ui:97
-#, kde-format
-msgid "Maximum"
-msgstr "Enin"
-
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: editor/scmeditoroptions.ui:117
-#, kde-format
-msgid "Minimum"
-msgstr "Vähin"
+msgid "Frames and Outlines"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
-#: editor/scmeditoroptions.ui:124
+#: editor/scmeditoroptions.ui:84
 #, kde-format
 msgid "Contrast"
 msgstr "Kontrasti"
+
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, contrastPercentageSpinBox)
+#: editor/scmeditoroptions.ui:110
+#, no-c-format, kde-format
+msgid "%"
+msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelFore0)
 #. i18n: ectx: property (toolTip), widget (QLabel, labelBack0)
@@ -1371,6 +1365,18 @@ msgstr "Avaa väriteema"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Väriteematiedostot (*.colors)"
+
+#~ msgid "Shading of frames and lighting (\"3D\") effects"
+#~ msgstr "Kehys- ja valotehosteiden (”3D”) varjostus"
+
+#~ msgid "Shading"
+#~ msgstr "Varjostus"
+
+#~ msgid "Maximum"
+#~ msgstr "Enin"
+
+#~ msgid "Minimum"
+#~ msgstr "Vähin"
 
 #~ msgid "Choose custom accent color"
 #~ msgstr "Valitse mukautettu korostusväri"

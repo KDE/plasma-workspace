@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-07 00:44+0000\n"
+"POT-Creation-Date: 2025-10-29 00:45+0000\n"
 "PO-Revision-Date: 2025-06-29 09:04+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -886,32 +886,26 @@ msgstr "Renklendirme gücü:"
 #. i18n: ectx: property (toolTip), widget (QGroupBox, groupBox_5)
 #: editor/scmeditoroptions.ui:69
 #, kde-format
-msgid "Shading of frames and lighting (\"3D\") effects"
-msgstr "Karelerin gölgelemesi ve aydınlatma (“3B”) efektleri"
+msgid "Contrast of the frames, separators and outlines"
+msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
 #: editor/scmeditoroptions.ui:72
 #, kde-format
-msgid "Shading"
-msgstr "Gölgeleme"
-
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#: editor/scmeditoroptions.ui:97
-#, kde-format
-msgid "Maximum"
-msgstr "En büyük"
-
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: editor/scmeditoroptions.ui:117
-#, kde-format
-msgid "Minimum"
-msgstr "En küçük"
+msgid "Frames and Outlines"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
-#: editor/scmeditoroptions.ui:124
+#: editor/scmeditoroptions.ui:84
 #, kde-format
 msgid "Contrast"
 msgstr "Karşıtlık"
+
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, contrastPercentageSpinBox)
+#: editor/scmeditoroptions.ui:110
+#, no-c-format, kde-format
+msgid "%"
+msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelFore0)
 #. i18n: ectx: property (toolTip), widget (QLabel, labelBack0)
@@ -1369,6 +1363,18 @@ msgstr "Renk Şeması Aç"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Renk Şeması Dosyaları (*.colors)"
+
+#~ msgid "Shading of frames and lighting (\"3D\") effects"
+#~ msgstr "Karelerin gölgelemesi ve aydınlatma (“3B”) efektleri"
+
+#~ msgid "Shading"
+#~ msgstr "Gölgeleme"
+
+#~ msgid "Maximum"
+#~ msgstr "En büyük"
+
+#~ msgid "Minimum"
+#~ msgstr "En küçük"
 
 #~ msgid "Choose custom accent color"
 #~ msgstr "Özel vurgu rengi seç"

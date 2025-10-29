@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-07 00:44+0000\n"
+"POT-Creation-Date: 2025-10-29 00:45+0000\n"
 "PO-Revision-Date: 2010-03-16 08:58+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -901,32 +901,26 @@ msgstr ""
 #. i18n: ectx: property (toolTip), widget (QGroupBox, groupBox_5)
 #: editor/scmeditoroptions.ui:69
 #, kde-format
-msgid "Shading of frames and lighting (\"3D\") effects"
-msgstr "ដាក់ស្រមោល​ស៊ុម​ និង​ពន្លឺ​បែបផែន (\"ត្រីមាត្រ\")"
+msgid "Contrast of the frames, separators and outlines"
+msgstr ""
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
 #: editor/scmeditoroptions.ui:72
 #, kde-format
-msgid "Shading"
-msgstr "ស្រមោល"
-
-#. i18n: ectx: property (text), widget (QLabel, label_10)
-#: editor/scmeditoroptions.ui:97
-#, kde-format
-msgid "Maximum"
-msgstr "អតិបរមា"
-
-#. i18n: ectx: property (text), widget (QLabel, label_9)
-#: editor/scmeditoroptions.ui:117
-#, kde-format
-msgid "Minimum"
-msgstr "អប្បបរមា"
+msgid "Frames and Outlines"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
-#: editor/scmeditoroptions.ui:124
+#: editor/scmeditoroptions.ui:84
 #, kde-format
 msgid "Contrast"
 msgstr "កម្រិត​ពណ៌"
+
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, contrastPercentageSpinBox)
+#: editor/scmeditoroptions.ui:110
+#, no-c-format, kde-format
+msgid "%"
+msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelFore0)
 #. i18n: ectx: property (toolTip), widget (QLabel, labelBack0)
@@ -1398,6 +1392,18 @@ msgstr "រក្សា​ទុក​ពណ៌​ចម្រុះ"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr ""
+
+#~ msgid "Shading of frames and lighting (\"3D\") effects"
+#~ msgstr "ដាក់ស្រមោល​ស៊ុម​ និង​ពន្លឺ​បែបផែន (\"ត្រីមាត្រ\")"
+
+#~ msgid "Shading"
+#~ msgstr "ស្រមោល"
+
+#~ msgid "Maximum"
+#~ msgstr "អតិបរមា"
+
+#~ msgid "Minimum"
+#~ msgstr "អប្បបរមា"
 
 #, fuzzy
 #~| msgid "Get &New Schemes..."
