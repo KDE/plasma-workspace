@@ -49,7 +49,7 @@ ColumnLayout {
                     Layout.alignment: Qt.AlignLeft
                     Layout.leftMargin: Math.max(Math.round(0.5 * (sunPathChart.width - width) - sunPathChart.daylightSpan), Kirigami.Units.gridUnit)
                     QQC2.ToolTip.visible: sunriseHoverHandler.hovered
-                    QQC2.ToolTip.text: i18nc("@info:tooltip", "Sunrise starts at %1 and ends at %2", formatTime(schedule.startSunriseDateTime), formatTime(schedule.endSunriseDateTime))
+                    QQC2.ToolTip.text: i18nc("@info:tooltip; the variables are times of day, e.g. 07:30", "Sunrise starts at %1 and ends at %2", formatTime(schedule.startSunriseDateTime), formatTime(schedule.endSunriseDateTime))
                     spacing: Kirigami.Units.smallSpacing
 
                     QQC2.Label {
@@ -74,7 +74,7 @@ ColumnLayout {
                     Layout.alignment: Qt.AlignRight
                     Layout.rightMargin: Math.max(Math.round(0.5 * (sunPathChart.width - width) - sunPathChart.daylightSpan), Kirigami.Units.gridUnit)
                     QQC2.ToolTip.visible: sunsetHoverHandler.hovered
-                    QQC2.ToolTip.text: i18nc("@info:tooltip", "Sunset starts at %1 and ends at %2", formatTime(schedule.startSunsetDateTime), formatTime(schedule.endSunsetDateTime))
+                    QQC2.ToolTip.text: i18nc("@info:tooltip; the variables are times of day, e.g. 07:30", "Sunset starts at %1 and ends at %2", formatTime(schedule.startSunsetDateTime), formatTime(schedule.endSunsetDateTime))
                     spacing: Kirigami.Units.smallSpacing
 
                     QQC2.Label {
