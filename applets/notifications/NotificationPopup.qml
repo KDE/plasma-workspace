@@ -76,14 +76,38 @@ NotificationsApplet.NotificationWindow {
             }
         }
 
+        // Activate default action when dragging a file over the notification.
         DropArea {
+            id: activateDefaultActionDropArea
             anchors.fill: parent
-            onEntered: (drag) => {
+
+            property bool containsAcceptableDrag: false
+            property point lastPosition: Qt.point(-1, -1)
+
+            onEntered: (event) => {
                 if (notificationItem.modelInterface.hasDefaultAction && !notificationItem.dragging) {
-                    dragActivationTimer.start();
+                    dragActivationTimer.restart();
+                    containsAcceptableDrag = true;
+                    lastPosition = Qt.point(drag.x, drag.y);
                 } else {
                     drag.accepted = false;
                 }
+            }
+            onPositionChanged: {
+                if (containsAcceptableDrag) {
+                    const manhattanLength = Math.abs((drag.x - lastPosition.x) + (drag.y - lastPosition.y));
+                    if (manhattanLength > Application.styleHints.startDragDistance) {
+                        dragActivationTimer.restart();
+                        lastPosition = Qt.point(drag.x, drag.y);
+                    }
+                }
+            }
+            onDropped: {
+                containsAcceptableDrag = false;
+            }
+            onExited: {
+                containsAcceptableDrag = false;
+                dragActivationTimer.stop();
             }
         }
 
@@ -141,7 +165,7 @@ NotificationsApplet.NotificationWindow {
                     if (interval <= 0) {
                         return false;
                     }
-                    if (notificationItem.dragging || notificationItem.menuOpen) {
+                    if (notificationItem.dragging || notificationItem.menuOpen || activateDefaultActionDropArea.containsAcceptableDrag) {
                         return false;
                     }
                     if (notificationItem.modelInterface.replying
