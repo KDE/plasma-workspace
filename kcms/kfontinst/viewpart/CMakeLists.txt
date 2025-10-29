@@ -12,4 +12,4 @@ target_link_libraries(kfontviewpart KF6::Archive KF6::Parts KF6::XmlGui KF6::Win
 
 install(TARGETS kfontviewpart  DESTINATION ${KDE_INSTALL_PLUGINDIR}/kf6/parts )
 
-install( FILES kfontviewpart.rc DESTINATION  ${KDE_INSTALL_KXMLGUIDIR}/kfontview )
+install( FILES kfontviewpart.rc DESTINATION  ${KDE_INSTALL_KXMLGUIDIR}/kfontviewpart )
