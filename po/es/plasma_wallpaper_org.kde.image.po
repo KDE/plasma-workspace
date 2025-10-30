@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_wallpaper_org.kde.image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-28 00:44+0000\n"
-"PO-Revision-Date: 2025-10-23 12:00+0100\n"
+"PO-Revision-Date: 2025-10-29 11:59+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -174,25 +174,25 @@ msgstr "Obtener nuevas imágenes de fondo del escritorio…"
 #, kde-format
 msgctxt "@action:button the things being selected are wallpapers"
 msgid "Select All"
-msgstr ""
+msgstr "Seleccionar todo"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:109
 #, kde-format
 msgctxt "@action:button"
 msgid "Select All Slides"
-msgstr ""
+msgstr "Seleccionar todas las diapositivas"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:117
 #, kde-format
 msgctxt "@action:button the things being unselected are wallpapers"
 msgid "Select None"
-msgstr ""
+msgstr "No seleccionar nada"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:118
 #, kde-format
 msgctxt "@action:button"
 msgid "Unselect All Slides"
-msgstr ""
+msgstr "Deseleccionar todas las diapositivas"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:34
 #, kde-format
