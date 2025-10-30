@@ -16,6 +16,8 @@ GenericName=Terminal ServiceRunnerTest
 
 Comment=Command line access ServiceRunnerTest
 
+Keywords=terminal;console;script;run;execute;command;command-line;commandline;cli;bash;sh;shell;zsh;cmd;command prompt
+
 [Desktop Action NewWindow]
 Name=Open a New Window
 Exec=konsole --new-window

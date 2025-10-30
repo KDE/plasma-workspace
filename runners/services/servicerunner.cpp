@@ -54,12 +54,16 @@ struct ScoreCard {
     qreal bitapScore;
     int levenshtein;
     qreal levenshteinScore;
+    bool perfectMatch;
+    bool completeMatch;
+    bool startsWith;
 };
 
 QDebug operator<<(QDebug dbg, const ScoreCard &card)
 {
     dbg.nospace() << "Scorecard(" << "search: " << card.search << ", term: " << card.term << "bitap: " << card.bitap << ", bitapScore: " << card.bitapScore
-                  << ", levenshtein: " << card.levenshtein << ", levenshteinScore: " << card.levenshteinScore << ")";
+                  << ", levenshtein: " << card.levenshtein << ", levenshteinScore: " << card.levenshteinScore << ", perfectMatch: " << card.perfectMatch
+                  << ", completeMatch: " << card.completeMatch << ", startsWith: " << card.startsWith << ")";
     return dbg;
 }
 
@@ -104,11 +108,11 @@ auto makeScores(const auto &notNormalizedString, const auto &queryList) {
 
         // Mind that we give different levels of bonus. This is important to imply ordering within competing matches of the same "type".
         // If we perfectly match that gives a bonus for not requiring any changes.
-        const auto noSubstitionBonus = Bitap::score(string, bitap.value(), 0) == 1.0 ? 4.0 : 1.0;
+        const auto perfectMatch = bitap.value().distance == 0;
         // If we match the entire length of the string that gets a bonus (disregarding distance, that was considered above).
-        const auto completeMatchBonus = bitap->size >= (queryItem.size()) ? 3.0 : 1.0;
+        const auto completeMatch = bitap->size >= (queryItem.size());
         // If the string starts with the query item that gets a bonus.
-        const auto startsWithBonus = (string.startsWith(queryItem, Qt::CaseInsensitive)) ? 2.0 : 1.0;
+        const auto startsWith = (string.startsWith(queryItem, Qt::CaseInsensitive));
 
         // Also consider the distance between the input and the query item.
         // If one is "yolotrollingservice" and the other is "yolo" then we must consider them worse matches than say "yolotroll".
@@ -118,9 +122,12 @@ auto makeScores(const auto &notNormalizedString, const auto &queryList) {
             .search = queryItem,
             .term = string,
             .bitap = *bitap,
-            .bitapScore = bitapScore + completeMatchBonus + noSubstitionBonus + startsWithBonus,
+            .bitapScore = bitapScore + (perfectMatch ? 4.0 : 0.0) + (completeMatch ? 3.0 : 0.0) + (startsWith ? 2.0 : 0.0),
             .levenshtein = levenshtein,
             .levenshteinScore = Levenshtein::score(string, levenshtein),
+            .perfectMatch = perfectMatch,
+            .completeMatch = completeMatch,
+            .startsWith = startsWith,
         });
     }
 
@@ -313,11 +320,11 @@ private:
             return Score{.value = std::numeric_limits<decltype(Score::value)>::max(), .categoryRelevance = KRunner::QueryMatch::CategoryRelevance::Highest};
         }
 
-        std::array<WeightedScoreCard, 4> weightedCards = {
-            WeightedScoreCard{.cards = makeScores(name, queryList), .weight = 1.0},
-            WeightedScoreCard{.cards = makeScores(service->untranslatedName(), queryList), .weight = 0.8},
-            WeightedScoreCard{.cards = makeScores(service->genericName(), queryList), .weight = 0.6},
-            WeightedScoreCard{.cards = makeScoreFromList(queryList, service->keywords()), .weight = 0.1},
+        const auto weightedCards = {
+            WeightedScoreCard{.cards = makeScores(name, queryList), .weight = 100.0},
+            WeightedScoreCard{.cards = makeScores(service->untranslatedName(), queryList), .weight = 75.0},
+            WeightedScoreCard{.cards = makeScores(service->genericName(), queryList), .weight = 50.0},
+            WeightedScoreCard{.cards = makeScoreFromList(queryList, service->keywords()), .weight = 25.0},
         };
 
         if (RUNNER_SERVICES().isDebugEnabled()) {
@@ -328,21 +335,32 @@ private:
             qCDebug(RUNNER_SERVICES) << "-------";
         }
 
-        int scores = 1; // starts at 1 to avoid division by zero
+        int scores = 1; // starts at 1 to avoid division by zero. Is the number of scores to average over.
         qreal finalScore = 0.0;
-        for (const auto &weightedCard : weightedCards) {
-            if (weightedCard.cards.empty()) {
-                continue; // No scores, no match.
-            }
 
-            qreal weightedScore = 0.0;
-            for (const auto &scoreCard : weightedCard.cards) {
-                weightedScore += (scoreCard.bitapScore + scoreCard.levenshteinScore) * weightedCard.weight;
+        const auto perfectMatchScore = [&](const auto &weightedCards) {
+            if (std::ranges::any_of(weightedCards.cards, [](const ScoreCard &card) {
+                    return card.perfectMatch;
+                })) {
+                finalScore += 100.0 * weightedCards.weight;
                 scores++;
             }
+        };
 
+        const auto fuzzyScore = [&](const auto &weightedCards) {
+            qreal weightedScore = 0.0;
+            for (const auto &scoreCard : weightedCards.cards) {
+                weightedScore += (scoreCard.bitapScore + scoreCard.levenshteinScore) * weightedCards.weight;
+                scores++;
+            }
             finalScore += weightedScore;
+        };
+
+        for (const auto &weightedCard : weightedCards) {
+            perfectMatchScore(weightedCard);
+            fuzzyScore(weightedCard);
         }
+
         finalScore = finalScore / scores; // Average the score for this card
 
         qCDebug(RUNNER_SERVICES) << "Final score for" << name << "is" << finalScore;
