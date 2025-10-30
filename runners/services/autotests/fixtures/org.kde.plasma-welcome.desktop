@@ -1,0 +1,14 @@
+# SPDX-License-Identifier: CC0-1.0
+# SPDX-FileCopyrightText: 2021 Felipe Kinoshita <kinofhek@gmail.com>
+# SPDX-FileCopyrightText: 2022 Nate Graham <nate@kde.org>
+[Desktop Entry]
+Categories=Qt;KDE;Documentation;
+Comment=Learn more about KDE Plasma
+Exec=plasma-welcome
+GenericName=Welcome Center
+Icon=start-here-kde-plasma
+Keywords=Welcome;Wizard;Onboarding;Contribute;Get involved;
+Name=Welcome Center ServiceRunnerTest
+SingleMainWindow=true
+Type=Application
+OnlyShowIn=KDE;

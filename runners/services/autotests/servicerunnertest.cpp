@@ -266,6 +266,7 @@ void ServiceRunnerTest::testCodeVsKateVsEmojier()
                  u"Visual Studio Code ServiceRunnerTest"_s,
                  u"Kate ServiceRunnerTest"_s, // keyword match
                  u"Discover ServiceRunnerTest"_s, // fuzzy match... disCO*Er
+                 u"Welcome Center ServiceRunnerTest"_s, // nobody knows why this matches, but it is a very poor match
              }));
 }
 
@@ -376,9 +377,14 @@ void ServiceRunnerTest::testTerm()
         texts.push_back(match.text());
     }
 
-    QCOMPARE(
-        texts,
-        QStringList({u"Konsole ServiceRunnerTest"_s, u"Yakuake ServiceRunnerTest"_s, u"System Settings ServiceRunnerTest"_s, u"Discover ServiceRunnerTest"_s}));
+    qDebug() << texts;
+
+    QCOMPARE(texts,
+             QStringList({u"Konsole ServiceRunnerTest"_s,
+                          u"Yakuake ServiceRunnerTest"_s,
+                          u"Welcome Center ServiceRunnerTest"_s,
+                          u"System Settings ServiceRunnerTest"_s,
+                          u"Discover ServiceRunnerTest"_s}));
 }
 
 void ServiceRunnerTest::testCmd()
