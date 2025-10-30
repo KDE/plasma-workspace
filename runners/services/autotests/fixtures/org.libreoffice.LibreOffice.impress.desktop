@@ -1,0 +1,24 @@
+# SPDX-FileCopyrightText: None
+# SPDX-License-Identifier: CC0-1.0
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Icon=org.libreoffice.LibreOffice.impress
+Type=Application
+Categories=Office;Presentation;X-Red-Hat-Base;
+Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=libreoffice --file-forwarding org.libreoffice.LibreOffice --impress @@u %U @@
+MimeType=application/mspowerpoint;application/vnd.apple.keynote;application/vnd.ms-powerpoint;application/vnd.ms-powerpoint.presentation.macroEnabled.12;application/vnd.ms-powerpoint.slideshow.macroEnabled.12;application/vnd.ms-powerpoint.template.macroEnabled.12;application/vnd.oasis.opendocument.presentation;application/vnd.oasis.opendocument.presentation-flat-xml;application/vnd.oasis.opendocument.presentation-template;application/vnd.openxmlformats-officedocument.presentationml.presentation;application/vnd.openxmlformats-officedocument.presentationml.slide;application/vnd.openxmlformats-officedocument.presentationml.slideshow;application/vnd.openxmlformats-officedocument.presentationml.template;application/vnd.stardivision.impress;application/vnd.sun.xml.impress;application/vnd.sun.xml.impress.template;application/x-iwork-keynote-sffkey;application/x-starimpress;
+Name=LibreOffice Impress ServiceRunnerTest
+GenericName=Presentation
+Comment=Create and edit presentations for slideshows, meetings and Web pages.
+StartupNotify=true
+X-GIO-NoFuse=true
+Keywords=Slideshow;Slides;OpenDocument Presentation;Microsoft PowerPoint;Microsoft Works;OpenOffice Impress;odp;ppt;pptx;
+InitialPreference=5
+StartupWMClass=libreoffice-impress
+X-KDE-Protocols=file,http,webdav,webdavs
+Actions=NewDocument;
+X-Desktop-File-Install-Version=0.28
+X-Endless-Alias=libreoffice-impress
+X-Flatpak-RenamedFrom=libreoffice-impress.desktop;org.libreoffice.LibreOffice-impress.desktop;
+X-Flatpak=org.libreoffice.LibreOffice
