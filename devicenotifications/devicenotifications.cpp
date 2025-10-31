@@ -496,7 +496,7 @@ void KdedDeviceNotifications::onDeviceRemoved(const UdevDevice &device)
     m_usbDeviceRemovedNotification = new KNotification(QStringLiteral("deviceRemoved"));
     m_usbDeviceRemovedNotification->setFlags(KNotification::DefaultEvent);
     m_usbDeviceRemovedNotification->setIconName(QStringLiteral("drive-removable-media-usb"));
-    m_usbDeviceRemovedNotification->setTitle(i18nc("@title:notifications", "USB Device Went Away"));
+    m_usbDeviceRemovedNotification->setTitle(i18nc("@title:notifications", "USB Device Removed"));
     m_usbDeviceRemovedNotification->setText(text);
     m_usbDeviceRemovedNotification->sendEvent();
 
