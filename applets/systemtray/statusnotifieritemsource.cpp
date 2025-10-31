@@ -14,6 +14,8 @@
 #include <KIconColors>
 #include <KIconEngine>
 #include <KIconLoader>
+#include <KWaylandExtras>
+#include <KWindowSystem>
 #include <Plasma/Theme>
 
 #include <QApplication>
@@ -37,9 +39,10 @@ Q_GLOBAL_STATIC(Plasma::Theme, s_theme)
 class PlasmaDBusMenuImporter : public DBusMenuImporter
 {
 public:
-    PlasmaDBusMenuImporter(const QString &service, const QString &path, KIconLoader *iconLoader, QObject *parent)
+    PlasmaDBusMenuImporter(const QString &service, const QString &path, KIconLoader *iconLoader, StatusNotifierItemSource *source, QObject *parent)
         : DBusMenuImporter(service, path, parent)
         , m_iconLoader(iconLoader)
+        , m_source(source)
     {
     }
 
@@ -49,8 +52,22 @@ protected:
         return QIcon(new KIconEngine(name, m_iconLoader));
     }
 
+    void actionActivated(int id) override
+    {
+        if (KWindowSystem::isPlatformX11() || !menu()->window() || !menu()->window()->windowHandle()) {
+            sendClickedEvent(id);
+            return;
+        }
+        auto tokenFuture = KWaylandExtras::xdgActivationToken(menu()->window()->windowHandle(), {});
+        tokenFuture.then(m_source, [this, id](const QString &token) {
+            m_source->provideXdgActivationToken(token);
+            sendClickedEvent(id);
+        });
+    }
+
 private:
     KIconLoader *m_iconLoader;
+    StatusNotifierItemSource *const m_source;
 };
 
 StatusNotifierItemSource::StatusNotifierItemSource(const QString &notifierItemId, QObject *parent)
@@ -370,7 +387,7 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
                     // KStatusNotifierItem::setContextMenu().
                     qCWarning(SYSTEM_TRAY) << "DBusMenu disabled for this application";
                 } else {
-                    m_menuImporter = new PlasmaDBusMenuImporter(m_statusNotifierItemInterface->service(), menuObjectPath, iconLoader(), this);
+                    m_menuImporter = new PlasmaDBusMenuImporter(m_statusNotifierItemInterface->service(), menuObjectPath, iconLoader(), this, this);
                     connect(m_menuImporter, &PlasmaDBusMenuImporter::menuUpdated, this, [this](QMenu *menu) {
                         if (menu == m_menuImporter->menu()) {
                             contextMenuReady();
