@@ -49,11 +49,10 @@ QVariant PackageListModel::data(const QModelIndex &index, int role) const
         return b.displayName();
 
     case PreviewRole: {
-        QUrl previewUrl(QStringLiteral("image://wallpaper-preview"));
-        previewUrl.setQuery({
-            std::make_pair(QStringLiteral("package"), b.package().path()),
-        });
-        return previewUrl;
+        QString previewUri;
+        previewUri.append(QLatin1String("image://wallpaper-preview/package/"));
+        previewUri.append(b.package().path());
+        return previewUri;
     }
 
     case AuthorRole: {

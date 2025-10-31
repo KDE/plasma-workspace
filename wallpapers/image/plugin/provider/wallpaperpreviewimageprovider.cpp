@@ -127,13 +127,10 @@ WallpaperPreviewImageProvider::WallpaperPreviewImageProvider()
 
 QQuickImageResponse *WallpaperPreviewImageProvider::requestImageResponse(const QString &id, const QSize &requestedSize)
 {
-    const QString packagePrefix = QStringLiteral("package=");
-    const QString imagePrefix = QStringLiteral("image=");
-
-    if (id.startsWith(packagePrefix)) {
+    if (const QString packagePrefix = QStringLiteral("package/"); id.startsWith(packagePrefix)) {
         const auto components = extractImagesFromPackage(id.sliced(packagePrefix.size()), requestedSize);
         return new WallpaperPreviewImageResponse(components, requestedSize);
-    } else if (id.startsWith(imagePrefix)) {
+    } else if (const QString imagePrefix = QStringLiteral("image/"); id.startsWith(imagePrefix)) {
         return new WallpaperPreviewImageResponse(QUrl::fromLocalFile(id.sliced(imagePrefix.size())), requestedSize);
     } else {
         Q_UNREACHABLE();

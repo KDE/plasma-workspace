@@ -51,11 +51,10 @@ QVariant ImageListModel::data(const QModelIndex &index, int role) const
     }
 
     case PreviewRole: {
-        QUrl previewUrl(QStringLiteral("image://wallpaper-preview"));
-        previewUrl.setQuery({
-            std::make_pair(QStringLiteral("image"), m_data.at(row)),
-        });
-        return previewUrl;
+        QString previewUri;
+        previewUri.append(QLatin1String("image://wallpaper-preview/image/"));
+        previewUri.append(m_data.at(row));
+        return previewUri;
     }
 
     case AuthorRole: {
