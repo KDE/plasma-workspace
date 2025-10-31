@@ -425,7 +425,7 @@ void DBusMenuImporter::slotGetLayoutFinished(QDBusPendingCallWatcher *watcher)
             });
 
             connect(action, &QAction::triggered, this, [id, this]() {
-                sendClickedEvent(id);
+                actionActivated(id);
             });
 
             if (QMenu *menuAction = action->menu()) {
@@ -448,6 +448,11 @@ void DBusMenuImporter::slotGetLayoutFinished(QDBusPendingCallWatcher *watcher)
     }
 
     Q_EMIT menuUpdated(menu);
+}
+
+void DBusMenuImporter::actionActivated(int id)
+{
+    sendClickedEvent(id);
 }
 
 void DBusMenuImporter::sendClickedEvent(int id)
