@@ -464,19 +464,8 @@ Plasma::Corona *WidgetExplorer::corona() const
 
 void WidgetExplorer::addApplet(const QString &pluginName)
 {
-    const QString p = QStringLiteral(PLASMA_RELATIVE_DATA_INSTALL_DIR) + u"/plasmoids/" + pluginName;
-    qWarning() << "-------->  load applet: " << pluginName << " relpath: " << p;
-
-    QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, p, QStandardPaths::LocateDirectory);
-
-    qDebug() << " .. pathes: " << dirs;
-    if (!dirs.count()) {
-        qWarning() << "Failed to find plasmoid path for " << pluginName;
-        return;
-    }
-
     if (d->containment) {
-        d->containment->createApplet(dirs.first());
+        d->containment->createApplet(pluginName);
     }
 }
 
