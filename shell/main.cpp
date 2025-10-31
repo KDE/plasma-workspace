@@ -36,8 +36,34 @@
 
 #include <csignal>
 
+#if __has_include(<malloc.h>)
+#include <malloc.h>
+#include <unistd.h>
+#endif
+
+#if __has_include(<malloc.h>)
+static void setupMalloc()
+{
+    // The default threshold is 128 * 1024, which can result in a large memory usage due to
+    // fragmentation especially if we use the raster graphicssystem. On the other side if the
+    // threshold is too low, free() starts to permanently ask the kernel about shrinking the heap.
+    //
+    // Setting M_TRIM_THRESHOLD also disables dynamic adjustment of M_MMAP_THRESHOLD, which is
+    // important with wallpapers. The average amount of memory necessary to store a 4K wallpaper
+    // is just under 32MB, the upper limit for M_MMAP_THRESHOLD. By disabling dynamic adjustment
+    // of M_MMAP_THRESHOLD, we ensure that memory for wallpapers is allocated with direct mmaps
+    // and released to the system individually without causing further fragmentation.
+    const int pagesize = sysconf(_SC_PAGESIZE);
+    mallopt(M_TRIM_THRESHOLD, 5 * pagesize);
+}
+#endif
+
 int main(int argc, char *argv[])
 {
+#if __has_include(<malloc.h>)
+    setupMalloc();
+#endif
+
 #if QT_CONFIG(qml_debug)
     if (qEnvironmentVariableIsSet("PLASMA_ENABLE_QML_DEBUG")) {
         QQmlDebuggingEnabler::enableDebugging(true);
