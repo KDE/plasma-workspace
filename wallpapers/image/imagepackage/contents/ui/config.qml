@@ -171,10 +171,6 @@ ColumnLayout {
                             'label': i18ndc("plasma_wallpaper_org.kde.image", "@item:inlistbox", "Centered"),
                             'fillMode': Image.Pad
                         },
-                        {
-                            'label': i18ndc("plasma_wallpaper_org.kde.image", "@item:inlistbox", "Tiled"),
-                            'fillMode': Image.Tile
-                        }
             ]
 
             textRole: "label"

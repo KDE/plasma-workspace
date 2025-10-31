@@ -43,9 +43,6 @@ int main(int argc, char **argv)
         {QStringLiteral("stretch"), 0},
         {QStringLiteral("preserveAspectFit"), 1},
         {QStringLiteral("preserveAspectCrop"), 2},
-        {QStringLiteral("tile"), 3},
-        {QStringLiteral("tileVertically"), 4},
-        {QStringLiteral("tileHorizontally"), 5},
         {QStringLiteral("pad"), 6},
     };
 
