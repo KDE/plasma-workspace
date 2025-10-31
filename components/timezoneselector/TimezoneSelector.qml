@@ -103,7 +103,7 @@ Item {
             top: parent.top
             right: parent.right
         }
-        text: i18nc("@info", "The currently selected time zone is not available for visualization on this map")
+        text: i18ndc("plasmashellprivateplugin", "@info", "The currently selected time zone is not available for visualization on this map")
         visible: !root.availableMapTimeZones.includes(root.selectedTimeZone) && root.selectedTimeZone
         Kirigami.OverlayZStacking.layer: Kirigami.OverlayZStacking.FullScreen
         z: Kirigami.OverlayZStacking.z
@@ -193,7 +193,7 @@ Item {
             QQC2.Button {
                 id: zoomInButton
 
-                text: i18nc("@action:button", "Zoom in")
+                text: i18ndc("plasmashellprivateplugin", "@action:button", "Zoom in")
                 display: QQC2.AbstractButton.IconOnly
                 icon.name: "zoom-in-map-symbolic"
                 enabled: view.map.zoomLevel < view.map.maximumZoomLevel
@@ -209,7 +209,7 @@ Item {
             QQC2.Button {
                 id: zoomOutButton
 
-                text: i18nc("@action:button", "Zoom out")
+                text: i18ndc("plasmashellprivateplugin", "@action:button", "Zoom out")
                 display: QQC2.AbstractButton.IconOnly
                 icon.name: "zoom-out-map-symbolic"
                 enabled: view.map.zoomLevel > view.map.minimumZoomLevel
@@ -238,18 +238,18 @@ Item {
                 spacing: Kirigami.Units.smallSpacing
 
                 QQC2.Label {
-                    text: i18nc("@label:listbox In the context of time zone selection", "Region:")
+                    text: i18ndc("plasmashellprivateplugin", "@label:listbox In the context of time zone selection", "Region:")
                 }
 
                 QQC2.ComboBox {
                     id: regionComboBox
                     model: [chooseText, ...regionsModel]
 
-                    property string chooseText: i18nc("Placeholder for empty time zone combobox selector", "Choose…")
+                    property string chooseText: i18ndc("plasmashellprivateplugin", "Placeholder for empty time zone combobox selector", "Choose…")
 
                     displayText: currentText
 
-                    Accessible.name: i18n("Timezone region selector")
+                    Accessible.name: i18nd("plasmashellprivateplugin", "Timezone region selector")
 
                     Connections {
                         target: root
@@ -270,7 +270,7 @@ Item {
                 }
 
                 QQC2.Label {
-                    text: i18nc("@label:listbox In the context of time zone selection", "Time zone:")
+                    text: i18ndc("plasmashellprivateplugin", "@label:listbox In the context of time zone selection", "Time zone:")
                     visible: locationComboBox.visible
                 }
 
@@ -280,7 +280,7 @@ Item {
                     visible: regionComboBox.currentText !== regionComboBox.chooseText
                     displayText: currentText
 
-                    Accessible.name: i18n("Timezone location selector")
+                    Accessible.name: i18nd("plasmashellprivateplugin", "Timezone location selector")
 
                     Connections {
                         target: root
