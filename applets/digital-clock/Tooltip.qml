@@ -84,7 +84,7 @@ Item {
 
             property var subText: {
                 if (Plasmoid.configuration.showSeconds === 0) {
-                    return Qt.format(clock.dateTime, Qt.locale(), root.dateFormatString);
+                    return Qt.formatDate(clock.dateTime, Qt.locale(), root.dateFormatString);
                 } else {
                     return "%1\n%2"
                         .arg(Qt.formatTime(clock.dateTime, Qt.locale(), Locale.LongFormat))
