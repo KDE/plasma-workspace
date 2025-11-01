@@ -31,11 +31,7 @@ KPackage::Package DefaultWallpaper::defaultWallpaperPackage()
     if (!package.isValid()) {
         // Try to get a default from the plasma theme
         Plasma::Theme theme;
-        QString path = theme.wallpaperPath();
-        int index = path.indexOf(QLatin1String("/contents/images/"));
-        if (index > -1) { // We have file from package -> get path to package
-            path = path.left(index);
-        }
+        const QString path = theme.defaultWallpaperTheme();
         package.setPath(path);
     }
 
