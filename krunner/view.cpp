@@ -32,6 +32,8 @@
 #include "appadaptor.h"
 #include "x11windowscreenrelativepositioner.h"
 
+using namespace std::chrono_literals;
+
 KCONFIGGROUP_DECLARE_ENUM_QOBJECT(View, HistoryBehavior)
 
 View::View(PlasmaQuick::SharedQmlEngine *engine, QWindow *)
@@ -65,6 +67,9 @@ View::View(PlasmaQuick::SharedQmlEngine *engine, QWindow *)
     });
     connect(&m_consumer, &KActivities::Consumer::currentActivityChanged, this, &View::activityChanged);
     Q_EMIT activityChanged(m_consumer.currentActivity());
+
+    m_quitTimer.setSingleShot(true);
+    connect(&m_quitTimer, &QTimer::timeout, qApp, &QCoreApplication::quit);
 
     loadConfig();
 
@@ -143,16 +148,51 @@ void View::setFreeFloating(bool floating)
     positionOnScreen();
 }
 
+void View::resetQuitAfterHideInterval()
+{
+    if (!m_quitAfterHideInterval) {
+        return;
+    }
+
+    m_quitAfterHideInterval.reset();
+    m_quitTimer.stop();
+}
+
+void View::setQuitAfterHideInterval(std::chrono::minutes interval)
+{
+    if (m_quitAfterHideInterval == interval) {
+        return;
+    }
+
+    m_quitAfterHideInterval = interval;
+
+    if (m_hideTimer.isValid()) {
+        if (m_hideTimer.durationElapsed() >= interval) {
+            QCoreApplication::quit();
+        } else {
+            const auto waitInterval = std::chrono::duration_cast<std::chrono::milliseconds>(interval - m_hideTimer.durationElapsed());
+            m_quitTimer.start(waitInterval);
+        }
+    }
+}
+
 void View::loadConfig()
 {
     setFreeFloating(m_config.readEntry("FreeFloating", false));
     setRetainPriorSearch(m_config.readEntry("RetainPriorSearch", true));
     setPinned(m_stateData.readEntry("Pinned", false));
     setHistoryBehavior(m_config.readEntry("historyBehavior", m_historyBehavior));
+
+    if (m_config.readEntry("QuitAfterHide", true)) {
+        setQuitAfterHideInterval(std::chrono::minutes(m_config.readEntry("QuitAfterHideInterval", 5)));
+    } else {
+        resetQuitAfterHideInterval();
+    }
 }
 
 void View::showEvent(QShowEvent *event)
 {
+    m_quitTimer.stop();
     if (KWindowSystem::isPlatformX11()) {
         KX11Extras::setOnAllDesktops(winId(), true);
     }
@@ -160,6 +200,16 @@ void View::showEvent(QShowEvent *event)
     requestActivate();
     if (KWindowSystem::isPlatformX11()) {
         KX11Extras::forceActiveWindow(winId());
+    }
+}
+
+void View::hideEvent(QHideEvent *event)
+{
+    QQuickWindow::hideEvent(event);
+
+    m_hideTimer.restart();
+    if (m_quitAfterHideInterval) {
+        m_quitTimer.start(*m_quitAfterHideInterval);
     }
 }
 

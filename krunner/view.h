@@ -11,7 +11,9 @@
 #include <KPluginMetaData>
 #include <KSharedConfig>
 #include <PlasmaActivities/Consumer>
+#include <QElapsedTimer>
 #include <QQuickView>
+#include <QTimer>
 
 #include <PlasmaQuick/PlasmaWindow>
 #include <PlasmaQuick/SharedQmlEngine>
@@ -78,6 +80,9 @@ public:
         Q_EMIT retainPriorSearchChanged();
     }
 
+    void resetQuitAfterHideInterval();
+    void setQuitAfterHideInterval(std::chrono::minutes interval);
+
 Q_SIGNALS:
     void pinnedChanged();
     void helpEnabledChanged();
@@ -85,6 +90,7 @@ Q_SIGNALS:
 
 protected:
     void showEvent(QShowEvent *event) override;
+    void hideEvent(QHideEvent *event) override;
 
 public Q_SLOTS:
     void display();
@@ -115,4 +121,7 @@ private:
     X11WindowScreenRelativePositioner *m_x11Positioner = nullptr;
     HistoryBehavior m_historyBehavior = HistoryBehavior::CompletionSuggestion;
     KActivities::Consumer m_consumer;
+    std::optional<std::chrono::minutes> m_quitAfterHideInterval = std::nullopt;
+    QTimer m_quitTimer;
+    QElapsedTimer m_hideTimer;
 };
