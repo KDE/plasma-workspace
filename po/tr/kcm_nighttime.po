@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-19 00:44+0000\n"
+"POT-Creation-Date: 2025-11-01 00:48+0000\n"
 "PO-Revision-Date: 2025-09-04 14:34+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -130,8 +130,10 @@ msgid "Longitude:"
 msgstr "Boylam:"
 
 #: ui/SunPath.qml:52
-#, kde-format
-msgctxt "@info:tooltip"
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Sunrise starts at %1 and ends at %2"
+msgctxt "@info:tooltip; the variables are times of day, e.g. 07:30"
 msgid "Sunrise starts at %1 and ends at %2"
 msgstr "Gündoğumu %1 saatinde başlar ve %2 saatinde biter"
 
@@ -142,8 +144,10 @@ msgid "Sunrise"
 msgstr "Gündoğumu"
 
 #: ui/SunPath.qml:77
-#, kde-format
-msgctxt "@info:tooltip"
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Sunset starts at %1 and ends at %2"
+msgctxt "@info:tooltip; the variables are times of day, e.g. 07:30"
 msgid "Sunset starts at %1 and ends at %2"
 msgstr "Günbatımı %1 saatinde başlar ve %2 saatinde biter"
 

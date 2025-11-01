@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-19 00:44+0000\n"
+"POT-Creation-Date: 2025-11-01 00:48+0000\n"
 "PO-Revision-Date: 2025-09-04 09:52+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -132,8 +132,10 @@ msgid "Longitude:"
 msgstr "Longitud:"
 
 #: ui/SunPath.qml:52
-#, kde-format
-msgctxt "@info:tooltip"
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Sunrise starts at %1 and ends at %2"
+msgctxt "@info:tooltip; the variables are times of day, e.g. 07:30"
 msgid "Sunrise starts at %1 and ends at %2"
 msgstr "L'alba comença a les %1 i acaba a les %2"
 
@@ -144,8 +146,10 @@ msgid "Sunrise"
 msgstr "Alba"
 
 #: ui/SunPath.qml:77
-#, kde-format
-msgctxt "@info:tooltip"
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Sunset starts at %1 and ends at %2"
+msgctxt "@info:tooltip; the variables are times of day, e.g. 07:30"
 msgid "Sunset starts at %1 and ends at %2"
 msgstr "La posta del sol comença a les %1 i acaba a les %2"
 
