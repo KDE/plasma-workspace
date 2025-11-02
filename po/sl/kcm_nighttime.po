@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-01 00:48+0000\n"
-"PO-Revision-Date: 2025-09-04 07:01+0200\n"
+"PO-Revision-Date: 2025-11-01 06:22+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <kde-i18n-doc@kde.org>\n"
 "Language: sl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 3.7\n"
+"X-Generator: Poedit 3.8\n"
 
 #: ui/main.qml:26
 #, kde-format
@@ -132,12 +132,10 @@ msgid "Longitude:"
 msgstr "Zemljepisna dolžina:"
 
 #: ui/SunPath.qml:52
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Sunrise starts at %1 and ends at %2"
+#, kde-format
 msgctxt "@info:tooltip; the variables are times of day, e.g. 07:30"
 msgid "Sunrise starts at %1 and ends at %2"
-msgstr "Sončni vzhod se začne ob %1 in konča ob %2"
+msgstr "Sončni vzhod se začne ob %1 in se konča ob %2"
 
 #: ui/SunPath.qml:57
 #, kde-format
@@ -146,12 +144,10 @@ msgid "Sunrise"
 msgstr "Sončni vzhod"
 
 #: ui/SunPath.qml:77
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Sunset starts at %1 and ends at %2"
+#, kde-format
 msgctxt "@info:tooltip; the variables are times of day, e.g. 07:30"
 msgid "Sunset starts at %1 and ends at %2"
-msgstr "Sončni zahod se začne ob %1 in konča ob %2"
+msgstr "Sončni zahod se začne ob %1 in se konča ob %2"
 
 #: ui/SunPath.qml:82
 #, kde-format

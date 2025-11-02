@@ -1357,15 +1357,3 @@ msgstr "Opna fargeoppsett"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Fargeoppsett-filer (*.colors)"
-
-#~ msgid "Shading of frames and lighting (\"3D\") effects"
-#~ msgstr "Skugge på (3D-)effektar for rammer og lyssetjing"
-
-#~ msgid "Shading"
-#~ msgstr "Skuggelegging"
-
-#~ msgid "Maximum"
-#~ msgstr "Maksimum"
-
-#~ msgid "Minimum"
-#~ msgstr "Minimum"

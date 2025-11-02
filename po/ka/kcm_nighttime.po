@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-01 00:48+0000\n"
-"PO-Revision-Date: 2025-09-04 06:43+0200\n"
+"PO-Revision-Date: 2025-11-01 03:18+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.7\n"
+"X-Generator: Poedit 3.8\n"
 
 #: ui/main.qml:26
 #, kde-format
@@ -131,9 +131,7 @@ msgid "Longitude:"
 msgstr "გრძედი:"
 
 #: ui/SunPath.qml:52
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Sunrise starts at %1 and ends at %2"
+#, kde-format
 msgctxt "@info:tooltip; the variables are times of day, e.g. 07:30"
 msgid "Sunrise starts at %1 and ends at %2"
 msgstr "აისი იწყება %1-ზე და სრულდება %2-ზე"
@@ -145,9 +143,7 @@ msgid "Sunrise"
 msgstr "აისი"
 
 #: ui/SunPath.qml:77
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Sunset starts at %1 and ends at %2"
+#, kde-format
 msgctxt "@info:tooltip; the variables are times of day, e.g. 07:30"
 msgid "Sunset starts at %1 and ends at %2"
 msgstr "დაისი იწყება %1-ზე და სრულდება %2-ზე"

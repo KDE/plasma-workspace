@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-01 00:48+0000\n"
-"PO-Revision-Date: 2025-09-04 08:22+0300\n"
+"PO-Revision-Date: 2025-11-01 16:21+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -134,9 +134,7 @@ msgid "Longitude:"
 msgstr "Довгота:"
 
 #: ui/SunPath.qml:52
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Sunrise starts at %1 and ends at %2"
+#, kde-format
 msgctxt "@info:tooltip; the variables are times of day, e.g. 07:30"
 msgid "Sunrise starts at %1 and ends at %2"
 msgstr "Сонце починає сходити о %1 і завершує о %2"
@@ -148,9 +146,7 @@ msgid "Sunrise"
 msgstr "Схід"
 
 #: ui/SunPath.qml:77
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Sunset starts at %1 and ends at %2"
+#, kde-format
 msgctxt "@info:tooltip; the variables are times of day, e.g. 07:30"
 msgid "Sunset starts at %1 and ends at %2"
 msgstr "Сонце починає заходити о %1 і завершує о %2"

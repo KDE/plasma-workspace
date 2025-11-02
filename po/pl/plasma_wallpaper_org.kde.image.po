@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-28 00:44+0000\n"
-"PO-Revision-Date: 2025-10-25 09:04+0200\n"
+"PO-Revision-Date: 2025-11-01 10:09+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -171,25 +171,25 @@ msgstr "Pobierz nowe tapety…"
 #, kde-format
 msgctxt "@action:button the things being selected are wallpapers"
 msgid "Select All"
-msgstr ""
+msgstr "Zaznacz wszystkie"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:109
 #, kde-format
 msgctxt "@action:button"
 msgid "Select All Slides"
-msgstr ""
+msgstr "Zaznacz wszystkie slajdy"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:117
 #, kde-format
 msgctxt "@action:button the things being unselected are wallpapers"
 msgid "Select None"
-msgstr ""
+msgstr "Odznacz wszystkie"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:118
 #, kde-format
 msgctxt "@action:button"
 msgid "Unselect All Slides"
-msgstr ""
+msgstr "Odznacz wszystkie slajdy"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:34
 #, kde-format
