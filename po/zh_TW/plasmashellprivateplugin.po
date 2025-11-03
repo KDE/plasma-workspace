@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-14 00:44+0000\n"
+"POT-Creation-Date: 2025-11-03 00:44+0000\n"
 "PO-Revision-Date: 2025-03-26 18:22+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -375,24 +375,24 @@ msgstr "下載新的 Plasma 元件"
 msgid "Install Widget From Local File…"
 msgstr "從本地端檔案安裝元件…"
 
-#: shellprivate/widgetexplorer.cpp:495
+#: shellprivate/widgetexplorer.cpp:484
 #, kde-format
 msgctxt "@title:window"
 msgid "Get New Widgets"
 msgstr "取得新元件"
 
-#: shellprivate/widgetexplorer.cpp:514
+#: shellprivate/widgetexplorer.cpp:503
 #, kde-format
 msgid "Select Plasmoid File"
 msgstr "選擇 Plasmoid 檔"
 
-#: shellprivate/widgetexplorer.cpp:530
+#: shellprivate/widgetexplorer.cpp:519
 #, kde-format
 msgctxt "%1 is the name of an applet, %2 is an error message"
 msgid "Installing the package %1 failed: %2."
 msgstr "安裝軟體包 %1 失敗：%2。"
 
-#: shellprivate/widgetexplorer.cpp:531
+#: shellprivate/widgetexplorer.cpp:520
 #, kde-format
 msgid "Installation Failure"
 msgstr "安裝失敗"

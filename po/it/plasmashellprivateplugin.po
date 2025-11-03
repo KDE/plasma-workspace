@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-14 00:44+0000\n"
+"POT-Creation-Date: 2025-11-03 00:44+0000\n"
 "PO-Revision-Date: 2025-03-24 13:04+0100\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -375,24 +375,24 @@ msgstr "Scarica nuovi oggetti di Plasma"
 msgid "Install Widget From Local File…"
 msgstr "Installa oggetto da file locale…"
 
-#: shellprivate/widgetexplorer.cpp:495
+#: shellprivate/widgetexplorer.cpp:484
 #, kde-format
 msgctxt "@title:window"
 msgid "Get New Widgets"
 msgstr "Ottieni nuovi oggetti"
 
-#: shellprivate/widgetexplorer.cpp:514
+#: shellprivate/widgetexplorer.cpp:503
 #, kde-format
 msgid "Select Plasmoid File"
 msgstr "Seleziona un file di plasmoide"
 
-#: shellprivate/widgetexplorer.cpp:530
+#: shellprivate/widgetexplorer.cpp:519
 #, kde-format
 msgctxt "%1 is the name of an applet, %2 is an error message"
 msgid "Installing the package %1 failed: %2."
 msgstr "Installazione del pacchetto %1 non riuscita: %2."
 
-#: shellprivate/widgetexplorer.cpp:531
+#: shellprivate/widgetexplorer.cpp:520
 #, kde-format
 msgid "Installation Failure"
 msgstr "Installazione non riuscita"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-14 00:44+0000\n"
+"POT-Creation-Date: 2025-11-03 00:44+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -384,24 +384,24 @@ msgstr "नवीनप्लाज्मा विजेट् डाउनल�
 msgid "Install Widget From Local File…"
 msgstr "स्थानीयसञ्चिकातः विजेट् संस्थापयन्तु..."
 
-#: shellprivate/widgetexplorer.cpp:495
+#: shellprivate/widgetexplorer.cpp:484
 #, kde-format
 msgctxt "@title:window"
 msgid "Get New Widgets"
 msgstr "नवीनविजेट् प्राप्नुवन्तु"
 
-#: shellprivate/widgetexplorer.cpp:514
+#: shellprivate/widgetexplorer.cpp:503
 #, kde-format
 msgid "Select Plasmoid File"
 msgstr "Plasmoid File इति चिनोतु"
 
-#: shellprivate/widgetexplorer.cpp:530
+#: shellprivate/widgetexplorer.cpp:519
 #, kde-format
 msgctxt "%1 is the name of an applet, %2 is an error message"
 msgid "Installing the package %1 failed: %2."
 msgstr "%1 संकुलस्य संस्थापनं विफलम्: %2."
 
-#: shellprivate/widgetexplorer.cpp:531
+#: shellprivate/widgetexplorer.cpp:520
 #, kde-format
 msgid "Installation Failure"
 msgstr "स्थापना विफलता"
