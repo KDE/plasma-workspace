@@ -14,6 +14,7 @@
 int main(int argc, char **argv)
 {
     // read ksplashrc as config file, not ksplashqmlrc
+    QCoreApplication::setAttribute(Qt::AA_DisableSessionManager);
     QCoreApplication::setApplicationName(QStringLiteral("ksplash"));
 
     auto format = QSurfaceFormat::defaultFormat();

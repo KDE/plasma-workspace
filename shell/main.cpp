@@ -26,7 +26,6 @@
 #include <QProcess>
 #include <QQmlDebuggingEnabler>
 #include <QQuickWindow>
-#include <QSessionManager>
 #include <QSurfaceFormat>
 
 #include <KAboutData>
@@ -49,6 +48,7 @@ int main(int argc, char *argv[])
     format.setOption(QSurfaceFormat::ResetNotification);
     QSurfaceFormat::setDefaultFormat(format);
 
+    QCoreApplication::setAttribute(Qt::AA_DisableSessionManager);
     QCoreApplication::setAttribute(Qt::AA_ShareOpenGLContexts);
 
     QQuickWindow::setDefaultAlphaBuffer(true);
@@ -121,12 +121,6 @@ int main(int argc, char *argv[])
 
         // don't let the first KJob terminate us
         QCoreApplication::setQuitLockEnabled(false);
-
-        auto disableSessionManagement = [](QSessionManager &sm) {
-            sm.setRestartHint(QSessionManager::RestartNever);
-        };
-        QObject::connect(&app, &QGuiApplication::commitDataRequest, disableSessionManagement);
-        QObject::connect(&app, &QGuiApplication::saveStateRequest, disableSessionManagement);
 
         corona.setShell(cliOptions.value(shellPluginOption));
         if (!corona.kPackage().isValid()) {

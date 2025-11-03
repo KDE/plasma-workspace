@@ -6,7 +6,6 @@
 */
 
 #include <QGuiApplication>
-#include <QSessionManager>
 
 #include "fdoselectionmanager.h"
 
@@ -44,6 +43,7 @@ int main(int argc, char **argv)
     qputenv("QT_QPA_PLATFORM", "xcb");
 
     QGuiApplication::setDesktopSettingsAware(false);
+    QCoreApplication::setAttribute(Qt::AA_DisableSessionManager);
 
     QGuiApplication app(argc, argv);
 
@@ -55,12 +55,6 @@ int main(int argc, char **argv)
     KAboutData::setApplicationData(about);
 
     KCrash::initialize();
-
-    auto disableSessionManagement = [](QSessionManager &sm) {
-        sm.setRestartHint(QSessionManager::RestartNever);
-    };
-    app.connect(&app, &QGuiApplication::commitDataRequest, disableSessionManagement);
-    app.connect(&app, &QGuiApplication::saveStateRequest, disableSessionManagement);
 
     app.setQuitOnLastWindowClosed(false);
 

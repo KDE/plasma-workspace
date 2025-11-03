@@ -13,7 +13,6 @@
 #include <QDBusMessage>
 #include <QDebug>
 #include <QQuickWindow>
-#include <QSessionManager>
 #include <QSurfaceFormat>
 #include <QUrl>
 
@@ -45,6 +44,8 @@ int main(int argc, char **argv)
     // bespoke wayland code disable for now. Consider re-enabling when layer-shell support lands
     qunsetenv("QT_WAYLAND_RECONNECT");
     QQuickWindow::setDefaultAlphaBuffer(true);
+    QCoreApplication::setAttribute(Qt::AA_DisableSessionManager);
+
     QApplication app(argc, argv);
     qunsetenv("QT_WAYLAND_DISABLE_FIXED_POSITIONS");
     qputenv("QT_WAYLAND_RECONNECT", "1");
@@ -95,12 +96,6 @@ int main(int argc, char **argv)
     }
 
     KDBusService service(KDBusService::Unique | KDBusService::StartupOption(parser.isSet(replaceOption) ? KDBusService::Replace : 0));
-
-    auto disableSessionManagement = [](QSessionManager &sm) {
-        sm.setRestartHint(QSessionManager::RestartNever);
-    };
-    QObject::connect(&app, &QGuiApplication::commitDataRequest, disableSessionManagement);
-    QObject::connect(&app, &QGuiApplication::saveStateRequest, disableSessionManagement);
 
     PlasmaQuick::SharedQmlEngine sharedEngine;
     // It is important this to be done before the view is created, as it creates internally a framesvgitem for the background
