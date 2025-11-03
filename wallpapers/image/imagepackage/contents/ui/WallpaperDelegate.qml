@@ -95,7 +95,8 @@ KCM.GridDelegate {
 
         QtControls2.CheckBox {
             visible: configDialog.currentWallpaper === "org.kde.slideshow"
-            anchors.right: parent.right
+            anchors.left: parent.left
+            anchors.margins: Kirigami.Units.smallSpacing
             anchors.top: parent.top
             checked: visible ? model.checked : false
             onToggled: model.checked = checked
