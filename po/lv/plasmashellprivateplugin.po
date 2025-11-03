@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-25 00:44+0000\n"
+"POT-Creation-Date: 2025-11-03 02:33+0000\n"
 "PO-Revision-Date: 2025-05-29 16:50+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -377,24 +377,24 @@ msgstr "Lejupielādēt jaunas „Plasma“ logdaļas"
 msgid "Install Widget From Local File…"
 msgstr "Instalēt logdaļu no datnes ierīcē…"
 
-#: shellprivate/widgetexplorer.cpp:494
+#: shellprivate/widgetexplorer.cpp:483
 #, kde-format
 msgctxt "@title:window"
 msgid "Get New Widgets"
 msgstr "Iegūt jaunas logdaļas"
 
-#: shellprivate/widgetexplorer.cpp:513
+#: shellprivate/widgetexplorer.cpp:502
 #, kde-format
 msgid "Select Plasmoid File"
 msgstr "Atlasiet plazmoīda datni"
 
-#: shellprivate/widgetexplorer.cpp:529
+#: shellprivate/widgetexplorer.cpp:518
 #, kde-format
 msgctxt "%1 is the name of an applet, %2 is an error message"
 msgid "Installing the package %1 failed: %2."
 msgstr "Pakotnes „%1“ instalācija neizdevās: %2."
 
-#: shellprivate/widgetexplorer.cpp:530
+#: shellprivate/widgetexplorer.cpp:519
 #, kde-format
 msgid "Installation Failure"
 msgstr "Instalācijas kļūme"

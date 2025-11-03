@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-25 00:44+0000\n"
+"POT-Creation-Date: 2025-11-03 02:33+0000\n"
 "PO-Revision-Date: 2025-06-04 19:43+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -379,24 +379,24 @@ msgstr "Descargar nuevos elementos gráficos de Plasma"
 msgid "Install Widget From Local File…"
 msgstr "Instalar elemento gráfico desde un archivo local…"
 
-#: shellprivate/widgetexplorer.cpp:494
+#: shellprivate/widgetexplorer.cpp:483
 #, kde-format
 msgctxt "@title:window"
 msgid "Get New Widgets"
 msgstr "Obtener nuevos elementos gráficos"
 
-#: shellprivate/widgetexplorer.cpp:513
+#: shellprivate/widgetexplorer.cpp:502
 #, kde-format
 msgid "Select Plasmoid File"
 msgstr "Seleccionar archivo de plasmoide"
 
-#: shellprivate/widgetexplorer.cpp:529
+#: shellprivate/widgetexplorer.cpp:518
 #, kde-format
 msgctxt "%1 is the name of an applet, %2 is an error message"
 msgid "Installing the package %1 failed: %2."
 msgstr "La instalación del paquete %1 ha fallado: %2."
 
-#: shellprivate/widgetexplorer.cpp:530
+#: shellprivate/widgetexplorer.cpp:519
 #, kde-format
 msgid "Installation Failure"
 msgstr "Fallo de instalación"

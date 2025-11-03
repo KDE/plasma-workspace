@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-25 00:44+0000\n"
+"POT-Creation-Date: 2025-11-03 02:33+0000\n"
 "PO-Revision-Date: 2024-08-24 18:43+0300\n"
 "Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -387,24 +387,24 @@ msgstr "Λήψη νέων συστατικού Plasma"
 msgid "Install Widget From Local File…"
 msgstr "Εγκατάσταση συστατικού από τοπικό αρχείο…"
 
-#: shellprivate/widgetexplorer.cpp:494
+#: shellprivate/widgetexplorer.cpp:483
 #, kde-format
 msgctxt "@title:window"
 msgid "Get New Widgets"
 msgstr "Λήψη νέων γραφικών στοιχειών"
 
-#: shellprivate/widgetexplorer.cpp:513
+#: shellprivate/widgetexplorer.cpp:502
 #, kde-format
 msgid "Select Plasmoid File"
 msgstr "Επιλέξτε αρχείο πλασμοειδούς"
 
-#: shellprivate/widgetexplorer.cpp:529
+#: shellprivate/widgetexplorer.cpp:518
 #, kde-format
 msgctxt "%1 is the name of an applet, %2 is an error message"
 msgid "Installing the package %1 failed: %2."
 msgstr "Η εγκατάσταση του πακέτου %1 απέτυχε: %2"
 
-#: shellprivate/widgetexplorer.cpp:530
+#: shellprivate/widgetexplorer.cpp:519
 #, kde-format
 msgid "Installation Failure"
 msgstr "Αποτυχία εγκατάστασης"

@@ -1,6 +1,5 @@
 # Translation of kded_geotimezoned to Norwegian Nynorsk
 #
-# SPDX-FileCopyrightText: 2025 Karl Ove Hufthammer <karl@huftis.org>
 #
 msgid ""
 msgstr ""
