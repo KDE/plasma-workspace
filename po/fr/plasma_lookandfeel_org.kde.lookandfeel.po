@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-12 02:31+0000\n"
-"PO-Revision-Date: 2025-05-17 09:46+0200\n"
+"PO-Revision-Date: 2025-07-30 09:12+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -144,7 +144,7 @@ msgstr "Horloge :"
 #, kde-format
 msgctxt "@option:check"
 msgid "Keep visible when unlocking prompt disappears"
-msgstr "Conserver visible lorsque l'invite de déverrouillage disparaît"
+msgstr "Conserver visible lorsque l'invite de déverrouillage disparait"
 
 #: contents/lockscreen/config.qml:33
 #, kde-format
