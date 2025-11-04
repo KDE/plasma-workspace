@@ -82,7 +82,10 @@ StackView {
             topUrl: snapshot.top,
             blendFactor: snapshot.blendFactor,
             fillMode: fillMode,
-            sourceSize: sourceSize
+            sourceSize: sourceSize,
+            implicitWidth: root.width,
+            implicitHeight: root.height,
+            visible: false,
         });
         if (!nextItem) {
             console.warn("Failed to instantiate DayNightImage:", baseImage.errorString());

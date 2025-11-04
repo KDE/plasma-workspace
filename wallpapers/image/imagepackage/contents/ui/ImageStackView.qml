@@ -93,6 +93,9 @@ QQC2.StackView {
             "color": view.configColor,
             "blur": view.blur,
             "parent": view,
+            "implicitWidth": view.width,
+            "implicitHeight": view.height,
+            "visible": false,
         });
         if (!pendingImage) {
             console.warn(baseImage.errorString());
@@ -134,8 +137,9 @@ QQC2.StackView {
     }
 
     replaceEnter: Transition {
-        OpacityAnimator {
+        NumberAnimation {
             id: replaceEnterOpacityAnimator
+            property: "opacity"
             from: 0
             to: 1
             // The value is to keep compatible with the old feeling defined by "TransitionAnimationDuration" (default: 1000)
