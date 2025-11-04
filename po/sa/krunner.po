@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-14 00:44+0000\n"
+"POT-Creation-Date: 2025-11-04 00:44+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -29,47 +29,47 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "skkalwar999@gmail.com"
 
-#: main.cpp:57 view.cpp:50
+#: main.cpp:58 view.cpp:50
 #, kde-format
 msgid "KRunner"
 msgstr "लॉकर"
 
-#: main.cpp:57
+#: main.cpp:58
 #, kde-format
 msgid "Run Command interface"
 msgstr "Command अन्तरफलकं चालयन्तु"
 
-#: main.cpp:63
+#: main.cpp:64
 #, kde-format
 msgid "Use the clipboard contents as query for KRunner"
 msgstr "KRunner कृते प्रश्नरूपेण क्लिप्बोर्डसामग्रीणां उपयोगं कुर्वन्तु"
 
-#: main.cpp:64
+#: main.cpp:65
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
 msgstr "पृष्ठभूमितः KRunner आरभत, न दर्शयतु ।"
 
-#: main.cpp:65
+#: main.cpp:66
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "विद्यमानं दृष्टान्तं प्रतिस्थापयन्तु"
 
-#: main.cpp:66
+#: main.cpp:67
 #, kde-format
 msgid "Show only results from the given plugin"
 msgstr "केवलं दत्तस्य प्लगिन् तः परिणामान् दर्शयतु"
 
-#: main.cpp:67
+#: main.cpp:68
 #, kde-format
 msgid "List available plugins"
 msgstr "उपलब्धप्लगिन्स् सूचीबद्धं कुर्वन्तु"
 
-#: main.cpp:74
+#: main.cpp:75
 #, kde-format
 msgid "The query to run, only used if -c is not provided"
 msgstr "चालयितुं प्रश्नः, केवलं तदा एव उपयुज्यते यदा -c न प्रदत्तं भवति"
 
-#: main.cpp:83
+#: main.cpp:84
 #, kde-format
 msgctxt "Header for command line output"
 msgid "Available KRunner plugins, pluginId"

@@ -26,7 +26,7 @@ msgid ""
 "Color temperature begins changing to night time at %1 and is fully changed "
 "by %2"
 msgstr ""
-"La température de couleur de nuit commence à apparaître à %1 et est "
+"La température de couleur de nuit commence à apparaitre à %1 et est "
 "entièrement installée à %2"
 
 #: ui/DayNightView.qml:157
@@ -35,7 +35,7 @@ msgid ""
 "Color temperature begins changing to day time at %1 and is fully changed by "
 "%2"
 msgstr ""
-"La température de couleur de jour commence à apparaître à %1 et est "
+"La température de couleur de jour commence à apparaitre à %1 et est "
 "entièrement installée à %2"
 
 #: ui/main.qml:39

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-25 00:44+0000\n"
+"POT-Creation-Date: 2025-11-04 00:44+0000\n"
 "PO-Revision-Date: 2016-12-18 21:56+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -196,12 +196,12 @@ msgstr ""
 msgid "Lists the available options for user feedback"
 msgstr ""
 
-#: main.cpp:170
+#: main.cpp:164
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Plasma ne može da se pokrene"
 
-#: main.cpp:171
+#: main.cpp:165
 #, fuzzy, kde-format
 #| msgid ""
 #| "Plasma is unable to start as it could not correctly use OpenGL 2.\n"

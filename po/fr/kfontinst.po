@@ -77,7 +77,7 @@ msgstr "(C) Craig Drummond, 2007"
 #, kde-format
 msgid "Makes the dialog transient for a window specified by windowHandle"
 msgstr ""
-"Rend la boîte de dialogue temporaire pour une fenêtre définie par son "
+"Rend la boite de dialogue temporaire pour une fenêtre définie par son "
 "identifiant « windowHandle »"
 
 #: apps/Installer.cpp:127
@@ -1611,7 +1611,7 @@ msgstr "Chaîne d'aperçu"
 #: viewpart/FontViewPart.cpp:406
 #, kde-format
 msgid "Please enter new string:"
-msgstr "Veuillez saisir la nouvelle chaîne :"
+msgstr "Veuillez saisir la nouvelle chaine :"
 
 #. i18n: ectx: ToolBar (mainToolBar)
 #: viewpart/kfontviewpart.rc:4
@@ -1918,7 +1918,7 @@ msgstr "Alphanumériques entourés"
 
 #: viewpart/UnicodeBlocks.h:85
 msgid "Box Drawing"
-msgstr "Forme de boîte"
+msgstr "Forme de boite"
 
 #: viewpart/UnicodeBlocks.h:86
 msgid "Block Elements"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-14 00:44+0000\n"
+"POT-Creation-Date: 2025-11-04 00:44+0000\n"
 "PO-Revision-Date: 2024-10-02 18:11+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -27,47 +27,47 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "wantoyek@gmail.com"
 
-#: main.cpp:57 view.cpp:50
+#: main.cpp:58 view.cpp:50
 #, kde-format
 msgid "KRunner"
 msgstr "KRunner"
 
-#: main.cpp:57
+#: main.cpp:58
 #, kde-format
 msgid "Run Command interface"
 msgstr "Antarmuka Run Command"
 
-#: main.cpp:63
+#: main.cpp:64
 #, kde-format
 msgid "Use the clipboard contents as query for KRunner"
 msgstr "Gunakan konten papan klip sebagai query untuk KRunner"
 
-#: main.cpp:64
+#: main.cpp:65
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
 msgstr "Mulaikan KRunner di latarbelakang, jangan menampilkannya."
 
-#: main.cpp:65
+#: main.cpp:66
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Ganti sebuah instansi yang ada"
 
-#: main.cpp:66
+#: main.cpp:67
 #, kde-format
 msgid "Show only results from the given plugin"
 msgstr "Hanya menampilkan hasil dari  plugin yang diberikan"
 
-#: main.cpp:67
+#: main.cpp:68
 #, kde-format
 msgid "List available plugins"
 msgstr "Daftar plugin-plugin yang tersedia"
 
-#: main.cpp:74
+#: main.cpp:75
 #, kde-format
 msgid "The query to run, only used if -c is not provided"
 msgstr "Query yang dijalankan, hanya digunakan jika -c tidak disediakan"
 
-#: main.cpp:83
+#: main.cpp:84
 #, kde-format
 msgctxt "Header for command line output"
 msgid "Available KRunner plugins, pluginId"

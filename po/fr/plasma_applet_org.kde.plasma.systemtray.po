@@ -91,8 +91,8 @@ msgid ""
 "the app’s author."
 msgstr ""
 "Rechercher un paramètre dans <application>%1</application> pour désactiver "
-"son icône de boîte à miniatures avant de le faire ici. Certaines icônes "
-"d'applications dans la boîte à miniatures n’ont pas été conçues pour être "
+"son icône de boite à miniatures avant de le faire ici. Certaines icônes "
+"d'applications dans la boite à miniatures n’ont pas été conçues pour être "
 "désactivées. Ainsi, l’utilisation de ce paramètre peut entraîner un "
 "comportement inattendu. <nl/><nl/>Veuillez utiliser ce paramètre à vos "
 "risques et périls et ne pas signaler de problèmes à KDE ou à l’auteur de "
@@ -221,7 +221,7 @@ msgstr "Laisser ouvert"
 #, kde-format
 msgid "Show all the items in the system tray in a popup"
 msgstr ""
-"Afficher tous les éléments dans la boîte à miniatures dans un menu contextuel"
+"Afficher tous les éléments dans la boite à miniatures dans un menu contextuel"
 
 #: package/contents/ui/ExpanderArrow.qml:40
 #, kde-format

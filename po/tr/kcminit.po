@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminit\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-09 01:39+0000\n"
+"POT-Creation-Date: 2025-11-04 00:44+0000\n"
 "PO-Revision-Date: 2024-03-13 20:20+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -29,23 +29,23 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "tulliana@gmail.com"
 
-#: main.cpp:168
+#: main.cpp:169
 #, kde-format
 msgid "KCMInit"
 msgstr "KCMInit"
 
-#: main.cpp:170
+#: main.cpp:171
 #, kde-format
 msgid "KCMInit - runs startup initialization for Control Modules."
 msgstr ""
 "KCMInit — Denetim Masası modülleri için açılış başlatıcılarını çalıştırır."
 
-#: main.cpp:176
+#: main.cpp:177
 #, kde-format
 msgid "List modules that are run at startup"
 msgstr "Başlangıçta çalıştırılacak modülleri listele"
 
-#: main.cpp:177
+#: main.cpp:178
 #, kde-format
 msgid "Configuration module to run"
 msgstr "Çalıştırmak için yapılandırma modülü"

@@ -113,7 +113,7 @@ msgid ""
 msgstr ""
 "Impossible de trouver un composant graphique « Notifications » nécessaire "
 "pour afficher les notifications. Veuillez vous assurer qu'il est activé soit "
-"dans la boîte à miniatures, soit comme un composant graphique autonome."
+"dans la boite à miniatures, soit comme un composant graphique autonome."
 
 #: ui/main.qml:107
 #, kde-format

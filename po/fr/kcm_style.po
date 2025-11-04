@@ -41,7 +41,7 @@ msgstr "%1 n'est pas une archive de thème GTK valable."
 #, kde-format
 msgid "There was an error loading the configuration dialog for this style."
 msgstr ""
-"Une erreur s'est produite lors du chargement de la boîte de dialogue de "
+"Une erreur s'est produite lors du chargement de la boite de dialogue de "
 "configuration de ce style."
 
 #: kcmstyle.cpp:276

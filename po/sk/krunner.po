@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-14 00:44+0000\n"
+"POT-Creation-Date: 2025-11-04 00:44+0000\n"
 "PO-Revision-Date: 2023-11-11 15:20+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -27,47 +27,47 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "wizzardsk@gmail.com,galko.ferdinand@gmail.com"
 
-#: main.cpp:57 view.cpp:50
+#: main.cpp:58 view.cpp:50
 #, kde-format
 msgid "KRunner"
 msgstr "KRunner"
 
-#: main.cpp:57
+#: main.cpp:58
 #, kde-format
 msgid "Run Command interface"
 msgstr "Rozhranie pre spúšťanie príkazov"
 
-#: main.cpp:63
+#: main.cpp:64
 #, kde-format
 msgid "Use the clipboard contents as query for KRunner"
 msgstr "Použite obsah schránky ako dopyt pre KRunner"
 
-#: main.cpp:64
+#: main.cpp:65
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
 msgstr "Spustiť KRunner v pozadí, ale nezobraziť ho."
 
-#: main.cpp:65
+#: main.cpp:66
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Nahradiť existujúcu inštanciu"
 
-#: main.cpp:66
+#: main.cpp:67
 #, kde-format
 msgid "Show only results from the given plugin"
 msgstr "Zobraziť iba výsledky z daného zásuvného modulu"
 
-#: main.cpp:67
+#: main.cpp:68
 #, kde-format
 msgid "List available plugins"
 msgstr "Zobraziť dostupné doplnky"
 
-#: main.cpp:74
+#: main.cpp:75
 #, kde-format
 msgid "The query to run, only used if -c is not provided"
 msgstr "Dotaz na spustenie sa použije, iba ak nie je zadaný -c"
 
-#: main.cpp:83
+#: main.cpp:84
 #, kde-format
 msgctxt "Header for command line output"
 msgid "Available KRunner plugins, pluginId"
