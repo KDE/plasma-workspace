@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-15 02:35+0000\n"
-"PO-Revision-Date: 2025-06-21 18:57+0200\n"
+"PO-Revision-Date: 2025-10-06 11:18+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 25.04.2\n"
+"X-Generator: Lokalize 25.08.1\n"
 "X-Text-Markup: kde4\n"
 
 #, kde-format
@@ -304,13 +304,13 @@ msgstr "Clavier visuel désactivé"
 #, kde-format
 msgctxt "power management was inhibited, keep short"
 msgid "Sleep and Screen Locking Blocked"
-msgstr "Mise en veille etverrouillage d'écran bloqués"
+msgstr "Mise en veille et verrouillage d'écran bloqués"
 
 #: osd.cpp:203
 #, kde-format
 msgctxt "power management was uninhibited, keep short"
 msgid "Sleep and Screen Locking Unblocked"
-msgstr "Mise en veilleet verrouillage d'écran débloqués"
+msgstr "Mise en veille et verrouillage d'écran débloqués"
 
 #: osd.cpp:213
 #, kde-format
@@ -358,7 +358,7 @@ msgstr "Afficher la configuration du panneau"
 #, kde-format
 msgctxt "Percentage value"
 msgid "%1%"
-msgstr ""
+msgstr "%1 %"
 
 #: shellcontainmentconfig.cpp:106
 #, kde-format

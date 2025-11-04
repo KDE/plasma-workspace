@@ -304,7 +304,7 @@ msgstr ""
 "fenêtres, même s'il est activé. En effet, un navigateur Internet peut, par "
 "exemple, mettre en surbrillance une URL dans la barre d'adresses pendant la "
 "saisie. Ainsi, le menu s'afficherait pour chaque appui de touche.<nl/><nl/"
-">Si le menu d'actions apparaît de manière inattendue lors de l'utilisation "
+">Si le menu d'actions apparait de manière inattendue lors de l'utilisation "
 "d'une application particulière, alors, ajoutez-le à cette liste. "
 "<link>Comment trouver le nom à saisir</link>."
 
