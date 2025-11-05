@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-02 00:44+0000\n"
+"POT-Creation-Date: 2025-11-05 00:46+0000\n"
 "PO-Revision-Date: 2024-09-30 21:48+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -72,12 +72,17 @@ msgid "A USB device has been disconnected."
 msgstr "Peranti USB telah tercabut."
 
 #: devicenotifications.cpp:499
-#, fuzzy, kde-format
-#| msgctxt "@title:notifications"
-#| msgid "USB Device Detected"
+#, kde-format
 msgctxt "@title:notifications"
-msgid "USB Device Went Away"
-msgstr "Peranti USB Terdeteksi"
+msgid "USB Device Removed"
+msgstr "Peranti USB Terlepas"
+
+#, fuzzy
+#~| msgctxt "@title:notifications"
+#~| msgid "USB Device Detected"
+#~ msgctxt "@title:notifications"
+#~ msgid "USB Device Went Away"
+#~ msgstr "Peranti USB Terdeteksi"
 
 #~ msgid "A display has been plugged in."
 #~ msgstr "Layar telah tercolok."
@@ -87,7 +92,3 @@ msgstr "Peranti USB Terdeteksi"
 
 #~ msgid "A USB device has been plugged in."
 #~ msgstr "Peranti USB telah tercolok."
-
-#~ msgctxt "@title:notifications"
-#~ msgid "USB Device Removed"
-#~ msgstr "Peranti USB Terlepas"

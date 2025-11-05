@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-02 00:44+0000\n"
+"POT-Creation-Date: 2025-11-05 00:46+0000\n"
 "PO-Revision-Date: 2024-12-13 19:09+0530\n"
 "Last-Translator: Kali <EMAIL@ADDRESS>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -72,12 +72,17 @@ msgid "A USB device has been disconnected."
 msgstr "एकं USB-यन्त्रं अनप्लग् कृतम् अस्ति ।"
 
 #: devicenotifications.cpp:499
-#, fuzzy, kde-format
-#| msgctxt "@title:notifications"
-#| msgid "USB Device Detected"
+#, kde-format
 msgctxt "@title:notifications"
-msgid "USB Device Went Away"
-msgstr "USB उपकरणं ज्ञातम्"
+msgid "USB Device Removed"
+msgstr "USB उपकरणं निष्कासितम्"
+
+#, fuzzy
+#~| msgctxt "@title:notifications"
+#~| msgid "USB Device Detected"
+#~ msgctxt "@title:notifications"
+#~ msgid "USB Device Went Away"
+#~ msgstr "USB उपकरणं ज्ञातम्"
 
 #~ msgid "A display has been plugged in."
 #~ msgstr "एकं प्रदर्शनं प्लग् कृतम् अस्ति ।"
@@ -87,7 +92,3 @@ msgstr "USB उपकरणं ज्ञातम्"
 
 #~ msgid "A USB device has been plugged in."
 #~ msgstr "एकं USB-यन्त्रं प्लग्-इन् कृतम् अस्ति ।"
-
-#~ msgctxt "@title:notifications"
-#~ msgid "USB Device Removed"
-#~ msgstr "USB उपकरणं निष्कासितम्"

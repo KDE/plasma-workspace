@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-02 00:44+0000\n"
+"POT-Creation-Date: 2025-11-05 00:46+0000\n"
 "PO-Revision-Date: 2024-11-04 22:01\n"
 "Last-Translator: Zmicier Turok <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -77,12 +77,17 @@ msgid "A USB device has been disconnected."
 msgstr "USB-прылада адлучаная."
 
 #: devicenotifications.cpp:499
-#, fuzzy, kde-format
-#| msgctxt "@title:notifications"
-#| msgid "USB Device Detected"
+#, kde-format
 msgctxt "@title:notifications"
-msgid "USB Device Went Away"
-msgstr "Выяўлена USB-прылада"
+msgid "USB Device Removed"
+msgstr "USB-прылада адлучаная"
+
+#, fuzzy
+#~| msgctxt "@title:notifications"
+#~| msgid "USB Device Detected"
+#~ msgctxt "@title:notifications"
+#~ msgid "USB Device Went Away"
+#~ msgstr "Выяўлена USB-прылада"
 
 #~ msgid "A display has been plugged in."
 #~ msgstr "Дысплэй быў падлучаны."
@@ -92,7 +97,3 @@ msgstr "Выяўлена USB-прылада"
 
 #~ msgid "A USB device has been plugged in."
 #~ msgstr "USB-прылада падлучаная."
-
-#~ msgctxt "@title:notifications"
-#~ msgid "USB Device Removed"
-#~ msgstr "USB-прылада адлучаная"

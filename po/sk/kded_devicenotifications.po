@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kded_devicenotifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-02 00:44+0000\n"
+"POT-Creation-Date: 2025-11-05 00:46+0000\n"
 "PO-Revision-Date: 2023-12-09 09:39+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -70,13 +70,14 @@ msgid "A USB device has been disconnected."
 msgstr ""
 
 #: devicenotifications.cpp:499
-#, fuzzy, kde-format
-#| msgctxt "@title:notifications"
-#| msgid "USB Device Detected"
+#, kde-format
 msgctxt "@title:notifications"
-msgid "USB Device Went Away"
-msgstr "Zistilo sa USB zariadenie"
+msgid "USB Device Removed"
+msgstr "USB zariadenie odstránené"
 
+#, fuzzy
+#~| msgctxt "@title:notifications"
+#~| msgid "USB Device Detected"
 #~ msgctxt "@title:notifications"
-#~ msgid "USB Device Removed"
-#~ msgstr "USB zariadenie odstránené"
+#~ msgid "USB Device Went Away"
+#~ msgstr "Zistilo sa USB zariadenie"

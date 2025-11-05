@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-02 00:44+0000\n"
+"POT-Creation-Date: 2025-11-05 00:46+0000\n"
 "PO-Revision-Date: 2025-10-05 00:26+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -69,8 +69,12 @@ msgstr "A fost deconectat un dispozitiv USB."
 #: devicenotifications.cpp:499
 #, kde-format
 msgctxt "@title:notifications"
-msgid "USB Device Went Away"
-msgstr "Dispozitivul USB a dispărut"
+msgid "USB Device Removed"
+msgstr "Dispozitiv USB eliminat"
+
+#~ msgctxt "@title:notifications"
+#~ msgid "USB Device Went Away"
+#~ msgstr "Dispozitivul USB a dispărut"
 
 #, fuzzy
 #~| msgid "A USB device has been plugged in."
@@ -82,7 +86,3 @@ msgstr "Dispozitivul USB a dispărut"
 
 #~ msgid "A USB device has been plugged in."
 #~ msgstr "A fost atașat un dispozitiv USB."
-
-#~ msgctxt "@title:notifications"
-#~ msgid "USB Device Removed"
-#~ msgstr "Dispozitiv USB eliminat"

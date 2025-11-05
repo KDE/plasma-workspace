@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-02 00:44+0000\n"
+"POT-Creation-Date: 2025-11-05 00:46+0000\n"
 "PO-Revision-Date: 2024-08-09 16:11+0400\n"
 "Last-Translator: Khayyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -72,12 +72,17 @@ msgid "A USB device has been disconnected."
 msgstr "USB cihaz çıxarıldı."
 
 #: devicenotifications.cpp:499
-#, fuzzy, kde-format
-#| msgctxt "@title:notifications"
-#| msgid "USB Device Detected"
+#, kde-format
 msgctxt "@title:notifications"
-msgid "USB Device Went Away"
-msgstr "USB cihaz aşkarlandı"
+msgid "USB Device Removed"
+msgstr "USB cihaz çıxarıldı"
+
+#, fuzzy
+#~| msgctxt "@title:notifications"
+#~| msgid "USB Device Detected"
+#~ msgctxt "@title:notifications"
+#~ msgid "USB Device Went Away"
+#~ msgstr "USB cihaz aşkarlandı"
 
 #~ msgid "A display has been plugged in."
 #~ msgstr "Ekran qoşulub."
@@ -87,7 +92,3 @@ msgstr "USB cihaz aşkarlandı"
 
 #~ msgid "A USB device has been plugged in."
 #~ msgstr "USB cihaz qoşuldu."
-
-#~ msgctxt "@title:notifications"
-#~ msgid "USB Device Removed"
-#~ msgstr "USB cihaz çıxarıldı"

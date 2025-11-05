@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-02 00:44+0000\n"
+"POT-Creation-Date: 2025-11-05 00:46+0000\n"
 "PO-Revision-Date: 2025-07-08 12:37+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -69,8 +69,12 @@ msgstr "Пристрій USB від'єднано."
 #: devicenotifications.cpp:499
 #, kde-format
 msgctxt "@title:notifications"
-msgid "USB Device Went Away"
-msgstr "Пристрій USB зник"
+msgid "USB Device Removed"
+msgstr "Вилучено пристрій USB"
+
+#~ msgctxt "@title:notifications"
+#~ msgid "USB Device Went Away"
+#~ msgstr "Пристрій USB зник"
 
 #~ msgid "A display has been plugged in."
 #~ msgstr "Дисплей з'єднано."
@@ -80,7 +84,3 @@ msgstr "Пристрій USB зник"
 
 #~ msgid "A USB device has been plugged in."
 #~ msgstr "З'єднано пристрій USB."
-
-#~ msgctxt "@title:notifications"
-#~ msgid "USB Device Removed"
-#~ msgstr "Вилучено пристрій USB"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-02 00:44+0000\n"
+"POT-Creation-Date: 2025-11-05 00:46+0000\n"
 "PO-Revision-Date: 2025-09-17 13:06+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -69,8 +69,12 @@ msgstr "USB-tæki var aftengt."
 #: devicenotifications.cpp:499
 #, kde-format
 msgctxt "@title:notifications"
-msgid "USB Device Went Away"
-msgstr "USB-tæki var tekið burt"
+msgid "USB Device Removed"
+msgstr "USB-tæki fjarlægt"
+
+#~ msgctxt "@title:notifications"
+#~ msgid "USB Device Went Away"
+#~ msgstr "USB-tæki var tekið burt"
 
 #~ msgid "A display has been plugged in."
 #~ msgstr "Skjá var stungið í samband."
@@ -80,7 +84,3 @@ msgstr "USB-tæki var tekið burt"
 
 #~ msgid "A USB device has been plugged in."
 #~ msgstr "USB-tæki hefur verið tengt."
-
-#~ msgctxt "@title:notifications"
-#~ msgid "USB Device Removed"
-#~ msgstr "USB-tæki fjarlægt"

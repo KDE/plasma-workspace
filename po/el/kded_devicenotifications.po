@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-02 00:44+0000\n"
+"POT-Creation-Date: 2025-11-05 00:46+0000\n"
 "PO-Revision-Date: 2024-09-13 18:18+0300\n"
 "Last-Translator: Antonis G. <capoiosct@gmail.com>\n"
 "Language-Team: el <kde-i18n-el@kde.org>\n"
@@ -72,12 +72,17 @@ msgid "A USB device has been disconnected."
 msgstr "Μια συσκευή USB έχει αποσυνδεθεί."
 
 #: devicenotifications.cpp:499
-#, fuzzy, kde-format
-#| msgctxt "@title:notifications"
-#| msgid "USB Device Detected"
+#, kde-format
 msgctxt "@title:notifications"
-msgid "USB Device Went Away"
-msgstr "Ανιχνεύθηκε συσκευή USB"
+msgid "USB Device Removed"
+msgstr "Η συσκευή USB αφαιρέθηκε"
+
+#, fuzzy
+#~| msgctxt "@title:notifications"
+#~| msgid "USB Device Detected"
+#~ msgctxt "@title:notifications"
+#~ msgid "USB Device Went Away"
+#~ msgstr "Ανιχνεύθηκε συσκευή USB"
 
 #~ msgid "A display has been plugged in."
 #~ msgstr "Μια οθόνη έχει συνδεθεί."
@@ -87,7 +92,3 @@ msgstr "Ανιχνεύθηκε συσκευή USB"
 
 #~ msgid "A USB device has been plugged in."
 #~ msgstr "Μια συσκευή USB έχει συνδεθεί."
-
-#~ msgctxt "@title:notifications"
-#~ msgid "USB Device Removed"
-#~ msgstr "Η συσκευή USB αφαιρέθηκε"

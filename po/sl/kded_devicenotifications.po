@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-02 00:44+0000\n"
+"POT-Creation-Date: 2025-11-05 00:46+0000\n"
 "PO-Revision-Date: 2025-07-08 06:45+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -69,8 +69,12 @@ msgstr "Naprava USB je bila odklopljena."
 #: devicenotifications.cpp:499
 #, kde-format
 msgctxt "@title:notifications"
-msgid "USB Device Went Away"
-msgstr "Naprava USB je šla proč"
+msgid "USB Device Removed"
+msgstr "Naprava USB odstranjena"
+
+#~ msgctxt "@title:notifications"
+#~ msgid "USB Device Went Away"
+#~ msgstr "Naprava USB je šla proč"
 
 #~ msgid "A display has been plugged in."
 #~ msgstr "Zaslon je bil priključen."
@@ -80,7 +84,3 @@ msgstr "Naprava USB je šla proč"
 
 #~ msgid "A USB device has been plugged in."
 #~ msgstr "Naprava USB je bila priključena."
-
-#~ msgctxt "@title:notifications"
-#~ msgid "USB Device Removed"
-#~ msgstr "Naprava USB odstranjena"

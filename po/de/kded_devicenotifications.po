@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kded_devicenotifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-02 00:44+0000\n"
+"POT-Creation-Date: 2025-11-05 00:46+0000\n"
 "PO-Revision-Date: 2025-09-20 21:51+0200\n"
 "Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -70,8 +70,12 @@ msgstr "Ein USB-Gerät wurde getrennt."
 #: devicenotifications.cpp:499
 #, kde-format
 msgctxt "@title:notifications"
-msgid "USB Device Went Away"
-msgstr "USB-Gerät ist verschwunden"
+msgid "USB Device Removed"
+msgstr "USB-Gerät entfernt"
+
+#~ msgctxt "@title:notifications"
+#~ msgid "USB Device Went Away"
+#~ msgstr "USB-Gerät ist verschwunden"
 
 #~ msgid "A display has been plugged in."
 #~ msgstr "Ein Bildschirm ist angeschlossen worden."
@@ -81,7 +85,3 @@ msgstr "USB-Gerät ist verschwunden"
 
 #~ msgid "A USB device has been plugged in."
 #~ msgstr "Ein USB-Gerät ist angeschlossen worden."
-
-#~ msgctxt "@title:notifications"
-#~ msgid "USB Device Removed"
-#~ msgstr "USB-Gerät entfernt"

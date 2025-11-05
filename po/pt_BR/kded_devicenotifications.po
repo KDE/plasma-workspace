@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-02 00:44+0000\n"
+"POT-Creation-Date: 2025-11-05 00:46+0000\n"
 "PO-Revision-Date: 2025-07-21 08:52-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -70,8 +70,12 @@ msgstr "Um dispositivo USB foi desconectado."
 #: devicenotifications.cpp:499
 #, kde-format
 msgctxt "@title:notifications"
-msgid "USB Device Went Away"
-msgstr "O dispositivo USB desapareceu"
+msgid "USB Device Removed"
+msgstr "Dispositivo USB removido"
+
+#~ msgctxt "@title:notifications"
+#~ msgid "USB Device Went Away"
+#~ msgstr "O dispositivo USB desapareceu"
 
 #~ msgid "A display has been plugged in."
 #~ msgstr "Uma tela foi conectada."
@@ -81,7 +85,3 @@ msgstr "O dispositivo USB desapareceu"
 
 #~ msgid "A USB device has been plugged in."
 #~ msgstr "Um dispositivo USB foi conectado."
-
-#~ msgctxt "@title:notifications"
-#~ msgid "USB Device Removed"
-#~ msgstr "Dispositivo USB removido"

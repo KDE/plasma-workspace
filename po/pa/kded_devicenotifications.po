@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-02 00:44+0000\n"
+"POT-Creation-Date: 2025-11-05 00:46+0000\n"
 "PO-Revision-Date: 2025-09-15 09:59-0500\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -68,8 +68,12 @@ msgstr "USB ਡਿਵਾਈਸ ਨੂੰ ਡਿਸ-ਕਨੈਕਟ ਕੀਤਾ 
 #: devicenotifications.cpp:499
 #, kde-format
 msgctxt "@title:notifications"
-msgid "USB Device Went Away"
-msgstr "USB ਡਿਵਾਈਸ ਦੂਰ ਗਿਆ"
+msgid "USB Device Removed"
+msgstr "USB ਡਿਵਾਈਸ ਨੂੰ ਹਟਾਇਆ"
+
+#~ msgctxt "@title:notifications"
+#~ msgid "USB Device Went Away"
+#~ msgstr "USB ਡਿਵਾਈਸ ਦੂਰ ਗਿਆ"
 
 #~ msgid "A display has been plugged in."
 #~ msgstr "ਡਿਸਪਲੇਅ ਦਾ ਪਲੱਗ ਲਾਇਆ ਗਿਆ।"
@@ -79,7 +83,3 @@ msgstr "USB ਡਿਵਾਈਸ ਦੂਰ ਗਿਆ"
 
 #~ msgid "A USB device has been plugged in."
 #~ msgstr "USB ਡਿਵਾਈਸ ਨੂੰ ਜੋੜਿਆ ਗਿਆ ਹੈ।"
-
-#~ msgctxt "@title:notifications"
-#~ msgid "USB Device Removed"
-#~ msgstr "USB ਡਿਵਾਈਸ ਨੂੰ ਹਟਾਇਆ"

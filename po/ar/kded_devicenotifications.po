@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-02 00:44+0000\n"
+"POT-Creation-Date: 2025-11-05 00:46+0000\n"
 "PO-Revision-Date: 2025-07-14 20:07+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -69,8 +69,12 @@ msgstr "فُصِل جهاز يو اس بي."
 #: devicenotifications.cpp:499
 #, kde-format
 msgctxt "@title:notifications"
-msgid "USB Device Went Away"
-msgstr "اختفى جهاز يو اس بي"
+msgid "USB Device Removed"
+msgstr "أزيل جهاز يو اس بي"
+
+#~ msgctxt "@title:notifications"
+#~ msgid "USB Device Went Away"
+#~ msgstr "اختفى جهاز يو اس بي"
 
 #~ msgid "A display has been plugged in."
 #~ msgstr "وُصِلت شاشة"
@@ -80,7 +84,3 @@ msgstr "اختفى جهاز يو اس بي"
 
 #~ msgid "A USB device has been plugged in."
 #~ msgstr "وُصِل جهاز يو اس بي."
-
-#~ msgctxt "@title:notifications"
-#~ msgid "USB Device Removed"
-#~ msgstr "أزيل جهاز يو اس بي"

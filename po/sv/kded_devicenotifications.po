@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-02 00:44+0000\n"
+"POT-Creation-Date: 2025-11-05 00:46+0000\n"
 "PO-Revision-Date: 2025-07-28 18:49+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -68,8 +68,12 @@ msgstr "En USB-enhet har bortkopplats."
 #: devicenotifications.cpp:499
 #, kde-format
 msgctxt "@title:notifications"
-msgid "USB Device Went Away"
-msgstr "USB-enhet försvann"
+msgid "USB Device Removed"
+msgstr "USB-enhet borttagen"
+
+#~ msgctxt "@title:notifications"
+#~ msgid "USB Device Went Away"
+#~ msgstr "USB-enhet försvann"
 
 #~ msgid "A display has been plugged in."
 #~ msgstr "En bildskärm har kopplats in."
@@ -79,7 +83,3 @@ msgstr "USB-enhet försvann"
 
 #~ msgid "A USB device has been plugged in."
 #~ msgstr "En USB-enhet har kopplats in."
-
-#~ msgctxt "@title:notifications"
-#~ msgid "USB Device Removed"
-#~ msgstr "USB-enhet borttagen"

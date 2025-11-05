@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-02 00:44+0000\n"
+"POT-Creation-Date: 2025-11-05 00:46+0000\n"
 "PO-Revision-Date: 2025-08-05 16:54+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -70,8 +70,12 @@ msgstr "USB įrenginys atjungtas."
 #: devicenotifications.cpp:499
 #, kde-format
 msgctxt "@title:notifications"
-msgid "USB Device Went Away"
-msgstr "USB įrenginys pradingo"
+msgid "USB Device Removed"
+msgstr "USB įrenginys pašalintas"
+
+#~ msgctxt "@title:notifications"
+#~ msgid "USB Device Went Away"
+#~ msgstr "USB įrenginys pradingo"
 
 #~ msgid "A display has been plugged in."
 #~ msgstr "Prijungtas ekranas."
@@ -81,7 +85,3 @@ msgstr "USB įrenginys pradingo"
 
 #~ msgid "A USB device has been plugged in."
 #~ msgstr "Įkištas USB įrenginys."
-
-#~ msgctxt "@title:notifications"
-#~ msgid "USB Device Removed"
-#~ msgstr "USB įrenginys pašalintas"
