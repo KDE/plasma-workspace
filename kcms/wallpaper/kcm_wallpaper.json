@@ -47,6 +47,9 @@
         "Description[uk]": "Налаштовування фонового зображення",
         "Description[zh_CN]": "配置壁纸",
         "Description[zh_TW]": "設定桌布",
+        "FormFactors": [
+            "desktop"
+        ],
         "Icon": "preferences-desktop-wallpaper",
         "Name": "Wallpaper",
         "Name[ar]": "الخلفية",
