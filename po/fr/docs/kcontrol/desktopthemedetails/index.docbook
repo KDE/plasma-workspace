@@ -84,7 +84,7 @@
 <para
 >Il est possible de filtrer la liste des thèmes à l'aide du champ <guilabel
 >Rechercher...</guilabel
-> au-dessus de la grille. De plus, vous pouvez utiliser la boîte de dialogue avec liste déroulante à côté de ce champ pour afficher uniquement les <guimenuitem
+> au-dessus de la grille. De plus, vous pouvez utiliser la boite de dialogue avec liste déroulante à côté de ce champ pour afficher uniquement les <guimenuitem
 >thèmes clairs</guimenuitem
 >, les <guimenuitem
 >thèmes sombres</guimenuitem
@@ -106,7 +106,7 @@
 >, les styles sélectionnés pour la suppression sont effectivement supprimés, de sorte que vous ne pourrez pas annuler une suppression ou toutes les suppressions. </para>
 
 <para
->Si le paquet « plasma-sdk » est installé sur votre système, un bouton apparaît lors du survol d'un aperçu de thème et vous permet de démarrer <application
+>Si le paquet « plasma-sdk » est installé sur votre système, un bouton apparait lors du survol d'un aperçu de thème et vous permet de démarrer <application
 >l'explorateur de thèmes de Plasma</application
 >. </para>
 <para
@@ -122,9 +122,9 @@
 ></term>
     <listitem>
     <para
->Vous devez être connecté à Internet pour l'utiliser. Un clic sur ce bouton fera afficher une boîte de dialogue dans laquelle vous pouvez sélectionner un nouveau thème de Plasma. Un clic sur le bouton <guibutton
+>Vous devez être connecté à Internet pour l'utiliser. Un clic sur ce bouton fera afficher une boite de dialogue dans laquelle vous pouvez sélectionner un nouveau thème de Plasma. Un clic sur le bouton <guibutton
 >Installer</guibutton
-> dans la boîte de dialogue installera le thème de &plasma; sélectionné et après avoir <guibutton
+> dans la boite de dialogue installera le thème de &plasma; sélectionné et après avoir <guibutton
 >fermé</guibutton
 > l'installateur, votre nouveau thème est immédiatement disponible. </para>
     <para>
@@ -151,12 +151,12 @@
 ></term>
     <listitem>
       <para
->Si vous avez téléchargé de nouveaux thèmes à partir d'Internet, vous pouvez les utiliser pour rechercher l'emplacement de ces nouveaux thèmes téléchargés. Un clic sur ce bouton fera apparaître la boîte de dialogue de fichier de sélection d'un fichier d'archives pour le thème de &plasma; que vous avez téléchargé sur votre disque.</para>
+>Si vous avez téléchargé de nouveaux thèmes à partir d'Internet, vous pouvez les utiliser pour rechercher l'emplacement de ces nouveaux thèmes téléchargés. Un clic sur ce bouton fera apparaitre la boite de dialogue de fichier de sélection d'un fichier d'archives pour le thème de &plasma; que vous avez téléchargé sur votre disque.</para>
 
       <para
 >Un clic sur le bouton sur <guibutton
 >Ouvrir</guibutton
-> dans cette boîte de dialogue installera le thème que vous avez sélectionné et le rendre disponible dans la liste des thèmes. </para>
+> dans cette boite de dialogue installera le thème que vous avez sélectionné et le rendre disponible dans la liste des thèmes. </para>
     </listitem>
   </varlistentry>
 </variablelist>

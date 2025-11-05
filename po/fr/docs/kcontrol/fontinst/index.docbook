@@ -124,7 +124,7 @@
 <para
 >Pour installer une police, appuyez sur le bouton <guibutton
 >Installer à partir d'un fichier...</guibutton
-> et choisissez les polices désirées à partir de la boîte de dialogue. Le groupe de polices sélectionnées déterminera l'emplacement d'installation des polices.</para>
+> et choisissez les polices désirées à partir de la boite de dialogue. Le groupe de polices sélectionnées déterminera l'emplacement d'installation des polices.</para>
 <para
 >Pour désinstaller des polices, sélectionnez les polices concernées à partir de la liste et appuyez sur le bouton <inlinemediaobject
 ><imageobject
@@ -224,7 +224,7 @@
 >/usr/local/share/fonts</quote
 >, le système de gestion des polices sous-jacent (appelé <quote
 >FontConfig</quote
->) n'en verra qu'une seule. Ainsi, si vous en désinstallez une fonte, elle pourrait ré-apparaître si uniquement un seul des fichiers a été supprimé. L'exécution de outil présente une boîte de dialogue listant chaque police, possédant plusieurs fichiers et la liste correspondante des fichiers. Pour choisir un fichier à supprimer, cliquez sur la colonne contenant l'icône de la corbeille.</para>
+>) n'en verra qu'une seule. Ainsi, si vous en désinstallez une fonte, elle pourrait ré-apparaitre si uniquement un seul des fichiers a été supprimé. L'exécution de outil présente une boite de dialogue listant chaque police, possédant plusieurs fichiers et la liste correspondante des fichiers. Pour choisir un fichier à supprimer, cliquez sur la colonne contenant l'icône de la corbeille.</para>
 </sect2>
 
 <sect2 id="font-preview">
