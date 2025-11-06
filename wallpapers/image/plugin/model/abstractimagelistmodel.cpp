@@ -23,10 +23,6 @@ AbstractImageListModel::AbstractImageListModel(const QBindable<QSize> &bindableT
     });
     m_usedInConfig.setBinding(bindableUsedInConfig.makeBinding());
 
-    constexpr int maxCacheSize = 10;
-    m_backgroundTitleCache.setMaxCost(maxCacheSize);
-    m_backgroundAuthorCache.setMaxCost(maxCacheSize);
-
     connect(this, &QAbstractListModel::rowsInserted, this, &AbstractImageListModel::countChanged);
     connect(this, &QAbstractListModel::rowsRemoved, this, &AbstractImageListModel::countChanged);
     connect(this, &QAbstractListModel::modelReset, this, &AbstractImageListModel::countChanged);
@@ -72,6 +68,7 @@ void AbstractImageListModel::reload()
 
 void AbstractImageListModel::asyncGetMediaMetadata(const QString &path, const QPersistentModelIndex &index) const
 {
+#ifdef HAVE_KExiv2
     if (m_sizeJobsUrls.contains(path) || path.isEmpty()) {
         return;
     }
@@ -81,35 +78,29 @@ void AbstractImageListModel::asyncGetMediaMetadata(const QString &path, const QP
     QThreadPool::globalInstance()->start(finder);
 
     m_sizeJobsUrls.insert(path, index);
-}
-
-void AbstractImageListModel::clearCache()
-{
-    m_backgroundTitleCache.clear();
-    m_backgroundAuthorCache.clear();
+#else
+    Q_UNUSED(path)
+    Q_UNUSED(index)
+#endif
 }
 
 void AbstractImageListModel::slotMediaMetadataFound(const QString &path, const MediaMetadata &metadata)
 {
     const QPersistentModelIndex index = m_sizeJobsUrls.take(path);
 
-#if HAVE_KExiv2
+    QList<int> dirtyRoles;
+
+    m_backgroundTitleCache.insert(path, metadata.title);
     if (!metadata.title.isEmpty()) {
-        auto title = new QString(metadata.title);
-        if (m_backgroundTitleCache.insert(path, title, 1)) {
-            Q_EMIT dataChanged(index, index, {Qt::DisplayRole});
-        } else {
-            delete title;
-        }
+        dirtyRoles.append(Qt::DisplayRole);
     }
 
+    m_backgroundAuthorCache.insert(path, metadata.author);
     if (!metadata.author.isEmpty()) {
-        auto author = new QString(metadata.author);
-        if (m_backgroundAuthorCache.insert(path, author, 1)) {
-            Q_EMIT dataChanged(index, index, {AuthorRole});
-        } else {
-            delete author;
-        }
+        dirtyRoles.append(AuthorRole);
     }
-#endif
+
+    if (!dirtyRoles.isEmpty()) {
+        Q_EMIT dataChanged(index, index, dirtyRoles);
+    }
 }

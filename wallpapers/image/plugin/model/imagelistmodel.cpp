@@ -40,10 +40,8 @@ QVariant ImageListModel::data(const QModelIndex &index, int role) const
 
     switch (role) {
     case Qt::DisplayRole: {
-        const QString *const title = m_backgroundTitleCache.object(m_data.at(row));
-
-        if (title) {
-            return title->isEmpty() ? QFileInfo(m_data.at(row)).completeBaseName() : *title;
+        if (const auto it = m_backgroundTitleCache.find(m_data.at(row)); it != m_backgroundTitleCache.end()) {
+            return it->isEmpty() ? QFileInfo(m_data.at(row)).completeBaseName() : *it;
         }
 
         asyncGetMediaMetadata(m_data.at(row), QPersistentModelIndex(index));
@@ -59,10 +57,8 @@ QVariant ImageListModel::data(const QModelIndex &index, int role) const
     }
 
     case AuthorRole: {
-        const QString *const author = m_backgroundAuthorCache.object(m_data.at(row));
-
-        if (author) {
-            return *author;
+        if (const auto it = m_backgroundAuthorCache.find(m_data.at(row)); it != m_backgroundAuthorCache.end()) {
+            return *it;
         }
 
         asyncGetMediaMetadata(m_data.at(row), QPersistentModelIndex(index));
@@ -136,7 +132,6 @@ void ImageListModel::slotHandleImageFound(const QStringList &paths)
     beginResetModel();
 
     m_data = paths;
-    clearCache();
 
     endResetModel();
 
@@ -201,6 +196,9 @@ QStringList ImageListModel::removeBackground(const QUrl &url)
             f.remove();
         }
     }
+
+    m_backgroundAuthorCache.remove(path);
+    m_backgroundTitleCache.remove(path);
 
     endRemoveRows();
 

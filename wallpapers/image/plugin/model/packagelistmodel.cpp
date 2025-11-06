@@ -228,7 +228,6 @@ void PackageListModel::slotHandlePackageFound(const QList<WallpaperPackage> &pac
     beginResetModel();
 
     m_packages = packages;
-    clearCache();
 
     endResetModel();
 
