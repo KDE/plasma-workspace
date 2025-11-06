@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-04 00:44+0000\n"
+"POT-Creation-Date: 2025-11-06 15:22+0000\n"
 "PO-Revision-Date: 2024-11-06 22:00\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -164,42 +164,42 @@ msgstr "Увайсці ў рэжым рэдагавання"
 msgid "Exit Edit Mode"
 msgstr "Увайсці ў рэжым рэдагавання"
 
-#: main.cpp:82
+#: main.cpp:108
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Абалонка Plasma"
 
-#: main.cpp:95
+#: main.cpp:121
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "Уключыць сродак адладжвання QML Javascript"
 
-#: main.cpp:98
+#: main.cpp:124
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "Не перазапускаць plasma-shell пасля збояў"
 
-#: main.cpp:101
+#: main.cpp:127
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Прымусовая загрузка пададзенай убудовы абалонкі"
 
-#: main.cpp:105
+#: main.cpp:131
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Замяніць наяўны асобнік"
 
-#: main.cpp:108
+#: main.cpp:134
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "Спіс даступных параметраў для водгукаў"
 
-#: main.cpp:164
+#: main.cpp:190
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Не ўдалося запусціць Plasma"
 
-#: main.cpp:165
+#: main.cpp:191
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "
@@ -421,12 +421,12 @@ msgstr "Кіраванне працоўнымі сталамі і панэлям
 msgid "Move keyboard focus between panels"
 msgstr "Перамяшчэнне фокуса клавіятуры паміж панэлямі"
 
-#: shellcorona.cpp:2234
+#: shellcorona.cpp:2242
 #, kde-format
 msgid "Add Panel"
 msgstr "Дадаць панэль"
 
-#: shellcorona.cpp:2317
+#: shellcorona.cpp:2325
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

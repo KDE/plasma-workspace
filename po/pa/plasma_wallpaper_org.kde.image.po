@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-28 00:44+0000\n"
+"POT-Creation-Date: 2025-11-06 15:22+0000\n"
 "PO-Revision-Date: 2025-09-15 09:50-0500\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -69,20 +69,14 @@ msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "ਸੈਂਟਰ"
 
-#: imagepackage/contents/ui/config.qml:175
-#, kde-format
-msgctxt "@item:inlistbox"
-msgid "Tiled"
-msgstr "ਟਾਈਲ"
-
-#: imagepackage/contents/ui/config.qml:203
+#: imagepackage/contents/ui/config.qml:199
 #, kde-format
 msgctxt ""
 "@label:listbox part of a sentence: 'Switch dynamic wallpapers [based on]'"
 msgid "Switch dynamic wallpapers:"
 msgstr "ਡਾਇਨੇਮਿਕ ਵਾਲਪੇਪਰਾਂ ਲਈ ਬਦਲੋ:"
 
-#: imagepackage/contents/ui/config.qml:211
+#: imagepackage/contents/ui/config.qml:207
 #, fuzzy, kde-format
 #| msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 #| msgid "Based on whether the color scheme is dark or light"
@@ -90,46 +84,46 @@ msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the Plasma style is light or dark "
 msgstr "ਰੰਗ ਸਕੀਮ ਗੂੜ੍ਹੀ ਹੈ ਜਾਂ ਫਿੱਕੀ, ਉਸ ਮੁਤਾਬਕ"
 
-#: imagepackage/contents/ui/config.qml:213
+#: imagepackage/contents/ui/config.qml:209
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on the day-night cycle"
 msgstr "ਦਿਨ-ਰਾਤ ਦੇ ਚੱਕਰ ਮੁਤਾਬਕ"
 
-#: imagepackage/contents/ui/config.qml:217
+#: imagepackage/contents/ui/config.qml:213
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always use light variant"
 msgstr "ਹਮੇਸ਼ਾਂ ਫਿੱਕਾ ਰੂਪ ਵਰਤੋਂ"
 
-#: imagepackage/contents/ui/config.qml:221
+#: imagepackage/contents/ui/config.qml:217
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always use dark variant"
 msgstr "ਹਮੇਸ਼ਾਂ ਗੂੜ੍ਹਾ ਰੂਪ ਵਰਤੋਂ"
 
-#: imagepackage/contents/ui/config.qml:231
+#: imagepackage/contents/ui/config.qml:227
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
 msgstr "…ਸੰਰਚਨਾ"
 
-#: imagepackage/contents/ui/config.qml:242
+#: imagepackage/contents/ui/config.qml:238
 #, kde-format
 msgid "Background:"
 msgstr "ਬੈਕਗਰਾਊਂਡ:"
 
-#: imagepackage/contents/ui/config.qml:243
+#: imagepackage/contents/ui/config.qml:239
 #, kde-format
 msgid "Blur"
 msgstr "ਧੁੰਦਲਾ"
 
-#: imagepackage/contents/ui/config.qml:252
+#: imagepackage/contents/ui/config.qml:248
 #, kde-format
 msgid "Solid color"
 msgstr "ਇਕਸਾਰ ਰੰਗ"
 
-#: imagepackage/contents/ui/config.qml:263
+#: imagepackage/contents/ui/config.qml:259
 #, kde-format
 msgid "Select Background Color"
 msgstr "ਬੈਕਗਰਾਊਂਡ ਰੰਗ ਚੁਣੋ"
@@ -225,7 +219,7 @@ msgstr ""
 msgid "Specify the fill mode (e.g., stretch, preserveAspectCrop, etc.)"
 msgstr ""
 
-#: plasma-apply-wallpaperimage.cpp:61
+#: plasma-apply-wallpaperimage.cpp:58
 #, kde-format
 msgid ""
 "There is a stray single quote in the filename of this wallpaper (') - please "
@@ -233,28 +227,28 @@ msgid ""
 "yourself: %1"
 msgstr ""
 
-#: plasma-apply-wallpaperimage.cpp:99
+#: plasma-apply-wallpaperimage.cpp:96
 #, kde-format
 msgid "Invalid fill mode specified: %1"
 msgstr ""
 
-#: plasma-apply-wallpaperimage.cpp:115
+#: plasma-apply-wallpaperimage.cpp:112
 #, kde-format
 msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
 msgstr "ਪਲਾਜ਼ਮਾ ਵਾਲਪੇਪਰ ਲਾਉਣ ਦੌਰਾਨ ਗਲਤੀ ਆਈ:\n"
 
-#: plasma-apply-wallpaperimage.cpp:119
+#: plasma-apply-wallpaperimage.cpp:116
 #, kde-format
 msgid ""
 "Successfully set the wallpaper for all desktops to the KPackage based %1"
 msgstr "ਸਾਰੇ ਡੈਸਕਟਾਪਾਂ ਲਈ ਕੇ-ਪੈਕੇਜ ਅਧਾਰਿਤ %1 ਨੂੰ ਵਾਲਪੇਪਰ ਵਜੋਂ ਕਾਮਯਾਬੀ ਨਾਲ ਲਾਇਆ ਗਿਆ"
 
-#: plasma-apply-wallpaperimage.cpp:121
+#: plasma-apply-wallpaperimage.cpp:118
 #, kde-format
 msgid "Successfully set the wallpaper for all desktops to the image %1"
 msgstr "ਸਾਰੇ ਡੈਸਕਟਾਪਾਂ ਲਈ ਚਿੱਤਰ %1 ਨੂੰ ਵਾਲਪੇਪਰ ਵਜੋਂ ਕਾਮਯਾਬੀ ਨਾਲ ਲਾਇਆ ਗਿਆ"
 
-#: plasma-apply-wallpaperimage.cpp:128
+#: plasma-apply-wallpaperimage.cpp:125
 #, kde-format
 msgid ""
 "The file passed to be set as wallpaper does not exist, or we cannot identify "
@@ -400,6 +394,10 @@ msgstr "ਪਲਾਜ਼ਮਾ ਵਾਲਪੇਪਰ ਲਾਉਣ ਦੌਰਾਨ �
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr "kscreenlockerrc ਸੰਰਚਨਾ ਫਾਇਲ ਖੋਲ੍ਹਣ ਦੌਰਾਨ ਗਲਤੀ ਆਈ ਹੈ।"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Tiled"
+#~ msgstr "ਟਾਈਲ"
 
 #, fuzzy
 #~| msgctxt "@title:window"

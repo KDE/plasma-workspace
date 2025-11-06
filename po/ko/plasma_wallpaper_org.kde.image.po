@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-28 00:44+0000\n"
+"POT-Creation-Date: 2025-11-06 15:22+0000\n"
 "PO-Revision-Date: 2025-10-09 01:53+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -69,20 +69,14 @@ msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "가운데"
 
-#: imagepackage/contents/ui/config.qml:175
-#, kde-format
-msgctxt "@item:inlistbox"
-msgid "Tiled"
-msgstr "바둑판식 배열"
-
-#: imagepackage/contents/ui/config.qml:203
+#: imagepackage/contents/ui/config.qml:199
 #, kde-format
 msgctxt ""
 "@label:listbox part of a sentence: 'Switch dynamic wallpapers [based on]'"
 msgid "Switch dynamic wallpapers:"
 msgstr "동적 배경 그림 전환:"
 
-#: imagepackage/contents/ui/config.qml:211
+#: imagepackage/contents/ui/config.qml:207
 #, fuzzy, kde-format
 #| msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 #| msgid "Based on whether the color scheme is dark or light"
@@ -90,46 +84,46 @@ msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the Plasma style is light or dark "
 msgstr "색 구성표가 밝음인가 어두움인가에 따라서"
 
-#: imagepackage/contents/ui/config.qml:213
+#: imagepackage/contents/ui/config.qml:209
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on the day-night cycle"
 msgstr "주간-야간 전환에 따라서"
 
-#: imagepackage/contents/ui/config.qml:217
+#: imagepackage/contents/ui/config.qml:213
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always use light variant"
 msgstr "항상 밝음 항목 사용"
 
-#: imagepackage/contents/ui/config.qml:221
+#: imagepackage/contents/ui/config.qml:217
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always use dark variant"
 msgstr "항상 어두움 항목 사용"
 
-#: imagepackage/contents/ui/config.qml:231
+#: imagepackage/contents/ui/config.qml:227
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
 msgstr "설정…"
 
-#: imagepackage/contents/ui/config.qml:242
+#: imagepackage/contents/ui/config.qml:238
 #, kde-format
 msgid "Background:"
 msgstr "배경:"
 
-#: imagepackage/contents/ui/config.qml:243
+#: imagepackage/contents/ui/config.qml:239
 #, kde-format
 msgid "Blur"
 msgstr "흐리게"
 
-#: imagepackage/contents/ui/config.qml:252
+#: imagepackage/contents/ui/config.qml:248
 #, kde-format
 msgid "Solid color"
 msgstr "단색"
 
-#: imagepackage/contents/ui/config.qml:263
+#: imagepackage/contents/ui/config.qml:259
 #, kde-format
 msgid "Select Background Color"
 msgstr "배경색 선택"
@@ -226,7 +220,7 @@ msgstr ""
 msgid "Specify the fill mode (e.g., stretch, preserveAspectCrop, etc.)"
 msgstr "채우기 모드 지정(예: stretch, preserveAspectCrop 등)"
 
-#: plasma-apply-wallpaperimage.cpp:61
+#: plasma-apply-wallpaperimage.cpp:58
 #, kde-format
 msgid ""
 "There is a stray single quote in the filename of this wallpaper (') - please "
@@ -236,28 +230,28 @@ msgstr ""
 "이 배경 그림 파일 이름에 닫히지 않은 작은 따옴표(')가 있습니다. 배경 그림 작"
 "성자에게 문의해서 오류를 수정하거나 직접 파일 이름을 변경하십시오: %1"
 
-#: plasma-apply-wallpaperimage.cpp:99
+#: plasma-apply-wallpaperimage.cpp:96
 #, kde-format
 msgid "Invalid fill mode specified: %1"
 msgstr "잘못된 채우기 모드 지정됨: %1"
 
-#: plasma-apply-wallpaperimage.cpp:115
+#: plasma-apply-wallpaperimage.cpp:112
 #, kde-format
 msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
 msgstr "Plasma 바탕 화면 배경 그림을 설정하는 중 오류 발생:\n"
 
-#: plasma-apply-wallpaperimage.cpp:119
+#: plasma-apply-wallpaperimage.cpp:116
 #, kde-format
 msgid ""
 "Successfully set the wallpaper for all desktops to the KPackage based %1"
 msgstr "모든 바탕 화면의 배경 그림을 KPackage의 %1(으)로 설정함"
 
-#: plasma-apply-wallpaperimage.cpp:121
+#: plasma-apply-wallpaperimage.cpp:118
 #, kde-format
 msgid "Successfully set the wallpaper for all desktops to the image %1"
 msgstr "모든 바탕 화면의 배경 그림을 %1(으)로 설정함"
 
-#: plasma-apply-wallpaperimage.cpp:128
+#: plasma-apply-wallpaperimage.cpp:125
 #, kde-format
 msgid ""
 "The file passed to be set as wallpaper does not exist, or we cannot identify "
@@ -400,6 +394,10 @@ msgstr "Plasma 바탕 화면 배경 그림을 설정하는 중 오류 발생:<nl
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr "kscreenlockerrc 설정 파일을 여는 중 오류가 발생했습니다."
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Tiled"
+#~ msgstr "바둑판식 배열"
 
 #~ msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
 #~ msgid "At sunrise and sunset"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-04 00:44+0000\n"
+"POT-Creation-Date: 2025-11-06 15:22+0000\n"
 "PO-Revision-Date: 2025-10-06 11:12+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -160,42 +160,42 @@ msgstr "ادخل نمط التحرير"
 msgid "Exit Edit Mode"
 msgstr "اخرج من نمط التحرير"
 
-#: main.cpp:82
+#: main.cpp:108
 #, kde-format
 msgid "Plasma Shell"
 msgstr "صدفة بلازما"
 
-#: main.cpp:95
+#: main.cpp:121
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "مكّن منقّح جافاسكربت QML"
 
-#: main.cpp:98
+#: main.cpp:124
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "لا تعيد تشغيل صدفة بلازما آليًّا بعد أن تنهار"
 
-#: main.cpp:101
+#: main.cpp:127
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "أجبِر تحميل ملحقة الصّدفة المعطاة"
 
-#: main.cpp:105
+#: main.cpp:131
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "استبدل نسخة موجودة"
 
-#: main.cpp:108
+#: main.cpp:134
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "يسرد الخيارات المتاحة لمشاركة بياناتك"
 
-#: main.cpp:164
+#: main.cpp:190
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "فشل بدء بلازما"
 
-#: main.cpp:165
+#: main.cpp:191
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "
@@ -415,12 +415,12 @@ msgstr "أدر الأسطح و اللوحات…"
 msgid "Move keyboard focus between panels"
 msgstr "حرّك تركيز لوحة المفاتيح بين اللوحات"
 
-#: shellcorona.cpp:2234
+#: shellcorona.cpp:2242
 #, kde-format
 msgid "Add Panel"
 msgstr "أضف لوحة"
 
-#: shellcorona.cpp:2317
+#: shellcorona.cpp:2325
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

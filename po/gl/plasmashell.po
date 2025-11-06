@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-04 00:44+0000\n"
+"POT-Creation-Date: 2025-11-06 15:22+0000\n"
 "PO-Revision-Date: 2025-01-25 11:55+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -160,42 +160,42 @@ msgstr "Activar o modo de edición"
 msgid "Exit Edit Mode"
 msgstr "Desactivar o modo de edición"
 
-#: main.cpp:82
+#: main.cpp:108
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Shell de Plasma"
 
-#: main.cpp:95
+#: main.cpp:121
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "Activar o depurador do JavaScript de QML"
 
-#: main.cpp:98
+#: main.cpp:124
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "Non reiniciar «plasma-shell» automaticamente cando quebre."
 
-#: main.cpp:101
+#: main.cpp:127
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Obriga a cargar o complemento da shell indicado."
 
-#: main.cpp:105
+#: main.cpp:131
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Substituír unha instancia existente"
 
-#: main.cpp:108
+#: main.cpp:134
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "Lista todas as opcións dispoñíbeis de comentarios."
 
-#: main.cpp:164
+#: main.cpp:190
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Plasma non puido iniciarse"
 
-#: main.cpp:165
+#: main.cpp:191
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "
@@ -415,12 +415,12 @@ msgstr "Xestionar os escritorios e os paneis…"
 msgid "Move keyboard focus between panels"
 msgstr "Mover o foco do teclado entre paneis"
 
-#: shellcorona.cpp:2234
+#: shellcorona.cpp:2242
 #, kde-format
 msgid "Add Panel"
 msgstr "Engadir un panel"
 
-#: shellcorona.cpp:2317
+#: shellcorona.cpp:2325
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

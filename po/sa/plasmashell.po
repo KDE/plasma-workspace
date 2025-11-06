@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-04 00:44+0000\n"
+"POT-Creation-Date: 2025-11-06 15:22+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -158,42 +158,42 @@ msgstr "सम्पादन मोडं प्रविशन्तु"
 msgid "Exit Edit Mode"
 msgstr "सम्पादन मोडं प्रविशन्तु"
 
-#: main.cpp:82
+#: main.cpp:108
 #, kde-format
 msgid "Plasma Shell"
 msgstr "प्लाज्मा-शैलम्"
 
-#: main.cpp:95
+#: main.cpp:121
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "क्यू-एम-एल जावास्क्रिप्ट डिबगर सक्षमम्"
 
-#: main.cpp:98
+#: main.cpp:124
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "क्रैश अनन्तरं प्लाज्मा-शैलं पुनः न आरभत"
 
-#: main.cpp:101
+#: main.cpp:127
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "दत्तं शेल् प्लगिन् बलात् आरोपण कुर्वन्तु"
 
-#: main.cpp:105
+#: main.cpp:131
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "विद्यमानं दृष्टान्तं प्रतिस्थापयन्तु"
 
-#: main.cpp:108
+#: main.cpp:134
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "उपयोक्तृप्रतिक्रियायाः उपलब्धविकल्पान् सूचीबद्धं करोति"
 
-#: main.cpp:164
+#: main.cpp:190
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "प्लाज्मा आरम्भं कर्तुं असफलम् अभवत्"
 
-#: main.cpp:165
+#: main.cpp:191
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "
@@ -413,12 +413,12 @@ msgstr ""
 msgid "Move keyboard focus between panels"
 msgstr "फलकयोः मध्ये कीलफलक-केन्द्रीकरणं चालयन्तु"
 
-#: shellcorona.cpp:2234
+#: shellcorona.cpp:2242
 #, kde-format
 msgid "Add Panel"
 msgstr "पैनलं संयोजयति"
 
-#: shellcorona.cpp:2317
+#: shellcorona.cpp:2325
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

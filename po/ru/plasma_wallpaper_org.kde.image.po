@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-28 00:44+0000\n"
+"POT-Creation-Date: 2025-11-06 15:22+0000\n"
 "PO-Revision-Date: 2025-10-24 11:13+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -80,65 +80,59 @@ msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "По центру"
 
-#: imagepackage/contents/ui/config.qml:175
-#, kde-format
-msgctxt "@item:inlistbox"
-msgid "Tiled"
-msgstr "Черепицей"
-
-#: imagepackage/contents/ui/config.qml:203
+#: imagepackage/contents/ui/config.qml:199
 #, kde-format
 msgctxt ""
 "@label:listbox part of a sentence: 'Switch dynamic wallpapers [based on]'"
 msgid "Switch dynamic wallpapers:"
 msgstr "Смена динамических обоев:"
 
-#: imagepackage/contents/ui/config.qml:211
+#: imagepackage/contents/ui/config.qml:207
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the Plasma style is light or dark "
 msgstr "В зависимости от использования светлого или тёмного оформления "
 
-#: imagepackage/contents/ui/config.qml:213
+#: imagepackage/contents/ui/config.qml:209
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on the day-night cycle"
 msgstr "В зависимости от смены дня и ночи:"
 
-#: imagepackage/contents/ui/config.qml:217
+#: imagepackage/contents/ui/config.qml:213
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always use light variant"
 msgstr "Всегда светлый вариант"
 
-#: imagepackage/contents/ui/config.qml:221
+#: imagepackage/contents/ui/config.qml:217
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always use dark variant"
 msgstr "Всегда тёмный вариант"
 
-#: imagepackage/contents/ui/config.qml:231
+#: imagepackage/contents/ui/config.qml:227
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
 msgstr "Настроить…"
 
-#: imagepackage/contents/ui/config.qml:242
+#: imagepackage/contents/ui/config.qml:238
 #, kde-format
 msgid "Background:"
 msgstr "Фон:"
 
-#: imagepackage/contents/ui/config.qml:243
+#: imagepackage/contents/ui/config.qml:239
 #, kde-format
 msgid "Blur"
 msgstr "Размыть"
 
-#: imagepackage/contents/ui/config.qml:252
+#: imagepackage/contents/ui/config.qml:248
 #, kde-format
 msgid "Solid color"
 msgstr "Сплошной цвет"
 
-#: imagepackage/contents/ui/config.qml:263
+#: imagepackage/contents/ui/config.qml:259
 #, kde-format
 msgid "Select Background Color"
 msgstr "Выбор цвета фона"
@@ -240,7 +234,7 @@ msgstr ""
 "Укажите режим заполнения (например, растягивание, равномерное "
 "масштабирование с кадрированием и так далее)"
 
-#: plasma-apply-wallpaperimage.cpp:61
+#: plasma-apply-wallpaperimage.cpp:58
 #, kde-format
 msgid ""
 "There is a stray single quote in the filename of this wallpaper (') - please "
@@ -250,17 +244,17 @@ msgstr ""
 "Имя файла этих обоев содержит лишний символ одинарной кавычки ('). Попросите "
 "автора исправить эту ошибку или самостоятельно переименуйте файл «%1»."
 
-#: plasma-apply-wallpaperimage.cpp:99
+#: plasma-apply-wallpaperimage.cpp:96
 #, kde-format
 msgid "Invalid fill mode specified: %1"
 msgstr "Указан неверный режим заполнения: %1"
 
-#: plasma-apply-wallpaperimage.cpp:115
+#: plasma-apply-wallpaperimage.cpp:112
 #, kde-format
 msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
 msgstr "Не удалось задать обои рабочего стола Plasma:\n"
 
-#: plasma-apply-wallpaperimage.cpp:119
+#: plasma-apply-wallpaperimage.cpp:116
 #, kde-format
 msgid ""
 "Successfully set the wallpaper for all desktops to the KPackage based %1"
@@ -268,13 +262,13 @@ msgstr ""
 "Пакет в формате KPackage «%1» успешно использовано в качестве обоев всех "
 "рабочих столов"
 
-#: plasma-apply-wallpaperimage.cpp:121
+#: plasma-apply-wallpaperimage.cpp:118
 #, kde-format
 msgid "Successfully set the wallpaper for all desktops to the image %1"
 msgstr ""
 "Изображение «%1» успешно использовано в качестве обоев всех рабочих столов"
 
-#: plasma-apply-wallpaperimage.cpp:128
+#: plasma-apply-wallpaperimage.cpp:125
 #, kde-format
 msgid ""
 "The file passed to be set as wallpaper does not exist, or we cannot identify "
@@ -429,6 +423,10 @@ msgstr ""
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr "Не удалось открыть файл конфигурации kscreenlockerrc."
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Tiled"
+#~ msgstr "Черепицей"
 
 #~ msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
 #~ msgid "At sunrise and sunset"

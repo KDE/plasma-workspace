@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-28 00:44+0000\n"
+"POT-Creation-Date: 2025-11-06 15:22+0000\n"
 "PO-Revision-Date: 2025-10-28 06:58-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -75,65 +75,59 @@ msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "Centralizado"
 
-#: imagepackage/contents/ui/config.qml:175
-#, kde-format
-msgctxt "@item:inlistbox"
-msgid "Tiled"
-msgstr "Ladrilhado"
-
-#: imagepackage/contents/ui/config.qml:203
+#: imagepackage/contents/ui/config.qml:199
 #, kde-format
 msgctxt ""
 "@label:listbox part of a sentence: 'Switch dynamic wallpapers [based on]'"
 msgid "Switch dynamic wallpapers:"
 msgstr "Alternar papéis de parede dinâmicos:"
 
-#: imagepackage/contents/ui/config.qml:211
+#: imagepackage/contents/ui/config.qml:207
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the Plasma style is light or dark "
 msgstr "Com base em se o estilo do Plasma é escuro ou claro "
 
-#: imagepackage/contents/ui/config.qml:213
+#: imagepackage/contents/ui/config.qml:209
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on the day-night cycle"
 msgstr "Baseado no ciclo dia-noite"
 
-#: imagepackage/contents/ui/config.qml:217
+#: imagepackage/contents/ui/config.qml:213
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always use light variant"
 msgstr "Sempre usar a variante clara"
 
-#: imagepackage/contents/ui/config.qml:221
+#: imagepackage/contents/ui/config.qml:217
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always use dark variant"
 msgstr "Sempre usar a variante escura"
 
-#: imagepackage/contents/ui/config.qml:231
+#: imagepackage/contents/ui/config.qml:227
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
 msgstr "Configurar..."
 
-#: imagepackage/contents/ui/config.qml:242
+#: imagepackage/contents/ui/config.qml:238
 #, kde-format
 msgid "Background:"
 msgstr "Plano de fundo:"
 
-#: imagepackage/contents/ui/config.qml:243
+#: imagepackage/contents/ui/config.qml:239
 #, kde-format
 msgid "Blur"
 msgstr "Borrado"
 
-#: imagepackage/contents/ui/config.qml:252
+#: imagepackage/contents/ui/config.qml:248
 #, kde-format
 msgid "Solid color"
 msgstr "Cor sólida"
 
-#: imagepackage/contents/ui/config.qml:263
+#: imagepackage/contents/ui/config.qml:259
 #, kde-format
 msgid "Select Background Color"
 msgstr "Selecionar cor de fundo"
@@ -235,7 +229,7 @@ msgstr ""
 "Especifique o modo de preenchimento (ex.: esticar, preservar aspecto de "
 "corte, etc.)"
 
-#: plasma-apply-wallpaperimage.cpp:61
+#: plasma-apply-wallpaperimage.cpp:58
 #, kde-format
 msgid ""
 "There is a stray single quote in the filename of this wallpaper (') - please "
@@ -246,17 +240,17 @@ msgstr ""
 "('), contate o autor do papel de parede para consertar isso ou renomeie o "
 "arquivo você mesmo: %1"
 
-#: plasma-apply-wallpaperimage.cpp:99
+#: plasma-apply-wallpaperimage.cpp:96
 #, kde-format
 msgid "Invalid fill mode specified: %1"
 msgstr "Modo de preenchimento inválido especificado: %1"
 
-#: plasma-apply-wallpaperimage.cpp:115
+#: plasma-apply-wallpaperimage.cpp:112
 #, kde-format
 msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
 msgstr "Um erro ocorreu ao tentar definir o papel de parede do Plasma:\n"
 
-#: plasma-apply-wallpaperimage.cpp:119
+#: plasma-apply-wallpaperimage.cpp:116
 #, kde-format
 msgid ""
 "Successfully set the wallpaper for all desktops to the KPackage based %1"
@@ -264,14 +258,14 @@ msgstr ""
 "A definição de um papel de parede para todas as áreas de trabalho do %1 "
 "baseado no KPackage foi realizada com sucesso."
 
-#: plasma-apply-wallpaperimage.cpp:121
+#: plasma-apply-wallpaperimage.cpp:118
 #, kde-format
 msgid "Successfully set the wallpaper for all desktops to the image %1"
 msgstr ""
 "A definição de um papel de parede para todas as áreas de trabalho da imagem "
 "%1 foi realizada com sucesso."
 
-#: plasma-apply-wallpaperimage.cpp:128
+#: plasma-apply-wallpaperimage.cpp:125
 #, kde-format
 msgid ""
 "The file passed to be set as wallpaper does not exist, or we cannot identify "
@@ -419,6 +413,10 @@ msgstr "Um erro ocorreu ao tentar definir o papel de parede do Plasma:<nl/>%1"
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr ""
 "Um erro ocorreu ao tentar abrir o arquivo de configuração kscreenlockerrc"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Tiled"
+#~ msgstr "Ladrilhado"
 
 #~ msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
 #~ msgid "At sunrise and sunset"

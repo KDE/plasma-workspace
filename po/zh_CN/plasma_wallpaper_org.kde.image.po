@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-28 00:44+0000\n"
+"POT-Creation-Date: 2025-11-06 15:22+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -70,20 +70,14 @@ msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "居中"
 
-#: imagepackage/contents/ui/config.qml:175
-#, kde-format
-msgctxt "@item:inlistbox"
-msgid "Tiled"
-msgstr "平铺"
-
-#: imagepackage/contents/ui/config.qml:203
+#: imagepackage/contents/ui/config.qml:199
 #, kde-format
 msgctxt ""
 "@label:listbox part of a sentence: 'Switch dynamic wallpapers [based on]'"
 msgid "Switch dynamic wallpapers:"
 msgstr "切换动态壁纸："
 
-#: imagepackage/contents/ui/config.qml:211
+#: imagepackage/contents/ui/config.qml:207
 #, fuzzy, kde-format
 #| msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 #| msgid "Based on whether the color scheme is dark or light"
@@ -91,46 +85,46 @@ msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the Plasma style is light or dark "
 msgstr "基于配色方案是深色还是浅色"
 
-#: imagepackage/contents/ui/config.qml:213
+#: imagepackage/contents/ui/config.qml:209
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on the day-night cycle"
 msgstr "基于日夜周期："
 
-#: imagepackage/contents/ui/config.qml:217
+#: imagepackage/contents/ui/config.qml:213
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always use light variant"
 msgstr "总是使用浅色版本"
 
-#: imagepackage/contents/ui/config.qml:221
+#: imagepackage/contents/ui/config.qml:217
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always use dark variant"
 msgstr "总是使用深色版本"
 
-#: imagepackage/contents/ui/config.qml:231
+#: imagepackage/contents/ui/config.qml:227
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
 msgstr "配置…"
 
-#: imagepackage/contents/ui/config.qml:242
+#: imagepackage/contents/ui/config.qml:238
 #, kde-format
 msgid "Background:"
 msgstr "背景色："
 
-#: imagepackage/contents/ui/config.qml:243
+#: imagepackage/contents/ui/config.qml:239
 #, kde-format
 msgid "Blur"
 msgstr "虚化"
 
-#: imagepackage/contents/ui/config.qml:252
+#: imagepackage/contents/ui/config.qml:248
 #, kde-format
 msgid "Solid color"
 msgstr "纯色"
 
-#: imagepackage/contents/ui/config.qml:263
+#: imagepackage/contents/ui/config.qml:259
 #, kde-format
 msgid "Select Background Color"
 msgstr "选择背景色"
@@ -226,7 +220,7 @@ msgstr "您想要为当前 Plasma 会话设置的壁纸的图像文件或已安�
 msgid "Specify the fill mode (e.g., stretch, preserveAspectCrop, etc.)"
 msgstr "指定填充模式 (例如拉伸、裁剪并保持宽高比等)"
 
-#: plasma-apply-wallpaperimage.cpp:61
+#: plasma-apply-wallpaperimage.cpp:58
 #, kde-format
 msgid ""
 "There is a stray single quote in the filename of this wallpaper (') - please "
@@ -236,28 +230,28 @@ msgstr ""
 "此壁纸的文件名包含一个未封闭的单引号 (') - 请联系壁纸的作者来解决这个问题，或"
 "者自行重命名该文件：%1"
 
-#: plasma-apply-wallpaperimage.cpp:99
+#: plasma-apply-wallpaperimage.cpp:96
 #, kde-format
 msgid "Invalid fill mode specified: %1"
 msgstr "指定了无效的填充模式：%1"
 
-#: plasma-apply-wallpaperimage.cpp:115
+#: plasma-apply-wallpaperimage.cpp:112
 #, kde-format
 msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
 msgstr "尝试设置 Plasma 壁纸时出错：\n"
 
-#: plasma-apply-wallpaperimage.cpp:119
+#: plasma-apply-wallpaperimage.cpp:116
 #, kde-format
 msgid ""
 "Successfully set the wallpaper for all desktops to the KPackage based %1"
 msgstr "已将所有桌面壁纸设置为基于 KPackage 的 %1"
 
-#: plasma-apply-wallpaperimage.cpp:121
+#: plasma-apply-wallpaperimage.cpp:118
 #, kde-format
 msgid "Successfully set the wallpaper for all desktops to the image %1"
 msgstr "已将所有桌面的壁纸设置为图像 %1"
 
-#: plasma-apply-wallpaperimage.cpp:128
+#: plasma-apply-wallpaperimage.cpp:125
 #, kde-format
 msgid ""
 "The file passed to be set as wallpaper does not exist, or we cannot identify "
@@ -399,3 +393,7 @@ msgstr "尝试设置 Plasma 壁纸时出错：<nl/>%1"
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr "尝试打开 kscreenlockerrc 配置文件时出错。"
+
+#~ msgctxt "@item:inlistbox"
+#~ msgid "Tiled"
+#~ msgstr "平铺"
