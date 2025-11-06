@@ -7,20 +7,21 @@
 # SPDX-FileCopyrightText: 2023 Jannick Kuhr <opensource@kuhr.org>
 # SPDX-FileCopyrightText: 2024 Alois.spitzbart <spitz234@hotmail.com>
 # SPDX-FileCopyrightText: 2024 Flori G <Renner03@protonmail.com>
+# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n@prly.mozmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-29 02:56+0000\n"
-"PO-Revision-Date: 2023-01-30 14:24+0100\n"
-"Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
+"PO-Revision-Date: 2025-10-29 20:19+0100\n"
+"Last-Translator: Philipp Kiemle <l10n@prly.mozmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #: autostartmodel.cpp:322
 #, kde-format
@@ -101,7 +102,7 @@ msgstr "Kein benutzerdefinierten Autostart-Einträge vorhanden"
 msgctxt "@info"
 msgid "Click the <interface>Add…</interface> button below to add some"
 msgstr ""
-"Klicken Sie unten auf den Knopf <interface>Hinzufügen ...</interface> um "
+"Klicken Sie unten auf den Knopf <interface>Hinzufügen …</interface>, um "
 "folgende Einträge hinzuzufügen:"
 
 #: package/contents/ui/main.qml:144
@@ -117,22 +118,22 @@ msgstr "Abmeldungs-Skript auswählen"
 #: package/contents/ui/main.qml:183
 #, kde-format
 msgid "Add…"
-msgstr "Hinzufügen ..."
+msgstr "Hinzufügen …"
 
 #: package/contents/ui/main.qml:198
 #, kde-format
 msgid "Add Application…"
-msgstr "Anwendung hinzufügen ..."
+msgstr "Anwendung hinzufügen …"
 
 #: package/contents/ui/main.qml:204
 #, kde-format
 msgid "Add Login Script…"
-msgstr "Anmeldungs-Skript hinzufügen ..."
+msgstr "Anmeldungs-Skript hinzufügen …"
 
 #: package/contents/ui/main.qml:210
 #, kde-format
 msgid "Add Logout Script…"
-msgstr "Abmeldungs-Skript hinzufügen ..."
+msgstr "Abmeldungs-Skript hinzufügen …"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"
