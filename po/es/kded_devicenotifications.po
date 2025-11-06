@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kded_devicenotifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-05 00:46+0000\n"
-"PO-Revision-Date: 2025-07-08 04:10+0100\n"
+"PO-Revision-Date: 2025-11-06 01:55+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.2\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #: devicenotifications.cpp:383
 #, kde-format
@@ -68,13 +68,7 @@ msgid "A USB device has been disconnected."
 msgstr "Se ha desconectado un dispositivo USB."
 
 #: devicenotifications.cpp:499
-#, fuzzy, kde-format
-#| msgctxt "@title:notifications"
-#| msgid "USB Device Detected"
+#, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Removed"
-msgstr "Dispositivo USB detectado"
-
-#~ msgctxt "@title:notifications"
-#~ msgid "USB Device Went Away"
-#~ msgstr "El dispositivo USB ha desaparecido"
+msgstr "Dispositivo USB extraído"
