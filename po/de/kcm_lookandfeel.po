@@ -2,20 +2,21 @@
 # SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021 Burkhard Lück <lueck@hube-lueck.de>
 # SPDX-FileCopyrightText: 2016, 2018, 2020, 2022, 2023 Frederik Schwarzer <schwarzer@kde.org>
 # SPDX-FileCopyrightText: 2023 Jannick Kuhr <opensource@kuhr.org>
+# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n@prly.mozmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-18 00:44+0000\n"
-"PO-Revision-Date: 2024-09-29 18:25+0200\n"
-"Last-Translator: Flori G <Renner03@protonmail.com>\n"
+"PO-Revision-Date: 2025-10-29 20:17+0100\n"
+"Last-Translator: Philipp Kiemle <l10n@prly.mozmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.1\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -36,22 +37,24 @@ msgstr "Globales Erscheinungsbild"
 #. i18n: ectx: label, entry (defaultLightLookAndFeel), group (KDE)
 #. i18n: ectx: label, entry (defaultDarkLookAndFeel), group (KDE)
 #: lookandfeelsettings.kcfg:13 lookandfeelsettings.kcfg:17
-#, fuzzy, kde-format
-#| msgid "Global look and feel"
+#, kde-format
 msgid "Global Look and Feel package, alternate"
-msgstr "Globales Erscheinungsbild"
+msgstr "Paket mit alternativem globalem Erscheinungsbild"
 
 #. i18n: ectx: label, entry (automaticLookAndFeel), group (KDE)
 #: lookandfeelsettings.kcfg:21
 #, kde-format
 msgid "Switch between dark and light global themes depending on time of day"
 msgstr ""
+"Je nach Tageszeit zwischen dunklen und hellen globalen Designs wechseln"
 
 #. i18n: ectx: label, entry (automaticLookAndFeelOnIdle), group (KDE)
 #: lookandfeelsettings.kcfg:25
 #, kde-format
 msgid "Switch between dark and light global themes when the computer is idle"
 msgstr ""
+"Zwischen dunklen und hellen globalen Designs wechseln, wenn der Computer "
+"nicht verwendet wird"
 
 #. i18n: ectx: label, entry (automaticLookAndFeelIdleInterval), group (KDE)
 #: lookandfeelsettings.kcfg:29
@@ -60,6 +63,8 @@ msgid ""
 "How long the computer should be idle in order to switch between dark and "
 "light global themes, in seconds"
 msgstr ""
+"Wie lange der Computer nicht verwendet werden sollte, um zwischen dunklen "
+"und hellen globalen Designs zu wechseln (in Sekunden)"
 
 #: tool/lnftool.cpp:32
 #, kde-format
@@ -78,7 +83,7 @@ msgstr ""
 #: tool/lnftool.cpp:36
 #, kde-format
 msgid "Copyright 2017, Marco Martin"
-msgstr "Copyright 2017, Marco Martin"
+msgstr "© 2017 Marco Martin"
 
 #: tool/lnftool.cpp:37
 #, kde-format
@@ -115,7 +120,7 @@ msgstr "Paketname"
 #: tool/lnftool.cpp:52
 #, kde-format
 msgid "Prevent --apply from disabling the automatic mode"
-msgstr ""
+msgstr "Verhindern, dass „--apply“ den automatischen Modus deaktiviert"
 
 #: tool/lnftool.cpp:53
 #, kde-format
@@ -153,62 +158,61 @@ msgid ""
 "The chosen light Global Theme will be used during the day, and the dark one "
 "will be used at night."
 msgstr ""
+"Das ausgewählte helle globale Design wird am Tag verwendet, das dunkle in "
+"der Nacht."
 
 #: ui/DayNightLookAndFeel.qml:55
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure Day/Night Cycle…"
-msgstr ""
+msgstr "Tag-Nacht-Zyklus einrichten …"
 
 #: ui/DayNightLookAndFeel.qml:68
 #, kde-format
 msgctxt "@option:radio Light global theme"
 msgid "Light"
-msgstr ""
+msgstr "Hell"
 
 #: ui/DayNightLookAndFeel.qml:80
 #, kde-format
 msgctxt "@option:radio Dark global theme"
 msgid "Dark"
-msgstr ""
+msgstr "Dunkel"
 
 #: ui/DayNightLookAndFeel.qml:97
 #, kde-format
 msgctxt "@option:check"
 msgid "Wait until idleness before switching:"
-msgstr ""
+msgstr "Vor dem Wechsel warten, bis der Computer nicht verwendet wird:"
 
 #: ui/DayNightLookAndFeel.qml:110
 #, kde-format
 msgctxt "@item:valuesuffix idle interval"
 msgid "%1 second"
 msgid_plural "%1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 Sekunde"
+msgstr[1] "%1 Sekunden"
 
 #: ui/DayNightLookAndFeel.qml:122
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Minimizes interruptions when actively using the computer."
-msgstr ""
+msgstr "Minimiert Unterbrechungen, wenn der Computer aktiv verwendet wird."
 
 #: ui/LookAndFeelSelector.qml:24
-#, fuzzy, kde-format
-#| msgid "Global Theme"
+#, kde-format
 msgctxt "@title:window"
 msgid "Choose Light Global Theme"
-msgstr "Globales Design"
+msgstr "Helles globales Design auswählen"
 
 #: ui/LookAndFeelSelector.qml:26
-#, fuzzy, kde-format
-#| msgid "Global Theme"
+#, kde-format
 msgctxt "@title:window"
 msgid "Choose Dark Global Theme"
-msgstr "Globales Design"
+msgstr "Dunkles globales Design auswählen"
 
 #: ui/LookAndFeelSelector.qml:49 ui/StaticLookAndFeel.qml:67
-#, fuzzy, kde-format
-#| msgid "Preview Theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview Theme"
 msgstr "Design-Vorschau"
@@ -235,14 +239,13 @@ msgstr "Löschen von systemweit installierten Designs nicht möglich"
 #, kde-format
 msgctxt "@option:check"
 msgid "Switch to Dark Mode at Night"
-msgstr ""
+msgstr "Nachts in den dunklen Modus wechseln"
 
 #: ui/main.qml:40
-#, fuzzy, kde-format
-#| msgid "Get New…"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Get New…"
-msgstr "Neue holen …"
+msgstr "Neue holen …"
 
 #: ui/MoreOptions.qml:24
 #, kde-format
@@ -362,8 +365,7 @@ msgstr ""
 "könnte."
 
 #: ui/StaticLookAndFeel.qml:53
-#, fuzzy, kde-format
-#| msgid "Contains Desktop layout"
+#, kde-format
 msgctxt "@label"
 msgid "Contains Desktop layout"
 msgstr "Enthält Arbeitsflächen-Layout"
@@ -379,12 +381,12 @@ msgstr "%1 anwenden?"
 #: ui/StaticLookAndFeel.qml:143
 #, kde-format
 msgid "Choose what to apply…"
-msgstr "Wählen Sie, was angewendet werden soll …"
+msgstr "Wählen Sie, was angewendet werden soll …"
 
 #: ui/StaticLookAndFeel.qml:143
 #, kde-format
 msgid "Show fewer options…"
-msgstr "Weniger Optionen anzeigen …"
+msgstr "Weniger Optionen anzeigen …"
 
 #~ msgid ""
 #~ "You have to restart the Plasma session for these changes to take effect."

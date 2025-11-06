@@ -67,7 +67,9 @@ msgid "A USB device has been disconnected."
 msgstr "فُصِل جهاز يو اس بي."
 
 #: devicenotifications.cpp:499
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:notifications"
+#| msgid "USB Device Removed"
 msgctxt "@title:notifications"
 msgid "USB Device Removed"
 msgstr "أزيل جهاز يو اس بي"

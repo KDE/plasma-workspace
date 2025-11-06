@@ -63,7 +63,9 @@ msgid "A USB device has been disconnected."
 msgstr "Un périphérique USB a été débranché."
 
 #: devicenotifications.cpp:499
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:notifications"
+#| msgid "USB Device Removed"
 msgctxt "@title:notifications"
 msgid "USB Device Removed"
 msgstr "Un périphérique USB a été déconnecté."

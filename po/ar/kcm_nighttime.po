@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-01 00:48+0000\n"
-"PO-Revision-Date: 2025-09-15 12:22+0400\n"
+"PO-Revision-Date: 2025-11-05 18:13+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -132,9 +132,7 @@ msgid "Longitude:"
 msgstr "خط الطول:"
 
 #: ui/SunPath.qml:52
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Sunrise starts at %1 and ends at %2"
+#, kde-format
 msgctxt "@info:tooltip; the variables are times of day, e.g. 07:30"
 msgid "Sunrise starts at %1 and ends at %2"
 msgstr "يبدأ شروق الشمس عند %1 وينتهي عند %2"
@@ -146,9 +144,7 @@ msgid "Sunrise"
 msgstr "الشروق"
 
 #: ui/SunPath.qml:77
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Sunset starts at %1 and ends at %2"
+#, kde-format
 msgctxt "@info:tooltip; the variables are times of day, e.g. 07:30"
 msgid "Sunset starts at %1 and ends at %2"
 msgstr "يبدأ الغروب عند %1 وينتهي عند %2"
