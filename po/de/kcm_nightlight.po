@@ -6,20 +6,21 @@
 # SPDX-FileCopyrightText: 2022 Alois Spitzbart <spitz234@hotmail.com>
 # SPDX-FileCopyrightText: 2023 Johannes Obermayr <johannesobermayr@gmx.de>
 # SPDX-FileCopyrightText: 2024 Flori G <Renner03@protonmail.com>
+# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n@prly.mozmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_nightlight\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-12 00:45+0000\n"
-"PO-Revision-Date: 2024-10-04 21:18+0200\n"
-"Last-Translator: Flori G <Renner03@protonmail.com>\n"
+"PO-Revision-Date: 2025-10-29 11:29+0100\n"
+"Last-Translator: Philipp Kiemle <l10n@prly.mozmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.1\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #: ui/DayNightView.qml:154
 #, kde-format
@@ -40,45 +41,41 @@ msgstr ""
 "vollständig umgestellt."
 
 #: ui/main.qml:39
-#, fuzzy, kde-format
-#| msgid "The blue light filter makes the colors on the screen warmer."
+#, kde-format
 msgctxt "@info"
 msgid "The blue light filter makes the colors on the screen warmer."
-msgstr "Durch Blaulichtfilter werden die Bildschirmfarben wärmer dargestellt."
+msgstr ""
+"Durch den Blaulichtfilter werden die Bildschirmfarben wärmer dargestellt."
 
 #: ui/main.qml:49
-#, fuzzy, kde-format
-#| msgid "Switching times:"
+#, kde-format
 msgctxt "@label:listbox Night Light modes"
 msgid "Switching times:"
 msgstr "Umschaltzeiten:"
 
 #: ui/main.qml:58
-#, fuzzy, kde-format
-#| msgid "Always off"
+#, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Always off"
 msgstr "Immer aus"
 
 #: ui/main.qml:59
-#, fuzzy, kde-format
-#| msgid "Always on night light"
+#, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Always on night light"
 msgstr "Nachtlicht immer an"
 
 #: ui/main.qml:60
-#, fuzzy, kde-format
-#| msgid "Sunrise begins:"
+#, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Sunrise and sunset"
-msgstr "Sonnenaufgang um:"
+msgstr "Sonnenaufgang und Sonnenuntergang"
 
 #: ui/main.qml:72
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
-msgstr ""
+msgstr "Einrichten …"
 
 #: ui/main.qml:115 ui/main.qml:166 ui/main.qml:230
 #, kde-format
@@ -87,8 +84,7 @@ msgid "%1K"
 msgstr "%1 K"
 
 #: ui/main.qml:123
-#, fuzzy, kde-format
-#| msgid "Day light temperature:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Day light temperature:"
 msgstr "Tageslichttemperatur:"
@@ -106,8 +102,7 @@ msgid "Warm"
 msgstr "Warm"
 
 #: ui/main.qml:187
-#, fuzzy, kde-format
-#| msgid "Night light temperature:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Night light temperature:"
 msgstr "Nachtlichttemperatur:"
