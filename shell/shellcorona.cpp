@@ -1546,6 +1546,14 @@ void ShellCorona::checkAllDesktopsUiReady()
     if (!m_waitingPanels.isEmpty()) {
         m_waitingPanelsTimer.start();
     }
+
+    // Emit screenUiReadyChanged for all screens that don't have any waiting panel
+    for (int i = 0; i < numScreens(); ++i) {
+        if (isScreenUiReady(i) && !m_screensWithUiReady.contains(i)) {
+            m_screensWithUiReady.insert(i);
+            Q_EMIT screenUiReadyChanged(i, true);
+        }
+    }
 }
 
 Plasma::Containment *ShellCorona::createContainmentForActivity(const QString &activity, int screenNum)
