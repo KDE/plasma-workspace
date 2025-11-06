@@ -23,8 +23,8 @@
 
 #include <PlasmaQuick/SharedQmlEngine>
 
+#include <QQmlEngine>
 #include <iostream>
-#include <qqmlengine.h>
 
 #include "view.h"
 

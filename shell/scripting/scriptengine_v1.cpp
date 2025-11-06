@@ -30,7 +30,7 @@
 #include <Plasma/Applet>
 #include <Plasma/Containment>
 #include <Plasma/PluginLoader>
-#include <qstandardpaths.h>
+#include <QStandardPaths>
 
 #include <defaultservice.h>
 

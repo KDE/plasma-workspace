@@ -14,7 +14,7 @@
 #include <KConfigGroup>
 #include <KDesktopFile>
 #include <KDirWatch>
-#include <qloggingcategory.h>
+#include <QLoggingCategory>
 
 PredicatesMonitor::PredicatesMonitor(QObject *parent)
     : QObject(parent)

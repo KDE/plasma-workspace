@@ -11,8 +11,8 @@
 
 #include <KService>
 
+#include <QLoggingCategory>
 #include <deviceserviceaction.h>
-#include <qloggingcategory.h>
 
 #include <Solid/Device>
 

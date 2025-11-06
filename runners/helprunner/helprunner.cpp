@@ -8,7 +8,7 @@
 #include <KIO/CommandLauncherJob>
 #include <KLocalizedString>
 #include <KPluginMetaData>
-#include <qttypetraits.h>
+#include <QtTypeTraits>
 
 HelpRunner::HelpRunner(QObject *parent, const KPluginMetaData &pluginMetaData)
     : AbstractRunner(parent, pluginMetaData)

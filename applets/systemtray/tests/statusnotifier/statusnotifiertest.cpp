@@ -10,7 +10,7 @@
 #include <QDebug>
 #include <kservice.h>
 
-#include <qcommandlineparser.h>
+#include <QCommandLineParser>
 
 #include <KLocalizedString>
 #include <KStatusNotifierItem>

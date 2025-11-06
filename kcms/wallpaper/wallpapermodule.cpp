@@ -3,8 +3,8 @@
 #include "config-workspace.h"
 #include "defaultwallpaper.h"
 #include "kcm_wallpaper_debug.h"
-#include "qdbusinterface.h"
-#include "qdbusreply.h"
+#include <QDBusInterface>
+#include <QDBusReply>
 #include <defaultwallpaper.h>
 #include <outputorderwatcher.h>
 

@@ -6,17 +6,17 @@
 
 #include "editactiondialog.h"
 
+#include <QCheckBox>
+#include <QCoreApplication>
 #include <QDialogButtonBox>
-#include <qcheckbox.h>
-#include <qcoreapplication.h>
-#include <qformlayout.h>
-#include <qgridlayout.h>
-#include <qheaderview.h>
-#include <qlabel.h>
-#include <qlineedit.h>
-#include <qpushbutton.h>
-#include <qtableview.h>
-#include <qwindow.h>
+#include <QFormLayout>
+#include <QGridLayout>
+#include <QHeaderView>
+#include <QLabel>
+#include <QLineEdit>
+#include <QPushButton>
+#include <QTableView>
+#include <QWindow>
 
 #include <klocalizedstring.h>
 #include <kmessagebox.h>

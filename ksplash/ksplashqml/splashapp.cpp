@@ -14,7 +14,7 @@
 #include <QDBusConnection>
 #include <QLoggingCategory>
 #include <QPixmap>
-#include <qscreen.h>
+#include <QScreen>
 
 #include <KWindowSystem>
 

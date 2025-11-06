@@ -73,8 +73,8 @@
 
 #include <KScreenLocker/KsldApp>
 
+#include <QStandardPaths>
 #include <krandom.h>
-#include <qstandardpaths.h>
 #include <startup_interface.h>
 
 #include "kwinsession_interface.h"

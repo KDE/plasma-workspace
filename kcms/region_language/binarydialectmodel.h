@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include "qabstractitemmodel.h"
+#include <QAbstractItemModel>
 
 class BinaryDialectModel : public QAbstractListModel
 {

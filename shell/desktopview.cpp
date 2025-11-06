@@ -13,11 +13,11 @@
 #include <QDBusMessage>
 #include <QDBusPendingCall>
 #include <QGuiApplication>
+#include <QOpenGLShaderProgram>
 #include <QQmlContext>
 #include <QQmlEngine>
 #include <QQuickItem>
 #include <QScreen>
-#include <qopenglshaderprogram.h>
 
 #include <PlasmaQuick/AppletQuickItem>
 

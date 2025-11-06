@@ -8,10 +8,10 @@
 #include <csignal>
 
 #include <QApplication>
+#include <QCommandLineOption>
+#include <QCommandLineParser>
 #include <QQmlDebuggingEnabler>
 #include <QSurfaceFormat>
-#include <qcommandlineoption.h>
-#include <qcommandlineparser.h>
 
 #include <KDBusService>
 #include <KLocalizedString>

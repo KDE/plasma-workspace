@@ -5,14 +5,14 @@
 
 #include "editcommanddialog.h"
 
-#include <qbuttongroup.h>
-#include <qdialogbuttonbox.h>
-#include <qformlayout.h>
-#include <qlabel.h>
-#include <qlineedit.h>
-#include <qpushbutton.h>
-#include <qradiobutton.h>
-#include <qwindow.h>
+#include <QButtonGroup>
+#include <QDialogButtonBox>
+#include <QFormLayout>
+#include <QLabel>
+#include <QLineEdit>
+#include <QPushButton>
+#include <QRadioButton>
+#include <QWindow>
 
 #include <kiconbutton.h>
 #include <klocalizedstring.h>

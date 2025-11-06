@@ -12,6 +12,7 @@
 
 #include "panelview.h"
 
+#include <QEvent>
 #include <QJSValue>
 #include <QPointer>
 #include <QQmlListProperty>
@@ -19,7 +20,6 @@
 #include <QQuickView>
 #include <QStandardItemModel>
 #include <plasmaquick/plasmawindow.h>
-#include <qevent.h>
 
 class PanelView;
 class PanelConfigView;

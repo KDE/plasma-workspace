@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include <qdialog.h>
+#include <QDialog>
 
 #include "urlgrabber.h"
 

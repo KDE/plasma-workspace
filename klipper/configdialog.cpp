@@ -7,18 +7,18 @@
 
 #include "configdialog.h"
 
-#include <qbuttongroup.h>
-#include <qcheckbox.h>
-#include <qfontdatabase.h>
-#include <qformlayout.h>
-#include <qgridlayout.h>
-#include <qheaderview.h>
-#include <qlabel.h>
-#include <qpushbutton.h>
-#include <qradiobutton.h>
-#include <qspinbox.h>
-#include <qtooltip.h>
-#include <qwindow.h>
+#include <QButtonGroup>
+#include <QCheckBox>
+#include <QFontDatabase>
+#include <QFormLayout>
+#include <QGridLayout>
+#include <QHeaderView>
+#include <QLabel>
+#include <QPushButton>
+#include <QRadioButton>
+#include <QSpinBox>
+#include <QToolTip>
+#include <QWindow>
 
 #include <KActionCollection>
 #include <KConfigSkeleton>

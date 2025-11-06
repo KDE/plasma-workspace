@@ -17,7 +17,7 @@
 #include <KIO/OpenUrlJob>
 #include <KLocalizedString>
 #include <KNotificationJobUiDelegate>
-#include <qttypetraits.h>
+#include <QtTypeTraits>
 
 K_PLUGIN_CLASS_WITH_JSON(PlacesRunner, "plasma-runner-places.json")
 
