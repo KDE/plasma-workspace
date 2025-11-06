@@ -26,7 +26,7 @@ using namespace Qt::StringLiterals;
 
 int main(int argc, char *argv[])
 {
-    qunsetenv("SESSION_MANAGER");
+    QCoreApplication::setAttribute(Qt::AA_DisableSessionManager);
 
     auto format = QSurfaceFormat::defaultFormat();
     format.setOption(QSurfaceFormat::ResetNotification);
