@@ -26,10 +26,14 @@ add_test(
 set_tests_properties(cameraindicatortest PROPERTIES TIMEOUT 120 ENVIRONMENT "CMAKE_RUNTIME_OUTPUT_DIRECTORY=${CMAKE_RUNTIME_OUTPUT_DIRECTORY}")
 
 add_test(
-    NAME clipboardtest
-    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/clipboardtest.py
+    NAME clipboardtest_basic
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/clipboardtest.py -k basic
 )
-set_tests_properties(clipboardtest PROPERTIES TIMEOUT 300 ENVIRONMENT "QT_QPA_PLATFORM=wayland;GDK_BACKEND=wayland")
+add_test(
+    NAME clipboardtest_extended
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/clipboardtest.py -k extended
+)
+set_tests_properties(clipboardtest_basic clipboardtest_extended PROPERTIES TIMEOUT 180 ENVIRONMENT "QT_QPA_PLATFORM=wayland;GDK_BACKEND=wayland")
 
 add_test(
     NAME devicenotifiertest

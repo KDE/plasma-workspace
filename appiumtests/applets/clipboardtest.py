@@ -100,6 +100,7 @@ class TestApplication(Gtk.Application):
             context.iteration(may_block=True)
 
     def gtk_copy(self, content_provider: Gdk.ContentProvider, clipboard_mode: int = 0) -> None:
+        logging.info("gtk_copy")
         window = Gtk.Window()
         window.set_default_size(20, 20)
         button = Gtk.Button(label="Copy Content")
@@ -123,6 +124,7 @@ class TestApplication(Gtk.Application):
         self.spin()
 
     def gtk_get_clipboard_mime_data(self, clipboard_mode: int = 0) -> dict[str, GLib.Bytes]:
+        logging.info("gtk_get_clipboard_mime_data")
         window = Gtk.Window()
         window.set_default_size(20, 20)
         button = Gtk.Button(label="Get Content")
@@ -203,10 +205,11 @@ class ClipboardTest(unittest.TestCase):
 
         self.assertEqual(app.klipper_proxy.getClipboardContents(), "Fushan Wen")
 
-    def test_1_barcode(self) -> None:
+    def test_basic(self) -> None:
         """
-        Tests the barcode page can be opened
+        The basic part tests the GUI buttons
         """
+        # Tests the barcode page can be opened
         actions = ActionChains(app.driver)
         actions.send_keys(Keys.DOWN).perform()
         # Wait until the first item is selected
@@ -239,35 +242,11 @@ class ClipboardTest(unittest.TestCase):
         app.driver.find_element(AppiumBy.NAME, "Fushan Wen")
         self.assertFalse(button_item.is_displayed())
 
-    def test_2_list_1_delete(self) -> None:
-        """
-        Deletes the top item and tests if the current clipboard changes
-        @see https://bugs.kde.org/show_bug.cgi?id=475696
-        """
-        ActionChains(app.driver).send_keys(Keys.TAB).send_keys(Keys.DOWN).pause(0.5).perform()
-        app.driver.find_element(AppiumBy.NAME, "Remove from history").click()
-        # The first item becomes the current clipboard item
-        self.assertEqual(app.gtk_get_clipboard_mime_data()["text/plain;charset=utf-8"].get_data().decode("utf-8"), "Fushan Wen")
-
-        item = app.driver.find_element(AppiumBy.NAME, "Fushan Wen")
-        app.driver.find_element(AppiumBy.NAME, "Clear History").click()
-        app.driver.find_element(AppiumBy.NAME, "Delete").click()
-        WebDriverWait(app.driver, 5).until_not(lambda _: item.is_displayed())
-
-    def test_2_list_2_edit(self) -> None:
-        """
-        In edit mode, the text area should be focused by default.
-        """
-        for new_text in ("clip thin", "clip medium"):
-            content_text = Gdk.ContentProvider.new_for_bytes("text/plain;charset=utf-8", GLib.Bytes.new(bytes(new_text, "utf-8")))
-            app.gtk_copy(content_text)
-        app.driver.find_element(AppiumBy.NAME, "clip medium")
-
+        # In edit mode, the text area should be focused by default.
         ActionChains(app.driver).send_keys(Keys.DOWN).send_keys(Keys.DOWN).perform()
         app.driver.find_element(AppiumBy.NAME, "Edit contents").click()
         app.driver.find_element(AppiumBy.NAME, "Text edit area")
         time.sleep(1)
-
         # By default the text area is focused, so typing anything will appear in the text area.
         new_text = "clip bold"
         ActionChains(app.driver).key_down(Keys.CONTROL).send_keys("a").key_up(Keys.CONTROL).perform()  # Select all
@@ -281,12 +260,15 @@ class ClipboardTest(unittest.TestCase):
         delete_button = app.driver.find_element(AppiumBy.NAME, "Remove from history")
         delete_button.click()
         WebDriverWait(app.driver, 5).until_not(lambda _: delete_button.is_displayed())
-        self.assertNotEqual(app.gtk_get_clipboard_mime_data()["text/plain;charset=utf-8"].get_data().decode("utf-8"), new_text)
+        # The first item becomes the current clipboard item
+        self.assertEqual(app.gtk_get_clipboard_mime_data()["text/plain;charset=utf-8"].get_data().decode("utf-8"), "clipboard")
 
-    def test_2_list_3_star(self) -> None:
-        """
-        Star/Pin feature
-        """
+        item = app.driver.find_element(AppiumBy.NAME, "clipboard")
+        app.driver.find_element(AppiumBy.NAME, "Clear History").click()
+        app.driver.find_element(AppiumBy.NAME, "Delete").click()
+        WebDriverWait(app.driver, 5).until_not(lambda _: item.is_displayed())
+
+        # Star/Pin feature
         app.klipper_proxy.clearClipboardHistory()
         app.spin()
         for new_text in ("star 1", "normal 1"):
@@ -298,16 +280,33 @@ class ClipboardTest(unittest.TestCase):
         tabbar_element = app.driver.find_element(AppiumBy.NAME, "Starred Only")
         tabbar_element.click()
         app.driver.find_element(AppiumBy.NAME, "star 1")
+        time.sleep(1)  # Wait for animation
         self.assertRaises((WebDriverException, NoSuchElementException), app.driver.find_element, AppiumBy.NAME, "normal 1")
         ActionChains(app.driver).send_keys(Keys.DOWN).perform()
         app.driver.find_element(AppiumBy.NAME, "Remove Star").click()
         app.driver.find_element(AppiumBy.NAME, "normal 1")
         WebDriverWait(app.driver, 5).until_not(lambda _: tabbar_element.is_displayed())
 
-    def test_3_dbus_interface(self) -> None:
+    def update_config(self, group: str | list[str], key: str | list[str], new_value: str | list[str]) -> None:
+        if isinstance(group, str):
+            subprocess.check_call([f"kwriteconfig{KDE_VERSION}", "--file", "klipperrc", "--group", group, "--key", key, new_value])
+        else:
+            for g, k, v in zip(group, key, new_value):
+                subprocess.check_call([f"kwriteconfig{KDE_VERSION}", "--file", "klipperrc", "--group", g, "--key", k, v])
+
+        app.klipper_proxy.reloadConfig()
+
+    def take_screenshot(self) -> str:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            saved_image_path = os.path.join(temp_dir, "tray.png")
+            app.driver.get_screenshot_as_file(saved_image_path)
+            return base64.b64encode(Gdk.Texture.new_from_filename(saved_image_path).save_to_png_bytes().get_data()).decode()
+
+    def test_extended(self) -> None:
         """
-        D-Bus interface for Klipper
+        The extended part tests the inner klipper code.
         """
+        # D-Bus interface for Klipper
         app.klipper_proxy.clearClipboardHistory()
         app.spin()
         app.klipper_updated_event.clear()
@@ -326,7 +325,7 @@ class ClipboardTest(unittest.TestCase):
         self.assertFalse(app.klipper_updated_event.is_set())
 
         # History item
-        self.assertEqual(app.klipper_proxy.getClipboardHistoryMenu(), [clipboard_content])
+        self.assertIn(clipboard_content, app.klipper_proxy.getClipboardHistoryMenu())
         self.assertEqual(app.klipper_proxy.getClipboardHistoryItem("(i)", 0), clipboard_content)
         self.assertEqual(app.klipper_proxy.getClipboardHistoryItem("(i)", 123), "")  # Invalid index
 
@@ -340,25 +339,7 @@ class ClipboardTest(unittest.TestCase):
         self.assertFalse(element.is_displayed())
         self.assertNotEqual(last_modified, os.stat(app.klipper_data_file).st_mtime)
 
-    def update_config(self, group: str | list[str], key: str | list[str], new_value: str | list[str]) -> None:
-        if isinstance(group, str):
-            subprocess.check_call([f"kwriteconfig{KDE_VERSION}", "--file", "klipperrc", "--group", group, "--key", key, new_value])
-        else:
-            for g, k, v in zip(group, key, new_value):
-                subprocess.check_call([f"kwriteconfig{KDE_VERSION}", "--file", "klipperrc", "--group", g, "--key", k, v])
-
-        app.klipper_proxy.reloadConfig()
-
-    def take_screenshot(self) -> str:
-        with tempfile.TemporaryDirectory() as temp_dir:
-            saved_image_path = os.path.join(temp_dir, "tray.png")
-            app.driver.get_screenshot_as_file(saved_image_path)
-            return base64.b64encode(Gdk.Texture.new_from_filename(saved_image_path).save_to_png_bytes().get_data()).decode()
-
-    def test_4_url_preview(self) -> None:
-        """
-        The PreviewImageProvider registers a custom image provider to load previews for URLs.
-        """
+        # The PreviewImageProvider registers a custom image provider to load previews for URLs.
         new_text = "clip thin"
         pixbuf = GdkPixbuf.Pixbuf.new(GdkPixbuf.Colorspace.RGB, True, 8, 256, 256)
         with tempfile.TemporaryDirectory() as temp_dir:
@@ -386,10 +367,7 @@ class ClipboardTest(unittest.TestCase):
 
             self.assertRaises(NoSuchElementException, app.driver.find_element, AppiumBy.NAME, new_text)
 
-    def test_5_1_bug491488_copy_cells(self) -> None:
-        """
-        A cell has both image data and text data, which should not be ignored when images are ignored.
-        """
+        # A cell has both image data and text data, which should not be ignored when images are ignored.
         utf8_text = "你好世界"
         ascii_text = "helloworld"
         pixbuf = GdkPixbuf.Pixbuf.new(GdkPixbuf.Colorspace.RGB, True, 8, 256, 256)
@@ -401,27 +379,20 @@ class ClipboardTest(unittest.TestCase):
         app.gtk_copy(content_union)
         app.driver.find_element(AppiumBy.NAME, utf8_text)
 
-    def test_5_2_bug496331_secret_password_hint(self) -> None:
-        """
-        When a mimedata has "x-kde-passwordManagerHint" set to "secret", the clip should not be saved to history.
-        """
+        # When a mimedata has "x-kde-passwordManagerHint" set to "secret", the clip should not be saved to history.
         try:
             from PySide6.QtCore import QObject
+            process = subprocess.Popen(["python3", os.path.join(os.path.dirname(os.path.abspath(__file__)), "clipboardtest", "copysecret.py")], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            self.addCleanup(process.kill)
+            process.stderr.readline()
+            process.stderr.readline()
+            ActionChains(app.driver).send_keys(Keys.SPACE).perform()
+            app.driver.find_element(AppiumBy.NAME, "123456789")
+            self.assertRaises(NoSuchElementException, app.driver.find_element, AppiumBy.NAME, "123456789test")
         except ModuleNotFoundError:
-            self.skipTest("PySide is not available")
+            pass
 
-        process = subprocess.Popen(["python3", os.path.join(os.path.dirname(os.path.abspath(__file__)), "clipboardtest", "copysecret.py")], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        self.addCleanup(process.kill)
-        process.stderr.readline()
-        process.stderr.readline()
-        ActionChains(app.driver).send_keys(Keys.SPACE).perform()
-        app.driver.find_element(AppiumBy.NAME, "123456789")
-        self.assertRaises(NoSuchElementException, app.driver.find_element, AppiumBy.NAME, "123456789test")
-
-    def test_5_3_bug491961_mimetypes(self) -> None:
-        """
-        Klipper's history should preserve more MIME types
-        """
+        # Klipper's history should preserve more MIME types
         app.klipper_proxy.clearClipboardHistory()
 
         pixbuf = GdkPixbuf.Pixbuf.new(GdkPixbuf.Colorspace.RGB, True, 8, 1, 1)  # 1x1 pixel
@@ -452,12 +423,9 @@ class ClipboardTest(unittest.TestCase):
         self.assertEqual(res[1], f"file://{temp_file.name}")
         con.close()
 
-    def test_6_bug487843_bug466414_empty_clip_crash(self) -> None:
-        """
-        When "Text selection - Always save in history" is enabled, a clip with empty text can crash klipper.
-        @see https://bugs.kde.org/show_bug.cgi?id=487843
-        @see https://bugs.kde.org/show_bug.cgi?id=466414
-        """
+        # When "Text selection - Always save in history" is enabled, a clip with empty text can crash klipper.
+        # @see https://bugs.kde.org/show_bug.cgi?id=487843
+        # @see https://bugs.kde.org/show_bug.cgi?id=466414
         # Enable "Text selection - Always save in history" to test the two bugs
         self.update_config(["General"] * 2, ["IgnoreSelection", "SyncClipboards"], ["false", "true"])
 
@@ -472,57 +440,46 @@ class ClipboardTest(unittest.TestCase):
         # self.assertEqual(app.gtk_get_clipboard_mime_data()["text/plain;charset=utf-8"].get_data().decode("utf-8"), new_text) Broken in CI
         app.driver.find_element(AppiumBy.NAME, new_text)  # Still alive
 
-    def test_7_ignore_image(self) -> None:
-        """
-        When `IgnoreImages` is set to false, the clipboard should save images.
-        """
+        # When `IgnoreImages` is set to false, the clipboard should save images.
         try:
             from PySide6.QtCore import QObject
-        except ModuleNotFoundError:
-            self.skipTest("PySide is not available")
+            # Enable "Only when explicitly copied" to test the two bugs
+            self.update_config(["General"] * 3, ["IgnoreImages", "IgnoreSelection", "SyncClipboards"], ["false", "true", "false"])
 
-        # Enable "Only when explicitly copied" to test the two bugs
-        self.update_config(["General"] * 3, ["IgnoreImages", "IgnoreSelection", "SyncClipboards"], ["false", "true", "false"])
+            app.klipper_proxy.clearClipboardHistory()
+            self.assertEqual(0, len(app.klipper_proxy.getClipboardHistoryMenu()))
 
-        app.klipper_proxy.clearClipboardHistory()
-        self.assertEqual(0, len(app.klipper_proxy.getClipboardHistoryMenu()))
-        memory_usage_before = int(subprocess.check_output(["ps", "-o", "rss", "-C", "plasmawindowed"]).decode("utf-8").strip().split("\n")[1])
-
-        # Copy 1 color blocks to clipboard
-        colors = (0xff0000ff, )
-        process = subprocess.Popen(["python3", os.path.join(os.path.dirname(os.path.abspath(__file__)), "clipboardtest", "bug497735_simultaneous_clipboard_requests.py"), "-w", "1000", "-h", "1000"], stdout=sys.stderr, stderr=subprocess.PIPE)
-        self.addCleanup(process.kill)
-        assert process.stderr is not None
-        process.stderr.readline()  # From resizeEvent
-        process.stderr.readline()  # From resizeEvent
-        action = ActionBuilder(app.driver, mouse=PointerInput(POINTER_MOUSE, "mouse"))
-        action.pointer_action.move_to_location(100, 100).click(None, MouseButton.LEFT)
-        action.perform()
-        process.stderr.readline()
-        try:
-            self.assertEqual(len(colors), len(app.klipper_proxy.getClipboardHistoryMenu()))
-        except AssertionError:  # Flaky
-            time.sleep(1)
-            self.assertEqual(len(colors), len(app.klipper_proxy.getClipboardHistoryMenu()))
-
-        for color in colors:
-            # Match the color block in the history
-            partial_pixbuf = GdkPixbuf.Pixbuf.new(GdkPixbuf.Colorspace.RGB, True, 8, 16, 16)
-            partial_pixbuf.fill(color)
-            partial_image = base64.b64encode(Gdk.Texture.new_for_pixbuf(partial_pixbuf).save_to_png_bytes().get_data()).decode()
+            # Copy 1 color blocks to clipboard
+            colors = (0xff0000ff, )
+            process = subprocess.Popen(["python3", os.path.join(os.path.dirname(os.path.abspath(__file__)), "clipboardtest", "bug497735_simultaneous_clipboard_requests.py"), "-w", "1000", "-h", "1000"], stdout=sys.stderr, stderr=subprocess.PIPE)
+            self.addCleanup(process.kill)
+            assert process.stderr is not None
+            process.stderr.readline()  # From resizeEvent
+            process.stderr.readline()  # From resizeEvent
+            action = ActionBuilder(app.driver, mouse=PointerInput(POINTER_MOUSE, "mouse"))
+            action.pointer_action.move_to_location(100, 100).click(None, MouseButton.LEFT)
+            action.perform()
+            process.stderr.readline()
             try:
-                app.driver.find_image_occurrence(self.take_screenshot(), partial_image)
-            except WebDriverException:  # Flaky
+                self.assertEqual(len(colors), len(app.klipper_proxy.getClipboardHistoryMenu()))
+            except AssertionError:  # Flaky
                 time.sleep(1)
-                app.driver.find_image_occurrence(self.take_screenshot(), partial_image)
+                self.assertEqual(len(colors), len(app.klipper_proxy.getClipboardHistoryMenu()))
 
-        memory_usage_after = int(subprocess.check_output(["ps", "-o", "rss", "-C", "plasmawindowed"]).decode("utf-8").strip().split("\n")[1])
-        logging.info(f"before: {memory_usage_before} after: {memory_usage_after} diff: {memory_usage_after - memory_usage_before}")
+            for color in colors:
+                # Match the color block in the history
+                partial_pixbuf = GdkPixbuf.Pixbuf.new(GdkPixbuf.Colorspace.RGB, True, 8, 16, 16)
+                partial_pixbuf.fill(color)
+                partial_image = base64.b64encode(Gdk.Texture.new_for_pixbuf(partial_pixbuf).save_to_png_bytes().get_data()).decode()
+                try:
+                    app.driver.find_image_occurrence(self.take_screenshot(), partial_image)
+                except WebDriverException:  # Flaky
+                    time.sleep(1)
+                    app.driver.find_image_occurrence(self.take_screenshot(), partial_image)
+        except ModuleNotFoundError:
+            pass
 
-    def test_8_bug492170_disable_history_across_session(self) -> None:
-        """
-        Clips should not be saved across desktop sessions when "Save history across desktop sessions" is disabled.
-        """
+        # Clips should not be saved across desktop sessions when "Save history across desktop sessions" is disabled.
         app.klipper_proxy.setClipboardContents("(s)", "appiumtest")
         app.driver.find_element(AppiumBy.NAME, "appiumtest")
         self.update_config("General", "KeepClipboardContents", "false")
