@@ -11,8 +11,11 @@ import QtQuick.Templates as T
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.lookandfeel
 
+// TODO Plasma 7: drop the entire SystemDialog tech (includes implementation snippets in look-and-feel packages)
+
 /**
  * Component to create CSD dialogs that come from the system.
+ * \deprecated [6.6] Use QtQuick Dialog or similar component instead.
  */
 Kirigami.AbstractApplicationWindow {
     id: root
