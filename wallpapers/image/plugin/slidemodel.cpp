@@ -36,7 +36,7 @@ QVariant SlideModel::data(const QModelIndex &index, int role) const
     }
 
     if (role == ToggleRole) {
-        return m_checkedTable.value(index.data(PackageNameRole).toString(), true);
+        return m_checkedTable.value(index.data(SourceRole).toUrl().toLocalFile(), true);
     }
 
     return QConcatenateTablesProxyModel::data(index, role);
@@ -49,7 +49,7 @@ bool SlideModel::setData(const QModelIndex &index, const QVariant &value, int ro
     }
 
     if (role == ToggleRole) {
-        m_checkedTable[index.data(PackageNameRole).toString()] = value.toBool();
+        m_checkedTable[index.data(SourceRole).toUrl().toLocalFile()] = value.toBool();
 
         Q_EMIT dataChanged(index, index, {ToggleRole});
         return true;

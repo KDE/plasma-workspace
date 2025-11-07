@@ -403,9 +403,9 @@ void ImageBackend::nextSlide()
         return;
     }
     int previousSlide = m_currentSlide;
-    QString previousPath;
+    QUrl previousUrl;
     if (previousSlide >= 0) {
-        previousPath = m_slideFilterModel->index(m_currentSlide, 0).data(ImageRoles::PackageNameRole).toString();
+        previousUrl = m_slideFilterModel->index(m_currentSlide, 0).data(ImageRoles::SourceRole).toUrl();
     }
     if (m_currentSlide >= rowCount - 1 /* ">" in case the last wallpaper is deleted before */ || m_currentSlide < 0) {
         m_currentSlide = 0;
@@ -416,16 +416,16 @@ void ImageBackend::nextSlide()
     if (m_slideshowMode == SortingMode::Random && m_currentSlide == 0) {
         m_slideFilterModel->invalidate();
     }
-    QString next = m_slideFilterModel->index(m_currentSlide, 0).data(ImageRoles::PackageNameRole).toString();
+    QUrl next = m_slideFilterModel->index(m_currentSlide, 0).data(ImageRoles::SourceRole).toUrl();
     // And  avoid showing the same picture twice
-    if (previousSlide == rowCount - 1 && previousPath == next && rowCount > 1) {
+    if (previousSlide == rowCount - 1 && previousUrl == next && rowCount > 1) {
         m_slideFilterModel->swapFirstWithRandom();
-        next = m_slideFilterModel->index(m_currentSlide, 0).data(ImageRoles::PackageNameRole).toString();
+        next = m_slideFilterModel->index(m_currentSlide, 0).data(ImageRoles::SourceRole).toUrl();
     }
     if (next.isEmpty()) {
-        m_image = QUrl::fromLocalFile(previousPath);
+        m_image = previousUrl;
     } else {
-        m_image = QUrl::fromLocalFile(next);
+        m_image = next;
         Q_EMIT imageChanged();
     }
 
@@ -462,9 +462,9 @@ void ImageBackend::slotSlideModelDataChanged(const QModelIndex &topLeft, const Q
 
     if (roles.contains(ImageRoles::ToggleRole)) {
         if (topLeft.data(ImageRoles::ToggleRole).toBool()) {
-            m_uncheckedSlides.removeOne(topLeft.data(ImageRoles::PackageNameRole).toString());
+            m_uncheckedSlides.removeOne(topLeft.data(ImageRoles::SourceRole).toUrl().toLocalFile());
         } else {
-            m_uncheckedSlides.append(topLeft.data(ImageRoles::PackageNameRole).toString());
+            m_uncheckedSlides.append(topLeft.data(ImageRoles::SourceRole).toUrl().toLocalFile());
         }
 
         Q_EMIT uncheckedSlidesChanged();

@@ -75,8 +75,8 @@ QVariant PackageListModel::data(const QModelIndex &index, int role) const
         return QUrl::fromLocalFile(b.package().filePath("preferred"));
     }
 
-    case PackageNameRole:
-        return b.package().path();
+    case SourceRole:
+        return QUrl::fromLocalFile(b.package().path());
 
     case RemovableRole: {
         const QString path = b.package().path();

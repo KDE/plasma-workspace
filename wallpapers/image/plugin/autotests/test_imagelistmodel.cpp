@@ -118,7 +118,7 @@ void ImageListModelTest::testImageListModelData()
 #endif
 
     QCOMPARE(idx.data(ImageRoles::PathRole).toUrl(), m_wallpaperPaths.at(0));
-    QCOMPARE(idx.data(ImageRoles::PackageNameRole).toString(), m_wallpaperPaths.at(0).toLocalFile());
+    QCOMPARE(idx.data(ImageRoles::SourceRole).toUrl(), m_wallpaperPaths.at(0));
 
     QCOMPARE(idx.data(ImageRoles::RemovableRole).toBool(), false);
     QCOMPARE(idx.data(ImageRoles::PendingDeletionRole).toBool(), false);
