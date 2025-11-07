@@ -112,6 +112,12 @@ int ImageListModel::indexOf(const QUrl &url) const
     return std::distance(m_data.cbegin(), it);
 }
 
+QUrl ImageListModel::effectiveSource(const QModelIndex &index, const QSize &targetSize) const
+{
+    Q_UNUSED(targetSize)
+    return index.data(SourceRole).toUrl();
+}
+
 void ImageListModel::load(const QStringList &customPaths)
 {
     if (m_loading || customPaths.empty()) {

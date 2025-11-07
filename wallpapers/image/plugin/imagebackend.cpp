@@ -183,7 +183,8 @@ void ImageBackend::ensureSlideshowModel()
     m_slideshowModel->setUncheckedSlides(m_uncheckedSlides);
     m_loading.setBinding(m_slideshowModel->loading().makeBinding());
 
-    m_slideFilterModel = new SlideFilterModel(QBindable<bool>(&m_usedInConfig), //
+    m_slideFilterModel = new SlideFilterModel(QBindable<QSize>(&m_targetSize), //
+                                              QBindable<bool>(&m_usedInConfig), //
                                               QBindable<SortingMode::Mode>(&m_slideshowMode), //
                                               QBindable<bool>(&m_slideshowFoldersFirst), //
                                               this);

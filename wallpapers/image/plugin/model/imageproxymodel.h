@@ -80,6 +80,8 @@ private:
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(ImageProxyModel, int, m_loaded, 0)
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(ImageProxyModel, bool, m_loading, false, &ImageProxyModel::loadingChanged)
 
+    Q_OBJECT_BINDABLE_PROPERTY(ImageProxyModel, QSize, m_targetSize)
+
     QStringList m_pendingAddition;
 
     friend class ImageProxyModelTest;

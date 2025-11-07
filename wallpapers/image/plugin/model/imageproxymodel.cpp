@@ -38,6 +38,7 @@ ImageProxyModel::ImageProxyModel(const QStringList &customPaths,
     : QConcatenateTablesProxyModel(parent)
     , m_imageModel(new ImageListModel(bindableTargetSize, bindableUsedInConfig, this))
     , m_packageModel(new PackageListModel(bindableTargetSize, bindableUsedInConfig, this))
+    , m_targetSize(bindableTargetSize.makeBinding())
 {
     connect(this, &ImageProxyModel::rowsInserted, this, &ImageProxyModel::countChanged);
     connect(this, &ImageProxyModel::rowsRemoved, this, &ImageProxyModel::countChanged);
@@ -238,7 +239,17 @@ void ImageProxyModel::commitDeletion()
 
 void ImageProxyModel::openContainingFolder(int row) const
 {
-    KIO::highlightInFileManager({index(row, 0).data(PathRole).toUrl()});
+    const QModelIndex sourceIndex = mapToSource(index(row, 0));
+    if (!sourceIndex.isValid()) {
+        return;
+    }
+
+    const AbstractImageListModel *sourceModel = qobject_cast<const AbstractImageListModel *>(sourceIndex.model());
+    if (!sourceModel) {
+        return;
+    }
+
+    KIO::highlightInFileManager({sourceModel->effectiveSource(sourceIndex, m_targetSize)});
 }
 
 void ImageProxyModel::slotHandleLoaded(AbstractImageListModel *model)
