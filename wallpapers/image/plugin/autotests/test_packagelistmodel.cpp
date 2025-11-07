@@ -102,7 +102,7 @@ void PackageListModelTest::testPackageListModelData()
 
     QCOMPARE(idx.data(ImageRoles::PathRole).toUrl().toLocalFile(),
              m_packagePaths.at(1).toLocalFile() + QDir::separator() + u"contents" + QDir::separator() + u"images" + QDir::separator() + u"1920x1080.jpg");
-    QCOMPARE(idx.data(ImageRoles::PackageNameRole).toString(), m_packagePaths.at(1).toLocalFile() + QDir::separator());
+    QCOMPARE(idx.data(ImageRoles::SourceRole).toUrl(), m_packagePaths.at(1));
 
     QCOMPARE(idx.data(ImageRoles::RemovableRole).toBool(), false);
     QCOMPARE(idx.data(ImageRoles::PendingDeletionRole).toBool(), false);

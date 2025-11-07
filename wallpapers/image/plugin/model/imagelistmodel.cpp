@@ -67,10 +67,8 @@ QVariant ImageListModel::data(const QModelIndex &index, int role) const
     }
 
     case PathRole:
+    case SourceRole:
         return QUrl::fromLocalFile(m_data.at(row));
-
-    case PackageNameRole:
-        return m_data.at(row);
 
     case RemovableRole: {
         const QString &path = m_data.at(row);

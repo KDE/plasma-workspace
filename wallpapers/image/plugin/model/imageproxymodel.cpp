@@ -209,7 +209,7 @@ void ImageProxyModel::commitDeletion()
         QModelIndex idx = index(row, 0);
 
         if (idx.data(PendingDeletionRole).toBool()) {
-            pendingList.append(idx.data(PackageNameRole).toString());
+            pendingList.append(idx.data(SourceRole).toUrl().toLocalFile());
         }
     }
 

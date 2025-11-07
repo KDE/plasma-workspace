@@ -15,7 +15,7 @@ public:
         AuthorRole = Qt::UserRole,
         PreviewRole,
         PathRole,
-        PackageNameRole,
+        SourceRole,
         RemovableRole,
         PendingDeletionRole,
         ToggleRole, /**< Used in slideshow model */
