@@ -22,8 +22,8 @@
 #include "../finder/packagefinder.h"
 #include "../finder/suffixcheck.h"
 
-PackageListModel::PackageListModel(const QBindable<QSize> &bindableTargetSize, const QBindable<bool> &bindableUsedInConfig, QObject *parent)
-    : AbstractImageListModel(bindableTargetSize, bindableUsedInConfig, parent)
+PackageListModel::PackageListModel(const QBindable<bool> &bindableUsedInConfig, QObject *parent)
+    : AbstractImageListModel(bindableUsedInConfig, parent)
 {
     qRegisterMetaType<QList<KPackage::Package>>();
 }
@@ -146,7 +146,7 @@ void PackageListModel::load(const QStringList &customPaths)
 
     AbstractImageListModel::load(customPaths);
 
-    auto *finder = new PackageFinder(m_customPaths, m_targetSize);
+    auto *finder = new PackageFinder(m_customPaths);
     connect(finder, &PackageFinder::packageFound, this, &PackageListModel::slotHandlePackageFound);
     QThreadPool::globalInstance()->start(finder);
 }
@@ -173,8 +173,6 @@ QStringList PackageListModel::addBackground(const QUrl &url)
         // This is an empty package. Skip it.
         return {};
     }
-
-    PackageFinder::findPreferredImageInPackage(package, m_targetSize);
 
     if (m_usedInConfig) {
         beginInsertRows(QModelIndex(), 0, 0);

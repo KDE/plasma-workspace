@@ -47,7 +47,7 @@ class PackageFinder : public QObject, public QRunnable
     Q_OBJECT
 
 public:
-    PackageFinder(const QStringList &paths, const QSize &targetSize, QObject *parent = nullptr);
+    PackageFinder(const QStringList &paths, QObject *parent = nullptr);
 
     void run() override;
 
@@ -58,5 +58,4 @@ Q_SIGNALS:
 
 private:
     QStringList m_paths;
-    QSize m_targetSize;
 };

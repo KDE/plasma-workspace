@@ -93,10 +93,9 @@ QStringList WallpaperPackage::selectors() const
     return m_selectors;
 }
 
-PackageFinder::PackageFinder(const QStringList &paths, const QSize &targetSize, QObject *parent)
+PackageFinder::PackageFinder(const QStringList &paths, QObject *parent)
     : QObject(parent)
     , m_paths(paths)
-    , m_targetSize(targetSize)
 {
 }
 
@@ -137,7 +136,6 @@ void PackageFinder::run()
                 return true;
             }
 
-            findPreferredImageInPackage(package, m_targetSize);
             packages << WallpaperPackage(package);
             folders << folderPath;
 

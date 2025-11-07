@@ -20,8 +20,8 @@
 #include "../finder/imagefinder.h"
 #include "../finder/suffixcheck.h"
 
-ImageListModel::ImageListModel(const QBindable<QSize> &bindableTargetSize, const QBindable<bool> &bindableUsedInConfig, QObject *parent)
-    : AbstractImageListModel(bindableTargetSize, bindableUsedInConfig, parent)
+ImageListModel::ImageListModel(const QBindable<bool> &bindableUsedInConfig, QObject *parent)
+    : AbstractImageListModel(bindableUsedInConfig, parent)
 {
 }
 

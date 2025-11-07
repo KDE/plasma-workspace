@@ -65,7 +65,7 @@ void PackageListModelTest::initTestCase()
 
 void PackageListModelTest::init()
 {
-    m_model = new PackageListModel(QBindable<QSize>(&m_targetSize), QBindable<bool>(&m_usedInConfig), this);
+    m_model = new PackageListModel(QBindable<bool>(&m_usedInConfig), this);
     m_countSpy = new QSignalSpy(m_model, &PackageListModel::countChanged);
     m_dataSpy = new QSignalSpy(m_model, &PackageListModel::dataChanged);
 
