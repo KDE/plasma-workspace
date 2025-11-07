@@ -107,14 +107,11 @@ void ImageListModelTest::testImageListModelData()
     QCOMPARE(idx.data(Qt::DisplayRole).toString(), QStringLiteral("wallpaper.jpg"));
 #if HAVE_KExiv2
     m_dataSpy->wait();
-    m_dataSpy->wait();
-    QCOMPARE(m_dataSpy->size(), 2);
-    QCOMPARE(m_dataSpy->takeFirst().at(2).value<QList<int>>().at(0), Qt::DisplayRole);
+    QCOMPARE(m_dataSpy->size(), 1);
+    const auto dirtyRoles = m_dataSpy->takeFirst().at(2).value<QList<int>>();
+    QVERIFY(dirtyRoles.contains(Qt::DisplayRole));
+    QVERIFY(dirtyRoles.contains(ImageRoles::AuthorRole));
     QCOMPARE(idx.data(Qt::DisplayRole).toString(), QStringLiteral("DocumentName"));
-    QCOMPARE(m_dataSpy->takeFirst().at(2).value<QList<int>>().at(0), ImageRoles::AuthorRole);
-#endif
-
-#if HAVE_KExiv2
     QCOMPARE(idx.data(ImageRoles::AuthorRole).toString(), QStringLiteral("KDE Community"));
 #else
     QCOMPARE(idx.data(ImageRoles::AuthorRole).toString(), QString());
