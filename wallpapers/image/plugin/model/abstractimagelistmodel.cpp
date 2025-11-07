@@ -35,7 +35,6 @@ QHash<int, QByteArray> AbstractImageListModel::roleNames() const
         {Qt::DecorationRole, QByteArrayLiteral("decoration")},
         {AuthorRole, QByteArrayLiteral("author")},
         {PreviewRole, QByteArrayLiteral("preview")},
-        {PathRole, QByteArrayLiteral("path")},
         {SourceRole, QByteArrayLiteral("source")},
         {RemovableRole, QByteArrayLiteral("removable")},
         {PendingDeletionRole, QByteArrayLiteral("pendingDeletion")},

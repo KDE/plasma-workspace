@@ -64,17 +64,6 @@ QVariant PackageListModel::data(const QModelIndex &index, int role) const
         return QString();
     }
 
-    case PathRole: {
-        if (qGray(qGuiApp->palette().window().color().rgb()) < 192) {
-            const QString darkPath = b.package().filePath(QByteArrayLiteral("preferredDark"));
-            if (!darkPath.isEmpty()) {
-                return QUrl::fromLocalFile(darkPath);
-            }
-        }
-
-        return QUrl::fromLocalFile(b.package().filePath("preferred"));
-    }
-
     case SourceRole:
         return QUrl::fromLocalFile(b.package().path());
 
