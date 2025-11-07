@@ -269,7 +269,7 @@ Item {
 
                 display: T.AbstractButton.IconOnly
                 icon.name: "window-pin"
-                text: i18n("Keep Open")
+                text: i18ndc("plasmashellprivateplugin", "@info:tooltip", "Keep Open")
 
                 KeyNavigation.down: root.nextButton
 
