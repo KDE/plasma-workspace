@@ -22,8 +22,8 @@
 #include "../finder/packagefinder.h"
 #include "../finder/suffixcheck.h"
 
-PackageListModel::PackageListModel(const QBindable<QSize> &bindableTargetSize, const QBindable<bool> &bindableUsedInConfig, QObject *parent)
-    : AbstractImageListModel(bindableTargetSize, bindableUsedInConfig, parent)
+PackageListModel::PackageListModel(const QBindable<bool> &bindableUsedInConfig, QObject *parent)
+    : AbstractImageListModel(bindableUsedInConfig, parent)
 {
     qRegisterMetaType<QList<KPackage::Package>>();
 }
@@ -146,8 +146,7 @@ void PackageListModel::load(const QStringList &customPaths)
 
     AbstractImageListModel::load(customPaths);
 
-    const QSize targetSize = m_targetSize;
-    QtConcurrent::run(WallpaperPackage::findAll, m_customPaths, targetSize).then(this, [this](const QList<WallpaperPackage> &packages) {
+    QtConcurrent::run(WallpaperPackage::findAll, m_customPaths).then(this, [this](const QList<WallpaperPackage> &packages) {
         beginResetModel();
         m_packages = packages;
         endResetModel();
@@ -179,8 +178,6 @@ QStringList PackageListModel::addBackground(const QUrl &url)
         // This is an empty package. Skip it.
         return {};
     }
-
-    WallpaperPackage::findPreferredImageInPackage(package, m_targetSize);
 
     if (m_usedInConfig) {
         beginInsertRows(QModelIndex(), 0, 0);

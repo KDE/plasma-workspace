@@ -86,21 +86,26 @@ void PackageFinderTest::testFindPreferredSizeInPackage()
 
 void PackageFinderTest::testPackageFinderCanFindPackages()
 {
-    const auto items =
-        WallpaperPackage::findAll({m_dataDir.absolutePath(), m_dataDir.absoluteFilePath(ImageBackendTestData::defaultPackageFolderName2)}, QSize(1920, 1080));
+    const auto items = WallpaperPackage::findAll({m_dataDir.absolutePath(), m_dataDir.absoluteFilePath(ImageBackendTestData::defaultPackageFolderName2)});
     // Total 3 packages in the directory, but one package is broken and should not be added to the list.
     QCOMPARE(items.size(), ImageBackendTestData::defaultPackageCount);
 
+    KPackage::Package firstPackage = items.at(0).package();
+    WallpaperPackage::findPreferredImageInPackage(firstPackage, QSize(1920, 1080));
+
+    KPackage::Package secondPackage = items.at(1).package();
+    WallpaperPackage::findPreferredImageInPackage(secondPackage, QSize(1920, 1080));
+
     // Folders are sorted by names
     // FEATURE207976-dark-wallpaper
-    QCOMPARE(items.at(0).package().filePath("preferred"),
+    QCOMPARE(firstPackage.filePath("preferred"),
              m_dataDir.absoluteFilePath(QStringLiteral("%1/contents/images/1024x768.png").arg(ImageBackendTestData::defaultPackageFolderName1)));
-    QCOMPARE(items.at(0).package().filePath("preferredDark"),
+    QCOMPARE(firstPackage.filePath("preferredDark"),
              m_dataDir.absoluteFilePath(QStringLiteral("%1/contents/images_dark/1920x1080.jpg").arg(ImageBackendTestData::defaultPackageFolderName1)));
     // package
-    QCOMPARE(items.at(1).package().filePath("preferred"),
+    QCOMPARE(secondPackage.filePath("preferred"),
              m_dataDir.absoluteFilePath(QStringLiteral("%1/contents/images/1920x1080.jpg").arg(ImageBackendTestData::defaultPackageFolderName2)));
-    QCOMPARE(items.at(1).package().filePath("preferredDark"), QString());
+    QCOMPARE(secondPackage.filePath("preferredDark"), QString());
 }
 
 QTEST_MAIN(PackageFinderTest)

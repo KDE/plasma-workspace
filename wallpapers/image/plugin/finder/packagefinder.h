@@ -32,7 +32,7 @@ public:
     KPackage::Package package() const;
     QStringList selectors() const;
 
-    static QList<WallpaperPackage> findAll(const QStringList &paths, const QSize &targetSize);
+    static QList<WallpaperPackage> findAll(const QStringList &paths);
     static void findPreferredImageInPackage(KPackage::Package &package, const QSize &targetSize);
 
 private:

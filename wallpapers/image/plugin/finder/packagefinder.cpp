@@ -93,7 +93,7 @@ QStringList WallpaperPackage::selectors() const
     return m_selectors;
 }
 
-QList<WallpaperPackage> WallpaperPackage::findAll(const QStringList &paths, const QSize &targetSize)
+QList<WallpaperPackage> WallpaperPackage::findAll(const QStringList &paths)
 {
     QList<WallpaperPackage> packages;
     QStringList folders;
@@ -103,7 +103,7 @@ QList<WallpaperPackage> WallpaperPackage::findAll(const QStringList &paths, cons
 
     KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Wallpaper/Images"));
 
-    const auto addPackage = [&package, &packages, &folders, &targetSize](const QString &_folderPath) {
+    const auto addPackage = [&package, &packages, &folders](const QString &_folderPath) {
         const QString folderPath = findSymlinkTarget(QFileInfo(_folderPath)).absoluteFilePath();
 
         if (folders.contains(folderPath)) {
@@ -130,7 +130,6 @@ QList<WallpaperPackage> WallpaperPackage::findAll(const QStringList &paths, cons
                 return true;
             }
 
-            findPreferredImageInPackage(package, targetSize);
             packages << WallpaperPackage(package);
             folders << folderPath;
 

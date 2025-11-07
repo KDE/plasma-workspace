@@ -36,8 +36,8 @@ ImageProxyModel::ImageProxyModel(const QStringList &customPaths,
                                  const QBindable<bool> &bindableUsedInConfig,
                                  QObject *parent)
     : QConcatenateTablesProxyModel(parent)
-    , m_imageModel(new ImageListModel(bindableTargetSize, bindableUsedInConfig, this))
-    , m_packageModel(new PackageListModel(bindableTargetSize, bindableUsedInConfig, this))
+    , m_imageModel(new ImageListModel(bindableUsedInConfig, this))
+    , m_packageModel(new PackageListModel(bindableUsedInConfig, this))
     , m_targetSize(bindableTargetSize.makeBinding())
 {
     connect(this, &ImageProxyModel::rowsInserted, this, &ImageProxyModel::countChanged);

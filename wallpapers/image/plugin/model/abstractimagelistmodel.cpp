@@ -11,16 +11,9 @@
 #include "../finder/mediametadatafinder.h"
 #include "config-KExiv2.h"
 
-AbstractImageListModel::AbstractImageListModel(const QBindable<QSize> &bindableTargetSize, const QBindable<bool> &bindableUsedInConfig, QObject *parent)
+AbstractImageListModel::AbstractImageListModel(const QBindable<bool> &bindableUsedInConfig, QObject *parent)
     : QAbstractListModel(parent)
 {
-    m_targetSize.setBinding(bindableTargetSize.makeBinding());
-    m_screenshotSize.setBinding([this] {
-        return m_targetSize.value() / 8;
-    });
-    m_targetSizeChangeNotifier = m_screenshotSize.addNotifier([this] {
-        reload();
-    });
     m_usedInConfig.setBinding(bindableUsedInConfig.makeBinding());
 
     connect(this, &QAbstractListModel::rowsInserted, this, &AbstractImageListModel::countChanged);

@@ -27,7 +27,7 @@ class AbstractImageListModel : public QAbstractListModel, public ImageRoles
     Q_PROPERTY(int count READ count NOTIFY countChanged)
 
 public:
-    explicit AbstractImageListModel(const QBindable<QSize> &bindableTargetSize, const QBindable<bool> &bindableUsedInConfig, QObject *parent = nullptr);
+    explicit AbstractImageListModel(const QBindable<bool> &bindableUsedInConfig, QObject *parent = nullptr);
 
     QHash<int, QByteArray> roleNames() const override;
 
@@ -36,7 +36,7 @@ public:
 
     virtual void load(const QStringList &customPaths = {});
     /**
-     * Reload when target size changes or a new package is installed
+     * Reload when a new package is installed
      */
     void reload();
 
@@ -60,10 +60,6 @@ protected:
     void asyncGetMediaMetadata(const QString &path, const QPersistentModelIndex &index) const;
 
     bool m_loading = false;
-
-    Q_OBJECT_BINDABLE_PROPERTY(AbstractImageListModel, QSize, m_screenshotSize)
-    Q_OBJECT_BINDABLE_PROPERTY(AbstractImageListModel, QSize, m_targetSize)
-    QPropertyNotifier m_targetSizeChangeNotifier;
 
     QHash<QString, QString /* title */> m_backgroundTitleCache;
     QHash<QString, QString /* author */> m_backgroundAuthorCache;
