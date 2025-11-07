@@ -152,9 +152,15 @@ void SchemeEditorOptions::on_accentTitlebar_stateChanged(int state)
 
 void SchemeEditorOptions::updateContrastExample()
 {
-    const QColor frameColor(
-        KColorUtils::mix(palette().color(QPalette::Window), palette().color(QPalette::WindowText), contrastPercentageSpinBox->value() / 100.0));
+    const qreal spinnerValue = contrastPercentageSpinBox->value();
+    const QColor frameColor(KColorUtils::mix(palette().color(QPalette::Window), palette().color(QPalette::WindowText), spinnerValue / 100.0));
     contrastExample->setStyleSheet(QStringLiteral("background-color: %1").arg(frameColor.name()));
+
+    if (spinnerValue < 15) {
+        contrastValueWarning->show();
+    } else {
+        contrastValueWarning->hide();
+    }
 }
 
 #include "moc_scmeditoroptions.cpp"

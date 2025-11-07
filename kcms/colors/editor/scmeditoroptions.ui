@@ -71,17 +71,45 @@
      <property name="title">
       <string>Frames and Outlines</string>
      </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+     <property name="checkable">
+      <bool>false</bool>
+     </property>
      <layout class="QGridLayout" name="gridLayout_3">
-      <property name="horizontalSpacing">
+      <property name="spacing">
        <number>12</number>
       </property>
-      <property name="verticalSpacing">
-       <number>0</number>
-      </property>
-      <item row="1" column="0">
-       <widget class="QLabel" name="label_8">
+      <item row="2" column="0" colspan="3">
+       <widget class="KMessageWidget" name="contrastValueWarning">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Shape::NoFrame</enum>
+        </property>
         <property name="text">
-         <string>Contrast</string>
+         <string>Contrast values below 15% may produce visually awkward effects with some applications and color schemes. Consider yourself warned!</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+        <property name="closeButtonVisible">
+         <bool>false</bool>
+        </property>
+        <property name="messageType">
+         <enum>KMessageWidget::MessageType::Warning</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2">
+       <widget class="QDoubleSpinBox" name="contrastPercentageSpinBox">
+        <property name="suffix">
+         <string>%</string>
+        </property>
+        <property name="maximum">
+         <double>100.000000000000000</double>
         </property>
        </widget>
       </item>
@@ -104,13 +132,10 @@
         </property>
        </widget>
       </item>
-      <item row="1" column="2">
-       <widget class="QDoubleSpinBox" name="contrastPercentageSpinBox">
-        <property name="suffix">
-         <string>%</string>
-        </property>
-        <property name="maximum">
-         <number>100</number>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_8">
+        <property name="text">
+         <string>Contrast</string>
         </property>
        </widget>
       </item>
@@ -132,6 +157,13 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>KMessageWidget</class>
+   <extends>QFrame</extends>
+   <header>kmessagewidget.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>
