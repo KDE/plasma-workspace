@@ -41,7 +41,7 @@
 #include <unistd.h>
 #endif
 
-#if __has_include(<malloc.h>)
+#if __has_include(<malloc.h>) && defined(__GLIBC__)
 static void setupMalloc()
 {
     // The default threshold is 128 * 1024, which can result in a large memory usage due to
@@ -60,7 +60,7 @@ static void setupMalloc()
 
 int main(int argc, char *argv[])
 {
-#if __has_include(<malloc.h>)
+#if __has_include(<malloc.h>) && defined(__GLIBC__)
     setupMalloc();
 #endif
 
