@@ -12,6 +12,7 @@ import org.kde.plasma.lookandfeel
 
 /**
  * Component to create CSD dialogs that come from the system.
+ * \deprecated [6.6] Use QtQuick Dialog or similar component instead.
  */
 Kirigami.AbstractApplicationWindow {
     id: root
