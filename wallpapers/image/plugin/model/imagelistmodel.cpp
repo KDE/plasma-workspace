@@ -66,7 +66,6 @@ QVariant ImageListModel::data(const QModelIndex &index, int role) const
         return QString();
     }
 
-    case PathRole:
     case SourceRole:
         return QUrl::fromLocalFile(m_data.at(row));
 
