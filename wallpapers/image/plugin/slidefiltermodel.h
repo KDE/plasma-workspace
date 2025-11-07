@@ -10,6 +10,7 @@
 
 #include <QBindable>
 #include <QList>
+#include <QSize>
 #include <QSortFilterProxyModel>
 
 #include "sortingmode.h"
@@ -19,7 +20,8 @@ class SlideFilterModel : public QSortFilterProxyModel
     Q_OBJECT
 
 public:
-    explicit SlideFilterModel(const QBindable<bool> &usedInConfig,
+    explicit SlideFilterModel(const QBindable<QSize> &targetSize,
+                              const QBindable<bool> &usedInConfig,
                               const QBindable<SortingMode::Mode> &sortingMode,
                               const QBindable<bool> &slideshowFoldersFirst,
                               QObject *parent);
@@ -48,6 +50,7 @@ private:
     QPropertyNotifier m_slideshowFoldersFirstNotifier;
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(SlideFilterModel, bool, m_usedInConfig, true)
     QPropertyNotifier m_usedInConfigNotifier;
+    Q_OBJECT_BINDABLE_PROPERTY(SlideFilterModel, QSize, m_targetSize)
     std::random_device m_randomDevice;
     std::mt19937 m_random;
 };

@@ -40,6 +40,8 @@ public:
      */
     void reload();
 
+    virtual QUrl effectiveSource(const QModelIndex &index, const QSize &targetSize) const = 0;
+
 public Q_SLOTS:
     virtual QStringList addBackground(const QUrl &url) = 0;
     /**

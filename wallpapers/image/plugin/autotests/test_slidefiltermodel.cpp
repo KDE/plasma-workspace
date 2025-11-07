@@ -87,7 +87,8 @@ void SlideFilterModelTest::initTestCase()
 void SlideFilterModelTest::init()
 {
     m_model = new SlideModel(QBindable<QSize>(&m_targetSize), QBindable<bool>(&m_usedInConfig), this);
-    m_filterModel = new SlideFilterModel(QBindable<bool>(&m_usedInConfig), //
+    m_filterModel = new SlideFilterModel(QBindable<QSize>(&m_targetSize), //
+                                         QBindable<bool>(&m_usedInConfig), //
                                          QBindable<SortingMode::Mode>(&m_sortingMode), //
                                          QBindable<bool>(&m_sortingFoldersFirst), //
                                          this);

@@ -111,6 +111,25 @@ bool PackageListModel::setData(const QModelIndex &index, const QVariant &value, 
     return false;
 }
 
+QUrl PackageListModel::effectiveSource(const QModelIndex &index, const QSize &targetSize) const
+{
+    if (!index.isValid()) {
+        return {};
+    }
+
+    KPackage::Package package = m_packages.at(index.row()).package();
+    WallpaperPackage::findPreferredImageInPackage(package, targetSize);
+
+    if (qGray(qGuiApp->palette().window().color().rgb()) < 192) {
+        const QString darkPath = package.filePath(QByteArrayLiteral("preferredDark"));
+        if (!darkPath.isEmpty()) {
+            return QUrl::fromLocalFile(darkPath);
+        }
+    }
+
+    return QUrl::fromLocalFile(package.filePath("preferred"));
+}
+
 static QString normalizeDirName(const QString &filePath)
 {
     return filePath.endsWith(QDir::separator()) ? filePath : filePath + QDir::separator();

@@ -5,7 +5,7 @@
 */
 
 #include "slidefiltermodel.h"
-
+#include "model/abstractimagelistmodel.h"
 #include "slidemodel.h"
 
 #include <QDateTime>
@@ -35,7 +35,8 @@ inline QString getFilePathWithDir(const QFileInfo &fileInfo)
 }
 }
 
-SlideFilterModel::SlideFilterModel(const QBindable<bool> &usedInConfig,
+SlideFilterModel::SlideFilterModel(const QBindable<QSize> &targetSize,
+                                   const QBindable<bool> &usedInConfig,
                                    const QBindable<SortingMode::Mode> &sortingMode,
                                    const QBindable<bool> &slideshowFoldersFirst,
                                    QObject *parent)
@@ -43,6 +44,7 @@ SlideFilterModel::SlideFilterModel(const QBindable<bool> &usedInConfig,
     , m_SortingMode(sortingMode.makeBinding())
     , m_SortingFoldersFirst(slideshowFoldersFirst.makeBinding())
     , m_usedInConfig(usedInConfig.makeBinding())
+    , m_targetSize(targetSize.makeBinding())
     , m_random(m_randomDevice())
 {
     srand(time(nullptr));
@@ -251,7 +253,17 @@ int SlideFilterModel::indexOf(const QString &path)
 
 void SlideFilterModel::openContainingFolder(int rowIndex)
 {
-    KIO::highlightInFileManager({index(rowIndex, 0).data(ImageRoles::PathRole).toUrl()});
+    const QModelIndex sourceIndex = mapToSource(index(rowIndex, 0));
+    if (!sourceIndex.isValid()) {
+        return;
+    }
+
+    const AbstractImageListModel *sourceModel = qobject_cast<const AbstractImageListModel *>(sourceIndex.model());
+    if (!sourceModel) {
+        return;
+    }
+
+    KIO::highlightInFileManager({sourceModel->effectiveSource(sourceIndex, m_targetSize)});
 }
 
 void SlideFilterModel::selectAllSlides()
