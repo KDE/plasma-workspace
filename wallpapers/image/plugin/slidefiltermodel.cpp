@@ -26,7 +26,7 @@ inline QString getDisplayName(const QModelIndex &modelIndex)
 
 inline QString getLocalFilePath(const QModelIndex &modelIndex)
 {
-    return modelIndex.data(ImageRoles::PathRole).toUrl().toLocalFile();
+    return modelIndex.data(ImageRoles::SourceRole).toUrl().toLocalFile();
 }
 
 inline QString getFilePathWithDir(const QFileInfo &fileInfo)
