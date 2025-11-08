@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-07 00:44+0000\n"
-"PO-Revision-Date: 2024-09-01 00:56+0300\n"
+"PO-Revision-Date: 2025-11-07 18:22+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.8\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -481,7 +481,7 @@ msgstr "Mygtukas"
 #, kde-format
 msgctxt "color-sets"
 msgid "Selection"
-msgstr "Pažymėjimas"
+msgstr "Žymėjimas"
 
 #. i18n: see plasma-workspace/kcms/colors/README.i18n
 #. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
@@ -577,19 +577,19 @@ msgstr "Mygtuko tekstas"
 #: editor/scmeditorcolors.ui:288
 #, kde-format
 msgid "Selection Background"
-msgstr "Pažymėjimo fonas"
+msgstr "Žymėjimo fonas"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:293
 #, kde-format
 msgid "Selection Text"
-msgstr "Pažymėjimo tekstas"
+msgstr "Žymėjimo tekstas"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:298
 #, kde-format
 msgid "Selection Inactive Text"
-msgstr "Neaktyvus pažymėjimo tekstas"
+msgstr "Neaktyvus žymėjimo tekstas"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:348
