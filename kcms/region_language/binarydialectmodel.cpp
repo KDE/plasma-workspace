@@ -74,7 +74,7 @@ QVariant BinaryDialectModel::data(const QModelIndex &index, int role) const
         case KFormat::BinaryUnitDialect::IECBinaryDialect:
             return i18n("Binary -  Kibibytes (KiB), Mebibytes (MiB), Gibibytes (GiB)");
         case KFormat::BinaryUnitDialect::JEDECBinaryDialect:
-            return i18n("Binary - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)");
+            return i18n("Binary - Kilobytes (KB), Megabytes (MB), Gigabytes (GB)");
         case KFormat::BinaryUnitDialect::MetricBinaryDialect:
             return i18n("Decimal - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)");
         default:
