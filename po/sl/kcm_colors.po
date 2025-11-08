@@ -1,7 +1,7 @@
 # translation of kcmcolors.po to Slovenian
 # Translation of kcmcolors.po to Slovenian
 # KDEBASE translation to Slovenian language.
-# $Id: kcm_colors.po 1721664 2025-10-30 01:24:31Z scripty $
+# $Id: kcm_colors.po 1722277 2025-11-08 01:24:05Z scripty $
 # $Source$
 #
 # Copyright (C) 2002, 2003, 2004, 2005, 2006, 2007 Free Software Foundation, Inc.
@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-29 00:45+0000\n"
+"POT-Creation-Date: 2025-11-08 00:43+0000\n"
 "PO-Revision-Date: 2025-10-29 06:22+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -897,17 +897,25 @@ msgstr "Kontrast okvirjev, ločil in obrisov"
 msgid "Frames and Outlines"
 msgstr "Okvirji in obrisi"
 
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: editor/scmeditoroptions.ui:84
-#, kde-format
-msgid "Contrast"
-msgstr "Kontrast"
+#. i18n: ectx: property (text), widget (KMessageWidget, contrastValueWarning)
+#: editor/scmeditoroptions.ui:93
+#, no-c-format, kde-format
+msgid ""
+"Contrast values below 15% may produce visually awkward effects with some "
+"applications and color schemes. Consider yourself warned!"
+msgstr ""
 
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, contrastPercentageSpinBox)
-#: editor/scmeditoroptions.ui:110
+#: editor/scmeditoroptions.ui:109
 #, no-c-format, kde-format
 msgid "%"
 msgstr "%"
+
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: editor/scmeditoroptions.ui:138
+#, kde-format
+msgid "Contrast"
+msgstr "Kontrast"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelFore0)
 #. i18n: ectx: property (toolTip), widget (QLabel, labelBack0)

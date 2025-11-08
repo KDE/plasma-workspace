@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-29 00:45+0000\n"
+"POT-Creation-Date: 2025-11-08 00:43+0000\n"
 "PO-Revision-Date: 2025-10-29 04:02+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -884,17 +884,25 @@ msgstr "ჩარჩოების, გამყოფების და კ�
 msgid "Frames and Outlines"
 msgstr "ჩარჩოები და კონტურები"
 
-#. i18n: ectx: property (text), widget (QLabel, label_8)
-#: editor/scmeditoroptions.ui:84
-#, kde-format
-msgid "Contrast"
-msgstr "კონტრასტი"
+#. i18n: ectx: property (text), widget (KMessageWidget, contrastValueWarning)
+#: editor/scmeditoroptions.ui:93
+#, no-c-format, kde-format
+msgid ""
+"Contrast values below 15% may produce visually awkward effects with some "
+"applications and color schemes. Consider yourself warned!"
+msgstr ""
 
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, contrastPercentageSpinBox)
-#: editor/scmeditoroptions.ui:110
+#: editor/scmeditoroptions.ui:109
 #, no-c-format, kde-format
 msgid "%"
 msgstr "%"
+
+#. i18n: ectx: property (text), widget (QLabel, label_8)
+#: editor/scmeditoroptions.ui:138
+#, kde-format
+msgid "Contrast"
+msgstr "კონტრასტი"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelFore0)
 #. i18n: ectx: property (toolTip), widget (QLabel, labelBack0)

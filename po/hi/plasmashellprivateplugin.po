@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-03 00:44+0000\n"
+"POT-Creation-Date: 2025-11-08 00:43+0000\n"
 "PO-Revision-Date: 2021-08-21 16:25+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -138,6 +138,7 @@ msgstr ""
 
 #: calendar/qml/MonthViewHeader.qml:272
 #, kde-format
+msgctxt "@info:tooltip"
 msgid "Keep Open"
 msgstr ""
 

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-29 00:45+0000\n"
+"POT-Creation-Date: 2025-11-08 00:43+0000\n"
 "PO-Revision-Date: 2004-09-19 17:18+0200\n"
 "Last-Translator: Thierry Vignaud <tvignaud.com>\n"
 "Language-Team: Brezhoneg <Suav.Icb.fr>\n"
@@ -943,18 +943,26 @@ msgstr ""
 msgid "Frames and Outlines"
 msgstr ""
 
+#. i18n: ectx: property (text), widget (KMessageWidget, contrastValueWarning)
+#: editor/scmeditoroptions.ui:93
+#, no-c-format, kde-format
+msgid ""
+"Contrast values below 15% may produce visually awkward effects with some "
+"applications and color schemes. Consider yourself warned!"
+msgstr ""
+
+#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, contrastPercentageSpinBox)
+#: editor/scmeditoroptions.ui:109
+#, no-c-format, kde-format
+msgid "%"
+msgstr ""
+
 #. i18n: ectx: property (text), widget (QLabel, label_8)
-#: editor/scmeditoroptions.ui:84
+#: editor/scmeditoroptions.ui:138
 #, fuzzy, kde-format
 #| msgid "Con&trast"
 msgid "Contrast"
 msgstr "Dar&gemm"
-
-#. i18n: ectx: property (suffix), widget (QDoubleSpinBox, contrastPercentageSpinBox)
-#: editor/scmeditoroptions.ui:110
-#, no-c-format, kde-format
-msgid "%"
-msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelFore0)
 #. i18n: ectx: property (toolTip), widget (QLabel, labelBack0)

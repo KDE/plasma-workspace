@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-03 00:44+0000\n"
+"POT-Creation-Date: 2025-11-08 00:43+0000\n"
 "PO-Revision-Date: 2025-03-28 01:36-0300\n"
 "Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -142,7 +142,9 @@ msgid "Next Decade"
 msgstr "Próxima década"
 
 #: calendar/qml/MonthViewHeader.qml:272
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Keep Open"
+msgctxt "@info:tooltip"
 msgid "Keep Open"
 msgstr "Manter aberto"
 
