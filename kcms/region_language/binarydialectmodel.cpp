@@ -72,11 +72,11 @@ QVariant BinaryDialectModel::data(const QModelIndex &index, int role) const
     case Description: {
         switch (dialect) {
         case KFormat::BinaryUnitDialect::IECBinaryDialect:
-            return i18n("Binary -  Kibibytes (KiB), Mebibytes (MiB), Gibibytes (GiB)");
+            return i18nc("Binary dialect IEC description", "Binary -  Kibibytes (KiB), Mebibytes (MiB), Gibibytes (GiB)");
         case KFormat::BinaryUnitDialect::JEDECBinaryDialect:
-            return i18n("Binary - Kilobytes (KB), Megabytes (MB), Gigabytes (GB)");
+            return i18nc("Binary dialect JEDEC description", "Binary - Kilobytes (KB), Megabytes (MB), Gigabytes (GB)");
         case KFormat::BinaryUnitDialect::MetricBinaryDialect:
-            return i18n("Decimal - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)");
+            return i18nc("Binary dialect Metric description", "Decimal - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)");
         default:
             break;
         }
