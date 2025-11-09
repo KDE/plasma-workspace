@@ -84,18 +84,16 @@ msgid "Switch dynamic wallpapers:"
 msgstr "切换动态壁纸："
 
 #: imagepackage/contents/ui/config.qml:211
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
-#| msgid "Based on whether the color scheme is dark or light"
+#, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the Plasma style is light or dark "
-msgstr "基于配色方案是深色还是浅色"
+msgstr "基于 Plasma 样式是深色/浅色 "
 
 #: imagepackage/contents/ui/config.qml:213
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on the day-night cycle"
-msgstr "基于日夜周期："
+msgstr "基于日夜周期"
 
 #: imagepackage/contents/ui/config.qml:217
 #, kde-format

@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-07 00:44+0000\n"
-"PO-Revision-Date: 2025-06-29 09:04+0300\n"
+"PO-Revision-Date: 2025-11-08 21:06+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -26,7 +26,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.04.2\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -56,12 +56,12 @@ msgstr "Bu bir renk şeması dosyası değil."
 #: colors.cpp:303
 #, kde-format
 msgid "Failed to create 'color-scheme' data folder."
-msgstr "'color-scheme' veri klasörü oluşturulamadı."
+msgstr "“color-scheme” adlı veri klasörü oluşturulamadı."
 
 #: colors.cpp:310
 #, kde-format
 msgid "Failed to copy color scheme into 'color-scheme' data folder."
-msgstr "Renk şeması 'color-scheme' veri dizini klasörü kopyalanamadı."
+msgstr "Renk şeması, “color-scheme” adlı veri klasörüne kopyalanamadı."
 
 #: colors.cpp:327
 #, kde-format

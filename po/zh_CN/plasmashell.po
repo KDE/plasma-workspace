@@ -347,7 +347,7 @@ msgstr "显示面板配置"
 #, kde-format
 msgctxt "Percentage value"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: shellcontainmentconfig.cpp:106
 #, kde-format

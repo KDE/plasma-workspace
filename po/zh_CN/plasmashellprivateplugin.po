@@ -139,7 +139,7 @@ msgstr "下一个十年"
 #: calendar/qml/MonthViewHeader.qml:272
 #, kde-format
 msgid "Keep Open"
-msgstr "保持展开状态"
+msgstr ""
 
 #: containmentlayoutmanager/qml/BasicAppletContainer.qml:285
 #, kde-format

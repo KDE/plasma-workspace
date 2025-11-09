@@ -13,8 +13,8 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-24 02:35+0000\n"
-"PO-Revision-Date: 2025-10-24 08:16-0300\n"
-"Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
+"PO-Revision-Date: 2025-11-08 21:17-0300\n"
+"Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
@@ -116,7 +116,7 @@ msgstr "Sempre usar a variante escura"
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
-msgstr "Configurar..."
+msgstr "Configurar…"
 
 #: imagepackage/contents/ui/config.qml:242
 #, kde-format
@@ -164,7 +164,7 @@ msgstr "Adicionar imagem de papel de parede…"
 #, kde-format
 msgctxt "@action:button the new things being gotten are wallpapers"
 msgid "Get New…"
-msgstr "Baixar novos..."
+msgstr "Baixar novos…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:101
 #, kde-format
@@ -353,7 +353,7 @@ msgstr "Remover pasta"
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:260
 #, kde-format
 msgid "Open Folder…"
-msgstr "Abrir pasta..."
+msgstr "Abrir pasta…"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:275
 #, kde-format

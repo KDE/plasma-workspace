@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: kcm_fonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-13 00:45+0000\n"
-"PO-Revision-Date: 2025-06-21 19:10-0300\n"
+"PO-Revision-Date: 2025-11-08 21:17-0300\n"
 "Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -26,7 +26,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.04.2\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #. i18n: ectx: label, entry (forceFontDPI), group (General)
 #: fontsaasettingsbase.kcfg:9
@@ -151,7 +151,7 @@ msgstr "Display"
 #: ui/main.qml:42
 #, kde-format
 msgid "Adjust Global Scale…"
-msgstr "Ajustar escala global..."
+msgstr "Ajustar escala global…"
 
 #: ui/main.qml:56
 #, kde-format
@@ -216,7 +216,7 @@ msgstr ""
 #: ui/main.qml:154
 #, kde-format
 msgid "&Adjust All Fonts…"
-msgstr "A&justar todas as fontes..."
+msgstr "A&justar todas as fontes…"
 
 #: ui/main.qml:167
 #, kde-format

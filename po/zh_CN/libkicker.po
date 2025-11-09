@@ -115,7 +115,7 @@ msgstr "电脑"
 #: kastatsfavoritesmodel.cpp:557 rootmodel.cpp:533 simplefavoritesmodel.cpp:33
 #, kde-format
 msgid "Favorites"
-msgstr "常用程序"
+msgstr "常用应用程序"
 
 #: recentusagemodel.cpp:163
 #, kde-format
