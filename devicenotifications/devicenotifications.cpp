@@ -118,7 +118,7 @@ QString UdevDevice::deviceProperty(const char *name) const
     if (m_device) {
         const auto *value = udev_device_get_property_value(m_device, name);
         if (value) {
-            return QString::fromLatin1(value);
+            return QString::fromUtf8(value);
         }
     }
     return {};
@@ -140,7 +140,7 @@ QString UdevDevice::sysfsProperty(const char *name) const
     if (m_device) {
         const auto *value = udev_device_get_sysattr_value(m_device, name);
         if (value) {
-            return QString::fromLatin1(value);
+            return QString::fromUtf8(value);
         }
     }
     return {};
@@ -149,7 +149,7 @@ QString UdevDevice::sysfsProperty(const char *name) const
 QString UdevDevice::getDeviceString(const char *(*getter)(udev_device *)) const
 {
     if (m_device) {
-        return QString::fromLatin1((*getter)(m_device));
+        return QString::fromUtf8((*getter)(m_device));
     }
     return {};
 }
