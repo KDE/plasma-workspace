@@ -290,6 +290,11 @@ QVariant StatusNotifierModel::data(const QModelIndex &index, int role) const
     const QString source = m_items[index.row()];
     StatusNotifierItemSource *sniData = m_sniHost->itemForService(source);
 
+    if (!sniData) {
+        qCWarning(SYSTEM_TRAY) << "Could not find sniData for source" << source;
+        return {};
+    }
+
     if (role <= Qt::UserRole) {
         switch (role) {
         case Qt::DisplayRole:
