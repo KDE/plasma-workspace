@@ -126,6 +126,17 @@ QString UdevDevice::deviceProperty(const char *name) const
     return {};
 }
 
+QByteArray UdevDevice::devicePropertyRaw(const char *name) const
+{
+    if (m_device) {
+        const auto *value = udev_device_get_property_value(m_device, name);
+        if (value) {
+            return value;
+        }
+    }
+    return {};
+}
+
 QString UdevDevice::sysfsProperty(const char *name) const
 {
     if (m_device) {
@@ -152,7 +163,7 @@ QString UdevDevice::model() const
         name = deviceProperty("ID_MODEL_FROM_DATABASE");
     }
     if (name.isEmpty()) {
-        name = decodePropertyValue(deviceProperty("ID_MODEL_ENC").toLatin1());
+        name = decodePropertyValue(devicePropertyRaw("ID_MODEL_ENC"));
     }
     if (name.isEmpty()) {
         name = deviceProperty("ID_MODEL");
@@ -167,7 +178,7 @@ QString UdevDevice::vendor() const
         vendor = deviceProperty("ID_VENDOR_FROM_DATABASE");
     }
     if (vendor.isEmpty()) {
-        vendor = decodePropertyValue(deviceProperty("ID_VENDOR_ENC").toLatin1());
+        vendor = decodePropertyValue(devicePropertyRaw("ID_VENDOR_ENC"));
     }
     if (vendor.isEmpty()) {
         vendor = deviceProperty("ID_VENDOR");

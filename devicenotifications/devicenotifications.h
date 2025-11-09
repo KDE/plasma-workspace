@@ -39,6 +39,7 @@ public:
     QString type() const;
 
     QString deviceProperty(const char *name) const;
+    QByteArray devicePropertyRaw(const char *name) const;
     QString sysfsProperty(const char *name) const;
 
     QString model() const;
