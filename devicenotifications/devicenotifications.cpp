@@ -23,7 +23,7 @@ K_PLUGIN_CLASS_WITH_JSON(KdedDeviceNotifications, "devicenotifications.json")
 using namespace std::chrono_literals;
 
 // TODO Can we put this in KStringHandler?
-static QString decodePropertyValue(const QByteArray &encoded)
+static QString decodePropertyValue(QByteArrayView encoded)
 {
     const int len = encoded.length();
     QByteArray decoded;
@@ -38,7 +38,7 @@ static QString decodePropertyValue(const QByteArray &encoded)
                 decoded.append('\\');
                 ++i;
             } else if (i + 3 < len && encoded.at(i + 1) == 'x') {
-                QByteArray hex = encoded.mid(i + 2, 2);
+                QByteArrayView hex = encoded.mid(i + 2, 2);
                 bool ok;
                 const int code = hex.toInt(&ok, 16);
                 if (ok) {
