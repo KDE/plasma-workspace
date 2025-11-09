@@ -11,15 +11,15 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-22 00:45+0000\n"
-"PO-Revision-Date: 2025-02-03 08:19-0300\n"
-"Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
+"PO-Revision-Date: 2025-11-08 21:10-0300\n"
+"Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #: actionlist.cpp:92
 #, kde-format
@@ -59,13 +59,13 @@ msgstr "Esquecer os arquivos recentes"
 #: actionlist.cpp:389
 #, kde-format
 msgid "Edit Application…"
-msgstr "Editar aplicativo..."
+msgstr "Editar aplicativo…"
 
 #: actionlist.cpp:421
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
-msgstr "Desinstalar ou gerenciar extensões..."
+msgstr "Desinstalar ou gerenciar extensões…"
 
 #: appentry.cpp:361
 #, kde-format

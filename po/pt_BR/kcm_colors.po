@@ -13,13 +13,14 @@
 # Aracele Torres <aracele@kde.org>, 2017.
 # Thiago Masato Costa Sueto <herzenschein@gmail.com>, 2021.
 # SPDX-FileCopyrightText: 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org>
+# SPDX-FileCopyrightText: 2025 Guilherme Marçal Silva <guimarcalsilva@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-08 00:43+0000\n"
-"PO-Revision-Date: 2025-10-29 07:26-0300\n"
-"Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
+"PO-Revision-Date: 2025-11-08 21:10-0300\n"
+"Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
@@ -915,6 +916,8 @@ msgid ""
 "Contrast values below 15% may produce visually awkward effects with some "
 "applications and color schemes. Consider yourself warned!"
 msgstr ""
+"Valores de contraste abaixo de 15% podem produzir efeitos visualmente "
+"estranhos com alguns aplicativos e esquemas de cor. Esteja avisado!"
 
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, contrastPercentageSpinBox)
 #: editor/scmeditoroptions.ui:109
@@ -1318,7 +1321,7 @@ msgstr "Esquemas escuros"
 #: ui/main.qml:152
 #, kde-format
 msgid "Install from File…"
-msgstr "Instalar a partir do arquivo..."
+msgstr "Instalar a partir do arquivo…"
 
 #: ui/main.qml:157
 #, kde-format
@@ -1370,7 +1373,7 @@ msgstr "Texto desativado"
 #: ui/main.qml:317
 #, kde-format
 msgid "Edit Color Scheme…"
-msgstr "Editar esquema de cores..."
+msgstr "Editar esquema de cores…"
 
 #: ui/main.qml:323
 #, kde-format

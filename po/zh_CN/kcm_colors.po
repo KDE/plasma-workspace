@@ -869,13 +869,13 @@ msgstr "染色强度："
 #: editor/scmeditoroptions.ui:69
 #, kde-format
 msgid "Contrast of the frames, separators and outlines"
-msgstr ""
+msgstr "框架、分隔线和轮廓的对比度"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
 #: editor/scmeditoroptions.ui:72
 #, kde-format
 msgid "Frames and Outlines"
-msgstr ""
+msgstr "框架和轮廓"
 
 #. i18n: ectx: property (text), widget (KMessageWidget, contrastValueWarning)
 #: editor/scmeditoroptions.ui:93
@@ -889,7 +889,7 @@ msgstr ""
 #: editor/scmeditoroptions.ui:109
 #, no-c-format, kde-format
 msgid "%"
-msgstr ""
+msgstr "%"
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: editor/scmeditoroptions.ui:138
@@ -1340,15 +1340,3 @@ msgstr "打开配色方案"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "配色方案文件 (*.colors)"
-
-#~ msgid "Shading of frames and lighting (\"3D\") effects"
-#~ msgstr "线框阴影和立体光照特效水平"
-
-#~ msgid "Shading"
-#~ msgstr "立体光照特效"
-
-#~ msgid "Maximum"
-#~ msgstr "最大"
-
-#~ msgid "Minimum"
-#~ msgstr "最小"

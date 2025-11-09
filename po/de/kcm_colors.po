@@ -7,20 +7,21 @@
 # SPDX-FileCopyrightText: 2010 Johannes Obermayr <johannesobermayr@gmx.de>
 # SPDX-FileCopyrightText: 2011, 2016, 2020, 2022, 2023 Frederik Schwarzer <schwarzer@kde.org>
 # SPDX-FileCopyrightText: 2023 Jannick Kuhr <opensource@kuhr.org>
+# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n@prly.mozmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_colors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-08 00:43+0000\n"
-"PO-Revision-Date: 2025-04-15 02:34+0200\n"
-"Last-Translator: Flori G <Renner03@protonmail.com>\n"
+"PO-Revision-Date: 2025-10-31 11:01+0100\n"
+"Last-Translator: Philipp Kiemle <l10n@prly.mozmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -883,13 +884,13 @@ msgstr "Ausprägung der Tönung:"
 #: editor/scmeditoroptions.ui:69
 #, kde-format
 msgid "Contrast of the frames, separators and outlines"
-msgstr ""
+msgstr "Kontrast der Rahmen, Abstandhalter und Umrandungen"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
 #: editor/scmeditoroptions.ui:72
 #, kde-format
 msgid "Frames and Outlines"
-msgstr ""
+msgstr "Rahmen und Umrandungen"
 
 #. i18n: ectx: property (text), widget (KMessageWidget, contrastValueWarning)
 #: editor/scmeditoroptions.ui:93
@@ -903,7 +904,7 @@ msgstr ""
 #: editor/scmeditoroptions.ui:109
 #, no-c-format, kde-format
 msgid "%"
-msgstr ""
+msgstr " %"
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: editor/scmeditoroptions.ui:138
@@ -1304,12 +1305,12 @@ msgstr "Dunkle Schemata"
 #: ui/main.qml:152
 #, kde-format
 msgid "Install from File…"
-msgstr "Aus Datei installieren ..."
+msgstr "Aus Datei installieren …"
 
 #: ui/main.qml:157
 #, kde-format
 msgid "Get New…"
-msgstr "Neue holen ..."
+msgstr "Neue holen …"
 
 #: ui/main.qml:204
 #, kde-format
@@ -1356,7 +1357,7 @@ msgstr "Deaktivierter Text"
 #: ui/main.qml:317
 #, kde-format
 msgid "Edit Color Scheme…"
-msgstr "Farbschema bearbeiten ..."
+msgstr "Farbschema bearbeiten …"
 
 #: ui/main.qml:323
 #, kde-format

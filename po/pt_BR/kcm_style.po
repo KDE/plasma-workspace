@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-17 00:41+0000\n"
-"PO-Revision-Date: 2025-10-30 22:26-0300\n"
+"PO-Revision-Date: 2025-11-08 21:10-0300\n"
 "Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -187,17 +187,17 @@ msgstr "Tema GTK:"
 #: ui/GtkStylePage.qml:68
 #, kde-format
 msgid "Preview…"
-msgstr "Prévia..."
+msgstr "Prévia…"
 
 #: ui/GtkStylePage.qml:87
 #, kde-format
 msgid "Install from File…"
-msgstr "Instalar a partir de um arquivo..."
+msgstr "Instalar a partir de um arquivo…"
 
 #: ui/GtkStylePage.qml:92
 #, kde-format
 msgid "Get New GNOME/GTK Application Styles…"
-msgstr "Baixar novos estilos de aplicativos GNOME/GTK..."
+msgstr "Baixar novos estilos de aplicativos GNOME/GTK…"
 
 #: ui/GtkStylePage.qml:108
 #, kde-format
@@ -212,17 +212,17 @@ msgstr "Arquivo de tema GTK (*.tar.xz *.tar.gz *.tar.bz2)"
 #: ui/main.qml:55
 #, kde-format
 msgid "Configure Icons and Toolbars…"
-msgstr "Configurar ícones e barras de ferramentas..."
+msgstr "Configurar ícones e barras de ferramentas…"
 
 #: ui/main.qml:73
 #, kde-format
 msgid "Configure GNOME/GTK Application Style…"
-msgstr "Configurar estilo de aplicativos GNOME/GTK..."
+msgstr "Configurar estilo de aplicativos GNOME/GTK…"
 
 #: ui/main.qml:106
 #, kde-format
 msgid "Configure Style…"
-msgstr "Configurar estilo..."
+msgstr "Configurar estilo…"
 
 #~ msgid ""
 #~ "This module allows you to modify the visual appearance of applications' "

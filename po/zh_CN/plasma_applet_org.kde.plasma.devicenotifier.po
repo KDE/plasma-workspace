@@ -181,7 +181,7 @@ msgstr "正在修复…"
 #, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
-msgstr "总容量 %2，空闲容量 %1"
+msgstr "总容量 %2，剩余容量 %1"
 
 #: qml/DeviceItem.qml:115
 #, kde-format

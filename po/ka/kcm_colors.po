@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-08 00:43+0000\n"
-"PO-Revision-Date: 2025-10-29 04:02+0100\n"
+"PO-Revision-Date: 2025-11-08 07:25+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -891,6 +891,9 @@ msgid ""
 "Contrast values below 15% may produce visually awkward effects with some "
 "applications and color schemes. Consider yourself warned!"
 msgstr ""
+"კონტრასტის მნიშვნელობებს, რომლებიც 15%-ზე ნაკლებია, შეუძლიათ, ვიზუალურად "
+"უცნაური ეფექტები გამოიწვიონ ზოგიერთ აპლიკაციებთან და ფერის სქემებთან ერთად. "
+"ჩვენ გაგაფრთხილეთ!"
 
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, contrastPercentageSpinBox)
 #: editor/scmeditoroptions.ui:109
