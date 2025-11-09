@@ -3,20 +3,21 @@
 # SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2020, 2021 Burkhard Lück <lueck@hube-lueck.de>
 # SPDX-FileCopyrightText: 2023 Jannick Kuhr <opensource@kuhr.org>
 # SPDX-FileCopyrightText: 2024, 2025 Flori G <Renner03@protonmail.com>
+# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n@prly.mozmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-02 02:34+0000\n"
-"PO-Revision-Date: 2025-01-25 15:42+0100\n"
-"Last-Translator: Flori G <Renner03@protonmail.com>\n"
+"PO-Revision-Date: 2025-10-30 17:49+0100\n"
+"Last-Translator: Philipp Kiemle <l10n@prly.mozmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -243,7 +244,7 @@ msgstr "Fensterleisteneintrag %1 aktivieren"
 #: shellcorona.cpp:258
 #, kde-format
 msgid "Manage Desktops And Panels..."
-msgstr "Arbeitsflächen und Kontrollleisten verwalten ..."
+msgstr "Arbeitsflächen und Kontrollleisten verwalten …"
 
 #: shellcorona.cpp:279
 #, kde-format

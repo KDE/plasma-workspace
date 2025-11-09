@@ -7,20 +7,21 @@
 # SPDX-FileCopyrightText: 2010 Johannes Obermayr <johannesobermayr@gmx.de>
 # SPDX-FileCopyrightText: 2011, 2016, 2020, 2022, 2023 Frederik Schwarzer <schwarzer@kde.org>
 # SPDX-FileCopyrightText: 2023 Jannick Kuhr <opensource@kuhr.org>
+# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n@prly.mozmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_colors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-05 05:54+0000\n"
-"PO-Revision-Date: 2023-08-13 16:26+0200\n"
-"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
+"PO-Revision-Date: 2025-10-31 11:01+0100\n"
+"Last-Translator: Philipp Kiemle <l10n@prly.mozmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -1249,7 +1250,7 @@ msgstr "Deaktivierter Text"
 #: package/contents/ui/main.qml:469
 #, kde-format
 msgid "Edit Color Scheme…"
-msgstr "Farbschema bearbeiten ..."
+msgstr "Farbschema bearbeiten …"
 
 #: package/contents/ui/main.qml:475
 #, kde-format
@@ -1264,12 +1265,12 @@ msgstr "Farbschema wiederherstellen"
 #: package/contents/ui/main.qml:526
 #, kde-format
 msgid "Install from File…"
-msgstr "Aus Datei installieren ..."
+msgstr "Aus Datei installieren …"
 
 #: package/contents/ui/main.qml:531
 #, kde-format
 msgid "Get New Color Schemes…"
-msgstr "Neue Farbschemata holen ..."
+msgstr "Neue Farbschemata holen …"
 
 #: package/contents/ui/main.qml:549
 #, kde-format
