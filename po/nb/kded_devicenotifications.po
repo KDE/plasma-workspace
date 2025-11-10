@@ -73,16 +73,7 @@ msgid "A USB device has been disconnected."
 msgstr "En USB-enhet ble frakoblet."
 
 #: devicenotifications.cpp:499
-#, fuzzy, kde-format
-#| msgctxt "@title:notifications"
-#| msgid "USB Device Detected"
+#, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Removed"
-msgstr "USB-enhet oppdaget"
-
-#, fuzzy
-#~| msgctxt "@title:notifications"
-#~| msgid "USB Device Detected"
-#~ msgctxt "@title:notifications"
-#~ msgid "USB Device Went Away"
-#~ msgstr "USB-enhet oppdaget"
+msgstr "USB-enhet fjernet"

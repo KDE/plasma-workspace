@@ -1,6 +1,5 @@
 # Translation of kcm_nighttime to Norwegian Nynorsk
 #
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"

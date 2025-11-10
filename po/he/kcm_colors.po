@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-08 00:43+0000\n"
-"PO-Revision-Date: 2025-10-29 11:00+0200\n"
+"PO-Revision-Date: 2025-11-08 19:59+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -902,6 +902,8 @@ msgid ""
 "Contrast values below 15% may produce visually awkward effects with some "
 "applications and color schemes. Consider yourself warned!"
 msgstr ""
+"ערכי ניגודיות מעל 15% יכולים לגרום לאפקטים מוזרים חזותית עם כל מיני יישומים "
+"וערכות צבעים. זאת סוג של אזהרה!"
 
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, contrastPercentageSpinBox)
 #: editor/scmeditoroptions.ui:109

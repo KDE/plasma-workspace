@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-08 00:43+0000\n"
-"PO-Revision-Date: 2025-11-07 22:20+0100\n"
+"PO-Revision-Date: 2025-11-09 13:56+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -893,6 +893,8 @@ msgid ""
 "Contrast values below 15% may produce visually awkward effects with some "
 "applications and color schemes. Consider yourself warned!"
 msgstr ""
+"Контрастни стойности под 15% могат да доведат до визуално неприятни ефекти "
+"при някои приложения и цветови схеми. Считайте се за предупредени!"
 
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, contrastPercentageSpinBox)
 #: editor/scmeditoroptions.ui:109
@@ -1365,15 +1367,3 @@ msgstr "Отваряне на цветова схема"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Файлове с цветна схема (*.colors)"
-
-#~ msgid "Shading of frames and lighting (\"3D\") effects"
-#~ msgstr "Засенчване на рамки и светлинни (\"3D \") ефекти"
-
-#~ msgid "Shading"
-#~ msgstr "Засенчване"
-
-#~ msgid "Maximum"
-#~ msgstr "Максимално"
-
-#~ msgid "Minimum"
-#~ msgstr "Минимално"

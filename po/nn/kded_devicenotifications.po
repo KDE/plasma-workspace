@@ -67,13 +67,7 @@ msgid "A USB device has been disconnected."
 msgstr "Ei USB-eining vart kopla frå."
 
 #: devicenotifications.cpp:499
-#, fuzzy, kde-format
-#| msgctxt "@title:notifications"
-#| msgid "USB Device Detected"
+#, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Removed"
-msgstr "USB-eining oppdaga"
-
-#~ msgctxt "@title:notifications"
-#~ msgid "USB Device Went Away"
-#~ msgstr "USB-eining forsvann"
+msgstr "USB-eining fjerna"

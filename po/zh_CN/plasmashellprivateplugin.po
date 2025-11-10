@@ -140,7 +140,7 @@ msgstr "下一个十年"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Keep Open"
-msgstr ""
+msgstr "保持展开状态"
 
 #: containmentlayoutmanager/qml/BasicAppletContainer.qml:285
 #, kde-format

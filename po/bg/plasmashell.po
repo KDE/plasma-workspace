@@ -456,6 +456,3 @@ msgstr "Брой панели"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Изброява панелите"
-
-#~ msgid "Stop Current Activity"
-#~ msgstr "Спиране на текущата дейност"
