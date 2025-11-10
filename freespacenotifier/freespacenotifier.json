@@ -117,7 +117,7 @@
         "Name[uk]": "Сповіщення про вільне місце",
         "Name[vi]": "Trình thông báo không gian trống",
         "Name[wa]": "Notifieu del plaece di libe",
-        "Name[zh_CN]": "空闲空间通知器",
+        "Name[zh_CN]": "剩余空间通知程序",
         "Name[zh_TW]": "剩餘空間通知"
     },
     "X-KDE-Kded-autoload": true
