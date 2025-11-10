@@ -1331,6 +1331,10 @@ void ShellCorona::removeDesktop(DesktopView *desktopView)
             it.remove();
             panelView->destroy();
             panelView->containment()->reactToScreenChange();
+            if (m_screensWithUiReady.contains(screenId)) {
+                m_screensWithUiReady.remove(screenId);
+                screenUiReadyChanged(screenId, false);
+            }
         }
     }
 
@@ -2526,6 +2530,11 @@ Plasma::Containment *ShellCorona::addPanel(const QString &plugin)
 
     Q_ASSERT(panel);
     m_waitingPanels << panel;
+    const int screen = std::max(0, panel->lastScreen());
+    if (m_screensWithUiReady.contains(screen)) {
+        m_screensWithUiReady.remove(screen);
+        screenUiReadyChanged(screen, false);
+    }
     // immediately create the panel here so that we have access to the panel view
     createWaitingPanels();
 
