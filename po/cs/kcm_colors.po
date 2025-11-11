@@ -898,7 +898,7 @@ msgstr ""
 #: editor/scmeditoroptions.ui:109
 #, no-c-format, kde-format
 msgid "%"
-msgstr ""
+msgstr "%"
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: editor/scmeditoroptions.ui:138
@@ -1362,15 +1362,3 @@ msgstr "Otevřít barevné schéma"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Soubory barevných schémat (*.colors)"
-
-#~ msgid "Shading of frames and lighting (\"3D\") effects"
-#~ msgstr "Stínování rámců a světelné (\"3D\") efekty"
-
-#~ msgid "Shading"
-#~ msgstr "Stínování"
-
-#~ msgid "Maximum"
-#~ msgstr "Maximum"
-
-#~ msgid "Minimum"
-#~ msgstr "Minimum"
