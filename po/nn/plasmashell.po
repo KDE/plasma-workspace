@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-06 17:07+0000\n"
+"POT-Creation-Date: 2025-11-11 02:57+0000\n"
 "PO-Revision-Date: 2025-10-26 13:06+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -417,13 +417,13 @@ msgstr "Handsam skrivebord og panel …"
 msgid "Move keyboard focus between panels"
 msgstr "Flytt tastaturfokus mellom panel"
 
-#: shellcorona.cpp:2217
+#: shellcorona.cpp:2221
 #, kde-format
 msgid "Add Panel"
 msgstr "Legg til panel"
 
 # Eksempel «Oppgåvepanel for telefon (tomt)», men helst «Tomt oppgåvepanel for telefon».
-#: shellcorona.cpp:2300
+#: shellcorona.cpp:2304
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
