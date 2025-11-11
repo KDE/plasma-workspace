@@ -964,7 +964,7 @@ void PanelView::showConfigurationInterface(Plasma::Applet *applet)
             configView->setAnimated(true);
             m_panelConfigView = configView;
 
-            connect(this, &PanelView::formFactorChanged, this, [&]() {
+            connect(this, &PanelView::formFactorChanged, m_panelConfigView, [&]() {
                 // The panel window will resize first, and the content
                 // will follow. We first unset the visual parent so that
                 // the config view does not reposition in the incorrect
