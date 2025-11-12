@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-14 00:44+0000\n"
+"POT-Creation-Date: 2025-11-12 00:46+0000\n"
 "PO-Revision-Date: 2025-10-26 12:59+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -37,17 +37,23 @@ msgid "Metric system (SI)"
 msgstr "Det metriske systemet (SI)"
 
 #: binarydialectmodel.cpp:75
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Binary -  Kibibytes (KiB), Mebibytes (MiB), Gibibytes (GiB)"
+msgctxt "Binary dialect IEC description"
 msgid "Binary -  Kibibytes (KiB), Mebibytes (MiB), Gibibytes (GiB)"
 msgstr "Binær –  kibibyte (KiB), bebibyte (MiB), gibibyte (GiB)"
 
 #: binarydialectmodel.cpp:77
-#, kde-format
-msgid "Binary - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
+#, fuzzy, kde-format
+#| msgid "Binary - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
+msgctxt "Binary dialect JEDEC description"
+msgid "Binary - Kilobytes (KB), Megabytes (MB), Gigabytes (GB)"
 msgstr "Binær – kilobyte (kB), megabyte (MB), gigabyte (GB)"
 
 #: binarydialectmodel.cpp:79
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Decimal - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
+msgctxt "Binary dialect Metric description"
 msgid "Decimal - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
 msgstr "Desimal – kilobyte (kB), megabyte (MB), gigabyte (GB)"
 
