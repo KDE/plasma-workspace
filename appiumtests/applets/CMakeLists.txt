@@ -29,7 +29,7 @@ add_test(
     NAME clipboardtest
     COMMAND sh -c "mkdir -p /tmp/appium/clipboardtest;dbus-launch selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/clipboardtest.py"
 )
-set_tests_properties(clipboardtest PROPERTIES TIMEOUT 300 ENVIRONMENT "XDG_RUNTIME_DIR=/tmp/appium/clipboardtest;FLASK_PORT=4728;QT_QPA_PLATFORM=wayland;GDK_BACKEND=wayland" RUN_SERIAL ON)
+set_tests_properties(clipboardtest PROPERTIES TIMEOUT 300 ENVIRONMENT "XDG_RUNTIME_DIR=/tmp/appium/clipboardtest;FLASK_PORT=4728;QT_QPA_PLATFORM=wayland;GDK_BACKEND=wayland;GSK_RENDERER=cairo" RUN_SERIAL ON)
 
 add_test(
     NAME devicenotifiertest
