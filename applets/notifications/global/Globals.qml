@@ -519,7 +519,7 @@ QtObject {
             required property string desktopEntry
 
             readonly property bool isTransient: model.transient // "transient" is a reserved keyword, cannot declare it as required property
-            readonly property bool hasSomeActions: (hasDefaultAction || false) || (actionLabels || []).length > 0 || (configureActionLabel || "").length > 0 || (hasReplyAction || false)
+            readonly property bool hasSomeActions: hasDefaultAction || (actionLabels).length > 0 || (configureActionLabel).length > 0 || hasReplyAction
 
             popupWidth: globals.popupWidth
 
@@ -542,7 +542,7 @@ QtObject {
 
                 applicationName: popup.applicationName
                 applicationIconSource: popup.applicationIconName
-                originName: popup.originName || ""
+                originName: popup.originName
 
                 time: isNaN(delegate.updated) ? delegate.created : delegate.updated
 
@@ -555,30 +555,30 @@ QtObject {
                 closable: popup.closable
 
                 summary: popup.summary
-                body: popup.body || ""
+                body: popup.body
                 accessibleDescription: popup.accessibleDescription
                 icon: popup.image || popup.iconName
-                hasDefaultAction: popup.hasDefaultAction || false
+                hasDefaultAction: popup.hasDefaultAction
 
-                urls: popup.urls || []
-                urgency: popup.urgency || NotificationManager.Notifications.NormalUrgency
+                urls: popup.urls
+                urgency: popup.urgency
 
-                jobState: popup.jobState || 0
-                percentage: popup.percentage || 0
-                jobError: popup.jobError || 0
+                jobState: popup.jobState
+                percentage: popup.percentage
+                jobError: popup.jobError
                 suspendable: !!popup.suspendable
                 killable: !!popup.killable
-                jobDetails: popup.jobDetails || null
+                jobDetails: popup.jobDetails
 
-                configureActionLabel: popup.configureActionLabel || ""
+                configureActionLabel: popup.configureActionLabel
                 actionNames: popup.actionNames
                 actionLabels: popup.actionLabels
 
-                hasReplyAction: popup.hasReplyAction || false
-                replyActionLabel: popup.replyActionLabel || ""
-                replyPlaceholderText: popup.replyPlaceholderText || ""
-                replySubmitButtonText: popup.replySubmitButtonText || ""
-                replySubmitButtonIconName: popup.replySubmitButtonIconName || ""
+                hasReplyAction: popup.hasReplyAction
+                replyActionLabel: popup.replyActionLabel
+                replyPlaceholderText: popup.replyPlaceholderText
+                replySubmitButtonText: popup.replySubmitButtonText
+                replySubmitButtonIconName: popup.replySubmitButtonIconName
 
                 // explicit close, even when resident
                 onCloseClicked: globals.popupNotificationsModel.close(globals.popupNotificationsModel.index(index, 0))
