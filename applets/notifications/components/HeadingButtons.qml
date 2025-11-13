@@ -21,18 +21,20 @@ import plasma.applet.org.kde.plasma.notifications as Notifications
 RowLayout {
     id: headingButtons
 
-    property ModelInterface modelInterface: ModelInterface {}
+    required property ModelInterface modelInterface
     property alias closeButtonTooltip: closeButtonToolTip.text
 
     readonly property string __applicationName: modelInterface.applicationName + (modelInterface.originName ? " · " + modelInterface.originName : "")
 
     Connections {
         target: headingButtons.modelInterface
-        function onTimeChanged() {
-            headingButtons.updateAgoText()
+
+        function onTimeChanged(): void {
+            headingButtons.updateAgoText();
         }
     }
-    function updateAgoText() {
+
+    function updateAgoText(): void {
         ageLabel.agoText = ageLabel.generateAgoText();
     }
 
@@ -42,9 +44,10 @@ RowLayout {
 
     Connections {
         target: Notifications.Globals
+
         // clock time changed
-        function onTimeChanged() {
-            headingButtons.updateAgoText()
+        function onTimeChanged(): void {
+            headingButtons.updateAgoText();
         }
     }
 
@@ -61,7 +64,8 @@ RowLayout {
         text: generateRemainingText() || agoText
         textFormat: Text.PlainText
 
-        function generateAgoText() {
+        // Returns a localized string describing how long ago this notification was sent (or updated).
+        function generateAgoText(): string {
             const time = headingButtons.modelInterface.time;
             if (!time || isNaN(time.getTime())
                     || headingButtons.modelInterface.jobState === NotificationManager.Notifications.JobStateRunning
@@ -69,7 +73,7 @@ RowLayout {
                 return "";
             }
 
-            var deltaMinutes = Math.floor((Date.now() - time.getTime()) / 1000 / 60);
+            let deltaMinutes = Math.floor((Date.now() - time.getTime()) / 1000 / 60);
             if (deltaMinutes < 1) {
                 // "Just now" is implied by
                 return headingButtons.modelInterface.inHistory
@@ -90,23 +94,24 @@ RowLayout {
             return KCoreAddons.Format.formatRelativeDate(time, Locale.ShortFormat);
         }
 
-        function generateRemainingText() {
+        // Returns a localized string describing how much time is remaining to complete this notification's job.
+        function generateRemainingText(): string {
             if (headingButtons.modelInterface.notificationType !== NotificationManager.Notifications.JobType
                 || headingButtons.modelInterface.jobState !== NotificationManager.Notifications.JobStateRunning) {
                 return "";
             }
 
-            var details = headingButtons.modelInterface.jobDetails;
+            let details = headingButtons.modelInterface.jobDetails;
             if (!details || !details.speed) {
                 return "";
             }
 
-            var remaining = details.totalBytes - details.processedBytes;
+            let remaining = details.totalBytes - details.processedBytes;
             if (remaining <= 0) {
                 return "";
             }
 
-            var eta = remaining / details.speed;
+            let eta = remaining / details.speed;
             if (eta < 0.5) { // Avoid showing "0 seconds remaining"
                 return "";
             }
