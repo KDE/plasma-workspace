@@ -544,7 +544,7 @@ QtObject {
                 applicationIconSource: popup.applicationIconName
                 originName: popup.originName
 
-                time: isNaN(delegate.updated) ? delegate.created : delegate.updated
+                time: isNaN(popup.updated) ? popup.created : popup.updated
 
                 configurable: popup.configurable
                 // For running jobs instead of offering a "close" button that might lead the user to
