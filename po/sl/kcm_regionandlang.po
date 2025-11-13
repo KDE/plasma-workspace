@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-12 00:46+0000\n"
-"PO-Revision-Date: 2025-11-11 15:01+0100\n"
+"PO-Revision-Date: 2025-11-12 07:38+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -37,22 +37,19 @@ msgid "Metric system (SI)"
 msgstr "Metrični sistem (SI)"
 
 #: binarydialectmodel.cpp:75
-#, fuzzy, kde-format
-#| msgid "Binary -  Kibibytes (KiB), Mebibytes (MiB), Gibibytes (GiB)"
+#, kde-format
 msgctxt "Binary dialect IEC description"
 msgid "Binary -  Kibibytes (KiB), Mebibytes (MiB), Gibibytes (GiB)"
 msgstr "Binarno -  Kibibytov (KiB), Mebibytov (MiB), Gibibytov (GiB)"
 
 #: binarydialectmodel.cpp:77
-#, fuzzy, kde-format
-#| msgid "Binary - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
+#, kde-format
 msgctxt "Binary dialect JEDEC description"
 msgid "Binary - Kilobytes (KB), Megabytes (MB), Gigabytes (GB)"
-msgstr "Binarno - Kilobytov (kB), Megabytov (MB), Gigabytov(GB)"
+msgstr "Binarno - Kilobytov (kB), Megabytov (MB), Gigabytov (GB)"
 
 #: binarydialectmodel.cpp:79
-#, fuzzy, kde-format
-#| msgid "Decimal - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
+#, kde-format
 msgctxt "Binary dialect Metric description"
 msgid "Decimal - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
 msgstr "Decimalno - Kilobytov (kB), Megabytov (MB), Gigabytov (GB)"
@@ -127,7 +124,7 @@ msgstr "Hiša 1"
 #, kde-format
 msgctxt "Whitespace field for locale address style example"
 msgid " "
-msgstr " "
+msgstr " Glavna ulica 12"
 
 #: exampleutility.cpp:101
 #, kde-format
