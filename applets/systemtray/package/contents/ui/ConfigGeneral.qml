@@ -30,7 +30,7 @@ KCMUtils.ScrollViewKCM {
 
     property bool cfg_scaleIconsToFit
     property int cfg_iconSpacing
-    property alias cfg_showAllItems: showAllCheckBox.checked
+    property bool cfg_showAllItems
     property var cfg_shownItems: []
     property var cfg_hiddenItems: []
     property var cfg_extraItems: []
@@ -155,175 +155,132 @@ KCMUtils.ScrollViewKCM {
         }
     }
 
-    headerPaddingEnabled: false
     header: ColumnLayout {
-        spacing: 0
+        spacing: Kirigami.Units.smallSpacing
 
-        // Container for items that benefit from the padding we just removed
-        ColumnLayout {
-            spacing: Kirigami.Units.smallSpacing
-            Layout.fillWidth: true
-            Layout.margins: iconsPage.margins
+        Kirigami.InlineMessage {
+            id: disablingSniMessage
+            property string appName
 
-            Kirigami.InlineMessage {
-                id: disablingSniMessage
-                property string appName
-
-                function showWithAppName(appName: string) {
-                    disablingSniMessage.appName = appName;
-                    visible = true;
-                }
-
-                Layout.fillWidth: true
-                type: Kirigami.MessageType.Warning
-                text: xi18nc("@info:usagetip", "Look for a setting in <application>%1</application> to disable its tray icon before doing it here. Some apps’ tray icons were not designed to be disabled, and using this setting may cause them to behave unexpectedly.<nl/><nl/>Use this setting at your own risk, and do not report issues to KDE or the app’s author.", appName) // qmllint disable unqualified
-                actions: [
-                    Kirigami.Action {
-                        text: i18nc("@action:button", "I understand the risks") // qmllint disable unqualified
-                        onTriggered: disablingSniMessage.visible = false
-                    }
-                ]
+            function showWithAppName(appName: string) {
+                disablingSniMessage.appName = appName;
+                visible = true;
             }
 
-            Kirigami.InlineMessage {
-                id: disablingKlipperMessage
-
-                visible: iconsPage.changedVisibility.get("org.kde.plasma.clipboard") === "disabled"
-                Layout.fillWidth: true
-                type: Kirigami.MessageType.Warning
-                text: xi18nc("@info:usagetip", "Disabling the clipboard is not recommended, as it will cause copied data to be lost when the application it was copied from is closed.<nl/><nl/>Instead consider configuring the clipboard to disable its history, or only remember one item at a time.") // qmllint disable unqualified
-            }
-
-            Kirigami.FormLayout {
-                id: formLayout
-
-                readonly property int maxComboboxWidth: Math.max(sizeChooser.implicitWidth, spacingChooser.implicitWidth)
-
-                QQC2.ComboBox {
-                    id: sizeChooser
-
-                    readonly property string scaleString: Plasmoid.formFactor === PlasmaCore.Types.Horizontal
-                        ? i18nc("@item:inlistbox Icon size", "Scale with Panel height")
-                        : i18nc("@item:inlistbox Icon size", "Scale with Panel width")
-
-                    Kirigami.FormData.label: i18nc("@label:listbox The spacing between system tray icons in the Panel", "Panel icon size:")
-                    Layout.preferredWidth: formLayout.maxComboboxWidth
-                    model: [
-                        {
-                            "label": i18nc("@item:inlistbox Icon spacing", "Small"),
-                            "size": "small"
-                        },
-                        {
-                            "label": scaleString,
-                            "size": "scale"
-                        }
-                    ]
-                    textRole: "label"
-                    enabled: !Kirigami.Settings.tabletMode
-
-                    currentIndex: {
-                        if (Kirigami.Settings.tabletMode) {
-                            return 1; // scale to fit
-                        }
-
-                        if (cfg_scaleIconsToFit) {
-                            return 1 // scale to fit
-                        } else {
-                            return 0 // small
-                        }
-                    }
-
-                    onActivated: index => {
-                        cfg_scaleIconsToFit = model[currentIndex]["size"] == "scale";
-                    }
-                }
-                QQC2.Label {
-                    visible: Kirigami.Settings.tabletMode
-                    text: i18n("Automatically enabled when in Touch Mode")
-                    textFormat: Text.PlainText
-                    font: Kirigami.Theme.smallFont
-                }
-
-                QQC2.ComboBox {
-                    id: spacingChooser
-
-                    Kirigami.FormData.label: i18nc("@label:listbox The spacing between system tray icons in the Panel", "Panel icon spacing:")
-                    Layout.preferredWidth: formLayout.maxComboboxWidth
-                    model: [
-                        {
-                            "label": i18nc("@item:inlistbox Icon spacing", "Small"),
-                            "spacing": 1
-                        },
-                        {
-                            "label": i18nc("@item:inlistbox Icon spacing", "Normal"),
-                            "spacing": 2
-                        },
-                        {
-                            "label": i18nc("@item:inlistbox Icon spacing", "Large"),
-                            "spacing": 6
-                        }
-                    ]
-                    textRole: "label"
-                    enabled: !Kirigami.Settings.tabletMode
-
-                    currentIndex: {
-                        if (Kirigami.Settings.tabletMode) {
-                            return 2; // Large
-                        }
-
-                        switch (cfg_iconSpacing) {
-                            case 1: return 0; // Small
-                            case 2: return 1; // Normal
-                            case 6: return 2; // Large
-                        }
-                    }
-
-                    onActivated: index => {
-                        cfg_iconSpacing = model[currentIndex]["spacing"];
-                    }
-                }
-                QQC2.Label {
-                    visible: Kirigami.Settings.tabletMode
-                    text: i18nc("@info:usagetip under a combobox when Touch Mode is on", "Automatically set to Large when in Touch Mode")
-                    textFormat: Text.PlainText
-                    font: Kirigami.Theme.smallFont
-                }
-            }
-        }
-
-        Kirigami.Separator {
             Layout.fillWidth: true
-        }
-
-        // This isn't the ListView's header because it already has one with a
-        // different positioning mode from the one we need to use here.
-        Kirigami.InlineViewHeader {
-            Layout.fillWidth: true
-            // Overlap with view's own top separator to prevent a double-thickness
-            // separator situation.
-            Layout.bottomMargin: -1
-
-            text: i18nc("@title:column", "Entries")
+            type: Kirigami.MessageType.Warning
+            text: xi18nc("@info:usagetip", "Look for a setting in <application>%1</application> to disable its tray icon before doing it here. Some apps’ tray icons were not designed to be disabled, and using this setting may cause them to behave unexpectedly.<nl/><nl/>Use this setting at your own risk, and do not report issues to KDE or the app’s author.", appName) // qmllint disable unqualified
             actions: [
                 Kirigami.Action {
-                    id: showAllCheckBox
-                    text: i18n("Always show all") // qmllint disable unqualified
-                    displayComponent: QQC2.CheckBox {
-                        horizontalPadding: Kirigami.Units.largeSpacing
-                        text: showAllCheckBox.text
-                        checked: showAllCheckBox.checked
-                        onToggled: showAllCheckBox.toggle()
-                    }
-                },
-                Kirigami.Action {
-                    id: searchAction
-                    property string searchText: ""
-                    displayComponent: Kirigami.SearchField {
-                        Layout.fillWidth: true
-                        onTextChanged: searchAction.searchText = text
-                    }
+                    text: i18nc("@action:button", "I understand the risks") // qmllint disable unqualified
+                    onTriggered: disablingSniMessage.visible = false
                 }
             ]
+        }
+
+        Kirigami.InlineMessage {
+            id: disablingKlipperMessage
+
+            visible: iconsPage.changedVisibility.get("org.kde.plasma.clipboard") === "disabled"
+            Layout.fillWidth: true
+            type: Kirigami.MessageType.Warning
+            text: xi18nc("@info:usagetip", "Disabling the clipboard is not recommended, as it will cause copied data to be lost when the application it was copied from is closed.<nl/><nl/>Instead consider configuring the clipboard to disable its history, or only remember one item at a time.") // qmllint disable unqualified
+        }
+
+        Kirigami.FormLayout {
+            id: formLayout
+
+            readonly property int maxComboboxWidth: Math.max(sizeChooser.implicitWidth, spacingChooser.implicitWidth)
+
+            QQC2.ComboBox {
+                id: sizeChooser
+
+                readonly property string scaleString: Plasmoid.formFactor === PlasmaCore.Types.Horizontal
+                    ? i18nc("@item:inlistbox Icon size", "Scale with Panel height")
+                    : i18nc("@item:inlistbox Icon size", "Scale with Panel width")
+
+                Kirigami.FormData.label: i18nc("@label:listbox The spacing between system tray icons in the Panel", "Panel icon size:")
+                Layout.preferredWidth: formLayout.maxComboboxWidth
+                model: [
+                    {
+                        "label": i18nc("@item:inlistbox Icon spacing", "Small"),
+                        "size": "small"
+                    },
+                    {
+                        "label": scaleString,
+                        "size": "scale"
+                    }
+                ]
+                textRole: "label"
+                enabled: !Kirigami.Settings.tabletMode
+
+                currentIndex: {
+                    if (Kirigami.Settings.tabletMode) {
+                        return 1; // scale to fit
+                    }
+
+                    if (cfg_scaleIconsToFit) {
+                        return 1 // scale to fit
+                    } else {
+                        return 0 // small
+                    }
+                }
+
+                onActivated: index => {
+                    cfg_scaleIconsToFit = model[currentIndex]["size"] == "scale";
+                }
+            }
+            QQC2.Label {
+                visible: Kirigami.Settings.tabletMode
+                text: i18n("Automatically enabled when in Touch Mode")
+                textFormat: Text.PlainText
+                font: Kirigami.Theme.smallFont
+            }
+
+            QQC2.ComboBox {
+                id: spacingChooser
+
+                Kirigami.FormData.label: i18nc("@label:listbox The spacing between system tray icons in the Panel", "Panel icon spacing:")
+                Layout.preferredWidth: formLayout.maxComboboxWidth
+                model: [
+                    {
+                        "label": i18nc("@item:inlistbox Icon spacing", "Small"),
+                        "spacing": 1
+                    },
+                    {
+                        "label": i18nc("@item:inlistbox Icon spacing", "Normal"),
+                        "spacing": 2
+                    },
+                    {
+                        "label": i18nc("@item:inlistbox Icon spacing", "Large"),
+                        "spacing": 6
+                    }
+                ]
+                textRole: "label"
+                enabled: !Kirigami.Settings.tabletMode
+
+                currentIndex: {
+                    if (Kirigami.Settings.tabletMode) {
+                        return 2; // Large
+                    }
+
+                    switch (cfg_iconSpacing) {
+                        case 1: return 0; // Small
+                        case 2: return 1; // Normal
+                        case 6: return 2; // Large
+                    }
+                }
+
+                onActivated: index => {
+                    cfg_iconSpacing = model[currentIndex]["spacing"];
+                }
+            }
+            QQC2.Label {
+                visible: Kirigami.Settings.tabletMode
+                text: i18nc("@info:usagetip under a combobox when Touch Mode is on", "Automatically set to Large when in Touch Mode")
+                textFormat: Text.PlainText
+                font: Kirigami.Theme.smallFont
+            }
         }
     }
 
@@ -337,47 +294,37 @@ KCMUtils.ScrollViewKCM {
         clip: true
 
         model: KItemModels.KSortFilterProxyModel {
-            filterString: searchAction.searchText
+            id: sortFilterProxyModel
             filterCaseSensitivity: Qt.CaseInsensitive
             Component.onCompleted: sourceModel = Plasmoid.configSystemTrayModel // avoid unnecessary binding, it causes loops
         }
         reuseItems: true
 
-        header: RowLayout {
+        headerPositioning: ListView.OverlayHeader
+        header: Kirigami.InlineViewHeader {
             width: itemsList.width
-            spacing: Kirigami.Units.smallSpacing
-
-            Item {
-                implicitWidth: itemsList.iconSize + 2 * Kirigami.Units.smallSpacing
-            }
-            Kirigami.Heading {
-                text: i18nc("Name of the system tray entry", "Entry") // qmllint disable unqualified
-                textFormat: Text.PlainText
-                level: 2
-                elide: Text.ElideRight
-                Layout.fillWidth: true
-            }
-            Kirigami.Heading {
-                text: i18n("Visibility") // qmllint disable unqualified
-                textFormat: Text.PlainText
-                level: 2
-                Layout.preferredWidth: itemsList.visibilityColumnWidth
-                Component.onCompleted: itemsList.visibilityColumnWidth = Math.max(implicitWidth, itemsList.visibilityColumnWidth)
-            }
-            Kirigami.Heading {
-                text: i18n("Keyboard Shortcut") // qmllint disable unqualified
-                textFormat: Text.PlainText
-                level: 2
-                Layout.preferredWidth: itemsList.keySequenceColumnWidth
-                Component.onCompleted: itemsList.keySequenceColumnWidth = Math.max(implicitWidth, itemsList.keySequenceColumnWidth)
-            }
-            QQC2.Button {
-                // Configure button column
-                icon.name: "configure"
-                enabled: false
-                opacity: 0
-                Layout.rightMargin: 2 * Kirigami.Units.smallSpacing
-            }
+            text: i18nc("@title:column", "Entries")
+            actions: [
+                Kirigami.Action {
+                    id: showAllCheckBox
+                    text: i18n("Always show all") // qmllint disable unqualified
+                    onToggled: iconsPage.cfg_showAllItems = checked
+                    checked: iconsPage.cfg_showAllItems
+                    displayComponent: QQC2.CheckBox {
+                        horizontalPadding: Kirigami.Units.largeSpacing
+                        text: showAllCheckBox.text
+                        checked: showAllCheckBox.checked
+                        onToggled: showAllCheckBox.toggle()
+                    }
+                },
+                Kirigami.Action {
+                    id: searchAction
+                    property string searchText: ""
+                    displayComponent: Kirigami.SearchField {
+                        onTextChanged: sortFilterProxyModel.filterString = text
+                    }
+                }
+            ]
         }
 
         section {
