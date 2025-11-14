@@ -1,35 +1,36 @@
-# SPDX-FileCopyrightText: 2024 Alois Spitzbart <spitz234@hotmail.com>
 # SPDX-FileCopyrightText: 2007, 2008, 2009 Thomas Reitelbach <tr@erdfunkstelle.de>
-# SPDX-FileCopyrightText: 2009, 2012, 2014, 2016, 2018, 2019, 2021 Burkhard Lück <lueck@hube-lueck.de>
 # SPDX-FileCopyrightText: 2009, 2010, 2024 Johannes Obermayr <johannesobermayr@gmx.de>
-# SPDX-FileCopyrightText: 2010, 2011, 2016, 2020, 2022 Frederik Schwarzer <schwarzer@kde.org>
+# SPDX-FileCopyrightText: 2009, 2012, 2014, 2016, 2018, 2019, 2021 Burkhard Lück <lueck@hube-lueck.de>
 # SPDX-FileCopyrightText: 2010 Panagiotis Papadopoulos <pano_90@gmx.net>
+# SPDX-FileCopyrightText: 2010, 2011, 2016, 2020, 2022 Frederik Schwarzer <schwarzer@kde.org>
+# SPDX-FileCopyrightText: 2024 Alois Spitzbart <spitz234@hotmail.com>
+# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n@prly.mozmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-08-31 00:44+0000\n"
-"PO-Revision-Date: 2024-09-08 20:34+0200\n"
-"Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
+"PO-Revision-Date: 2025-11-05 11:06+0100\n"
+"Last-Translator: Philipp Kiemle <l10n@prly.mozmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.11.70\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #: actions/checkaction.cpp:74
 #, kde-format
 msgctxt "@action:button check a storageAccess (i.e disk) for error"
 msgid "Check for Errors"
-msgstr ""
+msgstr "Auf Fehler überprüfen"
 
 #: actions/mountaction.cpp:103
 #, kde-format
 msgctxt "@action:button Mount a disk without verifying for errors"
 msgid "Mount without verifying"
-msgstr ""
+msgstr "Ohne Überprüfung einhängen"
 
 #: actions/mountaction.cpp:106
 #, kde-format
@@ -44,7 +45,7 @@ msgstr "In Dateiverwaltung öffnen"
 #: actions/mountandopenaction.cpp:186
 #, kde-format
 msgid "Try to Fix"
-msgstr ""
+msgstr "Reparatur versuchen"
 
 #: actions/mountandopenaction.cpp:186
 #, kde-format
@@ -62,22 +63,20 @@ msgid "Safely remove"
 msgstr "Sicher entfernen"
 
 #: devicemessagemonitor_p.cpp:171
-#, fuzzy, kde-format
-#| msgid "This device can now be safely removed."
+#, kde-format
 msgid "This device has file system errors."
-msgstr "Dieses Gerät kann nun sicher entfernt werden."
+msgstr "Dieses Gerät hat Dateisystemfehler."
 
 #: devicemessagemonitor_p.cpp:173
-#, fuzzy, kde-format
-#| msgid "This device can now be safely removed."
+#, kde-format
 msgctxt "@label device is a storage disk"
 msgid "This device has no errors"
-msgstr "Dieses Gerät kann nun sicher entfernt werden."
+msgstr "Dieses Gerät hat keine Fehler"
 
 #: devicemessagemonitor_p.cpp:176
 #, kde-format
 msgid "Successfully repaired!"
-msgstr ""
+msgstr "Erfolgreich repariert!"
 
 #: devicemessagemonitor_p.cpp:180
 #, kde-format
@@ -97,35 +96,33 @@ msgstr "Dieses Gerät kann nun sicher entfernt werden."
 #: devicemessagemonitor_p.cpp:192
 #, kde-format
 msgid "You are not authorized to mount this device."
-msgstr "Sie haben keine Berechtigung zum Einhängen dieses Geräts."
+msgstr "Sie sind nicht berechtigt, dieses Gerät einzuhängen."
 
 #: devicemessagemonitor_p.cpp:196
 #, kde-format
 msgid "You are not authorized to eject this disc."
-msgstr "Sie haben keine Berechtigung zum Auswerfen dieses Datenträgers."
+msgstr "Sie sind nicht berechtigt, diesen Datenträger auszuwerfen."
 
 #: devicemessagemonitor_p.cpp:199
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
-msgstr "Sie haben keine Berechtigung zum Entfernen dieses Geräts."
+msgstr "Sie sind nicht berechtigt, dieses Gerät zu entfernen."
 
 #: devicemessagemonitor_p.cpp:202
-#, fuzzy, kde-format
-#| msgctxt "Remove is less technical for unmount"
-#| msgid "You are not authorized to remove this device."
+#, kde-format
 msgid "You are not authorized to repair this device."
-msgstr "Sie haben keine Berechtigung zum Entfernen dieses Geräts."
+msgstr "Sie sind nicht berechtigt, dieses Gerät zu reparieren."
 
 #: devicemessagemonitor_p.cpp:204 devicemessagemonitor_p.cpp:269
 #, kde-format
 msgid "Unknown error type"
-msgstr ""
+msgstr "Unbekannter Fehlertyp"
 
 #: devicemessagemonitor_p.cpp:208
 #, kde-format
 msgid "Could not mount this device as it is busy."
-msgstr "Dieses Gerät kann nicht eingebunden werden, da es beschäftigt ist."
+msgstr "Dieses Gerät kann nicht eingehängt werden, da es beschäftigt ist."
 
 #: devicemessagemonitor_p.cpp:235
 #, kde-format
@@ -154,49 +151,39 @@ msgstr ", "
 #: devicemessagemonitor_p.cpp:258
 #, kde-format
 msgid "Could not mount this device."
-msgstr "Dieses Gerät kann nicht eingebunden werden."
+msgstr "Dieses Gerät konnte nicht eingehängt werden."
 
 #: devicemessagemonitor_p.cpp:262
 #, kde-format
 msgid "Could not eject this disc."
-msgstr "Dieser Datenträger kann nicht entfernt werden."
+msgstr "Dieser Datenträger konnte nicht ausgeworfen werden."
 
 #: devicemessagemonitor_p.cpp:264
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
-msgstr "Dieses Gerät kann nicht entfernt werden."
+msgstr "Dieses Gerät konnte nicht entfernt werden."
 
 #: devicemessagemonitor_p.cpp:267
-#, fuzzy, kde-format
-#| msgctxt "Remove is less technical for unmount"
-#| msgid "Could not remove this device."
+#, kde-format
 msgid "Could not repair this device: %1"
-msgstr "Dieses Gerät kann nicht entfernt werden."
+msgstr "Dieses Gerät konnte nicht repariert werden: %1"
 
 #: qml/DeviceItem.qml:106
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Removing is a less technical word for Unmounting; translation should be "
-#| "short and mean 'Currently unmounting this device'"
-#| msgid "Removing…"
+#, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Checking…"
-msgstr "Aushängen ..."
+msgstr "Wird überprüft …"
 
 #: qml/DeviceItem.qml:108
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Removing is a less technical word for Unmounting; translation should be "
-#| "short and mean 'Currently unmounting this device'"
-#| msgid "Removing…"
+#, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Repairing…"
-msgstr "Aushängen ..."
+msgstr "Wird repariert …"
 
 #: qml/DeviceItem.qml:111
 #, kde-format
@@ -210,7 +197,7 @@ msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Accessing…"
-msgstr "Einhängen ..."
+msgstr "Wird eingehängt …"
 
 #: qml/DeviceItem.qml:118
 #, kde-format
@@ -218,12 +205,12 @@ msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
 "short and mean 'Currently unmounting this device'"
 msgid "Removing…"
-msgstr "Aushängen ..."
+msgstr "Wird entfernt …"
 
 #: qml/DeviceItem.qml:121
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
-msgstr "Noch nicht abziehen! Es werden noch Dateien übertragen …"
+msgstr "Noch nicht abziehen! Es werden noch Dateien übertragen …"
 
 #: qml/FullRepresentation.qml:45 qml/main.qml:125
 #, kde-format
@@ -233,7 +220,7 @@ msgstr "Alle entfernen"
 #: qml/FullRepresentation.qml:46
 #, kde-format
 msgid "Click to safely remove all devices"
-msgstr "Klicken Sie, um alle Gerät sicher zu trennen."
+msgstr "Klicken Sie, um alle Geräte sicher zu entfernen."
 
 #: qml/FullRepresentation.qml:153
 #, kde-format
@@ -259,7 +246,7 @@ msgstr "Es sind keine Geräte verfügbar"
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
-msgstr "Wechselmedien einrichten ..."
+msgstr "Wechselmedien einrichten …"
 
 #: qml/main.qml:133
 #, kde-format
