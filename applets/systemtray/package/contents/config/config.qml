@@ -14,9 +14,4 @@ ConfigModel {
          icon: "plasma"
          source: "ConfigGeneral.qml"
     }
-    ConfigCategory {
-         name: i18n("Entries")
-         icon: "preferences-desktop-notification"
-         source: "ConfigEntries.qml"
-    }
 }
