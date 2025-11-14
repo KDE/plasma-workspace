@@ -36,7 +36,6 @@
 URLGrabber::URLGrabber(QObject *parent)
     : QObject(parent)
     , m_myCurrentAction(nullptr)
-    , m_myMenu(nullptr)
     , m_myPopupKillTimer(new QTimer(this))
     , m_myPopupKillTimeout(8)
     , m_stripWhiteSpace(true)
@@ -49,7 +48,6 @@ URLGrabber::~URLGrabber()
 {
     qDeleteAll(m_myActions);
     m_myActions.clear();
-    delete m_myMenu;
 }
 
 //
@@ -165,14 +163,14 @@ void URLGrabber::actionMenu(HistoryItemConstPtr item, bool automatically_invoked
 
         m_myPopupKillTimer->stop();
 
-        m_myMenu = new QMenu;
+        m_myMenu.reset(new QMenu);
         m_myMenu->setWindowFlag(Qt::FramelessWindowHint, true);
         if (KWindowSystem::isPlatformWayland()) {
             m_myMenu->setWindowFlag(Qt::Popup, false);
         }
         m_myMenu->setObjectName(QStringLiteral("klipperActionPopup"));
 
-        connect(m_myMenu, &QMenu::triggered, this, &URLGrabber::slotItemSelected);
+        connect(m_myMenu.get(), &QMenu::triggered, this, &URLGrabber::slotItemSelected);
 
         for (ClipAction *clipAct : matchingActionsList) {
             m_myMenu->addSection(QIcon::fromTheme(QStringLiteral("klipper")), clipAct->description());
@@ -186,7 +184,7 @@ void URLGrabber::actionMenu(HistoryItemConstPtr item, bool automatically_invoked
                     item = command.command;
 
                 QString id = QUuid::createUuid().toString();
-                QAction *action = new QAction(this);
+                auto *action = new QAction(m_myMenu.get());
                 action->setData(id);
                 action->setText(item);
 
@@ -199,14 +197,14 @@ void URLGrabber::actionMenu(HistoryItemConstPtr item, bool automatically_invoked
         }
         m_myMenu->addSeparator();
 
-        QAction *cancelAction = new QAction(QIcon::fromTheme(QStringLiteral("dialog-cancel")), i18n("&Cancel"), this);
+        auto *cancelAction = new QAction(QIcon::fromTheme(QStringLiteral("dialog-cancel")), i18n("&Cancel"), m_myMenu.get());
         m_myMenu->addAction(cancelAction);
         m_myClipItem = item;
 
         if (m_myPopupKillTimeout > 0)
             m_myPopupKillTimer->start(1000 * m_myPopupKillTimeout);
 
-        Q_EMIT sigPopup(m_myMenu);
+        Q_EMIT sigPopup(m_myMenu.get());
     }
 }
 
@@ -312,17 +310,16 @@ bool URLGrabber::isAvoidedWindow() const
 
 void URLGrabber::slotKillPopupMenu()
 {
-    if (m_myMenu && m_myMenu->isVisible()) {
-        if (m_myMenu->geometry().contains(QCursor::pos()) && m_myPopupKillTimeout > 0) {
-            m_myPopupKillTimer->start(1000 * m_myPopupKillTimeout);
-            return;
-        }
+    if (!m_myMenu) {
+        return;
     }
 
-    if (m_myMenu) {
-        m_myMenu->deleteLater();
-        m_myMenu = nullptr;
+    if (m_myPopupKillTimeout > 0 && m_myMenu->isVisible() && m_myMenu->geometry().contains(QCursor::pos())) {
+        m_myPopupKillTimer->start(1000 * m_myPopupKillTimeout);
+        return;
     }
+
+    m_myMenu.reset();
 }
 
 ///////////////////////////////////////////////////////////////////////////
