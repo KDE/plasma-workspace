@@ -275,8 +275,16 @@ void Klipper::showPopupMenu(QMenu *menu)
         menu->hide();
     }
     menu->popup(QCursor::pos());
+    QWindow *menuWindow = menu->windowHandle();
     if (m_plasmashell) {
-        menu->windowHandle()->installEventFilter(this);
+        menuWindow->installEventFilter(this);
+    }
+    if (!menu->windowFlags().testFlag(Qt::Popup)) {
+        connect(menuWindow, &QWindow::activeChanged, menu, [menu] {
+            if (!menu->windowHandle()->isActive()) {
+                menu->hide();
+            }
+        });
     }
 }
 

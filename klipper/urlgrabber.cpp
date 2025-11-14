@@ -23,6 +23,7 @@
 #include <KService>
 #include <KStringHandler>
 #include <KWindowInfo>
+#include <KWindowSystem>
 #include <KX11Extras>
 
 #include "clipcommandprocess.h"
@@ -165,7 +166,10 @@ void URLGrabber::actionMenu(HistoryItemConstPtr item, bool automatically_invoked
         m_myPopupKillTimer->stop();
 
         m_myMenu = new QMenu;
-        m_myMenu->setWindowFlags(m_myMenu->windowFlags() | Qt::FramelessWindowHint);
+        m_myMenu->setWindowFlag(Qt::FramelessWindowHint, true);
+        if (KWindowSystem::isPlatformWayland()) {
+            m_myMenu->setWindowFlag(Qt::Popup, false);
+        }
         m_myMenu->setObjectName(QStringLiteral("klipperActionPopup"));
 
         connect(m_myMenu, &QMenu::triggered, this, &URLGrabber::slotItemSelected);
@@ -208,6 +212,11 @@ void URLGrabber::actionMenu(HistoryItemConstPtr item, bool automatically_invoked
 
 void URLGrabber::slotItemSelected(QAction *action)
 {
+    // If it's not a popup, we need to hide it manually.
+    if (!m_myMenu->windowFlags().testFlag(Qt::Popup)) {
+        m_myMenu->hide();
+    }
+
     QString id = action->data().toString();
 
     if (id.isEmpty()) {
