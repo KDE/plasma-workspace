@@ -43,14 +43,12 @@ KeyboardLayout::~KeyboardLayout() = default;
 void KeyboardLayout::initialize()
 {
     if (mIface) {
-        delete mIface;
-        mIface = nullptr;
+        delete std::exchange(mIface, nullptr);
     }
 
     mIface = new OrgKdeKeyboardLayoutsInterface(QStringLiteral("org.kde.keyboard"), QStringLiteral("/Layouts"), QDBusConnection::sessionBus(), this);
     if (!mIface->isValid()) {
-        delete mIface;
-        mIface = nullptr;
+        delete std::exchange(mIface, nullptr);
         return;
     }
 

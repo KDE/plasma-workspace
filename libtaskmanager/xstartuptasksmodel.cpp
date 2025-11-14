@@ -68,8 +68,7 @@ void XStartupTasksModel::Private::loadConfig()
     KConfigGroup c(&_c, u"FeedbackStyle"_s);
 
     if (!c.readEntry("TaskbarButton", true)) {
-        delete startupInfo;
-        startupInfo = nullptr;
+        delete std::exchange(startupInfo, nullptr);
 
         q->beginResetModel();
         startups.clear();

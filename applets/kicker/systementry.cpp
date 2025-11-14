@@ -64,8 +64,7 @@ SystemEntry::~SystemEntry()
     --s_instanceCount;
 
     if (!s_instanceCount) {
-        delete s_sessionManagement;
-        s_sessionManagement = nullptr;
+        delete std::exchange(s_sessionManagement, nullptr);
     }
 }
 

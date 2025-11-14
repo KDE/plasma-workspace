@@ -135,10 +135,8 @@ CFontViewPart::CFontViewPart(QWidget *parentWidget, QObject *parent, const KPlug
 
 CFontViewPart::~CFontViewPart()
 {
-    delete m_tempDir;
-    m_tempDir = nullptr;
-    delete m_interface;
-    m_interface = nullptr;
+    delete std::exchange(m_tempDir, nullptr);
+    delete std::exchange(m_interface, nullptr);
 }
 
 static inline QUrl mostLocalUrl(const QUrl &url, QWidget *widget)
@@ -200,8 +198,7 @@ void CFontViewPart::timeout()
     int fileIndex(-1);
     QString fontFile;
 
-    delete m_tempDir;
-    m_tempDir = nullptr;
+    delete std::exchange(m_tempDir, nullptr);
 
     m_opening = true;
 

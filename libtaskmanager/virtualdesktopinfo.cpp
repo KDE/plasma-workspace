@@ -574,8 +574,7 @@ VirtualDesktopInfo::~VirtualDesktopInfo()
     --d->refCount;
 
     if (!d->refCount) {
-        delete d;
-        d = nullptr;
+        delete std::exchange(d, nullptr);
     }
 }
 

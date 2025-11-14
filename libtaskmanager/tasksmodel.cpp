@@ -126,10 +126,8 @@ TasksModel::Private::~Private()
     --instanceCount;
 
     if (!instanceCount) {
-        delete windowTasksModel;
-        windowTasksModel = nullptr;
-        delete startupTasksModel;
-        startupTasksModel = nullptr;
+        delete std::exchange(windowTasksModel, nullptr);
+        delete std::exchange(startupTasksModel, nullptr);
     }
 }
 
@@ -698,8 +696,7 @@ void TasksModel::Private::updateGroupInline()
         abstractTasksSourceModel = groupingProxyModel;
         q->setSourceModel(groupingProxyModel);
 
-        delete flattenGroupsProxyModel;
-        flattenGroupsProxyModel = nullptr;
+        delete std::exchange(flattenGroupsProxyModel, nullptr);
 
         if (hadSourceModel && sortMode == SortManual) {
             forceResort();

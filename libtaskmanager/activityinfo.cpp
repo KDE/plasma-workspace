@@ -36,10 +36,8 @@ ActivityInfo::Private::~Private()
     --instanceCount;
 
     if (!instanceCount) {
-        delete activityConsumer;
-        activityConsumer = nullptr;
-        delete activitiesModel;
-        activitiesModel = nullptr;
+        delete std::exchange(activityConsumer, nullptr);
+        delete std::exchange(activitiesModel, nullptr);
     }
 }
 

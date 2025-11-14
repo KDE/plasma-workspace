@@ -256,10 +256,8 @@ void Notifications::Private::initProxyModels()
     } else {
         sortModel->setSourceModel(filterModel);
         limiterModel->setSourceModel(sortModel);
-        delete flattenModel;
-        flattenModel = nullptr;
-        delete groupingModel;
-        groupingModel = nullptr;
+        delete std::exchange(flattenModel, nullptr);
+        delete std::exchange(groupingModel, nullptr);
     }
 
     q->setSourceModel(limiterModel);

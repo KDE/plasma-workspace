@@ -640,8 +640,7 @@ void KAStatsFavoritesModel::portOldFavorites(const QStringList &_ids)
     // Resetting the model
     auto clientId = d->m_clientId;
     setSourceModel(nullptr);
-    delete d;
-    d = nullptr;
+    delete std::exchange(d, nullptr);
 
     qCDebug(KICKER_DEBUG) << "Save ordering (from portOldFavorites) -->";
     Private::saveOrdering(ids, clientId, m_activities->currentActivity());

@@ -197,8 +197,7 @@ void StatusNotifierItemSource::syncStatus(const QString &status)
 void StatusNotifierItemSource::refreshMenu()
 {
     if (m_menuImporter) {
-        delete m_menuImporter;
-        m_menuImporter = nullptr;
+        delete std::exchange(m_menuImporter, nullptr);
     }
     refresh();
 }

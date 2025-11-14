@@ -179,8 +179,7 @@ void Firefox::teardown()
 {
     if (m_fetchsqlite) {
         m_fetchsqlite->teardown();
-        delete m_fetchsqlite;
-        m_fetchsqlite = nullptr;
+        delete std::exchange(m_fetchsqlite, nullptr);
     }
     m_favicon->teardown();
 }

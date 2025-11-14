@@ -150,8 +150,7 @@ bool ConfigGroup::readConfigFile()
         current = current->parent();
     }
 
-    delete d->configGroup;
-    d->configGroup = nullptr;
+    delete std::exchange(d->configGroup, nullptr);
 
     if (parentGroup) {
         d->configGroup = new KConfigGroup(parentGroup->configGroup(), d->group);

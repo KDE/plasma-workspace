@@ -85,8 +85,7 @@ AppMenuModule::AppMenuModule(QObject *parent, const QList<QVariant> &)
                                                  QStringLiteral("ItemActivationRequested"),
                                                  this,
                                                  SLOT(itemActivationRequested(int, uint)));
-        delete m_menuImporter;
-        m_menuImporter = nullptr;
+        delete std::exchange(m_menuImporter, nullptr);
     });
 
     if (QDBusConnection::sessionBus().interface()->isServiceRegistered(QStringLiteral("org.kde.kappmenuview"))) {

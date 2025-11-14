@@ -465,8 +465,7 @@ void AutostartModel::insertScriptEntry(int index, const QString &name, const QSt
 
     // Plasma shutdown and Plasma env scripts don't have units
     if (kind == AutostartModel::AutostartEntrySource::PlasmaShutdown || kind == AutostartModel::AutostartEntrySource::PlasmaEnvScripts) {
-        delete unit;
-        unit = nullptr;
+        delete std::exchange(unit, nullptr);
     }
 
     AutostartEntry entry = AutostartEntry{name, targetFileDirPath, kind, true, path, false, iconName, unit};

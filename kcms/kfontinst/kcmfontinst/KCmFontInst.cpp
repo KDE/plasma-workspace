@@ -461,8 +461,7 @@ void CKCmFontInst::addFonts()
         if (!urls.isEmpty()) {
             addFonts(urls);
         }
-        delete m_tempDir;
-        m_tempDir = nullptr;
+        delete std::exchange(m_tempDir, nullptr);
     }
 }
 
@@ -1167,8 +1166,7 @@ void CKCmFontInst::doCmd(CJobRunner::ECommand cmd, const CJobRunner::ItemList &u
     }
     CFcEngine::setDirty();
     setStatusBar();
-    delete m_tempDir;
-    m_tempDir = nullptr;
+    delete std::exchange(m_tempDir, nullptr);
     m_fontListView->repaint();
     removeDeletedFontsFromGroups();
 }

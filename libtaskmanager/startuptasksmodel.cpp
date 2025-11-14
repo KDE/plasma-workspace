@@ -47,8 +47,7 @@ StartupTasksModel::Private::~Private()
     --instanceCount;
 
     if (!instanceCount) {
-        delete sourceTasksModel;
-        sourceTasksModel = nullptr;
+        delete std::exchange(sourceTasksModel, nullptr);
     }
 }
 

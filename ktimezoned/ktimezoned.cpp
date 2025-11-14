@@ -36,19 +36,15 @@ KTimeZoned::KTimeZoned(QObject *parent, const QList<QVariant> &l)
 
 KTimeZoned::~KTimeZoned()
 {
-    delete m_dirWatch;
-    m_dirWatch = nullptr;
-    delete m_zoneTabWatch;
-    m_zoneTabWatch = nullptr;
+    delete std::exchange(m_dirWatch, nullptr);
+    delete std::exchange(m_zoneTabWatch, nullptr);
 }
 
 void KTimeZoned::init(bool restart)
 {
     if (restart) {
-        delete m_dirWatch;
-        m_dirWatch = nullptr;
-        delete m_zoneTabWatch;
-        m_zoneTabWatch = nullptr;
+        delete std::exchange(m_dirWatch, nullptr);
+        delete std::exchange(m_zoneTabWatch, nullptr);
         m_localZone = QString();
         m_zoneinfoDir = QString();
         m_zoneTab = QString();

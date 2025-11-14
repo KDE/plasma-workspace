@@ -266,8 +266,7 @@ void IconApplet::populateFromDesktopFile(const QString &path)
 
     setIconName(desktopFile.readIcon());
 
-    delete m_openContainingFolderAction;
-    m_openContainingFolderAction = nullptr;
+    delete std::exchange(m_openContainingFolderAction, nullptr);
     m_openWithActions.clear();
     m_jumpListActions.clear();
 

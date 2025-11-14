@@ -170,8 +170,7 @@ void ContainmentConfigView::setCurrentWallpaper(const QString &wallpaperPlugin)
         return;
     }
 
-    delete m_ownWallpaperConfig;
-    m_ownWallpaperConfig = nullptr;
+    delete std::exchange(m_ownWallpaperConfig, nullptr);
 
     if (m_containment->wallpaperPlugin() == wallpaperPlugin) {
         syncWallpaperObjects();

@@ -114,8 +114,7 @@ void StatusNotifierItemHost::registerWatcher(const QString &service)
                 }
             });
         } else {
-            delete m_statusNotifierWatcher;
-            m_statusNotifierWatcher = nullptr;
+            delete std::exchange(m_statusNotifierWatcher, nullptr);
             qCDebug(SYSTEM_TRAY) << "System tray daemon not reachable";
         }
     }
@@ -137,8 +136,7 @@ void StatusNotifierItemHost::unregisterWatcher(const QString &service)
 
         removeAllSNIServices();
 
-        delete m_statusNotifierWatcher;
-        m_statusNotifierWatcher = nullptr;
+        delete std::exchange(m_statusNotifierWatcher, nullptr);
     }
 }
 

@@ -357,8 +357,7 @@ int CJobRunner::exec(ECommand cmd, const ItemList &urls, bool destIsSystem)
     m_actionLabel->startAnimation();
     int rv = QDialog::exec();
     if (m_tempDir) {
-        delete m_tempDir;
-        m_tempDir = nullptr;
+        delete std::exchange(m_tempDir, nullptr);
     }
     return rv;
 }

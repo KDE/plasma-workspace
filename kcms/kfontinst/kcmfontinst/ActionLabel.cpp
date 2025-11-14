@@ -61,8 +61,7 @@ CActionLabel::~CActionLabel()
 {
     if (0 == --theUsageCount) {
         for (int i = 0; i < constNumIcons; ++i) {
-            delete theIcons[i];
-            theIcons[i] = nullptr;
+            delete std::exchange(theIcons[i], nullptr);
         }
     }
 }

@@ -54,10 +54,8 @@ SwitchWindow::~SwitchWindow()
     --s_instanceCount;
 
     if (!s_instanceCount) {
-        delete s_activityInfo;
-        s_activityInfo = nullptr;
-        delete s_tasksModel;
-        s_tasksModel = nullptr;
+        delete std::exchange(s_activityInfo, nullptr);
+        delete std::exchange(s_tasksModel, nullptr);
     }
 
     qDeleteAll(m_actions);

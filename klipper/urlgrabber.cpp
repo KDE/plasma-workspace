@@ -251,8 +251,7 @@ void URLGrabber::execute(const ClipAction *action, int cmdIdx) const
         } else {
             auto *proc = new ClipCommandProcess(*action, command, text, m_myClipItem);
             if (proc->program().isEmpty()) {
-                delete proc;
-                proc = nullptr;
+                delete std::exchange(proc, nullptr);
             } else {
                 proc->start();
             }
