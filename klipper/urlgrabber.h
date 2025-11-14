@@ -81,7 +81,7 @@ private:
 
     // holds mappings of menu action IDs to action commands (action+cmd index in it)
     QHash<QString, QPair<ClipAction *, int>> m_myCommandMapper;
-    QMenu *m_myMenu;
+    std::unique_ptr<QMenu, QScopedPointerDeleteLater> m_myMenu;
     QTimer *m_myPopupKillTimer;
     int m_myPopupKillTimeout;
     bool m_stripWhiteSpace;
