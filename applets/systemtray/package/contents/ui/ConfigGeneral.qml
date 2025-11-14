@@ -195,22 +195,47 @@ KCMUtils.ScrollViewKCM {
             }
 
             Kirigami.FormLayout {
-                Layout.fillHeight: true
+                id: formLayout
 
-                QQC2.RadioButton {
-                    Kirigami.FormData.label: i18nc("The arrangement of system tray icons in the Panel", "Panel icon size:")
+                readonly property int maxComboboxWidth: Math.max(sizeChooser.implicitWidth, spacingChooser.implicitWidth)
+
+                QQC2.ComboBox {
+                    id: sizeChooser
+
+                    readonly property string scaleString: Plasmoid.formFactor === PlasmaCore.Types.Horizontal
+                        ? i18nc("@item:inlistbox Icon size", "Scale with Panel height")
+                        : i18nc("@item:inlistbox Icon size", "Scale with Panel width")
+
+                    Kirigami.FormData.label: i18nc("@label:listbox The spacing between system tray icons in the Panel", "Panel icon size:")
+                    Layout.preferredWidth: formLayout.maxComboboxWidth
+                    model: [
+                        {
+                            "label": i18nc("@item:inlistbox Icon spacing", "Small"),
+                            "size": "small"
+                        },
+                        {
+                            "label": scaleString,
+                            "size": "scale"
+                        }
+                    ]
+                    textRole: "label"
                     enabled: !Kirigami.Settings.tabletMode
-                    text: i18n("Small")
-                    checked: !cfg_scaleIconsToFit && !Kirigami.Settings.tabletMode
-                    onToggled: cfg_scaleIconsToFit = !checked
-                }
-                QQC2.RadioButton {
-                    id: automaticRadioButton
-                    enabled: !Kirigami.Settings.tabletMode
-                    text: Plasmoid.formFactor === PlasmaCore.Types.Horizontal ? i18n("Scale with Panel height")
-                    : i18n("Scale with Panel width")
-                    checked: cfg_scaleIconsToFit || Kirigami.Settings.tabletMode
-                    onToggled: cfg_scaleIconsToFit = checked
+
+                    currentIndex: {
+                        if (Kirigami.Settings.tabletMode) {
+                            return 1; // scale to fit
+                        }
+
+                        if (cfg_scaleIconsToFit) {
+                            return 1 // scale to fit
+                        } else {
+                            return 0 // small
+                        }
+                    }
+
+                    onActivated: index => {
+                        cfg_scaleIconsToFit = model[currentIndex]["size"] == "scale";
+                    }
                 }
                 QQC2.Label {
                     visible: Kirigami.Settings.tabletMode
@@ -219,12 +244,11 @@ KCMUtils.ScrollViewKCM {
                     font: Kirigami.Theme.smallFont
                 }
 
-                Item {
-                    Kirigami.FormData.isSection: true
-                }
-
                 QQC2.ComboBox {
+                    id: spacingChooser
+
                     Kirigami.FormData.label: i18nc("@label:listbox The spacing between system tray icons in the Panel", "Panel icon spacing:")
+                    Layout.preferredWidth: formLayout.maxComboboxWidth
                     model: [
                         {
                             "label": i18nc("@item:inlistbox Icon spacing", "Small"),
