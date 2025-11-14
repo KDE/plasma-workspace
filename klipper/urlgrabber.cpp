@@ -196,7 +196,6 @@ void URLGrabber::actionMenu(HistoryItemConstPtr item, bool automatically_invoked
         m_myMenu->addSeparator();
 
         QAction *cancelAction = new QAction(QIcon::fromTheme(QStringLiteral("dialog-cancel")), i18n("&Cancel"), this);
-        connect(cancelAction, &QAction::triggered, m_myMenu, &QMenu::hide);
         m_myMenu->addAction(cancelAction);
         m_myClipItem = item;
 
@@ -209,9 +208,6 @@ void URLGrabber::actionMenu(HistoryItemConstPtr item, bool automatically_invoked
 
 void URLGrabber::slotItemSelected(QAction *action)
 {
-    if (m_myMenu)
-        m_myMenu->hide(); // deleted by the timer or the next action
-
     QString id = action->data().toString();
 
     if (id.isEmpty()) {
