@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-22 00:45+0000\n"
+"POT-Creation-Date: 2025-11-15 00:43+0000\n"
 "PO-Revision-Date: 2024-09-19 08:01+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -205,88 +205,88 @@ msgstr "Napájení / sezení"
 msgid "Search results"
 msgstr "Výsledky hledání"
 
-#: systementry.cpp:194
+#: systementry.cpp:193
 #, kde-format
 msgid "Lock"
 msgstr "Uzamknout"
 
-#: systementry.cpp:197
+#: systementry.cpp:196
 #, kde-format
 msgid "Log Out"
 msgstr "Odhlásit se"
 
-#: systementry.cpp:200 systementry.cpp:254
+#: systementry.cpp:199 systementry.cpp:253
 #, kde-format
 msgid "Save Session"
 msgstr "Uložit sezení"
 
-#: systementry.cpp:203
+#: systementry.cpp:202
 #, kde-format
 msgid "Switch User"
 msgstr "Přepnout uživatele"
 
-#: systementry.cpp:206
+#: systementry.cpp:205
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Uspat"
 
-#: systementry.cpp:209
+#: systementry.cpp:208
 #, kde-format
 msgid "Hibernate"
 msgstr "Hibernovat"
 
-#: systementry.cpp:212
+#: systementry.cpp:211
 #, kde-format
 msgid "Restart"
 msgstr "Restartovat"
 
-#: systementry.cpp:215
+#: systementry.cpp:214
 #, kde-format
 msgid "Shut Down"
 msgstr "Vypnout"
 
-#: systementry.cpp:231
+#: systementry.cpp:230
 #, kde-format
 msgid "Session"
 msgstr "Sezení"
 
-#: systementry.cpp:236
+#: systementry.cpp:235
 #, kde-format
 msgid "System"
 msgstr "Systém"
 
-#: systementry.cpp:248
+#: systementry.cpp:247
 #, kde-format
 msgid "Lock screen"
 msgstr "Zamknout obrazovku"
 
-#: systementry.cpp:251
+#: systementry.cpp:250
 #, kde-format
 msgid "End session"
 msgstr "Ukončit sezení"
 
-#: systementry.cpp:257
+#: systementry.cpp:256
 #, kde-format
 msgid "Start a parallel session as a different user"
 msgstr "Spustit souběžné sezení jako jiný uživatel"
 
-#: systementry.cpp:260
+#: systementry.cpp:259
 #, kde-format
 msgid "Suspend to RAM"
 msgstr "Uspat do paměti"
 
-#: systementry.cpp:263
+#: systementry.cpp:262
 #, kde-format
 msgid "Suspend to disk"
 msgstr "Uspat na disk"
 
-#: systementry.cpp:266
+#: systementry.cpp:265
 #, kde-format
 msgid "Restart computer"
 msgstr "Restartovat počítač"
 
-#: systementry.cpp:269
+#: systementry.cpp:268
 #, kde-format
 msgid "Turn off computer"
 msgstr "Vypnout počítač"

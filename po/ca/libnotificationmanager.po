@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-25 00:44+0000\n"
+"POT-Creation-Date: 2025-11-15 00:43+0000\n"
 "PO-Revision-Date: 2025-07-24 09:50+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -105,7 +105,7 @@ msgstr "%1 de %2"
 msgid "Application closed unexpectedly."
 msgstr "L'aplicació s'ha tancat inesperadament."
 
-#: notifications.cpp:909
+#: notifications.cpp:907
 #, kde-format
 msgctxt "@title"
 msgid "Unread Notification"
@@ -113,7 +113,7 @@ msgid_plural "Unread Notifications"
 msgstr[0] "Notificació sense llegir"
 msgstr[1] "Notificacions sense llegir"
 
-#: notifications.cpp:911
+#: notifications.cpp:909
 #, kde-format
 msgctxt "@info"
 msgid "%1 notification was received while Do Not Disturb was active."
@@ -121,7 +121,7 @@ msgid_plural "%1 notifications were received while Do Not Disturb was active."
 msgstr[0] "S'han rebut %1 notificació mentre «no destorbar» estava actiu."
 msgstr[1] "S'han rebut %1 notificacions mentre «no destorbar» estava actiu."
 
-#: notifications.cpp:919
+#: notifications.cpp:917
 #, kde-format
 msgctxt "@action:button Show the notifications popup"
 msgid "Show Notifications"

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.icon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-01 00:45+0000\n"
+"POT-Creation-Date: 2025-11-15 00:43+0000\n"
 "PO-Revision-Date: 2023-10-04 09:35+0300\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew\n"
@@ -25,12 +25,12 @@ msgstr "יצירת יישומוני סמלים לתיקייה ‚%1’ נכשל�
 msgid "Failed to copy icon widget desktop file from '%1' to '%2'"
 msgstr "העתקת קובץ desktop של יישומון סמל מ־‚%1’ ל־‚%2’ נכשלה"
 
-#: iconapplet.cpp:356
+#: iconapplet.cpp:355
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "פתיחת התיקייה המכילה"
 
-#: iconapplet.cpp:579
+#: iconapplet.cpp:578
 #, kde-format
 msgid "Properties for %1"
 msgstr "מאפיינים עבור %1"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-01 00:45+0000\n"
+"POT-Creation-Date: 2025-11-15 00:43+0000\n"
 "PO-Revision-Date: 2025-03-03 22:49+0700\n"
 "Last-Translator: Pongsakorn S. <kde@xerusion.me>\n"
 "Language-Team: Thai\n"
@@ -26,12 +26,12 @@ msgstr "สร้างโฟลเดอร์วิดเจ็ตไอคอ
 msgid "Failed to copy icon widget desktop file from '%1' to '%2'"
 msgstr "ไม่สามารถคัดลอกไฟล์เดสก์ท็อปวิดเจ็ตไอคอนจาก '%1' ไปยัง '%2'"
 
-#: iconapplet.cpp:356
+#: iconapplet.cpp:355
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "เปิดโฟลเดอร์ที่บรรจุ"
 
-#: iconapplet.cpp:579
+#: iconapplet.cpp:578
 #, kde-format
 msgid "Properties for %1"
 msgstr "คุณสมบัติของ %1"

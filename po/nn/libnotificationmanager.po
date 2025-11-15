@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-25 00:44+0000\n"
+"POT-Creation-Date: 2025-11-15 00:43+0000\n"
 "PO-Revision-Date: 2025-10-26 13:07+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -104,7 +104,7 @@ msgstr "%1 frå %2"
 msgid "Application closed unexpectedly."
 msgstr "Programmet vart uventa lukka."
 
-#: notifications.cpp:909
+#: notifications.cpp:907
 #, kde-format
 msgctxt "@title"
 msgid "Unread Notification"
@@ -112,7 +112,7 @@ msgid_plural "Unread Notifications"
 msgstr[0] "Ulesen varsling"
 msgstr[1] "Ulesne varslingar"
 
-#: notifications.cpp:911
+#: notifications.cpp:909
 #, kde-format
 msgctxt "@info"
 msgid "%1 notification was received while Do Not Disturb was active."
@@ -120,7 +120,7 @@ msgid_plural "%1 notifications were received while Do Not Disturb was active."
 msgstr[0] "%1 varsling vart motteken under «Ikkje forstyrr»-modus."
 msgstr[1] "%1 varslingar vart mottekne under «Ikkje forstyrr»-modus."
 
-#: notifications.cpp:919
+#: notifications.cpp:917
 #, kde-format
 msgctxt "@action:button Show the notifications popup"
 msgid "Show Notifications"

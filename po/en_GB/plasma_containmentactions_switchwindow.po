@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"POT-Creation-Date: 2025-11-15 00:43+0000\n"
 "PO-Revision-Date: 2014-06-28 18:35+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -35,19 +35,19 @@ msgstr "Display a submenu for each desktop"
 msgid "Display only the current desktop's windows"
 msgstr "Display only the current desktop's windows"
 
-#: switch.cpp:75
+#: switch.cpp:73
 #, kde-format
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "Configure Switch Window Plugin"
 msgstr "Configure Switch Window Plugin"
 
-#: switch.cpp:155
+#: switch.cpp:153
 #, kde-format
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "Windows"
 msgstr "Windows"
 
-#: switch.cpp:179 switch.cpp:200 switch.cpp:202
+#: switch.cpp:177 switch.cpp:198 switch.cpp:200
 #, kde-format
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "All Desktops"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-25 00:44+0000\n"
+"POT-Creation-Date: 2025-11-15 00:43+0000\n"
 "PO-Revision-Date: 2025-08-27 09:15+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -24,57 +24,52 @@ msgstr ""
 msgid "General"
 msgstr "Genel"
 
-#: package/contents/config/config.qml:18
-#, kde-format
-msgid "Entries"
-msgstr "Girdiler"
-
-#: package/contents/ui/ConfigEntries.qml:39
+#: package/contents/ui/ConfigGeneral.qml:43
 #, kde-format
 msgid "Shown when relevant"
 msgstr "İlgili olduğunda gösterilir"
 
-#: package/contents/ui/ConfigEntries.qml:43
+#: package/contents/ui/ConfigGeneral.qml:47
 #, kde-format
 msgid "Always shown"
 msgstr "Her zaman görünür"
 
-#: package/contents/ui/ConfigEntries.qml:47
+#: package/contents/ui/ConfigGeneral.qml:51
 #, kde-format
 msgid "Always hidden"
 msgstr "Her zaman gizli"
 
-#: package/contents/ui/ConfigEntries.qml:51
+#: package/contents/ui/ConfigGeneral.qml:55
 #, kde-format
 msgid "Disabled"
 msgstr "Devre dışı"
 
-#: package/contents/ui/ConfigEntries.qml:122
+#: package/contents/ui/ConfigGeneral.qml:126
 #, kde-format
 msgid "Application Status"
 msgstr "Uygulama Durumu"
 
-#: package/contents/ui/ConfigEntries.qml:124
+#: package/contents/ui/ConfigGeneral.qml:128
 #, kde-format
 msgid "Communications"
 msgstr "İletişim"
 
-#: package/contents/ui/ConfigEntries.qml:126
+#: package/contents/ui/ConfigGeneral.qml:130
 #, kde-format
 msgid "System Services"
 msgstr "Sistem Hizmetleri"
 
-#: package/contents/ui/ConfigEntries.qml:128
+#: package/contents/ui/ConfigGeneral.qml:132
 #, kde-format
 msgid "Hardware Control"
 msgstr "Donanım Denetimi"
 
-#: package/contents/ui/ConfigEntries.qml:131
+#: package/contents/ui/ConfigGeneral.qml:135
 #, kde-format
 msgid "Miscellaneous"
 msgstr "Çeşitli"
 
-#: package/contents/ui/ConfigEntries.qml:174
+#: package/contents/ui/ConfigGeneral.qml:179
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -91,13 +86,13 @@ msgstr ""
 ">Bu ayarı kendi riskinizle kullanın ve sorunları KDE’ye veya uygulamanın "
 "yazarına bildirmeyin."
 
-#: package/contents/ui/ConfigEntries.qml:177
+#: package/contents/ui/ConfigGeneral.qml:182
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
 msgstr "Riskleri Anlıyorum"
 
-#: package/contents/ui/ConfigEntries.qml:189
+#: package/contents/ui/ConfigGeneral.qml:194
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -111,82 +106,90 @@ msgstr ""
 "geçmişini devre dışı bırakacak veya bir kerede yalnızca bir ögeyi "
 "hatırlayacak şekilde yapılandırmayı düşünün."
 
-#: package/contents/ui/ConfigEntries.qml:217
-#, kde-format
-msgctxt "Name of the system tray entry"
-msgid "Entry"
-msgstr "Girdi"
-
-#: package/contents/ui/ConfigEntries.qml:224
-#, kde-format
-msgid "Visibility"
-msgstr "Görünürlük"
-
-#: package/contents/ui/ConfigEntries.qml:231
-#, kde-format
-msgid "Keyboard Shortcut"
-msgstr "Klavye Kısayolu"
-
-#: package/contents/ui/ConfigEntries.qml:263
-#, kde-format
-msgid "Always show all entries"
-msgstr "Her zaman bütün girdileri göster"
-
-#: package/contents/ui/ConfigGeneral.qml:23
+#: package/contents/ui/ConfigGeneral.qml:201
 #, kde-format
 msgctxt "The arrangement of system tray icons in the Panel"
 msgid "Panel icon size:"
 msgstr "Panel simgesi boyutu:"
 
-#: package/contents/ui/ConfigGeneral.qml:25
+#: package/contents/ui/ConfigGeneral.qml:203
 #, kde-format
 msgid "Small"
 msgstr "Küçük"
 
-#: package/contents/ui/ConfigGeneral.qml:32
+#: package/contents/ui/ConfigGeneral.qml:210
 #, kde-format
 msgid "Scale with Panel height"
 msgstr "Panel yüksekliğiyle ölçeklendir"
 
-#: package/contents/ui/ConfigGeneral.qml:33
+#: package/contents/ui/ConfigGeneral.qml:211
 #, kde-format
 msgid "Scale with Panel width"
 msgstr "Panel genişliğiyle ölçeklendir"
 
-#: package/contents/ui/ConfigGeneral.qml:39
+#: package/contents/ui/ConfigGeneral.qml:217
 #, kde-format
 msgid "Automatically enabled when in Touch Mode"
 msgstr "Dokunmatik Kip’teyken kendiliğinden etkin"
 
-#: package/contents/ui/ConfigGeneral.qml:49
+#: package/contents/ui/ConfigGeneral.qml:227
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon spacing:"
 msgstr "Panel simgesi boşluklandırması:"
 
-#: package/contents/ui/ConfigGeneral.qml:52
+#: package/contents/ui/ConfigGeneral.qml:230
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "Küçük"
 
-#: package/contents/ui/ConfigGeneral.qml:56
+#: package/contents/ui/ConfigGeneral.qml:234
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "Olağan"
 
-#: package/contents/ui/ConfigGeneral.qml:60
+#: package/contents/ui/ConfigGeneral.qml:238
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "Büyük"
 
-#: package/contents/ui/ConfigGeneral.qml:85
+#: package/contents/ui/ConfigGeneral.qml:263
 #, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
 msgstr "Dokunmatik Kip’teyken kendiliğinden büyük olarak ayarlanır"
+
+#: package/contents/ui/ConfigGeneral.qml:282
+#, fuzzy, kde-format
+#| msgid "Entries"
+msgctxt "@title:column"
+msgid "Entries"
+msgstr "Girdiler"
+
+#: package/contents/ui/ConfigGeneral.qml:286
+#, fuzzy, kde-format
+#| msgid "Always shown"
+msgid "Always show all"
+msgstr "Her zaman görünür"
+
+#: package/contents/ui/ConfigGeneral.qml:330
+#, kde-format
+msgctxt "Name of the system tray entry"
+msgid "Entry"
+msgstr "Girdi"
+
+#: package/contents/ui/ConfigGeneral.qml:337
+#, kde-format
+msgid "Visibility"
+msgstr "Görünürlük"
+
+#: package/contents/ui/ConfigGeneral.qml:344
+#, kde-format
+msgid "Keyboard Shortcut"
+msgstr "Klavye Kısayolu"
 
 #: package/contents/ui/ExpandedRepresentation.qml:59
 #, kde-format
@@ -235,6 +238,9 @@ msgstr "%2 sütünda %1 ögeli ızgara"
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
 msgstr "AİLlmyjgGJPŞĞM"
+
+#~ msgid "Always show all entries"
+#~ msgstr "Her zaman bütün girdileri göster"
 
 #~ msgid "Some letters with tall characters, ascenders, descenders, etc"
 #~ msgstr "Uzun karakterler, inişler, çıkışlar vb. içeren bazı harfler"

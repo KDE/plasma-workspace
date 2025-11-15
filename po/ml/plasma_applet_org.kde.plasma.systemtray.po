@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-25 00:44+0000\n"
+"POT-Creation-Date: 2025-11-15 00:43+0000\n"
 "PO-Revision-Date: 2021-08-19 13:59+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -24,57 +24,52 @@ msgstr ""
 msgid "General"
 msgstr "സാധാരണം"
 
-#: package/contents/config/config.qml:18
-#, kde-format
-msgid "Entries"
-msgstr "ഇനങ്ങൾ"
-
-#: package/contents/ui/ConfigEntries.qml:39
+#: package/contents/ui/ConfigGeneral.qml:43
 #, kde-format
 msgid "Shown when relevant"
 msgstr "പ്രസക്തമാകുമ്പോൾ കാണിക്കുന്നു"
 
-#: package/contents/ui/ConfigEntries.qml:43
+#: package/contents/ui/ConfigGeneral.qml:47
 #, kde-format
 msgid "Always shown"
 msgstr "എപ്പോഴും കാണിക്കുക"
 
-#: package/contents/ui/ConfigEntries.qml:47
+#: package/contents/ui/ConfigGeneral.qml:51
 #, kde-format
 msgid "Always hidden"
 msgstr "എപ്പോഴും മറയ്ക്കുക"
 
-#: package/contents/ui/ConfigEntries.qml:51
+#: package/contents/ui/ConfigGeneral.qml:55
 #, kde-format
 msgid "Disabled"
 msgstr "അപ്രാപ്തമാക്കി"
 
-#: package/contents/ui/ConfigEntries.qml:122
+#: package/contents/ui/ConfigGeneral.qml:126
 #, kde-format
 msgid "Application Status"
 msgstr "അപ്ലിക്കേഷൻ അവസ്ഥ"
 
-#: package/contents/ui/ConfigEntries.qml:124
+#: package/contents/ui/ConfigGeneral.qml:128
 #, kde-format
 msgid "Communications"
 msgstr "ആശയവിനിമയം"
 
-#: package/contents/ui/ConfigEntries.qml:126
+#: package/contents/ui/ConfigGeneral.qml:130
 #, kde-format
 msgid "System Services"
 msgstr "സംവിധാനത്തിലെ സേവനങ്ങൾ"
 
-#: package/contents/ui/ConfigEntries.qml:128
+#: package/contents/ui/ConfigGeneral.qml:132
 #, kde-format
 msgid "Hardware Control"
 msgstr "ഹാർഡ്‌വെയർ നിയന്ത്രണം"
 
-#: package/contents/ui/ConfigEntries.qml:131
+#: package/contents/ui/ConfigGeneral.qml:135
 #, kde-format
 msgid "Miscellaneous"
 msgstr "പലവക"
 
-#: package/contents/ui/ConfigEntries.qml:174
+#: package/contents/ui/ConfigGeneral.qml:179
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -85,13 +80,13 @@ msgid ""
 "the app’s author."
 msgstr ""
 
-#: package/contents/ui/ConfigEntries.qml:177
+#: package/contents/ui/ConfigGeneral.qml:182
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
 msgstr ""
 
-#: package/contents/ui/ConfigEntries.qml:189
+#: package/contents/ui/ConfigGeneral.qml:194
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -101,54 +96,33 @@ msgid ""
 "one item at a time."
 msgstr ""
 
-#: package/contents/ui/ConfigEntries.qml:217
-#, kde-format
-msgctxt "Name of the system tray entry"
-msgid "Entry"
-msgstr "ഇനം"
-
-#: package/contents/ui/ConfigEntries.qml:224
-#, kde-format
-msgid "Visibility"
-msgstr "കാണാവുന്ന"
-
-#: package/contents/ui/ConfigEntries.qml:231
-#, kde-format
-msgid "Keyboard Shortcut"
-msgstr "കീബോർഡ് കുറുക്കുവഴി"
-
-#: package/contents/ui/ConfigEntries.qml:263
-#, kde-format
-msgid "Always show all entries"
-msgstr "എപ്പോഴും എല്ലാ ഇനങ്ങളും കാണിക്കുക"
-
-#: package/contents/ui/ConfigGeneral.qml:23
+#: package/contents/ui/ConfigGeneral.qml:201
 #, kde-format
 msgctxt "The arrangement of system tray icons in the Panel"
 msgid "Panel icon size:"
 msgstr "പാളി ചിഹ്ന വലിപ്പം:"
 
-#: package/contents/ui/ConfigGeneral.qml:25
+#: package/contents/ui/ConfigGeneral.qml:203
 #, kde-format
 msgid "Small"
 msgstr "ചെറുത്"
 
-#: package/contents/ui/ConfigGeneral.qml:32
+#: package/contents/ui/ConfigGeneral.qml:210
 #, kde-format
 msgid "Scale with Panel height"
 msgstr "പാളിയുടെ ഉയരത്തിനനുസരിച്ച് ഉയരം ക്രമീകരിക്കുക"
 
-#: package/contents/ui/ConfigGeneral.qml:33
+#: package/contents/ui/ConfigGeneral.qml:211
 #, kde-format
 msgid "Scale with Panel width"
 msgstr "പാളിയുടെ വീതിക്കനുസരിച്ച് വീതി ക്രമീകരിക്കുക"
 
-#: package/contents/ui/ConfigGeneral.qml:39
+#: package/contents/ui/ConfigGeneral.qml:217
 #, kde-format
 msgid "Automatically enabled when in Touch Mode"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:49
+#: package/contents/ui/ConfigGeneral.qml:227
 #, fuzzy, kde-format
 #| msgctxt "The arrangement of system tray icons in the Panel"
 #| msgid "Panel icon size:"
@@ -156,30 +130,59 @@ msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon spacing:"
 msgstr "പാളി ചിഹ്ന വലിപ്പം:"
 
-#: package/contents/ui/ConfigGeneral.qml:52
+#: package/contents/ui/ConfigGeneral.qml:230
 #, fuzzy, kde-format
 #| msgid "Small"
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "ചെറുത്"
 
-#: package/contents/ui/ConfigGeneral.qml:56
+#: package/contents/ui/ConfigGeneral.qml:234
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:60
+#: package/contents/ui/ConfigGeneral.qml:238
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:85
+#: package/contents/ui/ConfigGeneral.qml:263
 #, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
 msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:282
+#, fuzzy, kde-format
+#| msgid "Entries"
+msgctxt "@title:column"
+msgid "Entries"
+msgstr "ഇനങ്ങൾ"
+
+#: package/contents/ui/ConfigGeneral.qml:286
+#, fuzzy, kde-format
+#| msgid "Always shown"
+msgid "Always show all"
+msgstr "എപ്പോഴും കാണിക്കുക"
+
+#: package/contents/ui/ConfigGeneral.qml:330
+#, kde-format
+msgctxt "Name of the system tray entry"
+msgid "Entry"
+msgstr "ഇനം"
+
+#: package/contents/ui/ConfigGeneral.qml:337
+#, kde-format
+msgid "Visibility"
+msgstr "കാണാവുന്ന"
+
+#: package/contents/ui/ConfigGeneral.qml:344
+#, kde-format
+msgid "Keyboard Shortcut"
+msgstr "കീബോർഡ് കുറുക്കുവഴി"
 
 #: package/contents/ui/ExpandedRepresentation.qml:59
 #, kde-format
@@ -228,6 +231,9 @@ msgstr ""
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
 msgstr ""
+
+#~ msgid "Always show all entries"
+#~ msgstr "എപ്പോഴും എല്ലാ ഇനങ്ങളും കാണിക്കുക"
 
 #~ msgctxt ""
 #~ "Suffix added to the applet name if the applet is autoloaded via DBus "

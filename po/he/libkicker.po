@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-22 00:45+0000\n"
+"POT-Creation-Date: 2025-11-15 00:43+0000\n"
 "PO-Revision-Date: 2025-01-08 16:38+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -205,88 +205,88 @@ msgstr "יציאה / הפעלה"
 msgid "Search results"
 msgstr "תוצאות חיפוש"
 
-#: systementry.cpp:194
+#: systementry.cpp:193
 #, kde-format
 msgid "Lock"
 msgstr "נעילה"
 
-#: systementry.cpp:197
+#: systementry.cpp:196
 #, kde-format
 msgid "Log Out"
 msgstr "יציאה"
 
-#: systementry.cpp:200 systementry.cpp:254
+#: systementry.cpp:199 systementry.cpp:253
 #, kde-format
 msgid "Save Session"
 msgstr "שמירת הפעלה"
 
-#: systementry.cpp:203
+#: systementry.cpp:202
 #, kde-format
 msgid "Switch User"
 msgstr "החלפת משתמש"
 
-#: systementry.cpp:206
+#: systementry.cpp:205
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "שינה"
 
-#: systementry.cpp:209
+#: systementry.cpp:208
 #, kde-format
 msgid "Hibernate"
 msgstr "תרדמת"
 
-#: systementry.cpp:212
+#: systementry.cpp:211
 #, kde-format
 msgid "Restart"
 msgstr "הפעלה מחדש"
 
-#: systementry.cpp:215
+#: systementry.cpp:214
 #, kde-format
 msgid "Shut Down"
 msgstr "כיבוי"
 
-#: systementry.cpp:231
+#: systementry.cpp:230
 #, kde-format
 msgid "Session"
 msgstr "הפעלה"
 
-#: systementry.cpp:236
+#: systementry.cpp:235
 #, kde-format
 msgid "System"
 msgstr "מערכת"
 
-#: systementry.cpp:248
+#: systementry.cpp:247
 #, kde-format
 msgid "Lock screen"
 msgstr "נעילת המסך"
 
-#: systementry.cpp:251
+#: systementry.cpp:250
 #, kde-format
 msgid "End session"
 msgstr "סיום הפעלה"
 
-#: systementry.cpp:257
+#: systementry.cpp:256
 #, kde-format
 msgid "Start a parallel session as a different user"
 msgstr "התחלת הפעלה מקבילה כמשתמש אחר"
 
-#: systementry.cpp:260
+#: systementry.cpp:259
 #, kde-format
 msgid "Suspend to RAM"
 msgstr "השהיה לזיכרון"
 
-#: systementry.cpp:263
+#: systementry.cpp:262
 #, kde-format
 msgid "Suspend to disk"
 msgstr "השהיה לכונן"
 
-#: systementry.cpp:266
+#: systementry.cpp:265
 #, kde-format
 msgid "Restart computer"
 msgstr "הפעלת המחשב מחדש"
 
-#: systementry.cpp:269
+#: systementry.cpp:268
 #, kde-format
 msgid "Turn off computer"
 msgstr "כיבוי המחשב"

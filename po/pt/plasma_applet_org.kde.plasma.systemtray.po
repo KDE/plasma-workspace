@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-25 00:44+0000\n"
+"POT-Creation-Date: 2025-11-15 00:43+0000\n"
 "PO-Revision-Date: 2022-07-25 09:38+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -18,57 +18,52 @@ msgstr ""
 msgid "General"
 msgstr "Geral"
 
-#: package/contents/config/config.qml:18
-#, kde-format
-msgid "Entries"
-msgstr "Elementos"
-
-#: package/contents/ui/ConfigEntries.qml:39
+#: package/contents/ui/ConfigGeneral.qml:43
 #, kde-format
 msgid "Shown when relevant"
 msgstr "Visível quando relevante"
 
-#: package/contents/ui/ConfigEntries.qml:43
+#: package/contents/ui/ConfigGeneral.qml:47
 #, kde-format
 msgid "Always shown"
 msgstr "Sempre visível"
 
-#: package/contents/ui/ConfigEntries.qml:47
+#: package/contents/ui/ConfigGeneral.qml:51
 #, kde-format
 msgid "Always hidden"
 msgstr "Sempre escondido"
 
-#: package/contents/ui/ConfigEntries.qml:51
+#: package/contents/ui/ConfigGeneral.qml:55
 #, kde-format
 msgid "Disabled"
 msgstr "Desactivado"
 
-#: package/contents/ui/ConfigEntries.qml:122
+#: package/contents/ui/ConfigGeneral.qml:126
 #, kde-format
 msgid "Application Status"
 msgstr "Estado da Aplicação"
 
-#: package/contents/ui/ConfigEntries.qml:124
+#: package/contents/ui/ConfigGeneral.qml:128
 #, kde-format
 msgid "Communications"
 msgstr "Comunicações"
 
-#: package/contents/ui/ConfigEntries.qml:126
+#: package/contents/ui/ConfigGeneral.qml:130
 #, kde-format
 msgid "System Services"
 msgstr "Serviços do Sistema"
 
-#: package/contents/ui/ConfigEntries.qml:128
+#: package/contents/ui/ConfigGeneral.qml:132
 #, kde-format
 msgid "Hardware Control"
 msgstr "Controlo do 'Hardware'"
 
-#: package/contents/ui/ConfigEntries.qml:131
+#: package/contents/ui/ConfigGeneral.qml:135
 #, kde-format
 msgid "Miscellaneous"
 msgstr "Diversos"
 
-#: package/contents/ui/ConfigEntries.qml:174
+#: package/contents/ui/ConfigGeneral.qml:179
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -79,13 +74,13 @@ msgid ""
 "the app’s author."
 msgstr ""
 
-#: package/contents/ui/ConfigEntries.qml:177
+#: package/contents/ui/ConfigGeneral.qml:182
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
 msgstr ""
 
-#: package/contents/ui/ConfigEntries.qml:189
+#: package/contents/ui/ConfigGeneral.qml:194
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -95,82 +90,90 @@ msgid ""
 "one item at a time."
 msgstr ""
 
-#: package/contents/ui/ConfigEntries.qml:217
-#, kde-format
-msgctxt "Name of the system tray entry"
-msgid "Entry"
-msgstr "Elemento"
-
-#: package/contents/ui/ConfigEntries.qml:224
-#, kde-format
-msgid "Visibility"
-msgstr "Visibilidade"
-
-#: package/contents/ui/ConfigEntries.qml:231
-#, kde-format
-msgid "Keyboard Shortcut"
-msgstr "Atalho de Teclado"
-
-#: package/contents/ui/ConfigEntries.qml:263
-#, kde-format
-msgid "Always show all entries"
-msgstr "Mostrar sempre todos os itens"
-
-#: package/contents/ui/ConfigGeneral.qml:23
+#: package/contents/ui/ConfigGeneral.qml:201
 #, kde-format
 msgctxt "The arrangement of system tray icons in the Panel"
 msgid "Panel icon size:"
 msgstr "Tamanho dos ícones do painel:"
 
-#: package/contents/ui/ConfigGeneral.qml:25
+#: package/contents/ui/ConfigGeneral.qml:203
 #, kde-format
 msgid "Small"
 msgstr "Pequeno"
 
-#: package/contents/ui/ConfigGeneral.qml:32
+#: package/contents/ui/ConfigGeneral.qml:210
 #, kde-format
 msgid "Scale with Panel height"
 msgstr "Adaptar à Altura do Painel"
 
-#: package/contents/ui/ConfigGeneral.qml:33
+#: package/contents/ui/ConfigGeneral.qml:211
 #, kde-format
 msgid "Scale with Panel width"
 msgstr "Adaptar à Largura do Painel"
 
-#: package/contents/ui/ConfigGeneral.qml:39
+#: package/contents/ui/ConfigGeneral.qml:217
 #, kde-format
 msgid "Automatically enabled when in Touch Mode"
 msgstr "Activo automaticamente quando no modo táctil"
 
-#: package/contents/ui/ConfigGeneral.qml:49
+#: package/contents/ui/ConfigGeneral.qml:227
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon spacing:"
 msgstr "Intervalo entre ícones do painel:"
 
-#: package/contents/ui/ConfigGeneral.qml:52
+#: package/contents/ui/ConfigGeneral.qml:230
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "Pequeno"
 
-#: package/contents/ui/ConfigGeneral.qml:56
+#: package/contents/ui/ConfigGeneral.qml:234
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "Normal"
 
-#: package/contents/ui/ConfigGeneral.qml:60
+#: package/contents/ui/ConfigGeneral.qml:238
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "Grande"
 
-#: package/contents/ui/ConfigGeneral.qml:85
+#: package/contents/ui/ConfigGeneral.qml:263
 #, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
 msgstr "Definido automaticamente como Grande no modo táctil"
+
+#: package/contents/ui/ConfigGeneral.qml:282
+#, fuzzy, kde-format
+#| msgid "Entries"
+msgctxt "@title:column"
+msgid "Entries"
+msgstr "Elementos"
+
+#: package/contents/ui/ConfigGeneral.qml:286
+#, fuzzy, kde-format
+#| msgid "Always shown"
+msgid "Always show all"
+msgstr "Sempre visível"
+
+#: package/contents/ui/ConfigGeneral.qml:330
+#, kde-format
+msgctxt "Name of the system tray entry"
+msgid "Entry"
+msgstr "Elemento"
+
+#: package/contents/ui/ConfigGeneral.qml:337
+#, kde-format
+msgid "Visibility"
+msgstr "Visibilidade"
+
+#: package/contents/ui/ConfigGeneral.qml:344
+#, kde-format
+msgid "Keyboard Shortcut"
+msgstr "Atalho de Teclado"
 
 #: package/contents/ui/ExpandedRepresentation.qml:59
 #, kde-format
@@ -219,6 +222,9 @@ msgstr ""
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
 msgstr ""
+
+#~ msgid "Always show all entries"
+#~ msgstr "Mostrar sempre todos os itens"
 
 #~ msgid "Expand System Tray"
 #~ msgstr "Expandir a Bandeja do Sistema"

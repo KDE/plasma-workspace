@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"POT-Creation-Date: 2025-11-15 00:43+0000\n"
 "PO-Revision-Date: 2015-02-15 12:30+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -38,19 +38,19 @@ msgstr "Podmeni za svaku površ"
 msgid "Display only the current desktop's windows"
 msgstr "Samo prozori na tekućoj površi"
 
-#: switch.cpp:75
+#: switch.cpp:73
 #, kde-format
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "Configure Switch Window Plugin"
 msgstr "Podešavanje priključka prebacivanja prozora"
 
-#: switch.cpp:155
+#: switch.cpp:153
 #, kde-format
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "Windows"
 msgstr "Prozori"
 
-#: switch.cpp:179 switch.cpp:200 switch.cpp:202
+#: switch.cpp:177 switch.cpp:198 switch.cpp:200
 #, kde-format
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "All Desktops"

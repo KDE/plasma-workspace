@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst stable\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-14 00:44+0000\n"
+"POT-Creation-Date: 2025-11-15 00:43+0000\n"
 "PO-Revision-Date: 2005-11-25 21:56+0200\n"
 "Last-Translator: AFRIKAANS <translate-discuss-af@lists.sourceforge.net>\n"
 "Language-Team: Afrikaans <af@li.org>\n"
@@ -27,14 +27,14 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kabousv@therugby.co.za"
 
-#: apps/Installer.cpp:36 kcmfontinst/KCmFontInst.cpp:947
+#: apps/Installer.cpp:36 kcmfontinst/KCmFontInst.cpp:946
 #, kde-format
 msgid ""
 "Do you wish to install the font(s) for personal use (only available to you), "
 "or system-wide (available to all users)?"
 msgstr ""
 
-#: apps/Installer.cpp:37 kcmfontinst/KCmFontInst.cpp:950
+#: apps/Installer.cpp:37 kcmfontinst/KCmFontInst.cpp:949
 #, kde-format
 msgid "Where to Install"
 msgstr "Waar om te Installeer"
@@ -342,13 +342,13 @@ msgid "Delete"
 msgstr "Skrap Lettertipe"
 
 #: kcmfontinst/FontList.cpp:1302 kcmfontinst/GroupList.cpp:790
-#: kcmfontinst/KCmFontInst.cpp:1113 kcmfontinst/KCmFontInst.cpp:1133
+#: kcmfontinst/KCmFontInst.cpp:1112 kcmfontinst/KCmFontInst.cpp:1132
 #, kde-format
 msgid "Enable"
 msgstr ""
 
 #: kcmfontinst/FontList.cpp:1303 kcmfontinst/GroupList.cpp:791
-#: kcmfontinst/KCmFontInst.cpp:1114 kcmfontinst/KCmFontInst.cpp:1133
+#: kcmfontinst/KCmFontInst.cpp:1113 kcmfontinst/KCmFontInst.cpp:1132
 #, kde-format
 msgid "Disable"
 msgstr ""
@@ -522,12 +522,12 @@ msgstr "Installeer"
 msgid "Uninstalling"
 msgstr "Installeer"
 
-#: kcmfontinst/JobRunner.cpp:321 kcmfontinst/JobRunner.cpp:418
+#: kcmfontinst/JobRunner.cpp:321 kcmfontinst/JobRunner.cpp:417
 #, kde-format
 msgid "Enabling"
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:324 kcmfontinst/JobRunner.cpp:422
+#: kcmfontinst/JobRunner.cpp:324 kcmfontinst/JobRunner.cpp:421
 #, kde-format
 msgid "Moving"
 msgstr ""
@@ -547,90 +547,90 @@ msgstr ""
 msgid "Disabling"
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:373
+#: kcmfontinst/JobRunner.cpp:372
 #, kde-format
 msgid "Updating font configuration. Please wait…"
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:445
+#: kcmfontinst/JobRunner.cpp:444
 #, kde-format
 msgid "Unable to start backend."
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:454
+#: kcmfontinst/JobRunner.cpp:453
 #, kde-format
 msgid "Backend died, but has been restarted. Please try again."
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:619 kcmfontinst/JobRunner.cpp:625
+#: kcmfontinst/JobRunner.cpp:618 kcmfontinst/JobRunner.cpp:624
 #, kde-format
 msgid "<h3>Error</h3>"
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:691
+#: kcmfontinst/JobRunner.cpp:690
 #, kde-format
 msgid "Failed to download <i>%1</i>"
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:693
+#: kcmfontinst/JobRunner.cpp:692
 #, kde-format
 msgid "System backend died. Please try again.<br><i>%1</i>"
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:695
+#: kcmfontinst/JobRunner.cpp:694
 #, kde-format
 msgid ""
 "<i>%1</i> is a bitmap font, and these have been disabled on your system."
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:697
+#: kcmfontinst/JobRunner.cpp:696
 #, kde-format
 msgid ""
 "<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
 "system."
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:699
+#: kcmfontinst/JobRunner.cpp:698
 #, kde-format
 msgid "<i>%1</i> is not a font."
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:701
+#: kcmfontinst/JobRunner.cpp:700
 #, kde-format
 msgid "Could not remove all files associated with <i>%1</i>"
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:703
+#: kcmfontinst/JobRunner.cpp:702
 #, kde-format
 msgid "Failed to start the system daemon.<br><i>%1</i>"
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:706 kio/KioFonts.cpp:719
+#: kcmfontinst/JobRunner.cpp:705 kio/KioFonts.cpp:719
 #, kde-format
 msgid "<i>%1</i> already exists."
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:709
+#: kcmfontinst/JobRunner.cpp:708
 #, kde-format
 msgid "<i>%1</i> does not exist."
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:711
+#: kcmfontinst/JobRunner.cpp:710
 #, kde-format
 msgid "Permission denied.<br><i>%1</i>"
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:713
+#: kcmfontinst/JobRunner.cpp:712
 #, kde-format
 msgid "Unsupported action.<br><i>%1</i>"
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:715
+#: kcmfontinst/JobRunner.cpp:714
 #, kde-format
 msgid "Authentication failed.<br><i>%1</i>"
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:717
+#: kcmfontinst/JobRunner.cpp:716
 #, kde-format
 msgid "Unexpected error while processing: <i>%1</i>"
 msgstr ""
@@ -708,17 +708,17 @@ msgstr "Verander Teks..."
 msgid "Add Fonts"
 msgstr "Installeer Lettertipes"
 
-#: kcmfontinst/KCmFontInst.cpp:553
+#: kcmfontinst/KCmFontInst.cpp:552
 #, kde-format
 msgid "Failed to save list of fonts to print."
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:574
+#: kcmfontinst/KCmFontInst.cpp:573
 #, kde-format
 msgid "Failed to start font printer."
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:581
+#: kcmfontinst/KCmFontInst.cpp:580
 #, fuzzy, kde-format
 msgid ""
 "There are no printable fonts.\n"
@@ -727,63 +727,63 @@ msgstr ""
 "Daar is geen drukbare lettertipes.\n"
 "Jy kan slegs nie-bitmap lettertipes druk."
 
-#: kcmfontinst/KCmFontInst.cpp:583
+#: kcmfontinst/KCmFontInst.cpp:582
 #, kde-format
 msgid "Cannot Print"
 msgstr "Kan nie Druk"
 
-#: kcmfontinst/KCmFontInst.cpp:598
+#: kcmfontinst/KCmFontInst.cpp:597
 #, kde-format
 msgid "You did not select anything to delete."
 msgstr "Jy het niks gekies om te skrap nie."
 
-#: kcmfontinst/KCmFontInst.cpp:598
+#: kcmfontinst/KCmFontInst.cpp:597
 #, kde-format
 msgid "Nothing to Delete"
 msgstr "Niks om te Skrap nie"
 
-#: kcmfontinst/KCmFontInst.cpp:613
+#: kcmfontinst/KCmFontInst.cpp:612
 #, fuzzy, kde-format
 msgid "<p>Do you really want to delete</p><p>'<b>%1</b>'?</p>"
 msgstr ""
 "<qt>Is jy seker jy wil\n"
 " <b>'%1'</b> Skrap?</qt>"
 
-#: kcmfontinst/KCmFontInst.cpp:616
+#: kcmfontinst/KCmFontInst.cpp:615
 #, kde-format
 msgid "Delete Font"
 msgstr "Skrap Lettertipe"
 
-#: kcmfontinst/KCmFontInst.cpp:623
+#: kcmfontinst/KCmFontInst.cpp:622
 #, fuzzy, kde-format
 msgid "Do you really want to delete this font?"
 msgid_plural "Do you really want to delete these %1 fonts?"
 msgstr[0] "_n: Is jy seker jy wil hierdie lettertipe skrap?"
 msgstr[1] "Is jy seker jy wil hierdie %1 lettertipes skrap?"
 
-#: kcmfontinst/KCmFontInst.cpp:625
+#: kcmfontinst/KCmFontInst.cpp:624
 #, kde-format
 msgid "Delete Fonts"
 msgstr "Skrap Lettertipes"
 
-#: kcmfontinst/KCmFontInst.cpp:630
+#: kcmfontinst/KCmFontInst.cpp:629
 #, fuzzy, kde-format
 msgid "Deleting font(s)…"
 msgstr "Skrap Lettertipes"
 
-#: kcmfontinst/KCmFontInst.cpp:645
+#: kcmfontinst/KCmFontInst.cpp:644
 #, fuzzy, kde-format
 #| msgid "You did not select anything to delete."
 msgid "You did not select anything to move."
 msgstr "Jy het niks gekies om te skrap nie."
 
-#: kcmfontinst/KCmFontInst.cpp:645
+#: kcmfontinst/KCmFontInst.cpp:644
 #, fuzzy, kde-format
 #| msgid "Nothing to Delete"
 msgid "Nothing to Move"
 msgstr "Niks om te Skrap nie"
 
-#: kcmfontinst/KCmFontInst.cpp:655
+#: kcmfontinst/KCmFontInst.cpp:654
 #, fuzzy, kde-format
 msgid ""
 "<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to <i>"
@@ -792,17 +792,17 @@ msgstr ""
 "<qt>Is jy seker jy wil\n"
 " <b>'%1'</b> Skrap?</qt>"
 
-#: kcmfontinst/KCmFontInst.cpp:660
+#: kcmfontinst/KCmFontInst.cpp:659
 #, fuzzy, kde-format
 msgid "Move Font"
 msgstr "_n: Een Lettertipe"
 
-#: kcmfontinst/KCmFontInst.cpp:661 kcmfontinst/KCmFontInst.cpp:673
+#: kcmfontinst/KCmFontInst.cpp:660 kcmfontinst/KCmFontInst.cpp:672
 #, kde-format
 msgid "Move"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:666
+#: kcmfontinst/KCmFontInst.cpp:665
 #, fuzzy, kde-format
 msgid ""
 "<p>Do you really want to move this font from <i>%2</i> to <i>%3</i>?</p>"
@@ -815,76 +815,76 @@ msgstr[1] ""
 "<qt>Is jy seker jy wil\n"
 " <b>'%1'</b> Skrap?</qt>"
 
-#: kcmfontinst/KCmFontInst.cpp:672
+#: kcmfontinst/KCmFontInst.cpp:671
 #, fuzzy, kde-format
 msgid "Move Fonts"
 msgstr "Installeer Lettertipes"
 
-#: kcmfontinst/KCmFontInst.cpp:677
+#: kcmfontinst/KCmFontInst.cpp:676
 #, fuzzy, kde-format
 msgid "Moving font(s)…"
 msgstr "Skrap Lettertipes"
 
-#: kcmfontinst/KCmFontInst.cpp:691
+#: kcmfontinst/KCmFontInst.cpp:690
 #, kde-format
 msgid "Export Group"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:717
+#: kcmfontinst/KCmFontInst.cpp:716
 #, kde-format
 msgid "No files?"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:720
+#: kcmfontinst/KCmFontInst.cpp:719
 #, fuzzy, kde-format
 #| msgid "Simple font viewer"
 msgid "Failed to open %1 for writing"
 msgstr "Eenvoudeige lettertipe vertoner"
 
-#: kcmfontinst/KCmFontInst.cpp:740
+#: kcmfontinst/KCmFontInst.cpp:739
 #, kde-format
 msgid "Create New Group"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:740
+#: kcmfontinst/KCmFontInst.cpp:739
 #, kde-format
 msgid "Name of new group:"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:740
+#: kcmfontinst/KCmFontInst.cpp:739
 #, kde-format
 msgid "New Group"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:768
+#: kcmfontinst/KCmFontInst.cpp:767
 #, fuzzy, kde-format
 msgid "Preview Text"
 msgstr "Voorskou String"
 
-#: kcmfontinst/KCmFontInst.cpp:768
+#: kcmfontinst/KCmFontInst.cpp:767
 #, fuzzy, kde-format
 #| msgid "Please enter new string:"
 msgid "Please enter new text:"
 msgstr "Sleutel asseblief nuwe string in:"
 
-#: kcmfontinst/KCmFontInst.cpp:820
+#: kcmfontinst/KCmFontInst.cpp:819
 #, kde-format
 msgid "Scanning font list…"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:879
+#: kcmfontinst/KCmFontInst.cpp:878
 #, kde-format
 msgid "No fonts"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:884
+#: kcmfontinst/KCmFontInst.cpp:883
 #, fuzzy, kde-format
 msgid "1 Font"
 msgid_plural "%1 Fonts"
 msgstr[0] "_n: Een Lettertipe"
 msgstr[1] "%1 Lettertipes"
 
-#: kcmfontinst/KCmFontInst.cpp:893
+#: kcmfontinst/KCmFontInst.cpp:892
 #, kde-format
 msgid ""
 "<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
@@ -893,7 +893,7 @@ msgid ""
 "tr></table>"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:903
+#: kcmfontinst/KCmFontInst.cpp:902
 #, kde-format
 msgid ""
 "<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
@@ -901,104 +901,104 @@ msgid ""
 "td><td>%3</td></tr></table>"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:980
+#: kcmfontinst/KCmFontInst.cpp:979
 #, kde-format
 msgid "Looking for any associated files…"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:984
+#: kcmfontinst/KCmFontInst.cpp:983
 #, kde-format
 msgid "Scanning Files…"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:985
+#: kcmfontinst/KCmFontInst.cpp:984
 #, kde-format
 msgid "Looking for additional files to install…"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:1000
+#: kcmfontinst/KCmFontInst.cpp:999
 #, kde-format
 msgid "Looking for files associated with %1"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:1028
+#: kcmfontinst/KCmFontInst.cpp:1027
 #, fuzzy, kde-format
 msgid "Installing font(s)…"
 msgstr "Installeer..."
 
-#: kcmfontinst/KCmFontInst.cpp:1093
+#: kcmfontinst/KCmFontInst.cpp:1092
 #, fuzzy, kde-format
 msgid "You did not select anything to enable."
 msgstr "Jy het niks gekies om te skrap nie."
 
-#: kcmfontinst/KCmFontInst.cpp:1093
+#: kcmfontinst/KCmFontInst.cpp:1092
 #, fuzzy, kde-format
 msgid "You did not select anything to disable."
 msgstr "Jy het niks gekies om te skrap nie."
 
-#: kcmfontinst/KCmFontInst.cpp:1094
+#: kcmfontinst/KCmFontInst.cpp:1093
 #, fuzzy, kde-format
 msgid "Nothing to Enable"
 msgstr "Niks om te Skrap nie"
 
-#: kcmfontinst/KCmFontInst.cpp:1094
+#: kcmfontinst/KCmFontInst.cpp:1093
 #, fuzzy, kde-format
 msgid "Nothing to Disable"
 msgstr "Niks om te Skrap nie"
 
-#: kcmfontinst/KCmFontInst.cpp:1108
+#: kcmfontinst/KCmFontInst.cpp:1107
 #, fuzzy, kde-format
 msgid "<p>Do you really want to enable</p><p>'<b>%1</b>'?</p>"
 msgstr ""
 "<qt>Is jy seker jy wil\n"
 " <b>'%1'</b> Skrap?</qt>"
 
-#: kcmfontinst/KCmFontInst.cpp:1109
+#: kcmfontinst/KCmFontInst.cpp:1108
 #, fuzzy, kde-format
 msgid "<p>Do you really want to disable</p><p>'<b>%1</b>'?</p>"
 msgstr ""
 "<qt>Is jy seker jy wil\n"
 " <b>'%1'</b> Skrap?</qt>"
 
-#: kcmfontinst/KCmFontInst.cpp:1110
+#: kcmfontinst/KCmFontInst.cpp:1109
 #, kde-format
 msgid ""
 "<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
 "'<b>%2</b>'?</p>"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:1111
+#: kcmfontinst/KCmFontInst.cpp:1110
 #, kde-format
 msgid ""
 "<p>Do you really want to disable</p><p>'<b>%1</b>', contained within group "
 "'<b>%2</b>'?</p>"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:1112 kcmfontinst/KCmFontInst.cpp:1113
+#: kcmfontinst/KCmFontInst.cpp:1111 kcmfontinst/KCmFontInst.cpp:1112
 #, fuzzy, kde-format
 msgid "Enable Font"
 msgstr "_n: Een Lettertipe"
 
-#: kcmfontinst/KCmFontInst.cpp:1112 kcmfontinst/KCmFontInst.cpp:1114
+#: kcmfontinst/KCmFontInst.cpp:1111 kcmfontinst/KCmFontInst.cpp:1113
 #, fuzzy, kde-format
 msgid "Disable Font"
 msgstr "Skrap Lettertipe"
 
-#: kcmfontinst/KCmFontInst.cpp:1120
+#: kcmfontinst/KCmFontInst.cpp:1119
 #, fuzzy, kde-format
 msgid "Do you really want to enable this font?"
 msgid_plural "Do you really want to enable these %1 fonts?"
 msgstr[0] "_n: Is jy seker jy wil hierdie lettertipe skrap?"
 msgstr[1] "Is jy seker jy wil hierdie %1 lettertipes skrap?"
 
-#: kcmfontinst/KCmFontInst.cpp:1121
+#: kcmfontinst/KCmFontInst.cpp:1120
 #, fuzzy, kde-format
 msgid "Do you really want to disable this font?"
 msgid_plural "Do you really want to disable these %1 fonts?"
 msgstr[0] "_n: Is jy seker jy wil hierdie lettertipe skrap?"
 msgstr[1] "Is jy seker jy wil hierdie %1 lettertipes skrap?"
 
-#: kcmfontinst/KCmFontInst.cpp:1123
+#: kcmfontinst/KCmFontInst.cpp:1122
 #, fuzzy, kde-format
 msgid ""
 "<p>Do you really want to enable this font contained within group '<b>%2</b>'?"
@@ -1013,7 +1013,7 @@ msgstr[1] ""
 "<qt>Is jy seker jy wil\n"
 " <b>'%1'</b> Skrap?</qt>"
 
-#: kcmfontinst/KCmFontInst.cpp:1127
+#: kcmfontinst/KCmFontInst.cpp:1126
 #, fuzzy, kde-format
 msgid ""
 "<p>Do you really want to disable this font contained within group '<b>%2</"
@@ -1028,22 +1028,22 @@ msgstr[1] ""
 "<qt>Is jy seker jy wil\n"
 " <b>'%1'</b> Skrap?</qt>"
 
-#: kcmfontinst/KCmFontInst.cpp:1131 kcmfontinst/KCmFontInst.cpp:1133
+#: kcmfontinst/KCmFontInst.cpp:1130 kcmfontinst/KCmFontInst.cpp:1132
 #, fuzzy, kde-format
 msgid "Enable Fonts"
 msgstr "_n: Een Lettertipe"
 
-#: kcmfontinst/KCmFontInst.cpp:1131 kcmfontinst/KCmFontInst.cpp:1133
+#: kcmfontinst/KCmFontInst.cpp:1130 kcmfontinst/KCmFontInst.cpp:1132
 #, fuzzy, kde-format
 msgid "Disable Fonts"
 msgstr "Skrap Lettertipes"
 
-#: kcmfontinst/KCmFontInst.cpp:1140
+#: kcmfontinst/KCmFontInst.cpp:1139
 #, fuzzy, kde-format
 msgid "Enabling font(s)…"
 msgstr "Installeer..."
 
-#: kcmfontinst/KCmFontInst.cpp:1142
+#: kcmfontinst/KCmFontInst.cpp:1141
 #, fuzzy, kde-format
 msgid "Disabling font(s)…"
 msgstr "Skrap Lettertipes"
@@ -1557,17 +1557,17 @@ msgstr "Installeer"
 msgid "Change Text…"
 msgstr "Verander Teks..."
 
-#: viewpart/FontViewPart.cpp:340
+#: viewpart/FontViewPart.cpp:337
 #, fuzzy, kde-format
 msgid "Could not read font."
 msgstr "Kry nie toegang tot \"%1\" nie."
 
-#: viewpart/FontViewPart.cpp:406
+#: viewpart/FontViewPart.cpp:403
 #, kde-format
 msgid "Preview String"
 msgstr "Voorskou String"
 
-#: viewpart/FontViewPart.cpp:406
+#: viewpart/FontViewPart.cpp:403
 #, kde-format
 msgid "Please enter new string:"
 msgstr "Sleutel asseblief nuwe string in:"

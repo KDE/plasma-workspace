@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-25 00:44+0000\n"
+"POT-Creation-Date: 2025-11-15 00:43+0000\n"
 "PO-Revision-Date: 2025-05-18 11:37+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -22,57 +22,52 @@ msgstr ""
 msgid "General"
 msgstr "Общи"
 
-#: package/contents/config/config.qml:18
-#, kde-format
-msgid "Entries"
-msgstr "Записи"
-
-#: package/contents/ui/ConfigEntries.qml:39
+#: package/contents/ui/ConfigGeneral.qml:43
 #, kde-format
 msgid "Shown when relevant"
 msgstr "Показва се, когато е необходимо"
 
-#: package/contents/ui/ConfigEntries.qml:43
+#: package/contents/ui/ConfigGeneral.qml:47
 #, kde-format
 msgid "Always shown"
 msgstr "Винаги показвано"
 
-#: package/contents/ui/ConfigEntries.qml:47
+#: package/contents/ui/ConfigGeneral.qml:51
 #, kde-format
 msgid "Always hidden"
 msgstr "Винаги скрито"
 
-#: package/contents/ui/ConfigEntries.qml:51
+#: package/contents/ui/ConfigGeneral.qml:55
 #, kde-format
 msgid "Disabled"
 msgstr "Забранено"
 
-#: package/contents/ui/ConfigEntries.qml:122
+#: package/contents/ui/ConfigGeneral.qml:126
 #, kde-format
 msgid "Application Status"
 msgstr "Състояние на приложението"
 
-#: package/contents/ui/ConfigEntries.qml:124
+#: package/contents/ui/ConfigGeneral.qml:128
 #, kde-format
 msgid "Communications"
 msgstr "Комуникации"
 
-#: package/contents/ui/ConfigEntries.qml:126
+#: package/contents/ui/ConfigGeneral.qml:130
 #, kde-format
 msgid "System Services"
 msgstr "Системни услуги"
 
-#: package/contents/ui/ConfigEntries.qml:128
+#: package/contents/ui/ConfigGeneral.qml:132
 #, kde-format
 msgid "Hardware Control"
 msgstr "Контрол на хардуера"
 
-#: package/contents/ui/ConfigEntries.qml:131
+#: package/contents/ui/ConfigGeneral.qml:135
 #, kde-format
 msgid "Miscellaneous"
 msgstr "Допълнителни"
 
-#: package/contents/ui/ConfigEntries.qml:174
+#: package/contents/ui/ConfigGeneral.qml:179
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -89,13 +84,13 @@ msgstr ""
 "поведение.<nl/><nl/>Използвайте тази настройка на свой собствен риск и не "
 "докладвайте за проблеми на KDE или на автора на приложението."
 
-#: package/contents/ui/ConfigEntries.qml:177
+#: package/contents/ui/ConfigGeneral.qml:182
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
 msgstr "Запознат съм с рисковете"
 
-#: package/contents/ui/ConfigEntries.qml:189
+#: package/contents/ui/ConfigGeneral.qml:194
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -109,82 +104,90 @@ msgstr ""
 "затворено.<nl/><nl/>Вместо това, помислете за конфигуриране на клипборда, за "
 "да деактивирате историята му или да запомняте само един елемент наведнъж."
 
-#: package/contents/ui/ConfigEntries.qml:217
-#, kde-format
-msgctxt "Name of the system tray entry"
-msgid "Entry"
-msgstr "Запис"
-
-#: package/contents/ui/ConfigEntries.qml:224
-#, kde-format
-msgid "Visibility"
-msgstr "Видимост"
-
-#: package/contents/ui/ConfigEntries.qml:231
-#, kde-format
-msgid "Keyboard Shortcut"
-msgstr "Клавишна комбинация"
-
-#: package/contents/ui/ConfigEntries.qml:263
-#, kde-format
-msgid "Always show all entries"
-msgstr "Винаги показване на всички записи"
-
-#: package/contents/ui/ConfigGeneral.qml:23
+#: package/contents/ui/ConfigGeneral.qml:201
 #, kde-format
 msgctxt "The arrangement of system tray icons in the Panel"
 msgid "Panel icon size:"
 msgstr "Размер на иконата на панела:"
 
-#: package/contents/ui/ConfigGeneral.qml:25
+#: package/contents/ui/ConfigGeneral.qml:203
 #, kde-format
 msgid "Small"
 msgstr "Малък"
 
-#: package/contents/ui/ConfigGeneral.qml:32
+#: package/contents/ui/ConfigGeneral.qml:210
 #, kde-format
 msgid "Scale with Panel height"
 msgstr "Мащабиране с височината на панела"
 
-#: package/contents/ui/ConfigGeneral.qml:33
+#: package/contents/ui/ConfigGeneral.qml:211
 #, kde-format
 msgid "Scale with Panel width"
 msgstr "Мащабиране с широчината на панела"
 
-#: package/contents/ui/ConfigGeneral.qml:39
+#: package/contents/ui/ConfigGeneral.qml:217
 #, kde-format
 msgid "Automatically enabled when in Touch Mode"
 msgstr "Автоматично активиране в режим на таблет"
 
-#: package/contents/ui/ConfigGeneral.qml:49
+#: package/contents/ui/ConfigGeneral.qml:227
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon spacing:"
 msgstr "Разстояние между иконите в панела:"
 
-#: package/contents/ui/ConfigGeneral.qml:52
+#: package/contents/ui/ConfigGeneral.qml:230
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "Малък"
 
-#: package/contents/ui/ConfigGeneral.qml:56
+#: package/contents/ui/ConfigGeneral.qml:234
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "Нормално"
 
-#: package/contents/ui/ConfigGeneral.qml:60
+#: package/contents/ui/ConfigGeneral.qml:238
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "Голямо"
 
-#: package/contents/ui/ConfigGeneral.qml:85
+#: package/contents/ui/ConfigGeneral.qml:263
 #, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
 msgstr "Автоматично задаване на големи икони в режим на таблет"
+
+#: package/contents/ui/ConfigGeneral.qml:282
+#, fuzzy, kde-format
+#| msgid "Entries"
+msgctxt "@title:column"
+msgid "Entries"
+msgstr "Записи"
+
+#: package/contents/ui/ConfigGeneral.qml:286
+#, fuzzy, kde-format
+#| msgid "Always shown"
+msgid "Always show all"
+msgstr "Винаги показвано"
+
+#: package/contents/ui/ConfigGeneral.qml:330
+#, kde-format
+msgctxt "Name of the system tray entry"
+msgid "Entry"
+msgstr "Запис"
+
+#: package/contents/ui/ConfigGeneral.qml:337
+#, kde-format
+msgid "Visibility"
+msgstr "Видимост"
+
+#: package/contents/ui/ConfigGeneral.qml:344
+#, kde-format
+msgid "Keyboard Shortcut"
+msgstr "Клавишна комбинация"
 
 #: package/contents/ui/ExpandedRepresentation.qml:59
 #, kde-format
@@ -233,3 +236,6 @@ msgstr "Решетка с %1 елемента в %2 колони"
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
 msgstr "AILlmyjgGJP"
+
+#~ msgid "Always show all entries"
+#~ msgstr "Винаги показване на всички записи"

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.systemtray\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-25 00:44+0000\n"
+"POT-Creation-Date: 2025-11-15 00:43+0000\n"
 "PO-Revision-Date: 2022-08-28 20:50-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -23,57 +23,52 @@ msgstr ""
 msgid "General"
 msgstr "全般"
 
-#: package/contents/config/config.qml:18
-#, kde-format
-msgid "Entries"
-msgstr "エントリ"
-
-#: package/contents/ui/ConfigEntries.qml:39
+#: package/contents/ui/ConfigGeneral.qml:43
 #, kde-format
 msgid "Shown when relevant"
 msgstr "適切なときに表示"
 
-#: package/contents/ui/ConfigEntries.qml:43
+#: package/contents/ui/ConfigGeneral.qml:47
 #, kde-format
 msgid "Always shown"
 msgstr "常に表示"
 
-#: package/contents/ui/ConfigEntries.qml:47
+#: package/contents/ui/ConfigGeneral.qml:51
 #, kde-format
 msgid "Always hidden"
 msgstr "常に非表示"
 
-#: package/contents/ui/ConfigEntries.qml:51
+#: package/contents/ui/ConfigGeneral.qml:55
 #, kde-format
 msgid "Disabled"
 msgstr "無効"
 
-#: package/contents/ui/ConfigEntries.qml:122
+#: package/contents/ui/ConfigGeneral.qml:126
 #, kde-format
 msgid "Application Status"
 msgstr "アプリケーションの状態"
 
-#: package/contents/ui/ConfigEntries.qml:124
+#: package/contents/ui/ConfigGeneral.qml:128
 #, kde-format
 msgid "Communications"
 msgstr "コミュニケーション"
 
-#: package/contents/ui/ConfigEntries.qml:126
+#: package/contents/ui/ConfigGeneral.qml:130
 #, kde-format
 msgid "System Services"
 msgstr "システムサービス"
 
-#: package/contents/ui/ConfigEntries.qml:128
+#: package/contents/ui/ConfigGeneral.qml:132
 #, kde-format
 msgid "Hardware Control"
 msgstr "ハードウェアコントロール"
 
-#: package/contents/ui/ConfigEntries.qml:131
+#: package/contents/ui/ConfigGeneral.qml:135
 #, kde-format
 msgid "Miscellaneous"
 msgstr "その他"
 
-#: package/contents/ui/ConfigEntries.qml:174
+#: package/contents/ui/ConfigGeneral.qml:179
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -84,13 +79,13 @@ msgid ""
 "the app’s author."
 msgstr ""
 
-#: package/contents/ui/ConfigEntries.qml:177
+#: package/contents/ui/ConfigGeneral.qml:182
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
 msgstr ""
 
-#: package/contents/ui/ConfigEntries.qml:189
+#: package/contents/ui/ConfigGeneral.qml:194
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -100,82 +95,90 @@ msgid ""
 "one item at a time."
 msgstr ""
 
-#: package/contents/ui/ConfigEntries.qml:217
-#, kde-format
-msgctxt "Name of the system tray entry"
-msgid "Entry"
-msgstr "エントリ"
-
-#: package/contents/ui/ConfigEntries.qml:224
-#, kde-format
-msgid "Visibility"
-msgstr "表示"
-
-#: package/contents/ui/ConfigEntries.qml:231
-#, kde-format
-msgid "Keyboard Shortcut"
-msgstr "キーボードショートカット"
-
-#: package/contents/ui/ConfigEntries.qml:263
-#, kde-format
-msgid "Always show all entries"
-msgstr "常にすべてのエントリを表示"
-
-#: package/contents/ui/ConfigGeneral.qml:23
+#: package/contents/ui/ConfigGeneral.qml:201
 #, kde-format
 msgctxt "The arrangement of system tray icons in the Panel"
 msgid "Panel icon size:"
 msgstr "パネルアイコンのサイズ:"
 
-#: package/contents/ui/ConfigGeneral.qml:25
+#: package/contents/ui/ConfigGeneral.qml:203
 #, kde-format
 msgid "Small"
 msgstr "小"
 
-#: package/contents/ui/ConfigGeneral.qml:32
+#: package/contents/ui/ConfigGeneral.qml:210
 #, kde-format
 msgid "Scale with Panel height"
 msgstr "パネルの高さに合わせる"
 
-#: package/contents/ui/ConfigGeneral.qml:33
+#: package/contents/ui/ConfigGeneral.qml:211
 #, kde-format
 msgid "Scale with Panel width"
 msgstr "パネルの幅に合わせる"
 
-#: package/contents/ui/ConfigGeneral.qml:39
+#: package/contents/ui/ConfigGeneral.qml:217
 #, kde-format
 msgid "Automatically enabled when in Touch Mode"
 msgstr "タッチモードで自動的に有効化"
 
-#: package/contents/ui/ConfigGeneral.qml:49
+#: package/contents/ui/ConfigGeneral.qml:227
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon spacing:"
 msgstr "アイコン間のスペース:"
 
-#: package/contents/ui/ConfigGeneral.qml:52
+#: package/contents/ui/ConfigGeneral.qml:230
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "小"
 
-#: package/contents/ui/ConfigGeneral.qml:56
+#: package/contents/ui/ConfigGeneral.qml:234
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "中"
 
-#: package/contents/ui/ConfigGeneral.qml:60
+#: package/contents/ui/ConfigGeneral.qml:238
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "大"
 
-#: package/contents/ui/ConfigGeneral.qml:85
+#: package/contents/ui/ConfigGeneral.qml:263
 #, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
 msgstr "タッチモードで自動的に「大」に設定"
+
+#: package/contents/ui/ConfigGeneral.qml:282
+#, fuzzy, kde-format
+#| msgid "Entries"
+msgctxt "@title:column"
+msgid "Entries"
+msgstr "エントリ"
+
+#: package/contents/ui/ConfigGeneral.qml:286
+#, fuzzy, kde-format
+#| msgid "Always shown"
+msgid "Always show all"
+msgstr "常に表示"
+
+#: package/contents/ui/ConfigGeneral.qml:330
+#, kde-format
+msgctxt "Name of the system tray entry"
+msgid "Entry"
+msgstr "エントリ"
+
+#: package/contents/ui/ConfigGeneral.qml:337
+#, kde-format
+msgid "Visibility"
+msgstr "表示"
+
+#: package/contents/ui/ConfigGeneral.qml:344
+#, kde-format
+msgid "Keyboard Shortcut"
+msgstr "キーボードショートカット"
 
 #: package/contents/ui/ExpandedRepresentation.qml:59
 #, kde-format
@@ -224,6 +227,9 @@ msgstr ""
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
 msgstr ""
+
+#~ msgid "Always show all entries"
+#~ msgstr "常にすべてのエントリを表示"
 
 #~ msgid "Expand System Tray"
 #~ msgstr "システムトレイを展開"

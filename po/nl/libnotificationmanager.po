@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-25 00:44+0000\n"
+"POT-Creation-Date: 2025-11-15 00:43+0000\n"
 "PO-Revision-Date: 2025-07-24 13:53+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -102,7 +102,7 @@ msgstr "%1 uit %2"
 msgid "Application closed unexpectedly."
 msgstr "Toepassing is onverwacht afgesloten."
 
-#: notifications.cpp:909
+#: notifications.cpp:907
 #, kde-format
 msgctxt "@title"
 msgid "Unread Notification"
@@ -110,7 +110,7 @@ msgid_plural "Unread Notifications"
 msgstr[0] "Ongelezen melding"
 msgstr[1] "Ongelezen meldingen"
 
-#: notifications.cpp:911
+#: notifications.cpp:909
 #, kde-format
 msgctxt "@info"
 msgid "%1 notification was received while Do Not Disturb was active."
@@ -118,7 +118,7 @@ msgid_plural "%1 notifications were received while Do Not Disturb was active."
 msgstr[0] "Er is %1 melding ontvangen toen Niet storen actief was."
 msgstr[1] "Er zijn %1 meldingen ontvangen toen Niet storen actief was."
 
-#: notifications.cpp:919
+#: notifications.cpp:917
 #, kde-format
 msgctxt "@action:button Show the notifications popup"
 msgid "Show Notifications"

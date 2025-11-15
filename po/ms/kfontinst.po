@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-14 00:44+0000\n"
+"POT-Creation-Date: 2025-11-15 00:43+0000\n"
 "PO-Revision-Date: 2011-07-01 21:22+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@gmail.com>\n"
 "Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
@@ -29,14 +29,14 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "md_najmi@yahoo.com"
 
-#: apps/Installer.cpp:36 kcmfontinst/KCmFontInst.cpp:947
+#: apps/Installer.cpp:36 kcmfontinst/KCmFontInst.cpp:946
 #, fuzzy, kde-format
 msgid ""
 "Do you wish to install the font(s) for personal use (only available to you), "
 "or system-wide (available to all users)?"
 msgstr "ke  saat ke  atau ke  semua?"
 
-#: apps/Installer.cpp:37 kcmfontinst/KCmFontInst.cpp:950
+#: apps/Installer.cpp:37 kcmfontinst/KCmFontInst.cpp:949
 #, kde-format
 msgid "Where to Install"
 msgstr "Di Mana Hendak Pasang"
@@ -342,13 +342,13 @@ msgid "Delete"
 msgstr "Padam"
 
 #: kcmfontinst/FontList.cpp:1302 kcmfontinst/GroupList.cpp:790
-#: kcmfontinst/KCmFontInst.cpp:1113 kcmfontinst/KCmFontInst.cpp:1133
+#: kcmfontinst/KCmFontInst.cpp:1112 kcmfontinst/KCmFontInst.cpp:1132
 #, kde-format
 msgid "Enable"
 msgstr "Hidupkan"
 
 #: kcmfontinst/FontList.cpp:1303 kcmfontinst/GroupList.cpp:791
-#: kcmfontinst/KCmFontInst.cpp:1114 kcmfontinst/KCmFontInst.cpp:1133
+#: kcmfontinst/KCmFontInst.cpp:1113 kcmfontinst/KCmFontInst.cpp:1132
 #, kde-format
 msgid "Disable"
 msgstr "Matikan"
@@ -528,12 +528,12 @@ msgstr "Memasang"
 msgid "Uninstalling"
 msgstr "Pasang"
 
-#: kcmfontinst/JobRunner.cpp:321 kcmfontinst/JobRunner.cpp:418
+#: kcmfontinst/JobRunner.cpp:321 kcmfontinst/JobRunner.cpp:417
 #, kde-format
 msgid "Enabling"
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:324 kcmfontinst/JobRunner.cpp:422
+#: kcmfontinst/JobRunner.cpp:324 kcmfontinst/JobRunner.cpp:421
 #, fuzzy, kde-format
 msgid "Moving"
 msgstr "Mengalih"
@@ -553,90 +553,90 @@ msgstr "Buang"
 msgid "Disabling"
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:373
+#: kcmfontinst/JobRunner.cpp:372
 #, fuzzy, kde-format
 msgid "Updating font configuration. Please wait…"
 msgstr "Mengemaskini."
 
-#: kcmfontinst/JobRunner.cpp:445
+#: kcmfontinst/JobRunner.cpp:444
 #, fuzzy, kde-format
 msgid "Unable to start backend."
 msgstr "ke ."
 
-#: kcmfontinst/JobRunner.cpp:454
+#: kcmfontinst/JobRunner.cpp:453
 #, fuzzy, kde-format
 msgid "Backend died, but has been restarted. Please try again."
 msgstr "Backend."
 
-#: kcmfontinst/JobRunner.cpp:619 kcmfontinst/JobRunner.cpp:625
+#: kcmfontinst/JobRunner.cpp:618 kcmfontinst/JobRunner.cpp:624
 #, fuzzy, kde-format
 msgid "<h3>Error</h3>"
 msgstr "<h3> Ralat</h3>"
 
-#: kcmfontinst/JobRunner.cpp:691
+#: kcmfontinst/JobRunner.cpp:690
 #, fuzzy, kde-format
 msgid "Failed to download <i>%1</i>"
 msgstr "Gagal ke <i></i>"
 
-#: kcmfontinst/JobRunner.cpp:693
+#: kcmfontinst/JobRunner.cpp:692
 #, fuzzy, kde-format
 msgid "System backend died. Please try again.<br><i>%1</i>"
 msgstr "Sistem<br><i></i>"
 
-#: kcmfontinst/JobRunner.cpp:695
+#: kcmfontinst/JobRunner.cpp:694
 #, fuzzy, kde-format
 msgid ""
 "<i>%1</i> is a bitmap font, and these have been disabled on your system."
 msgstr "<i></i> a dan dimatikan buka."
 
-#: kcmfontinst/JobRunner.cpp:697
+#: kcmfontinst/JobRunner.cpp:696
 #, fuzzy, kde-format
 msgid ""
 "<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
 "system."
 msgstr "<i></i><b></b> buka."
 
-#: kcmfontinst/JobRunner.cpp:699
+#: kcmfontinst/JobRunner.cpp:698
 #, fuzzy, kde-format
 msgid "<i>%1</i> is not a font."
 msgstr "<i></i> a."
 
-#: kcmfontinst/JobRunner.cpp:701
+#: kcmfontinst/JobRunner.cpp:700
 #, fuzzy, kde-format
 msgid "Could not remove all files associated with <i>%1</i>"
 msgstr "semua<i></i>"
 
-#: kcmfontinst/JobRunner.cpp:703
+#: kcmfontinst/JobRunner.cpp:702
 #, fuzzy, kde-format
 msgid "Failed to start the system daemon.<br><i>%1</i>"
 msgstr "Gagal ke <br><i></i>"
 
-#: kcmfontinst/JobRunner.cpp:706 kio/KioFonts.cpp:719
+#: kcmfontinst/JobRunner.cpp:705 kio/KioFonts.cpp:719
 #, kde-format
 msgid "<i>%1</i> already exists."
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:709
+#: kcmfontinst/JobRunner.cpp:708
 #, kde-format
 msgid "<i>%1</i> does not exist."
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:711
+#: kcmfontinst/JobRunner.cpp:710
 #, kde-format
 msgid "Permission denied.<br><i>%1</i>"
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:713
+#: kcmfontinst/JobRunner.cpp:712
 #, fuzzy, kde-format
 msgid "Unsupported action.<br><i>%1</i>"
 msgstr "Autentikasi gagal."
 
-#: kcmfontinst/JobRunner.cpp:715
+#: kcmfontinst/JobRunner.cpp:714
 #, fuzzy, kde-format
 msgid "Authentication failed.<br><i>%1</i>"
 msgstr "Pengesahan<br><i></i>"
 
-#: kcmfontinst/JobRunner.cpp:717
+#: kcmfontinst/JobRunner.cpp:716
 #, fuzzy, kde-format
 msgid "Unexpected error while processing: <i>%1</i>"
 msgstr "ralat<i></i>"
@@ -714,95 +714,95 @@ msgstr "Tukar Prapapar Teks."
 msgid "Add Fonts"
 msgstr "Tambah Font"
 
-#: kcmfontinst/KCmFontInst.cpp:553
+#: kcmfontinst/KCmFontInst.cpp:552
 #, fuzzy, kde-format
 msgid "Failed to save list of fonts to print."
 msgstr "Gagal ke  ke ."
 
-#: kcmfontinst/KCmFontInst.cpp:574
+#: kcmfontinst/KCmFontInst.cpp:573
 #, fuzzy, kde-format
 msgid "Failed to start font printer."
 msgstr "Gagal ke ."
 
-#: kcmfontinst/KCmFontInst.cpp:581
+#: kcmfontinst/KCmFontInst.cpp:580
 #, fuzzy, kde-format
 msgid ""
 "There are no printable fonts.\n"
 "You can only print non-bitmap and enabled fonts."
 msgstr "dan dihidupkan."
 
-#: kcmfontinst/KCmFontInst.cpp:583
+#: kcmfontinst/KCmFontInst.cpp:582
 #, kde-format
 msgid "Cannot Print"
 msgstr "Tidak Boleh Cetak"
 
-#: kcmfontinst/KCmFontInst.cpp:598
+#: kcmfontinst/KCmFontInst.cpp:597
 #, kde-format
 msgid "You did not select anything to delete."
 msgstr "Anda tidak memilih apa-apa untuk dipadam."
 
-#: kcmfontinst/KCmFontInst.cpp:598
+#: kcmfontinst/KCmFontInst.cpp:597
 #, kde-format
 msgid "Nothing to Delete"
 msgstr "Tiada untuk Dipadam"
 
-#: kcmfontinst/KCmFontInst.cpp:613
+#: kcmfontinst/KCmFontInst.cpp:612
 #, fuzzy, kde-format
 msgid "<p>Do you really want to delete</p><p>'<b>%1</b>'?</p>"
 msgstr "<p> ke </p><p><b></b></p>"
 
-#: kcmfontinst/KCmFontInst.cpp:616
+#: kcmfontinst/KCmFontInst.cpp:615
 #, kde-format
 msgid "Delete Font"
 msgstr "Padam Font"
 
-#: kcmfontinst/KCmFontInst.cpp:623
+#: kcmfontinst/KCmFontInst.cpp:622
 #, fuzzy, kde-format
 msgid "Do you really want to delete this font?"
 msgid_plural "Do you really want to delete these %1 fonts?"
 msgstr[0] "ke ?"
 msgstr[1] "ke ?"
 
-#: kcmfontinst/KCmFontInst.cpp:625
+#: kcmfontinst/KCmFontInst.cpp:624
 #, kde-format
 msgid "Delete Fonts"
 msgstr "Padam Font"
 
-#: kcmfontinst/KCmFontInst.cpp:630
+#: kcmfontinst/KCmFontInst.cpp:629
 #, fuzzy, kde-format
 msgid "Deleting font(s)…"
 msgstr "saat."
 
-#: kcmfontinst/KCmFontInst.cpp:645
+#: kcmfontinst/KCmFontInst.cpp:644
 #, fuzzy, kde-format
 #| msgid "You did not select anything to delete."
 msgid "You did not select anything to move."
 msgstr "Anda apa sahaja ke ."
 
-#: kcmfontinst/KCmFontInst.cpp:645
+#: kcmfontinst/KCmFontInst.cpp:644
 #, fuzzy, kde-format
 #| msgid "Nothing to Delete"
 msgid "Nothing to Move"
 msgstr "Tiada ke  Pindah"
 
-#: kcmfontinst/KCmFontInst.cpp:655
+#: kcmfontinst/KCmFontInst.cpp:654
 #, fuzzy, kde-format
 msgid ""
 "<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to <i>"
 "%3</i>?</p>"
 msgstr "<p> ke </p><p><b></b></p>"
 
-#: kcmfontinst/KCmFontInst.cpp:660
+#: kcmfontinst/KCmFontInst.cpp:659
 #, fuzzy, kde-format
 msgid "Move Font"
 msgstr "Pindah Font"
 
-#: kcmfontinst/KCmFontInst.cpp:661 kcmfontinst/KCmFontInst.cpp:673
+#: kcmfontinst/KCmFontInst.cpp:660 kcmfontinst/KCmFontInst.cpp:672
 #, fuzzy, kde-format
 msgid "Move"
 msgstr "Pindah"
 
-#: kcmfontinst/KCmFontInst.cpp:666
+#: kcmfontinst/KCmFontInst.cpp:665
 #, fuzzy, kde-format
 msgid ""
 "<p>Do you really want to move this font from <i>%2</i> to <i>%3</i>?</p>"
@@ -811,76 +811,76 @@ msgid_plural ""
 msgstr[0] "<p> ke </p><p><b></b></p>"
 msgstr[1] "<p> ke </p><p><b></b></p>"
 
-#: kcmfontinst/KCmFontInst.cpp:672
+#: kcmfontinst/KCmFontInst.cpp:671
 #, fuzzy, kde-format
 msgid "Move Fonts"
 msgstr "Pindah Font"
 
-#: kcmfontinst/KCmFontInst.cpp:677
+#: kcmfontinst/KCmFontInst.cpp:676
 #, fuzzy, kde-format
 msgid "Moving font(s)…"
 msgstr "saat."
 
-#: kcmfontinst/KCmFontInst.cpp:691
+#: kcmfontinst/KCmFontInst.cpp:690
 #, fuzzy, kde-format
 msgid "Export Group"
 msgstr "Kumpulan"
 
-#: kcmfontinst/KCmFontInst.cpp:717
+#: kcmfontinst/KCmFontInst.cpp:716
 #, fuzzy, kde-format
 msgid "No files?"
 msgstr "Tidak?"
 
-#: kcmfontinst/KCmFontInst.cpp:720
+#: kcmfontinst/KCmFontInst.cpp:719
 #, fuzzy, kde-format
 #| msgid "Simple font viewer"
 msgid "Failed to open %1 for writing"
 msgstr "Gagal ke "
 
-#: kcmfontinst/KCmFontInst.cpp:740
+#: kcmfontinst/KCmFontInst.cpp:739
 #, fuzzy, kde-format
 msgid "Create New Group"
 msgstr "Cipta Kumpulan Baru"
 
-#: kcmfontinst/KCmFontInst.cpp:740
+#: kcmfontinst/KCmFontInst.cpp:739
 #, fuzzy, kde-format
 msgid "Name of new group:"
 msgstr "Cipta Kumpulan Baru"
 
-#: kcmfontinst/KCmFontInst.cpp:740
+#: kcmfontinst/KCmFontInst.cpp:739
 #, fuzzy, kde-format
 msgid "New Group"
 msgstr "Kumpulan Baru"
 
-#: kcmfontinst/KCmFontInst.cpp:768
+#: kcmfontinst/KCmFontInst.cpp:767
 #, fuzzy, kde-format
 msgid "Preview Text"
 msgstr "Prapapar Teks"
 
-#: kcmfontinst/KCmFontInst.cpp:768
+#: kcmfontinst/KCmFontInst.cpp:767
 #, fuzzy, kde-format
 #| msgid "Please enter new string:"
 msgid "Please enter new text:"
 msgstr "baru teks:"
 
-#: kcmfontinst/KCmFontInst.cpp:820
+#: kcmfontinst/KCmFontInst.cpp:819
 #, kde-format
 msgid "Scanning font list…"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:879
+#: kcmfontinst/KCmFontInst.cpp:878
 #, fuzzy, kde-format
 msgid "No fonts"
 msgstr "Tidak"
 
-#: kcmfontinst/KCmFontInst.cpp:884
+#: kcmfontinst/KCmFontInst.cpp:883
 #, fuzzy, kde-format
 msgid "1 Font"
 msgid_plural "%1 Fonts"
 msgstr[0] "Font"
 msgstr[1] "Font"
 
-#: kcmfontinst/KCmFontInst.cpp:893
+#: kcmfontinst/KCmFontInst.cpp:892
 #, fuzzy, kde-format
 msgid ""
 "<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
@@ -892,7 +892,7 @@ msgstr ""
 "td></tr><tr><td> dihidupkan</td><td></td></tr><tr><td> Jumlah</td><td></td></"
 "tr></table>"
 
-#: kcmfontinst/KCmFontInst.cpp:903
+#: kcmfontinst/KCmFontInst.cpp:902
 #, fuzzy, kde-format
 msgid ""
 "<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
@@ -903,100 +903,100 @@ msgstr ""
 "td></tr><tr><td> dihidupkan</td><td></td></tr><tr><td> Jumlah</td><td></td></"
 "tr></table>"
 
-#: kcmfontinst/KCmFontInst.cpp:980
+#: kcmfontinst/KCmFontInst.cpp:979
 #, fuzzy, kde-format
 msgid "Looking for any associated files…"
 msgstr "1"
 
-#: kcmfontinst/KCmFontInst.cpp:984
+#: kcmfontinst/KCmFontInst.cpp:983
 #, fuzzy, kde-format
 msgid "Scanning Files…"
 msgstr "Fail."
 
-#: kcmfontinst/KCmFontInst.cpp:985
+#: kcmfontinst/KCmFontInst.cpp:984
 #, fuzzy, kde-format
 msgid "Looking for additional files to install…"
 msgstr "ke ."
 
-#: kcmfontinst/KCmFontInst.cpp:1000
+#: kcmfontinst/KCmFontInst.cpp:999
 #, fuzzy, kde-format
 msgid "Looking for files associated with %1"
 msgstr "1"
 
-#: kcmfontinst/KCmFontInst.cpp:1028
+#: kcmfontinst/KCmFontInst.cpp:1027
 #, fuzzy, kde-format
 msgid "Installing font(s)…"
 msgstr "Memasang saat."
 
-#: kcmfontinst/KCmFontInst.cpp:1093
+#: kcmfontinst/KCmFontInst.cpp:1092
 #, fuzzy, kde-format
 msgid "You did not select anything to enable."
 msgstr "Anda apa sahaja ke ."
 
-#: kcmfontinst/KCmFontInst.cpp:1093
+#: kcmfontinst/KCmFontInst.cpp:1092
 #, fuzzy, kde-format
 msgid "You did not select anything to disable."
 msgstr "Anda apa sahaja ke ."
 
-#: kcmfontinst/KCmFontInst.cpp:1094
+#: kcmfontinst/KCmFontInst.cpp:1093
 #, fuzzy, kde-format
 msgid "Nothing to Enable"
 msgstr "Tiada ke  Hidupkan"
 
-#: kcmfontinst/KCmFontInst.cpp:1094
+#: kcmfontinst/KCmFontInst.cpp:1093
 #, fuzzy, kde-format
 msgid "Nothing to Disable"
 msgstr "Tiada ke  Matikan"
 
-#: kcmfontinst/KCmFontInst.cpp:1108
+#: kcmfontinst/KCmFontInst.cpp:1107
 #, fuzzy, kde-format
 msgid "<p>Do you really want to enable</p><p>'<b>%1</b>'?</p>"
 msgstr "<p> ke </p><p><b></b></p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1109
+#: kcmfontinst/KCmFontInst.cpp:1108
 #, fuzzy, kde-format
 msgid "<p>Do you really want to disable</p><p>'<b>%1</b>'?</p>"
 msgstr "<p> ke </p><p><b></b></p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1110
+#: kcmfontinst/KCmFontInst.cpp:1109
 #, fuzzy, kde-format
 msgid ""
 "<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
 "'<b>%2</b>'?</p>"
 msgstr "<p> ke </p><p><b></b><b></b></p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1111
+#: kcmfontinst/KCmFontInst.cpp:1110
 #, fuzzy, kde-format
 msgid ""
 "<p>Do you really want to disable</p><p>'<b>%1</b>', contained within group "
 "'<b>%2</b>'?</p>"
 msgstr "<p> ke </p><p><b></b><b></b></p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1112 kcmfontinst/KCmFontInst.cpp:1113
+#: kcmfontinst/KCmFontInst.cpp:1111 kcmfontinst/KCmFontInst.cpp:1112
 #, fuzzy, kde-format
 msgid "Enable Font"
 msgstr "Hidupkan Font"
 
-#: kcmfontinst/KCmFontInst.cpp:1112 kcmfontinst/KCmFontInst.cpp:1114
+#: kcmfontinst/KCmFontInst.cpp:1111 kcmfontinst/KCmFontInst.cpp:1113
 #, fuzzy, kde-format
 msgid "Disable Font"
 msgstr "Matikan Font"
 
-#: kcmfontinst/KCmFontInst.cpp:1120
+#: kcmfontinst/KCmFontInst.cpp:1119
 #, fuzzy, kde-format
 msgid "Do you really want to enable this font?"
 msgid_plural "Do you really want to enable these %1 fonts?"
 msgstr[0] "ke ?"
 msgstr[1] "ke ?"
 
-#: kcmfontinst/KCmFontInst.cpp:1121
+#: kcmfontinst/KCmFontInst.cpp:1120
 #, fuzzy, kde-format
 msgid "Do you really want to disable this font?"
 msgid_plural "Do you really want to disable these %1 fonts?"
 msgstr[0] "ke ?"
 msgstr[1] "ke ?"
 
-#: kcmfontinst/KCmFontInst.cpp:1123
+#: kcmfontinst/KCmFontInst.cpp:1122
 #, fuzzy, kde-format
 msgid ""
 "<p>Do you really want to enable this font contained within group '<b>%2</b>'?"
@@ -1007,7 +1007,7 @@ msgid_plural ""
 msgstr[0] "<p> ke <b></b></p>"
 msgstr[1] "<p> ke <b></b></p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1127
+#: kcmfontinst/KCmFontInst.cpp:1126
 #, fuzzy, kde-format
 msgid ""
 "<p>Do you really want to disable this font contained within group '<b>%2</"
@@ -1018,22 +1018,22 @@ msgid_plural ""
 msgstr[0] "<p> ke <b></b></p>"
 msgstr[1] "<p> ke <b></b></p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1131 kcmfontinst/KCmFontInst.cpp:1133
+#: kcmfontinst/KCmFontInst.cpp:1130 kcmfontinst/KCmFontInst.cpp:1132
 #, fuzzy, kde-format
 msgid "Enable Fonts"
 msgstr "Hidupkan Font"
 
-#: kcmfontinst/KCmFontInst.cpp:1131 kcmfontinst/KCmFontInst.cpp:1133
+#: kcmfontinst/KCmFontInst.cpp:1130 kcmfontinst/KCmFontInst.cpp:1132
 #, fuzzy, kde-format
 msgid "Disable Fonts"
 msgstr "Matikan Font"
 
-#: kcmfontinst/KCmFontInst.cpp:1140
+#: kcmfontinst/KCmFontInst.cpp:1139
 #, fuzzy, kde-format
 msgid "Enabling font(s)…"
 msgstr "saat."
 
-#: kcmfontinst/KCmFontInst.cpp:1142
+#: kcmfontinst/KCmFontInst.cpp:1141
 #, fuzzy, kde-format
 msgid "Disabling font(s)…"
 msgstr "saat."
@@ -1557,17 +1557,17 @@ msgstr "Memasang"
 msgid "Change Text…"
 msgstr "Ubah Teks..."
 
-#: viewpart/FontViewPart.cpp:340
+#: viewpart/FontViewPart.cpp:337
 #, fuzzy, kde-format
 msgid "Could not read font."
 msgstr "Tidak boleh akses\"%1\"."
 
-#: viewpart/FontViewPart.cpp:406
+#: viewpart/FontViewPart.cpp:403
 #, kde-format
 msgid "Preview String"
 msgstr "Prapapar Rentetan"
 
-#: viewpart/FontViewPart.cpp:406
+#: viewpart/FontViewPart.cpp:403
 #, kde-format
 msgid "Please enter new string:"
 msgstr "Masukkan rentetan baru:"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-14 00:44+0000\n"
+"POT-Creation-Date: 2025-11-15 00:43+0000\n"
 "PO-Revision-Date: 2024-04-07 16:32+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -31,7 +31,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "ubuntu-l10n-tam@lists.ubuntu.com"
 
-#: apps/Installer.cpp:36 kcmfontinst/KCmFontInst.cpp:947
+#: apps/Installer.cpp:36 kcmfontinst/KCmFontInst.cpp:946
 #, kde-format
 msgid ""
 "Do you wish to install the font(s) for personal use (only available to you), "
@@ -41,7 +41,7 @@ msgstr ""
 "பயன்படுத்தக்ககூடியதாக), அல்லது கணினி முழுவதற்குமா (அனைத்து பயனர்களும் "
 "பயன்படுத்தக்கூடியதாக)?"
 
-#: apps/Installer.cpp:37 kcmfontinst/KCmFontInst.cpp:950
+#: apps/Installer.cpp:37 kcmfontinst/KCmFontInst.cpp:949
 #, kde-format
 msgid "Where to Install"
 msgstr "நிறுவ வேண்டிய இடம்"
@@ -353,13 +353,13 @@ msgid "Delete"
 msgstr "நீக்கு"
 
 #: kcmfontinst/FontList.cpp:1302 kcmfontinst/GroupList.cpp:790
-#: kcmfontinst/KCmFontInst.cpp:1113 kcmfontinst/KCmFontInst.cpp:1133
+#: kcmfontinst/KCmFontInst.cpp:1112 kcmfontinst/KCmFontInst.cpp:1132
 #, kde-format
 msgid "Enable"
 msgstr "இயக்கு"
 
 #: kcmfontinst/FontList.cpp:1303 kcmfontinst/GroupList.cpp:791
-#: kcmfontinst/KCmFontInst.cpp:1114 kcmfontinst/KCmFontInst.cpp:1133
+#: kcmfontinst/KCmFontInst.cpp:1113 kcmfontinst/KCmFontInst.cpp:1132
 #, kde-format
 msgid "Disable"
 msgstr "முடக்கு"
@@ -542,12 +542,12 @@ msgstr "நிறுவப்படுகிறது"
 msgid "Uninstalling"
 msgstr "நிறுவல் நீக்கப்படுகிறது"
 
-#: kcmfontinst/JobRunner.cpp:321 kcmfontinst/JobRunner.cpp:418
+#: kcmfontinst/JobRunner.cpp:321 kcmfontinst/JobRunner.cpp:417
 #, kde-format
 msgid "Enabling"
 msgstr "செயற்படுத்தப்படுகிறது"
 
-#: kcmfontinst/JobRunner.cpp:324 kcmfontinst/JobRunner.cpp:422
+#: kcmfontinst/JobRunner.cpp:324 kcmfontinst/JobRunner.cpp:421
 #, kde-format
 msgid "Moving"
 msgstr "நகர்த்தப்படுகிறது"
@@ -567,37 +567,37 @@ msgstr "நீக்கப்படுகிறது"
 msgid "Disabling"
 msgstr "முடக்கப்படுகிறது"
 
-#: kcmfontinst/JobRunner.cpp:373
+#: kcmfontinst/JobRunner.cpp:372
 #, kde-format
 msgid "Updating font configuration. Please wait…"
 msgstr "எழுத்துரு அமைப்பு புதுப்பிக்கப்படுகிறது. காத்திருங்கள்..."
 
-#: kcmfontinst/JobRunner.cpp:445
+#: kcmfontinst/JobRunner.cpp:444
 #, kde-format
 msgid "Unable to start backend."
 msgstr "பின்நிலையை துவக்க முடியவில்லை."
 
-#: kcmfontinst/JobRunner.cpp:454
+#: kcmfontinst/JobRunner.cpp:453
 #, kde-format
 msgid "Backend died, but has been restarted. Please try again."
 msgstr "பின்நிலை முறிவடைந்த‍து, ஆனால் மீள்துவக்கப்பட்டள்ளது. மீண்டும் முயற்சிக்கவும்."
 
-#: kcmfontinst/JobRunner.cpp:619 kcmfontinst/JobRunner.cpp:625
+#: kcmfontinst/JobRunner.cpp:618 kcmfontinst/JobRunner.cpp:624
 #, kde-format
 msgid "<h3>Error</h3>"
 msgstr "<h3>சிக்கல்</h3>"
 
-#: kcmfontinst/JobRunner.cpp:691
+#: kcmfontinst/JobRunner.cpp:690
 #, kde-format
 msgid "Failed to download <i>%1</i>"
 msgstr "<i>%1</i> என்பதன் பதிவிறக்கம் தோல்வியடைந்தது"
 
-#: kcmfontinst/JobRunner.cpp:693
+#: kcmfontinst/JobRunner.cpp:692
 #, kde-format
 msgid "System backend died. Please try again.<br><i>%1</i>"
 msgstr "பின்நிலை முறிவடைந்த‍து. மீண்டும் முயற்சிக்கவும்.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:695
+#: kcmfontinst/JobRunner.cpp:694
 #, kde-format
 msgid ""
 "<i>%1</i> is a bitmap font, and these have been disabled on your system."
@@ -605,54 +605,54 @@ msgstr ""
 "<i>%1</i> பிட்மேப் எழுத்துரு ஆகும், ஆனால் பிட்மேப் எழுத்துருக்கள் உங்கள் கணினியில் "
 "முடக்கப்பட்டுள்ளன."
 
-#: kcmfontinst/JobRunner.cpp:697
+#: kcmfontinst/JobRunner.cpp:696
 #, kde-format
 msgid ""
 "<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
 "system."
 msgstr "உங்கள் கணினியில் ஏற்கனவே நிறுவப்பட்டுள்ள <b>%2</b> என்பதை <i>%1</i> கொண்டுள்ளது."
 
-#: kcmfontinst/JobRunner.cpp:699
+#: kcmfontinst/JobRunner.cpp:698
 #, kde-format
 msgid "<i>%1</i> is not a font."
 msgstr "<i>%1</i> என்பது எழுத்துரு அல்ல."
 
-#: kcmfontinst/JobRunner.cpp:701
+#: kcmfontinst/JobRunner.cpp:700
 #, kde-format
 msgid "Could not remove all files associated with <i>%1</i>"
 msgstr "<i>%1</i> என்பதுடன் தொடர்புடைய சில கோப்புகளை நீக்க முடியவில்லை."
 
-#: kcmfontinst/JobRunner.cpp:703
+#: kcmfontinst/JobRunner.cpp:702
 #, kde-format
 msgid "Failed to start the system daemon.<br><i>%1</i>"
 msgstr "பின்னணி சேவையை துவக்க முடியவில்லை.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:706 kio/KioFonts.cpp:719
+#: kcmfontinst/JobRunner.cpp:705 kio/KioFonts.cpp:719
 #, kde-format
 msgid "<i>%1</i> already exists."
 msgstr "<i>%1</i> ஏற்கனவே உள்ளது."
 
-#: kcmfontinst/JobRunner.cpp:709
+#: kcmfontinst/JobRunner.cpp:708
 #, kde-format
 msgid "<i>%1</i> does not exist."
 msgstr "<i>%1</i> என்பது இல்லை."
 
-#: kcmfontinst/JobRunner.cpp:711
+#: kcmfontinst/JobRunner.cpp:710
 #, kde-format
 msgid "Permission denied.<br><i>%1</i>"
 msgstr "அனுமதி மறுக்கப்பட்டது.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:713
+#: kcmfontinst/JobRunner.cpp:712
 #, kde-format
 msgid "Unsupported action.<br><i>%1</i>"
 msgstr "ஆதரிக்கப்படாத செயல்.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:715
+#: kcmfontinst/JobRunner.cpp:714
 #, kde-format
 msgid "Authentication failed.<br><i>%1</i>"
 msgstr "உறுதிப்பாடு தோல்வியடைந்தது.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:717
+#: kcmfontinst/JobRunner.cpp:716
 #, kde-format
 msgid "Unexpected error while processing: <i>%1</i>"
 msgstr "வேலை செய்யும்போது எதிர்பாராத சிக்கல்: <i>%1</i>"
@@ -727,17 +727,17 @@ msgstr "முன்தோற்ற உரையை மாற்று…"
 msgid "Add Fonts"
 msgstr "எழுத்துருக்களை சேர்த்தல்"
 
-#: kcmfontinst/KCmFontInst.cpp:553
+#: kcmfontinst/KCmFontInst.cpp:552
 #, kde-format
 msgid "Failed to save list of fonts to print."
 msgstr "அச்சிட வேண்டிய எழுத்துருக்களின் பட்டியலை சேமிக்க முடியவில்லை."
 
-#: kcmfontinst/KCmFontInst.cpp:574
+#: kcmfontinst/KCmFontInst.cpp:573
 #, kde-format
 msgid "Failed to start font printer."
 msgstr "எழுத்துரு அச்சுப்பொறியை துவக்குதல் தோல்வியடைந்தது."
 
-#: kcmfontinst/KCmFontInst.cpp:581
+#: kcmfontinst/KCmFontInst.cpp:580
 #, kde-format
 msgid ""
 "There are no printable fonts.\n"
@@ -746,59 +746,59 @@ msgstr ""
 "அச்சிடக்கூடிய எழுத்துருக்கள் எதுவும் இல்லை.\n"
 "செயல்படுத்தப்பட்ட எழுத்துருக்களுள் பிட்மேபாக அல்லாதவற்றை மட்டுமே நீங்கள் அச்சிட முடியும்."
 
-#: kcmfontinst/KCmFontInst.cpp:583
+#: kcmfontinst/KCmFontInst.cpp:582
 #, kde-format
 msgid "Cannot Print"
 msgstr "அச்சிட முடியவில்லை"
 
-#: kcmfontinst/KCmFontInst.cpp:598
+#: kcmfontinst/KCmFontInst.cpp:597
 #, kde-format
 msgid "You did not select anything to delete."
 msgstr "நீக்குவதற்காக நீங்கள் எதையும் தேர்ந்தெடுக்கவில்லை."
 
-#: kcmfontinst/KCmFontInst.cpp:598
+#: kcmfontinst/KCmFontInst.cpp:597
 #, kde-format
 msgid "Nothing to Delete"
 msgstr "நீக்குவதற்கு ஏதுமில்லை"
 
-#: kcmfontinst/KCmFontInst.cpp:613
+#: kcmfontinst/KCmFontInst.cpp:612
 #, kde-format
 msgid "<p>Do you really want to delete</p><p>'<b>%1</b>'?</p>"
 msgstr "<p></p><p>'<b>%1</b>' என்பதை உறுதியாக நீக்க வேண்டுமா?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:616
+#: kcmfontinst/KCmFontInst.cpp:615
 #, kde-format
 msgid "Delete Font"
 msgstr "எழுத்துருவை நீக்கு"
 
-#: kcmfontinst/KCmFontInst.cpp:623
+#: kcmfontinst/KCmFontInst.cpp:622
 #, kde-format
 msgid "Do you really want to delete this font?"
 msgid_plural "Do you really want to delete these %1 fonts?"
 msgstr[0] "இவ்வெழுத்தருவை உறுதியாக நீக்க வேண்டுமா?"
 msgstr[1] "இந்த %1 எழுத்தருக்களை உறுதியாக நீக்க வேண்டுமா?"
 
-#: kcmfontinst/KCmFontInst.cpp:625
+#: kcmfontinst/KCmFontInst.cpp:624
 #, kde-format
 msgid "Delete Fonts"
 msgstr "எழுத்துருக்களை நீக்கு"
 
-#: kcmfontinst/KCmFontInst.cpp:630
+#: kcmfontinst/KCmFontInst.cpp:629
 #, kde-format
 msgid "Deleting font(s)…"
 msgstr "எழுத்துருக்கள் நீக்கப்படுகின்றன…"
 
-#: kcmfontinst/KCmFontInst.cpp:645
+#: kcmfontinst/KCmFontInst.cpp:644
 #, kde-format
 msgid "You did not select anything to move."
 msgstr "நகர்த்துவதற்கு நீங்கள் எதையும் தேர்ந்தெடுக்கவில்லை."
 
-#: kcmfontinst/KCmFontInst.cpp:645
+#: kcmfontinst/KCmFontInst.cpp:644
 #, kde-format
 msgid "Nothing to Move"
 msgstr "நகர்த்துதற்கு ஒன்றும் இல்லை"
 
-#: kcmfontinst/KCmFontInst.cpp:655
+#: kcmfontinst/KCmFontInst.cpp:654
 #, kde-format
 msgid ""
 "<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to <i>"
@@ -807,17 +807,17 @@ msgstr ""
 "<p>'<b>%1</b>'</p><p>என்பதை <i>%2</i> என்ற இடத்திலிருந்து <i>%3</i></p><p>என்ற "
 "இடத்திற்கு உறுதியாக நகர்த்த வேண்டுமா?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:660
+#: kcmfontinst/KCmFontInst.cpp:659
 #, kde-format
 msgid "Move Font"
 msgstr "எழுத்துருவை நகர்த்தல்"
 
-#: kcmfontinst/KCmFontInst.cpp:661 kcmfontinst/KCmFontInst.cpp:673
+#: kcmfontinst/KCmFontInst.cpp:660 kcmfontinst/KCmFontInst.cpp:672
 #, kde-format
 msgid "Move"
 msgstr "நகர்த்து"
 
-#: kcmfontinst/KCmFontInst.cpp:666
+#: kcmfontinst/KCmFontInst.cpp:665
 #, kde-format
 msgid ""
 "<p>Do you really want to move this font from <i>%2</i> to <i>%3</i>?</p>"
@@ -830,74 +830,74 @@ msgstr[1] ""
 "<p>இந்த %1 எழுத்துருக்களை <i>%2</i> என்ற இடத்திலிருந்து <i>%3</i> என்ற இடத்திற்கு "
 "உறுதியாக நகர்த்த வேண்டுமா?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:672
+#: kcmfontinst/KCmFontInst.cpp:671
 #, kde-format
 msgid "Move Fonts"
 msgstr "எழுத்துருக்களை நகர்த்து"
 
-#: kcmfontinst/KCmFontInst.cpp:677
+#: kcmfontinst/KCmFontInst.cpp:676
 #, kde-format
 msgid "Moving font(s)…"
 msgstr "எழுத்துருக்கள் நகர்த்தப்படுகின்றன…"
 
-#: kcmfontinst/KCmFontInst.cpp:691
+#: kcmfontinst/KCmFontInst.cpp:690
 #, kde-format
 msgid "Export Group"
 msgstr "குழுவை ஏற்றுமதி செய்"
 
-#: kcmfontinst/KCmFontInst.cpp:717
+#: kcmfontinst/KCmFontInst.cpp:716
 #, kde-format
 msgid "No files?"
 msgstr "கோப்புகள் இல்லை!"
 
-#: kcmfontinst/KCmFontInst.cpp:720
+#: kcmfontinst/KCmFontInst.cpp:719
 #, kde-format
 msgid "Failed to open %1 for writing"
 msgstr "%1 என்பதை எழுதுமாறு திறக்க முடியவில்லை"
 
-#: kcmfontinst/KCmFontInst.cpp:740
+#: kcmfontinst/KCmFontInst.cpp:739
 #, kde-format
 msgid "Create New Group"
 msgstr "புதிய குழுவை உருவாக்கு"
 
-#: kcmfontinst/KCmFontInst.cpp:740
+#: kcmfontinst/KCmFontInst.cpp:739
 #, kde-format
 msgid "Name of new group:"
 msgstr "புதிய குழுவின் பெயர்"
 
-#: kcmfontinst/KCmFontInst.cpp:740
+#: kcmfontinst/KCmFontInst.cpp:739
 #, kde-format
 msgid "New Group"
 msgstr "புதிய குழு"
 
-#: kcmfontinst/KCmFontInst.cpp:768
+#: kcmfontinst/KCmFontInst.cpp:767
 #, kde-format
 msgid "Preview Text"
 msgstr "முன்னோட்ட உரை"
 
-#: kcmfontinst/KCmFontInst.cpp:768
+#: kcmfontinst/KCmFontInst.cpp:767
 #, kde-format
 msgid "Please enter new text:"
 msgstr "புதிய உரையை உள்ளிடுங்கள்:"
 
-#: kcmfontinst/KCmFontInst.cpp:820
+#: kcmfontinst/KCmFontInst.cpp:819
 #, kde-format
 msgid "Scanning font list…"
 msgstr "எழுத்துருக்கள் பட்டியலிடப்படுகின்றன…"
 
-#: kcmfontinst/KCmFontInst.cpp:879
+#: kcmfontinst/KCmFontInst.cpp:878
 #, kde-format
 msgid "No fonts"
 msgstr "எழுத்துருக்கள் இல்லை"
 
-#: kcmfontinst/KCmFontInst.cpp:884
+#: kcmfontinst/KCmFontInst.cpp:883
 #, kde-format
 msgid "1 Font"
 msgid_plural "%1 Fonts"
 msgstr[0] "ஒரு எழுத்துரு"
 msgstr[1] "%1 எழுத்துருக்கள்"
 
-#: kcmfontinst/KCmFontInst.cpp:893
+#: kcmfontinst/KCmFontInst.cpp:892
 #, kde-format
 msgid ""
 "<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
@@ -910,7 +910,7 @@ msgstr ""
 "இயக்கப்பட்டவை:</td><td>%3</td></tr><tr><td align=\"right\">மொத்தம்:</td><td>%4</"
 "td></tr></table>"
 
-#: kcmfontinst/KCmFontInst.cpp:903
+#: kcmfontinst/KCmFontInst.cpp:902
 #, kde-format
 msgid ""
 "<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
@@ -921,62 +921,62 @@ msgstr ""
 "\"right\">முடக்கப்பட்டவை:</td><td>%2</td></tr><tr><td align=\"right\">மொத்தம்:</"
 "td><td>%3</td></tr></table>"
 
-#: kcmfontinst/KCmFontInst.cpp:980
+#: kcmfontinst/KCmFontInst.cpp:979
 #, kde-format
 msgid "Looking for any associated files…"
 msgstr "தொடர்புடைய கோப்புகள் கண்டுபிடிக்கப்படுகின்றன…"
 
-#: kcmfontinst/KCmFontInst.cpp:984
+#: kcmfontinst/KCmFontInst.cpp:983
 #, kde-format
 msgid "Scanning Files…"
 msgstr "கோப்புகள் கண்டறியப்படுகின்றன…"
 
-#: kcmfontinst/KCmFontInst.cpp:985
+#: kcmfontinst/KCmFontInst.cpp:984
 #, kde-format
 msgid "Looking for additional files to install…"
 msgstr "நிறுவுவதற்கான கூடுதல் கோப்புகள் கண்டறியப்படுகின்றன…"
 
-#: kcmfontinst/KCmFontInst.cpp:1000
+#: kcmfontinst/KCmFontInst.cpp:999
 #, kde-format
 msgid "Looking for files associated with %1"
 msgstr "%1 உடன் தொடர்புடைய கோப்புகள் கண்டறியப்படுகின்றன"
 
-#: kcmfontinst/KCmFontInst.cpp:1028
+#: kcmfontinst/KCmFontInst.cpp:1027
 #, kde-format
 msgid "Installing font(s)…"
 msgstr "எழுத்துருக்கள் நிறுவப்படுகின்றன…"
 
-#: kcmfontinst/KCmFontInst.cpp:1093
+#: kcmfontinst/KCmFontInst.cpp:1092
 #, kde-format
 msgid "You did not select anything to enable."
 msgstr "இயக்குவதற்காக நீங்கள் எதையும் தேர்ந்தெடுக்கவில்லை."
 
-#: kcmfontinst/KCmFontInst.cpp:1093
+#: kcmfontinst/KCmFontInst.cpp:1092
 #, kde-format
 msgid "You did not select anything to disable."
 msgstr "முடக்குவதற்கு நீங்கள் எதையும் தேர்ந்தெடுக்கவில்லை."
 
-#: kcmfontinst/KCmFontInst.cpp:1094
+#: kcmfontinst/KCmFontInst.cpp:1093
 #, kde-format
 msgid "Nothing to Enable"
 msgstr "இயக்க ஒன்றுமில்லை"
 
-#: kcmfontinst/KCmFontInst.cpp:1094
+#: kcmfontinst/KCmFontInst.cpp:1093
 #, kde-format
 msgid "Nothing to Disable"
 msgstr "முடக்க ஒன்றுமில்லை"
 
-#: kcmfontinst/KCmFontInst.cpp:1108
+#: kcmfontinst/KCmFontInst.cpp:1107
 #, kde-format
 msgid "<p>Do you really want to enable</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>'<b>%1</b>'</p><p>என்பதை உறுதியாக இயக்க வேண்டுமா?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1109
+#: kcmfontinst/KCmFontInst.cpp:1108
 #, kde-format
 msgid "<p>Do you really want to disable</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>'<b>%1</b>'</p><p>என்பதை உறுதியாக முடக்க வேண்டுமா?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1110
+#: kcmfontinst/KCmFontInst.cpp:1109
 #, kde-format
 msgid ""
 "<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
@@ -985,7 +985,7 @@ msgstr ""
 "<p>'<b>%2</b>' என்ற குழுவிலுள்ள '<b>%1</b>'</p><p>என்பதை உறுதியாக இயக்க வேண்டுமா?"
 "</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1111
+#: kcmfontinst/KCmFontInst.cpp:1110
 #, kde-format
 msgid ""
 "<p>Do you really want to disable</p><p>'<b>%1</b>', contained within group "
@@ -994,31 +994,31 @@ msgstr ""
 "<p>'<b>%2</b>' என்ற குழுவிலுள்ள '<b>%1</b>'</p><p>என்பதை உறுதியாக முடக்க வேண்டுமா?"
 "</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1112 kcmfontinst/KCmFontInst.cpp:1113
+#: kcmfontinst/KCmFontInst.cpp:1111 kcmfontinst/KCmFontInst.cpp:1112
 #, kde-format
 msgid "Enable Font"
 msgstr "எழுத்துருவை இயக்கு"
 
-#: kcmfontinst/KCmFontInst.cpp:1112 kcmfontinst/KCmFontInst.cpp:1114
+#: kcmfontinst/KCmFontInst.cpp:1111 kcmfontinst/KCmFontInst.cpp:1113
 #, kde-format
 msgid "Disable Font"
 msgstr "எழுத்துருவை முடக்கு"
 
-#: kcmfontinst/KCmFontInst.cpp:1120
+#: kcmfontinst/KCmFontInst.cpp:1119
 #, kde-format
 msgid "Do you really want to enable this font?"
 msgid_plural "Do you really want to enable these %1 fonts?"
 msgstr[0] "இவ்வெழுத்துருவை உறுதியாக இயக்க வேண்டுமா?"
 msgstr[1] "இந்த %1 எழுத்துருக்களை உறுதியாக இயக்க வேண்டுமா?"
 
-#: kcmfontinst/KCmFontInst.cpp:1121
+#: kcmfontinst/KCmFontInst.cpp:1120
 #, kde-format
 msgid "Do you really want to disable this font?"
 msgid_plural "Do you really want to disable these %1 fonts?"
 msgstr[0] "இவ்வெழுத்துருவை முடக்க வேண்டுமா?"
 msgstr[1] "இந்த %1 எழுத்துருக்களை முடக்க வேண்டுமா?"
 
-#: kcmfontinst/KCmFontInst.cpp:1123
+#: kcmfontinst/KCmFontInst.cpp:1122
 #, kde-format
 msgid ""
 "<p>Do you really want to enable this font contained within group '<b>%2</b>'?"
@@ -1031,7 +1031,7 @@ msgstr[0] ""
 msgstr[1] ""
 "<p>'<b>%2</b>' என்ற குழுவிலுள்ள இந்த %1 எழுத்துருக்களை உறுதியாக இயக்க வேண்டுமா?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1127
+#: kcmfontinst/KCmFontInst.cpp:1126
 #, kde-format
 msgid ""
 "<p>Do you really want to disable this font contained within group '<b>%2</"
@@ -1044,22 +1044,22 @@ msgstr[0] ""
 msgstr[1] ""
 "<p>'<b>%2</b>' என்ற குழுவிலுள்ள இந்த %1 எழுத்துருக்களை உறுதியாக முடக்க வேண்டுமா?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1131 kcmfontinst/KCmFontInst.cpp:1133
+#: kcmfontinst/KCmFontInst.cpp:1130 kcmfontinst/KCmFontInst.cpp:1132
 #, kde-format
 msgid "Enable Fonts"
 msgstr "எழுத்துருக்களை இயக்கு"
 
-#: kcmfontinst/KCmFontInst.cpp:1131 kcmfontinst/KCmFontInst.cpp:1133
+#: kcmfontinst/KCmFontInst.cpp:1130 kcmfontinst/KCmFontInst.cpp:1132
 #, kde-format
 msgid "Disable Fonts"
 msgstr "எழுத்துருக்களை முடக்கு"
 
-#: kcmfontinst/KCmFontInst.cpp:1140
+#: kcmfontinst/KCmFontInst.cpp:1139
 #, kde-format
 msgid "Enabling font(s)…"
 msgstr "எழுத்துருக்கள் இயக்கப்படுகின்றன…"
 
-#: kcmfontinst/KCmFontInst.cpp:1142
+#: kcmfontinst/KCmFontInst.cpp:1141
 #, kde-format
 msgid "Disabling font(s)…"
 msgstr "எழுத்துருக்கள் முடக்கப்படுகின்றன…"
@@ -1567,17 +1567,17 @@ msgstr "நிறுவு…"
 msgid "Change Text…"
 msgstr "உரையை மாற்று…"
 
-#: viewpart/FontViewPart.cpp:340
+#: viewpart/FontViewPart.cpp:337
 #, kde-format
 msgid "Could not read font."
 msgstr "எழுத்துருவை படிக்க முடியவில்லை."
 
-#: viewpart/FontViewPart.cpp:406
+#: viewpart/FontViewPart.cpp:403
 #, kde-format
 msgid "Preview String"
 msgstr "முன்னோட்டத்திற்கு பயன்படும் உரை"
 
-#: viewpart/FontViewPart.cpp:406
+#: viewpart/FontViewPart.cpp:403
 #, kde-format
 msgid "Please enter new string:"
 msgstr "புதிய சரத்தை உள்ளிடுங்கள்:"

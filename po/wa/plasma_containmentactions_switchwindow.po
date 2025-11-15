@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"POT-Creation-Date: 2025-11-15 00:43+0000\n"
 "PO-Revision-Date: 2011-01-14 10:12+0100\n"
 "Last-Translator: Jean Cayron <jean.cayron@gmail.com>\n"
 "Language-Team: Walloon <linux@walon.org>\n"
@@ -35,21 +35,21 @@ msgstr "Håyner ene dressêye efant po tchaeke sicribanne"
 msgid "Display only the current desktop's windows"
 msgstr "Èn håyner k' les fniesses do scribanne do moumint"
 
-#: switch.cpp:75
+#: switch.cpp:73
 #, fuzzy, kde-format
 #| msgid "Configure Switch Window Plugin"
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "Configure Switch Window Plugin"
 msgstr "Apontyî l' tchôke-divins di passaedje d' ene finiesse a l' ôte"
 
-#: switch.cpp:155
+#: switch.cpp:153
 #, fuzzy, kde-format
 #| msgid "Windows"
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "Windows"
 msgstr "Finiesses"
 
-#: switch.cpp:179 switch.cpp:200 switch.cpp:202
+#: switch.cpp:177 switch.cpp:198 switch.cpp:200
 #, fuzzy, kde-format
 #| msgid "All Desktops"
 msgctxt "plasma_containmentactions_switchwindow"

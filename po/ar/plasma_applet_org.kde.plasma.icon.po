@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-01 00:45+0000\n"
+"POT-Creation-Date: 2025-11-15 00:43+0000\n"
 "PO-Revision-Date: 2017-02-14 20:09+0300\n"
 "Last-Translator: Safa Alfulaij <safa1996alfulaij@gmail.com>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
@@ -27,12 +27,12 @@ msgstr "فشل إنشاء مجلّد ودجات الأيقونات ’%1‘"
 msgid "Failed to copy icon widget desktop file from '%1' to '%2'"
 msgstr "فشل نسخ ملفّ سطح المكتب لودجة الأيقونة من ’%1‘ إلى ’%2‘"
 
-#: iconapplet.cpp:356
+#: iconapplet.cpp:355
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "افتح المجلّد المحتوي"
 
-#: iconapplet.cpp:579
+#: iconapplet.cpp:578
 #, kde-format
 msgid "Properties for %1"
 msgstr "خصائص %1"

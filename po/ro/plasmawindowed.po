@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-10-14 00:44+0000\n"
+"POT-Creation-Date: 2025-11-15 00:43+0000\n"
 "PO-Revision-Date: 2024-02-24 18:35+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "20)) ? 1 : 2;\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: main.cpp:52 plasmawindowedcorona.cpp:106
+#: main.cpp:52 plasmawindowedcorona.cpp:104
 #, kde-format
 msgid "Plasma Windowed"
 msgstr "Plasma în fereastră"
@@ -28,7 +28,7 @@ msgstr "Plasma în fereastră"
 msgid "Enable QML Javascript debugger"
 msgstr "Activează depanatorul Javascript QML"
 
-#: main.cpp:57 plasmawindowedcorona.cpp:108
+#: main.cpp:57 plasmawindowedcorona.cpp:106
 #, kde-format
 msgid ""
 "Makes the plasmoid stay alive in the Notification Area, even when the window "
@@ -42,12 +42,12 @@ msgstr ""
 msgid "Force loading the given shell plugin"
 msgstr "Forțează încărcarea extensiei de înveliș date"
 
-#: main.cpp:63 plasmawindowedcorona.cpp:109
+#: main.cpp:63 plasmawindowedcorona.cpp:107
 #, kde-format
 msgid "The applet to open."
 msgstr "Miniaplicația de deschis."
 
-#: main.cpp:64 plasmawindowedcorona.cpp:110
+#: main.cpp:64 plasmawindowedcorona.cpp:108
 #, kde-format
 msgid "Arguments to pass to the plasmoid."
 msgstr "Argumente de transmis plasmoidului."

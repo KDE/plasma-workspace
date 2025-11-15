@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_containmentactions_switchwindow\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"POT-Creation-Date: 2025-11-15 00:43+0000\n"
 "PO-Revision-Date: 2010-05-12 21:10+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
 "Language-Team: Malay <translation-team-ms@lists.sourceforge.net>\n"
@@ -37,21 +37,21 @@ msgstr "Papar submenu bagi setiap desktop"
 msgid "Display only the current desktop's windows"
 msgstr "Papar hanya tetingkap desktop semasa"
 
-#: switch.cpp:75
+#: switch.cpp:73
 #, fuzzy, kde-format
 #| msgid "Configure Switch Window Plugin"
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "Configure Switch Window Plugin"
 msgstr "Tetapkan Plugin Penukar Tetingkap"
 
-#: switch.cpp:155
+#: switch.cpp:153
 #, fuzzy, kde-format
 #| msgid "Windows"
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "Windows"
 msgstr "Tetingkap"
 
-#: switch.cpp:179 switch.cpp:200 switch.cpp:202
+#: switch.cpp:177 switch.cpp:198 switch.cpp:200
 #, fuzzy, kde-format
 #| msgid "All Desktops"
 msgctxt "plasma_containmentactions_switchwindow"
