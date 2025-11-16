@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-14 00:44+0000\n"
+"POT-Creation-Date: 2025-11-16 00:43+0000\n"
 "PO-Revision-Date: 2021-08-12 11:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -46,13 +46,13 @@ msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "എല്ലാം തെരഞ്ഞെടുക്കുക"
 
-#: components/HeadingButtons.qml:76
+#: components/HeadingButtons.qml:80
 #, kde-format
 msgctxt "Notification was added less than a minute ago, keep short"
 msgid "Just now"
 msgstr ""
 
-#: components/HeadingButtons.qml:82
+#: components/HeadingButtons.qml:86
 #, kde-format
 msgctxt "Notification was added minutes ago, keep short"
 msgid "%1 min ago"
@@ -60,7 +60,7 @@ msgid_plural "%1 min ago"
 msgstr[0] "%1 മിനിട്ട് മുൻപേ"
 msgstr[1] "%1 മിനിട്ടുകൾക്ക് മുൻപേ"
 
-#: components/HeadingButtons.qml:116
+#: components/HeadingButtons.qml:121
 #, kde-format
 msgctxt "seconds remaining, keep short"
 msgid "%1 s remaining"
@@ -68,7 +68,7 @@ msgid_plural "%1 s remaining"
 msgstr[0] "%1 സെക്കന്റ് അവശേഷിക്കുന്നു"
 msgstr[1] "%1 സെക്കൻഡുകൾ അവശേഷിക്കുന്നു"
 
-#: components/HeadingButtons.qml:120
+#: components/HeadingButtons.qml:125
 #, kde-format
 msgctxt "minutes remaining, keep short"
 msgid "%1 min remaining"
@@ -76,7 +76,7 @@ msgid_plural "%1 min remaining"
 msgstr[0] "%1 മിനിട്ട് അവശേഷിക്കുന്നു"
 msgstr[1] "%1 മിനിട്ടുകൾ അവശേഷിക്കുന്നു"
 
-#: components/HeadingButtons.qml:125
+#: components/HeadingButtons.qml:130
 #, kde-format
 msgctxt "hours remaining, keep short"
 msgid "%1 h remaining"
@@ -84,23 +84,23 @@ msgid_plural "%1 h remaining"
 msgstr[0] "%1 മണിക്കൂർ അവശേഷിക്കുന്നു"
 msgstr[1] "%1 മണിക്കൂറുകൾ അവശേഷിക്കുന്നു"
 
-#: components/HeadingButtons.qml:145
+#: components/HeadingButtons.qml:150
 #, kde-format
 msgid "Configure"
 msgstr "ക്രമീകരിക്കുക"
 
-#: components/HeadingButtons.qml:162
+#: components/HeadingButtons.qml:167
 #, kde-format
 msgctxt "Opposite of minimize"
 msgid "Restore"
 msgstr "വീണ്ടെടുക്കുക"
 
-#: components/HeadingButtons.qml:163
+#: components/HeadingButtons.qml:168
 #, kde-format
 msgid "Minimize"
 msgstr "ചെറുതാക്കുക"
 
-#: components/HeadingButtons.qml:186
+#: components/HeadingButtons.qml:191
 #, kde-format
 msgid "Close"
 msgstr "അടയ്ക്കുക"

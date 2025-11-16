@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-14 00:44+0000\n"
+"POT-Creation-Date: 2025-11-16 00:43+0000\n"
 "PO-Revision-Date: 2024-09-21 10:41+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -41,13 +41,13 @@ msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "Elekti Ĉiujn"
 
-#: components/HeadingButtons.qml:76
+#: components/HeadingButtons.qml:80
 #, kde-format
 msgctxt "Notification was added less than a minute ago, keep short"
 msgid "Just now"
 msgstr "Ĵus nun"
 
-#: components/HeadingButtons.qml:82
+#: components/HeadingButtons.qml:86
 #, kde-format
 msgctxt "Notification was added minutes ago, keep short"
 msgid "%1 min ago"
@@ -55,7 +55,7 @@ msgid_plural "%1 min ago"
 msgstr[0] "antaŭ %1 min"
 msgstr[1] "antaŭ %1 min"
 
-#: components/HeadingButtons.qml:116
+#: components/HeadingButtons.qml:121
 #, kde-format
 msgctxt "seconds remaining, keep short"
 msgid "%1 s remaining"
@@ -63,7 +63,7 @@ msgid_plural "%1 s remaining"
 msgstr[0] "%1 s restas"
 msgstr[1] "%1 s restas"
 
-#: components/HeadingButtons.qml:120
+#: components/HeadingButtons.qml:125
 #, kde-format
 msgctxt "minutes remaining, keep short"
 msgid "%1 min remaining"
@@ -71,7 +71,7 @@ msgid_plural "%1 min remaining"
 msgstr[0] "%1 min restas"
 msgstr[1] "%1 min restas"
 
-#: components/HeadingButtons.qml:125
+#: components/HeadingButtons.qml:130
 #, kde-format
 msgctxt "hours remaining, keep short"
 msgid "%1 h remaining"
@@ -79,23 +79,23 @@ msgid_plural "%1 h remaining"
 msgstr[0] "%1 h restas"
 msgstr[1] "%1 h restas"
 
-#: components/HeadingButtons.qml:145
+#: components/HeadingButtons.qml:150
 #, kde-format
 msgid "Configure"
 msgstr "Agordi"
 
-#: components/HeadingButtons.qml:162
+#: components/HeadingButtons.qml:167
 #, kde-format
 msgctxt "Opposite of minimize"
 msgid "Restore"
 msgstr "Restarigi"
 
-#: components/HeadingButtons.qml:163
+#: components/HeadingButtons.qml:168
 #, kde-format
 msgid "Minimize"
 msgstr "Minimumigi"
 
-#: components/HeadingButtons.qml:186
+#: components/HeadingButtons.qml:191
 #, kde-format
 msgid "Close"
 msgstr "Fermi"

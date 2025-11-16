@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-15 00:43+0000\n"
-"PO-Revision-Date: 2025-05-15 17:47+0300\n"
+"PO-Revision-Date: 2025-11-15 18:10+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -161,17 +161,15 @@ msgid "Automatically set to Large when in Touch Mode"
 msgstr "У режимі сенсорного керування буде автоматично встановлено «Великий»"
 
 #: package/contents/ui/ConfigGeneral.qml:282
-#, fuzzy, kde-format
-#| msgid "Entries"
+#, kde-format
 msgctxt "@title:column"
 msgid "Entries"
 msgstr "Записи"
 
 #: package/contents/ui/ConfigGeneral.qml:286
-#, fuzzy, kde-format
-#| msgid "Always shown"
+#, kde-format
 msgid "Always show all"
-msgstr "Завжди показувати"
+msgstr "Завжди показувати усе"
 
 #: package/contents/ui/ConfigGeneral.qml:330
 #, kde-format

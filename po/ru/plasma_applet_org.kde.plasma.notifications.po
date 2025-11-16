@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-08-14 00:44+0000\n"
+"POT-Creation-Date: 2025-11-16 00:43+0000\n"
 "PO-Revision-Date: 2025-06-04 14:41+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -50,13 +50,13 @@ msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "Выделить всё"
 
-#: components/HeadingButtons.qml:76
+#: components/HeadingButtons.qml:80
 #, kde-format
 msgctxt "Notification was added less than a minute ago, keep short"
 msgid "Just now"
 msgstr "Только что"
 
-#: components/HeadingButtons.qml:82
+#: components/HeadingButtons.qml:86
 #, kde-format
 msgctxt "Notification was added minutes ago, keep short"
 msgid "%1 min ago"
@@ -66,7 +66,7 @@ msgstr[1] "%1 минуты назад"
 msgstr[2] "%1 минут назад"
 msgstr[3] "минуту назад"
 
-#: components/HeadingButtons.qml:116
+#: components/HeadingButtons.qml:121
 #, kde-format
 msgctxt "seconds remaining, keep short"
 msgid "%1 s remaining"
@@ -76,7 +76,7 @@ msgstr[1] "осталось %1 секунды"
 msgstr[2] "осталось %1 секунд"
 msgstr[3] "осталась секунда"
 
-#: components/HeadingButtons.qml:120
+#: components/HeadingButtons.qml:125
 #, kde-format
 msgctxt "minutes remaining, keep short"
 msgid "%1 min remaining"
@@ -86,7 +86,7 @@ msgstr[1] "осталось %1 минуты"
 msgstr[2] "осталось %1 минут"
 msgstr[3] "осталась минута"
 
-#: components/HeadingButtons.qml:125
+#: components/HeadingButtons.qml:130
 #, kde-format
 msgctxt "hours remaining, keep short"
 msgid "%1 h remaining"
@@ -96,23 +96,23 @@ msgstr[1] "осталось %1 часа"
 msgstr[2] "осталось %1 часов"
 msgstr[3] "остался час"
 
-#: components/HeadingButtons.qml:145
+#: components/HeadingButtons.qml:150
 #, kde-format
 msgid "Configure"
 msgstr "Настроить"
 
-#: components/HeadingButtons.qml:162
+#: components/HeadingButtons.qml:167
 #, kde-format
 msgctxt "Opposite of minimize"
 msgid "Restore"
 msgstr "Восстановить"
 
-#: components/HeadingButtons.qml:163
+#: components/HeadingButtons.qml:168
 #, kde-format
 msgid "Minimize"
 msgstr "Свернуть"
 
-#: components/HeadingButtons.qml:186
+#: components/HeadingButtons.qml:191
 #, kde-format
 msgid "Close"
 msgstr "Закрыть"

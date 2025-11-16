@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-15 00:43+0000\n"
-"PO-Revision-Date: 2025-05-15 07:10+0200\n"
+"PO-Revision-Date: 2025-11-15 07:57+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.8\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -161,17 +161,15 @@ msgid "Automatically set to Large when in Touch Mode"
 msgstr "V načinu na dotik se samodejno nastavi na Veliko"
 
 #: package/contents/ui/ConfigGeneral.qml:282
-#, fuzzy, kde-format
-#| msgid "Entries"
+#, kde-format
 msgctxt "@title:column"
 msgid "Entries"
 msgstr "Vnosi"
 
 #: package/contents/ui/ConfigGeneral.qml:286
-#, fuzzy, kde-format
-#| msgid "Always shown"
+#, kde-format
 msgid "Always show all"
-msgstr "Vedno prikazano"
+msgstr "Vedno prikaži vse"
 
 #: package/contents/ui/ConfigGeneral.qml:330
 #, kde-format
