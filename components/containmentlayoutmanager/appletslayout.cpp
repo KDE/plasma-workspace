@@ -736,6 +736,7 @@ AppletContainer *AppletsLayout::createContainerForApplet(PlasmaQuick::AppletQuic
         QObject *instance = m_appletContainerComponent->beginCreate(context);
         container = qobject_cast<AppletContainer *>(instance);
         if (container) {
+            container->setParent(this);
             container->setParentItem(this);
         } else {
             qCWarning(CONTAINMENTLAYOUTMANAGER_DEBUG) << "Error: provided component not an AppletContainer instance";
