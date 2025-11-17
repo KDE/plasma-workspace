@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.systemtray\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-15 00:43+0000\n"
-"PO-Revision-Date: 2025-05-19 09:07+0200\n"
+"PO-Revision-Date: 2025-11-15 15:22+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -163,17 +163,15 @@ msgid "Automatically set to Large when in Touch Mode"
 msgstr "Imposta automaticamente su Grande in modalità tattile"
 
 #: package/contents/ui/ConfigGeneral.qml:282
-#, fuzzy, kde-format
-#| msgid "Entries"
+#, kde-format
 msgctxt "@title:column"
 msgid "Entries"
 msgstr "Voci"
 
 #: package/contents/ui/ConfigGeneral.qml:286
-#, fuzzy, kde-format
-#| msgid "Always shown"
+#, kde-format
 msgid "Always show all"
-msgstr "Sempre visibile"
+msgstr "Mostra sempre tutto"
 
 #: package/contents/ui/ConfigGeneral.qml:330
 #, kde-format

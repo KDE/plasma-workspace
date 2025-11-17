@@ -229,6 +229,3 @@ msgstr ""
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
 msgstr "AÅILlmyjgGJP"
-
-#~ msgid "Always show all entries"
-#~ msgstr "Vis alltid alle oppføringene"

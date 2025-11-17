@@ -158,17 +158,15 @@ msgid "Automatically set to Large when in Touch Mode"
 msgstr "在触摸模式下自动设置为大间距"
 
 #: package/contents/ui/ConfigGeneral.qml:282
-#, fuzzy, kde-format
-#| msgid "Entries"
+#, kde-format
 msgctxt "@title:column"
 msgid "Entries"
-msgstr "项目"
+msgstr ""
 
 #: package/contents/ui/ConfigGeneral.qml:286
-#, fuzzy, kde-format
-#| msgid "Always shown"
+#, kde-format
 msgid "Always show all"
-msgstr "总是显示"
+msgstr ""
 
 #: package/contents/ui/ConfigGeneral.qml:330
 #, kde-format
@@ -233,6 +231,3 @@ msgstr "在 %2 列中显示 %1 个项目的网格"
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
 msgstr "AILlmyjgGJP"
-
-#~ msgid "Always show all entries"
-#~ msgstr "总是显示所有项目"
