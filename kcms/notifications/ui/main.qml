@@ -44,13 +44,13 @@ KCM.SimpleKCM {
 
     actions: [
         Kirigami.Action {
-            text: i18nc("@action:button Plasma-specific notifications", "System Notifications")
-            icon.name: "notifications-symbolic"
+            text: i18nc("@action:button Plasma-specific notifications", "Configure for System…")
+            icon.name: "plasma-symbolic"
             enabled: root.notificationsAvailable
             onTriggered: root.openSystemNotificationSettings()
         },
         Kirigami.Action {
-            text: i18nc("@action:button Application-specific notifications", "Application Settings")
+            text: i18nc("@action:button Application-specific notifications", "Configure for Applications…")
             icon.name: "applications-all-symbolic"
             enabled: root.notificationsAvailable
             onTriggered: root.openSourcesSettings()
@@ -266,7 +266,7 @@ KCM.SimpleKCM {
             }
             QtControls.Button {
                 id: positionCustomButton
-                text: i18nc("@action:button choose custom notification position", "Custom…")
+                text: i18nc("@action:button choose custom notification position", "Choose…")
                 icon.name: "preferences-desktop-display"
                 onClicked: popupPositionDialog.open()
             }
