@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-09-07 00:44+0000\n"
-"PO-Revision-Date: 2025-11-08 21:17-0300\n"
+"PO-Revision-Date: 2025-11-16 02:26-0300\n"
 "Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -27,7 +27,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -761,7 +761,7 @@ msgstr "Reduzir saturação"
 #, kde-format
 msgctxt "disabled color effect"
 msgid "Fade"
-msgstr "Desaparecer"
+msgstr "Esmaecer"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
 #: editor/scmeditoreffects.ui:56
@@ -846,7 +846,7 @@ msgstr "Nenhum"
 #, kde-format
 msgctxt "disabled contrast"
 msgid "Fade"
-msgstr "Desaparecer"
+msgstr "Esmaecer"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
 #: editor/scmeditoreffects.ui:195
