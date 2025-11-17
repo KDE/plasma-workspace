@@ -60,8 +60,6 @@ GridLayout {
         }
     ]
 
-
-
     readonly property int visibleButtonCount: {
         let count = 0;
         for (let i = 0; i < buttonDefinitions.length; i++) {
@@ -110,7 +108,7 @@ GridLayout {
         PlasmaComponents3.ToolButton {
             required property int index
             required property var modelData
-            
+
             Layout.fillWidth: toolButtonsLayout.shouldUseOverflowButton
             Layout.leftMargin: toolButtonsLayout.shouldUseOverflowButton ? Kirigami.Units.gridUnit : 0
             Layout.rightMargin: toolButtonsLayout.shouldUseOverflowButton ? Kirigami.Units.gridUnit : 0

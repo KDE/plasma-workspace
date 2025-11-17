@@ -14,8 +14,9 @@ import org.kde.kirigami 2.20 as Kirigami
 
 ClipboardItemDelegate {
     id: menuItem
-    Accessible.name: mainItem.text
+    Accessible.name: mainLabel.text
     mainItem: PlasmaComponents3.Label {
+        id: mainLabel
         maximumLineCount: 3
         verticalAlignment: Text.AlignVCenter
 

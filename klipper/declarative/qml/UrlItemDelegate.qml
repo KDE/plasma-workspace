@@ -45,6 +45,7 @@ ClipboardItemDelegate {
             }
 
             delegate: Item {
+                id: previewItemDelegate
                 width: previewList.itemWidth
                 height: previewList.itemHeight
                 y: Math.round((previewList.height - previewList.itemHeight) / 2)
@@ -56,7 +57,7 @@ ClipboardItemDelegate {
                     anchors.centerIn: parent
                     asynchronous: true
                     sourceSize: Qt.size(previewList.itemWidth * 2, previewList.itemHeight * 2)
-                    source: `image://klipperpreview/${modelData}`
+                    source: `image://klipperpreview/${previewItemDelegate.modelData}`
                 }
                 Rectangle {
                     id: overlay
@@ -83,7 +84,7 @@ ClipboardItemDelegate {
                     elide: Text.ElideRight
                     horizontalAlignment: Text.AlignHCenter
                     text: {
-                        let u = modelData.split("/");
+                        let u = previewItemDelegate.modelData.split("/");
                         return decodeURIComponent(u[u.length - 1]);
                     }
                     textFormat: Text.PlainText
@@ -105,7 +106,7 @@ ClipboardItemDelegate {
 
             }
             verticalAlignment: Text.AlignBottom
-            horizontalAlignment: Text.AlignCenter
+            horizontalAlignment: Text.AlignHCenter
             font: Kirigami.Theme.smallFont
         }
     }

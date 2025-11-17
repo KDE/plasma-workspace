@@ -14,7 +14,6 @@ import QtQml.Models // DelegateChoice for Qt >= 6.9
 import Qt.labs.qmlmodels // DelegateChooser
 
 import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 
 import org.kde.kitemmodels 1.0 as KItemModels
