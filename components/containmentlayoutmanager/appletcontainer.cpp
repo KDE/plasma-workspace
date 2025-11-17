@@ -90,6 +90,7 @@ void AppletContainer::connectBusyIndicator()
                 return;
             }
 
+            m_busyIndicatorItem->setParent(this);
             m_busyIndicatorItem->setParentItem(this);
             m_busyIndicatorItem->setZ(999);
             m_busyIndicatorComponent->completeCreate();
@@ -141,6 +142,7 @@ void AppletContainer::connectConfigurationRequired()
                 return;
             }
 
+            m_configurationRequiredItem->setParent(this);
             m_configurationRequiredItem->setParentItem(this);
             m_configurationRequiredItem->setZ(998);
             m_configurationRequiredComponent->completeCreate();
