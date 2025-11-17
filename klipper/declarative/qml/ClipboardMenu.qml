@@ -308,6 +308,8 @@ PlasmaComponents3.ScrollView {
                     }
                     event.accepted = true;
                 }
+                Keys.onEnterPressed: event => Keys.returnPressed(event)
+                Keys.onReturnPressed: event => filter.Keys.returnPressed(event) // reuse the logic from search field
 
                 currentIndex: clipboardMenu.model.starredOnly ? 1 : 0
                 onCurrentIndexChanged: {
