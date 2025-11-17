@@ -81,7 +81,7 @@ RuntimeDependencies:
    'require':
     'network/kio-extras': '@latest-kf6'
     'plasma/kactivitymanagerd': '@same'
-    'sdk/selenium-webdriver-at-spi': '@latest-kf6'
+    'sdk/selenium-webdriver-at-spi': '@same'
  - 'on': ['Linux', 'FreeBSD']
    'require':
     'frameworks/qqc2-desktop-style': '@latest-kf6'
