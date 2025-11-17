@@ -249,6 +249,7 @@ void ItemContainer::onConfigOverlayComponentStatusChanged(QQmlComponent::Status 
 
     m_configOverlay->setVisible(false);
     m_configOverlay->setItemContainer(this);
+    m_configOverlay->setParent(this);
     m_configOverlay->setParentItem(this);
     m_configOverlay->setTouchInteraction(m_mouseSynthetizedFromTouch);
     m_configOverlay->setZ(999);
