@@ -39,8 +39,8 @@ Q_GLOBAL_STATIC(Plasma::Theme, s_theme)
 class PlasmaDBusMenuImporter : public DBusMenuImporter
 {
 public:
-    PlasmaDBusMenuImporter(const QString &service, const QString &path, KIconLoader *iconLoader, StatusNotifierItemSource *source, QObject *parent)
-        : DBusMenuImporter(service, path, parent)
+    PlasmaDBusMenuImporter(const QString &service, const QString &path, KIconLoader *iconLoader, StatusNotifierItemSource *source)
+        : DBusMenuImporter(service, path, nullptr)
         , m_iconLoader(iconLoader)
         , m_source(source)
     {
@@ -73,7 +73,6 @@ private:
 StatusNotifierItemSource::StatusNotifierItemSource(const QString &notifierItemId, QObject *parent)
     : QObject(parent)
     , m_customIconLoader(nullptr)
-    , m_menuImporter(nullptr)
     , m_refreshing(false)
     , m_needsReRefreshing(false)
 {
@@ -88,13 +87,12 @@ StatusNotifierItemSource::StatusNotifierItemSource(const QString &notifierItemId
     if (slash == -1) {
         qCWarning(SYSTEM_TRAY) << "Invalid notifierItemId:" << notifierItemId;
         m_valid = false;
-        m_statusNotifierItemInterface = nullptr;
         return;
     }
     QString service = notifierItemId.left(slash);
     QString path = notifierItemId.mid(slash);
 
-    m_statusNotifierItemInterface = new org::kde::StatusNotifierItem(service, path, QDBusConnection::sessionBus(), this);
+    m_statusNotifierItemInterface = std::make_unique<org::kde::StatusNotifierItem>(service, path, QDBusConnection::sessionBus(), this);
 
     m_refreshTimer.setSingleShot(true);
     m_refreshTimer.setInterval(10);
@@ -102,13 +100,13 @@ StatusNotifierItemSource::StatusNotifierItemSource(const QString &notifierItemId
 
     m_valid = !service.isEmpty() && m_statusNotifierItemInterface->isValid();
     if (m_valid) {
-        connect(m_statusNotifierItemInterface, &OrgKdeStatusNotifierItem::NewTitle, this, &StatusNotifierItemSource::refresh);
-        connect(m_statusNotifierItemInterface, &OrgKdeStatusNotifierItem::NewIcon, this, &StatusNotifierItemSource::refresh);
-        connect(m_statusNotifierItemInterface, &OrgKdeStatusNotifierItem::NewAttentionIcon, this, &StatusNotifierItemSource::refresh);
-        connect(m_statusNotifierItemInterface, &OrgKdeStatusNotifierItem::NewOverlayIcon, this, &StatusNotifierItemSource::refresh);
-        connect(m_statusNotifierItemInterface, &OrgKdeStatusNotifierItem::NewToolTip, this, &StatusNotifierItemSource::refresh);
-        connect(m_statusNotifierItemInterface, &OrgKdeStatusNotifierItem::NewStatus, this, &StatusNotifierItemSource::syncStatus);
-        connect(m_statusNotifierItemInterface, &OrgKdeStatusNotifierItem::NewMenu, this, &StatusNotifierItemSource::refreshMenu);
+        connect(m_statusNotifierItemInterface.get(), &OrgKdeStatusNotifierItem::NewTitle, this, &StatusNotifierItemSource::refresh);
+        connect(m_statusNotifierItemInterface.get(), &OrgKdeStatusNotifierItem::NewIcon, this, &StatusNotifierItemSource::refresh);
+        connect(m_statusNotifierItemInterface.get(), &OrgKdeStatusNotifierItem::NewAttentionIcon, this, &StatusNotifierItemSource::refresh);
+        connect(m_statusNotifierItemInterface.get(), &OrgKdeStatusNotifierItem::NewOverlayIcon, this, &StatusNotifierItemSource::refresh);
+        connect(m_statusNotifierItemInterface.get(), &OrgKdeStatusNotifierItem::NewToolTip, this, &StatusNotifierItemSource::refresh);
+        connect(m_statusNotifierItemInterface.get(), &OrgKdeStatusNotifierItem::NewStatus, this, &StatusNotifierItemSource::syncStatus);
+        connect(m_statusNotifierItemInterface.get(), &OrgKdeStatusNotifierItem::NewMenu, this, &StatusNotifierItemSource::refreshMenu);
         refresh();
     }
 
@@ -117,7 +115,6 @@ StatusNotifierItemSource::StatusNotifierItemSource(const QString &notifierItemId
 
 StatusNotifierItemSource::~StatusNotifierItemSource()
 {
-    delete m_statusNotifierItemInterface;
 }
 
 KIconLoader *StatusNotifierItemSource::iconLoader() const
@@ -213,9 +210,7 @@ void StatusNotifierItemSource::syncStatus(const QString &status)
 
 void StatusNotifierItemSource::refreshMenu()
 {
-    if (m_menuImporter) {
-        delete std::exchange(m_menuImporter, nullptr);
-    }
+    m_menuImporter.reset();
     refresh();
 }
 
@@ -387,8 +382,8 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
                     // KStatusNotifierItem::setContextMenu().
                     qCWarning(SYSTEM_TRAY) << "DBusMenu disabled for this application";
                 } else {
-                    m_menuImporter = new PlasmaDBusMenuImporter(m_statusNotifierItemInterface->service(), menuObjectPath, iconLoader(), this, this);
-                    connect(m_menuImporter, &PlasmaDBusMenuImporter::menuUpdated, this, [this](QMenu *menu) {
+                    m_menuImporter = std::make_unique<PlasmaDBusMenuImporter>(m_statusNotifierItemInterface->service(), menuObjectPath, iconLoader(), this);
+                    connect(m_menuImporter.get(), &PlasmaDBusMenuImporter::menuUpdated, this, [this](QMenu *menu) {
                         if (menu == m_menuImporter->menu()) {
                             contextMenuReady();
                         }

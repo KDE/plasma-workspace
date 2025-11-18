@@ -73,8 +73,8 @@ private:
     QString m_servicename;
     QTimer m_refreshTimer;
     KIconLoader *m_customIconLoader;
-    DBusMenuImporter *m_menuImporter;
-    org::kde::StatusNotifierItem *m_statusNotifierItemInterface;
+    std::unique_ptr<DBusMenuImporter> m_menuImporter;
+    std::unique_ptr<org::kde::StatusNotifierItem> m_statusNotifierItemInterface;
     bool m_refreshing : 1;
     bool m_needsReRefreshing : 1;
 
