@@ -6,6 +6,7 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
+pragma ComponentBehavior: Bound
 
 import QtQuick
 import QtQuick.Layouts
@@ -22,8 +23,8 @@ import org.kde.plasma.private.mpris as Mpris
 PlasmaExtras.Representation {
     id: expandedRepresentation
 
-    Layout.minimumWidth: switchWidth
-    Layout.minimumHeight: switchHeight
+    Layout.minimumWidth: root.switchWidth
+    Layout.minimumHeight: root.switchHeight
     Layout.preferredWidth: Kirigami.Units.gridUnit * 20
     Layout.preferredHeight: Kirigami.Units.gridUnit * 20
     Layout.maximumWidth: Kirigami.Units.gridUnit * 40
@@ -235,9 +236,9 @@ PlasmaExtras.Representation {
             }
 
             anchors.centerIn: parent
-            visible: (albumArt.animating || albumArt.hasImage) && !softwareRendering
+            visible: (albumArt.animating || albumArt.hasImage) && !expandedRepresentation.softwareRendering
 
-            layer.enabled: !softwareRendering
+            layer.enabled: !expandedRepresentation.softwareRendering
             layer.effect: HueSaturation {
                 cached: true
 
@@ -256,20 +257,18 @@ PlasmaExtras.Representation {
             // use State to avoid unnecessary reevaluation of width and height
             states: State {
                 name: "albumArtReady"
-                when: root.expanded && backgroundImage.visible && shaderEffectSource.sourceItem.currentItem?.paintedWidth > 0
+                when: root.expanded && backgroundImage.visible && (albumArt.albumArt.currentItem as Image)?.paintedWidth > 0
                 PropertyChanges {
-                    target: backgroundImage
-                    scaleFactor: Math.max(parent.width / shaderEffectSource.sourceItem.currentItem.paintedWidth, parent.height / shaderEffectSource.sourceItem.currentItem.paintedHeight)
-                    width: Math.round(shaderEffectSource.sourceItem.currentItem.paintedWidth * scaleFactor)
-                    height: Math.round(shaderEffectSource.sourceItem.currentItem.paintedHeight * scaleFactor)
-                }
-                PropertyChanges {
-                    target: shaderEffectSource
+                    backgroundImage.scaleFactor: Math.max(parent.width / (albumArt.albumArt.currentItem as Image).paintedWidth, parent.height / (albumArt.albumArt.currentItem as Image).paintedHeight)
+                    backgroundImage.width: Math.round((albumArt.albumArt.currentItem as Image).paintedWidth * backgroundImage.scaleFactor)
+                    backgroundImage.height: Math.round((albumArt.albumArt.currentItem as Image).paintedHeight * backgroundImage.scaleFactor)
                     // HACK: Fix background ratio when DPI > 1
-                    sourceRect: Qt.rect(shaderEffectSource.sourceItem.width - shaderEffectSource.sourceItem.currentItem.paintedWidth,
-                                    Math.round((shaderEffectSource.sourceItem.height - shaderEffectSource.sourceItem.currentItem.paintedHeight) / 2),
-                                    shaderEffectSource.sourceItem.currentItem.paintedWidth,
-                                    shaderEffectSource.sourceItem.currentItem.paintedHeight)
+                    shaderEffectSource.sourceRect: Qt.rect(
+                        albumArt.albumArt.width - (albumArt.albumArt.currentItem as Image).paintedWidth,
+                        Math.round((albumArt.albumArt.height - (albumArt.albumArt.currentItem as Image).paintedHeight) / 2),
+                        (albumArt.albumArt.currentItem as Image).paintedWidth,
+                        (albumArt.albumArt.currentItem as Image).paintedHeight
+                    )
                 }
             }
         }
@@ -337,7 +336,7 @@ PlasmaExtras.Representation {
                     id: songTitle
                     level: 1
 
-                    color: (softwareRendering || !albumArt.hasImage) ? Kirigami.Theme.textColor : "white"
+                    color: (expandedRepresentation.softwareRendering || !albumArt.hasImage) ? Kirigami.Theme.textColor : "white"
 
                     textFormat: Text.PlainText
                     wrapMode: Text.Wrap
@@ -354,7 +353,7 @@ PlasmaExtras.Representation {
                     visible: root.artist
                     level: 2
 
-                    color: (softwareRendering || !albumArt.hasImage) ? Kirigami.Theme.textColor : "white"
+                    color: (expandedRepresentation.softwareRendering || !albumArt.hasImage) ? Kirigami.Theme.textColor : "white"
 
                     textFormat: Text.PlainText
                     wrapMode: Text.Wrap
@@ -366,7 +365,7 @@ PlasmaExtras.Representation {
                     Layout.maximumHeight: Kirigami.Units.gridUnit * 2
                 }
                 Kirigami.Heading { // Song Album
-                    color: (softwareRendering || !albumArt.hasImage) ? Kirigami.Theme.textColor : "white"
+                    color: (expandedRepresentation.softwareRendering || !albumArt.hasImage) ? Kirigami.Theme.textColor : "white"
 
                     level: 3
                     opacity: 0.75
@@ -515,7 +514,7 @@ PlasmaExtras.Representation {
 
                         // Don't update position during hide animation,
                         // "visible" only becomes false once the exit animation finishes.
-                        function updateIndicatedPosition() {
+                        function updateIndicatedPosition(): void {
                             if (shouldBeVisible) {
                                 indicatedPosition = position;
                             }
@@ -818,7 +817,7 @@ PlasmaExtras.Representation {
 
             // immediately update content on arrow key press the way other plasmoids do (e.g. weather, volume)
             function handleArrows(event: KeyEvent): void {
-                if (isForwardArrowKey(event.key)) {
+                if (expandedRepresentation.isForwardArrowKey(event.key)) {
                     mpris2Model.currentIndex = Math.min(currentIndex+1, count-1)
                 } else {
                     mpris2Model.currentIndex = Math.max(currentIndex-1, 0)
@@ -829,14 +828,17 @@ PlasmaExtras.Representation {
                 id: playerList
                 model: mpris2Model
                 delegate: PlasmaComponents3.TabButton {
-                    anchors.top: parent.top
-                    anchors.bottom: parent.bottom
+                    required property string iconName
+                    required property bool isMultiplexer
+                    required property string identity
+                    required property int index
+                    anchors.top: parent?.top
+                    anchors.bottom: parent?.bottom
                     implicitWidth: 1 // HACK: suppress binding loop warnings
-                    readonly property QtObject m: model
                     display: PlasmaComponents3.AbstractButton.IconOnly
-                    icon.name: model.iconName
+                    icon.name: iconName
                     icon.height: Kirigami.Units.iconSizes.smallMedium
-                    text: model.isMultiplexer ? i18nc("@action:button", "Choose player automatically") : model.identity
+                    text: isMultiplexer ? i18nc("@action:button", "Choose player automatically") : identity
                     // Keep the delegate centered by offsetting the padding removed in the parent
                     bottomPadding: verticalPadding + headerItem.bottomPadding
                     topPadding: verticalPadding - headerItem.bottomPadding

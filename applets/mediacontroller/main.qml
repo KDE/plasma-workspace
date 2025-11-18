@@ -5,9 +5,9 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
+pragma ComponentBehavior: Bound
 
 import QtQuick
-import QtQuick.Layouts
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core as PlasmaCore
 import plasma.applet.org.kde.plasma.mediacontroller
@@ -108,15 +108,15 @@ PlasmoidItem {
             icon.name: "go-up-symbolic"
             priority: PlasmaCore.Action.LowPriority
             visible: root.canRaise
-            onTriggered: raise()
+            onTriggered: root.raise()
         },
         PlasmaCore.Action {
             text: i18nc("Play previous track", "Previous Track")
-            icon.name: Qt.application.layoutDirection === Qt.RightToLeft ? "media-skip-forward" : "media-skip-backward"
+            icon.name: Application.layoutDirection === Qt.RightToLeft ? "media-skip-forward" : "media-skip-backward"
             priority: PlasmaCore.Action.LowPriority
             visible: root.canControl
             enabled: root.canGoPrevious
-            onTriggered: previous()
+            onTriggered: root.previous()
         },
         PlasmaCore.Action {
             text: i18nc("Pause playback", "Pause")
@@ -124,7 +124,7 @@ PlasmoidItem {
             priority: PlasmaCore.Action.LowPriority
             visible: root.isPlaying && root.canPause
             enabled: visible
-            onTriggered: pause()
+            onTriggered: root.pause()
         },
         PlasmaCore.Action {
             text: i18nc("Start playback", "Play")
@@ -132,15 +132,15 @@ PlasmoidItem {
             priority: PlasmaCore.Action.LowPriority
             visible: root.canControl && !root.isPlaying
             enabled: root.canPlay
-            onTriggered: play()
+            onTriggered: root.play()
         },
         PlasmaCore.Action {
             text: i18nc("Play next track", "Next Track")
-            icon.name: Qt.application.layoutDirection === Qt.RightToLeft ? "media-skip-backward" : "media-skip-forward"
+            icon.name: Application.layoutDirection === Qt.RightToLeft ? "media-skip-backward" : "media-skip-forward"
             priority: PlasmaCore.Action.LowPriority
             visible: root.canControl
             enabled: root.canGoNext
-            onTriggered: next()
+            onTriggered: root.next()
         },
         PlasmaCore.Action {
             text: i18nc("Stop playback", "Stop")
@@ -148,7 +148,7 @@ PlasmoidItem {
             priority: PlasmaCore.Action.LowPriority
             visible: root.canControl
             enabled: root.canStop
-            onTriggered: stop()
+            onTriggered: root.stop()
         },
         PlasmaCore.Action {
             isSeparator: true
@@ -160,36 +160,36 @@ PlasmoidItem {
             icon.name: "application-exit"
             priority: PlasmaCore.Action.LowPriority
             visible: root.canQuit
-            onTriggered: quit()
+            onTriggered: root.quit()
         }
     ]
 
-    function previous() {
+    function previous(): void {
         mpris2Model.currentPlayer.Previous();
     }
-    function next() {
+    function next(): void {
         mpris2Model.currentPlayer.Next();
     }
-    function play() {
+    function play(): void {
         mpris2Model.currentPlayer.Play();
     }
-    function pause() {
+    function pause(): void {
         mpris2Model.currentPlayer.Pause();
     }
-    function togglePlaying() {
+    function togglePlaying(): void {
         if (root.isPlaying) {
             mpris2Model.currentPlayer.Pause();
         } else {
             mpris2Model.currentPlayer.Play();
         }
     }
-    function stop() {
+    function stop(): void {
         mpris2Model.currentPlayer.Stop();
     }
-    function quit() {
+    function quit(): void {
         mpris2Model.currentPlayer.Quit();
     }
-    function raise() {
+    function raise(): void {
         mpris2Model.currentPlayer.Raise();
     }
 

@@ -3,6 +3,7 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
+pragma ComponentBehavior: Bound
 
 import QtQuick
 import QtQuick.Layouts
@@ -84,11 +85,11 @@ Loader {
             wheelDelta += (wheel.inverted ? -1 : 1) * (wheel.angleDelta.y ? wheel.angleDelta.y : -wheel.angleDelta.x)
             while (wheelDelta >= 120) {
                 wheelDelta -= 120;
-                mpris2Model.currentPlayer.changeVolume(volumePercentStep / 100, true);
+                mpris2Model.currentPlayer.changeVolume(root.volumePercentStep / 100, true);
             }
             while (wheelDelta <= -120) {
                 wheelDelta += 120;
-                mpris2Model.currentPlayer.changeVolume(-volumePercentStep / 100, true);
+                mpris2Model.currentPlayer.changeVolume(-root.volumePercentStep / 100, true);
             }
         }
         onClicked: (mouse) => {

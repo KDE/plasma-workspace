@@ -5,12 +5,11 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
+pragma ComponentBehavior: Bound
 
-import QtQuick 2.15
-import QtQuick.Controls 2.15
-import QtQuick.Window 2.15
+import QtQuick
+import QtQuick.Controls
 
-import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.components 3.0 as PC3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.private.mpris as Mpris
@@ -23,7 +22,7 @@ Item {
      * Whether the album art image is available or in loading status
      */
     readonly property bool hasImage: (pendingImage !== null && (pendingImage.status === Image.Ready || pendingImage.status === Image.Loading))
-        || (albumArt.currentItem instanceof Image && albumArt.currentItem.status === Image.Ready)
+        || (albumArt.currentItem instanceof Image && (albumArt.currentItem as Image).status === Image.Ready)
 
     readonly property bool animating: exitTransition.running || popExitTransition.running
 
@@ -39,7 +38,7 @@ Item {
 
     property Image pendingImage: null
 
-    function loadAlbumArt() {
+    function loadAlbumArt(): void {
         if (pendingImage !== null) {
             pendingImage.destroy();
             pendingImage = null;
@@ -50,14 +49,14 @@ Item {
             return;
         }
 
-        const oldImageRatio = albumArt.currentItem instanceof Image ? albumArt.currentItem.sourceSize.width / albumArt.currentItem.sourceSize.height : 1;
+        const oldImageRatio = albumArt.currentItem instanceof Image ? (albumArt.currentItem as Image).sourceSize.width / (albumArt.currentItem as Image).sourceSize.height : 1;
         pendingImage = albumArtComponent.createObject(albumArt, {
             "source": root.albumArt,
             "sourceSize": Qt.size(container.width * Screen.devicePixelRatio, container.height * Screen.devicePixelRatio),
             "opacity": 0,
         });
 
-        function replaceWhenLoaded() {
+        function replaceWhenLoaded(): void {
             // HACK: Workaround for QTBUG-140018 (see also: BUG 509192)
             // When a parent loader is inactive, it'll drop the engine from the context, but this can still run
             // afterwards which causes a crash in QQuickStackElement::initialize which asserts the engine is not null.
@@ -245,9 +244,9 @@ Item {
         anchors.fill: parent
         visible: active
 
-        readonly property bool isLoadingImage: pendingImage !== null && pendingImage.status === Image.Loading
+        readonly property bool isLoadingImage: container.pendingImage !== null && container.pendingImage.status === Image.Loading
 
-        active: (inCompactRepresentation || root.expanded) && (!container.hasImage || isLoadingImage)
+        active: (container.inCompactRepresentation || root.expanded) && (!container.hasImage || isLoadingImage)
         asynchronous: true
         sourceComponent: root.track ? (isLoadingImage ? busyComponent : fallbackIconItem) : placeholderMessage
     }
