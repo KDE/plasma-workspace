@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-18 00:45+0000\n"
 "PO-Revision-Date: 2011-01-13 21:10+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@gmail.com>\n"
 "Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
@@ -381,29 +381,29 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:269
+#: declarative/qml/ClipboardMenu.qml:268
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgid "Clear History"
 msgstr "Saiz rekod papan k&lip:"
 
-#: declarative/qml/ClipboardMenu.qml:324
+#: declarative/qml/ClipboardMenu.qml:323
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgid "All History"
 msgstr "Saiz rekod papan k&lip:"
 
-#: declarative/qml/ClipboardMenu.qml:329
+#: declarative/qml/ClipboardMenu.qml:328
 #, kde-format
 msgid "Starred Only"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:436
+#: declarative/qml/ClipboardMenu.qml:435
 #, kde-format
 msgid "No matches"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:436
+#: declarative/qml/ClipboardMenu.qml:435
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgid "Clipboard is empty"
@@ -444,25 +444,25 @@ msgstr "Main semula aksi pada item dipilih daripada &rekod"
 msgid "Star"
 msgstr "Mula"
 
-#: declarative/qml/EditPage.qml:64
+#: declarative/qml/EditPage.qml:63
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Text edit area"
 msgstr ""
 
-#: declarative/qml/EditPage.qml:82
+#: declarative/qml/EditPage.qml:81
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr ""
 
-#: declarative/qml/EditPage.qml:90
+#: declarative/qml/EditPage.qml:89
 #, fuzzy, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "&Batal"
 
-#: declarative/qml/UrlItemDelegate.qml:98
+#: declarative/qml/UrlItemDelegate.qml:99
 #, kde-format
 msgctxt ""
 "Indicator that there are more urls in the clipboard than previews shown"

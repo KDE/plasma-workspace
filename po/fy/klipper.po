@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-18 00:45+0000\n"
 "PO-Revision-Date: 2010-07-16 13:01+0100\n"
 "Last-Translator: Berend Ytsma <berendy@gmail.com>\n"
 "Language-Team: Frysk <kde-i18n-fry@kde.org>\n"
@@ -377,30 +377,30 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:269
+#: declarative/qml/ClipboardMenu.qml:268
 #, fuzzy, kde-format
 #| msgid "Clipboard history"
 msgid "Clear History"
 msgstr "Klamboerdskiednis"
 
-#: declarative/qml/ClipboardMenu.qml:324
+#: declarative/qml/ClipboardMenu.qml:323
 #, fuzzy, kde-format
 #| msgid "Clipboard history"
 msgid "All History"
 msgstr "Klamboerdskiednis"
 
-#: declarative/qml/ClipboardMenu.qml:329
+#: declarative/qml/ClipboardMenu.qml:328
 #, kde-format
 msgid "Starred Only"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:436
+#: declarative/qml/ClipboardMenu.qml:435
 #, fuzzy, kde-format
 #| msgid "<no matches>"
 msgid "No matches"
 msgstr "<gjin oerienkomsten>"
 
-#: declarative/qml/ClipboardMenu.qml:436
+#: declarative/qml/ClipboardMenu.qml:435
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Klamboerd is leech"
@@ -440,26 +440,26 @@ msgstr "Aksjes opnij útfiere op in item selektearre út de skiednis"
 msgid "Star"
 msgstr "Begjinne"
 
-#: declarative/qml/EditPage.qml:64
+#: declarative/qml/EditPage.qml:63
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Text edit area"
 msgstr ""
 
-#: declarative/qml/EditPage.qml:82
+#: declarative/qml/EditPage.qml:81
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr ""
 
-#: declarative/qml/EditPage.qml:90
+#: declarative/qml/EditPage.qml:89
 #, fuzzy, kde-format
 #| msgid "&Cancel"
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Ofbre&kke"
 
-#: declarative/qml/UrlItemDelegate.qml:98
+#: declarative/qml/UrlItemDelegate.qml:99
 #, kde-format
 msgctxt ""
 "Indicator that there are more urls in the clipboard than previews shown"

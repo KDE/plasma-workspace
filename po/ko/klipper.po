@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-18 00:45+0000\n"
 "PO-Revision-Date: 2025-10-09 01:51+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -378,27 +378,27 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "펴기"
 
-#: declarative/qml/ClipboardMenu.qml:269
+#: declarative/qml/ClipboardMenu.qml:268
 #, kde-format
 msgid "Clear History"
 msgstr "과거 기록 비우기"
 
-#: declarative/qml/ClipboardMenu.qml:324
+#: declarative/qml/ClipboardMenu.qml:323
 #, kde-format
 msgid "All History"
 msgstr "모든 과거 기록"
 
-#: declarative/qml/ClipboardMenu.qml:329
+#: declarative/qml/ClipboardMenu.qml:328
 #, kde-format
 msgid "Starred Only"
 msgstr "별표 표시된 것만"
 
-#: declarative/qml/ClipboardMenu.qml:436
+#: declarative/qml/ClipboardMenu.qml:435
 #, kde-format
 msgid "No matches"
 msgstr "검색 결과 없음"
 
-#: declarative/qml/ClipboardMenu.qml:436
+#: declarative/qml/ClipboardMenu.qml:435
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "클립보드가 비었습니다"
@@ -433,25 +433,25 @@ msgstr "별표 삭제"
 msgid "Star"
 msgstr "별표"
 
-#: declarative/qml/EditPage.qml:64
+#: declarative/qml/EditPage.qml:63
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Text edit area"
 msgstr "텍스트 편집 영역"
 
-#: declarative/qml/EditPage.qml:82
+#: declarative/qml/EditPage.qml:81
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr "저장"
 
-#: declarative/qml/EditPage.qml:90
+#: declarative/qml/EditPage.qml:89
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "취소"
 
-#: declarative/qml/UrlItemDelegate.qml:98
+#: declarative/qml/UrlItemDelegate.qml:99
 #, kde-format
 msgctxt ""
 "Indicator that there are more urls in the clipboard than previews shown"

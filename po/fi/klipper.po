@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-18 00:45+0000\n"
 "PO-Revision-Date: 2025-09-11 17:34+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -397,27 +397,27 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "Laajenna"
 
-#: declarative/qml/ClipboardMenu.qml:269
+#: declarative/qml/ClipboardMenu.qml:268
 #, kde-format
 msgid "Clear History"
 msgstr "Tyhjennä historia"
 
-#: declarative/qml/ClipboardMenu.qml:324
+#: declarative/qml/ClipboardMenu.qml:323
 #, kde-format
 msgid "All History"
 msgstr "Kaikki historia"
 
-#: declarative/qml/ClipboardMenu.qml:329
+#: declarative/qml/ClipboardMenu.qml:328
 #, kde-format
 msgid "Starred Only"
 msgstr "Vain tähdykälliset"
 
-#: declarative/qml/ClipboardMenu.qml:436
+#: declarative/qml/ClipboardMenu.qml:435
 #, kde-format
 msgid "No matches"
 msgstr "Ei osumia"
 
-#: declarative/qml/ClipboardMenu.qml:436
+#: declarative/qml/ClipboardMenu.qml:435
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Leikepöytä on tyhjä"
@@ -452,25 +452,25 @@ msgstr "Poista tähdykkä"
 msgid "Star"
 msgstr "Tähdykkä"
 
-#: declarative/qml/EditPage.qml:64
+#: declarative/qml/EditPage.qml:63
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Text edit area"
 msgstr "Tekstimuokkausalue"
 
-#: declarative/qml/EditPage.qml:82
+#: declarative/qml/EditPage.qml:81
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Tallenna"
 
-#: declarative/qml/EditPage.qml:90
+#: declarative/qml/EditPage.qml:89
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Peru"
 
-#: declarative/qml/UrlItemDelegate.qml:98
+#: declarative/qml/UrlItemDelegate.qml:99
 #, kde-format
 msgctxt ""
 "Indicator that there are more urls in the clipboard than previews shown"

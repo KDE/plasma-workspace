@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-18 00:45+0000\n"
 "PO-Revision-Date: 2025-08-30 11:38+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -396,27 +396,27 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "Expandeix"
 
-#: declarative/qml/ClipboardMenu.qml:269
+#: declarative/qml/ClipboardMenu.qml:268
 #, kde-format
 msgid "Clear History"
 msgstr "Neteja l'historial"
 
-#: declarative/qml/ClipboardMenu.qml:324
+#: declarative/qml/ClipboardMenu.qml:323
 #, kde-format
 msgid "All History"
 msgstr "Tot l'historial"
 
-#: declarative/qml/ClipboardMenu.qml:329
+#: declarative/qml/ClipboardMenu.qml:328
 #, kde-format
 msgid "Starred Only"
 msgstr "Només amb estrella"
 
-#: declarative/qml/ClipboardMenu.qml:436
+#: declarative/qml/ClipboardMenu.qml:435
 #, kde-format
 msgid "No matches"
 msgstr "Sense coincidències"
 
-#: declarative/qml/ClipboardMenu.qml:436
+#: declarative/qml/ClipboardMenu.qml:435
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "El porta-retalls està buit"
@@ -451,25 +451,25 @@ msgstr "Elimina l'estrella"
 msgid "Star"
 msgstr "Estrella"
 
-#: declarative/qml/EditPage.qml:64
+#: declarative/qml/EditPage.qml:63
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Text edit area"
 msgstr "Àrea d'edició de text"
 
-#: declarative/qml/EditPage.qml:82
+#: declarative/qml/EditPage.qml:81
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Desa"
 
-#: declarative/qml/EditPage.qml:90
+#: declarative/qml/EditPage.qml:89
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Cancel·la"
 
-#: declarative/qml/UrlItemDelegate.qml:98
+#: declarative/qml/UrlItemDelegate.qml:99
 #, kde-format
 msgctxt ""
 "Indicator that there are more urls in the clipboard than previews shown"
