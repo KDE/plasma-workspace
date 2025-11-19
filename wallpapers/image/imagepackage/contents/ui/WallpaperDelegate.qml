@@ -76,6 +76,7 @@ KCM.GridDelegate {
             radius: 4
             source: Image {
                 asynchronous: true
+                retainWhileLoading: true
                 cache: false
                 fillMode: Image.PreserveAspectCrop
                 source: fastBlur.visible ? previewImage.source : ""
@@ -88,6 +89,7 @@ KCM.GridDelegate {
             id: previewImage
             anchors.fill: parent
             asynchronous: true
+            retainWhileLoading: true
             cache: false
             fillMode: cfg_FillMode
             source: model.preview
