@@ -183,23 +183,6 @@ ColumnLayout {
 
                 running: queryTimer.queryDisplay
             }
-            function move_up() {
-                if (length === 0) {
-                    root.showHistory = true;
-                } else if (results.count > 0) {
-                    results.decrementCurrentIndex();
-                }
-                focusCurrentListView()
-            }
-
-            function move_down() {
-                if (length === 0) {
-                    root.showHistory = true;
-                } else if (results.count > 0) {
-                    results.incrementCurrentIndex();
-                }
-                focusCurrentListView()
-            }
 
             function focusCurrentListView() {
                 if (listView.count > 0) {
