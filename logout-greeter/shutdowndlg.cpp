@@ -222,6 +222,7 @@ void KSMShutdownDlg::init(const KPackage::Package &package)
         setGeometry(screen()->geometry());
     });
 
+    KWindowEffects::enableBlurBehind(this, true);
     KWindowEffects::enableBackgroundContrast(this, true, 1.0, 1.0, 1.5);
     if (m_windowed) {
         show();
@@ -232,7 +233,6 @@ void KSMShutdownDlg::init(const KPackage::Package &package)
     requestActivate();
 
     setKeyboardGrabEnabled(true);
-    KWindowEffects::enableBlurBehind(this, true);
 }
 
 void KSMShutdownDlg::resizeEvent(QResizeEvent *e)
