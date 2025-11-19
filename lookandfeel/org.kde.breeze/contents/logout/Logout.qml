@@ -35,8 +35,6 @@ Item {
     signal lockScreenRequested()
     signal cancelSoftwareUpdateRequested()
 
-    property alias backgroundColor: backgroundRect.color
-
     function sleepRequested() {
         root.suspendRequested(2);
     }
@@ -98,16 +96,11 @@ Item {
         }
     }
 
-    function isLightColor(color) {
-        return Math.max(color.r, color.g, color.b) > 0.5
-    }
-
     Rectangle {
         id: backgroundRect
         anchors.fill: parent
-        //use "black" because this is intended to look like a general darkening of the scene. a dark gray as normal background would just look too "washed out"
-        color: isLightColor(Kirigami.Theme.backgroundColor) ? Kirigami.Theme.backgroundColor : "black"
-        opacity: 0.5
+        color: Kirigami.Theme.backgroundColor
+        opacity: 0.85
     }
     MouseArea {
         anchors.fill: parent
