@@ -45,6 +45,13 @@ ContainmentItem {
         hiddenInstantiator.active = true;
     }
 
+    Connections {
+        target: Plasmoid
+        function onActivated() {
+            systemTrayState.expanded = !systemTrayState.expanded;
+        }
+    }
+
     KItemModels.KSortFilterProxyModel {
         id: activeModel
         filterRoleName: "effectiveStatus"
