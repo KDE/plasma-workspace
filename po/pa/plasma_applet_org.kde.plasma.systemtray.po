@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-19 00:45+0000\n"
 "PO-Revision-Date: 2025-09-15 09:52-0500\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -68,7 +68,7 @@ msgstr "ਹਾਰਡਵੇਅਰ ਕੰਟਰੋਲ"
 msgid "Miscellaneous"
 msgstr "ਫੁਟਕਲ"
 
-#: package/contents/ui/ConfigGeneral.qml:179
+#: package/contents/ui/ConfigGeneral.qml:172
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -79,13 +79,13 @@ msgid ""
 "the app’s author."
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:182
+#: package/contents/ui/ConfigGeneral.qml:175
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
 msgstr "ਮੈਂ ਖ਼ਤਰੇ ਨੂੰ ਸਮਝ ਲਿਆ ਹੈ"
 
-#: package/contents/ui/ConfigGeneral.qml:194
+#: package/contents/ui/ConfigGeneral.qml:187
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -95,90 +95,76 @@ msgid ""
 "one item at a time."
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:201
-#, kde-format
-msgctxt "The arrangement of system tray icons in the Panel"
-msgid "Panel icon size:"
-msgstr "ਪੈਨਲ ਆਈਕਾਨ ਆਕਾਰ:"
-
-#: package/contents/ui/ConfigGeneral.qml:203
-#, kde-format
-msgid "Small"
-msgstr "ਛੋਟਾ"
-
-#: package/contents/ui/ConfigGeneral.qml:210
-#, kde-format
+#: package/contents/ui/ConfigGeneral.qml:199
+#, fuzzy, kde-format
+#| msgid "Scale with Panel height"
+msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel height"
 msgstr "ਪੈਨਲ ਦੀ ਉਚਾਈ ਨਾਲ ਸਕੇਲ ਕਰੋ"
 
-#: package/contents/ui/ConfigGeneral.qml:211
-#, kde-format
+#: package/contents/ui/ConfigGeneral.qml:200
+#, fuzzy, kde-format
+#| msgid "Scale with Panel width"
+msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel width"
 msgstr "ਪੈਨਲ ਦੀ ਚੌੜਾਈ ਨਾਲ ਸਕੇਲ ਕਰੋ"
 
-#: package/contents/ui/ConfigGeneral.qml:217
+#: package/contents/ui/ConfigGeneral.qml:202
+#, fuzzy, kde-format
+#| msgctxt "The arrangement of system tray icons in the Panel"
+#| msgid "Panel icon size:"
+msgctxt "@label:listbox The spacing between system tray icons in the Panel"
+msgid "Panel icon size:"
+msgstr "ਪੈਨਲ ਆਈਕਾਨ ਆਕਾਰ:"
+
+#: package/contents/ui/ConfigGeneral.qml:206
+#: package/contents/ui/ConfigGeneral.qml:247
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Small"
+msgstr "ਛੋਟਾ"
+
+#: package/contents/ui/ConfigGeneral.qml:235
 #, kde-format
 msgid "Automatically enabled when in Touch Mode"
 msgstr "ਜਦੋਂ ਟੱਚ ਮੋਡ ਹੋਵੇ ਤਾਂ ਆਪਣੇ-ਆਪ ਸਮਰੱਥ ਕਰੋ"
 
-#: package/contents/ui/ConfigGeneral.qml:227
+#: package/contents/ui/ConfigGeneral.qml:243
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon spacing:"
 msgstr "ਪੈਨਲ ਆਈਕਾਨ ਫਾਸਲਾ:"
 
-#: package/contents/ui/ConfigGeneral.qml:230
-#, kde-format
-msgctxt "@item:inlistbox Icon spacing"
-msgid "Small"
-msgstr "ਛੋਟਾ"
-
-#: package/contents/ui/ConfigGeneral.qml:234
+#: package/contents/ui/ConfigGeneral.qml:251
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "ਸਧਾਰਨ"
 
-#: package/contents/ui/ConfigGeneral.qml:238
+#: package/contents/ui/ConfigGeneral.qml:255
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "ਵੱਡਾ"
 
-#: package/contents/ui/ConfigGeneral.qml:263
+#: package/contents/ui/ConfigGeneral.qml:280
 #, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
 msgstr "ਜਦੋਂ ਟੱਚ ਮੋਡ ਹੋਵੇ ਤਾਂ ਆਪਣੇ-ਆਪ ਵੱਡੇ ਵਜੋਂ ਸੈੱਟ ਕਰੋ"
 
-#: package/contents/ui/ConfigGeneral.qml:282
+#: package/contents/ui/ConfigGeneral.qml:306
 #, fuzzy, kde-format
 #| msgid "Entries"
 msgctxt "@title:column"
 msgid "Entries"
 msgstr "ਐਂਟਰੀਆਂ"
 
-#: package/contents/ui/ConfigGeneral.qml:286
+#: package/contents/ui/ConfigGeneral.qml:310
 #, fuzzy, kde-format
 #| msgid "Always shown"
 msgid "Always show all"
 msgstr "ਹਮੇਸ਼ਾਂ ਵੇਖਾਇਆ ਜਾਂਦਾ ਹੈ"
-
-#: package/contents/ui/ConfigGeneral.qml:330
-#, kde-format
-msgctxt "Name of the system tray entry"
-msgid "Entry"
-msgstr "ਐਂਟਰੀ"
-
-#: package/contents/ui/ConfigGeneral.qml:337
-#, kde-format
-msgid "Visibility"
-msgstr "ਦਿੱਖ"
-
-#: package/contents/ui/ConfigGeneral.qml:344
-#, kde-format
-msgid "Keyboard Shortcut"
-msgstr "ਕੀਬੋਰਡ ਦਾ ਸ਼ਾਰਟਕੱਟ"
 
 #: package/contents/ui/ExpandedRepresentation.qml:59
 #, kde-format
@@ -227,6 +213,19 @@ msgstr "%1 ਚੀਜ਼ਾਂ ਨੂੰ %2 ਕਾਲਮਾਂ ਵਿੱਚ ਗਰ�
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
 msgstr ""
+
+#~ msgid "Small"
+#~ msgstr "ਛੋਟਾ"
+
+#~ msgctxt "Name of the system tray entry"
+#~ msgid "Entry"
+#~ msgstr "ਐਂਟਰੀ"
+
+#~ msgid "Visibility"
+#~ msgstr "ਦਿੱਖ"
+
+#~ msgid "Keyboard Shortcut"
+#~ msgstr "ਕੀਬੋਰਡ ਦਾ ਸ਼ਾਰਟਕੱਟ"
 
 #~ msgid "Always show all entries"
 #~ msgstr "ਹਮੇਸ਼ਾ ਸਾਰੀਆਂ ਐਂਟਰੀਆਂ ਨੂੰ ਦਿਖਾਓ"

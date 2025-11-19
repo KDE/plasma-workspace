@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-19 00:45+0000\n"
 "PO-Revision-Date: 2025-05-27 15:05+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -68,7 +68,7 @@ msgstr "Controlo Hardware"
 msgid "Miscellaneous"
 msgstr "Miscellanea"
 
-#: package/contents/ui/ConfigGeneral.qml:179
+#: package/contents/ui/ConfigGeneral.qml:172
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -84,13 +84,13 @@ msgstr ""
 "lor se comporta demdo impreviste.<nl/><nl/>Usa iste preferentia a tu proprie "
 "risco e non face reporto de problemas al autor del app o de KDE."
 
-#: package/contents/ui/ConfigGeneral.qml:182
+#: package/contents/ui/ConfigGeneral.qml:175
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
 msgstr "Io comprende le riscos"
 
-#: package/contents/ui/ConfigGeneral.qml:194
+#: package/contents/ui/ConfigGeneral.qml:187
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -105,90 +105,76 @@ msgstr ""
 "trandferentia per dishabilitar su chronologia, o solmente memorar un "
 "elemento al vice. "
 
-#: package/contents/ui/ConfigGeneral.qml:201
-#, kde-format
-msgctxt "The arrangement of system tray icons in the Panel"
-msgid "Panel icon size:"
-msgstr "Dimension de Icone de pannello:"
-
-#: package/contents/ui/ConfigGeneral.qml:203
-#, kde-format
-msgid "Small"
-msgstr "Parve"
-
-#: package/contents/ui/ConfigGeneral.qml:210
-#, kde-format
+#: package/contents/ui/ConfigGeneral.qml:199
+#, fuzzy, kde-format
+#| msgid "Scale with Panel height"
+msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel height"
 msgstr "Scala con altessa de pannello"
 
-#: package/contents/ui/ConfigGeneral.qml:211
-#, kde-format
+#: package/contents/ui/ConfigGeneral.qml:200
+#, fuzzy, kde-format
+#| msgid "Scale with Panel width"
+msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel width"
 msgstr "Scala con largessa de Pannello"
 
-#: package/contents/ui/ConfigGeneral.qml:217
+#: package/contents/ui/ConfigGeneral.qml:202
+#, fuzzy, kde-format
+#| msgctxt "The arrangement of system tray icons in the Panel"
+#| msgid "Panel icon size:"
+msgctxt "@label:listbox The spacing between system tray icons in the Panel"
+msgid "Panel icon size:"
+msgstr "Dimension de Icone de pannello:"
+
+#: package/contents/ui/ConfigGeneral.qml:206
+#: package/contents/ui/ConfigGeneral.qml:247
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Small"
+msgstr "Parve"
+
+#: package/contents/ui/ConfigGeneral.qml:235
 #, kde-format
 msgid "Automatically enabled when in Touch Mode"
 msgstr "Automaticamente habilitate quando in modo de tocco (Touch)"
 
-#: package/contents/ui/ConfigGeneral.qml:227
+#: package/contents/ui/ConfigGeneral.qml:243
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon spacing:"
 msgstr "Spatiar de Icone de pannello:"
 
-#: package/contents/ui/ConfigGeneral.qml:230
-#, kde-format
-msgctxt "@item:inlistbox Icon spacing"
-msgid "Small"
-msgstr "Parve"
-
-#: package/contents/ui/ConfigGeneral.qml:234
+#: package/contents/ui/ConfigGeneral.qml:251
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "Normal"
 
-#: package/contents/ui/ConfigGeneral.qml:238
+#: package/contents/ui/ConfigGeneral.qml:255
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "Grande (Large)"
 
-#: package/contents/ui/ConfigGeneral.qml:263
+#: package/contents/ui/ConfigGeneral.qml:280
 #, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
 msgstr "Automaticamente fixa a Grande (large) quando in modo de tocco (touch)"
 
-#: package/contents/ui/ConfigGeneral.qml:282
+#: package/contents/ui/ConfigGeneral.qml:306
 #, fuzzy, kde-format
 #| msgid "Entries"
 msgctxt "@title:column"
 msgid "Entries"
 msgstr "Entratas"
 
-#: package/contents/ui/ConfigGeneral.qml:286
+#: package/contents/ui/ConfigGeneral.qml:310
 #, fuzzy, kde-format
 #| msgid "Always shown"
 msgid "Always show all"
 msgstr "Sempre monstrate"
-
-#: package/contents/ui/ConfigGeneral.qml:330
-#, kde-format
-msgctxt "Name of the system tray entry"
-msgid "Entry"
-msgstr "Elemento"
-
-#: package/contents/ui/ConfigGeneral.qml:337
-#, kde-format
-msgid "Visibility"
-msgstr "Visibilitate"
-
-#: package/contents/ui/ConfigGeneral.qml:344
-#, kde-format
-msgid "Keyboard Shortcut"
-msgstr "Via Breve de Claviero"
 
 #: package/contents/ui/ExpandedRepresentation.qml:59
 #, kde-format
@@ -237,6 +223,19 @@ msgstr "Grillia con %1 elementos in %2  columnas"
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
 msgstr "AILlmyjgGJP"
+
+#~ msgid "Small"
+#~ msgstr "Parve"
+
+#~ msgctxt "Name of the system tray entry"
+#~ msgid "Entry"
+#~ msgstr "Elemento"
+
+#~ msgid "Visibility"
+#~ msgstr "Visibilitate"
+
+#~ msgid "Keyboard Shortcut"
+#~ msgstr "Via Breve de Claviero"
 
 #~ msgid "Always show all entries"
 #~ msgstr "Sempre monstra omne entratas"

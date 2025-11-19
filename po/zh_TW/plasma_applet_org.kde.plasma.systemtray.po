@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-19 00:45+0000\n"
 "PO-Revision-Date: 2025-05-16 15:35+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -70,7 +70,7 @@ msgstr "硬體控制"
 msgid "Miscellaneous"
 msgstr "雜項"
 
-#: package/contents/ui/ConfigGeneral.qml:179
+#: package/contents/ui/ConfigGeneral.qml:172
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -86,13 +86,13 @@ msgstr ""
 "請只在瞭解風險的時候再使用這個設定，而如果發生問題的時候也請避免回報它給 KDE "
 "或該應用程式的作者。"
 
-#: package/contents/ui/ConfigGeneral.qml:182
+#: package/contents/ui/ConfigGeneral.qml:175
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
 msgstr "我瞭解風險"
 
-#: package/contents/ui/ConfigGeneral.qml:194
+#: package/contents/ui/ConfigGeneral.qml:187
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -104,90 +104,76 @@ msgstr ""
 "不建議停用剪貼簿，那會使得複製資料時複製的來源應用程式若關閉複製的資料便會丟"
 "失。<nl/><nl/>請考慮改成讓剪貼簿停用歷史記錄，或是一次只記住一個項目。"
 
-#: package/contents/ui/ConfigGeneral.qml:201
-#, kde-format
-msgctxt "The arrangement of system tray icons in the Panel"
-msgid "Panel icon size:"
-msgstr "面板圖示大小："
-
-#: package/contents/ui/ConfigGeneral.qml:203
-#, kde-format
-msgid "Small"
-msgstr "小"
-
-#: package/contents/ui/ConfigGeneral.qml:210
-#, kde-format
+#: package/contents/ui/ConfigGeneral.qml:199
+#, fuzzy, kde-format
+#| msgid "Scale with Panel height"
+msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel height"
 msgstr "依據面板高度改變"
 
-#: package/contents/ui/ConfigGeneral.qml:211
-#, kde-format
+#: package/contents/ui/ConfigGeneral.qml:200
+#, fuzzy, kde-format
+#| msgid "Scale with Panel width"
+msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel width"
 msgstr "依據面板寬度改變"
 
-#: package/contents/ui/ConfigGeneral.qml:217
+#: package/contents/ui/ConfigGeneral.qml:202
+#, fuzzy, kde-format
+#| msgctxt "The arrangement of system tray icons in the Panel"
+#| msgid "Panel icon size:"
+msgctxt "@label:listbox The spacing between system tray icons in the Panel"
+msgid "Panel icon size:"
+msgstr "面板圖示大小："
+
+#: package/contents/ui/ConfigGeneral.qml:206
+#: package/contents/ui/ConfigGeneral.qml:247
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Small"
+msgstr "小"
+
+#: package/contents/ui/ConfigGeneral.qml:235
 #, kde-format
 msgid "Automatically enabled when in Touch Mode"
 msgstr "觸控模式時自動啟用"
 
-#: package/contents/ui/ConfigGeneral.qml:227
+#: package/contents/ui/ConfigGeneral.qml:243
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon spacing:"
 msgstr "面板圖示間隔："
 
-#: package/contents/ui/ConfigGeneral.qml:230
-#, kde-format
-msgctxt "@item:inlistbox Icon spacing"
-msgid "Small"
-msgstr "小"
-
-#: package/contents/ui/ConfigGeneral.qml:234
+#: package/contents/ui/ConfigGeneral.qml:251
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "中"
 
-#: package/contents/ui/ConfigGeneral.qml:238
+#: package/contents/ui/ConfigGeneral.qml:255
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "大"
 
-#: package/contents/ui/ConfigGeneral.qml:263
+#: package/contents/ui/ConfigGeneral.qml:280
 #, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
 msgstr "觸控模式時自動設為「大」"
 
-#: package/contents/ui/ConfigGeneral.qml:282
+#: package/contents/ui/ConfigGeneral.qml:306
 #, fuzzy, kde-format
 #| msgid "Entries"
 msgctxt "@title:column"
 msgid "Entries"
 msgstr "項目"
 
-#: package/contents/ui/ConfigGeneral.qml:286
+#: package/contents/ui/ConfigGeneral.qml:310
 #, fuzzy, kde-format
 #| msgid "Always shown"
 msgid "Always show all"
 msgstr "總是顯示"
-
-#: package/contents/ui/ConfigGeneral.qml:330
-#, kde-format
-msgctxt "Name of the system tray entry"
-msgid "Entry"
-msgstr "項目"
-
-#: package/contents/ui/ConfigGeneral.qml:337
-#, kde-format
-msgid "Visibility"
-msgstr "可見度"
-
-#: package/contents/ui/ConfigGeneral.qml:344
-#, kde-format
-msgid "Keyboard Shortcut"
-msgstr "鍵盤捷徑"
 
 #: package/contents/ui/ExpandedRepresentation.qml:59
 #, kde-format
@@ -238,6 +224,19 @@ msgstr "用 %2 欄顯示 %1 個項目的網格"
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
 msgstr "AILlmyjgGJP漢字"
+
+#~ msgid "Small"
+#~ msgstr "小"
+
+#~ msgctxt "Name of the system tray entry"
+#~ msgid "Entry"
+#~ msgstr "項目"
+
+#~ msgid "Visibility"
+#~ msgstr "可見度"
+
+#~ msgid "Keyboard Shortcut"
+#~ msgstr "鍵盤捷徑"
 
 #~ msgid "Always show all entries"
 #~ msgstr "總是顯示所有項目"

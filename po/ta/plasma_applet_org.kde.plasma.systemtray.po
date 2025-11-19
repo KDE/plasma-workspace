@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-19 00:45+0000\n"
 "PO-Revision-Date: 2025-05-18 18:52+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -67,7 +67,7 @@ msgstr "வன்பொருள் கட்டுப்பாடு"
 msgid "Miscellaneous"
 msgstr "மற்றவை"
 
-#: package/contents/ui/ConfigGeneral.qml:179
+#: package/contents/ui/ConfigGeneral.qml:172
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -83,13 +83,13 @@ msgstr ""
 ">இத்தேர்வால் செயலியில் ஏதேனும் சிக்கல் ஏற்பட்டால், தயவுசெய்து அதை கே.டீ.யீ.யிடமோ செயலியின் "
 "நிரலாளரிடமோ தெரிவிக்க வேண்டாம்."
 
-#: package/contents/ui/ConfigGeneral.qml:182
+#: package/contents/ui/ConfigGeneral.qml:175
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
 msgstr "விளைவுகளை ஏற்கிறேன்"
 
-#: package/contents/ui/ConfigGeneral.qml:194
+#: package/contents/ui/ConfigGeneral.qml:187
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -102,90 +102,76 @@ msgstr ""
 "முடியாமல் போகும்.<nl/><nl/> மாறாக, பிடிப்புப்பலகை வரலாற்றை முடக்கலாம், அல்லது ஒரு "
 "நேரத்தில் ஒரே உருப்படியை நினைவில் கொள்ளுமாறு பிடிப்புப்பலகையை அமைக்கலாம்."
 
-#: package/contents/ui/ConfigGeneral.qml:201
-#, kde-format
-msgctxt "The arrangement of system tray icons in the Panel"
-msgid "Panel icon size:"
-msgstr "பலகையிலுள்ள சின்னத்தின் அளவு"
-
-#: package/contents/ui/ConfigGeneral.qml:203
-#, kde-format
-msgid "Small"
-msgstr "சிறியது"
-
-#: package/contents/ui/ConfigGeneral.qml:210
-#, kde-format
+#: package/contents/ui/ConfigGeneral.qml:199
+#, fuzzy, kde-format
+#| msgid "Scale with Panel height"
+msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel height"
 msgstr "பலகையின் அளவை பொறுத்து மாறும்"
 
-#: package/contents/ui/ConfigGeneral.qml:211
-#, kde-format
+#: package/contents/ui/ConfigGeneral.qml:200
+#, fuzzy, kde-format
+#| msgid "Scale with Panel width"
+msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel width"
 msgstr "பலகையின் அகலம் பொறுத்து மாறும்"
 
-#: package/contents/ui/ConfigGeneral.qml:217
+#: package/contents/ui/ConfigGeneral.qml:202
+#, fuzzy, kde-format
+#| msgctxt "The arrangement of system tray icons in the Panel"
+#| msgid "Panel icon size:"
+msgctxt "@label:listbox The spacing between system tray icons in the Panel"
+msgid "Panel icon size:"
+msgstr "பலகையிலுள்ள சின்னத்தின் அளவு"
+
+#: package/contents/ui/ConfigGeneral.qml:206
+#: package/contents/ui/ConfigGeneral.qml:247
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Small"
+msgstr "சிறியது"
+
+#: package/contents/ui/ConfigGeneral.qml:235
 #, kde-format
 msgid "Automatically enabled when in Touch Mode"
 msgstr "பலகைக்கணினி பயன்முறையில் தானாக இயக்கப்படும்"
 
-#: package/contents/ui/ConfigGeneral.qml:227
+#: package/contents/ui/ConfigGeneral.qml:243
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon spacing:"
 msgstr "பலகையிலுள்ள சின்னங்களுக்கிடையே இடைவெளி:"
 
-#: package/contents/ui/ConfigGeneral.qml:230
-#, kde-format
-msgctxt "@item:inlistbox Icon spacing"
-msgid "Small"
-msgstr "சிறியது"
-
-#: package/contents/ui/ConfigGeneral.qml:234
+#: package/contents/ui/ConfigGeneral.qml:251
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "சாதாரணமானது"
 
-#: package/contents/ui/ConfigGeneral.qml:238
+#: package/contents/ui/ConfigGeneral.qml:255
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "பெரியது"
 
-#: package/contents/ui/ConfigGeneral.qml:263
+#: package/contents/ui/ConfigGeneral.qml:280
 #, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
 msgstr "பலகைக்கணினி பயன்முறையில் இருக்கும்போது, பெரிதானதற்கு தானாக மாற்றப்படும்"
 
-#: package/contents/ui/ConfigGeneral.qml:282
+#: package/contents/ui/ConfigGeneral.qml:306
 #, fuzzy, kde-format
 #| msgid "Entries"
 msgctxt "@title:column"
 msgid "Entries"
 msgstr "பதிவுகள்"
 
-#: package/contents/ui/ConfigGeneral.qml:286
+#: package/contents/ui/ConfigGeneral.qml:310
 #, fuzzy, kde-format
 #| msgid "Always shown"
 msgid "Always show all"
 msgstr "எப்போதும் காட்டு"
-
-#: package/contents/ui/ConfigGeneral.qml:330
-#, kde-format
-msgctxt "Name of the system tray entry"
-msgid "Entry"
-msgstr "பதிவு"
-
-#: package/contents/ui/ConfigGeneral.qml:337
-#, kde-format
-msgid "Visibility"
-msgstr "காட்டப்படுவது"
-
-#: package/contents/ui/ConfigGeneral.qml:344
-#, kde-format
-msgid "Keyboard Shortcut"
-msgstr "விசைப்பலகை சுருக்குவழி"
 
 #: package/contents/ui/ExpandedRepresentation.qml:59
 #, kde-format
@@ -234,6 +220,19 @@ msgstr "%2 நெடுவரிசைகளில் %1 உருப்பட�
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
 msgstr "AILlmyjgGJPதொமுகீ"
+
+#~ msgid "Small"
+#~ msgstr "சிறியது"
+
+#~ msgctxt "Name of the system tray entry"
+#~ msgid "Entry"
+#~ msgstr "பதிவு"
+
+#~ msgid "Visibility"
+#~ msgstr "காட்டப்படுவது"
+
+#~ msgid "Keyboard Shortcut"
+#~ msgstr "விசைப்பலகை சுருக்குவழி"
 
 #~ msgid "Always show all entries"
 #~ msgstr "அனைத்து பதிவுகளையும் எப்போதும் காட்டு"

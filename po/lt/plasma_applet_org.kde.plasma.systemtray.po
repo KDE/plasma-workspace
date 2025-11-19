@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-19 00:45+0000\n"
 "PO-Revision-Date: 2025-08-05 15:57+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -71,7 +71,7 @@ msgstr "Aparatinės įrangos valdymas"
 msgid "Miscellaneous"
 msgstr "Įvairūs"
 
-#: package/contents/ui/ConfigGeneral.qml:179
+#: package/contents/ui/ConfigGeneral.qml:172
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -88,13 +88,13 @@ msgstr ""
 "pačių rizika ir nepranešinėkite apie klaidas KDE projektui ar programos "
 "autoriui."
 
-#: package/contents/ui/ConfigGeneral.qml:182
+#: package/contents/ui/ConfigGeneral.qml:175
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
 msgstr "Aš suprantu rizikas"
 
-#: package/contents/ui/ConfigGeneral.qml:194
+#: package/contents/ui/ConfigGeneral.qml:187
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -109,90 +109,76 @@ msgstr ""
 "taip, kad būtų išjungta jos istorija arba taip, kad vienu metu ji prisimintų "
 "tik vieną elementą."
 
-#: package/contents/ui/ConfigGeneral.qml:201
-#, kde-format
-msgctxt "The arrangement of system tray icons in the Panel"
-msgid "Panel icon size:"
-msgstr "Skydelio piktogramų dydis:"
-
-#: package/contents/ui/ConfigGeneral.qml:203
-#, kde-format
-msgid "Small"
-msgstr "Mažas"
-
-#: package/contents/ui/ConfigGeneral.qml:210
-#, kde-format
+#: package/contents/ui/ConfigGeneral.qml:199
+#, fuzzy, kde-format
+#| msgid "Scale with Panel height"
+msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel height"
 msgstr "Keisti mastelį pagal skydelio aukštį"
 
-#: package/contents/ui/ConfigGeneral.qml:211
-#, kde-format
+#: package/contents/ui/ConfigGeneral.qml:200
+#, fuzzy, kde-format
+#| msgid "Scale with Panel width"
+msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel width"
 msgstr "Keisti mastelį pagal skydelio plotį"
 
-#: package/contents/ui/ConfigGeneral.qml:217
-#, kde-format
-msgid "Automatically enabled when in Touch Mode"
-msgstr "Automatiškai įjungta, kai esama lietimo veiksenoje"
-
-#: package/contents/ui/ConfigGeneral.qml:227
-#, kde-format
+#: package/contents/ui/ConfigGeneral.qml:202
+#, fuzzy, kde-format
+#| msgctxt "The arrangement of system tray icons in the Panel"
+#| msgid "Panel icon size:"
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
-msgid "Panel icon spacing:"
-msgstr "Tarpai tarp skydelio piktogramų:"
+msgid "Panel icon size:"
+msgstr "Skydelio piktogramų dydis:"
 
-#: package/contents/ui/ConfigGeneral.qml:230
+#: package/contents/ui/ConfigGeneral.qml:206
+#: package/contents/ui/ConfigGeneral.qml:247
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "Maži"
 
-#: package/contents/ui/ConfigGeneral.qml:234
+#: package/contents/ui/ConfigGeneral.qml:235
+#, kde-format
+msgid "Automatically enabled when in Touch Mode"
+msgstr "Automatiškai įjungta, kai esama lietimo veiksenoje"
+
+#: package/contents/ui/ConfigGeneral.qml:243
+#, kde-format
+msgctxt "@label:listbox The spacing between system tray icons in the Panel"
+msgid "Panel icon spacing:"
+msgstr "Tarpai tarp skydelio piktogramų:"
+
+#: package/contents/ui/ConfigGeneral.qml:251
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "Įprasti"
 
-#: package/contents/ui/ConfigGeneral.qml:238
+#: package/contents/ui/ConfigGeneral.qml:255
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "Dideli"
 
-#: package/contents/ui/ConfigGeneral.qml:263
+#: package/contents/ui/ConfigGeneral.qml:280
 #, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
 msgstr "Automatiškai nustatoma į didelius, kai esama lietimo veiksenoje"
 
-#: package/contents/ui/ConfigGeneral.qml:282
+#: package/contents/ui/ConfigGeneral.qml:306
 #, fuzzy, kde-format
 #| msgid "Entries"
 msgctxt "@title:column"
 msgid "Entries"
 msgstr "Elementai"
 
-#: package/contents/ui/ConfigGeneral.qml:286
+#: package/contents/ui/ConfigGeneral.qml:310
 #, fuzzy, kde-format
 #| msgid "Always shown"
 msgid "Always show all"
 msgstr "Visada rodomas"
-
-#: package/contents/ui/ConfigGeneral.qml:330
-#, kde-format
-msgctxt "Name of the system tray entry"
-msgid "Entry"
-msgstr "Elementas"
-
-#: package/contents/ui/ConfigGeneral.qml:337
-#, kde-format
-msgid "Visibility"
-msgstr "Matomumas"
-
-#: package/contents/ui/ConfigGeneral.qml:344
-#, kde-format
-msgid "Keyboard Shortcut"
-msgstr "Spartieji klavišai"
 
 #: package/contents/ui/ExpandedRepresentation.qml:59
 #, kde-format
@@ -241,6 +227,19 @@ msgstr "Tinklelis, kuriame %1 elementai išdėstyti %2 stulpeliais"
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
 msgstr "AĄČčęĘėĖĮįILlmŠšŲųŪūŽžyjgGJP"
+
+#~ msgid "Small"
+#~ msgstr "Mažas"
+
+#~ msgctxt "Name of the system tray entry"
+#~ msgid "Entry"
+#~ msgstr "Elementas"
+
+#~ msgid "Visibility"
+#~ msgstr "Matomumas"
+
+#~ msgid "Keyboard Shortcut"
+#~ msgstr "Spartieji klavišai"
 
 #~ msgid "Always show all entries"
 #~ msgstr "Visada rodyti visus elementus"
