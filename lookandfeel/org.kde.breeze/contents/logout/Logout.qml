@@ -208,11 +208,20 @@ Item {
             visible: rebootToBootLoaderMenu
         }
 
-        RowLayout {
+        GridLayout {
             id: logoutButtonsRow
-            spacing: Kirigami.Units.largeSpacing
+
+            readonly property int spacing: Kirigami.Units.largeSpacing
+            rowSpacing: spacing
+            columnSpacing: spacing
+
             Layout.topMargin: Kirigami.Units.gridUnit * 2 - column.spacing
             Layout.alignment: Qt.AlignHCenter
+
+            readonly property int buttonCount: visibleChildren.length
+            readonly property int singleRowWidth: (children[0].implicitWidth * buttonCount) + (spacing * (buttonCount - 1))
+            columns: singleRowWidth < root.width ? buttonCount : Math.ceil(buttonCount / 2)
+
             LogoutButton {
                 id: suspendButton
                 icon.name: "system-suspend"
