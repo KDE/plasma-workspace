@@ -86,28 +86,25 @@ void PanelRulerView::syncPanelLocation()
         setBorders(Qt::TopEdge);
     }
 
-    switch (m_containment->location()) {
-    case Plasma::Types::LeftEdge:
-    case Plasma::Types::RightEdge:
-        setMaximumWidth(mainItem()->implicitWidth());
-        setWidth(mainItem()->implicitWidth());
-        setMaximumHeight(available.height());
-        setHeight(available.height());
-        break;
-    case Plasma::Types::TopEdge:
-    case Plasma::Types::BottomEdge:
-    default:
-        setMaximumWidth(available.width());
-        setWidth(available.width());
-        setMaximumHeight(mainItem()->implicitHeight());
-        setHeight(mainItem()->implicitHeight());
-        break;
-    }
-
     if (KWindowSystem::isPlatformX11()) {
 #if HAVE_X11
         KX11Extras::setType(winId(), NET::Dock);
         KX11Extras::setState(winId(), NET::KeepAbove);
+
+        switch (m_containment->location()) {
+        case Plasma::Types::LeftEdge:
+        case Plasma::Types::RightEdge:
+            setWidth(mainItem()->implicitWidth());
+            setHeight(available.height());
+            break;
+        case Plasma::Types::TopEdge:
+        case Plasma::Types::BottomEdge:
+        default:
+            setWidth(available.width());
+            setHeight(mainItem()->implicitHeight());
+            break;
+        }
+
         switch (m_containment->location()) {
         case Plasma::Types::TopEdge:
             setPosition(available.topLeft() + screen()->geometry().topLeft());
@@ -124,6 +121,18 @@ void PanelRulerView::syncPanelLocation()
         }
 #endif
     } else if (m_layerWindow) {
+        switch (m_containment->location()) {
+        case Plasma::Types::LeftEdge:
+        case Plasma::Types::RightEdge:
+            m_layerWindow->setDesiredSize(QSize(mainItem()->implicitWidth(), available.height()));
+            break;
+        case Plasma::Types::TopEdge:
+        case Plasma::Types::BottomEdge:
+        default:
+            m_layerWindow->setDesiredSize(QSize(available.width(), mainItem()->implicitHeight()));
+            break;
+        }
+
         m_layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityOnDemand);
         LayerShellQt::Window::Anchors anchors;
 
