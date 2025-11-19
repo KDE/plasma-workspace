@@ -285,6 +285,7 @@ ColumnLayout {
                 height: width
                 source: "expand"
                 visible: queryField.length === 0 && runnerManager.historyEnabled
+                enabled: runnerManager.history.length > 0
 
                 MouseArea {
                     anchors.fill: parent
