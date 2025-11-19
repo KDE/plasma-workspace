@@ -52,10 +52,6 @@
 	<tooltip>Show the popup menu of applicable actions as soon as a selection is made.</tooltip>
         <default>false</default>
     </entry>
-    <entry name="NoActionsForWM_CLASS" type="StringList">
-        <default>Navigator,navigator:browser,konqueror,keditbookmarks,mozilla-bin,Mozilla,Opera main window,opera,gnumeric,Gnumeric,Galeon,kcontrol,ksirc,MozillaFirebird-bin,firefox-bin,Firefox-bin,klipper,Gecko,gecko</default>
-        <label>No actions for WM_CLASS</label>
-    </entry>
     <entry name="TimeoutForActionPopups" type="Int">
         <label>Automatic action menu time:</label>
         <default>8</default>

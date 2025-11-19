@@ -22,7 +22,6 @@
 
 #include <KActionCollection>
 #include <KConfigSkeleton>
-#include <KEditListWidget>
 #include <KLocalization>
 #include <KShortcutsEditor>
 #include <kconfigskeleton.h>
@@ -279,17 +278,6 @@ then it can be shown by using the <shortcut>%1</shortcut> key shortcut.",
                                                  this);
     layout->addRow(QString(), hint);
 
-    // Exclusions
-    auto *exclusionsButton = new QPushButton(QIcon::fromTheme(QStringLiteral("configure")), i18n("Exclude Windows..."), this);
-    connect(exclusionsButton, &QPushButton::clicked, this, &PopupWidget::onAdvanced);
-
-    // Right align the push button, regardless of the QFormLayout style
-    auto *hb = new QHBoxLayout;
-    hb->setContentsMargins(0, 0, 0, 0);
-    hb->addStretch(1);
-    hb->addWidget(exclusionsButton);
-    layout->addRow(QString(), hb);
-
     // Action popup time
     item = KlipperSettings::self()->timeoutForActionPopupsItem();
     m_actionTimeoutSb = new QSpinBox(this);
@@ -315,38 +303,6 @@ then it can be shown by using the <shortcut>%1</shortcut> key shortcut.",
     layout->addRow(QString(), ConfigDialog::createHintLabel(item, this));
 
     layout->addRow(QString(), new QLabel(this));
-}
-
-void PopupWidget::setExcludedWMClasses(const QStringList &excludedWMClasses)
-{
-    m_exclWMClasses = excludedWMClasses;
-}
-
-QStringList PopupWidget::excludedWMClasses() const
-{
-    return m_exclWMClasses;
-}
-
-void PopupWidget::onAdvanced()
-{
-    QDialog dlg(this);
-    dlg.setModal(true);
-    dlg.setWindowTitle(i18n("Exclude Windows"));
-    auto *buttons = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, &dlg);
-    buttons->button(QDialogButtonBox::Ok)->setShortcut(Qt::CTRL | Qt::Key_Return);
-    connect(buttons, &QDialogButtonBox::accepted, &dlg, &QDialog::accept);
-    connect(buttons, &QDialogButtonBox::rejected, &dlg, &QDialog::reject);
-
-    auto *widget = new AdvancedWidget(&dlg);
-    widget->setWMClasses(m_exclWMClasses);
-
-    auto *layout = new QVBoxLayout(&dlg);
-    layout->addWidget(widget);
-    layout->addWidget(buttons);
-
-    if (dlg.exec() == QDialog::Accepted) {
-        m_exclWMClasses = widget->wmClasses();
-    }
 }
 
 //////////////////////////
@@ -682,7 +638,6 @@ void ConfigDialog::updateSettings()
 
     m_klipper->setURLGrabberEnabled(KlipperSettings::uRLGrabberEnabled());
     m_klipper->urlGrabber()->setActionList(m_actionsPage->actionList());
-    m_klipper->urlGrabber()->setExcludedWMClasses(m_popupPage->excludedWMClasses());
     m_klipper->saveSettings();
 
     KlipperSettings::self()->save();
@@ -698,7 +653,6 @@ void ConfigDialog::updateWidgets()
 
     if (m_klipper && m_klipper->urlGrabber()) {
         m_actionsPage->setActionList(m_klipper->urlGrabber()->actionList());
-        m_popupPage->setExcludedWMClasses(m_klipper->urlGrabber()->excludedWMClasses());
     } else {
         qCDebug(KLIPPER_LOG) << "Klipper or grabber object is null";
         return;
@@ -711,8 +665,7 @@ void ConfigDialog::updateWidgetsDefault()
 {
     // The user clicked "Defaults".  Restore the default values for
     // widgets which are not managed by KConfigDialogManager.  The
-    // settings of "Actions Configuration" and "Excluded Windows"
-    // are not reset to the default.
+    // settings of "Actions Configuration" are not reset to the default.
 
     m_shortcutsWidget->allDefault();
 }
@@ -720,62 +673,6 @@ void ConfigDialog::updateWidgetsDefault()
 bool ConfigDialog::hasChanged()
 {
     return (m_actionsPage->hasChanged() || m_shortcutsWidget->isModified());
-}
-
-//////////////////////////
-//  AdvancedWidget	//
-//////////////////////////
-
-AdvancedWidget::AdvancedWidget(QWidget *parent)
-    : QWidget(parent)
-{
-    auto *mainLayout = new QVBoxLayout(this);
-
-    QLabel *hint = ConfigDialog::createHintLabel(xi18nc("@info",
-                                                        "The action popup will not be shown automatically for these windows, \
-even if it is enabled. This is because, for example, a web browser may highlight a URL \
-in the address bar while typing, so the menu would show for every keystroke.\
-<nl/>\
-<nl/>\
-If the action menu appears unexpectedly when using a particular application, then add it to this list. \
-<link>How to find the name to enter</link>."),
-                                                 this);
-
-    mainLayout->addWidget(hint);
-    connect(hint, &QLabel::linkActivated, this, [hint]() {
-        QToolTip::showText(QCursor::pos(),
-                           xi18nc("@info:tooltip",
-                                  "The name that needs to be entered here is the WM_CLASS name of the window to be excluded. \
-To find the WM_CLASS name for a window, in another terminal window enter the command:\
-<nl/>\
-<nl/>\
-&nbsp;&nbsp;<icode>xprop | grep WM_CLASS</icode>\
-<nl/>\
-<nl/>\
-and click on the window that you want to exclude. \
-The first name that it displays after the equal sign is the one that you need to enter."),
-                           hint);
-    });
-
-    mainLayout->addWidget(hint);
-    mainLayout->addWidget(new QLabel(this));
-
-    m_editListBox = new KEditListWidget(this);
-    m_editListBox->setButtons(KEditListWidget::Add | KEditListWidget::Remove);
-    m_editListBox->setCheckAtEntering(true);
-    mainLayout->addWidget(m_editListBox);
-
-    m_editListBox->setFocus();
-}
-
-void AdvancedWidget::setWMClasses(const QStringList &items)
-{
-    m_editListBox->setItems(items);
-}
-
-QStringList AdvancedWidget::wmClasses() const
-{
-    return m_editListBox->items();
 }
 
 #include "moc_configdialog.cpp"

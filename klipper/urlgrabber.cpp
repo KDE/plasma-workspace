@@ -22,8 +22,6 @@
 #include <KNotificationJobUiDelegate>
 #include <KService>
 #include <KStringHandler>
-#include <KWindowInfo>
-#include <KX11Extras>
 
 #include "clipcommandprocess.h"
 #include "klippersettings.h"
@@ -155,11 +153,6 @@ void URLGrabber::actionMenu(HistoryItemConstPtr item, bool automatically_invoked
     const ActionList matchingActionsList = matchingActions(text, automatically_invoked);
 
     if (!matchingActionsList.isEmpty()) {
-        // don't react on blacklisted (e.g. konqi's/netscape's urls) unless the user explicitly asked for it
-        if (automatically_invoked && isAvoidedWindow()) {
-            return;
-        }
-
         m_myCommandMapper.clear();
 
         m_myPopupKillTimer->stop();
@@ -262,7 +255,6 @@ void URLGrabber::execute(const ClipAction *action, int cmdIdx) const
 void URLGrabber::loadSettings()
 {
     m_stripWhiteSpace = KlipperSettings::stripWhiteSpace();
-    m_myAvoidWindows = KlipperSettings::noActionsForWM_CLASS();
     m_myPopupKillTimeout = KlipperSettings::timeoutForActionPopups();
 
     qDeleteAll(m_myActions);
@@ -289,19 +281,6 @@ void URLGrabber::saveSettings() const
         action->save(config, group);
         ++i;
     }
-
-    KlipperSettings::setNoActionsForWM_CLASS(m_myAvoidWindows);
-}
-
-// find out whether the active window's WM_CLASS is in our avoid-list
-bool URLGrabber::isAvoidedWindow() const
-{
-    const WId active = KX11Extras::activeWindow();
-    if (!active) {
-        return false;
-    }
-    KWindowInfo info(active, NET::Properties(), NET::WM2WindowClass);
-    return m_myAvoidWindows.contains(QString::fromLatin1(info.windowClassName()));
 }
 
 void URLGrabber::slotKillPopupMenu()

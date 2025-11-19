@@ -14,7 +14,6 @@ class KConfigSkeleton;
 class KConfigSkeletonItem;
 class KShortcutsEditor;
 class Klipper;
-class KEditListWidget;
 class KActionCollection;
 class QCheckBox;
 class QRadioButton;
@@ -66,12 +65,6 @@ public:
     explicit PopupWidget(QWidget *parent);
     ~PopupWidget() override = default;
 
-    void setExcludedWMClasses(const QStringList &);
-    QStringList excludedWMClasses() const;
-
-private Q_SLOTS:
-    void onAdvanced();
-
 private:
     QCheckBox *m_enablePopupCb;
     QCheckBox *m_historyPopupCb;
@@ -79,8 +72,6 @@ private:
     QCheckBox *m_mimeActionsCb;
 
     QSpinBox *m_actionTimeoutSb;
-
-    QStringList m_exclWMClasses;
 };
 
 class ActionsWidget : public QWidget
@@ -120,22 +111,6 @@ private:
      * List of actions this page works with
      */
     ActionList m_actionList;
-};
-
-// only for use inside PopupWidget
-class AdvancedWidget : public QWidget
-{
-    Q_OBJECT
-
-public:
-    explicit AdvancedWidget(QWidget *parent = nullptr);
-    ~AdvancedWidget() override = default;
-
-    void setWMClasses(const QStringList &items);
-    QStringList wmClasses() const;
-
-private:
-    KEditListWidget *m_editListBox;
 };
 
 class ConfigDialog : public KConfigDialog

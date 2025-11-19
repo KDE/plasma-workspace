@@ -59,15 +59,6 @@ public:
         m_myPopupKillTimeout = timeout;
     }
 
-    QStringList excludedWMClasses() const
-    {
-        return m_myAvoidWindows;
-    }
-    void setExcludedWMClasses(const QStringList &list)
-    {
-        m_myAvoidWindows = list;
-    }
-
     bool stripWhiteSpace() const
     {
         return m_stripWhiteSpace;
@@ -80,13 +71,11 @@ public:
 private:
     const ActionList &matchingActions(const QString &, bool automatically_invoked);
     void execute(const ClipAction *action, int commandIdx) const;
-    bool isAvoidedWindow() const;
     void actionMenu(std::shared_ptr<const HistoryItem> item, bool automatically_invoked);
     void matchingMimeActions(const QString &clipData);
 
     ActionList m_myActions;
     ActionList m_myMatches;
-    QStringList m_myAvoidWindows;
     std::shared_ptr<const HistoryItem> m_myClipItem;
     ClipAction *m_myCurrentAction;
 

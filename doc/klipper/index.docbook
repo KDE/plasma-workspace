@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" 
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
 "dtd/kdedbx45.dtd" [
   <!ENTITY kappname "&klipper;">
   <!ENTITY package "kdebase">
@@ -60,7 +60,7 @@ url="http://bugs.kde.org">KDEs bugzilla</ulink>.</para>
 <sect1 id="basic-usage">
 <title>Basic Usage</title>
 <para>You can use &klipper; in the systemtray either as &plasma; widget or classic application.
-Both share the same functionality but have a different &GUI; and show the last item of the history 
+Both share the same functionality but have a different &GUI; and show the last item of the history
 when hovering the &klipper; icon in the systemtray:
 </para>
 
@@ -95,7 +95,7 @@ the systemtray.</para>
 </mediaobject>
 </screenshot>
 
-<para>Hover an entry with the mouse pointer and four icons appear which enable you to 
+<para>Hover an entry with the mouse pointer and four icons appear which enable you to
 invoke an action, show the barcode, edit the content or remove the entry from the history.
 Use &spectacle; to capture the barcodes and save them.
 </para>
@@ -106,7 +106,7 @@ you type. To clear the clipboard history click on the icon at the right of
 the search field.
 </para>
 
-<para>The <guilabel>Configure Clipboard...</guilabel> action in the context menu opens the 
+<para>The <guilabel>Configure Clipboard...</guilabel> action in the context menu opens the
 <link linkend="preferences">settings dialog</link>.
 </para>
 
@@ -119,15 +119,15 @@ the search field.
 <para>&klipper; can perform actions on the contents of the clipboard,
 based on whether they match a particular regular expression. For
 example, any clipboard contents starting with <quote>http://</quote> can
-be passed to Firefox or &konqueror; as &URL;s to open. In addition, if the 
+be passed to Firefox or &konqueror; as &URL;s to open. In addition, if the
 contents matches a path, similar actions can be performed according to the file's
-type. &eg;, if the path to a <acronym>PDF</acronym> file is copied to the clipboard, the file can be 
+type. &eg;, if the path to a <acronym>PDF</acronym> file is copied to the clipboard, the file can be
 viewed in &okular;.</para>
 
 <para>To use this feature, just select a &URL; or path. <!-- starting with slash ?-->
 If there is a matching regular expression in &klipper;'s
-list, a menu will appear showing you the programs for your selection. 
-Use the mouse or cursor keys to select a program, and &klipper; will run 
+list, a menu will appear showing you the programs for your selection.
+Use the mouse or cursor keys to select a program, and &klipper; will run
 this program, opening the address pointed to by the
 selection.</para>
 
@@ -141,7 +141,7 @@ part using the option <guilabel>Include MIME actions</guilabel> under the
 the shortcut <keycombo action="simul">&Ctrl;&Alt;<keycap>X</keycap></keycombo>.</para>
 
 <para>Clipboard contents which match a regular expression can also be
-edited before performing an action on them. Select <guimenuitem>Edit 
+edited before performing an action on them. Select <guimenuitem>Edit
 contents...</guimenuitem> at the right of the clipboard entry, and you can
 change the clipboard contents in the dialog which appears, before
 clicking the <guibutton>OK</guibutton> button to run the appropriate
@@ -160,7 +160,7 @@ menu to repeat the last action which &klipper; performed.</para>
 <title>General</title>
 <para>
 &klipper; can be used to set the behavior of the clipboard and selection in
-&plasma;. 
+&plasma;.
 </para>
 
 <note><para>The &X-Window; uses two separate clipboard buffers: the
@@ -171,7 +171,7 @@ the clipboard buffer, select it and press
 <keycombo>&Ctrl;<keycap>X</keycap> </keycombo> or
 <keycombo>&Ctrl;<keycap>C</keycap> </keycombo>. Text from the
 clipboard buffer is pasted using <keycombo>&Ctrl;<keycap>V</keycap>
-</keycombo> or by selecting <guimenuitem>Paste</guimenuitem> 
+</keycombo> or by selecting <guimenuitem>Paste</guimenuitem>
 in a context menu.</para>
 </note>
 
@@ -217,15 +217,15 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 <variablelist>
 
 <varlistentry><term><guilabel>Selection and Clipboard</guilabel></term>
-<listitem><para>When text or an area of the screen is highlighted with the mouse or 
-keyboard, this is the <emphasis>selection</emphasis>. It can be pasted using 
-the middle mouse button.</para><para>If the selection is explicitly copied 
-using a <guimenuitem>Copy</guimenuitem> or <guimenuitem>Cut</guimenuitem> action, it 
-is saved to the <emphasis>clipboard</emphasis>. It can be pasted using a 
-<guimenuitem>Paste</guimenuitem> action.</para><para>When turned on this option 
-keeps the selection and the clipboard the same, so that any selection is 
-immediately available to paste by any means. If it is turned off, the 
-selection may still be saved in the clipboard history (subject to the 
+<listitem><para>When text or an area of the screen is highlighted with the mouse or
+keyboard, this is the <emphasis>selection</emphasis>. It can be pasted using
+the middle mouse button.</para><para>If the selection is explicitly copied
+using a <guimenuitem>Copy</guimenuitem> or <guimenuitem>Cut</guimenuitem> action, it
+is saved to the <emphasis>clipboard</emphasis>. It can be pasted using a
+<guimenuitem>Paste</guimenuitem> action.</para><para>When turned on this option
+keeps the selection and the clipboard the same, so that any selection is
+immediately available to paste by any means. If it is turned off, the
+selection may still be saved in the clipboard history (subject to the
 options below), but it can only be pasted using the middle mouse button.</para></listitem>
 </varlistentry>
 
@@ -240,7 +240,7 @@ in the clipboard history.</para></listitem>
 
 <varlistentry>
 <term><guilabel>Text selection</guilabel></term>
-<listitem><para>When an area of the screen is selected with mouse or keyboard, this is 
+<listitem><para>When an area of the screen is selected with mouse or keyboard, this is
 called the <quote>selection</quote>. This option determines whether text selections are
 saved in the clipboard history. It is possible to choose between <guilabel>Always save
 in history</guilabel> and <guilabel>Only when explicitly copied</guilabel>. The
@@ -250,7 +250,7 @@ case the selection is never automatically saved in the clipboard history.
 See <xref linkend="clipboard-modes"/>.
 </para>
 </listitem>
-</varlistentry> 
+</varlistentry>
 
 <varlistentry>
 <term><guilabel>Non-text selection</guilabel></term>
@@ -263,7 +263,7 @@ is turned off &dash; in this case the selection is never automatically saved in 
 clipboard history. See <xref linkend="clipboard-modes"/>.
 </para>
 </listitem>
-</varlistentry> 
+</varlistentry>
 
 </variablelist>
 
@@ -284,30 +284,8 @@ nothing with it.</para></listitem>
 <term><guilabel>Replay actions on an item selected from
 history</guilabel></term>
 <listitem><para>If this is switched on, selecting an item from the history
-causes &klipper; to display the actions pop-up on that item, if 
+causes &klipper; to display the actions pop-up on that item, if
 appropriate.</para>
-</listitem>
-</varlistentry>
-
-<varlistentry><term><guibutton>Exclude Windows</guibutton></term>
-<listitem><para>Brings up the <guilabel>Disable Actions for windows of type
-WM_CLASS</guilabel> dialog.</para>
-<para>Some programs, such as &konqueror;,
-use the clipboard internally. If you get unwanted &klipper; pop-ups all the time
-when using a certain application, do the following:</para>
-
-<orderedlist>
-<listitem><para>Open the application.</para></listitem>
-<listitem><para>From a terminal, run <userinput><command>xprop</command>
-| <command>grep</command> <parameter>WM_CLASS</parameter></userinput>
-and then click on the window of the application you are
-running.</para></listitem> 
-<listitem><para>The first string after the equals sign is the one to
-enter.</para></listitem>
-</orderedlist>
-
-<para>Once the WM_CLASS is added, no more actions will be generated for
-windows of that application.</para>
 </listitem>
 </varlistentry>
 
@@ -323,7 +301,7 @@ cause an error.</para>
 
 <varlistentry>
 <term><guilabel>Include MIME actions</guilabel></term>
-<listitem><para>If selected, include applications that can accept its 
+<listitem><para>If selected, include applications that can accept its
 &MIME; type of a file name or URL selected in the popup menu.</para>
 </listitem>
 </varlistentry>
@@ -337,8 +315,8 @@ cause an error.</para>
 <varlistentry>
 <term>Editing Expressions/Actions</term>
 <listitem><para>On the <guilabel>Actions</guilabel> page, double-click
-the regular expression or action that you want to edit or select it and 
-press the <guibutton>Edit Action</guibutton> button. A dialog will appear in which the 
+the regular expression or action that you want to edit or select it and
+press the <guibutton>Edit Action</guibutton> button. A dialog will appear in which the
 expression text can be edited as you wish.</para></listitem>
 </varlistentry>
 
@@ -350,7 +328,7 @@ to add a regular expression for &klipper; to match. &klipper; uses
 Compatible Regular Expressions).</para>
 <para>You can add a description of the regular expression type (&eg;
 <quote>HTTP URL</quote>) by <mousebutton>left</mousebutton> clicking in the
-<guilabel>Description</guilabel> column.</para>   
+<guilabel>Description</guilabel> column.</para>
 
 <note><para>You can find detailed information about the use of
 <classname>QRegularExpression</classname> regular expressions in <ulink
@@ -358,7 +336,7 @@ url="https://doc.qt.io/qt-5/qregularexpression.html#details">the Qt upstream
 documentation</ulink>.</para></note>
 
 <para>Edit the regular expression as described above. To add a command
-to execute, click <guimenuitem>Add Command</guimenuitem> and edit the command 
+to execute, click <guimenuitem>Add Command</guimenuitem> and edit the command
 in an in-place text editing box. Double-clicking on a command allows you to edit it.</para>
 
 <para>Note that <token>%s</token> in the command line is replaced with
@@ -401,14 +379,14 @@ shortcuts referred to in this manual.</para></listitem>
 <varlistentry>
 <term><guilabel>Custom</guilabel></term>
 <listitem><para>The selected action is assigned to the keys you choose.</para>
-<para>To choose a custom key for the action you have selected, click on 
+<para>To choose a custom key for the action you have selected, click on
 <guilabel>Custom</guilabel> and then <guilabel>None</guilabel>.
-Now type the desired key combination on your keyboard, as in any &kde; application. 
+Now type the desired key combination on your keyboard, as in any &kde; application.
 </para> </listitem>
 </varlistentry>
 </variablelist>
 
-<para>If you define a shortcut for <guilabel>Open Klipper at Mouse Position</guilabel> 
+<para>If you define a shortcut for <guilabel>Open Klipper at Mouse Position</guilabel>
 pressing this shortcut will open the &klipper; popup menu at the position of
 the mouse cursor, instead of their default position (in the &plasma; Panel).
 Useful if you use the mouse more than the keyboard.</para>
@@ -444,7 +422,7 @@ Documentation copyright 2000-2003, 2005 &Philip.Rodrigues;
 </chapter>
 
 
-&documentation.index; 
+&documentation.index;
 
 </book>
 <!--
