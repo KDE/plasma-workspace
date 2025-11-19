@@ -31,6 +31,7 @@ public:
     void setPlasmaShell(KWayland::Client::PlasmaShell *plasmashell);
 
     void editCurrentClipboard();
+    void showCurrentBarcode();
 
 public Q_SLOTS:
     void hide();

@@ -67,6 +67,14 @@ void KlipperPopup::editCurrentClipboard()
     QMetaObject::invokeMethod(mainItem(), "editClipboardContent", Q_ARG(int, 0));
 }
 
+void KlipperPopup::showCurrentBarcode()
+{
+    if (!isVisible()) {
+        show();
+    }
+    QMetaObject::invokeMethod(mainItem(), "showBarcode", Q_ARG(int, 0));
+}
+
 void KlipperPopup::hide()
 {
     QWindow::hide();

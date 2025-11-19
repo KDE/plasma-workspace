@@ -11,24 +11,13 @@
 #include "klipper.h"
 
 #include "klipper_debug.h"
-#include <QApplication>
-#include <QBoxLayout>
 #include <QDBusConnection>
-#include <QDialog>
-#include <QDir>
-#include <QLabel>
 #include <QMenu>
-#include <QMessageBox>
 #include <QMimeData>
-#include <QPushButton>
-#include <QResizeEvent>
 
-#include <KAboutData>
 #include <KActionCollection>
 #include <KGlobalAccel>
-#include <KHelpMenu>
 #include <KLocalizedString>
-#include <KMessageBox>
 #include <KNotification>
 #include <KToggleAction>
 #include <KWayland/Client/connection_thread.h>
@@ -44,8 +33,6 @@
 #include "klipperpopup.h"
 #include "klippersettings.h"
 #include "systemclipboard.h"
-
-#include <Prison/Barcode>
 
 #include <config-X11.h>
 #include <wayland-client-core.h>
@@ -128,9 +115,7 @@ Klipper::Klipper(QObject *parent)
     m_showBarcodeAction->setText(i18nc("@action:inmenu", "&Show Barcode…"));
     m_showBarcodeAction->setIcon(QIcon::fromTheme(QStringLiteral("view-barcode-qr")));
     KGlobalAccel::setGlobalShortcut(m_showBarcodeAction, QKeySequence());
-    connect(m_showBarcodeAction, &QAction::triggered, this, [this]() {
-        showBarcode(m_historyModel->first());
-    });
+    connect(m_showBarcodeAction, &QAction::triggered, m_popup.get(), &KlipperPopup::showCurrentBarcode);
 
     // Cycle through history
     m_cycleNextAction = m_collection->addAction(QStringLiteral("cycleNextAction"));
@@ -399,69 +384,6 @@ void Klipper::updateTimestamp()
         xcb_aux_sync(interface->connection());
     }
 #endif
-}
-
-class BarcodeLabel : public QLabel
-{
-public:
-    BarcodeLabel(Prison::Barcode &&barcode, QWidget *parent = nullptr)
-        : QLabel(parent)
-        , m_barcode(std::move(barcode))
-    {
-        setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::MinimumExpanding);
-        setPixmap(QPixmap::fromImage(m_barcode.toImage(size())));
-    }
-
-protected:
-    void resizeEvent(QResizeEvent *event) override
-    {
-        QLabel::resizeEvent(event);
-        setPixmap(QPixmap::fromImage(m_barcode.toImage(event->size())));
-    }
-
-private:
-    Prison::Barcode m_barcode;
-};
-
-void Klipper::showBarcode(std::shared_ptr<const HistoryItem> item)
-{
-    QPointer<QDialog> dlg(new QDialog());
-    dlg->setWindowTitle(i18n("Mobile Barcode"));
-    auto *buttons = new QDialogButtonBox(QDialogButtonBox::Ok, dlg);
-    buttons->button(QDialogButtonBox::Ok)->setShortcut(Qt::CTRL | Qt::Key_Return);
-    connect(buttons, &QDialogButtonBox::accepted, dlg.data(), &QDialog::accept);
-    connect(dlg.data(), &QDialog::finished, dlg.data(), &QDialog::deleteLater);
-
-    auto *mw = new QWidget(dlg);
-    auto *layout = new QHBoxLayout(mw);
-
-    {
-        auto qrCode = Prison::Barcode::create(Prison::QRCode);
-        if (qrCode) {
-            if (item) {
-                qrCode->setData(item->text());
-            }
-            auto *qrCodeLabel = new BarcodeLabel(std::move(*qrCode), mw);
-            layout->addWidget(qrCodeLabel);
-        }
-    }
-    {
-        auto dataMatrix = Prison::Barcode::create(Prison::DataMatrix);
-        if (dataMatrix) {
-            if (item) {
-                dataMatrix->setData(item->text());
-            }
-            auto *dataMatrixLabel = new BarcodeLabel(std::move(*dataMatrix), mw);
-            layout->addWidget(dataMatrixLabel);
-        }
-    }
-
-    mw->setFocus();
-    auto *vBox = new QVBoxLayout(dlg);
-    vBox->addWidget(mw);
-    vBox->addWidget(buttons);
-    dlg->adjustSize();
-    dlg->open();
 }
 
 void Klipper::slotCycleNext()

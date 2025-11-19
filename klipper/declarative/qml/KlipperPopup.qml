@@ -36,6 +36,15 @@ PlasmaExtras.Representation {
         ((clipboardMenu.view as ListView).currentItem as ClipboardItemDelegate).edit();
     }
 
+    function showBarcode(index: int): void {
+        if (stack.currentItem instanceof BarcodePage || index < 0 || index >= clipboardMenu.view.count) {
+            return;
+        }
+        const view = clipboardMenu.view as ListView;
+        view.currentIndex = index;
+        (view.currentItem as ClipboardItemDelegate).barcode();
+    }
+
     function updateContentSize(screenSize: size): void {
         dialogItem.implicitWidth = Math.max(Kirigami.Units.gridUnit * 15, Math.min(screenSize.width / 4, Kirigami.Units.gridUnit * 40));
         dialogItem.implicitHeight = Math.min(screenSize.height / 2, Kirigami.Units.gridUnit * 40);

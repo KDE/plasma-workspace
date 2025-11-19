@@ -82,8 +82,6 @@ public:
         return m_popup.get();
     }
 
-    void showBarcode(std::shared_ptr<const HistoryItem> item);
-
 public Q_SLOTS:
     void saveSession();
     void slotConfigure();
