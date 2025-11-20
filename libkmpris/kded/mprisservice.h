@@ -29,6 +29,10 @@ private Q_SLOTS:
     void onPlayPause();
     void onNext();
     void onPrevious();
+    void onSeekForward();
+    void onSeekBackward();
+    void onSeekForwardLong();
+    void onSeekBackwardLong();
     void onStop();
     void onPause();
     void onPlay();
