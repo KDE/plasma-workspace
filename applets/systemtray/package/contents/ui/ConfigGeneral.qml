@@ -307,7 +307,7 @@ KCMUtils.ScrollViewKCM {
             actions: [
                 Kirigami.Action {
                     id: showAllCheckBox
-                    text: i18n("Always show all") // qmllint disable unqualified
+                    text: i18nc("@option:check, This is referring to system tray entries", "Always show all") // qmllint disable unqualified
                     onToggled: iconsPage.cfg_showAllItems = checked
                     checked: iconsPage.cfg_showAllItems
                     displayComponent: QQC2.CheckBox {
