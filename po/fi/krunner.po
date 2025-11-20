@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-20 00:44+0000\n"
 "PO-Revision-Date: 2023-08-26 18:49+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -112,32 +112,32 @@ msgctxt "Textfield placeholder text"
 msgid "Search…"
 msgstr "Etsi…"
 
-#: qml/RunCommand.qml:310 qml/RunCommand.qml:311 qml/RunCommand.qml:313
+#: qml/RunCommand.qml:311 qml/RunCommand.qml:312 qml/RunCommand.qml:314
 #, kde-format
 msgid "Show Usage Help"
 msgstr "Näytä käyttöohje"
 
-#: qml/RunCommand.qml:321
+#: qml/RunCommand.qml:322
 #, kde-format
 msgid "Pin"
 msgstr "Kiinnitä"
 
-#: qml/RunCommand.qml:322
+#: qml/RunCommand.qml:323
 #, kde-format
 msgid "Pin Search"
 msgstr "Kiinnitä haku"
 
-#: qml/RunCommand.qml:324
+#: qml/RunCommand.qml:325
 #, kde-format
 msgid "Keep Open"
 msgstr "Pidä avoinna"
 
-#: qml/RunCommand.qml:383 qml/RunCommand.qml:388
+#: qml/RunCommand.qml:384 qml/RunCommand.qml:389
 #, kde-format
 msgid "Recent Queries"
 msgstr "Viimeisimmät haut"
 
-#: qml/RunCommand.qml:386
+#: qml/RunCommand.qml:387
 #, kde-format
 msgid "Remove"
 msgstr "Poista"

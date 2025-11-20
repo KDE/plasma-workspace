@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-20 00:44+0000\n"
 "PO-Revision-Date: 2025-01-28 01:46-0300\n"
 "Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -87,71 +87,71 @@ msgstr ""
 "Ao reiniciar, o computador entrará no menu de configuração do carregador de "
 "inicialização."
 
-#: contents/logout/Logout.qml:219
+#: contents/logout/Logout.qml:228
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p"
 msgstr "&Suspender"
 
-#: contents/logout/Logout.qml:220
+#: contents/logout/Logout.qml:229
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p Now"
 msgstr "&Suspender agora"
 
-#: contents/logout/Logout.qml:229
+#: contents/logout/Logout.qml:238
 #, kde-format
 msgid "&Hibernate"
 msgstr "&Hibernar"
 
-#: contents/logout/Logout.qml:230
+#: contents/logout/Logout.qml:239
 #, kde-format
 msgid "&Hibernate Now"
 msgstr "&Hibernar agora"
 
-#: contents/logout/Logout.qml:241
+#: contents/logout/Logout.qml:250
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
 msgstr "Instalar atualizações e reiniciar"
 
-#: contents/logout/Logout.qml:243 contents/logout/Logout.qml:262
+#: contents/logout/Logout.qml:252 contents/logout/Logout.qml:271
 #, kde-format
 msgid "&Restart"
 msgstr "&Reiniciar"
 
-#: contents/logout/Logout.qml:244 contents/logout/Logout.qml:263
+#: contents/logout/Logout.qml:253 contents/logout/Logout.qml:272
 #, kde-format
 msgid "&Restart Now"
 msgstr "&Reiniciar agora"
 
-#: contents/logout/Logout.qml:276
+#: contents/logout/Logout.qml:285
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
 msgstr "Instalar atualizações e desligar"
 
-#: contents/logout/Logout.qml:278 contents/logout/Logout.qml:297
+#: contents/logout/Logout.qml:287 contents/logout/Logout.qml:306
 #, kde-format
 msgid "&Shut Down"
 msgstr "&Desligar"
 
-#: contents/logout/Logout.qml:279 contents/logout/Logout.qml:298
+#: contents/logout/Logout.qml:288 contents/logout/Logout.qml:307
 #, kde-format
 msgid "&Shut Down Now"
 msgstr "&Desligar agora"
 
-#: contents/logout/Logout.qml:310
+#: contents/logout/Logout.qml:319
 #, kde-format
 msgid "&Log Out"
 msgstr "&Encerrar sessão"
 
-#: contents/logout/Logout.qml:311
+#: contents/logout/Logout.qml:320
 #, kde-format
 msgid "&Log Out Now"
 msgstr "&Encerrar sessão agora"
 
-#: contents/logout/Logout.qml:321
+#: contents/logout/Logout.qml:330
 #, kde-format
 msgid "&Cancel"
 msgstr "&Cancelar"

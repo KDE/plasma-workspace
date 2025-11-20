@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-18 00:45+0000\n"
+"POT-Creation-Date: 2025-11-20 00:44+0000\n"
 "PO-Revision-Date: 2024-09-19 16:56+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -36,12 +36,12 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "sngeorgaras@otenet.gr, manolis@koppermind.homelinux.org"
 
-#: configdialog.cpp:85
+#: configdialog.cpp:84
 #, kde-format
 msgid "Clipboard history:"
 msgstr "Ιστορικό πρόχειρου:"
 
-#: configdialog.cpp:91
+#: configdialog.cpp:90
 #, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
@@ -49,12 +49,12 @@ msgid_plural "%v entries"
 msgstr[0] "%v καταχώρηση"
 msgstr[1] "%v καταχωρήσεις"
 
-#: configdialog.cpp:100
+#: configdialog.cpp:99
 #, kde-format
 msgid "Selection and Clipboard:"
 msgstr "Επιλογή και πρόχειρο:"
 
-#: configdialog.cpp:107
+#: configdialog.cpp:106
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -83,37 +83,37 @@ msgstr ""
 "παρακάτω επιλογών), αλλά μπορεί να επικολληθεί μόνο με τη χρήση του μεσαίου "
 "πλήκτρου του ποντικιού."
 
-#: configdialog.cpp:136 configdialog.cpp:174
+#: configdialog.cpp:135 configdialog.cpp:173
 #, kde-format
 msgid "Always save in history"
 msgstr "Πάντα αποθήκευση στο ιστορικό"
 
-#: configdialog.cpp:140
+#: configdialog.cpp:139
 #, kde-format
 msgid "Text selection:"
 msgstr "Επιλογή κειμένου:"
 
-#: configdialog.cpp:142 configdialog.cpp:180
+#: configdialog.cpp:141 configdialog.cpp:179
 #, kde-format
 msgid "Only when explicitly copied"
 msgstr "Μόνο όταν αντιγράφεται ρητά"
 
-#: configdialog.cpp:147
+#: configdialog.cpp:146
 #, kde-format
 msgid "Whether text selections are saved in the clipboard history."
 msgstr "Εάν οι επιλογές κειμένου αποθηκεύονται στο ιστορικό του πρόχειρου."
 
-#: configdialog.cpp:178
+#: configdialog.cpp:177
 #, kde-format
 msgid "Non-text selection:"
 msgstr "Επιλογή μη κειμένου:"
 
-#: configdialog.cpp:185
+#: configdialog.cpp:184
 #, kde-format
 msgid "Never save in history"
 msgstr "Να μην αποθηκεύεται ποτέ στο ιστορικό"
 
-#: configdialog.cpp:190
+#: configdialog.cpp:189
 #, kde-format
 msgid ""
 "Whether non-text selections (such as images) are saved in the clipboard "
@@ -122,12 +122,12 @@ msgstr ""
 "Εάν οι επιλογές μη κειμένου (όπως εικόνες) αποθηκεύονται στο ιστορικό του "
 "πρόχειρου."
 
-#: configdialog.cpp:264
+#: configdialog.cpp:263
 #, kde-format
 msgid "Show action popup menu:"
 msgstr "Εμφάνιση αναδυόμενου μενού ενεργειών:"
 
-#: configdialog.cpp:274
+#: configdialog.cpp:273
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -143,12 +143,7 @@ msgstr ""
 "δεν εμφανίζεται για ένα αποκλεισμένο παράθυρο, τότε μπορεί να εμφανιστεί με "
 "τη χρήση της συντόμευσης πλήκτρου <shortcut>%1</shortcut>."
 
-#: configdialog.cpp:283
-#, kde-format
-msgid "Exclude Windows..."
-msgstr "Εξαίρεση παραθύρων..."
-
-#: configdialog.cpp:297
+#: configdialog.cpp:285
 #, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
@@ -156,23 +151,18 @@ msgid_plural "%v seconds"
 msgstr[0] "%v δεύτερο"
 msgstr[1] "%v δευτερόλεπτα"
 
-#: configdialog.cpp:298
+#: configdialog.cpp:286
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "Κανένα"
 
-#: configdialog.cpp:307
+#: configdialog.cpp:295
 #, kde-format
 msgid "Options:"
 msgstr "Επιλογές:"
 
-#: configdialog.cpp:334
-#, kde-format
-msgid "Exclude Windows"
-msgstr "Εξαίρεση παραθύρων"
-
-#: configdialog.cpp:364
+#: configdialog.cpp:320
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -184,34 +174,34 @@ msgstr ""
 "περιεχόμενα του πρόχειρου, οι <interface>εντολές</interface> του "
 "εμφανίζονται στο αναδυόμενο μενού Klipper και μπορούν να εκτελεστούν."
 
-#: configdialog.cpp:373
+#: configdialog.cpp:329
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "Μοτίβο αντιστοίχισης και εντολές"
 
-#: configdialog.cpp:373
+#: configdialog.cpp:329
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Περιγραφή"
 
-#: configdialog.cpp:379
+#: configdialog.cpp:335
 #, kde-format
 msgid "Add Action..."
 msgstr "Προσθήκη ενέργειας..."
 
-#: configdialog.cpp:383
+#: configdialog.cpp:339
 #, kde-format
 msgid "Edit Action..."
 msgstr "Επεξεργασία ενέργειας..."
 
-#: configdialog.cpp:388
+#: configdialog.cpp:344
 #, kde-format
 msgid "Delete Action"
 msgstr "Διαγραφή ενέργειας"
 
-#: configdialog.cpp:395
+#: configdialog.cpp:351
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -221,7 +211,7 @@ msgstr ""
 "Αυτές οι ενέργειες εμφανίζονται στο αναδυόμενο μενού, το οποίο μπορεί να "
 "ρυθμιστεί στη σελίδα <interface>Μενού ενεργειών</interface>."
 
-#: configdialog.cpp:590
+#: configdialog.cpp:546
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -231,91 +221,54 @@ msgstr ""
 "Διαγραφή της επιλεγμένης ενέργειας <resource>%1</resource><nl/>και όλων των "
 "εντολών της;"
 
-#: configdialog.cpp:591
+#: configdialog.cpp:547
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "Επιβεβαίωση διαγραφής ενέργειας"
 
-#: configdialog.cpp:644
+#: configdialog.cpp:600
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Γενικά"
 
-#: configdialog.cpp:644
+#: configdialog.cpp:600
 #, kde-format
 msgid "General Configuration"
 msgstr "Γενική διαμόρφωση"
 
-#: configdialog.cpp:645
+#: configdialog.cpp:601
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Μενού ενεργειών"
 
-#: configdialog.cpp:645
+#: configdialog.cpp:601
 #, kde-format
 msgid "Action Menu"
 msgstr "Μενού ενεργειών"
 
-#: configdialog.cpp:646
+#: configdialog.cpp:602
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Διαμόρφωση ενεργειών"
 
-#: configdialog.cpp:646
+#: configdialog.cpp:602
 #, kde-format
 msgid "Actions Configuration"
 msgstr "Διαμόρφωση ενεργειών"
 
-#: configdialog.cpp:649
+#: configdialog.cpp:605
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Συντομεύσεις"
 
-#: configdialog.cpp:649
+#: configdialog.cpp:605
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Διαμόρφωση συντομεύσεων"
-
-#: configdialog.cpp:735
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"The action popup will not be shown automatically for these windows, even if "
-"it is enabled. This is because, for example, a web browser may highlight a "
-"URL in the address bar while typing, so the menu would show for every "
-"keystroke.<nl/><nl/>If the action menu appears unexpectedly when using a "
-"particular application, then add it to this list. <link>How to find the name "
-"to enter</link>."
-msgstr ""
-"Το αναδυόμενο παράθυρο δράσης δεν θα εμφανίζεται αυτόματα για αυτά τα "
-"παράθυρα, ακόμη και αν είναι ενεργοποιημένο. Αυτό συμβαίνει επειδή, για "
-"παράδειγμα, ένα πρόγραμμα περιήγησης ιστού μπορεί να επισημάνει μια "
-"διεύθυνση URL στη γραμμή διευθύνσεων κατά την πληκτρολόγηση, οπότε το μενού "
-"θα εμφανιζόταν για κάθε πληκτρολόγηση.<nl/><nl/>Αν το μενού ενεργειών "
-"εμφανίζεται απροσδόκητα κατά τη χρήση μιας συγκεκριμένης εφαρμογής, τότε "
-"προσθέστε το σε αυτή τη λίστα. <link>Πώς να βρείτε το όνομα που πρέπει να "
-"πληκτρολογήσετε</link>."
-
-#: configdialog.cpp:748
-#, kde-kuit-format
-msgctxt "@info:tooltip"
-msgid ""
-"The name that needs to be entered here is the WM_CLASS name of the window to "
-"be excluded. To find the WM_CLASS name for a window, in another terminal "
-"window enter the command:<nl/><nl/>&nbsp;&nbsp;<icode>xprop | grep WM_CLASS</"
-"icode><nl/><nl/>and click on the window that you want to exclude. The first "
-"name that it displays after the equal sign is the one that you need to enter."
-msgstr ""
-"Το όνομα που πρέπει να εισαχθεί εδώ είναι το όνομα WM_CLASS του παραθύρου "
-"που πρέπει να εξαιρεθεί. Για να βρείτε το όνομα WM_CLASS ενός παραθύρου, σε "
-"ένα άλλο παράθυρο τερματικού πληκτρολογήστε την εντολή:<nl/><nl/>&nbsp;&nbsp;"
-"<icode>xprop | grep WM_CLASS</icode><nl/><nl/>και κάντε κλικ στο παράθυρο "
-"που θέλετε να αποκλείσετε. Το πρώτο όνομα που εμφανίζει μετά το σύμβολο "
-"ισότητας είναι αυτό που πρέπει να πληκτρολογήσετε."
 
 #: declarative/qml/BarcodePage.qml:32
 #, kde-format
@@ -925,38 +878,32 @@ msgstr ""
 "Εμφάνιση του αναδυόμενου μενού των εφαρμοζόμενων ενεργειών μόλις γίνει μια "
 "επιλογή."
 
-#. i18n: ectx: label, entry (NoActionsForWM_CLASS), group (General)
-#: klipper.kcfg:57
-#, kde-format
-msgid "No actions for WM_CLASS"
-msgstr "Καμία ενέργεια για το WM_CLASS"
-
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:60
+#: klipper.kcfg:56
 #, kde-format
 msgid "Automatic action menu time:"
 msgstr "Χρόνος μενού αυτόματης ενέργειας:"
 
 #. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:64
+#: klipper.kcfg:60
 #, kde-format
 msgid "Display the automatic action popup menu for this time."
 msgstr "Εμφάνιση του αναδυόμενου μενού αυτόματης ενέργειας για αυτή τη στιγμή."
 
 #. i18n: ectx: label, entry (MaxClipItems), group (General)
-#: klipper.kcfg:67
+#: klipper.kcfg:63
 #, kde-format
 msgid "History size:"
 msgstr "Μέγεθος ιστορικού:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
-#: klipper.kcfg:71
+#: klipper.kcfg:67
 #, kde-format
 msgid "The clipboard history will store up to this many items."
 msgstr "Το ιστορικό του πρόχειρου θα αποθηκεύσει έως και τόσα αντικείμενα."
 
 #. i18n: ectx: label, entry (ActionList), group (General)
-#: klipper.kcfg:74
+#: klipper.kcfg:70
 #, kde-format
 msgid "Dummy entry for indicating changes in an action's tree widget"
 msgstr ""
@@ -964,13 +911,13 @@ msgstr ""
 "δέντρου ενεργειών"
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:84
+#: klipper.kcfg:80
 #, kde-format
 msgid "Trim whitespace from selection"
 msgstr "Αποκοπή λευκών διαστημάτων από την επιλογή"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:86
+#: klipper.kcfg:82
 #, kde-format
 msgid ""
 "Remove any whitespace from the start and end of selected text, before "
@@ -984,13 +931,13 @@ msgstr ""
 "αναμένεται. Το κείμενο που αποθηκεύεται στο πρόχειρο δεν επηρεάζεται."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:89
+#: klipper.kcfg:85
 #, kde-format
 msgid "For an item chosen from history"
 msgstr "Για ένα αντικείμενο που επιλέγεται από το ιστορικό"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:91
+#: klipper.kcfg:87
 #, kde-format
 msgid ""
 "Show the popup menu of applicable actions if an entry is chosen from the "
@@ -1000,13 +947,13 @@ msgstr ""
 "καταχώρηση από το ιστορικό του πρόχειρου."
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:94
+#: klipper.kcfg:90
 #, kde-format
 msgid "Include MIME actions"
 msgstr "Συμπερίληψη ενεργειών MIME"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:96
+#: klipper.kcfg:92
 #, kde-format
 msgid ""
 "If a file name or URL is selected, include applications that can accept its "
@@ -1020,10 +967,53 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "Αναδυόμενο μενού πρόχειρου"
 
-#: urlgrabber.cpp:202
+#: urlgrabber.cpp:195
 #, kde-format
 msgid "&Cancel"
 msgstr "&Ακύρωση"
+
+#~ msgid "Exclude Windows..."
+#~ msgstr "Εξαίρεση παραθύρων..."
+
+#~ msgid "Exclude Windows"
+#~ msgstr "Εξαίρεση παραθύρων"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The action popup will not be shown automatically for these windows, even "
+#~ "if it is enabled. This is because, for example, a web browser may "
+#~ "highlight a URL in the address bar while typing, so the menu would show "
+#~ "for every keystroke.<nl/><nl/>If the action menu appears unexpectedly "
+#~ "when using a particular application, then add it to this list. <link>How "
+#~ "to find the name to enter</link>."
+#~ msgstr ""
+#~ "Το αναδυόμενο παράθυρο δράσης δεν θα εμφανίζεται αυτόματα για αυτά τα "
+#~ "παράθυρα, ακόμη και αν είναι ενεργοποιημένο. Αυτό συμβαίνει επειδή, για "
+#~ "παράδειγμα, ένα πρόγραμμα περιήγησης ιστού μπορεί να επισημάνει μια "
+#~ "διεύθυνση URL στη γραμμή διευθύνσεων κατά την πληκτρολόγηση, οπότε το "
+#~ "μενού θα εμφανιζόταν για κάθε πληκτρολόγηση.<nl/><nl/>Αν το μενού "
+#~ "ενεργειών εμφανίζεται απροσδόκητα κατά τη χρήση μιας συγκεκριμένης "
+#~ "εφαρμογής, τότε προσθέστε το σε αυτή τη λίστα. <link>Πώς να βρείτε το "
+#~ "όνομα που πρέπει να πληκτρολογήσετε</link>."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "The name that needs to be entered here is the WM_CLASS name of the window "
+#~ "to be excluded. To find the WM_CLASS name for a window, in another "
+#~ "terminal window enter the command:<nl/><nl/>&nbsp;&nbsp;<icode>xprop | "
+#~ "grep WM_CLASS</icode><nl/><nl/>and click on the window that you want to "
+#~ "exclude. The first name that it displays after the equal sign is the one "
+#~ "that you need to enter."
+#~ msgstr ""
+#~ "Το όνομα που πρέπει να εισαχθεί εδώ είναι το όνομα WM_CLASS του παραθύρου "
+#~ "που πρέπει να εξαιρεθεί. Για να βρείτε το όνομα WM_CLASS ενός παραθύρου, "
+#~ "σε ένα άλλο παράθυρο τερματικού πληκτρολογήστε την εντολή:<nl/><nl/>&nbsp;"
+#~ "&nbsp;<icode>xprop | grep WM_CLASS</icode><nl/><nl/>και κάντε κλικ στο "
+#~ "παράθυρο που θέλετε να αποκλείσετε. Το πρώτο όνομα που εμφανίζει μετά το "
+#~ "σύμβολο ισότητας είναι αυτό που πρέπει να πληκτρολογήσετε."
+
+#~ msgid "No actions for WM_CLASS"
+#~ msgstr "Καμία ενέργεια για το WM_CLASS"
 
 #~ msgctxt "@action:inmenu"
 #~ msgid "&Configure Klipper…"

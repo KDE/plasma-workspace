@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-18 00:45+0000\n"
+"POT-Creation-Date: 2025-11-20 00:44+0000\n"
 "PO-Revision-Date: 2025-08-30 09:51+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -40,12 +40,12 @@ msgstr ""
 "markos@elite.org,gregor.rakar@kiss.si,jlp@holodeck1.com,andrejm@ubuntu.si,"
 "matjaz.jeran@amis.net"
 
-#: configdialog.cpp:85
+#: configdialog.cpp:84
 #, kde-format
 msgid "Clipboard history:"
 msgstr "Zgodovina odložišča:"
 
-#: configdialog.cpp:91
+#: configdialog.cpp:90
 #, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
@@ -55,12 +55,12 @@ msgstr[1] "%v vnos"
 msgstr[2] "%v vnosa"
 msgstr[3] "%v vnosi"
 
-#: configdialog.cpp:100
+#: configdialog.cpp:99
 #, kde-format
 msgid "Selection and Clipboard:"
 msgstr "Izbor in odložišče:"
 
-#: configdialog.cpp:107
+#: configdialog.cpp:106
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -86,37 +86,37 @@ msgstr ""
 "v zgodovini odložišča (ob upoštevanju spodnjih možnosti), lahko pa ga "
 "prilepite le s pomočjo srednjega gumba miške."
 
-#: configdialog.cpp:136 configdialog.cpp:174
+#: configdialog.cpp:135 configdialog.cpp:173
 #, kde-format
 msgid "Always save in history"
 msgstr "Vedno shrani v zgodovino"
 
-#: configdialog.cpp:140
+#: configdialog.cpp:139
 #, kde-format
 msgid "Text selection:"
 msgstr "Izbor besedila:"
 
-#: configdialog.cpp:142 configdialog.cpp:180
+#: configdialog.cpp:141 configdialog.cpp:179
 #, kde-format
 msgid "Only when explicitly copied"
 msgstr "Le ob izrecnem kopiranju"
 
-#: configdialog.cpp:147
+#: configdialog.cpp:146
 #, kde-format
 msgid "Whether text selections are saved in the clipboard history."
 msgstr "Ali naj se izbori besedila shranijo v zgodovino odložišča."
 
-#: configdialog.cpp:178
+#: configdialog.cpp:177
 #, kde-format
 msgid "Non-text selection:"
 msgstr "Izbor brez besedila:"
 
-#: configdialog.cpp:185
+#: configdialog.cpp:184
 #, kde-format
 msgid "Never save in history"
 msgstr "Nikoli ne shrani v zgodovino"
 
-#: configdialog.cpp:190
+#: configdialog.cpp:189
 #, kde-format
 msgid ""
 "Whether non-text selections (such as images) are saved in the clipboard "
@@ -124,12 +124,12 @@ msgid ""
 msgstr ""
 "Ali so ne-besedilni izbori (na primer slike) shranjeni v zgodovini odložišča."
 
-#: configdialog.cpp:264
+#: configdialog.cpp:263
 #, kde-format
 msgid "Show action popup menu:"
 msgstr "Prikaži pojavno okno dejavnosti:"
 
-#: configdialog.cpp:274
+#: configdialog.cpp:273
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -144,12 +144,7 @@ msgstr ""
 "je samodejni meni tukaj izklopljen ali ni prikazan zaradi izključenega okna, "
 "ga lahko prikažemo z uporabo bližnjice <shortcut>%1</shortcut>."
 
-#: configdialog.cpp:283
-#, kde-format
-msgid "Exclude Windows..."
-msgstr "Izključi okna..."
-
-#: configdialog.cpp:297
+#: configdialog.cpp:285
 #, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
@@ -159,23 +154,18 @@ msgstr[1] "%v sekund"
 msgstr[2] "%v sekundi"
 msgstr[3] "%v sekunde"
 
-#: configdialog.cpp:298
+#: configdialog.cpp:286
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "Brez"
 
-#: configdialog.cpp:307
+#: configdialog.cpp:295
 #, kde-format
 msgid "Options:"
 msgstr "Možnosti:"
 
-#: configdialog.cpp:334
-#, kde-format
-msgid "Exclude Windows"
-msgstr "Izključi okna"
-
-#: configdialog.cpp:364
+#: configdialog.cpp:320
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -187,34 +177,34 @@ msgstr ""
 "vmesnik <interface>ukazov</interface> v Klipperjevem pojavnem oknu in jih "
 "lahko izvedemo."
 
-#: configdialog.cpp:373
+#: configdialog.cpp:329
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "Upari vzorec in dejanja"
 
-#: configdialog.cpp:373
+#: configdialog.cpp:329
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Opis"
 
-#: configdialog.cpp:379
+#: configdialog.cpp:335
 #, kde-format
 msgid "Add Action..."
 msgstr "Dodaj dejanje..."
 
-#: configdialog.cpp:383
+#: configdialog.cpp:339
 #, kde-format
 msgid "Edit Action..."
 msgstr "Uredi dejanje..."
 
-#: configdialog.cpp:388
+#: configdialog.cpp:344
 #, kde-format
 msgid "Delete Action"
 msgstr "Izbriši dejanje"
 
-#: configdialog.cpp:395
+#: configdialog.cpp:351
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -224,7 +214,7 @@ msgstr ""
 "Ta dejanja so prikazana v pojavnem meniju, ki jih je mogoče konfigurirati na "
 "strani <interface>Meni dejanj</interface>."
 
-#: configdialog.cpp:590
+#: configdialog.cpp:546
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -233,88 +223,54 @@ msgid ""
 msgstr ""
 "Naj zbrišem izbrano dejavnost <resource>%1</resource><nl/> in vse ukaze?"
 
-#: configdialog.cpp:591
+#: configdialog.cpp:547
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "Potrdite dejanje brisanja"
 
-#: configdialog.cpp:644
+#: configdialog.cpp:600
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Splošno"
 
-#: configdialog.cpp:644
+#: configdialog.cpp:600
 #, kde-format
 msgid "General Configuration"
 msgstr "Splošne nastavitve"
 
-#: configdialog.cpp:645
+#: configdialog.cpp:601
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Menu dejanj"
 
-#: configdialog.cpp:645
+#: configdialog.cpp:601
 #, kde-format
 msgid "Action Menu"
 msgstr "Menu dejanj"
 
-#: configdialog.cpp:646
+#: configdialog.cpp:602
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Konfiguracija dejanj"
 
-#: configdialog.cpp:646
+#: configdialog.cpp:602
 #, kde-format
 msgid "Actions Configuration"
 msgstr "Nastavitev dejanj"
 
-#: configdialog.cpp:649
+#: configdialog.cpp:605
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Bližnjice"
 
-#: configdialog.cpp:649
+#: configdialog.cpp:605
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Nastavitev bližnjic"
-
-#: configdialog.cpp:735
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"The action popup will not be shown automatically for these windows, even if "
-"it is enabled. This is because, for example, a web browser may highlight a "
-"URL in the address bar while typing, so the menu would show for every "
-"keystroke.<nl/><nl/>If the action menu appears unexpectedly when using a "
-"particular application, then add it to this list. <link>How to find the name "
-"to enter</link>."
-msgstr ""
-"Meni pojavnega okna dejavnosti ne bo samodejno prikazan za ta okna, tudi če "
-"je omogočen. To je zato, ker lahko na primer spletni brskalnik med tipkanjem "
-"označi URL v naslovni vrstici, tako da bi se meni prikazal za vsak pritisk "
-"tipke.<nl/><nl/>Če bi se menu dejavnosti nepričakovano pojavil ob rabi "
-"določene aplikacije, jo dodajte na ta seznam.<link>Kako najti ime za vnos</"
-"link>."
-
-#: configdialog.cpp:748
-#, kde-kuit-format
-msgctxt "@info:tooltip"
-msgid ""
-"The name that needs to be entered here is the WM_CLASS name of the window to "
-"be excluded. To find the WM_CLASS name for a window, in another terminal "
-"window enter the command:<nl/><nl/>&nbsp;&nbsp;<icode>xprop | grep WM_CLASS</"
-"icode><nl/><nl/>and click on the window that you want to exclude. The first "
-"name that it displays after the equal sign is the one that you need to enter."
-msgstr ""
-"Ime, ki ga je treba vnesti tu, je ime razreda okna WM_CLASS, ki naj bo "
-"izključen. Če želite najti ime WM_CLASS za okno, v drugem oknu terminala "
-"vnesite ukaz: <nl/><nl/>&nbsp;&nbsp;<icode>xprop | grep WM_CLASS</icode><nl/"
-"><nl/> in kliknite na okno, ki ga želite izključiti. Prvo ime, ki se prikaže "
-"po enačaju, je tisto, ki ga morate vnesti."
 
 #: declarative/qml/BarcodePage.qml:32
 #, kde-format
@@ -907,50 +863,44 @@ msgid ""
 msgstr ""
 "Prikaži pojavno okno primernih dejavnosti takoj, ko je določena izbira."
 
-#. i18n: ectx: label, entry (NoActionsForWM_CLASS), group (General)
-#: klipper.kcfg:57
-#, kde-format
-msgid "No actions for WM_CLASS"
-msgstr "Brez dejanj za WM_CLASS"
-
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:60
+#: klipper.kcfg:56
 #, kde-format
 msgid "Automatic action menu time:"
 msgstr "Čas samodejnega pojavnega okna dejanj:"
 
 #. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:64
+#: klipper.kcfg:60
 #, kde-format
 msgid "Display the automatic action popup menu for this time."
 msgstr "Tokrat prikaži samodejno pojavno okno menuja dejanj."
 
 #. i18n: ectx: label, entry (MaxClipItems), group (General)
-#: klipper.kcfg:67
+#: klipper.kcfg:63
 #, kde-format
 msgid "History size:"
 msgstr "Velikost zgodovine:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
-#: klipper.kcfg:71
+#: klipper.kcfg:67
 #, kde-format
 msgid "The clipboard history will store up to this many items."
 msgstr "V zgodovini odložišča bo shranjeno največ toliko elementov."
 
 #. i18n: ectx: label, entry (ActionList), group (General)
-#: klipper.kcfg:74
+#: klipper.kcfg:70
 #, kde-format
 msgid "Dummy entry for indicating changes in an action's tree widget"
 msgstr "Lažen vnos za nakazovanje sprememb v drevesu dejanja"
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:84
+#: klipper.kcfg:80
 #, kde-format
 msgid "Trim whitespace from selection"
 msgstr "Odstrani presledke iz izbire"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:86
+#: klipper.kcfg:82
 #, kde-format
 msgid ""
 "Remove any whitespace from the start and end of selected text, before "
@@ -963,13 +913,13 @@ msgstr ""
 "pričakovano. To ne vpilva na besedilo shranjeno v odložišče."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:89
+#: klipper.kcfg:85
 #, kde-format
 msgid "For an item chosen from history"
 msgstr "Za izbran predmet iz zgodovine"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:91
+#: klipper.kcfg:87
 #, kde-format
 msgid ""
 "Show the popup menu of applicable actions if an entry is chosen from the "
@@ -979,13 +929,13 @@ msgstr ""
 "odložišča."
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:94
+#: klipper.kcfg:90
 #, kde-format
 msgid "Include MIME actions"
 msgstr "Vključi dejanja glede MIME"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:96
+#: klipper.kcfg:92
 #, kde-format
 msgid ""
 "If a file name or URL is selected, include applications that can accept its "
@@ -999,10 +949,50 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "Pojavno okno odložišča"
 
-#: urlgrabber.cpp:202
+#: urlgrabber.cpp:195
 #, kde-format
 msgid "&Cancel"
 msgstr "Prekliči"
+
+#~ msgid "Exclude Windows..."
+#~ msgstr "Izključi okna..."
+
+#~ msgid "Exclude Windows"
+#~ msgstr "Izključi okna"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The action popup will not be shown automatically for these windows, even "
+#~ "if it is enabled. This is because, for example, a web browser may "
+#~ "highlight a URL in the address bar while typing, so the menu would show "
+#~ "for every keystroke.<nl/><nl/>If the action menu appears unexpectedly "
+#~ "when using a particular application, then add it to this list. <link>How "
+#~ "to find the name to enter</link>."
+#~ msgstr ""
+#~ "Meni pojavnega okna dejavnosti ne bo samodejno prikazan za ta okna, tudi "
+#~ "če je omogočen. To je zato, ker lahko na primer spletni brskalnik med "
+#~ "tipkanjem označi URL v naslovni vrstici, tako da bi se meni prikazal za "
+#~ "vsak pritisk tipke.<nl/><nl/>Če bi se menu dejavnosti nepričakovano "
+#~ "pojavil ob rabi določene aplikacije, jo dodajte na ta seznam.<link>Kako "
+#~ "najti ime za vnos</link>."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "The name that needs to be entered here is the WM_CLASS name of the window "
+#~ "to be excluded. To find the WM_CLASS name for a window, in another "
+#~ "terminal window enter the command:<nl/><nl/>&nbsp;&nbsp;<icode>xprop | "
+#~ "grep WM_CLASS</icode><nl/><nl/>and click on the window that you want to "
+#~ "exclude. The first name that it displays after the equal sign is the one "
+#~ "that you need to enter."
+#~ msgstr ""
+#~ "Ime, ki ga je treba vnesti tu, je ime razreda okna WM_CLASS, ki naj bo "
+#~ "izključen. Če želite najti ime WM_CLASS za okno, v drugem oknu terminala "
+#~ "vnesite ukaz: <nl/><nl/>&nbsp;&nbsp;<icode>xprop | grep WM_CLASS</"
+#~ "icode><nl/><nl/> in kliknite na okno, ki ga želite izključiti. Prvo ime, "
+#~ "ki se prikaže po enačaju, je tisto, ki ga morate vnesti."
+
+#~ msgid "No actions for WM_CLASS"
+#~ msgstr "Brez dejanj za WM_CLASS"
 
 #~ msgctxt "@action:inmenu"
 #~ msgid "&Configure Klipper…"

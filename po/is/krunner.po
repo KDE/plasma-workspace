@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-20 00:44+0000\n"
 "PO-Revision-Date: 2023-09-09 09:56+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -105,32 +105,32 @@ msgctxt "Textfield placeholder text"
 msgid "Search…"
 msgstr "Leita…"
 
-#: qml/RunCommand.qml:310 qml/RunCommand.qml:311 qml/RunCommand.qml:313
+#: qml/RunCommand.qml:311 qml/RunCommand.qml:312 qml/RunCommand.qml:314
 #, kde-format
 msgid "Show Usage Help"
 msgstr "Birta notkunaraðstoð"
 
-#: qml/RunCommand.qml:321
+#: qml/RunCommand.qml:322
 #, kde-format
 msgid "Pin"
 msgstr "PIN-númer"
 
-#: qml/RunCommand.qml:322
+#: qml/RunCommand.qml:323
 #, kde-format
 msgid "Pin Search"
 msgstr "PIN-númeraleit"
 
-#: qml/RunCommand.qml:324
+#: qml/RunCommand.qml:325
 #, kde-format
 msgid "Keep Open"
 msgstr "Halda opnu"
 
-#: qml/RunCommand.qml:383 qml/RunCommand.qml:388
+#: qml/RunCommand.qml:384 qml/RunCommand.qml:389
 #, kde-format
 msgid "Recent Queries"
 msgstr "Nýlegar fyrirspurnir"
 
-#: qml/RunCommand.qml:386
+#: qml/RunCommand.qml:387
 #, kde-format
 msgid "Remove"
 msgstr "Fjarlægja"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-20 00:44+0000\n"
 "PO-Revision-Date: 2025-04-08 09:51+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -21,86 +21,86 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 23.08.5\n"
 
-#: AlbumArtStackView.qml:212
+#: AlbumArtStackView.qml:211
 #, kde-format
 msgid "No title"
 msgstr "Без названия"
 
-#: AlbumArtStackView.qml:212 main.qml:57
+#: AlbumArtStackView.qml:211 main.qml:57
 #, kde-format
 msgid "No media playing"
 msgstr "Ничего не воспроизводится"
 
-#: ExpandedRepresentation.qml:415 ExpandedRepresentation.qml:571
+#: ExpandedRepresentation.qml:414 ExpandedRepresentation.qml:570
 #, kde-format
 msgctxt "Remaining time for song e.g -5:42"
 msgid "-%1"
 msgstr "-%1"
 
-#: ExpandedRepresentation.qml:592
+#: ExpandedRepresentation.qml:591
 #, kde-format
 msgid "Playback rate %1"
 msgstr "Скорость воспроизведения %1"
 
-#: ExpandedRepresentation.qml:595
+#: ExpandedRepresentation.qml:594
 #, kde-format
 msgctxt "Playback rate"
 msgid "%1x"
 msgstr "%1⨯"
 
-#: ExpandedRepresentation.qml:599
+#: ExpandedRepresentation.qml:598
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Playback rate"
 msgstr "Скорость воспроизведения"
 
-#: ExpandedRepresentation.qml:645
+#: ExpandedRepresentation.qml:644
 #, kde-format
 msgctxt "@action:inmenu Playback speed (Normal)"
 msgid "%1 (Normal)"
 msgstr "%1 (Обычная)"
 
-#: ExpandedRepresentation.qml:684
+#: ExpandedRepresentation.qml:683
 #, kde-format
 msgctxt "@action:button"
 msgid "Shuffle"
 msgstr "Перемешать"
 
-#: ExpandedRepresentation.qml:708 main.qml:114
+#: ExpandedRepresentation.qml:707 main.qml:114
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
 msgstr "Предыдущая дорожка"
 
-#: ExpandedRepresentation.qml:730 main.qml:122
+#: ExpandedRepresentation.qml:729 main.qml:122
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
 msgstr "Приостановить"
 
-#: ExpandedRepresentation.qml:730 main.qml:130
+#: ExpandedRepresentation.qml:729 main.qml:130
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
 msgstr "Воспроизведение"
 
-#: ExpandedRepresentation.qml:748 main.qml:138
+#: ExpandedRepresentation.qml:747 main.qml:138
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
 msgstr "Следующая дорожка"
 
-#: ExpandedRepresentation.qml:771
+#: ExpandedRepresentation.qml:770
 #, kde-format
 msgid "Repeat Track"
 msgstr "Повторять дорожку"
 
-#: ExpandedRepresentation.qml:771
+#: ExpandedRepresentation.qml:770
 #, kde-format
 msgid "Repeat"
 msgstr "Автоповтор"
 
-#: ExpandedRepresentation.qml:839
+#: ExpandedRepresentation.qml:841
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose player automatically"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-18 00:45+0000\n"
+"POT-Creation-Date: 2025-11-20 00:44+0000\n"
 "PO-Revision-Date: 2006-12-17 12:20+0000\n"
 "Last-Translator: Mashrab Kuvatov <kmashrab@uni-bremen.de>\n"
 "Language-Team: Uzbek <floss-uz-l10n@googlegroups.com>\n"
@@ -27,13 +27,13 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kmashrab@uni-bremen.de"
 
-#: configdialog.cpp:85
+#: configdialog.cpp:84
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgid "Clipboard history:"
 msgstr "&Клипборд тарихининг ҳажми:"
 
-#: configdialog.cpp:91
+#: configdialog.cpp:90
 #, fuzzy, kde-format
 #| msgid " entry"
 #| msgid_plural " entries"
@@ -42,13 +42,13 @@ msgid "%v entry"
 msgid_plural "%v entries"
 msgstr[0] " ёзув"
 
-#: configdialog.cpp:100
+#: configdialog.cpp:99
 #, fuzzy, kde-format
 #| msgid "<empty clipboard>"
 msgid "Selection and Clipboard:"
 msgstr "<бўш клипборд>"
 
-#: configdialog.cpp:107
+#: configdialog.cpp:106
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -64,51 +64,51 @@ msgid ""
 "options below), but it can only be pasted using the middle mouse button."
 msgstr ""
 
-#: configdialog.cpp:136 configdialog.cpp:174
+#: configdialog.cpp:135 configdialog.cpp:173
 #, kde-format
 msgid "Always save in history"
 msgstr ""
 
-#: configdialog.cpp:140
+#: configdialog.cpp:139
 #, kde-format
 msgid "Text selection:"
 msgstr ""
 
-#: configdialog.cpp:142 configdialog.cpp:180
+#: configdialog.cpp:141 configdialog.cpp:179
 #, kde-format
 msgid "Only when explicitly copied"
 msgstr ""
 
-#: configdialog.cpp:147
+#: configdialog.cpp:146
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Whether text selections are saved in the clipboard history."
 msgstr "Клипборднинг тарихини то&залаш"
 
-#: configdialog.cpp:178
+#: configdialog.cpp:177
 #, kde-format
 msgid "Non-text selection:"
 msgstr ""
 
-#: configdialog.cpp:185
+#: configdialog.cpp:184
 #, kde-format
 msgid "Never save in history"
 msgstr ""
 
-#: configdialog.cpp:190
+#: configdialog.cpp:189
 #, kde-format
 msgid ""
 "Whether non-text selections (such as images) are saved in the clipboard "
 "history."
 msgstr ""
 
-#: configdialog.cpp:264
+#: configdialog.cpp:263
 #, fuzzy, kde-format
 #| msgid "Ac&tions"
 msgid "Show action popup menu:"
 msgstr "Ама&ллар"
 
-#: configdialog.cpp:274
+#: configdialog.cpp:273
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -119,12 +119,7 @@ msgid ""
 "key shortcut."
 msgstr ""
 
-#: configdialog.cpp:283
-#, kde-format
-msgid "Exclude Windows..."
-msgstr ""
-
-#: configdialog.cpp:297
+#: configdialog.cpp:285
 #, fuzzy, kde-format
 #| msgid " sec"
 msgctxt "Unit of time"
@@ -132,24 +127,19 @@ msgid "%v second"
 msgid_plural "%v seconds"
 msgstr[0] " сония"
 
-#: configdialog.cpp:298
+#: configdialog.cpp:286
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr ""
 
-#: configdialog.cpp:307
+#: configdialog.cpp:295
 #, fuzzy, kde-format
 #| msgid "Ac&tions"
 msgid "Options:"
 msgstr "Ама&ллар"
 
-#: configdialog.cpp:334
-#, kde-format
-msgid "Exclude Windows"
-msgstr ""
-
-#: configdialog.cpp:364
+#: configdialog.cpp:320
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -158,38 +148,38 @@ msgid ""
 "be executed."
 msgstr ""
 
-#: configdialog.cpp:373
+#: configdialog.cpp:329
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr ""
 
-#: configdialog.cpp:373
+#: configdialog.cpp:329
 #, fuzzy, kde-format
 #| msgid "Description"
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Таърифи"
 
-#: configdialog.cpp:379
+#: configdialog.cpp:335
 #, fuzzy, kde-format
 #| msgid "&Add Action"
 msgid "Add Action..."
 msgstr "&Амални қўшиш"
 
-#: configdialog.cpp:383
+#: configdialog.cpp:339
 #, fuzzy, kde-format
 #| msgid "&Add Action"
 msgid "Edit Action..."
 msgstr "&Амални қўшиш"
 
-#: configdialog.cpp:388
+#: configdialog.cpp:344
 #, fuzzy, kde-format
 #| msgid "&Delete Action"
 msgid "Delete Action"
 msgstr "Ама&лни ўчириш"
 
-#: configdialog.cpp:395
+#: configdialog.cpp:351
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -197,7 +187,7 @@ msgid ""
 "<interface>Action Menu</interface> page."
 msgstr ""
 
-#: configdialog.cpp:590
+#: configdialog.cpp:546
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -205,84 +195,61 @@ msgid ""
 "commands?"
 msgstr ""
 
-#: configdialog.cpp:591
+#: configdialog.cpp:547
 #, fuzzy, kde-format
 #| msgid "&Delete Action"
 msgid "Confirm Delete Action"
 msgstr "Ама&лни ўчириш"
 
-#: configdialog.cpp:644
+#: configdialog.cpp:600
 #, fuzzy, kde-format
 #| msgid "&General"
 msgctxt "General Config"
 msgid "General"
 msgstr "&Умумий"
 
-#: configdialog.cpp:644
+#: configdialog.cpp:600
 #, fuzzy, kde-format
 #| msgid "&General"
 msgid "General Configuration"
 msgstr "&Умумий"
 
-#: configdialog.cpp:645
+#: configdialog.cpp:601
 #, fuzzy, kde-format
 #| msgid "Ac&tions"
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Ама&ллар"
 
-#: configdialog.cpp:645
+#: configdialog.cpp:601
 #, fuzzy, kde-format
 #| msgid "Ac&tions"
 msgid "Action Menu"
 msgstr "Ама&ллар"
 
-#: configdialog.cpp:646
+#: configdialog.cpp:602
 #, fuzzy, kde-format
 #| msgid "Ac&tions"
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Ама&ллар"
 
-#: configdialog.cpp:646
+#: configdialog.cpp:602
 #, fuzzy, kde-format
 #| msgid "Ac&tions"
 msgid "Actions Configuration"
 msgstr "Ама&ллар"
 
-#: configdialog.cpp:649
+#: configdialog.cpp:605
 #, fuzzy, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "&Тугмалар бирикмаси"
 
-#: configdialog.cpp:649
+#: configdialog.cpp:605
 #, fuzzy, kde-format
 msgid "Shortcuts Configuration"
 msgstr "&Тугмалар бирикмаси"
-
-#: configdialog.cpp:735
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"The action popup will not be shown automatically for these windows, even if "
-"it is enabled. This is because, for example, a web browser may highlight a "
-"URL in the address bar while typing, so the menu would show for every "
-"keystroke.<nl/><nl/>If the action menu appears unexpectedly when using a "
-"particular application, then add it to this list. <link>How to find the name "
-"to enter</link>."
-msgstr ""
-
-#: configdialog.cpp:748
-#, kde-kuit-format
-msgctxt "@info:tooltip"
-msgid ""
-"The name that needs to be entered here is the WM_CLASS name of the window to "
-"be excluded. To find the WM_CLASS name for a window, in another terminal "
-"window enter the command:<nl/><nl/>&nbsp;&nbsp;<icode>xprop | grep WM_CLASS</"
-"icode><nl/><nl/>and click on the window that you want to exclude. The first "
-"name that it displays after the equal sign is the one that you need to enter."
-msgstr ""
 
 #: declarative/qml/BarcodePage.qml:32
 #, kde-format
@@ -878,53 +845,47 @@ msgid ""
 "Show the popup menu of applicable actions as soon as a selection is made."
 msgstr ""
 
-#. i18n: ectx: label, entry (NoActionsForWM_CLASS), group (General)
-#: klipper.kcfg:57
-#, kde-format
-msgid "No actions for WM_CLASS"
-msgstr ""
-
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:60
+#: klipper.kcfg:56
 #, fuzzy, kde-format
 #| msgid "Ac&tions"
 msgid "Automatic action menu time:"
 msgstr "Ама&ллар"
 
 #. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:64
+#: klipper.kcfg:60
 #, fuzzy, kde-format
 #| msgid "Ac&tions"
 msgid "Display the automatic action popup menu for this time."
 msgstr "Ама&ллар"
 
 #. i18n: ectx: label, entry (MaxClipItems), group (General)
-#: klipper.kcfg:67
+#: klipper.kcfg:63
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgid "History size:"
 msgstr "&Клипборд тарихининг ҳажми:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
-#: klipper.kcfg:71
+#: klipper.kcfg:67
 #, kde-format
 msgid "The clipboard history will store up to this many items."
 msgstr ""
 
 #. i18n: ectx: label, entry (ActionList), group (General)
-#: klipper.kcfg:74
+#: klipper.kcfg:70
 #, kde-format
 msgid "Dummy entry for indicating changes in an action's tree widget"
 msgstr ""
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:84
+#: klipper.kcfg:80
 #, kde-format
 msgid "Trim whitespace from selection"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:86
+#: klipper.kcfg:82
 #, kde-format
 msgid ""
 "Remove any whitespace from the start and end of selected text, before "
@@ -934,13 +895,13 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:89
+#: klipper.kcfg:85
 #, kde-format
 msgid "For an item chosen from history"
 msgstr ""
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:91
+#: klipper.kcfg:87
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid ""
@@ -949,14 +910,14 @@ msgid ""
 msgstr "Клипборднинг тарихини то&залаш"
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:94
+#: klipper.kcfg:90
 #, fuzzy, kde-format
 #| msgid "Enable/Disable Clipboard Actions"
 msgid "Include MIME actions"
 msgstr "Клипборд амалларини ёқиш/ўчириш"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:96
+#: klipper.kcfg:92
 #, kde-format
 msgid ""
 "If a file name or URL is selected, include applications that can accept its "
@@ -969,7 +930,7 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "&Клипборд тарихининг ҳажми:"
 
-#: urlgrabber.cpp:202
+#: urlgrabber.cpp:195
 #, kde-format
 msgid "&Cancel"
 msgstr ""

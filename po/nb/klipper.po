@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-18 00:45+0000\n"
+"POT-Creation-Date: 2025-11-20 00:44+0000\n"
 "PO-Revision-Date: 2025-02-22 07:48+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -36,12 +36,12 @@ msgstr ""
 "number1@realityx.net,klaus@skolelinux.no,knut.yrvin@gmail.com,mh306602@gmail."
 "com"
 
-#: configdialog.cpp:85
+#: configdialog.cpp:84
 #, kde-format
 msgid "Clipboard history:"
 msgstr "Utklippshistorikk:"
 
-#: configdialog.cpp:91
+#: configdialog.cpp:90
 #, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
@@ -49,12 +49,12 @@ msgid_plural "%v entries"
 msgstr[0] "%v oppføring"
 msgstr[1] "%v oppføringer"
 
-#: configdialog.cpp:100
+#: configdialog.cpp:99
 #, kde-format
 msgid "Selection and Clipboard:"
 msgstr "Utvalg og utklippstavle:"
 
-#: configdialog.cpp:107
+#: configdialog.cpp:106
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -81,37 +81,37 @@ msgstr ""
 "utklippstavla (avhengig av valg nedenfor), men det kan bare limes inn med "
 "midtknappen."
 
-#: configdialog.cpp:136 configdialog.cpp:174
+#: configdialog.cpp:135 configdialog.cpp:173
 #, kde-format
 msgid "Always save in history"
 msgstr "Lagre alltid i historikken"
 
-#: configdialog.cpp:140
+#: configdialog.cpp:139
 #, kde-format
 msgid "Text selection:"
 msgstr "Merket tekst:"
 
-#: configdialog.cpp:142 configdialog.cpp:180
+#: configdialog.cpp:141 configdialog.cpp:179
 #, kde-format
 msgid "Only when explicitly copied"
 msgstr "Bare ved direkte kopiering"
 
-#: configdialog.cpp:147
+#: configdialog.cpp:146
 #, kde-format
 msgid "Whether text selections are saved in the clipboard history."
 msgstr "Om merket tekst skal lagres i utklippstavla."
 
-#: configdialog.cpp:178
+#: configdialog.cpp:177
 #, kde-format
 msgid "Non-text selection:"
 msgstr "Merket ikke-tekst:"
 
-#: configdialog.cpp:185
+#: configdialog.cpp:184
 #, kde-format
 msgid "Never save in history"
 msgstr "Lagre aldri i historikken"
 
-#: configdialog.cpp:190
+#: configdialog.cpp:189
 #, kde-format
 msgid ""
 "Whether non-text selections (such as images) are saved in the clipboard "
@@ -119,12 +119,12 @@ msgid ""
 msgstr ""
 "Om merket ikke-tekst (for eksempel bilder) skal lagres i utklippstavla."
 
-#: configdialog.cpp:264
+#: configdialog.cpp:263
 #, kde-format
 msgid "Show action popup menu:"
 msgstr "Vis handlingsmeny som sprettopp:"
 
-#: configdialog.cpp:274
+#: configdialog.cpp:273
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -140,12 +140,7 @@ msgstr ""
 "ekskludert, kan du likevel vise menyen via hurtigtasten <shortcut>%1</"
 "shortcut>."
 
-#: configdialog.cpp:283
-#, kde-format
-msgid "Exclude Windows..."
-msgstr "Ekskluder vinduer …"
-
-#: configdialog.cpp:297
+#: configdialog.cpp:285
 #, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
@@ -153,23 +148,18 @@ msgid_plural "%v seconds"
 msgstr[0] "%v sekund"
 msgstr[1] "%v sekunder"
 
-#: configdialog.cpp:298
+#: configdialog.cpp:286
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "Ingen"
 
-#: configdialog.cpp:307
+#: configdialog.cpp:295
 #, kde-format
 msgid "Options:"
 msgstr "Innstillinger:"
 
-#: configdialog.cpp:334
-#, kde-format
-msgid "Exclude Windows"
-msgstr "Ekskluder vinduer"
-
-#: configdialog.cpp:364
+#: configdialog.cpp:320
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -180,34 +170,34 @@ msgstr ""
 "Når et <interface>mønster</interface> er i samsvar med innholdet i "
 "utklippstavla, så vises <interface>kommandoer</interface> i sprettoppmenyen."
 
-#: configdialog.cpp:373
+#: configdialog.cpp:329
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "Mønster og kommandoer"
 
-#: configdialog.cpp:373
+#: configdialog.cpp:329
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Beskrivelse"
 
-#: configdialog.cpp:379
+#: configdialog.cpp:335
 #, kde-format
 msgid "Add Action..."
 msgstr "Legg til handling …"
 
-#: configdialog.cpp:383
+#: configdialog.cpp:339
 #, kde-format
 msgid "Edit Action..."
 msgstr "Rediger handling …"
 
-#: configdialog.cpp:388
+#: configdialog.cpp:344
 #, kde-format
 msgid "Delete Action"
 msgstr "Slett handling"
 
-#: configdialog.cpp:395
+#: configdialog.cpp:351
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -217,7 +207,7 @@ msgstr ""
 "Disse handlingene vises i sprettoppmenyen, som du kan endre innstillingene "
 "til på siden <interface>Handlingsmeny</interface>."
 
-#: configdialog.cpp:590
+#: configdialog.cpp:546
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -227,89 +217,54 @@ msgstr ""
 "Vil du slette handlinga <resource>%1</resource><nl/>og alle tilhørende "
 "kommandoer?"
 
-#: configdialog.cpp:591
+#: configdialog.cpp:547
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "Bekreft slettehandling"
 
-#: configdialog.cpp:644
+#: configdialog.cpp:600
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Generelt"
 
-#: configdialog.cpp:644
+#: configdialog.cpp:600
 #, kde-format
 msgid "General Configuration"
 msgstr "Generelt oppsett"
 
-#: configdialog.cpp:645
+#: configdialog.cpp:601
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Handlingsmeny"
 
-#: configdialog.cpp:645
+#: configdialog.cpp:601
 #, kde-format
 msgid "Action Menu"
 msgstr "Handlingsmeny"
 
-#: configdialog.cpp:646
+#: configdialog.cpp:602
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Oppsett for handlinger"
 
-#: configdialog.cpp:646
+#: configdialog.cpp:602
 #, kde-format
 msgid "Actions Configuration"
 msgstr "Oppsett for handlinger"
 
-#: configdialog.cpp:649
+#: configdialog.cpp:605
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Hurtigtaster"
 
-#: configdialog.cpp:649
+#: configdialog.cpp:605
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Hurtigtastoppsett"
-
-#: configdialog.cpp:735
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"The action popup will not be shown automatically for these windows, even if "
-"it is enabled. This is because, for example, a web browser may highlight a "
-"URL in the address bar while typing, so the menu would show for every "
-"keystroke.<nl/><nl/>If the action menu appears unexpectedly when using a "
-"particular application, then add it to this list. <link>How to find the name "
-"to enter</link>."
-msgstr ""
-"Selv om sprettoppmenyen med handlinger er slått på, blir den ikke vist "
-"automatisk for disse vinduene. Dette kan for eksempel være nyttig for "
-"nettlesere, der nettadresser i adresselinja kan være markert mens du skriver "
-"den inn, noe som ville ført til at menyen blir vist ved alle tastetrykk.<nl/"
-"><nl/>Hvis handlingsmenyen dukker opp i et program når du ikke ønsker det, "
-"kan du registrere programmet her. <link>Hvordan finne rett navn å "
-"registrere</link>."
-
-#: configdialog.cpp:748
-#, kde-kuit-format
-msgctxt "@info:tooltip"
-msgid ""
-"The name that needs to be entered here is the WM_CLASS name of the window to "
-"be excluded. To find the WM_CLASS name for a window, in another terminal "
-"window enter the command:<nl/><nl/>&nbsp;&nbsp;<icode>xprop | grep WM_CLASS</"
-"icode><nl/><nl/>and click on the window that you want to exclude. The first "
-"name that it displays after the equal sign is the one that you need to enter."
-msgstr ""
-"Navnet du skal skrive inn her, er WM_CLASS-navnet til vinduet du vil "
-"ekskludere. Du finner det ved å skrive inn følgende kommando i et "
-"terminalvindu.<nl/><nl/>&nbsp;&nbsp;<icode>xprop | grep WM_CLASS</icode><nl/"
-"><nl/>Trykk så på vinduet du vil ekskludere. Navnet du skal bruke, er det "
-"første navnet etter likhetstegnet i teksten som vises."
 
 #: declarative/qml/BarcodePage.qml:32
 #, kde-format
@@ -906,51 +861,45 @@ msgid ""
 "Show the popup menu of applicable actions as soon as a selection is made."
 msgstr "Vis sprettoppmenyen så snart teksten er merket."
 
-#. i18n: ectx: label, entry (NoActionsForWM_CLASS), group (General)
-#: klipper.kcfg:57
-#, kde-format
-msgid "No actions for WM_CLASS"
-msgstr "Ingen handlinger for WM_CLASS"
-
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:60
+#: klipper.kcfg:56
 #, kde-format
 msgid "Automatic action menu time:"
 msgstr "Vis handlingsmenyen så lenge:"
 
 #. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:64
+#: klipper.kcfg:60
 #, kde-format
 msgid "Display the automatic action popup menu for this time."
 msgstr "Vis den automatiske sprettoppmenyen med ulike handlinger så lenge."
 
 #. i18n: ectx: label, entry (MaxClipItems), group (General)
-#: klipper.kcfg:67
+#: klipper.kcfg:63
 #, kde-format
 msgid "History size:"
 msgstr "Størrelse på utklippshistorikken:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
-#: klipper.kcfg:71
+#: klipper.kcfg:67
 #, kde-format
 msgid "The clipboard history will store up to this many items."
 msgstr "Utklippshistorikken vil inneholde opptil så mange oppføringer."
 
 #. i18n: ectx: label, entry (ActionList), group (General)
-#: klipper.kcfg:74
+#: klipper.kcfg:70
 #, kde-format
 msgid "Dummy entry for indicating changes in an action's tree widget"
 msgstr ""
 "Eksempeloppføring for visning av endringer i trevisninga til en handling"
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:84
+#: klipper.kcfg:80
 #, kde-format
 msgid "Trim whitespace from selection"
 msgstr "Fjern blanktegn på begge sider av teksten"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:86
+#: klipper.kcfg:82
 #, kde-format
 msgid ""
 "Remove any whitespace from the start and end of selected text, before "
@@ -964,13 +913,13 @@ msgstr ""
 "lagret i utklippstavla blir ikke påvirket."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:89
+#: klipper.kcfg:85
 #, kde-format
 msgid "For an item chosen from history"
 msgstr "For en oppføring valgt i historikken"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:91
+#: klipper.kcfg:87
 #, kde-format
 msgid ""
 "Show the popup menu of applicable actions if an entry is chosen from the "
@@ -980,13 +929,13 @@ msgstr ""
 "utklippshistorikken."
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:94
+#: klipper.kcfg:90
 #, kde-format
 msgid "Include MIME actions"
 msgstr "Ta med MIME-handlinger"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:96
+#: klipper.kcfg:92
 #, kde-format
 msgid ""
 "If a file name or URL is selected, include applications that can accept its "
@@ -1000,7 +949,48 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "Utklippstavle-sprettopp"
 
-#: urlgrabber.cpp:202
+#: urlgrabber.cpp:195
 #, kde-format
 msgid "&Cancel"
 msgstr "&Avbryt"
+
+#~ msgid "Exclude Windows..."
+#~ msgstr "Ekskluder vinduer …"
+
+#~ msgid "Exclude Windows"
+#~ msgstr "Ekskluder vinduer"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The action popup will not be shown automatically for these windows, even "
+#~ "if it is enabled. This is because, for example, a web browser may "
+#~ "highlight a URL in the address bar while typing, so the menu would show "
+#~ "for every keystroke.<nl/><nl/>If the action menu appears unexpectedly "
+#~ "when using a particular application, then add it to this list. <link>How "
+#~ "to find the name to enter</link>."
+#~ msgstr ""
+#~ "Selv om sprettoppmenyen med handlinger er slått på, blir den ikke vist "
+#~ "automatisk for disse vinduene. Dette kan for eksempel være nyttig for "
+#~ "nettlesere, der nettadresser i adresselinja kan være markert mens du "
+#~ "skriver den inn, noe som ville ført til at menyen blir vist ved alle "
+#~ "tastetrykk.<nl/><nl/>Hvis handlingsmenyen dukker opp i et program når du "
+#~ "ikke ønsker det, kan du registrere programmet her. <link>Hvordan finne "
+#~ "rett navn å registrere</link>."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "The name that needs to be entered here is the WM_CLASS name of the window "
+#~ "to be excluded. To find the WM_CLASS name for a window, in another "
+#~ "terminal window enter the command:<nl/><nl/>&nbsp;&nbsp;<icode>xprop | "
+#~ "grep WM_CLASS</icode><nl/><nl/>and click on the window that you want to "
+#~ "exclude. The first name that it displays after the equal sign is the one "
+#~ "that you need to enter."
+#~ msgstr ""
+#~ "Navnet du skal skrive inn her, er WM_CLASS-navnet til vinduet du vil "
+#~ "ekskludere. Du finner det ved å skrive inn følgende kommando i et "
+#~ "terminalvindu.<nl/><nl/>&nbsp;&nbsp;<icode>xprop | grep WM_CLASS</"
+#~ "icode><nl/><nl/>Trykk så på vinduet du vil ekskludere. Navnet du skal "
+#~ "bruke, er det første navnet etter likhetstegnet i teksten som vises."
+
+#~ msgid "No actions for WM_CLASS"
+#~ msgstr "Ingen handlinger for WM_CLASS"

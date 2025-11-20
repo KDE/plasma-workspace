@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-19 00:45+0000\n"
-"PO-Revision-Date: 2025-08-09 22:57+0400\n"
+"PO-Revision-Date: 2025-11-19 20:32+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -104,23 +104,19 @@ msgstr ""
 "سجلّها، أو تذكر عنصر واحد فقط في كل مرة."
 
 #: package/contents/ui/ConfigGeneral.qml:199
-#, fuzzy, kde-format
-#| msgid "Scale with Panel height"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel height"
 msgstr "تكبير مع ارتفاع اللوحة"
 
 #: package/contents/ui/ConfigGeneral.qml:200
-#, fuzzy, kde-format
-#| msgid "Scale with Panel width"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel width"
 msgstr "تكبير مع عرض اللوحة"
 
 #: package/contents/ui/ConfigGeneral.qml:202
-#, fuzzy, kde-format
-#| msgctxt "The arrangement of system tray icons in the Panel"
-#| msgid "Panel icon size:"
+#, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon size:"
 msgstr "حجم أيقونة اللوح:"
@@ -162,17 +158,15 @@ msgid "Automatically set to Large when in Touch Mode"
 msgstr "اجعله كبيراً آليّاً في وضع اللمس"
 
 #: package/contents/ui/ConfigGeneral.qml:306
-#, fuzzy, kde-format
-#| msgid "Entries"
+#, kde-format
 msgctxt "@title:column"
 msgid "Entries"
 msgstr "المُدخلات"
 
 #: package/contents/ui/ConfigGeneral.qml:310
-#, fuzzy, kde-format
-#| msgid "Always shown"
+#, kde-format
 msgid "Always show all"
-msgstr "دائما ظاهرة"
+msgstr "دائما أظهر الكل"
 
 #: package/contents/ui/ExpandedRepresentation.qml:59
 #, kde-format

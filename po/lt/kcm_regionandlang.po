@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2025-10-11 00:05+0300\n"
+"PO-Revision-Date: 2025-11-19 20:06+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.8\n"
 
 #: binarydialectmodel.cpp:52
 #, kde-format
@@ -38,22 +38,19 @@ msgid "Metric system (SI)"
 msgstr "Metrinė sistema (SI)"
 
 #: binarydialectmodel.cpp:75
-#, fuzzy, kde-format
-#| msgid "Binary -  Kibibytes (KiB), Mebibytes (MiB), Gibibytes (GiB)"
+#, kde-format
 msgctxt "Binary dialect IEC description"
 msgid "Binary -  Kibibytes (KiB), Mebibytes (MiB), Gibibytes (GiB)"
 msgstr "Dvejetainiai – Kibibaitai (KiB), Mebibaitai (MiB), Gibibaitai (GiB)"
 
 #: binarydialectmodel.cpp:77
-#, fuzzy, kde-format
-#| msgid "Binary - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
+#, kde-format
 msgctxt "Binary dialect JEDEC description"
 msgid "Binary - Kilobytes (KB), Megabytes (MB), Gigabytes (GB)"
-msgstr "Dvejetainiai – Kilobaitai (kB), Megabaitai (MB), Gigabaitai (GB)"
+msgstr "Dvejetainiai – Kilobaitai (KB), Megabaitai (MB), Gigabaitai (GB)"
 
 #: binarydialectmodel.cpp:79
-#, fuzzy, kde-format
-#| msgid "Decimal - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
+#, kde-format
 msgctxt "Binary dialect Metric description"
 msgid "Decimal - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
 msgstr "Dešimtainiai – Kilobaitai (kB), Megabaitai (MB), Gigabaitai (GB)"

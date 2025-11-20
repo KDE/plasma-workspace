@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-19 00:45+0000\n"
-"PO-Revision-Date: 2025-11-15 07:57+0100\n"
+"PO-Revision-Date: 2025-11-19 07:09+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -105,23 +105,19 @@ msgstr ""
 "onemogočite njegovo zgodovino ali pa si zapomnite le en element naenkrat."
 
 #: package/contents/ui/ConfigGeneral.qml:199
-#, fuzzy, kde-format
-#| msgid "Scale with Panel height"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel height"
-msgstr "V merilu z višino plošče"
+msgstr "Merilo z višino plošče"
 
 #: package/contents/ui/ConfigGeneral.qml:200
-#, fuzzy, kde-format
-#| msgid "Scale with Panel width"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel width"
-msgstr "V merilu s širino plošče"
+msgstr "Merilo s širino plošče"
 
 #: package/contents/ui/ConfigGeneral.qml:202
-#, fuzzy, kde-format
-#| msgctxt "The arrangement of system tray icons in the Panel"
-#| msgid "Panel icon size:"
+#, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon size:"
 msgstr "Velikost ikone plošče:"

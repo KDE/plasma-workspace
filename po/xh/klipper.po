@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-18 00:45+0000\n"
+"POT-Creation-Date: 2025-11-20 00:44+0000\n"
 "PO-Revision-Date: 2002-10-26 12:49SAST\n"
 "Last-Translator: Lwandle Mgidlana <lwandle@translate.org.za>\n"
 "Language-Team: Xhosa <xhosa@translate.org.za>\n"
@@ -30,13 +30,13 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "lwandle@translate.org.za"
 
-#: configdialog.cpp:85
+#: configdialog.cpp:84
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgid "Clipboard history:"
 msgstr "U&bungakanani bembali yebebhodi eqhotyoshwayo:"
 
-#: configdialog.cpp:91
+#: configdialog.cpp:90
 #, fuzzy, kde-format
 #| msgid " entry"
 #| msgid_plural " entries"
@@ -46,13 +46,13 @@ msgid_plural "%v entries"
 msgstr[0] "ingeno"
 msgstr[1] "ingeno"
 
-#: configdialog.cpp:100
+#: configdialog.cpp:99
 #, fuzzy, kde-format
 #| msgid "Pre&vent empty clipboard"
 msgid "Selection and Clipboard:"
 msgstr "&ibhodi eqhotyoshwayo engenanto"
 
-#: configdialog.cpp:107
+#: configdialog.cpp:106
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -68,55 +68,55 @@ msgid ""
 "options below), but it can only be pasted using the middle mouse button."
 msgstr ""
 
-#: configdialog.cpp:136 configdialog.cpp:174
+#: configdialog.cpp:135 configdialog.cpp:173
 #, fuzzy, kde-format
 #| msgid "&Replay actions on an item selected from history"
 msgid "Always save in history"
 msgstr "&Dlala kwakhona iintshukumo kumba okhethiweyo osuka kwimbali"
 
-#: configdialog.cpp:140
+#: configdialog.cpp:139
 #, fuzzy, kde-format
 #| msgid "&Ignore selection"
 msgid "Text selection:"
 msgstr "&Sukunanza ukhetho"
 
-#: configdialog.cpp:142 configdialog.cpp:180
+#: configdialog.cpp:141 configdialog.cpp:179
 #, kde-format
 msgid "Only when explicitly copied"
 msgstr ""
 
-#: configdialog.cpp:147
+#: configdialog.cpp:146
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Whether text selections are saved in the clipboard history."
 msgstr "&Cacisa Ibhodi eqhotyoshwayo Yembali"
 
-#: configdialog.cpp:178
+#: configdialog.cpp:177
 #, fuzzy, kde-format
 #| msgid "&Ignore selection"
 msgid "Non-text selection:"
 msgstr "&Sukunanza ukhetho"
 
-#: configdialog.cpp:185
+#: configdialog.cpp:184
 #, fuzzy, kde-format
 #| msgid "&Replay actions on an item selected from history"
 msgid "Never save in history"
 msgstr "&Dlala kwakhona iintshukumo kumba okhethiweyo osuka kwimbali"
 
-#: configdialog.cpp:190
+#: configdialog.cpp:189
 #, kde-format
 msgid ""
 "Whether non-text selections (such as images) are saved in the clipboard "
 "history."
 msgstr ""
 
-#: configdialog.cpp:264
+#: configdialog.cpp:263
 #, fuzzy, kde-format
 #| msgid "Tim&eout for action popups:"
 msgid "Show action popup menu:"
 msgstr "I&xesha lokuphuma kwentshukumo ye popups:"
 
-#: configdialog.cpp:274
+#: configdialog.cpp:273
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -127,12 +127,7 @@ msgid ""
 "key shortcut."
 msgstr ""
 
-#: configdialog.cpp:283
-#, kde-format
-msgid "Exclude Windows..."
-msgstr ""
-
-#: configdialog.cpp:297
+#: configdialog.cpp:285
 #, fuzzy, kde-format
 #| msgid " sec"
 msgctxt "Unit of time"
@@ -141,24 +136,19 @@ msgid_plural "%v seconds"
 msgstr[0] " sec"
 msgstr[1] " sec"
 
-#: configdialog.cpp:298
+#: configdialog.cpp:286
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr ""
 
-#: configdialog.cpp:307
+#: configdialog.cpp:295
 #, fuzzy, kde-format
 #| msgid "Ac&tions"
 msgid "Options:"
 msgstr "&Iintshukumo"
 
-#: configdialog.cpp:334
-#, kde-format
-msgid "Exclude Windows"
-msgstr ""
-
-#: configdialog.cpp:364
+#: configdialog.cpp:320
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -167,38 +157,38 @@ msgid ""
 "be executed."
 msgstr ""
 
-#: configdialog.cpp:373
+#: configdialog.cpp:329
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr ""
 
-#: configdialog.cpp:373
+#: configdialog.cpp:329
 #, fuzzy, kde-format
 #| msgid "Description"
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Inkcazelo"
 
-#: configdialog.cpp:379
+#: configdialog.cpp:335
 #, fuzzy, kde-format
 #| msgid "&Add Action"
 msgid "Add Action..."
 msgstr "&Yongeza Intshukumo"
 
-#: configdialog.cpp:383
+#: configdialog.cpp:339
 #, fuzzy, kde-format
 #| msgid "&Add Action"
 msgid "Edit Action..."
 msgstr "&Yongeza Intshukumo"
 
-#: configdialog.cpp:388
+#: configdialog.cpp:344
 #, fuzzy, kde-format
 #| msgid "&Delete Action"
 msgid "Delete Action"
 msgstr "&Cima Intshukumo"
 
-#: configdialog.cpp:395
+#: configdialog.cpp:351
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -206,7 +196,7 @@ msgid ""
 "<interface>Action Menu</interface> page."
 msgstr ""
 
-#: configdialog.cpp:590
+#: configdialog.cpp:546
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -214,84 +204,61 @@ msgid ""
 "commands?"
 msgstr ""
 
-#: configdialog.cpp:591
+#: configdialog.cpp:547
 #, fuzzy, kde-format
 #| msgid "&Delete Action"
 msgid "Confirm Delete Action"
 msgstr "&Cima Intshukumo"
 
-#: configdialog.cpp:644
+#: configdialog.cpp:600
 #, fuzzy, kde-format
 #| msgid "&General"
 msgctxt "General Config"
 msgid "General"
 msgstr "&Ngokubanzi"
 
-#: configdialog.cpp:644
+#: configdialog.cpp:600
 #, fuzzy, kde-format
 #| msgid "&General"
 msgid "General Configuration"
 msgstr "&Ngokubanzi"
 
-#: configdialog.cpp:645
+#: configdialog.cpp:601
 #, fuzzy, kde-format
 #| msgid "Ac&tions"
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "&Iintshukumo"
 
-#: configdialog.cpp:645
+#: configdialog.cpp:601
 #, fuzzy, kde-format
 #| msgid "Ac&tions"
 msgid "Action Menu"
 msgstr "&Iintshukumo"
 
-#: configdialog.cpp:646
+#: configdialog.cpp:602
 #, fuzzy, kde-format
 #| msgid "Ac&tions"
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "&Iintshukumo"
 
-#: configdialog.cpp:646
+#: configdialog.cpp:602
 #, fuzzy, kde-format
 #| msgid "Ac&tions"
 msgid "Actions Configuration"
 msgstr "&Iintshukumo"
 
-#: configdialog.cpp:649
+#: configdialog.cpp:605
 #, fuzzy, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "&Iindlela ezimfutshane"
 
-#: configdialog.cpp:649
+#: configdialog.cpp:605
 #, fuzzy, kde-format
 msgid "Shortcuts Configuration"
 msgstr "&Iindlela ezimfutshane"
-
-#: configdialog.cpp:735
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"The action popup will not be shown automatically for these windows, even if "
-"it is enabled. This is because, for example, a web browser may highlight a "
-"URL in the address bar while typing, so the menu would show for every "
-"keystroke.<nl/><nl/>If the action menu appears unexpectedly when using a "
-"particular application, then add it to this list. <link>How to find the name "
-"to enter</link>."
-msgstr ""
-
-#: configdialog.cpp:748
-#, kde-kuit-format
-msgctxt "@info:tooltip"
-msgid ""
-"The name that needs to be entered here is the WM_CLASS name of the window to "
-"be excluded. To find the WM_CLASS name for a window, in another terminal "
-"window enter the command:<nl/><nl/>&nbsp;&nbsp;<icode>xprop | grep WM_CLASS</"
-"icode><nl/><nl/>and click on the window that you want to exclude. The first "
-"name that it displays after the equal sign is the one that you need to enter."
-msgstr ""
 
 #: declarative/qml/BarcodePage.qml:32
 #, kde-format
@@ -892,53 +859,47 @@ msgid ""
 "Show the popup menu of applicable actions as soon as a selection is made."
 msgstr ""
 
-#. i18n: ectx: label, entry (NoActionsForWM_CLASS), group (General)
-#: klipper.kcfg:57
-#, kde-format
-msgid "No actions for WM_CLASS"
-msgstr ""
-
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:60
+#: klipper.kcfg:56
 #, fuzzy, kde-format
 #| msgid "Tim&eout for action popups:"
 msgid "Automatic action menu time:"
 msgstr "I&xesha lokuphuma kwentshukumo ye popups:"
 
 #. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:64
+#: klipper.kcfg:60
 #, fuzzy, kde-format
 #| msgid "Tim&eout for action popups:"
 msgid "Display the automatic action popup menu for this time."
 msgstr "I&xesha lokuphuma kwentshukumo ye popups:"
 
 #. i18n: ectx: label, entry (MaxClipItems), group (General)
-#: klipper.kcfg:67
+#: klipper.kcfg:63
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgid "History size:"
 msgstr "U&bungakanani bembali yebebhodi eqhotyoshwayo:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
-#: klipper.kcfg:71
+#: klipper.kcfg:67
 #, kde-format
 msgid "The clipboard history will store up to this many items."
 msgstr ""
 
 #. i18n: ectx: label, entry (ActionList), group (General)
-#: klipper.kcfg:74
+#: klipper.kcfg:70
 #, kde-format
 msgid "Dummy entry for indicating changes in an action's tree widget"
 msgstr ""
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:84
+#: klipper.kcfg:80
 #, kde-format
 msgid "Trim whitespace from selection"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:86
+#: klipper.kcfg:82
 #, kde-format
 msgid ""
 "Remove any whitespace from the start and end of selected text, before "
@@ -948,14 +909,14 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:89
+#: klipper.kcfg:85
 #, fuzzy, kde-format
 #| msgid "&Replay actions on an item selected from history"
 msgid "For an item chosen from history"
 msgstr "&Dlala kwakhona iintshukumo kumba okhethiweyo osuka kwimbali"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:91
+#: klipper.kcfg:87
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid ""
@@ -964,14 +925,14 @@ msgid ""
 msgstr "&Cacisa Ibhodi eqhotyoshwayo Yembali"
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:94
+#: klipper.kcfg:90
 #, fuzzy, kde-format
 #| msgid "Enable/Disable Clipboard Actions"
 msgid "Include MIME actions"
 msgstr "Yenza/khubaza Iintshukumo Zebhodi eqhotyoshwayo"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:96
+#: klipper.kcfg:92
 #, kde-format
 msgid ""
 "If a file name or URL is selected, include applications that can accept its "
@@ -984,7 +945,7 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "U&bungakanani bembali yebebhodi eqhotyoshwayo:"
 
-#: urlgrabber.cpp:202
+#: urlgrabber.cpp:195
 #, kde-format
 msgid "&Cancel"
 msgstr ""

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-20 00:44+0000\n"
 "PO-Revision-Date: 2025-03-24 14:57-0500\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -77,71 +77,71 @@ msgstr "ਜਦੋਂ ਮੁੜ-ਚਾਲੂ ਕੀਤਾ ਤਾਂ ਕੰਪਿ�
 msgid "When restarted, the computer will enter the boot loader menu."
 msgstr "ਜਦੋਂ ਮੁੜ-ਚਾਲੂ ਕੀਤਾ ਤਾਂ ਕੰਪਿਊਟਰ ਬੂਟ ਲੋਡਰ ਮੇਨੂ ਉੱਤੇ ਜਾਵੇਗਾ।"
 
-#: contents/logout/Logout.qml:219
+#: contents/logout/Logout.qml:228
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p"
 msgstr "ਸਲੀਪ(&p)"
 
-#: contents/logout/Logout.qml:220
+#: contents/logout/Logout.qml:229
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p Now"
 msgstr "ਹੁਣੇ ਸਲੀਪ ਕਰੋ(&p)"
 
-#: contents/logout/Logout.qml:229
+#: contents/logout/Logout.qml:238
 #, kde-format
 msgid "&Hibernate"
 msgstr "ਹਾਈਬਰਨੇਟ(&H)"
 
-#: contents/logout/Logout.qml:230
+#: contents/logout/Logout.qml:239
 #, kde-format
 msgid "&Hibernate Now"
 msgstr "ਹੁਣੇ ਹਾਈਬਰਨੇਟ ਕਰੋ(&H)"
 
-#: contents/logout/Logout.qml:241
+#: contents/logout/Logout.qml:250
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
 msgstr "ਅੱਪਡੇਟ ਇੰਸਟਾਲ ਕਰਕੇ ਮੁੜ-ਚਾਲੂ ਕਰੋ"
 
-#: contents/logout/Logout.qml:243 contents/logout/Logout.qml:262
+#: contents/logout/Logout.qml:252 contents/logout/Logout.qml:271
 #, kde-format
 msgid "&Restart"
 msgstr "ਮੁੜ-ਚਾਲੂ ਕਰੋ(&R)"
 
-#: contents/logout/Logout.qml:244 contents/logout/Logout.qml:263
+#: contents/logout/Logout.qml:253 contents/logout/Logout.qml:272
 #, kde-format
 msgid "&Restart Now"
 msgstr "ਹੁਣੇ ਮੁੜ-ਚਾਲੂ ਕਰੋ(&R)"
 
-#: contents/logout/Logout.qml:276
+#: contents/logout/Logout.qml:285
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
 msgstr "ਅੱਪਡੇਟ ਇੰਸਟਾਲ ਕਰਕੇ ਬੰਦ ਕਰੋ"
 
-#: contents/logout/Logout.qml:278 contents/logout/Logout.qml:297
+#: contents/logout/Logout.qml:287 contents/logout/Logout.qml:306
 #, kde-format
 msgid "&Shut Down"
 msgstr "ਬੰਦ ਕਰੋ(&S)"
 
-#: contents/logout/Logout.qml:279 contents/logout/Logout.qml:298
+#: contents/logout/Logout.qml:288 contents/logout/Logout.qml:307
 #, kde-format
 msgid "&Shut Down Now"
 msgstr "ਹੁਣੇ ਬੰਦ ਕਰੋ(&S)"
 
-#: contents/logout/Logout.qml:310
+#: contents/logout/Logout.qml:319
 #, kde-format
 msgid "&Log Out"
 msgstr "ਲਾਗ ਆਉਟ(&L)"
 
-#: contents/logout/Logout.qml:311
+#: contents/logout/Logout.qml:320
 #, kde-format
 msgid "&Log Out Now"
 msgstr "ਹੁਣੇ ਲਾਗ ਆਉਟ ਕਰੋ(&O)"
 
-#: contents/logout/Logout.qml:321
+#: contents/logout/Logout.qml:330
 #, kde-format
 msgid "&Cancel"
 msgstr "ਰੱਦ ਕਰੋ(&C)"

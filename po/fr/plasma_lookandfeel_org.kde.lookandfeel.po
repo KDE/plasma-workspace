@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-20 00:44+0000\n"
 "PO-Revision-Date: 2025-04-08 15:44+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -91,71 +91,71 @@ msgstr ""
 msgid "When restarted, the computer will enter the boot loader menu."
 msgstr "Au redémarrage, l'ordinateur ouvrira le menu du chargeur de démarrage."
 
-#: contents/logout/Logout.qml:219
+#: contents/logout/Logout.qml:228
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p"
 msgstr "Mettre en &veille"
 
-#: contents/logout/Logout.qml:220
+#: contents/logout/Logout.qml:229
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p Now"
 msgstr "Mettre en &veille maintenant"
 
-#: contents/logout/Logout.qml:229
+#: contents/logout/Logout.qml:238
 #, kde-format
 msgid "&Hibernate"
 msgstr "Mettre en &hibernation"
 
-#: contents/logout/Logout.qml:230
+#: contents/logout/Logout.qml:239
 #, kde-format
 msgid "&Hibernate Now"
 msgstr "Mettre en &hibernation maintenant"
 
-#: contents/logout/Logout.qml:241
+#: contents/logout/Logout.qml:250
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
 msgstr "Installer les mises à jour et re-démarrer"
 
-#: contents/logout/Logout.qml:243 contents/logout/Logout.qml:262
+#: contents/logout/Logout.qml:252 contents/logout/Logout.qml:271
 #, kde-format
 msgid "&Restart"
 msgstr "&Redémarrer"
 
-#: contents/logout/Logout.qml:244 contents/logout/Logout.qml:263
+#: contents/logout/Logout.qml:253 contents/logout/Logout.qml:272
 #, kde-format
 msgid "&Restart Now"
 msgstr "&Redémarrer maintenant"
 
-#: contents/logout/Logout.qml:276
+#: contents/logout/Logout.qml:285
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
 msgstr "Installer les mises à jour et éteindre"
 
-#: contents/logout/Logout.qml:278 contents/logout/Logout.qml:297
+#: contents/logout/Logout.qml:287 contents/logout/Logout.qml:306
 #, kde-format
 msgid "&Shut Down"
 msgstr "É&teindre"
 
-#: contents/logout/Logout.qml:279 contents/logout/Logout.qml:298
+#: contents/logout/Logout.qml:288 contents/logout/Logout.qml:307
 #, kde-format
 msgid "&Shut Down Now"
 msgstr "É&teindre maintenant"
 
-#: contents/logout/Logout.qml:310
+#: contents/logout/Logout.qml:319
 #, kde-format
 msgid "&Log Out"
 msgstr "&Se déconnecter"
 
-#: contents/logout/Logout.qml:311
+#: contents/logout/Logout.qml:320
 #, kde-format
 msgid "&Log Out Now"
 msgstr "&Se déconnecter maintenant"
 
-#: contents/logout/Logout.qml:321
+#: contents/logout/Logout.qml:330
 #, kde-format
 msgid "&Cancel"
 msgstr "A&nnuler"

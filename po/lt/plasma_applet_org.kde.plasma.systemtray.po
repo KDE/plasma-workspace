@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-19 00:45+0000\n"
-"PO-Revision-Date: 2025-08-05 15:57+0300\n"
+"PO-Revision-Date: 2025-11-19 20:10+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.8\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -110,26 +110,22 @@ msgstr ""
 "tik vieną elementą."
 
 #: package/contents/ui/ConfigGeneral.qml:199
-#, fuzzy, kde-format
-#| msgid "Scale with Panel height"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel height"
 msgstr "Keisti mastelį pagal skydelio aukštį"
 
 #: package/contents/ui/ConfigGeneral.qml:200
-#, fuzzy, kde-format
-#| msgid "Scale with Panel width"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel width"
 msgstr "Keisti mastelį pagal skydelio plotį"
 
 #: package/contents/ui/ConfigGeneral.qml:202
-#, fuzzy, kde-format
-#| msgctxt "The arrangement of system tray icons in the Panel"
-#| msgid "Panel icon size:"
+#, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon size:"
-msgstr "Skydelio piktogramų dydis:"
+msgstr "Tarpai tarp skydelio piktogramų:"
 
 #: package/contents/ui/ConfigGeneral.qml:206
 #: package/contents/ui/ConfigGeneral.qml:247
@@ -168,17 +164,15 @@ msgid "Automatically set to Large when in Touch Mode"
 msgstr "Automatiškai nustatoma į didelius, kai esama lietimo veiksenoje"
 
 #: package/contents/ui/ConfigGeneral.qml:306
-#, fuzzy, kde-format
-#| msgid "Entries"
+#, kde-format
 msgctxt "@title:column"
 msgid "Entries"
 msgstr "Elementai"
 
 #: package/contents/ui/ConfigGeneral.qml:310
-#, fuzzy, kde-format
-#| msgid "Always shown"
+#, kde-format
 msgid "Always show all"
-msgstr "Visada rodomas"
+msgstr "Visada rodyti visus"
 
 #: package/contents/ui/ExpandedRepresentation.qml:59
 #, kde-format

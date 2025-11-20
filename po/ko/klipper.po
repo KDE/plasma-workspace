@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-18 00:45+0000\n"
+"POT-Creation-Date: 2025-11-20 00:44+0000\n"
 "PO-Revision-Date: 2025-10-09 01:51+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -27,24 +27,24 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde@peremen.name"
 
-#: configdialog.cpp:85
+#: configdialog.cpp:84
 #, kde-format
 msgid "Clipboard history:"
 msgstr "클립보드 과거 기록:"
 
-#: configdialog.cpp:91
+#: configdialog.cpp:90
 #, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
 msgid_plural "%v entries"
 msgstr[0] "%v개 항목"
 
-#: configdialog.cpp:100
+#: configdialog.cpp:99
 #, kde-format
 msgid "Selection and Clipboard:"
 msgstr "선택과 클립보드:"
 
-#: configdialog.cpp:107
+#: configdialog.cpp:106
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -69,37 +69,37 @@ msgstr ""
 "성화하면 선택 항목이 클립보드 기록에 저장될 수도 있지만(아래 옵션에 따라서) "
 "마우스 가운데 단추로만 붙여넣을 수 있습니다."
 
-#: configdialog.cpp:136 configdialog.cpp:174
+#: configdialog.cpp:135 configdialog.cpp:173
 #, kde-format
 msgid "Always save in history"
 msgstr "항상 과거 기록에 저장"
 
-#: configdialog.cpp:140
+#: configdialog.cpp:139
 #, kde-format
 msgid "Text selection:"
 msgstr "텍스트 선택:"
 
-#: configdialog.cpp:142 configdialog.cpp:180
+#: configdialog.cpp:141 configdialog.cpp:179
 #, kde-format
 msgid "Only when explicitly copied"
 msgstr "명시적으로 복사되었을 때에만"
 
-#: configdialog.cpp:147
+#: configdialog.cpp:146
 #, kde-format
 msgid "Whether text selections are saved in the clipboard history."
 msgstr "텍스트 선택을 클립보드 기록에 저장할지 여부입니다."
 
-#: configdialog.cpp:178
+#: configdialog.cpp:177
 #, kde-format
 msgid "Non-text selection:"
 msgstr "비 텍스트 선택:"
 
-#: configdialog.cpp:185
+#: configdialog.cpp:184
 #, kde-format
 msgid "Never save in history"
 msgstr "과거 기록에 저장하지 않음"
 
-#: configdialog.cpp:190
+#: configdialog.cpp:189
 #, kde-format
 msgid ""
 "Whether non-text selections (such as images) are saved in the clipboard "
@@ -108,12 +108,12 @@ msgstr ""
 "텍스트가 아닌 항목(그림 등)을 선택했을 때 클립보드 기록에 저장할지 여부입니"
 "다."
 
-#: configdialog.cpp:264
+#: configdialog.cpp:263
 #, kde-format
 msgid "Show action popup menu:"
 msgstr "동작 팝업 메뉴 표시:"
 
-#: configdialog.cpp:274
+#: configdialog.cpp:273
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -128,35 +128,25 @@ msgstr ""
 "성화했거나, 제외된 창에서 표시되지 않았다면, <shortcut>%1</shortcut> 단축키"
 "를 눌러서 표시할 수 있습니다."
 
-#: configdialog.cpp:283
-#, kde-format
-msgid "Exclude Windows..."
-msgstr "창 제외..."
-
-#: configdialog.cpp:297
+#: configdialog.cpp:285
 #, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
 msgid_plural "%v seconds"
 msgstr[0] "%v초"
 
-#: configdialog.cpp:298
+#: configdialog.cpp:286
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "없음"
 
-#: configdialog.cpp:307
+#: configdialog.cpp:295
 #, kde-format
 msgid "Options:"
 msgstr "옵션:"
 
-#: configdialog.cpp:334
-#, kde-format
-msgid "Exclude Windows"
-msgstr "창 제외"
-
-#: configdialog.cpp:364
+#: configdialog.cpp:320
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -167,34 +157,34 @@ msgstr ""
 "<interface>일치 패턴</interface>과 클립보드 내용이 일치한다면 Klipper 팝업 메"
 "뉴에 <interface>명령</interface>이 표시되며 실행할 수 있습니다."
 
-#: configdialog.cpp:373
+#: configdialog.cpp:329
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "패턴과 명령 일치"
 
-#: configdialog.cpp:373
+#: configdialog.cpp:329
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "설명"
 
-#: configdialog.cpp:379
+#: configdialog.cpp:335
 #, kde-format
 msgid "Add Action..."
 msgstr "동작 추가..."
 
-#: configdialog.cpp:383
+#: configdialog.cpp:339
 #, kde-format
 msgid "Edit Action..."
 msgstr "동작 편집..."
 
-#: configdialog.cpp:388
+#: configdialog.cpp:344
 #, kde-format
 msgid "Delete Action"
 msgstr "동작 삭제"
 
-#: configdialog.cpp:395
+#: configdialog.cpp:351
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -204,7 +194,7 @@ msgstr ""
 "이 동작은 팝업 메뉴에 표시되며 <interface>동작 설정</interface> 페이지에서 설"
 "정할 수 있습니다."
 
-#: configdialog.cpp:590
+#: configdialog.cpp:546
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -214,86 +204,54 @@ msgstr ""
 "선택한 동작 <resource>%1</resource>와(과)<nl/>그 모든 명령을 삭제하시겠습니"
 "까?"
 
-#: configdialog.cpp:591
+#: configdialog.cpp:547
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "동작 삭제 확인"
 
-#: configdialog.cpp:644
+#: configdialog.cpp:600
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "일반"
 
-#: configdialog.cpp:644
+#: configdialog.cpp:600
 #, kde-format
 msgid "General Configuration"
 msgstr "일반 설정"
 
-#: configdialog.cpp:645
+#: configdialog.cpp:601
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "동작 메뉴"
 
-#: configdialog.cpp:645
+#: configdialog.cpp:601
 #, kde-format
 msgid "Action Menu"
 msgstr "동작 메뉴"
 
-#: configdialog.cpp:646
+#: configdialog.cpp:602
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "동작 설정"
 
-#: configdialog.cpp:646
+#: configdialog.cpp:602
 #, kde-format
 msgid "Actions Configuration"
 msgstr "동작 설정"
 
-#: configdialog.cpp:649
+#: configdialog.cpp:605
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "단축키"
 
-#: configdialog.cpp:649
+#: configdialog.cpp:605
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "단축키 설정"
-
-#: configdialog.cpp:735
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"The action popup will not be shown automatically for these windows, even if "
-"it is enabled. This is because, for example, a web browser may highlight a "
-"URL in the address bar while typing, so the menu would show for every "
-"keystroke.<nl/><nl/>If the action menu appears unexpectedly when using a "
-"particular application, then add it to this list. <link>How to find the name "
-"to enter</link>."
-msgstr ""
-"동작 팝업이 활성화되었다고 해도 다음 창에서는 표시하지 않습니다. 예를 들어 "
-"웹 브라우저에서 주소 표시줄에 URL을 입력하는 동안 URL을 강조할 수 있으며, 매"
-"번 키를 입력할 때마다 팝업이 표시될 수도 있습니다.<nl/><nl/>특정 앱을 사용하"
-"는 중에 동작 메뉴가 의도하지 않게 표시되었다면 이 목록에 추가하십시오. <link>"
-"입력할 이름을 찾는 방법</link>."
-
-#: configdialog.cpp:748
-#, kde-kuit-format
-msgctxt "@info:tooltip"
-msgid ""
-"The name that needs to be entered here is the WM_CLASS name of the window to "
-"be excluded. To find the WM_CLASS name for a window, in another terminal "
-"window enter the command:<nl/><nl/>&nbsp;&nbsp;<icode>xprop | grep WM_CLASS</"
-"icode><nl/><nl/>and click on the window that you want to exclude. The first "
-"name that it displays after the equal sign is the one that you need to enter."
-msgstr ""
-"여기에 입력해야 할 이름은 제외할 창의 WM_CLASS입니다. 창의 WM_CLASS 이름을 찾"
-"으려면 터미널에서 다음 명령을 입력하십시오:<nl/><nl/>&nbsp;&nbsp;"
-"<icode>xprop | grep WM_CLASS</icode><nl/><nl/> 그 다음 제외할 창을 클릭하십시"
-"오. 등호 옆에 표시된 최초의 이름을 입력하면 됩니다."
 
 #: declarative/qml/BarcodePage.qml:32
 #, kde-format
@@ -879,50 +837,44 @@ msgid ""
 "Show the popup menu of applicable actions as soon as a selection is made."
 msgstr "선택한 즉시 사용 가능한 동작이 있는 팝업 메뉴를 표시합니다."
 
-#. i18n: ectx: label, entry (NoActionsForWM_CLASS), group (General)
-#: klipper.kcfg:57
-#, kde-format
-msgid "No actions for WM_CLASS"
-msgstr "WM_CLASS에 대한 동작 없음"
-
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:60
+#: klipper.kcfg:56
 #, kde-format
 msgid "Automatic action menu time:"
 msgstr "자동 동작 메뉴 시간:"
 
 #. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:64
+#: klipper.kcfg:60
 #, kde-format
 msgid "Display the automatic action popup menu for this time."
 msgstr "이번만 자동 동작 팝업 메뉴를 표시합니다."
 
 #. i18n: ectx: label, entry (MaxClipItems), group (General)
-#: klipper.kcfg:67
+#: klipper.kcfg:63
 #, kde-format
 msgid "History size:"
 msgstr "과거 기록 크기:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
-#: klipper.kcfg:71
+#: klipper.kcfg:67
 #, kde-format
 msgid "The clipboard history will store up to this many items."
 msgstr "클립보드 과거 기록 항목을 저장할 개수입니다."
 
 #. i18n: ectx: label, entry (ActionList), group (General)
-#: klipper.kcfg:74
+#: klipper.kcfg:70
 #, kde-format
 msgid "Dummy entry for indicating changes in an action's tree widget"
 msgstr "동작의 트리 위젯이 바뀜을 알려 주는 빈 항목"
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:84
+#: klipper.kcfg:80
 #, kde-format
 msgid "Trim whitespace from selection"
 msgstr "선택 항목에서 공백 삭제"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:86
+#: klipper.kcfg:82
 #, kde-format
 msgid ""
 "Remove any whitespace from the start and end of selected text, before "
@@ -935,13 +887,13 @@ msgstr ""
 "에 저장된 문자열은 영향을 받지 않습니다."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:89
+#: klipper.kcfg:85
 #, kde-format
 msgid "For an item chosen from history"
 msgstr "과거 기록에서 항목 선택 시"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:91
+#: klipper.kcfg:87
 #, kde-format
 msgid ""
 "Show the popup menu of applicable actions if an entry is chosen from the "
@@ -949,13 +901,13 @@ msgid ""
 msgstr "클립보드 과거 기록에서 항목을 선택했을 때 동작 팝업 메뉴를 표시합니다."
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:94
+#: klipper.kcfg:90
 #, kde-format
 msgid "Include MIME actions"
 msgstr "MIME 동작 포함"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:96
+#: klipper.kcfg:92
 #, kde-format
 msgid ""
 "If a file name or URL is selected, include applications that can accept its "
@@ -969,10 +921,48 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "클립보드 팝업"
 
-#: urlgrabber.cpp:202
+#: urlgrabber.cpp:195
 #, kde-format
 msgid "&Cancel"
 msgstr "취소(&C)"
+
+#~ msgid "Exclude Windows..."
+#~ msgstr "창 제외..."
+
+#~ msgid "Exclude Windows"
+#~ msgstr "창 제외"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The action popup will not be shown automatically for these windows, even "
+#~ "if it is enabled. This is because, for example, a web browser may "
+#~ "highlight a URL in the address bar while typing, so the menu would show "
+#~ "for every keystroke.<nl/><nl/>If the action menu appears unexpectedly "
+#~ "when using a particular application, then add it to this list. <link>How "
+#~ "to find the name to enter</link>."
+#~ msgstr ""
+#~ "동작 팝업이 활성화되었다고 해도 다음 창에서는 표시하지 않습니다. 예를 들"
+#~ "어 웹 브라우저에서 주소 표시줄에 URL을 입력하는 동안 URL을 강조할 수 있으"
+#~ "며, 매번 키를 입력할 때마다 팝업이 표시될 수도 있습니다.<nl/><nl/>특정 앱"
+#~ "을 사용하는 중에 동작 메뉴가 의도하지 않게 표시되었다면 이 목록에 추가하십"
+#~ "시오. <link>입력할 이름을 찾는 방법</link>."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "The name that needs to be entered here is the WM_CLASS name of the window "
+#~ "to be excluded. To find the WM_CLASS name for a window, in another "
+#~ "terminal window enter the command:<nl/><nl/>&nbsp;&nbsp;<icode>xprop | "
+#~ "grep WM_CLASS</icode><nl/><nl/>and click on the window that you want to "
+#~ "exclude. The first name that it displays after the equal sign is the one "
+#~ "that you need to enter."
+#~ msgstr ""
+#~ "여기에 입력해야 할 이름은 제외할 창의 WM_CLASS입니다. 창의 WM_CLASS 이름"
+#~ "을 찾으려면 터미널에서 다음 명령을 입력하십시오:<nl/><nl/>&nbsp;&nbsp;"
+#~ "<icode>xprop | grep WM_CLASS</icode><nl/><nl/> 그 다음 제외할 창을 클릭하"
+#~ "십시오. 등호 옆에 표시된 최초의 이름을 입력하면 됩니다."
+
+#~ msgid "No actions for WM_CLASS"
+#~ msgstr "WM_CLASS에 대한 동작 없음"
 
 #~ msgctxt "@action:inmenu"
 #~ msgid "&Configure Klipper…"

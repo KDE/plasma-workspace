@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-20 00:44+0000\n"
 "PO-Revision-Date: 2025-02-02 20:58+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -71,71 +71,71 @@ msgstr "再起動すると、コンピュータはファームウェア設定画
 msgid "When restarted, the computer will enter the boot loader menu."
 msgstr "再起動すると、コンピュータはブートローダメニューに入ります。"
 
-#: contents/logout/Logout.qml:219
+#: contents/logout/Logout.qml:228
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p"
 msgstr "スリープ(&P)"
 
-#: contents/logout/Logout.qml:220
+#: contents/logout/Logout.qml:229
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p Now"
 msgstr "今すぐスリープ(&P)"
 
-#: contents/logout/Logout.qml:229
+#: contents/logout/Logout.qml:238
 #, kde-format
 msgid "&Hibernate"
 msgstr "ハイバネート(&H)"
 
-#: contents/logout/Logout.qml:230
+#: contents/logout/Logout.qml:239
 #, kde-format
 msgid "&Hibernate Now"
 msgstr "今すぐハイバネート(&H)"
 
-#: contents/logout/Logout.qml:241
+#: contents/logout/Logout.qml:250
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
 msgstr "更新をインストールして再起動"
 
-#: contents/logout/Logout.qml:243 contents/logout/Logout.qml:262
+#: contents/logout/Logout.qml:252 contents/logout/Logout.qml:271
 #, kde-format
 msgid "&Restart"
 msgstr "再起動(&R)"
 
-#: contents/logout/Logout.qml:244 contents/logout/Logout.qml:263
+#: contents/logout/Logout.qml:253 contents/logout/Logout.qml:272
 #, kde-format
 msgid "&Restart Now"
 msgstr "今すぐ再起動(&R)"
 
-#: contents/logout/Logout.qml:276
+#: contents/logout/Logout.qml:285
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
 msgstr "更新をインストールしてシャットダウン"
 
-#: contents/logout/Logout.qml:278 contents/logout/Logout.qml:297
+#: contents/logout/Logout.qml:287 contents/logout/Logout.qml:306
 #, kde-format
 msgid "&Shut Down"
 msgstr "シャットダウン(&S)"
 
-#: contents/logout/Logout.qml:279 contents/logout/Logout.qml:298
+#: contents/logout/Logout.qml:288 contents/logout/Logout.qml:307
 #, kde-format
 msgid "&Shut Down Now"
 msgstr "今すぐシャットダウン(&S)"
 
-#: contents/logout/Logout.qml:310
+#: contents/logout/Logout.qml:319
 #, kde-format
 msgid "&Log Out"
 msgstr "ログアウト(&L)"
 
-#: contents/logout/Logout.qml:311
+#: contents/logout/Logout.qml:320
 #, kde-format
 msgid "&Log Out Now"
 msgstr "今すぐログアウト(&L)"
 
-#: contents/logout/Logout.qml:321
+#: contents/logout/Logout.qml:330
 #, kde-format
 msgid "&Cancel"
 msgstr "キャンセル(&C)"

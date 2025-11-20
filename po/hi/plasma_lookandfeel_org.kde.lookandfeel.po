@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-20 00:44+0000\n"
 "PO-Revision-Date: 2022-02-26 11:47+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -78,7 +78,7 @@ msgstr "पुनरारंभ होने पर, कंप्यूटर �
 msgid "When restarted, the computer will enter the boot loader menu."
 msgstr "पुनरारंभ होने पर, कंप्यूटर फर्मवेयर संस्थापन स्क्रीन में प्रवेश करेगा।"
 
-#: contents/logout/Logout.qml:219
+#: contents/logout/Logout.qml:228
 #, fuzzy, kde-format
 #| msgctxt "Suspend to RAM"
 #| msgid "Sleep"
@@ -86,7 +86,7 @@ msgctxt "Suspend to RAM"
 msgid "Slee&p"
 msgstr "निद्रा"
 
-#: contents/logout/Logout.qml:220
+#: contents/logout/Logout.qml:229
 #, fuzzy, kde-format
 #| msgctxt "Suspend to RAM"
 #| msgid "Sleep"
@@ -94,67 +94,67 @@ msgctxt "Suspend to RAM"
 msgid "Slee&p Now"
 msgstr "निद्रा"
 
-#: contents/logout/Logout.qml:229
+#: contents/logout/Logout.qml:238
 #, fuzzy, kde-format
 #| msgid "Hibernate"
 msgid "&Hibernate"
 msgstr "सुप्तावस्था"
 
-#: contents/logout/Logout.qml:230
+#: contents/logout/Logout.qml:239
 #, fuzzy, kde-format
 #| msgid "Hibernate"
 msgid "&Hibernate Now"
 msgstr "सुप्तावस्था"
 
-#: contents/logout/Logout.qml:241
+#: contents/logout/Logout.qml:250
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
 msgstr ""
 
-#: contents/logout/Logout.qml:243 contents/logout/Logout.qml:262
+#: contents/logout/Logout.qml:252 contents/logout/Logout.qml:271
 #, fuzzy, kde-format
 #| msgid "Restart"
 msgid "&Restart"
 msgstr "पुनः प्रारंभ करें"
 
-#: contents/logout/Logout.qml:244 contents/logout/Logout.qml:263
+#: contents/logout/Logout.qml:253 contents/logout/Logout.qml:272
 #, fuzzy, kde-format
 #| msgid "Restart"
 msgid "&Restart Now"
 msgstr "पुनः प्रारंभ करें"
 
-#: contents/logout/Logout.qml:276
+#: contents/logout/Logout.qml:285
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
 msgstr ""
 
-#: contents/logout/Logout.qml:278 contents/logout/Logout.qml:297
+#: contents/logout/Logout.qml:287 contents/logout/Logout.qml:306
 #, fuzzy, kde-format
 #| msgid "Shut Down"
 msgid "&Shut Down"
 msgstr "बन्द करें"
 
-#: contents/logout/Logout.qml:279 contents/logout/Logout.qml:298
+#: contents/logout/Logout.qml:288 contents/logout/Logout.qml:307
 #, fuzzy, kde-format
 #| msgid "Shut Down"
 msgid "&Shut Down Now"
 msgstr "बन्द करें"
 
-#: contents/logout/Logout.qml:310
+#: contents/logout/Logout.qml:319
 #, fuzzy, kde-format
 #| msgid "Log Out"
 msgid "&Log Out"
 msgstr "लॉग-आउट"
 
-#: contents/logout/Logout.qml:311
+#: contents/logout/Logout.qml:320
 #, fuzzy, kde-format
 #| msgid "Log Out"
 msgid "&Log Out Now"
 msgstr "लॉग-आउट"
 
-#: contents/logout/Logout.qml:321
+#: contents/logout/Logout.qml:330
 #, fuzzy, kde-format
 #| msgid "Cancel"
 msgid "&Cancel"

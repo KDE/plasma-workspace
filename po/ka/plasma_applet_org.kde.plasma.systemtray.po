@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-19 00:45+0000\n"
-"PO-Revision-Date: 2025-11-15 08:10+0100\n"
+"PO-Revision-Date: 2025-11-19 05:32+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -106,23 +106,19 @@ msgstr ""
 "მან დროის ერთ მომენტში ერთი ელემენტი დაიმახსოვროს."
 
 #: package/contents/ui/ConfigGeneral.qml:199
-#, fuzzy, kde-format
-#| msgid "Scale with Panel height"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel height"
-msgstr "პანელის სიმაღლესთან ერთად გადიდება"
+msgstr "გადიდება პანელის სიმაღლესთან ერთად"
 
 #: package/contents/ui/ConfigGeneral.qml:200
-#, fuzzy, kde-format
-#| msgid "Scale with Panel width"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel width"
-msgstr "პანელის სიგანესთან ერთად გადიდება"
+msgstr "გადიდება პანელის სიგანესთან ერთად"
 
 #: package/contents/ui/ConfigGeneral.qml:202
-#, fuzzy, kde-format
-#| msgctxt "The arrangement of system tray icons in the Panel"
-#| msgid "Panel icon size:"
+#, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon size:"
 msgstr "პანელის ხატულების ზომა:"

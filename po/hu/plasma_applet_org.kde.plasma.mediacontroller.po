@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-20 00:44+0000\n"
 "PO-Revision-Date: 2025-05-27 22:00+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -18,86 +18,86 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 25.04.1\n"
 
-#: AlbumArtStackView.qml:212
+#: AlbumArtStackView.qml:211
 #, kde-format
 msgid "No title"
 msgstr "Nincs cím"
 
-#: AlbumArtStackView.qml:212 main.qml:57
+#: AlbumArtStackView.qml:211 main.qml:57
 #, kde-format
 msgid "No media playing"
 msgstr "Nincs médialejátszás"
 
-#: ExpandedRepresentation.qml:415 ExpandedRepresentation.qml:571
+#: ExpandedRepresentation.qml:414 ExpandedRepresentation.qml:570
 #, kde-format
 msgctxt "Remaining time for song e.g -5:42"
 msgid "-%1"
 msgstr "-%1"
 
-#: ExpandedRepresentation.qml:592
+#: ExpandedRepresentation.qml:591
 #, kde-format
 msgid "Playback rate %1"
 msgstr "Lejátszási sebesség %1"
 
-#: ExpandedRepresentation.qml:595
+#: ExpandedRepresentation.qml:594
 #, kde-format
 msgctxt "Playback rate"
 msgid "%1x"
 msgstr "%1x"
 
-#: ExpandedRepresentation.qml:599
+#: ExpandedRepresentation.qml:598
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Playback rate"
 msgstr "Lejátszási sebesség"
 
-#: ExpandedRepresentation.qml:645
+#: ExpandedRepresentation.qml:644
 #, kde-format
 msgctxt "@action:inmenu Playback speed (Normal)"
 msgid "%1 (Normal)"
 msgstr "%1 (Normál)"
 
-#: ExpandedRepresentation.qml:684
+#: ExpandedRepresentation.qml:683
 #, kde-format
 msgctxt "@action:button"
 msgid "Shuffle"
 msgstr "Keverés"
 
-#: ExpandedRepresentation.qml:708 main.qml:114
+#: ExpandedRepresentation.qml:707 main.qml:114
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
 msgstr "Előző szám"
 
-#: ExpandedRepresentation.qml:730 main.qml:122
+#: ExpandedRepresentation.qml:729 main.qml:122
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
 msgstr "Szünet"
 
-#: ExpandedRepresentation.qml:730 main.qml:130
+#: ExpandedRepresentation.qml:729 main.qml:130
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
 msgstr "Lejátszás"
 
-#: ExpandedRepresentation.qml:748 main.qml:138
+#: ExpandedRepresentation.qml:747 main.qml:138
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
 msgstr "Következő szám"
 
-#: ExpandedRepresentation.qml:771
+#: ExpandedRepresentation.qml:770
 #, kde-format
 msgid "Repeat Track"
 msgstr "Szám ismétlése"
 
-#: ExpandedRepresentation.qml:771
+#: ExpandedRepresentation.qml:770
 #, kde-format
 msgid "Repeat"
 msgstr "Ismétlés"
 
-#: ExpandedRepresentation.qml:839
+#: ExpandedRepresentation.qml:841
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose player automatically"

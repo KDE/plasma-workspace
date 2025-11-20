@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-18 00:45+0000\n"
+"POT-Creation-Date: 2025-11-20 00:44+0000\n"
 "PO-Revision-Date: 2025-02-13 22:10+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -30,12 +30,12 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "andhika.padmawan@gmail.com,wantoyek@gmail.com"
 
-#: configdialog.cpp:85
+#: configdialog.cpp:84
 #, kde-format
 msgid "Clipboard history:"
 msgstr "Riwayat papan klip:"
 
-#: configdialog.cpp:91
+#: configdialog.cpp:90
 #, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
@@ -43,12 +43,12 @@ msgid_plural "%v entries"
 msgstr[0] "%v entri"
 msgstr[1] "%v entri"
 
-#: configdialog.cpp:100
+#: configdialog.cpp:99
 #, kde-format
 msgid "Selection and Clipboard:"
 msgstr "Pemilihan dan Papan Klip:"
 
-#: configdialog.cpp:107
+#: configdialog.cpp:106
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -75,37 +75,37 @@ msgstr ""
 "pada opsi di bawah), tetapi hanya bisa ditempelkan menggunakan tombol tengah "
 "mouse."
 
-#: configdialog.cpp:136 configdialog.cpp:174
+#: configdialog.cpp:135 configdialog.cpp:173
 #, kde-format
 msgid "Always save in history"
 msgstr "Selalu simpan di riwayat"
 
-#: configdialog.cpp:140
+#: configdialog.cpp:139
 #, kde-format
 msgid "Text selection:"
 msgstr "Pemilihan teks:"
 
-#: configdialog.cpp:142 configdialog.cpp:180
+#: configdialog.cpp:141 configdialog.cpp:179
 #, kde-format
 msgid "Only when explicitly copied"
 msgstr "Hanya ketika disalin secara gamblang"
 
-#: configdialog.cpp:147
+#: configdialog.cpp:146
 #, kde-format
 msgid "Whether text selections are saved in the clipboard history."
 msgstr "Apakah pemilihan teks akan disimpan di riwayat papan klip."
 
-#: configdialog.cpp:178
+#: configdialog.cpp:177
 #, kde-format
 msgid "Non-text selection:"
 msgstr "Pemilihan non-teks:"
 
-#: configdialog.cpp:185
+#: configdialog.cpp:184
 #, kde-format
 msgid "Never save in history"
 msgstr "Tidak usah simpan di riwayat"
 
-#: configdialog.cpp:190
+#: configdialog.cpp:189
 #, kde-format
 msgid ""
 "Whether non-text selections (such as images) are saved in the clipboard "
@@ -114,12 +114,12 @@ msgstr ""
 "Apakah pemilihan non teks (sepertihalnya citra) disimpan di riwayat papan "
 "klip."
 
-#: configdialog.cpp:264
+#: configdialog.cpp:263
 #, kde-format
 msgid "Show action popup menu:"
 msgstr "Tampilkan sembulan menu tindakan:"
 
-#: configdialog.cpp:274
+#: configdialog.cpp:273
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -135,12 +135,7 @@ msgstr ""
 "ditampilkan untuk jendela yang dikecualikan, maka menu tersebut bisa "
 "ditampilkan dengan menggunakan pintasan tombol <shortcut>%1</shortcut>."
 
-#: configdialog.cpp:283
-#, kde-format
-msgid "Exclude Windows..."
-msgstr "Kecualikan Jendela..."
-
-#: configdialog.cpp:297
+#: configdialog.cpp:285
 #, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
@@ -148,23 +143,18 @@ msgid_plural "%v seconds"
 msgstr[0] "%v detik"
 msgstr[1] "%v detik"
 
-#: configdialog.cpp:298
+#: configdialog.cpp:286
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "Nihil"
 
-#: configdialog.cpp:307
+#: configdialog.cpp:295
 #, kde-format
 msgid "Options:"
 msgstr "Opsi:"
 
-#: configdialog.cpp:334
-#, kde-format
-msgid "Exclude Windows"
-msgstr "Kecualikan Jendela"
-
-#: configdialog.cpp:364
+#: configdialog.cpp:320
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -176,34 +166,34 @@ msgstr ""
 "<interface>perintah</interface> tersebut muncul di menu sembul Klipper dan "
 "bisa dieksekusi."
 
-#: configdialog.cpp:373
+#: configdialog.cpp:329
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "Perintah dan pola cocok"
 
-#: configdialog.cpp:373
+#: configdialog.cpp:329
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Deskripsi"
 
-#: configdialog.cpp:379
+#: configdialog.cpp:335
 #, kde-format
 msgid "Add Action..."
 msgstr "Tambah Tindakan..."
 
-#: configdialog.cpp:383
+#: configdialog.cpp:339
 #, kde-format
 msgid "Edit Action..."
 msgstr "Edit Tindakan..."
 
-#: configdialog.cpp:388
+#: configdialog.cpp:344
 #, kde-format
 msgid "Delete Action"
 msgstr "Hapus Tindakan"
 
-#: configdialog.cpp:395
+#: configdialog.cpp:351
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -213,7 +203,7 @@ msgstr ""
 "Tindakan tersebut muncul di menu sembul yang mana bisa dikonfigurasi di "
 "halaman <interface>Menu Tindakan</interface>."
 
-#: configdialog.cpp:590
+#: configdialog.cpp:546
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -223,90 +213,54 @@ msgstr ""
 "Hapus tindakan <resource>%1</resource><nl/> yang dipilihdan semua perintah-"
 "perintahnya?"
 
-#: configdialog.cpp:591
+#: configdialog.cpp:547
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "Konfirmasi Tindakan Menghapus"
 
-#: configdialog.cpp:644
+#: configdialog.cpp:600
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Umum"
 
-#: configdialog.cpp:644
+#: configdialog.cpp:600
 #, kde-format
 msgid "General Configuration"
 msgstr "Konfigurasi Umum"
 
-#: configdialog.cpp:645
+#: configdialog.cpp:601
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Menu Tindakan"
 
-#: configdialog.cpp:645
+#: configdialog.cpp:601
 #, kde-format
 msgid "Action Menu"
 msgstr "Menu Tindakan"
 
-#: configdialog.cpp:646
+#: configdialog.cpp:602
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Konfigurasi Tindakan"
 
-#: configdialog.cpp:646
+#: configdialog.cpp:602
 #, kde-format
 msgid "Actions Configuration"
 msgstr "Konfigurasi Tindakan"
 
-#: configdialog.cpp:649
+#: configdialog.cpp:605
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Pintasan"
 
-#: configdialog.cpp:649
+#: configdialog.cpp:605
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Konfigurasi Pintasan"
-
-#: configdialog.cpp:735
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"The action popup will not be shown automatically for these windows, even if "
-"it is enabled. This is because, for example, a web browser may highlight a "
-"URL in the address bar while typing, so the menu would show for every "
-"keystroke.<nl/><nl/>If the action menu appears unexpectedly when using a "
-"particular application, then add it to this list. <link>How to find the name "
-"to enter</link>."
-msgstr ""
-"Sembulan tindakan tidak akan ditampilkan secara otomatis untuk jendela "
-"tersebut, bahkan jika ia difungsikan. Ini karena, peramban web mungkin "
-"sedang menyoroti URL di bilah alamat selagi mengetik, sehingga menu tampak "
-"setiap penekanan tombol.\n"
-"<nl/>Jika menu tindakan muncul secara tiba-tiba saat menggunakan aplikasi "
-"tertentu, maka tambahkanlah ke daftar ini. <link>Bagaimana menemukan nama "
-"untuk memasukkan</link>."
-
-#: configdialog.cpp:748
-#, kde-kuit-format
-msgctxt "@info:tooltip"
-msgid ""
-"The name that needs to be entered here is the WM_CLASS name of the window to "
-"be excluded. To find the WM_CLASS name for a window, in another terminal "
-"window enter the command:<nl/><nl/>&nbsp;&nbsp;<icode>xprop | grep WM_CLASS</"
-"icode><nl/><nl/>and click on the window that you want to exclude. The first "
-"name that it displays after the equal sign is the one that you need to enter."
-msgstr ""
-"Nama yang perlu dimasukkan di sini adalah nama WM_CLASS dari jendela yang "
-"akan dikecualikan. Untuk menemukan nama WM_CLASS untuk jendela, dalam "
-"jendela terminal lain masukkan perintah:<nl/><nl/>&nbsp;&nbsp;<icode>xprop | "
-"grep WM_CLASS</icode><nl/><nl/>dan klik pada jendela yang Anda ingin "
-"dikecualikan. Nama pertama yang ditampilkan sesudah tanda sama dengan, "
-"adalah nama yang perlu Anda masukkan."
 
 #: declarative/qml/BarcodePage.qml:32
 #, kde-format
@@ -909,50 +863,44 @@ msgstr ""
 "Tampilkan menu sembul dari tindakan yang berlaku segera setelah pemilihan "
 "dibuat."
 
-#. i18n: ectx: label, entry (NoActionsForWM_CLASS), group (General)
-#: klipper.kcfg:57
-#, kde-format
-msgid "No actions for WM_CLASS"
-msgstr "Tak ada tindakan untuk WM_CLASS"
-
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:60
+#: klipper.kcfg:56
 #, kde-format
 msgid "Automatic action menu time:"
 msgstr "Waktu menu tindakan otomatis:"
 
 #. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:64
+#: klipper.kcfg:60
 #, kde-format
 msgid "Display the automatic action popup menu for this time."
 msgstr "Tampilkan sembulan tindakan otomatis untuk kali ini."
 
 #. i18n: ectx: label, entry (MaxClipItems), group (General)
-#: klipper.kcfg:67
+#: klipper.kcfg:63
 #, kde-format
 msgid "History size:"
 msgstr "Ukuran riwayat:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
-#: klipper.kcfg:71
+#: klipper.kcfg:67
 #, kde-format
 msgid "The clipboard history will store up to this many items."
 msgstr "Riwayat papan klip akan menyimpan hingga banyak item ini."
 
 #. i18n: ectx: label, entry (ActionList), group (General)
-#: klipper.kcfg:74
+#: klipper.kcfg:70
 #, kde-format
 msgid "Dummy entry for indicating changes in an action's tree widget"
 msgstr "Entri dumi untuk mengindikasikan perubahan di widget ranting tindakan"
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:84
+#: klipper.kcfg:80
 #, kde-format
 msgid "Trim whitespace from selection"
 msgstr "Rapikan ruang kosong dari pemilihan"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:86
+#: klipper.kcfg:82
 #, kde-format
 msgid ""
 "Remove any whitespace from the start and end of selected text, before "
@@ -966,13 +914,13 @@ msgstr ""
 "yang disimpan di papan klip tidak berpengaruh."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:89
+#: klipper.kcfg:85
 #, kde-format
 msgid "For an item chosen from history"
 msgstr "Untuk item yang dipilih dari riwayat"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:91
+#: klipper.kcfg:87
 #, kde-format
 msgid ""
 "Show the popup menu of applicable actions if an entry is chosen from the "
@@ -982,13 +930,13 @@ msgstr ""
 "entri dipilih dari riwayat papan klip."
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:94
+#: klipper.kcfg:90
 #, kde-format
 msgid "Include MIME actions"
 msgstr "Termasuk tindakan MIME"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:96
+#: klipper.kcfg:92
 #, kde-format
 msgid ""
 "If a file name or URL is selected, include applications that can accept its "
@@ -1002,10 +950,52 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "Sembulan Papan Klip"
 
-#: urlgrabber.cpp:202
+#: urlgrabber.cpp:195
 #, kde-format
 msgid "&Cancel"
 msgstr "&Batal"
+
+#~ msgid "Exclude Windows..."
+#~ msgstr "Kecualikan Jendela..."
+
+#~ msgid "Exclude Windows"
+#~ msgstr "Kecualikan Jendela"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The action popup will not be shown automatically for these windows, even "
+#~ "if it is enabled. This is because, for example, a web browser may "
+#~ "highlight a URL in the address bar while typing, so the menu would show "
+#~ "for every keystroke.<nl/><nl/>If the action menu appears unexpectedly "
+#~ "when using a particular application, then add it to this list. <link>How "
+#~ "to find the name to enter</link>."
+#~ msgstr ""
+#~ "Sembulan tindakan tidak akan ditampilkan secara otomatis untuk jendela "
+#~ "tersebut, bahkan jika ia difungsikan. Ini karena, peramban web mungkin "
+#~ "sedang menyoroti URL di bilah alamat selagi mengetik, sehingga menu "
+#~ "tampak setiap penekanan tombol.\n"
+#~ "<nl/>Jika menu tindakan muncul secara tiba-tiba saat menggunakan aplikasi "
+#~ "tertentu, maka tambahkanlah ke daftar ini. <link>Bagaimana menemukan nama "
+#~ "untuk memasukkan</link>."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "The name that needs to be entered here is the WM_CLASS name of the window "
+#~ "to be excluded. To find the WM_CLASS name for a window, in another "
+#~ "terminal window enter the command:<nl/><nl/>&nbsp;&nbsp;<icode>xprop | "
+#~ "grep WM_CLASS</icode><nl/><nl/>and click on the window that you want to "
+#~ "exclude. The first name that it displays after the equal sign is the one "
+#~ "that you need to enter."
+#~ msgstr ""
+#~ "Nama yang perlu dimasukkan di sini adalah nama WM_CLASS dari jendela yang "
+#~ "akan dikecualikan. Untuk menemukan nama WM_CLASS untuk jendela, dalam "
+#~ "jendela terminal lain masukkan perintah:<nl/><nl/>&nbsp;&nbsp;"
+#~ "<icode>xprop | grep WM_CLASS</icode><nl/><nl/>dan klik pada jendela yang "
+#~ "Anda ingin dikecualikan. Nama pertama yang ditampilkan sesudah tanda sama "
+#~ "dengan, adalah nama yang perlu Anda masukkan."
+
+#~ msgid "No actions for WM_CLASS"
+#~ msgstr "Tak ada tindakan untuk WM_CLASS"
 
 #~ msgctxt "@action:inmenu"
 #~ msgid "&Configure Klipper…"

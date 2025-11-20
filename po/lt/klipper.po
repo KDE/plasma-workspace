@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-18 00:45+0000\n"
+"POT-Creation-Date: 2025-11-20 00:44+0000\n"
 "PO-Revision-Date: 2025-09-04 13:15+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
@@ -32,12 +32,12 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "rch@richard.eu.org, dgvirtual@akl.lt, skroblas@erdves.lt, <>"
 
-#: configdialog.cpp:85
+#: configdialog.cpp:84
 #, kde-format
 msgid "Clipboard history:"
 msgstr "Iškarpinės istorija:"
 
-#: configdialog.cpp:91
+#: configdialog.cpp:90
 #, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
@@ -47,12 +47,12 @@ msgstr[1] "%v įrašai"
 msgstr[2] "%v įrašų"
 msgstr[3] "%v įrašas"
 
-#: configdialog.cpp:100
+#: configdialog.cpp:99
 #, kde-format
 msgid "Selection and Clipboard:"
 msgstr "Žymėjimas ir iškarpinė:"
 
-#: configdialog.cpp:107
+#: configdialog.cpp:106
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -80,37 +80,37 @@ msgstr ""
 "nuo žemiau pasirinktų parinkčių), bet gali būti įdėtas tik naudojant "
 "vidurinįjį pelės mygtuką."
 
-#: configdialog.cpp:136 configdialog.cpp:174
+#: configdialog.cpp:135 configdialog.cpp:173
 #, kde-format
 msgid "Always save in history"
 msgstr "Visada įrašyti į istoriją"
 
-#: configdialog.cpp:140
+#: configdialog.cpp:139
 #, kde-format
 msgid "Text selection:"
 msgstr "Teksto žymėjimas:"
 
-#: configdialog.cpp:142 configdialog.cpp:180
+#: configdialog.cpp:141 configdialog.cpp:179
 #, kde-format
 msgid "Only when explicitly copied"
 msgstr "Tik tada, kai sąmoningai nukopijuotas"
 
-#: configdialog.cpp:147
+#: configdialog.cpp:146
 #, kde-format
 msgid "Whether text selections are saved in the clipboard history."
 msgstr "Ar teksto žymėjimai bus įrašomi į iškarpinės istoriją."
 
-#: configdialog.cpp:178
+#: configdialog.cpp:177
 #, kde-format
 msgid "Non-text selection:"
 msgstr "Ne teksto žymėjimai:"
 
-#: configdialog.cpp:185
+#: configdialog.cpp:184
 #, kde-format
 msgid "Never save in history"
 msgstr "Niekada neįrašyti į istoriją"
 
-#: configdialog.cpp:190
+#: configdialog.cpp:189
 #, kde-format
 msgid ""
 "Whether non-text selections (such as images) are saved in the clipboard "
@@ -118,12 +118,12 @@ msgid ""
 msgstr ""
 "Ar ne teksto žymėjimai (pvz., paveikslai) bus įrašomi į iškarpinės istoriją."
 
-#: configdialog.cpp:264
+#: configdialog.cpp:263
 #, kde-format
 msgid "Show action popup menu:"
 msgstr "Rodyti veiksmų iškylantįjį meniu:"
 
-#: configdialog.cpp:274
+#: configdialog.cpp:273
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -139,12 +139,7 @@ msgstr ""
 "nėra rodomas išskirtam langui, tuomet jis gali būti parodytas naudojant "
 "spartųjį klavišą <shortcut>%1</shortcut>."
 
-#: configdialog.cpp:283
-#, kde-format
-msgid "Exclude Windows..."
-msgstr "Išskirti langus..."
-
-#: configdialog.cpp:297
+#: configdialog.cpp:285
 #, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
@@ -154,23 +149,18 @@ msgstr[1] "%v sekundės"
 msgstr[2] "%v sekundžių"
 msgstr[3] "%v sekundė"
 
-#: configdialog.cpp:298
+#: configdialog.cpp:286
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "Nėra"
 
-#: configdialog.cpp:307
+#: configdialog.cpp:295
 #, kde-format
 msgid "Options:"
 msgstr "Parinktys:"
 
-#: configdialog.cpp:334
-#, kde-format
-msgid "Exclude Windows"
-msgstr "Išskirti langus"
-
-#: configdialog.cpp:364
+#: configdialog.cpp:320
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -182,34 +172,34 @@ msgstr ""
 "<interface>komandos</interface> atsiranda Klipper iškylančiajame meniu ir "
 "gali būti įvykdytos."
 
-#: configdialog.cpp:373
+#: configdialog.cpp:329
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "Atitikimo šablonas ir komandos"
 
-#: configdialog.cpp:373
+#: configdialog.cpp:329
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Aprašas"
 
-#: configdialog.cpp:379
+#: configdialog.cpp:335
 #, kde-format
 msgid "Add Action..."
 msgstr "Pridėti veiksmą..."
 
-#: configdialog.cpp:383
+#: configdialog.cpp:339
 #, kde-format
 msgid "Edit Action..."
 msgstr "Keisti veiksmą..."
 
-#: configdialog.cpp:388
+#: configdialog.cpp:344
 #, kde-format
 msgid "Delete Action"
 msgstr "Ištrinti veiksmą"
 
-#: configdialog.cpp:395
+#: configdialog.cpp:351
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -219,7 +209,7 @@ msgstr ""
 "Šie veiksmai atsiras iškylančiajame meniu, kurį galima konfigūruoti "
 "<interface>Veiksmų meniu</interface> puslapyje."
 
-#: configdialog.cpp:590
+#: configdialog.cpp:546
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -228,89 +218,54 @@ msgid ""
 msgstr ""
 "Ištrinti pažymėtą veiksmą <resource>%1</resource><nl/>ir visas jo komandas?"
 
-#: configdialog.cpp:591
+#: configdialog.cpp:547
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "Patvirtinti veiksmo ištrynimą"
 
-#: configdialog.cpp:644
+#: configdialog.cpp:600
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Bendri"
 
-#: configdialog.cpp:644
+#: configdialog.cpp:600
 #, kde-format
 msgid "General Configuration"
 msgstr "Bendra konfigūracija"
 
-#: configdialog.cpp:645
+#: configdialog.cpp:601
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Veiksmų meniu"
 
-#: configdialog.cpp:645
+#: configdialog.cpp:601
 #, kde-format
 msgid "Action Menu"
 msgstr "Veiksmų meniu"
 
-#: configdialog.cpp:646
+#: configdialog.cpp:602
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Veiksmų konfigūracija"
 
-#: configdialog.cpp:646
+#: configdialog.cpp:602
 #, kde-format
 msgid "Actions Configuration"
 msgstr "Veiksmų konfigūracija"
 
-#: configdialog.cpp:649
+#: configdialog.cpp:605
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Spartieji klavišai"
 
-#: configdialog.cpp:649
+#: configdialog.cpp:605
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Sparčiųjų klavišų konfigūracija"
-
-#: configdialog.cpp:735
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"The action popup will not be shown automatically for these windows, even if "
-"it is enabled. This is because, for example, a web browser may highlight a "
-"URL in the address bar while typing, so the menu would show for every "
-"keystroke.<nl/><nl/>If the action menu appears unexpectedly when using a "
-"particular application, then add it to this list. <link>How to find the name "
-"to enter</link>."
-msgstr ""
-"Šiems langams veiksmo iškylantysis meniu nebus automatiškai rodomas net tuo "
-"atveju, jei jis įjungtas. Taip yra todėl, kad, pavyzdžiui, saityno naršyklė, "
-"adreso juostoje rašant URL adresą, gali jį paryškinti, todėl meniu būtų "
-"rodomas po kiekvieno klavišo paspaudimo.<nl/><nl/>Jei naudojant tam tikrą "
-"programą netikėtai atsiranda veiksmo meniu, tuomet pridėkite ją į šį sąrašą. "
-"<link>Kaip sužinoti, kokį pavadinimą įvesti</link>."
-
-#: configdialog.cpp:748
-#, kde-kuit-format
-msgctxt "@info:tooltip"
-msgid ""
-"The name that needs to be entered here is the WM_CLASS name of the window to "
-"be excluded. To find the WM_CLASS name for a window, in another terminal "
-"window enter the command:<nl/><nl/>&nbsp;&nbsp;<icode>xprop | grep WM_CLASS</"
-"icode><nl/><nl/>and click on the window that you want to exclude. The first "
-"name that it displays after the equal sign is the one that you need to enter."
-msgstr ""
-"Pavadinimas, kuris čia turi būti įvestas, yra lango, kuris turi būti "
-"išskirtas, WM_CLASS pavadinimas. Norėdami sužinoti lango WM_CLASS "
-"pavadinimą, kitame terminalo lange įveskite komandą:<nl/><nl/>&nbsp;&nbsp;"
-"<icode>xprop | grep WM_CLASS</icode><nl/><nl/>ir spustelėkite ant lango, "
-"kurį norite išskirti. Pirmas pavadinimas, kuris bus rodomas po lygybės "
-"ženklo, yra pavadinimas, kurį turite įvesti."
 
 #: declarative/qml/BarcodePage.qml:32
 #, kde-format
@@ -912,50 +867,44 @@ msgstr ""
 "Rodyti iškylantįjį pritaikyti galimų veiksmų meniu iš karto, kai tik "
 "atliekamas žymėjimas."
 
-#. i18n: ectx: label, entry (NoActionsForWM_CLASS), group (General)
-#: klipper.kcfg:57
-#, kde-format
-msgid "No actions for WM_CLASS"
-msgstr "WM_CLASS neturi veiksmų"
-
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:60
+#: klipper.kcfg:56
 #, kde-format
 msgid "Automatic action menu time:"
 msgstr "Automatinio veiksmų meniu laikas:"
 
 #. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:64
+#: klipper.kcfg:60
 #, kde-format
 msgid "Display the automatic action popup menu for this time."
 msgstr "Tiek laiko rodyti automatinį iškylantįjį veiksmų meniu."
 
 #. i18n: ectx: label, entry (MaxClipItems), group (General)
-#: klipper.kcfg:67
+#: klipper.kcfg:63
 #, kde-format
 msgid "History size:"
 msgstr "Istorijos dydis:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
-#: klipper.kcfg:71
+#: klipper.kcfg:67
 #, kde-format
 msgid "The clipboard history will store up to this many items."
 msgstr "Iškarpinės istorijoje bus laikoma štai tiek elementų."
 
 #. i18n: ectx: label, entry (ActionList), group (General)
-#: klipper.kcfg:74
+#: klipper.kcfg:70
 #, kde-format
 msgid "Dummy entry for indicating changes in an action's tree widget"
 msgstr "Fiktyvus įrašas, nurodantis pakeitimus veiksmo medžio valdiklyje"
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:84
+#: klipper.kcfg:80
 #, kde-format
 msgid "Trim whitespace from selection"
 msgstr "Panaikinti tarpus iš žymėjimo"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:86
+#: klipper.kcfg:82
 #, kde-format
 msgid ""
 "Remove any whitespace from the start and end of selected text, before "
@@ -969,13 +918,13 @@ msgstr ""
 "paveikiamas."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:89
+#: klipper.kcfg:85
 #, kde-format
 msgid "For an item chosen from history"
 msgstr "Iš istorijos pasirinktiems elementams"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:91
+#: klipper.kcfg:87
 #, kde-format
 msgid ""
 "Show the popup menu of applicable actions if an entry is chosen from the "
@@ -985,13 +934,13 @@ msgstr ""
 "pasirenkamas iš iškarpinės istorijos."
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:94
+#: klipper.kcfg:90
 #, kde-format
 msgid "Include MIME actions"
 msgstr "Įtraukti MIME pagrįstus veiksmus"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:96
+#: klipper.kcfg:92
 #, kde-format
 msgid ""
 "If a file name or URL is selected, include applications that can accept its "
@@ -1005,10 +954,52 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "Iškarpinės iškylantysis langas"
 
-#: urlgrabber.cpp:202
+#: urlgrabber.cpp:195
 #, kde-format
 msgid "&Cancel"
 msgstr "&Atsisakyti"
+
+#~ msgid "Exclude Windows..."
+#~ msgstr "Išskirti langus..."
+
+#~ msgid "Exclude Windows"
+#~ msgstr "Išskirti langus"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The action popup will not be shown automatically for these windows, even "
+#~ "if it is enabled. This is because, for example, a web browser may "
+#~ "highlight a URL in the address bar while typing, so the menu would show "
+#~ "for every keystroke.<nl/><nl/>If the action menu appears unexpectedly "
+#~ "when using a particular application, then add it to this list. <link>How "
+#~ "to find the name to enter</link>."
+#~ msgstr ""
+#~ "Šiems langams veiksmo iškylantysis meniu nebus automatiškai rodomas net "
+#~ "tuo atveju, jei jis įjungtas. Taip yra todėl, kad, pavyzdžiui, saityno "
+#~ "naršyklė, adreso juostoje rašant URL adresą, gali jį paryškinti, todėl "
+#~ "meniu būtų rodomas po kiekvieno klavišo paspaudimo.<nl/><nl/>Jei "
+#~ "naudojant tam tikrą programą netikėtai atsiranda veiksmo meniu, tuomet "
+#~ "pridėkite ją į šį sąrašą. <link>Kaip sužinoti, kokį pavadinimą įvesti</"
+#~ "link>."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "The name that needs to be entered here is the WM_CLASS name of the window "
+#~ "to be excluded. To find the WM_CLASS name for a window, in another "
+#~ "terminal window enter the command:<nl/><nl/>&nbsp;&nbsp;<icode>xprop | "
+#~ "grep WM_CLASS</icode><nl/><nl/>and click on the window that you want to "
+#~ "exclude. The first name that it displays after the equal sign is the one "
+#~ "that you need to enter."
+#~ msgstr ""
+#~ "Pavadinimas, kuris čia turi būti įvestas, yra lango, kuris turi būti "
+#~ "išskirtas, WM_CLASS pavadinimas. Norėdami sužinoti lango WM_CLASS "
+#~ "pavadinimą, kitame terminalo lange įveskite komandą:<nl/><nl/>&nbsp;&nbsp;"
+#~ "<icode>xprop | grep WM_CLASS</icode><nl/><nl/>ir spustelėkite ant lango, "
+#~ "kurį norite išskirti. Pirmas pavadinimas, kuris bus rodomas po lygybės "
+#~ "ženklo, yra pavadinimas, kurį turite įvesti."
+
+#~ msgid "No actions for WM_CLASS"
+#~ msgstr "WM_CLASS neturi veiksmų"
 
 #~ msgctxt "@action:inmenu"
 #~ msgid "&Configure Klipper…"

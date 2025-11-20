@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2025-11-07 18:22+0200\n"
+"PO-Revision-Date: 2025-11-19 20:04+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -890,6 +890,9 @@ msgid ""
 "Contrast values below 15% may produce visually awkward effects with some "
 "applications and color schemes. Consider yourself warned!"
 msgstr ""
+"Tam tikras programas ar spalvų rinkinius naudojant kartu su kontrasto "
+"reikšmėmis, kurios mažesnės nei 15%, gali būti atvaizduojami keisti "
+"vaizdiniai efektai. Jūs buvote įspėti!"
 
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, contrastPercentageSpinBox)
 #: editor/scmeditoroptions.ui:109

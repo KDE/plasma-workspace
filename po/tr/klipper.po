@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-18 00:45+0000\n"
+"POT-Creation-Date: 2025-11-20 00:44+0000\n"
 "PO-Revision-Date: 2025-08-30 18:52+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -35,12 +35,12 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "tulliana@gmail.com, emir_sari@icloud.com"
 
-#: configdialog.cpp:85
+#: configdialog.cpp:84
 #, kde-format
 msgid "Clipboard history:"
 msgstr "Pano geçmişi:"
 
-#: configdialog.cpp:91
+#: configdialog.cpp:90
 #, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
@@ -48,12 +48,12 @@ msgid_plural "%v entries"
 msgstr[0] "%v girdi"
 msgstr[1] "%v girdi"
 
-#: configdialog.cpp:100
+#: configdialog.cpp:99
 #, kde-format
 msgid "Selection and Clipboard:"
 msgstr "Seçim ve Pano"
 
-#: configdialog.cpp:107
+#: configdialog.cpp:106
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -78,37 +78,37 @@ msgstr ""
 "pano geçmişine kaydedilebilir (aşağıdaki seçeneğe göre); ancak yalnızca "
 "farenin orta düğmesi ile yapıştırılabilir."
 
-#: configdialog.cpp:136 configdialog.cpp:174
+#: configdialog.cpp:135 configdialog.cpp:173
 #, kde-format
 msgid "Always save in history"
 msgstr "Her zaman geçmişe kaydet"
 
-#: configdialog.cpp:140
+#: configdialog.cpp:139
 #, kde-format
 msgid "Text selection:"
 msgstr "Metin seçimi:"
 
-#: configdialog.cpp:142 configdialog.cpp:180
+#: configdialog.cpp:141 configdialog.cpp:179
 #, kde-format
 msgid "Only when explicitly copied"
 msgstr "Yalnızca açıkça kopyalandığında"
 
-#: configdialog.cpp:147
+#: configdialog.cpp:146
 #, kde-format
 msgid "Whether text selections are saved in the clipboard history."
 msgstr "Metin seçimlerinin pano geçmişinde kaydedilip kaydedilmeyeceği."
 
-#: configdialog.cpp:178
+#: configdialog.cpp:177
 #, kde-format
 msgid "Non-text selection:"
 msgstr "Metin olmayan seçim:"
 
-#: configdialog.cpp:185
+#: configdialog.cpp:184
 #, kde-format
 msgid "Never save in history"
 msgstr "Asla geçmişe kaydetme"
 
-#: configdialog.cpp:190
+#: configdialog.cpp:189
 #, kde-format
 msgid ""
 "Whether non-text selections (such as images) are saved in the clipboard "
@@ -117,12 +117,12 @@ msgstr ""
 "Metin olmayan seçimlerin (görseller gibi) pano geçmişine kaydedilip "
 "kaydedilmeyeceği."
 
-#: configdialog.cpp:264
+#: configdialog.cpp:263
 #, kde-format
 msgid "Show action popup menu:"
 msgstr "Eylem açılır menüsünü göster:"
 
-#: configdialog.cpp:274
+#: configdialog.cpp:273
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -138,12 +138,7 @@ msgstr ""
 "gösterilmiyorsa <shortcut>%1</shortcut> düğme kısayolu kullanılarak "
 "görüntülenebilir."
 
-#: configdialog.cpp:283
-#, kde-format
-msgid "Exclude Windows..."
-msgstr "Pencereleri Dışla"
-
-#: configdialog.cpp:297
+#: configdialog.cpp:285
 #, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
@@ -151,23 +146,18 @@ msgid_plural "%v seconds"
 msgstr[0] "%v saniye"
 msgstr[1] "%v saniye"
 
-#: configdialog.cpp:298
+#: configdialog.cpp:286
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "Yok"
 
-#: configdialog.cpp:307
+#: configdialog.cpp:295
 #, kde-format
 msgid "Options:"
 msgstr "Seçenekler:"
 
-#: configdialog.cpp:334
-#, kde-format
-msgid "Exclude Windows"
-msgstr "Pencereleri Dışla"
-
-#: configdialog.cpp:364
+#: configdialog.cpp:320
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -179,34 +169,34 @@ msgstr ""
 "<interface>komutları</interface> Klipper açılır menüsünde belirir ve "
 "yürütülebilir."
 
-#: configdialog.cpp:373
+#: configdialog.cpp:329
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "Dizgilerle ve komutlarla eşleş"
 
-#: configdialog.cpp:373
+#: configdialog.cpp:329
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Açıklama"
 
-#: configdialog.cpp:379
+#: configdialog.cpp:335
 #, kde-format
 msgid "Add Action..."
 msgstr "Eylem Ekle…"
 
-#: configdialog.cpp:383
+#: configdialog.cpp:339
 #, kde-format
 msgid "Edit Action..."
 msgstr "Eylemi Düzenle…"
 
-#: configdialog.cpp:388
+#: configdialog.cpp:344
 #, kde-format
 msgid "Delete Action"
 msgstr "Eylemi Sil"
 
-#: configdialog.cpp:395
+#: configdialog.cpp:351
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -216,7 +206,7 @@ msgstr ""
 "Açılır menüde gösterilen eylemler, <interface>Eylem Menüsü</interface> "
 "sayfasında yapılandırılabilir."
 
-#: configdialog.cpp:590
+#: configdialog.cpp:546
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -226,88 +216,54 @@ msgstr ""
 "Seçili <resource>%1</resource> eylemini ve onun<nl/>tüm komutlarını silmek "
 "istediğinizden emin misiniz?"
 
-#: configdialog.cpp:591
+#: configdialog.cpp:547
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "Silme Eylemini Onayla"
 
-#: configdialog.cpp:644
+#: configdialog.cpp:600
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Genel"
 
-#: configdialog.cpp:644
+#: configdialog.cpp:600
 #, kde-format
 msgid "General Configuration"
 msgstr "Genel Yapılandırma"
 
-#: configdialog.cpp:645
+#: configdialog.cpp:601
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Eylem Menüsü"
 
-#: configdialog.cpp:645
+#: configdialog.cpp:601
 #, kde-format
 msgid "Action Menu"
 msgstr "Eylem Menüsü"
 
-#: configdialog.cpp:646
+#: configdialog.cpp:602
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Eylemler Yapılandırması"
 
-#: configdialog.cpp:646
+#: configdialog.cpp:602
 #, kde-format
 msgid "Actions Configuration"
 msgstr "Eylemler Yapılandırması"
 
-#: configdialog.cpp:649
+#: configdialog.cpp:605
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Kısayollar"
 
-#: configdialog.cpp:649
+#: configdialog.cpp:605
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Kısayol Yapılandırmaları"
-
-#: configdialog.cpp:735
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"The action popup will not be shown automatically for these windows, even if "
-"it is enabled. This is because, for example, a web browser may highlight a "
-"URL in the address bar while typing, so the menu would show for every "
-"keystroke.<nl/><nl/>If the action menu appears unexpectedly when using a "
-"particular application, then add it to this list. <link>How to find the name "
-"to enter</link>."
-msgstr ""
-"Etkinleştirilmiş olsa bile, bu pencereler için eylem açılır menüsü "
-"kendiliğinden gösterilmeyecektir. Bunun nedeni, örneğin bir web tarayıcının "
-"yazarken adres çubuğunda bir URL’yi vurgulayabilmesi ve böylece menünün her "
-"düğme vuruşunda gösterilmesidir.<nl/><nl/>Kullanırken eylem menüsü "
-"beklenmedik bir şekilde görünürse belirli bir uygulamayı seçin, ardından bu "
-"listeye ekleyin. <link>Girilecek ad nasıl bulunur</link>."
-
-#: configdialog.cpp:748
-#, kde-kuit-format
-msgctxt "@info:tooltip"
-msgid ""
-"The name that needs to be entered here is the WM_CLASS name of the window to "
-"be excluded. To find the WM_CLASS name for a window, in another terminal "
-"window enter the command:<nl/><nl/>&nbsp;&nbsp;<icode>xprop | grep WM_CLASS</"
-"icode><nl/><nl/>and click on the window that you want to exclude. The first "
-"name that it displays after the equal sign is the one that you need to enter."
-msgstr ""
-"Burada girilmesi gereken ad, dışlanacak pencerenin WM_CLASS adıdır. Bir "
-"pencerenin WM_CLASS adını bulmak için başka bir uçbirim penceresinde şu "
-"komutu girin:<nl/><nl/>&nbsp;&nbsp;<icode>xprop | grep WM_CLASS</icode><nl/"
-"><nl/>ve dışarıda tutmak istediğiniz pencereye tıklayın. Eşittir iminden "
-"sonra görüntülenen ilk ad, girmeniz gereken addır."
 
 #: declarative/qml/BarcodePage.qml:32
 #, kde-format
@@ -900,38 +856,32 @@ msgstr ""
 "Seçim yapıldığı anda uygulanabilir eylemlerin olduğu bir açılır menü "
 "gösterin."
 
-#. i18n: ectx: label, entry (NoActionsForWM_CLASS), group (General)
-#: klipper.kcfg:57
-#, kde-format
-msgid "No actions for WM_CLASS"
-msgstr "WM_CLASS için eylem yok"
-
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:60
+#: klipper.kcfg:56
 #, kde-format
 msgid "Automatic action menu time:"
 msgstr "Otomatik eylem menüsi zamanı:"
 
 #. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
-#: klipper.kcfg:64
+#: klipper.kcfg:60
 #, kde-format
 msgid "Display the automatic action popup menu for this time."
 msgstr "Otomatik eylem açılır menüsünü bu kez göster."
 
 #. i18n: ectx: label, entry (MaxClipItems), group (General)
-#: klipper.kcfg:67
+#: klipper.kcfg:63
 #, kde-format
 msgid "History size:"
 msgstr "Geçmiş boyutu:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
-#: klipper.kcfg:71
+#: klipper.kcfg:67
 #, kde-format
 msgid "The clipboard history will store up to this many items."
 msgstr "Pano geçmişi bu sayıda ögeye kadar depolayacaktır."
 
 #. i18n: ectx: label, entry (ActionList), group (General)
-#: klipper.kcfg:74
+#: klipper.kcfg:70
 #, kde-format
 msgid "Dummy entry for indicating changes in an action's tree widget"
 msgstr ""
@@ -939,13 +889,13 @@ msgstr ""
 "girdi"
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:84
+#: klipper.kcfg:80
 #, kde-format
 msgid "Trim whitespace from selection"
 msgstr "Seçimden boşlukları kırp"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
-#: klipper.kcfg:86
+#: klipper.kcfg:82
 #, kde-format
 msgid ""
 "Remove any whitespace from the start and end of selected text, before "
@@ -959,13 +909,13 @@ msgstr ""
 "etkilenmez."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:89
+#: klipper.kcfg:85
 #, kde-format
 msgid "For an item chosen from history"
 msgstr "Geçmişten seçilen bir öge için"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
-#: klipper.kcfg:91
+#: klipper.kcfg:87
 #, kde-format
 msgid ""
 "Show the popup menu of applicable actions if an entry is chosen from the "
@@ -975,13 +925,13 @@ msgstr ""
 "menüyü göster."
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:94
+#: klipper.kcfg:90
 #, kde-format
 msgid "Include MIME actions"
 msgstr "MIME eylemlerini içer"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
-#: klipper.kcfg:96
+#: klipper.kcfg:92
 #, kde-format
 msgid ""
 "If a file name or URL is selected, include applications that can accept its "
@@ -995,10 +945,51 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "Pano Açılır Penceresi"
 
-#: urlgrabber.cpp:202
+#: urlgrabber.cpp:195
 #, kde-format
 msgid "&Cancel"
 msgstr "İ&ptal"
+
+#~ msgid "Exclude Windows..."
+#~ msgstr "Pencereleri Dışla"
+
+#~ msgid "Exclude Windows"
+#~ msgstr "Pencereleri Dışla"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The action popup will not be shown automatically for these windows, even "
+#~ "if it is enabled. This is because, for example, a web browser may "
+#~ "highlight a URL in the address bar while typing, so the menu would show "
+#~ "for every keystroke.<nl/><nl/>If the action menu appears unexpectedly "
+#~ "when using a particular application, then add it to this list. <link>How "
+#~ "to find the name to enter</link>."
+#~ msgstr ""
+#~ "Etkinleştirilmiş olsa bile, bu pencereler için eylem açılır menüsü "
+#~ "kendiliğinden gösterilmeyecektir. Bunun nedeni, örneğin bir web "
+#~ "tarayıcının yazarken adres çubuğunda bir URL’yi vurgulayabilmesi ve "
+#~ "böylece menünün her düğme vuruşunda gösterilmesidir.<nl/><nl/>Kullanırken "
+#~ "eylem menüsü beklenmedik bir şekilde görünürse belirli bir uygulamayı "
+#~ "seçin, ardından bu listeye ekleyin. <link>Girilecek ad nasıl bulunur</"
+#~ "link>."
+
+#~ msgctxt "@info:tooltip"
+#~ msgid ""
+#~ "The name that needs to be entered here is the WM_CLASS name of the window "
+#~ "to be excluded. To find the WM_CLASS name for a window, in another "
+#~ "terminal window enter the command:<nl/><nl/>&nbsp;&nbsp;<icode>xprop | "
+#~ "grep WM_CLASS</icode><nl/><nl/>and click on the window that you want to "
+#~ "exclude. The first name that it displays after the equal sign is the one "
+#~ "that you need to enter."
+#~ msgstr ""
+#~ "Burada girilmesi gereken ad, dışlanacak pencerenin WM_CLASS adıdır. Bir "
+#~ "pencerenin WM_CLASS adını bulmak için başka bir uçbirim penceresinde şu "
+#~ "komutu girin:<nl/><nl/>&nbsp;&nbsp;<icode>xprop | grep WM_CLASS</"
+#~ "icode><nl/><nl/>ve dışarıda tutmak istediğiniz pencereye tıklayın. "
+#~ "Eşittir iminden sonra görüntülenen ilk ad, girmeniz gereken addır."
+
+#~ msgid "No actions for WM_CLASS"
+#~ msgstr "WM_CLASS için eylem yok"
 
 #~ msgctxt "@action:inmenu"
 #~ msgid "&Configure Klipper…"
