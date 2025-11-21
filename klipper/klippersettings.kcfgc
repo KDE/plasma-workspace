@@ -1,9 +1,12 @@
 # Code generation options for kconfig_compiler
 File=klipper.kcfg
 ClassName=KlipperSettings
-Singleton=true
 CustomAdditions=false
-SetUserTexts=true
-Mutators=true
-TranslationSystem=kde
+GenerateProperties=true
+IncludeFiles=klipper_export.h
 ItemAccessors=true
+Mutators=true
+SetUserTexts=true
+Singleton=true
+TranslationSystem=kde
+Visibility=KLIPPER_EXPORT
