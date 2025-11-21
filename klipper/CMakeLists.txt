@@ -22,7 +22,7 @@ ecm_qt_declare_logging_category(libklipper_common_SRCS HEADER klipper_debug.h ID
 
 configure_file(config-klipper.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-klipper.h )
 
-kconfig_add_kcfg_files(libklipper_common_SRCS klippersettings.kcfgc)
+kconfig_add_kcfg_files(libklipper_common_SRCS klippersettings.kcfgc GENERATE_MOC)
 
 add_library(klipper SHARED ${libklipper_common_SRCS})
 generate_export_header(klipper)
