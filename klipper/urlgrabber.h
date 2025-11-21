@@ -69,4 +69,9 @@ namespace KLIPPER_EXPORT URLGrabber
 {
 ActionList loadActions();
 void saveActions(const ActionList &actions);
+/**
+ * Whether any configured or mimetype-based action matches @p text, without
+ * considering whether the action is marked as automatic.
+ */
+bool hasMatchingActions(const QString &text);
 }

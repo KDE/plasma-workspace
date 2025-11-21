@@ -521,7 +521,7 @@ QVariant HistoryModel::data(const QModelIndex &index, int role) const
         // frequent database queries if performance becomes an issue with large histories
         return isItemStarred(item->uuid());
     case HasActionRole:
-        return m_urlGrabber && m_urlGrabber->hasMatchingActions(item);
+        return URLGrabber::hasMatchingActions(item->text());
     }
     return {};
 }
@@ -1103,11 +1103,6 @@ void HistoryModel::setHasPassword(QClipboard::Mode mode, bool hasPassword)
 
     flag = hasPassword;
     Q_EMIT hasPasswordChanged();
-}
-
-void HistoryModel::setURLGrabber(URLGrabber *grabber)
-{
-    m_urlGrabber = grabber;
 }
 
 #include "moc_historymodel.cpp"

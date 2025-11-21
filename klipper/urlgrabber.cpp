@@ -5,8 +5,13 @@
 */
 #include "urlgrabber.h"
 
+#include <QFileInfo>
 #include <QIcon>
+#include <QMimeDatabase>
+#include <QRegularExpression>
+#include <QUrl>
 
+#include <KApplicationTrader>
 #include <KConfigGroup>
 
 #include "klippersettings.h"
@@ -57,6 +62,40 @@ void saveActions(const ActionList &actions)
     }
 
     Q_EMIT KlipperSettings::self()->ActionListChanged();
+}
+
+bool hasMatchingActions(const QString &text)
+{
+    QString clipData = text;
+    if (KlipperSettings::stripWhiteSpace()) {
+        clipData = std::move(clipData).trimmed();
+    }
+
+    // mime-based actions (file URLs and http(s) links)
+    QUrl url(clipData);
+    if (KlipperSettings::enableMagicMimeActions() && url.isValid() && !url.isRelative()) {
+        if (!(url.isLocalFile() && !QFileInfo::exists(url.toLocalFile()))) {
+            QMimeDatabase db;
+            QMimeType mimetype = db.mimeTypeForUrl(url);
+            if ((clipData.startsWith(u"http://") || clipData.startsWith(u"https://")) && mimetype.name() != u"text/html") {
+                mimetype = db.mimeTypeForName(u"text/html"_s);
+            }
+            if (!mimetype.isDefault() && !KApplicationTrader::queryByMimeType(mimetype.name()).isEmpty()) {
+                return true;
+            }
+        }
+    }
+
+    // configured custom actions
+    QRegularExpression re;
+    const ActionList actions = loadActions();
+    for (const ClipAction &action : std::as_const(actions)) {
+        re.setPattern(action.actionRegexPattern);
+        if (re.match(clipData).hasMatch()) {
+            return true;
+        }
+    }
+    return false;
 }
 }
 
