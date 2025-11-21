@@ -5,307 +5,64 @@
 */
 #include "urlgrabber.h"
 
-#include <netwm.h>
-
-#include "klipper_debug.h"
-#include <QFile>
 #include <QIcon>
-#include <QMenu>
-#include <QMimeDatabase>
-#include <QRegularExpression>
-#include <QTimer>
-#include <QUuid>
 
-#include <KApplicationTrader>
-#include <KIO/ApplicationLauncherJob>
-#include <KLocalizedString>
-#include <KNotificationJobUiDelegate>
-#include <KService>
-#include <KStringHandler>
-#include <KWindowSystem>
+#include <KConfigGroup>
 
-#include "clipcommandprocess.h"
 #include "klippersettings.h"
 
-// TODO: script-interface?
-#include "historycycler.h"
-#include "historyitem.h"
+using namespace Qt::StringLiterals;
 
-URLGrabber::URLGrabber(QObject *parent)
-    : QObject(parent)
-    , m_myCurrentAction(nullptr)
-    , m_myPopupKillTimer(new QTimer(this))
-    , m_myPopupKillTimeout(8)
-    , m_stripWhiteSpace(true)
+namespace URLGrabber
 {
-    m_myPopupKillTimer->setSingleShot(true);
-    connect(m_myPopupKillTimer, &QTimer::timeout, this, &URLGrabber::slotKillPopupMenu);
-}
 
-URLGrabber::~URLGrabber()
+ActionList loadActions()
 {
-    qDeleteAll(m_myActions);
-    m_myActions.clear();
-}
-
-//
-// Called from Klipper::slotRepeatAction, i.e. by pressing Ctrl-Alt-R
-// shortcut. I.e. never from clipboard monitoring
-//
-void URLGrabber::invokeAction(HistoryItemConstPtr item)
-{
-    m_myClipItem = item;
-    actionMenu(item, false);
-}
-
-void URLGrabber::setActionList(const ActionList &list)
-{
-    qDeleteAll(m_myActions);
-    m_myActions.clear();
-    m_myActions = list;
-}
-
-void URLGrabber::matchingMimeActions(const QString &clipData)
-{
-    QUrl url(clipData);
-    if (!KlipperSettings::enableMagicMimeActions()) {
-        return;
-    }
-    if (!url.isValid()) {
-        return;
-    }
-    if (url.isRelative()) { // openinng a relative path will just not work. what path should be used?
-        return;
-    }
-    if (url.isLocalFile()) {
-        if (clipData == QLatin1String("//")) {
-            return;
-        }
-        if (!QFile::exists(url.toLocalFile())) {
-            return;
-        }
-    }
-
-    // try to figure out if clipData contains a filename
-    QMimeDatabase db;
-    QMimeType mimetype = db.mimeTypeForUrl(url);
-
-    // let's see if we found some reasonable mimetype.
-    // If we do we'll populate menu with actions for apps
-    // that can handle that mimetype
-
-    // first: if clipboard contents starts with http, let's assume it's "text/html".
-    // That is even if we've url like "http://www.kde.org/somescript.pl", we'll
-    // still treat that as html page, because determining a mimetype using kio
-    // might take a long time, and i want this function to be quick!
-    if ((clipData.startsWith(QLatin1String("http://")) || clipData.startsWith(QLatin1String("https://"))) && mimetype.name() != QLatin1String("text/html")) {
-        mimetype = db.mimeTypeForName(QStringLiteral("text/html"));
-    }
-
-    if (!mimetype.isDefault()) {
-        const KService::List lst = KApplicationTrader::queryByMimeType(mimetype.name());
-        if (!lst.isEmpty()) {
-            auto *action = new ClipAction(QString(), mimetype.comment());
-            for (const KService::Ptr &service : lst) {
-                action->addCommand(ClipCommand(QString(), service->name(), true, service->icon(), ClipCommand::IGNORE, service->storageId()));
-            }
-            m_myMatches.append(action);
-        }
-    }
-}
-
-const ActionList &URLGrabber::matchingActions(const QString &clipData, bool automatically_invoked)
-{
-    m_myMatches.clear();
-
-    matchingMimeActions(clipData);
-
-    // now look for matches in custom user actions
-    QRegularExpression re;
-    for (ClipAction *action : std::as_const(m_myActions)) {
-        re.setPattern(action->actionRegexPattern());
-        const QRegularExpressionMatch match = re.match(clipData);
-        if (match.hasMatch() && (action->automatic() || !automatically_invoked)) {
-            action->setActionCapturedTexts(match.capturedTexts());
-            m_myMatches.append(action);
-        }
-    }
-
-    return m_myMatches;
-}
-
-void URLGrabber::checkNewData(HistoryItemConstPtr item)
-{
-    actionMenu(item, true); // also creates m_myMatches
-}
-
-void URLGrabber::actionMenu(HistoryItemConstPtr item, bool automatically_invoked)
-{
-    if (!item) {
-        qCWarning(KLIPPER_LOG, "Attempt to invoke URLGrabber without an item");
-        return;
-    }
-    QString text(item->text());
-    if (m_stripWhiteSpace) {
-        text = std::move(text).trimmed();
-    }
-    const ActionList matchingActionsList = matchingActions(text, automatically_invoked);
-
-    if (!matchingActionsList.isEmpty()) {
-        m_myCommandMapper.clear();
-
-        m_myPopupKillTimer->stop();
-
-        m_myMenu.reset(new QMenu);
-        m_myMenu->setWindowFlag(Qt::FramelessWindowHint, true);
-        if (KWindowSystem::isPlatformWayland()) {
-            m_myMenu->setWindowFlag(Qt::Popup, false);
-        }
-        m_myMenu->setObjectName(QStringLiteral("klipperActionPopup"));
-
-        connect(m_myMenu.get(), &QMenu::triggered, this, &URLGrabber::slotItemSelected);
-
-        for (ClipAction *clipAct : matchingActionsList) {
-            m_myMenu->addSection(QIcon::fromTheme(QStringLiteral("klipper")), clipAct->description());
-            QList<ClipCommand> cmdList = clipAct->commands();
-            int listSize = cmdList.count();
-            for (int i = 0; i < listSize; ++i) {
-                ClipCommand command = cmdList.at(i);
-
-                if (!command.isEnabled) {
-                    continue;
-                }
-
-                QString item = command.description;
-                if (item.isEmpty())
-                    item = command.command;
-
-                QString id = QUuid::createUuid().toString();
-                auto *action = new QAction(m_myMenu.get());
-                action->setData(id);
-                action->setText(item);
-
-                if (!command.icon.isEmpty())
-                    action->setIcon(QIcon::fromTheme(command.icon));
-
-                m_myCommandMapper.insert(id, qMakePair(clipAct, i));
-                m_myMenu->addAction(action);
-            }
-        }
-        m_myMenu->addSeparator();
-
-        auto *cancelAction = new QAction(QIcon::fromTheme(QStringLiteral("dialog-cancel")), i18n("&Cancel"), m_myMenu.get());
-        m_myMenu->addAction(cancelAction);
-        m_myClipItem = item;
-
-        if (m_myPopupKillTimeout > 0)
-            m_myPopupKillTimer->start(1000 * m_myPopupKillTimeout);
-
-        Q_EMIT sigPopup(m_myMenu.get());
-    }
-}
-
-void URLGrabber::slotItemSelected(QAction *action)
-{
-    // If it's not a popup, we need to hide it manually.
-    if (!m_myMenu->windowFlags().testFlag(Qt::Popup)) {
-        m_myMenu->hide();
-    }
-
-    QString id = action->data().toString();
-
-    if (id.isEmpty()) {
-        qCDebug(KLIPPER_LOG) << "Klipper: no command associated";
-        return;
-    }
-
-    // first is action ptr, second is command index
-    QPair<ClipAction *, int> actionCommand = m_myCommandMapper.value(id);
-
-    if (actionCommand.first)
-        execute(actionCommand.first, actionCommand.second);
-    else
-        qCDebug(KLIPPER_LOG) << "Klipper: cannot find associated action";
-}
-
-void URLGrabber::execute(const ClipAction *action, int cmdIdx) const
-{
-    if (!action) {
-        qCDebug(KLIPPER_LOG) << "Action object is null";
-        return;
-    }
-
-    ClipCommand command = action->command(cmdIdx);
-
-    if (command.isEnabled) {
-        QString text(m_myClipItem->text());
-        if (m_stripWhiteSpace) {
-            text = std::move(text).trimmed();
-        }
-        if (!command.serviceStorageId.isEmpty()) {
-            KService::Ptr service = KService::serviceByStorageId(command.serviceStorageId);
-            auto *job = new KIO::ApplicationLauncherJob(service);
-            job->setUrls({QUrl(text)});
-            job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
-            job->start();
-        } else {
-            auto *proc = new ClipCommandProcess(*action, command, text, m_myClipItem);
-            if (proc->program().isEmpty()) {
-                delete std::exchange(proc, nullptr);
-            } else {
-                proc->start();
-            }
-        }
-    }
-}
-
-void URLGrabber::loadSettings()
-{
-    m_stripWhiteSpace = KlipperSettings::stripWhiteSpace();
-    m_myPopupKillTimeout = KlipperSettings::timeoutForActionPopups();
-
-    qDeleteAll(m_myActions);
-    m_myActions.clear();
-
+    ActionList actions;
     const KSharedConfig::Ptr config = KSharedConfig::openConfig();
     const KConfigGroup cg(config, QStringLiteral("General"));
-    int num = cg.readEntry("Number of Actions", 0);
-    for (int i = 0; i < num; i++) {
+    for (int i = 0, num = cg.readEntry("Number of Actions", 0); i < num; i++) {
         const QString group = QStringLiteral("Action_%1").arg(i);
-        m_myActions.append(new ClipAction(config, group));
+        actions.emplace_back(config, group);
     }
+    return actions;
 }
 
-void URLGrabber::saveSettings() const
+void saveActions(const ActionList &actions)
 {
     KSharedConfig::Ptr config = KSharedConfig::openConfig();
-    KConfigGroup cg(config, QStringLiteral("General"));
-    cg.writeEntry("Number of Actions", m_myActions.count());
+    KConfigGroup cg(config, u"General"_s);
+    cg.writeEntry("Number of Actions", actions.size());
 
-    int i = 0;
-    for (ClipAction *action : std::as_const(m_myActions)) {
-        const QString group = QStringLiteral("Action_%1").arg(i);
-        action->save(config, group);
-        ++i;
+    for (int i = 0, count = actions.size(); i < count; ++i) {
+        const ClipAction &action = actions[i];
+        const QString groupName = QStringLiteral("Action_%1").arg(i);
+        KConfigGroup cg(config, groupName);
+        cg.writeEntry("Description", action.description);
+        cg.writeEntry("Regexp", action.actionRegexPattern);
+        cg.writeEntry("Number of commands", action.commands.size());
+        cg.writeEntry("Automatic", action.automatic);
+
+        // now iterate over all commands of this action
+        for (int j = 0, listSize = action.commands.size(); j < listSize; ++j) {
+            QString _group = groupName + QStringLiteral("/Command_%1");
+            KConfigGroup cg(config, _group.arg(j));
+            const ClipCommand &cmd = action.commands[j];
+            cg.writePathEntry("Commandline", cmd.command);
+            cg.writeEntry("Description", cmd.description);
+            cg.writeEntry("Enabled", cmd.isEnabled);
+            cg.writeEntry("Icon", cmd.icon);
+            cg.writeEntry("Output", std::to_underlying(cmd.output));
+        }
     }
+
+    Q_EMIT KlipperSettings::self()->ActionListChanged();
+}
 }
 
-void URLGrabber::slotKillPopupMenu()
+ClipCommand::ClipCommand()
 {
-    if (!m_myMenu) {
-        return;
-    }
-
-    if (m_myPopupKillTimeout > 0 && m_myMenu->isVisible() && m_myMenu->geometry().contains(QCursor::pos())) {
-        m_myPopupKillTimer->start(1000 * m_myPopupKillTimeout);
-        return;
-    }
-
-    m_myMenu.reset();
 }
-
-///////////////////////////////////////////////////////////////////////////
-////////
 
 ClipCommand::ClipCommand(const QString &_command,
                          const QString &_description,
@@ -334,25 +91,22 @@ ClipCommand::ClipCommand(const QString &_command,
 }
 
 ClipAction::ClipAction(const QString &regExp, const QString &description, bool automatic)
-    : m_regexPattern(regExp)
-    , m_myDescription(description)
-    , m_automatic(automatic)
+    : actionRegexPattern(regExp)
+    , description(description)
+    , automatic(automatic)
 {
 }
 
-ClipAction::ClipAction(KSharedConfigPtr kc, const QString &group)
-    : m_regexPattern(kc->group(group).readEntry("Regexp"))
-    , m_myDescription(kc->group(group).readEntry("Description"))
-    , m_automatic(kc->group(group).readEntry("Automatic", QVariant(true)).toBool())
+ClipAction::ClipAction(const KSharedConfigPtr &config, const QString &group)
+    : actionRegexPattern(config->group(group).readEntry("Regexp"))
+    , description(config->group(group).readEntry("Description"))
+    , automatic(config->group(group).readEntry("Automatic", QVariant(true)).toBool())
 {
-    KConfigGroup cg(kc, group);
-
-    int num = cg.readEntry("Number of commands", 0);
-
+    KConfigGroup cg(config, group);
     // read the commands
-    for (int i = 0; i < num; i++) {
+    for (int i = 0, listSize = cg.readEntry("Number of commands", 0); i < listSize; i++) {
         QString _group = group + QStringLiteral("/Command_%1");
-        KConfigGroup _cg(kc, _group.arg(i));
+        KConfigGroup _cg(config, _group.arg(i));
 
         addCommand(ClipCommand(_cg.readPathEntry("Commandline", QString()),
                                _cg.readEntry("Description"), // i18n'ed
@@ -362,52 +116,14 @@ ClipAction::ClipAction(KSharedConfigPtr kc, const QString &group)
     }
 }
 
-ClipAction::~ClipAction()
-{
-    m_myCommands.clear();
-}
+ClipAction::~ClipAction() = default;
 
 void ClipAction::addCommand(const ClipCommand &cmd)
 {
-    if (cmd.command.isEmpty() && cmd.serviceStorageId.isEmpty())
-        return;
-
-    m_myCommands.append(cmd);
-}
-
-void ClipAction::replaceCommand(int idx, const ClipCommand &cmd)
-{
-    if (idx < 0 || idx >= m_myCommands.count()) {
-        qCDebug(KLIPPER_LOG) << "wrong command index given";
+    if (cmd.command.isEmpty() && cmd.serviceStorageId.isEmpty()) {
         return;
     }
-
-    m_myCommands.replace(idx, cmd);
-}
-
-// precondition: we're in the correct action's group of the KConfig object
-void ClipAction::save(KSharedConfigPtr kc, const QString &group) const
-{
-    KConfigGroup cg(kc, group);
-    cg.writeEntry("Description", description());
-    cg.writeEntry("Regexp", actionRegexPattern());
-    cg.writeEntry("Number of commands", m_myCommands.count());
-    cg.writeEntry("Automatic", automatic());
-
-    int i = 0;
-    // now iterate over all commands of this action
-    for (const ClipCommand &cmd : std::as_const(m_myCommands)) {
-        QString _group = group + QStringLiteral("/Command_%1");
-        KConfigGroup cg(kc, _group.arg(i));
-
-        cg.writePathEntry("Commandline", cmd.command);
-        cg.writeEntry("Description", cmd.description);
-        cg.writeEntry("Enabled", cmd.isEnabled);
-        cg.writeEntry("Icon", cmd.icon);
-        cg.writeEntry("Output", static_cast<int>(cmd.output));
-
-        ++i;
-    }
+    commands.append(cmd);
 }
 
 #include "moc_urlgrabber.cpp"
