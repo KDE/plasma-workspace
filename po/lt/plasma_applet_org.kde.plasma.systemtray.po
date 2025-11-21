@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-19 00:45+0000\n"
+"POT-Creation-Date: 2025-11-21 00:45+0000\n"
 "PO-Revision-Date: 2025-11-19 20:10+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -170,7 +170,9 @@ msgid "Entries"
 msgstr "Elementai"
 
 #: package/contents/ui/ConfigGeneral.qml:310
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Always show all"
+msgctxt "@option:check, This is referring to system tray entries"
 msgid "Always show all"
 msgstr "Visada rodyti visus"
 

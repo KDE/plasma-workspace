@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-19 00:45+0000\n"
-"PO-Revision-Date: 2025-05-16 15:35+0900\n"
+"POT-Creation-Date: 2025-11-21 00:45+0000\n"
+"PO-Revision-Date: 2025-11-20 20:53+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 25.07.70\n"
+"X-Generator: Lokalize 26.03.70\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -105,23 +105,19 @@ msgstr ""
 "失。<nl/><nl/>請考慮改成讓剪貼簿停用歷史記錄，或是一次只記住一個項目。"
 
 #: package/contents/ui/ConfigGeneral.qml:199
-#, fuzzy, kde-format
-#| msgid "Scale with Panel height"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel height"
 msgstr "依據面板高度改變"
 
 #: package/contents/ui/ConfigGeneral.qml:200
-#, fuzzy, kde-format
-#| msgid "Scale with Panel width"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel width"
 msgstr "依據面板寬度改變"
 
 #: package/contents/ui/ConfigGeneral.qml:202
-#, fuzzy, kde-format
-#| msgctxt "The arrangement of system tray icons in the Panel"
-#| msgid "Panel icon size:"
+#, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon size:"
 msgstr "面板圖示大小："
@@ -163,17 +159,17 @@ msgid "Automatically set to Large when in Touch Mode"
 msgstr "觸控模式時自動設為「大」"
 
 #: package/contents/ui/ConfigGeneral.qml:306
-#, fuzzy, kde-format
-#| msgid "Entries"
+#, kde-format
 msgctxt "@title:column"
 msgid "Entries"
 msgstr "項目"
 
 #: package/contents/ui/ConfigGeneral.qml:310
 #, fuzzy, kde-format
-#| msgid "Always shown"
+#| msgid "Always show all"
+msgctxt "@option:check, This is referring to system tray entries"
 msgid "Always show all"
-msgstr "總是顯示"
+msgstr "總是顯示全部"
 
 #: package/contents/ui/ExpandedRepresentation.qml:59
 #, kde-format

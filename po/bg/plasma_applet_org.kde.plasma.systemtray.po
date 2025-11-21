@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-19 00:45+0000\n"
-"PO-Revision-Date: 2025-05-18 11:37+0200\n"
+"POT-Creation-Date: 2025-11-21 00:45+0000\n"
+"PO-Revision-Date: 2025-11-20 10:47+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -105,23 +105,19 @@ msgstr ""
 "да деактивирате историята му или да запомняте само един елемент наведнъж."
 
 #: package/contents/ui/ConfigGeneral.qml:199
-#, fuzzy, kde-format
-#| msgid "Scale with Panel height"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel height"
 msgstr "Мащабиране с височината на панела"
 
 #: package/contents/ui/ConfigGeneral.qml:200
-#, fuzzy, kde-format
-#| msgid "Scale with Panel width"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel width"
 msgstr "Мащабиране с широчината на панела"
 
 #: package/contents/ui/ConfigGeneral.qml:202
-#, fuzzy, kde-format
-#| msgctxt "The arrangement of system tray icons in the Panel"
-#| msgid "Panel icon size:"
+#, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon size:"
 msgstr "Размер на иконата на панела:"
@@ -163,17 +159,17 @@ msgid "Automatically set to Large when in Touch Mode"
 msgstr "Автоматично задаване на големи икони в режим на таблет"
 
 #: package/contents/ui/ConfigGeneral.qml:306
-#, fuzzy, kde-format
-#| msgid "Entries"
+#, kde-format
 msgctxt "@title:column"
 msgid "Entries"
 msgstr "Записи"
 
 #: package/contents/ui/ConfigGeneral.qml:310
 #, fuzzy, kde-format
-#| msgid "Always shown"
+#| msgid "Always show all"
+msgctxt "@option:check, This is referring to system tray entries"
 msgid "Always show all"
-msgstr "Винаги показвано"
+msgstr "Винаги да се показва всичко"
 
 #: package/contents/ui/ExpandedRepresentation.qml:59
 #, kde-format
@@ -222,19 +218,3 @@ msgstr "Решетка с %1 елемента в %2 колони"
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
 msgstr "AILlmyjgGJP"
-
-#~ msgid "Small"
-#~ msgstr "Малък"
-
-#~ msgctxt "Name of the system tray entry"
-#~ msgid "Entry"
-#~ msgstr "Запис"
-
-#~ msgid "Visibility"
-#~ msgstr "Видимост"
-
-#~ msgid "Keyboard Shortcut"
-#~ msgstr "Клавишна комбинация"
-
-#~ msgid "Always show all entries"
-#~ msgstr "Винаги показване на всички записи"

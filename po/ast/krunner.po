@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-20 00:44+0000\n"
+"POT-Creation-Date: 2025-11-21 00:45+0000\n"
 "PO-Revision-Date: 2023-05-09 22:45+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -105,32 +105,32 @@ msgctxt "Textfield placeholder text"
 msgid "Search…"
 msgstr ""
 
-#: qml/RunCommand.qml:311 qml/RunCommand.qml:312 qml/RunCommand.qml:314
+#: qml/RunCommand.qml:294 qml/RunCommand.qml:295 qml/RunCommand.qml:297
 #, kde-format
 msgid "Show Usage Help"
 msgstr ""
 
-#: qml/RunCommand.qml:322
+#: qml/RunCommand.qml:305
 #, kde-format
 msgid "Pin"
 msgstr ""
 
-#: qml/RunCommand.qml:323
+#: qml/RunCommand.qml:306
 #, kde-format
 msgid "Pin Search"
 msgstr ""
 
-#: qml/RunCommand.qml:325
+#: qml/RunCommand.qml:308
 #, kde-format
 msgid "Keep Open"
 msgstr ""
 
-#: qml/RunCommand.qml:384 qml/RunCommand.qml:389
+#: qml/RunCommand.qml:367 qml/RunCommand.qml:372
 #, kde-format
 msgid "Recent Queries"
 msgstr "Consultes de recién"
 
-#: qml/RunCommand.qml:387
+#: qml/RunCommand.qml:370
 #, kde-format
 msgid "Remove"
 msgstr ""

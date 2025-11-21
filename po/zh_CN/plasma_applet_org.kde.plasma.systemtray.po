@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-19 00:45+0000\n"
+"POT-Creation-Date: 2025-11-21 00:45+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -166,9 +166,11 @@ msgid "Entries"
 msgstr ""
 
 #: package/contents/ui/ConfigGeneral.qml:310
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Always shown"
+msgctxt "@option:check, This is referring to system tray entries"
 msgid "Always show all"
-msgstr ""
+msgstr "总是显示"
 
 #: package/contents/ui/ExpandedRepresentation.qml:59
 #, kde-format

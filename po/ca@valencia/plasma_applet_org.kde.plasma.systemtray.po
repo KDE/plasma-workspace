@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-19 00:45+0000\n"
-"PO-Revision-Date: 2025-11-15 13:53+0100\n"
+"POT-Creation-Date: 2025-11-21 00:45+0000\n"
+"PO-Revision-Date: 2025-11-19 10:38+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -110,23 +110,19 @@ msgstr ""
 "el seu historial o recordar només un element alhora."
 
 #: package/contents/ui/ConfigGeneral.qml:199
-#, fuzzy, kde-format
-#| msgid "Scale with Panel height"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel height"
 msgstr "Escala amb l'alçària del quadro"
 
 #: package/contents/ui/ConfigGeneral.qml:200
-#, fuzzy, kde-format
-#| msgid "Scale with Panel width"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel width"
 msgstr "Escala amb l'amplària del quadro"
 
 #: package/contents/ui/ConfigGeneral.qml:202
-#, fuzzy, kde-format
-#| msgctxt "The arrangement of system tray icons in the Panel"
-#| msgid "Panel icon size:"
+#, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon size:"
 msgstr "Mida de les icones del quadro:"
@@ -174,7 +170,9 @@ msgid "Entries"
 msgstr "Entrades"
 
 #: package/contents/ui/ConfigGeneral.qml:310
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Always show all"
+msgctxt "@option:check, This is referring to system tray entries"
 msgid "Always show all"
 msgstr "Mostra-ho tot sempre"
 
@@ -226,16 +224,3 @@ msgstr "Quadrícula amb %1 elements en %2 columnes"
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
 msgstr "AILlmyjgGJP"
-
-#~ msgid "Small"
-#~ msgstr "Xicoteta"
-
-#~ msgctxt "Name of the system tray entry"
-#~ msgid "Entry"
-#~ msgstr "Entrada"
-
-#~ msgid "Visibility"
-#~ msgstr "Visibilitat"
-
-#~ msgid "Keyboard Shortcut"
-#~ msgstr "Drecera de teclat"
