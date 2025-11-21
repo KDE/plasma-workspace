@@ -26,21 +26,23 @@ public:
     explicit KlipperPopup();
     ~KlipperPopup() override = default;
 
-    void show();
-
     void setPlasmaShell(KWayland::Client::PlasmaShell *plasmashell);
 
     void editCurrentClipboard();
     void showCurrentBarcode();
+    void showActionMenu(int index);
 
 public Q_SLOTS:
+    void show();
     void hide();
     void resizePopup();
+    void resizePopupHeight(qreal height);
 
 protected:
     void showEvent(QShowEvent *event) override;
 
 private:
+    void resizeMove(const QSize &popupSize);
     void positionOnScreen();
     void onObjectIncubated();
     void onFocusWindowChanged(QWindow *focusWindow);

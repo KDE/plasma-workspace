@@ -75,6 +75,15 @@ void KlipperPopup::showCurrentBarcode()
     QMetaObject::invokeMethod(mainItem(), "showBarcode", Q_ARG(int, 0));
 }
 
+void KlipperPopup::showActionMenu(int index)
+{
+    Q_ASSERT_X(index >= 0, Q_FUNC_INFO, QString(u"index must be >= 0, current index is "_s + QString::number(index)).toLatin1().constData());
+    if (!isVisible()) {
+        show();
+    }
+    QMetaObject::invokeMethod(mainItem(), "showActionMenu", Q_ARG(int, index), Q_ARG(bool, false));
+}
+
 void KlipperPopup::hide()
 {
     QWindow::hide();
@@ -87,18 +96,13 @@ void KlipperPopup::resizePopup()
 {
     // If the popup is off-screen, move it to the closest edge of the screen
     const QSize popupSize = QSize(mainItem()->implicitWidth(), mainItem()->implicitHeight()).grownBy(padding()).boundedTo(screen()->availableSize());
+    resizeMove(popupSize);
+}
 
-    if (KWindowSystem::isPlatformX11()) {
-        const QRect screenGeometry = screen()->geometry();
-        QRect popupGeometry(position(), popupSize);
-        if (!screenGeometry.contains(popupGeometry)) {
-            popupGeometry.moveTo(std::clamp(x(), screenGeometry.left(), screenGeometry.right() - popupSize.width()),
-                                 std::clamp(y(), screenGeometry.top(), screenGeometry.bottom() - popupSize.height()));
-        }
-        setGeometry(popupGeometry);
-    } else {
-        resize(popupSize);
-    }
+void KlipperPopup::resizePopupHeight(qreal height)
+{
+    const QSize newSize = QSize(mainItem()->implicitWidth(), std::ceil(height)).grownBy(padding()).boundedTo(screen()->availableSize());
+    resizeMove(newSize);
 }
 
 void KlipperPopup::showEvent(QShowEvent *event)
@@ -110,6 +114,22 @@ void KlipperPopup::showEvent(QShowEvent *event)
     requestActivate();
     if (KWindowSystem::isPlatformX11()) {
         KX11Extras::forceActiveWindow(winId());
+    }
+}
+
+void KlipperPopup::resizeMove(const QSize &popupSize)
+{
+    // If the popup is off-screen, move it to the closest edge of the screen
+    if (KWindowSystem::isPlatformX11()) {
+        const QRect screenGeometry = screen()->geometry();
+        QRect popupGeometry(position(), popupSize);
+        if (!screenGeometry.contains(popupGeometry)) {
+            popupGeometry.moveTo(std::clamp(x(), screenGeometry.left(), screenGeometry.right() - popupSize.width()),
+                                 std::clamp(y(), screenGeometry.top(), screenGeometry.bottom() - popupSize.height()));
+        }
+        setGeometry(popupGeometry);
+    } else {
+        resize(popupSize);
     }
 }
 
@@ -154,6 +174,8 @@ void KlipperPopup::onObjectIncubated()
     connect(this, &KlipperPopup::paddingChanged, this, &KlipperPopup::resizePopup);
 
     connect(item, SIGNAL(requestHidePopup()), this, SLOT(hide()));
+    connect(item, SIGNAL(requestShowPopup()), this, SLOT(show()));
+    connect(item, SIGNAL(requestResizeHeight(qreal)), this, SLOT(resizePopupHeight(qreal)));
 }
 
 void KlipperPopup::onFocusWindowChanged(QWindow *focusWindow)
