@@ -6,13 +6,13 @@
 
 #pragma once
 
+#include "urlgrabber.h"
 #include <QDialog>
 
 class QLineEdit;
 class QCheckBox;
 class QTableView;
 
-class ClipAction;
 class ActionDetailModel;
 
 class EditActionDialog : public QDialog
@@ -26,7 +26,7 @@ public:
     /**
      * Sets the action this dialog will work with
      */
-    void setAction(ClipAction *act, int commandIdxToSelect = -1);
+    void setAction(ClipAction &act, int commandIdxToSelect = -1);
 
 private Q_SLOTS:
     void onAddCommand();
@@ -58,6 +58,6 @@ private:
     QPushButton *m_editCommandPb;
     QPushButton *m_removeCommandPb;
 
-    ClipAction *m_action;
+    ClipAction *m_action = nullptr;
     ActionDetailModel *m_model;
 };

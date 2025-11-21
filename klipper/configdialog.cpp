@@ -385,19 +385,7 @@ which can be configured on the <interface>Action Menu</interface> page."),
 
 void ActionsWidget::setActionList(const ActionList &list)
 {
-    qDeleteAll(m_actionList);
-    m_actionList.clear();
-
-    for (const ClipAction *action : list) {
-        if (!action) {
-            qCDebug(KLIPPER_LOG) << "action is null!";
-            continue;
-        }
-
-        // make a copy for us to work with from now on
-        m_actionList.append(new ClipAction(*action));
-    }
-
+    m_actionList = list;
     updateActionListView();
 }
 
@@ -405,12 +393,7 @@ void ActionsWidget::updateActionListView()
 {
     m_actionsTree->clear();
 
-    for (const ClipAction *action : m_actionList) {
-        if (!action) {
-            qCDebug(KLIPPER_LOG) << "action is null!";
-            continue;
-        }
-
+    for (const ClipAction &action : m_actionList) {
         auto *item = new QTreeWidgetItem;
         item->setFlags(item->flags() | Qt::ItemIsUserCheckable);
         updateActionItem(item, action);
@@ -424,24 +407,24 @@ void ActionsWidget::updateActionListView()
     m_actionsTree->resetModifiedState();
 }
 
-void ActionsWidget::updateActionItem(QTreeWidgetItem *item, const ClipAction *action)
+void ActionsWidget::updateActionItem(QTreeWidgetItem *item, const ClipAction &action)
 {
-    if (!item || !action) {
+    if (!item) {
         qCDebug(KLIPPER_LOG) << "null pointer passed to function, nothing done";
         return;
     }
 
     // clear children if any
     item->takeChildren();
-    item->setText(0, action->actionRegexPattern());
-    item->setText(1, action->description());
+    item->setText(0, action.actionRegexPattern);
+    item->setText(1, action.description);
 
     item->setFlags(item->flags() | Qt::ItemIsUserCheckable | Qt::ItemIsAutoTristate);
     // There is no need to explicitly set the CheckState of the action item,
     // because with the ItemIsAutoTristate flag it is completely determined
     // by the state of the child command items.
 
-    for (const ClipCommand &command : action->commands()) {
+    for (const ClipCommand &command : action.commands) {
         QStringList cmdProps;
         cmdProps << command.command << command.description;
         auto *child = new QTreeWidgetItem(item, cmdProps);
@@ -453,18 +436,7 @@ void ActionsWidget::updateActionItem(QTreeWidgetItem *item, const ClipAction *ac
 
 ActionList ActionsWidget::actionList() const
 {
-    // return a copy of our action list
-    ActionList list;
-    for (const ClipAction *action : m_actionList) {
-        if (!action) {
-            qCDebug(KLIPPER_LOG) << "action is null";
-            continue;
-        }
-
-        list.append(new ClipAction(*action));
-    }
-
-    return list;
+    return m_actionList;
 }
 
 void ActionsWidget::resetModifiedState()
@@ -486,7 +458,7 @@ void ActionsWidget::onSelectionChanged()
 void ActionsWidget::onAddAction()
 {
     EditActionDialog dlg(this);
-    auto *newAct = new ClipAction;
+    ClipAction newAct;
     dlg.setAction(newAct);
 
     if (dlg.exec() == QDialog::Accepted) {
@@ -513,12 +485,7 @@ void ActionsWidget::onEditAction()
     }
 
     int idx = m_actionsTree->indexOfTopLevelItem(item);
-    ClipAction *action = m_actionList.at(idx);
-
-    if (!action) {
-        qCDebug(KLIPPER_LOG) << "action is null";
-        return;
-    }
+    ClipAction &action = m_actionList[idx];
 
     EditActionDialog dlg(this);
     dlg.setAction(action, commandIdx);
@@ -562,7 +529,7 @@ bool ActionsWidget::hasChanged() const
     return (m_actionsTree->actionsChanged() != -1);
 }
 
-void ActionsWidget::onItemChanged(QTreeWidgetItem *item, int col)
+void ActionsWidget::onItemChanged(QTreeWidgetItem *item, int /*col*/)
 {
     QTreeWidgetItem *parentItem = item->parent(); // parent of the command item
     if (parentItem == nullptr) { // this is a top level action
@@ -570,9 +537,9 @@ void ActionsWidget::onItemChanged(QTreeWidgetItem *item, int col)
     }
 
     int actionIdx = m_actionsTree->indexOfTopLevelItem(parentItem);
-    ClipAction *action = m_actionList.at(actionIdx);
+    ClipAction &action = m_actionList[actionIdx];
     int commandIdx = parentItem->indexOfChild(item);
-    ClipCommand command = action->command(commandIdx);
+    ClipCommand command = action.commands[commandIdx];
 
     // Ensure that the change being made really is a check state change.
     // because this slot is also called for multiple items when they are
@@ -581,7 +548,7 @@ void ActionsWidget::onItemChanged(QTreeWidgetItem *item, int col)
     const bool nowEnabled = (item->checkState(0) == Qt::Checked);
     if (nowEnabled != wasEnabled) {
         command.isEnabled = nowEnabled;
-        action->replaceCommand(commandIdx, command);
+        action.commands[commandIdx] = command;
         Q_EMIT widgetChanged();
     }
 }
@@ -636,11 +603,8 @@ void ConfigDialog::updateSettings()
     m_shortcutsWidget->save();
     m_actionsPage->resetModifiedState();
 
-    m_klipper->setURLGrabberEnabled(KlipperSettings::uRLGrabberEnabled());
-    m_klipper->urlGrabber()->setActionList(m_actionsPage->actionList());
+    URLGrabber::saveActions(m_actionsPage->actionList());
     m_klipper->saveSettings();
-
-    KlipperSettings::self()->save();
 
     KConfigGroup grp = KSharedConfig::openStateConfig()->group(u"klipper"_s).group(u"ConfigDialog"_s);
     KWindowConfig::saveWindowSize(windowHandle(), grp);
@@ -651,8 +615,8 @@ void ConfigDialog::updateWidgets()
     // The dialogue is being shown.  Initialise widgets which are not
     // managed by KConfigDialogManager from the application settings.
 
-    if (m_klipper && m_klipper->urlGrabber()) {
-        m_actionsPage->setActionList(m_klipper->urlGrabber()->actionList());
+    if (m_klipper) [[likely]] {
+        m_actionsPage->setActionList(URLGrabber::loadActions());
     } else {
         qCDebug(KLIPPER_LOG) << "Klipper or grabber object is null";
         return;
