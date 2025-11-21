@@ -99,8 +99,6 @@ public:
 Q_SIGNALS:
     void changed(bool isTop = false);
 
-    void actionInvoked(const std::shared_ptr<const HistoryItem> &item);
-
 private Q_SLOTS:
     /**
      * Check data in clipboard, and if it passes these checks,

@@ -43,8 +43,6 @@ public:
     Q_INVOKABLE void remove(const QString &uuid);
     Q_INVOKABLE void clearHistory();
 
-    Q_INVOKABLE void invokeAction(const QString &uuid);
-
 Q_SIGNALS:
     void countChanged();
     void sourceCountChanged();
