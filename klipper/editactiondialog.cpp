@@ -49,7 +49,7 @@ static QString output2text(ClipCommand::Output output)
 class ActionDetailModel : public QAbstractTableModel
 {
 public:
-    explicit ActionDetailModel(ClipAction *action, QObject *parent = nullptr);
+    explicit ActionDetailModel(ClipAction &action, QObject *parent = nullptr);
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     Qt::ItemFlags flags(const QModelIndex &index) const override;
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
@@ -74,9 +74,9 @@ private:
     QVariant decorationData(ClipCommand *command, column_t column) const;
 };
 
-ActionDetailModel::ActionDetailModel(ClipAction *action, QObject *parent)
+ActionDetailModel::ActionDetailModel(ClipAction &action, QObject *parent)
     : QAbstractTableModel(parent)
-    , m_commands(action->commands())
+    , m_commands(action.commands)
 {
 }
 
@@ -308,9 +308,9 @@ popup is activated manually with the <shortcut>%1</shortcut> key shortcut.",
     m_commandList->horizontalHeader()->setHighlightSections(false);
 }
 
-void EditActionDialog::setAction(ClipAction *act, int commandIdxToSelect)
+void EditActionDialog::setAction(ClipAction &act, int commandIdxToSelect)
 {
-    m_action = act;
+    m_action = &act;
     m_model = new ActionDetailModel(act, this);
     m_commandList->setModel(m_model);
     connect(m_commandList->selectionModel(), &QItemSelectionModel::selectionChanged, this, &EditActionDialog::onSelectionChanged);
@@ -320,14 +320,9 @@ void EditActionDialog::setAction(ClipAction *act, int commandIdxToSelect)
 
 void EditActionDialog::updateWidgets(int commandIdxToSelect)
 {
-    if (!m_action) {
-        qCDebug(KLIPPER_LOG) << "no action to edit was set";
-        return;
-    }
-
-    m_regExpEdit->setText(m_action->actionRegexPattern());
-    m_descriptionEdit->setText(m_action->description());
-    m_automaticCheck->setChecked(m_action->automatic());
+    m_regExpEdit->setText(m_action->actionRegexPattern);
+    m_descriptionEdit->setText(m_action->description);
+    m_automaticCheck->setChecked(m_action->automatic);
 
     if (commandIdxToSelect != -1) {
         m_commandList->setCurrentIndex(m_model->index(commandIdxToSelect, 0));
@@ -338,19 +333,14 @@ void EditActionDialog::updateWidgets(int commandIdxToSelect)
 
 void EditActionDialog::saveAction()
 {
-    if (!m_action) {
-        qCDebug(KLIPPER_LOG) << "no action to edit was set";
-        return;
-    }
+    m_action->actionRegexPattern = m_regExpEdit->text();
+    m_action->description = m_descriptionEdit->text();
+    m_action->automatic = m_automaticCheck->isChecked();
 
-    m_action->setActionRegexPattern(m_regExpEdit->text());
-    m_action->setDescription(m_descriptionEdit->text());
-    m_action->setAutomatic(m_automaticCheck->isChecked());
+    m_action->commands.clear();
 
-    m_action->clearCommands();
-
-    for (const auto commands = m_model->commands(); const ClipCommand &cmd : commands) {
-        m_action->addCommand(cmd);
+    for (const auto &cmd : m_model->commands()) {
+        m_action->commands.append(cmd);
     }
 }
 
