@@ -80,7 +80,7 @@ Klipper::Klipper(QObject *parent)
     m_repeatAction->setText(i18nc("@action:inmenu", "Manually Invoke Action on Current Clipboard"));
     m_repeatAction->setIcon(QIcon::fromTheme(QStringLiteral("open-menu-symbolic")));
     KGlobalAccel::setGlobalShortcut(m_repeatAction, QKeySequence());
-    connect(m_repeatAction, &QAction::triggered, this, [this] {
+connect(m_repeatAction, &QAction::triggered, this, [this] {
         showActionMenu(0);
     });
 
@@ -206,6 +206,11 @@ void Klipper::loadSettings()
     m_bUseGUIRegExpEditor = KlipperSettings::useGUIRegExpEditor();
 
     m_historyModel->loadSettings();
+}
+
+void Klipper::showActionMenu(int itemIndex)
+{
+    m_popup->showActionMenu(itemIndex);
 }
 
 void Klipper::saveSettings()

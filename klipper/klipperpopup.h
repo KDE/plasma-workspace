@@ -20,19 +20,21 @@ public:
     explicit KlipperPopup();
     ~KlipperPopup() override;
 
-    void show();
-
     void editCurrentClipboard();
     void showCurrentBarcode();
+    void showActionMenu(int index);
 
 public Q_SLOTS:
+    void show();
     void hide();
     void resizePopup();
+    void resizePopupHeight(qreal height);
 
 protected:
     void showEvent(QShowEvent *event) override;
 
 private:
+    void resizeMove(const QSize &popupSize);
     void positionOnScreen();
     void onFocusWindowChanged(QWindow *focusWindow);
 

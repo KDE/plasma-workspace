@@ -8,6 +8,8 @@
 
 #include "klipperpopup.h"
 
+#include <cmath>
+
 #include <QDBusConnection>
 #include <QDBusMessage>
 #include <QDBusReply>
@@ -45,6 +47,8 @@ KlipperPopup::KlipperPopup()
     connect(this, &KlipperPopup::paddingChanged, this, &KlipperPopup::resizePopup);
 
     connect(item, SIGNAL(requestHidePopup()), this, SLOT(hide()));
+    connect(item, SIGNAL(requestShowPopup()), this, SLOT(show()));
+    connect(item, SIGNAL(requestResizeHeight(qreal)), this, SLOT(resizePopupHeight(qreal)));
 
     connect(qGuiApp, &QGuiApplication::focusWindowChanged, this, &KlipperPopup::onFocusWindowChanged);
 }
@@ -80,6 +84,15 @@ void KlipperPopup::showCurrentBarcode()
     QMetaObject::invokeMethod(mainItem(), "showBarcode", Q_ARG(int, 0));
 }
 
+void KlipperPopup::showActionMenu(int index)
+{
+    Q_ASSERT_X(index >= 0, Q_FUNC_INFO, QString(u"index must be >= 0, current index is "_s + QString::number(index)).toLatin1().constData());
+    if (!isVisible()) {
+        show();
+    }
+    QMetaObject::invokeMethod(mainItem(), "showActionMenu", Q_ARG(int, index), Q_ARG(bool, false));
+}
+
 void KlipperPopup::hide()
 {
     QWindow::hide();
@@ -90,14 +103,24 @@ void KlipperPopup::resizePopup()
 {
     // If the popup is off-screen, move it to the closest edge of the screen
     const QSize popupSize = QSize(mainItem()->implicitWidth(), mainItem()->implicitHeight()).grownBy(padding()).boundedTo(screen()->availableSize());
+    resizeMove(popupSize);
+}
 
-    resize(popupSize);
+void KlipperPopup::resizePopupHeight(qreal height)
+{
+    const QSize newSize = QSize(mainItem()->implicitWidth(), std::ceil(height)).grownBy(padding()).boundedTo(screen()->availableSize());
+    resizeMove(newSize);
 }
 
 void KlipperPopup::showEvent(QShowEvent *event)
 {
     PlasmaWindow::showEvent(event); // NET::SkipTaskbar | NET::SkipPager | NET::SkipSwitcher
     requestActivate();
+}
+
+void KlipperPopup::resizeMove(const QSize &popupSize)
+{
+    resize(popupSize);
 }
 
 void KlipperPopup::positionOnScreen()
