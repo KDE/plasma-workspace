@@ -25,6 +25,7 @@ target_sources(klipperplugin
         previewimageprovider.cpp previewimageprovider.h
         declarativehistorymodel.cpp declarativehistorymodel.h
         klipperinterface.cpp klipperinterface.h
+        urlgrabbersingleton.cpp urlgrabbersingleton.h
 )
 target_link_libraries(klipperplugin
     PRIVATE
