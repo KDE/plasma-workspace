@@ -24,11 +24,13 @@ import org.kde.plasma.private.clipboard as Private
 PlasmaComponents3.ScrollView {
     id: clipboardMenu
 
+    signal requestResizeHeight(real contentHeight)
+    signal requestHidePopup
     signal itemSelected(var uuid)
     signal remove(var uuid)
     signal edit(var modelData)
     signal barcode(string text)
-    signal triggerAction(var uuid)
+    signal triggerAction(string uuid, string text, bool automaticallyInvoked)
 
     required property bool expanded
     required property PlasmaExtras.Representation dialogItem
@@ -51,7 +53,10 @@ PlasmaComponents3.ScrollView {
 
     PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
 
-    onItemSelected: uuid => model.moveToTop(uuid);
+    onItemSelected: uuid => {
+        model.moveToTop(uuid);
+        requestHidePopup();
+    }
     onRemove: uuid => {
         model.remove(uuid);
         // Prevents a race when after deleting an item, the hover would not reregister
@@ -76,10 +81,7 @@ PlasmaComponents3.ScrollView {
             showHeader: clipboardMenu.showHeader
         });
     }
-    onTriggerAction: uuid => {
-        hoverBlock.reset();
-        model.invokeAction(uuid);
-    }
+    onTriggerAction: (uuid, text, automaticallyInvoked) => showActionMenu(uuid, text, automaticallyInvoked)
 
     onExpandedChanged: {
         hoverBlock.reset();
@@ -238,6 +240,16 @@ PlasmaComponents3.ScrollView {
 
     function closeBarcode(): void {
         clipboardMenu.T.StackView.view.pop()
+    }
+
+    function showActionMenu(uuid: string, text: string, automaticallyInvoked: bool) {
+        const menu = clipboardMenu.T.StackView.view.pushItem(Qt.resolvedUrl("ActionMenu.qml"), {
+            uuid: uuid,
+            text: text,
+            automaticallyInvoked: automaticallyInvoked,
+        }, automaticallyInvoked ? T.StackView.Immediate : T.StackView.PushTransition);
+        menu.requestHidePopup.connect(clipboardMenu.requestHidePopup);
+        menu.requestResizeHeight.connect(clipboardMenu.requestResizeHeight);
     }
 
     // Hidden PlasmoidHeading for metrics purposes

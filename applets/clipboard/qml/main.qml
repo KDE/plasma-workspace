@@ -162,7 +162,7 @@ PlasmoidItem {
                 barcodeType: Plasmoid.configuration.barcodeType
                 showHeader: Plasmoid.containment.pluginName !== "org.kde.plasma.systemtray"
 
-                onItemSelected: if (main.hideOnWindowDeactivate) {
+                onRequestHidePopup: if (main.hideOnWindowDeactivate) {
                     main.expanded = false;
                 }
             }
