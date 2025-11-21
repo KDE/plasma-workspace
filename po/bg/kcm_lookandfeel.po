@@ -383,10 +383,3 @@ msgstr "Изберете какво да приложите…"
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Показване на по-малко опции…"
-
-#~ msgid ""
-#~ "You have to restart the Plasma session for these changes to take effect."
-#~ msgstr "Трябва да рестартирате сесията, за да влязат в сила тези промени."
-
-#~ msgid "Cursor Settings Changed"
-#~ msgstr "Настройките на курсора са променени"

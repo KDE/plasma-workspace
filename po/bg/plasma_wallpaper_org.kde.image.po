@@ -384,15 +384,3 @@ msgstr "Възникна грешка при опит за задаване на
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr ""
 "Възникна грешка при опит за отваряне на конфигурационния файл kscreenlockerrc"
-
-#~ msgctxt "part of a sentence: 'Switch dynamic wallpapers'"
-#~ msgid "At sunrise and sunset"
-#~ msgstr "При изгрев и залез"
-
-#~ msgctxt ""
-#~ "@label:checkbox Use geolocation services for more accurate sunset and "
-#~ "sunrise times"
-#~ msgid "Use device's current location for more accurate timings"
-#~ msgstr ""
-#~ "Използване на текущото местоположение на устройството за по-точно "
-#~ "определяне на времето за смяна"

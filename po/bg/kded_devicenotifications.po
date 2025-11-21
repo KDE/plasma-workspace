@@ -70,16 +70,3 @@ msgstr "USB устройство е отделено."
 msgctxt "@title:notifications"
 msgid "USB Device Went Away"
 msgstr "USB устройство е извадено"
-
-#~ msgid "A display has been plugged in."
-#~ msgstr "Включен е екран."
-
-#~ msgid "%1 has been plugged in."
-#~ msgstr "Устройство %1 е включено."
-
-#~ msgid "A USB device has been plugged in."
-#~ msgstr "Включено е USB устройство."
-
-#~ msgctxt "@title:notifications"
-#~ msgid "USB Device Removed"
-#~ msgstr "USB устройство e премахнато"
