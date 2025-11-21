@@ -62,9 +62,6 @@ void ClipboardJob::start()
             const QString text = parameters().value(QLatin1String("text")).toString();
             m_model->remove(item->uuid());
             m_model->insert(text);
-            if (m_klipper->urlGrabber()) {
-                m_klipper->urlGrabber()->checkNewData(HistoryItemConstPtr(m_model->first()));
-            }
             setResult(true);
             return;
         }
