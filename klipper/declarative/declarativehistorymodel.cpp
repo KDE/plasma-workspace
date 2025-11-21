@@ -81,13 +81,6 @@ void DeclarativeHistoryModel::clearHistory()
     m_model->clearHistory();
 }
 
-void DeclarativeHistoryModel::invokeAction(const QString &uuid)
-{
-    if (const qsizetype row = m_model->indexOf(uuid); row >= 0) {
-        Q_EMIT m_model->actionInvoked(m_model->m_items[row]);
-    }
-}
-
 bool DeclarativeHistoryModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const
 {
     if (m_starredOnly) {
