@@ -12,7 +12,6 @@
 
 #include "klipper_debug.h"
 #include <QDBusConnection>
-#include <QMenu>
 #include <QMimeData>
 
 #include <KActionCollection>
@@ -67,7 +66,6 @@ Klipper::Klipper(QObject *parent)
 
     m_historyModel = HistoryModel::self();
     m_popup = std::make_unique<KlipperPopup>();
-    connect(m_historyModel.get(), &HistoryModel::changed, this, &Klipper::slotHistoryChanged);
     connect(m_historyModel.get(), &HistoryModel::changed, this, &Klipper::clipboardHistoryUpdated);
 
     // we need that collection, otherwise KToggleAction is not happy :}
@@ -78,13 +76,6 @@ Klipper::Klipper(QObject *parent)
     m_toggleURLGrabAction->setText(i18nc("@action:inmenu Toggle automatic action", "Automatic Action Popup Menu"));
     KGlobalAccel::setGlobalShortcut(m_toggleURLGrabAction, QKeySequence(Qt::META | Qt::CTRL | Qt::Key_X));
     connect(m_toggleURLGrabAction, &QAction::toggled, this, &Klipper::setURLGrabberEnabled);
-
-    /*
-     * Create URL grabber
-     */
-    m_myURLGrabber = new URLGrabber(this);
-    connect(m_myURLGrabber, &URLGrabber::sigPopup, this, &Klipper::showPopupMenu);
-    connect(m_historyModel.get(), &HistoryModel::actionInvoked, m_myURLGrabber, &URLGrabber::invokeAction);
 
     /*
      * Load configuration settings
@@ -166,7 +157,6 @@ Klipper::Klipper(QObject *parent)
 
 Klipper::~Klipper()
 {
-    delete m_myURLGrabber;
 }
 
 // DBUS
@@ -233,60 +223,17 @@ void Klipper::slotStartShowTimer()
 
 void Klipper::loadSettings()
 {
-    m_bReplayActionInHistory = KlipperSettings::replayActionInHistory();
     // NOTE: not used atm - kregexpeditor is not ported to kde4
     m_bUseGUIRegExpEditor = KlipperSettings::useGUIRegExpEditor();
-
-    m_bURLGrabber = KlipperSettings::uRLGrabberEnabled();
-    // this will cause it to loadSettings too
-    setURLGrabberEnabled(m_bURLGrabber);
-
     m_historyModel->loadSettings();
 }
 
-void Klipper::saveSettings() const
+void Klipper::saveSettings()
 {
-    m_myURLGrabber->saveSettings();
-    KlipperSettings::self()->setVersion(QStringLiteral(KLIPPER_VERSION_STRING));
+    KlipperSettings::setVersion(QStringLiteral(KLIPPER_VERSION_STRING));
     KlipperSettings::self()->save();
 
     // other settings should be saved automatically by KConfigDialog
-}
-
-void Klipper::showPopupMenu(QMenu *menu)
-{
-    Q_ASSERT(menu != nullptr);
-    if (m_plasmashell) {
-        menu->hide();
-    }
-    menu->popup(QCursor::pos());
-    QWindow *menuWindow = menu->windowHandle();
-    if (m_plasmashell) {
-        menuWindow->installEventFilter(this);
-    }
-    if (!menu->windowFlags().testFlag(Qt::Popup)) {
-        connect(menuWindow, &QWindow::activeChanged, menu, [menu] {
-            if (!menu->windowHandle()->isActive()) {
-                menu->hide();
-            }
-        });
-    }
-}
-
-bool Klipper::eventFilter(QObject *filtered, QEvent *event)
-{
-    const bool ret = QObject::eventFilter(filtered, event);
-    auto menuWindow = qobject_cast<QWindow *>(filtered);
-    if (menuWindow && event->type() == QEvent::Expose && menuWindow->isVisible()) {
-        auto surface = KWayland::Client::Surface::fromWindow(menuWindow);
-        auto plasmaSurface = m_plasmashell->createSurface(surface, menuWindow);
-        plasmaSurface->openUnderCursor();
-        plasmaSurface->setSkipTaskbar(true);
-        plasmaSurface->setSkipSwitcher(true);
-        plasmaSurface->setRole(KWayland::Client::PlasmaShellSurface::Role::AppletPopup);
-        menuWindow->removeEventFilter(this);
-    }
-    return ret;
 }
 
 // save session on shutdown. Don't simply use the c'tor, as that may not be called.
@@ -318,56 +265,13 @@ void Klipper::slotPopupMenu()
     m_popup->show();
 }
 
-void Klipper::slotRepeatAction()
-{
-    auto top = std::static_pointer_cast<const HistoryItem>(m_historyModel->first());
-    if (top) {
-        m_myURLGrabber->invokeAction(top);
-    }
-}
-
 void Klipper::setURLGrabberEnabled(bool enable)
 {
-    if (enable != m_bURLGrabber) {
-        m_bURLGrabber = enable;
-        m_lastURLGrabberTextSelection.clear();
-        m_lastURLGrabberTextClipboard.clear();
+    if (enable != KlipperSettings::uRLGrabberEnabled()) {
         KlipperSettings::setURLGrabberEnabled(enable);
     }
 
     m_toggleURLGrabAction->setChecked(enable);
-
-    // make it update its settings
-    m_myURLGrabber->loadSettings();
-}
-
-void Klipper::slotHistoryChanged(bool isTop)
-{
-    if (!isTop) {
-        return;
-    }
-
-    QString &lastURLGrabberText = m_clip->isLocked(QClipboard::Selection) ? m_lastURLGrabberTextSelection : m_lastURLGrabberTextClipboard;
-    if (auto item = m_historyModel->first(); m_bURLGrabber && item && item->type() == HistoryItemType::Text) {
-        m_myURLGrabber->checkNewData(std::const_pointer_cast<const HistoryItem>(m_historyModel->first()));
-
-        // Make sure URLGrabber doesn't repeat all the time if klipper reads the same
-        // text all the time (e.g. because XFixes is not available and the application
-        // has broken TIMESTAMP target). Using most recent history item may not always
-        // work.
-        if (item->text() != lastURLGrabberText) {
-            lastURLGrabberText = item->text();
-        }
-    } else {
-        lastURLGrabberText.clear();
-    }
-
-    if (m_clip->isLocked(QClipboard::Selection) || m_clip->isLocked(QClipboard::Clipboard)) {
-        return;
-    }
-    if (m_bReplayActionInHistory && m_bURLGrabber) {
-        slotRepeatAction();
-    }
 }
 
 QStringList Klipper::getClipboardHistoryMenu()
