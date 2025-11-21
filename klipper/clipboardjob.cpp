@@ -107,7 +107,7 @@ void ClipboardJob::start()
             setResult(false);
         }
     } else if (operation == QLatin1String("action")) {
-        m_klipper->urlGrabber()->invokeAction(item);
+        m_klipper->showActionMenu(itemIndex);
         setResult(true);
     } else if (operation == s_previewKey) {
         const int pixelWidth = parameters().value(s_previewWidthKey).toInt();

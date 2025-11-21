@@ -92,7 +92,9 @@ Klipper::Klipper(QObject *parent)
     m_repeatAction->setText(i18nc("@action:inmenu", "Manually Invoke Action on Current Clipboard"));
     m_repeatAction->setIcon(QIcon::fromTheme(QStringLiteral("open-menu-symbolic")));
     KGlobalAccel::setGlobalShortcut(m_repeatAction, QKeySequence());
-    connect(m_repeatAction, &QAction::triggered, this, &Klipper::slotRepeatAction);
+    connect(m_repeatAction, &QAction::triggered, m_popup.get(), [this] {
+        showActionMenu(0);
+    });
 
     // add an edit-possibility
     m_editAction = m_collection->addAction(QStringLiteral("edit_clipboard"));
@@ -172,7 +174,7 @@ void Klipper::showKlipperPopupMenu()
 
 void Klipper::showKlipperManuallyInvokeActionMenu()
 {
-    slotRepeatAction();
+    showActionMenu(0);
 }
 
 void Klipper::reloadConfig()
@@ -226,6 +228,11 @@ void Klipper::loadSettings()
     // NOTE: not used atm - kregexpeditor is not ported to kde4
     m_bUseGUIRegExpEditor = KlipperSettings::useGUIRegExpEditor();
     m_historyModel->loadSettings();
+}
+
+void Klipper::showActionMenu(int itemIndex)
+{
+    m_popup->showActionMenu(itemIndex);
 }
 
 void Klipper::saveSettings()
