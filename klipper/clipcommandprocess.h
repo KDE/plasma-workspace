@@ -9,17 +9,19 @@
 #include <KProcess>
 #include <memory>
 
+#include "klipper_export.h"
+
 class ClipAction;
 struct ClipCommand;
 class HistoryItem;
 class HistoryModel;
 class SystemClipboard;
 
-class ClipCommandProcess : public KProcess
+class KLIPPER_EXPORT ClipCommandProcess : public KProcess
 {
     Q_OBJECT
 public:
-    ClipCommandProcess(const ClipAction &action, const ClipCommand &command, const QString &clip, std::shared_ptr<const HistoryItem> original_item = nullptr);
+    ClipCommandProcess(const QStringList &actionCapturedTexts, const ClipCommand &command, const QString &clip, const QString &uuid);
 public Q_SLOTS:
     void slotStdOutputAvailable();
     void slotFinished(int exitCode, QProcess::ExitStatus newState);
@@ -27,6 +29,6 @@ public Q_SLOTS:
 private:
     std::shared_ptr<HistoryModel> m_model;
     std::shared_ptr<SystemClipboard> m_clip;
-    std::shared_ptr<const HistoryItem> m_historyItem;
     QString m_newhistoryItem;
+    QString m_historyItemUuid;
 };
