@@ -15,12 +15,12 @@
 #include "systemclipboard.h"
 #include "urlgrabber.h"
 
-ClipCommandProcess::ClipCommandProcess(const ClipAction &action, const ClipCommand &command, const QString &clip, HistoryItemConstPtr original_item)
+ClipCommandProcess::ClipCommandProcess(const QStringList &actionCapturedTexts, const ClipCommand &command, const QString &clip, const QString &uuid)
     : KProcess()
     , m_model(HistoryModel::self())
     , m_clip(SystemClipboard::self())
-    , m_historyItem(original_item)
     , m_newhistoryItem()
+    , m_historyItemUuid(uuid)
 {
     QHash<QChar, QString> map;
     map.insert(QLatin1Char('s'), clip);
@@ -31,11 +31,10 @@ ClipCommandProcess::ClipCommandProcess(const ClipAction &action, const ClipComma
     map.insert(QLatin1Char('f'), clip);
     map.insert(QLatin1Char('F'), clip);
 
-    const QStringList matches = action.actionCapturedTexts();
     // support only %0 and the first 9 matches...
-    const int numMatches = qMin(10, matches.count());
+    const int numMatches = qMin(10, actionCapturedTexts.size());
     for (int i = 0; i < numMatches; ++i) {
-        map.insert(QChar('0' + i), matches.at(i));
+        map.insert(QChar('0' + i), actionCapturedTexts.at(i));
     }
 
     setOutputChannelMode(OnlyStdoutChannel);
@@ -46,7 +45,7 @@ ClipCommandProcess::ClipCommandProcess(const ClipAction &action, const ClipComma
         connect(this, &QIODevice::readyRead, this, &ClipCommandProcess::slotStdOutputAvailable);
     }
     if (command.output != ClipCommand::REPLACE) {
-        m_historyItem.reset();
+        m_historyItemUuid.clear();
     }
 }
 
@@ -59,8 +58,8 @@ void ClipCommandProcess::slotFinished(int /*exitCode*/, QProcess::ExitStatus /*n
         m_clip->checkClipData(QClipboard::Clipboard, data.get());
     }
     // If an history item was provided, remove it so that the new item can replace it
-    if (m_historyItem) {
-        m_model->remove(m_historyItem->uuid());
+    if (!m_historyItemUuid.isEmpty()) {
+        m_model->remove(m_historyItemUuid);
     }
     deleteLater();
 }
