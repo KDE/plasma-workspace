@@ -19,7 +19,9 @@ PlasmaExtras.Representation {
     implicitWidth: 100 // A friendly initial size
     implicitHeight: 100
 
+    signal requestShowPopup()
     signal requestHidePopup()
+    signal requestResizeHeight(real height)
 
     focus: true
     collapseMarginsHint: true
@@ -45,6 +47,19 @@ PlasmaExtras.Representation {
         (view.currentItem as ClipboardItemDelegate).barcode();
     }
 
+    function showActionMenu(index: int, automaticallyInvoked: bool): void {
+        historyModel.starredOnly = 0;
+        if (index < 0 || index >= clipboardMenu.view.count) {
+            return;
+        }
+        if (stack.currentItem instanceof ActionMenu) {
+            stack.popCurrentItem(QQC.StackView.Immediate);
+        }
+        const view = clipboardMenu.view as ListView;
+        view.currentIndex = index;
+        (view.currentItem as ClipboardItemDelegate).triggerAction(automaticallyInvoked);
+    }
+
     function updateContentSize(screenSize: size): void {
         dialogItem.implicitWidth = Math.max(Kirigami.Units.gridUnit * 15, Math.min(screenSize.width / 4, Kirigami.Units.gridUnit * 40));
         dialogItem.implicitHeight = Math.min(screenSize.height / 2, Kirigami.Units.gridUnit * 40);
@@ -57,6 +72,15 @@ PlasmaExtras.Representation {
                 ((stack.initialItem as Private.ClipboardMenu).view as ListView).positionViewAtBeginning();
             }
             ((stack.initialItem as Private.ClipboardMenu).view as ListView).currentIndex = 0;
+        }
+    }
+
+    Connections {
+        enabled: Private.URLGrabber.enabled
+        target: Private.URLGrabber
+        function onRequestShowCurrentActionMenu() {
+            dialogItem.requestShowPopup();
+            dialogItem.showActionMenu(0, true);
         }
     }
 
@@ -75,7 +99,8 @@ PlasmaExtras.Representation {
             showsClearHistoryButton: true
             barcodeType: "QRCode"
 
-            onItemSelected: dialogItem.requestHidePopup()
+            onRequestHidePopup: dialogItem.requestHidePopup()
+            onRequestResizeHeight: height => dialogItem.requestResizeHeight(height + dialogItem.header.height)
         }
     }
 }

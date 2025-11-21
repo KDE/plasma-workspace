@@ -121,7 +121,7 @@ PlasmoidItem {
                 showsClearHistoryButton: !(Plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentDrawsPlasmoidHeading) && clearAction.visible
                 barcodeType: Plasmoid.configuration.barcodeType
 
-                onItemSelected: if (main.hideOnWindowDeactivate) {
+                onRequestHidePopup: if (main.hideOnWindowDeactivate) {
                     main.expanded = false;
                 }
             }
