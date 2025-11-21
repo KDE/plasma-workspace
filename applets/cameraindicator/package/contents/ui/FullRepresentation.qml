@@ -30,13 +30,11 @@ PlasmaComponents.Page {
             model: !root.expanded || monitor.count <= 1 ? null : monitor
 
             delegate: PlasmaExtras.ExpandableListItem {
-                id: item
-
                 required property string display
                 required property int state
 
                 // TODO: switch to PlasmaExtras.ListItem once it has subtitle
-                icon: switch (item.state) {
+                icon: switch (state) {
                 case Monitor.NodeState.Running:
                     return "camera-on-symbolic";
                 case Monitor.NodeState.Idle:
@@ -44,8 +42,8 @@ PlasmaComponents.Page {
                 default:
                     return "camera-off-symbolic";
                 }
-                title: item.display || i18nc("@title", "Camera")
-                subtitle: switch (item.state) {
+                title: display || i18nc("@title", "Camera")
+                subtitle: switch (state) {
                 case Monitor.NodeState.Running:
                     return i18nc("@info:status", "Active");
                 case Monitor.NodeState.Idle:
@@ -67,7 +65,6 @@ PlasmaComponents.Page {
                 model: monitor.count === 1 ? monitor : 1
 
                 delegate: PlasmaExtras.PlaceholderMessage {
-                    id: item
                     property string display
                     property int state
                     parent: cameraList
@@ -75,8 +72,8 @@ PlasmaComponents.Page {
                     width: parent.width - (Kirigami.Units.gridUnit * 4)
                     iconName: Plasmoid.icon
                     text: {
-                        if (monitor.count === 1 && item.state === Monitor.NodeState.Running && item.display) {
-                            return i18nc("@info:status %1 camera name", "%1 is in use", item.display);
+                        if (monitor.count === 1 && state === Monitor.NodeState.Running && display) {
+                            return i18nc("@info:status %1 camera name", "%1 is in use", display);
                         }
                         return root.toolTipSubText;
                     }
