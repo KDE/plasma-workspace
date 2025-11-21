@@ -278,7 +278,6 @@ void KSMShutdownDlg::init(const KPackage::Package &package)
     });
 
     KWindowEffects::enableBlurBehind(this, true);
-    KWindowEffects::enableBackgroundContrast(this, true, 1.0, 1.0, 1.5);
     if (m_windowed) {
         show();
     } else {
