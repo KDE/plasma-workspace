@@ -98,7 +98,7 @@ private Q_SLOTS:
     void onItemChanged(QTreeWidgetItem *item, int col);
 
 private:
-    void updateActionItem(QTreeWidgetItem *item, const ClipAction *action);
+    void updateActionItem(QTreeWidgetItem *item, const ClipAction &action);
     void updateActionListView();
 
 private:
