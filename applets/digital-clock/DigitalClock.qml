@@ -519,6 +519,11 @@ MouseArea {
             PlasmaComponents.Label  {
                 id: timeLabel
 
+                readonly property localDateTime currentTime: {
+                    "dateTime": clock.dateTime,
+                    "format": Plasmoid.configuration.showSeconds === 2 ? main.timeFormatWithSeconds : main.timeFormat
+                }
+
                 font {
                     family: fontHelper.font.family
                     weight: fontHelper.font.weight
@@ -528,7 +533,7 @@ MouseArea {
                 }
                 minimumPixelSize: 1
 
-                text: Qt.formatTime(clock.dateTime, Plasmoid.configuration.showSeconds === 2 ? main.timeFormatWithSeconds : main.timeFormat)
+                text: String(currentTime)
                 textFormat: Text.PlainText
 
                 verticalAlignment: Text.AlignVCenter

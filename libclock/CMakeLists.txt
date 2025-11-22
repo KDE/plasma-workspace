@@ -3,7 +3,7 @@ URI "org.kde.plasma.clock"
 GENERATE_PLUGIN_SOURCE
 )
 
-target_sources(clockplugin PRIVATE alignedtimer.cpp clock.cpp)
+target_sources(clockplugin PRIVATE alignedtimer.cpp clock.cpp localdatetime.cpp)
 
 target_link_libraries(clockplugin
     PRIVATE
