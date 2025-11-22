@@ -36,8 +36,7 @@ PlasmoidItem {
     }
 
     function action_clearHistory() {
-        historyModel.clearHistory();
-        clearSearchField()
+        (fullRepresentationItem.clipboardMenu as Private.ClipboardMenu).clearHistory()
     }
 
     property bool inEmbeddedContainment: Plasmoid.containment.containmentType === PlasmaCore.Containment.CustomEmbedded
@@ -56,20 +55,13 @@ PlasmoidItem {
         }
     }
 
-    function clearSearchField() {
-        (fullRepresentationItem.clipboardMenu as Private.ClipboardMenu).filter.clear();
-    }
-
     Plasmoid.contextualActions: [
         PlasmaCore.Action {
             id: clearAction
             text: i18n("Clear History")
             icon.name: "edit-clear-history"
             visible: !main.isClipboardEmpty && !(main.fullRepresentationItem?.clipboardMenu as Private.ClipboardMenu)?.editing
-            onTriggered: {
-                historyModel.clearHistory();
-                main.clearSearchField()
-            }
+            onTriggered: (main.fullRepresentationItem.clipboardMenu as Private.ClipboardMenu).clearHistory()
         }
     ]
 
