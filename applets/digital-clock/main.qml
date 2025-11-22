@@ -16,7 +16,7 @@ import org.kde.plasma.private.digitalclock
 import org.kde.kirigami as Kirigami
 import org.kde.config as KConfig
 import org.kde.kcmutils as KCMUtils
-import org.kde.plasma.clock
+import org.kde.plasma.clock as PlasmaClock
 
 PlasmoidItem {
     id: root
@@ -30,12 +30,12 @@ PlasmoidItem {
     readonly property var currentTime: currentClock.dateTime
     readonly property string currentTimezone: currentClock.timeZone
 
-    Clock {
+    PlasmaClock.Clock {
         id: currentClock
         timeZone: Plasmoid.configuration.lastSelectedTimezone
     }
 
-    Clock {
+    PlasmaClock.Clock {
         id: systemClock
         // not defining a timezone keeps it up to date with the system timezone
     }
@@ -49,19 +49,14 @@ PlasmoidItem {
     }
 
     function formatTime(dateTime: date, showSeconds: bool): string {
-        if (!compactRepresentationItem) {
+        const compactRepItem = (compactRepresentationItem as Loader)?.item as DigitalClock;
+        if (!compactRepItem) {
             return "";
         }
 
-        let formattedTime;
-        if (showSeconds) {
-            formattedTime = Qt.formatTime(dateTime, compactRepresentationItem.item.timeFormatWithSeconds);
-        } else {
-            formattedTime = Qt.formatTime(dateTime, compactRepresentationItem.item.timeFormat);
-        }
-
+        let formattedTime = String(new PlasmaClock.localDateTime(dateTime, showSeconds ? compactRepItem.timeFormatWithSeconds : compactRepItem.timeFormat));
         if (dateTime.getDay() !== currentClock.dateTime.getDay()) {
-            formattedTime += " (" + compactRepresentationItem.item.dateFormatter(dateTime) + ")";
+            formattedTime += " (" + compactRepItem.dateFormatter(dateTime) + ")";
         }
 
         return formattedTime;
