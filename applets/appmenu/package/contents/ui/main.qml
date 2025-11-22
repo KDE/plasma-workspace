@@ -59,8 +59,10 @@ PlasmoidItem {
         Plasmoid.status: {
             if (appMenuModel.menuAvailable && Plasmoid.currentIndex > -1 && buttonRepeater.count > 0) {
                 return PlasmaCore.Types.NeedsAttentionStatus;
+            } else if (buttonRepeater.count > 0 || Plasmoid.configuration.compactView || Plasmoid.containment.corona?.editMode) {
+                return PlasmaCore.Types.ActiveStatus;
             } else {
-                return buttonRepeater.count > 0 || Plasmoid.configuration.compactView ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.HiddenStatus;
+                return PlasmaCore.Types.HiddenStatus;
             }
         }
 
