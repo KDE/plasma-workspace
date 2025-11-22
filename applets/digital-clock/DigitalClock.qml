@@ -17,7 +17,7 @@ import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.components as PlasmaComponents
 import org.kde.plasma.private.digitalclock
 import org.kde.kirigami as Kirigami
-import org.kde.plasma.clock
+import org.kde.plasma.clock as PlasmaClock
 
 MouseArea {
     id: main
@@ -80,7 +80,7 @@ MouseArea {
     Accessible.role: Accessible.Button
     Accessible.onPressAction: clicked(null)
 
-    Clock {
+    PlasmaClock.Clock {
         id: clock
         timeZone: Plasmoid.configuration.lastSelectedTimezone
         trackSeconds: Plasmoid.configuration.showSeconds == 2 // show seconds always
@@ -416,7 +416,7 @@ MouseArea {
                 }
                 minimumPixelSize: 1
 
-                text: Qt.formatTime(clock.dateTime, Plasmoid.configuration.showSeconds === 2 ? main.timeFormatWithSeconds : main.timeFormat)
+                text: String(new PlasmaClock.localDateTime(clock.dateTime, Plasmoid.configuration.showSeconds === 2 ? main.timeFormatWithSeconds : main.timeFormat))
                 textFormat: Text.PlainText
 
                 verticalAlignment: Text.AlignVCenter
