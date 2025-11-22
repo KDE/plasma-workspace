@@ -277,6 +277,8 @@ private:
     void executeSetupPlasmoidScript(Plasma::Containment *containment, Plasma::Applet *applet);
     void checkAllDesktopsUiReady();
     void activateLauncherMenu(const QString &screenName);
+
+    void setupLookAndFeel();
     void handleColorRequestedFromDBus(const QDBusMessage &msg);
 
 #ifndef NDEBUG
