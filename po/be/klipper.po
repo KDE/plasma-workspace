@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 14:42+0000\n"
+"POT-Creation-Date: 2025-11-22 02:34+0000\n"
 "PO-Revision-Date: 2024-11-04 22:00\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -763,27 +763,27 @@ msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Паказваць элементы буфера абмену ў месцы курсора мышы"
 
-#: klipper.cpp:429
+#: klipper.cpp:437
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Мабільны штрых-код"
 
-#: klipper.cpp:472 klipper.cpp:481
+#: klipper.cpp:480 klipper.cpp:489
 #, kde-format
 msgid "Clipboard history"
 msgstr "Гісторыя буфера абмену"
 
-#: klipper.cpp:498
+#: klipper.cpp:506
 #, kde-format
 msgid "up"
 msgstr "уверх"
 
-#: klipper.cpp:505
+#: klipper.cpp:513
 #, kde-format
 msgid "current"
 msgstr "бягучая"
 
-#: klipper.cpp:512
+#: klipper.cpp:520
 #, kde-format
 msgid "down"
 msgstr "уніз"
@@ -1002,7 +1002,7 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "Выплыўное акно буфера абмену"
 
-#: urlgrabber.cpp:198
+#: urlgrabber.cpp:200
 #, kde-format
 msgid "&Cancel"
 msgstr "&Скасаваць"

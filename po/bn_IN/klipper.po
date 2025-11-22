@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 14:42+0000\n"
+"POT-Creation-Date: 2025-11-22 02:34+0000\n"
 "PO-Revision-Date: 2009-01-05 12:55+0530\n"
 "Last-Translator: Runa Bhattacharjee <runab@redhat.com>\n"
 "Language-Team: Bengali INDIA <fedora-trans-bn_IN@redhat.com>\n"
@@ -751,28 +751,28 @@ msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "মাউসের কার্সারের অবস্থানে মেনু পপ-আপ করে প্রদর্শিত হবে (&P)"
 
-#: klipper.cpp:429
+#: klipper.cpp:437
 #, kde-format
 msgid "Mobile Barcode"
 msgstr ""
 
-#: klipper.cpp:472 klipper.cpp:481
+#: klipper.cpp:480 klipper.cpp:489
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgid "Clipboard history"
 msgstr "ক্লিপবোর্ডের পূর্ববর্তী তথ্য ধারণের মাপ: (&l)"
 
-#: klipper.cpp:498
+#: klipper.cpp:506
 #, kde-format
 msgid "up"
 msgstr ""
 
-#: klipper.cpp:505
+#: klipper.cpp:513
 #, kde-format
 msgid "current"
 msgstr ""
 
-#: klipper.cpp:512
+#: klipper.cpp:520
 #, kde-format
 msgid "down"
 msgstr ""
@@ -986,7 +986,7 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "ক্লিপবোর্ডের পূর্ববর্তী তথ্য ধারণের মাপ: (&l)"
 
-#: urlgrabber.cpp:198
+#: urlgrabber.cpp:200
 #, kde-format
 msgid "&Cancel"
 msgstr "বাতিল (&C)"

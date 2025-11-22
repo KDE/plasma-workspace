@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 14:42+0000\n"
+"POT-Creation-Date: 2025-11-22 02:34+0000\n"
 "PO-Revision-Date: 2025-11-04 08:32-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -768,27 +768,27 @@ msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Mostrar itens da área de transferência na posição do mouse"
 
-#: klipper.cpp:429
+#: klipper.cpp:437
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Código de barras móvel"
 
-#: klipper.cpp:472 klipper.cpp:481
+#: klipper.cpp:480 klipper.cpp:489
 #, kde-format
 msgid "Clipboard history"
 msgstr "Histórico da área de transferência"
 
-#: klipper.cpp:498
+#: klipper.cpp:506
 #, kde-format
 msgid "up"
 msgstr "acima"
 
-#: klipper.cpp:505
+#: klipper.cpp:513
 #, kde-format
 msgid "current"
 msgstr "atual"
 
-#: klipper.cpp:512
+#: klipper.cpp:520
 #, kde-format
 msgid "down"
 msgstr "abaixo"
@@ -1014,7 +1014,7 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "Menu de contexto da área de transferência"
 
-#: urlgrabber.cpp:198
+#: urlgrabber.cpp:200
 #, kde-format
 msgid "&Cancel"
 msgstr "&Cancelar"

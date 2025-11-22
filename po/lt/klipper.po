@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 14:42+0000\n"
+"POT-Creation-Date: 2025-11-22 02:34+0000\n"
 "PO-Revision-Date: 2025-09-04 13:15+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
@@ -761,27 +761,27 @@ msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Rodyti iškarpinės elementus ties pelės vieta"
 
-#: klipper.cpp:429
+#: klipper.cpp:437
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Mobilusis brūkšninis kodas"
 
-#: klipper.cpp:472 klipper.cpp:481
+#: klipper.cpp:480 klipper.cpp:489
 #, kde-format
 msgid "Clipboard history"
 msgstr "Iškarpinės istorija"
 
-#: klipper.cpp:498
+#: klipper.cpp:506
 #, kde-format
 msgid "up"
 msgstr "aukštyn"
 
-#: klipper.cpp:505
+#: klipper.cpp:513
 #, kde-format
 msgid "current"
 msgstr "dabartinis"
 
-#: klipper.cpp:512
+#: klipper.cpp:520
 #, kde-format
 msgid "down"
 msgstr "žemyn"
@@ -1005,7 +1005,7 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "Iškarpinės iškylantysis langas"
 
-#: urlgrabber.cpp:198
+#: urlgrabber.cpp:200
 #, kde-format
 msgid "&Cancel"
 msgstr "&Atsisakyti"

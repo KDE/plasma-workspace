@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 14:42+0000\n"
-"PO-Revision-Date: 2025-05-18 20:44+0200\n"
+"PO-Revision-Date: 2025-11-21 21:47+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #: abstractnotificationsmodel.cpp:340
 #, kde-format
@@ -120,10 +120,7 @@ msgstr[0] "%1 értesítés érkezett a Ne zavarjanak módban."
 msgstr[1] "%1 értesítés érkezett a Ne zavarjanak módban."
 
 #: notifications.cpp:922
-#, fuzzy, kde-format
-#| msgctxt "@title"
-#| msgid "Unread Notification"
-#| msgid_plural "Unread Notifications"
+#, kde-format
 msgctxt "@action:button Show the notifications popup"
 msgid "Show Notifications"
-msgstr "Olvasatlan értesítés"
+msgstr "Értesítések megjelenítése"
