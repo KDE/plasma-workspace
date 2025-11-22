@@ -144,12 +144,6 @@ ShellCorona::ShellCorona(QObject *parent)
             }
         }
     });
-
-    connect(this, &Corona::containmentAdded, this, [this](Plasma::Containment *cont) {
-        if (cont->containmentType() == Plasma::Containment::Panel || cont->containmentType() == Plasma::Containment::CustomPanel) {
-            connect(cont, &QObject::destroyed, this, &ShellCorona::panelContainmentDestroyed);
-        }
-    });
 }
 
 void ShellCorona::init()
