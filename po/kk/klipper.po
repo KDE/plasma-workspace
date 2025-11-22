@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-20 00:44+0000\n"
+"POT-Creation-Date: 2025-11-22 00:44+0000\n"
 "PO-Revision-Date: 2013-01-06 03:54+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -22,16 +22,6 @@ msgstr ""
 "\n"
 "\n"
 "\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Ақсәуле Мамаева, Сайран Киккарин"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "ak78@sci.kz, sairan@computer.org"
 
 #: configdialog.cpp:84
 #, fuzzy, kde-format
@@ -349,24 +339,24 @@ msgstr ""
 msgid "Clear History"
 msgstr "Алмасу буферінің журналы"
 
-#: declarative/qml/ClipboardMenu.qml:323
+#: declarative/qml/ClipboardMenu.qml:325
 #, fuzzy, kde-format
 #| msgid "Clipboard history"
 msgid "All History"
 msgstr "Алмасу буферінің журналы"
 
-#: declarative/qml/ClipboardMenu.qml:328
+#: declarative/qml/ClipboardMenu.qml:330
 #, kde-format
 msgid "Starred Only"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:435
+#: declarative/qml/ClipboardMenu.qml:437
 #, fuzzy, kde-format
 #| msgid "<no matches>"
 msgid "No matches"
 msgstr "<сәйкестіктер жоқ>"
 
-#: declarative/qml/ClipboardMenu.qml:435
+#: declarative/qml/ClipboardMenu.qml:437
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Алмасу буфері бос"
@@ -660,83 +650,78 @@ msgstr ""
 msgid "Remove Starred Item"
 msgstr ""
 
-#: klipper.cpp:91
+#: klipper.cpp:78
 #, fuzzy, kde-format
 #| msgid "Timeout for action popups:"
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Әрекет қалқымалы мәзірдің күту уақыты:"
 
-#: klipper.cpp:109
+#: klipper.cpp:96
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "Алмасу буферінің журналын т&азалау"
 
-#: klipper.cpp:114
+#: klipper.cpp:101
 #, fuzzy, kde-format
 #| msgid "Manually Invoke Action on Current Clipboard"
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Қолданыстағы алмасу буфер әрекетін қолмен таңдау"
 
-#: klipper.cpp:122
+#: klipper.cpp:109
 #, fuzzy, kde-format
 #| msgid "Edit Contents"
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "Мазмұнын өңдеу"
 
-#: klipper.cpp:128
+#: klipper.cpp:115
 #, fuzzy, kde-format
 #| msgid "&Show Barcode..."
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "&Штрихкодын көрсету..."
 
-#: klipper.cpp:137
+#: klipper.cpp:122
 #, fuzzy, kde-format
 #| msgid "Next History Item"
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Журналдағы келесі жазуы"
 
-#: klipper.cpp:142
+#: klipper.cpp:127
 #, fuzzy, kde-format
 #| msgid "Previous History Item"
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Журналдағы алдыңғы жазуы"
 
-#: klipper.cpp:149
+#: klipper.cpp:134
 #, fuzzy, kde-format
 #| msgid "Open Klipper at Mouse Position"
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Klipper тышқан меңзеген орында ашылсын"
 
-#: klipper.cpp:429
-#, kde-format
-msgid "Mobile Barcode"
-msgstr "QR штрихкоды"
-
-#: klipper.cpp:472 klipper.cpp:481
+#: klipper.cpp:402 klipper.cpp:411
 #, kde-format
 msgid "Clipboard history"
 msgstr "Алмасу буферінің журналы"
 
-#: klipper.cpp:498
+#: klipper.cpp:428
 #, kde-format
 msgid "up"
 msgstr "жоғары"
 
-#: klipper.cpp:505
+#: klipper.cpp:435
 #, kde-format
 msgid "current"
 msgstr "назардағы"
 
-#: klipper.cpp:512
+#: klipper.cpp:442
 #, kde-format
 msgid "down"
 msgstr "төмен"
@@ -944,10 +929,21 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "Алмасу буферінің журналы"
 
-#: urlgrabber.cpp:195
+#: urlgrabber.cpp:197
 #, kde-format
 msgid "&Cancel"
 msgstr "Қ&айту"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Ақсәуле Мамаева, Сайран Киккарин"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "ak78@sci.kz, sairan@computer.org"
+
+#~ msgid "Mobile Barcode"
+#~ msgstr "QR штрихкоды"
 
 #~ msgid "No actions for WM_CLASS"
 #~ msgstr "WM_CLASS үшін әрекеттер жоқ"

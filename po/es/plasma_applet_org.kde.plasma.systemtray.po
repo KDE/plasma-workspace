@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.systemtray\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-19 00:45+0000\n"
-"PO-Revision-Date: 2025-11-15 12:14+0100\n"
+"POT-Creation-Date: 2025-11-21 00:45+0000\n"
+"PO-Revision-Date: 2025-11-21 02:13+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -107,23 +107,19 @@ msgstr ""
 "desactivar su historial o para que solo recuerde un elemento a la vez."
 
 #: package/contents/ui/ConfigGeneral.qml:199
-#, fuzzy, kde-format
-#| msgid "Scale with Panel height"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel height"
 msgstr "Escalar a la altura del panel"
 
 #: package/contents/ui/ConfigGeneral.qml:200
-#, fuzzy, kde-format
-#| msgid "Scale with Panel width"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel width"
 msgstr "Escalar a la anchura del panel"
 
 #: package/contents/ui/ConfigGeneral.qml:202
-#, fuzzy, kde-format
-#| msgctxt "The arrangement of system tray icons in the Panel"
-#| msgid "Panel icon size:"
+#, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon size:"
 msgstr "Tamaño de los iconos del panel:"
@@ -171,7 +167,9 @@ msgid "Entries"
 msgstr "Entradas"
 
 #: package/contents/ui/ConfigGeneral.qml:310
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Always show all"
+msgctxt "@option:check, This is referring to system tray entries"
 msgid "Always show all"
 msgstr "Mostrar siempre todo"
 
@@ -224,16 +222,3 @@ msgstr "Cuadrícula con %1 elementos en %2 columnas"
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
 msgstr "AILlmyjgGJP"
-
-#~ msgid "Small"
-#~ msgstr "Pequeño"
-
-#~ msgctxt "Name of the system tray entry"
-#~ msgid "Entry"
-#~ msgstr "Entrada"
-
-#~ msgid "Visibility"
-#~ msgstr "Visibilidad"
-
-#~ msgid "Keyboard Shortcut"
-#~ msgstr "Atajo de teclado"

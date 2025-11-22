@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-20 00:44+0000\n"
+"POT-Creation-Date: 2025-11-22 00:44+0000\n"
 "PO-Revision-Date: 2025-09-01 19:11+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -18,16 +18,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 25.08.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Mattias Newzella"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "newzella@linux.nu"
 
 #: configdialog.cpp:84
 #, kde-format
@@ -348,22 +338,22 @@ msgstr "Expandera"
 msgid "Clear History"
 msgstr "Rensa historik"
 
-#: declarative/qml/ClipboardMenu.qml:323
+#: declarative/qml/ClipboardMenu.qml:325
 #, kde-format
 msgid "All History"
 msgstr "All historik"
 
-#: declarative/qml/ClipboardMenu.qml:328
+#: declarative/qml/ClipboardMenu.qml:330
 #, kde-format
 msgid "Starred Only"
 msgstr "Bara med stjärnor"
 
-#: declarative/qml/ClipboardMenu.qml:435
+#: declarative/qml/ClipboardMenu.qml:437
 #, kde-format
 msgid "No matches"
 msgstr "Inga träffar"
 
-#: declarative/qml/ClipboardMenu.qml:435
+#: declarative/qml/ClipboardMenu.qml:437
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Klippbordet är tomt"
@@ -659,75 +649,70 @@ msgstr ""
 msgid "Remove Starred Item"
 msgstr "Ta bort objekt med stjärnor"
 
-#: klipper.cpp:91
+#: klipper.cpp:78
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Automatisk sammanhangsberoende åtgärdsmeny"
 
-#: klipper.cpp:109
+#: klipper.cpp:96
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&Töm klippbordshistorik"
 
-#: klipper.cpp:114
+#: klipper.cpp:101
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Aktivera åtgärd med aktuellt klippbord manuellt"
 
-#: klipper.cpp:122
+#: klipper.cpp:109
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "&Redigera innehåll..."
 
-#: klipper.cpp:128
+#: klipper.cpp:115
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "Vi&sa streckkod…"
 
-#: klipper.cpp:137
+#: klipper.cpp:122
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Nästa historikvärde"
 
-#: klipper.cpp:142
+#: klipper.cpp:127
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Föregående historikvärde"
 
-#: klipper.cpp:149
+#: klipper.cpp:134
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Visa klippbordets innehåll vid muspekarens position"
 
-#: klipper.cpp:429
-#, kde-format
-msgid "Mobile Barcode"
-msgstr "Mobil streckkod"
-
-#: klipper.cpp:472 klipper.cpp:481
+#: klipper.cpp:402 klipper.cpp:411
 #, kde-format
 msgid "Clipboard history"
 msgstr "Klippbordshistorik"
 
-#: klipper.cpp:498
+#: klipper.cpp:428
 #, kde-format
 msgid "up"
 msgstr "upp"
 
-#: klipper.cpp:505
+#: klipper.cpp:435
 #, kde-format
 msgid "current"
 msgstr "nuvarande"
 
-#: klipper.cpp:512
+#: klipper.cpp:442
 #, kde-format
 msgid "down"
 msgstr "ner"
@@ -942,10 +927,21 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "Klippbordsruta"
 
-#: urlgrabber.cpp:195
+#: urlgrabber.cpp:197
 #, kde-format
 msgid "&Cancel"
 msgstr "&Avbryt"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Mattias Newzella"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "newzella@linux.nu"
+
+#~ msgid "Mobile Barcode"
+#~ msgstr "Mobil streckkod"
 
 #~ msgid "Exclude Windows..."
 #~ msgstr "Undanta fönster..."

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-20 00:44+0000\n"
+"POT-Creation-Date: 2025-11-22 00:44+0000\n"
 "PO-Revision-Date: 2025-02-22 07:46+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -20,42 +20,42 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: contents/logout/Logout.qml:156
+#: contents/logout/Logout.qml:149
 #, kde-format
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
 msgstr[0] "Installerer programoppdateringer og starter på nytt om 1 sekund"
 msgstr[1] "Installerer programoppdateringer og starter på nytt om %1 sekunder"
 
-#: contents/logout/Logout.qml:157
+#: contents/logout/Logout.qml:150
 #, kde-format
 msgid "Restarting in 1 second"
 msgid_plural "Restarting in %1 seconds"
 msgstr[0] "Starter på nytt om 1 sekund"
 msgstr[1] "Starter på nytt om %1 sekunder"
 
-#: contents/logout/Logout.qml:159
+#: contents/logout/Logout.qml:152
 #, kde-format
 msgid "Logging out in 1 second"
 msgid_plural "Logging out in %1 seconds"
 msgstr[0] "Logger ut om 1 sekund"
 msgstr[1] "Logger ut om %1 sekunder"
 
-#: contents/logout/Logout.qml:162
+#: contents/logout/Logout.qml:155
 #, kde-format
 msgid "Installing software updates and shutting down in 1 second"
 msgid_plural "Installing software updates and shutting down in %1 seconds"
 msgstr[0] "Installerer programoppdateringer og slår av om 1 sekund"
 msgstr[1] "Installerer programoppdateringer og slår av om %1 sekunder"
 
-#: contents/logout/Logout.qml:163
+#: contents/logout/Logout.qml:156
 #, kde-format
 msgid "Shutting down in 1 second"
 msgid_plural "Shutting down in %1 seconds"
 msgstr[0] "Slår av om 1 sekund"
 msgstr[1] "Slår av om %1 sekunder"
 
-#: contents/logout/Logout.qml:178
+#: contents/logout/Logout.qml:171
 #, kde-format
 msgid ""
 "One other user is currently logged in. If the computer is shut down or "
@@ -70,84 +70,84 @@ msgstr[1] ""
 "%1 andre brukere er logget inn. Hvis du slår av datamaskinen eller starter "
 "den på nytt, vil brukeren miste eventuelt ulagret arbeid."
 
-#: contents/logout/Logout.qml:193
+#: contents/logout/Logout.qml:186
 #, kde-format
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr ""
 "Når datamaskinen startes på nytt, vil den starte systeminnstillingene for "
 "oppsett av fastvare."
 
-#: contents/logout/Logout.qml:206
+#: contents/logout/Logout.qml:199
 #, kde-format
 msgid "When restarted, the computer will enter the boot loader menu."
 msgstr ""
 "Når datamaskinen startes på nytt, vil den starte oppstartslaster-menyen."
 
-#: contents/logout/Logout.qml:228
+#: contents/logout/Logout.qml:221
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p"
 msgstr "&Hvilemodus"
 
-#: contents/logout/Logout.qml:229
+#: contents/logout/Logout.qml:222
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p Now"
 msgstr "Gå i &hvilemodus nå"
 
-#: contents/logout/Logout.qml:238
+#: contents/logout/Logout.qml:231
 #, kde-format
 msgid "&Hibernate"
 msgstr "&Dvalemodus"
 
-#: contents/logout/Logout.qml:239
+#: contents/logout/Logout.qml:232
 #, kde-format
 msgid "&Hibernate Now"
 msgstr "Gå i &dvalemodus nå"
 
-#: contents/logout/Logout.qml:250
+#: contents/logout/Logout.qml:243
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
 msgstr "Installer oppdateringer og start på nytt"
 
-#: contents/logout/Logout.qml:252 contents/logout/Logout.qml:271
+#: contents/logout/Logout.qml:245 contents/logout/Logout.qml:264
 #, kde-format
 msgid "&Restart"
 msgstr "&Start på nytt"
 
-#: contents/logout/Logout.qml:253 contents/logout/Logout.qml:272
+#: contents/logout/Logout.qml:246 contents/logout/Logout.qml:265
 #, kde-format
 msgid "&Restart Now"
 msgstr "&Start på nytt nå"
 
-#: contents/logout/Logout.qml:285
+#: contents/logout/Logout.qml:278
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
 msgstr "Installer oppdateringer og slå av"
 
-#: contents/logout/Logout.qml:287 contents/logout/Logout.qml:306
+#: contents/logout/Logout.qml:280 contents/logout/Logout.qml:299
 #, kde-format
 msgid "&Shut Down"
 msgstr "Slå a&v"
 
-#: contents/logout/Logout.qml:288 contents/logout/Logout.qml:307
+#: contents/logout/Logout.qml:281 contents/logout/Logout.qml:300
 #, kde-format
 msgid "&Shut Down Now"
 msgstr "Slå a&v nå"
 
-#: contents/logout/Logout.qml:319
+#: contents/logout/Logout.qml:312
 #, kde-format
 msgid "&Log Out"
 msgstr "&Logg ut"
 
-#: contents/logout/Logout.qml:320
+#: contents/logout/Logout.qml:313
 #, kde-format
 msgid "&Log Out Now"
 msgstr "&Logg ut nå"
 
-#: contents/logout/Logout.qml:330
+#: contents/logout/Logout.qml:323
 #, kde-format
 msgid "&Cancel"
 msgstr "&Avbryt"

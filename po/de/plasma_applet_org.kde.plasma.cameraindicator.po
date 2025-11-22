@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.cameraindicator\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-22 00:44+0000\n"
 "PO-Revision-Date: 2024-09-08 20:35+0200\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -18,49 +18,49 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 24.11.70\n"
 
-#: contents/ui/FullRepresentation.qml:47
+#: contents/ui/FullRepresentation.qml:45
 #, kde-format
 msgctxt "@title"
 msgid "Camera"
 msgstr "Kamera"
 
-#: contents/ui/FullRepresentation.qml:50
+#: contents/ui/FullRepresentation.qml:48
 #, kde-format
 msgctxt "@info:status"
 msgid "Active"
 msgstr "Aktiv"
 
-#: contents/ui/FullRepresentation.qml:52
+#: contents/ui/FullRepresentation.qml:50
 #, kde-format
 msgctxt "@info:status"
 msgid "Idle"
 msgstr "Leerlauf"
 
-#: contents/ui/FullRepresentation.qml:54
+#: contents/ui/FullRepresentation.qml:52
 #, kde-format
 msgctxt "@info:status"
 msgid "Error"
 msgstr "Fehler"
 
-#: contents/ui/FullRepresentation.qml:56
+#: contents/ui/FullRepresentation.qml:54
 #, kde-format
 msgctxt "@info:status"
 msgid "Creating"
 msgstr "Wird erstellt"
 
-#: contents/ui/FullRepresentation.qml:58
+#: contents/ui/FullRepresentation.qml:56
 #, kde-format
 msgctxt "@info:status"
 msgid "Suspended"
 msgstr "Angehalten"
 
-#: contents/ui/FullRepresentation.qml:60
+#: contents/ui/FullRepresentation.qml:58
 #, kde-format
 msgctxt "@info:status"
 msgid "Unknown"
 msgstr "Unbekannt"
 
-#: contents/ui/FullRepresentation.qml:79
+#: contents/ui/FullRepresentation.qml:76
 #, kde-format
 msgctxt "@info:status %1 camera name"
 msgid "%1 is in use"

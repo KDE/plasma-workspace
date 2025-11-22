@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-20 00:44+0000\n"
+"POT-Creation-Date: 2025-11-22 00:44+0000\n"
 "PO-Revision-Date: 2009-01-06 01:03+0200\n"
 "Last-Translator: Omer Ensari <oensari@gmail.com>\n"
 "Language-Team: Kurdish <ubuntu-l10n-kur@lists.ubuntu.com>\n"
@@ -18,16 +18,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: KBabel 1.11.4\n"
 "X-Poedit-Language: Kurdish\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Omer Ensari"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "oensari@gmail.com"
 
 #: configdialog.cpp:84
 #, fuzzy, kde-format
@@ -345,23 +335,23 @@ msgstr ""
 msgid "Clear History"
 msgstr "Naverokê Biguherîne"
 
-#: declarative/qml/ClipboardMenu.qml:323
+#: declarative/qml/ClipboardMenu.qml:325
 #, fuzzy, kde-format
 #| msgid "Edit Contents"
 msgid "All History"
 msgstr "Naverokê Biguherîne"
 
-#: declarative/qml/ClipboardMenu.qml:328
+#: declarative/qml/ClipboardMenu.qml:330
 #, kde-format
 msgid "Starred Only"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:435
+#: declarative/qml/ClipboardMenu.qml:437
 #, kde-format
 msgid "No matches"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:435
+#: declarative/qml/ClipboardMenu.qml:437
 #, kde-format
 msgid "Clipboard is empty"
 msgstr ""
@@ -652,7 +642,7 @@ msgstr ""
 msgid "Remove Starred Item"
 msgstr ""
 
-#: klipper.cpp:91
+#: klipper.cpp:78
 #, fuzzy, kde-format
 #| msgctxt "Actions Config"
 #| msgid "Actions"
@@ -660,72 +650,67 @@ msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Çalakî"
 
-#: klipper.cpp:109
+#: klipper.cpp:96
 #, fuzzy, kde-format
 #| msgid "Edit Contents"
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "Naverokê Biguherîne"
 
-#: klipper.cpp:114
+#: klipper.cpp:101
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr ""
 
-#: klipper.cpp:122
+#: klipper.cpp:109
 #, fuzzy, kde-format
 #| msgid "Edit Contents"
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "Naverokê Biguherîne"
 
-#: klipper.cpp:128
+#: klipper.cpp:115
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr ""
 
-#: klipper.cpp:137
+#: klipper.cpp:122
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr ""
 
-#: klipper.cpp:142
+#: klipper.cpp:127
 #, fuzzy, kde-format
 #| msgid "Maintainer"
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Peydeker"
 
-#: klipper.cpp:149
+#: klipper.cpp:134
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr ""
 
-#: klipper.cpp:429
-#, kde-format
-msgid "Mobile Barcode"
-msgstr ""
-
-#: klipper.cpp:472 klipper.cpp:481
+#: klipper.cpp:402 klipper.cpp:411
 #, kde-format
 msgid "Clipboard history"
 msgstr ""
 
-#: klipper.cpp:498
+#: klipper.cpp:428
 #, kde-format
 msgid "up"
 msgstr ""
 
-#: klipper.cpp:505
+#: klipper.cpp:435
 #, kde-format
 msgid "current"
 msgstr ""
 
-#: klipper.cpp:512
+#: klipper.cpp:442
 #, kde-format
 msgid "down"
 msgstr ""
@@ -926,10 +911,18 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "Naverokê Biguherîne"
 
-#: urlgrabber.cpp:195
+#: urlgrabber.cpp:197
 #, kde-format
 msgid "&Cancel"
 msgstr "&Betal"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Omer Ensari"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "oensari@gmail.com"
 
 #~ msgid "&More"
 #~ msgstr "&Zêdetir"

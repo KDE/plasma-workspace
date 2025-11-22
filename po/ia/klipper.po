@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-20 00:44+0000\n"
+"POT-Creation-Date: 2025-11-22 00:44+0000\n"
 "PO-Revision-Date: 2024-12-18 18:07+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -16,16 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 23.08.5\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Giovanni Sora"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "g.sora@tiscali.it"
 
 #: configdialog.cpp:84
 #, kde-format
@@ -351,23 +341,23 @@ msgstr "Expande"
 msgid "Clear History"
 msgstr "Netta historia"
 
-#: declarative/qml/ClipboardMenu.qml:323
+#: declarative/qml/ClipboardMenu.qml:325
 #, fuzzy, kde-format
 #| msgid "Clear History"
 msgid "All History"
 msgstr "Netta historia"
 
-#: declarative/qml/ClipboardMenu.qml:328
+#: declarative/qml/ClipboardMenu.qml:330
 #, kde-format
 msgid "Starred Only"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:435
+#: declarative/qml/ClipboardMenu.qml:437
 #, kde-format
 msgid "No matches"
 msgstr "Nulle correspondentias"
 
-#: declarative/qml/ClipboardMenu.qml:435
+#: declarative/qml/ClipboardMenu.qml:437
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Area de transferentia  es vacue"
@@ -670,75 +660,70 @@ msgstr ""
 msgid "Remove Starred Item"
 msgstr ""
 
-#: klipper.cpp:91
+#: klipper.cpp:78
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Menu de Popup de Action Automatic"
 
-#: klipper.cpp:109
+#: klipper.cpp:96
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&Netta historia de area de transferentia"
 
-#: klipper.cpp:114
+#: klipper.cpp:101
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Invoca manualmente Action sur le currente area de transferentia"
 
-#: klipper.cpp:122
+#: klipper.cpp:109
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
 msgstr "&Edita contentos…"
 
-#: klipper.cpp:128
+#: klipper.cpp:115
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "Mon&stra codice a barras ..."
 
-#: klipper.cpp:137
+#: klipper.cpp:122
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Proxime elemento de chronologia"
 
-#: klipper.cpp:142
+#: klipper.cpp:127
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Precedente elemento de chronologia"
 
-#: klipper.cpp:149
+#: klipper.cpp:134
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Monstra elementos de aread de transferentia al position de mus"
 
-#: klipper.cpp:429
-#, kde-format
-msgid "Mobile Barcode"
-msgstr "Codice a barras mobile"
-
-#: klipper.cpp:472 klipper.cpp:481
+#: klipper.cpp:402 klipper.cpp:411
 #, kde-format
 msgid "Clipboard history"
 msgstr "Chronologia de area de transferentia"
 
-#: klipper.cpp:498
+#: klipper.cpp:428
 #, kde-format
 msgid "up"
 msgstr "in alto"
 
-#: klipper.cpp:505
+#: klipper.cpp:435
 #, kde-format
 msgid "current"
 msgstr "currente"
 
-#: klipper.cpp:512
+#: klipper.cpp:442
 #, kde-format
 msgid "down"
 msgstr "a basso"
@@ -961,10 +946,21 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "Popup de Tabula de Notas"
 
-#: urlgrabber.cpp:195
+#: urlgrabber.cpp:197
 #, kde-format
 msgid "&Cancel"
 msgstr "&Cancella"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Giovanni Sora"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "g.sora@tiscali.it"
+
+#~ msgid "Mobile Barcode"
+#~ msgstr "Codice a barras mobile"
 
 #~ msgid "Exclude Windows..."
 #~ msgstr "Exclude Fenestras (Windows)..."

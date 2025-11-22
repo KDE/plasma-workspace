@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-22 00:44+0000\n"
 "PO-Revision-Date: 2025-02-22 07:42+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -18,49 +18,49 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: contents/ui/FullRepresentation.qml:47
+#: contents/ui/FullRepresentation.qml:45
 #, kde-format
 msgctxt "@title"
 msgid "Camera"
 msgstr "Kamera"
 
-#: contents/ui/FullRepresentation.qml:50
+#: contents/ui/FullRepresentation.qml:48
 #, kde-format
 msgctxt "@info:status"
 msgid "Active"
 msgstr "I bruk"
 
-#: contents/ui/FullRepresentation.qml:52
+#: contents/ui/FullRepresentation.qml:50
 #, kde-format
 msgctxt "@info:status"
 msgid "Idle"
 msgstr "Ikke i bruk"
 
-#: contents/ui/FullRepresentation.qml:54
+#: contents/ui/FullRepresentation.qml:52
 #, kde-format
 msgctxt "@info:status"
 msgid "Error"
 msgstr "Feil"
 
-#: contents/ui/FullRepresentation.qml:56
+#: contents/ui/FullRepresentation.qml:54
 #, kde-format
 msgctxt "@info:status"
 msgid "Creating"
 msgstr "Oppretter"
 
-#: contents/ui/FullRepresentation.qml:58
+#: contents/ui/FullRepresentation.qml:56
 #, kde-format
 msgctxt "@info:status"
 msgid "Suspended"
 msgstr "På pause"
 
-#: contents/ui/FullRepresentation.qml:60
+#: contents/ui/FullRepresentation.qml:58
 #, kde-format
 msgctxt "@info:status"
 msgid "Unknown"
 msgstr "Ukjent"
 
-#: contents/ui/FullRepresentation.qml:79
+#: contents/ui/FullRepresentation.qml:76
 #, kde-format
 msgctxt "@info:status %1 camera name"
 msgid "%1 is in use"

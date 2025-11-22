@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2023, 2024 Kristof Kiszel <ulysses@fsf.hu>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2024-09-18 21:24+0200\n"
+"PO-Revision-Date: 2025-11-21 21:48+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #: devicenotifications.cpp:383
 #, kde-format
@@ -24,10 +24,9 @@ msgid "Display Detected"
 msgstr "Kijelző észlelve"
 
 #: devicenotifications.cpp:384
-#, fuzzy, kde-format
-#| msgid "A display has been unplugged."
+#, kde-format
 msgid "A display has been connected."
-msgstr "Egy kijelzőt leválasztottak."
+msgstr "Egy kijelzőt csatlakoztattak."
 
 #: devicenotifications.cpp:404
 #, kde-format
@@ -36,22 +35,19 @@ msgid "Display Removed"
 msgstr "Kijelző eltávolítva"
 
 #: devicenotifications.cpp:405
-#, fuzzy, kde-format
-#| msgid "A display has been unplugged."
+#, kde-format
 msgid "A display has been disconnected."
 msgstr "Egy kijelzőt leválasztottak."
 
 #: devicenotifications.cpp:451
-#, fuzzy, kde-format
-#| msgid "%1 has been unplugged."
+#, kde-format
 msgid "%1 has been connected."
-msgstr "%1 leválasztva."
+msgstr "%1 csatlakoztatva."
 
 #: devicenotifications.cpp:451
-#, fuzzy, kde-format
-#| msgid "A USB device has been unplugged."
+#, kde-format
 msgid "A USB device has been connected."
-msgstr "Egy USB-eszközt leválasztottak"
+msgstr "Egy USB-eszközt csatlakoztattak."
 
 #: devicenotifications.cpp:456
 #, kde-format
@@ -60,16 +56,14 @@ msgid "USB Device Detected"
 msgstr "USB-eszköz észlelve"
 
 #: devicenotifications.cpp:494
-#, fuzzy, kde-format
-#| msgid "%1 has been unplugged."
+#, kde-format
 msgid "%1 has been disconnected."
 msgstr "%1 leválasztva."
 
 #: devicenotifications.cpp:494
-#, fuzzy, kde-format
-#| msgid "A USB device has been unplugged."
+#, kde-format
 msgid "A USB device has been disconnected."
-msgstr "Egy USB-eszközt leválasztottak"
+msgstr "Egy USB-eszközt leválasztottak."
 
 #: devicenotifications.cpp:499
 #, kde-format

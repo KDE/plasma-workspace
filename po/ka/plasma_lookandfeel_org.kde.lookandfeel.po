@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-20 00:44+0000\n"
+"POT-Creation-Date: 2025-11-22 00:44+0000\n"
 "PO-Revision-Date: 2024-12-31 04:37+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -18,42 +18,42 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.5\n"
 
-#: contents/logout/Logout.qml:156
+#: contents/logout/Logout.qml:149
 #, kde-format
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
 msgstr[0] "განახლებების დაყენება და გადატვირთვა 1 წამში"
 msgstr[1] "განახლებების დაყენება და გადატვირთვა %1 წამში"
 
-#: contents/logout/Logout.qml:157
+#: contents/logout/Logout.qml:150
 #, kde-format
 msgid "Restarting in 1 second"
 msgid_plural "Restarting in %1 seconds"
 msgstr[0] "გადაიტვირთება %1 წამში"
 msgstr[1] "გადაიტვირთება %1 წამში"
 
-#: contents/logout/Logout.qml:159
+#: contents/logout/Logout.qml:152
 #, kde-format
 msgid "Logging out in 1 second"
 msgid_plural "Logging out in %1 seconds"
 msgstr[0] "გასვლა %1 წამში"
 msgstr[1] "გასვლა %1 წამში"
 
-#: contents/logout/Logout.qml:162
+#: contents/logout/Logout.qml:155
 #, kde-format
 msgid "Installing software updates and shutting down in 1 second"
 msgid_plural "Installing software updates and shutting down in %1 seconds"
 msgstr[0] "განახლებების დაყენება და მოწყობილობის გამორთვა 1 წამში"
 msgstr[1] "განახლებების დაყენება და მოწყობილობის გამორთვა %1 წამში"
 
-#: contents/logout/Logout.qml:163
+#: contents/logout/Logout.qml:156
 #, kde-format
 msgid "Shutting down in 1 second"
 msgid_plural "Shutting down in %1 seconds"
 msgstr[0] "გამოირთვება %1 წამში"
 msgstr[1] "გამოირთვება %1 წამში"
 
-#: contents/logout/Logout.qml:178
+#: contents/logout/Logout.qml:171
 #, kde-format
 msgid ""
 "One other user is currently logged in. If the computer is shut down or "
@@ -68,82 +68,82 @@ msgstr[1] ""
 "ასევე შესულია %1 სხვა მომხმარებელი. თუ კომპიუტერს გამორთავთ ან გადატვირთავთ, "
 "მათ შეიძლება ნამუშევარი დაკარგონ."
 
-#: contents/logout/Logout.qml:193
+#: contents/logout/Logout.qml:186
 #, kde-format
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr ""
 "გადატვირთვის შემდეგ კომპიუტერი მიკროკოდის მორგების ეკრანზე გადაირთვება."
 
-#: contents/logout/Logout.qml:206
+#: contents/logout/Logout.qml:199
 #, kde-format
 msgid "When restarted, the computer will enter the boot loader menu."
 msgstr "გადატვირთვის შემდეგ კომპიუტერი ჩამტვირთავი პროგრამის მენიუში შევა."
 
-#: contents/logout/Logout.qml:228
+#: contents/logout/Logout.qml:221
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p"
 msgstr "&ძილი"
 
-#: contents/logout/Logout.qml:229
+#: contents/logout/Logout.qml:222
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p Now"
 msgstr "&ძილი ახლავე"
 
-#: contents/logout/Logout.qml:238
+#: contents/logout/Logout.qml:231
 #, kde-format
 msgid "&Hibernate"
 msgstr "პ&როგრამული ძილი"
 
-#: contents/logout/Logout.qml:239
+#: contents/logout/Logout.qml:232
 #, kde-format
 msgid "&Hibernate Now"
 msgstr "&პროგრამული ძილი ახლავე"
 
-#: contents/logout/Logout.qml:250
+#: contents/logout/Logout.qml:243
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
 msgstr "განახლებების დაყენება და გადატვირთვა"
 
-#: contents/logout/Logout.qml:252 contents/logout/Logout.qml:271
+#: contents/logout/Logout.qml:245 contents/logout/Logout.qml:264
 #, kde-format
 msgid "&Restart"
 msgstr "&გადატვირთვა"
 
-#: contents/logout/Logout.qml:253 contents/logout/Logout.qml:272
+#: contents/logout/Logout.qml:246 contents/logout/Logout.qml:265
 #, kde-format
 msgid "&Restart Now"
 msgstr "&გადატვირთვა ახლავე"
 
-#: contents/logout/Logout.qml:285
+#: contents/logout/Logout.qml:278
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
 msgstr "განახლებების დაყენება და მოწყობილობის გამორთვა"
 
-#: contents/logout/Logout.qml:287 contents/logout/Logout.qml:306
+#: contents/logout/Logout.qml:280 contents/logout/Logout.qml:299
 #, kde-format
 msgid "&Shut Down"
 msgstr "გამ&ორთვა"
 
-#: contents/logout/Logout.qml:288 contents/logout/Logout.qml:307
+#: contents/logout/Logout.qml:281 contents/logout/Logout.qml:300
 #, kde-format
 msgid "&Shut Down Now"
 msgstr "ახლავე გამო&რთვა"
 
-#: contents/logout/Logout.qml:319
+#: contents/logout/Logout.qml:312
 #, kde-format
 msgid "&Log Out"
 msgstr "გასვ&ლა"
 
-#: contents/logout/Logout.qml:320
+#: contents/logout/Logout.qml:313
 #, kde-format
 msgid "&Log Out Now"
 msgstr "გასვლა ახ&ლავე"
 
-#: contents/logout/Logout.qml:330
+#: contents/logout/Logout.qml:323
 #, kde-format
 msgid "&Cancel"
 msgstr "&გაუქმება"

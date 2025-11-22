@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-22 00:44+0000\n"
 "PO-Revision-Date: 2023-09-27 05:46+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -18,49 +18,49 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.3.2\n"
 
-#: contents/ui/FullRepresentation.qml:47
+#: contents/ui/FullRepresentation.qml:45
 #, kde-format
 msgctxt "@title"
 msgid "Camera"
 msgstr "კამერა"
 
-#: contents/ui/FullRepresentation.qml:50
+#: contents/ui/FullRepresentation.qml:48
 #, kde-format
 msgctxt "@info:status"
 msgid "Active"
 msgstr "აქტიური"
 
-#: contents/ui/FullRepresentation.qml:52
+#: contents/ui/FullRepresentation.qml:50
 #, kde-format
 msgctxt "@info:status"
 msgid "Idle"
 msgstr "უმოქმედო"
 
-#: contents/ui/FullRepresentation.qml:54
+#: contents/ui/FullRepresentation.qml:52
 #, kde-format
 msgctxt "@info:status"
 msgid "Error"
 msgstr "შეცდომა"
 
-#: contents/ui/FullRepresentation.qml:56
+#: contents/ui/FullRepresentation.qml:54
 #, kde-format
 msgctxt "@info:status"
 msgid "Creating"
 msgstr "შექმნა"
 
-#: contents/ui/FullRepresentation.qml:58
+#: contents/ui/FullRepresentation.qml:56
 #, kde-format
 msgctxt "@info:status"
 msgid "Suspended"
 msgstr "გაჩერებულია"
 
-#: contents/ui/FullRepresentation.qml:60
+#: contents/ui/FullRepresentation.qml:58
 #, kde-format
 msgctxt "@info:status"
 msgid "Unknown"
 msgstr "უცნობი"
 
-#: contents/ui/FullRepresentation.qml:79
+#: contents/ui/FullRepresentation.qml:76
 #, kde-format
 msgctxt "@info:status %1 camera name"
 msgid "%1 is in use"
