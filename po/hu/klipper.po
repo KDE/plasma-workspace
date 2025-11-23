@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-22 00:44+0000\n"
-"PO-Revision-Date: 2025-11-21 21:49+0100\n"
+"POT-Creation-Date: 2025-11-23 00:44+0000\n"
+"PO-Revision-Date: 2025-11-22 22:02+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -298,14 +298,13 @@ msgstr "Másolás"
 #, kde-format
 msgctxt "@info:status"
 msgid "An image of the QR code has been copied to clipboard"
-msgstr ""
+msgstr "A QR-kód képe a vágólapra lett másolva"
 
 #: declarative/qml/BarcodePage.qml:101
-#, fuzzy, kde-format
-#| msgid "Append to clipboard"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Copy QR code image to clipboard"
-msgstr "Hozzáfűzés a vágólaphoz"
+msgstr "QR-kód kép másolása a vágólapra"
 
 #: declarative/qml/BarcodePage.qml:112
 #, kde-format
@@ -337,28 +336,27 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "Kibontás"
 
-#: declarative/qml/ClipboardMenu.qml:268
+#: declarative/qml/ClipboardMenu.qml:275
 #, kde-format
 msgid "Clear History"
 msgstr "Előzmények törlése"
 
-#: declarative/qml/ClipboardMenu.qml:325
-#, fuzzy, kde-format
-#| msgid "Clear History"
+#: declarative/qml/ClipboardMenu.qml:329
+#, kde-format
 msgid "All History"
-msgstr "Előzmények törlése"
+msgstr "Minden előzmény"
 
-#: declarative/qml/ClipboardMenu.qml:330
+#: declarative/qml/ClipboardMenu.qml:334
 #, kde-format
 msgid "Starred Only"
-msgstr ""
+msgstr "Csak a csillagosak"
 
-#: declarative/qml/ClipboardMenu.qml:437
+#: declarative/qml/ClipboardMenu.qml:441
 #, kde-format
 msgid "No matches"
 msgstr "Nincs találat"
 
-#: declarative/qml/ClipboardMenu.qml:437
+#: declarative/qml/ClipboardMenu.qml:441
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "A vágólap üres"
@@ -384,16 +382,14 @@ msgid "Remove from history"
 msgstr "Eltávolítás az előzményekből"
 
 #: declarative/qml/DelegateToolButtons.qml:58
-#, fuzzy, kde-format
-#| msgid "Remove from history"
+#, kde-format
 msgid "Remove Star"
-msgstr "Eltávolítás az előzményekből"
+msgstr "Csillag eltávolítása"
 
 #: declarative/qml/DelegateToolButtons.qml:58
-#, fuzzy, kde-format
-#| msgid "Start"
+#, kde-format
 msgid "Star"
-msgstr "Elindítás"
+msgstr "Csillagozás"
 
 #: declarative/qml/EditPage.qml:63
 #, kde-format
@@ -612,10 +608,11 @@ msgid "Icon:"
 msgstr "Ikon:"
 
 #: historymodel.cpp:281
-#, fuzzy, kde-format
-#| msgid "The clipboard history will store up to this many items."
+#, kde-format
 msgid "The clipboard history contains starred items. Clear them too?"
-msgstr "A vágólap előzményei legfeljebb ennyi elemet tárolnak."
+msgstr ""
+"A vágólap előzményei között vannak csillaggal jelölt elemek. Ezeket is "
+"törölni szeretné?"
 
 #: historymodel.cpp:282 historymodel.cpp:302
 #, kde-format
@@ -625,13 +622,12 @@ msgstr "Vágólapnapló törlése"
 #: historymodel.cpp:283
 #, kde-format
 msgid "Clear Everything"
-msgstr ""
+msgstr "Minden törlése"
 
 #: historymodel.cpp:284
-#, fuzzy, kde-format
-#| msgid "Clipboard Items"
+#, kde-format
 msgid "Keep Starred Items"
-msgstr "Vágólapelemek"
+msgstr "Csillaggal jelölt elemek megtartása"
 
 #: historymodel.cpp:301
 #, kde-format
@@ -648,11 +644,13 @@ msgstr "%1x%2"
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
+"Ez az elem csillaggal jelölt. Biztosan el szeretné távolítani az "
+"előzményekből?"
 
 #: historymodel.cpp:566
 #, kde-format
 msgid "Remove Starred Item"
-msgstr ""
+msgstr "Csillagozott elem eltávolítása"
 
 #: klipper.cpp:78
 #, kde-format

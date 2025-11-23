@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-23 00:44+0000\n"
 "PO-Revision-Date: 2024-05-30 20:54+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -27,12 +27,12 @@ msgstr "Съдържание на клипборда"
 msgid "Clipboard is empty"
 msgstr "Буферът е празен"
 
-#: contents/ui/main.qml:66
+#: contents/ui/main.qml:61
 #, kde-format
 msgid "Clear History"
 msgstr "Изчистване на история"
 
-#: contents/ui/main.qml:78
+#: contents/ui/main.qml:70
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "Конфигуриране на клипборда…"

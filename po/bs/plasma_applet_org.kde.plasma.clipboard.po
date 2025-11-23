@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bosnianuniversetranslation\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-23 00:44+0000\n"
 "PO-Revision-Date: 2015-02-15 12:28+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -30,13 +30,13 @@ msgstr "Zadrži sadržaj klipborda"
 msgid "Clipboard is empty"
 msgstr "Klipbord je prazan"
 
-#: contents/ui/main.qml:66
+#: contents/ui/main.qml:61
 #, fuzzy, kde-format
 #| msgid "Clear history"
 msgid "Clear History"
 msgstr "Očisti historiju"
 
-#: contents/ui/main.qml:78
+#: contents/ui/main.qml:70
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr ""

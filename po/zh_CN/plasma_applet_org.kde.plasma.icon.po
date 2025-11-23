@@ -21,12 +21,12 @@ msgstr ""
 #: iconapplet.cpp:98
 #, kde-format
 msgid "Failed to create icon widgets folder '%1'"
-msgstr "无法创建图标挂件文件夹“%1”"
+msgstr "无法创建图标小部件文件夹“%1”"
 
 #: iconapplet.cpp:144
 #, kde-format
 msgid "Failed to copy icon widget desktop file from '%1' to '%2'"
-msgstr "无法从“%1”复制图标挂件 desktop 文件到“%2”"
+msgstr "无法从“%1”复制图标小部件 desktop 文件到“%2”"
 
 #: iconapplet.cpp:355
 #, kde-format

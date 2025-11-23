@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-22 00:44+0000\n"
+"POT-Creation-Date: 2025-11-23 00:44+0000\n"
 "PO-Revision-Date: 2025-11-13 15:03+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -358,27 +358,27 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "Развернуть"
 
-#: declarative/qml/ClipboardMenu.qml:268
+#: declarative/qml/ClipboardMenu.qml:275
 #, kde-format
 msgid "Clear History"
 msgstr "Очистить журнал"
 
-#: declarative/qml/ClipboardMenu.qml:325
+#: declarative/qml/ClipboardMenu.qml:329
 #, kde-format
 msgid "All History"
 msgstr "Весь журнал"
 
-#: declarative/qml/ClipboardMenu.qml:330
+#: declarative/qml/ClipboardMenu.qml:334
 #, kde-format
 msgid "Starred Only"
 msgstr "Только избранное"
 
-#: declarative/qml/ClipboardMenu.qml:437
+#: declarative/qml/ClipboardMenu.qml:441
 #, kde-format
 msgid "No matches"
 msgstr "Совпадений не найдено"
 
-#: declarative/qml/ClipboardMenu.qml:437
+#: declarative/qml/ClipboardMenu.qml:441
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Буфер обмена пуст"

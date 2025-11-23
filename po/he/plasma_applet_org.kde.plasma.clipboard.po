@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.clipboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-23 00:44+0000\n"
 "PO-Revision-Date: 2023-10-04 09:21+0300\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -29,12 +29,12 @@ msgstr "תוכן לוח הגזירים"
 msgid "Clipboard is empty"
 msgstr "לוח גזירים ריק"
 
-#: contents/ui/main.qml:66
+#: contents/ui/main.qml:61
 #, kde-format
 msgid "Clear History"
 msgstr "פינוי ההיסטוריה"
 
-#: contents/ui/main.qml:78
+#: contents/ui/main.qml:70
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "הגדרת לוח גזירים…"
