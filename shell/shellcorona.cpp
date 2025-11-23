@@ -117,39 +117,7 @@ ShellCorona::ShellCorona(QObject *parent)
 
     qDBusRegisterMetaType<QColor>();
 
-    KConfigGroup cg(KSharedConfig::openConfig(u"kdeglobals"_s), u"KDE"_s);
-    const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
-    m_lookAndFeelPackage = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"), packageName);
-
-    // Accent color setting
-    KSharedConfigPtr globalConfig = KSharedConfig::openConfig();
-    KConfigGroup accentColorConfigGroup(globalConfig, u"General"_s);
-    m_accentColorFromWallpaperEnabled = accentColorConfigGroup.readEntry("accentColorFromWallpaper", false);
-
-    m_kdeGlobalsConfigWatcher = KConfigWatcher::create(globalConfig);
-    connect(m_kdeGlobalsConfigWatcher.data(), &KConfigWatcher::configChanged, this, [this](const KConfigGroup &group, const QByteArrayList &names) {
-        if (names.contains(QByteArrayLiteral("accentColorFromWallpaper"))) {
-            const bool result = group.readEntry("accentColorFromWallpaper", false);
-            if (m_accentColorFromWallpaperEnabled != result) {
-                m_accentColorFromWallpaperEnabled = result;
-                Q_EMIT accentColorFromWallpaperEnabledChanged();
-            }
-        }
-        if (names.contains(QByteArrayLiteral("LookAndFeelPackage"))) {
-            const QString packageName = group.readEntry("LookAndFeelPackage", QString());
-            KPackage::Package newPack = m_lookAndFeelPackage;
-            newPack.setPath(packageName);
-            if (newPack.isValid()) {
-                m_lookAndFeelPackage.setPath(packageName);
-            }
-        }
-    });
-
-    connect(this, &Corona::containmentAdded, this, [this](Plasma::Containment *cont) {
-        if (cont->containmentType() == Plasma::Containment::Panel || cont->containmentType() == Plasma::Containment::CustomPanel) {
-            connect(cont, &QObject::destroyed, this, &ShellCorona::panelContainmentDestroyed);
-        }
-    });
+    setupLookAndFeel();
 }
 
 void ShellCorona::init()
@@ -1811,6 +1779,37 @@ void ShellCorona::setDashboardShown(bool show)
 void ShellCorona::toggleDashboard()
 {
     setDashboardShown(!KWindowSystem::showingDesktop());
+}
+
+void ShellCorona::setupLookAndFeel()
+{
+    KSharedConfigPtr globalConfig = KSharedConfig::openConfig();
+    KConfigGroup cg(globalConfig, u"KDE"_s);
+    const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
+    m_lookAndFeelPackage = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"), packageName);
+
+    // Accent color setting
+    KConfigGroup accentColorConfigGroup(globalConfig, u"General"_s);
+    m_accentColorFromWallpaperEnabled = accentColorConfigGroup.readEntry("accentColorFromWallpaper", false);
+
+    m_kdeGlobalsConfigWatcher = KConfigWatcher::create(globalConfig);
+    connect(m_kdeGlobalsConfigWatcher.data(), &KConfigWatcher::configChanged, this, [this](const KConfigGroup &group, const QByteArrayList &names) {
+        if (names.contains(QByteArrayLiteral("accentColorFromWallpaper"))) {
+            const bool result = group.readEntry("accentColorFromWallpaper", false);
+            if (m_accentColorFromWallpaperEnabled != result) {
+                m_accentColorFromWallpaperEnabled = result;
+                Q_EMIT accentColorFromWallpaperEnabledChanged();
+            }
+        }
+        if (names.contains(QByteArrayLiteral("LookAndFeelPackage"))) {
+            const QString packageName = group.readEntry("LookAndFeelPackage", QString());
+            KPackage::Package newPack = m_lookAndFeelPackage;
+            newPack.setPath(packageName);
+            if (newPack.isValid()) {
+                m_lookAndFeelPackage.setPath(packageName);
+            }
+        }
+    });
 }
 
 void ShellCorona::handleColorRequestedFromDBus(const QDBusMessage &msg)

@@ -6,7 +6,6 @@
 */
 
 #include "statusnotifieritemsource.h"
-#include "statusnotifieritemservice.h"
 #include "systemtraytypes.h"
 
 #include "debug.h"
@@ -197,11 +196,6 @@ QString StatusNotifierItemSource::windowId() const
     return m_windowId;
 }
 
-Plasma5Support::Service *StatusNotifierItemSource::createService()
-{
-    return new StatusNotifierItemService(this);
-}
-
 void StatusNotifierItemSource::syncStatus(const QString &status)
 {
     m_status = status;
@@ -385,7 +379,7 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
                     m_menuImporter = std::make_unique<PlasmaDBusMenuImporter>(m_statusNotifierItemInterface->service(), menuObjectPath, iconLoader(), this);
                     connect(m_menuImporter.get(), &PlasmaDBusMenuImporter::menuUpdated, this, [this](QMenu *menu) {
                         if (menu == m_menuImporter->menu()) {
-                            contextMenuReady();
+                            Q_EMIT contextMenuReady(m_menuImporter->menu());
                         }
                     });
                 }
@@ -408,11 +402,6 @@ void StatusNotifierItemSource::reloadIcon()
     }
 
     Q_EMIT dataUpdated();
-}
-
-void StatusNotifierItemSource::contextMenuReady()
-{
-    Q_EMIT contextMenuReady(m_menuImporter->menu());
 }
 
 QPixmap StatusNotifierItemSource::KDbusImageStructToPixmap(const KDbusImageStruct &image) const

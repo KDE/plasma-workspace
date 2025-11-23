@@ -106,8 +106,8 @@ msgid ""
 "notifications. Make sure that it is enabled either in your System Tray or as "
 "a standalone widget."
 msgstr ""
-"无法找到“通知”挂件，显示通知必须使用该挂件。请确保已在系统托盘中或者作为独立"
-"窗口挂件启用了该挂件。"
+"无法找到“通知”小部件，显示通知必须使用该小部件。请确保已在系统托盘中或者作为"
+"独立窗口小部件启用了该小部件。"
 
 #: ui/main.qml:107
 #, kde-format

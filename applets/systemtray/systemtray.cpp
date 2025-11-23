@@ -12,6 +12,8 @@
 
 #include "plasmoidregistry.h"
 #include "sortedsystemtraymodel.h"
+#include "statusnotifieritemhost.h"
+#include "statusnotifieritemsource.h"
 #include "systemtraymodel.h"
 #include "systemtraysettings.h"
 
@@ -29,11 +31,11 @@
 #include <Plasma/Applet>
 #include <Plasma/Corona>
 #include <Plasma/PluginLoader>
-#include <Plasma5Support/ServiceJob>
 
 #include <KAcceleratorManager>
 #include <KActionCollection>
 #include <KSharedConfig>
+#include <KWaylandExtras>
 #include <KWindowSystem>
 
 using namespace Qt::StringLiterals;
@@ -250,73 +252,6 @@ void SystemTray::showPlasmoidMenu(QQuickItem *appletInterface, int x, int y)
     desktopMenu->popup(pos.toPoint());
 }
 
-void SystemTray::showStatusNotifierContextMenu(KJob *job, QQuickItem *statusNotifierIcon)
-{
-    if (QCoreApplication::closingDown() || !statusNotifierIcon) {
-        // apparently an edge case can be triggered due to the async nature of all this
-        // see: https://bugs.kde.org/show_bug.cgi?id=251977
-        return;
-    }
-
-    auto *sjob = qobject_cast<Plasma5Support::ServiceJob *>(job);
-    if (!sjob) {
-        return;
-    }
-
-    auto *menu = qobject_cast<QMenu *>(sjob->result().value<QObject *>());
-
-    if (menu && !menu->isEmpty()) {
-        menu->adjustSize();
-        const auto parameters = sjob->parameters();
-        int x = parameters[QStringLiteral("x")].toInt();
-        int y = parameters[QStringLiteral("y")].toInt();
-
-        // try tofind the icon screen coordinates, and adjust the position as a poor
-        // man's popupPosition
-
-        QRect screenItemRect(statusNotifierIcon->mapToScene(QPointF(0, 0)).toPoint(), QSize(statusNotifierIcon->width(), statusNotifierIcon->height()));
-
-        if (statusNotifierIcon->window()) {
-            screenItemRect.moveTopLeft(statusNotifierIcon->window()->mapToGlobal(screenItemRect.topLeft()));
-        }
-
-        switch (location()) {
-        case Plasma::Types::LeftEdge:
-            x = screenItemRect.right();
-            y = screenItemRect.top();
-            break;
-        case Plasma::Types::RightEdge:
-            x = screenItemRect.left() - menu->width();
-            y = screenItemRect.top();
-            break;
-        case Plasma::Types::TopEdge:
-            x = screenItemRect.left();
-            y = screenItemRect.bottom();
-            break;
-        case Plasma::Types::BottomEdge:
-            x = screenItemRect.left();
-            y = screenItemRect.top() - menu->height();
-            break;
-        default:
-            x = screenItemRect.left();
-            if (screenItemRect.top() - menu->height() >= statusNotifierIcon->window()->screen()->geometry().top()) {
-                y = screenItemRect.top() - menu->height();
-            } else {
-                y = screenItemRect.bottom();
-            }
-        }
-
-        KAcceleratorManager::manage(menu);
-        menu->winId();
-        menu->windowHandle()->setTransientParent(statusNotifierIcon->window());
-        menu->popup(QPoint(x, y));
-        // Workaround for QTBUG-59044
-        if (auto item = statusNotifierIcon->window()->mouseGrabberItem()) {
-            item->ungrabMouse();
-        }
-    }
-}
-
 bool SystemTray::requestBackFromActiveApplet(QQuickItem *fullRepresentationItem) const
 {
     if (!fullRepresentationItem) {
@@ -524,6 +459,133 @@ void SystemTray::stackItemAfter(QQuickItem *newItem, QQuickItem *afterItem)
         return;
     }
     newItem->stackAfter(afterItem);
+}
+
+void SystemTray::activate(const QString &service, QPoint pos, QQuickItem *statusNotifierIcon)
+{
+    const auto source = StatusNotifierItemHost::self()->itemForService(service);
+
+    connect(
+        source,
+        &StatusNotifierItemSource::activateResult,
+        this,
+        [this, service, pos, statusNotifierIcon](bool res) {
+            if (!res) {
+                // On error try to invoke the context menu.
+                // Workaround primarily for apps using libappindicator.
+                openContextMenu(service, pos, statusNotifierIcon);
+            }
+        },
+        Qt::SingleShotConnection);
+
+    QWindow *window = nullptr;
+    if (KWindowSystem::isPlatformX11()) {
+        source->activate(pos.x(), pos.y());
+        return;
+    }
+
+    auto tokenFuture = KWaylandExtras::xdgActivationToken(window, {});
+    tokenFuture.then(this, [source, service, pos](const QString &token) {
+        source->provideXdgActivationToken(token);
+        source->activate(pos.x(), pos.y());
+    });
+}
+
+void SystemTray::secondaryActivate(const QString &service, QPoint pos)
+{
+    const auto source = StatusNotifierItemHost::self()->itemForService(service);
+
+    QWindow *window = nullptr;
+    if (KWindowSystem::isPlatformX11()) {
+        source->secondaryActivate(pos.x(), pos.y());
+        return;
+    }
+
+    auto tokenFuture = KWaylandExtras::xdgActivationToken(window, {});
+    tokenFuture.then(this, [source, pos](const QString &token) {
+        source->provideXdgActivationToken(token);
+        source->secondaryActivate(pos.x(), pos.y());
+    });
+}
+
+void SystemTray::openContextMenu(const QString &service, QPoint pos, QQuickItem *statusNotifierIcon)
+{
+    const auto source = StatusNotifierItemHost::self()->itemForService(service);
+
+    connect(
+        source,
+        &StatusNotifierItemSource::contextMenuReady,
+        this,
+        [this, statusNotifierIcon, pos](QMenu *menu) {
+            if (menu && !menu->isEmpty()) {
+                menu->adjustSize();
+                int x = pos.x();
+                int y = pos.y();
+
+                // try tofind the icon screen coordinates, and adjust the position as a poor
+                // man's popupPosition
+
+                QRect screenItemRect(statusNotifierIcon->mapToScene(QPointF(0, 0)).toPoint(), QSize(statusNotifierIcon->width(), statusNotifierIcon->height()));
+
+                if (statusNotifierIcon->window()) {
+                    screenItemRect.moveTopLeft(statusNotifierIcon->window()->mapToGlobal(screenItemRect.topLeft()));
+                }
+
+                switch (location()) {
+                case Plasma::Types::LeftEdge:
+                    x = screenItemRect.right();
+                    y = screenItemRect.top();
+                    break;
+                case Plasma::Types::RightEdge:
+                    x = screenItemRect.left() - menu->width();
+                    y = screenItemRect.top();
+                    break;
+                case Plasma::Types::TopEdge:
+                    x = screenItemRect.left();
+                    y = screenItemRect.bottom();
+                    break;
+                case Plasma::Types::BottomEdge:
+                    x = screenItemRect.left();
+                    y = screenItemRect.top() - menu->height();
+                    break;
+                default:
+                    x = screenItemRect.left();
+                    if (screenItemRect.top() - menu->height() >= statusNotifierIcon->window()->screen()->geometry().top()) {
+                        y = screenItemRect.top() - menu->height();
+                    } else {
+                        y = screenItemRect.bottom();
+                    }
+                }
+
+                KAcceleratorManager::manage(menu);
+                menu->winId();
+                menu->windowHandle()->setTransientParent(statusNotifierIcon->window());
+                menu->popup(QPoint(x, y));
+                // Workaround for QTBUG-59044
+                if (auto item = statusNotifierIcon->window()->mouseGrabberItem()) {
+                    item->ungrabMouse();
+                }
+            }
+        },
+        Qt::SingleShotConnection);
+
+    QWindow *window = nullptr;
+    if (KWindowSystem::isPlatformX11()) {
+        source->contextMenu(pos.x(), pos.y());
+        return;
+    }
+
+    auto tokenFuture = KWaylandExtras::xdgActivationToken(window, {});
+    tokenFuture.then(this, [source, pos](const QString &token) {
+        source->provideXdgActivationToken(token);
+        source->contextMenu(pos.x(), pos.y());
+    });
+}
+
+void SystemTray::scroll(const QString &service, int delta, const QString &direction)
+{
+    const auto source = StatusNotifierItemHost::self()->itemForService(service);
+    source->scroll(delta, direction);
 }
 
 K_PLUGIN_CLASS(SystemTray)

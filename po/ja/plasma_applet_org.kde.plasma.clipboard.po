@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.clipboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-23 00:44+0000\n"
 "PO-Revision-Date: 2022-07-06 12:51+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
@@ -28,12 +28,12 @@ msgstr "クリップボードの内容"
 msgid "Clipboard is empty"
 msgstr "クリップボードは空です"
 
-#: contents/ui/main.qml:66
+#: contents/ui/main.qml:61
 #, kde-format
 msgid "Clear History"
 msgstr "履歴を消去"
 
-#: contents/ui/main.qml:78
+#: contents/ui/main.qml:70
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "クリップボードを設定…"

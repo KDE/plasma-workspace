@@ -7,7 +7,6 @@
 
 #pragma once
 
-#include <Plasma5Support/DataContainer>
 #include <QDBusPendingCallWatcher>
 #include <QMenu>
 #include <QString>
@@ -24,7 +23,6 @@ class StatusNotifierItemSource : public QObject
 public:
     StatusNotifierItemSource(const QString &service, QObject *parent);
     ~StatusNotifierItemSource() override;
-    Plasma5Support::Service *createService();
 
     void activate(int x, int y);
     void secondaryActivate(int x, int y);
@@ -54,7 +52,6 @@ Q_SIGNALS:
     void dataUpdated();
 
 private Q_SLOTS:
-    void contextMenuReady();
     void refreshMenu();
     void refresh();
     void performRefresh();

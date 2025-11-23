@@ -102,23 +102,19 @@ msgstr ""
 "以考虑禁用剪贴板历史记录，或设置为仅记忆一条内容。"
 
 #: package/contents/ui/ConfigGeneral.qml:199
-#, fuzzy, kde-format
-#| msgid "Scale with Panel height"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel height"
 msgstr "按面板高度缩放"
 
 #: package/contents/ui/ConfigGeneral.qml:200
-#, fuzzy, kde-format
-#| msgid "Scale with Panel width"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel width"
 msgstr "按面板宽度缩放"
 
 #: package/contents/ui/ConfigGeneral.qml:202
-#, fuzzy, kde-format
-#| msgctxt "The arrangement of system tray icons in the Panel"
-#| msgid "Panel icon size:"
+#, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon size:"
 msgstr "面板图标大小："
@@ -163,14 +159,13 @@ msgstr "在触摸模式下自动设置为大间距"
 #, kde-format
 msgctxt "@title:column"
 msgid "Entries"
-msgstr ""
+msgstr "项目"
 
 #: package/contents/ui/ConfigGeneral.qml:310
-#, fuzzy, kde-format
-#| msgid "Always shown"
+#, kde-format
 msgctxt "@option:check, This is referring to system tray entries"
 msgid "Always show all"
-msgstr "总是显示"
+msgstr "始终显示全部"
 
 #: package/contents/ui/ExpandedRepresentation.qml:59
 #, kde-format
@@ -219,16 +214,3 @@ msgstr "在 %2 列中显示 %1 个项目的网格"
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
 msgstr "AILlmyjgGJP"
-
-#~ msgid "Small"
-#~ msgstr "小"
-
-#~ msgctxt "Name of the system tray entry"
-#~ msgid "Entry"
-#~ msgstr "项目"
-
-#~ msgid "Visibility"
-#~ msgstr "可见性"
-
-#~ msgid "Keyboard Shortcut"
-#~ msgstr "键盘快捷键"

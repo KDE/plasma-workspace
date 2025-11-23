@@ -199,7 +199,7 @@ void RunnerModel::startQuery()
         clear();
         QTimer::singleShot(0, this, &RunnerModel::queryFinished);
     } else {
-        m_queryingModels = m_models.size();
+        m_queryingModels += m_models.size();
         for (KRunner::ResultsModel *model : std::as_const(m_models)) {
             model->setQueryString(m_query);
         }

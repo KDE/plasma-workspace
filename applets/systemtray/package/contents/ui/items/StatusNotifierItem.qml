@@ -43,29 +43,18 @@ AbstractItem {
 
     onActivated: pos => {
         if (model.ItemIsMenu) {
-            openContextMenu(pos);
+            Plasmoid.openContextMenu(model.DataEngineSource, pos, taskIcon);
             return;
         }
 
-        const service = model.Service;
-        const operation = service.operationDescription("Activate");
-        operation.x = pos.x; //mouseX
-        operation.y = pos.y; //mouseY
-        const job = service.startOperationCall(operation);
-        job.finished.connect(() => {
-            if (!job.result) {
-                // On error try to invoke the context menu.
-                // Workaround primarily for apps using libappindicator.
-                openContextMenu(pos);
-            }
-        })
+        Plasmoid.activate(model.DataEngineSource, pos, taskIcon)
     }
 
     onContextMenu: mouse => {
         if (mouse === null) {
-            openContextMenu(Plasmoid.popupPosition(taskIcon, taskIcon.width / 2, taskIcon.height / 2));
+            Plasmoid.openContextMenu(model.DataEngineSource, Plasmoid.popupPosition(taskIcon, taskIcon.width / 2, taskIcon.height / 2), taskIcon);
         } else {
-            openContextMenu(Plasmoid.popupPosition(taskIcon, mouse.x, mouse.y));
+            Plasmoid.openContextMenu(model.DataEngineSource, Plasmoid.popupPosition(taskIcon, mouse.x, mouse.y), taskIcon);
         }
     }
 
@@ -77,45 +66,21 @@ AbstractItem {
             taskIcon.activated(pos)
             break;
         case Qt.RightButton:
-            openContextMenu(pos);
+            Plasmoid.openContextMenu(model.DataEngineSource, pos, taskIcon);
             break;
         case Qt.MiddleButton:
-            const service = model.Service;
-            const operation = service.operationDescription("SecondaryActivate");
-            operation.x = pos.x;
-            operation.y = pos.y;
-            service.startOperationCall(operation);
+            Plasmoid.secondaryActivate(model.DataEngineSource, pos)
             break;
         }
-    }
-
-    function openContextMenu(pos = Qt.point(width/2, height/2)) {
-        const service = model.Service;
-        const operation = service.operationDescription("ContextMenu");
-        operation.x = pos.x;
-        operation.y = pos.y;
-
-        const job = service.startOperationCall(operation);
-        job.finished.connect(() => {
-            Plasmoid.showStatusNotifierContextMenu(job, taskIcon);
-        });
     }
 
     onWheel: wheel => {
         //don't send activateVertScroll with a delta of 0, some clients seem to break (kmix)
         if (wheel.angleDelta.y !== 0) {
-            const service = model.Service;
-            const operation = service.operationDescription("Scroll");
-            operation.delta = wheel.angleDelta.y;
-            operation.direction = "Vertical";
-            service.startOperationCall(operation);
+            Plasmoid.scroll(model.DataEngineSource, wheel.angleDelta.y, "Vertical")
         }
         if (wheel.angleDelta.x !== 0) {
-            const service = model.Service;
-            const operation = service.operationDescription("Scroll");
-            operation.delta = wheel.angleDelta.x;
-            operation.direction = "Horizontal";
-            service.startOperationCall(operation);
+            Plasmoid.scroll(model.DataEngineSource, wheel.angleDelta.x, "Horizontal")
         }
     }
 }

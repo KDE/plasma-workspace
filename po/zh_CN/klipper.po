@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-22 00:44+0000\n"
+"POT-Creation-Date: 2025-11-23 00:44+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -318,27 +318,27 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "展开"
 
-#: declarative/qml/ClipboardMenu.qml:268
+#: declarative/qml/ClipboardMenu.qml:275
 #, kde-format
 msgid "Clear History"
 msgstr "清除历史记录"
 
-#: declarative/qml/ClipboardMenu.qml:325
+#: declarative/qml/ClipboardMenu.qml:329
 #, kde-format
 msgid "All History"
 msgstr "所有历史记录"
 
-#: declarative/qml/ClipboardMenu.qml:330
+#: declarative/qml/ClipboardMenu.qml:334
 #, kde-format
 msgid "Starred Only"
 msgstr "仅星标项目"
 
-#: declarative/qml/ClipboardMenu.qml:437
+#: declarative/qml/ClipboardMenu.qml:441
 #, kde-format
 msgid "No matches"
 msgstr "没有匹配的内容"
 
-#: declarative/qml/ClipboardMenu.qml:437
+#: declarative/qml/ClipboardMenu.qml:441
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "剪贴板为空"
@@ -894,52 +894,3 @@ msgstr "剪贴板弹窗"
 #, kde-format
 msgid "&Cancel"
 msgstr "取消(&C)"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "KDE 中国, Guo Yunhe, Tyson Tan"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "kde-china@kde.org, i@guoyunhe.me, tds00@qq.com"
-
-#~ msgid "Mobile Barcode"
-#~ msgstr "移动条形码"
-
-#~ msgid "Exclude Windows..."
-#~ msgstr "排除窗口..."
-
-#~ msgid "Exclude Windows"
-#~ msgstr "排除窗口"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "The action popup will not be shown automatically for these windows, even "
-#~ "if it is enabled. This is because, for example, a web browser may "
-#~ "highlight a URL in the address bar while typing, so the menu would show "
-#~ "for every keystroke.<nl/><nl/>If the action menu appears unexpectedly "
-#~ "when using a particular application, then add it to this list. <link>How "
-#~ "to find the name to enter</link>."
-#~ msgstr ""
-#~ "即使在已经启用操作弹出菜单的情况下，这些窗口也不会显示该菜单。例如在网页浏"
-#~ "览器时，地址栏可能会在输入 URL 的过程中高亮显示地址，从而导致每次按键输入"
-#~ "时都要弹出一次菜单。<nl/><nl/>如果某些应用程序中发生操作菜单意外弹出的情"
-#~ "况，请将该程序添加到此列表。<link>点击查看如何确定应用程序的正确名称</"
-#~ "link>。"
-
-#~ msgctxt "@info:tooltip"
-#~ msgid ""
-#~ "The name that needs to be entered here is the WM_CLASS name of the window "
-#~ "to be excluded. To find the WM_CLASS name for a window, in another "
-#~ "terminal window enter the command:<nl/><nl/>&nbsp;&nbsp;<icode>xprop | "
-#~ "grep WM_CLASS</icode><nl/><nl/>and click on the window that you want to "
-#~ "exclude. The first name that it displays after the equal sign is the one "
-#~ "that you need to enter."
-#~ msgstr ""
-#~ "此处需要输入要排除窗口的 WM_CLASS 名称。要找到窗口的 WM_CLASS 名称，请新开"
-#~ "一个命令行终端窗口，输入以下命令：<nl/><nl/>&nbsp;&nbsp;<icode>xprop | "
-#~ "grep WM_CLASS</icode><nl/><nl/>然后点击需要排除的窗口。在等号后面显示的第"
-#~ "一个名称就是需要输入的名称。"
-
-#~ msgid "No actions for WM_CLASS"
-#~ msgstr "没有对应 WM_CLASS 的操作"

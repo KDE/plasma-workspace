@@ -255,8 +255,8 @@ msgid ""
 "Applying a Desktop layout will delete the current set of desktops, panels, "
 "docks, and widgets, replacing them with what the theme specifies."
 msgstr ""
-"应用桌面布局将删除当前的桌面、面板、停靠栏和挂件，并将它们替换为主题指定的状"
-"态。"
+"应用桌面布局将删除当前的桌面、面板、停靠栏和小部件，并将它们替换为主题指定的"
+"状态。"
 
 #: ui/MoreOptions.qml:67
 #, kde-format
