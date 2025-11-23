@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-22 02:34+0000\n"
+"POT-Creation-Date: 2025-11-23 02:38+0000\n"
 "PO-Revision-Date: 2024-12-28 17:41+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -388,28 +388,28 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "Etendi"
 
-#: declarative/qml/ClipboardMenu.qml:269
+#: declarative/qml/ClipboardMenu.qml:276
 #, kde-format
 msgid "Clear History"
 msgstr "Viŝi Historion"
 
-#: declarative/qml/ClipboardMenu.qml:324
+#: declarative/qml/ClipboardMenu.qml:328
 #, fuzzy, kde-format
 #| msgid "Clear History"
 msgid "All History"
 msgstr "Viŝi Historion"
 
-#: declarative/qml/ClipboardMenu.qml:329
+#: declarative/qml/ClipboardMenu.qml:333
 #, kde-format
 msgid "Starred Only"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:436
+#: declarative/qml/ClipboardMenu.qml:440
 #, kde-format
 msgid "No matches"
 msgstr "Neniuj kongruaĵoj"
 
-#: declarative/qml/ClipboardMenu.qml:436
+#: declarative/qml/ClipboardMenu.qml:440
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Poŝo estas malplena"

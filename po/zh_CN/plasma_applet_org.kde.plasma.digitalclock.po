@@ -358,8 +358,8 @@ msgid ""
 "Add more time zones to display all of them in the applet's pop-up, or use "
 "one of them for the clock itself"
 msgstr ""
-"添加多个时区后，时钟挂件将在光标悬停时和弹出面板中显示全部时区的时间。您还可"
-"以选择钟面显示的时区。"
+"添加多个时区后，时钟小部件将在光标悬停时和弹出面板中显示全部时区的时间。您还"
+"可以选择钟面显示的时区。"
 
 #: configTimeZones.qml:235
 #, kde-format
@@ -374,7 +374,7 @@ msgstr ""
 #: configTimeZones.qml:245
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
-msgstr "鼠标滚轮在时钟挂件上滚动时切换显示的时区"
+msgstr "鼠标滚轮在时钟小部件上滚动时切换显示的时区"
 
 #: configTimeZones.qml:254
 #, kde-format

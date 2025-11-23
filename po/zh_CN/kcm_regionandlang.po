@@ -38,7 +38,7 @@ msgstr "米制 (SI)"
 #: binarydialectmodel.cpp:75
 #, kde-format
 msgid "Binary -  Kibibytes (KiB), Mebibytes (MiB), Gibibytes (GiB)"
-msgstr ""
+msgstr "二进制 -  Kibibytes (KiB), Mebibytes (MiB), Gibibytes (GiB)"
 
 #: binarydialectmodel.cpp:77
 #, kde-format
@@ -48,7 +48,7 @@ msgstr "二进制 - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
 #: binarydialectmodel.cpp:79
 #, kde-format
 msgid "Decimal - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
-msgstr ""
+msgstr "十进制 - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
 
 #: exampleutility.cpp:31
 #, kde-format

@@ -187,8 +187,8 @@ msgid ""
 "compatible with Plasma %1. Please contact the widget's author for an updated "
 "version."
 msgstr ""
-"此挂件是为未知的旧版 Plasma 编写的，它与 Plasma %1 不兼容。请联系挂件的作者获"
-"取新版挂件。"
+"此小部件是为未知的旧版 Plasma 编写的，它与 Plasma %1 不兼容。请联系小部件的作"
+"者获取新版小部件。"
 
 #: shellprivate/plasmaappletitemmodel.cpp:202
 #, kde-format
@@ -196,8 +196,8 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please contact the widget's author for an updated version."
 msgstr ""
-"此挂件是为 Plasma %1 编写的，它与 Plasma %2 不兼容。请联系挂件的作者获取新版"
-"挂件。"
+"此小部件是为 Plasma %1 编写的，它与 Plasma %2 不兼容。请联系小部件的作者获取"
+"新版小部件。"
 
 #: shellprivate/plasmaappletitemmodel.cpp:206
 #, kde-format
@@ -205,8 +205,8 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please update Plasma in order to use the widget."
 msgstr ""
-"此挂件是为 Plasma %1 编写的，它与 Plasma %2 不兼容。请升级 Plasma 桌面环境以"
-"使用此挂件。"
+"此小部件是为 Plasma %1 编写的，它与 Plasma %2 不兼容。请升级 Plasma 桌面环境"
+"以使用此小部件。"
 
 #: shellprivate/plasmaappletitemmodel.cpp:211
 #, kde-format
@@ -214,8 +214,8 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "
 "version of Plasma. Please update Plasma in order to use the widget."
 msgstr ""
-"此挂件是为 Plasma %1 编写的，它与最新版本的 Plasma 不兼容。请更换 Plasma 桌面"
-"环境以使用此挂件。"
+"此小部件是为 Plasma %1 编写的，它与最新版本的 Plasma 不兼容。请更换 Plasma 桌"
+"面环境以使用此小部件。"
 
 #: shellprivate/widgetexplorer.cpp:109
 msgctxt "applet category"
@@ -335,7 +335,7 @@ msgstr "任务管理"
 #: shellprivate/widgetexplorer.cpp:147
 #, kde-format
 msgid "All Widgets"
-msgstr "所有挂件"
+msgstr "所有小部件"
 
 #: shellprivate/widgetexplorer.cpp:151
 #, kde-format
@@ -367,18 +367,18 @@ msgstr "分类："
 #: shellprivate/widgetexplorer.cpp:235
 #, kde-format
 msgid "Download New Plasma Widgets"
-msgstr "下载新 Plasma 挂件"
+msgstr "下载新 Plasma 小部件"
 
 #: shellprivate/widgetexplorer.cpp:244
 #, kde-format
 msgid "Install Widget From Local File…"
-msgstr "从本地文件安装挂件…"
+msgstr "从本地文件安装小部件…"
 
 #: shellprivate/widgetexplorer.cpp:483
 #, kde-format
 msgctxt "@title:window"
 msgid "Get New Widgets"
-msgstr "获取新挂件"
+msgstr "获取新小部件"
 
 #: shellprivate/widgetexplorer.cpp:502
 #, kde-format

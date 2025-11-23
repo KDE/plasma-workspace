@@ -40,7 +40,7 @@ msgstr "固定到任务管理器"
 #: actionlist.cpp:162
 #, kde-format
 msgid "Add to Panel (Widget)"
-msgstr "添加到面板 (挂件)"
+msgstr "添加到面板 (小部件)"
 
 #: actionlist.cpp:313 rootmodel.cpp:540
 #, kde-format
