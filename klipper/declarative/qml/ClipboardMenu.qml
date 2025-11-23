@@ -41,7 +41,6 @@ PlasmaComponents3.ScrollView {
     readonly property bool editing: T.StackView.view.currentItem instanceof EditPage
 
     property alias view: menuListView
-    property alias filter: filter
 
     background: null
     contentWidth: availableWidth - (contentItem as ListView).leftMargin - (contentItem as ListView).rightMargin
@@ -206,6 +205,14 @@ PlasmaComponents3.ScrollView {
         }
     }
 
+    function clearHistory(): void {
+        clipboardMenu.model.clearHistory();
+        if (!clipboardMenu.T.StackView.visible) {
+            clipboardMenu.T.StackView.view.popToIndex(0);
+        }
+        filter.clear();
+    }
+
     // Hidden PlasmoidHeading for metrics purposes
     PlasmaExtras.PlasmoidHeading {
         id: metricsPlasmoidHeading
@@ -271,10 +278,7 @@ PlasmaComponents3.ScrollView {
                     KeyNavigation.left: filter
                     KeyNavigation.down: tabBar.visible ? tabBar : menuListView
 
-                    onClicked: {
-                        clipboardMenu.model.clearHistory();
-                        filter.clear();
-                    }
+                    onClicked: clipboardMenu.clearHistory()
 
                     PlasmaComponents3.ToolTip {
                         text: clearHistoryButton.text
