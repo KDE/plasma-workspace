@@ -70,6 +70,7 @@
 
 #include <algorithm>
 #include <chrono>
+#include <ranges>
 
 #ifndef NDEBUG
 #define CHECK_SCREEN_INVARIANTS screenInvariants();
@@ -129,13 +130,6 @@ void ShellCorona::init()
 #endif
 
     connect(this, &Plasma::Corona::availableScreenRectChanged, this, &Plasma::Corona::availableScreenRegionChanged);
-    connect(this, &Plasma::Corona::editModeChanged, this, [this]() {
-        QMapIterator<const Plasma::Containment *, PanelView *> i(m_panelViews);
-        while (i.hasNext()) {
-            i.next();
-            Q_EMIT availableScreenRectChanged(i.key()->screen());
-        }
-    });
 
     m_appConfigSyncTimer.setSingleShot(true);
     m_appConfigSyncTimer.setInterval(s_configSyncDelay);
@@ -147,8 +141,6 @@ void ShellCorona::init()
     m_waitingPanelsTimer.setSingleShot(true);
     m_waitingPanelsTimer.setInterval(250ms);
     connect(&m_waitingPanelsTimer, &QTimer::timeout, this, &ShellCorona::createWaitingPanels);
-
-    connect(this, &ShellCorona::editModeChanged, this, &ShellCorona::availableScreenRegionChanged);
 
 #ifndef NDEBUG
     m_invariantsTimer.setSingleShot(true);
@@ -256,7 +248,10 @@ void ShellCorona::init()
             setEditMode(false);
         }
     });
-    connect(this, &ShellCorona::editModeChanged, this, [this](bool edit) {
+    connect(this, &Plasma::Corona::editModeChanged, this, [this](bool edit) {
+        for (auto it = m_desktopViewForScreen.keyBegin(); it != m_desktopViewForScreen.keyEnd(); it = std::next(it)) {
+            Q_EMIT availableScreenRectChanged(*it);
+        }
         setDashboardShown(edit);
     });
     connect(KWindowSystem::self(), &KWindowSystem::showingDesktopChanged, [this](bool showingDesktop) {
