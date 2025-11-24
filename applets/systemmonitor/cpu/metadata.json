@@ -102,7 +102,7 @@
         "Description[ta]": "மொத்த CPU பயன்பாட்டைக் காட்டும் பிளாஸ்மாய்ட்",
         "Description[tr]": "Toplam CPU kullanımını gösteren sistem monitörü araç takımı",
         "Description[uk]": "Віджет нагляду за системою, який показує загальне використання процесора",
-        "Description[zh_CN]": "显示总 CPU 占用率的系统监视挂件",
+        "Description[zh_CN]": "显示总 CPU 占用率的系统监视小部件",
         "Description[zh_TW]": "顯示總 CPU 用量的系統監控元件",
         "EnabledByDefault": true,
         "FormFactors": [

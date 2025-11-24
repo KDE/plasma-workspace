@@ -102,7 +102,7 @@
         "Description[ta]": "பதிவிறக்க மற்றும் பதிவேற்ற விகிதத்தைக் காட்டும் பிளாஸ்மாய்ட்",
         "Description[tr]": "Veri indirme ve karşıya yükleme hızını gösteren sistem monitörü araç takımı",
         "Description[uk]": "Віджет нагляду за системою, який показує швидкість отримання та вивантаження даних",
-        "Description[zh_CN]": "显示下载和上传速率的系统监视挂件",
+        "Description[zh_CN]": "显示下载和上传速率的系统监视小部件",
         "Description[zh_TW]": "顯示下載與上傳之資料速率的系統監控元件",
         "EnabledByDefault": true,
         "FormFactors": [
