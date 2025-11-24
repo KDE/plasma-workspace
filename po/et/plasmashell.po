@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-24 00:45+0000\n"
 "PO-Revision-Date: 2020-10-08 10:40+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -370,58 +370,58 @@ msgstr ""
 msgid "Disconnected Screen %1"
 msgstr ""
 
-#: shellcorona.cpp:214 shellcorona.cpp:216
+#: shellcorona.cpp:182 shellcorona.cpp:184
 #, kde-format
 msgid "Show Desktop"
 msgstr "Näita töölauda"
 
-#: shellcorona.cpp:216
+#: shellcorona.cpp:184
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Peida töölaud"
 
-#: shellcorona.cpp:231
+#: shellcorona.cpp:199
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr ""
 
-#: shellcorona.cpp:239
+#: shellcorona.cpp:207
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Näita tegevuste lülitajat"
 
-#: shellcorona.cpp:248
+#: shellcorona.cpp:216
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Lülitu eelmisele tegevusele"
 
-#: shellcorona.cpp:256
+#: shellcorona.cpp:224
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Lülitu järgmiseele tegevusele"
 
-#: shellcorona.cpp:271
+#: shellcorona.cpp:239
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "Aktiveeri ülesannete halduri kirje %1"
 
-#: shellcorona.cpp:303
+#: shellcorona.cpp:271
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr ""
 
-#: shellcorona.cpp:325
+#: shellcorona.cpp:293
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr ""
 
-#: shellcorona.cpp:2246
+#: shellcorona.cpp:2245
 #, kde-format
 msgid "Add Panel"
 msgstr "Lisa paneel"
 
-#: shellcorona.cpp:2329
+#: shellcorona.cpp:2328
 #, fuzzy, kde-format
 #| msgid "Empty %1"
 msgctxt "Creates an empty containment (%1 is the containment name)"

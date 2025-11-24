@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.systemtray\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-21 00:45+0000\n"
-"PO-Revision-Date: 2025-11-15 15:22+0100\n"
+"PO-Revision-Date: 2025-11-21 17:36+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -107,23 +107,19 @@ msgstr ""
 "cronologia o da ricordare solo un elemento alla volta."
 
 #: package/contents/ui/ConfigGeneral.qml:199
-#, fuzzy, kde-format
-#| msgid "Scale with Panel height"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel height"
 msgstr "Adatta all'altezza del pannello"
 
 #: package/contents/ui/ConfigGeneral.qml:200
-#, fuzzy, kde-format
-#| msgid "Scale with Panel width"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel width"
 msgstr "Adatta alla larghezza del pannello"
 
 #: package/contents/ui/ConfigGeneral.qml:202
-#, fuzzy, kde-format
-#| msgctxt "The arrangement of system tray icons in the Panel"
-#| msgid "Panel icon size:"
+#, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon size:"
 msgstr "Dimensione delle icone del pannello:"
@@ -171,8 +167,7 @@ msgid "Entries"
 msgstr "Voci"
 
 #: package/contents/ui/ConfigGeneral.qml:310
-#, fuzzy, kde-format
-#| msgid "Always show all"
+#, kde-format
 msgctxt "@option:check, This is referring to system tray entries"
 msgid "Always show all"
 msgstr "Mostra sempre tutto"

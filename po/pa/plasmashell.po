@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-24 00:45+0000\n"
 "PO-Revision-Date: 2025-09-15 09:40-0500\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -357,58 +357,58 @@ msgstr "%3 ਉੱਤੇ %1 %2"
 msgid "Disconnected Screen %1"
 msgstr "ਸਕਰੀਨ %1 ਤੋਂ ਡਿਸਕਨੈਕਟ ਹੈ"
 
-#: shellcorona.cpp:214 shellcorona.cpp:216
+#: shellcorona.cpp:182 shellcorona.cpp:184
 #, kde-format
 msgid "Show Desktop"
 msgstr "ਡੈਸਕਟਾਪ ਨੂੰ ਵੇਖਾਓ"
 
-#: shellcorona.cpp:216
+#: shellcorona.cpp:184
 #, kde-format
 msgid "Hide Desktop"
 msgstr "ਡੈਸਕਟਾਪ ਨੂੰ ਲੁਕਾਓ"
 
-#: shellcorona.cpp:231
+#: shellcorona.cpp:199
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr "ਐਪਲੀਕੇਸ਼ਨ ਲਾਂਚਰ ਨੂੰ ਐਕਟੀਵੇਟ ਕਰੋ"
 
-#: shellcorona.cpp:239
+#: shellcorona.cpp:207
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "ਸਰਗਰਮੀ ਸਵਿੱਚਰ ਵੇਖਾਓ"
 
-#: shellcorona.cpp:248
+#: shellcorona.cpp:216
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "ਪਿਛਲੀ ਸਰਗਰਮੀ ਲਈ ਬਦਲੋ"
 
-#: shellcorona.cpp:256
+#: shellcorona.cpp:224
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "ਅਗਲੀ ਸਰਗਰਮੀ ਲਈ ਬਦਲੋ"
 
-#: shellcorona.cpp:271
+#: shellcorona.cpp:239
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "ਟਾਸਕ ਮੈਨੇਜਰ ਐਂਟਰੀ %1 ਸਰਗਰਮ ਕਰੋ"
 
-#: shellcorona.cpp:303
+#: shellcorona.cpp:271
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "…ਡੈਸਕਟਾਪ ਅਤੇ ਪੈਨਲਾਂ ਦਾ ਇੰਤਜ਼ਾਮ"
 
-#: shellcorona.cpp:325
+#: shellcorona.cpp:293
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "ਪੈਨਲਾਂ ਵਿਚਾਲੇ ਕੀਬੋਰਡ ਫ਼ੋਕਸ ਨੂੰ ਬਦਲੋ"
 
-#: shellcorona.cpp:2246
+#: shellcorona.cpp:2245
 #, kde-format
 msgid "Add Panel"
 msgstr "ਪੈਨਲ ਜੋੜੋ"
 
-#: shellcorona.cpp:2329
+#: shellcorona.cpp:2328
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
