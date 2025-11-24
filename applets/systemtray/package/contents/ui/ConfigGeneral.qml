@@ -187,6 +187,15 @@ KCMUtils.ScrollViewKCM {
             text: xi18nc("@info:usagetip", "Disabling the clipboard is not recommended, as it will cause copied data to be lost when the application it was copied from is closed.<nl/><nl/>Instead consider configuring the clipboard to disable its history, or only remember one item at a time.") // qmllint disable unqualified
         }
 
+        Kirigami.InlineMessage {
+            id: disablingNotificationsMessage
+
+            visible: iconsPage.changedVisibility.get("org.kde.plasma.notifications") === "disabled"
+            Layout.fillWidth: true
+            type: Kirigami.MessageType.Warning
+            text: xi18nc("@info:usagetip", "Disabling the Notifications widget is not recommended, as notifications sent by apps will no longer be shown.<nl/><nl/>Only do this if you’ve manually added a standalone Notifications widget somewhere else, or are intentionally using a 3rd-party notification manager to handle notifications.") // qmllint disable unqualified
+        }
+
         Kirigami.FormLayout {
             id: formLayout
 
