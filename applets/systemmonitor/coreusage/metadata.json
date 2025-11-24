@@ -102,7 +102,7 @@
         "Description[ta]": "தனிப்பட்ட CPU core-களின் பயன்பாட்டைக் காட்டும் பிளாஸ்மாய்ட்",
         "Description[tr]": "Tekil CPU çekirdeklerini gösteren sistem monitörü araç takımı",
         "Description[uk]": "Віджет нагляду за системою, який показує використання окремих ядер процесора",
-        "Description[zh_CN]": "显示单个 CPU 核心占用率的系统监视挂件",
+        "Description[zh_CN]": "显示单个 CPU 核心占用率的系统监视小部件",
         "Description[zh_TW]": "顯示個別 CPU 核心用量的系統監控元件",
         "EnabledByDefault": true,
         "FormFactors": [

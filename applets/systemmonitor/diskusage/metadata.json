@@ -102,7 +102,7 @@
         "Description[ta]": "ரூட் வகிர்வின் பயன்பாட்டைக் காட்டும் பிளாஸ்மாய்ட்",
         "Description[tr]": "Kök bölüntünün kullanımını gösteren sistem monitörü araç takımı",
         "Description[uk]": "Віджет нагляду за системою, який показує використання кореневого розділу",
-        "Description[zh_CN]": "显示根分区占用率的系统监视挂件",
+        "Description[zh_CN]": "显示根分区占用率的系统监视小部件",
         "Description[zh_TW]": "顯示 root 分割區用量的系統監控元件",
         "EnabledByDefault": true,
         "FormFactors": [
