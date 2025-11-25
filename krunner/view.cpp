@@ -165,35 +165,29 @@ void View::showEvent(QShowEvent *event)
 
 void View::positionOnScreen()
 {
-    const auto screens = QGuiApplication::screens();
-    auto screenIt = screens.cend();
-    if (KWindowSystem::isPlatformWayland() && m_floating) {
-        auto message = QDBusMessage::createMethodCall(u"org.kde.KWin"_s, u"/KWin"_s, u"org.kde.KWin"_s, u"activeOutputName"_s);
-        QDBusReply<QString> reply = QDBusConnection::sessionBus().call(message);
-        if (reply.isValid()) {
-            const QString activeOutputName = reply.value();
-            screenIt = std::ranges::find_if(screens, [&activeOutputName](QScreen *screen) {
-                return screen->name() == activeOutputName;
-            });
-        }
-    } else if (KWindowSystem::isPlatformX11()) {
-        screenIt = std::ranges::find_if(screens, [](QScreen *screen) {
-            return screen->geometry().contains(QCursor::pos(screen));
-        });
-    }
-
-    QScreen *const shownOnScreen = screenIt != screens.cend() ? *screenIt : QGuiApplication::primaryScreen();
-    setScreen(shownOnScreen);
-
     if (KWindowSystem::isPlatformWayland()) {
         auto layerWindow = LayerShellQt::Window::get(this);
         layerWindow->setAnchors(LayerShellQt::Window::AnchorTop);
         layerWindow->setLayer(LayerShellQt::Window::LayerTop);
         layerWindow->setScope(u"krunner"_s);
         layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityOnDemand);
-        layerWindow->setMargins(margins());
-        layerWindow->setScreenConfiguration(m_floating ? LayerShellQt::Window::ScreenFromQWindow : LayerShellQt::Window::ScreenFromCompositor);
+        layerWindow->setScreenConfiguration(LayerShellQt::Window::ScreenFromCompositor);
+        if (m_floating) {
+            layerWindow->setTopMargin(LayerShellQt::Margin::fromFraction(1.0 / 3.0));
+            layerWindow->setExclusiveZone(-1);
+        } else {
+            layerWindow->setTopMargin(LayerShellQt::Margin::fromPixels(0));
+            layerWindow->setExclusiveZone(0);
+        }
     } else if (KWindowSystem::isPlatformX11()) {
+        const auto screens = QGuiApplication::screens();
+        auto screenIt = std::ranges::find_if(screens, [](QScreen *screen) {
+            return screen->geometry().contains(QCursor::pos(screen));
+        });
+
+        QScreen *const shownOnScreen = screenIt != screens.cend() ? *screenIt : QGuiApplication::primaryScreen();
+        setScreen(shownOnScreen);
+
         m_x11Positioner->setAnchors(Qt::TopEdge);
         m_x11Positioner->setMargins(margins());
         if (m_floating) {
