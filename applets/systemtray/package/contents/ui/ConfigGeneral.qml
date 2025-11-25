@@ -40,19 +40,19 @@ KCMUtils.ScrollViewKCM {
     readonly property var comboBoxModel: {
         const autoElement = {
             "value": "auto",
-            "text": i18n("Shown when relevant") // qmllint disable unqualified
+            "text": i18nc("@item:inlistbox Show this System Tray item when relevant", "Show when relevant") // qmllint disable unqualified
         };
         const shownElement = {
             "value": "shown",
-            "text": i18n("Always shown") // qmllint disable unqualified
+            "text": i18nc("@item:inlistbox Always show this System Tray item", "Always show") // qmllint disable unqualified
         };
         const hiddenElement = {
             "value": "hidden",
-            "text": i18n("Always hidden") // qmllint disable unqualified
+            "text": i18nc("@item:inlistbox Show this System Tray item only in the expanded popup", "Show only in popup") // qmllint disable unqualified
         };
         const disabledElement = {
             "value": "disabled",
-            "text": i18n("Disabled") // qmllint disable unqualified
+            "text": i18nc("@item:inlistbox Never show this System Tray item; disable it", "Never show (disabled)") // qmllint disable unqualified
         };
 
         return cfg_showAllItems ? [autoElement, disabledElement] : [autoElement, shownElement, hiddenElement, disabledElement];
