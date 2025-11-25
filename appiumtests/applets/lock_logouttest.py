@@ -54,7 +54,7 @@ class LockLogoutTest(unittest.TestCase):
         Tests the widget can be opened
         """
         self.driver.find_element(AppiumBy.NAME, "Lock")
-        self.driver.find_element(AppiumBy.NAME, "Shutdown…")
+        self.driver.find_element(AppiumBy.NAME, "Shut down")
 
 
 if __name__ == '__main__':

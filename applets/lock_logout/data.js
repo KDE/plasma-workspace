@@ -9,28 +9,28 @@ var data = [{
     icon: "system-switch-user",
     operation: "switchUser",
     configKey: "switchUser",
-    tooltip_mainText: i18n("Switch user"),
+    tooltip_mainText: i18n("Switch user…"),
     tooltip_subText: i18n("Start a parallel session as a different user"),
     requires: ""
 }, {
     icon: "system-shutdown",
     operation: "requestShutdown",
     configKey: "requestShutDown",
-    tooltip_mainText: i18n("Shutdown…"),
+    tooltip_mainText: i18n("Shut down"),
     tooltip_subText: i18n("Turn off the computer"),
     requires: "Shutdown"
 }, {
     icon: "system-reboot",
     operation: "requestReboot",
     configKey: "requestReboot",
-    tooltip_mainText: i18n("Restart…"),
+    tooltip_mainText: i18n("Restart"),
     tooltip_subText: i18n("Reboot the computer"),
     requires: "Reboot"
 }, {
     icon: "system-log-out",
     operation: "requestLogout",
     configKey: "requestLogout",
-    tooltip_mainText: i18n("Logout…"),
+    tooltip_mainText: i18n("Log out"),
     tooltip_subText: i18n("End the session"),
     requires: "Logout"
 }, {
