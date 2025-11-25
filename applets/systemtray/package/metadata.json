@@ -63,7 +63,9 @@
         "Description[ca@valencia]": "Accés ràpid a les característiques del sistema i a les icones d'estat de l'aplicació",
         "Description[ca]": "Accés ràpid a les característiques del sistema i a les icones d'estat de l'aplicació",
         "Description[es]": "Acceso rápido a funciones del sistema e iconos de estado de las aplicaciones",
+        "Description[fr]": "Accédez rapidement aux fonctionnalités du système et aux icônes d'état des applications",
         "Description[he]": "גישה מהירה לסמלי יכולות המערכת ומצב היישומים",
+        "Description[it]": "Accedi rapidamente alle funzionalità del sistema e alle icone di stato delle applicazioni",
         "Description[ka]": "სწრაფი წვდომა სისტემის ფუნქციებთან და აპლიკაციის სტატუსის ხატულებთან",
         "Description[lt]": "Greitai pasiekti sistemos ypatybes ir programų būsenos piktogramas",
         "Description[nl]": "Heb snel toegang tot systeemmogelijkheden en pictogrammen voor status van toepassingen",
@@ -72,6 +74,7 @@
         "Description[sl]": "Hiter dostop do sistemskih zmožnosti in ikon stanja aplikacije",
         "Description[tr]": "Sistem özelliklerine ve uygulama durumu simgelerine tez erişin",
         "Description[uk]": "Швидкий доступ до можливостей системи та піктограм стану програми",
+        "Description[zh_TW]": "快速存取系統功能與應用程式狀態圖示",
         "EnabledByDefault": true,
         "FormFactors": [
             "desktop"
