@@ -192,7 +192,11 @@ void View::positionOnScreen()
         layerWindow->setScope(u"krunner"_s);
         layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityOnDemand);
         layerWindow->setMargins(margins());
-        layerWindow->setScreenConfiguration(m_floating ? LayerShellQt::Window::ScreenFromQWindow : LayerShellQt::Window::ScreenFromCompositor);
+        if (m_floating) {
+            layerWindow->setDesiredActiveScreen(true);
+        } else {
+            layerWindow->setDesiredScreen(shownOnScreen);
+        }
     } else if (KWindowSystem::isPlatformX11()) {
         m_x11Positioner->setAnchors(Qt::TopEdge);
         m_x11Positioner->setMargins(margins());
