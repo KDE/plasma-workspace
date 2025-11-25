@@ -105,7 +105,11 @@ int main(int argc, char *argv[])
     // This does not make much sense for plasmashell.
     app.removeLibraryPath(QCoreApplication::applicationDirPath());
 
-    KAboutData aboutData(QStringLiteral("plasmashell"), QString(), QStringLiteral(PROJECT_VERSION), i18n("Plasma Shell"), KAboutLicense::GPL);
+    KAboutData aboutData(QStringLiteral("plasmashell"),
+                         i18nc("@info marketing name of the KDE Plasma desktop/mobile environment's base component", "Plasma Workspace"),
+                         QStringLiteral(PROJECT_VERSION),
+                         i18nc("@info short description of what KDE Plasma is", "Graphical desktop environment"),
+                         KAboutLicense::GPL);
 
     KAboutData::setApplicationData(aboutData);
     KCrash::initialize();
