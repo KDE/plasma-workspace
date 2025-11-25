@@ -1,85 +1,117 @@
 /*
     SPDX-FileCopyrightText: 2013 Sebastian Kügler <sebas@kde.org>
     SPDX-FileCopyrightText: 2015 Kai Uwe Broulik <kde@privat.broulik.de>
+    SPDX-FileCopyrightText: 2025 Shubham Arora <contact@shubhamarora.dev>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
 import QtQuick 2.0
-import QtQuick.Controls 2.5 as QtControls
-import org.kde.kirigami 2.5 as Kirigami
+import QtQuick.Layouts
+import QtQuick.Controls 2.5 as QQC2
+import org.kde.kirigami as Kirigami
 import org.kde.plasma.private.sessions 2.0
 import org.kde.kcmutils as KCM
+import "data.js" as Data
 
-KCM.SimpleKCM {
+KCM.ScrollViewKCM {
     id: root
 
-    readonly property int checkedOptions: logout.checked + logoutScreen.checked + shutdown.checked + reboot.checked + lock.checked + switchUser.checked + hibernate.checked + sleep.checked
+    property bool cfg_show_requestLogoutScreen
+    property bool cfg_show_requestLogout
+    property bool cfg_show_requestShutDown
+    property bool cfg_show_requestReboot
+    property bool cfg_show_lockScreen
+    property bool cfg_show_switchUser
+    property bool cfg_show_suspendToDisk
+    property bool cfg_show_suspendToRam
+    property var cfgKeys: []
 
-    property alias cfg_show_requestLogoutScreen: logoutScreen.checked
-    property alias cfg_show_requestLogout: logout.checked
-    property alias cfg_show_requestShutDown: shutdown.checked
-    property alias cfg_show_requestReboot: reboot.checked
+    readonly property int checkedOptions: (Number(cfg_show_requestLogout) +
+                                          Number(cfg_show_requestLogoutScreen) +
+                                          Number(cfg_show_requestShutDown) +
+                                          Number(cfg_show_requestReboot) +
+                                          Number(cfg_show_lockScreen) +
+                                          Number(cfg_show_switchUser) +
+                                          Number(cfg_show_suspendToDisk) +
+                                          Number(cfg_show_suspendToRam))
 
-    property alias cfg_show_lockScreen: lock.checked
-    property alias cfg_show_switchUser: switchUser.checked
-    property alias cfg_show_suspendToDisk: hibernate.checked
-    property alias cfg_show_suspendToRam: sleep.checked
+    SessionManagement {
+        id: session
+    }
 
-    Kirigami.FormLayout {
-        SessionManagement {
-            id: session
+    view: ListView {
+        id: list
+        clip: true
+        
+        model: ListModel {
+            id: actionsModel
         }
 
-        QtControls.CheckBox {
-            id: logout
-            Kirigami.FormData.label: i18nc("Heading for a list of actions (leave, lock, switch user, hibernate, suspend)", "Show actions:")
-            text: i18n("Log Out")
-            icon.name: "system-log-out"
-            // ensure user cannot have all options unchecked
-            enabled: session.canLogout && (root.checkedOptions > 1 || !checked)
+        headerPositioning: ListView.OverlayHeader
+        header: Kirigami.InlineViewHeader {
+            width: list.width
+            text: i18nc("@title:column", "Actions")
         }
-        QtControls.CheckBox {
-            id: logoutScreen
-            text: i18nc("@option:check", "Show logout screen")
-            icon.name: "system-log-out"
-            enabled: session.canLogout && (root.checkedOptions > 1 || !checked)
+
+        delegate: Kirigami.SwipeListItem {
+            id: delegateItem
+            width: list.width
+            
+            Kirigami.Theme.useAlternateBackgroundColor: true
+
+            highlighted: false
+            hoverEnabled: false
+            down: false
+
+            contentItem: RowLayout {
+                spacing: Kirigami.Units.smallSpacing
+
+                Kirigami.Icon {
+                    source: model.icon
+                    Layout.preferredWidth: Kirigami.Units.iconSizes.small
+                    Layout.preferredHeight: Kirigami.Units.iconSizes.small
+                }
+
+                QQC2.Label {
+                    text: model.text
+                    Layout.fillWidth: true
+                    elide: Text.ElideRight
+                }
+
+                QQC2.CheckBox {
+                    visible: (model.enabledKey ? session[model.enabledKey] : true)
+                    checked: root[model.cfgKey]
+                    onToggled: root[model.cfgKey] = checked
+                    enabled: (model.enabledKey ? session[model.enabledKey] : true) && (root.checkedOptions > 1 || !checked)
+                }
+
+                QQC2.Label {
+                    visible: !((model.enabledKey ? session[model.enabledKey] : true) && (root.checkedOptions > 1 || !checked))
+                    text: i18n("Unavailable")
+                    color: Kirigami.Theme.disabledTextColor
+                    Layout.fillWidth: true
+                    horizontalAlignment: Text.AlignRight
+                    Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
+                    Layout.rightMargin: Kirigami.Units.smallSpacing
+                    elide: Text.ElideRight
+                }
+            }
         }
-        QtControls.CheckBox {
-            id: shutdown
-            text: i18n("Shut Down")
-            icon.name: "system-shutdown"
-            enabled: session.canShutdown && (root.checkedOptions > 1 || !checked)
-        }
-        QtControls.CheckBox {
-            id: reboot
-            text: i18n("Restart")
-            icon.name: "system-reboot"
-            enabled: session.canReboot && (root.checkedOptions > 1 || !checked)
-        }
-        QtControls.CheckBox {
-            id: lock
-            text: i18n("Lock")
-            icon.name: "system-lock-screen"
-            enabled: session.canLock && (root.checkedOptions > 1 || !checked)
-        }
-        QtControls.CheckBox {
-            id: switchUser
-            text: i18n("Switch User")
-            icon.name: "system-switch-user"
-            enabled: root.checkedOptions > 1 || !checked
-        }
-        QtControls.CheckBox {
-            id: hibernate
-            text: i18n("Hibernate")
-            icon.name: "system-suspend-hibernate"
-            enabled: session.canHibernate && (root.checkedOptions > 1 || !checked)
-        }
-        QtControls.CheckBox {
-            id: sleep
-            text: i18nc("Suspend to RAM", "Sleep")
-            icon.name: "system-suspend"
-            enabled: session.canSuspend && (root.checkedOptions > 1 || !checked)
+    }
+
+    Component.onCompleted: {
+        var actions = Data.data;
+        for (var i = 0; i < actions.length; i++) {
+            var item = actions[i];
+            var key = "cfg_show_" + item.configKey;
+            actionsModel.append({
+                text: item.tooltip_mainText,
+                icon: item.icon,
+                cfgKey: key,
+                enabledKey: item.requires ? ("can" + item.requires) : ""
+            });
+            cfgKeys.push(key);
         }
     }
 }
