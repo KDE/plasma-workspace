@@ -75,7 +75,36 @@ PlasmoidItem {
             property int itemHeight: parent.flow==Flow.TopToBottom ? Math.floor(parent.height/lockout.visibleButtons) : parent.height
             property int iconSize: Math.min(itemWidth, itemHeight)
 
-            model: Data.data
+            model: ListModel {
+                id: orderedActionsModel
+            }
+
+            Component.onCompleted: {
+                orderedActionsModel.clear();
+
+                var data = Data.data;
+
+                var actionMap = {};
+                for (const item of data) {
+                    actionMap[item.configKey] = item;
+                }
+
+                var order = Plasmoid.configuration.actionsOrder || [];
+
+                if (!order.length) {
+                    for (const item of data) {
+                        order.push(item.configKey);
+                    }
+                }
+
+                for (const key of order) {
+                    var item = actionMap[key];
+                    if (!item) {
+                        continue;
+                    }
+                    orderedActionsModel.append(item);
+                }
+            }
 
             delegate: PlasmaCore.ToolTipArea {
                 id: iconDelegate
@@ -86,6 +115,7 @@ PlasmoidItem {
                 required property string tooltip_subText
                 required property string operation
                 required property string icon
+
 
                 visible: Plasmoid.configuration["show_" + configKey] && (requires !== ""|| session["can" + requires])
                 width: items.itemWidth
