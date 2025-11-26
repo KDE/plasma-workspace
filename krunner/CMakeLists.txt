@@ -2,7 +2,6 @@ set(krunner_SRCS
     main.cpp
     view.cpp
     x11windowscreenrelativepositioner.cpp x11windowscreenrelativepositioner.h
-    qml/krunner.qrc
 )
 
 set(krunner_dbusAppXML dbus/org.kde.krunner.App.xml)
@@ -16,7 +15,9 @@ ecm_generate_dbus_service_file(
 
 add_executable(krunner ${krunner_SRCS})
 
-target_link_libraries(krunner
+ecm_add_qml_module(krunner URI "org.kde.krunner.private.view" QML_FILES qml/RunCommand.qml)
+
+target_link_libraries(krunner PRIVATE
     Qt::Quick
     Qt::Widgets
     KF6::KIOGui

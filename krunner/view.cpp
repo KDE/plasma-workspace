@@ -72,7 +72,7 @@ View::View(PlasmaQuick::SharedQmlEngine *engine, QWindow *)
     QDBusConnection::sessionBus().registerObject(u"/App"_s, this);
 
     connect(m_engine, &PlasmaQuick::SharedQmlEngine::finished, this, &View::objectIncubated);
-    m_engine->setSource(QUrl(u"qrc:/krunner/RunCommand.qml"_s));
+    m_engine->setSourceFromModule("org.kde.krunner.private.view", "RunCommand");
     m_engine->completeInitialization({
         {u"runnerWindow"_s, QVariant::fromValue(this)},
     });
