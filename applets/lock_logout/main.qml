@@ -69,6 +69,41 @@ PlasmoidItem {
             id: session
         }
 
+        function buildOrderedModel() {
+            orderedActionsModel.clear();
+
+            var data = Data.data;
+
+            var actionMap = {};
+            for (const item of data) {
+                actionMap[item.configKey] = item;
+            }
+
+            var order = Plasmoid.configuration.actionsOrder || [];
+
+            if (!order.length) {
+                for (const item of data) {
+                    order.push(item.configKey);
+                }
+            }
+
+            for (const key of order) {
+                var item = actionMap[key];
+                if (!item) {
+                    continue;
+                }
+                orderedActionsModel.append(item);
+            }
+        }
+
+        Connections {
+            target: Plasmoid.configuration
+
+            function onActionsOrderChanged() {
+                lockout.buildOrderedModel();
+            }
+        }
+
         Repeater {
             id: items
             property int itemWidth: parent.flow==Flow.LeftToRight ? Math.floor(parent.width/lockout.visibleButtons) : parent.width
@@ -79,32 +114,7 @@ PlasmoidItem {
                 id: orderedActionsModel
             }
 
-            Component.onCompleted: {
-                orderedActionsModel.clear();
-
-                var data = Data.data;
-
-                var actionMap = {};
-                for (const item of data) {
-                    actionMap[item.configKey] = item;
-                }
-
-                var order = Plasmoid.configuration.actionsOrder || [];
-
-                if (!order.length) {
-                    for (const item of data) {
-                        order.push(item.configKey);
-                    }
-                }
-
-                for (const key of order) {
-                    var item = actionMap[key];
-                    if (!item) {
-                        continue;
-                    }
-                    orderedActionsModel.append(item);
-                }
-            }
+            Component.onCompleted: lockout.buildOrderedModel()
 
             delegate: PlasmaCore.ToolTipArea {
                 id: iconDelegate
@@ -115,7 +125,6 @@ PlasmoidItem {
                 required property string tooltip_subText
                 required property string operation
                 required property string icon
-
 
                 visible: Plasmoid.configuration["show_" + configKey] && (requires !== ""|| session["can" + requires])
                 width: items.itemWidth
