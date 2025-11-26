@@ -365,9 +365,13 @@ ColumnLayout {
             reuseItems: true
             delegate: Milou.ResultDelegate {
                 id: resultDelegate
+
+                required property var modelData
+
                 width: listView.width
                 typeText: index === 0 ? i18n("Recent Queries") : ""
-                additionalActions: [{
+                displayText: modelData
+                actions: [{
                     iconSource: "list-remove-symbolic",
                     text: i18n("Remove")
                 }]
@@ -420,7 +424,7 @@ ColumnLayout {
                 if (entry) {
                     // If user presses Shift+Return to invoke an action, invoke the first runner action
                     if (event && event.modifiers === Qt.ShiftModifier
-                            && currentItem.additionalActions && currentItem.additionalActions.length > 0) {
+                            && currentItem.actions && currentItem.actions.length > 0) {
                         runAction(0);
                         return
                     }
