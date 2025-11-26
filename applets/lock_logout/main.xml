@@ -6,6 +6,9 @@
   <kcfgfile name=""/>
 
   <group name="General">
+    <entry name="actionsOrder" type="StringList">
+      <label>Order of actions in the applet.</label>
+    </entry>
     <entry name="show_requestShutDown" type="Bool">
       <label>Show an option to shut down the system.</label>
       <default>false</default>

@@ -6,7 +6,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.0
+import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls 2.5 as QQC2
 import org.kde.kirigami as Kirigami
@@ -25,6 +25,7 @@ KCM.ScrollViewKCM {
     property bool cfg_show_switchUser
     property bool cfg_show_suspendToDisk
     property bool cfg_show_suspendToRam
+    property var cfg_actionsOrder: []
     property var cfgKeys: []
 
     readonly property int checkedOptions: (Number(cfg_show_requestLogout) +
@@ -48,70 +49,122 @@ KCM.ScrollViewKCM {
             id: actionsModel
         }
 
-        headerPositioning: ListView.OverlayHeader
         header: Kirigami.InlineViewHeader {
             width: list.width
             text: i18nc("@title:column", "Actions")
         }
 
-        delegate: Kirigami.SwipeListItem {
-            id: delegateItem
+        delegate: Loader {
+            id: delegateLoader
             width: list.width
-            
-            Kirigami.Theme.useAlternateBackgroundColor: true
 
-            highlighted: false
-            hoverEnabled: false
-            down: false
+            sourceComponent: Kirigami.SwipeListItem {
+                id: listItem
+                width: list.width
 
-            contentItem: RowLayout {
-                spacing: Kirigami.Units.smallSpacing
+                Kirigami.Theme.useAlternateBackgroundColor: true
 
-                Kirigami.Icon {
-                    source: model.icon
-                    Layout.preferredWidth: Kirigami.Units.iconSizes.small
-                    Layout.preferredHeight: Kirigami.Units.iconSizes.small
+                highlighted: false
+                hoverEnabled: false
+                down: false
+
+                contentItem: RowLayout {
+                    spacing: Kirigami.Units.smallSpacing
+
+                    Kirigami.ListItemDragHandle {
+                        listItem: listItem
+                        listView: list
+                        onMoveRequested: (oldIndex, newIndex) => {
+                            if (oldIndex === newIndex || oldIndex < 0 || newIndex < 0) {
+                                return;
+                            }
+
+                            actionsModel.move(oldIndex, newIndex, 1);
+
+                            var order = [];
+                            for (var i = 0; i < actionsModel.count; ++i) {
+                                var model = actionsModel.get(i);
+                                if (model && model.configKey) {
+                                    order.push(model.configKey);
+                                }
+                            }
+                            cfg_actionsOrder = order;
+                        }
+                    }
+
+                    Kirigami.Icon {
+                        source: model.icon
+                        Layout.preferredWidth: Kirigami.Units.iconSizes.small
+                        Layout.preferredHeight: Kirigami.Units.iconSizes.small
+                    }
+
+                    QQC2.Label {
+                        text: model.text
+                        Layout.fillWidth: true
+                        elide: Text.ElideRight
+                    }
+
+                    QQC2.CheckBox {
+                        visible: (model.enabledKey ? session[model.enabledKey] : true)
+                        checked: root[model.cfgKey]
+                        onToggled: root[model.cfgKey] = checked
+                        enabled: (model.enabledKey ? session[model.enabledKey] : true) && (root.checkedOptions > 1 || !checked)
+                    }
+
+                    QQC2.Label {
+                        visible: !((model.enabledKey ? session[model.enabledKey] : true) && (root.checkedOptions > 1 || !checked))
+                        text: i18n("Unavailable")
+                        color: Kirigami.Theme.disabledTextColor
+                        Layout.fillWidth: true
+                        horizontalAlignment: Text.AlignRight
+                        Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
+                        Layout.rightMargin: Kirigami.Units.smallSpacing
+                        elide: Text.ElideRight
+                    }
                 }
+            }
+        }
 
-                QQC2.Label {
-                    text: model.text
-                    Layout.fillWidth: true
-                    elide: Text.ElideRight
-                }
-
-                QQC2.CheckBox {
-                    visible: (model.enabledKey ? session[model.enabledKey] : true)
-                    checked: root[model.cfgKey]
-                    onToggled: root[model.cfgKey] = checked
-                    enabled: (model.enabledKey ? session[model.enabledKey] : true) && (root.checkedOptions > 1 || !checked)
-                }
-
-                QQC2.Label {
-                    visible: !((model.enabledKey ? session[model.enabledKey] : true) && (root.checkedOptions > 1 || !checked))
-                    text: i18n("Unavailable")
-                    color: Kirigami.Theme.disabledTextColor
-                    Layout.fillWidth: true
-                    horizontalAlignment: Text.AlignRight
-                    Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
-                    Layout.rightMargin: Kirigami.Units.smallSpacing
-                    elide: Text.ElideRight
-                }
+        moveDisplaced: Transition {
+            YAnimator {
+                duration: Kirigami.Units.longDuration
+                easing.type: Easing.InOutQuad
             }
         }
     }
 
     Component.onCompleted: {
         var actions = Data.data;
+
+        var actionMap = {};
+        actions.forEach(action => {
+            actionMap[action.configKey] = action;
+        });
         for (var i = 0; i < actions.length; i++) {
-            var item = actions[i];
+            actionMap[actions[i].configKey] = actions[i];
+        }
+
+        var order = cfg_actionsOrder && cfg_actionsOrder.length ? cfg_actionsOrder : [];
+        if (!order.length) {
+            actions.forEach(action => order.push(action.configKey));
+            cfg_actionsOrder = order;
+        }
+
+        order.forEach(keyName => {
+            var item = actionMap[keyName];
+            if (!item) {
+                return;
+            }
+
             var key = "cfg_show_" + item.configKey;
             actionsModel.append({
                 text: item.tooltip_mainText,
                 icon: item.icon,
-                cfgKey: key,
+                cfgKey: key, // used for binding
+                configKey: item.configKey, // used for reordering
                 enabledKey: item.requires ? ("can" + item.requires) : ""
             });
             cfgKeys.push(key);
-        }
+        });
     }
 }
