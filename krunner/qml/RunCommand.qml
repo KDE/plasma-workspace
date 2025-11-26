@@ -16,9 +16,12 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.milou as Milou
 import org.kde.krunner.private.view
 import org.kde.kirigami 2.20 as Kirigami
+import org.kde.plasma.core as PlasmaCore
 
 ColumnLayout {
     id: root
+
+    required property PlasmaCore.Window runnerWindow
     property string query
     property string singleRunner
     property bool showHistory: false

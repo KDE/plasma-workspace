@@ -72,9 +72,10 @@ View::View(PlasmaQuick::SharedQmlEngine *engine, QWindow *)
     QDBusConnection::sessionBus().registerObject(u"/App"_s, this);
 
     connect(m_engine, &PlasmaQuick::SharedQmlEngine::finished, this, &View::objectIncubated);
-    m_engine->engine()->rootContext()->setContextProperty(u"runnerWindow"_s, this);
     m_engine->setSource(QUrl(u"qrc:/krunner/RunCommand.qml"_s));
-    m_engine->completeInitialization();
+    m_engine->completeInitialization({
+        {u"runnerWindow"_s, QVariant::fromValue(this)},
+    });
 
     auto screenRemoved = [this](QScreen *screen) {
         if (screen == this->screen()) {
