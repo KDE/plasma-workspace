@@ -12,6 +12,7 @@
 #include <KSharedConfig>
 #include <PlasmaActivities/Consumer>
 #include <QQuickView>
+#include <qqmlregistration.h>
 
 #include <PlasmaQuick/PlasmaWindow>
 #include <PlasmaQuick/SharedQmlEngine>
@@ -24,6 +25,8 @@ class ViewPrivate;
 class View : public PlasmaQuick::PlasmaWindow
 {
     Q_OBJECT
+    QML_NAMED_ELEMENT(RunnerWindow)
+    QML_UNCREATABLE("")
     Q_CLASSINFO("D-Bus Interface", "org.kde.krunner.App")
 
     Q_PROPERTY(bool pinned READ pinned WRITE setPinned NOTIFY pinnedChanged)

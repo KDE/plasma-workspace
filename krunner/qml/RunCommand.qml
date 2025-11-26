@@ -16,12 +16,11 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.milou as Milou
 import org.kde.krunner.private.view
 import org.kde.kirigami 2.20 as Kirigami
-import org.kde.plasma.core as PlasmaCore
 
 ColumnLayout {
     id: root
 
-    required property PlasmaCore.Window runnerWindow
+    required property RunnerWindow runnerWindow
     property string query
     property string singleRunner
     property bool showHistory: false
@@ -44,14 +43,14 @@ ColumnLayout {
     Connections {
         target: root.runnerWindow
         function onHistoryBehaviorChanged() {
-            root.runnerManager.historyEnabled = root.runnerWindow.historyBehavior !== HistoryBehavior.Disabled
+            root.runnerManager.historyEnabled = root.runnerWindow.historyBehavior !== RunnerWindow.Disabled
         }
         function onActivityChanged(activity) {
             root.runnerManager.setHistoryEnvironmentIdentifier(activity)
         }
     }
     Component.onCompleted: {
-        runnerManager.historyEnabled = runnerWindow.historyBehavior !== HistoryBehavior.Disabled
+        runnerManager.historyEnabled = runnerWindow.historyBehavior !== RunnerWindow.Disabled
     }
 
     onQueryChanged: {
@@ -199,10 +198,10 @@ ColumnLayout {
                 root.query = queryField.text
                 if (!allowCompletion || !root.query ) { // Clear suggestion in case it was disabled or the query is cleared
                     fadedTextCompletion.text = ""
-                } else if (root.runnerWindow.historyBehavior === HistoryBehavior.CompletionSuggestion) {
+                } else if (root.runnerWindow.historyBehavior === RunnerWindow.CompletionSuggestion) {
                     // Match the user's exact typed characters to account for case insensitive matches
                     fadedTextCompletion.text = text + root.runnerManager.getHistorySuggestion(text).substring(text.length)
-                } else if (length > 0 && root.runnerWindow.historyBehavior === HistoryBehavior.ImmediateCompletion) {
+                } else if (length > 0 && root.runnerWindow.historyBehavior === RunnerWindow.ImmediateCompletion) {
                     var oldText = text
                     var suggestedText = root.runnerManager.getHistorySuggestion(text);
                     if (suggestedText.length > 0) {
@@ -219,7 +218,7 @@ ColumnLayout {
                     event.accepted = true;
                     focusCurrentListView()
                 }
-                if (root.runnerWindow.historyBehavior === HistoryBehavior.CompletionSuggestion
+                if (root.runnerWindow.historyBehavior === RunnerWindow.CompletionSuggestion
                     && fadedTextCompletion.text.length > 0
                     && cursorPosition === text.length
                     && event.key === Qt.Key_Right
@@ -236,7 +235,7 @@ ColumnLayout {
                 !event.accepted && results.navigationKeyHandler(event)
             }
             Keys.onTabPressed: event => {
-                if (root.runnerWindow.historyBehavior === HistoryBehavior.CompletionSuggestion) {
+                if (root.runnerWindow.historyBehavior === RunnerWindow.CompletionSuggestion) {
                     if (fadedTextCompletion.text && queryField.text !== fadedTextCompletion.text) {
                         queryField.text = fadedTextCompletion.text
                         fadedTextCompletion.text = ""

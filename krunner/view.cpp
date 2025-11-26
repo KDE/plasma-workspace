@@ -40,7 +40,6 @@ View::View(PlasmaQuick::SharedQmlEngine *engine, QWindow *)
     , m_floating(false)
 {
     KCrash::initialize();
-    qmlRegisterUncreatableType<View>("org.kde.krunner.private.view", 1, 0, "HistoryBehavior", u"Only for enums"_s);
 
     if (KWindowSystem::isPlatformX11()) {
         m_x11Positioner = new X11WindowScreenRelativePositioner(this);

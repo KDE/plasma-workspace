@@ -15,7 +15,7 @@ ecm_generate_dbus_service_file(
 
 add_executable(krunner ${krunner_SRCS})
 
-ecm_add_qml_module(krunner URI "org.kde.krunner.private.view" QML_FILES qml/RunCommand.qml)
+ecm_add_qml_module(krunner URI "org.kde.krunner.private.view" QML_FILES qml/RunCommand.qml DEPENDENCIES org.kde.plasma.core)
 
 target_link_libraries(krunner PRIVATE
     Qt::Quick
