@@ -18,6 +18,7 @@ PlasmoidItem {
     id: root
 
     readonly property int minButtonSize: Kirigami.Units.iconSizes.small
+    property bool initialized: false
 
     preferredRepresentation: fullRepresentation
     fullRepresentation: Flow {
@@ -100,8 +101,18 @@ PlasmoidItem {
             target: Plasmoid.configuration
 
             function onActionsOrderChanged() {
+                if (!lockout.initialized) {
+                    // On first addition to containment for every configuration change, ignore it, 
+                    // otherwise the model is built twice
+                    return;
+                }
                 lockout.buildOrderedModel();
             }
+        }
+
+        Component.onCompleted: function() {
+            lockout.buildOrderedModel();
+            lockout.initialized = true;
         }
 
         Repeater {
@@ -113,8 +124,6 @@ PlasmoidItem {
             model: ListModel {
                 id: orderedActionsModel
             }
-
-            Component.onCompleted: lockout.buildOrderedModel()
 
             delegate: PlasmaCore.ToolTipArea {
                 id: iconDelegate
