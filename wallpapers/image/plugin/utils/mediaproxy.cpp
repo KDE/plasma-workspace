@@ -168,7 +168,7 @@ void MediaProxy::useSingleImageDefaults()
 
     m_source = QUrl::fromLocalFile(package.path());
 
-    PackageFinder::findPreferredImageInPackage(package, m_targetSize);
+    WallpaperPackage::findPreferredImageInPackage(package, m_targetSize);
 
     // Make sure the image can be read, or there will be dead loops.
     if (m_source.isEmpty() || QImage(package.filePath("preferred")).isNull()) {
@@ -356,7 +356,7 @@ QUrl MediaProxy::findPreferredImageInPackage(KPackage::Package &package)
     const bool useDarkColorScheme =
         m_source.fragment().contains(QLatin1StringView("dark")) || (m_isDarkColorScheme && !m_source.fragment().contains(QLatin1StringView("light")));
 
-    PackageFinder::findPreferredImageInPackage(package, m_targetSize);
+    WallpaperPackage::findPreferredImageInPackage(package, m_targetSize);
     url = package.fileUrl("preferred");
 
     if (useDarkColorScheme) {

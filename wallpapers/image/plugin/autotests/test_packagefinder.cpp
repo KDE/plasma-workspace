@@ -8,7 +8,6 @@
 #include <QDir>
 #include <QSignalSpy>
 #include <QTest>
-#include <QThreadPool>
 
 #include <KPackage/PackageLoader>
 
@@ -80,23 +79,15 @@ void PackageFinderTest::testFindPreferredSizeInPackage()
     QVERIFY(package.isValid());
     QVERIFY(package.metadata().isValid());
 
-    PackageFinder::findPreferredImageInPackage(package, resolution);
+    WallpaperPackage::findPreferredImageInPackage(package, resolution);
 
     QVERIFY(package.filePath("preferred").contains(expected));
 }
 
 void PackageFinderTest::testPackageFinderCanFindPackages()
 {
-    PackageFinder *finder =
-        new PackageFinder({m_dataDir.absolutePath(), m_dataDir.absoluteFilePath(ImageBackendTestData::defaultPackageFolderName2)}, QSize(1920, 1080));
-    QSignalSpy spy(finder, &PackageFinder::packageFound);
-
-    QThreadPool::globalInstance()->start(finder);
-
-    spy.wait(10 * 1000);
-    QCOMPARE(spy.size(), 1);
-
-    const auto items = spy.takeFirst().at(0).value<QList<WallpaperPackage>>();
+    const auto items =
+        WallpaperPackage::findAll({m_dataDir.absolutePath(), m_dataDir.absoluteFilePath(ImageBackendTestData::defaultPackageFolderName2)}, QSize(1920, 1080));
     // Total 3 packages in the directory, but one package is broken and should not be added to the list.
     QCOMPARE(items.size(), ImageBackendTestData::defaultPackageCount);
 

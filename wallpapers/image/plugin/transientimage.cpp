@@ -255,7 +255,7 @@ static QImage loadPackage(const TransientImageOptions &options)
     }
 
     const QSize requestedSize = (options.size * options.devicePixelRatio).toSize();
-    PackageFinder::findPreferredImageInPackage(package, requestedSize);
+    WallpaperPackage::findPreferredImageInPackage(package, requestedSize);
 
     QString path = package.filePath("preferred");
     if (urlQuery.queryItemValue(QStringLiteral("darkMode")).toInt() == 1) {

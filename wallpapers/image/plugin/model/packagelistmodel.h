@@ -8,8 +8,7 @@
 #pragma once
 
 #include "abstractimagelistmodel.h"
-
-class WallpaperPackage;
+#include "finder/packagefinder.h"
 
 /**
  * List KPackage wallpapers, usually in a folder.
@@ -35,9 +34,6 @@ public:
 public Q_SLOTS:
     QStringList addBackground(const QUrl &url) override;
     QStringList removeBackground(const QUrl &url) override;
-
-private Q_SLOTS:
-    void slotHandlePackageFound(const QList<WallpaperPackage> &packages);
 
 private:
     QList<WallpaperPackage> m_packages;

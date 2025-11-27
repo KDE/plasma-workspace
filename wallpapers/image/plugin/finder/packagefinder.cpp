@@ -93,14 +93,7 @@ QStringList WallpaperPackage::selectors() const
     return m_selectors;
 }
 
-PackageFinder::PackageFinder(const QStringList &paths, const QSize &targetSize, QObject *parent)
-    : QObject(parent)
-    , m_paths(paths)
-    , m_targetSize(targetSize)
-{
-}
-
-void PackageFinder::run()
+QList<WallpaperPackage> WallpaperPackage::findAll(const QStringList &paths, const QSize &targetSize)
 {
     QList<WallpaperPackage> packages;
     QStringList folders;
@@ -110,7 +103,7 @@ void PackageFinder::run()
 
     KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Wallpaper/Images"));
 
-    const auto addPackage = [this, &package, &packages, &folders](const QString &_folderPath) {
+    const auto addPackage = [&package, &packages, &folders, &targetSize](const QString &_folderPath) {
         const QString folderPath = findSymlinkTarget(QFileInfo(_folderPath)).absoluteFilePath();
 
         if (folders.contains(folderPath)) {
@@ -137,7 +130,7 @@ void PackageFinder::run()
                 return true;
             }
 
-            findPreferredImageInPackage(package, m_targetSize);
+            findPreferredImageInPackage(package, targetSize);
             packages << WallpaperPackage(package);
             folders << folderPath;
 
@@ -150,8 +143,9 @@ void PackageFinder::run()
 
     int i;
 
-    for (i = 0; i < m_paths.size(); ++i) {
-        const QString &path = m_paths.at(i);
+    QStringList visitQueue = paths;
+    for (i = 0; i < visitQueue.size(); ++i) {
+        const QString &path = visitQueue.at(i);
         const QFileInfo info(path);
 
         if (!info.isDir()) {
@@ -169,15 +163,15 @@ void PackageFinder::run()
         for (const QFileInfo &wp : files) {
             if (!addPackage(wp.filePath())) {
                 // Add this to the directories we should be looking at
-                m_paths.append(wp.filePath());
+                visitQueue.append(wp.filePath());
             }
         }
     }
 
-    Q_EMIT packageFound(packages);
+    return packages;
 }
 
-void PackageFinder::findPreferredImageInPackage(KPackage::Package &package, const QSize &targetSize)
+void WallpaperPackage::findPreferredImageInPackage(KPackage::Package &package, const QSize &targetSize)
 {
     if (!package.isValid()) {
         return;

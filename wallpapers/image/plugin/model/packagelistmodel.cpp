@@ -12,8 +12,8 @@
 #include <QPalette>
 #include <QPixmap>
 #include <QStandardPaths>
-#include <QThreadPool>
 #include <QUrlQuery>
+#include <QtConcurrent>
 
 #include <KAboutData>
 #include <KPackage/PackageLoader>
@@ -138,9 +138,15 @@ void PackageListModel::load(const QStringList &customPaths)
 
     AbstractImageListModel::load(customPaths);
 
-    auto *finder = new PackageFinder(m_customPaths, m_targetSize);
-    connect(finder, &PackageFinder::packageFound, this, &PackageListModel::slotHandlePackageFound);
-    QThreadPool::globalInstance()->start(finder);
+    const QSize targetSize = m_targetSize;
+    QtConcurrent::run(WallpaperPackage::findAll, m_customPaths, targetSize).then(this, [this](const QList<WallpaperPackage> &packages) {
+        beginResetModel();
+        m_packages = packages;
+        endResetModel();
+
+        m_loading = false;
+        Q_EMIT loaded(this);
+    });
 }
 
 QStringList PackageListModel::addBackground(const QUrl &url)
@@ -166,7 +172,7 @@ QStringList PackageListModel::addBackground(const QUrl &url)
         return {};
     }
 
-    PackageFinder::findPreferredImageInPackage(package, m_targetSize);
+    WallpaperPackage::findPreferredImageInPackage(package, m_targetSize);
 
     if (m_usedInConfig) {
         beginInsertRows(QModelIndex(), 0, 0);
@@ -221,16 +227,4 @@ QStringList PackageListModel::removeBackground(const QUrl &url)
     endRemoveRows();
 
     return results;
-}
-
-void PackageListModel::slotHandlePackageFound(const QList<WallpaperPackage> &packages)
-{
-    beginResetModel();
-
-    m_packages = packages;
-
-    endResetModel();
-
-    m_loading = false;
-    Q_EMIT loaded(this);
 }
