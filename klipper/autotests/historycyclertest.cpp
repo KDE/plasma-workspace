@@ -18,12 +18,19 @@ class HistoryCyclerTest : public QObject
     Q_OBJECT
 private Q_SLOTS:
     void initTestCase();
+    void cleanupTestCase();
     void testCycle();
 };
 
 void HistoryCyclerTest::initTestCase()
 {
     QStandardPaths::setTestModeEnabled(true);
+}
+
+void HistoryCyclerTest::cleanupTestCase()
+{
+    // Clear to quit the current owners so ctest doesnt wait on them
+    HistoryModel::self()->clear();
 }
 
 void HistoryCyclerTest::testCycle()

@@ -22,6 +22,7 @@ class HistoryModelTest : public QObject
     Q_OBJECT
 private Q_SLOTS:
     void initTestCase();
+    void cleanupTestCase();
     void testSetMaxSize();
     void testInsertRemove();
     void testClear();
@@ -34,6 +35,12 @@ private Q_SLOTS:
 void HistoryModelTest::initTestCase()
 {
     QStandardPaths::setTestModeEnabled(true);
+}
+
+void HistoryModelTest::cleanupTestCase()
+{
+    // Clear to quit the current owners so ctest doesnt wait on them
+    HistoryModel::self()->clear();
 }
 
 void HistoryModelTest::testSetMaxSize()

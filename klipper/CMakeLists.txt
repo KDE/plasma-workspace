@@ -81,3 +81,4 @@ endif()
 ecm_qt_install_logging_categories(EXPORT KLIPPER FILE klipper.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
 
 add_subdirectory(kconf_update)
+add_subdirectory(owner)

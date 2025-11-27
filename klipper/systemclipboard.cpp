@@ -16,6 +16,7 @@
 #include <QFile>
 #include <QImageWriter>
 #include <QMimeData>
+#include <QProcess>
 #include <QSqlDatabase>
 #include <QSqlError>
 #include <QSqlQuery>
@@ -29,6 +30,7 @@
 
 #include "../c_ptr.h"
 #include "config-X11.h"
+#include "config-klipper.h"
 #include "historyitem.h"
 #include "klipper_debug.h"
 #include "updateclipboardjob.h"
@@ -85,91 +87,6 @@ void x11RoundTrip()
     }
 #endif
 }
-}
-
-class DatabaseRecordToMimeDataJob : public KCompositeJob
-{
-    Q_OBJECT
-
-public:
-    explicit DatabaseRecordToMimeDataJob(QObject *parent, const std::shared_ptr<const HistoryItem> &data);
-    ~DatabaseRecordToMimeDataJob() override;
-
-    void start() override;
-    QMimeData *mimeData() const;
-
-private:
-    void slotResult(KJob *job) override;
-
-    QString m_uuid;
-    std::list<std::pair<QString /*type*/, QByteArray /*data*/>> m_mimeDataList;
-};
-
-DatabaseRecordToMimeDataJob::DatabaseRecordToMimeDataJob(QObject *parent, const std::shared_ptr<const HistoryItem> &data)
-    : KCompositeJob(parent)
-    , m_uuid(data->uuid())
-{
-}
-
-DatabaseRecordToMimeDataJob::~DatabaseRecordToMimeDataJob() = default;
-
-void DatabaseRecordToMimeDataJob::start()
-{
-    QSqlDatabase db = QSqlDatabase::database(u"klipper"_s);
-    if (!db.isOpen()) [[unlikely]] {
-        setError(UserDefinedError);
-        setErrorText(db.lastError().text());
-        emitResult();
-        return;
-    }
-
-    QSqlQuery query(db);
-    query.exec(u"SELECT mimetype,data_uuid FROM aux WHERE uuid='%1'"_s.arg(m_uuid));
-    while (query.next()) {
-        const QString mimeType = query.value(0).toString();
-        const QString dataUuid = query.value(1).toString();
-        if (mimeType.isEmpty() || dataUuid.isEmpty()) {
-            continue;
-        }
-        const QString dataPath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + u"/klipper/data/" + m_uuid + u'/' + dataUuid;
-        auto job = KIO::open(QUrl::fromLocalFile(dataPath), QIODevice::ReadOnly);
-        connect(job, &KIO::FileJob::open, this, [this, job, mimeType] {
-            connect(job, &KIO::FileJob::data, this, [this, job, mimeType](KJob *, const QByteArray &data) {
-                m_mimeDataList.emplace_back(mimeType, data);
-                job->close();
-            });
-            job->read(job->size());
-        });
-        addSubjob(job);
-    }
-    if (!hasSubjobs()) {
-        emitResult();
-        return;
-    }
-}
-
-QMimeData *DatabaseRecordToMimeDataJob::mimeData() const
-{
-    auto mimeData = new QMimeData;
-    for (auto &[format, data] : m_mimeDataList) {
-        if (format == s_imageFormat) {
-            mimeData->setImageData(QImage::fromData(data, "PNG"));
-        } else {
-            mimeData->setData(format, data);
-        }
-    }
-    return mimeData;
-}
-
-void DatabaseRecordToMimeDataJob::slotResult(KJob *job)
-{
-    removeSubjob(job);
-
-    if (hasSubjobs()) {
-        return;
-    }
-
-    emitResult();
 }
 
 std::shared_ptr<SystemClipboard> SystemClipboard::self()
@@ -276,11 +193,11 @@ void SystemClipboard::setMimeData(const HistoryItemConstPtr &data, SelectionMode
         return;
     }
 
-    auto job = new DatabaseRecordToMimeDataJob(this, data);
-    connect(job, &KJob::finished, this, [this, job, mode, updateReason] {
-        setMimeDataInternal(mode & Selection ? job->mimeData() : nullptr, mode & Clipboard ? job->mimeData() : nullptr, updateReason);
-    });
-    job->start();
+    QProcess owner;
+    owner.setProgram(QString::fromUtf8(helperLocation));
+    owner.setArguments(
+        {u"--mode"_s, QString::number(static_cast<int>(mode)), u"--reason"_s, QString::number(static_cast<int>(updateReason)), u"--uuid"_s, data->uuid()});
+    owner.startDetached();
 }
 
 void SystemClipboard::setMimeData(const QMimeData *data, SelectionMode mode, ClipboardUpdateReason updateReason)
@@ -421,4 +338,3 @@ void SystemClipboard::setMimeDataInternal(QMimeData *selectionMimeData, QMimeDat
 }
 
 #include "moc_systemclipboard.cpp"
-#include "systemclipboard.moc"
