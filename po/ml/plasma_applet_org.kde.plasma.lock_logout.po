@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeplasma-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-27 00:45+0000\n"
 "PO-Revision-Date: 2021-08-12 11:59+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -43,7 +43,7 @@ msgstr "സ്ക്രീൻ പൂട്ടുക"
 msgid "Shut Down"
 msgstr "അടയ്ക്കുക"
 
-#: ConfigGeneral.qml:56
+#: ConfigGeneral.qml:56 data.js:26
 #, fuzzy, kde-format
 #| msgid "Restart…"
 msgid "Restart"
@@ -76,8 +76,9 @@ msgid "Lock the screen"
 msgstr "സ്ക്രീൻ പൂട്ടുക"
 
 #: data.js:12
-#, kde-format
-msgid "Switch user"
+#, fuzzy, kde-format
+#| msgid "Switch user"
+msgid "Switch user…"
 msgstr "ഉപയോക്താവിനെ മാറ്റുക"
 
 #: data.js:13
@@ -86,19 +87,15 @@ msgid "Start a parallel session as a different user"
 msgstr "മറ്റൊരു ഉപയോക്താവായി ഒരു സമാന്തര സെഷൻ ആരംഭിക്കുക"
 
 #: data.js:19
-#, kde-format
-msgid "Shutdown…"
-msgstr "ഷട്ട്ഡൗൺ"
+#, fuzzy, kde-format
+#| msgid "Shutdown"
+msgid "Shut down"
+msgstr "അടയ്ക്കുക"
 
 #: data.js:20
 #, kde-format
 msgid "Turn off the computer"
 msgstr "കമ്പ്യൂട്ടർ ഓഫാക്കുക"
-
-#: data.js:26
-#, kde-format
-msgid "Restart…"
-msgstr "പുനരാരംഭിക്കുക…"
 
 #: data.js:27
 #, kde-format
@@ -107,8 +104,8 @@ msgstr "കമ്പ്യൂട്ടർ പുനഃരാരംഭിക്�
 
 #: data.js:33
 #, kde-format
-msgid "Logout…"
-msgstr "പുറത്തിറങ്ങുക"
+msgid "Log out"
+msgstr ""
 
 #: data.js:34
 #, kde-format
@@ -137,6 +134,15 @@ msgstr "സ്ലീപ് (റാമിലേക്ക് സസ്‌പെൻ
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "ഹൈബർ‌നേറ്റ് (ഡിസ്കിലേക്ക് സസ്‌പെൻഡ് ചെയ്യുക)"
+
+#~ msgid "Shutdown…"
+#~ msgstr "ഷട്ട്ഡൗൺ"
+
+#~ msgid "Restart…"
+#~ msgstr "പുനരാരംഭിക്കുക…"
+
+#~ msgid "Logout…"
+#~ msgstr "പുറത്തിറങ്ങുക"
 
 #~ msgid "Logout"
 #~ msgstr "പുറത്തിറങ്ങുക"

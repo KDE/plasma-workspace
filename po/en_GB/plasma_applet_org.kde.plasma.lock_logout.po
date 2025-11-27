@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-27 00:45+0000\n"
 "PO-Revision-Date: 2024-06-29 11:30+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -45,7 +45,7 @@ msgstr "Show logout screen"
 msgid "Shut Down"
 msgstr "Shut Down"
 
-#: ConfigGeneral.qml:56
+#: ConfigGeneral.qml:56 data.js:26
 #, kde-format
 msgid "Restart"
 msgstr "Restart"
@@ -77,8 +77,9 @@ msgid "Lock the screen"
 msgstr "Lock the screen"
 
 #: data.js:12
-#, kde-format
-msgid "Switch user"
+#, fuzzy, kde-format
+#| msgid "Switch user"
+msgid "Switch user…"
 msgstr "Switch user"
 
 #: data.js:13
@@ -87,19 +88,15 @@ msgid "Start a parallel session as a different user"
 msgstr "Start a parallel session as a different user"
 
 #: data.js:19
-#, kde-format
-msgid "Shutdown…"
-msgstr "Shutdown…"
+#, fuzzy, kde-format
+#| msgid "Shut Down"
+msgid "Shut down"
+msgstr "Shut Down"
 
 #: data.js:20
 #, kde-format
 msgid "Turn off the computer"
 msgstr "Turn off the computer"
-
-#: data.js:26
-#, kde-format
-msgid "Restart…"
-msgstr "Restart…"
 
 #: data.js:27
 #, kde-format
@@ -107,9 +104,10 @@ msgid "Reboot the computer"
 msgstr "Reboot the computer"
 
 #: data.js:33
-#, kde-format
-msgid "Logout…"
-msgstr "Logout…"
+#, fuzzy, kde-format
+#| msgid "Log Out"
+msgid "Log out"
+msgstr "Log Out"
 
 #: data.js:34
 #, kde-format
@@ -136,6 +134,15 @@ msgstr "Sleep (suspend to RAM)"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Hibernate (suspend to disk)"
+
+#~ msgid "Shutdown…"
+#~ msgstr "Shutdown…"
+
+#~ msgid "Restart…"
+#~ msgstr "Restart…"
+
+#~ msgid "Logout…"
+#~ msgstr "Logout…"
 
 #~ msgid "Logout"
 #~ msgstr "Logout"

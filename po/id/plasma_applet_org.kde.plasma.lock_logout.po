@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-27 00:45+0000\n"
 "PO-Revision-Date: 2024-10-02 19:24+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -48,7 +48,7 @@ msgstr "Tampilkan layar keluar log"
 msgid "Shut Down"
 msgstr "Matikan"
 
-#: ConfigGeneral.qml:56
+#: ConfigGeneral.qml:56 data.js:26
 #, kde-format
 msgid "Restart"
 msgstr "Nyalakan Ulang"
@@ -80,8 +80,9 @@ msgid "Lock the screen"
 msgstr "Kunci layar"
 
 #: data.js:12
-#, kde-format
-msgid "Switch user"
+#, fuzzy, kde-format
+#| msgid "Switch user"
+msgid "Switch user…"
 msgstr "Beralih pengguna"
 
 #: data.js:13
@@ -90,19 +91,15 @@ msgid "Start a parallel session as a different user"
 msgstr "Jalankan sesi paralel sebagai pengguna lain"
 
 #: data.js:19
-#, kde-format
-msgid "Shutdown…"
-msgstr "Matikan..."
+#, fuzzy, kde-format
+#| msgid "Shut Down"
+msgid "Shut down"
+msgstr "Matikan"
 
 #: data.js:20
 #, kde-format
 msgid "Turn off the computer"
 msgstr "Matikan komputer"
-
-#: data.js:26
-#, kde-format
-msgid "Restart…"
-msgstr "Nyalakan ulang..."
 
 #: data.js:27
 #, kde-format
@@ -110,9 +107,10 @@ msgid "Reboot the computer"
 msgstr "Nyalakan ulang komputer"
 
 #: data.js:33
-#, kde-format
-msgid "Logout…"
-msgstr "Keluar Log..."
+#, fuzzy, kde-format
+#| msgid "Log Out"
+msgid "Log out"
+msgstr "Keluar Log"
 
 #: data.js:34
 #, kde-format
@@ -139,6 +137,15 @@ msgstr "Tidur (suspensi ke RAM)"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Hibernasi (suspensi ke cakram)"
+
+#~ msgid "Shutdown…"
+#~ msgstr "Matikan..."
+
+#~ msgid "Restart…"
+#~ msgstr "Nyalakan ulang..."
+
+#~ msgid "Logout…"
+#~ msgstr "Keluar Log..."
 
 #~ msgid "Logout"
 #~ msgstr "Keluar"

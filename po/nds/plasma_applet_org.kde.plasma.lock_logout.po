@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-27 00:45+0000\n"
 "PO-Revision-Date: 2014-08-11 12:30+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -47,7 +47,7 @@ msgstr "Den Schirm afsluten"
 msgid "Shut Down"
 msgstr ""
 
-#: ConfigGeneral.qml:56
+#: ConfigGeneral.qml:56 data.js:26
 #, kde-format
 msgid "Restart"
 msgstr ""
@@ -80,8 +80,9 @@ msgid "Lock the screen"
 msgstr "Den Schirm afsluten"
 
 #: data.js:12
-#, kde-format
-msgid "Switch user"
+#, fuzzy, kde-format
+#| msgid "Switch user"
+msgid "Switch user…"
 msgstr "Bruker wesseln"
 
 #: data.js:13
@@ -91,7 +92,7 @@ msgstr "En nieg Törn as en anner Bruker anfangen"
 
 #: data.js:19
 #, kde-format
-msgid "Shutdown…"
+msgid "Shut down"
 msgstr ""
 
 #: data.js:20
@@ -100,11 +101,6 @@ msgstr ""
 msgid "Turn off the computer"
 msgstr "Afmellen, den Reekner utmaken oder nieg starten"
 
-#: data.js:26
-#, kde-format
-msgid "Restart…"
-msgstr ""
-
 #: data.js:27
 #, kde-format
 msgid "Reboot the computer"
@@ -112,7 +108,7 @@ msgstr ""
 
 #: data.js:33
 #, kde-format
-msgid "Logout…"
+msgid "Log out"
 msgstr ""
 
 #: data.js:34

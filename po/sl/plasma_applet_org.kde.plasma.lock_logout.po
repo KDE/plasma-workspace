@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-27 00:45+0000\n"
 "PO-Revision-Date: 2024-06-26 12:24+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -48,7 +48,7 @@ msgstr "Pokaži zaslon za odjavo"
 msgid "Shut Down"
 msgstr "Izklopi"
 
-#: ConfigGeneral.qml:56
+#: ConfigGeneral.qml:56 data.js:26
 #, kde-format
 msgid "Restart"
 msgstr "Ponovno zaženi"
@@ -80,8 +80,9 @@ msgid "Lock the screen"
 msgstr "Zakleni zaslon"
 
 #: data.js:12
-#, kde-format
-msgid "Switch user"
+#, fuzzy, kde-format
+#| msgid "Switch user"
+msgid "Switch user…"
 msgstr "Preklopi uporabnika"
 
 #: data.js:13
@@ -90,19 +91,15 @@ msgid "Start a parallel session as a different user"
 msgstr "Zaženi vzporedno sejo kot drug uporabnik"
 
 #: data.js:19
-#, kde-format
-msgid "Shutdown…"
-msgstr "Izklop…"
+#, fuzzy, kde-format
+#| msgid "Shut Down"
+msgid "Shut down"
+msgstr "Izklopi"
 
 #: data.js:20
 #, kde-format
 msgid "Turn off the computer"
 msgstr "Izklopi računalnik"
-
-#: data.js:26
-#, kde-format
-msgid "Restart…"
-msgstr "Ponovno zaženi…"
 
 #: data.js:27
 #, kde-format
@@ -110,9 +107,10 @@ msgid "Reboot the computer"
 msgstr "Ponovno zaženi računalnik"
 
 #: data.js:33
-#, kde-format
-msgid "Logout…"
-msgstr "Odjava…"
+#, fuzzy, kde-format
+#| msgid "Log Out"
+msgid "Log out"
+msgstr "Odjavi se"
 
 #: data.js:34
 #, kde-format
@@ -139,6 +137,15 @@ msgstr "Zaspi (začasno zaustavi v pomnilnik)"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "V mirovanje (začasno zaustavi na disk)"
+
+#~ msgid "Shutdown…"
+#~ msgstr "Izklop…"
+
+#~ msgid "Restart…"
+#~ msgstr "Ponovno zaženi…"
+
+#~ msgid "Logout…"
+#~ msgstr "Odjava…"
 
 #~ msgid "Logout"
 #~ msgstr "Odjava"

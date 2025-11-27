@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-27 00:45+0000\n"
 "PO-Revision-Date: 2023-05-03 22:36+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -45,7 +45,7 @@ msgstr ""
 msgid "Shut Down"
 msgstr ""
 
-#: ConfigGeneral.qml:56
+#: ConfigGeneral.qml:56 data.js:26
 #, kde-format
 msgid "Restart"
 msgstr ""
@@ -78,7 +78,7 @@ msgstr ""
 
 #: data.js:12
 #, kde-format
-msgid "Switch user"
+msgid "Switch user…"
 msgstr ""
 
 #: data.js:13
@@ -88,17 +88,12 @@ msgstr ""
 
 #: data.js:19
 #, kde-format
-msgid "Shutdown…"
+msgid "Shut down"
 msgstr ""
 
 #: data.js:20
 #, kde-format
 msgid "Turn off the computer"
-msgstr ""
-
-#: data.js:26
-#, kde-format
-msgid "Restart…"
 msgstr ""
 
 #: data.js:27
@@ -108,7 +103,7 @@ msgstr ""
 
 #: data.js:33
 #, kde-format
-msgid "Logout…"
+msgid "Log out"
 msgstr ""
 
 #: data.js:34

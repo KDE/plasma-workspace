@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-27 00:45+0000\n"
 "PO-Revision-Date: 2024-11-04 22:01\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -50,7 +50,7 @@ msgstr "Паказваць экран выхаду"
 msgid "Shut Down"
 msgstr "Выключыць"
 
-#: ConfigGeneral.qml:56
+#: ConfigGeneral.qml:56 data.js:26
 #, kde-format
 msgid "Restart"
 msgstr "Перазапусціць"
@@ -82,8 +82,9 @@ msgid "Lock the screen"
 msgstr "Заблакаваць экран"
 
 #: data.js:12
-#, kde-format
-msgid "Switch user"
+#, fuzzy, kde-format
+#| msgid "Switch user"
+msgid "Switch user…"
 msgstr "Пераключыць карыстальніка"
 
 #: data.js:13
@@ -92,19 +93,15 @@ msgid "Start a parallel session as a different user"
 msgstr "Запусціць паралельны сеанс ад імя іншага карыстальніка"
 
 #: data.js:19
-#, kde-format
-msgid "Shutdown…"
-msgstr "Выключыць…"
+#, fuzzy, kde-format
+#| msgid "Shut Down"
+msgid "Shut down"
+msgstr "Выключыць"
 
 #: data.js:20
 #, kde-format
 msgid "Turn off the computer"
 msgstr "Выключыць камп'ютар"
-
-#: data.js:26
-#, kde-format
-msgid "Restart…"
-msgstr "Перазапусціць…"
 
 #: data.js:27
 #, kde-format
@@ -112,9 +109,10 @@ msgid "Reboot the computer"
 msgstr "Перазапусціць камп’ютар"
 
 #: data.js:33
-#, kde-format
-msgid "Logout…"
-msgstr "Выйсці…"
+#, fuzzy, kde-format
+#| msgid "Log Out"
+msgid "Log out"
+msgstr "Выйсці"
 
 #: data.js:34
 #, kde-format
@@ -141,6 +139,15 @@ msgstr "Прыпыніць у RAM(кэшаванне у аператыўную �
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Перавесці ў рэжым сну (кэшаванне на цвёрды дыск)"
+
+#~ msgid "Shutdown…"
+#~ msgstr "Выключыць…"
+
+#~ msgid "Restart…"
+#~ msgstr "Перазапусціць…"
+
+#~ msgid "Logout…"
+#~ msgstr "Выйсці…"
 
 #~ msgid "Logout"
 #~ msgstr "Выйсці"

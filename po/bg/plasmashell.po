@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-24 00:45+0000\n"
+"POT-Creation-Date: 2025-11-27 00:45+0000\n"
 "PO-Revision-Date: 2025-10-05 15:22+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -368,58 +368,58 @@ msgstr "%1 %2 on %3"
 msgid "Disconnected Screen %1"
 msgstr "Прекъснат екран %1"
 
-#: shellcorona.cpp:182 shellcorona.cpp:184
+#: shellcorona.cpp:174 shellcorona.cpp:176
 #, kde-format
 msgid "Show Desktop"
 msgstr "Показване на работния плот"
 
-#: shellcorona.cpp:184
+#: shellcorona.cpp:176
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Скриване на работния плот"
 
-#: shellcorona.cpp:199
+#: shellcorona.cpp:191
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr "Активиране на Стартер на приложения"
 
-#: shellcorona.cpp:207
+#: shellcorona.cpp:199
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Показване на превключвател на дейности"
 
-#: shellcorona.cpp:216
+#: shellcorona.cpp:208
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Превключване към предишна дейност"
 
-#: shellcorona.cpp:224
+#: shellcorona.cpp:216
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Превключване към следваща дейност"
 
-#: shellcorona.cpp:239
+#: shellcorona.cpp:231
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "Активиране на запис от управление на задачите %1"
 
-#: shellcorona.cpp:271
+#: shellcorona.cpp:266
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "Настройки на работния плот и панелите…"
 
-#: shellcorona.cpp:293
+#: shellcorona.cpp:288
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Преместване на фокуса на клавиатурата между панелите"
 
-#: shellcorona.cpp:2245
+#: shellcorona.cpp:2240
 #, kde-format
 msgid "Add Panel"
 msgstr "Добавяне на панел"
 
-#: shellcorona.cpp:2328
+#: shellcorona.cpp:2323
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

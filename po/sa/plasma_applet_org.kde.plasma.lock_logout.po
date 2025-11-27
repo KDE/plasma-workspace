@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-27 00:45+0000\n"
 "PO-Revision-Date: 2025-03-02 14:46+0530\n"
 "Last-Translator: Shreekant Kalwar <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -47,7 +47,7 @@ msgstr "लॉगआउट् पटलं दर्शयतु"
 msgid "Shut Down"
 msgstr "शट डाउन"
 
-#: ConfigGeneral.qml:56
+#: ConfigGeneral.qml:56 data.js:26
 #, kde-format
 msgid "Restart"
 msgstr "पुनः आरभत"
@@ -79,8 +79,9 @@ msgid "Lock the screen"
 msgstr "पटलं ताडयन्तु"
 
 #: data.js:12
-#, kde-format
-msgid "Switch user"
+#, fuzzy, kde-format
+#| msgid "Switch user"
+msgid "Switch user…"
 msgstr "उपयोक्तारं स्विच कुर्वन्तु"
 
 #: data.js:13
@@ -89,19 +90,15 @@ msgid "Start a parallel session as a different user"
 msgstr "भिन्नप्रयोक्तृरूपेण समानान्तरसत्रं आरभत"
 
 #: data.js:19
-#, kde-format
-msgid "Shutdown…"
-msgstr "शटडाउन..."
+#, fuzzy, kde-format
+#| msgid "Shut Down"
+msgid "Shut down"
+msgstr "शट डाउन"
 
 #: data.js:20
 #, kde-format
 msgid "Turn off the computer"
 msgstr "सङ्गणकं निष्क्रियं कुर्वन्तु"
-
-#: data.js:26
-#, kde-format
-msgid "Restart…"
-msgstr "पुनः आरभत..."
 
 #: data.js:27
 #, kde-format
@@ -109,9 +106,10 @@ msgid "Reboot the computer"
 msgstr "सङ्गणकं पुनः आरभत"
 
 #: data.js:33
-#, kde-format
-msgid "Logout…"
-msgstr "लॉगआउट्..."
+#, fuzzy, kde-format
+#| msgid "Log Out"
+msgid "Log out"
+msgstr "निर्गच्छन्तु"
 
 #: data.js:34
 #, kde-format
@@ -138,3 +136,12 @@ msgstr "निद्रा (रैम प्रति निलम्बनम�
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "हाइबरनेट (डिस्कं प्रति निलम्बनम्)"
+
+#~ msgid "Shutdown…"
+#~ msgstr "शटडाउन..."
+
+#~ msgid "Restart…"
+#~ msgstr "पुनः आरभत..."
+
+#~ msgid "Logout…"
+#~ msgstr "लॉगआउट्..."

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-27 00:45+0000\n"
 "PO-Revision-Date: 2021-05-26 21:12+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -48,7 +48,7 @@ msgstr "Khoá màn hình"
 msgid "Shut Down"
 msgstr "Tắt"
 
-#: ConfigGeneral.qml:56
+#: ConfigGeneral.qml:56 data.js:26
 #, fuzzy, kde-format
 #| msgid "Restart…"
 msgid "Restart"
@@ -81,8 +81,9 @@ msgid "Lock the screen"
 msgstr "Khoá màn hình"
 
 #: data.js:12
-#, kde-format
-msgid "Switch user"
+#, fuzzy, kde-format
+#| msgid "Switch user"
+msgid "Switch user…"
 msgstr "Chuyển người dùng"
 
 #: data.js:13
@@ -91,19 +92,15 @@ msgid "Start a parallel session as a different user"
 msgstr "Khởi động một phiên song song với một người dùng khác"
 
 #: data.js:19
-#, kde-format
-msgid "Shutdown…"
-msgstr "Tắt…"
+#, fuzzy, kde-format
+#| msgid "Shutdown"
+msgid "Shut down"
+msgstr "Tắt"
 
 #: data.js:20
 #, kde-format
 msgid "Turn off the computer"
 msgstr "Tắt máy tính"
-
-#: data.js:26
-#, kde-format
-msgid "Restart…"
-msgstr "Khởi động lại…"
 
 #: data.js:27
 #, kde-format
@@ -112,8 +109,8 @@ msgstr "Khởi động lại máy tính"
 
 #: data.js:33
 #, kde-format
-msgid "Logout…"
-msgstr "Đăng xuất…"
+msgid "Log out"
+msgstr ""
 
 #: data.js:34
 #, kde-format
@@ -142,6 +139,15 @@ msgstr "Ngủ (lưu trạng thái vào RAM)"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Ngủ đông (lưu trạng thái vào đĩa)"
+
+#~ msgid "Shutdown…"
+#~ msgstr "Tắt…"
+
+#~ msgid "Restart…"
+#~ msgstr "Khởi động lại…"
+
+#~ msgid "Logout…"
+#~ msgstr "Đăng xuất…"
 
 #~ msgid "Logout"
 #~ msgstr "Đăng xuất"

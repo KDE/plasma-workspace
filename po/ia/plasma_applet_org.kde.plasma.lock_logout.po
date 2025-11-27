@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-27 00:45+0000\n"
 "PO-Revision-Date: 2024-06-25 09:43+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -45,7 +45,7 @@ msgstr "Monstra Schermo de clausura de session"
 msgid "Shut Down"
 msgstr "Arresto (shut down)"
 
-#: ConfigGeneral.qml:56
+#: ConfigGeneral.qml:56 data.js:26
 #, kde-format
 msgid "Restart"
 msgstr "Re-Initia"
@@ -77,8 +77,9 @@ msgid "Lock the screen"
 msgstr "Bloca le schermo"
 
 #: data.js:12
-#, kde-format
-msgid "Switch user"
+#, fuzzy, kde-format
+#| msgid "Switch user"
+msgid "Switch user…"
 msgstr "Commuta Usator"
 
 #: data.js:13
@@ -87,19 +88,15 @@ msgid "Start a parallel session as a different user"
 msgstr "Initia un session parallel como differente usator"
 
 #: data.js:19
-#, kde-format
-msgid "Shutdown…"
-msgstr "Arresto (Shutdown)…"
+#, fuzzy, kde-format
+#| msgid "Shut Down"
+msgid "Shut down"
+msgstr "Arresto (shut down)"
 
 #: data.js:20
 #, kde-format
 msgid "Turn off the computer"
 msgstr "Extingue le computator"
-
-#: data.js:26
-#, kde-format
-msgid "Restart…"
-msgstr "Re-Initia..."
 
 #: data.js:27
 #, kde-format
@@ -107,9 +104,10 @@ msgid "Reboot the computer"
 msgstr "Re-starta le computator"
 
 #: data.js:33
-#, kde-format
-msgid "Logout…"
-msgstr "Clausura de session…"
+#, fuzzy, kde-format
+#| msgid "Log Out"
+msgid "Log out"
+msgstr "Claude session"
 
 #: data.js:34
 #, kde-format
@@ -136,6 +134,15 @@ msgstr "Dormi (suspende a RAM)"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Hiberna (Suspende a Disco)"
+
+#~ msgid "Shutdown…"
+#~ msgstr "Arresto (Shutdown)…"
+
+#~ msgid "Restart…"
+#~ msgstr "Re-Initia..."
+
+#~ msgid "Logout…"
+#~ msgstr "Clausura de session…"
 
 #~ msgid "Logout"
 #~ msgstr "Clausura de session"

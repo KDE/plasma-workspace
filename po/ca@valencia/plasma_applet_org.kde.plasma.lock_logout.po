@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-27 00:45+0000\n"
 "PO-Revision-Date: 2024-06-25 12:38+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -49,7 +49,7 @@ msgstr "Mostra la pantalla d'eixida"
 msgid "Shut Down"
 msgstr "Para"
 
-#: ConfigGeneral.qml:56
+#: ConfigGeneral.qml:56 data.js:26
 #, kde-format
 msgid "Restart"
 msgstr "Reinicia"
@@ -81,8 +81,9 @@ msgid "Lock the screen"
 msgstr "Bloqueja la pantalla"
 
 #: data.js:12
-#, kde-format
-msgid "Switch user"
+#, fuzzy, kde-format
+#| msgid "Switch user"
+msgid "Switch user…"
 msgstr "Canvia d'usuari"
 
 #: data.js:13
@@ -91,19 +92,15 @@ msgid "Start a parallel session as a different user"
 msgstr "Inicia una sessió en paral·lel amb un usuari diferent"
 
 #: data.js:19
-#, kde-format
-msgid "Shutdown…"
-msgstr "Para…"
+#, fuzzy, kde-format
+#| msgid "Shut Down"
+msgid "Shut down"
+msgstr "Para"
 
 #: data.js:20
 #, kde-format
 msgid "Turn off the computer"
 msgstr "Apaga l'ordinador"
-
-#: data.js:26
-#, kde-format
-msgid "Restart…"
-msgstr "Reinicia…"
 
 #: data.js:27
 #, kde-format
@@ -111,9 +108,10 @@ msgid "Reboot the computer"
 msgstr "Reinicia l'ordinador"
 
 #: data.js:33
-#, kde-format
-msgid "Logout…"
-msgstr "Eixida…"
+#, fuzzy, kde-format
+#| msgid "Log Out"
+msgid "Log out"
+msgstr "Eixida"
 
 #: data.js:34
 #, kde-format
@@ -140,3 +138,12 @@ msgstr "Adorm (suspén a la RAM)"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Hiberna (suspén al disc)"
+
+#~ msgid "Shutdown…"
+#~ msgstr "Para…"
+
+#~ msgid "Restart…"
+#~ msgstr "Reinicia…"
+
+#~ msgid "Logout…"
+#~ msgstr "Eixida…"

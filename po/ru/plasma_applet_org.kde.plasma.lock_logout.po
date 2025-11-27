@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-27 00:45+0000\n"
 "PO-Revision-Date: 2024-06-25 12:51+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -54,7 +54,7 @@ msgstr "Экран завершения работы"
 msgid "Shut Down"
 msgstr "Выключить"
 
-#: ConfigGeneral.qml:56
+#: ConfigGeneral.qml:56 data.js:26
 #, kde-format
 msgid "Restart"
 msgstr "Перезагрузка"
@@ -90,8 +90,9 @@ msgid "Lock the screen"
 msgstr "Блокировка экрана"
 
 #: data.js:12
-#, kde-format
-msgid "Switch user"
+#, fuzzy, kde-format
+#| msgid "Switch user"
+msgid "Switch user…"
 msgstr "Смена пользователя"
 
 #: data.js:13
@@ -100,9 +101,10 @@ msgid "Start a parallel session as a different user"
 msgstr "Начать параллельный сеанс от имени другого пользователя"
 
 #: data.js:19
-#, kde-format
-msgid "Shutdown…"
-msgstr "Выключить…"
+#, fuzzy, kde-format
+#| msgid "Shut Down"
+msgid "Shut down"
+msgstr "Выключить"
 
 # shutdown-method
 #: data.js:20
@@ -110,20 +112,16 @@ msgstr "Выключить…"
 msgid "Turn off the computer"
 msgstr "Выключить компьютер"
 
-#: data.js:26
-#, kde-format
-msgid "Restart…"
-msgstr "Перезагрузить…"
-
 #: data.js:27
 #, kde-format
 msgid "Reboot the computer"
 msgstr "Перезагрузить компьютер"
 
 #: data.js:33
-#, kde-format
-msgid "Logout…"
-msgstr "Завершить сеанс…"
+#, fuzzy, kde-format
+#| msgid "Log Out"
+msgid "Log out"
+msgstr "Завершить сеанс"
 
 #: data.js:34
 #, kde-format
@@ -154,6 +152,15 @@ msgstr "Приостановить с сохранением в ОЗУ"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Выключить с сохранением состояния на диск"
+
+#~ msgid "Shutdown…"
+#~ msgstr "Выключить…"
+
+#~ msgid "Restart…"
+#~ msgstr "Перезагрузить…"
+
+#~ msgid "Logout…"
+#~ msgstr "Завершить сеанс…"
 
 #~ msgid "Logout"
 #~ msgstr "Выйти"

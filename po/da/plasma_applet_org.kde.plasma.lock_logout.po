@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-27 00:45+0000\n"
 "PO-Revision-Date: 2024-07-08 12:29+0200\n"
 "Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -46,7 +46,7 @@ msgstr "Vis log ud-skærm"
 msgid "Shut Down"
 msgstr "Luk ned"
 
-#: ConfigGeneral.qml:56
+#: ConfigGeneral.qml:56 data.js:26
 #, kde-format
 msgid "Restart"
 msgstr "Genstart"
@@ -78,8 +78,9 @@ msgid "Lock the screen"
 msgstr "Lås skærmen"
 
 #: data.js:12
-#, kde-format
-msgid "Switch user"
+#, fuzzy, kde-format
+#| msgid "Switch user"
+msgid "Switch user…"
 msgstr "Skift bruger"
 
 #: data.js:13
@@ -88,19 +89,15 @@ msgid "Start a parallel session as a different user"
 msgstr "Start en parallel session som en anden bruger"
 
 #: data.js:19
-#, kde-format
-msgid "Shutdown…"
-msgstr "Luk ned…"
+#, fuzzy, kde-format
+#| msgid "Shut Down"
+msgid "Shut down"
+msgstr "Luk ned"
 
 #: data.js:20
 #, kde-format
 msgid "Turn off the computer"
 msgstr "Sluk computeren"
-
-#: data.js:26
-#, kde-format
-msgid "Restart…"
-msgstr "Genstart…"
 
 #: data.js:27
 #, kde-format
@@ -108,9 +105,10 @@ msgid "Reboot the computer"
 msgstr "Genstart computeren"
 
 #: data.js:33
-#, kde-format
-msgid "Logout…"
-msgstr "Log ud…"
+#, fuzzy, kde-format
+#| msgid "Log Out"
+msgid "Log out"
+msgstr "Log ud"
 
 #: data.js:34
 #, kde-format
@@ -137,6 +135,15 @@ msgstr "Slumre (suspendér til ram)"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Dvale (suspendér til disk)"
+
+#~ msgid "Shutdown…"
+#~ msgstr "Luk ned…"
+
+#~ msgid "Restart…"
+#~ msgstr "Genstart…"
+
+#~ msgid "Logout…"
+#~ msgstr "Log ud…"
 
 #~ msgid "Logout"
 #~ msgstr "Log ud"

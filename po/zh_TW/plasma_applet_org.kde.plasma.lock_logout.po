@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-27 00:45+0000\n"
 "PO-Revision-Date: 2025-01-24 22:08+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -50,7 +50,7 @@ msgstr "顯示登出畫面"
 msgid "Shut Down"
 msgstr "關機"
 
-#: ConfigGeneral.qml:56
+#: ConfigGeneral.qml:56 data.js:26
 #, kde-format
 msgid "Restart"
 msgstr "重新啟動"
@@ -82,8 +82,9 @@ msgid "Lock the screen"
 msgstr "鎖定螢幕"
 
 #: data.js:12
-#, kde-format
-msgid "Switch user"
+#, fuzzy, kde-format
+#| msgid "Switch user"
+msgid "Switch user…"
 msgstr "切換使用者"
 
 #: data.js:13
@@ -92,19 +93,15 @@ msgid "Start a parallel session as a different user"
 msgstr "以另一個使用者開始平行的作業階段"
 
 #: data.js:19
-#, kde-format
-msgid "Shutdown…"
-msgstr "關機…"
+#, fuzzy, kde-format
+#| msgid "Shut Down"
+msgid "Shut down"
+msgstr "關機"
 
 #: data.js:20
 #, kde-format
 msgid "Turn off the computer"
 msgstr "關閉這台電腦"
-
-#: data.js:26
-#, kde-format
-msgid "Restart…"
-msgstr "重新啟動…"
 
 #: data.js:27
 #, kde-format
@@ -112,9 +109,10 @@ msgid "Reboot the computer"
 msgstr "重新啟動電腦"
 
 #: data.js:33
-#, kde-format
-msgid "Logout…"
-msgstr "登出…"
+#, fuzzy, kde-format
+#| msgid "Log Out"
+msgid "Log out"
+msgstr "登出"
 
 #: data.js:34
 #, kde-format
@@ -141,6 +139,15 @@ msgstr "睡眠（暫停並儲存到記憶體）"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "休眠（暫停並儲存到磁碟）"
+
+#~ msgid "Shutdown…"
+#~ msgstr "關機…"
+
+#~ msgid "Restart…"
+#~ msgstr "重新啟動…"
+
+#~ msgid "Logout…"
+#~ msgstr "登出…"
 
 #~ msgid "Logout"
 #~ msgstr "登出"

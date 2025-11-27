@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-27 00:45+0000\n"
 "PO-Revision-Date: 2019-09-15 13:55+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -46,7 +46,7 @@ msgstr "Экранро қулф кардан"
 msgid "Shut Down"
 msgstr ""
 
-#: ConfigGeneral.qml:56
+#: ConfigGeneral.qml:56 data.js:26
 #, kde-format
 msgid "Restart"
 msgstr ""
@@ -78,8 +78,9 @@ msgid "Lock the screen"
 msgstr "Экранро қулф кардан"
 
 #: data.js:12
-#, kde-format
-msgid "Switch user"
+#, fuzzy, kde-format
+#| msgid "Switch user"
+msgid "Switch user…"
 msgstr "Иваз кардани корбар"
 
 #: data.js:13
@@ -89,7 +90,7 @@ msgstr "Оғоз кардани ҷаласаи мувозӣ ҳамчун кор�
 
 #: data.js:19
 #, kde-format
-msgid "Shutdown…"
+msgid "Shut down"
 msgstr ""
 
 #: data.js:20
@@ -98,11 +99,6 @@ msgstr ""
 msgid "Turn off the computer"
 msgstr "Компютерро хомӯш кунед, аз нав ба кор дароред ё аз низом бароед"
 
-#: data.js:26
-#, kde-format
-msgid "Restart…"
-msgstr ""
-
 #: data.js:27
 #, kde-format
 msgid "Reboot the computer"
@@ -110,7 +106,7 @@ msgstr ""
 
 #: data.js:33
 #, kde-format
-msgid "Logout…"
+msgid "Log out"
 msgstr ""
 
 #: data.js:34

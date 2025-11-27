@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-27 00:45+0000\n"
 "PO-Revision-Date: 2024-06-25 16:57+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -46,7 +46,7 @@ msgstr "Показване на екран за напускане на сеси
 msgid "Shut Down"
 msgstr "Изключване"
 
-#: ConfigGeneral.qml:56
+#: ConfigGeneral.qml:56 data.js:26
 #, kde-format
 msgid "Restart"
 msgstr "Рестартиране"
@@ -78,8 +78,9 @@ msgid "Lock the screen"
 msgstr "Заключване на екрана"
 
 #: data.js:12
-#, kde-format
-msgid "Switch user"
+#, fuzzy, kde-format
+#| msgid "Switch user"
+msgid "Switch user…"
 msgstr "Превключване на потребител"
 
 #: data.js:13
@@ -88,19 +89,15 @@ msgid "Start a parallel session as a different user"
 msgstr "Започване на паралелна сесия като различен потребител"
 
 #: data.js:19
-#, kde-format
-msgid "Shutdown…"
-msgstr "Изключване…"
+#, fuzzy, kde-format
+#| msgid "Shut Down"
+msgid "Shut down"
+msgstr "Изключване"
 
 #: data.js:20
 #, kde-format
 msgid "Turn off the computer"
 msgstr "Изключване на компютъра"
-
-#: data.js:26
-#, kde-format
-msgid "Restart…"
-msgstr "Рестартиране…"
 
 #: data.js:27
 #, kde-format
@@ -108,9 +105,10 @@ msgid "Reboot the computer"
 msgstr "Рестартиране на компютъра"
 
 #: data.js:33
-#, kde-format
-msgid "Logout…"
-msgstr "Излизане от сесия…"
+#, fuzzy, kde-format
+#| msgid "Log Out"
+msgid "Log out"
+msgstr "Излизане от сесия"
 
 #: data.js:34
 #, kde-format
@@ -137,3 +135,12 @@ msgstr "Приспиване (в паметта)"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Хибернация (записване на диск)"
+
+#~ msgid "Shutdown…"
+#~ msgstr "Изключване…"
+
+#~ msgid "Restart…"
+#~ msgstr "Рестартиране…"
+
+#~ msgid "Logout…"
+#~ msgstr "Излизане от сесия…"

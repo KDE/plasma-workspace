@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-27 00:45+0000\n"
 "PO-Revision-Date: 2024-11-28 23:46+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -45,7 +45,7 @@ msgstr "로그아웃 화면 표시"
 msgid "Shut Down"
 msgstr "컴퓨터 끄기"
 
-#: ConfigGeneral.qml:56
+#: ConfigGeneral.qml:56 data.js:26
 #, kde-format
 msgid "Restart"
 msgstr "다시 시작"
@@ -77,8 +77,9 @@ msgid "Lock the screen"
 msgstr "화면 잠그기"
 
 #: data.js:12
-#, kde-format
-msgid "Switch user"
+#, fuzzy, kde-format
+#| msgid "Switch user"
+msgid "Switch user…"
 msgstr "사용자 전환"
 
 #: data.js:13
@@ -87,19 +88,15 @@ msgid "Start a parallel session as a different user"
 msgstr "다른 사용자로 새 세션 시작하기"
 
 #: data.js:19
-#, kde-format
-msgid "Shutdown…"
-msgstr "컴퓨터 끄기…"
+#, fuzzy, kde-format
+#| msgid "Shut Down"
+msgid "Shut down"
+msgstr "컴퓨터 끄기"
 
 #: data.js:20
 #, kde-format
 msgid "Turn off the computer"
 msgstr "컴퓨터 끄기"
-
-#: data.js:26
-#, kde-format
-msgid "Restart…"
-msgstr "다시 시작…"
 
 #: data.js:27
 #, kde-format
@@ -107,9 +104,10 @@ msgid "Reboot the computer"
 msgstr "컴퓨터 다시 시작"
 
 #: data.js:33
-#, kde-format
-msgid "Logout…"
-msgstr "로그아웃…"
+#, fuzzy, kde-format
+#| msgid "Log Out"
+msgid "Log out"
+msgstr "로그아웃"
 
 #: data.js:34
 #, kde-format
@@ -136,6 +134,15 @@ msgstr "대기 모드(RAM 절전)"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "최대 절전 모드(디스크 절전)"
+
+#~ msgid "Shutdown…"
+#~ msgstr "컴퓨터 끄기…"
+
+#~ msgid "Restart…"
+#~ msgstr "다시 시작…"
+
+#~ msgid "Logout…"
+#~ msgstr "로그아웃…"
 
 #~ msgid "Logout"
 #~ msgstr "로그아웃"

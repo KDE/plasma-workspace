@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-27 00:45+0000\n"
 "PO-Revision-Date: 2024-06-25 05:22+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -46,7 +46,7 @@ msgstr "გასვლის ეკრანის ჩვენება"
 msgid "Shut Down"
 msgstr "გამორთვა"
 
-#: ConfigGeneral.qml:56
+#: ConfigGeneral.qml:56 data.js:26
 #, kde-format
 msgid "Restart"
 msgstr "გადატვირთვა"
@@ -78,8 +78,9 @@ msgid "Lock the screen"
 msgstr "ეკრანის ჩაკეტვა"
 
 #: data.js:12
-#, kde-format
-msgid "Switch user"
+#, fuzzy, kde-format
+#| msgid "Switch user"
+msgid "Switch user…"
 msgstr "მომხმარებლის გადართვა"
 
 #: data.js:13
@@ -88,19 +89,15 @@ msgid "Start a parallel session as a different user"
 msgstr "სხვა მომხმარებლით პარალელური სესიის გაშვება"
 
 #: data.js:19
-#, kde-format
-msgid "Shutdown…"
-msgstr "გამორთვა…"
+#, fuzzy, kde-format
+#| msgid "Shut Down"
+msgid "Shut down"
+msgstr "გამორთვა"
 
 #: data.js:20
 #, kde-format
 msgid "Turn off the computer"
 msgstr "კომპიუტერის გამორთვა"
-
-#: data.js:26
-#, kde-format
-msgid "Restart…"
-msgstr "გადატვირთვა…"
 
 #: data.js:27
 #, kde-format
@@ -108,9 +105,10 @@ msgid "Reboot the computer"
 msgstr "კომპიუტერის გადატვირთვა"
 
 #: data.js:33
-#, kde-format
-msgid "Logout…"
-msgstr "გამოსვლა…"
+#, fuzzy, kde-format
+#| msgid "Log Out"
+msgid "Log out"
+msgstr "გასვლა"
 
 #: data.js:34
 #, kde-format
@@ -137,6 +135,15 @@ msgstr "ძილი (RAM-ში)"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "პროგრამული ძილი (მეხსირების დისკზე დამახსოვრებით)"
+
+#~ msgid "Shutdown…"
+#~ msgstr "გამორთვა…"
+
+#~ msgid "Restart…"
+#~ msgstr "გადატვირთვა…"
+
+#~ msgid "Logout…"
+#~ msgstr "გამოსვლა…"
 
 #~ msgid "Logout"
 #~ msgstr "გასვლა"

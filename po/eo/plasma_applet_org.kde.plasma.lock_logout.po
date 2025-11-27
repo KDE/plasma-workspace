@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-27 00:45+0000\n"
 "PO-Revision-Date: 2024-06-28 16:51+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: eo <kde-i18n-doc@kde.org>\n"
@@ -47,7 +47,7 @@ msgstr "Montri elsalutan ekranon"
 msgid "Shut Down"
 msgstr "Fermi Sistemon"
 
-#: ConfigGeneral.qml:56
+#: ConfigGeneral.qml:56 data.js:26
 #, kde-format
 msgid "Restart"
 msgstr "Restartigi"
@@ -79,8 +79,9 @@ msgid "Lock the screen"
 msgstr "Ŝlosi la ekranon"
 
 #: data.js:12
-#, kde-format
-msgid "Switch user"
+#, fuzzy, kde-format
+#| msgid "Switch user"
+msgid "Switch user…"
 msgstr "Ŝalti uzanton"
 
 #: data.js:13
@@ -89,19 +90,15 @@ msgid "Start a parallel session as a different user"
 msgstr "Starti paralelan seancon kiel alia uzanto"
 
 #: data.js:19
-#, kde-format
-msgid "Shutdown…"
-msgstr "Malŝalti…"
+#, fuzzy, kde-format
+#| msgid "Shut Down"
+msgid "Shut down"
+msgstr "Fermi Sistemon"
 
 #: data.js:20
 #, kde-format
 msgid "Turn off the computer"
 msgstr "Malŝalti la komputilon"
-
-#: data.js:26
-#, kde-format
-msgid "Restart…"
-msgstr "Restartigi…"
 
 #: data.js:27
 #, kde-format
@@ -109,9 +106,10 @@ msgid "Reboot the computer"
 msgstr "Restartigi la komputilon"
 
 #: data.js:33
-#, kde-format
-msgid "Logout…"
-msgstr "Elsaluti…"
+#, fuzzy, kde-format
+#| msgid "Log Out"
+msgid "Log out"
+msgstr "Elsaluti"
 
 #: data.js:34
 #, kde-format
@@ -138,3 +136,12 @@ msgstr "Dormi (halteti al RAM)"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Pasivumigi (halteti al disko)"
+
+#~ msgid "Shutdown…"
+#~ msgstr "Malŝalti…"
+
+#~ msgid "Restart…"
+#~ msgstr "Restartigi…"
+
+#~ msgid "Logout…"
+#~ msgstr "Elsaluti…"

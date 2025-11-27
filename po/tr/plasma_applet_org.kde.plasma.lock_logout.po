@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-27 00:45+0000\n"
 "PO-Revision-Date: 2024-06-26 01:02+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -50,7 +50,7 @@ msgstr "Oturumu kapat ekranını göster"
 msgid "Shut Down"
 msgstr "Kapat"
 
-#: ConfigGeneral.qml:56
+#: ConfigGeneral.qml:56 data.js:26
 #, kde-format
 msgid "Restart"
 msgstr "Yeniden Başlat"
@@ -82,8 +82,9 @@ msgid "Lock the screen"
 msgstr "Ekranı kilitle"
 
 #: data.js:12
-#, kde-format
-msgid "Switch user"
+#, fuzzy, kde-format
+#| msgid "Switch user"
+msgid "Switch user…"
 msgstr "Kullanıcı değiştir"
 
 #: data.js:13
@@ -92,19 +93,15 @@ msgid "Start a parallel session as a different user"
 msgstr "Başka bir kullanıcı olarak paralel oturum başlat"
 
 #: data.js:19
-#, kde-format
-msgid "Shutdown…"
-msgstr "Kapat…"
+#, fuzzy, kde-format
+#| msgid "Shut Down"
+msgid "Shut down"
+msgstr "Kapat"
 
 #: data.js:20
 #, kde-format
 msgid "Turn off the computer"
 msgstr "Bilgisayarı kapat"
-
-#: data.js:26
-#, kde-format
-msgid "Restart…"
-msgstr "Yeniden Başlat…"
 
 #: data.js:27
 #, kde-format
@@ -112,9 +109,10 @@ msgid "Reboot the computer"
 msgstr "Bilgisayarı yeniden başlat"
 
 #: data.js:33
-#, kde-format
-msgid "Logout…"
-msgstr "Oturumu Kapat…"
+#, fuzzy, kde-format
+#| msgid "Log Out"
+msgid "Log out"
+msgstr "Oturumu Kapat"
 
 #: data.js:34
 #, kde-format
@@ -141,3 +139,12 @@ msgstr "Uyut (bellek kullanarak askıya al)"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Derin uykuya geçir (disk kullanarak askıya al)"
+
+#~ msgid "Shutdown…"
+#~ msgstr "Kapat…"
+
+#~ msgid "Restart…"
+#~ msgstr "Yeniden Başlat…"
+
+#~ msgid "Logout…"
+#~ msgstr "Oturumu Kapat…"

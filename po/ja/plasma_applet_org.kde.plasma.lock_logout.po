@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-27 00:45+0000\n"
 "PO-Revision-Date: 2022-08-18 09:24+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -51,7 +51,7 @@ msgstr "スクリーンをロック"
 msgid "Shut Down"
 msgstr "シャットダウン"
 
-#: ConfigGeneral.qml:56
+#: ConfigGeneral.qml:56 data.js:26
 #, fuzzy, kde-format
 #| msgid "Restart…"
 msgid "Restart"
@@ -84,8 +84,9 @@ msgid "Lock the screen"
 msgstr "スクリーンをロック"
 
 #: data.js:12
-#, kde-format
-msgid "Switch user"
+#, fuzzy, kde-format
+#| msgid "Switch user"
+msgid "Switch user…"
 msgstr "ユーザを切り替え"
 
 #: data.js:13
@@ -94,19 +95,15 @@ msgid "Start a parallel session as a different user"
 msgstr "現在のセッションと並行して、別のユーザとしてセッションを開始"
 
 #: data.js:19
-#, kde-format
-msgid "Shutdown…"
-msgstr "シャットダウン..."
+#, fuzzy, kde-format
+#| msgid "Shutdown"
+msgid "Shut down"
+msgstr "シャットダウン"
 
 #: data.js:20
 #, kde-format
 msgid "Turn off the computer"
 msgstr "コンピュータを停止"
-
-#: data.js:26
-#, kde-format
-msgid "Restart…"
-msgstr "再起動..."
 
 #: data.js:27
 #, kde-format
@@ -115,8 +112,8 @@ msgstr "コンピュータを再起動"
 
 #: data.js:33
 #, kde-format
-msgid "Logout…"
-msgstr "ログアウト..."
+msgid "Log out"
+msgstr ""
 
 #: data.js:34
 #, kde-format
@@ -145,3 +142,12 @@ msgstr "スリープ (作業状態をメモリに保存)"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "ハイバネート (作業状態をディスクに保存)"
+
+#~ msgid "Shutdown…"
+#~ msgstr "シャットダウン..."
+
+#~ msgid "Restart…"
+#~ msgstr "再起動..."
+
+#~ msgid "Logout…"
+#~ msgstr "ログアウト..."

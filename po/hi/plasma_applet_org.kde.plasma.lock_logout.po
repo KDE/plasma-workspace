@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-27 00:45+0000\n"
 "PO-Revision-Date: 2022-02-26 11:47+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -51,7 +51,7 @@ msgstr "लॉगआउट बटन दिखाएँ"
 msgid "Shut Down"
 msgstr "बंद करें"
 
-#: ConfigGeneral.qml:56
+#: ConfigGeneral.qml:56 data.js:26
 #, fuzzy, kde-format
 #| msgid "Restart…"
 msgid "Restart"
@@ -84,8 +84,9 @@ msgid "Lock the screen"
 msgstr "स्क्रीन पर ताला लगाएँ"
 
 #: data.js:12
-#, kde-format
-msgid "Switch user"
+#, fuzzy, kde-format
+#| msgid "Switch user"
+msgid "Switch user…"
 msgstr "उपयोक्ता बदलें"
 
 #: data.js:13
@@ -94,19 +95,15 @@ msgid "Start a parallel session as a different user"
 msgstr "किसी भिन्न उपयोक्ता के रूप में समानांतर सत्र प्रारंभ करें"
 
 #: data.js:19
-#, kde-format
-msgid "Shutdown…"
-msgstr "बंद करें…"
+#, fuzzy, kde-format
+#| msgid "Shutdown"
+msgid "Shut down"
+msgstr "बंद करें"
 
 #: data.js:20
 #, kde-format
 msgid "Turn off the computer"
 msgstr "कंप्यूटर बंद करें"
-
-#: data.js:26
-#, kde-format
-msgid "Restart…"
-msgstr "पुनः प्रारंभ करें…"
 
 #: data.js:27
 #, kde-format
@@ -115,8 +112,8 @@ msgstr "कम्प्यूटर बंद कर फिर से प्र�
 
 #: data.js:33
 #, kde-format
-msgid "Logout…"
-msgstr "लॉगआउट…"
+msgid "Log out"
+msgstr ""
 
 #: data.js:34
 #, kde-format
@@ -145,6 +142,15 @@ msgstr "स्लीप (रैम में सस्पेंड करें)
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "सुप्तावस्था (डिस्क में सस्पेंड करें)"
+
+#~ msgid "Shutdown…"
+#~ msgstr "बंद करें…"
+
+#~ msgid "Restart…"
+#~ msgstr "पुनः प्रारंभ करें…"
+
+#~ msgid "Logout…"
+#~ msgstr "लॉगआउट…"
 
 #~ msgid "Logout"
 #~ msgstr "लॉगआउट"

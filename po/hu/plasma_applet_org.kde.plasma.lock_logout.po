@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-27 00:45+0000\n"
 "PO-Revision-Date: 2024-09-18 21:28+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -48,7 +48,7 @@ msgstr "Kijelentkező képernyő megjelenítése"
 msgid "Shut Down"
 msgstr "Leállítás"
 
-#: ConfigGeneral.qml:56
+#: ConfigGeneral.qml:56 data.js:26
 #, kde-format
 msgid "Restart"
 msgstr "Újraindítás"
@@ -80,8 +80,9 @@ msgid "Lock the screen"
 msgstr "Képernyőzárolás"
 
 #: data.js:12
-#, kde-format
-msgid "Switch user"
+#, fuzzy, kde-format
+#| msgid "Switch user"
+msgid "Switch user…"
 msgstr "Felhasználóváltás"
 
 #: data.js:13
@@ -90,19 +91,15 @@ msgid "Start a parallel session as a different user"
 msgstr "Párhuzamos munkamenet indítása másik felhasználóként"
 
 #: data.js:19
-#, kde-format
-msgid "Shutdown…"
-msgstr "Leállítás…"
+#, fuzzy, kde-format
+#| msgid "Shut Down"
+msgid "Shut down"
+msgstr "Leállítás"
 
 #: data.js:20
 #, kde-format
 msgid "Turn off the computer"
 msgstr "A számítógép kikapcsolása"
-
-#: data.js:26
-#, kde-format
-msgid "Restart…"
-msgstr "Újraindítás…"
 
 #: data.js:27
 #, kde-format
@@ -110,9 +107,10 @@ msgid "Reboot the computer"
 msgstr "A számítógép újraindítása"
 
 #: data.js:33
-#, kde-format
-msgid "Logout…"
-msgstr "Kijelentkezés…"
+#, fuzzy, kde-format
+#| msgid "Log Out"
+msgid "Log out"
+msgstr "Kijelentkezés"
 
 #: data.js:34
 #, kde-format
@@ -139,6 +137,15 @@ msgstr "Alvó állapot (felfüggesztés memóriába)"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Hibernálás (felfüggesztés merevlemezre)"
+
+#~ msgid "Shutdown…"
+#~ msgstr "Leállítás…"
+
+#~ msgid "Restart…"
+#~ msgstr "Újraindítás…"
+
+#~ msgid "Logout…"
+#~ msgstr "Kijelentkezés…"
 
 #~ msgid "Logout"
 #~ msgstr "Kijelentkezés"

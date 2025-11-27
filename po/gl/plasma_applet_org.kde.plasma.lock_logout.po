@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-27 00:45+0000\n"
 "PO-Revision-Date: 2024-06-27 21:00+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -51,7 +51,7 @@ msgstr "Amosar a pantalla de saída."
 msgid "Shut Down"
 msgstr "Apagar"
 
-#: ConfigGeneral.qml:56
+#: ConfigGeneral.qml:56 data.js:26
 #, kde-format
 msgid "Restart"
 msgstr "Reiniciar"
@@ -83,8 +83,9 @@ msgid "Lock the screen"
 msgstr "Trancar a pantalla"
 
 #: data.js:12
-#, kde-format
-msgid "Switch user"
+#, fuzzy, kde-format
+#| msgid "Switch user"
+msgid "Switch user…"
 msgstr "Cambiar de persoa usuaria"
 
 #: data.js:13
@@ -93,19 +94,15 @@ msgid "Start a parallel session as a different user"
 msgstr "Comezar unha sesión paralela cunha persoa usuaria distinta."
 
 #: data.js:19
-#, kde-format
-msgid "Shutdown…"
-msgstr "Apagar…"
+#, fuzzy, kde-format
+#| msgid "Shut Down"
+msgid "Shut down"
+msgstr "Apagar"
 
 #: data.js:20
 #, kde-format
 msgid "Turn off the computer"
 msgstr "Apagar o computador"
-
-#: data.js:26
-#, kde-format
-msgid "Restart…"
-msgstr "Reiniciar…"
 
 #: data.js:27
 #, kde-format
@@ -113,9 +110,10 @@ msgid "Reboot the computer"
 msgstr "Reiniciar o computador"
 
 #: data.js:33
-#, kde-format
-msgid "Logout…"
-msgstr "Saír…"
+#, fuzzy, kde-format
+#| msgid "Log Out"
+msgid "Log out"
+msgstr "Saír"
 
 #: data.js:34
 #, kde-format
@@ -142,6 +140,15 @@ msgstr "Suspender (en memoria)"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Hibernar (suspender en disco)"
+
+#~ msgid "Shutdown…"
+#~ msgstr "Apagar…"
+
+#~ msgid "Restart…"
+#~ msgstr "Reiniciar…"
+
+#~ msgid "Logout…"
+#~ msgstr "Saír…"
 
 #~ msgid "Logout"
 #~ msgstr "Saír"

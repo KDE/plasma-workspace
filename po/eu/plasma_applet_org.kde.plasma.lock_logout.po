@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-27 00:45+0000\n"
 "PO-Revision-Date: 2025-07-23 14:18+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -49,7 +49,7 @@ msgstr "Erakutsi saioa-ixteko pantaila"
 msgid "Shut Down"
 msgstr "Itzali"
 
-#: ConfigGeneral.qml:56
+#: ConfigGeneral.qml:56 data.js:26
 #, kde-format
 msgid "Restart"
 msgstr "Berrabiarazi"
@@ -81,8 +81,9 @@ msgid "Lock the screen"
 msgstr "Giltzatu pantaila"
 
 #: data.js:12
-#, kde-format
-msgid "Switch user"
+#, fuzzy, kde-format
+#| msgid "Switch user"
+msgid "Switch user…"
 msgstr "Aldatu erabiltzailea"
 
 #: data.js:13
@@ -91,19 +92,15 @@ msgid "Start a parallel session as a different user"
 msgstr "Abiatu saio paralelo bat erabiltzaile desberdin bat bezala"
 
 #: data.js:19
-#, kde-format
-msgid "Shutdown…"
-msgstr "Itzali…"
+#, fuzzy, kde-format
+#| msgid "Shut Down"
+msgid "Shut down"
+msgstr "Itzali"
 
 #: data.js:20
 #, kde-format
 msgid "Turn off the computer"
 msgstr "Itzali ordenagailua"
-
-#: data.js:26
-#, kde-format
-msgid "Restart…"
-msgstr "Berrabiarazi…"
 
 #: data.js:27
 #, kde-format
@@ -111,9 +108,10 @@ msgid "Reboot the computer"
 msgstr "Berrabiarazi ordenagailua"
 
 #: data.js:33
-#, kde-format
-msgid "Logout…"
-msgstr "Saioa-itxi…"
+#, fuzzy, kde-format
+#| msgid "Log Out"
+msgid "Log out"
+msgstr "Saioa itxi"
 
 #: data.js:34
 #, kde-format
@@ -140,6 +138,15 @@ msgstr "Egin lo (eseki RAMera)"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Hibernatu (eseki diskora)"
+
+#~ msgid "Shutdown…"
+#~ msgstr "Itzali…"
+
+#~ msgid "Restart…"
+#~ msgstr "Berrabiarazi…"
+
+#~ msgid "Logout…"
+#~ msgstr "Saioa-itxi…"
 
 #~ msgid "Logout"
 #~ msgstr "Saio-itxi"

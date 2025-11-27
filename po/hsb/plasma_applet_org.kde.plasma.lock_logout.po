@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-27 00:45+0000\n"
 "PO-Revision-Date: 2021-11-18 21:05+0100\n"
 "Last-Translator: Edward Wornar <edi.werner@gmx.de>\n"
 "Language-Team: Upper Sorbian <kde-i18n-doc@kde.org>\n"
@@ -47,7 +47,7 @@ msgstr "Wobrazowku zamknyć"
 msgid "Shut Down"
 msgstr "Hasnyć"
 
-#: ConfigGeneral.qml:56
+#: ConfigGeneral.qml:56 data.js:26
 #, fuzzy, kde-format
 #| msgid "Restart…"
 msgid "Restart"
@@ -80,8 +80,9 @@ msgid "Lock the screen"
 msgstr "Wobrazowku zamknyć"
 
 #: data.js:12
-#, kde-format
-msgid "Switch user"
+#, fuzzy, kde-format
+#| msgid "Switch user"
+msgid "Switch user…"
 msgstr "Na hinašeho wužiwarja přešaltować"
 
 #: data.js:13
@@ -90,19 +91,15 @@ msgid "Start a parallel session as a different user"
 msgstr "Paralelne posedźenje startować jako hinaši wužiwar"
 
 #: data.js:19
-#, kde-format
-msgid "Shutdown…"
-msgstr "Hasnyć..."
+#, fuzzy, kde-format
+#| msgid "Shutdown"
+msgid "Shut down"
+msgstr "Hasnyć"
 
 #: data.js:20
 #, kde-format
 msgid "Turn off the computer"
 msgstr "Kompjuter hasnyć"
-
-#: data.js:26
-#, kde-format
-msgid "Restart…"
-msgstr "Znowa startować…"
 
 #: data.js:27
 #, kde-format
@@ -111,8 +108,8 @@ msgstr "Kompjuter znowa startować"
 
 #: data.js:33
 #, kde-format
-msgid "Logout…"
-msgstr "So wotzjewić…"
+msgid "Log out"
+msgstr ""
 
 #: data.js:34
 #, kde-format
@@ -141,6 +138,15 @@ msgstr "Spinkać (zastajić do RAMa)"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Zymski spar (zastajić do tačele)"
+
+#~ msgid "Shutdown…"
+#~ msgstr "Hasnyć..."
+
+#~ msgid "Restart…"
+#~ msgstr "Znowa startować…"
+
+#~ msgid "Logout…"
+#~ msgstr "So wotzjewić…"
 
 #~ msgid "Logout"
 #~ msgstr "So wotzjewić"

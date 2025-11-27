@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-21 00:45+0000\n"
-"PO-Revision-Date: 2025-11-19 20:32+0400\n"
+"PO-Revision-Date: 2025-11-26 10:41+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -164,8 +164,7 @@ msgid "Entries"
 msgstr "المُدخلات"
 
 #: package/contents/ui/ConfigGeneral.qml:310
-#, fuzzy, kde-format
-#| msgid "Always show all"
+#, kde-format
 msgctxt "@option:check, This is referring to system tray entries"
 msgid "Always show all"
 msgstr "دائما أظهر الكل"

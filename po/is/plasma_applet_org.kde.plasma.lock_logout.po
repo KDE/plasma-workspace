@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-27 00:45+0000\n"
 "PO-Revision-Date: 2024-06-30 15:13+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -51,7 +51,7 @@ msgstr "Sýna útskráningarskjá"
 msgid "Shut Down"
 msgstr "Slökkva á tölvunni"
 
-#: ConfigGeneral.qml:56
+#: ConfigGeneral.qml:56 data.js:26
 #, kde-format
 msgid "Restart"
 msgstr "Endurræsa"
@@ -83,8 +83,9 @@ msgid "Lock the screen"
 msgstr "Læsa skjánum"
 
 #: data.js:12
-#, kde-format
-msgid "Switch user"
+#, fuzzy, kde-format
+#| msgid "Switch user"
+msgid "Switch user…"
 msgstr "Skipta um notanda"
 
 #: data.js:13
@@ -93,19 +94,15 @@ msgid "Start a parallel session as a different user"
 msgstr "Byrja samhliða setu sem annar notandi"
 
 #: data.js:19
-#, kde-format
-msgid "Shutdown…"
-msgstr "Slökkva…"
+#, fuzzy, kde-format
+#| msgid "Shut Down"
+msgid "Shut down"
+msgstr "Slökkva á tölvunni"
 
 #: data.js:20
 #, kde-format
 msgid "Turn off the computer"
 msgstr "Slökkva á tölvunni"
-
-#: data.js:26
-#, kde-format
-msgid "Restart…"
-msgstr "Endurræsa…"
 
 #: data.js:27
 #, kde-format
@@ -113,9 +110,10 @@ msgid "Reboot the computer"
 msgstr "Endurræsa tölvuna"
 
 #: data.js:33
-#, kde-format
-msgid "Logout…"
-msgstr "Skrá út…"
+#, fuzzy, kde-format
+#| msgid "Log Out"
+msgid "Log out"
+msgstr "Skrá út"
 
 #: data.js:34
 #, kde-format
@@ -142,6 +140,15 @@ msgstr "Svæfa (setja í bið í RAM)"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Leggja í dvala (setja í bið á diski)"
+
+#~ msgid "Shutdown…"
+#~ msgstr "Slökkva…"
+
+#~ msgid "Restart…"
+#~ msgstr "Endurræsa…"
+
+#~ msgid "Logout…"
+#~ msgstr "Skrá út…"
 
 #~ msgid "Logout"
 #~ msgstr "Útskráning"

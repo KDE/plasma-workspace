@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.lock_logout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-27 00:45+0000\n"
 "PO-Revision-Date: 2023-11-11 15:16+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -46,7 +46,7 @@ msgstr "Zamknúť obrazovku"
 msgid "Shut Down"
 msgstr "Vypnúť"
 
-#: ConfigGeneral.qml:56
+#: ConfigGeneral.qml:56 data.js:26
 #, kde-format
 msgid "Restart"
 msgstr "Reštart"
@@ -78,8 +78,9 @@ msgid "Lock the screen"
 msgstr "Zamknúť obrazovku"
 
 #: data.js:12
-#, kde-format
-msgid "Switch user"
+#, fuzzy, kde-format
+#| msgid "Switch user"
+msgid "Switch user…"
 msgstr "Prepnúť užívateľa"
 
 #: data.js:13
@@ -88,19 +89,15 @@ msgid "Start a parallel session as a different user"
 msgstr "Spustiť súbežné sedenie ako iný užívateľ"
 
 #: data.js:19
-#, kde-format
-msgid "Shutdown…"
-msgstr "Vypnúť..."
+#, fuzzy, kde-format
+#| msgid "Shut Down"
+msgid "Shut down"
+msgstr "Vypnúť"
 
 #: data.js:20
 #, kde-format
 msgid "Turn off the computer"
 msgstr "Vypnúť počítač"
-
-#: data.js:26
-#, kde-format
-msgid "Restart…"
-msgstr "Reštartovať..."
 
 #: data.js:27
 #, kde-format
@@ -108,9 +105,10 @@ msgid "Reboot the computer"
 msgstr "Reštartovať počítač"
 
 #: data.js:33
-#, kde-format
-msgid "Logout…"
-msgstr "Odhlásiť sa..."
+#, fuzzy, kde-format
+#| msgid "Log Out"
+msgid "Log out"
+msgstr "Odhlásiť sa"
 
 #: data.js:34
 #, kde-format
@@ -139,6 +137,15 @@ msgstr "Uspať (uspať do RAM)"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Uspať (uspať na disk)"
+
+#~ msgid "Shutdown…"
+#~ msgstr "Vypnúť..."
+
+#~ msgid "Restart…"
+#~ msgstr "Reštartovať..."
+
+#~ msgid "Logout…"
+#~ msgstr "Odhlásiť sa..."
 
 #~ msgid "Logout"
 #~ msgstr "Odhlásiť sa"

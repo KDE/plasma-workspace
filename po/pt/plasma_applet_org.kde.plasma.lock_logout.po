@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-27 00:45+0000\n"
 "PO-Revision-Date: 2021-06-08 19:45+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -48,7 +48,7 @@ msgstr "Bloquear o ecrã"
 msgid "Shut Down"
 msgstr "Desligar"
 
-#: ConfigGeneral.qml:56
+#: ConfigGeneral.qml:56 data.js:26
 #, fuzzy, kde-format
 #| msgid "Restart…"
 msgid "Restart"
@@ -81,8 +81,9 @@ msgid "Lock the screen"
 msgstr "Bloquear o ecrã"
 
 #: data.js:12
-#, kde-format
-msgid "Switch user"
+#, fuzzy, kde-format
+#| msgid "Switch user"
+msgid "Switch user…"
 msgstr "Mudar de utilizador"
 
 #: data.js:13
@@ -91,19 +92,15 @@ msgid "Start a parallel session as a different user"
 msgstr "Iniciar uma sessão paralela como um utilizador diferente"
 
 #: data.js:19
-#, kde-format
-msgid "Shutdown…"
-msgstr "Desligar…"
+#, fuzzy, kde-format
+#| msgid "Shutdown"
+msgid "Shut down"
+msgstr "Desligar"
 
 #: data.js:20
 #, kde-format
 msgid "Turn off the computer"
 msgstr "Desligar o computador"
-
-#: data.js:26
-#, kde-format
-msgid "Restart…"
-msgstr "Reiniciar…"
 
 #: data.js:27
 #, kde-format
@@ -112,8 +109,8 @@ msgstr "Reiniciar o computador"
 
 #: data.js:33
 #, kde-format
-msgid "Logout…"
-msgstr "Encerrar…"
+msgid "Log out"
+msgstr ""
 
 #: data.js:34
 #, kde-format
@@ -142,6 +139,15 @@ msgstr "Suspender (para a RAM)"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Hibernar (para o disco)"
+
+#~ msgid "Shutdown…"
+#~ msgstr "Desligar…"
+
+#~ msgid "Restart…"
+#~ msgstr "Reiniciar…"
+
+#~ msgid "Logout…"
+#~ msgstr "Encerrar…"
 
 #~ msgid "Logout"
 #~ msgstr "Encerrar"

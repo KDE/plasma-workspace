@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-27 00:45+0000\n"
 "PO-Revision-Date: 2024-08-24 11:04+0300\n"
 "Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -50,7 +50,7 @@ msgstr "Εμφάνιση οθόνης αποσύνδεσης"
 msgid "Shut Down"
 msgstr "Τερματισμός"
 
-#: ConfigGeneral.qml:56
+#: ConfigGeneral.qml:56 data.js:26
 #, kde-format
 msgid "Restart"
 msgstr "Επανεκκίνηση"
@@ -82,8 +82,9 @@ msgid "Lock the screen"
 msgstr "Κλείδωμα οθόνης"
 
 #: data.js:12
-#, kde-format
-msgid "Switch user"
+#, fuzzy, kde-format
+#| msgid "Switch user"
+msgid "Switch user…"
 msgstr "Εναλλαγή χρήστη"
 
 #: data.js:13
@@ -92,19 +93,15 @@ msgid "Start a parallel session as a different user"
 msgstr "Έναρξη μιας παράλληλης συνεδρίας σαν διαφορετικός χρήστης"
 
 #: data.js:19
-#, kde-format
-msgid "Shutdown…"
-msgstr "Τερματισμός…"
+#, fuzzy, kde-format
+#| msgid "Shut Down"
+msgid "Shut down"
+msgstr "Τερματισμός"
 
 #: data.js:20
 #, kde-format
 msgid "Turn off the computer"
 msgstr "Κλείσιμο του υπολογιστή"
-
-#: data.js:26
-#, kde-format
-msgid "Restart…"
-msgstr "Επανεκκίνηση…"
 
 #: data.js:27
 #, kde-format
@@ -112,9 +109,10 @@ msgid "Reboot the computer"
 msgstr "Επανεκκίνηση του υπολογιστή"
 
 #: data.js:33
-#, kde-format
-msgid "Logout…"
-msgstr "Αποσύνδεση…"
+#, fuzzy, kde-format
+#| msgid "Log Out"
+msgid "Log out"
+msgstr "Αποσύνδεση"
 
 #: data.js:34
 #, kde-format
@@ -141,6 +139,15 @@ msgstr "Κοίμηση (αναστολή στη μνήμη RAM)"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Νάρκη (αναστολή στο δίσκο)"
+
+#~ msgid "Shutdown…"
+#~ msgstr "Τερματισμός…"
+
+#~ msgid "Restart…"
+#~ msgstr "Επανεκκίνηση…"
+
+#~ msgid "Logout…"
+#~ msgstr "Αποσύνδεση…"
 
 #~ msgid "Do you want to suspend to disk (hibernate)?"
 #~ msgstr "Επιθυμείτε την αναστολή στο δίσκο (νάρκη);"

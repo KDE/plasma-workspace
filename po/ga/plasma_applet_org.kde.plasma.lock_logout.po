@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-27 00:45+0000\n"
 "PO-Revision-Date: 2009-02-12 09:10-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -47,7 +47,7 @@ msgstr "Taispeáin cnaipe logála amach"
 msgid "Shut Down"
 msgstr ""
 
-#: ConfigGeneral.qml:56
+#: ConfigGeneral.qml:56 data.js:26
 #, kde-format
 msgid "Restart"
 msgstr ""
@@ -81,8 +81,9 @@ msgid "Lock the screen"
 msgstr "Cuir an scáileán faoi ghlas"
 
 #: data.js:12
-#, kde-format
-msgid "Switch user"
+#, fuzzy, kde-format
+#| msgid "Switch user"
+msgid "Switch user…"
 msgstr "athraigh an t-úsáideoir"
 
 #: data.js:13
@@ -92,7 +93,7 @@ msgstr "Tosaigh seisiún comhuaineach mar úsáideoir difriúil"
 
 #: data.js:19
 #, kde-format
-msgid "Shutdown…"
+msgid "Shut down"
 msgstr ""
 
 #: data.js:20
@@ -101,11 +102,6 @@ msgstr ""
 msgid "Turn off the computer"
 msgstr "Logáil amach, múch nó atosaigh an ríomhaire"
 
-#: data.js:26
-#, kde-format
-msgid "Restart…"
-msgstr ""
-
 #: data.js:27
 #, kde-format
 msgid "Reboot the computer"
@@ -113,7 +109,7 @@ msgstr ""
 
 #: data.js:33
 #, kde-format
-msgid "Logout…"
+msgid "Log out"
 msgstr ""
 
 #: data.js:34

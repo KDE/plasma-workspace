@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-27 00:45+0000\n"
 "PO-Revision-Date: 2024-06-30 12:39+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -45,7 +45,7 @@ msgstr "வெளியேற்ற திரையை காட்டு"
 msgid "Shut Down"
 msgstr "கணினியை நிறுத்து"
 
-#: ConfigGeneral.qml:56
+#: ConfigGeneral.qml:56 data.js:26
 #, kde-format
 msgid "Restart"
 msgstr "மீள்துவக்கு"
@@ -77,8 +77,9 @@ msgid "Lock the screen"
 msgstr "திரையைப் பூட்டு"
 
 #: data.js:12
-#, kde-format
-msgid "Switch user"
+#, fuzzy, kde-format
+#| msgid "Switch user"
+msgid "Switch user…"
 msgstr "பயனரை மாற்று"
 
 #: data.js:13
@@ -87,19 +88,15 @@ msgid "Start a parallel session as a different user"
 msgstr "இன்னொரு பயனராக வேறொரு (இணையான) அமர்வை தொடக்கும்"
 
 #: data.js:19
-#, kde-format
-msgid "Shutdown…"
-msgstr "கணினியை நிறுத்து…"
+#, fuzzy, kde-format
+#| msgid "Shut Down"
+msgid "Shut down"
+msgstr "கணினியை நிறுத்து"
 
 #: data.js:20
 #, kde-format
 msgid "Turn off the computer"
 msgstr "கணினியை நிறுத்து"
-
-#: data.js:26
-#, kde-format
-msgid "Restart…"
-msgstr "மீள்துவக்கு…"
 
 #: data.js:27
 #, kde-format
@@ -107,9 +104,10 @@ msgid "Reboot the computer"
 msgstr "கணினியை மறுபடியும் துவக்கும்"
 
 #: data.js:33
-#, kde-format
-msgid "Logout…"
-msgstr "கணக்கிலிருந்து வெளியேறு…"
+#, fuzzy, kde-format
+#| msgid "Log Out"
+msgid "Log out"
+msgstr "அமர்விலிருந்து வெளியேறு"
 
 #: data.js:34
 #, kde-format
@@ -136,6 +134,15 @@ msgstr "தூங்கு (RAM-க்கு இடைநிறுத்து�
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "ஆழுறங்கு (வட்டுக்கு இடைநிறுத்தம்)"
+
+#~ msgid "Shutdown…"
+#~ msgstr "கணினியை நிறுத்து…"
+
+#~ msgid "Restart…"
+#~ msgstr "மீள்துவக்கு…"
+
+#~ msgid "Logout…"
+#~ msgstr "கணக்கிலிருந்து வெளியேறு…"
 
 #~ msgid "Logout"
 #~ msgstr "கணக்கிலிருந்து வெளியேறு"

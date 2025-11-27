@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.lock_logout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-27 00:45+0000\n"
 "PO-Revision-Date: 2024-06-25 15:00+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -46,7 +46,7 @@ msgstr "הצגת מסך יציאה"
 msgid "Shut Down"
 msgstr "כיבויכיבוי"
 
-#: ConfigGeneral.qml:56
+#: ConfigGeneral.qml:56 data.js:26
 #, kde-format
 msgid "Restart"
 msgstr "הפעלה מחדש"
@@ -78,8 +78,9 @@ msgid "Lock the screen"
 msgstr "נעילת המסך"
 
 #: data.js:12
-#, kde-format
-msgid "Switch user"
+#, fuzzy, kde-format
+#| msgid "Switch user"
+msgid "Switch user…"
 msgstr "החלפת משתמש"
 
 #: data.js:13
@@ -88,19 +89,15 @@ msgid "Start a parallel session as a different user"
 msgstr "הקמת הפעלה מקבילית כמשתמש אחר"
 
 #: data.js:19
-#, kde-format
-msgid "Shutdown…"
-msgstr "כיבוי…"
+#, fuzzy, kde-format
+#| msgid "Shut Down"
+msgid "Shut down"
+msgstr "כיבויכיבוי"
 
 #: data.js:20
 #, kde-format
 msgid "Turn off the computer"
 msgstr "כיבוי המחשב"
-
-#: data.js:26
-#, kde-format
-msgid "Restart…"
-msgstr "הפעלה מחדש…"
 
 #: data.js:27
 #, kde-format
@@ -108,9 +105,10 @@ msgid "Reboot the computer"
 msgstr "הפעלת המחשב מחדש"
 
 #: data.js:33
-#, kde-format
-msgid "Logout…"
-msgstr "יציאה…"
+#, fuzzy, kde-format
+#| msgid "Log Out"
+msgid "Log out"
+msgstr "יציאה"
 
 #: data.js:34
 #, kde-format
@@ -137,6 +135,15 @@ msgstr "שינה (השהיה לזיכרון)"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "תרדמת (השהיה לכונן)"
+
+#~ msgid "Shutdown…"
+#~ msgstr "כיבוי…"
+
+#~ msgid "Restart…"
+#~ msgstr "הפעלה מחדש…"
+
+#~ msgid "Logout…"
+#~ msgstr "יציאה…"
 
 #~ msgid "Logout"
 #~ msgstr "יציאה"

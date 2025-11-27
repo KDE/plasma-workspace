@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-27 00:45+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -46,7 +46,7 @@ msgstr "显示注销屏幕"
 msgid "Shut Down"
 msgstr "关机"
 
-#: ConfigGeneral.qml:56
+#: ConfigGeneral.qml:56 data.js:26
 #, kde-format
 msgid "Restart"
 msgstr "重启"
@@ -78,8 +78,9 @@ msgid "Lock the screen"
 msgstr "锁定屏幕"
 
 #: data.js:12
-#, kde-format
-msgid "Switch user"
+#, fuzzy, kde-format
+#| msgid "Switch user"
+msgid "Switch user…"
 msgstr "切换用户"
 
 #: data.js:13
@@ -88,19 +89,15 @@ msgid "Start a parallel session as a different user"
 msgstr "以不同的用户启动并行会话"
 
 #: data.js:19
-#, kde-format
-msgid "Shutdown…"
-msgstr "关机…"
+#, fuzzy, kde-format
+#| msgid "Shut Down"
+msgid "Shut down"
+msgstr "关机"
 
 #: data.js:20
 #, kde-format
 msgid "Turn off the computer"
 msgstr "关闭计算机"
-
-#: data.js:26
-#, kde-format
-msgid "Restart…"
-msgstr "重启…"
 
 #: data.js:27
 #, kde-format
@@ -108,9 +105,10 @@ msgid "Reboot the computer"
 msgstr "重新启动计算机"
 
 #: data.js:33
-#, kde-format
-msgid "Logout…"
-msgstr "注销…"
+#, fuzzy, kde-format
+#| msgid "Log Out"
+msgid "Log out"
+msgstr "注销"
 
 #: data.js:34
 #, kde-format
@@ -137,3 +135,12 @@ msgstr "睡眠 (挂起到内存)"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "休眠 (挂起到磁盘)"
+
+#~ msgid "Shutdown…"
+#~ msgstr "关机…"
+
+#~ msgid "Restart…"
+#~ msgstr "重启…"
+
+#~ msgid "Logout…"
+#~ msgstr "注销…"

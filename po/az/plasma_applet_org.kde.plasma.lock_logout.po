@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-27 00:45+0000\n"
 "PO-Revision-Date: 2024-06-25 14:15+0400\n"
 "Last-Translator: Kheyyam Godjayev <xxmn77gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -46,7 +46,7 @@ msgstr "Çıxış ekranını göstərmək"
 msgid "Shut Down"
 msgstr "Söndürmək"
 
-#: ConfigGeneral.qml:56
+#: ConfigGeneral.qml:56 data.js:26
 #, kde-format
 msgid "Restart"
 msgstr "Yenidən başlatmaq"
@@ -78,8 +78,9 @@ msgid "Lock the screen"
 msgstr "Ekranı kilidləmək"
 
 #: data.js:12
-#, kde-format
-msgid "Switch user"
+#, fuzzy, kde-format
+#| msgid "Switch user"
+msgid "Switch user…"
 msgstr "İstifadəçini dəyişmək"
 
 #: data.js:13
@@ -88,8 +89,9 @@ msgid "Start a parallel session as a different user"
 msgstr "Paralel sesiyanı başqa istiadəçi adından başlatmaq"
 
 #: data.js:19
-#, kde-format
-msgid "Shutdown…"
+#, fuzzy, kde-format
+#| msgid "Shut Down"
+msgid "Shut down"
 msgstr "Söndürmək"
 
 #: data.js:20
@@ -97,20 +99,16 @@ msgstr "Söndürmək"
 msgid "Turn off the computer"
 msgstr "Komputeri söndürmək"
 
-#: data.js:26
-#, kde-format
-msgid "Restart…"
-msgstr "Yenidən başlatmaq..."
-
 #: data.js:27
 #, kde-format
 msgid "Reboot the computer"
 msgstr "Komputeri yenidən başlatmaq"
 
 #: data.js:33
-#, kde-format
-msgid "Logout…"
-msgstr "Sistemdən Çıxış"
+#, fuzzy, kde-format
+#| msgid "Log Out"
+msgid "Log out"
+msgstr "Sessiyadan çıxış"
 
 #: data.js:34
 #, kde-format
@@ -137,6 +135,15 @@ msgstr "Yuxu rejimi (RAM-da saxlamaqla)"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Gözləmə rejimi (diskdə saxlamaqla)"
+
+#~ msgid "Shutdown…"
+#~ msgstr "Söndürmək"
+
+#~ msgid "Restart…"
+#~ msgstr "Yenidən başlatmaq..."
+
+#~ msgid "Logout…"
+#~ msgstr "Sistemdən Çıxış"
 
 #~ msgid "Logout"
 #~ msgstr "Sistemdən Çıxış"

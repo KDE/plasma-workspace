@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-27 00:45+0000\n"
 "PO-Revision-Date: 2024-06-25 19:10+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -45,7 +45,7 @@ msgstr "Visa utloggningsskärm"
 msgid "Shut Down"
 msgstr "stäng av"
 
-#: ConfigGeneral.qml:56
+#: ConfigGeneral.qml:56 data.js:26
 #, kde-format
 msgid "Restart"
 msgstr "Starta om"
@@ -77,8 +77,9 @@ msgid "Lock the screen"
 msgstr "Lås skärmen"
 
 #: data.js:12
-#, kde-format
-msgid "Switch user"
+#, fuzzy, kde-format
+#| msgid "Switch user"
+msgid "Switch user…"
 msgstr "Byt användare"
 
 #: data.js:13
@@ -87,19 +88,15 @@ msgid "Start a parallel session as a different user"
 msgstr "Starta en parallell session som en annan användare"
 
 #: data.js:19
-#, kde-format
-msgid "Shutdown…"
-msgstr "Stäng av…"
+#, fuzzy, kde-format
+#| msgid "Shut Down"
+msgid "Shut down"
+msgstr "stäng av"
 
 #: data.js:20
 #, kde-format
 msgid "Turn off the computer"
 msgstr "Stäng av datorn"
-
-#: data.js:26
-#, kde-format
-msgid "Restart…"
-msgstr "Starta om…"
 
 #: data.js:27
 #, kde-format
@@ -107,9 +104,10 @@ msgid "Reboot the computer"
 msgstr "Starta om datorn"
 
 #: data.js:33
-#, kde-format
-msgid "Logout…"
-msgstr "Logga ut…"
+#, fuzzy, kde-format
+#| msgid "Log Out"
+msgid "Log out"
+msgstr "Logga ut"
 
 #: data.js:34
 #, kde-format
@@ -136,6 +134,15 @@ msgstr "Vila (viloläge i minne)"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Dvala (viloläge på disk)"
+
+#~ msgid "Shutdown…"
+#~ msgstr "Stäng av…"
+
+#~ msgid "Restart…"
+#~ msgstr "Starta om…"
+
+#~ msgid "Logout…"
+#~ msgstr "Logga ut…"
 
 #~ msgid "Logout"
 #~ msgstr "Logga ut"

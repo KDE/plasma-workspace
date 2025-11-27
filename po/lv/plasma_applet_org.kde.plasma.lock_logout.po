@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-27 00:45+0000\n"
 "PO-Revision-Date: 2024-08-15 19:12+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -51,7 +51,7 @@ msgstr "Rādīt izrakstīšanās ekrānu"
 msgid "Shut Down"
 msgstr "Izslēgt"
 
-#: ConfigGeneral.qml:56
+#: ConfigGeneral.qml:56 data.js:26
 #, kde-format
 msgid "Restart"
 msgstr "Pārstartēt"
@@ -83,8 +83,9 @@ msgid "Lock the screen"
 msgstr "Slēgt ekrānu"
 
 #: data.js:12
-#, kde-format
-msgid "Switch user"
+#, fuzzy, kde-format
+#| msgid "Switch user"
+msgid "Switch user…"
 msgstr "Pārslēgt lietotāju"
 
 #: data.js:13
@@ -93,19 +94,15 @@ msgid "Start a parallel session as a different user"
 msgstr "Sākt paralēlu sesiju kā citam lietotājam"
 
 #: data.js:19
-#, kde-format
-msgid "Shutdown…"
-msgstr "Izslēgt…"
+#, fuzzy, kde-format
+#| msgid "Shut Down"
+msgid "Shut down"
+msgstr "Izslēgt"
 
 #: data.js:20
 #, kde-format
 msgid "Turn off the computer"
 msgstr "Izslēgt datoru"
-
-#: data.js:26
-#, kde-format
-msgid "Restart…"
-msgstr "Pārstartēt…"
 
 #: data.js:27
 #, kde-format
@@ -113,9 +110,10 @@ msgid "Reboot the computer"
 msgstr "Pārstartēt datoru"
 
 #: data.js:33
-#, kde-format
-msgid "Logout…"
-msgstr "Izrakstīties…"
+#, fuzzy, kde-format
+#| msgid "Log Out"
+msgid "Log out"
+msgstr "Izrakstīties"
 
 #: data.js:34
 #, kde-format
@@ -142,6 +140,15 @@ msgstr "Iesnaudināt (iesnaudināt uz RAM)"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Hibernēt (iesnaudināt uz disku)"
+
+#~ msgid "Shutdown…"
+#~ msgstr "Izslēgt…"
+
+#~ msgid "Restart…"
+#~ msgstr "Pārstartēt…"
+
+#~ msgid "Logout…"
+#~ msgstr "Izrakstīties…"
 
 #~ msgid "Do you want to suspend to disk (hibernate)?"
 #~ msgstr "Vai vēlaties sastindzināt uz disku (hibernēt)?"

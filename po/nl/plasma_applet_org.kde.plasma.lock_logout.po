@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-27 00:45+0000\n"
 "PO-Revision-Date: 2024-06-25 12:11+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -45,7 +45,7 @@ msgstr "Afmeldscherm tonen"
 msgid "Shut Down"
 msgstr "Afsluiten"
 
-#: ConfigGeneral.qml:56
+#: ConfigGeneral.qml:56 data.js:26
 #, kde-format
 msgid "Restart"
 msgstr "Herstarten"
@@ -77,8 +77,9 @@ msgid "Lock the screen"
 msgstr "Het scherm vergrendelen"
 
 #: data.js:12
-#, kde-format
-msgid "Switch user"
+#, fuzzy, kde-format
+#| msgid "Switch user"
+msgid "Switch user…"
 msgstr "Gebruiker wisselen"
 
 #: data.js:13
@@ -87,19 +88,15 @@ msgid "Start a parallel session as a different user"
 msgstr "Start een parallelle sessie onder een andere gebruikersnaam"
 
 #: data.js:19
-#, kde-format
-msgid "Shutdown…"
-msgstr "Afsluiten…"
+#, fuzzy, kde-format
+#| msgid "Shut Down"
+msgid "Shut down"
+msgstr "Afsluiten"
 
 #: data.js:20
 #, kde-format
 msgid "Turn off the computer"
 msgstr "De computer uitzetten"
-
-#: data.js:26
-#, kde-format
-msgid "Restart…"
-msgstr "Herstarten…"
 
 #: data.js:27
 #, kde-format
@@ -107,9 +104,10 @@ msgid "Reboot the computer"
 msgstr "De computer opnieuw opstarten"
 
 #: data.js:33
-#, kde-format
-msgid "Logout…"
-msgstr "Afmelden…"
+#, fuzzy, kde-format
+#| msgid "Log Out"
+msgid "Log out"
+msgstr "Afmelden"
 
 #: data.js:34
 #, kde-format
@@ -136,6 +134,15 @@ msgstr "Slapen (RAM-slaapstand)"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Slaapstand (schijf-slaapstand)"
+
+#~ msgid "Shutdown…"
+#~ msgstr "Afsluiten…"
+
+#~ msgid "Restart…"
+#~ msgstr "Herstarten…"
+
+#~ msgid "Logout…"
+#~ msgstr "Afmelden…"
 
 #~ msgid "Logout"
 #~ msgstr "Afmelden"

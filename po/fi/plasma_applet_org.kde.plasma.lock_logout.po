@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-27 00:45+0000\n"
 "PO-Revision-Date: 2025-01-12 17:13+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -50,7 +50,7 @@ msgstr "Näytä sammutusvalinnat"
 msgid "Shut Down"
 msgstr "Sammuta"
 
-#: ConfigGeneral.qml:56
+#: ConfigGeneral.qml:56 data.js:26
 #, kde-format
 msgid "Restart"
 msgstr "Käynnistä uudelleen"
@@ -82,8 +82,9 @@ msgid "Lock the screen"
 msgstr "Lukitse näyttö"
 
 #: data.js:12
-#, kde-format
-msgid "Switch user"
+#, fuzzy, kde-format
+#| msgid "Switch user"
+msgid "Switch user…"
 msgstr "Vaihda käyttäjää"
 
 #: data.js:13
@@ -92,19 +93,15 @@ msgid "Start a parallel session as a different user"
 msgstr "Aloita rinnakkaisistunto toisena käyttäjänä"
 
 #: data.js:19
-#, kde-format
-msgid "Shutdown…"
-msgstr "Sammuta…"
+#, fuzzy, kde-format
+#| msgid "Shut Down"
+msgid "Shut down"
+msgstr "Sammuta"
 
 #: data.js:20
 #, kde-format
 msgid "Turn off the computer"
 msgstr "Sammuta tietokone"
-
-#: data.js:26
-#, kde-format
-msgid "Restart…"
-msgstr "Käynnistä uudelleen…"
 
 #: data.js:27
 #, kde-format
@@ -112,9 +109,10 @@ msgid "Reboot the computer"
 msgstr "Käynnistä tietokone uudelleen"
 
 #: data.js:33
-#, kde-format
-msgid "Logout…"
-msgstr "Kirjaudu ulos…"
+#, fuzzy, kde-format
+#| msgid "Log Out"
+msgid "Log out"
+msgstr "Kirjaudu ulos"
 
 #: data.js:34
 #, kde-format
@@ -142,6 +140,15 @@ msgstr "Valmiustila (keskeytä muistiin)"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Lepotila (keskeytä levylle)"
+
+#~ msgid "Shutdown…"
+#~ msgstr "Sammuta…"
+
+#~ msgid "Restart…"
+#~ msgstr "Käynnistä uudelleen…"
+
+#~ msgid "Logout…"
+#~ msgstr "Kirjaudu ulos…"
 
 #~ msgid "Logout"
 #~ msgstr "Kirjaudu ulos"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-27 00:45+0000\n"
 "PO-Revision-Date: 2025-10-03 14:08+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -46,7 +46,7 @@ msgstr "Arată ecranul de ieșire"
 msgid "Shut Down"
 msgstr "Deconectare"
 
-#: ConfigGeneral.qml:56
+#: ConfigGeneral.qml:56 data.js:26
 #, kde-format
 msgid "Restart"
 msgstr "Repornire"
@@ -78,8 +78,9 @@ msgid "Lock the screen"
 msgstr "Blochează ecranul"
 
 #: data.js:12
-#, kde-format
-msgid "Switch user"
+#, fuzzy, kde-format
+#| msgid "Switch user"
+msgid "Switch user…"
 msgstr "Schimbă utilizatorul"
 
 #: data.js:13
@@ -88,19 +89,15 @@ msgid "Start a parallel session as a different user"
 msgstr "Pornește o sesiune paralelă ca alt utilizator"
 
 #: data.js:19
-#, kde-format
-msgid "Shutdown…"
-msgstr "Oprește…"
+#, fuzzy, kde-format
+#| msgid "Shut Down"
+msgid "Shut down"
+msgstr "Deconectare"
 
 #: data.js:20
 #, kde-format
 msgid "Turn off the computer"
 msgstr "Deconectează calculatorul"
-
-#: data.js:26
-#, kde-format
-msgid "Restart…"
-msgstr "Repornește…"
 
 #: data.js:27
 #, kde-format
@@ -108,9 +105,10 @@ msgid "Reboot the computer"
 msgstr "Repornește calculatorul"
 
 #: data.js:33
-#, kde-format
-msgid "Logout…"
-msgstr "Ieși din sistem…"
+#, fuzzy, kde-format
+#| msgid "Log Out"
+msgid "Log out"
+msgstr "Ieșire din sistem"
 
 #: data.js:34
 #, kde-format
@@ -137,6 +135,15 @@ msgstr "Dormi (suspendă în RAM)"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Hibernează (suspendă pe disc)"
+
+#~ msgid "Shutdown…"
+#~ msgstr "Oprește…"
+
+#~ msgid "Restart…"
+#~ msgstr "Repornește…"
+
+#~ msgid "Logout…"
+#~ msgstr "Ieși din sistem…"
 
 #~ msgid "Logout"
 #~ msgstr "Ieși din sistem"
