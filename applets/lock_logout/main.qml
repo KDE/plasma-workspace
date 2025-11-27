@@ -101,7 +101,7 @@ PlasmoidItem {
             target: Plasmoid.configuration
 
             function onActionsOrderChanged() {
-                if (!lockout.initialized) {
+                if (!root.initialized) {
                     // On first addition to containment for every configuration change, ignore it, 
                     // otherwise the model is built twice
                     return;
@@ -112,7 +112,7 @@ PlasmoidItem {
 
         Component.onCompleted: function() {
             lockout.buildOrderedModel();
-            lockout.initialized = true;
+            root.initialized = true;
         }
 
         Repeater {
