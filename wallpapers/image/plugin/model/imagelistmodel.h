@@ -31,9 +31,6 @@ public Q_SLOTS:
     QStringList addBackground(const QUrl &url) override;
     QStringList removeBackground(const QUrl &url) override;
 
-protected Q_SLOTS:
-    void slotHandleImageFound(const QStringList &paths);
-
 private:
     QStringList m_data;
 

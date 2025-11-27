@@ -10,9 +10,9 @@
 #include <QFileInfo>
 #include <QPixmap>
 #include <QStandardPaths>
-#include <QThreadPool>
 #include <QUrl>
 #include <QUrlQuery>
+#include <QtConcurrent>
 
 #include <KIO/PreviewJob>
 #include <algorithm>
@@ -122,21 +122,14 @@ void ImageListModel::load(const QStringList &customPaths)
 
     AbstractImageListModel::load(customPaths);
 
-    auto *finder = new ImageFinder(m_customPaths);
-    connect(finder, &ImageFinder::imageFound, this, &ImageListModel::slotHandleImageFound);
-    QThreadPool::globalInstance()->start(finder);
-}
+    QtConcurrent::run(ImageWallpaper::findAll, m_customPaths).then(this, [this](const QStringList &paths) {
+        beginResetModel();
+        m_data = paths;
+        endResetModel();
 
-void ImageListModel::slotHandleImageFound(const QStringList &paths)
-{
-    beginResetModel();
-
-    m_data = paths;
-
-    endResetModel();
-
-    m_loading = false;
-    Q_EMIT loaded(this);
+        m_loading = false;
+        Q_EMIT loaded(this);
+    });
 }
 
 QStringList ImageListModel::addBackground(const QUrl &url)

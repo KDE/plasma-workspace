@@ -13,13 +13,7 @@
 #include "findsymlinktarget.h"
 #include "suffixcheck.h"
 
-ImageFinder::ImageFinder(const QStringList &paths, QObject *parent)
-    : QObject(parent)
-    , m_paths(paths)
-{
-}
-
-void ImageFinder::run()
+QStringList ImageWallpaper::findAll(const QStringList &searchPaths)
 {
     QStringList images;
 
@@ -35,8 +29,9 @@ void ImageFinder::run()
     };
     int i;
 
-    for (i = 0; i < m_paths.size(); ++i) {
-        const QString &path = m_paths.at(i);
+    QStringList visitQueue = searchPaths;
+    for (i = 0; i < visitQueue.size(); ++i) {
+        const QString &path = visitQueue.at(i);
         const QFileInfo info(findSymlinkTarget(QFileInfo(path)));
         const QString target = info.absoluteFilePath();
 
@@ -65,8 +60,8 @@ void ImageFinder::run()
                 }
             } else if (realwp.isDir() && !realwp.absoluteFilePath().contains(QLatin1String("contents/images"))) {
                 // add this to the directories we should be looking at
-                if (!m_paths.contains(realwp.filePath())) {
-                    m_paths.append(realwp.filePath());
+                if (!visitQueue.contains(realwp.filePath())) {
+                    visitQueue.append(realwp.filePath());
                 }
             }
         }
@@ -75,5 +70,5 @@ void ImageFinder::run()
     images.removeAll(QString());
     images.removeDuplicates();
 
-    Q_EMIT imageFound(images);
+    return images;
 }

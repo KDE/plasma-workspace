@@ -7,7 +7,6 @@
 #include <QDir>
 #include <QSignalSpy>
 #include <QTest>
-#include <QThreadPool>
 
 #include "commontestdata.h"
 #include "finder/imagefinder.h"
@@ -39,14 +38,6 @@ void ImageFinderTest::cleanupTestCase()
 
 void ImageFinderTest::testImageFinderCanFindImages()
 {
-    ImageFinder *finder = new ImageFinder({m_dataDir.absolutePath(), m_dataDir.absoluteFilePath(QStringLiteral("thispathdoesnotexist.jpg"))});
-    QSignalSpy spy(finder, &ImageFinder::imageFound);
-
-    QThreadPool::globalInstance()->start(finder);
-
-    spy.wait(10 * 1000);
-    QCOMPARE(spy.count(), 1);
-
     /**
      * Expected result:
      *
@@ -58,7 +49,7 @@ void ImageFinderTest::testImageFinderCanFindImages()
      *
      * So the total number of images found by ImageFinder is 2.
      */
-    const auto paths = spy.takeFirst().at(0).toStringList();
+    const auto paths = ImageWallpaper::findAll({m_dataDir.absolutePath(), m_dataDir.absoluteFilePath(QStringLiteral("thispathdoesnotexist.jpg"))});
 
     qInfo() << "Found images:" << paths;
     QCOMPARE(paths.size(), ImageBackendTestData::defaultImageCount);

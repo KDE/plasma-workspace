@@ -7,24 +7,10 @@
 
 #pragma once
 
-#include <QObject>
-#include <QRunnable>
+#include <QString>
 
-/**
- * A runnable that finds all available images in the specified paths.
- */
-class ImageFinder : public QObject, public QRunnable
+class ImageWallpaper
 {
-    Q_OBJECT
-
 public:
-    explicit ImageFinder(const QStringList &paths, QObject *parent = nullptr);
-
-    void run() override;
-
-Q_SIGNALS:
-    void imageFound(const QStringList &paths);
-
-private:
-    QStringList m_paths;
+    static QStringList findAll(const QStringList &searchPaths);
 };
