@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 14:42+0000\n"
+"POT-Creation-Date: 2025-11-28 02:34+0000\n"
 "PO-Revision-Date: 2025-09-26 16:13+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -19,55 +19,55 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 25.08.1\n"
 
-#: devicenotifications.cpp:385
+#: devicenotifications.cpp:396
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Detected"
 msgstr "Обнаружен экран"
 
-#: devicenotifications.cpp:386
+#: devicenotifications.cpp:397
 #, kde-format
 msgid "A display has been connected."
 msgstr "Экран подключён."
 
-#: devicenotifications.cpp:406
+#: devicenotifications.cpp:417
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Removed"
 msgstr "Экран отключён"
 
-#: devicenotifications.cpp:407
+#: devicenotifications.cpp:418
 #, kde-format
 msgid "A display has been disconnected."
 msgstr "Экран отключён."
 
-#: devicenotifications.cpp:453
+#: devicenotifications.cpp:464
 #, kde-format
 msgid "%1 has been connected."
 msgstr "Устройство %1 подключено."
 
-#: devicenotifications.cpp:453
+#: devicenotifications.cpp:464
 #, kde-format
 msgid "A USB device has been connected."
 msgstr "Подключено устройство USB."
 
-#: devicenotifications.cpp:458
+#: devicenotifications.cpp:469
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Detected"
 msgstr "Обнаружено устройство USB"
 
-#: devicenotifications.cpp:496
+#: devicenotifications.cpp:507
 #, kde-format
 msgid "%1 has been disconnected."
 msgstr "Устройство %1 отключено."
 
-#: devicenotifications.cpp:496
+#: devicenotifications.cpp:507
 #, kde-format
 msgid "A USB device has been disconnected."
 msgstr "Отключено устройство USB."
 
-#: devicenotifications.cpp:501
+#: devicenotifications.cpp:512
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Went Away"

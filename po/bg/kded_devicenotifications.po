@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 14:42+0000\n"
+"POT-Creation-Date: 2025-11-28 02:34+0000\n"
 "PO-Revision-Date: 2025-07-28 18:06+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -17,55 +17,55 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 25.07.70\n"
 
-#: devicenotifications.cpp:385
+#: devicenotifications.cpp:396
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Detected"
 msgstr "Открит е екран"
 
-#: devicenotifications.cpp:386
+#: devicenotifications.cpp:397
 #, kde-format
 msgid "A display has been connected."
 msgstr "Установено е свързване на екран."
 
-#: devicenotifications.cpp:406
+#: devicenotifications.cpp:417
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Removed"
 msgstr "Екранът e премахнат"
 
-#: devicenotifications.cpp:407
+#: devicenotifications.cpp:418
 #, kde-format
 msgid "A display has been disconnected."
 msgstr "Установено е изключване на екран."
 
-#: devicenotifications.cpp:453
+#: devicenotifications.cpp:464
 #, kde-format
 msgid "%1 has been connected."
 msgstr "Устройство %1 е свързано."
 
-#: devicenotifications.cpp:453
+#: devicenotifications.cpp:464
 #, kde-format
 msgid "A USB device has been connected."
 msgstr "USB устройство е свързано."
 
-#: devicenotifications.cpp:458
+#: devicenotifications.cpp:469
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Detected"
 msgstr "Открито е USB устройство"
 
-#: devicenotifications.cpp:496
+#: devicenotifications.cpp:507
 #, kde-format
 msgid "%1 has been disconnected."
 msgstr "Устройство %1 е отделено."
 
-#: devicenotifications.cpp:496
+#: devicenotifications.cpp:507
 #, kde-format
 msgid "A USB device has been disconnected."
 msgstr "USB устройство е отделено."
 
-#: devicenotifications.cpp:501
+#: devicenotifications.cpp:512
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Went Away"
