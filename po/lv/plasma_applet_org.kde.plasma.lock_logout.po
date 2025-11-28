@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-27 00:45+0000\n"
+"POT-Creation-Date: 2025-11-28 00:44+0000\n"
 "PO-Revision-Date: 2024-08-15 19:12+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -28,54 +28,22 @@ msgstr ""
 msgid "General"
 msgstr "Vispārēji"
 
-#: ConfigGeneral.qml:36
-#, kde-format
-msgctxt ""
-"Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
-msgid "Show actions:"
-msgstr "Rādīt darbības:"
+#: ConfigGeneral.qml:54
+#, fuzzy, kde-format
+#| msgid "Actions"
+msgctxt "@title:column"
+msgid "Actions"
+msgstr "Darbības"
 
-#: ConfigGeneral.qml:37
+#: ConfigGeneral.qml:116
 #, kde-format
-msgid "Log Out"
-msgstr "Izrakstīties"
+msgid "Unavailable"
+msgstr ""
 
-#: ConfigGeneral.qml:44
-#, kde-format
-msgctxt "@option:check"
-msgid "Show logout screen"
-msgstr "Rādīt izrakstīšanās ekrānu"
-
-#: ConfigGeneral.qml:50
-#, kde-format
-msgid "Shut Down"
-msgstr "Izslēgt"
-
-#: ConfigGeneral.qml:56 data.js:26
-#, kde-format
-msgid "Restart"
-msgstr "Pārstartēt"
-
-#: ConfigGeneral.qml:62 data.js:5
+#: data.js:5
 #, kde-format
 msgid "Lock"
 msgstr "Slēgt"
-
-#: ConfigGeneral.qml:68
-#, kde-format
-msgid "Switch User"
-msgstr "Pārslēgt lietotāju"
-
-#: ConfigGeneral.qml:74 data.js:54
-#, kde-format
-msgid "Hibernate"
-msgstr "Hibernēt"
-
-#: ConfigGeneral.qml:80 data.js:47
-#, kde-format
-msgctxt "Suspend to RAM"
-msgid "Sleep"
-msgstr "Iesnaudināt"
 
 #: data.js:6
 #, kde-format
@@ -104,6 +72,11 @@ msgstr "Izslēgt"
 msgid "Turn off the computer"
 msgstr "Izslēgt datoru"
 
+#: data.js:26
+#, kde-format
+msgid "Restart"
+msgstr "Pārstartēt"
+
 #: data.js:27
 #, kde-format
 msgid "Reboot the computer"
@@ -131,15 +104,45 @@ msgstr "Rādīt izrakstīšanās ekrānu"
 msgid "Log out, turn off, or restart the computer"
 msgstr "Izrakstīties, izslēgt vai pārstartēt datoru"
 
+#: data.js:47
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Iesnaudināt"
+
 #: data.js:48
 #, kde-format
 msgid "Sleep (suspend to RAM)"
 msgstr "Iesnaudināt (iesnaudināt uz RAM)"
 
+#: data.js:54
+#, kde-format
+msgid "Hibernate"
+msgstr "Hibernēt"
+
 #: data.js:55
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Hibernēt (iesnaudināt uz disku)"
+
+#~ msgctxt ""
+#~ "Heading for a list of actions (leave, lock, switch user, hibernate, "
+#~ "suspend)"
+#~ msgid "Show actions:"
+#~ msgstr "Rādīt darbības:"
+
+#~ msgid "Log Out"
+#~ msgstr "Izrakstīties"
+
+#~ msgctxt "@option:check"
+#~ msgid "Show logout screen"
+#~ msgstr "Rādīt izrakstīšanās ekrānu"
+
+#~ msgid "Shut Down"
+#~ msgstr "Izslēgt"
+
+#~ msgid "Switch User"
+#~ msgstr "Pārslēgt lietotāju"
 
 #~ msgid "Shutdown…"
 #~ msgstr "Izslēgt…"
@@ -167,12 +170,6 @@ msgstr "Hibernēt (iesnaudināt uz disku)"
 
 #~ msgid "Leave..."
 #~ msgstr "Pamest..."
-
-#, fuzzy
-#~| msgid "Actions"
-#~ msgctxt "Heading for list of actions (leave, lock, shutdown, ...)"
-#~ msgid "Actions"
-#~ msgstr "Darbības"
 
 #~ msgid "Suspend"
 #~ msgstr "Iemidzināt"

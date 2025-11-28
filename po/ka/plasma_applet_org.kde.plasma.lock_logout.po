@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-27 00:45+0000\n"
-"PO-Revision-Date: 2024-06-25 05:22+0200\n"
+"POT-Creation-Date: 2025-11-28 00:44+0000\n"
+"PO-Revision-Date: 2025-11-27 05:54+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,61 +16,28 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.8\n"
 
 #: config.qml:13
 #, kde-format
 msgid "General"
 msgstr "მთავარი"
 
-#: ConfigGeneral.qml:36
+#: ConfigGeneral.qml:54
 #, kde-format
-msgctxt ""
-"Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
-msgid "Show actions:"
-msgstr "ქმედებების ჩვენება:"
+msgctxt "@title:column"
+msgid "Actions"
+msgstr ""
 
-#: ConfigGeneral.qml:37
+#: ConfigGeneral.qml:116
 #, kde-format
-msgid "Log Out"
-msgstr "გასვლა"
+msgid "Unavailable"
+msgstr ""
 
-#: ConfigGeneral.qml:44
-#, kde-format
-msgctxt "@option:check"
-msgid "Show logout screen"
-msgstr "გასვლის ეკრანის ჩვენება"
-
-#: ConfigGeneral.qml:50
-#, kde-format
-msgid "Shut Down"
-msgstr "გამორთვა"
-
-#: ConfigGeneral.qml:56 data.js:26
-#, kde-format
-msgid "Restart"
-msgstr "გადატვირთვა"
-
-#: ConfigGeneral.qml:62 data.js:5
+#: data.js:5
 #, kde-format
 msgid "Lock"
 msgstr "დაბლოკვა"
-
-#: ConfigGeneral.qml:68
-#, kde-format
-msgid "Switch User"
-msgstr "მომხმარებლის გადართვა"
-
-#: ConfigGeneral.qml:74 data.js:54
-#, kde-format
-msgid "Hibernate"
-msgstr "პროგრამული ძილი"
-
-#: ConfigGeneral.qml:80 data.js:47
-#, kde-format
-msgctxt "Suspend to RAM"
-msgid "Sleep"
-msgstr "ძილი"
 
 #: data.js:6
 #, kde-format
@@ -78,10 +45,9 @@ msgid "Lock the screen"
 msgstr "ეკრანის ჩაკეტვა"
 
 #: data.js:12
-#, fuzzy, kde-format
-#| msgid "Switch user"
+#, kde-format
 msgid "Switch user…"
-msgstr "მომხმარებლის გადართვა"
+msgstr "მომხმარებლის გადართვა…"
 
 #: data.js:13
 #, kde-format
@@ -89,8 +55,7 @@ msgid "Start a parallel session as a different user"
 msgstr "სხვა მომხმარებლით პარალელური სესიის გაშვება"
 
 #: data.js:19
-#, fuzzy, kde-format
-#| msgid "Shut Down"
+#, kde-format
 msgid "Shut down"
 msgstr "გამორთვა"
 
@@ -99,14 +64,18 @@ msgstr "გამორთვა"
 msgid "Turn off the computer"
 msgstr "კომპიუტერის გამორთვა"
 
+#: data.js:26
+#, kde-format
+msgid "Restart"
+msgstr "გადატვირთვა"
+
 #: data.js:27
 #, kde-format
 msgid "Reboot the computer"
 msgstr "კომპიუტერის გადატვირთვა"
 
 #: data.js:33
-#, fuzzy, kde-format
-#| msgid "Log Out"
+#, kde-format
 msgid "Log out"
 msgstr "გასვლა"
 
@@ -126,15 +95,45 @@ msgstr "გასვლის ეკრანის ჩვენება"
 msgid "Log out, turn off, or restart the computer"
 msgstr "გადით სესიიდან, გამორთეთ ან გადატვირთეთ კომპიუტერი"
 
+#: data.js:47
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "ძილი"
+
 #: data.js:48
 #, kde-format
 msgid "Sleep (suspend to RAM)"
 msgstr "ძილი (RAM-ში)"
 
+#: data.js:54
+#, kde-format
+msgid "Hibernate"
+msgstr "პროგრამული ძილი"
+
 #: data.js:55
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "პროგრამული ძილი (მეხსირების დისკზე დამახსოვრებით)"
+
+#~ msgctxt ""
+#~ "Heading for a list of actions (leave, lock, switch user, hibernate, "
+#~ "suspend)"
+#~ msgid "Show actions:"
+#~ msgstr "ქმედებების ჩვენება:"
+
+#~ msgid "Log Out"
+#~ msgstr "გასვლა"
+
+#~ msgctxt "@option:check"
+#~ msgid "Show logout screen"
+#~ msgstr "გასვლის ეკრანის ჩვენება"
+
+#~ msgid "Shut Down"
+#~ msgstr "გამორთვა"
+
+#~ msgid "Switch User"
+#~ msgstr "მომხმარებლის გადართვა"
 
 #~ msgid "Shutdown…"
 #~ msgstr "გამორთვა…"

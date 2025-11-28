@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-27 00:45+0000\n"
-"PO-Revision-Date: 2024-06-26 12:24+0200\n"
+"POT-Creation-Date: 2025-11-28 00:44+0000\n"
+"PO-Revision-Date: 2025-11-27 07:15+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -18,61 +18,30 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.4.4\n"
+"X-Generator: Poedit 3.8\n"
 
 #: config.qml:13
 #, kde-format
 msgid "General"
 msgstr "Splošno"
 
-#: ConfigGeneral.qml:36
-#, kde-format
-msgctxt ""
-"Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
-msgid "Show actions:"
-msgstr "Prikaži dejavnosti:"
+#: ConfigGeneral.qml:54
+#, fuzzy, kde-format
+#| msgctxt "Heading for list of actions (leave, lock, shutdown, ...)"
+#| msgid "Actions"
+msgctxt "@title:column"
+msgid "Actions"
+msgstr "Dejanja"
 
-#: ConfigGeneral.qml:37
+#: ConfigGeneral.qml:116
 #, kde-format
-msgid "Log Out"
-msgstr "Odjavi se"
+msgid "Unavailable"
+msgstr ""
 
-#: ConfigGeneral.qml:44
-#, kde-format
-msgctxt "@option:check"
-msgid "Show logout screen"
-msgstr "Pokaži zaslon za odjavo"
-
-#: ConfigGeneral.qml:50
-#, kde-format
-msgid "Shut Down"
-msgstr "Izklopi"
-
-#: ConfigGeneral.qml:56 data.js:26
-#, kde-format
-msgid "Restart"
-msgstr "Ponovno zaženi"
-
-#: ConfigGeneral.qml:62 data.js:5
+#: data.js:5
 #, kde-format
 msgid "Lock"
 msgstr "Zakleni"
-
-#: ConfigGeneral.qml:68
-#, kde-format
-msgid "Switch User"
-msgstr "Preklopi uporabnika"
-
-#: ConfigGeneral.qml:74 data.js:54
-#, kde-format
-msgid "Hibernate"
-msgstr "V mirovanje"
-
-#: ConfigGeneral.qml:80 data.js:47
-#, kde-format
-msgctxt "Suspend to RAM"
-msgid "Sleep"
-msgstr "Zaspi"
 
 #: data.js:6
 #, kde-format
@@ -80,10 +49,9 @@ msgid "Lock the screen"
 msgstr "Zakleni zaslon"
 
 #: data.js:12
-#, fuzzy, kde-format
-#| msgid "Switch user"
+#, kde-format
 msgid "Switch user…"
-msgstr "Preklopi uporabnika"
+msgstr "Preklopi uporabnika…"
 
 #: data.js:13
 #, kde-format
@@ -91,8 +59,7 @@ msgid "Start a parallel session as a different user"
 msgstr "Zaženi vzporedno sejo kot drug uporabnik"
 
 #: data.js:19
-#, fuzzy, kde-format
-#| msgid "Shut Down"
+#, kde-format
 msgid "Shut down"
 msgstr "Izklopi"
 
@@ -101,14 +68,18 @@ msgstr "Izklopi"
 msgid "Turn off the computer"
 msgstr "Izklopi računalnik"
 
+#: data.js:26
+#, kde-format
+msgid "Restart"
+msgstr "Ponovno zaženi"
+
 #: data.js:27
 #, kde-format
 msgid "Reboot the computer"
 msgstr "Ponovno zaženi računalnik"
 
 #: data.js:33
-#, fuzzy, kde-format
-#| msgid "Log Out"
+#, kde-format
 msgid "Log out"
 msgstr "Odjavi se"
 
@@ -128,15 +99,45 @@ msgstr "Pokaži zaslon za odjavo"
 msgid "Log out, turn off, or restart the computer"
 msgstr "Odjavite se, izklopite ali znova zaženite računalnik"
 
+#: data.js:47
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Zaspi"
+
 #: data.js:48
 #, kde-format
 msgid "Sleep (suspend to RAM)"
 msgstr "Zaspi (začasno zaustavi v pomnilnik)"
 
+#: data.js:54
+#, kde-format
+msgid "Hibernate"
+msgstr "V mirovanje"
+
 #: data.js:55
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "V mirovanje (začasno zaustavi na disk)"
+
+#~ msgctxt ""
+#~ "Heading for a list of actions (leave, lock, switch user, hibernate, "
+#~ "suspend)"
+#~ msgid "Show actions:"
+#~ msgstr "Prikaži dejavnosti:"
+
+#~ msgid "Log Out"
+#~ msgstr "Odjavi se"
+
+#~ msgctxt "@option:check"
+#~ msgid "Show logout screen"
+#~ msgstr "Pokaži zaslon za odjavo"
+
+#~ msgid "Shut Down"
+#~ msgstr "Izklopi"
+
+#~ msgid "Switch User"
+#~ msgstr "Preklopi uporabnika"
 
 #~ msgid "Shutdown…"
 #~ msgstr "Izklop…"
@@ -176,10 +177,6 @@ msgstr "V mirovanje (začasno zaustavi na disk)"
 
 #~ msgid "Leave..."
 #~ msgstr "Zapusti..."
-
-#~ msgctxt "Heading for list of actions (leave, lock, shutdown, ...)"
-#~ msgid "Actions"
-#~ msgstr "Dejanja"
 
 #~ msgid "Suspend"
 #~ msgstr "V pripravljenost"

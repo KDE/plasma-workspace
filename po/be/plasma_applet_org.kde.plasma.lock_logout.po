@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-27 00:45+0000\n"
+"POT-Creation-Date: 2025-11-28 00:44+0000\n"
 "PO-Revision-Date: 2024-11-04 22:01\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -27,54 +27,21 @@ msgstr ""
 msgid "General"
 msgstr "Асноўныя"
 
-#: ConfigGeneral.qml:36
+#: ConfigGeneral.qml:54
 #, kde-format
-msgctxt ""
-"Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
-msgid "Show actions:"
-msgstr "Паказ дзеянняў:"
+msgctxt "@title:column"
+msgid "Actions"
+msgstr ""
 
-#: ConfigGeneral.qml:37
+#: ConfigGeneral.qml:116
 #, kde-format
-msgid "Log Out"
-msgstr "Выйсці"
+msgid "Unavailable"
+msgstr ""
 
-#: ConfigGeneral.qml:44
-#, kde-format
-msgctxt "@option:check"
-msgid "Show logout screen"
-msgstr "Паказваць экран выхаду"
-
-#: ConfigGeneral.qml:50
-#, kde-format
-msgid "Shut Down"
-msgstr "Выключыць"
-
-#: ConfigGeneral.qml:56 data.js:26
-#, kde-format
-msgid "Restart"
-msgstr "Перазапусціць"
-
-#: ConfigGeneral.qml:62 data.js:5
+#: data.js:5
 #, kde-format
 msgid "Lock"
 msgstr "Заблакаваць"
-
-#: ConfigGeneral.qml:68
-#, kde-format
-msgid "Switch User"
-msgstr "Пераключыць карыстальніка"
-
-#: ConfigGeneral.qml:74 data.js:54
-#, kde-format
-msgid "Hibernate"
-msgstr "Перавесці ў рэжым сну"
-
-#: ConfigGeneral.qml:80 data.js:47
-#, kde-format
-msgctxt "Suspend to RAM"
-msgid "Sleep"
-msgstr "Прыпыніць у RAM"
 
 #: data.js:6
 #, kde-format
@@ -103,6 +70,11 @@ msgstr "Выключыць"
 msgid "Turn off the computer"
 msgstr "Выключыць камп'ютар"
 
+#: data.js:26
+#, kde-format
+msgid "Restart"
+msgstr "Перазапусціць"
+
 #: data.js:27
 #, kde-format
 msgid "Reboot the computer"
@@ -130,15 +102,45 @@ msgstr "Паказваць экран выхаду"
 msgid "Log out, turn off, or restart the computer"
 msgstr "Выхад, выключэнне або перазапуск камп'ютара"
 
+#: data.js:47
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Прыпыніць у RAM"
+
 #: data.js:48
 #, kde-format
 msgid "Sleep (suspend to RAM)"
 msgstr "Прыпыніць у RAM(кэшаванне у аператыўную памяць)"
 
+#: data.js:54
+#, kde-format
+msgid "Hibernate"
+msgstr "Перавесці ў рэжым сну"
+
 #: data.js:55
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Перавесці ў рэжым сну (кэшаванне на цвёрды дыск)"
+
+#~ msgctxt ""
+#~ "Heading for a list of actions (leave, lock, switch user, hibernate, "
+#~ "suspend)"
+#~ msgid "Show actions:"
+#~ msgstr "Паказ дзеянняў:"
+
+#~ msgid "Log Out"
+#~ msgstr "Выйсці"
+
+#~ msgctxt "@option:check"
+#~ msgid "Show logout screen"
+#~ msgstr "Паказваць экран выхаду"
+
+#~ msgid "Shut Down"
+#~ msgstr "Выключыць"
+
+#~ msgid "Switch User"
+#~ msgstr "Пераключыць карыстальніка"
 
 #~ msgid "Shutdown…"
 #~ msgstr "Выключыць…"

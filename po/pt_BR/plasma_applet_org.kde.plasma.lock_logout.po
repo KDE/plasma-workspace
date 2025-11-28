@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.lock_logout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-27 00:45+0000\n"
-"PO-Revision-Date: 2025-11-08 21:10-0300\n"
+"POT-Creation-Date: 2025-11-28 00:44+0000\n"
+"PO-Revision-Date: 2025-11-27 01:48-0300\n"
 "Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -19,61 +19,30 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #: config.qml:13
 #, kde-format
 msgid "General"
 msgstr "Geral"
 
-#: ConfigGeneral.qml:36
-#, kde-format
-msgctxt ""
-"Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
-msgid "Show actions:"
-msgstr "Mostrar ações:"
+#: ConfigGeneral.qml:54
+#, fuzzy, kde-format
+#| msgctxt "Heading for list of actions (leave, lock, shutdown, ...)"
+#| msgid "Actions"
+msgctxt "@title:column"
+msgid "Actions"
+msgstr "Ações"
 
-#: ConfigGeneral.qml:37
+#: ConfigGeneral.qml:116
 #, kde-format
-msgid "Log Out"
-msgstr "Encerrar sessão"
+msgid "Unavailable"
+msgstr ""
 
-#: ConfigGeneral.qml:44
-#, kde-format
-msgctxt "@option:check"
-msgid "Show logout screen"
-msgstr "Mostrar tela de encerramento de sessão"
-
-#: ConfigGeneral.qml:50
-#, kde-format
-msgid "Shut Down"
-msgstr "Desligar"
-
-#: ConfigGeneral.qml:56 data.js:26
-#, kde-format
-msgid "Restart"
-msgstr "Reiniciar"
-
-#: ConfigGeneral.qml:62 data.js:5
+#: data.js:5
 #, kde-format
 msgid "Lock"
 msgstr "Bloquear"
-
-#: ConfigGeneral.qml:68
-#, kde-format
-msgid "Switch User"
-msgstr "Trocar usuário"
-
-#: ConfigGeneral.qml:74 data.js:54
-#, kde-format
-msgid "Hibernate"
-msgstr "Hibernar"
-
-#: ConfigGeneral.qml:80 data.js:47
-#, kde-format
-msgctxt "Suspend to RAM"
-msgid "Sleep"
-msgstr "Suspender"
 
 #: data.js:6
 #, kde-format
@@ -81,10 +50,9 @@ msgid "Lock the screen"
 msgstr "Bloquear tela"
 
 #: data.js:12
-#, fuzzy, kde-format
-#| msgid "Switch user"
+#, kde-format
 msgid "Switch user…"
-msgstr "Trocar usuário"
+msgstr "Trocar usuário…"
 
 #: data.js:13
 #, kde-format
@@ -92,8 +60,7 @@ msgid "Start a parallel session as a different user"
 msgstr "Iniciar uma sessão paralela como um usuário diferente"
 
 #: data.js:19
-#, fuzzy, kde-format
-#| msgid "Shut Down"
+#, kde-format
 msgid "Shut down"
 msgstr "Desligar"
 
@@ -102,14 +69,18 @@ msgstr "Desligar"
 msgid "Turn off the computer"
 msgstr "Desliga o computador"
 
+#: data.js:26
+#, kde-format
+msgid "Restart"
+msgstr "Reiniciar"
+
 #: data.js:27
 #, kde-format
 msgid "Reboot the computer"
 msgstr "Reinicia o computador"
 
 #: data.js:33
-#, fuzzy, kde-format
-#| msgid "Log Out"
+#, kde-format
 msgid "Log out"
 msgstr "Encerrar sessão"
 
@@ -129,15 +100,45 @@ msgstr "Mostrar tela de encerramento de sessão"
 msgid "Log out, turn off, or restart the computer"
 msgstr "Encerrar sessão, desligar ou reiniciar o computador"
 
+#: data.js:47
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Suspender"
+
 #: data.js:48
 #, kde-format
 msgid "Sleep (suspend to RAM)"
 msgstr "Dormir (suspender para a memória)"
 
+#: data.js:54
+#, kde-format
+msgid "Hibernate"
+msgstr "Hibernar"
+
 #: data.js:55
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Hibernar (suspender para o disco)"
+
+#~ msgctxt ""
+#~ "Heading for a list of actions (leave, lock, switch user, hibernate, "
+#~ "suspend)"
+#~ msgid "Show actions:"
+#~ msgstr "Mostrar ações:"
+
+#~ msgid "Log Out"
+#~ msgstr "Encerrar sessão"
+
+#~ msgctxt "@option:check"
+#~ msgid "Show logout screen"
+#~ msgstr "Mostrar tela de encerramento de sessão"
+
+#~ msgid "Shut Down"
+#~ msgstr "Desligar"
+
+#~ msgid "Switch User"
+#~ msgstr "Trocar usuário"
 
 #~ msgid "Shutdown…"
 #~ msgstr "Desligar…"
@@ -177,10 +178,6 @@ msgstr "Hibernar (suspender para o disco)"
 
 #~ msgid "Leave..."
 #~ msgstr "Sair..."
-
-#~ msgctxt "Heading for list of actions (leave, lock, shutdown, ...)"
-#~ msgid "Actions"
-#~ msgstr "Ações"
 
 #~ msgid "Suspend"
 #~ msgstr "Suspender"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-27 00:45+0000\n"
+"POT-Creation-Date: 2025-11-28 00:44+0000\n"
 "PO-Revision-Date: 2025-10-03 14:08+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -23,54 +23,22 @@ msgstr ""
 msgid "General"
 msgstr "Generale"
 
-#: ConfigGeneral.qml:36
-#, kde-format
-msgctxt ""
-"Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
-msgid "Show actions:"
-msgstr "Arată acțiunile:"
+#: ConfigGeneral.qml:54
+#, fuzzy, kde-format
+#| msgid "Actions"
+msgctxt "@title:column"
+msgid "Actions"
+msgstr "Acțiuni"
 
-#: ConfigGeneral.qml:37
+#: ConfigGeneral.qml:116
 #, kde-format
-msgid "Log Out"
-msgstr "Ieșire din sistem"
+msgid "Unavailable"
+msgstr ""
 
-#: ConfigGeneral.qml:44
-#, kde-format
-msgctxt "@option:check"
-msgid "Show logout screen"
-msgstr "Arată ecranul de ieșire"
-
-#: ConfigGeneral.qml:50
-#, kde-format
-msgid "Shut Down"
-msgstr "Deconectare"
-
-#: ConfigGeneral.qml:56 data.js:26
-#, kde-format
-msgid "Restart"
-msgstr "Repornire"
-
-#: ConfigGeneral.qml:62 data.js:5
+#: data.js:5
 #, kde-format
 msgid "Lock"
 msgstr "Blochează"
-
-#: ConfigGeneral.qml:68
-#, kde-format
-msgid "Switch User"
-msgstr "Schimbă utilizatorul"
-
-#: ConfigGeneral.qml:74 data.js:54
-#, kde-format
-msgid "Hibernate"
-msgstr "Hibernează"
-
-#: ConfigGeneral.qml:80 data.js:47
-#, kde-format
-msgctxt "Suspend to RAM"
-msgid "Sleep"
-msgstr "Adormi"
 
 #: data.js:6
 #, kde-format
@@ -99,6 +67,11 @@ msgstr "Deconectare"
 msgid "Turn off the computer"
 msgstr "Deconectează calculatorul"
 
+#: data.js:26
+#, kde-format
+msgid "Restart"
+msgstr "Repornire"
+
 #: data.js:27
 #, kde-format
 msgid "Reboot the computer"
@@ -126,15 +99,45 @@ msgstr "Arată ecranul de ieșire"
 msgid "Log out, turn off, or restart the computer"
 msgstr "Ieșiți, deconectați sau reporniți calculatorul"
 
+#: data.js:47
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Adormi"
+
 #: data.js:48
 #, kde-format
 msgid "Sleep (suspend to RAM)"
 msgstr "Dormi (suspendă în RAM)"
 
+#: data.js:54
+#, kde-format
+msgid "Hibernate"
+msgstr "Hibernează"
+
 #: data.js:55
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Hibernează (suspendă pe disc)"
+
+#~ msgctxt ""
+#~ "Heading for a list of actions (leave, lock, switch user, hibernate, "
+#~ "suspend)"
+#~ msgid "Show actions:"
+#~ msgstr "Arată acțiunile:"
+
+#~ msgid "Log Out"
+#~ msgstr "Ieșire din sistem"
+
+#~ msgctxt "@option:check"
+#~ msgid "Show logout screen"
+#~ msgstr "Arată ecranul de ieșire"
+
+#~ msgid "Shut Down"
+#~ msgstr "Deconectare"
+
+#~ msgid "Switch User"
+#~ msgstr "Schimbă utilizatorul"
 
 #~ msgid "Shutdown…"
 #~ msgstr "Oprește…"
@@ -174,12 +177,6 @@ msgstr "Hibernează (suspendă pe disc)"
 
 #~ msgid "Leave..."
 #~ msgstr "Pleacă..."
-
-#, fuzzy
-#~| msgid "Actions"
-#~ msgctxt "Heading for list of actions (leave, lock, shutdown, ...)"
-#~ msgid "Actions"
-#~ msgstr "Acțiuni"
 
 #~ msgid "Suspend"
 #~ msgstr "Suspendă"

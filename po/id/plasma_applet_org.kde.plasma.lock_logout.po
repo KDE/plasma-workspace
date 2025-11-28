@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-27 00:45+0000\n"
+"POT-Creation-Date: 2025-11-28 00:44+0000\n"
 "PO-Revision-Date: 2024-10-02 19:24+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -25,54 +25,23 @@ msgstr ""
 msgid "General"
 msgstr "Umum"
 
-#: ConfigGeneral.qml:36
-#, kde-format
-msgctxt ""
-"Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
-msgid "Show actions:"
-msgstr "Tampilkan tindakan:"
+#: ConfigGeneral.qml:54
+#, fuzzy, kde-format
+#| msgctxt "Heading for list of actions (leave, lock, shutdown, ...)"
+#| msgid "Actions"
+msgctxt "@title:column"
+msgid "Actions"
+msgstr "Aksi"
 
-#: ConfigGeneral.qml:37
+#: ConfigGeneral.qml:116
 #, kde-format
-msgid "Log Out"
-msgstr "Keluar Log"
+msgid "Unavailable"
+msgstr ""
 
-#: ConfigGeneral.qml:44
-#, kde-format
-msgctxt "@option:check"
-msgid "Show logout screen"
-msgstr "Tampilkan layar keluar log"
-
-#: ConfigGeneral.qml:50
-#, kde-format
-msgid "Shut Down"
-msgstr "Matikan"
-
-#: ConfigGeneral.qml:56 data.js:26
-#, kde-format
-msgid "Restart"
-msgstr "Nyalakan Ulang"
-
-#: ConfigGeneral.qml:62 data.js:5
+#: data.js:5
 #, kde-format
 msgid "Lock"
 msgstr "Kunci"
-
-#: ConfigGeneral.qml:68
-#, kde-format
-msgid "Switch User"
-msgstr "Alihkan Pengguna"
-
-#: ConfigGeneral.qml:74 data.js:54
-#, kde-format
-msgid "Hibernate"
-msgstr "Hibernasi"
-
-#: ConfigGeneral.qml:80 data.js:47
-#, kde-format
-msgctxt "Suspend to RAM"
-msgid "Sleep"
-msgstr "Tidur"
 
 #: data.js:6
 #, kde-format
@@ -101,6 +70,11 @@ msgstr "Matikan"
 msgid "Turn off the computer"
 msgstr "Matikan komputer"
 
+#: data.js:26
+#, kde-format
+msgid "Restart"
+msgstr "Nyalakan Ulang"
+
 #: data.js:27
 #, kde-format
 msgid "Reboot the computer"
@@ -128,15 +102,45 @@ msgstr "Tampilkan layar keluar log"
 msgid "Log out, turn off, or restart the computer"
 msgstr "Keluar log, matikan, atau nyalakan ulang komputer"
 
+#: data.js:47
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Tidur"
+
 #: data.js:48
 #, kde-format
 msgid "Sleep (suspend to RAM)"
 msgstr "Tidur (suspensi ke RAM)"
 
+#: data.js:54
+#, kde-format
+msgid "Hibernate"
+msgstr "Hibernasi"
+
 #: data.js:55
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Hibernasi (suspensi ke cakram)"
+
+#~ msgctxt ""
+#~ "Heading for a list of actions (leave, lock, switch user, hibernate, "
+#~ "suspend)"
+#~ msgid "Show actions:"
+#~ msgstr "Tampilkan tindakan:"
+
+#~ msgid "Log Out"
+#~ msgstr "Keluar Log"
+
+#~ msgctxt "@option:check"
+#~ msgid "Show logout screen"
+#~ msgstr "Tampilkan layar keluar log"
+
+#~ msgid "Shut Down"
+#~ msgstr "Matikan"
+
+#~ msgid "Switch User"
+#~ msgstr "Alihkan Pengguna"
 
 #~ msgid "Shutdown…"
 #~ msgstr "Matikan..."
@@ -170,10 +174,6 @@ msgstr "Hibernasi (suspensi ke cakram)"
 
 #~ msgid "Leave..."
 #~ msgstr "Tinggalkan..."
-
-#~ msgctxt "Heading for list of actions (leave, lock, shutdown, ...)"
-#~ msgid "Actions"
-#~ msgstr "Aksi"
 
 #~ msgid "Suspend"
 #~ msgstr "Suspensi"

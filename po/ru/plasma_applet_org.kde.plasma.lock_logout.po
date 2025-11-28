@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-27 00:45+0000\n"
+"POT-Creation-Date: 2025-11-28 00:44+0000\n"
 "PO-Revision-Date: 2024-06-25 12:51+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -29,59 +29,24 @@ msgstr ""
 msgid "General"
 msgstr "Основное"
 
-# shutdown-method
-#: ConfigGeneral.qml:36
-#, kde-format
-msgctxt ""
-"Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
-msgid "Show actions:"
-msgstr "Показывать действия:"
+#: ConfigGeneral.qml:54
+#, fuzzy, kde-format
+#| msgctxt "Heading for list of actions (leave, lock, shutdown, ...)"
+#| msgid "Actions"
+msgctxt "@title:column"
+msgid "Actions"
+msgstr "Действия"
 
-#: ConfigGeneral.qml:37
+#: ConfigGeneral.qml:116
 #, kde-format
-msgid "Log Out"
-msgstr "Завершить сеанс"
-
-# shutdown-method
-#: ConfigGeneral.qml:44
-#, kde-format
-msgctxt "@option:check"
-msgid "Show logout screen"
-msgstr "Экран завершения работы"
-
-#: ConfigGeneral.qml:50
-#, kde-format
-msgid "Shut Down"
-msgstr "Выключить"
-
-#: ConfigGeneral.qml:56 data.js:26
-#, kde-format
-msgid "Restart"
-msgstr "Перезагрузка"
+msgid "Unavailable"
+msgstr ""
 
 # shutdown-method
-#: ConfigGeneral.qml:62 data.js:5
+#: data.js:5
 #, kde-format
 msgid "Lock"
 msgstr "Блокировка"
-
-#: ConfigGeneral.qml:68
-#, kde-format
-msgid "Switch User"
-msgstr "Смена пользователя"
-
-# shutdown-method
-#: ConfigGeneral.qml:74 data.js:54
-#, kde-format
-msgid "Hibernate"
-msgstr "Гибернация"
-
-# shutdown-method
-#: ConfigGeneral.qml:80 data.js:47
-#, kde-format
-msgctxt "Suspend to RAM"
-msgid "Sleep"
-msgstr "Сон"
 
 # shutdown-method
 #: data.js:6
@@ -111,6 +76,11 @@ msgstr "Выключить"
 #, kde-format
 msgid "Turn off the computer"
 msgstr "Выключить компьютер"
+
+#: data.js:26
+#, kde-format
+msgid "Restart"
+msgstr "Перезагрузка"
 
 #: data.js:27
 #, kde-format
@@ -142,16 +112,50 @@ msgid "Log out, turn off, or restart the computer"
 msgstr "Завершение сеанса, выключение или перезапуск компьютера"
 
 # shutdown-method
+#: data.js:47
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Сон"
+
+# shutdown-method
 #: data.js:48
 #, kde-format
 msgid "Sleep (suspend to RAM)"
 msgstr "Приостановить с сохранением в ОЗУ"
 
 # shutdown-method
+#: data.js:54
+#, kde-format
+msgid "Hibernate"
+msgstr "Гибернация"
+
+# shutdown-method
 #: data.js:55
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Выключить с сохранением состояния на диск"
+
+# shutdown-method
+#~ msgctxt ""
+#~ "Heading for a list of actions (leave, lock, switch user, hibernate, "
+#~ "suspend)"
+#~ msgid "Show actions:"
+#~ msgstr "Показывать действия:"
+
+#~ msgid "Log Out"
+#~ msgstr "Завершить сеанс"
+
+# shutdown-method
+#~ msgctxt "@option:check"
+#~ msgid "Show logout screen"
+#~ msgstr "Экран завершения работы"
+
+#~ msgid "Shut Down"
+#~ msgstr "Выключить"
+
+#~ msgid "Switch User"
+#~ msgstr "Смена пользователя"
 
 #~ msgid "Shutdown…"
 #~ msgstr "Выключить…"
@@ -195,10 +199,6 @@ msgstr "Выключить с сохранением состояния на д�
 # shutdown-method
 #~ msgid "Leave..."
 #~ msgstr "Завершить работу..."
-
-#~ msgctxt "Heading for list of actions (leave, lock, shutdown, ...)"
-#~ msgid "Actions"
-#~ msgstr "Действия"
 
 # shutdown-method
 #~ msgid "Suspend"

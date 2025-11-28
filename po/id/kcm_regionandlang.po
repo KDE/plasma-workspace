@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-28 00:44+0000\n"
 "PO-Revision-Date: 2024-09-30 21:30+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -16,6 +16,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 24.05.2\n"
+
+#, kde-format
+msgid "Inherit Language"
+msgstr "Bahasa Warisan"
 
 #: binarydialectmodel.cpp:52
 #, kde-format
@@ -458,15 +462,6 @@ msgctxt ""
 "as subtitle, remind user that the format used now is inherited from locale %1"
 msgid " (Standard format for %1)"
 msgstr " (Format standar untuk %1)"
-
-#: regionandlangsettingsbase.kcfg:14 regionandlangsettingsbase.kcfg:17
-#: regionandlangsettingsbase.kcfg:20 regionandlangsettingsbase.kcfg:23
-#: regionandlangsettingsbase.kcfg:26 regionandlangsettingsbase.kcfg:29
-#: regionandlangsettingsbase.kcfg:32 regionandlangsettingsbase.kcfg:35
-#: regionandlangsettingsbase.kcfg:38
-#, kde-format
-msgid "Inherit Language"
-msgstr "Bahasa Warisan"
 
 #: ui/AdvancedLanguageSelectPage.qml:23
 #, kde-format

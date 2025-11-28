@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-28 00:44+0000\n"
 "PO-Revision-Date: 2024-11-04 22:06\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -21,6 +21,10 @@ msgstr ""
 "X-Crowdin-File: /[antikruk.KDE] main/KDE6/be/messages/plasma-workspace/"
 "kcm_regionandlang.po\n"
 "X-Crowdin-File-ID: 10774\n"
+
+#, kde-format
+msgid "Inherit Language"
+msgstr "Пераняць мову"
 
 #: binarydialectmodel.cpp:52
 #, fuzzy, kde-format
@@ -466,15 +470,6 @@ msgctxt ""
 "as subtitle, remind user that the format used now is inherited from locale %1"
 msgid " (Standard format for %1)"
 msgstr " (Стандартны фармат для %1)"
-
-#: regionandlangsettingsbase.kcfg:14 regionandlangsettingsbase.kcfg:17
-#: regionandlangsettingsbase.kcfg:20 regionandlangsettingsbase.kcfg:23
-#: regionandlangsettingsbase.kcfg:26 regionandlangsettingsbase.kcfg:29
-#: regionandlangsettingsbase.kcfg:32 regionandlangsettingsbase.kcfg:35
-#: regionandlangsettingsbase.kcfg:38
-#, kde-format
-msgid "Inherit Language"
-msgstr "Пераняць мову"
 
 #: ui/AdvancedLanguageSelectPage.qml:23
 #, kde-format

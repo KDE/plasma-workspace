@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-28 00:44+0000\n"
 "PO-Revision-Date: 2025-07-13 23:09+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -17,55 +17,55 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 23.08.5\n"
 
-#: devicenotifications.cpp:383
+#: devicenotifications.cpp:394
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Detected"
 msgstr "Havaittiin näyttö"
 
-#: devicenotifications.cpp:384
+#: devicenotifications.cpp:395
 #, kde-format
 msgid "A display has been connected."
 msgstr "Näyttö on kytketty."
 
-#: devicenotifications.cpp:404
+#: devicenotifications.cpp:415
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Removed"
 msgstr "Irrotettiin näyttö"
 
-#: devicenotifications.cpp:405
+#: devicenotifications.cpp:416
 #, kde-format
 msgid "A display has been disconnected."
 msgstr "Näyttö on irrotettu."
 
-#: devicenotifications.cpp:451
+#: devicenotifications.cpp:462
 #, kde-format
 msgid "%1 has been connected."
 msgstr "%1 on kytketty."
 
-#: devicenotifications.cpp:451
+#: devicenotifications.cpp:462
 #, kde-format
 msgid "A USB device has been connected."
 msgstr "USB-laite on kytketty."
 
-#: devicenotifications.cpp:456
+#: devicenotifications.cpp:467
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Detected"
 msgstr "Havaittiin USB-laite"
 
-#: devicenotifications.cpp:494
+#: devicenotifications.cpp:505
 #, kde-format
 msgid "%1 has been disconnected."
 msgstr "%1 on irrotettu."
 
-#: devicenotifications.cpp:494
+#: devicenotifications.cpp:505
 #, kde-format
 msgid "A USB device has been disconnected."
 msgstr "USB-laite on irrotettu."
 
-#: devicenotifications.cpp:499
+#: devicenotifications.cpp:510
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Removed"

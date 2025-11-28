@@ -5,14 +5,14 @@
 # Serdar SOYTETİR <tulliana@gmail.com>, 2010, 2012.
 # Ozan Çağlayan <ozan@pardus.org.tr>, 2011.
 # Volkan Gezer <volkangezer@gmail.com>, 2013, 2021, 2022.
-# SPDX-FileCopyrightText: 2023, 2024 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-27 00:45+0000\n"
-"PO-Revision-Date: 2024-06-26 01:02+0300\n"
-"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
+"POT-Creation-Date: 2025-11-28 00:44+0000\n"
+"PO-Revision-Date: 2025-11-27 16:24+0300\n"
+"Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
@@ -20,61 +20,28 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-POOTLE-MTIME: 1413102242.000000\n"
-"X-Generator: Lokalize 24.07.70\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #: config.qml:13
 #, kde-format
 msgid "General"
 msgstr "Genel"
 
-#: ConfigGeneral.qml:36
+#: ConfigGeneral.qml:54
 #, kde-format
-msgctxt ""
-"Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
-msgid "Show actions:"
-msgstr "Eylemleri göster:"
+msgctxt "@title:column"
+msgid "Actions"
+msgstr ""
 
-#: ConfigGeneral.qml:37
+#: ConfigGeneral.qml:116
 #, kde-format
-msgid "Log Out"
-msgstr "Oturumu Kapat"
+msgid "Unavailable"
+msgstr ""
 
-#: ConfigGeneral.qml:44
-#, kde-format
-msgctxt "@option:check"
-msgid "Show logout screen"
-msgstr "Oturumu kapat ekranını göster"
-
-#: ConfigGeneral.qml:50
-#, kde-format
-msgid "Shut Down"
-msgstr "Kapat"
-
-#: ConfigGeneral.qml:56 data.js:26
-#, kde-format
-msgid "Restart"
-msgstr "Yeniden Başlat"
-
-#: ConfigGeneral.qml:62 data.js:5
+#: data.js:5
 #, kde-format
 msgid "Lock"
 msgstr "Kilitle"
-
-#: ConfigGeneral.qml:68
-#, kde-format
-msgid "Switch User"
-msgstr "Kullanıcı Değiştir"
-
-#: ConfigGeneral.qml:74 data.js:54
-#, kde-format
-msgid "Hibernate"
-msgstr "Derin Uykuya Geçir"
-
-#: ConfigGeneral.qml:80 data.js:47
-#, kde-format
-msgctxt "Suspend to RAM"
-msgid "Sleep"
-msgstr "Uyut"
 
 #: data.js:6
 #, kde-format
@@ -82,10 +49,9 @@ msgid "Lock the screen"
 msgstr "Ekranı kilitle"
 
 #: data.js:12
-#, fuzzy, kde-format
-#| msgid "Switch user"
+#, kde-format
 msgid "Switch user…"
-msgstr "Kullanıcı değiştir"
+msgstr "Kullanıcı değiştir…"
 
 #: data.js:13
 #, kde-format
@@ -93,8 +59,7 @@ msgid "Start a parallel session as a different user"
 msgstr "Başka bir kullanıcı olarak paralel oturum başlat"
 
 #: data.js:19
-#, fuzzy, kde-format
-#| msgid "Shut Down"
+#, kde-format
 msgid "Shut down"
 msgstr "Kapat"
 
@@ -103,16 +68,20 @@ msgstr "Kapat"
 msgid "Turn off the computer"
 msgstr "Bilgisayarı kapat"
 
+#: data.js:26
+#, kde-format
+msgid "Restart"
+msgstr "Yeniden Başlat"
+
 #: data.js:27
 #, kde-format
 msgid "Reboot the computer"
 msgstr "Bilgisayarı yeniden başlat"
 
 #: data.js:33
-#, fuzzy, kde-format
-#| msgid "Log Out"
+#, kde-format
 msgid "Log out"
-msgstr "Oturumu Kapat"
+msgstr "Oturumu kapat"
 
 #: data.js:34
 #, kde-format
@@ -130,15 +99,45 @@ msgstr "Oturumu kapat ekranını göster"
 msgid "Log out, turn off, or restart the computer"
 msgstr "Oturumu kapat, bilgisayarı kapat veya yeniden başlat"
 
+#: data.js:47
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Uyut"
+
 #: data.js:48
 #, kde-format
 msgid "Sleep (suspend to RAM)"
 msgstr "Uyut (bellek kullanarak askıya al)"
 
+#: data.js:54
+#, kde-format
+msgid "Hibernate"
+msgstr "Derin Uykuya Geçir"
+
 #: data.js:55
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Derin uykuya geçir (disk kullanarak askıya al)"
+
+#~ msgctxt ""
+#~ "Heading for a list of actions (leave, lock, switch user, hibernate, "
+#~ "suspend)"
+#~ msgid "Show actions:"
+#~ msgstr "Eylemleri göster:"
+
+#~ msgid "Log Out"
+#~ msgstr "Oturumu Kapat"
+
+#~ msgctxt "@option:check"
+#~ msgid "Show logout screen"
+#~ msgstr "Oturumu kapat ekranını göster"
+
+#~ msgid "Shut Down"
+#~ msgstr "Kapat"
+
+#~ msgid "Switch User"
+#~ msgstr "Kullanıcı Değiştir"
 
 #~ msgid "Shutdown…"
 #~ msgstr "Kapat…"

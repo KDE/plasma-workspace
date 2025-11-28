@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-27 00:45+0000\n"
+"POT-Creation-Date: 2025-11-28 00:44+0000\n"
 "PO-Revision-Date: 2023-05-03 22:36+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -22,53 +22,20 @@ msgstr ""
 msgid "General"
 msgstr ""
 
-#: ConfigGeneral.qml:36
+#: ConfigGeneral.qml:54
 #, kde-format
-msgctxt ""
-"Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
-msgid "Show actions:"
+msgctxt "@title:column"
+msgid "Actions"
 msgstr ""
 
-#: ConfigGeneral.qml:37
+#: ConfigGeneral.qml:116
 #, kde-format
-msgid "Log Out"
+msgid "Unavailable"
 msgstr ""
 
-#: ConfigGeneral.qml:44
-#, kde-format
-msgctxt "@option:check"
-msgid "Show logout screen"
-msgstr ""
-
-#: ConfigGeneral.qml:50
-#, kde-format
-msgid "Shut Down"
-msgstr ""
-
-#: ConfigGeneral.qml:56 data.js:26
-#, kde-format
-msgid "Restart"
-msgstr ""
-
-#: ConfigGeneral.qml:62 data.js:5
+#: data.js:5
 #, kde-format
 msgid "Lock"
-msgstr ""
-
-#: ConfigGeneral.qml:68
-#, kde-format
-msgid "Switch User"
-msgstr ""
-
-#: ConfigGeneral.qml:74 data.js:54
-#, kde-format
-msgid "Hibernate"
-msgstr ""
-
-#: ConfigGeneral.qml:80 data.js:47
-#, kde-format
-msgctxt "Suspend to RAM"
-msgid "Sleep"
 msgstr ""
 
 #: data.js:6
@@ -94,6 +61,11 @@ msgstr ""
 #: data.js:20
 #, kde-format
 msgid "Turn off the computer"
+msgstr ""
+
+#: data.js:26
+#, kde-format
+msgid "Restart"
 msgstr ""
 
 #: data.js:27
@@ -122,9 +94,20 @@ msgstr ""
 msgid "Log out, turn off, or restart the computer"
 msgstr ""
 
+#: data.js:47
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr ""
+
 #: data.js:48
 #, kde-format
 msgid "Sleep (suspend to RAM)"
+msgstr ""
+
+#: data.js:54
+#, kde-format
+msgid "Hibernate"
 msgstr ""
 
 #: data.js:55

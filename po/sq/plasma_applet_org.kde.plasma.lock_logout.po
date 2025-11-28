@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-27 00:45+0000\n"
+"POT-Creation-Date: 2025-11-28 00:44+0000\n"
 "PO-Revision-Date: 2010-03-22 12:36+0000\n"
 "Last-Translator: Vilson Gjeci <vilsongjeci@gmail.com>\n"
 "Language-Team: Albanian <sq@li.org>\n"
@@ -24,55 +24,21 @@ msgstr ""
 msgid "General"
 msgstr ""
 
-#: ConfigGeneral.qml:36
+#: ConfigGeneral.qml:54
 #, kde-format
-msgctxt ""
-"Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
-msgid "Show actions:"
+msgctxt "@title:column"
+msgid "Actions"
 msgstr ""
 
-#: ConfigGeneral.qml:37
+#: ConfigGeneral.qml:116
 #, kde-format
-msgid "Log Out"
+msgid "Unavailable"
 msgstr ""
 
-#: ConfigGeneral.qml:44
-#, fuzzy, kde-format
-#| msgid "Lock the screen"
-msgctxt "@option:check"
-msgid "Show logout screen"
-msgstr "Blloko ekranin"
-
-#: ConfigGeneral.qml:50
-#, kde-format
-msgid "Shut Down"
-msgstr ""
-
-#: ConfigGeneral.qml:56 data.js:26
-#, kde-format
-msgid "Restart"
-msgstr ""
-
-#: ConfigGeneral.qml:62 data.js:5
+#: data.js:5
 #, kde-format
 msgid "Lock"
 msgstr "Blloko"
-
-#: ConfigGeneral.qml:68
-#, kde-format
-msgid "Switch User"
-msgstr ""
-
-#: ConfigGeneral.qml:74 data.js:54
-#, kde-format
-msgid "Hibernate"
-msgstr "Hiberno"
-
-#: ConfigGeneral.qml:80 data.js:47
-#, kde-format
-msgctxt "Suspend to RAM"
-msgid "Sleep"
-msgstr ""
 
 #: data.js:6
 #, kde-format
@@ -99,6 +65,11 @@ msgstr ""
 #| msgid "Logout, turn off or restart the computer"
 msgid "Turn off the computer"
 msgstr "Dil, fike ose rindize kompjuterin"
+
+#: data.js:26
+#, kde-format
+msgid "Restart"
+msgstr ""
 
 #: data.js:27
 #, kde-format
@@ -128,15 +99,32 @@ msgstr "Blloko ekranin"
 msgid "Log out, turn off, or restart the computer"
 msgstr "Dil, fike ose rindize kompjuterin"
 
+#: data.js:47
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr ""
+
 #: data.js:48
 #, kde-format
 msgid "Sleep (suspend to RAM)"
 msgstr ""
 
+#: data.js:54
+#, kde-format
+msgid "Hibernate"
+msgstr "Hiberno"
+
 #: data.js:55
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Lock the screen"
+#~ msgctxt "@option:check"
+#~ msgid "Show logout screen"
+#~ msgstr "Blloko ekranin"
 
 #, fuzzy
 #~| msgid "Leave..."

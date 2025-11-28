@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-27 00:45+0000\n"
+"POT-Creation-Date: 2025-11-28 00:44+0000\n"
 "PO-Revision-Date: 2012-07-29 10:37+0600\n"
 "Last-Translator: Sairan Kikkarin\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -23,58 +23,22 @@ msgstr ""
 msgid "General"
 msgstr "Жалпы"
 
-#: ConfigGeneral.qml:36
+#: ConfigGeneral.qml:54
 #, fuzzy, kde-format
-#| msgid "Show lock button"
-msgctxt ""
-"Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
-msgid "Show actions:"
-msgstr "Бұғаттау батырмасы көрсетілсін"
+#| msgid "Actions"
+msgctxt "@title:column"
+msgid "Actions"
+msgstr "Әрекеттер"
 
-#: ConfigGeneral.qml:37
+#: ConfigGeneral.qml:116
 #, kde-format
-msgid "Log Out"
+msgid "Unavailable"
 msgstr ""
 
-#: ConfigGeneral.qml:44
-#, fuzzy, kde-format
-#| msgid "Show logout button"
-msgctxt "@option:check"
-msgid "Show logout screen"
-msgstr "Шығу батырмасы көрсетілсін"
-
-#: ConfigGeneral.qml:50
-#, kde-format
-msgid "Shut Down"
-msgstr ""
-
-#: ConfigGeneral.qml:56 data.js:26
-#, kde-format
-msgid "Restart"
-msgstr ""
-
-#: ConfigGeneral.qml:62 data.js:5
+#: data.js:5
 #, kde-format
 msgid "Lock"
 msgstr "Бұғаттау"
-
-#: ConfigGeneral.qml:68
-#, fuzzy, kde-format
-#| msgid "Switch user"
-msgid "Switch User"
-msgstr "Пайдаланушысын ауыстыру"
-
-#: ConfigGeneral.qml:74 data.js:54
-#, kde-format
-msgid "Hibernate"
-msgstr "Ұйықтау"
-
-#: ConfigGeneral.qml:80 data.js:47
-#, fuzzy, kde-format
-#| msgid "Sleep"
-msgctxt "Suspend to RAM"
-msgid "Sleep"
-msgstr "Қалғу"
 
 #: data.js:6
 #, kde-format
@@ -102,6 +66,11 @@ msgstr ""
 #| msgid "Logout, turn off or restart the computer"
 msgid "Turn off the computer"
 msgstr "Жүйеден шығу, компьютерді сөндіру не жаңадан жегу"
+
+#: data.js:26
+#, kde-format
+msgid "Restart"
+msgstr ""
 
 #: data.js:27
 #, kde-format
@@ -131,15 +100,46 @@ msgstr "Шығу батырмасы көрсетілсін"
 msgid "Log out, turn off, or restart the computer"
 msgstr "Жүйеден шығу, компьютерді сөндіру не жаңадан жегу"
 
+#: data.js:47
+#, fuzzy, kde-format
+#| msgid "Sleep"
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Қалғу"
+
 #: data.js:48
 #, kde-format
 msgid "Sleep (suspend to RAM)"
 msgstr "Қалғу (күйін RAM-жадына сақтап)"
 
+#: data.js:54
+#, kde-format
+msgid "Hibernate"
+msgstr "Ұйықтау"
+
 #: data.js:55
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Ұйықтау (күйін дискіге сақтап)"
+
+#, fuzzy
+#~| msgid "Show lock button"
+#~ msgctxt ""
+#~ "Heading for a list of actions (leave, lock, switch user, hibernate, "
+#~ "suspend)"
+#~ msgid "Show actions:"
+#~ msgstr "Бұғаттау батырмасы көрсетілсін"
+
+#, fuzzy
+#~| msgid "Show logout button"
+#~ msgctxt "@option:check"
+#~ msgid "Show logout screen"
+#~ msgstr "Шығу батырмасы көрсетілсін"
+
+#, fuzzy
+#~| msgid "Switch user"
+#~ msgid "Switch User"
+#~ msgstr "Пайдаланушысын ауыстыру"
 
 #~ msgid "Do you want to suspend to disk (hibernate)?"
 #~ msgstr "Күйін дискіге сақтап ұйықтау режіміне ауысуды қалайсыз ба?"
@@ -158,12 +158,6 @@ msgstr "Ұйықтау (күйін дискіге сақтап)"
 
 #~ msgid "Leave..."
 #~ msgstr "Шығып кету..."
-
-#, fuzzy
-#~| msgid "Actions"
-#~ msgctxt "Heading for list of actions (leave, lock, shutdown, ...)"
-#~ msgid "Actions"
-#~ msgstr "Әрекеттер"
 
 #~ msgid "Suspend"
 #~ msgstr "Қалғу"

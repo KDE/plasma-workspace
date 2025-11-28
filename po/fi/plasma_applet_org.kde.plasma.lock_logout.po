@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-27 00:45+0000\n"
+"POT-Creation-Date: 2025-11-28 00:44+0000\n"
 "PO-Revision-Date: 2025-01-12 17:13+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -26,55 +26,23 @@ msgstr ""
 msgid "General"
 msgstr "Yleiset"
 
-#: ConfigGeneral.qml:36
-#, kde-format
-msgctxt ""
-"Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
-msgid "Show actions:"
-msgstr "Näytä toiminnot:"
+#: ConfigGeneral.qml:54
+#, fuzzy, kde-format
+#| msgctxt "Heading for list of actions (leave, lock, shutdown, ...)"
+#| msgid "Actions"
+msgctxt "@title:column"
+msgid "Actions"
+msgstr "Toiminnot"
 
-#: ConfigGeneral.qml:37
+#: ConfigGeneral.qml:116
 #, kde-format
-msgid "Log Out"
-msgstr "Kirjaudu ulos"
+msgid "Unavailable"
+msgstr ""
 
-# OLI: ”uloskirjautumisnäyttö” – paitsi pitkä myös sekava. Tämä on minusta tolkullisempi.
-#: ConfigGeneral.qml:44
-#, kde-format
-msgctxt "@option:check"
-msgid "Show logout screen"
-msgstr "Näytä sammutusvalinnat"
-
-#: ConfigGeneral.qml:50
-#, kde-format
-msgid "Shut Down"
-msgstr "Sammuta"
-
-#: ConfigGeneral.qml:56 data.js:26
-#, kde-format
-msgid "Restart"
-msgstr "Käynnistä uudelleen"
-
-#: ConfigGeneral.qml:62 data.js:5
+#: data.js:5
 #, kde-format
 msgid "Lock"
 msgstr "Lukitse"
-
-#: ConfigGeneral.qml:68
-#, kde-format
-msgid "Switch User"
-msgstr "Vaihda käyttäjää"
-
-#: ConfigGeneral.qml:74 data.js:54
-#, kde-format
-msgid "Hibernate"
-msgstr "Lepotila"
-
-#: ConfigGeneral.qml:80 data.js:47
-#, kde-format
-msgctxt "Suspend to RAM"
-msgid "Sleep"
-msgstr "Siirry valmiustilaan"
 
 #: data.js:6
 #, kde-format
@@ -102,6 +70,11 @@ msgstr "Sammuta"
 #, kde-format
 msgid "Turn off the computer"
 msgstr "Sammuta tietokone"
+
+#: data.js:26
+#, kde-format
+msgid "Restart"
+msgstr "Käynnistä uudelleen"
 
 #: data.js:27
 #, kde-format
@@ -131,15 +104,46 @@ msgstr "Näytä sammutusvalinnat"
 msgid "Log out, turn off, or restart the computer"
 msgstr "Kirjaudu ulos, sammuta tai käynnistä tietokone uudelleen"
 
+#: data.js:47
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Siirry valmiustilaan"
+
 #: data.js:48
 #, kde-format
 msgid "Sleep (suspend to RAM)"
 msgstr "Valmiustila (keskeytä muistiin)"
 
+#: data.js:54
+#, kde-format
+msgid "Hibernate"
+msgstr "Lepotila"
+
 #: data.js:55
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Lepotila (keskeytä levylle)"
+
+#~ msgctxt ""
+#~ "Heading for a list of actions (leave, lock, switch user, hibernate, "
+#~ "suspend)"
+#~ msgid "Show actions:"
+#~ msgstr "Näytä toiminnot:"
+
+#~ msgid "Log Out"
+#~ msgstr "Kirjaudu ulos"
+
+# OLI: ”uloskirjautumisnäyttö” – paitsi pitkä myös sekava. Tämä on minusta tolkullisempi.
+#~ msgctxt "@option:check"
+#~ msgid "Show logout screen"
+#~ msgstr "Näytä sammutusvalinnat"
+
+#~ msgid "Shut Down"
+#~ msgstr "Sammuta"
+
+#~ msgid "Switch User"
+#~ msgstr "Vaihda käyttäjää"
 
 #~ msgid "Shutdown…"
 #~ msgstr "Sammuta…"
@@ -179,10 +183,6 @@ msgstr "Lepotila (keskeytä levylle)"
 
 #~ msgid "Leave..."
 #~ msgstr "Poistu…"
-
-#~ msgctxt "Heading for list of actions (leave, lock, shutdown, ...)"
-#~ msgid "Actions"
-#~ msgstr "Toiminnot"
 
 #~ msgid "Suspend"
 #~ msgstr "Valmiustila"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-27 00:45+0000\n"
+"POT-Creation-Date: 2025-11-28 00:44+0000\n"
 "PO-Revision-Date: 2025-01-24 22:08+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -27,54 +27,21 @@ msgstr ""
 msgid "General"
 msgstr "一般"
 
-#: ConfigGeneral.qml:36
+#: ConfigGeneral.qml:54
 #, kde-format
-msgctxt ""
-"Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
-msgid "Show actions:"
-msgstr "顯示動作："
+msgctxt "@title:column"
+msgid "Actions"
+msgstr ""
 
-#: ConfigGeneral.qml:37
+#: ConfigGeneral.qml:116
 #, kde-format
-msgid "Log Out"
-msgstr "登出"
+msgid "Unavailable"
+msgstr ""
 
-#: ConfigGeneral.qml:44
-#, kde-format
-msgctxt "@option:check"
-msgid "Show logout screen"
-msgstr "顯示登出畫面"
-
-#: ConfigGeneral.qml:50
-#, kde-format
-msgid "Shut Down"
-msgstr "關機"
-
-#: ConfigGeneral.qml:56 data.js:26
-#, kde-format
-msgid "Restart"
-msgstr "重新啟動"
-
-#: ConfigGeneral.qml:62 data.js:5
+#: data.js:5
 #, kde-format
 msgid "Lock"
 msgstr "鎖定"
-
-#: ConfigGeneral.qml:68
-#, kde-format
-msgid "Switch User"
-msgstr "切換使用者"
-
-#: ConfigGeneral.qml:74 data.js:54
-#, kde-format
-msgid "Hibernate"
-msgstr "休眠"
-
-#: ConfigGeneral.qml:80 data.js:47
-#, kde-format
-msgctxt "Suspend to RAM"
-msgid "Sleep"
-msgstr "睡眠"
 
 #: data.js:6
 #, kde-format
@@ -103,6 +70,11 @@ msgstr "關機"
 msgid "Turn off the computer"
 msgstr "關閉這台電腦"
 
+#: data.js:26
+#, kde-format
+msgid "Restart"
+msgstr "重新啟動"
+
 #: data.js:27
 #, kde-format
 msgid "Reboot the computer"
@@ -130,15 +102,45 @@ msgstr "顯示登出畫面"
 msgid "Log out, turn off, or restart the computer"
 msgstr "登出、關機，或重新啟動電腦"
 
+#: data.js:47
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "睡眠"
+
 #: data.js:48
 #, kde-format
 msgid "Sleep (suspend to RAM)"
 msgstr "睡眠（暫停並儲存到記憶體）"
 
+#: data.js:54
+#, kde-format
+msgid "Hibernate"
+msgstr "休眠"
+
 #: data.js:55
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "休眠（暫停並儲存到磁碟）"
+
+#~ msgctxt ""
+#~ "Heading for a list of actions (leave, lock, switch user, hibernate, "
+#~ "suspend)"
+#~ msgid "Show actions:"
+#~ msgstr "顯示動作："
+
+#~ msgid "Log Out"
+#~ msgstr "登出"
+
+#~ msgctxt "@option:check"
+#~ msgid "Show logout screen"
+#~ msgstr "顯示登出畫面"
+
+#~ msgid "Shut Down"
+#~ msgstr "關機"
+
+#~ msgid "Switch User"
+#~ msgstr "切換使用者"
 
 #~ msgid "Shutdown…"
 #~ msgstr "關機…"

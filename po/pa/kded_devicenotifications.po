@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-28 00:44+0000\n"
 "PO-Revision-Date: 2025-09-15 09:59-0500\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -17,55 +17,55 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 25.08.0\n"
 
-#: devicenotifications.cpp:383
+#: devicenotifications.cpp:394
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Detected"
 msgstr "ਡਿਸਪਲੇਅ ਖੋਜਿਆ ਗਿਆ"
 
-#: devicenotifications.cpp:384
+#: devicenotifications.cpp:395
 #, kde-format
 msgid "A display has been connected."
 msgstr "ਡਿਸਪਲੇਅ ਕਨੈਕਟ ਕੀਤਾ ਗਿਆ।"
 
-#: devicenotifications.cpp:404
+#: devicenotifications.cpp:415
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Removed"
 msgstr "ਡਿਸਪਲੇਅ ਨੂੰ ਹਟਾਇਆ"
 
-#: devicenotifications.cpp:405
+#: devicenotifications.cpp:416
 #, kde-format
 msgid "A display has been disconnected."
 msgstr "ਡਿਸਪਲੇਅ ਨੂੰ ਡਿਸ-ਕਨੈਕਟ ਕੀਤਾ ਗਿਆ।"
 
-#: devicenotifications.cpp:451
+#: devicenotifications.cpp:462
 #, kde-format
 msgid "%1 has been connected."
 msgstr "%1 ਨੂੰ ਕਨੈਕਟ ਕੀਤਾ ਗਿਆ ਹੈ।"
 
-#: devicenotifications.cpp:451
+#: devicenotifications.cpp:462
 #, kde-format
 msgid "A USB device has been connected."
 msgstr "ਕਿਸੇ USB ਡਿਵਾਈਸ ਨੂੰ ਕਨੈਕਟ ਕੀਤਾ ਗਿਆ ਹੈ।"
 
-#: devicenotifications.cpp:456
+#: devicenotifications.cpp:467
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Detected"
 msgstr "USB ਡਿਵਾਈਸ ਖੋਜਿਆ ਗਿਆ"
 
-#: devicenotifications.cpp:494
+#: devicenotifications.cpp:505
 #, kde-format
 msgid "%1 has been disconnected."
 msgstr "%1 ਨੂੰ ਡਿਸ-ਕਨੈਕਟ ਕੀਤਾ ਗਿਆ ਹੈ।"
 
-#: devicenotifications.cpp:494
+#: devicenotifications.cpp:505
 #, kde-format
 msgid "A USB device has been disconnected."
 msgstr "USB ਡਿਵਾਈਸ ਨੂੰ ਡਿਸ-ਕਨੈਕਟ ਕੀਤਾ ਗਿਆ ਹੈ"
 
-#: devicenotifications.cpp:499
+#: devicenotifications.cpp:510
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Removed"

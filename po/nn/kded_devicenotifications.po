@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-28 00:44+0000\n"
 "PO-Revision-Date: 2025-10-26 12:50+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -18,55 +18,55 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: devicenotifications.cpp:383
+#: devicenotifications.cpp:394
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Detected"
 msgstr "Skjem oppdaga"
 
-#: devicenotifications.cpp:384
+#: devicenotifications.cpp:395
 #, kde-format
 msgid "A display has been connected."
 msgstr "Ein ny skjerm vart kopla til."
 
-#: devicenotifications.cpp:404
+#: devicenotifications.cpp:415
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Removed"
 msgstr "Skjerm fjerna"
 
-#: devicenotifications.cpp:405
+#: devicenotifications.cpp:416
 #, kde-format
 msgid "A display has been disconnected."
 msgstr "Ein skjerm vart kopla frå."
 
-#: devicenotifications.cpp:451
+#: devicenotifications.cpp:462
 #, kde-format
 msgid "%1 has been connected."
 msgstr "%1 vart kopla til."
 
-#: devicenotifications.cpp:451
+#: devicenotifications.cpp:462
 #, kde-format
 msgid "A USB device has been connected."
 msgstr "Ei USB-eining vart kopla til."
 
-#: devicenotifications.cpp:456
+#: devicenotifications.cpp:467
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Detected"
 msgstr "USB-eining oppdaga"
 
-#: devicenotifications.cpp:494
+#: devicenotifications.cpp:505
 #, kde-format
 msgid "%1 has been disconnected."
 msgstr "%1 vart kopla frå."
 
-#: devicenotifications.cpp:494
+#: devicenotifications.cpp:505
 #, kde-format
 msgid "A USB device has been disconnected."
 msgstr "Ei USB-eining vart kopla frå."
 
-#: devicenotifications.cpp:499
+#: devicenotifications.cpp:510
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Removed"

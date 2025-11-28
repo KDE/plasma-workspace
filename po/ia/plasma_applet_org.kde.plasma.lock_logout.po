@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-27 00:45+0000\n"
+"POT-Creation-Date: 2025-11-28 00:44+0000\n"
 "PO-Revision-Date: 2024-06-25 09:43+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -22,54 +22,22 @@ msgstr ""
 msgid "General"
 msgstr "General"
 
-#: ConfigGeneral.qml:36
-#, kde-format
-msgctxt ""
-"Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
-msgid "Show actions:"
-msgstr "Monstra Actiones:"
+#: ConfigGeneral.qml:54
+#, fuzzy, kde-format
+#| msgid "Actions"
+msgctxt "@title:column"
+msgid "Actions"
+msgstr "Actiones"
 
-#: ConfigGeneral.qml:37
+#: ConfigGeneral.qml:116
 #, kde-format
-msgid "Log Out"
-msgstr "Claude session"
+msgid "Unavailable"
+msgstr ""
 
-#: ConfigGeneral.qml:44
-#, kde-format
-msgctxt "@option:check"
-msgid "Show logout screen"
-msgstr "Monstra Schermo de clausura de session"
-
-#: ConfigGeneral.qml:50
-#, kde-format
-msgid "Shut Down"
-msgstr "Arresto (shut down)"
-
-#: ConfigGeneral.qml:56 data.js:26
-#, kde-format
-msgid "Restart"
-msgstr "Re-Initia"
-
-#: ConfigGeneral.qml:62 data.js:5
+#: data.js:5
 #, kde-format
 msgid "Lock"
 msgstr "Bloca"
-
-#: ConfigGeneral.qml:68
-#, kde-format
-msgid "Switch User"
-msgstr "Commuta Usator"
-
-#: ConfigGeneral.qml:74 data.js:54
-#, kde-format
-msgid "Hibernate"
-msgstr "Hiberna"
-
-#: ConfigGeneral.qml:80 data.js:47
-#, kde-format
-msgctxt "Suspend to RAM"
-msgid "Sleep"
-msgstr "Dormi"
 
 #: data.js:6
 #, kde-format
@@ -98,6 +66,11 @@ msgstr "Arresto (shut down)"
 msgid "Turn off the computer"
 msgstr "Extingue le computator"
 
+#: data.js:26
+#, kde-format
+msgid "Restart"
+msgstr "Re-Initia"
+
 #: data.js:27
 #, kde-format
 msgid "Reboot the computer"
@@ -125,15 +98,45 @@ msgstr "Monstra Schermo de clausura de session"
 msgid "Log out, turn off, or restart the computer"
 msgstr "Claude session, stoppa o re-starta le computator"
 
+#: data.js:47
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Dormi"
+
 #: data.js:48
 #, kde-format
 msgid "Sleep (suspend to RAM)"
 msgstr "Dormi (suspende a RAM)"
 
+#: data.js:54
+#, kde-format
+msgid "Hibernate"
+msgstr "Hiberna"
+
 #: data.js:55
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Hiberna (Suspende a Disco)"
+
+#~ msgctxt ""
+#~ "Heading for a list of actions (leave, lock, switch user, hibernate, "
+#~ "suspend)"
+#~ msgid "Show actions:"
+#~ msgstr "Monstra Actiones:"
+
+#~ msgid "Log Out"
+#~ msgstr "Claude session"
+
+#~ msgctxt "@option:check"
+#~ msgid "Show logout screen"
+#~ msgstr "Monstra Schermo de clausura de session"
+
+#~ msgid "Shut Down"
+#~ msgstr "Arresto (shut down)"
+
+#~ msgid "Switch User"
+#~ msgstr "Commuta Usator"
 
 #~ msgid "Shutdown…"
 #~ msgstr "Arresto (Shutdown)…"
@@ -173,12 +176,6 @@ msgstr "Hiberna (Suspende a Disco)"
 
 #~ msgid "Leave..."
 #~ msgstr "Lassa (abandonar)..."
-
-#, fuzzy
-#~| msgid "Actions"
-#~ msgctxt "Heading for list of actions (leave, lock, shutdown, ...)"
-#~ msgid "Actions"
-#~ msgstr "Actiones"
 
 #~ msgid "Suspend"
 #~ msgstr "Suspende"

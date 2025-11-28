@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-27 00:45+0000\n"
+"POT-Creation-Date: 2025-11-28 00:44+0000\n"
 "PO-Revision-Date: 2024-06-27 21:00+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -28,54 +28,23 @@ msgstr ""
 msgid "General"
 msgstr "Xeral"
 
-#: ConfigGeneral.qml:36
-#, kde-format
-msgctxt ""
-"Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
-msgid "Show actions:"
-msgstr "Amosar as accións:"
+#: ConfigGeneral.qml:54
+#, fuzzy, kde-format
+#| msgctxt "Heading for list of actions (leave, lock, shutdown, ...)"
+#| msgid "Actions"
+msgctxt "@title:column"
+msgid "Actions"
+msgstr "Accións"
 
-#: ConfigGeneral.qml:37
+#: ConfigGeneral.qml:116
 #, kde-format
-msgid "Log Out"
-msgstr "Saír"
+msgid "Unavailable"
+msgstr ""
 
-#: ConfigGeneral.qml:44
-#, kde-format
-msgctxt "@option:check"
-msgid "Show logout screen"
-msgstr "Amosar a pantalla de saída."
-
-#: ConfigGeneral.qml:50
-#, kde-format
-msgid "Shut Down"
-msgstr "Apagar"
-
-#: ConfigGeneral.qml:56 data.js:26
-#, kde-format
-msgid "Restart"
-msgstr "Reiniciar"
-
-#: ConfigGeneral.qml:62 data.js:5
+#: data.js:5
 #, kde-format
 msgid "Lock"
 msgstr "Trancar"
-
-#: ConfigGeneral.qml:68
-#, kde-format
-msgid "Switch User"
-msgstr "Cambiar de persoa usuaria"
-
-#: ConfigGeneral.qml:74 data.js:54
-#, kde-format
-msgid "Hibernate"
-msgstr "Hibernar"
-
-#: ConfigGeneral.qml:80 data.js:47
-#, kde-format
-msgctxt "Suspend to RAM"
-msgid "Sleep"
-msgstr "Durmir"
 
 #: data.js:6
 #, kde-format
@@ -104,6 +73,11 @@ msgstr "Apagar"
 msgid "Turn off the computer"
 msgstr "Apagar o computador"
 
+#: data.js:26
+#, kde-format
+msgid "Restart"
+msgstr "Reiniciar"
+
 #: data.js:27
 #, kde-format
 msgid "Reboot the computer"
@@ -131,15 +105,45 @@ msgstr "Amosar a pantalla de saída."
 msgid "Log out, turn off, or restart the computer"
 msgstr "Saír, apagar ou reiniciar o computador."
 
+#: data.js:47
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Durmir"
+
 #: data.js:48
 #, kde-format
 msgid "Sleep (suspend to RAM)"
 msgstr "Suspender (en memoria)"
 
+#: data.js:54
+#, kde-format
+msgid "Hibernate"
+msgstr "Hibernar"
+
 #: data.js:55
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Hibernar (suspender en disco)"
+
+#~ msgctxt ""
+#~ "Heading for a list of actions (leave, lock, switch user, hibernate, "
+#~ "suspend)"
+#~ msgid "Show actions:"
+#~ msgstr "Amosar as accións:"
+
+#~ msgid "Log Out"
+#~ msgstr "Saír"
+
+#~ msgctxt "@option:check"
+#~ msgid "Show logout screen"
+#~ msgstr "Amosar a pantalla de saída."
+
+#~ msgid "Shut Down"
+#~ msgstr "Apagar"
+
+#~ msgid "Switch User"
+#~ msgstr "Cambiar de persoa usuaria"
 
 #~ msgid "Shutdown…"
 #~ msgstr "Apagar…"
@@ -173,10 +177,6 @@ msgstr "Hibernar (suspender en disco)"
 
 #~ msgid "Leave..."
 #~ msgstr "Saír…"
-
-#~ msgctxt "Heading for list of actions (leave, lock, shutdown, ...)"
-#~ msgid "Actions"
-#~ msgstr "Accións"
 
 #~ msgid "Suspend"
 #~ msgstr "Suspender"

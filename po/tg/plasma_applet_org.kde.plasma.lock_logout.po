@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-27 00:45+0000\n"
+"POT-Creation-Date: 2025-11-28 00:44+0000\n"
 "PO-Revision-Date: 2019-09-15 13:55+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -22,55 +22,21 @@ msgstr ""
 msgid "General"
 msgstr "Умумӣ"
 
-#: ConfigGeneral.qml:36
+#: ConfigGeneral.qml:54
 #, kde-format
-msgctxt ""
-"Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
-msgid "Show actions:"
-msgstr "Намоиш додани амалиётҳо:"
-
-#: ConfigGeneral.qml:37
-#, kde-format
-msgid "Log Out"
+msgctxt "@title:column"
+msgid "Actions"
 msgstr ""
 
-#: ConfigGeneral.qml:44
-#, fuzzy, kde-format
-#| msgid "Lock the screen"
-msgctxt "@option:check"
-msgid "Show logout screen"
-msgstr "Экранро қулф кардан"
-
-#: ConfigGeneral.qml:50
+#: ConfigGeneral.qml:116
 #, kde-format
-msgid "Shut Down"
+msgid "Unavailable"
 msgstr ""
 
-#: ConfigGeneral.qml:56 data.js:26
-#, kde-format
-msgid "Restart"
-msgstr ""
-
-#: ConfigGeneral.qml:62 data.js:5
+#: data.js:5
 #, kde-format
 msgid "Lock"
 msgstr "Қулф кардани низом"
-
-#: ConfigGeneral.qml:68
-#, kde-format
-msgid "Switch User"
-msgstr "Иваз кардани корбар"
-
-#: ConfigGeneral.qml:74 data.js:54
-#, kde-format
-msgid "Hibernate"
-msgstr "Дар ҳолати ҷорӣ нигоҳ доштан"
-
-#: ConfigGeneral.qml:80 data.js:47
-#, kde-format
-msgctxt "Suspend to RAM"
-msgid "Sleep"
-msgstr "Ба хоб равондан"
 
 #: data.js:6
 #, kde-format
@@ -98,6 +64,11 @@ msgstr ""
 #| msgid "Log out, turn off or restart the computer"
 msgid "Turn off the computer"
 msgstr "Компютерро хомӯш кунед, аз нав ба кор дароред ё аз низом бароед"
+
+#: data.js:26
+#, kde-format
+msgid "Restart"
+msgstr ""
 
 #: data.js:27
 #, kde-format
@@ -127,15 +98,41 @@ msgstr "Экранро қулф кардан"
 msgid "Log out, turn off, or restart the computer"
 msgstr "Компютерро хомӯш кунед, аз нав ба кор дароред ё аз низом бароед"
 
+#: data.js:47
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Ба хоб равондан"
+
 #: data.js:48
 #, kde-format
 msgid "Sleep (suspend to RAM)"
 msgstr "Ба хоб равондан (таваққуф кардан дар RAM)"
 
+#: data.js:54
+#, kde-format
+msgid "Hibernate"
+msgstr "Дар ҳолати ҷорӣ нигоҳ доштан"
+
 #: data.js:55
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Дар ҳолати ҷорӣ нигоҳ доштан (таваққуф кардан дар диск)"
+
+#~ msgctxt ""
+#~ "Heading for a list of actions (leave, lock, switch user, hibernate, "
+#~ "suspend)"
+#~ msgid "Show actions:"
+#~ msgstr "Намоиш додани амалиётҳо:"
+
+#, fuzzy
+#~| msgid "Lock the screen"
+#~ msgctxt "@option:check"
+#~ msgid "Show logout screen"
+#~ msgstr "Экранро қулф кардан"
+
+#~ msgid "Switch User"
+#~ msgstr "Иваз кардани корбар"
 
 #~ msgid "Do you want to suspend to disk (hibernate)?"
 #~ msgstr ""

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-28 00:44+0000\n"
 "PO-Revision-Date: 2025-10-17 12:06+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -17,55 +17,55 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Lokalize 25.08.2\n"
 
-#: devicenotifications.cpp:383
+#: devicenotifications.cpp:394
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Detected"
 msgstr "Zjištěna obrazovka"
 
-#: devicenotifications.cpp:384
+#: devicenotifications.cpp:395
 #, kde-format
 msgid "A display has been connected."
 msgstr "Obrazovka byla připojena."
 
-#: devicenotifications.cpp:404
+#: devicenotifications.cpp:415
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Removed"
 msgstr "Obrazovka odpojena"
 
-#: devicenotifications.cpp:405
+#: devicenotifications.cpp:416
 #, kde-format
 msgid "A display has been disconnected."
 msgstr "Obrazovka byla odpojena."
 
-#: devicenotifications.cpp:451
+#: devicenotifications.cpp:462
 #, kde-format
 msgid "%1 has been connected."
 msgstr "%1 bylo připojeno."
 
-#: devicenotifications.cpp:451
+#: devicenotifications.cpp:462
 #, kde-format
 msgid "A USB device has been connected."
 msgstr "Zařízení USB bylo připojeno."
 
-#: devicenotifications.cpp:456
+#: devicenotifications.cpp:467
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Detected"
 msgstr "Bylo nalezeno zařízení USB"
 
-#: devicenotifications.cpp:494
+#: devicenotifications.cpp:505
 #, kde-format
 msgid "%1 has been disconnected."
 msgstr "%1 bylo odpojeno."
 
-#: devicenotifications.cpp:494
+#: devicenotifications.cpp:505
 #, kde-format
 msgid "A USB device has been disconnected."
 msgstr "Zařízení USB bylo odpojeno."
 
-#: devicenotifications.cpp:499
+#: devicenotifications.cpp:510
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Removed"

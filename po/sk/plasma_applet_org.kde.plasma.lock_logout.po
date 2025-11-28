@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.lock_logout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-27 00:45+0000\n"
+"POT-Creation-Date: 2025-11-28 00:44+0000\n"
 "PO-Revision-Date: 2023-11-11 15:16+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -22,55 +22,23 @@ msgstr ""
 msgid "General"
 msgstr "Všeobecné"
 
-#: ConfigGeneral.qml:36
-#, kde-format
-msgctxt ""
-"Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
-msgid "Show actions:"
-msgstr "Zobraziť akcie:"
-
-#: ConfigGeneral.qml:37
-#, kde-format
-msgid "Log Out"
-msgstr "Odhlásiť sa"
-
-#: ConfigGeneral.qml:44
+#: ConfigGeneral.qml:54
 #, fuzzy, kde-format
-#| msgid "Lock the screen"
-msgctxt "@option:check"
-msgid "Show logout screen"
-msgstr "Zamknúť obrazovku"
+#| msgctxt "Heading for list of actions (leave, lock, shutdown, ...)"
+#| msgid "Actions"
+msgctxt "@title:column"
+msgid "Actions"
+msgstr "Akcie"
 
-#: ConfigGeneral.qml:50
+#: ConfigGeneral.qml:116
 #, kde-format
-msgid "Shut Down"
-msgstr "Vypnúť"
+msgid "Unavailable"
+msgstr ""
 
-#: ConfigGeneral.qml:56 data.js:26
-#, kde-format
-msgid "Restart"
-msgstr "Reštart"
-
-#: ConfigGeneral.qml:62 data.js:5
+#: data.js:5
 #, kde-format
 msgid "Lock"
 msgstr "Zamknúť"
-
-#: ConfigGeneral.qml:68
-#, kde-format
-msgid "Switch User"
-msgstr "Prepnúť užívateľa"
-
-#: ConfigGeneral.qml:74 data.js:54
-#, kde-format
-msgid "Hibernate"
-msgstr "Hibernovať"
-
-#: ConfigGeneral.qml:80 data.js:47
-#, kde-format
-msgctxt "Suspend to RAM"
-msgid "Sleep"
-msgstr "Uspať"
 
 #: data.js:6
 #, kde-format
@@ -98,6 +66,11 @@ msgstr "Vypnúť"
 #, kde-format
 msgid "Turn off the computer"
 msgstr "Vypnúť počítač"
+
+#: data.js:26
+#, kde-format
+msgid "Restart"
+msgstr "Reštart"
 
 #: data.js:27
 #, kde-format
@@ -128,15 +101,47 @@ msgstr "Zamknúť obrazovku"
 msgid "Log out, turn off, or restart the computer"
 msgstr "Vypnúť počítač"
 
+#: data.js:47
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Uspať"
+
 #: data.js:48
 #, kde-format
 msgid "Sleep (suspend to RAM)"
 msgstr "Uspať (uspať do RAM)"
 
+#: data.js:54
+#, kde-format
+msgid "Hibernate"
+msgstr "Hibernovať"
+
 #: data.js:55
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Uspať (uspať na disk)"
+
+#~ msgctxt ""
+#~ "Heading for a list of actions (leave, lock, switch user, hibernate, "
+#~ "suspend)"
+#~ msgid "Show actions:"
+#~ msgstr "Zobraziť akcie:"
+
+#~ msgid "Log Out"
+#~ msgstr "Odhlásiť sa"
+
+#, fuzzy
+#~| msgid "Lock the screen"
+#~ msgctxt "@option:check"
+#~ msgid "Show logout screen"
+#~ msgstr "Zamknúť obrazovku"
+
+#~ msgid "Shut Down"
+#~ msgstr "Vypnúť"
+
+#~ msgid "Switch User"
+#~ msgstr "Prepnúť užívateľa"
 
 #~ msgid "Shutdown…"
 #~ msgstr "Vypnúť..."
@@ -176,10 +181,6 @@ msgstr "Uspať (uspať na disk)"
 
 #~ msgid "Leave..."
 #~ msgstr "Odísť..."
-
-#~ msgctxt "Heading for list of actions (leave, lock, shutdown, ...)"
-#~ msgid "Actions"
-#~ msgstr "Akcie"
 
 #~ msgid "Suspend"
 #~ msgstr "Uspať"
