@@ -60,6 +60,7 @@
         "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=System%20Tray%20widget",
         "Category": "Windows and Tasks",
         "Description": "Quickly access system features and application status icons",
+        "Description[ar]": "الوصول السريع إلى ميزات النظام وأيقونات حالة التطبيقات",
         "Description[ca@valencia]": "Accés ràpid a les característiques del sistema i a les icones d'estat de l'aplicació",
         "Description[ca]": "Accés ràpid a les característiques del sistema i a les icones d'estat de l'aplicació",
         "Description[es]": "Acceso rápido a funciones del sistema e iconos de estado de las aplicaciones",
