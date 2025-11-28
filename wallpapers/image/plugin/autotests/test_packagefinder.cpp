@@ -24,6 +24,7 @@ private Q_SLOTS:
     void testFindPreferredSizeInPackage_data();
     void testFindPreferredSizeInPackage();
     void testPackageFinderCanFindPackages();
+    void testSelectors();
 
 private:
     QDir m_dataDir;
@@ -106,6 +107,18 @@ void PackageFinderTest::testPackageFinderCanFindPackages()
     QCOMPARE(secondPackage.filePath("preferred"),
              m_dataDir.absoluteFilePath(QStringLiteral("%1/contents/images/1920x1080.jpg").arg(ImageBackendTestData::defaultPackageFolderName2)));
     QCOMPARE(secondPackage.filePath("preferredDark"), QString());
+}
+
+void PackageFinderTest::testSelectors()
+{
+    const auto withLightImages = WallpaperPackage::from(m_dataDir.absoluteFilePath(ImageBackendTestData::defaultPackageFolderName2));
+    QCOMPARE(withLightImages->selectors(), QStringList());
+
+    const auto withDarkAndLightImages = WallpaperPackage::from(m_dataDir.absoluteFilePath(ImageBackendTestData::defaultPackageFolderName1));
+    QCOMPARE(withDarkAndLightImages->selectors(), QStringList() << QStringLiteral("dark-light") << QStringLiteral("day-night"));
+
+    const auto withAnimatedDarkAndLightImages = WallpaperPackage::from(QFINDTESTDATA("testdata/animated-dark-light"));
+    QCOMPARE(withAnimatedDarkAndLightImages->selectors(), QStringList() << QStringLiteral("dark-light"));
 }
 
 QTEST_MAIN(PackageFinderTest)

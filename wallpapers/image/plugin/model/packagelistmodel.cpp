@@ -162,28 +162,18 @@ QStringList PackageListModel::addBackground(const QUrl &url)
         return {};
     }
 
-    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Wallpaper/Images"));
-    package.setPath(url.toLocalFile());
-
-    if (!package.isValid() || !package.metadata().isValid()) {
+    const auto wallpaper = WallpaperPackage::from(url.toLocalFile());
+    if (!wallpaper) {
         return {};
     }
 
-    // Check if there are any available images.
-    QDir imageDir(package.filePath("images"));
-    imageDir.setFilter(QDir::Files | QDir::Readable);
-    imageDir.setNameFilters(suffixes());
-
-    if (imageDir.entryInfoList().empty()) {
-        // This is an empty package. Skip it.
-        return {};
-    }
+    const QString packageFilePath = wallpaper->package().path();
 
     if (m_usedInConfig) {
         beginInsertRows(QModelIndex(), 0, 0);
 
-        m_removableWallpapers.prepend(package.path());
-        m_packages.prepend(package);
+        m_removableWallpapers.prepend(packageFilePath);
+        m_packages.prepend(*wallpaper);
 
         endInsertRows();
     } else {
@@ -191,13 +181,13 @@ QStringList PackageListModel::addBackground(const QUrl &url)
         const int count = rowCount();
         beginInsertRows(QModelIndex(), count, count);
 
-        m_removableWallpapers.append(package.path());
-        m_packages.append(package);
+        m_removableWallpapers.append(packageFilePath);
+        m_packages.append(*wallpaper);
 
         endInsertRows();
     }
 
-    return {package.path()};
+    return {packageFilePath};
 }
 
 QStringList PackageListModel::removeBackground(const QUrl &url)

@@ -26,11 +26,13 @@
 class WallpaperPackage
 {
 public:
-    WallpaperPackage(const KPackage::Package &package);
+    WallpaperPackage(const KPackage::Package &package, const QStringList &selectors);
 
     KPackage::Package package() const;
     QStringList selectors() const;
 
+    static std::optional<WallpaperPackage> from(const QString &filePath);
+    static std::optional<WallpaperPackage> from(const KPackage::Package &package);
     static QList<WallpaperPackage> findAll(const QStringList &paths);
     static void findPreferredImageInPackage(KPackage::Package &package, const QSize &targetSize);
 
