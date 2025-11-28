@@ -125,7 +125,7 @@ KCM.GridDelegate {
     }
 
     Behavior on opacity {
-        OpacityAnimator {
+        NumberAnimation {
             duration: Kirigami.Units.longDuration
             easing.type: Easing.InOutQuad
         }
