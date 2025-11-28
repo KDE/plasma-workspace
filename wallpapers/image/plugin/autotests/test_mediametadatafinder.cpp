@@ -39,7 +39,6 @@ void MediaMetadataFinderTest::testMediaMetadataFinderCanFindMetadata()
     QTRY_COMPARE(metadata.title, QStringLiteral("DocumentName"));
     QTRY_COMPARE(metadata.author, QStringLiteral("KDE Community"));
 #endif
-    QTRY_COMPARE(metadata.resolution, QSize(15, 16));
 }
 
 QTEST_MAIN(MediaMetadataFinderTest)

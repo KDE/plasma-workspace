@@ -7,9 +7,6 @@
 
 #include "mediametadatafinder.h"
 
-#include <QFile>
-#include <QImageReader>
-
 #include "config-KExiv2.h"
 #if HAVE_KExiv2
 #include <KExiv2/KExiv2>
@@ -18,9 +15,6 @@
 MediaMetadata MediaMetadata::read(const QString &path)
 {
     MediaMetadata metadata;
-
-    const QImageReader reader(path);
-    metadata.resolution = reader.size();
 
 #if HAVE_KExiv2
     KExiv2Iface::KExiv2 exivImage(path);

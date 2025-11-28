@@ -12,7 +12,6 @@
 struct MediaMetadata {
     QString title;
     QString author;
-    QSize resolution;
 
     static MediaMetadata read(const QString &path);
 };
