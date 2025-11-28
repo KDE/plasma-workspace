@@ -72,17 +72,6 @@ WallpaperPackage::WallpaperPackage(const KPackage::Package &package)
     }
 }
 
-QString WallpaperPackage::displayName() const
-{
-    const QString title = m_package.metadata().name();
-
-    if (title.isEmpty()) {
-        return QFileInfo(m_package.filePath("preferred")).completeBaseName();
-    }
-
-    return title;
-}
-
 KPackage::Package WallpaperPackage::package() const
 {
     return m_package;

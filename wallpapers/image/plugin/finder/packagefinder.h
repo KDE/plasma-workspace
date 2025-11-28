@@ -28,7 +28,6 @@ class WallpaperPackage
 public:
     WallpaperPackage(const KPackage::Package &package);
 
-    QString displayName() const;
     KPackage::Package package() const;
     QStringList selectors() const;
 

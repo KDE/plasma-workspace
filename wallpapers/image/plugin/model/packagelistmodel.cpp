@@ -47,7 +47,7 @@ QVariant PackageListModel::data(const QModelIndex &index, int role) const
 
     switch (role) {
     case Qt::DisplayRole:
-        return b.displayName();
+        return b.package().metadata().name();
 
     case PreviewRole: {
         QString previewUri;
