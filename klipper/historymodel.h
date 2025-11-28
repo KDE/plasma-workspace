@@ -79,7 +79,7 @@ public:
      * The duplicate concept is "deep", so that two text string
      * are considered duplicate if identical.
      */
-    bool insert(const QMimeData *mimeData, qreal timestamp = 0);
+    bool insert(const QMimeData *mimeData);
     bool insert(const QString &text);
 
     /**

@@ -36,8 +36,7 @@ UpdateDatabaseJob *UpdateDatabaseJob::updateClipboard(QObject *parent,
                                                       QStringView databaseFolder,
                                                       const QString &uuid,
                                                       const QString &text,
-                                                      const QMimeData *mimeData,
-                                                      qreal timestamp)
+                                                      const QMimeData *mimeData)
 {
     QCryptographicHash hash(QCryptographicHash::Sha1);
     std::list<MimeData> mimeDataList;
@@ -90,7 +89,7 @@ UpdateDatabaseJob *UpdateDatabaseJob::updateClipboard(QObject *parent,
         mimeDataList.emplace_back(format, std::move(data), QString::fromLatin1(hash.result().toHex()));
     }
 
-    return new UpdateDatabaseJob(parent, database, databaseFolder, uuid, text, std::move(mimeDataList), timestamp);
+    return new UpdateDatabaseJob(parent, database, databaseFolder, uuid, text, std::move(mimeDataList));
 }
 
 UpdateDatabaseJob::UpdateDatabaseJob(QObject *parent,
@@ -98,15 +97,13 @@ UpdateDatabaseJob::UpdateDatabaseJob(QObject *parent,
                                      QStringView databaseFolder,
                                      const QString &uuid,
                                      const QString &text,
-                                     std::list<MimeData> &&mimeDataList,
-                                     qreal timestamp)
+                                     std::list<MimeData> &&mimeDataList)
     : KCompositeJob(parent)
     , m_db(database)
     , m_uuid(uuid)
     , m_text(text)
     , m_dataDir(databaseFolder + u"/data/")
     , m_mimeDataList(std::move(mimeDataList))
-    , m_timestamp(timestamp)
 {
 }
 
@@ -124,13 +121,9 @@ void UpdateDatabaseJob::start()
     QSqlQuery query(*m_db);
     query.prepare(u"INSERT INTO main (uuid, added_time, last_used_time, mimetypes, text, starred) VALUES (?, ?, ?, ?, ?, ?)"_s);
     query.addBindValue(m_uuid);
-    if (m_timestamp == 0) [[likely]] {
-        query.addBindValue(QDateTime::currentMSecsSinceEpoch() / 1000.0);
-        query.addBindValue(QDateTime::currentMSecsSinceEpoch() / 1000.0);
-    } else {
-        query.addBindValue(qreal(m_timestamp));
-        query.addBindValue(qreal(m_timestamp));
-    }
+    query.addBindValue(QDateTime::currentMSecsSinceEpoch() / 1000.0);
+    query.addBindValue(QDateTime::currentMSecsSinceEpoch() / 1000.0);
+
     query.addBindValue(std::accumulate(std::next(m_mimeDataList.begin()),
                                        m_mimeDataList.end(),
                                        m_mimeDataList.begin()->type,

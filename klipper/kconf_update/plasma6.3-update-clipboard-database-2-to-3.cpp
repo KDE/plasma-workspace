@@ -85,9 +85,8 @@ void importHistory(const QString &history2FilePath)
     }
 
     qInfo() << "Size:" << dataList.size();
-    qreal timestamp = QDateTime::currentSecsSinceEpoch();
-    for (auto &it : std::as_const(dataList)) {
-        model->insert(it.get(), timestamp--);
+    for (auto &it : std::as_const(dataList) | std::views::reverse) {
+        model->insert(it.get());
     }
 
     int count = 0;

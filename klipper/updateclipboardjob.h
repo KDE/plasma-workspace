@@ -38,8 +38,7 @@ public:
                                               QStringView databaseFolder,
                                               const QString &uuid,
                                               const QString &text,
-                                              const QMimeData *mimeData,
-                                              qreal timestamp);
+                                              const QMimeData *mimeData);
     ~UpdateDatabaseJob() override;
 
     void start() override;
@@ -50,8 +49,7 @@ protected:
                                QStringView databaseFolder,
                                const QString &uuid,
                                const QString &text,
-                               std::list<MimeData> &&mimeDataList,
-                               qreal timestamp);
+                               std::list<MimeData> &&mimeDataList);
 
 private:
     void onDataDirReady(KJob *job);
@@ -62,5 +60,4 @@ private:
     QString m_text;
     QString m_dataDir;
     std::list<MimeData> m_mimeDataList;
-    qreal m_timestamp;
 };

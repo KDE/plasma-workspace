@@ -599,7 +599,7 @@ HistoryItemConstPtr HistoryModel::first() const
     return m_items[0];
 }
 
-bool HistoryModel::insert(const QMimeData *mimeData, qreal timestamp)
+bool HistoryModel::insert(const QMimeData *mimeData)
 {
     if (m_maxSize == 0) {
         // special case - cannot insert any items
@@ -632,7 +632,7 @@ bool HistoryModel::insert(const QMimeData *mimeData, qreal timestamp)
     }
 
     auto item = std::make_shared<HistoryItem>(uuid, formats, text);
-    auto updateJob = UpdateDatabaseJob::updateClipboard(this, &m_db, m_dbFolder, uuid, text, mimeData, timestamp);
+    auto updateJob = UpdateDatabaseJob::updateClipboard(this, &m_db, m_dbFolder, uuid, text, mimeData);
     if (item->type() == HistoryItemType::Image) {
         connect(updateJob, &KJob::finished, this, [this, uuid](KJob *job) {
             if (job->error()) {
