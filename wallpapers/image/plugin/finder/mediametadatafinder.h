@@ -6,31 +6,13 @@
 
 #pragma once
 
-#include <QObject>
-#include <QRunnable>
 #include <QSize>
+#include <QString>
 
 struct MediaMetadata {
     QString title;
     QString author;
     QSize resolution;
-};
 
-/**
- * A runnable that helps find the metadata of an image or a video.
- */
-class MediaMetadataFinder : public QObject, public QRunnable
-{
-    Q_OBJECT
-
-public:
-    explicit MediaMetadataFinder(const QString &path, QObject *parent = nullptr);
-
-    void run() override;
-
-Q_SIGNALS:
-    void metadataFound(const QString &path, const MediaMetadata &metadata);
-
-private:
-    QString m_path;
+    static MediaMetadata read(const QString &path);
 };

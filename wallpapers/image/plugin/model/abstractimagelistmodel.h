@@ -65,8 +65,7 @@ protected:
 
     QHash<QString, QString /* title */> m_backgroundTitleCache;
     QHash<QString, QString /* author */> m_backgroundAuthorCache;
-
-    mutable QHash<QString, QPersistentModelIndex> m_sizeJobsUrls;
+    QHash<QString, QPersistentModelIndex> m_sizeJobsUrls;
 
     QHash<QString, bool> m_pendingDeletion;
     QStringList m_removableWallpapers;
@@ -75,7 +74,4 @@ protected:
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(AbstractImageListModel, bool, m_usedInConfig, true)
 
     friend class ImageProxyModel; // For m_removableWallpapers
-
-private Q_SLOTS:
-    void slotMediaMetadataFound(const QString &path, const MediaMetadata &metadata);
 };

@@ -7,7 +7,6 @@
 #include <QDir>
 #include <QSignalSpy>
 #include <QTest>
-#include <QThreadPool>
 
 #include "../finder/mediametadatafinder.h"
 #include "commontestdata.h"
@@ -35,17 +34,7 @@ void MediaMetadataFinderTest::initTestCase()
 
 void MediaMetadataFinderTest::testMediaMetadataFinderCanFindMetadata()
 {
-    MediaMetadataFinder *finder = new MediaMetadataFinder(m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName1));
-    QSignalSpy spy(finder, &MediaMetadataFinder::metadataFound);
-    QThreadPool::globalInstance()->start(finder);
-
-    spy.wait(10 * 1000);
-    QCOMPARE(spy.count(), 1);
-
-    const auto args = spy.takeFirst();
-    QCOMPARE(args.at(0).toString(), m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName1));
-
-    const auto metadata = args.at(1).value<MediaMetadata>();
+    const auto metadata = MediaMetadata::read(m_dataDir.absoluteFilePath(ImageBackendTestData::defaultImageFileName1));
 #if HAVE_KExiv2
     QTRY_COMPARE(metadata.title, QStringLiteral("DocumentName"));
     QTRY_COMPARE(metadata.author, QStringLiteral("KDE Community"));

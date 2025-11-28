@@ -6,7 +6,7 @@
 
 #include "abstractimagelistmodel.h"
 
-#include <QThreadPool>
+#include <QtConcurrent>
 
 #include "../finder/mediametadatafinder.h"
 #include "config-KExiv2.h"
@@ -73,34 +73,33 @@ void AbstractImageListModel::asyncGetMediaMetadata(const QString &path, const QP
         return;
     }
 
-    auto *finder = new MediaMetadataFinder(path);
-    connect(finder, &MediaMetadataFinder::metadataFound, this, &AbstractImageListModel::slotMediaMetadataFound);
-    QThreadPool::globalInstance()->start(finder);
+    // An ugly way to get mutable "this". asyncGetMediaMetadata() gets called from `data() const` so
+    // there's no beating around the bush unfortunately, const_cast is only one of the few options we have left.
+    auto self = const_cast<AbstractImageListModel *>(this);
 
-    m_sizeJobsUrls.insert(path, index);
+    QtConcurrent::run(MediaMetadata::read, path).then(self, [self, path](const MediaMetadata &metadata) {
+        const QPersistentModelIndex index = self->m_sizeJobsUrls.take(path);
+
+        QList<int> dirtyRoles;
+
+        self->m_backgroundTitleCache.insert(path, metadata.title);
+        if (!metadata.title.isEmpty()) {
+            dirtyRoles.append(Qt::DisplayRole);
+        }
+
+        self->m_backgroundAuthorCache.insert(path, metadata.author);
+        if (!metadata.author.isEmpty()) {
+            dirtyRoles.append(AuthorRole);
+        }
+
+        if (!dirtyRoles.isEmpty()) {
+            Q_EMIT self->dataChanged(index, index, dirtyRoles);
+        }
+    });
+
+    self->m_sizeJobsUrls.insert(path, index);
 #else
     Q_UNUSED(path)
     Q_UNUSED(index)
 #endif
-}
-
-void AbstractImageListModel::slotMediaMetadataFound(const QString &path, const MediaMetadata &metadata)
-{
-    const QPersistentModelIndex index = m_sizeJobsUrls.take(path);
-
-    QList<int> dirtyRoles;
-
-    m_backgroundTitleCache.insert(path, metadata.title);
-    if (!metadata.title.isEmpty()) {
-        dirtyRoles.append(Qt::DisplayRole);
-    }
-
-    m_backgroundAuthorCache.insert(path, metadata.author);
-    if (!metadata.author.isEmpty()) {
-        dirtyRoles.append(AuthorRole);
-    }
-
-    if (!dirtyRoles.isEmpty()) {
-        Q_EMIT dataChanged(index, index, dirtyRoles);
-    }
 }
