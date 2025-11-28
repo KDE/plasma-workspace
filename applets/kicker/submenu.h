@@ -15,6 +15,7 @@ class SubMenu : public PlasmaQuick::Dialog
     QML_ELEMENT
 
     Q_PROPERTY(int offset READ offset WRITE setOffset NOTIFY offsetChanged)
+    Q_PROPERTY(bool dialogMirrored READ dialogMirrored WRITE setDialogMirrored NOTIFY dialogMirroredChanged)
     Q_PROPERTY(bool facingLeft READ facingLeft NOTIFY facingLeftChanged)
 
 public:
@@ -27,6 +28,8 @@ public:
 
     int offset() const;
     void setOffset(int offset);
+    bool dialogMirrored() const;
+    void setDialogMirrored(bool mirrored);
 
     bool facingLeft() const
     {
@@ -36,8 +39,10 @@ public:
 Q_SIGNALS:
     void offsetChanged() const;
     void facingLeftChanged() const;
+    void dialogMirroredChanged() const;
 
 private:
     int m_offset;
+    bool m_dialogMirrored;
     bool m_facingLeft;
 };

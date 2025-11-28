@@ -18,6 +18,7 @@
 SubMenu::SubMenu(QQuickItem *parent)
     : PlasmaQuick::Dialog(parent)
     , m_offset(0)
+    , m_dialogMirrored(false)
     , m_facingLeft(false)
 {
     setType(AppletPopup);
@@ -39,13 +40,25 @@ void SubMenu::setOffset(int offset)
     }
 }
 
+bool SubMenu::dialogMirrored() const
+{
+    return m_dialogMirrored;
+}
+
+void SubMenu::setDialogMirrored(bool mirrored)
+{
+    if (m_dialogMirrored != mirrored) {
+        m_dialogMirrored = mirrored;
+
+        Q_EMIT dialogMirroredChanged();
+    }
+}
+
 QPoint SubMenu::popupPosition(QQuickItem *item, const QSize &size)
 {
     if (!item || !item->window()) {
         return {0, 0};
     }
-
-    const bool isRightToLeft = QApplication::layoutDirection() == Qt::RightToLeft;
 
     QPointF pos = item->mapToScene(QPointF(0, 0));
     pos = item->window()->mapToGlobal(pos.toPoint());
@@ -58,7 +71,7 @@ QPoint SubMenu::popupPosition(QQuickItem *item, const QSize &size)
     bool fitsLeft = xPopupLeft >= avail.left();
     bool fitsRight = xPopupRight + size.width() <= avail.right();
 
-    if ((isRightToLeft && fitsLeft) || (!isRightToLeft && !fitsRight)) {
+    if ((dialogMirrored() && fitsLeft) || (!dialogMirrored() && !fitsRight)) {
         pos.setX(xPopupLeft);
         m_facingLeft = true;
         Q_EMIT facingLeftChanged();
