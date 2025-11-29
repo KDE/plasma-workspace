@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-29 00:44+0000\n"
 "PO-Revision-Date: 2024-02-09 07:28+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -18,55 +18,87 @@ msgstr ""
 "%100==4 ? 3 : 0);\n"
 "X-Generator: Poedit 3.4.2\n"
 
-#: kded/mprisservice.cpp:103
+#: kded/mprisservice.cpp:131
 #, kde-format
 msgctxt "@title Name for global shortcuts category"
 msgid "Media Controller"
 msgstr "Medijski krmilnik"
 
-#: kded/mprisservice.cpp:112
+#: kded/mprisservice.cpp:140
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Play/Pause media playback"
 msgstr "Predvajaj/začasno ustavi predvajanje medija"
 
-#: kded/mprisservice.cpp:113
+#: kded/mprisservice.cpp:141
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback next"
 msgstr "Predvajaj naslednji medij"
 
-#: kded/mprisservice.cpp:114
+#: kded/mprisservice.cpp:142
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback previous"
 msgstr "Predvajaj prejšnji medij"
 
-#: kded/mprisservice.cpp:115
+#: kded/mprisservice.cpp:144
+#, fuzzy, kde-format
+#| msgctxt "@title shortcut"
+#| msgid "Media playback previous"
+msgctxt "@title shortcut"
+msgid "Media playback seek forward 5s"
+msgstr "Predvajaj prejšnji medij"
+
+#: kded/mprisservice.cpp:148
+#, fuzzy, kde-format
+#| msgctxt "@title shortcut"
+#| msgid "Media playback next"
+msgctxt "@title shortcut"
+msgid "Media playback seek backward 5s"
+msgstr "Predvajaj naslednji medij"
+
+#: kded/mprisservice.cpp:152
+#, fuzzy, kde-format
+#| msgctxt "@title shortcut"
+#| msgid "Media playback previous"
+msgctxt "@title shortcut"
+msgid "Media playback seek forward 30s"
+msgstr "Predvajaj prejšnji medij"
+
+#: kded/mprisservice.cpp:156
+#, fuzzy, kde-format
+#| msgctxt "@title shortcut"
+#| msgid "Media playback next"
+msgctxt "@title shortcut"
+msgid "Media playback seek backward 30s"
+msgstr "Predvajaj naslednji medij"
+
+#: kded/mprisservice.cpp:159
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Stop media playback"
 msgstr "Zaustavi predvajanje medija"
 
-#: kded/mprisservice.cpp:116
+#: kded/mprisservice.cpp:160
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Pause media playback"
 msgstr "Prekini predvajanje medija"
 
-#: kded/mprisservice.cpp:117
+#: kded/mprisservice.cpp:161
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Play media playback"
 msgstr "Predvajaj medij"
 
-#: kded/mprisservice.cpp:118
+#: kded/mprisservice.cpp:162
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media volume up"
 msgstr "Povečaj glasnost"
 
-#: kded/mprisservice.cpp:119
+#: kded/mprisservice.cpp:163
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media volume down"

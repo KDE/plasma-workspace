@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-29 00:44+0000\n"
 "PO-Revision-Date: 2024-02-13 23:48+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -19,55 +19,87 @@ msgstr ""
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
 "X-Generator: Poedit 3.0.1\n"
 
-#: kded/mprisservice.cpp:103
+#: kded/mprisservice.cpp:131
 #, kde-format
 msgctxt "@title Name for global shortcuts category"
 msgid "Media Controller"
 msgstr "Medijos valdiklis"
 
-#: kded/mprisservice.cpp:112
+#: kded/mprisservice.cpp:140
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Play/Pause media playback"
 msgstr "Atkurti/Pristabdyti medijos atkūrimą"
 
-#: kded/mprisservice.cpp:113
+#: kded/mprisservice.cpp:141
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback next"
 msgstr "Medijos atkūrimas, kitas"
 
-#: kded/mprisservice.cpp:114
+#: kded/mprisservice.cpp:142
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback previous"
 msgstr "Medijos atkūrimas, ankstesnis"
 
-#: kded/mprisservice.cpp:115
+#: kded/mprisservice.cpp:144
+#, fuzzy, kde-format
+#| msgctxt "@title shortcut"
+#| msgid "Media playback previous"
+msgctxt "@title shortcut"
+msgid "Media playback seek forward 5s"
+msgstr "Medijos atkūrimas, ankstesnis"
+
+#: kded/mprisservice.cpp:148
+#, fuzzy, kde-format
+#| msgctxt "@title shortcut"
+#| msgid "Media playback next"
+msgctxt "@title shortcut"
+msgid "Media playback seek backward 5s"
+msgstr "Medijos atkūrimas, kitas"
+
+#: kded/mprisservice.cpp:152
+#, fuzzy, kde-format
+#| msgctxt "@title shortcut"
+#| msgid "Media playback previous"
+msgctxt "@title shortcut"
+msgid "Media playback seek forward 30s"
+msgstr "Medijos atkūrimas, ankstesnis"
+
+#: kded/mprisservice.cpp:156
+#, fuzzy, kde-format
+#| msgctxt "@title shortcut"
+#| msgid "Media playback next"
+msgctxt "@title shortcut"
+msgid "Media playback seek backward 30s"
+msgstr "Medijos atkūrimas, kitas"
+
+#: kded/mprisservice.cpp:159
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Stop media playback"
 msgstr "Stabdyti medijos atkūrimą"
 
-#: kded/mprisservice.cpp:116
+#: kded/mprisservice.cpp:160
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Pause media playback"
 msgstr "Pristabdyti medijos atkūrimą"
 
-#: kded/mprisservice.cpp:117
+#: kded/mprisservice.cpp:161
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Play media playback"
 msgstr "Atkurti medijos atkūrimą"
 
-#: kded/mprisservice.cpp:118
+#: kded/mprisservice.cpp:162
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media volume up"
 msgstr "Garsinti mediją"
 
-#: kded/mprisservice.cpp:119
+#: kded/mprisservice.cpp:163
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media volume down"

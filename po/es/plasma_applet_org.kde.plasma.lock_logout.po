@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.lock_logout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-28 00:44+0000\n"
-"PO-Revision-Date: 2025-11-27 21:16+0100\n"
+"PO-Revision-Date: 2025-11-28 02:30+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -28,12 +28,12 @@ msgstr "General"
 #, kde-format
 msgctxt "@title:column"
 msgid "Actions"
-msgstr ""
+msgstr "Acciones"
 
 #: ConfigGeneral.qml:116
 #, kde-format
 msgid "Unavailable"
-msgstr ""
+msgstr "No disponible"
 
 #: data.js:5
 #, kde-format
@@ -116,22 +116,3 @@ msgstr "Hibernar"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Hibernar (suspender en disco)"
-
-#~ msgctxt ""
-#~ "Heading for a list of actions (leave, lock, switch user, hibernate, "
-#~ "suspend)"
-#~ msgid "Show actions:"
-#~ msgstr "Mostrar acciones:"
-
-#~ msgid "Log Out"
-#~ msgstr "Cerrar sesión"
-
-#~ msgctxt "@option:check"
-#~ msgid "Show logout screen"
-#~ msgstr "Mostrar pantalla de cierre de sesión"
-
-#~ msgid "Shut Down"
-#~ msgstr "Apagar"
-
-#~ msgid "Switch User"
-#~ msgstr "Cambiar usuario"

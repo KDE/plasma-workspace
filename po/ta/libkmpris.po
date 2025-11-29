@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-11-29 00:44+0000\n"
 "PO-Revision-Date: 2024-03-30 20:55+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -17,55 +17,87 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.02.1\n"
 
-#: kded/mprisservice.cpp:103
+#: kded/mprisservice.cpp:131
 #, kde-format
 msgctxt "@title Name for global shortcuts category"
 msgid "Media Controller"
 msgstr "ஊடக கட்டுப்படுத்தி"
 
-#: kded/mprisservice.cpp:112
+#: kded/mprisservice.cpp:140
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Play/Pause media playback"
 msgstr "ஊடகத்தை இயக்கு/இடைநிறுத்து"
 
-#: kded/mprisservice.cpp:113
+#: kded/mprisservice.cpp:141
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback next"
 msgstr "ஊடக இயக்கத்தில் அடுத்தது"
 
-#: kded/mprisservice.cpp:114
+#: kded/mprisservice.cpp:142
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback previous"
 msgstr "ஊடக இயக்கத்தில் முந்தையது"
 
-#: kded/mprisservice.cpp:115
+#: kded/mprisservice.cpp:144
+#, fuzzy, kde-format
+#| msgctxt "@title shortcut"
+#| msgid "Media playback previous"
+msgctxt "@title shortcut"
+msgid "Media playback seek forward 5s"
+msgstr "ஊடக இயக்கத்தில் முந்தையது"
+
+#: kded/mprisservice.cpp:148
+#, fuzzy, kde-format
+#| msgctxt "@title shortcut"
+#| msgid "Media playback next"
+msgctxt "@title shortcut"
+msgid "Media playback seek backward 5s"
+msgstr "ஊடக இயக்கத்தில் அடுத்தது"
+
+#: kded/mprisservice.cpp:152
+#, fuzzy, kde-format
+#| msgctxt "@title shortcut"
+#| msgid "Media playback previous"
+msgctxt "@title shortcut"
+msgid "Media playback seek forward 30s"
+msgstr "ஊடக இயக்கத்தில் முந்தையது"
+
+#: kded/mprisservice.cpp:156
+#, fuzzy, kde-format
+#| msgctxt "@title shortcut"
+#| msgid "Media playback next"
+msgctxt "@title shortcut"
+msgid "Media playback seek backward 30s"
+msgstr "ஊடக இயக்கத்தில் அடுத்தது"
+
+#: kded/mprisservice.cpp:159
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Stop media playback"
 msgstr "ஊடக இயக்கத்தை நிறுத்து"
 
-#: kded/mprisservice.cpp:116
+#: kded/mprisservice.cpp:160
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Pause media playback"
 msgstr "ஊடக இயக்கத்தை இடைநிறுத்து"
 
-#: kded/mprisservice.cpp:117
+#: kded/mprisservice.cpp:161
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Play media playback"
 msgstr "ஊடக இயக்கத்தை இயக்கு"
 
-#: kded/mprisservice.cpp:118
+#: kded/mprisservice.cpp:162
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media volume up"
 msgstr "ஊடக ஒலியளவை கூட்டு"
 
-#: kded/mprisservice.cpp:119
+#: kded/mprisservice.cpp:163
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media volume down"

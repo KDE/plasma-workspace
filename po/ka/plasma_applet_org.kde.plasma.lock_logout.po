@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-28 00:44+0000\n"
-"PO-Revision-Date: 2025-11-27 05:54+0100\n"
+"PO-Revision-Date: 2025-11-28 04:33+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -27,12 +27,12 @@ msgstr "მთავარი"
 #, kde-format
 msgctxt "@title:column"
 msgid "Actions"
-msgstr ""
+msgstr "ქმედებები"
 
 #: ConfigGeneral.qml:116
 #, kde-format
 msgid "Unavailable"
-msgstr ""
+msgstr "ხელმიუწვდომელია"
 
 #: data.js:5
 #, kde-format

@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2014, 2015, 2019, 2020, 2021, 2023, 2024 Freek de Kruijf <freekdekruijf@kde.nl>
+# SPDX-FileCopyrightText: 2014, 2015, 2019, 2020, 2021, 2023, 2024, 2025 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-28 00:44+0000\n"
-"PO-Revision-Date: 2024-06-25 12:11+0200\n"
+"PO-Revision-Date: 2025-11-28 12:33+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #: config.qml:13
 #, kde-format
@@ -23,9 +23,7 @@ msgid "General"
 msgstr "Algemeen"
 
 #: ConfigGeneral.qml:54
-#, fuzzy, kde-format
-#| msgctxt "Heading for list of actions (leave, lock, shutdown, ...)"
-#| msgid "Actions"
+#, kde-format
 msgctxt "@title:column"
 msgid "Actions"
 msgstr "Acties"
@@ -33,7 +31,7 @@ msgstr "Acties"
 #: ConfigGeneral.qml:116
 #, kde-format
 msgid "Unavailable"
-msgstr ""
+msgstr "Niet beschikbaar"
 
 #: data.js:5
 #, kde-format
@@ -46,10 +44,9 @@ msgid "Lock the screen"
 msgstr "Het scherm vergrendelen"
 
 #: data.js:12
-#, fuzzy, kde-format
-#| msgid "Switch user"
+#, kde-format
 msgid "Switch user…"
-msgstr "Gebruiker wisselen"
+msgstr "Gebruiker wisselen…"
 
 #: data.js:13
 #, kde-format
@@ -57,8 +54,7 @@ msgid "Start a parallel session as a different user"
 msgstr "Start een parallelle sessie onder een andere gebruikersnaam"
 
 #: data.js:19
-#, fuzzy, kde-format
-#| msgid "Shut Down"
+#, kde-format
 msgid "Shut down"
 msgstr "Afsluiten"
 
@@ -78,8 +74,7 @@ msgid "Reboot the computer"
 msgstr "De computer opnieuw opstarten"
 
 #: data.js:33
-#, fuzzy, kde-format
-#| msgid "Log Out"
+#, kde-format
 msgid "Log out"
 msgstr "Afmelden"
 
