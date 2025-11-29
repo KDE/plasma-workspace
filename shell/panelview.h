@@ -151,6 +151,14 @@ class PanelView : public PlasmaQuick::ContainmentView
      */
     Q_PROPERTY(bool floatingApplets READ floatingApplets WRITE setFloatingApplets NOTIFY floatingAppletsChanged)
 
+    /**
+     * This property indicates whether the panel wants to be hidden. If it is @c true, the panel
+     * will be hidden, otherwise it will be shown. While the panel is hidden, it can be revealed by
+     * moving the pointer to the associated screen edge.
+     *
+     * @since 6.6
+     */
+    Q_PROPERTY(bool wantsToBeHidden READ wantsToBeHidden WRITE setWantsToBeHidden NOTIFY wantsToBeHiddenChanged)
 
 public:
     enum VisibilityMode {
@@ -263,6 +271,9 @@ public:
     bool isUserConfiguring() const;
     void restore();
 
+    bool wantsToBeHidden() const;
+    void setWantsToBeHidden(bool hidden);
+
 protected:
     QSize preferredSize() const;
 
@@ -297,6 +308,7 @@ Q_SIGNALS:
     void lengthModeChanged();
     void adaptiveOpacityEnabledChanged();
     void userConfiguringChanged();
+    void wantsToBeHiddenChanged();
 
 protected Q_SLOTS:
     /**
@@ -319,7 +331,6 @@ private Q_SLOTS:
     void updateFloating();
     void updateFloatingAnimationDuration();
     void updateShadows();
-    void updateTouchingWindow();
 
 private:
     bool isUnsupportedEnvironment() const;
@@ -361,7 +372,7 @@ private:
     bool m_containsMouse = false;
     bool m_containsDrag = false;
     bool m_fakeEventPending = false;
-    bool m_touchingWindow = false;
+    bool m_wantsToBeHidden = false;
     Qt::Alignment m_alignment;
     QPointer<PlasmaQuick::ConfigView> m_appletConfigView;
     QPointer<PlasmaQuick::PopupPlasmaWindow> m_panelConfigView;

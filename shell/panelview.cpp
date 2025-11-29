@@ -129,7 +129,6 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
     setSource(m_corona->kPackage().fileUrl("views", QStringLiteral("Panel.qml")));
     updatePadding();
     updateFloating();
-    updateTouchingWindow();
 }
 
 PanelView::~PanelView()
@@ -1037,18 +1036,13 @@ void PanelView::restoreAutoHide()
 
 void PanelView::setAutoHideEnabled(bool enabled)
 {
-    if (m_visibilityMode == VisibilityMode::AutoHide || (m_visibilityMode == VisibilityMode::DodgeWindows && m_touchingWindow)) {
-        if (!m_autoHideScreenEdge) {
-            m_autoHideScreenEdge = AutoHideScreenEdge::create(this);
-        }
-        if (enabled) {
-            m_autoHideScreenEdge->activate();
-        } else {
-            m_autoHideScreenEdge->deactivate();
-        }
+    if (!m_autoHideScreenEdge) {
+        m_autoHideScreenEdge = AutoHideScreenEdge::create(this);
+    }
+    if (enabled) {
+        m_autoHideScreenEdge->activate();
     } else {
-        delete m_autoHideScreenEdge;
-        m_autoHideScreenEdge = nullptr;
+        m_autoHideScreenEdge->deactivate();
     }
 }
 
@@ -1723,7 +1717,6 @@ void PanelView::handleQmlStatusChange(QQmlComponent::Status status)
         updatePadding();
         const int paddingSignal = rootObject->metaObject()->indexOfSignal("bottomPaddingChanged()");
         const int floatingSignal = rootObject->metaObject()->indexOfSignal("floatingnessTargetChanged()");
-        const int touchingWindowSignal = rootObject->metaObject()->indexOfSignal("touchingWindowChanged()");
 
         if (paddingSignal >= 0) {
             connect(rootObject, SIGNAL(bottomPaddingChanged()), this, SLOT(updatePadding()));
@@ -1763,10 +1756,6 @@ void PanelView::handleQmlStatusChange(QQmlComponent::Status status)
             connect(rootObject, SIGNAL(panelMaskChanged()), this, SLOT(updateMask()));
             updateMask();
         }
-        if (touchingWindowSignal >= 0) {
-            connect(rootObject, SIGNAL(touchingWindowChanged()), this, SLOT(updateTouchingWindow()));
-        }
-        updateTouchingWindow();
     }
 }
 
@@ -1833,13 +1822,18 @@ void PanelView::showTemporarily()
     t->start();
 }
 
-void PanelView::updateTouchingWindow()
+bool PanelView::wantsToBeHidden() const
 {
-    if (!rootObject()) {
-        return;
+    return m_wantsToBeHidden;
+}
+
+void PanelView::setWantsToBeHidden(bool wants)
+{
+    if (m_wantsToBeHidden != wants) {
+        m_wantsToBeHidden = wants;
+        restoreAutoHide();
+        Q_EMIT wantsToBeHiddenChanged();
     }
-    m_touchingWindow = rootObject()->property("touchingWindow").toBool();
-    restoreAutoHide();
 }
 
 void PanelView::screenDestroyed(QObject *)
@@ -1854,7 +1848,7 @@ void PanelView::screenDestroyed(QObject *)
 
 bool PanelView::edgeActivated() const
 {
-    return m_visibilityMode == PanelView::AutoHide || m_visibilityMode == PanelView::DodgeWindows;
+    return m_visibilityMode == PanelView::AutoHide || m_wantsToBeHidden;
 }
 
 void PanelView::updateEnabledBorders()
