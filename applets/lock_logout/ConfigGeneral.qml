@@ -49,11 +49,6 @@ KCM.ScrollViewKCM {
             id: actionsModel
         }
 
-        header: Kirigami.InlineViewHeader {
-            width: list.width
-            text: i18nc("@title:column", "Actions")
-        }
-
         delegate: Loader {
             id: delegateLoader
             width: list.width
@@ -92,6 +87,13 @@ KCM.ScrollViewKCM {
                         }
                     }
 
+                    QQC2.CheckBox {
+                        visible: (model.enabledKey ? session[model.enabledKey] : true)
+                        checked: root[model.cfgKey]
+                        onToggled: root[model.cfgKey] = checked
+                        enabled: (model.enabledKey ? session[model.enabledKey] : true) && (root.checkedOptions > 1 || !checked)
+                    }
+
                     Kirigami.Icon {
                         source: model.icon
                         Layout.preferredWidth: Kirigami.Units.iconSizes.small
@@ -102,13 +104,6 @@ KCM.ScrollViewKCM {
                         text: model.text
                         Layout.fillWidth: true
                         elide: Text.ElideRight
-                    }
-
-                    QQC2.CheckBox {
-                        visible: (model.enabledKey ? session[model.enabledKey] : true)
-                        checked: root[model.cfgKey]
-                        onToggled: root[model.cfgKey] = checked
-                        enabled: (model.enabledKey ? session[model.enabledKey] : true) && (root.checkedOptions > 1 || !checked)
                     }
 
                     QQC2.Label {
