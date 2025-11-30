@@ -118,6 +118,10 @@ void LookAndFeelAutoSwitcher::applyLookAndFeel(const QString &id)
 {
     qCDebug(LOOKANDFEELAUTOSWITCHER) << "Applying" << id << "global theme";
 
+    if (m_settings->lookAndFeelPackage() == id) {
+        return;
+    }
+
     m_settings->setLookAndFeelPackage(id);
     m_settings->save();
 
