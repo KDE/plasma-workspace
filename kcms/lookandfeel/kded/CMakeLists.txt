@@ -19,6 +19,7 @@ ecm_qt_declare_logging_category(lookandfeelautoswitcher
 kconfig_target_kcfg_file(lookandfeelautoswitcher
     FILE ${CMAKE_CURRENT_SOURCE_DIR}/../lookandfeelsettings.kcfg
     CLASS_NAME LookAndFeelSettings
+    MUTATORS
 )
 
 kconfig_target_kcfg_file(lookandfeelautoswitcher
@@ -34,5 +35,6 @@ target_link_libraries(lookandfeelautoswitcher PRIVATE
     KF6::CoreAddons
     KF6::DBusAddons
     KF6::IdleTime
+    PW::KLookAndFeel
     KNightTime
 )
