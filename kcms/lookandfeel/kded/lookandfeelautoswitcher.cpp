@@ -6,15 +6,16 @@
 
 #include "lookandfeelautoswitcher.h"
 #include "idletimeout.h"
+#include "klookandfeelmanager.h"
 #include "logging.h"
 #include "lookandfeelautoswitcherstate.h"
 #include "lookandfeelsettings.h"
 
+#include <KPackage/PackageLoader>
 #include <KPluginFactory>
 
 #include <QDateTime>
 #include <QDebug>
-#include <QProcess>
 #include <algorithm>
 
 K_PLUGIN_CLASS_WITH_JSON(LookAndFeelAutoSwitcher, "lookandfeelautoswitcher.json")
@@ -116,7 +117,17 @@ QString LookAndFeelAutoSwitcher::lookAndFeelAtDateTime(const QDateTime &dateTime
 void LookAndFeelAutoSwitcher::applyLookAndFeel(const QString &id)
 {
     qCDebug(LOOKANDFEELAUTOSWITCHER) << "Applying" << id << "global theme";
-    QProcess::startDetached(QStringLiteral("plasma-apply-lookandfeel"), QStringList({QStringLiteral("--keep-auto"), QStringLiteral("--apply"), id}));
+
+    m_settings->setLookAndFeelPackage(id);
+    m_settings->save();
+
+    KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
+    package.setPath(id);
+
+    const KLookAndFeelManager::Contents selection = KLookAndFeelManager::AppearanceSettings;
+
+    KLookAndFeelManager manager;
+    manager.save(package, selection);
 }
 
 void LookAndFeelAutoSwitcher::reschedule()
