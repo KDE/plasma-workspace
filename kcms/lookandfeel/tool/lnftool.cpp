@@ -40,7 +40,6 @@ int main(int argc, char **argv)
 
     const static auto _l = QStringLiteral("list");
     const static auto _a = QStringLiteral("apply");
-    const static auto _k = QStringLiteral("keep-auto");
     const static auto _r = QStringLiteral("resetLayout");
 
     QCommandLineOption _list = QCommandLineOption(QStringList() << QStringLiteral("l") << _l, i18n("List available global theme packages"));
@@ -49,13 +48,11 @@ int main(int argc, char **argv)
                            i18n("Apply a global theme package. This can be the name of a package, or a full path to an installed package, at which point this "
                                 "tool will ensure it is a global theme package and then attempt to apply it"),
                            i18n("packagename"));
-    QCommandLineOption _keepAuto = QCommandLineOption(QStringList() << QStringLiteral("k") << _k, i18n("Prevent --apply from disabling the automatic mode"));
     QCommandLineOption _resetLayout = QCommandLineOption(QStringList() << _r, i18n("Reset the Plasma Desktop layout"));
 
     QCommandLineParser parser;
     parser.addOption(_list);
     parser.addOption(_apply);
-    parser.addOption(_keepAuto);
     parser.addOption(_resetLayout);
     aboutData.setupCommandLine(&parser);
 
@@ -102,9 +99,7 @@ int main(int argc, char **argv)
         }
 
         LookAndFeelSettings settings;
-        if (!parser.isSet(_keepAuto)) {
-            settings.setAutomaticLookAndFeel(false);
-        }
+        settings.setAutomaticLookAndFeel(false);
         settings.setLookAndFeelPackage(requestedTheme);
         settings.save();
 
