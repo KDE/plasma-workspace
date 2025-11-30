@@ -128,7 +128,14 @@ void LookAndFeelAutoSwitcher::applyLookAndFeel(const QString &id)
     KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
     package.setPath(id);
 
-    const KLookAndFeelManager::Contents selection = KLookAndFeelManager::AppearanceSettings;
+    const KLookAndFeelManager::Contents selection = KLookAndFeelManager::Colors
+        | KLookAndFeelManager::WidgetStyle
+        | KLookAndFeelManager::Icons
+        | KLookAndFeelManager::PlasmaTheme
+        | KLookAndFeelManager::Cursors
+        | KLookAndFeelManager::Fonts
+        | KLookAndFeelManager::WindowSwitcher
+        | KLookAndFeelManager::SplashScreen;
 
     KLookAndFeelManager manager;
     manager.save(package, selection);
