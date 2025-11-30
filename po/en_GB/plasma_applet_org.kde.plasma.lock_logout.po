@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-28 00:44+0000\n"
+"POT-Creation-Date: 2025-11-30 00:45+0000\n"
 "PO-Revision-Date: 2024-06-29 11:30+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -22,15 +22,7 @@ msgstr ""
 msgid "General"
 msgstr "General"
 
-#: ConfigGeneral.qml:54
-#, fuzzy, kde-format
-#| msgctxt "Heading for list of actions (leave, lock, shutdown, ...)"
-#| msgid "Actions"
-msgctxt "@title:column"
-msgid "Actions"
-msgstr "Actions"
-
-#: ConfigGeneral.qml:116
+#: ConfigGeneral.qml:111
 #, kde-format
 msgid "Unavailable"
 msgstr ""
@@ -119,6 +111,13 @@ msgstr "Hibernate"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Hibernate (suspend to disk)"
+
+#, fuzzy
+#~| msgctxt "Heading for list of actions (leave, lock, shutdown, ...)"
+#~| msgid "Actions"
+#~ msgctxt "@title:column"
+#~ msgid "Actions"
+#~ msgstr "Actions"
 
 #~ msgctxt ""
 #~ "Heading for a list of actions (leave, lock, switch user, hibernate, "

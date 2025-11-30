@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-28 00:44+0000\n"
+"POT-Creation-Date: 2025-11-30 00:45+0000\n"
 "PO-Revision-Date: 2009-02-12 09:10-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -22,14 +22,7 @@ msgstr ""
 msgid "General"
 msgstr "Ginearálta"
 
-#: ConfigGeneral.qml:54
-#, fuzzy, kde-format
-#| msgid "Actions"
-msgctxt "@title:column"
-msgid "Actions"
-msgstr "Gníomhartha"
-
-#: ConfigGeneral.qml:116
+#: ConfigGeneral.qml:111
 #, kde-format
 msgid "Unavailable"
 msgstr ""
@@ -120,6 +113,12 @@ msgstr "Geimhrigh"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Geimhriú (cuir ar fionraí ar an diosca)"
+
+#, fuzzy
+#~| msgid "Actions"
+#~ msgctxt "@title:column"
+#~ msgid "Actions"
+#~ msgstr "Gníomhartha"
 
 #, fuzzy
 #~| msgid "Show lock button"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-28 00:44+0000\n"
+"POT-Creation-Date: 2025-11-30 00:45+0000\n"
 "PO-Revision-Date: 2024-08-15 19:12+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -28,14 +28,7 @@ msgstr ""
 msgid "General"
 msgstr "Vispārēji"
 
-#: ConfigGeneral.qml:54
-#, fuzzy, kde-format
-#| msgid "Actions"
-msgctxt "@title:column"
-msgid "Actions"
-msgstr "Darbības"
-
-#: ConfigGeneral.qml:116
+#: ConfigGeneral.qml:111
 #, kde-format
 msgid "Unavailable"
 msgstr ""
@@ -124,6 +117,12 @@ msgstr "Hibernēt"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Hibernēt (iesnaudināt uz disku)"
+
+#, fuzzy
+#~| msgid "Actions"
+#~ msgctxt "@title:column"
+#~ msgid "Actions"
+#~ msgstr "Darbības"
 
 #~ msgctxt ""
 #~ "Heading for a list of actions (leave, lock, switch user, hibernate, "

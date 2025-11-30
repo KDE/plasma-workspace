@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-28 00:44+0000\n"
-"PO-Revision-Date: 2024-07-06 01:01+0300\n"
+"POT-Creation-Date: 2025-11-30 00:45+0000\n"
+"PO-Revision-Date: 2025-11-29 23:54+0200\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -19,25 +19,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.8\n"
 
 #: config.qml:13
 #, kde-format
 msgid "General"
 msgstr "Bendra"
 
-#: ConfigGeneral.qml:54
-#, fuzzy, kde-format
-#| msgctxt "Heading for list of actions (leave, lock, shutdown, ...)"
-#| msgid "Actions"
-msgctxt "@title:column"
-msgid "Actions"
-msgstr "Veiksmai"
-
-#: ConfigGeneral.qml:116
+#: ConfigGeneral.qml:111
 #, kde-format
 msgid "Unavailable"
-msgstr ""
+msgstr "Neprieinamas"
 
 #: data.js:5
 #, kde-format
@@ -50,10 +42,9 @@ msgid "Lock the screen"
 msgstr "Užrakinti ekraną"
 
 #: data.js:12
-#, fuzzy, kde-format
-#| msgid "Switch user"
+#, kde-format
 msgid "Switch user…"
-msgstr "Perjungti naudotoją"
+msgstr "Perjungti naudotoją…"
 
 #: data.js:13
 #, kde-format
@@ -61,8 +52,7 @@ msgid "Start a parallel session as a different user"
 msgstr "Prisijungti kitu naudotoju lygiagrečiame seanse"
 
 #: data.js:19
-#, fuzzy, kde-format
-#| msgid "Shut Down"
+#, kde-format
 msgid "Shut down"
 msgstr "Išjungti"
 
@@ -82,8 +72,7 @@ msgid "Reboot the computer"
 msgstr "Paleisti kompiuterį iš naujo"
 
 #: data.js:33
-#, fuzzy, kde-format
-#| msgid "Log Out"
+#, kde-format
 msgid "Log out"
 msgstr "Atsijungti"
 
@@ -123,6 +112,10 @@ msgstr "Užmigdyti"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Užmigdyti (pristabdyti į diską)"
+
+#~ msgctxt "@title:column"
+#~ msgid "Actions"
+#~ msgstr "Veiksmai"
 
 #~ msgctxt ""
 #~ "Heading for a list of actions (leave, lock, switch user, hibernate, "

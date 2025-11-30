@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Nicolas Ternisien <nicolas.ternisien@gmail.com>, 2009.
 # Joëlle Cornavin <jcorn@free.fr>, 2009, 2010, 2012, 2013.
-# SPDX-FileCopyrightText: 2013, 2024 Xavier Besnard <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2013, 2024, 2025 Xavier Besnard <xavier.besnard@kde.org>
 # Thomas Vergnaud <thomas.vergnaud@gmx.fr>, 2015.
 # Simon Depiets <sdepiets@gmail.com>, 2019.
 # SPDX-FileCopyrightText: 2020, 2021, 2023 Xavier Besnard <xavier.besnard@kde.org>
@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-28 00:44+0000\n"
-"PO-Revision-Date: 2024-06-27 14:42+0200\n"
+"POT-Creation-Date: 2025-11-30 00:45+0000\n"
+"PO-Revision-Date: 2025-11-28 09:03+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.11.80\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -31,15 +31,7 @@ msgstr ""
 msgid "General"
 msgstr "Général"
 
-#: ConfigGeneral.qml:54
-#, fuzzy, kde-format
-#| msgctxt "Heading for list of actions (leave, lock, shutdown, ...)"
-#| msgid "Actions"
-msgctxt "@title:column"
-msgid "Actions"
-msgstr "Actions"
-
-#: ConfigGeneral.qml:116
+#: ConfigGeneral.qml:111
 #, kde-format
 msgid "Unavailable"
 msgstr ""
@@ -55,10 +47,9 @@ msgid "Lock the screen"
 msgstr "Verrouiller l'écran"
 
 #: data.js:12
-#, fuzzy, kde-format
-#| msgid "Switch user"
+#, kde-format
 msgid "Switch user…"
-msgstr "Changer d'utilisateur"
+msgstr "Changer d'utilisateur..."
 
 #: data.js:13
 #, kde-format
@@ -66,8 +57,7 @@ msgid "Start a parallel session as a different user"
 msgstr "Démarre une session parallèle en tant qu'utilisateur différent"
 
 #: data.js:19
-#, fuzzy, kde-format
-#| msgid "Shut Down"
+#, kde-format
 msgid "Shut down"
 msgstr "Éteindre"
 
@@ -87,8 +77,7 @@ msgid "Reboot the computer"
 msgstr "Re-démarrer l'ordinateur"
 
 #: data.js:33
-#, fuzzy, kde-format
-#| msgid "Log Out"
+#, kde-format
 msgid "Log out"
 msgstr "Se déconnecter"
 
@@ -128,6 +117,13 @@ msgstr "Veille prolongée"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Veille prolongée (mettre en veille prolongée)"
+
+#, fuzzy
+#~| msgctxt "Heading for list of actions (leave, lock, shutdown, ...)"
+#~| msgid "Actions"
+#~ msgctxt "@title:column"
+#~ msgid "Actions"
+#~ msgstr "Actions"
 
 #~ msgctxt ""
 #~ "Heading for a list of actions (leave, lock, switch user, hibernate, "

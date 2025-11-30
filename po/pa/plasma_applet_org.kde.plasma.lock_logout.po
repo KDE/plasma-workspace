@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-28 00:44+0000\n"
+"POT-Creation-Date: 2025-11-30 00:45+0000\n"
 "PO-Revision-Date: 2024-10-25 23:21-0500\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
@@ -22,15 +22,7 @@ msgstr ""
 msgid "General"
 msgstr "ਆਮ"
 
-#: ConfigGeneral.qml:54
-#, fuzzy, kde-format
-#| msgctxt "Heading for list of actions (leave, lock, shutdown, ...)"
-#| msgid "Actions"
-msgctxt "@title:column"
-msgid "Actions"
-msgstr "ਕਾਰਵਾਈਆਂ"
-
-#: ConfigGeneral.qml:116
+#: ConfigGeneral.qml:111
 #, kde-format
 msgid "Unavailable"
 msgstr ""
@@ -119,6 +111,13 @@ msgstr "ਹਾਈਬਰਨੇਟ"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "ਹਾਈਬਰਨੇਟ (ਡਿਸਕ ਉੱਤੇ ਸਸਪੈਂਡ ਕਰੋ)"
+
+#, fuzzy
+#~| msgctxt "Heading for list of actions (leave, lock, shutdown, ...)"
+#~| msgid "Actions"
+#~ msgctxt "@title:column"
+#~ msgid "Actions"
+#~ msgstr "ਕਾਰਵਾਈਆਂ"
 
 #~ msgctxt ""
 #~ "Heading for a list of actions (leave, lock, switch user, hibernate, "

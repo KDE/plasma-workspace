@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-28 00:44+0000\n"
+"POT-Creation-Date: 2025-11-30 00:45+0000\n"
 "PO-Revision-Date: 2025-11-28 04:33+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -23,13 +23,7 @@ msgstr ""
 msgid "General"
 msgstr "მთავარი"
 
-#: ConfigGeneral.qml:54
-#, kde-format
-msgctxt "@title:column"
-msgid "Actions"
-msgstr "ქმედებები"
-
-#: ConfigGeneral.qml:116
+#: ConfigGeneral.qml:111
 #, kde-format
 msgid "Unavailable"
 msgstr "ხელმიუწვდომელია"
@@ -115,6 +109,10 @@ msgstr "პროგრამული ძილი"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "პროგრამული ძილი (მეხსირების დისკზე დამახსოვრებით)"
+
+#~ msgctxt "@title:column"
+#~ msgid "Actions"
+#~ msgstr "ქმედებები"
 
 #~ msgctxt ""
 #~ "Heading for a list of actions (leave, lock, switch user, hibernate, "

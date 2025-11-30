@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-28 00:44+0000\n"
+"POT-Creation-Date: 2025-11-30 00:45+0000\n"
 "PO-Revision-Date: 2024-09-18 21:28+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -25,15 +25,7 @@ msgstr ""
 msgid "General"
 msgstr "Általános"
 
-#: ConfigGeneral.qml:54
-#, fuzzy, kde-format
-#| msgctxt "Heading for list of actions (leave, lock, shutdown, ...)"
-#| msgid "Actions"
-msgctxt "@title:column"
-msgid "Actions"
-msgstr "Műveletek"
-
-#: ConfigGeneral.qml:116
+#: ConfigGeneral.qml:111
 #, kde-format
 msgid "Unavailable"
 msgstr ""
@@ -122,6 +114,13 @@ msgstr "Hibernálás"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Hibernálás (felfüggesztés merevlemezre)"
+
+#, fuzzy
+#~| msgctxt "Heading for list of actions (leave, lock, shutdown, ...)"
+#~| msgid "Actions"
+#~ msgctxt "@title:column"
+#~ msgid "Actions"
+#~ msgstr "Műveletek"
 
 #~ msgctxt ""
 #~ "Heading for a list of actions (leave, lock, switch user, hibernate, "

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-28 00:44+0000\n"
+"POT-Creation-Date: 2025-11-30 00:45+0000\n"
 "PO-Revision-Date: 2025-11-28 12:33+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -22,13 +22,7 @@ msgstr ""
 msgid "General"
 msgstr "Algemeen"
 
-#: ConfigGeneral.qml:54
-#, kde-format
-msgctxt "@title:column"
-msgid "Actions"
-msgstr "Acties"
-
-#: ConfigGeneral.qml:116
+#: ConfigGeneral.qml:111
 #, kde-format
 msgid "Unavailable"
 msgstr "Niet beschikbaar"
@@ -114,6 +108,10 @@ msgstr "Slaapstand naar schijf"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Slaapstand (schijf-slaapstand)"
+
+#~ msgctxt "@title:column"
+#~ msgid "Actions"
+#~ msgstr "Acties"
 
 #~ msgctxt ""
 #~ "Heading for a list of actions (leave, lock, switch user, hibernate, "

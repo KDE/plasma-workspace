@@ -1,15 +1,15 @@
 # Translation of libkmpris.po to Catalan
-# Copyright (C) 2023-2024 This_file_is_part_of_KDE
+# Copyright (C) 2023-2025 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# SPDX-FileCopyrightText: 2023, 2024 Josep M. Ferrer <txemaq@gmail.com>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 Josep M. Ferrer <txemaq@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-29 00:44+0000\n"
-"PO-Revision-Date: 2024-02-09 09:54+0100\n"
+"PO-Revision-Date: 2025-11-29 11:12+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: kded/mprisservice.cpp:131
 #, kde-format
@@ -44,36 +44,28 @@ msgid "Media playback previous"
 msgstr "Anterior del reproductor multimèdia"
 
 #: kded/mprisservice.cpp:144
-#, fuzzy, kde-format
-#| msgctxt "@title shortcut"
-#| msgid "Media playback previous"
+#, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback seek forward 5s"
-msgstr "Anterior del reproductor multimèdia"
+msgstr "Cerca enrere 5 s en el reproductor multimèdia"
 
 #: kded/mprisservice.cpp:148
-#, fuzzy, kde-format
-#| msgctxt "@title shortcut"
-#| msgid "Media playback next"
+#, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback seek backward 5s"
-msgstr "Següent del reproductor multimèdia"
+msgstr "Cerca endavant 5 s en el reproductor multimèdia"
 
 #: kded/mprisservice.cpp:152
-#, fuzzy, kde-format
-#| msgctxt "@title shortcut"
-#| msgid "Media playback previous"
+#, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback seek forward 30s"
-msgstr "Anterior del reproductor multimèdia"
+msgstr "Cerca enrere 30 s en el reproductor multimèdia"
 
 #: kded/mprisservice.cpp:156
-#, fuzzy, kde-format
-#| msgctxt "@title shortcut"
-#| msgid "Media playback next"
+#, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback seek backward 30s"
-msgstr "Següent del reproductor multimèdia"
+msgstr "Cerca endavant 30 s en el reproductor multimèdia"
 
 #: kded/mprisservice.cpp:159
 #, kde-format

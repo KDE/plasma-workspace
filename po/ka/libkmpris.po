@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-29 00:44+0000\n"
-"PO-Revision-Date: 2024-02-09 06:04+0100\n"
+"PO-Revision-Date: 2025-11-29 05:08+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.8\n"
 
 #: kded/mprisservice.cpp:131
 #, kde-format
@@ -43,36 +43,28 @@ msgid "Media playback previous"
 msgstr "წინა მედიის დაკვრა"
 
 #: kded/mprisservice.cpp:144
-#, fuzzy, kde-format
-#| msgctxt "@title shortcut"
-#| msgid "Media playback previous"
+#, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback seek forward 5s"
-msgstr "წინა მედიის დაკვრა"
+msgstr "მედიის დაკვრის გადახვევა წინ 5 წმ-ით"
 
 #: kded/mprisservice.cpp:148
-#, fuzzy, kde-format
-#| msgctxt "@title shortcut"
-#| msgid "Media playback next"
+#, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback seek backward 5s"
-msgstr "შემდეგი მედიის დაკვრა"
+msgstr "მედიის დაკვრის გადახვევა უკან 5 წმ-ით"
 
 #: kded/mprisservice.cpp:152
-#, fuzzy, kde-format
-#| msgctxt "@title shortcut"
-#| msgid "Media playback previous"
+#, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback seek forward 30s"
-msgstr "წინა მედიის დაკვრა"
+msgstr "მედიის დაკვრის გადახვევა წინ 30 წმ-ით"
 
 #: kded/mprisservice.cpp:156
-#, fuzzy, kde-format
-#| msgctxt "@title shortcut"
-#| msgid "Media playback next"
+#, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback seek backward 30s"
-msgstr "შემდეგი მედიის დაკვრა"
+msgstr "მედიის დაკვრის გადახვევა უკან 30 წმ-ით"
 
 #: kded/mprisservice.cpp:159
 #, kde-format

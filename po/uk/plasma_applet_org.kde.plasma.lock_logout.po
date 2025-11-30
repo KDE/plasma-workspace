@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.lock_logout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-28 00:44+0000\n"
+"POT-Creation-Date: 2025-11-30 00:45+0000\n"
 "PO-Revision-Date: 2025-11-28 10:47+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -25,13 +25,7 @@ msgstr ""
 msgid "General"
 msgstr "Загальне"
 
-#: ConfigGeneral.qml:54
-#, kde-format
-msgctxt "@title:column"
-msgid "Actions"
-msgstr "Дії"
-
-#: ConfigGeneral.qml:116
+#: ConfigGeneral.qml:111
 #, kde-format
 msgid "Unavailable"
 msgstr "Недоступне"
@@ -117,6 +111,10 @@ msgstr "Приспати"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Сон зі збереженням на диск"
+
+#~ msgctxt "@title:column"
+#~ msgid "Actions"
+#~ msgstr "Дії"
 
 #~ msgctxt ""
 #~ "Heading for a list of actions (leave, lock, switch user, hibernate, "

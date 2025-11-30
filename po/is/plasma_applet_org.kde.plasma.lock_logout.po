@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-28 00:44+0000\n"
+"POT-Creation-Date: 2025-11-30 00:45+0000\n"
 "PO-Revision-Date: 2024-06-30 15:13+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -28,14 +28,7 @@ msgstr ""
 msgid "General"
 msgstr "Almennt"
 
-#: ConfigGeneral.qml:54
-#, fuzzy, kde-format
-#| msgid "Actions"
-msgctxt "@title:column"
-msgid "Actions"
-msgstr "Aðgerðir"
-
-#: ConfigGeneral.qml:116
+#: ConfigGeneral.qml:111
 #, kde-format
 msgid "Unavailable"
 msgstr ""
@@ -124,6 +117,12 @@ msgstr "Leggja í dvala"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Leggja í dvala (setja í bið á diski)"
+
+#, fuzzy
+#~| msgid "Actions"
+#~ msgctxt "@title:column"
+#~ msgid "Actions"
+#~ msgstr "Aðgerðir"
 
 #~ msgctxt ""
 #~ "Heading for a list of actions (leave, lock, switch user, hibernate, "

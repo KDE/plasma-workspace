@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-28 00:44+0000\n"
+"POT-Creation-Date: 2025-11-30 00:45+0000\n"
 "PO-Revision-Date: 2025-11-28 06:49+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -25,13 +25,7 @@ msgstr ""
 msgid "General"
 msgstr "Splošno"
 
-#: ConfigGeneral.qml:54
-#, kde-format
-msgctxt "@title:column"
-msgid "Actions"
-msgstr "Dejanja"
-
-#: ConfigGeneral.qml:116
+#: ConfigGeneral.qml:111
 #, kde-format
 msgid "Unavailable"
 msgstr "Ni na voljo"
@@ -117,6 +111,10 @@ msgstr "V mirovanje"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "V mirovanje (začasno zaustavi na disk)"
+
+#~ msgctxt "@title:column"
+#~ msgid "Actions"
+#~ msgstr "Dejanja"
 
 #~ msgctxt ""
 #~ "Heading for a list of actions (leave, lock, switch user, hibernate, "

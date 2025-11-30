@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-28 00:44+0000\n"
+"POT-Creation-Date: 2025-11-30 00:45+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -22,14 +22,7 @@ msgstr ""
 msgid "General"
 msgstr ""
 
-#: ConfigGeneral.qml:54
-#, fuzzy, kde-format
-#| msgid "Actions"
-msgctxt "@title:column"
-msgid "Actions"
-msgstr "مەشغۇلاتلار"
-
-#: ConfigGeneral.qml:116
+#: ConfigGeneral.qml:111
 #, kde-format
 msgid "Unavailable"
 msgstr ""
@@ -120,6 +113,12 @@ msgstr "ئۈچەك"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "ئۈچەك (دىسكىغا توڭلىتىدۇ)"
+
+#, fuzzy
+#~| msgid "Actions"
+#~ msgctxt "@title:column"
+#~ msgid "Actions"
+#~ msgstr "مەشغۇلاتلار"
 
 #, fuzzy
 #~| msgid "Lock the screen"

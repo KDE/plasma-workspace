@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-28 00:44+0000\n"
-"PO-Revision-Date: 2025-05-17 17:58+0400\n"
+"POT-Creation-Date: 2025-11-30 00:45+0000\n"
+"PO-Revision-Date: 2025-11-29 21:43+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -24,18 +24,10 @@ msgstr ""
 msgid "General"
 msgstr "عامّ"
 
-#: ConfigGeneral.qml:54
-#, fuzzy, kde-format
-#| msgctxt "Heading for list of actions (leave, lock, shutdown, ...)"
-#| msgid "Actions"
-msgctxt "@title:column"
-msgid "Actions"
-msgstr "إجراءات"
-
-#: ConfigGeneral.qml:116
+#: ConfigGeneral.qml:111
 #, kde-format
 msgid "Unavailable"
-msgstr ""
+msgstr "غير متوفّر"
 
 #: data.js:5
 #, kde-format
@@ -48,10 +40,9 @@ msgid "Lock the screen"
 msgstr "اقفل الشاشة"
 
 #: data.js:12
-#, fuzzy, kde-format
-#| msgid "Switch user"
+#, kde-format
 msgid "Switch user…"
-msgstr "بدّل المستخدِم"
+msgstr "بدّل المستخدِم…"
 
 #: data.js:13
 #, kde-format
@@ -59,8 +50,7 @@ msgid "Start a parallel session as a different user"
 msgstr "ابدأ جلسة موازية كمستخدِم مختلف"
 
 #: data.js:19
-#, fuzzy, kde-format
-#| msgid "Shut Down"
+#, kde-format
 msgid "Shut down"
 msgstr "أطفئ"
 
@@ -80,8 +70,7 @@ msgid "Reboot the computer"
 msgstr "أعد تشغيل الحاسوب"
 
 #: data.js:33
-#, fuzzy, kde-format
-#| msgid "Log Out"
+#, kde-format
 msgid "Log out"
 msgstr "اخرج"
 
@@ -121,6 +110,10 @@ msgstr "أسبِت"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "أسبِت (علّق إلى القرص)"
+
+#~ msgctxt "@title:column"
+#~ msgid "Actions"
+#~ msgstr "الإجراءات"
 
 #~ msgctxt ""
 #~ "Heading for a list of actions (leave, lock, switch user, hibernate, "

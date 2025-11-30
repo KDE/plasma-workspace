@@ -11,15 +11,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-28 00:44+0000\n"
-"PO-Revision-Date: 2025-01-24 22:08+0900\n"
+"POT-Creation-Date: 2025-11-30 00:45+0000\n"
+"PO-Revision-Date: 2025-11-29 18:00+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.03.70\n"
+"X-Generator: Lokalize 25.08.3\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: config.qml:13
@@ -27,16 +27,10 @@ msgstr ""
 msgid "General"
 msgstr "一般"
 
-#: ConfigGeneral.qml:54
-#, kde-format
-msgctxt "@title:column"
-msgid "Actions"
-msgstr ""
-
-#: ConfigGeneral.qml:116
+#: ConfigGeneral.qml:111
 #, kde-format
 msgid "Unavailable"
-msgstr ""
+msgstr "無法使用"
 
 #: data.js:5
 #, kde-format
@@ -49,10 +43,9 @@ msgid "Lock the screen"
 msgstr "鎖定螢幕"
 
 #: data.js:12
-#, fuzzy, kde-format
-#| msgid "Switch user"
+#, kde-format
 msgid "Switch user…"
-msgstr "切換使用者"
+msgstr "切換使用者…"
 
 #: data.js:13
 #, kde-format
@@ -60,8 +53,7 @@ msgid "Start a parallel session as a different user"
 msgstr "以另一個使用者開始平行的作業階段"
 
 #: data.js:19
-#, fuzzy, kde-format
-#| msgid "Shut Down"
+#, kde-format
 msgid "Shut down"
 msgstr "關機"
 
@@ -81,8 +73,7 @@ msgid "Reboot the computer"
 msgstr "重新啟動電腦"
 
 #: data.js:33
-#, fuzzy, kde-format
-#| msgid "Log Out"
+#, kde-format
 msgid "Log out"
 msgstr "登出"
 
@@ -122,6 +113,10 @@ msgstr "休眠"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "休眠（暫停並儲存到磁碟）"
+
+#~ msgctxt "@title:column"
+#~ msgid "Actions"
+#~ msgstr "動作"
 
 #~ msgctxt ""
 #~ "Heading for a list of actions (leave, lock, switch user, hibernate, "
