@@ -164,9 +164,26 @@ Item {
 
                 view.delegate: WallpaperDelegate {
                     color: cfg_Color
-                    // Set minimum image sample size, otherwise it's very blurry
-                    previewSize: Qt.size(Math.max(Kirigami.Units.gridUnit * 22, thumbnailsComponent.screenSize.width / 8),
-                                         Math.max(Kirigami.Units.gridUnit * 22, thumbnailsComponent.screenSize.height / 8))
+                    previewSize: {
+                        // Set minimum image sample size, otherwise it's very blurry
+                        const baseSize = Kirigami.Units.gridUnit * 22;
+                        const preferredSize = Qt.size(thumbnailsComponent.screenSize.width / 8, thumbnailsComponent.screenSize.height / 8);
+                        const aspectRatio = thumbnailsComponent.screenSize.width / thumbnailsComponent.screenSize.height;
+
+                        if (aspectRatio >= 1.0) {
+                            if (preferredSize.width >= baseSize) {
+                                return preferredSize;
+                            } else {
+                                return Qt.size(baseSize, baseSize / aspectRatio);
+                            }
+                        } else {
+                            if (preferredSize.height >= baseSize) {
+                                return preferredSize;
+                            } else {
+                                return Qt.size(baseSize * aspectRatio, baseSize);
+                            }
+                        }
+                    }
                 }
             }
         }
