@@ -11,6 +11,8 @@ set(systemtray_SRCS
     statusnotifieritemsource.cpp statusnotifieritemsource.h
     systemtraysettings.cpp systemtraysettings.h
     systemtraytypes.cpp
+    systemtraymodel.cpp
+    sortedsystemtraymodel.cpp sortedsystemtraymodel.h
 )
 
 qt_add_dbus_interface(systemtray_SRCS ${KSTATUSNOTIFIERITEM_DBUS_INTERFACES_DIR}/kf6_org.kde.StatusNotifierWatcher.xml statusnotifierwatcher_interface)
@@ -51,13 +53,9 @@ target_link_libraries(systemtray_static
 
 set_property(TARGET systemtray_static PROPERTY POSITION_INDEPENDENT_CODE ON)
 
-add_library(systemtraymodel_static STATIC systemtraymodel.cpp sortedsystemtraymodel.cpp sortedsystemtraymodel.h)
-target_link_libraries(systemtraymodel_static PUBLIC systemtray_static)
-set_property(TARGET systemtraymodel_static PROPERTY POSITION_INDEPENDENT_CODE ON)
-
 kcoreaddons_add_plugin(org.kde.plasma.systemtray SOURCES systemtray.cpp systemtray.h INSTALL_NAMESPACE "plasma/applets")
 
-target_link_libraries(org.kde.plasma.systemtray systemtraymodel_static)
+target_link_libraries(org.kde.plasma.systemtray systemtray_static)
 
 ecm_add_qml_module(systemtrayplugin URI org.kde.plasma.private.systemtray GENERATE_PLUGIN_SOURCE)
 target_sources(systemtrayplugin PRIVATE systemtraymodel.cpp)
