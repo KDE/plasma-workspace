@@ -67,6 +67,7 @@
         "Description[es]": "Acceso rápido a funciones del sistema e iconos de estado de las aplicaciones",
         "Description[fr]": "Accédez rapidement aux fonctionnalités du système et aux icônes d'état des applications",
         "Description[he]": "גישה מהירה לסמלי יכולות המערכת ומצב היישומים",
+        "Description[is]": "Fljótlegur aðgangur að eiginleikum kerfis og stöðutáknum forrita",
         "Description[it]": "Accedi rapidamente alle funzionalità del sistema e alle icone di stato delle applicazioni",
         "Description[ka]": "სწრაფი წვდომა სისტემის ფუნქციებთან და აპლიკაციის სტატუსის ხატულებთან",
         "Description[lt]": "Greitai pasiekti sistemos ypatybes ir programų būsenos piktogramas",
@@ -74,8 +75,10 @@
         "Description[pl]": "Szybki dostęp do funkcji systemu i ikon stanu aplikacji",
         "Description[pt_BR]": "Acessa rapidamente as funcionalidades do sistema e os ícones de status do aplicativo",
         "Description[sl]": "Hiter dostop do sistemskih zmožnosti in ikon stanja aplikacije",
+        "Description[ta]": "இயங்குதள அம்சங்ளையும் செயலிகளின் நிலையையும் எளிதில் அணுக உதவும்",
         "Description[tr]": "Sistem özelliklerine ve uygulama durumu simgelerine tez erişin",
         "Description[uk]": "Швидкий доступ до можливостей системи та піктограм стану програми",
+        "Description[zh_CN]": "快速访问系统功能和应用程序状态图标",
         "Description[zh_TW]": "快速存取系統功能與應用程式狀態圖示",
         "EnabledByDefault": true,
         "FormFactors": [
