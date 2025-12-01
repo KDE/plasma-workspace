@@ -206,6 +206,17 @@ public:
      * @since 6.4
      **/
     virtual void requestToggleNoBorder(const QModelIndex &index) = 0;
+
+    /**
+     * Request toggling the excludeFromCapture state of the task at given index.
+     *
+     * This is meant for tasks that have an associated window, and may be
+     * a no-op when there is no window.
+     *
+     * @param index An index in this tasks model.
+     * @since 6.6
+     **/
+    virtual void requestToggleExcludeFromCapture(const QModelIndex &index) = 0;
 };
 
 }

@@ -89,6 +89,7 @@ Q_SIGNALS:
     void shadedChanged();
     void canSetNoBorderChanged();
     void hasNoBorderChanged();
+    void excludeFromCaptureChanged();
     void movableChanged();
     void resizableChanged();
     void virtualDesktopChangeableChanged();
@@ -261,6 +262,10 @@ protected:
             windowState.setFlag(state::state_no_border, flags & state::state_no_border);
             Q_EMIT hasNoBorderChanged();
         }
+        if (diff & state::state_exclude_from_capture) {
+            windowState.setFlag(state::state_exclude_from_capture, flags & state::state_exclude_from_capture);
+            Q_EMIT excludeFromCaptureChanged();
+        }
     }
     void org_kde_plasma_window_virtual_desktop_entered(const QString &id) override
     {
@@ -375,7 +380,7 @@ class PlasmaWindowManagement : public QWaylandClientExtensionTemplate<PlasmaWind
 {
     Q_OBJECT
 public:
-    static constexpr int s_version = 17;
+    static constexpr int s_version = 20;
     PlasmaWindowManagement()
         : QWaylandClientExtensionTemplate(s_version)
     {
@@ -701,6 +706,10 @@ void WaylandTasksModel::Private::addWindow(PlasmaWindow *window)
         this->dataChanged(window, HasNoBorder);
     });
 
+    QObject::connect(window, &PlasmaWindow::excludeFromCaptureChanged, q, [window, this] {
+        this->dataChanged(window, IsExcludedFromCapture);
+    });
+
     QObject::connect(window, &PlasmaWindow::virtualDesktopChangeableChanged, q, [window, this] {
         this->dataChanged(window, IsVirtualDesktopsChangeable);
     });
@@ -914,6 +923,8 @@ QVariant WaylandTasksModel::data(const QModelIndex &index, int role) const
         return window->windowState.testFlag(PlasmaWindow::state::state_can_set_no_border);
     } else if (role == HasNoBorder) {
         return window->windowState.testFlag(PlasmaWindow::state::state_no_border);
+    } else if (role == IsExcludedFromCapture) {
+        return window->windowState.testFlag(PlasmaWindow::state::state_exclude_from_capture);
     } else if (role == IsVirtualDesktopsChangeable) {
         return window->windowState.testFlag(PlasmaWindow::state::state_virtual_desktop_changeable);
     } else if (role == VirtualDesktops) {
@@ -1139,6 +1150,21 @@ void WaylandTasksModel::requestToggleNoBorder(const QModelIndex &index)
         window->set_state(PlasmaWindow::state::state_no_border, 0);
     } else {
         window->set_state(PlasmaWindow::state::state_no_border, PlasmaWindow::state::state_no_border);
+    };
+}
+
+void WaylandTasksModel::requestToggleExcludeFromCapture(const QModelIndex &index)
+{
+    if (!checkIndex(index, QAbstractItemModel::CheckIndexOption::IndexIsValid | QAbstractItemModel::CheckIndexOption::DoNotUseParent)) {
+        return;
+    }
+
+    auto &window = d->windows.at(index.row());
+
+    if (window->windowState & PlasmaWindow::state::state_exclude_from_capture) {
+        window->set_state(PlasmaWindow::state::state_exclude_from_capture, 0);
+    } else {
+        window->set_state(PlasmaWindow::state::state_exclude_from_capture, PlasmaWindow::state::state_exclude_from_capture);
     };
 }
 

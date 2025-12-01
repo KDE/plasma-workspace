@@ -101,6 +101,7 @@ QVariant AbstractTasksModel::data(const QModelIndex &, int role) const
     case CanLaunchNewInstance:
     case CanSetNoBorder:
     case HasNoBorder:
+    case IsExcludedFromCapture:
         return false;
     default:
         return {};
@@ -175,6 +176,11 @@ void AbstractTasksModel::requestToggleShaded(const QModelIndex &index)
 }
 
 void AbstractTasksModel::requestToggleNoBorder(const QModelIndex &index)
+{
+    Q_UNUSED(index);
+}
+
+void AbstractTasksModel::requestToggleExcludeFromCapture(const QModelIndex &index)
 {
     Q_UNUSED(index);
 }

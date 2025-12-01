@@ -172,6 +172,16 @@ public:
     void requestToggleNoBorder(const QModelIndex &index) override;
 
     /**
+     * Request toggling the excludeFromCapture state of the task at given index.
+     *
+     * This is not implemented for X11.
+     *
+     * @param index An index in this tasks model.
+     * @since 6.6
+     */
+    void requestToggleExcludeFromCapture(const QModelIndex &index) override;
+
+    /**
      * Request entering the window at the given index on the specified virtual desktop.
      * For compatibility across windowing systems the library supports, the desktops
      * parameter is a list; however, on X11 a window can only be on one or all virtual

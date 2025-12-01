@@ -192,6 +192,20 @@ void AbstractTasksProxyModelIface::requestToggleNoBorder(const QModelIndex &inde
     }
 }
 
+void AbstractTasksProxyModelIface::requestToggleExcludeFromCapture(const QModelIndex &index)
+{
+    if (!index.isValid()) {
+        return;
+    }
+
+    const QModelIndex &sourceIndex = mapIfaceToSource(index);
+    const auto *m = dynamic_cast<const AbstractTasksModelIface *>(sourceIndex.model());
+
+    if (m) {
+        const_cast<AbstractTasksModelIface *>(m)->requestToggleExcludeFromCapture(sourceIndex);
+    }
+}
+
 void AbstractTasksProxyModelIface::requestVirtualDesktops(const QModelIndex &index, const QVariantList &desktops)
 {
     if (!index.isValid()) {

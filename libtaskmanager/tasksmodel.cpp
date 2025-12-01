@@ -1617,6 +1617,13 @@ void TasksModel::requestToggleNoBorder(const QModelIndex &index)
     }
 }
 
+void TasksModel::requestToggleExcludeFromCapture(const QModelIndex &index)
+{
+    if (index.isValid() && index.model() == this) {
+        d->abstractTasksSourceModel->requestToggleExcludeFromCapture(mapToSource(index));
+    }
+}
+
 void TasksModel::requestVirtualDesktops(const QModelIndex &index, const QVariantList &desktops)
 {
     if (index.isValid() && index.model() == this) {

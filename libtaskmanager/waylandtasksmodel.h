@@ -153,6 +153,14 @@ public:
     void requestToggleNoBorder(const QModelIndex &index) override;
 
     /**
+     * Request toggling the excludeFromCapture state of the task at given index.
+     *
+     * @param index An index in this tasks model.
+     * @since 6.6
+     */
+    void requestToggleExcludeFromCapture(const QModelIndex &index) override;
+
+    /**
      * Request entering the window at the given index on the specified virtual desktops,
      * leaving any other desktops.
      *
