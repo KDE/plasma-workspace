@@ -2,16 +2,16 @@
 # Copyright (C) 2009 This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Sveinn í Felli <sveinki@nett.is>, 2009, 2010, 2011, 2022.
+# SPDX-FileCopyrightText: 2009, 2010, 2011, 2022, 2025 Sveinn í Felli <sveinki@nett.is>
 # SPDX-FileCopyrightText: 2022, 2023, 2024 Guðmundur Erlingsson <gudmundure@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-30 00:45+0000\n"
-"PO-Revision-Date: 2024-06-30 15:13+0000\n"
-"Last-Translator: Gummi <gudmundure@gmail.com>\n"
-"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2025-11-30 12:07+0000\n"
+"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
+"Language-Team: Icelandic\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,7 +31,7 @@ msgstr "Almennt"
 #: ConfigGeneral.qml:111
 #, kde-format
 msgid "Unavailable"
-msgstr ""
+msgstr "Ekki tiltækt"
 
 #: data.js:5
 #, kde-format
@@ -44,10 +44,9 @@ msgid "Lock the screen"
 msgstr "Læsa skjánum"
 
 #: data.js:12
-#, fuzzy, kde-format
-#| msgid "Switch user"
+#, kde-format
 msgid "Switch user…"
-msgstr "Skipta um notanda"
+msgstr "Skipta um notanda…"
 
 #: data.js:13
 #, kde-format
@@ -55,10 +54,9 @@ msgid "Start a parallel session as a different user"
 msgstr "Byrja samhliða setu sem annar notandi"
 
 #: data.js:19
-#, fuzzy, kde-format
-#| msgid "Shut Down"
+#, kde-format
 msgid "Shut down"
-msgstr "Slökkva á tölvunni"
+msgstr "Slökkva"
 
 #: data.js:20
 #, kde-format
@@ -76,8 +74,7 @@ msgid "Reboot the computer"
 msgstr "Endurræsa tölvuna"
 
 #: data.js:33
-#, fuzzy, kde-format
-#| msgid "Log Out"
+#, kde-format
 msgid "Log out"
 msgstr "Skrá út"
 

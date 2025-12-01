@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-21 00:45+0000\n"
-"PO-Revision-Date: 2025-05-18 18:52+0530\n"
+"PO-Revision-Date: 2025-11-30 11:15+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
-"Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
+"Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -103,26 +103,22 @@ msgstr ""
 "நேரத்தில் ஒரே உருப்படியை நினைவில் கொள்ளுமாறு பிடிப்புப்பலகையை அமைக்கலாம்."
 
 #: package/contents/ui/ConfigGeneral.qml:199
-#, fuzzy, kde-format
-#| msgid "Scale with Panel height"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel height"
-msgstr "பலகையின் அளவை பொறுத்து மாறும்"
+msgstr "பலகையின் உயரத்தைப் பொறுத்து மாறும்"
 
 #: package/contents/ui/ConfigGeneral.qml:200
-#, fuzzy, kde-format
-#| msgid "Scale with Panel width"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel width"
-msgstr "பலகையின் அகலம் பொறுத்து மாறும்"
+msgstr "பலகையின் அகலத்தைப் பொறுத்து மாறும்"
 
 #: package/contents/ui/ConfigGeneral.qml:202
-#, fuzzy, kde-format
-#| msgctxt "The arrangement of system tray icons in the Panel"
-#| msgid "Panel icon size:"
+#, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon size:"
-msgstr "பலகையிலுள்ள சின்னத்தின் அளவு"
+msgstr "பலகையிலுள்ள சின்னத்தின் அளவு:"
 
 #: package/contents/ui/ConfigGeneral.qml:206
 #: package/contents/ui/ConfigGeneral.qml:247
@@ -161,18 +157,16 @@ msgid "Automatically set to Large when in Touch Mode"
 msgstr "பலகைக்கணினி பயன்முறையில் இருக்கும்போது, பெரிதானதற்கு தானாக மாற்றப்படும்"
 
 #: package/contents/ui/ConfigGeneral.qml:306
-#, fuzzy, kde-format
-#| msgid "Entries"
+#, kde-format
 msgctxt "@title:column"
 msgid "Entries"
 msgstr "பதிவுகள்"
 
 #: package/contents/ui/ConfigGeneral.qml:310
-#, fuzzy, kde-format
-#| msgid "Always shown"
+#, kde-format
 msgctxt "@option:check, This is referring to system tray entries"
 msgid "Always show all"
-msgstr "எப்போதும் காட்டு"
+msgstr "அனைத்தையும் எப்போதும் காட்டு"
 
 #: package/contents/ui/ExpandedRepresentation.qml:59
 #, kde-format
