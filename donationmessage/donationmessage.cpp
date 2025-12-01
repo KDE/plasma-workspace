@@ -81,7 +81,7 @@ DonationMessage::DonationMessage(QObject *parent, const QList<QVariant> &)
     notification->setText(i18nc("@info body text of a system notification",
                                 "KDE needs your help! Donations fund development and infrastructure important for KDE's continued existence."));
 
-    const QString donateActionText = i18nc("@action:button Make a donation now; translate this in as short a form as possible", "Donate");
+    const QString donateActionText = i18nc("@action:button Make a donation now; translate this in as short a form as possible", "Donate…");
     const QString dontShowAgainActionText = i18nc("@action:button don't donate this year; translate this in as short a form as possible", "No Thanks");
 
     const KNotificationAction *defaultDonateAction = notification->addDefaultAction(donateActionText);
