@@ -462,6 +462,3 @@ msgstr "Nombre de plafons"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Compta els plafons"
-
-#~ msgid "Stop Current Activity"
-#~ msgstr "Atura l'activitat actual"

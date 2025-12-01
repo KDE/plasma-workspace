@@ -1009,19 +1009,3 @@ msgstr "Menú emergent del porta-retalls"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Cancel·la"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "&Configure Klipper…"
-#~ msgstr "&Configura el Klipper…"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "You can enable URL actions later in the <interface>Actions</interface> "
-#~ "page of the Clipboard applet's configuration window"
-#~ msgstr ""
-#~ "Més tard podreu habilitar accions d'URL a la pàgina <interface>Accions</"
-#~ "interface> de la finestra de configuració de la miniaplicació de porta-"
-#~ "retalls"
-
-#~ msgid "Disable This Popup"
-#~ msgstr "Desactiva aquest emergent"

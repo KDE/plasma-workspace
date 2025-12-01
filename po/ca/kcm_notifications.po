@@ -297,9 +297,3 @@ msgid ""
 msgstr ""
 "Seleccioneu una aplicació de la llista per a configurar el seu arranjament "
 "de notificacions i el comportament"
-
-#~ msgid "Normal notifications:"
-#~ msgstr "Notificacions normals:"
-
-#~ msgid "Show over full screen windows"
-#~ msgstr "Mostra sobre les finestres a pantalla completa"
