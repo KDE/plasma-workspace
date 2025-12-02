@@ -8,13 +8,14 @@
 
 #include "main.h"
 
+#include "debug.h"
+
 #include <unistd.h>
 
 #include <KFileUtils>
 #include <QDBusConnection>
 #include <QDBusMessage>
 #include <QDBusPendingCall>
-#include <QDebug>
 #include <QFile>
 #include <QGuiApplication>
 #include <QLibrary>
@@ -54,12 +55,12 @@ bool KCMInit::runModule(const KPluginMetaData &data)
     // get the kcminit_ function
     QFunctionPointer init = QLibrary::resolve(path, "kcminit");
     if (!init) {
-        qWarning() << "Module" << data.fileName() << "does not actually have a kcminit function";
+        qCWarning(KCMINIT) << "Module" << data.fileName() << "does not actually have a kcminit function";
         return false;
     }
 
     // initialize the module
-    qDebug() << "Initializing " << data.fileName();
+    qCDebug(KCMINIT) << "Initializing " << data.fileName();
     init();
     return true;
 }
@@ -106,7 +107,7 @@ KCMInit::KCMInit(const QCommandLineParser &args)
             if (data.isValid()) {
                 m_list << data.fileName();
             } else {
-                qWarning() << "Could not find" << arg;
+                qCWarning(KCMINIT) << "Could not find" << arg;
             }
         }
     } else {
