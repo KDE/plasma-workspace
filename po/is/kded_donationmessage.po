@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-12-02 00:43+0000\n"
 "PO-Revision-Date: 2025-11-30 15:21+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -14,7 +14,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 23.08.5\n"
 
 #: donationmessage.cpp:80
@@ -34,11 +34,15 @@ msgstr ""
 "stoðkerfi sem  KDE þarfnast til að geta þrifist."
 
 #: donationmessage.cpp:84
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@action:button Make a donation now; translate this in as short a form as "
+#| "possible"
+#| msgid "Donate"
 msgctxt ""
 "@action:button Make a donation now; translate this in as short a form as "
 "possible"
-msgid "Donate"
+msgid "Donate…"
 msgstr "Styrkja"
 
 #: donationmessage.cpp:85

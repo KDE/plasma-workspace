@@ -45,25 +45,25 @@ msgstr "播放上一首媒体"
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback seek forward 5s"
-msgstr ""
+msgstr "媒体播放向前时移 5 秒"
 
 #: kded/mprisservice.cpp:148
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback seek backward 5s"
-msgstr ""
+msgstr "媒体播放向后时移 5 秒"
 
 #: kded/mprisservice.cpp:152
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback seek forward 30s"
-msgstr ""
+msgstr "媒体播放向前时移 30 秒"
 
 #: kded/mprisservice.cpp:156
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback seek backward 30s"
-msgstr ""
+msgstr "媒体播放向后时移 30 秒"
 
 #: kded/mprisservice.cpp:159
 #, kde-format

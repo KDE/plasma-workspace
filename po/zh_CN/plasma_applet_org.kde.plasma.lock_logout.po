@@ -26,7 +26,7 @@ msgstr "常规"
 #: ConfigGeneral.qml:111
 #, kde-format
 msgid "Unavailable"
-msgstr ""
+msgstr "不可用"
 
 #: data.js:5
 #, kde-format
@@ -41,7 +41,7 @@ msgstr "锁定屏幕"
 #: data.js:12
 #, kde-format
 msgid "Switch user…"
-msgstr ""
+msgstr "切换用户…"
 
 #: data.js:13
 #, kde-format
@@ -51,7 +51,7 @@ msgstr "以不同的用户启动并行会话"
 #: data.js:19
 #, kde-format
 msgid "Shut down"
-msgstr ""
+msgstr "关机"
 
 #: data.js:20
 #, kde-format
@@ -71,7 +71,7 @@ msgstr "重新启动计算机"
 #: data.js:33
 #, kde-format
 msgid "Log out"
-msgstr ""
+msgstr "注销"
 
 #: data.js:34
 #, kde-format

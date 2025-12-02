@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-12-02 00:43+0000\n"
 "PO-Revision-Date: 2025-03-02 11:27+0700\n"
 "Last-Translator: Pongsakorn S. <kde@xerusion.me>\n"
 "Language-Team: Thai\n"
@@ -33,11 +33,15 @@ msgstr ""
 "เงินบริจาคจะนำไปใช้เพื่อพัฒนาและโครงสร้างพื้นฐานที่สำคัญเพื่อให้ KDE สามารถดำรงอยู่ต่อไปได้"
 
 #: donationmessage.cpp:84
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@action:button Make a donation now; translate this in as short a form as "
+#| "possible"
+#| msgid "Donate"
 msgctxt ""
 "@action:button Make a donation now; translate this in as short a form as "
 "possible"
-msgid "Donate"
+msgid "Donate…"
 msgstr "บริจาค"
 
 #: donationmessage.cpp:85
