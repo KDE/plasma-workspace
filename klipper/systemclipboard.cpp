@@ -200,6 +200,21 @@ void SystemClipboard::setMimeData(const HistoryItemConstPtr &data, SelectionMode
     owner.startDetached();
 }
 
+void SystemClipboard::syncTo(SelectionMode mode)
+{
+    Q_ASSERT((mode & 1) == 0); // Warn if trying to pass a boolean as a mode.
+    if (!qobject_cast<QGuiApplication *>(QCoreApplication::instance())) {
+        return;
+    }
+
+    QProcess owner;
+    owner.setProgram(QString::fromUtf8(helperLocation));
+    owner.setArguments(
+        {u"--mode"_s, QString::number(static_cast<int>(mode)), u"--reason"_s, QString::number(static_cast<int>(ClipboardUpdateReason::SyncSelection))});
+    qDebug() << "running" << owner.program() << owner.arguments();
+    owner.startDetached();
+}
+
 void SystemClipboard::setMimeData(const QMimeData *data, SelectionMode mode, ClipboardUpdateReason updateReason)
 {
     Q_ASSERT((mode & 1) == 0); // Warn if trying to pass a boolean as a mode.

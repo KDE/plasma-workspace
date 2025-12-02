@@ -50,6 +50,42 @@ int main(int argc, char **argv)
     }
 
     auto uuid = parser.value(u"uuid"_s);
+    if (uuid.isEmpty() && reason == ClipboardUpdateReason::SyncSelection) {
+        auto syncTo = mode == SelectionMode::Clipboard ? QClipboard::Clipboard : QClipboard::Selection;
+        auto syncFrom = mode == SelectionMode::Clipboard ? QClipboard::Selection : QClipboard::Clipboard;
+        // Wait until we receive the data
+        QEventLoop loop;
+        auto waitConnection =
+            QObject::connect(KSystemClipboard::instance(), &KSystemClipboard::changed, qGuiApp, [syncFrom, &loop](QClipboard::Mode changedMode) {
+                if (changedMode == syncFrom) {
+                    loop.exit();
+                }
+            });
+        loop.exec();
+        QObject::disconnect(waitConnection);
+
+        auto source = KSystemClipboard::instance()->mimeData(syncFrom);
+        auto copy = new QMimeData;
+        if (source->hasImage()) {
+            copy->setImageData(source->imageData());
+        }
+        if (source->hasText()) {
+            copy->setText(source->text());
+        }
+        for (const QString &format : source->formats()) {
+            if (format.startsWith("text/plain"_L1) || format.startsWith(u"image/") || format == u"application/x-qt-image") {
+                continue; // Already saved
+            }
+            copy->setData(format, source->data(format));
+        }
+        KSystemClipboard::instance()->setMimeData(enhanceMimeData(copy, reason), syncTo);
+        QObject::connect(KSystemClipboard::instance(), &KSystemClipboard::changed, qGuiApp, [syncTo, copy]() {
+            if (KSystemClipboard::instance()->mimeData(syncTo) != copy) {
+                qGuiApp->quit();
+            }
+        });
+        return app.exec();
+    }
 
     if (uuid.length() != 40) {
         qCWarning(KLIPPER_LOG) << "invalid uuid" << uuid;

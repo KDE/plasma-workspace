@@ -898,9 +898,10 @@ void HistoryModel::checkClipData(QClipboard::Mode mode, const QMimeData *data)
     // XXX: I want a better handling of selection/clipboard in general.
     // XXX: Order sensitive code. Must die.
     const bool selectionMode = mode == QClipboard::Selection;
+    const QString currentTop = m_items.size() ? first()->uuid() : QString();
     if (selectionMode && m_bIgnoreSelection) {
-        if (m_bSynchronize) {
-            m_clip->setMimeData(data, SystemClipboard::Clipboard, SystemClipboard::ClipboardUpdateReason::SyncSelection);
+        if (m_bSynchronize && computeUuid(data) != currentTop) {
+            m_clip->syncTo(SystemClipboard::Clipboard);
         }
         return;
     }
@@ -919,8 +920,8 @@ void HistoryModel::checkClipData(QClipboard::Mode mode, const QMimeData *data)
 
     if (changed && insert(data)) [[likely]] {
         qCDebug(KLIPPER_LOG) << "Synchronize?" << m_bSynchronize;
-        if (m_bSynchronize) { // applyClipChanges can return nullptr
-            m_clip->setMimeData(data, mode == QClipboard::Selection ? SystemClipboard::Clipboard : SystemClipboard::Selection);
+        if (m_bSynchronize && first()->uuid() != currentTop) { // applyClipChanges can return nullptr
+            m_clip->syncTo(mode == QClipboard::Selection ? SystemClipboard::Clipboard : SystemClipboard::Selection);
         }
     }
 }

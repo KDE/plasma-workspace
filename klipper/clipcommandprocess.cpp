@@ -55,7 +55,7 @@ void ClipCommandProcess::slotFinished(int /*exitCode*/, QProcess::ExitStatus /*n
     if (!m_newhistoryItem.isEmpty()) {
         auto data = std::make_unique<QMimeData>();
         data->setText(m_newhistoryItem);
-        m_clip->setMimeData(data.get(), SystemClipboard::SelectionMode(SystemClipboard::Selection | SystemClipboard::Clipboard));
+        // m_clip->setMimeData(data.get(), SystemClipboard::SelectionMode(SystemClipboard::Selection | SystemClipboard::Clipboard));
         m_clip->checkClipData(QClipboard::Clipboard, data.get());
     }
     // If an history item was provided, remove it so that the new item can replace it

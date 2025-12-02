@@ -87,8 +87,8 @@ public:
     void setMimeData(const std::shared_ptr<const HistoryItem> &data,
                      SelectionMode mode,
                      ClipboardUpdateReason updateReason = ClipboardUpdateReason::UpdateClipboard);
-    // Used to sync selection with clipboard
     void setMimeData(const QMimeData *mimeData, SelectionMode mode, ClipboardUpdateReason updateReason = ClipboardUpdateReason::UpdateClipboard);
+    void syncTo(SelectionMode mode);
 
     bool isLocked(QClipboard::Mode mode);
 
