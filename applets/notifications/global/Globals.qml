@@ -12,7 +12,7 @@ import QtQuick.Layouts 1.1
 import QtQml 2.15
 
 import org.kde.plasma.core as PlasmaCore
-import org.kde.plasma.plasma5support 2.0 as P5Support
+import org.kde.plasma.clock
 import org.kde.kquickcontrolsaddons 2.0
 import org.kde.kirigami 2.11 as Kirigami
 
@@ -462,12 +462,8 @@ QtObject {
     }
 
     // This periodically checks whether do not disturb mode timed out and updates the "minutes ago" labels
-    property P5Support.DataSource timeSource: P5Support.DataSource {
-        engine: "time"
-        connectedSources: ["Local"]
-        interval: 60000 // 1 min
-        intervalAlignment: P5Support.Types.AlignToMinute
-        onDataChanged: {
+    property Clock clockSource: Clock {
+        onDateTimeChanged: {
             globals.checkInhibition();
             globals.timeChanged();
         }
