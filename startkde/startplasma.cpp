@@ -26,6 +26,7 @@
 
 #include <KConfig>
 #include <KConfigGroup>
+#include <KDarkLightSchedule>
 #include <KNotifyConfig>
 #include <KPackage/Package>
 #include <KPackage/PackageLoader>
@@ -352,6 +353,51 @@ void runEnvironmentScripts()
 // Since KDE4 there is also KDE_SESSION_VERSION, containing the major version number.
 //
 
+static std::optional<std::pair<QString, KLookAndFeelManager::Contents>> dayNightLookAndFeel(const LookAndFeelSettings &settings)
+{
+    const KConfig lookandfeelautoswitcherstaterc(QStringLiteral("lookandfeelautoswitcherstaterc"), KConfig::SimpleConfig, QStandardPaths::GenericStateLocation);
+    const KConfigGroup darkNightCycleGroup(&lookandfeelautoswitcherstaterc, QStringLiteral("DarkLightCycle"));
+    if (!darkNightCycleGroup.isValid()) {
+        return std::nullopt;
+    }
+
+    const std::optional<KDarkLightSchedule> darkLightSchedule =
+        KDarkLightSchedule::fromState(darkNightCycleGroup.readEntry(QStringLiteral("SerializedSchedule")));
+    if (!darkLightSchedule) {
+        return std::nullopt;
+    }
+
+    const QDateTime now = QDateTime::currentDateTime();
+    const auto previousTransition = darkLightSchedule->previousTransition(now);
+
+    bool wantsDarkTheme = false;
+    switch (previousTransition->test(now)) {
+    case KDarkLightTransition::Upcoming:
+    case KDarkLightTransition::InProgress:
+        wantsDarkTheme = previousTransition->type() == KDarkLightTransition::Morning;
+        break;
+    case KDarkLightTransition::Passed:
+        wantsDarkTheme = previousTransition->type() != KDarkLightTransition::Morning;
+        break;
+    }
+
+    const QString lookAndFeelName = wantsDarkTheme ? settings.defaultDarkLookAndFeel() : settings.defaultLightLookAndFeel();
+    return std::make_pair(lookAndFeelName, KLookAndFeelManager::AppearanceSettings);
+}
+
+static std::pair<QString, KLookAndFeelManager::Contents> determineLookAndFeel()
+{
+    const LookAndFeelSettings settings;
+
+    if (settings.automaticLookAndFeel()) {
+        if (const auto lookAndFeel = dayNightLookAndFeel(settings)) {
+            return *lookAndFeel;
+        }
+    }
+
+    return std::make_pair(settings.lookAndFeelPackage(), KLookAndFeelManager::AllSettings);
+}
+
 void setupPlasmaEnvironment()
 {
     qputenv("KDE_FULL_SESSION", "true");
@@ -372,14 +418,14 @@ void setupPlasmaEnvironment()
     QDir().mkpath(extraConfigDir);
     qputenv("XDG_CONFIG_DIRS", QByteArray(QFile::encodeName(extraConfigDir) + ':' + currentConfigDirs));
 
-    const QString currentLnf = LookAndFeelSettings().lookAndFeelPackage();
+    const auto &[lookAndFeelName, lookAndFeelContents] = determineLookAndFeel();
     QFile activeLnf(extraConfigDir + QLatin1String("/package"));
     activeLnf.open(QIODevice::ReadOnly);
-    if (activeLnf.readLine() != currentLnf.toUtf8()) {
-        KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"), currentLnf);
+    if (activeLnf.readLine() != lookAndFeelName.toUtf8()) {
+        KPackage::Package package = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"), lookAndFeelName);
         KLookAndFeelManager lnfManager;
         lnfManager.setMode(KLookAndFeelManager::Mode::Defaults);
-        lnfManager.save(package);
+        lnfManager.save(package, lookAndFeelContents);
     }
     // check if colors changed, if so apply them and discard plasma cache
     {

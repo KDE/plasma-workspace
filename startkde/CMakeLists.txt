@@ -24,6 +24,7 @@ target_link_libraries(startplasma PUBLIC
     Canberra::Canberra
     PW::KLookAndFeel
     PW::KWorkspace
+    KNightTime
 )
 
 kconfig_target_kcfg_file(startplasma
