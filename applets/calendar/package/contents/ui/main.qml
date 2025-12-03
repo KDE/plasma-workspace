@@ -9,7 +9,7 @@ import QtQuick 2.12
 import QtQuick.Layouts 1.12
 
 import org.kde.plasma.plasmoid 2.0
-import org.kde.plasma.plasma5support 2.0 as P5Support
+import org.kde.plasma.clock
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.kirigami as Kirigami
 import org.kde.ksvg as KSvg
@@ -21,7 +21,7 @@ PlasmoidItem {
     switchWidth: Kirigami.Units.gridUnit * 12
     switchHeight: Kirigami.Units.gridUnit * 12
 
-    toolTipMainText: Qt.formatDate(dataSource.data.Local.DateTime, "dddd")
+    toolTipMainText: Qt.formatDate(clockSource.dateTime, "dddd")
     toolTipSubText: {
         // this logic is taken from digital-clock:
         // remove "dddd" from the locale format string
@@ -30,18 +30,14 @@ PlasmoidItem {
         // remove it + the delimiter and space
         var format = Qt.locale().dateFormat(Locale.LongFormat);
         format = format.replace(/(^dddd.?\s)|(,?\sdddd$)/, "");
-        return Qt.formatDate(dataSource.data.Local.DateTime, format)
+        return Qt.formatDate(clockSource.dateTime, format)
     }
 
     Layout.minimumWidth: Kirigami.Units.iconSizes.large
     Layout.minimumHeight: Kirigami.Units.iconSizes.large
 
-    P5Support.DataSource {
-        id: dataSource
-        engine: "time"
-        connectedSources: ["Local"]
-        interval: 60000
-        intervalAlignment: P5Support.Types.AlignToMinute
+    Clock {
+        id: clockSource
     }
 
     // Only exists because the default CompactRepresentation doesn't expose a
@@ -73,7 +69,7 @@ PlasmoidItem {
                 color: "black"
 
                 text: {
-                    var d = new Date(dataSource.data.Local.DateTime);
+                    var d = new Date(clockSource.dateTime);
                     return Qt.formatDate(d, "MMM");
                 }
                 textFormat: Text.PlainText
@@ -95,7 +91,7 @@ PlasmoidItem {
                 /* color must be black because it's set on top of a white icon */
                 color: "black"
                 text: {
-                    var d = new Date(dataSource.data.Local.DateTime)
+                    var d = new Date(clockSource.dateTime)
                     var format = Plasmoid.configuration.compactDisplay
 
                     if (format === "w") {
@@ -123,7 +119,7 @@ PlasmoidItem {
 
         MonthView {
             id: calendar
-            today: dataSource.data["Local"]["DateTime"]
+            today: clockSource.dateTime
             showWeekNumbers: Plasmoid.configuration.showWeekNumbers
 
             anchors.fill: parent
