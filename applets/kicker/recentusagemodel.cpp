@@ -224,6 +224,10 @@ QVariant RecentUsageModel::appData(const QString &resource, int role) const
         return i18n("Applications");
     } else if (role == Kicker::FavoriteIdRole) {
         return service->storageId();
+    } else if (role == Kicker::HasChildrenRole) {
+        return false;
+    } else if (role == Kicker::IsParentRole) {
+        return false;
     } else if (role == Kicker::HasActionListRole) {
         return true;
     } else if (role == Kicker::ActionListRole) {
@@ -336,6 +340,10 @@ QVariant RecentUsageModel::docData(const QString &resource, int role, const QStr
         return desc;
     } else if (role == Kicker::UrlRole) {
         return url;
+    } else if (role == Kicker::HasChildrenRole) {
+        return false;
+    } else if (role == Kicker::IsParentRole) {
+        return false;
     } else if (role == Kicker::HasActionListRole) {
         return true;
     } else if (role == Kicker::ActionListRole) {
