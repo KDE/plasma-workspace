@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-02 00:43+0000\n"
-"PO-Revision-Date: 2024-08-29 06:23+0200\n"
+"PO-Revision-Date: 2025-12-02 05:04+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.8\n"
 
 #: donationmessage.cpp:80
 #, kde-format
@@ -35,16 +35,12 @@ msgstr ""
 "ინფრასტრუქტურას, რომელიც ძალიან მნიშვნელოვანია KDE-ის არსებობისთვის."
 
 #: donationmessage.cpp:84
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@action:button Make a donation now; translate this in as short a form as "
-#| "possible"
-#| msgid "Donate"
+#, kde-format
 msgctxt ""
 "@action:button Make a donation now; translate this in as short a form as "
 "possible"
 msgid "Donate…"
-msgstr "შეწირვა"
+msgstr "შეწირვა…"
 
 #: donationmessage.cpp:85
 #, kde-format

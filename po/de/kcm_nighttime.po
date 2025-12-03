@@ -1,4 +1,3 @@
-# German translations for plasma-workspace package
 # German translation for plasma-workspace.
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
@@ -8,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2025-10-31 22:21+0100\n"
+"PO-Revision-Date: 2025-11-20 22:10+0100\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -16,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #: ui/main.qml:26
 #, kde-format
@@ -135,7 +134,7 @@ msgstr "Längengrad:"
 #, kde-format
 msgctxt "@info:tooltip; the variables are times of day, e.g. 07:30"
 msgid "Sunrise starts at %1 and ends at %2"
-msgstr ""
+msgstr "Der Sonnenaufgang beginnt um %1 und endet um %2"
 
 #: ui/SunPath.qml:57
 #, kde-format
@@ -147,7 +146,7 @@ msgstr "Sonnenaufgang"
 #, kde-format
 msgctxt "@info:tooltip; the variables are times of day, e.g. 07:30"
 msgid "Sunset starts at %1 and ends at %2"
-msgstr ""
+msgstr "Der Sonnenuntergang beginnt um %1 und endet um %2"
 
 #: ui/SunPath.qml:82
 #, kde-format

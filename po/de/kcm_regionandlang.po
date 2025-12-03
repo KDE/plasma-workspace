@@ -1,8 +1,8 @@
 # German translations for plasma-workspace package.
 # Copyright (C) 2022 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# SPDX-FileCopyrightText: 2022 Frederik Schwarzer <schwarzer@kde.org>
 # SPDX-FileCopyrightText: 2022 Alois Spitzbart <spitz234@hotmail.com>
+# SPDX-FileCopyrightText: 2022 Frederik Schwarzer <schwarzer@kde.org>
 # SPDX-FileCopyrightText: 2023 Jannick Kuhr <opensource@kuhr.org>
 # SPDX-FileCopyrightText: 2024, 2025 Flori G <Renner03@protonmail.com>
 # SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n.daphipz@fastmail.de>
@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kcm_regionandlang\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-28 00:44+0000\n"
-"PO-Revision-Date: 2025-10-29 20:12+0100\n"
+"PO-Revision-Date: 2025-11-23 23:59+0100\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #, kde-format
 msgid "Inherit Language"
@@ -44,25 +44,22 @@ msgid "Metric system (SI)"
 msgstr "Metrisches System (SI)"
 
 #: binarydialectmodel.cpp:75
-#, fuzzy, kde-format
-#| msgid "Binary -  Kibibytes (KiB), Mebibytes (MiB), Gibibytes (GiB)"
+#, kde-format
 msgctxt "Binary dialect IEC description"
 msgid "Binary -  Kibibytes (KiB), Mebibytes (MiB), Gibibytes (GiB)"
-msgstr "Binär -  Kibibytes (KiB), Mebibytes (MiB), Gibibytes (GiB)"
+msgstr "Binär – Kibibytes (KiB), Mebibytes (MiB), Gibibytes (GiB)"
 
 #: binarydialectmodel.cpp:77
-#, fuzzy, kde-format
-#| msgid "Binary - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
+#, kde-format
 msgctxt "Binary dialect JEDEC description"
 msgid "Binary - Kilobytes (KB), Megabytes (MB), Gigabytes (GB)"
-msgstr "Binär - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
+msgstr "Binär – Kilobytes (KB), Megabytes (MB), Gigabytes (GB)"
 
 #: binarydialectmodel.cpp:79
-#, fuzzy, kde-format
-#| msgid "Decimal - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
+#, kde-format
 msgctxt "Binary dialect Metric description"
 msgid "Decimal - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
-msgstr "Dezimal - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
+msgstr "Dezimal – Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
 
 #: exampleutility.cpp:31
 #, kde-format

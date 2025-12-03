@@ -1,15 +1,15 @@
 # Translation of kded_donationmessage.po to Catalan (Valencian)
-# Copyright (C) 2024 This_file_is_part_of_KDE
+# Copyright (C) 2024-2025 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# SPDX-FileCopyrightText: 2024 Josep M. Ferrer <txemaq@gmail.com>
+# SPDX-FileCopyrightText: 2024, 2025 Josep M. Ferrer <txemaq@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-02 00:43+0000\n"
-"PO-Revision-Date: 2024-08-28 16:29+0200\n"
+"PO-Revision-Date: 2025-12-02 09:50+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: donationmessage.cpp:80
 #, kde-format
@@ -36,16 +36,12 @@ msgstr ""
 "la infraestructura important per a la continuïtat de KDE."
 
 #: donationmessage.cpp:84
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@action:button Make a donation now; translate this in as short a form as "
-#| "possible"
-#| msgid "Donate"
+#, kde-format
 msgctxt ""
 "@action:button Make a donation now; translate this in as short a form as "
 "possible"
 msgid "Donate…"
-msgstr "Donació"
+msgstr "Donació…"
 
 #: donationmessage.cpp:85
 #, kde-format

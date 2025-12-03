@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libkicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-12-03 00:46+0000\n"
 "PO-Revision-Date: 2025-06-04 19:35+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -83,7 +83,7 @@ msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
 #: appsmodel.cpp:38 appsmodel.cpp:74 computermodel.cpp:93 computermodel.cpp:219
-#: recentusagemodel.cpp:159 recentusagemodel.cpp:228
+#: recentusagemodel.cpp:155 recentusagemodel.cpp:224
 #, kde-format
 msgid "Applications"
 msgstr "Aplicaciones"
@@ -119,47 +119,47 @@ msgstr "Equipo"
 msgid "Favorites"
 msgstr "Favoritos"
 
-#: recentusagemodel.cpp:157
+#: recentusagemodel.cpp:153
 #, kde-format
 msgid "Recently Used"
 msgstr "Usado recientemente"
 
-#: recentusagemodel.cpp:162 recentusagemodel.cpp:317
+#: recentusagemodel.cpp:158 recentusagemodel.cpp:313
 #, kde-format
 msgid "Files"
 msgstr "Archivos"
 
-#: recentusagemodel.cpp:250
+#: recentusagemodel.cpp:246
 #, kde-format
 msgid "Forget Application"
 msgstr "Olvidar aplicación"
 
-#: recentusagemodel.cpp:315
+#: recentusagemodel.cpp:311
 #, kde-format
 msgid "Folders"
 msgstr "Carpetas"
 
-#: recentusagemodel.cpp:352
+#: recentusagemodel.cpp:348
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Abrir la carpeta contenedora"
 
-#: recentusagemodel.cpp:355
+#: recentusagemodel.cpp:351
 #, kde-format
 msgid "Forget File"
 msgstr "Olvidar archivo"
 
-#: recentusagemodel.cpp:490
+#: recentusagemodel.cpp:486
 #, kde-format
 msgid "Forget All"
 msgstr "Olvidar todo"
 
-#: recentusagemodel.cpp:492
+#: recentusagemodel.cpp:488
 #, kde-format
 msgid "Forget All Applications"
 msgstr "Olvidar todas las aplicaciones"
 
-#: recentusagemodel.cpp:495
+#: recentusagemodel.cpp:491
 #, kde-format
 msgid "Forget All Files"
 msgstr "Olvidar todos los archivos"

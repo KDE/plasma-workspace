@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-21 00:45+0000\n"
+"POT-Creation-Date: 2025-12-03 00:46+0000\n"
 "PO-Revision-Date: 2025-11-22 18:17+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -100,13 +100,21 @@ msgid "I understand the risks"
 msgstr "Je comprends les risques"
 
 #: package/contents/ui/ConfigGeneral.qml:187
-#, kde-kuit-format
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info:usagetip"
+#| msgid ""
+#| "Disabling the clipboard is not recommended, as it will cause copied data "
+#| "to be lost when the application it was copied from is closed.<nl/><nl/"
+#| ">Instead consider configuring the clipboard to disable its history, or "
+#| "only remember one item at a time."
 msgctxt "@info:usagetip"
 msgid ""
 "Disabling the clipboard is not recommended, as it will cause copied data to "
-"be lost when the application it was copied from is closed.<nl/><nl/>Instead "
-"consider configuring the clipboard to disable its history, or only remember "
-"one item at a time."
+"be lost when the application it was copied from is closed.<nl/><nl/>Only do "
+"this if you’ve manually added a standalone Clipboard widget somewhere else, "
+"or are using a 3rd-party clipboard manager. Also, instead consider "
+"configuring the clipboard to not save history, or to only remember one item "
+"at a time."
 msgstr ""
 "Il est déconseillé de désactiver le presse-papier. En effet, cela entraînera "
 "la perte de la copie des données lors de la fermeture de l’application "
@@ -114,67 +122,77 @@ msgstr ""
 "configurer le presse-papier pour désactiver son historique ou se souvenir "
 "d'un seul article à la fois."
 
-#: package/contents/ui/ConfigGeneral.qml:199
+#: package/contents/ui/ConfigGeneral.qml:196
+#, kde-kuit-format
+msgctxt "@info:usagetip"
+msgid ""
+"Disabling the Notifications widget is not recommended, as notifications sent "
+"by apps will no longer be shown.<nl/><nl/>Only do this if you’ve manually "
+"added a standalone Notifications widget somewhere else, or are intentionally "
+"using a 3rd-party notification manager to handle notifications."
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:208
 #, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel height"
 msgstr "Ajuster à la hauteur du panneau"
 
-#: package/contents/ui/ConfigGeneral.qml:200
+#: package/contents/ui/ConfigGeneral.qml:209
 #, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel width"
 msgstr "Ajuster à la largeur du panneau"
 
-#: package/contents/ui/ConfigGeneral.qml:202
+#: package/contents/ui/ConfigGeneral.qml:211
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon size:"
 msgstr "Taille des icônes du panneau :"
 
-#: package/contents/ui/ConfigGeneral.qml:206
-#: package/contents/ui/ConfigGeneral.qml:247
+#: package/contents/ui/ConfigGeneral.qml:215
+#: package/contents/ui/ConfigGeneral.qml:256
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "Petit"
 
-#: package/contents/ui/ConfigGeneral.qml:235
+#: package/contents/ui/ConfigGeneral.qml:244
 #, kde-format
 msgid "Automatically enabled when in Touch Mode"
 msgstr "Automatiquement activé lorsqu'en mode « Tablette »"
 
-#: package/contents/ui/ConfigGeneral.qml:243
+#: package/contents/ui/ConfigGeneral.qml:252
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon spacing:"
 msgstr "Espacement des icônes du panneau :"
 
-#: package/contents/ui/ConfigGeneral.qml:251
+#: package/contents/ui/ConfigGeneral.qml:260
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "Normal"
 
-#: package/contents/ui/ConfigGeneral.qml:255
+#: package/contents/ui/ConfigGeneral.qml:264
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "Grand"
 
-#: package/contents/ui/ConfigGeneral.qml:280
+#: package/contents/ui/ConfigGeneral.qml:289
 #, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
 msgstr "Automatiquement défini à « Grand » lorsqu'en mode « Tablette »"
 
-#: package/contents/ui/ConfigGeneral.qml:306
+#: package/contents/ui/ConfigGeneral.qml:315
 #, kde-format
 msgctxt "@title:column"
 msgid "Entries"
 msgstr "Entrées"
 
-#: package/contents/ui/ConfigGeneral.qml:310
+#: package/contents/ui/ConfigGeneral.qml:319
 #, kde-format
 msgctxt "@option:check, This is referring to system tray entries"
 msgid "Always show all"

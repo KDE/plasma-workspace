@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.homerun\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-12-03 00:46+0000\n"
 "PO-Revision-Date: 2012-09-21 16:01-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -82,7 +82,7 @@ msgid "%1 (%2)"
 msgstr ""
 
 #: appsmodel.cpp:38 appsmodel.cpp:74 computermodel.cpp:93 computermodel.cpp:219
-#: recentusagemodel.cpp:159 recentusagemodel.cpp:228
+#: recentusagemodel.cpp:155 recentusagemodel.cpp:224
 #, fuzzy, kde-format
 msgid "Applications"
 msgstr "Feidhmchláir"
@@ -118,48 +118,48 @@ msgstr ""
 msgid "Favorites"
 msgstr "Áiteanna Is Ansa Liom"
 
-#: recentusagemodel.cpp:157
+#: recentusagemodel.cpp:153
 #, kde-format
 msgid "Recently Used"
 msgstr ""
 
-#: recentusagemodel.cpp:162 recentusagemodel.cpp:317
+#: recentusagemodel.cpp:158 recentusagemodel.cpp:313
 #, kde-format
 msgid "Files"
 msgstr ""
 
-#: recentusagemodel.cpp:250
+#: recentusagemodel.cpp:246
 #, fuzzy, kde-format
 msgid "Forget Application"
 msgstr "Feidhmchláir Is Ansa Leat"
 
-#: recentusagemodel.cpp:315
+#: recentusagemodel.cpp:311
 #, fuzzy, kde-format
 #| msgid "Folder"
 msgid "Folders"
 msgstr "Fillteán"
 
-#: recentusagemodel.cpp:352
+#: recentusagemodel.cpp:348
 #, kde-format
 msgid "Open Containing Folder"
 msgstr ""
 
-#: recentusagemodel.cpp:355
+#: recentusagemodel.cpp:351
 #, fuzzy, kde-format
 msgid "Forget File"
 msgstr "Feidhmchláir Is Ansa Leat"
 
-#: recentusagemodel.cpp:490
+#: recentusagemodel.cpp:486
 #, fuzzy, kde-format
 msgid "Forget All"
 msgstr "Feidhmchláir Is Ansa Leat"
 
-#: recentusagemodel.cpp:492
+#: recentusagemodel.cpp:488
 #, fuzzy, kde-format
 msgid "Forget All Applications"
 msgstr "Feidhmchláir Is Ansa Leat"
 
-#: recentusagemodel.cpp:495
+#: recentusagemodel.cpp:491
 #, fuzzy, kde-format
 msgid "Forget All Files"
 msgstr "Feidhmchláir Is Ansa Leat"
