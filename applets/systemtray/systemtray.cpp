@@ -563,7 +563,7 @@ void SystemTray::scroll(const QString &service, int delta, const QString &direct
     source->scroll(delta, direction);
 }
 
-K_PLUGIN_CLASS(SystemTray)
+K_PLUGIN_CLASS_WITH_JSON(SystemTray, "metadata.json")
 
 #include "systemtray.moc"
 

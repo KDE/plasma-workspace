@@ -16,8 +16,6 @@ import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.extras as PlasmaExtras
 import org.kde.plasma.plasmoid
 
-import "items" as Items
-
 PlasmaComponents3.ScrollView {
     id: hiddenTasksView
 
@@ -58,7 +56,7 @@ PlasmaComponents3.ScrollView {
         readonly property int itemCount: model.count
 
         model: root.hiddenModel
-        delegate: Items.ItemLoader {
+        delegate: ItemLoader {
             width: hiddenTasks.cellWidth
             height: hiddenTasks.cellHeight
             Accessible.role: Accessible.ListItem // needed to get the GridView description or role announced

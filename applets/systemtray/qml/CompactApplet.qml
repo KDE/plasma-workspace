@@ -11,8 +11,6 @@ import org.kde.kirigami as Kirigami
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.plasmoid
 
-import "../ui/items" as Items
-
 PlasmaCore.ToolTipArea {
     id: appletRoot
     objectName: "org.kde.desktop-CompactApplet"
@@ -20,7 +18,7 @@ PlasmaCore.ToolTipArea {
 
     mainText: plasmoidItem?.toolTipMainText ?? ""
     subText: plasmoidItem?.toolTipSubText ?? ""
-    location: if ((plasmoidItem?.parent as Items.AbstractItem)?.inHiddenLayout && Plasmoid.location !== PlasmaCore.Types.LeftEdge) {
+    location: if ((plasmoidItem?.parent as AbstractItem)?.inHiddenLayout && Plasmoid.location !== PlasmaCore.Types.LeftEdge) {
         return PlasmaCore.Types.RightEdge;
     } else {
         return Plasmoid.location;

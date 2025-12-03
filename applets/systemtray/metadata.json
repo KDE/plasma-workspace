@@ -1,5 +1,4 @@
 {
-    "KPackageStructure": "Plasma/Applet",
     "KPlugin": {
         "Authors": [
             {
@@ -85,7 +84,6 @@
             "desktop"
         ],
         "Icon": "preferences-desktop-notification",
-        "Id": "org.kde.plasma.systemtray",
         "License": "GPL-2.0+",
         "Name": "System Tray",
         "Name[af]": "Stelsellaai",

@@ -15,8 +15,6 @@ import org.kde.ksvg as KSvg
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.plasmoid
 
-import "items" as Items
-
 ContainmentItem {
     id: root
 
@@ -232,7 +230,7 @@ ContainmentItem {
 
                 model: activeModel
 
-                delegate: Items.ItemLoader {
+                delegate: ItemLoader {
                     id: delegate
 
                     width: tasksGrid.cellWidth

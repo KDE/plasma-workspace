@@ -58,7 +58,7 @@ void SystemTrayModelTest::testPlasmoidModel()
 {
     // given: mocked PlasmoidRegistry with sample plugin meta data
     const QString configFileName = QFINDTESTDATA("data/systraysettingsrc");
-    const QString schemaFileName = QFINDTESTDATA("../package/contents/config/main.xml");
+    const QString schemaFileName = QFINDTESTDATA("../main.xml");
     QFile schemaFile(schemaFileName);
     KConfigLoader loader(configFileName, &schemaFile);
     SystemTraySettings *settings = new SystemTraySettings(&loader);
