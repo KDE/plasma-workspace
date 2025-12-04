@@ -42,6 +42,7 @@
 #include "../config-workspace.h"
 #include "debug.h"
 #include "klookandfeelmanager.h"
+#include "lookandfeelsettings.h"
 
 using namespace Qt::StringLiterals;
 
@@ -371,8 +372,7 @@ void setupPlasmaEnvironment()
     QDir().mkpath(extraConfigDir);
     qputenv("XDG_CONFIG_DIRS", QByteArray(QFile::encodeName(extraConfigDir) + ':' + currentConfigDirs));
 
-    const KConfig globals;
-    const QString currentLnf = KConfigGroup(&globals, QStringLiteral("KDE")).readEntry("LookAndFeelPackage", QStringLiteral("org.kde.breeze.desktop"));
+    const QString currentLnf = LookAndFeelSettings().lookAndFeelPackage();
     QFile activeLnf(extraConfigDir + QLatin1String("/package"));
     activeLnf.open(QIODevice::ReadOnly);
     if (activeLnf.readLine() != currentLnf.toUtf8()) {

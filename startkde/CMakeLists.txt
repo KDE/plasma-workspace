@@ -17,13 +17,18 @@ add_library(startplasma OBJECT startplasma.cpp ${startplasma_SRCS})
 target_link_libraries(startplasma PUBLIC
     Qt::Core
     Qt::DBus
-    KF6::ConfigCore
+    KF6::ConfigGui
     KF6::DBusAddons
     KF6::Notifications
     KF6::Package
     Canberra::Canberra
     PW::KLookAndFeel
     PW::KWorkspace
+)
+
+kconfig_target_kcfg_file(startplasma
+    FILE ${CMAKE_SOURCE_DIR}/kcms/lookandfeel/lookandfeelsettings.kcfg
+    CLASS_NAME LookAndFeelSettings
 )
 
 add_executable(startplasma-x11 ${START_PLASMA_COMMON_SRCS} startplasma-x11.cpp kcheckrunning/kcheckrunning.cpp)
