@@ -1,5 +1,4 @@
 {
-    "KPackageStructure": "Plasma/Applet",
     "KPlugin": {
         "Authors": [
             {
@@ -113,7 +112,6 @@
             "desktop"
         ],
         "Icon": "show-menu",
-        "Id": "org.kde.plasma.appmenu",
         "License": "GPL-2.0+",
         "Name": "Global Menu",
         "Name[ar]": "القائمة العموميّة",

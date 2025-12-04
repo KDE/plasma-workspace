@@ -1,6 +1,26 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"plasma_applet_org.kde.plasma.appmenu\")
 
-add_subdirectory(lib)
-add_subdirectory(plugin)
+plasma_add_applet(org.kde.plasma.appmenu
+    QML_SOURCES
+        qml/configGeneral.qml
+        qml/config.qml
+        qml/main.qml
+        qml/MenuDelegate.qml
+    CPP_SOURCES
+        appmenuapplet.cpp
+        appmenumodel.cpp
+    RESOURCES
+        main.xml
+)
 
-plasma_install_package(package org.kde.plasma.appmenu)
+target_link_libraries(org.kde.plasma.appmenu PRIVATE
+    Qt::Core
+    Qt::Widgets
+    Qt::Quick
+    Qt::DBus
+    Plasma::Plasma
+    KF6::WindowSystem
+    KF6::I18n
+    PW::LibTaskManager
+    dbusmenuqt
+)

@@ -16,7 +16,6 @@ import org.kde.kquickcontrolsaddons // For KCMShell
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.private.keyboardindicator as KeyboardIndicator
 import org.kde.plasma.components as PlasmaComponents3
-import org.kde.plasma.private.appmenu as AppMenuPrivate
 import org.kde.kirigami as Kirigami
 
 PlasmoidItem {
@@ -140,7 +139,7 @@ PlasmoidItem {
         }
     }
 
-    AppMenuPrivate.AppMenuModel {
+    AppMenuModel {
         id: appMenuModel
         containmentStatus: Plasmoid.containment.status
         screenGeometry: root.screenGeometry

@@ -5,7 +5,7 @@
 */
 
 #include "appmenuapplet.h"
-#include "../plugin/appmenumodel.h"
+#include "appmenumodel.h"
 
 #include <QAction>
 #include <QDBusConnection>
@@ -309,7 +309,7 @@ bool AppMenuApplet::eventFilter(QObject *watched, QEvent *event)
     return false;
 }
 
-K_PLUGIN_CLASS(AppMenuApplet)
+K_PLUGIN_CLASS_WITH_JSON(AppMenuApplet, "metadata.json")
 
 #include "appmenuapplet.moc"
 #include "moc_appmenuapplet.cpp"
