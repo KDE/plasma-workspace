@@ -1,5 +1,4 @@
 {
-    "KPackageStructure": "Plasma/Applet",
     "KPlugin": {
         "Authors": [
             {
@@ -101,7 +100,6 @@
         "Description[zh_TW]": "顯示是否有任何相機正被應用程式使用",
         "EnabledByDefault": true,
         "Icon": "camera-on-symbolic",
-        "Id": "org.kde.plasma.cameraindicator",
         "License": "GPL-2.0+",
         "Name": "Camera Indicator",
         "Name[ar]": "مؤشر الكاميرا",
