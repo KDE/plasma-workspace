@@ -19,7 +19,7 @@ add_subdirectory(panelspacer)
 if(BUILD_CAMERAINDICATOR)
     add_subdirectory(cameraindicator)
 endif()
-plasma_install_package(clipboard org.kde.plasma.clipboard)
+add_subdirectory(clipboard)
 
 add_subdirectory(notifications)
 add_subdirectory(systemtray)

@@ -1,5 +1,4 @@
 {
-    "KPackageStructure": "Plasma/Applet",
     "KPlugin": {
         "Authors": [
             {
@@ -113,7 +112,6 @@
             "desktop"
         ],
         "Icon": "klipper",
-        "Id": "org.kde.plasma.clipboard",
         "License": "GPL-2.0+",
         "Name": "Clipboard",
         "Name[ar]": "الحافظة",
