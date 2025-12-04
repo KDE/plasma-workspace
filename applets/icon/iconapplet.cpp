@@ -595,7 +595,7 @@ void IconApplet::setLocalPath(const QString &localPath)
     }
 }
 
-K_PLUGIN_CLASS(IconApplet)
+K_PLUGIN_CLASS_WITH_JSON(IconApplet, "metadata.json")
 
 #include "iconapplet.moc"
 
