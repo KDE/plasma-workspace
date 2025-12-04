@@ -3,7 +3,12 @@
 
 add_executable(plasma-apply-lookandfeel lnftool.cpp)
 
-kconfig_add_kcfg_files(plasma-apply-lookandfeel ../lookandfeelsettings.kcfgc GENERATE_MOC)
+kconfig_target_kcfg_file(plasma-apply-lookandfeel
+    FILE ${CMAKE_CURRENT_SOURCE_DIR}/../lookandfeelsettings.kcfg
+    CLASS_NAME LookAndFeelSettings
+    MUTATORS
+    NOTIFIERS
+)
 
 target_link_libraries(plasma-apply-lookandfeel PRIVATE
     Qt::Widgets

@@ -22,7 +22,16 @@ kcmutils_generate_module_data(kcm_lookandfeel
     SETTINGS_CLASSES LookAndFeelSettings
 )
 
-kconfig_add_kcfg_files(kcm_lookandfeel lookandfeelsettings.kcfgc GENERATE_MOC)
+kconfig_target_kcfg_file(kcm_lookandfeel
+    FILE lookandfeelsettings.kcfg
+    CLASS_NAME LookAndFeelSettings
+    DEFAULT_VALUE_GETTERS
+    GENERATE_MOC
+    GENERATE_PROPERTIES
+    MUTATORS
+    NOTIFIERS
+    PARENT_IN_CONSTRUCTOR
+)
 
 install(FILES lookandfeelsettings.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
 install(FILES lookandfeel.knsrc DESTINATION ${KDE_INSTALL_KNSRCDIR})
