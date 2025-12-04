@@ -20,7 +20,7 @@ int CalendarApplet::weekNumber(const QDateTime &dateTime) const
     return dateTime.date().weekNumber();
 }
 
-K_PLUGIN_CLASS(CalendarApplet)
+K_PLUGIN_CLASS_WITH_JSON(CalendarApplet, "metadata.json")
 
 #include "calendarapplet.moc"
 

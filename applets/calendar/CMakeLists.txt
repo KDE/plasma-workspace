@@ -1,6 +1,16 @@
-kcoreaddons_add_plugin(org.kde.plasma.calendar SOURCES calendarapplet.cpp calendarapplet.h INSTALL_NAMESPACE "plasma/applets")
+# SPDX-FileCopyrightText: 2025 Tobias Fella <tobias.fella@kde.org>
+# SPDX-License-Identifier: BSD-3-Clause
 
-target_link_libraries(org.kde.plasma.calendar
-                      Plasma::Plasma)
+plasma_add_applet(org.kde.plasma.calendar
+    QML_SOURCES
+        qml/main.qml
+        qml/config.qml
+        qml/configGeneral.qml
+    CPP_SOURCES
+        calendarapplet.cpp
+    RESOURCES
+        main.xml
+        mini-calendar.svgz
+)
 
-plasma_install_package(package org.kde.plasma.calendar)
+target_link_libraries(org.kde.plasma.calendar PRIVATE Plasma::Plasma)

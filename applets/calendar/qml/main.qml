@@ -51,7 +51,7 @@ PlasmoidItem {
             width: Kirigami.Units.iconSizes.roundedIconSize(Math.min(parent.width, parent.height))
             height: width
 
-            imagePath: Qt.resolvedUrl("../images/mini-calendar.svgz")
+            imagePath: "qrc:/qt/qml/plasma/applet/org/kde/plasma/calendar/mini-calendar.svgz"
 
             PlasmaComponents3.Label {
                 id: monthLabel

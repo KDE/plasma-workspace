@@ -1,5 +1,4 @@
 {
-    "KPackageStructure": "Plasma/Applet",
     "KPlugin": {
         "Authors": [
             {
@@ -115,7 +114,6 @@
             "desktop"
         ],
         "Icon": "office-calendar",
-        "Id": "org.kde.plasma.calendar",
         "License": "GPL-2.0+",
         "Name": "Calendar",
         "Name[ar]": "التقويم",
