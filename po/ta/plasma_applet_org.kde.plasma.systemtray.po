@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-03 00:46+0000\n"
+"POT-Creation-Date: 2025-12-04 00:46+0000\n"
 "PO-Revision-Date: 2025-11-30 11:15+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -23,24 +23,30 @@ msgid "General"
 msgstr "பொதுவானவை"
 
 #: package/contents/ui/ConfigGeneral.qml:43
-#, kde-format
-msgid "Shown when relevant"
+#, fuzzy, kde-format
+#| msgid "Shown when relevant"
+msgctxt "@item:inlistbox Show this System Tray item when relevant"
+msgid "Show when relevant"
 msgstr "தேவைப்படும்போது காட்டு"
 
 #: package/contents/ui/ConfigGeneral.qml:47
-#, kde-format
-msgid "Always shown"
+#, fuzzy, kde-format
+#| msgid "Always shown"
+msgctxt "@item:inlistbox Always show this System Tray item"
+msgid "Always show"
 msgstr "எப்போதும் காட்டு"
 
 #: package/contents/ui/ConfigGeneral.qml:51
 #, kde-format
-msgid "Always hidden"
-msgstr "எப்போதும் மறை"
+msgctxt "@item:inlistbox Show this System Tray item only in the expanded popup"
+msgid "Show only in popup"
+msgstr ""
 
 #: package/contents/ui/ConfigGeneral.qml:55
 #, kde-format
-msgid "Disabled"
-msgstr "முடக்கு"
+msgctxt "@item:inlistbox Never show this System Tray item; disable it"
+msgid "Never show (disabled)"
+msgstr ""
 
 #: package/contents/ui/ConfigGeneral.qml:126
 #, kde-format
@@ -233,6 +239,12 @@ msgstr "%2 நெடுவரிசைகளில் %1 உருப்பட�
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
 msgstr "AILlmyjgGJPதொமுகீ"
+
+#~ msgid "Always hidden"
+#~ msgstr "எப்போதும் மறை"
+
+#~ msgid "Disabled"
+#~ msgstr "முடக்கு"
 
 #~ msgid "Small"
 #~ msgstr "சிறியது"

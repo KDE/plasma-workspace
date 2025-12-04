@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_users\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-03 00:46+0000\n"
-"PO-Revision-Date: 2025-07-17 19:33+0100\n"
+"PO-Revision-Date: 2025-12-04 01:07+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #: src/fingerprintmodel.cpp:144 src/fingerprintmodel.cpp:228
 #, kde-format
@@ -611,6 +611,9 @@ msgid ""
 "Cannot change your own username while logged in; log out and then log in as "
 "another user to change this account’s username."
 msgstr ""
+"No puede cambiar su propio nombre de usuario mientras esté conectado. Cierre "
+"la sesión y vuelva a iniciar sesión como otro usuario para cambiar el nombre "
+"de usuario de esta cuenta."
 
 #: src/ui/UserDetailsPage.qml:186
 #, kde-format
@@ -619,6 +622,8 @@ msgid ""
 "Cannot change the username of a logged-in user; wait until this user logs "
 "out first."
 msgstr ""
+"No puede cambiar el nombre de usuario de un usuario que haya iniciado "
+"sesión. Espere hasta que este usuario cierre la sesión primero."
 
 #: src/ui/UserDetailsPage.qml:214
 #, kde-format
@@ -658,6 +663,8 @@ msgid ""
 "Cannot delete yourself! Log out and then log in as another user to delete "
 "this user account."
 msgstr ""
+"No puede borrarse a sí mismo. Cierre la sesión e inicie sesión con otro "
+"usuario para borrar esta cuenta."
 
 #: src/ui/UserDetailsPage.qml:286
 #, kde-format

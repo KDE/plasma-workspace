@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminit\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-12-04 00:46+0000\n"
 "PO-Revision-Date: 2024-01-26 10:30+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -31,22 +31,22 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "yuval.aviel@gmail.com,kde-l10n-he@kde.org"
 
-#: main.cpp:169
+#: main.cpp:170
 #, kde-format
 msgid "KCMInit"
 msgstr "KCMInit"
 
-#: main.cpp:171
+#: main.cpp:172
 #, kde-format
 msgid "KCMInit - runs startup initialization for Control Modules."
 msgstr "KCMInit - מפעיל את מודולי הבקרה (Control Modules) באופן ראשוני."
 
-#: main.cpp:177
+#: main.cpp:178
 #, kde-format
 msgid "List modules that are run at startup"
 msgstr "מפרט מודולים שרצים עם ההפעלה"
 
-#: main.cpp:178
+#: main.cpp:179
 #, kde-format
 msgid "Configuration module to run"
 msgstr "מודול הגדרות להרצה"

@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-03 00:46+0000\n"
-"PO-Revision-Date: 2025-07-16 09:41+0200\n"
+"PO-Revision-Date: 2025-12-03 08:53+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 "X-Accelerator-Marker: &\n"
 
 #: src/fingerprintmodel.cpp:144 src/fingerprintmodel.cpp:228
@@ -629,6 +629,9 @@ msgid ""
 "Cannot change your own username while logged in; log out and then log in as "
 "another user to change this account’s username."
 msgstr ""
+"No es pot canviar el vostre nom d'usuari amb la sessió iniciada; tanqueu la "
+"sessió i després inicieu la sessió com un altre usuari per a canviar el nom "
+"d'usuari d'aquest compte."
 
 #: src/ui/UserDetailsPage.qml:186
 #, kde-format
@@ -637,6 +640,8 @@ msgid ""
 "Cannot change the username of a logged-in user; wait until this user logs "
 "out first."
 msgstr ""
+"No es pot canviar el nom d'usuari d'un usuari amb la sessió iniciada; abans "
+"espereu fins que aquest usuari surti de la sessió."
 
 #: src/ui/UserDetailsPage.qml:214
 #, kde-format
@@ -676,6 +681,8 @@ msgid ""
 "Cannot delete yourself! Log out and then log in as another user to delete "
 "this user account."
 msgstr ""
+"No us podeu esborrar! Tanqueu la sessió i després inicieu la sessió amb un "
+"altre usuari per a suprimir aquest compte d'usuari."
 
 #: src/ui/UserDetailsPage.qml:286
 #, kde-format

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-28 00:44+0000\n"
+"POT-Creation-Date: 2025-12-04 00:46+0000\n"
 "PO-Revision-Date: 2021-01-05 19:56+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -127,12 +127,12 @@ msgstr ""
 msgid "Keep Open"
 msgstr ""
 
-#: qml/RunCommand.qml:369 qml/RunCommand.qml:374
+#: qml/RunCommand.qml:372 qml/RunCommand.qml:378
 #, kde-format
 msgid "Recent Queries"
 msgstr ""
 
-#: qml/RunCommand.qml:372
+#: qml/RunCommand.qml:376
 #, kde-format
 msgid "Remove"
 msgstr ""

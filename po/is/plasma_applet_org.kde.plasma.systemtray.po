@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-03 00:46+0000\n"
+"POT-Creation-Date: 2025-12-04 00:46+0000\n"
 "PO-Revision-Date: 2025-11-30 12:07+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -24,24 +24,30 @@ msgid "General"
 msgstr "Almennt"
 
 #: package/contents/ui/ConfigGeneral.qml:43
-#, kde-format
-msgid "Shown when relevant"
+#, fuzzy, kde-format
+#| msgid "Shown when relevant"
+msgctxt "@item:inlistbox Show this System Tray item when relevant"
+msgid "Show when relevant"
 msgstr "Sýnt þegar við á"
 
 #: package/contents/ui/ConfigGeneral.qml:47
-#, kde-format
-msgid "Always shown"
+#, fuzzy, kde-format
+#| msgid "Always shown"
+msgctxt "@item:inlistbox Always show this System Tray item"
+msgid "Always show"
 msgstr "Alltaf sýnt"
 
 #: package/contents/ui/ConfigGeneral.qml:51
 #, kde-format
-msgid "Always hidden"
-msgstr "Alltaf falið"
+msgctxt "@item:inlistbox Show this System Tray item only in the expanded popup"
+msgid "Show only in popup"
+msgstr ""
 
 #: package/contents/ui/ConfigGeneral.qml:55
 #, kde-format
-msgid "Disabled"
-msgstr "Óvirkt"
+msgctxt "@item:inlistbox Never show this System Tray item; disable it"
+msgid "Never show (disabled)"
+msgstr ""
 
 #: package/contents/ui/ConfigGeneral.qml:126
 #, kde-format
@@ -236,6 +242,12 @@ msgstr "Reitir með %1 hlutum í %2 dálkum"
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
 msgstr "AILlmyjgGJP"
+
+#~ msgid "Always hidden"
+#~ msgstr "Alltaf falið"
+
+#~ msgid "Disabled"
+#~ msgstr "Óvirkt"
 
 #~ msgid "Small"
 #~ msgstr "Lítil"

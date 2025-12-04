@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminit\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-12-04 00:46+0000\n"
 "PO-Revision-Date: 2024-01-16 15:05+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -31,22 +31,22 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "maris.kde@gmail.com, toms.trasuns@posteo.net"
 
-#: main.cpp:169
+#: main.cpp:170
 #, kde-format
 msgid "KCMInit"
 msgstr "KCMInit"
 
-#: main.cpp:171
+#: main.cpp:172
 #, kde-format
 msgid "KCMInit - runs startup initialization for Control Modules."
 msgstr "„KCMInit“ darbina kontroles moduļu palaišanas inicializāciju."
 
-#: main.cpp:177
+#: main.cpp:178
 #, kde-format
 msgid "List modules that are run at startup"
 msgstr "Parādīt moduļus, kas tiek palaisti pie startēšanas"
 
-#: main.cpp:178
+#: main.cpp:179
 #, kde-format
 msgid "Configuration module to run"
 msgstr "Darbināmais konfigurācijas modulis"

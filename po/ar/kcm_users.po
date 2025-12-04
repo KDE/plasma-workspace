@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-03 00:46+0000\n"
-"PO-Revision-Date: 2025-08-20 19:56+0400\n"
+"PO-Revision-Date: 2025-12-03 16:40+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -587,6 +587,8 @@ msgid ""
 "Cannot change your own username while logged in; log out and then log in as "
 "another user to change this account’s username."
 msgstr ""
+"لا يمكنك تغيير اسم المستخدم عند ولوجك في النظام بذاك الاسم، اخرج ثم لج "
+"كمستخدم آخر لتغيير اسم مستخدم هذا الحساب."
 
 #: src/ui/UserDetailsPage.qml:186
 #, kde-format
@@ -595,6 +597,8 @@ msgid ""
 "Cannot change the username of a logged-in user; wait until this user logs "
 "out first."
 msgstr ""
+"لا يمكن تغيير اسم المستخدم لمستخدم ولج في النظام؛ انتظر حتى يقوم هذا "
+"المستخدم بالخروج أولاً."
 
 #: src/ui/UserDetailsPage.qml:214
 #, kde-format
@@ -633,7 +637,7 @@ msgctxt "@label:tooltip"
 msgid ""
 "Cannot delete yourself! Log out and then log in as another user to delete "
 "this user account."
-msgstr ""
+msgstr "لا يمكنك حذف نفسك! اخرج ثم لج كمستخدم آخر لحذف اسم مستخدم هذا الحساب."
 
 #: src/ui/UserDetailsPage.qml:286
 #, kde-format

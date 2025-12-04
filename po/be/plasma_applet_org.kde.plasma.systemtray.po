@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-03 00:46+0000\n"
+"POT-Creation-Date: 2025-12-04 00:46+0000\n"
 "PO-Revision-Date: 2024-11-06 22:00\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -28,24 +28,30 @@ msgid "General"
 msgstr "Асноўныя"
 
 #: package/contents/ui/ConfigGeneral.qml:43
-#, kde-format
-msgid "Shown when relevant"
+#, fuzzy, kde-format
+#| msgid "Shown when relevant"
+msgctxt "@item:inlistbox Show this System Tray item when relevant"
+msgid "Show when relevant"
 msgstr "Паказваецца пры неабходнасці"
 
 #: package/contents/ui/ConfigGeneral.qml:47
-#, kde-format
-msgid "Always shown"
+#, fuzzy, kde-format
+#| msgid "Always shown"
+msgctxt "@item:inlistbox Always show this System Tray item"
+msgid "Always show"
 msgstr "Паказваецца заўсёды"
 
 #: package/contents/ui/ConfigGeneral.qml:51
 #, kde-format
-msgid "Always hidden"
-msgstr "Заўсёды схавана"
+msgctxt "@item:inlistbox Show this System Tray item only in the expanded popup"
+msgid "Show only in popup"
+msgstr ""
 
 #: package/contents/ui/ConfigGeneral.qml:55
 #, kde-format
-msgid "Disabled"
-msgstr "Адключана"
+msgctxt "@item:inlistbox Never show this System Tray item; disable it"
+msgid "Never show (disabled)"
+msgstr ""
 
 #: package/contents/ui/ConfigGeneral.qml:126
 #, kde-format
@@ -230,6 +236,12 @@ msgstr ""
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
 msgstr "AILlmyjgGJP"
+
+#~ msgid "Always hidden"
+#~ msgstr "Заўсёды схавана"
+
+#~ msgid "Disabled"
+#~ msgstr "Адключана"
 
 #~ msgid "Small"
 #~ msgstr "Маленькія"

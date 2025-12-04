@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-03 00:46+0000\n"
+"POT-Creation-Date: 2025-12-04 00:46+0000\n"
 "PO-Revision-Date: 2023-01-06 14:58+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -26,24 +26,30 @@ msgid "General"
 msgstr "Obecné"
 
 #: package/contents/ui/ConfigGeneral.qml:43
-#, kde-format
-msgid "Shown when relevant"
+#, fuzzy, kde-format
+#| msgid "Shown when relevant"
+msgctxt "@item:inlistbox Show this System Tray item when relevant"
+msgid "Show when relevant"
 msgstr "Zobrazit pokud relevantní"
 
 #: package/contents/ui/ConfigGeneral.qml:47
-#, kde-format
-msgid "Always shown"
+#, fuzzy, kde-format
+#| msgid "Always shown"
+msgctxt "@item:inlistbox Always show this System Tray item"
+msgid "Always show"
 msgstr "Vždy zobrazovat"
 
 #: package/contents/ui/ConfigGeneral.qml:51
 #, kde-format
-msgid "Always hidden"
-msgstr "Vždy skrytý"
+msgctxt "@item:inlistbox Show this System Tray item only in the expanded popup"
+msgid "Show only in popup"
+msgstr ""
 
 #: package/contents/ui/ConfigGeneral.qml:55
 #, kde-format
-msgid "Disabled"
-msgstr "Zakázáno"
+msgctxt "@item:inlistbox Never show this System Tray item; disable it"
+msgid "Never show (disabled)"
+msgstr ""
 
 #: package/contents/ui/ConfigGeneral.qml:126
 #, kde-format
@@ -228,6 +234,12 @@ msgstr ""
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
 msgstr ""
+
+#~ msgid "Always hidden"
+#~ msgstr "Vždy skrytý"
+
+#~ msgid "Disabled"
+#~ msgstr "Zakázáno"
 
 #~ msgid "Small"
 #~ msgstr "Malý"

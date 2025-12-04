@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-28 00:44+0000\n"
+"POT-Creation-Date: 2025-12-04 00:46+0000\n"
 "PO-Revision-Date: 2023-08-26 18:49+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -132,12 +132,12 @@ msgstr "Kiinnitä haku"
 msgid "Keep Open"
 msgstr "Pidä avoinna"
 
-#: qml/RunCommand.qml:369 qml/RunCommand.qml:374
+#: qml/RunCommand.qml:372 qml/RunCommand.qml:378
 #, kde-format
 msgid "Recent Queries"
 msgstr "Viimeisimmät haut"
 
-#: qml/RunCommand.qml:372
+#: qml/RunCommand.qml:376
 #, kde-format
 msgid "Remove"
 msgstr "Poista"

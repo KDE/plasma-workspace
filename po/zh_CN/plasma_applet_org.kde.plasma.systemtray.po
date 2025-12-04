@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-03 00:46+0000\n"
+"POT-Creation-Date: 2025-12-04 00:46+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -24,24 +24,30 @@ msgid "General"
 msgstr "常规"
 
 #: package/contents/ui/ConfigGeneral.qml:43
-#, kde-format
-msgid "Shown when relevant"
+#, fuzzy, kde-format
+#| msgid "Shown when relevant"
+msgctxt "@item:inlistbox Show this System Tray item when relevant"
+msgid "Show when relevant"
 msgstr "有作用时显示"
 
 #: package/contents/ui/ConfigGeneral.qml:47
-#, kde-format
-msgid "Always shown"
+#, fuzzy, kde-format
+#| msgid "Always shown"
+msgctxt "@item:inlistbox Always show this System Tray item"
+msgid "Always show"
 msgstr "总是显示"
 
 #: package/contents/ui/ConfigGeneral.qml:51
 #, kde-format
-msgid "Always hidden"
-msgstr "总是隐藏"
+msgctxt "@item:inlistbox Show this System Tray item only in the expanded popup"
+msgid "Show only in popup"
+msgstr ""
 
 #: package/contents/ui/ConfigGeneral.qml:55
 #, kde-format
-msgid "Disabled"
-msgstr "已禁用"
+msgctxt "@item:inlistbox Never show this System Tray item; disable it"
+msgid "Never show (disabled)"
+msgstr ""
 
 #: package/contents/ui/ConfigGeneral.qml:126
 #, kde-format
@@ -90,13 +96,7 @@ msgid "I understand the risks"
 msgstr "我明白上述风险"
 
 #: package/contents/ui/ConfigGeneral.qml:187
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:usagetip"
-#| msgid ""
-#| "Disabling the clipboard is not recommended, as it will cause copied data "
-#| "to be lost when the application it was copied from is closed.<nl/><nl/"
-#| ">Instead consider configuring the clipboard to disable its history, or "
-#| "only remember one item at a time."
+#, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
 "Disabling the clipboard is not recommended, as it will cause copied data to "
@@ -106,8 +106,6 @@ msgid ""
 "configuring the clipboard to not save history, or to only remember one item "
 "at a time."
 msgstr ""
-"不建议禁用剪贴板，因为这会导致应用程序关闭时丢失已复制的数据。<nl/><nl/>您可"
-"以考虑禁用剪贴板历史记录，或设置为仅记忆一条内容。"
 
 #: package/contents/ui/ConfigGeneral.qml:196
 #, kde-kuit-format
@@ -232,3 +230,9 @@ msgstr "在 %2 列中显示 %1 个项目的网格"
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
 msgstr "AILlmyjgGJP"
+
+#~ msgid "Always hidden"
+#~ msgstr "总是隐藏"
+
+#~ msgid "Disabled"
+#~ msgstr "已禁用"

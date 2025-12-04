@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-03 00:46+0000\n"
+"POT-Creation-Date: 2025-12-04 00:46+0000\n"
 "PO-Revision-Date: 2025-09-15 09:52-0500\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -24,24 +24,30 @@ msgid "General"
 msgstr "ਆਮ"
 
 #: package/contents/ui/ConfigGeneral.qml:43
-#, kde-format
-msgid "Shown when relevant"
+#, fuzzy, kde-format
+#| msgid "Shown when relevant"
+msgctxt "@item:inlistbox Show this System Tray item when relevant"
+msgid "Show when relevant"
 msgstr "ਜਦੋਂ ਢੁੱਕਵਾਂ ਹੋਵੇ ਉਦੋਂ ਵਿਖਾਇਆ ਜਾਂਦਾ ਹੈ"
 
 #: package/contents/ui/ConfigGeneral.qml:47
-#, kde-format
-msgid "Always shown"
+#, fuzzy, kde-format
+#| msgid "Always shown"
+msgctxt "@item:inlistbox Always show this System Tray item"
+msgid "Always show"
 msgstr "ਹਮੇਸ਼ਾਂ ਵੇਖਾਇਆ ਜਾਂਦਾ ਹੈ"
 
 #: package/contents/ui/ConfigGeneral.qml:51
 #, kde-format
-msgid "Always hidden"
-msgstr "ਹਮੇਸ਼ਾਂ ਓਹਲੇ"
+msgctxt "@item:inlistbox Show this System Tray item only in the expanded popup"
+msgid "Show only in popup"
+msgstr ""
 
 #: package/contents/ui/ConfigGeneral.qml:55
 #, kde-format
-msgid "Disabled"
-msgstr "ਬੰਦ ਹੈ"
+msgctxt "@item:inlistbox Never show this System Tray item; disable it"
+msgid "Never show (disabled)"
+msgstr ""
 
 #: package/contents/ui/ConfigGeneral.qml:126
 #, kde-format
@@ -226,6 +232,12 @@ msgstr "%1 ਚੀਜ਼ਾਂ ਨੂੰ %2 ਕਾਲਮਾਂ ਵਿੱਚ ਗਰ�
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
 msgstr ""
+
+#~ msgid "Always hidden"
+#~ msgstr "ਹਮੇਸ਼ਾਂ ਓਹਲੇ"
+
+#~ msgid "Disabled"
+#~ msgstr "ਬੰਦ ਹੈ"
 
 #~ msgid "Small"
 #~ msgstr "ਛੋਟਾ"

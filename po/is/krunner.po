@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-28 00:44+0000\n"
+"POT-Creation-Date: 2025-12-04 00:46+0000\n"
 "PO-Revision-Date: 2023-09-09 09:56+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -125,12 +125,12 @@ msgstr "PIN-númeraleit"
 msgid "Keep Open"
 msgstr "Halda opnu"
 
-#: qml/RunCommand.qml:369 qml/RunCommand.qml:374
+#: qml/RunCommand.qml:372 qml/RunCommand.qml:378
 #, kde-format
 msgid "Recent Queries"
 msgstr "Nýlegar fyrirspurnir"
 
-#: qml/RunCommand.qml:372
+#: qml/RunCommand.qml:376
 #, kde-format
 msgid "Remove"
 msgstr "Fjarlægja"

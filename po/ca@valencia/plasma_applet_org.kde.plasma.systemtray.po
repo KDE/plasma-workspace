@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-03 00:46+0000\n"
-"PO-Revision-Date: 2025-11-21 09:03+0100\n"
+"POT-Creation-Date: 2025-12-04 00:46+0000\n"
+"PO-Revision-Date: 2025-12-03 08:50+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -28,24 +28,30 @@ msgid "General"
 msgstr "General"
 
 #: package/contents/ui/ConfigGeneral.qml:43
-#, kde-format
-msgid "Shown when relevant"
+#, fuzzy, kde-format
+#| msgid "Shown when relevant"
+msgctxt "@item:inlistbox Show this System Tray item when relevant"
+msgid "Show when relevant"
 msgstr "Mostra quan siga rellevant"
 
 #: package/contents/ui/ConfigGeneral.qml:47
-#, kde-format
-msgid "Always shown"
+#, fuzzy, kde-format
+#| msgid "Always shown"
+msgctxt "@item:inlistbox Always show this System Tray item"
+msgid "Always show"
 msgstr "Mostra sempre"
 
 #: package/contents/ui/ConfigGeneral.qml:51
 #, kde-format
-msgid "Always hidden"
-msgstr "Sempre ocult"
+msgctxt "@item:inlistbox Show this System Tray item only in the expanded popup"
+msgid "Show only in popup"
+msgstr ""
 
 #: package/contents/ui/ConfigGeneral.qml:55
 #, kde-format
-msgid "Disabled"
-msgstr "Desactivat"
+msgctxt "@item:inlistbox Never show this System Tray item; disable it"
+msgid "Never show (disabled)"
+msgstr ""
 
 #: package/contents/ui/ConfigGeneral.qml:126
 #, kde-format
@@ -96,13 +102,7 @@ msgid "I understand the risks"
 msgstr "Entenc els riscos"
 
 #: package/contents/ui/ConfigGeneral.qml:187
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:usagetip"
-#| msgid ""
-#| "Disabling the clipboard is not recommended, as it will cause copied data "
-#| "to be lost when the application it was copied from is closed.<nl/><nl/"
-#| ">Instead consider configuring the clipboard to disable its history, or "
-#| "only remember one item at a time."
+#, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
 "Disabling the clipboard is not recommended, as it will cause copied data to "
@@ -114,8 +114,10 @@ msgid ""
 msgstr ""
 "No es recomana desactivar el porta-retalls, ja que farà que les dades "
 "copiades es perden quan es tanque l'aplicació de la qual s'han copiat.<nl/"
-"><nl/>En lloc d'açò, considereu configurar el porta-retalls per a desactivar "
-"el seu historial o recordar només un element alhora."
+"><nl/>Feu açò només si heu afegit manualment un giny de porta-retalls "
+"autònom d'una altra banda, o esteu utilitzant un gestor de porta-retalls de "
+"tercers. En lloc d'açò, considereu configurar el porta-retalls per a "
+"desactivar el seu historial o recordar només un element alhora."
 
 #: package/contents/ui/ConfigGeneral.qml:196
 #, kde-kuit-format
@@ -126,6 +128,11 @@ msgid ""
 "added a standalone Notifications widget somewhere else, or are intentionally "
 "using a 3rd-party notification manager to handle notifications."
 msgstr ""
+"No es recomana desactivar el giny de notificacions, ja que les notificacions "
+"enviades per les aplicacions ja no es mostraran.<nl/><nl/>Feu açò només si "
+"heu afegit manualment un giny de notificacions autònom d'una altra banda, o "
+"esteu utilitzant intencionadament un gestor de notificacions de tercers per "
+"a gestionar les notificacions."
 
 #: package/contents/ui/ConfigGeneral.qml:208
 #, kde-format
@@ -241,3 +248,9 @@ msgstr "Quadrícula amb %1 elements en %2 columnes"
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
 msgstr "AILlmyjgGJP"
+
+#~ msgid "Always hidden"
+#~ msgstr "Sempre ocult"
+
+#~ msgid "Disabled"
+#~ msgstr "Desactivat"

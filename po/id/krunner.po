@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-28 00:44+0000\n"
+"POT-Creation-Date: 2025-12-04 00:46+0000\n"
 "PO-Revision-Date: 2024-10-02 18:11+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -125,12 +125,12 @@ msgstr "Sematkan Pencarian"
 msgid "Keep Open"
 msgstr "Tetap Buka"
 
-#: qml/RunCommand.qml:369 qml/RunCommand.qml:374
+#: qml/RunCommand.qml:372 qml/RunCommand.qml:378
 #, kde-format
 msgid "Recent Queries"
 msgstr "Query Baru-Baru Ini"
 
-#: qml/RunCommand.qml:372
+#: qml/RunCommand.qml:376
 #, kde-format
 msgid "Remove"
 msgstr "Hapus"

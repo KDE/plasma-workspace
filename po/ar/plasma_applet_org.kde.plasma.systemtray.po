@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-03 00:46+0000\n"
-"PO-Revision-Date: 2025-11-26 10:41+0400\n"
+"POT-Creation-Date: 2025-12-04 00:46+0000\n"
+"PO-Revision-Date: 2025-12-03 16:42+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -25,24 +25,30 @@ msgid "General"
 msgstr "عامّ"
 
 #: package/contents/ui/ConfigGeneral.qml:43
-#, kde-format
-msgid "Shown when relevant"
+#, fuzzy, kde-format
+#| msgid "Shown when relevant"
+msgctxt "@item:inlistbox Show this System Tray item when relevant"
+msgid "Show when relevant"
 msgstr "تظهر عند الاحتياج"
 
 #: package/contents/ui/ConfigGeneral.qml:47
-#, kde-format
-msgid "Always shown"
+#, fuzzy, kde-format
+#| msgid "Always shown"
+msgctxt "@item:inlistbox Always show this System Tray item"
+msgid "Always show"
 msgstr "دائما ظاهرة"
 
 #: package/contents/ui/ConfigGeneral.qml:51
 #, kde-format
-msgid "Always hidden"
-msgstr "دائما مخفية"
+msgctxt "@item:inlistbox Show this System Tray item only in the expanded popup"
+msgid "Show only in popup"
+msgstr ""
 
 #: package/contents/ui/ConfigGeneral.qml:55
 #, kde-format
-msgid "Disabled"
-msgstr "معطلة"
+msgctxt "@item:inlistbox Never show this System Tray item; disable it"
+msgid "Never show (disabled)"
+msgstr ""
 
 #: package/contents/ui/ConfigGeneral.qml:126
 #, kde-format
@@ -91,13 +97,7 @@ msgid "I understand the risks"
 msgstr "أنا أفهم هذه المخاطر"
 
 #: package/contents/ui/ConfigGeneral.qml:187
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:usagetip"
-#| msgid ""
-#| "Disabling the clipboard is not recommended, as it will cause copied data "
-#| "to be lost when the application it was copied from is closed.<nl/><nl/"
-#| ">Instead consider configuring the clipboard to disable its history, or "
-#| "only remember one item at a time."
+#, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
 "Disabling the clipboard is not recommended, as it will cause copied data to "
@@ -108,8 +108,10 @@ msgid ""
 "at a time."
 msgstr ""
 "لا يُنصح بتعطيل الحافظة، إذ سيؤدي ذلك إلى فقدان البيانات المنسوخة عند إغلاق "
-"التطبيق الذي نُسخت منه.<nl/><nl/>بدلاً من ذلك، فكّر في ضبط الحافظة لتعطيل "
-"سجلّها، أو تذكر عنصر واحد فقط في كل مرة."
+"التطبيق الذي نُسخت منه.<nl/><nl/>لا تقم بذلك إلا إذا كنت قد أضفت يدويًا أداة "
+"الحافظة المستقلة في مكان آخر، أو إذا كنت تستخدم مدير حافظة تابع لجهة خارجية. "
+"بدلاً من ذلك، فكر في ضبط الحافظة بحيث لا تحفظ السجل، أو بحيث تتذكر عنصرًا "
+"واحدًا فقط في كل مرة."
 
 #: package/contents/ui/ConfigGeneral.qml:196
 #, kde-kuit-format
@@ -120,6 +122,10 @@ msgid ""
 "added a standalone Notifications widget somewhere else, or are intentionally "
 "using a 3rd-party notification manager to handle notifications."
 msgstr ""
+"لا يُنصح بتعطيل أداة الإشعارات، لأن الإشعارات المرسلة من التطبيقات لن تظهر "
+"بعد ذلك.<nl/><nl/>لا تقم بذلك إلا إذا كنت قد أضفت يدويًا أداة إشعارات مستقلة "
+"في مكان آخر، أو كنت تستخدم عن قصد مدير إشعارات تابع لجهة خارجية للتعامل مع "
+"الإشعارات."
 
 #: package/contents/ui/ConfigGeneral.qml:208
 #, kde-format
@@ -234,6 +240,12 @@ msgstr "شبكة بـ %1 عناصر و  %2 عمود"
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
 msgstr "أك‌م‌ص‌ع‌ق‌ي"
+
+#~ msgid "Always hidden"
+#~ msgstr "دائما مخفية"
+
+#~ msgid "Disabled"
+#~ msgstr "معطلة"
 
 #~ msgid "Small"
 #~ msgstr "صغير"

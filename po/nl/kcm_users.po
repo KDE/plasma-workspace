@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-03 00:46+0000\n"
-"PO-Revision-Date: 2025-07-16 13:56+0200\n"
+"PO-Revision-Date: 2025-12-03 11:43+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.3\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #: src/fingerprintmodel.cpp:144 src/fingerprintmodel.cpp:228
 #, kde-format
@@ -591,6 +591,9 @@ msgid ""
 "Cannot change your own username while logged in; log out and then log in as "
 "another user to change this account’s username."
 msgstr ""
+"Kan uw eigen gebruikersnaam niet wijzigen wanneer u bent aangemeld; meld u "
+"af en meld u aan als een andere gebruiker om deze gebruikersnaam va het "
+"account te wijzigen."
 
 #: src/ui/UserDetailsPage.qml:186
 #, kde-format
@@ -599,6 +602,8 @@ msgid ""
 "Cannot change the username of a logged-in user; wait until this user logs "
 "out first."
 msgstr ""
+"Kan de gebruikersnaam van een aangemelde gebruiker niet wijzigen; wacht "
+"totdat deze gebruiker zich eerst afmeldt."
 
 #: src/ui/UserDetailsPage.qml:214
 #, kde-format
@@ -639,6 +644,8 @@ msgid ""
 "Cannot delete yourself! Log out and then log in as another user to delete "
 "this user account."
 msgstr ""
+"Uzelf verwijderen kan niet! meld u af en meld u daarna aan als een andere "
+"gebruiker om dit gebruikersaccount te verwijderen."
 
 #: src/ui/UserDetailsPage.qml:286
 #, kde-format

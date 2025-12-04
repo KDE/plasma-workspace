@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-03 00:46+0000\n"
-"PO-Revision-Date: 2025-11-21 12:53+0200\n"
+"POT-Creation-Date: 2025-12-04 00:46+0000\n"
+"PO-Revision-Date: 2025-12-03 09:21+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -24,24 +24,30 @@ msgid "General"
 msgstr "כללי"
 
 #: package/contents/ui/ConfigGeneral.qml:43
-#, kde-format
-msgid "Shown when relevant"
+#, fuzzy, kde-format
+#| msgid "Shown when relevant"
+msgctxt "@item:inlistbox Show this System Tray item when relevant"
+msgid "Show when relevant"
 msgstr "מופיע כשצריך"
 
 #: package/contents/ui/ConfigGeneral.qml:47
-#, kde-format
-msgid "Always shown"
+#, fuzzy, kde-format
+#| msgid "Always shown"
+msgctxt "@item:inlistbox Always show this System Tray item"
+msgid "Always show"
 msgstr "מופיע תמיד"
 
 #: package/contents/ui/ConfigGeneral.qml:51
 #, kde-format
-msgid "Always hidden"
-msgstr "מוסתר תמיד"
+msgctxt "@item:inlistbox Show this System Tray item only in the expanded popup"
+msgid "Show only in popup"
+msgstr ""
 
 #: package/contents/ui/ConfigGeneral.qml:55
 #, kde-format
-msgid "Disabled"
-msgstr "מושבת"
+msgctxt "@item:inlistbox Never show this System Tray item; disable it"
+msgid "Never show (disabled)"
+msgstr ""
 
 #: package/contents/ui/ConfigGeneral.qml:126
 #, kde-format
@@ -91,13 +97,7 @@ msgid "I understand the risks"
 msgstr "הסכנות ברורות לי"
 
 #: package/contents/ui/ConfigGeneral.qml:187
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:usagetip"
-#| msgid ""
-#| "Disabling the clipboard is not recommended, as it will cause copied data "
-#| "to be lost when the application it was copied from is closed.<nl/><nl/"
-#| ">Instead consider configuring the clipboard to disable its history, or "
-#| "only remember one item at a time."
+#, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
 "Disabling the clipboard is not recommended, as it will cause copied data to "
@@ -108,8 +108,10 @@ msgid ""
 "at a time."
 msgstr ""
 "השבתת לוח הגזירים אינה מומלצת כיוון שתגרום לאיבוד הנתונים שהועתקו כאשר "
-"היישום שההעתקה בוצעה ממנו נסגר.<nl/><nl/>במקום, כדאי לשקול להגדיר להשבת את "
-"היסטוריית לוח הגזירים או רק לזכור פריט אחד בכל עת."
+"היישום שההעתקה בוצעה ממנו נסגר.<nl/><nl/>יש לעשות זאת רק עם הגדרת ידנית "
+"וידג׳ט לוח כזירים במקום אחר או שיש לך מנהל לוח גזירים מגורם צד־שלישי. במקום, "
+"כדאי לשקול להגדיר את לוח הגזירים כך שלא ישמור היסטוריה או שיזכור רק פריט אחד "
+"כל פעם."
 
 #: package/contents/ui/ConfigGeneral.qml:196
 #, kde-kuit-format
@@ -120,6 +122,9 @@ msgid ""
 "added a standalone Notifications widget somewhere else, or are intentionally "
 "using a 3rd-party notification manager to handle notifications."
 msgstr ""
+"השבתת וידג׳ט ההתראות לא מומלצת, כיוון שהתראות שנשלחות על ידי יישומים לא "
+"תופענה עוד.<nl/><nl/>עדיף לא לעשות את זה אלא אם הגדרת וידג׳ט התראות עצמאי "
+"במקום אחר כלשהו, או שבחרת להשתמש במנהל התראות מגורם צד־שלישי לטיפול בהתראות."
 
 #: package/contents/ui/ConfigGeneral.qml:208
 #, kde-format
@@ -234,6 +239,12 @@ msgstr "רשת עם %1 פריטים ב־%2 עמודות"
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
 msgstr "לקץןךףאגם"
+
+#~ msgid "Always hidden"
+#~ msgstr "מוסתר תמיד"
+
+#~ msgid "Disabled"
+#~ msgstr "מושבת"
 
 #~ msgid "Small"
 #~ msgstr "קטן"

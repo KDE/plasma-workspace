@@ -12,8 +12,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-03 00:46+0000\n"
-"PO-Revision-Date: 2025-11-21 09:25-0300\n"
+"POT-Creation-Date: 2025-12-04 00:46+0000\n"
+"PO-Revision-Date: 2025-12-03 08:29-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -29,24 +29,30 @@ msgid "General"
 msgstr "Geral"
 
 #: package/contents/ui/ConfigGeneral.qml:43
-#, kde-format
-msgid "Shown when relevant"
+#, fuzzy, kde-format
+#| msgid "Shown when relevant"
+msgctxt "@item:inlistbox Show this System Tray item when relevant"
+msgid "Show when relevant"
 msgstr "Visível quando relevante"
 
 #: package/contents/ui/ConfigGeneral.qml:47
-#, kde-format
-msgid "Always shown"
+#, fuzzy, kde-format
+#| msgid "Always shown"
+msgctxt "@item:inlistbox Always show this System Tray item"
+msgid "Always show"
 msgstr "Sempre visível"
 
 #: package/contents/ui/ConfigGeneral.qml:51
 #, kde-format
-msgid "Always hidden"
-msgstr "Sempre oculto"
+msgctxt "@item:inlistbox Show this System Tray item only in the expanded popup"
+msgid "Show only in popup"
+msgstr ""
 
 #: package/contents/ui/ConfigGeneral.qml:55
 #, kde-format
-msgid "Disabled"
-msgstr "Desativado"
+msgctxt "@item:inlistbox Never show this System Tray item; disable it"
+msgid "Never show (disabled)"
+msgstr ""
 
 #: package/contents/ui/ConfigGeneral.qml:126
 #, kde-format
@@ -97,13 +103,7 @@ msgid "I understand the risks"
 msgstr "Eu entendo os riscos"
 
 #: package/contents/ui/ConfigGeneral.qml:187
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:usagetip"
-#| msgid ""
-#| "Disabling the clipboard is not recommended, as it will cause copied data "
-#| "to be lost when the application it was copied from is closed.<nl/><nl/"
-#| ">Instead consider configuring the clipboard to disable its history, or "
-#| "only remember one item at a time."
+#, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
 "Disabling the clipboard is not recommended, as it will cause copied data to "
@@ -114,9 +114,12 @@ msgid ""
 "at a time."
 msgstr ""
 "Desativar a área de transferência não é recomendado pois pode causar a perda "
-"de dados copiados ao sair do aplicativo de onde se fez a cópia.<nl/><nl/>Ao "
-"invés disso, considere desativar o histórico da área de transferência, ou "
-"selecione a opção para lembrar de apenas um item por vez."
+"de dados copiados ao sair do aplicativo de onde se fez a cópia.<nl/><nl/"
+">Faça isso somente se você adicionou manualmente um widget de área de "
+"transferência independente em outro lugar, ou se estiver usando um "
+"gerenciador de área de transferência de terceiros.Ao invés disso, considere "
+"desativar o histórico da área de transferência, ou selecione a opção para "
+"lembrar de apenas um item por vez."
 
 #: package/contents/ui/ConfigGeneral.qml:196
 #, kde-kuit-format
@@ -127,6 +130,11 @@ msgid ""
 "added a standalone Notifications widget somewhere else, or are intentionally "
 "using a 3rd-party notification manager to handle notifications."
 msgstr ""
+"Desativar o widget de notificações não é recomendado, pois as notificações "
+"enviadas pelos aplicativos não serão mais exibidas.<nl/><nl/>Faça isso "
+"somente se você adicionou manualmente um widget de notificações independente "
+"em outro lugar ou se estiver usando intencionalmente um gerenciador de "
+"notificações de terceiros para lidar com as notificações."
 
 #: package/contents/ui/ConfigGeneral.qml:208
 #, kde-format
@@ -241,6 +249,12 @@ msgstr "Grade com %1 itens em %2 colunas"
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
 msgstr "AILlmyjgGJP"
+
+#~ msgid "Always hidden"
+#~ msgstr "Sempre oculto"
+
+#~ msgid "Disabled"
+#~ msgstr "Desativado"
 
 #~ msgid "Small"
 #~ msgstr "Pequeno"

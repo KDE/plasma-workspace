@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-03 00:46+0000\n"
-"PO-Revision-Date: 2025-11-21 07:04+0100\n"
+"POT-Creation-Date: 2025-12-04 00:46+0000\n"
+"PO-Revision-Date: 2025-12-03 07:06+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -24,24 +24,30 @@ msgid "General"
 msgstr "Splošno"
 
 #: package/contents/ui/ConfigGeneral.qml:43
-#, kde-format
-msgid "Shown when relevant"
+#, fuzzy, kde-format
+#| msgid "Shown when relevant"
+msgctxt "@item:inlistbox Show this System Tray item when relevant"
+msgid "Show when relevant"
 msgstr "Prikazano, ko je ustrezno"
 
 #: package/contents/ui/ConfigGeneral.qml:47
-#, kde-format
-msgid "Always shown"
+#, fuzzy, kde-format
+#| msgid "Always shown"
+msgctxt "@item:inlistbox Always show this System Tray item"
+msgid "Always show"
 msgstr "Vedno prikazano"
 
 #: package/contents/ui/ConfigGeneral.qml:51
 #, kde-format
-msgid "Always hidden"
-msgstr "Vedno skrito"
+msgctxt "@item:inlistbox Show this System Tray item only in the expanded popup"
+msgid "Show only in popup"
+msgstr ""
 
 #: package/contents/ui/ConfigGeneral.qml:55
 #, kde-format
-msgid "Disabled"
-msgstr "Onemogočeno"
+msgctxt "@item:inlistbox Never show this System Tray item; disable it"
+msgid "Never show (disabled)"
+msgstr ""
 
 #: package/contents/ui/ConfigGeneral.qml:126
 #, kde-format
@@ -91,13 +97,7 @@ msgid "I understand the risks"
 msgstr "Razumem tveganja"
 
 #: package/contents/ui/ConfigGeneral.qml:187
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:usagetip"
-#| msgid ""
-#| "Disabling the clipboard is not recommended, as it will cause copied data "
-#| "to be lost when the application it was copied from is closed.<nl/><nl/"
-#| ">Instead consider configuring the clipboard to disable its history, or "
-#| "only remember one item at a time."
+#, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
 "Disabling the clipboard is not recommended, as it will cause copied data to "
@@ -107,10 +107,12 @@ msgid ""
 "configuring the clipboard to not save history, or to only remember one item "
 "at a time."
 msgstr ""
-"Onemogočanje odložišča ni priporočljivo, saj bo to povzročilo izgubo "
-"kopiranih podatkov, ko se aplikacija, iz katere so bili kopirani, zapre.<nl/"
-"><nl/>Namesto tega razmislite o konfiguriranju odložišča tako, da "
-"onemogočite njegovo zgodovino ali pa si zapomnite le en element naenkrat."
+"Onemogočanje odložišča ni priporočljivo, saj bo povzročilo izgubo kopiranih "
+"podatkov, ko se aplikacija, iz katere so bili kopirani, zapre.<nl/><nl/>To "
+"storite le, če ste ročno dodali samostojni pripomoček odložišča nekam drugje "
+"ali če uporabljate upravitelja odložišča tretje osebe. Prav tako razmislite "
+"o nastavitvi odložišča tako, da ne shranjuje zgodovine ali da si zapomni "
+"samo en element naenkrat."
 
 #: package/contents/ui/ConfigGeneral.qml:196
 #, kde-kuit-format
@@ -121,6 +123,10 @@ msgid ""
 "added a standalone Notifications widget somewhere else, or are intentionally "
 "using a 3rd-party notification manager to handle notifications."
 msgstr ""
+"Onemogočanje pripomočka Obvestila ni priporočljivo, saj obvestila, ki jih "
+"pošiljajo aplikacije, ne bodo več prikazana.<nl/><nl/>To storite le, če ste "
+"ročno dodali samostojni pripomoček Obvestila nekam drugje ali če za "
+"upravljanje obvestil namerno uporabljate upravitelja obvestil tretje osebe."
 
 #: package/contents/ui/ConfigGeneral.qml:208
 #, kde-format
@@ -235,6 +241,12 @@ msgstr "Mreža z %1 elementi v %2 stolpcih"
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
 msgstr "AILlmyjgGJP"
+
+#~ msgid "Always hidden"
+#~ msgstr "Vedno skrito"
+
+#~ msgid "Disabled"
+#~ msgstr "Onemogočeno"
 
 #~ msgid "Small"
 #~ msgstr "Majhna"
