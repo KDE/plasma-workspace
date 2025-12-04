@@ -5,14 +5,14 @@
 */
 
 import QtCore
-import QtQuick 2.7
-import QtQuick.Layouts 1.1
-import QtQuick.Window 2.2
-import QtQuick.Dialogs 6.3 as QtDialogs
-import QtQuick.Controls 2.3 as QtControls
-import org.kde.kirigami 2.14 as Kirigami
-import org.kde.kquickcontrolsaddons 2.0 as KQCAddons
-import org.kde.newstuff 1.91 as NewStuff
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Window
+import QtQuick.Dialogs as QtDialogs
+import QtQuick.Controls as QtControls
+import org.kde.kirigami as Kirigami
+import org.kde.kquickcontrolsaddons as KQCAddons
+import org.kde.newstuff as NewStuff
 import org.kde.kcmutils as KCM
 
 

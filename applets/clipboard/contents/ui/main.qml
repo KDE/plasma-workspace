@@ -8,15 +8,15 @@
 pragma ComponentBehavior: Bound
 
 import QtQuick
-import QtQuick.Layouts 1.1
-import QtQuick.Controls 2.15 as QQC2 // For StackView
-import org.kde.plasma.plasmoid 2.0
+import QtQuick.Layouts
+import QtQuick.Controls as QQC2 // For StackView
+import org.kde.plasma.plasmoid
 import org.kde.plasma.core as PlasmaCore
-import org.kde.ksvg 1.0 as KSvg
-import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.ksvg as KSvg
+import org.kde.plasma.extras as PlasmaExtras
+import org.kde.kirigami as Kirigami
 
-import org.kde.plasma.private.clipboard 0.1 as Private
+import org.kde.plasma.private.clipboard as Private
 
 PlasmoidItem {
     id: main

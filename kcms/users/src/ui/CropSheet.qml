@@ -11,7 +11,7 @@ import QtQuick.Layouts
 import QtQuick.Effects
 
 import org.kde.kirigami as Kirigami
-import org.kde.plasma.kcm.users 1.0 as UsersKCM
+import org.kde.plasma.kcm.users as UsersKCM
 
 Kirigami.Dialog {
     id: cropSheet

@@ -4,9 +4,9 @@
 */
 
 
-import QtQuick 2.15
-import QtQml 2.15
-import org.kde.plasma.clock 1.0
+import QtQuick
+import QtQml
+import org.kde.plasma.clock
 
 Item {
     width: 500

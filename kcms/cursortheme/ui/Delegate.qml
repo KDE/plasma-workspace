@@ -4,14 +4,14 @@
     SPDX-License-Identifier: LGPL-2.0-only
 */
 
-import QtQuick 2.1
-import QtQuick.Window 2.2
-import QtQuick.Layouts 1.1
+import QtQuick
+import QtQuick.Window
+import QtQuick.Layouts
 
-import org.kde.kirigami 2.2 as Kirigami
+import org.kde.kirigami as Kirigami
 
 import org.kde.kcmutils as KCM
-import org.kde.private.kcm_cursortheme 1.0
+import org.kde.private.kcm_cursortheme
 
 KCM.GridDelegate {
     id: delegate

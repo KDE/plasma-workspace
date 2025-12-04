@@ -6,15 +6,15 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-import QtQuick 2.9
-import QtQuick.Layouts 1.1
-import QtQuick.Controls 2.2
-import QtQml 2.15
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls
+import QtQml
 
-import org.kde.plasma.plasmoid 2.0
+import org.kde.plasma.plasmoid
 import org.kde.plasma.core as PlasmaCore
 
-import org.kde.ksysguard.faces 1.0 as Faces
+import org.kde.ksysguard.faces as Faces
 
 Control {
     id: chartFace

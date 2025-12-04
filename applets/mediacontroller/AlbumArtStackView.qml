@@ -10,10 +10,10 @@ pragma ComponentBehavior: Bound
 import QtQuick
 import QtQuick.Controls
 
-import org.kde.plasma.components 3.0 as PC3
-import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.plasma.components as PC3
+import org.kde.plasma.extras as PlasmaExtras
 import org.kde.plasma.private.mpris as Mpris
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.kirigami as Kirigami
 
 Item {
     id: container

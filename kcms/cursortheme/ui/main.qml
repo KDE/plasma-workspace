@@ -5,17 +5,17 @@
 */
 
 import QtCore
-import QtQuick 2.7
-import QtQuick.Window 2.2 // for Screen
-import QtQuick.Layouts 1.1
-import QtQuick.Controls 2.2 as QtControls
-import QtQuick.Dialogs 6.3 as QtDialogs
-import org.kde.kirigami 2.5 as Kirigami
-import org.kde.kwindowsystem 1.0 // for isPlatformWayland
-import org.kde.newstuff 1.91 as NewStuff
+import QtQuick
+import QtQuick.Window // for Screen
+import QtQuick.Layouts
+import QtQuick.Controls as QtControls
+import QtQuick.Dialogs as QtDialogs
+import org.kde.kirigami as Kirigami
+import org.kde.kwindowsystem // for isPlatformWayland
+import org.kde.newstuff as NewStuff
 import org.kde.kcmutils as KCM
 
-import org.kde.private.kcm_cursortheme 1.0
+import org.kde.private.kcm_cursortheme
 
 KCM.GridViewKCM {
     id: root

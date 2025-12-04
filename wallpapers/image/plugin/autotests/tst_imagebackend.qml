@@ -4,11 +4,11 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.5
-import QtQuick.Window 2.15
-import QtTest 1.0
+import QtQuick
+import QtQuick.Window
+import QtTest
 
-import org.kde.plasma.wallpapers.image 2.0 as Wallpaper
+import org.kde.plasma.wallpapers.image as Wallpaper
 
 TestCase {
     id: root

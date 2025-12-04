@@ -4,11 +4,11 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-import QtQuick 2.6
-import QtQuick.Layouts 1.1
-import org.kde.kirigami 2.5 as Kirigami
+import QtQuick
+import QtQuick.Layouts
+import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCM
-import org.kde.private.kcms.style 1.0 as Private
+import org.kde.private.kcms.style as Private
 
 KCM.GridViewKCM {
     id: root

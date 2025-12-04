@@ -7,10 +7,10 @@
 
 pragma ComponentBehavior: Bound
 
-import QtQuick 2.15
+import QtQuick
 
-import org.kde.plasma.components 3.0 as PlasmaComponents3
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.plasma.components as PlasmaComponents3
+import org.kde.kirigami as Kirigami
 
 ClipboardItemDelegate {
     id: menuItem

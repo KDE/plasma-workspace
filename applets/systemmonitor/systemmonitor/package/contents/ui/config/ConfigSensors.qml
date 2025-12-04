@@ -6,13 +6,13 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-import QtQuick 2.9
-import QtQuick.Layouts 1.2
-import QtQuick.Controls 2.2 as QQC2
-import QtQml.Models 2.12
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as QQC2
+import QtQml.Models
 
-import org.kde.kquickcontrols 2.0
-import org.kde.plasma.plasmoid 2.0
+import org.kde.kquickcontrols
+import org.kde.plasma.plasmoid
 import org.kde.kcmutils as KCM
 
 KCM.SimpleKCM {

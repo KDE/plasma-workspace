@@ -5,12 +5,12 @@
 */
 
 import QtCore
-import QtQuick 2.7
-import QtQuick.Layouts 1.1
-import QtQuick.Dialogs 6.3 as QtDialogs
-import QtQuick.Controls 2.10 as QtControls
-import org.kde.kirigami 2.10 as Kirigami
-import org.kde.newstuff 1.91 as NewStuff
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Dialogs as QtDialogs
+import QtQuick.Controls as QtControls
+import org.kde.kirigami as Kirigami
+import org.kde.newstuff as NewStuff
 
 Kirigami.Page {
     id: gtkStylePage

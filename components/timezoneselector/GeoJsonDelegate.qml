@@ -7,7 +7,7 @@
 import QtQuick
 import QtPositioning
 import QtLocation
-import Qt.labs.qmlmodels 1.0
+import Qt.labs.qmlmodels
 
 import org.kde.kirigami as Kirigami
 

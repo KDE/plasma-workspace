@@ -4,12 +4,12 @@
  * SPDX-License-Identifier: GPL-2.0-or-later
  */
 
-import QtQuick 2.15
-import QtQuick.Controls 2.15
+import QtQuick
+import QtQuick.Controls
 
-import org.kde.ksvg 1.0 as KSvg
-import org.kde.plasma.components 3.0 as PC3
-import org.kde.kirigami 2.12 as Kirigami
+import org.kde.ksvg as KSvg
+import org.kde.plasma.components as PC3
+import org.kde.kirigami as Kirigami
 
 AbstractButton {
     id: controlRoot

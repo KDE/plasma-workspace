@@ -5,18 +5,18 @@
 */
 
 import QtCore
-import QtQuick 2.6
-import QtQuick.Layouts 1.1
-import QtQuick.Window 2.2
-import QtQuick.Dialogs 6.3 as QtDialogs
-import QtQuick.Controls 2.3 as QtControls
-import QtQuick.Templates 2.3 as T
-import QtQml 2.15
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Window
+import QtQuick.Dialogs as QtDialogs
+import QtQuick.Controls as QtControls
+import QtQuick.Templates as T
+import QtQml
 
-import org.kde.kirigami 2.8 as Kirigami
-import org.kde.newstuff 1.91 as NewStuff
+import org.kde.kirigami as Kirigami
+import org.kde.newstuff as NewStuff
 import org.kde.kcmutils as KCM
-import org.kde.private.kcms.colors 1.0 as Private
+import org.kde.private.kcms.colors as Private
 
 KCM.GridViewKCM {
     id: root

@@ -5,19 +5,19 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-import QtQuick 2.15
-import QtQuick.Layouts 1.15
-import QtQuick.Controls 2.15
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls
 // Deliberately imported after QtQuick to avoid missing restoreMode property in Binding. Fix in Qt 6.
-import QtQml 2.15
+import QtQml
 
-import org.kde.plasma.plasmoid 2.0
-import org.kde.kquickcontrolsaddons 2.0 // For KCMShell
+import org.kde.plasma.plasmoid
+import org.kde.kquickcontrolsaddons // For KCMShell
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.private.keyboardindicator as KeyboardIndicator
-import org.kde.plasma.components 3.0 as PlasmaComponents3
-import org.kde.plasma.private.appmenu 1.0 as AppMenuPrivate
-import org.kde.kirigami 2.5 as Kirigami
+import org.kde.plasma.components as PlasmaComponents3
+import org.kde.plasma.private.appmenu as AppMenuPrivate
+import org.kde.kirigami as Kirigami
 
 PlasmoidItem {
     id: root

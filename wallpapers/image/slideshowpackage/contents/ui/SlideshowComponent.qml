@@ -6,13 +6,13 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.15
-import QtQuick.Controls 2.15 as QQC2
-import QtQuick.Layouts 1.15
+import QtQuick
+import QtQuick.Controls as QQC2
+import QtQuick.Layouts
 
 import org.kde.kcmutils as KCM
 import org.kde.kirigami as Kirigami
-import org.kde.plasma.wallpapers.image 2.0 as PlasmaWallpaper
+import org.kde.plasma.wallpapers.image as PlasmaWallpaper
 
 /**
  * For proper alignment, an ancestor **MUST** have id "appearanceRoot" and property "parentLayout"

@@ -6,15 +6,15 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-import QtQuick 2.0
-import QtQuick.Layouts 1.1
-import QtQuick.Window 2.12
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Window
 
 import org.kde.plasma.core as PlasmaCore
-import org.kde.plasma.plasmoid 2.0
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.plasma.plasmoid
+import org.kde.kirigami as Kirigami
 
-import org.kde.ksysguard.sensors 1.0 as Sensors
+import org.kde.ksysguard.sensors as Sensors
 
 
 PlasmoidItem {

@@ -9,14 +9,14 @@ pragma ComponentBehavior: Bound
 
 import QtQuick
 import QtQuick.Controls as QQC
-import QtQuick.Layouts 1.1
+import QtQuick.Layouts
 import Qt5Compat.GraphicalEffects
 
-import org.kde.plasma.components 3.0 as PlasmaComponents
-import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.plasma.components as PlasmaComponents
+import org.kde.plasma.extras as PlasmaExtras
 
-import org.kde.kirigami 2.20 as Kirigami
-import org.kde.ksvg 1.0 as KSvg
+import org.kde.kirigami as Kirigami
+import org.kde.ksvg as KSvg
 
 PlasmaComponents.ItemDelegate {
     id: menuItem

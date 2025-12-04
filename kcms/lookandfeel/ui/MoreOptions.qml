@@ -5,12 +5,12 @@
     SPDX-License-Identifier: LGPL-2.0-only
 */
 
-import QtQuick 2.6
-import QtQuick.Layouts 1.1
-import QtQuick.Window 2.2
-import QtQuick.Controls 2.3 as QtControls
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Window
+import QtQuick.Controls as QtControls
 import org.kde.kirigami as Kirigami
-import org.kde.private.kcms.lookandfeel 1.0 as Private
+import org.kde.private.kcms.lookandfeel as Private
 
 ColumnLayout {
     Kirigami.FormLayout {

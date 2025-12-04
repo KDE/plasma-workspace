@@ -6,17 +6,17 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-import QtQuick 2.15
-import QtQuick.Layouts 1.15
-import QtQuick.Window 2.15
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Window
 import Qt5Compat.GraphicalEffects
 import QtQuick.Effects as Effects
 
-import org.kde.plasma.plasmoid 2.0
+import org.kde.plasma.plasmoid
 import org.kde.plasma.core as PlasmaCore
-import org.kde.ksvg 1.0 as KSvg
-import org.kde.plasma.components 3.0 as PlasmaComponents
-import org.kde.plasma.private.containmentlayoutmanager 1.0 as ContainmentLayoutManager
+import org.kde.ksvg as KSvg
+import org.kde.plasma.components as PlasmaComponents
+import org.kde.plasma.private.containmentlayoutmanager as ContainmentLayoutManager
 import org.kde.kirigami as Kirigami
 
 ContainmentLayoutManager.AppletContainer {

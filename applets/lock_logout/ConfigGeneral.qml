@@ -8,9 +8,9 @@
 
 import QtQuick
 import QtQuick.Layouts
-import QtQuick.Controls 2.5 as QQC2
+import QtQuick.Controls as QQC2
 import org.kde.kirigami as Kirigami
-import org.kde.plasma.private.sessions 2.0
+import org.kde.plasma.private.sessions
 import org.kde.kcmutils as KCM
 import "data.js" as Data
 

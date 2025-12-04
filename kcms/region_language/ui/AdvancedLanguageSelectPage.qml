@@ -5,16 +5,16 @@
   SPDX-FileCopyrightText: 2021 Harald Sitter <sitter@kde.org>
   SPDX-License-Identifier: LGPL-3.0-or-later
 */
-import QtQuick 2.15
-import QtQuick.Controls 2.15 as QQC2
-import QtQuick.Layouts 1.15
+import QtQuick
+import QtQuick.Controls as QQC2
+import QtQuick.Layouts
 
 import org.kde.kirigami as Kirigami
 import org.kde.kirigami.dialogs as KDialogs
 import org.kde.kcmutils as KCM
-import org.kde.kitemmodels 1.0 as ItemModels
+import org.kde.kitemmodels as ItemModels
 
-import kcmregionandlang 1.0
+import kcmregionandlang
 
 KCM.ScrollViewKCM {
     property int replaceLangIndex: -1

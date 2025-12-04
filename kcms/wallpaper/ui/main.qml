@@ -18,7 +18,7 @@ import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCM
 
 import org.kde.plasma.kcm.wallpaper
-import org.kde.plasma.configuration 2.0
+import org.kde.plasma.configuration
 
 // Not using AbstractKCM because we're not using any of it features, not even one
 Kirigami.ScrollablePage {

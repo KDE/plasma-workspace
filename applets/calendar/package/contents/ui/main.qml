@@ -5,16 +5,16 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
-import QtQuick 2.12
-import QtQuick.Layouts 1.12
+import QtQuick
+import QtQuick.Layouts
 
-import org.kde.plasma.plasmoid 2.0
+import org.kde.plasma.plasmoid
 import org.kde.plasma.clock
-import org.kde.plasma.components 3.0 as PlasmaComponents3
+import org.kde.plasma.components as PlasmaComponents3
 import org.kde.kirigami as Kirigami
 import org.kde.ksvg as KSvg
 
-import org.kde.plasma.workspace.calendar 2.0
+import org.kde.plasma.workspace.calendar
 
 PlasmoidItem {
     id: root

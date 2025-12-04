@@ -4,12 +4,12 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.15
-import QtQuick.Layouts 1.15
+import QtQuick
+import QtQuick.Layouts
 import Qt5Compat.GraphicalEffects
 
-import org.kde.kirigami 2.20 as Kirigami
-import org.kde.plasma.private.sessions 2.0
+import org.kde.kirigami as Kirigami
+import org.kde.plasma.private.sessions
 import org.kde.breeze.components
 
 Item {

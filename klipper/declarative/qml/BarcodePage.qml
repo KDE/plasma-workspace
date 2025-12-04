@@ -8,14 +8,14 @@ pragma ComponentBehavior: Bound
 
 import QtQuick
 import QtQuick.Templates as T
-import QtQuick.Layouts 1.1
-import org.kde.plasma.components 3.0 as PlasmaComponents3
-import org.kde.plasma.plasmoid 2.0
-import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.kirigami 2.20 as Kirigami
+import QtQuick.Layouts
+import org.kde.plasma.components as PlasmaComponents3
+import org.kde.plasma.plasmoid
+import org.kde.plasma.extras as PlasmaExtras
+import org.kde.kirigami as Kirigami
 import org.kde.kquickcontrolsaddons as KQuickControlsAddons
 
-import org.kde.prison 1.0 as Prison
+import org.kde.prison as Prison
 
 Item {
     id: barcodeView

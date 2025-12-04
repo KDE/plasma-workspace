@@ -6,18 +6,18 @@
 
 pragma ComponentBehavior: Bound
 pragma Singleton
-import QtQuick 2.8
-import QtQuick.Window 2.12
-import QtQuick.Layouts 1.1
-import QtQml 2.15
+import QtQuick
+import QtQuick.Window
+import QtQuick.Layouts
+import QtQml
 
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.clock
-import org.kde.kquickcontrolsaddons 2.0
-import org.kde.kirigami 2.11 as Kirigami
+import org.kde.kquickcontrolsaddons
+import org.kde.kirigami as Kirigami
 
 import org.kde.notificationmanager as NotificationManager
-import org.kde.taskmanager 0.1 as TaskManager
+import org.kde.taskmanager as TaskManager
 
 import plasma.applet.org.kde.plasma.notifications as Notifications
 

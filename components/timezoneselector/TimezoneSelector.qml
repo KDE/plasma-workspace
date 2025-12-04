@@ -16,7 +16,7 @@ import QtCore
 
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.workspace.timezoneselector as Workspace
-import org.kde.kirigamiaddons.components 1.0 as Components
+import org.kde.kirigamiaddons.components as Components
 
 /**
  * @brief An element that shows all available timezones through a map and comboboxes, and allows you to select one.

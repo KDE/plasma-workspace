@@ -4,10 +4,10 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.15
-import QtQuick.VirtualKeyboard 2.4
+import QtQuick
+import QtQuick.VirtualKeyboard
 
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.kirigami as Kirigami
 
 InputPanel {
     id: inputPanel

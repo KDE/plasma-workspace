@@ -4,11 +4,11 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-import QtQuick 2.12
+import QtQuick
 
-import org.kde.ksvg 1.0 as KSvg
-import org.kde.plasma.private.containmentlayoutmanager 1.0 as ContainmentLayoutManager
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.ksvg as KSvg
+import org.kde.plasma.private.containmentlayoutmanager as ContainmentLayoutManager
+import org.kde.kirigami as Kirigami
 
 ContainmentLayoutManager.ItemContainer {
     enabled: false

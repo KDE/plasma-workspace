@@ -1,5 +1,5 @@
-import QtQuick 2.12
-import QtTest 1.0
+import QtQuick
+import QtTest
 import org.kde.plasma.workspace.trianglemousefilter
 
 Item {

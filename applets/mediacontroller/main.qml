@@ -8,11 +8,11 @@
 pragma ComponentBehavior: Bound
 
 import QtQuick
-import org.kde.plasma.plasmoid 2.0
+import org.kde.plasma.plasmoid
 import org.kde.plasma.core as PlasmaCore
 import plasma.applet.org.kde.plasma.mediacontroller
 import org.kde.plasma.private.mpris as Mpris
-import org.kde.kirigami 2 as Kirigami
+import org.kde.kirigami as Kirigami
 
 PlasmoidItem {
     id: root

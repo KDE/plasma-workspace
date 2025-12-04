@@ -1,8 +1,8 @@
-import QtQuick 2.0
-import org.kde.ksysguard.sensors 1.0 as Sensors
+import QtQuick
+import org.kde.ksysguard.sensors as Sensors
 
-import org.kde.plasma.plasmoid 2.0
-import org.kde.plasma.configuration 2.0
+import org.kde.plasma.plasmoid
+import org.kde.plasma.configuration
 
 ConfigModel {
     ConfigCategory {

@@ -9,8 +9,8 @@ pragma ComponentBehavior: Bound
 import QtQuick
 import QtQuick.Controls as QQC
 
-import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.plasma.private.clipboard 0.1 as Private
+import org.kde.plasma.extras as PlasmaExtras
+import org.kde.plasma.private.clipboard as Private
 import org.kde.kirigami as Kirigami
 
 PlasmaExtras.Representation {

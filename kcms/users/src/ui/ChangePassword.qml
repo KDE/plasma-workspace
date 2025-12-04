@@ -4,12 +4,12 @@
     SPDX-License-Identifier: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
 */
 
-import QtQuick 2.6
-import QtQuick.Layouts 1.3
+import QtQuick
+import QtQuick.Layouts
 import QtQuick.Controls as QQC2
 
-import org.kde.kirigami 2.20 as Kirigami
-import org.kde.plasma.kcm.users 1.0 as UsersKCM
+import org.kde.kirigami as Kirigami
+import org.kde.plasma.kcm.users as UsersKCM
 
 Kirigami.PromptDialog {
     id: passwordRoot

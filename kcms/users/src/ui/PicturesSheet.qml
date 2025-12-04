@@ -5,10 +5,10 @@
     SPDX-License-Identifier: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
 */
 
-import QtQuick 2.15
-import QtQuick.Controls 2.15 as QQC2
-import QtQuick.Dialogs 6.3 as Dialogs
-import QtQuick.Layouts 1.15
+import QtQuick
+import QtQuick.Controls as QQC2
+import QtQuick.Dialogs as Dialogs
+import QtQuick.Layouts
 
 import org.kde.kirigami as Kirigami
 

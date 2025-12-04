@@ -4,9 +4,9 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.0
-import org.kde.kirigami 2.20 as Kirigami
-import org.kde.plasma.plasmoid 2.0
+import QtQuick
+import org.kde.kirigami as Kirigami
+import org.kde.plasma.plasmoid
 
 WallpaperItem {
     id: root

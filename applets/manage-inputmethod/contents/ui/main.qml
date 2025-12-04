@@ -4,14 +4,14 @@
  *    SPDX-License-Identifier: GPL-2.0-or-later
  */
 
-import QtQuick 2.1
-import QtQuick.Layouts 1.1
+import QtQuick
+import QtQuick.Layouts
 
-import org.kde.plasma.plasmoid 2.0
+import org.kde.plasma.plasmoid
 import org.kde.plasma.core as PlasmaCore
-import org.kde.plasma.workspace.keyboardlayout 1.0 as Keyboards
+import org.kde.plasma.workspace.keyboardlayout as Keyboards
 import org.kde.kcmutils // KCMLauncher
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.kirigami as Kirigami
 
 PlasmoidItem {
     id: root

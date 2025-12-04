@@ -5,14 +5,14 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-import QtQuick 2.15
-import QtQuick.Layouts 1.1
-import QtQuick.Controls 2.3 as QQC2
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as QQC2
 import org.kde.kirigami as Kirigami
-import org.kde.userfeedback 1.0 as UserFeedback
-import org.kde.userfeedback.kcm 1.0
+import org.kde.userfeedback as UserFeedback
+import org.kde.userfeedback.kcm
 import org.kde.kcmutils
-import org.kde.kcmutils 1.0 as KCMUtils
+import org.kde.kcmutils as KCMUtils
 
 SimpleKCM {
     id: root

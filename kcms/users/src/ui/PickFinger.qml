@@ -11,7 +11,7 @@ import QtQuick.Layouts
 
 import org.kde.kirigami as Kirigami
 import FingerprintModel
-import org.kde.plasma.kcm.users 1.0 as UsersKCM
+import org.kde.plasma.kcm.users as UsersKCM
 
 ColumnLayout {
     id: root

@@ -5,16 +5,16 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-import QtQuick 2.15
-import QtQml.Models 2.2
-import QtQuick.Layouts 1.15
+import QtQuick
+import QtQml.Models
+import QtQuick.Layouts
 import QtQuick.Controls as QQC2
 import QtQuick.Dialogs
 
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCM
 
-import org.kde.private.kcms.notifications 1.0 as Private
+import org.kde.private.kcms.notifications as Private
 
 ColumnLayout {
     id: configColumn

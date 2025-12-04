@@ -4,11 +4,11 @@
     SPDX-License-Identifier: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
 */
 
-import QtQuick 2.12
-import QtQuick.Layouts 1.3
-import QtQuick.Shapes 1.12
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Shapes
 
-import org.kde.kirigami 2.12 as Kirigami
+import org.kde.kirigami as Kirigami
 
 Item {
     property alias colorTimer: colorChangeBackTimer
