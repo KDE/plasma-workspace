@@ -1,7 +1,7 @@
 plasma_install_package(activitybar org.kde.plasma.activitybar)
 add_subdirectory(icon)
 
-plasma_install_package(analog-clock org.kde.plasma.analogclock)
+add_subdirectory(analog-clock)
 plasma_install_package(manage-inputmethod org.kde.plasma.manage-inputmethod)
 
 add_subdirectory(appmenu)
