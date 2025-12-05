@@ -1,5 +1,4 @@
 {
-    "KPackageStructure": "Plasma/Applet",
     "KPlugin": {
         "Authors": [
             {
@@ -114,7 +113,6 @@
             "desktop"
         ],
         "Icon": "tab-new",
-        "Id": "org.kde.plasma.activitybar",
         "License": "GPL-2.0+",
         "Name": "Activity Bar",
         "Name[ar]": "شريط أنشطة",

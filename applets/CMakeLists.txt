@@ -1,4 +1,4 @@
-plasma_install_package(activitybar org.kde.plasma.activitybar)
+add_subdirectory(activitybar)
 add_subdirectory(icon)
 
 plasma_install_package(analog-clock org.kde.plasma.analogclock)
