@@ -736,10 +736,7 @@ void PanelView::positionAndResizePanel()
     const QPoint pos = geometryByDistance(0).topLeft();
 
     const QRect geom = {pos, sizeHint};
-
-    if (geom == geometry()) {
-        return;
-    }
+    bool geomChanged = geom == geometry();
 
     updateLayerWindow();
 
@@ -751,7 +748,10 @@ void PanelView::positionAndResizePanel()
         setGeometry(geom);
     }
     updateMask();
-    Q_EMIT geometryChanged();
+
+    if (geomChanged) {
+        Q_EMIT geometryChanged();
+    }
     Q_EMIT m_corona->availableScreenRegionChanged(containment()->screen());
 
     KWindowEffects::slideWindow(this, slideLocation(), -1);
