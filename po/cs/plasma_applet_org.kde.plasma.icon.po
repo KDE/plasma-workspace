@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-12-05 00:44+0000\n"
 "PO-Revision-Date: 2020-06-04 11:18+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -37,7 +37,7 @@ msgstr "Otevřít odpovídající složku"
 msgid "Properties for %1"
 msgstr "Vlastnosti pro %1"
 
-#: package/contents/ui/main.qml:40
+#: qml/main.qml:40
 #, kde-format
 msgid "Properties"
 msgstr "Vlastnosti"

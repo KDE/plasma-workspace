@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-04 00:46+0000\n"
-"PO-Revision-Date: 2025-11-28 19:53+0100\n"
+"POT-Creation-Date: 2025-12-05 00:44+0000\n"
+"PO-Revision-Date: 2025-12-04 17:34+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -17,63 +17,61 @@ msgstr ""
 "X-Generator: Lokalize 25.07.70\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: package/contents/config/config.qml:13
+#: qml/config.qml:13
 #, kde-format
 msgid "General"
 msgstr "Общи"
 
-#: package/contents/ui/ConfigGeneral.qml:43
-#, fuzzy, kde-format
-#| msgid "Shown when relevant"
+#: qml/ConfigGeneral.qml:43
+#, kde-format
 msgctxt "@item:inlistbox Show this System Tray item when relevant"
 msgid "Show when relevant"
 msgstr "Показва се, когато е необходимо"
 
-#: package/contents/ui/ConfigGeneral.qml:47
-#, fuzzy, kde-format
-#| msgid "Always shown"
+#: qml/ConfigGeneral.qml:47
+#, kde-format
 msgctxt "@item:inlistbox Always show this System Tray item"
 msgid "Always show"
-msgstr "Винаги показвано"
+msgstr "Винаги да се показва"
 
-#: package/contents/ui/ConfigGeneral.qml:51
+#: qml/ConfigGeneral.qml:51
 #, kde-format
 msgctxt "@item:inlistbox Show this System Tray item only in the expanded popup"
 msgid "Show only in popup"
-msgstr ""
+msgstr "Показване само в изскачащ прозорец"
 
-#: package/contents/ui/ConfigGeneral.qml:55
+#: qml/ConfigGeneral.qml:55
 #, kde-format
 msgctxt "@item:inlistbox Never show this System Tray item; disable it"
 msgid "Never show (disabled)"
-msgstr ""
+msgstr "Никога да не се показва(деактивирано)"
 
-#: package/contents/ui/ConfigGeneral.qml:126
+#: qml/ConfigGeneral.qml:126
 #, kde-format
 msgid "Application Status"
 msgstr "Състояние на приложението"
 
-#: package/contents/ui/ConfigGeneral.qml:128
+#: qml/ConfigGeneral.qml:128
 #, kde-format
 msgid "Communications"
 msgstr "Комуникации"
 
-#: package/contents/ui/ConfigGeneral.qml:130
+#: qml/ConfigGeneral.qml:130
 #, kde-format
 msgid "System Services"
 msgstr "Системни услуги"
 
-#: package/contents/ui/ConfigGeneral.qml:132
+#: qml/ConfigGeneral.qml:132
 #, kde-format
 msgid "Hardware Control"
 msgstr "Контрол на хардуера"
 
-#: package/contents/ui/ConfigGeneral.qml:135
+#: qml/ConfigGeneral.qml:135
 #, kde-format
 msgid "Miscellaneous"
 msgstr "Допълнителни"
 
-#: package/contents/ui/ConfigGeneral.qml:172
+#: qml/ConfigGeneral.qml:172
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -90,20 +88,14 @@ msgstr ""
 "поведение.<nl/><nl/>Използвайте тази настройка на свой собствен риск и не "
 "докладвайте за проблеми на KDE или на автора на приложението."
 
-#: package/contents/ui/ConfigGeneral.qml:175
+#: qml/ConfigGeneral.qml:175
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
 msgstr "Запознат съм с рисковете"
 
-#: package/contents/ui/ConfigGeneral.qml:187
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:usagetip"
-#| msgid ""
-#| "Disabling the clipboard is not recommended, as it will cause copied data "
-#| "to be lost when the application it was copied from is closed.<nl/><nl/"
-#| ">Instead consider configuring the clipboard to disable its history, or "
-#| "only remember one item at a time."
+#: qml/ConfigGeneral.qml:187
+#, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
 "Disabling the clipboard is not recommended, as it will cause copied data to "
@@ -115,10 +107,12 @@ msgid ""
 msgstr ""
 "Деактивирането на клипборда не се препоръчва, тъй като това ще доведе до "
 "загуба на копирани данни, когато приложението, от което са копирани, бъде "
-"затворено.<nl/><nl/>Вместо това, помислете за конфигуриране на клипборда, за "
-"да деактивирате историята му или да запомняте само един елемент наведнъж."
+"затворено.<nl/><nl/>Направете това, само ако ръчно сте добавили "
+"самостоятелен уиджет за клипборда някъде другаде или използвате мениджър на "
+"клипборда на трета страна. Също така, помислете за конфигуриране на "
+"клипборда да не запазва историята или да запомня само един елемент."
 
-#: package/contents/ui/ConfigGeneral.qml:196
+#: qml/ConfigGeneral.qml:196
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -127,116 +121,120 @@ msgid ""
 "added a standalone Notifications widget somewhere else, or are intentionally "
 "using a 3rd-party notification manager to handle notifications."
 msgstr ""
+"Деактивирането на уиджета за известия не се препоръчва, тъй като известията, "
+"изпратени от приложенията, вече няма да се показват.<nl/><nl/>Правете това "
+"само ако ръчно сте добавили самостоятелен уиджет за известия някъде другаде "
+"или умишлено използвате мениджър за известия на трета страна за обработка на "
+"известия."
 
-#: package/contents/ui/ConfigGeneral.qml:208
+#: qml/ConfigGeneral.qml:208
 #, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel height"
 msgstr "Мащабиране с височината на панела"
 
-#: package/contents/ui/ConfigGeneral.qml:209
+#: qml/ConfigGeneral.qml:209
 #, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel width"
 msgstr "Мащабиране с широчината на панела"
 
-#: package/contents/ui/ConfigGeneral.qml:211
+#: qml/ConfigGeneral.qml:211
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon size:"
 msgstr "Размер на иконата на панела:"
 
-#: package/contents/ui/ConfigGeneral.qml:215
-#: package/contents/ui/ConfigGeneral.qml:256
+#: qml/ConfigGeneral.qml:215 qml/ConfigGeneral.qml:256
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "Малък"
 
-#: package/contents/ui/ConfigGeneral.qml:244
+#: qml/ConfigGeneral.qml:244
 #, kde-format
 msgid "Automatically enabled when in Touch Mode"
 msgstr "Автоматично активиране в режим на таблет"
 
-#: package/contents/ui/ConfigGeneral.qml:252
+#: qml/ConfigGeneral.qml:252
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon spacing:"
 msgstr "Разстояние между иконите в панела:"
 
-#: package/contents/ui/ConfigGeneral.qml:260
+#: qml/ConfigGeneral.qml:260
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "Нормално"
 
-#: package/contents/ui/ConfigGeneral.qml:264
+#: qml/ConfigGeneral.qml:264
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "Голямо"
 
-#: package/contents/ui/ConfigGeneral.qml:289
+#: qml/ConfigGeneral.qml:289
 #, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
 msgstr "Автоматично задаване на големи икони в режим на таблет"
 
-#: package/contents/ui/ConfigGeneral.qml:315
+#: qml/ConfigGeneral.qml:315
 #, kde-format
 msgctxt "@title:column"
 msgid "Entries"
 msgstr "Записи"
 
-#: package/contents/ui/ConfigGeneral.qml:319
+#: qml/ConfigGeneral.qml:319
 #, kde-format
 msgctxt "@option:check, This is referring to system tray entries"
 msgid "Always show all"
 msgstr "Винаги да се показва всичко"
 
-#: package/contents/ui/ExpandedRepresentation.qml:59
+#: qml/ExpandedRepresentation.qml:59
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
 msgstr "Назад"
 
-#: package/contents/ui/ExpandedRepresentation.qml:71
+#: qml/ExpandedRepresentation.qml:71
 #, kde-format
 msgid "Status and Notifications"
 msgstr "Състояние и известия"
 
-#: package/contents/ui/ExpandedRepresentation.qml:140
+#: qml/ExpandedRepresentation.qml:140
 #, kde-format
 msgid "More actions"
 msgstr "Допълнителни действия"
 
-#: package/contents/ui/ExpandedRepresentation.qml:240
+#: qml/ExpandedRepresentation.qml:240
 #, kde-format
 msgid "Keep Open"
 msgstr "Задържане отворен"
 
-#: package/contents/ui/ExpanderArrow.qml:26
+#: qml/ExpanderArrow.qml:26
 #, kde-format
 msgid "Show all the items in the system tray in a popup"
 msgstr "Показване на всички елементи в изскачащия прозорец на системния панел"
 
-#: package/contents/ui/ExpanderArrow.qml:40
+#: qml/ExpanderArrow.qml:40
 #, kde-format
 msgid "Close popup"
 msgstr "Затваряне на изскачащ прозорец"
 
-#: package/contents/ui/ExpanderArrow.qml:40
+#: qml/ExpanderArrow.qml:40
 #, kde-format
 msgid "Show hidden icons"
 msgstr "Показване на скрити икони"
 
-#: package/contents/ui/HiddenItemsView.qml:42
+#: qml/HiddenItemsView.qml:40
 #, kde-format
 msgctxt "@info:whatsthis accessible description for popup grid"
 msgid "Grid with %1 items in %2 columns"
 msgstr "Решетка с %1 елемента в %2 колони"
 
-#: package/contents/ui/HiddenItemsView.qml:46
+#: qml/HiddenItemsView.qml:44
 #, kde-format
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"

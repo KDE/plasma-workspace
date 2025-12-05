@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-03 00:46+0000\n"
+"POT-Creation-Date: 2025-12-05 00:44+0000\n"
 "PO-Revision-Date: 2024-10-25 23:31-0500\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
@@ -123,42 +123,42 @@ msgstr "ਪਸੰਦੀਦਾ"
 msgid "Recently Used"
 msgstr "ਤਾਜ਼ਾ ਵਰਤੇ"
 
-#: recentusagemodel.cpp:158 recentusagemodel.cpp:313
+#: recentusagemodel.cpp:158 recentusagemodel.cpp:317
 #, kde-format
 msgid "Files"
 msgstr "ਫਾਇਲ"
 
-#: recentusagemodel.cpp:246
+#: recentusagemodel.cpp:250
 #, kde-format
 msgid "Forget Application"
 msgstr "ਐਪਲੀਕੇਸ਼ਨ ਨੂੰ ਭੁਲਾਓ"
 
-#: recentusagemodel.cpp:311
+#: recentusagemodel.cpp:315
 #, kde-format
 msgid "Folders"
 msgstr ""
 
-#: recentusagemodel.cpp:348
+#: recentusagemodel.cpp:356
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "ਰੱਖਣ ਵਾਲਾ ਫੋਲਡਰ ਖੋਲ੍ਹੋ"
 
-#: recentusagemodel.cpp:351
+#: recentusagemodel.cpp:359
 #, kde-format
 msgid "Forget File"
 msgstr "ਫ਼ਾਇਲ ਨੂੰ ਭੁਲਾਓ"
 
-#: recentusagemodel.cpp:486
+#: recentusagemodel.cpp:494
 #, kde-format
 msgid "Forget All"
 msgstr "ਸਭ ਨੂੰ ਭੁਲਾਓ"
 
-#: recentusagemodel.cpp:488
+#: recentusagemodel.cpp:496
 #, kde-format
 msgid "Forget All Applications"
 msgstr "ਸਾਰੀਆਂ ਐਪਲੀਕੇਸ਼ਨਾਂ ਨੂੰ ਭੁਲਾਓ"
 
-#: recentusagemodel.cpp:491
+#: recentusagemodel.cpp:499
 #, kde-format
 msgid "Forget All Files"
 msgstr "ਸਾਰੀਆਂ ਫਾਇਲ ਭੁਲਾਓ"

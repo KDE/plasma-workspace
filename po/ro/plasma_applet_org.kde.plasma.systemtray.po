@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-04 00:46+0000\n"
+"POT-Creation-Date: 2025-12-05 00:44+0000\n"
 "PO-Revision-Date: 2025-10-03 14:14+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -18,63 +18,63 @@ msgstr ""
 "20)) ? 1 : 2;\n"
 "X-Generator: Lokalize 25.08.1\n"
 
-#: package/contents/config/config.qml:13
+#: qml/config.qml:13
 #, kde-format
 msgid "General"
 msgstr "Generale"
 
-#: package/contents/ui/ConfigGeneral.qml:43
+#: qml/ConfigGeneral.qml:43
 #, fuzzy, kde-format
 #| msgid "Shown when relevant"
 msgctxt "@item:inlistbox Show this System Tray item when relevant"
 msgid "Show when relevant"
 msgstr "Arată când e relevant"
 
-#: package/contents/ui/ConfigGeneral.qml:47
+#: qml/ConfigGeneral.qml:47
 #, fuzzy, kde-format
 #| msgid "Always shown"
 msgctxt "@item:inlistbox Always show this System Tray item"
 msgid "Always show"
 msgstr "Întotdeauna vizibil"
 
-#: package/contents/ui/ConfigGeneral.qml:51
+#: qml/ConfigGeneral.qml:51
 #, kde-format
 msgctxt "@item:inlistbox Show this System Tray item only in the expanded popup"
 msgid "Show only in popup"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:55
+#: qml/ConfigGeneral.qml:55
 #, kde-format
 msgctxt "@item:inlistbox Never show this System Tray item; disable it"
 msgid "Never show (disabled)"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:126
+#: qml/ConfigGeneral.qml:126
 #, kde-format
 msgid "Application Status"
 msgstr "Starea aplicației"
 
-#: package/contents/ui/ConfigGeneral.qml:128
+#: qml/ConfigGeneral.qml:128
 #, kde-format
 msgid "Communications"
 msgstr "Comunicații"
 
-#: package/contents/ui/ConfigGeneral.qml:130
+#: qml/ConfigGeneral.qml:130
 #, kde-format
 msgid "System Services"
 msgstr "Servicii de sistem"
 
-#: package/contents/ui/ConfigGeneral.qml:132
+#: qml/ConfigGeneral.qml:132
 #, kde-format
 msgid "Hardware Control"
 msgstr "Control echipament"
 
-#: package/contents/ui/ConfigGeneral.qml:135
+#: qml/ConfigGeneral.qml:135
 #, kde-format
 msgid "Miscellaneous"
 msgstr "Diverse"
 
-#: package/contents/ui/ConfigGeneral.qml:172
+#: qml/ConfigGeneral.qml:172
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -91,13 +91,13 @@ msgstr ""
 "comportament neașteptat.<nl/><nl/>Folosiți această configurare pe proprie "
 "răspundere și nu raportați defecte la KDE sau autorului aplicației."
 
-#: package/contents/ui/ConfigGeneral.qml:175
+#: qml/ConfigGeneral.qml:175
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
 msgstr "Înțeleg riscurile"
 
-#: package/contents/ui/ConfigGeneral.qml:187
+#: qml/ConfigGeneral.qml:187
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info:usagetip"
 #| msgid ""
@@ -119,7 +119,7 @@ msgstr ""
 "schimb, puteți configura clipboard-ul să nu păstreze istoricul, sau să "
 "rețină doar un element odată."
 
-#: package/contents/ui/ConfigGeneral.qml:196
+#: qml/ConfigGeneral.qml:196
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -129,21 +129,21 @@ msgid ""
 "using a 3rd-party notification manager to handle notifications."
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:208
+#: qml/ConfigGeneral.qml:208
 #, fuzzy, kde-format
 #| msgid "Scale with Panel height"
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel height"
 msgstr "Scalează cu înălțimea panoului"
 
-#: package/contents/ui/ConfigGeneral.qml:209
+#: qml/ConfigGeneral.qml:209
 #, fuzzy, kde-format
 #| msgid "Scale with Panel width"
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel width"
 msgstr "Scalează cu lățimea panoului"
 
-#: package/contents/ui/ConfigGeneral.qml:211
+#: qml/ConfigGeneral.qml:211
 #, fuzzy, kde-format
 #| msgctxt "The arrangement of system tray icons in the Panel"
 #| msgid "Panel icon size:"
@@ -151,99 +151,98 @@ msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon size:"
 msgstr "Dimensiune pictograme panou:"
 
-#: package/contents/ui/ConfigGeneral.qml:215
-#: package/contents/ui/ConfigGeneral.qml:256
+#: qml/ConfigGeneral.qml:215 qml/ConfigGeneral.qml:256
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "Mică"
 
-#: package/contents/ui/ConfigGeneral.qml:244
+#: qml/ConfigGeneral.qml:244
 #, kde-format
 msgid "Automatically enabled when in Touch Mode"
 msgstr "Activată automat în regim tactil"
 
-#: package/contents/ui/ConfigGeneral.qml:252
+#: qml/ConfigGeneral.qml:252
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon spacing:"
 msgstr "Spațiere pictograme panou:"
 
-#: package/contents/ui/ConfigGeneral.qml:260
+#: qml/ConfigGeneral.qml:260
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "Normală"
 
-#: package/contents/ui/ConfigGeneral.qml:264
+#: qml/ConfigGeneral.qml:264
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "Mare"
 
-#: package/contents/ui/ConfigGeneral.qml:289
+#: qml/ConfigGeneral.qml:289
 #, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
 msgstr "Stabilește automat la Mare în regim tactil"
 
-#: package/contents/ui/ConfigGeneral.qml:315
+#: qml/ConfigGeneral.qml:315
 #, fuzzy, kde-format
 #| msgid "Entries"
 msgctxt "@title:column"
 msgid "Entries"
 msgstr "Înregistrări"
 
-#: package/contents/ui/ConfigGeneral.qml:319
+#: qml/ConfigGeneral.qml:319
 #, fuzzy, kde-format
 #| msgid "Always shown"
 msgctxt "@option:check, This is referring to system tray entries"
 msgid "Always show all"
 msgstr "Întotdeauna vizibil"
 
-#: package/contents/ui/ExpandedRepresentation.qml:59
+#: qml/ExpandedRepresentation.qml:59
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
 msgstr "Mergi înapoi"
 
-#: package/contents/ui/ExpandedRepresentation.qml:71
+#: qml/ExpandedRepresentation.qml:71
 #, kde-format
 msgid "Status and Notifications"
 msgstr "Stare și notificări"
 
-#: package/contents/ui/ExpandedRepresentation.qml:140
+#: qml/ExpandedRepresentation.qml:140
 #, kde-format
 msgid "More actions"
 msgstr "Acțiuni suplimentare"
 
-#: package/contents/ui/ExpandedRepresentation.qml:240
+#: qml/ExpandedRepresentation.qml:240
 #, kde-format
 msgid "Keep Open"
 msgstr "Ține deschis"
 
-#: package/contents/ui/ExpanderArrow.qml:26
+#: qml/ExpanderArrow.qml:26
 #, kde-format
 msgid "Show all the items in the system tray in a popup"
 msgstr "Arată toate elementele tăvii de sistem într-o fereastră plutitoare"
 
-#: package/contents/ui/ExpanderArrow.qml:40
+#: qml/ExpanderArrow.qml:40
 #, kde-format
 msgid "Close popup"
 msgstr "Închide balonul"
 
-#: package/contents/ui/ExpanderArrow.qml:40
+#: qml/ExpanderArrow.qml:40
 #, kde-format
 msgid "Show hidden icons"
 msgstr "Arată pictogramele ascunse"
 
-#: package/contents/ui/HiddenItemsView.qml:42
+#: qml/HiddenItemsView.qml:40
 #, kde-format
 msgctxt "@info:whatsthis accessible description for popup grid"
 msgid "Grid with %1 items in %2 columns"
 msgstr "Grilă cu %1 elemente în %2 coloane"
 
-#: package/contents/ui/HiddenItemsView.qml:46
+#: qml/HiddenItemsView.qml:44
 #, kde-format
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"

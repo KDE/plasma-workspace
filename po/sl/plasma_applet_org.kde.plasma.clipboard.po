@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-23 00:44+0000\n"
+"POT-Creation-Date: 2025-12-05 00:44+0000\n"
 "PO-Revision-Date: 2023-05-26 06:24+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -20,22 +20,22 @@ msgstr ""
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "X-Generator: Poedit 3.2.2\n"
 
-#: contents/ui/main.qml:29
+#: qml/main.qml:29
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "Vsebina odložišča"
 
-#: contents/ui/main.qml:30
+#: qml/main.qml:30
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Odložišče je prazno"
 
-#: contents/ui/main.qml:61
+#: qml/main.qml:61
 #, kde-format
 msgid "Clear History"
 msgstr "Počisti zgodovino"
 
-#: contents/ui/main.qml:70
+#: qml/main.qml:70
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "Nastavi odložišče…"

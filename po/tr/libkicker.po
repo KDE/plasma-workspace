@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-03 00:46+0000\n"
+"POT-Creation-Date: 2025-12-05 00:44+0000\n"
 "PO-Revision-Date: 2025-01-07 15:08+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -124,42 +124,42 @@ msgstr "Sık Kullanılanlar"
 msgid "Recently Used"
 msgstr "Son Kullanılanlar"
 
-#: recentusagemodel.cpp:158 recentusagemodel.cpp:313
+#: recentusagemodel.cpp:158 recentusagemodel.cpp:317
 #, kde-format
 msgid "Files"
 msgstr "Dosyalar"
 
-#: recentusagemodel.cpp:246
+#: recentusagemodel.cpp:250
 #, kde-format
 msgid "Forget Application"
 msgstr "Uygulamayı Unut"
 
-#: recentusagemodel.cpp:311
+#: recentusagemodel.cpp:315
 #, kde-format
 msgid "Folders"
 msgstr "Klasörler"
 
-#: recentusagemodel.cpp:348
+#: recentusagemodel.cpp:356
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Dosyayı İçeren Klasörü Aç"
 
-#: recentusagemodel.cpp:351
+#: recentusagemodel.cpp:359
 #, kde-format
 msgid "Forget File"
 msgstr "Dosyayı Unut"
 
-#: recentusagemodel.cpp:486
+#: recentusagemodel.cpp:494
 #, kde-format
 msgid "Forget All"
 msgstr "Tümünü Unut"
 
-#: recentusagemodel.cpp:488
+#: recentusagemodel.cpp:496
 #, kde-format
 msgid "Forget All Applications"
 msgstr "Tüm Uygulamaları Unut"
 
-#: recentusagemodel.cpp:491
+#: recentusagemodel.cpp:499
 #, kde-format
 msgid "Forget All Files"
 msgstr "Tüm Dosyaları Unut"

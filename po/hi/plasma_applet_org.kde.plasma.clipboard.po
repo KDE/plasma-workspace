@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-23 00:44+0000\n"
+"POT-Creation-Date: 2025-12-05 00:44+0000\n"
 "PO-Revision-Date: 2024-12-15 19:31+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -18,22 +18,22 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Generator: Lokalize 24.08.2\n"
 
-#: contents/ui/main.qml:29
+#: qml/main.qml:29
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "क्लिपबोर्ड के वस्तुएँ"
 
-#: contents/ui/main.qml:30
+#: qml/main.qml:30
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "क्लिपबोर्ड खाली है"
 
-#: contents/ui/main.qml:61
+#: qml/main.qml:61
 #, kde-format
 msgid "Clear History"
 msgstr "इतिहास साफ करें"
 
-#: contents/ui/main.qml:70
+#: qml/main.qml:70
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "क्लिपबोर्ड विन्यस्त करें…"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-23 00:44+0000\n"
+"POT-Creation-Date: 2025-12-05 00:44+0000\n"
 "PO-Revision-Date: 2024-06-07 14:58+0400\n"
 "Last-Translator: Kheyyam Godjayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -18,22 +18,22 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 24.07.70\n"
 
-#: contents/ui/main.qml:29
+#: qml/main.qml:29
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "Mübadilə buferi tərkibləri"
 
-#: contents/ui/main.qml:30
+#: qml/main.qml:30
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Mübadilə buferi boşdur"
 
-#: contents/ui/main.qml:61
+#: qml/main.qml:61
 #, kde-format
 msgid "Clear History"
 msgstr "Tarixçəni silmək"
 
-#: contents/ui/main.qml:70
+#: qml/main.qml:70
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "Mübadilə buferini tənzimləmək..."

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-23 00:44+0000\n"
+"POT-Creation-Date: 2025-12-05 00:44+0000\n"
 "PO-Revision-Date: 2023-12-26 08:18-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -17,22 +17,22 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 23.08.4\n"
 
-#: contents/ui/main.qml:29
+#: qml/main.qml:29
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "ਕਲਿੱਪਬੋਰਡ ਸਮੱਗਰੀ"
 
-#: contents/ui/main.qml:30
+#: qml/main.qml:30
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "ਕਲਿੱਪਬੋਰਡ ਖਾਲੀ ਹੈ"
 
-#: contents/ui/main.qml:61
+#: qml/main.qml:61
 #, kde-format
 msgid "Clear History"
 msgstr "ਅਤੀਤ ਸਾਫ਼ ਕਰੋ"
 
-#: contents/ui/main.qml:70
+#: qml/main.qml:70
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "…ਕਲਿੱਪਬੋਰਡ ਦੀ ਸੰਰਚਨਾ"

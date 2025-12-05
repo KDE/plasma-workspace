@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-03 00:46+0000\n"
+"POT-Creation-Date: 2025-12-05 00:44+0000\n"
 "PO-Revision-Date: 2020-09-28 01:43+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -128,43 +128,43 @@ msgstr "Lemmikud"
 msgid "Recently Used"
 msgstr "Viimati kasutatud"
 
-#: recentusagemodel.cpp:158 recentusagemodel.cpp:313
+#: recentusagemodel.cpp:158 recentusagemodel.cpp:317
 #, kde-format
 msgid "Files"
 msgstr "Failid"
 
-#: recentusagemodel.cpp:246
+#: recentusagemodel.cpp:250
 #, kde-format
 msgid "Forget Application"
 msgstr "Unusta rakendus"
 
-#: recentusagemodel.cpp:311
+#: recentusagemodel.cpp:315
 #, fuzzy, kde-format
 #| msgid "Folder"
 msgid "Folders"
 msgstr "Kataloog"
 
-#: recentusagemodel.cpp:348
+#: recentusagemodel.cpp:356
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Ava sisaldav kataloog"
 
-#: recentusagemodel.cpp:351
+#: recentusagemodel.cpp:359
 #, kde-format
 msgid "Forget File"
 msgstr "Unusta fail"
 
-#: recentusagemodel.cpp:486
+#: recentusagemodel.cpp:494
 #, kde-format
 msgid "Forget All"
 msgstr "Unusta kõik"
 
-#: recentusagemodel.cpp:488
+#: recentusagemodel.cpp:496
 #, kde-format
 msgid "Forget All Applications"
 msgstr "Unusta kõik rakendused"
 
-#: recentusagemodel.cpp:491
+#: recentusagemodel.cpp:499
 #, kde-format
 msgid "Forget All Files"
 msgstr "Unusta kõik failid"

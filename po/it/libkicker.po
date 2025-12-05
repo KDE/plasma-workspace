@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.homerun\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-03 00:46+0000\n"
+"POT-Creation-Date: 2025-12-05 00:44+0000\n"
 "PO-Revision-Date: 2025-05-18 09:02+0200\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -123,42 +123,42 @@ msgstr "Preferiti"
 msgid "Recently Used"
 msgstr "Utilizzati di recente"
 
-#: recentusagemodel.cpp:158 recentusagemodel.cpp:313
+#: recentusagemodel.cpp:158 recentusagemodel.cpp:317
 #, kde-format
 msgid "Files"
 msgstr "File"
 
-#: recentusagemodel.cpp:246
+#: recentusagemodel.cpp:250
 #, kde-format
 msgid "Forget Application"
 msgstr "Dimentica applicazione"
 
-#: recentusagemodel.cpp:311
+#: recentusagemodel.cpp:315
 #, kde-format
 msgid "Folders"
 msgstr "Cartelle"
 
-#: recentusagemodel.cpp:348
+#: recentusagemodel.cpp:356
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Apri cartella contenitore"
 
-#: recentusagemodel.cpp:351
+#: recentusagemodel.cpp:359
 #, kde-format
 msgid "Forget File"
 msgstr "Dimentica file"
 
-#: recentusagemodel.cpp:486
+#: recentusagemodel.cpp:494
 #, kde-format
 msgid "Forget All"
 msgstr "Dimentica tutto"
 
-#: recentusagemodel.cpp:488
+#: recentusagemodel.cpp:496
 #, kde-format
 msgid "Forget All Applications"
 msgstr "Dimentica tutte le applicazioni"
 
-#: recentusagemodel.cpp:491
+#: recentusagemodel.cpp:499
 #, kde-format
 msgid "Forget All Files"
 msgstr "Dimentica tutti i file"

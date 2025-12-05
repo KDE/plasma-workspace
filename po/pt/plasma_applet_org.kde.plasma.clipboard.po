@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-23 00:44+0000\n"
+"POT-Creation-Date: 2025-12-05 00:44+0000\n"
 "PO-Revision-Date: 2021-11-09 18:50+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -13,22 +13,22 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-POFile-SpellExtra: QR Azteca\n"
 
-#: contents/ui/main.qml:29
+#: qml/main.qml:29
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "Conteúdo da Área de Transferência"
 
-#: contents/ui/main.qml:30
+#: qml/main.qml:30
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "A área de transferência está em branco"
 
-#: contents/ui/main.qml:61
+#: qml/main.qml:61
 #, kde-format
 msgid "Clear History"
 msgstr "Limpar o Histórico"
 
-#: contents/ui/main.qml:70
+#: qml/main.qml:70
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "Configurar a Área de Transferência…"

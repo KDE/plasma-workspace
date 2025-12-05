@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-04 00:46+0000\n"
+"POT-Creation-Date: 2025-12-05 00:44+0000\n"
 "PO-Revision-Date: 2025-05-25 15:20+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -21,63 +21,63 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 25.04.1\n"
 
-#: package/contents/config/config.qml:13
+#: qml/config.qml:13
 #, kde-format
 msgid "General"
 msgstr "Orokorra"
 
-#: package/contents/ui/ConfigGeneral.qml:43
+#: qml/ConfigGeneral.qml:43
 #, fuzzy, kde-format
 #| msgid "Shown when relevant"
 msgctxt "@item:inlistbox Show this System Tray item when relevant"
 msgid "Show when relevant"
 msgstr "Erakutsi aproposa denean"
 
-#: package/contents/ui/ConfigGeneral.qml:47
+#: qml/ConfigGeneral.qml:47
 #, fuzzy, kde-format
 #| msgid "Always shown"
 msgctxt "@item:inlistbox Always show this System Tray item"
 msgid "Always show"
 msgstr "Beti agerian"
 
-#: package/contents/ui/ConfigGeneral.qml:51
+#: qml/ConfigGeneral.qml:51
 #, kde-format
 msgctxt "@item:inlistbox Show this System Tray item only in the expanded popup"
 msgid "Show only in popup"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:55
+#: qml/ConfigGeneral.qml:55
 #, kde-format
 msgctxt "@item:inlistbox Never show this System Tray item; disable it"
 msgid "Never show (disabled)"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:126
+#: qml/ConfigGeneral.qml:126
 #, kde-format
 msgid "Application Status"
 msgstr "Aplikazioaren egoera"
 
-#: package/contents/ui/ConfigGeneral.qml:128
+#: qml/ConfigGeneral.qml:128
 #, kde-format
 msgid "Communications"
 msgstr "Komunikazioak"
 
-#: package/contents/ui/ConfigGeneral.qml:130
+#: qml/ConfigGeneral.qml:130
 #, kde-format
 msgid "System Services"
 msgstr "Sistemaren zerbitzuak"
 
-#: package/contents/ui/ConfigGeneral.qml:132
+#: qml/ConfigGeneral.qml:132
 #, kde-format
 msgid "Hardware Control"
 msgstr "Hardwarearen kontrola"
 
-#: package/contents/ui/ConfigGeneral.qml:135
+#: qml/ConfigGeneral.qml:135
 #, kde-format
 msgid "Miscellaneous"
 msgstr "Beste zenbait"
 
-#: package/contents/ui/ConfigGeneral.qml:172
+#: qml/ConfigGeneral.qml:172
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -93,13 +93,13 @@ msgstr ""
 "haiek espero ez den moduan jokatzea eragin dezake.<nl/><nl/>Erabili ezarpen "
 "hau zeure ardurapean, eta ez eman auzien berri KDE edo aplikazioaren egileei."
 
-#: package/contents/ui/ConfigGeneral.qml:175
+#: qml/ConfigGeneral.qml:175
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
 msgstr "Arriskuak ulertzen ditut"
 
-#: package/contents/ui/ConfigGeneral.qml:187
+#: qml/ConfigGeneral.qml:187
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info:usagetip"
 #| msgid ""
@@ -120,7 +120,7 @@ msgstr ""
 "datuak galtzea eragingo baitu.<nl/><nl/>Horren ordez, arbela, bere historia "
 "ezgaitzeko edo elementu bakarra oroitzeko konfiguratu dezakezu."
 
-#: package/contents/ui/ConfigGeneral.qml:196
+#: qml/ConfigGeneral.qml:196
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -130,21 +130,21 @@ msgid ""
 "using a 3rd-party notification manager to handle notifications."
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:208
+#: qml/ConfigGeneral.qml:208
 #, fuzzy, kde-format
 #| msgid "Scale with Panel height"
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel height"
 msgstr "Eskalatu panelaren altuerarekin"
 
-#: package/contents/ui/ConfigGeneral.qml:209
+#: qml/ConfigGeneral.qml:209
 #, fuzzy, kde-format
 #| msgid "Scale with Panel width"
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel width"
 msgstr "Eskalatu panelaren zabalerarekin"
 
-#: package/contents/ui/ConfigGeneral.qml:211
+#: qml/ConfigGeneral.qml:211
 #, fuzzy, kde-format
 #| msgctxt "The arrangement of system tray icons in the Panel"
 #| msgid "Panel icon size:"
@@ -152,99 +152,98 @@ msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon size:"
 msgstr "Paneleko ikonoen neurria:"
 
-#: package/contents/ui/ConfigGeneral.qml:215
-#: package/contents/ui/ConfigGeneral.qml:256
+#: qml/ConfigGeneral.qml:215 qml/ConfigGeneral.qml:256
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "Txikia"
 
-#: package/contents/ui/ConfigGeneral.qml:244
+#: qml/ConfigGeneral.qml:244
 #, kde-format
 msgid "Automatically enabled when in Touch Mode"
 msgstr "Ukimen moduan automatikoki gaitzen da"
 
-#: package/contents/ui/ConfigGeneral.qml:252
+#: qml/ConfigGeneral.qml:252
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon spacing:"
 msgstr "Paneleko ikonoen arteko tartea:"
 
-#: package/contents/ui/ConfigGeneral.qml:260
+#: qml/ConfigGeneral.qml:260
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "Arrunta"
 
-#: package/contents/ui/ConfigGeneral.qml:264
+#: qml/ConfigGeneral.qml:264
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "Handia"
 
-#: package/contents/ui/ConfigGeneral.qml:289
+#: qml/ConfigGeneral.qml:289
 #, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
 msgstr "Ukimen moduan automatikoki ezarri handira"
 
-#: package/contents/ui/ConfigGeneral.qml:315
+#: qml/ConfigGeneral.qml:315
 #, fuzzy, kde-format
 #| msgid "Entries"
 msgctxt "@title:column"
 msgid "Entries"
 msgstr "Sarrerak"
 
-#: package/contents/ui/ConfigGeneral.qml:319
+#: qml/ConfigGeneral.qml:319
 #, fuzzy, kde-format
 #| msgid "Always shown"
 msgctxt "@option:check, This is referring to system tray entries"
 msgid "Always show all"
 msgstr "Beti agerian"
 
-#: package/contents/ui/ExpandedRepresentation.qml:59
+#: qml/ExpandedRepresentation.qml:59
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
 msgstr "Joan atzera"
 
-#: package/contents/ui/ExpandedRepresentation.qml:71
+#: qml/ExpandedRepresentation.qml:71
 #, kde-format
 msgid "Status and Notifications"
 msgstr "Egoera eta jakinarazpenak"
 
-#: package/contents/ui/ExpandedRepresentation.qml:140
+#: qml/ExpandedRepresentation.qml:140
 #, kde-format
 msgid "More actions"
 msgstr "Ekintza gehiago"
 
-#: package/contents/ui/ExpandedRepresentation.qml:240
+#: qml/ExpandedRepresentation.qml:240
 #, kde-format
 msgid "Keep Open"
 msgstr "Eduki irekita"
 
-#: package/contents/ui/ExpanderArrow.qml:26
+#: qml/ExpanderArrow.qml:26
 #, kde-format
 msgid "Show all the items in the system tray in a popup"
 msgstr "Erakutsi sistema-erretiluko elementu guztiak gainerakor batean"
 
-#: package/contents/ui/ExpanderArrow.qml:40
+#: qml/ExpanderArrow.qml:40
 #, kde-format
 msgid "Close popup"
 msgstr "Itxi gainerakorra"
 
-#: package/contents/ui/ExpanderArrow.qml:40
+#: qml/ExpanderArrow.qml:40
 #, kde-format
 msgid "Show hidden icons"
 msgstr "Erakutsi ezkutuko ikonoak"
 
-#: package/contents/ui/HiddenItemsView.qml:42
+#: qml/HiddenItemsView.qml:40
 #, kde-format
 msgctxt "@info:whatsthis accessible description for popup grid"
 msgid "Grid with %1 items in %2 columns"
 msgstr "%1 elementu eta %2 zutabeko sareta"
 
-#: package/contents/ui/HiddenItemsView.qml:46
+#: qml/HiddenItemsView.qml:44
 #, kde-format
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"

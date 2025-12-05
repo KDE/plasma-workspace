@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-04 00:46+0000\n"
-"PO-Revision-Date: 2025-12-03 15:43+0200\n"
+"POT-Creation-Date: 2025-12-05 00:44+0000\n"
+"PO-Revision-Date: 2025-12-04 17:05+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -18,63 +18,61 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 23.04.3\n"
 
-#: package/contents/config/config.qml:13
+#: qml/config.qml:13
 #, kde-format
 msgid "General"
 msgstr "Загальне"
 
-#: package/contents/ui/ConfigGeneral.qml:43
-#, fuzzy, kde-format
-#| msgid "Shown when relevant"
+#: qml/ConfigGeneral.qml:43
+#, kde-format
 msgctxt "@item:inlistbox Show this System Tray item when relevant"
 msgid "Show when relevant"
-msgstr "Показувати, якщо потрібно"
+msgstr "Показувати, якщо варто"
 
-#: package/contents/ui/ConfigGeneral.qml:47
-#, fuzzy, kde-format
-#| msgid "Always shown"
+#: qml/ConfigGeneral.qml:47
+#, kde-format
 msgctxt "@item:inlistbox Always show this System Tray item"
 msgid "Always show"
 msgstr "Завжди показувати"
 
-#: package/contents/ui/ConfigGeneral.qml:51
+#: qml/ConfigGeneral.qml:51
 #, kde-format
 msgctxt "@item:inlistbox Show this System Tray item only in the expanded popup"
 msgid "Show only in popup"
-msgstr ""
+msgstr "Показувати лише на контекстній панелі"
 
-#: package/contents/ui/ConfigGeneral.qml:55
+#: qml/ConfigGeneral.qml:55
 #, kde-format
 msgctxt "@item:inlistbox Never show this System Tray item; disable it"
 msgid "Never show (disabled)"
-msgstr ""
+msgstr "Ніколи не показувати (вимкнути)"
 
-#: package/contents/ui/ConfigGeneral.qml:126
+#: qml/ConfigGeneral.qml:126
 #, kde-format
 msgid "Application Status"
 msgstr "Стан програм"
 
-#: package/contents/ui/ConfigGeneral.qml:128
+#: qml/ConfigGeneral.qml:128
 #, kde-format
 msgid "Communications"
 msgstr "Обмін даними"
 
-#: package/contents/ui/ConfigGeneral.qml:130
+#: qml/ConfigGeneral.qml:130
 #, kde-format
 msgid "System Services"
 msgstr "Служби системи"
 
-#: package/contents/ui/ConfigGeneral.qml:132
+#: qml/ConfigGeneral.qml:132
 #, kde-format
 msgid "Hardware Control"
 msgstr "Керування обладнанням"
 
-#: package/contents/ui/ConfigGeneral.qml:135
+#: qml/ConfigGeneral.qml:135
 #, kde-format
 msgid "Miscellaneous"
 msgstr "Різне"
 
-#: package/contents/ui/ConfigGeneral.qml:172
+#: qml/ConfigGeneral.qml:172
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -90,13 +88,13 @@ msgstr ""
 "наслідків.<nl/><nl/>Використовуючи цей пункт ви берете відповідальність на "
 "себе — не повідомляйте про вади до KDE або автору програми."
 
-#: package/contents/ui/ConfigGeneral.qml:175
+#: qml/ConfigGeneral.qml:175
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
 msgstr "Хочу ризикнути"
 
-#: package/contents/ui/ConfigGeneral.qml:187
+#: qml/ConfigGeneral.qml:187
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -114,7 +112,7 @@ msgstr ""
 "обміну даних. Крім того, варто налаштувати буфер обміну даними так, щоб він "
 "не зберігав журнал дій або запам'ятовував лише один запис за раз."
 
-#: package/contents/ui/ConfigGeneral.qml:196
+#: qml/ConfigGeneral.qml:196
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -128,115 +126,114 @@ msgstr ""
 "якщо вами вручну додано окремий віджет сповіщень в іншому місці, або ви "
 "навмисне використовуєте сторонню програму для керування сповіщеннями."
 
-#: package/contents/ui/ConfigGeneral.qml:208
+#: qml/ConfigGeneral.qml:208
 #, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel height"
 msgstr "Масштабувати за висотою панелі"
 
-#: package/contents/ui/ConfigGeneral.qml:209
+#: qml/ConfigGeneral.qml:209
 #, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel width"
 msgstr "Масштабувати за шириною панелі"
 
-#: package/contents/ui/ConfigGeneral.qml:211
+#: qml/ConfigGeneral.qml:211
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon size:"
 msgstr "Розмір піктограм на панелі:"
 
-#: package/contents/ui/ConfigGeneral.qml:215
-#: package/contents/ui/ConfigGeneral.qml:256
+#: qml/ConfigGeneral.qml:215 qml/ConfigGeneral.qml:256
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "Малий"
 
-#: package/contents/ui/ConfigGeneral.qml:244
+#: qml/ConfigGeneral.qml:244
 #, kde-format
 msgid "Automatically enabled when in Touch Mode"
 msgstr "Автоматично вмикається у режимі сенсорного керування"
 
-#: package/contents/ui/ConfigGeneral.qml:252
+#: qml/ConfigGeneral.qml:252
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon spacing:"
 msgstr "Інтервал між піктограмами на панелі:"
 
-#: package/contents/ui/ConfigGeneral.qml:260
+#: qml/ConfigGeneral.qml:260
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "Звичайний"
 
-#: package/contents/ui/ConfigGeneral.qml:264
+#: qml/ConfigGeneral.qml:264
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "Великий"
 
-#: package/contents/ui/ConfigGeneral.qml:289
+#: qml/ConfigGeneral.qml:289
 #, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
 msgstr "У режимі сенсорного керування буде автоматично встановлено «Великий»"
 
-#: package/contents/ui/ConfigGeneral.qml:315
+#: qml/ConfigGeneral.qml:315
 #, kde-format
 msgctxt "@title:column"
 msgid "Entries"
 msgstr "Записи"
 
-#: package/contents/ui/ConfigGeneral.qml:319
+#: qml/ConfigGeneral.qml:319
 #, kde-format
 msgctxt "@option:check, This is referring to system tray entries"
 msgid "Always show all"
 msgstr "Завжди показувати усе"
 
-#: package/contents/ui/ExpandedRepresentation.qml:59
+#: qml/ExpandedRepresentation.qml:59
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
 msgstr "Назад"
 
-#: package/contents/ui/ExpandedRepresentation.qml:71
+#: qml/ExpandedRepresentation.qml:71
 #, kde-format
 msgid "Status and Notifications"
 msgstr "Стан і сповіщення"
 
-#: package/contents/ui/ExpandedRepresentation.qml:140
+#: qml/ExpandedRepresentation.qml:140
 #, kde-format
 msgid "More actions"
 msgstr "Додаткові дії"
 
-#: package/contents/ui/ExpandedRepresentation.qml:240
+#: qml/ExpandedRepresentation.qml:240
 #, kde-format
 msgid "Keep Open"
 msgstr "Тримати відкритим"
 
-#: package/contents/ui/ExpanderArrow.qml:26
+#: qml/ExpanderArrow.qml:26
 #, kde-format
 msgid "Show all the items in the system tray in a popup"
 msgstr "Показати на контекстній панелі усі пункти у системному лотку"
 
-#: package/contents/ui/ExpanderArrow.qml:40
+#: qml/ExpanderArrow.qml:40
 #, kde-format
 msgid "Close popup"
 msgstr "Закрити контекстну підказку"
 
-#: package/contents/ui/ExpanderArrow.qml:40
+#: qml/ExpanderArrow.qml:40
 #, kde-format
 msgid "Show hidden icons"
 msgstr "Показати приховані піктограми"
 
-#: package/contents/ui/HiddenItemsView.qml:42
+#: qml/HiddenItemsView.qml:40
 #, kde-format
 msgctxt "@info:whatsthis accessible description for popup grid"
 msgid "Grid with %1 items in %2 columns"
 msgstr "Таблиця з %1 записів у %2 стовпчики"
 
-#: package/contents/ui/HiddenItemsView.qml:46
+#: qml/HiddenItemsView.qml:44
 #, kde-format
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"

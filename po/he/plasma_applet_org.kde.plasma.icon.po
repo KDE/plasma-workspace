@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.icon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-12-05 00:44+0000\n"
 "PO-Revision-Date: 2023-10-04 09:35+0300\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew\n"
@@ -35,7 +35,7 @@ msgstr "פתיחת התיקייה המכילה"
 msgid "Properties for %1"
 msgstr "מאפיינים עבור %1"
 
-#: package/contents/ui/main.qml:40
+#: qml/main.qml:40
 #, kde-format
 msgid "Properties"
 msgstr "מאפיינים"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-04 00:46+0000\n"
+"POT-Creation-Date: 2025-12-05 00:44+0000\n"
 "PO-Revision-Date: 2025-12-03 16:42+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -19,63 +19,63 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
 "X-Generator: Lokalize 23.08.5\n"
 
-#: package/contents/config/config.qml:13
+#: qml/config.qml:13
 #, kde-format
 msgid "General"
 msgstr "عامّ"
 
-#: package/contents/ui/ConfigGeneral.qml:43
+#: qml/ConfigGeneral.qml:43
 #, fuzzy, kde-format
 #| msgid "Shown when relevant"
 msgctxt "@item:inlistbox Show this System Tray item when relevant"
 msgid "Show when relevant"
 msgstr "تظهر عند الاحتياج"
 
-#: package/contents/ui/ConfigGeneral.qml:47
+#: qml/ConfigGeneral.qml:47
 #, fuzzy, kde-format
 #| msgid "Always shown"
 msgctxt "@item:inlistbox Always show this System Tray item"
 msgid "Always show"
 msgstr "دائما ظاهرة"
 
-#: package/contents/ui/ConfigGeneral.qml:51
+#: qml/ConfigGeneral.qml:51
 #, kde-format
 msgctxt "@item:inlistbox Show this System Tray item only in the expanded popup"
 msgid "Show only in popup"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:55
+#: qml/ConfigGeneral.qml:55
 #, kde-format
 msgctxt "@item:inlistbox Never show this System Tray item; disable it"
 msgid "Never show (disabled)"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:126
+#: qml/ConfigGeneral.qml:126
 #, kde-format
 msgid "Application Status"
 msgstr "حالة التطبيق"
 
-#: package/contents/ui/ConfigGeneral.qml:128
+#: qml/ConfigGeneral.qml:128
 #, kde-format
 msgid "Communications"
 msgstr "التّواصل"
 
-#: package/contents/ui/ConfigGeneral.qml:130
+#: qml/ConfigGeneral.qml:130
 #, kde-format
 msgid "System Services"
 msgstr "خدمات النظام"
 
-#: package/contents/ui/ConfigGeneral.qml:132
+#: qml/ConfigGeneral.qml:132
 #, kde-format
 msgid "Hardware Control"
 msgstr "تحكّم العتاد"
 
-#: package/contents/ui/ConfigGeneral.qml:135
+#: qml/ConfigGeneral.qml:135
 #, kde-format
 msgid "Miscellaneous"
 msgstr "متنوّع"
 
-#: package/contents/ui/ConfigGeneral.qml:172
+#: qml/ConfigGeneral.qml:172
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -90,13 +90,13 @@ msgstr ""
 "استخدام هذا الإعداد إلى حدوث خلل غير متوقع.<nl/><nl/>استخدم هذا الإعداد على "
 "مسؤوليتك الخاصة، ولا تُبلغ كيدي أو مطور التطبيق عن أي مشاكل."
 
-#: package/contents/ui/ConfigGeneral.qml:175
+#: qml/ConfigGeneral.qml:175
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
 msgstr "أنا أفهم هذه المخاطر"
 
-#: package/contents/ui/ConfigGeneral.qml:187
+#: qml/ConfigGeneral.qml:187
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -113,7 +113,7 @@ msgstr ""
 "بدلاً من ذلك، فكر في ضبط الحافظة بحيث لا تحفظ السجل، أو بحيث تتذكر عنصرًا "
 "واحدًا فقط في كل مرة."
 
-#: package/contents/ui/ConfigGeneral.qml:196
+#: qml/ConfigGeneral.qml:196
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -127,115 +127,114 @@ msgstr ""
 "في مكان آخر، أو كنت تستخدم عن قصد مدير إشعارات تابع لجهة خارجية للتعامل مع "
 "الإشعارات."
 
-#: package/contents/ui/ConfigGeneral.qml:208
+#: qml/ConfigGeneral.qml:208
 #, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel height"
 msgstr "تكبير مع ارتفاع اللوحة"
 
-#: package/contents/ui/ConfigGeneral.qml:209
+#: qml/ConfigGeneral.qml:209
 #, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel width"
 msgstr "تكبير مع عرض اللوحة"
 
-#: package/contents/ui/ConfigGeneral.qml:211
+#: qml/ConfigGeneral.qml:211
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon size:"
 msgstr "حجم أيقونة اللوح:"
 
-#: package/contents/ui/ConfigGeneral.qml:215
-#: package/contents/ui/ConfigGeneral.qml:256
+#: qml/ConfigGeneral.qml:215 qml/ConfigGeneral.qml:256
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "صغير"
 
-#: package/contents/ui/ConfigGeneral.qml:244
+#: qml/ConfigGeneral.qml:244
 #, kde-format
 msgid "Automatically enabled when in Touch Mode"
 msgstr "يفعل آليّا في وضع اللمس"
 
-#: package/contents/ui/ConfigGeneral.qml:252
+#: qml/ConfigGeneral.qml:252
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon spacing:"
 msgstr "تباعد أيقونة اللوح:"
 
-#: package/contents/ui/ConfigGeneral.qml:260
+#: qml/ConfigGeneral.qml:260
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "عادي"
 
-#: package/contents/ui/ConfigGeneral.qml:264
+#: qml/ConfigGeneral.qml:264
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "كبير"
 
-#: package/contents/ui/ConfigGeneral.qml:289
+#: qml/ConfigGeneral.qml:289
 #, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
 msgstr "اجعله كبيراً آليّاً في وضع اللمس"
 
-#: package/contents/ui/ConfigGeneral.qml:315
+#: qml/ConfigGeneral.qml:315
 #, kde-format
 msgctxt "@title:column"
 msgid "Entries"
 msgstr "المُدخلات"
 
-#: package/contents/ui/ConfigGeneral.qml:319
+#: qml/ConfigGeneral.qml:319
 #, kde-format
 msgctxt "@option:check, This is referring to system tray entries"
 msgid "Always show all"
 msgstr "دائما أظهر الكل"
 
-#: package/contents/ui/ExpandedRepresentation.qml:59
+#: qml/ExpandedRepresentation.qml:59
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
 msgstr "عُد"
 
-#: package/contents/ui/ExpandedRepresentation.qml:71
+#: qml/ExpandedRepresentation.qml:71
 #, kde-format
 msgid "Status and Notifications"
 msgstr "الحالة والإشعارات"
 
-#: package/contents/ui/ExpandedRepresentation.qml:140
+#: qml/ExpandedRepresentation.qml:140
 #, kde-format
 msgid "More actions"
 msgstr "إجراءات أكثر"
 
-#: package/contents/ui/ExpandedRepresentation.qml:240
+#: qml/ExpandedRepresentation.qml:240
 #, kde-format
 msgid "Keep Open"
 msgstr "أبقه مفتوحاً"
 
-#: package/contents/ui/ExpanderArrow.qml:26
+#: qml/ExpanderArrow.qml:26
 #, kde-format
 msgid "Show all the items in the system tray in a popup"
 msgstr "أظهر كل عناصر صينية النظام في منبثقة"
 
-#: package/contents/ui/ExpanderArrow.qml:40
+#: qml/ExpanderArrow.qml:40
 #, kde-format
 msgid "Close popup"
 msgstr "أغلق المنبثقة"
 
-#: package/contents/ui/ExpanderArrow.qml:40
+#: qml/ExpanderArrow.qml:40
 #, kde-format
 msgid "Show hidden icons"
 msgstr "أظهر الأيقونات المخفية"
 
-#: package/contents/ui/HiddenItemsView.qml:42
+#: qml/HiddenItemsView.qml:40
 #, kde-format
 msgctxt "@info:whatsthis accessible description for popup grid"
 msgid "Grid with %1 items in %2 columns"
 msgstr "شبكة بـ %1 عناصر و  %2 عمود"
 
-#: package/contents/ui/HiddenItemsView.qml:46
+#: qml/HiddenItemsView.qml:44
 #, kde-format
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-03 00:46+0000\n"
-"PO-Revision-Date: 2025-12-02 10:28+0000\n"
+"PO-Revision-Date: 2025-12-04 09:02+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
 "Language: is\n"
@@ -591,6 +591,9 @@ msgid ""
 "Cannot change your own username while logged in; log out and then log in as "
 "another user to change this account’s username."
 msgstr ""
+"Notandi má ekki breyta sínu eigin notandanafni á meðan hann er skráður inn. "
+"Skráðu þig út og skráðu þig svo aftur inn sem annar notandi til að breyta "
+"notandanafninu á þessum notandaaðgangi."
 
 #: src/ui/UserDetailsPage.qml:186
 #, kde-format
@@ -599,6 +602,8 @@ msgid ""
 "Cannot change the username of a logged-in user; wait until this user logs "
 "out first."
 msgstr ""
+"Ekki er hægt að breyta notandanafni þessa innskráða notanda; bíddu þangað "
+"til þessi notandi skráir út."
 
 #: src/ui/UserDetailsPage.qml:214
 #, kde-format
@@ -639,6 +644,8 @@ msgid ""
 "Cannot delete yourself! Log out and then log in as another user to delete "
 "this user account."
 msgstr ""
+"Notandi má ekki eyða sjálfum sér! Skráðu þig út og skráðu þig svo aftur inn "
+"sem annar notandi til að eyða þessum notandaaðgangi."
 
 #: src/ui/UserDetailsPage.qml:286
 #, kde-format
