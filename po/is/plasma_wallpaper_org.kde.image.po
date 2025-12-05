@@ -2,16 +2,16 @@
 # Copyright (C) 2009 This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Sveinn í Felli <sveinki@nett.is>, 2009, 2010, 2022.
+# SPDX-FileCopyrightText: 2009, 2010, 2022, 2025 Sveinn í Felli <sveinki@nett.is>
 # SPDX-FileCopyrightText: 2022, 2023, 2024 Guðmundur Erlingsson <gudmundure@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 14:42+0000\n"
-"PO-Revision-Date: 2024-12-15 15:31+0000\n"
-"Last-Translator: Gummi <gudmundure@gmail.com>\n"
-"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2025-12-04 10:29+0000\n"
+"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
+"Language-Team: Icelandic\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,12 +25,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Guðmundur Erlingsson"
+msgstr "Guðmundur Erlingsson, Sveinn í Felli"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "gudmundure@gmail.com"
+msgstr "gudmundure@gmail.com, sv1@fellsnet.is"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:58
 #, kde-format
@@ -42,7 +42,7 @@ msgstr "Opna mynd"
 #, kde-format
 msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
-msgstr "Mappa með veggfóðursmyndum sem á að sýna sem skyggnusýningu"
+msgstr "Mappa með bakgrunnsmyndum sem á að sýna sem skyggnusýningu"
 
 #: imagepackage/contents/ui/config.qml:156
 #, kde-format
@@ -81,43 +81,41 @@ msgid "Tiled"
 msgstr "Flísalögð"
 
 #: imagepackage/contents/ui/config.qml:203
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Set as Wallpaper"
+#, kde-format
 msgctxt ""
 "@label:listbox part of a sentence: 'Switch dynamic wallpapers [based on]'"
 msgid "Switch dynamic wallpapers:"
-msgstr "Velja sem veggfóður"
+msgstr "Skipta um breytilegar bakgrunnsmyndir:"
 
 #: imagepackage/contents/ui/config.qml:211
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the Plasma style is light or dark "
-msgstr ""
+msgstr "Byggt á hvort stíll Plasma sé ljós eða dökkur "
 
 #: imagepackage/contents/ui/config.qml:213
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on the day-night cycle"
-msgstr ""
+msgstr "Byggt á dagur/nótt sólarhringnum"
 
 #: imagepackage/contents/ui/config.qml:217
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always use light variant"
-msgstr ""
+msgstr "Alltaf nota ljóst afbrigði"
 
 #: imagepackage/contents/ui/config.qml:221
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always use dark variant"
-msgstr ""
+msgstr "Alltaf nota dökkt afbrigði"
 
 #: imagepackage/contents/ui/config.qml:231
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
-msgstr ""
+msgstr "Grunnstilla…"
 
 #: imagepackage/contents/ui/config.qml:242
 #, kde-format
@@ -142,7 +140,7 @@ msgstr "Velja bakgrunnslit"
 #: imagepackage/contents/ui/main.qml:37
 #, kde-format
 msgid "Open Wallpaper Image"
-msgstr "Opna veggfóðursmynd"
+msgstr "Opna myndskrá fyrir bakgrunn"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:89
 #, kde-format
@@ -159,7 +157,7 @@ msgstr "Bæta við…"
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Wallpaper Image…"
-msgstr "Bæta við veggfóðursmynd…"
+msgstr "Bæta við bakgrunnsmynd…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:100
 #, kde-format
@@ -171,7 +169,7 @@ msgstr "Sækja nýtt..."
 #, kde-format
 msgctxt "@action:button"
 msgid "Get New Wallpaper Images…"
-msgstr "Sækja nýjar veggfóðursmyndir..."
+msgstr "Sækja nýjar bakgrunnsmyndir..."
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:34
 #, kde-format
@@ -181,19 +179,19 @@ msgstr "Opna möppu sem skráin er í"
 #: imagepackage/contents/ui/WallpaperDelegate.qml:40
 #, kde-format
 msgid "Restore wallpaper"
-msgstr "Endurheimta veggfóður"
+msgstr "Endurheimta bakgrunnsmynd"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:45
 #, kde-format
 msgid "Remove Wallpaper"
-msgstr "Fjarlægja veggfóður"
+msgstr "Fjarlægja bakgrunnsmynd"
 
 #: plasma-apply-wallpaperimage.cpp:28
 #, kde-format
 msgid ""
 "This tool allows you to set an image as the wallpaper for the Plasma session."
 msgstr ""
-"Með þessu verkfæri getur þú valið mynd sem veggfóður fyrir Plasma-setuna."
+"Með þessu verkfæri getur þú valið mynd sem bakgrunn fyrir Plasma-setuna."
 
 #: plasma-apply-wallpaperimage.cpp:30
 #, kde-format
@@ -201,8 +199,8 @@ msgid ""
 "An image file or an installed wallpaper kpackage that you wish to set as the "
 "wallpaper for your Plasma session"
 msgstr ""
-"Myndskrá eða uppsettur kpackage-veggfóðurspakki sem þú vilt velja sem "
-"veggfóður fyrir Plasma-setuna"
+"Myndskrá eða uppsettur kpackage-bakgrunnsmyndapakki sem þú vilt velja sem "
+"bakgrunn fyrir Plasma-setuna"
 
 #: plasma-apply-wallpaperimage.cpp:33
 #, kde-format
@@ -216,8 +214,9 @@ msgid ""
 "contact the author of the wallpaper to fix this, or rename the file "
 "yourself: %1"
 msgstr ""
-"Það er stök einföld gæsalöpp í skrárheiti veggfóðursins ('). Hafðu samband "
-"við höfund veggfóðursins til að laga þetta, eða gefðu skránni nýtt heiti: %1"
+"Það er stök einföld gæsalöpp í skráarheiti bakgrunnsmyndar ('). Hafðu "
+"samband við höfund bakgrunnsmyndar til að laga þetta, eða gefðu skránni nýtt "
+"heiti: %1"
 
 #: plasma-apply-wallpaperimage.cpp:99
 #, kde-format
@@ -227,18 +226,18 @@ msgstr "Ógilt fyllisnið tilgreint: %1"
 #: plasma-apply-wallpaperimage.cpp:115
 #, kde-format
 msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
-msgstr "Villa kom upp þegar reynt var að velja Plasma-veggfóður:\n"
+msgstr "Villa kom upp þegar reynt var að velja Plasma-bakgrunn:\n"
 
 #: plasma-apply-wallpaperimage.cpp:119
 #, kde-format
 msgid ""
 "Successfully set the wallpaper for all desktops to the KPackage based %1"
-msgstr "Tókst að stilla veggfóður fyrir öll skjáborð á KPackage-pakkann %1"
+msgstr "Tókst að stilla bakgrunnsmynd fyrir öll skjáborð á KPackage-pakkann %1"
 
 #: plasma-apply-wallpaperimage.cpp:121
 #, kde-format
 msgid "Successfully set the wallpaper for all desktops to the image %1"
-msgstr "Tókst að stilla veggfóður allra skjáborða á myndina %1"
+msgstr "Tókst að stilla bakgrunnsmynd allra skjáborða á myndina %1"
 
 #: plasma-apply-wallpaperimage.cpp:128
 #, kde-format
@@ -246,13 +245,13 @@ msgid ""
 "The file passed to be set as wallpaper does not exist, or we cannot identify "
 "it as a wallpaper: %1"
 msgstr ""
-"Skráin sem átti að velja sem veggfóður er ekki til, eða við getum ekki séð "
-"að hún geti verið veggfóður: %1"
+"Skráin sem átti að velja sem bakgrunnsmynd er ekki til, eða við getum ekki "
+"séð að hún geti verið bakgrunnur: %1"
 
 #: plugin/imagebackend.cpp:38
 #, kde-format
 msgid "Next Wallpaper Image"
-msgstr "Næsta veggfóðursmynd"
+msgstr "Næsta bakgrunnsmynd"
 
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
 #: plugin/imagebackend.cpp:355
@@ -351,13 +350,13 @@ msgstr "Opna möppu…"
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:275
 #, kde-format
 msgid "There are no wallpaper locations configured"
-msgstr "Engar staðsetningar veggfóðurs eru stilltar"
+msgstr "Engar staðsetningar bakgrunnsmynda eru stilltar"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:49
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Set as Wallpaper"
-msgstr "Velja sem veggfóður"
+msgstr "Setja sem bakgrunnsmynd"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:52
 #, kde-format
@@ -381,7 +380,7 @@ msgstr "Bæði"
 #, kde-kuit-format
 msgctxt "@info %1 is the dbus error message"
 msgid "An error occurred while attempting to set the Plasma wallpaper:<nl/>%1"
-msgstr "Villa kom upp þegar reynt var að velja Plasma-veggfóður:<nl/>%1"
+msgstr "Villa kom upp þegar reynt var að velja Plasma-bakgrunn:<nl/>%1"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:110
 #, kde-format

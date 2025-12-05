@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 14:42+0000\n"
+"POT-Creation-Date: 2025-12-05 02:34+0000\n"
 "PO-Revision-Date: 2021-08-12 11:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -126,42 +126,42 @@ msgstr "പ്രിയപ്പെട്ടവ"
 msgid "Recently Used"
 msgstr "അടുത്തിടെ ഉപയോഗിച്ചവ"
 
-#: recentusagemodel.cpp:168 recentusagemodel.cpp:317
+#: recentusagemodel.cpp:168 recentusagemodel.cpp:321
 #, kde-format
 msgid "Files"
 msgstr "ഫയലുകൾ"
 
-#: recentusagemodel.cpp:250
+#: recentusagemodel.cpp:254
 #, kde-format
 msgid "Forget Application"
 msgstr "പ്രയോഗത്തെ മറക്കുക"
 
-#: recentusagemodel.cpp:315
+#: recentusagemodel.cpp:319
 #, kde-format
 msgid "Folders"
 msgstr ""
 
-#: recentusagemodel.cpp:352
+#: recentusagemodel.cpp:360
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "അടങ്ങിയിരിക്കുന്ന അറ തുറക്കുക"
 
-#: recentusagemodel.cpp:355
+#: recentusagemodel.cpp:363
 #, kde-format
 msgid "Forget File"
 msgstr "ഫയൽ മറക്കുക"
 
-#: recentusagemodel.cpp:490
+#: recentusagemodel.cpp:498
 #, kde-format
 msgid "Forget All"
 msgstr "എല്ലാം മറക്കുക"
 
-#: recentusagemodel.cpp:492
+#: recentusagemodel.cpp:500
 #, kde-format
 msgid "Forget All Applications"
 msgstr "എല്ലാ പ്രയോഗങ്ങളും മറക്കുക"
 
-#: recentusagemodel.cpp:495
+#: recentusagemodel.cpp:503
 #, kde-format
 msgid "Forget All Files"
 msgstr "എല്ലാ ഫയലുകളും മറക്കുക"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 14:42+0000\n"
+"POT-Creation-Date: 2025-12-05 02:34+0000\n"
 "PO-Revision-Date: 2025-01-26 17:25+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -122,42 +122,42 @@ msgstr "பிடித்தவை"
 msgid "Recently Used"
 msgstr "சமீபத்தில் பயன்படுத்தியவை"
 
-#: recentusagemodel.cpp:168 recentusagemodel.cpp:317
+#: recentusagemodel.cpp:168 recentusagemodel.cpp:321
 #, kde-format
 msgid "Files"
 msgstr "கோப்புகள்"
 
-#: recentusagemodel.cpp:250
+#: recentusagemodel.cpp:254
 #, kde-format
 msgid "Forget Application"
 msgstr "செயலியை மறந்துவிடு"
 
-#: recentusagemodel.cpp:315
+#: recentusagemodel.cpp:319
 #, kde-format
 msgid "Folders"
 msgstr "அடைவுகள்"
 
-#: recentusagemodel.cpp:352
+#: recentusagemodel.cpp:360
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "கொண்டுள்ள அடைவைத் திற"
 
-#: recentusagemodel.cpp:355
+#: recentusagemodel.cpp:363
 #, kde-format
 msgid "Forget File"
 msgstr "கோப்பை மறந்துவிடு"
 
-#: recentusagemodel.cpp:490
+#: recentusagemodel.cpp:498
 #, kde-format
 msgid "Forget All"
 msgstr "அனைத்தையும் மறந்துவிடு"
 
-#: recentusagemodel.cpp:492
+#: recentusagemodel.cpp:500
 #, kde-format
 msgid "Forget All Applications"
 msgstr "அனைத்து செயலிகளையும் மறந்துவிடு"
 
-#: recentusagemodel.cpp:495
+#: recentusagemodel.cpp:503
 #, kde-format
 msgid "Forget All Files"
 msgstr "அனைத்து கோப்புகளையும் மறந்துவிடு"

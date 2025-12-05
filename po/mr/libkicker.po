@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 14:42+0000\n"
+"POT-Creation-Date: 2025-12-05 02:34+0000\n"
 "PO-Revision-Date: 2013-04-13 16:15+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -123,45 +123,45 @@ msgstr "पसंत जागा"
 msgid "Recently Used"
 msgstr ""
 
-#: recentusagemodel.cpp:168 recentusagemodel.cpp:317
+#: recentusagemodel.cpp:168 recentusagemodel.cpp:321
 #, fuzzy, kde-format
 #| msgctxt "Tab title"
 #| msgid "Files"
 msgid "Files"
 msgstr "फाईल्स"
 
-#: recentusagemodel.cpp:250
+#: recentusagemodel.cpp:254
 #, fuzzy, kde-format
 msgid "Forget Application"
 msgstr "पसंत अनुप्रयोग"
 
-#: recentusagemodel.cpp:315
+#: recentusagemodel.cpp:319
 #, fuzzy, kde-format
 #| msgid "Folder"
 msgid "Folders"
 msgstr "संचयीका"
 
-#: recentusagemodel.cpp:352
+#: recentusagemodel.cpp:360
 #, kde-format
 msgid "Open Containing Folder"
 msgstr ""
 
-#: recentusagemodel.cpp:355
+#: recentusagemodel.cpp:363
 #, fuzzy, kde-format
 msgid "Forget File"
 msgstr "दस्तऐवज विसरा"
 
-#: recentusagemodel.cpp:490
+#: recentusagemodel.cpp:498
 #, fuzzy, kde-format
 msgid "Forget All"
 msgstr "दस्तऐवज विसरा"
 
-#: recentusagemodel.cpp:492
+#: recentusagemodel.cpp:500
 #, fuzzy, kde-format
 msgid "Forget All Applications"
 msgstr "पसंत अनुप्रयोग"
 
-#: recentusagemodel.cpp:495
+#: recentusagemodel.cpp:503
 #, fuzzy, kde-format
 msgid "Forget All Files"
 msgstr "दस्तऐवज विसरा"

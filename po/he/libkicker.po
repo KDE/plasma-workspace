@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 14:42+0000\n"
+"POT-Creation-Date: 2025-12-05 02:34+0000\n"
 "PO-Revision-Date: 2025-01-08 16:38+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -125,42 +125,42 @@ msgstr "מועדפים"
 msgid "Recently Used"
 msgstr "היו בשימוש לאחרונה"
 
-#: recentusagemodel.cpp:168 recentusagemodel.cpp:317
+#: recentusagemodel.cpp:168 recentusagemodel.cpp:321
 #, kde-format
 msgid "Files"
 msgstr "קבצים"
 
-#: recentusagemodel.cpp:250
+#: recentusagemodel.cpp:254
 #, kde-format
 msgid "Forget Application"
 msgstr "לשכוח יישומים"
 
-#: recentusagemodel.cpp:315
+#: recentusagemodel.cpp:319
 #, kde-format
 msgid "Folders"
 msgstr "תיקייה"
 
-#: recentusagemodel.cpp:352
+#: recentusagemodel.cpp:360
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "פתיחת התיקייה המכילה"
 
-#: recentusagemodel.cpp:355
+#: recentusagemodel.cpp:363
 #, kde-format
 msgid "Forget File"
 msgstr "לשכוח קובץ"
 
-#: recentusagemodel.cpp:490
+#: recentusagemodel.cpp:498
 #, kde-format
 msgid "Forget All"
 msgstr "לשכוח הכול"
 
-#: recentusagemodel.cpp:492
+#: recentusagemodel.cpp:500
 #, kde-format
 msgid "Forget All Applications"
 msgstr "לשכוח את כל היישומים"
 
-#: recentusagemodel.cpp:495
+#: recentusagemodel.cpp:503
 #, kde-format
 msgid "Forget All Files"
 msgstr "לשכוח את כל הקבצים"
