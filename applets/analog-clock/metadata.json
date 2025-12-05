@@ -1,5 +1,4 @@
 {
-    "KPackageStructure": "Plasma/Applet",
     "KPlugin": {
         "Authors": [
             {
@@ -117,7 +116,6 @@
             "desktop"
         ],
         "Icon": "preferences-system-time",
-        "Id": "org.kde.plasma.analogclock",
         "License": "GPL-2.0+",
         "Name": "Analog Clock",
         "Name[af]": "Analooghorlosie",
