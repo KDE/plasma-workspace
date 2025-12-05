@@ -2,7 +2,7 @@ add_subdirectory(activitybar)
 add_subdirectory(icon)
 
 plasma_install_package(analog-clock org.kde.plasma.analogclock)
-plasma_install_package(manage-inputmethod org.kde.plasma.manage-inputmethod)
+add_subdirectory(manage-inputmethod)
 
 add_subdirectory(appmenu)
 if (KSysGuard_FOUND)

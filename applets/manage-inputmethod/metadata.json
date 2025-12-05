@@ -1,5 +1,4 @@
 {
-    "KPackageStructure": "Plasma/Applet",
     "KPlugin": {
         "Authors": [
             {
@@ -111,7 +110,6 @@
             "desktop"
         ],
         "Icon": "input-keyboard-virtual",
-        "Id": "org.kde.plasma.manage-inputmethod",
         "License": "GPL-2.0+",
         "Name": "Input Method",
         "Name[ar]": "طريقة الإدخال",
