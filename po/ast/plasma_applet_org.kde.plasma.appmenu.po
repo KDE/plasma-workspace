@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-12-06 00:44+0000\n"
 "PO-Revision-Date: 2023-05-03 22:35+0200\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -17,33 +17,33 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 23.04.0\n"
 
-#: package/contents/config/config.qml:13
-#, kde-format
-msgid "Appearance"
-msgstr "Aspeutu"
-
-#: package/contents/ui/configGeneral.qml:20
-#, kde-format
-msgid "Use single button for application menu"
-msgstr ""
-
-#: package/contents/ui/configGeneral.qml:26
-#, kde-format
-msgid "Show full application menu"
-msgstr ""
-
-#: package/contents/ui/MenuDelegate.qml:62
-#, kde-format
-msgctxt "@info:usagetip"
-msgid "Open a menu"
-msgstr ""
-
-#: plugin/appmenumodel.cpp:85
+#: appmenumodel.cpp:85
 #, kde-format
 msgid "Search"
 msgstr ""
 
-#: plugin/appmenumodel.cpp:92
+#: appmenumodel.cpp:92
 #, kde-format
 msgid "Search…"
+msgstr ""
+
+#: qml/config.qml:13
+#, kde-format
+msgid "Appearance"
+msgstr "Aspeutu"
+
+#: qml/configGeneral.qml:20
+#, kde-format
+msgid "Use single button for application menu"
+msgstr ""
+
+#: qml/configGeneral.qml:26
+#, kde-format
+msgid "Show full application menu"
+msgstr ""
+
+#: qml/MenuDelegate.qml:62
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Open a menu"
 msgstr ""

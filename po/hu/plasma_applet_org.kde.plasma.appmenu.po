@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-12-06 00:44+0000\n"
 "PO-Revision-Date: 2023-12-30 11:39+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -18,33 +18,33 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 23.08.4\n"
 
-#: package/contents/config/config.qml:13
-#, kde-format
-msgid "Appearance"
-msgstr "Megjelenés"
-
-#: package/contents/ui/configGeneral.qml:20
-#, kde-format
-msgid "Use single button for application menu"
-msgstr "Egy gomb használata alkalmazásmenüként"
-
-#: package/contents/ui/configGeneral.qml:26
-#, kde-format
-msgid "Show full application menu"
-msgstr "Teljes alkalmazásmenü megjelenítése"
-
-#: package/contents/ui/MenuDelegate.qml:62
-#, kde-format
-msgctxt "@info:usagetip"
-msgid "Open a menu"
-msgstr "Megnyit egy menüt"
-
-#: plugin/appmenumodel.cpp:85
+#: appmenumodel.cpp:85
 #, kde-format
 msgid "Search"
 msgstr "Keresés"
 
-#: plugin/appmenumodel.cpp:92
+#: appmenumodel.cpp:92
 #, kde-format
 msgid "Search…"
 msgstr "Keresés…"
+
+#: qml/config.qml:13
+#, kde-format
+msgid "Appearance"
+msgstr "Megjelenés"
+
+#: qml/configGeneral.qml:20
+#, kde-format
+msgid "Use single button for application menu"
+msgstr "Egy gomb használata alkalmazásmenüként"
+
+#: qml/configGeneral.qml:26
+#, kde-format
+msgid "Show full application menu"
+msgstr "Teljes alkalmazásmenü megjelenítése"
+
+#: qml/MenuDelegate.qml:62
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Open a menu"
+msgstr "Megnyit egy menüt"

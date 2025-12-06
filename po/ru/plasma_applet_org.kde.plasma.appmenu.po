@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_clock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-12-06 00:44+0000\n"
 "PO-Revision-Date: 2022-08-13 15:43+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -23,36 +23,36 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: package/contents/config/config.qml:13
-#, kde-format
-msgid "Appearance"
-msgstr "Внешний вид"
-
-#: package/contents/ui/configGeneral.qml:20
-#, kde-format
-msgid "Use single button for application menu"
-msgstr "Использовать одну кнопку для меню приложения"
-
-#: package/contents/ui/configGeneral.qml:26
-#, kde-format
-msgid "Show full application menu"
-msgstr "Показывать полную строку меню приложения"
-
-#: package/contents/ui/MenuDelegate.qml:62
-#, kde-format
-msgctxt "@info:usagetip"
-msgid "Open a menu"
-msgstr "Открыть меню"
-
-#: plugin/appmenumodel.cpp:85
+#: appmenumodel.cpp:85
 #, kde-format
 msgid "Search"
 msgstr "Поиск"
 
-#: plugin/appmenumodel.cpp:92
+#: appmenumodel.cpp:92
 #, kde-format
 msgid "Search…"
 msgstr "Поиск..."
+
+#: qml/config.qml:13
+#, kde-format
+msgid "Appearance"
+msgstr "Внешний вид"
+
+#: qml/configGeneral.qml:20
+#, kde-format
+msgid "Use single button for application menu"
+msgstr "Использовать одну кнопку для меню приложения"
+
+#: qml/configGeneral.qml:26
+#, kde-format
+msgid "Show full application menu"
+msgstr "Показывать полную строку меню приложения"
+
+#: qml/MenuDelegate.qml:62
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Open a menu"
+msgstr "Открыть меню"
 
 # placeholder
 #~ msgid "Search..."

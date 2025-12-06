@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-22 00:44+0000\n"
+"POT-Creation-Date: 2025-12-06 00:44+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -18,68 +18,68 @@ msgstr ""
 "plasma.cameraindicator.pot\n"
 "X-Crowdin-File-ID: 46293\n"
 
-#: contents/ui/FullRepresentation.qml:45
+#: qml/FullRepresentation.qml:45
 #, kde-format
 msgctxt "@title"
 msgid "Camera"
 msgstr "相机"
 
-#: contents/ui/FullRepresentation.qml:48
+#: qml/FullRepresentation.qml:48
 #, kde-format
 msgctxt "@info:status"
 msgid "Active"
 msgstr "活动"
 
-#: contents/ui/FullRepresentation.qml:50
+#: qml/FullRepresentation.qml:50
 #, kde-format
 msgctxt "@info:status"
 msgid "Idle"
 msgstr "空闲"
 
-#: contents/ui/FullRepresentation.qml:52
+#: qml/FullRepresentation.qml:52
 #, kde-format
 msgctxt "@info:status"
 msgid "Error"
 msgstr "错误"
 
-#: contents/ui/FullRepresentation.qml:54
+#: qml/FullRepresentation.qml:54
 #, kde-format
 msgctxt "@info:status"
 msgid "Creating"
 msgstr "正在创建"
 
-#: contents/ui/FullRepresentation.qml:56
+#: qml/FullRepresentation.qml:56
 #, kde-format
 msgctxt "@info:status"
 msgid "Suspended"
 msgstr "已挂起"
 
-#: contents/ui/FullRepresentation.qml:58
+#: qml/FullRepresentation.qml:58
 #, kde-format
 msgctxt "@info:status"
 msgid "Unknown"
 msgstr "未知"
 
-#: contents/ui/FullRepresentation.qml:76
+#: qml/FullRepresentation.qml:76
 #, kde-format
 msgctxt "@info:status %1 camera name"
 msgid "%1 is in use"
 msgstr "%1 正被使用"
 
-#: contents/ui/main.qml:25
+#: qml/main.qml:25
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Camera indicator is unavailable"
 msgstr "相机指示器不可用"
 
-#: contents/ui/main.qml:27
+#: qml/main.qml:27
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "A camera is in use"
 msgid_plural "%1 cameras are in use"
 msgstr[0] "%1 个相机正被使用"
 
-#: contents/ui/main.qml:29
+#: qml/main.qml:29
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "No camera is in use"

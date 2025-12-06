@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.manageinputmethod\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-12-06 00:44+0000\n"
 "PO-Revision-Date: 2023-02-01 23:35+0100\n"
 "Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -19,33 +19,33 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.12.1\n"
 
-#: contents/ui/main.qml:70
+#: qml/main.qml:70
 #, kde-format
 msgctxt "Opens the system settings module"
 msgid "Configure Virtual Keyboards..."
 msgstr "Virtuelle Tastaturen einrichten ..."
 
-#: contents/ui/main.qml:91
+#: qml/main.qml:91
 #, kde-format
 msgid "Virtual Keyboard: unavailable"
 msgstr "Virtuelle Tastatur: Nicht verfügbar"
 
-#: contents/ui/main.qml:104
+#: qml/main.qml:104
 #, kde-format
 msgid "Virtual Keyboard: disabled"
 msgstr "Virtuelle Tastatur: Deaktiviert"
 
-#: contents/ui/main.qml:120
+#: qml/main.qml:120
 #, kde-format
 msgid "Show Virtual Keyboard"
 msgstr "Virtuelle Tastatur anzeigen"
 
-#: contents/ui/main.qml:135
+#: qml/main.qml:135
 #, kde-format
 msgid "Virtual Keyboard: visible"
 msgstr "Virtuelle Tastatur: sichtbar"
 
-#: contents/ui/main.qml:149
+#: qml/main.qml:149
 #, kde-format
 msgid "Virtual Keyboard: enabled"
 msgstr "Virtuelle Tastatur: Aktiviert"

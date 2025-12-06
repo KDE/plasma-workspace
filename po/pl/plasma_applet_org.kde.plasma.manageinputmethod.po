@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-12-06 00:44+0000\n"
 "PO-Revision-Date: 2022-09-23 10:41+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -17,33 +17,33 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 
-#: contents/ui/main.qml:70
+#: qml/main.qml:70
 #, kde-format
 msgctxt "Opens the system settings module"
 msgid "Configure Virtual Keyboards..."
 msgstr "Ustawienia klawiatur ekranowych..."
 
-#: contents/ui/main.qml:91
+#: qml/main.qml:91
 #, kde-format
 msgid "Virtual Keyboard: unavailable"
 msgstr "Klawiatura ekranowa: niedostępna"
 
-#: contents/ui/main.qml:104
+#: qml/main.qml:104
 #, kde-format
 msgid "Virtual Keyboard: disabled"
 msgstr "Klawiatura ekranowa: wyłączona"
 
-#: contents/ui/main.qml:120
+#: qml/main.qml:120
 #, kde-format
 msgid "Show Virtual Keyboard"
 msgstr "Pokaż klawiaturę ekranową"
 
-#: contents/ui/main.qml:135
+#: qml/main.qml:135
 #, kde-format
 msgid "Virtual Keyboard: visible"
 msgstr "Klawiatura ekranowa: widoczna"
 
-#: contents/ui/main.qml:149
+#: qml/main.qml:149
 #, kde-format
 msgid "Virtual Keyboard: enabled"
 msgstr "Klawiatura ekranowa: włączona"

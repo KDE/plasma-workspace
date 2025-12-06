@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-12-06 00:44+0000\n"
 "PO-Revision-Date: 2022-08-03 13:59+0200\n"
 "Last-Translator: Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail."
 "com>\n"
@@ -21,33 +21,33 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: package/contents/config/config.qml:13
-#, kde-format
-msgid "Appearance"
-msgstr "Utsjånad"
-
-#: package/contents/ui/configGeneral.qml:20
-#, kde-format
-msgid "Use single button for application menu"
-msgstr "Vis einskildknapp for programmeny"
-
-#: package/contents/ui/configGeneral.qml:26
-#, kde-format
-msgid "Show full application menu"
-msgstr "Vis full programmeny"
-
-#: package/contents/ui/MenuDelegate.qml:62
-#, kde-format
-msgctxt "@info:usagetip"
-msgid "Open a menu"
-msgstr "Opna ein meny"
-
-#: plugin/appmenumodel.cpp:85
+#: appmenumodel.cpp:85
 #, kde-format
 msgid "Search"
 msgstr "Søk"
 
-#: plugin/appmenumodel.cpp:92
+#: appmenumodel.cpp:92
 #, kde-format
 msgid "Search…"
 msgstr "Søk …"
+
+#: qml/config.qml:13
+#, kde-format
+msgid "Appearance"
+msgstr "Utsjånad"
+
+#: qml/configGeneral.qml:20
+#, kde-format
+msgid "Use single button for application menu"
+msgstr "Vis einskildknapp for programmeny"
+
+#: qml/configGeneral.qml:26
+#, kde-format
+msgid "Show full application menu"
+msgstr "Vis full programmeny"
+
+#: qml/MenuDelegate.qml:62
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Open a menu"
+msgstr "Opna ein meny"

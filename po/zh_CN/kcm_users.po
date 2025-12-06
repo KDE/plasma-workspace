@@ -584,6 +584,8 @@ msgid ""
 "Cannot change your own username while logged in; log out and then log in as "
 "another user to change this account’s username."
 msgstr ""
+"您无法在登录时更改自己的用户名；请注销并登录为另一个用户以更改此账户的用户"
+"名。"
 
 #: src/ui/UserDetailsPage.qml:186
 #, kde-format
@@ -591,7 +593,7 @@ msgctxt "@label:tooltip"
 msgid ""
 "Cannot change the username of a logged-in user; wait until this user logs "
 "out first."
-msgstr ""
+msgstr "无法更改己登录用户的用户名；请在该用户注销后再进行更改。"
 
 #: src/ui/UserDetailsPage.qml:214
 #, kde-format
@@ -630,7 +632,7 @@ msgctxt "@label:tooltip"
 msgid ""
 "Cannot delete yourself! Log out and then log in as another user to delete "
 "this user account."
-msgstr ""
+msgstr "您无法删除自己的账户。请注销并登录为另一个用户以删除此用户账户。"
 
 #: src/ui/UserDetailsPage.qml:286
 #, kde-format

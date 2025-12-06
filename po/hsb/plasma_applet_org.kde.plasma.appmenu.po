@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-12-06 00:44+0000\n"
 "PO-Revision-Date: 2021-11-18 21:06+0100\n"
 "Last-Translator: Edward Wornar <edi.werner@gmx.de>\n"
 "Language-Team: Upper Sorbian <kde-i18n-doc@kde.org>\n"
@@ -17,33 +17,33 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
 "%100==4 ? 2 : 3;\n"
 
-#: package/contents/config/config.qml:13
-#, kde-format
-msgid "Appearance"
-msgstr "Napohlad"
-
-#: package/contents/ui/configGeneral.qml:20
-#, kde-format
-msgid "Use single button for application menu"
-msgstr "Jenički knefl za meni aplikacije wužiwać"
-
-#: package/contents/ui/configGeneral.qml:26
-#, kde-format
-msgid "Show full application menu"
-msgstr "Cyły meni aplikacije pokazać"
-
-#: package/contents/ui/MenuDelegate.qml:62
-#, kde-format
-msgctxt "@info:usagetip"
-msgid "Open a menu"
-msgstr ""
-
-#: plugin/appmenumodel.cpp:85
+#: appmenumodel.cpp:85
 #, kde-format
 msgid "Search"
 msgstr "Pytać"
 
-#: plugin/appmenumodel.cpp:92
+#: appmenumodel.cpp:92
 #, kde-format
 msgid "Search…"
 msgstr "Pytać..."
+
+#: qml/config.qml:13
+#, kde-format
+msgid "Appearance"
+msgstr "Napohlad"
+
+#: qml/configGeneral.qml:20
+#, kde-format
+msgid "Use single button for application menu"
+msgstr "Jenički knefl za meni aplikacije wužiwać"
+
+#: qml/configGeneral.qml:26
+#, kde-format
+msgid "Show full application menu"
+msgstr "Cyły meni aplikacije pokazać"
+
+#: qml/MenuDelegate.qml:62
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Open a menu"
+msgstr ""

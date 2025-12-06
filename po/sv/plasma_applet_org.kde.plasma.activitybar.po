@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-12-06 00:44+0000\n"
 "PO-Revision-Date: 2024-09-01 09:10+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -17,18 +17,18 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.05.2\n"
 
-#: contents/ui/main.qml:71
+#: qml/main.qml:71
 #, kde-format
 msgid "Switch to activity %1"
 msgstr "Byt till aktivitet %1"
 
-#: contents/ui/main.qml:91
+#: qml/main.qml:91
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Show Activity Manager"
 msgstr "Visa aktivitetshanterare"
 
-#: contents/ui/main.qml:99
+#: qml/main.qml:99
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Activities…"

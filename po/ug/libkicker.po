@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-05 00:44+0000\n"
+"POT-Creation-Date: 2025-12-06 00:44+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
@@ -17,48 +17,48 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: actionlist.cpp:92
+#: actionlist.cpp:93
 #, kde-format
 msgid "Open with:"
 msgstr "ئاچىدىغان پروگرامما:"
 
-#: actionlist.cpp:105
+#: actionlist.cpp:106
 #, kde-format
 msgid "Properties"
 msgstr "خاسلىق"
 
-#: actionlist.cpp:152
+#: actionlist.cpp:153
 #, kde-format
 msgid "Add to Desktop"
 msgstr "ئۈستەلئۈستىگە قوش"
 
-#: actionlist.cpp:159
+#: actionlist.cpp:160
 #, kde-format
 msgid "Pin to Task Manager"
 msgstr ""
 
-#: actionlist.cpp:163
+#: actionlist.cpp:164
 #, fuzzy, kde-format
 msgid "Add to Panel (Widget)"
 msgstr "تاختىغا قوش"
 
-#: actionlist.cpp:314 rootmodel.cpp:538
+#: actionlist.cpp:315 rootmodel.cpp:538
 #, fuzzy, kde-format
 #| msgid "Recent Documents"
 msgid "Recent Files"
 msgstr "يېقىنقى پۈتۈكلەر"
 
-#: actionlist.cpp:324
+#: actionlist.cpp:325
 #, fuzzy, kde-format
 msgid "Forget Recent Files"
 msgstr "يېقىنقى پۈتۈكلەر"
 
-#: actionlist.cpp:389
+#: actionlist.cpp:392
 #, fuzzy, kde-format
 msgid "Edit Application…"
 msgstr "پروگراممىلار"
 
-#: actionlist.cpp:421
+#: actionlist.cpp:424
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
@@ -82,7 +82,7 @@ msgid "%1 (%2)"
 msgstr ""
 
 #: appsmodel.cpp:38 appsmodel.cpp:74 computermodel.cpp:93 computermodel.cpp:219
-#: recentusagemodel.cpp:155 recentusagemodel.cpp:224
+#: recentusagemodel.cpp:156 recentusagemodel.cpp:225
 #, fuzzy, kde-format
 msgid "Applications"
 msgstr "پروگراممىلار"
@@ -118,50 +118,50 @@ msgstr ""
 msgid "Favorites"
 msgstr "يىغقۇچقا قوش"
 
-#: recentusagemodel.cpp:153
+#: recentusagemodel.cpp:154
 #, kde-format
 msgid "Recently Used"
 msgstr ""
 
-#: recentusagemodel.cpp:158 recentusagemodel.cpp:317
+#: recentusagemodel.cpp:159 recentusagemodel.cpp:318
 #, fuzzy, kde-format
 #| msgctxt "Tab title"
 #| msgid "Files"
 msgid "Files"
 msgstr "ھۆججەتلەر"
 
-#: recentusagemodel.cpp:250
+#: recentusagemodel.cpp:251
 #, fuzzy, kde-format
 msgid "Forget Application"
 msgstr "پروگراممىلار"
 
-#: recentusagemodel.cpp:315
+#: recentusagemodel.cpp:316
 #, fuzzy, kde-format
 #| msgid "Folder"
 msgid "Folders"
 msgstr "قىسقۇچ"
 
-#: recentusagemodel.cpp:356
+#: recentusagemodel.cpp:357
 #, kde-format
 msgid "Open Containing Folder"
 msgstr ""
 
-#: recentusagemodel.cpp:359
+#: recentusagemodel.cpp:360
 #, fuzzy, kde-format
 msgid "Forget File"
 msgstr "يېقىنقى پۈتۈكلەر"
 
-#: recentusagemodel.cpp:494
+#: recentusagemodel.cpp:504
 #, fuzzy, kde-format
 msgid "Forget All"
 msgstr "يېقىنقى پۈتۈكلەر"
 
-#: recentusagemodel.cpp:496
+#: recentusagemodel.cpp:506
 #, fuzzy, kde-format
 msgid "Forget All Applications"
 msgstr "پروگراممىلار"
 
-#: recentusagemodel.cpp:499
+#: recentusagemodel.cpp:509
 #, fuzzy, kde-format
 msgid "Forget All Files"
 msgstr "يېقىنقى پۈتۈكلەر"

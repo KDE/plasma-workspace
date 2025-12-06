@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-03 00:46+0000\n"
-"PO-Revision-Date: 2025-07-17 09:07+0200\n"
+"PO-Revision-Date: 2025-12-04 16:37+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.07.80\n"
+"X-Generator: Lokalize 25.11.90\n"
 
 #: src/fingerprintmodel.cpp:144 src/fingerprintmodel.cpp:228
 #, kde-format
@@ -633,6 +633,9 @@ msgid ""
 "Cannot change your own username while logged in; log out and then log in as "
 "another user to change this account’s username."
 msgstr ""
+"Vous ne pouvez pas modifier votre propre nom d'utilisateur lorsque vous êtes "
+"connecté. Veuillez vous déconnecter, puis vous connecter en tant qu’un autre "
+"utilisateur pour pouvoir modifier le nom d’utilisateur de votre compte."
 
 #: src/ui/UserDetailsPage.qml:186
 #, kde-format
@@ -641,6 +644,8 @@ msgid ""
 "Cannot change the username of a logged-in user; wait until this user logs "
 "out first."
 msgstr ""
+"Impossible de modifier le nom d'utilisateur d'un utilisateur déjà connecté. "
+"Veuillez attendre que ce dernier se déconnecte tout d'abord."
 
 #: src/ui/UserDetailsPage.qml:214
 #, kde-format
@@ -681,6 +686,8 @@ msgid ""
 "Cannot delete yourself! Log out and then log in as another user to delete "
 "this user account."
 msgstr ""
+"Impossible de vous supprimer ! Veuillez vous déconnecter, puis  reconnecter "
+"vous comme un autre utilisateur pour supprimer votre compte."
 
 #: src/ui/UserDetailsPage.qml:286
 #, kde-format

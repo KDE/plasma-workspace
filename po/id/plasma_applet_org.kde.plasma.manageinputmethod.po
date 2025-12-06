@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-12-06 00:44+0000\n"
 "PO-Revision-Date: 2024-10-02 18:43+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -17,33 +17,33 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 24.05.2\n"
 
-#: contents/ui/main.qml:70
+#: qml/main.qml:70
 #, kde-format
 msgctxt "Opens the system settings module"
 msgid "Configure Virtual Keyboards..."
 msgstr "Konfigurasi Keyboard Virtual..."
 
-#: contents/ui/main.qml:91
+#: qml/main.qml:91
 #, kde-format
 msgid "Virtual Keyboard: unavailable"
 msgstr "Keyboard Virtual: tak tersedia"
 
-#: contents/ui/main.qml:104
+#: qml/main.qml:104
 #, kde-format
 msgid "Virtual Keyboard: disabled"
 msgstr "Keyboard Virtual: dinonfungsikan"
 
-#: contents/ui/main.qml:120
+#: qml/main.qml:120
 #, kde-format
 msgid "Show Virtual Keyboard"
 msgstr "Tampilkan Keyboard Virtual..."
 
-#: contents/ui/main.qml:135
+#: qml/main.qml:135
 #, kde-format
 msgid "Virtual Keyboard: visible"
 msgstr "Keyboard Virtual: terlihat"
 
-#: contents/ui/main.qml:149
+#: qml/main.qml:149
 #, kde-format
 msgid "Virtual Keyboard: enabled"
 msgstr "Keyboard Virtual: difungsikan"

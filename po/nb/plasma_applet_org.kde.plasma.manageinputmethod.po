@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-12-06 00:44+0000\n"
 "PO-Revision-Date: 2025-02-14 23:06+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -18,33 +18,33 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: contents/ui/main.qml:70
+#: qml/main.qml:70
 #, kde-format
 msgctxt "Opens the system settings module"
 msgid "Configure Virtual Keyboards..."
 msgstr "Sett opp virtuelle tastatur …"
 
-#: contents/ui/main.qml:91
+#: qml/main.qml:91
 #, kde-format
 msgid "Virtual Keyboard: unavailable"
 msgstr "Virtuelt tastatur: utilgjengelig"
 
-#: contents/ui/main.qml:104
+#: qml/main.qml:104
 #, kde-format
 msgid "Virtual Keyboard: disabled"
 msgstr "Virtuelt tastatur: slått av"
 
-#: contents/ui/main.qml:120
+#: qml/main.qml:120
 #, kde-format
 msgid "Show Virtual Keyboard"
 msgstr "Vis virtuelt tastatur"
 
-#: contents/ui/main.qml:135
+#: qml/main.qml:135
 #, kde-format
 msgid "Virtual Keyboard: visible"
 msgstr "Virtuelt tastatur: synlig"
 
-#: contents/ui/main.qml:149
+#: qml/main.qml:149
 #, kde-format
 msgid "Virtual Keyboard: enabled"
 msgstr "Virtuelt tastatur: slått på"

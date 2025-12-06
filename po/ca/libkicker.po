@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-05 00:44+0000\n"
+"POT-Creation-Date: 2025-12-06 00:44+0000\n"
 "PO-Revision-Date: 2025-01-07 10:14+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -21,47 +21,47 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Generator: Lokalize 22.12.3\n"
 
-#: actionlist.cpp:92
+#: actionlist.cpp:93
 #, kde-format
 msgid "Open with:"
 msgstr "Obre amb:"
 
-#: actionlist.cpp:105
+#: actionlist.cpp:106
 #, kde-format
 msgid "Properties"
 msgstr "Propietats"
 
-#: actionlist.cpp:152
+#: actionlist.cpp:153
 #, kde-format
 msgid "Add to Desktop"
 msgstr "Afegeix a l'escriptori"
 
-#: actionlist.cpp:159
+#: actionlist.cpp:160
 #, kde-format
 msgid "Pin to Task Manager"
 msgstr "Fixa al gestor de tasques"
 
-#: actionlist.cpp:163
+#: actionlist.cpp:164
 #, kde-format
 msgid "Add to Panel (Widget)"
 msgstr "Afegeix al plafó (giny)"
 
-#: actionlist.cpp:314 rootmodel.cpp:538
+#: actionlist.cpp:315 rootmodel.cpp:538
 #, kde-format
 msgid "Recent Files"
 msgstr "Fitxers recents"
 
-#: actionlist.cpp:324
+#: actionlist.cpp:325
 #, kde-format
 msgid "Forget Recent Files"
 msgstr "Oblida els fitxers recents"
 
-#: actionlist.cpp:389
+#: actionlist.cpp:392
 #, kde-format
 msgid "Edit Application…"
 msgstr "Edita l'aplicació…"
 
-#: actionlist.cpp:421
+#: actionlist.cpp:424
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
@@ -85,7 +85,7 @@ msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
 #: appsmodel.cpp:38 appsmodel.cpp:74 computermodel.cpp:93 computermodel.cpp:219
-#: recentusagemodel.cpp:155 recentusagemodel.cpp:224
+#: recentusagemodel.cpp:156 recentusagemodel.cpp:225
 #, kde-format
 msgid "Applications"
 msgstr "Aplicacions"
@@ -121,47 +121,47 @@ msgstr "Ordinador"
 msgid "Favorites"
 msgstr "Preferits"
 
-#: recentusagemodel.cpp:153
+#: recentusagemodel.cpp:154
 #, kde-format
 msgid "Recently Used"
 msgstr "Usats recentment"
 
-#: recentusagemodel.cpp:158 recentusagemodel.cpp:317
+#: recentusagemodel.cpp:159 recentusagemodel.cpp:318
 #, kde-format
 msgid "Files"
 msgstr "Fitxers"
 
-#: recentusagemodel.cpp:250
+#: recentusagemodel.cpp:251
 #, kde-format
 msgid "Forget Application"
 msgstr "Oblida l'aplicació"
 
-#: recentusagemodel.cpp:315
+#: recentusagemodel.cpp:316
 #, kde-format
 msgid "Folders"
 msgstr "Carpetes"
 
-#: recentusagemodel.cpp:356
+#: recentusagemodel.cpp:357
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Obre la carpeta contenidora"
 
-#: recentusagemodel.cpp:359
+#: recentusagemodel.cpp:360
 #, kde-format
 msgid "Forget File"
 msgstr "Oblida un fitxer"
 
-#: recentusagemodel.cpp:494
+#: recentusagemodel.cpp:504
 #, kde-format
 msgid "Forget All"
 msgstr "Oblida-ho tot"
 
-#: recentusagemodel.cpp:496
+#: recentusagemodel.cpp:506
 #, kde-format
 msgid "Forget All Applications"
 msgstr "Oblida totes les aplicacions"
 
-#: recentusagemodel.cpp:499
+#: recentusagemodel.cpp:509
 #, kde-format
 msgid "Forget All Files"
 msgstr "Oblida tots els fitxers"

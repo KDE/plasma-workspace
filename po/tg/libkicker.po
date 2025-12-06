@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-05 00:44+0000\n"
+"POT-Creation-Date: 2025-12-06 00:44+0000\n"
 "PO-Revision-Date: 2020-09-21 13:33+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -17,48 +17,48 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 20.04.2\n"
 
-#: actionlist.cpp:92
+#: actionlist.cpp:93
 #, kde-format
 msgid "Open with:"
 msgstr "Кушодан ба воситаи:"
 
-#: actionlist.cpp:105
+#: actionlist.cpp:106
 #, kde-format
 msgid "Properties"
 msgstr "Хусусиятҳо"
 
-#: actionlist.cpp:152
+#: actionlist.cpp:153
 #, kde-format
 msgid "Add to Desktop"
 msgstr "Илова кардан ба мизи корӣ"
 
-#: actionlist.cpp:159
+#: actionlist.cpp:160
 #, kde-format
 msgid "Pin to Task Manager"
 msgstr "Васл кардан ба мудири вазифаҳо"
 
-#: actionlist.cpp:163
+#: actionlist.cpp:164
 #, kde-format
 msgid "Add to Panel (Widget)"
 msgstr "Илова кардан ба лавҳа (Виҷет)"
 
-#: actionlist.cpp:314 rootmodel.cpp:538
+#: actionlist.cpp:315 rootmodel.cpp:538
 #, kde-format
 msgid "Recent Files"
 msgstr "Файлҳои охирин"
 
-#: actionlist.cpp:324
+#: actionlist.cpp:325
 #, kde-format
 msgid "Forget Recent Files"
 msgstr "Пок кардани рӯйхати файлҳои охирин"
 
-#: actionlist.cpp:389
+#: actionlist.cpp:392
 #, fuzzy, kde-format
 #| msgid "Edit Application..."
 msgid "Edit Application…"
 msgstr "Таҳрир кардани барнома..."
 
-#: actionlist.cpp:421
+#: actionlist.cpp:424
 #, fuzzy, kde-format
 #| msgctxt "@action opens a software center with the application"
 #| msgid "Uninstall or Manage Add-Ons..."
@@ -86,7 +86,7 @@ msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
 #: appsmodel.cpp:38 appsmodel.cpp:74 computermodel.cpp:93 computermodel.cpp:219
-#: recentusagemodel.cpp:155 recentusagemodel.cpp:224
+#: recentusagemodel.cpp:156 recentusagemodel.cpp:225
 #, kde-format
 msgid "Applications"
 msgstr "Барномаҳо"
@@ -122,47 +122,47 @@ msgstr "Компютер"
 msgid "Favorites"
 msgstr "Баргузидаҳо"
 
-#: recentusagemodel.cpp:153
+#: recentusagemodel.cpp:154
 #, kde-format
 msgid "Recently Used"
 msgstr "Истифодашудаи охирин"
 
-#: recentusagemodel.cpp:158 recentusagemodel.cpp:317
+#: recentusagemodel.cpp:159 recentusagemodel.cpp:318
 #, kde-format
 msgid "Files"
 msgstr "Файлҳо"
 
-#: recentusagemodel.cpp:250
+#: recentusagemodel.cpp:251
 #, kde-format
 msgid "Forget Application"
 msgstr "Пок кардани барнома"
 
-#: recentusagemodel.cpp:315
+#: recentusagemodel.cpp:316
 #, kde-format
 msgid "Folders"
 msgstr ""
 
-#: recentusagemodel.cpp:356
+#: recentusagemodel.cpp:357
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Кушодани ҷузвадони марбут"
 
-#: recentusagemodel.cpp:359
+#: recentusagemodel.cpp:360
 #, kde-format
 msgid "Forget File"
 msgstr "Пок кардани файл"
 
-#: recentusagemodel.cpp:494
+#: recentusagemodel.cpp:504
 #, kde-format
 msgid "Forget All"
 msgstr "Ҳамаро пок кардан"
 
-#: recentusagemodel.cpp:496
+#: recentusagemodel.cpp:506
 #, kde-format
 msgid "Forget All Applications"
 msgstr "Пок кардани ҳамаи барномаҳо"
 
-#: recentusagemodel.cpp:499
+#: recentusagemodel.cpp:509
 #, kde-format
 msgid "Forget All Files"
 msgstr "Пок кардани ҳамаи файлҳо"

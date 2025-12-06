@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-12-06 00:44+0000\n"
 "PO-Revision-Date: 2025-08-04 21:10+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -18,33 +18,33 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
 "X-Generator: Lokalize 23.08.5\n"
 
-#: contents/ui/main.qml:70
+#: qml/main.qml:70
 #, kde-format
 msgctxt "Opens the system settings module"
 msgid "Configure Virtual Keyboards..."
 msgstr "اضبط لوحات المفاتيح الافتراضية..."
 
-#: contents/ui/main.qml:91
+#: qml/main.qml:91
 #, kde-format
 msgid "Virtual Keyboard: unavailable"
 msgstr "لوحة المفاتيح الافتراضيّة: غير متوفرة"
 
-#: contents/ui/main.qml:104
+#: qml/main.qml:104
 #, kde-format
 msgid "Virtual Keyboard: disabled"
 msgstr "لوحة المفاتيح الافتراضيّة: معطلة"
 
-#: contents/ui/main.qml:120
+#: qml/main.qml:120
 #, kde-format
 msgid "Show Virtual Keyboard"
 msgstr "أظهر لوحة المفاتيح الافتراضية"
 
-#: contents/ui/main.qml:135
+#: qml/main.qml:135
 #, kde-format
 msgid "Virtual Keyboard: visible"
 msgstr "لوحة المفاتيح الافتراضيّة: مرئية"
 
-#: contents/ui/main.qml:149
+#: qml/main.qml:149
 #, kde-format
 msgid "Virtual Keyboard: enabled"
 msgstr "لوحة المفاتيح الافتراضيّة: مفعلة"

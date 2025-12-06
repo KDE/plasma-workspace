@@ -24,18 +24,16 @@ msgid "General"
 msgstr "常规"
 
 #: qml/ConfigGeneral.qml:43
-#, fuzzy, kde-format
-#| msgid "Shown when relevant"
+#, kde-format
 msgctxt "@item:inlistbox Show this System Tray item when relevant"
 msgid "Show when relevant"
-msgstr "有作用时显示"
+msgstr ""
 
 #: qml/ConfigGeneral.qml:47
-#, fuzzy, kde-format
-#| msgid "Always shown"
+#, kde-format
 msgctxt "@item:inlistbox Always show this System Tray item"
 msgid "Always show"
-msgstr "总是显示"
+msgstr ""
 
 #: qml/ConfigGeneral.qml:51
 #, kde-format
@@ -106,6 +104,10 @@ msgid ""
 "configuring the clipboard to not save history, or to only remember one item "
 "at a time."
 msgstr ""
+"不建议禁用剪贴板，因为这将导致已复制的数据在复制来源的应用程序关闭后丢失。"
+"<nl/><nl/>请仅在您已经手动添加了一个独立的剪贴板小部件或使用第三方剪贴板管理"
+"器时禁用系统剪贴板。另外，您也可以将剪贴板配置为不保存任何历史记录，或者每次"
+"仅记住一个项目。"
 
 #: qml/ConfigGeneral.qml:196
 #, kde-kuit-format
@@ -116,6 +118,8 @@ msgid ""
 "added a standalone Notifications widget somewhere else, or are intentionally "
 "using a 3rd-party notification manager to handle notifications."
 msgstr ""
+"不建议禁用通知小部件，因为应用发送的通知将不再显示。<nl/><nl/>请仅在您已经手"
+"动添加了一个独立的通知小部件或使用第三方通知管理器时禁用系统通知。"
 
 #: qml/ConfigGeneral.qml:208
 #, kde-format
@@ -229,9 +233,3 @@ msgstr "在 %2 列中显示 %1 个项目的网格"
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
 msgstr "AILlmyjgGJP"
-
-#~ msgid "Always hidden"
-#~ msgstr "总是隐藏"
-
-#~ msgid "Disabled"
-#~ msgstr "已禁用"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-12-06 00:44+0000\n"
 "PO-Revision-Date: 2024-12-13 19:09+0530\n"
 "Last-Translator: Kali <EMAIL@ADDRESS>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -17,18 +17,18 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
 
-#: contents/ui/main.qml:71
+#: qml/main.qml:71
 #, kde-format
 msgid "Switch to activity %1"
 msgstr "%1 क्रियाकलापं प्रति स्विच कुर्वन्तु"
 
-#: contents/ui/main.qml:91
+#: qml/main.qml:91
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Show Activity Manager"
 msgstr "गतिविधिप्रबन्धकं दर्शयतु"
 
-#: contents/ui/main.qml:99
+#: qml/main.qml:99
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Activities…"

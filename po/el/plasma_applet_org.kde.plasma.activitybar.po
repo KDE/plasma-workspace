@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-12-06 00:44+0000\n"
 "PO-Revision-Date: 2024-09-21 13:08+0300\n"
 "Last-Translator: Δημήτρης Μηλιάτης <demetresmeliates+i18n@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -17,18 +17,18 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.08.0\n"
 
-#: contents/ui/main.qml:71
+#: qml/main.qml:71
 #, kde-format
 msgid "Switch to activity %1"
 msgstr "Εναλλαγή στη δραστηριότητα %1"
 
-#: contents/ui/main.qml:91
+#: qml/main.qml:91
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Show Activity Manager"
 msgstr "Εμφάνιση διαχειριστή δραστηριότητας"
 
-#: contents/ui/main.qml:99
+#: qml/main.qml:99
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Activities…"
