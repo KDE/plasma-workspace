@@ -52,8 +52,6 @@ class DeviceNotifierTest(dbusmock.DBusTestCase):
 
         cls.dbusmock = dbus.Interface(cls.obj_udisks2, dbusmock.MOCK_IFACE)
 
-        print("DBUS_SYSTEM_BUS_ADDRESS=", os.environ["DBUS_SYSTEM_BUS_ADDRESS"])
-
         options = AppiumOptions()
         options.set_capability("app", f"plasmawindowed -p org.kde.plasma.nano {WIDGET_ID}")
         options.set_capability("timeouts", {'implicit': 10000})
