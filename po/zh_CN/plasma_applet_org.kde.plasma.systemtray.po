@@ -27,25 +27,25 @@ msgstr "常规"
 #, kde-format
 msgctxt "@item:inlistbox Show this System Tray item when relevant"
 msgid "Show when relevant"
-msgstr ""
+msgstr "有作用时显示"
 
 #: qml/ConfigGeneral.qml:47
 #, kde-format
 msgctxt "@item:inlistbox Always show this System Tray item"
 msgid "Always show"
-msgstr ""
+msgstr "始终显示"
 
 #: qml/ConfigGeneral.qml:51
 #, kde-format
 msgctxt "@item:inlistbox Show this System Tray item only in the expanded popup"
 msgid "Show only in popup"
-msgstr ""
+msgstr "仅在弹窗中显示"
 
 #: qml/ConfigGeneral.qml:55
 #, kde-format
 msgctxt "@item:inlistbox Never show this System Tray item; disable it"
 msgid "Never show (disabled)"
-msgstr ""
+msgstr "不显示 (禁用)"
 
 #: qml/ConfigGeneral.qml:126
 #, kde-format

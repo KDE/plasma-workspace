@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2025-04-28 08:59+0200\n"
+"PO-Revision-Date: 2025-12-06 15:45+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.0\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #: components/ActionContainer.qml:80
 #, kde-format
@@ -458,9 +458,7 @@ msgstr ""
 #: main.qml:110
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
-msgstr ""
-"Fai clic con il pulsante centrale del mouse per accedere alla modalità Non "
-"disturbare"
+msgstr "Clic centrale per accedere alla modalità Non disturbare"
 
 #: main.qml:236
 #, kde-format
