@@ -238,7 +238,7 @@ def mount_filesystem(self, device_name):
 
     path = UDISKS2_BLOCK_DEVICES + device_name
 
-    job_path = self.create_job("filesystem-mount", [path])
+    job_path = self.create_job("filesystem-mount", path)
 
     self.finish_job(job_path)
 
@@ -268,45 +268,56 @@ def unmount_filesystem(self, device_name):
 
     path = UDISKS2_BLOCK_DEVICES + device_name
 
-    job_path = self.create_job("filesystem-unmount", [path])
-
-    blk_obj = dbusmock.get_object(path)
-
-    mount_points = dbus.Array([], signature="ay")
-
-    blk_obj.Set(UDISKS2_FILESYSTEM_IFACE, "MountPoints", mount_points)
+    job_path = self.create_job("filesystem-unmount", path)
 
     self.finish_job(job_path)
 
+    obj = dbusmock.get_object(path)
+
+    mount_points = dbus.Array([], signature="ay")
+
+    obj.Set(UDISKS2_FILESYSTEM_IFACE, "MountPoints", mount_points)
+
     userspace_mount_options = dbus.Array([], signature="s")
 
-    blk_obj.Set(UDISKS2_BLOCK_IFACE, "UserspaceMountOptions", userspace_mount_options)
+    obj.Set(UDISKS2_BLOCK_IFACE, "UserspaceMountOptions", userspace_mount_options)
 
 @dbus.service.method(MOCK_IFACE,
                      in_signature="s", out_signature="b")
-def check_filesystem(_self, device_name):
+def check_filesystem(self, device_name):
     """
     Convenience method to check a mock block device object
     simulates org.freedesktop.UDisks2.Filesystem.Check
     """
 
-    blk_path = UDISKS2_BLOCK_DEVICES + device_name
-    blk_obj = dbusmock.get_object(blk_path)
+    path = UDISKS2_BLOCK_DEVICES + device_name
 
-    return not blk_obj.is_damaged
+    job_path = self.create_job("filesystem-check", path)
+
+    self.finish_job(job_path)
+
+    obj = dbusmock.get_object(path)
+
+    return not obj.is_damaged
 
 @dbus.service.method(MOCK_IFACE,
                      in_signature="s", out_signature="b")
-def repair_filesystem(_self, device_name):
+def repair_filesystem(self, device_name):
     """
     Convenience method to repair a mock block device object
     simulates org.freedesktop.UDisks2.Filesystem.Repair
     """
 
     path = UDISKS2_BLOCK_DEVICES + device_name
+
+    job_path = self.create_job("filesystem-repair", path)
+
     obj = dbusmock.get_object(path)
 
+    self.finish_job(job_path)
+
     obj.is_damaged = False
+
     return True
 
 @dbus.service.method(MOCK_IFACE,
@@ -323,37 +334,37 @@ def eject_drive(self, drive_name):
 
     block_path = UDISKS2_BLOCK_DEVICES + drive_obj.block_name
 
-    block_obj = dbusmock.get_object(block_path)
+    old_block_obj = dbusmock.get_object(block_path)
 
     # Workaround: python-dbusmock does not support removing of individual dbus ifaces.
     # So remove the block_devices object and then add a new object without the
     # 'org.freedesktop.UDisks2.Filesystem' iface.
     block_props = {
-        "Device": block_obj.Get(UDISKS2_BLOCK_IFACE, "Device"),
-        "PreferredDevice": block_obj.Get(UDISKS2_BLOCK_IFACE, "PreferredDevice"),
-        "Symlinks": block_obj.Get(UDISKS2_BLOCK_IFACE, "Symlinks"),
-        "DeviceNumber": block_obj.Get(UDISKS2_BLOCK_IFACE, "DeviceNumber"),
-        "Id": block_obj.Get(UDISKS2_BLOCK_IFACE, "Id"),
-        "Size": block_obj.Get(UDISKS2_BLOCK_IFACE, "Size"),
-        "ReadOnly": block_obj.Get(UDISKS2_BLOCK_IFACE, "ReadOnly"),
-        "Drive": block_obj.Get(UDISKS2_BLOCK_IFACE, "Drive"),
-        "MDRaid": block_obj.Get(UDISKS2_BLOCK_IFACE, "MDRaid"),
-        "MDRaidMember": block_obj.Get(UDISKS2_BLOCK_IFACE, "MDRaidMember"),
-        "IdUsage": block_obj.Get(UDISKS2_BLOCK_IFACE, "IdUsage"),
-        "IdType": block_obj.Get(UDISKS2_BLOCK_IFACE, "IdType"),
-        "IdVersion": block_obj.Get(UDISKS2_BLOCK_IFACE, "IdVersion"),
-        "IdLabel": block_obj.Get(UDISKS2_BLOCK_IFACE, "IdLabel"),
-        "IdUUID": block_obj.Get(UDISKS2_BLOCK_IFACE, "IdUUID"),
-        "Configuration": block_obj.Get(UDISKS2_BLOCK_IFACE, "Configuration"),
-        "CryptoBackingDevice": block_obj.Get(UDISKS2_BLOCK_IFACE, "CryptoBackingDevice"),
-        "HintPartitionable": block_obj.Get(UDISKS2_BLOCK_IFACE, "HintPartitionable"),
-        "HintSystem": block_obj.Get(UDISKS2_BLOCK_IFACE, "HintSystem"),
-        "HintIgnore": block_obj.Get(UDISKS2_BLOCK_IFACE, "HintIgnore"),
-        "HintAuto": block_obj.Get(UDISKS2_BLOCK_IFACE, "HintAuto"),
-        "HintName": block_obj.Get(UDISKS2_BLOCK_IFACE, "HintName"),
-        "HintIconName": block_obj.Get(UDISKS2_BLOCK_IFACE, "HintIconName"),
-        "HintSymbolicIconName": block_obj.Get(UDISKS2_BLOCK_IFACE, "HintSymbolicIconName"),
-        "UserspaceMountOptions": block_obj.Get(UDISKS2_BLOCK_IFACE, "UserspaceMountOptions"),
+        "Device": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "Device"),
+        "PreferredDevice": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "PreferredDevice"),
+        "Symlinks": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "Symlinks"),
+        "DeviceNumber": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "DeviceNumber"),
+        "Id": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "Id"),
+        "Size": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "Size"),
+        "ReadOnly": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "ReadOnly"),
+        "Drive": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "Drive"),
+        "MDRaid": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "MDRaid"),
+        "MDRaidMember": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "MDRaidMember"),
+        "IdUsage": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "IdUsage"),
+        "IdType": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "IdType"),
+        "IdVersion": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "IdVersion"),
+        "IdLabel": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "IdLabel"),
+        "IdUUID": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "IdUUID"),
+        "Configuration": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "Configuration"),
+        "CryptoBackingDevice": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "CryptoBackingDevice"),
+        "HintPartitionable": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "HintPartitionable"),
+        "HintSystem": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "HintSystem"),
+        "HintIgnore": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "HintIgnore"),
+        "HintAuto": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "HintAuto"),
+        "HintName": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "HintName"),
+        "HintIconName": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "HintIconName"),
+        "HintSymbolicIconName": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "HintSymbolicIconName"),
+        "UserspaceMountOptions": old_block_obj.Get(UDISKS2_BLOCK_IFACE, "UserspaceMountOptions"),
     }
 
     block_methods = [
@@ -386,7 +397,7 @@ def eject_drive(self, drive_name):
         "Size": dbus.UInt64(0),
     }
 
-    job_path = self.create_job("drive-eject", [drive_path])
+    job_path = self.create_job("drive-eject", drive_path)
 
     self.finish_job(job_path)
 
@@ -398,16 +409,19 @@ def eject_drive(self, drive_name):
 
     drive_obj.UpdateProperties(UDISKS2_DRIVE_IFACE, changed_drive_props)
 
-    block_obj = dbusmock.get_object(block_path)
-    block_obj.UpdateProperties(UDISKS2_BLOCK_IFACE, changed_block_props)
+    new_block_obj = dbusmock.get_object(block_path)
+    new_block_obj.block_name = old_block_obj.block_name
+    new_block_obj.drive_name = old_block_obj.drive_name
+    new_block_obj.is_damaged = old_block_obj.is_damaged
+    new_block_obj.UpdateProperties(UDISKS2_BLOCK_IFACE, changed_block_props)
 
     main_obj.EmitSignal(
         dbusmock.OBJECT_MANAGER_IFACE, "InterfacesRemoved", "oas", [dbus.ObjectPath(block_path), [dbus.String(UDISKS2_FILESYSTEM_IFACE)]]
     )
 
 @dbus.service.method(MOCK_IFACE,
-                     in_signature="sao", out_signature="s")
-def create_job(self, operation, objects) -> str:
+                     in_signature="ss", out_signature="s")
+def create_job(self, operation, device_path) -> str:
     """
     Convenience method to create a job
     simulates org.freedesktop.UDisks2.Job
@@ -428,7 +442,7 @@ def create_job(self, operation, objects) -> str:
         "Rate": dbus.UInt64(0),
         "StartTime": dbus.UInt64(dt.timestamp()),
         "ExpectedEndTime": dbus.UInt64(0),
-        "Objects": dbus.Array(objects, signature="o"),
+        "Objects": dbus.Array([device_path], signature="o"),
         "StartedByUID": dbus.UInt32(0),
         "Cancelable": dbus.Boolean(False),
     }
