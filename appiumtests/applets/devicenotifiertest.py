@@ -151,6 +151,7 @@ class DeviceNotifierTest(dbusmock.DBusTestCase):
         expand_element.send_keys(Keys.ENTER)
         self.driver.find_element(by="description", value="This device can now be safely removed.")
         self.driver.find_element(AppiumBy.NAME, "No removable devices attached")
+        self.dbusmock.remove_mock_device("sda1")
 
     def test_5_check_device(self) -> None:
         """
@@ -175,6 +176,7 @@ class DeviceNotifierTest(dbusmock.DBusTestCase):
         fix_element.send_keys(Keys.ENTER)
 
         self.driver.find_element(by="description", value="Successfully repaired!")
+        self.dbusmock.remove_mock_device("sdb1")
 
 if __name__ == '__main__':
     unittest.main()
