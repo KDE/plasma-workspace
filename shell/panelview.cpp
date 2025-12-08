@@ -736,7 +736,7 @@ void PanelView::positionAndResizePanel()
     const QPoint pos = geometryByDistance(0).topLeft();
 
     const QRect geom = {pos, sizeHint};
-    bool geomChanged = geom == geometry();
+    bool geomChanged = geom != geometry();
 
     updateLayerWindow();
 
