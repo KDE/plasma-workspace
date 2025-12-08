@@ -139,16 +139,31 @@ QHash<int, QByteArray> DeviceControl::roleNames() const
 
 void DeviceControl::onDeviceAdded(const QString &udi)
 {
-    // There is a possibility that a device already present. Check it.
-    if (m_devicesUdi.contains(udi)) {
-        return;
-    }
+    qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: Added device signal arrived : " << udi;
 
     auto storageInfo = std::make_shared<StorageInfo>(udi);
 
     // check if the device is a storage device
     if (!storageInfo->isValid()) {
+        qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: device : " << udi << " is not storage device";
         return;
+    }
+
+    // The device may already be present; if so, reinitialize it.
+    if (auto it = m_devicesUdi.constFind(udi); it != m_devicesUdi.cend()) {
+        qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: device : " << udi << " already exists. Reinitializing";
+
+        QString parentUdi;
+
+        for (auto it = m_parentDevices.begin(); it != m_parentDevices.end(); ++it) {
+            for (int childPosition = 0; childPosition < it->size(); ++childPosition) {
+                if (udi == it->at(childPosition)->device().udi()) {
+                    parentUdi = it.key();
+                }
+            }
+        }
+
+        deviceDelayRemove(udi, parentUdi);
     }
 
     auto stateInfo = std::make_shared<StateInfo>(storageInfo);
@@ -243,6 +258,11 @@ void DeviceControl::onDeviceRemoved(const QString &udi)
             for (auto it = m_parentDevices.begin(); it != m_parentDevices.end(); ++it) {
                 for (int childPosition = 0; childPosition < it->size(); ++childPosition) {
                     if (udi == it->at(childPosition)->device().udi()) {
+                        // If the message does not exist, don't delay the removal.
+                        if (m_devices[position].messageInfo->getMessage().isEmpty()) {
+                            deviceDelayRemove(udi, it.key());
+                            return;
+                        }
                         auto timer = std::make_shared<QTimer>();
                         timer->setSingleShot(true);
                         timer->setInterval(REMOVE_INTERVAL);
