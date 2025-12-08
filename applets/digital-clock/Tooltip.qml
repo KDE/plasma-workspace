@@ -23,7 +23,7 @@ Item {
     implicitWidth: mainLayout.implicitWidth + Kirigami.Units.gridUnit
     implicitHeight: mainLayout.implicitHeight + Kirigami.Units.gridUnit
 
-    LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
+    LayoutMirroring.enabled: Application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
     Kirigami.Theme.colorSet: Kirigami.Theme.Window

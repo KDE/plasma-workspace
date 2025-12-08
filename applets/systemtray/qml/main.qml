@@ -23,7 +23,7 @@ ContainmentItem {
     Layout.minimumWidth: vertical ? Kirigami.Units.iconSizes.small : mainLayout.implicitWidth + Kirigami.Units.smallSpacing
     Layout.minimumHeight: vertical ? mainLayout.implicitHeight + Kirigami.Units.smallSpacing : Kirigami.Units.iconSizes.small
 
-    LayoutMirroring.enabled: !vertical && Qt.application.layoutDirection === Qt.RightToLeft
+    LayoutMirroring.enabled: !vertical && Application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
     readonly property alias systemTrayState: systemTrayState
@@ -408,7 +408,7 @@ ContainmentItem {
                     ]
                 }
 
-                LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
+                LayoutMirroring.enabled: Application.layoutDirection === Qt.RightToLeft
                 LayoutMirroring.childrenInherit: true
             }
         }

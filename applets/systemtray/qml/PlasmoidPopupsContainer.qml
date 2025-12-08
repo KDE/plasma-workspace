@@ -57,7 +57,7 @@ QQC2.StackView {
             }
 
             let unFlipped = systemTrayState.oldVisualIndex < systemTrayState.newVisualIndex;
-            if (Qt.application.layoutDirection !== Qt.LeftToRight) {
+            if (Application.layoutDirection !== Qt.LeftToRight) {
                 unFlipped = !unFlipped;
             }
 

@@ -20,7 +20,7 @@ KCM.ScrollViewKCM {
     title: i18n("Users")
 
     sidebarMode: !Kirigami.Settings.isMobile
-    LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
+    LayoutMirroring.enabled: Application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
     // Is create user button enabled
     property alias createUserEnabled: createUserButton.enabled

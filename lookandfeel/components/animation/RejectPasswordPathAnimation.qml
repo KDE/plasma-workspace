@@ -22,7 +22,7 @@ PathAnimation {
      * By default it is opposite to the application's layout direction, to
      * make an animation feel more "disturbing".
      */
-    property int initialDirection: Qt.application.layoutDirection === Qt.RightToLeft ? Qt.LeftToRight : Qt.RightToLeft
+    property int initialDirection: Application.layoutDirection === Qt.RightToLeft ? Qt.LeftToRight : Qt.RightToLeft
 
     alwaysRunToEnd: true
 

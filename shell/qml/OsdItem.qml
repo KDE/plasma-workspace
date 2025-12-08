@@ -51,7 +51,7 @@ RowLayout {
         Layout.preferredWidth: Kirigami.Units.iconSizes.medium
         Layout.preferredHeight: Kirigami.Units.iconSizes.medium
         Layout.alignment: Qt.AlignVCenter
-        source: root.icon + (Qt.application.layoutDirection === Qt.RightToLeft ? "-rtl" : "")
+        source: root.icon + (Application.layoutDirection === Qt.RightToLeft ? "-rtl" : "")
         visible: valid
     }
 

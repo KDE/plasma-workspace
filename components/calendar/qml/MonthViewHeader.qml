@@ -188,7 +188,7 @@ Item {
                     }
                 }
 
-                icon.name: Qt.application.layoutDirection === Qt.RightToLeft ? "go-next" : "go-previous"
+                icon.name: Application.layoutDirection === Qt.RightToLeft ? "go-next" : "go-previous"
                 display: T.AbstractButton.IconOnly
                 KeyNavigation.right: todayButton
 
@@ -221,7 +221,7 @@ Item {
                     }
                 }
 
-                icon.name: Qt.application.layoutDirection === Qt.RightToLeft ? "go-previous" : "go-next"
+                icon.name: Application.layoutDirection === Qt.RightToLeft ? "go-previous" : "go-next"
                 display: T.AbstractButton.IconOnly
                 KeyNavigation.tab: root.swipeView
 

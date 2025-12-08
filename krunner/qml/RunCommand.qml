@@ -27,7 +27,7 @@ ColumnLayout {
     property string priorSearch: ""
     property alias runnerManager: results.runnerManager
 
-    LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
+    LayoutMirroring.enabled: Application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
     function isKeyUp(event) {
