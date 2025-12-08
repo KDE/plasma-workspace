@@ -1544,6 +1544,9 @@ bool PanelView::canSetStrut() const
 
 void PanelView::updateExclusiveZone()
 {
+    if (!containment()) {
+        return;
+    }
     if (m_corona->isEditMode() && m_layerWindow && m_layerWindow->exclusionZone() == -1) {
         // We set the exclusve zone to make sure the ruler does not
         // overlap with the panel regardless of the visibility mode,
