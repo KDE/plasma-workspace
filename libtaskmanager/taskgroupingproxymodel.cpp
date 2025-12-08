@@ -206,7 +206,8 @@ void TaskGroupingProxyModel::Private::sourceDataChanged(QModelIndex topLeft, QMo
         QModelIndex proxyIndex = q->mapFromSource(sourceIndex);
 
         if (!proxyIndex.isValid()) {
-            return;
+            Q_ASSERT(false);
+            continue;
         }
 
         const QModelIndex parent = proxyIndex.parent();
