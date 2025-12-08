@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-05 00:44+0000\n"
-"PO-Revision-Date: 2025-05-25 15:20+0200\n"
+"PO-Revision-Date: 2025-12-07 23:50+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #: qml/config.qml:13
 #, kde-format
@@ -27,15 +27,13 @@ msgid "General"
 msgstr "Orokorra"
 
 #: qml/ConfigGeneral.qml:43
-#, fuzzy, kde-format
-#| msgid "Shown when relevant"
+#, kde-format
 msgctxt "@item:inlistbox Show this System Tray item when relevant"
 msgid "Show when relevant"
 msgstr "Erakutsi aproposa denean"
 
 #: qml/ConfigGeneral.qml:47
-#, fuzzy, kde-format
-#| msgid "Always shown"
+#, kde-format
 msgctxt "@item:inlistbox Always show this System Tray item"
 msgid "Always show"
 msgstr "Beti agerian"
@@ -44,13 +42,13 @@ msgstr "Beti agerian"
 #, kde-format
 msgctxt "@item:inlistbox Show this System Tray item only in the expanded popup"
 msgid "Show only in popup"
-msgstr ""
+msgstr "Erakutsi bakarrik leiho gainerakorrean"
 
 #: qml/ConfigGeneral.qml:55
 #, kde-format
 msgctxt "@item:inlistbox Never show this System Tray item; disable it"
 msgid "Never show (disabled)"
-msgstr ""
+msgstr "Ez erakutsi inoiz (ezgaituta)"
 
 #: qml/ConfigGeneral.qml:126
 #, kde-format
@@ -100,13 +98,7 @@ msgid "I understand the risks"
 msgstr "Arriskuak ulertzen ditut"
 
 #: qml/ConfigGeneral.qml:187
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:usagetip"
-#| msgid ""
-#| "Disabling the clipboard is not recommended, as it will cause copied data "
-#| "to be lost when the application it was copied from is closed.<nl/><nl/"
-#| ">Instead consider configuring the clipboard to disable its history, or "
-#| "only remember one item at a time."
+#, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
 "Disabling the clipboard is not recommended, as it will cause copied data to "
@@ -116,9 +108,12 @@ msgid ""
 "configuring the clipboard to not save history, or to only remember one item "
 "at a time."
 msgstr ""
-"Ez da gomendagarria arbela ezgaitzea, aplikazioa ixtean handik kopiatutako "
-"datuak galtzea eragingo baitu.<nl/><nl/>Horren ordez, arbela, bere historia "
-"ezgaitzeko edo elementu bakarra oroitzeko konfiguratu dezakezu."
+"Arbela ezgaitzea ez da gomendagarria, datuak kopiatu ziren aplikazioa ixtean "
+"kopiatutako datuak galtzea eragingo baitu.<nl/><nl/>Hori egin bakarrik eskuz "
+"beste nonbait arbela trepeta autonomo bat gehitu baduzu, edo hirugarrenen "
+"arbela-kudeatzaile bat erabiltzen ari bazara. Gainera, kontuan hartu arbela "
+"historia ez gordetzeko, edo aldiko elementu bakarra gordetzeko konfigura "
+"daitekeela."
 
 #: qml/ConfigGeneral.qml:196
 #, kde-kuit-format
@@ -129,25 +124,26 @@ msgid ""
 "added a standalone Notifications widget somewhere else, or are intentionally "
 "using a 3rd-party notification manager to handle notifications."
 msgstr ""
+"Jakinarazpen trepeta ezgaitzea ez da gomendagarria, ondoren, aplikazioek "
+"bidalitako jakinarazpenak ez baitira erakutsiko.<nl/><nl/>Hori egin bakarrik "
+"eskuz beste nonbait Jakinarazpen trepeta autonomo bat gehitu baduzu, edo "
+"jakinarazpenak kudeatzeko hirugarrenen arbela-kudeatzaile bat erabiltzen ari "
+"bazara."
 
 #: qml/ConfigGeneral.qml:208
-#, fuzzy, kde-format
-#| msgid "Scale with Panel height"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel height"
 msgstr "Eskalatu panelaren altuerarekin"
 
 #: qml/ConfigGeneral.qml:209
-#, fuzzy, kde-format
-#| msgid "Scale with Panel width"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel width"
 msgstr "Eskalatu panelaren zabalerarekin"
 
 #: qml/ConfigGeneral.qml:211
-#, fuzzy, kde-format
-#| msgctxt "The arrangement of system tray icons in the Panel"
-#| msgid "Panel icon size:"
+#, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon size:"
 msgstr "Paneleko ikonoen neurria:"
@@ -188,18 +184,16 @@ msgid "Automatically set to Large when in Touch Mode"
 msgstr "Ukimen moduan automatikoki ezarri handira"
 
 #: qml/ConfigGeneral.qml:315
-#, fuzzy, kde-format
-#| msgid "Entries"
+#, kde-format
 msgctxt "@title:column"
 msgid "Entries"
 msgstr "Sarrerak"
 
 #: qml/ConfigGeneral.qml:319
-#, fuzzy, kde-format
-#| msgid "Always shown"
+#, kde-format
 msgctxt "@option:check, This is referring to system tray entries"
 msgid "Always show all"
-msgstr "Beti agerian"
+msgstr "Beti dena agerian"
 
 #: qml/ExpandedRepresentation.qml:59
 #, kde-format

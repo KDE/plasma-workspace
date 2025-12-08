@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-12-08 00:45+0000\n"
 "PO-Revision-Date: 2024-05-12 20:05\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -23,27 +23,27 @@ msgstr ""
 "plasma_applet_org.kde.plasma.analogclock.po\n"
 "X-Crowdin-File-ID: 10810\n"
 
-#: contents/config/config.qml:13
+#: qml/config.qml:13
 #, kde-format
 msgid "Appearance"
 msgstr "Выгляд"
 
-#: contents/ui/configGeneral.qml:19
+#: qml/configGeneral.qml:19
 #, kde-format
 msgid "Show seconds hand"
 msgstr "Паказваць секундную стрэлку"
 
-#: contents/ui/configGeneral.qml:20
+#: qml/configGeneral.qml:20
 #, kde-format
 msgid "General:"
 msgstr "Асноўныя:"
 
-#: contents/ui/configGeneral.qml:24
+#: qml/configGeneral.qml:24
 #, kde-format
 msgid "Show time zone"
 msgstr "Паказваць часавы пояс"
 
-#: contents/ui/main.qml:59
+#: qml/main.qml:59
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Current time is %1; Current date is %2"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_clock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-12-08 00:45+0000\n"
 "PO-Revision-Date: 2014-03-28 22:50+0100\n"
 "Last-Translator: Jean Cayron <jean.cayron@gmail.com>\n"
 "Language-Team: Walloon <linux-wa@walon.org>\n"
@@ -20,28 +20,28 @@ msgstr ""
 "X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: contents/config/config.qml:13
+#: qml/config.qml:13
 #, kde-format
 msgid "Appearance"
 msgstr "Rivnance"
 
-#: contents/ui/configGeneral.qml:19
+#: qml/configGeneral.qml:19
 #, kde-format
 msgid "Show seconds hand"
 msgstr "Håyner l' aweye des &segondes"
 
-#: contents/ui/configGeneral.qml:20
+#: qml/configGeneral.qml:20
 #, fuzzy, kde-format
 #| msgid "General"
 msgid "General:"
 msgstr "Djenerå"
 
-#: contents/ui/configGeneral.qml:24
+#: qml/configGeneral.qml:24
 #, kde-format
 msgid "Show time zone"
 msgstr "Håyner l' &coisse ås eures"
 
-#: contents/ui/main.qml:59
+#: qml/main.qml:59
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Current time is %1; Current date is %2"

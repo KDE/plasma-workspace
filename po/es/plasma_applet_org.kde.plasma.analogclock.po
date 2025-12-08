@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.analogclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-12-08 00:45+0000\n"
 "PO-Revision-Date: 2025-06-04 19:37+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -20,27 +20,27 @@ msgstr ""
 "X-Generator: Lokalize 22.04.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: contents/config/config.qml:13
+#: qml/config.qml:13
 #, kde-format
 msgid "Appearance"
 msgstr "Apariencia"
 
-#: contents/ui/configGeneral.qml:19
+#: qml/configGeneral.qml:19
 #, kde-format
 msgid "Show seconds hand"
 msgstr "Mostrar el segundero"
 
-#: contents/ui/configGeneral.qml:20
+#: qml/configGeneral.qml:20
 #, kde-format
 msgid "General:"
 msgstr "General:"
 
-#: contents/ui/configGeneral.qml:24
+#: qml/configGeneral.qml:24
 #, kde-format
 msgid "Show time zone"
 msgstr "Mostrar la zona horaria"
 
-#: contents/ui/main.qml:59
+#: qml/main.qml:59
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Current time is %1; Current date is %2"

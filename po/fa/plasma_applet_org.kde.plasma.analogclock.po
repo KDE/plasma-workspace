@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_clock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-12-08 00:45+0000\n"
 "PO-Revision-Date: 2008-04-18 14:31+0330\n"
 "Last-Translator: Saied Taghavi <s.taghavi@gmail.com>\n"
 "Language-Team: Persian <kde-i18n-fa@kde.org>\n"
@@ -14,29 +14,29 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: contents/config/config.qml:13
+#: qml/config.qml:13
 #, kde-format
 msgid "Appearance"
 msgstr ""
 
-#: contents/ui/configGeneral.qml:19
+#: qml/configGeneral.qml:19
 #, fuzzy, kde-format
 #| msgid "Display the second hand"
 msgid "Show seconds hand"
 msgstr "نمایش عقربهٔ ثانیه"
 
-#: contents/ui/configGeneral.qml:20
+#: qml/configGeneral.qml:20
 #, kde-format
 msgid "General:"
 msgstr ""
 
-#: contents/ui/configGeneral.qml:24
+#: qml/configGeneral.qml:24
 #, fuzzy, kde-format
 #| msgid "Also display the time in text"
 msgid "Show time zone"
 msgstr "همچنین زمان را به صورت متنی نمایش بده"
 
-#: contents/ui/main.qml:59
+#: qml/main.qml:59
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Current time is %1; Current date is %2"

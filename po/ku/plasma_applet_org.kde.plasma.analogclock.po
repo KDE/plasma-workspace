@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_clock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-12-08 00:45+0000\n"
 "PO-Revision-Date: 2008-12-25 02:25+0200\n"
 "Last-Translator: Omer Ensari <oensari@gmail.com>\n"
 "Language-Team: Kurdish <ubuntu-l10n-kur@lists.ubuntu.com>\n"
@@ -20,30 +20,30 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Language: Kurdish\n"
 
-#: contents/config/config.qml:13
+#: qml/config.qml:13
 #, kde-format
 msgid "Appearance"
 msgstr ""
 
-#: contents/ui/configGeneral.qml:19
+#: qml/configGeneral.qml:19
 #, fuzzy, kde-format
 #| msgid "Show &seconds hand"
 msgid "Show seconds hand"
 msgstr "Jimêra &çirkeyan nîşan bide"
 
-#: contents/ui/configGeneral.qml:20
+#: qml/configGeneral.qml:20
 #, fuzzy, kde-format
 #| msgid "General"
 msgid "General:"
 msgstr "Giştî"
 
-#: contents/ui/configGeneral.qml:24
+#: qml/configGeneral.qml:24
 #, fuzzy, kde-format
 #| msgid "Show &time zone"
 msgid "Show time zone"
 msgstr "Herêma &demê nîşan bide"
 
-#: contents/ui/main.qml:59
+#: qml/main.qml:59
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Current time is %1; Current date is %2"

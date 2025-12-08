@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-12-08 00:45+0000\n"
 "PO-Revision-Date: 2024-07-29 16:53+0700\n"
 "Last-Translator: OIS <mistresssilvara@hotmail.com>\n"
 "Language-Team: Interlingue <>\n"
@@ -17,27 +17,27 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 24.07.70\n"
 
-#: contents/config/config.qml:13
+#: qml/config.qml:13
 #, kde-format
 msgid "Appearance"
 msgstr "Aspecte"
 
-#: contents/ui/configGeneral.qml:19
+#: qml/configGeneral.qml:19
 #, kde-format
 msgid "Show seconds hand"
 msgstr "Monstrar li indicator de secondes"
 
-#: contents/ui/configGeneral.qml:20
+#: qml/configGeneral.qml:20
 #, kde-format
 msgid "General:"
 msgstr "General:"
 
-#: contents/ui/configGeneral.qml:24
+#: qml/configGeneral.qml:24
 #, kde-format
 msgid "Show time zone"
 msgstr "Monstrar li zone horari"
 
-#: contents/ui/main.qml:59
+#: qml/main.qml:59
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Current time is %1; Current date is %2"

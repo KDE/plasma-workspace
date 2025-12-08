@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_clock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-12-08 00:45+0000\n"
 "PO-Revision-Date: 2008-12-14 13:00+0100\n"
 "Last-Translator: Mark Kwidzińsczi <mark@linuxcsb.org>\n"
 "Language-Team: Kashubian <i18n-csb@linuxcsb.org>\n"
@@ -20,30 +20,30 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2)\n"
 
-#: contents/config/config.qml:13
+#: qml/config.qml:13
 #, kde-format
 msgid "Appearance"
 msgstr "Wëzdrzatk"
 
-#: contents/ui/configGeneral.qml:19
+#: qml/configGeneral.qml:19
 #, fuzzy, kde-format
 #| msgid "Show &seconds hand"
 msgid "Show seconds hand"
 msgstr "Pòkażë &sekùndnik"
 
-#: contents/ui/configGeneral.qml:20
+#: qml/configGeneral.qml:20
 #, fuzzy, kde-format
 #| msgid "General"
 msgid "General:"
 msgstr "Òglowé"
 
-#: contents/ui/configGeneral.qml:24
+#: qml/configGeneral.qml:24
 #, fuzzy, kde-format
 #| msgid "Show &time zone"
 msgid "Show time zone"
 msgstr "Pòkazë &czasową conã"
 
-#: contents/ui/main.qml:59
+#: qml/main.qml:59
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Current time is %1; Current date is %2"

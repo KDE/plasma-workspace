@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_clock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-12-08 00:45+0000\n"
 "PO-Revision-Date: 2008-10-18 09:51+0530\n"
 "Last-Translator: Kartik Mistry <kartik.mistry@gmail.com>\n"
 "Language-Team: Gujarati <kde-i18n-doc@kde.org>\n"
@@ -17,30 +17,30 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: contents/config/config.qml:13
+#: qml/config.qml:13
 #, kde-format
 msgid "Appearance"
 msgstr "દેખાવ"
 
-#: contents/ui/configGeneral.qml:19
+#: qml/configGeneral.qml:19
 #, fuzzy, kde-format
 #| msgid "Show &seconds hand"
 msgid "Show seconds hand"
 msgstr "સેકન્ડ્સનો કાંટો બતાવો (&s)"
 
-#: contents/ui/configGeneral.qml:20
+#: qml/configGeneral.qml:20
 #, fuzzy, kde-format
 #| msgid "General"
 msgid "General:"
 msgstr "સામાન્ય"
 
-#: contents/ui/configGeneral.qml:24
+#: qml/configGeneral.qml:24
 #, fuzzy, kde-format
 #| msgid "Show &time zone"
 msgid "Show time zone"
 msgstr "સમયવિસ્તાર બતાવો (&t)"
 
-#: contents/ui/main.qml:59
+#: qml/main.qml:59
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Current time is %1; Current date is %2"
