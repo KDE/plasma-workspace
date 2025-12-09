@@ -11,6 +11,7 @@ plasma_add_applet(org.kde.plasma.appmenu
         appmenumodel.cpp
     RESOURCES
         main.xml
+    QML_ARGS DEPENDENCIES QtCore org.kde.plasma.core
 )
 
 target_link_libraries(org.kde.plasma.appmenu PRIVATE
