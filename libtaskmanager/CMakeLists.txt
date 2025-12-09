@@ -55,7 +55,12 @@ qt6_generate_wayland_protocol_client_sources(taskmanager
 
 generate_export_header(taskmanager)
 
-target_include_directories(taskmanager PUBLIC "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>" "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/taskmanager>")
+target_include_directories(taskmanager PUBLIC "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>" "$<INSTALL_INTERFACE:${K
+DE_INSTALL_INCLUDEDIR}/taskmanager>")
+
+# Optionally use Qt::Test if available to find a crash
+# This can be reverted before release hopefully
+find_package(Qt6Test ${QT_MIN_VERSION} CONFIG QUIET)
 
 target_link_libraries(taskmanager
     PUBLIC
@@ -78,6 +83,14 @@ target_link_libraries(taskmanager
         KF6::WindowSystem
         PW::KWorkspace
 )
+
+# Define and link Qt::Test only if available
+if(Qt6Test_FOUND)
+    target_compile_definitions(taskmanager PRIVATE HAVE_QTTEST=1)
+    target_link_libraries(taskmanager PRIVATE Qt::Test)
+else()
+    target_compile_definitions(taskmanager PRIVATE HAVE_QTTEST=0)
+endif()
 
 if (HAVE_X11)
     target_link_libraries(taskmanager PRIVATE KF6::IconThemes)
