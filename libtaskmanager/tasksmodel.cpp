@@ -25,6 +25,10 @@
 #include <QTimer>
 #include <QUrl>
 
+#if HAVE_QTTEST
+#include <QAbstractItemModelTester>
+#endif
+
 #include <algorithm>
 #include <numeric>
 #include <optional>
@@ -83,6 +87,7 @@ public:
     void forceResort();
     bool lessThan(const QModelIndex &left, const QModelIndex &right, bool sortOnlyLaunchers = false) const;
     std::optional<bool> lessThanByVirtualDesktop(const QModelIndex &left, const QModelIndex &right) const;
+    static void modelTest(QAbstractItemModel *model);
 
 private:
     TasksModel *const q;
@@ -142,9 +147,11 @@ void TasksModel::Private::initModels()
     //      -> TasksModel collapses (top-level) items into task lifecycle abstraction; sorts.
 
     concatProxyModel = new ConcatenateTasksProxyModel(q);
+    modelTest(concatProxyModel);
 
     if (!windowTasksModel) {
         windowTasksModel = new WindowTasksModel();
+        modelTest(windowTasksModel);
     }
 
     concatProxyModel->addSourceModel(windowTasksModel);
@@ -195,6 +202,7 @@ void TasksModel::Private::initModels()
 
     if (!startupTasksModel) {
         startupTasksModel = new StartupTasksModel();
+        modelTest(startupTasksModel);
     }
 
     concatProxyModel->addSourceModel(startupTasksModel);
@@ -266,6 +274,8 @@ void TasksModel::Private::initModels()
     });
 
     filterProxyModel = new TaskFilterProxyModel(q);
+    modelTest(filterProxyModel);
+
     filterProxyModel->setSourceModel(concatProxyModel);
     QObject::connect(filterProxyModel, &TaskFilterProxyModel::virtualDesktopChanged, q, &TasksModel::virtualDesktopChanged);
     QObject::connect(filterProxyModel, &TaskFilterProxyModel::screenGeometryChanged, q, &TasksModel::screenGeometryChanged);
@@ -281,6 +291,8 @@ void TasksModel::Private::initModels()
     QObject::connect(filterProxyModel, &TaskFilterProxyModel::filterHiddenChanged, q, &TasksModel::filterHiddenChanged);
 
     groupingProxyModel = new TaskGroupingProxyModel(q);
+    modelTest(groupingProxyModel);
+
     groupingProxyModel->setSourceModel(filterProxyModel);
     QObject::connect(groupingProxyModel, &TaskGroupingProxyModel::groupModeChanged, q, &TasksModel::groupModeChanged);
     QObject::connect(groupingProxyModel, &TaskGroupingProxyModel::blacklistedAppIdsChanged, q, &TasksModel::groupingAppIdBlacklistChanged);
@@ -1000,6 +1012,15 @@ bool TasksModel::Private::lessThan(const QModelIndex &left, const QModelIndex &r
         return (sortResult < 0);
     }
     }
+}
+
+void TasksModel::TasksModel::Private::modelTest(QAbstractItemModel *model)
+{
+#if HAVE_QTTEST
+    new QAbstractItemModelTester(model, model);
+#else
+    Q_UNUSED(model);
+#endif
 }
 
 TasksModel::TasksModel(QObject *parent)
