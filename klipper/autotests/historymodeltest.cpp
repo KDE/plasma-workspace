@@ -140,6 +140,7 @@ void HistoryModelTest::testClear()
     std::shared_ptr<HistoryModel> history = HistoryModel::self();
     std::unique_ptr<QAbstractItemModelTester> modelTest(new QAbstractItemModelTester(history.get()));
     history->setMaxSize(10);
+    history->clear();
     QCOMPARE(history->rowCount(), 0);
 
     history->clear();

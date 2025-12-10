@@ -197,7 +197,9 @@ void SystemClipboard::setMimeData(const HistoryItemConstPtr &data, SelectionMode
     owner.setProgram(QString::fromUtf8(helperLocation));
     owner.setArguments(
         {u"--mode"_s, QString::number(static_cast<int>(mode)), u"--reason"_s, QString::number(static_cast<int>(updateReason)), u"--uuid"_s, data->uuid()});
-    owner.startDetached();
+    qint64 pid;
+    owner.startDetached(&pid);
+    qDebug() << "running" << pid << owner.program() << owner.arguments();
 }
 
 void SystemClipboard::syncTo(SelectionMode mode)

@@ -151,7 +151,9 @@ HistoryModel::HistoryModel()
     });
 
     connect(this, &HistoryModel::changed, this, [this](bool isTop) {
+        qDebug() << "changed" << m_items.size();
         if (m_items.empty()) {
+            qDebug() << "clearing";
             m_clip->clear(SystemClipboard::SelectionMode(SystemClipboard::Selection | SystemClipboard::Clipboard));
             return;
         }
@@ -777,6 +779,7 @@ bool HistoryModel::loadHistory()
     m_starredCount = starredCount;
     endResetModel();
 
+    qDebug() << "set" << m_items[0]->text();
     m_clip->setMimeData(m_items[0], SystemClipboard::SelectionMode(SystemClipboard::Clipboard | SystemClipboard::Selection));
 
     return true;
@@ -941,6 +944,7 @@ void HistoryModel::slotIgnored(QClipboard::Mode mode)
 void HistoryModel::slotReceivedEmptyClipboard(QClipboard::Mode mode)
 {
     Q_ASSERT(m_bNoNullClipboard);
+    qDebug() << "received empty clipboard" << m_items.size();
     if (auto top = first()) {
         // keep old clipboard after someone set it to null
         qCDebug(KLIPPER_LOG) << "Resetting clipboard (Prevent empty clipboard)";
