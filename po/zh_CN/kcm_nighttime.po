@@ -24,8 +24,8 @@ msgid ""
 "Time-based features such as Night Light and dynamic wallpapers can be "
 "synchronized with the day-night cycle. Choose your preferred cycle here."
 msgstr ""
-"夜间模式和动态壁纸等基于时间的功能支持与日夜周期同步。请在此处选择您想要的周"
-"期。"
+"基于时间的功能，例如夜间模式和动态壁纸等，可以根据日夜周期同步切换。请在此选"
+"择想要使用的周期。"
 
 #: ui/main.qml:42
 #, kde-format
@@ -33,7 +33,7 @@ msgctxt ""
 "@label:listbox part of a sentence: 'Determine sunrise and sunset times "
 "[based on]'"
 msgid "Determine sunrise and sunset times:"
-msgstr "日出和日落时间的确定："
+msgstr "日出和日落时间的确定方式："
 
 #: ui/main.qml:47
 #, kde-format
@@ -111,7 +111,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option:radio"
 msgid "Use manual location:"
-msgstr "使用手动指定位置："
+msgstr "手动指定位置："
 
 #: ui/main.qml:176
 #, kde-format
