@@ -29,7 +29,7 @@ msgstr "Obecné"
 #: ConfigGeneral.qml:111
 #, kde-format
 msgid "Unavailable"
-msgstr ""
+msgstr "Nedostupný"
 
 #: data.js:5
 #, kde-format
@@ -53,8 +53,7 @@ msgid "Start a parallel session as a different user"
 msgstr "Spustit souběžné sezení jako jiný uživatel"
 
 #: data.js:19
-#, fuzzy, kde-format
-#| msgid "Shut Down"
+#, kde-format
 msgid "Shut down"
 msgstr "Vypnout"
 
@@ -74,8 +73,7 @@ msgid "Reboot the computer"
 msgstr "Restartovat počítač"
 
 #: data.js:33
-#, fuzzy, kde-format
-#| msgid "Log Out"
+#, kde-format
 msgid "Log out"
 msgstr "Odhlásit se"
 
