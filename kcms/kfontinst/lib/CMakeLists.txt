@@ -9,6 +9,7 @@ target_link_libraries(kfontinst
     KF6::I18n
     KF6::KIOCore
     Fontconfig::Fontconfig
+    Freetype::Freetype
     PRIVATE
     Qt::Xml
     Qt::Gui

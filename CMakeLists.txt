@@ -149,6 +149,12 @@ set_package_properties(ZLIB PROPERTIES DESCRIPTION "Support for gzip compressed 
                        TYPE REQUIRED
                       )
 
+find_package(Freetype)
+set_package_properties(Freetype PROPERTIES DESCRIPTION "Software library to render fonts"
+                       URL "https://freetype.org"
+                       TYPE OPTIONAL
+                      )
+
 find_package(Fontconfig)
 set_package_properties(Fontconfig PROPERTIES DESCRIPTION "Font access configuration library"
                        URL "https://www.freedesktop.org/wiki/Software/fontconfig"

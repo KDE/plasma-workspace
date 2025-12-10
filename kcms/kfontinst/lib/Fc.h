@@ -9,6 +9,7 @@
 #include "kfontinst_export.h"
 #include <QUrl>
 #include <fontconfig/fontconfig.h>
+#include <fontconfig/fcfreetype.h>
 
 #include "kfontinst_export.h"
 
