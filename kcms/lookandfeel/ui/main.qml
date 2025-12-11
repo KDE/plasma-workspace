@@ -35,6 +35,11 @@ KCM.AbstractKCM {
                 onToggled: automaticModeAction.trigger()
             }
         },
+        Kirigami.Action {
+            icon.name: "document-save"
+            text: i18nc("@action:button", "Save Current Theme…")
+            onTriggered: kcm.push("LookAndFeelSnapshot.qml")
+        },
         NewStuff.Action {
             configFile: "lookandfeel.knsrc"
             text: i18nc("@action:intoolbar", "Get New…")

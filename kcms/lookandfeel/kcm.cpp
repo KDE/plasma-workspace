@@ -10,8 +10,11 @@
 */
 
 #include "kcm.h"
+#include "klookandfeelmanifest.h"
 #include "lookandfeeldata.h"
+#include "lookandfeelnamevalidator.h"
 #include "lookandfeelsettings.h"
+#include "screenshotmaker.h"
 
 #include <KPackage/PackageLoader>
 
@@ -255,6 +258,8 @@ KCMLookandFeel::KCMLookandFeel(QObject *parent, const KPluginMetaData &data)
     qmlRegisterUncreatableType<KLookAndFeelManager>(uri, 1, 0, "LookandFeelManager", u"Can't create LookandFeelManager"_s);
     qmlRegisterType<LookAndFeelInformation>(uri, 1, 0, "LookAndFeelInformation");
     qmlRegisterType<ItemModelRow>(uri, 1, 0, "ItemModelRow");
+    qmlRegisterType<LookAndFeelNameValidator>(uri, 1, 0, "LookAndFeelNameValidator");
+    qmlRegisterType<ScreenshotMaker>(uri, 1, 0, "ScreenshotMaker");
     qmlRegisterUncreatableMetaObject(KLookAndFeel::staticMetaObject, uri, 1, 0, "LookAndFeel", QStringLiteral("for enums"));
 
     m_model = new QStandardItemModel(this);
@@ -458,6 +463,21 @@ void KCMLookandFeel::apply()
     if (!settings()->automaticLookAndFeel()) {
         m_lnf->save(package, m_selectedContents);
     }
+}
+
+void KCMLookandFeel::saveCurrentTheme(const QString &name, const QUrl &url)
+{
+    const QString path = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/plasma/look-and-feel/") + name;
+
+    KLookAndFeelManifest manifest = KLookAndFeelManifest::snapshot();
+    manifest.setId(name);
+    manifest.setName(name);
+    manifest.setPreview(url.toLocalFile());
+    manifest.write(path);
+
+    KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"));
+    pkg.setPath(path);
+    addKPackageToModel(pkg);
 }
 
 KLookAndFeelManager::Contents KCMLookandFeel::themeContents() const

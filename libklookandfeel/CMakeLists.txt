@@ -34,6 +34,7 @@ target_sources(klookandfeel PRIVATE
 
     klookandfeel.cpp
     klookandfeelmanager.cpp
+    klookandfeelmanifest.cpp
 )
 
 target_link_libraries(klookandfeel
@@ -78,6 +79,7 @@ install(
     FILES
         klookandfeel.h
         klookandfeelmanager.h
+        klookandfeelmanifest.h
         ${CMAKE_CURRENT_BINARY_DIR}/klookandfeel_export.h
     DESTINATION
         ${KDE_INSTALL_INCLUDEDIR}/klookandfeel
