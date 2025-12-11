@@ -6,8 +6,11 @@ add_subdirectory(tool)
 kcmutils_add_qml_kcm(kcm_lookandfeel)
 target_sources(kcm_lookandfeel PRIVATE
     kcm.cpp
+    lookandfeelnamevalidator.cpp
+    screenshotmaker.cpp
 )
 target_link_libraries(kcm_lookandfeel PRIVATE
+    Qt6::DBus
     KF6::ConfigGui
     KF6::KCMUtils
     KF6::KCMUtilsQuick
