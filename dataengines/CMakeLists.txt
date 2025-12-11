@@ -5,4 +5,3 @@ remove_definitions(-DQT_NO_CAST_FROM_BYTEARRAY)
 
 add_subdirectory(applicationjobs)
 add_subdirectory(executable)
-add_subdirectory(notifications)
