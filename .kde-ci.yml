@@ -57,7 +57,6 @@ Dependencies:
     'plasma/libkscreen': '@same'
     'plasma/libksysguard': '@same'
     'plasma/plasma-nano': '@same'
-    'plasma/plasma5support': '@same'
     'plasma/plasma-activities': '@same'
     'plasma/plasma-activities-stats': '@same'
     'plasma/knighttime': '@same'
