@@ -182,6 +182,7 @@ public:
 public Q_SLOTS:
     void defaults() override;
     void apply();
+    void saveCurrentTheme(const QString &name, const QUrl &preview);
 
 Q_SIGNALS:
     void showConfirmation();
