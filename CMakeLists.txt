@@ -52,7 +52,7 @@ endif()
 option(BUILD_CAMERAINDICATOR "Build the camera indicator Plasma applet" ${BUILD_CAMERAINDICATOR_DEFAULT})
 
 find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
-                    Concurrent Core5Compat DBus Location Network Positioning Quick QuickWidgets
+                    Concurrent DBus Location Network Positioning Quick QuickWidgets
                     ShaderTools Sql Svg Widgets)
 
 if (Qt6Gui_VERSION VERSION_GREATER_EQUAL "6.10.0")
@@ -67,7 +67,6 @@ find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
                     Notifications NotifyConfig Package Parts Prison Runner StatusNotifierItem
                     Svg TextEditor TextWidgets Wallet ColorScheme
                     OPTIONAL_COMPONENTS DocTools)
-find_package(Plasma5Support ${PROJECT_DEP_VERSION} REQUIRED)
 find_package(Plasma ${PROJECT_DEP_VERSION} REQUIRED)
 find_package(PlasmaQuick ${PROJECT_DEP_VERSION} REQUIRED)
 find_package(KWayland ${PROJECT_DEP_VERSION} REQUIRED)
