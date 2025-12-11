@@ -81,8 +81,6 @@ ecm_finalize_qml_module(systemtrayplugin)
 
 target_link_libraries(org.kde.plasma.systemtray PRIVATE systemtray_static)
 
-install(FILES statusnotifieritem.operations DESTINATION ${PLASMA5SUPPORT_DATA_INSTALL_DIR}/services)
-
 if(BUILD_TESTING)
   add_subdirectory(autotests)
   add_subdirectory(tests)
