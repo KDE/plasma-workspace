@@ -29,6 +29,7 @@ target_sources(klipperplugin
 target_link_libraries(klipperplugin
     PRIVATE
         Qt::Qml
+        Qt::Quick
         klipper
 )
 

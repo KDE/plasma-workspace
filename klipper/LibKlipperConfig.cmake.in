@@ -1,0 +1,9 @@
+@PACKAGE_INIT@
+
+include(CMakeFindDependencyMacro)
+find_dependency(Qt6Sql "@QT_MIN_VERSION@")
+find_dependency(KF6GuiAddons "@KF6_MIN_VERSION@")
+find_dependency(KF6GlobalAccel "@KF6_MIN_VERSION@")
+find_dependency(KF6KIO "@KF6_MIN_VERSION@")
+
+include("${CMAKE_CURRENT_LIST_DIR}/LibKlipperLibraryTargets.cmake")
