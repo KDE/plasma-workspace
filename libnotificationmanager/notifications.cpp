@@ -10,6 +10,8 @@
 #include <QDebug>
 #include <QFile>
 #include <QMetaEnum>
+#include <QPointer>
+
 #include <canberra.h>
 
 #include <KConfig>
@@ -106,6 +108,8 @@ public:
     KDescendantsProxyModel *flattenModel = nullptr;
     ca_context *canberraContext = nullptr;
     LimitedRowCountProxyModel *limiterModel = nullptr;
+
+    QPointer<KNotification> inhibitionSummaryNotification;
 
 private:
     Notifications *const q;
@@ -903,26 +907,37 @@ void Notifications::showInhibitionSummary(Urgency urgency, const QStringList &bl
         return;
     }
 
-    auto *notification = new KNotification(u"inhibitionSummary"_s);
-    notification->setTitle(i18ncp("@title", "Unread Notification", "Unread Notifications", inhibited));
-    notification->setText(i18ncp("@info",
-                                 "%1 notification was received while Do Not Disturb was active.",
-                                 "%1 notifications were received while Do Not Disturb was active.",
-                                 inhibited));
-    notification->setIconName(u"preferences-desktop-notification-bell"_s);
-    notification->setFlags(KNotification::CloseOnTimeout);
-    notification->setComponentName(u"libnotificationmanager"_s);
-    notification->setHint(u"transient"_s, true);
+    // Don't just update it so it pops up again.
+    hideInhibitionSummary();
+
+    d->inhibitionSummaryNotification = new KNotification(u"inhibitionSummary"_s);
+    d->inhibitionSummaryNotification->setTitle(i18ncp("@title", "Unread Notification", "Unread Notifications", inhibited));
+    d->inhibitionSummaryNotification->setText(i18ncp("@info",
+                                                     "%1 notification was received while Do Not Disturb was active.",
+                                                     "%1 notifications were received while Do Not Disturb was active.",
+                                                     inhibited));
+    d->inhibitionSummaryNotification->setIconName(u"preferences-desktop-notification-bell"_s);
+    d->inhibitionSummaryNotification->setFlags(KNotification::CloseOnTimeout);
+    d->inhibitionSummaryNotification->setComponentName(u"libnotificationmanager"_s);
+    d->inhibitionSummaryNotification->setHint(u"transient"_s, true);
 
     const QString showNotificationsText = i18nc("@action:button Show the notifications popup", "Show Notifications");
 
-    const KNotificationAction *defaultShowNotificationsAction = notification->addDefaultAction(showNotificationsText);
+    const KNotificationAction *defaultShowNotificationsAction = d->inhibitionSummaryNotification->addDefaultAction(showNotificationsText);
     connect(defaultShowNotificationsAction, &KNotificationAction::activated, this, &Notifications::showNotificationsRequested);
 
-    const KNotificationAction *showNotificationsAction = notification->addAction(showNotificationsText);
+    const KNotificationAction *showNotificationsAction = d->inhibitionSummaryNotification->addAction(showNotificationsText);
     connect(showNotificationsAction, &KNotificationAction::activated, this, &Notifications::showNotificationsRequested);
 
-    notification->sendEvent();
+    d->inhibitionSummaryNotification->sendEvent();
+}
+
+void Notifications::hideInhibitionSummary()
+{
+    if (d->inhibitionSummaryNotification) {
+        d->inhibitionSummaryNotification->close();
+        d->inhibitionSummaryNotification = nullptr;
+    }
 }
 
 QVariant Notifications::data(const QModelIndex &index, int role) const
