@@ -26,18 +26,16 @@ msgid "General"
 msgstr "Obecné"
 
 #: qml/ConfigGeneral.qml:43
-#, fuzzy, kde-format
-#| msgid "Shown when relevant"
+#, kde-format
 msgctxt "@item:inlistbox Show this System Tray item when relevant"
 msgid "Show when relevant"
-msgstr "Zobrazit pokud relevantní"
+msgstr ""
 
 #: qml/ConfigGeneral.qml:47
-#, fuzzy, kde-format
-#| msgid "Always shown"
+#, kde-format
 msgctxt "@item:inlistbox Always show this System Tray item"
 msgid "Always show"
-msgstr "Vždy zobrazovat"
+msgstr ""
 
 #: qml/ConfigGeneral.qml:51
 #, kde-format
@@ -116,26 +114,24 @@ msgid ""
 msgstr ""
 
 #: qml/ConfigGeneral.qml:208
-#, fuzzy, kde-format
-#| msgid "Scale with Panel height"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel height"
-msgstr "Měnit s výškou panelu"
+msgstr ""
 
 #: qml/ConfigGeneral.qml:209
-#, fuzzy, kde-format
-#| msgid "Scale with Panel width"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel width"
-msgstr "Měnit s šířkou panelu"
+msgstr ""
 
 #: qml/ConfigGeneral.qml:211
 #, fuzzy, kde-format
-#| msgctxt "The arrangement of system tray icons in the Panel"
-#| msgid "Panel icon size:"
+#| msgctxt "@label:listbox The spacing between system tray icons in the Panel"
+#| msgid "Panel icon spacing:"
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon size:"
-msgstr "Velikost ikon panelu:"
+msgstr "Rozestupy ikon panelu:"
 
 #: qml/ConfigGeneral.qml:215 qml/ConfigGeneral.qml:256
 #, kde-format
@@ -173,18 +169,16 @@ msgid "Automatically set to Large when in Touch Mode"
 msgstr "Automaticky přepnout na velké v dotykovém režimu"
 
 #: qml/ConfigGeneral.qml:315
-#, fuzzy, kde-format
-#| msgid "Entries"
+#, kde-format
 msgctxt "@title:column"
 msgid "Entries"
-msgstr "Položky"
+msgstr ""
 
 #: qml/ConfigGeneral.qml:319
-#, fuzzy, kde-format
-#| msgid "Always shown"
+#, kde-format
 msgctxt "@option:check, This is referring to system tray entries"
 msgid "Always show all"
-msgstr "Vždy zobrazovat"
+msgstr ""
 
 #: qml/ExpandedRepresentation.qml:59
 #, kde-format
@@ -233,25 +227,3 @@ msgstr ""
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
 msgstr ""
-
-#~ msgid "Always hidden"
-#~ msgstr "Vždy skrytý"
-
-#~ msgid "Disabled"
-#~ msgstr "Zakázáno"
-
-#~ msgid "Small"
-#~ msgstr "Malý"
-
-#~ msgctxt "Name of the system tray entry"
-#~ msgid "Entry"
-#~ msgstr "Záznam"
-
-#~ msgid "Visibility"
-#~ msgstr "Viditelnost"
-
-#~ msgid "Keyboard Shortcut"
-#~ msgstr "Klávesová zkratka"
-
-#~ msgid "Always show all entries"
-#~ msgstr "Vždy zobrazit všechny položky"

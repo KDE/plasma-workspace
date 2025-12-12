@@ -915,39 +915,3 @@ msgstr ""
 #, kde-format
 msgid "&Cancel"
 msgstr "Z&rušit"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Lukáš Tinkl,Miroslav Flídr,Zdeněk Tlustý"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "lukas@kde.org,flidr@kky.zcu.cz,ztlusty@netscape.net"
-
-#~ msgid "Mobile Barcode"
-#~ msgstr "Mobilní čárový kód"
-
-#~ msgid "Exclude Windows..."
-#~ msgstr "Výjimka pro okna..."
-
-#~ msgid "Exclude Windows"
-#~ msgstr "Výjimka pro okna"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "The action popup will not be shown automatically for these windows, even "
-#~ "if it is enabled. This is because, for example, a web browser may "
-#~ "highlight a URL in the address bar while typing, so the menu would show "
-#~ "for every keystroke.<nl/><nl/>If the action menu appears unexpectedly "
-#~ "when using a particular application, then add it to this list. <link>How "
-#~ "to find the name to enter</link>."
-#~ msgstr ""
-#~ "Vyskakovací nabídka činnosti se nebude automaticky zobrazovat pro tato "
-#~ "okna ani když je povolena. To například proto, že webový prohlížeč může "
-#~ "během psaní zvýrazňovat URL v adresním řádku během psaní, takže nabídka "
-#~ "by ukazovala každý stisk klávesy.<nl/><nl/>Pokud se nečekaně zobrazí "
-#~ "nabídka činnosti během používání konkrétní aplikace, přidejte ji do "
-#~ "tohoto seznamu. <link>Jak zjistit, jaký název zadat</link>."
-
-#~ msgid "No actions for WM_CLASS"
-#~ msgstr "Žádná činnost pro WM_CLASS"

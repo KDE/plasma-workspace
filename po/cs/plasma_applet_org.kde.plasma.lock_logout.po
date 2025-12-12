@@ -42,10 +42,9 @@ msgid "Lock the screen"
 msgstr "Uzamknout obrazovku"
 
 #: data.js:12
-#, fuzzy, kde-format
-#| msgid "Switch user"
+#, kde-format
 msgid "Switch user…"
-msgstr "Přepnout uživatele"
+msgstr ""
 
 #: data.js:13
 #, kde-format
@@ -113,31 +112,3 @@ msgstr "Hibernovat"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Hibernovat (Uspat na disk)"
-
-#~ msgctxt ""
-#~ "Heading for a list of actions (leave, lock, switch user, hibernate, "
-#~ "suspend)"
-#~ msgid "Show actions:"
-#~ msgstr "Zobrazit činnosti:"
-
-#~ msgid "Log Out"
-#~ msgstr "Odhlásit se"
-
-#~ msgctxt "@option:check"
-#~ msgid "Show logout screen"
-#~ msgstr "Zobrazit obrazovku pro odhlášení"
-
-#~ msgid "Shut Down"
-#~ msgstr "Vypnout"
-
-#~ msgid "Switch User"
-#~ msgstr "Přepnout uživatele"
-
-#~ msgid "Shutdown…"
-#~ msgstr "Vypnout..."
-
-#~ msgid "Restart…"
-#~ msgstr "Restartovat…"
-
-#~ msgid "Logout…"
-#~ msgstr "Odhlásit se…"

@@ -32,16 +32,12 @@ msgid ""
 msgstr ""
 
 #: donationmessage.cpp:84
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@action:button Make a donation now; translate this in as short a form as "
-#| "possible"
-#| msgid "Donate"
+#, kde-format
 msgctxt ""
 "@action:button Make a donation now; translate this in as short a form as "
 "possible"
 msgid "Donate…"
-msgstr "Přispějte"
+msgstr ""
 
 #: donationmessage.cpp:85
 #, kde-format
