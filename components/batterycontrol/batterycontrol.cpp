@@ -31,6 +31,25 @@ BatteryControlModel::BatteryControlModel(QObject *parent)
     , m_namesMonitor(new BatteriesNamesMonitor)
     , m_solidWatcher(new QDBusServiceWatcher)
 {
+    m_internalBatteries.reserve(2);
+
+    const QList<Solid::Device> listBattery = Solid::Device::listFromType(Solid::DeviceInterface::Battery);
+
+    if (!listBattery.isEmpty()) {
+        for (const Solid::Device &deviceBattery : listBattery) {
+            deviceAdded(deviceBattery.udi());
+        }
+
+        m_hasBatteries = true;
+        updateOverallBattery();
+    } else {
+        m_hasBatteries = false;
+        m_hasCumulative = false;
+    }
+
+    connect(Solid::DeviceNotifier::instance(), &Solid::DeviceNotifier::deviceAdded, this, &BatteryControlModel::deviceAdded);
+    connect(Solid::DeviceNotifier::instance(), &Solid::DeviceNotifier::deviceRemoved, this, &BatteryControlModel::deviceRemoved);
+
     // Watch for PowerDevil's power management service
     m_solidWatcher->setConnection(QDBusConnection::sessionBus());
     m_solidWatcher->setWatchMode(QDBusServiceWatcher::WatchForRegistration | QDBusServiceWatcher::WatchForUnregistration);
@@ -48,58 +67,38 @@ BatteryControlModel::~BatteryControlModel() = default;
 
 void BatteryControlModel::onServiceRegistered(const QString &serviceName)
 {
-    m_internalBatteries.reserve(2);
-
     if (serviceName == SOLID_POWERMANAGEMENT_SERVICE) {
-        const QList<Solid::Device> listBattery = Solid::Device::listFromType(Solid::DeviceInterface::Battery);
-
-        if (!listBattery.isEmpty()) {
-            for (const Solid::Device &deviceBattery : listBattery) {
-                deviceAdded(deviceBattery.udi());
+        QDBusMessage batteryRemainingTimeMessage = QDBusMessage::createMethodCall(SOLID_POWERMANAGEMENT_SERVICE,
+                                                                                  SOLID_POWERMANAGEMENT_PATH,
+                                                                                  SOLID_POWERMANAGEMENT_IFACE,
+                                                                                  QStringLiteral("batteryRemainingTime"));
+        QDBusPendingCall batteryRemainingTimeCall = QDBusConnection::sessionBus().asyncCall(batteryRemainingTimeMessage);
+        auto batteryRemainingTimeWatcher = new QDBusPendingCallWatcher(batteryRemainingTimeCall, this);
+        connect(batteryRemainingTimeWatcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {
+            QDBusReply<qulonglong> reply = *watcher;
+            if (reply.isValid()) {
+                m_remainingMsec = reply.value();
+            } else {
+                qCDebug(COMPONENTS::BATTERYCONTROL) << "error getting battery remaining time";
             }
+            watcher->deleteLater();
+        });
 
-            m_hasBatteries = true;
-            updateOverallBattery();
-
-            QDBusMessage batteryRemainingTimeMessage = QDBusMessage::createMethodCall(SOLID_POWERMANAGEMENT_SERVICE,
-                                                                                      SOLID_POWERMANAGEMENT_PATH,
-                                                                                      SOLID_POWERMANAGEMENT_IFACE,
-                                                                                      QStringLiteral("batteryRemainingTime"));
-            QDBusPendingCall batteryRemainingTimeCall = QDBusConnection::sessionBus().asyncCall(batteryRemainingTimeMessage);
-            auto batteryRemainingTimeWatcher = new QDBusPendingCallWatcher(batteryRemainingTimeCall, this);
-            connect(batteryRemainingTimeWatcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {
-                QDBusReply<qulonglong> reply = *watcher;
-                if (reply.isValid()) {
-                    m_remainingMsec = reply.value();
-                } else {
-                    qCDebug(COMPONENTS::BATTERYCONTROL) << "error getting battery remaining time";
-                }
-                watcher->deleteLater();
-            });
-
-            QDBusMessage smoothedBatteryRemainingTimeMessage = QDBusMessage::createMethodCall(SOLID_POWERMANAGEMENT_SERVICE,
-                                                                                              SOLID_POWERMANAGEMENT_PATH,
-                                                                                              SOLID_POWERMANAGEMENT_IFACE,
-                                                                                              QStringLiteral("smoothedBatteryRemainingTime"));
-            QDBusPendingCall smoothedBatteryRemainingTimeCall = QDBusConnection::sessionBus().asyncCall(smoothedBatteryRemainingTimeMessage);
-            auto smoothedBatteryRemainingTimeWatcher = new QDBusPendingCallWatcher(smoothedBatteryRemainingTimeCall, this);
-            connect(smoothedBatteryRemainingTimeWatcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {
-                QDBusReply<qulonglong> reply = *watcher;
-                if (reply.isValid()) {
-                    m_smoothedRemainingMsec = reply.value();
-                } else {
-                    qCDebug(COMPONENTS::BATTERYCONTROL) << "error getting smoothed battery remaining time";
-                }
-
-                watcher->deleteLater();
-            });
-        } else {
-            m_hasBatteries = false;
-            m_hasCumulative = false;
-        }
-
-        connect(Solid::DeviceNotifier::instance(), &Solid::DeviceNotifier::deviceAdded, this, &BatteryControlModel::deviceAdded);
-        connect(Solid::DeviceNotifier::instance(), &Solid::DeviceNotifier::deviceRemoved, this, &BatteryControlModel::deviceRemoved);
+        QDBusMessage smoothedBatteryRemainingTimeMessage = QDBusMessage::createMethodCall(SOLID_POWERMANAGEMENT_SERVICE,
+                                                                                          SOLID_POWERMANAGEMENT_PATH,
+                                                                                          SOLID_POWERMANAGEMENT_IFACE,
+                                                                                          QStringLiteral("smoothedBatteryRemainingTime"));
+        QDBusPendingCall smoothedBatteryRemainingTimeCall = QDBusConnection::sessionBus().asyncCall(smoothedBatteryRemainingTimeMessage);
+        auto smoothedBatteryRemainingTimeWatcher = new QDBusPendingCallWatcher(smoothedBatteryRemainingTimeCall, this);
+        connect(smoothedBatteryRemainingTimeWatcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {
+            QDBusReply<qulonglong> reply = *watcher;
+            if (reply.isValid()) {
+                m_smoothedRemainingMsec = reply.value();
+            } else {
+                qCDebug(COMPONENTS::BATTERYCONTROL) << "error getting smoothed battery remaining time";
+            }
+            watcher->deleteLater();
+        });
 
         QDBusMessage chargeStopThresholdMessage = QDBusMessage::createMethodCall(SOLID_POWERMANAGEMENT_SERVICE,
                                                                                  SOLID_POWERMANAGEMENT_PATH,
@@ -174,9 +173,6 @@ void BatteryControlModel::onServiceRegistered(const QString &serviceName)
 void BatteryControlModel::onServiceUnregistered(const QString &serviceName)
 {
     if (serviceName == SOLID_POWERMANAGEMENT_SERVICE) {
-        disconnect(Solid::DeviceNotifier::instance(), &Solid::DeviceNotifier::deviceAdded, this, &BatteryControlModel::deviceAdded);
-        disconnect(Solid::DeviceNotifier::instance(), &Solid::DeviceNotifier::deviceRemoved, this, &BatteryControlModel::deviceRemoved);
-
         QDBusConnection::sessionBus().disconnect(SOLID_POWERMANAGEMENT_SERVICE,
                                                  SOLID_POWERMANAGEMENT_PATH,
                                                  SOLID_POWERMANAGEMENT_IFACE,
@@ -201,21 +197,6 @@ void BatteryControlModel::onServiceUnregistered(const QString &serviceName)
                                                  QStringLiteral("PowerSaveStatusChanged"),
                                                  this,
                                                  SLOT(updateAcPlugState(bool)));
-
-        const QList<QString> batteries = m_batterySources;
-        for (const auto &udi : batteries) {
-            // clear m_batterySources, m_batteryPositions, m_internalBatteries, m_namesMonitor
-            deviceRemoved(udi);
-        }
-        m_hasBatteries = false;
-        m_hasInternalBatteries = false;
-        m_hasCumulative = false;
-        m_pluggedIn = false;
-        m_state = NoCharge;
-        m_chargeStopThreshold = 0;
-        m_remainingMsec = 0;
-        m_smoothedRemainingMsec = 0;
-        m_percent = 0;
     }
 }
 
