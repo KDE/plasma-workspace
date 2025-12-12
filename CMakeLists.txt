@@ -10,7 +10,7 @@ list(GET VERSION_LIST 2 PROJECT_VERSION_PATCH)
 set(PROJECT_DEP_VERSION "6.4.90")
 set(QT_MIN_VERSION "6.9.0")
 set(KF6_MIN_VERSION "6.18.0")
-option(PLASMA_X11_DEFAULT_SESSION "Use X11 session by default for Plasma" OFF)
+option(WITH_X11_SESSION "Build and install X11 session (deprecated)" OFF)
 option(INSTALL_SDDM_WAYLAND_SESSION OFF)
 option(WITH_X11 "Build with X11 support. Building without is experimental" ON)
 
@@ -172,7 +172,7 @@ option(PACKAGEKIT_OFFLINE_UPDATES "Integrate with PackageKit for offline updates
 add_feature_info(PACKAGEKIT_OFFLINE_UPDATES PackageKitQt6_FOUND "Integrate with PackageKit for offline updates")
 set(PACKAGEKIT_OFFLINE_UPDATES ${PackageKitQt6_FOUND})
 
-if(PLASMA_X11_DEFAULT_SESSION)
+if(WITH_X11_SESSION)
     set(WITH_X11 1)
 endif()
 
