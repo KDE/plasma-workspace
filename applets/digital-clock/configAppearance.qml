@@ -136,7 +136,7 @@ KCMUtils.SimpleKCM {
             }
             QQC2.Button {
                 id: switchTimeZoneButton
-                Layout.preferredWidth: Math.max(changeRegionalSettingsButton.implicitWidth, switchTimeZoneButton.implicitWidth, dateExampleLabel.implicitWidth)
+                Layout.preferredWidth: Math.max(changeRegionalSettingsButton.implicitWidth, switchTimeZoneButton.implicitWidth)
                 visible: KConfig.KAuthorized.authorizeControlModule("kcm_clock")
                 text: i18nc("@action:button opens kcm", "Switch Time Zone…")
                 icon.name: "preferences-system-time"
@@ -167,7 +167,7 @@ KCMUtils.SimpleKCM {
             QQC2.Button {
                 id: changeRegionalSettingsButton
                 visible: KConfig.KAuthorized.authorizeControlModule("kcm_regionandlang")
-                Layout.preferredWidth: Math.max(changeRegionalSettingsButton.implicitWidth, switchTimeZoneButton.implicitWidth, dateExampleLabel.implicitWidth)
+                Layout.preferredWidth: Math.max(changeRegionalSettingsButton.implicitWidth, switchTimeZoneButton.implicitWidth)
                 text: i18nc("@action:button opens kcm", "Change Regional Settings…")
                 icon.name: "preferences-desktop-locale"
                 onClicked: KCMUtils.KCMLauncher.openSystemSettings("kcm_regionandlang")
@@ -227,10 +227,19 @@ KCMUtils.SimpleKCM {
 
             QQC2.Label {
                 id: dateExampleLabel
-                Layout.preferredWidth: Math.max(changeRegionalSettingsButton.implicitWidth, switchTimeZoneButton.implicitWidth, dateExampleLabel.implicitWidth)
+                Layout.preferredWidth: Math.max(changeRegionalSettingsButton.implicitWidth, switchTimeZoneButton.implicitWidth)
+//                clip: implicitWidth > width
+                elide: Text.ElideRight
                 horizontalAlignment: Text.AlignHCenter
                 textFormat: Text.PlainText
                 text: dateFormat.model[dateFormat.currentIndex].formatter(new Date());
+                QQC2.ToolTip.text: text
+                QQC2.ToolTip.visible: (exampleHoverHandler.hovered || activeFocus) && implicitWidth > width
+                // no ToolTip.delay, this is an edge case and we might as well show it immediately if it applies
+
+                HoverHandler {
+                    id: exampleHoverHandler
+                }
             }
         }
 
