@@ -32,9 +32,9 @@
 </authorgroup>
 
 <date
->08/04/2015</date>
+>09/04/2021</date>
 <releaseinfo
->Plasma 5.3</releaseinfo>
+>Plasma 5.20</releaseinfo>
 
 <keywordset>
 <keyword
@@ -107,7 +107,7 @@
 <title
 >Lista de fontes</title>
 <para
->A área principal é uma lista com as fontes instaladas, agrupados de acordo com o nome da família - o número entre colchetes representa o número de estilos instalados para essa família. P.ex., a fonte <quote
+>A área principal é uma lista com as fontes instaladas, agrupados de acordo com o nome da família - o número entre colchetes representa o número de estilos instalados para essa família. Por exemplo, a fonte <quote
 >Times</quote
 > pode ser listada como: <itemizedlist
 > <listitem>
@@ -137,11 +137,13 @@
 
 <para
 >Para instalar uma fonte, clique no botão <guibutton
->Adicionar...</guibutton
+>Instalar a partir do arquivo...</guibutton
 > e selecione as fontes desejadas na janela de arquivos. O grupo de fontes selecionado controlará onde as fontes serão instaladas.</para>
 <para
->Para desinstalar as fontes, selecione as fontes apropriadas na lista e clique no botão <guibutton
->Apagar...</guibutton
+>Para desinstalar as fontes, selecione as fontes apropriadas na lista e clique no botão <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
+></inlinemediaobject
 >.</para>
 
 <para
@@ -202,15 +204,13 @@
 
 <sect3 id="get-new-fonts">
 <title
->Obter novas fontes</title>
+>Baixar novas fontes</title>
 <para
->Novas fontes podem ser instaladas a partir de arquivos locais ou obtidas a partir do <quote
->kde-look.org</quote
+>Novas fontes podem ser instaladas a partir de arquivos locais ou baixadas usando <guilabel
+>Baixar novidades</guilabel
 >. A opção <guilabel
->Obter novas fontes</guilabel
-> do botão de ferramentas (localizado acima da lista de grupos), permite-lhe instalar fontes do <quote
->kde-look.org</quote
->. As fontes baixadas desta forma serão instaladas no seu grupo <quote
+>Baixar novas fontes</guilabel
+> do botão de ferramentas (localizado acima da lista de grupos), permite-lhe instalar fontes da Internet. As fontes baixadas desta forma serão instaladas no seu grupo <quote
 >Fontes pessoais</quote
 >. Para instalá-las em todo o sistema, terá que movê-las para o grupo <quote
 >Fontes do sistema</quote
@@ -226,9 +226,9 @@
 >Se você tiver várias fontes instaladas no seu sistema, é possível que ocorram duplicações.</para
 > 
 <para
->Clique nos ícones das ferramentas acima da lista do grupo e selecione a ferramenta <guilabel
+>Clique no botão <guilabel
 >Procurar fontes duplicadas...</guilabel
->, um aplicativo simples que irá pesquisar o seu sistema à procura de fontes que tenham vários arquivos associados a elas. Por exemplo, se você tiver o <quote
+> para abrir um aplicativo simples que irá pesquisar o seu sistema à procura de fontes que tenham vários arquivos associados a elas. Por exemplo, se você tiver o <quote
 >times.ttf</quote
 > e o <quote
 >times.TTF</quote
@@ -250,6 +250,9 @@
 > ou <guilabel
 >Todos os Caracteres</guilabel
 >) ou ainda mudar o texto da previsão.</para>
+
+<para
+>Inicie o aplicativo &kfontview; se você precisar de visualizar tipos adicionais para blocos Unicode. </para>
 </sect2>
 </sect1>
 </article>

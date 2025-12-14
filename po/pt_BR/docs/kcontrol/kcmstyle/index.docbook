@@ -10,7 +10,7 @@
 <articleinfo>
 
 <title
->Estilo dos widgets</title>
+>Estilo dos aplicativos</title>
 <authorgroup>
 <author
 >&Mike.McBride; &Mike.McBride.mail;</author>
@@ -46,9 +46,9 @@
 </authorgroup>
 
 <date
->07/07/2015</date>
+>2021-04-09</date>
 <releaseinfo
->Plasma 5.3</releaseinfo>
+>Plasma 5.20</releaseinfo>
 
 <keywordset>
 <keyword
@@ -57,17 +57,15 @@
 >Configuração do Sistema</keyword>
 <keyword
 >estilo</keyword>
+<keyword
+>Aplicativo</keyword>
+<keyword
+>widgets</keyword>
 </keywordset>
 </articleinfo>
 
-<variablelist>
-<varlistentry>
-<term
->Introdução</term>
-<listitem>
-
 <para
->Este módulo é usado para configurar a forma como os widgets individuais são desenhados pelo Plasma.</para>
+>Este módulo é usado para configurar a forma como os widgets individuais são desenhados pelo &plasma;.</para>
 
 <note
 ><para
@@ -82,64 +80,29 @@
 >.</para>
 
 <para
->Este painel encontra-se dividido em duas abas: <guilabel
->Aplicativos</guilabel
-> e <guilabel
->Ajuste fino</guilabel
->.</para>
-
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term
->A aba <guilabel
->Aplicativos</guilabel
-></term>
-<listitem>
-<para
->A lista chamada <guilabel
->Estilo dos widgets</guilabel
->, contém vários estilos predefinidos. Cada estilo possui um nome e uma breve descrição.</para>
+>A grade superior, rotulada <guilabel
+>Estilo dos Aplicativos</guilabel
+> contém uma lista de prévias dos estilos predefinidos. Cada estilo tem um nome, e uma breve descrição é mostrada quando você passa o ponteiro do mouse sobre seu item.</para>
 
 <para
->Para alterar o estilo, selecione um deles na lista disponível. Uma prévia do estilo pode ser vista no quadro abaixo dessa lista.</para>
+>Se você quiser configurar um tema do &plasma;, use o ícone de sobreposição <guilabel
+>Configurar estilo...</guilabel
+> no canto inferior direito do ícone de estilo do widget na grade.</para>
 
 <para
->Se um estilo for configurável, o botão <guibutton
->Configurar...</guibutton
->, do lado direito da lista, ficará ativo e poderá ser usado para abrir uma janela e selecionar outras opções.</para>
+>Se implementado, é possível alterar quase todos os aspectos do estilo: centralizar as guias da barra de guias, desenhar separadores de itens da barra de ferramentas, desenhar indicador de foco em listas, desenhar marcas de seleção do controle deslizante, habilitar manipuladores de redimensionamento estendidos, definir a visibilidade dos aceleradores do teclado, modo de arrastar das janelas, usar quadros para melhor acessibilidade, usar botões nas barras de rolagem, usar transparência nos menus.</para>
 
-</listitem>
-</varlistentry>
-
-<varlistentry
-> 
-<term
->A aba <guilabel
->Ajuste fino</guilabel
-></term>
-<listitem>
+<para
+>A configuração geral pode ser feita pressionando o botão <guibutton
+>Configurar ícones e barras de ferramentas</guibutton
+> abaixo da grade. Este botão abre um painel para selecionar mais configurações.</para>
 <variablelist>
-<varlistentry
-> 
-<term
-><guilabel
->Efeitos gráficos</guilabel
-></term>
-<listitem>
-<para
->Os aplicativos do &kde; irão executar as animações internas com a resolução e carga de CPU selecionados.</para>
-</listitem
-> 
-</varlistentry
-> 
 
 <varlistentry
 > 
 <term
 ><guilabel
->Mostrar ícones sobre os botões</guilabel
+>Mostrar ícones: Nos botões</guilabel
 ></term>
 <listitem>
 <para
@@ -147,7 +110,7 @@
 >OK</guibutton
 > e o <guibutton
 >Aplicar</guibutton
->) ficarão com um pequeno ícone localizado dentro deles para ser usado como uma referência visual. Se esta opção não estiver selecionada, somente aparecerá o texto do botão.</para>
+>) ficarão com um pequeno ícone localizado dentro deles para ser usado como uma referência visual. Se esta opção não estiver selecionada, somente aparecerá o texto no botão.</para>
 </listitem
 > 
 </varlistentry
@@ -157,7 +120,7 @@
 > 
 <term
 ><guilabel
->Mostrar ícones nos menus</guilabel
+>Mostrar ícones: Nos menus</guilabel
 ></term>
 <listitem>
 <para
@@ -171,88 +134,46 @@
 > 
 <term
 ><guilabel
->Texto da barra de ferramentas principal</guilabel
+>Rótulo da barra de ferramentas principal</guilabel
 >, <guilabel
->Texto da barra de ferramentas secundária</guilabel
+>Rótulo da barra de ferramentas secundária</guilabel
 ></term>
 <listitem>
 <para
->Estas listas permitem-lhe determinar em qual parte do botão irá aparecer o texto por padrão. Se estiver selecionada a opção <guilabel
->Sem texto</guilabel
->, então nenhum texto aparecerá nos botões das barras de ferramentas. Se estiver selecionada a opção <guilabel
->Apenas texto</guilabel
->, então o ícone dos botões será substituído pelo seu respectivo nome. Se estiver selecionada a opção <guilabel
->Texto ao lado dos ícones</guilabel
->, então o nome do botão será colocado à <emphasis
+>Essas caixas suspensas permitem que você determine onde no botão em ambas as barras de ferramentas o nome do texto do botão aparecerá como padrão. Se <guilabel
+>Nenhum</guilabel
+> for selecionado, não haverá texto nos botões da barra de ferramentas. Se <guilabel
+>Somente texto</guilabel
+> for selecionado, o ícone do botão será substituído por um nome de texto do botão. Se <guilabel
+>Ao lado dos ícones</guilabel
+> for selecionado, o nome do botão será colocado à <emphasis
 >direita</emphasis
-> do ícone. Se estiver selecionada a opção <guilabel
->Texto abaixo dos ícones</guilabel
->, o texto aparecerá <emphasis
+> do ícone. Se <guilabel
+>Abaixo do ícone</guilabel
+> for selecionado, o padrão será ter o texto do botão <emphasis
 >abaixo</emphasis
-> do ícone dos botões.</para>
+> do ícone.</para>
 
 <tip
 ><para
->Esta opção somente especifica a localização <emphasis
+>Essas opções especificam apenas o local <emphasis
 >padrão</emphasis
->. Cada aplicativo pode sobrescrever a configuração padrão usada neste painel.</para
+>. Cada aplicativo pode substituir as configurações usadas neste painel.</para
 ></tip>
 </listitem
 > 
 </varlistentry
 > 
 
-<!-- appmenu is so far not in kf5, status in kf5 see
-https://forum.kde.org/viewtopic.php?f=285&t=125058&p=336313&hilit=appmenu#p336313
-https://bugs.kde.org/show_bug.cgi?id=341071#c9
-
-<varlistentry
-> 
-<term
-><guilabel
->Menubar style</guilabel
-></term>
-<listitem>
-<para
-><guilabel
->In application</guilabel
->: The classic menubar at the top of the application window.</para>
-<para
-><guilabel
->Title bar button</guilabel
->: The window has an additional menu button top left. 
-All changes will take effect only for newly started applications.</para>
-<para
-><guilabel
->Top screen menubar</guilabel
->: This will turn on a menubar at the top of the screen that 
-is hidden by default and revealed on mouse over or a menu button on the window decoration.
-This menubar will reflect the menu options of the active application.</para>
-<para
-><guilabel
->Only export</guilabel
->: for use by plasma runners + applets. 
-To use this feature you need a KRunner plugin like <guilabel
->Appmenu action launcher</guilabel
->.
-Select an application, press <keycombo action="simul"
->&Alt;<keycap
->F2</keycap
-></keycombo
-> 
-and type the menu action you want to perform.</para>
-</listitem
-> 
-</varlistentry
-> 
--->
 </variablelist>
 
-</listitem>
-</varlistentry>
-
-
-</variablelist>
-
+<para
+>O botão <guibutton
+>Configurar estilo de aplicativo GNOME/GTK...</guibutton
+> pode ser usado para abrir a aba de configuração onde você pode escolher <guilabel
+>tema GTK</guilabel
+>, instalar o tema GTK do arquivo ou <guibutton
+>Obter novos estilos de aplicativo GNOME/GTK</guibutton
+> da Internet. </para>
 
 </article>

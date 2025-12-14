@@ -63,9 +63,9 @@
 >&FDLNotice;</legalnotice>
 
 <date
->20/07/2015</date>
+>05/05/2022</date>
 <releaseinfo
->Plasma 5.4</releaseinfo>
+>Plasma 5.25</releaseinfo>
 
 <abstract>
 <para
@@ -142,55 +142,17 @@
 </screenshot>
 
 <para
->Passe o ponteiro do mouse sobre um item para aparecerem quatro ícones, os quais lhe permitem efetuar uma ação, mostrar o código de barras, editar o conteúdo ou remover o item do histórico. Use o &ksnapshot; para capturar os códigos de barras e depois salvá-los. </para>
+>Passe o ponteiro do mouse sobre um item para aparecerem quatro ícones, os quais lhe permitem efetuar uma ação, mostrar o código de barras, editar o conteúdo ou remover o item do histórico. Use o &spectacle; para capturar os códigos de barras e depois salvá-los. </para>
 
 <para
 >Você pode procurar pelo histórico da área de transferência abrindo-o (clique no &klipper;) e digitando a sua pesquisa. Os resultados são atualizados à medida que você digita. Para limpar o histórico da área de transferência, clique no ícone à direita do campo de pesquisa. </para>
 
 <para
 >A ação <guilabel
->Configurar</guilabel
+>Configurar área de transferência...</guilabel
 > no menu de contexto abre a <link linkend="preferences"
 >caixa de diálogo de configuração</link
 >. </para>
-
-<para
->Para desativar o widget do &klipper;, desmarque-o na página <guilabel
->Geral</guilabel
-> das <guilabel
->Configurações da área de notificação</guilabel
-> (<keycombo action="simul"
->&Alt;<keycap
->D</keycap
-></keycombo
->, <keycap
->S</keycap
->).</para>
-
-</sect2>
-
-<sect2 id="klipper-application">
-<title
->Aplicativo &klipper;</title>
-<screenshot>
-<screeninfo
->O aplicativo &klipper;.</screeninfo>
-<mediaobject>
-<imageobject>
-<imagedata fileref="klipper-application.png" format="PNG"/>
-</imageobject>
-<textobject>
-<phrase
->O aplicativo &klipper;</phrase>
-</textobject>
-</mediaobject>
-</screenshot>
-
-<para
->Os itens anteriores da área de transferência são mostrados no topo do menu que aparece. Selecionar um desses itens irá copiá-lo para a área de transferência, a partir da qual poderá ser colado em qualquer aplicativo do &kde; ou do X, como de costume.</para>
-
-<para
->Você pode pesquisar no histórico da área de transferência se digitar sua pesquisa no campo respectivo, localizado no topo do menu. Os resultados são atualizados à medida que digita. </para>
 
 </sect2>
 </sect1>
@@ -210,16 +172,14 @@
 >Para usar este recurso, basta selecionar um &URL; ou caminho. Se existir uma correspondência com alguma expressão regular da lista do &klipper;, um menu aparecerá mostrando os programas disponíveis para sua seleção. Use o mouse ou teclado para selecionar um programa, e o &klipper; executará este programa, abrindo o endereço apontado pelo conteúdo da área de transferência.</para>
 
 <para
->Se você não deseja executar nenhuma das ações sobre o conteúdo da área de transferência, selecione <guimenuitem
->Desativar este menu</guimenuitem
-> no menu para retornar ao que estava fazendo antes. Se você deixar o menu, ele desaparecerá, permitindo que você continue seu trabalho. Você pode mudar o tempo em que este menu fica aberto na caixa de diálogo de configurações, com a opção <guilabel
->Tempo máximo para ações de contexto</guilabel
+>Você pode alterar o tempo de exibição do menu nas configurações, com a opção <guilabel
+>Mostrar menu popup de ações</guilabel
 > na página <guilabel
 >Geral</guilabel
 >. Você pode desativar separadamente a parte do caminho do arquivo usando a opção <guilabel
->Ativar ações baseadas no MIME</guilabel
-> na página de <guilabel
->Ações</guilabel
+>Incluir ações MIME</guilabel
+> na página <guilabel
+>Menu de ações</guilabel
 >.</para>
 
 <para
@@ -278,35 +238,6 @@
 > no menu de contexto.</para>
 </note>
 
-<!-- &klipper; can be used to set the clipboard mode for the whole of &kde;. The
-first mode will be familiar to &Microsoft; &Windows; and &Mac; users: Text is
-inserted into the clipboard using an application's cut/copy (or generally
-<keycombo
->&Ctrl;<keycap
->X</keycap
-></keycombo
-> and
-<keycombo
->&Ctrl;<keycap
->C</keycap
-></keycombo
-> respectively)
-function, and the application's paste (or generally 
-<keycombo
->&Ctrl;<keycap
->V</keycap
-></keycombo
->) function pastes the
-contents of this clipboard.
-</para>
-<para>
-The second mode will be more familiar to longtime &UNIX; users: Selected text
-is copied to this clipboard, and clicking the <mousebutton
->middle</mousebutton
-> 
-mouse button pastes the
-contents of this clipboard.
--->
 </sect2>
 
 <sect2 id="changing-clipboard-modes">
@@ -314,15 +245,15 @@ contents of this clipboard.
 >Mudando o Comportamento da Área de Transferência/Seleção</title>
 <para
 >Para mudar o comportamento da área de transferência/seleção, selecione <guimenuitem
->Configurar &klipper;...</guimenuitem
-> no menu de contexto do &klipper;, e na caixa de diálogo que aparecer, selecione a página <guilabel
+>Configurar área de transferência...</guimenuitem
+> no menu de contexto, e na caixa de diálogo que aparecer, selecione a página <guilabel
 >Geral</guilabel
 >. Desmarcar <guilabel
->Sincronizar o conteúdo da área de transferência com a seleção</guilabel
+>Seleção e área de transferência</guilabel
 > faz com que as funções de área de transferência e seleção ocupem buffers distintos conforme descrito anteriormente. Com esta opção configurada, a opção <guilabel
 >Ignorar seleção</guilabel
 > evitará que o &klipper; inclua conteúdo da seleção no seu histórico da área de transferência e que ele execute ações sobre o conteúdo da seleção. Selecionar <guilabel
->Sincronizar conteúdo da área de transferência com a seleção</guilabel
+>Seleção e área de transferência</guilabel
 > fará com que os buffers da área de transferência e seleção sejam sempre o mesmo, fazendo com que o texto na seleção possa ser colado tanto com o botão <mousebutton
 >do meio</mousebutton
 > do mouse ou a combinação de teclas <keycombo
@@ -356,99 +287,46 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 
 <variablelist>
 
-<varlistentry>
-<term
+<varlistentry
+><term
 ><guilabel
->Salvar o conteúdo da área de transferência ao sair</guilabel
-></term
-> <listitem
-><para
->Se esta opção estiver habilitada, o histórico da área de transferência será salva quando o &klipper; terminar, permitindo que você o use na próxima vez que iniciar o &klipper;.</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term
-><guilabel
->Impedir que a área de transferência fique vazia</guilabel
+>Seleção e área de transferência</guilabel
 ></term>
 <listitem
 ><para
->Se selecionado, a área de transferência nunca ficará vazia: o &klipper; inserirá o item mais recente do histórico da área de transferência na área ao invés de permitir que ela fica vazia.</para
-></listitem>
-</varlistentry>
-
-<varlistentry>
-<term
-><guilabel
->Ignorar imagens</guilabel
-></term>
-<listitem
+>Quando um texto ou uma área da tela é selecionada com o mouse ou o teclado, essa é a <emphasis
+>seleção</emphasis
+>. Ela pode ser colada usando o botão do meio do mouse.</para
 ><para
->Quando uma área da tela é selecionada com o mouse ou o teclado, ela é chamada de <quote
->seleção</quote
->. Se esta opção estiver selecionada, somente será armazenada no histórico as seleções de texto, enquanto as imagens e as outras seleções não são. </para>
-</listitem>
-</varlistentry
-> 
-
-<varlistentry>
-<term
-><guilabel
->Ignorar seleção</guilabel
-></term>
-<listitem
+>Se a seleção for copiada explicitamente usando uma ação <guimenuitem
+>Copiar</guimenuitem
+> ou <guimenuitem
+>Recortar</guimenuitem
+>, ela será salva na <emphasis
+>área de transferência</emphasis
+>. Ela poderá ser colada usando uma ação <guimenuitem
+>Colar</guimenuitem
+>.</para
 ><para
->Define o modo da área de transferência. Esta opção evitará que o &klipper; inclua o conteúdo da seleção em seu histórico e realize ações no conteúdo da seleção. Veja <xref linkend="clipboard-modes"/>. </para>
-</listitem>
-</varlistentry
-> 
-
-<varlistentry>
-<term
-><guilabel
->Somente a seleção de texto</guilabel
-></term>
-<listitem
-><para
->Quando uma área da tela é selecionada com o mouse ou teclado, ela é chamada de <quote
->seleção</quote
->. Se esta opção estiver ativa, somente seleções de texto são armazenadas no histórico, enquanto imagens e outras seleções não. Veja <xref linkend="clipboard-modes"/>. </para>
-</listitem>
-</varlistentry
-> 
-
-<varlistentry>
-<term
-><guilabel
->Sincronizar o conteúdo da área de transferência com a seleção</guilabel
-></term>
-<listitem
-><para
->Define o modo da área de transferência. Quando uma área da tela é selecionada com o mouse ou teclado, ela é chamada de <quote
->seleção</quote
->. Se esta opção estiver selecionada, a seleção e a área de transferência se manterão a mesma, assim qualquer coisa na seleção fica imediatamente disponível para colagem em qualquer local usando qualquer método, incluindo o tradicional botão do meio do mouse. Caso contrário, a seleção é guardada no histórico da área de transferência, mas a seleção somente pode ser colada usando o método do botão do meio do mouse. Veja também a opção <guilabel
->Ignorar seleção</guilabel
->. Veja <xref linkend="clipboard-modes"/>. </para>
-</listitem>
-</varlistentry
-> 
-
-<varlistentry>
-<term
-><guilabel
->Tempo máximo para ações de contexto</guilabel
-></term>
-<listitem
-><para
->Configura o tempo que o menu das ações irá permanecer aberto, se você não selecionar nenhuma ação dele.</para
+>Quando ativada, esta opção mantém a seleção e a área de transferência iguais, de modo que qualquer seleção esteja imediatamente disponível para colar por qualquer meio. Se estiver desativada, a seleção ainda poderá ser salva no histórico da área de transferência (sujeito às opções abaixo), mas só poderá ser colada usando o botão do meio do mouse.</para
 ></listitem>
 </varlistentry>
 
 <varlistentry
 ><term
 ><guilabel
->Tamanho do histórico da área de transferência</guilabel
+>Histórico da área de transferência</guilabel
+></term>
+<listitem
+><para
+>Alterna o histórico da área de transferência.</para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>Número de entradas</guilabel
 ></term>
 <listitem
 ><para
@@ -456,15 +334,67 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 ></listitem>
 </varlistentry>
 
+<varlistentry>
+<term
+><guilabel
+>Seleção de texto</guilabel
+></term>
+<listitem
+><para
+>Quando uma área da tela é selecionada com o mouse ou teclado, isso é chamado de <quote
+>seleção</quote
+>. Esta opção determina se as seleções de texto são salvas no histórico da área de transferência. É possível escolher entre <guilabel
+>Sempre salvar no histórico</guilabel
+> e <guilabel
+>Somente quando copiado explicitamente</guilabel
+>. A opção <guilabel
+>Sempre salvar no histórico</guilabel
+> não está disponível se a sincronização de seleção/área de transferência estiver desativada &dash; nesse caso, a seleção nunca é salva automaticamente no histórico da área de transferência. Consulte <xref linkend="clipboard-modes"/>. </para>
+</listitem>
+</varlistentry
+> 
+
+<varlistentry>
+<term
+><guilabel
+>Seleção não textual</guilabel
+></term>
+<listitem
+><para
+>Esta opção determina se seleções que não sejam texto (como imagens) são salvas no histórico da área de transferência. É possível escolher entre <guilabel
+>Sempre salvar no histórico</guilabel
+>, <guilabel
+>Somente quando explicitamente copiado</guilabel
+> e <guilabel
+>Nunca salvar no histórico</guilabel
+>. A opção <guilabel
+>Sempre salvar no histórico</guilabel
+> não está disponível se a sincronização de seleção/área de transferência estiver desativada &dash; nesse caso, a seleção nunca é salva automaticamente no histórico da área de transferência. Consulte <xref linkend="clipboard-modes"/>. </para>
+</listitem>
+</varlistentry
+> 
+
 </variablelist>
 
 </sect1>
 
-<sect1 id="actions-page">
+<sect1 id="action-menu-page">
 <title
->Opções de Ações</title>
+>Menu de ações</title>
 
 <variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>Mostra menu de contexto de ações</guilabel
+></term>
+<listitem
+><para
+>Configura o tempo que o menu das ações irá permanecer aberto, se você não selecionar nenhuma ação dele.</para
+></listitem>
+</varlistentry>
+
 <varlistentry>
 <term
 ><guilabel
@@ -476,109 +406,10 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 </listitem>
 </varlistentry>
 
-<varlistentry>
-<term
-><guilabel
->Remover espaços em branco ao executar as ações</guilabel
-></term>
-<listitem
-><para
->Se estiver selecionada, todos os caracteres em branco (espaços, tabulações, &etc;) no início e no fim do conteúdo da área de transferência serão removidos antes de passar o conteúdo da área de transferência para o aplicativo. Isto é útil, por exemplo, se a área de transferência contiver um &URL; com espaços que, ao ser aberto por um navegador Web, poderia causar um erro.</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term
-><guilabel
->Habilitar ações baseadas no MIME</guilabel
-></term>
-<listitem
-><para
->Se selecionado, além das ações que você definiu, irá aparecer no menu de contexto uma lista de aplicativos para o tipo MIME detectado.</para>
-</listitem>
-</varlistentry>
-
-<varlistentry>
-<term
->Editando Expressões/Ações</term>
-<listitem
-><para
->Na página de <guilabel
->Ações</guilabel
->, dê um duplo-clique numa expressão regular ou ação que deseja editar ou selecione-a e pressione o botão <guibutton
->Editar ação</guibutton
->. Um diálogo aparecerá no qual o texto da expressão pode ser editado conforme você desejar.</para
-></listitem>
-</varlistentry>
-
-<varlistentry>
-<term
->Adicionando Expressões/Ações</term>
-<listitem
-><para
->Clique no botão <guibutton
->Adicionar ação...</guibutton
-> para adicionar uma expressão regular para o &klipper; pesquisar. O &klipper; usa o <classname
->QRegExp</classname
-> do &Qt;, que aceita a maioria das expressões que você poderia usar no <application
->grep</application
-> ou <application
->egrep</application
->, por exemplo.</para>
-<para
->Você pode adicionar uma descrição para o tipo da expressão regular (&eg; <quote
->HTTP URL</quote
->) através de um clique <mousebutton
->esquerdo</mousebutton
-> na coluna <guilabel
->Descrição</guilabel
->.</para
->   
-
-<note
-><para
->Você pode encontrar informações detalhadas sobre o uso de expressões regulares do <classname
->QRegExp</classname
-> em <ulink url="http://doc.qt.io/qt-5/qregexp.html#details"
->http://doc.qt.io/qt-5/qregexp.html#details</ulink
->. Observe que o &klipper; não tem suporte a caracteres curingas diferentes dos mencionados nessa página.</para
-></note
-> 
-
-<para
->Edita a expressão regular como descrito acima. Para adicionar o comando a ser executado, clique em <guimenuitem
->Adicionar Comando</guimenuitem
-> e edite o comando na caixa de texto. Um duplo-clique no comando permitirá que você o edite.</para>
-
-<para
->Observe que o <token
->%s</token
-> na linha de comando é substituído pelo conteúdo da área de transferência, &eg; se sua definição de comando é <userinput
-><command
->kwrite</command
-> <token
->%s</token
-></userinput
-> e o conteúdo da área de transferência é <filename
->/home/marcus/arquivotexto</filename
->, o comando <userinput
-><command
->kwrite</command
-> <filename
->/home/marcus/arquivotexto</filename
-></userinput
-> será executado. Para incluir o <token
->%s</token
-> na linha de comando, escape-o com uma barra invertida, como a seguir: <userinput
->\%s</userinput
->.</para
-></listitem>
-</varlistentry>
-
 <varlistentry
 ><term
 ><guibutton
->Avançado</guibutton
+>Excluir janelas</guibutton
 ></term>
 <listitem
 ><para
@@ -614,6 +445,118 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 
 <para
 >Uma vez que a WM_CLASS é adicionado, nenhuma ação mais será gerada para janelas deste aplicativo.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Remover espaços em branco ao executar as ações</guilabel
+></term>
+<listitem
+><para
+>Se estiver selecionada, todos os caracteres em branco (espaços, tabulações, &etc;) no início e no fim do conteúdo da área de transferência serão removidos antes de passar o conteúdo da área de transferência para o aplicativo. Isto é útil, por exemplo, se a área de transferência contiver um &URL; com espaços que, ao ser aberto por um navegador Web, poderia causar um erro.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>Incluir ações MIME</guilabel
+></term>
+<listitem
+><para
+>Se selecionado, inclui aplicativos que possam aceitar o tipo &MIME; de um nome de arquivo ou URL selecionado no menu popup.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect1>
+
+<sect1 id="actions-configuration-page">
+<title
+>Configuração das ações</title>
+
+<variablelist>
+<varlistentry>
+<term
+>Editando Expressões/Ações</term>
+<listitem
+><para
+>Na página de <guilabel
+>Ações</guilabel
+>, dê um duplo-clique numa expressão regular ou ação que deseja editar ou selecione-a e pressione o botão <guibutton
+>Editar ação</guibutton
+>. Um diálogo aparecerá no qual o texto da expressão pode ser editado conforme você desejar.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>Adicionando Expressões/Ações</term>
+<listitem
+><para
+>Clique no botão <guibutton
+>Adicionar ação...</guibutton
+> para adicionar uma expressão regular para o &klipper; pesquisar. O &klipper; usa o <classname
+>QRegularExpression</classname
+> do &Qt;, que usa PCRE (Expressões Regulares Compatíveis com o Perl).</para>
+<para
+>Você pode adicionar uma descrição para o tipo da expressão regular (&eg; <quote
+>HTTP URL</quote
+>) através de um clique <mousebutton
+>esquerdo</mousebutton
+> na coluna <guilabel
+>Descrição</guilabel
+>.</para
+>   
+
+<note
+><para
+>Você pode encontrar informações detalhadas sobre o uso de expressões regulares do <classname
+>QRegularExpression</classname
+> na <ulink url="https://doc.qt.io/qt-5/qregularexpression.html#details"
+>documentação do Qt</ulink
+>.</para
+></note>
+
+<para
+>Edita a expressão regular como descrito acima. Para adicionar o comando a ser executado, clique em <guimenuitem
+>Adicionar Comando</guimenuitem
+> e edite o comando na caixa de texto. Um duplo-clique no comando permitirá que você o edite.</para>
+
+<para
+>Observe que o <token
+>%s</token
+> na linha de comando é substituído pelo conteúdo da área de transferência, &eg; se sua definição de comando é <userinput
+><command
+>kwrite</command
+> <token
+>%s</token
+></userinput
+> e o conteúdo da área de transferência é <filename
+>/home/marcus/arquivotexto</filename
+>, o comando <userinput
+><command
+>kwrite</command
+> <filename
+>/home/marcus/arquivotexto</filename
+></userinput
+> será executado. Para incluir o <token
+>%s</token
+> na linha de comando, escape-o com uma barra invertida, como a seguir: <userinput
+>\%s</userinput
+>.</para>
+
+<para
+>As entradas <userinput
+><token
+>%0</token
+></userinput
+> até <userinput
+><token
+>%9</token
+></userinput
+> serão substituídas pelos textos correspondentes capturados do padrão de correspondência. </para>
 </listitem>
 </varlistentry>
 </variablelist>
@@ -700,8 +643,7 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 > e André Marcelo Alvarenga <email
 >alvarenga@kde.org</email
 ></para
-> 
-&underFDL; &underGPL; </chapter>
+> &underFDL; &underGPL; </chapter>
 
 
 &documentation.index; 
