@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-06 00:44+0000\n"
+"POT-Creation-Date: 2025-12-14 00:44+0000\n"
 "PO-Revision-Date: 2025-01-07 07:00+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -89,12 +89,12 @@ msgstr "%1 (%2)"
 msgid "Applications"
 msgstr "Programi"
 
-#: appsmodel.cpp:169
+#: appsmodel.cpp:171
 #, kde-format
 msgid "Unhide Applications in this Submenu"
 msgstr "Pokaži vse programe v tem podmeniju"
 
-#: appsmodel.cpp:178
+#: appsmodel.cpp:180
 #, kde-format
 msgid "Unhide Applications in '%1'"
 msgstr "Pokaži vse programe v '%1'"

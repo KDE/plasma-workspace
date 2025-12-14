@@ -15,6 +15,16 @@
 >&Mike.McBride; &Mike.McBride.mail;</author>
 <author
 >&Brad.Hards; &Brad.Hards.mail;</author>
+<author
+>&Lauri.Watts; &Lauri.Watts.mail;</author>
+<author
+><firstname
+>Natalie</firstname
+><surname
+>Clarius</surname
+><email
+>natalie_clarius@yahoo.de</email
+></author>
 <othercredit role="translator"
 ><firstname
 >Lisiane</firstname
@@ -47,9 +57,9 @@
 </authorgroup>
 
 <date
->08/04/2015</date>
+>29/01/2023</date>
 <releaseinfo
->Plasma 5.3</releaseinfo>
+>Plasma 5.27</releaseinfo>
 
 <abstract>
 <para
@@ -65,33 +75,175 @@
 >mouse</keyword>
 <keyword
 >cursor</keyword>
+<keyword
+>ponteiro</keyword>
+<keyword
+>saltitante</keyword>
+<keyword
+>piscante</keyword>
+<keyword
+>animação</keyword>
+<keyword
+>iniciar</keyword>
+<keyword
+>feedback</keyword>
+<keyword
+>tema</keyword>
 </keywordset>
 </articleinfo>
 
-<para
->Este módulo permite selecionar a partir de um determinado número de temas de cursores instalados. Uma previsão do cursor é mostrada abaixo da caixa de listagem. </para>
+<sect1 id="cursorthemes">
+<title
+>Tema de cursores</title>
 
 <para
->Os recursos fornecidos por este módulo podem não estar disponíveis em alguns sistemas. Seu sistema pode precisar ser atualizado para suportar temas de cursor. </para>
+>Este módulo permite que você <itemizedlist>
+<listitem
+><para
+>selecione um tema de cursor</para
+></listitem>
+<listitem
+><para
+>configure uma animação do cursor para iniciar aplicativos</para
+></listitem>
+</itemizedlist>
+</para>
 
 <para
->Se você tiver temas de cursor adicionais disponíveis, você pode instalá-los e removê-los usando os botões á direita da caixa de listagem. Observe que você não pode remover os temas predefinidos. </para>
+>As funcionalidades fornecidos por este módulo podem não estar disponíveis em alguns sistemas.</para>
+
+<sect2 id="cursorthememanagement">
+<title
+>Gerenciamento de tema de cursores</title>
+
+<screenshot>
+<screeninfo
+>Captura de tela do gerenciador de temas do cursor</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="main.png" format="PNG"/>
+</imageobject>
+</mediaobject>
+</screenshot>
 
 <para
->Use o botão para <guibutton
->Obter novos temas</guibutton
-> para invocar a janela para <guilabel
->Obter coisas novas</guilabel
-> e transferir temas adicionais da Internet.</para>
+>Para usar um tema de cursor, basta selecioná-lo e clicar no botão <guilabel
+>Aplicar</guilabel
+>.</para>
 
 <para
->Alguns temas permitem escolher o tamanho do cursor, usando a lista abaixo da legenda <guilabel
->Tamanho:</guilabel
->. </para>
+>Você pode remover temas de cursor usando o botão da lixeira que aparece quando você passa o cursor do mouse sobre o item do tema na lista. Observe que você não pode remover os temas pré-instalados.</para>
 
 <para
->O tamanho pode ser definido para ser <guilabel
->dependente da resolução</guilabel
-> ou para um dos tamanhos disponíveis no seu sistema. </para>
+>Use o botão <guilabel
+>Baixar novos cursores...</guilabel
+> para lançar a caixa de diálogo <guilabel
+>Baixar novos cursores</guilabel
+> e baixar temas adicionais da Internet.</para>
+
+<screenshot>
+<screeninfo
+>Captura de tela da opção "Obter novos temas de cursor"</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="get-new-stuff.png" format="PNG"/>
+</imageobject>
+</mediaobject>
+</screenshot>
+
+<para
+>Você também pode instalar arquivos de temas de cursor que você baixou ou obteve de outra forma usando o botão <guilabel
+>Instalar a partir do arquivo...</guilabel
+>.</para>
+
+<para
+>Se você estiver interessado em criar seu próprio tema de cursor, você pode encontrar informações <ulink url="https://userbase.kde.org/Special:MyLanguage/Create_your_own_mouse_cursor_theme"
+>aqui</ulink
+>.</para>
+
+</sect2>
+
+<sect2 id="cursorsize">
+<title
+>Tamanho do cursor</title>
+
+<para
+>Alguns temas permitem escolher o tamanho do cursor. Use o campo <guilabel
+>Tamanho</guilabel
+> para selecionar o tamanho apropriado.</para>
+
+<screenshot>
+<screeninfo
+>Capturas de tela do tamanho do cursor</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="cursor-size.png" format="PNG"/>
+</imageobject>
+</mediaobject>
+</screenshot>
+
+</sect2>
+
+<sect2 id="lauchfeedback">
+<title
+>Feedback de inicialização</title>
+
+<para
+>Às vezes, é reconfortante saber que seu computador não ignorou seu comando e que algo está acontecendo nos bastidores. Na caixa de diálogo <guilabel
+>Configurar feedback de inicialização...</guilabel
+>, você pode configurar o feedback visível para saber se realmente clicou naquele ícone ou não.</para>
+
+<screenshot>
+<screeninfo
+>Captura de tela do feedback de inicialização</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="launch-feedback.png" format="PNG"/>
+</imageobject>
+</mediaobject>
+</screenshot>
+	
+<para
+>A maneira tradicional de indicar que seu computador está ocupado é modificar o cursor, e você pode ativar isso escolhendo um <guilabel
+>Cursor</guilabel
+>.</para>
+
+<para
+>Com esta opção ativada, o cursor terá um ícone associado a ele por um curto período de tempo quando um novo aplicativo for iniciado. Você pode configurar por quanto tempo esse ícone será exibido ao lado do cursor com a caixa de seleção <guilabel
+>Parar animação após:</guilabel
+>. O padrão é 5 segundos.</para>
+
+<para
+>Existem diversas variações de cursor ocupado disponíveis, incluindo um <guilabel
+>Sem feedback</guilabel
+>, um <guilabel
+>Piscando</guilabel
+>, um <guilabel
+>Saltando</guilabel
+> ou um ícone de cursor <guilabel
+>Estático</guilabel
+> sem animação.</para>
+
+<para
+>A notificação de inicialização tradicional do &plasma; assumiu outra forma, que você também pode ativar e desativar aqui. Normalmente, quando você inicia um aplicativo, ele ganha uma entrada imediata na barra de tarefas, com o ícone substituído por uma ampulheta giratória para indicar que algo está acontecendo. Você pode ativar e desativar esse comportamento com a caixa de seleção <guilabel
+>Ativar animação</guilabel
+>.</para>
+
+<para
+>Nem todos os aplicativos que você inicia exibirão uma janela ou uma entrada na barra de tarefas. Alguns deles, por exemplo, são ancorados na bandeja do sistema do &plasma;. Alternativamente, pode ser que você o tenha enviado para uma área de trabalho virtual diferente e, na seção <guilabel
+>Comportamento</guilabel
+> das <ulink url="help:/plasma-desktop/panel.html"
+><guilabel
+>Configurações do gerenciador de tarefas</guilabel
+></ulink
+>, a opção <guilabel
+>Da área de trabalho atual</guilabel
+> esteja marcada como <guilabel
+>Mostrar apenas tarefas</guilabel
+>. Definir um tempo limite garante que, mesmo nesses casos, você ainda possa receber feedback de inicialização, mas também que ele desapareça quando a tarefa for concluída.</para>
+
+</sect2>
+
+</sect1>
 
 </article>

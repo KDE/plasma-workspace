@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_wallpaper_org.kde.image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-29 00:44+0000\n"
-"PO-Revision-Date: 2025-11-20 22:41+0100\n"
+"PO-Revision-Date: 2025-12-04 20:41+0100\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -172,7 +172,7 @@ msgstr "Alle auswählen"
 #, kde-format
 msgctxt "@action:button"
 msgid "Select All Slides"
-msgstr ""
+msgstr "Alle Folien auswählen"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:117
 #, kde-format
@@ -184,7 +184,7 @@ msgstr "Keine auswählen"
 #, kde-format
 msgctxt "@action:button"
 msgid "Unselect All Slides"
-msgstr ""
+msgstr "Alle Folien abwählen"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:34
 #, kde-format

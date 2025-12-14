@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: l 10n\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-05 00:44+0000\n"
-"PO-Revision-Date: 2025-11-23 01:17+0200\n"
+"PO-Revision-Date: 2025-12-14 01:46+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -27,30 +27,28 @@ msgid "General"
 msgstr "Bendra"
 
 #: qml/ConfigGeneral.qml:43
-#, fuzzy, kde-format
-#| msgid "Shown when relevant"
+#, kde-format
 msgctxt "@item:inlistbox Show this System Tray item when relevant"
 msgid "Show when relevant"
-msgstr "Rodomas, kai aktualus"
+msgstr "Rodyti, kai aktualus"
 
 #: qml/ConfigGeneral.qml:47
-#, fuzzy, kde-format
-#| msgid "Always shown"
+#, kde-format
 msgctxt "@item:inlistbox Always show this System Tray item"
 msgid "Always show"
-msgstr "Visada rodomas"
+msgstr "Visada rodyti"
 
 #: qml/ConfigGeneral.qml:51
 #, kde-format
 msgctxt "@item:inlistbox Show this System Tray item only in the expanded popup"
 msgid "Show only in popup"
-msgstr ""
+msgstr "Rodyti tik iškylančiajame lange"
 
 #: qml/ConfigGeneral.qml:55
 #, kde-format
 msgctxt "@item:inlistbox Never show this System Tray item; disable it"
 msgid "Never show (disabled)"
-msgstr ""
+msgstr "Niekada nerodyti (išjungtas)"
 
 #: qml/ConfigGeneral.qml:126
 #, kde-format
@@ -101,13 +99,7 @@ msgid "I understand the risks"
 msgstr "Aš suprantu rizikas"
 
 #: qml/ConfigGeneral.qml:187
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:usagetip"
-#| msgid ""
-#| "Disabling the clipboard is not recommended, as it will cause copied data "
-#| "to be lost when the application it was copied from is closed.<nl/><nl/"
-#| ">Instead consider configuring the clipboard to disable its history, or "
-#| "only remember one item at a time."
+#, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
 "Disabling the clipboard is not recommended, as it will cause copied data to "
@@ -119,9 +111,11 @@ msgid ""
 msgstr ""
 "Išjungti iškarpinę yra nerekomenduojama todėl, kad nukopijuoti duomenys bus "
 "prarandami po to, kai bus užveriama programa, iš kurios jie buvo nukopijuoti."
-"<nl/><nl/>Vietoj to, pagalvokite apie galimybę sukonfigūruoti iškarpinę "
-"taip, kad būtų išjungta jos istorija arba taip, kad vienu metu ji prisimintų "
-"tik vieną elementą."
+"<nl/><nl/>Išjunkite ją tik tuo atveju, jei kurioje nors kitoje vietoje esate "
+"pridėję atskirą iškarpinės valdiklį arba naudojate trečiosios šalies "
+"iškarpinės tvarkytuvę. Taip pat, užuot tai darę, pagalvokite apie galimybę "
+"sukonfigūruoti iškarpinę taip, kad būtų išjungta jos istorija arba taip, kad "
+"vienu metu ji prisimintų tik vieną elementą."
 
 #: qml/ConfigGeneral.qml:196
 #, kde-kuit-format
@@ -132,6 +126,11 @@ msgid ""
 "added a standalone Notifications widget somewhere else, or are intentionally "
 "using a 3rd-party notification manager to handle notifications."
 msgstr ""
+"Yra nerekomenduojama išjungti pranešimų valdiklio, nes nebebus rodomi "
+"programų siunčiami pranešimai.<nl/><nl/>Darykite tai tik tuo atveju, jei "
+"kurioje nors kitoje vietoje esate pridėję atskirą pranešimų valdiklį arba "
+"pranešimų apdorojimui sąmoningai naudojate trečiosios šalies pranešimų "
+"tvarkytuvę."
 
 #: qml/ConfigGeneral.qml:208
 #, kde-format

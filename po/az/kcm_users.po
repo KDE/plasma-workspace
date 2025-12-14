@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-03 00:46+0000\n"
-"PO-Revision-Date: 2025-10-21 19:50+0400\n"
-"Last-Translator: linux <xxmn77@gmail.com>\n"
+"PO-Revision-Date: 2025-12-14 00:19+0400\n"
+"Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #: src/fingerprintmodel.cpp:144 src/fingerprintmodel.cpp:228
 #, kde-format
@@ -604,6 +604,9 @@ msgid ""
 "Cannot change your own username while logged in; log out and then log in as "
 "another user to change this account’s username."
 msgstr ""
+"Daxil olduqdan sonra öz istifadəçi adınızı dəyişə bilməzsiniz; sistemdən "
+"çıxın və başqa istifadəçi adı ilə daxil olun ki, bu istifadəçi adını dəyişə "
+"biləsiniz."
 
 #: src/ui/UserDetailsPage.qml:186
 #, kde-format
@@ -612,6 +615,8 @@ msgid ""
 "Cannot change the username of a logged-in user; wait until this user logs "
 "out first."
 msgstr ""
+"İstifadəçi daxil olduqda istifadəçi adını dəyişə bilməz; öncə bu istifadəçi "
+"sistemdən çıxana qədər gözləyin."
 
 #: src/ui/UserDetailsPage.qml:214
 #, kde-format
@@ -651,6 +656,8 @@ msgid ""
 "Cannot delete yourself! Log out and then log in as another user to delete "
 "this user account."
 msgstr ""
+"Özünüzü silə bilməzsiniz! bu istifadəçi hesabını silmək üçün sistemdən çıxın "
+"və başqa istifadəçi kimi daxil olun."
 
 #: src/ui/UserDetailsPage.qml:286
 #, kde-format
