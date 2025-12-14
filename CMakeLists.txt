@@ -10,7 +10,7 @@ list(GET VERSION_LIST 2 PROJECT_VERSION_PATCH)
 set(PROJECT_DEP_VERSION "6.4.90")
 set(QT_MIN_VERSION "6.9.0")
 set(KF6_MIN_VERSION "6.18.0")
-option(WITH_X11_SESSION "Build and install X11 session (deprecated)" OFF)
+option(WITH_X11_SESSION "Build and install X11 session (deprecated)" ON)
 option(INSTALL_SDDM_WAYLAND_SESSION OFF)
 option(WITH_X11 "Build with X11 support. Building without is experimental" ON)
 
