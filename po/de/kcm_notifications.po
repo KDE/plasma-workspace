@@ -5,20 +5,21 @@
 # SPDX-FileCopyrightText: 2023 Frederik Schwarzer <schwarzer@kde.org>
 # SPDX-FileCopyrightText: 2024 Flori G <Renner03@protonmail.com>
 # SPDX-FileCopyrightText: 2025 Alois Spitzbart <spitz234@hotmail.com>
+# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n.daphipz@fastmail.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2023-04-19 00:33+0200\n"
-"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
+"PO-Revision-Date: 2025-12-11 18:25+0100\n"
+"Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #: kcm.cpp:64
 #, kde-format
@@ -54,7 +55,7 @@ msgstr "Benachrichtigungs-Symbole anzeigen"
 #: package/contents/ui/ApplicationConfiguration.qml:119
 #, kde-format
 msgid "Configure Events…"
-msgstr "Ereignisse einrichten ..."
+msgstr "Ereignisse einrichten …"
 
 #: package/contents/ui/ApplicationConfiguration.qml:130
 #, kde-format
@@ -62,7 +63,7 @@ msgid ""
 "This application does not support configuring notifications on a per-event "
 "basis."
 msgstr ""
-"Diese Anwendung unterstützt kein Einrichtung von Benachrichtigungen für "
+"Diese Anwendung unterstützt keine Einrichtung von Benachrichtigungen für "
 "einzelne Ereignisse."
 
 #: package/contents/ui/main.qml:18
@@ -184,7 +185,7 @@ msgstr "Neben dem Benachrichtigungssymbol"
 #: package/contents/ui/main.qml:209
 #, kde-format
 msgid "Choose Custom Position…"
-msgstr "Benutzerdefinierte Position auswählen ..."
+msgstr "Benutzerdefinierte Position auswählen …"
 
 #: package/contents/ui/main.qml:218 package/contents/ui/main.qml:234
 #, kde-format
@@ -241,7 +242,7 @@ msgstr "Anwendungsspezifische Einstellungen"
 #: package/contents/ui/main.qml:308
 #, kde-format
 msgid "Configure…"
-msgstr "Einrichten ..."
+msgstr "Einrichten …"
 
 #: package/contents/ui/PopupPositionPage.qml:15
 #, kde-format

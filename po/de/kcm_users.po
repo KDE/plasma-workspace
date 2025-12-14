@@ -6,20 +6,21 @@
 # SPDX-FileCopyrightText: 2023 Johannes Obermayr <johannesobermayr@gmx.de>
 # SPDX-FileCopyrightText: 2024 Flori G <Renner03@protonmail.com>
 # SPDX-FileCopyrightText: 2025 Alois Spitzbart <spitz234@hotmail.com>
+# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n.daphipz@fastmail.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_users\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2024-09-29 18:48+0200\n"
-"Last-Translator: Flori G <Renner03@protonmail.com>\n"
+"PO-Revision-Date: 2025-12-04 20:37+0100\n"
+"Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #: package/contents/ui/ChangePassword.qml:27
 #: package/contents/ui/UserDetailsPage.qml:156
@@ -469,7 +470,7 @@ msgstr "Ein Bild auswählen"
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose File…"
-msgstr "Datei wählen …"
+msgstr "Datei wählen …"
 
 #: package/contents/ui/UserDetailsPage.qml:107
 #, kde-format
@@ -494,12 +495,12 @@ msgstr "Dateien behalten"
 #: package/contents/ui/UserDetailsPage.qml:190
 #, kde-format
 msgid "Delete User…"
-msgstr "Benutzer löschen …"
+msgstr "Benutzer löschen …"
 
 #: package/contents/ui/UserDetailsPage.qml:201
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
-msgstr "Fingerabdruck-Authentifizierung konfigurieren …"
+msgstr "Fingerabdruck-Authentifizierung einrichten …"
 
 #: package/contents/ui/UserDetailsPage.qml:215
 #, kde-kuit-format

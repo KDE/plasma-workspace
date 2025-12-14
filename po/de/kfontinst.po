@@ -6,20 +6,21 @@
 # SPDX-FileCopyrightText: 2009, 2010, 2011, 2016, 2022 Frederik Schwarzer <schwarzer@kde.org>
 # SPDX-FileCopyrightText: 2010, 2011 Panagiotis Papadopoulos <pano_90@gmx.net>
 # SPDX-FileCopyrightText: 2010 Johannes Obermayr <johannesobermayr@gmx.de>
+# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n.daphipz@fastmail.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2024-08-04 13:43+0200\n"
-"Last-Translator: Frank Steinmetzger <dev-kde@felsenfleischer.de>\n"
+"PO-Revision-Date: 2025-12-04 20:37+0100\n"
+"Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -78,7 +79,7 @@ msgstr "Drucken"
 #: apps/Printer.cpp:308 kcmfontinst/DuplicatesDialog.cpp:222
 #, kde-format
 msgid "Canceling…"
-msgstr "Wird abgebrochen ..."
+msgstr "Wird abgebrochen …"
 
 #: apps/Printer.cpp:325
 #, kde-format
@@ -157,7 +158,7 @@ msgstr "Doppelte Schriftarten"
 #: kcmfontinst/DuplicatesDialog.cpp:77
 #, kde-format
 msgid "Scanning for duplicate fonts. Please wait…"
-msgstr "Suche nach Duplikaten läuft, bitte warten ..."
+msgstr "Suche nach doppelten Schriftarten läuft, bitte warten …"
 
 #: kcmfontinst/DuplicatesDialog.cpp:96
 #, kde-format
@@ -296,7 +297,7 @@ msgstr "Symbol/Sonstige"
 #: kcmfontinst/FontFilter.cpp:266 kcmfontinst/FontFilter.cpp:334
 #, kde-format
 msgid "Filter by %1…"
-msgstr "Filtern nach %1 ..."
+msgstr "Filtern nach %1 …"
 
 #: kcmfontinst/FontList.cpp:554
 #, kde-format
@@ -334,7 +335,7 @@ msgstr ""
 #: kcmfontinst/FontList.cpp:956 kcmfontinst/FontList.cpp:980
 #, kde-format
 msgid "…plus %1 more"
-msgstr "... und %1 weitere"
+msgstr "… und %1 weitere"
 
 #: kcmfontinst/FontList.cpp:1007
 #, kde-format
@@ -361,7 +362,7 @@ msgstr "Deaktivieren"
 #: kcmfontinst/FontList.cpp:1313 kcmfontinst/GroupList.cpp:796
 #, kde-format
 msgid "Print…"
-msgstr "Drucken ..."
+msgstr "Drucken …"
 
 #: kcmfontinst/FontList.cpp:1317
 #, kde-format
@@ -481,12 +482,12 @@ msgstr "<qt>Es existiert bereits eine Gruppe namens <b>%1</b>.</qt>"
 #: kcmfontinst/GroupList.cpp:792
 #, kde-format
 msgid "Rename…"
-msgstr "Umbenennen ..."
+msgstr "Umbenennen …"
 
 #: kcmfontinst/GroupList.cpp:801
 #, kde-format
 msgid "Export…"
-msgstr "Exportieren ..."
+msgstr "Exportieren …"
 
 #: kcmfontinst/GroupList.cpp:895
 #, kde-format
@@ -540,17 +541,17 @@ msgstr "Diese Meldung nicht mehr anzeigen"
 #: kcmfontinst/JobRunner.cpp:321
 #, kde-format
 msgid "Installing"
-msgstr "Installation ..."
+msgstr "Installation"
 
 #: kcmfontinst/JobRunner.cpp:324
 #, kde-format
 msgid "Uninstalling"
-msgstr "Deinstallation ..."
+msgstr "Deinstallation"
 
 #: kcmfontinst/JobRunner.cpp:327 kcmfontinst/JobRunner.cpp:424
 #, kde-format
 msgid "Enabling"
-msgstr "Aktivierung ..."
+msgstr "Aktivierung"
 
 #: kcmfontinst/JobRunner.cpp:330 kcmfontinst/JobRunner.cpp:428
 #, kde-format
@@ -570,12 +571,12 @@ msgstr "Wird entfernt"
 #: kcmfontinst/JobRunner.cpp:341
 #, kde-format
 msgid "Disabling"
-msgstr "Deaktivierung ..."
+msgstr "Deaktivierung"
 
 #: kcmfontinst/JobRunner.cpp:379
 #, kde-format
 msgid "Updating font configuration. Please wait…"
-msgstr "Schriftarten-Einrichtung wird aktualisiert. Bitte warten ..."
+msgstr "Schriftarten-Einrichtung wird aktualisiert. Bitte warten …"
 
 #: kcmfontinst/JobRunner.cpp:451
 #, kde-format
@@ -692,22 +693,22 @@ msgstr "Entwickler und Betreuer"
 #: kcmfontinst/KCmFontInst.cpp:202
 #, kde-format
 msgid "Create New Group…"
-msgstr "Neue Gruppe erstellen ..."
+msgstr "Neue Gruppe erstellen …"
 
 #: kcmfontinst/KCmFontInst.cpp:204
 #, kde-format
 msgid "Remove Group…"
-msgstr "Gruppe entfernen ..."
+msgstr "Gruppe entfernen …"
 
 #: kcmfontinst/KCmFontInst.cpp:206
 #, kde-format
 msgid "Enable Fonts in Group…"
-msgstr "Schriftarten in Gruppen aktivieren ..."
+msgstr "Schriftarten in Gruppe aktivieren …"
 
 #: kcmfontinst/KCmFontInst.cpp:208
 #, kde-format
 msgid "Disable Fonts in Group…"
-msgstr "Schriftarten in Gruppen deaktivieren ..."
+msgstr "Schriftarten in Gruppe deaktivieren …"
 
 #: kcmfontinst/KCmFontInst.cpp:233
 #, kde-format
@@ -717,17 +718,17 @@ msgstr "Zeigt eine Vorschau der gewählten Schriftart an."
 #: kcmfontinst/KCmFontInst.cpp:249
 #, kde-format
 msgid "Find Duplicates…"
-msgstr "Duplikate suchen ..."
+msgstr "Duplikate suchen …"
 
 #: kcmfontinst/KCmFontInst.cpp:249
 #, kde-format
 msgid "Scan for Duplicate Fonts…"
-msgstr "Nach doppelten Schriftarten suchen ..."
+msgstr "Nach doppelten Schriftarten suchen …"
 
 #: kcmfontinst/KCmFontInst.cpp:251
 #, kde-format
 msgid "Install from File…"
-msgstr "Aus Datei installieren ..."
+msgstr "Aus Datei installieren …"
 
 #: kcmfontinst/KCmFontInst.cpp:251
 #, kde-format
@@ -737,7 +738,7 @@ msgstr "Installiert Schriftarten aus einer lokalen Datei"
 #: kcmfontinst/KCmFontInst.cpp:252
 #, kde-format
 msgid "Get New Fonts…"
-msgstr "Neue Schriftarten holen ..."
+msgstr "Neue Schriftarten holen …"
 
 #: kcmfontinst/KCmFontInst.cpp:253
 #, kde-format
@@ -747,12 +748,12 @@ msgstr "Neue Schriftarten herunterladen"
 #: kcmfontinst/KCmFontInst.cpp:255
 #, kde-format
 msgid "Delete Selected Fonts…"
-msgstr "Ausgewählte Schriftarten löschen ..."
+msgstr "Ausgewählte Schriftarten löschen …"
 
 #: kcmfontinst/KCmFontInst.cpp:313
 #, kde-format
 msgid "Change Preview Text…"
-msgstr "Vorschau-Text ändern ..."
+msgstr "Vorschautext ändern …"
 
 #: kcmfontinst/KCmFontInst.cpp:375
 #, kde-format
@@ -851,7 +852,7 @@ msgstr "Schriftarten löschen"
 #: kcmfontinst/KCmFontInst.cpp:639
 #, kde-format
 msgid "Deleting font(s)…"
-msgstr "Schriftarten werden gelöscht ..."
+msgstr "Schriftarten werden gelöscht …"
 
 #: kcmfontinst/KCmFontInst.cpp:654
 #, kde-format
@@ -903,7 +904,7 @@ msgstr "Schriftarten verschieben"
 #: kcmfontinst/KCmFontInst.cpp:686
 #, kde-format
 msgid "Moving font(s)…"
-msgstr "Schriftarten werden verschoben ..."
+msgstr "Schriftarten werden verschoben …"
 
 #: kcmfontinst/KCmFontInst.cpp:700
 #, kde-format
@@ -948,7 +949,7 @@ msgstr "Bitte geben Sie einen neuen Text ein:"
 #: kcmfontinst/KCmFontInst.cpp:829
 #, kde-format
 msgid "Scanning font list…"
-msgstr "Schriftartenliste wird analysiert ..."
+msgstr "Schriftartenliste wird analysiert …"
 
 #: kcmfontinst/KCmFontInst.cpp:888
 #, kde-format
@@ -989,17 +990,17 @@ msgstr ""
 #: kcmfontinst/KCmFontInst.cpp:989
 #, kde-format
 msgid "Looking for any associated files…"
-msgstr "Zugehörige Dateien werden gesucht ..."
+msgstr "Zugehörige Dateien werden gesucht …"
 
 #: kcmfontinst/KCmFontInst.cpp:993
 #, kde-format
 msgid "Scanning Files…"
-msgstr "Dateien werden durchsucht ..."
+msgstr "Dateien werden durchsucht …"
 
 #: kcmfontinst/KCmFontInst.cpp:994
 #, kde-format
 msgid "Looking for additional files to install…"
-msgstr "Weitere zu installierende Dateien werden gesucht ..."
+msgstr "Weitere zu installierende Dateien werden gesucht …"
 
 #: kcmfontinst/KCmFontInst.cpp:1009
 #, kde-format
@@ -1009,7 +1010,7 @@ msgstr "Zu %1 zugehörige Dateien werden gesucht."
 #: kcmfontinst/KCmFontInst.cpp:1037
 #, kde-format
 msgid "Installing font(s)…"
-msgstr "Schriftarten werden installiert ..."
+msgstr "Schriftarten werden installiert …"
 
 #: kcmfontinst/KCmFontInst.cpp:1102
 #, kde-format
@@ -1126,12 +1127,12 @@ msgstr "Schriftarten deaktivieren"
 #: kcmfontinst/KCmFontInst.cpp:1164
 #, kde-format
 msgid "Enabling font(s)…"
-msgstr "Schriftarten werden aktiviert ..."
+msgstr "Schriftarten werden aktiviert …"
 
 #: kcmfontinst/KCmFontInst.cpp:1166
 #, kde-format
 msgid "Disabling font(s)…"
-msgstr "Schriftarten werden deaktiviert ..."
+msgstr "Schriftarten werden deaktiviert …"
 
 #: kcmfontinst/PrintDialog.cpp:21
 #, kde-format
@@ -1627,12 +1628,12 @@ msgstr "Schriftart anzeigen:"
 #: viewpart/FontViewPart.cpp:88
 #, kde-format
 msgid "Install…"
-msgstr "Installieren ..."
+msgstr "Installieren …"
 
 #: viewpart/FontViewPart.cpp:109
 #, kde-format
 msgid "Change Text…"
-msgstr "Text ändern ..."
+msgstr "Text ändern …"
 
 #: viewpart/FontViewPart.cpp:335
 #, kde-format

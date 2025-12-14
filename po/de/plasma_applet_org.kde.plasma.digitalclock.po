@@ -4,20 +4,21 @@
 # SPDX-FileCopyrightText: 2021, 2025 Alois Spitzbart <spitz234@hotmail.com>
 # SPDX-FileCopyrightText: 2023 Jannick Kuhr <opensource@kuhr.org>
 # SPDX-FileCopyrightText: 2025 Flori G <Renner03@protonmail.com>
+# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n.daphipz@fastmail.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2023-02-01 22:28+0100\n"
-"Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
+"PO-Revision-Date: 2025-12-04 20:39+0100\n"
+"Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #: package/contents/config/config.qml:19
 #, kde-format
@@ -44,7 +45,7 @@ msgstr "Termine"
 #, kde-format
 msgctxt "@action:button Add event"
 msgid "Add…"
-msgstr "Hinzufügen ..."
+msgstr "Hinzufügen …"
 
 #: package/contents/ui/CalendarView.qml:148
 #, kde-format
@@ -65,7 +66,7 @@ msgstr "Keine Termine an diesem Tag"
 #: package/contents/ui/CalendarView.qml:440
 #, kde-format
 msgid "Switch…"
-msgstr "Wechseln ..."
+msgstr "Wechseln …"
 
 #: package/contents/ui/CalendarView.qml:441
 #: package/contents/ui/CalendarView.qml:444
@@ -162,7 +163,7 @@ msgstr "24 Stunden"
 #: package/contents/ui/configAppearance.qml:133
 #, kde-format
 msgid "Change Regional Settings…"
-msgstr "Regionaleinstellungen ändern ..."
+msgstr "Regionaleinstellungen ändern …"
 
 #: package/contents/ui/configAppearance.qml:144
 #, kde-format
@@ -230,7 +231,7 @@ msgstr "Manuell"
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
-msgstr "Darstellung auswählen ..."
+msgstr "Stil auswählen …"
 
 #: package/contents/ui/configAppearance.qml:260
 #, kde-format
@@ -292,7 +293,7 @@ msgstr "Versteckt, da der lokalen Zeitzone entsprechend"
 #: package/contents/ui/configTimeZones.qml:117
 #, kde-format
 msgid "Switch Systemwide Time Zone…"
-msgstr "Zeitzone des Systems wechseln ..."
+msgstr "Zeitzone des Systems wechseln …"
 
 #: package/contents/ui/configTimeZones.qml:126
 #, kde-format
@@ -321,7 +322,7 @@ msgstr ""
 #: package/contents/ui/configTimeZones.qml:155
 #, kde-format
 msgid "Add Time Zones…"
-msgstr "Zeitzonen hinzufügen ..."
+msgstr "Zeitzonen hinzufügen …"
 
 #: package/contents/ui/configTimeZones.qml:165
 #, kde-format
@@ -369,12 +370,12 @@ msgstr "In die Zwischenablage kopieren"
 #: package/contents/ui/main.qml:133
 #, kde-format
 msgid "Adjust Date and Time…"
-msgstr "Datum und Zeit einstellen ..."
+msgstr "Datum und Zeit einstellen …"
 
 #: package/contents/ui/main.qml:136
 #, kde-format
 msgid "Set Time Format…"
-msgstr "Zeitformat einstellen ..."
+msgstr "Zeitformat einstellen …"
 
 #: package/contents/ui/Tooltip.qml:32
 #, kde-format

@@ -1,20 +1,21 @@
 # SPDX-FileCopyrightText: 2015, 2018, 2019, 2021 Burkhard Lück <lueck@hube-lueck.de>
 # SPDX-FileCopyrightText: 2016, 2020, 2023 Frederik Schwarzer <schwarzer@kde.org>
 # SPDX-FileCopyrightText: 2023 Jannick Kuhr <opensource@kuhr.org>
+# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n.daphipz@fastmail.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_cursortheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2023-04-15 00:03+0200\n"
-"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
+"PO-Revision-Date: 2025-12-04 20:36+0100\n"
+"Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.11.70\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #. i18n: ectx: label, entry (cursorTheme), group (Mouse)
 #: cursorthemesettings.kcfg:9
@@ -174,17 +175,17 @@ msgstr "Größe:"
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
-msgstr "Startanzeige einrichten ..."
+msgstr "Startanzeige einrichten …"
 
 #: package/contents/ui/main.qml:145
 #, kde-format
 msgid "&Install from File…"
-msgstr "&Aus Datei installieren ..."
+msgstr "&Aus Datei installieren …"
 
 #: package/contents/ui/main.qml:151
 #, kde-format
 msgid "&Get New Cursors…"
-msgstr "&Neue Zeiger holen ..."
+msgstr "&Neue Zeiger holen …"
 
 #: package/contents/ui/main.qml:168
 #, kde-format
