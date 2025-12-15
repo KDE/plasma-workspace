@@ -131,18 +131,24 @@ Item {
                     text: i18nd("plasmashellprivateplugin", "Days");
                     onClicked: (root.monthViewRoot as MonthView).showMonthView();
                     display: T.AbstractButton.TextOnly
+                    Keys.onReturnPressed: animateClick()
+                    Keys.onEnterPressed: animateClick()
                 }
                 PlasmaComponents.TabButton {
                     Accessible.onPressAction: clicked()
                     text: i18nd("plasmashellprivateplugin", "Months");
                     onClicked: (root.monthViewRoot as MonthView).showYearView();
                     display: T.AbstractButton.TextOnly
+                    Keys.onReturnPressed: animateClick()
+                    Keys.onEnterPressed: animateClick()
                 }
                 PlasmaComponents.TabButton {
                     Accessible.onPressAction: clicked()
                     text: i18nd("plasmashellprivateplugin", "Years");
                     onClicked: (root.monthViewRoot as MonthView).showDecadeView();
                     display: T.AbstractButton.TextOnly
+                    Keys.onReturnPressed: animateClick()
+                    Keys.onEnterPressed: animateClick()
                 }
             }
 
@@ -190,8 +196,9 @@ Item {
             KeyNavigation.right: todayButton
 
             onClicked: (root.monthViewRoot as MonthView).previousView()
-
-            PlasmaComponents.ToolTip { text: previousButton.text }
+            Keys.onReturnPressed: animateClick()
+            Keys.onEnterPressed: animateClick()
+            PlasmaComponents.ToolTip { text: previousButton.text  }
         }
 
         PlasmaComponents.ToolButton {
@@ -201,6 +208,8 @@ Item {
             KeyNavigation.right: nextButton
 
             onClicked: (root.monthViewRoot as MonthView).resetToToday()
+            Keys.onReturnPressed: animateClick()
+            Keys.onEnterPressed: animateClick()
         }
 
         PlasmaComponents.ToolButton {
@@ -222,9 +231,10 @@ Item {
             display: T.AbstractButton.IconOnly
             KeyNavigation.tab: root.swipeView
 
-            onClicked: (root.monthViewRoot as MonthView).nextView();
-
-            PlasmaComponents.ToolTip { text: nextButton     .text }
+            onClicked: (root.monthViewRoot as MonthView).nextView()
+            Keys.onReturnPressed: animateClick()
+            Keys.onEnterPressed: animateClick()
+            PlasmaComponents.ToolTip { text: nextButton.text }
         }
     }
 
@@ -254,6 +264,8 @@ Item {
             KeyNavigation.down: root.todayButton
 
             onClicked: (root.monthViewRoot as MonthView).digitalClock.internalAction("configure").trigger()
+            Keys.onReturnPressed: animateClick()
+            Keys.onEnterPressed: animateClick()
             PlasmaComponents.ToolTip {
                 text: configureButton.text
             }
@@ -273,6 +285,8 @@ Item {
             KeyNavigation.down: root.nextButton
 
             onToggled: (root.monthViewRoot as MonthView).digitalClock.configuration.pin = checked
+            Keys.onReturnPressed: animateClick()
+            Keys.onEnterPressed: animateClick()
 
             PlasmaComponents.ToolTip {
                 text: pinButton.text
