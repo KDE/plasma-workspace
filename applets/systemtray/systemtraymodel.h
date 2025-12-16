@@ -215,10 +215,12 @@ public:
 
     void addSourceModel(QAbstractItemModel *sourceModel);
 
+#if QT_VERSION < QT_VERSION_CHECK(6, 11, 0)
     Q_INVOKABLE QModelIndex mapToSource(const QModelIndex &index) const
     {
         return QConcatenateTablesProxyModel::mapToSource(index);
     }
+#endif
 
 private:
     QHash<int, QByteArray> m_roleNames;

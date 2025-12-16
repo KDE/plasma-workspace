@@ -20,6 +20,7 @@
 #include <KLocalizedString>
 #include <KNotificationJobUiDelegate>
 #include <KService>
+#include <KWaylandExtras>
 #include <Plasma/Applet>
 #include <PlasmaQuick/AppletQuickItem>
 
@@ -478,14 +479,19 @@ BackgroundAppsModel::BackgroundAppsModel(QPointer<SystemTraySettings> settings, 
                                                              "/org/freedesktop/background/monitor"_L1,
                                                              QDBusConnection::sessionBus(),
                                                              this);
-    connect(monitor, &OrgFreedesktopDBusPropertiesInterface::PropertiesChanged, this, [this, monitor](const QString &interface, const QVariantMap &changed) {
-        if (interface != monitor->service()) {
-            return;
-        }
-        if (auto property = changed.find("BackgroundApps"_L1); property != changed.cend()) {
-            backgroundAppsChanged(qdbus_cast<QList<QVariantMap>>(property->value<QDBusArgument>()));
-        }
-    });
+    connect(monitor,
+            &OrgFreedesktopDBusPropertiesInterface::PropertiesChanged,
+            this,
+            [this, monitor](const QString &interface, const QVariantMap &changed, const QStringList &invalidated) {
+                if (interface != monitor->service()) {
+                    return;
+                }
+                if (auto property = changed.find("BackgroundApps"_L1); property != changed.cend()) {
+                    backgroundAppsChanged(qdbus_cast<QList<QVariantMap>>(property->value<QDBusArgument>()));
+                } else if (invalidated.contains("BackgroundApps"_L1)) {
+                    backgroundAppsChanged({});
+                }
+            });
     auto pendingCall = monitor->Get(monitor->service(), "BackgroundApps"_L1);
     connect(new QDBusPendingCallWatcher(pendingCall, this), &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *call) {
         call->deleteLater();
@@ -500,6 +506,7 @@ void BackgroundAppsModel::backgroundAppsChanged(const QList<QVariantMap> &backgr
 {
     beginResetModel();
     m_backgroundApps.clear();
+    m_backgroundApps.reserve(backgroundApps.size());
     for (const auto &entry : backgroundApps) {
         const QString appId = entry.value("app_id"_L1).toString();
         const QString instance = entry.value("instance"_L1).toString();
@@ -524,10 +531,15 @@ void BackgroundAppsModel::openBackgroundApp(const QModelIndex &index)
         return;
     }
     const auto &app = m_backgroundApps.at(index.row());
-    auto job = new KIO::ApplicationLauncherJob(app.service);
-    auto delegate = new KNotificationJobUiDelegate(KJobUiDelegate::AutoErrorHandlingEnabled);
-    job->setUiDelegate(delegate);
-    job->start();
+    auto tokenFuture = KWaylandExtras::xdgActivationToken(nullptr, app.appId);
+    tokenFuture.then([service = app.service](const QString &token) {
+        auto job = new KIO::ApplicationLauncherJob(service);
+        job->setStartupId(token.toUtf8());
+        auto delegate = new KNotificationJobUiDelegate(KJobUiDelegate::AutoErrorHandlingEnabled);
+        job->setUiDelegate(delegate);
+        job->start();
+    });
+
     // Remove it from the model immediately - if things didnt work it will appear on the next update
     // Better the errorneous case is a bit weird than the normal one
     beginRemoveRows(index.parent(), index.row(), index.row());
@@ -541,12 +553,28 @@ void BackgroundAppsModel::stopBackgroundApp(const QModelIndex &index)
         return;
     }
     const auto &app = m_backgroundApps.at(index.row());
-    for (const auto &instance : std::as_const(app.flatpakInstances)) {
-        auto job = new KIO::CommandLauncherJob("flatpak"_L1, {"kill"_L1, instance});
-        auto delegate = new KNotificationJobUiDelegate(KJobUiDelegate::AutoErrorHandlingEnabled);
-        job->setUiDelegate(delegate);
-        job->start();
-    }
+
+    auto appIdToDBusPath = [](QString appId) {
+        return u'/' + appId.replace(u'.', u'/').replace(u'-', u'_');
+    };
+
+    // Some apps react to a quit action even if it's not in their desktop file
+    // Nicer than immediately killing them
+    auto message = QDBusMessage::createMethodCall(app.appId, appIdToDBusPath(app.appId), "org.freedesktop.Application"_L1, "quit"_L1);
+    message.setArguments({QList<QVariant>{}, QVariantMap{}});
+    auto watcher = new QDBusPendingCallWatcher(QDBusConnection::sessionBus().asyncCall(message));
+    connect(watcher, &QDBusPendingCallWatcher::finished, watcher, [instances = app.flatpakInstances](QDBusPendingCallWatcher *watcher) {
+        watcher->deleteLater();
+        if (watcher->isError()) {
+            qCInfo(SYSTEM_TRAY) << "Failed to terminate background app via dbus:" << watcher->error();
+            for (const auto &instance : std::as_const(instances)) {
+                auto job = new KIO::CommandLauncherJob("flatpak"_L1, {"kill"_L1, instance});
+                auto delegate = new KNotificationJobUiDelegate(KJobUiDelegate::AutoErrorHandlingEnabled);
+                job->setUiDelegate(delegate);
+                job->start();
+            }
+        }
+    });
     // Remove it from the model immediately - if things didnt work it will appear on the next update
     // Better the errorneous case is a bit weird than the normal one
     beginRemoveRows(index.parent(), index.row(), index.row());
@@ -556,6 +584,9 @@ void BackgroundAppsModel::stopBackgroundApp(const QModelIndex &index)
 
 int BackgroundAppsModel::rowCount(const QModelIndex &parent) const
 {
+    if (parent.isValid()) {
+        return 0;
+    }
     return m_backgroundApps.size();
 }
 
@@ -599,9 +630,9 @@ QVariant BackgroundAppsModel::data(const QModelIndex &index, int role) const
         case BaseRole::Category:
             return u"ApplicationStatus"_s;
         case BaseRole::Status:
-            return Plasma::Types::ItemStatus::PassiveStatus;
+            return Plasma::Types::ItemStatus::ActiveStatus;
         case BaseRole::EffectiveStatus:
-            return calculateEffectiveStatus(true, Plasma::Types::ItemStatus::PassiveStatus, app.appId);
+            return calculateEffectiveStatus(true, Plasma::Types::ItemStatus::ActiveStatus, app.appId);
         default:
             return QVariant();
         }
@@ -626,14 +657,16 @@ BackgroundAppsFilteredModel::BackgroundAppsFilteredModel(BackgroundAppsModel *so
 {
     connect(StatusNotifierItemHost::self(), &StatusNotifierItemHost::itemAdded, this, [this](const QString &item) {
         if (auto instance = StatusNotifierItemHost::self()->itemForService(item)->flatpakInstance(); !instance.isEmpty()) {
+            beginFilterChange();
             m_flatpaksWithSni.push_back({.flatpakInstance = instance, .sniId = item});
-            invalidateFilter();
+            endFilterChange();
         }
     });
     connect(StatusNotifierItemHost::self(), &StatusNotifierItemHost::itemRemoved, this, [this](const QString &item) {
         if (auto it = std::ranges::find(m_flatpaksWithSni, item, &Info::sniId); it != m_flatpaksWithSni.end()) {
+            beginFilterChange();
             m_flatpaksWithSni.erase(it);
-            invalidateFilter();
+            endFilterChange();
         }
     });
     const auto registeredSnis = StatusNotifierItemHost::self()->services();
