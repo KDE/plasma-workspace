@@ -533,12 +533,28 @@ void BackgroundAppsModel::stopBackgroundApp(const QModelIndex &index)
         return;
     }
     const auto &app = m_backgroundApps.at(index.row());
-    for (const auto &instance : std::as_const(app.flatpakInstances)) {
-        auto job = new KIO::CommandLauncherJob("flatpak"_L1, {"kill"_L1, instance});
-        auto delegate = new KNotificationJobUiDelegate(KJobUiDelegate::AutoErrorHandlingEnabled);
-        job->setUiDelegate(delegate);
-        job->start();
-    }
+
+    auto appIdToDBusPath = [](QString appId) {
+        return u'/' + appId.replace(u'.', u'/').replace(u'-', u'_');
+    };
+
+    // Some apps react to a quit action even if it's not in their desktop file
+    // Nicer than immediately killing them
+    auto message = QDBusMessage::createMethodCall(app.appId, appIdToDBusPath(app.appId), "org.freedesktop.Application"_L1, "quit"_L1);
+    message.setArguments({QList<QVariant>{}, QVariantMap{}});
+    auto watcher = new QDBusPendingCallWatcher(QDBusConnection::sessionBus().asyncCall(message));
+    connect(watcher, &QDBusPendingCallWatcher::finished, watcher, [instances = app.flatpakInstances](QDBusPendingCallWatcher *watcher) {
+        watcher->deleteLater();
+        if (watcher->isError()) {
+            qCInfo(SYSTEM_TRAY) << "Failed to terminate background app via dbus:" << watcher->error();
+            for (const auto &instance : std::as_const(instances)) {
+                auto job = new KIO::CommandLauncherJob("flatpak"_L1, {"kill"_L1, instance});
+                auto delegate = new KNotificationJobUiDelegate(KJobUiDelegate::AutoErrorHandlingEnabled);
+                job->setUiDelegate(delegate);
+                job->start();
+            }
+        }
+    });
     // Remove it from the model immediately - if things didnt work it will appear on the next update
     // Better the errorneous case is a bit weird than the normal one
     beginRemoveRows(index.parent(), index.row(), index.row());

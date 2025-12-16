@@ -59,6 +59,7 @@ plasma_add_applet(org.kde.plasma.systemtray
         systemtray.cpp
     QML_SOURCES
         qml/AbstractItem.qml
+        qml/BackgroundAppItem.qml
         qml/ConfigGeneral.qml
         qml/CurrentItemHighLight.qml
         qml/ExpanderArrow.qml
