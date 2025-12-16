@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-05 00:44+0000\n"
-"PO-Revision-Date: 2025-11-24 17:13+0900\n"
+"PO-Revision-Date: 2025-12-16 21:40+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -26,15 +26,13 @@ msgid "General"
 msgstr "一般"
 
 #: qml/ConfigGeneral.qml:43
-#, fuzzy, kde-format
-#| msgid "Shown when relevant"
+#, kde-format
 msgctxt "@item:inlistbox Show this System Tray item when relevant"
 msgid "Show when relevant"
 msgstr "有關時顯示"
 
 #: qml/ConfigGeneral.qml:47
-#, fuzzy, kde-format
-#| msgid "Always shown"
+#, kde-format
 msgctxt "@item:inlistbox Always show this System Tray item"
 msgid "Always show"
 msgstr "總是顯示"
@@ -43,13 +41,13 @@ msgstr "總是顯示"
 #, kde-format
 msgctxt "@item:inlistbox Show this System Tray item only in the expanded popup"
 msgid "Show only in popup"
-msgstr ""
+msgstr "只在彈出視窗中顯示"
 
 #: qml/ConfigGeneral.qml:55
 #, kde-format
 msgctxt "@item:inlistbox Never show this System Tray item; disable it"
 msgid "Never show (disabled)"
-msgstr ""
+msgstr "永不顯示（停用）"
 
 #: qml/ConfigGeneral.qml:126
 #, kde-format
@@ -99,13 +97,7 @@ msgid "I understand the risks"
 msgstr "我瞭解風險"
 
 #: qml/ConfigGeneral.qml:187
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:usagetip"
-#| msgid ""
-#| "Disabling the clipboard is not recommended, as it will cause copied data "
-#| "to be lost when the application it was copied from is closed.<nl/><nl/"
-#| ">Instead consider configuring the clipboard to disable its history, or "
-#| "only remember one item at a time."
+#, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
 "Disabling the clipboard is not recommended, as it will cause copied data to "
@@ -115,8 +107,10 @@ msgid ""
 "configuring the clipboard to not save history, or to only remember one item "
 "at a time."
 msgstr ""
-"不建議停用剪貼簿，那會使得複製資料時複製的來源應用程式若關閉複製的資料便會丟"
-"失。<nl/><nl/>請考慮改成讓剪貼簿停用歷史記錄，或是一次只記住一個項目。"
+"不建議停用剪貼簿，停用剪貼簿會造成複製的資料在複製來源的應用程式關閉時丟失。"
+"<nl/><nl/>請只在您已在系統匣外手動新增獨立的剪貼簿元件或是使用別的剪貼簿管理"
+"員的時候才停用系統匣內的剪貼簿。請考慮設定剪貼簿不要儲存歷史紀錄，或是一次只"
+"記住一個項目，而非停用剪貼簿元件。"
 
 #: qml/ConfigGeneral.qml:196
 #, kde-kuit-format
@@ -127,6 +121,9 @@ msgid ""
 "added a standalone Notifications widget somewhere else, or are intentionally "
 "using a 3rd-party notification manager to handle notifications."
 msgstr ""
+"不建議停用通知元件，若停用會使應用程式傳送的通知不再顯示。<nl/><nl/>請只在您"
+"已在系統匣外手動新增獨立的通知元件或是使用別的通知管理員的時候才停用系統匣內"
+"的通知元件。"
 
 #: qml/ConfigGeneral.qml:208
 #, kde-format

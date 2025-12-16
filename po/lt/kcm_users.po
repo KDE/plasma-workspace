@@ -15,8 +15,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || "
-"n%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
+"%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
 "X-Generator: Poedit 3.8\n"
 
 #: src/fingerprintmodel.cpp:144 src/fingerprintmodel.cpp:228
@@ -549,15 +549,15 @@ msgstr "Pasirinkti paveikslą"
 #, kde-format
 msgctxt ""
 "@option file type (mime type) for avif, bmp, gif, jp2, jpeg, jpg, pbm, pgm, "
-"png, ppm, tiff, wbmp, webp, xbm, xpm image file formats; do not translate "
-"*.avif, *.bmp, *.gif, *.jp2, *.jpeg, *.jpg, *.pbm, *.pgm, *.png, *.ppm, "
-"*.tiff, *.wbmp, *.webp, *.xbm, *.xpm"
+"png, ppm, tiff, wbmp, webp, xbm, xpm image file formats; do not translate *."
+"avif, *.bmp, *.gif, *.jp2, *.jpeg, *.jpg, *.pbm, *.pgm, *.png, *.ppm, *."
+"tiff, *.wbmp, *.webp, *.xbm, *.xpm"
 msgid ""
-"Image files (All major file types) (*.avif *.bmp *.gif *.jp2 *.jpeg *.jpg "
-"*.pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
+"Image files (All major file types) (*.avif *.bmp *.gif *.jp2 *.jpeg *.jpg *."
+"pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 msgstr ""
-"Paveikslo failai (Visi pagrindiniai failo tipai) (*.avif *.bmp *.gif *.jp2 "
-"*.jpeg *.jpg *.pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
+"Paveikslo failai (Visi pagrindiniai failo tipai) (*.avif *.bmp *.gif *.jp2 *."
+"jpeg *.jpg *.pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 
 #: src/ui/PicturesSheet.qml:201
 #, kde-format

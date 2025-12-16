@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-03 00:46+0000\n"
-"PO-Revision-Date: 2025-08-08 02:22+0900\n"
+"PO-Revision-Date: 2025-12-16 21:42+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 25.07.70\n"
+"X-Generator: Lokalize 26.03.70\n"
 
 #: src/fingerprintmodel.cpp:144 src/fingerprintmodel.cpp:228
 #, kde-format
@@ -581,6 +581,8 @@ msgid ""
 "Cannot change your own username while logged in; log out and then log in as "
 "another user to change this account’s username."
 msgstr ""
+"無法變更在登入時變更您自己的使用者名稱；請登出後登入為另一個使用者才能變更這"
+"個帳號的使用者名稱。"
 
 #: src/ui/UserDetailsPage.qml:186
 #, kde-format
@@ -588,7 +590,7 @@ msgctxt "@label:tooltip"
 msgid ""
 "Cannot change the username of a logged-in user; wait until this user logs "
 "out first."
-msgstr ""
+msgstr "無法變更已登入使用者的使用者名稱，請先等這個使用者登出。"
 
 #: src/ui/UserDetailsPage.qml:214
 #, kde-format
@@ -628,6 +630,8 @@ msgid ""
 "Cannot delete yourself! Log out and then log in as another user to delete "
 "this user account."
 msgstr ""
+"不能刪除您自己！如果真的要刪除這個使用者帳號，請登出後改登入為另一個使用者再"
+"刪除這個使用者帳號。"
 
 #: src/ui/UserDetailsPage.qml:286
 #, kde-format
