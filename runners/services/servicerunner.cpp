@@ -149,7 +149,7 @@ auto makeScoreFromList(const auto &queryList, const QStringList &strings) {
                 continue; // The combination didn't match.
             }
             for (auto &scoreCard : stringCards) {
-                if (scoreCard.levenshteinScore < 0.8) {
+                if (!scoreCard.startsWith || !scoreCard.completeMatch) {
                     continue; // Not a good match, skip it. We are very strict with keywords
                 }
                 found = true;
