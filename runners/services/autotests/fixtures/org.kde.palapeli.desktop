@@ -1,0 +1,12 @@
+# SPDX-FileCopyrightText: None
+# SPDX-License-Identifier: CC0-1.0
+[Desktop Entry]
+Type=Application
+Exec=palapeli %u
+Name=Palapeli ServiceRunnerTest
+GenericName=Jigsaw puzzle game
+Icon=palapeli
+StartupNotify=true
+Categories=Qt;KDE;Game;LogicGame;
+MimeType=application/x-palapeli-puzzle;
+X-DocPath=palapeli/index.html

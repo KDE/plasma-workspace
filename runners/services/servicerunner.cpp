@@ -342,7 +342,18 @@ private:
             if (std::ranges::any_of(weightedCards.cards, [](const ScoreCard &card) {
                     return card.perfectMatch;
                 })) {
-                finalScore += 100.0 * weightedCards.weight;
+                constexpr auto scoreAdjustment = 100.0;
+                finalScore += scoreAdjustment * weightedCards.weight;
+                scores++;
+            }
+        };
+
+        const auto startsWithMatchScore = [&](const auto &weightedCards) {
+            if (std::ranges::any_of(weightedCards.cards, [](const ScoreCard &card) {
+                    return card.startsWith;
+                })) {
+                constexpr auto scoreAdjustment = 90.0;
+                finalScore += scoreAdjustment * weightedCards.weight;
                 scores++;
             }
         };
@@ -357,7 +368,11 @@ private:
         };
 
         for (const auto &weightedCard : weightedCards) {
+            // Perfect matches should always win
             perfectMatchScore(weightedCard);
+            // When the card started with the search term give it also a hefty bump
+            startsWithMatchScore(weightedCard);
+            // Other sorting of still equal results is based on fuzzyness
             fuzzyScore(weightedCard);
         }
 
