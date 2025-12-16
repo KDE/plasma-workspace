@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-03 00:46+0000\n"
-"PO-Revision-Date: 2025-08-05 15:47+0300\n"
+"PO-Revision-Date: 2025-12-16 01:31+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: none\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
-"%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.6\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || "
+"n%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"X-Generator: Poedit 3.8\n"
 
 #: src/fingerprintmodel.cpp:144 src/fingerprintmodel.cpp:228
 #, kde-format
@@ -549,15 +549,15 @@ msgstr "Pasirinkti paveikslą"
 #, kde-format
 msgctxt ""
 "@option file type (mime type) for avif, bmp, gif, jp2, jpeg, jpg, pbm, pgm, "
-"png, ppm, tiff, wbmp, webp, xbm, xpm image file formats; do not translate *."
-"avif, *.bmp, *.gif, *.jp2, *.jpeg, *.jpg, *.pbm, *.pgm, *.png, *.ppm, *."
-"tiff, *.wbmp, *.webp, *.xbm, *.xpm"
+"png, ppm, tiff, wbmp, webp, xbm, xpm image file formats; do not translate "
+"*.avif, *.bmp, *.gif, *.jp2, *.jpeg, *.jpg, *.pbm, *.pgm, *.png, *.ppm, "
+"*.tiff, *.wbmp, *.webp, *.xbm, *.xpm"
 msgid ""
-"Image files (All major file types) (*.avif *.bmp *.gif *.jp2 *.jpeg *.jpg *."
-"pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
+"Image files (All major file types) (*.avif *.bmp *.gif *.jp2 *.jpeg *.jpg "
+"*.pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 msgstr ""
-"Paveikslo failai (Visi pagrindiniai failo tipai) (*.avif *.bmp *.gif *.jp2 *."
-"jpeg *.jpg *.pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
+"Paveikslo failai (Visi pagrindiniai failo tipai) (*.avif *.bmp *.gif *.jp2 "
+"*.jpeg *.jpg *.pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 
 #: src/ui/PicturesSheet.qml:201
 #, kde-format
@@ -625,6 +625,9 @@ msgid ""
 "Cannot change your own username while logged in; log out and then log in as "
 "another user to change this account’s username."
 msgstr ""
+"Negalite pakeisti savo naudotojo vardo, kol esate prisijungę; atsijunkite, o "
+"tada prisijunkite kaip kitas naudotojas, kad pakeistumėte šios paskyros "
+"naudotojo vardą."
 
 #: src/ui/UserDetailsPage.qml:186
 #, kde-format
@@ -633,6 +636,8 @@ msgid ""
 "Cannot change the username of a logged-in user; wait until this user logs "
 "out first."
 msgstr ""
+"Negalite pakeisti prisijungusio naudotojo vardo; iš pradžių, palaukite, kol "
+"šis naudotojas atsijungs."
 
 #: src/ui/UserDetailsPage.qml:214
 #, kde-format
@@ -672,6 +677,8 @@ msgid ""
 "Cannot delete yourself! Log out and then log in as another user to delete "
 "this user account."
 msgstr ""
+"Negalite ištrinti savęs! Atsijunkite, o tada prisijunkite kaip kitas "
+"naudotojas, kad ištrintumėte šią naudotojo paskyrą."
 
 #: src/ui/UserDetailsPage.qml:286
 #, kde-format
