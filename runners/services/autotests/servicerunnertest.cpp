@@ -64,6 +64,7 @@ private Q_SLOTS:
     void testTerm();
     void testCmd();
     void testAla();
+    void testVsc();
 };
 
 void ServiceRunnerTest::initTestCase()
@@ -418,6 +419,19 @@ void ServiceRunnerTest::testAla()
     }
 
     QCOMPARE(texts.at(0), u"Alacritty ServiceRunnerTest"_s);
+}
+
+void ServiceRunnerTest::testVsc()
+{
+    auto matches = launchQueryAndSort(u"vsc"_s);
+
+    QStringList texts;
+    for (const auto &match : matches) {
+        texts.push_back(match.text());
+    }
+
+    // We have two variants of vscode. We don't really care which one wins.
+    QVERIFY(QStringList({u"Code - OSS ServiceRunnerTest"_s, u"Visual Studio Code ServiceRunnerTest"_s}).contains(texts.at(0)));
 }
 
 QTEST_MAIN(ServiceRunnerTest)
