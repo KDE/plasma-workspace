@@ -63,6 +63,7 @@ private Q_SLOTS:
     void testGimpVsImpress();
     void testTerm();
     void testCmd();
+    void testAla();
 };
 
 void ServiceRunnerTest::initTestCase()
@@ -380,7 +381,8 @@ void ServiceRunnerTest::testTerm()
     qDebug() << texts;
 
     QCOMPARE(texts,
-             QStringList({u"Konsole ServiceRunnerTest"_s,
+             QStringList({u"Alacritty ServiceRunnerTest"_s,
+                          u"Konsole ServiceRunnerTest"_s,
                           u"Yakuake ServiceRunnerTest"_s,
                           u"Welcome Center ServiceRunnerTest"_s,
                           u"System Settings ServiceRunnerTest"_s,
@@ -399,6 +401,18 @@ void ServiceRunnerTest::testCmd()
     QCOMPARE(texts,
              QStringList(
                  {u"Konsole ServiceRunnerTest"_s, u"Code - OSS ServiceRunnerTest"_s, u"Visual Studio Code ServiceRunnerTest"_s, u"Kate ServiceRunnerTest"_s}));
+}
+
+void ServiceRunnerTest::testAla()
+{
+    auto matches = launchQueryAndSort(u"ala"_s);
+
+    QStringList texts;
+    for (const auto &match : matches) {
+        texts.push_back(match.text());
+    }
+
+    QCOMPARE(texts.at(0), u"Alacritty ServiceRunnerTest"_s);
 }
 
 QTEST_MAIN(ServiceRunnerTest)
