@@ -40,12 +40,12 @@ ColumnLayout {
     property bool cfg_SlideshowFoldersFirstDefault: false
     property alias cfg_Blur: blurRadioButton.checked
     property bool cfg_BlurDefault
-    property var cfg_SlidePaths: []
-    property var cfg_SlidePathsDefault: []
+    property list<string> cfg_SlidePaths: []
+    property list<string> cfg_SlidePathsDefault: []
     property int cfg_SlideInterval: 0
     property int cfg_SlideIntervalDefault: 0
-    property var cfg_UncheckedSlides: []
-    property var cfg_UncheckedSlidesDefault: []
+    property list<string> cfg_UncheckedSlides: []
+    property list<string> cfg_UncheckedSlidesDefault: []
     property int cfg_DynamicMode: 0
 
     signal configurationChanged()
