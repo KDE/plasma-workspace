@@ -26,7 +26,7 @@ KCM.ScrollViewKCM {
     property bool cfg_show_suspendToDisk
     property bool cfg_show_suspendToRam
     property var cfg_actionsOrder: []
-    property var cfgKeys: []
+    property list<string> cfgKeys: []
 
     readonly property int checkedOptions: (Number(cfg_show_requestLogout) +
                                           Number(cfg_show_requestLogoutScreen) +
@@ -151,7 +151,7 @@ KCM.ScrollViewKCM {
                 return;
             }
 
-            var key = "cfg_show_" + item.configKey;
+            let key = "cfg_show_" + item.configKey;
             actionsModel.append({
                 text: item.tooltip_mainText,
                 icon: item.icon,
