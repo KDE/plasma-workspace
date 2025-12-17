@@ -39,7 +39,7 @@ QtObject {
     property string body
     property string accessibleDescription
     property var icon
-    property var urls: []
+    property list<url> urls: []
     property int urgency: NotificationManager.Notifications.NormalUrgency
 
     property int jobState
@@ -51,8 +51,8 @@ QtObject {
     property QtObject jobDetails
 
     property string configureActionLabel
-    property var actionNames: []
-    property var actionLabels: []
+    property list<string> actionNames: []
+    property list<string> actionLabels: []
     property bool hasDefaultAction
     property bool hasSomeActions
 
