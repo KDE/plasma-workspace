@@ -338,21 +338,22 @@ private:
         int scores = 1; // starts at 1 to avoid division by zero. Is the number of scores to average over.
         qreal finalScore = 0.0;
 
-        const auto perfectMatchScore = [&](const auto &weightedCards) {
+        const auto startsWithMatchScore = [&](const auto &weightedCards) {
             if (std::ranges::any_of(weightedCards.cards, [](const ScoreCard &card) {
-                    return card.perfectMatch;
+                    return card.startsWith;
                 })) {
-                constexpr auto scoreAdjustment = 100.0;
+                constexpr auto scoreAdjustment = 110.0;
                 finalScore += scoreAdjustment * weightedCards.weight;
                 scores++;
             }
         };
 
-        const auto startsWithMatchScore = [&](const auto &weightedCards) {
+        // Perfect match may still be partial. Just means 100% of the input query matched without changes.
+        const auto perfectMatchScore = [&](const auto &weightedCards) {
             if (std::ranges::any_of(weightedCards.cards, [](const ScoreCard &card) {
-                    return card.startsWith;
+                    return card.perfectMatch;
                 })) {
-                constexpr auto scoreAdjustment = 90.0;
+                constexpr auto scoreAdjustment = 100.0;
                 finalScore += scoreAdjustment * weightedCards.weight;
                 scores++;
             }
@@ -368,10 +369,10 @@ private:
         };
 
         for (const auto &weightedCard : weightedCards) {
-            // Perfect matches should always win
-            perfectMatchScore(weightedCard);
-            // When the card started with the search term give it also a hefty bump
+            // When the card started with the search term give it a hefty bump
             startsWithMatchScore(weightedCard);
+            // Perfect matches are those where the search term matched without any changes (may be partial though)
+            perfectMatchScore(weightedCard);
             // Other sorting of still equal results is based on fuzzyness
             fuzzyScore(weightedCard);
         }

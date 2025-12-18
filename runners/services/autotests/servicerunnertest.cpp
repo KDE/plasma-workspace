@@ -65,6 +65,7 @@ private Q_SLOTS:
     void testCmd();
     void testAla();
     void testVsc();
+    void testEmo();
 };
 
 void ServiceRunnerTest::initTestCase()
@@ -432,6 +433,19 @@ void ServiceRunnerTest::testVsc()
 
     // We have two variants of vscode. We don't really care which one wins.
     QVERIFY(QStringList({u"Code - OSS ServiceRunnerTest"_s, u"Visual Studio Code ServiceRunnerTest"_s}).contains(texts.at(0)));
+}
+
+void ServiceRunnerTest::testEmo()
+{
+    auto matches = launchQueryAndSort(u"emo"_s);
+
+    QStringList texts;
+    for (const auto &match : matches) {
+        texts.push_back(match.text());
+    }
+
+    // ASHPD must lose here! It only contains emo, it doesn't start with it.
+    QCOMPARE(u"Emoji Selector ServiceRunnerTest"_s, texts.at(0));
 }
 
 QTEST_MAIN(ServiceRunnerTest)

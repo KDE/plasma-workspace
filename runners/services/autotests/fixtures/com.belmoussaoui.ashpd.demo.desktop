@@ -1,0 +1,14 @@
+# SPDX-FileCopyrightText: None
+# SPDX-License-Identifier: CC0-1.0
+[Desktop Entry]
+Name=ASHPD Demo ServiceRunnerTest
+Comment=Play with portals
+Type=Application
+Exec=/usr/bin/flatpak run --branch=stable --arch=x86_64 --command=ashpd-demo com.belmoussaoui.ashpd.demo
+Terminal=false
+Categories=Utility;GNOME;GTK;
+Keywords=Gnome;GTK;ASHPD;Portals;Demo;
+Icon=com.belmoussaoui.ashpd.demo
+StartupNotify=true
+DBusActivatable=true
+X-Flatpak=com.belmoussaoui.ashpd.demo
