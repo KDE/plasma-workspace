@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-12-18 00:45+0000\n"
 "PO-Revision-Date: 2025-02-22 21:54+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -217,7 +217,7 @@ msgctxt "@item:inlistbox custom date format"
 msgid "Custom"
 msgstr "Kutimo"
 
-#: configAppearance.qml:245
+#: configAppearance.qml:254
 #, kde-format
 msgid ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
@@ -226,19 +226,19 @@ msgstr ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
 "\">Tempoformata Dokumentado</a>"
 
-#: configAppearance.qml:270
+#: configAppearance.qml:279
 #, kde-format
 msgctxt "@label:group"
 msgid "Text display:"
 msgstr "Teksta ekrano:"
 
-#: configAppearance.qml:275
+#: configAppearance.qml:284
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatic"
 msgstr "Aŭtomata"
 
-#: configAppearance.qml:279
+#: configAppearance.qml:288
 #, kde-format
 msgctxt "@label"
 msgid ""
@@ -247,31 +247,31 @@ msgstr ""
 "Teksto sekvos la sisteman tiparon kaj vastiĝos por plenigi la disponeblan "
 "spacon."
 
-#: configAppearance.qml:293
+#: configAppearance.qml:302
 #, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
 msgstr "Manlibro"
 
-#: configAppearance.qml:303
+#: configAppearance.qml:312
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
 msgstr "Elekti Stilon…"
 
-#: configAppearance.qml:320
+#: configAppearance.qml:329
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
 msgstr "%1pt %2"
 
-#: configAppearance.qml:327
+#: configAppearance.qml:336
 #, kde-format
 msgctxt "@info"
 msgid "Note: size may be reduced if the panel is not thick enough."
 msgstr "Rimarku: grandeco povus reduktiĝi se la panelo ne estas sufiĉe dika."
 
-#: configAppearance.qml:341
+#: configAppearance.qml:350
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-12-18 00:45+0000\n"
 "PO-Revision-Date: 2025-06-09 17:50+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -217,7 +217,7 @@ msgctxt "@item:inlistbox custom date format"
 msgid "Custom"
 msgstr "مخصّص"
 
-#: configAppearance.qml:245
+#: configAppearance.qml:254
 #, kde-format
 msgid ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
@@ -226,50 +226,50 @@ msgstr ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
 "\">توثيق تنسيق الوقت</a>"
 
-#: configAppearance.qml:270
+#: configAppearance.qml:279
 #, kde-format
 msgctxt "@label:group"
 msgid "Text display:"
 msgstr "عرض النص:"
 
-#: configAppearance.qml:275
+#: configAppearance.qml:284
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatic"
 msgstr "آليّ"
 
-#: configAppearance.qml:279
+#: configAppearance.qml:288
 #, kde-format
 msgctxt "@label"
 msgid ""
 "Text will follow the system font and expand to fill the available space."
 msgstr "سيتبع النص خط النظام ويتوسع لملء المساحة المتاحة."
 
-#: configAppearance.qml:293
+#: configAppearance.qml:302
 #, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
 msgstr "يدويّ"
 
-#: configAppearance.qml:303
+#: configAppearance.qml:312
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
 msgstr "اختر نمطاً…"
 
-#: configAppearance.qml:320
+#: configAppearance.qml:329
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
 msgstr "%1نقطة %2"
 
-#: configAppearance.qml:327
+#: configAppearance.qml:336
 #, kde-format
 msgctxt "@info"
 msgid "Note: size may be reduced if the panel is not thick enough."
 msgstr "ملحوظة: قد يقلل الحجم إذا لم تكن اللوحة عريضة بدرجة كافية."
 
-#: configAppearance.qml:341
+#: configAppearance.qml:350
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"

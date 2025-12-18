@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-12-18 00:45+0000\n"
 "PO-Revision-Date: 2025-05-31 20:27+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -215,7 +215,7 @@ msgctxt "@item:inlistbox custom date format"
 msgid "Custom"
 msgstr "Özel"
 
-#: configAppearance.qml:245
+#: configAppearance.qml:254
 #, kde-format
 msgid ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
@@ -224,19 +224,19 @@ msgstr ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
 "\">Zaman Biçimi Belgelendirmesi</a>"
 
-#: configAppearance.qml:270
+#: configAppearance.qml:279
 #, kde-format
 msgctxt "@label:group"
 msgid "Text display:"
 msgstr "Metin görünümü:"
 
-#: configAppearance.qml:275
+#: configAppearance.qml:284
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatic"
 msgstr "Otomatik"
 
-#: configAppearance.qml:279
+#: configAppearance.qml:288
 #, kde-format
 msgctxt "@label"
 msgid ""
@@ -245,31 +245,31 @@ msgstr ""
 "Metin, sistem yazıtipini izler ve kullanılabilir alanı dolduracak biçimde "
 "genişler."
 
-#: configAppearance.qml:293
+#: configAppearance.qml:302
 #, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
 msgstr "El İle"
 
-#: configAppearance.qml:303
+#: configAppearance.qml:312
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
 msgstr "Biçem Seç…"
 
-#: configAppearance.qml:320
+#: configAppearance.qml:329
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
 msgstr "%1 pt %2"
 
-#: configAppearance.qml:327
+#: configAppearance.qml:336
 #, kde-format
 msgctxt "@info"
 msgid "Note: size may be reduced if the panel is not thick enough."
 msgstr "Not: Panel yeterince kalın değilse boyut azaltılabilir."
 
-#: configAppearance.qml:341
+#: configAppearance.qml:350
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"

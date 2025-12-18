@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-12-18 00:45+0000\n"
 "PO-Revision-Date: 2025-05-31 07:24+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -217,7 +217,7 @@ msgctxt "@item:inlistbox custom date format"
 msgid "Custom"
 msgstr "התאמה אישית"
 
-#: configAppearance.qml:245
+#: configAppearance.qml:254
 #, kde-format
 msgid ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
@@ -226,50 +226,50 @@ msgstr ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
 "\">תיעוד תבנית שעה</a>"
 
-#: configAppearance.qml:270
+#: configAppearance.qml:279
 #, kde-format
 msgctxt "@label:group"
 msgid "Text display:"
 msgstr "תצוגת טקסט:"
 
-#: configAppearance.qml:275
+#: configAppearance.qml:284
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatic"
 msgstr "אוטומטית"
 
-#: configAppearance.qml:279
+#: configAppearance.qml:288
 #, kde-format
 msgctxt "@label"
 msgid ""
 "Text will follow the system font and expand to fill the available space."
 msgstr "גופן הטקסט יושפע ישירות מגופן המערכת ויתרחב כדי למלא את המקום הפנוי."
 
-#: configAppearance.qml:293
+#: configAppearance.qml:302
 #, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
 msgstr "ידני"
 
-#: configAppearance.qml:303
+#: configAppearance.qml:312
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
 msgstr "בחירת סגנון…"
 
-#: configAppearance.qml:320
+#: configAppearance.qml:329
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
 msgstr "%1 נק׳ %2"
 
-#: configAppearance.qml:327
+#: configAppearance.qml:336
 #, kde-format
 msgctxt "@info"
 msgid "Note: size may be reduced if the panel is not thick enough."
 msgstr "לתשומת ליבך: אפשר לצמצם את הגודל אם הלוח לא עבה מספיק."
 
-#: configAppearance.qml:341
+#: configAppearance.qml:350
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
