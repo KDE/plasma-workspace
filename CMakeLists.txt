@@ -474,6 +474,8 @@ add_subdirectory(appiumtests)
 
 add_subdirectory(devicenotifications)
 
+add_subdirectory(ksecretprompter)
+
 ki18n_install(po)
 
 install(FILES completions/plasmashell.zsh RENAME _plasmashell DESTINATION ${KDE_INSTALL_ZSHAUTOCOMPLETEDIR})
