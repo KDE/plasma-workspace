@@ -56,7 +56,6 @@ PlasmoidItem {
 
     property bool itemClicked: false
     property int currentIndex: -1
-    property var connectedRemovables: []
     property int mountedRemovables: 0
 
     signal unmountAllRequested
