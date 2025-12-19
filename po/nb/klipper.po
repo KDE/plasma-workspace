@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 05:54+0000\n"
+"POT-Creation-Date: 2025-11-17 16:19+0000\n"
 "PO-Revision-Date: 2025-02-22 07:48+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -961,9 +961,7 @@ msgstr "Christian A. Strømmen,Klaus Ade Johnstad,Knut Yrvin,Martin Hansen"
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
-"number1@realityx.net,klaus@skolelinux.no,knut.yrvin@gmail.com,mh306602@gmail."
-"com"
+msgstr "number1@realityx.net,klaus@skolelinux.no,knut.yrvin@gmail.com,mh306602@gmail.com"
 
 #: popupproxy.cpp:145
 #, kde-format

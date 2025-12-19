@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-05 05:54+0000\n"
+"POT-Creation-Date: 2025-11-17 16:19+0000\n"
 "PO-Revision-Date: 2025-05-31 20:21+0200\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -34,9 +34,7 @@ msgstr ""
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
-"bieker@kde.org,bjornst@skogkatt.homelinux.org,fri_programvare@bojer.no,"
-"slx@nilsk.net,bjorn.kvisli@gmail.com,mh306602@gmail.com"
+msgstr "bieker@kde.org,bjornst@skogkatt.homelinux.org,fri_programvare@bojer.no,slx@nilsk.net,bjorn.kvisli@gmail.com,mh306602@gmail.com"
 
 #: colors.cpp:235
 #, kde-format
@@ -1312,9 +1310,9 @@ msgstr ""
 #: plasma-apply-colorscheme.cpp:51
 #, kde-format
 msgid ""
-"The name of the accent color you want to set. SVG color names (https://www."
-"w3.org/TR/SVG11/types.html#ColorKeywords) and hex color codes are supported. "
-"Quote the hex code if there is possibility of shell expansion"
+"The name of the accent color you want to set. SVG color names (https://"
+"www.w3.org/TR/SVG11/types.html#ColorKeywords) and hex color codes are "
+"supported. Quote the hex code if there is possibility of shell expansion"
 msgstr ""
 "Navnet på kontrastfargen du vil bruke. Du kan bruke både SVG-fargenavn "
 "(https://www.w3.org/TR/SVG11/types.html#ColorKeywords) og fargekoder "
