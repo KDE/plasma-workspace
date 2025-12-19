@@ -5,6 +5,7 @@
 */
 
 #include "ksecretprompter.h"
+#include "promptcontext.h"
 #include "secretprompteradaptor.h"
 
 #include <sys/socket.h>
@@ -38,72 +39,6 @@ void setParentWindow(QWidget *widget, const QString &windowId)
     }
     setParentWindow(widget->window()->windowHandle(), windowId);
 }
-
-class PromptContext : public QObject
-{
-    Q_OBJECT
-public:
-    PromptContext(const QString &callerAddress, const QDBusObjectPath &path, QObject *parent = nullptr)
-        : QObject(parent)
-        , m_id({callerAddress, path.path()})
-        , m_path(path)
-        , m_watcher(make_shared_qobject<QDBusServiceWatcher>(callerAddress, QDBusConnection::sessionBus(), QDBusServiceWatcher::WatchForUnregistration, this))
-    {
-        qCDebug(KSecretPrompterDaemon) << "Creating PromptContext for caller:" << callerAddress << "path:" << path.path();
-
-        if (!m_watcher) {
-            return;
-        }
-
-        connect(m_watcher.get(), &QDBusServiceWatcher::serviceUnregistered, this, [this](const QString &serviceName) {
-            deleteLater();
-        });
-
-        m_valid = true;
-    }
-
-    ~PromptContext() override
-    {
-        qCDebug(KSecretPrompterDaemon) << "Destroying PromptContext for caller:" << m_id.first << "path:" << m_path;
-        auto message = QDBusMessage::createMethodCall(m_id.first, m_id.second, u"org.kde.secretprompter.request"_s, u"Dismissed"_s);
-        QDBusConnection::sessionBus().asyncCall(message);
-    }
-
-    Q_DISABLE_COPY_MOVE(PromptContext)
-
-    [[nodiscard]] bool isValid() const
-    {
-        return m_valid;
-    }
-
-    [[nodiscard]] KSecretPrompter::Id id() const
-    {
-        return m_id;
-    }
-
-    [[nodiscard]] QString callerAddress() const
-    {
-        return m_id.first;
-    }
-
-    void setWidget(const std::shared_ptr<KPasswordDialog> &widget)
-    {
-        m_promptWidget = widget;
-    }
-
-    void retry(const QString &message)
-    {
-        m_promptWidget->showErrorMessage(message);
-        m_promptWidget->show();
-    }
-
-private:
-    bool m_valid = false;
-    KSecretPrompter::Id m_id;
-    QDBusObjectPath m_path;
-    std::shared_ptr<QDBusServiceWatcher> m_watcher;
-    std::shared_ptr<KPasswordDialog> m_promptWidget;
-};
 
 KSecretPrompter::KSecretPrompter(QObject *parent)
     : QObject(parent)
