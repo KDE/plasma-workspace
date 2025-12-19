@@ -1243,7 +1243,8 @@ bool PanelView::event(QEvent *e)
 
     case QEvent::MouseMove:
     case QEvent::MouseButtonPress:
-    case QEvent::MouseButtonRelease: {
+    case QEvent::MouseButtonRelease:
+    case QEvent::MouseButtonDblClick: {
         auto *me = static_cast<QMouseEvent *>(e);
 
         // first, don't mess with position if the cursor is actually outside the view:
