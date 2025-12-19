@@ -4,6 +4,7 @@
 set(ksecretprompter_SRCS
     main.cpp
     ksecretprompter.cpp
+    promptcontext.cpp
 )
 
 ecm_qt_declare_logging_category(ksecretprompter_SRCS
