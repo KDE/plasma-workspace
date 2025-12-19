@@ -41,7 +41,7 @@ PrompterTest::PrompterTest(QObject *parent)
         switch (KWindowSystem::platform()) {
         case KWindowSystem::Platform::X11: {
             const qulonglong wId = widget->winId();
-            const auto windowId = u"x11:%1"_s.arg(QString::number(wId));
+            const auto windowId = QString::number(wId);
             QMetaObject::invokeMethod(this, [=] {
                 createCollectionPrompt(windowId);
             });

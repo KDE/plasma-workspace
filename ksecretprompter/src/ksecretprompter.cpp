@@ -26,37 +26,18 @@
 using namespace std::chrono_literals;
 using namespace Qt::StringLiterals;
 
-namespace
-{
-constexpr auto x11Prefix = "x11:"_L1;
-constexpr auto waylandPrefix = "wayland:"_L1;
-
 void setParentWindow(QWindow *window, const QString &windowId)
 {
-    if (auto prefix = waylandPrefix; windowId.startsWith(prefix)) {
-        KWindowSystem::setMainWindow(window, windowId.mid(prefix.length()));
-    } else if (auto prefix = x11Prefix; windowId.startsWith(prefix)) {
-        bool ok = false;
-        KWindowSystem::setMainWindow(window, windowId.mid(prefix.length()).toULongLong(&ok));
-        if (!ok) {
-            qCWarning(KSecretPrompterDaemon) << "Failed to parse X11 window ID from string:" << windowId;
-        }
-    }
+    KWindowSystem::setMainWindow(window, windowId);
 }
 
 void setParentWindow(QWidget *widget, const QString &windowId)
 {
-    if (windowId.startsWith(waylandPrefix)) {
-        if (!widget->window()->windowHandle()) {
-            widget->window()->winId(); // ensure we have a window handle
-        }
-        setParentWindow(widget->window()->windowHandle(), windowId);
-    } else if (windowId.startsWith(x11Prefix)) {
-        widget->setAttribute(Qt::WA_NativeWindow, true);
-        setParentWindow(widget->windowHandle(), windowId);
+    if (!widget->window()->windowHandle()) {
+        widget->window()->winId(); // ensure we have a window handle
     }
+    setParentWindow(widget->window()->windowHandle(), windowId);
 }
-} // namespace
 
 class PromptContext : public QObject
 {
