@@ -233,22 +233,3 @@ msgstr ""
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
 msgstr "AÅILlmyjgGJP"
-
-#~ msgid "Always hidden"
-#~ msgstr "Alltid skjult"
-
-#~ msgid "Disabled"
-#~ msgstr "Slått av"
-
-#~ msgid "Small"
-#~ msgstr "Liten"
-
-#~ msgctxt "Name of the system tray entry"
-#~ msgid "Entry"
-#~ msgstr "Oppføring"
-
-#~ msgid "Visibility"
-#~ msgstr "Synlighet"
-
-#~ msgid "Keyboard Shortcut"
-#~ msgstr "Hurtigtast"

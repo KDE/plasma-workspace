@@ -113,31 +113,3 @@ msgstr "Dvalemodus"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Dvalemodus til disken"
-
-#~ msgctxt ""
-#~ "Heading for a list of actions (leave, lock, switch user, hibernate, "
-#~ "suspend)"
-#~ msgid "Show actions:"
-#~ msgstr "Vis handlingar:"
-
-#~ msgid "Log Out"
-#~ msgstr "Logg ut"
-
-#~ msgctxt "@option:check"
-#~ msgid "Show logout screen"
-#~ msgstr "Vis utloggingsval"
-
-#~ msgid "Shut Down"
-#~ msgstr "Slå av"
-
-#~ msgid "Switch User"
-#~ msgstr "Byt brukar"
-
-#~ msgid "Shutdown…"
-#~ msgstr "Slå av …"
-
-#~ msgid "Restart…"
-#~ msgstr "Start på nytt …"
-
-#~ msgid "Logout…"
-#~ msgstr "Logg ut …"

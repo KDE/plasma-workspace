@@ -232,22 +232,3 @@ msgstr "Rutenett med %1 element i %2 kolonnar"
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
 msgstr "AÅILlmyjgGJP"
-
-#~ msgid "Always hidden"
-#~ msgstr "Gøym alltid"
-
-#~ msgid "Disabled"
-#~ msgstr "Slått av"
-
-#~ msgid "Small"
-#~ msgstr "Liten"
-
-#~ msgctxt "Name of the system tray entry"
-#~ msgid "Entry"
-#~ msgstr "Oppføring"
-
-#~ msgid "Visibility"
-#~ msgstr "Synlegheit"
-
-#~ msgid "Keyboard Shortcut"
-#~ msgstr "Snøggtast"
