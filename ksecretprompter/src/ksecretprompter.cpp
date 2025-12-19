@@ -100,13 +100,6 @@ void KSecretPrompter::Prompt(const QDBusObjectPath &path, const QString &title, 
     dlg->setModal(true);
 
     connect(dlg.get(), &KPasswordDialog::gotPassword, this, [this, context, id, dlg, path](const QString &password) {
-        QDBusInterface iface(context->callerAddress(), path.path(), u"org.kde.secretprompter.request"_s, QDBusConnection::sessionBus());
-
-        if (!iface.isValid()) {
-            qCWarning(KSecretPrompterDaemon) << "Failed to connect to" << context->callerAddress() << "service," << path.path() << "path";
-            qCWarning(KSecretPrompterDaemon) << "Error:" << QDBusConnection::sessionBus().lastError().message();
-        }
-
         std::array<int, 2> fds{};
         if (auto ret = socketpair(AF_UNIX, SOCK_STREAM | SOCK_CLOEXEC | SOCK_NONBLOCK, 0, fds.data()); ret == -1) {
             qCWarning(KSecretPrompterDaemon) << "Failed to create socketpair for prompt result:" << safe_strerror(errno);
@@ -132,7 +125,10 @@ void KSecretPrompter::Prompt(const QDBusObjectPath &path, const QString &title, 
             return;
         }
 
-        auto watcher = new QDBusPendingCallWatcher(iface.asyncCall(u"Accepted"_s, QVariant::fromValue(QDBusUnixFileDescriptor(readFd))), this);
+        auto message = QDBusMessage::createMethodCall(context->callerAddress(), path.path(), u"org.kde.secretprompter.request"_s, u"Accepted"_s);
+        message << QVariant::fromValue(QDBusUnixFileDescriptor(readFd));
+
+        auto watcher = new QDBusPendingCallWatcher(QDBusConnection::sessionBus().asyncCall(message), this);
         connect(watcher, &QDBusPendingCallWatcher::finished, watcher, [this, id](QDBusPendingCallWatcher *self) {
             self->deleteLater();
             QDBusPendingReply<int> reply = *self;
@@ -148,14 +144,9 @@ void KSecretPrompter::Prompt(const QDBusObjectPath &path, const QString &title, 
     });
 
     connect(dlg.get(), &QDialog::rejected, this, [this, id, context, path]() {
-        QDBusInterface iface(context->callerAddress(), path.path(), u"org.kde.secretprompter.request"_s, QDBusConnection::sessionBus());
+        auto message = QDBusMessage::createMethodCall(context->callerAddress(), path.path(), u"org.kde.secretprompter.request"_s, u"Rejected"_s);
 
-        if (!iface.isValid()) {
-            qCWarning(KSecretPrompterDaemon) << "Failed to connect to" << context->callerAddress() << "service," << path.path() << "path";
-            qCWarning(KSecretPrompterDaemon) << "Error:" << QDBusConnection::sessionBus().lastError().message();
-        }
-
-        auto watcher = new QDBusPendingCallWatcher(iface.asyncCall(u"Rejected"_s), this);
+        auto watcher = new QDBusPendingCallWatcher(QDBusConnection::sessionBus().asyncCall(message), this);
         connect(watcher, &QDBusPendingCallWatcher::finished, watcher, [this, id](QDBusPendingCallWatcher *self) {
             self->deleteLater();
             QDBusPendingReply<int> reply = *self;
