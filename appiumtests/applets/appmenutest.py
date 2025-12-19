@@ -56,10 +56,10 @@ class AppMenuTest(unittest.TestCase):
                 print(f"waiting for kded{KDE_VERSION} to appear on the dbus session")
                 time.sleep(1)
             assert kded_started, "kded is not started"
-            kded_reply: GLib.Variant = session_bus.call_sync(f"org.kde.kded{KDE_VERSION}", "/kded", f"org.kde.kded{KDE_VERSION}", "loadModule", GLib.Variant("(s)", ["appmenu"]), GLib.VariantType("(b)"), Gio.DBusSendMessageFlags.NONE, 1000)
+            kded_reply: GLib.Variant = session_bus.call_sync(f"org.kde.kded{KDE_VERSION}", "/kded", f"org.kde.kded{KDE_VERSION}", "loadModule", GLib.Variant("(s)", ["appmenu"]), GLib.VariantType("(b)"), Gio.DBusSendMessageFlags.NONE, 5000)
             assert kded_reply.get_child_value(0).get_boolean(), "appmenu module is not loaded"
 
-        if not "gmenudbusmenuproxy" in subprocess.check_output(["ps", "-ef"]).decode():
+        if not name_has_owner(session_bus, "org.kde.gmenudbusmenuproxy"):
             cls.gmenudbusmenuproxy = subprocess.Popen([os.path.join(CMAKE_RUNTIME_OUTPUT_DIRECTORY, "gmenudbusmenuproxy")])
 
         options = AppiumOptions()
@@ -77,10 +77,7 @@ class AppMenuTest(unittest.TestCase):
         Take screenshot when the current test fails
         """
         if not self._outcome.result.wasSuccessful():
-            if os.getenv("TEST_WITH_KWIN_WAYLAND", "1") == "0":
-                subprocess.check_call(["import", "-window", "root", f"failed_test_shot_{WIDGET_ID}_#{self.id()}.png"])
-            else:
-                self.driver.get_screenshot_as_file(f"failed_test_shot_{WIDGET_ID}_#{self.id()}.png")
+            self.driver.get_screenshot_as_file(f"failed_test_shot_{WIDGET_ID}_#{self.id()}.png")
 
     @classmethod
     def tearDownClass(cls) -> None:
@@ -105,7 +102,10 @@ class AppMenuTest(unittest.TestCase):
         """
         Activate a window with two hidden submenus and match strings in the widget
         """
-        gtk_app = subprocess.Popen(["python3", os.path.join(os.path.dirname(os.path.abspath(__file__)), "appmenutest_window.py")], stdout=sys.stderr, stderr=sys.stderr)
+        env = os.environ.copy()
+        env["GDK_BACKEND"] = "x11"
+        env["DISPLAY"] = ":1"
+        gtk_app = subprocess.Popen(["python3", os.path.join(os.path.dirname(os.path.abspath(__file__)), "appmenutest_window.py")], stdout=sys.stderr, stderr=sys.stderr, env=env)
         self.addCleanup(gtk_app.terminate)
 
         menu1 = self.driver.find_element(AppiumBy.NAME, "foo")
