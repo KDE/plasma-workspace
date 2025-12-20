@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-12-20 00:44+0000\n"
 "PO-Revision-Date: 2009-06-02 00:19+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
 "Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
@@ -231,7 +231,7 @@ msgstr ""
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr ""
 
-#: qml/FullRepresentation.qml:45 qml/main.qml:125
+#: qml/FullRepresentation.qml:45 qml/main.qml:124
 #, kde-format
 msgid "Remove All"
 msgstr ""
@@ -255,41 +255,41 @@ msgstr "Peranti terakhir dipasang: %1"
 msgid "No disks available"
 msgstr "Tiada peranti di plug masuk"
 
-#: qml/main.qml:72
+#: qml/main.qml:71
 #, fuzzy, kde-format
 #| msgid "Last plugged in device: %1"
 msgid "Most Recent Device"
 msgstr "Peranti terakhir dipasang: %1"
 
-#: qml/main.qml:72
+#: qml/main.qml:71
 #, kde-format
 msgid "No Devices Available"
 msgstr ""
 
-#: qml/main.qml:108
+#: qml/main.qml:107
 #, fuzzy, kde-format
 #| msgid "Last plugged in device: %1"
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Peranti terakhir dipasang: %1"
 
-#: qml/main.qml:133
+#: qml/main.qml:132
 #, kde-format
 msgid "Removable Devices"
 msgstr ""
 
-#: qml/main.qml:148
+#: qml/main.qml:147
 #, fuzzy, kde-format
 #| msgid "Last plugged in device: %1"
 msgid "Non Removable Devices"
 msgstr "Peranti terakhir dipasang: %1"
 
-#: qml/main.qml:163
+#: qml/main.qml:162
 #, kde-format
 msgid "All Devices"
 msgstr ""
 
-#: qml/main.qml:180
+#: qml/main.qml:179
 #, fuzzy, kde-format
 #| msgid "No devices plugged in"
 msgid "Show popup when new device is plugged in"

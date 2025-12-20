@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2025-12-20 00:44+0000\n"
 "PO-Revision-Date: 2023-12-02 19:50+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -229,7 +229,7 @@ msgstr "Odstraňuje sa…"
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr "Ešte sa neodpájajte! Súbory sa stále prenášajú..."
 
-#: qml/FullRepresentation.qml:45 qml/main.qml:125
+#: qml/FullRepresentation.qml:45 qml/main.qml:124
 #, kde-format
 msgid "Remove All"
 msgstr "Odpojiť všetky"
@@ -249,38 +249,38 @@ msgstr "Nie sú pripojené žiadne vymeniteľné zariadenia"
 msgid "No disks available"
 msgstr "Nie sú dostupné žiadne disky"
 
-#: qml/main.qml:72
+#: qml/main.qml:71
 #, kde-format
 msgid "Most Recent Device"
 msgstr "Najnovšie zariadenie"
 
-#: qml/main.qml:72
+#: qml/main.qml:71
 #, kde-format
 msgid "No Devices Available"
 msgstr "Žiadne dostupné zariadenia"
 
-#: qml/main.qml:108
+#: qml/main.qml:107
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Nastaviť vymeniteľné zariadenia…"
 
-#: qml/main.qml:133
+#: qml/main.qml:132
 #, kde-format
 msgid "Removable Devices"
 msgstr "Vymeniteľné zariadenia"
 
-#: qml/main.qml:148
+#: qml/main.qml:147
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "Nevymeniteľné zariadenia"
 
-#: qml/main.qml:163
+#: qml/main.qml:162
 #, kde-format
 msgid "All Devices"
 msgstr "Všetky zariadenia"
 
-#: qml/main.qml:180
+#: qml/main.qml:179
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "Otvoriť vyskakovacie okno po pripojení nového zariadenia"
