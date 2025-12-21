@@ -122,7 +122,7 @@ KCM.SimpleKCM {
 
     QtDialogs.FileDialog {
         id: previewDialog
-        nameFilters: [i18nc("@option image file formats; do not translate *.png *.jpg *.jpeg *.bmp", "Image Files (*.png *.jpg *.jpeg *.bmp)")]
+        nameFilters: [Private.FileDialogNameFilters.imageFiles()]
         selectedFile: previewImage.source
         title: i18nc("@title:title", "Choose a Preview Image")
         onAccepted: previewImage.source = selectedFile
