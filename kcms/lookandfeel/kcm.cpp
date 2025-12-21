@@ -10,6 +10,7 @@
 */
 
 #include "kcm.h"
+#include "filedialognamefilters.h"
 #include "klookandfeelmanifest.h"
 #include "lookandfeeldata.h"
 #include "lookandfeelnamevalidator.h"
@@ -261,6 +262,9 @@ KCMLookandFeel::KCMLookandFeel(QObject *parent, const KPluginMetaData &data)
     qmlRegisterType<LookAndFeelNameValidator>(uri, 1, 0, "LookAndFeelNameValidator");
     qmlRegisterType<ScreenshotMaker>(uri, 1, 0, "ScreenshotMaker");
     qmlRegisterUncreatableMetaObject(KLookAndFeel::staticMetaObject, uri, 1, 0, "LookAndFeel", QStringLiteral("for enums"));
+    qmlRegisterSingletonType<FileDialogNameFilters>(uri, 1, 0, "FileDialogNameFilters", [](QQmlEngine *, QJSEngine *) -> QObject * {
+        return new FileDialogNameFilters();
+    });
 
     m_model = new QStandardItemModel(this);
     QHash<int, QByteArray> roles = m_model->roleNames();
