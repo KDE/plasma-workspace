@@ -61,6 +61,11 @@ KSecretPrompter::KSecretPrompter(QObject *parent)
     }
 }
 
+uint KSecretPrompter::version() const
+{
+    return 1;
+}
+
 void KSecretPrompter::Prompt(const QDBusObjectPath &path, const QString &title, const QString &prompt, const QString &windowId)
 {
     m_quitTimer->stop();
@@ -70,6 +75,7 @@ void KSecretPrompter::Prompt(const QDBusObjectPath &path, const QString &title, 
         qCWarning(KSecretPrompterDaemon) << "Invalid prompt context for caller:" << message().service() << "path:" << path.path();
         return;
     }
+    const auto callerAddress = context->callerAddress();
 
     const auto id = context->id();
     connect(context.get(), &QObject::destroyed, this, [this, id]() {
@@ -77,17 +83,12 @@ void KSecretPrompter::Prompt(const QDBusObjectPath &path, const QString &title, 
     });
 
     if (m_activePrompts.contains(id)) {
-        qCWarning(KSecretPrompterDaemon) << "Prompt already existing for address:" << context->callerAddress() << "path:" << path.path();
+        qCWarning(KSecretPrompterDaemon) << "Prompt already existing for address:" << callerAddress << "path:" << path.path();
         return;
     }
 
     m_activePrompts.insert(id, context);
     qCDebug(KSecretPrompterDaemon) << "Created prompt for" << id << ", current prompts:" << m_activePrompts.size();
-
-    QDBusConnection::sessionBus()
-        .connect(context->callerAddress(), path.path(), u"org.kde.secretprompter.request"_s, u"Retry"_s, this, SLOT(onRetryRequest(QString)));
-    QDBusConnection::sessionBus()
-        .connect(context->callerAddress(), path.path(), u"org.kde.secretprompter.request"_s, u"Dismiss"_s, this, SLOT(onDismissRequest()));
 
     qCDebug(KSecretPrompterDaemon) << "Prompt:" << path << title << prompt;
 
@@ -99,7 +100,7 @@ void KSecretPrompter::Prompt(const QDBusObjectPath &path, const QString &title, 
     dlg->setWindowIcon(QIcon::fromTheme(QIcon::ThemeIcon::DialogPassword));
     dlg->setModal(true);
 
-    connect(dlg.get(), &KPasswordDialog::gotPassword, this, [this, context, id, dlg, path](const QString &password) {
+    connect(dlg.get(), &KPasswordDialog::gotPassword, this, [this, callerAddress, id, dlg, path](const QString &password) {
         std::array<int, 2> fds{};
         if (auto ret = socketpair(AF_UNIX, SOCK_STREAM | SOCK_CLOEXEC | SOCK_NONBLOCK, 0, fds.data()); ret == -1) {
             qCWarning(KSecretPrompterDaemon) << "Failed to create socketpair for prompt result:" << safe_strerror(errno);
@@ -125,7 +126,7 @@ void KSecretPrompter::Prompt(const QDBusObjectPath &path, const QString &title, 
             return;
         }
 
-        auto message = QDBusMessage::createMethodCall(context->callerAddress(), path.path(), u"org.kde.secretprompter.request"_s, u"Accepted"_s);
+        auto message = QDBusMessage::createMethodCall(callerAddress, path.path(), u"org.kde.secretprompter.request"_s, u"Accepted"_s);
         message << QVariant::fromValue(QDBusUnixFileDescriptor(readFd));
 
         auto watcher = new QDBusPendingCallWatcher(QDBusConnection::sessionBus().asyncCall(message), this);
@@ -135,6 +136,7 @@ void KSecretPrompter::Prompt(const QDBusObjectPath &path, const QString &title, 
             if (reply.isError()) {
                 qCWarning(KSecretPrompterDaemon) << "Failed to send prompt accepted via D-Bus:" << reply.error().message();
             }
+
             if (reply.value() == 0) {
                 dropPrompt(id);
             } else {
@@ -143,8 +145,8 @@ void KSecretPrompter::Prompt(const QDBusObjectPath &path, const QString &title, 
         });
     });
 
-    connect(dlg.get(), &QDialog::rejected, this, [this, id, context, path]() {
-        auto message = QDBusMessage::createMethodCall(context->callerAddress(), path.path(), u"org.kde.secretprompter.request"_s, u"Rejected"_s);
+    connect(dlg.get(), &QDialog::rejected, this, [this, id, callerAddress, path]() {
+        auto message = QDBusMessage::createMethodCall(callerAddress, path.path(), u"org.kde.secretprompter.request"_s, u"Rejected"_s);
 
         auto watcher = new QDBusPendingCallWatcher(QDBusConnection::sessionBus().asyncCall(message), this);
         connect(watcher, &QDBusPendingCallWatcher::finished, watcher, [this, id](QDBusPendingCallWatcher *self) {

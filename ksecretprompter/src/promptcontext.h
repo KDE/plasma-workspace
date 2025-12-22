@@ -15,7 +15,7 @@ class PromptContext : public QObject
 {
     Q_OBJECT
 public:
-    PromptContext(const QString &callerAddress, const QDBusObjectPath &path, QObject *parent = nullptr);
+    PromptContext(const QString &callerAddress, const QDBusObjectPath &path, KSecretPrompter *parent);
     ~PromptContext() override;
 
     Q_DISABLE_COPY_MOVE(PromptContext)
@@ -32,6 +32,6 @@ private:
     bool m_valid = false;
     KSecretPrompter::Id m_id;
     QDBusObjectPath m_path;
-    std::shared_ptr<QDBusServiceWatcher> m_watcher;
+    QDBusServiceWatcher *m_watcher;
     std::shared_ptr<KPasswordDialog> m_promptWidget;
 };

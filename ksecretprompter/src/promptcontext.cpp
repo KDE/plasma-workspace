@@ -16,21 +16,21 @@
 using namespace std::chrono_literals;
 using namespace Qt::StringLiterals;
 
-PromptContext::PromptContext(const QString &callerAddress, const QDBusObjectPath &path, QObject *parent)
+PromptContext::PromptContext(const QString &callerAddress, const QDBusObjectPath &path, KSecretPrompter *parent)
     : QObject(parent)
     , m_id({callerAddress, path.path()})
     , m_path(path)
-    , m_watcher(make_shared_qobject<QDBusServiceWatcher>(callerAddress, QDBusConnection::sessionBus(), QDBusServiceWatcher::WatchForUnregistration, this))
+    , m_watcher(new QDBusServiceWatcher(callerAddress, QDBusConnection::sessionBus(), QDBusServiceWatcher::WatchForUnregistration, this))
 {
     qCDebug(KSecretPrompterDaemon) << "Creating PromptContext for caller:" << callerAddress << "path:" << path.path();
 
-    if (!m_watcher) {
-        return;
-    }
-
-    connect(m_watcher.get(), &QDBusServiceWatcher::serviceUnregistered, this, [this](const QString &serviceName) {
+    connect(m_watcher, &QDBusServiceWatcher::serviceUnregistered, this, [this](const QString &serviceName) {
+        m_valid = false;
         deleteLater();
     });
+
+    QDBusConnection::sessionBus().connect(callerAddress, path.path(), u"org.kde.secretprompter.request"_s, u"Retry"_s, parent, SLOT(onRetryRequest(QString)));
+    QDBusConnection::sessionBus().connect(callerAddress, path.path(), u"org.kde.secretprompter.request"_s, u"Dismiss"_s, parent, SLOT(onDismissRequest()));
 
     m_valid = true;
 }
@@ -38,6 +38,12 @@ PromptContext::PromptContext(const QString &callerAddress, const QDBusObjectPath
 PromptContext::~PromptContext()
 {
     qCDebug(KSecretPrompterDaemon) << "Destroying PromptContext for caller:" << m_id.first << "path:" << m_path;
+
+    QDBusConnection::sessionBus()
+        .disconnect(callerAddress(), m_path.path(), u"org.kde.secretprompter.request"_s, u"Retry"_s, parent(), SLOT(onRetryRequest(QString)));
+    QDBusConnection::sessionBus()
+        .disconnect(callerAddress(), m_path.path(), u"org.kde.secretprompter.request"_s, u"Dismiss"_s, parent(), SLOT(onDismissRequest()));
+
     auto message = QDBusMessage::createMethodCall(m_id.first, m_id.second, u"org.kde.secretprompter.request"_s, u"Dismissed"_s);
     QDBusConnection::sessionBus().asyncCall(message);
 }

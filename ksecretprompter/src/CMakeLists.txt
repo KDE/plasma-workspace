@@ -21,6 +21,8 @@ qt_add_dbus_adaptor(ksecretprompter_SRCS
     ksecretprompter.h KSecretPrompter
 )
 
+target_compile_definitions(ksecretprompter PRIVATE -DPROJECT_VERSION="${PROJECT_VERSION}")
+
 target_sources(ksecretprompter PRIVATE
     ${ksecretprompter_SRCS}
 )
@@ -36,14 +38,14 @@ target_link_libraries(ksecretprompter
     Qt6::DBus
 )
 
+
+
 install(TARGETS ksecretprompter DESTINATION ${KDE_INSTALL_LIBEXECDIR})
 
-configure_file(org.kde.secretprompter.service.in
-                ${CMAKE_CURRENT_BINARY_DIR}/org.kde.secretprompter.service)
-
-install(
-        FILES ${CMAKE_CURRENT_BINARY_DIR}/org.kde.secretprompter.service
-        DESTINATION ${KDE_INSTALL_DBUSSERVICEDIR}
+ecm_generate_dbus_service_file(
+    NAME org.kde.secretprompter
+    EXECUTABLE ${KDE_INSTALL_FULL_LIBEXECDIR}/ksecretprompter
+    DESTINATION ${KDE_INSTALL_DBUSSERVICEDIR}
 )
 
 install(FILES org.kde.secretprompter.desktop DESTINATION ${KDE_INSTALL_APPDIR})

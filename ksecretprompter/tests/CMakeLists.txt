@@ -21,5 +21,3 @@ target_link_libraries(ksecretpromptertest
     KF6::I18n
     KF6::WindowSystem
 )
-
-install( TARGETS ksecretpromptertest ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} )

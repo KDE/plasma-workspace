@@ -26,14 +26,12 @@ int main(int argc, char **argv)
 
     KAboutData aboutData(u"secretprompter"_s,
                          QString(), // No application name to not append ksecretprompter to dialog window titles
-                         u"1.0"_s,
+                         QStringLiteral(PROJECT_VERSION),
                          i18nc("application description", "A service to show password prompts"),
                          KAboutLicense::GPL,
                          i18nc("copyright statement", "Copyright 2025, Marco Martin <notmart@gmail.com>"));
 
     aboutData.addAuthor(i18nc("author name", "Marco Martin"), i18nc("task description for an author line in about data", "Author"), QString());
-    aboutData.setOrganizationDomain("kde.org");
-    aboutData.setDesktopFileName(u"org.kde.secretprompter"_s);
 
     KAboutData::setApplicationData(aboutData);
 
