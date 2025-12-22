@@ -89,6 +89,13 @@ void KSecretPrompter::Prompt(const QDBusObjectPath &path, const QString &title, 
     QDBusConnection::sessionBus()
         .connect(context->callerAddress(), path.path(), u"org.kde.secretprompter.request"_s, u"Dismiss"_s, this, SLOT(onDismissRequest()));
 
+    connect(context.get(), &QObject::destroyed, this, [this, context, path]() {
+        QDBusConnection::sessionBus()
+            .disconnect(context->callerAddress(), path.path(), u"org.kde.secretprompter.request"_s, u"Retry"_s, this, SLOT(onRetryRequest(QString)));
+        QDBusConnection::sessionBus()
+            .disconnect(context->callerAddress(), path.path(), u"org.kde.secretprompter.request"_s, u"Dismiss"_s, this, SLOT(onDismissRequest()));
+    });
+
     qCDebug(KSecretPrompterDaemon) << "Prompt:" << path << title << prompt;
 
     auto dlg = make_shared_qobject<KPasswordDialog>();
