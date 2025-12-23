@@ -42,7 +42,7 @@ msgstr "En bildskärm har bortkopplats."
 #: devicenotifications.cpp:462
 #, kde-format
 msgid "%1 has been connected."
-msgstr "%1 har bortkopplats."
+msgstr "%1 har anslutits."
 
 #: devicenotifications.cpp:462
 #, kde-format
