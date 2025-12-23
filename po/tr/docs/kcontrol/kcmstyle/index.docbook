@@ -32,7 +32,7 @@
 </authorgroup>
 
 <date
->2021-04-09</date>
+>2021‒04‒09</date>
 <releaseinfo
 >Plasma 5.20</releaseinfo>
 
@@ -72,11 +72,11 @@
 
 <para
 >Bir &plasma; temasını yapılandırmak istiyorsanız ızgaradaki araç takımı biçemi simgesinin sağ alt köşesindeki <guilabel
->Biçemi Yapılandır...</guilabel
+>Biçemi Yapılandır…</guilabel
 > kaplama simgesini kullanın.</para>
 
 <para
->Uygulanırsa biçemin hemen hemen her yönünü değiştirmek olanaklıdır: sekme çubuğu sekmelerini ortalayın, araç çubuğu öge ayırıcıları çizin, listelerde odak göstergesi çizin, kaydırıcı onay imleri çizin, genişletilmiş yeniden boyutlandırma işleyicilerini etkinleştirin, klavye hızlandırıcı görünürlüğünü tanımlayın, pencerelerin sürükleme kipini değiştirin, daha iyi erişilebilirlik için çerçeveler kullanın, kaydırma çubuklarındaki düğmeleri kullanın, saydam menüler kullanın.</para>
+>Uygulanırsa biçemin hemen hemen her yönünü değiştirmek olanaklıdır: sekme çubuğu sekmelerini ortalayın, araç çubuğu öge ayırıcıları çizin, listelerde odak göstergesi çizin, sürgü onay imleri çizin, genişletilmiş yeniden boyutlandırma işleyicilerini etkinleştirin, klavye ivmelendiricisi görünürlüğünü tanımlayın, pencerelerin sürükleme kipini değiştirin, daha iyi erişilebilirlik için çerçeveler kullanın, kaydırma çubuklarındaki düğmeleri kullanın, saydam menüler kullanın.</para>
 
 <para
 >Genel yapılandırma, ızgaranın altındaki <guibutton
@@ -155,7 +155,7 @@
 
 <para
 ><guibutton
->GNOME/GTK Uygulama Biçemini Yapılandır...</guibutton
+>GNOME/GTK Uygulama Biçemini Yapılandır…</guibutton
 > düğmesi, <guilabel
 >GTK temasını</guilabel
 > seçebileceğiniz veya dosyadan ve/veya <guibutton

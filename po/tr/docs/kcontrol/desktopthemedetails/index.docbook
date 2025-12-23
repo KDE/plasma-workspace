@@ -39,7 +39,7 @@
 </authorgroup>
 
 <date
->2021-04-09</date>
+>2021‒04‒09</date>
 <releaseinfo
 >Plasma 5.20</releaseinfo>
 
@@ -97,14 +97,14 @@
 
 <para
 >Biçem listesini, ızgaranın üzerindeki <guilabel
->Ara...</guilabel
+>Ara…</guilabel
 > alanını kullanarak süzebilirsiniz. Dahası, bu alanın yanındaki çoklu kutuyu kullanarak yalnızca <guimenuitem
 >Açık Temalar</guimenuitem
 >, <guimenuitem
 >Koyu Temalar</guimenuitem
->'ı veya <guimenuitem
+>’ı veya <guimenuitem
 >Renk şeması uyumlu</guimenuitem
-> temaları gösterek biçimde ayarlayabilirsiniz. </para>
+> temaları gösterecek biçimde ayarlayabilirsiniz. </para>
 
 <para
 >Bir biçemi kaldırmak istiyorsanız biçem simgesinin sağ alt köşesindeki <inlinemediaobject
@@ -122,7 +122,7 @@
 <para
 >Sisteminizde plasma-sdk paketi kuruluysa bir biçem önizlemesinin üzerine geldiğinizde bir düğme görünür ve <application
 >Plasma Tema Gezgini</application
->'ni başlatmanıza izin verir. </para>
+>’ni başlatmanıza izin verir. </para>
 <para
 >Ek teknik bilgi için <ulink url="https://develop.kde.org/docs/plasma/theme/theme-details/"
 >bu sayfayı</ulink
@@ -132,7 +132,7 @@
   <varlistentry>
     <term
 ><guilabel
->Yeni Plasma Biçemleri Al...</guilabel
+>Yeni Plasma Biçemleri Al…</guilabel
 ></term>
     <listitem>
     <para
@@ -140,18 +140,18 @@
 >Kur</guibutton
 > düğmesine tıklamak, seçili &plasma; biçemini kurar ve Kur ekranını <guibutton
 >Kapat</guibutton
->'tığınızda yeni biçemi hemen kullanabilirsiniz. </para>
+>’tığınızda yeni biçemi hemen kullanabilirsiniz. </para>
     <para>
     <screenshot>
     <screeninfo
->Yeni Plasma Biçemleri Al...</screeninfo>
+>Yeni Plasma Biçemleri Al…</screeninfo>
       <mediaobject>
         <imageobject>
           <imagedata fileref="get-new-theme.png" format="PNG"/>
         </imageobject>
         <textobject>
           <phrase
->Yeni Plasma Biçemleri Al...</phrase>
+>Yeni Plasma Biçemleri Al…</phrase>
         </textobject>
       </mediaobject>
     </screenshot>
@@ -161,7 +161,7 @@
   <varlistentry>
     <term
 ><guilabel
->Dosyadan Kur...</guilabel
+>Dosyadan Kur…</guilabel
 ></term>
     <listitem>
       <para

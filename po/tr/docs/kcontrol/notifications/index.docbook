@@ -42,7 +42,7 @@
 </authorgroup>
 
 <date
->2021-04-16</date>
+>2021‒04‒16</date>
 <releaseinfo
 >Plasma 5.21</releaseinfo>
 
@@ -68,7 +68,7 @@
 > kümesi kullanır.</para>
 
 <para
->Bu modülü kullanarak, &plasma;'nın her bir olay için nasıl iletişim kuracağını belirleyebilirsiniz.</para>
+>Bu modülü kullanarak, &plasma;’nın her bir olay için nasıl iletişim kuracağını belirleyebilirsiniz.</para>
 
 <sect2 id="notification-settings">
 <title
@@ -79,7 +79,7 @@
 >Rahatsız Etmeyin Kipi</title>
 
     <para
->Bu kip, geçerli görevinize odaklanmanızı sağlamak için tüm görsel ve çoğu sesli bildirimleri devre dışı bırakır. Bu bölümdeki ayarlar, &plasma;'nın hangi durumlarda kendiliğinden rahatsız etmeyin kipini etkinleştireceğini belirlemenize izin verir.</para>
+>Bu kip, geçerli görevinize odaklanmanızı sağlamak için tüm görsel ve çoğu sesli bildirimleri devre dışı bırakır. Bu bölümdeki ayarlar, &plasma;’nın hangi durumlarda kendiliğinden rahatsız etmeyin kipini etkinleştireceğini belirlemenize izin verir.</para>
 
     <variablelist>
 
@@ -102,6 +102,17 @@
     <listitem
 ><para
 >Örneğin bir çevrimiçi ders sırasında ekranınızı paylaştığınızda, rahatsız etmeyin kipini kendiliğinden etkinleştirin.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Bir tam ekran uygulama odaktayken etkinleştir</guiicon
+></term>
+    <listitem
+><para
+>Tam ekran bir uygulama kullanırken Rahatsız Etmeyin kipini kendiliğinden etkinleştirin; örneğin bir video izlerken.</para
 ></listitem>
     </varlistentry>
 
@@ -195,7 +206,7 @@
     <varlistentry>
     <term
 ><guiicon
->Özel Konum Seç...</guiicon
+>Özel…</guiicon
 ></term>
     <listitem
 ><para
@@ -210,7 +221,7 @@
 ></term>
     <listitem
 ><para
->Bildirim açılır penceresi kaç saniye sonra kendiliğinden kaybolur. 1-120 saniye arasında herhangi bir seçim yapabilirsiniz.</para
+>Bildirim açılır penceresi kaç saniye sonra kendiliğinden kaybolur. 1–120 saniye arasında herhangi bir seçim yapabilirsiniz.</para
 ></listitem>
     </varlistentry>
 
@@ -296,7 +307,7 @@
 
 <para
 >Listenin sonundaki <guilabel
->Yapılandır...</guilabel
+>Yapılandır…</guilabel
 > düğmesine tıklamak, uygulama ve hizmet bazında bildirim davranışını yapılandırmanıza izin veren uygulama ayarları sayfasını açar.</para>
 
 <para
@@ -365,7 +376,7 @@
     <varlistentry>
     <term
 ><guiicon
->Olayları Yapılandır...</guiicon
+>Olayları Yapılandır…</guiicon
 ></term>
     <listitem
 ><para

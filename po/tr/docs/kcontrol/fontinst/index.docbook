@@ -32,7 +32,7 @@
 </authorgroup>
 
 <date
->2021-04-09</date>
+>2021‒04‒09</date>
 <releaseinfo
 >Plasma 5.20</releaseinfo>
 
@@ -107,7 +107,7 @@
 <title
 >Yazıtipi Listesi</title>
 <para
->Ana görüntü, yazıtiplerinin aile adına göre gruplandırılmış kurulu yazıtiplerinin bir listesidir - köşeli parantez içindeki sayı, o aile için kurulu biçemlerin sayısını temsil eder. Örneğin, <quote
+>Ana görüntü, yazıtiplerinin aile adına göre gruplandırılmış kurulu yazıtiplerinin bir listesidir — köşeli parantez içindeki sayı, o aile için kurulu biçemlerin sayısını temsil eder. Örneğin, <quote
 >Times</quote
 > yazıtipi şu şekilde listelenebilir: <itemizedlist
 > <listitem>
@@ -137,7 +137,7 @@
 
 <para
 >Bir yazıtipi kurmak için <guibutton
->Dosyadan Kur...</guibutton
+>Dosyadan Kur…</guibutton
 > düğmesine basın ve dosya iletişim kutusundan istediğiniz yazıtiplerini seçin. Seçili yazıtipi grubu, yazıtiplerinin nereye kurulacağını denetleyecektir.</para>
 <para
 >Yazıtiplerini kaldırmak için uygun yazıtiplerini listeden seçin ve <inlinemediaobject
@@ -209,12 +209,12 @@
 >Yeni yazıtipleri yerel dosyalardan veya <guilabel
 >Yeni Çıkanları Al</guilabel
 > yerinden indirilebilir. Araç kutusunda bulunan <guilabel
->Yeni Yazıtipleri Al...</guilabel
+>Yeni Yazıtipleri Al…</guilabel
 > düğmesi (grup listesinin üstünde bulunur), internetten yazıtipleri kurmanıza izin verir. Böyle kurulan yazıtipleri <quote
 >Kişisel Yazıtipleri</quote
 > grubunuza gider. Sistem geneline kurmak için onları <quote
 >Sistem Yazıtipleri</quote
-> grubuna kaldırmanız gerekir - bunu, yazıtiplerini <quote
+> grubuna kaldırmanız gerekir — bunu, yazıtiplerini <quote
 >Sistem Yazıtipleri</quote
 > grubu girdisine sürükleyerek yapabilirsiniz; sizden yönetici parolası istenecektir.</para>
 </sect3>
@@ -229,7 +229,7 @@
 > 
 <para
 >Kendileriyle ilişkilendirilmiş birden çok dosyaya sahip yazıtiplerini aramak için sisteminizi tarayacak basit bir aracı açmak üzere <guilabel
->Yinelenenleri Bul...</guilabel
+>Yinelenenleri Bul…</guilabel
 > düğmesine tıklayın. Örneğin, <quote
 >/usr/local/share/fonts</quote
 > içinde <quote
@@ -245,7 +245,7 @@
 <title
 >Önizleme</title>
 <para
->Bu, değişik yazıtipi boyutlarında bir önizleme metni görüntüler.</para>
+>Bu, değişik yazıtipi puntolarında bir önizleme metni görüntüler.</para>
 <para
 >Bağlam menüsünü kullanarak yakınlaştırabilir/uzaklaştırabilir ve bir önizleme türü seçebilir (<guilabel
 >Standart Önizleme</guilabel

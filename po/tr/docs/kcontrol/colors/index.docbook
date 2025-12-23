@@ -40,7 +40,7 @@
 </authorgroup>
 
 <date
->2023-01-29</date>
+>2023‒01‒29</date>
 <releaseinfo
 >Plasma 5.27</releaseinfo>
 
@@ -73,26 +73,26 @@
 
   <para
 >Şema listesini, ızgaranın üstünde bulunan <guilabel
->Ara...</guilabel
+>Ara…</guilabel
 > alanıyla süzmek olanaklıdır. Dahası, alanın yanındaki çoklu kutuyu kullanarak yalnızca <guimenuitem
 >Açık Şemalar</guimenuitem
->'ı veya <guimenuitem
+>’ı veya <guimenuitem
 >Koyu Şemalar</guimenuitem
->'ı görüntüleyebilirsiniz. </para>
+>’ı görüntüleyebilirsiniz. </para>
 
   <para
 >İnternet bağlantınız varsa <guibutton
->Yeni Renk Şemaları Al...</guibutton
+>Yeni Renk Şemaları Al…</guibutton
 > düğmesiyle kullanıcılar tarafından oluşturulmuş şemalara göz atabilirsiniz.</para>
 
   <para
->İndirdiğiniz veya başka yollarla edildiğiniz şemaları veya &quot;*.colors&quot; biçimli &kde; 4 şemalarını da kurabilirsiniz. </para>
+>İndirdiğiniz veya başka yollarla edildiğiniz şemaları veya “*.colors” biçimli &kde; 4 şemalarını da kurabilirsiniz. </para>
 
   <note>
   <para
->Bu belge, bazen &quot;geçerli&quot; veya &quot;etkin&quot; şemaya atıfta bulunur. &quot;Geçerli&quot; şema, en son uygulanan renkler ve renk şeması seçenekleridir; &ie;, <guibutton
+>Bu belge, bazen “geçerli” veya “etkin” şemaya atıfta bulunur. “Geçerli” şema, en son uygulanan renkler ve renk şeması seçenekleridir; &ie;, <guibutton
 >İptal</guibutton
->'e tıklarsanız alacağınız ayarlardır. &quot;Etkin&quot; şemaysa sizin tarafınızdan en son değiştirilen şemadır; &ie;, <guibutton
+>’e tıklarsanız alacağınız ayarlardır. “Etkin” şemaysa sizin tarafınızdan en son değiştirilen şemadır; &ie;, <guibutton
 >Uygula</guibutton
 > düğmesine tıkladığınızda alacağınız düzendir.</para>
   </note>
@@ -103,7 +103,7 @@
 >Vurgu Rengi</title>
 
   <para
->Vurgu rengi, odaklanılan veya seçilen ögelerin vurgulandığı renktir ve kaydırıcılar veya klasör simgeleri gibi diğer bazı arabirim ögeleri için de kullanılır. Tüm renkleri vurgu rengiyle renklendirmek de olanaklıdır (aşağıdaki renk şeması seçenekleri hakkında daha fazla bilgi edinin). <guilabel
+>Vurgu rengi, odaklanılan veya seçilen ögelerin vurgulandığı renktir ve sürgüler veya klasör simgeleri gibi diğer bazı arabirim ögeleri için de kullanılır. Tüm renkleri vurgu rengiyle renklendirmek de olanaklıdır (aşağıdaki renk şeması seçenekleri hakkında daha fazla bilgi edinin). <guilabel
 >Vurgu rengi kullan</guilabel
 > ile vurgu rengi seçmek için üç seçeneğiniz vardır: </para>
     <itemizedlist>
@@ -159,7 +159,7 @@
 >Etkin olmayan pencerelere efektleri uygula</guilabel
 > &mdash; İşaretlenirse durum efektleri (<link linkend="color-effects"
 >aşağıya</link
-> bakın) etkin olmayan pencerelere uygulanır. Bu, etkin pencerelerle etkin olmayan pencereleri görsel olarak ayırt etmenize yardımcı olur ve zevkinize bağlı olarak estetik değer taşır. Ancak bazı kullanıcılar, pencereler etkin olmayan duruma geçtiğinde yeniden çizilmeleri gerektiğinden bunun rahatsız edici &quot;titreşmelere&quot; neden olduğunu düşünüyorlar. Masaüstü efektlerinin aksine, renk durumu efektleri bileşikleştirme desteğine gereksinim duymaz ve tüm sistemlerde çalışır; ancak bu yalnızca &kde; uygulamaları için geçerlidir. </para
+> bakın) etkin olmayan pencerelere uygulanır. Bu, etkin pencerelerle etkin olmayan pencereleri görsel olarak ayırt etmenize yardımcı olur ve zevkinize bağlı olarak estetik değer taşır. Ancak bazı kullanıcılar, pencereler etkin olmayan duruma geçtiğinde yeniden çizilmeleri gerektiğinden bunun rahatsız edici “titreşmelere” neden olduğunu düşünüyorlar. Masaüstü efektlerinin aksine, renk durumu efektleri bileşikleştirme desteğine gereksinim duymaz ve tüm sistemlerde çalışır; ancak bu yalnızca &kde; uygulamaları için geçerlidir. </para
 ></listitem>
     <listitem
 ><para
@@ -179,7 +179,7 @@
 >Tüm renkleri vurgu rengiyle renklendir</guilabel
 > &mdash; İşaretlenirse tüm renklere vurgu renginin bir kısmı harmanlanır. <guilabel
 >Renklendirme gücü</guilabel
-> kaydırıcısını hareket ettirerek vurgu renginin ne kadar güçlü karışması gerektiğini denetleyebilirsiniz. </para
+> sürgüsünü sürerek vurgu renginin ne kadar güçlü karışması gerektiğini denetleyebilirsiniz. </para
 ></listitem>
     <listitem
 ><para
@@ -191,7 +191,7 @@
 ><para
 ><guilabel
 >Karşıtlık</guilabel
-> &mdash; Bu kaydırıcı, gölgelenen ögelerin karşıtlığını denetler; örneğin çerçeve kenarlıkları ve çoğu biçem tarafından kullanılan &quot;3B&quot; efektler. Düşük bir değer daha az karşıtlık verir ve daha yumuşak kenarlara neden olur; yüksekçe bir değer ise kenarların daha çok &quot;ortaya çıkmasını&quot; sağlar. </para
+> &mdash; Bu sürgü, gölgelenen ögelerin karşıtlığını denetler; örneğin çerçeve kenarlıkları ve çoğu biçem tarafından kullanılan “3B” efektler. Düşük bir değer daha az karşıtlık verir ve daha yumuşak kenarlara neden olur; yüksekçe bir değer ise kenarların daha çok “ortaya çıkmasını” sağlar. </para
 ></listitem>
   </itemizedlist>
 
@@ -212,18 +212,18 @@
   <para
 >İlk başta görüntülenen <guilabel
 >Ana Renkler</guilabel
-> kümesi, özünde Plasma’nın kullandığı gibi bir &quot;küme&quot; değildir (sonraki bölüme bakın); ancak şemayı tümüyle düzenlemeyi kolay kılan bir sayıda renk rolleri sunar. Yeni bir renk şeması oluştururken öncelikle bu renkleri değiştirirsiniz ve gerekise diğer renklere geçersiniz.</para>
+> kümesi, özünde Plasma’nın kullandığı gibi bir “küme” değildir (sonraki bölüme bakın); ancak şemayı tümüyle düzenlemeyi kolay kılan bir sayıda renk rolleri sunar. Yeni bir renk şeması oluştururken öncelikle bu renkleri değiştirirsiniz ve gerekirse diğer renklere geçersiniz.</para>
 
   <para
 ><guilabel
 >Ana Renkler</guilabel
-> kümseinin tüm kümelerden rolleri kullanılabilir yaptığını not edin. Örneğin, &quot;Görünüm Arka Planı&quot;, burada Görünüm kümesindeki Normal Arka Plan rolü için bir kısaltmadır. Ayrıca, belirli bir kümeye başvurmayan renkler ayarlamak, <emphasis
+> kümesinin tüm kümelerden rolleri kullanılabilir yaptığını not edin. Örneğin, “Görünüm Arka Planı”, burada Görünüm kümesindeki Normal Arka Plan rolü için bir kısaltmadır. Ayrıca, belirli bir kümeye başvurmayan renkler ayarlamak, <emphasis
 >tüm</emphasis
-> kümelerdeki renkleri değiştirir. (bir istisna olarak, &quot;Etkin Olmayan Metin&quot; tüm kümeler için renkleri değiştirir; <emphasis
+> kümelerdeki renkleri değiştirir. (bir istisna olarak, “Etkin Olmayan Metin” tüm kümeler için renkleri değiştirir; <emphasis
 >yalnızca</emphasis
-> Seçim’e dokunmaz; bunun için ayrı olarak Seçim kümesinde Etkin Olmayan Metin için &quot;Seçim Etkin Olmayan Metin&quot; vardır). Bazı roller <guilabel
+> Seçim’e dokunmaz; bunun için ayrı olarak Seçim kümesinde Etkin Olmayan Metin için “Seçim Etkin Olmayan Metin” vardır). Bazı roller <guilabel
 >Ana Renkler</guilabel
-> altında görünür bile olmayabilir ve yalnızca ilgili küme seçilerek değişirilebilir (gerekirse).</para>
+> altında görünür bile olmayabilir ve yalnızca ilgili küme seçilerek değiştirilebilir (gerekirse).</para>
 
   <sect4>
     <title
@@ -260,7 +260,7 @@
 ><para
 ><guilabel
 >İpucu</guilabel
-> &mdash; araç ipuçları, &quot;Bu Nedir&quot; ipuçları ve benzeri ögeler. </para
+> &mdash; araç ipuçları, “Bu Nedir” ipuçları ve benzeri ögeler. </para
 ></listitem>
       <listitem
 ><para
@@ -288,11 +288,11 @@
 ></listitem>
       <listitem
 ><para
->Bağlantı Metni &mdash; köprüler için veya başka bir şekilde &quot;ziyaret edilebilecek bir şey&quot; veya ilişkileri göstermek için. </para
+>Bağlantı Metni &mdash; köprüler için veya başka bir şekilde “ziyaret edilebilecek bir şey” veya ilişkileri göstermek için. </para
 ></listitem>
       <listitem
 ><para
->Ziyaret Edilmiş Metin &mdash; &quot;ziyaret edilmiş&quot; (&eg;, bir köprü) veya "eski" bir şeyi belirtmek için kullanılır. </para
+>Ziyaret Edilmiş Metin &mdash; “ziyaret edilmiş” (&eg;, bir köprü) veya “eski” bir şeyi belirtmek için kullanılır. </para
 ></listitem>
       <listitem
 ><para
@@ -300,7 +300,7 @@
 ></listitem>
       <listitem
 ><para
->Etkin Olmayan Metin &mdash; göze batmaması gereken metinler için kullanılır; &eg;, yorumlar, &quot;altyazılar&quot;, önemsiz bilgiler vb. </para
+>Etkin Olmayan Metin &mdash; göze batmaması gereken metinler için kullanılır; &eg;, yorumlar, “altyazılar”, önemsiz bilgiler vb. </para
 ></listitem>
       <listitem
 ><para
@@ -317,7 +317,7 @@
     </itemizedlist>
 
     <para
->Metin rollerinin yanı sıra, çizgiler çizmek veya kullanıcı arayüzü ögelerini gölgelendirmek için kullanılan birkaç ek &quot;dekorasyon&quot; rolü de vardır (yukarıdakiler, uygun durumlarda, bu amaç için de kullanılabilirken, aşağıdakiler özellikle metin çizmek için <emphasis
+>Metin rollerinin yanı sıra, çizgiler çizmek veya kullanıcı arayüzü ögelerini gölgelendirmek için kullanılan birkaç ek “dekorasyon” rolü de vardır (yukarıdakiler, uygun durumlarda, bu amaç için de kullanılabilirken, aşağıdakiler özellikle metin çizmek için <emphasis
 >değildir</emphasis
 >). Bunlar:</para>
 
@@ -382,20 +382,20 @@
 >Yoğunluk</title>
 
     <para
->Yoğunluk, genel rengin açılmasını veya koyulaşmasını sağlar. Kaydırıcıyı ortaya ayarlamak herhangi bir değişiklik yaratmaz. Kullanılabilir efektler şunlardır:</para>
+>Yoğunluk, genel rengin açılmasını veya koyulaşmasını sağlar. Sürgüyü ortaya ayarlamak herhangi bir değişiklik yaratmaz. Kullanılabilir efektler şunlardır:</para>
 
     <itemizedlist>
       <listitem
 ><para
->Gölgele &mdash; her şeyi denetimli bir biçimde daha açık veya daha koyu yapar. Her bir &quot;tik&quot;, kaydırıcıda toplam yoğunluğu (&ie; algılanan parlaklığı) mutlak bir miktarda artırır veya azaltır. </para
+>Gölgele &mdash; her şeyi denetimli bir biçimde daha açık veya daha koyu yapar. Her bir “tik”, sürgüde toplam yoğunluğu (&ie; algılanan parlaklığı) mutlak bir miktarda artırır veya azaltır. </para
 ></listitem>
       <listitem
 ><para
->Koyulaştır &mdash; yoğunluğu başlangıç değerinin bir yüzdesine değiştirir. Orta ve en yüksek arasında bir kaydırıcı ayarı, özgünün yarısı kadar yoğun bir renkle sonuçlanır. En düşük, özgünden iki kat daha yoğun bir renk verir. </para
+>Koyulaştır &mdash; yoğunluğu başlangıç değerinin bir yüzdesine değiştirir. Orta ve en yüksek arasında bir sürgü ayarı, özgünün yarısı kadar yoğun bir renkle sonuçlanır. En düşük, özgünden iki kat daha yoğun bir renk verir. </para
 ></listitem>
       <listitem
 ><para
->Açıklaştır &mdash; kavramsal olarak koyulaştırmanın tersidir; açıklaştırma "beyazdan uzaklık" ile çalışırken, koyulaştırma "siyahtan uzaklık" ile çalışıyor olarak düşünülebilir. En düşük, özgünden iki kat daha beyaz &quot;uzaklığındadır&quot;; orta ve en yükseğin ortası ise özgün renk ile beyazın ortasında bir yoğunluk verir. </para
+>Açıklaştır &mdash; kavramsal olarak koyulaştırmanın tersidir; açıklaştırma "beyazdan uzaklık" ile çalışırken, koyulaştırma "siyahtan uzaklık" ile çalışıyor olarak düşünülebilir. En düşük, özgünden iki kat daha beyaz “uzaklığındadır”; orta ve en yükseğin ortası ise özgün renk ile beyazın ortasında bir yoğunluk verir. </para
 ></listitem>
     </itemizedlist>
   </sect4>
@@ -414,11 +414,11 @@
 ></listitem>
       <listitem
 ><para
->Solgunlaştır &mdash; özgün rengi sorunsuz bir şekilde başvuru rengine karıştırır. Kaydırıcıdaki en düşük ayar herhangi bir değişiklik üretmez; en yüksek ise başvuru rengini verir. </para
+>Solgunlaştır &mdash; özgün rengi sorunsuz bir şekilde başvuru rengine karıştırır. Sürgüdeki en düşük ayar herhangi bir değişiklik üretmez; en yüksek ise başvuru rengini verir. </para
 ></listitem>
       <listitem
 ><para
->Renklendir &mdash; kaydırıcı değeri arttıkça yoğunluğun daha yavaş değişmesi ve rengin (ton ve kroma) daha tez değişmesi dışında solmaya benzer. </para
+>Renklendir &mdash; sürgü değeri arttıkça yoğunluğun daha yavaş değişmesi ve rengin (ton ve kroma) daha tez değişmesi dışında solmaya benzer. </para
 ></listitem>
     </itemizedlist>
   </sect4>
@@ -428,7 +428,7 @@
 >Karşıtlık</title>
 
     <para
->Karşıtlık efektleri, arka plan rengini başvuru rengi olarak kullanarak metne uygulanmaları ve doygunluk gidermenin kullanılamaması dışında renk efektlerine benzer. Solgunlaştır, &quot;soluklaşan&quot; metin üretirken; Renklendir, arka planla daha tez eşleşecek şekilde renk değiştiren ve daha uzun süre daha yüksek karşıtlık yoğunluğunu koruyan metin üretir (&quot;daha uzun&quot;, kaydırıcıda daha yüksek ayarlar anlamına gelir). Karşıtlık efektleri için kaydırıcıdaki en düşük ayar herhangi bir değişiklik oluşturmazken en yüksek ayar, metnin tümüyle arka planda kaybolmasına neden olur.</para>
+>Karşıtlık efektleri, arka plan rengini başvuru rengi olarak kullanarak metne uygulanmaları ve doygunluk gidermenin kullanılamaması dışında renk efektlerine benzer. Solgunlaştır, “soluklaşan” metin üretirken; Renklendir, arka planla daha tez eşleşecek şekilde renk değiştiren ve daha uzun süre daha yüksek karşıtlık yoğunluğunu koruyan metin üretir (“daha uzun”, sürgüde daha yüksek ayarlar anlamına gelir). Karşıtlık efektleri için sürgüdeki en düşük ayar herhangi bir değişiklik oluşturmazken en yüksek ayar, metnin tümüyle arka planda kaybolmasına neden olur.</para>
   </sect4>
 
 </sect3>

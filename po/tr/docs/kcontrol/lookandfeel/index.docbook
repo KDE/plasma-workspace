@@ -35,7 +35,7 @@
 </authorgroup>
 
 <date
->2023-01-26</date>
+>2023‒01‒26</date>
 <releaseinfo
 >Plasma 5.27</releaseinfo>
 
@@ -78,7 +78,7 @@
 <itemizedlist>
   <listitem
 ><para
->Masaüstü Yerleşimi: Paneller ve araç takımlarından oluşan bir aranjman - örneğin görev yöneticisi ve uygulama başlatıcısı içeren bir alt panel veya global menü ve sistem tepsisi içeren bir üst panel</para
+>Masaüstü Yerleşimi: Paneller ve araç takımlarından oluşan bir aranjman — örneğin görev yöneticisi ve uygulama başlatıcısı içeren bir alt panel veya global menü ve sistem tepsisi içeren bir üst panel</para
 ></listitem>
   <listitem
 ><para
@@ -198,19 +198,19 @@
 
 <para
 ><guilabel
->Yeni Global Temalar Al...</guilabel
+>Yeni Global Temalar Al…</guilabel
 > düğmesiyle, üçüncü taraf sağlayıcılar tarafından yeni Global Temalar kurabilirsiniz. Bu temalara erişmek için internete bağlı olmanız gerekir. İletişim kutusundaki temalardan birinde <guibutton
 >Kur</guibutton
 >’a tıklamak, seçili Global Tema’yı yükler ve iletişim kutusunu kapattıktan sonra yeni temanız hemen kullanılabilir. <screenshot>
   <screeninfo
->Yeni Global Temalar Al...</screeninfo>
+>Yeni Global Temalar Al…</screeninfo>
     <mediaobject>
       <imageobject>
         <imagedata fileref="get-new-stuff.png" format="PNG"/>
       </imageobject>
       <textobject>
         <phrase
->Yeni Global Temalar Al...</phrase>
+>Yeni Global Temalar Al…</phrase>
       </textobject>
     </mediaobject>
   </screenshot>

@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" 
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
 "dtd/kdedbx45.dtd" [
   <!ENTITY kappname "&klipper;">
   <!ENTITY package "kdebase">
@@ -49,7 +49,7 @@
 >&FDLNotice;</legalnotice>
 
 <date
->2022-05-05</date>
+>2022‒05‒05</date>
 <releaseinfo
 >Plasma 5.25</releaseinfo>
 
@@ -88,7 +88,7 @@
 <title
 >Temel Kullanım</title>
 <para
->&klipper;'ı sistem tepsisinde bir &plasma; araç takımı veya klasik bir uygulama olarak kullanabilirsiniz. İkisi de aynı işlevselliği paylaşır; ancak kullanıcı arayüzleri farklıdır ve sistem tepsisindeki &klipper; simgesinin üzerine fare ile geldiğinizde panodaki son ögeyi gösterirler. </para>
+>&klipper;’ı sistem tepsisinde bir &plasma; araç takımı veya klasik bir uygulama olarak kullanabilirsiniz. İkisi de aynı işlevselliği paylaşır; ancak kullanıcı arayüzleri farklıdır ve sistem tepsisindeki &klipper; simgesinin üzerine fare ile geldiğinizde panodaki son ögeyi gösterirler. </para>
 
 <screenshot>
 <screeninfo
@@ -131,11 +131,11 @@
 >Fare işaretçisi ile bir girişin üzerine gelin ve bir eylemi başlatmanıza, kare kod göstermenize, içeriği düzenlemenize veya girdiyi geçmişten kaldırmanıza olanak tanıyan dört simge görünür. Kare kodları yakalamak ve kaydetmek için &spectacle; kullanın. </para>
 
 <para
->Pano geçmişini açıp (&klipper;'a tıklayın) ve sorgunuzu yazarak arama yapabilirsiniz. Siz yazdıkça sonuçlar güncellenir. Pano geçmişini temizlemek için arama alanının sağındaki simgeye tıklayın. </para>
+>Pano geçmişini açıp (&klipper;’a tıklayın) ve sorgunuzu yazarak arama yapabilirsiniz. Siz yazdıkça sonuçlar güncellenir. Pano geçmişini temizlemek için arama alanının sağındaki simgeye tıklayın. </para>
 
 <para
 >Bağlam menüsündeki <guilabel
->Panoyu Yapılandır...</guilabel
+>Panoyu Yapılandır…</guilabel
 > eylemi, <link linkend="preferences"
 >ayarlar iletişim kutusunu</link
 > açar. </para>
@@ -155,12 +155,10 @@
 > dosyasına giden bir yol panoya kopyalanırsa dosya &okular;’da görüntülenebilir.</para>
 
 <para
->Bu özelliği kullanmak için bir &URL; veya yol seçin. &klipper;'ın listesinde eşleşen bir düzenli ifade varsa seçiminiz için programları gösteren bir menü görüntülenir. Bir program seçmek için fare veya imleç düğmelerini kullanın ve &klipper; seçimin işaret ettiği adresi açarak bu programı çalıştırır.</para>
+>Bu özelliği kullanmak için bir &URL; veya yol seçin. &klipper;’ın listesinde eşleşen bir düzenli ifade varsa seçiminiz için programları gösteren bir menü görüntülenir. Bir program seçmek için fare veya imleç düğmelerini kullanın ve &klipper; seçimin işaret ettiği adresi açarak bu programı çalıştırır.</para>
 
 <para
->Pano içeriğinde herhangi bir işlem yapmak istemiyorsanız daha önce yaptığınız işe geri dönmek için açılır menüden <guimenuitem
->Bu Açılır Pencereyi Devre Dışı Bırak</guimenuitem
-> ögesini seçin. Menüden çıkarsanız sizi işinize geri döndürüp kaybolur. Ayarlar iletişim kutusunda <guilabel
+>Ayarlar iletişim kutusunda <guilabel
 >Genel</guilabel
 > sayfası altındaki <guilabel
 >Eylem açılır menüsünü göster</guilabel
@@ -179,7 +177,7 @@
 
 <para
 >Düzenli bir ifadeyle eşleşen pano içeriği de üzerilerinde bir işlem yapılmadan önce düzenlenebilir. Pano girişinin sağındaki <guimenuitem
->İçeriği düzenle...</guimenuitem
+>İçeriği düzenle…</guimenuitem
 > ögesini seçin ve uygun olanı çalıştırmak için <guibutton
 >Kaydet</guibutton
 > düğmesine basmadan önce açılan iletişim kutusunda pano içeriğini uygun eylemle değiştirebilirsiniz.</para>
@@ -189,7 +187,7 @@
 >&Ctrl;&Alt;<keycap
 >R</keycap
 ></keycombo
-> kısayoluna basmak, &klipper;'ın gerçekleştirdiği son eylemi yinelemek için açılır menüyü gösterir.</para>
+> kısayoluna basmak, &klipper;’ın gerçekleştirdiği son eylemi yinelemek için açılır menüyü gösterir.</para>
 
 </sect1>
 
@@ -201,7 +199,7 @@
 <title
 >Genel</title>
 <para
->&klipper;, &plasma;'daki pano ve seçim davranışlarını ayarlamak için kullanılabilir. </para>
+>&klipper;, &plasma;’daki pano ve seçim davranışlarını ayarlamak için kullanılabilir. </para>
 
 <note
 ><para
@@ -233,14 +231,14 @@
 >Pano/Seçim Davranışını Değiştirmek</title>
 <para
 >Pano/seçim davranışını değiştirmek için &klipper; bağlam menüsünden <guimenuitem
->Panoyu Yapılandır...</guimenuitem
->'ı seçin ve açılan iletişim kutusundan <guilabel
+>Panoyu Yapılandır…</guimenuitem
+>’ı seçin ve açılan iletişim kutusundan <guilabel
 >Genel</guilabel
 > sayfasına geçin. <guilabel
 >Seçim ve Pano</guilabel
 > seçeneğinin içeriğini kaldırmak pano ve seçim işlevlerini yukarıda anlatıldığı üzere tümüyle ayrı arabelleklerde tutar. Bu seçenek ayarlandığında, <guilabel
 >Yok Say</guilabel
-> eylemi, &klipper;'ın seçim içeriğini onun pano geçmişine almasına ve seçimin üzerinde eylemler gerçekleştirmesine engel olur. <guilabel
+> eylemi, &klipper;’ın seçim içeriğini onun pano geçmişine almasına ve seçimin üzerinde eylemler gerçekleştirmesine engel olur. <guilabel
 >Seçim ve Pano</guilabel
 > seçeneğini işaretlemek pano ve seçim arabelleklerinin her zaman aynı olmasına neden olur ve seçilen metnin hem <mousebutton
 >orta</mousebutton
@@ -284,7 +282,7 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 ><para
 >Metin veya ekranın bir alanı fare veya klavye ile vurgulandığında, bu <emphasis
 >seçim</emphasis
->'dir. Orta fare düğmesi kullanılarak yapıştırılabilir.</para
+>’dir. Orta fare düğmesi kullanılarak yapıştırılabilir.</para
 ><para
 >Seçim, <guimenuitem
 >Kopyala</guimenuitem
@@ -339,8 +337,7 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 >Her zaman geçmişe kaydet</guilabel
 > seçeneği, seçim/pano eşzamanlaması kapalıysa kullanılamaz &dash; bu durumda seçim pano geçmişine hiçbir zaman kendiliğinden kaydedilmez. <xref linkend="clipboard-modes"/> bölümüne bakın. </para>
 </listitem>
-</varlistentry
-> 
+</varlistentry>
 
 <varlistentry>
 <term
@@ -359,8 +356,7 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 >Her zaman geçmişe kaydet</guilabel
 > seçeneği, seçim/pano eşzamanlaması kapalıysa kullanılamaz &dash; bu durumda seçim pano geçmişine hiçbir zaman kendiliğinden kaydedilmez. <xref linkend="clipboard-modes"/> bölümüne bakın. </para>
 </listitem>
-</varlistentry
-> 
+</varlistentry>
 
 </variablelist>
 
@@ -390,49 +386,7 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 ></term>
 <listitem
 ><para
->Bu açıksa geçmişten bir ögeyi seçmek uygunsa &klipper;'ın o öge üzerinde eylem açılır menüsünü göstermesini sağlar.</para>
-</listitem>
-</varlistentry>
-
-<varlistentry
-><term
-><guibutton
->Pencereleri Dışla</guibutton
-></term>
-<listitem
-><para
-><guilabel
->WM_CLASS türündeki pencereler için Eylemleri Devre Dışı Bırak</guilabel
-> iletişim kutusunu getirir.</para>
-<para
->&konqueror; gibi bazı programlar panoyu kendi içinde kullanır. Belirli bir uygulamayı kullanırken sürekli istenmeyen &klipper; açılır pencerleri alıyorsanız şunu yapın:</para>
-
-<orderedlist>
-<listitem
-><para
->Uygulamayı açın.</para
-></listitem>
-<listitem
-><para
->Bir uçbirimden <userinput
-><command
->xprop</command
-> | <command
->grep</command
-> <parameter
->WM_CLASS</parameter
-></userinput
-> komutunu çalıştırıp kullandığınız uygulamanın penceresine tıklayın.</para
-></listitem
-> 
-<listitem
-><para
->Eşittir iminden sonraki ilk diziyi girin.</para
-></listitem>
-</orderedlist>
-
-<para
->WM_CLASS eklendikten sonra o uygulamanın pencereleri için artık bir daha eylemler üretilmeyecektir.</para>
+>Bu açıksa geçmişten bir ögeyi seçmek uygunsa &klipper;’ın o öge üzerinde eylem açılır menüsünü göstermesini sağlar.</para>
 </listitem>
 </varlistentry>
 
@@ -483,9 +437,9 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 >İfadeler/Eylemler Eklemek</term>
 <listitem
 ><para
->&klipper;'ın eşleşeceği bir düzenli ifade eklemek için <guibutton
->Eylem Ekle...</guibutton
-> düğmesine tıklayın. &klipper;, &Qt;'nin PCRE (Perl Uyumlu Düzenli İfadeler) kullanan <classname
+>&klipper;’ın eşleşeceği bir düzenli ifade eklemek için <guibutton
+>Eylem Ekle…</guibutton
+> düğmesine tıklayın. &klipper;, &Qt;’nin PCRE (Perl Uyumlu Düzenli İfadeler) kullanan <classname
 >QRegularExpression</classname
 > sınıfını kullanır.</para>
 <para
@@ -495,8 +449,7 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 >Açıklama</guilabel
 > sütununa <mousebutton
 >sol</mousebutton
-> fare düğmesiyle tıklayarak ekleyebilirsiniz.</para
->   
+> fare düğmesiyle tıklayarak ekleyebilirsiniz.</para>
 
 <note
 ><para
@@ -508,14 +461,14 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 ></note>
 
 <para
->Normal ifadeyi yukarıda açıklandığı gibi düzenleyin. Yürütülecek bir komut eklemek için, <guimenuitem
+>Normal ifadeyi yukarıda açıklandığı gibi düzenleyin. Yürütülecek bir komut eklemek için <guimenuitem
 >Komut Ekle</guimenuitem
 > ögesini tıklayın ve komutu metin düzenleme kutusunda düzenleyin. Bir komuta çift tıklamak onu düzenlemenizi sağlar.</para>
 
 <para
 >Komut satırındaki <token
 >%s</token
->'nin pano içeriğiyle değiştirildiğini not edin; &eg;, komut tanımınız <userinput
+>’nin pano içeriğiyle değiştirildiğini not edin; &eg;, komut tanımınız <userinput
 ><command
 >kwrite</command
 > <token
@@ -576,7 +529,7 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 ></term>
 <listitem
 ><para
->Seçili eylem, &klipper;'ın öntanımlı düğmesini kullanır. Bunlar, bu el kitabında söz edilen kısayollardır.</para
+>Seçili eylem, &klipper;’ın öntanımlı düğmesini kullanır. Bunlar, bu el kitabında söz edilen kısayollardır.</para
 ></listitem>
 </varlistentry>
 <varlistentry>
@@ -590,9 +543,9 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 <para
 >Seçtiğiniz eyleme özel bir düğme atamak isterseniz <guilabel
 >Özel</guilabel
->'e ve ardından <guilabel
+>’e ve ardından <guilabel
 >Yok</guilabel
->'a tıklayın. Şimdi, başka &kde; uygulamalarında da yaptığınız gibi, istediğiniz kısayolu girin. </para
+>’a tıklayın. Şimdi, başka &kde; uygulamalarında da yaptığınız gibi, istediğiniz kısayolu girin. </para
 > </listitem>
 </varlistentry>
 </variablelist>
@@ -616,14 +569,14 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 >asj@cban.com</email
 > </para>
 <para
->Program telif hakkı 1998-2000 &Carsten.Pfeiffer; &Carsten.Pfeiffer.mail;</para>
+>Program telif hakkı 1998–2000 &Carsten.Pfeiffer; &Carsten.Pfeiffer.mail;</para>
 <para
 >Geçerli bakımcı: Esben Mose Hansen. İletişim bilgileri için <ulink url="http://mosehansen.dk/about"
 >http://mosehansen.dk/about</ulink
 > sayfasına bakın. </para>
 
 <para
->Belgelendirme telif hakkı 2000-2003, 2005 &Philip.Rodrigues; &Philip.Rodrigues.mail;</para>
+>Belgelendirme telif hakkı 2000–2003, 2005 &Philip.Rodrigues; &Philip.Rodrigues.mail;</para>
 
 <para
 >Çeviri: Emir SARI <email
@@ -632,7 +585,7 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 > &underFDL; &underGPL; </chapter>
 
 
-&documentation.index; 
+&documentation.index;
 
 </book>
 <!--

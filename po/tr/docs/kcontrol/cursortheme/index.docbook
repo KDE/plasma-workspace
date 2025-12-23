@@ -43,7 +43,7 @@
 </authorgroup>
 
 <date
->2023-01-29</date>
+>2023‒01‒29</date>
 <releaseinfo
 >Plasma 5.27</releaseinfo>
 
@@ -124,7 +124,7 @@
 ><guilabel
 >Yeni İmleçler İndir</guilabel
 > iletişim kutusunu başlatmak için <guilabel
->Yeni İmleçler Al...</guilabel
+>Yeni İmleçler Al…</guilabel
 > düğmesine tıklayın ve internetten yeni temalar indirin.</para>
 
 <screenshot>
@@ -139,7 +139,7 @@
 
 <para
 >İndirdiğiniz veya başka yollarla edildiğiniz imleç temalarını kurmak için <guilabel
->Dosyadan Kur...</guilabel
+>Dosyadan Kur…</guilabel
 > düğmesini kullanın.</para>
 
 <para
@@ -176,7 +176,7 @@
 
 <para
 >Bazen bilgisayarınızın komutlarınızı görmezden gelmediğini ve perde arkasında bir şeyler olduğunu bilmek güven vericidir. Bu <guilabel
->Başlatma Geri Bildirimini Yapılandır...</guilabel
+>Başlatma Geri Bildirimini Yapılandır…</guilabel
 > iletişim kutusunda, o simgeye gerçekten basıp basmadığınızı anlamanıza yardımcı olması için görünür geri bildirimi yapılandırabilirsiniz.</para>
 
 <screenshot>
@@ -220,7 +220,7 @@
 ><guilabel
 >Görev Yöneticisi Ayarları</guilabel
 ></ulink
->'nın <guilabel
+>’nın <guilabel
 >Davranış</guilabel
 > bölümünde <guilabel
 >Görevleri yalnızca</guilabel

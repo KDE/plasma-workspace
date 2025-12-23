@@ -33,7 +33,7 @@
 </authorgroup>
 
 <date
->2021-04-09</date>
+>2021‒04‒09</date>
 <releaseinfo
 >Plasma 5.20</releaseinfo>
 
@@ -136,10 +136,10 @@
 
 <para
 >Her yazıtipinin karşılık gelen bir <guibutton
->Seç...</guibutton
+>Seç…</guibutton
 > düğmesi vardır. Bu düğmeye tıkladığınızda bir iletişim kutusu görünür. Yeni bir yazıtipi, yazıtipi biçemini ve boyutunu seçmek için bu iletişim kutusunu kullanabilirsiniz. Ardından <guibutton
 >Tamam</guibutton
->'a basın.</para>
+>’a basın.</para>
 
 <para
 >Eş aralıklı olmayan tüm yazıtiplerini listeden süzmek için <guilabel
@@ -148,17 +148,17 @@
 
 <para
 >Seçtiğiniz yazıtipinin bir örneği, yazıtipi grubu adı ve <guibutton
->Seç...</guibutton
+>Seç…</guibutton
 > düğmesi arasında görüntülenir.</para>
 
 <para
 >İşiniz bittiğinde <guibutton
 >Tamam</guibutton
->'a tıklayın ve değişikliklerinizin hemen etkili olması için &kde;'nin ilgili bileşenleri yeniden başlatılacaktır.</para>
+>’a tıklayın ve değişikliklerinizin hemen etkili olması için &kde;’nin ilgili bileşenleri yeniden başlatılacaktır.</para>
 
 <para
 ><guibutton
->Tüm Yazıtiplerini Ayarla...</guibutton
+>Tüm Yazıtiplerini Ayarla…</guibutton
 > düğmesi, yukarıda seçili tüm yazıtiplerinin özelliklerini tez ayarlamanıza olanak tanır. Standart olana benzer bir yazıtipi seçme iletişim kutusu açılır; ancak <guilabel
 >Yazıtipi</guilabel
 >, <guilabel
@@ -182,14 +182,14 @@
     </imageobject>
     <textobject>
       <phrase
->Tüm Yazıtiplerini Ayarla... iletişim kutusu</phrase>
+>Tüm Yazıtiplerini Ayarla… iletişim kutusu</phrase>
     </textobject>
   </mediaobject>
 </screenshot>
 </para>
 
 <para
->Örneğin, yukarıda birkaç farklı yazıyüzü seçtiyseniz ve hepsinin boyutunun çok büyük olduğunu fark ettiyseniz (bu, örneğin ekran çözünürlüğünü değiştirdiğinizde sıklıkla olur), tüm özelleştirilmiş yazıyüzlerinizi ve biçemlerinizi etkilemeden yeni bir yazıtipi boyutu uygulayabilirsiniz.</para>
+>Örneğin, yukarıda birkaç farklı yazıyüzü seçtiyseniz ve hepsinin puntosunun çok büyük olduğunu fark ettiyseniz (bu, örneğin ekran çözünürlüğünü değiştirdiğinizde sıklıkla olur), tüm özelleştirilmiş yazıyüzlerinizi ve biçemlerinizi etkilemeden yeni bir yazıtipi boyutu uygulayabilirsiniz.</para>
 
 <sect2 id="fonts-aa">
 <title

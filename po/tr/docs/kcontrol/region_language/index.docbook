@@ -35,7 +35,7 @@
  </authorgroup>
 
           <date
->2022-06-23</date>
+>2022‒06‒23</date>
           <releaseinfo
 >Plasma 5.26</releaseinfo>
 
@@ -63,21 +63,21 @@
 >Bu sayfada, &plasma; Çalışma Alanı ve uygulamalarının kullanacağı dili ve biçimleri ayarlayabilirsiniz. </para>
 
 <para
->Çoğu durumda dili seçmeniz yeterlidir ve tüm seçenekler uygun şekilde ayarlanır. &plasma; Çalışma Alanı ve &kde; uygulamaları Amerikan İngilizcesi ile yazılır ve gönüllülerden oluşan ekipler tarafından birçok farklı dile çevrilir. Bu çevirilerin kullanılabilmesi için önce kurulmaları gerekir. </para>
+>Çoğu durumda dili seçmeniz yeterlidir ve tüm seçenekler buna uygun bir biçimde ayarlanır. &plasma; Çalışma Alanı ve &kde; uygulamaları Amerikan İngilizcesi ile yazılır ve gönüllülerden oluşan ekipler tarafından birçok farklı dile çevrilir. Bu çevirilerin kullanılabilmesi için önce kurulmaları gerekir. </para>
 <note
 ><para
 >Kullanmak istediğiniz dil için &plasma; dil paketlerinin veya çevirilerinin kurulu olduğundan emin olun.</para>
 <para
->&plasma;, &Qt; kitaplıkları üzerine yapıldığından, tümüyle çevrilmiş bir arayüze sahip olmak için seçili diller için olan &Qt; çevirileri gerekir.</para
+>&plasma;, &Qt; kitaplıkları üzerine yapıldığından, tümüyle çevrilmiş bir arayüze sahip olmak için seçili diller için olan &Qt; çevirilerinin de yapılmış olması gerekir.</para
 ></note>
 
 
 <para
->Her seçim çubuğunda, ayarların nasıl göründüğüne ve hangi ölçü birimlerinin kullanıldığına dair örnekler görebilirsiniz. Sayılara ek olarak, para birimi değerlerinin, tarihlerin ve saatlerin uzun ve kısa biçimde nasıl görüntülendiğini görebilirsiniz. Ayarlardan herhangi birini değiştirdiğinizde, önizleme, siz uygulamadan önce değişikliklerin etkilerini gösterir. </para>
+>Her seçim çubuğunda, her bir ayarın nasıl göründüğüne ve hangi ölçü birimlerinin kullanıldığına dair örnekler görebilirsiniz. Sayılara ek olarak, para birimi değerlerinin, tarihlerin ve saatlerin uzun ve kısa biçimde nasıl görüntülendiğini görebilirsiniz. Ayarlardan herhangi birini değiştirdiğinizde, önizleme, siz uygulamadan önce değişikliklerin etkilerini gösterir. </para>
 
 <para
 >Dil alt sayfasında <guilabel
->Daha Fazla Ekle...</guilabel
+>Daha Fazla Ekle…</guilabel
 > düğmesine tıklamak ilk önce geçerli seçili dili ve sonrasında kullanılabilir diğer dillerin bir listesini gösterir. Eğer seçim <quote
 >Yapılandırılmış Dil Yok</quote
 > gösteriyorsa bir ülke seçmediğinizi ve sistemin öntanımlı dil değerlerine geri döndüğünü gösterir. Bu genelde C’dir. Kullanmak istediğiniz dil bu listede yoksa sisteminiz için olan normal yollarla bunu kurmalısınız. </para>

@@ -35,7 +35,7 @@
 </authorgroup>
 
 <date
->2021-04-09</date>
+>2021‒04‒09</date>
 <releaseinfo
 >Plasma 5.20</releaseinfo>
 
@@ -50,7 +50,7 @@
 </articleinfo>
 
 <para
->&plasma;, birkaç boyutta tam simge kümeleri ile birlikte gelir. Bu simgeler, &plasma;'nın her yerinde kullanılırlar: Masaüstü, panel, &dolphin; dosya yöneticisi, her bir &plasma; uygulamasının araç çubuklarında vb. Simgeler denetim modülü, &plasma;'nın simgeleri işleme yolunu özelleştirmek için esnek yordamlar sunar.</para>
+>&plasma;, birkaç boyutta tam simge kümeleri ile birlikte gelir. Bu simgeler, &plasma;’nın her yerinde kullanılırlar: Masaüstü, panel, &dolphin; dosya yöneticisi, her bir &plasma; uygulamasının araç çubuklarında vb. Simgeler denetim modülü, &plasma;’nın simgeleri işleme yolunu özelleştirmek için esnek yordamlar sunar.</para>
 
 <para>
 <screenshot>
@@ -119,7 +119,7 @@
 ></term>
 <listitem>
 <para
->Bileşenlerden birini seçin ve ilgili boyuta uyarlamak için kaydırıcıyı kullanın. </para>
+>Bileşenlerden birini seçin ve ilgili boyuta uyarlamak için sürgüyü kullanın. </para>
 <para>
 <screenshot>
 <screeninfo
@@ -140,7 +140,7 @@
 <varlistentry
 ><term
 ><guilabel
->Yeni Simgeler Al...</guilabel
+>Yeni Simgeler Al…</guilabel
 ></term>
 <listitem>
 <para
@@ -148,7 +148,7 @@
 >Kur</guibutton
 > seçeneğine tıklamak, seçilen simge temasını kurar ve Kur ekranını <guibutton
 >Kapat</guibutton
->'tıktan sonra yeni temayı hemen kullanabilirsiniz. </para>
+>’tıktan sonra yeni temayı hemen kullanabilirsiniz. </para>
 <para>
 <screenshot>
 <screeninfo
@@ -169,7 +169,7 @@
 <varlistentry
 ><term
 ><guilabel
->Dosyadan Kur...</guilabel
+>Dosyadan Kur…</guilabel
 ></term>
 <listitem>
 <para

@@ -29,7 +29,7 @@
 </authorgroup>
 
 <date
->2021-04-05</date>
+>2021‒04‒05</date>
 <releaseinfo
 >&plasma; 5.20</releaseinfo>
 
@@ -52,7 +52,7 @@
 >Otomatik Başlatma Yöneticisi</title>
 
 <para
->Bu modül, kişisel &plasma;'nız ile hangi programların başlatılacağını yönetmek için bir yapılandırma aracıdır. Programları veya betikleri eklemenize izin verir, böylece &plasma; oturumunuz başlatılırken veya kapatılırken kendiliğinden çalıştırılr ve onları ayrıca yönetebilirsiniz.</para>
+>Bu modül, kişisel &plasma;’nız ile hangi programların başlatılacağını yönetmek için bir yapılandırma aracıdır. Programları veya betikleri eklemenize izin verir, böylece &plasma; oturumunuz başlatılırken veya kapatılırken kendiliğinden çalıştırılır ve onları ayrıca yönetebilirsiniz.</para>
 
 <note
 ><para
@@ -79,7 +79,7 @@
 ><para
 ><filename class="directory"
 >autostart</filename
-> klasörünüzün konumunu, &systemsettings;'nın <guilabel
+> klasörünüzün konumunu, &systemsettings;’nın <guilabel
 >Kişiselleştirme</guilabel
 >kategorisinde <menuchoice
 ><guimenu
@@ -227,7 +227,7 @@
 >Eylemler</title>
 <para
 >Altta, eklemek istediğiniz öge türünü seçmek için birleştirilmiş <guibutton
->Ekle...</guibutton
+>Ekle…</guibutton
 > düğmesi vardır. Programlar ve oturum açma veya oturum kapatma betikleri ekleyebilirsiniz. </para>
 
 <variablelist>
@@ -242,7 +242,7 @@
 >Uygulama Seç</guilabel
 > iletişim kutusu açılır ve hangi programı başlatmak istediğinizi seçmenize olanak tanır. Programı seçtikten sonra, <guibutton
 >Tamam</guibutton
->'a tıklayarak bu programa ait özellikleri görebilirsiniz. </para>
+>’a tıklayarak bu programa ait özellikleri görebilirsiniz. </para>
 <para
 >Bu, programın <filename class="extension"
 >.desktop</filename
@@ -255,7 +255,7 @@
 <varlistentry
 ><term
 ><guimenuitem
->Oturum Açma Betiği Ekle...</guimenuitem
+>Oturum Açma Betiği Ekle…</guimenuitem
 ></term>
 <listitem>
 <para
@@ -269,7 +269,7 @@
 <varlistentry
 ><term
 ><guimenuitem
->Oturum Kapatma Betiği Ekle...</guimenuitem
+>Oturum Kapatma Betiği Ekle…</guimenuitem
 ></term>
 <listitem>
 <para

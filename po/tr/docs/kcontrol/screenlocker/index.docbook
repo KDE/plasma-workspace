@@ -31,7 +31,7 @@
 </authorgroup>
 <!--FIXME code in plasma/kscreenlocker - docbook in plasma/plasma-workspace -->
 <date
->2020-07-02</date>
+>2020‒07‒02</date>
 <releaseinfo
 >Plasma 5.20</releaseinfo>
 
@@ -86,7 +86,7 @@
 >Yapılandır</guilabel
 > düğmesine tıklayın. Sonrasında, <guilabel
 >Duvar kağıdı türü</guilabel
->'nü yapılandırabilirsiniz.</para>
+>’nü yapılandırabilirsiniz.</para>
 
 <para
 >Duvar kağıdı türü olarak <guilabel
@@ -94,6 +94,6 @@
 > seçebilirsiniz.</para>
 
 <para
->Alternatif olarak, tek bir görsel veya bir klasördeki görsellerle bir slayt gösterisi kullanın veya internetten yeni duvar kağıtları yükleyin.</para>
+>Alternatif olarak, tek bir görsel veya bir klasördeki görsellerle bir slayt gösterisi kullanın veya internetten yeni duvar kâğıtları yükleyin.</para>
 
 </article>
