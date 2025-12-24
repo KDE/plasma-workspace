@@ -2,20 +2,22 @@
 # Copyright (C) 2009 This_file_is_part_of_KDE
 # This file is distributed under the same license as the plasma_containmentactions_switchwindow package.
 # Kevin Scannell <kscanne@gmail.com>, 2009.
+# SPDX-FileCopyrightText: 2025 Charlotte <altronic25@protonmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_containmentactions_switchwindow\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 14:42+0000\n"
-"PO-Revision-Date: 2009-12-24 06:59-0500\n"
-"Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
-"Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
+"PO-Revision-Date: 2025-12-24 01:22+0000\n"
+"Last-Translator: Charlotte <altronic25@protonmail.com>\n"
+"Language-Team: Irish\n"
 "Language: ga\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #. i18n: ectx: property (text), widget (QRadioButton, flatButton)
 #: config.ui:16
@@ -36,22 +38,19 @@ msgid "Display only the current desktop's windows"
 msgstr "Ná taispeáin ach na fuinneoga ar an deasc reatha"
 
 #: switch.cpp:75
-#, fuzzy, kde-format
-#| msgid "Configure Switch Window Plugin"
+#, kde-format
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "Configure Switch Window Plugin"
 msgstr "Cumraigh an Breiseán 'Athraigh Fuinneog'"
 
 #: switch.cpp:155
-#, fuzzy, kde-format
-#| msgid "Windows"
+#, kde-format
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "Windows"
 msgstr "Fuinneoga"
 
 #: switch.cpp:179 switch.cpp:200 switch.cpp:202
-#, fuzzy, kde-format
-#| msgid "All Desktops"
+#, kde-format
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "All Desktops"
 msgstr "Gach Deasc"

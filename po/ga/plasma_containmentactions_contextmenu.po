@@ -2,45 +2,45 @@
 # Copyright (C) 2009 This_file_is_part_of_KDE
 # This file is distributed under the same license as the plasma_containmentactions_contextmenu package.
 # Kevin Scannell <kscanne@gmail.com>, 2009.
+# SPDX-FileCopyrightText: 2025 Charlotte <altronic25@protonmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_containmentactions_contextmenu\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 14:42+0000\n"
-"PO-Revision-Date: 2009-12-24 06:59-0500\n"
-"Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
-"Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
+"PO-Revision-Date: 2025-12-24 01:29+0000\n"
+"Last-Translator: Charlotte <altronic25@protonmail.com>\n"
+"Language-Team: Irish\n"
 "Language: ga\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #: menu.cpp:109
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Show KRunner"
-msgstr ""
+msgstr "Taispeáin KRunner"
 
 #: menu.cpp:114
 #, kde-format
 msgid "Open Terminal"
-msgstr ""
+msgstr "Oscail Teirminéal"
 
 #: menu.cpp:118
-#, fuzzy, kde-format
-#| msgid "Lock Screen"
+#, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Lock Screen"
 msgstr "Cuir an Scáileán Faoi Ghlas"
 
 #: menu.cpp:127
-#, fuzzy, kde-format
-#| msgid "Lock Screen"
+#, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Show Logout Screen"
-msgstr "Cuir an Scáileán Faoi Ghlas"
+msgstr "Taispeáin an Scáileán Logála Isteach"
 
 #: menu.cpp:132
 #, kde-format
@@ -70,8 +70,7 @@ msgid "Wallpaper Actions"
 msgstr "Gníomhartha Cúlbhrait"
 
 #: menu.cpp:297
-#, fuzzy, kde-format
-#| msgid "[Separator]"
+#, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Separator]"
 msgstr "[Deighilteoir]"
