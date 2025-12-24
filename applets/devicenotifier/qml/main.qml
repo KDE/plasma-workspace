@@ -110,9 +110,6 @@ PlasmoidItem {
     }
 
     Component.onCompleted: {
-        if (devicenotifier.deviceCount === 0) {
-            Plasmoid.status = PlasmaCore.Types.PassiveStatus;
-        }
         Plasmoid.setInternalAction("configure", configureAction);
     }
 
