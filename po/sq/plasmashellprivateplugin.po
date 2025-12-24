@@ -1,0 +1,438 @@
+# Copyright (C) 2025 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# SPDX-FileCopyrightText: 2025 Agron Selimaj <as9902613@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"PO-Revision-Date: 2025-12-22 21:57-0500\n"
+"Last-Translator: Agron Selimaj <as9902613@gmail.com>\n"
+"Language-Team: sq\n"
+"Language: sq\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 25.12.0\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "KDE Shqip, Agron Selimaj"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "kde-i18n-sq@kde.org,as9902613@gmail.com"
+
+#: batterycontrol/batteriesnamesmonitor_p.cpp:45
+#, kde-format
+msgctxt "Placeholder is the battery number"
+msgid "Battery %1"
+msgstr "Bateri %1"
+
+#: batterycontrol/batteriesnamesmonitor_p.cpp:47
+#, kde-format
+msgid "Battery"
+msgstr "Bateri"
+
+#: calendar/eventdatadecorator.cpp:50
+#, kde-format
+msgctxt "Agenda listview section title"
+msgid "Holidays"
+msgstr "Pushimet"
+
+#: calendar/eventdatadecorator.cpp:52
+#, kde-format
+msgctxt "Agenda listview section title"
+msgid "Events"
+msgstr "Ngjarjet"
+
+#: calendar/eventdatadecorator.cpp:54
+#, kde-format
+msgctxt "Agenda listview section title"
+msgid "Todo"
+msgstr "Për-të-bërë"
+
+#: calendar/eventdatadecorator.cpp:56
+#, kde-format
+msgctxt "Means 'Other calendar items'"
+msgid "Other"
+msgstr "Të Tjera"
+
+#: calendar/qml/DayDelegate.qml:97
+#, kde-format
+msgid "%1 event"
+msgid_plural "%1 events"
+msgstr[0] "%1 ngjarje"
+msgstr[1] "%1 Ngjarjet"
+
+#: calendar/qml/DayDelegate.qml:98
+#, kde-format
+msgid "No events"
+msgstr "Nuk ka ngjarje"
+
+#: calendar/qml/MonthViewHeader.qml:74
+#, kde-format
+msgctxt "Format: month year"
+msgid "%1 %2"
+msgstr "%1 %2"
+
+#: calendar/qml/MonthViewHeader.qml:131
+#, kde-format
+msgid "Days"
+msgstr "Ditët"
+
+#: calendar/qml/MonthViewHeader.qml:137
+#, kde-format
+msgid "Months"
+msgstr "Muajt"
+
+#: calendar/qml/MonthViewHeader.qml:143
+#, kde-format
+msgid "Years"
+msgstr "Vitet"
+
+#: calendar/qml/MonthViewHeader.qml:181
+#, kde-format
+msgid "Previous Month"
+msgstr "Muaji i mëparshëm"
+
+#: calendar/qml/MonthViewHeader.qml:183
+#, kde-format
+msgid "Previous Year"
+msgstr "Viti i mëparshëm"
+
+#: calendar/qml/MonthViewHeader.qml:185
+#, kde-format
+msgid "Previous Decade"
+msgstr "Dekada e Mëparshme"
+
+#: calendar/qml/MonthViewHeader.qml:202
+#, kde-format
+msgctxt "Reset calendar to today"
+msgid "Today"
+msgstr "Sot"
+
+#: calendar/qml/MonthViewHeader.qml:203
+#, kde-format
+msgid "Reset calendar to today"
+msgstr "Rivendos kalendarin në ditën e sotme"
+
+#: calendar/qml/MonthViewHeader.qml:214
+#, kde-format
+msgid "Next Month"
+msgstr "Muaji i ardhshëm"
+
+#: calendar/qml/MonthViewHeader.qml:216
+#, kde-format
+msgid "Next Year"
+msgstr "Viti i ardhshëm"
+
+#: calendar/qml/MonthViewHeader.qml:218
+#, kde-format
+msgid "Next Decade"
+msgstr "Dekada e Ardhshme"
+
+#: calendar/qml/MonthViewHeader.qml:272
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Keep Open"
+msgstr "Mbaje të hapur"
+
+#: containmentlayoutmanager/qml/BasicAppletContainer.qml:285
+#, kde-format
+msgid "Configure…"
+msgstr "Konfiguro…"
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:10
+#, kde-format
+msgid "Screen lock enabled"
+msgstr "Dryri i ekranit është i akvizuar"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:11
+#, kde-format
+msgid "Sets whether the screen will be locked after the specified time."
+msgstr "Vendos nëse ekrani do të kyçet pas kohës së specifikuar."
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:16
+#, kde-format
+msgid "Screen saver timeout"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:17
+#, kde-format
+msgid "Sets the minutes after which the screen is locked."
+msgstr "Cakton minutat pas të cilave ekrani kyçet."
+
+#: sessionsprivate/sessionsmodel.cpp:255 sessionsprivate/sessionsmodel.cpp:259
+#, kde-format
+msgid "New Session"
+msgstr "Seancë e Re"
+
+#: shellprivate/kcategorizeditemsviewmodels.cpp:66
+#, kde-format
+msgid "Filters"
+msgstr "Filtra"
+
+#: shellprivate/plasmaappletitemmodel.cpp:199
+#, kde-format
+msgid ""
+"This Widget was written for an unknown older version of Plasma and is not "
+"compatible with Plasma %1. Please contact the widget's author for an updated "
+"version."
+msgstr ""
+
+#: shellprivate/plasmaappletitemmodel.cpp:203
+#, kde-format
+msgid ""
+"This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
+"Please contact the widget's author for an updated version."
+msgstr ""
+
+#: shellprivate/plasmaappletitemmodel.cpp:207
+#, kde-format
+msgid ""
+"This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
+"Please update Plasma in order to use the widget."
+msgstr ""
+
+#: shellprivate/plasmaappletitemmodel.cpp:212
+#, kde-format
+msgid ""
+"This Widget was written for Plasma %1 and is not compatible with the latest "
+"version of Plasma. Please update Plasma in order to use the widget."
+msgstr ""
+
+#: shellprivate/widgetexplorer.cpp:110
+msgctxt "applet category"
+msgid "Accessibility"
+msgstr "Çasshmëria"
+
+#: shellprivate/widgetexplorer.cpp:111
+msgctxt "applet category"
+msgid "Application Launchers"
+msgstr "Egzekutuesit e Programeve"
+
+#: shellprivate/widgetexplorer.cpp:112
+msgctxt "applet category"
+msgid "Astronomy"
+msgstr "Astronomi"
+
+#: shellprivate/widgetexplorer.cpp:113
+msgctxt "applet category"
+msgid "Date and Time"
+msgstr "Data dhe Ora"
+
+#: shellprivate/widgetexplorer.cpp:114
+msgctxt "applet category"
+msgid "Development Tools"
+msgstr "Mjetet e Programimit"
+
+#: shellprivate/widgetexplorer.cpp:115
+msgctxt "applet category"
+msgid "Education"
+msgstr "Shkollim"
+
+#: shellprivate/widgetexplorer.cpp:116
+msgctxt "applet category"
+msgid "Environment and Weather"
+msgstr "Mjedisi dhe Moti"
+
+#: shellprivate/widgetexplorer.cpp:117
+msgctxt "applet category"
+msgid "Examples"
+msgstr "Shembuj"
+
+#: shellprivate/widgetexplorer.cpp:118
+msgctxt "applet category"
+msgid "File System"
+msgstr "Sistemi i Skedave"
+
+#: shellprivate/widgetexplorer.cpp:119
+msgctxt "applet category"
+msgid "Fun and Games"
+msgstr "Argëtim dhe Lojëra"
+
+#: shellprivate/widgetexplorer.cpp:120
+msgctxt "applet category"
+msgid "Graphics"
+msgstr "Grafikët"
+
+#: shellprivate/widgetexplorer.cpp:121
+msgctxt "applet category"
+msgid "Language"
+msgstr "Gjuha"
+
+#: shellprivate/widgetexplorer.cpp:122
+msgctxt "applet category"
+msgid "Mapping"
+msgstr "Shoqërim të vlerave"
+
+#: shellprivate/widgetexplorer.cpp:123
+msgctxt "applet category"
+msgid "Miscellaneous"
+msgstr "Të Ndryshme"
+
+#: shellprivate/widgetexplorer.cpp:124
+msgctxt "applet category"
+msgid "Multimedia"
+msgstr ""
+
+#: shellprivate/widgetexplorer.cpp:125
+msgctxt "applet category"
+msgid "Online Services"
+msgstr "Shërbimet në Rrjet"
+
+#: shellprivate/widgetexplorer.cpp:126
+msgctxt "applet category"
+msgid "Personal Information"
+msgstr "Informacione Personale"
+
+#: shellprivate/widgetexplorer.cpp:127
+msgctxt "applet category"
+msgid "Productivity"
+msgstr "Produktivitet"
+
+#: shellprivate/widgetexplorer.cpp:128
+msgctxt "applet category"
+msgid "System Information"
+msgstr "Informacionet e Sistemit"
+
+#: shellprivate/widgetexplorer.cpp:129
+msgctxt "applet category"
+msgid "Utilities"
+msgstr "Veglat"
+
+#: shellprivate/widgetexplorer.cpp:130
+msgctxt "applet category"
+msgid "Windows and Tasks"
+msgstr "Dritaret dhe Detyrat"
+
+#: shellprivate/widgetexplorer.cpp:131
+msgctxt "applet category"
+msgid "Clipboard"
+msgstr "Kujtesë e përkohshme"
+
+#: shellprivate/widgetexplorer.cpp:132
+msgctxt "applet category"
+msgid "Tasks"
+msgstr "Detyrat"
+
+#: shellprivate/widgetexplorer.cpp:148
+#, kde-format
+msgid "All Widgets"
+msgstr "Të gjitha elementet e ndërveprimit"
+
+#: shellprivate/widgetexplorer.cpp:152
+#, kde-format
+msgid "Running"
+msgstr "Në ekzekutim"
+
+#: shellprivate/widgetexplorer.cpp:158
+#, kde-format
+msgctxt ""
+"@item:inmenu used in the widget filter. Filter widgets that can be un-"
+"installed from the system, which are usually installed by the user to a "
+"local place."
+msgid "User-installed"
+msgstr "Të instaluara nga Përdoruesi/ja"
+
+#: shellprivate/widgetexplorer.cpp:162
+#, kde-format
+msgctxt ""
+"@item:inmenu used in the widget filter. Filter widgets that can were "
+"recently installed."
+msgid "Recently installed"
+msgstr "Të Instaluara Kohët e Fundit"
+
+#: shellprivate/widgetexplorer.cpp:166
+#, kde-format
+msgid "Categories:"
+msgstr "Kategoritë:"
+
+#: shellprivate/widgetexplorer.cpp:236
+#, kde-format
+msgid "Download New Plasma Widgets"
+msgstr "Shkarko Elemente të Reja Ndërveprimi"
+
+#: shellprivate/widgetexplorer.cpp:245
+#, kde-format
+msgid "Install Widget From Local File…"
+msgstr "Instalo Elemente Ndërveprimi nga Skeda Lokale…"
+
+#: shellprivate/widgetexplorer.cpp:484
+#, kde-format
+msgctxt "@title:window"
+msgid "Get New Widgets"
+msgstr "Merr elemente të reja ndërveprimi"
+
+#: shellprivate/widgetexplorer.cpp:503
+#, kde-format
+msgid "Select Plasmoid File"
+msgstr "Përzgjidh Skedën Plasmoide"
+
+#: shellprivate/widgetexplorer.cpp:519
+#, kde-format
+msgctxt "%1 is the name of an applet, %2 is an error message"
+msgid "Installing the package %1 failed: %2."
+msgstr "Duke Instaluar paketën %1 dështoi: %2."
+
+#: shellprivate/widgetexplorer.cpp:520
+#, kde-format
+msgid "Installation Failure"
+msgstr "Dështim i Instalimit"
+
+#: timezoneselector/TimezoneSelector.qml:106
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The currently selected time zone is not available for visualization on this "
+"map"
+msgstr ""
+
+#: timezoneselector/TimezoneSelector.qml:196
+#, kde-format
+msgctxt "@action:button"
+msgid "Zoom in"
+msgstr "Zmadho"
+
+#: timezoneselector/TimezoneSelector.qml:212
+#, kde-format
+msgctxt "@action:button"
+msgid "Zoom out"
+msgstr "Zvogëlo"
+
+#: timezoneselector/TimezoneSelector.qml:241
+#, kde-format
+msgctxt "@label:listbox In the context of time zone selection"
+msgid "Region:"
+msgstr "Rajoni:"
+
+#: timezoneselector/TimezoneSelector.qml:248
+#, kde-format
+msgctxt "Placeholder for empty time zone combobox selector"
+msgid "Choose…"
+msgstr "Zgjidhni…"
+
+#: timezoneselector/TimezoneSelector.qml:252
+#, kde-format
+msgid "Timezone region selector"
+msgstr ""
+
+#: timezoneselector/TimezoneSelector.qml:273
+#, kde-format
+msgctxt "@label:listbox In the context of time zone selection"
+msgid "Time zone:"
+msgstr ""
+
+#: timezoneselector/TimezoneSelector.qml:283
+#, kde-format
+msgid "Timezone location selector"
+msgstr ""
