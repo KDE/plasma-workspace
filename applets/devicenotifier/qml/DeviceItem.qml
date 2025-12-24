@@ -7,17 +7,16 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
+pragma ComponentBehavior: Bound
 
 import QtQuick
 import QtQuick.Controls as QQC2
-import QtQml.Models
 
-import org.kde.plasma.plasmoid
 import org.kde.plasma.extras as PlasmaExtras
 import org.kde.plasma.components as PlasmaComponents3
 import org.kde.kirigami as Kirigami
+import plasma.applet.org.kde.plasma.devicenotifier
 
-import org.kde.kquickcontrolsaddons
 
 PlasmaExtras.ExpandableListItem {
     id: deviceItem
@@ -61,12 +60,6 @@ PlasmaExtras.ExpandableListItem {
     onDeviceStateChanged: {
         if (deviceItem.deviceState === DevicesStateMonitor.Unmounting) {
             unmountTimer.restart();
-        }
-    }
-
-    onHasMessageChanged: {
-        if (deviceItem.hasMessage) {
-            messageHighlight.highlight(this)
         }
     }
 
@@ -139,13 +132,13 @@ PlasmaExtras.ExpandableListItem {
 
     QQC2.Action {
         id: defaultAction
-        icon.name: deviceActions?.defaultActionIcon ?? ""
-        text: deviceActions?.defaultActionText ?? ""
+        icon.name: deviceItem.deviceActions?.defaultActionIcon ?? ""
+        text: deviceItem.deviceActions?.defaultActionText ?? ""
         onTriggered: {
             if (deviceItem.deviceMounted) {
                 unmountTimer.restart();
             }
-            deviceActions.actionTriggered(deviceActions.defaultActionName)
+            deviceItem.deviceActions.actionTriggered(deviceItem.deviceActions.defaultActionName)
         }
     }
 
@@ -166,25 +159,25 @@ PlasmaExtras.ExpandableListItem {
 
             delegate: PlasmaComponents3.ToolButton
             {
+                required property var model //TODO rename model roles and split
+
                 width: parent.width
                 text: model.Text
                 icon.name: model.Icon
 
-                KeyNavigation.up: currentIndex > 0 ? actionRepeater.itemAtIndex(currentIndex - 1) : deviceItem
+                KeyNavigation.up: actionRepeater.currentIndex > 0 ? actionRepeater.itemAtIndex(actionRepeater.currentIndex - 1) : deviceItem
                 KeyNavigation.down: {
-                    if (currentIndex <= actionRepeater.count - 1) {
-                        return actionRepeater.itemAtIndex(currentIndex + 1);
+                    if (actionRepeater.currentIndex <= actionRepeater.count - 1) {
+                        return actionRepeater.itemAtIndex(actionRepeater.currentIndex + 1);
                     } else {
                         return actionRepeater.itemAtIndex(0);
                     }
                 }
 
                 onClicked: {
-                    deviceActions.actionTriggered(model.Name)
+                    deviceItem.deviceActions.actionTriggered(model.Name)
                 }
-
             }
         }
-
     }
 }

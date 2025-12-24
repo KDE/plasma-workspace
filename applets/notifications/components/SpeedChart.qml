@@ -4,10 +4,10 @@
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
+pragma ComponentBehavior: Bound
 
 import QtQuick
 import QtQml
-import QtQuick.Controls
 import QtQuick.Layouts
 
 import org.kde.kirigami as Kirigami
@@ -169,19 +169,24 @@ Item {
 
                 spacing: Kirigami.Units.largeSpacing
                 delegate: RowLayout {
+                    id: legendDelegate
+
+                    required property string name
+                    required property string color
+
                     spacing: Kirigami.Units.smallSpacing
 
                     ChartsControls.LegendLayout.maximumWidth: implicitWidth
 
                     Rectangle {
-                        color: model.color
+                        color: legendDelegate.color
                         width: Kirigami.Units.smallSpacing
                         height: legendLabel.height
                     }
                     PlasmaComponents3.Label {
                         id: legendLabel
                         font: Kirigami.Theme.smallFont
-                        text: model.name
+                        text: legendDelegate.name
                     }
                     PlasmaComponents3.Label {
                         font: Kirigami.Theme.smallFont

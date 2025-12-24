@@ -4,6 +4,7 @@
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
+pragma ComponentBehavior: Bound
 
 import QtQuick
 import QtQuick.Window
@@ -35,7 +36,7 @@ ColumnLayout {
 
     SpeedChart {
         id: speedChart
-        width: jobItem.width
+        Layout.fillWidth: true
         modelInterface: jobItem.modelInterface
         expanded: expandButton.checked
     }
@@ -97,7 +98,7 @@ ColumnLayout {
     Loader {
         Layout.fillWidth: true
         Layout.preferredWidth: Notifications.Globals.popupWidth
-        Layout.preferredHeight: item ? item.implicitHeight : 0
+        Layout.preferredHeight: item ? (item as Item).implicitHeight : 0
         active: expandButton.checked
         // Loader doesn't reset its height when unloaded, just hide it altogether
         visible: active
@@ -135,7 +136,7 @@ ColumnLayout {
 
             PlasmaComponents3.ToolTip {
                 text: parent.Accessible.name
-                enabled: parent.text === ""
+                enabled: otherFileActionsButton.text === ""
             }
 
             Notifications.FileMenu {
@@ -156,21 +157,19 @@ ColumnLayout {
                 State {
                     when: jobItem.modelInterface.jobDetails && jobItem.modelInterface.jobDetails.totalFiles !== 1
                     PropertyChanges {
-                        target: openButton
-                        text: i18nd("plasma_applet_org.kde.plasma.notifications", "Open Containing Folder")
-                        icon.name: "folder-open-symbolic"
+                        openButton.text: i18nd("plasma_applet_org.kde.plasma.notifications", "Open Containing Folder")
+                        openButton.icon.name: "folder-open-symbolic"
                     }
                 },
                 State {
                     when: fileInfo.openAction !== null
                     PropertyChanges {
-                        target: openButton
-                        text: fileInfo.openAction.text
-                        icon.name: fileInfo.openActionIconName
-                        visible: fileInfo.openAction.enabled
-                        onClicked: {
+                        openButton.text: fileInfo.openAction.text
+                        openButton.icon.name: fileInfo.openActionIconName
+                        openButton.visible: fileInfo.openAction.enabled
+                        openButton.onClicked: {
                             fileInfo.openAction.trigger();
-                            modelInterface.fileActionInvoked(fileInfo.openAction);
+                            jobItem.modelInterface.fileActionInvoked(fileInfo.openAction);
                         }
                     }
                 }
@@ -182,23 +181,19 @@ ColumnLayout {
         State {
             when: jobItem.modelInterface.jobState === NotificationManager.Notifications.JobStateSuspended
             PropertyChanges {
-                target: speedChart
-                enabled: false
+                speedChart.enabled: false
             }
         },
         State {
             when: jobItem.modelInterface.jobState === NotificationManager.Notifications.JobStateStopped
             PropertyChanges {
-                target: speedChart
-                visible: false
+                speedChart.visible: false
             }
             PropertyChanges {
-                target: jobActionsRow
-                visible: false
+                jobActionsRow.visible: false
             }
             PropertyChanges {
-                target: expandButton
-                checked: false
+                expandButton.checked: false
             }
         }
     ]

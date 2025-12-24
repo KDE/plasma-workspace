@@ -11,6 +11,7 @@ import org.kde.plasma.plasmoid
 
 //This object contains state of the SystemTray, mainly related to the 'expanded' state
 QtObject {
+    id: systemTrayState
     //true if System Tray is 'expanded'. It may be when:
     // - there is an active applet or
     // - 'Status and Notification' with hidden items is shown
@@ -80,26 +81,26 @@ QtObject {
         target: Plasmoid
         //emitted when activation is requested, for example by using a global keyboard shortcut
         function onActivated() {
-            acceptExpandedChange = true
+            systemTrayState.acceptExpandedChange = true
         }
     }
 
     readonly property Connections rootConnections: Connections {
         function onExpandedChanged() {
-            if (acceptExpandedChange) {
-                expanded = root.expanded
+            if (systemTrayState.acceptExpandedChange) {
+                systemTrayState.expanded = root.expanded
             } else {
-                root.expanded = expanded
+                root.expanded = systemTrayState.expanded
             }
         }
     }
 
     readonly property Connections activeAppletConnections: Connections {
-        target: activeApplet && activeApplet
+        target: systemTrayState.activeApplet
 
         function onExpandedChanged() {
-            if (activeApplet && !activeApplet.expanded) {
-                expanded = false
+            if (systemTrayState.activeApplet && !systemTrayState.activeApplet.expanded) {
+                systemTrayState.expanded = false
             }
         }
     }

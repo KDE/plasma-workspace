@@ -18,7 +18,7 @@ BaseDelegate {
 
     body: bodyLabel
     icon: icon
-    footer: footerLoader.item
+    footer: footerLoader.item as Item
     columns: 3
 
     Item {

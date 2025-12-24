@@ -4,6 +4,7 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
+pragma ComponentBehavior: Bound
 
 import QtQuick
 import QtQuick.Layouts
@@ -52,13 +53,13 @@ Item {
 
             PlasmaComponents.ToolButton {
                 id: backButton
-                visible: systemTrayState.activeApplet && systemTrayState.activeApplet.expanded && (hiddenLayout.itemCount > 0)
+                visible: systemTrayState.activeApplet && systemTrayState.activeApplet.expanded && (popup.hiddenLayout.itemCount > 0)
                 icon.name: mirrored ? "go-previous-symbolic-rtl" : "go-previous-symbolic"
 
                 display: PlasmaComponents.AbstractButton.IconOnly
                 text: i18nc("@action:button", "Go Back")
 
-                KeyNavigation.down: hiddenItemsView.visible ? hiddenLayout : container
+                KeyNavigation.down: hiddenItemsView.visible ? popup.hiddenLayout : container
 
                 onClicked: systemTrayState.setActiveApplet(null)
             }
@@ -80,24 +81,27 @@ Item {
                     if (actionsButton.applet === null) {
                         return [];
                     }
-                    return actionsButton.applet.plasmoid.contextualActions.filter(action => {
+                    return actionsButton.applet.Plasmoid.contextualActions.filter(action => {
                         return !action.isSeparator && action.priority === PlasmaCore.Action.HighPriority;
                     });
                 }
 
                 delegate: PlasmaComponents.ToolButton {
+                    id: actionButton
+                    required property int index
+                    required property PlasmaCore.Action modelData
                     // We cannot use `action` as it is already a QQuickAction property of the button
-                    property QtObject qAction: model.modelData
+                    property PlasmaCore.Action qAction: modelData
 
                     visible: qAction && qAction.visible
 
                     // NOTE: it needs an IconItem because QtQuickControls2 buttons cannot load QIcons as their icon
                     contentItem: Kirigami.Icon {
                         anchors.centerIn: parent
-                        active: parent.hovered
+                        active: actionButton.hovered
                         implicitWidth: Kirigami.Units.iconSizes.smallMedium
                         implicitHeight: implicitWidth
-                        source: parent.qAction ? parent.qAction.icon.name : ""
+                        source: actionButton.qAction ? actionButton.qAction.icon.name : ""
                     }
 
                     enabled: qAction && qAction.enabled
@@ -112,7 +116,7 @@ Item {
                                                             actionsButton.visible ? actionsButton : actionsButton.KeyNavigation.right
 
                     PlasmaComponents.ToolTip {
-                        text: parent.text
+                        text: actionButton.text
                     }
 
                     onClicked: {
@@ -130,7 +134,7 @@ Item {
                 checked: visibleActions > 1 ? configMenu.status !== PlasmaExtras.Menu.Closed : singleAction && singleAction.checked
                 property QtObject applet: systemTrayState.activeApplet || root
                 property int visibleActions: menuItemFactory.count
-                property QtObject singleAction: visibleActions === 1 && menuItemFactory.object ? menuItemFactory.object.action : null
+                property PlasmaCore.Action singleAction: visibleActions === 1 && menuItemFactory.object ? menuItemFactory.object.action : null
 
                 icon.name: "application-menu"
                 checkable: visibleActions > 1 || (singleAction && singleAction.checkable)
@@ -169,7 +173,7 @@ Item {
                     }
                 }
                 PlasmaComponents.ToolTip {
-                    text: parent.text
+                    text: actionsButton.text
                 }
                 PlasmaExtras.Menu {
                     id: configMenu
@@ -204,6 +208,7 @@ Item {
                     }
                     delegate: PlasmaExtras.MenuItem {
                         id: menuItem
+                        required property PlasmaCore.Action modelData
                         action: modelData
                     }
                     onObjectAdded: (index, object) => {

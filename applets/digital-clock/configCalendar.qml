@@ -66,7 +66,7 @@ KCMUtils.ScrollViewKCM {
             onActivated: index => {
                 cfg_firstDayOfWeek = model[index].day;
             }
-            currentIndex: model.findIndex(item => item.day === cfg_firstDayOfWeek)
+            currentIndex: model.findIndex(item => item.day === calendarPage.cfg_firstDayOfWeek)
         }
 
         Item {

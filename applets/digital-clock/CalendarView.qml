@@ -315,7 +315,7 @@ PlasmaExtras.Representation {
                                 Layout.fillHeight: true
 
                                 color: eventItem.modelData.eventColor
-                                width: 5
+                                implicitWidth: 5
                                 visible: eventItem.modelData.eventColor !== ""
                             }
 
@@ -512,7 +512,7 @@ PlasmaExtras.Representation {
 
                     Clock {
                         id: tzClock
-                        timeZone: modelData
+                        timeZone: listItem.modelData
                         trackSeconds: Plasmoid.configuration.showSeconds === 2 // Always
                     }
 

@@ -4,6 +4,7 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
+// should be pragma ComponentBehavior: Bound but this causes weird errors
 
 import QtQuick
 import QtQuick.Layouts
@@ -176,7 +177,7 @@ ContainmentItem {
             columnSpacing: 0
             anchors.fill: parent
 
-            flow: vertical ? GridLayout.TopToBottom : GridLayout.LeftToRight
+            flow: root.vertical ? GridLayout.TopToBottom : GridLayout.LeftToRight
 
             GridView {
                 id: tasksGrid
@@ -184,7 +185,7 @@ ContainmentItem {
                 Layout.alignment: Qt.AlignCenter
 
                 interactive: false //disable features we don't need
-                flow: vertical ? GridView.LeftToRight : GridView.TopToBottom
+                flow: root.vertical ? GridView.LeftToRight : GridView.TopToBottom
 
                 // The icon size to display when not using the auto-scaling setting
                 readonly property int smallIconSize: Kirigami.Units.iconSizes.smallMedium
@@ -299,8 +300,8 @@ ContainmentItem {
             floating: Plasmoid.location == PlasmaCore.Desktop
 
             removeBorderStrategy: Plasmoid.location === PlasmaCore.Types.Floating
-            ? PlasmaCore.AppletPopup.AtScreenEdges
-            : PlasmaCore.AppletPopup.AtScreenEdges | PlasmaCore.AppletPopup.AtPanelEdges
+                ? PlasmaCore.AppletPopup.AtScreenEdges
+                : PlasmaCore.AppletPopup.AtScreenEdges | PlasmaCore.AppletPopup.AtPanelEdges
 
 
             hideOnWindowDeactivate: !Plasmoid.configuration.pin
@@ -356,8 +357,7 @@ ContainmentItem {
                                 }
                             }
                             PropertyChanges {
-                                target: separator
-                                height: 1
+                                separator.height: 1
                             }
                         },
                         State {
@@ -371,8 +371,7 @@ ContainmentItem {
                                 }
                             }
                             PropertyChanges {
-                                target: separator
-                                width: 1
+                                separator.width: 1
                             }
                         },
                         State {
@@ -386,8 +385,7 @@ ContainmentItem {
                                 }
                             }
                             PropertyChanges {
-                                target: separator
-                                width: 1
+                                separator.width: 1
                             }
                         },
                         State {
@@ -401,8 +399,7 @@ ContainmentItem {
                                 }
                             }
                             PropertyChanges {
-                                target: separator
-                                height: 1
+                                separator.height: 1
                             }
                         }
                     ]

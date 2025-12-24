@@ -443,7 +443,7 @@ PlasmaExtras.Representation {
                     Layout.fillWidth: true
                     z: 999
                     value: 0
-                    visible: canSeek
+                    visible: expandedRepresentation.canSeek
                     stepSize: 5000000 // 5s in microseconds.
 
                     KeyNavigation.backtab: playerSelector.currentItem
@@ -451,7 +451,7 @@ PlasmaExtras.Representation {
                     KeyNavigation.down: playPauseButton.enabled ? playPauseButton : (playPauseButton.KeyNavigation.left.enabled ? playPauseButton.KeyNavigation.left : playPauseButton.KeyNavigation.right)
 
                     onMoved: {
-                        if (!disablePositionUpdate) {
+                        if (!expandedRepresentation.disablePositionUpdate) {
                             // delay setting the position to avoid race conditions
                             queuedPositionUpdate.restart()
                             flashToolTipTimer.restart();
@@ -528,25 +528,25 @@ PlasmaExtras.Representation {
                         id: seekTimer
                         interval: 1000 / expandedRepresentation.rate
                         repeat: true
-                        running: root.isPlaying && root.expanded && !keyPressed && interval > 0 && seekSlider.to >= 1000000
+                        running: root.isPlaying && root.expanded && !expandedRepresentation.keyPressed && interval > 0 && seekSlider.to >= 1000000
                         onTriggered: {
                             // some players don't continuously update the seek slider position via mpris
                             // add one second; value in microseconds
                             if (!seekSlider.pressed) {
-                                disablePositionUpdate = true
+                                expandedRepresentation.disablePositionUpdate = true
                                 if (seekSlider.value == seekSlider.to) {
                                     mpris2Model.currentPlayer.updatePosition();
                                 } else {
                                     seekSlider.value += 1000000
                                 }
-                                disablePositionUpdate = false
+                                expandedRepresentation.disablePositionUpdate = false
                             }
                         }
                     }
                 }
 
                 RowLayout {
-                    visible: !canSeek
+                    visible: !expandedRepresentation.canSeek
 
                     Layout.fillWidth: true
                     Layout.preferredHeight: seekSlider.height

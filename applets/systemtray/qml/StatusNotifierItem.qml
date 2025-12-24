@@ -28,15 +28,15 @@ AbstractItem {
         anchors.fill: iconItem.parent
 
         source: {
-            if (model.status === PlasmaCore.Types.NeedsAttentionStatus) {
-                if (model.AttentionIcon) {
-                    return model.AttentionIcon
+            if (taskIcon.model.status === PlasmaCore.Types.NeedsAttentionStatus) {
+                if (taskIcon.model.AttentionIcon) {
+                    return taskIcon.model.AttentionIcon
                 }
-                if (model.AttentionIconName) {
-                    return model.AttentionIconName
+                if (taskIcon.model.AttentionIconName) {
+                    return taskIcon.model.AttentionIconName
                 }
             }
-            return model.Icon || model.IconName
+            return taskIcon.model.Icon || taskIcon.model.IconName
         }
         active: taskIcon.containsMouse
     }

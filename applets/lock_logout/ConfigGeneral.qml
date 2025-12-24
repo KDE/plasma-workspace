@@ -5,6 +5,7 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
+pragma ComponentBehavior: Bound
 
 import QtQuick
 import QtQuick.Layouts
@@ -51,6 +52,12 @@ KCM.ScrollViewKCM {
 
         delegate: Loader {
             id: delegateLoader
+
+            required property string enabledKey
+            required property string cfgKey
+            required property string icon
+            required property string text
+
             width: list.width
 
             sourceComponent: Kirigami.SwipeListItem {
@@ -83,31 +90,31 @@ KCM.ScrollViewKCM {
                                     order.push(model.configKey);
                                 }
                             }
-                            cfg_actionsOrder = order;
+                            root.cfg_actionsOrder = order;
                         }
                     }
 
                     QQC2.CheckBox {
-                        visible: (model.enabledKey ? session[model.enabledKey] : true)
-                        checked: root[model.cfgKey]
-                        onToggled: root[model.cfgKey] = checked
-                        enabled: (model.enabledKey ? session[model.enabledKey] : true) && (root.checkedOptions > 1 || !checked)
+                        visible: (delegateLoader.enabledKey ? session[delegateLoader.enabledKey] : true)
+                        checked: root[delegateLoader.cfgKey]
+                        onToggled: root[delegateLoader.cfgKey] = checked
+                        enabled: (delegateLoader.enabledKey ? session[delegateLoader.enabledKey] : true) && (root.checkedOptions > 1 || !checked)
                     }
 
                     Kirigami.Icon {
-                        source: model.icon
+                        source: delegateLoader.icon
                         Layout.preferredWidth: Kirigami.Units.iconSizes.small
                         Layout.preferredHeight: Kirigami.Units.iconSizes.small
                     }
 
                     QQC2.Label {
-                        text: model.text
+                        text: delegateLoader.text
                         Layout.fillWidth: true
                         elide: Text.ElideRight
                     }
 
                     QQC2.Label {
-                        visible: !((model.enabledKey ? session[model.enabledKey] : true) && (root.checkedOptions > 1 || !checked))
+                        visible: !((delegateLoader.enabledKey ? session[delegateLoader.enabledKey] : true) && (root.checkedOptions > 1 || !checked))
                         text: i18n("Unavailable")
                         color: Kirigami.Theme.disabledTextColor
                         Layout.fillWidth: true

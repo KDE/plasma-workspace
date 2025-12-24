@@ -10,6 +10,7 @@ import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCM
 
 KCM.SimpleKCM {
+    id: root
     property alias cfg_showWeekNumbers: showWeekNumbers.checked
     property string cfg_compactDisplay
 
@@ -32,14 +33,14 @@ KCM.SimpleKCM {
 
             text: i18nc("Show the number of the day (eg. 31) in the icon", "Show day of the month")
 
-            checked: cfg_compactDisplay == "d"
-            onCheckedChanged: if (checked) cfg_compactDisplay = "d"
+            checked: root.cfg_compactDisplay == "d"
+            onCheckedChanged: if (checked) root.cfg_compactDisplay = "d"
         }
         QtControls.RadioButton {
             text: i18nc("Show the week number (eg. 50) in the icon", "Show week number")
 
-            checked: cfg_compactDisplay == "w"
-            onCheckedChanged: if (checked) cfg_compactDisplay = "w"
+            checked: root.cfg_compactDisplay == "w"
+            onCheckedChanged: if (checked) root.cfg_compactDisplay = "w"
         }
     }
 }

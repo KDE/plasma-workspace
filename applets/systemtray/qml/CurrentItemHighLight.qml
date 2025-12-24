@@ -9,7 +9,6 @@ import QtQuick
 import org.kde.kirigami as Kirigami
 import org.kde.ksvg as KSvg
 import org.kde.plasma.core as PlasmaCore
-import org.kde.plasma.plasmoid
 
 KSvg.FrameSvgItem {
     id: currentItemHighLight
@@ -60,11 +59,11 @@ KSvg.FrameSvgItem {
         target: systemTrayState
 
         function onActiveAppletChanged() {
-            Qt.callLater(updateHighlightedItem);
+            Qt.callLater(currentItemHighLight.updateHighlightedItem);
         }
 
         function onExpandedChanged() {
-            Qt.callLater(updateHighlightedItem);
+            Qt.callLater(currentItemHighLight.updateHighlightedItem);
         }
     }
 
@@ -92,10 +91,10 @@ KSvg.FrameSvgItem {
 
     // update when scale of newly added tray item changes (check 'add' animation in GridView in main.qml)
     Connections {
-        target: !!highlightedItem && highlightedItem.parent ? highlightedItem.parent : null
+        target: !!currentItemHighLight.highlightedItem && currentItemHighLight.highlightedItem.parent ? currentItemHighLight.highlightedItem.parent : null
 
         function onScaleChanged() {
-            Qt.callLater(updateHighlightedItem);
+            Qt.callLater(currentItemHighLight.updateHighlightedItem);
         }
     }
 
@@ -143,7 +142,7 @@ KSvg.FrameSvgItem {
     }
     Behavior on x {
         id: xAnim
-        enabled: animationEnabled
+        enabled: currentItemHighLight.animationEnabled
         NumberAnimation {
             duration: Kirigami.Units.longDuration
             easing.type: Easing.InOutCubic
@@ -151,7 +150,7 @@ KSvg.FrameSvgItem {
     }
     Behavior on y {
         id: yAnim
-        enabled: animationEnabled
+        enabled: currentItemHighLight.animationEnabled
         NumberAnimation {
             duration: Kirigami.Units.longDuration
             easing.type: Easing.InOutCubic
@@ -159,7 +158,7 @@ KSvg.FrameSvgItem {
     }
     Behavior on width {
         id: widthAnim
-        enabled: animationEnabled
+        enabled: currentItemHighLight.animationEnabled
         NumberAnimation {
             duration: Kirigami.Units.longDuration
             easing.type: Easing.InOutCubic
@@ -167,7 +166,7 @@ KSvg.FrameSvgItem {
     }
     Behavior on height {
         id: heightAnim
-        enabled: animationEnabled
+        enabled: currentItemHighLight.animationEnabled
         NumberAnimation {
             duration: Kirigami.Units.longDuration
             easing.type: Easing.InOutCubic

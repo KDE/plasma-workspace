@@ -93,13 +93,13 @@ PlasmoidItem {
     compactRepresentation: Loader {
         id: conditionalLoader
 
-        property bool containsMouse: item?.containsMouse ?? false
-        Layout.minimumWidth: item.Layout.minimumWidth
-        Layout.minimumHeight: item.Layout.minimumHeight
-        Layout.preferredWidth: item.Layout.preferredWidth
-        Layout.preferredHeight: item.Layout.preferredHeight
-        Layout.maximumWidth: item.Layout.maximumWidth
-        Layout.maximumHeight: item.Layout.maximumHeight
+        property bool containsMouse: (item as MouseArea)?.containsMouse ?? false
+        Layout.minimumWidth: (item as Item)?.Layout.minimumWidth
+        Layout.minimumHeight: (item as Item)?.Layout.minimumHeight
+        Layout.preferredWidth: (item as Item)?.Layout.preferredWidth
+        Layout.preferredHeight: (item as Item)?.Layout.preferredHeight
+        Layout.maximumWidth: (item as Item)?.Layout.maximumWidth
+        Layout.maximumHeight: (item as Item)?.Layout.maximumHeight
 
         sourceComponent: !currentClock.valid ? noTimezoneComponent : digitalClockComponent
     }
@@ -110,8 +110,8 @@ PlasmoidItem {
             activeFocusOnTab: true
             hoverEnabled: true
 
-            Accessible.name: tooltipLoader.item.Accessible.name
-            Accessible.description: tooltipLoader.item.Accessible.description
+            Accessible.name: (tooltipLoader.item as Item)?.Accessible.name
+            Accessible.description: (tooltipLoader.item as Item)?.Accessible.description
         }
     }
 
@@ -123,10 +123,10 @@ PlasmoidItem {
     toolTipItem: Loader {
         id: tooltipLoader
 
-        Layout.minimumWidth: item ? item.implicitWidth : 0
-        Layout.maximumWidth: item ? item.implicitWidth : 0
-        Layout.minimumHeight: item ? item.implicitHeight : 0
-        Layout.maximumHeight: item ? item.implicitHeight : 0
+        Layout.minimumWidth: item ? (item as Tooltip).implicitWidth : 0
+        Layout.maximumWidth: item ? (item as Tooltip).implicitWidth : 0
+        Layout.minimumHeight: item ? (item as Tooltip).implicitHeight : 0
+        Layout.maximumHeight: item ? (item as Tooltip).implicitHeight : 0
 
         source: Qt.resolvedUrl("Tooltip.qml")
     }

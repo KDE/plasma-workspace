@@ -3,6 +3,7 @@
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
+pragma ComponentBehavior: Bound
 
 import QtQuick
 import QtQuick.Layouts
@@ -27,10 +28,12 @@ GridLayout {
         model: [1, 2]
 
         PlasmaExtras.DescriptiveLabel {
+            required property int index
+            required property int modelData
             Layout.column: 0
             Layout.row: index
             Layout.alignment: Qt.AlignTop | Qt.AlignRight
-            text: modelInterface.jobDetails["descriptionLabel" + modelData] && modelInterface.jobDetails["descriptionValue" + modelData]
+            text: detailsGrid.modelInterface.jobDetails["descriptionLabel" + modelData] && modelInterface.jobDetails["descriptionValue" + modelData]
                 ? i18ndc("plasma_applet_org.kde.plasma.notifications", "Row description, e.g. Source", "%1:", modelInterface.jobDetails["descriptionLabel" + modelData]) : ""
             font: Kirigami.Theme.smallFont
             textFormat: Text.PlainText
@@ -42,6 +45,8 @@ GridLayout {
         model: [1, 2]
 
         PlasmaExtras.DescriptiveLabel {
+            required property int index
+            required property int modelData
             id: descriptionValueLabel
             Layout.column: 1
             Layout.row: index
@@ -64,7 +69,7 @@ GridLayout {
             Component.onCompleted: bindText()
             function bindText() {
                 text = Qt.binding(function() {
-                    return modelInterface.jobDetails["descriptionValue" + modelData] || "";
+                    return detailsGrid.modelInterface.jobDetails["descriptionValue" + modelData] || "";
                 });
             }
 
@@ -91,12 +96,14 @@ GridLayout {
         model: ["Bytes", "Files", "Directories", "Items"]
 
         PlasmaExtras.DescriptiveLabel {
+            required property int index
+            required property string modelData
             Layout.column: 1
             Layout.row: 2 + index
             Layout.fillWidth: true
             text: {
-                let processed = modelInterface.jobDetails["processed" + modelData];
-                let total = modelInterface.jobDetails["total" + modelData];
+                let processed = detailsGrid.modelInterface.jobDetails["processed" + modelData];
+                let total = detailsGrid.modelInterface.jobDetails["total" + modelData];
 
                 if (processed > 0 || total > 1) {
                     // Format numbers to not display as exponential
@@ -145,10 +152,10 @@ GridLayout {
         Layout.column: 1
         Layout.row: 2 + 4
         Layout.fillWidth: true
-        text: modelInterface.jobDetails.speed > 0 ? i18ndc("plasma_applet_org.kde.plasma.notifications", "Bytes per second", "%1/s",
-                                           KCoreAddons.Format.formatByteSize(modelInterface.jobDetails.speed)) : ""
+        text: detailsGrid.modelInterface.jobDetails.speed > 0 ? i18ndc("plasma_applet_org.kde.plasma.notifications", "Bytes per second", "%1/s",
+            KCoreAddons.Format.formatByteSize(detailsGrid.modelInterface.jobDetails.speed)) : ""
         font: Kirigami.Theme.smallFont
         textFormat: Text.PlainText
-        visible: text !== "" && !(percentage > 0 && modelInterface.jobDetails.elapsedTime > 0) // SpeedChart should be visible then
+        visible: text !== "" && !(detailsGrid.modelInterface.percentage > 0 && detailsGrid.modelInterface.jobDetails.elapsedTime > 0) // SpeedChart should be visible then
     }
 }

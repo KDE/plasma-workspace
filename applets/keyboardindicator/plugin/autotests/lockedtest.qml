@@ -4,6 +4,7 @@
     SPDX-License-Identifier: MIT
 */
 
+import QtQuick
 import QtQuick.Controls as QQC
 import org.kde.plasma.private.keyboardindicator as KI
 

@@ -33,7 +33,7 @@ PlasmaCore.ToolTipArea {
     readonly property alias iconContainer: iconContainer
     readonly property int /*PlasmaCore.Types.ItemStatus*/ status: model.status || PlasmaCore.Types.UnknownStatus
     readonly property int /*PlasmaCore.Types.ItemStatus*/ effectiveStatus: model.effectiveStatus || PlasmaCore.Types.UnknownStatus
-        readonly property bool inHiddenLayout: effectiveStatus === PlasmaCore.Types.PassiveStatus
+    readonly property bool inHiddenLayout: effectiveStatus === PlasmaCore.Types.PassiveStatus
     readonly property bool inVisibleLayout: effectiveStatus === PlasmaCore.Types.ActiveStatus
 
     property bool effectivePressed: false
@@ -64,7 +64,7 @@ PlasmaCore.ToolTipArea {
         // This needs to be above applets when it's in the grid hidden area
         // so that it can receive hover events while the mouse is over an applet,
         // but below them on regular systray, so collapsing works
-        z: inHiddenLayout ? 1 : 0
+        z: abstractItem.inHiddenLayout ? 1 : 0
         anchors.fill: abstractItem
         hoverEnabled: true
         drag.filterChildren: true
@@ -74,13 +74,13 @@ PlasmaCore.ToolTipArea {
         // index in a scrollable view also changes the view position.
         // onEntered will change the index while the items are scrolling,
         // making it harder to scroll.
-        onPositionChanged: if (inHiddenLayout) {
-            root.hiddenLayout.currentIndex = index
+        onPositionChanged: if (abstractItem.inHiddenLayout) {
+            root.hiddenLayout.currentIndex = abstractItem.index
         }
         onClicked: mouse => { abstractItem.clicked(mouse) }
         onPressed: mouse => {
-            if (inHiddenLayout) {
-                root.hiddenLayout.currentIndex = index
+            if (abstractItem.inHiddenLayout) {
+                root.hiddenLayout.currentIndex = abstractItem.index
             }
             abstractItem.hideImmediately()
             abstractItem.pressed(mouse)
@@ -108,7 +108,7 @@ PlasmaCore.ToolTipArea {
             id: iconContainer
             scale: (abstractItem.effectivePressed || mouseArea.containsPress) ? 0.8 : 1
 
-            activeFocusOnTab: !inHiddenLayout
+            activeFocusOnTab: !abstractItem.inHiddenLayout
             focus: true // Required in HiddenItemsView so keyboard events can be forwarded to this item
             Accessible.name: abstractItem.text
             Accessible.description: abstractItem.subText
@@ -118,7 +118,7 @@ PlasmaCore.ToolTipArea {
             Behavior on scale {
                 ScaleAnimator {
                     duration: Kirigami.Units.longDuration
-                    easing.type: (effectivePressed || mouseArea.containsPress) ? Easing.OutCubic : Easing.InCubic
+                    easing.type: (abstractItem.effectivePressed || mouseArea.containsPress) ? Easing.OutCubic : Easing.InCubic
                 }
             }
 

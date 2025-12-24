@@ -4,6 +4,7 @@
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
+pragma ComponentBehavior: Bound
 
 import QtQuick
 import QtQuick.Layouts
@@ -92,21 +93,24 @@ PlasmaComponents3.StackView {
             }
 
             PlasmaComponents3.ToolButton {
+                required property int index
+                required property string label
+                required property string actionName
                 Layout.fillWidth: true
                 Layout.maximumWidth: implicitWidth
                 Layout.leftMargin: index > 0 ? Kirigami.Units.smallSpacing : 0
 
                 flat: false
                 // why does it spit "cannot assign undefined to string" when a notification becomes expired?
-                text: modelData.label || ""
+                text: label || ""
 
                 onClicked: {
-                    if (modelData.actionName === "inline-reply") {
+                    if (actionName === "inline-reply") {
                         actionContainer.beginReply();
                         return;
                     }
 
-                    actionContainer.modelInterface.actionInvoked(modelData.actionName);
+                    actionContainer.modelInterface.actionInvoked(actionName);
                 }
             }
         }

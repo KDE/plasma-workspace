@@ -17,14 +17,14 @@ Kirigami.Icon {
     Layout.alignment: Qt.AlignTop
 
     property ModelInterface modelInterface
-    readonly property bool dragging: jobIconLoader.item?.dragging ?? false
+    readonly property bool dragging: (jobIconLoader.item as JobIconItem)?.dragging ?? false
 
     implicitWidth: Kirigami.Units.iconSizes.large
     implicitHeight: Kirigami.Units.iconSizes.large
 
     source: modelInterface.icon
     // don't show two identical icons
-    visible: valid || (jobIconLoader.item?.shown ?? false)
+    visible: valid || ((jobIconLoader.item as JobIconItem)?.shown ?? false)
 
     smooth: true
 

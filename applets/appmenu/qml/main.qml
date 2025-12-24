@@ -5,18 +5,19 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Layouts
-import QtQuick.Controls
 // Deliberately imported after QtQuick to avoid missing restoreMode property in Binding. Fix in Qt 6.
 import QtQml
 
 import org.kde.plasma.plasmoid
-import org.kde.kquickcontrolsaddons // For KCMShell
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.private.keyboardindicator as KeyboardIndicator
 import org.kde.plasma.components as PlasmaComponents3
 import org.kde.kirigami as Kirigami
+import plasma.applet.org.kde.plasma.appmenu
 
 PlasmoidItem {
     id: root
@@ -47,7 +48,7 @@ PlasmoidItem {
 
         display: PlasmaComponents3.AbstractButton.IconOnly
         text: Plasmoid.title
-        Accessible.description: toolTipSubText
+        Accessible.description: root.toolTipSubText
 
         onClicked: Plasmoid.trigger(this, 0);
     }
@@ -72,7 +73,7 @@ PlasmoidItem {
         columnSpacing: 0
 
         Binding {
-            target: plasmoid
+            target: Plasmoid
             property: "buttonGrid"
             value: buttonGrid
             restoreMode: Binding.RestoreNone
@@ -81,7 +82,7 @@ PlasmoidItem {
         Connections {
             target: Plasmoid
             function onRequestActivateIndex(index: int) {
-                const button = buttonRepeater.itemAt(index);
+                const button = buttonRepeater.itemAt(index) as MenuDelegate;
                 if (button) {
                     button.activated();
                 }
@@ -91,7 +92,7 @@ PlasmoidItem {
         Connections {
             target: Plasmoid
             function onActivated() {
-                const button = buttonRepeater.itemAt(0);
+                const button = buttonRepeater.itemAt(0) as MenuDelegate;
                 if (button) {
                     button.activated();
                 }
@@ -111,6 +112,9 @@ PlasmoidItem {
             model: appMenuModel.visible ? appMenuModel : null
 
             MenuDelegate {
+                required property int index
+                required property string activeMenu
+                required property PlasmaCore.Action activeActions
                 readonly property int buttonIndex: index
 
                 Layout.fillWidth: root.vertical
@@ -119,7 +123,7 @@ PlasmoidItem {
                 Kirigami.MnemonicData.active: altState.pressed
 
                 down: Plasmoid.currentIndex === index
-                visible: text !== "" && model.activeActions.visible
+                visible: text !== "" && activeActions.visible
 
                 menuIsOpen: Plasmoid.currentIndex !== -1
                 onActivated: Plasmoid.trigger(this, index)

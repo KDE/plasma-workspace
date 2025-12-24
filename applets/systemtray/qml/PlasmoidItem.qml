@@ -18,9 +18,9 @@ AbstractItem {
     id: plasmoidContainer
 
     property Item applet: model.applet ?? null
-    text: applet?.plasmoid.title ?? ""
+    text: applet?.Plasmoid.title ?? ""
 
-    itemId: applet?.plasmoid.pluginName ?? ""
+    itemId: applet?.Plasmoid.pluginName ?? ""
     mainText: inVisibleLayout || (applet && applet.toolTipMainText && applet.toolTipMainText != text) ? applet.toolTipMainText : ""
     subText: applet?.toolTipSubText ?? ""
     mainItem: applet?.toolTipItem ?? null
@@ -33,7 +33,7 @@ AbstractItem {
     // do anything with onActivated.
     onActivated: pos => {
         if (applet) {
-            applet.plasmoid.activated()
+            applet.Plasmoid.activated()
         }
     }
 
@@ -105,7 +105,7 @@ AbstractItem {
         }
 
         if (item instanceof MouseArea) {
-            return item
+            return item as MouseArea
         }
 
         return item.children.find(__isSuitableMouseArea) ?? null;
@@ -132,14 +132,14 @@ AbstractItem {
 
     Connections {
         enabled: plasmoidContainer.applet !== null
-        target: findMouseArea(
+        target: plasmoidContainer.findMouseArea(
             plasmoidContainer.applet?.compactRepresentationItem ??
             plasmoidContainer.applet?.fullRepresentationItem ??
             plasmoidContainer.applet
         )
 
         function onContainsPressChanged() {
-            plasmoidContainer.effectivePressed = target.containsPress;
+            plasmoidContainer.effectivePressed = (target as MouseArea).containsPress;
         }
 
         // TODO For touch/stylus only, since the feature is not desired for mouse users
@@ -151,7 +151,7 @@ AbstractItem {
     }
 
     Connections {
-        target: plasmoidContainer.applet?.plasmoid ?? null
+        target: plasmoidContainer.applet?.Plasmoid ?? null
 
         //activation using global keyboard shortcut
         function onActivated() {
@@ -166,12 +166,12 @@ AbstractItem {
         target: plasmoidContainer.applet
 
         function onFullRepresentationItemChanged(fullRepresentationItem) {
-            preloadFullRepresentationItem(fullRepresentationItem)
+            plasmoidContainer.preloadFullRepresentationItem(fullRepresentationItem)
         }
 
         function onExpandedChanged(expanded) {
             if (expanded) {
-                effectivePressed = false;
+                plasmoidContainer.effectivePressed = false;
             }
         }
     }
@@ -181,11 +181,11 @@ AbstractItem {
             top: parent.top
             bottom: parent.bottom
             left: parent.left
-            leftMargin: inHiddenLayout ? Math.round(Kirigami.Units.smallSpacing / 2) : 0
-            right: inHiddenLayout ? undefined : parent.right
+            leftMargin: plasmoidContainer.inHiddenLayout ? Math.round(Kirigami.Units.smallSpacing / 2) : 0
+            right: plasmoidContainer.inHiddenLayout ? undefined : parent.right
         }
         z: 999
-        running: plasmoidContainer.applet?.plasmoid.busy ?? false
+        running: plasmoidContainer.applet?.Plasmoid.busy ?? false
     }
 
     Binding {
@@ -199,14 +199,14 @@ AbstractItem {
         property: "activeFocusOnTab"
         value: false
         target: plasmoidContainer.applet.compactRepresentationItem
-        when: plasmoidContainer.applet !== null && inHiddenLayout
+        when: plasmoidContainer.applet !== null && plasmoidContainer.inHiddenLayout
         restoreMode: Binding.RestoreBinding
     }
     Binding {
         property: "activeFocusOnTab"
         value: false
         target: plasmoidContainer.applet.fullRepresentationItem
-        when: plasmoidContainer.applet !== null && inHiddenLayout && !plasmoidContainer.applet.compactRepresentationItem
+        when: plasmoidContainer.applet !== null && plasmoidContainer.inHiddenLayout && !plasmoidContainer.applet.compactRepresentationItem
         restoreMode: Binding.RestoreBinding
     }
 }

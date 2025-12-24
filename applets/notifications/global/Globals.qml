@@ -8,12 +8,10 @@ pragma ComponentBehavior: Bound
 pragma Singleton
 import QtQuick
 import QtQuick.Window
-import QtQuick.Layouts
 import QtQml
 
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.clock
-import org.kde.kquickcontrolsaddons
 import org.kde.kirigami as Kirigami
 
 import org.kde.notificationmanager as NotificationManager

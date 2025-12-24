@@ -41,13 +41,12 @@ KSvg.SvgItem {
     width: Math.round(naturalSize.width * svgScale) + Math.round(naturalSize.width * svgScale) % 2
     height: Math.round(naturalSize.height * svgScale) + width % 2
     anchors {
-        top: clock.verticalCenter
+        top: parent.verticalCenter
         topMargin: -verticalRotationCenter + verticalRotationOffset
-        left: clock.horizontalCenter
+        left: parent.horizontalCenter
         leftMargin: -horizontalRotationCenter + horizontalRotationOffset
     }
 
-    svg: clockSvg
     transform: Rotation {
         id: rotationTransform
         angle: 0

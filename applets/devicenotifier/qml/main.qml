@@ -6,15 +6,16 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
+pragma ComponentBehavior: Bound
 
 import QtQuick
-import QtQuick.Layouts
 import org.kde.plasma.plasmoid
 import org.kde.plasma.core as PlasmaCore
 import org.kde.kirigami as Kirigami
 
 import org.kde.kcmutils // For KCMLauncher
 import org.kde.config // KAuthorized
+import plasma.applet.org.kde.plasma.devicenotifier
 
 PlasmoidItem {
     id: devicenotifier
@@ -37,7 +38,7 @@ PlasmoidItem {
                 if (Plasmoid.configuration.popupOnNewDevice) {
                     filterModel.dismissUsbDeviceAddedNotification();
                     devicenotifier.expanded = true;
-                    fullRepresentationItem.spontaneousOpen = true;
+                    (devicenotifier.fullRepresentationItem as FullRepresentation).spontaneousOpen = true;
                 }
                 devicenotifier.popupIcon = "preferences-desktop-notification";
                 popupIconTimer.restart();
@@ -99,6 +100,7 @@ PlasmoidItem {
 
     fullRepresentation: FullRepresentation {
         model: filterModel
+        appletInterface: devicenotifier
     }
 
     PlasmaCore.Action {
@@ -131,7 +133,7 @@ PlasmoidItem {
             checkable: true
             checked: Plasmoid.configuration.removableDevices
             actionGroup: devicesGroup
-            onTriggered: checked => {
+            onTriggered: {
                 if (!checked) {
                     return;
                 }
@@ -146,7 +148,7 @@ PlasmoidItem {
             checkable: true
             checked: Plasmoid.configuration.nonRemovableDevices
             actionGroup: devicesGroup
-            onTriggered: checked => {
+            onTriggered: {
                 if (!checked) {
                     return;
                 }
@@ -160,7 +162,7 @@ PlasmoidItem {
             checkable: true
             checked: Plasmoid.configuration.allDevices
             actionGroup: devicesGroup
-            onTriggered: checked => {
+            onTriggered: {
                 if (!checked) {
                     return;
                 }
@@ -176,7 +178,7 @@ PlasmoidItem {
             text: i18n("Show popup when new device is plugged in")
             checkable: true
             checked: Plasmoid.configuration.popupOnNewDevice
-            onTriggered: checked => {
+            onTriggered: {
                 Plasmoid.configuration.popupOnNewDevice = checked;
             }
         },

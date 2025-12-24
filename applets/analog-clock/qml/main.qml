@@ -5,6 +5,7 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
+pragma ComponentBehavior: Bound
 
 import QtQuick
 import QtQuick.Layouts
@@ -33,7 +34,7 @@ PlasmoidItem {
     property bool showSecondsHand: Plasmoid.configuration.showSecondHand
     property bool showTimezone: Plasmoid.configuration.showTimezoneString
 
-    Plasmoid.backgroundHints: "NoBackground";
+    Plasmoid.backgroundHints: PlasmaCore.Types.NoBackground
     preferredRepresentation: compactRepresentation
 
     toolTipMainText: Qt.locale().toString(clockSource.dateTime,"dddd")
@@ -41,7 +42,7 @@ PlasmoidItem {
 
     Clock {
         id: clockSource
-        trackSeconds: showSecondsHand || analogclock.compactRepresentationItem.containsMouse
+        trackSeconds: analogclock.showSecondsHand || (analogclock.compactRepresentationItem as MouseArea).containsMouse
     }
 
     compactRepresentation: MouseArea {
@@ -103,7 +104,7 @@ PlasmoidItem {
 
             anchors {
                 top: parent.top
-                bottom: showTimezone ? timezoneBg.top : parent.bottom
+                bottom: analogclock.showTimezone ? timezoneBg.top : parent.bottom
             }
             width: parent.width
 
@@ -123,50 +124,55 @@ PlasmoidItem {
             }
 
             Hand {
+                svg: clockSvg
                 elementId: "HourHandShadow"
                 rotationCenterHintId: "hint-hourhandshadow-rotation-center-offset"
                 horizontalRotationOffset: clock.horizontalShadowOffset
                 verticalRotationOffset: clock.verticalShadowOffset
-                handRotation: 180 + hours * 30 + (minutes/2)
+                handRotation: 180 + analogclock.hours * 30 + (analogclock.minutes/2)
                 svgScale: clock.svgScale
-
             }
             Hand {
+                svg: clockSvg
                 elementId: "HourHand"
                 rotationCenterHintId: "hint-hourhand-rotation-center-offset"
-                handRotation: 180 + hours * 30 + (minutes/2)
+                handRotation: 180 + analogclock.hours * 30 + (analogclock.minutes/2)
                 svgScale: clock.svgScale
             }
 
             Hand {
+                svg: clockSvg
                 elementId: "MinuteHandShadow"
                 rotationCenterHintId: "hint-minutehandshadow-rotation-center-offset"
                 horizontalRotationOffset: clock.horizontalShadowOffset
                 verticalRotationOffset: clock.verticalShadowOffset
-                handRotation: 180 + minutes * 6
+                handRotation: 180 + analogclock.minutes * 6
                 svgScale: clock.svgScale
             }
             Hand {
+                svg: clockSvg
                 elementId: "MinuteHand"
                 rotationCenterHintId: "hint-minutehand-rotation-center-offset"
-                handRotation: 180 + minutes * 6
+                handRotation: 180 + analogclock.minutes * 6
                 svgScale: clock.svgScale
             }
 
             Hand {
-                visible: showSecondsHand
+                svg: clockSvg
+                visible: analogclock.showSecondsHand
                 elementId: "SecondHandShadow"
                 rotationCenterHintId: "hint-secondhandshadow-rotation-center-offset"
                 horizontalRotationOffset: clock.horizontalShadowOffset
                 verticalRotationOffset: clock.verticalShadowOffset
-                handRotation: 180 + seconds * 6
+                handRotation: 180 + analogclock.seconds * 6
                 svgScale: clock.svgScale
             }
             Hand {
-                visible: showSecondsHand
+                svg: clockSvg
+                visible: analogclock.showSecondsHand
                 elementId: "SecondHand"
                 rotationCenterHintId: "hint-secondhand-rotation-center-offset"
-                handRotation: 180 + seconds * 6
+                handRotation: 180 + analogclock.seconds * 6
                 svgScale: clock.svgScale
             }
 
@@ -199,7 +205,7 @@ PlasmoidItem {
             }
             width: childrenRect.width + margins.right + margins.left
             height: childrenRect.height + margins.top + margins.bottom
-            visible: showTimezone
+            visible: analogclock.showTimezone
 
             imagePath: "widgets/background"
 

@@ -73,7 +73,7 @@ KCMUtils.SimpleKCM {
                     i18n("Always beside time"),
                     i18n("Always below time"),
                 ]
-                onActivated: cfg_dateDisplayFormat = currentIndex
+                onActivated: appearancePage.cfg_dateDisplayFormat = currentIndex
             }
         }
 
@@ -90,7 +90,7 @@ KCMUtils.SimpleKCM {
                 i18nc("@option:check", "Only in the tooltip"),
                 i18n("Always"),
             ]
-            onActivated: cfg_showSeconds = currentIndex;
+            onActivated: appearancePage.cfg_showSeconds = currentIndex;
         }
 
         Item {
@@ -132,7 +132,7 @@ KCMUtils.SimpleKCM {
                     i18n("City"),
                     i18n("Offset from UTC time"),
                 ]
-                onActivated: cfg_displayTimezoneFormat = currentIndex
+                onActivated: appearancePage.cfg_displayTimezoneFormat = currentIndex
             }
             QQC2.Button {
                 id: switchTimeZoneButton
@@ -161,7 +161,7 @@ KCMUtils.SimpleKCM {
                     i18nc("@item:inlistbox time display option", "Use region defaults"),
                     i18nc("@item:inlistbox time display option", "24-Hour")
                 ]
-                onActivated: cfg_use24hFormat = currentIndex
+                onActivated: appearancePage.cfg_use24hFormat = currentIndex
             }
 
             QQC2.Button {
@@ -217,7 +217,7 @@ KCMUtils.SimpleKCM {
                         },
                     },
                 ]
-                onActivated: cfg_dateFormat = model[currentIndex]["name"];
+                onActivated: appearancePage.cfg_dateFormat = model[currentIndex]["name"];
 
                 Component.onCompleted: {
                     const isConfiguredDateFormat = item => item["name"] === Plasmoid.configuration.dateFormat;
@@ -228,7 +228,6 @@ KCMUtils.SimpleKCM {
             QQC2.Label {
                 id: dateExampleLabel
                 Layout.preferredWidth: Math.max(changeRegionalSettingsButton.implicitWidth, switchTimeZoneButton.implicitWidth)
-//                clip: implicitWidth > width
                 elide: Text.ElideRight
                 horizontalAlignment: Text.AlignHCenter
                 textFormat: Text.PlainText
@@ -247,13 +246,13 @@ KCMUtils.SimpleKCM {
             id: customDateFormat
             Layout.fillWidth: true
             enabled: showDate.checked
-            visible: cfg_dateFormat === "custom"
+            visible: appearancePage.cfg_dateFormat === "custom"
         }
 
         QQC2.Label {
             text: i18n("<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method\">Time Format Documentation</a>")
             enabled: showDate.checked
-            visible: cfg_dateFormat === "custom"
+            visible: appearancePage.cfg_dateFormat === "custom"
             wrapMode: Text.Wrap
 
             Layout.preferredWidth: Layout.maximumWidth
@@ -300,9 +299,9 @@ KCMUtils.SimpleKCM {
             QQC2.RadioButton {
                 id: manualFontAndSizeRadioButton
                 text: i18nc("@option:radio setting for manually configuring the font settings", "Manual")
-                checked: !cfg_autoFontAndSize
+                checked: !appearancePage.cfg_autoFontAndSize
                 onClicked: {
-                    if (cfg_fontFamily === "") {
+                    if (appearancePage.cfg_fontFamily === "") {
                         fontDialog.fontChosen = Kirigami.Theme.defaultFont
                     }
                 }

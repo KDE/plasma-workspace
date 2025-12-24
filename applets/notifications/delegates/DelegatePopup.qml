@@ -22,11 +22,11 @@ import "../components" as Components
 BaseDelegate {
     id: delegateRoot
 
-    Layout.preferredWidth: footerLoader.item?.implicitWidth ?? -1
+    Layout.preferredWidth: (footerLoader.item as Item)?.implicitWidth ?? -1
 
     body: bodyLabel
     icon: icon
-    footer: footerLoader.item
+    footer: footerLoader.item as Item
     columns: 3
 
     Accessible.role: Accessible.Notification

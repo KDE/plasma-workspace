@@ -37,7 +37,7 @@ Item {
     Accessible.description: {
         const description = tooltipSubLabelText.visible ? [tooltipSubLabelText.text] : [];
         for (let i = 0; i < timeZoneRepeater.count; i += 2) {
-            description.push(`${timeZoneRepeater.itemAt(i).text}: ${timeZoneRepeater.itemAt(i + 1).text}`);
+            description.push(`${(timeZoneRepeater.itemAt(i) as PlasmaComponents.Label).text}: ${(timeZoneRepeater.itemAt(i + 1) as PlasmaComponents.Label).text}`);
         }
         return description.join('; ');
     }
@@ -129,6 +129,7 @@ Item {
                     }, [])
 
                 PlasmaComponents.Label {
+                    id: label
                     required property int index
                     required property string modelData
 
@@ -143,7 +144,7 @@ Item {
                     }
                     Clock {
                         id: tzClock
-                        timeZone: modelData
+                        timeZone: label.modelData
                         trackSeconds: Plasmoid.configuration.showSeconds
                     }
 

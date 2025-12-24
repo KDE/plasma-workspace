@@ -108,42 +108,27 @@ MouseArea {
         State { // active process
             when: compactRoot.jobsCount > 0
             PropertyChanges {
-                target: notificationIcon
-                source: "notification-progress-inactive"
-            }
-            PropertyChanges {
-                target: countLabel
-                text: compactRoot.jobsCount
-                visible: true
-            }
-            PropertyChanges {
-                target: busyIndicator
-                visible: compactRoot.jobsPercentage == 0
-            }
-            PropertyChanges {
-                target: chart
-                visible: true
+                notificationIcon.source: "notification-progress-inactive"
+                countLabel.text: compactRoot.jobsCount
+                countLabel.visible: true
+                busyIndicator.visible: compactRoot.jobsPercentage == 0
+                chart.visible: true
             }
         },
         State { // do not disturb
             when: compactRoot.inhibited
             PropertyChanges {
-                target: dndIcon
-                scale: 1
-                opacity: 1
-            }
-            PropertyChanges {
-                target: notificationIcon
-                scale: 0
-                opacity: 0
+                dndIcon.scale: 1
+                dndIcon.opacity: 1
+                notificationIcon.scale: 0
+                notificationIcon.opacity: 0
             }
         },
         State { // unread notifications
             name: "UNREAD"
             when: compactRoot.unreadCount > 0
             PropertyChanges {
-                target: notificationIcon
-                source: "notification-active-symbolic"
+                notificationIcon.source: "notification-active-symbolic"
             }
         }
     ]

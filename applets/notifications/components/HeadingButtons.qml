@@ -153,7 +153,7 @@ RowLayout {
         onClicked: headingButtons.modelInterface.configureClicked()
 
         PlasmaComponents3.ToolTip {
-            text: parent.text
+            text: configureButton.text
         }
     }
 
@@ -171,7 +171,7 @@ RowLayout {
         onClicked: headingButtons.modelInterface.dismissClicked()
 
         PlasmaComponents3.ToolTip {
-            text: parent.text
+            text: dismissButton.text
         }
     }
 

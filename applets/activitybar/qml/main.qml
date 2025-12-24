@@ -3,6 +3,7 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
+pragma ComponentBehavior: Bound
 
 import QtQuick
 import QtQuick.Layouts
@@ -50,8 +51,12 @@ PlasmoidItem {
             delegate: PlasmaComponents.TabButton {
                 id: tab
 
-                checked: model.current
-                text: model.name
+                required property bool current
+                required property string name
+                required property string id
+
+                checked: current
+                text: name
                 activeFocusOnTab: true
                 width: implicitWidth
 
@@ -61,22 +66,22 @@ PlasmoidItem {
                     case Qt.Key_Enter:
                     case Qt.Key_Return:
                     case Qt.Key_Select:
-                        activityModel.setCurrentActivity(model.id, function() {});
+                        activityModel.setCurrentActivity(id, function() {});
                         event.accepted = true;
                         break;
                     }
                 }
-                Accessible.checked: model.current
-                Accessible.name: model.name
-                Accessible.description: i18n("Switch to activity %1", model.name)
+                Accessible.checked: current
+                Accessible.name: name
+                Accessible.description: i18n("Switch to activity %1", name)
                 Accessible.role: Accessible.Button
 
                 onClicked: {
-                    activityModel.setCurrentActivity(model.id, function() {});
+                    activityModel.setCurrentActivity(id, function() {});
                 }
 
                 onCheckedChanged: {
-                    if(model.current) {
+                    if(current) {
                         if (tabBar.activeFocus) {
                             forceActiveFocus();
                         }

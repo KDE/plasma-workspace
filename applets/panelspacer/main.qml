@@ -34,7 +34,7 @@ PlasmoidItem {
         let candidate = root.parent;
         while (candidate) {
             if (candidate instanceof GridLayout) {
-                return candidate;
+                return candidate as GridLayout;
             }
             candidate = candidate.parent;
         }

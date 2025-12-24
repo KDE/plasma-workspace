@@ -16,7 +16,7 @@ BaseDelegate {
 
     body: bodyLabel
     icon: icon
-    footer: footerLoader.item
+    footer: footerLoader.item as Item
     columns: 2
 
     Components.NotificationHeader {

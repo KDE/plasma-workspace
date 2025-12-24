@@ -7,6 +7,7 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
+pragma ComponentBehavior: Bound
 
 import QtQuick
 import QtQuick.Window
@@ -17,10 +18,11 @@ import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.components as PlasmaComponents3
 import org.kde.plasma.extras as PlasmaExtras
 import org.kde.kirigami as Kirigami
+import plasma.applet.org.kde.plasma.devicenotifier
 
 PlasmaExtras.Representation {
     id: root
-    readonly property var appletInterface: devicenotifier
+    required property var appletInterface
 
     property bool spontaneousOpen: false
 
@@ -35,11 +37,11 @@ PlasmaExtras.Representation {
     collapseMarginsHint: true
 
     header: PlasmaExtras.PlasmoidHeading {
-        visible: !(Plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentDrawsPlasmoidHeading) && devicenotifier.mountedRemovables > 1
+        visible: !(Plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentDrawsPlasmoidHeading) && root.appletInterface.mountedRemovables > 1
         PlasmaComponents3.ToolButton {
             id: unmountAll
             anchors.right: parent.right
-            visible: devicenotifier.mountedRemovables > 1;
+            visible: root.appletInterface.mountedRemovables > 1;
 
             icon.name: "media-eject"
             text: i18n("Remove All")
@@ -68,13 +70,13 @@ PlasmaExtras.Representation {
             to: 0
             duration: Kirigami.Units.veryLongDuration * 8
             easing.type: Easing.InOutQuad
-            Component.onCompleted: devicenotifier.isMessageHighlightAnimatorRunning = Qt.binding(() => running);
+            Component.onCompleted: root.appletInterface.isMessageHighlightAnimatorRunning = Qt.binding(() => running);
         }
 
         Connections {
-            target: filterModel
+            target: root.model
             function onLastUdiChanged() {
-                if (filterModel.lastUdi === "") {
+                if (root.model.lastUdi === "") {
                     messageHighlightAnimator.stop()
                     messageHighlight.visible = false
                 }
@@ -95,7 +97,7 @@ PlasmaExtras.Representation {
         id: scrollView
 
         anchors.fill: parent
-        contentWidth: availableWidth - contentItem.leftMargin - contentItem.rightMargin
+        contentWidth: availableWidth - (contentItem as ListView).leftMargin - (contentItem as ListView).rightMargin
         PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
 
         focus: true
@@ -104,9 +106,15 @@ PlasmaExtras.Representation {
             id: notifierDialog
             focus: true
 
-            model: filterModel
+            model: root.model
 
             delegate: DeviceItem {
+                id: deviceItem
+                onHasMessageChanged: {
+                    if (deviceItem.hasMessage) {
+                        messageHighlight.highlight(this)
+                    }
+                }
             }
 
             highlight: PlasmaExtras.Highlight
@@ -121,7 +129,7 @@ PlasmaExtras.Representation {
             rightMargin: Kirigami.Units.largeSpacing
             spacing: Kirigami.Units.smallSpacing
 
-            currentIndex: devicenotifier.currentIndex
+            currentIndex: root.appletInterface.currentIndex
 
             //this is needed to make SectionScroller actually work
             //acceptable since one doesn't have a billion of devices
@@ -133,6 +141,7 @@ PlasmaExtras.Representation {
             section {
                 property: "deviceType"
                 delegate: PlasmaExtras.ListSectionHeader {
+                    required property string section
                     width: notifierDialog.width - notifierDialog.leftMargin - notifierDialog.rightMargin
                     text: section
                 }

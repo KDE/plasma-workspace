@@ -137,17 +137,17 @@ KCMUtils.ScrollViewKCM {
     }
 
     Connections {
-        target: plasmoid.configSystemTrayModel
+        target: Plasmoid.configSystemTrayModel
         function onRowsRemoved() {
             // if the user closes an app with a SNI that has a visibility change queued, we need to remove it
             // from the queue as the change is no longer visible in the UI.
             let idsToRemove = [...iconsPage.changedVisibility.keys()];
-            for (let i = 0; i < plasmoid.configSystemTrayModel.rowCount() && idsToRemove.length > 0; ++i) {
-                let itemId = plasmoid.configSystemTrayModel.index(i, 0).data(Qt.UserRole + 2);
+            for (let i = 0; i < Plasmoid.configSystemTrayModel.rowCount() && idsToRemove.length > 0; ++i) {
+                let itemId = Plasmoid.configSystemTrayModel.index(i, 0).data(Qt.UserRole + 2);
                 idsToRemove = idsToRemove.filter(id => id !== itemId);
             }
             idsToRemove.forEach(id => {
-                changedVisibility.delete(id);
+                iconsPage.changedVisibility.delete(id);
             });
             if (idsToRemove.length > 0) {
                 iconsPage.changedVisibilityChanged();
@@ -228,7 +228,7 @@ KCMUtils.ScrollViewKCM {
                         return 1; // scale to fit
                     }
 
-                    if (cfg_scaleIconsToFit) {
+                    if (iconsPage.cfg_scaleIconsToFit) {
                         return 1 // scale to fit
                     } else {
                         return 0 // small
@@ -236,7 +236,7 @@ KCMUtils.ScrollViewKCM {
                 }
 
                 onActivated: index => {
-                    cfg_scaleIconsToFit = model[currentIndex]["size"] == "scale";
+                    iconsPage.cfg_scaleIconsToFit = model[currentIndex]["size"] == "scale";
                 }
             }
             QQC2.Label {
@@ -273,7 +273,7 @@ KCMUtils.ScrollViewKCM {
                         return 2; // Large
                     }
 
-                    switch (cfg_iconSpacing) {
+                    switch (iconsPage.cfg_iconSpacing) {
                         case 1: return 0; // Small
                         case 2: return 1; // Normal
                         case 6: return 2; // Large
@@ -281,7 +281,7 @@ KCMUtils.ScrollViewKCM {
                 }
 
                 onActivated: index => {
-                    cfg_iconSpacing = model[currentIndex]["spacing"];
+                    iconsPage.cfg_iconSpacing = model[currentIndex]["spacing"];
                 }
             }
             QQC2.Label {
@@ -402,8 +402,8 @@ KCMUtils.ScrollViewKCM {
                     elide: Text.ElideRight
 
                     QQC2.ToolTip {
-                        visible: listItem.hovered && parent.truncated
-                        text: parent.text
+                        visible: listItem.hovered && nameLabel.truncated
+                        text: nameLabel.text
                     }
                 }
 

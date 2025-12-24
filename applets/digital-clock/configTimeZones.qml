@@ -206,7 +206,7 @@ Kirigami.PageRow {
                     required property string section
 
                     width: configuredTimeZoneList.width
-                    label: section === "true" ? i18n("Systemwide Time Zone") : i18n("Additional Time Zones")
+                    text: section === "true" ? i18n("Systemwide Time Zone") : i18n("Additional Time Zones")
                 }
             }
 

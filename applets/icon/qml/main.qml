@@ -82,23 +82,23 @@ PlasmoidItem {
             
             onDragEnter: event => {
                 const acceptable = Plasmoid.isAcceptableDrag(event);
-                containsAcceptableDrag = acceptable;
+                root.containsAcceptableDrag = acceptable;
 
                 if (!acceptable) {
                     event.ignore();
                 }
             }
             
-            onDragLeave: containsAcceptableDrag = false
+            onDragLeave: root.containsAcceptableDrag = false
             
             onDrop: event => {
-                if (containsAcceptableDrag) {
+                if (root.containsAcceptableDrag) {
                     Plasmoid.processDrop(event);
                 } else {
                     event.ignore();
                 }
 
-                containsAcceptableDrag = false;
+                root.containsAcceptableDrag = false;
             }
         }
 
@@ -107,11 +107,11 @@ PlasmoidItem {
                 left: parent.left
                 right: parent.right
                 top: parent.top
-                bottom: constrained ? parent.bottom : iconLabel.top
+                bottom: root.constrained ? parent.bottom : iconLabel.top
             }
             source: Plasmoid.icon
             enabled: mouseArea.enabled
-            active: mouseArea.containsMouse || containsAcceptableDrag
+            active: mouseArea.containsMouse || root.containsAcceptableDrag
             opacity: Plasmoid.busy ? 0.6 : 1
             
             Behavior on opacity {

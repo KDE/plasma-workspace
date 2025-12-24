@@ -8,7 +8,6 @@ import QtQuick
 import QtQuick.Layouts
 
 import org.kde.kquickcontrolsaddons as KQuickAddons
-import org.kde.plasma.core as PlasmaCore
 import org.kde.kirigami as Kirigami
 
 import org.kde.notificationmanager as NotificationManager

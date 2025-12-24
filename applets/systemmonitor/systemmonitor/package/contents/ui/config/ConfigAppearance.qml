@@ -7,11 +7,7 @@
 */
 
 import QtQuick
-import QtQuick.Layouts
-import QtQuick.Controls as QQC2
 
-import org.kde.kquickcontrols
-import org.kde.config // for KAuthorized
 import org.kde.plasma.plasmoid
 import org.kde.kcmutils as KCM
 

@@ -22,7 +22,7 @@ SequentialAnimation {
     alwaysRunToEnd: true
 
     ScaleAnimator {
-        target: targetItem
+        target: pulseAnimation.targetItem
         from: 1
         to: 1.2
         duration: pulseAnimation.duration * 0.15
@@ -30,7 +30,7 @@ SequentialAnimation {
     }
 
     ScaleAnimator {
-        target: targetItem
+        target: pulseAnimation.targetItem
         from: 1.2
         to: 1
         duration: pulseAnimation.duration * 0.15

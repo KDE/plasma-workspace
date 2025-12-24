@@ -7,11 +7,7 @@
 */
 
 import QtQuick
-import QtQuick.Layouts
-import QtQuick.Controls as QQC2
-import QtQml.Models
 
-import org.kde.kquickcontrols
 import org.kde.plasma.plasmoid
 import org.kde.kcmutils as KCM
 
@@ -46,7 +42,7 @@ KCM.SimpleKCM {
     }
 
     Connections {
-        target: configUi
+        target: root.configUi
         function onConfigurationChanged() {
             root.configurationChanged()
         }
