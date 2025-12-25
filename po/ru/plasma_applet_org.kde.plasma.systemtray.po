@@ -8,21 +8,21 @@
 # Alexander Potashev <aspotashev@gmail.com>, 2009, 2010, 2011, 2014, 2015, 2016, 2017, 2019.
 # Nick Shaforostoff <shafff@ukr.net>, 2009.
 # Yuri Efremov <yur.arh@gmail.com>, 2013.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2020, 2021, 2022, 2024, 2025.
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2024, 2025 Alexander Yavorsky <kekcuha@gmail.com>
 # SPDX-FileCopyrightText: 2025 Olesya Gerasimenko <goa@altlinux.ru>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_systemtray\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-05 00:44+0000\n"
-"PO-Revision-Date: 2025-06-24 16:22+0300\n"
-"Last-Translator: Olesya Gerasimenko <goa@altlinux.ru>\n"
-"Language-Team: Basealt Translation Team\n"
+"PO-Revision-Date: 2025-12-19 13:29+0200\n"
+"Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.12.0\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Environment: kde\n"
@@ -35,18 +35,16 @@ msgid "General"
 msgstr "Основное"
 
 #: qml/ConfigGeneral.qml:43
-#, fuzzy, kde-format
-#| msgid "Shown when relevant"
+#, kde-format
 msgctxt "@item:inlistbox Show this System Tray item when relevant"
 msgid "Show when relevant"
-msgstr "Автоматически"
+msgstr "Показывать автоматически"
 
 #: qml/ConfigGeneral.qml:47
-#, fuzzy, kde-format
-#| msgid "Always shown"
+#, kde-format
 msgctxt "@item:inlistbox Always show this System Tray item"
 msgid "Always show"
-msgstr "Всегда показывать"
+msgstr "Показывать всегда"
 
 #: qml/ConfigGeneral.qml:51
 #, kde-format
@@ -58,7 +56,7 @@ msgstr ""
 #, kde-format
 msgctxt "@item:inlistbox Never show this System Tray item; disable it"
 msgid "Never show (disabled)"
-msgstr ""
+msgstr "Никогда не показывать"
 
 #: qml/ConfigGeneral.qml:126
 #, kde-format
@@ -108,13 +106,7 @@ msgid "I understand the risks"
 msgstr "Я понимаю и принимаю риски"
 
 #: qml/ConfigGeneral.qml:187
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:usagetip"
-#| msgid ""
-#| "Disabling the clipboard is not recommended, as it will cause copied data "
-#| "to be lost when the application it was copied from is closed.<nl/><nl/"
-#| ">Instead consider configuring the clipboard to disable its history, or "
-#| "only remember one item at a time."
+#, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
 "Disabling the clipboard is not recommended, as it will cause copied data to "
@@ -124,10 +116,13 @@ msgid ""
 "configuring the clipboard to not save history, or to only remember one item "
 "at a time."
 msgstr ""
-"Отключение буфера обмена не рекомендуется, так как скопированные данные "
-"будут потеряны при закрытии приложения, из которого они были скопированы.<nl/"
-"><nl/> Вместо этого рекомендуется настроить буфер обмена так, чтобы "
-"отключить его историю или запоминать только один последний элемент."
+"Отключение буфера обмена не рекомендуется, так как это приведёт к потере "
+"скопированных данных при закрытии приложения, из которого они были "
+"скопированы.<nl/><nl/>Следует выполнять это действие только в случае, если "
+"отдельный виджет буфера обмена был добавлен вручную в другом месте или если "
+"используется сторонний менеджер буфера обмена. Также вместо этого можно "
+"рассмотреть настройку буфера обмена без сохранения истории либо с "
+"запоминанием только одного элемента за раз."
 
 #: qml/ConfigGeneral.qml:196
 #, kde-kuit-format
@@ -138,25 +133,26 @@ msgid ""
 "added a standalone Notifications widget somewhere else, or are intentionally "
 "using a 3rd-party notification manager to handle notifications."
 msgstr ""
+"Отключение виджета уведомлений не рекомендуется, так как уведомления, "
+"отправляемые приложениями, больше не будут отображаться.<nl/><nl/>Следует "
+"выполнять это действие только в случае, если отдельный виджет уведомлений "
+"был добавлен вручную в другом месте или если для обработки уведомлений "
+"используется сторонний менеджер уведомлений."
 
 #: qml/ConfigGeneral.qml:208
-#, fuzzy, kde-format
-#| msgid "Scale with Panel height"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel height"
 msgstr "Масштабировать по высоте панели"
 
 #: qml/ConfigGeneral.qml:209
-#, fuzzy, kde-format
-#| msgid "Scale with Panel width"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel width"
 msgstr "Масштабировать по ширине панели"
 
 #: qml/ConfigGeneral.qml:211
-#, fuzzy, kde-format
-#| msgctxt "The arrangement of system tray icons in the Panel"
-#| msgid "Panel icon size:"
+#, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon size:"
 msgstr "Размер значков:"
@@ -197,18 +193,16 @@ msgid "Automatically set to Large when in Touch Mode"
 msgstr "В режиме планшета автоматически используется интервал большого размера"
 
 #: qml/ConfigGeneral.qml:315
-#, fuzzy, kde-format
-#| msgid "Entries"
+#, kde-format
 msgctxt "@title:column"
 msgid "Entries"
 msgstr "Элементы"
 
 #: qml/ConfigGeneral.qml:319
-#, fuzzy, kde-format
-#| msgid "Always shown"
+#, kde-format
 msgctxt "@option:check, This is referring to system tray entries"
 msgid "Always show all"
-msgstr "Всегда показывать"
+msgstr "Всегда показывать все"
 
 #: qml/ExpandedRepresentation.qml:59
 #, kde-format

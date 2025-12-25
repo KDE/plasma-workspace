@@ -2,24 +2,25 @@
 # Copyright (C) 2009 This_file_is_part_of_KDE
 # This file is distributed under the same license as the plasma_runner_sessions package.
 # Kevin Scannell <kscanne@gmail.com>, 2009.
+# SPDX-FileCopyrightText: 2025 Charlotte <altronic25@protonmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdebase/krunner_sessions.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2008-06-02 20:00-0500\n"
-"Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
-"Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
+"PO-Revision-Date: 2025-12-24 01:14+0000\n"
+"Last-Translator: Charlotte <altronic25@protonmail.com>\n"
+"Language-Team: Irish\n"
 "Language: ga\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #: sessionrunner.cpp:20
-#, fuzzy, kde-format
-#| msgid "log out"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to log out of the "
 "session"
@@ -32,14 +33,12 @@ msgid "Logs out, exiting the current desktop session"
 msgstr "Logáil amach agus scoir den seisiún reatha deisce"
 
 #: sessionrunner.cpp:27
-#, fuzzy, kde-format
-#| msgctxt "shutdown computer command"
-#| msgid "shutdown"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to shut down the "
 "computer"
 msgid "shutdown;shut down;power;poweroff;power off"
-msgstr "múch"
+msgstr "múch;múchta;cumhacht;cumhacht a mhúchadh"
 
 #: sessionrunner.cpp:30
 #, kde-format
@@ -47,9 +46,7 @@ msgid "Turns off the computer"
 msgstr "Múch an ríomhaire"
 
 #: sessionrunner.cpp:33
-#, fuzzy, kde-format
-#| msgctxt "restart computer command"
-#| msgid "restart"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to restart the "
 "computer"
@@ -62,12 +59,11 @@ msgid "Reboots the computer"
 msgstr "Atosaigh an ríomhaire"
 
 #: sessionrunner.cpp:40
-#, fuzzy, kde-format
-#| msgid "Lock the screen"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to lock the screen"
 msgid "lock;lock screen"
-msgstr "Cuir an scáileán faoi ghlas"
+msgstr "glasáil;glas;glasáil an scáileán;scáileán glasála"
 
 #: sessionrunner.cpp:42
 #, kde-format
@@ -75,73 +71,64 @@ msgid "Locks the current sessions and starts the screen saver"
 msgstr "Cuir na seisiúin reatha faoi ghlas agus tosaigh spárálaí an scáileáin"
 
 #: sessionrunner.cpp:45
-#, fuzzy, kde-format
-#| msgid "new session"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to save the "
 "desktop session"
 msgid "save;save session"
-msgstr "seisiún nua"
+msgstr "sábháil;sábháil seisiún"
 
 #: sessionrunner.cpp:48
 #, kde-format
 msgid "Saves the current session for session restoration"
-msgstr ""
+msgstr "Sábháiltear an seisiún reatha deisce chun seisiún aischur"
 
 #: sessionrunner.cpp:51
-#, fuzzy, kde-format
-#| msgid "switch user"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to switch user "
 "sessions"
 msgid "switch user;new session"
-msgstr "athraigh an t-úsáideoir"
+msgstr "athraigh an t-úsáideoir;seisiún nua"
 
 #: sessionrunner.cpp:54
-#, fuzzy, kde-format
-#| msgid "Starts a new session as a different user"
+#, kde-format
 msgid "Switch to a session as a different user"
-msgstr "Tosaigh seisiún nua mar úsáideoir eile"
+msgstr "Athraigh chun seisiún nua mar úsáideoir eile"
 
 #: sessionrunner.cpp:75
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
-msgstr ""
+msgstr "Logáil Amach"
 
 #: sessionrunner.cpp:83
-#, fuzzy, kde-format
-#| msgctxt "shutdown computer command"
-#| msgid "shutdown"
+#, kde-format
 msgctxt "turn off computer command"
 msgid "Shut Down"
-msgstr "múch"
+msgstr "Múch"
 
 #: sessionrunner.cpp:90
-#, fuzzy, kde-format
-#| msgctxt "restart computer command"
-#| msgid "restart"
+#, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
-msgstr "atosaigh"
+msgstr "Atosaigh"
 
 #: sessionrunner.cpp:97
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
-msgstr ""
+msgstr "Glasáil"
 
 #: sessionrunner.cpp:104
-#, fuzzy, kde-format
-#| msgid "new session"
+#, kde-format
 msgid "Save Session"
-msgstr "seisiún nua"
+msgstr "Sábháil Seisiún"
 
 #: sessionrunner.cpp:111
-#, fuzzy, kde-format
-#| msgid "switch user"
+#, kde-format
 msgid "Switch User"
-msgstr "athraigh an t-úsáideoir"
+msgstr "Athraigh an t-Úsáideoir"
 
 #, fuzzy
 #~| msgctxt "User sessions"
