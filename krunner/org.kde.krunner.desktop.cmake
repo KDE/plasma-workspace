@@ -19,6 +19,7 @@ Name[et]=KRunner
 Name[eu]=KRunner
 Name[fi]=KRunner
 Name[fr]=KRunner
+Name[ga]=KRunner
 Name[gl]=KRunner
 Name[hi]=केरनर
 Name[hu]=KRunner
