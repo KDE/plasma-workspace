@@ -20,7 +20,7 @@ ListView {
     // since different years don't have different names for months, we don't need to set up alternative models for YearView
     readonly property QtObject previousModel: switch (viewType) {
     case InfiniteList.ViewType.DayView:
-        return previousAlternativeBackend.item?.daysModel ?? null;
+        return (previousAlternativeBackend.item as PlasmaCalendar.Calendar)?.daysModel ?? null;
     case InfiniteList.ViewType.DecadeView:
         return previousYearModel.item;
     default:
@@ -29,15 +29,15 @@ ListView {
 
     readonly property QtObject nextModel: switch (viewType) {
     case InfiniteList.ViewType.DayView:
-        return nextAlternativeBackend.item?.daysModel ?? null;
+        return (nextAlternativeBackend.item as PlasmaCalendar.Calendar)?.daysModel ?? null;
     case InfiniteList.ViewType.DecadeView:
         return nextYearModel.item;
     default:
         return null;
     }
 
-    readonly property PlasmaCalendar.Calendar previousCalendar: previousAlternativeBackend.item
-    readonly property PlasmaCalendar.Calendar nextCalendar: nextAlternativeBackend.item
+    readonly property PlasmaCalendar.Calendar previousCalendar: previousAlternativeBackend.item as PlasmaCalendar.Calendar
+    readonly property PlasmaCalendar.Calendar nextCalendar: nextAlternativeBackend.item as PlasmaCalendar.Calendar
 
     readonly property int cellHeight: (currentItem as DaysCalendar)?.cellHeight ?? 0
     readonly property int cellWidth: (currentItem as DaysCalendar)?.cellWidth ?? 0

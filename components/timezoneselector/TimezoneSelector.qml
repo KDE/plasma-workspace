@@ -7,8 +7,6 @@
 import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls as QQC2
-import QtQuick.Dialogs
-import QtQuick.Controls
 
 import QtPositioning
 import QtLocation

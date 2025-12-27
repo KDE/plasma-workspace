@@ -277,14 +277,14 @@ ContainmentLayoutManager.AppletContainer {
 
     busyIndicatorComponent: PlasmaComponents.BusyIndicator {
         anchors.centerIn: parent
-        visible: applet.plasmoid.busy
+        visible: appletContainer.applet.plasmoid.busy
         running: visible
     }
     configurationRequiredComponent: PlasmaComponents.Button {
         anchors.centerIn: parent
         text: i18nd("plasmashellprivateplugin", "Configure…")
         icon.name: "configure"
-        visible: applet.plasmoid.configurationRequired
-        onClicked: applet.plasmoid.internalAction("configure").trigger();
+        visible: appletContainer.applet.plasmoid.configurationRequired
+        onClicked: appletContainer.applet.plasmoid.internalAction("configure").trigger();
     }
 }

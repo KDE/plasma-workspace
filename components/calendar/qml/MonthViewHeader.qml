@@ -33,7 +33,7 @@ Item {
     // Can't use the real type due to a "Cyclic dependency"
     required property QtObject /*MonthView*/ monthViewRoot
 
-    readonly property bool isDigitalClock: monthViewRoot.showDigitalClockHeader
+    readonly property bool isDigitalClock: (monthViewRoot as MonthView).showDigitalClockHeader
     readonly property var buttons: isDigitalClock ? dateManipulationButtonsForDigitalClock : dateManipulationButtons
     readonly property T.AbstractButton tabButton: isDigitalClock ? configureButton : todayButton
     readonly property T.AbstractButton previousButton: buttons.previousButton
@@ -70,10 +70,10 @@ Item {
                 // Needed for Appium testing
                 objectName: "monthHeader"
 
-                text: root.swipeView.currentIndex > 0 || root.monthViewRoot.selectedYear !== today.getFullYear()
+                text: root.swipeView.currentIndex > 0 || (root.monthViewRoot as MonthView).selectedYear !== today.getFullYear()
                     ? i18ndc("plasmashellprivateplugin", "Format: month year", "%1 %2",
-                        root.monthViewRoot.selectedMonth, root.monthViewRoot.selectedYear.toString())
-                    : root.monthViewRoot.selectedMonth
+                        (root.monthViewRoot as MonthView).selectedMonth, (root.monthViewRoot as MonthView).selectedYear.toString())
+                    : (root.monthViewRoot as MonthView).selectedMonth
                 textFormat: Text.PlainText
                 level: root.isDigitalClock ? 1 : 2
                 elide: Text.ElideRight
@@ -84,9 +84,9 @@ Item {
             Loader {
                 id: dateManipulationButtons
 
-                readonly property T.AbstractButton previousButton: item?.previousButton ?? null
-                readonly property T.AbstractButton todayButton: item?.todayButton ?? null
-                readonly property T.AbstractButton nextButton: item?.nextButton ?? null
+                readonly property T.AbstractButton previousButton: (item as ButtonsGroup)?.previousButton ?? null
+                readonly property T.AbstractButton todayButton: (item as ButtonsGroup)?.todayButton ?? null
+                readonly property T.AbstractButton nextButton: (item as ButtonsGroup)?.nextButton ?? null
 
                 sourceComponent: buttonsGroup
                 active: !root.isDigitalClock
@@ -95,8 +95,8 @@ Item {
             Loader {
                 id: dateAndPinButtons
 
-                readonly property T.AbstractButton configureButton: item?.configureButton ?? null
-                readonly property T.AbstractButton pinButton: item?.pinButton ?? null
+                readonly property T.AbstractButton configureButton: (item as DateAndPin)?.configureButton ?? null
+                readonly property T.AbstractButton pinButton: (item as DateAndPin)?.pinButton ?? null
 
                 sourceComponent: dateAndPin
                 active: root.isDigitalClock
@@ -115,9 +115,9 @@ Item {
 
                 KeyNavigation.up: root.isDigitalClock ? root.configureButton : root.previousButton
                 KeyNavigation.right: dateManipulationButtonsForDigitalClock.previousButton
-                KeyNavigation.left: root.monthViewRoot.eventButton && root.monthViewRoot.eventButton.visible
-                    ? root.monthViewRoot.eventButton
-                    : root.monthViewRoot.eventButton && root.monthViewRoot.eventButton.KeyNavigation.down
+                KeyNavigation.left: (root.monthViewRoot as MonthView).eventButton && (root.monthViewRoot as MonthView).eventButton.visible
+                    ? (root.monthViewRoot as MonthView).eventButton
+                    : (root.monthViewRoot as MonthView).eventButton && (root.monthViewRoot as MonthView).eventButton.KeyNavigation.down
 
                 onFocusChanged: {
                     if (!focus) {
@@ -129,19 +129,19 @@ Item {
                 PlasmaComponents.TabButton {
                     Accessible.onPressAction: clicked()
                     text: i18nd("plasmashellprivateplugin", "Days");
-                    onClicked: root.monthViewRoot.showMonthView();
+                    onClicked: (root.monthViewRoot as MonthView).showMonthView();
                     display: T.AbstractButton.TextOnly
                 }
                 PlasmaComponents.TabButton {
                     Accessible.onPressAction: clicked()
                     text: i18nd("plasmashellprivateplugin", "Months");
-                    onClicked: root.monthViewRoot.showYearView();
+                    onClicked: (root.monthViewRoot as MonthView).showYearView();
                     display: T.AbstractButton.TextOnly
                 }
                 PlasmaComponents.TabButton {
                     Accessible.onPressAction: clicked()
                     text: i18nd("plasmashellprivateplugin", "Years");
-                    onClicked: root.monthViewRoot.showDecadeView();
+                    onClicked: (root.monthViewRoot as MonthView).showDecadeView();
                     display: T.AbstractButton.TextOnly
                 }
             }
@@ -149,9 +149,9 @@ Item {
             Loader {
                 id: dateManipulationButtonsForDigitalClock
 
-                readonly property T.AbstractButton previousButton: item?.previousButton ?? null
-                readonly property T.AbstractButton todayButton: item?.todayButton ?? null
-                readonly property T.AbstractButton nextButton: item?.nextButton ?? null
+                readonly property T.AbstractButton previousButton: (item as ButtonsGroup)?.previousButton ?? null
+                readonly property T.AbstractButton todayButton: (item as ButtonsGroup)?.todayButton ?? null
+                readonly property T.AbstractButton nextButton: (item as ButtonsGroup)?.nextButton ?? null
 
                 sourceComponent: buttonsGroup
                 active: root.isDigitalClock
@@ -161,22 +161,19 @@ Item {
 
     // ------------------------------------------ UI ends ------------------------------------------------- //
 
-    Component {
-        id: buttonsGroup
+    component ButtonsGroup: RowLayout {
+        spacing: 0
 
-        RowLayout {
-            spacing: 0
+        readonly property alias previousButton: previousButton
+        readonly property alias todayButton: todayButton
+        readonly property alias nextButton: nextButton
 
-            readonly property alias previousButton: previousButton
-            readonly property alias todayButton: todayButton
-            readonly property alias nextButton: nextButton
+        KeyNavigation.up: root.configureButton
 
-            KeyNavigation.up: root.configureButton
-
-            PlasmaComponents.ToolButton {
-                id: previousButton
-                text: {
-                    switch (root.monthViewRoot.calendarViewDisplayed) {
+        PlasmaComponents.ToolButton {
+            id: previousButton
+            text: {
+                switch ((root.monthViewRoot as MonthView).calendarViewDisplayed) {
                     case MonthView.CalendarView.DayView:
                         return i18nd("plasmashellprivateplugin", "Previous Month")
                     case MonthView.CalendarView.MonthView:
@@ -185,31 +182,31 @@ Item {
                         return i18nd("plasmashellprivateplugin", "Previous Decade")
                     default:
                         return "";
-                    }
                 }
-
-                icon.name: Application.layoutDirection === Qt.RightToLeft ? "go-next" : "go-previous"
-                display: T.AbstractButton.IconOnly
-                KeyNavigation.right: todayButton
-
-                onClicked: root.monthViewRoot.previousView()
-
-                PlasmaComponents.ToolTip { text: parent.text }
             }
 
-            PlasmaComponents.ToolButton {
-                id: todayButton
-                text: i18ndc("plasmashellprivateplugin", "Reset calendar to today", "Today")
-                Accessible.description: i18nd("plasmashellprivateplugin", "Reset calendar to today")
-                KeyNavigation.right: nextButton
+            icon.name: Application.layoutDirection === Qt.RightToLeft ? "go-next" : "go-previous"
+            display: T.AbstractButton.IconOnly
+            KeyNavigation.right: todayButton
 
-                onClicked: root.monthViewRoot.resetToToday()
-            }
+            onClicked: (root.monthViewRoot as MonthView).previousView()
 
-            PlasmaComponents.ToolButton {
-                id: nextButton
-                text: {
-                    switch (root.monthViewRoot.calendarViewDisplayed) {
+            PlasmaComponents.ToolTip { text: previousButton.text }
+        }
+
+        PlasmaComponents.ToolButton {
+            id: todayButton
+            text: i18ndc("plasmashellprivateplugin", "Reset calendar to today", "Today")
+            Accessible.description: i18nd("plasmashellprivateplugin", "Reset calendar to today")
+            KeyNavigation.right: nextButton
+
+            onClicked: (root.monthViewRoot as MonthView).resetToToday()
+        }
+
+        PlasmaComponents.ToolButton {
+            id: nextButton
+            text: {
+                switch ((root.monthViewRoot as MonthView).calendarViewDisplayed) {
                     case MonthView.CalendarView.DayView:
                         return i18nd("plasmashellprivateplugin", "Next Month")
                     case MonthView.CalendarView.MonthView:
@@ -218,16 +215,67 @@ Item {
                         return i18nd("plasmashellprivateplugin", "Next Decade")
                     default:
                         return "";
-                    }
                 }
+            }
 
-                icon.name: Application.layoutDirection === Qt.RightToLeft ? "go-previous" : "go-next"
-                display: T.AbstractButton.IconOnly
-                KeyNavigation.tab: root.swipeView
+            icon.name: Application.layoutDirection === Qt.RightToLeft ? "go-previous" : "go-next"
+            display: T.AbstractButton.IconOnly
+            KeyNavigation.tab: root.swipeView
 
-                onClicked: root.monthViewRoot.nextView();
+            onClicked: (root.monthViewRoot as MonthView).nextView();
 
-                PlasmaComponents.ToolTip { text: parent.text }
+            PlasmaComponents.ToolTip { text: nextButton     .text }
+        }
+    }
+
+    Component {
+        id: buttonsGroup
+
+        ButtonsGroup { }
+    }
+
+    component DateAndPin: RowLayout {
+        readonly property alias configureButton: configureButton
+        readonly property alias pinButton: pinButton
+
+        KeyNavigation.up: pinButton
+
+        PlasmaComponents.ToolButton {
+            id: configureButton
+
+            visible: (root.monthViewRoot as MonthView).digitalClock.internalAction("configure").enabled
+
+            display: T.AbstractButton.IconOnly
+            icon.name: "configure"
+            text: (root.monthViewRoot as MonthView).digitalClock.internalAction("configure").text
+
+            KeyNavigation.left: tabBar.KeyNavigation.left
+            KeyNavigation.right: pinButton
+            KeyNavigation.down: root.todayButton
+
+            onClicked: (root.monthViewRoot as MonthView).digitalClock.internalAction("configure").trigger()
+            PlasmaComponents.ToolTip {
+                text: configureButton.text
+            }
+        }
+
+        // Allows the user to keep the calendar open for reference
+        PlasmaComponents.ToolButton {
+            id: pinButton
+
+            checkable: true
+            checked: (root.monthViewRoot as MonthView).digitalClock.configuration.pin
+
+            display: T.AbstractButton.IconOnly
+            icon.name: "window-pin"
+            text: i18ndc("plasmashellprivateplugin", "@info:tooltip", "Keep Open")
+
+            KeyNavigation.down: root.nextButton
+
+            onToggled: (root.monthViewRoot as MonthView).digitalClock.configuration.pin = checked
+
+            PlasmaComponents.ToolTip {
+                text: pinButton.text
             }
         }
     }
@@ -235,50 +283,6 @@ Item {
     Component {
         id: dateAndPin
 
-        RowLayout {
-            readonly property alias configureButton: configureButton
-            readonly property alias pinButton: pinButton
-
-            KeyNavigation.up: pinButton
-
-            PlasmaComponents.ToolButton {
-                id: configureButton
-
-                visible: root.monthViewRoot.digitalClock.internalAction("configure").enabled
-
-                display: T.AbstractButton.IconOnly
-                icon.name: "configure"
-                text: root.monthViewRoot.digitalClock.internalAction("configure").text
-
-                KeyNavigation.left: tabBar.KeyNavigation.left
-                KeyNavigation.right: pinButton
-                KeyNavigation.down: root.todayButton
-
-                onClicked: root.monthViewRoot.digitalClock.internalAction("configure").trigger()
-                PlasmaComponents.ToolTip {
-                    text: parent.text
-                }
-            }
-
-            // Allows the user to keep the calendar open for reference
-            PlasmaComponents.ToolButton {
-                id: pinButton
-
-                checkable: true
-                checked: root.monthViewRoot.digitalClock.configuration.pin
-
-                display: T.AbstractButton.IconOnly
-                icon.name: "window-pin"
-                text: i18ndc("plasmashellprivateplugin", "@info:tooltip", "Keep Open")
-
-                KeyNavigation.down: root.nextButton
-
-                onToggled: root.monthViewRoot.digitalClock.configuration.pin = checked
-
-                PlasmaComponents.ToolTip {
-                    text: parent.text
-                }
-            }
-        }
+        DateAndPin { }
     }
 }

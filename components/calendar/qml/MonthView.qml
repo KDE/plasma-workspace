@@ -72,7 +72,7 @@ Item {
     KeyNavigation.up: viewHeader.previousButton
     // The view can have no highlighted item, so always highlight the first item
     Keys.onDownPressed: event => {
-        swipeView.currentItem.focusFirstCellOfView();
+        (swipeView.currentItem as InfiniteList).focusFirstCellOfView();
     }
 
     function isToday(date: date): bool {
@@ -127,9 +127,10 @@ Item {
      * calendar view displayed.
      */
     function nextView() {
-        swipeView.currentItem.finishChangeIfNeeded();
-        swipeView.currentItem.resetViewPosition();
-        swipeView.currentItem.incrementCurrentIndex();
+        const currentView = swipeView.currentItem as InfiniteList;
+        currentView.finishChangeIfNeeded();
+        currentView.resetViewPosition();
+        currentView.incrementCurrentIndex();
     }
 
     /**
@@ -137,9 +138,10 @@ Item {
      * calendar view displayed.
      */
     function previousView() {
-        swipeView.currentItem.finishChangeIfNeeded();
-        swipeView.currentItem.resetViewPosition();
-        swipeView.currentItem.decrementCurrentIndex();
+        const currentView = swipeView.currentItem as InfiniteList;
+        currentView.finishChangeIfNeeded();
+        currentView.resetViewPosition();
+        currentView.decrementCurrentIndex();
     }
 
     /**
@@ -179,7 +181,7 @@ Item {
     }
 
     Connections {
-        target: eventPluginsManager
+        target: root.eventPluginsManager
         function onPluginsChanged() {
             root.todayAuxilliaryText = "";
         }

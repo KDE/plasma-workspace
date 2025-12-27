@@ -6,7 +6,6 @@
 
 import QtQuick
 import QtQuick.Controls as QQC2
-import QtQuick.Layouts
 import QtQuick.Templates as T
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.lookandfeel
@@ -100,9 +99,9 @@ Kirigami.AbstractApplicationWindow {
     }
 
     Binding {
-        target: dialogButtonBox?.standardButton(QQC2.DialogButtonBox.Ok) ?? null
+        target: root.dialogButtonBox?.standardButton(QQC2.DialogButtonBox.Ok) ?? null
         property: "enabled"
-        when: dialogButtonBox?.standardButtons & QQC2.DialogButtonBox.Ok
+        when: root.dialogButtonBox?.standardButtons & QQC2.DialogButtonBox.Ok
         value: root.acceptable
     }
 
@@ -134,7 +133,7 @@ Kirigami.AbstractApplicationWindow {
         focus: true
 
         function accept() {
-            const button = dialogButtonBox.standardButton(QQC2.DialogButtonBox.Ok);
+            const button = root.dialogButtonBox.standardButton(QQC2.DialogButtonBox.Ok);
             if (button?.enabled) {
                 root.accept()
             }

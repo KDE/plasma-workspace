@@ -150,16 +150,16 @@ PlasmaComponents.AbstractButton {
     Loader {
         anchors.fill: parent
 
-        active: today || selected || dayStyle.hovered || dayStyle.activeFocus
+        active: dayStyle.today || dayStyle.selected || dayStyle.hovered || dayStyle.activeFocus
         asynchronous: true
         z: -1
 
         sourceComponent: PlasmaExtras.Highlight {
             hovered: true
             opacity: {
-                if (today) {
+                if (dayStyle.today) {
                     return 1;
-                } else if (selected) {
+                } else if (dayStyle.selected) {
                     return 0.6;
                 } else if (dayStyle.hovered) {
                     return 0.3;
@@ -275,8 +275,7 @@ PlasmaComponents.AbstractButton {
                     anchors.bottom: subDayLabel.parent.bottom
                 }
                 PropertyChanges {
-                    target: subDayLabel
-                    opacity: 1
+                    subDayLabel.opacity: 1
                 }
             }
 

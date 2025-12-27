@@ -17,7 +17,7 @@ ContainmentLayoutManager.ResizeHandle {
 
     Kirigami.ShadowedRectangle {
         anchors.fill: parent
-        color: resizeBlocked ? Kirigami.Theme.negativeTextColor : Kirigami.Theme.backgroundColor
+        color: handle.resizeBlocked ? Kirigami.Theme.negativeTextColor : Kirigami.Theme.backgroundColor
 
         radius: width
 
