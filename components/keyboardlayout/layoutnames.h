@@ -1,12 +1,14 @@
 #pragma once
 
 #include <QMetaType>
+#include <qqmlregistration.h>
 
 class QDBusArgument;
 
 class LayoutNames
 {
     Q_GADGET
+    QML_VALUE_TYPE(layoutNames)
 
     Q_PROPERTY(QString shortName MEMBER shortName)
     Q_PROPERTY(QString displayName MEMBER displayName)

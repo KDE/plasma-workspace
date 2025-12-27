@@ -8,7 +8,7 @@ qt_add_dbus_interface(keyboardlayoutplugin_SRCS "${KWIN_VIRTUALKEYBOARD_INTERFAC
 
 target_sources(keyboardlayoutplugin PRIVATE
     keyboardlayout.cpp keyboardlayout.h
-    layoutnames.cpp
+    layoutnames.cpp layoutnames.h
     virtualkeyboard.cpp virtualkeyboard.h
     ${keyboardlayoutplugin_SRCS}
 )
