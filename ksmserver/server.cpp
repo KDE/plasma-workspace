@@ -609,7 +609,7 @@ KSMServer::KSMServer(InitFlags flags)
     IceAddConnectionWatch(KSMWatchProc, (IcePointer)this);
 
     KSMListener *con = nullptr;
-    for (int i = 0; i < numTransports; i++) {
+    for (int i = 0; i < count; i++) {
         fcntl(IceGetListenConnectionNumber(listenObjs[i]), F_SETFD, FD_CLOEXEC);
         con = new KSMListener(listenObjs[i]);
         listener.append(con);
@@ -1061,10 +1061,10 @@ void KSMServer::tryRestore()
         // We only discard the entries here because a violating app will get all entries disabled, not just the ones in
         // excess. So we need to loop all entries twice: once to establish the in-excess apps, and again to actually start
         // (or not).
-        const bool dontStart = std::ranges::any_of(dontStartEntries, [&entry](const auto &dontStartEntry) {
-            return dontStartEntry.clientId == entry.clientId;
+        const bool startWithoutRestoration = std::ranges::any_of(dontStartEntries, [&entry](const auto &dontStartEntry) {
+            return !entry.restartCommand.isEmpty() && dontStartEntry.appName == entry.restartCommand.first();
         });
-        if (dontStart) {
+        if (startWithoutRestoration) {
             continue;
         }
 

@@ -106,6 +106,9 @@ StatusNotifierItemSource::StatusNotifierItemSource(const QString &notifierItemId
         connect(m_statusNotifierItemInterface.get(), &OrgKdeStatusNotifierItem::NewToolTip, this, &StatusNotifierItemSource::refresh);
         connect(m_statusNotifierItemInterface.get(), &OrgKdeStatusNotifierItem::NewStatus, this, &StatusNotifierItemSource::syncStatus);
         connect(m_statusNotifierItemInterface.get(), &OrgKdeStatusNotifierItem::NewMenu, this, &StatusNotifierItemSource::refreshMenu);
+        if (m_customIconLoader) {
+            connect(m_customIconLoader, &KIconLoader::iconChanged, this, &StatusNotifierItemSource::reloadIcon, Qt::UniqueConnection);
+        }
         refresh();
     }
 
@@ -259,6 +262,7 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
         if (!path.isEmpty() && path != m_iconThemePath) {
             if (!m_customIconLoader) {
                 m_customIconLoader = new KIconLoader(QString(), QStringList(), this);
+                connect(m_customIconLoader, &KIconLoader::iconChanged, this, &StatusNotifierItemSource::reloadIcon, Qt::UniqueConnection);
             }
             // FIXME: If last part of path is not "icons", this won't work!
             QString appName;
@@ -273,11 +277,6 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
 
             // add app dir requires an app name, though this is completely unused in this context
             m_customIconLoader->addAppDir(appName.size() ? appName : QStringLiteral("unused"), path);
-
-            connect(m_customIconLoader, &KIconLoader::iconChanged, this, [=, this] {
-                m_customIconLoader->reconfigure(appName, QStringList(path));
-                m_customIconLoader->addAppDir(appName.size() ? appName : QStringLiteral("unused"), path);
-            });
         }
         m_iconThemePath = path;
 
@@ -406,25 +405,25 @@ void StatusNotifierItemSource::reloadIcon()
 
 QPixmap StatusNotifierItemSource::KDbusImageStructToPixmap(const KDbusImageStruct &image) const
 {
-    // swap from network byte order if we are little endian
-    if (QSysInfo::ByteOrder == QSysInfo::LittleEndian) {
-        uint *uintBuf = (uint *)image.data.data();
-        for (uint i = 0; i < image.data.size() / sizeof(uint); ++i) {
-            *uintBuf = ntohl(*uintBuf);
-            ++uintBuf;
-        }
-    }
-    if (image.width == 0 || image.height == 0) {
+    if (image.width == 0 || image.height == 0 || image.data.isEmpty()) {
         return {};
     }
 
-    // avoid a deep copy of the image data
-    // we need to keep a reference to the image.data alive for the lifespan of the image, even if the image is copied
-    // we create a new QByteArray with a shallow copy of the original data on the heap, then delete this in the QImage cleanup
+    // avoid a deep copy of the image data initially
     auto dataRef = new QByteArray(image.data);
 
+    // swap from network byte order if we are little endian
+    if (QSysInfo::ByteOrder == QSysInfo::LittleEndian) {
+        dataRef->detach(); // Ensure we have our own copy before modifying
+        uint *uintBuf = reinterpret_cast<uint *>(dataRef->data());
+        for (int i = 0; i < dataRef->size() / static_cast<int>(sizeof(uint)); ++i) {
+            uintBuf[i] = ntohl(uintBuf[i]);
+        }
+    }
+
+    // QImage will take ownership of the heap-allocated QByteArray and delete it when finished
     QImage iconImage(
-        reinterpret_cast<const uchar *>(dataRef->data()),
+        reinterpret_cast<const uchar *>(dataRef->constData()),
         image.width,
         image.height,
         QImage::Format_ARGB32,
@@ -432,6 +431,7 @@ QPixmap StatusNotifierItemSource::KDbusImageStructToPixmap(const KDbusImageStruc
             delete static_cast<QByteArray *>(ptr);
         },
         dataRef);
+
     return QPixmap::fromImage(std::move(iconImage));
 }
 
@@ -544,9 +544,10 @@ void StatusNotifierItemSource::contextMenu(int x, int y)
 
 void StatusNotifierItemSource::provideXdgActivationToken(const QString &token)
 {
-    if (m_statusNotifierItemInterface && m_statusNotifierItemInterface->isValid()) {
+    if (m_valid) {
         m_statusNotifierItemInterface->ProvideXdgActivationToken(token);
     }
 }
 
 #include "moc_statusnotifieritemsource.cpp"
+```
