@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" 
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
 "dtd/kdedbx45.dtd" [
   <!ENTITY kappname "&klipper;">
   <!ENTITY package "kdebase">
@@ -323,8 +323,7 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 >Altijd opslaan in geschiedenis</guilabel
 > is niet beschikbaar als synchronisatie van selectie/klembord is uitgeschakeld &dash; in dat geval wordt de selectie nooit automatisch opgeslagen in de klembordgeschiedenis. Zie <xref linkend="clipboard-modes"/>. </para>
 </listitem>
-</varlistentry
-> 
+</varlistentry>
 
 <varlistentry>
 <term
@@ -343,8 +342,7 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 >Altijd in geschiedenis opslaan</guilabel
 > is niet beschikbaar als synchronisatie van selectie/klembord is uitgezet &dash; in dat geval wordt de selectie nooit automatisch opgeslagen in de klembordgeschiedenis. Zie <xref linkend="clipboard-modes"/>. </para>
 </listitem>
-</varlistentry
-> 
+</varlistentry>
 
 </variablelist>
 
@@ -375,48 +373,6 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 <listitem
 ><para
 >Indien geselecteerd zal wanner er een ingang uit de geschiedenis van &klipper; geselecteerd wordt, nogmaals het actie-venster getoond worden, indien van toepassing.</para>
-</listitem>
-</varlistentry>
-
-<varlistentry
-><term
-><guibutton
->Vensters uitsluiten</guibutton
-></term>
-<listitem
-><para
->Het venster <guilabel
->Acties deactiveren voor vensters van het type WM_CLASS</guilabel
-> verschijnt.</para>
-<para
->Sommige programma's, zoals &konqueror;, gebruiken het klembord ook intern. Indien u ongewenste &klipper;-vensters krijgt wanneer u een bepaalde toepassing gebruikt, kunt u het volgende doen:</para>
-
-<orderedlist>
-<listitem
-><para
->Open de toepassing.</para
-></listitem>
-<listitem
-><para
->Vanuit een terminal, start u <userinput
-><command
->xprop</command
-> | <command
->grep</command
-> <parameter
->WM_CLASS</parameter
-></userinput
-> en vervolgens klikt u op het venster van de toepassing.</para
-></listitem
-> 
-<listitem
-><para
->De eerste tekst na het '=' teken is de tekst die u dient in te voeren.</para
-></listitem>
-</orderedlist>
-
-<para
->Wanneer de WM_CLASS is toegevoegd, zullen er geen acties meer veroorzaakt worden door vensters van die toepassing.</para>
 </listitem>
 </varlistentry>
 
@@ -479,8 +435,7 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 >linker</mousebutton
 >muisknop te klikken in de kolom <guilabel
 >Beschrijving</guilabel
->.</para
->   
+>.</para>
 
 <note
 ><para
@@ -612,7 +567,7 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 &meld.fouten;&vertaling.tom;&vertaling.sander; &underFDL; &underGPL; </chapter>
 
 
-&documentation.index; 
+&documentation.index;
 
 </book>
 <!--
