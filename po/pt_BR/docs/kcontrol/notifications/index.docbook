@@ -1,0 +1,382 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Brazilian-Portuguese "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmnotify" lang="&language;">
+<title
+>Configurações das notificações do sistema</title>
+<articleinfo>
+
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+><personname
+><firstname
+>Kai Uwe</firstname
+> <surname
+>Broulik</surname
+></personname
+> <email
+>kde@broulik.de</email
+></author>
+<othercredit role="translator"
+><firstname
+>Marcus</firstname
+><surname
+>Gama</surname
+><affiliation
+><address
+><email
+>marcus.gama@gmail.com</email
+></address
+></affiliation
+><contrib
+>Tradução</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>16/04/2021</date>
+<releaseinfo
+>Plasma 5.21</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>Configurações do sistema</keyword>
+<keyword
+>notificações do sistema</keyword>
+<keyword
+>notificação</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="sys-notify">
+<title
+>Configurações das notificações do sistema</title>
+
+<para
+>O &plasma;, como todo aplicativo, necessita informar ao usuário quando problemas ocorrem, quando uma tarefa é finalizada ou quando algo acontece. O &plasma; usa um conjunto de <quote
+>Notificações do sistema</quote
+> para manter o usuário informado do que está acontecendo.</para>
+
+<para
+>Usando este módulo você pode determinar o que o &plasma; faz para comunicar cada evento.</para>
+
+<sect2 id="notification-settings">
+<title
+>Configurações das notificações</title>
+
+<sect3 id="do-not-disturb">
+<title
+>Modo "Não perturbe"</title>
+
+    <para
+>Este modo desativa todas as notificações visuais e a maioria das notificações sonoras para permitir que você se concentre na sua tarefa atual. As configurações nesta seção permitem que você configure em quais circunstâncias o &plasma; ativa automaticamente o modo "Não perturbe".</para>
+
+    <variablelist>
+
+    <varlistentry>
+    <term
+><guiicon
+>Ativar quando as telas estiverem espelhadas</guiicon
+></term>
+    <listitem
+><para
+>Ativa automaticamente o modo "Não perturbe" ao espelhar suas telas, por exemplo, durante uma apresentação.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Ativar durante o compartilhamento de tela</guiicon
+></term>
+    <listitem
+><para
+>Ativa automaticamente o modo "Não perturbe" quando você compartilhar suas telas, por exemplo, durante uma aula online.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Mostrar notificações críticas</guiicon
+></term>
+    <listitem
+><para
+>A opção de exibir notificações críticas, como "sua bateria está quase vazia", ​​mesmo quando o modo "Não perturbe" estiver ativado.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Alternar com:</guiicon
+></term>
+    <listitem
+><para
+>Um atalho global que você pode pressionar para ativar e desativar o modo "Não perturbe" a qualquer momento.</para
+></listitem>
+    </varlistentry>
+
+    </variablelist>
+
+</sect3>
+
+<sect3 id="notification-filters">
+    <title
+>Filtros</title>
+
+    <variablelist>
+
+    <varlistentry>
+    <term
+>Notificações importantes: <guiicon
+>Manter sempre no topo</guiicon
+></term>
+    <listitem
+><para
+>Mantém as notificações importantes, como a de bateria quase descarregada, sempre visíveis. Isso garante que elas também fiquem visíveis enquanto você assiste a um vídeo em tela cheia ou faz uma apresentação.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+>Notificações normais: <guiicon
+>Manter sempre no topo</guiicon
+></term>
+    <listitem
+><para
+>Mantém as notificações normais, como mensagens, sempre visíveis. Isso garante que elas também estarão visíveis enquanto você assiste a um vídeo em tela cheia ou faz uma apresentação.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+>Notificações de baixa prioridade: <guiicon
+>Mostrar pop-up</guiicon
+> e <guiicon
+>Mostrar no histórico</guiicon
+></term>
+    <listitem
+><para
+>Se as notificações de baixa prioridade, como as alterações de acompanhamento no seu reprodutor de mídia, serão exibidas como pop-ups ou no histórico, respectivamente.</para
+></listitem>
+    </varlistentry>
+
+    </variablelist>
+</sect3>
+
+<sect3 id="notification-behavior">
+    <title
+>Comportamento</title>
+
+    <variablelist>
+
+    <varlistentry>
+    <term
+>Pop-up: <guiicon
+>Mostrar próxima ao ícone de notificação</guiicon
+></term>
+    <listitem
+><para
+>Exibir notificações pop-up próximas ao ícone de notificação localizado no seu painel.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Escolher posição personalizada...</guiicon
+></term>
+    <listitem
+><para
+>Permite escolher um canto fixo da tela onde as notificações pop-up serão posicionadas.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+        <term
+><guiicon
+>Ocultar após:</guiicon
+></term>
+    <listitem
+><para
+>Após quantos segundos a notificação pop-up desaparecerá automaticamente? Você pode escolher entre 1 e 120 segundos.</para
+></listitem>
+    </varlistentry>
+
+    </variablelist>
+</sect3>
+
+<sect3 id="progress-and-badges">
+    <title
+>Progresso do aplicativo e emblemas</title>
+
+    <sect4 id="application-progress">
+        <title
+>Progresso do aplicativo</title>
+
+        <para
+>As opções nesta seção controlam como o progresso do aplicativo, como copiar ou baixar um arquivo, é apresentado.</para>
+
+        <variablelist>
+
+        <varlistentry>
+        <term
+><guiicon
+>Mostrar no gerenciador de tarefas</guiicon
+></term>
+        <listitem
+><para
+>Coloriza a janela no painel com base no progresso.</para
+></listitem>
+        </varlistentry>
+
+        <varlistentry>
+        <term
+><guiicon
+>Mostrar nas notificações</guiicon
+></term>
+        <listitem
+><para
+>Exibe uma notificação pop-up durante o processo.</para
+></listitem>
+        </varlistentry>
+
+        <varlistentry>
+        <term
+><guiicon
+>Manter a mensagem aberta durante o progresso</guiicon
+></term>
+        <listitem
+><para
+>Se a janela pop-up deve permanecer visível durante todo o processo ou ocultar-se automaticamente. Ela sempre será exibida novamente quando a tarefa for concluída ou falhar.</para
+></listitem>
+        </varlistentry>
+
+        </variablelist>
+    </sect4>
+
+    <sect4 id="badges">
+        <title
+>Emblemas das notificações:</title>
+
+        <variablelist>
+
+        <varlistentry>
+        <term
+><guiicon
+>Mostrar no gerenciador de tarefas</guiicon
+></term>
+        <listitem
+><para
+>Permite que os aplicativos exibam emblemas, como a contagem de mensagens não lidas, no painel.</para
+></listitem>
+        </varlistentry>
+
+        </variablelist>
+    </sect4>
+
+</sect3>
+
+</sect2>
+
+<sect2 id="application-settings">
+<title
+>Configurações do aplicativo</title>
+
+<para
+>Clicar no botão <guilabel
+>Configurar...</guilabel
+> no final da lista abre a página de configurações do aplicativo, que permite configurar o comportamento das notificações para cada aplicativo e serviço individualmente.</para>
+
+<para
+>Use a barra lateral à esquerda para escolher uma entrada da categoria <guilabel
+>Aplicativos</guilabel
+> ou <guilabel
+>Serviços do sistema</guilabel
+>.</para>
+
+<para
+>Avisos gerais, bem como sons de inicialização e desligamento, estão localizados no serviço <guilabel
+>Espaço de Trabalho Plasma</guilabel
+>.</para>
+
+<para
+>Aplicativos que não fornecem identificação adequada, como scripts de shell, podem ser configurados usando a entrada <guilabel
+>Outros aplicativos</guilabel
+>.</para>
+
+<variablelist>
+
+    <varlistentry>
+    <term
+><guiicon
+>Mostrar mensagens</guiicon
+></term>
+    <listitem
+><para
+>Se este aplicativo pode exibir notificações popup.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Mostrar no modo não perturbe</guiicon
+></term>
+    <listitem
+><para
+>Se este aplicativo pode exibir notificações popup mesmo quando o modo "Não perturbe" estiver ativado.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Mostrar no histórico</guiicon
+></term>
+    <listitem
+><para
+>Se as notificações deste aplicativo serão mantidas no histórico de notificações.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Mostrar emblemas das notificações</guiicon
+></term>
+    <listitem
+><para
+>Se este aplicativo pode exibir emblemas, como uma contagem de mensagens não lidas, no painel.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>Configurar eventos...</guiicon
+></term>
+    <listitem
+><para
+>Para aplicativos &kde; você também pode configurar cada notificação individualmente.</para
+></listitem>
+    </varlistentry>
+
+</variablelist>
+
+</sect2>
+
+</sect1>
+
+</article>

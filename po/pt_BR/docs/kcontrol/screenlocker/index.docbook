@@ -29,11 +29,11 @@
 ></othercredit
 > 
 </authorgroup>
-
+<!--FIXME code in plasma/kscreenlocker - docbook in plasma/plasma-workspace -->
 <date
->20/05/2015</date>
+>02/07/2020</date>
 <releaseinfo
->Plasma 5.3</releaseinfo>
+>Plasma 5.20</releaseinfo>
 
 <keywordset>
 <keyword
@@ -46,22 +46,31 @@
 >bloqueador de sessão</keyword>
 </keywordset>
 </articleinfo>
-<!--https://bugs.kde.org/show_bug.cgi?id=317156 does this effect screenlock in kf5?-->
 <para
->Com este módulo é possível determinar a rapidez com que a tela é bloqueada e adicionar/remover a senha de proteção.</para>
+>Com este módulo, você pode determinar quanto tempo deve passar antes que o bloqueador de tela seja ativado, configurar o período de tolerância para desbloquear a tela sem senha e escolher a aparência do seu bloqueador de tela.</para>
 
 <para
 >Na parte superior encontra-se uma opção para bloqueio da tela <guilabel
->Bloquear a tela automaticamente após</guilabel
+>Bloquear tela automaticamente</guilabel
 > e um campo incremental que define o período de inatividade, em minutos, antes de iniciar o bloqueio. Você pode indicar qualquer número positivo neste campo.</para>
 
 <para
+>A caixa de seleção <guilabel
+>Após sair do modo de suspensão</guilabel
+> pode ser usada para ativar ou desativar o bloqueio da tela da área de trabalho após a suspensão do sistema.</para>
+
+<para
 >Abaixo desta opção existe outra chamada <guilabel
->Pedir uma senha após o bloqueio</guilabel
->. Se esta opção estiver assinalada, quando clicar em uma tecla ou botão do mouse, de forma a terminar o bloqueio ao fim do tempo definido no campo incremental e voltar ao seu trabalho, será necessário informar uma senha. A senha é a mesma usada para autenticação na máquina. </para>
+>Permitir desbloquear sem senha para</guilabel
+>. Quando você pressionar uma tecla ou clicar um botão do mouse, de forma a terminar o bloqueio ao fim do tempo definido no campo incremental e voltar ao seu trabalho, não será necessário informar uma senha. A senha é a mesma usada para autenticação na máquina.</para>
 
 <para
 >O bloqueio manual da tela faz com que a proteção por senha seja aplicada imediatamente.</para>
+
+<para
+>Você pode definir um atalho para bloquear a tela usando o campo <guilabel
+>Atalho de teclado</guilabel
+>.</para>
 
 <para
 >A combinação de teclas padrão <keycombo action="simul"
@@ -71,13 +80,20 @@
 > oferece uma forma rápida de bloquear a tela manualmente.</para>
 
 <para
->Assinale a opção <guilabel
->Bloquear a tela ao reativar</guilabel
-> se quiser um sistema protegido por senha quando reativá-lo a partir de um estado de suspensão/hibernação.</para>
+>Se você quiser alterar o plano de fundo com a tela bloqueada, pressione o botão <guibutton
+>Configurar</guibutton
+> ao lado do rótulo <guilabel
+>Aparência</guilabel
+>. Em seguida, você poderá alterar o <guilabel
+>Tipo de papel de parede</guilabel
+>.</para>
 
 <para
->Se quiser alterar o plano de fundo no estado bloqueado, clique no botão de imagem à direita do <guilabel
->Plano de fundo personalizado</guilabel
->, de modo a abrir um menu com ações para carregar uma imagem a partir de um arquivo ou limpar a imagem que está em uso.</para>
+>Você pode selecionar uma <guilabel
+>Cor simples</guilabel
+> como tipo de papel de parede.</para>
+
+<para
+>Alternativamente, use uma única imagem ou uma apresentação de slides com imagens de uma pasta ou carregue novos papéis de parede da Internet.</para>
 
 </article>

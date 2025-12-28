@@ -6,15 +6,17 @@
 > <!-- change language only here -->
 ]>
 
-<article id="translations" lang="&language;">
+<article id="region_language" lang="&language;">
 <articleinfo>
 <title
->Traduções</title>
+>Região e idioma</title>
 <authorgroup>
 <author
 >&Mike.McBride; &Mike.McBride.mail;</author>
 <author
 >&Krishna.Tateneni; &Krishna.Tateneni.mail;</author>
+<author
+>&Han.Young; &Han.Young.mail;</author>
 <othercredit role="translator"
 ><firstname
 >André Marcelo</firstname
@@ -32,10 +34,10 @@
 > 
  </authorgroup>
 
-	  <date
->18/05/2015</date>
-	  <releaseinfo
->Plasma 5.3</releaseinfo>
+          <date
+>23/06/2022</date>
+          <releaseinfo
+>Plasma 5.26</releaseinfo>
 
 	  <keywordset>
 		<keyword
@@ -49,67 +51,65 @@
 		<keyword
 >idioma</keyword>
 		<keyword
+>número</keyword>
+                <keyword
 >tradução</keyword>
+		<keyword
+>monetário</keyword>
 	  </keywordset>
 </articleinfo>
 
 <para
->Nesta página você pode definir os idiomas preferidos que serão exibidos no espaço de trabalho e aplicativos do &kde;. </para>
+>Nesta página você pode definir os idiomas e formatos preferidos que serão exibidos no espaço de trabalho e aplicativos do &plasma;. </para>
 
 <para
->O &kde; Workspace e Applications são escritos em inglês americano e são traduzidos para diversos idiomas por equipes de voluntários. Estas traduções precisam ser instaladas antes que você possa selecioná-las. A lista de <guilabel
->Idiomas disponíveis</guilabel
-> mostra os nomes dos idiomas das traduções das &systemsettings; instaladas e disponíveis no seu sistema. Se o idioma que deseja usar não estiver na lista, então você precisará instalá-lo usando o método normal do seu sistema. </para>
+>Na maioria dos casos, você pode simplesmente selecionar o idioma e todas as opções serão configuradas de acordo. O ambiente de trabalho &plasma; e os aplicativos do &kde; são escritos em inglês americano e são traduzidos para diversos idiomas por equipes de voluntários. Estas traduções precisam ser instaladas antes que você possa selecioná-las. </para>
 <note
 ><para
->Certifique-se de que tem instalados os pacotes de idiomas do &kde; ou das traduções dos idiomas que deseja usar.</para>
+>Certifique-se de que tem instalados os pacotes de idiomas do &plasma; ou das traduções dos idiomas que deseja usar.</para>
 <para
->Como o &kde; utiliza as bibliotecas do &Qt;, você também precisará das traduções do &Qt; para os idiomas selecionados, para ter uma interfacecompletamente traduzida.</para
+>Como o &plasma; utiliza as bibliotecas do &Qt;, você também precisará das traduções do &Qt; para os idiomas selecionados, para ter uma &GUI; completamente traduzida.</para
 ></note>
-<!--FIXME 
-Toooltip in GUI about available languages is wrong as well
--->
+
 
 <para
->A lista de <guilabel
->Idiomas preferidos</guilabel
-> mostra os nomes dos idiomas que possuem informações de localização e que podem serão usados ao exibir o espaço de trabalho e aplicativos do &kde;. Uma vez que nem todos os componentes do espaço de trabalho e aplicativos do KDE podem estar traduzidos em todos os idiomas, o &kde; tentará encontrar as traduções mais adequadas seguindo a lista de <guilabel
->Idiomas preferidos</guilabel
-> até encontrar uma tradução. Se nenhum dos seus idiomas preferidos tiver uma tradução, então o inglês americano será usado. </para>
+>Em cada barra de seleção, você pode ver exemplos de como cada configuração se parece e quais unidades de medida são usadas. Além de números, você pode ver como os valores monetários, datas e horários nos formatos longo e curto são exibidos. Ao alterar qualquer uma das configurações, a pré-visualização mostra os efeitos das alterações antes de aplicá-las. </para>
 
 <para
->Você pode adicionar um idioma à lista de <guilabel
->Idiomas preferidos</guilabel
->, selecionando-o nas <guilabel
->Idiomas disponíveis</guilabel
-> e depois clicando no botão Adicionar. Se tiver a lista ativa, basta digitar a primeira letra do idioma desejado. Digite a primeira letra novamente para percorrer todos os itens da lista. </para>
-<para
->Você pode remover um idioma da lista de <guilabel
->Idiomas preferidos</guilabel
-> selecionando-o e então clicando no botão com uma seta para remover. Você pode mudar a ordem de preferência na lista de <guilabel
->Idiomas preferidos</guilabel
-> selecionando um idioma e clicando nos botões com seta para cima e para baixo. </para>
+>Clicar no botão <guilabel
+>Adicionar mais...</guilabel
+> na subpágina de idiomas mostrará a lista de idiomas disponíveis e, inicialmente, exibirá o idioma selecionado. Se a seleção mostrar <quote
+>Nenhum idioma configurado</quote
+>, significa que você não definiu um país e está usando o idioma padrão definido pelo sistema. Se o idioma que você deseja usar não for exibido nesta lista, você precisará instalá-lo usando o método usual do seu sistema. </para>
 
 <para
->Apenas os idiomas apresentados em <guilabel
->Idiomas preferidos</guilabel
-> e em <guilabel
->Idiomas disponíveis</guilabel
-> serão oferecidos como opções para o <guilabel
->Idioma primário</guilabel
+>Você pode remover um idioma da lista principal selecionando-o e clicando no  <inlinemediaobject
+><imageobject
+><imagedata fileref="list-remove.png" format="PNG"/> </imageobject
+></inlinemediaobject
+> ícone. Você pode alterar a ordem de preferência na lista selecionando um idioma e clicando no <inlinemediaobject
+><imageobject
+> <imagedata fileref="go-top.png" format="PNG"/> </imageobject
+></inlinemediaobject
+> ícone. </para>
+
+<para
+>Caso você precise de configurações de formato individuais diferentes, você pode selecionar a localidade para <guilabel
+>Números</guilabel
+>, <guilabel
+>Hora</guilabel
+>, <guilabel
+>Moeda</guilabel
 > e <guilabel
->Idioma secundário</guilabel
-> na caixa de diálogo <guilabel
->Mudar o idioma do aplicativo</guilabel
-> do menu <guimenu
->Ajuda</guimenu
+>Unidades de medida</guilabel
 >. </para>
 
 <note>
 <para
->As configurações das Traduções e Formatos são independentes. A mudança de um idioma <emphasis
->não</emphasis
-> altera automaticamente as configurações dos números, moeda, &etc;, do país ou região correspondentes. </para>
+>Anteriormente, Idioma e Formatos eram configurações independentes. Desde o &plasma; 5.26, eles foram mesclados neste módulo chamado Região e idioma. Alterar um idioma <emphasis
+>altera automaticamente</emphasis
+> as configurações de números, moeda &etc; para o país ou região correspondente. No entanto, essa alteração não quebra a configuração antiga. O arquivo de configuração ainda está localizado em <emphasis
+>~/.config/plasma-localerc</emphasis
+>. </para>
 </note>
-
 </article>
