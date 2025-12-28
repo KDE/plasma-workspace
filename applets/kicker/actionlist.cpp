@@ -228,7 +228,8 @@ QVariantList jumpListActions(KService::Ptr service)
             continue;
         }
 
-        QVariantMap item = createActionItem(action.text(), action.icon(), QStringLiteral("_kicker_jumpListAction"), QVariant::fromValue(action));
+        const QString text = action.text().replace(QLatin1Char('&'), QStringLiteral("&&"));
+        QVariantMap item = createActionItem(text, action.icon(), QStringLiteral("_kicker_jumpListAction"), QVariant::fromValue(action));
 
         list << item;
     }
