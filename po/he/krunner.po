@@ -3,118 +3,118 @@
 #
 # Elkana Bardugo <ttv200@gmail.com>, 2016.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
+# SPDX-FileCopyrightText: 2025 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: krunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2017-05-16 06:54-0400\n"
-"Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
-"Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2025-12-27 12:27+0200\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Zanata 3.9.6\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "אלקנה ברדוגו"
+msgstr "אלקנה ברדוגו,צוות התרגום של KDE ישראל"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "ttv200@gmail.com"
+msgstr "ttv200@gmail.com,kde-l10n-he@kde.org"
 
 #: main.cpp:57 view.cpp:47
-#, fuzzy, kde-format
-#| msgid "krunner"
+#, kde-format
 msgid "KRunner"
-msgstr "krunner"
+msgstr "KRunner"
 
 #: main.cpp:57
 #, kde-format
 msgid "Run Command interface"
-msgstr "הרץ ממשק פקודות"
+msgstr "הרצת ממשק פקודות"
 
 #: main.cpp:62
 #, kde-format
 msgid "Use the clipboard contents as query for KRunner"
-msgstr ""
+msgstr "להשתמש בתוכן לוח הגזירים כשאילתה ל־KRunner"
 
 #: main.cpp:63
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
-msgstr ""
+msgstr "להפעיל את KRunner ברקע, לא להציג אותו."
 
 #: main.cpp:64
 #, kde-format
 msgid "Replace an existing instance"
-msgstr ""
+msgstr "החלפת עותק קיים"
 
 #: main.cpp:69
 #, kde-format
 msgid "The query to run, only used if -c is not provided"
-msgstr ""
+msgstr "השאילתה להרצה, ייעשה שימוש רק אם לא סופק ‎-c"
 
 #: qml/RunCommand.qml:75
 #, kde-format
 msgid "Configure"
-msgstr ""
+msgstr "הגדרה"
 
 #: qml/RunCommand.qml:76
 #, kde-format
 msgid "Configure KRunner Behavior"
-msgstr ""
+msgstr "הגדרת התנהגות KRunner"
 
 #: qml/RunCommand.qml:79
 #, kde-format
 msgid "Configure KRunner…"
-msgstr ""
+msgstr "הגדרת KRunner…"
 
 #: qml/RunCommand.qml:91
 #, kde-format
 msgctxt "Textfield placeholder text, query specific KRunner plugin"
 msgid "Search '%1'…"
-msgstr ""
+msgstr "חיפוש ‚%1’…"
 
 #: qml/RunCommand.qml:92
 #, kde-format
 msgctxt "Textfield placeholder text"
 msgid "Search…"
-msgstr ""
+msgstr "חיפוש…"
 
 #: qml/RunCommand.qml:228 qml/RunCommand.qml:229 qml/RunCommand.qml:231
 #, kde-format
 msgid "Show Usage Help"
-msgstr ""
+msgstr "הצגת עזרה בשימוש"
 
 #: qml/RunCommand.qml:239
 #, kde-format
 msgid "Pin"
-msgstr ""
+msgstr "הצמדה"
 
 #: qml/RunCommand.qml:240
 #, kde-format
 msgid "Pin Search"
-msgstr ""
+msgstr "הצמדת חיפוש"
 
 #: qml/RunCommand.qml:242
 #, kde-format
 msgid "Keep Open"
-msgstr ""
+msgstr "להשאיר פתוח"
 
 #: qml/RunCommand.qml:320 qml/RunCommand.qml:325
 #, kde-format
 msgid "Recent Queries"
-msgstr ""
+msgstr "שאילתות אחרונות"
 
 #: qml/RunCommand.qml:323
 #, kde-format
 msgid "Remove"
-msgstr ""
+msgstr "הסרה"
 
 #~ msgid "krunner"
 #~ msgstr "krunner"
