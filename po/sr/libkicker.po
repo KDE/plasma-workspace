@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-14 00:44+0000\n"
+"POT-Creation-Date: 2025-12-29 00:45+0000\n"
 "PO-Revision-Date: 2017-09-25 19:53+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -43,7 +43,7 @@ msgstr "Прикачи на менаџер задатака"
 msgid "Add to Panel (Widget)"
 msgstr "Додај на панел (виџет)"
 
-#: actionlist.cpp:315 rootmodel.cpp:538
+#: actionlist.cpp:316 rootmodel.cpp:538
 #, fuzzy, kde-format
 #| msgid "Recent Documents"
 msgid "Recent Files"
@@ -51,19 +51,19 @@ msgstr ""
 "Недавни документи|/|$[својства ген 'недавних докумената' аку 'недавне "
 "документе']"
 
-#: actionlist.cpp:325
+#: actionlist.cpp:326
 #, fuzzy, kde-format
 #| msgid "Forget Recent Documents"
 msgid "Forget Recent Files"
 msgstr "Заборави недавне документе"
 
-#: actionlist.cpp:392
+#: actionlist.cpp:393
 #, fuzzy, kde-format
 #| msgid "Edit Application..."
 msgid "Edit Application…"
 msgstr "Уреди програм..."
 
-#: actionlist.cpp:424
+#: actionlist.cpp:425
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"

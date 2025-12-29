@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-14 00:44+0000\n"
+"POT-Creation-Date: 2025-12-29 00:45+0000\n"
 "PO-Revision-Date: 2025-02-22 07:41+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -45,22 +45,22 @@ msgstr "Fest til oppgavelinja"
 msgid "Add to Panel (Widget)"
 msgstr "Legg til panel (skjermelement)"
 
-#: actionlist.cpp:315 rootmodel.cpp:538
+#: actionlist.cpp:316 rootmodel.cpp:538
 #, kde-format
 msgid "Recent Files"
 msgstr "Nylig brukte filer"
 
-#: actionlist.cpp:325
+#: actionlist.cpp:326
 #, kde-format
 msgid "Forget Recent Files"
 msgstr "Glem nylig brukte filer"
 
-#: actionlist.cpp:392
+#: actionlist.cpp:393
 #, kde-format
 msgid "Edit Application…"
 msgstr "Rediger program …"
 
-#: actionlist.cpp:424
+#: actionlist.cpp:425
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"

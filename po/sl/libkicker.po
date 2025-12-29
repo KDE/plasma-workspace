@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-14 00:44+0000\n"
+"POT-Creation-Date: 2025-12-29 00:45+0000\n"
 "PO-Revision-Date: 2025-01-07 07:00+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -45,22 +45,22 @@ msgstr "Pripni v upravljalnik opravil"
 msgid "Add to Panel (Widget)"
 msgstr "Dodaj na pult (gradnik)"
 
-#: actionlist.cpp:315 rootmodel.cpp:538
+#: actionlist.cpp:316 rootmodel.cpp:538
 #, kde-format
 msgid "Recent Files"
 msgstr "Nedavne datoteke"
 
-#: actionlist.cpp:325
+#: actionlist.cpp:326
 #, kde-format
 msgid "Forget Recent Files"
 msgstr "Pozabi nedavne datoteke"
 
-#: actionlist.cpp:392
+#: actionlist.cpp:393
 #, kde-format
 msgid "Edit Application…"
 msgstr "Uredi program…"
 
-#: actionlist.cpp:424
+#: actionlist.cpp:425
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
