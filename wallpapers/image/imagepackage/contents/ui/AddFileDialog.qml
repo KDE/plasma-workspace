@@ -3,6 +3,7 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
+pragma ComponentBehavior: Bound
 
 import QtCore
 import QtQuick
@@ -28,11 +29,11 @@ Loader {
         function onAccepted() {
             let added = false;
             if (dialogLoader.item instanceof QtDialogs.FileDialog) {
-                dialogLoader.item.selectedFiles.forEach(url => {
+                (dialogLoader.item as QtDialogs.FileDialog).selectedFiles.forEach(url => {
                     added |= imageWallpaper.addUsersWallpaper(url).length > 0;
                 });
             } else if (dialogLoader.item instanceof QtDialogs.FolderDialog) {
-                added = imageWallpaper.addSlidePath(dialogLoader.item.selectedFolder);
+                added = imageWallpaper.addSlidePath((dialogLoader.item as QtDialogs.FolderDialog).selectedFolder);
             }
             if (added) {
                 root.wallpaperBrowseCompleted();

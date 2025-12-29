@@ -49,7 +49,7 @@ Item {
             currentItem = secondImage;
             nextItem = firstImage;
         } else {
-            if (secondImage.source != "") {
+            if (secondImage.source !== "") {
                 currentItem = secondImage;
                 nextItem = firstImage;
             } else {

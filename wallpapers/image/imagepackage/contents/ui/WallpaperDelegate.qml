@@ -10,7 +10,6 @@ import QtQuick.Controls as QtControls2
 import Qt5Compat.GraphicalEffects
 
 import org.kde.kirigami as Kirigami
-import org.kde.kquickcontrolsaddons
 import org.kde.kcmutils as KCM
 
 KCM.GridDelegate {

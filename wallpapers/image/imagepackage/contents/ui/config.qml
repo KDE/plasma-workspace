@@ -102,15 +102,15 @@ ColumnLayout {
 
     PlasmaWallpaper.ImageBackend {
         id: imageWallpaper
-        renderingMode: (configDialog.currentWallpaper === "org.kde.image") ? PlasmaWallpaper.ImageBackend.SingleImage : PlasmaWallpaper.ImageBackend.SlideShow
+        renderingMode: (root.configDialog.currentWallpaper === "org.kde.image") ? PlasmaWallpaper.ImageBackend.SingleImage : PlasmaWallpaper.ImageBackend.SlideShow
         targetSize: {
             // Lock screen configuration case
             return Qt.size(root.screenSize.width * Screen.devicePixelRatio, root.screenSize.height * Screen.devicePixelRatio)
         }
-        onSlidePathsChanged: cfg_SlidePaths = slidePaths
-        onUncheckedSlidesChanged: cfg_UncheckedSlides = uncheckedSlides
-        onSlideshowModeChanged: cfg_SlideshowMode = slideshowMode
-        onSlideshowFoldersFirstChanged: cfg_SlideshowFoldersFirst = slideshowFoldersFirst
+        onSlidePathsChanged: root.cfg_SlidePaths = slidePaths
+        onUncheckedSlidesChanged: root.cfg_UncheckedSlides = uncheckedSlides
+        onSlideshowModeChanged: root.cfg_SlideshowMode = slideshowMode
+        onSlideshowFoldersFirstChanged: root.cfg_SlideshowFoldersFirst = slideshowFoldersFirst
 
         onSettingsChanged: root.configurationChanged()
     }
@@ -143,7 +143,7 @@ ColumnLayout {
     Kirigami.FormLayout {
         id: formLayout
 
-        Layout.bottomMargin: configDialog.currentWallpaper === "org.kde.image" ? Kirigami.Units.largeSpacing : 0
+        Layout.bottomMargin: root.configDialog.currentWallpaper === "org.kde.image" ? Kirigami.Units.largeSpacing : 0
 
         Component.onCompleted: function() {
             if (typeof appearanceRoot !== "undefined") {
@@ -174,11 +174,11 @@ ColumnLayout {
             ]
 
             textRole: "label"
-            onActivated: cfg_FillMode = model[currentIndex]["fillMode"]
+            onActivated: root.cfg_FillMode = model[currentIndex]["fillMode"]
             Component.onCompleted: setMethod();
 
             KCM.SettingHighlighter {
-                highlight: cfg_FillModeDefault != cfg_FillMode
+                highlight: root.cfg_FillModeDefault != root.cfg_FillMode
             }
 
             function setMethod() {
@@ -234,7 +234,7 @@ ColumnLayout {
 
         QtControls2.RadioButton {
             id: blurRadioButton
-            visible: cfg_FillMode === Image.PreserveAspectFit || cfg_FillMode === Image.Pad
+            visible: root.cfg_FillMode === Image.PreserveAspectFit || root.cfg_FillMode === Image.Pad
             Kirigami.FormData.label: i18nd("plasma_wallpaper_org.kde.image", "Background:")
             text: i18nd("plasma_wallpaper_org.kde.image", "Blur")
             QtControls2.ButtonGroup.group: backgroundGroup
@@ -242,24 +242,24 @@ ColumnLayout {
 
         RowLayout {
             id: colorRow
-            visible: cfg_FillMode === Image.PreserveAspectFit || cfg_FillMode === Image.Pad
+            visible: root.cfg_FillMode === Image.PreserveAspectFit || root.cfg_FillMode === Image.Pad
             QtControls2.RadioButton {
                 id: colorRadioButton
                 text: i18nd("plasma_wallpaper_org.kde.image", "Solid color")
-                checked: !cfg_Blur
+                checked: !root.cfg_Blur
                 QtControls2.ButtonGroup.group: backgroundGroup
 
                 KCM.SettingHighlighter {
-                    highlight: cfg_Blur != cfg_BlurDefault
+                    highlight: root.cfg_Blur != root.cfg_BlurDefault
                 }
             }
             KQuickControls.ColorButton {
                 id: colorButton
-                color: cfg_Color
+                color: root.cfg_Color
                 dialogTitle: i18nd("plasma_wallpaper_org.kde.image", "Select Background Color")
 
                 KCM.SettingHighlighter {
-                    highlight: cfg_Color != cfg_ColorDefault
+                    highlight: root.cfg_Color != root.cfg_ColorDefault
                 }
             }
         }
@@ -276,14 +276,14 @@ ColumnLayout {
         }
         onDropped: drop => {
             drop.urls.forEach(function (url) {
-                if (configDialog.currentWallpaper === "org.kde.image") {
+                if (root.configDialog.currentWallpaper === "org.kde.image") {
                     imageWallpaper.addUsersWallpaper(url);
                 } else {
                     imageWallpaper.addSlidePath(url);
                 }
             });
             // Scroll to top to view added images
-            if (configDialog.currentWallpaper === "org.kde.image") {
+            if (root.configDialog.currentWallpaper === "org.kde.image") {
                 thumbnailsLoader.item.view.positionViewAtIndex(0, GridView.Beginning);
             }
         }
@@ -293,20 +293,20 @@ ColumnLayout {
             anchors.fill: parent
 
             function loadWallpaper () {
-                let source = (configDialog.currentWallpaper == "org.kde.image") ? "ThumbnailsComponent.qml" :
-                    ((configDialog.currentWallpaper == "org.kde.slideshow") ? "SlideshowComponent.qml" : "");
+                let source = (root.configDialog.currentWallpaper == "org.kde.image") ? "ThumbnailsComponent.qml" :
+                    ((root.configDialog.currentWallpaper == "org.kde.slideshow") ? "SlideshowComponent.qml" : "");
 
-                let props = {screenSize: screenSize};
+                let props = {screenSize: root.screenSize};
 
-                if (configDialog.currentWallpaper == "org.kde.slideshow") {
-                    props["configuration"] = wallpaperConfiguration;
+                if (root.configDialog.currentWallpaper == "org.kde.slideshow") {
+                    props["configuration"] = root.wallpaperConfiguration;
                 }
                 thumbnailsLoader.setSource(source, props);
             }
         }
 
         Connections {
-            target: configDialog
+            target: root.configDialog
             function onCurrentWallpaperChanged() {
                 thumbnailsLoader.loadWallpaper();
             }

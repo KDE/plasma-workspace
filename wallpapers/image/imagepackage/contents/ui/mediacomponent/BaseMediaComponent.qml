@@ -31,7 +31,7 @@ Rectangle {
 
     Loader {
         anchors.fill: parent
-        active: blurEnabled
+        active: backgroundColor.blurEnabled
         visible: active
         z: 0
         source: "BlurComponent.qml"

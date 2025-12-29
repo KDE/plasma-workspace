@@ -5,6 +5,7 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
+pragma ComponentBehavior: Bound
 
 import QtQuick
 import org.kde.plasma.wallpapers.image as Wallpaper
@@ -28,7 +29,7 @@ BaseMediaComponent {
         id: blurLoader
         anchors.fill: parent
         z: 0
-        active: blurEnabled
+        active: staticImageComponent.blurEnabled
         sourceComponent: Image {
             asynchronous: true
             cache: false

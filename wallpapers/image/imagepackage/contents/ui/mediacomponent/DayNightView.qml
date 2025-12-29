@@ -3,6 +3,7 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
+pragma ComponentBehavior: Bound
 
 import QtQuick
 import QtQuick.Controls
@@ -30,7 +31,7 @@ StackView {
         id: baseImage
 
         DayNightImage {
-            layer.enabled: replaceEnter.running
+            layer.enabled: root.replaceEnter.running
             StackView.onRemoved: destroy()
         }
     }

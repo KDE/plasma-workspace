@@ -5,6 +5,7 @@
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
+pragma ComponentBehavior: Bound
 
 import QtQuick
 import QtQuick.Controls as QQC2
@@ -285,7 +286,6 @@ ColumnLayout {
         Loader {
             Layout.fillWidth: true
             Layout.fillHeight: true
-            anchors.fill: undefined
 
             Component.onCompleted: () => {
                 this.setSource("ThumbnailsComponent.qml", {"screenSize": slideshowComponent.screenSize});

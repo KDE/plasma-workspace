@@ -19,7 +19,7 @@ QQC2.StackView {
     required property bool blur
     property alias source: mediaProxy.source
     required property size sourceSize
-    required property QtObject wallpaperInterface
+    required property /*WallpaperItem*/ QtObject wallpaperInterface // weaker type to support mock object in autotests
 
     readonly property alias mediaProxy: mediaProxy
     readonly property url modelImage: mediaProxy.modelImage
@@ -145,7 +145,7 @@ QQC2.StackView {
             // The value is to keep compatible with the old feeling defined by "TransitionAnimationDuration" (default: 1000)
             duration: Math.round(Kirigami.Units.veryLongDuration * 2.5)
         }
-        enabled: !doesSkipAnimation
+        enabled: !view.doesSkipAnimation
     }
     // Keep the old image around till the new one is fully faded in
     // If we fade both at the same time you can see the background behind glimpse through
@@ -161,8 +161,8 @@ QQC2.StackView {
 
         targetSize: view.sourceSize
 
-        onActualSizeChanged: Qt.callLater(loadImageImmediately);
-        onColorSchemeChanged: loadImageImmediately();
-        onSourceFileUpdated: loadImageImmediately()
+        onActualSizeChanged: Qt.callLater(view.loadImageImmediately);
+        onColorSchemeChanged: view.loadImageImmediately();
+        onSourceFileUpdated: view.loadImageImmediately()
     }
 }
