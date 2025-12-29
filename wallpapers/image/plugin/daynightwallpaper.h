@@ -52,6 +52,7 @@ private:
 class DayNightSnapshot
 {
     Q_GADGET
+    QML_VALUE_TYPE(dayNightSnapshot)
     Q_PROPERTY(QUrl bottom MEMBER m_bottom CONSTANT)
     Q_PROPERTY(QUrl top MEMBER m_top CONSTANT)
     Q_PROPERTY(qreal blendFactor MEMBER m_blendFactor CONSTANT)
