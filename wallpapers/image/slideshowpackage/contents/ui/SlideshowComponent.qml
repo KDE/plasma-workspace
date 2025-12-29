@@ -182,7 +182,7 @@ ColumnLayout {
         ColumnLayout {
             spacing: 0
             Layout.fillHeight: true
-            Layout.preferredWidth: 0.35 * parent.width
+            Layout.preferredWidth: 0.35 * slideshowComponent.width
             Layout.maximumWidth: Kirigami.Units.gridUnit * 16
 
             Kirigami.Separator {
