@@ -14,10 +14,10 @@ Item {
     property bool activated: false
     visible: Keyboards.KWinVirtualKeyboard.visible
 
-    x: Qt.inputMethod.keyboardRectangle.x
-    y: Qt.inputMethod.keyboardRectangle.y
-    height: Qt.inputMethod.keyboardRectangle.height
-    width: Qt.inputMethod.keyboardRectangle.width
+    x: InputMethod.keyboardRectangle.x
+    y: InputMethod.keyboardRectangle.y
+    height: InputMethod.keyboardRectangle.height
+    width: InputMethod.keyboardRectangle.width
 
     onActivatedChanged: if (activated) {
         Keyboards.KWinVirtualKeyboard.enabled = true

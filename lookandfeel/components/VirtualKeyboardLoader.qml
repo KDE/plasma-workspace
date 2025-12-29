@@ -7,8 +7,6 @@
 */
 
 import QtQuick
-import QtQuick.Controls as QQC2
-import QtQuick.Layouts
 import QtQuick.Templates as T
 import org.kde.kirigami as Kirigami
 
@@ -54,23 +52,15 @@ Loader {
         State {
             name: "visible"
             PropertyChanges {
-                target: mainStack
-                y: Math.min(0, screenRoot.height - loader.height - mainBlock.visibleBoundary)
-            }
-            PropertyChanges {
-                target: loader
-                y: screenRoot.height - loader.height
+                mainStack.y: Math.min(0, screenRoot.height - loader.height - mainBlock.visibleBoundary)
+                loader.y: screenRoot.height - loader.height
             }
         },
         State {
             name: "hidden"
             PropertyChanges {
-                target: mainStack
-                y: 0
-            }
-            PropertyChanges {
-                target: loader
-                y: screenRoot.height * 0.75
+                mainStack.y: 0
+                loader.y: screenRoot.height * 0.75
             }
         }
     ]
@@ -88,7 +78,7 @@ Loader {
                 }
                 ParallelAnimation {
                     NumberAnimation {
-                        target: mainStack
+                        target: loader.mainStack
                         property: "y"
                         duration: Kirigami.Units.longDuration
                         easing.type: Easing.InOutQuad
@@ -108,7 +98,7 @@ Loader {
             SequentialAnimation {
                 ParallelAnimation {
                     NumberAnimation {
-                        target: mainStack
+                        target: loader.mainStack
                         property: "y"
                         duration: Kirigami.Units.longDuration
                         easing.type: Easing.InOutQuad
