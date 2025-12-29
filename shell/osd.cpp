@@ -245,7 +245,7 @@ bool Osd::init()
     if (!m_osdTimer) {
         m_osdTimer = new QTimer(this);
         m_osdTimer->setSingleShot(true);
-        connect(m_osdTimer, &QTimer::timeout, this, &Osd::hideOsd);
+        connect(m_osdTimer, &QTimer::timeout, this, &Osd::hide);
     }
 
     return true;
@@ -313,11 +313,19 @@ void Osd::showOsd()
     m_osdTimer->start(m_timeout);
 }
 
-void Osd::hideOsd()
+void Osd::hide()
 {
+    if (!m_osdObject) {
+        return;
+    }
+
     auto *rootObject = m_osdObject->rootObject();
     if (!rootObject) {
         return;
+    }
+
+    if (m_osdTimer) {
+        m_osdTimer->stop();
     }
 
     rootObject->setProperty("visible", false);

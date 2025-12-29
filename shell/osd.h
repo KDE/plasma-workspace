@@ -47,13 +47,11 @@ public Q_SLOTS:
     void powerManagementInhibitedChanged(bool inhibited);
     void powerProfileChanged(const QString &profile);
     void showText(const QString &icon, const QString &text);
+    void hide();
 
 Q_SIGNALS:
     void osdProgress(const QString &icon, const int percent, const int maximumPercent, const QString &additionalText);
     void osdText(const QString &icon, const QString &text);
-
-private Q_SLOTS:
-    void hideOsd();
 
 private:
     bool init();
