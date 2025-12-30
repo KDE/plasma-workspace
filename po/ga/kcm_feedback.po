@@ -1,0 +1,56 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-11-17 16:19+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: package/contents/ui/main.qml:34
+#, kde-format
+msgid ""
+"User Feedback has been disabled centrally. Please contact your distributor."
+msgstr ""
+
+#: package/contents/ui/main.qml:44 package/contents/ui/main.qml:77
+#, kde-format
+msgid "Plasma:"
+msgstr ""
+
+#: package/contents/ui/main.qml:51
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"You can help KDE improve Plasma by contributing information on how you use "
+"it, so we can focus on things that matter to you.<nl/><nl/>Contributing this "
+"information is optional and entirely anonymous. We never collect your "
+"personal data, files you use, websites you visit, or information that could "
+"identify you.<nl/><nl/>You can read about <link url='https://kde.org/"
+"privacypolicy-apps.php'>our privacy policy here.</link>"
+msgstr ""
+
+#: package/contents/ui/main.qml:112
+#, kde-format
+msgid "Plasma"
+msgstr ""
+
+#: package/contents/ui/main.qml:133
+#, kde-format
+msgid "The following information will be sent:"
+msgstr ""
+
+#: package/contents/ui/main.qml:178
+#, kde-format
+msgid "View sent data:"
+msgstr ""

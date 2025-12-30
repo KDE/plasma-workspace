@@ -1,310 +1,310 @@
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
-# Lasse Liehu <lasse.liehu@gmail.com>, 2014, 2015.
-# SPDX-FileCopyrightText: 2016, 2018, 2020, 2021, 2022, 2023, 2024, 2025 Tommi Nieminen <translator@legisign.org>
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-# Larso, 2014.
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2023-06-27 15:58+0300\n"
-"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
-"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
-"Language: fi\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.0\n"
+"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
+"3 : 4\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Tommi Nieminen"
+msgstr ""
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "translator@legisign.org"
+msgstr ""
 
 #: calendar/eventdatadecorator.cpp:51
 #, kde-format
 msgctxt "Agenda listview section title"
 msgid "Holidays"
-msgstr "Vapaapäivät"
+msgstr ""
 
 #: calendar/eventdatadecorator.cpp:53
 #, kde-format
 msgctxt "Agenda listview section title"
 msgid "Events"
-msgstr "Tapahtumat"
+msgstr ""
 
 #: calendar/eventdatadecorator.cpp:55
 #, kde-format
 msgctxt "Agenda listview section title"
 msgid "Todo"
-msgstr "Tehtävät"
+msgstr ""
 
 #: calendar/eventdatadecorator.cpp:57
 #, kde-format
 msgctxt "Means 'Other calendar items'"
 msgid "Other"
-msgstr "Muut"
+msgstr ""
 
 #: calendar/qml/DayDelegate.qml:43
 #, kde-format
 msgid "%1 event"
 msgid_plural "%1 events"
-msgstr[0] "%1 tapahtuma"
-msgstr[1] "%1 tapahtumaa"
+msgstr[0] ""
+msgstr[1] ""
 
 #: calendar/qml/DayDelegate.qml:43
 #, kde-format
 msgid "No events"
-msgstr "Ei tapahtumia"
+msgstr ""
 
 #: calendar/qml/MonthViewHeader.qml:67
 #, kde-format
 msgctxt "Format: month year"
 msgid "%1 %2"
-msgstr "%1 %2"
+msgstr ""
 
 #: calendar/qml/MonthViewHeader.qml:113
 #, kde-format
 msgid "Days"
-msgstr "Päivät"
+msgstr ""
 
 #: calendar/qml/MonthViewHeader.qml:119
 #, kde-format
 msgid "Months"
-msgstr "Kuukaudet"
+msgstr ""
 
 #: calendar/qml/MonthViewHeader.qml:125
 #, kde-format
 msgid "Years"
-msgstr "Vuodet"
+msgstr ""
 
 #: calendar/qml/MonthViewHeader.qml:163
 #, kde-format
 msgid "Previous Month"
-msgstr "Edellinen kuukausi"
+msgstr ""
 
 #: calendar/qml/MonthViewHeader.qml:165
 #, kde-format
 msgid "Previous Year"
-msgstr "Edellinen vuosi"
+msgstr ""
 
 #: calendar/qml/MonthViewHeader.qml:167
 #, kde-format
 msgid "Previous Decade"
-msgstr "Edellinen vuosikymmen"
+msgstr ""
 
 #: calendar/qml/MonthViewHeader.qml:184
 #, kde-format
 msgctxt "Reset calendar to today"
 msgid "Today"
-msgstr "Tänään"
+msgstr ""
 
 #: calendar/qml/MonthViewHeader.qml:185
 #, kde-format
 msgid "Reset calendar to today"
-msgstr "Palauta kalenteri tänäiseen"
+msgstr ""
 
 #: calendar/qml/MonthViewHeader.qml:196
 #, kde-format
 msgid "Next Month"
-msgstr "Seuraava kuukausi"
+msgstr ""
 
 #: calendar/qml/MonthViewHeader.qml:198
 #, kde-format
 msgid "Next Year"
-msgstr "Seuraava vuosi"
+msgstr ""
 
 #: calendar/qml/MonthViewHeader.qml:200
 #, kde-format
 msgid "Next Decade"
-msgstr "Seuraava vuosikymmen"
+msgstr ""
 
 #: calendar/qml/MonthViewHeader.qml:256
 #, kde-format
 msgid "Keep Open"
-msgstr "Pidä avoinna"
+msgstr ""
 
 #: containmentlayoutmanager/qml/BasicAppletContainer.qml:270
 #, kde-format
 msgid "Configure…"
-msgstr "Asetukset…"
+msgstr ""
 
 #. i18n: ectx: label, entry, group (Daemon)
 #: sessionsprivate/kscreenlockersettings.kcfg:10
 #, kde-format
 msgid "Screen lock enabled"
-msgstr "Näyttölukko käytössä"
+msgstr ""
 
 #. i18n: ectx: whatsthis, entry, group (Daemon)
 #: sessionsprivate/kscreenlockersettings.kcfg:11
 #, kde-format
 msgid "Sets whether the screen will be locked after the specified time."
-msgstr "Asettaa, lukitaanko näyttö määräajan kuluessa."
+msgstr ""
 
 #. i18n: ectx: label, entry, group (Daemon)
 #: sessionsprivate/kscreenlockersettings.kcfg:16
 #, kde-format
 msgid "Screen saver timeout"
-msgstr "Näytönsäästäjän aikakatkaisu"
+msgstr ""
 
 #. i18n: ectx: whatsthis, entry, group (Daemon)
 #: sessionsprivate/kscreenlockersettings.kcfg:17
 #, kde-format
 msgid "Sets the minutes after which the screen is locked."
-msgstr "Asettaa minuutteina ajan, jossa näyttö lukitaan."
+msgstr ""
 
 #: sessionsprivate/sessionsmodel.cpp:235 sessionsprivate/sessionsmodel.cpp:239
 #, kde-format
 msgid "New Session"
-msgstr "Uusi istunto"
+msgstr ""
 
 #: shellprivate/widgetexplorer/kcategorizeditemsviewmodels.cpp:64
 #, kde-format
 msgid "Filters"
-msgstr "Suodattimet"
+msgstr ""
 
 #: shellprivate/widgetexplorer/openwidgetassistant.cpp:41
 #, kde-format
 msgid "Select Plasmoid File"
-msgstr "Valitse plasmoiditiedosto"
+msgstr ""
 
 #: shellprivate/widgetexplorer/openwidgetassistant.cpp:65
 #, kde-format
 msgid "Installing the package %1 failed."
-msgstr "Paketin %1 asennus epäonnistui."
+msgstr ""
 
 #: shellprivate/widgetexplorer/openwidgetassistant.cpp:65
 #, kde-format
 msgid "Installation Failure"
-msgstr "Asennus epäonnistui"
+msgstr ""
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:111
 msgctxt "applet category"
 msgid "Accessibility"
-msgstr "Esteettömyys"
+msgstr ""
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:112
 msgctxt "applet category"
 msgid "Application Launchers"
-msgstr "Sovelluskäynnistimet"
+msgstr ""
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:113
 msgctxt "applet category"
 msgid "Astronomy"
-msgstr "Tähtitiede"
+msgstr ""
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:114
 msgctxt "applet category"
 msgid "Date and Time"
-msgstr "Päiväys ja aika"
+msgstr ""
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:115
 msgctxt "applet category"
 msgid "Development Tools"
-msgstr "Kehitystyökalut"
+msgstr ""
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:116
 msgctxt "applet category"
 msgid "Education"
-msgstr "Opetus"
+msgstr ""
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:117
 msgctxt "applet category"
 msgid "Environment and Weather"
-msgstr "Ympäristö ja sää"
+msgstr ""
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:118
 msgctxt "applet category"
 msgid "Examples"
-msgstr "Esimerkkejä"
+msgstr ""
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:119
 msgctxt "applet category"
 msgid "File System"
-msgstr "Tiedostojärjestelmä"
+msgstr ""
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:120
 msgctxt "applet category"
 msgid "Fun and Games"
-msgstr "Hupi ja pelit"
+msgstr ""
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:121
 msgctxt "applet category"
 msgid "Graphics"
-msgstr "Grafiikka"
+msgstr ""
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:122
 msgctxt "applet category"
 msgid "Language"
-msgstr "Kieli"
+msgstr ""
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:123
 msgctxt "applet category"
 msgid "Mapping"
-msgstr "Kartoitus"
+msgstr ""
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:124
 msgctxt "applet category"
 msgid "Miscellaneous"
-msgstr "Sekalaista"
+msgstr ""
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:125
 msgctxt "applet category"
 msgid "Multimedia"
-msgstr "Multimedia"
+msgstr ""
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:126
 msgctxt "applet category"
 msgid "Online Services"
-msgstr "Verkkopalvelut"
+msgstr ""
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:127
 msgctxt "applet category"
 msgid "Productivity"
-msgstr "Tuottavuus"
+msgstr ""
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:128
 msgctxt "applet category"
 msgid "System Information"
-msgstr "Järjestelmätiedot"
+msgstr ""
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:129
 msgctxt "applet category"
 msgid "Utilities"
-msgstr "Apuohjelmat"
+msgstr ""
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:130
 msgctxt "applet category"
 msgid "Windows and Tasks"
-msgstr "Ikkunat ja tehtävät"
+msgstr ""
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:131
 msgctxt "applet category"
 msgid "Clipboard"
-msgstr "Leikepöytä"
+msgstr ""
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:132
 msgctxt "applet category"
 msgid "Tasks"
-msgstr "Tehtävät"
+msgstr ""
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:148
 #, kde-format
 msgid "All Widgets"
-msgstr "Kaikki sovelmat"
+msgstr ""
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:152
 #, kde-format
 msgid "Running"
-msgstr "Käynnissä olevat"
+msgstr ""
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:158
 #, kde-format
@@ -313,75 +313,19 @@ msgctxt ""
 "installed from the system, which are usually installed by the user to a "
 "local place."
 msgid "Uninstallable"
-msgstr "Ei asennettavissa"
+msgstr ""
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:162
 #, kde-format
 msgid "Categories:"
-msgstr "Luokat:"
+msgstr ""
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:235
 #, kde-format
 msgid "Download New Plasma Widgets"
-msgstr "Lataa uusia Plasma-sovelmia"
+msgstr ""
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:244
 #, kde-format
 msgid "Install Widget From Local File…"
-msgstr "Asenna sovelma paikallisesta tiedostosta…"
-
-#~ msgid "&Execute"
-#~ msgstr "&Suorita"
-
-#~ msgctxt "Toolbar Button to switch to Plasma Scripting Mode"
-#~ msgid "Plasma"
-#~ msgstr "Plasma"
-
-#~ msgctxt "Toolbar Button to switch to KWin Scripting Mode"
-#~ msgid "KWin"
-#~ msgstr "KWin"
-
-#~ msgid "Templates"
-#~ msgstr "Mallit"
-
-#~ msgid "Desktop Shell Scripting Console"
-#~ msgstr "Työpöydäkuoren skriptauskonsoli"
-
-#~ msgid "Editor"
-#~ msgstr "Muokkain"
-
-#~ msgid "Load"
-#~ msgstr "Lataa"
-
-#~ msgid "Use"
-#~ msgstr "Käytä"
-
-#~ msgid "Output"
-#~ msgstr "Tuloste"
-
-#~ msgid "Unable to load script file <b>%1</b>"
-#~ msgstr "Skriptitiedostoa <b>%1</b> ei voitu ladata"
-
-#~ msgid "Open Script File"
-#~ msgstr "Avaa skriptitiedosto"
-
-#~ msgid "Save Script File"
-#~ msgstr "Tallenna skriptitiedosto"
-
-#~ msgid "Executing script at %1"
-#~ msgstr "Suoritetaan skriptiä kohteessa %1"
-
-#~ msgid "Runtime: %1ms"
-#~ msgstr "Suoritusaika: %1 ms"
-
-#~ msgid "Download Wallpaper Plugins"
-#~ msgstr "Lataa taustakuvaliitännäisiä"
-
-#~ msgid "Containments"
-#~ msgstr "Sovelmasäiliöt"
-
-#~ msgctxt ""
-#~ "%1 is a type of widgets, as defined by e.g. some plasma-packagestructure-"
-#~ "*.desktop files"
-#~ msgid "Download New %1"
-#~ msgstr "Lataa uusia %1|/|Lataa uusia $[part %1]"
+msgstr ""

@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: plasma_applet_lockout.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2009-02-12 09:10-0500\n"
-"Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
+"PO-Revision-Date: 2025-12-28 17:28+0000\n"
+"Last-Translator: Charlotte <altronic25@protonmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
 "Language: ga\n"
 "MIME-Version: 1.0\n"
@@ -23,27 +23,26 @@ msgid "General"
 msgstr "Ginearálta"
 
 #: contents/ui/ConfigGeneral.qml:36
-#, fuzzy, kde-format
-#| msgid "Show lock button"
+#, kde-format
 msgctxt ""
 "Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
 msgid "Show actions:"
-msgstr "Taispeáin cnaipe glasála"
+msgstr "Taispeáin gníomhartha:"
 
 #: contents/ui/ConfigGeneral.qml:37
 #, kde-format
 msgid "Logout"
-msgstr ""
+msgstr "Logáil Amach"
 
 #: contents/ui/ConfigGeneral.qml:43
 #, kde-format
 msgid "Shutdown"
-msgstr ""
+msgstr "Múch"
 
 #: contents/ui/ConfigGeneral.qml:48
 #, kde-format
 msgid "Reboot"
-msgstr ""
+msgstr "Atosaigh"
 
 #: contents/ui/ConfigGeneral.qml:53 contents/ui/data.js:5
 #, kde-format
@@ -51,10 +50,9 @@ msgid "Lock"
 msgstr "Cuir Faoi Ghlas"
 
 #: contents/ui/ConfigGeneral.qml:58
-#, fuzzy, kde-format
-#| msgid "Switch user"
+#, kde-format
 msgid "Switch User"
-msgstr "athraigh an t-úsáideoir"
+msgstr "athraigh an t-Úsáideoir"
 
 #: contents/ui/ConfigGeneral.qml:63 contents/ui/data.js:46
 #, kde-format
@@ -62,8 +60,7 @@ msgid "Hibernate"
 msgstr "Geimhrigh"
 
 #: contents/ui/ConfigGeneral.qml:68 contents/ui/data.js:39
-#, fuzzy, kde-format
-#| msgid "Sleep"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Codail"
@@ -86,33 +83,32 @@ msgstr "Tosaigh seisiún comhuaineach mar úsáideoir difriúil"
 #: contents/ui/data.js:18
 #, kde-format
 msgid "Shutdown…"
-msgstr ""
+msgstr "Múch..."
 
 #: contents/ui/data.js:19
-#, fuzzy, kde-format
-#| msgid "Logout, turn off or restart the computer"
+#, kde-format
 msgid "Turn off the computer"
-msgstr "Logáil amach, múch nó atosaigh an ríomhaire"
+msgstr "Múch an ríomhaire"
 
 #: contents/ui/data.js:25
 #, kde-format
 msgid "Restart…"
-msgstr ""
+msgstr "Atosaigh..."
 
 #: contents/ui/data.js:26
 #, kde-format
 msgid "Reboot the computer"
-msgstr ""
+msgstr "Atosaigh an ríomhaire"
 
 #: contents/ui/data.js:32
 #, kde-format
 msgid "Logout…"
-msgstr ""
+msgstr "Logáil Amach..."
 
 #: contents/ui/data.js:33
 #, kde-format
 msgid "End the session"
-msgstr ""
+msgstr "Críochnaigh an seisiún"
 
 #: contents/ui/data.js:40
 #, kde-format
