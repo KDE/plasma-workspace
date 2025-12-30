@@ -133,7 +133,7 @@ PlasmoidItem {
                 required property string tooltip_mainText
                 required property string tooltip_subText
                 required property string operation
-                required property string icon
+                required property var model // used to access icon because ToopTipArea already has icon property
 
                 visible: Plasmoid.configuration["show_" + configKey] && (requires !== ""|| session["can" + requires])
                 width: items.itemWidth
@@ -168,7 +168,7 @@ PlasmoidItem {
                     width: items.iconSize
                     height: items.iconSize
                     anchors.centerIn: parent
-                    source: iconDelegate.icon
+                    source: iconDelegate.model.icon
                     scale: tapHandler.pressed ? 0.9 : 1
                     active: iconDelegate.containsMouse
                 }
