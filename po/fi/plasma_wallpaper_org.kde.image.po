@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-29 00:44+0000\n"
-"PO-Revision-Date: 2025-09-11 17:35+0300\n"
+"PO-Revision-Date: 2025-11-30 15:49+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -83,12 +83,10 @@ msgid "Switch dynamic wallpapers:"
 msgstr "Vaihda dynaamista taustakuvaa:"
 
 #: imagepackage/contents/ui/config.qml:207
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
-#| msgid "Based on whether the color scheme is dark or light"
+#, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the Plasma style is light or dark "
-msgstr "Sen mukaan, onko väriteema tumma vai vaalea"
+msgstr "Sen mukaan, onko Plasma-tyyli tumma vai vaalea "
 
 #: imagepackage/contents/ui/config.qml:209
 #, kde-format
@@ -172,25 +170,25 @@ msgstr "Hanki uusia taustakuvia…"
 #, kde-format
 msgctxt "@action:button the things being selected are wallpapers"
 msgid "Select All"
-msgstr ""
+msgstr "Valitse kaikki"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:109
 #, kde-format
 msgctxt "@action:button"
 msgid "Select All Slides"
-msgstr ""
+msgstr "Valitse kaikki diat"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:117
 #, kde-format
 msgctxt "@action:button the things being unselected are wallpapers"
 msgid "Select None"
-msgstr ""
+msgstr "Poista valinnat"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:118
 #, kde-format
 msgctxt "@action:button"
 msgid "Unselect All Slides"
-msgstr ""
+msgstr "Poista kaikkien diojen valinnat"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:34
 #, kde-format

@@ -54,10 +54,9 @@ msgid "Shut down"
 msgstr ""
 
 #: data.js:20
-#, fuzzy, kde-format
-#| msgid "Logout, turn off or restart the computer"
+#, kde-format
 msgid "Turn off the computer"
-msgstr "Logáil amach, múch nó atosaigh an ríomhaire"
+msgstr "Múch an ríomhaire"
 
 #: data.js:26
 #, kde-format
@@ -67,7 +66,7 @@ msgstr ""
 #: data.js:27
 #, kde-format
 msgid "Reboot the computer"
-msgstr ""
+msgstr "Atosaigh an ríomhaire"
 
 #: data.js:33
 #, kde-format
@@ -77,7 +76,7 @@ msgstr ""
 #: data.js:34
 #, kde-format
 msgid "End the session"
-msgstr ""
+msgstr "Críochnaigh an seisiún"
 
 #: data.js:40
 #, fuzzy, kde-format
@@ -93,8 +92,7 @@ msgid "Log out, turn off, or restart the computer"
 msgstr "Logáil amach, múch nó atosaigh an ríomhaire"
 
 #: data.js:47
-#, fuzzy, kde-format
-#| msgid "Sleep"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Codail"

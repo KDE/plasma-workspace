@@ -1,21 +1,23 @@
-# Copyright (C) 2025 This file is copyright:
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# SPDX-FileCopyrightText: 2025 Tommi Nieminen <translator@legisign.org>
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2025-11-30 15:48+0200\n"
-"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
-"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
-"Language: fi\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.0\n"
+"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
+"3 : 4\n"
 
 #: ui/main.qml:26
 #, kde-format
@@ -24,8 +26,6 @@ msgid ""
 "Time-based features such as Night Light and dynamic wallpapers can be "
 "synchronized with the day-night cycle. Choose your preferred cycle here."
 msgstr ""
-"Aikaan perustuvat ominaisuudet kuten yövalo ja dynaamiset taustakuvat voi "
-"tahdistaa päivänkiertoon. Valitse tästä haluamasi kierto."
 
 #: ui/main.qml:42
 #, kde-format
@@ -33,53 +33,53 @@ msgctxt ""
 "@label:listbox part of a sentence: 'Determine sunrise and sunset times "
 "[based on]'"
 msgid "Determine sunrise and sunset times:"
-msgstr "Määritä auringon nousu- ja laskuajat:"
+msgstr ""
 
 #: ui/main.qml:47
 #, kde-format
 msgctxt ""
 "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
 msgid "Based on device's location"
-msgstr "Laitteen sijainnin mukaan"
+msgstr ""
 
 #: ui/main.qml:48
 #, kde-format
 msgctxt ""
 "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
 msgid "Using custom times"
-msgstr "mukautettujen aikojen mukaan"
+msgstr ""
 
 #: ui/main.qml:60
 #, kde-format
 msgctxt "@label"
 msgid "Sunrise:"
-msgstr "Auringonnousu:"
+msgstr ""
 
 #: ui/main.qml:75
 #, kde-format
 msgctxt "@label"
 msgid "Sunset:"
-msgstr "Auringonlasku:"
+msgstr ""
 
 #: ui/main.qml:89
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Transition duration:"
-msgstr "Siirtymän kesto:"
+msgstr ""
 
 #: ui/main.qml:95
 #, kde-format
 msgctxt "@item:valuesuffix transition duration"
 msgid "%1 minute"
 msgid_plural "%1 minutes"
-msgstr[0] "%1 minuutti"
-msgstr[1] "%1 minuuttia"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ui/main.qml:119
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatically detect location"
-msgstr "Tunnista sijainti automaattisesti"
+msgstr ""
 
 #: ui/main.qml:146
 #, kde-kuit-format
@@ -90,10 +90,6 @@ msgid ""
 "available, or else by sending its IP address to <link url='https://geoip.com/"
 "privacy/'>GeoIP</link>."
 msgstr ""
-"<application>GeoClue2</application>-palvelu päivittää laitteen sijainnin "
-"säännöllisin aikavälein GPS:llä, matkapuhelintornien kolmiomittauksella (jos "
-"käytettävissä) tai lähettämällä IP-osoitteen <link url='https://geoip.com/"
-"privacy/'>GeoIP</link>:hen."
 
 #: ui/main.qml:147
 #, kde-kuit-format
@@ -104,52 +100,48 @@ msgid ""
 "bugs.kde.org'>https://bugs.kde.org</link> asking KDE developers to write a "
 "detailed description of what this service will do."
 msgstr ""
-"<application>%1</application>-palvelu päivittää laitteen sijainnin "
-"säännöllisin aikavälein. Tee vikailmoitus osoitteessa <link url='https://"
-"bugs.kde.org/'>https://bugs.kde.org/</link> ja pyydä KDE:n kehittäjiltä "
-"yksityiskohtainen kuvaus siitä, mitä palvelu tekee."
 
 #: ui/main.qml:164
 #, kde-format
 msgctxt "@option:radio"
 msgid "Use manual location:"
-msgstr "Käytä asetettua sijaintia:"
+msgstr ""
 
 #: ui/main.qml:176
 #, kde-format
 msgctxt "@label"
 msgid "Latitude:"
-msgstr "Leveysaste:"
+msgstr ""
 
 #: ui/main.qml:196
 #, kde-format
 msgctxt "@label"
 msgid "Longitude:"
-msgstr "Pituusaste:"
+msgstr ""
 
 #: ui/SunPath.qml:52
 #, kde-format
 msgctxt "@info:tooltip; the variables are times of day, e.g. 07:30"
 msgid "Sunrise starts at %1 and ends at %2"
-msgstr "Auringonnousu alkaa %1 ja päättyy %2"
+msgstr ""
 
 #: ui/SunPath.qml:57
 #, kde-format
 msgctxt "@label"
 msgid "Sunrise"
-msgstr "Auringonnousu"
+msgstr ""
 
 #: ui/SunPath.qml:77
 #, kde-format
 msgctxt "@info:tooltip; the variables are times of day, e.g. 07:30"
 msgid "Sunset starts at %1 and ends at %2"
-msgstr "Auringonlasku alkaa %1 ja päättyy %2"
+msgstr ""
 
 #: ui/SunPath.qml:82
 #, kde-format
 msgctxt "@label"
 msgid "Sunset"
-msgstr "Auringonlasku"
+msgstr ""
 
 #: ui/SunPath.qml:107
 #, kde-format
@@ -158,8 +150,6 @@ msgid ""
 "Sunrise and sunset times cannot be determined at your location due to polar "
 "day. Choose custom times instead."
 msgstr ""
-"Sijaintisi auringon nousu- ja laskuaikoja ei voitu päätellä yöttömän yön "
-"takia. Käytetään sen sijaan mukautettuja aikoja."
 
 #: ui/SunPath.qml:109
 #, kde-format
@@ -168,8 +158,6 @@ msgid ""
 "Sunrise and sunset times cannot be determined at your location due to polar "
 "night. Choose custom times instead."
 msgstr ""
-"Sijaintisi auringon nousu- ja laskuaikoja ei voitu päätellä kaamoksen takia. "
-"Käytetään sen sijaan mukautettuja aikoja."
 
 #: ui/SunPath.qml:111
 #, kde-format
@@ -178,38 +166,36 @@ msgid ""
 "Sunrise and sunset times cannot be reliably determined at your location. "
 "Choose custom times instead."
 msgstr ""
-"Sijaintisi auringon nousu- ja laskuaikoja ei voitu luotettavasti päätellä. "
-"Käytetään sen sijaan mukautettuja aikoja."
 
 #: ui/TimeField.qml:31
 #, kde-format
 msgctxt "Time separator between hours and minutes"
 msgid ":"
-msgstr ":"
+msgstr ""
 
 #: ui/WorldMap.qml:76
 #, kde-format
 msgctxt ""
 "@label:chooser Tap should be translated to mean touching using a touchscreen"
 msgid "Tap to choose your location on the map."
-msgstr "Napauta sijaintiasi kartalla."
+msgstr ""
 
 #: ui/WorldMap.qml:77
 #, kde-format
 msgctxt ""
 "@label:chooser Click should be translated to mean clicking using a mouse"
 msgid "Click to choose your location on the map."
-msgstr "Napsauta sijaintiasi kartalla."
+msgstr ""
 
 #: ui/WorldMap.qml:189
 #, kde-format
 msgid "Zoom in"
-msgstr "Lähennä"
+msgstr ""
 
 #: ui/WorldMap.qml:206
 #, kde-format
 msgid "Zoom out"
-msgstr "Loitonna"
+msgstr ""
 
 #: ui/WorldMap.qml:235
 #, kde-kuit-format
@@ -220,15 +206,3 @@ msgid ""
 "TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
 "by-sa/3.0'>CC BY-SA 3.0</link>"
 msgstr ""
-"Muokattu <link url='https://commons.wikimedia.org/wiki/File:"
-"World_location_map_(equirectangular_180).svg'>maailman sijaintikartasta</"
-"link>, TUBS / Wikimedia Commons / <link url='https://creativecommons.org/"
-"licenses/by-sa/3.0'>CC BY-SA 3.0</link>"
-
-#~ msgctxt "@label The coordinates for the current location"
-#~ msgid "Current location:"
-#~ msgstr "Nykyinen sijainti:"
-
-#~ msgctxt "@info"
-#~ msgid "Latitude: %1°   Longitude: %2°"
-#~ msgstr "Leveysaste: %1°  Pituusaste: %2°"
