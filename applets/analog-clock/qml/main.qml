@@ -127,14 +127,14 @@ PlasmoidItem {
                 rotationCenterHintId: "hint-hourhandshadow-rotation-center-offset"
                 horizontalRotationOffset: clock.horizontalShadowOffset
                 verticalRotationOffset: clock.verticalShadowOffset
-                rotation: 180 + hours * 30 + (minutes/2)
+                handRotation: 180 + hours * 30 + (minutes/2)
                 svgScale: clock.svgScale
 
             }
             Hand {
                 elementId: "HourHand"
                 rotationCenterHintId: "hint-hourhand-rotation-center-offset"
-                rotation: 180 + hours * 30 + (minutes/2)
+                handRotation: 180 + hours * 30 + (minutes/2)
                 svgScale: clock.svgScale
             }
 
@@ -143,13 +143,13 @@ PlasmoidItem {
                 rotationCenterHintId: "hint-minutehandshadow-rotation-center-offset"
                 horizontalRotationOffset: clock.horizontalShadowOffset
                 verticalRotationOffset: clock.verticalShadowOffset
-                rotation: 180 + minutes * 6
+                handRotation: 180 + minutes * 6
                 svgScale: clock.svgScale
             }
             Hand {
                 elementId: "MinuteHand"
                 rotationCenterHintId: "hint-minutehand-rotation-center-offset"
-                rotation: 180 + minutes * 6
+                handRotation: 180 + minutes * 6
                 svgScale: clock.svgScale
             }
 
@@ -159,14 +159,14 @@ PlasmoidItem {
                 rotationCenterHintId: "hint-secondhandshadow-rotation-center-offset"
                 horizontalRotationOffset: clock.horizontalShadowOffset
                 verticalRotationOffset: clock.verticalShadowOffset
-                rotation: 180 + seconds * 6
+                handRotation: 180 + seconds * 6
                 svgScale: clock.svgScale
             }
             Hand {
                 visible: showSecondsHand
                 elementId: "SecondHand"
                 rotationCenterHintId: "hint-secondhand-rotation-center-offset"
-                rotation: 180 + seconds * 6
+                handRotation: 180 + seconds * 6
                 svgScale: clock.svgScale
             }
 
