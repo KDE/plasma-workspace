@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 14:42+0000\n"
-"PO-Revision-Date: 2025-09-11 17:35+0300\n"
+"PO-Revision-Date: 2025-11-30 15:49+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -89,12 +89,10 @@ msgid "Switch dynamic wallpapers:"
 msgstr "Vaihda dynaamista taustakuvaa:"
 
 #: imagepackage/contents/ui/config.qml:211
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
-#| msgid "Based on whether the color scheme is dark or light"
+#, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the Plasma style is light or dark "
-msgstr "Sen mukaan, onko väriteema tumma vai vaalea"
+msgstr "Sen mukaan, onko Plasma-tyyli tumma vai vaalea "
 
 #: imagepackage/contents/ui/config.qml:213
 #, kde-format

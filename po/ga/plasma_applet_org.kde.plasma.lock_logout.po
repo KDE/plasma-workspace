@@ -23,12 +23,11 @@ msgid "General"
 msgstr "Ginearálta"
 
 #: ConfigGeneral.qml:36
-#, fuzzy, kde-format
-#| msgid "Show lock button"
+#, kde-format
 msgctxt ""
 "Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
 msgid "Show actions:"
-msgstr "Taispeáin cnaipe glasála"
+msgstr "Taispeáin gníomhartha:"
 
 #: ConfigGeneral.qml:37
 #, kde-format
@@ -58,10 +57,9 @@ msgid "Lock"
 msgstr "Cuir Faoi Ghlas"
 
 #: ConfigGeneral.qml:68
-#, fuzzy, kde-format
-#| msgid "Switch user"
+#, kde-format
 msgid "Switch User"
-msgstr "athraigh an t-úsáideoir"
+msgstr "athraigh an t-Úsáideoir"
 
 #: ConfigGeneral.qml:74 data.js:54
 #, kde-format
@@ -69,8 +67,7 @@ msgid "Hibernate"
 msgstr "Geimhrigh"
 
 #: ConfigGeneral.qml:80 data.js:47
-#, fuzzy, kde-format
-#| msgid "Sleep"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Codail"
@@ -93,33 +90,32 @@ msgstr "Tosaigh seisiún comhuaineach mar úsáideoir difriúil"
 #: data.js:19
 #, kde-format
 msgid "Shutdown…"
-msgstr ""
+msgstr "Múch..."
 
 #: data.js:20
-#, fuzzy, kde-format
-#| msgid "Logout, turn off or restart the computer"
+#, kde-format
 msgid "Turn off the computer"
-msgstr "Logáil amach, múch nó atosaigh an ríomhaire"
+msgstr "Múch an ríomhaire"
 
 #: data.js:26
 #, kde-format
 msgid "Restart…"
-msgstr ""
+msgstr "Atosaigh..."
 
 #: data.js:27
 #, kde-format
 msgid "Reboot the computer"
-msgstr ""
+msgstr "Atosaigh an ríomhaire"
 
 #: data.js:33
 #, kde-format
 msgid "Logout…"
-msgstr ""
+msgstr "Logáil Amach..."
 
 #: data.js:34
 #, kde-format
 msgid "End the session"
-msgstr ""
+msgstr "Críochnaigh an seisiún"
 
 #: data.js:40
 #, fuzzy, kde-format
