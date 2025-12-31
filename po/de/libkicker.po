@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libkicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-05 02:34+0000\n"
+"POT-Creation-Date: 2025-12-31 02:55+0000\n"
 "PO-Revision-Date: 2025-12-04 20:38+0100\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -44,22 +44,22 @@ msgstr "An Fensterleiste anheften"
 msgid "Add to Panel (Widget)"
 msgstr "Zur Kontrollleiste hinzufügen (Miniprogramm)"
 
-#: actionlist.cpp:313 rootmodel.cpp:540
+#: actionlist.cpp:314 rootmodel.cpp:540
 #, kde-format
 msgid "Recent Files"
 msgstr "Zuletzt geöffnete Dateien"
 
-#: actionlist.cpp:323
+#: actionlist.cpp:324
 #, kde-format
 msgid "Forget Recent Files"
 msgstr "Zuletzt geöffnete Dateien vergessen"
 
-#: actionlist.cpp:388
+#: actionlist.cpp:389
 #, kde-format
 msgid "Edit Application…"
 msgstr "Anwendung bearbeiten …"
 
-#: actionlist.cpp:420
+#: actionlist.cpp:421
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"

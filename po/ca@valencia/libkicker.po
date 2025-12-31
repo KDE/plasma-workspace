@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-05 02:34+0000\n"
+"POT-Creation-Date: 2025-12-31 02:55+0000\n"
 "PO-Revision-Date: 2025-01-07 10:14+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -46,22 +46,22 @@ msgstr "Fixa al gestor de tasques"
 msgid "Add to Panel (Widget)"
 msgstr "Afig al quadro (giny)"
 
-#: actionlist.cpp:313 rootmodel.cpp:540
+#: actionlist.cpp:314 rootmodel.cpp:540
 #, kde-format
 msgid "Recent Files"
 msgstr "Fitxers recents"
 
-#: actionlist.cpp:323
+#: actionlist.cpp:324
 #, kde-format
 msgid "Forget Recent Files"
 msgstr "Oblida els fitxers recents"
 
-#: actionlist.cpp:388
+#: actionlist.cpp:389
 #, kde-format
 msgid "Edit Application…"
 msgstr "Edita l'aplicació…"
 
-#: actionlist.cpp:420
+#: actionlist.cpp:421
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"

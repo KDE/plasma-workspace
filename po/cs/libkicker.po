@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-05 02:34+0000\n"
+"POT-Creation-Date: 2025-12-31 02:55+0000\n"
 "PO-Revision-Date: 2024-09-19 08:01+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -45,22 +45,22 @@ msgstr "Připnout do Správce úloh"
 msgid "Add to Panel (Widget)"
 msgstr "Přidat do panelu (Widget)"
 
-#: actionlist.cpp:313 rootmodel.cpp:540
+#: actionlist.cpp:314 rootmodel.cpp:540
 #, kde-format
 msgid "Recent Files"
 msgstr "Nedávné soubory"
 
-#: actionlist.cpp:323
+#: actionlist.cpp:324
 #, kde-format
 msgid "Forget Recent Files"
 msgstr "Zapomenout nedávné soubory"
 
-#: actionlist.cpp:388
+#: actionlist.cpp:389
 #, kde-format
 msgid "Edit Application…"
 msgstr "Upravit aplikaci…"
 
-#: actionlist.cpp:420
+#: actionlist.cpp:421
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"

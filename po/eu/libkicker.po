@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-05 02:34+0000\n"
+"POT-Creation-Date: 2025-12-31 02:55+0000\n"
 "PO-Revision-Date: 2025-01-07 19:37+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -46,22 +46,22 @@ msgstr "Iltzatu Ataza Kudeatzailean"
 msgid "Add to Panel (Widget)"
 msgstr "Gehitu panelera (trepeta)"
 
-#: actionlist.cpp:313 rootmodel.cpp:540
+#: actionlist.cpp:314 rootmodel.cpp:540
 #, kde-format
 msgid "Recent Files"
 msgstr "Azken aldiko fitxategiak"
 
-#: actionlist.cpp:323
+#: actionlist.cpp:324
 #, kde-format
 msgid "Forget Recent Files"
 msgstr "Ahaztu azken aldiko fitxategiak"
 
-#: actionlist.cpp:388
+#: actionlist.cpp:389
 #, kde-format
 msgid "Edit Application…"
 msgstr "Editatu aplikazioa..."
 
-#: actionlist.cpp:420
+#: actionlist.cpp:421
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
