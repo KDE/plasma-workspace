@@ -18,6 +18,37 @@ PlasmaComponents.Page {
     implicitWidth: root.switchWidth
     implicitHeight: root.switchHeight
 
+    PlasmaExtras.PlaceholderMessage {
+        anchors.centerIn: parent
+
+        visible: monitor.count === 0
+        width: parent.width - (Kirigami.Units.gridUnit * 4)
+        iconName: Plasmoid.icon
+        text: root.toolTipSubText;
+    }
+
+    Repeater {
+        model: monitor
+
+        PlasmaExtras.PlaceholderMessage {
+            anchors.centerIn: parent
+
+            required property string display
+            required property int state
+
+            visible: monitor.count === 1
+            width: parent.width - (Kirigami.Units.gridUnit * 4)
+            iconName: Plasmoid.icon
+            text: {
+                if (state === Monitor.NodeState.Running && display) {
+                    return i18nc("@info:status %1 camera name", "%1 is in use", display);
+                }
+                return root.toolTipSubText;
+            }
+        }
+    }
+
+
     PlasmaComponents.ScrollView {
         anchors.fill: parent
         contentWidth: availableWidth - (contentItem as ListView).leftMargin - (contentItem as ListView).rightMargin
@@ -26,8 +57,10 @@ PlasmaComponents.Page {
         contentItem: ListView {
             id: cameraList
 
-            focus: cameraList.count > 0
-            model: !root.expanded || monitor.count <= 1 ? null : monitor
+            focus: visible
+            model: monitor
+
+            visible: count > 1
 
             delegate: PlasmaExtras.ExpandableListItem {
                 required property string display
@@ -56,27 +89,6 @@ PlasmaComponents.Page {
                     return i18nc("@info:status", "Suspended");
                 default:
                     return i18nc("@info:status", "Unknown");
-                }
-            }
-
-            Instantiator {
-                active: cameraList.count === 0
-                asynchronous: true
-                model: monitor.count === 1 ? monitor : 1
-
-                delegate: PlasmaExtras.PlaceholderMessage {
-                    property string display
-                    property int state
-                    parent: cameraList
-                    anchors.centerIn: parent
-                    width: parent.width - (Kirigami.Units.gridUnit * 4)
-                    iconName: Plasmoid.icon
-                    text: {
-                        if (monitor.count === 1 && state === Monitor.NodeState.Running && display) {
-                            return i18nc("@info:status %1 camera name", "%1 is in use", display);
-                        }
-                        return root.toolTipSubText;
-                    }
                 }
             }
         }
