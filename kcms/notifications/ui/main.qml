@@ -302,6 +302,18 @@ KCM.SimpleKCM {
             }
         }
 
+        QtControls.CheckBox {
+            text: i18n("Show timeout indicator")
+            checked: kcm.notificationSettings.showPopupTimeout
+            onClicked: kcm.notificationSettings.showPopupTimeout = checked
+
+            KCM.SettingStateBinding {
+                configObject: kcm.notificationSettings
+                settingName: "ShowPopupTimeout"
+                extraEnabledConditions: root.notificationsAvailable
+            }
+        }
+
         Item {
             Kirigami.FormData.label: i18nc("@title:group", "Additional feedback")
             Kirigami.FormData.isSection: true

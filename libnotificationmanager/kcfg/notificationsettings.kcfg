@@ -30,6 +30,9 @@
         <entry name="PopupTimeout" type="Int">
             <default>5000</default><!-- milliseconds -->
         </entry>
+        <entry name="ShowPopupTimeout" type="Bool">
+            <default>true</default>
+        </entry>
     </group>
 
 </kcfg>

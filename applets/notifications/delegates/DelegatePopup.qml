@@ -63,7 +63,7 @@ BaseDelegate {
         Layout.rightMargin: -delegateRoot.modelInterface.popupRightPadding
         implicitHeight: 2
         implicitWidth: -1
-        visible: !criticalNotificationIndicator.visible
+        visible: !criticalNotificationIndicator.visible && Notifications.Globals.notificationSettings.showPopupTimeout
 
         Rectangle {
             readonly property real completionFraction: delegateRoot.modelInterface.remainingTime / delegateRoot.modelInterface.timeout

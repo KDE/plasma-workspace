@@ -20,6 +20,7 @@ NotificationsApplet.NotificationWindow {
     id: notificationPopup
 
     property int popupWidth
+    property bool showPopupTimeout
 
     // Maximum width the popup can take to not break out of the screen geometry.
     readonly property int availableWidth: NotificationsApplet.Globals.screenRect.width - NotificationsApplet.Globals.popupEdgeDistance * 2 - leftPadding - rightPadding
@@ -189,7 +190,7 @@ NotificationsApplet.NotificationWindow {
                 from: timer.interval
                 to: 0
                 duration: timer.interval
-                running: timer.running && Kirigami.Units.longDuration > 1
+                running: timer.running && Kirigami.Units.longDuration > 1 && notificationPopup.showPopupTimeout
             }
 
             contentItem: Delegates.DelegatePopup {

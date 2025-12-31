@@ -63,6 +63,11 @@ class NOTIFICATIONMANAGER_EXPORT Settings : public QObject
     Q_PROPERTY(int popupTimeout READ popupTimeout WRITE setPopupTimeout RESET resetPopupTimeout NOTIFY settingsChanged)
 
     /**
+     * Whether to show the timeout indicator (progress bar) in notification popups.
+     */
+    Q_PROPERTY(bool showPopupTimeout READ showPopupTimeout WRITE setShowPopupTimeout NOTIFY settingsChanged)
+
+    /**
      * Whether to show application jobs as notifications
      */
     Q_PROPERTY(bool jobsInNotifications READ jobsInNotifications WRITE setJobsInNotifications /*RESET resetJobsPopup*/ NOTIFY settingsChanged)
@@ -278,6 +283,9 @@ public:
     int popupTimeout() const;
     void setPopupTimeout(int popupTimeout);
     void resetPopupTimeout();
+
+    bool showPopupTimeout() const;
+    void setShowPopupTimeout(bool show);
 
     bool jobsInNotifications() const;
     void setJobsInNotifications(bool enable);

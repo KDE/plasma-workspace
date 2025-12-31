@@ -428,6 +428,20 @@ void Settings::resetPopupTimeout()
     setPopupTimeout(d->notificationSettings.defaultPopupTimeoutValue());
 }
 
+bool Settings::showPopupTimeout() const
+{
+    return d->notificationSettings.showPopupTimeout();
+}
+
+void Settings::setShowPopupTimeout(bool show)
+{
+    if (this->showPopupTimeout() == show) {
+        return;
+    }
+    d->notificationSettings.setShowPopupTimeout(show);
+    d->setDirty(true);
+}
+
 bool Settings::jobsInNotifications() const
 {
     return d->jobSettings.inNotifications();

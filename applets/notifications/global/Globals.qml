@@ -518,6 +518,7 @@ QtObject {
             readonly property bool hasSomeActions: hasDefaultAction || (actionLabels).length > 0 || (configureActionLabel).length > 0 || hasReplyAction
 
             popupWidth: globals.popupWidth
+            showPopupTimeout: globals.notificationSettings.showPopupTimeout
 
             isCritical: urgency === NotificationManager.Notifications.CriticalUrgency || (urgency === NotificationManager.Notifications.NormalUrgency && !globals.notificationSettings.inhibitNotificationsWhenFullscreen)
 
