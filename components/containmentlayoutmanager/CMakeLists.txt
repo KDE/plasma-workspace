@@ -2,7 +2,7 @@ ecm_add_qml_module(containmentlayoutmanagerplugin
     URI "org.kde.plasma.private.containmentlayoutmanager"
     VERSION 1.0
     GENERATE_PLUGIN_SOURCE
-    DEPENDENCIES QtQuick
+    DEPENDENCIES QtQuick org.kde.plasma.core org.kde.plasma.plasmoid
 )
 
 target_sources(containmentlayoutmanagerplugin PRIVATE
