@@ -34,13 +34,13 @@ PlasmaComponents.Page {
             anchors.centerIn: parent
 
             required property string display
-            required property int state
+            required property var model
 
             visible: monitor.count === 1
             width: parent.width - (Kirigami.Units.gridUnit * 4)
             iconName: Plasmoid.icon
             text: {
-                if (state === Monitor.NodeState.Running && display) {
+                if (model.state === Monitor.NodeState.Running && display) {
                     return i18nc("@info:status %1 camera name", "%1 is in use", display);
                 }
                 return root.toolTipSubText;
@@ -64,10 +64,10 @@ PlasmaComponents.Page {
 
             delegate: PlasmaExtras.ExpandableListItem {
                 required property string display
-                required property int state
+                required property var model
 
                 // TODO: switch to PlasmaExtras.ListItem once it has subtitle
-                icon: switch (state) {
+                icon: switch (model.state) {
                 case Monitor.NodeState.Running:
                     return "camera-on-symbolic";
                 case Monitor.NodeState.Idle:
@@ -76,7 +76,7 @@ PlasmaComponents.Page {
                     return "camera-off-symbolic";
                 }
                 title: display || i18nc("@title", "Camera")
-                subtitle: switch (state) {
+                subtitle: switch (model.state) {
                 case Monitor.NodeState.Running:
                     return i18nc("@info:status", "Active");
                 case Monitor.NodeState.Idle:
