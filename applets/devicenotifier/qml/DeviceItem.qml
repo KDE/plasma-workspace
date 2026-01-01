@@ -22,7 +22,7 @@ import org.kde.kquickcontrolsaddons
 PlasmaExtras.ExpandableListItem {
     id: deviceItem
 
-    required property int index
+    required index
 
     required property string deviceDescription
     required property string deviceIcon
