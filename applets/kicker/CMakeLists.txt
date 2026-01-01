@@ -48,7 +48,7 @@ ecm_add_qml_module(kickerplugin
     URI "org.kde.plasma.private.kicker"
     VERSION 0.1
     SOURCES ${kickerplugin_SRCS}
-    DEPENDENCIES QtCore QtQuick
+    DEPENDENCIES QtCore QtQuick org.kde.plasma.core
     GENERATE_PLUGIN_SOURCE
 )
 
