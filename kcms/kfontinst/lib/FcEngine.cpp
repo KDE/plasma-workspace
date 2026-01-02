@@ -202,10 +202,10 @@ public:
                        int &y,
                        int w,
                        int h,
+                       QList<TChar> &chars,
                        bool oneLine = false,
                        int max = -1,
-                       QRect *used = nullptr,
-                       QList<TChar> *chars = nullptr) const;
+                       QRect *used = nullptr) const;
     bool drawAllChars(XftFont *xftFont, int fontHeight, int &x, int &y, int w, int h, bool oneLine = false, int max = -1, QRect *used = nullptr) const;
     QImage toImage(int w, int h) const;
 
@@ -460,7 +460,7 @@ bool CFcEngine::Xft::drawGlyph(XftFont *xftFont, FT_UInt i, int &x, int &y, int 
     return false;
 }
 
-bool CFcEngine::Xft::drawAllGlyphs(XftFont *xftFont, int fontHeight, int &x, int &y, int w, int h, bool oneLine, int max, QRect *used, QList<TChar> *chars)
+bool CFcEngine::Xft::drawAllGlyphs(XftFont *xftFont, int fontHeight, int &x, int &y, int w, int h, QList<TChar> &chars, bool oneLine, int max, QRect *used)
     const
 {
     bool rv(false);
@@ -478,13 +478,11 @@ bool CFcEngine::Xft::drawAllGlyphs(XftFont *xftFont, int fontHeight, int &x, int
 
             // Build a map from glyph index to character code
             QHash<FT_UInt, quint32> glyphToChar;
-            if (chars) {
-                FT_UInt gindex;
-                FT_ULong charcode = FT_Get_First_Char(face, &gindex);
-                while (gindex != 0) {
-                    glyphToChar[gindex] = charcode;
-                    charcode = FT_Get_Next_Char(face, charcode, &gindex);
-                }
+            FT_UInt gindex;
+            FT_ULong charcode = FT_Get_First_Char(face, &gindex);
+            while (gindex != 0) {
+                glyphToChar[gindex] = charcode;
+                charcode = FT_Get_Next_Char(face, charcode, &gindex);
             }
 
             rv = true;
@@ -500,8 +498,8 @@ bool CFcEngine::Xft::drawAllGlyphs(XftFont *xftFont, int fontHeight, int &x, int
                             }
                         }
                         // Add character info for tooltip
-                        if (chars && !r.isEmpty() && glyphToChar.contains(i)) {
-                            chars->append(TChar(r, glyphToChar[i]));
+                        if (!r.isEmpty() && glyphToChar.contains(i)) {
+                            chars.append(TChar(r, glyphToChar[i]));
                         }
                         if (max > 0 && ++drawn >= max) {
                             break;
@@ -739,8 +737,9 @@ QImage CFcEngine::drawPreview(const QString &name, quint32 style, int faceNo, co
                     } else {
                         int x = constOffset, y = constOffset;
                         QRect used;
+                        QList<TChar> chars;
 
-                        rv = xft()->drawAllGlyphs(xftFont, fSize, x, y, constInitialWidth, h, true, text.length(), &used);
+                        rv = xft()->drawAllGlyphs(xftFont, fSize, x, y, constInitialWidth, h, chars, true, text.length(), &used);
                         if (rv) {
                             usedWidth = used.width();
                         }
@@ -824,8 +823,9 @@ QImage CFcEngine::draw(const QString &name, quint32 style, int faceNo, const QCo
                     } else {
                         int x = 0, y = 0;
                         QRect used;
+                        QList<TChar> chars;
 
-                        rv = xft()->drawAllGlyphs(xftFont, h, x, y, w, h, true, text.length(), &used);
+                        rv = xft()->drawAllGlyphs(xftFont, h, x, y, w, h, chars, true, text.length(), &used);
                     }
 
                     if (rv) {
@@ -1022,7 +1022,7 @@ QImage CFcEngine::draw(const QString &name,
                         if ((xftFont = getFont(alphaSize()))) {
                             int fontHeight = xftFont->ascent + xftFont->descent;
 
-                            xft()->drawAllGlyphs(xftFont, fontHeight, x, y, w, h, false, -1, nullptr, chars);
+                            xft()->drawAllGlyphs(xftFont, fontHeight, x, y, w, h, *chars);
                             rv = true;
                             closeFont(xftFont);
                         }
