@@ -196,7 +196,16 @@ public:
     bool drawString(XftFont *xftFont, const QString &text, int x, int &y, int h) const;
     void drawString(const QString &text, int x, int &y, int h) const;
     bool drawGlyph(XftFont *xftFont, FT_UInt i, int &x, int &y, int w, int h, int fontHeight, bool oneLine, QRect &r) const;
-    bool drawAllGlyphs(XftFont *xftFont, int fontHeight, int &x, int &y, int w, int h, bool oneLine = false, int max = -1, QRect *used = nullptr) const;
+    bool drawAllGlyphs(XftFont *xftFont,
+                       int fontHeight,
+                       int &x,
+                       int &y,
+                       int w,
+                       int h,
+                       bool oneLine = false,
+                       int max = -1,
+                       QRect *used = nullptr,
+                       QList<TChar> *chars = nullptr) const;
     bool drawAllChars(XftFont *xftFont, int fontHeight, int &x, int &y, int w, int h, bool oneLine = false, int max = -1, QRect *used = nullptr) const;
     QImage toImage(int w, int h) const;
 
@@ -451,7 +460,8 @@ bool CFcEngine::Xft::drawGlyph(XftFont *xftFont, FT_UInt i, int &x, int &y, int 
     return false;
 }
 
-bool CFcEngine::Xft::drawAllGlyphs(XftFont *xftFont, int fontHeight, int &x, int &y, int w, int h, bool oneLine, int max, QRect *used) const
+bool CFcEngine::Xft::drawAllGlyphs(XftFont *xftFont, int fontHeight, int &x, int &y, int w, int h, bool oneLine, int max, QRect *used, QList<TChar> *chars)
+    const
 {
     bool rv(false);
 
@@ -466,6 +476,17 @@ bool CFcEngine::Xft::drawAllGlyphs(XftFont *xftFont, int fontHeight, int &x, int
                 space = 1;
             }
 
+            // Build a map from glyph index to character code
+            QHash<FT_UInt, quint32> glyphToChar;
+            if (chars) {
+                FT_UInt gindex;
+                FT_ULong charcode = FT_Get_First_Char(face, &gindex);
+                while (gindex != 0) {
+                    glyphToChar[gindex] = charcode;
+                    charcode = FT_Get_Next_Char(face, charcode, &gindex);
+                }
+            }
+
             rv = true;
             y += fontHeight;
             for (int i = 1; i < face->num_glyphs && y < h; ++i) {
@@ -477,6 +498,10 @@ bool CFcEngine::Xft::drawAllGlyphs(XftFont *xftFont, int fontHeight, int &x, int
                             } else {
                                 *used = used->united(r);
                             }
+                        }
+                        // Add character info for tooltip
+                        if (chars && !r.isEmpty() && glyphToChar.contains(i)) {
+                            chars->append(TChar(r, glyphToChar[i]));
                         }
                         if (max > 0 && ++drawn >= max) {
                             break;
@@ -997,7 +1022,7 @@ QImage CFcEngine::draw(const QString &name,
                         if ((xftFont = getFont(alphaSize()))) {
                             int fontHeight = xftFont->ascent + xftFont->descent;
 
-                            xft()->drawAllGlyphs(xftFont, fontHeight, x, y, w, h, false);
+                            xft()->drawAllGlyphs(xftFont, fontHeight, x, y, w, h, false, -1, nullptr, chars);
                             rv = true;
                             closeFont(xftFont);
                         }
