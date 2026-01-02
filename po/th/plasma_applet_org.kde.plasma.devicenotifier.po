@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-20 00:44+0000\n"
+"POT-Creation-Date: 2026-01-02 00:46+0000\n"
 "PO-Revision-Date: 2010-12-17 16:09+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -244,7 +244,7 @@ msgstr "กำลังถอดออก..."
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr ""
 
-#: qml/FullRepresentation.qml:45 qml/main.qml:124
+#: qml/FullRepresentation.qml:45 qml/main.qml:121
 #, kde-format
 msgid "Remove All"
 msgstr ""
@@ -285,25 +285,25 @@ msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "อุปกรณ์ที่ไม่สามารถถอด/เสียบได้เท่านั้น"
 
-#: qml/main.qml:132
+#: qml/main.qml:129
 #, fuzzy, kde-format
 #| msgid "Removable devices only"
 msgid "Removable Devices"
 msgstr "อุปกรณ์ที่สามารถถอด/เสียบได้เท่านั้น"
 
-#: qml/main.qml:147
+#: qml/main.qml:144
 #, fuzzy, kde-format
 #| msgid "Non-removable devices only"
 msgid "Non Removable Devices"
 msgstr "อุปกรณ์ที่ไม่สามารถถอด/เสียบได้เท่านั้น"
 
-#: qml/main.qml:162
+#: qml/main.qml:159
 #, fuzzy, kde-format
 #| msgid "All devices"
 msgid "All Devices"
 msgstr "อุปกรณ์ทั้งหมด"
 
-#: qml/main.qml:179
+#: qml/main.qml:176
 #, fuzzy, kde-format
 #| msgid "No devices plugged in"
 msgid "Show popup when new device is plugged in"

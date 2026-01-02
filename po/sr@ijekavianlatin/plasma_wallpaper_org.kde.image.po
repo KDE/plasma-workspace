@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-29 00:44+0000\n"
+"POT-Creation-Date: 2026-01-02 00:46+0000\n"
 "PO-Revision-Date: 2017-12-15 12:38+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -29,7 +29,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
 
-#: imagepackage/contents/ui/AddFileDialog.qml:58
+#: imagepackage/contents/ui/AddFileDialog.qml:59
 #, fuzzy, kde-format
 #| msgid "Open Wallpaper Image"
 msgctxt "@title:window"
@@ -37,7 +37,7 @@ msgid "Open Image"
 msgstr "Otvori tapetnu sliku"
 
 # rewrite-msgid: /slides//
-#: imagepackage/contents/ui/AddFileDialog.qml:70
+#: imagepackage/contents/ui/AddFileDialog.qml:71
 #, fuzzy, kde-format
 #| msgid "Directory with the wallpaper to show slides from"
 msgctxt "@title:window"
@@ -149,74 +149,74 @@ msgid "Open Wallpaper Image"
 msgstr "Otvori tapetnu sliku"
 
 # >> @item:intext
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:89
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:88
 #, fuzzy, kde-format
 #| msgid "Image Files"
 msgid "Images"
 msgstr "fajlovi slika"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:93
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:92
 #, kde-format
 msgctxt "@action:button the thing being added is an image file"
 msgid "Add…"
 msgstr ""
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:94
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:93
 #, fuzzy, kde-format
 #| msgid "Open Wallpaper Image"
 msgctxt "@action:button"
 msgid "Add Wallpaper Image…"
 msgstr "Otvori tapetnu sliku"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:100
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:99
 #, fuzzy, kde-format
 #| msgid "Get New Wallpapers..."
 msgctxt "@action:button the new things being gotten are wallpapers"
 msgid "Get New…"
 msgstr "Dobavi nove tapete..."
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:101
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:100
 #, fuzzy, kde-format
 #| msgid "Next Wallpaper Image"
 msgctxt "@action:button"
 msgid "Get New Wallpaper Images…"
 msgstr "Sljedeća tapetna slika"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:108
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:107
 #, kde-format
 msgctxt "@action:button the things being selected are wallpapers"
 msgid "Select All"
 msgstr ""
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:109
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:108
 #, kde-format
 msgctxt "@action:button"
 msgid "Select All Slides"
 msgstr ""
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:117
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:116
 #, kde-format
 msgctxt "@action:button the things being unselected are wallpapers"
 msgid "Select None"
 msgstr ""
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:118
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:117
 #, kde-format
 msgctxt "@action:button"
 msgid "Unselect All Slides"
 msgstr ""
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:34
+#: imagepackage/contents/ui/WallpaperDelegate.qml:33
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Otvori obuhvatajuću fasciklu"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:40
+#: imagepackage/contents/ui/WallpaperDelegate.qml:39
 #, kde-format
 msgid "Restore wallpaper"
 msgstr "Vrati tapet"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:45
+#: imagepackage/contents/ui/WallpaperDelegate.qml:44
 #, fuzzy, kde-format
 #| msgid "Remove wallpaper"
 msgid "Remove Wallpaper"
@@ -289,47 +289,47 @@ msgstr "Sljedeća tapetna slika"
 msgid "Media Files"
 msgstr "fajlovi slika"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:52
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:53
 #, kde-format
 msgid "Order:"
 msgstr ""
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:59
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:60
 #, kde-format
 msgid "Random"
 msgstr ""
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:63
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:64
 #, kde-format
 msgid "A to Z"
 msgstr ""
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:67
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:68
 #, kde-format
 msgid "Z to A"
 msgstr ""
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:71
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:72
 #, kde-format
 msgid "Date modified (newest first)"
 msgstr ""
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:75
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:76
 #, kde-format
 msgid "Date modified (oldest first)"
 msgstr ""
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:100
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:101
 #, kde-format
 msgid "Group by folders"
 msgstr ""
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:112
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:113
 #, kde-format
 msgid "Change every:"
 msgstr "Mijenjaj svakih:"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:122
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:123
 #, kde-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
@@ -338,7 +338,7 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:142
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:143
 #, fuzzy, kde-format
 #| msgid "Minutes"
 msgid "%1 minute"
@@ -348,7 +348,7 @@ msgstr[1] "minuta"
 msgstr[2] "minuta"
 msgstr[3] "minuta"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:162
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:163
 #, fuzzy, kde-format
 #| msgid "Seconds"
 msgid "%1 second"
@@ -358,38 +358,38 @@ msgstr[1] "sekundi"
 msgstr[2] "sekundi"
 msgstr[3] "sekundi"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:206
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:207
 #, fuzzy, kde-format
 #| msgid "Add Folder..."
 msgid "Folders"
 msgstr "Dodaj fasciklu..."
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:210
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:211
 #, kde-format
 msgctxt "@action button the thing being added is a folder"
 msgid "Add…"
 msgstr ""
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:211
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:212
 #, fuzzy, kde-format
 #| msgid "Add Folder..."
 msgctxt "@action:button"
 msgid "Add Folder…"
 msgstr "Dodaj fasciklu..."
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:249
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:250
 #, fuzzy, kde-format
 #| msgid "Remove wallpaper"
 msgid "Remove Folder"
 msgstr "Ukloni tapet"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:260
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:261
 #, fuzzy, kde-format
 #| msgid "Open Containing Folder"
 msgid "Open Folder…"
 msgstr "Otvori obuhvatajuću fasciklu"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:275
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:276
 #, kde-format
 msgid "There are no wallpaper locations configured"
 msgstr ""

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: widgetexplorer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-02 00:46+0000\n"
 "PO-Revision-Date: 2025-02-23 13:31+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -94,48 +94,48 @@ msgstr "月"
 msgid "Years"
 msgstr "年"
 
-#: calendar/qml/MonthViewHeader.qml:181
+#: calendar/qml/MonthViewHeader.qml:178
 #, kde-format
 msgid "Previous Month"
 msgstr "前の月"
 
-#: calendar/qml/MonthViewHeader.qml:183
+#: calendar/qml/MonthViewHeader.qml:180
 #, kde-format
 msgid "Previous Year"
 msgstr "前の年"
 
-#: calendar/qml/MonthViewHeader.qml:185
+#: calendar/qml/MonthViewHeader.qml:182
 #, kde-format
 msgid "Previous Decade"
 msgstr "前の十年"
 
-#: calendar/qml/MonthViewHeader.qml:202
+#: calendar/qml/MonthViewHeader.qml:199
 #, kde-format
 msgctxt "Reset calendar to today"
 msgid "Today"
 msgstr "今日"
 
-#: calendar/qml/MonthViewHeader.qml:203
+#: calendar/qml/MonthViewHeader.qml:200
 #, kde-format
 msgid "Reset calendar to today"
 msgstr "カレンダーを今日にリセット"
 
-#: calendar/qml/MonthViewHeader.qml:214
+#: calendar/qml/MonthViewHeader.qml:211
 #, kde-format
 msgid "Next Month"
 msgstr "次の月"
 
-#: calendar/qml/MonthViewHeader.qml:216
+#: calendar/qml/MonthViewHeader.qml:213
 #, kde-format
 msgid "Next Year"
 msgstr "次の年"
 
-#: calendar/qml/MonthViewHeader.qml:218
+#: calendar/qml/MonthViewHeader.qml:215
 #, kde-format
 msgid "Next Decade"
 msgstr "次の十年"
 
-#: calendar/qml/MonthViewHeader.qml:272
+#: calendar/qml/MonthViewHeader.qml:271
 #, fuzzy, kde-format
 #| msgid "Keep Open"
 msgctxt "@info:tooltip"
@@ -404,7 +404,7 @@ msgstr "パッケージ %1 のインストールに失敗しました: %2"
 msgid "Installation Failure"
 msgstr "インストール失敗"
 
-#: timezoneselector/TimezoneSelector.qml:106
+#: timezoneselector/TimezoneSelector.qml:104
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -412,42 +412,42 @@ msgid ""
 "map"
 msgstr "現在選択されているタイムゾーンはこのマップ上に表示できません"
 
-#: timezoneselector/TimezoneSelector.qml:196
+#: timezoneselector/TimezoneSelector.qml:194
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom in"
 msgstr "拡大"
 
-#: timezoneselector/TimezoneSelector.qml:212
+#: timezoneselector/TimezoneSelector.qml:210
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom out"
 msgstr "縮小"
 
-#: timezoneselector/TimezoneSelector.qml:241
+#: timezoneselector/TimezoneSelector.qml:239
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Region:"
 msgstr "地域:"
 
-#: timezoneselector/TimezoneSelector.qml:248
+#: timezoneselector/TimezoneSelector.qml:246
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
 msgstr "選択…"
 
-#: timezoneselector/TimezoneSelector.qml:252
+#: timezoneselector/TimezoneSelector.qml:250
 #, kde-format
 msgid "Timezone region selector"
 msgstr "タイムゾーン地域セレクタ"
 
-#: timezoneselector/TimezoneSelector.qml:273
+#: timezoneselector/TimezoneSelector.qml:271
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
 msgstr "タイムゾーン:"
 
-#: timezoneselector/TimezoneSelector.qml:283
+#: timezoneselector/TimezoneSelector.qml:281
 #, kde-format
 msgid "Timezone location selector"
 msgstr "タイムゾーン場所セレクタ"

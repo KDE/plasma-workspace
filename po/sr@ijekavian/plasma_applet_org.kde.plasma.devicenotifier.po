@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-20 00:44+0000\n"
+"POT-Creation-Date: 2026-01-02 00:46+0000\n"
 "PO-Revision-Date: 2016-07-10 19:45+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -237,7 +237,7 @@ msgstr "Уклањам..."
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr ""
 
-#: qml/FullRepresentation.qml:45 qml/main.qml:124
+#: qml/FullRepresentation.qml:45 qml/main.qml:121
 #, kde-format
 msgid "Remove All"
 msgstr ""
@@ -278,26 +278,26 @@ msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Подеси уклоњиве уређаје"
 
-#: qml/main.qml:132
+#: qml/main.qml:129
 #, fuzzy, kde-format
 #| msgid "Removable devices only"
 msgid "Removable Devices"
 msgstr "само уклоњиве уређаје"
 
-#: qml/main.qml:147
+#: qml/main.qml:144
 #, fuzzy, kde-format
 #| msgctxt "Open auto mounter kcm"
 #| msgid "Configure Removable Devices"
 msgid "Non Removable Devices"
 msgstr "Подеси уклоњиве уређаје"
 
-#: qml/main.qml:162
+#: qml/main.qml:159
 #, fuzzy, kde-format
 #| msgid "All devices"
 msgid "All Devices"
 msgstr "све уређаје"
 
-#: qml/main.qml:179
+#: qml/main.qml:176
 #, fuzzy, kde-format
 #| msgid "Open popup when new device is plugged in"
 msgid "Show popup when new device is plugged in"

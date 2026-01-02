@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-02 00:46+0000\n"
 "PO-Revision-Date: 2025-11-30 15:19+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -96,48 +96,48 @@ msgstr "Mánuðir"
 msgid "Years"
 msgstr "Ár"
 
-#: calendar/qml/MonthViewHeader.qml:181
+#: calendar/qml/MonthViewHeader.qml:178
 #, kde-format
 msgid "Previous Month"
 msgstr "Fyrri mánuður"
 
-#: calendar/qml/MonthViewHeader.qml:183
+#: calendar/qml/MonthViewHeader.qml:180
 #, kde-format
 msgid "Previous Year"
 msgstr "Fyrra ár"
 
-#: calendar/qml/MonthViewHeader.qml:185
+#: calendar/qml/MonthViewHeader.qml:182
 #, kde-format
 msgid "Previous Decade"
 msgstr "Fyrri áratugur"
 
-#: calendar/qml/MonthViewHeader.qml:202
+#: calendar/qml/MonthViewHeader.qml:199
 #, kde-format
 msgctxt "Reset calendar to today"
 msgid "Today"
 msgstr "Í dag"
 
-#: calendar/qml/MonthViewHeader.qml:203
+#: calendar/qml/MonthViewHeader.qml:200
 #, kde-format
 msgid "Reset calendar to today"
 msgstr "Stilla dagatal á daginn í dag"
 
-#: calendar/qml/MonthViewHeader.qml:214
+#: calendar/qml/MonthViewHeader.qml:211
 #, kde-format
 msgid "Next Month"
 msgstr "Næsti mánuður"
 
-#: calendar/qml/MonthViewHeader.qml:216
+#: calendar/qml/MonthViewHeader.qml:213
 #, kde-format
 msgid "Next Year"
 msgstr "Næsta ár"
 
-#: calendar/qml/MonthViewHeader.qml:218
+#: calendar/qml/MonthViewHeader.qml:215
 #, kde-format
 msgid "Next Decade"
 msgstr "Næsti áratugur"
 
-#: calendar/qml/MonthViewHeader.qml:272
+#: calendar/qml/MonthViewHeader.qml:271
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Keep Open"
@@ -398,7 +398,7 @@ msgstr "Uppsetning á pakkanum %1 mistókst: %2."
 msgid "Installation Failure"
 msgstr "Uppsetning mistókst"
 
-#: timezoneselector/TimezoneSelector.qml:106
+#: timezoneselector/TimezoneSelector.qml:104
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -408,42 +408,42 @@ msgstr ""
 "Tímabeltið sem er valið er ekki tiltækt til að hægt sé að sýna það á þessu "
 "korti"
 
-#: timezoneselector/TimezoneSelector.qml:196
+#: timezoneselector/TimezoneSelector.qml:194
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom in"
 msgstr "Auka aðdrátt"
 
-#: timezoneselector/TimezoneSelector.qml:212
+#: timezoneselector/TimezoneSelector.qml:210
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom out"
 msgstr "Minnka aðdrátt"
 
-#: timezoneselector/TimezoneSelector.qml:241
+#: timezoneselector/TimezoneSelector.qml:239
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Region:"
 msgstr "Svæði:"
 
-#: timezoneselector/TimezoneSelector.qml:248
+#: timezoneselector/TimezoneSelector.qml:246
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
 msgstr "Velja…"
 
-#: timezoneselector/TimezoneSelector.qml:252
+#: timezoneselector/TimezoneSelector.qml:250
 #, kde-format
 msgid "Timezone region selector"
 msgstr "Svæðisval tímabeltis"
 
-#: timezoneselector/TimezoneSelector.qml:273
+#: timezoneselector/TimezoneSelector.qml:271
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
 msgstr "Tímabelti:"
 
-#: timezoneselector/TimezoneSelector.qml:283
+#: timezoneselector/TimezoneSelector.qml:281
 #, kde-format
 msgid "Timezone location selector"
 msgstr "Staðarval tímabeltis"

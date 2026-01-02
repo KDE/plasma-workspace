@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-29 00:44+0000\n"
+"POT-Creation-Date: 2026-01-02 00:46+0000\n"
 "PO-Revision-Date: 2023-02-28 21:51+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -31,14 +31,14 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "raviratlami@aol.in"
 
-#: imagepackage/contents/ui/AddFileDialog.qml:58
+#: imagepackage/contents/ui/AddFileDialog.qml:59
 #, fuzzy, kde-format
 #| msgid "Open Wallpaper Image"
 msgctxt "@title:window"
 msgid "Open Image"
 msgstr "वालपेपर छवि खोलें"
 
-#: imagepackage/contents/ui/AddFileDialog.qml:70
+#: imagepackage/contents/ui/AddFileDialog.qml:71
 #, fuzzy, kde-format
 #| msgid "Directory with the wallpaper to show slides from"
 msgctxt "@title:window"
@@ -144,74 +144,74 @@ msgstr "पृष्ठभूमि रंग चुनें"
 msgid "Open Wallpaper Image"
 msgstr "वालपेपर छवि खोलें"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:89
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:88
 #, fuzzy, kde-format
 #| msgid "Image Files"
 msgid "Images"
 msgstr "छवि फ़ाइलें"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:93
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:92
 #, kde-format
 msgctxt "@action:button the thing being added is an image file"
 msgid "Add…"
 msgstr ""
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:94
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:93
 #, fuzzy, kde-format
 #| msgid "Open Wallpaper Image"
 msgctxt "@action:button"
 msgid "Add Wallpaper Image…"
 msgstr "वालपेपर छवि खोलें"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:100
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:99
 #, fuzzy, kde-format
 #| msgid "Get New Wallpapers…"
 msgctxt "@action:button the new things being gotten are wallpapers"
 msgid "Get New…"
 msgstr "नए वॉलपेपर प्राप्त करें…"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:101
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:100
 #, fuzzy, kde-format
 #| msgid "Next Wallpaper Image"
 msgctxt "@action:button"
 msgid "Get New Wallpaper Images…"
 msgstr "अगला वालपेपर छवि"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:108
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:107
 #, kde-format
 msgctxt "@action:button the things being selected are wallpapers"
 msgid "Select All"
 msgstr ""
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:109
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:108
 #, kde-format
 msgctxt "@action:button"
 msgid "Select All Slides"
 msgstr ""
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:117
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:116
 #, kde-format
 msgctxt "@action:button the things being unselected are wallpapers"
 msgid "Select None"
 msgstr ""
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:118
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:117
 #, kde-format
 msgctxt "@action:button"
 msgid "Unselect All Slides"
 msgstr ""
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:34
+#: imagepackage/contents/ui/WallpaperDelegate.qml:33
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "युक्त फोल्डर खोलें"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:40
+#: imagepackage/contents/ui/WallpaperDelegate.qml:39
 #, kde-format
 msgid "Restore wallpaper"
 msgstr "वॉलपेपर पुनर्स्थापित करें"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:45
+#: imagepackage/contents/ui/WallpaperDelegate.qml:44
 #, kde-format
 msgid "Remove Wallpaper"
 msgstr "वालपेपर हटाएँ"
@@ -289,98 +289,98 @@ msgstr "अगला वालपेपर छवि"
 msgid "Media Files"
 msgstr "छवि फ़ाइलें"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:52
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:53
 #, kde-format
 msgid "Order:"
 msgstr "अनुक्रम:"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:59
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:60
 #, kde-format
 msgid "Random"
 msgstr "बेतरतीब"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:63
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:64
 #, kde-format
 msgid "A to Z"
 msgstr "अ-ह"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:67
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:68
 #, kde-format
 msgid "Z to A"
 msgstr "ह-अ"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:71
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:72
 #, kde-format
 msgid "Date modified (newest first)"
 msgstr "दिनांक परिवर्धित (नवीनतम पहले)"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:75
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:76
 #, kde-format
 msgid "Date modified (oldest first)"
 msgstr "दिनांक परिवर्धित (सबसे पुराना पहले)"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:100
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:101
 #, kde-format
 msgid "Group by folders"
 msgstr "फ़ोल्डरों के अनुसार समूहबद्ध करें"
 
 # This is the time given to change images in wallpaper slideshow
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:112
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:113
 #, kde-format
 msgid "Change every:"
 msgstr "छवी बदलने का समय :"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:122
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:123
 #, kde-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
 msgstr[0] "%1 घंटा"
 msgstr[1] "%1 घंटे"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:142
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:143
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] "%1 मिनट"
 msgstr[1] "%1 मिनट"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:162
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:163
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
 msgstr[0] "%1 सेकंड"
 msgstr[1] "%1 सेकंड"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:206
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:207
 #, kde-format
 msgid "Folders"
 msgstr "फ़ोल्डर"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:210
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:211
 #, kde-format
 msgctxt "@action button the thing being added is a folder"
 msgid "Add…"
 msgstr ""
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:211
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:212
 #, fuzzy, kde-format
 #| msgid "Add Folder…"
 msgctxt "@action:button"
 msgid "Add Folder…"
 msgstr "फ़ोल्डर जोड़ें…"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:249
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:250
 #, kde-format
 msgid "Remove Folder"
 msgstr "फ़ोल्डर हटाएँ"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:260
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:261
 #, fuzzy, kde-format
 #| msgid "Open Folder"
 msgid "Open Folder…"
 msgstr "फ़ोल्डर खोलें"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:275
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:276
 #, kde-format
 msgid "There are no wallpaper locations configured"
 msgstr "कोई वॉलपेपर स्थान विन्यस्त नहीं किया गया है"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-20 00:44+0000\n"
+"POT-Creation-Date: 2026-01-02 00:46+0000\n"
 "PO-Revision-Date: 2025-07-16 00:30+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -213,7 +213,7 @@ msgstr "Extrayendo…"
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr "No lo desconecte. Todavía se están transfiriendo archivos…"
 
-#: qml/FullRepresentation.qml:45 qml/main.qml:124
+#: qml/FullRepresentation.qml:45 qml/main.qml:121
 #, kde-format
 msgid "Remove All"
 msgstr "Extraer todos"
@@ -249,22 +249,22 @@ msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Configurar dispositivos extraíbles…"
 
-#: qml/main.qml:132
+#: qml/main.qml:129
 #, kde-format
 msgid "Removable Devices"
 msgstr "Dispositivos extraíbles"
 
-#: qml/main.qml:147
+#: qml/main.qml:144
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "Dispositivos no extraíbles"
 
-#: qml/main.qml:162
+#: qml/main.qml:159
 #, kde-format
 msgid "All Devices"
 msgstr "Todos los dispositivos"
 
-#: qml/main.qml:179
+#: qml/main.qml:176
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "Mostrar una ventana emergente al conectar un nuevo dispositivo"

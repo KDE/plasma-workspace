@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-29 00:44+0000\n"
+"POT-Creation-Date: 2026-01-02 00:46+0000\n"
 "PO-Revision-Date: 2024-11-04 22:01\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -32,13 +32,13 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "nashtlumach@gmail.com"
 
-#: imagepackage/contents/ui/AddFileDialog.qml:58
+#: imagepackage/contents/ui/AddFileDialog.qml:59
 #, kde-format
 msgctxt "@title:window"
 msgid "Open Image"
 msgstr "Адкрыць выяву"
 
-#: imagepackage/contents/ui/AddFileDialog.qml:70
+#: imagepackage/contents/ui/AddFileDialog.qml:71
 #, kde-format
 msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
@@ -138,70 +138,70 @@ msgstr "Абраць колер фону"
 msgid "Open Wallpaper Image"
 msgstr "Адкрыць выяву шпалер"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:89
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:88
 #, kde-format
 msgid "Images"
 msgstr "Выявы"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:93
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:92
 #, kde-format
 msgctxt "@action:button the thing being added is an image file"
 msgid "Add…"
 msgstr "Дадаць…"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:94
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:93
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Wallpaper Image…"
 msgstr "Дадаць выяву шпалер…"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:100
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:99
 #, kde-format
 msgctxt "@action:button the new things being gotten are wallpapers"
 msgid "Get New…"
 msgstr "Атрымаць новыя…"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:101
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:100
 #, kde-format
 msgctxt "@action:button"
 msgid "Get New Wallpaper Images…"
 msgstr "Атрымаць новыя шпалеры…"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:108
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:107
 #, kde-format
 msgctxt "@action:button the things being selected are wallpapers"
 msgid "Select All"
 msgstr ""
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:109
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:108
 #, kde-format
 msgctxt "@action:button"
 msgid "Select All Slides"
 msgstr ""
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:117
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:116
 #, kde-format
 msgctxt "@action:button the things being unselected are wallpapers"
 msgid "Select None"
 msgstr ""
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:118
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:117
 #, kde-format
 msgctxt "@action:button"
 msgid "Unselect All Slides"
 msgstr ""
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:34
+#: imagepackage/contents/ui/WallpaperDelegate.qml:33
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Адкрыць каталог змесціва"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:40
+#: imagepackage/contents/ui/WallpaperDelegate.qml:39
 #, kde-format
 msgid "Restore wallpaper"
 msgstr "Аднавіць шпалеры"
 
-#: imagepackage/contents/ui/WallpaperDelegate.qml:45
+#: imagepackage/contents/ui/WallpaperDelegate.qml:44
 #, kde-format
 msgid "Remove Wallpaper"
 msgstr "Выдаліць шпалеры"
@@ -277,47 +277,47 @@ msgstr "Наступная выява шпалер"
 msgid "Media Files"
 msgstr "Медыяфайлы"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:52
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:53
 #, kde-format
 msgid "Order:"
 msgstr "Парадак:"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:59
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:60
 #, kde-format
 msgid "Random"
 msgstr "Выпадкова"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:63
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:64
 #, kde-format
 msgid "A to Z"
 msgstr "А - Я"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:67
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:68
 #, kde-format
 msgid "Z to A"
 msgstr "Я - А"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:71
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:72
 #, kde-format
 msgid "Date modified (newest first)"
 msgstr "Дата змены (спачатку навейшыя)"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:75
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:76
 #, kde-format
 msgid "Date modified (oldest first)"
 msgstr "Дата змены (спачатку старэйшыя)"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:100
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:101
 #, kde-format
 msgid "Group by folders"
 msgstr "Групаваць па каталогах"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:112
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:113
 #, kde-format
 msgid "Change every:"
 msgstr "Змяняць кожныя:"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:122
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:123
 #, kde-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
@@ -326,7 +326,7 @@ msgstr[1] "%1 гадзіны"
 msgstr[2] "%1 гадзін"
 msgstr[3] "%1 гадзіны"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:142
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:143
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
@@ -335,7 +335,7 @@ msgstr[1] "%1 хвіліны"
 msgstr[2] "%1 хвіліны"
 msgstr[3] "%1 хвілін"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:162
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:163
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
@@ -344,34 +344,34 @@ msgstr[1] "%1 секунды"
 msgstr[2] "%1 секунд"
 msgstr[3] "%1 секунды"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:206
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:207
 #, kde-format
 msgid "Folders"
 msgstr "Каталогі"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:210
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:211
 #, kde-format
 msgctxt "@action button the thing being added is a folder"
 msgid "Add…"
 msgstr "Дадаць…"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:211
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:212
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Folder…"
 msgstr "Дадаць каталог…"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:249
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:250
 #, kde-format
 msgid "Remove Folder"
 msgstr "Выдаліць каталог"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:260
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:261
 #, kde-format
 msgid "Open Folder…"
 msgstr "Адкрыць каталог…"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:275
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:276
 #, kde-format
 msgid "There are no wallpaper locations configured"
 msgstr "Размяшчэнні шпалер не наладжаныя"

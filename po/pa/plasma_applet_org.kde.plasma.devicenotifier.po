@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-20 00:44+0000\n"
+"POT-Creation-Date: 2026-01-02 00:46+0000\n"
 "PO-Revision-Date: 2025-09-15 09:57-0500\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -206,7 +206,7 @@ msgstr "…ਹਟਾਉਣਾ ਜਾਰੀ"
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr "ਹਾਲੇ ਅਣ-ਪਲੱਗ ਨਾ ਕਰੋ! ਫਾਇਲਾਂ ਨੂੰ ਹਾਲੇ ਵੀ ਭੇਜਿਆ ਜਾ ਰਿਹਾ ਹੈ…"
 
-#: qml/FullRepresentation.qml:45 qml/main.qml:124
+#: qml/FullRepresentation.qml:45 qml/main.qml:121
 #, kde-format
 msgid "Remove All"
 msgstr "ਸਭ ਨੂੰ ਹਟਾਓ"
@@ -242,22 +242,22 @@ msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "…ਹਟਾਉਣਯੋਗ ਡਿਵਾਈਸਾਂ ਦੀ ਸੰਰਚਨਾ"
 
-#: qml/main.qml:132
+#: qml/main.qml:129
 #, kde-format
 msgid "Removable Devices"
 msgstr "ਹਟਾਉਣਯੋਗ ਡਿਵਾਈਸ"
 
-#: qml/main.qml:147
+#: qml/main.qml:144
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "ਗ਼ੈਰ ਹਟਾਉਣਯੋਗ ਡਿਵਾਈਸ"
 
-#: qml/main.qml:162
+#: qml/main.qml:159
 #, kde-format
 msgid "All Devices"
 msgstr "ਸਭ ਡਿਵਾਈਸ"
 
-#: qml/main.qml:179
+#: qml/main.qml:176
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "ਜਦੋਂ ਨਵੇਂ ਡਿਵਾਈਸ ਨੂੰ ਲਗਾਇਆ ਜਾਵੇ ਤਾਂ ਪੋਪਅੱਪ ਵੇਖਾਓ"

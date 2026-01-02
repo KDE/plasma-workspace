@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-06 00:44+0000\n"
+"POT-Creation-Date: 2026-01-02 00:46+0000\n"
 "PO-Revision-Date: 2024-01-26 14:28+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -19,53 +19,53 @@ msgstr ""
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
 "X-Generator: Poedit 3.0.1\n"
 
-#: qml/FullRepresentation.qml:45
+#: qml/FullRepresentation.qml:44
+#, kde-format
+msgctxt "@info:status %1 camera name"
+msgid "%1 is in use"
+msgstr "Yra naudojama %1"
+
+#: qml/FullRepresentation.qml:78
 #, kde-format
 msgctxt "@title"
 msgid "Camera"
 msgstr "Kamera"
 
-#: qml/FullRepresentation.qml:48
+#: qml/FullRepresentation.qml:81
 #, kde-format
 msgctxt "@info:status"
 msgid "Active"
 msgstr "Aktyvi"
 
-#: qml/FullRepresentation.qml:50
+#: qml/FullRepresentation.qml:83
 #, kde-format
 msgctxt "@info:status"
 msgid "Idle"
 msgstr "Neveikli"
 
-#: qml/FullRepresentation.qml:52
+#: qml/FullRepresentation.qml:85
 #, kde-format
 msgctxt "@info:status"
 msgid "Error"
 msgstr "Klaida"
 
-#: qml/FullRepresentation.qml:54
+#: qml/FullRepresentation.qml:87
 #, kde-format
 msgctxt "@info:status"
 msgid "Creating"
 msgstr "Kuriama"
 
-#: qml/FullRepresentation.qml:56
+#: qml/FullRepresentation.qml:89
 #, kde-format
 msgctxt "@info:status"
 msgid "Suspended"
 msgstr "Pristabdyta"
 
-#: qml/FullRepresentation.qml:58
+#: qml/FullRepresentation.qml:91
 #, kde-format
 msgctxt "@info:status"
 msgid "Unknown"
 msgstr "Nežinoma"
-
-#: qml/FullRepresentation.qml:76
-#, kde-format
-msgctxt "@info:status %1 camera name"
-msgid "%1 is in use"
-msgstr "Yra naudojama %1"
 
 #: qml/main.qml:25
 #, kde-format

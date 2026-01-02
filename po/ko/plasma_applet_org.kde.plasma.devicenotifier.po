@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-20 00:44+0000\n"
+"POT-Creation-Date: 2026-01-02 00:46+0000\n"
 "PO-Revision-Date: 2025-07-20 01:19+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -204,7 +204,7 @@ msgstr "제거하는 중…"
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr "아직 연결을 해제하지 마십시오! 파일 전송 중입니다…"
 
-#: qml/FullRepresentation.qml:45 qml/main.qml:124
+#: qml/FullRepresentation.qml:45 qml/main.qml:121
 #, kde-format
 msgid "Remove All"
 msgstr "모두 제거"
@@ -240,22 +240,22 @@ msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "이동식 장치 설정…"
 
-#: qml/main.qml:132
+#: qml/main.qml:129
 #, kde-format
 msgid "Removable Devices"
 msgstr "이동식 장치"
 
-#: qml/main.qml:147
+#: qml/main.qml:144
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "고정 장치"
 
-#: qml/main.qml:162
+#: qml/main.qml:159
 #, kde-format
 msgid "All Devices"
 msgstr "모든 장치"
 
-#: qml/main.qml:179
+#: qml/main.qml:176
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "새 장치가 연결되었을 때 팝업 표시"

@@ -221,11 +221,9 @@ msgid "Hide after:"
 msgstr "经过此时长后隐藏："
 
 #: ui/main.qml:306
-#, fuzzy, kde-format
-#| msgctxt "Show application jobs in notification widget"
-#| msgid "Show in notifications"
+#, kde-format
 msgid "Show timeout indicator"
-msgstr "在通知中显示"
+msgstr ""
 
 #: ui/main.qml:318
 #, kde-format

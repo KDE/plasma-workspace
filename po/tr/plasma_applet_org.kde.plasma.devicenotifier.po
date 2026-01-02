@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-20 00:44+0000\n"
+"POT-Creation-Date: 2026-01-02 00:46+0000\n"
 "PO-Revision-Date: 2025-07-17 23:16+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -211,7 +211,7 @@ msgstr "Kaldırılıyor…"
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr "Henüz çıkarmayın! Dosyalar hâlâ aktarılıyor…"
 
-#: qml/FullRepresentation.qml:45 qml/main.qml:124
+#: qml/FullRepresentation.qml:45 qml/main.qml:121
 #, kde-format
 msgid "Remove All"
 msgstr "Tümünü Kaldır"
@@ -247,22 +247,22 @@ msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Çıkarılabilir Aygıtları Yapılandır…"
 
-#: qml/main.qml:132
+#: qml/main.qml:129
 #, kde-format
 msgid "Removable Devices"
 msgstr "Çıkarılabilir Aygıtlar"
 
-#: qml/main.qml:147
+#: qml/main.qml:144
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "Çıkarılabilir Olmayan Aygıtlar"
 
-#: qml/main.qml:162
+#: qml/main.qml:159
 #, kde-format
 msgid "All Devices"
 msgstr "Tüm Aygıtlar"
 
-#: qml/main.qml:179
+#: qml/main.qml:176
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "Yeni Aygıt Takıldığında Açılır Pencere Göster"

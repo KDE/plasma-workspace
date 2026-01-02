@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025, 2026 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-03 00:46+0000\n"
-"PO-Revision-Date: 2025-08-17 12:03+0200\n"
+"PO-Revision-Date: 2026-01-01 12:48+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #: src/fingerprintmodel.cpp:144 src/fingerprintmodel.cpp:228
 #, kde-format
@@ -621,6 +621,9 @@ msgid ""
 "Cannot change your own username while logged in; log out and then log in as "
 "another user to change this account’s username."
 msgstr ""
+"Nie można zmienić twojej własnej nazwy użytkownika, gdy jesteś zalogowany; "
+"wyloguj się, a następnie zaloguj jako inny użytkownik, aby zmienić nazwę "
+"tego konta."
 
 #: src/ui/UserDetailsPage.qml:186
 #, kde-format
@@ -629,6 +632,8 @@ msgid ""
 "Cannot change the username of a logged-in user; wait until this user logs "
 "out first."
 msgstr ""
+"Nie możesz zmienić nazwy użytkownika zalogowanego użytkownika; poczekaj aż "
+"ten użytkownik się wyloguje."
 
 #: src/ui/UserDetailsPage.qml:214
 #, kde-format
@@ -668,6 +673,8 @@ msgid ""
 "Cannot delete yourself! Log out and then log in as another user to delete "
 "this user account."
 msgstr ""
+"Nie możesz usunąć samego siebie! Wyloguj się, a następnie zaloguj jako inny "
+"użytkownik, aby usunąć to konto."
 
 #: src/ui/UserDetailsPage.qml:286
 #, kde-format

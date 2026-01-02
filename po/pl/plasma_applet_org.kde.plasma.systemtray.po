@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2014, 2015, 2017, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+# SPDX-FileCopyrightText: 2014, 2015, 2017, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-05 00:44+0000\n"
-"PO-Revision-Date: 2025-11-22 21:23+0100\n"
+"PO-Revision-Date: 2026-01-01 12:52+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -24,15 +24,13 @@ msgid "General"
 msgstr "Ogólne"
 
 #: qml/ConfigGeneral.qml:43
-#, fuzzy, kde-format
-#| msgid "Shown when relevant"
+#, kde-format
 msgctxt "@item:inlistbox Show this System Tray item when relevant"
 msgid "Show when relevant"
 msgstr "Pokaż, gdy potrzebne"
 
 #: qml/ConfigGeneral.qml:47
-#, fuzzy, kde-format
-#| msgid "Always shown"
+#, kde-format
 msgctxt "@item:inlistbox Always show this System Tray item"
 msgid "Always show"
 msgstr "Zawsze widoczne"
@@ -41,13 +39,13 @@ msgstr "Zawsze widoczne"
 #, kde-format
 msgctxt "@item:inlistbox Show this System Tray item only in the expanded popup"
 msgid "Show only in popup"
-msgstr ""
+msgstr "Pokaż tylko w oknie wysuwnym"
 
 #: qml/ConfigGeneral.qml:55
 #, kde-format
 msgctxt "@item:inlistbox Never show this System Tray item; disable it"
 msgid "Never show (disabled)"
-msgstr ""
+msgstr "Nie pokazuj nigdy (wyłączone)"
 
 #: qml/ConfigGeneral.qml:126
 #, kde-format
@@ -98,13 +96,7 @@ msgid "I understand the risks"
 msgstr "Rozumiem ryzyko"
 
 #: qml/ConfigGeneral.qml:187
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:usagetip"
-#| msgid ""
-#| "Disabling the clipboard is not recommended, as it will cause copied data "
-#| "to be lost when the application it was copied from is closed.<nl/><nl/"
-#| ">Instead consider configuring the clipboard to disable its history, or "
-#| "only remember one item at a time."
+#, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
 "Disabling the clipboard is not recommended, as it will cause copied data to "
@@ -115,9 +107,11 @@ msgid ""
 "at a time."
 msgstr ""
 "Wyłączenie schowka nie jest zalecane, bo spowoduje utratę skopiowanych "
-"danych, gdy aplikacja, z której je skopiowano zostanie zamknięta.<nl/><nl/"
-">Zamiast tego rozważ wyłączenie historii schowka lub zapamiętuj tylko jeden "
-"wpis na raz."
+"danych, gdy aplikacja, z której je skopiowano zostanie zamknięta.<nl/><nl/> "
+"Zrób to tylko po ręcznym dodaniu wolnostojącego elementu powiadomień gdzieś "
+"w innym miejscu lub gdy używasz elementu strony trzeciej do obsługi "
+"powiadomień.Zamiast tego rozważ wyłączenie historii schowka lub zapamiętuj "
+"tylko jeden wpis na raz."
 
 #: qml/ConfigGeneral.qml:196
 #, kde-kuit-format
@@ -128,6 +122,10 @@ msgid ""
 "added a standalone Notifications widget somewhere else, or are intentionally "
 "using a 3rd-party notification manager to handle notifications."
 msgstr ""
+"Wyłączenie elementu powiadamiającego nie jest zalecane, bo powiadomienia "
+"wysyłane przez aplikacje nie będą już widoczne.<nl/><nl/>Zrób to tylko po "
+"ręcznym dodaniu wolnostojącego elementu powiadomień gdzieś w innym miejscu "
+"lub gdy używasz elementu strony trzeciej do obsługi powiadomień."
 
 #: qml/ConfigGeneral.qml:208
 #, kde-format
