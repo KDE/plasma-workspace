@@ -1,0 +1,99 @@
+# Copyright (C) 2025 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# SPDX-FileCopyrightText: 2025, 2026 Charlotte <altronic25@protonmail.com>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-11-17 14:42+0000\n"
+"PO-Revision-Date: 2025-12-30 00:59+0000\n"
+"Last-Translator: Charlotte <altronic25@protonmail.com>\n"
+"Language-Team: Irish\n"
+"Language: ga\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
+"3 : 4\n"
+"X-Generator: Lokalize 25.12.0\n"
+
+#: ui/DayNightView.qml:154
+#, kde-format
+msgid ""
+"Color temperature begins changing to night time at %1 and is fully changed "
+"by %2"
+msgstr ""
+
+#: ui/DayNightView.qml:157
+#, kde-format
+msgid ""
+"Color temperature begins changing to day time at %1 and is fully changed by "
+"%2"
+msgstr ""
+
+#: ui/main.qml:39
+#, kde-format
+msgctxt "@info"
+msgid "The blue light filter makes the colors on the screen warmer."
+msgstr ""
+
+#: ui/main.qml:49
+#, kde-format
+msgctxt "@label:listbox Night Light modes"
+msgid "Switching times:"
+msgstr ""
+
+#: ui/main.qml:58
+#, kde-format
+msgctxt "@item:inlistbox switching times"
+msgid "Always off"
+msgstr ""
+
+#: ui/main.qml:59
+#, kde-format
+msgctxt "@item:inlistbox switching times"
+msgid "Always on night light"
+msgstr ""
+
+#: ui/main.qml:60
+#, kde-format
+msgctxt "@item:inlistbox switching times"
+msgid "Sunrise and sunset"
+msgstr "Éirí agus luí na gréine"
+
+#: ui/main.qml:72
+#, kde-format
+msgctxt "@action:button Configure day-night cycle times"
+msgid "Configure…"
+msgstr ""
+
+#: ui/main.qml:115 ui/main.qml:166 ui/main.qml:230
+#, kde-format
+msgctxt "Color temperature in Kelvin"
+msgid "%1K"
+msgstr "%1K"
+
+#: ui/main.qml:123
+#, kde-format
+msgctxt "@label:slider"
+msgid "Day light temperature:"
+msgstr "Solas an lae teochta:"
+
+#: ui/main.qml:173 ui/main.qml:237
+#, kde-format
+msgctxt "Night colour blue-ish; no blue light filter activated"
+msgid "Cool (no filter)"
+msgstr "Fionnuar (gan scagaire)"
+
+#: ui/main.qml:180 ui/main.qml:244
+#, kde-format
+msgctxt "Night colour red-ish"
+msgid "Warm"
+msgstr "Te"
+
+#: ui/main.qml:187
+#, kde-format
+msgctxt "@label:slider"
+msgid "Night light temperature:"
+msgstr ""

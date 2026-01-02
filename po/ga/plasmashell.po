@@ -1,0 +1,448 @@
+# Copyright (C) 2025 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# SPDX-FileCopyrightText: 2025 Charlotte <altronic25@protonmail.com>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-11-17 14:42+0000\n"
+"PO-Revision-Date: 2025-12-30 00:59+0000\n"
+"Last-Translator: Charlotte <altronic25@protonmail.com>\n"
+"Language-Team: Irish\n"
+"Language: ga\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
+"3 : 4\n"
+"X-Generator: Lokalize 25.12.0\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+
+#: currentcontainmentactionsmodel.cpp:203
+#, kde-format
+msgid "Configure Mouse Actions Plugin"
+msgstr ""
+
+#: desktopview.cpp:222
+#, kde-format
+msgctxt "@label %1 is the Plasma version"
+msgid "KDE Plasma 6.0 Dev"
+msgstr ""
+
+#: desktopview.cpp:225
+#, kde-format
+msgctxt "@label %1 is the Plasma version"
+msgid "KDE Plasma 6.0 Alpha"
+msgstr ""
+
+#: desktopview.cpp:228
+#, kde-format
+msgctxt "@label %1 is the Plasma version"
+msgid "KDE Plasma 6.0 Beta 1"
+msgstr ""
+
+#: desktopview.cpp:231
+#, kde-format
+msgctxt "@label %1 is the Plasma version"
+msgid "KDE Plasma 6.0 Beta 2"
+msgstr ""
+
+#: desktopview.cpp:234
+#, kde-format
+msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
+msgid "KDE Plasma 6.0 RC1"
+msgstr ""
+
+#: desktopview.cpp:237
+#, kde-format
+msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
+msgid "KDE Plasma 6.0 RC2"
+msgstr ""
+
+#: desktopview.cpp:263
+#, kde-format
+msgctxt "@label %1 is the Plasma version"
+msgid "KDE Plasma %1 Dev"
+msgstr ""
+
+#: desktopview.cpp:267
+#, kde-format
+msgctxt "@label %1 is the Plasma version"
+msgid "KDE Plasma %1 Beta"
+msgstr ""
+
+#: desktopview.cpp:270
+#, kde-format
+msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
+msgid "KDE Plasma %1 Beta %2"
+msgstr ""
+
+#: desktopview.cpp:274
+#, kde-format
+msgctxt "@label %1 is the Plasma version"
+msgid "KDE Plasma %1"
+msgstr ""
+
+#: desktopview.cpp:280
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Visit bugs.kde.org to report issues"
+msgstr ""
+
+#: desktopview.cpp:288
+#, kde-format
+msgctxt "@action:button"
+msgid "Copy Plasma Version"
+msgstr ""
+
+#: desktopview.cpp:294
+#, kde-format
+msgctxt "@action:button"
+msgid "Report a Bug…"
+msgstr ""
+
+#: desktopview.cpp:304
+#, kde-format
+msgctxt "@title:menu"
+msgid "Hide Preview Banner"
+msgstr ""
+
+#: desktopview.cpp:307
+#, kde-format
+msgctxt "@action:button Hide the preview banner until the system is restarted"
+msgid "Hide Until Restart"
+msgstr ""
+
+#: desktopview.cpp:314
+#, kde-format
+msgctxt "@action:button Hide the preview banner permanently"
+msgid "Hide Permanently…"
+msgstr ""
+
+#: desktopview.cpp:320
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Are you sure you want to permanently hide the preview banner?<nl/><nl/>This "
+"action can only be undone by removing the line beginning with "
+"<icode>ShowDesktopPreviewBanner</icode> in the <filename>kdeglobals</"
+"filename> config file."
+msgstr ""
+
+#: desktopview.cpp:322
+#, kde-format
+msgctxt "@title:window"
+msgid "Hide Preview Banner?"
+msgstr ""
+
+#: desktopview.cpp:595 desktopview.cpp:611
+#, kde-format
+msgid "Enter Edit Mode"
+msgstr ""
+
+#: desktopview.cpp:609
+#, kde-format
+msgid "Exit Edit Mode"
+msgstr ""
+
+#: main.cpp:86
+#, kde-format
+msgid "Plasma Shell"
+msgstr ""
+
+#: main.cpp:99
+#, kde-format
+msgid "Enable QML Javascript debugger"
+msgstr ""
+
+#: main.cpp:102
+#, kde-format
+msgid "Do not restart plasma-shell automatically after a crash"
+msgstr ""
+
+#: main.cpp:105
+#, kde-format
+msgid "Force loading the given shell plugin"
+msgstr ""
+
+#: main.cpp:109
+#, kde-format
+msgid "Replace an existing instance"
+msgstr ""
+
+#: main.cpp:112
+#, kde-format
+msgid "Lists the available options for user feedback"
+msgstr ""
+
+#: main.cpp:174
+#, kde-format
+msgid "Plasma Failed To Start"
+msgstr ""
+
+#: main.cpp:175
+#, kde-format
+msgid ""
+"Plasma is unable to start as it could not correctly use OpenGL 2 or software "
+"fallback\n"
+"Please check that your graphic drivers are set up correctly."
+msgstr ""
+
+#: osd.cpp:65
+#, kde-format
+msgctxt "Brightness OSD: display name and brightness percentage"
+msgid "%1: %2%"
+msgstr ""
+
+#: osd.cpp:93
+#, kde-format
+msgctxt "OSD informing that the system is muted, keep short"
+msgid "Audio Muted"
+msgstr ""
+
+#: osd.cpp:116
+#, kde-format
+msgctxt "OSD informing that the microphone is muted, keep short"
+msgid "Microphone Muted"
+msgstr ""
+
+#: osd.cpp:132
+#, kde-format
+msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
+msgid "%1 Muted"
+msgstr ""
+
+#: osd.cpp:154
+#, kde-format
+msgctxt "touchpad was enabled, keep short"
+msgid "Touchpad On"
+msgstr ""
+
+#: osd.cpp:156
+#, kde-format
+msgctxt "touchpad was disabled, keep short"
+msgid "Touchpad Off"
+msgstr ""
+
+#: osd.cpp:163
+#, kde-format
+msgctxt "wireless lan was enabled, keep short"
+msgid "Wifi On"
+msgstr ""
+
+#: osd.cpp:165
+#, kde-format
+msgctxt "wireless lan was disabled, keep short"
+msgid "Wifi Off"
+msgstr ""
+
+#: osd.cpp:172
+#, kde-format
+msgctxt "Bluetooth was enabled, keep short"
+msgid "Bluetooth On"
+msgstr ""
+
+#: osd.cpp:174
+#, kde-format
+msgctxt "Bluetooth was disabled, keep short"
+msgid "Bluetooth Off"
+msgstr ""
+
+#: osd.cpp:181
+#, kde-format
+msgctxt "mobile internet was enabled, keep short"
+msgid "Mobile Internet On"
+msgstr ""
+
+#: osd.cpp:183
+#, kde-format
+msgctxt "mobile internet was disabled, keep short"
+msgid "Mobile Internet Off"
+msgstr ""
+
+#: osd.cpp:191
+#, kde-format
+msgctxt ""
+"on screen keyboard was enabled because physical keyboard got unplugged, keep "
+"short"
+msgid "On-Screen Keyboard Activated"
+msgstr ""
+
+#: osd.cpp:194
+#, kde-format
+msgctxt ""
+"on screen keyboard was disabled because physical keyboard was plugged in, "
+"keep short"
+msgid "On-Screen Keyboard Deactivated"
+msgstr ""
+
+#: osd.cpp:201
+#, kde-format
+msgctxt "power management was inhibited, keep short"
+msgid "Sleep and Screen Locking Blocked"
+msgstr ""
+
+#: osd.cpp:203
+#, kde-format
+msgctxt "power management was uninhibited, keep short"
+msgid "Sleep and Screen Locking Unblocked"
+msgstr ""
+
+#: osd.cpp:213
+#, kde-format
+msgctxt "Power profile was changed to power save mode, keep short"
+msgid "Power Save Mode"
+msgstr ""
+
+#: osd.cpp:216
+#, kde-format
+msgctxt "Power profile was changed to balanced mode, keep short"
+msgid "Balanced Power Mode"
+msgstr ""
+
+#: osd.cpp:219
+#, kde-format
+msgctxt "Power profile was changed to performance mode, keep short"
+msgid "Performance Mode"
+msgstr ""
+
+#: panelview.cpp:458
+#, kde-format
+msgid ""
+"With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode are "
+"known to cause poor window drag and resize performance. Consider using other "
+"settings."
+msgstr ""
+
+#: panelview.cpp:1141
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Hide Panel Configuration"
+msgstr ""
+
+#: panelview.cpp:1143
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Show Panel Configuration"
+msgstr ""
+
+#: qml/OsdItem.qml:34
+#, kde-format
+msgctxt "Percentage value"
+msgid "%1%"
+msgstr ""
+
+#: shellcontainmentconfig.cpp:106
+#, kde-format
+msgid "Internal Screen on %1"
+msgstr ""
+
+#: shellcontainmentconfig.cpp:110
+#, kde-format
+msgctxt "Screen manufacturer and model on connector"
+msgid "%1 %2 on %3"
+msgstr ""
+
+#: shellcontainmentconfig.cpp:133
+#, kde-format
+msgid "Disconnected Screen %1"
+msgstr ""
+
+#: shellcorona.cpp:213 shellcorona.cpp:215
+#, kde-format
+msgid "Show Desktop"
+msgstr ""
+
+#: shellcorona.cpp:215
+#, kde-format
+msgid "Hide Desktop"
+msgstr ""
+
+#: shellcorona.cpp:230
+#, kde-format
+msgid "Activate Application Launcher"
+msgstr ""
+
+#: shellcorona.cpp:238
+#, kde-format
+msgid "Show Activity Switcher"
+msgstr ""
+
+#: shellcorona.cpp:247
+#, kde-format
+msgid "Switch to Previous Activity"
+msgstr ""
+
+#: shellcorona.cpp:255
+#, kde-format
+msgid "Switch to Next Activity"
+msgstr ""
+
+#: shellcorona.cpp:270
+#, kde-format
+msgid "Activate Task Manager Entry %1"
+msgstr ""
+
+#: shellcorona.cpp:302
+#, kde-format
+msgctxt "@action:button"
+msgid "Manage Desktops and Panels…"
+msgstr ""
+
+#: shellcorona.cpp:324
+#, kde-format
+msgid "Move keyboard focus between panels"
+msgstr ""
+
+#: shellcorona.cpp:2221
+#, kde-format
+msgid "Add Panel"
+msgstr ""
+
+#: shellcorona.cpp:2304
+#, kde-format
+msgctxt "Creates an empty containment (%1 is the containment name)"
+msgid "Empty %1"
+msgstr ""
+
+#: softwarerendernotifier.cpp:34
+#, kde-format
+msgid "Software Renderer In Use"
+msgstr ""
+
+#: softwarerendernotifier.cpp:35
+#, kde-format
+msgctxt "Tooltip telling user their GL drivers are broken"
+msgid "Software Renderer In Use"
+msgstr ""
+
+#: softwarerendernotifier.cpp:36
+#, kde-format
+msgctxt "Tooltip telling user their GL drivers are broken"
+msgid "Rendering may be degraded"
+msgstr ""
+
+#: softwarerendernotifier.cpp:46
+#, kde-format
+msgid "Never show again"
+msgstr ""
+
+#: userfeedback.cpp:36
+#, kde-format
+msgid "Panel Count"
+msgstr ""
+
+#: userfeedback.cpp:40
+#, kde-format
+msgid "Counts the panels"
+msgstr ""
