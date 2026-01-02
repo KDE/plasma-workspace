@@ -1,22 +1,22 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SPDX-FileCopyrightText: 2025, 2026 Charlotte <altronic25@protonmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Irish Gaelic <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-01-01 18:03+0000\n"
+"Last-Translator: Charlotte <altronic25@protonmail.com>\n"
+"Language-Team: Irish\n"
 "Language: ga\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #: package/contents/ui/LocationsFixedView.qml:39
 #, kde-format
@@ -30,13 +30,13 @@ msgstr ""
 msgctxt ""
 "@label:chooser Click should be translated to mean clicking using a mouse"
 msgid "Click to choose your location on the map."
-msgstr ""
+msgstr "Cliceáil chun do shuíomh ar an léarscáil a roghnú."
 
 #: package/contents/ui/LocationsFixedView.qml:78
 #: package/contents/ui/LocationsFixedView.qml:103
 #, kde-format
 msgid "Zoom in"
-msgstr ""
+msgstr "Zúmáil isteach"
 
 #: package/contents/ui/LocationsFixedView.qml:222
 #, kde-kuit-format
@@ -52,13 +52,13 @@ msgstr ""
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Latitude:"
-msgstr ""
+msgstr "Domhanleithead:"
 
 #: package/contents/ui/LocationsFixedView.qml:261
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Longitude:"
-msgstr ""
+msgstr "Domhanfhad:"
 
 #: package/contents/ui/main.qml:98
 #, kde-format
@@ -68,7 +68,7 @@ msgstr ""
 #: package/contents/ui/main.qml:109
 #, kde-format
 msgid "Switching times:"
-msgstr ""
+msgstr "Amanna athraithe:"
 
 #: package/contents/ui/main.qml:111
 #, kde-format
@@ -78,7 +78,7 @@ msgstr ""
 #: package/contents/ui/main.qml:112
 #, kde-format
 msgid "Sunset and sunrise at current location"
-msgstr ""
+msgstr "Éirí agus luí na gréine i suíomh reatha"
 
 #: package/contents/ui/main.qml:113
 #, kde-format
@@ -113,35 +113,35 @@ msgstr ""
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1K"
-msgstr ""
+msgstr "%1K"
 
 #: package/contents/ui/main.qml:233 package/contents/ui/main.qml:292
 #, kde-format
 msgctxt "Night colour red-ish"
 msgid "Warm"
-msgstr ""
+msgstr "Te"
 
 #: package/contents/ui/main.qml:239 package/contents/ui/main.qml:298
 #, kde-format
 msgctxt "No blue light filter activated"
 msgid "Cool (no filter)"
-msgstr ""
+msgstr "Fionnuar (gan scagaire)"
 
 #: package/contents/ui/main.qml:239 package/contents/ui/main.qml:298
 #, kde-format
 msgctxt "Night colour blue-ish"
 msgid "Cool"
-msgstr ""
+msgstr "Fionnuar"
 
 #: package/contents/ui/main.qml:245
 #, kde-format
 msgid "Night color temperature:"
-msgstr ""
+msgstr "Oíche dath teochta:"
 
 #: package/contents/ui/main.qml:309
 #, kde-format
 msgid "Latitude: %1°   Longitude: %2°"
-msgstr ""
+msgstr "Domhanleithead: %1°   Domhanfhad: %2°"
 
 #: package/contents/ui/main.qml:319
 #, kde-format
@@ -161,24 +161,27 @@ msgstr ""
 #: package/contents/ui/main.qml:364
 #, kde-format
 msgid "Transition duration:"
-msgstr ""
+msgstr "Achar Athraithe:"
 
 #: package/contents/ui/main.qml:373
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 nóiméad"
+msgstr[1] "%1 nóiméad"
+msgstr[2] "%1 nóiméad"
+msgstr[3] "%1 nóiméad"
+msgstr[4] "%1 nóiméad"
 
 #: package/contents/ui/main.qml:386
 #, kde-format
 msgid "Input minutes - min. 1, max. 600"
-msgstr ""
+msgstr "Ionchuir nóiméid - íos. 1, uas. 600"
 
 #: package/contents/ui/main.qml:404
 #, kde-format
 msgid "Error: Transition time overlaps."
-msgstr ""
+msgstr "Earráid: Am athraithe ag an am céanna"
 
 #: package/contents/ui/main.qml:426
 #, kde-format

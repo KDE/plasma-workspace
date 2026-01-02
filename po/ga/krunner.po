@@ -1,37 +1,37 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SPDX-FileCopyrightText: 2025 Charlotte <altronic25@protonmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Irish Gaelic <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2025-12-29 21:30+0000\n"
+"Last-Translator: Charlotte <altronic25@protonmail.com>\n"
+"Language-Team: Irish\n"
 "Language: ga\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Charlotte"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "altronic25@protonmail.com"
 
 #: main.cpp:57 view.cpp:47
 #, kde-format
 msgid "KRunner"
-msgstr ""
+msgstr "KRunner"
 
 #: main.cpp:57
 #, kde-format
@@ -46,7 +46,7 @@ msgstr ""
 #: main.cpp:63
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
-msgstr ""
+msgstr "Tosaigh KRunner sa chúlra, ná taispeáin é."
 
 #: main.cpp:64
 #, kde-format
@@ -77,13 +77,13 @@ msgstr ""
 #, kde-format
 msgctxt "Textfield placeholder text, query specific KRunner plugin"
 msgid "Search '%1'…"
-msgstr ""
+msgstr "Cuardaigh '%1'..."
 
 #: qml/RunCommand.qml:92
 #, kde-format
 msgctxt "Textfield placeholder text"
 msgid "Search…"
-msgstr ""
+msgstr "Cuardaigh"
 
 #: qml/RunCommand.qml:228 qml/RunCommand.qml:229 qml/RunCommand.qml:231
 #, kde-format
@@ -93,17 +93,17 @@ msgstr ""
 #: qml/RunCommand.qml:239
 #, kde-format
 msgid "Pin"
-msgstr ""
+msgstr "Greamaigh le Bioráin"
 
 #: qml/RunCommand.qml:240
 #, kde-format
 msgid "Pin Search"
-msgstr ""
+msgstr "Greamaigh Cuardach le Bioráin"
 
 #: qml/RunCommand.qml:242
 #, kde-format
 msgid "Keep Open"
-msgstr ""
+msgstr "Coimeád Oscailte"
 
 #: qml/RunCommand.qml:320 qml/RunCommand.qml:325
 #, kde-format
@@ -113,4 +113,4 @@ msgstr ""
 #: qml/RunCommand.qml:323
 #, kde-format
 msgid "Remove"
-msgstr ""
+msgstr "Bain"
