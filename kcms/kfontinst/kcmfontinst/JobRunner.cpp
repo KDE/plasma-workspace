@@ -619,12 +619,14 @@ void CJobRunner::setPage(int page, const QString &msg)
         m_buttonBox->setStandardButtons(QDialogButtonBox::Cancel);
         m_skipButton->show();
         m_autoSkipButton->show();
+        adjustSize();
         break;
     case PAGE_ERROR:
         m_errorLabel->setText(i18n("<h3>Error</h3>") + QLatin1String("<p>") + msg + QLatin1String("</p>"));
         m_buttonBox->setStandardButtons(QDialogButtonBox::Cancel);
         m_skipButton->hide();
         m_autoSkipButton->hide();
+        adjustSize();
         break;
     case PAGE_CANCEL:
         m_buttonBox->setStandardButtons(QDialogButtonBox::Yes | QDialogButtonBox::No);
