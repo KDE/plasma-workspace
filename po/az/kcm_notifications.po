@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-01 00:44+0000\n"
+"POT-Creation-Date: 2026-01-03 00:45+0000\n"
 "PO-Revision-Date: 2025-04-24 13:03+0400\n"
 "Last-Translator: linux <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -89,16 +89,18 @@ msgid "Choose sound file"
 msgstr "Səs faylını seçin"
 
 #: ui/main.qml:47
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure…"
 msgctxt "@action:button Plasma-specific notifications"
-msgid "System Notifications"
-msgstr "Sistem bildirişləri"
+msgid "Configure for System…"
+msgstr "Tənzimləmək..."
 
 #: ui/main.qml:53
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Application Settings"
 msgctxt "@action:button Application-specific notifications"
-msgid "Application Settings"
-msgstr "Tətbiq ayarları"
+msgid "Configure for Applications…"
+msgstr "Tətbiq Ayarları"
 
 #: ui/main.qml:96
 #, kde-format
@@ -207,8 +209,8 @@ msgstr "Bildiriş nişanının yanında"
 #: ui/main.qml:269
 #, kde-format
 msgctxt "@action:button choose custom notification position"
-msgid "Custom…"
-msgstr "Fərdi..."
+msgid "Choose…"
+msgstr ""
 
 #: ui/main.qml:278 ui/main.qml:294
 #, kde-format
@@ -297,6 +299,18 @@ msgstr ""
 "Bildiriş ayarlarını və davranışlarını tənzimləyəcəyiniz tətbiqləri siyahıdan "
 "seçin"
 
+#~ msgctxt "@action:button Plasma-specific notifications"
+#~ msgid "System Notifications"
+#~ msgstr "Sistem bildirişləri"
+
+#~ msgctxt "@action:button Application-specific notifications"
+#~ msgid "Application Settings"
+#~ msgstr "Tətbiq ayarları"
+
+#~ msgctxt "@action:button choose custom notification position"
+#~ msgid "Custom…"
+#~ msgstr "Fərdi..."
+
 #~ msgid "Normal notifications:"
 #~ msgstr "Normal bildirişlər:"
 
@@ -310,18 +324,9 @@ msgstr ""
 #~ msgid "Application Settings…"
 #~ msgstr "Tətbiq Ayarları..."
 
-#, fuzzy
-#~| msgid "Application Settings"
-#~ msgctxt "@action:button Application-specific notifications"
-#~ msgid "Configure Application Settings…"
-#~ msgstr "Tətbiq Ayarları"
-
 #~ msgctxt "@title:group"
 #~ msgid "Application-specific settings"
 #~ msgstr "Əlavə xüsusi ayarlar"
-
-#~ msgid "Configure…"
-#~ msgstr "Tənzimləmək..."
 
 #~ msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 #~ msgid "Enable:"

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-01 00:44+0000\n"
+"POT-Creation-Date: 2026-01-03 00:45+0000\n"
 "PO-Revision-Date: 2025-03-18 07:29+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -91,14 +91,15 @@ msgstr "音声ファイルを選択"
 #: ui/main.qml:47
 #, kde-format
 msgctxt "@action:button Plasma-specific notifications"
-msgid "System Notifications"
-msgstr "システムの通知"
+msgid "Configure for System…"
+msgstr ""
 
 #: ui/main.qml:53
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Other Applications"
 msgctxt "@action:button Application-specific notifications"
-msgid "Application Settings"
-msgstr "アプリケーション設定"
+msgid "Configure for Applications…"
+msgstr "その他のアプリケーション"
 
 #: ui/main.qml:96
 #, kde-format
@@ -207,7 +208,7 @@ msgstr "通知アイコンの近く"
 #: ui/main.qml:269
 #, kde-format
 msgctxt "@action:button choose custom notification position"
-msgid "Custom…"
+msgid "Choose…"
 msgstr ""
 
 #: ui/main.qml:278 ui/main.qml:294
@@ -293,6 +294,14 @@ msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior"
 msgstr "リストからアプリケーションを選択して通知設定と動作を設定できます"
+
+#~ msgctxt "@action:button Plasma-specific notifications"
+#~ msgid "System Notifications"
+#~ msgstr "システムの通知"
+
+#~ msgctxt "@action:button Application-specific notifications"
+#~ msgid "Application Settings"
+#~ msgstr "アプリケーション設定"
 
 #~ msgid "Normal notifications:"
 #~ msgstr "通常の通知:"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-01 00:44+0000\n"
+"POT-Creation-Date: 2026-01-03 00:45+0000\n"
 "PO-Revision-Date: 2024-06-09 15:07+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -90,18 +90,18 @@ msgstr "Alege fișierul sonor"
 
 #: ui/main.qml:47
 #, fuzzy, kde-format
-#| msgctxt "@action:button Plasma-specific notifications"
-#| msgid "System Notifications…"
+#| msgid "Configure…"
 msgctxt "@action:button Plasma-specific notifications"
-msgid "System Notifications"
-msgstr "Notificări de sistem…"
+msgid "Configure for System…"
+msgstr "Configurează…"
 
 #: ui/main.qml:53
 #, fuzzy, kde-format
-#| msgid "Application Settings"
+#| msgctxt "@action:button Application-specific notifications"
+#| msgid "Configure Application Settings…"
 msgctxt "@action:button Application-specific notifications"
-msgid "Application Settings"
-msgstr "Configurări aplicație"
+msgid "Configure for Applications…"
+msgstr "Configurează parametrii aplicației…"
 
 #: ui/main.qml:96
 #, kde-format
@@ -210,7 +210,7 @@ msgstr "Lângă pictograma de notificare"
 #: ui/main.qml:269
 #, kde-format
 msgctxt "@action:button choose custom notification position"
-msgid "Custom…"
+msgid "Choose…"
 msgstr ""
 
 #: ui/main.qml:278 ui/main.qml:294
@@ -301,6 +301,19 @@ msgstr ""
 "Alegeți o aplicație din listă pentru a-i configura parametrii și "
 "comportamentul de notificare"
 
+#, fuzzy
+#~| msgctxt "@action:button Plasma-specific notifications"
+#~| msgid "System Notifications…"
+#~ msgctxt "@action:button Plasma-specific notifications"
+#~ msgid "System Notifications"
+#~ msgstr "Notificări de sistem…"
+
+#, fuzzy
+#~| msgid "Application Settings"
+#~ msgctxt "@action:button Application-specific notifications"
+#~ msgid "Application Settings"
+#~ msgstr "Configurări aplicație"
+
 #~ msgid "Normal notifications:"
 #~ msgstr "Notificări normale:"
 
@@ -314,16 +327,9 @@ msgstr ""
 #~ msgid "Application Settings…"
 #~ msgstr "Configurări aplicații…"
 
-#~ msgctxt "@action:button Application-specific notifications"
-#~ msgid "Configure Application Settings…"
-#~ msgstr "Configurează parametrii aplicației…"
-
 #~ msgctxt "@title:group"
 #~ msgid "Application-specific settings"
 #~ msgstr "Configurări specifice aplicației"
-
-#~ msgid "Configure…"
-#~ msgstr "Configurează…"
 
 #~ msgid "Configure Notifications"
 #~ msgstr "Configurează notificările"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-01 00:44+0000\n"
+"POT-Creation-Date: 2026-01-03 00:45+0000\n"
 "PO-Revision-Date: 2024-08-14 11:36+0300\n"
 "Last-Translator: Dimitrys Meliates <demetresmeliates+i18n@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -90,14 +90,15 @@ msgstr "Επιλογή αρχείου ήχου"
 #: ui/main.qml:47
 #, kde-format
 msgctxt "@action:button Plasma-specific notifications"
-msgid "System Notifications"
-msgstr "Ειδοποιήσεις συστήματος"
+msgid "Configure for System…"
+msgstr ""
 
 #: ui/main.qml:53
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Other Applications"
 msgctxt "@action:button Application-specific notifications"
-msgid "Application Settings"
-msgstr "Ρυθμίσεις εφαρμογών"
+msgid "Configure for Applications…"
+msgstr "Άλλες εφαρμογές"
 
 #: ui/main.qml:96
 #, kde-format
@@ -207,7 +208,7 @@ msgstr "Κοντά στο εικονίδιο ειδοποίησης"
 #: ui/main.qml:269
 #, kde-format
 msgctxt "@action:button choose custom notification position"
-msgid "Custom…"
+msgid "Choose…"
 msgstr ""
 
 #: ui/main.qml:278 ui/main.qml:294
@@ -297,6 +298,14 @@ msgid ""
 msgstr ""
 "Επιλέξτε μια εφαρμογή από τη λίστα για να διαμορφώσετε τις ρυθμίσεις και τη "
 "συμπεριφορά των ειδοποιήσεων της."
+
+#~ msgctxt "@action:button Plasma-specific notifications"
+#~ msgid "System Notifications"
+#~ msgstr "Ειδοποιήσεις συστήματος"
+
+#~ msgctxt "@action:button Application-specific notifications"
+#~ msgid "Application Settings"
+#~ msgstr "Ρυθμίσεις εφαρμογών"
 
 #~ msgid "Normal notifications:"
 #~ msgstr "Κανονικές ειδοποιήσεις:"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-01 00:44+0000\n"
+"POT-Creation-Date: 2026-01-03 00:45+0000\n"
 "PO-Revision-Date: 2026-01-01 09:41+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -97,14 +97,15 @@ msgstr "Escolliu un fitxer de so"
 #: ui/main.qml:47
 #, kde-format
 msgctxt "@action:button Plasma-specific notifications"
-msgid "System Notifications"
-msgstr "Notificacions del sistema"
+msgid "Configure for System…"
+msgstr ""
 
 #: ui/main.qml:53
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Other Applications"
 msgctxt "@action:button Application-specific notifications"
-msgid "Application Settings"
-msgstr "Configuració de l'aplicació"
+msgid "Configure for Applications…"
+msgstr "Altres aplicacions"
 
 #: ui/main.qml:96
 #, kde-format
@@ -215,8 +216,8 @@ msgstr "Prop de la icona de la notificació"
 #: ui/main.qml:269
 #, kde-format
 msgctxt "@action:button choose custom notification position"
-msgid "Custom…"
-msgstr "Personalitzat…"
+msgid "Choose…"
+msgstr ""
 
 #: ui/main.qml:278 ui/main.qml:294
 #, kde-format
@@ -302,6 +303,18 @@ msgid ""
 msgstr ""
 "Seleccioneu una aplicació de la llista per a configurar el seu arranjament "
 "de notificacions i el comportament"
+
+#~ msgctxt "@action:button Plasma-specific notifications"
+#~ msgid "System Notifications"
+#~ msgstr "Notificacions del sistema"
+
+#~ msgctxt "@action:button Application-specific notifications"
+#~ msgid "Application Settings"
+#~ msgstr "Configuració de l'aplicació"
+
+#~ msgctxt "@action:button choose custom notification position"
+#~ msgid "Custom…"
+#~ msgstr "Personalitzat…"
 
 #~ msgid "Normal notifications:"
 #~ msgstr "Notificacions normals:"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-01 00:44+0000\n"
+"POT-Creation-Date: 2026-01-03 00:45+0000\n"
 "PO-Revision-Date: 2024-12-20 21:54+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -92,14 +92,15 @@ msgstr "ध्वनिसञ्चिकां चिनोतु"
 #: ui/main.qml:47
 #, kde-format
 msgctxt "@action:button Plasma-specific notifications"
-msgid "System Notifications"
-msgstr "प्रणाली सूचनाएँ"
+msgid "Configure for System…"
+msgstr ""
 
 #: ui/main.qml:53
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Other Applications"
 msgctxt "@action:button Application-specific notifications"
-msgid "Application Settings"
-msgstr "अनुप्रयोग सेटिंग्स्"
+msgid "Configure for Applications…"
+msgstr "अन्ये अनुप्रयोगाः"
 
 #: ui/main.qml:96
 #, kde-format
@@ -207,7 +208,7 @@ msgstr "सूचनाचिह्नस्य समीपे"
 #: ui/main.qml:269
 #, kde-format
 msgctxt "@action:button choose custom notification position"
-msgid "Custom…"
+msgid "Choose…"
 msgstr ""
 
 #: ui/main.qml:278 ui/main.qml:294
@@ -294,6 +295,14 @@ msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior"
 msgstr "तस्य सूचनासेटिंग्स् व्यवहारं च विन्यस्तुं सूचीतः एकं अनुप्रयोगं चिनोतु"
+
+#~ msgctxt "@action:button Plasma-specific notifications"
+#~ msgid "System Notifications"
+#~ msgstr "प्रणाली सूचनाएँ"
+
+#~ msgctxt "@action:button Application-specific notifications"
+#~ msgid "Application Settings"
+#~ msgstr "अनुप्रयोग सेटिंग्स्"
 
 #~ msgid "Normal notifications:"
 #~ msgstr "सामान्यसूचनाः :"

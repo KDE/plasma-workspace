@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-01 00:44+0000\n"
+"POT-Creation-Date: 2026-01-03 00:45+0000\n"
 "PO-Revision-Date: 2024-11-04 22:00\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -94,16 +94,19 @@ msgid "Choose sound file"
 msgstr "Абраць гукавы файл"
 
 #: ui/main.qml:47
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure…"
 msgctxt "@action:button Plasma-specific notifications"
-msgid "System Notifications"
-msgstr "Сістэмныя апавяшчэнні"
+msgid "Configure for System…"
+msgstr "Наладжванне…"
 
 #: ui/main.qml:53
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button Application-specific notifications"
+#| msgid "Configure Application Settings…"
 msgctxt "@action:button Application-specific notifications"
-msgid "Application Settings"
-msgstr "Налады праграмы"
+msgid "Configure for Applications…"
+msgstr "Наладжванне праграмы…"
 
 #: ui/main.qml:96
 #, kde-format
@@ -214,7 +217,7 @@ msgstr "Побач са значком апавяшчэння"
 #: ui/main.qml:269
 #, kde-format
 msgctxt "@action:button choose custom notification position"
-msgid "Custom…"
+msgid "Choose…"
 msgstr ""
 
 #: ui/main.qml:278 ui/main.qml:294
@@ -304,6 +307,14 @@ msgid ""
 "and behavior"
 msgstr "Абярыце праграму са спіса, каб наладзіць яе апавяшчэнні і паводзіны"
 
+#~ msgctxt "@action:button Plasma-specific notifications"
+#~ msgid "System Notifications"
+#~ msgstr "Сістэмныя апавяшчэнні"
+
+#~ msgctxt "@action:button Application-specific notifications"
+#~ msgid "Application Settings"
+#~ msgstr "Налады праграмы"
+
 #~ msgid "Normal notifications:"
 #~ msgstr "Звычайныя апавяшчэнні:"
 
@@ -317,17 +328,9 @@ msgstr "Абярыце праграму са спіса, каб наладзіц
 #~ msgid "Application Settings…"
 #~ msgstr "Налады праграмы…"
 
-#~| msgid "Application Settings"
-#~ msgctxt "@action:button Application-specific notifications"
-#~ msgid "Configure Application Settings…"
-#~ msgstr "Наладжванне праграмы…"
-
 #~ msgctxt "@title:group"
 #~ msgid "Application-specific settings"
 #~ msgstr "Адмысловыя налады для праграм"
-
-#~ msgid "Configure…"
-#~ msgstr "Наладжванне…"
 
 #~ msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 #~ msgid "Enable:"

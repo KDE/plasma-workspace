@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-01 00:44+0000\n"
+"POT-Creation-Date: 2026-01-03 00:45+0000\n"
 "PO-Revision-Date: 2025-09-15 10:03-0500\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -88,15 +88,17 @@ msgid "Choose sound file"
 msgstr "ਸਾਊਂਡ ਫਾਇਲ ਨੂੰ ਚੁਣੋ"
 
 #: ui/main.qml:47
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure…"
 msgctxt "@action:button Plasma-specific notifications"
-msgid "System Notifications"
-msgstr "ਸਿਸਟਮ ਨੋਟੀਫਿਕੇਸ਼ਨ"
+msgid "Configure for System…"
+msgstr "…ਸੰਰਚਨਾ"
 
 #: ui/main.qml:53
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Application Settings"
 msgctxt "@action:button Application-specific notifications"
-msgid "Application Settings"
+msgid "Configure for Applications…"
 msgstr "ਐਪਲੀਕੇਸ਼ਨ ਸੈਟਿੰਗਾਂ"
 
 #: ui/main.qml:96
@@ -205,8 +207,8 @@ msgstr "ਨੋਟੀਫਿਕੇਸ਼ਨ ਆਈਕਾਨ ਦੇ ਨੇੜੇ"
 #: ui/main.qml:269
 #, kde-format
 msgctxt "@action:button choose custom notification position"
-msgid "Custom…"
-msgstr "…ਕਸਟਮ"
+msgid "Choose…"
+msgstr ""
 
 #: ui/main.qml:278 ui/main.qml:294
 #, kde-format
@@ -294,6 +296,18 @@ msgid ""
 msgstr ""
 "ਸੂਚੀ ਵਿੱਚੋਂ ਐਪਲੀਕੇਸ਼ਨ ਨੂੰ ਚੁਣੋ, ਜਿਸ ਦੀਆਂ ਨੋਟੀਫਿਕੇਸ਼ਨ ਸੈਟਿੰਗਾਂ ਅਤੇ ਰਵੱਈਏ ਦੀ ਸੰਰਚਨਾ ਕਰਨੀ ਚਾਹੁੰਦੇ ਹੋ"
 
+#~ msgctxt "@action:button Plasma-specific notifications"
+#~ msgid "System Notifications"
+#~ msgstr "ਸਿਸਟਮ ਨੋਟੀਫਿਕੇਸ਼ਨ"
+
+#~ msgctxt "@action:button Application-specific notifications"
+#~ msgid "Application Settings"
+#~ msgstr "ਐਪਲੀਕੇਸ਼ਨ ਸੈਟਿੰਗਾਂ"
+
+#~ msgctxt "@action:button choose custom notification position"
+#~ msgid "Custom…"
+#~ msgstr "…ਕਸਟਮ"
+
 #~ msgid "Normal notifications:"
 #~ msgstr "ਸਧਾਰਨ ਨੋਟੀਫਿਕੇਸ਼ਨ:"
 
@@ -307,18 +321,9 @@ msgstr ""
 #~ msgid "Application Settings…"
 #~ msgstr "ਐਪਲੀਕੇਸ਼ਨ ਸੈਟਿੰਗਾਂ…"
 
-#, fuzzy
-#~| msgid "Application Settings"
-#~ msgctxt "@action:button Application-specific notifications"
-#~ msgid "Configure Application Settings…"
-#~ msgstr "ਐਪਲੀਕੇਸ਼ਨ ਸੈਟਿੰਗਾਂ"
-
 #~ msgctxt "@title:group"
 #~ msgid "Application-specific settings"
 #~ msgstr "ਖਾਸ ਐਪਲੀਕੇਸ਼ਨ ਸੈਟਿੰਗਾਂ"
-
-#~ msgid "Configure…"
-#~ msgstr "…ਸੰਰਚਨਾ"
 
 #~ msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 #~ msgid "Enable:"

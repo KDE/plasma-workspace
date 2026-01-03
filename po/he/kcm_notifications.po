@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-01 00:44+0000\n"
-"PO-Revision-Date: 2025-04-24 20:48+0300\n"
+"POT-Creation-Date: 2026-01-03 00:45+0000\n"
+"PO-Revision-Date: 2026-01-01 09:08+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #: kcm.cpp:62
 #, kde-format
@@ -89,16 +89,19 @@ msgid "Choose sound file"
 msgstr "בחירת קובץ צליל"
 
 #: ui/main.qml:47
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure…"
 msgctxt "@action:button Plasma-specific notifications"
-msgid "System Notifications"
-msgstr "התראות מערכת"
+msgid "Configure for System…"
+msgstr "הגדרה…"
 
 #: ui/main.qml:53
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button Application-specific notifications"
+#| msgid "Configure Application Settings…"
 msgctxt "@action:button Application-specific notifications"
-msgid "Application Settings"
-msgstr "הגדרות יישום"
+msgid "Configure for Applications…"
+msgstr "הגדרת תצורת יישום…"
 
 #: ui/main.qml:96
 #, kde-format
@@ -206,8 +209,8 @@ msgstr "ליד סמל ההתראות"
 #: ui/main.qml:269
 #, kde-format
 msgctxt "@action:button choose custom notification position"
-msgid "Custom…"
-msgstr "התאמה אישית…"
+msgid "Choose…"
+msgstr ""
 
 #: ui/main.qml:278 ui/main.qml:294
 #, kde-format
@@ -225,11 +228,9 @@ msgid "Hide after:"
 msgstr "להסתיר לאחר:"
 
 #: ui/main.qml:306
-#, fuzzy, kde-format
-#| msgctxt "Show application jobs in notification widget"
-#| msgid "Show in notifications"
+#, kde-format
 msgid "Show timeout indicator"
-msgstr "הצגה בהתראות"
+msgstr "הצגת מחוון תום זמן"
 
 #: ui/main.qml:318
 #, kde-format
@@ -296,6 +297,18 @@ msgid ""
 "and behavior"
 msgstr "נא לבחור יישום מהרשימה כדי להגדיר את הגדרות ההתראות וההתהגות שלו"
 
+#~ msgctxt "@action:button Plasma-specific notifications"
+#~ msgid "System Notifications"
+#~ msgstr "התראות מערכת"
+
+#~ msgctxt "@action:button Application-specific notifications"
+#~ msgid "Application Settings"
+#~ msgstr "הגדרות יישום"
+
+#~ msgctxt "@action:button choose custom notification position"
+#~ msgid "Custom…"
+#~ msgstr "התאמה אישית…"
+
 #~ msgid "Normal notifications:"
 #~ msgstr "התראות רגילות:"
 
@@ -309,16 +322,9 @@ msgstr "נא לבחור יישום מהרשימה כדי להגדיר את הג�
 #~ msgid "Application Settings…"
 #~ msgstr "הגדרות יישום…"
 
-#~ msgctxt "@action:button Application-specific notifications"
-#~ msgid "Configure Application Settings…"
-#~ msgstr "הגדרת תצורת יישום…"
-
 #~ msgctxt "@title:group"
 #~ msgid "Application-specific settings"
 #~ msgstr "הגדרות תלויות יישום"
-
-#~ msgid "Configure…"
-#~ msgstr "הגדרה…"
 
 #~ msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 #~ msgid "Enable:"

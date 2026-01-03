@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-01 00:44+0000\n"
+"POT-Creation-Date: 2026-01-03 00:45+0000\n"
 "PO-Revision-Date: 2026-01-02 07:18+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -91,16 +91,19 @@ msgid "Choose sound file"
 msgstr "選擇音效檔"
 
 #: ui/main.qml:47
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure…"
 msgctxt "@action:button Plasma-specific notifications"
-msgid "System Notifications"
-msgstr "系統通知"
+msgid "Configure for System…"
+msgstr "設定…"
 
 #: ui/main.qml:53
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button Application-specific notifications"
+#| msgid "Configure Application Settings…"
 msgctxt "@action:button Application-specific notifications"
-msgid "Application Settings"
-msgstr "應用程式設定"
+msgid "Configure for Applications…"
+msgstr "調整應用程式設定…"
 
 #: ui/main.qml:96
 #, kde-format
@@ -208,8 +211,8 @@ msgstr "通知圖示附近"
 #: ui/main.qml:269
 #, kde-format
 msgctxt "@action:button choose custom notification position"
-msgid "Custom…"
-msgstr "自訂…"
+msgid "Choose…"
+msgstr ""
 
 #: ui/main.qml:278 ui/main.qml:294
 #, kde-format
@@ -293,6 +296,18 @@ msgid ""
 "and behavior"
 msgstr "從列表選取應用程式以調整其通知設定及行為"
 
+#~ msgctxt "@action:button Plasma-specific notifications"
+#~ msgid "System Notifications"
+#~ msgstr "系統通知"
+
+#~ msgctxt "@action:button Application-specific notifications"
+#~ msgid "Application Settings"
+#~ msgstr "應用程式設定"
+
+#~ msgctxt "@action:button choose custom notification position"
+#~ msgid "Custom…"
+#~ msgstr "自訂…"
+
 #~ msgid "Normal notifications:"
 #~ msgstr "一般通知："
 
@@ -306,16 +321,9 @@ msgstr "從列表選取應用程式以調整其通知設定及行為"
 #~ msgid "Application Settings…"
 #~ msgstr "應用程式設定…"
 
-#~ msgctxt "@action:button Application-specific notifications"
-#~ msgid "Configure Application Settings…"
-#~ msgstr "調整應用程式設定…"
-
 #~ msgctxt "@title:group"
 #~ msgid "Application-specific settings"
 #~ msgstr "特定應用程式的設定"
-
-#~ msgid "Configure…"
-#~ msgstr "設定…"
 
 #~ msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 #~ msgid "Enable:"

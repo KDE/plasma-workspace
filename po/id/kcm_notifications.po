@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-01 00:44+0000\n"
+"POT-Creation-Date: 2026-01-03 00:45+0000\n"
 "PO-Revision-Date: 2024-09-29 20:48+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -90,15 +90,17 @@ msgid "Choose sound file"
 msgstr "Pilih file suara"
 
 #: ui/main.qml:47
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure…"
 msgctxt "@action:button Plasma-specific notifications"
-msgid "System Notifications"
-msgstr "Notifikasi Sistem"
+msgid "Configure for System…"
+msgstr "Konfigurasi..."
 
 #: ui/main.qml:53
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Application Settings"
 msgctxt "@action:button Application-specific notifications"
-msgid "Application Settings"
+msgid "Configure for Applications…"
 msgstr "Pengaturan Aplikasi"
 
 #: ui/main.qml:96
@@ -208,7 +210,7 @@ msgstr "Dekat ikon notifikasi"
 #: ui/main.qml:269
 #, kde-format
 msgctxt "@action:button choose custom notification position"
-msgid "Custom…"
+msgid "Choose…"
 msgstr ""
 
 #: ui/main.qml:278 ui/main.qml:294
@@ -299,6 +301,14 @@ msgstr ""
 "Pilih sebuah aplikasi dari daftar untuk mengonfigurasi pengaturan notifikasi "
 "dan perilakunya"
 
+#~ msgctxt "@action:button Plasma-specific notifications"
+#~ msgid "System Notifications"
+#~ msgstr "Notifikasi Sistem"
+
+#~ msgctxt "@action:button Application-specific notifications"
+#~ msgid "Application Settings"
+#~ msgstr "Pengaturan Aplikasi"
+
 #~ msgid "Normal notifications:"
 #~ msgstr "Notifikasi normal:"
 
@@ -316,18 +326,9 @@ msgstr ""
 
 #, fuzzy
 #~| msgid "Application Settings"
-#~ msgctxt "@action:button Application-specific notifications"
-#~ msgid "Configure Application Settings…"
-#~ msgstr "Pengaturan Aplikasi"
-
-#, fuzzy
-#~| msgid "Application Settings"
 #~ msgctxt "@title:group"
 #~ msgid "Application-specific settings"
 #~ msgstr "Pengaturan Aplikasi"
-
-#~ msgid "Configure…"
-#~ msgstr "Konfigurasi..."
 
 #~ msgid "Configure Notifications"
 #~ msgstr "Konfigurasi Notifikasi"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-01 00:44+0000\n"
+"POT-Creation-Date: 2026-01-03 00:45+0000\n"
 "PO-Revision-Date: 2025-06-10 22:06+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -88,16 +88,19 @@ msgid "Choose sound file"
 msgstr "소리 파일 선택"
 
 #: ui/main.qml:47
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure…"
 msgctxt "@action:button Plasma-specific notifications"
-msgid "System Notifications"
-msgstr "시스템 알림"
+msgid "Configure for System…"
+msgstr "설정…"
 
 #: ui/main.qml:53
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button Application-specific notifications"
+#| msgid "Configure Application Settings…"
 msgctxt "@action:button Application-specific notifications"
-msgid "Application Settings"
-msgstr "앱 설정"
+msgid "Configure for Applications…"
+msgstr "앱 개별 설정…"
 
 #: ui/main.qml:96
 #, kde-format
@@ -205,8 +208,8 @@ msgstr "알림 아이콘 근처"
 #: ui/main.qml:269
 #, kde-format
 msgctxt "@action:button choose custom notification position"
-msgid "Custom…"
-msgstr "사용자 정의…"
+msgid "Choose…"
+msgstr ""
 
 #: ui/main.qml:278 ui/main.qml:294
 #, kde-format
@@ -292,6 +295,18 @@ msgid ""
 "and behavior"
 msgstr "알림 설정과 행동을 설정할 앱 선택"
 
+#~ msgctxt "@action:button Plasma-specific notifications"
+#~ msgid "System Notifications"
+#~ msgstr "시스템 알림"
+
+#~ msgctxt "@action:button Application-specific notifications"
+#~ msgid "Application Settings"
+#~ msgstr "앱 설정"
+
+#~ msgctxt "@action:button choose custom notification position"
+#~ msgid "Custom…"
+#~ msgstr "사용자 정의…"
+
 #~ msgid "Normal notifications:"
 #~ msgstr "일반 알림:"
 
@@ -307,16 +322,9 @@ msgstr "알림 설정과 행동을 설정할 앱 선택"
 #~ msgid "Application Settings…"
 #~ msgstr "앱 설정"
 
-#~ msgctxt "@action:button Application-specific notifications"
-#~ msgid "Configure Application Settings…"
-#~ msgstr "앱 개별 설정…"
-
 #~ msgctxt "@title:group"
 #~ msgid "Application-specific settings"
 #~ msgstr "앱별 설정"
-
-#~ msgid "Configure…"
-#~ msgstr "설정…"
 
 #~ msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 #~ msgid "Enable:"

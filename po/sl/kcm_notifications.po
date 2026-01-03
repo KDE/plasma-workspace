@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-01 00:44+0000\n"
+"POT-Creation-Date: 2026-01-03 00:45+0000\n"
 "PO-Revision-Date: 2026-01-01 08:39+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -89,16 +89,19 @@ msgid "Choose sound file"
 msgstr "Izberi datoteko zvoka"
 
 #: ui/main.qml:47
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure…"
 msgctxt "@action:button Plasma-specific notifications"
-msgid "System Notifications"
-msgstr "Sistemska obvestila"
+msgid "Configure for System…"
+msgstr "Nastavi…"
 
 #: ui/main.qml:53
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button Application-specific notifications"
+#| msgid "Configure Application Settings…"
 msgctxt "@action:button Application-specific notifications"
-msgid "Application Settings"
-msgstr "Nastavitve aplikacije"
+msgid "Configure for Applications…"
+msgstr "Konfiguriraj nastavitve aplikacij…"
 
 #: ui/main.qml:96
 #, kde-format
@@ -207,8 +210,8 @@ msgstr "Blizu ikone obvestila"
 #: ui/main.qml:269
 #, kde-format
 msgctxt "@action:button choose custom notification position"
-msgid "Custom…"
-msgstr "Po meri…"
+msgid "Choose…"
+msgstr ""
 
 #: ui/main.qml:278 ui/main.qml:294
 #, kde-format
@@ -296,6 +299,18 @@ msgid ""
 msgstr ""
 "Izberite aplikacijo s seznama, če želite nastaviti njena obvestila in vedenje"
 
+#~ msgctxt "@action:button Plasma-specific notifications"
+#~ msgid "System Notifications"
+#~ msgstr "Sistemska obvestila"
+
+#~ msgctxt "@action:button Application-specific notifications"
+#~ msgid "Application Settings"
+#~ msgstr "Nastavitve aplikacije"
+
+#~ msgctxt "@action:button choose custom notification position"
+#~ msgid "Custom…"
+#~ msgstr "Po meri…"
+
 #~ msgid "Normal notifications:"
 #~ msgstr "Običajna obvestila:"
 
@@ -309,16 +324,9 @@ msgstr ""
 #~ msgid "Application Settings…"
 #~ msgstr "Nastavitve aplikacij…"
 
-#~ msgctxt "@action:button Application-specific notifications"
-#~ msgid "Configure Application Settings…"
-#~ msgstr "Konfiguriraj nastavitve aplikacij…"
-
 #~ msgctxt "@title:group"
 #~ msgid "Application-specific settings"
 #~ msgstr "Posebne nastavitve glede na aplikacijo"
-
-#~ msgid "Configure…"
-#~ msgstr "Nastavi…"
 
 #~ msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 #~ msgid "Enable:"

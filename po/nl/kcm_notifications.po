@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-01 00:44+0000\n"
+"POT-Creation-Date: 2026-01-03 00:45+0000\n"
 "PO-Revision-Date: 2026-01-01 15:00+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -90,16 +90,19 @@ msgid "Choose sound file"
 msgstr "Kies geluidsbestand"
 
 #: ui/main.qml:47
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure…"
 msgctxt "@action:button Plasma-specific notifications"
-msgid "System Notifications"
-msgstr "Systeemmeldingen"
+msgid "Configure for System…"
+msgstr "Configureren…"
 
 #: ui/main.qml:53
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button Application-specific notifications"
+#| msgid "Configure Application Settings…"
 msgctxt "@action:button Application-specific notifications"
-msgid "Application Settings"
-msgstr "Toepassinginstellingen"
+msgid "Configure for Applications…"
+msgstr "Toepassingsinstellingen configureren…"
 
 #: ui/main.qml:96
 #, kde-format
@@ -208,8 +211,8 @@ msgstr "Bij meldingenpictogram"
 #: ui/main.qml:269
 #, kde-format
 msgctxt "@action:button choose custom notification position"
-msgid "Custom…"
-msgstr "Aangepast…"
+msgid "Choose…"
+msgstr ""
 
 #: ui/main.qml:278 ui/main.qml:294
 #, kde-format
@@ -296,6 +299,18 @@ msgstr ""
 "Een toepassing uit de lijst selecteren om zijn meldingeninstellingen en "
 "gedrag te configureren"
 
+#~ msgctxt "@action:button Plasma-specific notifications"
+#~ msgid "System Notifications"
+#~ msgstr "Systeemmeldingen"
+
+#~ msgctxt "@action:button Application-specific notifications"
+#~ msgid "Application Settings"
+#~ msgstr "Toepassinginstellingen"
+
+#~ msgctxt "@action:button choose custom notification position"
+#~ msgid "Custom…"
+#~ msgstr "Aangepast…"
+
 #~ msgid "Normal notifications:"
 #~ msgstr "Normale meldingen:"
 
@@ -309,16 +324,9 @@ msgstr ""
 #~ msgid "Application Settings…"
 #~ msgstr "Toepassingsinstellingen…"
 
-#~ msgctxt "@action:button Application-specific notifications"
-#~ msgid "Configure Application Settings…"
-#~ msgstr "Toepassingsinstellingen configureren…"
-
 #~ msgctxt "@title:group"
 #~ msgid "Application-specific settings"
 #~ msgstr "Toepassingsspecifieke instellingen"
-
-#~ msgid "Configure…"
-#~ msgstr "Configureren…"
 
 #~ msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 #~ msgid "Enable:"

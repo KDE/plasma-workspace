@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-01 00:44+0000\n"
+"POT-Creation-Date: 2026-01-03 00:45+0000\n"
 "PO-Revision-Date: 2025-09-17 13:07+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -91,16 +91,19 @@ msgid "Choose sound file"
 msgstr "Velja hljóðskrá"
 
 #: ui/main.qml:47
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure…"
 msgctxt "@action:button Plasma-specific notifications"
-msgid "System Notifications"
-msgstr "Kerfistilkynningar"
+msgid "Configure for System…"
+msgstr "Grunnstilla…"
 
 #: ui/main.qml:53
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button Application-specific notifications"
+#| msgid "Configure Application Settings…"
 msgctxt "@action:button Application-specific notifications"
-msgid "Application Settings"
-msgstr "Stillingar forrits"
+msgid "Configure for Applications…"
+msgstr "Grunnstilla forrit..."
 
 #: ui/main.qml:96
 #, kde-format
@@ -209,8 +212,8 @@ msgstr "Nálægt tilkynningatákni"
 #: ui/main.qml:269
 #, kde-format
 msgctxt "@action:button choose custom notification position"
-msgid "Custom…"
-msgstr "Sérsniðið…"
+msgid "Choose…"
+msgstr ""
 
 #: ui/main.qml:278 ui/main.qml:294
 #, kde-format
@@ -297,6 +300,18 @@ msgid ""
 "and behavior"
 msgstr "Veldu forrit af listanum til að grunnstilla tilkynningar og hegðun."
 
+#~ msgctxt "@action:button Plasma-specific notifications"
+#~ msgid "System Notifications"
+#~ msgstr "Kerfistilkynningar"
+
+#~ msgctxt "@action:button Application-specific notifications"
+#~ msgid "Application Settings"
+#~ msgstr "Stillingar forrits"
+
+#~ msgctxt "@action:button choose custom notification position"
+#~ msgid "Custom…"
+#~ msgstr "Sérsniðið…"
+
 #~ msgid "Normal notifications:"
 #~ msgstr "Venjulegar tilkynningar:"
 
@@ -310,17 +325,9 @@ msgstr "Veldu forrit af listanum til að grunnstilla tilkynningar og hegðun."
 #~ msgid "Application Settings…"
 #~ msgstr "Stillingar forrits…"
 
-#~| msgid "Application Settings"
-#~ msgctxt "@action:button Application-specific notifications"
-#~ msgid "Configure Application Settings…"
-#~ msgstr "Grunnstilla forrit..."
-
 #~ msgctxt "@title:group"
 #~ msgid "Application-specific settings"
 #~ msgstr "Stillingar fyrir tiltekin forrit"
-
-#~ msgid "Configure…"
-#~ msgstr "Grunnstilla…"
 
 #~ msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 #~ msgid "Enable:"

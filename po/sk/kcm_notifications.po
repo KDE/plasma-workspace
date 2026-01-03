@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-01 00:44+0000\n"
+"POT-Creation-Date: 2026-01-03 00:45+0000\n"
 "PO-Revision-Date: 2023-11-11 14:51+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -90,16 +90,16 @@ msgstr ""
 
 #: ui/main.qml:47
 #, fuzzy, kde-format
-#| msgid "Notifications"
+#| msgid "Configure…"
 msgctxt "@action:button Plasma-specific notifications"
-msgid "System Notifications"
-msgstr "Upozornenia"
+msgid "Configure for System…"
+msgstr "Nastaviť..."
 
 #: ui/main.qml:53
 #, fuzzy, kde-format
 #| msgid "Application Settings"
 msgctxt "@action:button Application-specific notifications"
-msgid "Application Settings"
+msgid "Configure for Applications…"
 msgstr "Nastavenia aplikácií"
 
 #: ui/main.qml:96
@@ -213,7 +213,7 @@ msgstr "Vedľa ikony upozornení"
 #: ui/main.qml:269
 #, kde-format
 msgctxt "@action:button choose custom notification position"
-msgid "Custom…"
+msgid "Choose…"
 msgstr ""
 
 #: ui/main.qml:278 ui/main.qml:294
@@ -303,6 +303,18 @@ msgid ""
 msgstr ""
 "Vyberte aplikáciu zo zoznamu na zmenu jej nastavení upozornení a správania"
 
+#, fuzzy
+#~| msgid "Notifications"
+#~ msgctxt "@action:button Plasma-specific notifications"
+#~ msgid "System Notifications"
+#~ msgstr "Upozornenia"
+
+#, fuzzy
+#~| msgid "Application Settings"
+#~ msgctxt "@action:button Application-specific notifications"
+#~ msgid "Application Settings"
+#~ msgstr "Nastavenia aplikácií"
+
 #~ msgid "Normal notifications:"
 #~ msgstr "Normálne oznámenia:"
 
@@ -318,18 +330,9 @@ msgstr ""
 #~ msgid "Application Settings…"
 #~ msgstr "Nastavenia aplikácií"
 
-#, fuzzy
-#~| msgid "Application Settings"
-#~ msgctxt "@action:button Application-specific notifications"
-#~ msgid "Configure Application Settings…"
-#~ msgstr "Nastavenia aplikácií"
-
 #~ msgctxt "@title:group"
 #~ msgid "Application-specific settings"
 #~ msgstr "Špecifické nastavenia aplikácií"
-
-#~ msgid "Configure…"
-#~ msgstr "Nastaviť..."
 
 #~ msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 #~ msgid "Enable:"

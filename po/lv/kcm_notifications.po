@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-01 00:44+0000\n"
+"POT-Creation-Date: 2026-01-03 00:45+0000\n"
 "PO-Revision-Date: 2025-05-29 16:31+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -90,15 +90,17 @@ msgid "Choose sound file"
 msgstr "Atlasīt skaņas datni"
 
 #: ui/main.qml:47
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure…"
 msgctxt "@action:button Plasma-specific notifications"
-msgid "System Notifications"
-msgstr "Sistēmas paziņojumi"
+msgid "Configure for System…"
+msgstr "Konfigurēt..."
 
 #: ui/main.qml:53
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Application Settings"
 msgctxt "@action:button Application-specific notifications"
-msgid "Application Settings"
+msgid "Configure for Applications…"
 msgstr "Programmu iestatījumi"
 
 #: ui/main.qml:96
@@ -208,8 +210,8 @@ msgstr "Pie paziņojuma ikonas"
 #: ui/main.qml:269
 #, kde-format
 msgctxt "@action:button choose custom notification position"
-msgid "Custom…"
-msgstr "Pielāgots…"
+msgid "Choose…"
+msgstr ""
 
 #: ui/main.qml:278 ui/main.qml:294
 #, kde-format
@@ -299,6 +301,18 @@ msgstr ""
 "Sarakstā atlasiet programmu, lai konfigurētu tās paziņojumu iestatījumus un "
 "uzvedību"
 
+#~ msgctxt "@action:button Plasma-specific notifications"
+#~ msgid "System Notifications"
+#~ msgstr "Sistēmas paziņojumi"
+
+#~ msgctxt "@action:button Application-specific notifications"
+#~ msgid "Application Settings"
+#~ msgstr "Programmu iestatījumi"
+
+#~ msgctxt "@action:button choose custom notification position"
+#~ msgid "Custom…"
+#~ msgstr "Pielāgots…"
+
 #~ msgid "Normal notifications:"
 #~ msgstr "Normālie paziņojumi:"
 
@@ -312,18 +326,9 @@ msgstr ""
 #~ msgid "Application Settings…"
 #~ msgstr "Programmas iestatījumi..."
 
-#, fuzzy
-#~| msgid "Application Settings"
-#~ msgctxt "@action:button Application-specific notifications"
-#~ msgid "Configure Application Settings…"
-#~ msgstr "Programmu iestatījumi"
-
 #~ msgctxt "@title:group"
 #~ msgid "Application-specific settings"
 #~ msgstr "Programmu iestatījumi"
-
-#~ msgid "Configure…"
-#~ msgstr "Konfigurēt..."
 
 #~ msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 #~ msgid "Enable:"

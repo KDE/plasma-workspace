@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-01 00:44+0000\n"
+"POT-Creation-Date: 2026-01-03 00:45+0000\n"
 "PO-Revision-Date: 2025-12-31 22:30-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -95,16 +95,18 @@ msgid "Choose sound file"
 msgstr "Escolher arquivo de som"
 
 #: ui/main.qml:47
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure…"
 msgctxt "@action:button Plasma-specific notifications"
-msgid "System Notifications"
-msgstr "Notificações do sistema"
+msgid "Configure for System…"
+msgstr "Configurar..."
 
 #: ui/main.qml:53
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Application Settings"
 msgctxt "@action:button Application-specific notifications"
-msgid "Application Settings"
-msgstr "Configurações dos aplicativos"
+msgid "Configure for Applications…"
+msgstr "Configurações do aplicativo"
 
 #: ui/main.qml:96
 #, kde-format
@@ -214,8 +216,8 @@ msgstr "Próximo do ícone da notificação"
 #: ui/main.qml:269
 #, kde-format
 msgctxt "@action:button choose custom notification position"
-msgid "Custom…"
-msgstr "Personalizado…"
+msgid "Choose…"
+msgstr ""
 
 #: ui/main.qml:278 ui/main.qml:294
 #, kde-format
@@ -302,6 +304,18 @@ msgstr ""
 "Selecione um aplicativo da lista para configurar suas configurações de "
 "notificação e comportamento"
 
+#~ msgctxt "@action:button Plasma-specific notifications"
+#~ msgid "System Notifications"
+#~ msgstr "Notificações do sistema"
+
+#~ msgctxt "@action:button Application-specific notifications"
+#~ msgid "Application Settings"
+#~ msgstr "Configurações dos aplicativos"
+
+#~ msgctxt "@action:button choose custom notification position"
+#~ msgid "Custom…"
+#~ msgstr "Personalizado…"
+
 #~ msgid "Normal notifications:"
 #~ msgstr "Notificações normais:"
 
@@ -317,18 +331,9 @@ msgstr ""
 #~ msgid "Application Settings…"
 #~ msgstr "Configurações do aplicativo"
 
-#, fuzzy
-#~| msgid "Application Settings"
-#~ msgctxt "@action:button Application-specific notifications"
-#~ msgid "Configure Application Settings…"
-#~ msgstr "Configurações do aplicativo"
-
 #~ msgctxt "@title:group"
 #~ msgid "Application-specific settings"
 #~ msgstr "Configurações específicas do aplicativo"
-
-#~ msgid "Configure…"
-#~ msgstr "Configurar..."
 
 #~ msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 #~ msgid "Enable:"

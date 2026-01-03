@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-01 00:44+0000\n"
+"POT-Creation-Date: 2026-01-03 00:45+0000\n"
 "PO-Revision-Date: 2025-04-27 12:42+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -88,15 +88,17 @@ msgid "Choose sound file"
 msgstr "ஒலிக்கோப்பை தேர்ந்தெடு"
 
 #: ui/main.qml:47
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure…"
 msgctxt "@action:button Plasma-specific notifications"
-msgid "System Notifications"
-msgstr "கணினி அறிவிப்புகள்"
+msgid "Configure for System…"
+msgstr "அமை…"
 
 #: ui/main.qml:53
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Application Settings"
 msgctxt "@action:button Application-specific notifications"
-msgid "Application Settings"
+msgid "Configure for Applications…"
 msgstr "செயலி அமைப்புகள்"
 
 #: ui/main.qml:96
@@ -205,8 +207,8 @@ msgstr "அறிவிப்பு சின்னத்திற்கு அ�
 #: ui/main.qml:269
 #, kde-format
 msgctxt "@action:button choose custom notification position"
-msgid "Custom…"
-msgstr "விருப்பமானது…"
+msgid "Choose…"
+msgstr ""
 
 #: ui/main.qml:278 ui/main.qml:294
 #, kde-format
@@ -295,6 +297,18 @@ msgstr ""
 "ஒரு செயலியின் அறிவிப்பு அமைப்புகள் மற்றும் நடத்தையை மாற்ற, அதை பட்டியலிலிருந்து தேர்வு "
 "செய்யுங்கள்"
 
+#~ msgctxt "@action:button Plasma-specific notifications"
+#~ msgid "System Notifications"
+#~ msgstr "கணினி அறிவிப்புகள்"
+
+#~ msgctxt "@action:button Application-specific notifications"
+#~ msgid "Application Settings"
+#~ msgstr "செயலி அமைப்புகள்"
+
+#~ msgctxt "@action:button choose custom notification position"
+#~ msgid "Custom…"
+#~ msgstr "விருப்பமானது…"
+
 #~ msgid "Normal notifications:"
 #~ msgstr "சாதாரண அறிவிப்புகள்:"
 
@@ -308,18 +322,9 @@ msgstr ""
 #~ msgid "Application Settings…"
 #~ msgstr "செயலி அமைப்புகள்…"
 
-#, fuzzy
-#~| msgid "Application Settings"
-#~ msgctxt "@action:button Application-specific notifications"
-#~ msgid "Configure Application Settings…"
-#~ msgstr "செயலி அமைப்புகள்"
-
 #~ msgctxt "@title:group"
 #~ msgid "Application-specific settings"
 #~ msgstr "தனிப்பட்ட செயலிகளுக்கான அமைப்புகள்"
-
-#~ msgid "Configure…"
-#~ msgstr "அமை…"
 
 #~ msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 #~ msgid "Enable:"

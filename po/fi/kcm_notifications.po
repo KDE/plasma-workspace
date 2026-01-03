@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-01 00:44+0000\n"
+"POT-Creation-Date: 2026-01-03 00:45+0000\n"
 "PO-Revision-Date: 2025-05-25 10:30+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -90,16 +90,19 @@ msgid "Choose sound file"
 msgstr "Valitse äänitiedosto"
 
 #: ui/main.qml:47
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure…"
 msgctxt "@action:button Plasma-specific notifications"
-msgid "System Notifications"
-msgstr "Järjestelmäilmoitukset"
+msgid "Configure for System…"
+msgstr "Asetukset…"
 
 #: ui/main.qml:53
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button Application-specific notifications"
+#| msgid "Configure Application Settings…"
 msgctxt "@action:button Application-specific notifications"
-msgid "Application Settings"
-msgstr "Sovellusasetukset"
+msgid "Configure for Applications…"
+msgstr "Sovellusasetukset…"
 
 #: ui/main.qml:96
 #, kde-format
@@ -207,8 +210,8 @@ msgstr "Lähellä ilmoituskuvaketta"
 #: ui/main.qml:269
 #, kde-format
 msgctxt "@action:button choose custom notification position"
-msgid "Custom…"
-msgstr "Mukautettu…"
+msgid "Choose…"
+msgstr ""
 
 #: ui/main.qml:278 ui/main.qml:294
 #, kde-format
@@ -297,6 +300,18 @@ msgstr ""
 "Mukauta sovelluksen ilmoitusasetuksia ja toimintaa valitsemalla ensin "
 "sovellus luettelosta"
 
+#~ msgctxt "@action:button Plasma-specific notifications"
+#~ msgid "System Notifications"
+#~ msgstr "Järjestelmäilmoitukset"
+
+#~ msgctxt "@action:button Application-specific notifications"
+#~ msgid "Application Settings"
+#~ msgstr "Sovellusasetukset"
+
+#~ msgctxt "@action:button choose custom notification position"
+#~ msgid "Custom…"
+#~ msgstr "Mukautettu…"
+
 #~ msgid "Normal notifications:"
 #~ msgstr "Tavalliset ilmoitukset:"
 
@@ -310,16 +325,9 @@ msgstr ""
 #~ msgid "Application Settings…"
 #~ msgstr "Sovellusasetukset…"
 
-#~ msgctxt "@action:button Application-specific notifications"
-#~ msgid "Configure Application Settings…"
-#~ msgstr "Sovellusasetukset…"
-
 #~ msgctxt "@title:group"
 #~ msgid "Application-specific settings"
 #~ msgstr "Sovelluskohtaiset asetukset"
-
-#~ msgid "Configure…"
-#~ msgstr "Asetukset…"
 
 #~ msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 #~ msgid "Enable:"

@@ -3,13 +3,13 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2019, 2020, 2021, 2022, 2023, 2024, 2025.
+# Yuri Chornoivan <yurchor@ukr.net>, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-01 00:44+0000\n"
-"PO-Revision-Date: 2025-04-24 12:00+0300\n"
+"POT-Creation-Date: 2026-01-03 00:45+0000\n"
+"PO-Revision-Date: 2026-01-01 11:57+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -93,16 +93,19 @@ msgid "Choose sound file"
 msgstr "Виберіть звуковий файл"
 
 #: ui/main.qml:47
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Configure…"
 msgctxt "@action:button Plasma-specific notifications"
-msgid "System Notifications"
-msgstr "Системні сповіщення"
+msgid "Configure for System…"
+msgstr "Налаштувати…"
 
 #: ui/main.qml:53
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button Application-specific notifications"
+#| msgid "Configure Application Settings…"
 msgctxt "@action:button Application-specific notifications"
-msgid "Application Settings"
-msgstr "Параметри програм"
+msgid "Configure for Applications…"
+msgstr "Налаштувати параметри програми…"
 
 #: ui/main.qml:96
 #, kde-format
@@ -211,8 +214,8 @@ msgstr "Поруч із піктограмою сповіщень"
 #: ui/main.qml:269
 #, kde-format
 msgctxt "@action:button choose custom notification position"
-msgid "Custom…"
-msgstr "Нетипове…"
+msgid "Choose…"
+msgstr ""
 
 #: ui/main.qml:278 ui/main.qml:294
 #, kde-format
@@ -230,11 +233,9 @@ msgid "Hide after:"
 msgstr "Приховати за:"
 
 #: ui/main.qml:306
-#, fuzzy, kde-format
-#| msgctxt "Show application jobs in notification widget"
-#| msgid "Show in notifications"
+#, kde-format
 msgid "Show timeout indicator"
-msgstr "Показувати у сповіщеннях"
+msgstr "Показувати індикатор часу очікування"
 
 #: ui/main.qml:318
 #, kde-format
@@ -303,6 +304,18 @@ msgstr ""
 "Виберіть програму зі списку, щоб налаштувати параметри та поведінку для її "
 "сповіщень"
 
+#~ msgctxt "@action:button Plasma-specific notifications"
+#~ msgid "System Notifications"
+#~ msgstr "Системні сповіщення"
+
+#~ msgctxt "@action:button Application-specific notifications"
+#~ msgid "Application Settings"
+#~ msgstr "Параметри програм"
+
+#~ msgctxt "@action:button choose custom notification position"
+#~ msgid "Custom…"
+#~ msgstr "Нетипове…"
+
 #~ msgid "Normal notifications:"
 #~ msgstr "Звичайні сповіщення:"
 
@@ -316,16 +329,9 @@ msgstr ""
 #~ msgid "Application Settings…"
 #~ msgstr "Параметри програм…"
 
-#~ msgctxt "@action:button Application-specific notifications"
-#~ msgid "Configure Application Settings…"
-#~ msgstr "Налаштувати параметри програми…"
-
 #~ msgctxt "@title:group"
 #~ msgid "Application-specific settings"
 #~ msgstr "Параметри окремих програм"
-
-#~ msgid "Configure…"
-#~ msgstr "Налаштувати…"
 
 #~ msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 #~ msgid "Enable:"
