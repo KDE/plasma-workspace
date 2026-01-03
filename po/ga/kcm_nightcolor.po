@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2026-01-01 18:03+0000\n"
+"PO-Revision-Date: 2026-01-01 19:07+0000\n"
 "Last-Translator: Charlotte <altronic25@protonmail.com>\n"
 "Language-Team: Irish\n"
 "Language: ga\n"
@@ -16,7 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
-"X-Generator: Lokalize 25.12.0\n"
 
 #: package/contents/ui/LocationsFixedView.qml:39
 #, kde-format
@@ -181,7 +180,7 @@ msgstr "Ionchuir nóiméid - íos. 1, uas. 600"
 #: package/contents/ui/main.qml:404
 #, kde-format
 msgid "Error: Transition time overlaps."
-msgstr "Earráid: Am athraithe ag an am céanna"
+msgstr "Earráid: Am athraithe ag an am céanna."
 
 #: package/contents/ui/main.qml:426
 #, kde-format
