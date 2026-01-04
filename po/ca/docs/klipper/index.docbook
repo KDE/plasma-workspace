@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" 
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
 "dtd/kdedbx45.dtd" [
   <!ENTITY kappname "&klipper;">
   <!ENTITY package "kdebase">
@@ -313,8 +313,7 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 >Desa sempre en l'historial</guilabel
 > no està disponible si la sincronització de la selecció/porta-retalls està desactivada: en aquest cas la selecció mai es desarà automàticament en l'historial del porta-retalls. Vegeu <xref linkend="clipboard-modes"/>. </para>
 </listitem>
-</varlistentry
-> 
+</varlistentry>
 
 <varlistentry>
 <term
@@ -333,8 +332,7 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 >Desa sempre en l'historial</guilabel
 > no està disponible si la sincronització de la selecció/porta-retalls està desactivada: en aquest cas la selecció mai es desa automàticament en l'historial del porta-retalls. Vegeu <xref linkend="clipboard-modes"/>. </para>
 </listitem>
-</varlistentry
-> 
+</varlistentry>
 
 </variablelist>
 
@@ -365,48 +363,6 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 <listitem
 ><para
 >Si aquesta opció és activada, seleccionar un element de l'historial causarà que el &klipper; mostri les accions emergents sobre aquest element, si fos apropiat.</para>
-</listitem>
-</varlistentry>
-
-<varlistentry
-><term
-><guibutton
->Exclou finestres</guibutton
-></term>
-<listitem
-><para
->Apareixerà el diàleg <guilabel
->Desactiva les accions per a les finestres de tipus WM_CLASS</guilabel
->.</para>
-<para
->Alguns programes, com el &konqueror; usaran el porta-retalls internament. Si rebeu menús emergents del &klipper; a tota hora quan empreu una certa aplicació, feu el següent:</para>
-
-<orderedlist>
-<listitem
-><para
->Obriu l'aplicació.</para
-></listitem>
-<listitem
-><para
->Des d'un terminal, executeu <userinput
-><command
->xprop</command
-> | <command
->grep</command
-> <parameter
->WM_CLASS</parameter
-></userinput
-> i després feu clic a sobre de la finestra de l'aplicació que esteu executant.</para
-></listitem
-> 
-<listitem
-><para
->La primera cadena de caràcters després del signe igual és la que s'ha d'introduir.</para
-></listitem>
-</orderedlist>
-
-<para
->Una vegada que hàgiu afegit WM_CLASS, no es generaran més accions per a les finestres d'aquesta aplicació.</para>
 </listitem>
 </varlistentry>
 
@@ -467,8 +423,7 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 >esquerre</mousebutton
 > en la columna <guilabel
 >Descripció</guilabel
->.</para
->   
+>.</para>
 
 <note
 ><para
@@ -602,7 +557,7 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 > &underFDL; &underGPL; </chapter>
 
 
-&documentation.index; 
+&documentation.index;
 
 </book>
 <!--

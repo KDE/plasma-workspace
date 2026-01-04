@@ -1,33 +1,33 @@
 # Translation for klipper.po to Euskara/Basque (eu).
-# Copyright (C) 2002-2025 This file is copyright:
+# Copyright (C) 2002-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# SPDX-FileCopyrightText: 2024, 2025 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2024, 2025, 2026 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Koldo Navarro <koldo.np@euskalnet.net>
 # Marcos  <marcos@euskalgnu.org>, 2002, 2005, 2006, 2007, 2008, 2010.
 # Juan Irigoien <juanirigoien@irakasle.net>, 2004.
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2010, 2011, 2014, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2010, 2011, 2014, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026.
 # Hizkuntza Politikarako Sailburuordetza <hizpol@ej-gv.es>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-23 00:44+0000\n"
-"PO-Revision-Date: 2025-08-30 07:48+0200\n"
+"PO-Revision-Date: 2026-01-03 10:34+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.12.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: configdialog.cpp:84
 #, kde-format
 msgid "Clipboard history:"
-msgstr "Arbeleko historia:"
+msgstr "Arbelaren historia:"
 
 #: configdialog.cpp:90
 #, kde-format
@@ -81,12 +81,12 @@ msgstr "Testu-hautapena:"
 #: configdialog.cpp:141 configdialog.cpp:179
 #, kde-format
 msgid "Only when explicitly copied"
-msgstr "Bakarrik esplizituki kopiatzen denean"
+msgstr "Esplizituki kopiatzen denean bakarrik"
 
 #: configdialog.cpp:146
 #, kde-format
 msgid "Whether text selections are saved in the clipboard history."
-msgstr "Testu hautapenak arbeleko historian gorde behar diren ala ez."
+msgstr "Testu hautapenak arbelaren historian gordetzen diren edo ez."
 
 #: configdialog.cpp:177
 #, kde-format
@@ -762,7 +762,7 @@ msgstr ""
 #: klipper.kcfg:27
 #, kde-format
 msgid "Keep the selection and clipboard the same"
-msgstr "Mantendu berdin hautapena eta arbela"
+msgstr "Hautapena eta arbela berdin mantendu"
 
 #. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
 #: klipper.kcfg:29

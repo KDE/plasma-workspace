@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" 
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
 "dtd/kdedbx45.dtd" [
   <!ENTITY kappname "&klipper;">
   <!ENTITY package "kdebase">
@@ -373,8 +373,7 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 >Guardar siempre en el historial</guilabel
 > no está disponible si está desactivada la sincronización entre selección y portapapeles (en este caso, la selección nunca se guarda automáticamente en el historial del portapapeles). Consulte <xref linkend="clipboard-modes"/>. </para>
 </listitem>
-</varlistentry
-> 
+</varlistentry>
 
 <varlistentry>
 <term
@@ -393,8 +392,7 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 >Guardar siempre en el historial</guilabel
 > no está disponible si está desactivada la sincronización entre selección y portapapeles (en este caso, la selección no se guarda nunca automáticamente en el historial del portapapeles). Consulte <xref linkend="clipboard-modes"/>. </para>
 </listitem>
-</varlistentry
-> 
+</varlistentry>
 
 </variablelist>
 
@@ -425,48 +423,6 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 <listitem
 ><para
 >Si esta opción está activada, al seleccionar un elemento del historial hará que, si es apropiado, &klipper; muestre las operaciones emergentes en ese elemento.</para>
-</listitem>
-</varlistentry>
-
-<varlistentry
-><term
-><guibutton
->Excluir ventanas</guibutton
-></term>
-<listitem
-><para
->Llama al diálogo <guilabel
->Desactivar operaciones para ventanas del tipo WM_CLASS</guilabel
->.</para>
-<para
->Algunos programas, tales como &konqueror; utilizan el portapapeles internamente. Si recibe menús emergentes de &klipper; constantemente cuando use una cierta aplicación, haga lo siguiente:</para>
-
-<orderedlist>
-<listitem
-><para
->Abra la aplicación.</para
-></listitem>
-<listitem
-><para
->Desde un terminal, ejecute <userinput
-><command
->xprop</command
-> | <command
->grep</command
-> <parameter
->WM_CLASS</parameter
-></userinput
-> y después pulse sobre la ventana de la aplicación que esté ejecutando.</para
-></listitem
-> 
-<listitem
-><para
->La primera cadena de caracteres después del signo igual es la que hay que introducir.</para
-></listitem>
-</orderedlist>
-
-<para
->Una vez que haya añadido WM_CLASS, no se generarán más operaciones para las ventanas de esa aplicación.</para>
 </listitem>
 </varlistentry>
 
@@ -527,8 +483,7 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 >izquierdo</mousebutton
 > del ratón en la columna <guilabel
 >Descripción</guilabel
->.</para
->   
+>.</para>
 
 <note
 ><para
@@ -670,7 +625,7 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 > &underFDL; &underGPL; </chapter>
 
 
-&documentation.index; 
+&documentation.index;
 
 </book>
 <!--

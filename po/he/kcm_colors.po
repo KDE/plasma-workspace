@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2025-11-08 19:59+0200\n"
+"PO-Revision-Date: 2026-01-03 16:16+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -30,7 +30,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -285,7 +285,7 @@ msgstr "!"
 #: editor/preview.ui:193
 #, kde-format
 msgid "Selection Neutral Text against Selection Normal Background"
-msgstr "טקסט נייטרלי נבחר מול מול רקע רגיל נבחר"
+msgstr "טקסט ניטרלי נבחר מול מול רקע רגיל נבחר"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -361,7 +361,7 @@ msgstr "תצוגת טקסט שלילי מול תצוגת רקע רגיל"
 #: editor/preview.ui:317
 #, kde-format
 msgid "View Neutral Text against View Normal Background"
-msgstr "תצוגת טקסט נייטרלי מול תצוגת רקע רגיל"
+msgstr "תצוגת טקסט ניטרלי מול תצוגת רקע רגיל"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView7)
 #: editor/preview.ui:327
@@ -1016,7 +1016,7 @@ msgstr "שלילי"
 #: editor/setpreview.ui:141
 #, kde-format
 msgid "Neutral Text on Normal Background"
-msgstr "טקסט נייטרלי על רקע רגיל"
+msgstr "טקסט ניטרלי על רקע רגיל"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -1124,8 +1124,8 @@ msgid ""
 "(Note: Neutral Background is derived from Neutral Text and cannot be "
 "separately configured at this time)"
 msgstr ""
-"טקסט נייטרלי על רקע נייטרלי\n"
-"(לשימת ליבך: רקע נייטרלי נגזר מטקסט נייטרלי, ולא ניתן להגדירו בנפרד כעת)"
+"טקסט ניטרלי על רקע ניטרלי\n"
+"(לשימת ליבך: רקע ניטרלי נגזר מטקסט ניטרלי, ולא ניתן להגדירו בנפרד כעת)"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelBack7)
 #: editor/setpreview.ui:317

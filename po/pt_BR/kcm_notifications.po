@@ -7,13 +7,13 @@
 # Frederico Gonçalves Guimarães <frederico@teia.bio.br>, 2021.
 # SPDX-FileCopyrightText: 2024, 2025 Geraldo Simiao <geraldosimiao@fedoraproject.org>
 # SPDX-FileCopyrightText: 2025 Guilherme Marçal Silva <guimarcalsilva@gmail.com>
-# SPDX-FileCopyrightText: 2025 Marcus Gama <marcus.gama@gmail.com>
+# SPDX-FileCopyrightText: 2025, 2026 Marcus Gama <marcus.gama@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-03 00:45+0000\n"
-"PO-Revision-Date: 2025-12-31 22:30-0300\n"
+"PO-Revision-Date: 2026-01-03 06:33-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -95,18 +95,16 @@ msgid "Choose sound file"
 msgstr "Escolher arquivo de som"
 
 #: ui/main.qml:47
-#, fuzzy, kde-format
-#| msgid "Configure…"
+#, kde-format
 msgctxt "@action:button Plasma-specific notifications"
 msgid "Configure for System…"
-msgstr "Configurar..."
+msgstr "Configurar para o sistema..."
 
 #: ui/main.qml:53
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Configure for Applications…"
-msgstr "Configurações do aplicativo"
+msgstr "Configurar para os aplicativos…"
 
 #: ui/main.qml:96
 #, kde-format
@@ -217,7 +215,7 @@ msgstr "Próximo do ícone da notificação"
 #, kde-format
 msgctxt "@action:button choose custom notification position"
 msgid "Choose…"
-msgstr ""
+msgstr "Escolher…"
 
 #: ui/main.qml:278 ui/main.qml:294
 #, kde-format
