@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_clock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-05 00:44+0000\n"
 "PO-Revision-Date: 2024-01-17 14:04+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -42,7 +42,7 @@ msgstr "Pamata:"
 msgid "Show time zone"
 msgstr "Rādīt laika joslu"
 
-#: qml/main.qml:59
+#: qml/main.qml:60
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Current time is %1; Current date is %2"

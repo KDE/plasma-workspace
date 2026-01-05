@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.activitybar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-06 00:44+0000\n"
+"POT-Creation-Date: 2026-01-05 00:44+0000\n"
 "PO-Revision-Date: 2025-06-04 19:37+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -18,18 +18,18 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.08.0\n"
 
-#: qml/main.qml:71
+#: qml/main.qml:76
 #, kde-format
 msgid "Switch to activity %1"
 msgstr "Cambiar a la actividad %1"
 
-#: qml/main.qml:91
+#: qml/main.qml:96
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Show Activity Manager"
 msgstr "Mostrar el gestor de actividades"
 
-#: qml/main.qml:99
+#: qml/main.qml:104
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Activities…"

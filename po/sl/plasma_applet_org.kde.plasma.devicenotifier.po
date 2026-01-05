@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-02 00:46+0000\n"
+"POT-Creation-Date: 2026-01-05 00:44+0000\n"
 "PO-Revision-Date: 2025-07-16 07:36+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -173,7 +173,7 @@ msgstr "Te naprave ni bilo mogoče odstraniti."
 msgid "Could not repair this device: %1"
 msgstr "Te naprave ni bilo mogoče popraviti: %1"
 
-#: qml/DeviceItem.qml:106
+#: qml/DeviceItem.qml:99
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -181,7 +181,7 @@ msgctxt ""
 msgid "Checking…"
 msgstr "Preverjanje…"
 
-#: qml/DeviceItem.qml:108
+#: qml/DeviceItem.qml:101
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -189,13 +189,13 @@ msgctxt ""
 msgid "Repairing…"
 msgstr "Popravljanje…"
 
-#: qml/DeviceItem.qml:111
+#: qml/DeviceItem.qml:104
 #, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "%1 neporabljeno od %2"
 
-#: qml/DeviceItem.qml:115
+#: qml/DeviceItem.qml:108
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -203,7 +203,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr "Dostopanje…"
 
-#: qml/DeviceItem.qml:118
+#: qml/DeviceItem.qml:111
 #, kde-format
 msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
@@ -211,63 +211,63 @@ msgctxt ""
 msgid "Removing…"
 msgstr "Odstranjevanje…"
 
-#: qml/DeviceItem.qml:121
+#: qml/DeviceItem.qml:114
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr "Ne odklapljajte še! Datoteke se še prenašajo…"
 
-#: qml/FullRepresentation.qml:45 qml/main.qml:121
+#: qml/FullRepresentation.qml:47 qml/main.qml:123
 #, kde-format
 msgid "Remove All"
 msgstr "Odstrani vse"
 
-#: qml/FullRepresentation.qml:46
+#: qml/FullRepresentation.qml:48
 #, kde-format
 msgid "Click to safely remove all devices"
 msgstr "Kliknite, da varno odstranite vse naprave"
 
-#: qml/FullRepresentation.qml:153
+#: qml/FullRepresentation.qml:162
 #, kde-format
 msgid "No removable devices attached"
 msgstr "Ni priklopljene nobene odstranljive naprave"
 
-#: qml/FullRepresentation.qml:153
+#: qml/FullRepresentation.qml:162
 #, kde-format
 msgid "No disks available"
 msgstr "Na voljo ni nobenega diska"
 
-#: qml/main.qml:71
+#: qml/main.qml:72
 #, kde-format
 msgid "Most Recent Device"
 msgstr "Najnovejša naprava"
 
-#: qml/main.qml:71
+#: qml/main.qml:72
 #, kde-format
 msgid "No Devices Available"
 msgstr "Na voljo ni nobene naprave"
 
-#: qml/main.qml:107
+#: qml/main.qml:109
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Nastavi odstranljive naprave…"
 
-#: qml/main.qml:129
+#: qml/main.qml:131
 #, kde-format
 msgid "Removable Devices"
 msgstr "Odstranljive naprave"
 
-#: qml/main.qml:144
+#: qml/main.qml:146
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "Neodstranljive naprave"
 
-#: qml/main.qml:159
+#: qml/main.qml:161
 #, kde-format
 msgid "All Devices"
 msgstr "Vse naprave"
 
-#: qml/main.qml:176
+#: qml/main.qml:178
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "Odpri pojavno okno, ko je priklopljena nova naprava"

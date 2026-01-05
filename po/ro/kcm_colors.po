@@ -1,12 +1,12 @@
 # Traducerea kcmcolors.po în Română
-# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2010, 2013, 2020, 2021, 2022, 2023, 2024.
+# SPDX-FileCopyrightText: 2008, 2009, 2010, 2013, 2020, 2021, 2022, 2023, 2024, 2025 Sergiu Bivol <sergiu@cip.md>
 # Cristian Oneț <onet.cristian@gmail.com>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2024-02-24 18:21+0000\n"
+"PO-Revision-Date: 2025-12-12 11:25+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -446,9 +446,7 @@ msgstr "Setul de culori de vizualizat/modificat"
 #. i18n: 'Common' here means &quot;frequent/not rare&quot;, not &quot;shared&quot;
 #. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
 #: editor/scmeditorcolors.ui:40
-#, fuzzy, kde-format
-#| msgctxt "color-sets"
-#| msgid "Common Colors"
+#, kde-format
 msgctxt "color-sets"
 msgid "Common colors"
 msgstr "Culori obișnuite"
@@ -877,13 +875,13 @@ msgstr "Intensitatea nuanței:"
 #: editor/scmeditoroptions.ui:69
 #, kde-format
 msgid "Contrast of the frames, separators and outlines"
-msgstr ""
+msgstr "Contrastul cadrelor, separatorilor și contururilor"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
 #: editor/scmeditoroptions.ui:72
 #, kde-format
 msgid "Frames and Outlines"
-msgstr ""
+msgstr "Cadre și contururi"
 
 #. i18n: ectx: property (text), widget (KMessageWidget, contrastValueWarning)
 #: editor/scmeditoroptions.ui:93
@@ -892,12 +890,14 @@ msgid ""
 "Contrast values below 15% may produce visually awkward effects with some "
 "applications and color schemes. Consider yourself warned!"
 msgstr ""
+"Valorile contrastului sub 15% pot produce efecte vizuale ciudate cu unele "
+"aplicații și scheme de culori. Ați fost avertizat!"
 
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, contrastPercentageSpinBox)
 #: editor/scmeditoroptions.ui:109
 #, no-c-format, kde-format
 msgid "%"
-msgstr ""
+msgstr "%"
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: editor/scmeditoroptions.ui:138
@@ -1251,25 +1251,19 @@ msgid " * %1 (current color scheme)"
 msgstr " * %1 (schema de culori actuală)"
 
 #: ui/AccentColorUI.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox Accent color from color scheme"
-#| msgid "Accent Color From Color Scheme"
+#, kde-format
 msgctxt "@item:inlistbox Accent color from color scheme"
 msgid "Accent color from color scheme"
 msgstr "Culoare de accent din schema de culori"
 
 #: ui/AccentColorUI.qml:28
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox Accent color from wallpaper"
-#| msgid "Accent Color From Wallpaper"
+#, kde-format
 msgctxt "@item:inlistbox Accent color from wallpaper"
 msgid "Accent color from wallpaper"
 msgstr "Culoare de accent de pe tapet"
 
 #: ui/AccentColorUI.qml:29
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox User-chosen custom accent color"
-#| msgid "Custom Accent Color"
+#, kde-format
 msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom accent color"
 msgstr "Culoare de accent personalizată"
@@ -1282,22 +1276,19 @@ msgstr ""
 "Schema de culori „%1” nu e instalată. Se alege în schimb tematica implicită."
 
 #: ui/main.qml:123
-#, fuzzy, kde-format
-#| msgid "All Schemes"
+#, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "All schemes"
 msgstr "Toate schemele"
 
 #: ui/main.qml:124
-#, fuzzy, kde-format
-#| msgid "Light Schemes"
+#, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "Light schemes"
 msgstr "Scheme luminoase"
 
 #: ui/main.qml:125
-#, fuzzy, kde-format
-#| msgid "Dark Schemes"
+#, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "Dark schemes"
 msgstr "Scheme întunecate"

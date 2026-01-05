@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-05 00:44+0000\n"
 "PO-Revision-Date: 2012-06-14 10:53+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer\n"
@@ -16,7 +16,7 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 "X-Language: km-CM\n"
 
-#: components/ActionContainer.qml:80
+#: components/ActionContainer.qml:81
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"
@@ -98,19 +98,19 @@ msgstr ""
 msgid "Close"
 msgstr ""
 
-#: components/JobDetails.qml:34
+#: components/JobDetails.qml:37
 #, kde-format
 msgctxt "Row description, e.g. Source"
 msgid "%1:"
 msgstr ""
 
-#: components/JobDetails.qml:109
+#: components/JobDetails.qml:116
 #, kde-format
 msgctxt "How many bytes have been copied"
 msgid "%2 of %1"
 msgstr ""
 
-#: components/JobDetails.qml:113
+#: components/JobDetails.qml:120
 #, fuzzy, kde-format
 #| msgid "%2 / 1 file"
 #| msgid_plural "%2 / %1 files"
@@ -119,7 +119,7 @@ msgid "%2 of %1 file"
 msgid_plural "%2 of %1 files"
 msgstr[0] "ឯកសារ %2 / %1"
 
-#: components/JobDetails.qml:116
+#: components/JobDetails.qml:123
 #, fuzzy, kde-format
 #| msgid "%2 / 1 folder"
 #| msgid_plural "%2 / %1 folders"
@@ -128,7 +128,7 @@ msgid "%2 of %1 folder"
 msgid_plural "%2 of %1 folders"
 msgstr[0] "ថត %2 / %1"
 
-#: components/JobDetails.qml:119
+#: components/JobDetails.qml:126
 #, fuzzy, kde-format
 #| msgid "%2 / 1 file"
 #| msgid_plural "%2 / %1 files"
@@ -137,7 +137,7 @@ msgid "%2 of %1 item"
 msgid_plural "%2 of %1 items"
 msgstr[0] "ឯកសារ %2 / %1"
 
-#: components/JobDetails.qml:127
+#: components/JobDetails.qml:134
 #, fuzzy, kde-format
 #| msgid "%2 / 1 file"
 #| msgid_plural "%2 / %1 files"
@@ -145,7 +145,7 @@ msgid "%1 file"
 msgid_plural "%1 files"
 msgstr[0] "ឯកសារ %2 / %1"
 
-#: components/JobDetails.qml:129
+#: components/JobDetails.qml:136
 #, fuzzy, kde-format
 #| msgid "%2 / 1 folder"
 #| msgid_plural "%2 / %1 folders"
@@ -153,53 +153,53 @@ msgid "%1 folder"
 msgid_plural "%1 folders"
 msgstr[0] "ថត %2 / %1"
 
-#: components/JobDetails.qml:131
+#: components/JobDetails.qml:138
 #, kde-format
 msgid "%1 item"
 msgid_plural "%1 items"
 msgstr[0] ""
 
-#: components/JobDetails.qml:148 components/SpeedChart.qml:72
-#: components/SpeedChart.qml:98 components/SpeedChart.qml:188
-#: components/SpeedChart.qml:199
+#: components/JobDetails.qml:155 components/SpeedChart.qml:72
+#: components/SpeedChart.qml:98 components/SpeedChart.qml:193
+#: components/SpeedChart.qml:204
 #, kde-format
 msgctxt "Bytes per second"
 msgid "%1/s"
 msgstr ""
 
-#: components/JobItem.qml:56
+#: components/JobItem.qml:57
 #, kde-format
 msgctxt "Hides/expands item details"
 msgid "Details"
 msgstr ""
 
-#: components/JobItem.qml:77
+#: components/JobItem.qml:78
 #, fuzzy, kde-format
 #| msgid "Resume job"
 msgctxt "Resume paused job"
 msgid "Resume"
 msgstr "បន្ត​ការងារ"
 
-#: components/JobItem.qml:78
+#: components/JobItem.qml:79
 #, fuzzy, kde-format
 #| msgid "Paused"
 msgctxt "Pause running job"
 msgid "Pause"
 msgstr "បានផ្អាក"
 
-#: components/JobItem.qml:92
+#: components/JobItem.qml:93
 #, fuzzy, kde-format
 #| msgid "Cancel job"
 msgctxt "Cancel running job"
 msgid "Cancel"
 msgstr "បោះបង់​ការងារ"
 
-#: components/JobItem.qml:124 components/ThumbnailStrip.qml:158
+#: components/JobItem.qml:125 components/ThumbnailStrip.qml:159
 #, kde-format
 msgid "More Options…"
 msgstr ""
 
-#: components/JobItem.qml:152
+#: components/JobItem.qml:153
 #, fuzzy, kde-format
 #| msgid "Open"
 msgid "Open"
@@ -227,12 +227,12 @@ msgstr ""
 msgid "Speed"
 msgstr ""
 
-#: components/SpeedChart.qml:195
+#: components/SpeedChart.qml:200
 #, kde-format
 msgid "Average Speed"
 msgstr ""
 
-#: components/SpeedChart.qml:253
+#: components/SpeedChart.qml:258
 #, kde-format
 msgctxt "Percentage of a job"
 msgid "%1%"

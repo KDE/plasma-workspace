@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-02 00:46+0000\n"
+"POT-Creation-Date: 2026-01-05 00:44+0000\n"
 "PO-Revision-Date: 2025-07-15 10:02+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -170,7 +170,7 @@ msgid "Could not repair this device: %1"
 msgstr "No s'ha pogut reparar aquest dispositiu: %1"
 
 # skip-rule: kct-remove
-#: qml/DeviceItem.qml:106
+#: qml/DeviceItem.qml:99
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -179,7 +179,7 @@ msgid "Checking…"
 msgstr "S'està comprovant…"
 
 # skip-rule: kct-remove
-#: qml/DeviceItem.qml:108
+#: qml/DeviceItem.qml:101
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -187,13 +187,13 @@ msgctxt ""
 msgid "Repairing…"
 msgstr "S'està reparant…"
 
-#: qml/DeviceItem.qml:111
+#: qml/DeviceItem.qml:104
 #, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "%1 lliure de %2"
 
-#: qml/DeviceItem.qml:115
+#: qml/DeviceItem.qml:108
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -202,7 +202,7 @@ msgid "Accessing…"
 msgstr "Accedint…"
 
 # skip-rule: kct-remove
-#: qml/DeviceItem.qml:118
+#: qml/DeviceItem.qml:111
 #, kde-format
 msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
@@ -210,63 +210,63 @@ msgctxt ""
 msgid "Removing…"
 msgstr "Extraient…"
 
-#: qml/DeviceItem.qml:121
+#: qml/DeviceItem.qml:114
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr "No el desconnecteu! Encara s'estan transferint els fitxers…"
 
-#: qml/FullRepresentation.qml:45 qml/main.qml:121
+#: qml/FullRepresentation.qml:47 qml/main.qml:123
 #, kde-format
 msgid "Remove All"
 msgstr "Extreu-los tots"
 
-#: qml/FullRepresentation.qml:46
+#: qml/FullRepresentation.qml:48
 #, kde-format
 msgid "Click to safely remove all devices"
 msgstr "Cliqueu per a extreure amb seguretat tots els dispositius"
 
-#: qml/FullRepresentation.qml:153
+#: qml/FullRepresentation.qml:162
 #, kde-format
 msgid "No removable devices attached"
 msgstr "No hi ha cap dispositiu extraïble connectat"
 
-#: qml/FullRepresentation.qml:153
+#: qml/FullRepresentation.qml:162
 #, kde-format
 msgid "No disks available"
 msgstr "No hi ha cap disc disponible"
 
-#: qml/main.qml:71
+#: qml/main.qml:72
 #, kde-format
 msgid "Most Recent Device"
 msgstr "Dispositiu més recent"
 
-#: qml/main.qml:71
+#: qml/main.qml:72
 #, kde-format
 msgid "No Devices Available"
 msgstr "No hi ha disponible cap dispositiu"
 
-#: qml/main.qml:107
+#: qml/main.qml:109
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Configura els dispositius extraïbles…"
 
-#: qml/main.qml:129
+#: qml/main.qml:131
 #, kde-format
 msgid "Removable Devices"
 msgstr "Dispositius extraïbles"
 
-#: qml/main.qml:144
+#: qml/main.qml:146
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "Dispositius no extraïbles"
 
-#: qml/main.qml:159
+#: qml/main.qml:161
 #, kde-format
 msgid "All Devices"
 msgstr "Tots els dispositius"
 
-#: qml/main.qml:176
+#: qml/main.qml:178
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "Mostra un missatge emergent quan s'endolli un dispositiu nou"

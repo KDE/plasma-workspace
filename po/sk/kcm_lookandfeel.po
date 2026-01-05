@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-05 00:45+0000\n"
 "PO-Revision-Date: 2023-08-06 11:27+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -28,6 +28,12 @@ msgstr "Roman Paholík,Dušan Kazik"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "wizzardsk@gmail.com,prescott66@gmail.com"
+
+#: filedialognamefilters.cpp:28
+#, kde-format
+msgctxt "Name filter for file dialogs: File type (file extension wildcards)"
+msgid "Image Files (%1)"
+msgstr ""
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: lookandfeelsettings.kcfg:9
@@ -235,6 +241,64 @@ msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed themes"
 msgstr ""
 
+#: ui/LookAndFeelSnapshot.qml:16
+#, kde-format
+msgctxt "@title:window"
+msgid "Save Current Theme"
+msgstr ""
+
+#: ui/LookAndFeelSnapshot.qml:25
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Plasma’s current appearance and theme settings will be saved in a new global "
+"theme."
+msgstr ""
+
+#: ui/LookAndFeelSnapshot.qml:69
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Add a preview image…"
+msgstr ""
+
+#: ui/LookAndFeelSnapshot.qml:79
+#, kde-format
+msgctxt "@action:button Configure day-night cycle times"
+msgid "Take a screenshot…"
+msgstr ""
+
+#: ui/LookAndFeelSnapshot.qml:86
+#, kde-format
+msgctxt "@label:textbox Name of new global theme that will be created"
+msgid "Name:"
+msgstr ""
+
+#: ui/LookAndFeelSnapshot.qml:92
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "Type in name…"
+msgstr ""
+
+#: ui/LookAndFeelSnapshot.qml:101
+#, kde-format
+msgctxt ""
+"@action:button Confirm creating new global theme from the user's current "
+"appearance settings"
+msgid "Confirm"
+msgstr ""
+
+#: ui/LookAndFeelSnapshot.qml:113
+#, kde-format
+msgctxt "@info"
+msgid "A global theme with this name or id already exists."
+msgstr ""
+
+#: ui/LookAndFeelSnapshot.qml:127
+#, kde-format
+msgctxt "@title:title"
+msgid "Choose a Preview Image"
+msgstr ""
+
 #: ui/main.qml:22
 #, kde-format
 msgctxt "@option:check"
@@ -242,6 +306,12 @@ msgid "Switch to Dark Mode at Night"
 msgstr ""
 
 #: ui/main.qml:40
+#, kde-format
+msgctxt "@action:button"
+msgid "Save Current Theme…"
+msgstr ""
+
+#: ui/main.qml:45
 #, fuzzy, kde-format
 #| msgid "Get New…"
 msgctxt "@action:intoolbar"

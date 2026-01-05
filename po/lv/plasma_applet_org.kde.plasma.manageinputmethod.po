@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-06 00:44+0000\n"
+"POT-Creation-Date: 2026-01-05 00:44+0000\n"
 "PO-Revision-Date: 2024-01-17 14:58+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -24,27 +24,27 @@ msgctxt "Opens the system settings module"
 msgid "Configure Virtual Keyboards..."
 msgstr "Konfigurēt virtuālās tastatūras..."
 
-#: qml/main.qml:91
+#: qml/main.qml:87
 #, kde-format
 msgid "Virtual Keyboard: unavailable"
 msgstr "Virtuālā tastatūra: nav pieejama"
 
-#: qml/main.qml:104
+#: qml/main.qml:96
 #, kde-format
 msgid "Virtual Keyboard: disabled"
 msgstr "Virtuālā tastatūra: izslēgta"
 
-#: qml/main.qml:120
+#: qml/main.qml:108
 #, kde-format
 msgid "Show Virtual Keyboard"
 msgstr "Parādīt virtuālo tastatūru"
 
-#: qml/main.qml:135
+#: qml/main.qml:119
 #, kde-format
 msgid "Virtual Keyboard: visible"
 msgstr "Virtuālā tastatūra: redzama"
 
-#: qml/main.qml:149
+#: qml/main.qml:129
 #, kde-format
 msgid "Virtual Keyboard: enabled"
 msgstr "Virtuālā tastatūra: ieslēgta"

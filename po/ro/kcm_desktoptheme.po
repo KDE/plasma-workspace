@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2010, 2011, 2013, 2015, 2020, 2021, 2022, 2024.
+# SPDX-FileCopyrightText: 2008, 2009, 2010, 2011, 2013, 2015, 2020, 2021, 2022, 2024, 2025 Sergiu Bivol <sergiu@cip.md>
 # Cristian Oneț <onet.cristian@gmail.com>, 2011.
 #
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2024-02-24 18:21+0000\n"
+"PO-Revision-Date: 2025-12-12 11:17+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #. i18n: ectx: label, entry (name), group (Theme)
 #: desktopthemesettings.kcfg:9
@@ -105,29 +105,25 @@ msgid "You have the following Plasma themes on your system:"
 msgstr "Aveți următoarele tematici Plasma în sistem:"
 
 #: ui/main.qml:101
-#, fuzzy, kde-format
-#| msgid "All Themes"
+#, kde-format
 msgctxt "@item:inlistbox filters displayed themes"
 msgid "All themes"
 msgstr "Toate tematicile"
 
 #: ui/main.qml:102
-#, fuzzy, kde-format
-#| msgid "Light Themes"
+#, kde-format
 msgctxt "@item:inlistbox filters displayed themes"
 msgid "Light themes"
 msgstr "Tematici luminoase"
 
 #: ui/main.qml:103
-#, fuzzy, kde-format
-#| msgid "Dark Themes"
+#, kde-format
 msgctxt "@item:inlistbox filters displayed themes"
 msgid "Dark themes"
 msgstr "Tematici întunecate"
 
 #: ui/main.qml:104
-#, fuzzy, kde-format
-#| msgid "Color scheme compatible"
+#, kde-format
 msgctxt "@item:inlistbox filters displayed themes"
 msgid "Color scheme compatible"
 msgstr "Compatibil cu schema de culori"

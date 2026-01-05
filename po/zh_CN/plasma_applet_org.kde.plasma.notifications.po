@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-05 00:44+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -18,7 +18,7 @@ msgstr ""
 "plasma.notifications.pot\n"
 "X-Crowdin-File-ID: 43761\n"
 
-#: components/ActionContainer.qml:80
+#: components/ActionContainer.qml:81
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"
@@ -97,95 +97,95 @@ msgstr "最小化"
 msgid "Close"
 msgstr "关闭"
 
-#: components/JobDetails.qml:34
+#: components/JobDetails.qml:37
 #, kde-format
 msgctxt "Row description, e.g. Source"
 msgid "%1:"
 msgstr "%1："
 
-#: components/JobDetails.qml:109
+#: components/JobDetails.qml:116
 #, kde-format
 msgctxt "How many bytes have been copied"
 msgid "%2 of %1"
 msgstr "%1 中的 %2"
 
-#: components/JobDetails.qml:113
+#: components/JobDetails.qml:120
 #, kde-format
 msgctxt "How many files have been copied"
 msgid "%2 of %1 file"
 msgid_plural "%2 of %1 files"
 msgstr[0] "%1 个文件中的 %2 个文件"
 
-#: components/JobDetails.qml:116
+#: components/JobDetails.qml:123
 #, kde-format
 msgctxt "How many dirs have been copied"
 msgid "%2 of %1 folder"
 msgid_plural "%2 of %1 folders"
 msgstr[0] "%1 个文件夹中的 %2 个文件夹"
 
-#: components/JobDetails.qml:119
+#: components/JobDetails.qml:126
 #, kde-format
 msgctxt "How many items (that includes files and dirs) have been copied"
 msgid "%2 of %1 item"
 msgid_plural "%2 of %1 items"
 msgstr[0] "%1 项中的 %2 项"
 
-#: components/JobDetails.qml:127
+#: components/JobDetails.qml:134
 #, kde-format
 msgid "%1 file"
 msgid_plural "%1 files"
 msgstr[0] "%1 个文件"
 
-#: components/JobDetails.qml:129
+#: components/JobDetails.qml:136
 #, kde-format
 msgid "%1 folder"
 msgid_plural "%1 folders"
 msgstr[0] "%1 个文件夹"
 
-#: components/JobDetails.qml:131
+#: components/JobDetails.qml:138
 #, kde-format
 msgid "%1 item"
 msgid_plural "%1 items"
 msgstr[0] "%1 项"
 
-#: components/JobDetails.qml:148 components/SpeedChart.qml:72
-#: components/SpeedChart.qml:98 components/SpeedChart.qml:188
-#: components/SpeedChart.qml:199
+#: components/JobDetails.qml:155 components/SpeedChart.qml:72
+#: components/SpeedChart.qml:98 components/SpeedChart.qml:193
+#: components/SpeedChart.qml:204
 #, kde-format
 msgctxt "Bytes per second"
 msgid "%1/s"
 msgstr "%1/s"
 
-#: components/JobItem.qml:56
+#: components/JobItem.qml:57
 #, kde-format
 msgctxt "Hides/expands item details"
 msgid "Details"
 msgstr "详细信息"
 
-#: components/JobItem.qml:77
+#: components/JobItem.qml:78
 #, kde-format
 msgctxt "Resume paused job"
 msgid "Resume"
 msgstr "继续"
 
-#: components/JobItem.qml:78
+#: components/JobItem.qml:79
 #, kde-format
 msgctxt "Pause running job"
 msgid "Pause"
 msgstr "暂停"
 
-#: components/JobItem.qml:92
+#: components/JobItem.qml:93
 #, kde-format
 msgctxt "Cancel running job"
 msgid "Cancel"
 msgstr "取消"
 
-#: components/JobItem.qml:124 components/ThumbnailStrip.qml:158
+#: components/JobItem.qml:125 components/ThumbnailStrip.qml:159
 #, kde-format
 msgid "More Options…"
 msgstr "更多选项…"
 
-#: components/JobItem.qml:152
+#: components/JobItem.qml:153
 #, kde-format
 msgid "Open"
 msgstr "打开"
@@ -212,12 +212,12 @@ msgstr "发送"
 msgid "Speed"
 msgstr "速度"
 
-#: components/SpeedChart.qml:195
+#: components/SpeedChart.qml:200
 #, kde-format
 msgid "Average Speed"
 msgstr "平均速度"
 
-#: components/SpeedChart.qml:253
+#: components/SpeedChart.qml:258
 #, kde-format
 msgctxt "Percentage of a job"
 msgid "%1%"

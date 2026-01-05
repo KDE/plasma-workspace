@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-18 00:45+0000\n"
+"POT-Creation-Date: 2026-01-05 00:44+0000\n"
 "PO-Revision-Date: 2025-05-12 16:08+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -215,7 +215,7 @@ msgctxt "@item:inlistbox custom date format"
 msgid "Custom"
 msgstr "Personalisate"
 
-#: configAppearance.qml:254
+#: configAppearance.qml:253
 #, kde-format
 msgid ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
@@ -224,19 +224,19 @@ msgstr ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
 "\">Documentation de Formato de Tempore</a>"
 
-#: configAppearance.qml:279
+#: configAppearance.qml:278
 #, kde-format
 msgctxt "@label:group"
 msgid "Text display:"
 msgstr "Monstra texto:"
 
-#: configAppearance.qml:284
+#: configAppearance.qml:283
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatic"
 msgstr "Automatic"
 
-#: configAppearance.qml:288
+#: configAppearance.qml:287
 #, kde-format
 msgctxt "@label"
 msgid ""
@@ -245,32 +245,32 @@ msgstr ""
 "Texto sequera le font de systema e expandera a reimpler le spatio "
 "disponibile."
 
-#: configAppearance.qml:302
+#: configAppearance.qml:301
 #, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
 msgstr "Manual"
 
-#: configAppearance.qml:312
+#: configAppearance.qml:311
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
 msgstr "Selige stilo ..."
 
-#: configAppearance.qml:329
+#: configAppearance.qml:328
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
 msgstr "%1pt %2"
 
-#: configAppearance.qml:336
+#: configAppearance.qml:335
 #, kde-format
 msgctxt "@info"
 msgid "Note: size may be reduced if the panel is not thick enough."
 msgstr ""
 "Nota: grandor pote esser reducite si le pannello non es assatis spisse."
 
-#: configAppearance.qml:350
+#: configAppearance.qml:349
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
@@ -461,7 +461,7 @@ msgstr ""
 "Clicca le icone de horologio per aperir preferentias de Data & Tempore e "
 "assignar un fuso horari."
 
-#: Tooltip.qml:139
+#: Tooltip.qml:140
 #, kde-format
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"

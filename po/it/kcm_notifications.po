@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2023, 2024, 2025 Paolo Zamponi <feus73@gmail.com>
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Paolo Zamponi <feus73@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-03 00:45+0000\n"
-"PO-Revision-Date: 2025-04-30 14:51+0200\n"
+"PO-Revision-Date: 2026-01-03 18:16+0100\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.0\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #: kcm.cpp:62
 #, kde-format
@@ -90,19 +90,16 @@ msgid "Choose sound file"
 msgstr "Scegli il file audio"
 
 #: ui/main.qml:47
-#, fuzzy, kde-format
-#| msgid "Configure…"
+#, kde-format
 msgctxt "@action:button Plasma-specific notifications"
 msgid "Configure for System…"
-msgstr "Configura…"
+msgstr "Configura per il sistema…"
 
 #: ui/main.qml:53
-#, fuzzy, kde-format
-#| msgctxt "@action:button Application-specific notifications"
-#| msgid "Configure Application Settings…"
+#, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Configure for Applications…"
-msgstr "Configura le impostazioni dell'applicazione..."
+msgstr "Configura per le applicazioni..."
 
 #: ui/main.qml:96
 #, kde-format
@@ -212,7 +209,7 @@ msgstr "Vicino all'icona di notifica"
 #, kde-format
 msgctxt "@action:button choose custom notification position"
 msgid "Choose…"
-msgstr ""
+msgstr "Scegli…"
 
 #: ui/main.qml:278 ui/main.qml:294
 #, kde-format
@@ -228,11 +225,9 @@ msgid "Hide after:"
 msgstr "Nascondi dopo:"
 
 #: ui/main.qml:306
-#, fuzzy, kde-format
-#| msgctxt "Show application jobs in notification widget"
-#| msgid "Show in notifications"
+#, kde-format
 msgid "Show timeout indicator"
-msgstr "Mostra nelle notifiche"
+msgstr "Mostra indicatore di tempo residuo"
 
 #: ui/main.qml:318
 #, kde-format

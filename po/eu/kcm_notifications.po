@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-03 00:45+0000\n"
-"PO-Revision-Date: 2026-01-01 20:47+0100\n"
+"PO-Revision-Date: 2026-01-04 12:26+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -93,19 +93,16 @@ msgid "Choose sound file"
 msgstr "Hautatu soinu-fitxategia"
 
 #: ui/main.qml:47
-#, fuzzy, kde-format
-#| msgid "Configure…"
+#, kde-format
 msgctxt "@action:button Plasma-specific notifications"
 msgid "Configure for System…"
-msgstr "Konfiguratu..."
+msgstr "Konfiguratu sistemarako…"
 
 #: ui/main.qml:53
-#, fuzzy, kde-format
-#| msgctxt "@action:button Application-specific notifications"
-#| msgid "Configure Application Settings…"
+#, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Configure for Applications…"
-msgstr "Konfiguratu aplikazio-ezarpenak..."
+msgstr "Konfiguratu aplikazioetarako…"
 
 #: ui/main.qml:96
 #, kde-format
@@ -217,7 +214,7 @@ msgstr "Jakinarazpen ikonotik hurbil"
 #, kde-format
 msgctxt "@action:button choose custom notification position"
 msgid "Choose…"
-msgstr ""
+msgstr "Hautatu…"
 
 #: ui/main.qml:278 ui/main.qml:294
 #, kde-format

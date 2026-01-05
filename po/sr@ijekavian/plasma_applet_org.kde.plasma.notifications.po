@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-05 00:44+0000\n"
 "PO-Revision-Date: 2017-12-31 22:42+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-#: components/ActionContainer.qml:80
+#: components/ActionContainer.qml:81
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"
@@ -121,7 +121,7 @@ msgstr ""
 msgid "Close"
 msgstr ""
 
-#: components/JobDetails.qml:34
+#: components/JobDetails.qml:37
 #, fuzzy, kde-format
 #| msgctxt "placeholder is row description, such as Source or Destination"
 #| msgid "%1:"
@@ -129,7 +129,7 @@ msgctxt "Row description, e.g. Source"
 msgid "%1:"
 msgstr "%1:"
 
-#: components/JobDetails.qml:109
+#: components/JobDetails.qml:116
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "How much many bytes (or whether unit in the locale has been copied over "
@@ -139,7 +139,7 @@ msgctxt "How many bytes have been copied"
 msgid "%2 of %1"
 msgstr "%1 од %2"
 
-#: components/JobDetails.qml:113
+#: components/JobDetails.qml:120
 #, fuzzy, kde-format
 #| msgctxt "Either just 1 file or m of n files are being processed"
 #| msgid "1 file"
@@ -152,7 +152,7 @@ msgstr[1] "%2 од %1 фајла"
 msgstr[2] "%2 од %1 фајлова"
 msgstr[3] "%1 фајл"
 
-#: components/JobDetails.qml:116
+#: components/JobDetails.qml:123
 #, kde-format
 msgctxt "How many dirs have been copied"
 msgid "%2 of %1 folder"
@@ -162,7 +162,7 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#: components/JobDetails.qml:119
+#: components/JobDetails.qml:126
 #, fuzzy, kde-format
 #| msgctxt "Either just 1 file or m of n files are being processed"
 #| msgid "1 file"
@@ -175,7 +175,7 @@ msgstr[1] "%2 од %1 фајла"
 msgstr[2] "%2 од %1 фајлова"
 msgstr[3] "%1 фајл"
 
-#: components/JobDetails.qml:127
+#: components/JobDetails.qml:134
 #, fuzzy, kde-format
 #| msgctxt "Either just 1 file or m of n files are being processed"
 #| msgid "1 file"
@@ -187,7 +187,7 @@ msgstr[1] "%2 од %1 фајла"
 msgstr[2] "%2 од %1 фајлова"
 msgstr[3] "%1 фајл"
 
-#: components/JobDetails.qml:129
+#: components/JobDetails.qml:136
 #, kde-format
 msgid "%1 folder"
 msgid_plural "%1 folders"
@@ -196,7 +196,7 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#: components/JobDetails.qml:131
+#: components/JobDetails.qml:138
 #, kde-format
 msgid "%1 item"
 msgid_plural "%1 items"
@@ -205,15 +205,15 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#: components/JobDetails.qml:148 components/SpeedChart.qml:72
-#: components/SpeedChart.qml:98 components/SpeedChart.qml:188
-#: components/SpeedChart.qml:199
+#: components/JobDetails.qml:155 components/SpeedChart.qml:72
+#: components/SpeedChart.qml:98 components/SpeedChart.qml:193
+#: components/SpeedChart.qml:204
 #, kde-format
 msgctxt "Bytes per second"
 msgid "%1/s"
 msgstr ""
 
-#: components/JobItem.qml:56
+#: components/JobItem.qml:57
 #, fuzzy, kde-format
 #| msgctxt "A button tooltip; hides item details"
 #| msgid "Hide Details"
@@ -221,13 +221,13 @@ msgctxt "Hides/expands item details"
 msgid "Details"
 msgstr "Сакриј детаље"
 
-#: components/JobItem.qml:77
+#: components/JobItem.qml:78
 #, kde-format
 msgctxt "Resume paused job"
 msgid "Resume"
 msgstr ""
 
-#: components/JobItem.qml:78
+#: components/JobItem.qml:79
 #, fuzzy, kde-format
 #| msgctxt "Placeholder is job name, eg. 'Copying'"
 #| msgid "%1 (Paused)"
@@ -235,19 +235,19 @@ msgctxt "Pause running job"
 msgid "Pause"
 msgstr "%1 (паузирано)"
 
-#: components/JobItem.qml:92
+#: components/JobItem.qml:93
 #, kde-format
 msgctxt "Cancel running job"
 msgid "Cancel"
 msgstr ""
 
-#: components/JobItem.qml:124 components/ThumbnailStrip.qml:158
+#: components/JobItem.qml:125 components/ThumbnailStrip.qml:159
 #, fuzzy, kde-format
 #| msgid "More Options..."
 msgid "More Options…"
 msgstr "Више опција..."
 
-#: components/JobItem.qml:152
+#: components/JobItem.qml:153
 #, fuzzy, kde-format
 #| msgid "Open..."
 msgid "Open"
@@ -275,12 +275,12 @@ msgstr ""
 msgid "Speed"
 msgstr ""
 
-#: components/SpeedChart.qml:195
+#: components/SpeedChart.qml:200
 #, kde-format
 msgid "Average Speed"
 msgstr ""
 
-#: components/SpeedChart.qml:253
+#: components/SpeedChart.qml:258
 #, fuzzy, kde-format
 #| msgctxt "placeholder is row description, such as Source or Destination"
 #| msgid "%1:"

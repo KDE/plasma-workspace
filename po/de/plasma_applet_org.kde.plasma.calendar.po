@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-05 00:44+0000\n"
+"POT-Creation-Date: 2026-01-05 00:44+0000\n"
 "PO-Revision-Date: 2019-05-22 07:38+0200\n"
 "Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -19,29 +19,29 @@ msgstr ""
 msgid "General"
 msgstr "Allgemein"
 
-#: qml/configGeneral.qml:20
+#: qml/configGeneral.qml:21
 #, kde-format
 msgid "Calendar version:"
 msgstr "Kalenderversion:"
 
-#: qml/configGeneral.qml:22
+#: qml/configGeneral.qml:23
 #, kde-format
 msgid "Show week numbers"
 msgstr "Kalenderwoche anzeigen"
 
-#: qml/configGeneral.qml:31
+#: qml/configGeneral.qml:32
 #, kde-format
 msgctxt "What information is shown in the calendar icon"
 msgid "Compact version:"
 msgstr "Kompakte Version:"
 
-#: qml/configGeneral.qml:33
+#: qml/configGeneral.qml:34
 #, kde-format
 msgctxt "Show the number of the day (eg. 31) in the icon"
 msgid "Show day of the month"
 msgstr "Monatstag anzeigen"
 
-#: qml/configGeneral.qml:39
+#: qml/configGeneral.qml:40
 #, kde-format
 msgctxt "Show the week number (eg. 50) in the icon"
 msgid "Show week number"

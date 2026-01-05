@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.systemtray\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-05 00:44+0000\n"
+"POT-Creation-Date: 2026-01-05 00:44+0000\n"
 "PO-Revision-Date: 2025-12-04 18:08+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -194,50 +194,50 @@ msgctxt "@option:check, This is referring to system tray entries"
 msgid "Always show all"
 msgstr "Mostra sempre tutto"
 
-#: qml/ExpandedRepresentation.qml:59
+#: qml/ExpandedRepresentation.qml:60
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
 msgstr "Vai indietro"
 
-#: qml/ExpandedRepresentation.qml:71
+#: qml/ExpandedRepresentation.qml:72
 #, kde-format
 msgid "Status and Notifications"
 msgstr "Stato e notifiche"
 
-#: qml/ExpandedRepresentation.qml:140
+#: qml/ExpandedRepresentation.qml:144
 #, kde-format
 msgid "More actions"
 msgstr "Altre azioni"
 
-#: qml/ExpandedRepresentation.qml:240
+#: qml/ExpandedRepresentation.qml:245
 #, kde-format
 msgid "Keep Open"
 msgstr "Mantieni aperta"
 
-#: qml/ExpanderArrow.qml:26
+#: qml/ExpanderArrow.qml:25
 #, kde-format
 msgid "Show all the items in the system tray in a popup"
 msgstr ""
 "Mostra tutti gli elementi nel vassoio di sistema in una finestra a comparsa"
 
-#: qml/ExpanderArrow.qml:40
+#: qml/ExpanderArrow.qml:39
 #, kde-format
 msgid "Close popup"
 msgstr "Chiudi la finestra a comparsa"
 
-#: qml/ExpanderArrow.qml:40
+#: qml/ExpanderArrow.qml:39
 #, kde-format
 msgid "Show hidden icons"
 msgstr "Mostra le icone nascoste"
 
-#: qml/HiddenItemsView.qml:40
+#: qml/HiddenItemsView.qml:37
 #, kde-format
 msgctxt "@info:whatsthis accessible description for popup grid"
 msgid "Grid with %1 items in %2 columns"
 msgstr "Griglia con %1 elementi in %2 colonne"
 
-#: qml/HiddenItemsView.qml:44
+#: qml/HiddenItemsView.qml:41
 #, kde-format
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"

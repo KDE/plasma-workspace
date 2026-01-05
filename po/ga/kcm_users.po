@@ -1,0 +1,682 @@
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# SPDX-FileCopyrightText: 2026 Charlotte <altronic25@protonmail.com>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-12-03 00:46+0000\n"
+"PO-Revision-Date: 2026-01-04 02:42+0000\n"
+"Last-Translator: Charlotte <altronic25@protonmail.com>\n"
+"Language-Team: Irish\n"
+"Language: ga\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
+"3 : 4\n"
+"X-Generator: Lokalize 25.12.0\n"
+
+#: src/fingerprintmodel.cpp:144 src/fingerprintmodel.cpp:228
+#, kde-format
+msgid "No fingerprint device found."
+msgstr ""
+
+#: src/fingerprintmodel.cpp:301
+#, kde-format
+msgid "Retry scanning your finger."
+msgstr ""
+
+#: src/fingerprintmodel.cpp:303
+#, kde-format
+msgid "Swipe too short. Try again."
+msgstr ""
+
+#: src/fingerprintmodel.cpp:305
+#, kde-format
+msgid "Finger not centered on the reader. Try again."
+msgstr ""
+
+#: src/fingerprintmodel.cpp:307
+#, kde-format
+msgid "Remove your finger from the reader, and try again."
+msgstr ""
+
+#: src/fingerprintmodel.cpp:315
+#, kde-format
+msgid "Fingerprint enrollment has failed."
+msgstr ""
+
+#: src/fingerprintmodel.cpp:318
+#, kde-format
+msgid ""
+"There is no space left for this device, delete other fingerprints to "
+"continue."
+msgstr ""
+
+#: src/fingerprintmodel.cpp:321
+#, kde-format
+msgid "The device was disconnected."
+msgstr ""
+
+#: src/fingerprintmodel.cpp:326
+#, kde-format
+msgid "An unknown error has occurred."
+msgstr ""
+
+#: src/ui/ChangePassword.qml:29 src/ui/UserDetailsPage.qml:228
+#, kde-format
+msgid "Change Password"
+msgstr "Athraigh Focail Faire"
+
+#: src/ui/ChangePassword.qml:35
+#, kde-format
+msgid "Set Password"
+msgstr "Cuir Focal Faire"
+
+#: src/ui/ChangePassword.qml:56
+#, kde-format
+msgid "Password"
+msgstr "Focal Faire"
+
+#: src/ui/ChangePassword.qml:71
+#, kde-format
+msgid "Confirm password"
+msgstr ""
+
+#: src/ui/ChangePassword.qml:90 src/ui/CreateUser.qml:73
+#, kde-format
+msgid "Passwords must match"
+msgstr ""
+
+#: src/ui/ChangeWalletPassword.qml:18
+#, kde-format
+msgid "Change Wallet Password?"
+msgstr "An bhfuil Tú Athraigh an Focal Faire Tiachóige?"
+
+#: src/ui/ChangeWalletPassword.qml:29
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Now that you have changed your login password, consider changing the "
+"password on your default KWallet to match it."
+msgstr ""
+
+#: src/ui/ChangeWalletPassword.qml:35
+#, kde-format
+msgid "What is KWallet?"
+msgstr "Cad é an KWallet?"
+
+#: src/ui/ChangeWalletPassword.qml:45
+#, kde-format
+msgid ""
+"KWallet is a password manager that stores your passwords for wireless "
+"networks and other encrypted resources. It is locked with its own password "
+"which differs from your login password. If the two passwords match, it can "
+"be unlocked at login automatically so you don't have to enter the KWallet "
+"password yourself."
+msgstr "Tá KWallet bainisteoir focal faire go do focal faire a "
+
+#: src/ui/ChangeWalletPassword.qml:60
+#, kde-format
+msgid "Change Wallet Password"
+msgstr "Athraigh an Focal Faire Tiachóige"
+
+#: src/ui/ChangeWalletPassword.qml:69
+#, kde-format
+msgid "Leave Unchanged"
+msgstr ""
+
+#: src/ui/CreateUser.qml:15
+#, kde-format
+msgid "Create User"
+msgstr "Cruthaigh Úsáideoir"
+
+#: src/ui/CreateUser.qml:38 src/ui/UserDetailsPage.qml:165
+#, kde-format
+msgid "Name:"
+msgstr "Ainm:"
+
+#: src/ui/CreateUser.qml:42 src/ui/UserDetailsPage.qml:171
+#, kde-format
+msgid "Username:"
+msgstr "Ainm Úsáideora:"
+
+#: src/ui/CreateUser.qml:52 src/ui/UserDetailsPage.qml:203
+#, kde-format
+msgid "Standard"
+msgstr ""
+
+#: src/ui/CreateUser.qml:53 src/ui/UserDetailsPage.qml:204
+#, kde-format
+msgid "Administrator"
+msgstr ""
+
+#: src/ui/CreateUser.qml:56 src/ui/UserDetailsPage.qml:193
+#, kde-format
+msgid "Account type:"
+msgstr "Cineál Cuntais:"
+
+#: src/ui/CreateUser.qml:61
+#, kde-format
+msgid "Password:"
+msgstr "Focal Faire:"
+
+#: src/ui/CreateUser.qml:66
+#, kde-format
+msgid "Confirm password:"
+msgstr ""
+
+#: src/ui/CreateUser.qml:88
+#, kde-format
+msgctxt "@action:button Create a new user"
+msgid "Create"
+msgstr "Cruthaigh"
+
+#: src/ui/CreateUser.qml:109
+#, kde-format
+msgctxt "@action:button Cancel creating new user"
+msgid "Cancel"
+msgstr "Cealaigh"
+
+#: src/ui/CropSheet.qml:28
+#, kde-format
+msgctxt "@title:window"
+msgid "Select Picture Area"
+msgstr ""
+
+#: src/ui/EnrolledConfirmation.qml:20
+#, kde-format
+msgctxt "@info:status"
+msgid "Finger enrolled"
+msgstr ""
+
+#: src/ui/EnrollFeedback.qml:28
+#, kde-format
+msgid ""
+"Please repeatedly press your right index finger on the fingerprint sensor."
+msgstr ""
+
+#: src/ui/EnrollFeedback.qml:30
+#, kde-format
+msgid ""
+"Please repeatedly press your right middle finger on the fingerprint sensor."
+msgstr ""
+
+#: src/ui/EnrollFeedback.qml:32
+#, kde-format
+msgid ""
+"Please repeatedly press your right ring finger on the fingerprint sensor."
+msgstr ""
+
+#: src/ui/EnrollFeedback.qml:34
+#, kde-format
+msgid ""
+"Please repeatedly press your right little finger on the fingerprint sensor."
+msgstr ""
+
+#: src/ui/EnrollFeedback.qml:36
+#, kde-format
+msgid "Please repeatedly press your right thumb on the fingerprint sensor."
+msgstr ""
+
+#: src/ui/EnrollFeedback.qml:38
+#, kde-format
+msgid ""
+"Please repeatedly press your left index finger on the fingerprint sensor."
+msgstr ""
+
+#: src/ui/EnrollFeedback.qml:40
+#, kde-format
+msgid ""
+"Please repeatedly press your left middle finger on the fingerprint sensor."
+msgstr ""
+
+#: src/ui/EnrollFeedback.qml:42
+#, kde-format
+msgid ""
+"Please repeatedly press your left ring finger on the fingerprint sensor."
+msgstr ""
+
+#: src/ui/EnrollFeedback.qml:44
+#, kde-format
+msgid ""
+"Please repeatedly press your left little finger on the fingerprint sensor."
+msgstr ""
+
+#: src/ui/EnrollFeedback.qml:46
+#, kde-format
+msgid "Please repeatedly press your left thumb on the fingerprint sensor."
+msgstr ""
+
+#: src/ui/EnrollFeedback.qml:50
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right index finger on the fingerprint sensor."
+msgstr ""
+
+#: src/ui/EnrollFeedback.qml:52
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right middle finger on the fingerprint sensor."
+msgstr ""
+
+#: src/ui/EnrollFeedback.qml:54
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right ring finger on the fingerprint sensor."
+msgstr ""
+
+#: src/ui/EnrollFeedback.qml:56
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right little finger on the fingerprint sensor."
+msgstr ""
+
+#: src/ui/EnrollFeedback.qml:58
+#, kde-format
+msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
+msgstr ""
+
+#: src/ui/EnrollFeedback.qml:60
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left index finger on the fingerprint sensor."
+msgstr ""
+
+#: src/ui/EnrollFeedback.qml:62
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left middle finger on the fingerprint sensor."
+msgstr ""
+
+#: src/ui/EnrollFeedback.qml:64
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left ring finger on the fingerprint sensor."
+msgstr ""
+
+#: src/ui/EnrollFeedback.qml:66
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left little finger on the fingerprint sensor."
+msgstr ""
+
+#: src/ui/EnrollFeedback.qml:68
+#, kde-format
+msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
+msgstr ""
+
+#: src/ui/FingerprintDialog.qml:28
+#, kde-format
+msgid "Configure Fingerprints"
+msgstr ""
+
+#: src/ui/FingerprintDialog.qml:38
+#, kde-format
+msgid "Add"
+msgstr "Cuir Leis"
+
+#: src/ui/FingerprintDialog.qml:50
+#, kde-format
+msgid "Cancel"
+msgstr "Cealaigh"
+
+#: src/ui/FingerprintDialog.qml:58
+#, kde-format
+msgid "Done"
+msgstr "Críochnaithe"
+
+#: src/ui/FingerprintList.qml:46
+#, kde-format
+msgid "Re-enroll finger"
+msgstr ""
+
+#: src/ui/FingerprintList.qml:58
+#, kde-format
+msgid "Delete fingerprint"
+msgstr "Scrios méarlorg"
+
+#: src/ui/FingerprintList.qml:74
+#, kde-format
+msgid "No fingerprints added"
+msgstr ""
+
+#: src/ui/main.qml:20
+#, kde-format
+msgid "Users"
+msgstr "Úsáideoirí"
+
+#: src/ui/main.qml:31
+#, kde-format
+msgctxt "@action:button As in, 'add new user'"
+msgid "Add New…"
+msgstr "Cuir Nua Leis..."
+
+#: src/ui/main.qml:32
+#, kde-format
+msgctxt "@action:button"
+msgid "Add New User…"
+msgstr "Cuir Úsáideoir Nua Leis..."
+
+#: src/ui/main.qml:137
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Press Space to edit the user profile"
+msgstr ""
+
+#: src/ui/PickFinger.qml:28
+#, kde-format
+msgid "Pick a finger to enroll"
+msgstr ""
+
+#: src/ui/PicturesSheet.qml:18
+#, kde-format
+msgctxt "@title"
+msgid "Change Avatar"
+msgstr ""
+
+#: src/ui/PicturesSheet.qml:28
+#, kde-format
+msgctxt "@item:intable"
+msgid "It's Nothing"
+msgstr ""
+
+#: src/ui/PicturesSheet.qml:29
+#, kde-format
+msgctxt "@item:intable"
+msgid "Feisty Flamingo"
+msgstr ""
+
+#: src/ui/PicturesSheet.qml:30
+#, kde-format
+msgctxt "@item:intable"
+msgid "Dragon's Fruit"
+msgstr ""
+
+#: src/ui/PicturesSheet.qml:31
+#, kde-format
+msgctxt "@item:intable"
+msgid "Sweet Potato"
+msgstr ""
+
+#: src/ui/PicturesSheet.qml:32
+#, kde-format
+msgctxt "@item:intable"
+msgid "Ambient Amber"
+msgstr ""
+
+#: src/ui/PicturesSheet.qml:33
+#, kde-format
+msgctxt "@item:intable"
+msgid "Sparkle Sunbeam"
+msgstr ""
+
+#: src/ui/PicturesSheet.qml:34
+#, kde-format
+msgctxt "@item:intable"
+msgid "Lemon-Lime"
+msgstr ""
+
+#: src/ui/PicturesSheet.qml:35
+#, kde-format
+msgctxt "@item:intable"
+msgid "Verdant Charm"
+msgstr ""
+
+#: src/ui/PicturesSheet.qml:36
+#, kde-format
+msgctxt "@item:intable"
+msgid "Mellow Meadow"
+msgstr ""
+
+#: src/ui/PicturesSheet.qml:37
+#, kde-format
+msgctxt "@item:intable"
+msgid "Tepid Teal"
+msgstr ""
+
+#: src/ui/PicturesSheet.qml:38
+#, kde-format
+msgctxt "@item:intable"
+msgid "Plasma Blue"
+msgstr ""
+
+#: src/ui/PicturesSheet.qml:39
+#, kde-format
+msgctxt "@item:intable"
+msgid "Pon Purple"
+msgstr ""
+
+#: src/ui/PicturesSheet.qml:40
+#, kde-format
+msgctxt "@item:intable"
+msgid "Bajo Purple"
+msgstr ""
+
+#: src/ui/PicturesSheet.qml:41
+#, kde-format
+msgctxt "@item:intable"
+msgid "Burnt Charcoal"
+msgstr ""
+
+#: src/ui/PicturesSheet.qml:42
+#, kde-format
+msgctxt "@item:intable"
+msgid "Paper Perfection"
+msgstr ""
+
+#: src/ui/PicturesSheet.qml:43
+#, kde-format
+msgctxt "@item:intable"
+msgid "Cafétera Brown"
+msgstr ""
+
+#: src/ui/PicturesSheet.qml:44
+#, kde-format
+msgctxt "@item:intable"
+msgid "Rich Hardwood"
+msgstr ""
+
+#: src/ui/PicturesSheet.qml:63
+#, kde-format
+msgctxt "@action:button"
+msgid "Go Back"
+msgstr "Ar Ais"
+
+#: src/ui/PicturesSheet.qml:81
+#, kde-format
+msgctxt "@action:button"
+msgid "Initials"
+msgstr "Túslitreacha"
+
+#: src/ui/PicturesSheet.qml:135
+#, kde-format
+msgctxt "@action:button"
+msgid "Choose File…"
+msgstr "Roghnaigh Comhad..."
+
+#: src/ui/PicturesSheet.qml:140
+#, kde-format
+msgctxt "@title"
+msgid "Choose a picture"
+msgstr "Roghnaigh pictiúr"
+
+#: src/ui/PicturesSheet.qml:144
+#, kde-format
+msgctxt ""
+"@option file type (mime type) for avif, bmp, gif, jp2, jpeg, jpg, pbm, pgm, "
+"png, ppm, tiff, wbmp, webp, xbm, xpm image file formats; do not translate *."
+"avif, *.bmp, *.gif, *.jp2, *.jpeg, *.jpg, *.pbm, *.pgm, *.png, *.ppm, *."
+"tiff, *.wbmp, *.webp, *.xbm, *.xpm"
+msgid ""
+"Image files (All major file types) (*.avif *.bmp *.gif *.jp2 *.jpeg *.jpg *."
+"pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
+msgstr ""
+"Comhaid Íomhá (Gach mór cineál comhaid) (*.avif *.bmp *.gif *.jp2 *.jpeg *."
+"jpg *.pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
+
+#: src/ui/PicturesSheet.qml:201
+#, kde-format
+msgctxt "@action:button"
+msgid "Placeholder Icon"
+msgstr ""
+
+#: src/ui/PicturesSheet.qml:290
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "User avatar placeholder icon"
+msgstr ""
+
+#: src/ui/UserDetailsPage.qml:114
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Logged-In User Without Deleting Files?"
+msgstr ""
+
+#: src/ui/UserDetailsPage.qml:115
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Logged-In User?"
+msgstr "Úsáideoir ag Logáilte Isteach a Scriosadh?"
+
+#: src/ui/UserDetailsPage.qml:117
+#, kde-kuit-format
+msgctxt "@info:usagetip"
+msgid ""
+"%1 is currently logged in, so their files cannot be deleted. Delete just the "
+"account instead?<nl/><nl/>This will make %1 unable to log in again, and they "
+"may experience strange behaviors until they log out."
+msgstr ""
+"Tá %1 ag logáilte isteach faoi láthair, go ní féidir a gcomhaid a scriosadh. "
+"Scrios amháin an cuntas ina ionad sin?<nl/><nl/>Ní bheidh %1 in ann logáil "
+"isteach arís, agus d'fhéadfadh iompraíochtaí aisteacha a bheidh acu go dtí "
+"go logálfaidh siad amach."
+
+#: src/ui/UserDetailsPage.qml:118
+#, kde-format
+msgctxt "@info:usagetip"
+msgid ""
+"%1 is currently logged in. Deleting the account will make them unable to log "
+"in again, and they may experience strange behaviors until they log out."
+msgstr ""
+"Tá %1 ag logáilte isteach faoi láthair. Má scriostar an cuntas ní bheidh "
+"siad in ann logáil isteach arís, agus d'fhéadfadh iompraíochtaí aisteacha a "
+"bheidh acu go dtí go logálfaidh siad amach."
+
+#: src/ui/UserDetailsPage.qml:125
+#, kde-format
+msgctxt "@action: button"
+msgid "Delete %1"
+msgstr "Scrios %1"
+
+#: src/ui/UserDetailsPage.qml:144
+#, kde-format
+msgid "Change avatar"
+msgstr ""
+
+#: src/ui/UserDetailsPage.qml:185
+#, kde-format
+msgctxt "@label:tooltip"
+msgid ""
+"Cannot change your own username while logged in; log out and then log in as "
+"another user to change this account’s username."
+msgstr ""
+
+#: src/ui/UserDetailsPage.qml:186
+#, kde-format
+msgctxt "@label:tooltip"
+msgid ""
+"Cannot change the username of a logged-in user; wait until this user logs "
+"out first."
+msgstr ""
+
+#: src/ui/UserDetailsPage.qml:214
+#, kde-format
+msgid ""
+"Cannot change the account type to Standard unless there is at least one "
+"other Administrator account on the system. Without one, authentication would "
+"become impossible or require the insecure use of the root password."
+msgstr ""
+
+#: src/ui/UserDetailsPage.qml:222
+#, kde-format
+msgid "Email address:"
+msgstr "Seoladh Ríomhphoist:"
+
+#: src/ui/UserDetailsPage.qml:254
+#, kde-format
+msgid "Delete files"
+msgstr "Scrios comhaid"
+
+#: src/ui/UserDetailsPage.qml:261
+#, kde-format
+msgid "Keep files"
+msgstr ""
+
+#: src/ui/UserDetailsPage.qml:268
+#, kde-format
+msgid "Delete User…"
+msgstr "Scrios Úsáideoir..."
+
+#: src/ui/UserDetailsPage.qml:274
+#, kde-format
+msgctxt "@label:tooltip"
+msgid ""
+"Cannot delete yourself! Log out and then log in as another user to delete "
+"this user account."
+msgstr ""
+"Ní féidir tú féin a scriosadh! Logáil amach agus logáil isteach mar "
+"úsáideoir eile chun an cuntas seo a scriosadh."
+
+#: src/ui/UserDetailsPage.qml:286
+#, kde-format
+msgid "Configure Fingerprint Authentication…"
+msgstr ""
+
+#: src/ui/UserDetailsPage.qml:318
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Fingerprints can be used in place of a password when unlocking the screen "
+"and providing administrator permissions to applications and command-line "
+"programs that request them.<nl/><nl/>Logging into the system with your "
+"fingerprint is not yet supported."
+msgstr ""
+
+#: src/user.cpp:141
+#, kde-format
+msgctxt "@info"
+msgid "Failed to crop image: %1"
+msgstr ""
+
+#: src/user.cpp:337
+#, kde-format
+msgid "Could not get permission to save user %1"
+msgstr ""
+
+#: src/user.cpp:342
+#, kde-format
+msgid "There was an error while saving changes"
+msgstr ""
+
+#: src/user.cpp:474
+#, kde-format
+msgid "Failed to resize image: opening temp file failed"
+msgstr ""
+
+#: src/user.cpp:482
+#, kde-format
+msgid "Failed to resize image: writing to temp file failed"
+msgstr ""
+
+#: src/usermodel.cpp:170
+#, kde-format
+msgid "Your Account"
+msgstr "Do Cuntas"
+
+#: src/usermodel.cpp:170
+#, kde-format
+msgid "Other Accounts"
+msgstr "Cuntais Eile"

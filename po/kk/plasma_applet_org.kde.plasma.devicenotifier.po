@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-02 00:46+0000\n"
+"POT-Creation-Date: 2026-01-05 00:44+0000\n"
 "PO-Revision-Date: 2013-01-02 05:14+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -186,7 +186,7 @@ msgstr "%1 құрылғысы тіркелмеді."
 msgid "Could not repair this device: %1"
 msgstr "%1 құрылғысы тіркелмеді."
 
-#: qml/DeviceItem.qml:106
+#: qml/DeviceItem.qml:99
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Removing is a less technical word for Unmounting; translation shoud be "
@@ -198,7 +198,7 @@ msgctxt ""
 msgid "Checking…"
 msgstr "Алып шығару..."
 
-#: qml/DeviceItem.qml:108
+#: qml/DeviceItem.qml:101
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Removing is a less technical word for Unmounting; translation shoud be "
@@ -210,7 +210,7 @@ msgctxt ""
 msgid "Repairing…"
 msgstr "Алып шығару..."
 
-#: qml/DeviceItem.qml:111
+#: qml/DeviceItem.qml:104
 #, fuzzy, kde-format
 #| msgctxt "@info:status Free disk space"
 #| msgid "%1 free"
@@ -218,7 +218,7 @@ msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "%1 бос"
 
-#: qml/DeviceItem.qml:115
+#: qml/DeviceItem.qml:108
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Accessing is a less technical word for Mounting; translation should be "
@@ -230,7 +230,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr "Қатынау..."
 
-#: qml/DeviceItem.qml:118
+#: qml/DeviceItem.qml:111
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Removing is a less technical word for Unmounting; translation shoud be "
@@ -242,71 +242,71 @@ msgctxt ""
 msgid "Removing…"
 msgstr "Алып шығару..."
 
-#: qml/DeviceItem.qml:121
+#: qml/DeviceItem.qml:114
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr ""
 
-#: qml/FullRepresentation.qml:45 qml/main.qml:121
+#: qml/FullRepresentation.qml:47 qml/main.qml:123
 #, kde-format
 msgid "Remove All"
 msgstr ""
 
-#: qml/FullRepresentation.qml:46
+#: qml/FullRepresentation.qml:48
 #, fuzzy, kde-format
 #| msgid "Click to safely remove this device."
 msgid "Click to safely remove all devices"
 msgstr "Құрылғысын қауіпсіз алу үшін түртіңіз."
 
-#: qml/FullRepresentation.qml:153
+#: qml/FullRepresentation.qml:162
 #, fuzzy, kde-format
 #| msgid "Non-removable devices only"
 msgid "No removable devices attached"
 msgstr "Ауыстырмалы емес құрылғыларын ғана"
 
-#: qml/FullRepresentation.qml:153
+#: qml/FullRepresentation.qml:162
 #, fuzzy, kde-format
 #| msgid "No devices available"
 msgid "No disks available"
 msgstr "Қосылған құрылғы жоқ"
 
-#: qml/main.qml:71
+#: qml/main.qml:72
 #, fuzzy, kde-format
 #| msgid "Most recent device"
 msgid "Most Recent Device"
 msgstr "Соңғы қосылған құрылғы"
 
-#: qml/main.qml:71
+#: qml/main.qml:72
 #, kde-format
 msgid "No Devices Available"
 msgstr "Қосылған құрылғылар жоқ"
 
-#: qml/main.qml:107
+#: qml/main.qml:109
 #, fuzzy, kde-format
 #| msgid "Non-removable devices only"
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Ауыстырмалы емес құрылғыларын ғана"
 
-#: qml/main.qml:129
+#: qml/main.qml:131
 #, fuzzy, kde-format
 #| msgid "Removable devices only"
 msgid "Removable Devices"
 msgstr "Ауыстырмалы құрылғыларын ғана"
 
-#: qml/main.qml:144
+#: qml/main.qml:146
 #, fuzzy, kde-format
 #| msgid "Non-removable devices only"
 msgid "Non Removable Devices"
 msgstr "Ауыстырмалы емес құрылғыларын ғана"
 
-#: qml/main.qml:159
+#: qml/main.qml:161
 #, fuzzy, kde-format
 #| msgid "All devices"
 msgid "All Devices"
 msgstr "Барлық құрылғыларын"
 
-#: qml/main.qml:176
+#: qml/main.qml:178
 #, fuzzy, kde-format
 #| msgid "No devices plugged in"
 msgid "Show popup when new device is plugged in"

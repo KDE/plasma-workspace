@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-05 00:44+0000\n"
+"POT-Creation-Date: 2026-01-05 00:44+0000\n"
 "PO-Revision-Date: 2019-05-11 14:53+0800\n"
 "Last-Translator: pan93412 <pan93412@gmail.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
@@ -24,29 +24,29 @@ msgstr ""
 msgid "General"
 msgstr "一般"
 
-#: qml/configGeneral.qml:20
+#: qml/configGeneral.qml:21
 #, kde-format
 msgid "Calendar version:"
 msgstr "行事曆版本："
 
-#: qml/configGeneral.qml:22
+#: qml/configGeneral.qml:23
 #, kde-format
 msgid "Show week numbers"
 msgstr "顯示週數"
 
-#: qml/configGeneral.qml:31
+#: qml/configGeneral.qml:32
 #, kde-format
 msgctxt "What information is shown in the calendar icon"
 msgid "Compact version:"
 msgstr "Compact 版本："
 
-#: qml/configGeneral.qml:33
+#: qml/configGeneral.qml:34
 #, kde-format
 msgctxt "Show the number of the day (eg. 31) in the icon"
 msgid "Show day of the month"
 msgstr "顯示月天數"
 
-#: qml/configGeneral.qml:39
+#: qml/configGeneral.qml:40
 #, kde-format
 msgctxt "Show the week number (eg. 50) in the icon"
 msgid "Show week number"

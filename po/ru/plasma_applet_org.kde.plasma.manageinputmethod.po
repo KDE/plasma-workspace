@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-06 00:44+0000\n"
+"POT-Creation-Date: 2026-01-05 00:44+0000\n"
 "PO-Revision-Date: 2022-09-24 14:14+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -24,27 +24,27 @@ msgctxt "Opens the system settings module"
 msgid "Configure Virtual Keyboards..."
 msgstr "Настроить экранные клавиатуры…"
 
-#: qml/main.qml:91
+#: qml/main.qml:87
 #, kde-format
 msgid "Virtual Keyboard: unavailable"
 msgstr "Экранная клавиатура недоступна"
 
-#: qml/main.qml:104
+#: qml/main.qml:96
 #, kde-format
 msgid "Virtual Keyboard: disabled"
 msgstr "Экранная клавиатура отключена"
 
-#: qml/main.qml:120
+#: qml/main.qml:108
 #, kde-format
 msgid "Show Virtual Keyboard"
 msgstr "Показать виртуальную клавиатуру"
 
-#: qml/main.qml:135
+#: qml/main.qml:119
 #, kde-format
 msgid "Virtual Keyboard: visible"
 msgstr "Экранная клавиатура видима"
 
-#: qml/main.qml:149
+#: qml/main.qml:129
 #, kde-format
 msgid "Virtual Keyboard: enabled"
 msgstr "Экранная клавиатура включена"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-05 00:44+0000\n"
+"POT-Creation-Date: 2026-01-05 00:44+0000\n"
 "PO-Revision-Date: 2025-12-19 10:05+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -192,49 +192,49 @@ msgctxt "@option:check, This is referring to system tray entries"
 msgid "Always show all"
 msgstr "Alltaf birta allt"
 
-#: qml/ExpandedRepresentation.qml:59
+#: qml/ExpandedRepresentation.qml:60
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
 msgstr "Fara til baka"
 
-#: qml/ExpandedRepresentation.qml:71
+#: qml/ExpandedRepresentation.qml:72
 #, kde-format
 msgid "Status and Notifications"
 msgstr "Staða og tilkynningar"
 
-#: qml/ExpandedRepresentation.qml:140
+#: qml/ExpandedRepresentation.qml:144
 #, kde-format
 msgid "More actions"
 msgstr "Fleiri aðgerðir"
 
-#: qml/ExpandedRepresentation.qml:240
+#: qml/ExpandedRepresentation.qml:245
 #, kde-format
 msgid "Keep Open"
 msgstr "Halda opnu"
 
-#: qml/ExpanderArrow.qml:26
+#: qml/ExpanderArrow.qml:25
 #, kde-format
 msgid "Show all the items in the system tray in a popup"
 msgstr "Sýna öll atriði úr kerfisbakka í sprettiglugga"
 
-#: qml/ExpanderArrow.qml:40
+#: qml/ExpanderArrow.qml:39
 #, kde-format
 msgid "Close popup"
 msgstr "Loka sprettiglugga"
 
-#: qml/ExpanderArrow.qml:40
+#: qml/ExpanderArrow.qml:39
 #, kde-format
 msgid "Show hidden icons"
 msgstr "Sýna falin tákn"
 
-#: qml/HiddenItemsView.qml:40
+#: qml/HiddenItemsView.qml:37
 #, kde-format
 msgctxt "@info:whatsthis accessible description for popup grid"
 msgid "Grid with %1 items in %2 columns"
 msgstr "Reitir með %1 hlutum í %2 dálkum"
 
-#: qml/HiddenItemsView.qml:44
+#: qml/HiddenItemsView.qml:41
 #, kde-format
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"

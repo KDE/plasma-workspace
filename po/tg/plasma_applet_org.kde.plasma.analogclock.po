@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_clock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-05 00:44+0000\n"
 "PO-Revision-Date: 2019-09-16 14:04+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -38,7 +38,7 @@ msgstr "Умумӣ"
 msgid "Show time zone"
 msgstr "Намоиш додани минтақаи вақт"
 
-#: qml/main.qml:59
+#: qml/main.qml:60
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Current time is %1; Current date is %2"

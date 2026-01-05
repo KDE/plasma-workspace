@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-05 00:44+0000\n"
+"POT-Creation-Date: 2026-01-05 00:44+0000\n"
 "PO-Revision-Date: 2019-06-04 22:15+0000\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -27,29 +27,29 @@ msgstr ""
 msgid "General"
 msgstr "Bendra"
 
-#: qml/configGeneral.qml:20
+#: qml/configGeneral.qml:21
 #, kde-format
 msgid "Calendar version:"
 msgstr "Kalendoriaus versija:"
 
-#: qml/configGeneral.qml:22
+#: qml/configGeneral.qml:23
 #, kde-format
 msgid "Show week numbers"
 msgstr "Rodyti savaitės numerius"
 
-#: qml/configGeneral.qml:31
+#: qml/configGeneral.qml:32
 #, kde-format
 msgctxt "What information is shown in the calendar icon"
 msgid "Compact version:"
 msgstr "Kompaktiška versija:"
 
-#: qml/configGeneral.qml:33
+#: qml/configGeneral.qml:34
 #, kde-format
 msgctxt "Show the number of the day (eg. 31) in the icon"
 msgid "Show day of the month"
 msgstr "Rodyti mėnesio dieną"
 
-#: qml/configGeneral.qml:39
+#: qml/configGeneral.qml:40
 #, kde-format
 msgctxt "Show the week number (eg. 50) in the icon"
 msgid "Show week number"

@@ -1,13 +1,13 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# SPDX-FileCopyrightText: 2025 Charlotte <altronic25@protonmail.com>
+# SPDX-FileCopyrightText: 2025, 2026 Charlotte <altronic25@protonmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-27 00:45+0000\n"
-"PO-Revision-Date: 2025-12-30 00:59+0000\n"
+"PO-Revision-Date: 2026-01-03 19:56+0000\n"
 "Last-Translator: Charlotte <altronic25@protonmail.com>\n"
 "Language-Team: Irish\n"
 "Language: ga\n"
@@ -16,16 +16,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Charlotte"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "altronic25@protonmail.com"
 
 #: currentcontainmentactionsmodel.cpp:201
 #, kde-format
@@ -60,13 +61,13 @@ msgstr ""
 #, kde-format
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC1"
-msgstr ""
+msgstr "KDE Plasma 6.0 RC1"
 
 #: desktopview.cpp:235
 #, kde-format
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC2"
-msgstr ""
+msgstr "KDE Plasma 6.0 RC2"
 
 #: desktopview.cpp:261
 #, kde-format
@@ -90,7 +91,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1"
-msgstr ""
+msgstr "KDE Plasma %1"
 
 #: desktopview.cpp:278
 #, kde-format
@@ -187,7 +188,7 @@ msgstr ""
 #: main.cpp:190
 #, kde-format
 msgid "Plasma Failed To Start"
-msgstr ""
+msgstr "Ní Féidir Plasma a Thosú"
 
 #: main.cpp:191
 #, kde-format
@@ -201,61 +202,61 @@ msgstr ""
 #, kde-format
 msgctxt "Brightness OSD: display name and brightness percentage"
 msgid "%1: %2%"
-msgstr ""
+msgstr "%1: %2%"
 
 #: osd.cpp:91
 #, kde-format
 msgctxt "OSD informing that the system is muted, keep short"
 msgid "Audio Muted"
-msgstr ""
+msgstr "Fuaim Múchta"
 
 #: osd.cpp:114
 #, kde-format
 msgctxt "OSD informing that the microphone is muted, keep short"
 msgid "Microphone Muted"
-msgstr ""
+msgstr "Micreafón Múchta"
 
 #: osd.cpp:130
 #, kde-format
 msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
 msgid "%1 Muted"
-msgstr ""
+msgstr "%1 Fuaime Múchta"
 
 #: osd.cpp:152
 #, kde-format
 msgctxt "touchpad was enabled, keep short"
 msgid "Touchpad On"
-msgstr ""
+msgstr "Ceap Tadhaill Ar"
 
 #: osd.cpp:154
 #, kde-format
 msgctxt "touchpad was disabled, keep short"
 msgid "Touchpad Off"
-msgstr ""
+msgstr "Ceap Tadhaill Múchta"
 
 #: osd.cpp:161
 #, kde-format
 msgctxt "wireless lan was enabled, keep short"
 msgid "Wifi On"
-msgstr ""
+msgstr "Wifi Ar"
 
 #: osd.cpp:163
 #, kde-format
 msgctxt "wireless lan was disabled, keep short"
 msgid "Wifi Off"
-msgstr ""
+msgstr "Wifi Múchta"
 
 #: osd.cpp:170
 #, kde-format
 msgctxt "Bluetooth was enabled, keep short"
 msgid "Bluetooth On"
-msgstr ""
+msgstr "Blutooth Ar"
 
 #: osd.cpp:172
 #, kde-format
 msgctxt "Bluetooth was disabled, keep short"
 msgid "Bluetooth Off"
-msgstr ""
+msgstr "Bluetooth Múchta"
 
 #: osd.cpp:179
 #, kde-format
@@ -301,7 +302,7 @@ msgstr ""
 #, kde-format
 msgctxt "Power profile was changed to power save mode, keep short"
 msgid "Power Save Mode"
-msgstr ""
+msgstr "Sábháil Cumhachta Mód"
 
 #: osd.cpp:214
 #, kde-format
@@ -339,7 +340,7 @@ msgstr ""
 #, kde-format
 msgctxt "Percentage value"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: shellcontainmentconfig.cpp:107
 #, kde-format
@@ -350,7 +351,7 @@ msgstr ""
 #, kde-format
 msgctxt "Screen manufacturer and model on connector"
 msgid "%1 %2 on %3"
-msgstr ""
+msgstr "%1 %2 ar %3"
 
 #: shellcontainmentconfig.cpp:134
 #, kde-format
@@ -412,7 +413,7 @@ msgstr ""
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
-msgstr ""
+msgstr "Coimeád Folamh %1"
 
 #: softwarerendernotifier.cpp:34
 #, kde-format

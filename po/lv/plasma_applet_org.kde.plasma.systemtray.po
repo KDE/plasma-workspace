@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-05 00:44+0000\n"
+"POT-Creation-Date: 2026-01-05 00:44+0000\n"
 "PO-Revision-Date: 2025-05-29 16:48+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -200,49 +200,49 @@ msgctxt "@option:check, This is referring to system tray entries"
 msgid "Always show all"
 msgstr "Rādīt vienmēr"
 
-#: qml/ExpandedRepresentation.qml:59
+#: qml/ExpandedRepresentation.qml:60
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
 msgstr "Atgriezties"
 
-#: qml/ExpandedRepresentation.qml:71
+#: qml/ExpandedRepresentation.qml:72
 #, kde-format
 msgid "Status and Notifications"
 msgstr "Statuss un paziņojumi"
 
-#: qml/ExpandedRepresentation.qml:140
+#: qml/ExpandedRepresentation.qml:144
 #, kde-format
 msgid "More actions"
 msgstr "Vairāk darbību"
 
-#: qml/ExpandedRepresentation.qml:240
+#: qml/ExpandedRepresentation.qml:245
 #, kde-format
 msgid "Keep Open"
 msgstr "Neaizvērt"
 
-#: qml/ExpanderArrow.qml:26
+#: qml/ExpanderArrow.qml:25
 #, kde-format
 msgid "Show all the items in the system tray in a popup"
 msgstr "Parādīt visas sistēmas ikonu joslas vienības uzlecošā lokā"
 
-#: qml/ExpanderArrow.qml:40
+#: qml/ExpanderArrow.qml:39
 #, kde-format
 msgid "Close popup"
 msgstr "Aizvērt uzlecošo logu"
 
-#: qml/ExpanderArrow.qml:40
+#: qml/ExpanderArrow.qml:39
 #, kde-format
 msgid "Show hidden icons"
 msgstr "Rādīt paslēptās ikonas"
 
-#: qml/HiddenItemsView.qml:40
+#: qml/HiddenItemsView.qml:37
 #, kde-format
 msgctxt "@info:whatsthis accessible description for popup grid"
 msgid "Grid with %1 items in %2 columns"
 msgstr "Režģis ar %1 vienumiem %2 kolonnās"
 
-#: qml/HiddenItemsView.qml:44
+#: qml/HiddenItemsView.qml:41
 #, kde-format
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"

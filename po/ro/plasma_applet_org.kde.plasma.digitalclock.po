@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-18 00:45+0000\n"
+"POT-Creation-Date: 2026-01-05 00:44+0000\n"
 "PO-Revision-Date: 2025-10-05 00:20+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -214,7 +214,7 @@ msgctxt "@item:inlistbox custom date format"
 msgid "Custom"
 msgstr "Personalizat"
 
-#: configAppearance.qml:254
+#: configAppearance.qml:253
 #, kde-format
 msgid ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
@@ -223,19 +223,19 @@ msgstr ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
 "\">Documentația formatului orei</a>"
 
-#: configAppearance.qml:279
+#: configAppearance.qml:278
 #, kde-format
 msgctxt "@label:group"
 msgid "Text display:"
 msgstr "Afișare text:"
 
-#: configAppearance.qml:284
+#: configAppearance.qml:283
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatic"
 msgstr "Automat"
 
-#: configAppearance.qml:288
+#: configAppearance.qml:287
 #, kde-format
 msgctxt "@label"
 msgid ""
@@ -244,31 +244,31 @@ msgstr ""
 "Textul va urma fontul de sistem și se va extinde pentru a umple spațiul "
 "disponibil."
 
-#: configAppearance.qml:302
+#: configAppearance.qml:301
 #, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
 msgstr "Manual"
 
-#: configAppearance.qml:312
+#: configAppearance.qml:311
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
 msgstr "Alege stil…"
 
-#: configAppearance.qml:329
+#: configAppearance.qml:328
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
 msgstr "%1pt %2"
 
-#: configAppearance.qml:336
+#: configAppearance.qml:335
 #, kde-format
 msgctxt "@info"
 msgid "Note: size may be reduced if the panel is not thick enough."
 msgstr "Notă: dimensiunea poate fi redusă dacă panoul nu e suficient de lung."
 
-#: configAppearance.qml:350
+#: configAppearance.qml:349
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
@@ -456,7 +456,7 @@ msgstr ""
 "Apăsați pictograma ceasului pentru a deschide configurările de dată și oră "
 "ca să alegeți un fus orar."
 
-#: Tooltip.qml:139
+#: Tooltip.qml:140
 #, kde-format
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"

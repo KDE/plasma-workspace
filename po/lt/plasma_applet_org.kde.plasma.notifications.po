@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-05 00:44+0000\n"
 "PO-Revision-Date: 2025-04-28 00:37+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -24,7 +24,7 @@ msgstr ""
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
 "X-Generator: Poedit 3.5\n"
 
-#: components/ActionContainer.qml:80
+#: components/ActionContainer.qml:81
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"
@@ -115,19 +115,19 @@ msgstr "Suskleisti"
 msgid "Close"
 msgstr "Užverti"
 
-#: components/JobDetails.qml:34
+#: components/JobDetails.qml:37
 #, kde-format
 msgctxt "Row description, e.g. Source"
 msgid "%1:"
 msgstr "%1:"
 
-#: components/JobDetails.qml:109
+#: components/JobDetails.qml:116
 #, kde-format
 msgctxt "How many bytes have been copied"
 msgid "%2 of %1"
 msgstr "%2 iš %1"
 
-#: components/JobDetails.qml:113
+#: components/JobDetails.qml:120
 #, kde-format
 msgctxt "How many files have been copied"
 msgid "%2 of %1 file"
@@ -137,7 +137,7 @@ msgstr[1] "%2 iš %1 failų"
 msgstr[2] "%2 iš %1 failų"
 msgstr[3] "%2 iš %1 failo"
 
-#: components/JobDetails.qml:116
+#: components/JobDetails.qml:123
 #, kde-format
 msgctxt "How many dirs have been copied"
 msgid "%2 of %1 folder"
@@ -147,7 +147,7 @@ msgstr[1] "%2 iš %1 aplankų"
 msgstr[2] "%2 iš %1 aplankų"
 msgstr[3] "%2 iš %1 aplanko"
 
-#: components/JobDetails.qml:119
+#: components/JobDetails.qml:126
 #, kde-format
 msgctxt "How many items (that includes files and dirs) have been copied"
 msgid "%2 of %1 item"
@@ -157,7 +157,7 @@ msgstr[1] "%2 iš %1 elementų"
 msgstr[2] "%2 iš %1 elementų"
 msgstr[3] "%2 iš %1 elemento"
 
-#: components/JobDetails.qml:127
+#: components/JobDetails.qml:134
 #, kde-format
 msgid "%1 file"
 msgid_plural "%1 files"
@@ -166,7 +166,7 @@ msgstr[1] "%1 failai"
 msgstr[2] "%1 failų"
 msgstr[3] "%1 failas"
 
-#: components/JobDetails.qml:129
+#: components/JobDetails.qml:136
 #, kde-format
 msgid "%1 folder"
 msgid_plural "%1 folders"
@@ -175,7 +175,7 @@ msgstr[1] "%1 aplankai"
 msgstr[2] "%1 aplankų"
 msgstr[3] "%1 aplankas"
 
-#: components/JobDetails.qml:131
+#: components/JobDetails.qml:138
 #, kde-format
 msgid "%1 item"
 msgid_plural "%1 items"
@@ -184,44 +184,44 @@ msgstr[1] "%1 elementai"
 msgstr[2] "%1 elementų"
 msgstr[3] "%1 elementas"
 
-#: components/JobDetails.qml:148 components/SpeedChart.qml:72
-#: components/SpeedChart.qml:98 components/SpeedChart.qml:188
-#: components/SpeedChart.qml:199
+#: components/JobDetails.qml:155 components/SpeedChart.qml:72
+#: components/SpeedChart.qml:98 components/SpeedChart.qml:193
+#: components/SpeedChart.qml:204
 #, kde-format
 msgctxt "Bytes per second"
 msgid "%1/s"
 msgstr "%1/sek."
 
-#: components/JobItem.qml:56
+#: components/JobItem.qml:57
 #, kde-format
 msgctxt "Hides/expands item details"
 msgid "Details"
 msgstr "Išsamiau"
 
-#: components/JobItem.qml:77
+#: components/JobItem.qml:78
 #, kde-format
 msgctxt "Resume paused job"
 msgid "Resume"
 msgstr "Pratęsti"
 
-#: components/JobItem.qml:78
+#: components/JobItem.qml:79
 #, kde-format
 msgctxt "Pause running job"
 msgid "Pause"
 msgstr "Pristabdyti"
 
-#: components/JobItem.qml:92
+#: components/JobItem.qml:93
 #, kde-format
 msgctxt "Cancel running job"
 msgid "Cancel"
 msgstr "Atsisakyti"
 
-#: components/JobItem.qml:124 components/ThumbnailStrip.qml:158
+#: components/JobItem.qml:125 components/ThumbnailStrip.qml:159
 #, kde-format
 msgid "More Options…"
 msgstr "Daugiau parinkčių…"
 
-#: components/JobItem.qml:152
+#: components/JobItem.qml:153
 #, kde-format
 msgid "Open"
 msgstr "Atverti"
@@ -248,12 +248,12 @@ msgstr "Siųsti"
 msgid "Speed"
 msgstr "Greitis"
 
-#: components/SpeedChart.qml:195
+#: components/SpeedChart.qml:200
 #, kde-format
 msgid "Average Speed"
 msgstr "Vidutinis greitis"
 
-#: components/SpeedChart.qml:253
+#: components/SpeedChart.qml:258
 #, kde-format
 msgctxt "Percentage of a job"
 msgid "%1%"

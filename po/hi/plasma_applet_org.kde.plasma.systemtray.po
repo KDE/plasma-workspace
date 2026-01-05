@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-05 00:44+0000\n"
+"POT-Creation-Date: 2026-01-05 00:44+0000\n"
 "PO-Revision-Date: 2021-08-13 02:11+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -188,49 +188,49 @@ msgctxt "@option:check, This is referring to system tray entries"
 msgid "Always show all"
 msgstr "हमेशा दिखाए गए"
 
-#: qml/ExpandedRepresentation.qml:59
+#: qml/ExpandedRepresentation.qml:60
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
 msgstr ""
 
-#: qml/ExpandedRepresentation.qml:71
+#: qml/ExpandedRepresentation.qml:72
 #, kde-format
 msgid "Status and Notifications"
 msgstr "स्थिति और सूचनाएँ"
 
-#: qml/ExpandedRepresentation.qml:140
+#: qml/ExpandedRepresentation.qml:144
 #, kde-format
 msgid "More actions"
 msgstr "अधिक क्रियाएँ"
 
-#: qml/ExpandedRepresentation.qml:240
+#: qml/ExpandedRepresentation.qml:245
 #, kde-format
 msgid "Keep Open"
 msgstr "खुला रखें"
 
-#: qml/ExpanderArrow.qml:26
+#: qml/ExpanderArrow.qml:25
 #, kde-format
 msgid "Show all the items in the system tray in a popup"
 msgstr ""
 
-#: qml/ExpanderArrow.qml:40
+#: qml/ExpanderArrow.qml:39
 #, kde-format
 msgid "Close popup"
 msgstr "पॉपअप बंद करें"
 
-#: qml/ExpanderArrow.qml:40
+#: qml/ExpanderArrow.qml:39
 #, kde-format
 msgid "Show hidden icons"
 msgstr "छुपे प्रतीक दिखाएँ"
 
-#: qml/HiddenItemsView.qml:40
+#: qml/HiddenItemsView.qml:37
 #, kde-format
 msgctxt "@info:whatsthis accessible description for popup grid"
 msgid "Grid with %1 items in %2 columns"
 msgstr ""
 
-#: qml/HiddenItemsView.qml:44
+#: qml/HiddenItemsView.qml:41
 #, kde-format
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"

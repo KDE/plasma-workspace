@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-02 00:46+0000\n"
+"POT-Creation-Date: 2026-01-05 00:44+0000\n"
 "PO-Revision-Date: 2024-12-13 19:09+0530\n"
 "Last-Translator: Kali <EMAIL@ADDRESS>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -169,7 +169,7 @@ msgstr "एतत् यन्त्रं निष्कासयितुं 
 msgid "Could not repair this device: %1"
 msgstr "एतत् यन्त्रं निष्कासयितुं न शक्तवान्।"
 
-#: qml/DeviceItem.qml:106
+#: qml/DeviceItem.qml:99
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Removing is a less technical word for Unmounting; translation should be "
@@ -181,7 +181,7 @@ msgctxt ""
 msgid "Checking…"
 msgstr "निष्कासयन्..."
 
-#: qml/DeviceItem.qml:108
+#: qml/DeviceItem.qml:101
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Removing is a less technical word for Unmounting; translation should be "
@@ -193,13 +193,13 @@ msgctxt ""
 msgid "Repairing…"
 msgstr "निष्कासयन्..."
 
-#: qml/DeviceItem.qml:111
+#: qml/DeviceItem.qml:104
 #, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "%1 %2 तः मुक्तम्"
 
-#: qml/DeviceItem.qml:115
+#: qml/DeviceItem.qml:108
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -207,7 +207,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr "अभिगम्य..."
 
-#: qml/DeviceItem.qml:118
+#: qml/DeviceItem.qml:111
 #, kde-format
 msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
@@ -215,63 +215,63 @@ msgctxt ""
 msgid "Removing…"
 msgstr "निष्कासयन्..."
 
-#: qml/DeviceItem.qml:121
+#: qml/DeviceItem.qml:114
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr "अद्यापि प्लगं न विच्छेदयन्तु! अद्यापि सञ्चिकाः स्थानान्तरिताः सन्ति..."
 
-#: qml/FullRepresentation.qml:45 qml/main.qml:121
+#: qml/FullRepresentation.qml:47 qml/main.qml:123
 #, kde-format
 msgid "Remove All"
 msgstr "सर्वं निष्कासयतु"
 
-#: qml/FullRepresentation.qml:46
+#: qml/FullRepresentation.qml:48
 #, kde-format
 msgid "Click to safely remove all devices"
 msgstr "सर्वाणि उपकरणानि सुरक्षितरूपेण निष्कासयितुं क्लिक् कुर्वन्तु"
 
-#: qml/FullRepresentation.qml:153
+#: qml/FullRepresentation.qml:162
 #, kde-format
 msgid "No removable devices attached"
 msgstr "न हटनीयानि यन्त्राणि संलग्नम्"
 
-#: qml/FullRepresentation.qml:153
+#: qml/FullRepresentation.qml:162
 #, kde-format
 msgid "No disks available"
 msgstr "डिस्काः उपलब्धाः न सन्ति"
 
-#: qml/main.qml:71
+#: qml/main.qml:72
 #, kde-format
 msgid "Most Recent Device"
 msgstr "अद्यतनतमं यन्त्रम्"
 
-#: qml/main.qml:71
+#: qml/main.qml:72
 #, kde-format
 msgid "No Devices Available"
 msgstr "कोऽपि उपकरणः उपलब्धः नास्ति"
 
-#: qml/main.qml:107
+#: qml/main.qml:109
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "हटनीयानि उपकरणानि विन्यस्यताम्..."
 
-#: qml/main.qml:129
+#: qml/main.qml:131
 #, kde-format
 msgid "Removable Devices"
 msgstr "हटनीयानि उपकरणानि"
 
-#: qml/main.qml:144
+#: qml/main.qml:146
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "अहटनीयानि उपकरणानि"
 
-#: qml/main.qml:159
+#: qml/main.qml:161
 #, kde-format
 msgid "All Devices"
 msgstr "सर्वाणि यन्त्राणि"
 
-#: qml/main.qml:176
+#: qml/main.qml:178
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "यदा नूतनं यन्त्रं प्लग्-इन् भवति तदा popup दर्शयतु"

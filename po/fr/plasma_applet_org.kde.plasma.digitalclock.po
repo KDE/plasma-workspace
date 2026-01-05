@@ -3,17 +3,17 @@
 # Thomas Vergnaud <thomas.vergnaud@gmx.fr>, 2014, 2015, 2016.
 # Vincent Pinon <vpinon@kde.org>, 2017.
 # Simon Depiets <sdepiets@gmail.com>, 2018, 2019.
-# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024, 2025 Xavier Besnard <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024, 2025, 2026 Xavier Besnard <xavier.besnard@kde.org>
 # Xavier Besnard <xavier.besnard@kde.org>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-18 00:45+0000\n"
-"PO-Revision-Date: 2025-06-01 19:27+0200\n"
+"POT-Creation-Date: 2026-01-05 00:44+0000\n"
+"PO-Revision-Date: 2026-01-03 17:55+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
-"Language-Team: French <French <kde-francophone@kde.org>>\n"
+"Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.12.0\n"
 "X-Text-Markup: kde4\n"
 
 #: CalendarView.qml:149
@@ -221,7 +221,7 @@ msgctxt "@item:inlistbox custom date format"
 msgid "Custom"
 msgstr "Personnalisé"
 
-#: configAppearance.qml:254
+#: configAppearance.qml:253
 #, kde-format
 msgid ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
@@ -230,19 +230,19 @@ msgstr ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
 "\">Documentation du format d'heure</a>"
 
-#: configAppearance.qml:279
+#: configAppearance.qml:278
 #, kde-format
 msgctxt "@label:group"
 msgid "Text display:"
 msgstr "Affichage du texte : "
 
-#: configAppearance.qml:284
+#: configAppearance.qml:283
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatic"
 msgstr "Automatique"
 
-#: configAppearance.qml:288
+#: configAppearance.qml:287
 #, kde-format
 msgctxt "@label"
 msgid ""
@@ -251,32 +251,32 @@ msgstr ""
 "Le texte prendra en compte la police du système et sera étendu pour remplir "
 "l'espace disponible."
 
-#: configAppearance.qml:302
+#: configAppearance.qml:301
 #, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
 msgstr "Manuel"
 
-#: configAppearance.qml:312
+#: configAppearance.qml:311
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
 msgstr "Sélectionner un style..."
 
-#: configAppearance.qml:329
+#: configAppearance.qml:328
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
 msgstr "%1 pt %2"
 
-#: configAppearance.qml:336
+#: configAppearance.qml:335
 #, kde-format
 msgctxt "@info"
 msgid "Note: size may be reduced if the panel is not thick enough."
 msgstr ""
 "Remarque : la taille peut être réduite si le panneau n'est pas assez épais."
 
-#: configAppearance.qml:350
+#: configAppearance.qml:349
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
@@ -378,7 +378,7 @@ msgid ""
 "you're traveling. It will not be shown twice while at home."
 msgstr ""
 "Astuce : vous pouvez ajouter votre fuseau horaire à cette liste pour voir "
-"l’heure là-bas même lorsque vous voyagez. Il ne sera pas affiché de nouveau "
+"l'heure là-bas même lorsque vous voyagez. Il ne sera pas affiché de nouveau "
 "de retour chez vous."
 
 #: configTimeZones.qml:245
@@ -467,7 +467,7 @@ msgstr ""
 "Veuillez cliquer ici pour ouvrir la configuration de date et d'heure et "
 "définir un fuseau horaire."
 
-#: Tooltip.qml:139
+#: Tooltip.qml:140
 #, kde-format
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"

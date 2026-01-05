@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" 
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
 "dtd/kdedbx45.dtd" [
   <!ENTITY kappname "&klipper;">
   <!ENTITY package "kdebase">
@@ -335,8 +335,7 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 >Завжди зберігати у журналі</guilabel
 > не можна буде скористатися, якщо синхронізацію між позначеним і буфером обміну даними вимкнено — у цьому випадку позначене ніколи не зберігатиметься у журналі буфера обміну даними автоматично. Див. <xref linkend="clipboard-modes"/>. </para>
 </listitem>
-</varlistentry
-> 
+</varlistentry>
 
 <varlistentry>
 <term
@@ -355,8 +354,7 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 >Завжди зберігати у журналі</guilabel
 > не можна буде скористатися, якщо синхронізацію між позначеним і буфером обміну даними вимкнено — у цьому випадку позначене ніколи не зберігатиметься у журналі буфера обміну даними автоматично. Див. <xref linkend="clipboard-modes"/>. </para>
 </listitem>
-</varlistentry
-> 
+</varlistentry>
 
 </variablelist>
 
@@ -387,48 +385,6 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 <listitem
 ><para
 >Якщо позначено цей параметр, вибір пункту у журналі кишені спричинить до відкриття контекстного меню з діями &klipper;, що стосуються вмісту, якщо вміст відповідає одному з визначених формальних виразів.</para>
-</listitem>
-</varlistentry>
-
-<varlistentry
-><term
-><guibutton
->Виключити вікна</guibutton
-></term>
-<listitem
-><para
->Відкриває діалогове вікно <guilabel
->Вимкнути дії для вікон типу WM_CLASS WM_CLASS</guilabel
->.</para>
-<para
->Деякі програми, наприклад &konqueror;, використовують внутрішню кишеню програми. Якщо під час роботи з програмою у вас весь час відкриваються небажані контекстні меню &klipper;, зробіть так:</para>
-
-<orderedlist>
-<listitem
-><para
->Відкрийте програму.</para
-></listitem>
-<listitem
-><para
->З термінала виконайте команду <userinput
-><command
->xprop</command
-> | <command
->grep</command
-> <parameter
->WM_CLASS</parameter
-></userinput
->, а потім наведіть вказівник миші на вікно програми і клацніть лівою кнопкою.</para
-></listitem
-> 
-<listitem
-><para
->Перший рядок у терміналі після знаку рівності — це той рядок, що вам потрібен.</para
-></listitem>
-</orderedlist>
-
-<para
->Після додавання WM_CLASS, дії з вікнами програми більше не виконуватимуться.</para>
 </listitem>
 </varlistentry>
 
@@ -491,8 +447,7 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 >Опис</guilabel
 > і клацніть <mousebutton
 >лівою</mousebutton
-> кнопкою миші.</para
->   
+> кнопкою миші.</para>
 
 <note
 ><para
@@ -628,7 +583,7 @@ selected, the clipboard functions in the &UNIX; mode; if not, the
 > &underFDL; &underGPL; </chapter>
 
 
-&documentation.index; 
+&documentation.index;
 
 </book>
 <!--

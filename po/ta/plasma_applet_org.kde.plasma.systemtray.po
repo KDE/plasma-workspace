@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Kishore G <kishore96@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025, 2026 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-05 00:44+0000\n"
-"PO-Revision-Date: 2025-11-30 11:15+0530\n"
+"POT-Creation-Date: 2026-01-05 00:44+0000\n"
+"PO-Revision-Date: 2026-01-04 15:07+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.08.3\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #: qml/config.qml:13
 #, kde-format
@@ -23,15 +23,13 @@ msgid "General"
 msgstr "பொதுவானவை"
 
 #: qml/ConfigGeneral.qml:43
-#, fuzzy, kde-format
-#| msgid "Shown when relevant"
+#, kde-format
 msgctxt "@item:inlistbox Show this System Tray item when relevant"
 msgid "Show when relevant"
 msgstr "தேவைப்படும்போது காட்டு"
 
 #: qml/ConfigGeneral.qml:47
-#, fuzzy, kde-format
-#| msgid "Always shown"
+#, kde-format
 msgctxt "@item:inlistbox Always show this System Tray item"
 msgid "Always show"
 msgstr "எப்போதும் காட்டு"
@@ -40,13 +38,13 @@ msgstr "எப்போதும் காட்டு"
 #, kde-format
 msgctxt "@item:inlistbox Show this System Tray item only in the expanded popup"
 msgid "Show only in popup"
-msgstr ""
+msgstr "கணினித் தட்டை விரிவுபடுத்தம்போது மட்டும் காட்டு"
 
 #: qml/ConfigGeneral.qml:55
 #, kde-format
 msgctxt "@item:inlistbox Never show this System Tray item; disable it"
 msgid "Never show (disabled)"
-msgstr ""
+msgstr "ஒருபோதும் காட்டாதே (முடக்கு)"
 
 #: qml/ConfigGeneral.qml:126
 #, kde-format
@@ -96,13 +94,7 @@ msgid "I understand the risks"
 msgstr "விளைவுகளை ஏற்கிறேன்"
 
 #: qml/ConfigGeneral.qml:187
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:usagetip"
-#| msgid ""
-#| "Disabling the clipboard is not recommended, as it will cause copied data "
-#| "to be lost when the application it was copied from is closed.<nl/><nl/"
-#| ">Instead consider configuring the clipboard to disable its history, or "
-#| "only remember one item at a time."
+#, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
 "Disabling the clipboard is not recommended, as it will cause copied data to "
@@ -113,7 +105,9 @@ msgid ""
 "at a time."
 msgstr ""
 "பிடிப்புப்பலகையை முடக்கினால், ஓர் செயலியை மூடியபிறகு அதிலிருந்து நகலெடுத்ததை ஒட்ட "
-"முடியாமல் போகும்.<nl/><nl/> மாறாக, பிடிப்புப்பலகை வரலாற்றை முடக்கலாம், அல்லது ஒரு "
+"முடியாமல் போகும்.<nl/><nl/> பிடிப்புப்பலகை வேறு நிரலால் கையாளப்படுகிறதென்றாலோ, "
+"தனிப்பட்ட பிடிப்புப்பலகை பிளாஸ்மாய்டை வேறு எங்கேயாவது சேர்த்திருந்தாலோ, இதை முடக்கலாம். "
+"மேலும், இதை முடக்குவதற்கு பதிலாக, பிடிப்புப்பலகை வரலாற்றை முடக்கலாம், அல்லது ஒரு "
 "நேரத்தில் ஒரே உருப்படியை நினைவில் கொள்ளுமாறு பிடிப்புப்பலகையை அமைக்கலாம்."
 
 #: qml/ConfigGeneral.qml:196
@@ -125,6 +119,9 @@ msgid ""
 "added a standalone Notifications widget somewhere else, or are intentionally "
 "using a 3rd-party notification manager to handle notifications."
 msgstr ""
+"அறிவிப்புகள் பிளாஸ்மாய்டை முடக்கினால், செயலிகள் அனுப்பும் அறிவிப்புகள் காட்டப்படாமல் "
+"இருக்கலாம்.<nl/><nl/>அறிவிப்புகளை கையாளும் வேறு நிரலை நிறுவியிருந்தாலோ அறிவிப்புகள் "
+"பிளாஸ்மாய்டை வேறு எங்கேயாவது சேர்த்திருந்தாலோ மட்டும் இதை முடக்கவும்."
 
 #: qml/ConfigGeneral.qml:208
 #, kde-format
@@ -191,49 +188,49 @@ msgctxt "@option:check, This is referring to system tray entries"
 msgid "Always show all"
 msgstr "அனைத்தையும் எப்போதும் காட்டு"
 
-#: qml/ExpandedRepresentation.qml:59
+#: qml/ExpandedRepresentation.qml:60
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
 msgstr "பின்னே செல்"
 
-#: qml/ExpandedRepresentation.qml:71
+#: qml/ExpandedRepresentation.qml:72
 #, kde-format
 msgid "Status and Notifications"
 msgstr "நிலைகாட்டிகளும் அறிவிப்புகளும்"
 
-#: qml/ExpandedRepresentation.qml:140
+#: qml/ExpandedRepresentation.qml:144
 #, kde-format
 msgid "More actions"
 msgstr "மேலும் செயல்கள்"
 
-#: qml/ExpandedRepresentation.qml:240
+#: qml/ExpandedRepresentation.qml:245
 #, kde-format
 msgid "Keep Open"
 msgstr "திறந்தே வைத்திரு"
 
-#: qml/ExpanderArrow.qml:26
+#: qml/ExpanderArrow.qml:25
 #, kde-format
 msgid "Show all the items in the system tray in a popup"
 msgstr "கணினித் தட்டிலுள்ள அனைத்தையும் மேல்தோன்றும் பட்டியில் காட்டும்"
 
-#: qml/ExpanderArrow.qml:40
+#: qml/ExpanderArrow.qml:39
 #, kde-format
 msgid "Close popup"
 msgstr "தெரித்தெழும் பட்டியை மூடு"
 
-#: qml/ExpanderArrow.qml:40
+#: qml/ExpanderArrow.qml:39
 #, kde-format
 msgid "Show hidden icons"
 msgstr "மறைந்துள்ள சின்னங்களை காட்டு"
 
-#: qml/HiddenItemsView.qml:40
+#: qml/HiddenItemsView.qml:37
 #, kde-format
 msgctxt "@info:whatsthis accessible description for popup grid"
 msgid "Grid with %1 items in %2 columns"
 msgstr "%2 நெடுவரிசைகளில் %1 உருப்படிகளைக் கொண்ட கிரிட்"
 
-#: qml/HiddenItemsView.qml:44
+#: qml/HiddenItemsView.qml:41
 #, kde-format
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"

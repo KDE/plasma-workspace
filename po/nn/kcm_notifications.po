@@ -295,15 +295,3 @@ msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior"
 msgstr "Vel eit program frå lista for å velja varslingsinnstillingar"
-
-#~ msgctxt "@action:button Plasma-specific notifications"
-#~ msgid "System Notifications"
-#~ msgstr "Systemmeldingar"
-
-#~ msgctxt "@action:button Application-specific notifications"
-#~ msgid "Application Settings"
-#~ msgstr "Programinnstillingar"
-
-#~ msgctxt "@action:button choose custom notification position"
-#~ msgid "Custom…"
-#~ msgstr "Tilpassa …"
