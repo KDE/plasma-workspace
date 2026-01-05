@@ -146,18 +146,18 @@ MouseArea {
                 main.Layout.minimumWidth: contentItem.width
                 main.Layout.maximumWidth: main.Layout.minimumWidth
 
-                contentItem.height: timeLabel.height + (Plasmoid.configuration.showDate || timeZoneLabel.visible ? 0.8 * timeLabel.height : 0)
-                contentItem.width: Math.max(timeLabel.width + (Plasmoid.configuration.showDate ? timeZoneLabel.paintedWidth : 0),
+                contentItem.height: timeLabel.height + (contentItem.Plasmoid.configuration.showDate || timeZoneLabel.visible ? 0.8 * timeLabel.height : 0)
+                contentItem.width: Math.max(timeLabel.width + (contentItem.Plasmoid.configuration.showDate ? timeZoneLabel.paintedWidth : 0),
                                 timeZoneLabel.paintedWidth, dateLabel.paintedWidth) + Kirigami.Units.largeSpacing
 
-                labelsGrid.rows: Plasmoid.configuration.showDate ? 1 : 2
+                labelsGrid.rows: labelsGrid.Plasmoid.configuration.showDate ? 1 : 2
 
                 timeLabel.height: sizehelper.height
                 timeLabel.width: sizehelper.contentWidth
                 timeLabel.font.pixelSize: timeLabel.height
 
-                timeZoneLabel.height: Plasmoid.configuration.showDate ? 0.7 * timeLabel.height : 0.8 * timeLabel.height
-                timeZoneLabel.width: Plasmoid.configuration.showDate ? timeZoneLabel.paintedWidth : timeLabel.width
+                timeZoneLabel.height: timeZoneLabel.Plasmoid.configuration.showDate ? 0.7 * timeLabel.height : 0.8 * timeLabel.height
+                timeZoneLabel.width: timeZoneLabel.Plasmoid.configuration.showDate ? timeZoneLabel.paintedWidth : timeLabel.width
                 timeZoneLabel.font.pixelSize: timeZoneLabel.height
 
                 dateLabel.height: 0.8 * timeLabel.height
@@ -172,7 +172,7 @@ MouseArea {
                  * the time label is slightly larger than the date or time zone label
                  * and still fits well into the panel with all the applied margins.
                  */
-                sizehelper.height: Math.min(Plasmoid.configuration.showDate || timeZoneLabel.visible ? main.height * 0.56 : main.height * 0.71,
+                sizehelper.height: Math.min(timeZoneLabel.Plasmoid.configuration.showDate || timeZoneLabel.visible ? main.height * 0.56 : main.height * 0.71,
                                             fontHelper.font.pixelSize)
 
                 sizehelper.font.pixelSize: sizehelper.height
@@ -254,7 +254,7 @@ MouseArea {
                 main.Layout.maximumHeight: contentItem.height
                 main.Layout.minimumHeight: main.Layout.maximumHeight
 
-                contentItem.height: Plasmoid.configuration.showDate ? labelsGrid.height + dateLabel.contentHeight : labelsGrid.height
+                contentItem.height: contentItem.Plasmoid.configuration.showDate ? labelsGrid.height + dateLabel.contentHeight : labelsGrid.height
                 contentItem.width: main.width
 
                 labelsGrid.rows: 2
@@ -264,7 +264,7 @@ MouseArea {
                 timeLabel.font.pixelSize: Math.min(timeLabel.height, fontHelper.font.pixelSize)
                 timeLabel.fontSizeMode: Text.Fit
 
-                timeZoneLabel.height: Math.max(0.7 * timeLabel.height, minimumPixelSize)
+                timeZoneLabel.height: Math.max(0.7 * timeLabel.height, dateLabel.minimumPixelSize)
                 timeZoneLabel.width: main.width
                 timeZoneLabel.fontSizeMode: Text.Fit
                 timeZoneLabel.minimumPixelSize: dateLabel.minimumPixelSize
@@ -277,7 +277,7 @@ MouseArea {
                 dateLabel.verticalAlignment: Text.AlignTop
                 // Those magic numbers are purely what looks nice as maximum size, here we have it the smallest
                 // between slightly bigger than the default font (1.4 times) and a bit smaller than the time font
-                dateLabel.font.pixelSize: Math.min(0.7 * timeLabel.height, Kirigami.Theme.defaultFont.pixelSize * 1.4)
+                dateLabel.font.pixelSize: Math.min(0.7 * timeLabel.height, contentItem.Kirigami.Theme.defaultFont.pixelSize * 1.4)
                 dateLabel.elide: Text.ElideRight
                 dateLabel.wrapMode: Text.WordWrap
 
@@ -327,7 +327,7 @@ MouseArea {
                 dateLabel.wrapMode: Text.WordWrap
 
                 sizehelper.height: {
-                    if (Plasmoid?.configuration.showDate) {
+                    if (sizehelper.Plasmoid?.configuration.showDate) {
                         if (timeZoneLabel.visible) {
                             return 0.4 * main.height
                         }
