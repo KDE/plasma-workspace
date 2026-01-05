@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# Sergiu Bivol <sergiu@cip.md>, 2020, 2021, 2022, 2023, 2024.
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024, 2025 Sergiu Bivol <sergiu@cip.md>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 14:42+0000\n"
-"PO-Revision-Date: 2024-06-09 15:07+0100\n"
+"PO-Revision-Date: 2025-12-12 11:22+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: kcm.cpp:62
 #, kde-format
@@ -89,16 +89,13 @@ msgid "Choose sound file"
 msgstr "Alege fișierul sonor"
 
 #: ui/main.qml:47
-#, fuzzy, kde-format
-#| msgctxt "@action:button Plasma-specific notifications"
-#| msgid "System Notifications…"
+#, kde-format
 msgctxt "@action:button Plasma-specific notifications"
 msgid "System Notifications"
-msgstr "Notificări de sistem…"
+msgstr "Notificări de sistem"
 
 #: ui/main.qml:53
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Application Settings"
 msgstr "Configurări aplicație"
@@ -155,7 +152,7 @@ msgctxt ""
 "Automatically enable Do Not Disturb mode while a fullscreen application is "
 "focused"
 msgid "While a fullscreen application is focused"
-msgstr ""
+msgstr "Cât e focalizată o aplicație pe tot ecranul"
 
 #: ui/main.qml:170
 #, kde-format
@@ -211,7 +208,7 @@ msgstr "Lângă pictograma de notificare"
 #, kde-format
 msgctxt "@action:button choose custom notification position"
 msgid "Custom…"
-msgstr ""
+msgstr "Personalizată…"
 
 #: ui/main.qml:278 ui/main.qml:294
 #, kde-format

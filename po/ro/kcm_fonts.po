@@ -1,12 +1,12 @@
 # Traducerea kcmfonts.po în Română
+# SPDX-FileCopyrightText: 2008-2014, 2020, 2021, 2022, 2023, 2025 Sergiu Bivol <sergiu@cip.md>
 # Claudiu Costin <claudiuc@kde.org>, 2003, 2004, 2005.
-# Sergiu Bivol <sergiu@cip.md>, 2008-2014, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 14:42+0000\n"
-"PO-Revision-Date: 2023-04-10 19:38+0100\n"
+"PO-Revision-Date: 2025-12-12 11:21+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #. i18n: ectx: label, entry (forceFontDPI), group (General)
 #: fontsaasettingsbase.kcfg:9
@@ -135,7 +135,7 @@ msgctxt ""
 "Sub-string in a font name; 'Display' as in display font — a type of font "
 "inappropriate for computer screens"
 msgid "Display"
-msgstr ""
+msgstr "Afișare"
 
 #: ui/main.qml:42
 #, kde-format
@@ -158,7 +158,7 @@ msgid ""
 "large font size, consider adjusting the global screen scale."
 msgstr ""
 "Fonturile foarte mari pot produce rezultate ce arată ciudat. În loc să "
-"folosiți o dimensiuni foarte mare a fonturilor, încercați ajustarea scalării "
+"folosiți o dimensiune foarte mare a fonturilor, încercați ajustarea scalării "
 "globale a ecranului."
 
 #: ui/main.qml:90
@@ -169,6 +169,9 @@ msgid ""
 "Display_typeface'>not intended for use on computer displays</link>, and may "
 "produce odd results. Consider using a different font."
 msgstr ""
+"Fonturile pentru afișare <link url='https://wikipedia.org/wiki/"
+"Display_typeface'>nu sunt destinate utilizării pe ecrane de calculator</"
+"link> și pot produce rezultate ciudate. Încercați să folosiți alt font."
 
 #: ui/main.qml:107
 #, kde-format
@@ -186,19 +189,18 @@ msgid ""
 "Plasma is not designed to be usable with fonts smaller than 4pt. Size has "
 "been reset to 4pt."
 msgstr ""
+"Plasma nu e proiectată să fie utilizabilă cu fonturi mai mici de 4pct. "
+"Dimensiunea a fost reinițializată la 4 pct."
 
 #: ui/main.qml:133
-#, fuzzy, kde-format
-#| msgid ""
-#| "Very large fonts may produce odd-looking results. Instead of using a very "
-#| "large font size, consider adjusting the global screen scale."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "Very small fonts may produce odd-looking results. Instead of using a very "
 "small font size, consider adjusting the global screen scale."
 msgstr ""
-"Fonturile foarte mari pot produce rezultate ce arată ciudat. În loc să "
-"folosiți o dimensiuni foarte mare a fonturilor, încercați ajustarea scalării "
+"Fonturile foarte mici pot produce rezultate ce arată ciudat. În loc să "
+"folosiți o dimensiune foarte mică a fonturilor, încercați ajustarea scalării "
 "globale a ecranului."
 
 #: ui/main.qml:154
