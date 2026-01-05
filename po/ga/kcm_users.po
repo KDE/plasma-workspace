@@ -1,38 +1,38 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2026 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SPDX-FileCopyrightText: 2026 Charlotte <altronic25@protonmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Irish Gaelic <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-01-04 02:42+0000\n"
+"Last-Translator: Charlotte <altronic25@protonmail.com>\n"
+"Language-Team: Irish\n"
 "Language: ga\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #: package/contents/ui/ChangePassword.qml:27
 #: package/contents/ui/UserDetailsPage.qml:156
 #, kde-format
 msgid "Change Password"
-msgstr ""
+msgstr "Athraigh Focail Faire"
 
 #: package/contents/ui/ChangePassword.qml:33
 #, kde-format
 msgid "Set Password"
-msgstr ""
+msgstr "Cuir Focal Faire"
 
 #: package/contents/ui/ChangePassword.qml:56
 #, kde-format
 msgid "Password"
-msgstr ""
+msgstr "Focal Faire"
 
 #: package/contents/ui/ChangePassword.qml:71
 #, kde-format
@@ -48,7 +48,7 @@ msgstr ""
 #: package/contents/ui/ChangeWalletPassword.qml:17
 #, kde-format
 msgid "Change Wallet Password?"
-msgstr ""
+msgstr "An bhfuil Tú Athraigh an Focal Faire Tiachóige?"
 
 #: package/contents/ui/ChangeWalletPassword.qml:26
 #, kde-kuit-format
@@ -61,7 +61,7 @@ msgstr ""
 #: package/contents/ui/ChangeWalletPassword.qml:31
 #, kde-format
 msgid "What is KWallet?"
-msgstr ""
+msgstr "Cad é an KWallet?"
 
 #: package/contents/ui/ChangeWalletPassword.qml:41
 #, kde-format
@@ -71,12 +71,12 @@ msgid ""
 "which differs from your login password. If the two passwords match, it can "
 "be unlocked at login automatically so you don't have to enter the KWallet "
 "password yourself."
-msgstr ""
+msgstr "Tá KWallet bainisteoir focal faire go do focal faire a "
 
 #: package/contents/ui/ChangeWalletPassword.qml:57
 #, kde-format
 msgid "Change Wallet Password"
-msgstr ""
+msgstr "Athraigh an Focal Faire Tiachóige"
 
 #: package/contents/ui/ChangeWalletPassword.qml:66
 #, kde-format
@@ -86,19 +86,19 @@ msgstr ""
 #: package/contents/ui/CreateUser.qml:16
 #, kde-format
 msgid "Create User"
-msgstr ""
+msgstr "Cruthaigh Úsáideoir"
 
 #: package/contents/ui/CreateUser.qml:30
 #: package/contents/ui/UserDetailsPage.qml:124
 #, kde-format
 msgid "Name:"
-msgstr ""
+msgstr "Ainm:"
 
 #: package/contents/ui/CreateUser.qml:34
 #: package/contents/ui/UserDetailsPage.qml:131
 #, kde-format
 msgid "Username:"
-msgstr ""
+msgstr "Ainm Úsáideora:"
 
 #: package/contents/ui/CreateUser.qml:44
 #: package/contents/ui/UserDetailsPage.qml:139
@@ -116,12 +116,12 @@ msgstr ""
 #: package/contents/ui/UserDetailsPage.qml:143
 #, kde-format
 msgid "Account type:"
-msgstr ""
+msgstr "Cineál Cuntais:"
 
 #: package/contents/ui/CreateUser.qml:53
 #, kde-format
 msgid "Password:"
-msgstr ""
+msgstr "Focal Faire:"
 
 #: package/contents/ui/CreateUser.qml:58
 #, kde-format
@@ -131,7 +131,7 @@ msgstr ""
 #: package/contents/ui/CreateUser.qml:72
 #, kde-format
 msgid "Create"
-msgstr ""
+msgstr "Cruthaigh"
 
 #: package/contents/ui/FingerprintDialog.qml:58
 #, kde-format
@@ -147,17 +147,17 @@ msgstr ""
 #: package/contents/ui/FingerprintDialog.qml:75
 #, kde-format
 msgid "Add"
-msgstr ""
+msgstr "Cuir Leis"
 
 #: package/contents/ui/FingerprintDialog.qml:84
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "Cealaigh"
 
 #: package/contents/ui/FingerprintDialog.qml:92
 #, kde-format
 msgid "Done"
-msgstr ""
+msgstr "Críochnaithe"
 
 #: package/contents/ui/FingerprintDialog.qml:116
 #, kde-format
@@ -298,7 +298,7 @@ msgstr ""
 #: package/contents/ui/FingerprintDialog.qml:333
 #, kde-format
 msgid "Delete fingerprint"
-msgstr ""
+msgstr "Scrios méarlorg"
 
 #: package/contents/ui/FingerprintDialog.qml:342
 #, kde-format
@@ -313,7 +313,7 @@ msgstr ""
 #: package/contents/ui/main.qml:123
 #, kde-format
 msgid "Add New User"
-msgstr ""
+msgstr "Cuir Úsáideoir Nua Leis"
 
 #: package/contents/ui/PicturesSheet.qml:19
 #, kde-format
@@ -427,13 +427,13 @@ msgstr ""
 #, kde-format
 msgctxt "@title"
 msgid "Choose a picture"
-msgstr ""
+msgstr "Roghnaigh pictiúr"
 
 #: package/contents/ui/PicturesSheet.qml:114
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose File…"
-msgstr ""
+msgstr "Roghnaigh Comhad..."
 
 #: package/contents/ui/UserDetailsPage.qml:107
 #, kde-format
@@ -443,12 +443,12 @@ msgstr ""
 #: package/contents/ui/UserDetailsPage.qml:152
 #, kde-format
 msgid "Email address:"
-msgstr ""
+msgstr "Seoladh Ríomhphoist:"
 
 #: package/contents/ui/UserDetailsPage.qml:176
 #, kde-format
 msgid "Delete files"
-msgstr ""
+msgstr "Scrios comhaid"
 
 #: package/contents/ui/UserDetailsPage.qml:183
 #, kde-format
@@ -458,7 +458,7 @@ msgstr ""
 #: package/contents/ui/UserDetailsPage.qml:190
 #, kde-format
 msgid "Delete User…"
-msgstr ""
+msgstr "Scrios Úsáideoir..."
 
 #: package/contents/ui/UserDetailsPage.qml:201
 #, kde-format
@@ -545,9 +545,9 @@ msgstr ""
 #: src/usermodel.cpp:147
 #, kde-format
 msgid "Your Account"
-msgstr ""
+msgstr "Do Cuntas"
 
 #: src/usermodel.cpp:147
 #, kde-format
 msgid "Other Accounts"
-msgstr ""
+msgstr "Cuntais Eile"

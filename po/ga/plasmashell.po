@@ -1,13 +1,13 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# SPDX-FileCopyrightText: 2025 Charlotte <altronic25@protonmail.com>
+# SPDX-FileCopyrightText: 2025, 2026 Charlotte <altronic25@protonmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2025-12-30 00:59+0000\n"
+"PO-Revision-Date: 2026-01-02 14:25+0000\n"
 "Last-Translator: Charlotte <altronic25@protonmail.com>\n"
 "Language-Team: Irish\n"
 "Language: ga\n"
@@ -16,16 +16,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Charlotte"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "altronic25@protonmail.com"
 
 #: currentcontainmentactionsmodel.cpp:205
 #, kde-format
@@ -35,7 +36,7 @@ msgstr ""
 #: main.cpp:88
 #, kde-format
 msgid "Plasma"
-msgstr ""
+msgstr "Plasma"
 
 #: main.cpp:88
 #, kde-format
@@ -79,7 +80,7 @@ msgstr ""
 #: main.cpp:117
 #, kde-format
 msgid "file"
-msgstr ""
+msgstr "comhad"
 
 #: main.cpp:121
 #, kde-format
@@ -89,7 +90,7 @@ msgstr ""
 #: main.cpp:221
 #, kde-format
 msgid "Plasma Failed To Start"
-msgstr ""
+msgstr "Ní Féidir Plasma a Thosú"
 
 #: main.cpp:222
 #, kde-format
@@ -103,55 +104,55 @@ msgstr ""
 #, kde-format
 msgctxt "OSD informing that the system is muted, keep short"
 msgid "Audio Muted"
-msgstr ""
+msgstr "Fuaim Múchta"
 
 #: osd.cpp:72
 #, kde-format
 msgctxt "OSD informing that the microphone is muted, keep short"
 msgid "Microphone Muted"
-msgstr ""
+msgstr "Micreafón Múchta"
 
 #: osd.cpp:88
 #, kde-format
 msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
 msgid "%1 Muted"
-msgstr ""
+msgstr "%1 Fuaime Múchta"
 
 #: osd.cpp:110
 #, kde-format
 msgctxt "touchpad was enabled, keep short"
 msgid "Touchpad On"
-msgstr ""
+msgstr "Ceap Tadhaill Ar"
 
 #: osd.cpp:112
 #, kde-format
 msgctxt "touchpad was disabled, keep short"
 msgid "Touchpad Off"
-msgstr ""
+msgstr "Ceap Tadhaill Múchta"
 
 #: osd.cpp:119
 #, kde-format
 msgctxt "wireless lan was enabled, keep short"
 msgid "Wifi On"
-msgstr ""
+msgstr "Wifi Ar"
 
 #: osd.cpp:121
 #, kde-format
 msgctxt "wireless lan was disabled, keep short"
 msgid "Wifi Off"
-msgstr ""
+msgstr "Wifi Múchta"
 
 #: osd.cpp:128
 #, kde-format
 msgctxt "Bluetooth was enabled, keep short"
 msgid "Bluetooth On"
-msgstr ""
+msgstr "Blutooth Ar"
 
 #: osd.cpp:130
 #, kde-format
 msgctxt "Bluetooth was disabled, keep short"
 msgid "Bluetooth Off"
-msgstr ""
+msgstr "Bluetooth Múchta"
 
 #: osd.cpp:137
 #, kde-format
@@ -190,7 +191,7 @@ msgstr ""
 #, kde-format
 msgctxt "Screen manufacturer and model on connector"
 msgid "%1 %2 on %3"
-msgstr ""
+msgstr "%1 %2 ar %3"
 
 #: shellcontainmentconfig.cpp:132
 #, kde-format
@@ -251,7 +252,7 @@ msgstr ""
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
-msgstr ""
+msgstr "Coimeád Folamh %1"
 
 #: softwarerendernotifier.cpp:27
 #, kde-format

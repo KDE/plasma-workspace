@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Guillaume Pujol <guill.p@gmail.com>, 2009.
 # Yoann Laissus <yoann.laissus@gmail.com>, 2015.
-# SPDX-FileCopyrightText: 2020, 2021, 2025 Xavier Besnard <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2020, 2021, 2025, 2026 Xavier Besnard <xavier.besnard@kde.org>
 #
 msgid ""
 msgstr ""
@@ -11,7 +11,7 @@ msgstr ""
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
 "PO-Revision-Date: 2021-05-27 14:42+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
-"Language-Team: French <French <kde-francophone@kde.org>>\n"
+"Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.12.0\n"
 "X-Text-Markup: kde4\n"
 
 #: freespacenotifier.cpp:91

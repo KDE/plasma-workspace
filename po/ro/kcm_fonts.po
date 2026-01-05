@@ -1,12 +1,12 @@
 # Traducerea kcmfonts.po în Română
+# SPDX-FileCopyrightText: 2008-2014, 2020, 2021, 2022, 2023, 2025 Sergiu Bivol <sergiu@cip.md>
 # Claudiu Costin <claudiuc@kde.org>, 2003, 2004, 2005.
-# Sergiu Bivol <sergiu@cip.md>, 2008-2014, 2020, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2022-12-29 17:29+0000\n"
+"PO-Revision-Date: 2025-12-12 11:21+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
 #: fontsaasettingsbase.kcfg:9
@@ -153,7 +153,7 @@ msgid ""
 "large font size, consider adjusting the global screen scale."
 msgstr ""
 "Fonturile foarte mari pot produce rezultate ce arată ciudat. În loc să "
-"folosiți o dimensiuni foarte mare a fonturilor, încercați ajustarea scalării "
+"folosiți o dimensiune foarte mare a fonturilor, încercați ajustarea scalării "
 "globale a ecranului."
 
 #: package/contents/ui/main.qml:72
