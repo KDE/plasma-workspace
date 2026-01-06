@@ -94,11 +94,10 @@ msgid "Configure for System…"
 msgstr ""
 
 #: ui/main.qml:53
-#, fuzzy, kde-format
-#| msgid "Other Applications"
+#, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Configure for Applications…"
-msgstr "其他应用"
+msgstr ""
 
 #: ui/main.qml:96
 #, kde-format
@@ -224,7 +223,7 @@ msgstr "经过此时长后隐藏："
 #: ui/main.qml:306
 #, kde-format
 msgid "Show timeout indicator"
-msgstr ""
+msgstr "显示超时指示器"
 
 #: ui/main.qml:318
 #, kde-format
@@ -290,15 +289,3 @@ msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior"
 msgstr "从列表中选择应用程序来配置其通知设置和行为"
-
-#~ msgctxt "@action:button Plasma-specific notifications"
-#~ msgid "System Notifications"
-#~ msgstr "系统通知"
-
-#~ msgctxt "@action:button Application-specific notifications"
-#~ msgid "Application Settings"
-#~ msgstr "应用程序设置"
-
-#~ msgctxt "@action:button choose custom notification position"
-#~ msgid "Custom…"
-#~ msgstr "自定义…"
