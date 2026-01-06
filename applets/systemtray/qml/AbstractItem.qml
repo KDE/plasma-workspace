@@ -21,6 +21,8 @@ PlasmaCore.ToolTipArea {
 
     required property int index
     required property var model
+    required property int status
+    required property int effectiveStatus
 
     required property string itemId
     /*required*/ property alias text: label.text
@@ -31,8 +33,6 @@ PlasmaCore.ToolTipArea {
     required textFormat
 
     readonly property alias iconContainer: iconContainer
-    readonly property int /*PlasmaCore.Types.ItemStatus*/ status: model.status || PlasmaCore.Types.UnknownStatus
-    readonly property int /*PlasmaCore.Types.ItemStatus*/ effectiveStatus: model.effectiveStatus || PlasmaCore.Types.UnknownStatus
     readonly property bool inHiddenLayout: effectiveStatus === PlasmaCore.Types.PassiveStatus
     readonly property bool inVisibleLayout: effectiveStatus === PlasmaCore.Types.ActiveStatus
 

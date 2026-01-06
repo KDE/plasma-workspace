@@ -15,10 +15,10 @@ import org.kde.plasma.plasmoid
 AbstractItem {
     id: taskIcon
 
-    itemId: model.Id
-    text: model.Title || model.ToolTipTitle
-    mainText: inVisibleLayout || (model.ToolTipTitle !== "" && model.ToolTipTitle !== text) ? model.ToolTipTitle : ""
-    subText: model.ToolTipSubTitle
+    itemId: model?.Id ?? ""
+    text: model?.Title || model?.ToolTipTitle || ""
+    mainText: inVisibleLayout || (model?.ToolTipTitle !== "" && model?.ToolTipTitle !== text) ? model?.ToolTipTitle ?? "" : ""
+    subText: model?.ToolTipSubTitle ?? ""
     textFormat: Text.AutoText
     active: inVisibleLayout || text != mainText || subText.length > 0
 
@@ -28,15 +28,15 @@ AbstractItem {
         anchors.fill: iconItem.parent
 
         source: {
-            if (taskIcon.model.status === PlasmaCore.Types.NeedsAttentionStatus) {
-                if (taskIcon.model.AttentionIcon) {
+            if (taskIcon.model?.status === PlasmaCore.Types.NeedsAttentionStatus) {
+                if (taskIcon.model?.AttentionIcon) {
                     return taskIcon.model.AttentionIcon
                 }
-                if (taskIcon.model.AttentionIconName) {
+                if (taskIcon.model?.AttentionIconName) {
                     return taskIcon.model.AttentionIconName
                 }
             }
-            return taskIcon.model.Icon || taskIcon.model.IconName
+            return taskIcon.model?.Icon || taskIcon.model?.IconName || ""
         }
         active: taskIcon.containsMouse
     }

@@ -4,7 +4,7 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
-// should be pragma ComponentBehavior: Bound but this causes weird errors
+pragma ComponentBehavior: Bound
 
 import QtQuick
 import QtQuick.Layouts

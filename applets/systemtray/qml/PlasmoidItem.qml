@@ -17,11 +17,11 @@ import org.kde.plasma.plasmoid
 AbstractItem {
     id: plasmoidContainer
 
-    property Item applet: model.applet ?? null
+    property Item applet: model?.applet ?? null
     text: applet?.Plasmoid.title ?? ""
 
     itemId: applet?.Plasmoid.pluginName ?? ""
-    mainText: inVisibleLayout || (applet && applet.toolTipMainText && applet.toolTipMainText != text) ? applet.toolTipMainText : ""
+    mainText: applet && (inVisibleLayout || (applet.toolTipMainText && applet.toolTipMainText != text)) ? applet.toolTipMainText : ""
     subText: applet?.toolTipSubText ?? ""
     mainItem: applet?.toolTipItem ?? null
     textFormat: applet?.toolTipTextFormat ?? 0 /* Text.AutoText, the default value */
@@ -198,15 +198,15 @@ AbstractItem {
     Binding {
         property: "activeFocusOnTab"
         value: false
-        target: plasmoidContainer.applet.compactRepresentationItem
-        when: plasmoidContainer.applet !== null && plasmoidContainer.inHiddenLayout
+        target: plasmoidContainer.applet?.compactRepresentationItem ?? null
+        when: plasmoidContainer?.applet && plasmoidContainer.inHiddenLayout
         restoreMode: Binding.RestoreBinding
     }
     Binding {
         property: "activeFocusOnTab"
         value: false
-        target: plasmoidContainer.applet.fullRepresentationItem
-        when: plasmoidContainer.applet !== null && plasmoidContainer.inHiddenLayout && !plasmoidContainer.applet.compactRepresentationItem
+        target: plasmoidContainer.applet?.fullRepresentationItem ?? null
+        when: plasmoidContainer?.applet && plasmoidContainer.inHiddenLayout && !plasmoidContainer.applet.compactRepresentationItem
         restoreMode: Binding.RestoreBinding
     }
 }

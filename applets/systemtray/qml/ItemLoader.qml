@@ -10,6 +10,8 @@ import QtQuick
 
 Loader {
     required property int index
+    required property int status
+    required property int effectiveStatus
     required property var model
 
     z: x + 1 // always be above what it's on top of, even for x==0
@@ -29,6 +31,8 @@ Loader {
     on__UrlChanged: {
         setSource(__url, {
             index: Qt.binding(() => index),
+            status: Qt.binding(() => status),
+            effectiveStatus: Qt.binding(() => effectiveStatus),
             model: Qt.binding(() => model),
         });
     }
