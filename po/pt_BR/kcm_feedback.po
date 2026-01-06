@@ -5,20 +5,21 @@
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2019, 2021, 2022.
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2019, 2020.
 # Thiago Masato Costa Sueto <herzenschein@gmail.com>, 2020.
+# SPDX-FileCopyrightText: 2026 Guilherme Marçal Silva <guimarcalsilva@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 14:42+0000\n"
-"PO-Revision-Date: 2022-01-17 15:14-0300\n"
-"Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
-"Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
+"PO-Revision-Date: 2026-01-05 18:47-0300\n"
+"Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
+"Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #: ui/main.qml:32
 #, kde-format
@@ -45,10 +46,10 @@ msgid ""
 "privacypolicy-apps.php'>our privacy policy here.</link>"
 msgstr ""
 "Você pode ajudar a KDE a melhorar o Plasma contribuindo com informações "
-"sobre a forma como o usa, para que nos possamos focar nas coisas que "
+"sobre a forma como o usa, para que nós possamos focar nas coisas que "
 "realmente lhe interessam.<nl/><nl/>Contribuir com essas informações é "
-"opcional e completamente anônima. Nunca coletaremos os seus dados pessoais, "
-"arquivos, sites que visita ou quaisquer outras informações que o possam "
+"opcional e completamente anônimo. Nunca coletaremos os seus dados pessoais, "
+"arquivos, sites que visita ou quaisquer outras informações que possam "
 "identificá-lo.<nl/><nl/>Você pode ler sobre <link url='https://kde.org/"
 "privacypolicy-apps.php'>nossa política de privacidade aqui.</link>"
 
