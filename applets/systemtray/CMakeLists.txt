@@ -74,6 +74,11 @@ plasma_add_applet(org.kde.plasma.systemtray
         main.xml
 )
 
+ecm_add_qml_module(systemtrayplugin URI org.kde.plasma.private.systemtray GENERATE_PLUGIN_SOURCE)
+target_sources(systemtrayplugin PRIVATE systemtraymodel.cpp)
+target_link_libraries(systemtrayplugin PRIVATE systemtray_static)
+ecm_finalize_qml_module(systemtrayplugin)
+
 target_link_libraries(org.kde.plasma.systemtray PRIVATE systemtray_static)
 
 install(FILES statusnotifieritem.operations DESTINATION ${PLASMA5SUPPORT_DATA_INSTALL_DIR}/services)
