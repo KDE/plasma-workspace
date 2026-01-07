@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-03 00:45+0000\n"
-"PO-Revision-Date: 2025-04-27 23:45+0300\n"
+"PO-Revision-Date: 2026-01-06 13:15+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.8\n"
 
 #: kcm.cpp:62
 #, kde-format
@@ -92,19 +92,16 @@ msgid "Choose sound file"
 msgstr "Pasirinkti garso failą"
 
 #: ui/main.qml:47
-#, fuzzy, kde-format
-#| msgid "Configure…"
+#, kde-format
 msgctxt "@action:button Plasma-specific notifications"
 msgid "Configure for System…"
-msgstr "Konfigūruoti…"
+msgstr "Konfigūruoti sistemai…"
 
 #: ui/main.qml:53
-#, fuzzy, kde-format
-#| msgctxt "@action:button Application-specific notifications"
-#| msgid "Configure Application Settings…"
+#, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Configure for Applications…"
-msgstr "Konfigūruoti programos nuostatas…"
+msgstr "Konfigūruoti programoms…"
 
 #: ui/main.qml:96
 #, kde-format
@@ -214,7 +211,7 @@ msgstr "Šalia pranešimų piktogramos"
 #, kde-format
 msgctxt "@action:button choose custom notification position"
 msgid "Choose…"
-msgstr ""
+msgstr "Pasirinkti…"
 
 #: ui/main.qml:278 ui/main.qml:294
 #, kde-format
@@ -232,11 +229,9 @@ msgid "Hide after:"
 msgstr "Slėpti po:"
 
 #: ui/main.qml:306
-#, fuzzy, kde-format
-#| msgctxt "Show application jobs in notification widget"
-#| msgid "Show in notifications"
+#, kde-format
 msgid "Show timeout indicator"
-msgstr "Rodyti pranešimuose"
+msgstr "Rodyti skirtojo laiko indikatorių"
 
 #: ui/main.qml:318
 #, kde-format
