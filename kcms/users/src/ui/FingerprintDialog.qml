@@ -29,6 +29,7 @@ Kirigami.Dialog {
 
     visible: true
 
+    onRejected: root.fingerprintModel.stopEnrolling()
 
     standardButtons: QQC2.Dialog.NoButton
 
