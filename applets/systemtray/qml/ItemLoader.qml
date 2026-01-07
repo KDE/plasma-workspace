@@ -10,7 +10,6 @@ import QtQuick
 
 Loader {
     required property int index
-    required property int status
     required property int effectiveStatus
     required property var model
 
@@ -31,7 +30,7 @@ Loader {
     on__UrlChanged: {
         setSource(__url, {
             index: Qt.binding(() => index),
-            status: Qt.binding(() => status),
+            status: Qt.binding(() => model.status),
             effectiveStatus: Qt.binding(() => effectiveStatus),
             model: Qt.binding(() => model),
         });
