@@ -46,6 +46,7 @@ using namespace std::chrono_literals;
 using namespace Qt::StringLiterals;
 
 static const int MINSIZE = 10;
+PanelView *PanelView::s_panelBeingConfigured = nullptr;
 
 PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent)
     : PlasmaQuick::ContainmentView(corona, parent)
@@ -119,7 +120,7 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
     m_strutsTimer.setSingleShot(true);
     connect(&m_strutsTimer, &QTimer::timeout, this, &PanelView::updateExclusiveZone);
 
-    connect(m_corona, &Plasma::Corona::editModeChanged, this, &PanelView::updateEditModeLabel);
+    connect(m_corona, &Plasma::Corona::editModeChanged, this, &PanelView::panelIsBeingConfiguredChanged);
 
     // Register enums
     qmlRegisterUncreatableMetaObject(PanelView::staticMetaObject, "org.kde.plasma.shell.panel", 0, 1, "Global", QStringLiteral("Error: only enums"));
@@ -134,6 +135,10 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
 
 PanelView::~PanelView()
 {
+    if (s_panelBeingConfigured == this) {
+        s_panelBeingConfigured = nullptr;
+    }
+
     if (containment()) {
         m_corona->requestApplicationConfigSync();
     }
@@ -975,12 +980,12 @@ void PanelView::showConfigurationInterface(Plasma::Applet *applet)
                 QTimer::singleShot(0, this, &PanelView::positionConfigView);
             });
             positionConfigView();
+            connect(m_panelConfigView, &PanelConfigView::visibleChanged, this, &PanelView::panelIsBeingConfiguredChanged);
+            panelIsBeingConfiguredChanged();
 
             configView->init();
             configView->show();
             configView->requestActivate();
-            connect(m_panelConfigView, &PanelConfigView::visibleChanged, this, &PanelView::updateEditModeLabel);
-            updateEditModeLabel();
         }
     } else {
         containment()->corona()->setEditMode(false);
@@ -1130,7 +1135,7 @@ void PanelView::integrateScreen()
     }
 }
 
-void PanelView::updateEditModeLabel()
+void PanelView::panelIsBeingConfiguredChanged()
 {
     bool editMode = containment()->corona()->isEditMode();
     QAction *action = containment()->internalAction(u"configure"_s);
@@ -1142,6 +1147,14 @@ void PanelView::updateEditModeLabel()
     } else {
         action->setText(i18nc("@action:inmenu", "Show Panel Configuration"));
     }
+    if (m_panelConfigView && m_panelConfigView->isVisible()) {
+        if (s_panelBeingConfigured && s_panelBeingConfigured != this && s_panelBeingConfigured->m_panelConfigView) {
+            s_panelBeingConfigured->m_panelConfigView->hide();
+        }
+        s_panelBeingConfigured = this;
+    } else if (s_panelBeingConfigured == this) {
+        s_panelBeingConfigured = nullptr;
+    }
 }
 
 void PanelView::showEvent(QShowEvent *event)
@@ -1149,7 +1162,7 @@ void PanelView::showEvent(QShowEvent *event)
     PlasmaQuick::ContainmentView::showEvent(event);
 
     integrateScreen();
-    updateEditModeLabel();
+    panelIsBeingConfiguredChanged();
 }
 
 void PanelView::setScreenToFollow(QScreen *screen)

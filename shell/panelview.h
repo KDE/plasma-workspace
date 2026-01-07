@@ -331,7 +331,7 @@ private:
     void positionPanel();
     void positionAndResizePanel();
     void integrateScreen();
-    void updateEditModeLabel();
+    void panelIsBeingConfiguredChanged();
     bool containmentContainsPosition(const QPointF &point) const;
     QPointF positionAdjustedForContainment(const QPointF &point) const;
     bool edgeActivated() const;
@@ -380,5 +380,6 @@ private:
     QMetaObject::Connection m_transientWindowVisibleWatcher;
     AutoHideScreenEdge *m_autoHideScreenEdge = nullptr;
 
+    static PanelView *s_panelBeingConfigured;
     static const int STRUTSTIMERDELAY = 200;
 };
