@@ -43,15 +43,10 @@ void setParentWindow(QWidget *widget, const QString &windowId)
 KSecretPrompter::KSecretPrompter(QObject *parent)
     : QObject(parent)
     , m_quitTimer(new QTimer(this))
-    , m_maybeQuitTimer(new QTimer(this))
 {
-    m_quitTimer->setInterval(30s);
-    connect(m_quitTimer, &QTimer::timeout, qApp, &QCoreApplication::quit);
+    m_quitTimer->setInterval(1min);
+    connect(m_quitTimer, &QTimer::timeout, this, &KSecretPrompter::maybeQuit);
     m_quitTimer->start();
-
-    m_maybeQuitTimer->setInterval(1min);
-    connect(m_maybeQuitTimer, &QTimer::timeout, this, &KSecretPrompter::maybeQuit);
-    m_maybeQuitTimer->start();
 
     new SecretprompterAdaptor(this);
 
@@ -63,8 +58,6 @@ KSecretPrompter::KSecretPrompter(QObject *parent)
 
 void KSecretPrompter::Prompt(const QDBusObjectPath &path, const QString &title, const QString &prompt, const QString &windowId)
 {
-    m_quitTimer->stop();
-
     auto context = make_shared_qobject<PromptContext>(message().service(), path, this);
     if (!context->isValid()) {
         qCWarning(KSecretPrompterDaemon) << "Invalid prompt context for caller:" << message().service() << "path:" << path.path();
@@ -192,7 +185,7 @@ void KSecretPrompter::CreateCollectionPrompt(const QDBusObjectPath &path,
 void KSecretPrompter::maybeQuit()
 {
     if (m_activePrompts.isEmpty()) {
-        m_quitTimer->start();
+        qApp->quit();
     }
 }
 

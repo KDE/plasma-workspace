@@ -35,5 +35,4 @@ private:
     void maybeQuit();
     QHash<Id, std::shared_ptr<PromptContext>> m_activePrompts;
     QTimer *m_quitTimer;
-    QTimer *m_maybeQuitTimer;
 };
