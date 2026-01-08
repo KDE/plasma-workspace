@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-03 00:45+0000\n"
-"PO-Revision-Date: 2026-01-01 12:10+0300\n"
-"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
+"PO-Revision-Date: 2026-01-07 20:13+0300\n"
+"Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
@@ -93,14 +93,13 @@ msgstr "Ses dosyası seç"
 #, kde-format
 msgctxt "@action:button Plasma-specific notifications"
 msgid "Configure for System…"
-msgstr ""
+msgstr "Sistem için Yapılandır…"
 
 #: ui/main.qml:53
-#, fuzzy, kde-format
-#| msgid "Other Applications"
+#, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Configure for Applications…"
-msgstr "Başka Uygulamalar"
+msgstr "Uygulamalar için Yapılandır…"
 
 #: ui/main.qml:96
 #, kde-format
@@ -210,7 +209,7 @@ msgstr "Bildirim simgesi yakınında"
 #, kde-format
 msgctxt "@action:button choose custom notification position"
 msgid "Choose…"
-msgstr ""
+msgstr "Seç…"
 
 #: ui/main.qml:278 ui/main.qml:294
 #, kde-format

@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2024-09-19 17:04+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -601,23 +601,23 @@ msgstr ""
 "Το σύστημα υποστήριξης τερματίστηκε, αλλά επανεκκινήθηκε. Παρακαλούμε "
 "δοκιμάστε ξανά."
 
-#: kcmfontinst/JobRunner.cpp:618 kcmfontinst/JobRunner.cpp:624
+#: kcmfontinst/JobRunner.cpp:618 kcmfontinst/JobRunner.cpp:625
 #, kde-format
 msgid "<h3>Error</h3>"
 msgstr "<h3>Σφάλμα</h3>"
 
-#: kcmfontinst/JobRunner.cpp:690
+#: kcmfontinst/JobRunner.cpp:692
 #, kde-format
 msgid "Failed to download <i>%1</i>"
 msgstr "Αποτυχία λήψης του <i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:692
+#: kcmfontinst/JobRunner.cpp:694
 #, kde-format
 msgid "System backend died. Please try again.<br><i>%1</i>"
 msgstr ""
 "Το σύστημα υποστήριξης τερματίστηκε. Παρακαλούμε δοκιμάστε ξανά.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:694
+#: kcmfontinst/JobRunner.cpp:696
 #, kde-format
 msgid ""
 "<i>%1</i> is a bitmap font, and these have been disabled on your system."
@@ -625,7 +625,7 @@ msgstr ""
 "Το <i>%1</i> είναι γραμματοσειρά bitmap, οι οποίες έχουν απενεργοποιηθεί στο "
 "σύστημά σας."
 
-#: kcmfontinst/JobRunner.cpp:696
+#: kcmfontinst/JobRunner.cpp:698
 #, kde-format
 msgid ""
 "<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
@@ -634,48 +634,48 @@ msgstr ""
 "Το <i>%1</i> περιέχει τη γραμματοσειρά <b>%2</b>, η οποία είναι ήδη "
 "εγκατεστημένη στο σύστημά σας."
 
-#: kcmfontinst/JobRunner.cpp:698
+#: kcmfontinst/JobRunner.cpp:700
 #, kde-format
 msgid "<i>%1</i> is not a font."
 msgstr "Το <i>%1</i> δεν είναι γραμματοσειρά."
 
-#: kcmfontinst/JobRunner.cpp:700
+#: kcmfontinst/JobRunner.cpp:702
 #, kde-format
 msgid "Could not remove all files associated with <i>%1</i>"
 msgstr ""
 "Δεν ήταν δυνατή η αφαίρεση όλων των αρχείων που σχετίζονται με το <i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:702
+#: kcmfontinst/JobRunner.cpp:704
 #, kde-format
 msgid "Failed to start the system daemon.<br><i>%1</i>"
 msgstr "Αδυναμία εκκίνησης του δαίμονα συστήματος.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:705 kio/KioFonts.cpp:719
+#: kcmfontinst/JobRunner.cpp:707 kio/KioFonts.cpp:719
 #, kde-format
 msgid "<i>%1</i> already exists."
 msgstr "Το <i>%1</i> υπάρχει ήδη."
 
-#: kcmfontinst/JobRunner.cpp:708
+#: kcmfontinst/JobRunner.cpp:710
 #, kde-format
 msgid "<i>%1</i> does not exist."
 msgstr "Το <i>%1</i> δεν υπάρχει."
 
-#: kcmfontinst/JobRunner.cpp:710
+#: kcmfontinst/JobRunner.cpp:712
 #, kde-format
 msgid "Permission denied.<br><i>%1</i>"
 msgstr "Η άδεια απορρίφθηκε.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:712
+#: kcmfontinst/JobRunner.cpp:714
 #, kde-format
 msgid "Unsupported action.<br><i>%1</i>"
 msgstr "Μη υποστηριζόμενη ενέργεια.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:714
+#: kcmfontinst/JobRunner.cpp:716
 #, kde-format
 msgid "Authentication failed.<br><i>%1</i>"
 msgstr "Η ταυτοποίηση απέτυχε.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:716
+#: kcmfontinst/JobRunner.cpp:718
 #, kde-format
 msgid "Unexpected error while processing: <i>%1</i>"
 msgstr "Απρόβλεπτο σφάλμα κατά την επεξεργασία: <i>%1</i>"
@@ -1220,54 +1220,54 @@ msgstr "Δεν ήταν δυνατή η αφαίρεση όλων των αρχ�
 msgid "Unknown"
 msgstr "Άγνωστο"
 
-#: lib/FcEngine.cpp:869
+#: lib/FcEngine.cpp:894
 #, kde-format
 msgctxt "First letter of the alphabet (in upper then lower case)"
 msgid "Aa"
 msgstr "Αα"
 
-#: lib/FcEngine.cpp:872
+#: lib/FcEngine.cpp:897
 #, kde-format
 msgctxt ""
 "All letters of the alphabet (in upper/lower case pairs), followed by numbers"
 msgid "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789"
 msgstr "αΑβΒγΓδΔεΕζΖηΗθΘιΙκΚλΛμΜνΝξΞοΟπΠρΡσΣτΤυΥφΦχΧψΨωΩ0123456789"
 
-#: lib/FcEngine.cpp:1034
+#: lib/FcEngine.cpp:1059
 #, kde-format
 msgid "No characters found."
 msgstr "Δε βρέθηκαν χαρακτήρες."
 
-#: lib/FcEngine.cpp:1072
+#: lib/FcEngine.cpp:1097
 #, kde-format
 msgctxt "A sentence that uses all of the letters of the alphabet"
 msgid "The quick brown fox jumps over the lazy dog"
 msgstr "Νίψον ανομήματα μη μόναν όψιν"
 
-#: lib/FcEngine.cpp:1077
+#: lib/FcEngine.cpp:1102
 #, kde-format
 msgctxt "All of the letters of the alphabet, uppercase"
 msgid "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 msgstr "ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ"
 
-#: lib/FcEngine.cpp:1082
+#: lib/FcEngine.cpp:1107
 #, kde-format
 msgctxt "All of the letters of the alphabet, lowercase"
 msgid "abcdefghijklmnopqrstuvwxyz"
 msgstr "αβγδεζηθικλμνξοπρστυφχψω"
 
-#: lib/FcEngine.cpp:1087
+#: lib/FcEngine.cpp:1112
 #, kde-format
 msgctxt "Numbers and characters"
 msgid "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
 msgstr "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
 
-#: lib/FcEngine.cpp:1485
+#: lib/FcEngine.cpp:1510
 #, kde-format
 msgid "ERROR: Could not determine font's name."
 msgstr "ΣΦΑΛΜΑ: Δεν μπορώ να καθορίσω το όνομα της γραμματοσειράς."
 
-#: lib/FcEngine.cpp:1488
+#: lib/FcEngine.cpp:1513
 #, kde-format
 msgid "%2 [1 pixel]"
 msgid_plural "%2 [%1 pixels]"

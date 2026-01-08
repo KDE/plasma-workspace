@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-22 00:44+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-07-23 23:28+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -86,71 +86,77 @@ msgstr ""
 msgid "When restarted, the computer will enter the boot loader menu."
 msgstr "En reiniciar, l'ordinador presentarà el menú del gestor d'arrancada."
 
-#: contents/logout/Logout.qml:221
+#: contents/logout/Logout.qml:212
+#, fuzzy, kde-format
+#| msgid "When restarted, the computer will enter the boot loader menu."
+msgid "When restarted, the computer will switch to %1."
+msgstr "En reiniciar, l'ordinador presentarà el menú del gestor d'arrancada."
+
+#: contents/logout/Logout.qml:234
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p"
 msgstr "Sus&pèn"
 
-#: contents/logout/Logout.qml:222
+#: contents/logout/Logout.qml:235
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p Now"
 msgstr "Sus&pèn ara"
 
-#: contents/logout/Logout.qml:231
+#: contents/logout/Logout.qml:244
 #, kde-format
 msgid "&Hibernate"
 msgstr "&Hiberna"
 
-#: contents/logout/Logout.qml:232
+#: contents/logout/Logout.qml:245
 #, kde-format
 msgid "&Hibernate Now"
 msgstr "&Hiberna ara"
 
-#: contents/logout/Logout.qml:243
+#: contents/logout/Logout.qml:256
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
 msgstr "Instal·la les actualitzacions i reinicia"
 
-#: contents/logout/Logout.qml:245 contents/logout/Logout.qml:264
+#: contents/logout/Logout.qml:258 contents/logout/Logout.qml:277
 #, kde-format
 msgid "&Restart"
 msgstr "&Reinicia"
 
-#: contents/logout/Logout.qml:246 contents/logout/Logout.qml:265
+#: contents/logout/Logout.qml:259 contents/logout/Logout.qml:278
 #, kde-format
 msgid "&Restart Now"
 msgstr "&Reinicia ara"
 
-#: contents/logout/Logout.qml:278
+#: contents/logout/Logout.qml:291
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
 msgstr "Instal·la les actualitzacions i para"
 
-#: contents/logout/Logout.qml:280 contents/logout/Logout.qml:299
+#: contents/logout/Logout.qml:293 contents/logout/Logout.qml:312
 #, kde-format
 msgid "&Shut Down"
 msgstr "&Para"
 
-#: contents/logout/Logout.qml:281 contents/logout/Logout.qml:300
+#: contents/logout/Logout.qml:294 contents/logout/Logout.qml:313
 #, kde-format
 msgid "&Shut Down Now"
 msgstr "&Para ara"
 
-#: contents/logout/Logout.qml:312
+#: contents/logout/Logout.qml:325
 #, kde-format
 msgid "&Log Out"
 msgstr "I&x"
 
-#: contents/logout/Logout.qml:313
+#: contents/logout/Logout.qml:326
 #, kde-format
 msgid "&Log Out Now"
 msgstr "I&x ara"
 
-#: contents/logout/Logout.qml:323
+#: contents/logout/Logout.qml:336
 #, kde-format
 msgid "&Cancel"
 msgstr "C&ancel·la"

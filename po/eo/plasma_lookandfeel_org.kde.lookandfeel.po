@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-22 00:44+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2024-12-31 11:42+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -84,71 +84,77 @@ msgstr "Rekomencinte, la komputilo eniros la ekranon de agordo de firmware."
 msgid "When restarted, the computer will enter the boot loader menu."
 msgstr "Rekomencante, la komputilo eniros la praŝargilan menuon."
 
-#: contents/logout/Logout.qml:221
+#: contents/logout/Logout.qml:212
+#, fuzzy, kde-format
+#| msgid "When restarted, the computer will enter the boot loader menu."
+msgid "When restarted, the computer will switch to %1."
+msgstr "Rekomencante, la komputilo eniros la praŝargilan menuon."
+
+#: contents/logout/Logout.qml:234
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p"
 msgstr "&Dormi"
 
-#: contents/logout/Logout.qml:222
+#: contents/logout/Logout.qml:235
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p Now"
 msgstr "&Dormi Nun"
 
-#: contents/logout/Logout.qml:231
+#: contents/logout/Logout.qml:244
 #, kde-format
 msgid "&Hibernate"
 msgstr "Pas&ivumigi"
 
-#: contents/logout/Logout.qml:232
+#: contents/logout/Logout.qml:245
 #, kde-format
 msgid "&Hibernate Now"
 msgstr "Pas&ivumigi Nun"
 
-#: contents/logout/Logout.qml:243
+#: contents/logout/Logout.qml:256
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
 msgstr "Instali Ĝisdatigojn kaj Rekomenci"
 
-#: contents/logout/Logout.qml:245 contents/logout/Logout.qml:264
+#: contents/logout/Logout.qml:258 contents/logout/Logout.qml:277
 #, kde-format
 msgid "&Restart"
 msgstr "&Rekomenci"
 
-#: contents/logout/Logout.qml:246 contents/logout/Logout.qml:265
+#: contents/logout/Logout.qml:259 contents/logout/Logout.qml:278
 #, kde-format
 msgid "&Restart Now"
 msgstr "&Rekomenci Nun"
 
-#: contents/logout/Logout.qml:278
+#: contents/logout/Logout.qml:291
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
 msgstr "Instali Ĝisdatigojn kaj Sistemfermi"
 
-#: contents/logout/Logout.qml:280 contents/logout/Logout.qml:299
+#: contents/logout/Logout.qml:293 contents/logout/Logout.qml:312
 #, kde-format
 msgid "&Shut Down"
 msgstr "Fermi &sistemon"
 
-#: contents/logout/Logout.qml:281 contents/logout/Logout.qml:300
+#: contents/logout/Logout.qml:294 contents/logout/Logout.qml:313
 #, kde-format
 msgid "&Shut Down Now"
 msgstr "&Sistemfermi Nun"
 
-#: contents/logout/Logout.qml:312
+#: contents/logout/Logout.qml:325
 #, kde-format
 msgid "&Log Out"
 msgstr "Elsa&luti"
 
-#: contents/logout/Logout.qml:313
+#: contents/logout/Logout.qml:326
 #, kde-format
 msgid "&Log Out Now"
 msgstr "Elsa&luti Nun"
 
-#: contents/logout/Logout.qml:323
+#: contents/logout/Logout.qml:336
 #, kde-format
 msgid "&Cancel"
 msgstr "Nuli&gi"

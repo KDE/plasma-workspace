@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-22 00:44+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2025-01-02 18:56+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -74,71 +74,77 @@ msgstr "重新開機後，電腦將進入韌體設定畫面。"
 msgid "When restarted, the computer will enter the boot loader menu."
 msgstr "重新開機後，電腦將進入開機管理員選單。"
 
-#: contents/logout/Logout.qml:221
+#: contents/logout/Logout.qml:212
+#, fuzzy, kde-format
+#| msgid "When restarted, the computer will enter the boot loader menu."
+msgid "When restarted, the computer will switch to %1."
+msgstr "重新開機後，電腦將進入開機管理員選單。"
+
+#: contents/logout/Logout.qml:234
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p"
 msgstr "睡眠(&P)"
 
-#: contents/logout/Logout.qml:222
+#: contents/logout/Logout.qml:235
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p Now"
 msgstr "立即睡眠(&P)"
 
-#: contents/logout/Logout.qml:231
+#: contents/logout/Logout.qml:244
 #, kde-format
 msgid "&Hibernate"
 msgstr "休眠(&H)"
 
-#: contents/logout/Logout.qml:232
+#: contents/logout/Logout.qml:245
 #, kde-format
 msgid "&Hibernate Now"
 msgstr "立即休眠(&H)"
 
-#: contents/logout/Logout.qml:243
+#: contents/logout/Logout.qml:256
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
 msgstr "安裝更新後重新啟動"
 
-#: contents/logout/Logout.qml:245 contents/logout/Logout.qml:264
+#: contents/logout/Logout.qml:258 contents/logout/Logout.qml:277
 #, kde-format
 msgid "&Restart"
 msgstr "重新啟動(&R)"
 
-#: contents/logout/Logout.qml:246 contents/logout/Logout.qml:265
+#: contents/logout/Logout.qml:259 contents/logout/Logout.qml:278
 #, kde-format
 msgid "&Restart Now"
 msgstr "立即重新啟動(&R)"
 
-#: contents/logout/Logout.qml:278
+#: contents/logout/Logout.qml:291
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
 msgstr "安裝更新後關機"
 
-#: contents/logout/Logout.qml:280 contents/logout/Logout.qml:299
+#: contents/logout/Logout.qml:293 contents/logout/Logout.qml:312
 #, kde-format
 msgid "&Shut Down"
 msgstr "關機(&S)"
 
-#: contents/logout/Logout.qml:281 contents/logout/Logout.qml:300
+#: contents/logout/Logout.qml:294 contents/logout/Logout.qml:313
 #, kde-format
 msgid "&Shut Down Now"
 msgstr "立即關機(&S)"
 
-#: contents/logout/Logout.qml:312
+#: contents/logout/Logout.qml:325
 #, kde-format
 msgid "&Log Out"
 msgstr "登出(&L)"
 
-#: contents/logout/Logout.qml:313
+#: contents/logout/Logout.qml:326
 #, kde-format
 msgid "&Log Out Now"
 msgstr "立即登出(&L)"
 
-#: contents/logout/Logout.qml:323
+#: contents/logout/Logout.qml:336
 #, kde-format
 msgid "&Cancel"
 msgstr "取消(&C)"

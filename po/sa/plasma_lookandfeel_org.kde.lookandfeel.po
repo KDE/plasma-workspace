@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-22 00:44+0000\n"
+"POT-Creation-Date: 2026-01-08 00:45+0000\n"
 "PO-Revision-Date: 2024-12-20 12:26+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -79,7 +79,13 @@ msgstr "पुनः आरभ्यते सति सङ्गणकः फ�
 msgid "When restarted, the computer will enter the boot loader menu."
 msgstr "पुनः आरभ्यते सति सङ्गणकः बूट् लोडर् मेन्यू मध्ये प्रविशति ।"
 
-#: contents/logout/Logout.qml:221
+#: contents/logout/Logout.qml:212
+#, fuzzy, kde-format
+#| msgid "When restarted, the computer will enter the boot loader menu."
+msgid "When restarted, the computer will switch to %1."
+msgstr "पुनः आरभ्यते सति सङ्गणकः बूट् लोडर् मेन्यू मध्ये प्रविशति ।"
+
+#: contents/logout/Logout.qml:234
 #, fuzzy, kde-format
 #| msgctxt "Suspend to RAM"
 #| msgid "Sleep"
@@ -87,7 +93,7 @@ msgctxt "Suspend to RAM"
 msgid "Slee&p"
 msgstr "शयनं करोतु"
 
-#: contents/logout/Logout.qml:222
+#: contents/logout/Logout.qml:235
 #, fuzzy, kde-format
 #| msgctxt "Suspend to RAM"
 #| msgid "Sleep Now"
@@ -95,67 +101,67 @@ msgctxt "Suspend to RAM"
 msgid "Slee&p Now"
 msgstr "अधुना निद्रातु"
 
-#: contents/logout/Logout.qml:231
+#: contents/logout/Logout.qml:244
 #, fuzzy, kde-format
 #| msgid "Hibernate"
 msgid "&Hibernate"
 msgstr "शीतनिद्रा"
 
-#: contents/logout/Logout.qml:232
+#: contents/logout/Logout.qml:245
 #, fuzzy, kde-format
 #| msgid "Hibernate Now"
 msgid "&Hibernate Now"
 msgstr "अधुना हाइबरनेटं कुर्वन्तु"
 
-#: contents/logout/Logout.qml:243
+#: contents/logout/Logout.qml:256
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
 msgstr "Updates संस्थाप्य पुनः आरम्भं कुर्वन्तु"
 
-#: contents/logout/Logout.qml:245 contents/logout/Logout.qml:264
+#: contents/logout/Logout.qml:258 contents/logout/Logout.qml:277
 #, fuzzy, kde-format
 #| msgid "Restart"
 msgid "&Restart"
 msgstr "पुनः आरभत"
 
-#: contents/logout/Logout.qml:246 contents/logout/Logout.qml:265
+#: contents/logout/Logout.qml:259 contents/logout/Logout.qml:278
 #, fuzzy, kde-format
 #| msgid "Restart Now"
 msgid "&Restart Now"
 msgstr "अधुना पुनः आरभत"
 
-#: contents/logout/Logout.qml:278
+#: contents/logout/Logout.qml:291
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
 msgstr "Updates संस्थाप्य Shut Down कुर्वन्तु"
 
-#: contents/logout/Logout.qml:280 contents/logout/Logout.qml:299
+#: contents/logout/Logout.qml:293 contents/logout/Logout.qml:312
 #, fuzzy, kde-format
 #| msgid "Shut Down"
 msgid "&Shut Down"
 msgstr "शट डाउन"
 
-#: contents/logout/Logout.qml:281 contents/logout/Logout.qml:300
+#: contents/logout/Logout.qml:294 contents/logout/Logout.qml:313
 #, fuzzy, kde-format
 #| msgid "Shut Down Now"
 msgid "&Shut Down Now"
 msgstr "अधुना निरुद्धं कुरुत"
 
-#: contents/logout/Logout.qml:312
+#: contents/logout/Logout.qml:325
 #, fuzzy, kde-format
 #| msgid "Log Out"
 msgid "&Log Out"
 msgstr "Log Out इति"
 
-#: contents/logout/Logout.qml:313
+#: contents/logout/Logout.qml:326
 #, fuzzy, kde-format
 #| msgid "Log Out Now"
 msgid "&Log Out Now"
 msgstr "अधुना लॉग आउट् कुर्वन्तु"
 
-#: contents/logout/Logout.qml:323
+#: contents/logout/Logout.qml:336
 #, fuzzy, kde-format
 #| msgid "Cancel"
 msgid "&Cancel"
