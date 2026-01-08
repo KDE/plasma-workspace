@@ -22,7 +22,7 @@ Kirigami.Icon {
     implicitWidth: Kirigami.Units.iconSizes.large
     implicitHeight: Kirigami.Units.iconSizes.large
 
-    source: modelInterface.icon
+    source: modelInterface.icon !== modelInterface.applicationIconSource ? modelInterface.icon : null
     // don't show two identical icons
     visible: valid || ((jobIconLoader.item as JobIconItem)?.shown ?? false)
 
