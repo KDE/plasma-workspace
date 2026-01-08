@@ -53,9 +53,7 @@ bool Request::handleMessage(const QDBusMessage &message, const QDBusConnection &
         return false;
     }
 
-    if (message.member() == QLatin1String("Version")) {
-        connection.send(message.createReply(1));
-    } else if (message.member() == QLatin1String("Accepted")) {
+    if (message.member() == QLatin1String("Accepted")) {
         Q_ASSERT(message.arguments().length() == 1);
         qWarning() << "Result type:" << message;
 

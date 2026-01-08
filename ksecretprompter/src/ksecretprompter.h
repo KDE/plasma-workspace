@@ -16,12 +16,10 @@ class PromptContext;
 class KSecretPrompter : public QObject, protected QDBusContext
 {
     Q_OBJECT
-    Q_PROPERTY(uint Version READ version CONSTANT)
 
 public:
     using Id = QPair<QString, QString>;
     KSecretPrompter(QObject *parent = nullptr);
-    uint version() const;
 
 public Q_SLOTS:
     void UnlockCollectionPrompt(const QDBusObjectPath &path, const QString &windowId, const QString &activationToken, const QString &collectionName);

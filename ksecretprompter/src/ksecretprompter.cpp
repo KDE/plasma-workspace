@@ -61,11 +61,6 @@ KSecretPrompter::KSecretPrompter(QObject *parent)
     }
 }
 
-uint KSecretPrompter::version() const
-{
-    return 1;
-}
-
 void KSecretPrompter::Prompt(const QDBusObjectPath &path, const QString &title, const QString &prompt, const QString &windowId)
 {
     m_quitTimer->stop();
