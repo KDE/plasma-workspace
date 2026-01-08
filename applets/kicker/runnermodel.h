@@ -30,6 +30,7 @@ class RunnerModel : public QAbstractListModel
     Q_PROPERTY(QStringList runners READ runners WRITE setRunners NOTIFY runnersChanged)
     Q_PROPERTY(QString query READ query WRITE setQuery NOTIFY queryChanged)
     Q_PROPERTY(bool mergeResults READ mergeResults WRITE setMergeResults NOTIFY mergeResultsChanged)
+    Q_PROPERTY(bool querying READ querying NOTIFY queryingChanged)
 
 public:
     explicit RunnerModel(QObject *parent = nullptr);
@@ -49,6 +50,8 @@ public:
     QString query() const;
     void setQuery(const QString &query);
 
+    bool querying() const;
+
     AbstractModel *favoritesModel() const;
     void setFavoritesModel(AbstractModel *model);
 
@@ -67,6 +70,7 @@ Q_SIGNALS:
     void runnersChanged() const;
     void queryChanged() const;
     void queryFinished();
+    void queryingChanged();
     void mergeResultsChanged() const;
     void requestUpdateQuery(const QString &query);
     void anyRunnerFinished();

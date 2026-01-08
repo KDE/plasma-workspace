@@ -35,6 +35,7 @@ RunnerMatchesModel::RunnerMatchesModel(const QString &runnerId, const std::optio
     connect(this, &RunnerMatchesModel::rowsInserted, this, &RunnerMatchesModel::countChanged);
     connect(this, &RunnerMatchesModel::rowsRemoved, this, &RunnerMatchesModel::countChanged);
     connect(this, &RunnerMatchesModel::modelReset, this, &RunnerMatchesModel::countChanged);
+    connect(runnerManager(), &KRunner::RunnerManager::queryingChanged, this, &RunnerMatchesModel::queryingChanged);
 
     if (name.has_value()) {
         m_name = name.value();

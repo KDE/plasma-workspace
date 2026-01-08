@@ -180,6 +180,11 @@ QString RunnerModel::query() const
     return m_query;
 }
 
+bool RunnerModel::querying() const
+{
+    return m_queryingModels > 0;
+}
+
 void RunnerModel::setQuery(const QString &query)
 {
     if (m_query == query) {
@@ -203,6 +208,7 @@ void RunnerModel::startQuery()
         for (KRunner::ResultsModel *model : std::as_const(m_models)) {
             model->setQueryString(m_query);
         }
+        Q_EMIT queryingChanged();
     }
 }
 
@@ -234,6 +240,7 @@ void RunnerModel::initializeModels()
             Q_EMIT anyRunnerFinished();
             if (--m_queryingModels == 0) {
                 Q_EMIT queryFinished();
+                Q_EMIT queryingChanged();
             }
         });
     }

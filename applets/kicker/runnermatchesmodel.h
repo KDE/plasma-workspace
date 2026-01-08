@@ -23,6 +23,7 @@ class RunnerMatchesModel : public KRunner::ResultsModel
     Q_PROPERTY(QString name READ name CONSTANT)
     Q_PROPERTY(int count READ count NOTIFY countChanged)
     Q_PROPERTY(QString description READ description CONSTANT)
+    Q_PROPERTY(bool querying READ querying NOTIFY queryingChanged)
 
     Q_PROPERTY(AbstractModel *favoritesModel READ favoritesModel NOTIFY favoritesModelChanged)
 
@@ -50,6 +51,12 @@ public:
     int count() const
     {
         return rowCount();
+    }
+
+    Q_SIGNAL void queryingChanged();
+    bool querying() const
+    {
+        return runnerManager()->querying();
     }
 
     void setMatches(const QList<KRunner::QueryMatch> &matches);
