@@ -1,0 +1,8 @@
+[Unit]
+Description=KDE Startup Sound
+After=graphical-session.target
+
+[Service]
+Type=oneshot
+ExecStart=@CMAKE_INSTALL_FULL_LIBEXECDIR@/plasma-startup-sound
+Slice=session.slice

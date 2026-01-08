@@ -1,6 +1,7 @@
 add_subdirectory(plasmaautostart)
 add_subdirectory(kcminit)
 add_subdirectory(waitforname)
+add_subdirectory(startup-sound)
 
 if (SYSTEMD_FOUND)
     add_subdirectory(systemd)
@@ -21,7 +22,6 @@ target_link_libraries(startplasma PUBLIC
     KF6::DBusAddons
     KF6::Notifications
     KF6::Package
-    Canberra::Canberra
     PW::KLookAndFeel
     PW::KWorkspace
     KNightTime

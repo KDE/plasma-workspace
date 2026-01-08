@@ -205,7 +205,7 @@ void Startup::finishStartup()
 {
     qCDebug(PLASMA_SESSION) << "Finished";
 
-    playStartupSound();
+    QProcess::startDetached(QStringLiteral(CMAKE_INSTALL_FULL_LIBEXECDIR "/plasma-startup-sound"));
     new SessionTrack(m_processes);
     deleteLater();
 }
