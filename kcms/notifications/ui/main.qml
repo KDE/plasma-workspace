@@ -303,7 +303,7 @@ KCM.SimpleKCM {
         }
 
         QtControls.CheckBox {
-            text: i18n("Show timeout indicator")
+            text: i18nc("@option:check Show progress bar on notifications indicating when it will hide","Show timeout indicator")
             checked: kcm.notificationSettings.showPopupTimeout
             onClicked: kcm.notificationSettings.showPopupTimeout = checked
 
