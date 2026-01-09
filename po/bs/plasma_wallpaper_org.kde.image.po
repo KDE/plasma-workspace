@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-02 00:46+0000\n"
+"POT-Creation-Date: 2026-01-09 00:45+0000\n"
 "PO-Revision-Date: 2015-02-04 14:28+0000\n"
 "Last-Translator: Dino Babahmetovic <dbabahmeto1@etf.unsa.ba>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -349,38 +349,38 @@ msgstr[0] "Sekunde"
 msgstr[1] "Sekunde"
 msgstr[2] "Sekunde"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:207
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:203
 #, fuzzy, kde-format
 #| msgid "Remove wallpaper"
 msgid "Folders"
 msgstr "Ukloni pozadinu"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:211
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:207
 #, kde-format
 msgctxt "@action button the thing being added is a folder"
 msgid "Add…"
 msgstr ""
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:212
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:208
 #, fuzzy, kde-format
 #| msgid "Add Folder"
 msgctxt "@action:button"
 msgid "Add Folder…"
 msgstr "Dodaj direktorij"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:250
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:246
 #, fuzzy, kde-format
 #| msgid "Remove wallpaper"
 msgid "Remove Folder"
 msgstr "Ukloni pozadinu"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:261
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:257
 #, fuzzy, kde-format
 #| msgid "Add Folder"
 msgid "Open Folder…"
 msgstr "Dodaj direktorij"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:276
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:272
 #, kde-format
 msgid "There are no wallpaper locations configured"
 msgstr ""

@@ -31,7 +31,7 @@ msgstr "kde-china@kde.org, i@guoyunhe.me, tds00@qq.com"
 #, kde-format
 msgctxt "Name filter for file dialogs: File type (file extension wildcards)"
 msgid "Image Files (%1)"
-msgstr ""
+msgstr "图像文件 (%1)"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: lookandfeelsettings.kcfg:9
@@ -232,7 +232,7 @@ msgstr "无法删除系统安装的主题"
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Current Theme"
-msgstr ""
+msgstr "保存当前主题"
 
 #: ui/LookAndFeelSnapshot.qml:25
 #, kde-format
@@ -240,31 +240,31 @@ msgctxt "@info"
 msgid ""
 "Plasma’s current appearance and theme settings will be saved in a new global "
 "theme."
-msgstr ""
+msgstr "Plasma 的当前外观和主题设置将保存在新的全局主题中。"
 
 #: ui/LookAndFeelSnapshot.qml:69
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add a preview image…"
-msgstr ""
+msgstr "添加预览图像…"
 
 #: ui/LookAndFeelSnapshot.qml:79
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Take a screenshot…"
-msgstr ""
+msgstr "截图…"
 
 #: ui/LookAndFeelSnapshot.qml:86
 #, kde-format
 msgctxt "@label:textbox Name of new global theme that will be created"
 msgid "Name:"
-msgstr ""
+msgstr "名称："
 
 #: ui/LookAndFeelSnapshot.qml:92
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type in name…"
-msgstr ""
+msgstr "输入名称…"
 
 #: ui/LookAndFeelSnapshot.qml:101
 #, kde-format
@@ -272,19 +272,19 @@ msgctxt ""
 "@action:button Confirm creating new global theme from the user's current "
 "appearance settings"
 msgid "Confirm"
-msgstr ""
+msgstr "确认"
 
 #: ui/LookAndFeelSnapshot.qml:113
 #, kde-format
 msgctxt "@info"
 msgid "A global theme with this name or id already exists."
-msgstr ""
+msgstr "已存在同名全局主题。"
 
 #: ui/LookAndFeelSnapshot.qml:127
 #, kde-format
 msgctxt "@title:title"
 msgid "Choose a Preview Image"
-msgstr ""
+msgstr "选择预览图像"
 
 #: ui/main.qml:22
 #, kde-format
@@ -296,7 +296,7 @@ msgstr "夜间切换到深色模式"
 #, kde-format
 msgctxt "@action:button"
 msgid "Save Current Theme…"
-msgstr ""
+msgstr "保存当前主题…"
 
 #: ui/main.qml:45
 #, kde-format

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-02 00:46+0000\n"
+"POT-Creation-Date: 2026-01-09 00:45+0000\n"
 "PO-Revision-Date: 2022-05-23 03:16+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -351,36 +351,36 @@ msgid_plural "%1 seconds"
 msgstr[0] "%1 segundo"
 msgstr[1] "%1 segundos"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:207
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:203
 #, kde-format
 msgid "Folders"
 msgstr "Pastas"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:211
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:207
 #, kde-format
 msgctxt "@action button the thing being added is a folder"
 msgid "Add…"
 msgstr ""
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:212
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:208
 #, fuzzy, kde-format
 #| msgid "Add Folder…"
 msgctxt "@action:button"
 msgid "Add Folder…"
 msgstr "Adicionar uma Pasta…"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:250
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:246
 #, kde-format
 msgid "Remove Folder"
 msgstr "Remover a Pasta"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:261
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:257
 #, fuzzy, kde-format
 #| msgid "Open Folder"
 msgid "Open Folder…"
 msgstr "Abrir a Pasta"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:276
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:272
 #, kde-format
 msgid "There are no wallpaper locations configured"
 msgstr "Não estão configuradas nenhumas localizações com papéis de parede"

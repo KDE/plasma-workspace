@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# SPDX-FileCopyrightText: 2021, 2022, 2024, 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2024, 2025, 2026 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-03 00:45+0000\n"
-"PO-Revision-Date: 2025-08-13 19:52+0400\n"
+"PO-Revision-Date: 2026-01-08 12:02+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -89,19 +89,16 @@ msgid "Choose sound file"
 msgstr "اختر ملف صوت"
 
 #: ui/main.qml:47
-#, fuzzy, kde-format
-#| msgid "Configure…"
+#, kde-format
 msgctxt "@action:button Plasma-specific notifications"
 msgid "Configure for System…"
-msgstr "اضبط…"
+msgstr "اضبط للنظام…"
 
 #: ui/main.qml:53
-#, fuzzy, kde-format
-#| msgctxt "@action:button Application-specific notifications"
-#| msgid "Configure Application Settings…"
+#, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Configure for Applications…"
-msgstr "اضبط إعدادات التطبيق…"
+msgstr "اضبط للتطبيقات…"
 
 #: ui/main.qml:96
 #, kde-format
@@ -210,7 +207,7 @@ msgstr "قرب أيقونة الإشعار"
 #, kde-format
 msgctxt "@action:button choose custom notification position"
 msgid "Choose…"
-msgstr ""
+msgstr "اختر..."
 
 #: ui/main.qml:278 ui/main.qml:294
 #, kde-format
@@ -230,11 +227,9 @@ msgid "Hide after:"
 msgstr "أخف بعد:"
 
 #: ui/main.qml:306
-#, fuzzy, kde-format
-#| msgctxt "Show application jobs in notification widget"
-#| msgid "Show in notifications"
+#, kde-format
 msgid "Show timeout indicator"
-msgstr "أظهر في الإشعارات"
+msgstr "أظهر مؤشر انتهاء الوقت"
 
 #: ui/main.qml:318
 #, kde-format

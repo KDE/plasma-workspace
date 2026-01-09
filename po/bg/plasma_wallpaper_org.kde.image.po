@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-02 00:46+0000\n"
+"POT-Creation-Date: 2026-01-09 00:45+0000\n"
 "PO-Revision-Date: 2025-10-28 16:31+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -335,34 +335,34 @@ msgid_plural "%1 seconds"
 msgstr[0] "%1 секунда"
 msgstr[1] "%1 секунди"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:207
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:203
 #, kde-format
 msgid "Folders"
 msgstr "Папки"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:211
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:207
 #, kde-format
 msgctxt "@action button the thing being added is a folder"
 msgid "Add…"
 msgstr "Добавяне…"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:212
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:208
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Folder…"
 msgstr "Добавяне на папка…"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:250
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:246
 #, kde-format
 msgid "Remove Folder"
 msgstr "Премахване на папка"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:261
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:257
 #, kde-format
 msgid "Open Folder…"
 msgstr "Отваряне на папка…"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:276
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:272
 #, kde-format
 msgid "There are no wallpaper locations configured"
 msgstr "Няма конфигурирано местоположение за тапети"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_org.kde.image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-02 00:46+0000\n"
+"POT-Creation-Date: 2026-01-09 00:45+0000\n"
 "PO-Revision-Date: 2025-10-29 11:59+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -343,34 +343,34 @@ msgid_plural "%1 seconds"
 msgstr[0] "%1 segundo"
 msgstr[1] "%1 segundos"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:207
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:203
 #, kde-format
 msgid "Folders"
 msgstr "Carpetas"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:211
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:207
 #, kde-format
 msgctxt "@action button the thing being added is a folder"
 msgid "Add…"
 msgstr "Añadir…"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:212
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:208
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Folder…"
 msgstr "Añadir carpeta…"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:250
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:246
 #, kde-format
 msgid "Remove Folder"
 msgstr "Eliminar carpeta"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:261
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:257
 #, kde-format
 msgid "Open Folder…"
 msgstr "Abrir carpeta…"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:276
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:272
 #, kde-format
 msgid "There are no wallpaper locations configured"
 msgstr "No se han configurado ubicaciones de fondos de escritorio"

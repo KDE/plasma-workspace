@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-02 00:46+0000\n"
+"POT-Creation-Date: 2026-01-09 00:45+0000\n"
 "PO-Revision-Date: 2025-11-02 13:45+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -330,34 +330,34 @@ msgid_plural "%1 seconds"
 msgstr[0] "%1 நொடி"
 msgstr[1] "%1 நொடிகள்"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:207
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:203
 #, kde-format
 msgid "Folders"
 msgstr "அடைவுகள்"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:211
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:207
 #, kde-format
 msgctxt "@action button the thing being added is a folder"
 msgid "Add…"
 msgstr "சேர்…"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:212
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:208
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Folder…"
 msgstr "அடைவை சேர்…"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:250
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:246
 #, kde-format
 msgid "Remove Folder"
 msgstr "அடைவை நீக்கு"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:261
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:257
 #, kde-format
 msgid "Open Folder…"
 msgstr "அடைவை திற…"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:276
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:272
 #, kde-format
 msgid "There are no wallpaper locations configured"
 msgstr "பின்புல படங்களை கொண்ட இடங்கள் அமைக்கப்படவில்லை"

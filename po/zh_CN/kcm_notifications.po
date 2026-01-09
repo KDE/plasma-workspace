@@ -91,13 +91,13 @@ msgstr "选择声音文件"
 #, kde-format
 msgctxt "@action:button Plasma-specific notifications"
 msgid "Configure for System…"
-msgstr ""
+msgstr "配置系统通知…"
 
 #: ui/main.qml:53
 #, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Configure for Applications…"
-msgstr ""
+msgstr "配置应用程序通知…"
 
 #: ui/main.qml:96
 #, kde-format
@@ -206,7 +206,7 @@ msgstr "在通知图标附近"
 #, kde-format
 msgctxt "@action:button choose custom notification position"
 msgid "Choose…"
-msgstr ""
+msgstr "选择…"
 
 #: ui/main.qml:278 ui/main.qml:294
 #, kde-format

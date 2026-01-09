@@ -1,14 +1,14 @@
 # Spanish translations for plasma_lookandfeel_org.kde.lookandfeel.po package.
-# Copyright (C) 2014-2025 This file is copyright:
+# Copyright (C) 2014-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-08 00:45+0000\n"
-"PO-Revision-Date: 2025-06-04 19:40+0100\n"
+"PO-Revision-Date: 2026-01-09 00:50+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 25.12.0\n"
 
 #: contents/logout/Logout.qml:149
 #, kde-format
@@ -84,12 +84,9 @@ msgstr ""
 "arranque."
 
 #: contents/logout/Logout.qml:212
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will enter the boot loader menu."
+#, kde-format
 msgid "When restarted, the computer will switch to %1."
-msgstr ""
-"Cuando reinicie el equipo, entrará en la pantalla del menú del cargador de "
-"arranque."
+msgstr "Cuando reinicie el equipo, cambiará a %1."
 
 #: contents/logout/Logout.qml:234
 #, kde-format

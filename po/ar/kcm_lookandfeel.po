@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Safa Alfulaij <safa1996alfulaij@gmail.com>, 2015.
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025, 2026 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-05 00:45+0000\n"
-"PO-Revision-Date: 2025-08-04 12:38+0400\n"
+"PO-Revision-Date: 2026-01-08 12:04+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -33,7 +33,7 @@ msgstr "safa1996alfulaij@gmail.com,zayed.alsaidi@gmail.com"
 #, kde-format
 msgctxt "Name filter for file dialogs: File type (file extension wildcards)"
 msgid "Image Files (%1)"
-msgstr ""
+msgstr "ملفّات الصّور (%1)"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: lookandfeelsettings.kcfg:9
@@ -244,7 +244,7 @@ msgstr "لا يمكن حذف السمات المثبتة على النظام"
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Current Theme"
-msgstr ""
+msgstr "احفظ السمة الحالية"
 
 #: ui/LookAndFeelSnapshot.qml:25
 #, kde-format
@@ -252,31 +252,31 @@ msgctxt "@info"
 msgid ""
 "Plasma’s current appearance and theme settings will be saved in a new global "
 "theme."
-msgstr ""
+msgstr "سيُحفظ المظهر الحالي لبلازما وإعدادات السمة في سمة عامة جديدة."
 
 #: ui/LookAndFeelSnapshot.qml:69
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add a preview image…"
-msgstr ""
+msgstr "أضف صورة معاينة…"
 
 #: ui/LookAndFeelSnapshot.qml:79
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Take a screenshot…"
-msgstr ""
+msgstr "خُذ لقطة…"
 
 #: ui/LookAndFeelSnapshot.qml:86
 #, kde-format
 msgctxt "@label:textbox Name of new global theme that will be created"
 msgid "Name:"
-msgstr ""
+msgstr "الاسم:"
 
 #: ui/LookAndFeelSnapshot.qml:92
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type in name…"
-msgstr ""
+msgstr "اكتب اسم…"
 
 #: ui/LookAndFeelSnapshot.qml:101
 #, kde-format
@@ -284,19 +284,19 @@ msgctxt ""
 "@action:button Confirm creating new global theme from the user's current "
 "appearance settings"
 msgid "Confirm"
-msgstr ""
+msgstr "أكد"
 
 #: ui/LookAndFeelSnapshot.qml:113
 #, kde-format
 msgctxt "@info"
 msgid "A global theme with this name or id already exists."
-msgstr ""
+msgstr "سمة عامة موجود فعلًا بهذا الاسم أو بهذا المعرف."
 
 #: ui/LookAndFeelSnapshot.qml:127
 #, kde-format
 msgctxt "@title:title"
 msgid "Choose a Preview Image"
-msgstr ""
+msgstr "اختر صورة المعاينة"
 
 #: ui/main.qml:22
 #, kde-format
@@ -308,7 +308,7 @@ msgstr "بدّل إلى وضع المظلم في الليل"
 #, kde-format
 msgctxt "@action:button"
 msgid "Save Current Theme…"
-msgstr ""
+msgstr "احفظ السمة الحالية…"
 
 #: ui/main.qml:45
 #, kde-format
