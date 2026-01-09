@@ -209,7 +209,7 @@ Item {
             horizontalAlignment: Text.AlignHCenter
             wrapMode: Text.WordWrap
             font.italic: true
-            text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "When restarted, the computer will switch to %1.", rebootToBootLoaderEntry)
+            text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "%1 is a boot loader entry", "When restarted, the computer will switch to %1.", rebootToBootLoaderEntry)
             textFormat: Text.PlainText
             visible: rebootToBootLoaderEntry != ""
         }
