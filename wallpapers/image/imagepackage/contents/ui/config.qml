@@ -47,6 +47,7 @@ ColumnLayout {
     property list<string> cfg_UncheckedSlides: []
     property list<string> cfg_UncheckedSlidesDefault: []
     property int cfg_DynamicMode: 0
+    property int cfg_DynamicModeDefault: 0
 
     signal configurationChanged()
     /**
@@ -219,10 +220,14 @@ ColumnLayout {
                 ]
                 onActivated: root.selectDynamicMode(currentValue)
                 Component.onCompleted: currentIndex = indexOfValue(root.cfg_DynamicMode)
+
+                KCM.SettingHighlighter {
+                    highlight: root.cfg_DynamicModeDefault !== root.cfg_DynamicMode
+                }
             }
 
             QtControls2.Button {
-                visible: root.cfg_DynamicMode == 1 
+                visible: root.cfg_DynamicMode == 1
                 enabled: KConfig.KAuthorized.authorizeControlModule("kcm_nighttime")
                 text: i18nc("@action:button Configure day-night cycle times", "Configure…")
                 icon.name: "configure"
