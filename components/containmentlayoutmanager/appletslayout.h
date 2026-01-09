@@ -211,7 +211,7 @@ private:
     AppletContainer *createContainerForApplet(PlasmaQuick::AppletQuickItem *appletItem);
 
     void handleMoveEvent(const QPointF &scenePosition);
-    void handleReleaseEvent(const QPointF &scenePosition);
+    void handleReleaseEvent();
 
     QString m_configKey;
     QString m_fallbackConfigKey;

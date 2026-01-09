@@ -613,7 +613,8 @@ void AppletsLayout::mousePressEvent(QMouseEvent *event)
 
 void AppletsLayout::mouseReleaseEvent(QMouseEvent *event)
 {
-    handleReleaseEvent(event->scenePosition());
+    Q_UNUSED(event)
+    handleReleaseEvent();
 }
 
 void AppletsLayout::touchEvent(QTouchEvent *event)
@@ -626,7 +627,7 @@ void AppletsLayout::touchEvent(QTouchEvent *event)
     }
 
     if (event->type() == QEvent::TouchCancel) {
-        handleReleaseEvent(point.scenePosition());
+        handleReleaseEvent();
         return;
     }
 
@@ -658,7 +659,7 @@ void AppletsLayout::touchEvent(QTouchEvent *event)
     }
 
     case QEventPoint::State::Released: {
-        handleReleaseEvent(point.scenePosition());
+        handleReleaseEvent();
         break;
     }
 
@@ -792,13 +793,8 @@ AppletContainer *AppletsLayout::createContainerForApplet(PlasmaQuick::AppletQuic
     return container;
 }
 
-void AppletsLayout::handleReleaseEvent(const QPointF &scenePosition)
+void AppletsLayout::handleReleaseEvent()
 {
-    if (m_editMode && m_touchDownWasEditMode
-        && QPointF(scenePosition - m_touchDownPosition).manhattanLength() < QGuiApplication::styleHints()->startDragDistance()) {
-        setEditMode(false);
-    }
-
     m_pressAndHoldTimer->stop();
 
     if (m_editMode) {
