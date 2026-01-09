@@ -97,8 +97,10 @@ ColumnLayout {
     function selectDynamicMode(mode: PlasmaWallpaper.DynamicMode): void {
         cfg_DynamicMode = mode;
 
-        selectWallpaper(thumbnailsLoader.item.view.currentItem.key,
-                        thumbnailsLoader.item.view.currentItem.selectors);
+        if (root.configDialog.currentWallpaper === "org.kde.image") {
+            selectWallpaper(thumbnailsLoader.item.view.currentItem.key,
+                            thumbnailsLoader.item.view.currentItem.selectors);
+        }
     }
 
     PlasmaWallpaper.ImageBackend {
