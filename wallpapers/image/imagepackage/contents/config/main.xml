@@ -16,6 +16,16 @@
     </entry>
     <entry name="Image" type="String">
       <label>Wallpaper image path or wallpaper name</label>
+      <tooltip>
+        If the specified KPackage wallpaper contains dark images, then the following
+        URL fragments may be specified:
+
+        - #day-night: switch between light and dark images based on time of day
+        - #dark: only use the dark image
+        - #light: only use the light image
+        - if no fragment is specified, plasma will switch between dark and light
+          images depending on the currently used color scheme
+      </tooltip>
       <default></default>
     </entry>
     <entry name="PreviewImage" type="String">
@@ -47,7 +57,18 @@
         <default>0</default>
     </entry>
     <entry name="DynamicMode" type="UInt">
-        <label>Preferred dynamic wallpaper mode: 0 = switch based on whether the Plasma style is dark or light, 1 = switch at sunrise and sunset</label>
+        <label>Preferred dynamic wallpaper mode</label>
+        <tooltip>
+          This is a KCM implementation detail. It is used to make the dynamic
+          mode preferance persistent. #day-night, #dark, and #light fragments in
+          the Image URL actually specify what image will be used.
+
+          Possible values:
+          - 0: switch based on whether the Plasma style is dark or light
+          - 1: switch at sunrise and sunset
+          - 2: only use the light image
+          - 3: only use the dark image
+        </tooltip>
         <default>0</default>
     </entry>
     <entry name="DarkLightScheduleState" type="String">
