@@ -29,7 +29,7 @@ int main(int argc, char **argv)
                          QStringLiteral(PROJECT_VERSION),
                          i18nc("application description", "A service to show password prompts"),
                          KAboutLicense::GPL,
-                         i18nc("copyright statement", "Copyright 2025, Marco Martin <notmart@gmail.com>"));
+                         i18nc("copyright statement", "© 2025 Marco Martin <notmart@gmail.com>"));
 
     aboutData.addAuthor(i18nc("author name", "Marco Martin"), i18nc("task description for an author line in about data", "Author"), QString());
 
