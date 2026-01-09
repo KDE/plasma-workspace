@@ -23,6 +23,7 @@
 #include <QUrl>
 
 #include "sortingmode.h"
+#include "utils/dynamicmode.h"
 
 class ImageProxyModel;
 class SlideModel;
@@ -67,6 +68,7 @@ class ImageBackend : public QObject, public QQmlParserStatus
      * Provides source url for \MediaProxy
      */
     Q_PROPERTY(QString image READ image WRITE setImage NOTIFY imageChanged)
+    Q_PROPERTY(DynamicMode::Mode dynamicMode READ dynamicMode WRITE setDynamicMode NOTIFY dynamicModeChanged)
 
     Q_PROPERTY(QAbstractItemModel *wallpaperModel READ wallpaperModel NOTIFY wallpaperModelChanged)
     Q_PROPERTY(QAbstractItemModel *slideFilterModel READ slideFilterModel NOTIFY slideFilterModelChanged)
@@ -100,6 +102,9 @@ public:
     QString image() const;
     void setImage(const QString &url);
 
+    DynamicMode::Mode dynamicMode() const;
+    void setDynamicMode(DynamicMode::Mode dynamicMode);
+
     // this is for QML use
     Q_INVOKABLE bool addSlidePath(const QUrl &url);
     Q_INVOKABLE void removeSlidePath(const QString &path);
@@ -107,6 +112,9 @@ public:
     Q_INVOKABLE QString nameFilters() const;
 
     Q_INVOKABLE QString addUsersWallpaper(const QUrl &url);
+
+    QUrl makeWallpaperUrl(const QUrl &url, const QStringList &selectors) const;
+    Q_INVOKABLE QUrl makeWallpaperUrl(const QString &url, const QStringList &selectors) const;
 
     QQmlPropertyMap *configMap() const;
     void setConfigMap(QQmlPropertyMap *configMap);
@@ -152,6 +160,7 @@ public Q_SLOTS:
 Q_SIGNALS:
     void settingsChanged();
     void imageChanged();
+    void dynamicModeChanged();
     void wallpaperModelChanged();
     void slideFilterModelChanged();
     void renderingModeChanged();
@@ -178,6 +187,7 @@ private:
     bool m_ready = false;
     int m_delay = 10;
     QUrl m_image;
+    DynamicMode::Mode m_dynamicMode = DynamicMode::Mode::Automatic;
     Q_OBJECT_BINDABLE_PROPERTY(ImageBackend, QSize, m_targetSize, &ImageBackend::targetSizeChanged)
 
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(ImageBackend, bool, m_usedInConfig, true)

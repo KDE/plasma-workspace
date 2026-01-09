@@ -32,6 +32,8 @@
 #include "slidefiltermodel.h"
 #include "slidemodel.h"
 
+using namespace Qt::StringLiterals;
+
 ImageBackend::ImageBackend(QObject *parent)
     : QObject(parent)
     , m_targetSize(qGuiApp->primaryScreen()->size() * qGuiApp->primaryScreen()->devicePixelRatio())
@@ -82,6 +84,32 @@ void ImageBackend::setImage(const QString &url)
 
     m_image = QUrl::fromUserInput(url);
     Q_EMIT imageChanged();
+}
+
+DynamicMode::Mode ImageBackend::dynamicMode() const
+{
+    return m_dynamicMode;
+}
+
+void ImageBackend::setDynamicMode(DynamicMode::Mode dynamicMode)
+{
+    if (dynamicMode == m_dynamicMode) {
+        return;
+    }
+
+    m_dynamicMode = dynamicMode;
+    Q_EMIT dynamicModeChanged();
+
+    if (m_mode == SingleImage || m_usedInConfig || !m_ready) {
+        return;
+    }
+
+    const QStringList selectors = m_slideFilterModel->index(m_currentSlide, 0).data(ImageRoles::SelectorsRole).toStringList();
+    const QUrl newImage = makeWallpaperUrl(m_image, selectors);
+    if (newImage != m_image) {
+        m_image = newImage;
+        Q_EMIT imageChanged();
+    }
 }
 
 ImageBackend::RenderingMode ImageBackend::renderingMode() const
@@ -396,6 +424,30 @@ QString ImageBackend::addUsersWallpaper(const QUrl &url)
     return results.at(0);
 }
 
+QUrl ImageBackend::makeWallpaperUrl(const QUrl &url, const QStringList &selectors) const
+{
+    QString selector;
+    if (m_dynamicMode == DynamicMode::Mode::DayNight && selectors.contains(u"day-night")) {
+        selector = u"day-night"_s;
+    } else if (m_dynamicMode != DynamicMode::Mode::Automatic && selectors.contains(u"dark-light")) {
+        if (m_dynamicMode == DynamicMode::Mode::AlwaysDark) {
+            selector = u"dark"_s;
+        } else if (m_dynamicMode == DynamicMode::Mode::AlwaysLight) {
+            selector = u"light"_s;
+        }
+    }
+    QUrl ret = url;
+    if (!selector.isEmpty()) {
+        ret.setFragment(selector);
+    }
+    return ret;
+}
+
+QUrl ImageBackend::makeWallpaperUrl(const QString &url, const QStringList &selectors) const
+{
+    return makeWallpaperUrl(QUrl::fromUserInput(url), selectors);
+}
+
 void ImageBackend::nextSlide()
 {
     const int rowCount = m_slideFilterModel->rowCount();
@@ -424,9 +476,11 @@ void ImageBackend::nextSlide()
         next = m_slideFilterModel->index(m_currentSlide, 0).data(ImageRoles::SourceRole).toUrl();
     }
     if (next.isEmpty()) {
-        m_image = previousUrl;
+        const QStringList selectors = m_slideFilterModel->index(previousSlide, 0).data(ImageRoles::SelectorsRole).toStringList();
+        m_image = makeWallpaperUrl(previousUrl, selectors);
     } else {
-        m_image = next;
+        const QStringList selectors = m_slideFilterModel->index(m_currentSlide, 0).data(ImageRoles::SelectorsRole).toStringList();
+        m_image = makeWallpaperUrl(next, selectors);
         Q_EMIT imageChanged();
     }
 
