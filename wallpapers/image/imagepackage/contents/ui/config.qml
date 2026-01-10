@@ -94,7 +94,7 @@ ColumnLayout {
         wallpaperConfiguration.PreviewImage = cfg_Image;
     }
 
-    function selectDynamicMode(mode: PlasmaWallpaper.DynamicMode): void {
+    function selectDynamicMode(mode: /*PlasmaWallpaper.DynamicMode*/ int): void {
         cfg_DynamicMode = mode;
 
         if (root.configDialog.currentWallpaper === "org.kde.image") {
