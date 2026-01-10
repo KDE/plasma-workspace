@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-10 00:45+0000\n"
 "PO-Revision-Date: 2024-12-20 12:26+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -82,6 +82,7 @@ msgstr "पुनः आरभ्यते सति सङ्गणकः ब�
 #: contents/logout/Logout.qml:212
 #, fuzzy, kde-format
 #| msgid "When restarted, the computer will enter the boot loader menu."
+msgctxt "%1 is a boot loader entry"
 msgid "When restarted, the computer will switch to %1."
 msgstr "पुनः आरभ्यते सति सङ्गणकः बूट् लोडर् मेन्यू मध्ये प्रविशति ।"
 

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-03 00:45+0000\n"
+"POT-Creation-Date: 2026-01-10 00:45+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -221,7 +221,10 @@ msgid "Hide after:"
 msgstr "经过此时长后隐藏："
 
 #: ui/main.qml:306
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show timeout indicator"
+msgctxt ""
+"@option:check Show progress bar on notifications indicating when it will hide"
 msgid "Show timeout indicator"
 msgstr "显示超时指示器"
 

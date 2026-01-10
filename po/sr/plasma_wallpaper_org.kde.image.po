@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-09 00:45+0000\n"
+"POT-Creation-Date: 2026-01-10 00:45+0000\n"
 "PO-Revision-Date: 2017-12-15 12:38+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -44,7 +44,7 @@ msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Фасцикла из које се повлаче тапети."
 
-#: imagepackage/contents/ui/config.qml:156
+#: imagepackage/contents/ui/config.qml:157
 #, fuzzy, kde-format
 #| msgid "Positioning:"
 msgctxt "@label:listbox"
@@ -52,7 +52,7 @@ msgid "Positioning:"
 msgstr "Постављање:"
 
 # >> @item:inlistbox Positioning
-#: imagepackage/contents/ui/config.qml:159
+#: imagepackage/contents/ui/config.qml:160
 #, fuzzy, kde-format
 #| msgid "Scaled and Cropped"
 msgctxt "@item:inlistbox"
@@ -60,7 +60,7 @@ msgid "Scaled and cropped"
 msgstr "скалирано и опсечено"
 
 # >> @item:inlistbox Positioning
-#: imagepackage/contents/ui/config.qml:163
+#: imagepackage/contents/ui/config.qml:164
 #, fuzzy, kde-format
 #| msgid "Scaled"
 msgctxt "@item:inlistbox"
@@ -68,7 +68,7 @@ msgid "Scaled"
 msgstr "скалирано"
 
 # >> @item:inlistbox Positioning
-#: imagepackage/contents/ui/config.qml:167
+#: imagepackage/contents/ui/config.qml:168
 #, fuzzy, kde-format
 #| msgid "Scaled, Keep Proportions"
 msgctxt "@item:inlistbox"
@@ -76,14 +76,14 @@ msgid "Scaled, keep proportions"
 msgstr "скалирано, очувана пропорција"
 
 # >> @item:inlistbox Positioning
-#: imagepackage/contents/ui/config.qml:171
+#: imagepackage/contents/ui/config.qml:172
 #, fuzzy, kde-format
 #| msgid "Centered"
 msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "центрирано"
 
-#: imagepackage/contents/ui/config.qml:199
+#: imagepackage/contents/ui/config.qml:200
 #, fuzzy, kde-format
 #| msgid "Get New Wallpapers..."
 msgctxt ""
@@ -91,54 +91,54 @@ msgctxt ""
 msgid "Switch dynamic wallpapers:"
 msgstr "Добави нове тапете..."
 
-#: imagepackage/contents/ui/config.qml:207
+#: imagepackage/contents/ui/config.qml:208
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the Plasma style is light or dark "
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:209
+#: imagepackage/contents/ui/config.qml:210
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on the day-night cycle"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:213
+#: imagepackage/contents/ui/config.qml:214
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always use light variant"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:217
+#: imagepackage/contents/ui/config.qml:218
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always use dark variant"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:227
+#: imagepackage/contents/ui/config.qml:232
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:238
+#: imagepackage/contents/ui/config.qml:243
 #, kde-format
 msgid "Background:"
 msgstr "Позадина:"
 
 # >> @option:radio Blur the background
-#: imagepackage/contents/ui/config.qml:239
+#: imagepackage/contents/ui/config.qml:244
 #, kde-format
 msgid "Blur"
 msgstr "Замућена"
 
-#: imagepackage/contents/ui/config.qml:248
+#: imagepackage/contents/ui/config.qml:253
 #, kde-format
 msgid "Solid color"
 msgstr "Пуна боја"
 
 # >> @title:window
-#: imagepackage/contents/ui/config.qml:259
+#: imagepackage/contents/ui/config.qml:264
 #, kde-format
 msgid "Select Background Color"
 msgstr "Избор боје позадине"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-10 00:45+0000\n"
 "PO-Revision-Date: 2026-01-08 17:48+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -82,7 +82,9 @@ msgid "When restarted, the computer will enter the boot loader menu."
 msgstr "Bij herstarten zal de computer naar het bootloader menu gaan."
 
 #: contents/logout/Logout.qml:212
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "When restarted, the computer will switch to %1."
+msgctxt "%1 is a boot loader entry"
 msgid "When restarted, the computer will switch to %1."
 msgstr "Bij herstarten zal de computer omschakelen naar %1."
 

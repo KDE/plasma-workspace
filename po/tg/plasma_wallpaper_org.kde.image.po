@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-09 00:45+0000\n"
+"POT-Creation-Date: 2026-01-10 00:45+0000\n"
 "PO-Revision-Date: 2019-09-23 20:17+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: Tajik <kde-i18n-doc@kde.org>\n"
@@ -41,42 +41,42 @@ msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Ҷузвадон бо тасвирҳои замина барои намоиши слайдҳо"
 
-#: imagepackage/contents/ui/config.qml:156
+#: imagepackage/contents/ui/config.qml:157
 #, fuzzy, kde-format
 #| msgid "Positioning:"
 msgctxt "@label:listbox"
 msgid "Positioning:"
 msgstr "Ҷойгиршавӣ:"
 
-#: imagepackage/contents/ui/config.qml:159
+#: imagepackage/contents/ui/config.qml:160
 #, fuzzy, kde-format
 #| msgid "Scaled and Cropped"
 msgctxt "@item:inlistbox"
 msgid "Scaled and cropped"
 msgstr "Васеъшуда ва бурида"
 
-#: imagepackage/contents/ui/config.qml:163
+#: imagepackage/contents/ui/config.qml:164
 #, fuzzy, kde-format
 #| msgid "Scaled"
 msgctxt "@item:inlistbox"
 msgid "Scaled"
 msgstr "Васеъшуда"
 
-#: imagepackage/contents/ui/config.qml:167
+#: imagepackage/contents/ui/config.qml:168
 #, fuzzy, kde-format
 #| msgid "Scaled, Keep Proportions"
 msgctxt "@item:inlistbox"
 msgid "Scaled, keep proportions"
 msgstr "Васеъшуда, мутаносиб"
 
-#: imagepackage/contents/ui/config.qml:171
+#: imagepackage/contents/ui/config.qml:172
 #, fuzzy, kde-format
 #| msgid "Centered"
 msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "Дар марказ"
 
-#: imagepackage/contents/ui/config.qml:199
+#: imagepackage/contents/ui/config.qml:200
 #, fuzzy, kde-format
 #| msgid "Get New Wallpapers..."
 msgctxt ""
@@ -84,52 +84,52 @@ msgctxt ""
 msgid "Switch dynamic wallpapers:"
 msgstr "Гирифтани тасвири заминаи нав..."
 
-#: imagepackage/contents/ui/config.qml:207
+#: imagepackage/contents/ui/config.qml:208
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the Plasma style is light or dark "
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:209
+#: imagepackage/contents/ui/config.qml:210
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on the day-night cycle"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:213
+#: imagepackage/contents/ui/config.qml:214
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always use light variant"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:217
+#: imagepackage/contents/ui/config.qml:218
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always use dark variant"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:227
+#: imagepackage/contents/ui/config.qml:232
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:238
+#: imagepackage/contents/ui/config.qml:243
 #, kde-format
 msgid "Background:"
 msgstr "Замина:"
 
-#: imagepackage/contents/ui/config.qml:239
+#: imagepackage/contents/ui/config.qml:244
 #, kde-format
 msgid "Blur"
 msgstr "Хирагӣ"
 
-#: imagepackage/contents/ui/config.qml:248
+#: imagepackage/contents/ui/config.qml:253
 #, kde-format
 msgid "Solid color"
 msgstr "Ранги яклухт"
 
-#: imagepackage/contents/ui/config.qml:259
+#: imagepackage/contents/ui/config.qml:264
 #, kde-format
 msgid "Select Background Color"
 msgstr "Интихоби ранги замина"

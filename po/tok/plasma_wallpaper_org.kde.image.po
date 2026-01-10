@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-09 00:45+0000\n"
+"POT-Creation-Date: 2026-01-10 00:45+0000\n"
 "PO-Revision-Date: 2024-01-11 15:10-0500\n"
 "Last-Translator: Janet Blackquill <uhhadd@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -41,94 +41,94 @@ msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "ilo li pana e sitelen tan poki lipu ni."
 
-#: imagepackage/contents/ui/config.qml:156
+#: imagepackage/contents/ui/config.qml:157
 #, fuzzy, kde-format
 #| msgid "Positioning:"
 msgctxt "@label:listbox"
 msgid "Positioning:"
 msgstr "nasin lon:"
 
-#: imagepackage/contents/ui/config.qml:159
+#: imagepackage/contents/ui/config.qml:160
 #, fuzzy, kde-format
 #| msgid "Scaled and Cropped"
 msgctxt "@item:inlistbox"
 msgid "Scaled and cropped"
 msgstr "o suli. o weka selo."
 
-#: imagepackage/contents/ui/config.qml:163
+#: imagepackage/contents/ui/config.qml:164
 #, fuzzy, kde-format
 #| msgid "Scaled"
 msgctxt "@item:inlistbox"
 msgid "Scaled"
 msgstr "o suli."
 
-#: imagepackage/contents/ui/config.qml:167
+#: imagepackage/contents/ui/config.qml:168
 #, fuzzy, kde-format
 #| msgid "Scaled, Keep Proportions"
 msgctxt "@item:inlistbox"
 msgid "Scaled, keep proportions"
 msgstr "o suli. o awen e leko."
 
-#: imagepackage/contents/ui/config.qml:171
+#: imagepackage/contents/ui/config.qml:172
 #, fuzzy, kde-format
 #| msgid "Centered"
 msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "o insa."
 
-#: imagepackage/contents/ui/config.qml:199
+#: imagepackage/contents/ui/config.qml:200
 #, kde-format
 msgctxt ""
 "@label:listbox part of a sentence: 'Switch dynamic wallpapers [based on]'"
 msgid "Switch dynamic wallpapers:"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:207
+#: imagepackage/contents/ui/config.qml:208
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the Plasma style is light or dark "
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:209
+#: imagepackage/contents/ui/config.qml:210
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on the day-night cycle"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:213
+#: imagepackage/contents/ui/config.qml:214
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always use light variant"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:217
+#: imagepackage/contents/ui/config.qml:218
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always use dark variant"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:227
+#: imagepackage/contents/ui/config.qml:232
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:238
+#: imagepackage/contents/ui/config.qml:243
 #, kde-format
 msgid "Background:"
 msgstr "monsi:"
 
-#: imagepackage/contents/ui/config.qml:239
+#: imagepackage/contents/ui/config.qml:244
 #, kde-format
 msgid "Blur"
 msgstr "o ko e lukin sitelen"
 
-#: imagepackage/contents/ui/config.qml:248
+#: imagepackage/contents/ui/config.qml:253
 #, kde-format
 msgid "Solid color"
 msgstr "kule wan"
 
-#: imagepackage/contents/ui/config.qml:259
+#: imagepackage/contents/ui/config.qml:264
 #, kde-format
 msgid "Select Background Color"
 msgstr "o pana e kule sinpin pi wile sina"

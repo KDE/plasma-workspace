@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-10 00:45+0000\n"
 "PO-Revision-Date: 2025-02-16 12:36+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -84,6 +84,7 @@ msgstr "Når maskina vert starta på nytt, vil ho starta oppstartslastar-menyen.
 #: contents/logout/Logout.qml:212
 #, fuzzy, kde-format
 #| msgid "When restarted, the computer will enter the boot loader menu."
+msgctxt "%1 is a boot loader entry"
 msgid "When restarted, the computer will switch to %1."
 msgstr "Når maskina vert starta på nytt, vil ho starta oppstartslastar-menyen."
 

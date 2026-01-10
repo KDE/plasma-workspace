@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-10 00:45+0000\n"
 "PO-Revision-Date: 2025-05-13 16:36+0200\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -84,6 +84,7 @@ msgstr "Beim Neustart wird der Dialog für Bootloader-Einrichtung angezeigt."
 #: contents/logout/Logout.qml:212
 #, fuzzy, kde-format
 #| msgid "When restarted, the computer will enter the boot loader menu."
+msgctxt "%1 is a boot loader entry"
 msgid "When restarted, the computer will switch to %1."
 msgstr "Beim Neustart wird der Dialog für Bootloader-Einrichtung angezeigt."
 

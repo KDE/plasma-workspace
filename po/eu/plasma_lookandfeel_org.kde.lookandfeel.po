@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-10 00:45+0000\n"
 "PO-Revision-Date: 2025-01-01 00:46+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -83,6 +83,7 @@ msgstr "Berrabiatzean, ordenagailua abio-zamatzailearen menura sartuko da."
 #: contents/logout/Logout.qml:212
 #, fuzzy, kde-format
 #| msgid "When restarted, the computer will enter the boot loader menu."
+msgctxt "%1 is a boot loader entry"
 msgid "When restarted, the computer will switch to %1."
 msgstr "Berrabiatzean, ordenagailua abio-zamatzailearen menura sartuko da."
 

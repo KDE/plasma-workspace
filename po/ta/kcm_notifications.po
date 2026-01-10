@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-03 00:45+0000\n"
+"POT-Creation-Date: 2026-01-10 00:45+0000\n"
 "PO-Revision-Date: 2026-01-04 15:01+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -222,7 +222,10 @@ msgid "Hide after:"
 msgstr "இதற்கு பிறகு மறை:"
 
 #: ui/main.qml:306
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show timeout indicator"
+msgctxt ""
+"@option:check Show progress bar on notifications indicating when it will hide"
 msgid "Show timeout indicator"
 msgstr "காலாவதி ஆகப்போவதைக் குறி"
 

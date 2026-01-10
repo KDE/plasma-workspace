@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-08 00:45+0000\n"
+"POT-Creation-Date: 2026-01-10 00:45+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -70,9 +70,11 @@ msgid "When restarted, the computer will enter the boot loader menu."
 msgstr "重新启动时，电脑将进入引导加载程序菜单。"
 
 #: contents/logout/Logout.qml:212
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "When restarted, the computer will switch to %1."
+msgctxt "%1 is a boot loader entry"
 msgid "When restarted, the computer will switch to %1."
-msgstr ""
+msgstr "重启后，计算机将切换到 %1。"
 
 #: contents/logout/Logout.qml:234
 #, kde-format

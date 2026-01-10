@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-03 00:45+0000\n"
+"POT-Creation-Date: 2026-01-10 00:45+0000\n"
 "PO-Revision-Date: 2026-01-06 13:15+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -229,7 +229,10 @@ msgid "Hide after:"
 msgstr "Slėpti po:"
 
 #: ui/main.qml:306
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Show timeout indicator"
+msgctxt ""
+"@option:check Show progress bar on notifications indicating when it will hide"
 msgid "Show timeout indicator"
 msgstr "Rodyti skirtojo laiko indikatorių"
 

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-03 00:45+0000\n"
+"POT-Creation-Date: 2026-01-10 00:45+0000\n"
 "PO-Revision-Date: 2019-10-10 07:59+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -235,6 +235,8 @@ msgstr "Пинҳон кардани равзанаи пайдошаванда б
 #, fuzzy, kde-format
 #| msgctxt "Show application jobs in notification widget"
 #| msgid "Show in notifications"
+msgctxt ""
+"@option:check Show progress bar on notifications indicating when it will hide"
 msgid "Show timeout indicator"
 msgstr "Намоиш додан дар огоҳиҳо"
 
