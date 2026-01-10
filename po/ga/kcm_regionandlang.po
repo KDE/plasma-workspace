@@ -1,22 +1,22 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2026 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SPDX-FileCopyrightText: 2026 Charlotte <altronic25@protonmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Irish Gaelic <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-01-09 22:33+0000\n"
+"Last-Translator: Charlotte <altronic25@protonmail.com>\n"
+"Language-Team: Irish\n"
 "Language: ga\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: exampleutility.cpp:29
 #, kde-format
@@ -202,13 +202,13 @@ msgstr ""
 #, kde-format
 msgctxt "Space or dot for locale name style example"
 msgid " "
-msgstr ""
+msgstr " "
 
 #: exampleutility.cpp:119
 #, kde-format
 msgctxt "Whitespace for telephone style example"
 msgid " "
-msgstr ""
+msgstr " "
 
 #: exampleutility.cpp:133
 #, kde-format
@@ -238,7 +238,7 @@ msgstr ""
 #, kde-format
 msgctxt "%1 is language name, %2 is language code name"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: languagelistmodel.cpp:92
 #, kde-format
@@ -314,7 +314,7 @@ msgctxt ""
 "the first is language name, the second is the country name, like 'English "
 "(America)'"
 msgid "%1 (%2)"
-msgstr ""
+msgstr "%1 (%2)"
 
 #: localelistmodel.cpp:164
 #, kde-format
@@ -334,7 +334,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info:title"
 msgid "Language"
-msgstr ""
+msgstr "Teanga"
 
 #: optionsmodel.cpp:24
 #, kde-format
@@ -346,7 +346,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info:title"
 msgid "Time"
-msgstr ""
+msgstr "Am"
 
 #: optionsmodel.cpp:26
 #, kde-format
@@ -473,7 +473,7 @@ msgstr ""
 #: package/contents/ui/main.qml:38
 #, kde-format
 msgid "Restart now"
-msgstr ""
+msgstr "Atosaigh anois"
 
 #: package/contents/ui/main.qml:52
 #, kde-format
@@ -515,7 +515,7 @@ msgstr ""
 #: package/contents/ui/main.qml:182
 #, kde-format
 msgid "Time"
-msgstr ""
+msgstr "Am"
 
 #: package/contents/ui/main.qml:184
 #, kde-format
@@ -542,7 +542,7 @@ msgstr ""
 #, kde-format
 msgctxt "Name Style"
 msgid "Name"
-msgstr ""
+msgstr "Ainm"
 
 #: package/contents/ui/main.qml:194
 #, kde-format

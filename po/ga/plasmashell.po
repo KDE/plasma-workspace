@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2026-01-02 14:25+0000\n"
+"PO-Revision-Date: 2026-01-09 22:15+0000\n"
 "Last-Translator: Charlotte <altronic25@protonmail.com>\n"
 "Language-Team: Irish\n"
 "Language: ga\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -41,7 +41,7 @@ msgstr "Plasma"
 #: main.cpp:88
 #, kde-format
 msgid "Plasma Shell"
-msgstr ""
+msgstr "Blaosc Plasma"
 
 #: main.cpp:100
 #, kde-format
@@ -51,7 +51,7 @@ msgstr ""
 #: main.cpp:103
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
-msgstr ""
+msgstr "Ná atosaigh Blaosc Plasma go huathoibríoch tar éis tuairteáil"
 
 #: main.cpp:106
 #, kde-format
@@ -99,6 +99,9 @@ msgid ""
 "fallback\n"
 "Please check that your graphic drivers are set up correctly."
 msgstr ""
+"Níorbh fhéidir Plasma a thosú mar níorbh fhéidir OpenGL2 nó rindreálaí "
+"bogearraí a úsáid\n"
+"Cinntigh do thiománaithe grafaicí "
 
 #: osd.cpp:54
 #, kde-format
@@ -158,13 +161,13 @@ msgstr "Bluetooth Múchta"
 #, kde-format
 msgctxt "mobile internet was enabled, keep short"
 msgid "Mobile Internet On"
-msgstr ""
+msgstr "Idirlíon Móibíleach Ar"
 
 #: osd.cpp:139
 #, kde-format
 msgctxt "mobile internet was disabled, keep short"
 msgid "Mobile Internet Off"
-msgstr ""
+msgstr "Idirlíon Móibíleach Múchta"
 
 #: osd.cpp:147
 #, kde-format
@@ -201,12 +204,12 @@ msgstr ""
 #: shellcorona.cpp:176 shellcorona.cpp:178
 #, kde-format
 msgid "Show Desktop"
-msgstr ""
+msgstr "Taispeáin an Deasc"
 
 #: shellcorona.cpp:178
 #, kde-format
 msgid "Hide Desktop"
-msgstr ""
+msgstr "Folaigh an Deasc"
 
 #: shellcorona.cpp:193
 #, kde-format
