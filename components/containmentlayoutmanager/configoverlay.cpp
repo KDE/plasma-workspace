@@ -61,6 +61,21 @@ void ConfigOverlay::setTouchInteraction(bool touch)
     Q_EMIT touchInteractionChanged();
 }
 
+bool ConfigOverlay::placeholderActive() const
+{
+    return m_placeholderActive;
+}
+
+void ConfigOverlay::setPlaceholderActive(bool active)
+{
+    if (active == m_placeholderActive) {
+        return;
+    }
+
+    m_placeholderActive = active;
+    Q_EMIT placeholderActiveChanged();
+}
+
 ItemContainer *ConfigOverlay::itemContainer() const
 {
     return m_itemContainer;

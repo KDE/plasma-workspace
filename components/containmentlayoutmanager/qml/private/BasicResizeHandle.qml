@@ -9,43 +9,95 @@ import QtQuick
 import org.kde.plasma.private.containmentlayoutmanager as ContainmentLayoutManager
 import org.kde.kirigami as Kirigami
 
+
+// TODO: Add animations when showing/hiding the handles
+// TODO: Add hover effect on the handles
+// TODO: Extend clickable area of the handles for easier grabbing on touch
 ContainmentLayoutManager.ResizeHandle {
     id: handle
-    width: overlay.touchInteraction ? Kirigami.Units.gridUnit * 2 : Kirigami.Units.gridUnit
-    height: width
+    
+
+    // FIXME: Remove before merge
+    property bool debug: false
+    
+    readonly property bool isCorner: resizeCorner === ContainmentLayoutManager.ResizeHandle.TopLeft ||
+                                     resizeCorner === ContainmentLayoutManager.ResizeHandle.TopRight ||
+                                     resizeCorner === ContainmentLayoutManager.ResizeHandle.BottomLeft ||
+                                     resizeCorner === ContainmentLayoutManager.ResizeHandle.BottomRight
+        
+    readonly property bool isHorizontalEdge: resizeCorner === ContainmentLayoutManager.ResizeHandle.Top ||
+                                             resizeCorner === ContainmentLayoutManager.ResizeHandle.Bottom
+    
+    readonly property bool isVerticalEdge: resizeCorner === ContainmentLayoutManager.ResizeHandle.Left ||
+                                           resizeCorner === ContainmentLayoutManager.ResizeHandle.Right
+
+    
+    width: isHorizontalEdge ? parent.width : Kirigami.Units.gridUnit * 2
+    height: isVerticalEdge ? parent.height : Kirigami.Units.gridUnit * 2
+    
+    scale: overlay.open ? 1 : 0
     z: 999
 
-    Kirigami.ShadowedRectangle {
+    Item {
         anchors.fill: parent
-        color: handle.resizeBlocked ? Kirigami.Theme.negativeTextColor : Kirigami.Theme.backgroundColor
+        visible: handle.isCorner
+        clip: true
 
-        radius: width
+        Rectangle {
+            width: parent.width * 2
+            height: parent.height * 2
+            
+            color: "transparent"
+            
+            border.width: Kirigami.Units.gridUnit / 4
+            border.color: handle.resizeBlocked ? Kirigami.Theme.negativeTextColor : Kirigami.Theme.highlightColor
+            
+            radius: Kirigami.Units.largeSpacing * 2
+            
+            x: {
+                if (handle.resizeCorner === ContainmentLayoutManager.ResizeHandle.TopLeft ||
+                    handle.resizeCorner === ContainmentLayoutManager.ResizeHandle.BottomLeft) {
+                    return 0
+                } else {
+                    return -parent.width
+                }
+            }
+            
+            y: {
+                if (handle.resizeCorner === ContainmentLayoutManager.ResizeHandle.TopLeft ||
+                    handle.resizeCorner === ContainmentLayoutManager.ResizeHandle.TopRight) {
+                    return 0
+                } else {
+                    return -parent.height
+                }
+            }
+        }
 
-        shadow.size: Kirigami.Units.smallSpacing
-        shadow.color: Qt.rgba(0.0, 0.0, 0.0, 0.2)
-        shadow.yOffset: 2
-
-        border.width: 1
-        border.color: Qt.tint(Kirigami.Theme.textColor,
-                            Qt.rgba(color.r, color.g, color.b, 0.3))
     }
+
+    Item {
+        anchors.fill: parent
+        visible: handle.isHorizontalEdge || handle.isVerticalEdge
+        
+        // FIXME: Remove before merge
+        Rectangle {
+            anchors.fill: parent
+            color: handle.debug ? Qt.rgba(0, 1, 0, 0.3) : "transparent"
+            border.width: handle.debug ? 1 : 0
+            border.color: "green"
+        }
+    }
+    
+    // FIXME: Remove before merge
     Rectangle {
-        anchors {
-            fill: parent
-            margins: 0.5
-        }
-        border {
-            width: 0.5
-            color: Qt.rgba(1, 1, 1, 0.2)
-        }
-        gradient: Gradient {
-            GradientStop { position: 0.0; color: handle.pressed ? Qt.rgba(0, 0, 0, 0.15) : Qt.rgba(1, 1, 1, 0.05) }
-            GradientStop { position: 1.0; color: handle.pressed ? Qt.rgba(0, 0, 0, 0.15) : Qt.rgba(0, 0, 0, 0.05) }
-        }
-
-        radius: width
+        anchors.fill: parent
+        color: handle.debug && handle.isCorner ? Qt.rgba(1, 0, 0, 0.3) : "transparent"
+        border.width: handle.debug && handle.isCorner ? 1 : 0
+        border.color: "red"
+        visible: handle.debug && handle.isCorner
+        z: -1
     }
-    scale: overlay.open ? 1 : 0
+
     Behavior on scale {
         NumberAnimation {
             duration: Kirigami.Units.longDuration

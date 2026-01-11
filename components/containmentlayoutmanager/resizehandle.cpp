@@ -163,6 +163,7 @@ void ResizeHandle::mouseMoveEvent(QMouseEvent *event)
 
         // -1 to have a bit of margins around
         if (layout->isRectAvailable(x - 1, m_mouseDownGeometry.y(), width, m_mouseDownGeometry.height())) {
+            m_configOverlay->setPlaceholderActive(true);
             itemContainer->setX(x);
             itemContainer->setWidth(width);
             setResizeBlocked(m_mouseDownGeometry.width() + difference.x() < minimumSize.width(), m_resizeHeightBlocked);
@@ -173,6 +174,7 @@ void ResizeHandle::mouseMoveEvent(QMouseEvent *event)
         const qreal width = qMax(minimumSize.width(), m_mouseDownGeometry.width() - difference.x());
 
         if (layout->isRectAvailable(m_mouseDownGeometry.x(), m_mouseDownGeometry.y(), width, m_mouseDownGeometry.height())) {
+            m_configOverlay->setPlaceholderActive(true);
             itemContainer->setWidth(width);
             setResizeBlocked(m_mouseDownGeometry.width() - difference.x() < minimumSize.width(), m_resizeHeightBlocked);
         } else {
@@ -187,6 +189,7 @@ void ResizeHandle::mouseMoveEvent(QMouseEvent *event)
 
         // -1 to have a bit of margins around
         if (layout->isRectAvailable(m_mouseDownGeometry.x(), y - 1, m_mouseDownGeometry.width(), m_mouseDownGeometry.height())) {
+            m_configOverlay->setPlaceholderActive(true);
             itemContainer->setY(y);
             itemContainer->setHeight(height);
             setResizeBlocked(m_resizeWidthBlocked, m_mouseDownGeometry.height() + difference.y() < minimumSize.height());
@@ -197,6 +200,7 @@ void ResizeHandle::mouseMoveEvent(QMouseEvent *event)
         const qreal height = qMax(minimumSize.height(), m_mouseDownGeometry.height() - difference.y());
 
         if (layout->isRectAvailable(m_mouseDownGeometry.x(), m_mouseDownGeometry.y(), m_mouseDownGeometry.width(), height)) {
+            m_configOverlay->setPlaceholderActive(true);
             itemContainer->setHeight(qMax(height, minimumSize.height()));
             setResizeBlocked(m_resizeWidthBlocked, m_mouseDownGeometry.height() - difference.y() < minimumSize.height());
         } else {
@@ -204,12 +208,20 @@ void ResizeHandle::mouseMoveEvent(QMouseEvent *event)
         }
     }
 
+    if (m_configOverlay->placeholderActive()) {
+        layout->showPlaceHolderForItem(itemContainer);
+    }
+
     event->accept();
 }
 
 void ResizeHandle::mouseReleaseEvent(QMouseEvent *event)
 {
+    if (m_configOverlay) {
+        m_configOverlay->setPlaceholderActive(false);
+    }
     setPressed(false);
+
     if (!m_configOverlay || !m_configOverlay->itemContainer()) {
         return;
     }
@@ -222,7 +234,7 @@ void ResizeHandle::mouseReleaseEvent(QMouseEvent *event)
     }
 
     layout->positionItem(itemContainer);
-
+    layout->hidePlaceHolder();
     event->accept();
 
     setResizeBlocked(false, false);
@@ -231,6 +243,9 @@ void ResizeHandle::mouseReleaseEvent(QMouseEvent *event)
 
 void ResizeHandle::mouseUngrabEvent()
 {
+    if (m_configOverlay) {
+        m_configOverlay->setPlaceholderActive(false);
+    }
     setPressed(false);
 }
 

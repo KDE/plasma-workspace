@@ -531,6 +531,8 @@ bool ItemContainer::childMouseEventFilter(QQuickItem *item, QEvent *event)
         if (auto mouseEvent = static_cast<QMouseEvent *>(event); mouseEvent->exclusiveGrabber(mouseEvent->point(0)) == this) {
             mouseEvent->setExclusiveGrabber(mouseEvent->point(0), nullptr);
         }
+
+        m_configOverlay->setPlaceholderActive(false);
         event->accept();
         m_dragActive = false;
         if (m_editMode) {
@@ -614,6 +616,10 @@ void ItemContainer::mouseReleaseEvent(QMouseEvent *event)
         m_layout->positionItem(this);
     }
 
+    if (m_configOverlay) {
+        m_configOverlay->setPlaceholderActive(false);
+    }
+
     m_dragActive = false;
     if (m_editMode) {
         Q_EMIT dragActiveChanged();
@@ -647,6 +653,9 @@ void ItemContainer::mouseMoveEvent(QMouseEvent *event)
         m_layout->releaseSpace(this);
         event->setExclusiveGrabber(event->point(0), this);
         m_dragActive = true;
+        if (m_configOverlay) {
+            m_configOverlay->setPlaceholderActive(true);
+        }
         Q_EMIT dragActiveChanged();
 
     } else {
@@ -655,6 +664,9 @@ void ItemContainer::mouseMoveEvent(QMouseEvent *event)
         if (m_layout
             && (std::floor(parentPos.x() / m_layout->cellWidth()) != std::floor(m_lastMousePositionOnGrid.x() / m_layout->cellWidth())
                 || std::floor(parentPos.y() / m_layout->cellHeight()) != std::floor(m_lastMousePositionOnGrid.y() / m_layout->cellHeight()))) {
+            if (m_configOverlay) {
+                m_configOverlay->setPlaceholderActive(true);
+            }
             m_layout->showPlaceHolderForItem(this);
             m_lastMousePositionOnGrid = parentPos;
         }
@@ -674,6 +686,10 @@ void ItemContainer::mouseUngrabEvent()
     if (m_layout && m_editMode && !m_layout->itemIsManaged(this)) {
         m_layout->hidePlaceHolder();
         m_layout->positionItem(this);
+    }
+
+    if (m_configOverlay) {
+        m_configOverlay->setPlaceholderActive(false);
     }
 
     m_dragActive = false;

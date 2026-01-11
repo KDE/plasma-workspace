@@ -23,6 +23,26 @@ ContainmentLayoutManager.ConfigOverlay {
             easing.type: Easing.InOutQuad
         }
     }
+    
+    Rectangle {
+        anchors {
+            fill: parent
+            margins: -(Kirigami.Units.gridUnit * 1.5)
+        }
+        color: !overlay.placeholderActive ? Qt.rgba(Kirigami.Theme.disabledTextColor.r, 
+                              Kirigami.Theme.disabledTextColor.g, 
+                              Kirigami.Theme.disabledTextColor.b, 
+                              0.1) : "transparent"
+        radius: Kirigami.Units.largeSpacing * 2
+
+        Behavior on color {
+            enabled: true
+            ColorAnimation {
+                duration: Kirigami.Units.longDuration
+                easing.type: Easing.InOutCubic
+            }
+        }
+    }       
 
     MultiPointTouchArea {
         anchors.fill: parent
@@ -64,6 +84,7 @@ ContainmentLayoutManager.ConfigOverlay {
             }
 
             if (pinching === (point1.pressed && point2.pressed)) {
+                overlay.placeholderActive = true;
                 overlay.itemContainer.x += minX - previousMinX;
                 overlay.itemContainer.y += minY - previousMinY;
 
@@ -87,6 +108,7 @@ ContainmentLayoutManager.ConfigOverlay {
             overlay.itemContainer.layout.positionItem(overlay.itemContainer);
             overlay.itemContainer.layout.hidePlaceHolder();
             pinching = false;
+            overlay.placeholderActive = false;
         }
         onCanceled: released()
     }
@@ -99,10 +121,34 @@ ContainmentLayoutManager.ConfigOverlay {
         }
     }
     BasicResizeHandle {
+        resizeCorner: ContainmentLayoutManager.ResizeHandle.Top
+        anchors {
+            left: parent.left
+            right: parent.right
+            verticalCenter: parent.top
+        }
+    }
+    BasicResizeHandle {
+        resizeCorner: ContainmentLayoutManager.ResizeHandle.TopRight
+       anchors {
+            horizontalCenter: parent.right
+            verticalCenter: parent.top
+        }
+    }
+    BasicResizeHandle {
         resizeCorner: ContainmentLayoutManager.ResizeHandle.Left
         anchors {
+            top: parent.top
+            bottom: parent.bottom
             horizontalCenter: parent.left
-            verticalCenter: parent.verticalCenter
+        }
+    }
+    BasicResizeHandle {
+        resizeCorner: ContainmentLayoutManager.ResizeHandle.Right
+        anchors {
+            top: parent.top
+            bottom: parent.bottom
+            horizontalCenter: parent.right
         }
     }
     BasicResizeHandle {
@@ -115,7 +161,8 @@ ContainmentLayoutManager.ConfigOverlay {
     BasicResizeHandle {
         resizeCorner: ContainmentLayoutManager.ResizeHandle.Bottom
         anchors {
-            horizontalCenter: parent.horizontalCenter
+            left: parent.left
+            right: parent.right
             verticalCenter: parent.bottom
         }
     }
@@ -124,27 +171,6 @@ ContainmentLayoutManager.ConfigOverlay {
         anchors {
             horizontalCenter: parent.right
             verticalCenter: parent.bottom
-        }
-    }
-    BasicResizeHandle {
-        resizeCorner: ContainmentLayoutManager.ResizeHandle.Right
-        anchors {
-            horizontalCenter: parent.right
-            verticalCenter: parent.verticalCenter
-        }
-    }
-    BasicResizeHandle {
-        resizeCorner: ContainmentLayoutManager.ResizeHandle.TopRight
-        anchors {
-            horizontalCenter: parent.right
-            verticalCenter: parent.top
-        }
-    }
-    BasicResizeHandle {
-        resizeCorner: ContainmentLayoutManager.ResizeHandle.Top
-        anchors {
-            horizontalCenter: parent.horizontalCenter
-            verticalCenter: parent.top
         }
     }
 }

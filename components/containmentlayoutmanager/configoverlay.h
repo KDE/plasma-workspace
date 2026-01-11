@@ -22,6 +22,7 @@ class ConfigOverlay : public QQuickItem
     Q_PROPERTY(qreal rightAvailableSpace READ rightAvailableSpace NOTIFY rightAvailableSpaceChanged)
     Q_PROPERTY(qreal bottomAvailableSpace READ bottomAvailableSpace NOTIFY bottomAvailableSpaceChanged)
     Q_PROPERTY(bool touchInteraction READ touchInteraction NOTIFY touchInteractionChanged)
+    Q_PROPERTY(bool placeholderActive READ placeholderActive WRITE setPlaceholderActive NOTIFY placeholderActiveChanged)
 
 public:
     ConfigOverlay(QQuickItem *parent = nullptr);
@@ -55,6 +56,9 @@ public:
     // This only usable from C++
     void setTouchInteraction(bool touch);
 
+    bool placeholderActive() const;
+    void setPlaceholderActive(bool active);
+
 Q_SIGNALS:
     void openChanged(bool open);
     void itemContainerChanged();
@@ -63,6 +67,7 @@ Q_SIGNALS:
     void rightAvailableSpaceChanged();
     void bottomAvailableSpaceChanged();
     void touchInteractionChanged();
+    void placeholderActiveChanged();
 
 private:
     QPointer<ItemContainer> m_itemContainer;
@@ -77,4 +82,5 @@ private:
 
     bool m_open = false;
     bool m_touchInteraction = false;
+    bool m_placeholderActive = false;
 };
