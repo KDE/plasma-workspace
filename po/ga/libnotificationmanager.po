@@ -1,105 +1,125 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2026 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SPDX-FileCopyrightText: 2026 Charlotte <altronic25@protonmail.com>
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2026-01-10 05:32+0000\n"
+"Last-Translator: Charlotte <altronic25@protonmail.com>\n"
+"Language-Team: Irish\n"
+"Language: ga\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: abstractnotificationsmodel.cpp:315
 #, kde-format
 msgctxt "@info %1 notification body %2 application name"
 msgid "%1 from %2"
-msgstr ""
+msgstr "%1 ó %2"
 
 #: job_p.cpp:183
 #, kde-format
 msgctxt "Copying n of m files to locaton"
 msgid "%2 of %1 file to %3"
 msgid_plural "%2 of %1 files to %3"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%2 as %1 chomhad go %3"
+msgstr[1] "%2 as %1 chomhad go %3"
+msgstr[2] "%2 as %1 chomhad go %3"
+msgstr[3] "%2 as %1 gcomhad go %3"
+msgstr[4] "%2 as %1 comhad go %3"
 
 #: job_p.cpp:186 job_p.cpp:216 job_p.cpp:232
 #, kde-format
 msgctxt "Copying n files to location"
 msgid "%1 file to %2"
 msgid_plural "%1 files to %2"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 chomhad go %2"
+msgstr[1] "%1 chomhad go %2"
+msgstr[2] "%1 chomhad go %2"
+msgstr[3] "%1 gcomhad go %2"
+msgstr[4] "%1 comhad go %2"
 
 #: job_p.cpp:193
 #, kde-format
 msgctxt "Copying n of m files"
 msgid "%2 of %1 file"
 msgid_plural "%2 of %1 files"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%2 as %1 chomhad"
+msgstr[1] "%2 as %1 chomhad"
+msgstr[2] "%2 as %1 chomhad"
+msgstr[3] "%2 as %1 gcomhad"
+msgstr[4] "%2 as %1 comhad"
 
 #: job_p.cpp:196 job_p.cpp:226 job_p.cpp:236
 #, kde-format
 msgctxt "Copying n files"
 msgid "%1 file"
 msgid_plural "%1 files"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 chomhad"
+msgstr[1] "%1 chomhad"
+msgstr[2] "%1 chomhad"
+msgstr[3] "%1 gcomhad"
+msgstr[4] "%1 comhad"
 
 #: job_p.cpp:201
 #, kde-format
 msgctxt "Copying n of m items"
 msgid "%2 of %1 item"
 msgid_plural "%2 of %1 items"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%2 as %1 mhír"
+msgstr[1] "%2 as %1 mhír"
+msgstr[2] "%2 as %1 mhír"
+msgstr[3] "%2 as %1 mír"
+msgstr[4] "%2 as %1 mír"
 
 #: job_p.cpp:204 job_p.cpp:224
 #, kde-format
 msgctxt "Copying n items"
 msgid "%1 item"
 msgid_plural "%1 items"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 mhír"
+msgstr[1] "%1 mhír"
+msgstr[2] "%1 mhír"
+msgstr[3] "%1 mír"
+msgstr[4] "%1 mír"
 
 #: job_p.cpp:211
 #, kde-format
 msgctxt "Copying file to location"
 msgid "%1 to %2"
-msgstr ""
+msgstr "%1 go %2"
 
 #: job_p.cpp:214
 #, kde-format
 msgctxt "Copying n items to location"
 msgid "%1 file to %2"
 msgid_plural "%1 items to %2"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 chomhad go %2"
+msgstr[1] "%1 mhír go %2"
+msgstr[2] "%1 mhír go %2"
+msgstr[3] "%1 mír go %2"
+msgstr[4] "%1 mír go %2"
 
 #: job_p.cpp:234
 #, kde-format
 msgctxt "Copying unknown amount of files to location"
 msgid "to %1"
-msgstr ""
+msgstr "go %1"
 
 #: jobsmodel.cpp:109
 #, kde-format
 msgctxt "@info %1 notification body %2 job name"
 msgid "%1 from %2"
-msgstr ""
+msgstr "%1 ó %2"
 
 #: jobsmodel_p.cpp:477
 #, kde-format
 msgid "Application closed unexpectedly."
-msgstr ""
+msgstr "Dúnadh an feidhmchlár go gan choinne."

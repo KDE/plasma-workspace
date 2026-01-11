@@ -2,20 +2,22 @@
 # Copyright (C) 2009 This_file_is_part_of_KDE
 # This file is distributed under the same license as the kcm_autostart package.
 # Kevin Scannell <kscanne@gmail.com>, 2009.
+# SPDX-FileCopyrightText: 2026 Charlotte <altronic25@protonmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdereview/kcm_autostart.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2008-03-22 08:52-0500\n"
-"Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
-"Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
+"PO-Revision-Date: 2026-01-10 04:57+0000\n"
+"Last-Translator: Charlotte <altronic25@protonmail.com>\n"
+"Language-Team: Irish\n"
 "Language: ga\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: autostartmodel.cpp:322
 #, kde-format
@@ -25,12 +27,12 @@ msgstr ""
 #: autostartmodel.cpp:325
 #, kde-format
 msgid "\"%1\" does not exist."
-msgstr ""
+msgstr "Níl \"%1\" ann."
 
 #: autostartmodel.cpp:328
 #, kde-format
 msgid "\"%1\" is not a file."
-msgstr ""
+msgstr "Ní comhad é \"%1\"."
 
 #: autostartmodel.cpp:331
 #, kde-format
@@ -53,37 +55,34 @@ msgid "The file '%1' must be executable to run at login."
 msgstr ""
 
 #: package/contents/ui/main.qml:94
-#, fuzzy, kde-format
-#| msgid "&Properties..."
+#, kde-format
 msgid "Properties"
-msgstr "&Airíonna..."
+msgstr "Airíonna"
 
 #: package/contents/ui/main.qml:100
-#, fuzzy, kde-format
-#| msgid "&Remove"
+#, kde-format
 msgid "Remove"
-msgstr "&Bain"
+msgstr "Bain"
 
 #: package/contents/ui/main.qml:111
 #, kde-format
 msgid "Applications"
-msgstr ""
+msgstr "Feidhmchláir"
 
 #: package/contents/ui/main.qml:114
 #, kde-format
 msgid "Login Scripts"
-msgstr ""
+msgstr "Scripteanna Le hAghaidh Logáil Isteach"
 
 #: package/contents/ui/main.qml:117
-#, fuzzy, kde-format
-#| msgid "Pre-KDE startup"
+#, kde-format
 msgid "Pre-startup Scripts"
-msgstr "Tosú Réámh-KDE"
+msgstr "Réámh-Tosú"
 
 #: package/contents/ui/main.qml:120
 #, kde-format
 msgid "Logout Scripts"
-msgstr ""
+msgstr "Scripteanna Le hAghaidh Logáil Amach"
 
 #: package/contents/ui/main.qml:129
 #, kde-format
@@ -97,37 +96,34 @@ msgid "Click the <interface>Add…</interface> button below to add some"
 msgstr ""
 
 #: package/contents/ui/main.qml:144
-#, fuzzy, kde-format
-#| msgid "Add Script..."
+#, kde-format
 msgid "Choose Login Script"
-msgstr "Cuir Script Leis..."
+msgstr "Roghnaigh Script Le hAghaidh Logáil Isteach"
 
 #: package/contents/ui/main.qml:165
 #, kde-format
 msgid "Choose Logout Script"
-msgstr ""
+msgstr "Roghnaigh Script Le hAghaidh Logáil Amach"
 
 #: package/contents/ui/main.qml:183
 #, kde-format
 msgid "Add…"
-msgstr ""
+msgstr "Cuir Leis..."
 
 #: package/contents/ui/main.qml:198
 #, kde-format
 msgid "Add Application…"
-msgstr ""
+msgstr "Cuir Feidhmchlár Leis..."
 
 #: package/contents/ui/main.qml:204
-#, fuzzy, kde-format
-#| msgid "Add Script..."
+#, kde-format
 msgid "Add Login Script…"
-msgstr "Cuir Script Leis..."
+msgstr "Cuir Script Le hAghaidh Logáil Isteach Leis..."
 
 #: package/contents/ui/main.qml:210
-#, fuzzy, kde-format
-#| msgid "Add Script..."
+#, kde-format
 msgid "Add Logout Script…"
-msgstr "Cuir Script Leis..."
+msgstr "Cuir Script Le hAghaidh Logáil Amach Leis..."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"
