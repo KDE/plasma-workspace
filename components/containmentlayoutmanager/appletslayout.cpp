@@ -578,21 +578,43 @@ void AppletsLayout::componentComplete()
 
 bool AppletsLayout::childMouseEventFilter(QQuickItem *item, QEvent *event)
 {
-    if (item != m_eventManagerToFilter) {
-        return QQuickItem::childMouseEventFilter(item, event);
+    if (item == m_eventManagerToFilter) {
+        switch (event->type()) {
+        case QEvent::TouchBegin:
+        case QEvent::TouchUpdate:
+        case QEvent::TouchCancel:
+        case QEvent::TouchEnd: {
+            touchEvent(static_cast<QTouchEvent *>(event));
+            break;
+        }
+
+        default:
+            break;
+        }
     }
 
-    switch (event->type()) {
-    case QEvent::TouchBegin:
-    case QEvent::TouchUpdate:
-    case QEvent::TouchCancel:
-    case QEvent::TouchEnd: {
-        touchEvent(static_cast<QTouchEvent *>(event));
-        break;
-    }
-
-    default:
-        break;
+    // Disable events to all applets when in edit mode
+    for (auto *applet : m_containment->applets()) {
+        PlasmaQuick::AppletQuickItem *appletItem = PlasmaQuick::AppletQuickItem::itemForApplet(applet);
+        if (m_editMode && appletItem && (item == appletItem || appletItem->isAncestorOf(item))) {
+            switch (event->type()) {
+            case QEvent::MouseButtonPress:
+            case QEvent::MouseButtonRelease:
+            case QEvent::MouseButtonDblClick:
+            case QEvent::MouseMove:
+            case QEvent::HoverEnter:
+            case QEvent::HoverLeave:
+            case QEvent::HoverMove:
+            case QEvent::Wheel:
+            case QEvent::TouchBegin:
+            case QEvent::TouchUpdate:
+            case QEvent::TouchEnd:
+            case QEvent::TouchCancel:
+                return true;
+            default:
+                break;
+            }
+        }
     }
 
     return QQuickItem::childMouseEventFilter(item, event);
