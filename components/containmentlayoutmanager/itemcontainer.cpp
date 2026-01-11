@@ -486,18 +486,9 @@ bool ItemContainer::childMouseEventFilter(QQuickItem *item, QEvent *event)
 {
     // Don't filter the configoverlay
     if (item == m_configOverlay || (m_configOverlay && m_configOverlay->isAncestorOf(item)) || (!m_editMode && m_editModeCondition == Manual)) {
-        if (m_closeEditModeTimer && m_closeEditModeTimer->isActive()) {
-            m_closeEditModeTimer->setInterval(2s);
-            m_closeEditModeTimer->start();
-        }
         return QQuickItem::childMouseEventFilter(item, event);
     }
 
-    // give more time before closing
-    if (m_closeEditModeTimer && m_closeEditModeTimer->isActive()) {
-        m_closeEditModeTimer->setInterval(500ms);
-        m_closeEditModeTimer->start();
-    }
     if (event->type() == QEvent::MouseButtonPress) {
         auto *me = static_cast<QMouseEvent *>(event);
         if (me->button() != Qt::LeftButton && !(me->buttons() & Qt::LeftButton)) {
@@ -699,13 +690,8 @@ void ItemContainer::hoverEnterEvent(QHoverEvent *event)
         return;
     }
 
-    if (m_closeEditModeTimer) {
-        m_closeEditModeTimer->stop();
-    }
-
     if (m_layout->editMode()) {
         setCursor(Qt::OpenHandCursor);
-        setEditMode(true);
     } else {
         m_editModeTimer->start(QGuiApplication::styleHints()->mousePressAndHoldInterval());
     }
@@ -720,15 +706,6 @@ void ItemContainer::hoverLeaveEvent(QHoverEvent *event)
     }
 
     m_editModeTimer->stop();
-    if (!m_closeEditModeTimer) {
-        m_closeEditModeTimer = new QTimer(this);
-        m_closeEditModeTimer->setSingleShot(true);
-        connect(m_closeEditModeTimer, &QTimer::timeout, this, [this]() {
-            setEditMode(false);
-        });
-    }
-    m_closeEditModeTimer->setInterval(500ms);
-    m_closeEditModeTimer->start();
 }
 
 QQuickItem *ItemContainer::contentItem() const

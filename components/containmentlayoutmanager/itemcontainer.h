@@ -220,7 +220,6 @@ private:
 
     QPointer<AppletsLayout> m_layout;
     QTimer *m_editModeTimer = nullptr;
-    QTimer *m_closeEditModeTimer = nullptr;
     QTimer *m_sizeHintAdjustTimer = nullptr;
     QObject *m_layoutAttached = nullptr;
     EditModeCondition m_editModeCondition = Manual;
