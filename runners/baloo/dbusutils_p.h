@@ -1,5 +1,6 @@
 #pragma once
 
+#include <KRunner/Action>
 #include <KRunner/QueryMatch>
 #include <QDBusArgument>
 #include <QList>
@@ -17,14 +18,6 @@ struct RemoteMatch {
 };
 
 typedef QList<RemoteMatch> RemoteMatches;
-
-struct RemoteAction {
-    QString id;
-    QString text;
-    QString iconName;
-};
-
-typedef QList<RemoteAction> RemoteActions;
 
 inline QDBusArgument &operator<<(QDBusArgument &argument, const RemoteMatch &match)
 {
@@ -53,22 +46,26 @@ inline const QDBusArgument &operator>>(const QDBusArgument &argument, RemoteMatc
     return argument;
 }
 
-inline QDBusArgument &operator<<(QDBusArgument &argument, const RemoteAction &action)
+inline QDBusArgument &operator<<(QDBusArgument &argument, const KRunner::Action &action)
 {
     argument.beginStructure();
-    argument << action.id;
-    argument << action.text;
-    argument << action.iconName;
+    argument << action.id();
+    argument << action.text();
+    argument << action.iconSource();
     argument.endStructure();
     return argument;
 }
 
-inline const QDBusArgument &operator>>(const QDBusArgument &argument, RemoteAction &action)
+inline const QDBusArgument &operator>>(const QDBusArgument &argument, KRunner::Action &action)
 {
+    QString id;
+    QString text;
+    QString iconName;
     argument.beginStructure();
-    argument >> action.id;
-    argument >> action.text;
-    argument >> action.iconName;
+    argument >> id;
+    argument >> text;
+    argument >> iconName;
     argument.endStructure();
+    action = KRunner::Action(id, iconName, text);
     return argument;
 }

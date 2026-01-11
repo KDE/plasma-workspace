@@ -12,6 +12,7 @@
 #include <QObject>
 
 #include "dbusutils_p.h"
+#include <KRunner/Action>
 #include <KRunner/QueryMatch>
 
 class SearchRunner : public QObject, protected QDBusContext
@@ -21,10 +22,12 @@ class SearchRunner : public QObject, protected QDBusContext
 public:
     explicit SearchRunner(QObject *parent = nullptr);
 
-    RemoteActions Actions();
+    KRunner::Actions Actions();
     RemoteMatches Match(const QString &searchTerm);
     void Run(const QString &id, const QString &actionId);
     void SetActivationToken(const QString &token);
+    QVariantMap Config();
+    void Teardown();
 
 private:
     RemoteMatches matchInternal(const QString &searchTerm, const QStringList &types, const QString &category, QSet<QUrl> &foundUrls);

@@ -1,6 +1,37 @@
 <!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN" "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<!--
+    SPDX-License-Identifier: LGPL-2.0-or-later
+    SPDX-FileCopyrightText: 2017, 2018 David Edmundson <davidedmundson@kde.org>
+    SPDX-FileCopyrightText: 2020 Kai Uwe Broulik <kde@broulik.de>
+    SPDX-FileCopyrightText: 2020-2021 Alexander Lohnau <alexander.lohnau@gmx.de>
+-->
+
 <node>
   <interface name="org.kde.krunner1">
+    <!--
+        This method gets called when a match session is over.
+        It can be used to clear data which should not be kept in memory after a match session.
+    -->
+    <method name="Teardown"/>
+
+    <!--
+        This method can be used to set runner config at runtime. In case the service wildcard is used
+        the config is only for one service requested.
+        It gets only called when the X-Plasma-Api value is set to DBus2
+
+        Possible values for the response map are:
+        MatchRegex (String)
+        MinLetterCount (int)
+        TriggerWords (StringList)
+        Actions (RemoteActions), see X-Plasma-Request-Actions-Once property docs
+
+        See API documentation of the AbstractRunner class for details about these values.
+    -->
+    <method name="Config">
+      <annotation name="org.qtproject.QtDBus.QtTypeName.Out0" value="QVariantMap" />
+      <arg name="config" type="a{sv}" direction="out">
+      </arg>
+    </method>
 
     <!--
         Returns a list of actions supported by this runner.
@@ -12,7 +43,7 @@
          - IconName
     -->
     <method name="Actions">
-      <annotation name="org.qtproject.QtDBus.QtTypeName.Out0" value="RemoteActions" />
+      <annotation name="org.qtproject.QtDBus.QtTypeName.Out0" value="KRunner::Actions" />
       <arg name="matches" type="a(sss)" direction="out">
       </arg>
     </method>
@@ -53,12 +84,23 @@
          - Id
          - Text
          - IconName
-         - Type (see PlasmaQuery::Type)
+         - Type (see KRunner::QueryMatch::Type)
          - Relevance
          - Properties (VariantMap)
+            - urls (StringList)
+            - category
+            - subtext
+            - actions (StringList of RemoteAction's IDs). In case you don't want to display any actions set this to an empty list.
+              Otherwise all the actions will be shown for compatibility with the previous versions of the D-Bus API.
+              When the actions only need to be fetched once you can set the X-Plasma-Request-Actions-Once property of
+              the service file to true.
+            - icon-data (iiibiiay). Custom icon pixmap. Icon name should be preferred, if available.
+              Format is the same as org.freedesktop.Notifications icon-data, in order: width, height, row stride,
+              has alpha, bits per sample, number of channels, pixmap data.
+            - multiline (boolean). If the text should be displayed as styled multiline text.
       -->
       <annotation name="org.qtproject.QtDBus.QtTypeName.Out0" value="RemoteMatches"/>
-      <arg name="matches" type="a(sssuda{sv})" direction="out"/>
+      <arg name="matches" type="a(sssida{sv})" direction="out"/>
     </method>
   </interface>
 </node>
