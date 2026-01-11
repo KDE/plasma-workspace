@@ -33,3 +33,5 @@ ecm_generate_dbus_service_file(NAME org.kde.runners.baloo
 )
 
 ecm_install_configured_files(INPUT plasma-baloorunner.service.in @ONLY DESTINATION ${KDE_INSTALL_SYSTEMDUSERUNITDIR})
+
+install(FILES org.kde.baloorunner.desktop DESTINATION ${KDE_INSTALL_APPDIR})

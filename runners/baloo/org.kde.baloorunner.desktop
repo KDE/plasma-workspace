@@ -1,0 +1,8 @@
+# SPDX-License-Identifier: CC0-1.0
+# SPDX-FileCopyrightText: None
+
+[Desktop Entry]
+Name=File Search
+Type=Application
+Icon=baloo
+NoDisplay=true
