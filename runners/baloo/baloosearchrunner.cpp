@@ -39,7 +39,7 @@ int main(int argc, char **argv)
     QApplication::setQuitOnLastWindowClosed(false);
     QApplication app(argc, argv); // KRun needs widgets for error message boxes
 
-    KAboutData about(QStringLiteral("baloorunner"), QString(), QStringLiteral(WORKSPACE_VERSION_STRING));
+    KAboutData about(QStringLiteral("baloorunner"), i18n("File Search"), QStringLiteral(WORKSPACE_VERSION_STRING));
     KAboutData::setApplicationData(about);
 
     KCrash::initialize();
