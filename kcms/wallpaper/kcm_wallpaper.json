@@ -113,6 +113,16 @@
     "X-DocPath": "kcontrol/kcm_wallpaper/index.html",
     "X-KDE-Init-Phase": 0,
     "X-KDE-Keywords": "wallpaper,desktop,background,slideshow,haenau,hunyango,picture of the day,dynamic wallpaper,live wallpaper,animated wallpaper",
+    "X-KDE-Keywords[ca@valencia]": "fons de pantalla,escriptori,fons,presentació de diapositives,haenau,hunyango,imatge del dia,fons de pantalla dinàmic,fons de pantalla en directe,fons de pantalla animat",
+    "X-KDE-Keywords[ca]": "fons de pantalla,escriptori,fons,presentació de diapositives,haenau,hunyango,imatge del dia,fons de pantalla dinàmic,fons de pantalla en directe,fons de pantalla animat",
+    "X-KDE-Keywords[es]": "fondo de escritorio,fondo del escritorio,fondo de pantalla,escritorio,fondo,presentación,haenau,hunyango,imagen del día,foto del día,fondo dinámico,fondo en vivo,fondo vivo,fondo animado",
+    "X-KDE-Keywords[is]": "bakgrunnur,bakgrunnsmynd,skjáborð,skyggnusýning,haenau,hunyango,mynd dagsins,breytilegur bakgrunnur,lifandi bakgrunnsmynd,bakgrunnur með hreyfingu",
+    "X-KDE-Keywords[ka]": "wallpaper,desktop,background,slideshow,haenau,hunyango,picture of the day,dynamic wallpaper,live wallpaper,animated wallpaper",
+    "X-KDE-Keywords[nl]": "achtergrondafbeeldingen,bureaublad,achtergrond,diashow,haenau,hunyango,plaatje van de dag,dynamische achtergrond,live-achtergrond,geanimeerde achtergrond",
+    "X-KDE-Keywords[pt_BR]": "papel de parede,área de trabalho,plano de fundo,apresentação de slides,haenau,hunyango,imagem do dia,papel de parede dinâmico,papel de parede dinâmico,papel de parede animado",
+    "X-KDE-Keywords[sl]": "slika ozadja,namizje,ozadje,predstavitev,haenau,hunyango,slika dneva,dinamično ozadje,živo ozadje,animirano ozadje",
+    "X-KDE-Keywords[tr]": "wallpaper,desktop,background,slideshow,haenau,hunyango,picture of the day,dynamic wallpaper,live wallpaper,animated wallpaper,duvar kağıdı,masaüstü,arka plan,slayt görüntüsü,günün resmi,devingen duvar kağıdı,dinamik duvar kağıdı,canlı duvar kağıdı,hareketli duvar kağıdı",
+    "X-KDE-Keywords[uk]": "wallpaper,desktop,background,slideshow,haenau,hunyango,picture of the day,dynamic wallpaper,live wallpaper,animated wallpaper,шпалери,тло,стільниця,показ слайдів,слайди,зображення дня,динамічне тло,динамічні шпалери,анімоване тло,анімовані шпалери",
     "X-KDE-System-Settings-Parent-Category": "appearance",
     "X-KDE-Weight": 10
 }
