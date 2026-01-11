@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:44+0000\n"
+"POT-Creation-Date: 2026-01-11 00:45+0000\n"
 "PO-Revision-Date: 2024-09-21 10:41+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -457,12 +457,12 @@ msgstr "'Ne ĝenu' reĝimo aktiva; mezklaku por eliri"
 msgid "Middle-click to enter do not disturb mode"
 msgstr "Mezklaku por eniri la 'ne ĝenu' reĝimon"
 
-#: main.qml:236
+#: main.qml:238
 #, kde-format
 msgid "Clear All Notifications"
 msgstr "Viŝi Ĉiujn Sciigojn"
 
-#: main.qml:255
+#: main.qml:257
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "&Agordi Eventosciigojn kaj Agojn…"

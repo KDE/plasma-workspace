@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:44+0000\n"
+"POT-Creation-Date: 2026-01-11 00:45+0000\n"
 "PO-Revision-Date: 2025-08-17 12:11+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -472,12 +472,12 @@ msgstr "W trybie nieprzeszkadzania; naciśnij środkowy, aby wyjść z niego"
 msgid "Middle-click to enter do not disturb mode"
 msgstr "Kliknij środkowym, aby przejść w tryb nieprzeszkadzania"
 
-#: main.qml:236
+#: main.qml:238
 #, kde-format
 msgid "Clear All Notifications"
 msgstr "Wyczyść wszystkie powiadomienia"
 
-#: main.qml:255
+#: main.qml:257
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "U&stawienia powiadomień i działań wydarzeń…"

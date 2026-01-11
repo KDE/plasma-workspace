@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-27 00:45+0000\n"
-"PO-Revision-Date: 2026-01-09 22:15+0000\n"
+"PO-Revision-Date: 2026-01-10 20:46+0000\n"
 "Last-Translator: Charlotte <altronic25@protonmail.com>\n"
 "Language-Team: Irish\n"
 "Language: ga\n"
@@ -37,25 +37,25 @@ msgstr ""
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Dev"
-msgstr ""
+msgstr "KDE Plasma 6.0 Forbairt"
 
 #: desktopview.cpp:223
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Alpha"
-msgstr ""
+msgstr "KDE Plasma 6.0 Alfa"
 
 #: desktopview.cpp:226
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 1"
-msgstr ""
+msgstr "KDE Plasma 6.0 Béite 1"
 
 #: desktopview.cpp:229
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 2"
-msgstr ""
+msgstr "KDE Plasma 6.0 Béite 2"
 
 #: desktopview.cpp:232
 #, kde-format
@@ -73,19 +73,19 @@ msgstr "KDE Plasma 6.0 RC2"
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Dev"
-msgstr ""
+msgstr "KDE Plasma %1 Forbairt"
 
 #: desktopview.cpp:265
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Beta"
-msgstr ""
+msgstr "KDE Plasma %1 Béite"
 
 #: desktopview.cpp:268
 #, kde-format
 msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
 msgid "KDE Plasma %1 Beta %2"
-msgstr ""
+msgstr "KDE Plasma %1 Béite %2"
 
 #: desktopview.cpp:272
 #, kde-format
@@ -148,12 +148,12 @@ msgstr ""
 #: desktopview.cpp:554 desktopview.cpp:570
 #, kde-format
 msgid "Enter Edit Mode"
-msgstr ""
+msgstr "Tar Isteach Mód Eagarthóireacht"
 
 #: desktopview.cpp:568
 #, kde-format
 msgid "Exit Edit Mode"
-msgstr ""
+msgstr "Imigh Mód Eagarthóireacht"
 
 #: main.cpp:108
 #, kde-format
@@ -293,13 +293,13 @@ msgstr ""
 #, kde-format
 msgctxt "power management was inhibited, keep short"
 msgid "Sleep and Screen Locking Blocked"
-msgstr ""
+msgstr "Codladh agus Glasála Scáileáin Blocáilte"
 
 #: osd.cpp:201
 #, kde-format
 msgctxt "power management was uninhibited, keep short"
 msgid "Sleep and Screen Locking Unblocked"
-msgstr ""
+msgstr "Codladh agus Glasála Scáileáin Díbhlocáilte"
 
 #: osd.cpp:211
 #, kde-format
@@ -348,7 +348,7 @@ msgstr "%1%"
 #: shellcontainmentconfig.cpp:107
 #, kde-format
 msgid "Internal Screen on %1"
-msgstr ""
+msgstr "Scáileán Inmheánach ar %1"
 
 #: shellcontainmentconfig.cpp:111
 #, kde-format

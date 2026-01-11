@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-10 00:45+0000\n"
-"PO-Revision-Date: 2026-01-08 07:46+0100\n"
+"PO-Revision-Date: 2026-01-10 09:05+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -106,11 +106,10 @@ msgid "When restarted, the computer will enter the boot loader menu."
 msgstr "Po ponovnem zagonu bo računalnik vstopil v meni začetnega nalagalnika."
 
 #: contents/logout/Logout.qml:212
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will switch to %1."
+#, kde-format
 msgctxt "%1 is a boot loader entry"
 msgid "When restarted, the computer will switch to %1."
-msgstr "Po ponovnem zagonu bo računalnik preklopil na %1."
+msgstr "Po ponovnem zagonu se bo računalnik preklopil na %1."
 
 #: contents/logout/Logout.qml:234
 #, kde-format

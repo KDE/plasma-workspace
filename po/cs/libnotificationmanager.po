@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-11 00:45+0000\n"
 "PO-Revision-Date: 2025-10-17 13:07+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -109,7 +109,7 @@ msgstr "%1 z %2"
 msgid "Application closed unexpectedly."
 msgstr "Aplikace byla neočekávaně ukončena"
 
-#: notifications.cpp:907
+#: notifications.cpp:914
 #, kde-format
 msgctxt "@title"
 msgid "Unread Notification"
@@ -118,7 +118,7 @@ msgstr[0] "Nepřečtené upozornění"
 msgstr[1] "Nepřečtená upozornění"
 msgstr[2] "Nepřečtená upozornění"
 
-#: notifications.cpp:909
+#: notifications.cpp:916
 #, kde-format
 msgctxt "@info"
 msgid "%1 notification was received while Do Not Disturb was active."
@@ -127,7 +127,7 @@ msgstr[0] "Přijato %1 upozornění během režimu Nerušit"
 msgstr[1] "Přijata %1 upozornění během režimu Nerušit"
 msgstr[2] "Přijato %1 upozornění během režimu Nerušit"
 
-#: notifications.cpp:917
+#: notifications.cpp:924
 #, kde-format
 msgctxt "@action:button Show the notifications popup"
 msgid "Show Notifications"

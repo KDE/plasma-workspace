@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libnotificationmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-11 00:45+0000\n"
 "PO-Revision-Date: 2025-07-24 09:51+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -119,7 +119,7 @@ msgstr "%1 від %2"
 msgid "Application closed unexpectedly."
 msgstr "Програма неочікувано завершила роботу."
 
-#: notifications.cpp:907
+#: notifications.cpp:914
 #, kde-format
 msgctxt "@title"
 msgid "Unread Notification"
@@ -129,7 +129,7 @@ msgstr[1] "Непрочитані сповіщення"
 msgstr[2] "Непрочитані сповіщення"
 msgstr[3] "Непрочитане сповіщення"
 
-#: notifications.cpp:909
+#: notifications.cpp:916
 #, kde-format
 msgctxt "@info"
 msgid "%1 notification was received while Do Not Disturb was active."
@@ -139,7 +139,7 @@ msgstr[1] "У режимі «Не турбувати» було отримано
 msgstr[2] "У режимі «Не турбувати» було отримано %1 сповіщень."
 msgstr[3] "У режимі «Не турбувати» було отримано сповіщення."
 
-#: notifications.cpp:917
+#: notifications.cpp:924
 #, kde-format
 msgctxt "@action:button Show the notifications popup"
 msgid "Show Notifications"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:44+0000\n"
+"POT-Creation-Date: 2026-01-11 00:45+0000\n"
 "PO-Revision-Date: 2025-04-24 13:03+0400\n"
 "Last-Translator: linux <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -456,12 +456,12 @@ msgstr "Narahat etmə rejimi aktivdir; çıxmaq üçün orta düyməyə vurun"
 msgid "Middle-click to enter do not disturb mode"
 msgstr "Narahat etmə rejimindən çıxmaq üçün orta düyməyə vurun"
 
-#: main.qml:236
+#: main.qml:238
 #, kde-format
 msgid "Clear All Notifications"
 msgstr "Bütün bildirişləri silin"
 
-#: main.qml:255
+#: main.qml:257
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "&Tədbir bildirişləri və əməllərini quraşdırın..."

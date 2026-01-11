@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-10 00:45+0000\n"
-"PO-Revision-Date: 2026-01-08 04:50+0100\n"
+"PO-Revision-Date: 2026-01-10 02:33+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -80,8 +80,7 @@ msgid "When restarted, the computer will enter the boot loader menu."
 msgstr "გადატვირთვის შემდეგ კომპიუტერი ჩამტვირთავი პროგრამის მენიუში შევა."
 
 #: contents/logout/Logout.qml:212
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will switch to %1."
+#, kde-format
 msgctxt "%1 is a boot loader entry"
 msgid "When restarted, the computer will switch to %1."
 msgstr "გადატვირთვის შემდეგ კომპიუტერი გადაერთვება %1-ზე."

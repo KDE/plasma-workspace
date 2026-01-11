@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-10 00:45+0000\n"
-"PO-Revision-Date: 2026-01-08 17:41+0300\n"
+"PO-Revision-Date: 2026-01-10 21:39+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -84,11 +84,10 @@ msgid "When restarted, the computer will enter the boot loader menu."
 msgstr "Yeniden başlatıldığında bilgisayar, önyükleyici menüsüne girecektir."
 
 #: contents/logout/Logout.qml:212
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will switch to %1."
+#, kde-format
 msgctxt "%1 is a boot loader entry"
 msgid "When restarted, the computer will switch to %1."
-msgstr "Yeniden başlatıldığında bilgisayar, %1 seçeneğine geçecektir."
+msgstr "Yeniden başlatıldığında bilgisayar, %1 seçeneğine geçer."
 
 #: contents/logout/Logout.qml:234
 #, kde-format
