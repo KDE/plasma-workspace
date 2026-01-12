@@ -36,7 +36,7 @@ msgstr "Sense ús"
 #: kdisplaymanager.cpp:773
 #, kde-format
 msgid "X login on remote host"
-msgstr "Sessió X en una màquina remota"
+msgstr "Sessió X en un amfitrió remot"
 
 #: kdisplaymanager.cpp:773
 #, kde-format

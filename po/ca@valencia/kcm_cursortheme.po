@@ -59,7 +59,7 @@ msgstr "El fitxer no és un arxiu vàlid de tema d'icones."
 #: kcmcursortheme.cpp:435
 #, kde-format
 msgid "Failed to create 'icons' folder."
-msgstr "No s'ha pogut crear la carpeta «Icones»."
+msgstr "Ha fallat mentre es creava la carpeta «Icones»."
 
 #: kcmcursortheme.cpp:444
 #, kde-format

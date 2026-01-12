@@ -256,9 +256,10 @@ msgstr "No s'ha pogut"
 #: unit.cpp:81
 #, kde-format
 msgid "Error occurred when receiving reply of GetAll call %1"
-msgstr "S'ha produït un error en rebre la resposta de la crida «GetAll» %1"
+msgstr ""
+"S'ha produït un error mentre es rebia la resposta de la crida «GetAll» %1"
 
 #: unit.cpp:153
 #, kde-format
 msgid "Failed to open journal"
-msgstr "No s'ha pogut obrir el diari"
+msgstr "Ha fallat mentre s'obria el diari"

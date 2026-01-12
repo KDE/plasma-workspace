@@ -395,7 +395,7 @@ msgstr "Trieu un fitxer de Plasmoide"
 #, kde-format
 msgctxt "%1 is the name of an applet, %2 is an error message"
 msgid "Installing the package %1 failed: %2."
-msgstr "No s'ha pogut instal·lar el paquet %1: %2."
+msgstr "Ha fallat mentre s'instal·lava el paquet %1: %2."
 
 #: shellprivate/widgetexplorer.cpp:520
 #, kde-format

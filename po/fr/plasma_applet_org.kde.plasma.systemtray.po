@@ -5,16 +5,16 @@
 # Thomas Vergnaud <thomas.vergnaud@gmx.fr>, 2014, 2015.
 # Vincent Pinon <vpinon@kde.org>, 2017.
 # Simon Depiets <sdepiets@gmail.com>, 2019, 2020.
-# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024, 2025 Xavier Besnard <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024, 2025, 2026 Xavier Besnard <xavier.besnard@kde.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-05 00:44+0000\n"
-"PO-Revision-Date: 2025-12-05 09:30+0100\n"
+"PO-Revision-Date: 2026-01-10 19:45+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
-"Language-Team: French <French <kde-francophone@kde.org>>\n"
+"Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 25.11.90\n"
+"X-Generator: Lokalize 25.12.1\n"
 "X-Text-Markup: kde4\n"
 
 #: qml/config.qml:13
@@ -91,11 +91,11 @@ msgid ""
 msgstr ""
 "Rechercher un paramètre dans <application>%1</application> pour désactiver "
 "son icône de boite à miniatures avant de le faire ici. Certaines icônes "
-"d'applications dans la boite à miniatures n’ont pas été conçues pour être "
-"désactivées. Ainsi, l’utilisation de ce paramètre peut entraîner un "
+"d'applications dans la boite à miniatures n'ont pas été conçues pour être "
+"désactivées. Ainsi, l'utilisation de ce paramètre peut entraîner un "
 "comportement inattendu. <nl/><nl/>Veuillez utiliser ce paramètre à vos "
-"risques et périls et ne pas signaler de problèmes à KDE ou à l’auteur de "
-"l’application."
+"risques et périls et ne pas signaler de problèmes à KDE ou à l'auteur de "
+"l'application."
 
 #: qml/ConfigGeneral.qml:175
 #, kde-format
@@ -115,12 +115,12 @@ msgid ""
 "at a time."
 msgstr ""
 "La désactivation du presse-papier est déconseillé. En effet, cela entraînera "
-"la perte des copies des données lors de la fermeture de l’application source "
+"la perte des copies des données lors de la fermeture de l'application source "
 "de la copie. <nl/><nl/> Ne faites cela que si vous avez ajouté manuellement "
 "un composant graphique de presse-papier autonome quelque part ailleurs ou si "
-"vous utilisez un gestionnaire de presse-papier tiers.  Veuillez aussi "
-"prendre en compte la configuration du presse-papier pour qu'il n'enregistre "
-"pas son historique ou pour ne se souvenir que d'un seul élément à la fois."
+"vous utilisez un gestionnaire de presse-papier tiers. Veuillez aussi prendre "
+"en compte la configuration du presse-papier pour qu'il n'enregistre pas son "
+"historique ou pour ne se souvenir que d'un seul élément à la fois."
 
 #: qml/ConfigGeneral.qml:196
 #, kde-kuit-format

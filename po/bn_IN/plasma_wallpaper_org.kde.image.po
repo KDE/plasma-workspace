@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-10 00:45+0000\n"
+"POT-Creation-Date: 2026-01-12 00:45+0000\n"
 "PO-Revision-Date: 2008-12-22 17:48+0530\n"
 "Last-Translator: Runa Bhattacharjee <runab@redhat.com>\n"
 "Language-Team: Bengali INDIA <fedora-trans-bn_IN@redhat.com>\n"
@@ -41,39 +41,39 @@ msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:157
+#: imagepackage/contents/ui/config.qml:159
 #, fuzzy, kde-format
 #| msgid "P&ositioning:"
 msgctxt "@label:listbox"
 msgid "Positioning:"
 msgstr "অবস্থান: (&o)"
 
-#: imagepackage/contents/ui/config.qml:160
+#: imagepackage/contents/ui/config.qml:162
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled and cropped"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:164
+#: imagepackage/contents/ui/config.qml:166
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:168
+#: imagepackage/contents/ui/config.qml:170
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled, keep proportions"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:172
+#: imagepackage/contents/ui/config.qml:174
 #, fuzzy, kde-format
 #| msgid "Centered"
 msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "কেন্দ্রস্থিত"
 
-#: imagepackage/contents/ui/config.qml:200
+#: imagepackage/contents/ui/config.qml:202
 #, fuzzy, kde-format
 #| msgid "Get New Wallpapers..."
 msgctxt ""
@@ -81,52 +81,52 @@ msgctxt ""
 msgid "Switch dynamic wallpapers:"
 msgstr "পটভূমির জন্য নতুন ছবি প্রাপ্ত করুন..."
 
-#: imagepackage/contents/ui/config.qml:208
+#: imagepackage/contents/ui/config.qml:210
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the Plasma style is light or dark "
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:210
+#: imagepackage/contents/ui/config.qml:212
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on the day-night cycle"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:214
+#: imagepackage/contents/ui/config.qml:216
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always use light variant"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:218
+#: imagepackage/contents/ui/config.qml:220
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always use dark variant"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:232
+#: imagepackage/contents/ui/config.qml:234
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:243
+#: imagepackage/contents/ui/config.qml:245
 #, kde-format
 msgid "Background:"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:244
+#: imagepackage/contents/ui/config.qml:246
 #, kde-format
 msgid "Blur"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:253
+#: imagepackage/contents/ui/config.qml:255
 #, kde-format
 msgid "Solid color"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:264
+#: imagepackage/contents/ui/config.qml:266
 #, kde-format
 msgid "Select Background Color"
 msgstr ""

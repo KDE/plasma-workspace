@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-10 00:45+0000\n"
+"POT-Creation-Date: 2026-01-12 00:45+0000\n"
 "PO-Revision-Date: 2025-12-02 13:30+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -44,89 +44,89 @@ msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Mappa með bakgrunnsmyndum sem á að sýna sem skyggnusýningu"
 
-#: imagepackage/contents/ui/config.qml:157
+#: imagepackage/contents/ui/config.qml:159
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Positioning:"
 msgstr "Staðsetning:"
 
-#: imagepackage/contents/ui/config.qml:160
+#: imagepackage/contents/ui/config.qml:162
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled and cropped"
 msgstr "Stækkuð og skorin"
 
-#: imagepackage/contents/ui/config.qml:164
+#: imagepackage/contents/ui/config.qml:166
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled"
 msgstr "Stækkuð"
 
-#: imagepackage/contents/ui/config.qml:168
+#: imagepackage/contents/ui/config.qml:170
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled, keep proportions"
 msgstr "Stækkuð, halda hlutföllum"
 
-#: imagepackage/contents/ui/config.qml:172
+#: imagepackage/contents/ui/config.qml:174
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "Miðjuð"
 
-#: imagepackage/contents/ui/config.qml:200
+#: imagepackage/contents/ui/config.qml:202
 #, kde-format
 msgctxt ""
 "@label:listbox part of a sentence: 'Switch dynamic wallpapers [based on]'"
 msgid "Switch dynamic wallpapers:"
 msgstr "Skipta um breytilegar bakgrunnsmyndir:"
 
-#: imagepackage/contents/ui/config.qml:208
+#: imagepackage/contents/ui/config.qml:210
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the Plasma style is light or dark "
 msgstr "Byggt á hvort stíll Plasma sé ljós eða dökkur "
 
-#: imagepackage/contents/ui/config.qml:210
+#: imagepackage/contents/ui/config.qml:212
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on the day-night cycle"
 msgstr "Byggt á dagur/nótt sólarhringnum"
 
-#: imagepackage/contents/ui/config.qml:214
+#: imagepackage/contents/ui/config.qml:216
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always use light variant"
 msgstr "Alltaf nota ljóst afbrigði"
 
-#: imagepackage/contents/ui/config.qml:218
+#: imagepackage/contents/ui/config.qml:220
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always use dark variant"
 msgstr "Alltaf nota dökkt afbrigði"
 
-#: imagepackage/contents/ui/config.qml:232
+#: imagepackage/contents/ui/config.qml:234
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
 msgstr "Grunnstilla…"
 
-#: imagepackage/contents/ui/config.qml:243
+#: imagepackage/contents/ui/config.qml:245
 #, kde-format
 msgid "Background:"
 msgstr "Bakgrunnur:"
 
-#: imagepackage/contents/ui/config.qml:244
+#: imagepackage/contents/ui/config.qml:246
 #, kde-format
 msgid "Blur"
 msgstr "Móða"
 
-#: imagepackage/contents/ui/config.qml:253
+#: imagepackage/contents/ui/config.qml:255
 #, kde-format
 msgid "Solid color"
 msgstr "Hreinn litur"
 
-#: imagepackage/contents/ui/config.qml:264
+#: imagepackage/contents/ui/config.qml:266
 #, kde-format
 msgid "Select Background Color"
 msgstr "Velja bakgrunnslit"

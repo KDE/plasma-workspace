@@ -2,26 +2,27 @@
 # Copyright (C) 2002 Free Software Foundation, Inc.
 # Séamus Ó Ciardhuáin <seoc@cnds.ucd.ie>, 2002
 # Kevin Scannell <kscanne@gmail.com>, 2009
+# SPDX-FileCopyrightText: 2026 Charlotte <altronic25@protonmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-23 00:44+0000\n"
-"PO-Revision-Date: 2004-12-03 14:52-0500\n"
-"Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
-"Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
+"PO-Revision-Date: 2026-01-11 01:40+0000\n"
+"Last-Translator: Charlotte <altronic25@protonmail.com>\n"
+"Language-Team: Irish\n"
 "Language: ga\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: configdialog.cpp:84
-#, fuzzy, kde-format
-#| msgid "Clipboard history"
+#, kde-format
 msgid "Clipboard history:"
-msgstr "Stair na gearrthaisce"
+msgstr "Stair na gearrthaisce:"
 
 #: configdialog.cpp:90
 #, fuzzy, kde-format
@@ -255,7 +256,7 @@ msgstr "Cumraíocht Aicearraí"
 #: declarative/qml/BarcodePage.qml:32
 #, kde-format
 msgid "QR Code"
-msgstr ""
+msgstr "QR Cód"
 
 #: declarative/qml/BarcodePage.qml:33
 #, kde-format
@@ -410,7 +411,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
-msgstr ""
+msgstr "Sábháil"
 
 #: declarative/qml/EditPage.qml:89
 #, fuzzy, kde-format
@@ -424,7 +425,7 @@ msgstr "&Cealaigh"
 msgctxt ""
 "Indicator that there are more urls in the clipboard than previews shown"
 msgid "+%1"
-msgstr ""
+msgstr "+%1"
 
 #: editactiondialog.cpp:36 editcommanddialog.cpp:91
 #, kde-format
@@ -642,7 +643,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
-msgstr ""
+msgstr "%1x%2"
 
 #: historymodel.cpp:565
 #, kde-format
