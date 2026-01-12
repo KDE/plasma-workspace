@@ -95,7 +95,11 @@ void AbstractNotificationsModel::Private::onNotificationAdded(const Notification
     // Only set up watchers for notifications with actions, since some apps (e.g. `notify-send`) may just
     // dispatch a notification and then immediately exit
     if (notification.hasDefaultAction() || notification.hasReplyAction() || !notification.actionNames().empty()) {
-        notificationWatcher.addWatchedService(notification.dBusService());
+        const QString service = notification.dBusService();
+        const auto watchedServices = notificationWatcher.watchedServices();
+        if (!watchedServices.contains(service)) {
+            notificationWatcher.addWatchedService(service);
+        }
     }
 
     q->beginInsertRows(QModelIndex(), notifications.count(), notifications.count());
