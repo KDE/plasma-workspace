@@ -28,9 +28,7 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
-"SPDX-FileCopyrightText: 2019 Empar Montoro Martín,SPDX-FileCopyrightText: "
-"2019 Alfredo Vicente,Sebastià Pla i Sanz"
+msgstr "Empar Montoro Martín,Alfredo Vicente,Sebastià Pla i Sanz"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
@@ -603,7 +601,7 @@ msgstr "<h3>S'ha produït un error</h3>"
 #: kcmfontinst/JobRunner.cpp:697
 #, kde-format
 msgid "Failed to download <i>%1</i>"
-msgstr "No s'ha pogut baixar <i>%1</i>"
+msgstr "Ha fallat mentre es baixava <i>%1</i>"
 
 #: kcmfontinst/JobRunner.cpp:699
 #, kde-format
@@ -640,7 +638,7 @@ msgstr "No s'han pogut eliminar tots els fitxers associats amb <i>%1</i>"
 #: kcmfontinst/JobRunner.cpp:709
 #, kde-format
 msgid "Failed to start the system daemon.<br><i>%1</i>"
-msgstr "No s'ha pogut iniciar el dimoni del sistema.<br><i>%1</i>"
+msgstr "Ha fallat mentre s'iniciava el dimoni del sistema.<br><i>%1</i>"
 
 #: kcmfontinst/JobRunner.cpp:712 kio/KioFonts.cpp:727
 #, kde-format
@@ -798,12 +796,13 @@ msgstr "Afig un tipus de lletra"
 #: kcmfontinst/KCmFontInst.cpp:562
 #, kde-format
 msgid "Failed to save list of fonts to print."
-msgstr "No s'ha pogut guardar la llista de tipus de lletra per a imprimir."
+msgstr ""
+"Ha fallat mentre es guardava la llista de tipus de lletra per a imprimir."
 
 #: kcmfontinst/KCmFontInst.cpp:583
 #, kde-format
 msgid "Failed to start font printer."
-msgstr "No s'ha pogut iniciar la impressora de tipus de lletra."
+msgstr "Ha fallat mentre s'iniciava la impressora de tipus de lletra."
 
 #: kcmfontinst/KCmFontInst.cpp:590
 #, kde-format
@@ -922,7 +921,7 @@ msgstr "Sense fitxers?"
 #: kcmfontinst/KCmFontInst.cpp:729
 #, kde-format
 msgid "Failed to open %1 for writing"
-msgstr "No s'ha pogut obrir %1 per a escriptura"
+msgstr "Ha fallat mentre s'obria %1 per a escriptura"
 
 #: kcmfontinst/KCmFontInst.cpp:749
 #, kde-format
@@ -1229,7 +1228,7 @@ msgstr "Tipus de lletra"
 #: kio/KioFonts.cpp:708
 #, kde-format
 msgid "Failed to start the system daemon"
-msgstr "No s'ha pogut iniciar el dimoni del sistema"
+msgstr "Ha fallat mentre s'iniciava el dimoni del sistema"
 
 #: kio/KioFonts.cpp:711
 #, kde-format

@@ -279,7 +279,7 @@ msgstr "No s'han resolt tots els paquets que falten! %1"
 #, kde-format
 msgctxt "%1 is a list of package names"
 msgid "Failed to install package %1"
-msgstr "No s'ha pogut instal·lar el paquet %1"
+msgstr "Ha fallat mentre s'instal·lava el paquet %1"
 
 #: localegenhelper/localegenhelper.cpp:43
 #, kde-format

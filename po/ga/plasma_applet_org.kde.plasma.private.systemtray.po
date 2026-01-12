@@ -1,21 +1,22 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2026 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SPDX-FileCopyrightText: 2026 Charlotte <altronic25@protonmail.com>
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2026-01-11 05:31+0000\n"
+"Last-Translator: Charlotte <altronic25@protonmail.com>\n"
+"Language-Team: Irish\n"
+"Language: ga\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
+"3 : 4\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -86,7 +87,7 @@ msgstr ""
 #: package/contents/ui/ConfigEntries.qml:249
 #, kde-format
 msgid "Disabled"
-msgstr ""
+msgstr "Díchumasaithe"
 
 #: package/contents/ui/ConfigEntries.qml:314
 #, kde-format
@@ -102,7 +103,7 @@ msgstr ""
 #: package/contents/ui/ConfigGeneral.qml:25
 #, kde-format
 msgid "Small"
-msgstr ""
+msgstr "Beag"
 
 #: package/contents/ui/ConfigGeneral.qml:32
 #, kde-format
@@ -129,7 +130,7 @@ msgstr ""
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
-msgstr ""
+msgstr "Beag"
 
 #: package/contents/ui/ConfigGeneral.qml:55
 #, kde-format
@@ -141,7 +142,7 @@ msgstr ""
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
-msgstr ""
+msgstr "Mór"
 
 #: package/contents/ui/ConfigGeneral.qml:82
 #, kde-format
@@ -153,7 +154,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
-msgstr ""
+msgstr "Ar Ais"
 
 #: package/contents/ui/ExpandedRepresentation.qml:76
 #, kde-format

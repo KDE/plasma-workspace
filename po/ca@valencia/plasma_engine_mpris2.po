@@ -75,7 +75,8 @@ msgstr "El reproductor multimèdia «%1» no ha pogut realitzar l'acció «%2».
 #: playeractionjob.cpp:171
 #, kde-format
 msgid "Attempting to perform the action '%1' failed with the message '%2'."
-msgstr "No s'ha pogut intentar executar l'acció «%1» amb el missatge «%2»."
+msgstr ""
+"Ha fallat mentre s'intentava executar l'acció «%1» amb el missatge «%2»."
 
 #: playeractionjob.cpp:173
 #, kde-format

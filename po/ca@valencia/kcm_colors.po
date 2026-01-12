@@ -28,7 +28,7 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "SPDX-FileCopyrightText: 2019 Empar Montoro Martín,Albert Astals Cid"
+msgstr "Empar Montoro Martín,Albert Astals Cid"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
@@ -53,13 +53,13 @@ msgstr "Este fitxer no és un esquema de color."
 #: colors.cpp:285
 #, kde-format
 msgid "Failed to create 'color-scheme' data folder."
-msgstr "No s'ha pogut crear la carpeta de dades «color-scheme»."
+msgstr "Ha fallat mentre es creava la carpeta de dades «color-scheme»."
 
 #: colors.cpp:292
 #, kde-format
 msgid "Failed to copy color scheme into 'color-scheme' data folder."
 msgstr ""
-"No s'ha pogut copiar l'esquema de color a dins de la carpeta de dades «color-"
+"Ha fallat mentre es copiava l'esquema de color a la carpeta de dades «color-"
 "scheme»."
 
 #: colors.cpp:309

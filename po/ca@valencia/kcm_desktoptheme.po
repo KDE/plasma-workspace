@@ -50,7 +50,7 @@ msgstr "No s'ha pogut instal·lar el tema."
 #: kcm.cpp:257
 #, kde-format
 msgid "Removing theme failed: %1"
-msgstr "No s'ha pogut eliminar el tema: %1"
+msgstr "Ha fallat mentre s'eliminava el tema: %1"
 
 #: package/contents/ui/main.qml:24
 #, kde-format

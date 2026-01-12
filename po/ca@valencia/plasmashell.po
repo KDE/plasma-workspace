@@ -99,7 +99,7 @@ msgstr "Llista les opcions disponibles per als comentaris dels usuaris"
 #: main.cpp:221
 #, kde-format
 msgid "Plasma Failed To Start"
-msgstr "No s'ha pogut iniciar Plasma"
+msgstr "Ha fallat mentre s'iniciava Plasma"
 
 #: main.cpp:222
 #, kde-format

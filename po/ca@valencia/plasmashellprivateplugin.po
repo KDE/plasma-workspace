@@ -181,7 +181,7 @@ msgstr "Trieu un fitxer de Plasmoide"
 #: shellprivate/widgetexplorer/openwidgetassistant.cpp:65
 #, kde-format
 msgid "Installing the package %1 failed."
-msgstr "No s'ha pogut instal·lar el paquet %1."
+msgstr "Ha fallat mentre s'instal·lava el paquet %1."
 
 #: shellprivate/widgetexplorer/openwidgetassistant.cpp:65
 #, kde-format

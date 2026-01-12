@@ -221,7 +221,7 @@ msgstr "La miniaplicació de bateria ha activat la inhibició global del sistema
 #: package/contents/ui/main.qml:364
 #, kde-format
 msgid "Failed to activate %1 mode"
-msgstr "No s'ha pogut activar el mode %1"
+msgstr "Ha fallat mentre s'activava el mode %1"
 
 #: package/contents/ui/main.qml:376
 #, kde-format

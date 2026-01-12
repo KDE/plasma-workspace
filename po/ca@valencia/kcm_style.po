@@ -33,12 +33,13 @@ msgstr "El %1no és un arxiu vàlid de tema GTK."
 #, kde-format
 msgid "There was an error loading the configuration dialog for this style."
 msgstr ""
-"S'ha produït un error en carregar el diàleg de configuració per a este estil."
+"S'ha produït un error mentre es carregava el diàleg de configuració per a "
+"este estil."
 
 #: kcmstyle.cpp:274
 #, kde-format
 msgid "Failed to apply selected style '%1'."
-msgstr "No s'ha pogut aplicar l'estil «%1» seleccionat."
+msgstr "Ha fallat mentre s'aplicava l'estil «%1» seleccionat."
 
 #: package/contents/ui/EffectSettingsPopup.qml:32
 #, kde-format
