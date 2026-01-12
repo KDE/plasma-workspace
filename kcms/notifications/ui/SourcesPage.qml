@@ -16,8 +16,8 @@ import org.kde.private.kcms.notifications as Private
 
 KCM.AbstractKCM {
     id: sourcesPage
-    // Use app title when when only configuring events.
-    title: showOnlyEventsConfig ? rootIndex.model.data(rootIndex, Qt.DisplayRole) : i18n("Application Settings")
+    // Use app title when only configuring events.
+    title: showOnlyEventsConfig ? rootIndex.model.data(rootIndex, Qt.DisplayRole) : i18nc("@title:window kcm page title, configure app-specific notification settings", "Application Notifications")
 
     property alias rootIndex: appConfiguration.rootIndex
     property bool showOnlyEventsConfig: false
