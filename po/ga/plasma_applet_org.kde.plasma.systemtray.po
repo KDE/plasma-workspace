@@ -1,0 +1,226 @@
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# SPDX-FileCopyrightText: 2026 Charlotte <altronic25@protonmail.com>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-11-17 14:42+0000\n"
+"PO-Revision-Date: 2026-01-11 05:31+0000\n"
+"Last-Translator: Charlotte <altronic25@protonmail.com>\n"
+"Language-Team: Irish\n"
+"Language: ga\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
+"3 : 4\n"
+"X-Generator: Lokalize 25.12.1\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr ""
+
+#: package/contents/config/config.qml:18
+#, kde-format
+msgid "Entries"
+msgstr ""
+
+#: package/contents/ui/ConfigEntries.qml:39
+#, kde-format
+msgid "Shown when relevant"
+msgstr ""
+
+#: package/contents/ui/ConfigEntries.qml:43
+#, kde-format
+msgid "Always shown"
+msgstr ""
+
+#: package/contents/ui/ConfigEntries.qml:47
+#, kde-format
+msgid "Always hidden"
+msgstr ""
+
+#: package/contents/ui/ConfigEntries.qml:51
+#, kde-format
+msgid "Disabled"
+msgstr "Díchumasaithe"
+
+#: package/contents/ui/ConfigEntries.qml:122
+#, kde-format
+msgid "Application Status"
+msgstr ""
+
+#: package/contents/ui/ConfigEntries.qml:124
+#, kde-format
+msgid "Communications"
+msgstr ""
+
+#: package/contents/ui/ConfigEntries.qml:126
+#, kde-format
+msgid "System Services"
+msgstr ""
+
+#: package/contents/ui/ConfigEntries.qml:128
+#, kde-format
+msgid "Hardware Control"
+msgstr ""
+
+#: package/contents/ui/ConfigEntries.qml:131
+#, kde-format
+msgid "Miscellaneous"
+msgstr ""
+
+#: package/contents/ui/ConfigEntries.qml:174
+#, kde-kuit-format
+msgctxt "@info:usagetip"
+msgid ""
+"Look for a setting in <application>%1</application> to disable its tray icon "
+"before doing it here. Some apps’ tray icons were not designed to be "
+"disabled, and using this setting may cause them to behave unexpectedly.<nl/"
+"><nl/>Use this setting at your own risk, and do not report issues to KDE or "
+"the app’s author."
+msgstr ""
+
+#: package/contents/ui/ConfigEntries.qml:177
+#, kde-format
+msgctxt "@action:button"
+msgid "I understand the risks"
+msgstr "Tuigim an rioscaí"
+
+#: package/contents/ui/ConfigEntries.qml:189
+#, kde-kuit-format
+msgctxt "@info:usagetip"
+msgid ""
+"Disabling the clipboard is not recommended, as it will cause copied data to "
+"be lost when the application it was copied from is closed.<nl/><nl/>Instead "
+"consider configuring the clipboard to disable its history, or only remember "
+"one item at a time."
+msgstr ""
+
+#: package/contents/ui/ConfigEntries.qml:217
+#, kde-format
+msgctxt "Name of the system tray entry"
+msgid "Entry"
+msgstr ""
+
+#: package/contents/ui/ConfigEntries.qml:224
+#, kde-format
+msgid "Visibility"
+msgstr ""
+
+#: package/contents/ui/ConfigEntries.qml:231
+#, kde-format
+msgid "Keyboard Shortcut"
+msgstr ""
+
+#: package/contents/ui/ConfigEntries.qml:263
+#, kde-format
+msgid "Always show all entries"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:23
+#, kde-format
+msgctxt "The arrangement of system tray icons in the Panel"
+msgid "Panel icon size:"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:25
+#, kde-format
+msgid "Small"
+msgstr "Beag"
+
+#: package/contents/ui/ConfigGeneral.qml:32
+#, kde-format
+msgid "Scale with Panel height"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:33
+#, kde-format
+msgid "Scale with Panel width"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:39
+#, kde-format
+msgid "Automatically enabled when in Touch Mode"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:49
+#, kde-format
+msgctxt "@label:listbox The spacing between system tray icons in the Panel"
+msgid "Panel icon spacing:"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:52
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Small"
+msgstr "Beag"
+
+#: package/contents/ui/ConfigGeneral.qml:56
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Normal"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:60
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Large"
+msgstr "Mór"
+
+#: package/contents/ui/ConfigGeneral.qml:85
+#, kde-format
+msgctxt "@info:usagetip under a combobox when Touch Mode is on"
+msgid "Automatically set to Large when in Touch Mode"
+msgstr ""
+
+#: package/contents/ui/ExpandedRepresentation.qml:59
+#, kde-format
+msgctxt "@action:button"
+msgid "Go Back"
+msgstr "Ar Ais"
+
+#: package/contents/ui/ExpandedRepresentation.qml:71
+#, kde-format
+msgid "Status and Notifications"
+msgstr ""
+
+#: package/contents/ui/ExpandedRepresentation.qml:140
+#, kde-format
+msgid "More actions"
+msgstr ""
+
+#: package/contents/ui/ExpandedRepresentation.qml:240
+#, kde-format
+msgid "Keep Open"
+msgstr ""
+
+#: package/contents/ui/ExpanderArrow.qml:26
+#, kde-format
+msgid "Show all the items in the system tray in a popup"
+msgstr ""
+
+#: package/contents/ui/ExpanderArrow.qml:40
+#, kde-format
+msgid "Close popup"
+msgstr ""
+
+#: package/contents/ui/ExpanderArrow.qml:40
+#, kde-format
+msgid "Show hidden icons"
+msgstr ""
+
+#: package/contents/ui/HiddenItemsView.qml:42
+#, kde-format
+msgctxt "@info:whatsthis accessible description for popup grid"
+msgid "Grid with %1 items in %2 columns"
+msgstr ""
+
+#: package/contents/ui/HiddenItemsView.qml:46
+#, kde-format
+msgctxt "Some letters with tall characters, ascenders, descenders, etc"
+msgid "AILlmyjgGJP"
+msgstr "AILlmóyjgGJPÁ"

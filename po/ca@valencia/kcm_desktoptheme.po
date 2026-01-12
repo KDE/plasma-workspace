@@ -50,7 +50,7 @@ msgstr "No s'ha pogut instal·lar el tema."
 #: kcm.cpp:251
 #, kde-format
 msgid "Removing theme failed: %1"
-msgstr "No s'ha pogut eliminar el tema: %1"
+msgstr "Ha fallat mentre s'eliminava el tema: %1"
 
 #: plasma-apply-desktoptheme.cpp:33
 #, kde-format

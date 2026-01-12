@@ -5,16 +5,16 @@
 # Thomas Vergnaud <thomas.vergnaud@gmx.fr>, 2014, 2015.
 # Vincent Pinon <vpinon@kde.org>, 2017.
 # Simon Depiets <sdepiets@gmail.com>, 2019, 2020.
-# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024, 2025 Xavier Besnard <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024, 2025, 2026 Xavier Besnard <xavier.besnard@kde.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 14:42+0000\n"
-"PO-Revision-Date: 2025-05-16 09:01+0200\n"
+"PO-Revision-Date: 2026-01-10 19:45+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
-"Language-Team: French <French <kde-francophone@kde.org>>\n"
+"Language-Team: \n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 25.11.90\n"
+"X-Generator: Lokalize 25.12.1\n"
 "X-Text-Markup: kde4\n"
 
 #: package/contents/config/config.qml:13
@@ -92,11 +92,11 @@ msgid ""
 msgstr ""
 "Rechercher un paramètre dans <application>%1</application> pour désactiver "
 "son icône de boite à miniatures avant de le faire ici. Certaines icônes "
-"d'applications dans la boite à miniatures n’ont pas été conçues pour être "
-"désactivées. Ainsi, l’utilisation de ce paramètre peut entraîner un "
+"d'applications dans la boite à miniatures n'ont pas été conçues pour être "
+"désactivées. Ainsi, l'utilisation de ce paramètre peut entraîner un "
 "comportement inattendu. <nl/><nl/>Veuillez utiliser ce paramètre à vos "
-"risques et périls et ne pas signaler de problèmes à KDE ou à l’auteur de "
-"l’application."
+"risques et périls et ne pas signaler de problèmes à KDE ou à l'auteur de "
+"l'application."
 
 #: package/contents/ui/ConfigEntries.qml:177
 #, kde-format
@@ -114,7 +114,7 @@ msgid ""
 "one item at a time."
 msgstr ""
 "Il est déconseillé de désactiver le presse-papier. En effet, cela entraînera "
-"la perte de la copie des données lors de la fermeture de l’application "
+"la perte de la copie des données lors de la fermeture de l'application "
 "source de la copie. <nl/><nl/>Alternativement, veuillez envisager de "
 "configurer le presse-papier pour désactiver son historique ou se souvenir "
 "d'un seul article à la fois."

@@ -231,7 +231,8 @@ msgstr "Mode de farciment especificat no vàlid: %1"
 #, kde-format
 msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
 msgstr ""
-"S'ha produït un error en intentar establir el fons de pantalla de Plasma:\n"
+"S'ha produït un error mentre s'intentava establir el fons de pantalla de "
+"Plasma:\n"
 
 #: plasma-apply-wallpaperimage.cpp:119
 #, kde-format
@@ -390,12 +391,12 @@ msgstr "Ambdós"
 msgctxt "@info %1 is the dbus error message"
 msgid "An error occurred while attempting to set the Plasma wallpaper:<nl/>%1"
 msgstr ""
-"S'ha produït un error en intentar establir el fons de pantalla de Plasma:<nl/"
-">%1"
+"S'ha produït un error mentre s'intentava establir el fons de pantalla de "
+"Plasma:<nl/>%1"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:110
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr ""
-"S'ha produït un error en intentar obrir el fitxer de configuració "
+"S'ha produït un error mentre s'intentava obrir el fitxer de configuració "
 "«kscreenlockerrc»."

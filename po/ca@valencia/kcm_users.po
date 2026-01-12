@@ -694,21 +694,21 @@ msgstr "No s'ha pogut obtindre el permís per a guardar l'usuari %1"
 #: src/user.cpp:342
 #, kde-format
 msgid "There was an error while saving changes"
-msgstr "S'ha produït un error en guardar els canvis"
+msgstr "S'ha produït un error mentre es guardaven els canvis"
 
 #: src/user.cpp:474
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr ""
-"No s'ha pogut redimensionar la imatge: ha fallat l'obertura del fitxer "
-"temporal"
+"Ha fallat mentre es redimensionava la imatge: ha fallat l'obertura del "
+"fitxer temporal"
 
 #: src/user.cpp:482
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr ""
-"No s'ha pogut redimensionar la imatge: ha fallat en escriure en el fitxer "
-"temporal"
+"Ha fallat mentre es redimensionava la imatge: ha fallat mentre s'escrivia al "
+"fitxer temporal"
 
 #: src/usermodel.cpp:170
 #, kde-format

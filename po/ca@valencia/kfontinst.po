@@ -601,7 +601,7 @@ msgstr "<h3>S'ha produït un error</h3>"
 #: kcmfontinst/JobRunner.cpp:690
 #, kde-format
 msgid "Failed to download <i>%1</i>"
-msgstr "No s'ha pogut baixar <i>%1</i>"
+msgstr "Ha fallat mentre es baixava <i>%1</i>"
 
 #: kcmfontinst/JobRunner.cpp:692
 #, kde-format
@@ -636,7 +636,7 @@ msgstr "No s'han pogut eliminar tots els fitxers associats amb <i>%1</i>"
 #: kcmfontinst/JobRunner.cpp:702
 #, kde-format
 msgid "Failed to start the system daemon.<br><i>%1</i>"
-msgstr "No s'ha pogut iniciar el dimoni del sistema.<br><i>%1</i>"
+msgstr "Ha fallat mentre s'iniciava el dimoni del sistema.<br><i>%1</i>"
 
 #: kcmfontinst/JobRunner.cpp:705 kio/KioFonts.cpp:719
 #, kde-format
@@ -741,12 +741,12 @@ msgstr "Afig una font"
 #: kcmfontinst/KCmFontInst.cpp:555
 #, kde-format
 msgid "Failed to save list of fonts to print."
-msgstr "No s'ha pogut guardar la llista de fonts que s'han d'imprimir."
+msgstr "Ha fallat mentre es guardava la llista de fonts a imprimir."
 
 #: kcmfontinst/KCmFontInst.cpp:576
 #, kde-format
 msgid "Failed to start font printer."
-msgstr "No s'ha pogut iniciar la impressora de fonts."
+msgstr "Ha fallat mentre s'iniciava la impressora de fonts."
 
 #: kcmfontinst/KCmFontInst.cpp:583
 #, kde-format
@@ -862,7 +862,7 @@ msgstr "Sense fitxers?"
 #: kcmfontinst/KCmFontInst.cpp:722
 #, kde-format
 msgid "Failed to open %1 for writing"
-msgstr "No s'ha pogut obrir %1 per a escriptura"
+msgstr "Ha fallat mentre s'obria %1 per a escriptura"
 
 #: kcmfontinst/KCmFontInst.cpp:742
 #, kde-format
@@ -1168,7 +1168,7 @@ msgstr "Fonts"
 #: kio/KioFonts.cpp:705
 #, kde-format
 msgid "Failed to start the system daemon"
-msgstr "No s'ha pogut iniciar el dimoni del sistema"
+msgstr "Ha fallat mentre s'iniciava el dimoni del sistema"
 
 #: kio/KioFonts.cpp:707
 #, kde-format

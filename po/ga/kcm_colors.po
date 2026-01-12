@@ -2,30 +2,32 @@
 # Copyright (C) 2002 Free Software Foundation, Inc.
 # Séamus Ó Ciardhuáin <seoc@cnds.ucd.ie>, 2002
 # Kevin Scannell <kscanne@gmail.com>, 2009
+# SPDX-FileCopyrightText: 2026 Charlotte <altronic25@protonmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 14:42+0000\n"
-"PO-Revision-Date: 2004-12-03 14:52-0500\n"
-"Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
-"Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
+"PO-Revision-Date: 2026-01-11 01:42+0000\n"
+"Last-Translator: Charlotte <altronic25@protonmail.com>\n"
+"Language-Team: Irish\n"
 "Language: ga\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Séamus Ó Ciardhuáin,Kevin Scannell"
+msgstr "Séamus Ó Ciardhuáin,Kevin Scannell,Charlotte"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "seoc@iolfree.ie,kscanne@gmail.com"
+msgstr "seoc@iolfree.ie,kscanne@gmail.com,altronic25@protonmail.com"
 
 #: colors.cpp:253
 #, kde-format
@@ -102,7 +104,7 @@ msgstr "Sábháil an scéim reatha datha"
 #: editor/kcolorschemeeditor.cpp:27
 #, kde-format
 msgid "Olivier Churlaud"
-msgstr ""
+msgstr "Olivier Churlaud"
 
 #: editor/kcolorschemeeditor.cpp:27
 #, kde-format
@@ -202,9 +204,7 @@ msgstr "Téacs Naisc Roghnaithe ar Ghnáthchúlra Roghnaithe"
 #. i18n: ectx: property (text), widget (QLabel, labelSelection3)
 #. i18n: ectx: property (text), widget (QLabel, labelView3)
 #: editor/preview.ui:141 editor/preview.ui:265
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "link"
+#, kde-format
 msgctxt "color-kcm-preview"
 msgid "link"
 msgstr "nasc"
@@ -1325,16 +1325,12 @@ msgid "Window text"
 msgstr "Téacs fuinneog"
 
 #: ui/main.qml:235
-#, fuzzy, kde-format
-#| msgctxt "color-sets"
-#| msgid "Button"
+#, kde-format
 msgid "Button"
 msgstr "Cnaipe"
 
 #: ui/main.qml:275
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "link"
+#, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "nasc"
@@ -1386,10 +1382,9 @@ msgid "Restore Color Scheme"
 msgstr "Iompórtáil Scéim Datha"
 
 #: ui/main.qml:374
-#, fuzzy, kde-format
-#| msgid "Save Color Scheme"
+#, kde-format
 msgid "Open Color Scheme"
-msgstr "Sábháil Scéim Datha"
+msgstr "Oscail Scéim Datha"
 
 #: ui/main.qml:376
 #, kde-format
