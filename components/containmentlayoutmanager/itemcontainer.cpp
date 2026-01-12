@@ -221,6 +221,10 @@ void ItemContainer::setLayout(AppletsLayout *layout)
         }
     });
     connect(m_layout, &AppletsLayout::editModeChanged, this, [this]() {
+        // Exit item edit mode when layout edit mode is disabled
+        if (!m_layout->editMode()) {
+            setEditMode(false);
+        }
         setAcceptHoverEvents(m_editModeCondition == AfterMouseOver || m_layout->editMode());
     });
     Q_EMIT layoutChanged();
