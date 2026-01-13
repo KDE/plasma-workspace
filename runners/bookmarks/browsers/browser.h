@@ -32,7 +32,6 @@ public:
         Unchanged,
     };
 
-public Q_SLOTS:
     virtual void teardown()
     {
     }

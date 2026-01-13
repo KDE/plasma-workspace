@@ -17,8 +17,8 @@
 
 using namespace Qt::StringLiterals;
 
-Falkon::Falkon(QObject *parent)
-    : QObject(parent)
+Falkon::Falkon()
+    : QObject()
     , m_startupProfile(getStartupProfileDir())
     , m_favicon(FaviconFromBlob::falkon(m_startupProfile, this))
 {

@@ -20,8 +20,8 @@
 
 using namespace Qt::StringLiterals;
 
-Firefox::Firefox(const QString &firefoxConfigDir, QObject *parent)
-    : QObject(parent)
+Firefox::Firefox(const QString &firefoxConfigDir)
+    : QObject()
     , m_dbCacheFile(QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation)
                     + QStringLiteral("/bookmarksrunner/bookmarkrunnerfirefoxdbfile.sqlite"))
     , m_dbCacheFile_fav(QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation)

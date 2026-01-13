@@ -21,7 +21,7 @@ class Chrome : public QObject, public Browser
 {
     Q_OBJECT
 public:
-    explicit Chrome(FindProfile *findProfile, QObject *parent = nullptr);
+    explicit Chrome(FindProfile *findProfile);
     ~Chrome() override;
     QList<BookmarkMatch> match(const QString &term, bool addEveryThing) override;
 public Q_SLOTS:

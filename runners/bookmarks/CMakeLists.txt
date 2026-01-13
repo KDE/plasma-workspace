@@ -35,7 +35,7 @@ target_link_libraries(krunner_bookmarks_common
     KF6::Bookmarks
 )
 
-kcoreaddons_add_plugin(krunner_bookmarksrunner SOURCES bookmarksrunner.cpp bookmarksrunner.h browserfactory.cpp browserfactory.h INSTALL_NAMESPACE "kf6/krunner")
+kcoreaddons_add_plugin(krunner_bookmarksrunner SOURCES bookmarksrunner.cpp bookmarksrunner.h INSTALL_NAMESPACE "kf6/krunner")
 target_link_libraries(krunner_bookmarksrunner
     krunner_bookmarks_common
     PW::KWorkspace

@@ -18,7 +18,7 @@ public:
     using QObject::QObject;
 
 private:
-    Firefox *m_firefox = nullptr;
+    std::unique_ptr<Firefox> m_firefox = nullptr;
 
 private Q_SLOTS:
     void initTestCase();
@@ -30,7 +30,7 @@ private Q_SLOTS:
 void TestFirefoxBookmarksMatch::initTestCase()
 {
     QStandardPaths::setTestModeEnabled(true);
-    m_firefox = new Firefox(QFINDTESTDATA("firefox-config-home"), this);
+    m_firefox = std::make_unique<Firefox>(QFINDTESTDATA("firefox-config-home"));
 }
 
 void TestFirefoxBookmarksMatch::testAllBookmarks()

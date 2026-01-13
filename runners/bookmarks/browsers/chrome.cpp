@@ -54,8 +54,8 @@ private:
     QJsonArray m_bookmarks;
 };
 
-Chrome::Chrome(FindProfile *findProfile, QObject *parent)
-    : QObject(parent)
+Chrome::Chrome(FindProfile *findProfile)
+    : QObject()
     , m_watcher(new KDirWatch(this))
     , m_dirty(false)
 {
