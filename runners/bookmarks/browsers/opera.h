@@ -16,7 +16,7 @@ class Opera : public QObject, public Browser
 {
     Q_OBJECT
 public:
-    explicit Opera(QObject *parent = nullptr);
+    explicit Opera();
     QList<BookmarkMatch> match(const QString &term, bool addEverything) override;
 public Q_SLOTS:
     void prepare() override;

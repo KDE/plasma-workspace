@@ -25,14 +25,18 @@
 
 #include "bookmarkmatch.h"
 #include "bookmarksrunner_defs.h"
-#include "browserfactory.h"
+#include "browsers/browser.h"
+#include "browsers/chrome.h"
+#include "browsers/chromefindprofile.h"
+#include "browsers/falkon.h"
+#include "browsers/firefox.h"
+#include "browsers/konqueror.h"
+#include "browsers/opera.h"
 
 K_PLUGIN_CLASS_WITH_JSON(BookmarksRunner, "plasma-runner-bookmarks.json")
 
 BookmarksRunner::BookmarksRunner(QObject *parent, const KPluginMetaData &metaData)
     : KRunner::AbstractRunner(parent, metaData)
-    , m_browser(nullptr)
-    , m_browserFactory(new BrowserFactory(this))
 {
     addSyntax(QStringLiteral(":q:"), i18n("Finds web browser bookmarks matching :q:."));
     addSyntax(i18nc("list of all web browser bookmarks", "bookmarks"), i18n("List all web browser bookmarks"));
@@ -42,10 +46,9 @@ BookmarksRunner::BookmarksRunner(QObject *parent, const KPluginMetaData &metaDat
 
 void BookmarksRunner::prep()
 {
-    auto browser = m_browserFactory->find(findBrowserName(), this);
-    if (m_browser != browser) {
-        m_browser = browser;
-        connect(this, &KRunner::AbstractRunner::teardown, dynamic_cast<QObject *>(m_browser), [this]() {
+    if (!m_browser || m_currentBrowserName != findBrowserName()) {
+        m_browser = findBrowser(findBrowserName());
+        connect(this, &KRunner::AbstractRunner::teardown, this, [this]() {
             m_browser->teardown();
         });
     }
@@ -98,6 +101,23 @@ void BookmarksRunner::run(const KRunner::RunnerContext & /*context*/, const KRun
 
     auto job = new KIO::OpenUrlJob(url);
     job->start();
+}
+
+std::unique_ptr<Browser> BookmarksRunner::findBrowser(const QString &browserName)
+{
+    if (browserName.contains(QLatin1String("firefox"), Qt::CaseInsensitive) || browserName.contains(QLatin1String("iceweasel"), Qt::CaseInsensitive)) {
+        return std::make_unique<Firefox>(QDir::homePath() + QStringLiteral("/.mozilla/firefox"));
+    } else if (browserName.contains(QLatin1String("opera"), Qt::CaseInsensitive)) {
+        return std::make_unique<Opera>();
+    } else if (browserName.contains(QLatin1String("chrome"), Qt::CaseInsensitive)) {
+        return std::make_unique<Chrome>(new FindChromeProfile(QStringLiteral("google-chrome"), QDir::homePath()));
+    } else if (browserName.contains(QLatin1String("chromium"), Qt::CaseInsensitive)) {
+        return std::make_unique<Chrome>(new FindChromeProfile(QStringLiteral("chromium"), QDir::homePath()));
+    } else if (browserName.contains(QLatin1String("falkon"), Qt::CaseInsensitive)) {
+        return std::make_unique<Falkon>();
+    } else {
+        return std::make_unique<Konqueror>();
+    }
 }
 
 #include "bookmarksrunner.moc"

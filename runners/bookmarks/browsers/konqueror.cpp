@@ -30,8 +30,8 @@ KDEFavicon::KDEFavicon(QObject *parent)
 {
 }
 
-Konqueror::Konqueror(QObject *parent)
-    : QObject(parent)
+Konqueror::Konqueror()
+    : QObject()
     , m_favicon(new KDEFavicon(this))
 {
     const QString bookmarksFile = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/konqueror/bookmarks.xml");

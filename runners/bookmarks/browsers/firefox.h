@@ -17,7 +17,7 @@ class Firefox : public QObject, public Browser
 {
     Q_OBJECT
 public:
-    explicit Firefox(const QString &firefoxConfigDir, QObject *parent = nullptr);
+    explicit Firefox(const QString &firefoxConfigDir);
     ~Firefox() override;
     QList<BookmarkMatch> match(const QString &term, bool addEverything) override;
 public Q_SLOTS:

@@ -11,7 +11,6 @@
 #include <krunner/abstractrunner.h>
 
 class Browser;
-class BrowserFactory;
 
 /** This runner searches for bookmarks in browsers like Konqueror, Firefox and Opera */
 class BookmarksRunner : public KRunner::AbstractRunner
@@ -31,8 +30,10 @@ private:
     QString findBrowserName();
 
 private:
-    Browser *m_browser;
-    BrowserFactory *const m_browserFactory;
+    static std::unique_ptr<Browser> findBrowser(const QString &browserName);
+
+    std::unique_ptr<Browser> m_browser;
+    QString m_currentBrowserName;
 
 private Q_SLOTS:
     void prep();

@@ -14,8 +14,8 @@
 
 using namespace Qt::StringLiterals;
 
-Opera::Opera(QObject *parent)
-    : QObject(parent)
+Opera::Opera()
+    : QObject()
     , m_favicon(new FallbackFavicon(this))
 {
 }
