@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-02 00:46+0000\n"
+"POT-Creation-Date: 2026-01-13 08:43+0000\n"
 "PO-Revision-Date: 2025-05-21 21:57+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -86,58 +86,58 @@ msgstr "%2 %1"
 msgid "Days"
 msgstr "Nap"
 
-#: calendar/qml/MonthViewHeader.qml:137
+#: calendar/qml/MonthViewHeader.qml:139
 #, kde-format
 msgid "Months"
 msgstr "Hónap"
 
-#: calendar/qml/MonthViewHeader.qml:143
+#: calendar/qml/MonthViewHeader.qml:147
 #, kde-format
 msgid "Years"
 msgstr "Év"
 
-#: calendar/qml/MonthViewHeader.qml:178
+#: calendar/qml/MonthViewHeader.qml:184
 #, kde-format
 msgid "Previous Month"
 msgstr "Előző hónap"
 
-#: calendar/qml/MonthViewHeader.qml:180
+#: calendar/qml/MonthViewHeader.qml:186
 #, kde-format
 msgid "Previous Year"
 msgstr "Előző év"
 
-#: calendar/qml/MonthViewHeader.qml:182
+#: calendar/qml/MonthViewHeader.qml:188
 #, kde-format
 msgid "Previous Decade"
 msgstr "Előző évtized"
 
-#: calendar/qml/MonthViewHeader.qml:199
+#: calendar/qml/MonthViewHeader.qml:206
 #, kde-format
 msgctxt "Reset calendar to today"
 msgid "Today"
 msgstr "Ma"
 
-#: calendar/qml/MonthViewHeader.qml:200
+#: calendar/qml/MonthViewHeader.qml:207
 #, kde-format
 msgid "Reset calendar to today"
 msgstr "Visszaállítás a mai napra"
 
-#: calendar/qml/MonthViewHeader.qml:211
+#: calendar/qml/MonthViewHeader.qml:220
 #, kde-format
 msgid "Next Month"
 msgstr "Következő hónap"
 
-#: calendar/qml/MonthViewHeader.qml:213
+#: calendar/qml/MonthViewHeader.qml:222
 #, kde-format
 msgid "Next Year"
 msgstr "Következő év"
 
-#: calendar/qml/MonthViewHeader.qml:215
+#: calendar/qml/MonthViewHeader.qml:224
 #, kde-format
 msgid "Next Decade"
 msgstr "Következő évtized"
 
-#: calendar/qml/MonthViewHeader.qml:271
+#: calendar/qml/MonthViewHeader.qml:283
 #, fuzzy, kde-format
 #| msgid "Keep Open"
 msgctxt "@info:tooltip"

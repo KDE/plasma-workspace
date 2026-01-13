@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-10 00:45+0000\n"
-"PO-Revision-Date: 2025-01-10 01:23+0200\n"
+"PO-Revision-Date: 2026-01-12 20:36+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.8\n"
 
 #: contents/logout/Logout.qml:149
 #, kde-format
@@ -111,11 +111,10 @@ msgid "When restarted, the computer will enter the boot loader menu."
 msgstr "Paleidus iš naujo, kompiuteris įžengs į pradinio įkėliklio meniu."
 
 #: contents/logout/Logout.qml:212
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will enter the boot loader menu."
+#, kde-format
 msgctxt "%1 is a boot loader entry"
 msgid "When restarted, the computer will switch to %1."
-msgstr "Paleidus iš naujo, kompiuteris įžengs į pradinio įkėliklio meniu."
+msgstr "Paleidus iš naujo, kompiuteris persijungs į %1."
 
 #: contents/logout/Logout.qml:234
 #, kde-format

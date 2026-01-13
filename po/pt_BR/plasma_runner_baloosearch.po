@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_baloosearchrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-13 08:43+0000\n"
 "PO-Revision-Date: 2024-11-29 00:32-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -29,6 +29,11 @@ msgstr "Geraldo Simião"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "geraldosimiao@fedoraproject.org"
+
+#: baloosearchrunner.cpp:42
+#, kde-format
+msgid "File Search"
+msgstr ""
 
 #: baloosearchrunner.cpp:69
 #, kde-format

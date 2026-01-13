@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-02 00:46+0000\n"
+"POT-Creation-Date: 2026-01-13 08:43+0000\n"
 "PO-Revision-Date: 2025-11-30 11:04+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -85,58 +85,58 @@ msgstr "%1 %2"
 msgid "Days"
 msgstr "நாட்கள்"
 
-#: calendar/qml/MonthViewHeader.qml:137
+#: calendar/qml/MonthViewHeader.qml:139
 #, kde-format
 msgid "Months"
 msgstr "மாதங்கள்"
 
-#: calendar/qml/MonthViewHeader.qml:143
+#: calendar/qml/MonthViewHeader.qml:147
 #, kde-format
 msgid "Years"
 msgstr "வருடங்கள்"
 
-#: calendar/qml/MonthViewHeader.qml:178
+#: calendar/qml/MonthViewHeader.qml:184
 #, kde-format
 msgid "Previous Month"
 msgstr "முந்தைய மாதம்"
 
-#: calendar/qml/MonthViewHeader.qml:180
+#: calendar/qml/MonthViewHeader.qml:186
 #, kde-format
 msgid "Previous Year"
 msgstr "முந்தைய ஆண்டு"
 
-#: calendar/qml/MonthViewHeader.qml:182
+#: calendar/qml/MonthViewHeader.qml:188
 #, kde-format
 msgid "Previous Decade"
 msgstr "முந்தைய பத்தாண்டு"
 
-#: calendar/qml/MonthViewHeader.qml:199
+#: calendar/qml/MonthViewHeader.qml:206
 #, kde-format
 msgctxt "Reset calendar to today"
 msgid "Today"
 msgstr "இன்று"
 
-#: calendar/qml/MonthViewHeader.qml:200
+#: calendar/qml/MonthViewHeader.qml:207
 #, kde-format
 msgid "Reset calendar to today"
 msgstr "நாள்காட்டியை இன்றைய தேதிக்கு மீட்டமை"
 
-#: calendar/qml/MonthViewHeader.qml:211
+#: calendar/qml/MonthViewHeader.qml:220
 #, kde-format
 msgid "Next Month"
 msgstr "அடுத்த மாதம்"
 
-#: calendar/qml/MonthViewHeader.qml:213
+#: calendar/qml/MonthViewHeader.qml:222
 #, kde-format
 msgid "Next Year"
 msgstr "அடுத்த ஆண்டு"
 
-#: calendar/qml/MonthViewHeader.qml:215
+#: calendar/qml/MonthViewHeader.qml:224
 #, kde-format
 msgid "Next Decade"
 msgstr "அடுத்த பத்தாண்டு"
 
-#: calendar/qml/MonthViewHeader.qml:271
+#: calendar/qml/MonthViewHeader.qml:283
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Keep Open"

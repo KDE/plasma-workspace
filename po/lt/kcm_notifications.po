@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-10 00:45+0000\n"
-"PO-Revision-Date: 2026-01-06 13:15+0200\n"
+"POT-Creation-Date: 2026-01-13 08:43+0000\n"
+"PO-Revision-Date: 2026-01-12 20:26+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -229,8 +229,7 @@ msgid "Hide after:"
 msgstr "Slėpti po:"
 
 #: ui/main.qml:306
-#, fuzzy, kde-format
-#| msgid "Show timeout indicator"
+#, kde-format
 msgctxt ""
 "@option:check Show progress bar on notifications indicating when it will hide"
 msgid "Show timeout indicator"
@@ -275,8 +274,11 @@ msgid "Popup Position"
 msgstr "Iškylančiojo lango vieta"
 
 #: ui/SourcesPage.qml:20
-#, kde-format
-msgid "Application Settings"
+#, fuzzy, kde-format
+#| msgid "Application Settings"
+msgctxt ""
+"@title:window kcm page title, configure app-specific notification settings"
+msgid "Application Notifications"
 msgstr "Programos nuostatos"
 
 #: ui/SourcesPage.qml:104

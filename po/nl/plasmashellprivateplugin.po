@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-02 00:46+0000\n"
+"POT-Creation-Date: 2026-01-13 08:43+0000\n"
 "PO-Revision-Date: 2025-11-08 11:19+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -85,58 +85,58 @@ msgstr "%1 %2"
 msgid "Days"
 msgstr "Dagen"
 
-#: calendar/qml/MonthViewHeader.qml:137
+#: calendar/qml/MonthViewHeader.qml:139
 #, kde-format
 msgid "Months"
 msgstr "Maanden"
 
-#: calendar/qml/MonthViewHeader.qml:143
+#: calendar/qml/MonthViewHeader.qml:147
 #, kde-format
 msgid "Years"
 msgstr "Jaren"
 
-#: calendar/qml/MonthViewHeader.qml:178
+#: calendar/qml/MonthViewHeader.qml:184
 #, kde-format
 msgid "Previous Month"
 msgstr "Vorige maand"
 
-#: calendar/qml/MonthViewHeader.qml:180
+#: calendar/qml/MonthViewHeader.qml:186
 #, kde-format
 msgid "Previous Year"
 msgstr "Vorig jaar"
 
-#: calendar/qml/MonthViewHeader.qml:182
+#: calendar/qml/MonthViewHeader.qml:188
 #, kde-format
 msgid "Previous Decade"
 msgstr "Vorige decade"
 
-#: calendar/qml/MonthViewHeader.qml:199
+#: calendar/qml/MonthViewHeader.qml:206
 #, kde-format
 msgctxt "Reset calendar to today"
 msgid "Today"
 msgstr "Vandaag"
 
-#: calendar/qml/MonthViewHeader.qml:200
+#: calendar/qml/MonthViewHeader.qml:207
 #, kde-format
 msgid "Reset calendar to today"
 msgstr "Zet de agenda terug op vandaag"
 
-#: calendar/qml/MonthViewHeader.qml:211
+#: calendar/qml/MonthViewHeader.qml:220
 #, kde-format
 msgid "Next Month"
 msgstr "Volgende maand"
 
-#: calendar/qml/MonthViewHeader.qml:213
+#: calendar/qml/MonthViewHeader.qml:222
 #, kde-format
 msgid "Next Year"
 msgstr "Volgend jaar"
 
-#: calendar/qml/MonthViewHeader.qml:215
+#: calendar/qml/MonthViewHeader.qml:224
 #, kde-format
 msgid "Next Decade"
 msgstr "Volgende decade"
 
-#: calendar/qml/MonthViewHeader.qml:271
+#: calendar/qml/MonthViewHeader.qml:283
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Keep Open"

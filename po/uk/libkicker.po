@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libkicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-29 00:45+0000\n"
+"POT-Creation-Date: 2026-01-13 08:43+0000\n"
 "PO-Revision-Date: 2025-01-07 23:03+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -200,7 +200,7 @@ msgstr "Часто використовувані програми"
 msgid "Power / Session"
 msgstr "Живлення/Сеанс"
 
-#: runnermodel.cpp:220
+#: runnermodel.cpp:226
 #, kde-format
 msgid "Search results"
 msgstr "Результати пошуку"

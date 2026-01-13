@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-02 00:46+0000\n"
+"POT-Creation-Date: 2026-01-13 08:43+0000\n"
 "PO-Revision-Date: 2024-08-24 18:43+0300\n"
 "Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -86,58 +86,58 @@ msgstr "%1 %2"
 msgid "Days"
 msgstr "Ημέρες"
 
-#: calendar/qml/MonthViewHeader.qml:137
+#: calendar/qml/MonthViewHeader.qml:139
 #, kde-format
 msgid "Months"
 msgstr "Μήνες"
 
-#: calendar/qml/MonthViewHeader.qml:143
+#: calendar/qml/MonthViewHeader.qml:147
 #, kde-format
 msgid "Years"
 msgstr "Χρόνια"
 
-#: calendar/qml/MonthViewHeader.qml:178
+#: calendar/qml/MonthViewHeader.qml:184
 #, kde-format
 msgid "Previous Month"
 msgstr "Προηγούμενος μήνας"
 
-#: calendar/qml/MonthViewHeader.qml:180
+#: calendar/qml/MonthViewHeader.qml:186
 #, kde-format
 msgid "Previous Year"
 msgstr "Προηγούμενο έτος"
 
-#: calendar/qml/MonthViewHeader.qml:182
+#: calendar/qml/MonthViewHeader.qml:188
 #, kde-format
 msgid "Previous Decade"
 msgstr "Προηγούμενη δεκαετία"
 
-#: calendar/qml/MonthViewHeader.qml:199
+#: calendar/qml/MonthViewHeader.qml:206
 #, kde-format
 msgctxt "Reset calendar to today"
 msgid "Today"
 msgstr "Σήμερα"
 
-#: calendar/qml/MonthViewHeader.qml:200
+#: calendar/qml/MonthViewHeader.qml:207
 #, kde-format
 msgid "Reset calendar to today"
 msgstr "Επαναφορά ημερολογίου στο σήμερα"
 
-#: calendar/qml/MonthViewHeader.qml:211
+#: calendar/qml/MonthViewHeader.qml:220
 #, kde-format
 msgid "Next Month"
 msgstr "Επόμενος μήνας"
 
-#: calendar/qml/MonthViewHeader.qml:213
+#: calendar/qml/MonthViewHeader.qml:222
 #, kde-format
 msgid "Next Year"
 msgstr "Επόμενο έτος"
 
-#: calendar/qml/MonthViewHeader.qml:215
+#: calendar/qml/MonthViewHeader.qml:224
 #, kde-format
 msgid "Next Decade"
 msgstr "Επόμενη δεκαετία"
 
-#: calendar/qml/MonthViewHeader.qml:271
+#: calendar/qml/MonthViewHeader.qml:283
 #, fuzzy, kde-format
 #| msgid "Keep Open"
 msgctxt "@info:tooltip"

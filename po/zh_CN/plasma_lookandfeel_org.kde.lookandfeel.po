@@ -70,11 +70,10 @@ msgid "When restarted, the computer will enter the boot loader menu."
 msgstr "重新启动时，电脑将进入引导加载程序菜单。"
 
 #: contents/logout/Logout.qml:212
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will switch to %1."
+#, kde-format
 msgctxt "%1 is a boot loader entry"
 msgid "When restarted, the computer will switch to %1."
-msgstr "重启后，计算机将切换到 %1。"
+msgstr ""
 
 #: contents/logout/Logout.qml:234
 #, kde-format

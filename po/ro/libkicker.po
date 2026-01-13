@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-29 00:45+0000\n"
+"POT-Creation-Date: 2026-01-13 08:43+0000\n"
 "PO-Revision-Date: 2025-12-12 11:17+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -198,7 +198,7 @@ msgstr "Aplicații folosite des"
 msgid "Power / Session"
 msgstr "Alimentare / Sesiune"
 
-#: runnermodel.cpp:220
+#: runnermodel.cpp:226
 #, kde-format
 msgid "Search results"
 msgstr "Rezultatele căutării"

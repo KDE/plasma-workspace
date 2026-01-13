@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-29 00:45+0000\n"
+"POT-Creation-Date: 2026-01-13 08:43+0000\n"
 "PO-Revision-Date: 2025-01-07 15:08+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -199,7 +199,7 @@ msgstr "Sık Kullanılan Uygulamalar"
 msgid "Power / Session"
 msgstr "Güç/Oturum"
 
-#: runnermodel.cpp:220
+#: runnermodel.cpp:226
 #, kde-format
 msgid "Search results"
 msgstr "Arama sonuçları"
