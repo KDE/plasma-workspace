@@ -31,5 +31,4 @@ private:
     const QString m_dbCacheFile_fav;
     Favicon *m_favicon;
     FetchSqlite *m_fetchsqlite;
-    FetchSqlite *m_fetchsqlite_fav;
 };

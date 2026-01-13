@@ -16,8 +16,8 @@
 #include <sstream>
 #include <thread>
 
-FetchSqlite::FetchSqlite(const QString &databaseFile, QObject *parent)
-    : QObject(parent)
+FetchSqlite::FetchSqlite(const QString &databaseFile)
+    : QObject()
     , m_databaseFile(databaseFile)
 {
 }
