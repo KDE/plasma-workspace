@@ -64,7 +64,7 @@ find_package(QCoro6 REQUIRED COMPONENTS Core)
 find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
                     Archive Auth CoreAddons Crash DBusAddons Declarative GlobalAccel GuiAddons
                     Holidays I18n IconThemes IdleTime ItemModels KCMUtils KDED KIO NewStuff
-                    Notifications NotifyConfig Package Parts Prison Runner StatusNotifierItem
+                    Notifications Package Parts Prison Runner StatusNotifierItem
                     Svg TextEditor TextWidgets Wallet ColorScheme
                     OPTIONAL_COMPONENTS DocTools)
 find_package(Plasma ${PROJECT_DEP_VERSION} REQUIRED)
