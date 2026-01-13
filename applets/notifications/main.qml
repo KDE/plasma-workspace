@@ -147,6 +147,13 @@ PlasmoidItem {
         } else {
             historyModel.lastRead = undefined; // reset to now
             historyModel.collapseAllGroups();
+            // BUG: 513012, unknown cause but appears to fix
+            /*
+            Qt.callLater(() => {
+                historyModel.lastRead = undefined; // reset to now
+                historyModel.collapseAllGroups();
+            })
+            */
         }
     }
 
@@ -171,6 +178,15 @@ PlasmoidItem {
         id: notificationSettings
     }
 
+    readonly property var urgencies: {
+        var urgencies = NotificationManager.Notifications.CriticalUrgency
+                      | NotificationManager.Notifications.NormalUrgency;
+        if (notificationSettings.lowPriorityHistory) {
+            urgencies |= NotificationManager.Notifications.LowUrgency;
+        }
+        return urgencies;
+    }
+
     NotificationManager.Notifications {
         id: historyModel
         showExpired: true
@@ -183,14 +199,7 @@ PlasmoidItem {
         ignoreBlacklistDuringInhibition: true
         blacklistedDesktopEntries: notificationSettings.historyBlacklistedApplications
         blacklistedNotifyRcNames: notificationSettings.historyBlacklistedServices
-        urgencies: {
-            var urgencies = NotificationManager.Notifications.CriticalUrgency
-                          | NotificationManager.Notifications.NormalUrgency;
-            if (notificationSettings.lowPriorityHistory) {
-                urgencies |= NotificationManager.Notifications.LowUrgency;
-            }
-            return urgencies;
-        }
+        urgencies: root.urgencies
 
         onCountChanged: {
             if (count === 0) {
@@ -203,13 +212,13 @@ PlasmoidItem {
         id: jobAggregator
         sourceModel: NotificationManager.Notifications {
             id: jobAggregatorModel
-            showExpired: historyModel.showExpired
-            showDismissed: historyModel.showDismissed
-            showJobs: historyModel.showJobs
+            showExpired: true
+            showDismissed: true
+            showJobs: notificationSettings.jobsInNotifications
             showNotifications: false
-            blacklistedDesktopEntries: historyModel.blacklistedDesktopEntries
-            blacklistedNotifyRcNames: historyModel.blacklistedNotifyRcNames
-            urgencies: historyModel.urgencies
+            blacklistedDesktopEntries: notificationSettings.historyBlacklistedApplications
+            blacklistedNotifyRcNames: notificationSettings.historyBlacklistedServices
+            urgencies: root.urgencies
         }
     }
 
