@@ -94,13 +94,6 @@ QString MountAction::icon() const
 
 QString MountAction::text() const
 {
-    Solid::Device device(m_udi);
-    if (device.is<Solid::StorageAccess>()) {
-        auto *access = device.as<Solid::StorageAccess>();
-        if (access && access->canCheck() && !m_stateMonitor->isChecked(m_udi)) {
-            return i18nc("@action:button Mount a disk without verifying for errors", "Mount without verifying");
-        }
-    }
     return i18n("Mount");
 }
 
