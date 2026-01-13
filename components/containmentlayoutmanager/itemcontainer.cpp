@@ -222,6 +222,10 @@ void ItemContainer::setLayout(AppletsLayout *layout)
     });
     connect(m_layout, &AppletsLayout::editModeChanged, this, [this]() {
         setAcceptHoverEvents(m_editModeCondition == AfterMouseOver || m_layout->editMode());
+
+        if (!m_layout->editMode()) {
+            setEditMode(false);
+        }
     });
     Q_EMIT layoutChanged();
 }
