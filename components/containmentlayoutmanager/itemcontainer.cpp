@@ -547,6 +547,27 @@ bool ItemContainer::childMouseEventFilter(QQuickItem *item, QEvent *event)
         }
     }
 
+    // Block all events to applets when in edit mode
+    if ((m_editMode || m_layout->editMode()) && m_contentItem && (item == m_contentItem || m_contentItem->isAncestorOf(item))) {
+        switch (event->type()) {
+        case QEvent::MouseButtonPress:
+        case QEvent::MouseButtonRelease:
+        case QEvent::MouseButtonDblClick:
+        case QEvent::MouseMove:
+        case QEvent::HoverEnter:
+        case QEvent::HoverLeave:
+        case QEvent::HoverMove:
+        case QEvent::Wheel:
+        case QEvent::TouchBegin:
+        case QEvent::TouchUpdate:
+        case QEvent::TouchEnd:
+        case QEvent::TouchCancel:
+            return true;
+        default:
+            break;
+        }
+    }
+
     return QQuickItem::childMouseEventFilter(item, event);
 }
 
