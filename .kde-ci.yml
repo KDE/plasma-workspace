@@ -29,7 +29,6 @@ Dependencies:
     'frameworks/kjobwidgets': '@latest-kf6'
     'frameworks/knewstuff': '@latest-kf6'
     'frameworks/knotifications': '@latest-kf6'
-    'frameworks/knotifyconfig': '@latest-kf6'
     'frameworks/kpackage': '@latest-kf6'
     'frameworks/kparts': '@latest-kf6'
     'frameworks/krunner': '@latest-kf6'
