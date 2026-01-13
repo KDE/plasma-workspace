@@ -17,7 +17,7 @@ class FetchSqlite : public QObject
 {
     Q_OBJECT
 public:
-    explicit FetchSqlite(const QString &databaseFile, QObject *parent = nullptr);
+    explicit FetchSqlite(const QString &databaseFile);
     ~FetchSqlite() override;
     void prepare();
     void teardown();

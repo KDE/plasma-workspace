@@ -28,7 +28,6 @@ Firefox::Firefox(const QString &firefoxConfigDir)
                         + QStringLiteral("/bookmarksrunner/bookmarkrunnerfirefoxfavdbfile.sqlite"))
     , m_favicon(new FallbackFavicon(this))
     , m_fetchsqlite(nullptr)
-    , m_fetchsqlite_fav(nullptr)
 {
     if (!QSqlDatabase::isDriverAvailable(QStringLiteral("QSQLITE"))) {
         qCWarning(RUNNER_BOOKMARKS) << "SQLITE driver isn't available";
@@ -73,9 +72,9 @@ Firefox::Firefox(const QString &firefoxConfigDir)
     // We can reuse the favicon instance over the lifetime of the plugin consequently the
     // icons that are already written to disk can be reused in multiple match sessions
     updateCacheFile(m_dbFile_fav, m_dbCacheFile_fav);
-    m_fetchsqlite_fav = new FetchSqlite(m_dbCacheFile_fav, this);
+    auto fetchsqlite_fav = std::make_unique<FetchSqlite>(m_dbCacheFile_fav, this);
     delete m_favicon;
-    m_favicon = FaviconFromBlob::firefox(m_fetchsqlite_fav, this);
+    m_favicon = FaviconFromBlob::firefox(std::move(fetchsqlite_fav), this);
 }
 
 Firefox::~Firefox()
