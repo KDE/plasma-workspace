@@ -281,6 +281,11 @@ void Output::kde_output_device_v2_uuid(const QString &uuid)
     Q_EMIT uuidAdded();
 }
 
+void Output::kde_output_device_v2_mode(struct ::kde_output_device_mode_v2 *mode)
+{
+    kde_output_device_mode_v2_destroy(mode);
+}
+
 KdedDeviceNotifications::KdedDeviceNotifications(QObject *parent, const QList<QVariant> &)
     : KDEDModule(parent)
 {

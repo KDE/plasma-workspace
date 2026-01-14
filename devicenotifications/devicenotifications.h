@@ -98,6 +98,8 @@ Q_SIGNALS:
 
 private:
     void kde_output_device_v2_uuid(const QString &uuid) override;
+    void kde_output_device_v2_mode(struct ::kde_output_device_mode_v2 *mode) override;
+
     uint32_t m_id;
     QString m_uuid;
 };
