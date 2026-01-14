@@ -359,10 +359,10 @@ void KdedDeviceNotifications::setupWaylandOutputListener()
 
     // Suppress notifications until the initial list of outputs has been received.
     auto syncDone = [](void *data, struct wl_callback *wl_callback, uint32_t callback_data) {
-        Q_UNUSED(wl_callback);
         Q_UNUSED(callback_data);
         auto *self = static_cast<KdedDeviceNotifications *>(data);
         self->m_initialOutputsReceived = true;
+        wl_callback_destroy(wl_callback);
     };
     auto syncCallback = wl_display_sync(display);
     static const wl_callback_listener syncCallbackListener{syncDone};
