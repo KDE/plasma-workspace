@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-28 00:44+0000\n"
+"POT-Creation-Date: 2026-01-14 02:39+0000\n"
 "PO-Revision-Date: 2024-12-20 12:26+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -18,10 +18,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
 "X-Generator: Lokalize 24.08.2\n"
-
-#, kde-format
-msgid "Inherit Language"
-msgstr "भाषा उत्तराधिकार प्राप्त करें"
 
 #: binarydialectmodel.cpp:52
 #, fuzzy, kde-format
@@ -467,6 +463,15 @@ msgctxt ""
 "as subtitle, remind user that the format used now is inherited from locale %1"
 msgid " (Standard format for %1)"
 msgstr " (%1 कृते मानकस्वरूपम्)"
+
+#: regionandlangsettingsbase.kcfg:14 regionandlangsettingsbase.kcfg:17
+#: regionandlangsettingsbase.kcfg:20 regionandlangsettingsbase.kcfg:23
+#: regionandlangsettingsbase.kcfg:26 regionandlangsettingsbase.kcfg:29
+#: regionandlangsettingsbase.kcfg:32 regionandlangsettingsbase.kcfg:35
+#: regionandlangsettingsbase.kcfg:38
+#, kde-format
+msgid "Inherit Language"
+msgstr "भाषा उत्तराधिकार प्राप्त करें"
 
 #: ui/AdvancedLanguageSelectPage.qml:23
 #, kde-format

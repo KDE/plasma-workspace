@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-28 00:44+0000\n"
+"POT-Creation-Date: 2026-01-14 02:39+0000\n"
 "PO-Revision-Date: 2025-12-19 13:24+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -18,10 +18,6 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 25.12.0\n"
-
-#, kde-format
-msgid "Inherit Language"
-msgstr "Наследовать по языку"
 
 #: binarydialectmodel.cpp:52
 #, kde-format
@@ -457,6 +453,15 @@ msgctxt ""
 "as subtitle, remind user that the format used now is inherited from locale %1"
 msgid " (Standard format for %1)"
 msgstr " (стандартный для %1)"
+
+#: regionandlangsettingsbase.kcfg:14 regionandlangsettingsbase.kcfg:17
+#: regionandlangsettingsbase.kcfg:20 regionandlangsettingsbase.kcfg:23
+#: regionandlangsettingsbase.kcfg:26 regionandlangsettingsbase.kcfg:29
+#: regionandlangsettingsbase.kcfg:32 regionandlangsettingsbase.kcfg:35
+#: regionandlangsettingsbase.kcfg:38
+#, kde-format
+msgid "Inherit Language"
+msgstr "Наследовать по языку"
 
 #: ui/AdvancedLanguageSelectPage.qml:23
 #, kde-format

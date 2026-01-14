@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-28 00:44+0000\n"
+"POT-Creation-Date: 2026-01-14 02:39+0000\n"
 "PO-Revision-Date: 2025-11-12 09:47+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -19,10 +19,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 25.04.0\n"
-
-#, kde-format
-msgid "Inherit Language"
-msgstr "Idioma heretat"
 
 #: binarydialectmodel.cpp:52
 #, kde-format
@@ -461,6 +457,15 @@ msgctxt ""
 "as subtitle, remind user that the format used now is inherited from locale %1"
 msgid " (Standard format for %1)"
 msgstr " (Format estàndard %1)"
+
+#: regionandlangsettingsbase.kcfg:14 regionandlangsettingsbase.kcfg:17
+#: regionandlangsettingsbase.kcfg:20 regionandlangsettingsbase.kcfg:23
+#: regionandlangsettingsbase.kcfg:26 regionandlangsettingsbase.kcfg:29
+#: regionandlangsettingsbase.kcfg:32 regionandlangsettingsbase.kcfg:35
+#: regionandlangsettingsbase.kcfg:38
+#, kde-format
+msgid "Inherit Language"
+msgstr "Idioma heretat"
 
 #: ui/AdvancedLanguageSelectPage.qml:23
 #, kde-format
