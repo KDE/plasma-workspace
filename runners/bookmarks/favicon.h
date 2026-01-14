@@ -39,8 +39,8 @@ class FallbackFavicon : public Favicon
 {
     Q_OBJECT
 public:
-    FallbackFavicon(QObject *parent = nullptr)
-        : Favicon(parent)
+    FallbackFavicon()
+        : Favicon()
     {
     }
     QIcon iconFor(const QString &) override
