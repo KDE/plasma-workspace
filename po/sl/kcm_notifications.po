@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2026-01-10 09:06+0100\n"
+"PO-Revision-Date: 2026-01-13 11:58+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -271,12 +271,11 @@ msgid "Popup Position"
 msgstr "Pozicija pojavnega okna"
 
 #: ui/SourcesPage.qml:20
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt ""
 "@title:window kcm page title, configure app-specific notification settings"
 msgid "Application Notifications"
-msgstr "Nastavitve aplikacij"
+msgstr "Obvestila aplikacij"
 
 #: ui/SourcesPage.qml:104
 #, kde-format
