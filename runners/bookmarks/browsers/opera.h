@@ -24,5 +24,5 @@ public Q_SLOTS:
 
 private:
     QStringList m_operaBookmarkEntries;
-    Favicon *const m_favicon;
+    std::unique_ptr<Favicon> const m_favicon;
 };

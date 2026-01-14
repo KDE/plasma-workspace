@@ -16,7 +16,7 @@ using namespace Qt::StringLiterals;
 
 Opera::Opera()
     : QObject()
-    , m_favicon(new FallbackFavicon(this))
+    , m_favicon(std::make_unique<FallbackFavicon>())
 {
 }
 

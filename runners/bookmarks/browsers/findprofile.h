@@ -10,14 +10,15 @@
 #include <QStandardPaths>
 #include <QString>
 
-class Favicon;
+#include "favicon.h"
+
 class Profile
 {
 public:
-    Profile(const QString &path, const QString &name, Favicon *favicon)
+    Profile(const QString &path, const QString &name, std::unique_ptr<Favicon> &&favicon)
         : m_path(path)
         , m_name(name)
-        , m_favicon(favicon)
+        , m_favicon(std::move(favicon))
     {
         // Remove "Bookmarks" from end of path
         m_faviconSource = path.chopped(9) + QStringLiteral("Favicons");
@@ -34,7 +35,7 @@ public:
     }
     inline Favicon *favicon() const
     {
-        return m_favicon;
+        return m_favicon.get();
     }
     inline QString faviconSource() const
     {
@@ -48,7 +49,7 @@ public:
 private:
     QString m_path;
     QString m_name;
-    Favicon *m_favicon;
+    std::unique_ptr<Favicon> m_favicon;
     QString m_faviconSource;
     QString m_faviconCache;
 };
@@ -56,6 +57,6 @@ private:
 class FindProfile
 {
 public:
-    virtual QList<Profile> find() = 0;
+    virtual std::vector<std::unique_ptr<Profile>> find() = 0;
     virtual ~FindProfile() = default;
 };
