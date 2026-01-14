@@ -15,22 +15,22 @@ class FaviconFromBlob : public Favicon
 {
     Q_OBJECT
 public:
-    static FaviconFromBlob *chrome(const QString &profileDirectory, QObject *parent = nullptr);
-    static FaviconFromBlob *firefox(std::unique_ptr<FetchSqlite> &&fetchSqlite, QObject *parent = nullptr);
-    static FaviconFromBlob *falkon(const QString &profileDirectory, QObject *parent = nullptr);
+    static std::unique_ptr<FaviconFromBlob> chrome(const QString &profileDirectory);
+    static std::unique_ptr<FaviconFromBlob> firefox(std::unique_ptr<FetchSqlite> &&fetchSqlite);
+    static std::unique_ptr<FaviconFromBlob> falkon(const QString &profileDirectory);
     ~FaviconFromBlob() override;
     QIcon iconFor(const QString &url) override;
 
-public Q_SLOTS:
-    void prepare() override;
-    void teardown() override;
-
-private:
     FaviconFromBlob(const QString &profileName,
                     const QString &query,
                     const QString &blobColumn,
                     std::unique_ptr<FetchSqlite> &&fetchSqlite,
                     QObject *parent = nullptr);
+public Q_SLOTS:
+    void prepare() override;
+    void teardown() override;
+
+private:
     QString m_profileCacheDirectory;
     QString m_query;
     QString const m_blobcolumn;

@@ -18,8 +18,10 @@ using namespace KRunner;
 void TestChromeBookmarks::initTestCase()
 {
     m_configHome = QFINDTESTDATA("chrome-config-home");
-    m_findBookmarksInCurrentDirectory.reset(
-        new FakeFindProfile(QList<Profile>({Profile(QString(m_configHome + u"/Chrome-Bookmarks-Sample.json"), u"Sample"_s, new FallbackFavicon())})));
+    auto profile = std::make_unique<Profile>(QString(m_configHome + u"/Chrome-Bookmarks-Sample.json"), u"Sample"_s, std::make_unique<FallbackFavicon>());
+    std::vector<std::unique_ptr<Profile>> list;
+    list.push_back(std::move(profile));
+    m_findBookmarksInCurrentDirectory = std::make_unique<FakeFindProfile>(std::move(list));
 }
 
 void TestChromeBookmarks::bookmarkFinderShouldFindEachProfileDirectory()
@@ -27,16 +29,16 @@ void TestChromeBookmarks::bookmarkFinderShouldFindEachProfileDirectory()
     FindChromeProfile findChrome(u"chromium"_s, m_configHome);
     QString profileTemplate = m_configHome + u"/.config/%1/%2/Bookmarks";
 
-    QList<Profile> profiles = findChrome.find();
+    auto profiles = findChrome.find();
     QCOMPARE(profiles.size(), 2);
-    QCOMPARE(profiles[0].path(), profileTemplate.arg(u"chromium", u"Default"));
-    QCOMPARE(profiles[1].path(), profileTemplate.arg(u"chromium", u"Profile 1"));
+    QCOMPARE(profiles[0]->path(), profileTemplate.arg(u"chromium", u"Default"));
+    QCOMPARE(profiles[1]->path(), profileTemplate.arg(u"chromium", u"Profile 1"));
 }
 
 void TestChromeBookmarks::bookmarkFinderShouldReportNoProfilesOnErrors()
 {
     FindChromeProfile findChrome(u"chromium"_s, u"./no-config-directory"_s);
-    QList<Profile> profiles = findChrome.find();
+    auto profiles = findChrome.find();
     QCOMPARE(profiles.size(), 0);
 }
 
@@ -48,7 +50,10 @@ void TestChromeBookmarks::itShouldFindNothingWhenPrepareIsNotCalled()
 
 void TestChromeBookmarks::itShouldGracefullyExitWhenFileIsNotFound()
 {
-    FakeFindProfile finder(QList<Profile>() << Profile(u"FileNotExisting.json"_s, QString(), nullptr));
+    auto profile = std::make_unique<Profile>(u"FileNotExisting.json"_s, QString(), nullptr);
+    std::vector<std::unique_ptr<Profile>> list;
+    list.push_back(std::move(profile));
+    FakeFindProfile finder(std::move(list));
     Chrome chrome(&finder);
     chrome.prepare();
     QCOMPARE(chrome.match(u"any"_s, true).size(), 0);
@@ -91,9 +96,13 @@ void TestChromeBookmarks::itShouldClearResultAfterCallingTeardown()
 
 void TestChromeBookmarks::itShouldFindBookmarksFromAllProfiles()
 {
-    FakeFindProfile findBookmarksFromAllProfiles(
-        QList<Profile>{Profile(QString(m_configHome + u"/Chrome-Bookmarks-Sample.json"), u"Sample"_s, new FallbackFavicon(this)),
-                       Profile(QString(m_configHome + u"/Chrome-Bookmarks-SecondProfile.json"), u"SecondProfile"_s, new FallbackFavicon(this))});
+    auto profile1 = std::make_unique<Profile>(QString(m_configHome + u"/Chrome-Bookmarks-Sample.json"), u"Sample"_s, std::make_unique<FallbackFavicon>());
+    auto profile2 =
+        std::make_unique<Profile>(QString(m_configHome + u"/Chrome-Bookmarks-SecondProfile.json"), u"SecondProfile"_s, std::make_unique<FallbackFavicon>());
+    std::vector<std::unique_ptr<Profile>> list;
+    list.push_back(std::move(profile1));
+    list.push_back(std::move(profile2));
+    FakeFindProfile findBookmarksFromAllProfiles(std::move(list));
     Chrome chrome(&findBookmarksFromAllProfiles);
     chrome.prepare();
     QList<BookmarkMatch> matches = chrome.match(u"any"_s, true);

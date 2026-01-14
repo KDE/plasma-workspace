@@ -26,7 +26,7 @@ Firefox::Firefox(const QString &firefoxConfigDir)
                     + QStringLiteral("/bookmarksrunner/bookmarkrunnerfirefoxdbfile.sqlite"))
     , m_dbCacheFile_fav(QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation)
                         + QStringLiteral("/bookmarksrunner/bookmarkrunnerfirefoxfavdbfile.sqlite"))
-    , m_favicon(new FallbackFavicon(this))
+    , m_favicon(std::make_unique<FallbackFavicon>())
     , m_fetchsqlite(nullptr)
 {
     if (!QSqlDatabase::isDriverAvailable(QStringLiteral("QSQLITE"))) {
@@ -73,8 +73,7 @@ Firefox::Firefox(const QString &firefoxConfigDir)
     // icons that are already written to disk can be reused in multiple match sessions
     updateCacheFile(m_dbFile_fav, m_dbCacheFile_fav);
     auto fetchsqlite_fav = std::make_unique<FetchSqlite>(m_dbCacheFile_fav, this);
-    delete m_favicon;
-    m_favicon = FaviconFromBlob::firefox(std::move(fetchsqlite_fav), this);
+    m_favicon = FaviconFromBlob::firefox(std::move(fetchsqlite_fav));
 }
 
 Firefox::~Firefox()

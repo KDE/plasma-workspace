@@ -15,17 +15,17 @@
 class FakeFindProfile : public FindProfile
 {
 public:
-    FakeFindProfile(const QList<Profile> &profiles)
-        : m_profiles(profiles)
+    FakeFindProfile(std::vector<std::unique_ptr<Profile>> &&profiles)
+        : m_profiles(std::move(profiles))
     {
     }
-    QList<Profile> find() override
+    std::vector<std::unique_ptr<Profile>> find() override
     {
-        return m_profiles;
+        return std::move(m_profiles);
     }
 
 private:
-    QList<Profile> m_profiles;
+    std::vector<std::unique_ptr<Profile>> m_profiles;
 };
 
 class TestChromeBookmarks : public QObject

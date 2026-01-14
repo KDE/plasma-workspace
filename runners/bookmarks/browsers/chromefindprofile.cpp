@@ -21,12 +21,12 @@ FindChromeProfile::FindChromeProfile(const QString &applicationName, const QStri
 {
 }
 
-QList<Profile> FindChromeProfile::find()
+std::vector<std::unique_ptr<Profile>> FindChromeProfile::find()
 {
     QString configDirectory = QStringLiteral("%1/.config/%2").arg(m_homeDirectory, m_applicationName);
     QString localStateFileName = QStringLiteral("%1/Local State").arg(configDirectory);
 
-    QList<Profile> profiles;
+    std::vector<std::unique_ptr<Profile>> profiles;
 
     QFile localStateFile(localStateFileName);
 
@@ -46,7 +46,7 @@ QList<Profile> FindChromeProfile::find()
     for (const QString &profile : profilesConfig.keys()) {
         const QString profilePath = QStringLiteral("%1/%2").arg(configDirectory, profile);
         const QString profileBookmarksPath = QStringLiteral("%1/%2").arg(profilePath, QStringLiteral("Bookmarks"));
-        profiles << Profile(profileBookmarksPath, profile, FaviconFromBlob::chrome(profilePath, this));
+        profiles.push_back(std::make_unique<Profile>(profileBookmarksPath, profile, FaviconFromBlob::chrome(profilePath)));
     }
 
     return profiles;

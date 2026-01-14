@@ -21,12 +21,12 @@
 #include <QSqlQuery>
 #include <QSqlRecord>
 
-FaviconFromBlob *FaviconFromBlob::chrome(const QString &profileDirectory, QObject *parent)
+std::unique_ptr<FaviconFromBlob> FaviconFromBlob::chrome(const QString &profileDirectory)
 {
     QString profileName = QFileInfo(profileDirectory).fileName();
     QString faviconCache = QStringLiteral("%1/bookmarksrunner/KRunner-Chrome-Favicons-%2.sqlite")
                                .arg(QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation), profileName);
-    auto fetchSqlite = std::make_unique<FetchSqlite>(faviconCache, parent);
+    auto fetchSqlite = std::make_unique<FetchSqlite>(faviconCache);
 
     QString faviconQuery;
     if (fetchSqlite->tables().contains(QLatin1String("favicon_bitmaps"))) {
@@ -42,25 +42,25 @@ FaviconFromBlob *FaviconFromBlob::chrome(const QString &profileDirectory, QObjec
             "WHERE page_url = :url LIMIT 1;");
     }
 
-    return new FaviconFromBlob(profileName, faviconQuery, QStringLiteral("image_data"), std::move(fetchSqlite), parent);
+    return std::make_unique<FaviconFromBlob>(profileName, faviconQuery, QStringLiteral("image_data"), std::move(fetchSqlite));
 }
 
-FaviconFromBlob *FaviconFromBlob::firefox(std::unique_ptr<FetchSqlite> &&fetchSqlite, QObject *parent)
+std::unique_ptr<FaviconFromBlob> FaviconFromBlob::firefox(std::unique_ptr<FetchSqlite> &&fetchSqlite)
 {
     QString faviconQuery = QStringLiteral(
         "SELECT moz_icons.data FROM moz_icons"
         " INNER JOIN moz_icons_to_pages ON moz_icons.id = moz_icons_to_pages.icon_id"
         " INNER JOIN moz_pages_w_icons ON moz_icons_to_pages.page_id = moz_pages_w_icons.id"
         " WHERE moz_pages_w_icons.page_url = :url LIMIT 1;");
-    return new FaviconFromBlob(QStringLiteral("firefox-default"), faviconQuery, QStringLiteral("data"), std::move(fetchSqlite), parent);
+    return std::make_unique<FaviconFromBlob>(QStringLiteral("firefox-default"), faviconQuery, QStringLiteral("data"), std::move(fetchSqlite));
 }
 
-FaviconFromBlob *FaviconFromBlob::falkon(const QString &profileDirectory, QObject *parent)
+std::unique_ptr<FaviconFromBlob> FaviconFromBlob::falkon(const QString &profileDirectory)
 {
     const QString dbPath = profileDirectory + QStringLiteral("/browsedata.db");
-    auto fetchSqlite = std::make_unique<FetchSqlite>(dbPath, parent);
+    auto fetchSqlite = std::make_unique<FetchSqlite>(dbPath);
     const QString faviconQuery = QStringLiteral("SELECT icon FROM icons WHERE url = :url LIMIT 1;");
-    return new FaviconFromBlob(QStringLiteral("falkon-default"), faviconQuery, QStringLiteral("icon"), std::move(fetchSqlite), parent);
+    return std::make_unique<FaviconFromBlob>(QStringLiteral("falkon-default"), faviconQuery, QStringLiteral("icon"), std::move(fetchSqlite));
 }
 
 FaviconFromBlob::FaviconFromBlob(const QString &profileName,
