@@ -319,18 +319,18 @@ void KdedDeviceNotifications::setupWaylandOutputListener()
         auto *self = static_cast<KdedDeviceNotifications *>(data);
         if (qstrcmp(interface, "kde_output_device_v2") == 0) {
             const bool initialOutputsReceived = self->m_initialOutputsReceived;
-            auto &out = self->m_outputs.emplace_back(std::make_unique<Output>(name));
+            Output *output = self->m_outputs.emplace_back(std::make_unique<Output>(name)).get();
             // Notify after the UUID's are resolved, and add it to our timed list
-            connect(out.get(), &Output::uuidAdded, self, [&out, self, initialOutputsReceived]() {
+            connect(output, &Output::uuidAdded, self, [output, self, initialOutputsReceived]() {
                 if (initialOutputsReceived) {
-                    const QString uuid = out->uuid();
+                    const QString uuid = output->uuid();
                     // If we recently just removed this output, it wasn't actually physically disconnected
                     if (!self->m_recentlyRemovedOutputs.removeOne(uuid)) {
                         self->notifyOutputAdded();
                     }
                 }
             });
-            out->init(registry, name, version);
+            output->init(registry, name, version);
         }
     };
     auto globalRemoved = [](void *data, wl_registry *registry, uint32_t name) {
