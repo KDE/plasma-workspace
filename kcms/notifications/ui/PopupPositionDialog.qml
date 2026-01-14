@@ -18,9 +18,8 @@ Kirigami.Dialog {
 
     property var newPosition
 
-    ScreenPositionSelector {
+    contentItem: ScreenPositionSelector {
         id: positionSelector
-        anchors.horizontalCenter: parent.horizontalCenter
         selectedPosition: kcm.notificationSettings.popupPosition
         onSelectedPositionChanged: positionPopup.newPosition = selectedPosition
     }
