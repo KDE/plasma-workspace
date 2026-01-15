@@ -2,25 +2,27 @@
 # Copyright (C) 2009 This_file_is_part_of_KDE
 # This file is distributed under the same license as the kcmcomponentchooser package.
 # Kevin Scannell <kscanne@gmail.com>, 2009.
+# SPDX-FileCopyrightText: 2026 Charlotte <altronic25@protonmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdebase/kcmcomponentchooser.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2004-12-03 14:52-0500\n"
-"Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
-"Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
+"PO-Revision-Date: 2026-01-14 11:24+0000\n"
+"Last-Translator: Charlotte <altronic25@protonmail.com>\n"
+"Language-Team: Irish\n"
 "Language: ga\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: applicationmodel.cpp:64
 #, kde-format
 msgid "Other…"
-msgstr ""
+msgstr "Eile..."
 
 #: components/componentchooserarchivemanager.cpp:15
 #, fuzzy, kde-format
@@ -113,7 +115,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button %1 is an application name"
 msgid "Open All in %1"
-msgstr ""
+msgstr "Oscail Gach i %1"
 
 #: ui/ComponentOverlay.qml:130
 #, kde-format
@@ -129,10 +131,9 @@ msgid "Force All to Open in %1"
 msgstr ""
 
 #: ui/ComponentOverlay.qml:159
-#, fuzzy, kde-format
-#| msgid "Configure"
+#, kde-format
 msgid "Configure Manually…"
-msgstr "Cumraigh"
+msgstr "Cumraigh De Láimh..."
 
 #: ui/main.qml:17
 #, kde-format
@@ -200,7 +201,7 @@ msgstr ""
 #, kde-format
 msgctxt "Documents related application’s category’s name"
 msgid "Documents"
-msgstr ""
+msgstr "Doiciméid"
 
 #: ui/main.qml:164
 #, kde-format

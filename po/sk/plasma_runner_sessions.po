@@ -4,19 +4,20 @@
 # Mthw <jari_45@hotmail.com>, 2018.
 # Dusan Kazik <prescott66@gmail.com>, 2020.
 # SPDX-FileCopyrightText: 2023 Matej Mrenica <matejm98mthw@gmail.com>
+# SPDX-FileCopyrightText: 2026 Lucia Mrenica <lucia.mrenica@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2023-11-11 15:14+0100\n"
-"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"PO-Revision-Date: 2026-01-14 18:26+0100\n"
+"Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 25.12.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: sessionrunner.cpp:20
@@ -96,10 +97,9 @@ msgid "switch user;new session"
 msgstr "prepnúť používateľa;nové sedenie"
 
 #: sessionrunner.cpp:54
-#, fuzzy, kde-format
-#| msgid "Starts a new session as a different user"
+#, kde-format
 msgid "Switch to a session as a different user"
-msgstr "Spustí nové sedenie ako iný používateľ"
+msgstr "Spustiť nové sedenie ako iný používateľ"
 
 #: sessionrunner.cpp:75
 #, kde-format

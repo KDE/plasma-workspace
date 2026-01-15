@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2026-01-03 00:59+0000\n"
+"PO-Revision-Date: 2026-01-14 14:33+0000\n"
 "Last-Translator: Charlotte <altronic25@protonmail.com>\n"
 "Language-Team: Irish\n"
 "Language: ga\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -42,7 +43,7 @@ msgstr "Cadhnra"
 #, kde-format
 msgctxt "Agenda listview section title"
 msgid "Holidays"
-msgstr ""
+msgstr "Laethanta Saoire"
 
 #: calendar/eventdatadecorator.cpp:52
 #, kde-format
@@ -148,7 +149,7 @@ msgstr ""
 #: containmentlayoutmanager/qml/BasicAppletContainer.qml:285
 #, kde-format
 msgid "Configure…"
-msgstr ""
+msgstr "Cumraigh..."
 
 #. i18n: ectx: label, entry, group (Daemon)
 #: sessionsprivate/kscreenlockersettings.kcfg:10
@@ -182,7 +183,7 @@ msgstr "Seisiún Nua"
 #: shellprivate/kcategorizeditemsviewmodels.cpp:66
 #, kde-format
 msgid "Filters"
-msgstr ""
+msgstr "Scagairí"
 
 #: shellprivate/plasmaappletitemmodel.cpp:199
 #, kde-format
@@ -212,6 +213,8 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "
 "version of Plasma. Please update Plasma in order to use the widget."
 msgstr ""
+"Bhí an giuirléidí seo ag scríofa do Plasma %1 agus níl comhoiriúnach le an "
+"leagan is déanaí de Plasma. Nuashonraigh Plasma chun an giuirléidí a úsáid."
 
 #: shellprivate/widgetexplorer.cpp:110
 msgctxt "applet category"
@@ -231,7 +234,7 @@ msgstr ""
 #: shellprivate/widgetexplorer.cpp:113
 msgctxt "applet category"
 msgid "Date and Time"
-msgstr ""
+msgstr "Dáta agus Am"
 
 #: shellprivate/widgetexplorer.cpp:114
 msgctxt "applet category"
@@ -251,7 +254,7 @@ msgstr ""
 #: shellprivate/widgetexplorer.cpp:117
 msgctxt "applet category"
 msgid "Examples"
-msgstr ""
+msgstr "Samplaí"
 
 #: shellprivate/widgetexplorer.cpp:118
 msgctxt "applet category"
@@ -266,12 +269,12 @@ msgstr ""
 #: shellprivate/widgetexplorer.cpp:120
 msgctxt "applet category"
 msgid "Graphics"
-msgstr ""
+msgstr "Grafaicí"
 
 #: shellprivate/widgetexplorer.cpp:121
 msgctxt "applet category"
 msgid "Language"
-msgstr ""
+msgstr "Teanga"
 
 #: shellprivate/widgetexplorer.cpp:122
 msgctxt "applet category"
@@ -336,7 +339,7 @@ msgstr ""
 #: shellprivate/widgetexplorer.cpp:152
 #, kde-format
 msgid "Running"
-msgstr ""
+msgstr "Ag Rith"
 
 #: shellprivate/widgetexplorer.cpp:158
 #, kde-format
@@ -374,23 +377,23 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Get New Widgets"
-msgstr ""
+msgstr "Faigh Giuirléidí Nua"
 
 #: shellprivate/widgetexplorer.cpp:503
 #, kde-format
 msgid "Select Plasmoid File"
-msgstr ""
+msgstr "Roghnaigh Comhad Plasmóid"
 
 #: shellprivate/widgetexplorer.cpp:519
 #, kde-format
 msgctxt "%1 is the name of an applet, %2 is an error message"
 msgid "Installing the package %1 failed: %2."
-msgstr ""
+msgstr "Bhí an pacáiste %1 ag theipthe a shuiteáil: %2."
 
 #: shellprivate/widgetexplorer.cpp:520
 #, kde-format
 msgid "Installation Failure"
-msgstr ""
+msgstr "Teip Shuiteáilte"
 
 #: timezoneselector/TimezoneSelector.qml:104
 #, kde-format
@@ -416,24 +419,24 @@ msgstr "Zúmáil amach"
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Region:"
-msgstr ""
+msgstr "Réigiún:"
 
 #: timezoneselector/TimezoneSelector.qml:246
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
-msgstr ""
+msgstr "Roghnaigh..."
 
 #: timezoneselector/TimezoneSelector.qml:250
 #, kde-format
 msgid "Timezone region selector"
-msgstr ""
+msgstr "Roghnóir réigiún crios ama"
 
 #: timezoneselector/TimezoneSelector.qml:271
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
-msgstr ""
+msgstr "Crios ama:"
 
 #: timezoneselector/TimezoneSelector.qml:281
 #, kde-format

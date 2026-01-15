@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-10 00:45+0000\n"
-"PO-Revision-Date: 2026-01-08 12:00+0400\n"
+"PO-Revision-Date: 2026-01-14 07:24+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -111,8 +111,7 @@ msgid "When restarted, the computer will enter the boot loader menu."
 msgstr "عند إعادة التشغيل، سيدخل الحاسوب إلى قائمة محمل الإقلاع."
 
 #: contents/logout/Logout.qml:212
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will switch to %1."
+#, kde-format
 msgctxt "%1 is a boot loader entry"
 msgid "When restarted, the computer will switch to %1."
 msgstr "عند إعادة التشغيل، سينتقل الحاسوب إلى %1."

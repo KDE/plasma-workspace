@@ -460,21 +460,3 @@ msgstr "Trieu què aplicar…"
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Mostra menys opcions…"
-
-#~ msgid ""
-#~ "You have to restart the Plasma session for these changes to take effect."
-#~ msgstr ""
-#~ "Cal tornar a engegar la sessió del Plasma perquè aquests canvis tinguin "
-#~ "efecte."
-
-#~ msgid "Cursor Settings Changed"
-#~ msgstr "Ha canviat l'arranjament del cursor"
-
-#~ msgid "Apply"
-#~ msgstr "Aplica"
-
-#~ msgid "Cancel"
-#~ msgstr "Cancel·la"
-
-#~ msgid "Lock Screen"
-#~ msgstr "Bloqueig de la pantalla"

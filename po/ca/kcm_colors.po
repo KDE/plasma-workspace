@@ -1379,18 +1379,3 @@ msgstr "Obre un esquema de color"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Fitxers d'esquema de color (*.colors)"
-
-#~ msgid "Shading of frames and lighting (\"3D\") effects"
-#~ msgstr "Ombreig de marcs i efectes d'il·luminació («3D»)"
-
-#~ msgid "Shading"
-#~ msgstr "Ombreig"
-
-#~ msgid "Maximum"
-#~ msgstr "Màxim"
-
-#~ msgid "Minimum"
-#~ msgstr "Mínim"
-
-#~ msgid "Choose custom accent color"
-#~ msgstr "Trieu el color d'accent personalitzat"
