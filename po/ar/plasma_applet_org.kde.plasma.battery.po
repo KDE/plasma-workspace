@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Safa Alfulaij <safa1996alfulaij@gmail.com>, 2014, 2016, 2017.
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025, 2026 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2025-08-27 17:42+0400\n"
+"PO-Revision-Date: 2026-01-14 08:29+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -46,7 +46,7 @@ msgstr "الوقت المتبقي:"
 #, kde-format
 msgctxt "@info"
 msgid "Estimating…"
-msgstr "يقدر…"
+msgstr "يقدّر…"
 
 #: package/contents/ui/BatteryItem.qml:204
 #, kde-format
@@ -62,7 +62,7 @@ msgstr "%1٪"
 #: package/contents/ui/BatteryItem.qml:224
 #, kde-format
 msgid "Battery is configured to charge up to approximately %1%."
-msgstr "ضبطت بطاريتك لتشحن إلى %1٪ تقريبًا."
+msgstr "ضُبطت بطاريتك لتشحن إلى %1٪ تقريبًا."
 
 #: package/contents/ui/BrightnessItem.qml:64
 #, kde-format
@@ -126,7 +126,7 @@ msgstr "إدارة الطاقة"
 #: package/contents/ui/main.qml:152
 #, kde-format
 msgid "Battery at %1%, not Charging"
-msgstr "البطارية عند %1٪، لا تشحن."
+msgstr "البطارية عند %1٪، لا تشحن"
 
 #: package/contents/ui/main.qml:154
 #, kde-format
@@ -136,7 +136,7 @@ msgstr "البطارية عند %1٪، موصولة لكن ما زالت تفر�
 #: package/contents/ui/main.qml:156
 #, kde-format
 msgid "Battery at %1%, Charging"
-msgstr "البطارية عند %1٪، تشحن."
+msgstr "البطارية عند %1٪، تشحن"
 
 #: package/contents/ui/main.qml:159
 #, kde-format
@@ -157,7 +157,7 @@ msgstr "لا بطّاريّات متوفّرة"
 #, kde-format
 msgctxt "time until fully charged - HH:MM"
 msgid "%1 until fully charged"
-msgstr "%1 حتى يكتمل الشحن"
+msgstr "بقي %1 حتى يكتمل الشحن"
 
 #: package/contents/ui/main.qml:179
 #, kde-format
@@ -179,11 +179,11 @@ msgstr "عُطل التعليق الآليّ وقفل الشاشة"
 #, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
-msgstr[0] "تطبيق واحد طلب تنشيط وضع الأداء"
+msgstr[0] "لم تطلب أي تطبيقات تنشيط وضع الأداء"
 msgstr[1] "تطبيق واحد طلب تنشيط وضع الأداء"
 msgstr[2] "تطبيقان طلبا تنشيط وضع الأداء"
 msgstr[3] "%1 تطبيقات طلبت تنشيط وضع الأداء"
-msgstr[4] "%1 تطبيقا طلب تنشيط وضع الأداء"
+msgstr[4] "%1 تطبيقًا طلب تنشيط وضع الأداء"
 msgstr[5] "%1 تطبيق طلب تنشيط وضع الأداء"
 
 #: package/contents/ui/main.qml:195
@@ -195,11 +195,11 @@ msgstr "النظام في وضع الأداء"
 #, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
-msgstr[0] "تطبيق واحد طلب تنشيط وضع حفظ الطاقة"
+msgstr[0] "لم تطلب أي تطبيقات تنشيط وضع حفظ الطاقة"
 msgstr[1] "تطبيق واحد طلب تنشيط وضع حفظ الطاقة"
 msgstr[2] "تطبيقان طلبا تنشيط وضع حفظ الطاقة"
 msgstr[3] "%1 تطبيقات طلبت تنشيط وضع حفظ الطاقة"
-msgstr[4] "%1 تطبيقا طلب تنشيط وضع حفظ الطاقة"
+msgstr[4] "%1 تطبيقًا طلب تنشيط وضع حفظ الطاقة"
 msgstr[5] "%1 تطبيق طلب تنشيط وضع حفظ الطاقة"
 
 #: package/contents/ui/main.qml:203
@@ -220,12 +220,12 @@ msgstr "مكّنَ بريمج البطّاريّة الكبت على مستوى 
 #: package/contents/ui/main.qml:364
 #, kde-format
 msgid "Failed to activate %1 mode"
-msgstr "فشل تفعيل نمط %1"
+msgstr "فشل تفعيل وضع %1"
 
 #: package/contents/ui/main.qml:376
 #, kde-format
 msgid "&Show Energy Information…"
-msgstr "أ&ظهر معلومات الطاقة..."
+msgstr "أ&ظهر معلومات الطاقة…"
 
 #: package/contents/ui/main.qml:378
 #, kde-format
@@ -260,7 +260,8 @@ msgid ""
 "Your laptop is configured not to sleep when closing the lid while an "
 "external monitor is connected."
 msgstr ""
-"ضُبط الجهاز الدّفتريّ لألا ينام عند إغلاق الغطاء إن كانت هناك شاشة خارجيّة متّصلة."
+"ضُبط الحاسوب المحمول ألا يدخل في وضع التعليق عند إغلاق الغطاء مع اتصال شاشة "
+"خارجية."
 
 #: package/contents/ui/PowerManagementItem.qml:88
 #, kde-format
@@ -313,7 +314,7 @@ msgstr "الأداء"
 #: package/contents/ui/PowerProfileItem.qml:59
 #, kde-format
 msgid "Power Profile"
-msgstr "وضع إدارة الطاقة"
+msgstr "تشكيلة الطاقة"
 
 #: package/contents/ui/PowerProfileItem.qml:191
 #, kde-format
@@ -321,18 +322,18 @@ msgid ""
 "Performance mode has been disabled to reduce heat generation because the "
 "computer has detected that it may be sitting on your lap."
 msgstr ""
-"عُطل وضع الأداء لتقليل توليد الحرارة لأن الحاسوب اكتشف أنه قد يكون على حُجرك."
+"عُطّل وضع الأداء لتقليل توليد الحرارة لأن الحاسوب اكتشف أنه قد يكون على حِجرك."
 
 #: package/contents/ui/PowerProfileItem.qml:193
 #, kde-format
 msgid ""
 "Performance mode is unavailable because the computer is running too hot."
-msgstr "وضع الأداء غير متاح لأن الحاسوب يعمل على درجة حرارة عالية جدًا."
+msgstr "وضع الأداء غير متاح لأن الحاسوب يعمل عند درجة حرارة عالية جدًا."
 
 #: package/contents/ui/PowerProfileItem.qml:195
 #, kde-format
 msgid "Performance mode is unavailable."
-msgstr "وضع الأداء غير متوفر"
+msgstr "وضع الأداء غير متاح."
 
 #: package/contents/ui/PowerProfileItem.qml:208
 #, kde-format
@@ -340,12 +341,12 @@ msgid ""
 "Performance may be lowered to reduce heat generation because the computer "
 "has detected that it may be sitting on your lap."
 msgstr ""
-"قُلل الأداء لتقليل توليد الحرارة لأن الحاسوب اكتشف أنه قد يكون على حُجرك."
+"قد ينخفض الأداء لتقليل توليد الحرارة لأن الحاسوب اكتشف أنه قد يكون على حِجرك."
 
 #: package/contents/ui/PowerProfileItem.qml:210
 #, kde-format
 msgid "Performance may be reduced because the computer is running too hot."
-msgstr "قُلل الأداء لأن الحاسوب يعمل على درجة حرارة عالية جدًا."
+msgstr "قد ينخفض الأداء لأن الحاسوب يعمل عند درجة حرارة عالية جدًا."
 
 #: package/contents/ui/PowerProfileItem.qml:212
 #, kde-format

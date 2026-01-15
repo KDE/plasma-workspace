@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2026-01-10 20:46+0000\n"
+"PO-Revision-Date: 2026-01-13 22:45+0000\n"
 "Last-Translator: Charlotte <altronic25@protonmail.com>\n"
 "Language-Team: Irish\n"
 "Language: ga\n"
@@ -249,7 +249,7 @@ msgstr ""
 #: shellcorona.cpp:1923
 #, kde-format
 msgid "Add Panel"
-msgstr ""
+msgstr "Cuir Painéal Leis"
 
 #: shellcorona.cpp:1959
 #, kde-format

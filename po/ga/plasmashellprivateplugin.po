@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2026-01-03 00:59+0000\n"
+"PO-Revision-Date: 2026-01-14 11:14+0000\n"
 "Last-Translator: Charlotte <altronic25@protonmail.com>\n"
 "Language-Team: Irish\n"
 "Language: ga\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -31,7 +32,7 @@ msgstr "altronic25@protonmail.com"
 #, kde-format
 msgctxt "Agenda listview section title"
 msgid "Holidays"
-msgstr ""
+msgstr "Laethanta Saoire"
 
 #: calendar/eventdatadecorator.cpp:53
 #, kde-format
@@ -136,7 +137,7 @@ msgstr ""
 #: containmentlayoutmanager/qml/BasicAppletContainer.qml:270
 #, kde-format
 msgid "Configure…"
-msgstr ""
+msgstr "Cumraigh..."
 
 #. i18n: ectx: label, entry, group (Daemon)
 #: sessionsprivate/kscreenlockersettings.kcfg:10
@@ -170,22 +171,22 @@ msgstr "Seisiún Nua"
 #: shellprivate/widgetexplorer/kcategorizeditemsviewmodels.cpp:64
 #, kde-format
 msgid "Filters"
-msgstr ""
+msgstr "Scagairí"
 
 #: shellprivate/widgetexplorer/openwidgetassistant.cpp:41
 #, kde-format
 msgid "Select Plasmoid File"
-msgstr ""
+msgstr "Roghnaigh Comhad Plasmóid"
 
 #: shellprivate/widgetexplorer/openwidgetassistant.cpp:65
 #, kde-format
 msgid "Installing the package %1 failed."
-msgstr ""
+msgstr "Bhí an pacáiste %1 ag theipthe a shuiteáil."
 
 #: shellprivate/widgetexplorer/openwidgetassistant.cpp:65
 #, kde-format
 msgid "Installation Failure"
-msgstr ""
+msgstr "Teip Shuiteáilte"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:111
 msgctxt "applet category"
@@ -205,7 +206,7 @@ msgstr ""
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:114
 msgctxt "applet category"
 msgid "Date and Time"
-msgstr ""
+msgstr "Dáta agus Am"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:115
 msgctxt "applet category"
@@ -225,7 +226,7 @@ msgstr ""
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:118
 msgctxt "applet category"
 msgid "Examples"
-msgstr ""
+msgstr "Samplaí"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:119
 msgctxt "applet category"
@@ -240,12 +241,12 @@ msgstr ""
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:121
 msgctxt "applet category"
 msgid "Graphics"
-msgstr ""
+msgstr "Grafaicí"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:122
 msgctxt "applet category"
 msgid "Language"
-msgstr ""
+msgstr "Teanga"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:123
 msgctxt "applet category"
@@ -305,7 +306,7 @@ msgstr ""
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:152
 #, kde-format
 msgid "Running"
-msgstr ""
+msgstr "Ag Rith"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:158
 #, kde-format
@@ -314,7 +315,7 @@ msgctxt ""
 "installed from the system, which are usually installed by the user to a "
 "local place."
 msgid "Uninstallable"
-msgstr ""
+msgstr "Is féidir díshuiteáil"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:162
 #, kde-format
