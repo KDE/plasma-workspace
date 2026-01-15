@@ -413,7 +413,7 @@ void MediaProxy::updateModelImage(KPackage::Package *package, bool doesBlockSign
 
         QUrlQuery urlQuery(composedUrl);
         urlQuery.addQueryItem(QStringLiteral("dir"), m_source.toLocalFile());
-        // To make modelImageChaged work
+        // To make modelImageChanged work
         urlQuery.addQueryItem(QStringLiteral("targetWidth"), QString::number(m_targetSize.width()));
         urlQuery.addQueryItem(QStringLiteral("targetHeight"), QString::number(m_targetSize.height()));
         urlQuery.addQueryItem(QStringLiteral("darkMode"), QString::number(m_isDarkColorScheme ? 1 : 0));
