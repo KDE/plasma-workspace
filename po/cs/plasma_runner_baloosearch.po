@@ -31,7 +31,7 @@ msgstr "vit@pelcak.org"
 #: baloosearchrunner.cpp:42
 #, kde-format
 msgid "File Search"
-msgstr ""
+msgstr "Hledání souboru"
 
 #: baloosearchrunner.cpp:69
 #, kde-format
