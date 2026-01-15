@@ -61,7 +61,6 @@ Dependencies:
     'plasma/knighttime': '@same'
     'plasma/kwin': '@same'
     'libraries/plasma-wayland-protocols': '@latest-kf6'
-    'libraries/phonon': '@latest-kf6'
     'libraries/kirigami-addons': '@latest-kf6'
     'graphics/libkexiv2': '@latest-kf6'
     'third-party/appstream': '@latest'
