@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.lock_logout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-05 00:44+0000\n"
-"PO-Revision-Date: 2026-01-14 18:24+0100\n"
+"PO-Revision-Date: 2026-01-15 19:48+0100\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
@@ -39,10 +39,9 @@ msgid "Lock the screen"
 msgstr "Zamknúť obrazovku"
 
 #: data.js:12
-#, fuzzy, kde-format
-#| msgid "Switch user"
+#, kde-format
 msgid "Switch user…"
-msgstr "Prepnúť užívateľa"
+msgstr "Prepnúť užívateľa..."
 
 #: data.js:13
 #, kde-format

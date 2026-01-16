@@ -14,9 +14,9 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/plasma-workspace/plasma_lookandfeel_org."
+"X-Crowdin-File: /kf6-stable/messages/plasma-workspace/plasma_lookandfeel_org."
 "kde.lookandfeel.pot\n"
-"X-Crowdin-File-ID: 42579\n"
+"X-Crowdin-File-ID: 49968\n"
 
 #: contents/logout/Logout.qml:149
 #, kde-format
@@ -73,7 +73,7 @@ msgstr "重新启动时，电脑将进入引导加载程序菜单。"
 #, kde-format
 msgctxt "%1 is a boot loader entry"
 msgid "When restarted, the computer will switch to %1."
-msgstr ""
+msgstr "重启后，计算机将切换到 %1。"
 
 #: contents/logout/Logout.qml:234
 #, kde-format

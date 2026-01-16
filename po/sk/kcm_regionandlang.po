@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_regionandlang\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-14 02:39+0000\n"
-"PO-Revision-Date: 2026-01-14 18:14+0100\n"
+"PO-Revision-Date: 2026-01-15 20:11+0100\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
@@ -46,7 +46,7 @@ msgstr "Binárne -  Kibibajty (KiB), Mebibajty (MiB), Gibibajty (GiB)"
 #, kde-format
 msgctxt "Binary dialect JEDEC description"
 msgid "Binary - Kilobytes (KB), Megabytes (MB), Gigabytes (GB)"
-msgstr ""
+msgstr "Binárne – kilobajty (KB), megabajty (MB), gigabajty (GB)"
 
 #: binarydialectmodel.cpp:79
 #, kde-format
@@ -287,12 +287,10 @@ msgid "Can't locate executable `check-language-support`"
 msgstr "Nemožno nájsť spustiteľný súbor `check-language-support`"
 
 #: localegeneratorubuntu.cpp:56
-#, fuzzy, kde-format
-#| msgctxt "the arg is the output of failed check-language-support call"
-#| msgid "check-language-support failed, output: %1"
+#, kde-format
 msgctxt "the arg is the output of failed check-language-support call"
 msgid "check-language-support failed, output: %1 %2"
-msgstr "check-language-support zlyhal, výstup: %1"
+msgstr "kontrola podpory jazyka zlyhala, výstup: %1 %2"
 
 #: localegeneratorubuntu.cpp:88
 #, kde-format
@@ -301,12 +299,10 @@ msgid "Not all missing packages managed to resolve! %1"
 msgstr "Nie všetky chýbajúce balíky sa podarilo vyriešiť! %1"
 
 #: localegeneratorubuntu.cpp:96
-#, fuzzy, kde-format
-#| msgctxt "%1 is a list of package names"
-#| msgid "Failed to install package %1"
+#, kde-format
 msgctxt "%1 is a list of package names, %2 is the error explanation"
 msgid "Failed to install language packages (%1): %2"
-msgstr "Nepodarilo sa nainštalovať balík %1"
+msgstr "Inštalácia jazykových balíkov sa nepodarila (%1): %2"
 
 #: localegenhelper/localegenhelper.cpp:45
 #, kde-format
@@ -423,25 +419,25 @@ msgstr "Telefónne čísla"
 #, kde-format
 msgctxt "@info:title"
 msgid "Data and Storage Sizes"
-msgstr ""
+msgstr "Veľkosti úložiska a údajov"
 
 #: optionsmodel.cpp:279
 #, kde-format
 msgctxt "the prefix for IECBinaryDialect, %1 is an example for 1 KiB"
 msgid "KiB, MiB, GiB; %1"
-msgstr ""
+msgstr "KiB, MiB, GiB; %1"
 
 #: optionsmodel.cpp:282
 #, kde-format
 msgctxt "the prefix for JEDECBinaryDialect, %1 is an example for 1 KB"
 msgid "KB, MB, GB; %1"
-msgstr ""
+msgstr "KB, MB, GB; %1"
 
 #: optionsmodel.cpp:285
 #, kde-format
 msgctxt "the prefix for MetricBinaryDialect, %1 is an example for 1 kB"
 msgid "kB, MB, GB; %1"
-msgstr ""
+msgstr "kB, MB, GB; %1"
 
 #: optionsmodel.cpp:357
 #, kde-format
@@ -589,7 +585,7 @@ msgstr "Upraviť..."
 #, kde-format
 msgctxt "@title:window"
 msgid "Data and Storage Sizes"
-msgstr ""
+msgstr "Veľkosti úložiska a údajov"
 
 #: ui/main.qml:281
 #, kde-format

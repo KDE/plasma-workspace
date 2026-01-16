@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-28 00:44+0000\n"
+"POT-Creation-Date: 2026-01-16 03:02+0000\n"
 "PO-Revision-Date: 2025-07-20 01:20+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -17,55 +17,55 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 24.12.3\n"
 
-#: devicenotifications.cpp:394
+#: devicenotifications.cpp:399
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Detected"
 msgstr "디스플레이 감지됨"
 
-#: devicenotifications.cpp:395
+#: devicenotifications.cpp:400
 #, kde-format
 msgid "A display has been connected."
 msgstr "디스플레이가 연결되었습니다."
 
-#: devicenotifications.cpp:415
+#: devicenotifications.cpp:420
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Removed"
 msgstr "디스플레이 제거됨"
 
-#: devicenotifications.cpp:416
+#: devicenotifications.cpp:421
 #, kde-format
 msgid "A display has been disconnected."
 msgstr "디스플레이의 연결이 해제되었습니다."
 
-#: devicenotifications.cpp:462
+#: devicenotifications.cpp:467
 #, kde-format
 msgid "%1 has been connected."
 msgstr "%1이(가) 연결되었습니다."
 
-#: devicenotifications.cpp:462
+#: devicenotifications.cpp:467
 #, kde-format
 msgid "A USB device has been connected."
 msgstr "USB 장치가 연결되었습니다."
 
-#: devicenotifications.cpp:467
+#: devicenotifications.cpp:472
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Detected"
 msgstr "USB 장치 감지됨"
 
-#: devicenotifications.cpp:505
+#: devicenotifications.cpp:510
 #, kde-format
 msgid "%1 has been disconnected."
 msgstr "%1의 연결이 해제되었습니다."
 
-#: devicenotifications.cpp:505
+#: devicenotifications.cpp:510
 #, kde-format
 msgid "A USB device has been disconnected."
 msgstr "USB 장치의 연결이 해제되었습니다."
 
-#: devicenotifications.cpp:510
+#: devicenotifications.cpp:515
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Removed"

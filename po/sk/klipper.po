@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-23 00:44+0000\n"
-"PO-Revision-Date: 2026-01-14 18:20+0100\n"
+"PO-Revision-Date: 2026-01-15 20:05+0100\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
@@ -300,14 +300,13 @@ msgstr "Kopírovať"
 #, kde-format
 msgctxt "@info:status"
 msgid "An image of the QR code has been copied to clipboard"
-msgstr ""
+msgstr "Obrázok QR kódu bol skopírovaný do schránky."
 
 #: declarative/qml/BarcodePage.qml:101
-#, fuzzy, kde-format
-#| msgid "Append to clipboard"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Copy QR code image to clipboard"
-msgstr "Pridanie do schránky"
+msgstr "Kopírovať obrázok QR kódu do schránky"
 
 #: declarative/qml/BarcodePage.qml:112
 #, kde-format
@@ -345,15 +344,14 @@ msgid "Clear History"
 msgstr "Vyčistiť históriu"
 
 #: declarative/qml/ClipboardMenu.qml:329
-#, fuzzy, kde-format
-#| msgid "Clipboard history"
+#, kde-format
 msgid "All History"
-msgstr "História schránky"
+msgstr "Všetka história"
 
 #: declarative/qml/ClipboardMenu.qml:334
 #, kde-format
 msgid "Starred Only"
-msgstr ""
+msgstr "Iba s hviezdičkou"
 
 #: declarative/qml/ClipboardMenu.qml:441
 #, kde-format
@@ -612,10 +610,11 @@ msgid "Icon:"
 msgstr "Ikona:"
 
 #: historymodel.cpp:281
-#, fuzzy, kde-format
-#| msgid "The clipboard history will store up to this many items."
+#, kde-format
 msgid "The clipboard history contains starred items. Clear them too?"
-msgstr "Do histórie schránky sa uloží až toľkoto položiek."
+msgstr ""
+"História schránky obsahuje položky označené hviezdičkou. Chcete ich tiež "
+"vymazať?"
 
 #: historymodel.cpp:282 historymodel.cpp:302
 #, kde-format
@@ -625,14 +624,12 @@ msgstr "Vyčistiť históriu schránky"
 #: historymodel.cpp:283
 #, kde-format
 msgid "Clear Everything"
-msgstr ""
+msgstr "Vymazať všetko"
 
 #: historymodel.cpp:284
-#, fuzzy, kde-format
-#| msgctxt "%1 is application display name"
-#| msgid "%1 - Clipboard Items"
+#, kde-format
 msgid "Keep Starred Items"
-msgstr "%1 - Položky schránky"
+msgstr "Uložiť označené položky"
 
 #: historymodel.cpp:301
 #, kde-format
@@ -649,11 +646,12 @@ msgstr "%1x%2"
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
+"Táto položka je označená hviezdičkou. Naozaj ju chcete odstrániť z histórie?"
 
 #: historymodel.cpp:566
 #, kde-format
 msgid "Remove Starred Item"
-msgstr ""
+msgstr "Odstrániť označený prvok"
 
 #: klipper.cpp:78
 #, kde-format

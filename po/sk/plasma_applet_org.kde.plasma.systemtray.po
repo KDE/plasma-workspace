@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.systemtray\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-05 00:44+0000\n"
-"PO-Revision-Date: 2026-01-14 18:25+0100\n"
+"PO-Revision-Date: 2026-01-15 20:00+0100\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
@@ -24,11 +24,10 @@ msgid "General"
 msgstr "Všeobecné"
 
 #: qml/ConfigGeneral.qml:43
-#, fuzzy, kde-format
-#| msgid "Shown when relevant"
+#, kde-format
 msgctxt "@item:inlistbox Show this System Tray item when relevant"
 msgid "Show when relevant"
-msgstr "Zobraziť, keď je to relevantné"
+msgstr "Zobraziť, ak je to relevantné"
 
 #: qml/ConfigGeneral.qml:47
 #, kde-format
@@ -40,13 +39,13 @@ msgstr "Vždy zobraziť"
 #, kde-format
 msgctxt "@item:inlistbox Show this System Tray item only in the expanded popup"
 msgid "Show only in popup"
-msgstr ""
+msgstr "Zobraziť len v popup okne"
 
 #: qml/ConfigGeneral.qml:55
 #, kde-format
 msgctxt "@item:inlistbox Never show this System Tray item; disable it"
 msgid "Never show (disabled)"
-msgstr ""
+msgstr "Nikdy nezobrazovať (vypnuté)"
 
 #: qml/ConfigGeneral.qml:126
 #, kde-format
@@ -88,7 +87,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
-msgstr ""
+msgstr "Rozumiem rizikám"
 
 #: qml/ConfigGeneral.qml:187
 #, kde-kuit-format
@@ -217,7 +216,7 @@ msgstr "Zobraziť skryté ikony"
 #, kde-format
 msgctxt "@info:whatsthis accessible description for popup grid"
 msgid "Grid with %1 items in %2 columns"
-msgstr ""
+msgstr "Tabuľka s %1 položkami v %2 stĺpcoch"
 
 #: qml/HiddenItemsView.qml:41
 #, kde-format

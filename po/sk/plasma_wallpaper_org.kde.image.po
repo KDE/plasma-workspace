@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-12 00:45+0000\n"
-"PO-Revision-Date: 2026-01-14 18:27+0100\n"
+"PO-Revision-Date: 2026-01-15 19:53+0100\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
@@ -72,37 +72,35 @@ msgid "Centered"
 msgstr "Na stred"
 
 #: imagepackage/contents/ui/config.qml:202
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Set as Wallpaper"
+#, kde-format
 msgctxt ""
 "@label:listbox part of a sentence: 'Switch dynamic wallpapers [based on]'"
 msgid "Switch dynamic wallpapers:"
-msgstr "Nastaviť ako tapetu"
+msgstr "Prepínanie dynamických tapiet:"
 
 #: imagepackage/contents/ui/config.qml:210
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the Plasma style is light or dark "
-msgstr ""
+msgstr "Na základe toho, či je štýl Plasma svetlý alebo tmavý "
 
 #: imagepackage/contents/ui/config.qml:212
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on the day-night cycle"
-msgstr ""
+msgstr "Na základe denného a nočného cyklu"
 
 #: imagepackage/contents/ui/config.qml:216
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always use light variant"
-msgstr ""
+msgstr "Vždy používať svetlú variantu"
 
 #: imagepackage/contents/ui/config.qml:220
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always use dark variant"
-msgstr ""
+msgstr "Vždy používať tmavú variantu"
 
 #: imagepackage/contents/ui/config.qml:234
 #, kde-format
@@ -174,7 +172,7 @@ msgstr "Vybrať všetko"
 #, kde-format
 msgctxt "@action:button"
 msgid "Select All Slides"
-msgstr ""
+msgstr "Vybrať všetky snímky"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:116
 #, kde-format
@@ -186,7 +184,7 @@ msgstr "Zrušiť výber"
 #, kde-format
 msgctxt "@action:button"
 msgid "Unselect All Slides"
-msgstr ""
+msgstr "Zrušiť výber všetkých snímok"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:33
 #, kde-format
@@ -222,6 +220,7 @@ msgstr ""
 #, kde-format
 msgid "Specify the fill mode (e.g., stretch, preserveAspectCrop, etc.)"
 msgstr ""
+"Určite režim vyplnenia (napr. roztiahnutie, zachovanie pomeru strán atď.)."
 
 #: plasma-apply-wallpaperimage.cpp:58
 #, kde-format
@@ -237,7 +236,7 @@ msgstr ""
 #: plasma-apply-wallpaperimage.cpp:96
 #, kde-format
 msgid "Invalid fill mode specified: %1"
-msgstr ""
+msgstr "Neplatný režim vyplnenia: %1"
 
 #: plasma-apply-wallpaperimage.cpp:112
 #, kde-format

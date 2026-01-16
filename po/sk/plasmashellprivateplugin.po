@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2026-01-14 18:28+0100\n"
+"PO-Revision-Date: 2026-01-15 19:51+0100\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
@@ -407,6 +407,7 @@ msgid ""
 "The currently selected time zone is not available for visualization on this "
 "map"
 msgstr ""
+"Aktuálne vybrané časové pásmo nie je k dispozícii na zobrazenie na tejto mape"
 
 #: timezoneselector/TimezoneSelector.qml:194
 #, kde-format
@@ -435,7 +436,7 @@ msgstr "Vybrať..."
 #: timezoneselector/TimezoneSelector.qml:250
 #, kde-format
 msgid "Timezone region selector"
-msgstr ""
+msgstr "Výber časového pásma"
 
 #: timezoneselector/TimezoneSelector.qml:271
 #, kde-format
@@ -446,7 +447,7 @@ msgstr "Časové pásmo:"
 #: timezoneselector/TimezoneSelector.qml:281
 #, kde-format
 msgid "Timezone location selector"
-msgstr ""
+msgstr "Výber časového pásma"
 
 #~ msgid "&Execute"
 #~ msgstr "S&pustiť"

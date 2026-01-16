@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-27 00:45+0000\n"
-"PO-Revision-Date: 2026-01-14 18:28+0100\n"
+"PO-Revision-Date: 2026-01-15 19:50+0100\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
@@ -138,6 +138,10 @@ msgid ""
 "<icode>ShowDesktopPreviewBanner</icode> in the <filename>kdeglobals</"
 "filename> config file."
 msgstr ""
+"Naozaj chcete natrvalo skryť náhľadový banner?<nl/><nl/>Túto akciu je možné "
+"vrátiť späť iba odstránením riadku začínajúceho znakmi "
+"<icode>ShowDesktopPreviewBanner</icode> v konfiguračnom súbore "
+"<filename>kdeglobals</filename>."
 
 #: desktopview.cpp:319
 #, kde-format
@@ -204,7 +208,7 @@ msgstr ""
 #, kde-format
 msgctxt "Brightness OSD: display name and brightness percentage"
 msgid "%1: %2%"
-msgstr ""
+msgstr "%1: %2%"
 
 #: osd.cpp:91
 #, kde-format
@@ -345,7 +349,7 @@ msgstr "Zobraziť nastavenie panelu"
 #, kde-format
 msgctxt "Percentage value"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: shellcontainmentconfig.cpp:107
 #, kde-format

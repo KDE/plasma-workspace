@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2026-01-14 18:14+0100\n"
+"PO-Revision-Date: 2026-01-15 20:12+0100\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
@@ -90,18 +90,16 @@ msgid "Choose sound file"
 msgstr "Vyberte zvukový súbor"
 
 #: ui/main.qml:47
-#, fuzzy, kde-format
-#| msgid "Configure…"
+#, kde-format
 msgctxt "@action:button Plasma-specific notifications"
 msgid "Configure for System…"
-msgstr "Nastaviť..."
+msgstr "Konfigurácia pre systém…"
 
 #: ui/main.qml:53
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Configure for Applications…"
-msgstr "Nastavenia aplikácií"
+msgstr "Konfigurácia pre aplikácie…"
 
 #: ui/main.qml:96
 #, kde-format
@@ -228,13 +226,11 @@ msgid "Hide after:"
 msgstr "Skryť po:"
 
 #: ui/main.qml:306
-#, fuzzy, kde-format
-#| msgctxt "Show application jobs in notification widget"
-#| msgid "Show in notifications"
+#, kde-format
 msgctxt ""
 "@option:check Show progress bar on notifications indicating when it will hide"
 msgid "Show timeout indicator"
-msgstr "Zobrazovať v upozorneniach"
+msgstr "Zobraziť indikátor časového limitu"
 
 #: ui/main.qml:318
 #, kde-format

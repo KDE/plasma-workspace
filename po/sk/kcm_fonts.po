@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2026-01-14 18:13+0100\n"
+"PO-Revision-Date: 2026-01-15 20:16+0100\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
@@ -178,6 +178,9 @@ msgid ""
 "Display_typeface'>not intended for use on computer displays</link>, and may "
 "produce odd results. Consider using a different font."
 msgstr ""
+"„Zobrazené“ písma nie sú <link url='https://wikipedia.org/wiki/"
+"Display_typeface'>určené na použitie na počítačových displejoch</link> a "
+"môžu vytvárať nezvyčajné výsledky. Zvážte použitie iného písma."
 
 #: ui/main.qml:107
 #, kde-format
@@ -195,18 +198,17 @@ msgid ""
 "Plasma is not designed to be usable with fonts smaller than 4pt. Size has "
 "been reset to 4pt."
 msgstr ""
+"Plasma nie je navrhnutá na použitie s písmami menšími ako 4pt. Veľkosť bola "
+"resetovaná na 4pt."
 
 #: ui/main.qml:133
-#, fuzzy, kde-format
-#| msgid ""
-#| "Very large fonts may produce odd-looking results. Instead of using a very "
-#| "large font size, consider adjusting the global screen scale."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "Very small fonts may produce odd-looking results. Instead of using a very "
 "small font size, consider adjusting the global screen scale."
 msgstr ""
-"Obrovské písma môžu viezť k zvláštnym výsledkom. Namiesto použitia obrovskej "
+"Drobné písma môžu viezť k zvláštnym výsledkom. Namiesto použitia drobných "
 "veľkosti písma zvážte úpravu globálnej mierky obrazovky."
 
 #: ui/main.qml:154

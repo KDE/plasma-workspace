@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma_runner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2026-01-14 18:26+0100\n"
+"PO-Revision-Date: 2026-01-15 19:49+0100\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
@@ -34,16 +34,12 @@ msgid "Logs out, exiting the current desktop session"
 msgstr "Odhlási a ukončí aktuálne sedenie pracovnej plochy"
 
 #: sessionrunner.cpp:27
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "KRunner keywords (split by semicolons without whitespace) to shut down "
-#| "the computer"
-#| msgid "shutdown;shut down;power;power off"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to shut down the "
 "computer"
 msgid "shutdown;shut down;power;poweroff;power off"
-msgstr "vypnutie;vypnúť;napájanie;vypnúť"
+msgstr "vypnutie;vypnúť;napájanie;vypnúť;vypnúť"
 
 #: sessionrunner.cpp:30
 #, kde-format
