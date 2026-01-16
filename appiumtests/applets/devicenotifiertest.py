@@ -116,7 +116,7 @@ class DeviceNotifierTest(dbusmock.DBusTestCase):
         for expand_element in expand_elements:
             expand_element.click()
 
-        mount = self.driver.find_elements(AppiumBy.NAME, "Mount without verifying")
+        mount = self.driver.find_elements(AppiumBy.NAME, "Mount")
         self.assertNotEqual(len(mount), 3)
 
     def test_2_remove_devices(self) -> None:
@@ -138,7 +138,7 @@ class DeviceNotifierTest(dbusmock.DBusTestCase):
         self.dbusmock.add_mock_device("sda", 1, 1000000000, False)
         expand_element = self.driver.find_element(AppiumBy.NAME, "Expand")
         expand_element.click()
-        mount_element = self.driver.find_element(AppiumBy.NAME, "Mount without verifying")
+        mount_element = self.driver.find_element(AppiumBy.NAME, "Mount")
         mount_element.click()
         self.driver.find_element(AppiumBy.NAME, "Safely remove")
 
