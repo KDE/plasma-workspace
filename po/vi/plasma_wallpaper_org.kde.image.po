@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-12 00:45+0000\n"
+"POT-Creation-Date: 2026-01-16 00:45+0000\n"
 "PO-Revision-Date: 2022-05-23 13:27+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -41,42 +41,42 @@ msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Thư mục với phông nền để từ đó hiển thị các trang trình chiếu"
 
-#: imagepackage/contents/ui/config.qml:159
+#: imagepackage/contents/ui/config.qml:146
 #, fuzzy, kde-format
 #| msgid "Positioning:"
 msgctxt "@label:listbox"
 msgid "Positioning:"
 msgstr "Bố trí:"
 
-#: imagepackage/contents/ui/config.qml:162
+#: imagepackage/contents/ui/config.qml:149
 #, fuzzy, kde-format
 #| msgid "Scaled and Cropped"
 msgctxt "@item:inlistbox"
 msgid "Scaled and cropped"
 msgstr "Đổi cỡ và xén cạnh"
 
-#: imagepackage/contents/ui/config.qml:166
+#: imagepackage/contents/ui/config.qml:153
 #, fuzzy, kde-format
 #| msgid "Scaled"
 msgctxt "@item:inlistbox"
 msgid "Scaled"
 msgstr "Đổi cỡ"
 
-#: imagepackage/contents/ui/config.qml:170
+#: imagepackage/contents/ui/config.qml:157
 #, fuzzy, kde-format
 #| msgid "Scaled, Keep Proportions"
 msgctxt "@item:inlistbox"
 msgid "Scaled, keep proportions"
 msgstr "Đổi cỡ, giữ tỉ lệ"
 
-#: imagepackage/contents/ui/config.qml:174
+#: imagepackage/contents/ui/config.qml:161
 #, fuzzy, kde-format
 #| msgid "Centered"
 msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "Đặt vào giữa"
 
-#: imagepackage/contents/ui/config.qml:202
+#: imagepackage/contents/ui/config.qml:189
 #, fuzzy, kde-format
 #| msgid "Get New Wallpapers…"
 msgctxt ""
@@ -84,52 +84,52 @@ msgctxt ""
 msgid "Switch dynamic wallpapers:"
 msgstr "Lấy phông nền mới…"
 
-#: imagepackage/contents/ui/config.qml:210
+#: imagepackage/contents/ui/config.qml:197
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the Plasma style is light or dark "
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:212
+#: imagepackage/contents/ui/config.qml:199
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on the day-night cycle"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:216
+#: imagepackage/contents/ui/config.qml:203
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always use light variant"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:220
+#: imagepackage/contents/ui/config.qml:207
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always use dark variant"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:234
+#: imagepackage/contents/ui/config.qml:221
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:245
+#: imagepackage/contents/ui/config.qml:232
 #, kde-format
 msgid "Background:"
 msgstr "Nền:"
 
-#: imagepackage/contents/ui/config.qml:246
+#: imagepackage/contents/ui/config.qml:233
 #, kde-format
 msgid "Blur"
 msgstr "Mờ"
 
-#: imagepackage/contents/ui/config.qml:255
+#: imagepackage/contents/ui/config.qml:242
 #, kde-format
 msgid "Solid color"
 msgstr "Đồng màu"
 
-#: imagepackage/contents/ui/config.qml:266
+#: imagepackage/contents/ui/config.qml:253
 #, kde-format
 msgid "Select Background Color"
 msgstr "Chọn màu nền"
@@ -273,13 +273,13 @@ msgstr ""
 "Tệp được truyền vào để đặt làm phông nền không tồn tại, hoặc không thể được "
 "nhận diện là một phông nền: %1"
 
-#: plugin/imagebackend.cpp:38
+#: plugin/imagebackend.cpp:40
 #, kde-format
 msgid "Next Wallpaper Image"
 msgstr "Ảnh phông nền tiếp theo"
 
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
-#: plugin/imagebackend.cpp:354
+#: plugin/imagebackend.cpp:382
 #, fuzzy, kde-format
 #| msgid "Image Files"
 msgid "Media Files"

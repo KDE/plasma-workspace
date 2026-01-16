@@ -225,7 +225,7 @@ msgstr "经过此时长后隐藏："
 msgctxt ""
 "@option:check Show progress bar on notifications indicating when it will hide"
 msgid "Show timeout indicator"
-msgstr ""
+msgstr "显示超时指示器"
 
 #: ui/main.qml:318
 #, kde-format
@@ -266,12 +266,11 @@ msgid "Popup Position"
 msgstr "弹出位置"
 
 #: ui/SourcesPage.qml:20
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt ""
 "@title:window kcm page title, configure app-specific notification settings"
 msgid "Application Notifications"
-msgstr "应用程序设置"
+msgstr ""
 
 #: ui/SourcesPage.qml:104
 #, kde-format

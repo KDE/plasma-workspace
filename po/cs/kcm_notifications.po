@@ -273,11 +273,11 @@ msgstr "Umístění vyskakovacího okna"
 
 #: ui/SourcesPage.qml:20
 #, fuzzy, kde-format
-#| msgid "Application Settings"
+#| msgid "Critical notifications:"
 msgctxt ""
 "@title:window kcm page title, configure app-specific notification settings"
 msgid "Application Notifications"
-msgstr "Nastavení aplikace"
+msgstr "Kritické upozornění:"
 
 #: ui/SourcesPage.qml:104
 #, kde-format
@@ -300,15 +300,3 @@ msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior"
 msgstr "Vyberte v seznamu aplikaci, jejíž upozornění chcete nastavit"
-
-#~ msgctxt "@action:button Plasma-specific notifications"
-#~ msgid "System Notifications"
-#~ msgstr "Systémová upozornění"
-
-#~ msgctxt "@action:button Application-specific notifications"
-#~ msgid "Application Settings"
-#~ msgstr "Nastavení aplikace"
-
-#~ msgctxt "@action:button choose custom notification position"
-#~ msgid "Custom…"
-#~ msgstr "Vlastní…"
