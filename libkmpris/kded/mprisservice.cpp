@@ -142,11 +142,11 @@ void MprisService::enableGlobalShortcuts()
     addGlobalShortcut(QStringLiteral("previousmedia"), i18nc("@title shortcut", "Media playback previous"), Qt::Key_MediaPrevious, &MprisService::onPrevious);
     addGlobalShortcut(QStringLiteral("seekforwardmedia"),
                       i18nc("@title shortcut", "Media playback seek forward 5s"),
-                      QKeySequence(),
+                      Qt::Key_AudioForward,
                       &MprisService::onSeekForward);
     addGlobalShortcut(QStringLiteral("seekbackwardmedia"),
                       i18nc("@title shortcut", "Media playback seek backward 5s"),
-                      QKeySequence(),
+                      Qt::Key_AudioRewind,
                       &MprisService::onSeekBackward);
     addGlobalShortcut(QStringLiteral("seekforwardmedialong"),
                       i18nc("@title shortcut", "Media playback seek forward 30s"),
