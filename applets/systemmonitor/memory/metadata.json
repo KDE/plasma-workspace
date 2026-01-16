@@ -169,6 +169,7 @@
         "Name[zh_TW]": "記憶體用量",
         "Website": "https://www.kde.org/plasma-desktop"
     },
+    "Keywords": "Memory;RAM;",
     "X-Plasma-API-Minimum-Version": "6.0",
     "X-Plasma-Provides": [
         "org.kde.plasma.systemmonitor"
