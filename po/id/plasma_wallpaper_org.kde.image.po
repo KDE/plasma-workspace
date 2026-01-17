@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-12 00:45+0000\n"
+"POT-Creation-Date: 2026-01-17 02:39+0000\n"
 "PO-Revision-Date: 2024-12-09 07:16+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -42,37 +42,37 @@ msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Direktori dengan wallpaper untuk menampilkan slide dari"
 
-#: imagepackage/contents/ui/config.qml:159
+#: imagepackage/contents/ui/config.qml:146
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Positioning:"
 msgstr "Pemosisian:"
 
-#: imagepackage/contents/ui/config.qml:162
+#: imagepackage/contents/ui/config.qml:149
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled and cropped"
 msgstr "Diskalakan dan dipangkas"
 
-#: imagepackage/contents/ui/config.qml:166
+#: imagepackage/contents/ui/config.qml:153
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled"
 msgstr "Diskalakan"
 
-#: imagepackage/contents/ui/config.qml:170
+#: imagepackage/contents/ui/config.qml:157
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled, keep proportions"
 msgstr "Diskala, jaga proporsi"
 
-#: imagepackage/contents/ui/config.qml:174
+#: imagepackage/contents/ui/config.qml:161
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "Ditengahkan"
 
-#: imagepackage/contents/ui/config.qml:202
+#: imagepackage/contents/ui/config.qml:189
 #, fuzzy, kde-format
 #| msgctxt "@action:inmenu"
 #| msgid "Set as Wallpaper"
@@ -81,52 +81,52 @@ msgctxt ""
 msgid "Switch dynamic wallpapers:"
 msgstr "Setel sebagai Wallpaper"
 
-#: imagepackage/contents/ui/config.qml:210
+#: imagepackage/contents/ui/config.qml:197
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the Plasma style is light or dark "
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:212
+#: imagepackage/contents/ui/config.qml:199
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on the day-night cycle"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:216
+#: imagepackage/contents/ui/config.qml:203
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always use light variant"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:220
+#: imagepackage/contents/ui/config.qml:207
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always use dark variant"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:234
+#: imagepackage/contents/ui/config.qml:221
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
 msgstr ""
 
-#: imagepackage/contents/ui/config.qml:245
+#: imagepackage/contents/ui/config.qml:232
 #, kde-format
 msgid "Background:"
 msgstr "LatarBelakang:"
 
-#: imagepackage/contents/ui/config.qml:246
+#: imagepackage/contents/ui/config.qml:233
 #, kde-format
 msgid "Blur"
 msgstr "Buram"
 
-#: imagepackage/contents/ui/config.qml:255
+#: imagepackage/contents/ui/config.qml:242
 #, kde-format
 msgid "Solid color"
 msgstr "Warna padat"
 
-#: imagepackage/contents/ui/config.qml:266
+#: imagepackage/contents/ui/config.qml:253
 #, kde-format
 msgid "Select Background Color"
 msgstr "Pilih Warna LatarBelakang:"
@@ -268,13 +268,13 @@ msgstr ""
 "File yang diloloskan untuk disetel sebagai wallpaper tidak berada, atau kita "
 "tidak bisa mengidentifikasinya sebagai wallpaper: %1"
 
-#: plugin/imagebackend.cpp:38
+#: plugin/imagebackend.cpp:40
 #, kde-format
 msgid "Next Wallpaper Image"
 msgstr "Gambar Wallpaper Selanjutnya"
 
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
-#: plugin/imagebackend.cpp:354
+#: plugin/imagebackend.cpp:382
 #, kde-format
 msgid "Media Files"
 msgstr "File Media"
