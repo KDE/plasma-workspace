@@ -13,12 +13,13 @@
 #include <QDebug>
 #include <QScreen>
 
-#include "shutdowndlg.h"
-
+#include "debug.h"
 #include "logoutpromptadaptor.h"
+#include "shutdowndlg.h"
 
 #include <algorithm>
 
+using namespace std::chrono_literals;
 using namespace Qt::StringLiterals;
 
 Greeter::Greeter(const KPackage::Package &package)
@@ -43,6 +44,35 @@ void Greeter::init()
         QApplication::quit();
         return;
     }
+
+    if (!m_windowed) {
+        // Quit if we lost focus or failed to gain it after 1 second
+        auto *quitTimer = new QTimer(this);
+        QObject::connect(quitTimer, &QTimer::timeout, this, [this] {
+            qCWarning(LOGOUT_GREETER) << "Failed to get focus after 1 second, quitting";
+            quit();
+        });
+        quitTimer->setInterval(1s);
+        quitTimer->setSingleShot(true);
+        quitTimer->start();
+        QObject::connect(qApp, &QGuiApplication::applicationStateChanged, this, [this, quitTimer = QPointer(quitTimer)](Qt::ApplicationState state) {
+            switch (state) {
+            case Qt::ApplicationActive:
+                if (!quitTimer.isNull()) {
+                    quitTimer->stop();
+                    quitTimer->deleteLater();
+                }
+                break;
+            case Qt::ApplicationInactive:
+                qCWarning(LOGOUT_GREETER) << "Lost focus, quitting";
+                quit();
+                break;
+            default:
+                break;
+            }
+        });
+    }
+
     const auto screens = qApp->screens();
     for (QScreen *screen : screens) {
         adoptScreen(screen);
