@@ -290,18 +290,6 @@ void KSMShutdownDlg::init(const KPackage::Package &package)
     setKeyboardGrabEnabled(true);
 }
 
-void KSMShutdownDlg::resizeEvent(QResizeEvent *e)
-{
-    QuickViewSharedEngine::resizeEvent(e);
-
-    if (KX11Extras::compositingActive()) {
-        // TODO: reenable window mask when we are without composite?
-        //        clearMask();
-    } else {
-        //        setMask(m_view->mask());
-    }
-}
-
 void KSMShutdownDlg::slotLogout()
 {
     m_session.requestLogout(SessionManagement::ConfirmationMode::Skip);

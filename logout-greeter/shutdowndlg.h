@@ -46,9 +46,6 @@ Q_SIGNALS:
     void accepted();
     void rejected();
 
-protected:
-    void resizeEvent(QResizeEvent *e) override;
-
 private:
 #ifdef PACKAGEKIT_OFFLINE_UPDATES
     void setTriggerAction(PackageKit::Offline::Action action);
