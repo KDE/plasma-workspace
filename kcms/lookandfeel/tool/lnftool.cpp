@@ -51,12 +51,14 @@ int main(int argc, char **argv)
                            i18n("packagename"));
     QCommandLineOption _keepAuto = QCommandLineOption(QStringList() << QStringLiteral("k") << _k, i18n("Prevent --apply from disabling the automatic mode"));
     QCommandLineOption _resetLayout = QCommandLineOption(QStringList() << _r, i18n("Reset the Plasma Desktop layout"));
+    QCommandLineOption blendChanges{QStringLiteral("blend-changes"), i18n("Animate the changes being applied")};
 
     QCommandLineParser parser;
     parser.addOption(_list);
     parser.addOption(_apply);
     parser.addOption(_keepAuto);
     parser.addOption(_resetLayout);
+    parser.addOption(blendChanges);
     aboutData.setupCommandLine(&parser);
 
     parser.process(app);
@@ -99,6 +101,9 @@ int main(int argc, char **argv)
         KLookAndFeelManager::Contents selection = KLookAndFeelManager::AppearanceSettings;
         if (parser.isSet(_resetLayout)) {
             selection |= KLookAndFeelManager::LayoutSettings;
+        }
+        if (parser.isSet(blendChanges)) {
+            selection |= KLookAndFeelManager::BlendChanges;
         }
 
         LookAndFeelSettings settings;

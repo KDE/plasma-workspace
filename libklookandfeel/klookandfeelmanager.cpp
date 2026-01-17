@@ -484,6 +484,17 @@ void KLookAndFeelManager::save(const KPackage::Package &package, Contents applyM
     const QString packageId = package.metadata().pluginId();
     const Contents itemsToApply = packageContents(package) & applyMask;
 
+    if (itemsToApply.testFlag(Colors) && applyMask.testFlag(BlendChanges)) {
+        auto msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.KWin"),
+                                                  QStringLiteral("/org/kde/KWin/BlendChanges"),
+                                                  QStringLiteral("org.kde.KWin.BlendChanges"),
+                                                  QStringLiteral("start"));
+        msg << 300;
+        // This is deliberately blocking so that we ensure Kwin has processed the
+        // animation start event before we potentially trigger client side changes
+        QDBusConnection::sessionBus().call(msg);
+    }
+
     if (itemsToApply.testFlag(DesktopLayout) && m_mode == Mode::Apply) {
         QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.plasmashell"),
                                                               QStringLiteral("/PlasmaShell"),

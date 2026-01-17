@@ -56,6 +56,8 @@ public:
         // General Flag combinations
         KWinSettings = WindowSwitcher | WindowDecoration | WindowPlacement | TitlebarLayout | BorderSize,
         AllSettings = (1 << 26) - 1,
+        // Animate settings change
+        BlendChanges = (1 << 30),
     };
     Q_DECLARE_FLAGS(Contents, ContentFlags)
     Q_FLAG(Contents)
