@@ -42,5 +42,24 @@
         <label>Processing folders first for the slideshow</label>
         <default>false</default>
     </entry>
+    <entry name="DynamicMode" type="UInt">
+        <label>Preferred dynamic wallpaper mode</label>
+        <tooltip>
+          This is a KCM implementation detail. It is used to make the dynamic
+          mode preferance persistent. #day-night, #dark, and #light fragments in
+          the Image URL actually specify what image will be used.
+
+          Possible values:
+          - 0: switch based on whether the Plasma style is dark or light
+          - 1: switch at sunrise and sunset
+          - 2: only use the light image
+          - 3: only use the dark image
+        </tooltip>
+        <default>0</default>
+    </entry>
+    <entry name="DarkLightScheduleState" type="String">
+      <label>Saved dark light schedule state</label>
+      <default></default>
+    </entry>
   </group>
 </kcfg>

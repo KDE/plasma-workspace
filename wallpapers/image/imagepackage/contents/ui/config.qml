@@ -76,21 +76,7 @@ ColumnLayout {
     }
 
     function selectWallpaper(wallpaper: string, selectors: list<string>): void {
-        let selector = "";
-        if (selectors.includes("day-night")) {
-            if (cfg_DynamicMode == PlasmaWallpaper.DynamicMode.DayNight) {
-                selector = "day-night";
-            }
-        }
-        if (selectors.includes("dark-light")) {
-            if (cfg_DynamicMode == PlasmaWallpaper.DynamicMode.AlwaysLight) {
-                selector = "light"
-            } else if (cfg_DynamicMode == PlasmaWallpaper.DynamicMode.AlwaysDark) {
-                selector = "dark"
-            }
-        }
-
-        cfg_Image = PlasmaWallpaper.WallpaperUrl.make(wallpaper, selector);
+        cfg_Image = imageWallpaper.makeWallpaperUrl(wallpaper, selectors);
         wallpaperConfiguration.PreviewImage = cfg_Image;
     }
 
@@ -110,6 +96,7 @@ ColumnLayout {
             // Lock screen configuration case
             return Qt.size(root.screenSize.width * Screen.devicePixelRatio, root.screenSize.height * Screen.devicePixelRatio)
         }
+        dynamicMode: root.cfg_DynamicMode
         onSlidePathsChanged: root.cfg_SlidePaths = slidePaths
         onUncheckedSlidesChanged: root.cfg_UncheckedSlides = uncheckedSlides
         onSlideshowModeChanged: root.cfg_SlideshowMode = slideshowMode

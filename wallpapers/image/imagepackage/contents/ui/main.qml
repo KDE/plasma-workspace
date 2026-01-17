@@ -80,6 +80,7 @@ WallpaperItem {
             usedInConfig: false
             //the oneliner of difference between image and slideshow wallpapers
             renderingMode: (root.pluginName === "org.kde.image") ? Wallpaper.ImageBackend.SingleImage : Wallpaper.ImageBackend.SlideShow
+            dynamicMode: root.configuration.DynamicMode
             targetSize: imageView.sourceSize
             slidePaths: root.configuration.SlidePaths
             slideTimer: root.configuration.SlideInterval

@@ -20,7 +20,6 @@ set(image_SRCS
     utils/dynamicmode.h
     utils/maximizedwindowmonitor.cpp utils/maximizedwindowmonitor.h
     utils/mediaproxy.cpp utils/mediaproxy.h
-    utils/wallpaperurl.cpp utils/wallpaperurl.h
     transientimage.cpp transientimage.h
 )
 
