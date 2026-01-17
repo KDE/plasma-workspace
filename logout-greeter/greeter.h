@@ -41,7 +41,6 @@ public Q_SLOTS:
 private:
     void quit();
     void adoptScreen(QScreen *screen);
-    void setupWaylandIntegration();
 
     bool m_running = false;
 

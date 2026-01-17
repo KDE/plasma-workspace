@@ -17,8 +17,6 @@
 
 #include "logoutpromptadaptor.h"
 
-#include <KWindowSystem>
-#include <LayerShellQt/Shell>
 #include <algorithm>
 
 using namespace Qt::StringLiterals;
@@ -37,14 +35,6 @@ Greeter::~Greeter()
     qDeleteAll(m_dialogs);
 }
 
-void Greeter::setupWaylandIntegration()
-{
-    if (!KWindowSystem::isPlatformWayland() || m_windowed) {
-        return;
-    }
-    LayerShellQt::Shell::useLayerShell();
-}
-
 void Greeter::init()
 {
     // If we're already shutting down we don't need another prompt,
@@ -53,8 +43,6 @@ void Greeter::init()
         QApplication::quit();
         return;
     }
-
-    setupWaylandIntegration();
     const auto screens = qApp->screens();
     for (QScreen *screen : screens) {
         adoptScreen(screen);
