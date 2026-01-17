@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:44+0000\n"
+"POT-Creation-Date: 2026-01-17 00:46+0000\n"
 "PO-Revision-Date: 2025-02-24 16:25+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -23,38 +23,32 @@ msgctxt "@action:button check a storageAccess (i.e disk) for error"
 msgid "Check for Errors"
 msgstr ""
 
-#: actions/mountaction.cpp:101
-#, kde-format
-msgctxt "@action:button Mount a disk without verifying for errors"
-msgid "Mount without verifying"
-msgstr ""
-
-#: actions/mountaction.cpp:104
+#: actions/mountaction.cpp:97
 #, kde-format
 msgid "Mount"
 msgstr "Monta"
 
-#: actions/mountandopenaction.cpp:181
+#: actions/mountandopenaction.cpp:178
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Aperi in Gerente de File"
 
-#: actions/mountandopenaction.cpp:184
+#: actions/mountandopenaction.cpp:181
 #, kde-format
 msgid "Try to Fix"
 msgstr "Essaya a corriger"
 
-#: actions/mountandopenaction.cpp:184
+#: actions/mountandopenaction.cpp:181
 #, kde-format
 msgid "Mount and Open"
 msgstr "Monta e aperi"
 
-#: actions/mountandopenaction.cpp:186
+#: actions/mountandopenaction.cpp:183
 #, kde-format
 msgid "Eject"
 msgstr "Expelle"
 
-#: actions/mountandopenaction.cpp:188
+#: actions/mountandopenaction.cpp:185
 #, kde-format
 msgid "Safely remove"
 msgstr "Remove con securitate"

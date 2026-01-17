@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:44+0000\n"
+"POT-Creation-Date: 2026-01-17 00:46+0000\n"
 "PO-Revision-Date: 2025-07-15 16:39+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -26,38 +26,32 @@ msgctxt "@action:button check a storageAccess (i.e disk) for error"
 msgid "Check for Errors"
 msgstr "Controlla gli errori"
 
-#: actions/mountaction.cpp:101
-#, kde-format
-msgctxt "@action:button Mount a disk without verifying for errors"
-msgid "Mount without verifying"
-msgstr "Monta senza verificare"
-
-#: actions/mountaction.cpp:104
+#: actions/mountaction.cpp:97
 #, kde-format
 msgid "Mount"
 msgstr "Monta"
 
-#: actions/mountandopenaction.cpp:181
+#: actions/mountandopenaction.cpp:178
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Apri nel gestore dei file"
 
-#: actions/mountandopenaction.cpp:184
+#: actions/mountandopenaction.cpp:181
 #, kde-format
 msgid "Try to Fix"
 msgstr "Prova a risolvere"
 
-#: actions/mountandopenaction.cpp:184
+#: actions/mountandopenaction.cpp:181
 #, kde-format
 msgid "Mount and Open"
 msgstr "Monta e apri"
 
-#: actions/mountandopenaction.cpp:186
+#: actions/mountandopenaction.cpp:183
 #, kde-format
 msgid "Eject"
 msgstr "Espelli"
 
-#: actions/mountandopenaction.cpp:188
+#: actions/mountandopenaction.cpp:185
 #, kde-format
 msgid "Safely remove"
 msgstr "Rimuovi in sicurezza"
@@ -265,6 +259,10 @@ msgstr "Tutti i dispositivi"
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "Mostra finestra a comparsa quando viene collegato un nuovo dispositivo"
+
+#~ msgctxt "@action:button Mount a disk without verifying for errors"
+#~ msgid "Mount without verifying"
+#~ msgstr "Monta senza verificare"
 
 #~ msgid "Filesystem is not responding"
 #~ msgstr "Il filesystem non risponde"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:44+0000\n"
+"POT-Creation-Date: 2026-01-17 00:46+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -24,38 +24,32 @@ msgctxt "@action:button check a storageAccess (i.e disk) for error"
 msgid "Check for Errors"
 msgstr "检查错误"
 
-#: actions/mountaction.cpp:101
-#, kde-format
-msgctxt "@action:button Mount a disk without verifying for errors"
-msgid "Mount without verifying"
-msgstr "挂载而不验证错误"
-
-#: actions/mountaction.cpp:104
+#: actions/mountaction.cpp:97
 #, kde-format
 msgid "Mount"
 msgstr "挂载"
 
-#: actions/mountandopenaction.cpp:181
+#: actions/mountandopenaction.cpp:178
 #, kde-format
 msgid "Open in File Manager"
 msgstr "用文件管理器打开"
 
-#: actions/mountandopenaction.cpp:184
+#: actions/mountandopenaction.cpp:181
 #, kde-format
 msgid "Try to Fix"
 msgstr "尝试修复"
 
-#: actions/mountandopenaction.cpp:184
+#: actions/mountandopenaction.cpp:181
 #, kde-format
 msgid "Mount and Open"
 msgstr "挂载并打开"
 
-#: actions/mountandopenaction.cpp:186
+#: actions/mountandopenaction.cpp:183
 #, kde-format
 msgid "Eject"
 msgstr "弹出"
 
-#: actions/mountandopenaction.cpp:188
+#: actions/mountandopenaction.cpp:185
 #, kde-format
 msgid "Safely remove"
 msgstr "安全移除"
@@ -259,3 +253,7 @@ msgstr "所有设备"
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "插入新设备时弹窗提示"
+
+#~ msgctxt "@action:button Mount a disk without verifying for errors"
+#~ msgid "Mount without verifying"
+#~ msgstr "挂载而不验证错误"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:44+0000\n"
+"POT-Creation-Date: 2026-01-17 00:46+0000\n"
 "PO-Revision-Date: 2025-07-24 18:14+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -27,38 +27,32 @@ msgctxt "@action:button check a storageAccess (i.e disk) for error"
 msgid "Check for Errors"
 msgstr "Egiaztatu errore bila"
 
-#: actions/mountaction.cpp:101
-#, kde-format
-msgctxt "@action:button Mount a disk without verifying for errors"
-msgid "Mount without verifying"
-msgstr "Muntatu egiaztatu gabe"
-
-#: actions/mountaction.cpp:104
+#: actions/mountaction.cpp:97
 #, kde-format
 msgid "Mount"
 msgstr "Muntatu"
 
-#: actions/mountandopenaction.cpp:181
+#: actions/mountandopenaction.cpp:178
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Ireki fitxategi-kudeatzailean"
 
-#: actions/mountandopenaction.cpp:184
+#: actions/mountandopenaction.cpp:181
 #, kde-format
 msgid "Try to Fix"
 msgstr "Saiatu konpontzen"
 
-#: actions/mountandopenaction.cpp:184
+#: actions/mountandopenaction.cpp:181
 #, kde-format
 msgid "Mount and Open"
 msgstr "Muntatu eta ireki"
 
-#: actions/mountandopenaction.cpp:186
+#: actions/mountandopenaction.cpp:183
 #, kde-format
 msgid "Eject"
 msgstr "Egotzi"
 
-#: actions/mountandopenaction.cpp:188
+#: actions/mountandopenaction.cpp:185
 #, kde-format
 msgid "Safely remove"
 msgstr "Kendu arriskurik gabe"
@@ -265,6 +259,10 @@ msgstr "Gailu guztiak"
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "Erakutsi laster-leihoa gailu berria konektatzen denean"
+
+#~ msgctxt "@action:button Mount a disk without verifying for errors"
+#~ msgid "Mount without verifying"
+#~ msgstr "Muntatu egiaztatu gabe"
 
 #~ msgid "Filesystem is not responding"
 #~ msgstr "Fitxategi sistemak ez du erantzuten"

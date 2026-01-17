@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:44+0000\n"
+"POT-Creation-Date: 2026-01-17 00:46+0000\n"
 "PO-Revision-Date: 2026-01-06 16:14+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: \n"
@@ -39,38 +39,32 @@ msgctxt "@action:button check a storageAccess (i.e disk) for error"
 msgid "Check for Errors"
 msgstr "Vérifier s'il y a des erreurs"
 
-#: actions/mountaction.cpp:101
-#, kde-format
-msgctxt "@action:button Mount a disk without verifying for errors"
-msgid "Mount without verifying"
-msgstr "Monter sans vérifier"
-
-#: actions/mountaction.cpp:104
+#: actions/mountaction.cpp:97
 #, kde-format
 msgid "Mount"
 msgstr "Monter"
 
-#: actions/mountandopenaction.cpp:181
+#: actions/mountandopenaction.cpp:178
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Ouvrir dans le gestionnaire de fichiers"
 
-#: actions/mountandopenaction.cpp:184
+#: actions/mountandopenaction.cpp:181
 #, kde-format
 msgid "Try to Fix"
 msgstr "Essayer de réparer"
 
-#: actions/mountandopenaction.cpp:184
+#: actions/mountandopenaction.cpp:181
 #, kde-format
 msgid "Mount and Open"
 msgstr "Monter et ouvrir"
 
-#: actions/mountandopenaction.cpp:186
+#: actions/mountandopenaction.cpp:183
 #, kde-format
 msgid "Eject"
 msgstr "Éjecter"
 
-#: actions/mountandopenaction.cpp:188
+#: actions/mountandopenaction.cpp:185
 #, kde-format
 msgid "Safely remove"
 msgstr "Retirer en toute sécurité"
@@ -281,6 +275,10 @@ msgstr "Tous les périphériques"
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "Afficher un menu contextuel lorsqu'un nouveau périphérique est branché"
+
+#~ msgctxt "@action:button Mount a disk without verifying for errors"
+#~ msgid "Mount without verifying"
+#~ msgstr "Monter sans vérifier"
 
 #~ msgid "Filesystem is not responding"
 #~ msgstr "Le système de fichiers ne répond pas."
