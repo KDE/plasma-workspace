@@ -41,6 +41,7 @@ void Greeter::init()
     // If we're already shutting down we don't need another prompt,
     // just reply to the dbus message and exit
     if (QDBusConnection::sessionBus().interface()->isServiceRegistered(u"org.kde.Shutdown"_s)) {
+        qCWarning(LOGOUT_GREETER) << "org.kde.Shutdown D-Bus service is already registered; quitting";
         QApplication::quit();
         return;
     }
@@ -136,6 +137,7 @@ bool Greeter::eventFilter(QObject *watched, QEvent *event)
 void Greeter::promptLogout()
 {
     if (m_running) {
+        qCWarning(LOGOUT_GREETER) << "promptLogout was called but we were already showing the logout screen; doing nothing";
         return;
     }
     m_shutdownType = KWorkSpace::ShutdownTypeNone;
@@ -145,6 +147,7 @@ void Greeter::promptLogout()
 void Greeter::promptShutDown()
 {
     if (m_running) {
+        qCWarning(LOGOUT_GREETER) << "promptShutDown was called but we were already showing the logout screen; doing nothing";
         return;
     }
     m_shutdownType = KWorkSpace::ShutdownTypeHalt;
@@ -154,6 +157,7 @@ void Greeter::promptShutDown()
 void Greeter::promptReboot()
 {
     if (m_running) {
+        qCWarning(LOGOUT_GREETER) << "promptReboot was called but we were already showing the logout screen; doing nothing";
         return;
     }
     m_shutdownType = KWorkSpace::ShutdownTypeReboot;
@@ -163,6 +167,7 @@ void Greeter::promptReboot()
 void Greeter::promptAll()
 {
     if (m_running) {
+        qCWarning(LOGOUT_GREETER) << "promptAll was called but we were already showing the logout screen; doing nothing";
         return;
     }
     m_shutdownType = KWorkSpace::ShutdownTypeDefault;
