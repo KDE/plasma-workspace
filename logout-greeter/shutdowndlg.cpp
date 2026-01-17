@@ -70,9 +70,10 @@ static const QString s_login1RebootToFirmwareSetup = QStringLiteral("RebootToFir
 static const QString s_login1RebootToBootLoaderMenu = QStringLiteral("RebootToBootLoaderMenu");
 static const QString s_login1RebootToBootLoaderEntry = QStringLiteral("RebootToBootLoaderEntry");
 
-KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype, QScreen *screen)
+KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype, bool windowed, QScreen *screen)
     : QuickViewSharedEngine(parent)
     , m_result(false)
+    , m_windowed(windowed)
 // this is a WType_Popup on purpose. Do not change that! Not
 // having a popup here has severe side effects.
 {

@@ -24,12 +24,8 @@ class KSMShutdownDlg : public PlasmaQuick::QuickViewSharedEngine
     Q_OBJECT
 
 public:
-    KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype, QScreen *screen);
+    KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype, bool windowed, QScreen *screen);
 
-    void setWindowed(bool windowed)
-    {
-        m_windowed = windowed;
-    }
     void init(const KPackage::Package &package);
     bool result() const;
 
