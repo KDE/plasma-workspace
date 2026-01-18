@@ -98,16 +98,16 @@ ColumnLayout {
     RowLayout {
         Layout.alignment: Qt.AlignTop
         PlasmaComponents3.ToolButton {
-            icon.name: "configure"
-            onClicked: {
-                root.runnerWindow.visible = false
-                KCMLauncher.open("plasma/kcms/desktop/kcm_krunnersettings")
-            }
-            Accessible.name: i18n("Configure")
-            Accessible.description: i18n("Configure KRunner Behavior")
-            visible: KAuthorized.authorizeControlModule("kcm_krunnersettings")
+            visible: root.runnerWindow.helpEnabled
+            checkable: true
+            checked: root.query.startsWith("?")
+            // Reset if out quers starts with "?", otherwise set it to "?"
+            onClicked: root.query = root.query.startsWith("?") ? "" : "?"
+            icon.name: "question"
+            Accessible.name: i18n("Show Usage Help")
+            Accessible.description: i18n("Show Usage Help")
             PlasmaComponents3.ToolTip {
-                text: i18n("Configure KRunner…")
+                text: i18n("Show Usage Help")
             }
         }
         PlasmaComponents3.ToolButton {
@@ -285,18 +285,17 @@ ColumnLayout {
                 }
             }
         }
-
         PlasmaComponents3.ToolButton {
-            visible: root.runnerWindow.helpEnabled
-            checkable: true
-            checked: root.query.startsWith("?")
-            // Reset if out quers starts with "?", otherwise set it to "?"
-            onClicked: root.query = root.query.startsWith("?") ? "" : "?"
-            icon.name: "question"
-            Accessible.name: i18n("Show Usage Help")
-            Accessible.description: i18n("Show Usage Help")
+            icon.name: "configure"
+            onClicked: {
+                root.runnerWindow.visible = false
+                KCMLauncher.open("plasma/kcms/desktop/kcm_krunnersettings")
+            }
+            Accessible.name: i18n("Configure")
+            Accessible.description: i18n("Configure KRunner Behavior")
+            visible: KAuthorized.authorizeControlModule("kcm_krunnersettings")
             PlasmaComponents3.ToolTip {
-                text: i18n("Show Usage Help")
+                text: i18n("Configure KRunner…")
             }
         }
         PlasmaComponents3.ToolButton {
