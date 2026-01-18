@@ -5,13 +5,13 @@
 # SPDX-FileCopyrightText: 2023 Frederik Schwarzer <schwarzer@kde.org>
 # SPDX-FileCopyrightText: 2024 Flori G <Renner03@protonmail.com>
 # SPDX-FileCopyrightText: 2025 Alois Spitzbart <spitz234@hotmail.com>
-# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n.daphipz@fastmail.de>
+# SPDX-FileCopyrightText: 2025, 2026 Philipp Kiemle <l10n.daphipz@fastmail.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2025-12-11 18:25+0100\n"
+"PO-Revision-Date: 2026-01-14 18:25+0100\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -94,18 +94,16 @@ msgid "Choose sound file"
 msgstr "Klangdatei auswählen"
 
 #: ui/main.qml:47
-#, fuzzy, kde-format
-#| msgid "Configure…"
+#, kde-format
 msgctxt "@action:button Plasma-specific notifications"
 msgid "Configure for System…"
-msgstr "Einrichten ..."
+msgstr "Für das System einrichten …"
 
 #: ui/main.qml:53
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Configure for Applications…"
-msgstr "Programm-Einstellungen"
+msgstr "Für Anwendungen einrichten …"
 
 #: ui/main.qml:96
 #, kde-format
@@ -218,7 +216,7 @@ msgstr "Neben dem Benachrichtigungssymbol"
 #, kde-format
 msgctxt "@action:button choose custom notification position"
 msgid "Choose…"
-msgstr ""
+msgstr "Auswählen …"
 
 #: ui/main.qml:278 ui/main.qml:294
 #, kde-format
@@ -234,13 +232,11 @@ msgid "Hide after:"
 msgstr "Ausblenden nach:"
 
 #: ui/main.qml:306
-#, fuzzy, kde-format
-#| msgctxt "Show application jobs in notification widget"
-#| msgid "Show in notifications"
+#, kde-format
 msgctxt ""
 "@option:check Show progress bar on notifications indicating when it will hide"
 msgid "Show timeout indicator"
-msgstr "In Benachrichtigungen anzeigen"
+msgstr "Indikator für verbleibende Zeit anzeigen"
 
 #: ui/main.qml:318
 #, kde-format

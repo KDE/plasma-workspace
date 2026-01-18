@@ -270,7 +270,7 @@ msgstr "弹出位置"
 msgctxt ""
 "@title:window kcm page title, configure app-specific notification settings"
 msgid "Application Notifications"
-msgstr ""
+msgstr "应用程序通知"
 
 #: ui/SourcesPage.qml:104
 #, kde-format

@@ -6,13 +6,13 @@
 # SPDX-FileCopyrightText: 2023 Johannes Obermayr <johannesobermayr@gmx.de>
 # SPDX-FileCopyrightText: 2024 Flori G <Renner03@protonmail.com>
 # SPDX-FileCopyrightText: 2025 Alois Spitzbart <spitz234@hotmail.com>
-# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n.daphipz@fastmail.de>
+# SPDX-FileCopyrightText: 2025, 2026 Philipp Kiemle <l10n.daphipz@fastmail.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_users\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2025-12-04 20:37+0100\n"
+"PO-Revision-Date: 2026-01-12 20:01+0100\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -127,10 +127,10 @@ msgid ""
 msgstr ""
 "KWallet ist ein Passwortspeicher, der Ihre Passwörter für drahtlose "
 "Netzwerke und andere verschlüsselte Ressourcen speichert. Er ist mit einem "
-"eigenen Passwort gesperrt das sich von Ihrem Passwort für die Anmeldung "
-"unterscheidet. Wenn die beiden Passwörter übereinstimmen, kann die Sperre "
-"bei der Anmeldung automatisch aufgehoben werden, so dass Sie das Passwort "
-"nicht mehr eingeben müssen."
+"eigenen Passwort gesperrt, das sich von Ihrem Anmeldepasswort unterscheidet. "
+"Wenn die beiden Passwörter übereinstimmen, kann die Sperre bei der Anmeldung "
+"automatisch aufgehoben werden, sodass Sie das KWallet-Passwort nicht selbst "
+"eingeben müssen."
 
 #: src/ui/ChangeWalletPassword.qml:60
 #, kde-format
@@ -622,6 +622,9 @@ msgid ""
 "Cannot change your own username while logged in; log out and then log in as "
 "another user to change this account’s username."
 msgstr ""
+"Sie können Ihren eigenen Benutzernamen nicht ändern, während Sie angemeldet "
+"sind. Melden Sie sich ab und unter einer anderen Benutzerkennung wieder an, "
+"um den Benutzernamen dieses Kontos zu ändern."
 
 #: src/ui/UserDetailsPage.qml:186
 #, kde-format
@@ -630,6 +633,8 @@ msgid ""
 "Cannot change the username of a logged-in user; wait until this user logs "
 "out first."
 msgstr ""
+"Der Benutzername eines angemeldeten Benutzers kann nicht geändert werden. "
+"Warten Sie, bis sich der Benutzer abgemeldet hat."
 
 #: src/ui/UserDetailsPage.qml:214
 #, kde-format
@@ -670,6 +675,9 @@ msgid ""
 "Cannot delete yourself! Log out and then log in as another user to delete "
 "this user account."
 msgstr ""
+"Sie können Ihr eigenes Benutzerkonto nicht löschen! Melden Sie sich ab und "
+"unter einer anderen Benutzerkennung wieder an, um dieses Benutzerkonto zu "
+"löschen."
 
 #: src/ui/UserDetailsPage.qml:286
 #, kde-format

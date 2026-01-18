@@ -253,7 +253,3 @@ msgstr "所有设备"
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "插入新设备时弹窗提示"
-
-#~ msgctxt "@action:button Mount a disk without verifying for errors"
-#~ msgid "Mount without verifying"
-#~ msgstr "挂载而不验证错误"

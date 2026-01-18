@@ -84,8 +84,9 @@ msgid ""
 "The last used custom accent color before user switched to wallpaper "
 "generated color or default color"
 msgstr ""
-"Die zuletzt verwendete benutzerdefinierte Akzentfarbe bevor zu einer aus dem "
-"Hintergrundbild abgeleiteten oder der Standard-Akzentfarbe gewechselt wurde"
+"Die zuletzt verwendete benutzerdefinierte Akzentfarbe, bevor zu einer aus "
+"dem Hintergrundbild abgeleiteten oder der Standard-Akzentfarbe gewechselt "
+"wurde"
 
 #. i18n: ectx: label, entry (accentColorFromWallpaper), group (General)
 #: colorssettings.kcfg:21
