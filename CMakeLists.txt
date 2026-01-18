@@ -391,7 +391,7 @@ add_subdirectory(login-sessions)
 add_subdirectory(lookandfeel)
 
 if (INSTALL_SDDM_WAYLAND_SESSION)
-    install(FILES sddm-wayland-session/plasma-wayland.conf DESTINATION /etc/sddm.conf.d)
+    install(FILES sddm-wayland-session/plasma-wayland.conf DESTINATION ${KDE_INSTALL_LIBDIR}/sddm/sddm.conf.d)
 else()
     message(STATUS "INSTALL_SDDM_WAYLAND_SESSION is disabled. As soon as it's installed, SDDM will default to use Wayland and KWin for its greeter session (BETA, do not deploy to final users yet).")
 endif()
