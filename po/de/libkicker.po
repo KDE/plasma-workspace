@@ -3,13 +3,13 @@
 # SPDX-FileCopyrightText: 2012, 2013 Markus Slopianka <markus.s@kdemail.net>
 # SPDX-FileCopyrightText: 2013, 2015, 2016, 2020 Frederik Schwarzer <schwarzer@kde.org>
 # SPDX-FileCopyrightText: 2015 Nils Naumann <nau@gmx.net>
-# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n.daphipz@fastmail.de>
+# SPDX-FileCopyrightText: 2025, 2026 Philipp Kiemle <l10n.daphipz@fastmail.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: libkicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2025-12-04 20:38+0100\n"
+"PO-Revision-Date: 2026-01-12 20:01+0100\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -42,17 +42,17 @@ msgstr "An Fensterleiste anheften"
 #: actionlist.cpp:164
 #, kde-format
 msgid "Add to Panel (Widget)"
-msgstr "Zur Kontrollleiste hinzufügen (Miniprogramm)"
+msgstr "Zur Kontrollleiste hinzufügen (Bedienelement)"
 
 #: actionlist.cpp:316 rootmodel.cpp:538
 #, kde-format
 msgid "Recent Files"
-msgstr "Zuletzt geöffnete Dateien"
+msgstr "Kürzlich geöffnete Dateien"
 
 #: actionlist.cpp:326
 #, kde-format
 msgid "Forget Recent Files"
-msgstr "Zuletzt geöffnete Dateien vergessen"
+msgstr "Kürzlich geöffnete Dateien vergessen"
 
 #: actionlist.cpp:393
 #, kde-format
@@ -122,7 +122,7 @@ msgstr "Favoriten"
 #: recentusagemodel.cpp:154
 #, kde-format
 msgid "Recently Used"
-msgstr "Kürzlich benutzt"
+msgstr "Kürzlich verwendet"
 
 #: recentusagemodel.cpp:159 recentusagemodel.cpp:318
 #, kde-format
@@ -177,22 +177,22 @@ msgstr "%1 ausblenden"
 #: rootmodel.cpp:525
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
-msgstr "Dies sollte nicht sichtbar sein, benutzen Sie KICKER_FAVORITES_MODEL"
+msgstr "Dies sollte nicht sichtbar sein, verwenden Sie KICKER_FAVORITES_MODEL"
 
 #: rootmodel.cpp:538
 #, kde-format
 msgid "Often Used Files"
-msgstr "Häufig benutzte Dateien"
+msgstr "Häufig verwendete Dateien"
 
 #: rootmodel.cpp:547
 #, kde-format
 msgid "Recent Applications"
-msgstr "Zuletzt benutzte Anwendungen"
+msgstr "Kürzlich verwendete Anwendungen"
 
 #: rootmodel.cpp:547
 #, kde-format
 msgid "Often Used Applications"
-msgstr "Häufig benutzte Anwendungen"
+msgstr "Häufig verwendete Anwendungen"
 
 #: rootmodel.cpp:562
 #, kde-format

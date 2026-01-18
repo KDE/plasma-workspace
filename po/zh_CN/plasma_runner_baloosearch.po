@@ -31,7 +31,7 @@ msgstr "i@guoyunhe.me, tds00@qq.com"
 #: baloosearchrunner.cpp:42
 #, kde-format
 msgid "File Search"
-msgstr ""
+msgstr "文件搜索"
 
 #: baloosearchrunner.cpp:69
 #, kde-format

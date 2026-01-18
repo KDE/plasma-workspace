@@ -3,13 +3,13 @@
 # SPDX-FileCopyrightText: 2013, 2020, 2022 Frederik Schwarzer <schwarzer@kde.org>
 # SPDX-FileCopyrightText: 2023 Jannick Kuhr <opensource@kuhr.org>
 # SPDX-FileCopyrightText: 2025 Flori G <Renner03@protonmail.com>
-# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n.daphipz@fastmail.de>
+# SPDX-FileCopyrightText: 2025, 2026 Philipp Kiemle <l10n.daphipz@fastmail.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.private.systemtray\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-05 00:44+0000\n"
-"PO-Revision-Date: 2025-12-04 20:40+0100\n"
+"PO-Revision-Date: 2026-01-14 18:27+0100\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -25,30 +25,28 @@ msgid "General"
 msgstr "Allgemein"
 
 #: qml/ConfigGeneral.qml:43
-#, fuzzy, kde-format
-#| msgid "Shown when relevant"
+#, kde-format
 msgctxt "@item:inlistbox Show this System Tray item when relevant"
 msgid "Show when relevant"
-msgstr "Angezeigt, wenn wichtig"
+msgstr "Anzeigen, wenn wichtig"
 
 #: qml/ConfigGeneral.qml:47
-#, fuzzy, kde-format
-#| msgid "Always shown"
+#, kde-format
 msgctxt "@item:inlistbox Always show this System Tray item"
 msgid "Always show"
-msgstr "Immer angezeigt"
+msgstr "Immer anzeigen"
 
 #: qml/ConfigGeneral.qml:51
 #, kde-format
 msgctxt "@item:inlistbox Show this System Tray item only in the expanded popup"
 msgid "Show only in popup"
-msgstr ""
+msgstr "Nur im Aufklappfenster anzeigen"
 
 #: qml/ConfigGeneral.qml:55
 #, kde-format
 msgctxt "@item:inlistbox Never show this System Tray item; disable it"
 msgid "Never show (disabled)"
-msgstr ""
+msgstr "Nie anzeigen (deaktiviert)"
 
 #: qml/ConfigGeneral.qml:126
 #, kde-format
@@ -100,13 +98,7 @@ msgid "I understand the risks"
 msgstr "Ich verstehe die Risiken"
 
 #: qml/ConfigGeneral.qml:187
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:usagetip"
-#| msgid ""
-#| "Disabling the clipboard is not recommended, as it will cause copied data "
-#| "to be lost when the application it was copied from is closed.<nl/><nl/"
-#| ">Instead consider configuring the clipboard to disable its history, or "
-#| "only remember one item at a time."
+#, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
 "Disabling the clipboard is not recommended, as it will cause copied data to "
@@ -117,9 +109,12 @@ msgid ""
 "at a time."
 msgstr ""
 "Es wird nicht empfohlen, die Zwischenablage zu deaktivieren. Kopierte Daten "
-"gehen sonst verloren, sobald die Quellanwendung geschlossen wird.<nl/><nl/"
-">Stattdessen sollten Sie die Zwischenablage so einrichten, dass ihr Verlauf "
-"deaktiviert wird oder nur ein Element auf einmal gespeichert wird."
+"gehen sonst verloren, sobald deren Quellanwendung geschlossen wird.<nl/><nl/"
+">Tun Sie das nur, wenn Sie an anderer Stelle ein eigenständiges "
+"Zwischenablage-Bedienelement hinzugefügt haben oder ein anderes Programm zur "
+"Verwaltung der Zwischenablage verwenden. Sie können die Zwischenablage auch "
+"so einrichten, dass ihr Verlauf nicht gespeichert wird oder jederzeit "
+"maximal ein Element enthalten soll."
 
 #: qml/ConfigGeneral.qml:196
 #, kde-kuit-format
@@ -130,6 +125,11 @@ msgid ""
 "added a standalone Notifications widget somewhere else, or are intentionally "
 "using a 3rd-party notification manager to handle notifications."
 msgstr ""
+"Es wird nicht empfohlen, das Benachrichtigungs-Bedienelement zu "
+"deaktivieren, da so keine Benachrichtigungen von Programmen mehr angezeigt "
+"werden.<nl/><nl/>Tun Sie das nur, wenn Sie an anderer Stelle ein "
+"eigenständiges Benachrichtigungs-Bedienelement hinzugefügt haben oder "
+"bewusst ein anderes Programm zur Verwaltung von Benachrichtigungen verwenden."
 
 #: qml/ConfigGeneral.qml:208
 #, kde-format

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdebase/kcmcomponentchooser.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2026-01-14 11:24+0000\n"
+"PO-Revision-Date: 2026-01-17 23:03+0000\n"
 "Last-Translator: Charlotte <altronic25@protonmail.com>\n"
 "Language-Team: Irish\n"
 "Language: ga\n"
@@ -109,7 +109,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label %1 is a MIME type and %2 is an application name"
 msgid "%1 (Currently opens in %2)"
-msgstr ""
+msgstr "%1 (Osclaítear i %2 faoi láthair)"
 
 #: ui/ComponentOverlay.qml:111
 #, kde-format
@@ -158,7 +158,7 @@ msgstr ""
 #, kde-format
 msgctxt "Internet related application’s category’s name"
 msgid "Internet"
-msgstr ""
+msgstr "Idirlíon"
 
 #: ui/main.qml:68
 #, kde-format

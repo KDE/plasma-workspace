@@ -4,13 +4,13 @@
 # SPDX-FileCopyrightText: 2023 Jannick Kuhr <opensource@kuhr.org>
 # SPDX-FileCopyrightText: 2024 Johannes Obermayr <johannesobermayr@gmx.de>
 # SPDX-FileCopyrightText: 2024, 2025 Flori G <Renner03@protonmail.com>
-# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n.daphipz@fastmail.de>
+# SPDX-FileCopyrightText: 2025, 2026 Philipp Kiemle <l10n.daphipz@fastmail.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-10 00:45+0000\n"
-"PO-Revision-Date: 2025-05-13 16:36+0200\n"
+"PO-Revision-Date: 2026-01-11 19:45+0100\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #: contents/logout/Logout.qml:149
 #, kde-format
@@ -66,10 +66,10 @@ msgid_plural ""
 "restarted, those users may lose work."
 msgstr[0] ""
 "Ein weiterer Benutzer ist noch angemeldet. Wenn der Rechner heruntergefahren "
-"oder abgeschaltet wird, kann dessen Arbeit verlorengehen."
+"oder neu gestartet wird, kann dessen Arbeit verlorengehen."
 msgstr[1] ""
 "%1 weitere Benutzer sind noch angemeldet. Wenn der Rechner heruntergefahren "
-"oder abgeschaltet wird, kann deren Arbeit verlorengehen."
+"oder neu gestartet wird, kann ihre Arbeit verlorengehen."
 
 #: contents/logout/Logout.qml:186
 #, kde-format
@@ -82,11 +82,10 @@ msgid "When restarted, the computer will enter the boot loader menu."
 msgstr "Beim Neustart wird der Dialog für Bootloader-Einrichtung angezeigt."
 
 #: contents/logout/Logout.qml:212
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will enter the boot loader menu."
+#, kde-format
 msgctxt "%1 is a boot loader entry"
 msgid "When restarted, the computer will switch to %1."
-msgstr "Beim Neustart wird der Dialog für Bootloader-Einrichtung angezeigt."
+msgstr "Beim Neustart wird der Computer zu „%1“ wechseln."
 
 #: contents/logout/Logout.qml:234
 #, kde-format

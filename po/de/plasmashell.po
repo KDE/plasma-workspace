@@ -430,13 +430,13 @@ msgstr "Leere %1"
 #: softwarerendernotifier.cpp:34
 #, kde-format
 msgid "Software Renderer In Use"
-msgstr "Software-Renderer wird benutzt"
+msgstr "Software-Renderer wird verwendet"
 
 #: softwarerendernotifier.cpp:35
 #, kde-format
 msgctxt "Tooltip telling user their GL drivers are broken"
 msgid "Software Renderer In Use"
-msgstr "Software-Renderer wird benutzt"
+msgstr "Software-Renderer wird verwendet"
 
 #: softwarerendernotifier.cpp:36
 #, kde-format
