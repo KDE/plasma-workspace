@@ -58,7 +58,7 @@ msgid ""
 "as an icon. Applets can override this component."
 msgstr ""
 "Kompakte Darstellung eines Miniprogramms, wenn es in einem "
-"Nachrichtenfenster zusammengeklappt ist - zum Beispiel als Symbol. "
+"Nachrichtenfenster zusammengeklappt ist – zum Beispiel als Symbol. "
 "Miniprogramme können diese Komponente überschreiben."
 
 #: shellpackage.cpp:53

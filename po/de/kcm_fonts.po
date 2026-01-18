@@ -5,13 +5,13 @@
 # SPDX-FileCopyrightText: 2008, 2014, 2017, 2018, 2019, 2021 Burkhard Lück <lueck@hube-lueck.de>
 # SPDX-FileCopyrightText: 2011, 2012, 2018, 2020, 2023 Frederik Schwarzer <schwarzer@kde.org>
 # SPDX-FileCopyrightText: 2023 Jannick Kuhr <opensource@kuhr.org>
-# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n.daphipz@fastmail.de>
+# SPDX-FileCopyrightText: 2025, 2026 Philipp Kiemle <l10n.daphipz@fastmail.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_fonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2025-10-29 11:11+0100\n"
+"PO-Revision-Date: 2026-01-11 19:41+0100\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
 #: fontsaasettingsbase.kcfg:9
@@ -264,8 +264,8 @@ msgid ""
 "effect. You generally want to keep this option enabled unless it causes "
 "problems."
 msgstr ""
-"Pixel werden auf Bildschirmen generell in Gittern angeordnet. Daher wirkt "
-"der Umriss von Schriften, die nicht mit dem Gitter übereinstimmen, klötzern "
+"Pixel werden auf Bildschirmen generell in Rastern angeordnet. Daher wirkt "
+"der Umriss von Schriften, die nicht mit dem Raster übereinstimmen, klötzern "
 "und falsch, wenn keine Technik zur <emphasis>Kantenglättung</emphasis> "
 "angewendet wird, um diesen Effekt zu reduzieren. Sie sollten diese "
 "Einstellung generell aktivieren, sofern keine Probleme damit auftreten."

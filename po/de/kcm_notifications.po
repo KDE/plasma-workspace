@@ -5,13 +5,13 @@
 # SPDX-FileCopyrightText: 2023 Frederik Schwarzer <schwarzer@kde.org>
 # SPDX-FileCopyrightText: 2024 Flori G <Renner03@protonmail.com>
 # SPDX-FileCopyrightText: 2025 Alois Spitzbart <spitz234@hotmail.com>
-# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n.daphipz@fastmail.de>
+# SPDX-FileCopyrightText: 2025, 2026 Philipp Kiemle <l10n.daphipz@fastmail.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2025-12-11 18:25+0100\n"
+"PO-Revision-Date: 2026-01-14 18:25+0100\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -70,8 +70,8 @@ msgstr ""
 #, kde-format
 msgid "This module lets you manage application and system notifications."
 msgstr ""
-"In diesem Modul können Sie Benachrichtigungen für Anwendungen und das System "
-"einrichten."
+"In diesem Modul können Sie Benachrichtigungen von Anwendungen und des "
+"Systems verwalten."
 
 #: package/contents/ui/main.qml:42
 #, kde-format

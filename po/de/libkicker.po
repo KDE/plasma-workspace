@@ -3,13 +3,13 @@
 # SPDX-FileCopyrightText: 2012, 2013 Markus Slopianka <markus.s@kdemail.net>
 # SPDX-FileCopyrightText: 2013, 2015, 2016, 2020 Frederik Schwarzer <schwarzer@kde.org>
 # SPDX-FileCopyrightText: 2015 Nils Naumann <nau@gmx.net>
-# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n.daphipz@fastmail.de>
+# SPDX-FileCopyrightText: 2025, 2026 Philipp Kiemle <l10n.daphipz@fastmail.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: libkicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2025-12-04 20:38+0100\n"
+"PO-Revision-Date: 2026-01-12 20:01+0100\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -37,7 +37,7 @@ msgstr "Zur Arbeitsfläche hinzufügen"
 #: plugin/actionlist.cpp:151
 #, kde-format
 msgid "Add to Panel (Widget)"
-msgstr "Zur Kontrollleiste hinzufügen (Miniprogramm)"
+msgstr "Zur Kontrollleiste hinzufügen (Bedienelement)"
 
 #: plugin/actionlist.cpp:156
 #, kde-format
@@ -47,12 +47,12 @@ msgstr "An Fensterleiste anheften"
 #: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:429
 #, kde-format
 msgid "Recent Files"
-msgstr "Zuletzt geöffnete Dateien"
+msgstr "Kürzlich geöffnete Dateien"
 
 #: plugin/actionlist.cpp:317
 #, kde-format
 msgid "Forget Recent Files"
-msgstr "Zuletzt geöffnete Dateien vergessen"
+msgstr "Kürzlich geöffnete Dateien vergessen"
 
 #: plugin/actionlist.cpp:395
 #, kde-format
@@ -144,7 +144,7 @@ msgstr "Alle Kontakte vergessen"
 #: plugin/recentusagemodel.cpp:151
 #, kde-format
 msgid "Recently Used"
-msgstr "Kürzlich benutzt"
+msgstr "Kürzlich verwendet"
 
 #: plugin/recentusagemodel.cpp:156 plugin/recentusagemodel.cpp:298
 #, kde-format
@@ -194,27 +194,27 @@ msgstr "Alle Anwendungen"
 #: plugin/rootmodel.cpp:410
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
-msgstr "Dies sollte nicht sichtbar sein, benutzen Sie KICKER_FAVORITES_MODEL"
+msgstr "Dies sollte nicht sichtbar sein, verwenden Sie KICKER_FAVORITES_MODEL"
 
 #: plugin/rootmodel.cpp:422
 #, kde-format
 msgid "Recent Contacts"
-msgstr "Zuletzt verwendete Kontakte"
+msgstr "Kürzlich verwendete Kontakte"
 
 #: plugin/rootmodel.cpp:429
 #, kde-format
 msgid "Often Used Files"
-msgstr "Häufig benutzte Dateien"
+msgstr "Häufig verwendete Dateien"
 
 #: plugin/rootmodel.cpp:438
 #, kde-format
 msgid "Recent Applications"
-msgstr "Zuletzt benutzte Anwendungen"
+msgstr "Kürzlich verwendete Anwendungen"
 
 #: plugin/rootmodel.cpp:438
 #, kde-format
 msgid "Often Used Applications"
-msgstr "Häufig benutzte Anwendungen"
+msgstr "Häufig verwendete Anwendungen"
 
 #: plugin/rootmodel.cpp:453
 #, kde-format

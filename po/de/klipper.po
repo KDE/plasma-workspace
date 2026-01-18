@@ -565,7 +565,7 @@ msgstr "Elemente an Mausposition anzeigen"
 #, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
-msgstr "%1 - Verwaltung der Zwischenablage"
+msgstr "%1 – Verwaltung der Zwischenablage"
 
 #: klipper.cpp:567
 #, kde-kuit-format
@@ -857,7 +857,7 @@ msgstr ""
 #, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Items"
-msgstr "%1 - Elemente der Zwischenablage"
+msgstr "%1 – Elemente der Zwischenablage"
 
 #: klipperpopup.cpp:109
 #, kde-format
