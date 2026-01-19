@@ -743,7 +743,6 @@ void PanelView::positionAndResizePanel()
     // At least one QWindow setGeometry is needed to avoid a protocol error
     if (m_layerWindow && !size().isEmpty()) {
         m_layerWindow->setDesiredSize(geom.size());
-        setPosition(geom.topLeft());
     } else {
         setGeometry(geom);
     }
