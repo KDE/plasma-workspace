@@ -30,7 +30,6 @@ KSvg.FrameSvgItem {
     }
 
     z: -1 // always draw behind icons
-    opacity: systemTrayState.expanded ? 1 : 0
 
     imagePath: "widgets/tabbar"
     prefix: {
@@ -108,6 +107,7 @@ KSvg.FrameSvgItem {
         } else {
             highlightedItem = null;
         }
+        currentItemHighLight.opacity = systemTrayState.expanded ? 1 : 0
     }
 
     function changeHighlightedItem(nextItem, forceEdgeHighlight) {
