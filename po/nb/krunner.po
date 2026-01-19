@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-04 00:46+0000\n"
+"POT-Creation-Date: 2026-01-19 00:45+0000\n"
 "PO-Revision-Date: 2025-02-22 07:41+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -75,20 +75,10 @@ msgctxt "Header for command line output"
 msgid "Available KRunner plugins, pluginId"
 msgstr "Tilgjengelige KRunner-tillegg, pluginID"
 
-#: qml/RunCommand.qml:106
+#: qml/RunCommand.qml:107 qml/RunCommand.qml:108 qml/RunCommand.qml:110
 #, kde-format
-msgid "Configure"
-msgstr "Sett opp"
-
-#: qml/RunCommand.qml:107
-#, kde-format
-msgid "Configure KRunner Behavior"
-msgstr "Sett opp KRunner-atferd"
-
-#: qml/RunCommand.qml:110
-#, kde-format
-msgid "Configure KRunner…"
-msgstr "Sett opp KRunner …"
+msgid "Show Usage Help"
+msgstr "Vis brukshjelp"
 
 #: qml/RunCommand.qml:123
 #, kde-format
@@ -107,32 +97,42 @@ msgctxt "Textfield placeholder text"
 msgid "Search…"
 msgstr "Søk …"
 
-#: qml/RunCommand.qml:296 qml/RunCommand.qml:297 qml/RunCommand.qml:299
+#: qml/RunCommand.qml:294
 #, kde-format
-msgid "Show Usage Help"
-msgstr "Vis brukshjelp"
+msgid "Configure"
+msgstr "Sett opp"
 
-#: qml/RunCommand.qml:307
+#: qml/RunCommand.qml:295
+#, kde-format
+msgid "Configure KRunner Behavior"
+msgstr "Sett opp KRunner-atferd"
+
+#: qml/RunCommand.qml:298
+#, kde-format
+msgid "Configure KRunner…"
+msgstr "Sett opp KRunner …"
+
+#: qml/RunCommand.qml:306
 #, kde-format
 msgid "Pin"
 msgstr "Fest"
 
-#: qml/RunCommand.qml:308
+#: qml/RunCommand.qml:307
 #, kde-format
 msgid "Pin Search"
 msgstr "Fest søk"
 
-#: qml/RunCommand.qml:310
+#: qml/RunCommand.qml:309
 #, kde-format
 msgid "Keep Open"
 msgstr "Hold åpen"
 
-#: qml/RunCommand.qml:372 qml/RunCommand.qml:378
+#: qml/RunCommand.qml:371 qml/RunCommand.qml:377
 #, kde-format
 msgid "Recent Queries"
 msgstr "Nylige søk"
 
-#: qml/RunCommand.qml:376
+#: qml/RunCommand.qml:375
 #, kde-format
 msgid "Remove"
 msgstr "Fjern"

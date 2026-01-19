@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-04 00:46+0000\n"
+"POT-Creation-Date: 2026-01-19 00:45+0000\n"
 "PO-Revision-Date: 2024-11-09 20:04+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -73,20 +73,10 @@ msgctxt "Header for command line output"
 msgid "Available KRunner plugins, pluginId"
 msgstr "Налични приставки на KRunner, pluginId"
 
-#: qml/RunCommand.qml:106
+#: qml/RunCommand.qml:107 qml/RunCommand.qml:108 qml/RunCommand.qml:110
 #, kde-format
-msgid "Configure"
-msgstr "Настройване"
-
-#: qml/RunCommand.qml:107
-#, kde-format
-msgid "Configure KRunner Behavior"
-msgstr "Конфигуриране на поведение на KRunner"
-
-#: qml/RunCommand.qml:110
-#, kde-format
-msgid "Configure KRunner…"
-msgstr "Конфигуриране на KRunner…"
+msgid "Show Usage Help"
+msgstr "Показване на помощ за използването"
 
 #: qml/RunCommand.qml:123
 #, kde-format
@@ -105,32 +95,42 @@ msgctxt "Textfield placeholder text"
 msgid "Search…"
 msgstr "Търсене…"
 
-#: qml/RunCommand.qml:296 qml/RunCommand.qml:297 qml/RunCommand.qml:299
+#: qml/RunCommand.qml:294
 #, kde-format
-msgid "Show Usage Help"
-msgstr "Показване на помощ за използването"
+msgid "Configure"
+msgstr "Настройване"
 
-#: qml/RunCommand.qml:307
+#: qml/RunCommand.qml:295
+#, kde-format
+msgid "Configure KRunner Behavior"
+msgstr "Конфигуриране на поведение на KRunner"
+
+#: qml/RunCommand.qml:298
+#, kde-format
+msgid "Configure KRunner…"
+msgstr "Конфигуриране на KRunner…"
+
+#: qml/RunCommand.qml:306
 #, kde-format
 msgid "Pin"
 msgstr "Фиксиране"
 
-#: qml/RunCommand.qml:308
+#: qml/RunCommand.qml:307
 #, kde-format
 msgid "Pin Search"
 msgstr "Фиксиране на търсене"
 
-#: qml/RunCommand.qml:310
+#: qml/RunCommand.qml:309
 #, kde-format
 msgid "Keep Open"
 msgstr "Задържане отворен"
 
-#: qml/RunCommand.qml:372 qml/RunCommand.qml:378
+#: qml/RunCommand.qml:371 qml/RunCommand.qml:377
 #, kde-format
 msgid "Recent Queries"
 msgstr "Последни заявки"
 
-#: qml/RunCommand.qml:376
+#: qml/RunCommand.qml:375
 #, kde-format
 msgid "Remove"
 msgstr "Премахване"
