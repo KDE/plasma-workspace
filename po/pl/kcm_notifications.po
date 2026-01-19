@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2026-01-01 12:48+0100\n"
+"PO-Revision-Date: 2026-01-18 16:13+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -89,19 +89,16 @@ msgid "Choose sound file"
 msgstr "Wybierz plik dźwiękowy"
 
 #: ui/main.qml:47
-#, fuzzy, kde-format
-#| msgid "Configure…"
+#, kde-format
 msgctxt "@action:button Plasma-specific notifications"
 msgid "Configure for System…"
-msgstr "Ustawienia…"
+msgstr "Ustawienia dla systemu…"
 
 #: ui/main.qml:53
-#, fuzzy, kde-format
-#| msgctxt "@action:button Application-specific notifications"
-#| msgid "Configure Application Settings…"
+#, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Configure for Applications…"
-msgstr "Ustawienia aplikacji…"
+msgstr "Ustawienia dla aplikacji…"
 
 #: ui/main.qml:96
 #, kde-format
@@ -211,7 +208,7 @@ msgstr "Obok ikony powiadomień"
 #, kde-format
 msgctxt "@action:button choose custom notification position"
 msgid "Choose…"
-msgstr ""
+msgstr "Wybierz…"
 
 #: ui/main.qml:278 ui/main.qml:294
 #, kde-format
@@ -228,8 +225,7 @@ msgid "Hide after:"
 msgstr "Ukryj po:"
 
 #: ui/main.qml:306
-#, fuzzy, kde-format
-#| msgid "Show timeout indicator"
+#, kde-format
 msgctxt ""
 "@option:check Show progress bar on notifications indicating when it will hide"
 msgid "Show timeout indicator"
@@ -274,12 +270,11 @@ msgid "Popup Position"
 msgstr "Położenie okna wysuwnego"
 
 #: ui/SourcesPage.qml:20
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt ""
 "@title:window kcm page title, configure app-specific notification settings"
 msgid "Application Notifications"
-msgstr "Ustawienia programu"
+msgstr "Powiadomienia programów"
 
 #: ui/SourcesPage.qml:104
 #, kde-format

@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2014, 2015, 2019, 2020, 2021, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
+# SPDX-FileCopyrightText: 2014, 2015, 2019, 2020, 2021, 2024, 2026 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-05 00:44+0000\n"
-"PO-Revision-Date: 2024-06-25 19:10+0200\n"
+"PO-Revision-Date: 2026-01-18 08:46+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: config.qml:13
 #, kde-format
@@ -25,7 +25,7 @@ msgstr "Allmänt"
 #: ConfigGeneral.qml:118
 #, kde-format
 msgid "Unavailable"
-msgstr ""
+msgstr "Inte tillgänglig"
 
 #: data.js:5
 #, kde-format
@@ -38,10 +38,9 @@ msgid "Lock the screen"
 msgstr "Lås skärmen"
 
 #: data.js:12
-#, fuzzy, kde-format
-#| msgid "Switch user"
+#, kde-format
 msgid "Switch user…"
-msgstr "Byt användare"
+msgstr "Byt användare…"
 
 #: data.js:13
 #, kde-format
@@ -49,8 +48,7 @@ msgid "Start a parallel session as a different user"
 msgstr "Starta en parallell session som en annan användare"
 
 #: data.js:19
-#, fuzzy, kde-format
-#| msgid "Shut Down"
+#, kde-format
 msgid "Shut down"
 msgstr "stäng av"
 
@@ -70,8 +68,7 @@ msgid "Reboot the computer"
 msgstr "Starta om datorn"
 
 #: data.js:33
-#, fuzzy, kde-format
-#| msgid "Log Out"
+#, kde-format
 msgid "Log out"
 msgstr "Logga ut"
 

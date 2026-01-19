@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2013, 2014, 2015, 2016, 2017, 2018, 2020, 2021, 2022, 2024, 2025 Stefan Asserhäll <stefan.asserhall@gmail.com>
+# SPDX-FileCopyrightText: 2013, 2014, 2015, 2016, 2017, 2018, 2020, 2021, 2022, 2024, 2025, 2026 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-05 00:44+0000\n"
-"PO-Revision-Date: 2025-05-31 15:18+0200\n"
+"PO-Revision-Date: 2026-01-18 08:53+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: qml/config.qml:13
 #, kde-format
@@ -23,15 +23,13 @@ msgid "General"
 msgstr "Allmänt"
 
 #: qml/ConfigGeneral.qml:43
-#, fuzzy, kde-format
-#| msgid "Shown when relevant"
+#, kde-format
 msgctxt "@item:inlistbox Show this System Tray item when relevant"
 msgid "Show when relevant"
-msgstr "Visas om relevant"
+msgstr "Visa om relevant"
 
 #: qml/ConfigGeneral.qml:47
-#, fuzzy, kde-format
-#| msgid "Always shown"
+#, kde-format
 msgctxt "@item:inlistbox Always show this System Tray item"
 msgid "Always show"
 msgstr "Visa alltid"
@@ -40,13 +38,13 @@ msgstr "Visa alltid"
 #, kde-format
 msgctxt "@item:inlistbox Show this System Tray item only in the expanded popup"
 msgid "Show only in popup"
-msgstr ""
+msgstr "Visa bara i panelruta"
 
 #: qml/ConfigGeneral.qml:55
 #, kde-format
 msgctxt "@item:inlistbox Never show this System Tray item; disable it"
 msgid "Never show (disabled)"
-msgstr ""
+msgstr "Visa aldrig (inaktiverad)"
 
 #: qml/ConfigGeneral.qml:126
 #, kde-format
@@ -96,13 +94,7 @@ msgid "I understand the risks"
 msgstr "Jag förstår riskerna"
 
 #: qml/ConfigGeneral.qml:187
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:usagetip"
-#| msgid ""
-#| "Disabling the clipboard is not recommended, as it will cause copied data "
-#| "to be lost when the application it was copied from is closed.<nl/><nl/"
-#| ">Instead consider configuring the clipboard to disable its history, or "
-#| "only remember one item at a time."
+#, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
 "Disabling the clipboard is not recommended, as it will cause copied data to "
@@ -114,8 +106,10 @@ msgid ""
 msgstr ""
 "Att inaktivera klippbordet rekommenderas inte, eftersom det leder till att "
 "kopierad data går förlorad när programmet det kopieras från stängs.<nl/><nl/"
-">Överväg istället att ställa in klippbordet så att dess historik "
-"inaktiveras, eller att det bara kommer ihåg ett objekt åt gången."
+">Gör det bara om du manuellt har lagt till en fristående klippbordskomponent "
+"någon annanstans, eller använder en klippbordshanterare från tredje part. "
+"Överväg också att ställa in klippbordet så att historiken inte sparas, eller "
+"att bara komma ihåg ett objekt åt gången."
 
 #: qml/ConfigGeneral.qml:196
 #, kde-kuit-format
@@ -126,25 +120,26 @@ msgid ""
 "added a standalone Notifications widget somewhere else, or are intentionally "
 "using a 3rd-party notification manager to handle notifications."
 msgstr ""
+"Det rekommenderas inte att inaktivera underrättelsekomponenten, eftersom "
+"underrättelser som skickas av program inte längre visas.<nl/><nl/>Gör det "
+"bara om du manuellt har lagt till en fristående underrättelsekomponent någon "
+"annanstans, eller om du avsiktligt använder en underrättelsehanterare från "
+"tredje part för att hantera underrättelser."
 
 #: qml/ConfigGeneral.qml:208
-#, fuzzy, kde-format
-#| msgid "Scale with Panel height"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel height"
 msgstr "Skala till panelhöjd"
 
 #: qml/ConfigGeneral.qml:209
-#, fuzzy, kde-format
-#| msgid "Scale with Panel width"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel width"
 msgstr "Skala till panelbredd"
 
 #: qml/ConfigGeneral.qml:211
-#, fuzzy, kde-format
-#| msgctxt "The arrangement of system tray icons in the Panel"
-#| msgid "Panel icon size:"
+#, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon size:"
 msgstr "Panelens ikonstorlek:"
@@ -185,18 +180,16 @@ msgid "Automatically set to Large when in Touch Mode"
 msgstr "Ställ automatiskt in till stort med pekläge"
 
 #: qml/ConfigGeneral.qml:315
-#, fuzzy, kde-format
-#| msgid "Entries"
+#, kde-format
 msgctxt "@title:column"
 msgid "Entries"
 msgstr "Poster"
 
 #: qml/ConfigGeneral.qml:319
-#, fuzzy, kde-format
-#| msgid "Always shown"
+#, kde-format
 msgctxt "@option:check, This is referring to system tray entries"
 msgid "Always show all"
-msgstr "Visa alltid"
+msgstr "Visa alltid alla"
 
 #: qml/ExpandedRepresentation.qml:60
 #, kde-format
