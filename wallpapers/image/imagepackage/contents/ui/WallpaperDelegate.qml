@@ -101,6 +101,12 @@ KCM.GridDelegate {
             anchors.top: parent.top
             checked: visible ? model.checked : false
             onToggled: model.checked = checked
+            // The checked checkbox has a transparent background which can lead to visibility issues
+            // with wallpapers. Draw an unchecked checkbox as a background so there's always enough contrast
+            background:  QtControls2.CheckBox {
+                enabled: false
+                Kirigami.Theme.colorGroup: Kirigami.Theme.Active
+            }
         }
 
         Kirigami.Icon {
