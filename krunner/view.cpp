@@ -193,6 +193,7 @@ void View::positionOnScreen()
         layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityOnDemand);
         layerWindow->setMargins(margins());
         layerWindow->setScreenConfiguration(m_floating ? LayerShellQt::Window::ScreenFromQWindow : LayerShellQt::Window::ScreenFromCompositor);
+        setPosition(shownOnScreen->geometry().topLeft());
     } else if (KWindowSystem::isPlatformX11()) {
         m_x11Positioner->setAnchors(Qt::TopEdge);
         m_x11Positioner->setMargins(margins());
