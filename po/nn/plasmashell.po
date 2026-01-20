@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-27 00:45+0000\n"
+"POT-Creation-Date: 2026-01-20 00:44+0000\n"
 "PO-Revision-Date: 2025-10-26 13:06+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -337,13 +337,13 @@ msgstr ""
 "«adaptiv» dårleg yting ved draging og endring av storleiken til vindauge. "
 "Vurder derfor å bruka andre innstillingar."
 
-#: panelview.cpp:1141
+#: panelview.cpp:1140
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Gøym panelinnstillingar"
 
-#: panelview.cpp:1143
+#: panelview.cpp:1142
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"

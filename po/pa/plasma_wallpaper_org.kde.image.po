@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-16 00:45+0000\n"
+"POT-Creation-Date: 2026-01-20 00:44+0000\n"
 "PO-Revision-Date: 2025-09-15 09:50-0500\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -39,44 +39,44 @@ msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "ਵਾਲਪੇਪਰਾਂ ਵਾਲੀ ਡਾਇਰੈਕਟਰੀ, ਜਿਸ ਤੋਂ ਸਲਾਈਡ ਸ਼ੋਅ ਵੇਖਾਉਣਾ ਹੈ"
 
-#: imagepackage/contents/ui/config.qml:146
+#: imagepackage/contents/ui/config.qml:148
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Positioning:"
 msgstr "ਸਥਿਤੀ:"
 
-#: imagepackage/contents/ui/config.qml:149
+#: imagepackage/contents/ui/config.qml:151
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled and cropped"
 msgstr "ਸਕੇਲ ਤੇ ਕਰੋਪ ਕੀਤਾ"
 
-#: imagepackage/contents/ui/config.qml:153
+#: imagepackage/contents/ui/config.qml:155
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled"
 msgstr "ਸਕੇਲ ਕੀਤਾ"
 
-#: imagepackage/contents/ui/config.qml:157
+#: imagepackage/contents/ui/config.qml:159
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled, keep proportions"
 msgstr "ਸਕੇਲ ਕੀਤਾ, ਆਕਾਰ ਅਨੁਪਾਤ ਬਣਾਈ ਰੱਖੋ"
 
-#: imagepackage/contents/ui/config.qml:161
+#: imagepackage/contents/ui/config.qml:163
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "ਸੈਂਟਰ"
 
-#: imagepackage/contents/ui/config.qml:189
+#: imagepackage/contents/ui/config.qml:191
 #, kde-format
 msgctxt ""
 "@label:listbox part of a sentence: 'Switch dynamic wallpapers [based on]'"
 msgid "Switch dynamic wallpapers:"
 msgstr "ਡਾਇਨੇਮਿਕ ਵਾਲਪੇਪਰਾਂ ਲਈ ਬਦਲੋ:"
 
-#: imagepackage/contents/ui/config.qml:197
+#: imagepackage/contents/ui/config.qml:199
 #, fuzzy, kde-format
 #| msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 #| msgid "Based on whether the color scheme is dark or light"
@@ -84,46 +84,46 @@ msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the Plasma style is light or dark "
 msgstr "ਰੰਗ ਸਕੀਮ ਗੂੜ੍ਹੀ ਹੈ ਜਾਂ ਫਿੱਕੀ, ਉਸ ਮੁਤਾਬਕ"
 
-#: imagepackage/contents/ui/config.qml:199
+#: imagepackage/contents/ui/config.qml:201
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on the day-night cycle"
 msgstr "ਦਿਨ-ਰਾਤ ਦੇ ਚੱਕਰ ਮੁਤਾਬਕ"
 
-#: imagepackage/contents/ui/config.qml:203
+#: imagepackage/contents/ui/config.qml:205
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always use light variant"
 msgstr "ਹਮੇਸ਼ਾਂ ਫਿੱਕਾ ਰੂਪ ਵਰਤੋਂ"
 
-#: imagepackage/contents/ui/config.qml:207
+#: imagepackage/contents/ui/config.qml:209
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always use dark variant"
 msgstr "ਹਮੇਸ਼ਾਂ ਗੂੜ੍ਹਾ ਰੂਪ ਵਰਤੋਂ"
 
-#: imagepackage/contents/ui/config.qml:221
+#: imagepackage/contents/ui/config.qml:223
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
 msgstr "…ਸੰਰਚਨਾ"
 
-#: imagepackage/contents/ui/config.qml:232
+#: imagepackage/contents/ui/config.qml:234
 #, kde-format
 msgid "Background:"
 msgstr "ਬੈਕਗਰਾਊਂਡ:"
 
-#: imagepackage/contents/ui/config.qml:233
+#: imagepackage/contents/ui/config.qml:235
 #, kde-format
 msgid "Blur"
 msgstr "ਧੁੰਦਲਾ"
 
-#: imagepackage/contents/ui/config.qml:242
+#: imagepackage/contents/ui/config.qml:244
 #, kde-format
 msgid "Solid color"
 msgstr "ਇਕਸਾਰ ਰੰਗ"
 
-#: imagepackage/contents/ui/config.qml:253
+#: imagepackage/contents/ui/config.qml:255
 #, kde-format
 msgid "Select Background Color"
 msgstr "ਬੈਕਗਰਾਊਂਡ ਰੰਗ ਚੁਣੋ"

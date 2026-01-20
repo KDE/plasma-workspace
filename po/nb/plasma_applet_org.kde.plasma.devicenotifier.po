@@ -6,14 +6,14 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-17 00:46+0000\n"
-"PO-Revision-Date: 2025-05-31 20:20+0200\n"
+"PO-Revision-Date: 2026-01-18 20:22+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.12.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -23,7 +23,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button check a storageAccess (i.e disk) for error"
 msgid "Check for Errors"
-msgstr ""
+msgstr "Kontroller for feil"
 
 #: actions/mountaction.cpp:97
 #, kde-format
@@ -61,11 +61,10 @@ msgid "This device has file system errors."
 msgstr "Denne enheten har feil ved filsystemet."
 
 #: devicemessagemonitor_p.cpp:173
-#, fuzzy, kde-format
-#| msgid "This device has file system errors."
+#, kde-format
 msgctxt "@label device is a storage disk"
 msgid "This device has no errors"
-msgstr "Denne enheten har feil ved filsystemet."
+msgstr "Enheten har ingen feil"
 
 #: devicemessagemonitor_p.cpp:176
 #, kde-format
@@ -111,7 +110,7 @@ msgstr "Du har ikke tillatelser til å reparere denne enheten."
 #: devicemessagemonitor_p.cpp:204 devicemessagemonitor_p.cpp:269
 #, kde-format
 msgid "Unknown error type"
-msgstr ""
+msgstr "Ukjent type feil"
 
 #: devicemessagemonitor_p.cpp:208
 #, kde-format

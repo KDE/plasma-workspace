@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-27 00:45+0000\n"
+"POT-Creation-Date: 2026-01-20 00:44+0000\n"
 "PO-Revision-Date: 2025-11-13 22:21+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -333,13 +333,13 @@ msgstr ""
 "使用 NVIDIA 顯示卡時若是使用 X11 圖形平台，「浮動」風格與「自動調整」透明度模"
 "式已知會造成視窗拖曳與調整大小時的效能降低。請考慮使用其他設定。"
 
-#: panelview.cpp:1141
+#: panelview.cpp:1140
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "隱藏面板設定"
 
-#: panelview.cpp:1143
+#: panelview.cpp:1142
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"

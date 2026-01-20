@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2025-05-31 21:05+0200\n"
+"PO-Revision-Date: 2026-01-18 20:29+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
 "Language: nb\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.12.1\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -176,15 +176,13 @@ msgid "Confirm password:"
 msgstr "Bekreft passord:"
 
 #: src/ui/CreateUser.qml:88
-#, fuzzy, kde-format
-#| msgid "Create"
+#, kde-format
 msgctxt "@action:button Create a new user"
 msgid "Create"
 msgstr "Legg til"
 
 #: src/ui/CreateUser.qml:109
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action:button Cancel creating new user"
 msgid "Cancel"
 msgstr "Avbryt"
@@ -590,6 +588,8 @@ msgid ""
 "Cannot change your own username while logged in; log out and then log in as "
 "another user to change this account’s username."
 msgstr ""
+"Kan ikke endre ditt eget brukernavn mens du er innlogget; logg ut og logg "
+"inn igjen med en annen bruker for å endre navnet på denne brukeren."
 
 #: src/ui/UserDetailsPage.qml:186
 #, kde-format
@@ -598,6 +598,8 @@ msgid ""
 "Cannot change the username of a logged-in user; wait until this user logs "
 "out first."
 msgstr ""
+"Kan ikke endre ditt eget brukernavn mens brukeren er innlogget; vent til "
+"brukeren logger seg ut først."
 
 #: src/ui/UserDetailsPage.qml:214
 #, kde-format
@@ -637,6 +639,8 @@ msgid ""
 "Cannot delete yourself! Log out and then log in as another user to delete "
 "this user account."
 msgstr ""
+"Kan ikke slette deg selv! Logg ut og logg inn igjen med en annen bruker for "
+"å slette denne brukerkontoen."
 
 #: src/ui/UserDetailsPage.qml:286
 #, kde-format

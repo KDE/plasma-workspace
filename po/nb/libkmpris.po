@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-29 00:44+0000\n"
-"PO-Revision-Date: 2025-02-14 22:58+0100\n"
+"PO-Revision-Date: 2026-01-18 20:19+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
 "Language: nb\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.2\n"
+"X-Generator: Lokalize 25.12.1\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -43,36 +43,28 @@ msgid "Media playback previous"
 msgstr "Media avspilling forrige"
 
 #: kded/mprisservice.cpp:144
-#, fuzzy, kde-format
-#| msgctxt "@title shortcut"
-#| msgid "Media playback previous"
+#, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback seek forward 5s"
-msgstr "Media avspilling forrige"
+msgstr "Media avspilling spol 5 sekunder frem"
 
 #: kded/mprisservice.cpp:148
-#, fuzzy, kde-format
-#| msgctxt "@title shortcut"
-#| msgid "Media playback next"
+#, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback seek backward 5s"
-msgstr "Media avspilling neste"
+msgstr "Media avspilling spol 5 sekunder bak"
 
 #: kded/mprisservice.cpp:152
-#, fuzzy, kde-format
-#| msgctxt "@title shortcut"
-#| msgid "Media playback previous"
+#, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback seek forward 30s"
-msgstr "Media avspilling forrige"
+msgstr "Media avspilling spol 30 sekunder frem"
 
 #: kded/mprisservice.cpp:156
-#, fuzzy, kde-format
-#| msgctxt "@title shortcut"
-#| msgid "Media playback next"
+#, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback seek backward 30s"
-msgstr "Media avspilling neste"
+msgstr "Media avspilling spol 30 sekunder bak"
 
 #: kded/mprisservice.cpp:159
 #, kde-format

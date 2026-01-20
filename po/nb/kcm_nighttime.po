@@ -1,0 +1,230 @@
+# Translation of kcm_nighttime to Norwegian Bokmål
+#
+# SPDX-FileCopyrightText: 2026 Martin Hansen <mh306602@gmail.com>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"PO-Revision-Date: 2026-01-18 19:59+0100\n"
+"Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
+"Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
+"Language: nb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 25.12.1\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: ui/main.qml:26
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Time-based features such as Night Light and dynamic wallpapers can be "
+"synchronized with the day-night cycle. Choose your preferred cycle here."
+msgstr ""
+"Tidsbaserte funksjoner, som kveldsfarger og dynamiske bakgrunnsbilder, kan "
+"synkroniseres med dag–natt-syklusen. Her kan du velge hvilken type syklus du "
+"vil bruke."
+
+#: ui/main.qml:42
+#, kde-format
+msgctxt ""
+"@label:listbox part of a sentence: 'Determine sunrise and sunset times "
+"[based on]'"
+msgid "Determine sunrise and sunset times:"
+msgstr "Fastsett tid for soloppgang og solnedgang basert på:"
+
+#: ui/main.qml:47
+#, kde-format
+msgctxt ""
+"@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
+msgid "Based on device's location"
+msgstr "Geografisk posisjon"
+
+#: ui/main.qml:48
+#, kde-format
+msgctxt ""
+"@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
+msgid "Using custom times"
+msgstr "Brukervalgte klokkeslett"
+
+#: ui/main.qml:60
+#, kde-format
+msgctxt "@label"
+msgid "Sunrise:"
+msgstr "Soloppgang:"
+
+#: ui/main.qml:75
+#, kde-format
+msgctxt "@label"
+msgid "Sunset:"
+msgstr "Solnedgang:"
+
+#: ui/main.qml:89
+#, kde-format
+msgctxt "@label:spinbox"
+msgid "Transition duration:"
+msgstr "Overgangstid:"
+
+#: ui/main.qml:95
+#, kde-format
+msgctxt "@item:valuesuffix transition duration"
+msgid "%1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] "%1 minutt"
+msgstr[1] "%1 minutter"
+
+#: ui/main.qml:119
+#, kde-format
+msgctxt "@option:radio"
+msgid "Automatically detect location"
+msgstr "Finn automatisk geografisk posisjon"
+
+#: ui/main.qml:146
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The <application>GeoClue2</application> service will be used to periodically "
+"update the device's location using GPS or cell tower triangulation if "
+"available, or else by sending its IP address to <link url='https://geoip.com/"
+"privacy/'>GeoIP</link>."
+msgstr ""
+"Tjenesten <application>GeoClue2</application> blir brukt til å oppdatere "
+"posisjonen regelmessig, enten via GPS eller triangulering av mobilmaster "
+"dersom tilgjengelig, eller ved å sende IP-adressen til <link url='https://"
+"geoip.com/privacy/'>GeoIP</link>."
+
+#: ui/main.qml:147
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The <application>%1</application> service will be used to periodically "
+"update the device's location. Please open a bug report at <link url='https://"
+"bugs.kde.org'>https://bugs.kde.org</link> asking KDE developers to write a "
+"detailed description of what this service will do."
+msgstr ""
+"Tjenesten <application>%1</application> blir brukt til å oppdatere "
+"posisjonen regelmessig. Legg til en feilrapport <link url='https://bugs.kde."
+"org'>https://bugs.kde.org</link> der du ber KDE-utviklerne å skrive en "
+"detaljert beskrivelse av hva tjenesten gjør."
+
+#: ui/main.qml:164
+#, kde-format
+msgctxt "@option:radio"
+msgid "Use manual location:"
+msgstr "Bruk manuell posisjon:"
+
+#: ui/main.qml:176
+#, kde-format
+msgctxt "@label"
+msgid "Latitude:"
+msgstr "breiddegrad:"
+
+#: ui/main.qml:196
+#, kde-format
+msgctxt "@label"
+msgid "Longitude:"
+msgstr "lengdegrad:"
+
+#: ui/SunPath.qml:52
+#, kde-format
+msgctxt "@info:tooltip; the variables are times of day, e.g. 07:30"
+msgid "Sunrise starts at %1 and ends at %2"
+msgstr "Soloppgang begynner kl. %1 og slutter kl. %2"
+
+#: ui/SunPath.qml:57
+#, kde-format
+msgctxt "@label"
+msgid "Sunrise"
+msgstr "Soloppgang"
+
+#: ui/SunPath.qml:77
+#, kde-format
+msgctxt "@info:tooltip; the variables are times of day, e.g. 07:30"
+msgid "Sunset starts at %1 and ends at %2"
+msgstr "Solnedgang begynner kl. %1 og slutter kl. %2"
+
+#: ui/SunPath.qml:82
+#, kde-format
+msgctxt "@label"
+msgid "Sunset"
+msgstr "Solnedgang"
+
+#: ui/SunPath.qml:107
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Sunrise and sunset times cannot be determined at your location due to polar "
+"day. Choose custom times instead."
+msgstr ""
+"Klarte ikke fastsette soloppgang og solnedgang basert på din posisjon på "
+"grunn av midnattsol. Bruk brukervalgt klokkeslett i stedet."
+
+#: ui/SunPath.qml:109
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Sunrise and sunset times cannot be determined at your location due to polar "
+"night. Choose custom times instead."
+msgstr ""
+"Klarte ikke fastsette soloppgang og solnedgang basert på din posisjon på "
+"grunn av møretiden. Bruk brukervalgt klokkeslett i stedet."
+
+#: ui/SunPath.qml:111
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Sunrise and sunset times cannot be reliably determined at your location. "
+"Choose custom times instead."
+msgstr ""
+"Klarte ikke fastsette soloppgang og solnedgang basert på din posisjon på "
+"grunn av feil. Bruk brukervalgt klokkeslett i stedet."
+
+#: ui/TimeField.qml:31
+#, kde-format
+msgctxt "Time separator between hours and minutes"
+msgid ":"
+msgstr ":"
+
+#: ui/WorldMap.qml:76
+#, kde-format
+msgctxt ""
+"@label:chooser Tap should be translated to mean touching using a touchscreen"
+msgid "Tap to choose your location on the map."
+msgstr "Trykk på kartet for å velge hvor du er."
+
+#: ui/WorldMap.qml:77
+#, kde-format
+msgctxt ""
+"@label:chooser Click should be translated to mean clicking using a mouse"
+msgid "Click to choose your location on the map."
+msgstr "Trykk for å velge din posisjon på kartet."
+
+#: ui/WorldMap.qml:189
+#, kde-format
+msgid "Zoom in"
+msgstr "Forstørr"
+
+#: ui/WorldMap.qml:206
+#, kde-format
+msgid "Zoom out"
+msgstr "Forminsk"
+
+#: ui/WorldMap.qml:235
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Modified from <link url='https://commons.wikimedia.org/wiki/File:"
+"World_location_map_(equirectangular_180).svg'>World location map</link> by "
+"TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
+"by-sa/3.0'>CC BY-SA 3.0</link>"
+msgstr ""
+"Kilde <link url='https://commons.wikimedia.org/wiki/File:"
+"World_location_map_(equirectangular_180).svg'>verdenskart</link> av TUBS / "
+"Wikimedia Commons / <link url='https://creativecommons.org/licenses/by-"
+"sa/3.0'>CC BY-SA 3.0</link>"

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2026-01-01 19:52+0100\n"
+"PO-Revision-Date: 2026-01-19 19:12+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -92,14 +92,13 @@ msgstr "Избор на аудио файл"
 #, kde-format
 msgctxt "@action:button Plasma-specific notifications"
 msgid "Configure for System…"
-msgstr ""
+msgstr "Конфигуриране на системата…"
 
 #: ui/main.qml:53
-#, fuzzy, kde-format
-#| msgid "Other Applications"
+#, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Configure for Applications…"
-msgstr "Други програми"
+msgstr "Конфигуриране на приложения…"
 
 #: ui/main.qml:96
 #, kde-format
@@ -209,7 +208,7 @@ msgstr "В близост до иконата за известия"
 #, kde-format
 msgctxt "@action:button choose custom notification position"
 msgid "Choose…"
-msgstr ""
+msgstr "Избиране…"
 
 #: ui/main.qml:278 ui/main.qml:294
 #, kde-format
@@ -225,8 +224,7 @@ msgid "Hide after:"
 msgstr "Скриване след:"
 
 #: ui/main.qml:306
-#, fuzzy, kde-format
-#| msgid "Show timeout indicator"
+#, kde-format
 msgctxt ""
 "@option:check Show progress bar on notifications indicating when it will hide"
 msgid "Show timeout indicator"
@@ -271,12 +269,11 @@ msgid "Popup Position"
 msgstr "Изскачаща позиция"
 
 #: ui/SourcesPage.qml:20
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt ""
 "@title:window kcm page title, configure app-specific notification settings"
 msgid "Application Notifications"
-msgstr "Настройки на приложението"
+msgstr "Програмни съобщения"
 
 #: ui/SourcesPage.qml:104
 #, kde-format

@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-16 00:45+0000\n"
-"PO-Revision-Date: 2025-02-20 06:32+0100\n"
+"PO-Revision-Date: 2026-01-18 17:04+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
 "Language: nb\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.2\n"
+"X-Generator: Lokalize 25.12.1\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -25,10 +25,9 @@ msgid "Display Detected"
 msgstr "Skjerm oppdaget"
 
 #: devicenotifications.cpp:400
-#, fuzzy, kde-format
-#| msgid "A display has been unplugged."
+#, kde-format
 msgid "A display has been connected."
-msgstr "En skjerm ble frakoblet."
+msgstr "En ny skjerm ble koblet til."
 
 #: devicenotifications.cpp:420
 #, kde-format
@@ -37,22 +36,19 @@ msgid "Display Removed"
 msgstr "Skjerm fjernet"
 
 #: devicenotifications.cpp:421
-#, fuzzy, kde-format
-#| msgid "A display has been unplugged."
+#, kde-format
 msgid "A display has been disconnected."
-msgstr "En skjerm ble frakoblet."
+msgstr "En skjerm ble koblet fra."
 
 #: devicenotifications.cpp:467
-#, fuzzy, kde-format
-#| msgid "%1 has been unplugged."
+#, kde-format
 msgid "%1 has been connected."
-msgstr "%1 ble frakoblet."
+msgstr "%1 ble koblet til."
 
 #: devicenotifications.cpp:467
-#, fuzzy, kde-format
-#| msgid "A USB device has been unplugged."
+#, kde-format
 msgid "A USB device has been connected."
-msgstr "En USB-enhet ble frakoblet."
+msgstr "En USB-enhet ble koblet til."
 
 #: devicenotifications.cpp:472
 #, kde-format
@@ -61,16 +57,14 @@ msgid "USB Device Detected"
 msgstr "USB-enhet oppdaget"
 
 #: devicenotifications.cpp:510
-#, fuzzy, kde-format
-#| msgid "%1 has been unplugged."
+#, kde-format
 msgid "%1 has been disconnected."
-msgstr "%1 ble frakoblet."
+msgstr "%1 ble koblet fra."
 
 #: devicenotifications.cpp:510
-#, fuzzy, kde-format
-#| msgid "A USB device has been unplugged."
+#, kde-format
 msgid "A USB device has been disconnected."
-msgstr "En USB-enhet ble frakoblet."
+msgstr "En USB-enhet ble koblet fra."
 
 #: devicenotifications.cpp:515
 #, kde-format

@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024, 2025 Tommi Nieminen <translator@legisign.org>
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024, 2025, 2026 Tommi Nieminen <translator@legisign.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2025-08-14 18:37+0300\n"
+"PO-Revision-Date: 2026-01-10 20:56+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -610,6 +610,8 @@ msgid ""
 "Cannot change your own username while logged in; log out and then log in as "
 "another user to change this account’s username."
 msgstr ""
+"Kirjautuneena ei voi muuttaa omaa käyttäjätunnusta: kirjaudu ulos ja toisena "
+"käyttäjänä takaisin  muuttaaksesi tämän käyttäjätunnuksen."
 
 #: src/ui/UserDetailsPage.qml:186
 #, kde-format
@@ -618,6 +620,8 @@ msgid ""
 "Cannot change the username of a logged-in user; wait until this user logs "
 "out first."
 msgstr ""
+"Kirjautuneen käyttäjän käyttäjätunnusta ei voi muuttaa: odota, että käyttäjä "
+"kirjautuu ensin ulos."
 
 #: src/ui/UserDetailsPage.qml:214
 #, kde-format
@@ -657,6 +661,8 @@ msgid ""
 "Cannot delete yourself! Log out and then log in as another user to delete "
 "this user account."
 msgstr ""
+"Itseä ei voi poistaa! Kirjaudu ulos ja toisena käyttäjänä takaisin "
+"poistaaksesi tämän käyttäjätunnuksen."
 
 #: src/ui/UserDetailsPage.qml:286
 #, kde-format
