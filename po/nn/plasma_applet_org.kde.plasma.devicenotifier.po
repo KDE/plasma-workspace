@@ -256,7 +256,3 @@ msgstr "Alle einingar"
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "Vis sprettopp ved tilkopling av einingar"
-
-#~ msgctxt "@action:button Mount a disk without verifying for errors"
-#~ msgid "Mount without verifying"
-#~ msgstr "Monter utan kontrollering"

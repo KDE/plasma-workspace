@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-27 00:45+0000\n"
+"POT-Creation-Date: 2026-01-20 03:01+0000\n"
 "PO-Revision-Date: 2026-01-15 19:50+0100\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -333,13 +333,13 @@ msgstr ""
 "adaptívny režim nepriehľadnosti spôsobujú slabý výkon pri preťahovaní okien "
 "a zmene veľkosti. Zvážte použitie iných nastavení."
 
-#: panelview.cpp:1141
+#: panelview.cpp:1140
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Skryť nastavenie panelu"
 
-#: panelview.cpp:1143
+#: panelview.cpp:1142
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"

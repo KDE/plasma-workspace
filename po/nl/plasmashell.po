@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-27 00:45+0000\n"
+"POT-Creation-Date: 2026-01-20 03:01+0000\n"
 "PO-Revision-Date: 2025-10-05 16:03+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -335,13 +335,13 @@ msgstr ""
 "Aanpasbare dekking slecht gedrag van vensters verslepen en prestatie van "
 "grootte wijzigen veroorzaakt. Overweeg andere instellingen te gebruiken."
 
-#: panelview.cpp:1141
+#: panelview.cpp:1140
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Configuratie van paneel verbergen"
 
-#: panelview.cpp:1143
+#: panelview.cpp:1142
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"

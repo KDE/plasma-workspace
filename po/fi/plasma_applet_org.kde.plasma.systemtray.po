@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2013, 2014, 2015, 2017.
-# SPDX-FileCopyrightText: 2013, 2014, 2019, 2020, 2021, 2022, 2024, 2025 Tommi Nieminen <translator@legisign.org>
+# SPDX-FileCopyrightText: 2013, 2014, 2019, 2020, 2021, 2022, 2024, 2025, 2026 Tommi Nieminen <translator@legisign.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-05 00:44+0000\n"
-"PO-Revision-Date: 2025-05-25 10:36+0300\n"
+"PO-Revision-Date: 2026-01-10 21:00+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: qml/config.qml:13
 #, kde-format
@@ -24,30 +24,28 @@ msgid "General"
 msgstr "Perusasetukset"
 
 #: qml/ConfigGeneral.qml:43
-#, fuzzy, kde-format
-#| msgid "Shown when relevant"
+#, kde-format
 msgctxt "@item:inlistbox Show this System Tray item when relevant"
 msgid "Show when relevant"
 msgstr "Näytä tarvittaessa"
 
 #: qml/ConfigGeneral.qml:47
-#, fuzzy, kde-format
-#| msgid "Always shown"
+#, kde-format
 msgctxt "@item:inlistbox Always show this System Tray item"
 msgid "Always show"
-msgstr "Aina näkyvissä"
+msgstr "Näytä aina"
 
 #: qml/ConfigGeneral.qml:51
 #, kde-format
 msgctxt "@item:inlistbox Show this System Tray item only in the expanded popup"
 msgid "Show only in popup"
-msgstr ""
+msgstr "Näytä vain ponnahdusikkunassa"
 
 #: qml/ConfigGeneral.qml:55
 #, kde-format
 msgctxt "@item:inlistbox Never show this System Tray item; disable it"
 msgid "Never show (disabled)"
-msgstr ""
+msgstr "Älä koskaan näytä (poista käytöstä)"
 
 #: qml/ConfigGeneral.qml:126
 #, kde-format
@@ -98,13 +96,7 @@ msgid "I understand the risks"
 msgstr "Ymmärrän riskit"
 
 #: qml/ConfigGeneral.qml:187
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:usagetip"
-#| msgid ""
-#| "Disabling the clipboard is not recommended, as it will cause copied data "
-#| "to be lost when the application it was copied from is closed.<nl/><nl/"
-#| ">Instead consider configuring the clipboard to disable its history, or "
-#| "only remember one item at a time."
+#, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
 "Disabling the clipboard is not recommended, as it will cause copied data to "
@@ -114,10 +106,12 @@ msgid ""
 "configuring the clipboard to not save history, or to only remember one item "
 "at a time."
 msgstr ""
-"Ei ole suositeltavaa poistaa leikepöytää käytöstä, koska silloin kopioitu "
-"tieto menetetään suljettaessa sovellus, josta se kopioitiin.<nl/><nl/"
-">Harkitse sen sijaan leikepöydän historian poistamista käytöstä tai sen "
-"asettamista muistamaan vain kohde kerrallaan."
+"Leikepöytää ei suositella poistamaan käytöstä, koska silloin kopioitu tieto "
+"menetetään suljettaessa sovellus, josta se kopioitiin.<nl/><nl/>Tee näin "
+"vain, jos olet itse lisännyt itsenäiset leikepöytäsovelman muualle tai "
+"käytät kolmannen osapuolen leikepöydänhallintaa. Harkitse myös leikepöydän "
+"asettamista niin, että historiaa ei tallenneta tai muistetaan vain tietue "
+"kerrallaan."
 
 #: qml/ConfigGeneral.qml:196
 #, kde-kuit-format
@@ -128,25 +122,25 @@ msgid ""
 "added a standalone Notifications widget somewhere else, or are intentionally "
 "using a 3rd-party notification manager to handle notifications."
 msgstr ""
+"Ilmoitussovelman poistamista käytöstä ei suositella, koska sovellusten "
+"ilmoituksia ei näytettäisi lainkaan.<nl/><nl/>Tee näin vain, jos olet itse "
+"lisännyt itsenäisen ilmoitussovelman muualle tai käytät ilmoitusten "
+"käsittelyyn kolmannen osapuolen ohjelmaa."
 
 #: qml/ConfigGeneral.qml:208
-#, fuzzy, kde-format
-#| msgid "Scale with Panel height"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel height"
 msgstr "Sovita paneelin korkeuteen"
 
 #: qml/ConfigGeneral.qml:209
-#, fuzzy, kde-format
-#| msgid "Scale with Panel width"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel width"
 msgstr "Sovita paneelin leveyteen"
 
 #: qml/ConfigGeneral.qml:211
-#, fuzzy, kde-format
-#| msgctxt "The arrangement of system tray icons in the Panel"
-#| msgid "Panel icon size:"
+#, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon size:"
 msgstr "Paneelin kuvakekoko:"
@@ -187,18 +181,16 @@ msgid "Automatically set to Large when in Touch Mode"
 msgstr "Aseta automaattisesti suureksi kosketustilassa"
 
 #: qml/ConfigGeneral.qml:315
-#, fuzzy, kde-format
-#| msgid "Entries"
+#, kde-format
 msgctxt "@title:column"
 msgid "Entries"
-msgstr "Kuvakkeet"
+msgstr "Merkinnät"
 
 #: qml/ConfigGeneral.qml:319
-#, fuzzy, kde-format
-#| msgid "Always shown"
+#, kde-format
 msgctxt "@option:check, This is referring to system tray entries"
 msgid "Always show all"
-msgstr "Aina näkyvissä"
+msgstr "Näytä aina kaikki"
 
 #: qml/ExpandedRepresentation.qml:60
 #, kde-format
