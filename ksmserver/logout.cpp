@@ -52,8 +52,6 @@
 #include <KSharedConfig>
 
 #include "kwinsession_interface.h"
-#include "logoutprompt_interface.h"
-#include "shutdown_interface.h"
 
 enum KWinSessionState {
     Normal = 0,
