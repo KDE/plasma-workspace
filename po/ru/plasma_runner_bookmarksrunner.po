@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-21 00:47+0000\n"
 "PO-Revision-Date: 2010-06-06 12:59+0400\n"
 "Last-Translator: Alexander Potashev <aspotashev@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -22,23 +22,23 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: bookmarksrunner.cpp:37
+#: bookmarksrunner.cpp:41
 #, kde-format
 msgid "Finds web browser bookmarks matching :q:."
 msgstr "Искать :q: в закладках веб-браузера."
 
-#: bookmarksrunner.cpp:38
+#: bookmarksrunner.cpp:42
 #, kde-format
 msgctxt "list of all web browser bookmarks"
 msgid "bookmarks"
 msgstr "закладки"
 
-#: bookmarksrunner.cpp:38
+#: bookmarksrunner.cpp:42
 #, kde-format
 msgid "List all web browser bookmarks"
 msgstr "Показать все закладки веб-браузера"
 
-#: bookmarksrunner.cpp:58
+#: bookmarksrunner.cpp:61
 #, kde-format
 msgctxt "list of all konqueror bookmarks"
 msgid "bookmarks"

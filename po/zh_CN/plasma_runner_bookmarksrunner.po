@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-21 00:47+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -18,23 +18,23 @@ msgstr ""
 "plasma_runner_bookmarksrunner.pot\n"
 "X-Crowdin-File-ID: 43611\n"
 
-#: bookmarksrunner.cpp:37
+#: bookmarksrunner.cpp:41
 #, kde-format
 msgid "Finds web browser bookmarks matching :q:."
 msgstr "查找匹配 :q: 的网页浏览器书签。"
 
-#: bookmarksrunner.cpp:38
+#: bookmarksrunner.cpp:42
 #, kde-format
 msgctxt "list of all web browser bookmarks"
 msgid "bookmarks"
 msgstr "书签"
 
-#: bookmarksrunner.cpp:38
+#: bookmarksrunner.cpp:42
 #, kde-format
 msgid "List all web browser bookmarks"
 msgstr "列出所有网页浏览器书签"
 
-#: bookmarksrunner.cpp:58
+#: bookmarksrunner.cpp:61
 #, kde-format
 msgctxt "list of all konqueror bookmarks"
 msgid "bookmarks"

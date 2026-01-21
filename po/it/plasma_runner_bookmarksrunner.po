@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_bookmarksrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-21 00:47+0000\n"
 "PO-Revision-Date: 2009-11-21 19:46+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128@baslug.org>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -16,23 +16,23 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: bookmarksrunner.cpp:37
+#: bookmarksrunner.cpp:41
 #, kde-format
 msgid "Finds web browser bookmarks matching :q:."
 msgstr "Trova segnalibri del browser web che corrispondono a :q:."
 
-#: bookmarksrunner.cpp:38
+#: bookmarksrunner.cpp:42
 #, kde-format
 msgctxt "list of all web browser bookmarks"
 msgid "bookmarks"
 msgstr "segnalibri"
 
-#: bookmarksrunner.cpp:38
+#: bookmarksrunner.cpp:42
 #, kde-format
 msgid "List all web browser bookmarks"
 msgstr "Elenca tutti i segnalibri del browser web"
 
-#: bookmarksrunner.cpp:58
+#: bookmarksrunner.cpp:61
 #, kde-format
 msgctxt "list of all konqueror bookmarks"
 msgid "bookmarks"

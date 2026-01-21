@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-21 00:47+0000\n"
 "PO-Revision-Date: 2009-12-16 09:20+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: Punjabi/Panjabi <punjabi-users@lists.sf.net>\n"
@@ -17,23 +17,23 @@ msgstr ""
 "X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: bookmarksrunner.cpp:37
+#: bookmarksrunner.cpp:41
 #, kde-format
 msgid "Finds web browser bookmarks matching :q:."
 msgstr "ਇਸ ਨਾਲ ਮਿਲਦੇ ਵੈੱਬ ਬਰਾਊਜ਼ਰ ਬੁੱਕਮਾਰਕ ਲੱਭੋ :q:."
 
-#: bookmarksrunner.cpp:38
+#: bookmarksrunner.cpp:42
 #, kde-format
 msgctxt "list of all web browser bookmarks"
 msgid "bookmarks"
 msgstr "ਬੁੱਕਮਾਰਕ"
 
-#: bookmarksrunner.cpp:38
+#: bookmarksrunner.cpp:42
 #, kde-format
 msgid "List all web browser bookmarks"
 msgstr "ਸਭ ਵੈੱਬ ਬਰਾਊਜ਼ਰ ਬੁੱਕਮਾਰਕ ਵੇਖੋ"
 
-#: bookmarksrunner.cpp:58
+#: bookmarksrunner.cpp:61
 #, kde-format
 msgctxt "list of all konqueror bookmarks"
 msgid "bookmarks"

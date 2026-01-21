@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-21 00:47+0000\n"
 "PO-Revision-Date: 2024-02-11 18:57\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -22,23 +22,23 @@ msgstr ""
 "plasma_runner_bookmarksrunner.po\n"
 "X-Crowdin-File-ID: 10866\n"
 
-#: bookmarksrunner.cpp:37
+#: bookmarksrunner.cpp:41
 #, kde-format
 msgid "Finds web browser bookmarks matching :q:."
 msgstr "Пошук закладак вэб-браўзера, якія адпавядаюць :q:."
 
-#: bookmarksrunner.cpp:38
+#: bookmarksrunner.cpp:42
 #, kde-format
 msgctxt "list of all web browser bookmarks"
 msgid "bookmarks"
 msgstr "закладкі"
 
-#: bookmarksrunner.cpp:38
+#: bookmarksrunner.cpp:42
 #, kde-format
 msgid "List all web browser bookmarks"
 msgstr "Спіс усіх закладак вэб-браўзера"
 
-#: bookmarksrunner.cpp:58
+#: bookmarksrunner.cpp:61
 #, kde-format
 msgctxt "list of all konqueror bookmarks"
 msgid "bookmarks"
