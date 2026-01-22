@@ -11,6 +11,8 @@
 
 #include <Solid/SolidNamespace>
 
+#include <storageinfo.h>
+
 class DevicesStateMonitor;
 
 /**

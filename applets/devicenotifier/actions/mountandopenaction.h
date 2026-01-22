@@ -21,7 +21,7 @@ class MountAndOpenAction : public ActionInterface
     Q_INTERFACES(ActionInterface)
 
 public:
-    explicit MountAndOpenAction(const QString &udi, QObject *parent = nullptr);
+    explicit MountAndOpenAction(const std::shared_ptr<StorageInfo> &storageInfo, QObject *parent = nullptr);
     ~MountAndOpenAction() override;
 
     QString predicate() const override;

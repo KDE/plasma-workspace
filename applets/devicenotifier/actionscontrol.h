@@ -13,6 +13,8 @@
 #include "actioninterface.h"
 #include "predicatesmonitor_p.h"
 
+#include "storageinfo.h"
+
 class ActionsControl : public QAbstractListModel
 {
     Q_OBJECT
@@ -34,7 +36,7 @@ public:
 
     Q_INVOKABLE void actionTriggered(const QString &operation);
 
-    explicit ActionsControl(const QString &udi, QObject *parent = nullptr);
+    explicit ActionsControl(const std::shared_ptr<StorageInfo> &storageInfo, QObject *parent = nullptr);
     ~ActionsControl() override;
 
     bool isEmpty() const;
@@ -70,12 +72,13 @@ private Q_SLOTS:
     void onActionTextChanged(const QString &action);
 
 private:
-    QString m_udi;
     bool m_isEmpty;
     ActionInterface *m_defaultAction;
     ActionInterface *m_unmountAction;
     QList<ActionInterface *> m_actions;
     QHash<QString, std::pair<int, ActionInterface *>> m_notValidActions;
+
+    std::shared_ptr<StorageInfo> m_storageInfo;
 
     std::shared_ptr<PredicatesMonitor> m_predicatesMonitor;
 };

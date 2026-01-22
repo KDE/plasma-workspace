@@ -12,8 +12,8 @@
 
 #include <KService>
 
-DefaultAction::DefaultAction(const QString &udi, const QString &desktopFile, QObject *parent)
-    : ActionInterface(udi, parent)
+DefaultAction::DefaultAction(const std::shared_ptr<StorageInfo> &storageInfo, const QString &desktopFile, QObject *parent)
+    : ActionInterface(storageInfo, parent)
 {
     qCDebug(APPLETS::DEVICENOTIFIER) << "Initializing default action with " << desktopFile << " predicate";
     const QString actionUrl = QStandardPaths::locate(QStandardPaths::GenericDataLocation, u"solid/actions/" + desktopFile);

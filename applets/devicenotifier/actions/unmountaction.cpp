@@ -12,17 +12,15 @@
 #include <Solid/OpticalDrive>
 #include <Solid/PortableMediaPlayer>
 
-UnmountAction::UnmountAction(const QString &udi, QObject *parent)
-    : ActionInterface(udi, parent)
+UnmountAction::UnmountAction(const std::shared_ptr<StorageInfo> &storageInfo, QObject *parent)
+    : ActionInterface(storageInfo, parent)
     , m_stateMonitor(DevicesStateMonitor::instance())
 {
-    Solid::Device device(m_udi);
-
     m_hasStorageAccess = false;
     m_isRoot = false;
 
-    if (device.is<Solid::StorageAccess>()) {
-        auto *storageaccess = device.as<Solid::StorageAccess>();
+    if (m_storageInfo->device().is<Solid::StorageAccess>()) {
+        const Solid::StorageAccess *storageaccess = m_storageInfo->device().as<Solid::StorageAccess>();
         if (storageaccess) {
             m_hasStorageAccess = true;
             m_isRoot = storageaccess->filePath() == u"/";
@@ -51,12 +49,12 @@ QString UnmountAction::text() const
 
 bool UnmountAction::isValid() const
 {
-    return m_hasStorageAccess && m_stateMonitor->isRemovable(m_udi) && !m_isRoot && m_stateMonitor->isMounted(m_udi);
+    return m_hasStorageAccess && m_storageInfo->isRemovable() && !m_isRoot && m_stateMonitor->isMounted(m_storageInfo->device().udi());
 }
 
 void UnmountAction::triggered()
 {
-    Solid::Device device(m_udi);
+    Solid::Device device = m_storageInfo->device();
     if (device.is<Solid::OpticalDisc>()) {
         auto *drive = device.as<Solid::OpticalDrive>();
         if (!drive) {
@@ -76,7 +74,7 @@ void UnmountAction::triggered()
 
 void UnmountAction::updateIsValid(const QString &udi)
 {
-    if (udi != m_udi) {
+    if (udi != m_storageInfo->device().udi()) {
         return;
     }
 

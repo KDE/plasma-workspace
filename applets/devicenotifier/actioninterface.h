@@ -8,6 +8,8 @@
 
 #include <QObject>
 
+#include "storageinfo.h"
+
 /**
  * Interface to add custom actions for devices
  */
@@ -16,7 +18,7 @@ class ActionInterface : public QObject
     Q_OBJECT
 
 public:
-    explicit ActionInterface(const QString &udi, QObject *parent = nullptr);
+    explicit ActionInterface(std::shared_ptr<StorageInfo> storageInfo, QObject *parent = nullptr);
     ~ActionInterface() override;
 
     /**
@@ -70,7 +72,7 @@ Q_SIGNALS:
     void isValidChanged(const QString &name, bool status);
 
 protected:
-    QString m_udi;
+    std::shared_ptr<StorageInfo> m_storageInfo;
 };
 
 #define ActionInterface_iid "com.plasma.private.ActionInterface"

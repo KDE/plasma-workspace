@@ -16,9 +16,9 @@
 
 #include <Solid/Device>
 
-ActionInterface::ActionInterface(const QString &udi, QObject *parent)
+ActionInterface::ActionInterface(std::shared_ptr<StorageInfo> storageInfo, QObject *parent)
     : QObject(parent)
-    , m_udi(udi)
+    , m_storageInfo(storageInfo)
 {
 }
 
@@ -45,7 +45,7 @@ void ActionInterface::triggered()
     DeviceServiceAction action;
     action.setService(services.takeFirst());
 
-    Solid::Device device(m_udi);
+    Solid::Device device = m_storageInfo->device();
     action.execute(device);
 }
 

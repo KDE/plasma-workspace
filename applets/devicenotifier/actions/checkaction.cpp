@@ -12,11 +12,11 @@
 
 #include "devicestatemonitor_p.h"
 
-CheckAction::CheckAction(const QString &udi, QObject *parent)
-    : ActionInterface(udi, parent)
+CheckAction::CheckAction(const std::shared_ptr<StorageInfo> &storageInfo, QObject *parent)
+    : ActionInterface(storageInfo, parent)
     , m_stateMonitor(DevicesStateMonitor::instance())
 {
-    Solid::Device device(udi);
+    const Solid::Device &device = m_storageInfo->device();
 
     // It's possible for there to be no StorageAccess (e.g. MTP devices don't have one)
     if (device.is<Solid::StorageAccess>()) {
@@ -34,7 +34,7 @@ void CheckAction::triggered()
 {
     qCDebug(APPLETS::DEVICENOTIFIER) << "Check Action: Triggered! Begin checking";
 
-    Solid::Device device(m_udi);
+    Solid::Device device = m_storageInfo->device();
 
     if (device.is<Solid::StorageAccess>()) {
         auto *access = device.as<Solid::StorageAccess>();
@@ -46,11 +46,11 @@ void CheckAction::triggered()
 
 bool CheckAction::isValid() const
 {
-    Solid::Device device(m_udi);
+    const Solid::Device &device = m_storageInfo->device();
 
     if (device.is<Solid::StorageAccess>()) {
         auto *access = device.as<Solid::StorageAccess>();
-        if (access && access->canCheck() && !access->isAccessible() && !m_stateMonitor->isChecked(m_udi)) {
+        if (access && access->canCheck() && !access->isAccessible() && !m_stateMonitor->isChecked(m_storageInfo->device().udi())) {
             return true;
         }
     }
@@ -74,7 +74,7 @@ QString CheckAction::text() const
 
 void CheckAction::updateIsValid(const QString &udi)
 {
-    if (udi == m_udi) {
+    if (udi == m_storageInfo->device().udi()) {
         Q_EMIT isValidChanged(name(), isValid());
     }
 }

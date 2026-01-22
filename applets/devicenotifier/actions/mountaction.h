@@ -17,7 +17,7 @@ class MountAction : public ActionInterface
     Q_INTERFACES(ActionInterface)
 
 public:
-    explicit MountAction(const QString &udi, QObject *parent = nullptr);
+    explicit MountAction(const std::shared_ptr<StorageInfo> &storageInfo, QObject *parent = nullptr);
     ~MountAction() override;
 
     void triggered() override;

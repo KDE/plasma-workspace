@@ -17,7 +17,7 @@ class CheckAction : public ActionInterface
     Q_INTERFACES(ActionInterface)
 
 public:
-    explicit CheckAction(const QString &udi, QObject *parent = nullptr);
+    explicit CheckAction(const std::shared_ptr<StorageInfo> &storageInfo, QObject *parent = nullptr);
     ~CheckAction() override;
 
     void triggered() override;

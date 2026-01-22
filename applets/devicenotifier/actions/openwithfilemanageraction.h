@@ -17,7 +17,7 @@ class OpenWithFileManagerAction : public ActionInterface
     Q_INTERFACES(ActionInterface)
 
 public:
-    explicit OpenWithFileManagerAction(const QString &udi, QObject *parent);
+    explicit OpenWithFileManagerAction(const std::shared_ptr<StorageInfo> &storageInfo, QObject *parent);
     ~OpenWithFileManagerAction() override;
 
     QString predicate() const override;

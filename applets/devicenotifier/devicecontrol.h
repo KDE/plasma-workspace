@@ -10,6 +10,8 @@
 #include <QAbstractListModel>
 #include <qqmlregistration.h>
 
+#include "storageinfo.h"
+
 #include "devicemessagemonitor_p.h"
 #include "devicestatemonitor_p.h"
 #include "spacemonitor_p.h"
@@ -60,28 +62,22 @@ private Q_SLOTS:
 private:
     void deviceDelayRemove(const QString &udi, const QString &parentUdi);
 
-    QList<Solid::Device> m_devices;
+    struct DeviceInfo {
+        std::shared_ptr<StorageInfo> storageInfo;
+    };
+
+    QList<DeviceInfo> m_devices;
+    QSet<QString> m_devicesUdi;
     QHash<QString, ActionsControl *> m_actions;
 
-    // save device type to properly sort and icon and description as workaround because
-    // solid removes it and list model show empty device(without icon and description).
-    // first = type
-    // second.first = icon
-    // second.second = description
-    QHash<QString, std::pair<QString, std::pair<QString, QString>>> m_deviceTypes;
-
-    QHash<QString, QList<Solid::Device>> m_parentDevices;
+    QHash<QString, QList<std::shared_ptr<StorageInfo>>> m_parentDevices;
 
     struct RemoveTimerData {
-        QTimer *timer = nullptr;
+        std::shared_ptr<QTimer> timer;
         QString udi;
         QString parentUdi;
     };
     QHash<QString, RemoveTimerData> m_removeTimers;
-    Solid::Predicate m_predicateDeviceMatch;
-    Solid::Predicate m_encryptedPredicate;
-    const QList<Solid::DeviceInterface::Type> m_types;
-    bool m_isVisible = false;
 
     std::shared_ptr<SpaceMonitor> m_spaceMonitor;
     std::shared_ptr<DevicesStateMonitor> m_stateMonitor;

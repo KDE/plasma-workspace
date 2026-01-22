@@ -15,13 +15,13 @@
 
 #include <KLocalizedString>
 
-MountAction::MountAction(const QString &udi, QObject *parent)
-    : ActionInterface(udi, parent)
+MountAction::MountAction(const std::shared_ptr<StorageInfo> &storageInfo, QObject *parent)
+    : ActionInterface(storageInfo, parent)
     , m_supportsMTP(false)
     , m_hasStorageAccess(false)
     , m_stateMonitor(DevicesStateMonitor::instance())
 {
-    Solid::Device device(udi);
+    const Solid::Device &device = m_storageInfo->device();
 
     QStringList supportedProtocols;
 
@@ -64,7 +64,7 @@ void MountAction::triggered()
 {
     qCDebug(APPLETS::DEVICENOTIFIER) << "MountAction: Triggered! Begin mounting";
 
-    Solid::Device device(m_udi);
+    Solid::Device device = m_storageInfo->device();
 
     if (device.is<Solid::StorageAccess>()) {
         auto *access = device.as<Solid::StorageAccess>();
@@ -76,12 +76,12 @@ void MountAction::triggered()
 
 bool MountAction::isValid() const
 {
-    return m_hasStorageAccess && m_stateMonitor->isRemovable(m_udi) && !m_stateMonitor->isMounted(m_udi) && !m_supportsMTP;
+    return m_hasStorageAccess && m_storageInfo->isRemovable() && !m_stateMonitor->isMounted(m_storageInfo->device().udi()) && !m_supportsMTP;
 }
 
 void MountAction::updateIsValid(const QString &udi)
 {
-    if (udi != m_udi) {
+    if (udi != m_storageInfo->device().udi()) {
         return;
     }
     Q_EMIT isValidChanged(name(), isValid());

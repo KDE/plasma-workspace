@@ -13,17 +13,7 @@
 
 #include <qqmlintegration.h>
 
-// TODO: implement in libsolid2
-template<class DevIface>
-DevIface *getAncestorAs(const Solid::Device &device)
-{
-    for (Solid::Device parent = device.parent(); parent.isValid(); parent = parent.parent()) {
-        if (parent.is<DevIface>()) {
-            return parent.as<DevIface>();
-        }
-    }
-    return nullptr;
-}
+#include "storageinfo.h"
 
 /**
  * This class is connected with solid, and monitors state of devices
