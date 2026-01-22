@@ -117,12 +117,6 @@ ContainmentItem {
             id: systemTrayState
         }
 
-        //being there forces the items to fully load, and they will be reparented in the popup one by one, this item is *never* visible
-        Item {
-            id: preloadedStorage
-            visible: false
-        }
-
         CurrentItemHighLight {
             location: Plasmoid.location
             parent: root
@@ -327,6 +321,13 @@ ContainmentItem {
 
                 Keys.onEscapePressed: event => {
                     systemTrayState.expanded = false
+                }
+
+                // Being there forces the items to fully load, and they will be reparented in the stack one by one, this item is *never* visible
+                // it's important this item is parented to the popup, otherwise the full representation will be reparented every time the popup opens or closes
+                Item {
+                    id: preloadedStorage
+                    visible: false
                 }
 
                 // Draws a line between the applet dialog and the panel
