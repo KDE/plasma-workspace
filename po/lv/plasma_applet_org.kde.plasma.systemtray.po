@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2024, 2025 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2024, 2025, 2026 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-05 00:44+0000\n"
-"PO-Revision-Date: 2025-05-29 16:48+0300\n"
+"PO-Revision-Date: 2026-01-19 17:02+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: qml/config.qml:13
 #, kde-format
@@ -24,15 +24,13 @@ msgid "General"
 msgstr "Pamata"
 
 #: qml/ConfigGeneral.qml:43
-#, fuzzy, kde-format
-#| msgid "Shown when relevant"
+#, kde-format
 msgctxt "@item:inlistbox Show this System Tray item when relevant"
 msgid "Show when relevant"
 msgstr "Rādīt, kad aktuāli"
 
 #: qml/ConfigGeneral.qml:47
-#, fuzzy, kde-format
-#| msgid "Always shown"
+#, kde-format
 msgctxt "@item:inlistbox Always show this System Tray item"
 msgid "Always show"
 msgstr "Rādīt vienmēr"
@@ -41,13 +39,13 @@ msgstr "Rādīt vienmēr"
 #, kde-format
 msgctxt "@item:inlistbox Show this System Tray item only in the expanded popup"
 msgid "Show only in popup"
-msgstr ""
+msgstr "Rādīt tikai uznirstošajā lodziņā"
 
 #: qml/ConfigGeneral.qml:55
 #, kde-format
 msgctxt "@item:inlistbox Never show this System Tray item; disable it"
 msgid "Never show (disabled)"
-msgstr ""
+msgstr "Nekad nerādīt (izslēgts)"
 
 #: qml/ConfigGeneral.qml:126
 #, kde-format
@@ -98,13 +96,7 @@ msgid "I understand the risks"
 msgstr "Es saprotu riskus"
 
 #: qml/ConfigGeneral.qml:187
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:usagetip"
-#| msgid ""
-#| "Disabling the clipboard is not recommended, as it will cause copied data "
-#| "to be lost when the application it was copied from is closed.<nl/><nl/"
-#| ">Instead consider configuring the clipboard to disable its history, or "
-#| "only remember one item at a time."
+#, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
 "Disabling the clipboard is not recommended, as it will cause copied data to "
@@ -115,9 +107,11 @@ msgid ""
 "at a time."
 msgstr ""
 "Starpliktuves izslēgšana nav ieteicama, jo rezultātā, aizverot programmu, "
-"tajā nokopētie dati būs zuduši.<nl/><nl/>Tā vietā apsveriet izslēgt "
-"starpliktuves vēstures funkciju vai likt tai atcerēties vienlaicīgi tikai "
-"vienu vienumu."
+"tajā nokopētie dati būs zuduši.<nl/><nl/>To dariet tikai tad, ja manuāli "
+"pievienojāt atsevišķu starpliktuves logdaļu vai kaut ko citu vai arī "
+"izmantojat trešās puses starpliktuves pārvaldnieku. Tā vietā arī apsveriet "
+"izslēgt starpliktuves vēstures funkciju vai likt tai atcerēties vienlaicīgi "
+"tikai vienu vienumu."
 
 #: qml/ConfigGeneral.qml:196
 #, kde-kuit-format
@@ -128,25 +122,25 @@ msgid ""
 "added a standalone Notifications widget somewhere else, or are intentionally "
 "using a 3rd-party notification manager to handle notifications."
 msgstr ""
+"Paziņojumu logdaļas izslēgšana nav ieteicama, jo tādā adījumā vairs "
+"neredzēsiet programmu sūtītos paziņojumus.<nl/><nl/>To dariet tikai tad, ja "
+"kaut kur citur manuāli pievienojāt atsevišķu paziņojumu logdaļu vai arī "
+"paziņojumu pārvaldīšanai izmantojot trešās puses paziņojumu pārvaldnieku."
 
 #: qml/ConfigGeneral.qml:208
-#, fuzzy, kde-format
-#| msgid "Scale with Panel height"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel height"
 msgstr "Mērogot kopā ar paneļa augstumu"
 
 #: qml/ConfigGeneral.qml:209
-#, fuzzy, kde-format
-#| msgid "Scale with Panel width"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel width"
 msgstr "Mērogot kopā ar paneļa platumu"
 
 #: qml/ConfigGeneral.qml:211
-#, fuzzy, kde-format
-#| msgctxt "The arrangement of system tray icons in the Panel"
-#| msgid "Panel icon size:"
+#, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon size:"
 msgstr "Paneļa ikonu izmērs:"
@@ -187,18 +181,16 @@ msgid "Automatically set to Large when in Touch Mode"
 msgstr "Automātiski iestatīt uz lielām, atrodoties skārienjutīgā režīmā"
 
 #: qml/ConfigGeneral.qml:315
-#, fuzzy, kde-format
-#| msgid "Entries"
+#, kde-format
 msgctxt "@title:column"
 msgid "Entries"
 msgstr "Ieraksti"
 
 #: qml/ConfigGeneral.qml:319
-#, fuzzy, kde-format
-#| msgid "Always shown"
+#, kde-format
 msgctxt "@option:check, This is referring to system tray entries"
 msgid "Always show all"
-msgstr "Rādīt vienmēr"
+msgstr "Rādīt vienmēr visas"
 
 #: qml/ExpandedRepresentation.qml:60
 #, kde-format

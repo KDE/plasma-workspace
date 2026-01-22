@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2024, 2025 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2024, 2025, 2026 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2025-05-29 16:31+0300\n"
+"PO-Revision-Date: 2026-01-19 16:47+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: kcm.cpp:62
 #, kde-format
@@ -90,18 +90,16 @@ msgid "Choose sound file"
 msgstr "Atlasīt skaņas datni"
 
 #: ui/main.qml:47
-#, fuzzy, kde-format
-#| msgid "Configure…"
+#, kde-format
 msgctxt "@action:button Plasma-specific notifications"
 msgid "Configure for System…"
-msgstr "Konfigurēt..."
+msgstr "Pielāgot sistēmai…"
 
 #: ui/main.qml:53
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Configure for Applications…"
-msgstr "Programmu iestatījumi"
+msgstr "Pielāgot programmām…"
 
 #: ui/main.qml:96
 #, kde-format
@@ -211,7 +209,7 @@ msgstr "Pie paziņojuma ikonas"
 #, kde-format
 msgctxt "@action:button choose custom notification position"
 msgid "Choose…"
-msgstr ""
+msgstr "Izvēlēties…"
 
 #: ui/main.qml:278 ui/main.qml:294
 #, kde-format
@@ -228,13 +226,11 @@ msgid "Hide after:"
 msgstr "Paslēpt pēc:"
 
 #: ui/main.qml:306
-#, fuzzy, kde-format
-#| msgctxt "Show application jobs in notification widget"
-#| msgid "Show in notifications"
+#, kde-format
 msgctxt ""
 "@option:check Show progress bar on notifications indicating when it will hide"
 msgid "Show timeout indicator"
-msgstr "Rādīt paziņojumos"
+msgstr "Rādīt atlikušā laika indikatoru"
 
 #: ui/main.qml:318
 #, kde-format
@@ -275,12 +271,11 @@ msgid "Popup Position"
 msgstr "Uzlecošā paziņojuma vieta"
 
 #: ui/SourcesPage.qml:20
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt ""
 "@title:window kcm page title, configure app-specific notification settings"
 msgid "Application Notifications"
-msgstr "Programmu iestatījumi"
+msgstr "Programmu paziņojumi"
 
 #: ui/SourcesPage.qml:104
 #, kde-format

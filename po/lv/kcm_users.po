@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2024, 2025 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2024, 2025, 2026 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2025-08-18 17:30+0300\n"
+"PO-Revision-Date: 2026-01-19 16:51+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,12 +16,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: src/fingerprintmodel.cpp:144 src/fingerprintmodel.cpp:228
 #, kde-format
 msgid "No fingerprint device found."
-msgstr "Nav atrasta pirkstu nospiedumu nolasīšanas ierīce."
+msgstr "Pirkstu nospiedumu nolasīšanas ierīce nav atrasta."
 
 #: src/fingerprintmodel.cpp:301
 #, kde-format
@@ -624,6 +624,8 @@ msgid ""
 "Cannot change your own username while logged in; log out and then log in as "
 "another user to change this account’s username."
 msgstr ""
+"Nav iespējams mainīt savu lietotājvārdu, kamēr esat ar to ierakstījies. Lai "
+"to mainītu, izrakstieties un ierakstieties kā cits lietotājs."
 
 #: src/ui/UserDetailsPage.qml:186
 #, kde-format
@@ -632,6 +634,8 @@ msgid ""
 "Cannot change the username of a logged-in user; wait until this user logs "
 "out first."
 msgstr ""
+"Nevar mainīt tāda lietotāja lietotājvārdu, kas ir ierakstījies. Uzgaidiet "
+"līdz lietotājs izrakstās."
 
 #: src/ui/UserDetailsPage.qml:214
 #, kde-format
@@ -671,6 +675,8 @@ msgid ""
 "Cannot delete yourself! Log out and then log in as another user to delete "
 "this user account."
 msgstr ""
+"Nav iespējams sevi izdzēst! Lai dzēstu šo profilu, izrakstieties, tad "
+"ierakstieties kā citas lietotājs."
 
 #: src/ui/UserDetailsPage.qml:286
 #, kde-format
