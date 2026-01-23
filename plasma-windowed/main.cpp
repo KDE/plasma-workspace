@@ -44,6 +44,7 @@ int main(int argc, char **argv)
     qunsetenv("QT_WAYLAND_DISABLE_FIXED_POSITIONS");
     app.setApplicationVersion(QLatin1String(version));
     app.setOrganizationDomain(QStringLiteral("kde.org"));
+    app.setDesktopFileName(QStringLiteral("org.kde.plasmawindowed"));
     KLocalizedString::setApplicationDomain(QByteArrayLiteral("plasmawindowed"));
 
     KDBusService service(KDBusService::Unique);
