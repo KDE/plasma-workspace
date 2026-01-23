@@ -70,12 +70,12 @@ KCM.GridViewKCM {
 
     DropArea {
         anchors.fill: parent
-        onEntered: {
+        onEntered: drag => {
             if (!drag.hasUrls) {
                 drag.accepted = false;
             }
         }
-        onDropped: kcm.installThemeFromFile(drop.urls[0])
+        onDropped: drop => kcm.installThemeFromFile(drop.urls[0])
     }
 
     actions: [

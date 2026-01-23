@@ -53,12 +53,12 @@ KCM.GridViewKCM {
     DropArea {
         enabled: view.enabled
         anchors.fill: parent
-        onEntered: {
+        onEntered: drag => {
             if (!drag.hasUrls) {
                 drag.accepted = false;
             }
         }
-        onDropped: kcm.installThemeFromFile(drop.urls[0])
+        onDropped: drop => kcm.installThemeFromFile(drop.urls[0])
     }
 
     actions: [
@@ -225,7 +225,7 @@ KCM.GridViewKCM {
 
         Connections {
             target: kcm
-            function onShowProgress() {
+            function onShowProgress(message) {
                 progressLabel.text = message;
                 progressBusy.running = true;
                 progressRow.visible = true;

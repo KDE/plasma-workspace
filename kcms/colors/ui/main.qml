@@ -60,12 +60,12 @@ KCM.GridViewKCM {
 
     DropArea {
         anchors.fill: parent
-        onEntered: {
+        onEntered: drag => {
             if (!drag.hasUrls) {
                 drag.accepted = false;
             }
         }
-        onDropped: {
+        onDropped: drop => {
             infoLabel.visible = false;
             kcm.installSchemeFromFile(drop.urls[0]);
         }
