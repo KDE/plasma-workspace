@@ -240,27 +240,33 @@ PlasmaComponents3.ScrollView {
             // Middle mouse selection information
             RowLayout {
                 spacing: Kirigami.Units.smallSpacing
-                PlasmaComponents3.Label {
-                    text: "Primary Selection:"
-                    Layout.fillWidth: true
-                }
-
-                PlasmaComponents3.Label {
-                    text: "[selected text here]"
-                    Layout.fillWidth: true
-                }
+                Layout.bottomMargin: Kirigami.Units.smallSpacing
 
                 PlasmaComponents3.ToolButton {
-                    icon.name: "info-symbolic"
-                    text: i18nd("klipper", "What's this?")
+                    icon.name: "edit-select-text"
+                    text: i18nd("klipper", "Primary Selection Buffer")
                     display: PlasmaComponents3.AbstractButton.IconOnly
                     onClicked: {
-                        // tooltip stuff
+                        infoToolTip.show(i18nd("klipper", "This field shows the primary selection buffer. The buffer can be pasted anywhere by pressing middle mouse button.<br>If this behavior is undesired, it can be disabled from Settings -> General Behavior -> Middle-click."));
+                    }
+                    PlasmaComponents3.ToolTip {
+                        id: infoToolTip
+                        text: parent.text
+                        onAboutToHide: {
+                            infoToolTip.text = parent.text
+                        }
                     }
                 }
-            }
 
-            Kirigami.Separator {
+                PlasmaComponents3.Label {
+                    id: primarySelectionText
+                    Layout.fillWidth: true
+
+                    text:"b"
+                    maximumLineCount: 1
+                    elide: Qt.ElideRight
+                }
+
 
             }
 
