@@ -237,6 +237,33 @@ PlasmaComponents3.ScrollView {
             // No extra spacing between rows; individual rows set their own spacing
             spacing: 0
 
+            // Middle mouse selection information
+            RowLayout {
+                spacing: Kirigami.Units.smallSpacing
+                PlasmaComponents3.Label {
+                    text: "Primary Selection:"
+                    Layout.fillWidth: true
+                }
+
+                PlasmaComponents3.Label {
+                    text: "[selected text here]"
+                    Layout.fillWidth: true
+                }
+
+                PlasmaComponents3.ToolButton {
+                    icon.name: "info-symbolic"
+                    text: i18nd("klipper", "What's this?")
+                    display: PlasmaComponents3.AbstractButton.IconOnly
+                    onClicked: {
+                        // tooltip stuff
+                    }
+                }
+            }
+
+            Kirigami.Separator {
+
+            }
+
             RowLayout {
                 spacing: Kirigami.Units.smallSpacing
                 PlasmaExtras.SearchField {
