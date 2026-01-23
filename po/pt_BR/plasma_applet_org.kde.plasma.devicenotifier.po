@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-17 00:46+0000\n"
+"POT-Creation-Date: 2026-01-23 00:45+0000\n"
 "PO-Revision-Date: 2025-07-21 08:51-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -33,27 +33,27 @@ msgstr "Verificar por erros"
 msgid "Mount"
 msgstr "Montar"
 
-#: actions/mountandopenaction.cpp:178
+#: actions/mountandopenaction.cpp:180
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Abrir no gerenciador de arquivos"
 
-#: actions/mountandopenaction.cpp:181
+#: actions/mountandopenaction.cpp:184
 #, kde-format
 msgid "Try to Fix"
 msgstr "Tentar reparar"
 
-#: actions/mountandopenaction.cpp:181
+#: actions/mountandopenaction.cpp:185
 #, kde-format
 msgid "Mount and Open"
 msgstr "Montar e abrir"
 
-#: actions/mountandopenaction.cpp:183
+#: actions/mountandopenaction.cpp:187
 #, kde-format
 msgid "Eject"
 msgstr "Ejetar"
 
-#: actions/mountandopenaction.cpp:185
+#: actions/mountandopenaction.cpp:189
 #, kde-format
 msgid "Safely remove"
 msgstr "Remover com segurança"

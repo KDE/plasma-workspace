@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-17 00:46+0000\n"
+"POT-Creation-Date: 2026-01-23 00:45+0000\n"
 "PO-Revision-Date: 2025-09-17 13:02+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -32,27 +32,27 @@ msgstr "Leita að villum"
 msgid "Mount"
 msgstr "Tengja í skráakerfið"
 
-#: actions/mountandopenaction.cpp:178
+#: actions/mountandopenaction.cpp:180
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Opna í skráastjóra"
 
-#: actions/mountandopenaction.cpp:181
+#: actions/mountandopenaction.cpp:184
 #, kde-format
 msgid "Try to Fix"
 msgstr "Reyna að lagfæra"
 
-#: actions/mountandopenaction.cpp:181
+#: actions/mountandopenaction.cpp:185
 #, kde-format
 msgid "Mount and Open"
 msgstr "Tengja og opna"
 
-#: actions/mountandopenaction.cpp:183
+#: actions/mountandopenaction.cpp:187
 #, kde-format
 msgid "Eject"
 msgstr "Henda út"
 
-#: actions/mountandopenaction.cpp:185
+#: actions/mountandopenaction.cpp:189
 #, kde-format
 msgid "Safely remove"
 msgstr "Fjarlæga á öruggan máta"

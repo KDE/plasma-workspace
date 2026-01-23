@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-17 00:46+0000\n"
+"POT-Creation-Date: 2026-01-23 00:45+0000\n"
 "PO-Revision-Date: 2025-07-15 23:12+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -30,27 +30,27 @@ msgstr "افحص الأخطاء"
 msgid "Mount"
 msgstr "ضمّ"
 
-#: actions/mountandopenaction.cpp:178
+#: actions/mountandopenaction.cpp:180
 #, kde-format
 msgid "Open in File Manager"
 msgstr "افتح في مدير الملفّات"
 
-#: actions/mountandopenaction.cpp:181
+#: actions/mountandopenaction.cpp:184
 #, kde-format
 msgid "Try to Fix"
 msgstr "حاول الإصلاح"
 
-#: actions/mountandopenaction.cpp:181
+#: actions/mountandopenaction.cpp:185
 #, kde-format
 msgid "Mount and Open"
 msgstr "ضم وافتح"
 
-#: actions/mountandopenaction.cpp:183
+#: actions/mountandopenaction.cpp:187
 #, kde-format
 msgid "Eject"
 msgstr "أخرِج"
 
-#: actions/mountandopenaction.cpp:185
+#: actions/mountandopenaction.cpp:189
 #, kde-format
 msgid "Safely remove"
 msgstr "أزِل بأمان"

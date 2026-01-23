@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-17 00:46+0000\n"
+"POT-Creation-Date: 2026-01-23 00:45+0000\n"
 "PO-Revision-Date: 2024-12-13 19:09+0530\n"
 "Last-Translator: Kali <EMAIL@ADDRESS>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -28,27 +28,27 @@ msgstr ""
 msgid "Mount"
 msgstr "माउण्ट्"
 
-#: actions/mountandopenaction.cpp:178
+#: actions/mountandopenaction.cpp:180
 #, kde-format
 msgid "Open in File Manager"
 msgstr "सञ्चिकाप्रबन्धके उद्घाटयन्तु"
 
-#: actions/mountandopenaction.cpp:181
+#: actions/mountandopenaction.cpp:184
 #, kde-format
 msgid "Try to Fix"
 msgstr ""
 
-#: actions/mountandopenaction.cpp:181
+#: actions/mountandopenaction.cpp:185
 #, kde-format
 msgid "Mount and Open"
 msgstr "माउण्ट् तथा ओपन"
 
-#: actions/mountandopenaction.cpp:183
+#: actions/mountandopenaction.cpp:187
 #, kde-format
 msgid "Eject"
 msgstr "निष्कासनम्"
 
-#: actions/mountandopenaction.cpp:185
+#: actions/mountandopenaction.cpp:189
 #, kde-format
 msgid "Safely remove"
 msgstr "सुरक्षितरूपेण निष्कासयन्तु"

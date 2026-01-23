@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-17 00:46+0000\n"
+"POT-Creation-Date: 2026-01-23 00:45+0000\n"
 "PO-Revision-Date: 2025-07-15 15:44+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -31,27 +31,27 @@ msgstr "Перевірити на помилки"
 msgid "Mount"
 msgstr "Змонтувати"
 
-#: actions/mountandopenaction.cpp:178
+#: actions/mountandopenaction.cpp:180
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Відкрити у програмі для керування файлами"
 
-#: actions/mountandopenaction.cpp:181
+#: actions/mountandopenaction.cpp:184
 #, kde-format
 msgid "Try to Fix"
 msgstr "Спробувати виправити"
 
-#: actions/mountandopenaction.cpp:181
+#: actions/mountandopenaction.cpp:185
 #, kde-format
 msgid "Mount and Open"
 msgstr "Змонтувати і відкрити"
 
-#: actions/mountandopenaction.cpp:183
+#: actions/mountandopenaction.cpp:187
 #, kde-format
 msgid "Eject"
 msgstr "Виштовхнути"
 
-#: actions/mountandopenaction.cpp:185
+#: actions/mountandopenaction.cpp:189
 #, kde-format
 msgid "Safely remove"
 msgstr "Безпечно вилучити"
