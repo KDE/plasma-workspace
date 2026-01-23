@@ -259,15 +259,41 @@ PlasmaComponents3.ScrollView {
                 }
 
                 PlasmaComponents3.Label {
-                    id: primarySelectionText
+                    maximumLineCount: 3
                     Layout.fillWidth: true
+                    Layout.fillHeight: true
+                    verticalAlignment: Text.AlignVCenter
+                    text: {
+                        if (!model.currentSelection) {
+                            return "";
+                        }
+                        let highlightFontTag = "<font color='" + Kirigami.Theme.highlightColor + "'>%1</font>"
+                        let text = model.currentSelection.slice(0, 100)
 
-                    text:"b"
-                    maximumLineCount: 1
-                    elide: Qt.ElideRight
+                        // first escape any HTML characters to prevent privacy issues
+                        text = text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+
+                        // color code leading or trailing whitespace
+                        // the first regex is basically "trim"
+                        text = text.replace(/^\s+|\s+$/gm, function(match) {
+                            // then inside the trimmed characters ("match") we replace each one individually
+                            match = match.replace(/ /g, "␣") // space
+                            .replace(/\t/g, "⇥") // tab
+                            .replace(/\n/g, "↵") // return
+                            return highlightFontTag.arg(match)
+                        })
+
+                        // finally turn line breaks into HTML br tags
+                        text = text.replace(/\r\n|\r|\n/g, "<br>")
+
+                        return text
+                    }
+                    elide: Text.ElideRight
+                    wrapMode: Text.WrapAtWordBoundaryOrAnywhere
+                    textFormat: Text.StyledText
+
+                    Accessible.ignored: true
                 }
-
-
             }
 
             RowLayout {

@@ -32,6 +32,10 @@ DeclarativeHistoryModel::DeclarativeHistoryModel(QObject *parent)
     });
 
     connect(m_model.get(), &HistoryModel::changed, this, &DeclarativeHistoryModel::currentTextChanged);
+    connect(m_model.get(), &HistoryModel::currentSelectionChanged, this, [this](const QString &selection) {
+        m_currentSelection = selection;
+        Q_EMIT DeclarativeHistoryModel::currentSelectionChanged();
+    });
 }
 
 DeclarativeHistoryModel::~DeclarativeHistoryModel() = default;
@@ -39,6 +43,11 @@ DeclarativeHistoryModel::~DeclarativeHistoryModel() = default;
 QString DeclarativeHistoryModel::currentText() const
 {
     return m_model->rowCount() == 0 ? QString() : m_model->index(0).data(Qt::DisplayRole).toString();
+}
+
+QString DeclarativeHistoryModel::currentSelection() const
+{
+    return m_currentSelection;
 }
 
 int DeclarativeHistoryModel::sourceCount() const

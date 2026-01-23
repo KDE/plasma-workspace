@@ -24,6 +24,7 @@ class DeclarativeHistoryModel : public QSortFilterProxyModel
     Q_PROPERTY(int sourceCount READ sourceCount NOTIFY sourceCountChanged)
     Q_PROPERTY(int starredCount READ starredCount NOTIFY starredCountChanged)
     Q_PROPERTY(QString currentText READ currentText NOTIFY currentTextChanged)
+    Q_PROPERTY(QString currentSelection READ currentSelection NOTIFY currentSelectionChanged)
 
     Q_PROPERTY(bool starredOnly READ starredOnly WRITE setStarredOnly NOTIFY starredOnlyChanged)
 
@@ -32,6 +33,7 @@ public:
     ~DeclarativeHistoryModel() override;
 
     QString currentText() const;
+    QString currentSelection() const;
     int sourceCount() const;
     int starredCount() const;
 
@@ -50,6 +52,7 @@ Q_SIGNALS:
     void sourceCountChanged();
     void starredCountChanged();
     void currentTextChanged();
+    void currentSelectionChanged();
     void starredOnlyChanged();
 
 protected:
@@ -59,4 +62,5 @@ private:
     std::shared_ptr<HistoryModel> m_model;
     bool m_starredOnly = false;
     QPropertyNotifier m_starredCountNotifier;
+    QString m_currentSelection;
 };

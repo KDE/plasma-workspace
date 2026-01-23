@@ -898,7 +898,11 @@ void HistoryModel::checkClipData(QClipboard::Mode mode, const QMimeData *data)
     // XXX: I want a better handling of selection/clipboard in general.
     // XXX: Order sensitive code. Must die.
     const bool selectionMode = mode == QClipboard::Selection;
+
     if (selectionMode && m_bIgnoreSelection) {
+        if (data->hasText() && data->data(QStringLiteral("x-kde-passwordManagerHint")) != QByteArrayView("secret")) {
+            Q_EMIT currentSelectionChanged(data->text());
+        }
         if (m_bSynchronize) {
             m_clip->setMimeData(data, SystemClipboard::Clipboard, SystemClipboard::ClipboardUpdateReason::SyncSelection);
         }

@@ -99,6 +99,8 @@ public:
 Q_SIGNALS:
     void changed(bool isTop = false);
 
+    void currentSelectionChanged(const QString &selection);
+
     void actionInvoked(const std::shared_ptr<const HistoryItem> &item);
 
 private Q_SLOTS:
