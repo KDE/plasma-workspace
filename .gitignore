@@ -27,4 +27,5 @@ CMakeLists.txt.user*
 /cmake-build*
 .cache
 .vscode
+.qtcreator
 .qmlls.ini

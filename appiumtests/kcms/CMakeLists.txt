@@ -92,3 +92,9 @@ add_test(
     COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/kcm_users_test.py --failfast
 )
 set_tests_properties(kcm_users_test PROPERTIES TIMEOUT 120)
+
+add_test(
+    NAME kcm_waydroidintegration_test
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/kcm_waydroidintegration_test.py --failfast
+)
+set_tests_properties(kcm_waydroidintegration_test PROPERTIES TIMEOUT 120)
