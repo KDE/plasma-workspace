@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2019, 2020, 2021, 2024, 2025 Stefan Asserhäll <stefan.asserhall@gmail.com>
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2024, 2025, 2026 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2025-05-31 15:16+0200\n"
+"PO-Revision-Date: 2026-01-23 20:41+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: kcm.cpp:62
 #, kde-format
@@ -88,18 +88,16 @@ msgid "Choose sound file"
 msgstr "Välj ljudfil"
 
 #: ui/main.qml:47
-#, fuzzy, kde-format
-#| msgid "Configure…"
+#, kde-format
 msgctxt "@action:button Plasma-specific notifications"
 msgid "Configure for System…"
-msgstr "Anpassa…"
+msgstr "Anpassa för system…"
 
 #: ui/main.qml:53
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Configure for Applications…"
-msgstr "Programinställningar"
+msgstr "Anpassa för program…"
 
 #: ui/main.qml:96
 #, kde-format
@@ -210,7 +208,7 @@ msgstr "Nära underrättelseikon"
 #, kde-format
 msgctxt "@action:button choose custom notification position"
 msgid "Choose…"
-msgstr ""
+msgstr "Välj…"
 
 #: ui/main.qml:278 ui/main.qml:294
 #, kde-format
@@ -226,13 +224,11 @@ msgid "Hide after:"
 msgstr "Dölj efter:"
 
 #: ui/main.qml:306
-#, fuzzy, kde-format
-#| msgctxt "Show application jobs in notification widget"
-#| msgid "Show in notifications"
+#, kde-format
 msgctxt ""
 "@option:check Show progress bar on notifications indicating when it will hide"
 msgid "Show timeout indicator"
-msgstr "Visa i underrättelser"
+msgstr "Visa tidsgränsindikering"
 
 #: ui/main.qml:318
 #, kde-format
@@ -273,12 +269,11 @@ msgid "Popup Position"
 msgstr "Meddelanderutans position"
 
 #: ui/SourcesPage.qml:20
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt ""
 "@title:window kcm page title, configure app-specific notification settings"
 msgid "Application Notifications"
-msgstr "Programinställningar"
+msgstr "Programunderrättelser"
 
 #: ui/SourcesPage.qml:104
 #, kde-format

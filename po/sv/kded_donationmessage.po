@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
+# SPDX-FileCopyrightText: 2024, 2026 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-12-02 00:43+0000\n"
-"PO-Revision-Date: 2024-08-28 17:25+0200\n"
+"PO-Revision-Date: 2026-01-23 20:40+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: donationmessage.cpp:80
 #, kde-format
@@ -34,16 +34,12 @@ msgstr ""
 "viktiga för KDE:s fortsatta existens."
 
 #: donationmessage.cpp:84
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@action:button Make a donation now; translate this in as short a form as "
-#| "possible"
-#| msgid "Donate"
+#, kde-format
 msgctxt ""
 "@action:button Make a donation now; translate this in as short a form as "
 "possible"
 msgid "Donate…"
-msgstr "Ge ett bidrag"
+msgstr "Ge ett bidrag…"
 
 #: donationmessage.cpp:85
 #, kde-format

@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2014, 2015, 2017, 2018, 2019, 2020, 2021, 2022, 2024, 2025 Stefan Asserhäll <stefan.asserhall@gmail.com>
+# SPDX-FileCopyrightText: 2014, 2015, 2017, 2018, 2019, 2020, 2021, 2022, 2024, 2025, 2026 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-21 00:47+0000\n"
-"PO-Revision-Date: 2025-10-23 21:06+0200\n"
+"PO-Revision-Date: 2026-01-23 20:39+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -164,25 +164,25 @@ msgstr "Hämta nya skrivbordsunderläggsbilder…"
 #, kde-format
 msgctxt "@action:button the things being selected are wallpapers"
 msgid "Select All"
-msgstr ""
+msgstr "Markera alla"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:108
 #, kde-format
 msgctxt "@action:button"
 msgid "Select All Slides"
-msgstr ""
+msgstr "Markera alla bilder"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:116
 #, kde-format
 msgctxt "@action:button the things being unselected are wallpapers"
 msgid "Select None"
-msgstr ""
+msgstr "Markera ingen"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:117
 #, kde-format
 msgctxt "@action:button"
 msgid "Unselect All Slides"
-msgstr ""
+msgstr "Avmarkera alla bilder"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:33
 #, kde-format
