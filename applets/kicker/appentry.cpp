@@ -16,6 +16,7 @@
 #include <QProcess>
 #include <QQmlPropertyMap>
 #include <QStandardPaths>
+#include <QUrlQuery>
 
 #include <KApplicationTrader>
 #include <KConfigGroup>
@@ -38,6 +39,20 @@
 
 namespace
 {
+
+std::optional<KServiceAction> serviceActionFromUrl(const KService::Ptr &service, const QUrl &url)
+{
+    const QString actionId = QUrlQuery(url).queryItemValue(QStringLiteral("action"));
+    if (!actionId.isEmpty()) {
+        const auto actions = service->actions();
+        for (const auto &action : actions) {
+            if (action.name() == actionId) {
+                return action;
+            }
+        }
+    }
+    return std::nullopt;
+}
 
 #ifdef HAVE_ICU
 std::unique_ptr<icu::Transliterator> getICUTransliterator(const QLocale &locale)
@@ -139,7 +154,12 @@ AppEntry::AppEntry(AbstractModel *owner, const QString &id)
         m_service = defaultAppByName(url.host());
         m_id = id;
     } else {
-        m_service = KService::serviceByStorageId(id);
+        m_service = KService::serviceByStorageId(url.path());
+        if (!m_service) {
+            m_service = KService::serviceByStorageId(m_id);
+        } else {
+            m_serviceAction = serviceActionFromUrl(m_service, url);
+        }
     }
     if (!m_service) {
         m_service = new KService(QString());
@@ -162,12 +182,20 @@ void AppEntry::init(NameFormat nameFormat)
     case NameOnly:
         m_description = comment;
     case NameAndGenericName:
-        m_compactName = nameFromService(m_service, NameOnly);
+        if (m_serviceAction) {
+            m_compactName = m_serviceAction->text();
+        } else {
+            m_compactName = nameFromService(m_service, NameOnly);
+        }
         m_description = comment;
         break;
     case GenericNameOnly:
     case GenericNameAndName:
-        m_compactName = nameFromService(m_service, GenericNameOnly);
+        if (m_serviceAction) {
+            m_compactName = m_serviceAction->text();
+        } else {
+            m_compactName = nameFromService(m_service, GenericNameOnly);
+        }
         m_description = m_service->name();
     }
 }
@@ -180,7 +208,12 @@ bool AppEntry::isValid() const
 QString AppEntry::icon() const
 {
     if (m_icon.isNull()) {
-        m_icon = m_service->icon();
+        if (m_serviceAction) {
+            m_icon = m_serviceAction->icon();
+        }
+        if (m_icon.isEmpty()) {
+            m_icon = m_service->icon();
+        }
     }
     return m_icon;
 }
@@ -242,6 +275,7 @@ void AppEntry::reload()
         if (!m_service) {
             m_service = new KService(QString());
         }
+        m_serviceAction = serviceActionFromUrl(m_service, url);
         init((NameFormat)owner()->rootModel()->property("appNameFormat").toInt());
         m_icon = QString();
     }
@@ -312,9 +346,11 @@ QVariantList AppEntry::actions() const
 {
     QVariantList actionList;
 
-    actionList << Kicker::jumpListActions(m_service);
-    if (!actionList.isEmpty()) {
-        actionList << Kicker::createSeparatorActionItem();
+    if (!m_serviceAction) {
+        actionList << Kicker::jumpListActions(m_service);
+        if (!actionList.isEmpty()) {
+            actionList << Kicker::createSeparatorActionItem();
+        }
     }
 
     auto *appletInterface = m_owner->rootModel()->property("appletInterface").value<QObject *>();
@@ -324,9 +360,12 @@ QVariantList AppEntry::actions() const
         systemImmutable = (appletInterface->property("immutability").toInt() == Plasma::Types::SystemImmutable);
     }
 
-    const QVariantList &addLauncherActions = Kicker::createAddLauncherActionList(appletInterface, m_service);
-    if (!systemImmutable && !addLauncherActions.isEmpty()) {
-        actionList << addLauncherActions;
+    // We cannot yet link to jump list actions directly from desktop/task manager.
+    if (!m_serviceAction) {
+        const QVariantList &addLauncherActions = Kicker::createAddLauncherActionList(appletInterface, m_service);
+        if (!systemImmutable && !addLauncherActions.isEmpty()) {
+            actionList << addLauncherActions;
+        }
     }
 
     const QVariantList &recentDocuments = Kicker::recentDocumentActions(m_service);
@@ -374,7 +413,7 @@ bool AppEntry::run(const QString &actionId, const QVariant &argument)
     }
 
     if (actionId.isEmpty()) {
-        auto *job = new KIO::ApplicationLauncherJob(m_service);
+        auto *job = m_serviceAction ? new KIO::ApplicationLauncherJob(*m_serviceAction) : new KIO::ApplicationLauncherJob(m_service);
         job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
         job->start();
 
