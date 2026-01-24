@@ -9,9 +9,12 @@
 #include "abstractentry.h"
 
 #include <KService>
+#include <KServiceAction>
 #include <KServiceGroup>
 
 #include <QPointer>
+
+#include <optional>
 
 class AppsModel;
 class MenuEntryEditor;
@@ -77,6 +80,7 @@ private:
     mutable QString m_group;
     mutable QString m_icon;
     KService::Ptr m_service;
+    std::optional<KServiceAction> m_serviceAction;
     static MenuEntryEditor *m_menuEntryEditor;
 };
 
