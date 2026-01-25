@@ -92,3 +92,4 @@ Options:
  clang-format-versions: [14, 18]
  run-qmllint: True
  gcovr-arguments: '--merge-mode-functions=separate'
+ enable-lsan: True
