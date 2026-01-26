@@ -39,15 +39,19 @@ Item {
                 }
                 Text {
                     text: (timeZone || "System")
+                    textFormat: Text.PlainText
                 }
                 Text {
                     text: clock.timeZoneName
+                    textFormat: Text.PlainText
                 }
                 Text {
                     text: Qt.formatDateTime(clock.dateTime, Qt.locale().dateFormat(Locale.ShortFormat))
+                    textFormat: Text.PlainText
                 }
                 Text {
                     text: Qt.formatDateTime(clock.dateTime, Qt.locale().timeFormat(Locale.ShortFormat))
+                    textFormat: Text.PlainText
                 }
             }
         }

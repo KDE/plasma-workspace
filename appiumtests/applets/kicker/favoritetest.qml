@@ -86,6 +86,7 @@ TestCase {
             required property var model
             width: parent.width
             text: model.compactNameWrapped ?? model.compactName ?? model.displayWrapped ?? model.display
+            textFormat: Text.PlainText
         }
     }
 }

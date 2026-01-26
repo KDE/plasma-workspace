@@ -79,6 +79,7 @@ Rectangle {
                 text: i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "This is the first text the user sees while starting in the splash screen, should be translated as something short, is a form that can be seen on a product. Plasma is the project name so shouldn't be translated.", "Plasma made by KDE")
                 Accessible.name: text
                 Accessible.role: Accessible.StaticText
+                textFormat: Text.PlainText
             }
             Image {
                 asynchronous: true

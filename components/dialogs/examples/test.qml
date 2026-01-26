@@ -106,6 +106,7 @@ Kirigami.AbstractApplicationWindow {
         ColumnLayout {
             Text {
                 text: "height: " + parent.height + " / " + xdgDialog.height
+                textFormat: Text.PlainText
             }
 
             QQC2.Label {
@@ -120,6 +121,7 @@ Kirigami.AbstractApplicationWindow {
                 onLinkActivated: {
                     AppChooserData.openDiscover()
                 }
+                textFormat: Text.PlainText
             }
 
             QQC2.Frame {

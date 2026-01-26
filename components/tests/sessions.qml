@@ -9,7 +9,8 @@ ListView
     model: SessionsModel{}
 
     delegate: Text {
-        text: model.name + " " + model.session + " " + model.displayNumber + " VT" +model.vtNumber
+        text: model.name + " " + model.session + " " + model.displayNumber + " VT" + model.vtNumber
+        textFormat: Text.PlainText
     }
 
 }

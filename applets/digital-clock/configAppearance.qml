@@ -263,6 +263,7 @@ KCMUtils.SimpleKCM {
             }
 
             onLinkActivated: link => Qt.openUrlExternally(link)
+            textFormat: Text.PlainText
         }
 
         Item {
