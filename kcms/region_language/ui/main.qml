@@ -255,6 +255,7 @@ KCM.ScrollViewKCM {
                         QQC2.Label {
                             text: model.description
                             color: titleSubtitle.color
+                            textFormat: Text.PlainText
                         }
                     }
 

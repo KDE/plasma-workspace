@@ -39,6 +39,7 @@ ListView {
                 text: delegate.text
 
                 Layout.fillWidth: true
+                textFormat: Text.PlainText
             }
 
             QQC2.ToolButton {

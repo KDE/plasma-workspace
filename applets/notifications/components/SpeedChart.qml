@@ -70,6 +70,7 @@ Item {
         font: Kirigami.Theme.smallFont
         // Measure 888.8 KiB/s
         text: i18ndc("plasma_applet_org.kde.plasma.notifications", "Bytes per second", "%1/s", 910131)
+        textFormat: Text.PlainText
     }
 
     Loader {
@@ -97,6 +98,7 @@ Item {
                 delegate: PlasmaComponents3.Label {
                     text:  i18ndc("plasma_applet_org.kde.plasma.notifications", "Bytes per second", "%1/s", KCoreAddons.Format.formatByteSize(ChartsControls.AxisLabels.label))
                     font: Kirigami.Theme.smallFont
+                    textFormat: Text.PlainText
                 }
 
                 source: Charts.ChartAxisSource {
@@ -187,10 +189,12 @@ Item {
                         id: legendLabel
                         font: Kirigami.Theme.smallFont
                         text: legendDelegate.name
+                        textFormat: Text.PlainText
                     }
                     PlasmaComponents3.Label {
                         font: Kirigami.Theme.smallFont
                         text: i18ndc("plasma_applet_org.kde.plasma.notifications", "Bytes per second", "%1/s", KCoreAddons.Format.formatByteSize(root.speed))
+                        textFormat: Text.PlainText
                     }
                 }
 
@@ -198,10 +202,12 @@ Item {
                     PlasmaComponents3.Label {
                         font: Kirigami.Theme.smallFont
                         text: i18nd("plasma_applet_org.kde.plasma.notifications", "Average Speed")
+                        textFormat: Text.PlainText
                     }
                     PlasmaComponents3.Label {
                         font: Kirigami.Theme.smallFont
                         text: i18ndc("plasma_applet_org.kde.plasma.notifications", "Bytes per second", "%1/s", KCoreAddons.Format.formatByteSize(root.averageSpeed))
+                        textFormat: Text.PlainText
                     }
                 }
             }

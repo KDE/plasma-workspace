@@ -237,6 +237,7 @@ Item {
 
                 QQC2.Label {
                     text: i18ndc("plasmashellprivateplugin", "@label:listbox In the context of time zone selection", "Region:")
+                    textFormat: Text.PlainText
                 }
 
                 QQC2.ComboBox {
@@ -270,6 +271,7 @@ Item {
                 QQC2.Label {
                     text: i18ndc("plasmashellprivateplugin", "@label:listbox In the context of time zone selection", "Time zone:")
                     visible: locationComboBox.visible
+                    textFormat: Text.PlainText
                 }
 
                 QQC2.ComboBox {

@@ -112,6 +112,7 @@ KCM.ScrollViewKCM {
                         text: delegateLoader.text
                         Layout.fillWidth: true
                         elide: Text.ElideRight
+                        textFormat: Text.PlainText
                     }
 
                     QQC2.Label {
@@ -123,6 +124,7 @@ KCM.ScrollViewKCM {
                         Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
                         Layout.rightMargin: Kirigami.Units.smallSpacing
                         elide: Text.ElideRight
+                        textFormat: Text.PlainText
                     }
                 }
             }

@@ -98,6 +98,7 @@ Item {
             opacity: 0.75
             visible: !clocks.visible
             font.features: { "tnum": 1 }
+            textFormat: Text.PlainText
         }
 
         PlasmaComponents.Label {

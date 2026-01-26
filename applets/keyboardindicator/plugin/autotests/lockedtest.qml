@@ -14,4 +14,5 @@ QQC.Label {
         id: capsLockState
         key: Qt.Key_CapsLock
     }
+    textFormat: Text.PlainText
 }
