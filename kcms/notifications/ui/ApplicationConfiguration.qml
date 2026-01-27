@@ -296,7 +296,7 @@ ColumnLayout {
                                 }
 
                                 QQC2.Button {
-                                    enabled: soundCheckBox.checked && model && model.sound.length > 0
+                                    enabled: !!model?.sound
                                     display: QQC2.AbstractButton.IconOnly
                                     icon.name: "media-playback-start"
                                     text: i18nc("@info:tooltip", "Preview sound")
