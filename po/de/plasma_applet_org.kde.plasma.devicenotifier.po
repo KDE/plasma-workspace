@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-23 00:45+0000\n"
+"POT-Creation-Date: 2026-01-27 00:46+0000\n"
 "PO-Revision-Date: 2025-11-05 11:06+0100\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -26,105 +26,105 @@ msgctxt "@action:button check a storageAccess (i.e disk) for error"
 msgid "Check for Errors"
 msgstr "Auf Fehler überprüfen"
 
-#: actions/mountaction.cpp:97
+#: actions/mountaction.cpp:94
 #, kde-format
 msgid "Mount"
 msgstr "Einhängen"
 
-#: actions/mountandopenaction.cpp:180
+#: actions/mountandopenaction.cpp:174
 #, kde-format
 msgid "Open in File Manager"
 msgstr "In Dateiverwaltung öffnen"
 
-#: actions/mountandopenaction.cpp:184
+#: actions/mountandopenaction.cpp:177
 #, kde-format
 msgid "Try to Fix"
 msgstr "Reparatur versuchen"
 
-#: actions/mountandopenaction.cpp:185
+#: actions/mountandopenaction.cpp:177
 #, kde-format
 msgid "Mount and Open"
 msgstr "Einhängen und öffnen"
 
-#: actions/mountandopenaction.cpp:187
+#: actions/mountandopenaction.cpp:179
 #, kde-format
 msgid "Eject"
 msgstr "Auswerfen"
 
-#: actions/mountandopenaction.cpp:189
+#: actions/mountandopenaction.cpp:181
 #, kde-format
 msgid "Safely remove"
 msgstr "Sicher entfernen"
 
-#: devicemessagemonitor_p.cpp:171
+#: devicemessagemonitor_p.cpp:155
 #, kde-format
 msgid "This device has file system errors."
 msgstr "Dieses Gerät hat Dateisystemfehler."
 
-#: devicemessagemonitor_p.cpp:173
+#: devicemessagemonitor_p.cpp:157
 #, kde-format
 msgctxt "@label device is a storage disk"
 msgid "This device has no errors"
 msgstr "Dieses Gerät hat keine Fehler"
 
-#: devicemessagemonitor_p.cpp:176
+#: devicemessagemonitor_p.cpp:160
 #, kde-format
 msgid "Successfully repaired!"
 msgstr "Erfolgreich repariert!"
 
-#: devicemessagemonitor_p.cpp:180
+#: devicemessagemonitor_p.cpp:164
 #, kde-format
 msgid "Device Status"
 msgstr "Gerätestatus"
 
-#: devicemessagemonitor_p.cpp:181
+#: devicemessagemonitor_p.cpp:165
 #, kde-format
 msgid "A device can now be safely removed"
 msgstr "Ein Gerät kann nun sicher entfernt werden"
 
-#: devicemessagemonitor_p.cpp:185
+#: devicemessagemonitor_p.cpp:169
 #, kde-format
 msgid "This device can now be safely removed."
 msgstr "Dieses Gerät kann nun sicher entfernt werden."
 
-#: devicemessagemonitor_p.cpp:192
+#: devicemessagemonitor_p.cpp:176
 #, kde-format
 msgid "You are not authorized to mount this device."
 msgstr "Sie sind nicht berechtigt, dieses Gerät einzuhängen."
 
-#: devicemessagemonitor_p.cpp:196
+#: devicemessagemonitor_p.cpp:180
 #, kde-format
 msgid "You are not authorized to eject this disc."
 msgstr "Sie sind nicht berechtigt, diesen Datenträger auszuwerfen."
 
-#: devicemessagemonitor_p.cpp:199
+#: devicemessagemonitor_p.cpp:183
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr "Sie sind nicht berechtigt, dieses Gerät zu entfernen."
 
-#: devicemessagemonitor_p.cpp:202
+#: devicemessagemonitor_p.cpp:186
 #, kde-format
 msgid "You are not authorized to repair this device."
 msgstr "Sie sind nicht berechtigt, dieses Gerät zu reparieren."
 
-#: devicemessagemonitor_p.cpp:204 devicemessagemonitor_p.cpp:269
+#: devicemessagemonitor_p.cpp:188 devicemessagemonitor_p.cpp:253
 #, kde-format
 msgid "Unknown error type"
 msgstr "Unbekannter Fehlertyp"
 
-#: devicemessagemonitor_p.cpp:208
+#: devicemessagemonitor_p.cpp:192
 #, kde-format
 msgid "Could not mount this device as it is busy."
 msgstr "Dieses Gerät kann nicht eingehängt werden, da es beschäftigt ist."
 
-#: devicemessagemonitor_p.cpp:235
+#: devicemessagemonitor_p.cpp:219
 #, kde-format
 msgid "One or more files on this device are open within an application."
 msgstr ""
 "Mindestens eine Datei auf dem Gerät ist noch in einer Anwendung geöffnet."
 
-#: devicemessagemonitor_p.cpp:237
+#: devicemessagemonitor_p.cpp:221
 #, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
@@ -136,29 +136,29 @@ msgstr[1] ""
 "Mindestens eine Datei auf dem Gerät ist noch in den folgenden Anwendungen "
 "geöffnet: %2."
 
-#: devicemessagemonitor_p.cpp:240
+#: devicemessagemonitor_p.cpp:224
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ", "
 
-#: devicemessagemonitor_p.cpp:258
+#: devicemessagemonitor_p.cpp:242
 #, kde-format
 msgid "Could not mount this device."
 msgstr "Dieses Gerät konnte nicht eingehängt werden."
 
-#: devicemessagemonitor_p.cpp:262
+#: devicemessagemonitor_p.cpp:246
 #, kde-format
 msgid "Could not eject this disc."
 msgstr "Dieser Datenträger konnte nicht ausgeworfen werden."
 
-#: devicemessagemonitor_p.cpp:264
+#: devicemessagemonitor_p.cpp:248
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "Dieses Gerät konnte nicht entfernt werden."
 
-#: devicemessagemonitor_p.cpp:267
+#: devicemessagemonitor_p.cpp:251
 #, kde-format
 msgid "Could not repair this device: %1"
 msgstr "Dieses Gerät konnte nicht repariert werden: %1"

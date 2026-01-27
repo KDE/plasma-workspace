@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-23 00:45+0000\n"
+"POT-Creation-Date: 2026-01-27 00:46+0000\n"
 "PO-Revision-Date: 2025-08-18 17:32+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -28,104 +28,104 @@ msgctxt "@action:button check a storageAccess (i.e disk) for error"
 msgid "Check for Errors"
 msgstr "Pārbaudīt kļūdas"
 
-#: actions/mountaction.cpp:97
+#: actions/mountaction.cpp:94
 #, kde-format
 msgid "Mount"
 msgstr "Piemontēt"
 
-#: actions/mountandopenaction.cpp:180
+#: actions/mountandopenaction.cpp:174
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Atvērt datņu pārvaldniekā"
 
-#: actions/mountandopenaction.cpp:184
+#: actions/mountandopenaction.cpp:177
 #, kde-format
 msgid "Try to Fix"
 msgstr "Mēģināt labot"
 
-#: actions/mountandopenaction.cpp:185
+#: actions/mountandopenaction.cpp:177
 #, kde-format
 msgid "Mount and Open"
 msgstr "Piemontēt un atvērt"
 
-#: actions/mountandopenaction.cpp:187
+#: actions/mountandopenaction.cpp:179
 #, kde-format
 msgid "Eject"
 msgstr "Izņemt"
 
-#: actions/mountandopenaction.cpp:189
+#: actions/mountandopenaction.cpp:181
 #, kde-format
 msgid "Safely remove"
 msgstr "Droši izņemt"
 
-#: devicemessagemonitor_p.cpp:171
+#: devicemessagemonitor_p.cpp:155
 #, kde-format
 msgid "This device has file system errors."
 msgstr "Šai ierīcei ir datņu sistēmas kļūdas."
 
-#: devicemessagemonitor_p.cpp:173
+#: devicemessagemonitor_p.cpp:157
 #, kde-format
 msgctxt "@label device is a storage disk"
 msgid "This device has no errors"
 msgstr "Šai ierīcei kļūdu nav"
 
-#: devicemessagemonitor_p.cpp:176
+#: devicemessagemonitor_p.cpp:160
 #, kde-format
 msgid "Successfully repaired!"
 msgstr "Izdevās salabot!"
 
-#: devicemessagemonitor_p.cpp:180
+#: devicemessagemonitor_p.cpp:164
 #, kde-format
 msgid "Device Status"
 msgstr "Ierīces statuss"
 
-#: devicemessagemonitor_p.cpp:181
+#: devicemessagemonitor_p.cpp:165
 #, kde-format
 msgid "A device can now be safely removed"
 msgstr "Ierīci var droši izņemt"
 
-#: devicemessagemonitor_p.cpp:185
+#: devicemessagemonitor_p.cpp:169
 #, kde-format
 msgid "This device can now be safely removed."
 msgstr "Šo ierīci var droši izņemt."
 
-#: devicemessagemonitor_p.cpp:192
+#: devicemessagemonitor_p.cpp:176
 #, kde-format
 msgid "You are not authorized to mount this device."
 msgstr "Jums nav tiesību piemontēt šo ierīci."
 
-#: devicemessagemonitor_p.cpp:196
+#: devicemessagemonitor_p.cpp:180
 #, kde-format
 msgid "You are not authorized to eject this disc."
 msgstr "Jums nav tiesību izgrūst šo disku"
 
-#: devicemessagemonitor_p.cpp:199
+#: devicemessagemonitor_p.cpp:183
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr "Jums nav tiesību izņemt šo ierīci."
 
-#: devicemessagemonitor_p.cpp:202
+#: devicemessagemonitor_p.cpp:186
 #, kde-format
 msgid "You are not authorized to repair this device."
 msgstr "Jums nav tiesību labot šo ierīci."
 
-#: devicemessagemonitor_p.cpp:204 devicemessagemonitor_p.cpp:269
+#: devicemessagemonitor_p.cpp:188 devicemessagemonitor_p.cpp:253
 #, kde-format
 msgid "Unknown error type"
 msgstr "Nezināms kļūdas tips"
 
-#: devicemessagemonitor_p.cpp:208
+#: devicemessagemonitor_p.cpp:192
 #, kde-format
 msgid "Could not mount this device as it is busy."
 msgstr "Nevar piemontēt ierīci, jo tā ir aizņemta."
 
-#: devicemessagemonitor_p.cpp:235
+#: devicemessagemonitor_p.cpp:219
 #, kde-format
 msgid "One or more files on this device are open within an application."
 msgstr "Kāda no programmām ir atvērusi vienu vai vairākas datnes šajā ierīcē."
 
-#: devicemessagemonitor_p.cpp:237
+#: devicemessagemonitor_p.cpp:221
 #, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
@@ -134,29 +134,29 @@ msgstr[0] "Viena vai vairākas datnes ir atvērtas programmā „%2“."
 msgstr[1] "Viena vai vairākas datnes ir atvērtas programmās: %2."
 msgstr[2] "Viena vai vairākas datnes ir atvērtas programmās: %2."
 
-#: devicemessagemonitor_p.cpp:240
+#: devicemessagemonitor_p.cpp:224
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ", "
 
-#: devicemessagemonitor_p.cpp:258
+#: devicemessagemonitor_p.cpp:242
 #, kde-format
 msgid "Could not mount this device."
 msgstr "Ierīci neizdodas piemontēt."
 
-#: devicemessagemonitor_p.cpp:262
+#: devicemessagemonitor_p.cpp:246
 #, kde-format
 msgid "Could not eject this disc."
 msgstr "Neizdodas izgrūst disku."
 
-#: devicemessagemonitor_p.cpp:264
+#: devicemessagemonitor_p.cpp:248
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "Ierīci neizdodas izņemt"
 
-#: devicemessagemonitor_p.cpp:267
+#: devicemessagemonitor_p.cpp:251
 #, kde-format
 msgid "Could not repair this device: %1"
 msgstr "Ierīci salabot neizdevās: %1"
