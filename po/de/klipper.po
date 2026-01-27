@@ -82,7 +82,7 @@ msgstr "Textauswahl:"
 #: configdialog.cpp:137 configdialog.cpp:175
 #, kde-format
 msgid "Only when explicitly copied"
-msgstr "Nur wenn explizit kopiert"
+msgstr "Nur, wenn explizit kopiert"
 
 #: configdialog.cpp:142
 #, kde-format
