@@ -12,3 +12,5 @@ ecm_optional_add_subdirectory(kcmstyle)
 ecm_optional_add_subdirectory(autostart)
 ecm_optional_add_subdirectory(notifications)
 ecm_optional_add_subdirectory(componentchooser)
+ecm_optional_add_subdirectory(region_language)
+
