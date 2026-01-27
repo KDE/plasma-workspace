@@ -127,7 +127,7 @@ msgstr "Zeitzone anzeigen:"
 #: configAppearance.qml:107
 #, kde-format
 msgid "Only when different from local time zone"
-msgstr "Nur wenn von lokaler Zeitzone abweichend"
+msgstr "Nur, wenn von lokaler Zeitzone abweichend"
 
 #: configAppearance.qml:121
 #, kde-format

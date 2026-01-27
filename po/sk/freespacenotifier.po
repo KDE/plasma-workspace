@@ -4,19 +4,20 @@
 # Roman Paholík <wizzardsk@gmail.com>, 2014.
 # Dusan Kazik <prescott66@gmail.com>, 2020.
 # Matej Mrenica <matejm98mthw@gmail.com>, 2020, 2021.
+# SPDX-FileCopyrightText: 2026 Lucia Mrenica <lucia.mrenica@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: freespacenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2021-09-15 18:46+0200\n"
-"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"PO-Revision-Date: 2026-01-26 20:58+0100\n"
+"Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 25.12.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: freespacenotifier.cpp:121
@@ -42,8 +43,7 @@ msgstr "Minimálna veľkosť voľného miesta, kedy bude užívateľ upozornený
 
 #. i18n: ectx: label, entry (minimumSpacePercentage), group (General)
 #: freespacenotifier.kcfg:15
-#, fuzzy, kde-format
-#| msgid "Minimum free space before user starts being notified."
+#, kde-format
 msgid "Minimum percentage free space before user starts being notified."
 msgstr "Minimálna veľkosť voľného miesta, kedy bude užívateľ upozornený."
 
@@ -73,16 +73,15 @@ msgstr " MiB"
 
 #. i18n: ectx: property (text), widget (QLabel, label_minimumSpacePercentage)
 #: freespacenotifier_prefs_base.ui:44
-#, fuzzy, kde-format
-#| msgid "Warn when free space is below:"
+#, kde-format
 msgid "And when free space is under:"
-msgstr "Upozorniť, ak voľné miesto klesne pod:"
+msgstr "A keď voľné miesto klesne pod:"
 
 #. i18n: ectx: property (suffix), widget (QSpinBox, kcfg_minimumSpacePercentage)
 #: freespacenotifier_prefs_base.ui:54
 #, no-c-format, kde-format
 msgid "%"
-msgstr ""
+msgstr "%"
 
 #. i18n: ectx: property (text), widget (QLabel, label_info)
 #: freespacenotifier_prefs_base.ui:67
@@ -91,39 +90,34 @@ msgid ""
 "The system will notify you if the free space drops below the specified MiB "
 "and the specified percentage of available space."
 msgstr ""
+"Systém vás upozorní, ak voľné miesto klesne pod špecifikovanú hodnotu MiB a "
+"špecifikované percento dostupného miesta."
 
 #: module.cpp:121
-#, fuzzy, kde-format
-#| msgid ""
-#| "Your Root partition is running out of disk space, you have %1 MiB "
-#| "remaining (%2%)."
+#, kde-format
 msgid ""
 "Your %1 partition is running out of disk space; %2 MiB of space remaining "
 "(%3%)."
 msgstr ""
-"Vo vašom koreňovom priečinku je nedostatok miesta, zostáva vám %1 MiB (%2%)."
+"Vaša partícia %1 nemá dostatok miesta na disku; zostáva %2 MiB voľného "
+"miesta (%3%)."
 
 #: module.cpp:123
-#, fuzzy, kde-format
-#| msgid ""
-#| "Your Root partition is running out of disk space, you have %1 MiB "
-#| "remaining (%2%)."
+#, kde-format
 msgid ""
 "Your Root partition is running out of disk space; %1 MiB of space remaining "
 "(%2%)."
 msgstr ""
-"Vo vašom koreňovom priečinku je nedostatok miesta, zostáva vám %1 MiB (%2%)."
+"Váš koreňový oddiel má nedostatok miesta na disku; zostáva %1 MiB miesta "
+"(%2%)."
 
 #: module.cpp:125
-#, fuzzy, kde-format
-#| msgid ""
-#| "Your Home folder is running out of disk space, you have %1 MiB remaining "
-#| "(%2%)."
+#, kde-format
 msgid ""
 "Your Home folder is running out of disk space; %1 MiB of space remaining "
 "(%2%)."
 msgstr ""
-"Vo vašom domovskom priečinku je nedostatok miesta, zostáva vám %1 MiB (%2%)."
+"V domácej zložke dochádza miesto na disku; zostáva %1 MiB miesta (%2%)."
 
 #: module.cpp:150
 #, kde-format

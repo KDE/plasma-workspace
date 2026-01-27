@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcm_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-05 00:45+0000\n"
-"PO-Revision-Date: 2026-01-14 18:14+0100\n"
+"PO-Revision-Date: 2026-01-26 21:01+0100\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
@@ -54,12 +54,16 @@ msgstr "Balíček Globálny vzhľad a dojem, alternatívny"
 #, kde-format
 msgid "Switch between dark and light global themes depending on time of day"
 msgstr ""
+"Prepínanie medzi tmavými a svetlými globálnymi motívmi v závislosti od "
+"dennej doby"
 
 #. i18n: ectx: label, entry (automaticLookAndFeelOnIdle), group (KDE)
 #: lookandfeelsettings.kcfg:25
 #, kde-format
 msgid "Switch between dark and light global themes when the computer is idle"
 msgstr ""
+"Prepínanie medzi tmavými a svetlými globálnymi motívmi, keď je počítač v "
+"nečinnosti"
 
 #. i18n: ectx: label, entry (automaticLookAndFeelIdleInterval), group (KDE)
 #: lookandfeelsettings.kcfg:29
@@ -68,6 +72,8 @@ msgid ""
 "How long the computer should be idle in order to switch between dark and "
 "light global themes, in seconds"
 msgstr ""
+"Ako dlho má byť počítač nečinný, aby sa prepínal medzi tmavými a svetlými "
+"globálnymi motívmi, v sekundách"
 
 #: tool/lnftool.cpp:32
 #, kde-format
@@ -160,12 +166,14 @@ msgid ""
 "The chosen light Global Theme will be used during the day, and the dark one "
 "will be used at night."
 msgstr ""
+"Vybraná svetlá globálna téma sa bude používať počas dňa a tmavá sa bude "
+"používať v noci."
 
 #: ui/DayNightLookAndFeel.qml:55
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure Day/Night Cycle…"
-msgstr ""
+msgstr "Nastaviť cyklus deň/noc..."
 
 #: ui/DayNightLookAndFeel.qml:68
 #, kde-format
@@ -183,7 +191,7 @@ msgstr "Tmavá"
 #, kde-format
 msgctxt "@option:check"
 msgid "Wait until idleness before switching:"
-msgstr ""
+msgstr "Pred prepnutím počkajte, kým sa zariadenie dostane do nečinnosti:"
 
 #: ui/DayNightLookAndFeel.qml:110
 #, kde-format
@@ -198,21 +206,19 @@ msgstr[2] "%1 sekúnd"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Minimizes interruptions when actively using the computer."
-msgstr ""
+msgstr "Minimalizuje prerušenia pri aktívnom používaní počítača."
 
 #: ui/LookAndFeelSelector.qml:24
-#, fuzzy, kde-format
-#| msgid "Global Theme"
+#, kde-format
 msgctxt "@title:window"
 msgid "Choose Light Global Theme"
-msgstr "Globálna téma"
+msgstr "Vyberte si svetlý globálny motív"
 
 #: ui/LookAndFeelSelector.qml:26
-#, fuzzy, kde-format
-#| msgid "Global Theme"
+#, kde-format
 msgctxt "@title:window"
 msgid "Choose Dark Global Theme"
-msgstr "Globálna téma"
+msgstr "Vyberte tmavú globálnu tému"
 
 #: ui/LookAndFeelSelector.qml:49 ui/StaticLookAndFeel.qml:67
 #, kde-format
@@ -230,19 +236,19 @@ msgstr "Odstrániť tému"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active theme"
-msgstr ""
+msgstr "Aktívnu tému nie je možné odstrániť"
 
 #: ui/LookAndFeelSelector.qml:61 ui/StaticLookAndFeel.qml:79
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed themes"
-msgstr ""
+msgstr "Nie je možné odstrániť systémové motívy"
 
 #: ui/LookAndFeelSnapshot.qml:16
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Current Theme"
-msgstr ""
+msgstr "Uložiť aktuálnu tému"
 
 #: ui/LookAndFeelSnapshot.qml:25
 #, kde-format
@@ -251,18 +257,20 @@ msgid ""
 "Plasma’s current appearance and theme settings will be saved in a new global "
 "theme."
 msgstr ""
+"Aktuálny vzhľad a nastavenia motívu programu Plasma budú uložené v novom "
+"globálnom motíve."
 
 #: ui/LookAndFeelSnapshot.qml:69
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add a preview image…"
-msgstr ""
+msgstr "Pridať náhľad obrázku…"
 
 #: ui/LookAndFeelSnapshot.qml:79
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Take a screenshot…"
-msgstr ""
+msgstr "Urobiť snímku obrazovky..."
 
 #: ui/LookAndFeelSnapshot.qml:86
 #, kde-format
@@ -274,7 +282,7 @@ msgstr "Názov:"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type in name…"
-msgstr ""
+msgstr "Zadajte meno..."
 
 #: ui/LookAndFeelSnapshot.qml:101
 #, kde-format
@@ -288,25 +296,25 @@ msgstr "Potvrdiť"
 #, kde-format
 msgctxt "@info"
 msgid "A global theme with this name or id already exists."
-msgstr ""
+msgstr "Globálna téma s týmto názvom alebo identifikátorom už existuje."
 
 #: ui/LookAndFeelSnapshot.qml:127
 #, kde-format
 msgctxt "@title:title"
 msgid "Choose a Preview Image"
-msgstr ""
+msgstr "Vyberte náhľad obrázku"
 
 #: ui/main.qml:22
 #, kde-format
 msgctxt "@option:check"
 msgid "Switch to Dark Mode at Night"
-msgstr ""
+msgstr "Prepnúť do tmavého režimu v noci"
 
 #: ui/main.qml:40
 #, kde-format
 msgctxt "@action:button"
 msgid "Save Current Theme…"
-msgstr ""
+msgstr "Uložiť aktuálnu tému…"
 
 #: ui/main.qml:45
 #, kde-format
@@ -330,16 +338,13 @@ msgid "Titlebar Buttons layout"
 msgstr "Rozloženie tlačidiel záhlavia"
 
 #: ui/MoreOptions.qml:56 ui/SimpleOptions.qml:64
-#, fuzzy, kde-format
-#| msgid ""
-#| "Applying a Desktop layout replaces your current configuration of "
-#| "desktops, panels, docks, and widgets"
+#, kde-format
 msgid ""
 "Applying a Desktop layout will delete the current set of desktops, panels, "
 "docks, and widgets, replacing them with what the theme specifies."
 msgstr ""
-"Použitie rozloženia pracovnej plochy nahradí vašu aktuálnu konfiguráciu "
-"pracovných plôch, panelov, dokov a miniaplikácií"
+"Použitie rozloženia plochy vymaže aktuálnu sadu plôch, panelov, dokovacích "
+"staníc a miniaplikácií a nahradí ich tým, čo špecifikuje téma."
 
 #: ui/MoreOptions.qml:67
 #, kde-format
