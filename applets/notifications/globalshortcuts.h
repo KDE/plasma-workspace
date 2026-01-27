@@ -21,10 +21,13 @@ public:
     ~GlobalShortcuts() override;
 
     Q_INVOKABLE void showDoNotDisturbOsd(bool doNotDisturb) const;
+    Q_INVOKABLE void showNotificationsHistoryCleaned() const;
 
 Q_SIGNALS:
     void toggleDoNotDisturbTriggered();
+    void clearHistoryTriggered();
 
 private:
     QAction *m_toggleDoNotDisturbAction;
+    QAction *m_clearHistoryAction;
 };

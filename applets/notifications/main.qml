@@ -219,6 +219,13 @@ PlasmoidItem {
         }
     }
 
+    function clearNotificationHistoryAndShowOsd() {
+        if (historyModel.expiredNotificationsCount > 0 || historyModel.activeNotificationsCount > 0) {
+            historyModel.clear(NotificationManager.Notifications.ClearExpired);
+            Notifications.Globals.shortcuts.showNotificationsHistoryCleaned();
+        }
+    }
+
     function action_configure() {
         KCMUtils.KCMLauncher.openSystemSettings("kcm_notifications");
     }

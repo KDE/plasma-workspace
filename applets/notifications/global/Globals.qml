@@ -797,5 +797,6 @@ QtObject {
 
     property Notifications.GlobalShortcuts shortcuts: Notifications.GlobalShortcuts {
         onToggleDoNotDisturbTriggered: globals.toggleDoNotDisturbMode()
+        onClearHistoryTriggered: plasmoidItem.clearNotificationHistoryAndShowOsd()
     }
 }
