@@ -22,6 +22,9 @@ KCM.ScrollViewKCM {
     sidebarMode: !Kirigami.Settings.isMobile
     LayoutMirroring.enabled: Application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
+
+    KCM.ConfigModule.buttons: KCM.ConfigModule.NoAdditionalButton
+
     // Is create user button enabled
     property alias createUserEnabled: createUserButton.enabled
 
