@@ -61,5 +61,9 @@
       <label>Saved dark light schedule state</label>
       <default></default>
     </entry>
+    <entry name="ForceImageAnimation" type="bool">
+      <label>Force animated images to play</label>
+      <default>false</default>
+    </entry>
   </group>
 </kcfg>

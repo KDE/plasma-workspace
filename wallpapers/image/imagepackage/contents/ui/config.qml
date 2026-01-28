@@ -48,6 +48,8 @@ ColumnLayout {
     property list<string> cfg_UncheckedSlidesDefault: []
     property int cfg_DynamicMode: 0
     property int cfg_DynamicModeDefault: 0
+    property bool cfg_ForceImageAnimation: false
+    property bool cfg_ForceImageAnimationDefault: false
 
     signal configurationChanged()
     /**

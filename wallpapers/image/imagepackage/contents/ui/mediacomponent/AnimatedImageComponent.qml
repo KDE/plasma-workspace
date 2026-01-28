@@ -16,6 +16,7 @@ BaseMediaComponent {
 
     readonly property rect desktopRect: Window.window ? Qt.rect(Window.window.x, Window.window.y, Window.window.width, Window.window.height) : Qt.rect(0, 0, 0, 0)
     readonly property alias status: mainImage.status
+    property bool forceImageAnimation: false
 
     blurSource: blurLoader.item
 
@@ -36,7 +37,7 @@ BaseMediaComponent {
         // sourceSize is read-only
         // https://github.com/qt/qtdeclarative/blob/23b4ab24007f489ac7c2b9ceabe72fa625a51f3d/src/quick/items/qquickanimatedimage_p.h#L39
 
-        paused: activeWindowMonitor.count > 0 && !KWindowSystem.showingDesktop
+        paused: !animatedImageComponent.forceImageAnimation && activeWindowMonitor.count > 0 && !KWindowSystem.showingDesktop
     }
 
     Loader {

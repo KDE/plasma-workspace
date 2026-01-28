@@ -60,6 +60,8 @@ WallpaperItem {
         fillMode: root.configuration.FillMode
         configColor: root.configuration.Color
         blur: root.configuration.Blur
+        forceImageAnimation: root.configuration.ForceImageAnimation
+
         source: {
             if (root.pluginName === "org.kde.slideshow") {
                 return imageWallpaper.image;
