@@ -2,13 +2,14 @@
 # Fuminobu Takeyama <ftake@geeko.jp>, 2016.
 # Tomohiro Hyakutake <tomhioo@outlook.jp>, 2019, 2020.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2019, 2022.
+# noyciy7037 <noyciy7037@gmail.com>, 2026
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
 "PO-Revision-Date: 2024-02-05 00:22+0900\n"
-"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
+"Last-Translator: noyciy7037 <noyciy7037@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: ../sddm-theme/KeyboardButton.qml:19
 #, kde-format
@@ -279,7 +280,9 @@ msgid "Cancel"
 msgstr "キャンセル"
 
 #: contents/osd/OsdItem.qml:30
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "Percentage value"
+#| msgid "%1%"
 msgctxt "Percentage value"
 msgid "%1%"
 msgstr "%1%"
