@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-11 00:45+0000\n"
+"POT-Creation-Date: 2026-01-28 00:46+0000\n"
 "PO-Revision-Date: 2025-04-24 16:40+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -389,21 +389,36 @@ msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"
 msgstr "Meldingen worden nu geleverd door '%1 %2'"
 
-#: globalshortcuts.cpp:23
+#: globalshortcuts.cpp:24
 #, kde-format
 msgid "Toggle do not disturb"
 msgstr "Niet storen omschakelen"
 
-#: globalshortcuts.cpp:42
+#: globalshortcuts.cpp:33
+#, fuzzy, kde-format
+#| msgid "Clear All Notifications"
+msgctxt "@action"
+msgid "Clear Notification History"
+msgstr "Alle meldingen wissen"
+
+#: globalshortcuts.cpp:52
 #, kde-format
 msgctxt "OSD popup, keep short"
 msgid "Notifications Off"
 msgstr "Meldingen uit"
 
-#: globalshortcuts.cpp:43
+#: globalshortcuts.cpp:53
 #, kde-format
 msgctxt "OSD popup, keep short"
 msgid "Notifications On"
+msgstr "Meldingen aan"
+
+#: globalshortcuts.cpp:68
+#, fuzzy, kde-format
+#| msgctxt "OSD popup, keep short"
+#| msgid "Notifications On"
+msgctxt "@label OSD popup, keep short"
+msgid "Notification history cleared"
 msgstr "Meldingen aan"
 
 #: main.qml:61
@@ -455,12 +470,12 @@ msgstr "Modus niet storen actief; midden-klik om er uit te gaan"
 msgid "Middle-click to enter do not disturb mode"
 msgstr "Midden-klik om in modus niet storen te gaan"
 
-#: main.qml:238
+#: main.qml:245
 #, kde-format
 msgid "Clear All Notifications"
 msgstr "Alle meldingen wissen"
 
-#: main.qml:257
+#: main.qml:264
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "Meldingen van gebeurtenissen en acties &configureren…"

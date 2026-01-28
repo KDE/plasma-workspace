@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-11 00:45+0000\n"
+"POT-Creation-Date: 2026-01-28 00:46+0000\n"
 "PO-Revision-Date: 2025-04-27 12:52+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -389,21 +389,36 @@ msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"
 msgstr "அறிவிப்புகள் தற்போது '%1 %2' என்பதால் வழங்கப்படுகின்றன"
 
-#: globalshortcuts.cpp:23
+#: globalshortcuts.cpp:24
 #, kde-format
 msgid "Toggle do not disturb"
 msgstr "தொந்தரவு செய்யாமையை நிலைமாற்று"
 
-#: globalshortcuts.cpp:42
+#: globalshortcuts.cpp:33
+#, fuzzy, kde-format
+#| msgid "Clear All Notifications"
+msgctxt "@action"
+msgid "Clear Notification History"
+msgstr "அனைத்து அறிவிப்புகளையும் நீக்கு"
+
+#: globalshortcuts.cpp:52
 #, kde-format
 msgctxt "OSD popup, keep short"
 msgid "Notifications Off"
 msgstr "அறிவிப்புகள் முடக்கப்பட்டன"
 
-#: globalshortcuts.cpp:43
+#: globalshortcuts.cpp:53
 #, kde-format
 msgctxt "OSD popup, keep short"
 msgid "Notifications On"
+msgstr "அறிவிப்புகள் இயக்கப்பட்டன"
+
+#: globalshortcuts.cpp:68
+#, fuzzy, kde-format
+#| msgctxt "OSD popup, keep short"
+#| msgid "Notifications On"
+msgctxt "@label OSD popup, keep short"
+msgid "Notification history cleared"
 msgstr "அறிவிப்புகள் இயக்கப்பட்டன"
 
 #: main.qml:61
@@ -455,12 +470,12 @@ msgstr "தொந்தரவு செய்யா பயன்முறை ச
 msgid "Middle-click to enter do not disturb mode"
 msgstr "தொந்தரவு செய்யா பயன்முறையில் நுழைய நடு-கிளிக் செய்யவும்"
 
-#: main.qml:238
+#: main.qml:245
 #, kde-format
 msgid "Clear All Notifications"
 msgstr "அனைத்து அறிவிப்புகளையும் நீக்கு"
 
-#: main.qml:257
+#: main.qml:264
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "நிகழ்வுகளுக்கான அறிவிப்புகள் மற்றும் செயல்களை &அமை…"

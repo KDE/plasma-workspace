@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-11 00:45+0000\n"
+"POT-Creation-Date: 2026-01-28 00:46+0000\n"
 "PO-Revision-Date: 2025-09-15 09:53-0500\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -389,21 +389,36 @@ msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"
 msgstr "ਨੋਟੀਫਿਕੇਸ਼ਨ ਇਸ ਵੇਲੇ '%1 %2' ਵਲੋਂ ਦਿੱਤੇ ਜਾ ਰਹੇ ਹਨ"
 
-#: globalshortcuts.cpp:23
+#: globalshortcuts.cpp:24
 #, kde-format
 msgid "Toggle do not disturb"
 msgstr "ਤੰਗ ਨਾ ਕਰੋ ਨੂੰ ਬਦਲੋ"
 
-#: globalshortcuts.cpp:42
+#: globalshortcuts.cpp:33
+#, fuzzy, kde-format
+#| msgid "Clear All Notifications"
+msgctxt "@action"
+msgid "Clear Notification History"
+msgstr "ਸਾਰੇ ਨੋਟੀਫਿਕੇਸ਼ਨ ਮਿਟਾਓ"
+
+#: globalshortcuts.cpp:52
 #, kde-format
 msgctxt "OSD popup, keep short"
 msgid "Notifications Off"
 msgstr "ਨੋਟੀਫਿਕੇਸ਼ਨ ਬੰਦ ਕਰੋ"
 
-#: globalshortcuts.cpp:43
+#: globalshortcuts.cpp:53
 #, kde-format
 msgctxt "OSD popup, keep short"
 msgid "Notifications On"
+msgstr "ਨੋਟੀਫਿਕੇਸ਼ਨ ਚਾਲੂ ਕਰੋ"
+
+#: globalshortcuts.cpp:68
+#, fuzzy, kde-format
+#| msgctxt "OSD popup, keep short"
+#| msgid "Notifications On"
+msgctxt "@label OSD popup, keep short"
+msgid "Notification history cleared"
 msgstr "ਨੋਟੀਫਿਕੇਸ਼ਨ ਚਾਲੂ ਕਰੋ"
 
 #: main.qml:61
@@ -455,12 +470,12 @@ msgstr "ਤੰਗ ਨਾ ਕਰੋ ਮੋਡ ਸਰਗਰਮ ਹੈ; ਬੰਦ �
 msgid "Middle-click to enter do not disturb mode"
 msgstr "ਤੰਗ ਨਾ ਕਰੋ ਮੋਡ ਵਿੱਚ ਜਾਣ ਲਈ ਮਿਡਲ-ਕਲਿੱਕ ਕਰੋ"
 
-#: main.qml:238
+#: main.qml:245
 #, kde-format
 msgid "Clear All Notifications"
 msgstr "ਸਾਰੇ ਨੋਟੀਫਿਕੇਸ਼ਨ ਮਿਟਾਓ"
 
-#: main.qml:257
+#: main.qml:264
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "…ਈਵੈਂਟ ਸੂਚਨਾਵਾਂ ਤੇ ਕਾਰਵਾਈ ਸੰਰਚਨਾ(&C)"

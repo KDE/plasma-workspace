@@ -1,15 +1,15 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2019, 2020, 2021, 2023, 2024, 2025 Alexander Yavorsky <kekcuha@gmail.com>
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2023, 2024, 2025, 2026 Alexander Yavorsky <kekcuha@gmail.com>
 # Alexander Yavorsky <kekcuha@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2025-11-22 16:57+0200\n"
-"Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
+"PO-Revision-Date: 2026-01-22 19:32+0300\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.08.3\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: kcm.cpp:62
 #, kde-format
@@ -90,19 +90,16 @@ msgid "Choose sound file"
 msgstr "Выберите звуковой файл"
 
 #: ui/main.qml:47
-#, fuzzy, kde-format
-#| msgid "Configure…"
+#, kde-format
 msgctxt "@action:button Plasma-specific notifications"
 msgid "Configure for System…"
-msgstr "Настроить…"
+msgstr "Параметры для системы…"
 
 #: ui/main.qml:53
-#, fuzzy, kde-format
-#| msgctxt "@action:button Application-specific notifications"
-#| msgid "Configure Application Settings…"
+#, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Configure for Applications…"
-msgstr "Параметры приложения…"
+msgstr "Параметры для приложений…"
 
 #: ui/main.qml:96
 #, kde-format
@@ -212,7 +209,7 @@ msgstr "Рядом со значком уведомления"
 #, kde-format
 msgctxt "@action:button choose custom notification position"
 msgid "Choose…"
-msgstr ""
+msgstr "Выбрать…"
 
 #: ui/main.qml:278 ui/main.qml:294
 #, kde-format
@@ -230,13 +227,11 @@ msgid "Hide after:"
 msgstr "Скрывать через:"
 
 #: ui/main.qml:306
-#, fuzzy, kde-format
-#| msgctxt "Show application jobs in notification widget"
-#| msgid "Show in notifications"
+#, kde-format
 msgctxt ""
 "@option:check Show progress bar on notifications indicating when it will hide"
 msgid "Show timeout indicator"
-msgstr "Показывать в уведомлениях"
+msgstr "Показывать индикатор времени до закрытия"
 
 #: ui/main.qml:318
 #, kde-format
@@ -277,12 +272,11 @@ msgid "Popup Position"
 msgstr "Расположение всплывающих уведомлений"
 
 #: ui/SourcesPage.qml:20
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt ""
 "@title:window kcm page title, configure app-specific notification settings"
 msgid "Application Notifications"
-msgstr "Параметры приложения"
+msgstr "Уведомления приложений"
 
 #: ui/SourcesPage.qml:104
 #, kde-format

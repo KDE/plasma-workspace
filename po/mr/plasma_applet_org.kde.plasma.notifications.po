@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-11 00:45+0000\n"
+"POT-Creation-Date: 2026-01-28 00:46+0000\n"
 "PO-Revision-Date: 2013-02-07 13:16+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
@@ -416,23 +416,37 @@ msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"
 msgstr ""
 
-#: globalshortcuts.cpp:23
+#: globalshortcuts.cpp:24
 #, kde-format
 msgid "Toggle do not disturb"
 msgstr ""
 
-#: globalshortcuts.cpp:42
+#: globalshortcuts.cpp:33
+#, fuzzy, kde-format
+#| msgid "Notifications"
+msgctxt "@action"
+msgid "Clear Notification History"
+msgstr "सूचना"
+
+#: globalshortcuts.cpp:52
 #, fuzzy, kde-format
 #| msgid "Notifications"
 msgctxt "OSD popup, keep short"
 msgid "Notifications Off"
 msgstr "सूचना"
 
-#: globalshortcuts.cpp:43
+#: globalshortcuts.cpp:53
 #, fuzzy, kde-format
 #| msgid "Notifications"
 msgctxt "OSD popup, keep short"
 msgid "Notifications On"
+msgstr "सूचना"
+
+#: globalshortcuts.cpp:68
+#, fuzzy, kde-format
+#| msgid "Notifications"
+msgctxt "@label OSD popup, keep short"
+msgid "Notification history cleared"
 msgstr "सूचना"
 
 #: main.qml:61
@@ -490,13 +504,13 @@ msgstr ""
 msgid "Middle-click to enter do not disturb mode"
 msgstr ""
 
-#: main.qml:238
+#: main.qml:245
 #, fuzzy, kde-format
 #| msgid "Notifications"
 msgid "Clear All Notifications"
 msgstr "सूचना"
 
-#: main.qml:257
+#: main.qml:264
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr ""

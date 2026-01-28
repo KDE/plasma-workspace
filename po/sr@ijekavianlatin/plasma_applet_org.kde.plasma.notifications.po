@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-11 00:45+0000\n"
+"POT-Creation-Date: 2026-01-28 00:46+0000\n"
 "PO-Revision-Date: 2017-12-31 22:42+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -453,23 +453,37 @@ msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"
 msgstr ""
 
-#: globalshortcuts.cpp:23
+#: globalshortcuts.cpp:24
 #, kde-format
 msgid "Toggle do not disturb"
 msgstr ""
 
-#: globalshortcuts.cpp:42
+#: globalshortcuts.cpp:33
+#, fuzzy, kde-format
+#| msgid "Clear Notifications"
+msgctxt "@action"
+msgid "Clear Notification History"
+msgstr "Očisti obavještenja"
+
+#: globalshortcuts.cpp:52
 #, fuzzy, kde-format
 #| msgid "Clear Notifications"
 msgctxt "OSD popup, keep short"
 msgid "Notifications Off"
 msgstr "Očisti obavještenja"
 
-#: globalshortcuts.cpp:43
+#: globalshortcuts.cpp:53
 #, fuzzy, kde-format
 #| msgid "Clear Notifications"
 msgctxt "OSD popup, keep short"
 msgid "Notifications On"
+msgstr "Očisti obavještenja"
+
+#: globalshortcuts.cpp:68
+#, fuzzy, kde-format
+#| msgid "Clear Notifications"
+msgctxt "@label OSD popup, keep short"
+msgid "Notification history cleared"
 msgstr "Očisti obavještenja"
 
 #: main.qml:61
@@ -535,13 +549,13 @@ msgstr ""
 msgid "Middle-click to enter do not disturb mode"
 msgstr ""
 
-#: main.qml:238
+#: main.qml:245
 #, fuzzy, kde-format
 #| msgid "Clear Notifications"
 msgid "Clear All Notifications"
 msgstr "Očisti obavještenja"
 
-#: main.qml:257
+#: main.qml:264
 #, fuzzy, kde-format
 #| msgid "&Configure Event Notifications and Actions..."
 msgid "&Configure Event Notifications and Actions…"
