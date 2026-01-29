@@ -1,0 +1,43 @@
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# SPDX-FileCopyrightText: 2026 Sergiu Bivol <sergiu@cip.md>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"PO-Revision-Date: 2026-01-29 01:43+0000\n"
+"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
+"Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Lokalize 25.08.1\n"
+
+#: geotimezonemodule.cpp:186
+#, kde-format
+msgctxt "OSD, keep short"
+msgid "Time zone changed to %1"
+msgstr "Fus orar schimbat la %1"
+
+#: geotimezonemodule.cpp:189
+#, kde-format
+msgctxt ""
+"System clock was changed due to time zone change OSD, keep short: new time "
+"(time zone)"
+msgid "Clock changed to %1 (%2)"
+msgstr "Ceas schimbat la %1 (%2)"
+
+#: geotimezonemodule.cpp:205
+#, kde-format
+msgid "Refresh is already in progress."
+msgstr "Împrospătarea e deja în desfășurare."
+
+#: geotimezonemodule.cpp:268
+#, kde-format
+msgid "Received no or an invalid time zone."
+msgstr "Fusul orar primit a fost gol sau nevalid."

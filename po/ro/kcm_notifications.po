@@ -1,13 +1,13 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024, 2025 Sergiu Bivol <sergiu@cip.md>
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024, 2025, 2026 Sergiu Bivol <sergiu@cip.md>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2025-12-12 11:22+0000\n"
+"PO-Revision-Date: 2026-01-28 20:35+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -89,19 +89,16 @@ msgid "Choose sound file"
 msgstr "Alege fișierul sonor"
 
 #: ui/main.qml:47
-#, fuzzy, kde-format
-#| msgid "Configure…"
+#, kde-format
 msgctxt "@action:button Plasma-specific notifications"
 msgid "Configure for System…"
-msgstr "Configurează…"
+msgstr "Configurează pentru sistem…"
 
 #: ui/main.qml:53
-#, fuzzy, kde-format
-#| msgctxt "@action:button Application-specific notifications"
-#| msgid "Configure Application Settings…"
+#, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Configure for Applications…"
-msgstr "Configurează parametrii aplicației…"
+msgstr "Configurează pentru aplicații…"
 
 #: ui/main.qml:96
 #, kde-format
@@ -211,7 +208,7 @@ msgstr "Lângă pictograma de notificare"
 #, kde-format
 msgctxt "@action:button choose custom notification position"
 msgid "Choose…"
-msgstr ""
+msgstr "Alege…"
 
 #: ui/main.qml:278 ui/main.qml:294
 #, kde-format
@@ -228,13 +225,11 @@ msgid "Hide after:"
 msgstr "Ascunde după:"
 
 #: ui/main.qml:306
-#, fuzzy, kde-format
-#| msgctxt "Show application jobs in notification widget"
-#| msgid "Show in notifications"
+#, kde-format
 msgctxt ""
 "@option:check Show progress bar on notifications indicating when it will hide"
 msgid "Show timeout indicator"
-msgstr "Arată în notificări"
+msgstr "Arată indicator de expirare"
 
 #: ui/main.qml:318
 #, kde-format
@@ -275,12 +270,11 @@ msgid "Popup Position"
 msgstr "Poziție indiciu"
 
 #: ui/SourcesPage.qml:20
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt ""
 "@title:window kcm page title, configure app-specific notification settings"
 msgid "Application Notifications"
-msgstr "Configurări aplicație"
+msgstr "Notificări pentru aplicații"
 
 #: ui/SourcesPage.qml:104
 #, kde-format

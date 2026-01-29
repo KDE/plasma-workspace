@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2026 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# Sergiu Bivol <sergiu@cip.md>, 2020, 2021, 2022, 2023, 2024.
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024, 2026 Sergiu Bivol <sergiu@cip.md>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2024-02-25 18:59+0000\n"
+"PO-Revision-Date: 2026-01-28 20:44+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: src/fingerprintmodel.cpp:144 src/fingerprintmodel.cpp:228
 #, kde-format
@@ -182,15 +182,13 @@ msgid "Confirm password:"
 msgstr "Confirmă parola:"
 
 #: src/ui/CreateUser.qml:88
-#, fuzzy, kde-format
-#| msgid "Create"
+#, kde-format
 msgctxt "@action:button Create a new user"
 msgid "Create"
 msgstr "Creează"
 
 #: src/ui/CreateUser.qml:109
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action:button Cancel creating new user"
 msgid "Cancel"
 msgstr "Renunță"
@@ -199,11 +197,10 @@ msgstr "Renunță"
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Picture Area"
-msgstr ""
+msgstr "Alege zona imaginii"
 
 #: src/ui/EnrolledConfirmation.qml:20
-#, fuzzy, kde-format
-#| msgid "Finger Enrolled"
+#, kde-format
 msgctxt "@info:status"
 msgid "Finger enrolled"
 msgstr "Deget înrolat"
@@ -365,20 +362,16 @@ msgid "Users"
 msgstr "Utilizatori"
 
 #: src/ui/main.qml:31
-#, fuzzy, kde-format
-#| msgctxt "@action:button As in, 'add new user'"
-#| msgid "Add New"
+#, kde-format
 msgctxt "@action:button As in, 'add new user'"
 msgid "Add New…"
-msgstr "Adaugă nou"
+msgstr "Adaugă nou…"
 
 #: src/ui/main.qml:32
-#, fuzzy, kde-format
-#| msgctxt "@action:button As in, 'add new user'"
-#| msgid "Add New"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add New User…"
-msgstr "Adaugă nou"
+msgstr "Adaugă utilizator nou…"
 
 #: src/ui/main.qml:137
 #, kde-format
@@ -521,7 +514,7 @@ msgstr "Alege fișier…"
 #, kde-format
 msgctxt "@title"
 msgid "Choose a picture"
-msgstr "Alege o poză"
+msgstr "Alegeți o poză"
 
 #: src/ui/PicturesSheet.qml:144
 #, kde-format
@@ -534,6 +527,8 @@ msgid ""
 "Image files (All major file types) (*.avif *.bmp *.gif *.jp2 *.jpeg *.jpg *."
 "pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 msgstr ""
+"Fișiere cu imagini (toate tipurile majore) (*.avif *.bmp *.gif *.jp2 *.jpeg "
+"*.jpg *.pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 
 #: src/ui/PicturesSheet.qml:201
 #, kde-format
@@ -551,14 +546,13 @@ msgstr "Folosește pictogramă substituentă pentru avatar"
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User Without Deleting Files?"
-msgstr ""
+msgstr "Ștergeți utilizatorul autentificat fără a-i șterge fișierele?"
 
 #: src/ui/UserDetailsPage.qml:115
-#, fuzzy, kde-format
-#| msgid "Delete User…"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User?"
-msgstr "Șterge utilizatorul…"
+msgstr "Ștergeți utilizatorul autentificat?"
 
 #: src/ui/UserDetailsPage.qml:117
 #, kde-kuit-format
@@ -568,6 +562,9 @@ msgid ""
 "account instead?<nl/><nl/>This will make %1 unable to log in again, and they "
 "may experience strange behaviors until they log out."
 msgstr ""
+"%1 e autentificat acum, așa că fișierele sale nu pot fi șterse. Doriți să "
+"ștergeți doar contul?<nl/><nl/>Aceasta va împiedica pe %1 să se autentifice "
+"și ar putea observa comportament ciudat până la ieșirea din sistem."
 
 #: src/ui/UserDetailsPage.qml:118
 #, kde-format
@@ -576,13 +573,14 @@ msgid ""
 "%1 is currently logged in. Deleting the account will make them unable to log "
 "in again, and they may experience strange behaviors until they log out."
 msgstr ""
+"%1 e autentificat acum. Ștergerea contului va împiedica autentificarea și ar "
+"putea observa comportament ciudat până la ieșirea din sistem."
 
 #: src/ui/UserDetailsPage.qml:125
-#, fuzzy, kde-format
-#| msgid "Delete files"
+#, kde-format
 msgctxt "@action: button"
 msgid "Delete %1"
-msgstr "Șterge fișierele"
+msgstr "Șterge %1"
 
 #: src/ui/UserDetailsPage.qml:144
 #, kde-format

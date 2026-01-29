@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2009, 2012, 2015, 2020, 2021, 2024, 2025 Sergiu Bivol <sergiu@cip.md>
+# SPDX-FileCopyrightText: 2009, 2012, 2015, 2020, 2021, 2024, 2025, 2026 Sergiu Bivol <sergiu@cip.md>
 # Cristian Oneț <onet.cristian@gmail.com>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-05 00:44+0000\n"
-"PO-Revision-Date: 2025-10-03 14:08+0100\n"
+"PO-Revision-Date: 2026-01-28 20:33+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -26,7 +26,7 @@ msgstr "Generale"
 #: ConfigGeneral.qml:118
 #, kde-format
 msgid "Unavailable"
-msgstr ""
+msgstr "Indisponibil"
 
 #: data.js:5
 #, kde-format
@@ -39,10 +39,9 @@ msgid "Lock the screen"
 msgstr "Blochează ecranul"
 
 #: data.js:12
-#, fuzzy, kde-format
-#| msgid "Switch user"
+#, kde-format
 msgid "Switch user…"
-msgstr "Schimbă utilizatorul"
+msgstr "Schimbă utilizatorul…"
 
 #: data.js:13
 #, kde-format
@@ -50,10 +49,9 @@ msgid "Start a parallel session as a different user"
 msgstr "Pornește o sesiune paralelă ca alt utilizator"
 
 #: data.js:19
-#, fuzzy, kde-format
-#| msgid "Shut Down"
+#, kde-format
 msgid "Shut down"
-msgstr "Deconectare"
+msgstr "Oprește"
 
 #: data.js:20
 #, kde-format
@@ -71,10 +69,9 @@ msgid "Reboot the computer"
 msgstr "Repornește calculatorul"
 
 #: data.js:33
-#, fuzzy, kde-format
-#| msgid "Log Out"
+#, kde-format
 msgid "Log out"
-msgstr "Ieșire din sistem"
+msgstr "Ieși din sistem"
 
 #: data.js:34
 #, kde-format
