@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2026 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# Sergiu Bivol <sergiu@cip.md>, 2020, 2022, 2023, 2024.
+# SPDX-FileCopyrightText: 2020, 2022, 2023, 2024, 2026 Sergiu Bivol <sergiu@cip.md>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2024-06-08 17:19+0100\n"
+"PO-Revision-Date: 2026-01-28 20:38+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -139,8 +139,7 @@ msgid "Next Decade"
 msgstr "Deceniul viitor"
 
 #: calendar/qml/MonthViewHeader.qml:283
-#, fuzzy, kde-format
-#| msgid "Keep Open"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Keep Open"
 msgstr "Ține deschis"
@@ -303,12 +302,9 @@ msgid "Online Services"
 msgstr "Servicii online"
 
 #: shellprivate/widgetexplorer.cpp:126
-#, fuzzy
-#| msgctxt "applet category"
-#| msgid "System Information"
 msgctxt "applet category"
 msgid "Personal Information"
-msgstr "Informații despre sistem"
+msgstr "Informații personale"
 
 #: shellprivate/widgetexplorer.cpp:127
 msgctxt "applet category"
@@ -351,18 +347,13 @@ msgid "Running"
 msgstr "Rulează"
 
 #: shellprivate/widgetexplorer.cpp:158
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inmenu used in the widget filter. Filter widgets that can be un-"
-#| "installed from the system, which are usually installed by the user to a "
-#| "local place."
-#| msgid "Uninstallable"
+#, kde-format
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can be un-"
 "installed from the system, which are usually installed by the user to a "
 "local place."
 msgid "User-installed"
-msgstr "Dezinstalabil"
+msgstr "Instalate de utilizator"
 
 #: shellprivate/widgetexplorer.cpp:162
 #, kde-format
@@ -370,7 +361,7 @@ msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can were "
 "recently installed."
 msgid "Recently installed"
-msgstr ""
+msgstr "Instalate recent"
 
 #: shellprivate/widgetexplorer.cpp:166
 #, kde-format
@@ -388,11 +379,10 @@ msgid "Install Widget From Local File…"
 msgstr "Instalează control din fișier local…"
 
 #: shellprivate/widgetexplorer.cpp:484
-#, fuzzy, kde-format
-#| msgid "All Widgets"
+#, kde-format
 msgctxt "@title:window"
 msgid "Get New Widgets"
-msgstr "Toate controalele grafice"
+msgstr "Obține controale noi"
 
 #: shellprivate/widgetexplorer.cpp:503
 #, kde-format
@@ -400,11 +390,10 @@ msgid "Select Plasmoid File"
 msgstr "Alege fișierul cu plasmoid"
 
 #: shellprivate/widgetexplorer.cpp:519
-#, fuzzy, kde-format
-#| msgid "Installing the package %1 failed."
+#, kde-format
 msgctxt "%1 is the name of an applet, %2 is an error message"
 msgid "Installing the package %1 failed: %2."
-msgstr "Instalarea pachetului %1 a eșuat."
+msgstr "Instalarea pachetului %1 a eșuat: %2."
 
 #: shellprivate/widgetexplorer.cpp:520
 #, kde-format
@@ -417,47 +406,47 @@ msgctxt "@info"
 msgid ""
 "The currently selected time zone is not available for visualization on this "
 "map"
-msgstr ""
+msgstr "Fusul orar ales nu e disponibil pentru vizualizare pe această hartă"
 
 #: timezoneselector/TimezoneSelector.qml:194
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom in"
-msgstr ""
+msgstr "Apropie"
 
 #: timezoneselector/TimezoneSelector.qml:210
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom out"
-msgstr ""
+msgstr "Îndepărtează"
 
 #: timezoneselector/TimezoneSelector.qml:239
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Region:"
-msgstr ""
+msgstr "Regiune:"
 
 #: timezoneselector/TimezoneSelector.qml:246
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
-msgstr ""
+msgstr "Alege…"
 
 #: timezoneselector/TimezoneSelector.qml:250
 #, kde-format
 msgid "Timezone region selector"
-msgstr ""
+msgstr "Selector de regiune a fusului orar"
 
 #: timezoneselector/TimezoneSelector.qml:271
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
-msgstr ""
+msgstr "Fus orar:"
 
 #: timezoneselector/TimezoneSelector.qml:281
 #, kde-format
 msgid "Timezone location selector"
-msgstr ""
+msgstr "Selector de amplasare a fusului orar"
 
 #~ msgid "&Execute"
 #~ msgstr "&Execută"

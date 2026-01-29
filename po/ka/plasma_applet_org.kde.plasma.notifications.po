@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-28 00:46+0000\n"
-"PO-Revision-Date: 2025-04-24 04:32+0200\n"
+"PO-Revision-Date: 2026-01-28 05:13+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.8\n"
 
 #: components/ActionContainer.qml:81
 #, kde-format
@@ -396,11 +396,10 @@ msgid "Toggle do not disturb"
 msgstr "არ შემაწუხოს რეჟიმის გადართვა"
 
 #: globalshortcuts.cpp:33
-#, fuzzy, kde-format
-#| msgid "Clear All Notifications"
+#, kde-format
 msgctxt "@action"
 msgid "Clear Notification History"
-msgstr "ყველა შეტყობინების გასუფთავება"
+msgstr "გაფრთხილებების ისტორიის გასუფთავება"
 
 #: globalshortcuts.cpp:52
 #, kde-format
@@ -415,12 +414,10 @@ msgid "Notifications On"
 msgstr "შეტყობინებები ჩართულია"
 
 #: globalshortcuts.cpp:68
-#, fuzzy, kde-format
-#| msgctxt "OSD popup, keep short"
-#| msgid "Notifications On"
+#, kde-format
 msgctxt "@label OSD popup, keep short"
 msgid "Notification history cleared"
-msgstr "შეტყობინებები ჩართულია"
+msgstr "გაფრთხილებების ისტორია გაწმენდილია"
 
 #: main.qml:61
 #, kde-format

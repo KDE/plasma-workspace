@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-28 00:46+0000\n"
-"PO-Revision-Date: 2025-04-24 07:22+0200\n"
+"PO-Revision-Date: 2026-01-28 11:17+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.8\n"
 
 #: components/ActionContainer.qml:81
 #, kde-format
@@ -420,11 +420,10 @@ msgid "Toggle do not disturb"
 msgstr "Preklopi Ne moti"
 
 #: globalshortcuts.cpp:33
-#, fuzzy, kde-format
-#| msgid "Clear All Notifications"
+#, kde-format
 msgctxt "@action"
 msgid "Clear Notification History"
-msgstr "Počisti vsa obvestila"
+msgstr "Počisti zgodovino obvestil"
 
 #: globalshortcuts.cpp:52
 #, kde-format
@@ -439,12 +438,10 @@ msgid "Notifications On"
 msgstr "Obvestila vklopljena"
 
 #: globalshortcuts.cpp:68
-#, fuzzy, kde-format
-#| msgctxt "OSD popup, keep short"
-#| msgid "Notifications On"
+#, kde-format
 msgctxt "@label OSD popup, keep short"
 msgid "Notification history cleared"
-msgstr "Obvestila vklopljena"
+msgstr "Zgodovina obvestil je bila počiščena"
 
 #: main.qml:61
 #, kde-format
