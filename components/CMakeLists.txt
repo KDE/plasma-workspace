@@ -1,6 +1,5 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"plasmashellprivateplugin\")
 
-add_subdirectory(dialogs)
 add_subdirectory(containmentlayoutmanager)
 add_subdirectory(dbus)
 add_subdirectory(shellprivate)

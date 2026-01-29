@@ -17,7 +17,6 @@ if(NOT SeleniumWebDriverATSPI_FOUND AND NOT DEFINED ENV{KDECI_BUILD})
 endif()
 
 add_subdirectory(applets)
-add_subdirectory(components_tests)
 add_subdirectory(kcms)
 add_subdirectory(krunner)
 add_subdirectory(wallpapers)

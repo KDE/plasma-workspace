@@ -46,9 +46,6 @@ public:
         package->addDirectoryDefinition("windowswitcher", QStringLiteral("windowswitcher"));
         package->addFileDefinition("windowswitchermainscript", QStringLiteral("windowswitcher/WindowSwitcher.qml"));
 
-        package->addDirectoryDefinition("systemdialog", QStringLiteral("systemdialog"));
-        package->addFileDefinition("systemdialogscript", QStringLiteral("systemdialog/SystemDialog.qml"));
-
         package->addDirectoryDefinition("layouts", QStringLiteral("layouts"));
 
         package->setPath(DEFAULT_LOOKANDFEEL);
