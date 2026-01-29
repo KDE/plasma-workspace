@@ -95,8 +95,8 @@ Kirigami.AbstractApplicationWindow {
         if (!visible && !accepted) {
             root.reject()
         }
-        width = Qt.binding(() => contentDialog.implicitWidth)
-        height = Qt.binding(() => contentDialog.implicitHeight)
+        width = Qt.binding(() => contentDialog.implicitWidth > 0 ? contentDialog.implicitWidth : width)
+        height = Qt.binding(() => contentDialog.implicitHeight > 0 ? contentDialog.implicitHeight : height)
     }
 
     Binding {
