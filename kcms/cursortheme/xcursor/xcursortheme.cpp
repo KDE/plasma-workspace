@@ -185,7 +185,7 @@ qulonglong XCursorTheme::loadCursor(const QString &name, int size) const
     return handle;
 }
 
-QImage XCursorTheme::loadImage(const QString &name, int size) const
+std::optional<CursorTheme::CursorImage> XCursorTheme::loadImage(const QString &name, int size) const
 {
     if (size <= 0)
         size = defaultCursorSize();
@@ -197,16 +197,24 @@ QImage XCursorTheme::loadImage(const QString &name, int size) const
         xcimage = xcLoadImage(findAlternative(name), size);
 
     if (!xcimage) {
-        return {};
+        return std::nullopt;
     }
 
-    // Convert the XcursorImage to a QImage, and auto-crop it
+    // Convert the XcursorImage to a QImage.
     QImage image((uchar *)xcimage->pixels, xcimage->width, xcimage->height, QImage::Format_ARGB32_Premultiplied);
+    if (image.isNull()) {
+        return std::nullopt;
+    }
 
-    image = autoCropImage(image);
+    CursorImage cursorImage{
+        image.copy(),
+        QPoint(xcimage->xhot, xcimage->yhot),
+        std::chrono::milliseconds{0},
+    };
+
     XcursorImageDestroy(xcimage);
 
-    return image;
+    return cursorImage;
 }
 
 std::vector<CursorTheme::CursorImage> XCursorTheme::loadImages(const QString &name, int size) const
@@ -230,7 +238,7 @@ std::vector<CursorTheme::CursorImage> XCursorTheme::loadImages(const QString &na
         // Convert the XcursorImage to a QImage, and auto-crop it
         const XcursorImage *xcimage = xcimages->images[i];
         QImage image(reinterpret_cast<unsigned char *>(xcimage->pixels), xcimage->width, xcimage->height, QImage::Format_ARGB32_Premultiplied);
-        images.push_back(CursorImage{autoCropImage(image), std::chrono::milliseconds{xcimage->delay}});
+        images.push_back(CursorImage{image.copy(), QPoint(xcimage->xhot, xcimage->yhot), std::chrono::milliseconds{xcimage->delay}});
     }
 
     XcursorImagesDestroy(xcimages);

@@ -37,31 +37,6 @@ QPixmap CursorTheme::icon() const
     return m_icon;
 }
 
-QImage CursorTheme::autoCropImage(const QImage &image) const
-{
-    // Compute an autocrop rectangle for the image
-    QRect r(image.rect().bottomRight(), image.rect().topLeft());
-    const auto *pixels = reinterpret_cast<const quint32 *>(image.bits());
-
-    for (int y = 0; y < image.height(); y++) {
-        for (int x = 0; x < image.width(); x++) {
-            if (*(pixels++)) {
-                if (x < r.left())
-                    r.setLeft(x);
-                if (x > r.right())
-                    r.setRight(x);
-                if (y < r.top())
-                    r.setTop(y);
-                if (y > r.bottom())
-                    r.setBottom(y);
-            }
-        }
-    }
-
-    // Normalize the rectangle
-    return image.copy(r.normalized());
-}
-
 static int nominalCursorSize(int iconSize)
 {
     for (int i = 512; i > 8; i /= 2) {
@@ -95,13 +70,13 @@ QPixmap CursorTheme::createIcon() const
 QPixmap CursorTheme::createIcon(int size) const
 {
     QPixmap pixmap;
-    QImage image = loadImage(sample(), size);
+    auto image = loadImage(sample(), size);
 
-    if (image.isNull() && sample() != QLatin1String("left_ptr"))
+    if (!image.has_value() && sample() != QLatin1String("left_ptr"))
         image = loadImage(QStringLiteral("left_ptr"), size);
 
-    if (!image.isNull()) {
-        pixmap = QPixmap::fromImage(std::move(image));
+    if (image.has_value()) {
+        pixmap = QPixmap::fromImage(std::move(image->image));
     }
 
     return pixmap;

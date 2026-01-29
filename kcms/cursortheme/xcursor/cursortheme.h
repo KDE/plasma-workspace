@@ -10,6 +10,7 @@
 #include <QPixmap>
 
 #include <chrono>
+#include <optional>
 
 /**
  * This is the abstract base class for all cursor themes stored in a
@@ -45,6 +46,7 @@ public:
 
     struct CursorImage {
         QImage image;
+        QPoint hotspot;
         std::chrono::milliseconds delay;
     };
 
@@ -96,12 +98,10 @@ public:
     }
 
     /// Loads the cursor image @p name, with the nominal size @p size.
-    /// The image should be autocropped to the smallest possible size.
-    /// If the theme doesn't have the cursor @p name, it should return a null image.
-    virtual QImage loadImage(const QString &name, int size = 0) const = 0;
+    /// If the theme doesn't have the cursor @p name, it should return nullopt.
+    virtual std::optional<CursorImage> loadImage(const QString &name, int size = 0) const = 0;
 
     /// Loads the cursor images @p name, with the nominal size @p size.
-    /// The images should be autocropped to the smallest possible size.
     /// If the theme doesn't have the cursor @p name, it should return an empty vector
     virtual std::vector<CursorImage> loadImages(const QString &name, int size = 0) const = 0;
 
@@ -159,9 +159,6 @@ protected:
     {
         m_hidden = val;
     }
-
-    /// Convenience function for cropping an image.
-    QImage autoCropImage(const QImage &image) const;
 
     // Convenience function that uses Xfixes to tag a cursor with a name
     void setCursorName(qulonglong cursor, const QString &name) const;

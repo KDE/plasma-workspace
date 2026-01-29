@@ -48,17 +48,19 @@ class PreviewCursor
 public:
     PreviewCursor(const CursorTheme *theme, const QString &name, int size);
 
-    const QPixmap &pixmap() const
-    {
-        return m_pixmap;
-    }
     int width() const
     {
-        return m_pixmap.width();
+        if (!m_images.empty()) {
+            return m_images.front().image.width();
+        }
+        return 0;
     }
     int height() const
     {
-        return m_pixmap.height();
+        if (!m_images.empty()) {
+            return m_images.front().image.height();
+        }
+        return 0;
     }
     int boundingSize() const
     {
@@ -77,10 +79,6 @@ public:
     {
         return m_pos;
     }
-    operator const QPixmap &() const
-    {
-        return pixmap();
-    }
     const std::vector<CursorTheme::CursorImage> &images() const
     {
         return m_images;
@@ -88,7 +86,6 @@ public:
 
 private:
     int m_boundingSize;
-    QPixmap m_pixmap;
     std::vector<CursorTheme::CursorImage> m_images;
     QPoint m_pos;
 };
@@ -97,15 +94,11 @@ PreviewCursor::PreviewCursor(const CursorTheme *theme, const QString &name, int 
     : m_boundingSize(size > 0 ? size : theme->defaultCursorSize())
     , m_images(theme->loadImages(name, size))
 {
-    if (m_images.empty())
-        return;
-
-    m_pixmap = QPixmap::fromImage(m_images.front().image);
 }
 
 QRectF PreviewCursor::rect() const
 {
-    return QRectF(m_pos, m_pixmap.size()).adjusted(-(cursorSpacing / 2), -(cursorSpacing / 2), cursorSpacing / 2, cursorSpacing / 2);
+    return QRectF(m_pos, QSizeF(width(), height())).adjusted(-(cursorSpacing / 2), -(cursorSpacing / 2), cursorSpacing / 2, cursorSpacing / 2);
 }
 
 // ------------------------------------------------------------------------------
@@ -119,8 +112,9 @@ PreviewWidget::PreviewWidget(QQuickItem *parent)
     current = nullptr;
     connect(&m_animationTimer, &QTimer::timeout, this, [this] {
         Q_ASSERT(current);
-        setCursor(QCursor(QPixmap::fromImage(current->images().at(nextAnimationFrame).image)));
-        m_animationTimer.setInterval(current->images().at(nextAnimationFrame).delay);
+        const auto &frame = current->images().at(nextAnimationFrame);
+        setCursor(QCursor(QPixmap::fromImage(frame.image), frame.hotspot.x(), frame.hotspot.y()));
+        m_animationTimer.setInterval(frame.delay);
         nextAnimationFrame = (nextAnimationFrame + 1) % current->images().size();
     });
 }
@@ -278,10 +272,12 @@ void PreviewWidget::paint(QPainter *painter)
     painter->scale(1 / devicePixelRatio, 1 / devicePixelRatio);
 #endif
     for (const auto *c : std::as_const(list)) {
-        if (c->pixmap().isNull())
+        const QImage image = !c->images().empty() ? c->images().front().image : QImage();
+        if (image.isNull()) {
             continue;
+        }
 
-        painter->drawPixmap(c->position(), *c);
+        painter->drawImage(c->position(), image);
     }
 }
 
@@ -313,8 +309,15 @@ void PreviewWidget::hoverMoveEvent(QHoverEvent *e)
         return;
     }
 
-    if (current->images().size() <= 1) {
-        setCursor(QCursor(current->pixmap()));
+    const auto &images = current->images();
+    if (images.empty()) {
+        setCursor(Qt::ArrowCursor);
+        return;
+    }
+
+    if (images.size() == 1) {
+        const auto &image = images.front();
+        setCursor(QCursor(QPixmap::fromImage(image.image), image.hotspot.x(), image.hotspot.y()));
         return;
     }
 
