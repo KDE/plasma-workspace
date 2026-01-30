@@ -9,11 +9,14 @@
 #include <QFile>
 #include <QImage>
 #include <QStyle>
-#include <private/qtx11extras_p.h>
 
 #include "cursortheme.h"
 
 #include <config-X11.h>
+
+#if HAVE_X11
+#include <private/qtx11extras_p.h>
+#endif
 
 #ifdef HAVE_XFIXES
 #include <X11/Xlib.h>

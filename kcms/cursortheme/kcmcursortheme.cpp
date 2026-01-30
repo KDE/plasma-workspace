@@ -31,14 +31,6 @@
 #include <QDir>
 #include <QStandardItemModel>
 #include <QTemporaryFile>
-#include <private/qtx11extras_p.h>
-
-#include <X11/Xcursor/Xcursor.h>
-#include <X11/Xlib.h>
-
-#ifdef HAVE_XFIXES
-#include <X11/extensions/Xfixes.h>
-#endif
 
 using namespace Qt::StringLiterals;
 

@@ -12,10 +12,16 @@
 #include <QDir>
 #include <QImage>
 #include <algorithm>
-#include <private/qtx11extras_p.h>
 
+#include "config-X11.h"
+
+#if HAVE_X11
 #include <X11/Xcursor/Xcursor.h>
 #include <X11/Xlib.h>
+#include <private/qtx11extras_p.h>
+#else
+#include "xcursor.h"
+#endif
 
 #include "xcursortheme.h"
 
@@ -131,6 +137,7 @@ XcursorImages *XCursorTheme::xcLoadImages(const QString &image, int size) const
 int XCursorTheme::defaultCursorSize() const
 {
     // TODO: manage Wayland
+#if HAVE_X11
     if (!QX11Info::isPlatformX11()) {
         return 32;
     }
@@ -157,11 +164,15 @@ int XCursorTheme::defaultCursorSize() const
         size = dim / 48;
     }
     return size;
+#else
+    return 32;
+#endif
 }
 
 qulonglong XCursorTheme::loadCursor(const QString &name, int size) const
 {
     // TODO: manage Wayland
+#if HAVE_X11
     if (!QX11Info::isPlatformX11()) {
         return None;
     }
@@ -183,6 +194,9 @@ qulonglong XCursorTheme::loadCursor(const QString &name, int size) const
 
     setCursorName(handle, name);
     return handle;
+#else
+    return 0;
+#endif
 }
 
 std::optional<CursorTheme::CursorImage> XCursorTheme::loadImage(const QString &name, int size) const
