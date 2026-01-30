@@ -99,6 +99,7 @@ RootModel::RootModel(QObject *parent)
     , m_recentOrdering(RecentUsageModel::Recent)
     , m_showPowerSession(true)
     , m_showFavoritesPlaceholder(false)
+    , m_showRootSeparator(true)
     , m_highlightNewlyInstalledApps(false)
     , m_refreshNewlyInstalledAppsTimer(nullptr)
     , m_recentAppsModel(nullptr)
@@ -288,6 +289,22 @@ void RootModel::setHighlightNewlyInstalledApps(bool highlight)
         refresh();
 
         Q_EMIT highlightNewlyInstalledAppsChanged();
+    }
+}
+
+bool RootModel::showRootSeparator() const
+{
+    return m_showRootSeparator;
+}
+
+void RootModel::setShowRootSeparator(bool showRootSeparator)
+{
+    if (m_showRootSeparator != showRootSeparator) {
+        m_showRootSeparator = showRootSeparator;
+
+        refresh();
+
+        Q_EMIT showRootSeparatorChanged();
     }
 }
 
@@ -550,7 +567,7 @@ void RootModel::refresh()
         ++separatorPosition;
     }
 
-    if (m_showSeparators && separatorPosition > 0) {
+    if (m_showRootSeparator && separatorPosition > 0) {
         m_entryList.insert(separatorPosition, new SeparatorEntry(this));
         ++m_separatorCount;
     }

@@ -55,6 +55,7 @@ class RootModel : public AppsModel
     Q_PROPERTY(bool showPowerSession READ showPowerSession WRITE setShowPowerSession NOTIFY showPowerSessionChanged)
     Q_PROPERTY(bool showFavoritesPlaceholder READ showFavoritesPlaceholder WRITE setShowFavoritesPlaceholder NOTIFY showFavoritesPlaceholderChanged)
     Q_PROPERTY(bool highlightNewlyInstalledApps READ highlightNewlyInstalledApps WRITE setHighlightNewlyInstalledApps NOTIFY highlightNewlyInstalledAppsChanged)
+    Q_PROPERTY(bool showRootSeparator READ showRootSeparator WRITE setShowRootSeparator NOTIFY showRootSeparatorChanged)
 
 public:
     explicit RootModel(QObject *parent = nullptr);
@@ -88,6 +89,9 @@ public:
     bool highlightNewlyInstalledApps() const;
     void setHighlightNewlyInstalledApps(bool highlight);
 
+    bool showRootSeparator() const;
+    void setShowRootSeparator(bool showRootSeparator);
+
     AbstractModel *favoritesModel() override;
     AbstractModel *systemFavoritesModel();
 
@@ -103,6 +107,7 @@ Q_SIGNALS:
     void recentAppsModelChanged() const;
     void showFavoritesPlaceholderChanged() const;
     void highlightNewlyInstalledAppsChanged() const;
+    void showRootSeparatorChanged() const;
 
 protected Q_SLOTS:
     void refresh() override;
@@ -129,6 +134,7 @@ private:
     int m_recentOrdering;
     bool m_showPowerSession;
     bool m_showFavoritesPlaceholder;
+    bool m_showRootSeparator;
 
     bool m_highlightNewlyInstalledApps;
     QTimer *m_refreshNewlyInstalledAppsTimer;
