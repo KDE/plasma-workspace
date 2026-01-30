@@ -139,7 +139,7 @@ int XCursorTheme::defaultCursorSize() const
     // TODO: manage Wayland
 #if HAVE_X11
     if (!QX11Info::isPlatformX11()) {
-        return 32;
+        return 24;
     }
     /* This code is basically borrowed from display.c of the XCursor library
        We can't use "int XcursorGetDefaultSize(Display *dpy)" because if
@@ -165,7 +165,7 @@ int XCursorTheme::defaultCursorSize() const
     }
     return size;
 #else
-    return 32;
+    return 24;
 #endif
 }
 
