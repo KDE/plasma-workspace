@@ -10,9 +10,8 @@ endif()
 add_subdirectory(style)
 add_subdirectory(lookandfeel)
 add_subdirectory(colors)
-if(WITH_X11 AND X11_Xcursor_FOUND)
-    add_subdirectory(cursortheme)
-endif()
+add_subdirectory(cursortheme)
+
 
 if(FONTCONFIG_FOUND)
     add_subdirectory( kfontinst )

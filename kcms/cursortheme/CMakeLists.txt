@@ -10,6 +10,7 @@ target_sources(kcm_cursortheme PRIVATE
     xcursor/sortproxymodel.cpp
     ../kcms-common.cpp
     kcmcursortheme.cpp
+    xcursor/xcursor.c
 )
 
 include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/xcursor/ ${CMAKE_CURRENT_BINARY_DIR}/../krdb/ )
@@ -43,10 +44,6 @@ target_link_libraries(kcm_cursortheme PRIVATE
 
 target_compile_definitions(kcm_cursortheme PRIVATE CMAKE_INSTALL_FULL_LIBEXECDIR="${CMAKE_INSTALL_FULL_LIBEXECDIR}")
 
-if (HAVE_X11)
-   target_link_libraries(kcm_cursortheme PRIVATE X11::Xcursor)
-endif ()
-
 # plasma-apply-cursortheme utility
 
 add_executable(plasma-apply-cursortheme)
@@ -58,6 +55,7 @@ target_sources(plasma-apply-cursortheme PRIVATE
     xcursor/xcursortheme.cpp
     ../kcms-common.cpp
     ../krdb/krdb.cpp
+     xcursor/xcursor.c
 )
 kconfig_add_kcfg_files(plasma-apply-cursortheme cursorthemesettings.kcfgc GENERATE_MOC)
 target_link_libraries(plasma-apply-cursortheme
@@ -71,9 +69,6 @@ target_link_libraries(plasma-apply-cursortheme
 
 target_compile_definitions(plasma-apply-cursortheme PRIVATE CMAKE_INSTALL_FULL_LIBEXECDIR="${CMAKE_INSTALL_FULL_LIBEXECDIR}")
 
-if (HAVE_X11)
-   target_link_libraries(plasma-apply-cursortheme X11::Xcursor)
-endif()
 
 install(TARGETS plasma-apply-cursortheme  DESTINATION ${KDE_INSTALL_BINDIR})
 

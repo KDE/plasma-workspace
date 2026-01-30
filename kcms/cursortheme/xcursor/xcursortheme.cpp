@@ -13,9 +13,7 @@
 #include <QImage>
 #include <algorithm>
 
-#include <X11/Xcursor/Xcursor.h>
-#include <X11/Xlib.h>
-
+#include "xcursor.h"
 #include "xcursortheme.h"
 
 using namespace Qt::StringLiterals;
