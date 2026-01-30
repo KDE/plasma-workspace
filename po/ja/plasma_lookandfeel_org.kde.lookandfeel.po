@@ -2,13 +2,13 @@
 # Fuminobu Takeyama <ftake@geeko.jp>, 2016.
 # Tomohiro Hyakutake <tomhioo@outlook.jp>, 2019, 2020.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2019, 2022.
-# noyciy7037 <noyciy7037@gmail.com>, 2026
+# SPDX-FileCopyrightText: 2026 noyciy7037 <noyciy7037@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2024-02-05 00:22+0900\n"
+"PO-Revision-Date: 2026-01-29 11:54+0900\n"
 "Last-Translator: noyciy7037 <noyciy7037@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
@@ -68,7 +68,7 @@ msgstr "シャットダウン"
 #, kde-format
 msgctxt "For switching to a username and password prompt"
 msgid "Other…"
-msgstr "その他..."
+msgstr "その他…"
 
 #: ../sddm-theme/Main.qml:449
 #, kde-format
@@ -165,8 +165,7 @@ msgid "Sleep"
 msgstr "スリープ"
 
 #: contents/lockscreen/LockScreenUi.qml:338 contents/logout/Logout.qml:172
-#, fuzzy, kde-format
-#| msgid "Hibernate"
+#, kde-format
 msgid "Hibernate"
 msgstr "ハイバネート"
 
@@ -245,8 +244,7 @@ msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr "再起動すると、コンピュータはファームウェア設定画面に入ります。"
 
 #: contents/logout/Logout.qml:201
-#, fuzzy, kde-format
-#| msgid "Log Out"
+#, kde-format
 msgid "Log Out"
 msgstr "ログアウト"
 
@@ -274,15 +272,12 @@ msgid "OK"
 msgstr "OK"
 
 #: contents/logout/Logout.qml:245
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgid "Cancel"
 msgstr "キャンセル"
 
 #: contents/osd/OsdItem.qml:30
-#, fuzzy, kde-format
-#| msgctxt "Percentage value"
-#| msgid "%1%"
+#, kde-format
 msgctxt "Percentage value"
 msgid "%1%"
 msgstr "%1%"
