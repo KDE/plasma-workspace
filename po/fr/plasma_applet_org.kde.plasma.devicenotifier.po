@@ -218,7 +218,7 @@ msgstr "Suppression en cours…"
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr ""
-"Ne pas débrancher encore ! Les fichiers sont encore en cours de transfert..."
+"Ne débranchez pas encore ! Les fichiers sont encore en cours de transfert..."
 
 #: qml/FullRepresentation.qml:47 qml/main.qml:123
 #, kde-format

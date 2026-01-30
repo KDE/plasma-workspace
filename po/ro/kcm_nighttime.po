@@ -1,22 +1,22 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2026 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# SPDX-FileCopyrightText: 2026 Sergiu Bivol <sergiu@cip.md>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Irish Gaelic <kde-i18n-doc@kde.org>\n"
-"Language: ga\n"
+"PO-Revision-Date: 2026-01-29 01:23+0000\n"
+"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
+"Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
+"Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
-"3 : 4\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: ui/main.qml:26
 #, kde-format
@@ -25,6 +25,9 @@ msgid ""
 "Time-based features such as Night Light and dynamic wallpapers can be "
 "synchronized with the day-night cycle. Choose your preferred cycle here."
 msgstr ""
+"Caracteristicile bazate pe oră, cum ar fi lumina nocturnă și tapetele "
+"dinamice, pot fi sincronizate la ciclul diurn. Alegeți de aici ciclul "
+"preferat."
 
 #: ui/main.qml:42
 #, kde-format
@@ -32,53 +35,54 @@ msgctxt ""
 "@label:listbox part of a sentence: 'Determine sunrise and sunset times "
 "[based on]'"
 msgid "Determine sunrise and sunset times:"
-msgstr ""
+msgstr "Determină orele răsăritului și apusului:"
 
 #: ui/main.qml:47
 #, kde-format
 msgctxt ""
 "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
 msgid "Based on device's location"
-msgstr ""
+msgstr "În baza amplasării dispozitivului"
 
 #: ui/main.qml:48
 #, kde-format
 msgctxt ""
 "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
 msgid "Using custom times"
-msgstr ""
+msgstr "Folosind ore personalizare"
 
 #: ui/main.qml:60
 #, kde-format
 msgctxt "@label"
 msgid "Sunrise:"
-msgstr ""
+msgstr "Răsărit:"
 
 #: ui/main.qml:75
 #, kde-format
 msgctxt "@label"
 msgid "Sunset:"
-msgstr ""
+msgstr "Apus:"
 
 #: ui/main.qml:89
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Transition duration:"
-msgstr ""
+msgstr "Durata tranziției:"
 
 #: ui/main.qml:95
 #, kde-format
 msgctxt "@item:valuesuffix transition duration"
 msgid "%1 minute"
 msgid_plural "%1 minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 minut"
+msgstr[1] "%1 minute"
+msgstr[2] "%1 de minute"
 
 #: ui/main.qml:119
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatically detect location"
-msgstr ""
+msgstr "Detectează amplasarea automat"
 
 #: ui/main.qml:146
 #, kde-kuit-format
@@ -89,6 +93,10 @@ msgid ""
 "available, or else by sending its IP address to <link url='https://geoip.com/"
 "privacy/'>GeoIP</link>."
 msgstr ""
+"Serviciul <application>GeoClue2</application> va fi folosit pentru a "
+"actualiza periodic amplasarea dispozitivului folosind GPS sau triangularea "
+"turnurilor celulare dacă sunt disponibile, altfel se va trimite adresa IP "
+"către <link url='https://geoip.com/privacy/'>GeoIP</link>."
 
 #: ui/main.qml:147
 #, kde-kuit-format
@@ -99,48 +107,53 @@ msgid ""
 "bugs.kde.org'>https://bugs.kde.org</link> asking KDE developers to write a "
 "detailed description of what this service will do."
 msgstr ""
+"Serviciul <application>%1</application> va fi folosit pentru a actualiza "
+"periodic amplasarea dispozitivului. Raportați un defect la <link "
+"url='https://bugs.kde.org'>https://bugs.kde.org</link> și cereți "
+"dezvoltatorilor KDE să scrie o descriere detaliată a modului de funcționare "
+"al acestui serviciu."
 
 #: ui/main.qml:164
 #, kde-format
 msgctxt "@option:radio"
 msgid "Use manual location:"
-msgstr ""
+msgstr "Folosește amplasare manuală:"
 
 #: ui/main.qml:176
 #, kde-format
 msgctxt "@label"
 msgid "Latitude:"
-msgstr ""
+msgstr "Latitudine:"
 
 #: ui/main.qml:196
 #, kde-format
 msgctxt "@label"
 msgid "Longitude:"
-msgstr ""
+msgstr "Longitudine:"
 
 #: ui/SunPath.qml:52
 #, kde-format
 msgctxt "@info:tooltip; the variables are times of day, e.g. 07:30"
 msgid "Sunrise starts at %1 and ends at %2"
-msgstr ""
+msgstr "Răsăritul începe la %1 și se termină la %2"
 
 #: ui/SunPath.qml:57
 #, kde-format
 msgctxt "@label"
 msgid "Sunrise"
-msgstr ""
+msgstr "Răsărit"
 
 #: ui/SunPath.qml:77
 #, kde-format
 msgctxt "@info:tooltip; the variables are times of day, e.g. 07:30"
 msgid "Sunset starts at %1 and ends at %2"
-msgstr ""
+msgstr "Apusul începe la %1 și se termină la %2"
 
 #: ui/SunPath.qml:82
 #, kde-format
 msgctxt "@label"
 msgid "Sunset"
-msgstr ""
+msgstr "Apus"
 
 #: ui/SunPath.qml:107
 #, kde-format
@@ -149,6 +162,8 @@ msgid ""
 "Sunrise and sunset times cannot be determined at your location due to polar "
 "day. Choose custom times instead."
 msgstr ""
+"Orele răsăritului și apusului nu pot fi determinate la amplasarea "
+"dumneavoastră din cauza zilei polare. Alegeți ore personalizate."
 
 #: ui/SunPath.qml:109
 #, kde-format
@@ -157,6 +172,8 @@ msgid ""
 "Sunrise and sunset times cannot be determined at your location due to polar "
 "night. Choose custom times instead."
 msgstr ""
+"Orele răsăritului și apusului nu pot fi determinate la amplasarea "
+"dumneavoastră din cauza nopții polare. Alegeți ore personalizate."
 
 #: ui/SunPath.qml:111
 #, kde-format
@@ -165,36 +182,38 @@ msgid ""
 "Sunrise and sunset times cannot be reliably determined at your location. "
 "Choose custom times instead."
 msgstr ""
+"Orele răsăritului și apusului nu pot fi determinate fiabil la amplasarea "
+"dumneavoastră. Alegeți ore personalizate."
 
 #: ui/TimeField.qml:31
 #, kde-format
 msgctxt "Time separator between hours and minutes"
 msgid ":"
-msgstr ""
+msgstr ":"
 
 #: ui/WorldMap.qml:76
 #, kde-format
 msgctxt ""
 "@label:chooser Tap should be translated to mean touching using a touchscreen"
 msgid "Tap to choose your location on the map."
-msgstr ""
+msgstr "Atingeți pentru a vă alege amplasarea pe hartă."
 
 #: ui/WorldMap.qml:77
 #, kde-format
 msgctxt ""
 "@label:chooser Click should be translated to mean clicking using a mouse"
 msgid "Click to choose your location on the map."
-msgstr ""
+msgstr "Apăsați pentru a vă alege amplasarea pe hartă."
 
 #: ui/WorldMap.qml:189
 #, kde-format
 msgid "Zoom in"
-msgstr ""
+msgstr "Apropie"
 
 #: ui/WorldMap.qml:206
 #, kde-format
 msgid "Zoom out"
-msgstr ""
+msgstr "Îndepărtează"
 
 #: ui/WorldMap.qml:235
 #, kde-kuit-format
@@ -205,3 +224,7 @@ msgid ""
 "TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
 "by-sa/3.0'>CC BY-SA 3.0</link>"
 msgstr ""
+"Modificat din <link url='https://commons.wikimedia.org/wiki/File:"
+"World_location_map_(equirectangular_180).svg'>Harta locurilor lumii</link> "
+"de TUBS / Wikimedia Commons / <link url='https://creativecommons.org/"
+"licenses/by-sa/3.0'>CC BY-SA 3.0</link>"
