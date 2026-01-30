@@ -16,15 +16,7 @@
 #include "thememodel.h"
 #include "xcursortheme.h"
 
-#include <X11/Xcursor/Xcursor.h>
-
 using namespace Qt::StringLiterals;
-
-// Check for older version
-#if !defined(XCURSOR_LIB_MAJOR) && defined(XCURSOR_MAJOR)
-#define XCURSOR_LIB_MAJOR XCURSOR_MAJOR
-#define XCURSOR_LIB_MINOR XCURSOR_MINOR
-#endif
 
 Q_LOGGING_CATEGORY(KCM_CURSORTHEME, "kcm_cursortheme", QtWarningMsg)
 
@@ -152,19 +144,12 @@ const QStringList CursorThemeModel::searchPaths()
     if (!baseDirs.isEmpty())
         return baseDirs;
 
-#if XCURSOR_LIB_MAJOR == 1 && XCURSOR_LIB_MINOR < 1
-    // These are the default paths Xcursor will scan for cursor themes
-    QString path("~/.icons:/usr/share/icons:/usr/share/pixmaps:/usr/X11R6/lib/X11/icons");
+    QString path = u"~/.icons:/usr/share/icons:/usr/share/pixmaps:/usr/X11R6/lib/X11/icons"_s;
 
     // If XCURSOR_PATH is set, use that instead of the default path
     char *xcursorPath = std::getenv("XCURSOR_PATH");
     if (xcursorPath)
-        path = xcursorPath;
-#else
-    // Get the search path from Xcursor
-    QString path = QString::fromLocal8Bit(XcursorLibraryPath());
-    qCDebug(KCM_CURSORTHEME) << "XcursorLibraryPath:" << path;
-#endif
+        path = QString::fromUtf8(xcursorPath);
 
     // Separate the paths
     baseDirs = path.split(u':', Qt::SkipEmptyParts);
