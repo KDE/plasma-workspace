@@ -127,7 +127,7 @@ XcursorImages *XCursorTheme::xcLoadImages(const QString &image, int size) const
 
 int XCursorTheme::defaultCursorSize() const
 {
-    return 32;
+    return 24;
 }
 
 std::optional<CursorTheme::CursorImage> XCursorTheme::loadImage(const QString &name, int size) const
