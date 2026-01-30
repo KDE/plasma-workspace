@@ -20,6 +20,9 @@ class PreviewWidget : public QQuickPaintedItem
     Q_PROPERTY(SortProxyModel *themeModel READ themeModel WRITE setThemeModel NOTIFY themeModelChanged)
     Q_PROPERTY(int currentIndex READ currentIndex WRITE setCurrentIndex NOTIFY currentIndexChanged)
     Q_PROPERTY(int currentSize READ currentSize WRITE setCurrentSize NOTIFY currentSizeChanged)
+    Q_PROPERTY(int maximumCount READ maximumCount WRITE setMaximumCount NOTIFY maximumCountChanged)
+    Q_PROPERTY(int padding READ padding WRITE setPadding NOTIFY paddingChanged)
+    Q_PROPERTY(int spacing READ spacing WRITE setSpacing NOTIFY spacingChanged)
 
 public:
     explicit PreviewWidget(QQuickItem *parent = nullptr);
@@ -38,7 +41,21 @@ public:
     void setCurrentSize(int size);
     int currentSize() const;
 
+    int maximumCount() const;
+    void setMaximumCount(int maximumCount);
+    Q_SIGNAL void maximumCountChanged(int maximumCount);
+
+    int padding() const;
+    void setPadding(int padding);
+    Q_SIGNAL void paddingChanged(int padding);
+
+    int spacing() const;
+    void setSpacing(int spacing);
+    Q_SIGNAL void spacingChanged(int spacing);
+
     Q_INVOKABLE void refresh();
+
+    void componentComplete() override;
 
 Q_SIGNALS:
     void themeModelChanged();
@@ -60,6 +77,9 @@ private:
     QPointer<SortProxyModel> m_themeModel;
     int m_currentIndex;
     int m_currentSize;
+    int m_maximumCount = 0;
+    int m_padding = 0;
+    int m_spacing = 0;
     QTimer m_animationTimer;
     size_t nextAnimationFrame;
 };

@@ -16,6 +16,10 @@ import org.kde.private.kcm_cursortheme
 KCM.GridDelegate {
     id: delegate
 
+    property alias previewPadding: previewWidget.padding
+    property alias previewSpacing: previewWidget.spacing
+    property alias maximumPreviewCount: previewWidget.maximumCount
+
     text: model.display
     toolTip: model.description
 

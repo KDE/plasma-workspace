@@ -37,8 +37,6 @@ constexpr const char *const cursor_names[] = {
     "split_v",
 };
 
-const int numCursors = 9; // The number of cursors from the above list to be previewed
-constexpr int cursorSpacing = 14 * 2; // Spacing between preview cursors
 const qreal widgetMinWidth = 10; // The minimum width of the preview widget
 const qreal widgetMinHeight = 48; // The minimum height of the preview widget
 }
@@ -98,7 +96,7 @@ PreviewCursor::PreviewCursor(const CursorTheme *theme, const QString &name, int 
 
 QRectF PreviewCursor::rect() const
 {
-    return QRectF(m_pos, QSizeF(width(), height())).adjusted(-(cursorSpacing / 2), -(cursorSpacing / 2), cursorSpacing / 2, cursorSpacing / 2);
+    return QRectF(m_pos, QSizeF(width(), height()));
 }
 
 // ------------------------------------------------------------------------------
@@ -125,6 +123,12 @@ PreviewWidget::~PreviewWidget()
     list.clear();
 }
 
+void PreviewWidget::componentComplete()
+{
+    QQuickPaintedItem::componentComplete();
+    refresh();
+}
+
 void PreviewWidget::setThemeModel(SortProxyModel *themeModel)
 {
     if (m_themeModel == themeModel) {
@@ -147,13 +151,8 @@ void PreviewWidget::setCurrentIndex(int idx)
     }
 
     m_currentIndex = idx;
+    refresh();
     Q_EMIT currentIndexChanged();
-
-    if (!m_themeModel) {
-        return;
-    }
-    const CursorTheme *theme = m_themeModel->theme(m_themeModel->index(idx, 0));
-    setTheme(theme, m_currentSize);
 }
 
 int PreviewWidget::currentIndex() const
@@ -168,13 +167,8 @@ void PreviewWidget::setCurrentSize(int size)
     }
 
     m_currentSize = size;
+    refresh();
     Q_EMIT currentSizeChanged();
-
-    if (!m_themeModel) {
-        return;
-    }
-    const CursorTheme *theme = m_themeModel->theme(m_themeModel->index(m_currentIndex, 0));
-    setTheme(theme, size);
 }
 
 int PreviewWidget::currentSize() const
@@ -182,8 +176,60 @@ int PreviewWidget::currentSize() const
     return m_currentSize;
 }
 
+int PreviewWidget::maximumCount() const
+{
+    return m_maximumCount;
+}
+
+void PreviewWidget::setMaximumCount(int maximumCount)
+{
+    if (m_maximumCount == maximumCount) {
+        return;
+    }
+
+    m_maximumCount = maximumCount;
+    refresh();
+    Q_EMIT maximumCountChanged(maximumCount);
+}
+
+int PreviewWidget::padding() const
+{
+    return m_padding;
+}
+
+void PreviewWidget::setPadding(int padding)
+{
+    if (m_padding == padding) {
+        return;
+    }
+
+    m_padding = padding;
+    refresh(); // could just relayout?
+    Q_EMIT paddingChanged(padding);
+}
+
+int PreviewWidget::spacing() const
+{
+    return m_spacing;
+}
+
+void PreviewWidget::setSpacing(int spacing)
+{
+    if (m_spacing == spacing) {
+        return;
+    }
+
+    m_spacing = spacing;
+    refresh(); // could just relayout?
+    Q_EMIT spacingChanged(spacing);
+}
+
 void PreviewWidget::refresh()
 {
+    if (!isComponentComplete()) {
+        return;
+    }
+
     if (!m_themeModel) {
         return;
     }
@@ -202,7 +248,7 @@ void PreviewWidget::updateImplicitSize()
         maxHeight = qMax(c->height(), (int)maxHeight);
     }
 
-    totalWidth += (list.count() - 1) * cursorSpacing;
+    totalWidth += (list.count() - 1) * m_spacing;
     maxHeight = qMax(maxHeight, widgetMinHeight);
 
     setImplicitWidth(qMax(totalWidth, widgetMinWidth));
@@ -218,17 +264,16 @@ void PreviewWidget::layoutItems()
             deviceCoordinateWidth *= window()->devicePixelRatio();
         }
 #endif
-        const int spacing = cursorSpacing / 2;
-        int nextX = spacing;
-        int nextY = spacing;
+        int nextX = m_padding;
+        int nextY = m_padding;
 
         for (auto *c : std::as_const(list)) {
             c->setPosition(nextX, nextY);
             const int boundingSize = c->boundingSize();
-            nextX += boundingSize + spacing;
-            if (nextX + boundingSize > deviceCoordinateWidth) {
-                nextX = spacing;
-                nextY += boundingSize + spacing;
+            nextX += boundingSize + m_spacing;
+            if (nextX + boundingSize > deviceCoordinateWidth - m_padding) {
+                nextX = m_padding;
+                nextY += boundingSize + m_spacing;
             }
         }
     }
@@ -242,8 +287,13 @@ void PreviewWidget::setTheme(const CursorTheme *theme, const int size)
     list.clear();
 
     if (theme) {
-        for (int i = 0; i < numCursors; i++)
+        int numCursors = m_maximumCount;
+        if (numCursors <= 0) {
+            numCursors = sizeof(cursor_names) / sizeof(cursor_names[0]);
+        }
+        for (int i = 0; i < numCursors; i++) {
             list << new PreviewCursor(theme, QString::fromLatin1(cursor_names[i]), size);
+        }
 
         needLayout = true;
         updateImplicitSize();
@@ -294,8 +344,11 @@ void PreviewWidget::hoverMoveEvent(QHoverEvent *e)
         devicePixelRatio = window()->devicePixelRatio();
     }
 #endif
-    auto it = std::ranges::find_if(list, [e, devicePixelRatio](const PreviewCursor *c) {
-        return c->rect().contains(e->position() * devicePixelRatio);
+    auto it = std::ranges::find_if(list, [this, e, devicePixelRatio](const PreviewCursor *c) {
+        // Increase hit area.
+        const int padding = m_spacing / 2;
+        const auto adjustedRect = c->rect().adjusted(-padding, -padding, +padding, +padding);
+        return adjustedRect.contains(e->position() * devicePixelRatio);
     });
     const PreviewCursor *cursor = it != list.cend() ? *it : nullptr;
 
