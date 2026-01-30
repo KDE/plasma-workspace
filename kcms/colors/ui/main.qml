@@ -320,14 +320,20 @@ KCM.GridViewKCM {
             },
             Kirigami.Action {
                 icon.name: "edit-delete"
-                tooltip: i18n("Remove Color Scheme")
-                enabled: model.removable
+                tooltip: if (enabled) {
+                    return i18nc("@info:tooltip", "Remove color scheme");
+                } else if (delegate.GridView.isCurrentItem) {
+                    return i18nc("@info:tooltip", "Cannot delete the active color scheme");
+                } else {
+                    return i18nc("@info:tooltip", "Cannot delete system-installed color schemes");
+                }
+                enabled: model.removable && !delegate.GridView.isCurrentItem
                 visible: !model.pendingDeletion
                 onTriggered: model.pendingDeletion = true
             },
             Kirigami.Action {
                 icon.name: "edit-undo"
-                tooltip: i18n("Restore Color Scheme")
+                tooltip: i18n("Don’t delete this color scheme")
                 visible: model.pendingDeletion
                 onTriggered: model.pendingDeletion = false
             }
