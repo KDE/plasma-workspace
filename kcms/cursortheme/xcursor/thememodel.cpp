@@ -11,14 +11,18 @@
 #include <QDir>
 #include <QLoggingCategory>
 #include <QRegularExpression>
-#include <private/qtx11extras_p.h>
 
 #include "cursorthemesettings.h"
 #include "thememodel.h"
 #include "xcursortheme.h"
 
+#include "config-X11.h"
+
+#if HAVE_X11
 #include <X11/Xcursor/Xcursor.h>
 #include <X11/Xlib.h>
+#include <private/qtx11extras_p.h>
+#endif
 
 using namespace Qt::StringLiterals;
 
@@ -154,14 +158,14 @@ const QStringList CursorThemeModel::searchPaths()
     if (!baseDirs.isEmpty())
         return baseDirs;
 
-#if XCURSOR_LIB_MAJOR == 1 && XCURSOR_LIB_MINOR < 1
+#if !HAVE_X11 || (XCURSOR_LIB_MAJOR == 1 && XCURSOR_LIB_MINOR < 1)
     // These are the default paths Xcursor will scan for cursor themes
-    QString path("~/.icons:/usr/share/icons:/usr/share/pixmaps:/usr/X11R6/lib/X11/icons");
+    QString path = u"~/.icons:/usr/share/icons:/usr/share/pixmaps:/usr/X11R6/lib/X11/icons"_s;
 
     // If XCURSOR_PATH is set, use that instead of the default path
     char *xcursorPath = std::getenv("XCURSOR_PATH");
     if (xcursorPath)
-        path = xcursorPath;
+        path = QString::fromUtf8(xcursorPath);
 #else
     // Get the search path from Xcursor
     QString path = QString::fromLocal8Bit(XcursorLibraryPath());
