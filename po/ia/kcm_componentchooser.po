@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2014, 2017, 2020, 2021, 2022, 2023, 2024 G.Sora <g.sora@tiscali.it>
+# SPDX-FileCopyrightText: 2014, 2017, 2020, 2021, 2022, 2023, 2024, 2026 G.Sora <g.sora@tiscali.it>
 # giovanni <g.sora@tiscali.it>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2024-09-26 12:39+0200\n"
+"PO-Revision-Date: 2026-01-30 16:41+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -97,7 +97,7 @@ msgstr "Iste application pote anque aperir iste typos de file:"
 #, kde-format
 msgctxt "@label %1 is a MIME type and %2 is an application name"
 msgid "%1 (Currently opens in %2)"
-msgstr "%1 (Currentemente aperiin %2)"
+msgstr "%1 (Currentemente aperi in %2)"
 
 #: ui/ComponentOverlay.qml:111
 #, kde-format
