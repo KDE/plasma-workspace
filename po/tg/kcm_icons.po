@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-31 00:45+0000\n"
 "PO-Revision-Date: 2019-10-09 17:18+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -70,25 +70,43 @@ msgstr "Аз файл насб кардан..."
 msgid "Get New…"
 msgstr "Гирифтани нишонаҳои нав..."
 
-#: ui/main.qml:188
-#, kde-format
-msgid "Remove Icon Theme"
+#: ui/main.qml:189
+#, fuzzy, kde-format
+#| msgid "Remove Icon Theme"
+msgctxt "@info:tooltip"
+msgid "Remove icon theme"
 msgstr "Тоза кардани мавзӯи нишонаҳо"
 
-#: ui/main.qml:195
+#: ui/main.qml:191
 #, kde-format
-msgid "Restore Icon Theme"
-msgstr "Барқарор кардани мавзӯи нишонаҳо"
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active icon theme"
+msgstr ""
 
-#: ui/main.qml:244
+#: ui/main.qml:193
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed icon themes"
+msgstr ""
+
+#: ui/main.qml:201
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Don’t delete this icon theme"
+msgstr ""
+
+#: ui/main.qml:250
 #, kde-format
 msgid "Open Theme"
 msgstr "Кушодани мавзӯъ"
 
-#: ui/main.qml:246
+#: ui/main.qml:252
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr ""
+
+#~ msgid "Restore Icon Theme"
+#~ msgstr "Барқарор кардани мавзӯи нишонаҳо"
 
 #~ msgid "Main Toolbar"
 #~ msgstr "Навори абзорҳои асосӣ"

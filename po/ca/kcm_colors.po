@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-31 00:45+0000\n"
 "PO-Revision-Date: 2025-11-08 15:01+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -1360,25 +1360,43 @@ msgstr "Text desactivat"
 msgid "Edit Color Scheme…"
 msgstr "Edita l'esquema de color…"
 
-#: ui/main.qml:323
-#, kde-format
-msgid "Remove Color Scheme"
+#: ui/main.qml:324
+#, fuzzy, kde-format
+#| msgid "Remove Color Scheme"
+msgctxt "@info:tooltip"
+msgid "Remove color scheme"
 msgstr "Elimina l'esquema de color"
 
-#: ui/main.qml:330
-#, kde-format
-msgid "Restore Color Scheme"
-msgstr "Restaura l'esquema de color"
+#: ui/main.qml:326
+#, fuzzy, kde-format
+#| msgid "Utility to edit and create color schemes"
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active color scheme"
+msgstr "Utilitat per a editar i crear esquemes de color"
 
-#: ui/main.qml:374
+#: ui/main.qml:328
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed color schemes"
+msgstr ""
+
+#: ui/main.qml:336
+#, kde-format
+msgid "Don’t delete this color scheme"
+msgstr ""
+
+#: ui/main.qml:380
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "Obre un esquema de color"
 
-#: ui/main.qml:376
+#: ui/main.qml:382
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Fitxers d'esquema de color (*.colors)"
+
+#~ msgid "Restore Color Scheme"
+#~ msgstr "Restaura l'esquema de color"
 
 #~ msgid "Shading of frames and lighting (\"3D\") effects"
 #~ msgstr "Ombreig de marcs i efectes d'il·luminació («3D»)"

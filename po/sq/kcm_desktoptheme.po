@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-31 00:45+0000\n"
 "PO-Revision-Date: 2021-03-19 18:55-0400\n"
 "Last-Translator: Agron Selimaj <as9902613@gmail.com>\n"
 "Language-Team: kdeshqip\n"
@@ -144,27 +144,50 @@ msgstr ""
 msgid "Edit Theme…"
 msgstr "Emri i Temës"
 
-#: ui/main.qml:173
-#, kde-format
-msgid "Remove Theme"
-msgstr "Hiqe Temën"
-
-#: ui/main.qml:180
+#: ui/main.qml:174
 #, fuzzy, kde-format
-#| msgid "Remove Theme"
-msgid "Restore Theme"
-msgstr "Hiqe Temën"
+#| msgid "Theme Name"
+msgctxt "@info:tooltip"
+msgid "Remove Plasma style"
+msgstr "Emri i Temës"
 
-#: ui/main.qml:199
+#: ui/main.qml:176
+#, fuzzy, kde-format
+#| msgid "Theme Name"
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active Plasma style"
+msgstr "Emri i Temës"
+
+#: ui/main.qml:178
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed Plasma styles"
+msgstr ""
+
+#: ui/main.qml:186
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Don’t delete this Plasma style"
+msgstr ""
+
+#: ui/main.qml:205
 #, fuzzy, kde-format
 #| msgid "Theme Name"
 msgid "Open Theme"
 msgstr "Emri i Temës"
 
-#: ui/main.qml:201
+#: ui/main.qml:207
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr ""
+
+#~ msgid "Remove Theme"
+#~ msgstr "Hiqe Temën"
+
+#, fuzzy
+#~| msgid "Remove Theme"
+#~ msgid "Restore Theme"
+#~ msgstr "Hiqe Temën"
 
 #, fuzzy
 #~| msgid "Theme Name"
@@ -178,11 +201,6 @@ msgstr ""
 #~ msgctxt "EMAIL OF TRANSLATORS"
 #~ msgid "Your emails"
 #~ msgstr "kde-i18n-sq@kde.org,vilsongjeci@gmail.com"
-
-#, fuzzy
-#~| msgid "Theme Name"
-#~ msgid "Plasma Style"
-#~ msgstr "Emri i Temës"
 
 #, fuzzy
 #~| msgid "Theme Name"

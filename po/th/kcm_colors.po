@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-31 00:45+0000\n"
 "PO-Revision-Date: 2025-03-03 20:07+0700\n"
 "Last-Translator: Pongsakorn S. <kde@xerusion.me>\n"
 "Language-Team: Thai\n"
@@ -1379,28 +1379,46 @@ msgstr "ส่วนที่ถูกปิดการใช้งาน"
 msgid "Edit Color Scheme…"
 msgstr "อัปโหล&ดชุดสี..."
 
-#: ui/main.qml:323
+#: ui/main.qml:324
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
-msgid "Remove Color Scheme"
+msgctxt "@info:tooltip"
+msgid "Remove color scheme"
 msgstr "บันทึกชุดสี"
 
-#: ui/main.qml:330
+#: ui/main.qml:326
 #, fuzzy, kde-format
-#| msgid "Import Color Scheme"
-msgid "Restore Color Scheme"
-msgstr "นำเข้าชุดสี"
+#| msgid "Save the current color scheme"
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active color scheme"
+msgstr "บันทึกชุดสีปัจจุบัน"
 
-#: ui/main.qml:374
+#: ui/main.qml:328
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed color schemes"
+msgstr ""
+
+#: ui/main.qml:336
+#, kde-format
+msgid "Don’t delete this color scheme"
+msgstr ""
+
+#: ui/main.qml:380
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Open Color Scheme"
 msgstr "บันทึกชุดสี"
 
-#: ui/main.qml:376
+#: ui/main.qml:382
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Import Color Scheme"
+#~ msgid "Restore Color Scheme"
+#~ msgstr "นำเข้าชุดสี"
 
 #~ msgid "Shading of frames and lighting (\"3D\") effects"
 #~ msgstr "ลูกเล่นวาดกรอบให้เหมือนได้รับแสงเงา (เหมือน 3 มิติ)"

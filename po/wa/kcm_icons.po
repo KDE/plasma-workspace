@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-31 00:45+0000\n"
 "PO-Revision-Date: 2011-07-17 15:38+0200\n"
 "Last-Translator: Jean Cayron <jean.cayron@base.be>\n"
 "Language-Team: Walloon <linux@walon.org>\n"
@@ -80,28 +80,46 @@ msgstr "Astaler fitchî di tinme..."
 msgid "Get New…"
 msgstr "Aveur des noveas tinmes..."
 
-#: ui/main.qml:188
+#: ui/main.qml:189
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
-msgid "Remove Icon Theme"
+msgctxt "@info:tooltip"
+msgid "Remove icon theme"
 msgstr "Oister tinme"
 
-#: ui/main.qml:195
-#, fuzzy, kde-format
-#| msgid "Remove Theme"
-msgid "Restore Icon Theme"
-msgstr "Oister tinme"
+#: ui/main.qml:191
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active icon theme"
+msgstr ""
 
-#: ui/main.qml:244
+#: ui/main.qml:193
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed icon themes"
+msgstr ""
+
+#: ui/main.qml:201
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Don’t delete this icon theme"
+msgstr ""
+
+#: ui/main.qml:250
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Open Theme"
 msgstr "Oister tinme"
 
-#: ui/main.qml:246
+#: ui/main.qml:252
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Remove Theme"
+#~ msgid "Restore Icon Theme"
+#~ msgstr "Oister tinme"
 
 #~ msgid "Main Toolbar"
 #~ msgstr "Mwaisse bår"

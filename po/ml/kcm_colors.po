@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-31 00:45+0000\n"
 "PO-Revision-Date: 2021-08-27 12:19+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -1346,25 +1346,43 @@ msgstr "അപ്രാപ്തമാക്കിയ പദാവലി"
 msgid "Edit Color Scheme…"
 msgstr "നിറക്കൂട്ടു് ചിട്ടപെടുത്തുക…"
 
-#: ui/main.qml:323
-#, kde-format
-msgid "Remove Color Scheme"
+#: ui/main.qml:324
+#, fuzzy, kde-format
+#| msgid "Remove Color Scheme"
+msgctxt "@info:tooltip"
+msgid "Remove color scheme"
 msgstr "നിറക്കൂട്ടു് നീക്കം ചെയ്യുക"
 
-#: ui/main.qml:330
-#, kde-format
-msgid "Restore Color Scheme"
-msgstr "നിറക്കൂട്ടു് പുനഃസ്ഥാപിക്കുക"
+#: ui/main.qml:326
+#, fuzzy, kde-format
+#| msgid "Utility to edit and create color schemes"
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active color scheme"
+msgstr "നിറക്കൂട്ടുകൾ എഡിറ്റു ചെയ്യാനും സൃഷ്ടിക്കാനുമുള്ള ഉപകരണം"
 
-#: ui/main.qml:374
+#: ui/main.qml:328
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed color schemes"
+msgstr ""
+
+#: ui/main.qml:336
+#, kde-format
+msgid "Don’t delete this color scheme"
+msgstr ""
+
+#: ui/main.qml:380
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "നിറക്കൂട്ടു് തുറക്കുക"
 
-#: ui/main.qml:376
+#: ui/main.qml:382
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "നിറക്കൂട്ടു് ഫയലുകൾ (*.colors)"
+
+#~ msgid "Restore Color Scheme"
+#~ msgstr "നിറക്കൂട്ടു് പുനഃസ്ഥാപിക്കുക"
 
 #~ msgid "Shading of frames and lighting (\"3D\") effects"
 #~ msgstr "ഫ്രെയിമുകളുടെ നിഴലും ലൈറ്റിംഗ് (\"3D\") ഇഫക്റ്റുകളും"

@@ -1,5 +1,5 @@
 # translation of kcmicons.po to Polish
-# Version: $Revision: 1723076 $
+# Version: $Revision: 1729009 $
 # translation of kcmicons.po to
 # Michał Rudolf <mrudolf@kdewebdev.org>, 2002.
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2002, 2003, 2004, 2005, 2008, 2009.
@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-31 00:45+0000\n"
 "PO-Revision-Date: 2023-09-17 12:58+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -76,25 +76,44 @@ msgstr "Wgraj z pliku..."
 msgid "Get New…"
 msgstr "Pobierz nowe…"
 
-#: ui/main.qml:188
-#, kde-format
-msgid "Remove Icon Theme"
+#: ui/main.qml:189
+#, fuzzy, kde-format
+#| msgid "Remove Icon Theme"
+msgctxt "@info:tooltip"
+msgid "Remove icon theme"
 msgstr "Usuń zestaw ikon"
 
-#: ui/main.qml:195
-#, kde-format
-msgid "Restore Icon Theme"
-msgstr "Przywróć zestaw ikon"
+#: ui/main.qml:191
+#, fuzzy, kde-format
+#| msgid "Name of the current icon theme"
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active icon theme"
+msgstr "Nazwa bieżącego zestawu ikon"
 
-#: ui/main.qml:244
+#: ui/main.qml:193
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed icon themes"
+msgstr ""
+
+#: ui/main.qml:201
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Don’t delete this icon theme"
+msgstr ""
+
+#: ui/main.qml:250
 #, kde-format
 msgid "Open Theme"
 msgstr "Otwórz zestaw"
 
-#: ui/main.qml:246
+#: ui/main.qml:252
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Plik zestawu (*.tar.gz *.tar.bz2)"
+
+#~ msgid "Restore Icon Theme"
+#~ msgstr "Przywróć zestaw ikon"
 
 #~ msgid "Main Toolbar"
 #~ msgstr "Na głównym pasku narzędzi"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-31 00:45+0000\n"
 "PO-Revision-Date: 2024-09-18 19:03+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -147,22 +147,43 @@ msgstr "Sekvas koloran etoson"
 msgid "Edit Theme…"
 msgstr "Redakti Etoson…"
 
-#: ui/main.qml:173
+#: ui/main.qml:174
 #, kde-format
-msgid "Remove Theme"
-msgstr "Forigi Etoson"
+msgctxt "@info:tooltip"
+msgid "Remove Plasma style"
+msgstr ""
 
-#: ui/main.qml:180
+#: ui/main.qml:176
+#, fuzzy, kde-format
+#| msgid "Name of the current Plasma Style"
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active Plasma style"
+msgstr "Nomo de la aktuala Plasma-Stilo"
+
+#: ui/main.qml:178
 #, kde-format
-msgid "Restore Theme"
-msgstr "Restarigi Etoson"
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed Plasma styles"
+msgstr ""
 
-#: ui/main.qml:199
+#: ui/main.qml:186
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Don’t delete this Plasma style"
+msgstr ""
+
+#: ui/main.qml:205
 #, kde-format
 msgid "Open Theme"
 msgstr "Malfermi Etoson"
 
-#: ui/main.qml:201
+#: ui/main.qml:207
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "Etosaj Dosieroj (*.zip *.tar.gz *.tar.bz2)"
+
+#~ msgid "Remove Theme"
+#~ msgstr "Forigi Etoson"
+
+#~ msgid "Restore Theme"
+#~ msgstr "Restarigi Etoson"

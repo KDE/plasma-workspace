@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_icons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-31 00:45+0000\n"
 "PO-Revision-Date: 2025-06-04 19:32+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -80,22 +80,41 @@ msgstr "Instalar desde archivo…"
 msgid "Get New…"
 msgstr "Obtener novedades…"
 
-#: ui/main.qml:188
-#, kde-format
-msgid "Remove Icon Theme"
+#: ui/main.qml:189
+#, fuzzy, kde-format
+#| msgid "Remove Icon Theme"
+msgctxt "@info:tooltip"
+msgid "Remove icon theme"
 msgstr "Eliminar tema de iconos"
 
-#: ui/main.qml:195
-#, kde-format
-msgid "Restore Icon Theme"
-msgstr "Restaurar tema de iconos"
+#: ui/main.qml:191
+#, fuzzy, kde-format
+#| msgid "Name of the current icon theme"
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active icon theme"
+msgstr "Nombre del tema de iconos actual"
 
-#: ui/main.qml:244
+#: ui/main.qml:193
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed icon themes"
+msgstr ""
+
+#: ui/main.qml:201
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Don’t delete this icon theme"
+msgstr ""
+
+#: ui/main.qml:250
 #, kde-format
 msgid "Open Theme"
 msgstr "Abrir tema"
 
-#: ui/main.qml:246
+#: ui/main.qml:252
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Archivos de temas (*.tar.gz *.tar.bz2)"
+
+#~ msgid "Restore Icon Theme"
+#~ msgstr "Restaurar tema de iconos"

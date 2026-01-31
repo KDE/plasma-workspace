@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-31 00:45+0000\n"
 "PO-Revision-Date: 2014-09-18 15:57+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -156,16 +156,29 @@ msgstr ""
 msgid "(Current theme for this Plasma session)"
 msgstr ""
 
-#: ui/Delegate.qml:43
-#, kde-format
-msgid "Remove Theme"
-msgstr "Muster wegmaken"
-
-#: ui/Delegate.qml:50
+#: ui/Delegate.qml:44
 #, fuzzy, kde-format
 #| msgid "Cursor Theme"
-msgid "Restore Cursor Theme"
+msgctxt "@info:tooltip"
+msgid "Remove cursor theme"
 msgstr "Wieserutsehn"
+
+#: ui/Delegate.qml:46
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active cursor theme"
+msgstr ""
+
+#: ui/Delegate.qml:48
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed cursor themes"
+msgstr ""
+
+#: ui/Delegate.qml:56
+#, kde-format
+msgid "Don’t delete this cursor theme"
+msgstr ""
 
 #: ui/LaunchFeedbackDialog.qml:16
 #, kde-format
@@ -277,6 +290,9 @@ msgctxt ""
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(Verföögbor Grötten: %1)"
+
+#~ msgid "Remove Theme"
+#~ msgstr "Muster wegmaken"
 
 #~ msgid "Name"
 #~ msgstr "Naam"

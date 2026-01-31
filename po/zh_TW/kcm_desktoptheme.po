@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-31 00:45+0000\n"
 "PO-Revision-Date: 2024-09-10 02:31+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -146,31 +146,50 @@ msgstr "使用配色"
 msgid "Edit Theme…"
 msgstr "編輯主題…"
 
-#: ui/main.qml:173
-#, kde-format
-msgid "Remove Theme"
-msgstr "移除主題"
+#: ui/main.qml:174
+#, fuzzy, kde-format
+#| msgid "Plasma Style"
+msgctxt "@info:tooltip"
+msgid "Remove Plasma style"
+msgstr "Plasma 樣式"
 
-#: ui/main.qml:180
-#, kde-format
-msgid "Restore Theme"
-msgstr "復原主題"
+#: ui/main.qml:176
+#, fuzzy, kde-format
+#| msgid "This module lets you choose the Plasma style."
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active Plasma style"
+msgstr "這個模組讓您可以選擇 Plasma 樣式。"
 
-#: ui/main.qml:199
+#: ui/main.qml:178
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed Plasma styles"
+msgstr ""
+
+#: ui/main.qml:186
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Don’t delete this Plasma style"
+msgstr ""
+
+#: ui/main.qml:205
 #, kde-format
 msgid "Open Theme"
 msgstr "開啟主題"
 
-#: ui/main.qml:201
+#: ui/main.qml:207
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "主題檔 (*.zip *.tar.gz *.tar.bz2)"
 
+#~ msgid "Remove Theme"
+#~ msgstr "移除主題"
+
+#~ msgid "Restore Theme"
+#~ msgstr "復原主題"
+
 #~ msgid "Get New Plasma Styles…"
 #~ msgstr "取得新 Plasma 樣式…"
-
-#~ msgid "This module lets you choose the Plasma style."
-#~ msgstr "這個模組讓您可以選擇 Plasma 樣式。"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"
@@ -179,9 +198,6 @@ msgstr "主題檔 (*.zip *.tar.gz *.tar.bz2)"
 #~ msgctxt "EMAIL OF TRANSLATORS"
 #~ msgid "Your emails"
 #~ msgstr "franklin@goodhorse.idv.tw, s8321414@gmail.com"
-
-#~ msgid "Plasma Style"
-#~ msgstr "Plasma 樣式"
 
 #~ msgid "David Rosca"
 #~ msgstr "David Rosca"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_cursortheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-31 00:45+0000\n"
 "PO-Revision-Date: 2023-01-09 18:36+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -161,15 +161,30 @@ msgstr "Tem os seguintes temas de cursores do rato no seu sistema:"
 msgid "(Current theme for this Plasma session)"
 msgstr "(Tema actual da sessão do Plasma)"
 
-#: ui/Delegate.qml:43
-#, kde-format
-msgid "Remove Theme"
-msgstr "Remover o Tema"
-
-#: ui/Delegate.qml:50
-#, kde-format
-msgid "Restore Cursor Theme"
+#: ui/Delegate.qml:44
+#, fuzzy, kde-format
+#| msgid "Restore Cursor Theme"
+msgctxt "@info:tooltip"
+msgid "Remove cursor theme"
 msgstr "Repor o Tema de Cursores"
+
+#: ui/Delegate.qml:46
+#, fuzzy, kde-format
+#| msgid "Name of the current cursor theme"
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active cursor theme"
+msgstr "Nome do tema de cursores actual"
+
+#: ui/Delegate.qml:48
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed cursor themes"
+msgstr ""
+
+#: ui/Delegate.qml:56
+#, kde-format
+msgid "Don’t delete this cursor theme"
+msgstr ""
 
 #: ui/LaunchFeedbackDialog.qml:16
 #, kde-format
@@ -278,6 +293,9 @@ msgctxt ""
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(Tamanhos disponíveis: %1)"
+
+#~ msgid "Remove Theme"
+#~ msgstr "Remover o Tema"
 
 #~ msgid "This module lets you choose the mouse cursor theme."
 #~ msgstr "Este módulo permite-lhe escolher o tema de cursores do rato."

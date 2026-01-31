@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails trunk\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-31 00:45+0000\n"
 "PO-Revision-Date: 2019-12-12 22:40+0000\n"
 "Last-Translator: Vivek KJ Pazhedath <vivekkj2004@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -141,25 +141,46 @@ msgstr "നിറ പദ്ധതി"
 msgid "Edit Theme…"
 msgstr "പ്രമേയത്തിന്റെ ഇനം"
 
-#: ui/main.qml:173
-#, kde-format
-msgid "Remove Theme"
-msgstr "പ്രമേയം നീക്കം ചെയ്യുക"
-
-#: ui/main.qml:180
+#: ui/main.qml:174
 #, fuzzy, kde-format
-msgid "Restore Theme"
-msgstr "പ്രമേയം നീക്കം ചെയ്യുക"
+msgctxt "@info:tooltip"
+msgid "Remove Plasma style"
+msgstr "പുതിയ പ്രമേയം എടുക്കുക..."
 
-#: ui/main.qml:199
+#: ui/main.qml:176
+#, fuzzy, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active Plasma style"
+msgstr "പുതിയ പ്രമേയം എടുക്കുക..."
+
+#: ui/main.qml:178
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed Plasma styles"
+msgstr ""
+
+#: ui/main.qml:186
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Don’t delete this Plasma style"
+msgstr ""
+
+#: ui/main.qml:205
 #, fuzzy, kde-format
 msgid "Open Theme"
 msgstr "പ്രമേയത്തിന്റെ ഇനം"
 
-#: ui/main.qml:201
+#: ui/main.qml:207
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr ""
+
+#~ msgid "Remove Theme"
+#~ msgstr "പ്രമേയം നീക്കം ചെയ്യുക"
+
+#, fuzzy
+#~ msgid "Restore Theme"
+#~ msgstr "പ്രമേയം നീക്കം ചെയ്യുക"
 
 #, fuzzy
 #~ msgid "Get New Plasma Styles…"
@@ -173,10 +194,6 @@ msgstr ""
 #~ msgid "Your emails"
 #~ msgstr ""
 #~ "shijualexonline@gmail.com,snalledam@dataone.in,vivekkj2004@gmail.com"
-
-#, fuzzy
-#~ msgid "Plasma Style"
-#~ msgstr "പുതിയ പ്രമേയം എടുക്കുക..."
 
 #, fuzzy
 #~ msgid "Plasma Styles"

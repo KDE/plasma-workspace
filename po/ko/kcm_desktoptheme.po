@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-31 00:45+0000\n"
 "PO-Revision-Date: 2024-11-28 23:27+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -140,31 +140,50 @@ msgstr "색 구성표 준수"
 msgid "Edit Theme…"
 msgstr "테마 편집…"
 
-#: ui/main.qml:173
-#, kde-format
-msgid "Remove Theme"
-msgstr "테마 삭제"
+#: ui/main.qml:174
+#, fuzzy, kde-format
+#| msgid "Plasma Style"
+msgctxt "@info:tooltip"
+msgid "Remove Plasma style"
+msgstr "Plasma 스타일"
 
-#: ui/main.qml:180
-#, kde-format
-msgid "Restore Theme"
-msgstr "테마 복원"
+#: ui/main.qml:176
+#, fuzzy, kde-format
+#| msgid "This module lets you choose the Plasma style."
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active Plasma style"
+msgstr "이 모듈에서 Plasma 스타일을 선택할 수 있습니다."
 
-#: ui/main.qml:199
+#: ui/main.qml:178
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed Plasma styles"
+msgstr ""
+
+#: ui/main.qml:186
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Don’t delete this Plasma style"
+msgstr ""
+
+#: ui/main.qml:205
 #, kde-format
 msgid "Open Theme"
 msgstr "테마 열기"
 
-#: ui/main.qml:201
+#: ui/main.qml:207
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "테마 파일 (*.zip *.tar.gz *.tar.bz2)"
 
+#~ msgid "Remove Theme"
+#~ msgstr "테마 삭제"
+
+#~ msgid "Restore Theme"
+#~ msgstr "테마 복원"
+
 #~ msgid "Get New Plasma Styles…"
 #~ msgstr "새 Plasma 스타일 가져오기…"
-
-#~ msgid "This module lets you choose the Plasma style."
-#~ msgstr "이 모듈에서 Plasma 스타일을 선택할 수 있습니다."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"
@@ -173,9 +192,6 @@ msgstr "테마 파일 (*.zip *.tar.gz *.tar.bz2)"
 #~ msgctxt "EMAIL OF TRANSLATORS"
 #~ msgid "Your emails"
 #~ msgstr "kde@peremen.name,daemul72@gmail.com"
-
-#~ msgid "Plasma Style"
-#~ msgstr "Plasma 스타일"
 
 #~ msgid "David Rosca"
 #~ msgstr "David Rosca"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-31 00:45+0000\n"
 "PO-Revision-Date: 2014-07-02 23:27+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -149,26 +149,49 @@ msgstr "Klöörschema"
 msgid "Edit Theme…"
 msgstr "Muster"
 
-#: ui/main.qml:173
-#, kde-format
-msgid "Remove Theme"
-msgstr "Muster wegdoon"
-
-#: ui/main.qml:180
+#: ui/main.qml:174
 #, fuzzy, kde-format
-#| msgid "Remove Theme"
-msgid "Restore Theme"
-msgstr "Muster wegdoon"
+#| msgid "Get New Themes..."
+msgctxt "@info:tooltip"
+msgid "Remove Plasma style"
+msgstr "Nieg Mustern halen..."
 
-#: ui/main.qml:199
+#: ui/main.qml:176
+#, fuzzy, kde-format
+#| msgid "Get New Themes..."
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active Plasma style"
+msgstr "Nieg Mustern halen..."
+
+#: ui/main.qml:178
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed Plasma styles"
+msgstr ""
+
+#: ui/main.qml:186
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Don’t delete this Plasma style"
+msgstr ""
+
+#: ui/main.qml:205
 #, kde-format
 msgid "Open Theme"
 msgstr "Muster opmaken"
 
-#: ui/main.qml:201
+#: ui/main.qml:207
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "Musterdateien (*.zip *.tar.gz *.tar.bz2)"
+
+#~ msgid "Remove Theme"
+#~ msgstr "Muster wegdoon"
+
+#, fuzzy
+#~| msgid "Remove Theme"
+#~ msgid "Restore Theme"
+#~ msgstr "Muster wegdoon"
 
 #, fuzzy
 #~| msgid "Get New Themes..."
@@ -182,11 +205,6 @@ msgstr "Musterdateien (*.zip *.tar.gz *.tar.bz2)"
 #~ msgctxt "EMAIL OF TRANSLATORS"
 #~ msgid "Your emails"
 #~ msgstr "m.j.wiese@web.de, s_dibbern@web.de"
-
-#, fuzzy
-#~| msgid "Get New Themes..."
-#~ msgid "Plasma Style"
-#~ msgstr "Nieg Mustern halen..."
 
 #, fuzzy
 #~| msgid "Get New Themes..."

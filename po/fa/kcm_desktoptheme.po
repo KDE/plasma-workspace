@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-31 00:45+0000\n"
 "PO-Revision-Date: ۲۰۱۶-۰۸-۲۰ ۱۶:۵۵+0330\n"
 "Last-Translator: Mohi Mirdamadi <mohi@ubuntu.ir>\n"
 "Language-Team: Persian <kde-i18n-fa@kde.org>\n"
@@ -144,36 +144,54 @@ msgstr ""
 msgid "Edit Theme…"
 msgstr "باز کردن چهره"
 
-#: ui/main.qml:173
-#, kde-format
-msgid "Remove Theme"
-msgstr "حذف چهره"
-
-#: ui/main.qml:180
+#: ui/main.qml:174
 #, fuzzy, kde-format
-#| msgid "Remove Theme"
-msgid "Restore Theme"
-msgstr "حذف چهره"
+#| msgid "Get new Theme"
+msgctxt "@info:tooltip"
+msgid "Remove Plasma style"
+msgstr "دریافت چهره‌ی جدید"
 
-#: ui/main.qml:199
+#: ui/main.qml:176
+#, fuzzy, kde-format
+#| msgid "This module lets you configure the desktop theme."
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active Plasma style"
+msgstr "این پیمانه به شما اجازه‌ی پیکربندی چهره‌ی رومیزی را می‌دهد."
+
+#: ui/main.qml:178
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed Plasma styles"
+msgstr ""
+
+#: ui/main.qml:186
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Don’t delete this Plasma style"
+msgstr ""
+
+#: ui/main.qml:205
 #, kde-format
 msgid "Open Theme"
 msgstr "باز کردن چهره"
 
-#: ui/main.qml:201
+#: ui/main.qml:207
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "پرونده‌های چهره (*.zip *.tar.gz *.tar.bz2)"
+
+#~ msgid "Remove Theme"
+#~ msgstr "حذف چهره"
+
+#, fuzzy
+#~| msgid "Remove Theme"
+#~ msgid "Restore Theme"
+#~ msgstr "حذف چهره"
 
 #, fuzzy
 #~| msgid "Get new Theme"
 #~ msgid "Get New Plasma Styles…"
 #~ msgstr "دریافت چهره‌ی جدید"
-
-#, fuzzy
-#~| msgid "This module lets you configure the desktop theme."
-#~ msgid "This module lets you choose the Plasma style."
-#~ msgstr "این پیمانه به شما اجازه‌ی پیکربندی چهره‌ی رومیزی را می‌دهد."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"
@@ -182,11 +200,6 @@ msgstr "پرونده‌های چهره (*.zip *.tar.gz *.tar.bz2)"
 #~ msgctxt "EMAIL OF TRANSLATORS"
 #~ msgid "Your emails"
 #~ msgstr "mohi@ubuntu.ir, ehsan.abdolahy@gmail.com"
-
-#, fuzzy
-#~| msgid "Get new Theme"
-#~ msgid "Plasma Style"
-#~ msgstr "دریافت چهره‌ی جدید"
 
 #~ msgid "David Rosca"
 #~ msgstr "David Rosca"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-31 00:45+0000\n"
 "PO-Revision-Date: 2008-12-28 08:00+0200\n"
 "Last-Translator: Omer Ensari <oensari@gmail.com>\n"
 "Language-Team: Kurdish <kde-i18n-doc@lists.kde.org>\n"
@@ -146,27 +146,50 @@ msgstr "Şemaya Rengan"
 msgid "Edit Theme…"
 msgstr "Hêmana Dirbê"
 
-#: ui/main.qml:173
-#, kde-format
-msgid "Remove Theme"
-msgstr "Temayê Rake"
-
-#: ui/main.qml:180
+#: ui/main.qml:174
 #, fuzzy, kde-format
-#| msgid "Remove Theme"
-msgid "Restore Theme"
-msgstr "Temayê Rake"
+#| msgid "Get New Theme..."
+msgctxt "@info:tooltip"
+msgid "Remove Plasma style"
+msgstr "Temaya Nû Bîne..."
 
-#: ui/main.qml:199
+#: ui/main.qml:176
+#, fuzzy, kde-format
+#| msgid "Get New Theme..."
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active Plasma style"
+msgstr "Temaya Nû Bîne..."
+
+#: ui/main.qml:178
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed Plasma styles"
+msgstr ""
+
+#: ui/main.qml:186
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Don’t delete this Plasma style"
+msgstr ""
+
+#: ui/main.qml:205
 #, fuzzy, kde-format
 #| msgid "Theme Item"
 msgid "Open Theme"
 msgstr "Hêmana Dirbê"
 
-#: ui/main.qml:201
+#: ui/main.qml:207
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr ""
+
+#~ msgid "Remove Theme"
+#~ msgstr "Temayê Rake"
+
+#, fuzzy
+#~| msgid "Remove Theme"
+#~ msgid "Restore Theme"
+#~ msgstr "Temayê Rake"
 
 #, fuzzy
 #~| msgid "Get New Theme..."
@@ -180,11 +203,6 @@ msgstr ""
 #~ msgctxt "EMAIL OF TRANSLATORS"
 #~ msgid "Your emails"
 #~ msgstr "oensari@gmail.com"
-
-#, fuzzy
-#~| msgid "Get New Theme..."
-#~ msgid "Plasma Style"
-#~ msgstr "Temaya Nû Bîne..."
 
 #, fuzzy
 #~| msgid "Get New Theme..."

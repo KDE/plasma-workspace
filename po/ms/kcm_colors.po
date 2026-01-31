@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-31 00:45+0000\n"
 "PO-Revision-Date: 2011-02-15 21:31+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@gmail.com>\n"
 "Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
@@ -1418,28 +1418,46 @@ msgstr "Dimatikan"
 msgid "Edit Color Scheme…"
 msgstr "Import Skema..."
 
-#: ui/main.qml:323
+#: ui/main.qml:324
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
-msgid "Remove Color Scheme"
+msgctxt "@info:tooltip"
+msgid "Remove color scheme"
 msgstr "Simpan Skima Warna"
 
-#: ui/main.qml:330
+#: ui/main.qml:326
 #, fuzzy, kde-format
-#| msgid "Import Color Scheme"
-msgid "Restore Color Scheme"
-msgstr "Import Skema Warna"
+#| msgid "Save Color Scheme"
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active color scheme"
+msgstr "Simpan Skima Warna"
 
-#: ui/main.qml:374
+#: ui/main.qml:328
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed color schemes"
+msgstr ""
+
+#: ui/main.qml:336
+#, kde-format
+msgid "Don’t delete this color scheme"
+msgstr ""
+
+#: ui/main.qml:380
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Open Color Scheme"
 msgstr "Simpan Skima Warna"
 
-#: ui/main.qml:376
+#: ui/main.qml:382
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Import Color Scheme"
+#~ msgid "Restore Color Scheme"
+#~ msgstr "Import Skema Warna"
 
 #, fuzzy
 #~| msgctxt "Menu item"

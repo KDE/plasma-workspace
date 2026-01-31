@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-31 00:45+0000\n"
 "PO-Revision-Date: 2025-09-21 14:59+0900\n"
 "Last-Translator: Yuma Kakei <yumasansansan@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -143,22 +143,43 @@ msgstr "カラースキームに対応"
 msgid "Edit Theme…"
 msgstr "テーマを編集..."
 
-#: ui/main.qml:173
+#: ui/main.qml:174
 #, kde-format
-msgid "Remove Theme"
-msgstr "テーマを削除"
+msgctxt "@info:tooltip"
+msgid "Remove Plasma style"
+msgstr ""
 
-#: ui/main.qml:180
+#: ui/main.qml:176
+#, fuzzy, kde-format
+#| msgid "Name of the current Plasma Style"
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active Plasma style"
+msgstr "現在の Plasma スタイルの名前"
+
+#: ui/main.qml:178
 #, kde-format
-msgid "Restore Theme"
-msgstr "テーマを復元"
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed Plasma styles"
+msgstr ""
 
-#: ui/main.qml:199
+#: ui/main.qml:186
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Don’t delete this Plasma style"
+msgstr ""
+
+#: ui/main.qml:205
 #, kde-format
 msgid "Open Theme"
 msgstr "テーマを開く"
 
-#: ui/main.qml:201
+#: ui/main.qml:207
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "テーマファイル (*.zip *.tar.gz *.tar.bz2)"
+
+#~ msgid "Remove Theme"
+#~ msgstr "テーマを削除"
+
+#~ msgid "Restore Theme"
+#~ msgstr "テーマを復元"

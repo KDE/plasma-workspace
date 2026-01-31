@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-31 00:45+0000\n"
 "PO-Revision-Date: 2020-09-26 10:15+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -145,33 +145,52 @@ msgstr "Värviskeemi alus"
 msgid "Edit Theme…"
 msgstr "Muuda teemat ..."
 
-#: ui/main.qml:173
-#, kde-format
-msgid "Remove Theme"
-msgstr "Eemalda teema"
+#: ui/main.qml:174
+#, fuzzy, kde-format
+#| msgid "Plasma Style"
+msgctxt "@info:tooltip"
+msgid "Remove Plasma style"
+msgstr "Plasma stiil"
 
-#: ui/main.qml:180
-#, kde-format
-msgid "Restore Theme"
-msgstr "Taasta teema"
+#: ui/main.qml:176
+#, fuzzy, kde-format
+#| msgid "This module lets you choose the Plasma style."
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active Plasma style"
+msgstr "See moodul võimaldab valida Plasma stiili."
 
-#: ui/main.qml:199
+#: ui/main.qml:178
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed Plasma styles"
+msgstr ""
+
+#: ui/main.qml:186
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Don’t delete this Plasma style"
+msgstr ""
+
+#: ui/main.qml:205
 #, kde-format
 msgid "Open Theme"
 msgstr "Teema avamine"
 
-#: ui/main.qml:201
+#: ui/main.qml:207
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "Teemafailid (*.zip *.tar.gz *.tar.bz2)"
+
+#~ msgid "Remove Theme"
+#~ msgstr "Eemalda teema"
+
+#~ msgid "Restore Theme"
+#~ msgstr "Taasta teema"
 
 #, fuzzy
 #~| msgid "Get New Plasma Styles..."
 #~ msgid "Get New Plasma Styles…"
 #~ msgstr "Hangi uusi Plasma stiile ..."
-
-#~ msgid "This module lets you choose the Plasma style."
-#~ msgstr "See moodul võimaldab valida Plasma stiili."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"
@@ -180,9 +199,6 @@ msgstr "Teemafailid (*.zip *.tar.gz *.tar.bz2)"
 #~ msgctxt "EMAIL OF TRANSLATORS"
 #~ msgid "Your emails"
 #~ msgstr "qiilaq69@gmail.com"
-
-#~ msgid "Plasma Style"
-#~ msgstr "Plasma stiil"
 
 #~ msgid "David Rosca"
 #~ msgstr "David Rosca"

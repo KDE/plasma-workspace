@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-31 00:45+0000\n"
 "PO-Revision-Date: 2024-05-17 19:28+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -163,15 +163,30 @@ msgstr "You have the following mouse cursor themes on your system:"
 msgid "(Current theme for this Plasma session)"
 msgstr "(Current theme for this Plasma session)"
 
-#: ui/Delegate.qml:43
-#, kde-format
-msgid "Remove Theme"
-msgstr "Remove Theme"
-
-#: ui/Delegate.qml:50
-#, kde-format
-msgid "Restore Cursor Theme"
+#: ui/Delegate.qml:44
+#, fuzzy, kde-format
+#| msgid "Restore Cursor Theme"
+msgctxt "@info:tooltip"
+msgid "Remove cursor theme"
 msgstr "Restore Cursor Theme"
+
+#: ui/Delegate.qml:46
+#, fuzzy, kde-format
+#| msgid "Name of the current cursor theme"
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active cursor theme"
+msgstr "Name of the current cursor theme"
+
+#: ui/Delegate.qml:48
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed cursor themes"
+msgstr ""
+
+#: ui/Delegate.qml:56
+#, kde-format
+msgid "Don’t delete this cursor theme"
+msgstr ""
 
 #: ui/LaunchFeedbackDialog.qml:16
 #, kde-format
@@ -278,6 +293,9 @@ msgctxt ""
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(Available sizes: %1)"
+
+#~ msgid "Remove Theme"
+#~ msgstr "Remove Theme"
 
 #~ msgid "This module lets you choose the mouse cursor theme."
 #~ msgstr "This module lets you choose the mouse cursor theme."

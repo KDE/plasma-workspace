@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmmousetheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-31 00:45+0000\n"
 "PO-Revision-Date: 2024-05-05 11:54+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -169,15 +169,30 @@ msgstr "ערכות הסמנים הבאות נמצאות במערכת שלך:"
 msgid "(Current theme for this Plasma session)"
 msgstr "(ערכת סמלים נוכחית להפעלת פלזמה זו)"
 
-#: ui/Delegate.qml:43
-#, kde-format
-msgid "Remove Theme"
-msgstr "הסרת ערכה"
-
-#: ui/Delegate.qml:50
-#, kde-format
-msgid "Restore Cursor Theme"
+#: ui/Delegate.qml:44
+#, fuzzy, kde-format
+#| msgid "Restore Cursor Theme"
+msgctxt "@info:tooltip"
+msgid "Remove cursor theme"
 msgstr "איפוס ערכת סמנים"
+
+#: ui/Delegate.qml:46
+#, fuzzy, kde-format
+#| msgid "Name of the current cursor theme"
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active cursor theme"
+msgstr "שם ערכת הסמנים הנוכחית"
+
+#: ui/Delegate.qml:48
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed cursor themes"
+msgstr ""
+
+#: ui/Delegate.qml:56
+#, kde-format
+msgid "Don’t delete this cursor theme"
+msgstr ""
 
 #: ui/LaunchFeedbackDialog.qml:16
 #, kde-format
@@ -286,6 +301,9 @@ msgctxt ""
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(גדלים זמינים: %1)"
+
+#~ msgid "Remove Theme"
+#~ msgstr "הסרת ערכה"
 
 #~ msgid "Name"
 #~ msgstr "שם"

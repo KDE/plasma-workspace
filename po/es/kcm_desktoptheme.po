@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktoptheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-31 00:45+0000\n"
 "PO-Revision-Date: 2025-06-04 19:31+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -153,22 +153,43 @@ msgstr "Sigue el esquema de color"
 msgid "Edit Theme…"
 msgstr "Editar tema…"
 
-#: ui/main.qml:173
+#: ui/main.qml:174
 #, kde-format
-msgid "Remove Theme"
-msgstr "Borrar tema"
+msgctxt "@info:tooltip"
+msgid "Remove Plasma style"
+msgstr ""
 
-#: ui/main.qml:180
+#: ui/main.qml:176
+#, fuzzy, kde-format
+#| msgid "Name of the current Plasma Style"
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active Plasma style"
+msgstr "Nombre del estilo actual de Plasma"
+
+#: ui/main.qml:178
 #, kde-format
-msgid "Restore Theme"
-msgstr "Restaurar tema"
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed Plasma styles"
+msgstr ""
 
-#: ui/main.qml:199
+#: ui/main.qml:186
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Don’t delete this Plasma style"
+msgstr ""
+
+#: ui/main.qml:205
 #, kde-format
 msgid "Open Theme"
 msgstr "Abrir tema"
 
-#: ui/main.qml:201
+#: ui/main.qml:207
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "Archivos de temas (*.zip *.tar.gz *.tar.bz2)"
+
+#~ msgid "Remove Theme"
+#~ msgstr "Borrar tema"
+
+#~ msgid "Restore Theme"
+#~ msgstr "Restaurar tema"

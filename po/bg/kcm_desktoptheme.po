@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-31 00:45+0000\n"
 "PO-Revision-Date: 2024-11-09 20:04+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -146,22 +146,43 @@ msgstr "Спазване на цветовата схема"
 msgid "Edit Theme…"
 msgstr "Редактиране на тема…"
 
-#: ui/main.qml:173
+#: ui/main.qml:174
 #, kde-format
-msgid "Remove Theme"
-msgstr "Премахване на тема"
+msgctxt "@info:tooltip"
+msgid "Remove Plasma style"
+msgstr ""
 
-#: ui/main.qml:180
+#: ui/main.qml:176
+#, fuzzy, kde-format
+#| msgid "Name of the current Plasma Style"
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active Plasma style"
+msgstr "Име на текущия стил за Plasma"
+
+#: ui/main.qml:178
 #, kde-format
-msgid "Restore Theme"
-msgstr "Възстановяване на тема"
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed Plasma styles"
+msgstr ""
 
-#: ui/main.qml:199
+#: ui/main.qml:186
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Don’t delete this Plasma style"
+msgstr ""
+
+#: ui/main.qml:205
 #, kde-format
 msgid "Open Theme"
 msgstr "Отваряне на тема"
 
-#: ui/main.qml:201
+#: ui/main.qml:207
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "Файлове на тема ((*.zip *.tar.gz *.tar.bz2)"
+
+#~ msgid "Remove Theme"
+#~ msgstr "Премахване на тема"
+
+#~ msgid "Restore Theme"
+#~ msgstr "Възстановяване на тема"

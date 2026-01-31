@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-31 00:45+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -136,22 +136,36 @@ msgstr ""
 msgid "Edit Theme…"
 msgstr ""
 
-#: ui/main.qml:173
+#: ui/main.qml:174
 #, kde-format
-msgid "Remove Theme"
+msgctxt "@info:tooltip"
+msgid "Remove Plasma style"
 msgstr ""
 
-#: ui/main.qml:180
+#: ui/main.qml:176
 #, kde-format
-msgid "Restore Theme"
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active Plasma style"
 msgstr ""
 
-#: ui/main.qml:199
+#: ui/main.qml:178
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed Plasma styles"
+msgstr ""
+
+#: ui/main.qml:186
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Don’t delete this Plasma style"
+msgstr ""
+
+#: ui/main.qml:205
 #, kde-format
 msgid "Open Theme"
 msgstr ""
 
-#: ui/main.qml:201
+#: ui/main.qml:207
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr ""

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-31 00:45+0000\n"
 "PO-Revision-Date: 2024-09-29 08:04+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -150,31 +150,50 @@ msgstr "Mengikuti skema warna"
 msgid "Edit Theme…"
 msgstr "Edit Tema..."
 
-#: ui/main.qml:173
-#, kde-format
-msgid "Remove Theme"
-msgstr "Hapus Tema"
+#: ui/main.qml:174
+#, fuzzy, kde-format
+#| msgid "Plasma Style"
+msgctxt "@info:tooltip"
+msgid "Remove Plasma style"
+msgstr "Gaya Plasma"
 
-#: ui/main.qml:180
-#, kde-format
-msgid "Restore Theme"
-msgstr "Kembalikan Tema"
+#: ui/main.qml:176
+#, fuzzy, kde-format
+#| msgid "This module lets you choose the Plasma style."
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active Plasma style"
+msgstr "Modul ini membiarkan kamu memilih gaya Plasma."
 
-#: ui/main.qml:199
+#: ui/main.qml:178
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed Plasma styles"
+msgstr ""
+
+#: ui/main.qml:186
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Don’t delete this Plasma style"
+msgstr ""
+
+#: ui/main.qml:205
 #, kde-format
 msgid "Open Theme"
 msgstr "Buka Tema"
 
-#: ui/main.qml:201
+#: ui/main.qml:207
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "File Tema (*.zip *.tar.gz *.tar.bz2)"
 
+#~ msgid "Remove Theme"
+#~ msgstr "Hapus Tema"
+
+#~ msgid "Restore Theme"
+#~ msgstr "Kembalikan Tema"
+
 #~ msgid "Get New Plasma Styles…"
 #~ msgstr "Dapatkan Gaya Plasma Baru..."
-
-#~ msgid "This module lets you choose the Plasma style."
-#~ msgstr "Modul ini membiarkan kamu memilih gaya Plasma."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"
@@ -183,9 +202,6 @@ msgstr "File Tema (*.zip *.tar.gz *.tar.bz2)"
 #~ msgctxt "EMAIL OF TRANSLATORS"
 #~ msgid "Your emails"
 #~ msgstr "andhika.padmawan@gmail.com,wantoyek@gmail.com"
-
-#~ msgid "Plasma Style"
-#~ msgstr "Gaya Plasma"
 
 #~ msgid "David Rosca"
 #~ msgstr "David Rosca"

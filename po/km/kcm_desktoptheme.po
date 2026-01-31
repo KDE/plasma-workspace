@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-31 00:45+0000\n"
 "PO-Revision-Date: 2010-06-03 16:28+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -144,27 +144,50 @@ msgstr "គ្រោងការណ៍​ពណ៌"
 msgid "Edit Theme…"
 msgstr "​ស្បែក"
 
-#: ui/main.qml:173
-#, kde-format
-msgid "Remove Theme"
-msgstr "យក​ស្បែក​ចេញ"
-
-#: ui/main.qml:180
+#: ui/main.qml:174
 #, fuzzy, kde-format
-#| msgid "Remove Theme"
-msgid "Restore Theme"
-msgstr "យក​ស្បែក​ចេញ"
+#| msgid "Get New Themes..."
+msgctxt "@info:tooltip"
+msgid "Remove Plasma style"
+msgstr "យក​ស្បែក​ថ្មី..."
 
-#: ui/main.qml:199
+#: ui/main.qml:176
+#, fuzzy, kde-format
+#| msgid "Get New Themes..."
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active Plasma style"
+msgstr "យក​ស្បែក​ថ្មី..."
+
+#: ui/main.qml:178
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed Plasma styles"
+msgstr ""
+
+#: ui/main.qml:186
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Don’t delete this Plasma style"
+msgstr ""
+
+#: ui/main.qml:205
 #, fuzzy, kde-format
 #| msgid "Theme"
 msgid "Open Theme"
 msgstr "​ស្បែក"
 
-#: ui/main.qml:201
+#: ui/main.qml:207
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr ""
+
+#~ msgid "Remove Theme"
+#~ msgstr "យក​ស្បែក​ចេញ"
+
+#, fuzzy
+#~| msgid "Remove Theme"
+#~ msgid "Restore Theme"
+#~ msgstr "យក​ស្បែក​ចេញ"
 
 #, fuzzy
 #~| msgid "Get New Themes..."
@@ -179,11 +202,6 @@ msgstr ""
 #~ msgid "Your emails"
 #~ msgstr ""
 #~ "khoemsokhem@khmeros.info,​​evannak@khmeros.info,piseth_dv@khmeros.info"
-
-#, fuzzy
-#~| msgid "Get New Themes..."
-#~ msgid "Plasma Style"
-#~ msgstr "យក​ស្បែក​ថ្មី..."
 
 #, fuzzy
 #~| msgid "Get New Themes..."

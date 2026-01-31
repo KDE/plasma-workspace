@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-28 00:46+0000\n"
-"PO-Revision-Date: 2025-04-28 00:37+0300\n"
+"PO-Revision-Date: 2026-01-30 16:07+0200\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.8\n"
 
 #: components/ActionContainer.qml:81
 #, kde-format
@@ -422,11 +422,10 @@ msgid "Toggle do not disturb"
 msgstr "Perjungti \"Netrukdymo\" veikseną"
 
 #: globalshortcuts.cpp:33
-#, fuzzy, kde-format
-#| msgid "Clear All Notifications"
+#, kde-format
 msgctxt "@action"
 msgid "Clear Notification History"
-msgstr "Išvalyti visus pranešimus"
+msgstr "Išvalyti pranešimų istoriją"
 
 #: globalshortcuts.cpp:52
 #, kde-format
@@ -441,12 +440,10 @@ msgid "Notifications On"
 msgstr "Pranešimai įjungti"
 
 #: globalshortcuts.cpp:68
-#, fuzzy, kde-format
-#| msgctxt "OSD popup, keep short"
-#| msgid "Notifications On"
+#, kde-format
 msgctxt "@label OSD popup, keep short"
 msgid "Notification history cleared"
-msgstr "Pranešimai įjungti"
+msgstr "Pranešimų istorija išvalyta"
 
 #: main.qml:61
 #, kde-format

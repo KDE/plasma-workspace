@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-31 00:45+0000\n"
 "PO-Revision-Date: 2024-10-01 21:16-0500\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
@@ -142,25 +142,47 @@ msgstr "ਰੰਗ ਸਕੀਮ ਮੁਤਾਬਕ"
 msgid "Edit Theme…"
 msgstr "…ਥੀਮ ਸੋਧੋ"
 
-#: ui/main.qml:173
-#, kde-format
-msgid "Remove Theme"
-msgstr "ਥੀਮ ਹਟਾਓ"
+#: ui/main.qml:174
+#, fuzzy, kde-format
+#| msgid "Plasma Style"
+msgctxt "@info:tooltip"
+msgid "Remove Plasma style"
+msgstr "ਪਲਾਜ਼ਮਾ ਸਟਾਈਲ"
 
-#: ui/main.qml:180
-#, kde-format
-msgid "Restore Theme"
-msgstr "ਥੀਮ ਬਹਾਲ ਕਰੋ"
+#: ui/main.qml:176
+#, fuzzy, kde-format
+#| msgid "Name of the current Plasma Style"
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active Plasma style"
+msgstr "ਮੌਜੂਦਾ ਪਲਾਜ਼ਮਾ ਸਟਾਈਲ ਦਾ ਨਾਂ"
 
-#: ui/main.qml:199
+#: ui/main.qml:178
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed Plasma styles"
+msgstr ""
+
+#: ui/main.qml:186
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Don’t delete this Plasma style"
+msgstr ""
+
+#: ui/main.qml:205
 #, kde-format
 msgid "Open Theme"
 msgstr "ਥੀਮ ਖੋਲ੍ਹੋ"
 
-#: ui/main.qml:201
+#: ui/main.qml:207
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "ਥੀਮ ਫਾਇਲਾਂ (*.zip *.tar.gz *.tar.bz2)"
+
+#~ msgid "Remove Theme"
+#~ msgstr "ਥੀਮ ਹਟਾਓ"
+
+#~ msgid "Restore Theme"
+#~ msgstr "ਥੀਮ ਬਹਾਲ ਕਰੋ"
 
 #~ msgid "Get New Plasma Styles…"
 #~ msgstr "…ਨਵੇਂ ਪਲਾਜ਼ਮਾ ਸਟਾਈਲ ਲਵੋ"
@@ -172,9 +194,6 @@ msgstr "ਥੀਮ ਫਾਇਲਾਂ (*.zip *.tar.gz *.tar.bz2)"
 #~ msgctxt "EMAIL OF TRANSLATORS"
 #~ msgid "Your emails"
 #~ msgstr "aalam@users.sf.net"
-
-#~ msgid "Plasma Style"
-#~ msgstr "ਪਲਾਜ਼ਮਾ ਸਟਾਈਲ"
 
 #, fuzzy
 #~| msgid "Get New Themes..."

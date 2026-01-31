@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-31 00:45+0000\n"
 "PO-Revision-Date: 2023-10-30 10:30+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -72,22 +72,37 @@ msgstr "Instalar dende un ficheru…"
 msgid "Get New…"
 msgstr "Consiguir…"
 
-#: ui/main.qml:188
+#: ui/main.qml:189
 #, kde-format
-msgid "Remove Icon Theme"
+msgctxt "@info:tooltip"
+msgid "Remove icon theme"
 msgstr ""
 
-#: ui/main.qml:195
+#: ui/main.qml:191
+#, fuzzy, kde-format
+#| msgid "Name of the current icon theme"
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active icon theme"
+msgstr "Nome del estilu d'iconos actual"
+
+#: ui/main.qml:193
 #, kde-format
-msgid "Restore Icon Theme"
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed icon themes"
 msgstr ""
 
-#: ui/main.qml:244
+#: ui/main.qml:201
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Don’t delete this icon theme"
+msgstr ""
+
+#: ui/main.qml:250
 #, kde-format
 msgid "Open Theme"
 msgstr ""
 
-#: ui/main.qml:246
+#: ui/main.qml:252
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Ficheros d'estilu (*.tar.gz *.tar.bz2)"

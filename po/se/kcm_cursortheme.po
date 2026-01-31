@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-31 00:45+0000\n"
 "PO-Revision-Date: 2007-12-24 01:50+0100\n"
 "Last-Translator: Børre Gaup <boerre@skolelinux.no>\n"
 "Language-Team: Northern Sami <l10n-no@lister.huftis.org>\n"
@@ -151,14 +151,27 @@ msgstr ""
 msgid "(Current theme for this Plasma session)"
 msgstr ""
 
-#: ui/Delegate.qml:43
+#: ui/Delegate.qml:44
 #, kde-format
-msgid "Remove Theme"
+msgctxt "@info:tooltip"
+msgid "Remove cursor theme"
 msgstr ""
 
-#: ui/Delegate.qml:50
+#: ui/Delegate.qml:46
 #, kde-format
-msgid "Restore Cursor Theme"
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active cursor theme"
+msgstr ""
+
+#: ui/Delegate.qml:48
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed cursor themes"
+msgstr ""
+
+#: ui/Delegate.qml:56
+#, kde-format
+msgid "Don’t delete this cursor theme"
 msgstr ""
 
 #: ui/LaunchFeedbackDialog.qml:16

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-31 00:45+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -143,27 +143,50 @@ msgstr "رەڭ لايىھىسى"
 msgid "Edit Theme…"
 msgstr "ئۆرنەك"
 
-#: ui/main.qml:173
-#, kde-format
-msgid "Remove Theme"
-msgstr "ئۆرنەكنى چىقىرىۋەت"
-
-#: ui/main.qml:180
+#: ui/main.qml:174
 #, fuzzy, kde-format
-#| msgid "Remove Theme"
-msgid "Restore Theme"
-msgstr "ئۆرنەكنى چىقىرىۋەت"
+#| msgid "Get New Themes..."
+msgctxt "@info:tooltip"
+msgid "Remove Plasma style"
+msgstr "يېڭى ئۆرنەكلەرنى ئېلىش…"
 
-#: ui/main.qml:199
+#: ui/main.qml:176
+#, fuzzy, kde-format
+#| msgid "Get New Themes..."
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active Plasma style"
+msgstr "يېڭى ئۆرنەكلەرنى ئېلىش…"
+
+#: ui/main.qml:178
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed Plasma styles"
+msgstr ""
+
+#: ui/main.qml:186
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Don’t delete this Plasma style"
+msgstr ""
+
+#: ui/main.qml:205
 #, fuzzy, kde-format
 #| msgid "Theme"
 msgid "Open Theme"
 msgstr "ئۆرنەك"
 
-#: ui/main.qml:201
+#: ui/main.qml:207
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr ""
+
+#~ msgid "Remove Theme"
+#~ msgstr "ئۆرنەكنى چىقىرىۋەت"
+
+#, fuzzy
+#~| msgid "Remove Theme"
+#~ msgid "Restore Theme"
+#~ msgstr "ئۆرنەكنى چىقىرىۋەت"
 
 #, fuzzy
 #~| msgid "Get New Themes..."
@@ -177,11 +200,6 @@ msgstr ""
 #~ msgctxt "EMAIL OF TRANSLATORS"
 #~ msgid "Your emails"
 #~ msgstr "sahran.ug@gmail.com,  gheyret@gmail.com"
-
-#, fuzzy
-#~| msgid "Get New Themes..."
-#~ msgid "Plasma Style"
-#~ msgstr "يېڭى ئۆرنەكلەرنى ئېلىش…"
 
 #, fuzzy
 #~| msgid "Get New Themes..."

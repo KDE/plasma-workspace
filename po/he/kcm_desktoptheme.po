@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktoptheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-31 00:45+0000\n"
 "PO-Revision-Date: 2024-08-29 07:01+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -148,35 +148,52 @@ msgstr "כמו ערכת הצבעים"
 msgid "Edit Theme…"
 msgstr "עריכת ערכת עיצוב…"
 
-#: ui/main.qml:173
-#, kde-format
-msgid "Remove Theme"
-msgstr "הסרת ערכת עיצוב"
+#: ui/main.qml:174
+#, fuzzy, kde-format
+#| msgid "Get new Theme"
+msgctxt "@info:tooltip"
+msgid "Remove Plasma style"
+msgstr "קבל ערכות חדשות..."
 
-#: ui/main.qml:180
-#, kde-format
-msgid "Restore Theme"
-msgstr "שחזור ערכת עיצוב"
+#: ui/main.qml:176
+#, fuzzy, kde-format
+#| msgid "This module lets you configure the desktop theme."
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active Plasma style"
+msgstr "מודל זה מאפשר לך להגדיר את ערכת נושא של שולחן העבודה."
 
-#: ui/main.qml:199
+#: ui/main.qml:178
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed Plasma styles"
+msgstr ""
+
+#: ui/main.qml:186
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Don’t delete this Plasma style"
+msgstr ""
+
+#: ui/main.qml:205
 #, kde-format
 msgid "Open Theme"
 msgstr "פתיחת ערכת עיצוב"
 
-#: ui/main.qml:201
+#: ui/main.qml:207
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "קובצי ערכות עיצוב (‎*.zip‏ ‎*.tar.gz‏ ‎*.tar.bz2)"
+
+#~ msgid "Remove Theme"
+#~ msgstr "הסרת ערכת עיצוב"
+
+#~ msgid "Restore Theme"
+#~ msgstr "שחזור ערכת עיצוב"
 
 #, fuzzy
 #~| msgid "Get new Theme"
 #~ msgid "Get New Plasma Styles…"
 #~ msgstr "קבל ערכות חדשות..."
-
-#, fuzzy
-#~| msgid "This module lets you configure the desktop theme."
-#~ msgid "This module lets you choose the Plasma style."
-#~ msgstr "מודל זה מאפשר לך להגדיר את ערכת נושא של שולחן העבודה."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"
@@ -185,11 +202,6 @@ msgstr "קובצי ערכות עיצוב (‎*.zip‏ ‎*.tar.gz‏ ‎*.tar.bz
 #~ msgctxt "EMAIL OF TRANSLATORS"
 #~ msgid "Your emails"
 #~ msgstr "kde-l10n-he@kde.org"
-
-#, fuzzy
-#~| msgid "Get new Theme"
-#~ msgid "Plasma Style"
-#~ msgstr "קבל ערכות חדשות..."
 
 #~ msgid "David Rosca"
 #~ msgstr "David Rosca"

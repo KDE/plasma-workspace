@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-31 00:45+0000\n"
 "PO-Revision-Date: 2011-07-11 23:37+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: Kannada <kde-l10n-kn@kde.org>\n"
@@ -1379,28 +1379,45 @@ msgstr "ಅಶಕ್ತಗೊಂಡ"
 msgid "Edit Color Scheme…"
 msgstr "ಬಣ್ಣ ಪದ್ಧತಿಯನ್ನು (ಸ್ಕೀಮ್) ಆಮದು ಮಾಡಿಕೊಳ್ಳಿ"
 
-#: ui/main.qml:323
+#: ui/main.qml:324
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
-msgid "Remove Color Scheme"
+msgctxt "@info:tooltip"
+msgid "Remove color scheme"
 msgstr "ಬಣ್ಣ ಪದ್ಧತಿಯನ್ನು (ಸ್ಕೀಮ್) ಉಳಿಸಿ"
 
-#: ui/main.qml:330
+#: ui/main.qml:326
 #, fuzzy, kde-format
-#| msgid "Import Color Scheme"
-msgid "Restore Color Scheme"
-msgstr "ಬಣ್ಣ ಪದ್ಧತಿಯನ್ನು ಆಮದು ಮಾಡಿಕೊಳ್ಳಿ (ಸ್ಕೀಮ್)"
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active color scheme"
+msgstr "ಬಣ್ಣ ಪದ್ಧತಿಯನ್ನು (ಸ್ಕೀಮ್) ಉಳಿಸಿ"
 
-#: ui/main.qml:374
+#: ui/main.qml:328
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed color schemes"
+msgstr ""
+
+#: ui/main.qml:336
+#, kde-format
+msgid "Don’t delete this color scheme"
+msgstr ""
+
+#: ui/main.qml:380
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Open Color Scheme"
 msgstr "ಬಣ್ಣ ಪದ್ಧತಿಯನ್ನು (ಸ್ಕೀಮ್) ಉಳಿಸಿ"
 
-#: ui/main.qml:376
+#: ui/main.qml:382
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Import Color Scheme"
+#~ msgid "Restore Color Scheme"
+#~ msgstr "ಬಣ್ಣ ಪದ್ಧತಿಯನ್ನು ಆಮದು ಮಾಡಿಕೊಳ್ಳಿ (ಸ್ಕೀಮ್)"
 
 #, fuzzy
 #~ msgid "Shading of frames and lighting (\"3D\") effects"

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-31 00:45+0000\n"
 "PO-Revision-Date: 2007-12-20 11:19+0100\n"
 "Last-Translator: Børre Gaup <boerre@skolelinux.no>\n"
 "Language-Team: Northern Sami <l10n-no@lister.huftis.org>\n"
@@ -1304,22 +1304,36 @@ msgstr ""
 msgid "Edit Color Scheme…"
 msgstr ""
 
-#: ui/main.qml:323
+#: ui/main.qml:324
+#, fuzzy, kde-format
+#| msgid "Save Color Scheme"
+msgctxt "@info:tooltip"
+msgid "Remove color scheme"
+msgstr "Vurke ivdnečoahkádusa"
+
+#: ui/main.qml:326
 #, kde-format
-msgid "Remove Color Scheme"
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active color scheme"
 msgstr ""
 
-#: ui/main.qml:330
+#: ui/main.qml:328
 #, kde-format
-msgid "Restore Color Scheme"
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed color schemes"
 msgstr ""
 
-#: ui/main.qml:374
+#: ui/main.qml:336
+#, kde-format
+msgid "Don’t delete this color scheme"
+msgstr ""
+
+#: ui/main.qml:380
 #, kde-format
 msgid "Open Color Scheme"
 msgstr ""
 
-#: ui/main.qml:376
+#: ui/main.qml:382
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr ""

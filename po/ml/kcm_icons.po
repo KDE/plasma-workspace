@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-31 00:45+0000\n"
 "PO-Revision-Date: 2020-11-30 16:14+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -77,25 +77,44 @@ msgstr "പ്രമേയം ഫയലില്‍ നിന്നും ചേ
 msgid "Get New…"
 msgstr "പുതിയ പ്രമേയങ്ങള്‍ ലഭ്യമാക്കുക..."
 
-#: ui/main.qml:188
-#, kde-format
-msgid "Remove Icon Theme"
+#: ui/main.qml:189
+#, fuzzy, kde-format
+#| msgid "Remove Icon Theme"
+msgctxt "@info:tooltip"
+msgid "Remove icon theme"
 msgstr "പ്രമേയം നീക്കം ചെയ്യുക"
 
-#: ui/main.qml:195
-#, kde-format
-msgid "Restore Icon Theme"
-msgstr "പ്രമേയം തിരികെ കൊണ്ടുവരുക"
+#: ui/main.qml:191
+#, fuzzy, kde-format
+#| msgid "Name of the current icon theme"
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active icon theme"
+msgstr "ഇപ്പോഴത്തെ ചിഹ്ന പ്രമേയത്തിന്റെ പേര്"
 
-#: ui/main.qml:244
+#: ui/main.qml:193
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed icon themes"
+msgstr ""
+
+#: ui/main.qml:201
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Don’t delete this icon theme"
+msgstr ""
+
+#: ui/main.qml:250
 #, kde-format
 msgid "Open Theme"
 msgstr "പ്രമേയം തുറക്കുക"
 
-#: ui/main.qml:246
+#: ui/main.qml:252
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "പ്രമേയ ഫയലുകള്‍ (*.tar.gz *.tar.bz2)"
+
+#~ msgid "Restore Icon Theme"
+#~ msgstr "പ്രമേയം തിരികെ കൊണ്ടുവരുക"
 
 #~ msgid "Main Toolbar"
 #~ msgstr "പ്രധാന ഉപകരണപ്പട്ട"

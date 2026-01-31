@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-31 00:45+0000\n"
 "PO-Revision-Date: 2024-10-25 23:38-0500\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
@@ -153,15 +153,30 @@ msgstr ""
 msgid "(Current theme for this Plasma session)"
 msgstr "(ਇਸ ਪਲਾਜ਼ਮਾ ਸ਼ੈਸ਼ਨ ਲਈ ਮੌਜੂਦਾ ਥੀਮ)"
 
-#: ui/Delegate.qml:43
-#, kde-format
-msgid "Remove Theme"
-msgstr "ਥੀਮ ਹਟਾਓ"
-
-#: ui/Delegate.qml:50
-#, kde-format
-msgid "Restore Cursor Theme"
+#: ui/Delegate.qml:44
+#, fuzzy, kde-format
+#| msgid "Restore Cursor Theme"
+msgctxt "@info:tooltip"
+msgid "Remove cursor theme"
 msgstr "ਕਰਸਰ ਥੀਮ ਬਹਾਲ ਕਰੋ"
+
+#: ui/Delegate.qml:46
+#, fuzzy, kde-format
+#| msgid "Name of the current cursor theme"
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active cursor theme"
+msgstr "ਮੌਜੂਦਾ ਕਰਸਰ ਥੀਮ ਦਾ ਨਾਂ ਹੈ"
+
+#: ui/Delegate.qml:48
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed cursor themes"
+msgstr ""
+
+#: ui/Delegate.qml:56
+#, kde-format
+msgid "Don’t delete this cursor theme"
+msgstr ""
 
 #: ui/LaunchFeedbackDialog.qml:16
 #, kde-format
@@ -268,6 +283,9 @@ msgctxt ""
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(ਉਪਲੱਬਧ ਆਕਾਰ: %1)"
+
+#~ msgid "Remove Theme"
+#~ msgstr "ਥੀਮ ਹਟਾਓ"
 
 #~ msgid "Name"
 #~ msgstr "ਨਾਂ"

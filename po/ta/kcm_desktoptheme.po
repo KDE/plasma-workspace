@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-01-31 00:45+0000\n"
 "PO-Revision-Date: 2024-09-01 17:11+0200\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -146,34 +146,50 @@ msgstr "நிறத்திட்டத்தை பின்பற்று�
 msgid "Edit Theme…"
 msgstr "தோற்றத்திட்டத்தை திருத்து…"
 
-#: ui/main.qml:173
-#, kde-format
-msgid "Remove Theme"
-msgstr "தோற்றத்திட்டத்தை நீக்கு"
+#: ui/main.qml:174
+#, fuzzy, kde-format
+#| msgid "Plasma Style"
+msgctxt "@info:tooltip"
+msgid "Remove Plasma style"
+msgstr "பிளாஸ்மா தோற்றத்திட்டம்"
 
-#: ui/main.qml:180
-#, kde-format
-msgid "Restore Theme"
-msgstr "தோற்றத்திட்டத்தை மீட்டமை"
+#: ui/main.qml:176
+#, fuzzy, kde-format
+#| msgid "This module lets you choose the Plasma style."
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active Plasma style"
+msgstr "பிளாஸ்மாவின் தோற்றத்தை நீங்கள் தேர்ந்தெடுக்க இந்த கூறு உதவும்."
 
-#: ui/main.qml:199
+#: ui/main.qml:178
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed Plasma styles"
+msgstr ""
+
+#: ui/main.qml:186
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Don’t delete this Plasma style"
+msgstr ""
+
+#: ui/main.qml:205
 #, kde-format
 msgid "Open Theme"
 msgstr "தோற்றத்திட்டத்தை திற"
 
-#: ui/main.qml:201
+#: ui/main.qml:207
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "தோற்றத்திட்ட கோப்புகள் (*.zip *.tar.gz *.tar.bz2)"
 
+#~ msgid "Remove Theme"
+#~ msgstr "தோற்றத்திட்டத்தை நீக்கு"
+
+#~ msgid "Restore Theme"
+#~ msgstr "தோற்றத்திட்டத்தை மீட்டமை"
+
 #~ msgid "Get New Plasma Styles…"
 #~ msgstr "புதிய பிளாஸ்மா தோற்றத்திட்டங்களை பெறு…"
-
-#~ msgid "This module lets you choose the Plasma style."
-#~ msgstr "பிளாஸ்மாவின் தோற்றத்தை நீங்கள் தேர்ந்தெடுக்க இந்த கூறு உதவும்."
-
-#~ msgid "Plasma Style"
-#~ msgstr "பிளாஸ்மா தோற்றத்திட்டம்"
 
 #~ msgid "David Rosca"
 #~ msgstr "டேவிட் ராஸ்கா"
