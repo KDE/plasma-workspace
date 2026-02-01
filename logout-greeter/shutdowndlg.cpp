@@ -137,6 +137,7 @@ KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype,
 
     // Trying to access a non-existent context property throws an error, always create the property and then update it later
     context->setContextProperty(u"rebootToFirmwareSetup"_s, false);
+    context->setContextProperty(u"isUefi"_s, false);
     context->setContextProperty(u"rebootToBootLoaderMenu"_s, false);
     context->setContextProperty(u"rebootToBootLoaderEntry"_s, u""_s);
 
@@ -148,6 +149,11 @@ KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype,
         connect(callWatcher, &QDBusPendingCallWatcher::finished, context, [context](QDBusPendingCallWatcher *watcher) {
             QDBusPendingReply<QVariant> reply = *watcher;
             watcher->deleteLater();
+
+            // check whether we're UEFI to provide a more descriptive button label
+            if (QFileInfo(QStringLiteral("/sys/firmware/efi")).isDir()) {
+                context->setContextProperty(u"isUefi"_s, true);
+            }
 
             if (reply.value().toBool()) {
                 context->setContextProperty(u"rebootToFirmwareSetup"_s, true);

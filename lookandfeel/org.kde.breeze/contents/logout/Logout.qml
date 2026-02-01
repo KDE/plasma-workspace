@@ -183,7 +183,13 @@ Item {
             horizontalAlignment: Text.AlignHCenter
             wrapMode: Text.WordWrap
             font.italic: true
-            text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "When restarted, the computer will enter the firmware setup screen.")
+            text: {
+                if (isUefi) {
+                    return i18nd("plasma_lookandfeel_org.kde.lookandfeel", "When restarted, the computer will enter UEFI firmware settings.");
+                } else {
+                    return i18nd("plasma_lookandfeel_org.kde.lookandfeel", "When restarted, the computer will enter the firmware setup screen.");
+                }
+            }
             textFormat: Text.PlainText
             visible: rebootToFirmwareSetup
         }
