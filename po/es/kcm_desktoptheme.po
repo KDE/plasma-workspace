@@ -1,10 +1,10 @@
 # Spanish translations for kcm_desktoptheme.po package.
-# Copyright (C) 2008-2025 This file is copyright:
+# Copyright (C) 2008-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
 # SPDX-FileCopyrightText: 2008 Ignacio Poggi <ignaciop.3@gmail.com>
 # SPDX-FileCopyrightText: 2008 Jaime Robles <jaime@kde.org>
-# SPDX-FileCopyrightText: 2010, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2010, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2023, 2024, 2025, 2026 Eloy Cuadra <ecuadra@eloihr.net>
 # SPDX-FileCopyrightText: 2010, 2011 Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>
 # SPDX-FileCopyrightText: 2011, 2012 Javier Vinal <fjvinal@gmail.com>
 msgid ""
@@ -12,14 +12,14 @@ msgstr ""
 "Project-Id-Version: kcm_desktoptheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-31 00:45+0000\n"
-"PO-Revision-Date: 2025-06-04 19:31+0100\n"
+"PO-Revision-Date: 2026-01-31 12:09+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 25.12.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. i18n: ectx: label, entry (name), group (Theme)
@@ -157,26 +157,25 @@ msgstr "Editar tema…"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove Plasma style"
-msgstr ""
+msgstr "Eliminar estilo de Plasma"
 
 #: ui/main.qml:176
-#, fuzzy, kde-format
-#| msgid "Name of the current Plasma Style"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active Plasma style"
-msgstr "Nombre del estilo actual de Plasma"
+msgstr "No se puede borrar el estilo de Plasma activo"
 
 #: ui/main.qml:178
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed Plasma styles"
-msgstr ""
+msgstr "No se pueden borrar estilos de Plasma instalados en el sistema"
 
 #: ui/main.qml:186
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Don’t delete this Plasma style"
-msgstr ""
+msgstr "No borrar este estilo de Plasma"
 
 #: ui/main.qml:205
 #, kde-format
@@ -187,9 +186,3 @@ msgstr "Abrir tema"
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "Archivos de temas (*.zip *.tar.gz *.tar.bz2)"
-
-#~ msgid "Remove Theme"
-#~ msgstr "Borrar tema"
-
-#~ msgid "Restore Theme"
-#~ msgstr "Restaurar tema"

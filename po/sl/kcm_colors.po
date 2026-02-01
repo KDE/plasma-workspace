@@ -1,7 +1,7 @@
 # translation of kcmcolors.po to Slovenian
 # Translation of kcmcolors.po to Slovenian
 # KDEBASE translation to Slovenian language.
-# $Id: kcm_colors.po 1729009 2026-01-31 01:27:10Z scripty $
+# $Id: kcm_colors.po 1729086 2026-02-01 01:26:56Z scripty $
 # $Source$
 #
 # Copyright (C) 2002, 2003, 2004, 2005, 2006, 2007 Free Software Foundation, Inc.
@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-31 00:45+0000\n"
-"PO-Revision-Date: 2025-11-08 07:04+0100\n"
+"PO-Revision-Date: 2026-01-31 08:48+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -1361,29 +1361,27 @@ msgid "Edit Color Scheme…"
 msgstr "Uredi barvno shemo…"
 
 #: ui/main.qml:324
-#, fuzzy, kde-format
-#| msgid "Remove Color Scheme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove color scheme"
 msgstr "Odstrani barvno shemo"
 
 #: ui/main.qml:326
-#, fuzzy, kde-format
-#| msgid "Utility to edit and create color schemes"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active color scheme"
-msgstr "Orodje za urejanje in ustvarjanje barvnih shem"
+msgstr "Ni mogoče izbrisati aktivne barvne sheme"
 
 #: ui/main.qml:328
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed color schemes"
-msgstr ""
+msgstr "Barvnih shem, ki jih je namestil sistem, ni mogoče izbrisati"
 
 #: ui/main.qml:336
 #, kde-format
 msgid "Don’t delete this color scheme"
-msgstr ""
+msgstr "Ne izbrišite te barvne sheme"
 
 #: ui/main.qml:380
 #, kde-format

@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024, 2025 Freek de Kruijf <freekdekruijf@kde.nl>
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024, 2025, 2026 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-31 00:45+0000\n"
-"PO-Revision-Date: 2025-11-08 11:19+0100\n"
+"PO-Revision-Date: 2026-01-31 12:26+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,12 +15,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Freek de Kruijf - 2020-2025"
+msgstr "Freek de Kruijf - 2020-2026"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
@@ -1347,29 +1347,27 @@ msgid "Edit Color Scheme…"
 msgstr "Kleurenschema bewerken…"
 
 #: ui/main.qml:324
-#, fuzzy, kde-format
-#| msgid "Remove Color Scheme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove color scheme"
 msgstr "Kleurenschema verwijderen"
 
 #: ui/main.qml:326
-#, fuzzy, kde-format
-#| msgid "Utility to edit and create color schemes"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active color scheme"
-msgstr "Hulpmiddel om kleurenschema's te bewerken en aan te maken"
+msgstr "Kan het actieve kleurenschema niet verwijderen"
 
 #: ui/main.qml:328
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed color schemes"
-msgstr ""
+msgstr "Kan door het systeem geïnstalleerde kleurenthema's niet verwijderen"
 
 #: ui/main.qml:336
 #, kde-format
 msgid "Don’t delete this color scheme"
-msgstr ""
+msgstr "Kan dit kleurenschema niet verwijderen"
 
 #: ui/main.qml:380
 #, kde-format

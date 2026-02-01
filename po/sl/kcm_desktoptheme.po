@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-31 00:45+0000\n"
-"PO-Revision-Date: 2024-08-29 07:03+0200\n"
+"PO-Revision-Date: 2026-01-31 08:44+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.4.4\n"
+"X-Generator: Poedit 3.8\n"
 
 #. i18n: ectx: label, entry (name), group (Theme)
 #: desktopthemesettings.kcfg:9
@@ -150,30 +150,28 @@ msgid "Edit Theme…"
 msgstr "Uredi teme…"
 
 #: ui/main.qml:174
-#, fuzzy, kde-format
-#| msgid "Plasma Style"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove Plasma style"
-msgstr "Slog Plazme"
+msgstr "Odstrani slog Plasme"
 
 #: ui/main.qml:176
-#, fuzzy, kde-format
-#| msgid "This module lets you choose the Plasma style."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active Plasma style"
-msgstr "Ta modul vam omogoča izbrati slog Plazme."
+msgstr "Ni mogoče izbrisati aktivnega sloga Plasme"
 
 #: ui/main.qml:178
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed Plasma styles"
-msgstr ""
+msgstr "Ni mogoče izbrisati sistemsko nameščenih slogov Plasme"
 
 #: ui/main.qml:186
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Don’t delete this Plasma style"
-msgstr ""
+msgstr "Ne izbrišite tega sloga Plasme"
 
 #: ui/main.qml:205
 #, kde-format

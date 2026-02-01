@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-31 00:45+0000\n"
-"PO-Revision-Date: 2023-08-04 07:15+0200\n"
+"PO-Revision-Date: 2026-01-31 05:26+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.8\n"
 
 #. i18n: ectx: label, entry (Theme), group (Icons)
 #: iconssettingsbase.kcfg:9
@@ -72,30 +72,28 @@ msgid "Get New…"
 msgstr "ახლის მიღება…"
 
 #: ui/main.qml:189
-#, fuzzy, kde-format
-#| msgid "Remove Icon Theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove icon theme"
 msgstr "ხატულების თემის წაშლა"
 
 #: ui/main.qml:191
-#, fuzzy, kde-format
-#| msgid "Name of the current icon theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active icon theme"
-msgstr "ხატულების მიმდინარე თემის სახელი"
+msgstr "აქტიური ხატულების თემის წაშლა შეუძლებელია"
 
 #: ui/main.qml:193
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed icon themes"
-msgstr ""
+msgstr "სისტემასთან ერთად დაყენებული ხატულას თემების წაშლა შეუძლებელია"
 
 #: ui/main.qml:201
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Don’t delete this icon theme"
-msgstr ""
+msgstr "არ წაშალოთ ეს ხატულების თემა"
 
 #: ui/main.qml:250
 #, kde-format

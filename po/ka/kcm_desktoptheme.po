@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-31 00:45+0000\n"
-"PO-Revision-Date: 2024-08-29 06:20+0200\n"
+"PO-Revision-Date: 2026-01-31 05:26+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.8\n"
 
 #. i18n: ectx: label, entry (name), group (Theme)
 #: desktopthemesettings.kcfg:9
@@ -144,30 +144,28 @@ msgid "Edit Theme…"
 msgstr "თემის ჩასწორება…"
 
 #: ui/main.qml:174
-#, fuzzy, kde-format
-#| msgid "Get New Plasma Styles…"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove Plasma style"
-msgstr "Plasma-ის ახალი სტილების მიღება…"
+msgstr "Plasma-ის სტილის წაშლა"
 
 #: ui/main.qml:176
-#, fuzzy, kde-format
-#| msgid "This module lets you choose the Plasma style."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active Plasma style"
-msgstr "ეს მოდული საშუალებას გაძლევთ აირჩიოთ Plasma-ის სტილი."
+msgstr "აქტიური Plasma-ის სტილის წაშლა შეუძლებელია"
 
 #: ui/main.qml:178
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed Plasma styles"
-msgstr ""
+msgstr "სისტემასთან ერთად დაყენებული Plasma-ის სტილების წაშლა შეუძლებელია"
 
 #: ui/main.qml:186
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Don’t delete this Plasma style"
-msgstr ""
+msgstr "არ წაშალოთ ეს Plasma-ის სტილი"
 
 #: ui/main.qml:205
 #, kde-format

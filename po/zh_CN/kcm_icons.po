@@ -71,18 +71,16 @@ msgid "Get New…"
 msgstr "获取新图标主题…"
 
 #: ui/main.qml:189
-#, fuzzy, kde-format
-#| msgid "Remove Icon Theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove icon theme"
-msgstr "移除图标主题"
+msgstr ""
 
 #: ui/main.qml:191
-#, fuzzy, kde-format
-#| msgid "Name of the current icon theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active icon theme"
-msgstr "当前图标主题名称"
+msgstr ""
 
 #: ui/main.qml:193
 #, kde-format
@@ -105,6 +103,3 @@ msgstr "打开主题"
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "主题文件 (*.tar.gz *.tar.bz2)"
-
-#~ msgid "Restore Icon Theme"
-#~ msgstr "还原图标主题"

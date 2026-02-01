@@ -14,13 +14,13 @@
 # tahmar1900 <tahmar1900@gmail.com>, 2009.
 # elkana bardugo <ttv200@gmail.com>, 2016.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
-# SPDX-FileCopyrightText: 2023, 2024 Yaron Shahrabani <sh.yaron@gmail.com>
+# SPDX-FileCopyrightText: 2023, 2024, 2026 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmmousetheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-31 00:45+0000\n"
-"PO-Revision-Date: 2024-05-05 11:54+0300\n"
+"PO-Revision-Date: 2026-01-31 17:40+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -29,7 +29,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #. i18n: ectx: label, entry (cursorTheme), group (Mouse)
 #: cursorthemesettings.kcfg:9
@@ -170,29 +170,27 @@ msgid "(Current theme for this Plasma session)"
 msgstr "(ערכת סמלים נוכחית להפעלת פלזמה זו)"
 
 #: ui/Delegate.qml:44
-#, fuzzy, kde-format
-#| msgid "Restore Cursor Theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove cursor theme"
-msgstr "איפוס ערכת סמנים"
+msgstr "הסרת ערכת סמנים"
 
 #: ui/Delegate.qml:46
-#, fuzzy, kde-format
-#| msgid "Name of the current cursor theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active cursor theme"
-msgstr "שם ערכת הסמנים הנוכחית"
+msgstr "לא ניתן למחוק את ערכת הסמנים הפעילה"
 
 #: ui/Delegate.qml:48
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed cursor themes"
-msgstr ""
+msgstr "לא ניתן למחוק ערכות סמנים מערכתיות"
 
 #: ui/Delegate.qml:56
 #, kde-format
 msgid "Don’t delete this cursor theme"
-msgstr ""
+msgstr "לא למחוק את ערכת הסמנים הזאת"
 
 #: ui/LaunchFeedbackDialog.qml:16
 #, kde-format

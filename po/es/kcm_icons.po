@@ -1,12 +1,12 @@
 # Spanish translations for kcm_icons.po package.
-# Copyright (C) 2000-2025 This file is copyright:
+# Copyright (C) 2000-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
 # SPDX-FileCopyrightText: 2000-2002 Pablo de Vicente <vicente@oan.es>
 # SPDX-FileCopyrightText: 2003, 2005, 2007, 2008 Jaime Robles <jaime@kde.org>
 # SPDX-FileCopyrightText: 2004 Miguel Revilla Rodríguez <yo@miguelrevilla.com>
 # SPDX-FileCopyrightText: 2007 Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>
-# SPDX-FileCopyrightText: 2008, 2012, 2014, 2016, 2017, 2018, 2020, 2021, 2022, 2023, 2025 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2008, 2012, 2014, 2016, 2017, 2018, 2020, 2021, 2022, 2023, 2025, 2026 Eloy Cuadra <ecuadra@eloihr.net>
 # SPDX-FileCopyrightText: 2009 Jaime Robles <jaime@robles.es>
 # SPDX-FileCopyrightText: 2011 Javier Vinal <fjvinal@gmail.com>
 msgid ""
@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: kcm_icons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-31 00:45+0000\n"
-"PO-Revision-Date: 2025-06-04 19:32+0100\n"
+"PO-Revision-Date: 2026-01-31 12:10+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "First-Translator: Valux (Manuel Soriano) <manu@europa3.com>\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 25.12.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. i18n: ectx: label, entry (Theme), group (Icons)
@@ -81,30 +81,28 @@ msgid "Get New…"
 msgstr "Obtener novedades…"
 
 #: ui/main.qml:189
-#, fuzzy, kde-format
-#| msgid "Remove Icon Theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove icon theme"
 msgstr "Eliminar tema de iconos"
 
 #: ui/main.qml:191
-#, fuzzy, kde-format
-#| msgid "Name of the current icon theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active icon theme"
-msgstr "Nombre del tema de iconos actual"
+msgstr "No de puede borrar el tema de iconos activo"
 
 #: ui/main.qml:193
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed icon themes"
-msgstr ""
+msgstr "No se pueden borrar temas de iconos instalados en el sistema"
 
 #: ui/main.qml:201
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Don’t delete this icon theme"
-msgstr ""
+msgstr "No borrar este tema de iconos"
 
 #: ui/main.qml:250
 #, kde-format
@@ -115,6 +113,3 @@ msgstr "Abrir tema"
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Archivos de temas (*.tar.gz *.tar.bz2)"
-
-#~ msgid "Restore Icon Theme"
-#~ msgstr "Restaurar tema de iconos"

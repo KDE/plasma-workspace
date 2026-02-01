@@ -12,22 +12,22 @@
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2010, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
 # Aracele Torres <aracele@kde.org>, 2017.
 # Thiago Masato Costa Sueto <herzenschein@gmail.com>, 2021.
-# SPDX-FileCopyrightText: 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org>
+# SPDX-FileCopyrightText: 2024, 2026 Geraldo Simiao <geraldosimiao@fedoraproject.org>
 # SPDX-FileCopyrightText: 2025 Guilherme Marçal Silva <guimarcalsilva@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-31 00:45+0000\n"
-"PO-Revision-Date: 2025-11-16 02:26-0300\n"
-"Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
+"PO-Revision-Date: 2026-01-31 02:50-0300\n"
+"Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.08.3\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -1376,29 +1376,27 @@ msgid "Edit Color Scheme…"
 msgstr "Editar esquema de cores…"
 
 #: ui/main.qml:324
-#, fuzzy, kde-format
-#| msgid "Remove Color Scheme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove color scheme"
-msgstr "Remover esquema de cores"
+msgstr "Excluir esquema de cores"
 
 #: ui/main.qml:326
-#, fuzzy, kde-format
-#| msgid "Utility to edit and create color schemes"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active color scheme"
-msgstr "Programa para editar e criar esquemas de cores"
+msgstr "Não é possível excluir o esquema de cores ativo"
 
 #: ui/main.qml:328
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed color schemes"
-msgstr ""
+msgstr "Não é possível excluir esquemas de cores instalados pelo sistema"
 
 #: ui/main.qml:336
 #, kde-format
 msgid "Don’t delete this color scheme"
-msgstr ""
+msgstr "Não exclua este esquema de cores."
 
 #: ui/main.qml:380
 #, kde-format

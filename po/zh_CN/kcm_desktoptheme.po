@@ -148,11 +148,10 @@ msgid "Remove Plasma style"
 msgstr ""
 
 #: ui/main.qml:176
-#, fuzzy, kde-format
-#| msgid "Name of the current Plasma Style"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active Plasma style"
-msgstr "当前 Plasma 外观样式名称"
+msgstr ""
 
 #: ui/main.qml:178
 #, kde-format
@@ -175,9 +174,3 @@ msgstr "打开主题"
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "主题文件 (*.zip *.tar.gz *.tar.bz2)"
-
-#~ msgid "Remove Theme"
-#~ msgstr "移除主题"
-
-#~ msgid "Restore Theme"
-#~ msgstr "还原主题"

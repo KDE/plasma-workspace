@@ -1,15 +1,15 @@
 # Spanish translations for kcm_cursortheme.po package.
-# Copyright (C) 2015-2025 This file is copyright:
+# Copyright (C) 2015-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 # Automatically generated, 2015.
 #
-# SPDX-FileCopyrightText: 2015, 2016, 2018, 2019, 2020, 2021, 2022, 2023, 2025 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2015, 2016, 2018, 2019, 2020, 2021, 2022, 2023, 2025, 2026 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_cursortheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-31 00:45+0000\n"
-"PO-Revision-Date: 2025-06-04 19:30+0100\n"
+"PO-Revision-Date: 2026-01-31 12:11+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #. i18n: ectx: label, entry (cursorTheme), group (Mouse)
 #: cursorthemesettings.kcfg:9
@@ -168,29 +168,27 @@ msgid "(Current theme for this Plasma session)"
 msgstr "(Tema actual para esta sesión de Plasma)"
 
 #: ui/Delegate.qml:44
-#, fuzzy, kde-format
-#| msgid "Restore Cursor Theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove cursor theme"
-msgstr "Restaurar el tema de cursores"
+msgstr "Eliminar tema de cursores"
 
 #: ui/Delegate.qml:46
-#, fuzzy, kde-format
-#| msgid "Name of the current cursor theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active cursor theme"
-msgstr "Nombre del tema de cursores actual"
+msgstr "No se puede borrar el tema de cursores activo"
 
 #: ui/Delegate.qml:48
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed cursor themes"
-msgstr ""
+msgstr "No se pueden borrar temas de cursores instalados en el sistema"
 
 #: ui/Delegate.qml:56
 #, kde-format
 msgid "Don’t delete this cursor theme"
-msgstr ""
+msgstr "No borrar este tema de cursores"
 
 #: ui/LaunchFeedbackDialog.qml:16
 #, kde-format
@@ -298,6 +296,3 @@ msgctxt ""
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(Tamaños disponibles: %1)"
-
-#~ msgid "Remove Theme"
-#~ msgstr "Eliminar tema"

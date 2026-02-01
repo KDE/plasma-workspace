@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-31 00:45+0000\n"
-"PO-Revision-Date: 2025-11-08 07:25+0100\n"
+"PO-Revision-Date: 2026-01-31 05:23+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -36,7 +36,7 @@ msgstr "დროებითი ფაილის შექმნის შე
 #: colors.cpp:266
 #, kde-format
 msgid "Unable to download the color scheme: %1"
-msgstr "ფერების სქემის გადმოწერის შეცდომა: %1"
+msgstr "ფერთა სქემის გადმოწერის შეცდომა: %1"
 
 #: colors.cpp:284
 #, kde-format
@@ -56,13 +56,13 @@ msgstr "საქაღალდეში \"color-scheme\" ფაილები
 #: colors.cpp:327
 #, kde-format
 msgid "Color scheme installed successfully."
-msgstr "ფერების სქემა წარმატებით დადგა."
+msgstr "ფერთა სქემის დაყენება წარმატებით დასრულდა."
 
 #. i18n: ectx: label, entry (colorScheme), group (General)
 #: colorssettings.kcfg:9
 #, kde-format
 msgid "Color scheme name"
-msgstr "ფერების სქემის სახელი"
+msgstr "ფერთა სქემის სახელი"
 
 #. i18n: ectx: label, entry (accentColor), group (General)
 #: colorssettings.kcfg:13
@@ -436,7 +436,7 @@ msgstr "გადატარების დეკორაცია"
 #: editor/scmeditorcolors.ui:23
 #, kde-format
 msgid "Color set:"
-msgstr "ფერების ნაკრები:"
+msgstr "ფერთა ნაკრები:"
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, colorSet)
 #: editor/scmeditorcolors.ui:36
@@ -668,7 +668,7 @@ msgstr "შეუნახავი ცვლილებები"
 #: editor/scmeditordialog.cpp:117 editor/scmeditordialog.cpp:142
 #, kde-format
 msgid "Save Color Scheme"
-msgstr "ფერების სქემის შენახვა"
+msgstr "ფერთა სქემის შენახვა"
 
 #: editor/scmeditordialog.cpp:117
 #, kde-format
@@ -681,7 +681,7 @@ msgid ""
 "A color scheme with that name already exists.\n"
 "Do you want to overwrite it?"
 msgstr ""
-"ფერების სქემა მითითებული სახელით უკვე არსებობს.\n"
+"ფერთა სქემა მითითებული სახელით უკვე არსებობს.\n"
 "გნებავთ, თავზე გადააწეროთ?"
 
 #: editor/scmeditordialog.cpp:178
@@ -1163,7 +1163,7 @@ msgid ""
 "The name of the color scheme you wish to set for your current Plasma session "
 "(passing a full path will only use the last part of the path)"
 msgstr ""
-"ფერის სქემის სახელი, რომელიც მიმდინარე Plasma-ის სესიაზე დაყენებაც გნებავთ "
+"ფერთა სქემის სახელი, რომელიც მიმდინარე Plasma-ის სესიაზე დაყენებაც გნებავთ "
 "(სრული ბილიკის მითითების შემთხვევაში გამოყენებული იქნება მხოლოდ ბოლო ნაწილი)"
 
 #: plasma-apply-colorscheme.cpp:48
@@ -1197,8 +1197,7 @@ msgstr ""
 #: plasma-apply-colorscheme.cpp:113
 #, kde-format
 msgid "Successfully applied the color scheme %1 to your current Plasma session"
-msgstr ""
-"ფერების სქემა %1 თქვენს მიმდინარე Plasma-ის სესიაზე წარმატებით გადატარდა"
+msgstr "ფერთა სქემა %1 თქვენს მიმდინარე Plasma-ის სესიაზე წარმატებით გადატარდა"
 
 #: plasma-apply-colorscheme.cpp:115
 #, kde-format
@@ -1267,7 +1266,7 @@ msgstr "აქცენტის ფერის ხელით მითით
 msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
 msgstr ""
-"ფერის სქემა '%1' დაყენებული არაა. მის მაგიერ ნაგულისხმევი თემა ჩაიტვირთება."
+"ფერთა სქემა '%1' დაყენებული არაა. მის მაგიერ ნაგულისხმევი თემა ჩაიტვირთება."
 
 #: ui/main.qml:123
 #, kde-format
@@ -1342,42 +1341,40 @@ msgstr "გათიშული ტექსტი"
 #: ui/main.qml:317
 #, kde-format
 msgid "Edit Color Scheme…"
-msgstr "ფერების სქემის ჩასწორება…"
+msgstr "ფერთა სქემის ჩასწორება…"
 
 #: ui/main.qml:324
-#, fuzzy, kde-format
-#| msgid "Remove Color Scheme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove color scheme"
-msgstr "ფერების სქემის წაშლა"
+msgstr "ფერთას სქემის წაშლა"
 
 #: ui/main.qml:326
-#, fuzzy, kde-format
-#| msgid "Utility to edit and create color schemes"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active color scheme"
-msgstr "პროგრამა ფერის სქემების ჩასასწორებლად და შესაქმნელად"
+msgstr "აქტიური ფერთა სქემის წაშლა შეუძლებელია"
 
 #: ui/main.qml:328
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed color schemes"
-msgstr ""
+msgstr "სისტემის მიერ დაყენებული ფერის სქემების წაშლა შეუძლებელია"
 
 #: ui/main.qml:336
 #, kde-format
 msgid "Don’t delete this color scheme"
-msgstr ""
+msgstr "არ წაშალოთ ეს ფერთა სქემა"
 
 #: ui/main.qml:380
 #, kde-format
 msgid "Open Color Scheme"
-msgstr "ფერების სქემის გახსნა"
+msgstr "ფერთა სქემის გახსნა"
 
 #: ui/main.qml:382
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
-msgstr "ფერების სქემის ფაილები (*.colors)"
+msgstr "ფერთა სქემის ფაილები (*.colors)"
 
 #~ msgid "Restore Color Scheme"
 #~ msgstr "ფერების სქემის აღდგენა"

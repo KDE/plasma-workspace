@@ -8,14 +8,14 @@
 # محمد سعد  Mohamed SAAD <metehyi@free.fr>, 2006.
 # AbdulAziz AlSharif <a.a-a.s@hotmail.com>, 2007.
 # Youssef Chahibi <chahibi@gmail.com>, 2007.
-# SPDX-FileCopyrightText: 2008, 2021, 2022, 2023, 2024, 2025 zayed <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2008, 2021, 2022, 2023, 2024, 2025, 2026 zayed <zayed.alsaidi@gmail.com>
 # Abdalrahim Fakhouri <abdilra7eem@yahoo.com>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-31 00:45+0000\n"
-"PO-Revision-Date: 2025-08-05 17:49+0400\n"
+"PO-Revision-Date: 2026-01-31 20:30+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -164,29 +164,27 @@ msgid "(Current theme for this Plasma session)"
 msgstr "(سمة الحالية لجلسة بلازما هذه)"
 
 #: ui/Delegate.qml:44
-#, fuzzy, kde-format
-#| msgid "Restore Cursor Theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove cursor theme"
-msgstr "استعد سِمة المؤشر"
+msgstr "أزل سِمة المؤشر"
 
 #: ui/Delegate.qml:46
-#, fuzzy, kde-format
-#| msgid "Name of the current cursor theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active cursor theme"
-msgstr "اسم سمة المؤشر الحالية"
+msgstr "لا يمكن حذف سمة المؤشر النشطة"
 
 #: ui/Delegate.qml:48
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed cursor themes"
-msgstr ""
+msgstr "لا يمكن حذف سمات المؤشر المثبتة في النظام"
 
 #: ui/Delegate.qml:56
 #, kde-format
 msgid "Don’t delete this cursor theme"
-msgstr ""
+msgstr "لا تحذف سمة المؤشر هذه"
 
 #: ui/LaunchFeedbackDialog.qml:16
 #, kde-format

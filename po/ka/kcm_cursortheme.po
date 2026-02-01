@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-31 00:45+0000\n"
-"PO-Revision-Date: 2023-08-04 07:15+0200\n"
+"PO-Revision-Date: 2026-01-31 05:25+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.8\n"
 
 #. i18n: ectx: label, entry (cursorTheme), group (Mouse)
 #: cursorthemesettings.kcfg:9
@@ -160,29 +160,27 @@ msgid "(Current theme for this Plasma session)"
 msgstr "(მიმდინარე თემა ამ Plasma-ის სესიისთვის)"
 
 #: ui/Delegate.qml:44
-#, fuzzy, kde-format
-#| msgid "Restore Cursor Theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove cursor theme"
-msgstr "კურსორის თემის აღდგენა"
+msgstr "კურსორების თემის წაშლა"
 
 #: ui/Delegate.qml:46
-#, fuzzy, kde-format
-#| msgid "Name of the current cursor theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active cursor theme"
-msgstr "კურსორის მიმდინარე ფერის სახელი"
+msgstr "აქტიური კურსორების თემის წაშლა შეუძლებელია"
 
 #: ui/Delegate.qml:48
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed cursor themes"
-msgstr ""
+msgstr "სისტემასთან ერთად დაყენებული კურსორის თემების წაშლა შეუძლებელია"
 
 #: ui/Delegate.qml:56
 #, kde-format
 msgid "Don’t delete this cursor theme"
-msgstr ""
+msgstr "არ წაშალოთ ეს კურსორების თემა"
 
 #: ui/LaunchFeedbackDialog.qml:16
 #, kde-format

@@ -1,21 +1,21 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Kishore G <kishore96@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025, 2026 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-10 00:45+0000\n"
-"PO-Revision-Date: 2025-01-26 17:32+0530\n"
+"PO-Revision-Date: 2026-01-31 18:17+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
-"Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
+"Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: contents/logout/Logout.qml:149
 #, kde-format
@@ -78,11 +78,10 @@ msgid "When restarted, the computer will enter the boot loader menu."
 msgstr "மீள்துவக்கப்படும்போது கணினி துவக்குநிரல் அமைப்புகளில் நுழையும்."
 
 #: contents/logout/Logout.qml:212
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will enter the boot loader menu."
+#, kde-format
 msgctxt "%1 is a boot loader entry"
 msgid "When restarted, the computer will switch to %1."
-msgstr "மீள்துவக்கப்படும்போது கணினி துவக்குநிரல் அமைப்புகளில் நுழையும்."
+msgstr "மீள்துவக்கப்படும்போது கணினி %1-க்குள் நுழையும்."
 
 #: contents/logout/Logout.qml:234
 #, kde-format

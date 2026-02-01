@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2026 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2026 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-31 00:45+0000\n"
-"PO-Revision-Date: 2023-08-03 10:14+0200\n"
+"PO-Revision-Date: 2026-01-31 12:27+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #. i18n: ectx: label, entry (cursorTheme), group (Mouse)
 #: cursorthemesettings.kcfg:9
@@ -169,29 +169,27 @@ msgid "(Current theme for this Plasma session)"
 msgstr "(Huidige thema voor deze Plasma-sessie)"
 
 #: ui/Delegate.qml:44
-#, fuzzy, kde-format
-#| msgid "Restore Cursor Theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove cursor theme"
-msgstr "Cursorthema herstellen"
+msgstr "Cursorthema verwijderen"
 
 #: ui/Delegate.qml:46
-#, fuzzy, kde-format
-#| msgid "Name of the current cursor theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active cursor theme"
-msgstr "Naam van het huidige cursorthema"
+msgstr "Kan het actieve cursorthema niet verwijderen"
 
 #: ui/Delegate.qml:48
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed cursor themes"
-msgstr ""
+msgstr "Kan door het systeem geïnstalleerde cursorthema's niet verwijderen"
 
 #: ui/Delegate.qml:56
 #, kde-format
 msgid "Don’t delete this cursor theme"
-msgstr ""
+msgstr "Kan dit cursorthema niet verwijderen"
 
 #: ui/LaunchFeedbackDialog.qml:16
 #, kde-format

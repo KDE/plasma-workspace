@@ -1323,18 +1323,16 @@ msgid "Edit Color Scheme…"
 msgstr "编辑配色方案…"
 
 #: ui/main.qml:324
-#, fuzzy, kde-format
-#| msgid "Remove Color Scheme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove color scheme"
-msgstr "删除配色方案"
+msgstr ""
 
 #: ui/main.qml:326
-#, fuzzy, kde-format
-#| msgid "Utility to edit and create color schemes"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active color scheme"
-msgstr "配色方案创建与编辑工具程序"
+msgstr ""
 
 #: ui/main.qml:328
 #, kde-format
@@ -1356,6 +1354,3 @@ msgstr "打开配色方案"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "配色方案文件 (*.colors)"
-
-#~ msgid "Restore Color Scheme"
-#~ msgstr "恢复配色方案"

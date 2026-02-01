@@ -1,13 +1,13 @@
 # translation of kcm_desktopthemedetails.po to Arabic
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2008, 2021, 2024, 2025 zayed <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2008, 2021, 2024, 2025, 2026 zayed <zayed.alsaidi@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-31 00:45+0000\n"
-"PO-Revision-Date: 2025-08-05 18:32+0400\n"
+"PO-Revision-Date: 2026-01-31 20:32+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -145,30 +145,28 @@ msgid "Edit Theme…"
 msgstr "حرر السمة..."
 
 #: ui/main.qml:174
-#, fuzzy, kde-format
-#| msgid "Plasma Style"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove Plasma style"
-msgstr "نمط بلازما"
+msgstr "أزل نمط بلازما"
 
 #: ui/main.qml:176
-#, fuzzy, kde-format
-#| msgid "This module lets you choose the Plasma style."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active Plasma style"
-msgstr "هذه الوحدة تجعلك تختار نمط بلازما"
+msgstr "لا يمكن حذف نمط بلازما النشط"
 
 #: ui/main.qml:178
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed Plasma styles"
-msgstr ""
+msgstr "لا يمكن حذف أنماط بلازما المثبتة في النظام"
 
 #: ui/main.qml:186
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Don’t delete this Plasma style"
-msgstr ""
+msgstr "لا تحذف نمط بلازما هذا"
 
 #: ui/main.qml:205
 #, kde-format
