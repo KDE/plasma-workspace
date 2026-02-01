@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.systemtray\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-05 00:44+0000\n"
-"PO-Revision-Date: 2026-01-15 20:00+0100\n"
+"PO-Revision-Date: 2026-01-31 17:16+0100\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
@@ -82,6 +82,12 @@ msgid ""
 "><nl/>Use this setting at your own risk, and do not report issues to KDE or "
 "the app’s author."
 msgstr ""
+"Predtým, ako to urobíte tu, vyhľadajte nastavenie v <application>%1</"
+"application>, aby ste deaktivovali ikonu v paneli úloh. Ikony niektorých "
+"aplikácií v paneli úloh neboli navrhnuté tak, aby sa dali deaktivovať, a "
+"použitie tohto nastavenia môže spôsobiť ich neočakávané správanie.<nl/><nl/"
+">Toto nastavenie používajte na vlastné riziko a nehláste problémy KDE ani "
+"autorovi aplikácie."
 
 #: qml/ConfigGeneral.qml:175
 #, kde-format
@@ -100,6 +106,12 @@ msgid ""
 "configuring the clipboard to not save history, or to only remember one item "
 "at a time."
 msgstr ""
+"Deaktivácia schránky sa neodporúča, pretože to spôsobí stratu skopírovaných "
+"údajov po zatvorení aplikácie, z ktorej boli skopírované.<nl/><nl/>Urobte to "
+"len v prípade, ak ste ručne pridali samostatný widget schránky niekde inde "
+"alebo používate správcu schránky tretej strany. Zvážte tiež konfiguráciu "
+"schránky tak, aby neukladala históriu alebo si pamätala len jednu položku "
+"naraz."
 
 #: qml/ConfigGeneral.qml:196
 #, kde-kuit-format
@@ -110,6 +122,10 @@ msgid ""
 "added a standalone Notifications widget somewhere else, or are intentionally "
 "using a 3rd-party notification manager to handle notifications."
 msgstr ""
+"Deaktivácia widgetu Oznámenia sa neodporúča, pretože oznámenia odoslané "
+"aplikáciami sa už nebudú zobrazovať.<nl/><nl/>Toto urobte len v prípade, ak "
+"ste ručne pridali samostatný widget Oznámenia niekde inde alebo zámerne "
+"používate správcu oznámení tretej strany na spracovanie oznámení."
 
 #: qml/ConfigGeneral.qml:208
 #, kde-format

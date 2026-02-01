@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-10 00:45+0000\n"
-"PO-Revision-Date: 2026-01-14 18:26+0100\n"
+"PO-Revision-Date: 2026-01-31 17:12+0100\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
@@ -88,11 +88,10 @@ msgid "When restarted, the computer will enter the boot loader menu."
 msgstr "Po reštarte počítač zobrazí obrazovku s nastaveniami firmvéru."
 
 #: contents/logout/Logout.qml:212
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will enter the firmware setup screen."
+#, kde-format
 msgctxt "%1 is a boot loader entry"
 msgid "When restarted, the computer will switch to %1."
-msgstr "Po reštarte počítač zobrazí obrazovku s nastaveniami firmvéru."
+msgstr "Po reštartovaní sa počítač prepne na %1."
 
 #: contents/logout/Logout.qml:234
 #, kde-format
