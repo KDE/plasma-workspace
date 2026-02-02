@@ -155,24 +155,24 @@ msgstr "(此 Plasma 会话的当前主题)"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove cursor theme"
-msgstr ""
+msgstr "移除光标主题"
 
 #: ui/Delegate.qml:46
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active cursor theme"
-msgstr ""
+msgstr "无法删除活动光标主题"
 
 #: ui/Delegate.qml:48
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed cursor themes"
-msgstr ""
+msgstr "无法展出系统安装的光标主题"
 
 #: ui/Delegate.qml:56
 #, kde-format
 msgid "Don’t delete this cursor theme"
-msgstr ""
+msgstr "不要删除此光标主题"
 
 #: ui/LaunchFeedbackDialog.qml:16
 #, kde-format

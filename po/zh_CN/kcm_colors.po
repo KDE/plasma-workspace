@@ -1326,24 +1326,24 @@ msgstr "编辑配色方案…"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove color scheme"
-msgstr ""
+msgstr "移除配色方案"
 
 #: ui/main.qml:326
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active color scheme"
-msgstr ""
+msgstr "无法删除活动配色方案"
 
 #: ui/main.qml:328
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed color schemes"
-msgstr ""
+msgstr "无法展出系统安装的配色方案"
 
 #: ui/main.qml:336
 #, kde-format
 msgid "Don’t delete this color scheme"
-msgstr ""
+msgstr "不要删除此配色方案"
 
 #: ui/main.qml:380
 #, kde-format

@@ -1,6 +1,6 @@
 # translation of plasma_applet_notifications.po to Italian
 # Copyright (C) 2008 Free Software Foundation, Inc.
-# SPDX-FileCopyrightText: 2008, 2009, 2010, 2011, 2014, 2015, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Vincenzo Reale <smart2128vr@gmail.com>
+# SPDX-FileCopyrightText: 2008, 2009, 2010, 2011, 2014, 2015, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Vincenzo Reale <smart2128vr@gmail.com>
 # Nicola Ruggero <nicola@nxnt.org>, 2013.
 #
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-28 00:46+0000\n"
-"PO-Revision-Date: 2025-12-06 15:45+0100\n"
+"PO-Revision-Date: 2026-01-29 15:24+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.3\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: components/ActionContainer.qml:81
 #, kde-format
@@ -396,11 +396,10 @@ msgid "Toggle do not disturb"
 msgstr "Attiva Non disturbare"
 
 #: globalshortcuts.cpp:33
-#, fuzzy, kde-format
-#| msgid "Clear All Notifications"
+#, kde-format
 msgctxt "@action"
 msgid "Clear Notification History"
-msgstr "Cancella tutte le notifiche"
+msgstr "Cancella la cronologia delle notifiche"
 
 #: globalshortcuts.cpp:52
 #, kde-format
@@ -415,12 +414,10 @@ msgid "Notifications On"
 msgstr "Notifiche attivate"
 
 #: globalshortcuts.cpp:68
-#, fuzzy, kde-format
-#| msgctxt "OSD popup, keep short"
-#| msgid "Notifications On"
+#, kde-format
 msgctxt "@label OSD popup, keep short"
 msgid "Notification history cleared"
-msgstr "Notifiche attivate"
+msgstr "Cronologia delle notifiche cancellata"
 
 #: main.qml:61
 #, kde-format

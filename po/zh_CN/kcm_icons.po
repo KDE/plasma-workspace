@@ -74,25 +74,25 @@ msgstr "获取新图标主题…"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove icon theme"
-msgstr ""
+msgstr "移除图标主题"
 
 #: ui/main.qml:191
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active icon theme"
-msgstr ""
+msgstr "无法删除活动图标主题"
 
 #: ui/main.qml:193
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed icon themes"
-msgstr ""
+msgstr "无法展出系统安装的图标主题"
 
 #: ui/main.qml:201
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Don’t delete this icon theme"
-msgstr ""
+msgstr "不要删除此图标主题"
 
 #: ui/main.qml:250
 #, kde-format

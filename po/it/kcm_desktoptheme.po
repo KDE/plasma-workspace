@@ -2,14 +2,14 @@
 # Copyright (C) 2008 Free Software Foundation, Inc.
 # Vincenzo Reale <smart2128vr@gmail.com>, 2008, 2009, 2010, 2011, 2014, 2021.
 # Federico Zenith <federico.zenith@member.fsf.org>, 2010.
-# SPDX-FileCopyrightText: 2017, 2018, 2019, 2020, 2021, 2023, 2024 Paolo Zamponi <feus73@gmail.com>
+# SPDX-FileCopyrightText: 2017, 2018, 2019, 2020, 2021, 2023, 2024, 2026 Paolo Zamponi <feus73@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-31 00:45+0000\n"
-"PO-Revision-Date: 2024-09-01 15:06+0200\n"
+"PO-Revision-Date: 2026-02-01 09:12+0100\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #. i18n: ectx: label, entry (name), group (Theme)
 #: desktopthemesettings.kcfg:9
@@ -150,30 +150,28 @@ msgid "Edit Theme…"
 msgstr "Modifica tema…"
 
 #: ui/main.qml:174
-#, fuzzy, kde-format
-#| msgid "Plasma Style"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove Plasma style"
-msgstr "Stile di Plasma"
+msgstr "Rimuovi stile di Plasma"
 
 #: ui/main.qml:176
-#, fuzzy, kde-format
-#| msgid "This module lets you choose the Plasma style."
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active Plasma style"
-msgstr "Questo modulo ti permette di scegliere lo stile di Plasma."
+msgstr "Impossibile eliminare lo stile di Plasma attivo"
 
 #: ui/main.qml:178
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed Plasma styles"
-msgstr ""
+msgstr "Impossibile eliminare gli stili di Plasma installati dal sistema"
 
 #: ui/main.qml:186
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Don’t delete this Plasma style"
-msgstr ""
+msgstr "Non eliminare questo stile di Plasma"
 
 #: ui/main.qml:205
 #, kde-format

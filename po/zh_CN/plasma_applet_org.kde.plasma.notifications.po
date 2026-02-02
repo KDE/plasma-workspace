@@ -389,7 +389,7 @@ msgstr "切换勿扰模式"
 #, kde-format
 msgctxt "@action"
 msgid "Clear Notification History"
-msgstr ""
+msgstr "清除通知历史记录"
 
 #: globalshortcuts.cpp:52
 #, kde-format
@@ -407,7 +407,7 @@ msgstr "通知开启"
 #, kde-format
 msgctxt "@label OSD popup, keep short"
 msgid "Notification history cleared"
-msgstr ""
+msgstr "通知历史记录已清除"
 
 #: main.qml:61
 #, kde-format
