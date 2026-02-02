@@ -8,10 +8,12 @@
 
 #include "devicenotifier_debug.h"
 
+#include <Solid/Block>
 #include <Solid/Camera>
 #include <Solid/DeviceNotifier>
 #include <Solid/OpticalDisc>
 #include <Solid/PortableMediaPlayer>
+#include <Solid/StorageAccess>
 #include <Solid/StorageDrive>
 
 const QList<Solid::DeviceInterface::Type> StorageInfo::m_types({
@@ -117,9 +119,20 @@ StorageInfo::StorageInfo(const QString &udi, QObject *parent)
         }
     }
 
-    if (m_isRemovable && device.is<Solid::StorageVolume>()) {
+    if (device.is<Solid::StorageVolume>()) {
         qCDebug(APPLETS::DEVICENOTIFIER) << "Storage Info " << udi << " : parent device: " << device.parent().udi();
-        m_hasRemovableParent = true;
+        if (m_isRemovable) {
+            m_hasRemovableParent = true;
+        }
+        // Allow mount/unmount only for unused loop devices.
+        // Do not unmount a mounted loop device, as it may be in use or system-related.
+        if (device.is<Solid::Block>() && device.is<Solid::StorageAccess>()) {
+            auto block = device.as<Solid::Block>();
+            auto access = device.as<Solid::StorageAccess>();
+            if (access && !access->isAccessible() && block && block->device().contains(QStringLiteral("/loop"))) {
+                m_isRemovable = true;
+            }
+        }
     }
 
     for (auto type : m_types) {
