@@ -1,10 +1,10 @@
 # translation of kcminput.po to Italian
-# SPDX-FileCopyrightText: 2018, 2019, 2025 Paolo Zamponi <feus73@gmail.com>
+# SPDX-FileCopyrightText: 2015, 2020, 2021, 2022, 2023, 2026 Vincenzo Reale <smart2128vr@gmail.com>
 # Andrea Rizzi <rizzi@kde.org>, 2003, 2004, 2005, 2007.
 # Pino Toscano <toscano.pino@tiscali.it>, 2006.
 # Luciano Montanaro <mikelima@cirulla.net>, 2008.
 # Nicola Ruggero <nicola@nxnt.org>, 2010, 2011, 2012.
-# Vincenzo Reale <smart2128vr@gmail.com>, 2015, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2018, 2019, 2025 Paolo Zamponi <feus73@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.04.1\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #. i18n: ectx: label, entry (cursorTheme), group (Mouse)
 #: cursorthemesettings.kcfg:9
