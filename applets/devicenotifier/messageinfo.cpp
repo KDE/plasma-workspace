@@ -111,7 +111,7 @@ void MessageInfo::onStateChanged()
             if (state == StateInfo::RepairDone) {
                 return i18n("Successfully repaired!");
             }
-            if (state == StateInfo::UnmountDone && m_stateInfo->isSafelyRemovable()) {
+            if (state == StateInfo::UnmountDone && m_stateInfo->isSafelyRemovable() && m_storageInfo->hasRemovableParent()) {
                 KNotification::event(QStringLiteral("safelyRemovable"),
                                      i18n("Device Status"),
                                      i18n("A device can now be safely removed"),
