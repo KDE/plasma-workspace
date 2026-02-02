@@ -390,6 +390,10 @@ Plasma::Containment *ScriptEngine::createContainment(const QString &type, const 
 Containment *ScriptEngine::createContainmentWrapper(const QString &type, const QString &plugin)
 {
     Plasma::Containment *c = createContainment(type, plugin);
+    // createContainment will return nullptr on an invalid plugin
+    if (!c) {
+        return nullptr;
+    }
     return isPanel(c) ? new Panel(c, this) : new Containment(c, this);
 }
 
