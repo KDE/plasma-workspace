@@ -1737,16 +1737,35 @@ void ShellCorona::executeSetupPlasmoidScript(Plasma::Containment *containment, P
 
 void ShellCorona::toggleWidgetExplorer()
 {
-    setEditMode(true);
-    // FIXME: This does not work on wayland
-    const QPoint cursorPos = QCursor::pos();
-    for (DesktopView *view : std::as_const(m_desktopViewForScreen)) {
-        if (view->screen()->geometry().contains(cursorPos)) {
-            // The view QML has to provide something to display the widget explorer
-            QMetaObject::invokeMethod(view->rootObject(), "toggleWidgetExplorer", Q_ARG(QVariant, QVariant::fromValue(sender())));
-            return;
+    auto viewIt = m_desktopViewForScreen.cbegin();
+    if (KWindowSystem::isPlatformWayland()) {
+        auto message = QDBusMessage::createMethodCall(u"org.kde.KWin"_s, u"/KWin"_s, u"org.kde.KWin"_s, u"activeOutputName"_s);
+        QDBusReply<QString> reply = QDBusConnection::sessionBus().call(message);
+        if (reply.isValid()) {
+            const QString activeOutputName = reply.value();
+            viewIt = std::find_if(m_desktopViewForScreen.cbegin(), m_desktopViewForScreen.cend(), [&activeOutputName](DesktopView *view) {
+                return view->screen()->name() == activeOutputName;
+            });
         }
+    } else {
+        const QPoint cursorPos = QCursor::pos();
+        viewIt = std::find_if(m_desktopViewForScreen.cbegin(), m_desktopViewForScreen.cend(), [&cursorPos](DesktopView *view) {
+            return view->screen()->geometry().contains(cursorPos);
+        });
     }
+
+    if (viewIt == m_desktopViewForScreen.cend()) [[unlikely]] {
+        Q_ASSERT_X(false, Q_FUNC_INFO, qUtf8Printable(std::invoke([this]() {
+                       QString message;
+                       QDebug(&message) << "m_desktopViewForScreen:" << m_desktopViewForScreen << "cursorPos:" << QCursor::pos();
+                       return message;
+                   })));
+        viewIt = m_desktopViewForScreen.cbegin();
+    }
+
+    setEditMode(true);
+    // The view QML has to provide something to display the widget explorer
+    QMetaObject::invokeMethod((*viewIt)->rootObject(), "toggleWidgetExplorer", Q_ARG(QVariant, QVariant::fromValue(sender())));
 }
 
 void ShellCorona::toggleActivityManager()
