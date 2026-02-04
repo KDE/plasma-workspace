@@ -2,20 +2,22 @@
 # Copyright (C) 2002 Free Software Foundation, Inc.
 # Séamus Ó Ciardhuáin <seoc@cnds.ucd.ie>, 2002
 # Kevin Scannell <kscanne@gmail.com>, 2009
+# SPDX-FileCopyrightText: 2026 Charlotte <altronic25@protonmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2004-12-03 14:52-0500\n"
-"Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
-"Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
+"PO-Revision-Date: 2026-02-01 16:08+0000\n"
+"Last-Translator: Charlotte <altronic25@protonmail.com>\n"
+"Language-Team: Irish\n"
 "Language: ga\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #. i18n: ectx: label, entry (forceFontDPI), group (General)
 #: fontsaasettingsbase.kcfg:9
@@ -42,11 +44,9 @@ msgstr "Aonleithid"
 
 #. i18n: ectx: label, entry (smallestReadableFont), group (General)
 #: fontssettings.kcfg:25
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Small"
+#, kde-format
 msgid "Small font"
-msgstr "Beag"
+msgstr "Cló Beag"
 
 #. i18n: ectx: label, entry (toolBarFont), group (General)
 #: fontssettings.kcfg:33
@@ -142,7 +142,7 @@ msgctxt ""
 "%1 is the name of a font type, %2 is the size in points (pt). Ex: Noto Sans "
 "10pt"
 msgid "%1 %2pt"
-msgstr ""
+msgstr "%1 %2pt"
 
 #: ui/main.qml:37
 #, kde-format
@@ -159,16 +159,13 @@ msgid "Adjust Global Scale…"
 msgstr "Coi&geartaigh Gach Cló..."
 
 #: ui/main.qml:56
-#, fuzzy, kde-format
-#| msgid ""
-#| "<p>Some changes such as anti-aliasing or DPI will only affect newly "
-#| "started applications.</p>"
+#, kde-format
 msgid ""
 "Some changes such as anti-aliasing or DPI will only affect newly started "
 "applications."
 msgstr ""
-"<p>Cuirfear athruithe áirithe (mar shampla frithailiasáil nó luach PSO) i "
-"bhfeidhm ar fheidhmchláir nua-thosaithe amháin.</p>"
+"Cuirfear athruithe áirithe (mar shampla frithailiasáil nó luach PSO) i "
+"bhfeidhm ar fheidhmchláir nua-thosaithe amháin."
 
 #: ui/main.qml:72
 #, kde-format
@@ -210,10 +207,9 @@ msgid ""
 msgstr ""
 
 #: ui/main.qml:154
-#, fuzzy, kde-format
-#| msgid "Ad&just All Fonts..."
+#, kde-format
 msgid "&Adjust All Fonts…"
-msgstr "Coi&geartaigh Gach Cló..."
+msgstr "Coige&artaigh Gach Cló..."
 
 #: ui/main.qml:167
 #, fuzzy, kde-format
@@ -244,32 +240,24 @@ msgid "Select fixed width font"
 msgstr "Aonleithid"
 
 #: ui/main.qml:191
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Small"
+#, kde-format
 msgid "Small:"
-msgstr "Beag"
+msgstr "Beag:"
 
 #: ui/main.qml:192
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Small"
+#, kde-format
 msgid "Select small font"
-msgstr "Beag"
+msgstr "Roghnaigh cló beag"
 
 #: ui/main.qml:203
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Toolbar"
+#, kde-format
 msgid "Toolbar:"
-msgstr "Barra Uirlisí"
+msgstr "Barra Uirlisí:"
 
 #: ui/main.qml:204
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Toolbar"
+#, kde-format
 msgid "Select toolbar font"
-msgstr "Barra Uirlisí"
+msgstr "Roghnaigh cló barra uirlisí"
 
 #: ui/main.qml:215
 #, fuzzy, kde-format
@@ -284,18 +272,14 @@ msgid "Select menu font"
 msgstr ""
 
 #: ui/main.qml:226
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Window title"
+#, kde-format
 msgid "Window title:"
-msgstr "Teideal fuinneog"
+msgstr "Teideal fuinneog:"
 
 #: ui/main.qml:227
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Window title"
+#, kde-format
 msgid "Select window title font"
-msgstr "Teideal fuinneog"
+msgstr "Roghnaigh cló teideal fuinneog"
 
 #: ui/main.qml:242
 #, fuzzy, kde-format
@@ -304,11 +288,9 @@ msgid "Anti-Aliasing:"
 msgstr "Úsáid &frithailiasáil:"
 
 #: ui/main.qml:247
-#, fuzzy, kde-format
-#| msgctxt "Use anti-aliasing"
-#| msgid "Enabled"
+#, kde-format
 msgid "Enable"
-msgstr "Cumasaithe"
+msgstr "Cumasaigh"
 
 #: ui/main.qml:251
 #, kde-kuit-format
@@ -329,13 +311,12 @@ msgstr ""
 #: ui/main.qml:284 ui/main.qml:308
 #, kde-format
 msgid "%1 pt"
-msgstr ""
+msgstr "%1 pt"
 
 #: ui/main.qml:299
-#, fuzzy, kde-format
-#| msgid " to "
+#, kde-format
 msgid "to"
-msgstr " go "
+msgstr "go"
 
 #: ui/main.qml:331
 #, fuzzy, kde-format
@@ -359,11 +340,10 @@ msgid ""
 msgstr ""
 
 #: ui/main.qml:382
-#, fuzzy, kde-format
-#| msgid "Hinting style: "
+#, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
-msgstr "Stíl leideach: "
+msgstr "Leid:"
 
 #: ui/main.qml:427
 #, kde-kuit-format

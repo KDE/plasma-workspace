@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2016, 2020, 2021, 2022, 2023, 2024, 2025 Giovanni Sora <g.sora@tiscali.it>
+# SPDX-FileCopyrightText: 2016, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Giovanni Sora <g.sora@tiscali.it>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-05 00:45+0000\n"
-"PO-Revision-Date: 2025-09-02 17:41+0200\n"
+"PO-Revision-Date: 2026-02-03 18:04+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -31,7 +31,7 @@ msgstr "g.sora@tiscali.it"
 #, kde-format
 msgctxt "Name filter for file dialogs: File type (file extension wildcards)"
 msgid "Image Files (%1)"
-msgstr ""
+msgstr "Files de Image (%1)"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: lookandfeelsettings.kcfg:9
@@ -42,10 +42,9 @@ msgstr "Apparentia e semblantia global"
 #. i18n: ectx: label, entry (defaultLightLookAndFeel), group (KDE)
 #. i18n: ectx: label, entry (defaultDarkLookAndFeel), group (KDE)
 #: lookandfeelsettings.kcfg:13 lookandfeelsettings.kcfg:17
-#, fuzzy, kde-format
-#| msgid "Global look and feel"
+#, kde-format
 msgid "Global Look and Feel package, alternate"
-msgstr "Apparentia e semblantia global"
+msgstr "Pacchetto de apparentia e semblantia global, alternative"
 
 #. i18n: ectx: label, entry (automaticLookAndFeel), group (KDE)
 #: lookandfeelsettings.kcfg:21
@@ -167,10 +166,10 @@ msgid "Configure Day/Night Cycle…"
 msgstr ""
 
 #: ui/DayNightLookAndFeel.qml:68
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@option:radio Light global theme"
 msgid "Light"
-msgstr "Legier"
+msgstr "Clar"
 
 #: ui/DayNightLookAndFeel.qml:80
 #, kde-format
@@ -185,7 +184,7 @@ msgid "Wait until idleness before switching:"
 msgstr ""
 
 #: ui/DayNightLookAndFeel.qml:110
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@item:valuesuffix idle interval"
 msgid "%1 second"
 msgid_plural "%1 seconds"
@@ -199,18 +198,16 @@ msgid "Minimizes interruptions when actively using the computer."
 msgstr ""
 
 #: ui/LookAndFeelSelector.qml:24
-#, fuzzy, kde-format
-#| msgid "Global Theme"
+#, kde-format
 msgctxt "@title:window"
 msgid "Choose Light Global Theme"
-msgstr "Thema Global"
+msgstr "Selige Thema Global Clar"
 
 #: ui/LookAndFeelSelector.qml:26
-#, fuzzy, kde-format
-#| msgid "Global Theme"
+#, kde-format
 msgctxt "@title:window"
 msgid "Choose Dark Global Theme"
-msgstr "Thema Global"
+msgstr "Selige Thema Global Obscur"
 
 #: ui/LookAndFeelSelector.qml:49 ui/StaticLookAndFeel.qml:67
 #, kde-format
@@ -260,13 +257,13 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Take a screenshot…"
-msgstr ""
+msgstr "Prende un  captura de schermo…"
 
 #: ui/LookAndFeelSnapshot.qml:86
 #, kde-format
 msgctxt "@label:textbox Name of new global theme that will be created"
 msgid "Name:"
-msgstr ""
+msgstr "Nomine:"
 
 #: ui/LookAndFeelSnapshot.qml:92
 #, kde-format
@@ -280,7 +277,7 @@ msgctxt ""
 "@action:button Confirm creating new global theme from the user's current "
 "appearance settings"
 msgid "Confirm"
-msgstr ""
+msgstr "Confirma"
 
 #: ui/LookAndFeelSnapshot.qml:113
 #, kde-format
@@ -307,8 +304,7 @@ msgid "Save Current Theme…"
 msgstr ""
 
 #: ui/main.qml:45
-#, fuzzy, kde-format
-#| msgid "Get New…"
+#, kde-format
 msgctxt "@action:intoolbar"
 msgid "Get New…"
 msgstr "Obtene Nove…"

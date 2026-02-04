@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2019, 2020, 2021, 2024 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2019, 2020, 2021, 2024, 2026 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-05 00:44+0000\n"
-"PO-Revision-Date: 2024-11-28 23:46+0100\n"
+"PO-Revision-Date: 2026-02-03 23:28+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: config.qml:13
 #, kde-format
@@ -25,7 +25,7 @@ msgstr "일반"
 #: ConfigGeneral.qml:118
 #, kde-format
 msgid "Unavailable"
-msgstr ""
+msgstr "사용할 수 없음"
 
 #: data.js:5
 #, kde-format
@@ -38,10 +38,9 @@ msgid "Lock the screen"
 msgstr "화면 잠그기"
 
 #: data.js:12
-#, fuzzy, kde-format
-#| msgid "Switch user"
+#, kde-format
 msgid "Switch user…"
-msgstr "사용자 전환"
+msgstr "사용자 전환…"
 
 #: data.js:13
 #, kde-format
@@ -49,8 +48,7 @@ msgid "Start a parallel session as a different user"
 msgstr "다른 사용자로 새 세션 시작하기"
 
 #: data.js:19
-#, fuzzy, kde-format
-#| msgid "Shut Down"
+#, kde-format
 msgid "Shut down"
 msgstr "컴퓨터 끄기"
 
@@ -70,8 +68,7 @@ msgid "Reboot the computer"
 msgstr "컴퓨터 다시 시작"
 
 #: data.js:33
-#, fuzzy, kde-format
-#| msgid "Log Out"
+#, kde-format
 msgid "Log out"
 msgstr "로그아웃"
 

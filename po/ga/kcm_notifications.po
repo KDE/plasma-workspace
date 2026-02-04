@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2026-01-11 05:47+0000\n"
+"PO-Revision-Date: 2026-02-01 16:41+0000\n"
 "Last-Translator: Charlotte <altronic25@protonmail.com>\n"
 "Language-Team: Irish\n"
 "Language: ga\n"
@@ -16,11 +16,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: kcm.cpp:62
 #, kde-format
 msgid "Toggle do not disturb"
-msgstr "Scoránaigh ná cuir isteach ar"
+msgstr "Scoránaigh ná cuir isteach orm"
 
 #: sourcesmodel.cpp:406
 #, kde-format
@@ -35,12 +36,12 @@ msgstr ""
 #: ui/ApplicationConfiguration.qml:119
 #, kde-format
 msgid "Show in do not disturb mode"
-msgstr ""
+msgstr "Taispeáin i mód ná cuir isteach orm"
 
 #: ui/ApplicationConfiguration.qml:132 ui/main.qml:208
 #, kde-format
 msgid "Show in history"
-msgstr ""
+msgstr "Taispeáin i stair"
 
 #: ui/ApplicationConfiguration.qml:143
 #, kde-format
@@ -91,13 +92,13 @@ msgstr "Roghnaigh comhad fuaime"
 #, kde-format
 msgctxt "@action:button Plasma-specific notifications"
 msgid "Configure for System…"
-msgstr ""
+msgstr "Cumraigh do Chóras..."
 
 #: ui/main.qml:53
 #, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Configure for Applications…"
-msgstr ""
+msgstr "Cumraigh d'Fheidhmchláir..."
 
 #: ui/main.qml:96
 #, kde-format
@@ -122,13 +123,13 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "Do Not Disturb mode"
-msgstr "Mód Ná Cuir Isteach Ar"
+msgstr "Mód Ná Cuir Isteach Orm"
 
 #: ui/main.qml:131
 #, kde-format
 msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "Enable automatically:"
-msgstr ""
+msgstr "Cumasaigh go huathoibríoch:"
 
 #: ui/main.qml:132
 #, kde-format
@@ -170,7 +171,7 @@ msgstr ""
 #: ui/main.qml:183
 #, kde-format
 msgid "Show in Do Not Disturb mode"
-msgstr ""
+msgstr "Taispeáin i mód Ná Cuir Isteach Orm"
 
 #: ui/main.qml:195
 #, kde-format
@@ -239,7 +240,7 @@ msgstr ""
 #, kde-format
 msgctxt "Show application jobs in notification widget"
 msgid "Show in notifications"
-msgstr ""
+msgstr "Taispeáin i bhfógraí"
 
 #: ui/main.qml:325
 #, kde-format
@@ -268,12 +269,11 @@ msgid "Popup Position"
 msgstr ""
 
 #: ui/SourcesPage.qml:20
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt ""
 "@title:window kcm page title, configure app-specific notification settings"
 msgid "Application Notifications"
-msgstr "Socruithe Feidhmchláir"
+msgstr "Fógraí Feidhmchláir"
 
 #: ui/SourcesPage.qml:104
 #, kde-format
