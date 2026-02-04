@@ -5,7 +5,7 @@
 */
 pragma ComponentBehavior: Bound
 
-import QtCore
+
 import QtQuick
 import QtQuick.Dialogs as QtDialogs
 
@@ -15,25 +15,22 @@ Loader {
     asynchronous: true
     sourceComponent: configDialog.currentWallpaper === "org.kde.image" ? addFileDialog : addFolderDialog
 
-    readonly property url defaultFolder: {
-        let defaultPaths = StandardPaths.standardLocations(StandardPaths.PicturesLocation);
-        if (defaultPaths.length === 0) {
-            // HomeLocation is guaranteed not to be empty.
-            defaultPaths = StandardPaths.standardLocations(StandardPaths.HomeLocation);
-        }
-        return defaultPaths[0];
-    }
-
     Connections {
         target: dialogLoader.item
         function onAccepted() {
             let added = false;
             if (dialogLoader.item instanceof QtDialogs.FileDialog) {
-                (dialogLoader.item as QtDialogs.FileDialog).selectedFiles.forEach(url => {
+                const fileDialog = dialogLoader.item as QtDialogs.FileDialog;
+                const folder = fileDialog.currentFolder;
+                fileDialog.selectedFiles.forEach(url => {
                     added |= imageWallpaper.addUsersWallpaper(url).length > 0;
                 });
+                imageWallpaper.lastFolder = folder;
             } else if (dialogLoader.item instanceof QtDialogs.FolderDialog) {
-                added = imageWallpaper.addSlidePath((dialogLoader.item as QtDialogs.FolderDialog).selectedFolder);
+                const folderDialog = dialogLoader.item as QtDialogs.FolderDialog;
+                const folder = folderDialog.currentFolder;
+                added = imageWallpaper.addSlidePath(folderDialog.selectedFolder);
+                imageWallpaper.lastFolder = folder;
             }
             if (added) {
                 root.wallpaperBrowseCompleted();
@@ -52,7 +49,7 @@ Loader {
         QtDialogs.FileDialog {
             id: fileDialog
             visible: dialogLoader.status === Loader.Ready
-            currentFolder: dialogLoader.defaultFolder
+            currentFolder: imageWallpaper.lastFolder
             nameFilters: imageWallpaper.nameFilters()
             fileMode: QtDialogs.FileDialog.OpenFiles
             options: QtDialogs.FileDialog.ReadOnly
@@ -66,7 +63,7 @@ Loader {
         QtDialogs.FolderDialog {
             id: folderDialog
             visible: dialogLoader.status === Loader.Ready
-            currentFolder: dialogLoader.defaultFolder
+            currentFolder: imageWallpaper.lastFolder
             options: QtDialogs.FolderDialog.ReadOnly
             title: i18nc("@title:window", "Directory with the wallpaper to show slides from")
         }

@@ -23,8 +23,10 @@
 #include <QScreen>
 #include <QStandardPaths>
 
+#include <KConfigGroup>
 #include <KGlobalAccel>
 #include <KLocalizedString>
+#include <KSharedConfig>
 #include <algorithm>
 
 #include "finder/suffixcheck.h"
@@ -422,6 +424,65 @@ QString ImageBackend::addUsersWallpaper(const QUrl &url)
     Q_EMIT settingsChanged();
 
     return results.at(0);
+}
+
+bool ImageBackend::folderExists(const QUrl &url) const
+{
+    if (!url.isValid()) {
+        return false;
+    }
+
+    if (!url.isLocalFile()) {
+        return true;
+    }
+    const QString path = url.toLocalFile();
+    if (path.isEmpty()) {
+        return false;
+    }
+
+    const QFileInfo info(path);
+    return info.exists() && info.isDir();
+}
+
+QUrl ImageBackend::lastFolder() const
+{
+    KSharedConfig::Ptr config = KSharedConfig::openStateConfig();
+    KConfigGroup group(config, QStringLiteral("AddFileDialog"));
+    const QUrl savedUrl = group.readEntry("lastFolder", QUrl());
+
+    // return only if savedUrl is valid and exists
+    if (savedUrl.isValid() && folderExists(savedUrl)) {
+        return savedUrl;
+    }
+
+    // return Pictures as fallback
+    const QStringList picturePaths = QStandardPaths::standardLocations(QStandardPaths::PicturesLocation);
+    if (!picturePaths.isEmpty()) {
+        return QUrl::fromLocalFile(picturePaths.first());
+    }
+
+    // return Home as fallback if Pictures doesn't exist
+    return QUrl::fromLocalFile(QStandardPaths::writableLocation(QStandardPaths::HomeLocation));
+}
+
+void ImageBackend::setLastFolder(const QUrl &url)
+{
+    if (!url.isValid()) {
+        return;
+    }
+
+    KSharedConfig::Ptr config = KSharedConfig::openStateConfig();
+    KConfigGroup group(config, QStringLiteral("AddFileDialog"));
+
+    // skip writing if same as before
+    if (group.readEntry("lastFolder", QUrl()) == url) {
+        return;
+    }
+
+    group.writeEntry("lastFolder", url);
+    config->sync();
+
+    Q_EMIT lastFolderChanged();
 }
 
 QUrl ImageBackend::makeWallpaperUrl(const QUrl &url, const QStringList &selectors) const

@@ -83,6 +83,12 @@ class ImageBackend : public QObject, public QQmlParserStatus
     Q_PROPERTY(bool pauseSlideshow READ pauseSlideshow WRITE setPauseSlideshow NOTIFY pauseSlideshowChanged)
 
     /**
+     * Last used folder in the file dialog for adding wallpapers.
+     * Persisted via KConfig. Falls back to Pictures if invalid/missing.
+     */
+    Q_PROPERTY(QUrl lastFolder READ lastFolder WRITE setLastFolder NOTIFY lastFolderChanged)
+
+    /**
      * @return @c true if the image list is loaded, @c false otherwise
      */
     Q_PROPERTY(bool loading READ loading NOTIFY loadingChanged)
@@ -112,6 +118,10 @@ public:
     Q_INVOKABLE QString nameFilters() const;
 
     Q_INVOKABLE QString addUsersWallpaper(const QUrl &url);
+
+    bool folderExists(const QUrl &url) const;
+    QUrl lastFolder() const;
+    void setLastFolder(const QUrl &url);
 
     QUrl makeWallpaperUrl(const QUrl &url, const QStringList &selectors) const;
     Q_INVOKABLE QUrl makeWallpaperUrl(const QString &url, const QStringList &selectors) const;
@@ -173,6 +183,7 @@ Q_SIGNALS:
     void pauseSlideshowChanged();
     void configMapChanged();
     void loadingChanged(bool loading);
+    void lastFolderChanged();
 
 protected Q_SLOTS:
     void startSlideshow();
