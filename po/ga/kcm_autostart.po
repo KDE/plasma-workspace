@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdereview/kcm_autostart.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2026-01-10 04:57+0000\n"
+"PO-Revision-Date: 2026-02-01 15:55+0000\n"
 "Last-Translator: Charlotte <altronic25@protonmail.com>\n"
 "Language-Team: Irish\n"
 "Language: ga\n"
@@ -17,11 +17,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: autostartmodel.cpp:381
 #, kde-format
 msgid "\"%1\" is not an absolute url."
-msgstr ""
+msgstr "Níl \"%1\" URL absalóideach."
 
 #: autostartmodel.cpp:384
 #, kde-format
@@ -36,7 +37,7 @@ msgstr "Ní comhad é \"%1\"."
 #: autostartmodel.cpp:390
 #, kde-format
 msgid "\"%1\" is not readable."
-msgstr ""
+msgstr "Ní féidir \"%1\" a léann."
 
 #: ui/entry.qml:30
 #, kde-format
@@ -239,7 +240,7 @@ msgstr "Á Thosú"
 #, kde-format
 msgctxt "@label Entry is being stopped"
 msgid "Stopping"
-msgstr "Ag Stad"
+msgstr "Á Stad"
 
 #: unit.cpp:30
 #, kde-format

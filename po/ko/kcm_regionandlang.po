@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025, 2026 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-14 02:39+0000\n"
-"PO-Revision-Date: 2025-10-09 01:50+0200\n"
+"PO-Revision-Date: 2026-02-03 23:22+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: binarydialectmodel.cpp:52
 #, kde-format
@@ -36,22 +36,19 @@ msgid "Metric system (SI)"
 msgstr "미터법(SI)"
 
 #: binarydialectmodel.cpp:75
-#, fuzzy, kde-format
-#| msgid "Binary -  Kibibytes (KiB), Mebibytes (MiB), Gibibytes (GiB)"
+#, kde-format
 msgctxt "Binary dialect IEC description"
 msgid "Binary -  Kibibytes (KiB), Mebibytes (MiB), Gibibytes (GiB)"
 msgstr "이진수 -  키비바이트(KiB), 메비바이트(MiB), 기비바이트(GiB)"
 
 #: binarydialectmodel.cpp:77
-#, fuzzy, kde-format
-#| msgid "Binary - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
+#, kde-format
 msgctxt "Binary dialect JEDEC description"
 msgid "Binary - Kilobytes (KB), Megabytes (MB), Gigabytes (GB)"
-msgstr "이진수 - 킬로바이트(kB), 메가바이트(MB), 기가바이트(GB)"
+msgstr "이진수 - 킬로바이트(KB), 메가바이트(MB), 기가바이트(GB)"
 
 #: binarydialectmodel.cpp:79
-#, fuzzy, kde-format
-#| msgid "Decimal - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
+#, kde-format
 msgctxt "Binary dialect Metric description"
 msgid "Decimal - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
 msgstr "십진수 - 킬로바이트(kB), 메가바이트(MB), 기가바이트(GB)"

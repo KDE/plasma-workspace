@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026 Shinjo Park <kde@peremen.name>
 # JungHee Lee <daemul72@gmail.com>, 2019.
 #
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-10 00:45+0000\n"
-"PO-Revision-Date: 2025-04-07 00:29+0200\n"
+"PO-Revision-Date: 2026-02-03 23:34+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: contents/logout/Logout.qml:149
 #, kde-format
@@ -71,11 +71,10 @@ msgid "When restarted, the computer will enter the boot loader menu."
 msgstr "컴퓨터를 다시 시작하면 부트 로더 메뉴 화면으로 진입합니다."
 
 #: contents/logout/Logout.qml:212
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will enter the boot loader menu."
+#, kde-format
 msgctxt "%1 is a boot loader entry"
 msgid "When restarted, the computer will switch to %1."
-msgstr "컴퓨터를 다시 시작하면 부트 로더 메뉴 화면으로 진입합니다."
+msgstr "컴퓨터를 다시 시작하면 %1(으)로 전환합니다."
 
 #: contents/logout/Logout.qml:234
 #, kde-format

@@ -1,6 +1,6 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024, 2025 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024, 2025, 2026 Shinjo Park <kde@peremen.name>
 # JungHee Lee <daemul72@gmail.com>, 2021.
 #
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2025-07-20 01:20+0200\n"
+"PO-Revision-Date: 2026-02-03 23:27+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: src/fingerprintmodel.cpp:144 src/fingerprintmodel.cpp:228
 #, kde-format
@@ -586,6 +586,8 @@ msgid ""
 "Cannot change your own username while logged in; log out and then log in as "
 "another user to change this account’s username."
 msgstr ""
+"로그인한 상태에서는 자기 자신의 사용자 이름을 변경할 수 없습니다. 이 계정의 "
+"사용자 이름을 변경하려면 로그아웃 후 다른 사용자로 로그인하십시오."
 
 #: src/ui/UserDetailsPage.qml:186
 #, kde-format
@@ -594,6 +596,8 @@ msgid ""
 "Cannot change the username of a logged-in user; wait until this user logs "
 "out first."
 msgstr ""
+"로그인한 사용자의 사용자 이름을 변경할 수 없습니다. 해당 사용자가 로그아웃하"
+"기를 기다리십시오."
 
 #: src/ui/UserDetailsPage.qml:214
 #, kde-format
@@ -633,6 +637,8 @@ msgid ""
 "Cannot delete yourself! Log out and then log in as another user to delete "
 "this user account."
 msgstr ""
+"자기 자신을 삭제할 수 없습니다! 이 계정을 삭제하려면 로그아웃한 후 다른 사용"
+"자로 로그인하십시오."
 
 #: src/ui/UserDetailsPage.qml:286
 #, kde-format
