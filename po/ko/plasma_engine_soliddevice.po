@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2020-09-05 23:47+0200\n"
+"PO-Revision-Date: 2024-02-24 22:10+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -131,7 +131,7 @@ msgstr "플랫폼"
 
 #: soliddeviceengine.cpp:173
 msgid "Hard Disk"
-msgstr "하드디스크"
+msgstr "하드 디스크"
 
 #: soliddeviceengine.cpp:173
 msgid "Cdrom Drive"

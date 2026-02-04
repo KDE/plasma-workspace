@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2026-01-10 22:23+0000\n"
+"PO-Revision-Date: 2026-02-01 16:41+0000\n"
 "Last-Translator: Charlotte <altronic25@protonmail.com>\n"
 "Language-Team: Irish\n"
 "Language: ga\n"
@@ -16,16 +16,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: kcm.cpp:64
 #, kde-format
 msgid "Toggle do not disturb"
-msgstr "Scoránaigh ná cuir isteach ar"
+msgstr "Scoránaigh ná cuir isteach orm"
 
 #: kcm.cpp:192
 #, kde-format
 msgid "Configure Notifications"
-msgstr ""
+msgstr "Cumraigh Fógraí"
 
 #: package/contents/ui/ApplicationConfiguration.qml:63
 #, kde-format
@@ -35,13 +36,13 @@ msgstr ""
 #: package/contents/ui/ApplicationConfiguration.qml:77
 #, kde-format
 msgid "Show in do not disturb mode"
-msgstr ""
+msgstr "Taispeáin i mód ná cuir isteach orm"
 
 #: package/contents/ui/ApplicationConfiguration.qml:90
 #: package/contents/ui/main.qml:148
 #, kde-format
 msgid "Show in history"
-msgstr ""
+msgstr "Taispeáin i stair"
 
 #: package/contents/ui/ApplicationConfiguration.qml:101
 #, kde-format
@@ -88,13 +89,13 @@ msgstr ""
 #, kde-format
 msgctxt "@title:group"
 msgid "Do Not Disturb mode"
-msgstr "Mód Ná Cuir Isteach Ar"
+msgstr "Mód Ná Cuir Isteach Orm"
 
 #: package/contents/ui/main.qml:69
 #, kde-format
 msgctxt "Enable Do Not Disturb mode when screens are mirrored"
 msgid "Enable:"
-msgstr ""
+msgstr "Cumasaigh"
 
 #: package/contents/ui/main.qml:70
 #, kde-format
@@ -128,7 +129,7 @@ msgstr ""
 #: package/contents/ui/main.qml:110
 #, kde-format
 msgid "Show in Do Not Disturb mode"
-msgstr ""
+msgstr "Taispeáin i mód Ná Cuir Isteach Orm"
 
 #: package/contents/ui/main.qml:122
 #, kde-format
@@ -209,7 +210,7 @@ msgstr ""
 #, kde-format
 msgctxt "Show application jobs in notification widget"
 msgid "Show in notifications"
-msgstr ""
+msgstr "Taispeáin i bhfógraí"
 
 #: package/contents/ui/main.qml:278
 #, kde-format
@@ -231,7 +232,7 @@ msgstr ""
 #: package/contents/ui/main.qml:308
 #, kde-format
 msgid "Configure…"
-msgstr ""
+msgstr "Cumraigh..."
 
 #: package/contents/ui/PopupPositionPage.qml:15
 #, kde-format

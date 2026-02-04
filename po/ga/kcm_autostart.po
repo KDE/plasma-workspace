@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kdereview/kcm_autostart.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2026-01-10 04:57+0000\n"
+"PO-Revision-Date: 2026-02-01 15:55+0000\n"
 "Last-Translator: Charlotte <altronic25@protonmail.com>\n"
 "Language-Team: Irish\n"
 "Language: ga\n"
@@ -17,11 +17,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: autostartmodel.cpp:322
 #, kde-format
 msgid "\"%1\" is not an absolute url."
-msgstr ""
+msgstr "Níl \"%1\" URL absalóideach."
 
 #: autostartmodel.cpp:325
 #, kde-format
@@ -36,7 +37,7 @@ msgstr "Ní comhad é \"%1\"."
 #: autostartmodel.cpp:331
 #, kde-format
 msgid "\"%1\" is not readable."
-msgstr ""
+msgstr "Ní féidir \"%1\" a léann."
 
 #: package/contents/ui/main.qml:40
 #, kde-format
@@ -92,7 +93,7 @@ msgstr ""
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Click the <interface>Add…</interface> button below to add some"
-msgstr ""
+msgstr "Cliceáil an cnaipe <interface>Cuir Leis...</interface>"
 
 #: package/contents/ui/main.qml:144
 #, kde-format
