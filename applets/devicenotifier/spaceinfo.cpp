@@ -30,6 +30,8 @@ SpaceInfo::SpaceInfo(const std::shared_ptr<StorageInfo> &storageInfo, const std:
     connect(m_spaceUpdateMonitor.get(), &SpaceUpdateMonitor::updateSpace, this, &SpaceInfo::updateSize);
     connect(m_stateInfo.get(), &StateInfo::stateChanged, this, &SpaceInfo::onStateChanged);
 
+    updateSize();
+
     qCDebug(APPLETS::DEVICENOTIFIER) << "Space Info " << m_storageInfo->device().udi() << " : created";
 }
 
