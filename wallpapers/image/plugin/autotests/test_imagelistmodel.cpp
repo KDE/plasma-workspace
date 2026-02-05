@@ -173,8 +173,9 @@ void ImageListModelTest::testImageListModelAddBackground()
     // Case 4: add a hidden image
     QVERIFY(QFile::exists(m_dataDir.absoluteFilePath(QStringLiteral(".wallpaper.jpg"))));
     results = m_model->addBackground(QUrl::fromLocalFile(m_dataDir.absoluteFilePath(QStringLiteral(".wallpaper.jpg"))));
-    QCOMPARE(results.size(), 0);
-    QCOMPARE(m_countSpy->size(), 0);
+    QCOMPARE(m_countSpy->size(), 1);
+    m_countSpy->clear();
+    QCOMPARE(results.size(), 1);
 
     // Case 5: path is empty
     results = m_model->addBackground(QUrl());
