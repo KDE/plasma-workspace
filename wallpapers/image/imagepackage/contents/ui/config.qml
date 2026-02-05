@@ -130,6 +130,14 @@ ColumnLayout {
             imageWallpaper.slideshowFoldersFirst = cfg_SlideshowFoldersFirst
     }
 
+    Binding on cfg_Image {
+        // in the desktop dialog, the config property is updated as Images change;
+        // in the kcm, it's fixed. Bind it to make sure it's not marking the config
+        // as dirty if the only change is the currently selected wallpaper.
+        when: root.configDialog.currentWallpaper === "org.kde.slideshow"
+        value: root.wallpaperConfiguration.Image
+    }
+
     spacing: 0
 
     Kirigami.FormLayout {
