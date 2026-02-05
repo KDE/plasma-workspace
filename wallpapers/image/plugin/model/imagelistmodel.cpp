@@ -142,8 +142,8 @@ QStringList ImageListModel::addBackground(const QUrl &url)
         return {};
     }
 
-    if (QFileInfo info(path); info.isHidden() || !isAcceptableSuffix(info.suffix())) {
-        // Skip hidden files or Format not supported
+    if (QFileInfo info(path); !isAcceptableSuffix(info.suffix())) {
+        // Skip files with unsupported formats
         return {};
     }
 
