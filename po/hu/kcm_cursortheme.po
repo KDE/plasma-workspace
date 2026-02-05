@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-31 00:45+0000\n"
+"POT-Creation-Date: 2026-02-05 00:46+0000\n"
 "PO-Revision-Date: 2023-12-21 07:46+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -166,27 +166,27 @@ msgstr "Az alábbi kurzortémák találhatók meg a rendszeren:"
 msgid "(Current theme for this Plasma session)"
 msgstr "(A Plasma munkamenet aktuális témája)"
 
-#: ui/Delegate.qml:44
+#: ui/Delegate.qml:48
 #, fuzzy, kde-format
 #| msgid "Restore Cursor Theme"
 msgctxt "@info:tooltip"
 msgid "Remove cursor theme"
 msgstr "Kurzortéma visszaállítása"
 
-#: ui/Delegate.qml:46
+#: ui/Delegate.qml:50
 #, fuzzy, kde-format
 #| msgid "Name of the current cursor theme"
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active cursor theme"
 msgstr "A jelenlegi kurzortéma neve"
 
-#: ui/Delegate.qml:48
+#: ui/Delegate.qml:52
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed cursor themes"
 msgstr ""
 
-#: ui/Delegate.qml:56
+#: ui/Delegate.qml:60
 #, kde-format
 msgid "Don’t delete this cursor theme"
 msgstr ""
@@ -258,33 +258,33 @@ msgid_plural "%1 seconds"
 msgstr[0] "%1 másodperc után"
 msgstr[1] "%1 másodperc után"
 
-#: ui/main.qml:91 ui/main.qml:129
+#: ui/main.qml:109 ui/main.qml:147
 #, kde-format
 msgid "Size: %1"
 msgstr "Méret: %1"
 
-#: ui/main.qml:144
+#: ui/main.qml:162
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr "Indítási visszajelzés &beállítása…"
 
-#: ui/main.qml:159
+#: ui/main.qml:177
 #, kde-format
 msgid "&Install from File…"
 msgstr "&Telepítés fájlból…"
 
-#: ui/main.qml:165
+#: ui/main.qml:183
 #, kde-format
 msgid "&Get New…"
 msgstr "Új le&töltése…"
 
-#: ui/main.qml:179
+#: ui/main.qml:197
 #, kde-format
 msgid "Open Theme"
 msgstr "Téma megnyitása"
 
-#: ui/main.qml:181
+#: ui/main.qml:199
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Kurzortéma-fájlok (*.tar.gz, *.tar.bz2)"

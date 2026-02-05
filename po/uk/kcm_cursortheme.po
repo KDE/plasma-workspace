@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_cursortheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-31 00:45+0000\n"
+"POT-Creation-Date: 2026-02-05 00:46+0000\n"
 "PO-Revision-Date: 2026-02-02 18:11+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -162,25 +162,25 @@ msgstr "У вашій системі виявлено такі теми вказ
 msgid "(Current theme for this Plasma session)"
 msgstr "(Поточна тема для цього сеансу Плазми)"
 
-#: ui/Delegate.qml:44
+#: ui/Delegate.qml:48
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove cursor theme"
 msgstr "Вилучити тему вказівників"
 
-#: ui/Delegate.qml:46
+#: ui/Delegate.qml:50
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active cursor theme"
 msgstr "Не можна вилучати активну тему вказівників"
 
-#: ui/Delegate.qml:48
+#: ui/Delegate.qml:52
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed cursor themes"
 msgstr "Не можна вилучати встановлені на рівні системи теми вказівників"
 
-#: ui/Delegate.qml:56
+#: ui/Delegate.qml:60
 #, kde-format
 msgid "Don’t delete this cursor theme"
 msgstr "Не вилучати цю тему вказівників"
@@ -254,33 +254,33 @@ msgstr[1] "%1 секунди"
 msgstr[2] "%1 секунд"
 msgstr[3] "%1 секунду"
 
-#: ui/main.qml:91 ui/main.qml:129
+#: ui/main.qml:109 ui/main.qml:147
 #, kde-format
 msgid "Size: %1"
 msgstr "Розмір: %1"
 
-#: ui/main.qml:144
+#: ui/main.qml:162
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr "&Налаштувати супровід запуску…"
 
-#: ui/main.qml:159
+#: ui/main.qml:177
 #, kde-format
 msgid "&Install from File…"
 msgstr "Вс&тановити з файла…"
 
-#: ui/main.qml:165
+#: ui/main.qml:183
 #, kde-format
 msgid "&Get New…"
 msgstr "&Отримати нове…"
 
-#: ui/main.qml:179
+#: ui/main.qml:197
 #, kde-format
 msgid "Open Theme"
 msgstr "Відкриття теми"
 
-#: ui/main.qml:181
+#: ui/main.qml:199
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "файли тем вказівника (*.tar.gz *.tar.bz2)"

@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-31 00:45+0000\n"
+"POT-Creation-Date: 2026-02-05 00:46+0000\n"
 "PO-Revision-Date: 2023-08-26 18:46+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -170,27 +170,27 @@ msgstr "Järjestelmään on asennettu seuraavat osoitinteemat:"
 msgid "(Current theme for this Plasma session)"
 msgstr "(Tämän Plasma-istunnon nykyinen teema)"
 
-#: ui/Delegate.qml:44
+#: ui/Delegate.qml:48
 #, fuzzy, kde-format
 #| msgid "Restore Cursor Theme"
 msgctxt "@info:tooltip"
 msgid "Remove cursor theme"
 msgstr "Palauta osoitinteema"
 
-#: ui/Delegate.qml:46
+#: ui/Delegate.qml:50
 #, fuzzy, kde-format
 #| msgid "Name of the current cursor theme"
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active cursor theme"
 msgstr "Nykyisen osoitinteeman nimi"
 
-#: ui/Delegate.qml:48
+#: ui/Delegate.qml:52
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed cursor themes"
 msgstr ""
 
-#: ui/Delegate.qml:56
+#: ui/Delegate.qml:60
 #, kde-format
 msgid "Don’t delete this cursor theme"
 msgstr ""
@@ -262,33 +262,33 @@ msgid_plural "%1 seconds"
 msgstr[0] "%1 sekunti"
 msgstr[1] "%1 sekuntia"
 
-#: ui/main.qml:91 ui/main.qml:129
+#: ui/main.qml:109 ui/main.qml:147
 #, kde-format
 msgid "Size: %1"
 msgstr "Koko: %1"
 
-#: ui/main.qml:144
+#: ui/main.qml:162
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr "&Aseta käynnistyksen palaute…"
 
-#: ui/main.qml:159
+#: ui/main.qml:177
 #, kde-format
 msgid "&Install from File…"
 msgstr "&Asenna tiedostosta…"
 
-#: ui/main.qml:165
+#: ui/main.qml:183
 #, kde-format
 msgid "&Get New…"
 msgstr "&Hae uusia…"
 
-#: ui/main.qml:179
+#: ui/main.qml:197
 #, kde-format
 msgid "Open Theme"
 msgstr "Avaa teema"
 
-#: ui/main.qml:181
+#: ui/main.qml:199
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Osoitinteematiedostot (*.tar.gz *.tar.bz2)"

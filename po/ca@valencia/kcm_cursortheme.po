@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-31 00:45+0000\n"
+"POT-Creation-Date: 2026-02-05 00:46+0000\n"
 "PO-Revision-Date: 2026-01-31 13:57+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -171,25 +171,25 @@ msgstr "En el sistema hi ha els temes següents de cursor de ratolí:"
 msgid "(Current theme for this Plasma session)"
 msgstr "(Tema actual d'esta sessió de Plasma)"
 
-#: ui/Delegate.qml:44
+#: ui/Delegate.qml:48
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove cursor theme"
 msgstr "Elimina el tema del cursor"
 
-#: ui/Delegate.qml:46
+#: ui/Delegate.qml:50
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active cursor theme"
 msgstr "No es pot suprimir el tema del cursor actiu"
 
-#: ui/Delegate.qml:48
+#: ui/Delegate.qml:52
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed cursor themes"
 msgstr "No es poden suprimir els temes del cursor instal·lats al sistema"
 
-#: ui/Delegate.qml:56
+#: ui/Delegate.qml:60
 #, kde-format
 msgid "Don’t delete this cursor theme"
 msgstr "No suprimisques este tema del cursor"
@@ -261,33 +261,33 @@ msgid_plural "%1 seconds"
 msgstr[0] "%1 segon"
 msgstr[1] "%1 segons"
 
-#: ui/main.qml:91 ui/main.qml:129
+#: ui/main.qml:109 ui/main.qml:147
 #, kde-format
 msgid "Size: %1"
 msgstr "Mida: %1"
 
-#: ui/main.qml:144
+#: ui/main.qml:162
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr "&Configura les reaccions de llançament…"
 
-#: ui/main.qml:159
+#: ui/main.qml:177
 #, kde-format
 msgid "&Install from File…"
 msgstr "I&nstal·la des d'un fitxer…"
 
-#: ui/main.qml:165
+#: ui/main.qml:183
 #, kde-format
 msgid "&Get New…"
 msgstr "O&btín nous…"
 
-#: ui/main.qml:179
+#: ui/main.qml:197
 #, kde-format
 msgid "Open Theme"
 msgstr "Obri un tema"
 
-#: ui/main.qml:181
+#: ui/main.qml:199
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Fitxers de tema del cursor (*.tar.gz *.tar.bz2)"

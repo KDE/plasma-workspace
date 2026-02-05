@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-02-05 00:46+0000\n"
 "PO-Revision-Date: 2024-12-13 19:09+0530\n"
 "Last-Translator: Kali <EMAIL@ADDRESS>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -17,34 +17,34 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
 
-#: main.cpp:52 plasmawindowedcorona.cpp:104
+#: main.cpp:53 plasmawindowedcorona.cpp:104
 #, kde-format
 msgid "Plasma Windowed"
 msgstr "प्लाज्मा खिडकी"
 
-#: main.cpp:54
+#: main.cpp:55
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "QML Javascript debugger सक्षमं कुर्वन्तु"
 
-#: main.cpp:57 plasmawindowedcorona.cpp:106
+#: main.cpp:58 plasmawindowedcorona.cpp:106
 #, kde-format
 msgid ""
 "Makes the plasmoid stay alive in the Notification Area, even when the window "
 "is closed."
 msgstr "प्लाज्मोइड् सूचनाक्षेत्रे जीवितं स्थातुं करोति, यदा अपि खिडकी पिहितं भवति ।"
 
-#: main.cpp:59
+#: main.cpp:60
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "दत्तं शेल् प्लगिन् बलात् लोड् कुर्वन्तु"
 
-#: main.cpp:63 plasmawindowedcorona.cpp:107
+#: main.cpp:64 plasmawindowedcorona.cpp:107
 #, kde-format
 msgid "The applet to open."
 msgstr "एप्लेट् उद्घाटयितुं।"
 
-#: main.cpp:64 plasmawindowedcorona.cpp:108
+#: main.cpp:65 plasmawindowedcorona.cpp:108
 #, kde-format
 msgid "Arguments to pass to the plasmoid."
 msgstr "प्लाज्मोइड् प्रति गन्तुं तर्काः।"

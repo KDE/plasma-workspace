@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2026-02-03 18:07+0100\n"
+"PO-Revision-Date: 2026-02-04 10:19+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -24,6 +24,9 @@ msgid ""
 "Time-based features such as Night Light and dynamic wallpapers can be "
 "synchronized with the day-night cycle. Choose your preferred cycle here."
 msgstr ""
+"Characteristicas basate sur le tempore tal como Lumine de Nocte e tapetes de "
+"papiro dynamic pote esser synchronisate con le cyclo de die-nocte. Selige tu "
+"cyclo preferite ci."
 
 #: ui/main.qml:42
 #, kde-format
@@ -31,21 +34,21 @@ msgctxt ""
 "@label:listbox part of a sentence: 'Determine sunrise and sunset times "
 "[based on]'"
 msgid "Determine sunrise and sunset times:"
-msgstr ""
+msgstr "Determina tempores de alba e poner del sol:"
 
 #: ui/main.qml:47
 #, kde-format
 msgctxt ""
 "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
 msgid "Based on device's location"
-msgstr ""
+msgstr "Basate sur location deldispositivo"
 
 #: ui/main.qml:48
 #, kde-format
 msgctxt ""
 "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
 msgid "Using custom times"
-msgstr ""
+msgstr "Usante tempore personalisate"
 
 #: ui/main.qml:60
 #, kde-format
@@ -63,7 +66,7 @@ msgstr "Poner del sol"
 #, kde-format
 msgctxt "@label:spinbox"
 msgid "Transition duration:"
-msgstr ""
+msgstr "Duration de transition:"
 
 #: ui/main.qml:95
 #, kde-format
@@ -77,7 +80,7 @@ msgstr[1] "%1 minutas"
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatically detect location"
-msgstr ""
+msgstr "Discoperi automaticamente location"
 
 #: ui/main.qml:146
 #, kde-kuit-format
@@ -88,6 +91,10 @@ msgid ""
 "available, or else by sending its IP address to <link url='https://geoip.com/"
 "privacy/'>GeoIP</link>."
 msgstr ""
+"Le servicio <application>GeoClue2</application> essera usate per actualisar  "
+"periodicamente le location del dispositivo  usante GPS o triangulation de "
+"turre de cella si disponibile, o alteremente per inviar su adresse IP a "
+"<link url='https://geoip.com/privacy/'>GeoIP</link>."
 
 #: ui/main.qml:147
 #, kde-kuit-format
@@ -98,12 +105,17 @@ msgid ""
 "bugs.kde.org'>https://bugs.kde.org</link> asking KDE developers to write a "
 "detailed description of what this service will do."
 msgstr ""
+"Le servicio <application>%1</application> essera usate per actualisar "
+"periodicamente le location del dispositivo. Pro favor aperi un reporto de "
+"bug a open a <link url='https://bugs.kde.org'>https://bugs.kde.org</link> "
+"demandante a disveloppatores de KDE que scriba un description detaliate de "
+"lo que iste servicio facera."
 
 #: ui/main.qml:164
 #, kde-format
 msgctxt "@option:radio"
 msgid "Use manual location:"
-msgstr ""
+msgstr "Usa location manual:"
 
 #: ui/main.qml:176
 #, kde-format
@@ -121,7 +133,7 @@ msgstr "Longitude:"
 #, kde-format
 msgctxt "@info:tooltip; the variables are times of day, e.g. 07:30"
 msgid "Sunrise starts at %1 and ends at %2"
-msgstr ""
+msgstr "Alba starta a %1 e fini a %2"
 
 #: ui/SunPath.qml:57
 #, kde-format
@@ -133,7 +145,7 @@ msgstr "Alba"
 #, kde-format
 msgctxt "@info:tooltip; the variables are times of day, e.g. 07:30"
 msgid "Sunset starts at %1 and ends at %2"
-msgstr ""
+msgstr "Poner del sol  starta a %1 e fini a %2"
 
 #: ui/SunPath.qml:82
 #, kde-format
@@ -148,6 +160,8 @@ msgid ""
 "Sunrise and sunset times cannot be determined at your location due to polar "
 "day. Choose custom times instead."
 msgstr ""
+"Tempores de alba e poner del sol non pote esser determinate a tu location "
+"debite a die polar. In loco selige tempores personalisate."
 
 #: ui/SunPath.qml:109
 #, kde-format
@@ -156,6 +170,8 @@ msgid ""
 "Sunrise and sunset times cannot be determined at your location due to polar "
 "night. Choose custom times instead."
 msgstr ""
+"Tempores de alba e poner del sol non pote esser determinate a tu location "
+"debite a nocte polar In loco selige tempores personalisate."
 
 #: ui/SunPath.qml:111
 #, kde-format
@@ -164,26 +180,28 @@ msgid ""
 "Sunrise and sunset times cannot be reliably determined at your location. "
 "Choose custom times instead."
 msgstr ""
+"Tempores de alba e poner del sol non pote esser determinate de modo fidel a "
+"tu location. In loco selige tempores personalisate."
 
 #: ui/TimeField.qml:31
 #, kde-format
 msgctxt "Time separator between hours and minutes"
 msgid ":"
-msgstr ""
+msgstr ":"
 
 #: ui/WorldMap.qml:76
 #, kde-format
 msgctxt ""
 "@label:chooser Tap should be translated to mean touching using a touchscreen"
 msgid "Tap to choose your location on the map."
-msgstr ""
+msgstr "Tocca per seliger tu location sur le mappa."
 
 #: ui/WorldMap.qml:77
 #, kde-format
 msgctxt ""
 "@label:chooser Click should be translated to mean clicking using a mouse"
 msgid "Click to choose your location on the map."
-msgstr ""
+msgstr "Clicca per seliger tu location sur le mappa."
 
 #: ui/WorldMap.qml:189
 #, kde-format
@@ -204,3 +222,7 @@ msgid ""
 "TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
 "by-sa/3.0'>CC BY-SA 3.0</link>"
 msgstr ""
+"Modificate ex <link url='https://commons.wikimedia.org/wiki/File:"
+"World_location_map_(equirectangular_180).svg'>World location map</link> per "
+"TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
+"by-sa/3.0'>CC BY-SA 3.0</link>"

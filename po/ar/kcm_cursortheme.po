@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-31 00:45+0000\n"
+"POT-Creation-Date: 2026-02-05 00:46+0000\n"
 "PO-Revision-Date: 2026-01-31 20:30+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -163,25 +163,25 @@ msgstr "لديك سمات المؤشرات التالية على نظامك:"
 msgid "(Current theme for this Plasma session)"
 msgstr "(سمة الحالية لجلسة بلازما هذه)"
 
-#: ui/Delegate.qml:44
+#: ui/Delegate.qml:48
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove cursor theme"
 msgstr "أزل سِمة المؤشر"
 
-#: ui/Delegate.qml:46
+#: ui/Delegate.qml:50
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active cursor theme"
 msgstr "لا يمكن حذف سمة المؤشر النشطة"
 
-#: ui/Delegate.qml:48
+#: ui/Delegate.qml:52
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed cursor themes"
 msgstr "لا يمكن حذف سمات المؤشر المثبتة في النظام"
 
-#: ui/Delegate.qml:56
+#: ui/Delegate.qml:60
 #, kde-format
 msgid "Don’t delete this cursor theme"
 msgstr "لا تحذف سمة المؤشر هذه"
@@ -257,33 +257,33 @@ msgstr[3] "%1 ثواني"
 msgstr[4] "%1 ثانية"
 msgstr[5] "%1 ثانية"
 
-#: ui/main.qml:91 ui/main.qml:129
+#: ui/main.qml:109 ui/main.qml:147
 #, kde-format
 msgid "Size: %1"
 msgstr "الحجم: %1"
 
-#: ui/main.qml:144
+#: ui/main.qml:162
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr "ا&ضبط التنبيه المرئي للبدء التطبيقات…"
 
-#: ui/main.qml:159
+#: ui/main.qml:177
 #, kde-format
 msgid "&Install from File…"
 msgstr "&ثبت من ملف..."
 
-#: ui/main.qml:165
+#: ui/main.qml:183
 #, kde-format
 msgid "&Get New…"
 msgstr "ا&حصل على المزيد…"
 
-#: ui/main.qml:179
+#: ui/main.qml:197
 #, kde-format
 msgid "Open Theme"
 msgstr "افتح سمة"
 
-#: ui/main.qml:181
+#: ui/main.qml:199
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "ملفات سمة المؤشر (*.tar.gz *.tar.bz2)"

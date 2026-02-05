@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# giovanni <g.sora@tiscali.it>, 2023, 2024.
+# giovanni <g.sora@tiscali.it>, 2023, 2024, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-29 00:44+0000\n"
-"PO-Revision-Date: 2024-02-13 16:58+0100\n"
+"PO-Revision-Date: 2026-02-04 18:54+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 21.12.1\n"
 
 #: kded/mprisservice.cpp:131
 #, kde-format
@@ -42,36 +42,28 @@ msgid "Media playback previous"
 msgstr "Retro reproduction de multimedia previe"
 
 #: kded/mprisservice.cpp:144
-#, fuzzy, kde-format
-#| msgctxt "@title shortcut"
-#| msgid "Media playback previous"
+#, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback seek forward 5s"
-msgstr "Retro reproduction de multimedia previe"
+msgstr "Reproduction de multimedia avantia de 5s"
 
 #: kded/mprisservice.cpp:148
-#, fuzzy, kde-format
-#| msgctxt "@title shortcut"
-#| msgid "Media playback next"
+#, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback seek backward 5s"
-msgstr "Retro reproduction de multimedia proxime"
+msgstr "Reproduction de multimedia vade retro de 5s"
 
 #: kded/mprisservice.cpp:152
-#, fuzzy, kde-format
-#| msgctxt "@title shortcut"
-#| msgid "Media playback previous"
+#, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback seek forward 30s"
-msgstr "Retro reproduction de multimedia previe"
+msgstr "Reproduction de multimedia avantia de 30s"
 
 #: kded/mprisservice.cpp:156
-#, fuzzy, kde-format
-#| msgctxt "@title shortcut"
-#| msgid "Media playback next"
+#, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback seek backward 30s"
-msgstr "Retro reproduction de multimedia proxime"
+msgstr "Reproduction de multimedia vade retro de 30s"
 
 #: kded/mprisservice.cpp:159
 #, kde-format

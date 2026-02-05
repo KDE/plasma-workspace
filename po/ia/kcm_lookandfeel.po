@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-05 00:45+0000\n"
-"PO-Revision-Date: 2026-02-03 18:04+0100\n"
+"PO-Revision-Date: 2026-02-04 09:58+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -51,12 +51,14 @@ msgstr "Pacchetto de apparentia e semblantia global, alternative"
 #, kde-format
 msgid "Switch between dark and light global themes depending on time of day"
 msgstr ""
+"Commuta inter themas global obscur e clar dependente del tempore del die"
 
 #. i18n: ectx: label, entry (automaticLookAndFeelOnIdle), group (KDE)
 #: lookandfeelsettings.kcfg:25
 #, kde-format
 msgid "Switch between dark and light global themes when the computer is idle"
 msgstr ""
+"Commuta inter themas global obscur e clar quando le computator es otiante"
 
 #. i18n: ectx: label, entry (automaticLookAndFeelIdleInterval), group (KDE)
 #: lookandfeelsettings.kcfg:29
@@ -65,6 +67,8 @@ msgid ""
 "How long the computer should be idle in order to switch between dark and "
 "light global themes, in seconds"
 msgstr ""
+"Quantotempore lecomputator debe esser otiante per commutar inter  themas "
+"globalobscur e clar, in secundas"
 
 #: tool/lnftool.cpp:32
 #, kde-format
@@ -120,7 +124,7 @@ msgstr "nomine de pacchetto"
 #: tool/lnftool.cpp:52
 #, kde-format
 msgid "Prevent --apply from disabling the automatic mode"
-msgstr ""
+msgstr "Preveni --applica ab dishabilitar lemodo automatic"
 
 #: tool/lnftool.cpp:53
 #, kde-format
@@ -158,12 +162,14 @@ msgid ""
 "The chosen light Global Theme will be used during the day, and the dark one "
 "will be used at night."
 msgstr ""
+"Le Thema Global clar seligite essera usate durante le die, e lo obscur "
+"essera usate al nocte."
 
 #: ui/DayNightLookAndFeel.qml:55
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure Day/Night Cycle…"
-msgstr ""
+msgstr "Configura Cyclo Die/Nocte..."
 
 #: ui/DayNightLookAndFeel.qml:68
 #, kde-format
@@ -181,7 +187,7 @@ msgstr "Obscur"
 #, kde-format
 msgctxt "@option:check"
 msgid "Wait until idleness before switching:"
-msgstr ""
+msgstr "Attende disoccupation ante commutar:"
 
 #: ui/DayNightLookAndFeel.qml:110
 #, kde-format
@@ -195,7 +201,7 @@ msgstr[1] "%1 secundas"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Minimizes interruptions when actively using the computer."
-msgstr ""
+msgstr "Minimisa interruption quandi usa activemente le computator."
 
 #: ui/LookAndFeelSelector.qml:24
 #, kde-format
@@ -237,7 +243,7 @@ msgstr "No pote deler themas de systema installate"
 #, kde-format
 msgctxt "@title:window"
 msgid "Save Current Theme"
-msgstr ""
+msgstr "Salveguarda Thema Currente"
 
 #: ui/LookAndFeelSnapshot.qml:25
 #, kde-format
@@ -246,12 +252,14 @@ msgid ""
 "Plasma’s current appearance and theme settings will be saved in a new global "
 "theme."
 msgstr ""
+"Preferentias de thema e apparentia currente de Plasma essera salveguardate "
+"in un nove thema global."
 
 #: ui/LookAndFeelSnapshot.qml:69
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Add a preview image…"
-msgstr ""
+msgstr "Adde un imagine de vista preliminar..."
 
 #: ui/LookAndFeelSnapshot.qml:79
 #, kde-format
@@ -269,7 +277,7 @@ msgstr "Nomine:"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Type in name…"
-msgstr ""
+msgstr "Typa nomine..."
 
 #: ui/LookAndFeelSnapshot.qml:101
 #, kde-format
@@ -283,25 +291,25 @@ msgstr "Confirma"
 #, kde-format
 msgctxt "@info"
 msgid "A global theme with this name or id already exists."
-msgstr ""
+msgstr "Un thema global con iste nomine o id ja existe."
 
 #: ui/LookAndFeelSnapshot.qml:127
 #, kde-format
 msgctxt "@title:title"
 msgid "Choose a Preview Image"
-msgstr ""
+msgstr "Selige un imagine de vista preliminar..."
 
 #: ui/main.qml:22
 #, kde-format
 msgctxt "@option:check"
 msgid "Switch to Dark Mode at Night"
-msgstr ""
+msgstr "Commuta a Modo Obscur al Nocte"
 
 #: ui/main.qml:40
 #, kde-format
 msgctxt "@action:button"
 msgid "Save Current Theme…"
-msgstr ""
+msgstr "Salveguarda Thema Currente..."
 
 #: ui/main.qml:45
 #, kde-format

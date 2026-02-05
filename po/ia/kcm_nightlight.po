@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2026-02-03 18:06+0100\n"
+"PO-Revision-Date: 2026-02-04 10:01+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -63,7 +63,7 @@ msgstr "Sempre Active sur lumine de nocte"
 #, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Sunrise and sunset"
-msgstr "Alba eponer del sol"
+msgstr "Alba e poner del sol"
 
 #: ui/main.qml:72
 #, kde-format

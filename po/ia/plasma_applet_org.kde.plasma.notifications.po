@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # SPDX-FileCopyrightText: 2010, 2011, 2012, 2013, 2014, 2020, 2021, 2022, 2023, 2024, 2025 g.sora <g.sora@tiscali.it>
-# giovanni <g.sora@tiscali.it>, 2025.
+# giovanni <g.sora@tiscali.it>, 2025, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-28 00:46+0000\n"
-"PO-Revision-Date: 2025-05-12 16:00+0200\n"
+"PO-Revision-Date: 2026-02-04 19:02+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -396,11 +396,10 @@ msgid "Toggle do not disturb"
 msgstr "Commuta a non disturbar"
 
 #: globalshortcuts.cpp:33
-#, fuzzy, kde-format
-#| msgid "Clear All Notifications"
+#, kde-format
 msgctxt "@action"
 msgid "Clear Notification History"
-msgstr "Netta omne Notificationes"
+msgstr "Netta Chronologia de Notification"
 
 #: globalshortcuts.cpp:52
 #, kde-format
@@ -415,12 +414,10 @@ msgid "Notifications On"
 msgstr "Notificationes On"
 
 #: globalshortcuts.cpp:68
-#, fuzzy, kde-format
-#| msgctxt "OSD popup, keep short"
-#| msgid "Notifications On"
+#, kde-format
 msgctxt "@label OSD popup, keep short"
 msgid "Notification history cleared"
-msgstr "Notificationes On"
+msgstr "Chronologia de Notification  clarate"
 
 #: main.qml:61
 #, kde-format

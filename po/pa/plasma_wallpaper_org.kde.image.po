@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-29 00:46+0000\n"
+"POT-Creation-Date: 2026-02-05 00:46+0000\n"
 "PO-Revision-Date: 2025-09-15 09:50-0500\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -27,13 +27,13 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "aalam@punlinux.org"
 
-#: imagepackage/contents/ui/AddFileDialog.qml:59
+#: imagepackage/contents/ui/AddFileDialog.qml:56
 #, kde-format
 msgctxt "@title:window"
 msgid "Open Image"
 msgstr "ਚਿੱਤਰ ਨੂੰ ਖੋਲ੍ਹੋ"
 
-#: imagepackage/contents/ui/AddFileDialog.qml:71
+#: imagepackage/contents/ui/AddFileDialog.qml:68
 #, kde-format
 msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
@@ -256,13 +256,13 @@ msgid ""
 msgstr ""
 "ਵਾਲਪੇਪਰ ਲਾਉਣ ਵਾਲੀ ਦਿੱਤੀ ਗਈ ਫਾਇਲ ਮੌਜੂਦ ਨਹੀਂ ਹੈ ਜਾਂ ਅਸੀਂ ਇਸ ਨੂੰ ਠੀਕ ਤਰ੍ਹਾਂ ਪਛਾਣ ਨਹੀਂ ਸਕੇ: %1"
 
-#: plugin/imagebackend.cpp:40
+#: plugin/imagebackend.cpp:42
 #, kde-format
 msgid "Next Wallpaper Image"
 msgstr "ਅਗਲਾ ਵਾਲਪੇਪਰ ਚਿੱਤਰ"
 
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
-#: plugin/imagebackend.cpp:382
+#: plugin/imagebackend.cpp:384
 #, kde-format
 msgid "Media Files"
 msgstr "ਮੀਡੀਆ ਫਾਇਲਾਂ"

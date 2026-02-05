@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-02-05 00:46+0000\n"
 "PO-Revision-Date: 2024-03-09 18:26+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -18,17 +18,17 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: main.cpp:52 plasmawindowedcorona.cpp:104
+#: main.cpp:53 plasmawindowedcorona.cpp:104
 #, kde-format
 msgid "Plasma Windowed"
 msgstr "Plasma i vindauge"
 
-#: main.cpp:54
+#: main.cpp:55
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "Slå på QML JavaScript-feilsøkjar"
 
-#: main.cpp:57 plasmawindowedcorona.cpp:106
+#: main.cpp:58 plasmawindowedcorona.cpp:106
 #, kde-format
 msgid ""
 "Makes the plasmoid stay alive in the Notification Area, even when the window "
@@ -37,17 +37,17 @@ msgstr ""
 "Gjer at skjermelementet vert verande i systemtrauet sjølv etter at vindauget "
 "er lukka."
 
-#: main.cpp:59
+#: main.cpp:60
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Tving innlasting av det valde skal-tillegget."
 
-#: main.cpp:63 plasmawindowedcorona.cpp:107
+#: main.cpp:64 plasmawindowedcorona.cpp:107
 #, kde-format
 msgid "The applet to open."
 msgstr "Skjermelementet som skal opnast."
 
-#: main.cpp:64 plasmawindowedcorona.cpp:108
+#: main.cpp:65 plasmawindowedcorona.cpp:108
 #, kde-format
 msgid "Arguments to pass to the plasmoid."
 msgstr "Argument som skal sendast til skjermelementet."
