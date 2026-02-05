@@ -5,12 +5,8 @@
 */
 
 import QtQuick
-import org.kde.plasma.core as PlasmaCore
 
-PlasmaCore.Dialog {
-    location: PlasmaCore.Types.Floating
-    type: PlasmaCore.Dialog.OnScreenDisplay
-    outputOnly: true
+OsdWindow {
 
     LayoutMirroring.enabled: Application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
@@ -21,6 +17,9 @@ PlasmaCore.Dialog {
     property alias osdAdditionalText: osd.osdAdditionalText
     property alias icon: osd.icon
     property alias showingProgress: osd.showingProgress
+
+    width: mainItem.implicitWidth + leftPadding + rightPadding
+    height: mainItem.implicitHeight + topPadding + bottomPadding
 
     mainItem: OsdItem {
         id: osd

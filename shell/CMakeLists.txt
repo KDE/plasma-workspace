@@ -82,6 +82,17 @@ ecm_target_qml_sources(plasmashell_osd SOURCES
 )
 ecm_finalize_qml_module(plasmashell_osd)
 
+target_sources(plasmashell_osd PRIVATE
+    osdwindow.cpp
+    osdwindow.h
+)
+
+target_link_libraries(plasmashell_osd PRIVATE
+    Plasma::PlasmaQuick
+    KF6::WindowSystem
+    Wayland::Client
+)
+
 if (Qt6_VERSION VERSION_GREATER_EQUAL "6.8.0")
     set(private_code_option  "PRIVATE_CODE")
 endif()
