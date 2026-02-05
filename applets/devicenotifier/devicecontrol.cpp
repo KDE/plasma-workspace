@@ -78,11 +78,11 @@ QVariant DeviceControl::data(const QModelIndex &index, int role) const
     }
     case Size: {
         std::optional<double> size = deviceInfo.spaceInfo ? deviceInfo.spaceInfo->getFullSize() : std::nullopt;
-        return size.has_value() ? size.value() : QVariant();
+        return size.has_value() ? size.value() : 0;
     }
     case FreeSpace: {
         std::optional<double> freeSpace = deviceInfo.spaceInfo ? deviceInfo.spaceInfo->getFreeSize() : std::nullopt;
-        return freeSpace.has_value() ? freeSpace.value() : QVariant();
+        return freeSpace.has_value() ? freeSpace.value() : 0;
     }
     case SizeText: {
         std::optional<double> size = deviceInfo.spaceInfo ? deviceInfo.spaceInfo->getFullSize() : std::nullopt;
