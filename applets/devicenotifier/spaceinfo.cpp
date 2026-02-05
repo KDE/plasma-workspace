@@ -101,10 +101,12 @@ void SpaceInfo::onSpaceUpdated(KJob *job)
 
         qCDebug(APPLETS::DEVICENOTIFIER) << "Space Info " << udi << " : storage space update finished. "
                                          << "Space: " << m_fullSize << "FreeSpace: " << m_freeSize;
-        Q_EMIT sizeChanged(udi);
     } else {
         qCDebug(APPLETS::DEVICENOTIFIER) << "Space Info " << udi << " : Failed to get size";
+        m_fullSize = std::nullopt;
+        m_freeSize = std::nullopt;
     }
+    Q_EMIT sizeChanged(udi);
 }
 
 void SpaceInfo::onDeviceChanged(const QMap<QString, int> &props)
