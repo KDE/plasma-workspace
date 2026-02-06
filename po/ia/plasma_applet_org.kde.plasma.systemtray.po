@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2013, 2014, 2020, 2021, 2022, 2024, 2025 Giovanni Sora <g.sora@tiscali.it>
+# SPDX-FileCopyrightText: 2013, 2014, 2020, 2021, 2022, 2024, 2025, 2026 Giovanni Sora <g.sora@tiscali.it>
 # giovanni <g.sora@tiscali.it>, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-05 00:44+0000\n"
-"PO-Revision-Date: 2025-05-27 15:05+0200\n"
+"PO-Revision-Date: 2026-02-05 17:05+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -24,30 +24,28 @@ msgid "General"
 msgstr "General"
 
 #: qml/ConfigGeneral.qml:43
-#, fuzzy, kde-format
-#| msgid "Shown when relevant"
+#, kde-format
 msgctxt "@item:inlistbox Show this System Tray item when relevant"
 msgid "Show when relevant"
 msgstr "Monstrate quando relevante"
 
 #: qml/ConfigGeneral.qml:47
-#, fuzzy, kde-format
-#| msgid "Always shown"
+#, kde-format
 msgctxt "@item:inlistbox Always show this System Tray item"
 msgid "Always show"
-msgstr "Sempre monstrate"
+msgstr "Monstra sempre"
 
 #: qml/ConfigGeneral.qml:51
 #, kde-format
 msgctxt "@item:inlistbox Show this System Tray item only in the expanded popup"
 msgid "Show only in popup"
-msgstr ""
+msgstr "Monstra solmente in popup"
 
 #: qml/ConfigGeneral.qml:55
 #, kde-format
 msgctxt "@item:inlistbox Never show this System Tray item; disable it"
 msgid "Never show (disabled)"
-msgstr ""
+msgstr "Nunquam Monstrar(dishabilitate)"
 
 #: qml/ConfigGeneral.qml:126
 #, kde-format
@@ -97,13 +95,7 @@ msgid "I understand the risks"
 msgstr "Io comprende le riscos"
 
 #: qml/ConfigGeneral.qml:187
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:usagetip"
-#| msgid ""
-#| "Disabling the clipboard is not recommended, as it will cause copied data "
-#| "to be lost when the application it was copied from is closed.<nl/><nl/"
-#| ">Instead consider configuring the clipboard to disable its history, or "
-#| "only remember one item at a time."
+#, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
 "Disabling the clipboard is not recommended, as it will cause copied data to "
@@ -113,11 +105,13 @@ msgid ""
 "configuring the clipboard to not save history, or to only remember one item "
 "at a time."
 msgstr ""
-"Dishabilitar le area de transferentia nones recommendate, proque il causara "
-"que datos copiate esserea perdite quando le application ab cuje esseva "
-"copiate  es claudite.<nl/><nl/>In loco considera configurar le area de "
-"trandferentia per dishabilitar su chronologia, o solmente memorar un "
-"elemento al vice. "
+"Dishabilitar le area de transferentia (tabuliero) non es recommendate, "
+"proque il causara que datos copiate esserea perdite quando le application ab "
+"cuje esseva copiate  es claudite.<nl/><nl/>Tu face solmente isto si tu ha "
+"addite manualmente un widget de Clipboard (tabuliero) autonome alterubi, o "
+"tu es usante un gerente de clipboard de tertie parte. Anque, in loco "
+"considera que configurar le area de transferentia non salveguarda "
+"chronologia, o solmente memorar un elemento al vice. "
 
 #: qml/ConfigGeneral.qml:196
 #, kde-kuit-format
@@ -128,25 +122,26 @@ msgid ""
 "added a standalone Notifications widget somewhere else, or are intentionally "
 "using a 3rd-party notification manager to handle notifications."
 msgstr ""
+"Dishabilitar le widget de Notificationes non es recommendate, proque "
+"notificationes inviate per apps non essera plus monstrate.<nl/><nl/>Tu face  "
+"isto solmente si tu ha addite manualmente un widget de Notificationes "
+"autonome alterubi,  o tu es usnte intentionalmente un gerente de "
+"notificationes de tertie parte permanear notificationes."
 
 #: qml/ConfigGeneral.qml:208
-#, fuzzy, kde-format
-#| msgid "Scale with Panel height"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel height"
 msgstr "Scala con altessa de pannello"
 
 #: qml/ConfigGeneral.qml:209
-#, fuzzy, kde-format
-#| msgid "Scale with Panel width"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel width"
 msgstr "Scala con largessa de Pannello"
 
 #: qml/ConfigGeneral.qml:211
-#, fuzzy, kde-format
-#| msgctxt "The arrangement of system tray icons in the Panel"
-#| msgid "Panel icon size:"
+#, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon size:"
 msgstr "Dimension de Icone de pannello:"
@@ -187,18 +182,16 @@ msgid "Automatically set to Large when in Touch Mode"
 msgstr "Automaticamente fixa a Grande (large) quando in modo de tocco (touch)"
 
 #: qml/ConfigGeneral.qml:315
-#, fuzzy, kde-format
-#| msgid "Entries"
+#, kde-format
 msgctxt "@title:column"
 msgid "Entries"
 msgstr "Entratas"
 
 #: qml/ConfigGeneral.qml:319
-#, fuzzy, kde-format
-#| msgid "Always shown"
+#, kde-format
 msgctxt "@option:check, This is referring to system tray entries"
 msgid "Always show all"
-msgstr "Sempre monstrate"
+msgstr "Sempre monstra toto"
 
 #: qml/ExpandedRepresentation.qml:60
 #, kde-format

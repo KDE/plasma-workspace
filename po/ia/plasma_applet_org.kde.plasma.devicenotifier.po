@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2011, 2012, 2020, 2021, 2022, 2023, 2024, 2025 g.sora <g.sora@tiscali.it>
+# SPDX-FileCopyrightText: 2011, 2012, 2020, 2021, 2022, 2023, 2024, 2025, 2026 g.sora <g.sora@tiscali.it>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-17 02:39+0000\n"
-"PO-Revision-Date: 2025-02-24 16:25+0100\n"
+"PO-Revision-Date: 2026-02-05 17:04+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -21,7 +21,7 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button check a storageAccess (i.e disk) for error"
 msgid "Check for Errors"
-msgstr ""
+msgstr "Verifica Errores"
 
 #: actions/mountaction.cpp:97
 #, kde-format
@@ -59,11 +59,10 @@ msgid "This device has file system errors."
 msgstr "Iste dispositivo ha errores de systema de file"
 
 #: devicemessagemonitor_p.cpp:173
-#, fuzzy, kde-format
-#| msgid "This device has file system errors."
+#, kde-format
 msgctxt "@label device is a storage disk"
 msgid "This device has no errors"
-msgstr "Iste dispositivo ha errores de systema de file"
+msgstr "Iste dispositivo non ha errores"
 
 #: devicemessagemonitor_p.cpp:176
 #, kde-format
@@ -109,7 +108,7 @@ msgstr "Tu non es authorisate a reparar iste dispositivo."
 #: devicemessagemonitor_p.cpp:204 devicemessagemonitor_p.cpp:269
 #, kde-format
 msgid "Unknown error type"
-msgstr ""
+msgstr "Typo de error Incognite"
 
 #: devicemessagemonitor_p.cpp:208
 #, kde-format

@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2010, 2012, 2016, 2019, 2020, 2021, 2023, 2024 g.sora <g.sora@tiscali.it>
+# SPDX-FileCopyrightText: 2010, 2012, 2016, 2019, 2020, 2021, 2023, 2024, 2026 g.sora <g.sora@tiscali.it>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2024-07-31 10:49+0200\n"
+"PO-Revision-Date: 2026-02-05 16:58+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -109,7 +109,7 @@ msgstr "Adde nove"
 #, kde-format
 msgctxt "@title:menu accessible menu button"
 msgid "Add new application or script"
-msgstr ""
+msgstr "Adde nove Application o script"
 
 #: ui/main.qml:73
 #, kde-format
@@ -118,11 +118,10 @@ msgid "Application…"
 msgstr "Application…"
 
 #: ui/main.qml:75
-#, fuzzy, kde-format
-#| msgid "Applications"
+#, kde-format
 msgctxt "@action:inmenu accessible"
 msgid "Add application"
-msgstr "Applicationes"
+msgstr "Adde Application"
 
 #: ui/main.qml:79
 #, kde-format
@@ -131,11 +130,10 @@ msgid "Login Script…"
 msgstr "Script de accesso de identification…"
 
 #: ui/main.qml:81
-#, fuzzy, kde-format
-#| msgid "Login Scripts"
+#, kde-format
 msgctxt "@action:inmenu accessible"
 msgid "Add login script"
-msgstr "Scripts de accessos (login)"
+msgstr "Adde Script de accesso de identification (login)"
 
 #: ui/main.qml:85
 #, kde-format
@@ -144,11 +142,10 @@ msgid "Logout Script…"
 msgstr "Script de clausura de session..."
 
 #: ui/main.qml:87
-#, fuzzy, kde-format
-#| msgid "Logout Scripts"
+#, kde-format
 msgctxt "@action:inmenu accessible"
 msgid "Add logout script"
-msgstr "Script de Clausura de session"
+msgstr "Adde script de clausura de session (logout)"
 
 #: ui/main.qml:121
 #, kde-format

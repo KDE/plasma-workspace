@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2010, 2011, 2012, 2017, 2019, 2020, 2021, 2022, 2023, 2025 g.sora <g.sora@tiscali.it>
+# SPDX-FileCopyrightText: 2010, 2011, 2012, 2017, 2019, 2020, 2021, 2022, 2023, 2025, 2026 g.sora <g.sora@tiscali.it>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2025-05-27 15:04+0200\n"
+"PO-Revision-Date: 2026-02-05 16:59+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -190,19 +190,18 @@ msgid ""
 "Plasma is not designed to be usable with fonts smaller than 4pt. Size has "
 "been reset to 4pt."
 msgstr ""
+"Plasma non es designate per esser usabile con fontsplus parve que 4pt. "
+"Grandor debe esser reinitialisate a 4pt."
 
 #: ui/main.qml:133
-#, fuzzy, kde-format
-#| msgid ""
-#| "Very large fonts may produce odd-looking results. Instead of using a very "
-#| "large font size, consider adjusting the global screen scale."
+#, kde-format
 msgctxt "@info:usagetip"
 msgid ""
 "Very small fonts may produce odd-looking results. Instead of using a very "
 "small font size, consider adjusting the global screen scale."
 msgstr ""
-"Fontes multe grande pote producer resultatos de vista bizzarre. In loco de "
-"usar un dimension de font multe grande, tu considera adjustar le scala  de "
+"Fontes multe parve pote producer resultatos de vista bizzarre. In loco de "
+"usar un dimension de font multe parve, tu considera adjustar le scala  de "
 "schermo global."
 
 #: ui/main.qml:154
