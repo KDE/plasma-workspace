@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-27 00:46+0000\n"
+"POT-Creation-Date: 2026-02-06 00:47+0000\n"
 "PO-Revision-Date: 2025-10-05 00:24+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -57,76 +57,76 @@ msgstr "Scoate suportul"
 msgid "Safely remove"
 msgstr "Scoate în siguranță"
 
-#: devicemessagemonitor_p.cpp:155
+#: messageinfo.cpp:107
 #, kde-format
 msgid "This device has file system errors."
 msgstr "Acest dispozitiv are erori în sistemul de fișiere."
 
-#: devicemessagemonitor_p.cpp:157
+#: messageinfo.cpp:109
 #, kde-format
 msgctxt "@label device is a storage disk"
 msgid "This device has no errors"
 msgstr "Acest dispozitiv nu are erori"
 
-#: devicemessagemonitor_p.cpp:160
+#: messageinfo.cpp:112
 #, kde-format
 msgid "Successfully repaired!"
 msgstr "Reparat cu succes!"
 
-#: devicemessagemonitor_p.cpp:164
+#: messageinfo.cpp:116
 #, kde-format
 msgid "Device Status"
 msgstr "Stare dispozitiv"
 
-#: devicemessagemonitor_p.cpp:165
+#: messageinfo.cpp:117
 #, kde-format
 msgid "A device can now be safely removed"
 msgstr "Un dispozitiv poate fi eliminat în siguranță acum"
 
-#: devicemessagemonitor_p.cpp:169
+#: messageinfo.cpp:121
 #, kde-format
 msgid "This device can now be safely removed."
 msgstr "Dispozitivul poate fi eliminat în siguranță acum."
 
-#: devicemessagemonitor_p.cpp:176
+#: messageinfo.cpp:128
 #, kde-format
 msgid "You are not authorized to mount this device."
 msgstr "Nu aveți autorizare să montați acest dispozitiv."
 
-#: devicemessagemonitor_p.cpp:180
+#: messageinfo.cpp:132
 #, kde-format
 msgid "You are not authorized to eject this disc."
 msgstr "Nu aveți autorizare să scoateți acest disc."
 
-#: devicemessagemonitor_p.cpp:183
+#: messageinfo.cpp:135
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr "Nu aveți autorizare să eliminați acest dispozitiv."
 
-#: devicemessagemonitor_p.cpp:186
+#: messageinfo.cpp:138
 #, kde-format
 msgid "You are not authorized to repair this device."
 msgstr "Nu aveți autorizare să reparați acest dispozitiv."
 
-#: devicemessagemonitor_p.cpp:188 devicemessagemonitor_p.cpp:253
+#: messageinfo.cpp:140 messageinfo.cpp:207
 #, kde-format
 msgid "Unknown error type"
 msgstr "Tip de eroare necunoscut"
 
-#: devicemessagemonitor_p.cpp:192
+#: messageinfo.cpp:144
 #, kde-format
 msgid "Could not mount this device as it is busy."
 msgstr "Nu s-a putut monta dispozitivul întrucât este ocupat."
 
-#: devicemessagemonitor_p.cpp:219
+#: messageinfo.cpp:172
 #, kde-format
 msgid "One or more files on this device are open within an application."
 msgstr ""
 "Unul sau mai multe fișiere de pe acest dispozitiv sunt deschise într-o "
 "aplicație."
 
-#: devicemessagemonitor_p.cpp:221
+#: messageinfo.cpp:174
 #, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
@@ -141,29 +141,29 @@ msgstr[2] ""
 "Unul sau mai multe fișiere de pe acest dispozitiv sunt deschise în "
 "următoarele aplicații: %2."
 
-#: devicemessagemonitor_p.cpp:224
+#: messageinfo.cpp:177
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ", "
 
-#: devicemessagemonitor_p.cpp:242
+#: messageinfo.cpp:196
 #, kde-format
 msgid "Could not mount this device."
 msgstr "Nu s-a putut monta acest dispozitiv."
 
-#: devicemessagemonitor_p.cpp:246
+#: messageinfo.cpp:200
 #, kde-format
 msgid "Could not eject this disc."
 msgstr "Nu s-a putut scoate acest disc."
 
-#: devicemessagemonitor_p.cpp:248
+#: messageinfo.cpp:202
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "Nu s-a putut elimina acest dispozitiv."
 
-#: devicemessagemonitor_p.cpp:251
+#: messageinfo.cpp:205
 #, kde-format
 msgid "Could not repair this device: %1"
 msgstr "Nu s-a putut repara acest dispozitiv: %1"

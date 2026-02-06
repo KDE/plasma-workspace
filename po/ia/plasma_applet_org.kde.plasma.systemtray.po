@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-05 00:44+0000\n"
-"PO-Revision-Date: 2026-02-04 19:03+0100\n"
+"PO-Revision-Date: 2026-02-05 11:14+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: qml/config.qml:13
 #, kde-format
@@ -95,13 +95,7 @@ msgid "I understand the risks"
 msgstr "Io comprende le riscos"
 
 #: qml/ConfigGeneral.qml:187
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:usagetip"
-#| msgid ""
-#| "Disabling the clipboard is not recommended, as it will cause copied data "
-#| "to be lost when the application it was copied from is closed.<nl/><nl/"
-#| ">Instead consider configuring the clipboard to disable its history, or "
-#| "only remember one item at a time."
+#, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
 "Disabling the clipboard is not recommended, as it will cause copied data to "
@@ -111,11 +105,13 @@ msgid ""
 "configuring the clipboard to not save history, or to only remember one item "
 "at a time."
 msgstr ""
-"Dishabilitar le area de transferentia nones recommendate, proque il causara "
-"que datos copiate esserea perdite quando le application ab cuje esseva "
-"copiate  es claudite.<nl/><nl/>In loco considera configurar le area de "
-"trandferentia per dishabilitar su chronologia, o solmente memorar un "
-"elemento al vice. "
+"Dishabilitar le area de transferentia (tabuliero) non es recommendate, "
+"proque il causara que datos copiate esserea perdite quando le application ab "
+"cuje esseva copiate  es claudite.<nl/><nl/>Tu face solmente isto si tu ha "
+"addite manualmente un widget de Clipboard (tabuliero) autonome alterubi, o "
+"tu es usante un gerente de clipboard de tertie parte. Anque, in loco "
+"considera que configurar le area de transferentia non salveguarda "
+"chronologia, o solmente memorar un elemento al vice. "
 
 #: qml/ConfigGeneral.qml:196
 #, kde-kuit-format
@@ -126,6 +122,11 @@ msgid ""
 "added a standalone Notifications widget somewhere else, or are intentionally "
 "using a 3rd-party notification manager to handle notifications."
 msgstr ""
+"Dishabilitar le widget de Notificationes non es recommendate, proque "
+"notificationes inviate per apps non essera plus monstrate.<nl/><nl/>Tu face  "
+"isto solmente si tu ha addite manualmente un widget de Notificationes "
+"autonome alterubi,  o tu es usnte intentionalmente un gerente de "
+"notificationes de tertie parte permanear notificationes."
 
 #: qml/ConfigGeneral.qml:208
 #, kde-format

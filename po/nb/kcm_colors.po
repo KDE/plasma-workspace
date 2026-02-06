@@ -1385,6 +1385,3 @@ msgstr "Åpne fargeoppsett"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Fargeoppsett-filer (*.colors)"
-
-#~ msgid "Restore Color Scheme"
-#~ msgstr "Gjenopprett fargeoppsett"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-27 00:46+0000\n"
+"POT-Creation-Date: 2026-02-06 00:47+0000\n"
 "PO-Revision-Date: 2024-12-07 19:40+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -55,79 +55,79 @@ msgstr "Keluarkan"
 msgid "Safely remove"
 msgstr "Lepas dengan aman"
 
-#: devicemessagemonitor_p.cpp:155
+#: messageinfo.cpp:107
 #, fuzzy, kde-format
 #| msgid "This device can now be safely removed."
 msgid "This device has file system errors."
 msgstr "Peranti ini sekarang bisa dilepas dengan aman."
 
-#: devicemessagemonitor_p.cpp:157
+#: messageinfo.cpp:109
 #, fuzzy, kde-format
 #| msgid "This device can now be safely removed."
 msgctxt "@label device is a storage disk"
 msgid "This device has no errors"
 msgstr "Peranti ini sekarang bisa dilepas dengan aman."
 
-#: devicemessagemonitor_p.cpp:160
+#: messageinfo.cpp:112
 #, kde-format
 msgid "Successfully repaired!"
 msgstr ""
 
-#: devicemessagemonitor_p.cpp:164
+#: messageinfo.cpp:116
 #, kde-format
 msgid "Device Status"
 msgstr "Status Peranti"
 
-#: devicemessagemonitor_p.cpp:165
+#: messageinfo.cpp:117
 #, kde-format
 msgid "A device can now be safely removed"
 msgstr "Sekarang peranti bisa dilepas dengan aman"
 
-#: devicemessagemonitor_p.cpp:169
+#: messageinfo.cpp:121
 #, kde-format
 msgid "This device can now be safely removed."
 msgstr "Peranti ini sekarang bisa dilepas dengan aman."
 
-#: devicemessagemonitor_p.cpp:176
+#: messageinfo.cpp:128
 #, kde-format
 msgid "You are not authorized to mount this device."
 msgstr "Anda tidak diotorisasi untuk mengaitkan peranti ini."
 
-#: devicemessagemonitor_p.cpp:180
+#: messageinfo.cpp:132
 #, kde-format
 msgid "You are not authorized to eject this disc."
 msgstr "Anda tidak diotorisasi untuk mengeluarkan cakram ini."
 
-#: devicemessagemonitor_p.cpp:183
+#: messageinfo.cpp:135
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr "Anda tidak diotorisasi untuk melepaskan peranti ini."
 
-#: devicemessagemonitor_p.cpp:186
+#: messageinfo.cpp:138
 #, fuzzy, kde-format
 #| msgctxt "Remove is less technical for unmount"
 #| msgid "You are not authorized to remove this device."
 msgid "You are not authorized to repair this device."
 msgstr "Anda tidak diotorisasi untuk melepaskan peranti ini."
 
-#: devicemessagemonitor_p.cpp:188 devicemessagemonitor_p.cpp:253
+#: messageinfo.cpp:140 messageinfo.cpp:207
 #, kde-format
 msgid "Unknown error type"
 msgstr ""
 
-#: devicemessagemonitor_p.cpp:192
+#: messageinfo.cpp:144
 #, kde-format
 msgid "Could not mount this device as it is busy."
 msgstr "Tidak bisa mengaitkan peranti ini karena ia sedang sibuk."
 
-#: devicemessagemonitor_p.cpp:219
+#: messageinfo.cpp:172
 #, kde-format
 msgid "One or more files on this device are open within an application."
 msgstr ""
 "Satu atau lebih file pada peranti ini sedang dibuka oleh suatu aplikasi."
 
-#: devicemessagemonitor_p.cpp:221
+#: messageinfo.cpp:174
 #, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
@@ -138,29 +138,29 @@ msgstr[1] ""
 "Satu atau lebih file pada peranti ini sedang dibuka oleh aplikasi berikut "
 "ini: %2."
 
-#: devicemessagemonitor_p.cpp:224
+#: messageinfo.cpp:177
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ", "
 
-#: devicemessagemonitor_p.cpp:242
+#: messageinfo.cpp:196
 #, kde-format
 msgid "Could not mount this device."
 msgstr "Tidak dapat mengaitkan peranti ini."
 
-#: devicemessagemonitor_p.cpp:246
+#: messageinfo.cpp:200
 #, kde-format
 msgid "Could not eject this disc."
 msgstr "Tidak dapat mengeluarkan cakram ini."
 
-#: devicemessagemonitor_p.cpp:248
+#: messageinfo.cpp:202
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "Tidak dapat melepas peranti ini."
 
-#: devicemessagemonitor_p.cpp:251
+#: messageinfo.cpp:205
 #, fuzzy, kde-format
 #| msgctxt "Remove is less technical for unmount"
 #| msgid "Could not remove this device."

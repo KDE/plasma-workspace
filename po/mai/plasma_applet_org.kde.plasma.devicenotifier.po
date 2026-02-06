@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-27 00:46+0000\n"
+"POT-Creation-Date: 2026-02-06 00:47+0000\n"
 "PO-Revision-Date: 2010-01-29 16:12+0530\n"
 "Last-Translator: Rajesh Ranjan <rajesh672@gmail.com>\n"
 "Language-Team: Maithili <maithili.sf.net>\n"
@@ -60,52 +60,52 @@ msgstr ""
 msgid "Safely remove"
 msgstr ""
 
-#: devicemessagemonitor_p.cpp:155
+#: messageinfo.cpp:107
 #, kde-format
 msgid "This device has file system errors."
 msgstr ""
 
-#: devicemessagemonitor_p.cpp:157
+#: messageinfo.cpp:109
 #, kde-format
 msgctxt "@label device is a storage disk"
 msgid "This device has no errors"
 msgstr ""
 
-#: devicemessagemonitor_p.cpp:160
+#: messageinfo.cpp:112
 #, kde-format
 msgid "Successfully repaired!"
 msgstr ""
 
-#: devicemessagemonitor_p.cpp:164
+#: messageinfo.cpp:116
 #, kde-format
 msgid "Device Status"
 msgstr ""
 
-#: devicemessagemonitor_p.cpp:165
+#: messageinfo.cpp:117
 #, kde-format
 msgid "A device can now be safely removed"
 msgstr ""
 
-#: devicemessagemonitor_p.cpp:169
+#: messageinfo.cpp:121
 #, kde-format
 msgid "This device can now be safely removed."
 msgstr ""
 
-#: devicemessagemonitor_p.cpp:176
+#: messageinfo.cpp:128
 #, fuzzy, kde-format
 #| msgid "1 action for this device"
 #| msgid_plural "%1 actions for this device"
 msgid "You are not authorized to mount this device."
 msgstr "एहि अओजार क' लेल 1 क्रिया"
 
-#: devicemessagemonitor_p.cpp:180
+#: messageinfo.cpp:132
 #, fuzzy, kde-format
 #| msgid "1 action for this device"
 #| msgid_plural "%1 actions for this device"
 msgid "You are not authorized to eject this disc."
 msgstr "एहि अओजार क' लेल 1 क्रिया"
 
-#: devicemessagemonitor_p.cpp:183
+#: messageinfo.cpp:135
 #, fuzzy, kde-format
 #| msgid "1 action for this device"
 #| msgid_plural "%1 actions for this device"
@@ -113,25 +113,25 @@ msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr "एहि अओजार क' लेल 1 क्रिया"
 
-#: devicemessagemonitor_p.cpp:186
+#: messageinfo.cpp:138
 #, fuzzy, kde-format
 #| msgid "1 action for this device"
 #| msgid_plural "%1 actions for this device"
 msgid "You are not authorized to repair this device."
 msgstr "एहि अओजार क' लेल 1 क्रिया"
 
-#: devicemessagemonitor_p.cpp:188 devicemessagemonitor_p.cpp:253
+#: messageinfo.cpp:140 messageinfo.cpp:207
 #, kde-format
 msgid "Unknown error type"
 msgstr ""
 
-#: devicemessagemonitor_p.cpp:192
+#: messageinfo.cpp:144
 #, fuzzy, kde-format
 #| msgid "Last plugged in device: %1"
 msgid "Could not mount this device as it is busy."
 msgstr "हालमे प्लग कएल गेल उपकरण: %1"
 
-#: devicemessagemonitor_p.cpp:219
+#: messageinfo.cpp:172
 #, fuzzy, kde-format
 #| msgid ""
 #| "Cannot eject the disc.\n"
@@ -141,7 +141,7 @@ msgstr ""
 "उपकरणकेँ बाहर नहि कएल जाए सकल.\n"
 "कोनो अनुप्रयोगमे एहि अओजार क' एकाधिक फाइल खुलल अछि."
 
-#: devicemessagemonitor_p.cpp:221
+#: messageinfo.cpp:174
 #, fuzzy, kde-format
 #| msgid ""
 #| "Cannot unmount the device.\n"
@@ -156,33 +156,33 @@ msgstr[1] ""
 "उपकरणकेँ अनमाउन्ट नहि कएल जाए सकल.\n"
 "कोनो अनुप्रयोगमे एहि अओजार क' एकाधिक फाइल खुलल अछि."
 
-#: devicemessagemonitor_p.cpp:224
+#: messageinfo.cpp:177
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ""
 
-#: devicemessagemonitor_p.cpp:242
+#: messageinfo.cpp:196
 #, fuzzy, kde-format
 #| msgid "Last plugged in device: %1"
 msgid "Could not mount this device."
 msgstr "हालमे प्लग कएल गेल उपकरण: %1"
 
-#: devicemessagemonitor_p.cpp:246
+#: messageinfo.cpp:200
 #, fuzzy, kde-format
 #| msgid "1 action for this device"
 #| msgid_plural "%1 actions for this device"
 msgid "Could not eject this disc."
 msgstr "एहि अओजार क' लेल 1 क्रिया"
 
-#: devicemessagemonitor_p.cpp:248
+#: messageinfo.cpp:202
 #, fuzzy, kde-format
 #| msgid "Last plugged in device: %1"
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "हालमे प्लग कएल गेल उपकरण: %1"
 
-#: devicemessagemonitor_p.cpp:251
+#: messageinfo.cpp:205
 #, fuzzy, kde-format
 #| msgid "Last plugged in device: %1"
 msgid "Could not repair this device: %1"

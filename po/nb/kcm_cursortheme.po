@@ -293,6 +293,3 @@ msgctxt ""
 "'Available sizes: 24' or 'Available sizes: 24, 36, 48'"
 msgid "(Available sizes: %1)"
 msgstr "(Tilgjengelige størrelser: %1)"
-
-#~ msgid "Remove Theme"
-#~ msgstr "Fjern tema"

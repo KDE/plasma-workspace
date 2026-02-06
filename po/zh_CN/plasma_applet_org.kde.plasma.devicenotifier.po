@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-27 00:46+0000\n"
+"POT-Creation-Date: 2026-02-06 00:47+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -54,103 +54,103 @@ msgstr "弹出"
 msgid "Safely remove"
 msgstr "安全移除"
 
-#: devicemessagemonitor_p.cpp:155
+#: messageinfo.cpp:107
 #, kde-format
 msgid "This device has file system errors."
 msgstr "此设备有文件系统错误。"
 
-#: devicemessagemonitor_p.cpp:157
+#: messageinfo.cpp:109
 #, kde-format
 msgctxt "@label device is a storage disk"
 msgid "This device has no errors"
 msgstr "此设备没有错误"
 
-#: devicemessagemonitor_p.cpp:160
+#: messageinfo.cpp:112
 #, kde-format
 msgid "Successfully repaired!"
 msgstr "成功修复"
 
-#: devicemessagemonitor_p.cpp:164
+#: messageinfo.cpp:116
 #, kde-format
 msgid "Device Status"
 msgstr "设备状态"
 
-#: devicemessagemonitor_p.cpp:165
+#: messageinfo.cpp:117
 #, kde-format
 msgid "A device can now be safely removed"
 msgstr "现在可以安全移除设备"
 
-#: devicemessagemonitor_p.cpp:169
+#: messageinfo.cpp:121
 #, kde-format
 msgid "This device can now be safely removed."
 msgstr "现在可以安全移除此设备。"
 
-#: devicemessagemonitor_p.cpp:176
+#: messageinfo.cpp:128
 #, kde-format
 msgid "You are not authorized to mount this device."
 msgstr "您没有挂载此设备的权限。"
 
-#: devicemessagemonitor_p.cpp:180
+#: messageinfo.cpp:132
 #, kde-format
 msgid "You are not authorized to eject this disc."
 msgstr "您没有弹出此光盘的权限。"
 
-#: devicemessagemonitor_p.cpp:183
+#: messageinfo.cpp:135
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr "您没有移除此设备的权限。"
 
-#: devicemessagemonitor_p.cpp:186
+#: messageinfo.cpp:138
 #, kde-format
 msgid "You are not authorized to repair this device."
 msgstr "您没有修复此设备的权限。"
 
-#: devicemessagemonitor_p.cpp:188 devicemessagemonitor_p.cpp:253
+#: messageinfo.cpp:140 messageinfo.cpp:207
 #, kde-format
 msgid "Unknown error type"
 msgstr "未知错误类型"
 
-#: devicemessagemonitor_p.cpp:192
+#: messageinfo.cpp:144
 #, kde-format
 msgid "Could not mount this device as it is busy."
 msgstr "无法挂载设备，因为此设备正忙。"
 
-#: devicemessagemonitor_p.cpp:219
+#: messageinfo.cpp:172
 #, kde-format
 msgid "One or more files on this device are open within an application."
 msgstr "此设备中有文件正在被其他应用程序打开。"
 
-#: devicemessagemonitor_p.cpp:221
+#: messageinfo.cpp:174
 #, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
 "One or more files on this device are opened in following applications: %2."
 msgstr[0] "此设备中有文件正在被以下其他应用程序打开：%2。"
 
-#: devicemessagemonitor_p.cpp:224
+#: messageinfo.cpp:177
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr "、"
 
-#: devicemessagemonitor_p.cpp:242
+#: messageinfo.cpp:196
 #, kde-format
 msgid "Could not mount this device."
 msgstr "无法挂载此设备。"
 
-#: devicemessagemonitor_p.cpp:246
+#: messageinfo.cpp:200
 #, kde-format
 msgid "Could not eject this disc."
 msgstr "无法弹出此光盘。"
 
-#: devicemessagemonitor_p.cpp:248
+#: messageinfo.cpp:202
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "无法移除此设备。"
 
-#: devicemessagemonitor_p.cpp:251
+#: messageinfo.cpp:205
 #, kde-format
 msgid "Could not repair this device: %1"
 msgstr "无法修复此设备：%1"

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-28 00:44+0000\n"
-"PO-Revision-Date: 2026-02-03 18:09+0100\n"
+"PO-Revision-Date: 2026-02-05 10:54+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -475,7 +475,7 @@ msgstr ""
 #, kde-format
 msgctxt "Error message, %1 is the language name"
 msgid "The language \"%1\" is unsupported"
-msgstr "Le linguage \"%1\" nones supportate"
+msgstr "Le linguage \"%1\" non es supportate"
 
 #: ui/AdvancedLanguageSelectPage.qml:58
 #, kde-format

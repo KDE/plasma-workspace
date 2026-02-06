@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-27 00:46+0000\n"
+"POT-Creation-Date: 2026-02-06 00:47+0000\n"
 "PO-Revision-Date: 2025-07-16 00:30+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -58,75 +58,75 @@ msgstr "Expulsar"
 msgid "Safely remove"
 msgstr "Extraer con seguridad"
 
-#: devicemessagemonitor_p.cpp:155
+#: messageinfo.cpp:107
 #, kde-format
 msgid "This device has file system errors."
 msgstr "Este dispositivo tiene errores en el sistema de archivos."
 
-#: devicemessagemonitor_p.cpp:157
+#: messageinfo.cpp:109
 #, kde-format
 msgctxt "@label device is a storage disk"
 msgid "This device has no errors"
 msgstr "Este dispositivo no tiene errores"
 
-#: devicemessagemonitor_p.cpp:160
+#: messageinfo.cpp:112
 #, kde-format
 msgid "Successfully repaired!"
 msgstr "Reparado correctamente."
 
-#: devicemessagemonitor_p.cpp:164
+#: messageinfo.cpp:116
 #, kde-format
 msgid "Device Status"
 msgstr "Estado del dispositivo"
 
-#: devicemessagemonitor_p.cpp:165
+#: messageinfo.cpp:117
 #, kde-format
 msgid "A device can now be safely removed"
 msgstr "Se puede extraer con seguridad un dispositivo"
 
-#: devicemessagemonitor_p.cpp:169
+#: messageinfo.cpp:121
 #, kde-format
 msgid "This device can now be safely removed."
 msgstr "Este dispositivo se puede extraer con seguridad."
 
-#: devicemessagemonitor_p.cpp:176
+#: messageinfo.cpp:128
 #, kde-format
 msgid "You are not authorized to mount this device."
 msgstr "No tiene autorización para montar este dispositivo."
 
-#: devicemessagemonitor_p.cpp:180
+#: messageinfo.cpp:132
 #, kde-format
 msgid "You are not authorized to eject this disc."
 msgstr "No tiene autorización para expulsar este disco."
 
-#: devicemessagemonitor_p.cpp:183
+#: messageinfo.cpp:135
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr "No tiene autorización para extraer este dispositivo."
 
-#: devicemessagemonitor_p.cpp:186
+#: messageinfo.cpp:138
 #, kde-format
 msgid "You are not authorized to repair this device."
 msgstr "No tiene autorización para reparar este dispositivo."
 
-#: devicemessagemonitor_p.cpp:188 devicemessagemonitor_p.cpp:253
+#: messageinfo.cpp:140 messageinfo.cpp:207
 #, kde-format
 msgid "Unknown error type"
 msgstr "Tipo de error desconocido"
 
-#: devicemessagemonitor_p.cpp:192
+#: messageinfo.cpp:144
 #, kde-format
 msgid "Could not mount this device as it is busy."
 msgstr "No se ha podido montar este dispositivo porque está ocupado."
 
-#: devicemessagemonitor_p.cpp:219
+#: messageinfo.cpp:172
 #, kde-format
 msgid "One or more files on this device are open within an application."
 msgstr ""
 "Uno o más archivos de este dispositivo están abiertos en alguna aplicación."
 
-#: devicemessagemonitor_p.cpp:221
+#: messageinfo.cpp:174
 #, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
@@ -137,29 +137,29 @@ msgstr[1] ""
 "Uno o más archivos de este dispositivo están abiertos en las siguientes "
 "aplicaciones: %2."
 
-#: devicemessagemonitor_p.cpp:224
+#: messageinfo.cpp:177
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ", "
 
-#: devicemessagemonitor_p.cpp:242
+#: messageinfo.cpp:196
 #, kde-format
 msgid "Could not mount this device."
 msgstr "No se ha podido montar este dispositivo."
 
-#: devicemessagemonitor_p.cpp:246
+#: messageinfo.cpp:200
 #, kde-format
 msgid "Could not eject this disc."
 msgstr "No se ha podido expulsar este disco."
 
-#: devicemessagemonitor_p.cpp:248
+#: messageinfo.cpp:202
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "No se ha podido extraer este dispositivo."
 
-#: devicemessagemonitor_p.cpp:251
+#: messageinfo.cpp:205
 #, kde-format
 msgid "Could not repair this device: %1"
 msgstr "No se ha podido reparar este dispositivo: %1"

@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2026 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# Sergiu Bivol <sergiu@cip.md>, 2022, 2023, 2024.
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2026 Sergiu Bivol <sergiu@cip.md>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-28 00:44+0000\n"
-"PO-Revision-Date: 2024-06-09 15:08+0100\n"
+"PO-Revision-Date: 2026-02-05 15:32+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #, kde-format
 msgid "Inherit Language"
@@ -26,13 +26,13 @@ msgstr "Moștenește limba"
 #, kde-format
 msgctxt "Binary dialect IEC, with single in parentheses"
 msgid "International Electrotechnical Commission (IEC)"
-msgstr ""
+msgstr "Comisia Electrotehnică Internațională (IEC)"
 
 #: binarydialectmodel.cpp:56
 #, kde-format
 msgctxt "Binary dialect JEDEC, with single in parentheses"
 msgid "Joint Electron Device Engineering Council (JEDEC)"
-msgstr ""
+msgstr "Joint Electron Device Engineering Council (JEDEC)"
 
 #: binarydialectmodel.cpp:60
 #, kde-format
@@ -44,19 +44,19 @@ msgstr "Sistemul metric (SI)"
 #, kde-format
 msgctxt "Binary dialect IEC description"
 msgid "Binary -  Kibibytes (KiB), Mebibytes (MiB), Gibibytes (GiB)"
-msgstr ""
+msgstr "Binar -  Kibiocteți (KiO), Mebiocteți (MiO), Gibiocteți (GiO)"
 
 #: binarydialectmodel.cpp:77
 #, kde-format
 msgctxt "Binary dialect JEDEC description"
 msgid "Binary - Kilobytes (KB), Megabytes (MB), Gigabytes (GB)"
-msgstr ""
+msgstr "Binar - Kiloocteți (KO), Megaocteți (MO), Gigaocteți (GO)"
 
 #: binarydialectmodel.cpp:79
 #, kde-format
 msgctxt "Binary dialect Metric description"
 msgid "Decimal - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
-msgstr ""
+msgstr "Zecimal - Kiloocteți (kO), Megaocteți (MO), Gigaocteți (GO)"
 
 #: exampleutility.cpp:31
 #, kde-format
@@ -77,9 +77,7 @@ msgid "Metric"
 msgstr "Metric"
 
 #: exampleutility.cpp:76
-#, fuzzy, kde-format
-#| msgctxt "PaperSize combobox"
-#| msgid "Letter"
+#, kde-format
 msgctxt "PaperSize combobox"
 msgid "Letter"
 msgstr "Scrisoare"
@@ -100,19 +98,19 @@ msgstr "în grija"
 #, kde-format
 msgctxt "Firm name"
 msgid "Acme Corporation"
-msgstr ""
+msgstr "Corporația Acme"
 
 #: exampleutility.cpp:95
 #, kde-format
 msgctxt "Department name"
 msgid "Development Department"
-msgstr ""
+msgstr "Departamentul de dezvoltare"
 
 #: exampleutility.cpp:96
 #, kde-format
 msgctxt "Building name"
 msgid "Dev-Building"
-msgstr ""
+msgstr "Clădirea dezvoltatorilor"
 
 #: exampleutility.cpp:97
 #, kde-format
@@ -148,7 +146,7 @@ msgstr "Etajul 3"
 #, kde-format
 msgctxt "Local township within town or city"
 msgid "Downtown"
-msgstr ""
+msgstr "Centrul orașului"
 
 #: exampleutility.cpp:105
 #, kde-format
@@ -172,51 +170,49 @@ msgstr "Stat"
 #, kde-format
 msgctxt "Family names"
 msgid "FamilyName"
-msgstr ""
+msgstr "NumeDeFamilie"
 
 #: exampleutility.cpp:121
 #, kde-format
 msgctxt "Family names in uppercase"
 msgid "FAMILYNAME"
-msgstr ""
+msgstr "NUMEDEFAMILIE"
 
 #: exampleutility.cpp:122
 #, kde-format
 msgctxt "First given name"
 msgid "FirstName"
-msgstr ""
+msgstr "Prenume"
 
 #: exampleutility.cpp:123
 #, kde-format
 msgctxt "First given initial"
 msgid "F"
-msgstr ""
+msgstr "P"
 
 #: exampleutility.cpp:124
 #, kde-format
 msgctxt "First given name with latin letters"
 msgid "FirstName"
-msgstr ""
+msgstr "Prenume"
 
 #: exampleutility.cpp:125
 #, kde-format
 msgctxt "Other shorter name"
 msgid "OtherName"
-msgstr ""
+msgstr "AltNume"
 
 #: exampleutility.cpp:126
 #, kde-format
 msgctxt "Additional given names"
 msgid "AdditionalName"
-msgstr ""
+msgstr "NumeSuplimentar"
 
 #: exampleutility.cpp:127
-#, fuzzy, kde-format
-#| msgctxt "PaperSize combobox"
-#| msgid "A4"
+#, kde-format
 msgctxt "Initials for additional given names"
 msgid "A"
-msgstr "A4"
+msgstr "S"
 
 #: exampleutility.cpp:128
 #, kde-format
@@ -270,6 +266,9 @@ msgid ""
 "command> tool. Please file a bug report about this at <link>https://bugs.kde."
 "org</link>"
 msgstr ""
+"Localizările disponibile în sistem nu au putut fi găsite cu unealta "
+"<command>localectl</command>. Raportați un defect despre aceasta la "
+"<link>https://bugs.kde.org</link>"
 
 #: languagelistmodel.cpp:97
 #, kde-format
@@ -292,12 +291,10 @@ msgid "Can't locate executable `check-language-support`"
 msgstr "Executabilul „check-language-support” nu poate fi găsit"
 
 #: localegeneratorubuntu.cpp:56
-#, fuzzy, kde-format
-#| msgctxt "the arg is the output of failed check-language-support call"
-#| msgid "check-language-support failed, output: %1"
+#, kde-format
 msgctxt "the arg is the output of failed check-language-support call"
 msgid "check-language-support failed, output: %1 %2"
-msgstr "„check-language-support” a eșuat, rezultat: %1"
+msgstr "„check-language-support” a eșuat, rezultat: %1 %2"
 
 #: localegeneratorubuntu.cpp:88
 #, kde-format
@@ -306,12 +303,10 @@ msgid "Not all missing packages managed to resolve! %1"
 msgstr "Nu au putut fi rezolvate toate pachetele lipsă: %1"
 
 #: localegeneratorubuntu.cpp:96
-#, fuzzy, kde-format
-#| msgctxt "%1 is a list of package names"
-#| msgid "Failed to install package %1"
+#, kde-format
 msgctxt "%1 is a list of package names, %2 is the error explanation"
 msgid "Failed to install language packages (%1): %2"
-msgstr "Instalarea pachetului %1 a eșuat"
+msgstr "Instalarea pachetelor lingvistice (%1) a eșuat: %2"
 
 #: localegenhelper/localegenhelper.cpp:45
 #, kde-format
@@ -430,25 +425,25 @@ msgstr "Numere de telefon"
 #, kde-format
 msgctxt "@info:title"
 msgid "Data and Storage Sizes"
-msgstr ""
+msgstr "Dimensiuni de date și stocare"
 
 #: optionsmodel.cpp:279
 #, kde-format
 msgctxt "the prefix for IECBinaryDialect, %1 is an example for 1 KiB"
 msgid "KiB, MiB, GiB; %1"
-msgstr ""
+msgstr "KiO, MiO, GiO; %1"
 
 #: optionsmodel.cpp:282
 #, kde-format
 msgctxt "the prefix for JEDECBinaryDialect, %1 is an example for 1 KB"
 msgid "KB, MB, GB; %1"
-msgstr ""
+msgstr "KO, MO, GO; %1"
 
 #: optionsmodel.cpp:285
 #, kde-format
 msgctxt "the prefix for MetricBinaryDialect, %1 is an example for 1 kB"
 msgid "kB, MB, GB; %1"
-msgstr ""
+msgstr "kO, MO, GO; %1"
 
 #: optionsmodel.cpp:357
 #, kde-format
@@ -587,7 +582,7 @@ msgstr "Modifică…"
 #, kde-format
 msgctxt "@title:window"
 msgid "Data and Storage Sizes"
-msgstr ""
+msgstr "Dimensiuni de date și stocare"
 
 #: ui/main.qml:281
 #, kde-format

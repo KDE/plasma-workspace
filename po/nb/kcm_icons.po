@@ -114,6 +114,3 @@ msgstr "Åpne tema"
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Temafiler (*.tar.gz *.tar.bz2)"
-
-#~ msgid "Restore Icon Theme"
-#~ msgstr "Gjenopprett ikontema"
