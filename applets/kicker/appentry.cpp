@@ -451,13 +451,13 @@ AppGroupEntry::AppGroupEntry(AppsModel *parentModel,
 
     QObject::connect(parentModel, &AppsModel::cleared, model, &AppsModel::deleteLater);
 
-    QObject::connect(model, &AppsModel::countChanged, [parentModel, this] {
+    QObject::connect(model, &AppsModel::countChanged, parentModel, [parentModel, this] {
         if (parentModel) {
             parentModel->entryChanged(this);
         }
     });
 
-    QObject::connect(model, &AppsModel::hiddenEntriesChanged, [parentModel, this] {
+    QObject::connect(model, &AppsModel::hiddenEntriesChanged, parentModel, [parentModel, this] {
         if (parentModel) {
             parentModel->entryChanged(this);
         }

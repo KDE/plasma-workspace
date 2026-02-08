@@ -398,7 +398,10 @@ endif()
 
 install(FILES portal-configuration/kde-portals.conf DESTINATION ${KDE_INSTALL_DATADIR}/xdg-desktop-portal)
 
-add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
+add_definitions(
+    -DQT_NO_URL_CAST_FROM_STRING
+    -DQT_NO_CONTEXTLESS_CONNECT
+)
 
 # locate qdbus in the Qt path because not every distro makes a symlink at /usr/bin/qdbus
 ecm_query_qt(QtBinariesDir QT_INSTALL_BINS)

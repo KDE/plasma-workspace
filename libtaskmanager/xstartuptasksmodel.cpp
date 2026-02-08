@@ -49,13 +49,13 @@ void XStartupTasksModel::Private::init()
     configWatcher = new KDirWatch(q);
     configWatcher->addFile(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QLatin1String("/klaunchrc"));
 
-    QObject::connect(configWatcher, &KDirWatch::dirty, [this] {
+    QObject::connect(configWatcher, &KDirWatch::dirty, q, [this] {
         loadConfig();
     });
-    QObject::connect(configWatcher, &KDirWatch::created, [this] {
+    QObject::connect(configWatcher, &KDirWatch::created, q, [this] {
         loadConfig();
     });
-    QObject::connect(configWatcher, &KDirWatch::deleted, [this] {
+    QObject::connect(configWatcher, &KDirWatch::deleted, q, [this] {
         loadConfig();
     });
 

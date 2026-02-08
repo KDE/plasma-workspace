@@ -526,7 +526,7 @@ KSMServer::KSMServer(InitFlags flags)
     }
     wake_up_socket = sockets[0];
     auto notifier = new QSocketNotifier(sockets[1], QSocketNotifier::Read, this);
-    qApp->connect(notifier, &QSocketNotifier::activated, &QApplication::quit);
+    connect(notifier, &QSocketNotifier::activated, qApp, &QApplication::quit);
 
     const QString runtimeDirectory = QStandardPaths::writableLocation(QStandardPaths::RuntimeLocation);
     iceAuthFile.setFileTemplate(runtimeDirectory + QStringLiteral("/iceauth_XXXXXX"));

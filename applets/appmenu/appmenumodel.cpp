@@ -47,6 +47,7 @@ AppMenuModel::AppMenuModel(QObject *parent)
     connect(m_tasksModel, &TaskManager::TasksModel::activeTaskChanged, this, &AppMenuModel::onActiveWindowChanged);
     connect(m_tasksModel,
             &TaskManager::TasksModel::dataChanged,
+            this,
             [this](const QModelIndex &topLeft, const QModelIndex &bottomRight, const QList<int> &roles = QList<int>()) {
                 Q_UNUSED(topLeft)
                 Q_UNUSED(bottomRight)

@@ -284,13 +284,13 @@ void DesktopView::showPreviewBannerMenu(const QPoint &pos)
     menu->setAttribute(Qt::WA_DeleteOnClose);
 
     auto *copyVersionAction = new QAction(QIcon::fromTheme(u"edit-copy-symbolic"_s), i18nc("@action:button", "Copy Plasma Version"));
-    connect(copyVersionAction, &QAction::triggered, [] {
+    connect(copyVersionAction, &QAction::triggered, copyVersionAction, [] {
         QGuiApplication::clipboard()->setText(QStringLiteral(WORKSPACE_VERSION_STRING));
     });
     menu->addAction(copyVersionAction);
 
     auto *reportBugAction = new QAction(QIcon::fromTheme(u"tools-report-bug-symbolic"_s), i18nc("@action:button", "Report a Bug…"));
-    connect(reportBugAction, &QAction::triggered, [] {
+    connect(reportBugAction, &QAction::triggered, reportBugAction, [] {
         auto job = new KIO::OpenUrlJob(QUrl(u"https://bugs.kde.org/"_s));
         job->setUiDelegate(KIO::createDefaultJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled, nullptr));
         job->start();
@@ -302,14 +302,14 @@ void DesktopView::showPreviewBannerMenu(const QPoint &pos)
     auto hideMenu = menu->addMenu(QIcon::fromTheme(u"view-hidden-symbolic"_s), i18nc("@title:menu", "Hide Preview Banner"));
 
     auto *hidePreviewBannerTemporarilyAction = new QAction(i18nc("@action:button Hide the preview banner until the system is restarted", "Hide Until Restart"));
-    connect(hidePreviewBannerTemporarilyAction, &QAction::triggered, [&]() {
+    connect(hidePreviewBannerTemporarilyAction, &QAction::triggered, this, [this] {
         m_showPreviewBanner = false;
         Q_EMIT showPreviewBannerChanged();
     });
     hideMenu->addAction(hidePreviewBannerTemporarilyAction);
 
     auto *hidePreviewBannerPermenanentlyAction = new QAction(i18nc("@action:button Hide the preview banner permanently", "Hide Permanently…"));
-    connect(hidePreviewBannerPermenanentlyAction, &QAction::triggered, [&]() {
+    connect(hidePreviewBannerPermenanentlyAction, &QAction::triggered, this, [this] {
         if (KMessageBox::warningContinueCancel(
                 nullptr,
                 xi18nc(
@@ -555,7 +555,7 @@ void DesktopView::slotContainmentChanged()
         QAction *editMode = m_containment->corona()->action(QStringLiteral("edit mode"));
         m_containment->setInternalAction(QStringLiteral("desktop edit mode"), desktopEditMode);
         connect(desktopEditMode, &QAction::triggered, editMode, &QAction::triggered);
-        connect(desktopEditMode, &QAction::triggered, [&]() {
+        connect(desktopEditMode, &QAction::triggered, this, [this] {
             m_enteredEditMode = true;
         });
         connect(m_containment->corona(), &Plasma::Corona::editModeChanged, this, [this](bool editMode) {

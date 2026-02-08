@@ -46,8 +46,8 @@ DefaultCompositor::DefaultCompositor()
         outputOrder->setList({u"WL-1"_s});
         add<LayerShell>();
 
-        QObject::connect(get<WlCompositor>(), &WlCompositor::surfaceCreated, [&](Surface *surface) {
-            QObject::connect(surface, &Surface::bufferCommitted, [this, surface] {
+        QObject::connect(get<WlCompositor>(), &WlCompositor::surfaceCreated, nullptr, [this](Surface *surface) {
+            QObject::connect(surface, &Surface::bufferCommitted, nullptr, [this, surface] {
                 if (m_config.autoRelease && surface->m_committed.buffer) {
                     // Pretend we made a copy of the buffer and just release it immediately
                     surface->m_committed.buffer->send_release();

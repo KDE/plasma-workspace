@@ -115,7 +115,7 @@ void FileMenu::open(int x, int y)
 
     if (KProtocolManager::supportsListing(m_url)) {
         QAction *openContainingFolderAction = menu->addAction(QIcon::fromTheme(QStringLiteral("folder-open")), i18n("Open Containing Folder"));
-        connect(openContainingFolderAction, &QAction::triggered, [this] {
+        connect(openContainingFolderAction, &QAction::triggered, openContainingFolderAction, [this] {
             KIO::highlightInFileManager({m_url});
         });
     }
@@ -129,7 +129,7 @@ void FileMenu::open(int x, int y)
 
     // KStandardAction? But then the Ctrl+C shortcut makes no sense in this context
     QAction *copyAction = menu->addAction(QIcon::fromTheme(QStringLiteral("edit-copy")), i18n("&Copy"));
-    connect(copyAction, &QAction::triggered, this, [fileItem] {
+    connect(copyAction, &QAction::triggered, qApp, [fileItem] {
         // inspired by KDirModel::mimeData()
         auto *data = new QMimeData(); // who cleans it up?
         KUrlMimeData::setUrls({fileItem.url()}, {fileItem.mostLocalUrl()}, data);
@@ -138,7 +138,7 @@ void FileMenu::open(int x, int y)
     });
 
     QAction *copyPathAction = menu->addAction(QIcon::fromTheme(QStringLiteral("edit-copy-path")), i18nc("@action:incontextmenu", "Copy Location"));
-    connect(copyPathAction, &QAction::triggered, this, [fileItem] {
+    connect(copyPathAction, &QAction::triggered, qApp, [fileItem] {
         QString path = fileItem.localPath();
         if (path.isEmpty()) {
             path = fileItem.url().toDisplayString();
@@ -153,7 +153,7 @@ void FileMenu::open(int x, int y)
         auto moveToTrashLambda = [this] {
             // No parent since the FileMenu will be destroyed as soon as the user clicked the menu item.
             auto handler = new KIO::WidgetsAskUserActionHandler();
-            connect(handler, &KIO::WidgetsAskUserActionHandler::askUserDeleteResult, [handler](bool allow, const QList<QUrl> &urls) {
+            connect(handler, &KIO::WidgetsAskUserActionHandler::askUserDeleteResult, handler, [handler](bool allow, const QList<QUrl> &urls) {
                 if (allow) {
                     auto job = KIO::trash(urls);
                     job->uiDelegate()->setAutoErrorHandlingEnabled(true);
@@ -175,7 +175,7 @@ void FileMenu::open(int x, int y)
         auto deleteLambda = [this] {
             // No parent since the FileMenu will be destroyed as soon as the user clicked the menu item.
             auto handler = new KIO::WidgetsAskUserActionHandler();
-            connect(handler, &KIO::WidgetsAskUserActionHandler::askUserDeleteResult, [handler](bool allow, const QList<QUrl> &urls) {
+            connect(handler, &KIO::WidgetsAskUserActionHandler::askUserDeleteResult, handler, [handler](bool allow, const QList<QUrl> &urls) {
                 if (allow) {
                     auto job = KIO::del(urls);
                     job->uiDelegate()->setAutoErrorHandlingEnabled(true);
@@ -196,7 +196,7 @@ void FileMenu::open(int x, int y)
     menu->addSeparator();
 
     QAction *propertiesAction = menu->addAction(QIcon::fromTheme(QStringLiteral("document-properties")), i18n("Properties"));
-    connect(propertiesAction, &QAction::triggered, [fileItem] {
+    connect(propertiesAction, &QAction::triggered, propertiesAction, [fileItem] {
         auto *dialog = new KPropertiesDialog(fileItem.url());
         dialog->setAttribute(Qt::WA_DeleteOnClose);
         dialog->show();

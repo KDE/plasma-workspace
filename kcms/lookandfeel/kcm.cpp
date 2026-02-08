@@ -292,7 +292,7 @@ KCMLookandFeel::KCMLookandFeel(QObject *parent, const KPluginMetaData &data)
         resetSelectedContents();
     };
 
-    connect(settings(), &LookAndFeelSettings::lookAndFeelPackageChanged, handleLookAndFeelPackageChanged);
+    connect(settings(), &LookAndFeelSettings::lookAndFeelPackageChanged, this, handleLookAndFeelPackageChanged);
     handleLookAndFeelPackageChanged();
 
     connect(m_lnf, &KLookAndFeelManager::plasmaLockedChanged, this, &KCMLookandFeel::plasmaLockedChanged);

@@ -504,7 +504,7 @@ void WidgetExplorer::openWidgetFile()
     dialog->setFileMode(QFileDialog::ExistingFile);
     dialog->setAttribute(Qt::WA_DeleteOnClose, true);
 
-    connect(dialog, &QFileDialog::fileSelected, [](const QString &packageFilePath) {
+    connect(dialog, &QFileDialog::fileSelected, dialog, [](const QString &packageFilePath) {
         if (packageFilePath.isEmpty()) {
             // TODO: user visible error handling
             qDebug() << "hm. no file path?";
@@ -512,7 +512,7 @@ void WidgetExplorer::openWidgetFile()
         }
 
         auto job = KPackage::PackageJob::install(QStringLiteral("Plasma/Applet"), packageFilePath);
-        connect(job, &KJob::result, [packageFilePath](KJob *job) {
+        connect(job, &KJob::result, job, [packageFilePath](KJob *job) {
             if (job->error()) {
                 KMessageBox::error(
                     nullptr,

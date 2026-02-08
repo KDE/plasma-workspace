@@ -41,11 +41,11 @@ QString MessageInfo::getMessage() const
 void MessageInfo::queryBlockingApps(const QString &devicePath)
 {
     auto p = new QProcess;
-    connect(p, &QProcess::errorOccurred, [p, this](QProcess::ProcessError) {
+    connect(p, &QProcess::errorOccurred, this, [p, this](QProcess::ProcessError) {
         Q_EMIT blockingAppsReady({});
         p->deleteLater();
     });
-    connect(p, &QProcess::finished, [p, this](int, QProcess::ExitStatus) {
+    connect(p, &QProcess::finished, this, [p, this](int, QProcess::ExitStatus) {
         QStringList blockApps;
         const QString out = QString::fromLatin1(p->readAll());
         const auto pidList = QStringView(out).split(QRegularExpression(QStringLiteral("\\s+")), Qt::SkipEmptyParts);
@@ -166,7 +166,7 @@ void MessageInfo::onStateChanged()
             // Without that, our lambda function would capture an uninitialized object, resulting in UB
             // and random crashes
             auto c = new QMetaObject::Connection();
-            *c = connect(this, &MessageInfo::blockingAppsReady, [c, operationResult, operationInfo, deviceUdi, this](const QStringList &blockApps) {
+            *c = connect(this, &MessageInfo::blockingAppsReady, this, [c, operationResult, operationInfo, deviceUdi, this](const QStringList &blockApps) {
                 QString message;
                 if (blockApps.isEmpty()) {
                     message = i18n("One or more files on this device are open within an application.");

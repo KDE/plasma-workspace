@@ -718,7 +718,7 @@ bool startPlasmaSession(bool wayland)
     serviceWatcher.addWatchedService(QStringLiteral("org.kde.Shutdown"));
     serviceWatcher.setWatchMode(QDBusServiceWatcher::WatchForUnregistration);
 
-    QObject::connect(&serviceWatcher, &QDBusServiceWatcher::serviceUnregistered, [&]() {
+    QObject::connect(&serviceWatcher, &QDBusServiceWatcher::serviceUnregistered, &e, [&e, &serviceWatcher]() {
         const QStringList watchedServices = serviceWatcher.watchedServices();
         bool plasmaSessionRunning = std::any_of(watchedServices.constBegin(), watchedServices.constEnd(), [](const QString &service) {
             return QDBusConnection::sessionBus().interface()->isServiceRegistered(service);
