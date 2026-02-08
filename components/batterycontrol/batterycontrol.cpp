@@ -452,6 +452,8 @@ void BatteryControlModel::updateOverallBattery()
             m_percent = 0;
         }
 
+        m_pluggedIn = !discharging;
+
         if (allFullyCharged) {
             m_state = FullyCharged;
         } else if (charging) {
@@ -474,6 +476,7 @@ void BatteryControlModel::updateOverallBattery()
         }
     } else {
         m_percent = 0;
+        m_pluggedIn = true;
         m_state = NoCharge;
     }
 
