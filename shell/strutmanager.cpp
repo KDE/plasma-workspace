@@ -27,7 +27,7 @@ StrutManager::StrutManager(ShellCorona *plasmashellCorona)
     dbus.registerObject(u"/StrutManager"_s, this, QDBusConnection::ExportAllSlots);
     m_serviceWatcher->setConnection(dbus);
 
-    connect(m_serviceWatcher, &QDBusServiceWatcher::serviceUnregistered, [this](const QString &service) {
+    connect(m_serviceWatcher, &QDBusServiceWatcher::serviceUnregistered, this, [this](const QString &service) {
         m_availableScreenRects.remove(service);
         m_availableScreenRegions.remove(service);
         m_serviceWatcher->removeWatchedService(service);

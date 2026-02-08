@@ -298,7 +298,7 @@ KCMLookandFeel::KCMLookandFeel(QObject *parent, const KPluginMetaData &data)
         resetSelectedContents();
     };
 
-    connect(settings(), &LookAndFeelSettings::lookAndFeelPackageChanged, handleLookAndFeelPackageChanged);
+    connect(settings(), &LookAndFeelSettings::lookAndFeelPackageChanged, this, handleLookAndFeelPackageChanged);
     handleLookAndFeelPackageChanged();
 
     QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.plasmashell"),

@@ -37,7 +37,7 @@ void SwitchActivity::makeMenu()
             action->setFont(font);
         }
 
-        connect(action, &QAction::triggered, [=, this]() {
+        connect(action, &QAction::triggered, this, [this, action] {
             switchTo(action);
         });
 

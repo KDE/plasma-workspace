@@ -36,7 +36,7 @@ GroupEntry::GroupEntry(AppsModel *parentModel, const QString &name, const QStrin
 {
     QObject::connect(parentModel, &RootModel::cleared, childModel, &AbstractModel::deleteLater);
 
-    QObject::connect(childModel, &AbstractModel::countChanged, [parentModel, this] {
+    QObject::connect(childModel, &AbstractModel::countChanged, parentModel, [parentModel, this] {
         if (parentModel) {
             parentModel->entryChanged(this);
         }

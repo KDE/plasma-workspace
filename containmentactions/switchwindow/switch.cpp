@@ -115,7 +115,7 @@ void SwitchWindow::makeMenu()
         auto *action = new QAction(name, this);
         action->setIcon(idx.data(Qt::DecorationRole).value<QIcon>());
         action->setData(idx.data(AbstractTasksModel::WinIdList).toList());
-        connect(action, &QAction::triggered, [=, this]() {
+        connect(action, &QAction::triggered, this, [this, action] {
             switchTo(action);
         });
 

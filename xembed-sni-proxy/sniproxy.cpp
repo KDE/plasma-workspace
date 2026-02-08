@@ -470,7 +470,7 @@ void SNIProxy::registerNotifierItem()
         org::kde::StatusNotifierWatcher(QStringLiteral(SNI_WATCHER_SERVICE_NAME), QStringLiteral(SNI_WATCHER_PATH), QDBusConnection::sessionBus(), this);
     auto reply = statusNotifierWatcher.RegisterStatusNotifierItem(m_dbus.baseService());
     auto replyWatcher = new QDBusPendingCallWatcher(reply, this);
-    QObject::connect(replyWatcher, &QDBusPendingCallWatcher::finished, [](QDBusPendingCallWatcher *call) {
+    QObject::connect(replyWatcher, &QDBusPendingCallWatcher::finished, this, [](QDBusPendingCallWatcher *call) {
         if (call->isError()) {
             qCWarning(SNIPROXY) << "could not register SNI:" << call->error().message();
         }

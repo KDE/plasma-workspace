@@ -175,9 +175,7 @@ void User::setPath(const QDBusObjectPath &path)
 
     mPath = path;
 
-    connect(m_dbusIface, &OrgFreedesktopAccountsUserInterface::Changed, [this]() {
-        loadData();
-    });
+    connect(m_dbusIface, &OrgFreedesktopAccountsUserInterface::Changed, this, &User::loadData);
 
     loadData();
 }

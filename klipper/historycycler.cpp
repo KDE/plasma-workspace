@@ -44,7 +44,7 @@ HistoryCycler::HistoryCycler(QObject *parent)
     : QObject(parent)
     , m_model(HistoryModel::self())
 {
-    connect(m_model.get(), &HistoryModel::changed, [this](bool isTop) {
+    connect(m_model.get(), &HistoryModel::changed, this, [this](bool isTop) {
         if (isTop && !CycleBlocker::isBlocked()) {
             m_cycleStartUuid = QByteArray();
         }

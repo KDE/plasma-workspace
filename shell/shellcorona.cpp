@@ -249,7 +249,7 @@ void ShellCorona::init()
             setDashboardShown(false);
         }
     });
-    connect(KWindowSystem::self(), &KWindowSystem::showingDesktopChanged, [this](bool showingDesktop) {
+    connect(KWindowSystem::self(), &KWindowSystem::showingDesktopChanged, this, [this](bool showingDesktop) {
         if (!showingDesktop) {
             setEditMode(false);
         }

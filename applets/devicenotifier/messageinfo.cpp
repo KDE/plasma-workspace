@@ -167,7 +167,7 @@ void MessageInfo::onStateChanged()
             // Without that, our lambda function would capture an uninitialized object, resulting in UB
             // and random crashes
             auto c = new QMetaObject::Connection();
-            *c = connect(this, &MessageInfo::blockingAppsReady, [c, operationResult, operationInfo, deviceUdi, this](const QStringList &blockApps) {
+            *c = connect(this, &MessageInfo::blockingAppsReady, this, [c, operationResult, operationInfo, deviceUdi, this](const QStringList &blockApps) {
                 QString message;
                 if (blockApps.isEmpty()) {
                     message = i18n("One or more files on this device are open within an application.");

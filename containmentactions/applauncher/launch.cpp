@@ -49,7 +49,7 @@ void AppLauncher::makeMenu(QMenu *menu, const KServiceGroup::Ptr &group)
             }
             text.replace(u'&', u"&&"_s);
             auto *action = new QAction(QIcon::fromTheme(service->icon()), text, this);
-            connect(action, &QAction::triggered, [action]() {
+            connect(action, &QAction::triggered, action, [action]() {
                 KService::Ptr service = KService::serviceByStorageId(action->data().toString());
                 auto job = new KIO::ApplicationLauncherJob(service);
                 job->start();
