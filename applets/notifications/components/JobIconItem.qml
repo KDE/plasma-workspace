@@ -57,7 +57,14 @@ Item {
             dragUrl: jobDragIconItem.modelInterface.jobDetails?.effectiveDestUrl
             dragPixmap: jobDragIcon.source
 
-            onActivated: jobDragIconItem.modelInterface.openUrl(jobDragIconItem.modelInterface.jobDetails?.effectiveDestUrl)
+            onActivated: {
+                if (fileInfo.openAction) {
+                    fileInfo.openAction.trigger();
+                    jobDragIconItem.modelInterface.fileActionInvoked(fileInfo.openAction);
+                } else {
+                    jobDragIconItem.modelInterface.openUrl(jobDragIconItem.modelInterface.jobDetails?.effectiveDestUrl);
+                }
+            }
             onContextMenuRequested: (pos) => {
                 otherFileActionsMenu.visualParent = this;
                 otherFileActionsMenu.open(pos.x, pos.y);
