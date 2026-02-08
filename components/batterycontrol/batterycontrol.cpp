@@ -438,20 +438,20 @@ void BatteryControlModel::updateOverallBattery()
         }
     }
 
-    if (count == 1) {
-        // Energy is sometimes way off causing us to show rubbish; this is a UPower issue
-        // but anyway having just one battery and the tooltip showing strange readings
-        // compared to the popup doesn't look polished.
-        m_percent = qRound(totalPercentage);
-    } else if (totalEnergy > 0) {
-        m_percent = qRound(energy / totalEnergy * 100);
-    } else if (count > 0) { // UPS don't have energy, see Bug 348588
-        m_percent = qRound(totalPercentage / static_cast<qreal>(count));
-    } else {
-        m_percent = 0;
-    }
-
     if (hasCumulative) {
+        if (count == 1) {
+            // Energy is sometimes way off causing us to show rubbish; this is a UPower issue
+            // but anyway having just one battery and the tooltip showing strange readings
+            // compared to the popup doesn't look polished.
+            m_percent = qRound(totalPercentage);
+        } else if (totalEnergy > 0) {
+            m_percent = qRound(energy / totalEnergy * 100);
+        } else if (count > 0) { // UPS don't have energy, see Bug 348588
+            m_percent = qRound(totalPercentage / static_cast<qreal>(count));
+        } else {
+            m_percent = 0;
+        }
+
         if (allFullyCharged) {
             m_state = FullyCharged;
         } else if (charging) {
@@ -473,6 +473,7 @@ void BatteryControlModel::updateOverallBattery()
             }
         }
     } else {
+        m_percent = 0;
         m_state = NoCharge;
     }
 
