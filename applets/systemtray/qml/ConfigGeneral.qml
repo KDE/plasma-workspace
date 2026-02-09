@@ -397,6 +397,7 @@ KCMUtils.ScrollViewKCM {
                 QQC2.Label {
                     id: nameLabel
                     Layout.fillWidth: true
+                    maximumLineCount: 1
                     text: listItem.displayText
                     textFormat: Text.PlainText
                     elide: Text.ElideRight
