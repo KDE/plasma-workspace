@@ -57,6 +57,7 @@ KCM.ScrollViewKCM {
             required property string cfgKey
             required property string icon
             required property string text
+            required property int index
 
             width: list.width
 
