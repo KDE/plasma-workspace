@@ -257,6 +257,11 @@ void DeviceControl::onDeviceRemoved(const QString &udi)
             for (auto it = m_parentDevices.begin(); it != m_parentDevices.end(); ++it) {
                 for (int childPosition = 0; childPosition < it->size(); ++childPosition) {
                     if (udi == it->at(childPosition)->device().udi()) {
+                        // If the message does not exist, don't delay the removal.
+                        if (m_devices[position].messageInfo->getMessage().isEmpty()) {
+                            deviceDelayRemove(udi, it.key());
+                            return;
+                        }
                         auto timer = std::make_shared<QTimer>();
                         timer->setSingleShot(true);
                         timer->setInterval(REMOVE_INTERVAL);
