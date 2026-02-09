@@ -51,13 +51,20 @@ UpdateDatabaseJob *UpdateDatabaseJob::updateClipboard(QObject *parent,
     }
 
     if (mimeData->hasImage()) {
-        auto image = mimeData->imageData().value<QImage>();
+        QByteArray data;
+        QImage image;
+        // If png is available directly do not do a needless encoding
+        if (mimeData->hasFormat(QLatin1String("image/png"))) {
+            data = mimeData->data(QLatin1String("image/png"));
+            image = QImage::fromData(data, "PNG");
+        } else {
+            image = mimeData->imageData().value<QImage>();
+            QBuffer buffer(&data);
+            QImageWriter encoder(&buffer, "PNG");
+            encoder.write(image);
+        }
         hash.reset();
         hash.addData(QByteArrayView(reinterpret_cast<const char *>(image.constBits()), image.sizeInBytes()));
-        QByteArray data;
-        QBuffer buffer(&data);
-        QImageWriter encoder(&buffer, "PNG");
-        encoder.write(image);
         mimeDataList.emplace_back(s_imageFormat, std::move(data), QString::fromLatin1(hash.result().toHex()));
     }
 
