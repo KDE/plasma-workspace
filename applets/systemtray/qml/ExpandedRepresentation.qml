@@ -70,6 +70,7 @@ Item {
 
                 level: 1
                 text: systemTrayState.activeApplet ? systemTrayState.activeApplet.plasmoid.title : i18n("Status and Notifications")
+                maximumLineCount: 1
                 textFormat: Text.PlainText
                 elide: Text.ElideRight
             }
