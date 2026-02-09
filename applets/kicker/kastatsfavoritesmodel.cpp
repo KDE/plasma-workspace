@@ -436,22 +436,11 @@ public:
         if (row < 0 || row >= rowCount()) {
             return false;
         }
-
-        const QString id = data(index(row, 0), Kicker::UrlRole).toString();
-        if (m_itemEntries.contains(id)) {
-            return m_itemEntries.at(id)->run(actionId, argument);
-        }
-        // Entries with preferred:// can be changed by the user, BUG: 416161
-        // then the list of entries could be out of sync
         auto it = m_itemEntries.find(m_items.value(row).value());
         if (it == m_itemEntries.cend()) {
             return false;
         }
-        const auto &entry = it->second;
-        if (QUrl(entry->id()).scheme() == QLatin1String("preferred")) {
-            return entry->run(actionId, argument);
-        }
-        return false;
+        return it->second->run(actionId, argument);
     }
 
     void move(int from, int to)
