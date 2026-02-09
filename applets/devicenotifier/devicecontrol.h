@@ -49,6 +49,9 @@ public:
     QVariant data(const QModelIndex &index, int role) const override;
     QHash<int, QByteArray> roleNames() const override;
 
+Q_SIGNALS:
+    void deviceAboutToBeRemoved(const QString &udi);
+
 private Q_SLOTS:
     void onDeviceAdded(const QString &udi);
     void onDeviceRemoved(const QString &udi);

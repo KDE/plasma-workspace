@@ -163,6 +163,7 @@ void DeviceControl::onDeviceAdded(const QString &udi)
     }
 
     auto stateInfo = std::make_shared<StateInfo>(storageInfo);
+    connect(this, &DeviceControl::deviceAboutToBeRemoved, stateInfo.get(), &StateInfo::setNotPresentState);
 
     auto actionsInfo = std::make_shared<ActionsInfo>(storageInfo, stateInfo);
 
@@ -239,6 +240,8 @@ void DeviceControl::onDeviceRemoved(const QString &udi)
     if (!m_devicesUdi.contains(udi)) {
         return;
     }
+
+    Q_EMIT deviceAboutToBeRemoved(udi);
 
     for (int position = 0; position < m_devices.size(); ++position) {
         if (m_devices[position].storageInfo->device().udi() == udi) {

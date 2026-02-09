@@ -64,6 +64,9 @@ public:
     Solid::ErrorType getOperationResult() const;
     QVariant getOperationInfo() const;
 
+public Q_SLOTS:
+    void setNotPresentState(const QString &udi);
+
 private Q_SLOTS:
     void setAccessibilityState(bool isAccessible, const QString &udi);
     void setMountingState(const QString &udi);

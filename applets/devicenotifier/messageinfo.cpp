@@ -86,7 +86,8 @@ void MessageInfo::onStateChanged()
     auto operationResult = m_stateInfo->getOperationResult();
     auto state = m_stateInfo->getState();
 
-    if (operationResult == Solid::ErrorType::NoError && state == StateInfo::MountDone) {
+    // If the state is NotPresent, clear the old message to prevent it from being shown.
+    if (operationResult == Solid::ErrorType::NoError && (state == StateInfo::MountDone || state == StateInfo::NotPresent)) {
         notify(QString());
         qCDebug(APPLETS::DEVICENOTIFIER) << "Message Info " << m_storageInfo->device().udi() << " : No message for device";
         return;
