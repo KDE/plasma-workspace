@@ -1677,6 +1677,7 @@ void PanelView::refreshContainment()
     connect(m_corona, &Plasma::Corona::editModeChanged, this, [this](bool edit) {
         updateExclusiveZone();
     });
+    updateExclusiveZone();
     connect(cont, &Plasma::Containment::userConfiguringChanged, this, [this](bool configuring) {
         if (configuring) {
             showTemporarily();
