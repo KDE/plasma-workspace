@@ -220,7 +220,7 @@ msgstr "移除主题"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active theme"
-msgstr "无法删除活动主题"
+msgstr "无法删除已激活的主题"
 
 #: ui/LookAndFeelSelector.qml:61 ui/StaticLookAndFeel.qml:79
 #, kde-format

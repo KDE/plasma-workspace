@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-28 00:46+0000\n"
-"PO-Revision-Date: 2026-01-29 20:41+0200\n"
+"PO-Revision-Date: 2026-02-08 19:13+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -503,7 +503,7 @@ msgstr "Включён режим «не беспокоить», для откл
 #: main.qml:110
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
-msgstr "Для отключения режима «не беспокоить» щёлкните средней кнопкой"
+msgstr "Для включения режима «не беспокоить» щёлкните средней кнопкой"
 
 #: main.qml:245
 #, kde-format
