@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2023-01-19 02:31+0000\n"
-"Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
+"PO-Revision-Date: 2026-02-09 16:00+0000\n"
+"Last-Translator: André Moreira <afrmscb@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
@@ -16,23 +16,23 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "José Nuno Pires"
+msgstr "José Nuno Pires, André Moreira"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "zepires@gmail.com"
+msgstr "zepires@gmail.com, afrmscb@gmail.com"
 
 #: batterycontrol/batteriesnamesmonitor_p.cpp:45
 #, kde-format
 msgctxt "Placeholder is the battery number"
 msgid "Battery %1"
-msgstr ""
+msgstr "Bateria %1"
 
 #: batterycontrol/batteriesnamesmonitor_p.cpp:47
 #, kde-format
 msgid "Battery"
-msgstr ""
+msgstr "Bateria"
 
 #: calendar/eventdatadecorator.cpp:50
 #, kde-format
@@ -185,6 +185,9 @@ msgid ""
 "compatible with Plasma %1. Please contact the widget's author for an updated "
 "version."
 msgstr ""
+"Este elemento foi escrito para uma versão antiga desconhecida do Plasma e não "
+"é compatível com o Plasma %1. Contacte o autor do elemento para obter uma "
+"versão actualizada."
 
 #: shellprivate/plasmaappletitemmodel.cpp:203
 #, kde-format
@@ -192,6 +195,8 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please contact the widget's author for an updated version."
 msgstr ""
+"Este elemento foi escrito para o Plasma %1 e não é compatível com o Plasma "
+"%2. Contacte o autor do elemento para obter uma versão actualizada."
 
 #: shellprivate/plasmaappletitemmodel.cpp:207
 #, kde-format
@@ -199,6 +204,8 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please update Plasma in order to use the widget."
 msgstr ""
+"Este elemento foi escrito para o Plasma %1 e não é compatível com o Plasma "
+"%2. Por favor actualize o Plasma para poder usar o elemento."
 
 #: shellprivate/plasmaappletitemmodel.cpp:212
 #, kde-format
@@ -206,51 +213,53 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "
 "version of Plasma. Please update Plasma in order to use the widget."
 msgstr ""
+"Este elemento foi escrito para o Plasma %1 e não é compatível com a última "
+"versão do Plasma. Por favor actualize o Plasma para poder usar o elemento."
 
 #: shellprivate/widgetexplorer.cpp:110
 msgctxt "applet category"
 msgid "Accessibility"
-msgstr ""
+msgstr "Acessibilidade"
 
 #: shellprivate/widgetexplorer.cpp:111
 msgctxt "applet category"
 msgid "Application Launchers"
-msgstr ""
+msgstr "Lançadores de Aplicações"
 
 #: shellprivate/widgetexplorer.cpp:112
 msgctxt "applet category"
 msgid "Astronomy"
-msgstr ""
+msgstr "Astronomia"
 
 #: shellprivate/widgetexplorer.cpp:113
 msgctxt "applet category"
 msgid "Date and Time"
-msgstr ""
+msgstr "Data e Hora"
 
 #: shellprivate/widgetexplorer.cpp:114
 msgctxt "applet category"
 msgid "Development Tools"
-msgstr ""
+msgstr "Ferramentas de Desenvolvimento"
 
 #: shellprivate/widgetexplorer.cpp:115
 msgctxt "applet category"
 msgid "Education"
-msgstr ""
+msgstr "Educação"
 
 #: shellprivate/widgetexplorer.cpp:116
 msgctxt "applet category"
 msgid "Environment and Weather"
-msgstr ""
+msgstr "Ambiente e Meteorologia"
 
 #: shellprivate/widgetexplorer.cpp:117
 msgctxt "applet category"
 msgid "Examples"
-msgstr ""
+msgstr "Exemplos"
 
 #: shellprivate/widgetexplorer.cpp:118
 msgctxt "applet category"
 msgid "File System"
-msgstr ""
+msgstr "Sistema de Ficheiros"
 
 #: shellprivate/widgetexplorer.cpp:119
 #, fuzzy
@@ -258,72 +267,72 @@ msgstr ""
 #| msgid "Your names"
 msgctxt "applet category"
 msgid "Fun and Games"
-msgstr "José Nuno Pires"
+msgstr "Diversão e Jogos"
 
 #: shellprivate/widgetexplorer.cpp:120
 msgctxt "applet category"
 msgid "Graphics"
-msgstr ""
+msgstr "Gráficos"
 
 #: shellprivate/widgetexplorer.cpp:121
 msgctxt "applet category"
 msgid "Language"
-msgstr ""
+msgstr "Língua"
 
 #: shellprivate/widgetexplorer.cpp:122
 msgctxt "applet category"
 msgid "Mapping"
-msgstr ""
+msgstr "Mapas"
 
 #: shellprivate/widgetexplorer.cpp:123
 msgctxt "applet category"
 msgid "Miscellaneous"
-msgstr ""
+msgstr "Diversos"
 
 #: shellprivate/widgetexplorer.cpp:124
 msgctxt "applet category"
 msgid "Multimedia"
-msgstr ""
+msgstr "Multimédia"
 
 #: shellprivate/widgetexplorer.cpp:125
 msgctxt "applet category"
 msgid "Online Services"
-msgstr ""
+msgstr "Serviços Online"
 
 #: shellprivate/widgetexplorer.cpp:126
 msgctxt "applet category"
 msgid "Personal Information"
-msgstr ""
+msgstr "Informações Pessoais"
 
 #: shellprivate/widgetexplorer.cpp:127
 msgctxt "applet category"
 msgid "Productivity"
-msgstr ""
+msgstr "Produtividade"
 
 #: shellprivate/widgetexplorer.cpp:128
 msgctxt "applet category"
 msgid "System Information"
-msgstr ""
+msgstr "Informações do Sistema"
 
 #: shellprivate/widgetexplorer.cpp:129
 msgctxt "applet category"
 msgid "Utilities"
-msgstr ""
+msgstr "Utilitários"
 
 #: shellprivate/widgetexplorer.cpp:130
 msgctxt "applet category"
 msgid "Windows and Tasks"
-msgstr ""
+msgstr "Janelas e Tarefas"
 
 #: shellprivate/widgetexplorer.cpp:131
 msgctxt "applet category"
 msgid "Clipboard"
-msgstr ""
+msgstr "Área de Transferência"
 
 #: shellprivate/widgetexplorer.cpp:132
 msgctxt "applet category"
 msgid "Tasks"
-msgstr ""
+msgstr "Tarefas"
 
 #: shellprivate/widgetexplorer.cpp:148
 #, kde-format
@@ -347,7 +356,7 @@ msgctxt ""
 "installed from the system, which are usually installed by the user to a "
 "local place."
 msgid "User-installed"
-msgstr "Desinstalável"
+msgstr "Instalado pelo utilizador"
 
 #: shellprivate/widgetexplorer.cpp:162
 #, kde-format
@@ -355,7 +364,7 @@ msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can were "
 "recently installed."
 msgid "Recently installed"
-msgstr ""
+msgstr "Instalados recentemente"
 
 #: shellprivate/widgetexplorer.cpp:166
 #, kde-format
@@ -377,7 +386,7 @@ msgstr "Instalar um Elemento do Ficheiro Local…"
 #| msgid "All Widgets"
 msgctxt "@title:window"
 msgid "Get New Widgets"
-msgstr "Todos os Elementos"
+msgstr "Obter Novos Elementos"
 
 #: shellprivate/widgetexplorer.cpp:503
 #, kde-format
@@ -389,7 +398,7 @@ msgstr "Seleccionar o Ficheiro do Plasmóide"
 #| msgid "Installing the package %1 failed."
 msgctxt "%1 is the name of an applet, %2 is an error message"
 msgid "Installing the package %1 failed: %2."
-msgstr "A instalação do pacote %1 foi mal-sucedida."
+msgstr "A instalação do pacote %1 falhou: %2."
 
 #: shellprivate/widgetexplorer.cpp:520
 #, kde-format
@@ -403,43 +412,45 @@ msgid ""
 "The currently selected time zone is not available for visualization on this "
 "map"
 msgstr ""
+"O fuso horário seleccionado actualmente não está disponível para "
+"visualização neste mapa"
 
 #: timezoneselector/TimezoneSelector.qml:194
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom in"
-msgstr ""
+msgstr "Aproximar"
 
 #: timezoneselector/TimezoneSelector.qml:210
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom out"
-msgstr ""
+msgstr "Afastar"
 
 #: timezoneselector/TimezoneSelector.qml:239
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Region:"
-msgstr ""
+msgstr "Região:"
 
 #: timezoneselector/TimezoneSelector.qml:246
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
-msgstr ""
+msgstr "Escolher…"
 
 #: timezoneselector/TimezoneSelector.qml:250
 #, kde-format
 msgid "Timezone region selector"
-msgstr ""
+msgstr "Selector de região do fuso horário"
 
 #: timezoneselector/TimezoneSelector.qml:271
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
-msgstr ""
+msgstr "Fuso horário:"
 
 #: timezoneselector/TimezoneSelector.qml:281
 #, kde-format
 msgid "Timezone location selector"
-msgstr ""
+msgstr "Selector de localização do fuso horário"
