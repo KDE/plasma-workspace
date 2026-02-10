@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-06 00:47+0000\n"
+"POT-Creation-Date: 2026-02-10 00:46+0000\n"
 "PO-Revision-Date: 2025-08-17 12:08+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -20,38 +20,38 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2);\n"
 "X-Generator: Lokalize 25.08.0\n"
 
-#: actions/checkaction.cpp:72
+#: actions/checkaction.cpp:71
 #, kde-format
 msgctxt "@action:button check a storageAccess (i.e disk) for error"
 msgid "Check for Errors"
 msgstr "Poszukaj błędów"
 
-#: actions/mountaction.cpp:94
+#: actions/mountaction.cpp:93
 #, kde-format
 msgid "Mount"
 msgstr "Podepnij"
 
-#: actions/mountandopenaction.cpp:174
+#: actions/mountandopenaction.cpp:173
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Otwórz w przeglądarce plików"
 
-#: actions/mountandopenaction.cpp:177
+#: actions/mountandopenaction.cpp:176
 #, kde-format
 msgid "Try to Fix"
 msgstr "Spróbuj naprawić"
 
-#: actions/mountandopenaction.cpp:177
+#: actions/mountandopenaction.cpp:176
 #, kde-format
 msgid "Mount and Open"
 msgstr "Podepnij i otwórz"
 
-#: actions/mountandopenaction.cpp:179
+#: actions/mountandopenaction.cpp:178
 #, kde-format
 msgid "Eject"
 msgstr "Wysuń"
 
-#: actions/mountandopenaction.cpp:181
+#: actions/mountandopenaction.cpp:180
 #, kde-format
 msgid "Safely remove"
 msgstr "Wysuń bezpiecznie"

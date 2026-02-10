@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-06 00:47+0000\n"
+"POT-Creation-Date: 2026-02-10 00:46+0000\n"
 "PO-Revision-Date: 2026-01-18 20:22+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -19,38 +19,38 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: actions/checkaction.cpp:72
+#: actions/checkaction.cpp:71
 #, kde-format
 msgctxt "@action:button check a storageAccess (i.e disk) for error"
 msgid "Check for Errors"
 msgstr "Kontroller for feil"
 
-#: actions/mountaction.cpp:94
+#: actions/mountaction.cpp:93
 #, kde-format
 msgid "Mount"
 msgstr "Monter"
 
-#: actions/mountandopenaction.cpp:174
+#: actions/mountandopenaction.cpp:173
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Åpne i filbehandler"
 
-#: actions/mountandopenaction.cpp:177
+#: actions/mountandopenaction.cpp:176
 #, kde-format
 msgid "Try to Fix"
 msgstr "Prøver å fikse"
 
-#: actions/mountandopenaction.cpp:177
+#: actions/mountandopenaction.cpp:176
 #, kde-format
 msgid "Mount and Open"
 msgstr "Monter og åpne"
 
-#: actions/mountandopenaction.cpp:179
+#: actions/mountandopenaction.cpp:178
 #, kde-format
 msgid "Eject"
 msgstr "Løs ut"
 
-#: actions/mountandopenaction.cpp:181
+#: actions/mountandopenaction.cpp:180
 #, kde-format
 msgid "Safely remove"
 msgstr "Fjern trygt"

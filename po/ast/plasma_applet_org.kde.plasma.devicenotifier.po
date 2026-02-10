@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-06 00:47+0000\n"
+"POT-Creation-Date: 2026-02-10 00:46+0000\n"
 "PO-Revision-Date: 2024-03-15 01:17+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: Asturian <alministradores@softastur.org>\n"
@@ -17,38 +17,38 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.02.0\n"
 
-#: actions/checkaction.cpp:72
+#: actions/checkaction.cpp:71
 #, kde-format
 msgctxt "@action:button check a storageAccess (i.e disk) for error"
 msgid "Check for Errors"
 msgstr ""
 
-#: actions/mountaction.cpp:94
+#: actions/mountaction.cpp:93
 #, kde-format
 msgid "Mount"
 msgstr "Montar"
 
-#: actions/mountandopenaction.cpp:174
+#: actions/mountandopenaction.cpp:173
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Abrir nel xestor de ficheros"
 
-#: actions/mountandopenaction.cpp:177
+#: actions/mountandopenaction.cpp:176
 #, kde-format
 msgid "Try to Fix"
 msgstr ""
 
-#: actions/mountandopenaction.cpp:177
+#: actions/mountandopenaction.cpp:176
 #, kde-format
 msgid "Mount and Open"
 msgstr "Montar y abrir"
 
-#: actions/mountandopenaction.cpp:179
+#: actions/mountandopenaction.cpp:178
 #, kde-format
 msgid "Eject"
 msgstr "Espulsar"
 
-#: actions/mountandopenaction.cpp:181
+#: actions/mountandopenaction.cpp:180
 #, kde-format
 msgid "Safely remove"
 msgstr "Estrayer con seguranza"

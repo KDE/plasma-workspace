@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-06 00:47+0000\n"
+"POT-Creation-Date: 2026-02-10 00:46+0000\n"
 "PO-Revision-Date: 2025-07-15 15:44+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -20,38 +20,38 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 23.04.3\n"
 
-#: actions/checkaction.cpp:72
+#: actions/checkaction.cpp:71
 #, kde-format
 msgctxt "@action:button check a storageAccess (i.e disk) for error"
 msgid "Check for Errors"
 msgstr "Перевірити на помилки"
 
-#: actions/mountaction.cpp:94
+#: actions/mountaction.cpp:93
 #, kde-format
 msgid "Mount"
 msgstr "Змонтувати"
 
-#: actions/mountandopenaction.cpp:174
+#: actions/mountandopenaction.cpp:173
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Відкрити у програмі для керування файлами"
 
-#: actions/mountandopenaction.cpp:177
+#: actions/mountandopenaction.cpp:176
 #, kde-format
 msgid "Try to Fix"
 msgstr "Спробувати виправити"
 
-#: actions/mountandopenaction.cpp:177
+#: actions/mountandopenaction.cpp:176
 #, kde-format
 msgid "Mount and Open"
 msgstr "Змонтувати і відкрити"
 
-#: actions/mountandopenaction.cpp:179
+#: actions/mountandopenaction.cpp:178
 #, kde-format
 msgid "Eject"
 msgstr "Виштовхнути"
 
-#: actions/mountandopenaction.cpp:181
+#: actions/mountandopenaction.cpp:180
 #, kde-format
 msgid "Safely remove"
 msgstr "Безпечно вилучити"

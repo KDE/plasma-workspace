@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-06 00:47+0000\n"
+"POT-Creation-Date: 2026-02-10 00:46+0000\n"
 "PO-Revision-Date: 2025-04-23 00:15+0400\n"
 "Last-Translator: linux <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -18,38 +18,38 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 25.04.0\n"
 
-#: actions/checkaction.cpp:72
+#: actions/checkaction.cpp:71
 #, kde-format
 msgctxt "@action:button check a storageAccess (i.e disk) for error"
 msgid "Check for Errors"
 msgstr ""
 
-#: actions/mountaction.cpp:94
+#: actions/mountaction.cpp:93
 #, kde-format
 msgid "Mount"
 msgstr "Qoşmaq"
 
-#: actions/mountandopenaction.cpp:174
+#: actions/mountandopenaction.cpp:173
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Fayl Meneceri açmaq"
 
-#: actions/mountandopenaction.cpp:177
+#: actions/mountandopenaction.cpp:176
 #, kde-format
 msgid "Try to Fix"
 msgstr "Xətaları düzəltməyə cəhd edin"
 
-#: actions/mountandopenaction.cpp:177
+#: actions/mountandopenaction.cpp:176
 #, kde-format
 msgid "Mount and Open"
 msgstr "Qoşmaq və Açmaq"
 
-#: actions/mountandopenaction.cpp:179
+#: actions/mountandopenaction.cpp:178
 #, kde-format
 msgid "Eject"
 msgstr "Çıxartmaq"
 
-#: actions/mountandopenaction.cpp:181
+#: actions/mountandopenaction.cpp:180
 #, kde-format
 msgid "Safely remove"
 msgstr "Təhlükəsiz çıxartmaq"
