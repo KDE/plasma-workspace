@@ -163,6 +163,7 @@ KCM.SimpleKCM {
                 id: realNametextField
                 text: user.realName
                 Kirigami.FormData.label: i18n("Name:")
+                placeholderText: user.name
 
                 KeyNavigation.down: userNameField
             }
@@ -221,6 +222,7 @@ KCM.SimpleKCM {
                 text: user.email
                 Kirigami.FormData.label: i18n("Email address:")
                 KeyNavigation.down: changeButton
+                placeholderText: i18nc("@info:placeholder", "name@example.com")
             }
 
             QQC2.Button {
