@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:44+0000\n"
+"POT-Creation-Date: 2026-02-10 02:38+0000\n"
 "PO-Revision-Date: 2026-01-13 23:28+0000\n"
 "Last-Translator: Charlotte <altronic25@protonmail.com>\n"
 "Language-Team: Irish\n"
@@ -187,12 +187,12 @@ msgstr "Ar Ais"
 msgid "Status and Notifications"
 msgstr "Staid agus Fógraí"
 
-#: qml/ExpandedRepresentation.qml:144
+#: qml/ExpandedRepresentation.qml:145
 #, kde-format
 msgid "More actions"
 msgstr ""
 
-#: qml/ExpandedRepresentation.qml:245
+#: qml/ExpandedRepresentation.qml:246
 #, kde-format
 msgid "Keep Open"
 msgstr ""

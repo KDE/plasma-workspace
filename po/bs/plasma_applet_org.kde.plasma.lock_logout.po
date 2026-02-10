@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:44+0000\n"
+"POT-Creation-Date: 2026-02-10 02:38+0000\n"
 "PO-Revision-Date: 2015-02-15 12:30+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -27,7 +27,7 @@ msgstr ""
 msgid "General"
 msgstr "Opće"
 
-#: ConfigGeneral.qml:118
+#: ConfigGeneral.qml:119
 #, kde-format
 msgid "Unavailable"
 msgstr ""

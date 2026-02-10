@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:44+0000\n"
+"POT-Creation-Date: 2026-02-10 02:38+0000\n"
 "PO-Revision-Date: 2026-01-18 20:46+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -203,12 +203,12 @@ msgstr "Gå tilbake"
 msgid "Status and Notifications"
 msgstr "Status og varslinger"
 
-#: qml/ExpandedRepresentation.qml:144
+#: qml/ExpandedRepresentation.qml:145
 #, kde-format
 msgid "More actions"
 msgstr "Flere handlinger"
 
-#: qml/ExpandedRepresentation.qml:245
+#: qml/ExpandedRepresentation.qml:246
 #, kde-format
 msgid "Keep Open"
 msgstr "Hold åpen"

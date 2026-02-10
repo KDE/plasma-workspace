@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:44+0000\n"
+"POT-Creation-Date: 2026-02-10 02:38+0000\n"
 "PO-Revision-Date: 2025-12-04 11:07+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -208,12 +208,12 @@ msgstr "Retrocedix"
 msgid "Status and Notifications"
 msgstr "Estat i notificacions"
 
-#: qml/ExpandedRepresentation.qml:144
+#: qml/ExpandedRepresentation.qml:145
 #, kde-format
 msgid "More actions"
 msgstr "Més accions"
 
-#: qml/ExpandedRepresentation.qml:245
+#: qml/ExpandedRepresentation.qml:246
 #, kde-format
 msgid "Keep Open"
 msgstr "Mantín obert"
