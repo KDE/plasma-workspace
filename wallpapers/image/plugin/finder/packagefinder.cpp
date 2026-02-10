@@ -95,13 +95,15 @@ std::optional<WallpaperPackage> WallpaperPackage::from(const KPackage::Package &
 
     QStringList selectors;
 
-    const QDir darkImagesDirectory(package.filePath("images_dark"));
-    const QFileInfoList darkImageFiles = darkImagesDirectory.entryInfoList(suffixes(), QDir::Files | QDir::Readable);
-    if (!darkImageFiles.isEmpty()) {
-        selectors << QStringLiteral("dark-light");
+    if (const QString imagesDarkPath = package.filePath("images_dark"); !imagesDarkPath.isEmpty()) {
+        const QDir darkImagesDirectory(imagesDarkPath);
+        const QFileInfoList darkImageFiles = darkImagesDirectory.entryInfoList(suffixes(), QDir::Files | QDir::Readable);
+        if (!darkImageFiles.isEmpty()) {
+            selectors << QStringLiteral("dark-light");
 
-        if (isDayNightSupported(imageFiles.first().absoluteFilePath(), darkImageFiles.first().absoluteFilePath())) {
-            selectors << QStringLiteral("day-night");
+            if (isDayNightSupported(imageFiles.first().absoluteFilePath(), darkImageFiles.first().absoluteFilePath())) {
+                selectors << QStringLiteral("day-night");
+            }
         }
     }
 
