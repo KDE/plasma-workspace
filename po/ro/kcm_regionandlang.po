@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2026 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# Sergiu Bivol <sergiu@cip.md>, 2022, 2023, 2024.
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2026 Sergiu Bivol <sergiu@cip.md>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2024-02-25 18:52+0000\n"
+"PO-Revision-Date: 2026-02-05 15:32+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: exampleutility.cpp:29
 #, kde-format
@@ -37,9 +37,7 @@ msgid "Metric"
 msgstr "Metric"
 
 #: exampleutility.cpp:47
-#, fuzzy, kde-format
-#| msgctxt "PaperSize combobox"
-#| msgid "Letter"
+#, kde-format
 msgctxt "PaperSize combobox"
 msgid "Letter"
 msgstr "Scrisoare"
@@ -60,19 +58,19 @@ msgstr "în grija"
 #, kde-format
 msgctxt "Firm name"
 msgid "Acme Corporation"
-msgstr ""
+msgstr "Corporația Acme"
 
 #: exampleutility.cpp:66
 #, kde-format
 msgctxt "Department name"
 msgid "Development Department"
-msgstr ""
+msgstr "Departamentul de dezvoltare"
 
 #: exampleutility.cpp:67
 #, kde-format
 msgctxt "Building name"
 msgid "Dev-Building"
-msgstr ""
+msgstr "Clădirea dezvoltatorilor"
 
 #: exampleutility.cpp:68
 #, kde-format
@@ -108,7 +106,7 @@ msgstr "Etajul 3"
 #, kde-format
 msgctxt "Local township within town or city"
 msgid "Downtown"
-msgstr ""
+msgstr "Centrul orașului"
 
 #: exampleutility.cpp:76
 #, kde-format
@@ -132,51 +130,49 @@ msgstr "Stat"
 #, kde-format
 msgctxt "Family names"
 msgid "FamilyName"
-msgstr ""
+msgstr "NumeDeFamilie"
 
 #: exampleutility.cpp:92
 #, kde-format
 msgctxt "Family names in uppercase"
 msgid "FAMILYNAME"
-msgstr ""
+msgstr "NUMEDEFAMILIE"
 
 #: exampleutility.cpp:93
 #, kde-format
 msgctxt "First given name"
 msgid "FirstName"
-msgstr ""
+msgstr "Prenume"
 
 #: exampleutility.cpp:94
 #, kde-format
 msgctxt "First given initial"
 msgid "F"
-msgstr ""
+msgstr "P"
 
 #: exampleutility.cpp:95
 #, kde-format
 msgctxt "First given name with latin letters"
 msgid "FirstName"
-msgstr ""
+msgstr "Prenume"
 
 #: exampleutility.cpp:96
 #, kde-format
 msgctxt "Other shorter name"
 msgid "OtherName"
-msgstr ""
+msgstr "AltNume"
 
 #: exampleutility.cpp:97
 #, kde-format
 msgctxt "Additional given names"
 msgid "AdditionalName"
-msgstr ""
+msgstr "NumeSuplimentar"
 
 #: exampleutility.cpp:98
-#, fuzzy, kde-format
-#| msgctxt "PaperSize combobox"
-#| msgid "A4"
+#, kde-format
 msgctxt "Initials for additional given names"
 msgid "A"
-msgstr "A4"
+msgstr "S"
 
 #: exampleutility.cpp:99
 #, kde-format
@@ -239,6 +235,9 @@ msgid ""
 "command> tool. Please file a bug report about this at <link>https://bugs.kde."
 "org</link>"
 msgstr ""
+"Localizările disponibile în sistem nu au putut fi găsite cu unealta "
+"<command>localectl</command>. Raportați un defect despre aceasta la "
+"<link>https://bugs.kde.org</link>"
 
 #: languagelistmodel.cpp:86
 #, kde-format
