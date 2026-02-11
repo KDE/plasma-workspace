@@ -68,7 +68,7 @@ class TestApplication(Gtk.Application):
             {
                 "LC_ALL": "en_US.UTF-8",
                 "QT_FATAL_WARNINGS": "0",  # DataControlOffer: timeout reading from pipe
-                "QT_LOGGING_RULES": "qt.accessibility.atspi.warning=false;org.kde.klipper.debug=true",
+                "QT_LOGGING_RULES": "qt.accessibility.atspi.warning=false;org.kde.klipper.debug=true;qt.qml.propertyCache.append.warning=false",
             })
         options.set_capability("timeouts", {'implicit': 5000})
         self.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', options=options)
