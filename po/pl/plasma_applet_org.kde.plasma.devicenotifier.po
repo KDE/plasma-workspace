@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-10 00:46+0000\n"
+"POT-Creation-Date: 2026-02-11 00:47+0000\n"
 "PO-Revision-Date: 2025-08-17 12:08+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -56,75 +56,75 @@ msgstr "Wysuń"
 msgid "Safely remove"
 msgstr "Wysuń bezpiecznie"
 
-#: messageinfo.cpp:107
+#: messageinfo.cpp:108
 #, kde-format
 msgid "This device has file system errors."
 msgstr "To urządzenie zawiera błędy systemu plików."
 
-#: messageinfo.cpp:109
+#: messageinfo.cpp:110
 #, kde-format
 msgctxt "@label device is a storage disk"
 msgid "This device has no errors"
 msgstr "To urządzenie nie zawiera błędów"
 
-#: messageinfo.cpp:112
+#: messageinfo.cpp:113
 #, kde-format
 msgid "Successfully repaired!"
 msgstr "Pomyślnie naprawiono!"
 
-#: messageinfo.cpp:116
+#: messageinfo.cpp:117
 #, kde-format
 msgid "Device Status"
 msgstr "Stan urządzenia"
 
-#: messageinfo.cpp:117
+#: messageinfo.cpp:118
 #, kde-format
 msgid "A device can now be safely removed"
 msgstr "Możesz teraz bezpiecznie wysunąć to urządzenie"
 
-#: messageinfo.cpp:121
+#: messageinfo.cpp:122
 #, kde-format
 msgid "This device can now be safely removed."
 msgstr "Możesz teraz bezpiecznie wysunąć to urządzenie."
 
-#: messageinfo.cpp:128
+#: messageinfo.cpp:129
 #, kde-format
 msgid "You are not authorized to mount this device."
 msgstr "Nie masz uprawnień do podpięcia tego urządzenia."
 
-#: messageinfo.cpp:132
+#: messageinfo.cpp:133
 #, kde-format
 msgid "You are not authorized to eject this disc."
 msgstr "Nie masz uprawnień do wysunięcia tego dysku."
 
-#: messageinfo.cpp:135
+#: messageinfo.cpp:136
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr "Nie masz uprawnień do wysunięcia tego urządzenia."
 
-#: messageinfo.cpp:138
+#: messageinfo.cpp:139
 #, kde-format
 msgid "You are not authorized to repair this device."
 msgstr "Nie masz uprawnień do naprawienia tego urządzenia."
 
-#: messageinfo.cpp:140 messageinfo.cpp:207
+#: messageinfo.cpp:141 messageinfo.cpp:208
 #, kde-format
 msgid "Unknown error type"
 msgstr "Nieznany rodzaj błędu"
 
-#: messageinfo.cpp:144
+#: messageinfo.cpp:145
 #, kde-format
 msgid "Could not mount this device as it is busy."
 msgstr "Nie można podpiąć tego urządzenia, bo jest zajęte."
 
-#: messageinfo.cpp:172
+#: messageinfo.cpp:173
 #, kde-format
 msgid "One or more files on this device are open within an application."
 msgstr ""
 "Jeden lub więcej plików na tym urządzeniu jest otwartych w jakiejś aplikacji."
 
-#: messageinfo.cpp:174
+#: messageinfo.cpp:175
 #, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
@@ -138,29 +138,29 @@ msgstr[2] ""
 "Jeden lub więcej plików na tym urządzeniu jest otwartych w następujących "
 "aplikacjach: \"%2\"."
 
-#: messageinfo.cpp:177
+#: messageinfo.cpp:178
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ", "
 
-#: messageinfo.cpp:196
+#: messageinfo.cpp:197
 #, kde-format
 msgid "Could not mount this device."
 msgstr "Nie można podpiąć tego urządzenia."
 
-#: messageinfo.cpp:200
+#: messageinfo.cpp:201
 #, kde-format
 msgid "Could not eject this disc."
 msgstr "Nie można wysunąć dysku."
 
-#: messageinfo.cpp:202
+#: messageinfo.cpp:203
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "Nie można wysunąć tego urządzenia."
 
-#: messageinfo.cpp:205
+#: messageinfo.cpp:206
 #, kde-format
 msgid "Could not repair this device: %1"
 msgstr "Nie można naprawić tego urządzenia: %1"

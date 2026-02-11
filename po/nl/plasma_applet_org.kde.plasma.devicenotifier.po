@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-10 00:46+0000\n"
+"POT-Creation-Date: 2026-02-11 00:47+0000\n"
 "PO-Revision-Date: 2025-07-15 10:20+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -55,74 +55,74 @@ msgstr "Uitwerpen"
 msgid "Safely remove"
 msgstr "Veilig verwijderen"
 
-#: messageinfo.cpp:107
+#: messageinfo.cpp:108
 #, kde-format
 msgid "This device has file system errors."
 msgstr "Dit apparaat heeft fouten in het bestandssysteem."
 
-#: messageinfo.cpp:109
+#: messageinfo.cpp:110
 #, kde-format
 msgctxt "@label device is a storage disk"
 msgid "This device has no errors"
 msgstr "Dit apparaat heeft geen fouten"
 
-#: messageinfo.cpp:112
+#: messageinfo.cpp:113
 #, kde-format
 msgid "Successfully repaired!"
 msgstr "Met succes gerepareerd!"
 
-#: messageinfo.cpp:116
+#: messageinfo.cpp:117
 #, kde-format
 msgid "Device Status"
 msgstr "Apparaatstatus"
 
-#: messageinfo.cpp:117
+#: messageinfo.cpp:118
 #, kde-format
 msgid "A device can now be safely removed"
 msgstr "Een apparaat kan nu veilig worden verwijderd"
 
-#: messageinfo.cpp:121
+#: messageinfo.cpp:122
 #, kde-format
 msgid "This device can now be safely removed."
 msgstr "Dit apparaat kan nu veilig worden verwijderd."
 
-#: messageinfo.cpp:128
+#: messageinfo.cpp:129
 #, kde-format
 msgid "You are not authorized to mount this device."
 msgstr "U bent niet geautoriseerd om dit apparaat aan te koppelen."
 
-#: messageinfo.cpp:132
+#: messageinfo.cpp:133
 #, kde-format
 msgid "You are not authorized to eject this disc."
 msgstr "U bent niet geautoriseerd om deze schijf uit te werpen."
 
-#: messageinfo.cpp:135
+#: messageinfo.cpp:136
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr "U bent niet geautoriseerd om dit apparaat te verwijderen."
 
-#: messageinfo.cpp:138
+#: messageinfo.cpp:139
 #, kde-format
 msgid "You are not authorized to repair this device."
 msgstr "U bent niet geautoriseerd om dit apparaat te repareren."
 
-#: messageinfo.cpp:140 messageinfo.cpp:207
+#: messageinfo.cpp:141 messageinfo.cpp:208
 #, kde-format
 msgid "Unknown error type"
 msgstr "Onbekende type fout"
 
-#: messageinfo.cpp:144
+#: messageinfo.cpp:145
 #, kde-format
 msgid "Could not mount this device as it is busy."
 msgstr "Kon dit apparaat niet aankoppelen omdat het bezig is."
 
-#: messageinfo.cpp:172
+#: messageinfo.cpp:173
 #, kde-format
 msgid "One or more files on this device are open within an application."
 msgstr "Een of meer bestanden op dit apparaat zijn in een toepassing geopend"
 
-#: messageinfo.cpp:174
+#: messageinfo.cpp:175
 #, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
@@ -132,29 +132,29 @@ msgstr[0] ""
 msgstr[1] ""
 "Een of meer bestanden op dit apparaat zijn in een programma geopend \"%2\"."
 
-#: messageinfo.cpp:177
+#: messageinfo.cpp:178
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ", "
 
-#: messageinfo.cpp:196
+#: messageinfo.cpp:197
 #, kde-format
 msgid "Could not mount this device."
 msgstr "Kon dit apparaat niet aankoppelen."
 
-#: messageinfo.cpp:200
+#: messageinfo.cpp:201
 #, kde-format
 msgid "Could not eject this disc."
 msgstr "Kon deze schijf miet uitwerpen."
 
-#: messageinfo.cpp:202
+#: messageinfo.cpp:203
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "Kon dit apparaat niet verwijderen."
 
-#: messageinfo.cpp:205
+#: messageinfo.cpp:206
 #, kde-format
 msgid "Could not repair this device: %1"
 msgstr "Kon dit apparaat niet repareren: %1"

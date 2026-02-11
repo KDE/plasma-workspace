@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-10 00:46+0000\n"
+"POT-Creation-Date: 2026-02-11 00:47+0000\n"
 "PO-Revision-Date: 2025-10-17 13:27+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -58,75 +58,75 @@ msgstr "Vysunout"
 msgid "Safely remove"
 msgstr "Bezpečně odstranit"
 
-#: messageinfo.cpp:107
+#: messageinfo.cpp:108
 #, kde-format
 msgid "This device has file system errors."
 msgstr "Toto zařízení má chyby v souborovém systému."
 
-#: messageinfo.cpp:109
+#: messageinfo.cpp:110
 #, kde-format
 msgctxt "@label device is a storage disk"
 msgid "This device has no errors"
 msgstr "Toto zařízení nemá žádné chyby"
 
-#: messageinfo.cpp:112
+#: messageinfo.cpp:113
 #, kde-format
 msgid "Successfully repaired!"
 msgstr "Úspěšně opraveno."
 
-#: messageinfo.cpp:116
+#: messageinfo.cpp:117
 #, kde-format
 msgid "Device Status"
 msgstr "Stav zařízení"
 
-#: messageinfo.cpp:117
+#: messageinfo.cpp:118
 #, kde-format
 msgid "A device can now be safely removed"
 msgstr "Zařízení může být nyní bezpečně odebráno"
 
-#: messageinfo.cpp:121
+#: messageinfo.cpp:122
 #, kde-format
 msgid "This device can now be safely removed."
 msgstr "Toto zařízení může být nyní bezpečně odebráno."
 
-#: messageinfo.cpp:128
+#: messageinfo.cpp:129
 #, kde-format
 msgid "You are not authorized to mount this device."
 msgstr "Nemáte oprávnění odpojit toto zařízení."
 
-#: messageinfo.cpp:132
+#: messageinfo.cpp:133
 #, kde-format
 msgid "You are not authorized to eject this disc."
 msgstr "Nemáte oprávnění vysunout tento disk."
 
-#: messageinfo.cpp:135
+#: messageinfo.cpp:136
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr "Nemáte oprávnění odstranit toto zařízení."
 
-#: messageinfo.cpp:138
+#: messageinfo.cpp:139
 #, kde-format
 msgid "You are not authorized to repair this device."
 msgstr "Nemáte oprávnění opravit toto zařízení."
 
-#: messageinfo.cpp:140 messageinfo.cpp:207
+#: messageinfo.cpp:141 messageinfo.cpp:208
 #, kde-format
 msgid "Unknown error type"
 msgstr "Neznámý typ chyby"
 
-#: messageinfo.cpp:144
+#: messageinfo.cpp:145
 #, kde-format
 msgid "Could not mount this device as it is busy."
 msgstr "Nelze připojit toto zařízení protože se používá."
 
-#: messageinfo.cpp:172
+#: messageinfo.cpp:173
 #, kde-format
 msgid "One or more files on this device are open within an application."
 msgstr ""
 "Jeden nebo více souborů z toho zařízení je používáno některou aplikací."
 
-#: messageinfo.cpp:174
+#: messageinfo.cpp:175
 #, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
@@ -140,29 +140,29 @@ msgstr[2] ""
 "Jeden nebo více souborů z toho zařízení je používáno těmito aplikacemi "
 "\"%2\"."
 
-#: messageinfo.cpp:177
+#: messageinfo.cpp:178
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ", "
 
-#: messageinfo.cpp:196
+#: messageinfo.cpp:197
 #, kde-format
 msgid "Could not mount this device."
 msgstr "Nepovedlo se připojit toto zařízení."
 
-#: messageinfo.cpp:200
+#: messageinfo.cpp:201
 #, kde-format
 msgid "Could not eject this disc."
 msgstr "Nelze odpojit tento disk."
 
-#: messageinfo.cpp:202
+#: messageinfo.cpp:203
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "Nelze odpojit  toto zařízení."
 
-#: messageinfo.cpp:205
+#: messageinfo.cpp:206
 #, kde-format
 msgid "Could not repair this device: %1"
 msgstr "Nepovedlo se opravit toto zařízení: %1"

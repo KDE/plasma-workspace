@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-10 00:46+0000\n"
+"POT-Creation-Date: 2026-02-11 00:47+0000\n"
 "PO-Revision-Date: 2025-11-22 21:57+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -56,74 +56,74 @@ msgstr "Kiadás"
 msgid "Safely remove"
 msgstr "Biztonságos eltávolítás"
 
-#: messageinfo.cpp:107
+#: messageinfo.cpp:108
 #, kde-format
 msgid "This device has file system errors."
 msgstr "Az eszköz fájlrendszere hibás."
 
-#: messageinfo.cpp:109
+#: messageinfo.cpp:110
 #, kde-format
 msgctxt "@label device is a storage disk"
 msgid "This device has no errors"
 msgstr "Az eszköz hibátlan"
 
-#: messageinfo.cpp:112
+#: messageinfo.cpp:113
 #, kde-format
 msgid "Successfully repaired!"
 msgstr "Sikeres javítás."
 
-#: messageinfo.cpp:116
+#: messageinfo.cpp:117
 #, kde-format
 msgid "Device Status"
 msgstr "Eszközállapot"
 
-#: messageinfo.cpp:117
+#: messageinfo.cpp:118
 #, kde-format
 msgid "A device can now be safely removed"
 msgstr "Az eszköz biztonságosan eltávolítható"
 
-#: messageinfo.cpp:121
+#: messageinfo.cpp:122
 #, kde-format
 msgid "This device can now be safely removed."
 msgstr "Az eszköz most már biztonságosan eltávolítható."
 
-#: messageinfo.cpp:128
+#: messageinfo.cpp:129
 #, kde-format
 msgid "You are not authorized to mount this device."
 msgstr "Nincs jogosultsága az eszköz csatolásához."
 
-#: messageinfo.cpp:132
+#: messageinfo.cpp:133
 #, kde-format
 msgid "You are not authorized to eject this disc."
 msgstr "Nincs jogosultsága a lemez kiadásához."
 
-#: messageinfo.cpp:135
+#: messageinfo.cpp:136
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr "Nincs jogosultsága az eszköz eltávolításához."
 
-#: messageinfo.cpp:138
+#: messageinfo.cpp:139
 #, kde-format
 msgid "You are not authorized to repair this device."
 msgstr "Nincs jogosultsága az eszköz javításához."
 
-#: messageinfo.cpp:140 messageinfo.cpp:207
+#: messageinfo.cpp:141 messageinfo.cpp:208
 #, kde-format
 msgid "Unknown error type"
 msgstr "Ismeretlen hibatípus"
 
-#: messageinfo.cpp:144
+#: messageinfo.cpp:145
 #, kde-format
 msgid "Could not mount this device as it is busy."
 msgstr "Nem lehet csatlakoztatni az eszközt, mivel foglalt."
 
-#: messageinfo.cpp:172
+#: messageinfo.cpp:173
 #, kde-format
 msgid "One or more files on this device are open within an application."
 msgstr "Egy vagy több fájl az eszközről meg van nyitva egy alkalmazásban."
 
-#: messageinfo.cpp:174
+#: messageinfo.cpp:175
 #, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
@@ -134,29 +134,29 @@ msgstr[1] ""
 "Egy vagy több fájl az eszközről meg van nyitva a következő alkalmazásokban: "
 "%2."
 
-#: messageinfo.cpp:177
+#: messageinfo.cpp:178
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ", "
 
-#: messageinfo.cpp:196
+#: messageinfo.cpp:197
 #, kde-format
 msgid "Could not mount this device."
 msgstr "Nem lehet csatolni az eszközt."
 
-#: messageinfo.cpp:200
+#: messageinfo.cpp:201
 #, kde-format
 msgid "Could not eject this disc."
 msgstr "Nem lehet kiadni a lemezt."
 
-#: messageinfo.cpp:202
+#: messageinfo.cpp:203
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "Nem lehet leválasztani az eszközt."
 
-#: messageinfo.cpp:205
+#: messageinfo.cpp:206
 #, kde-format
 msgid "Could not repair this device: %1"
 msgstr "Nem lehet javítani az eszközt: %1"

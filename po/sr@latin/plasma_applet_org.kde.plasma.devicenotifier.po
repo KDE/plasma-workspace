@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-10 00:46+0000\n"
+"POT-Creation-Date: 2026-02-11 00:47+0000\n"
 "PO-Revision-Date: 2016-07-10 19:45+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -55,80 +55,80 @@ msgstr ""
 msgid "Safely remove"
 msgstr ""
 
-#: messageinfo.cpp:107
+#: messageinfo.cpp:108
 #, kde-format
 msgid "This device has file system errors."
 msgstr ""
 
-#: messageinfo.cpp:109
+#: messageinfo.cpp:110
 #, fuzzy, kde-format
 #| msgid "This device is not currently accessible."
 msgctxt "@label device is a storage disk"
 msgid "This device has no errors"
 msgstr "Ovom uređaju se trenutno ne može pristupiti."
 
-#: messageinfo.cpp:112
+#: messageinfo.cpp:113
 #, kde-format
 msgid "Successfully repaired!"
 msgstr ""
 
-#: messageinfo.cpp:116
+#: messageinfo.cpp:117
 #, kde-format
 msgid "Device Status"
 msgstr ""
 
-#: messageinfo.cpp:117
+#: messageinfo.cpp:118
 #, kde-format
 msgid "A device can now be safely removed"
 msgstr ""
 
-#: messageinfo.cpp:121
+#: messageinfo.cpp:122
 #, kde-format
 msgid "This device can now be safely removed."
 msgstr ""
 
-#: messageinfo.cpp:128
+#: messageinfo.cpp:129
 #, fuzzy, kde-format
 #| msgid "It is currently safe to remove this device."
 msgid "You are not authorized to mount this device."
 msgstr "Trenutno je bezbedno ukloniti ovaj uređaj."
 
-#: messageinfo.cpp:132
+#: messageinfo.cpp:133
 #, fuzzy, kde-format
 #| msgid "Click to eject this disc."
 msgid "You are not authorized to eject this disc."
 msgstr "Kliknite za izbacivanje ovog diska."
 
-#: messageinfo.cpp:135
+#: messageinfo.cpp:136
 #, fuzzy, kde-format
 #| msgid "It is currently safe to remove this device."
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr "Trenutno je bezbedno ukloniti ovaj uređaj."
 
-#: messageinfo.cpp:138
+#: messageinfo.cpp:139
 #, fuzzy, kde-format
 #| msgid "It is currently safe to remove this device."
 msgid "You are not authorized to repair this device."
 msgstr "Trenutno je bezbedno ukloniti ovaj uređaj."
 
-#: messageinfo.cpp:140 messageinfo.cpp:207
+#: messageinfo.cpp:141 messageinfo.cpp:208
 #, kde-format
 msgid "Unknown error type"
 msgstr ""
 
-#: messageinfo.cpp:144
+#: messageinfo.cpp:145
 #, kde-format
 msgid "Could not mount this device as it is busy."
 msgstr ""
 
-#: messageinfo.cpp:172
+#: messageinfo.cpp:173
 #, fuzzy, kde-format
 #| msgid "Click to access this device from other applications."
 msgid "One or more files on this device are open within an application."
 msgstr "Kliknite da pristupite ovom uređaju iz drugih programa."
 
-#: messageinfo.cpp:174
+#: messageinfo.cpp:175
 #, fuzzy, kde-format
 #| msgid "Click to access this device from other applications."
 msgid "One or more files on this device are opened in application \"%2\"."
@@ -139,32 +139,32 @@ msgstr[1] "Kliknite da pristupite ovom uređaju iz drugih programa."
 msgstr[2] "Kliknite da pristupite ovom uređaju iz drugih programa."
 msgstr[3] "Kliknite da pristupite ovom uređaju iz drugih programa."
 
-#: messageinfo.cpp:177
+#: messageinfo.cpp:178
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ""
 
-#: messageinfo.cpp:196
+#: messageinfo.cpp:197
 #, fuzzy, kde-format
 #| msgid "Click to safely remove this device."
 msgid "Could not mount this device."
 msgstr "Kliknite da bezbedno uklonite ovaj uređaj."
 
-#: messageinfo.cpp:200
+#: messageinfo.cpp:201
 #, fuzzy, kde-format
 #| msgid "Click to eject this disc."
 msgid "Could not eject this disc."
 msgstr "Kliknite za izbacivanje ovog diska."
 
-#: messageinfo.cpp:202
+#: messageinfo.cpp:203
 #, fuzzy, kde-format
 #| msgid "Click to safely remove this device."
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "Kliknite da bezbedno uklonite ovaj uređaj."
 
-#: messageinfo.cpp:205
+#: messageinfo.cpp:206
 #, fuzzy, kde-format
 #| msgid "Click to safely remove this device."
 msgid "Could not repair this device: %1"

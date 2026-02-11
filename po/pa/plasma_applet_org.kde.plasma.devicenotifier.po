@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-10 00:46+0000\n"
+"POT-Creation-Date: 2026-02-11 00:47+0000\n"
 "PO-Revision-Date: 2025-09-15 09:57-0500\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -55,74 +55,74 @@ msgstr "ਕੱਢੋ"
 msgid "Safely remove"
 msgstr "ਸਹੀ ਸਲਾਮਤੀ ਹਟਾਓ"
 
-#: messageinfo.cpp:107
+#: messageinfo.cpp:108
 #, kde-format
 msgid "This device has file system errors."
 msgstr "ਇਸ ਡਿਵਾਈਸ ਲਈ ਫ਼ਾਇਲ ਸਿਸਟਮ ਗਲਤੀਆਂ ਹਨ।"
 
-#: messageinfo.cpp:109
+#: messageinfo.cpp:110
 #, kde-format
 msgctxt "@label device is a storage disk"
 msgid "This device has no errors"
 msgstr "ਇਸ ਡਿਵਾਈਸ ਲਈ ਕੋਈ ਗਲਤੀ ਨਹੀ ਹੈ"
 
-#: messageinfo.cpp:112
+#: messageinfo.cpp:113
 #, kde-format
 msgid "Successfully repaired!"
 msgstr "ਕਾਮਯਾਬੀ ਨਾਲ ਰਿਪੇਅਰ ਕੀਤਾ!"
 
-#: messageinfo.cpp:116
+#: messageinfo.cpp:117
 #, kde-format
 msgid "Device Status"
 msgstr "ਡਿਵਾਈਸ ਦੀ ਸਥਿਤੀ"
 
-#: messageinfo.cpp:117
+#: messageinfo.cpp:118
 #, kde-format
 msgid "A device can now be safely removed"
 msgstr "ਡਿਵਾਈਸ ਨੂੰ ਹੁਣ ਸਹੀ ਸਲਾਮਤ ਹਟਾਇਆ ਜਾ ਸਕਦਾ ਹੈ"
 
-#: messageinfo.cpp:121
+#: messageinfo.cpp:122
 #, kde-format
 msgid "This device can now be safely removed."
 msgstr "ਇਸ ਡਿਵਾਈਸ ਨੂੰ ਹੁਣ ਸਹੀ ਸਲਾਮਤ ਹਟਾਇਆ ਜਾ ਸਕਦਾ ਹੈ।"
 
-#: messageinfo.cpp:128
+#: messageinfo.cpp:129
 #, kde-format
 msgid "You are not authorized to mount this device."
 msgstr "ਤੁਸੀਂ ਇਸ ਡਿਵਾਈਸ ਨੂੰ ਮਾਊਂਟ ਕਰਨ ਲਈ ਪਰਮਾਣਿਤ ਨਹੀਂ ਹੋ।"
 
-#: messageinfo.cpp:132
+#: messageinfo.cpp:133
 #, kde-format
 msgid "You are not authorized to eject this disc."
 msgstr "ਤੁਸੀਂ ਇਸ ਡਿਸਕ ਨੂੰ ਬਾਹਰ ਕੱਢਣ ਲਈ ਪਰਮਾਣਿਤ ਨਹੀਂ ਹੋ।"
 
-#: messageinfo.cpp:135
+#: messageinfo.cpp:136
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr "ਤੁਸੀਂ ਇਸ ਡਿਵਾਈਸ ਨੂੰ ਹਟਾਉਣ ਲਈ ਪਰਮਾਣਿਤ ਨਹੀਂ ਹੋ।"
 
-#: messageinfo.cpp:138
+#: messageinfo.cpp:139
 #, kde-format
 msgid "You are not authorized to repair this device."
 msgstr "ਤੁਸੀਂ ਇਸ ਡਿਵਾਈਸ ਦੀ ਰਿਪੇਅਰ ਕਰਨ ਲਈ ਪਰਮਾਣਿਤ ਨਹੀਂ ਹੋ।"
 
-#: messageinfo.cpp:140 messageinfo.cpp:207
+#: messageinfo.cpp:141 messageinfo.cpp:208
 #, kde-format
 msgid "Unknown error type"
 msgstr "ਗਲਤੀ ਦੀ ਅਣਪਛਾਤੀ ਕਿਸਮ"
 
-#: messageinfo.cpp:144
+#: messageinfo.cpp:145
 #, kde-format
 msgid "Could not mount this device as it is busy."
 msgstr "ਇਸ ਡਿਵਾਈਸ ਨੂੰ ਰੁਝੇ ਹੋਣ ਕਰਕੇ ਮਾਊਂਟ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ।"
 
-#: messageinfo.cpp:172
+#: messageinfo.cpp:173
 #, kde-format
 msgid "One or more files on this device are open within an application."
 msgstr "ਇਸ ਡਿਵਾਈਸ ਉੱਤੇ ਇੱਕ ਜਾਂ ਵੱਧ ਫਾਇਲਾਂ ਐਪਲੀਕੇਸ਼ਨ ਨਾਲ ਖੁੱਲ੍ਹੀਆਂ ਹਨ।"
 
-#: messageinfo.cpp:174
+#: messageinfo.cpp:175
 #, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
@@ -130,29 +130,29 @@ msgid_plural ""
 msgstr[0] "ਇਸ ਡਿਵਾਈਸ ਉੱਤੇ ਇੱਕ ਜਾਂ ਵੱਧ ਫਾਇਲਾਂ \"%2\" ਐਪਲੀਕੇਸ਼ਨ ਨਾਲ ਖੁੱਲ੍ਹੀਆਂ ਹਨ।"
 msgstr[1] "ਇਸ ਡਿਵਾਈਸ ਉੱਤੇ ਇੱਕ ਜਾਂ ਵੱਧ ਫਾਇਲਾਂ ਅੱਗੇ ਦਿੱਤੀਆਂ ਐਪਲੀਕੇਸ਼ਨਾਂ ਨਾਲ ਖੁੱਲ੍ਹੀਆਂ ਹਨ: %2"
 
-#: messageinfo.cpp:177
+#: messageinfo.cpp:178
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ", "
 
-#: messageinfo.cpp:196
+#: messageinfo.cpp:197
 #, kde-format
 msgid "Could not mount this device."
 msgstr "ਇਸ ਡਿਵਾਈਸ ਨੂੰ ਮਾਊਂਟ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ।"
 
-#: messageinfo.cpp:200
+#: messageinfo.cpp:201
 #, kde-format
 msgid "Could not eject this disc."
 msgstr "ਇਸ ਡਿਸਕ ਨੂੰ ਬਾਹਰ ਨਹੀਂ ਕੱਢਿਆ ਜਾ ਸਕਿਆ।"
 
-#: messageinfo.cpp:202
+#: messageinfo.cpp:203
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "ਇਸ ਡਿਵਾਈਸ ਨੂੰ ਮਾਊਂਟ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ।"
 
-#: messageinfo.cpp:205
+#: messageinfo.cpp:206
 #, kde-format
 msgid "Could not repair this device: %1"
 msgstr "ਇਸ ਡਿਵਾਈਸ ਦੀ ਰਿਪੇਅਰ ਨਹੀਂ ਹੋ ਸਕੀ: %1"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-10 00:46+0000\n"
+"POT-Creation-Date: 2026-02-11 00:47+0000\n"
 "PO-Revision-Date: 2008-07-04 12:04+0530\n"
 "Last-Translator: Runa Bhattacharjee <runab@fedoraproject.org>\n"
 "Language-Team: Bengali INDIA <discuss@ankur.org.in>\n"
@@ -54,52 +54,52 @@ msgstr ""
 msgid "Safely remove"
 msgstr ""
 
-#: messageinfo.cpp:107
+#: messageinfo.cpp:108
 #, kde-format
 msgid "This device has file system errors."
 msgstr ""
 
-#: messageinfo.cpp:109
+#: messageinfo.cpp:110
 #, kde-format
 msgctxt "@label device is a storage disk"
 msgid "This device has no errors"
 msgstr ""
 
-#: messageinfo.cpp:112
+#: messageinfo.cpp:113
 #, kde-format
 msgid "Successfully repaired!"
 msgstr ""
 
-#: messageinfo.cpp:116
+#: messageinfo.cpp:117
 #, kde-format
 msgid "Device Status"
 msgstr ""
 
-#: messageinfo.cpp:117
+#: messageinfo.cpp:118
 #, kde-format
 msgid "A device can now be safely removed"
 msgstr ""
 
-#: messageinfo.cpp:121
+#: messageinfo.cpp:122
 #, kde-format
 msgid "This device can now be safely removed."
 msgstr ""
 
-#: messageinfo.cpp:128
+#: messageinfo.cpp:129
 #, fuzzy, kde-format
 #| msgid "1 action for this device"
 #| msgid_plural "%1 actions for this device"
 msgid "You are not authorized to mount this device."
 msgstr "চিহ্নিত ডিভাইসের জন্য ১-টি কর্ম"
 
-#: messageinfo.cpp:132
+#: messageinfo.cpp:133
 #, fuzzy, kde-format
 #| msgid "1 action for this device"
 #| msgid_plural "%1 actions for this device"
 msgid "You are not authorized to eject this disc."
 msgstr "চিহ্নিত ডিভাইসের জন্য ১-টি কর্ম"
 
-#: messageinfo.cpp:135
+#: messageinfo.cpp:136
 #, fuzzy, kde-format
 #| msgid "1 action for this device"
 #| msgid_plural "%1 actions for this device"
@@ -107,26 +107,26 @@ msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr "চিহ্নিত ডিভাইসের জন্য ১-টি কর্ম"
 
-#: messageinfo.cpp:138
+#: messageinfo.cpp:139
 #, fuzzy, kde-format
 #| msgid "1 action for this device"
 #| msgid_plural "%1 actions for this device"
 msgid "You are not authorized to repair this device."
 msgstr "চিহ্নিত ডিভাইসের জন্য ১-টি কর্ম"
 
-#: messageinfo.cpp:140 messageinfo.cpp:207
+#: messageinfo.cpp:141 messageinfo.cpp:208
 #, kde-format
 msgid "Unknown error type"
 msgstr ""
 
-#: messageinfo.cpp:144
+#: messageinfo.cpp:145
 #, fuzzy, kde-format
 #| msgid "1 action for this device"
 #| msgid_plural "%1 actions for this device"
 msgid "Could not mount this device as it is busy."
 msgstr "চিহ্নিত ডিভাইসের জন্য ১-টি কর্ম"
 
-#: messageinfo.cpp:172
+#: messageinfo.cpp:173
 #, fuzzy, kde-format
 #| msgid ""
 #| "Cannot eject the disc.\n"
@@ -136,7 +136,7 @@ msgstr ""
 "ডিস্ক বের করা যায়নি।\n"
 "কোনো অ্যাপ্লিকেশনের মধ্যে এই ডিস্কের এক অথবা একাধিক ফাইল খোলা রয়েছে।"
 
-#: messageinfo.cpp:174
+#: messageinfo.cpp:175
 #, fuzzy, kde-format
 #| msgid ""
 #| "Cannot unmount the device.\n"
@@ -151,27 +151,27 @@ msgstr[1] ""
 "ডিভাইস আন-মাউন্ট করা যায়নি।\n"
 "কোনো অ্যাপ্লিকেশনের মধ্যে এই ডিভাইসের এক অথবা একাধিক ফাইল খোলা রয়েছে।"
 
-#: messageinfo.cpp:177
+#: messageinfo.cpp:178
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ""
 
-#: messageinfo.cpp:196
+#: messageinfo.cpp:197
 #, fuzzy, kde-format
 #| msgid "1 action for this device"
 #| msgid_plural "%1 actions for this device"
 msgid "Could not mount this device."
 msgstr "চিহ্নিত ডিভাইসের জন্য ১-টি কর্ম"
 
-#: messageinfo.cpp:200
+#: messageinfo.cpp:201
 #, fuzzy, kde-format
 #| msgid "1 action for this device"
 #| msgid_plural "%1 actions for this device"
 msgid "Could not eject this disc."
 msgstr "চিহ্নিত ডিভাইসের জন্য ১-টি কর্ম"
 
-#: messageinfo.cpp:202
+#: messageinfo.cpp:203
 #, fuzzy, kde-format
 #| msgid "1 action for this device"
 #| msgid_plural "%1 actions for this device"
@@ -179,7 +179,7 @@ msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "চিহ্নিত ডিভাইসের জন্য ১-টি কর্ম"
 
-#: messageinfo.cpp:205
+#: messageinfo.cpp:206
 #, fuzzy, kde-format
 #| msgid "1 action for this device"
 #| msgid_plural "%1 actions for this device"
