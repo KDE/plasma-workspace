@@ -67,7 +67,6 @@ class TestApplication(Gtk.Application):
             "environ",
             {
                 "LC_ALL": "en_US.UTF-8",
-                "QT_FATAL_WARNINGS": "0",  # DataControlOffer: timeout reading from pipe
                 "QT_LOGGING_RULES": "qt.accessibility.atspi.warning=false;org.kde.klipper.debug=true",
             })
         options.set_capability("timeouts", {'implicit': 5000})
