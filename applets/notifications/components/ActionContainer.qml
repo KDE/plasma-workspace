@@ -49,7 +49,22 @@ PlasmaComponents3.StackView {
     }
 
     // Notification actions
-    initialItem: (actionContainer.modelInterface.hasReplyAction && (actionContainer.modelInterface.actionNames || []).length === 0) ? replyFieldComponent : actionRow
+    initialItem: {
+        if (actionContainer.modelInterface.hasReplyAction) {
+            // When inliny reply is the only action, default to it.
+            let actionsCount = (actionContainer.modelInterface.actionNames || []).length;
+            // "default" in history is added afterwards , handle it here, too.
+            if (actionContainer.modelInterface.inHistory && actionContainer.modelInterface.addDefaultAction) {
+                ++actionsCount;
+            }
+
+            if (actionsCount === 0) {
+                return replyFieldComponent;
+            }
+        }
+        return actionRow;
+    }
+
     RowLayout {
         id: actionRow
         visible: actionContainer.currentItem === actionRow
