@@ -2,21 +2,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Aman Alam <aalam@users.sf.net>, 2013, 2014, 2015, 2016.
-# SPDX-FileCopyrightText: 2020, 2021, 2023, 2024, 2025 A S Alam <aalam.yellow@gmail.com>
+# SPDX-FileCopyrightText: 2020, 2021, 2023, 2024, 2025, 2026 A S Alam <aalam.yellow@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-10 00:46+0000\n"
-"PO-Revision-Date: 2025-09-15 09:52-0500\n"
-"Last-Translator: A S Alam <aalam@punlinux.org>\n"
-"Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2026-02-11 17:48-0600\n"
+"Last-Translator: A S Alam <aman@punlinux.org>\n"
+"Language-Team: pa\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.08.0\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: qml/config.qml:13
 #, kde-format
@@ -24,30 +24,28 @@ msgid "General"
 msgstr "ਆਮ"
 
 #: qml/ConfigGeneral.qml:43
-#, fuzzy, kde-format
-#| msgid "Shown when relevant"
+#, kde-format
 msgctxt "@item:inlistbox Show this System Tray item when relevant"
 msgid "Show when relevant"
-msgstr "ਜਦੋਂ ਢੁੱਕਵਾਂ ਹੋਵੇ ਉਦੋਂ ਵਿਖਾਇਆ ਜਾਂਦਾ ਹੈ"
+msgstr "ਜਦੋਂ ਢੁੱਕਵਾਂ ਹੋਵੇ ਉਦੋਂ ਵੇਖਾਓ"
 
 #: qml/ConfigGeneral.qml:47
-#, fuzzy, kde-format
-#| msgid "Always shown"
+#, kde-format
 msgctxt "@item:inlistbox Always show this System Tray item"
 msgid "Always show"
-msgstr "ਹਮੇਸ਼ਾਂ ਵੇਖਾਇਆ ਜਾਂਦਾ ਹੈ"
+msgstr "ਹਮੇਸ਼ਾਂ ਵੇਖਾਓ"
 
 #: qml/ConfigGeneral.qml:51
 #, kde-format
 msgctxt "@item:inlistbox Show this System Tray item only in the expanded popup"
 msgid "Show only in popup"
-msgstr ""
+msgstr "ਸਿਰਫ਼ ਪੌਪ-ਅੱਪ ਵਿੱਚ ਹੀ ਵੇਖਾਓ"
 
 #: qml/ConfigGeneral.qml:55
 #, kde-format
 msgctxt "@item:inlistbox Never show this System Tray item; disable it"
 msgid "Never show (disabled)"
-msgstr ""
+msgstr "ਕਦੇ ਨਾ ਵੇਖਾਓ (ਅਸਮਰੱਥ ਹੈ)"
 
 #: qml/ConfigGeneral.qml:126
 #, kde-format
@@ -114,23 +112,19 @@ msgid ""
 msgstr ""
 
 #: qml/ConfigGeneral.qml:208
-#, fuzzy, kde-format
-#| msgid "Scale with Panel height"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel height"
 msgstr "ਪੈਨਲ ਦੀ ਉਚਾਈ ਨਾਲ ਸਕੇਲ ਕਰੋ"
 
 #: qml/ConfigGeneral.qml:209
-#, fuzzy, kde-format
-#| msgid "Scale with Panel width"
+#, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel width"
 msgstr "ਪੈਨਲ ਦੀ ਚੌੜਾਈ ਨਾਲ ਸਕੇਲ ਕਰੋ"
 
 #: qml/ConfigGeneral.qml:211
-#, fuzzy, kde-format
-#| msgctxt "The arrangement of system tray icons in the Panel"
-#| msgid "Panel icon size:"
+#, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon size:"
 msgstr "ਪੈਨਲ ਆਈਕਾਨ ਆਕਾਰ:"
@@ -171,18 +165,16 @@ msgid "Automatically set to Large when in Touch Mode"
 msgstr "ਜਦੋਂ ਟੱਚ ਮੋਡ ਹੋਵੇ ਤਾਂ ਆਪਣੇ-ਆਪ ਵੱਡੇ ਵਜੋਂ ਸੈੱਟ ਕਰੋ"
 
 #: qml/ConfigGeneral.qml:315
-#, fuzzy, kde-format
-#| msgid "Entries"
+#, kde-format
 msgctxt "@title:column"
 msgid "Entries"
 msgstr "ਐਂਟਰੀਆਂ"
 
 #: qml/ConfigGeneral.qml:319
-#, fuzzy, kde-format
-#| msgid "Always shown"
+#, kde-format
 msgctxt "@option:check, This is referring to system tray entries"
 msgid "Always show all"
-msgstr "ਹਮੇਸ਼ਾਂ ਵੇਖਾਇਆ ਜਾਂਦਾ ਹੈ"
+msgstr "ਹਮੇਸ਼ਾਂ ਸਭ ਨੂੰ ਵੇਖਾਓ"
 
 #: qml/ExpandedRepresentation.qml:60
 #, kde-format
@@ -230,7 +222,7 @@ msgstr "%1 ਚੀਜ਼ਾਂ ਨੂੰ %2 ਕਾਲਮਾਂ ਵਿੱਚ ਗਰ�
 #, kde-format
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
-msgstr ""
+msgstr "AILlmyjgGJP"
 
 #~ msgid "Always hidden"
 #~ msgstr "ਹਮੇਸ਼ਾਂ ਓਹਲੇ"
