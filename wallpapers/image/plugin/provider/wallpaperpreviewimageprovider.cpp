@@ -78,36 +78,26 @@ void WallpaperPreviewImageResponse::onPreviewGenerated(const KFileItem &item, co
         return;
     }
 
-    if (m_parts.size() == 1) {
-        m_preview = m_parts[0];
-    } else {
-        m_preview = QImage(m_parts[0].size(), QImage::Format_ARGB32_Premultiplied);
+    m_preview = std::move(m_parts[0]);
+
+    if (auto count = m_parts.size(); count > 1) {
+        m_preview.convertTo(QImage::Format_ARGB32_Premultiplied);
 
         const qreal deltaWidth = 0.15 * m_preview.width() / m_parts.size();
         QPainter painter(&m_preview);
-        for (const auto &[key, value] : std::as_const(m_parts).asKeyValueRange()) {
+        painter.setRenderHint(QPainter::Antialiasing);
+        for (int key = 1; key < count; ++key) {
             const int start = (key * m_preview.width()) / m_parts.size();
             const int end = ((key + 1) * m_preview.width()) / m_parts.size();
 
             QPainterPath clipPath;
-            if (key == 0) {
-                clipPath.moveTo(start, 0);
-                clipPath.lineTo(start, m_preview.height());
-            } else {
-                clipPath.moveTo(start + deltaWidth, 0);
-                clipPath.lineTo(start - deltaWidth, m_preview.height());
-            }
-
-            if (key == m_parts.size() - 1) {
-                clipPath.lineTo(end, m_preview.height());
-                clipPath.lineTo(end, 0);
-            } else {
-                clipPath.lineTo(end - deltaWidth, m_preview.height());
-                clipPath.lineTo(end + deltaWidth, 0);
-            }
+            clipPath.moveTo(start + deltaWidth, 0);
+            clipPath.lineTo(start - deltaWidth, m_preview.height());
+            clipPath.lineTo(end, m_preview.height());
+            clipPath.lineTo(end, 0);
 
             painter.setClipPath(clipPath);
-            painter.drawImage(m_preview.rect(), value, value.rect());
+            painter.drawImage(m_preview.rect(), m_parts[key]);
         }
     }
 
