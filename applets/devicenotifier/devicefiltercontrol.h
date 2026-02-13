@@ -24,7 +24,7 @@ class DeviceFilterControl : public QSortFilterProxyModel
     Q_PROPERTY(DevicesType filterType READ filterType WRITE setFilterType)
 
     Q_PROPERTY(qsizetype deviceCount READ default NOTIFY deviceCountChanged BINDABLE bindableDeviceCount)
-    Q_PROPERTY(qsizetype unmountableCount READ default NOTIFY unmountableCountChanged BINDABLE bindableUnmountableCount)
+    Q_PROPERTY(qsizetype ejectableCount READ default NOTIFY ejectableCountChanged BINDABLE bindableEjectableCount)
 
     Q_PROPERTY(QString lastUdi READ default NOTIFY lastUdiChanged BINDABLE bindableLastUdi)
     Q_PROPERTY(QString lastDescription READ default NOTIFY lastDescriptionChanged BINDABLE bindableLastDescription)
@@ -40,7 +40,7 @@ public:
 
     Q_ENUM(DevicesType)
 
-    Q_INVOKABLE void unmountAllRemovables();
+    Q_INVOKABLE void ejectAllRemovables();
     Q_INVOKABLE void dismissUsbDeviceAddedNotification();
 
     explicit DeviceFilterControl(QObject *parent = nullptr);
@@ -62,7 +62,7 @@ private:
     QBindable<bool> bindableLastDeviceAdded();
 
     QBindable<qsizetype> bindableDeviceCount();
-    QBindable<qsizetype> bindableUnmountableCount();
+    QBindable<qsizetype> bindableEjectableCount();
 
 Q_SIGNALS:
     void lastUdiChanged();
@@ -71,14 +71,14 @@ Q_SIGNALS:
     void lastDeviceAddedChanged();
 
     void deviceCountChanged();
-    void unmountableCountChanged();
+    void ejectableCountChanged();
 
 private Q_SLOTS:
     void onDeviceAdded(const QModelIndex &parent, int first, int last);
     void onDeviceRemoved(const QModelIndex &parent, int first, int last);
     void onModelReset();
 
-    void onDeviceActionUnmountableChanged(const QString &udi, bool status);
+    void onDeviceActionEjectableChanged(const QString &udi, bool status);
 
 private:
     void handleDeviceAdded(const QModelIndex &index);
@@ -88,13 +88,13 @@ private:
     Q_OBJECT_BINDABLE_PROPERTY(DeviceFilterControl, QString, m_lastIcon, &DeviceFilterControl::lastIconChanged)
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(DeviceFilterControl, bool, m_lastDeviceAdded, false, &DeviceFilterControl::lastDeviceAddedChanged)
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(DeviceFilterControl, qsizetype, m_deviceCount, 0, &DeviceFilterControl::deviceCountChanged)
-    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(DeviceFilterControl, qsizetype, m_unmountableCount, 0, &DeviceFilterControl::unmountableCountChanged)
+    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(DeviceFilterControl, qsizetype, m_ejectableCount, 0, &DeviceFilterControl::ejectableCountChanged)
 
     DevicesType m_filterType;
     bool m_isVisible;
     bool m_modelReset;
 
-    QSet<QString> m_unmountableDevices;
+    QSet<QString> m_ejectableDevices;
     QStack<QString> m_deviceOrder;
 
     std::shared_ptr<DeviceControl> m_deviceControl;

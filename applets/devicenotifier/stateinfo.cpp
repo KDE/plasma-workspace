@@ -48,7 +48,9 @@ StateInfo::StateInfo(const std::shared_ptr<StorageInfo> &storageInfo, QObject *p
             connect(access, &Solid::StorageAccess::accessibilityChanged, this, &StateInfo::setAccessibilityState);
             connect(access, &Solid::StorageAccess::setupRequested, this, &StateInfo::setMountingState);
             connect(access, &Solid::StorageAccess::setupDone, this, &StateInfo::setIdleState);
-            connect(access, &Solid::StorageAccess::teardownRequested, this, &StateInfo::setUnmountingState);
+            connect(access, &Solid::StorageAccess::unmountRequested, this, &StateInfo::setUnmountingState);
+            connect(access, &Solid::StorageAccess::unmountDone, this, &StateInfo::setIdleState);
+            connect(access, &Solid::StorageAccess::teardownRequested, this, &StateInfo::setEjectingState);
             connect(access, &Solid::StorageAccess::teardownDone, this, &StateInfo::setIdleState);
             if (access->canCheck()) {
                 connect(access, &Solid::StorageAccess::checkRequested, this, &StateInfo::setCheckingState);
@@ -164,6 +166,16 @@ void StateInfo::setUnmountingState(const QString &udi)
     Q_EMIT stateChanged(udi);
 }
 
+void StateInfo::setEjectingState(const QString &udi)
+{
+    qCDebug(APPLETS::DEVICENOTIFIER) << "State Info " << udi << " : state changed to Ejecting";
+
+    m_isBusy = true;
+    m_state = Ejecting;
+
+    Q_EMIT stateChanged(udi);
+}
+
 void StateInfo::setCheckingState(const QString &udi)
 {
     qCDebug(APPLETS::DEVICENOTIFIER) << "State Info " << udi << " : state changed to Checking";
@@ -198,7 +210,7 @@ void StateInfo::setNotPresentState(const QString &udi)
     // UnmountDone differs from NotPresent because it is triggered by
     // Solid::StorageAccess::teardownDone rather than by external removal.
     // So there is no need to update it if the state is UnmountDone.
-    if (m_state != UnmountDone && m_storageInfo->device().udi() == udi) {
+    if (m_state != EjectDone && m_storageInfo->device().udi() == udi) {
         qCDebug(APPLETS::DEVICENOTIFIER) << "State Info " << udi << " : state changed to NotPresent";
         m_isBusy = false;
         m_isMounted = false;
@@ -230,6 +242,11 @@ void StateInfo::setIdleState(Solid::ErrorType operationResult, QVariant operatio
         m_isMounted = access->isAccessible();
         qCDebug(APPLETS::DEVICENOTIFIER) << "State Info " << udi << " : Mount signal arrived. State changed : " << access->isAccessible();
         m_state = MountDone;
+    } else if (m_state == Ejecting) {
+        auto access = m_storageInfo->device().as<Solid::StorageAccess>();
+        m_isMounted = access->isAccessible();
+        qCDebug(APPLETS::DEVICENOTIFIER) << "State Info " << udi << " : Eject signal arrived. State changed : " << access->isAccessible();
+        m_state = EjectDone;
     } else if (m_state == Unmounting) {
         auto access = m_storageInfo->device().as<Solid::StorageAccess>();
         m_isMounted = access->isAccessible();

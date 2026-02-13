@@ -12,6 +12,8 @@
 #include <Solid/OpticalDrive>
 #include <Solid/PortableMediaPlayer>
 
+#include <KLocalizedString>
+
 UnmountAction::UnmountAction(const std::shared_ptr<StorageInfo> &storageInfo, const std::shared_ptr<StateInfo> &stateInfo, QObject *parent)
     : ActionInterface(storageInfo, stateInfo, parent)
 {
@@ -38,12 +40,12 @@ QString UnmountAction::name() const
 
 QString UnmountAction::icon() const
 {
-    return {};
+    return QStringLiteral("media-playback-stop");
 }
 
 QString UnmountAction::text() const
 {
-    return {};
+    return i18n("Unmount");
 }
 
 bool UnmountAction::isValid() const
@@ -54,20 +56,9 @@ bool UnmountAction::isValid() const
 void UnmountAction::triggered()
 {
     Solid::Device device = m_storageInfo->device();
-    if (device.is<Solid::OpticalDisc>()) {
-        auto *drive = device.as<Solid::OpticalDrive>();
-        if (!drive) {
-            drive = device.parent().as<Solid::OpticalDrive>();
-        }
-        if (drive) {
-            drive->eject();
-        }
-        return;
-    }
-
     auto *access = device.as<Solid::StorageAccess>();
     if (access && access->isAccessible()) {
-        access->teardown();
+        access->unmount();
     }
 }
 

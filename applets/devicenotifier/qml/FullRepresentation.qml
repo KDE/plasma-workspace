@@ -37,11 +37,11 @@ PlasmaExtras.Representation {
     collapseMarginsHint: true
 
     header: PlasmaExtras.PlasmoidHeading {
-        visible: !(Plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentDrawsPlasmoidHeading) && root.appletInterface.mountedRemovables > 1
+        visible: !(Plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentDrawsPlasmoidHeading) && root.model.ejectableCount > 1
         PlasmaComponents3.ToolButton {
-            id: unmountAll
+            id: ejectAll
             anchors.right: parent.right
-            visible: root.appletInterface.mountedRemovables > 1;
+            visible: root.model.ejectableCount > 1;
 
             icon.name: "media-eject"
             text: i18n("Remove All")
@@ -49,6 +49,10 @@ PlasmaExtras.Representation {
 
             PlasmaComponents3.ToolTip {
                 text: parent.Accessible.description
+            }
+
+            onClicked: {
+                root.model.ejectAllRemovables();
             }
         }
     }

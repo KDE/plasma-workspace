@@ -42,7 +42,7 @@ DeviceFilterControl::DeviceFilterControl(QObject *parent)
 
 DeviceFilterControl::~DeviceFilterControl() = default;
 
-void DeviceFilterControl::unmountAllRemovables()
+void DeviceFilterControl::ejectAllRemovables()
 {
     qCDebug(APPLETS::DEVICENOTIFIER) << "Device Filter Control: unmount all removables function invoked";
     for (int position = 0; position < rowCount(); ++position) {
@@ -50,8 +50,8 @@ void DeviceFilterControl::unmountAllRemovables()
         auto actionData = data(index, DeviceControl::Actions);
         if (!actionData.isNull()) {
             auto actions = qvariant_cast<ActionsInfo *>(actionData);
-            if (actions->isUnmountable()) {
-                actions->unmount();
+            if (actions->isEjectable()) {
+                actions->eject();
             }
         }
     }
@@ -92,9 +92,9 @@ QBindable<qsizetype> DeviceFilterControl::bindableDeviceCount()
     return &m_deviceCount;
 }
 
-QBindable<qsizetype> DeviceFilterControl::bindableUnmountableCount()
+QBindable<qsizetype> DeviceFilterControl::bindableEjectableCount()
 {
-    return &m_unmountableCount;
+    return &m_ejectableCount;
 }
 
 DeviceFilterControl::DevicesType DeviceFilterControl::filterType() const
@@ -216,18 +216,18 @@ void DeviceFilterControl::onDeviceRemoved(const QModelIndex &parent, int first, 
     if (m_filterType != Unremovable) {
         qCDebug(APPLETS::DEVICENOTIFIER) << "Device Filter Control: filter type is not Unremovable. updating unmountAll Action";
 
-        if (auto it = m_unmountableDevices.constFind(data(index, DeviceControl::Udi).toString()); it != m_unmountableDevices.constEnd()) {
+        if (auto it = m_ejectableDevices.constFind(data(index, DeviceControl::Udi).toString()); it != m_ejectableDevices.constEnd()) {
             qCDebug(APPLETS::DEVICENOTIFIER) << "Device Filter Control: remove device " << data(index, DeviceControl::Udi).toString()
                                              << " from unmountable devices";
-            m_unmountableDevices.erase(it);
+            m_ejectableDevices.erase(it);
         } else {
             qCDebug(APPLETS::DEVICENOTIFIER) << "Device Filter Control: device " << data(index, DeviceControl::Udi).toString()
                                              << "device is not unmountable. Skipping";
         }
     }
 
-    m_unmountableCount = m_unmountableDevices.count();
-    qCDebug(APPLETS::DEVICENOTIFIER) << "Device Filter Control: Unmountable count updated: " << m_unmountableCount.value();
+    m_ejectableCount = m_ejectableDevices.count();
+    qCDebug(APPLETS::DEVICENOTIFIER) << "Device Filter Control: Unmountable count updated: " << m_ejectableCount.value();
 
     if (m_lastUdi.value() == data(index, DeviceControl::Udi).toString()) {
         qCDebug(APPLETS::DEVICENOTIFIER) << "Device Filter Control: device " << data(index, DeviceControl::Udi).toString()
@@ -268,7 +268,7 @@ void DeviceFilterControl::onModelReset()
     qCDebug(APPLETS::DEVICENOTIFIER) << "Device Filter Control: modelResetSignal arrived. Begin resetting model";
 
     m_deviceOrder.clear();
-    m_unmountableDevices.clear();
+    m_ejectableDevices.clear();
 
     m_deviceCount = rowCount();
 
@@ -286,22 +286,22 @@ void DeviceFilterControl::onModelReset()
     qCDebug(APPLETS::DEVICENOTIFIER) << "Device Filter Control: modelResetSignal arrived. Resetting model finished";
 }
 
-void DeviceFilterControl::onDeviceActionUnmountableChanged(const QString &udi, bool status)
+void DeviceFilterControl::onDeviceActionEjectableChanged(const QString &udi, bool status)
 {
     qCDebug(APPLETS::DEVICENOTIFIER) << "Device Filter Control: DeviceActionUnmountable arrived for device" << udi;
     if (status) {
         qCDebug(APPLETS::DEVICENOTIFIER) << "Device Filter Control: device " << udi << "added to unmountable devices";
-        m_unmountableDevices.insert(udi);
+        m_ejectableDevices.insert(udi);
     } else {
-        if (auto it = m_unmountableDevices.constFind(udi); it != m_unmountableDevices.constEnd()) {
+        if (auto it = m_ejectableDevices.constFind(udi); it != m_ejectableDevices.constEnd()) {
             qCDebug(APPLETS::DEVICENOTIFIER) << "Device Filter Control: device " << udi << "removed from unmountable devices";
-            m_unmountableDevices.erase(it);
+            m_ejectableDevices.erase(it);
         }
     }
 
-    m_unmountableCount = m_unmountableDevices.count();
+    m_ejectableCount = m_ejectableDevices.count();
 
-    qCDebug(APPLETS::DEVICENOTIFIER) << "Device Filter Control: Unmountable count updated: " << m_unmountableCount.value();
+    qCDebug(APPLETS::DEVICENOTIFIER) << "Device Filter Control: Unmountable count updated: " << m_ejectableCount.value();
 }
 
 void DeviceFilterControl::handleDeviceAdded(const QModelIndex &index)
@@ -328,11 +328,11 @@ void DeviceFilterControl::handleDeviceAdded(const QModelIndex &index)
         auto actionData = data(index, DeviceControl::Actions);
         if (!actionData.isNull()) {
             auto actions = qvariant_cast<ActionsInfo *>(actionData);
-            connect(actions, &ActionsInfo::unmountActionIsValidChanged, this, &DeviceFilterControl::onDeviceActionUnmountableChanged);
-            if (actions->isUnmountable()) {
+            connect(actions, &ActionsInfo::ejectActionIsValidChanged, this, &DeviceFilterControl::onDeviceActionEjectableChanged);
+            if (actions->isEjectable()) {
                 qCDebug(APPLETS::DEVICENOTIFIER) << "Device Filter Control: add device " << data(index, DeviceControl::Udi).toString()
                                                  << " to unmountable devices";
-                m_unmountableDevices.insert(data(index, DeviceControl::Udi).toString());
+                m_ejectableDevices.insert(data(index, DeviceControl::Udi).toString());
             } else {
                 qCDebug(APPLETS::DEVICENOTIFIER) << "Device Filter Control: device " << data(index, DeviceControl::Udi).toString()
                                                  << "device is not unmountable. Skipping";
@@ -340,7 +340,7 @@ void DeviceFilterControl::handleDeviceAdded(const QModelIndex &index)
         }
     }
 
-    m_unmountableCount = m_unmountableDevices.count();
+    m_ejectableCount = m_ejectableDevices.count();
 }
 
 #include "moc_devicefiltercontrol.cpp"

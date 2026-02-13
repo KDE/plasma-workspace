@@ -112,7 +112,10 @@ void MessageInfo::onStateChanged()
             if (state == StateInfo::RepairDone) {
                 return i18n("Successfully repaired!");
             }
-            if (state == StateInfo::UnmountDone && m_stateInfo->isSafelyRemovable() && m_storageInfo->hasRemovableParent()) {
+            if (state == StateInfo::UnmountDone) {
+                return i18n("Successfully unmounted!");
+            }
+            if (state == StateInfo::EjectDone && m_stateInfo->isSafelyRemovable() && m_storageInfo->hasRemovableParent()) {
                 KNotification::event(QStringLiteral("safelyRemovable"),
                                      i18n("Device Status"),
                                      i18n("A device can now be safely removed"),
@@ -127,7 +130,9 @@ void MessageInfo::onStateChanged()
             switch (state) {
             case StateInfo::MountDone:
                 return i18n("You are not authorized to mount this device.");
-            case StateInfo::UnmountDone: {
+            case StateInfo::UnmountDone:
+                return i18n("You are not aothorized to unmount this device.");
+            case StateInfo::EjectDone: {
                 const Solid::Device &device = m_storageInfo->device();
                 if (device.is<Solid::OpticalDisc>()) {
                     return i18n("You are not authorized to eject this disc.");
@@ -148,7 +153,7 @@ void MessageInfo::onStateChanged()
             QString deviceUdi = m_storageInfo->device().udi();
             Solid::Device device = m_storageInfo->device();
 
-            if (state == StateInfo::UnmountDone && device.is<Solid::OpticalDisc>()) {
+            if (state == StateInfo::EjectDone && device.is<Solid::OpticalDisc>()) {
                 const auto discs = Solid::Device::listFromType(Solid::DeviceInterface::OpticalDisc);
                 for (const auto &disc : discs) {
                     if (disc.parentUdi() == m_storageInfo->device().udi()) {
@@ -175,7 +180,7 @@ void MessageInfo::onStateChanged()
                     message = i18np("One or more files on this device are opened in application \"%2\".",
                                     "One or more files on this device are opened in following applications: %2.",
                                     blockApps.size(),
-                                    blockApps.join(i18nc("separator in list of apps blocking device unmount", ", ")));
+                                    blockApps.join(i18nc("separator in list of apps blocking device unmount or eject", ", ")));
                 }
                 notify(message);
                 qCDebug(APPLETS::DEVICENOTIFIER) << "Message Info " << m_storageInfo->device().udi() << " : operation result: " << operationResult

@@ -57,9 +57,6 @@ PlasmoidItem {
 
     property bool itemClicked: false
     property int currentIndex: -1
-    property int mountedRemovables: 0
-
-    signal unmountAllRequested
 
     // QTBUG-50380: As soon as the item gets removed from the model, all of ListView's
     // properties (count, contentHeight) pretend the delegate doesn't exist anymore
@@ -121,8 +118,8 @@ PlasmoidItem {
     Plasmoid.contextualActions: [
         PlasmaCore.Action {
             text: i18n("Remove All")
-            visible: filterModel.unmountableCount > 0
-            onTriggered: filterModel.unmountAllRemovables()
+            visible: filterModel.ejectableCount > 0
+            onTriggered: filterModel.ejectAllRemovables()
         },
         PlasmaCore.Action {
             isSeparator: true

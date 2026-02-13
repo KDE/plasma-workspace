@@ -47,8 +47,8 @@ public:
     QVariant data(const QModelIndex &index, int role) const override;
     QHash<int, QByteArray> roleNames() const override;
 
-    bool isUnmountable() const;
-    void unmount();
+    bool isEjectable() const;
+    void eject();
 
 private:
     QString defaultActionName() const;
@@ -64,7 +64,7 @@ Q_SIGNALS:
     void defaultActionIconChanged(const QString &icon);
     void defaultActionTextChanged(const QString &text);
 
-    void unmountActionIsValidChanged(const QString &udi, bool status);
+    void ejectActionIsValidChanged(const QString &udi, bool status);
 
 private Q_SLOTS:
     void onPredicatesChanged(const QHash<QString, Solid::Predicate> &predicates);
@@ -76,7 +76,7 @@ private Q_SLOTS:
 private:
     bool m_isEmpty;
     ActionInterface *m_defaultAction;
-    ActionInterface *m_unmountAction;
+    ActionInterface *m_ejectAction;
     QList<ActionInterface *> m_actions;
     QHash<QString, std::pair<int, ActionInterface *>> m_notValidActions;
 

@@ -25,6 +25,7 @@ plasma_add_applet(org.kde.plasma.devicenotifier
         actions/unmountaction.cpp
         actions/openwithfilemanageraction.cpp
         actions/checkaction.cpp
+        actions/ejectaction.cpp
         RESOURCES
         main.xml
         GENERATE_APPLET_CLASS

@@ -32,6 +32,8 @@ public:
         MountDone,
         Unmounting,
         UnmountDone,
+        Ejecting,
+        EjectDone,
         Checking,
         CheckDone,
         Repairing,
@@ -71,6 +73,7 @@ private Q_SLOTS:
     void setAccessibilityState(bool isAccessible, const QString &udi);
     void setMountingState(const QString &udi);
     void setUnmountingState(const QString &udi);
+    void setEjectingState(const QString &udi);
     void setCheckingState(const QString &udi);
     void setRepairingState(const QString &udi);
     void setIdleState(Solid::ErrorType operationResult, QVariant operationInfo, const QString &udi);

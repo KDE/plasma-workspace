@@ -20,6 +20,7 @@
 
 #include <actions/checkaction.h>
 #include <actions/defaultaction.h>
+#include <actions/ejectaction.h>
 #include <actions/mountaction.h>
 #include <actions/mountandopenaction.h>
 #include <actions/openwithfilemanageraction.h>
@@ -35,7 +36,7 @@ ActionsInfo::ActionsInfo(const std::shared_ptr<StorageInfo> &storageInfo, const 
 
 {
     m_defaultAction = new MountAndOpenAction{m_storageInfo, stateInfo, this};
-    m_unmountAction = new UnmountAction{m_storageInfo, stateInfo, this};
+    m_ejectAction = new EjectAction{m_storageInfo, stateInfo, this};
 
     qCDebug(APPLETS::DEVICENOTIFIER) << "Actions Info " << m_storageInfo->device().udi() << " : Begin initializing";
 
@@ -43,7 +44,7 @@ ActionsInfo::ActionsInfo(const std::shared_ptr<StorageInfo> &storageInfo, const 
 
     connect(m_predicatesMonitor.get(), &PredicatesMonitor::predicatesChanged, this, &ActionsInfo::onPredicatesChanged);
 
-    connect(m_unmountAction, &ActionInterface::isValidChanged, this, &ActionsInfo::onIsActionValidChanged);
+    connect(m_ejectAction, &ActionInterface::isValidChanged, this, &ActionsInfo::onIsActionValidChanged);
 
     connect(m_defaultAction, &ActionInterface::iconChanged, this, &ActionsInfo::defaultActionIconChanged);
     connect(m_defaultAction, &ActionInterface::textChanged, this, &ActionsInfo::defaultActionTextChanged);
@@ -112,14 +113,14 @@ QHash<int, QByteArray> ActionsInfo::roleNames() const
     return roles;
 }
 
-bool ActionsInfo::isUnmountable() const
+bool ActionsInfo::isEjectable() const
 {
-    return m_unmountAction->isValid();
+    return m_ejectAction->isValid();
 }
 
-void ActionsInfo::unmount()
+void ActionsInfo::eject()
 {
-    m_unmountAction->triggered();
+    m_ejectAction->triggered();
 }
 
 void ActionsInfo::actionTriggered(const QString &name)
@@ -140,7 +141,15 @@ void ActionsInfo::actionTriggered(const QString &name)
 
 void ActionsInfo::addActions()
 {
-    ActionInterface *action = new CheckAction(m_storageInfo, m_stateInfo, this);
+    ActionInterface *action = new UnmountAction(m_storageInfo, m_stateInfo, this);
+    connect(action, &ActionInterface::isValidChanged, this, &ActionsInfo::onIsActionValidChanged);
+    if (action->isValid()) {
+        m_actions.append(action);
+    } else {
+        m_notValidActions[action->name()] = std::make_pair(m_actions.size(), action);
+    }
+
+    action = new CheckAction(m_storageInfo, m_stateInfo, this);
     connect(action, &ActionInterface::isValidChanged, this, &ActionsInfo::onIsActionValidChanged);
     if (action->isValid()) {
         m_actions.append(action);
@@ -258,8 +267,8 @@ void ActionsInfo::onIsActionValidChanged(const QString &name, bool status)
 {
     qCDebug(APPLETS::DEVICENOTIFIER) << "Actions Info " << m_storageInfo->device().udi() << " : "
                                      << "isActionValidChanged signal arrived for action " << name << " with status " << status;
-    if (name == u"Unmount") {
-        Q_EMIT unmountActionIsValidChanged(m_storageInfo->device().udi(), status);
+    if (name == u"Eject") {
+        Q_EMIT ejectActionIsValidChanged(m_storageInfo->device().udi(), status);
     } else if (status) {
         if (auto it = m_notValidActions.find(name); it != m_notValidActions.end()) {
             qCDebug(APPLETS::DEVICENOTIFIER) << "Actions Info " << m_storageInfo->device().udi() << " : "
