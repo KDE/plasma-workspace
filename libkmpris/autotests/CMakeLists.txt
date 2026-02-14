@@ -18,12 +18,11 @@ add_test(
     NAME mprisdeclarativetest_MultiplexerModel
     COMMAND python3 ${CMAKE_CURRENT_SOURCE_DIR}/mprisdeclarativetest.py "tst_MultiplexerModel.qml"
 )
-execute_process(COMMAND gcc -print-file-name=libasan.so OUTPUT_VARIABLE LIBASAN_PATH ECHO_OUTPUT_VARIABLE OUTPUT_STRIP_TRAILING_WHITESPACE)
 set_tests_properties(
     mprisdeclarativetest_Mpris2Model
     mprisdeclarativetest_MultiplexerModel
     PROPERTIES
-        ENVIRONMENT "LC_ALL=en_US.UTF-8;LD_PRELOAD=${LIBASAN_PATH};CMAKE_BINARY_DIR=${CMAKE_BINARY_DIR}/bin;QMLTEST_PATH=$<TARGET_FILE:${QT_CMAKE_EXPORT_NAMESPACE}::qmltestrunner>"
+        ENVIRONMENT "LC_ALL=en_US.UTF-8;CMAKE_BINARY_DIR=${CMAKE_BINARY_DIR}/bin;QMLTEST_PATH=$<TARGET_FILE:${QT_CMAKE_EXPORT_NAMESPACE}::qmltestrunner>"
 )
 
 if(WITH_X11)
