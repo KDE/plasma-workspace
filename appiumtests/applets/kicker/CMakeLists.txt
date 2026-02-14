@@ -3,7 +3,7 @@
 
 add_test(
     NAME kicker_favoritetest
-    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/favoritetest.py --failfast
+    COMMAND ${SELENIUM_WEBDRIVER_AT_SPI_RUN_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/favoritetest.py --failfast
 )
 execute_process(COMMAND gcc -print-file-name=libasan.so OUTPUT_VARIABLE LIBASAN_PATH ECHO_OUTPUT_VARIABLE OUTPUT_STRIP_TRAILING_WHITESPACE)
 set_tests_properties(kicker_favoritetest PROPERTIES
