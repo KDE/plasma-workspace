@@ -40,7 +40,7 @@ msgstr ""
 #: package/contents/ui/BatteryItem.qml:187
 #, kde-format
 msgid "Remaining Time:"
-msgstr ""
+msgstr "Am Fagtha:"
 
 #: package/contents/ui/BatteryItem.qml:192
 #, kde-format
@@ -156,7 +156,7 @@ msgstr "Taispeáin lucht an &chadhnra mar chéatadán"
 #: package/contents/ui/main.qml:171
 #, kde-format
 msgid "No Batteries Available"
-msgstr ""
+msgstr "Gach Cadhnra Ar Fáil"
 
 #: package/contents/ui/main.qml:177
 #, kde-format
@@ -168,7 +168,7 @@ msgstr ""
 #, kde-format
 msgctxt "remaining time left of battery usage - HH:MM"
 msgid "%1 remaining"
-msgstr ""
+msgstr "%1 fagtha"
 
 #: package/contents/ui/main.qml:182
 #, kde-format
@@ -227,10 +227,9 @@ msgid "Failed to activate %1 mode"
 msgstr ""
 
 #: package/contents/ui/main.qml:376
-#, fuzzy, kde-format
-#| msgid "Show charge &information"
+#, kde-format
 msgid "&Show Energy Information…"
-msgstr "Taispeáin eolas fao&in lucht"
+msgstr "Taispeáin eola&s faoin lucht"
 
 #: package/contents/ui/main.qml:378
 #, fuzzy, kde-format
