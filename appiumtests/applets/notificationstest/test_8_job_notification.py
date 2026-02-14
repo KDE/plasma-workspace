@@ -88,8 +88,6 @@ class TestJobNotification(NotificationsTestBase):
         wait = WebDriverWait(self.driver, 10, ignored_exceptions=(NoSuchElementException, WebDriverException))
 
         subprocess_env: dict[str, str] = os.environ.copy()
-        if "KDECI_BUILD" in os.environ:
-            subprocess_env["LD_PRELOAD"] = subprocess.check_output(["gcc", "-print-file-name=libasan.so"]).strip().decode(encoding="utf-8")
 
         # Capture stderr to a temporary file so we can include it in failure
         # messages when the subprocess exits unexpectedly (e.g. crashes).

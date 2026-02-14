@@ -27,7 +27,6 @@ class ClipboardDeadlockTest(unittest.TestCase):
         options.set_capability("app", f"python3 {os.path.join(os.path.dirname(os.path.abspath(__file__)), 'clipboardtest', 'deadlocktestwindow.py')}")
         options.set_capability("environ", {
             "QT_QPA_PLATFORM": "wayland" if os.getenv("TEST_WITH_KWIN_WAYLAND", "1") != "0" else "xcb",
-            "LD_PRELOAD": subprocess.check_output(["gcc", "-print-file-name=libasan.so"]).strip().decode(encoding="utf-8"),
         })
         options.set_capability("timeouts", {'implicit': 10000})
         cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', options=options)
