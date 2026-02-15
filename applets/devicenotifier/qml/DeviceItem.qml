@@ -96,9 +96,9 @@ PlasmaExtras.ExpandableListItem {
             return deviceItem.deviceMessage
         }
         if (deviceItem.deviceState === StateInfo.Checking) {
-            return i18nc("Accessing is a less technical word for Mounting; translation should be short and mean \'Currently mounting this device\'", "Checking…")
+            return i18nc("Translation should be short and mean \'Currently checking the device for filesystem errors\'", "Checking…")
         } else if (deviceItem.deviceState === StateInfo.Repairing) {
-            return i18nc("Accessing is a less technical word for Mounting; translation should be short and mean \'Currently mounting this device\'", "Repairing…")
+            return i18nc("Translation should be short and mean \'The storage device contains filesystem errors and is being repaired\'", "Repairing…")
         } else if (!deviceItem.deviceIsBusy) {
             if (deviceItem.deviceFreeSpace > 0 && deviceItem.deviceSize > 0) {
                 return i18nc("@info:status Free disk space", "%1 free of %2", deviceItem.deviceFreeSpaceText, deviceItem.deviceSizeText)
