@@ -142,9 +142,9 @@ class DeviceNotifierTest(dbusmock.DBusTestCase):
         mount_element.click()
         self.driver.find_element(AppiumBy.NAME, "Safely remove")
 
-    def test_4_unmount_device(self) -> None:
+    def test_4_eject_device(self) -> None:
         """
-        Tests the widget can unmount a device
+        Tests the widget can eject a device
         """
 
         expand_element = self.driver.find_element(AppiumBy.NAME, "Safely remove")
@@ -177,6 +177,27 @@ class DeviceNotifierTest(dbusmock.DBusTestCase):
 
         self.driver.find_element(by="description", value="Successfully repaired!")
         self.dbusmock.remove_mock_device("sdb1")
+
+    def test_7_unmount_device(self) -> None:
+        """
+        Tests the widget can unmount the device
+        """
+
+        self.dbusmock.add_mock_device("sda", 1, 1000000000, False)
+        expand_element = self.driver.find_element(AppiumBy.NAME, "Expand")
+        expand_element.click()
+
+        # Check that the device is still present after unmount
+        # and can be mounted and unmounted again.
+        for _ in range(2):
+            mount_element = self.driver.find_element(AppiumBy.NAME, "Mount")
+            mount_element.click()
+
+            unmount_element = self.driver.find_element(AppiumBy.NAME, "Unmount")
+            unmount_element.click()
+            self.driver.find_element(by="description", value="Successfully unmounted!")
+
+        self.dbusmock.remove_mock_device("sda1")
 
 if __name__ == '__main__':
     unittest.main()
