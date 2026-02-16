@@ -9,7 +9,7 @@ endif()
 
 add_test(
     NAME lockedtest
-    COMMAND ${SELENIUM_WEBDRIVER_AT_SPI_RUN_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/lockedtest.py
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/lockedtest.py
 )
 execute_process(COMMAND gcc -print-file-name=libasan.so OUTPUT_VARIABLE LIBASAN_PATH ECHO_OUTPUT_VARIABLE OUTPUT_STRIP_TRAILING_WHITESPACE)
 set_tests_properties(lockedtest PROPERTIES
