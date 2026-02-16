@@ -112,7 +112,7 @@ KCM.SimpleKCM {
             visible: false
             // One digit more than the theoretical maximum, because who knows
             // which digit is the widest in the current font anyway.
-            text: i18nc("Color temperature in Kelvin", "%1K", 99999)
+            text: i18nc("Color temperature in Kelvin", "%1 K", 99999)
             textFormat: Text.PlainText
         }
 
@@ -163,7 +163,7 @@ KCM.SimpleKCM {
                     }
                 }
                 QQC2.Label {
-                    text: i18nc("Color temperature in Kelvin", "%1K", tempSliderDay.value)
+                    text: i18nc("Color temperature in Kelvin", "%1 K", tempSliderDay.value)
                     textFormat: Text.PlainText
                     horizontalAlignment: Text.AlignRight
                     Layout.minimumWidth: sliderValueLabelMetrics.implicitWidth
@@ -227,7 +227,7 @@ KCM.SimpleKCM {
                     }
                 }
                 QQC2.Label {
-                    text: i18nc("Color temperature in Kelvin", "%1K", tempSliderNight.value)
+                    text: i18nc("Color temperature in Kelvin", "%1 K", tempSliderNight.value)
                     textFormat: Text.PlainText
                     horizontalAlignment: Text.AlignRight
                     Layout.minimumWidth: sliderValueLabelMetrics.implicitWidth
