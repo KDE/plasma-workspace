@@ -85,7 +85,7 @@ RuntimeDependencies:
     'plasma/milou': '@same'
 
 Options:
- ctest-arguments: '--repeat until-pass:5'
+ ctest-arguments: '-VV --stop-on-failure'
  use-ccache: True
  require-passing-tests-on: ['@all']
  clang-format-versions: [14, 18]
