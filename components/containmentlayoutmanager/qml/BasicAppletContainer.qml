@@ -260,6 +260,7 @@ ContainmentLayoutManager.AppletContainer {
                 // the mask as well
                 width: backgroundEffect.appletContainerScreenRect.width
                 height: backgroundEffect.appletContainerScreenRect.height
+                autoPaddingEnabled: false
 
                 blurEnabled: true
                 blur: 1
