@@ -71,6 +71,7 @@ Dependencies:
  - 'on': ['Linux']
    'require':
     'libraries/polkit-qt-1': '@latest-kf6'
+    'sdk/selenium-webdriver-at-spi': '@same'
     'third-party/packagekit-qt': '@latest'
 
 RuntimeDependencies:
@@ -78,7 +79,6 @@ RuntimeDependencies:
    'require':
     'network/kio-extras': '@latest-kf6'
     'plasma/kactivitymanagerd': '@same'
-    'sdk/selenium-webdriver-at-spi': '@same'
  - 'on': ['Linux', 'FreeBSD']
    'require':
     'frameworks/qqc2-desktop-style': '@latest-kf6'
