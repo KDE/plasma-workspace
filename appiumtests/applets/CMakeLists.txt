@@ -1,6 +1,8 @@
 # SPDX-FileCopyrightText: 2024 Fushan Wen <qydwhotmail@gmail.com>
 # SPDX-License-Identifier: BSD-3-Clause
 
+message("aaaaaaaaaaaaaaaaaaa" ${SELENIUM_WEBDRIVER_AT_SPI_RUN_PATH})
+
 add_test(
     NAME analogclocktest
     COMMAND ${SELENIUM_WEBDRIVER_AT_SPI_RUN_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/analogclocktest.py --failfast
