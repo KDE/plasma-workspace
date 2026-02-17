@@ -104,23 +104,7 @@ KCM.GridViewKCM {
                     {text: i18nc("@item:inlistbox filters displayed themes", "Color scheme compatible"), filter: Private.FilterProxyModel.ThemesFollowingColors}
                 ]
 
-                // HACK QQC2 doesn't support icons, so we just tamper with the desktop style ComboBox's background
-                // and inject a nice little filter icon.
-                Component.onCompleted: {
-                    if (!background || !background.hasOwnProperty("properties")) {
-                        // not a KQuickStyleItem
-                        return;
-                    }
-
-                    var props = background.properties || {};
-
-                    background.properties = Qt.binding(function() {
-                        var newProps = props;
-                        newProps.currentIcon = "view-filter";
-                        newProps.iconColor = Kirigami.Theme.textColor;
-                        return newProps;
-                    });
-                }
+                Kirigami.StyleHints.iconName: "view-filter"
             }
         }
     }
