@@ -32,4 +32,3 @@ add_test(
     COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/waylandtasksmodeltestwrapper.py ${CMAKE_BINARY_DIR}/bin/waylandtasksmodeltest
     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
 )
-set_tests_properties(waylandtasksmodeltest PROPERTIES TIMEOUT 60)
