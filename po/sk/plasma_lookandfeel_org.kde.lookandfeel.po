@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-10 00:45+0000\n"
+"POT-Creation-Date: 2026-02-17 00:47+0000\n"
 "PO-Revision-Date: 2024-06-21 15:41+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -78,25 +78,31 @@ msgstr[2] ""
 "%1 iných používateľov je aktuálne prihlásených. Ak bude počítač vypnutý "
 "alebo reštartovaný, títo používatelia môžu stratiť prácu."
 
-#: contents/logout/Logout.qml:186
+#: contents/logout/Logout.qml:188
+#, fuzzy, kde-format
+#| msgid "When restarted, the computer will enter the firmware setup screen."
+msgid "When restarted, the computer will enter UEFI firmware settings."
+msgstr "Po reštarte počítač zobrazí obrazovku s nastaveniami firmvéru."
+
+#: contents/logout/Logout.qml:190
 #, kde-format
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr "Po reštarte počítač zobrazí obrazovku s nastaveniami firmvéru."
 
-#: contents/logout/Logout.qml:199
+#: contents/logout/Logout.qml:205
 #, fuzzy, kde-format
 #| msgid "When restarted, the computer will enter the firmware setup screen."
 msgid "When restarted, the computer will enter the boot loader menu."
 msgstr "Po reštarte počítač zobrazí obrazovku s nastaveniami firmvéru."
 
-#: contents/logout/Logout.qml:212
+#: contents/logout/Logout.qml:218
 #, fuzzy, kde-format
 #| msgid "When restarted, the computer will enter the firmware setup screen."
 msgctxt "%1 is a boot loader entry"
 msgid "When restarted, the computer will switch to %1."
 msgstr "Po reštarte počítač zobrazí obrazovku s nastaveniami firmvéru."
 
-#: contents/logout/Logout.qml:234
+#: contents/logout/Logout.qml:240
 #, fuzzy, kde-format
 #| msgctxt "Suspend to RAM"
 #| msgid "Sleep"
@@ -104,7 +110,7 @@ msgctxt "Suspend to RAM"
 msgid "Slee&p"
 msgstr "Uspať"
 
-#: contents/logout/Logout.qml:235
+#: contents/logout/Logout.qml:241
 #, fuzzy, kde-format
 #| msgctxt "Suspend to RAM"
 #| msgid "Sleep Now"
@@ -112,19 +118,19 @@ msgctxt "Suspend to RAM"
 msgid "Slee&p Now"
 msgstr "Uspať teraz"
 
-#: contents/logout/Logout.qml:244
+#: contents/logout/Logout.qml:250
 #, fuzzy, kde-format
 #| msgid "Hibernate"
 msgid "&Hibernate"
 msgstr "Hibernovať"
 
-#: contents/logout/Logout.qml:245
+#: contents/logout/Logout.qml:251
 #, fuzzy, kde-format
 #| msgid "Hibernate Now"
 msgid "&Hibernate Now"
 msgstr "Hibernovať teraz"
 
-#: contents/logout/Logout.qml:256
+#: contents/logout/Logout.qml:262
 #, fuzzy, kde-format
 #| msgctxt "@action:button Keep short"
 #| msgid "Install Updates & Restart"
@@ -132,19 +138,19 @@ msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
 msgstr "Inštalovať aktualizácie a reštartovať"
 
-#: contents/logout/Logout.qml:258 contents/logout/Logout.qml:277
+#: contents/logout/Logout.qml:264 contents/logout/Logout.qml:283
 #, fuzzy, kde-format
 #| msgid "Restart"
 msgid "&Restart"
 msgstr "Reštartovať"
 
-#: contents/logout/Logout.qml:259 contents/logout/Logout.qml:278
+#: contents/logout/Logout.qml:265 contents/logout/Logout.qml:284
 #, fuzzy, kde-format
 #| msgid "Restart Now"
 msgid "&Restart Now"
 msgstr "Reštartovať teraz"
 
-#: contents/logout/Logout.qml:291
+#: contents/logout/Logout.qml:297
 #, fuzzy, kde-format
 #| msgctxt "@action:button Keep short"
 #| msgid "Install Updates & Restart Now"
@@ -152,31 +158,31 @@ msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
 msgstr "Inštalovať aktualizácie a reštartovať teraz"
 
-#: contents/logout/Logout.qml:293 contents/logout/Logout.qml:312
+#: contents/logout/Logout.qml:299 contents/logout/Logout.qml:318
 #, fuzzy, kde-format
 #| msgid "Shut Down"
 msgid "&Shut Down"
 msgstr "Vypnúť"
 
-#: contents/logout/Logout.qml:294 contents/logout/Logout.qml:313
+#: contents/logout/Logout.qml:300 contents/logout/Logout.qml:319
 #, fuzzy, kde-format
 #| msgid "Shut Down Now"
 msgid "&Shut Down Now"
 msgstr "Vypnúť teraz"
 
-#: contents/logout/Logout.qml:325
+#: contents/logout/Logout.qml:331
 #, fuzzy, kde-format
 #| msgid "Log Out"
 msgid "&Log Out"
 msgstr "Odhlásiť sa"
 
-#: contents/logout/Logout.qml:326
+#: contents/logout/Logout.qml:332
 #, fuzzy, kde-format
 #| msgid "Log Out Now"
 msgid "&Log Out Now"
 msgstr "Odhlásiť sa teraz"
 
-#: contents/logout/Logout.qml:336
+#: contents/logout/Logout.qml:342
 #, fuzzy, kde-format
 #| msgid "Cancel"
 msgid "&Cancel"

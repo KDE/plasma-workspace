@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-10 00:45+0000\n"
+"POT-Creation-Date: 2026-02-17 00:47+0000\n"
 "PO-Revision-Date: 2026-01-11 19:45+0100\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -71,87 +71,93 @@ msgstr[1] ""
 "%1 weitere Benutzer sind noch angemeldet. Wenn der Rechner heruntergefahren "
 "oder neu gestartet wird, kann ihre Arbeit verlorengehen."
 
-#: contents/logout/Logout.qml:186
+#: contents/logout/Logout.qml:188
+#, fuzzy, kde-format
+#| msgid "When restarted, the computer will enter the firmware setup screen."
+msgid "When restarted, the computer will enter UEFI firmware settings."
+msgstr "Beim Neustart wird der Dialog für Firmware-Einrichtung angezeigt."
+
+#: contents/logout/Logout.qml:190
 #, kde-format
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr "Beim Neustart wird der Dialog für Firmware-Einrichtung angezeigt."
 
-#: contents/logout/Logout.qml:199
+#: contents/logout/Logout.qml:205
 #, kde-format
 msgid "When restarted, the computer will enter the boot loader menu."
 msgstr "Beim Neustart wird der Dialog für Bootloader-Einrichtung angezeigt."
 
-#: contents/logout/Logout.qml:212
+#: contents/logout/Logout.qml:218
 #, kde-format
 msgctxt "%1 is a boot loader entry"
 msgid "When restarted, the computer will switch to %1."
 msgstr "Beim Neustart wird der Computer zu „%1“ wechseln."
 
-#: contents/logout/Logout.qml:234
+#: contents/logout/Logout.qml:240
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p"
 msgstr "&Standby-Modus"
 
-#: contents/logout/Logout.qml:235
+#: contents/logout/Logout.qml:241
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p Now"
 msgstr "Jetzt in den &Standby-Modus wechseln"
 
-#: contents/logout/Logout.qml:244
+#: contents/logout/Logout.qml:250
 #, kde-format
 msgid "&Hibernate"
 msgstr "&Ruhezustand"
 
-#: contents/logout/Logout.qml:245
+#: contents/logout/Logout.qml:251
 #, kde-format
 msgid "&Hibernate Now"
 msgstr "Jetzt in &Ruhezustand versetzen"
 
-#: contents/logout/Logout.qml:256
+#: contents/logout/Logout.qml:262
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
 msgstr "Aktualisierungen installieren und neu starten"
 
-#: contents/logout/Logout.qml:258 contents/logout/Logout.qml:277
+#: contents/logout/Logout.qml:264 contents/logout/Logout.qml:283
 #, kde-format
 msgid "&Restart"
 msgstr "&Neu starten"
 
-#: contents/logout/Logout.qml:259 contents/logout/Logout.qml:278
+#: contents/logout/Logout.qml:265 contents/logout/Logout.qml:284
 #, kde-format
 msgid "&Restart Now"
 msgstr "Jetzt &neu starten"
 
-#: contents/logout/Logout.qml:291
+#: contents/logout/Logout.qml:297
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
 msgstr "Aktualisierungen installieren und herunterfahren"
 
-#: contents/logout/Logout.qml:293 contents/logout/Logout.qml:312
+#: contents/logout/Logout.qml:299 contents/logout/Logout.qml:318
 #, kde-format
 msgid "&Shut Down"
 msgstr "&Herunterfahren"
 
-#: contents/logout/Logout.qml:294 contents/logout/Logout.qml:313
+#: contents/logout/Logout.qml:300 contents/logout/Logout.qml:319
 #, kde-format
 msgid "&Shut Down Now"
 msgstr "Jetzt &herunterfahren"
 
-#: contents/logout/Logout.qml:325
+#: contents/logout/Logout.qml:331
 #, kde-format
 msgid "&Log Out"
 msgstr "&Abmelden"
 
-#: contents/logout/Logout.qml:326
+#: contents/logout/Logout.qml:332
 #, kde-format
 msgid "&Log Out Now"
 msgstr "Jetzt &abmelden"
 
-#: contents/logout/Logout.qml:336
+#: contents/logout/Logout.qml:342
 #, kde-format
 msgid "&Cancel"
 msgstr "&Abbrechen"

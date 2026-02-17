@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-10 00:45+0000\n"
+"POT-Creation-Date: 2026-02-17 00:47+0000\n"
 "PO-Revision-Date: 2020-10-08 15:00+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -68,25 +68,31 @@ msgstr[1] ""
 "Praegu on veel %1 kasutajat sisse logitud. Kui arvuti seisatakse või "
 "taaskäivitatakse, võivad need kasutajad oma töö tulemustest ilma jääda"
 
-#: contents/logout/Logout.qml:186
+#: contents/logout/Logout.qml:188
+#, fuzzy, kde-format
+#| msgid "When restarted, the computer will enter the firmware setup screen."
+msgid "When restarted, the computer will enter UEFI firmware settings."
+msgstr "Taaskäivitamisel avab arvuti püsivara seadistamise ekraani."
+
+#: contents/logout/Logout.qml:190
 #, kde-format
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr "Taaskäivitamisel avab arvuti püsivara seadistamise ekraani."
 
-#: contents/logout/Logout.qml:199
+#: contents/logout/Logout.qml:205
 #, fuzzy, kde-format
 #| msgid "When restarted, the computer will enter the firmware setup screen."
 msgid "When restarted, the computer will enter the boot loader menu."
 msgstr "Taaskäivitamisel avab arvuti püsivara seadistamise ekraani."
 
-#: contents/logout/Logout.qml:212
+#: contents/logout/Logout.qml:218
 #, fuzzy, kde-format
 #| msgid "When restarted, the computer will enter the firmware setup screen."
 msgctxt "%1 is a boot loader entry"
 msgid "When restarted, the computer will switch to %1."
 msgstr "Taaskäivitamisel avab arvuti püsivara seadistamise ekraani."
 
-#: contents/logout/Logout.qml:234
+#: contents/logout/Logout.qml:240
 #, fuzzy, kde-format
 #| msgctxt "Suspend to RAM"
 #| msgid "Sleep"
@@ -94,7 +100,7 @@ msgctxt "Suspend to RAM"
 msgid "Slee&p"
 msgstr "Unne"
 
-#: contents/logout/Logout.qml:235
+#: contents/logout/Logout.qml:241
 #, fuzzy, kde-format
 #| msgctxt "Suspend to RAM"
 #| msgid "Sleep"
@@ -102,67 +108,67 @@ msgctxt "Suspend to RAM"
 msgid "Slee&p Now"
 msgstr "Unne"
 
-#: contents/logout/Logout.qml:244
+#: contents/logout/Logout.qml:250
 #, fuzzy, kde-format
 #| msgid "Hibernate"
 msgid "&Hibernate"
 msgstr "Talveunne"
 
-#: contents/logout/Logout.qml:245
+#: contents/logout/Logout.qml:251
 #, fuzzy, kde-format
 #| msgid "Hibernate"
 msgid "&Hibernate Now"
 msgstr "Talveunne"
 
-#: contents/logout/Logout.qml:256
+#: contents/logout/Logout.qml:262
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
 msgstr ""
 
-#: contents/logout/Logout.qml:258 contents/logout/Logout.qml:277
+#: contents/logout/Logout.qml:264 contents/logout/Logout.qml:283
 #, fuzzy, kde-format
 #| msgid "Restart"
 msgid "&Restart"
 msgstr "Taaskäivita"
 
-#: contents/logout/Logout.qml:259 contents/logout/Logout.qml:278
+#: contents/logout/Logout.qml:265 contents/logout/Logout.qml:284
 #, fuzzy, kde-format
 #| msgid "Restart"
 msgid "&Restart Now"
 msgstr "Taaskäivita"
 
-#: contents/logout/Logout.qml:291
+#: contents/logout/Logout.qml:297
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
 msgstr ""
 
-#: contents/logout/Logout.qml:293 contents/logout/Logout.qml:312
+#: contents/logout/Logout.qml:299 contents/logout/Logout.qml:318
 #, fuzzy, kde-format
 #| msgid "Shut Down"
 msgid "&Shut Down"
 msgstr "Seiska"
 
-#: contents/logout/Logout.qml:294 contents/logout/Logout.qml:313
+#: contents/logout/Logout.qml:300 contents/logout/Logout.qml:319
 #, fuzzy, kde-format
 #| msgid "Shut Down"
 msgid "&Shut Down Now"
 msgstr "Seiska"
 
-#: contents/logout/Logout.qml:325
+#: contents/logout/Logout.qml:331
 #, fuzzy, kde-format
 #| msgid "Log Out"
 msgid "&Log Out"
 msgstr "Logi välja"
 
-#: contents/logout/Logout.qml:326
+#: contents/logout/Logout.qml:332
 #, fuzzy, kde-format
 #| msgid "Log Out"
 msgid "&Log Out Now"
 msgstr "Logi välja"
 
-#: contents/logout/Logout.qml:336
+#: contents/logout/Logout.qml:342
 #, fuzzy, kde-format
 #| msgid "Cancel"
 msgid "&Cancel"

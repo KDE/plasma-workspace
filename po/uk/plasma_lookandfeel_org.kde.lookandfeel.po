@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-10 00:45+0000\n"
+"POT-Creation-Date: 2026-02-17 00:47+0000\n"
 "PO-Revision-Date: 2026-01-12 03:20+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -102,89 +102,97 @@ msgstr[3] ""
 "Зараз у системі працює ще один користувач. Якщо вимкнути або перезавантажити "
 "комп'ютер, ці користувачі можуть втратити результати їхньої роботи."
 
-#: contents/logout/Logout.qml:186
+#: contents/logout/Logout.qml:188
+#, fuzzy, kde-format
+#| msgid "When restarted, the computer will enter the firmware setup screen."
+msgid "When restarted, the computer will enter UEFI firmware settings."
+msgstr ""
+"Під час перезапуску комп'ютер запустить засіб налаштовування мікропрограми "
+"завантаження."
+
+#: contents/logout/Logout.qml:190
 #, kde-format
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr ""
 "Під час перезапуску комп'ютер запустить засіб налаштовування мікропрограми "
 "завантаження."
 
-#: contents/logout/Logout.qml:199
+#: contents/logout/Logout.qml:205
 #, kde-format
 msgid "When restarted, the computer will enter the boot loader menu."
 msgstr "Під час перезапуску комп'ютер відкриє меню завантажувача."
 
-#: contents/logout/Logout.qml:212
+#: contents/logout/Logout.qml:218
 #, kde-format
 msgctxt "%1 is a boot loader entry"
 msgid "When restarted, the computer will switch to %1."
 msgstr "Під час перезапуску комп'ютер перемкнеться на %1."
 
-#: contents/logout/Logout.qml:234
+#: contents/logout/Logout.qml:240
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p"
 msgstr "Приз&упинити"
 
-#: contents/logout/Logout.qml:235
+#: contents/logout/Logout.qml:241
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p Now"
 msgstr "Приз&упинити зараз"
 
-#: contents/logout/Logout.qml:244
+#: contents/logout/Logout.qml:250
 #, kde-format
 msgid "&Hibernate"
 msgstr "&Приспати"
 
-#: contents/logout/Logout.qml:245
+#: contents/logout/Logout.qml:251
 #, kde-format
 msgid "&Hibernate Now"
 msgstr "&Приспати зараз"
 
-#: contents/logout/Logout.qml:256
+#: contents/logout/Logout.qml:262
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
 msgstr "Встановити оновлення і перезавантажити"
 
-#: contents/logout/Logout.qml:258 contents/logout/Logout.qml:277
+#: contents/logout/Logout.qml:264 contents/logout/Logout.qml:283
 #, kde-format
 msgid "&Restart"
 msgstr "П&ерезапустити"
 
-#: contents/logout/Logout.qml:259 contents/logout/Logout.qml:278
+#: contents/logout/Logout.qml:265 contents/logout/Logout.qml:284
 #, kde-format
 msgid "&Restart Now"
 msgstr "П&ерезапустити зараз"
 
-#: contents/logout/Logout.qml:291
+#: contents/logout/Logout.qml:297
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
 msgstr "Встановити оновлення і вимкнути"
 
-#: contents/logout/Logout.qml:293 contents/logout/Logout.qml:312
+#: contents/logout/Logout.qml:299 contents/logout/Logout.qml:318
 #, kde-format
 msgid "&Shut Down"
 msgstr "Ви&мкнути"
 
-#: contents/logout/Logout.qml:294 contents/logout/Logout.qml:313
+#: contents/logout/Logout.qml:300 contents/logout/Logout.qml:319
 #, kde-format
 msgid "&Shut Down Now"
 msgstr "Ви&мкнути зараз"
 
-#: contents/logout/Logout.qml:325
+#: contents/logout/Logout.qml:331
 #, kde-format
 msgid "&Log Out"
 msgstr "Ви&йти"
 
-#: contents/logout/Logout.qml:326
+#: contents/logout/Logout.qml:332
 #, kde-format
 msgid "&Log Out Now"
 msgstr "Ви&йти зараз"
 
-#: contents/logout/Logout.qml:336
+#: contents/logout/Logout.qml:342
 #, kde-format
 msgid "&Cancel"
 msgstr "&Скасувати"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-10 00:45+0000\n"
+"POT-Creation-Date: 2026-02-17 00:47+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -59,87 +59,93 @@ msgid_plural ""
 msgstr[0] ""
 "其他 %1 位用户已经登录。如果计算机关机或重启，其他用户可能会丢失数据。"
 
-#: contents/logout/Logout.qml:186
+#: contents/logout/Logout.qml:188
+#, fuzzy, kde-format
+#| msgid "When restarted, the computer will enter the firmware setup screen."
+msgid "When restarted, the computer will enter UEFI firmware settings."
+msgstr "重新启动时，电脑将进入固件设置界面。"
+
+#: contents/logout/Logout.qml:190
 #, kde-format
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr "重新启动时，电脑将进入固件设置界面。"
 
-#: contents/logout/Logout.qml:199
+#: contents/logout/Logout.qml:205
 #, kde-format
 msgid "When restarted, the computer will enter the boot loader menu."
 msgstr "重新启动时，电脑将进入引导加载程序菜单。"
 
-#: contents/logout/Logout.qml:212
+#: contents/logout/Logout.qml:218
 #, kde-format
 msgctxt "%1 is a boot loader entry"
 msgid "When restarted, the computer will switch to %1."
 msgstr "重启后，计算机将切换到 %1。"
 
-#: contents/logout/Logout.qml:234
+#: contents/logout/Logout.qml:240
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p"
 msgstr "睡眠(&P)"
 
-#: contents/logout/Logout.qml:235
+#: contents/logout/Logout.qml:241
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p Now"
 msgstr "立即睡眠(&P)"
 
-#: contents/logout/Logout.qml:244
+#: contents/logout/Logout.qml:250
 #, kde-format
 msgid "&Hibernate"
 msgstr "休眠(&H)"
 
-#: contents/logout/Logout.qml:245
+#: contents/logout/Logout.qml:251
 #, kde-format
 msgid "&Hibernate Now"
 msgstr "立即休眠(&H)"
 
-#: contents/logout/Logout.qml:256
+#: contents/logout/Logout.qml:262
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
 msgstr "安装更新并重启"
 
-#: contents/logout/Logout.qml:258 contents/logout/Logout.qml:277
+#: contents/logout/Logout.qml:264 contents/logout/Logout.qml:283
 #, kde-format
 msgid "&Restart"
 msgstr "重启(&R)"
 
-#: contents/logout/Logout.qml:259 contents/logout/Logout.qml:278
+#: contents/logout/Logout.qml:265 contents/logout/Logout.qml:284
 #, kde-format
 msgid "&Restart Now"
 msgstr "立即重启(&R)"
 
-#: contents/logout/Logout.qml:291
+#: contents/logout/Logout.qml:297
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
 msgstr "安装更新并关机"
 
-#: contents/logout/Logout.qml:293 contents/logout/Logout.qml:312
+#: contents/logout/Logout.qml:299 contents/logout/Logout.qml:318
 #, kde-format
 msgid "&Shut Down"
 msgstr "关闭(&S)"
 
-#: contents/logout/Logout.qml:294 contents/logout/Logout.qml:313
+#: contents/logout/Logout.qml:300 contents/logout/Logout.qml:319
 #, kde-format
 msgid "&Shut Down Now"
 msgstr "立即关机(&S)"
 
-#: contents/logout/Logout.qml:325
+#: contents/logout/Logout.qml:331
 #, kde-format
 msgid "&Log Out"
 msgstr "注销(&L)"
 
-#: contents/logout/Logout.qml:326
+#: contents/logout/Logout.qml:332
 #, kde-format
 msgid "&Log Out Now"
 msgstr "立即注销(&L)"
 
-#: contents/logout/Logout.qml:336
+#: contents/logout/Logout.qml:342
 #, kde-format
 msgid "&Cancel"
 msgstr "取消(&C)"

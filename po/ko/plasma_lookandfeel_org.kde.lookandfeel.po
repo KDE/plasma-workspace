@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-10 00:45+0000\n"
+"POT-Creation-Date: 2026-02-17 00:47+0000\n"
 "PO-Revision-Date: 2026-02-03 23:34+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -60,87 +60,93 @@ msgstr[0] ""
 "다른 사용자 %1명이 로그인되어 있습니다. 컴퓨터를 끄거나 다시 시작하면 다음 사"
 "용자의 작업이 손실됩니다."
 
-#: contents/logout/Logout.qml:186
+#: contents/logout/Logout.qml:188
+#, fuzzy, kde-format
+#| msgid "When restarted, the computer will enter the firmware setup screen."
+msgid "When restarted, the computer will enter UEFI firmware settings."
+msgstr "컴퓨터를 다시 시작하면 펌웨어 설정 화면으로 진입합니다."
+
+#: contents/logout/Logout.qml:190
 #, kde-format
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr "컴퓨터를 다시 시작하면 펌웨어 설정 화면으로 진입합니다."
 
-#: contents/logout/Logout.qml:199
+#: contents/logout/Logout.qml:205
 #, kde-format
 msgid "When restarted, the computer will enter the boot loader menu."
 msgstr "컴퓨터를 다시 시작하면 부트 로더 메뉴 화면으로 진입합니다."
 
-#: contents/logout/Logout.qml:212
+#: contents/logout/Logout.qml:218
 #, kde-format
 msgctxt "%1 is a boot loader entry"
 msgid "When restarted, the computer will switch to %1."
 msgstr "컴퓨터를 다시 시작하면 %1(으)로 전환합니다."
 
-#: contents/logout/Logout.qml:234
+#: contents/logout/Logout.qml:240
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p"
 msgstr "대기 모드(&P)"
 
-#: contents/logout/Logout.qml:235
+#: contents/logout/Logout.qml:241
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p Now"
 msgstr "지금 대기 모드로 전환(&P)"
 
-#: contents/logout/Logout.qml:244
+#: contents/logout/Logout.qml:250
 #, kde-format
 msgid "&Hibernate"
 msgstr "최대 절전 모드(&H)"
 
-#: contents/logout/Logout.qml:245
+#: contents/logout/Logout.qml:251
 #, kde-format
 msgid "&Hibernate Now"
 msgstr "지금 최대 절전 모드로 전환(&H)"
 
-#: contents/logout/Logout.qml:256
+#: contents/logout/Logout.qml:262
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
 msgstr "업데이트 설치 후 다시 시작"
 
-#: contents/logout/Logout.qml:258 contents/logout/Logout.qml:277
+#: contents/logout/Logout.qml:264 contents/logout/Logout.qml:283
 #, kde-format
 msgid "&Restart"
 msgstr "다시 시작(&R)"
 
-#: contents/logout/Logout.qml:259 contents/logout/Logout.qml:278
+#: contents/logout/Logout.qml:265 contents/logout/Logout.qml:284
 #, kde-format
 msgid "&Restart Now"
 msgstr "지금 다시 시작(&R)"
 
-#: contents/logout/Logout.qml:291
+#: contents/logout/Logout.qml:297
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
 msgstr "업데이트 설치 후 컴퓨터 끄기"
 
-#: contents/logout/Logout.qml:293 contents/logout/Logout.qml:312
+#: contents/logout/Logout.qml:299 contents/logout/Logout.qml:318
 #, kde-format
 msgid "&Shut Down"
 msgstr "컴퓨터 끄기(&S)"
 
-#: contents/logout/Logout.qml:294 contents/logout/Logout.qml:313
+#: contents/logout/Logout.qml:300 contents/logout/Logout.qml:319
 #, kde-format
 msgid "&Shut Down Now"
 msgstr "지금 컴퓨터 끄기(&S)"
 
-#: contents/logout/Logout.qml:325
+#: contents/logout/Logout.qml:331
 #, kde-format
 msgid "&Log Out"
 msgstr "로그아웃(&L)"
 
-#: contents/logout/Logout.qml:326
+#: contents/logout/Logout.qml:332
 #, kde-format
 msgid "&Log Out Now"
 msgstr "지금 로그아웃(&L)"
 
-#: contents/logout/Logout.qml:336
+#: contents/logout/Logout.qml:342
 #, kde-format
 msgid "&Cancel"
 msgstr "취소(&C)"

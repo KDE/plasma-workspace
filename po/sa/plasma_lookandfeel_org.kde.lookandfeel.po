@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-10 00:45+0000\n"
+"POT-Creation-Date: 2026-02-17 00:47+0000\n"
 "PO-Revision-Date: 2024-12-20 12:26+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -69,24 +69,30 @@ msgstr[1] ""
 "%1 अन्ये उपयोक्तारः सम्प्रति प्रवेशं कृतवन्तः यदि सङ्गणकं निरुद्धं वा पुनः आरब्धं वा तर्हि ते "
 "उपयोक्तारः कार्यं नष्टुं शक्नुवन्ति ।"
 
-#: contents/logout/Logout.qml:186
+#: contents/logout/Logout.qml:188
+#, fuzzy, kde-format
+#| msgid "When restarted, the computer will enter the firmware setup screen."
+msgid "When restarted, the computer will enter UEFI firmware settings."
+msgstr "पुनः आरभ्यते सति सङ्गणकः फर्मवेयर सेटअप स्क्रीन् मध्ये प्रविशति ।"
+
+#: contents/logout/Logout.qml:190
 #, kde-format
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr "पुनः आरभ्यते सति सङ्गणकः फर्मवेयर सेटअप स्क्रीन् मध्ये प्रविशति ।"
 
-#: contents/logout/Logout.qml:199
+#: contents/logout/Logout.qml:205
 #, kde-format
 msgid "When restarted, the computer will enter the boot loader menu."
 msgstr "पुनः आरभ्यते सति सङ्गणकः बूट् लोडर् मेन्यू मध्ये प्रविशति ।"
 
-#: contents/logout/Logout.qml:212
+#: contents/logout/Logout.qml:218
 #, fuzzy, kde-format
 #| msgid "When restarted, the computer will enter the boot loader menu."
 msgctxt "%1 is a boot loader entry"
 msgid "When restarted, the computer will switch to %1."
 msgstr "पुनः आरभ्यते सति सङ्गणकः बूट् लोडर् मेन्यू मध्ये प्रविशति ।"
 
-#: contents/logout/Logout.qml:234
+#: contents/logout/Logout.qml:240
 #, fuzzy, kde-format
 #| msgctxt "Suspend to RAM"
 #| msgid "Sleep"
@@ -94,7 +100,7 @@ msgctxt "Suspend to RAM"
 msgid "Slee&p"
 msgstr "शयनं करोतु"
 
-#: contents/logout/Logout.qml:235
+#: contents/logout/Logout.qml:241
 #, fuzzy, kde-format
 #| msgctxt "Suspend to RAM"
 #| msgid "Sleep Now"
@@ -102,67 +108,67 @@ msgctxt "Suspend to RAM"
 msgid "Slee&p Now"
 msgstr "अधुना निद्रातु"
 
-#: contents/logout/Logout.qml:244
+#: contents/logout/Logout.qml:250
 #, fuzzy, kde-format
 #| msgid "Hibernate"
 msgid "&Hibernate"
 msgstr "शीतनिद्रा"
 
-#: contents/logout/Logout.qml:245
+#: contents/logout/Logout.qml:251
 #, fuzzy, kde-format
 #| msgid "Hibernate Now"
 msgid "&Hibernate Now"
 msgstr "अधुना हाइबरनेटं कुर्वन्तु"
 
-#: contents/logout/Logout.qml:256
+#: contents/logout/Logout.qml:262
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
 msgstr "Updates संस्थाप्य पुनः आरम्भं कुर्वन्तु"
 
-#: contents/logout/Logout.qml:258 contents/logout/Logout.qml:277
+#: contents/logout/Logout.qml:264 contents/logout/Logout.qml:283
 #, fuzzy, kde-format
 #| msgid "Restart"
 msgid "&Restart"
 msgstr "पुनः आरभत"
 
-#: contents/logout/Logout.qml:259 contents/logout/Logout.qml:278
+#: contents/logout/Logout.qml:265 contents/logout/Logout.qml:284
 #, fuzzy, kde-format
 #| msgid "Restart Now"
 msgid "&Restart Now"
 msgstr "अधुना पुनः आरभत"
 
-#: contents/logout/Logout.qml:291
+#: contents/logout/Logout.qml:297
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
 msgstr "Updates संस्थाप्य Shut Down कुर्वन्तु"
 
-#: contents/logout/Logout.qml:293 contents/logout/Logout.qml:312
+#: contents/logout/Logout.qml:299 contents/logout/Logout.qml:318
 #, fuzzy, kde-format
 #| msgid "Shut Down"
 msgid "&Shut Down"
 msgstr "शट डाउन"
 
-#: contents/logout/Logout.qml:294 contents/logout/Logout.qml:313
+#: contents/logout/Logout.qml:300 contents/logout/Logout.qml:319
 #, fuzzy, kde-format
 #| msgid "Shut Down Now"
 msgid "&Shut Down Now"
 msgstr "अधुना निरुद्धं कुरुत"
 
-#: contents/logout/Logout.qml:325
+#: contents/logout/Logout.qml:331
 #, fuzzy, kde-format
 #| msgid "Log Out"
 msgid "&Log Out"
 msgstr "Log Out इति"
 
-#: contents/logout/Logout.qml:326
+#: contents/logout/Logout.qml:332
 #, fuzzy, kde-format
 #| msgid "Log Out Now"
 msgid "&Log Out Now"
 msgstr "अधुना लॉग आउट् कुर्वन्तु"
 
-#: contents/logout/Logout.qml:336
+#: contents/logout/Logout.qml:342
 #, fuzzy, kde-format
 #| msgid "Cancel"
 msgid "&Cancel"
