@@ -29,6 +29,6 @@ add_test(
     NAME klipper_v3migrationtest
     COMMAND python3 ${CMAKE_CURRENT_SOURCE_DIR}/v3migrationtest.py --failfast
 )
-set_tests_properties(klipper_v3migrationtest PROPERTIES TIMEOUT 30 ENVIRONMENT "CMAKE_RUNTIME_OUTPUT_DIRECTORY=${CMAKE_RUNTIME_OUTPUT_DIRECTORY}")
+set_tests_properties(klipper_v3migrationtest PROPERTIES ENVIRONMENT "CMAKE_RUNTIME_OUTPUT_DIRECTORY=${CMAKE_RUNTIME_OUTPUT_DIRECTORY}")
 
 

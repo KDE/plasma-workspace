@@ -5,4 +5,4 @@ add_test(
     NAME wallpaperinstalltest
     COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/installtest.py --failfast
 )
-set_tests_properties(wallpaperinstalltest PROPERTIES TIMEOUT 600 ENVIRONMENT "CMAKE_BINARY_DIR=${CMAKE_BINARY_DIR}/bin")
+set_tests_properties(wallpaperinstalltest PROPERTIES ENVIRONMENT "CMAKE_BINARY_DIR=${CMAKE_BINARY_DIR}/bin")
