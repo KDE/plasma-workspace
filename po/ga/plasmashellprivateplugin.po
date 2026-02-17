@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-13 08:43+0000\n"
+"POT-Creation-Date: 2026-02-17 02:42+0000\n"
 "PO-Revision-Date: 2026-01-14 14:33+0000\n"
 "Last-Translator: Charlotte <altronic25@protonmail.com>\n"
 "Language-Team: Irish\n"
@@ -146,7 +146,7 @@ msgctxt "@info:tooltip"
 msgid "Keep Open"
 msgstr ""
 
-#: containmentlayoutmanager/qml/BasicAppletContainer.qml:285
+#: containmentlayoutmanager/qml/BasicAppletContainer.qml:286
 #, kde-format
 msgid "Configure…"
 msgstr "Cumraigh..."
