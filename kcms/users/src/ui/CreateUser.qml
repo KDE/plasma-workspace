@@ -97,7 +97,9 @@ KCM.SimpleKCM {
                         debouncer.isTriggered = true;
                         return;
                     }
-                    kcm.mainUi.createUser(userNameField.text, realNameField.text, passwordField.text, (usertypeBox.model[usertypeBox.currentIndex]["type"] === "administrator"));
+                    const userTypeIsAdmin = (usertypeBox.model[usertypeBox.currentIndex]["type"] === "administrator");
+                    const userIsCreated = kcm.mainUi.createUser(userNameField.text, realNameField.text, passwordField.text, userTypeIsAdmin);
+                    kcm.mainUi.createUserEnabled = userIsCreated;
                 }
             }
             Item {
