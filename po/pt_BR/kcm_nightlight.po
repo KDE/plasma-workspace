@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_nightcolor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-02-18 00:48+0000\n"
 "PO-Revision-Date: 2025-11-08 21:10-0300\n"
 "Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -80,8 +80,8 @@ msgstr "Configurar…"
 #: ui/main.qml:115 ui/main.qml:166 ui/main.qml:230
 #, kde-format
 msgctxt "Color temperature in Kelvin"
-msgid "%1K"
-msgstr "%1K"
+msgid "%1 K"
+msgstr ""
 
 #: ui/main.qml:123
 #, kde-format
@@ -106,6 +106,10 @@ msgstr "Quente"
 msgctxt "@label:slider"
 msgid "Night light temperature:"
 msgstr "Temperatura da luz noturna:"
+
+#~ msgctxt "Color temperature in Kelvin"
+#~ msgid "%1K"
+#~ msgstr "%1K"
 
 #~ msgctxt ""
 #~ "@label:chooser Tap should be translated to mean touching using a "

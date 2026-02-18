@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-02-18 00:48+0000\n"
 "PO-Revision-Date: 2026-01-18 20:23+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -71,8 +71,8 @@ msgstr "Sett opp …"
 #: ui/main.qml:115 ui/main.qml:166 ui/main.qml:230
 #, kde-format
 msgctxt "Color temperature in Kelvin"
-msgid "%1K"
-msgstr "%1 K"
+msgid "%1 K"
+msgstr ""
 
 #: ui/main.qml:123
 #, kde-format
@@ -97,3 +97,7 @@ msgstr "Varm"
 msgctxt "@label:slider"
 msgid "Night light temperature:"
 msgstr "Kveldsfarge-temperatur:"
+
+#~ msgctxt "Color temperature in Kelvin"
+#~ msgid "%1K"
+#~ msgstr "%1 K"

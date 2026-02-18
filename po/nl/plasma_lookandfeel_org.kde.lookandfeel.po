@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-17 00:47+0000\n"
-"PO-Revision-Date: 2026-01-10 12:39+0100\n"
+"PO-Revision-Date: 2026-02-17 12:36+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: contents/logout/Logout.qml:149
 #, kde-format
@@ -72,10 +72,10 @@ msgstr[1] ""
 "of opnieuw gestart, dan kunnen die gebruikers werk verliezen."
 
 #: contents/logout/Logout.qml:188
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will enter the firmware setup screen."
+#, kde-format
 msgid "When restarted, the computer will enter UEFI firmware settings."
-msgstr "Na de herstart zal de computer naar het firmware setup scherm gaan."
+msgstr ""
+"Na het herstarten zal de computer de UEFI-firmware-instellingen ingaan."
 
 #: contents/logout/Logout.qml:190
 #, kde-format

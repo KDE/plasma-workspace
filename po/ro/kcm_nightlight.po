@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-02-18 00:48+0000\n"
 "PO-Revision-Date: 2026-01-28 20:34+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -75,8 +75,8 @@ msgstr "Configurează…"
 #: ui/main.qml:115 ui/main.qml:166 ui/main.qml:230
 #, kde-format
 msgctxt "Color temperature in Kelvin"
-msgid "%1K"
-msgstr "%1K"
+msgid "%1 K"
+msgstr ""
 
 #: ui/main.qml:123
 #, kde-format
@@ -101,6 +101,10 @@ msgstr "Caldă"
 msgctxt "@label:slider"
 msgid "Night light temperature:"
 msgstr "Temperatura luminii nocturne:"
+
+#~ msgctxt "Color temperature in Kelvin"
+#~ msgid "%1K"
+#~ msgstr "%1K"
 
 #~ msgctxt ""
 #~ "@label:chooser Tap should be translated to mean touching using a "

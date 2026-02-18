@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-02-18 00:48+0000\n"
 "PO-Revision-Date: 2022-03-29 20:45+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -79,8 +79,8 @@ msgstr ""
 #: ui/main.qml:115 ui/main.qml:166 ui/main.qml:230
 #, kde-format
 msgctxt "Color temperature in Kelvin"
-msgid "%1K"
-msgstr "%1 कि"
+msgid "%1 K"
+msgstr ""
 
 #: ui/main.qml:123
 #, fuzzy, kde-format
@@ -107,6 +107,10 @@ msgstr "गरम"
 msgctxt "@label:slider"
 msgid "Night light temperature:"
 msgstr "रात्रि का रंग का तापक्रम:"
+
+#~ msgctxt "Color temperature in Kelvin"
+#~ msgid "%1K"
+#~ msgstr "%1 कि"
 
 #, fuzzy
 #~| msgid "Latitude:"

@@ -127,7 +127,7 @@ msgstr ""
 #, kde-format
 msgctxt "Whitespace field for locale address style example"
 msgid " "
-msgstr ""
+msgstr " "
 
 #: exampleutility.cpp:101
 #, kde-format
@@ -169,7 +169,7 @@ msgstr ""
 #, kde-format
 msgctxt "Family names"
 msgid "FamilyName"
-msgstr ""
+msgstr "Ó Sloinne"
 
 #: exampleutility.cpp:121
 #, kde-format
@@ -223,7 +223,7 @@ msgstr ""
 #, kde-format
 msgctxt "Salutation"
 msgid "Doctor"
-msgstr ""
+msgstr "Dochtúir"
 
 #: exampleutility.cpp:130
 #, kde-format
@@ -255,7 +255,7 @@ msgctxt ""
 "This is returned when an example test could not be made from locale "
 "information"
 msgid "Could not find an example for this locale"
-msgstr ""
+msgstr "Níorbh fhéidir sampala a aimsiú den logchaighdeán seo"
 
 #: glibclocaleconstructor.cpp:165
 #, kde-kuit-format
@@ -278,7 +278,7 @@ msgctxt ""
 "%1 is português in system locale name, Brazil is to distinguish European "
 "português and Brazilian português"
 msgid "%1 (Brazil)"
-msgstr ""
+msgstr "%1 (An Bhrasaíl)"
 
 #: localegeneratorubuntu.cpp:46
 #, kde-format
@@ -290,7 +290,7 @@ msgstr ""
 #, kde-format
 msgctxt "the arg is the output of failed check-language-support call"
 msgid "check-language-support failed, output: %1 %2"
-msgstr ""
+msgstr "Theip check-language-support, aschur: %1 %2"
 
 #: localegeneratorubuntu.cpp:88
 #, kde-format
@@ -317,17 +317,17 @@ msgstr ""
 #: localegenhelper/localegenhelper.cpp:115
 #, kde-format
 msgid "Can't open file `/etc/locale.gen`"
-msgstr ""
+msgstr "Ní féidir an comhad '/etc/locale.gen' a oscailt"
 
 #: localegenhelper/localegenhelper.cpp:148
 #, kde-format
 msgid "Can't locate executable `locale-gen`"
-msgstr ""
+msgstr "Ní féidir an inrite 'locale-gen' a aimsiú"
 
 #: localegenhelper/localegenhelper.cpp:161
 #, kde-format
 msgid "Unknown"
-msgstr ""
+msgstr "Anaithnid"
 
 #: localelistmodel.cpp:24
 #, kde-format
@@ -371,7 +371,7 @@ msgstr "Teanga"
 #, kde-format
 msgctxt "@info:title"
 msgid "Numbers"
-msgstr ""
+msgstr "Uimhreachta"
 
 #: optionsmodel.cpp:48
 #, kde-format
@@ -407,13 +407,13 @@ msgstr ""
 #, kde-format
 msgctxt "@info:title"
 msgid "Name Style"
-msgstr ""
+msgstr "Stíl Ainme"
 
 #: optionsmodel.cpp:55
 #, kde-format
 msgctxt "@info:title"
 msgid "Phone Numbers"
-msgstr ""
+msgstr "Uimhreachta Fóin"
 
 #: optionsmodel.cpp:57
 #, kde-format
@@ -455,7 +455,7 @@ msgstr ""
 #: ui/AdvancedLanguageSelectPage.qml:23
 #, kde-format
 msgid "Language"
-msgstr ""
+msgstr "Teanga"
 
 #: ui/AdvancedLanguageSelectPage.qml:36
 #, kde-format
@@ -480,13 +480,13 @@ msgstr ""
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Language"
-msgstr ""
+msgstr "Athraigh an Teanga"
 
 #: ui/AdvancedLanguageSelectPage.qml:104
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Language"
-msgstr ""
+msgstr "Athraigh an Teanga"
 
 #: ui/AdvancedLanguageSelectPage.qml:113
 #, kde-format
@@ -570,7 +570,7 @@ msgstr ""
 #: ui/main.qml:281
 #, kde-format
 msgid "Numbers"
-msgstr ""
+msgstr "Uimhreachta"
 
 #: ui/main.qml:283
 #, kde-format
@@ -608,4 +608,4 @@ msgstr "Ainm"
 #, kde-format
 msgctxt "Phone Numbers"
 msgid "Phone number"
-msgstr ""
+msgstr "Uimhreachta fóin"

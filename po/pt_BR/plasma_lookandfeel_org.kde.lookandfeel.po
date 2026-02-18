@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-17 00:47+0000\n"
-"PO-Revision-Date: 2026-01-10 07:04-0300\n"
+"PO-Revision-Date: 2026-02-17 08:18-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: contents/logout/Logout.qml:149
 #, kde-format
@@ -75,19 +75,15 @@ msgstr[1] ""
 "desligado ou reiniciado, aqueles usuários poderão perder seu trabalho."
 
 #: contents/logout/Logout.qml:188
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will enter the firmware setup screen."
+#, kde-format
 msgid "When restarted, the computer will enter UEFI firmware settings."
-msgstr ""
-"Quando reiniciar, o computador irá entrar na tela de configuração do "
-"firmware."
+msgstr "Ao reiniciar, o computador entrará nas configurações do firmware UEFI."
 
 #: contents/logout/Logout.qml:190
 #, kde-format
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr ""
-"Quando reiniciar, o computador irá entrar na tela de configuração do "
-"firmware."
+"Ao reiniciar, o computador irá entrar na tela de configuração do firmware."
 
 #: contents/logout/Logout.qml:205
 #, kde-format
@@ -100,7 +96,7 @@ msgstr ""
 #, kde-format
 msgctxt "%1 is a boot loader entry"
 msgid "When restarted, the computer will switch to %1."
-msgstr "Ao ser reiniciado, o computador mudará para %1."
+msgstr "Ao reiniciar, o computador mudará para %1."
 
 #: contents/logout/Logout.qml:240
 #, kde-format

@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-17 00:47+0000\n"
-"PO-Revision-Date: 2026-01-10 09:05+0100\n"
+"PO-Revision-Date: 2026-02-17 05:48+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -94,12 +94,11 @@ msgstr[3] ""
 "računalniku."
 
 #: contents/logout/Logout.qml:188
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will enter the firmware setup screen."
+#, kde-format
 msgid "When restarted, the computer will enter UEFI firmware settings."
 msgstr ""
-"Po ponovnem zagonu računalnik vstopi v zaslon za nastavitev strojne "
-"programske opreme."
+"Ob ponovnem zagonu bo računalnik vnesel nastavitve vdelane programske opreme "
+"UEFI."
 
 #: contents/logout/Logout.qml:190
 #, kde-format

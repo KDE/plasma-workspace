@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-17 00:47+0000\n"
-"PO-Revision-Date: 2026-01-10 02:33+0100\n"
+"PO-Revision-Date: 2026-02-17 03:58+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -69,11 +69,10 @@ msgstr[1] ""
 "მათ შეიძლება ნამუშევარი დაკარგონ."
 
 #: contents/logout/Logout.qml:188
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will enter the firmware setup screen."
+#, kde-format
 msgid "When restarted, the computer will enter UEFI firmware settings."
 msgstr ""
-"გადატვირთვის შემდეგ კომპიუტერი მიკროკოდის მორგების ეკრანზე გადაირთვება."
+"გადატვირთვის შემდეგ კომპიუტერი UEFI მიკროკოდის მორგების ეკრანზე გადაირთვება."
 
 #: contents/logout/Logout.qml:190
 #, kde-format

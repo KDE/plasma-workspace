@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-17 00:47+0000\n"
-"PO-Revision-Date: 2026-01-11 00:34+0100\n"
+"PO-Revision-Date: 2026-02-17 14:02+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: contents/logout/Logout.qml:149
 #, kde-format
@@ -70,12 +70,9 @@ msgstr[1] ""
 "usuarios pueden perder su trabajo."
 
 #: contents/logout/Logout.qml:188
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will enter the firmware setup screen."
+#, kde-format
 msgid "When restarted, the computer will enter UEFI firmware settings."
-msgstr ""
-"Cuando reinicie el equipo, entrará en la pantalla de configuración del "
-"firmware."
+msgstr "Cuando reinicie el equipo, entrará en los ajustes del firmware UEFI."
 
 #: contents/logout/Logout.qml:190
 #, kde-format
