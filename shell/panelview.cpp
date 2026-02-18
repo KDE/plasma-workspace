@@ -743,6 +743,10 @@ void PanelView::positionAndResizePanel()
     // At least one QWindow setGeometry is needed to avoid a protocol error
     if (m_layerWindow && !size().isEmpty()) {
         m_layerWindow->setDesiredSize(geom.size());
+
+        // Should not be needed on Wayland in general, but popups and things like that still need it.
+        // After all popups are ported to semantic positioning apis, this setPosition() can be removed.
+        setPosition(geom.topLeft());
     } else {
         setGeometry(geom);
     }
@@ -1184,6 +1188,10 @@ void PanelView::setScreenToFollow(QScreen *screen)
     });*/
 
     m_screenToFollow = screen;
+
+    if (m_layerWindow) {
+        m_layerWindow->setScreen(screen);
+    }
 
     setScreen(screen);
     adaptToScreen();
