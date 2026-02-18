@@ -391,9 +391,16 @@ void Notification::Private::setDesktopEntry(const QString &desktopEntry)
     }
 }
 
-void Notification::Private::processHints(const QVariantMap &hints)
+void Notification::Private::processCommonHints(const QVariantMap &hints)
+{
+    eventId = hints.value(QStringLiteral("x-kde-eventId")).toString();
+}
+
+void Notification::Private::processFdoHints(const QVariantMap &hints)
 {
     auto end = hints.end();
+
+    processCommonHints(hints);
 
     notifyRcName = hints.value(QStringLiteral("x-kde-appname")).toString();
 
@@ -408,7 +415,6 @@ void Notification::Private::processHints(const QVariantMap &hints)
 
     originName = hints.value(QStringLiteral("x-kde-origin-name")).toString();
 
-    eventId = hints.value(QStringLiteral("x-kde-eventId")).toString();
     xdgTokenAppId = hints.value(QStringLiteral("x-kde-xdgTokenAppId")).toString();
 
     bool ok;
@@ -493,6 +499,8 @@ void Notification::Private::processHints(const QVariantMap &hints)
 
 void Notification::Private::processPortalProperties(const QVariantMap &props)
 {
+    processCommonHints(props);
+
     const QString priority = props.value(u"priority"_s).toString();
     if (priority == "low"_L1) {
         setUrgency(Notifications::LowUrgency);
@@ -506,8 +514,11 @@ void Notification::Private::processPortalProperties(const QVariantMap &props)
     const QStringList displayHints = props.value(u"display-hints"_s).toStringList();
     if (displayHints.contains("transient"_L1)) {
         transient = true;
+    } else if (displayHints.contains("tray"_L1)) {
+        // "No banner is shown"
+        // TODO test if this works
+        expired = true;
     }
-    // TODO tray (expired by default?)
     // TODO persistent means "not closable" (not timeout 0)
 
     category = props.value(u"category"_s).toString();
@@ -553,7 +564,34 @@ void Notification::Private::processPortalProperties(const QVariantMap &props)
     }
 
     defaultActionId = props.value(u"default-action"_s).toString();
-    // TODO default-action-target
+    defaultActionTarget = props.value(u"default-action-target"_s);
+
+    actionNames.clear();
+    actionLabels.clear();
+    actionPurposes.clear();
+    const QVariant buttonsValue = props.value(u"buttons"_s);
+    if (buttonsValue.isValid()) {
+        const QDBusArgument buttonsArg = buttonsValue.value<QDBusArgument>();
+        // TODO verify signature?
+        const auto buttons = qdbus_cast<QList<QVariantMap>>(buttonsArg);
+
+        for (const QVariantMap &button : buttons) {
+            const QString actionId = button.value(u"action"_s).toString();
+            const QString label = button.value(u"label"_s).toString();
+            const QVariant target = button.value(u"target"_s);
+            const QString purpose = button.value(u"purpose"_s).toString();
+            if (purpose == "im.reply-with-text"_L1 && category == "im.received"_L1) {
+                replyActionId = actionId;
+                replyActionLabel = label;
+                replyActionTarget = target;
+            } else {
+                actionNames.append(actionId);
+                actionLabels.append(label);
+                actionPurposes.append(purpose);
+                actionTargets.append(target);
+            }
+        }
+    }
 }
 
 void Notification::Private::setUrgency(Notifications::Urgency urgency)
@@ -766,6 +804,11 @@ QStringList Notification::actionLabels() const
     return d->actionLabels;
 }
 
+QStringList Notification::actionPurposes() const
+{
+    return d->actionPurposes;
+}
+
 bool Notification::hasDefaultAction() const
 {
     return !d->defaultActionId.isEmpty();
@@ -791,10 +834,11 @@ void Notification::setActions(const QStringList &actions)
 
     d->defaultActionId = QString();
     d->hasConfigureAction = false;
-    d->hasReplyAction = false;
+    d->replyActionId = QString();
 
     QStringList names;
     QStringList labels;
+    d->actionPurposes.clear();
 
     for (int i = 0; i < actions.count(); i += 2) {
         const QString &name = actions.at(i);
@@ -812,8 +856,8 @@ void Notification::setActions(const QStringList &actions)
             continue;
         }
 
-        if (!d->hasReplyAction && name == QLatin1String("inline-reply")) {
-            d->hasReplyAction = true;
+        if (d->replyActionId.isEmpty() && name == QLatin1String("inline-reply")) {
+            d->replyActionId = name;
             d->replyActionLabel = label;
             continue;
         }
@@ -868,7 +912,7 @@ QString Notification::configureActionLabel() const
 
 bool Notification::hasReplyAction() const
 {
-    return d->hasReplyAction;
+    return !d->replyActionId.isEmpty();
 }
 
 QString Notification::replyActionLabel() const
@@ -948,7 +992,7 @@ void Notification::setHints(const QVariantMap &hints)
 
 void Notification::processHints(const QVariantMap &hints)
 {
-    d->processHints(hints);
+    d->processFdoHints(hints);
 }
 
 bool Notification::wasAddedDuringInhibition() const

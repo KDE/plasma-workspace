@@ -841,23 +841,35 @@ void Notifications::invokeDefaultAction(const QModelIndex &idx, InvokeBehavior b
     if (const QModelIndex portalIndex = Utils::mapToModel(idx, d->portalNotificationsModel.get()); portalIndex.isValid()) {
         d->portalNotificationsModel->invokeDefaultAction(notificationId, behavior);
     } else {
-        d->notificationsModel->invokeDefaultAction(Private::notificationId(idx), behavior);
+        d->notificationsModel->invokeDefaultAction(notificationId, behavior);
     }
 }
 
 void Notifications::invokeAction(const QModelIndex &idx, const QString &actionId, InvokeBehavior behavior)
 {
-    // TODO portal
-    if (d->notificationsModel) {
-        d->notificationsModel->invokeAction(Private::notificationId(idx), actionId, behavior);
+    if (!checkIndex(idx, CheckIndexOption::IndexIsValid)) {
+        return;
+    }
+
+    const auto notificationId = Private::notificationId(idx);
+    if (const QModelIndex portalIndex = Utils::mapToModel(idx, d->portalNotificationsModel.get()); portalIndex.isValid()) {
+        d->portalNotificationsModel->invokeAction(notificationId, actionId, behavior);
+    } else {
+        d->notificationsModel->invokeAction(notificationId, actionId, behavior);
     }
 }
 
 void Notifications::reply(const QModelIndex &idx, const QString &text, InvokeBehavior behavior)
 {
-    // TODO portal
-    if (d->notificationsModel) {
-        d->notificationsModel->reply(Private::notificationId(idx), text, behavior);
+    if (!checkIndex(idx, CheckIndexOption::IndexIsValid)) {
+        return;
+    }
+
+    const auto notificationId = Private::notificationId(idx);
+    if (const QModelIndex portalIndex = Utils::mapToModel(idx, d->portalNotificationsModel.get()); portalIndex.isValid()) {
+        d->portalNotificationsModel->reply(notificationId, text, behavior);
+    } else {
+        d->notificationsModel->reply(notificationId, text, behavior);
     }
 }
 

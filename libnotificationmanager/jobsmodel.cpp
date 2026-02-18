@@ -147,6 +147,8 @@ QVariant JobsModel::data(const QModelIndex &index, int role) const
         return true;
     case Notifications::ActionLabelsRole:
         return QStringList();
+    case Notifications::ActionPurposesRole:
+        return QStringList();
     }
 
     return {};

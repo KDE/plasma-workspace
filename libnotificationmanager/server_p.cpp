@@ -165,7 +165,7 @@ uint ServerPrivate::Notify(const QString &app_name,
     notification.setWasAddedDuringInhibition(m_inhibited);
 
     // might override some of the things we set above (like application name)
-    notification.d->processHints(hints);
+    notification.d->processFdoHints(hints);
 
     // If we got a pixmap, use app_icon as application icon,
     // otherwise use it as the notification icon.

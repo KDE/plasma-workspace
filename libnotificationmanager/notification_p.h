@@ -36,7 +36,8 @@ public:
     static KService::Ptr serviceForDesktopEntry(const QString &desktopEntry);
 
     void setDesktopEntry(const QString &desktopEntry);
-    void processHints(const QVariantMap &hints);
+    void processCommonHints(const QVariantMap &hints);
+    void processFdoHints(const QVariantMap &hints);
     void processPortalProperties(const QVariantMap &props);
 
     void setUrgency(Notifications::Urgency urgency);
@@ -67,9 +68,12 @@ public:
 
     QStringList actionNames;
     QStringList actionLabels;
+    QStringList actionPurposes;
+    QVariantList actionTargets;
 
     QString defaultActionId; // on fdo it's always "default".
     QString defaultActionLabel;
+    QVariant defaultActionTarget;
 
     bool hasConfigureAction = false;
     QString configureActionLabel;
@@ -78,11 +82,12 @@ public:
     QString notifyRcName;
     QString eventId;
 
-    bool hasReplyAction = false;
+    QString replyActionId; // on fdo it's always "inline-reply".
     QString replyActionLabel;
     QString replyPlaceholderText;
     QString replySubmitButtonText;
     QString replySubmitButtonIconName;
+    QVariant replyActionTarget;
 
     QString category;
     QString xdgTokenAppId;
