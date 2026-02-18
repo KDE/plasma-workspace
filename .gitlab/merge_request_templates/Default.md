@@ -1,12 +1,11 @@
 <!-- Thank you for submitting a merge request to make KDE Software better! Use the information from the commit message(s) to fill in the template below.
 
-### Original commit message(s)
-
-%{all_commits}
-
 (For future reference, follow the guidelines at https://cbea.ms/git-commit/#seven-rules)
 -->
 
+### Original commit message(s)
+
+%{all_commits}
 
 ### Reason for the change
 
@@ -41,6 +40,3 @@ If the changes in this merge request fix any Bugzilla tickets, add the following
 
 BUG: [number of the bug report]
 -->
-
-
-
