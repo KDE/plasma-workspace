@@ -296,7 +296,7 @@ class SystemTrayTests(unittest.TestCase):
         action.wheel_action.scroll(int(rect["x"] + rect["width"] / 2), int(rect["y"] + rect["height"] / 2), delta_x, delta_y).pause(1)
         action.perform()
         if self.xembed_tray_icon is not None:
-            self.assertTrue(self.xembed_tray_icon.scroll_event.is_set())
+            WebDriverWait(self.driver, 4).until(lambda _: self.xembed_tray_icon.scroll_event.is_set())
 
     def test_1_xembed_tray_icon(self) -> None:
         """
