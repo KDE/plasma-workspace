@@ -621,8 +621,8 @@ void Notification::setIcon(const QString &icon)
 
 QImage Notification::image() const
 {
-    if (d->s_imageCache.contains(d->id)) {
-        return *d->s_imageCache.object(d->id);
+    if (auto *image = d->s_imageCache.object(QPair(d->source, d->id))) {
+        return *image;
     }
     return {};
 }
