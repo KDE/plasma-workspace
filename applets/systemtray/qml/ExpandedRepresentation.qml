@@ -134,8 +134,32 @@ Item {
                 enabled: visibleActions > 1 || (singleAction && singleAction.enabled)
                 checked: visibleActions > 1 ? configMenu.status !== PlasmaExtras.Menu.Closed : singleAction && singleAction.checked
                 property QtObject applet: systemTrayState.activeApplet || root
-                property int visibleActions: menuItemFactory.count
+                property int visibleActions: actions.length
                 property PlasmaCore.Action singleAction: visibleActions === 1 && menuItemFactory.object ? menuItemFactory.object.action : null
+
+                readonly property var actions: {
+                    if (!applet) {
+                        return [];
+                    }
+
+                    return applet.plasmoid.contextualActions
+                        .filter(action => {
+                            return action.visible &&
+                            action.priority === PlasmaCore.Action.NormalPriority &&
+                            action !== applet.plasmoid.internalAction("configure");
+                        })
+                        // squash separators
+                        .reduce((dstActions, action, i, srcActions) => {
+                            if (!action.isSeparator) {
+                                const prevAction = srcActions[i - 1];
+                                if (prevAction?.isSeparator && dstActions.length > 0) {
+                                    dstActions.push(prevAction);
+                                }
+                                dstActions.push(action);
+                            }
+                            return dstActions;
+                        }, []);
+                }
 
                 icon.name: "application-menu"
                 checkable: visibleActions > 1 || (singleAction && singleAction.checkable)
@@ -184,36 +208,21 @@ Item {
 
                 Instantiator {
                     id: menuItemFactory
-                    model: {
-                        configMenu.clearMenuItems();
-                        if (!actionsButton.applet) {
-                            return [];
-                        }
-                        return actionsButton.applet.plasmoid.contextualActions
-                            .filter(action => {
-                                return action.visible &&
-                                    action.priority === PlasmaCore.Action.NormalPriority &&
-                                    action !== actionsButton.applet.plasmoid.internalAction("configure");
-                            })
-                            // squash separators
-                            .reduce((dstActions, action, i, srcActions) => {
-                                if (!action.isSeparator) {
-                                    const prevAction = srcActions[i - 1];
-                                    if (prevAction?.isSeparator && dstActions.length > 0) {
-                                        dstActions.push(prevAction);
-                                    }
-                                    dstActions.push(action);
-                                }
-                                return dstActions;
-                            }, []);
-                    }
+
+                    model: actionsButton.actions
+
                     delegate: PlasmaExtras.MenuItem {
                         id: menuItem
                         required property PlasmaCore.Action modelData
                         action: modelData
                     }
+
                     onObjectAdded: (index, object) => {
                         configMenu.addMenuItem(object);
+                    }
+
+                    onObjectRemoved: (index, object) => {
+                        configMenu.removeMenuItem(object)
                     }
                 }
             }
