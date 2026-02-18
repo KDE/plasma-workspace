@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2026-01-11 01:42+0000\n"
-"Last-Translator: Charlotte <altronic25@protonmail.com>\n"
+"PO-Revision-Date: 2026-02-17 07:08+0000\n"
+"Last-Translator: charlotte <altronic25@protonmail.com>\n"
 "Language-Team: Irish\n"
 "Language: ga\n"
 "MIME-Version: 1.0\n"
@@ -17,6 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -31,7 +32,7 @@ msgstr "seoc@iolfree.ie,kscanne@gmail.com,altronic25@protonmail.com"
 #: colors.cpp:253
 #, kde-format
 msgid "Unable to create a temporary file."
-msgstr ""
+msgstr "Ní féidir comhad sealadach a chruthú."
 
 #: colors.cpp:266
 #, fuzzy, kde-format
@@ -40,10 +41,9 @@ msgid "Unable to download the color scheme: %1"
 msgstr "&Iontráil ainm ar an scéim datha:"
 
 #: colors.cpp:284
-#, fuzzy, kde-format
-#| msgid "Import a color scheme from a file"
+#, kde-format
 msgid "This file is not a color scheme file."
-msgstr "Iompórtáil scéim datha ó chomhad"
+msgstr "Níl an comhad seo comhad scéim dathanna."
 
 #: colors.cpp:303
 #, kde-format
@@ -53,7 +53,7 @@ msgstr ""
 #: colors.cpp:310
 #, kde-format
 msgid "Failed to copy color scheme into 'color-scheme' data folder."
-msgstr ""
+msgstr "Teipeadh scéim datha a chóipeáil chuig fillteán sonraí 'color-scheme'."
 
 #: colors.cpp:327
 #, kde-format
@@ -89,10 +89,9 @@ msgid "Whether accent color from wallpaper should be applied"
 msgstr ""
 
 #: editor/kcolorschemeeditor.cpp:23
-#, fuzzy, kde-format
-#| msgid "Save Color Scheme"
+#, kde-format
 msgid "KColorSchemeEditor"
-msgstr "Sábháil Scéim Datha"
+msgstr "KColorSchemeEditor"
 
 #: editor/kcolorschemeeditor.cpp:25
 #, fuzzy, kde-format
@@ -118,7 +117,7 @@ msgstr "Jeremy Whiting"
 #: editor/kcolorschemeeditor.cpp:28 editor/kcolorschemeeditor.cpp:29
 #, kde-format
 msgid "KCM code (reused in here)"
-msgstr ""
+msgstr "Cód KCM (athúsáidte anseo)"
 
 #: editor/kcolorschemeeditor.cpp:29
 #, kde-format
@@ -668,9 +667,7 @@ msgid "Colors"
 msgstr "Dathanna"
 
 #: editor/scmeditordialog.cpp:64
-#, fuzzy, kde-format
-#| msgctxt "@title:tab color transformations on disabled elements"
-#| msgid "Disabled"
+#, kde-format
 msgid "Disabled"
 msgstr "Díchumasaithe"
 
@@ -678,11 +675,13 @@ msgstr "Díchumasaithe"
 #, kde-format
 msgid "You have unsaved changes. Do you really want to quit?"
 msgstr ""
+"Tá athruithe gan sábháil agat. An bhfuil tú cinnte go bhfuil ag iarraidh a "
+"fhágáil?"
 
 #: editor/scmeditordialog.cpp:97
 #, kde-format
 msgid "Unsaved changes"
-msgstr ""
+msgstr "Athruithe gan sábháil"
 
 #: editor/scmeditordialog.cpp:117 editor/scmeditordialog.cpp:142
 #, kde-format
@@ -1390,7 +1389,7 @@ msgstr "Oscail Scéim Datha"
 #: ui/main.qml:376
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
-msgstr ""
+msgstr "Comhaid Scéim Dathanna (*.colors)"
 
 #~ msgid "Shading of frames and lighting (\"3D\") effects"
 #~ msgstr "Scáthú frámaí agus maisíochtaí soilsithe (\"3T\")"

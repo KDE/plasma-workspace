@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2025-12-30 00:59+0000\n"
-"Last-Translator: Charlotte <altronic25@protonmail.com>\n"
+"PO-Revision-Date: 2026-02-17 08:43+0000\n"
+"Last-Translator: charlotte <altronic25@protonmail.com>\n"
 "Language-Team: Irish\n"
 "Language: ga\n"
 "MIME-Version: 1.0\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: ui/DayNightView.qml:154
 #, kde-format
@@ -41,19 +42,19 @@ msgstr ""
 #, kde-format
 msgctxt "@label:listbox Night Light modes"
 msgid "Switching times:"
-msgstr ""
+msgstr "Amanna a lascadh:"
 
 #: ui/main.qml:58
 #, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Always off"
-msgstr ""
+msgstr "I gcónaí as"
 
 #: ui/main.qml:59
 #, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Always on night light"
-msgstr ""
+msgstr "Solas oíche i gcónaí air"
 
 #: ui/main.qml:60
 #, kde-format
@@ -65,7 +66,7 @@ msgstr "Éirí agus luí na gréine"
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
-msgstr ""
+msgstr "Cumraigh..."
 
 #: ui/main.qml:115 ui/main.qml:166 ui/main.qml:230
 #, kde-format
@@ -95,4 +96,4 @@ msgstr "Te"
 #, kde-format
 msgctxt "@label:slider"
 msgid "Night light temperature:"
-msgstr ""
+msgstr "Solas oíche teochta:"
