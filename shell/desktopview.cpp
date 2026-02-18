@@ -125,6 +125,9 @@ void DesktopView::setScreenToFollow(QScreen *screen)
         disconnect(m_screenToFollow.data(), &QScreen::geometryChanged, this, &DesktopView::screenGeometryChanged);
     }
     m_screenToFollow = screen;
+    if (m_layerWindow) {
+        m_layerWindow->setScreen(screen);
+    }
     setScreen(screen);
     connect(m_screenToFollow.data(), &QScreen::geometryChanged, this, &DesktopView::screenGeometryChanged);
 
