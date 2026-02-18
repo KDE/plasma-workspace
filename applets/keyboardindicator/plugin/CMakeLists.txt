@@ -19,7 +19,3 @@ ecm_qt_declare_logging_category(keyboardindicatorplugin
     EXPORT PLASMAWORKSPACE
 )
 ecm_finalize_qml_module(keyboardindicatorplugin)
-
-if (BUILD_TESTING)
-    add_subdirectory(autotests)
-endif()

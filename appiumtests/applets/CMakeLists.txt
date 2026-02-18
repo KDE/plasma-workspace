@@ -52,6 +52,8 @@ add_test(
 )
 set_tests_properties(icontest PROPERTIES TIMEOUT 120)
 
+add_subdirectory(keyboardindicatortest)
+
 add_test(
     NAME lock_logouttest
     COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/lock_logouttest.py --failfast
