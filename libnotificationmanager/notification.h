@@ -12,6 +12,7 @@
 #include <QString>
 #include <QUrl>
 
+#include "notification.h"
 #include "notifications.h"
 
 #include "notificationmanager_export.h"
@@ -26,7 +27,14 @@ namespace NotificationManager
 class NOTIFICATIONMANAGER_EXPORT Notification
 {
 public:
+    enum class Source {
+        Unknown,
+        Freedesktop,
+        Portal,
+    };
+
     explicit Notification(uint id = 0);
+    Notification(Source source, uint id);
 
     Notification(const Notification &other);
     Notification(Notification &&other) Q_DECL_NOEXCEPT;
@@ -36,6 +44,7 @@ public:
 
     virtual ~Notification();
 
+    Source source() const;
     uint id() const;
 
     QString dBusService() const;
@@ -137,7 +146,9 @@ public:
 private:
     friend class NotificationsModel;
     friend class AbstractNotificationsModel;
+    friend class PortalNotificationsModel;
     friend class ServerPrivate;
+    friend class PortalPrivate;
 
     class Private;
     Private *d;

@@ -125,8 +125,6 @@ bool ServerPrivate::init()
                                              SLOT(onBroadcastNotification(QMap<QString, QVariant>)));
     }
 
-    Notification::Private::s_imageCache.setMaxCost(256 * 256 * 100);
-
     m_valid = true;
     Q_EMIT validChanged();
 
@@ -155,7 +153,7 @@ uint ServerPrivate::Notify(const QString &app_name,
         ++m_highestNotificationId;
     }
 
-    Notification notification(notificationId);
+    Notification notification(Notification::Source::Freedesktop, notificationId);
     notification.setDBusService(message().service());
     notification.setSummary(summary);
     notification.setBody(body);
@@ -172,7 +170,7 @@ uint ServerPrivate::Notify(const QString &app_name,
     // If we got a pixmap, use app_icon as application icon,
     // otherwise use it as the notification icon.
     if (!app_icon.isEmpty()) {
-        if (notification.d->s_imageCache.contains(notificationId)) {
+        if (notification.d->s_imageCache.contains(QPair(Notification::Source::Freedesktop, notificationId))) {
             notification.setApplicationIconName(app_icon);
         } else {
             notification.setIcon(app_icon);

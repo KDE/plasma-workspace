@@ -40,7 +40,8 @@ AbstractNotificationsModel::Private::Private(AbstractNotificationsModel *q)
         QList<int> rowsToBeRemoved;
         rowsToBeRemoved.reserve(pendingRemovals.count());
         for (uint id : std::as_const(pendingRemovals)) {
-            Notification::Private::s_imageCache.remove(id);
+            // FIXME source+id pair
+            // Notification::Private::s_imageCache.remove(QPair(id);
             int row = q->rowOfNotification(id); // oh the complexity...
             if (row == -1) {
                 continue;
@@ -83,7 +84,8 @@ void AbstractNotificationsModel::Private::onNotificationAdded(const Notification
                                      << "notifications";
         q->beginRemoveRows(QModelIndex(), 0, cleanupCount - 1);
         for (int i = 0; i < cleanupCount; ++i) {
-            Notification::Private::s_imageCache.remove(notifications.at(0).id());
+            // FIXME QPair
+            // Notification::Private::s_imageCache.remove(notifications.at(0).id());
             q->stopTimeout(notifications.first().id());
             notifications.removeAt(0);
             // TODO close gracefully?

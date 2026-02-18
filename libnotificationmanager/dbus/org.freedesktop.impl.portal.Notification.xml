@@ -1,0 +1,33 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN" "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<!--
+  SPDX-License-Identifier: CC0-1.0
+  SPDX-FileCopyrightText: none
+-->
+<node>
+
+<interface name="org.freedesktop.impl.portal.Notification">
+  <property name="SupportedOptions" type="a{sv}" access="read">
+    <annotation name="org.qtproject.QtDBus.QtTypeName" value="QVariantMap"/>
+  </property>
+  <property name="version" type="u" access="read"/>
+
+  <method name="AddNotification">
+    <arg name="app_id" type="s" direction="in"/>
+    <arg name="id" type="s" direction="in"/>
+    <arg name="notification" type="a{sv}" direction="in"/>
+    <annotation name="org.qtproject.QtDBus.QtTypeName.In2" value="QVariantMap"/>
+  </method>
+  <method name="RemoveNotification">
+    <arg name="app_id" type="s" direction="in"/>
+    <arg name="id" type="s" direction="in"/>
+  </method>
+
+  <signal name="ActionInvoked">
+    <arg name="app_id" type="s" direction="out"/>
+    <arg name="id" type="s" direction="out"/>
+    <arg name="action" type="s" direction="out"/>
+    <arg name="parameter" type="av" direction="out"/>
+  </signal>
+</interface>
+
+</node>

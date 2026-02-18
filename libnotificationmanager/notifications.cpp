@@ -27,6 +27,7 @@
 #include "notificationgroupingproxymodel_p.h"
 #include "notificationsmodel.h"
 #include "notificationsortproxymodel_p.h"
+#include "portalnotificationsmodel.h"
 
 #include "jobsmodel.h"
 
@@ -96,6 +97,7 @@ public:
 
     // NOTE when you add or re-arrange models make sure to update mapFromModel()!
     NotificationsModel::Ptr notificationsModel;
+    PortalNotificationsModel::Ptr portalNotificationsModel;
     JobsModel::Ptr jobsModel;
     std::shared_ptr<Settings> settings() const;
 
@@ -126,17 +128,31 @@ void Notifications::Private::initSourceModels()
 {
     Q_ASSERT(notificationsAndJobsModel); // initProxyModels must be called before initSourceModels
 
-    if (showNotifications && !notificationsModel) {
-        notificationsModel = NotificationsModel::createNotificationsModel();
-        notificationsAndJobsModel->addSourceModel(notificationsModel.get());
-        connect(notificationsModel.get(), &NotificationsModel::lastReadChanged, q, [this] {
-            updateCount();
-            Q_EMIT q->lastReadChanged();
-        });
-    } else if (!showNotifications && notificationsModel) {
-        notificationsAndJobsModel->removeSourceModel(notificationsModel.get());
-        disconnect(notificationsModel.get(), nullptr, q, nullptr); // disconnect all
-        notificationsModel = nullptr;
+    if (showNotifications) {
+        if (!notificationsModel) {
+            notificationsModel = NotificationsModel::createNotificationsModel();
+            notificationsAndJobsModel->addSourceModel(notificationsModel.get());
+            connect(notificationsModel.get(), &NotificationsModel::lastReadChanged, q, [this] {
+                updateCount();
+                Q_EMIT q->lastReadChanged();
+            });
+        }
+        if (!portalNotificationsModel) {
+            portalNotificationsModel = PortalNotificationsModel::create();
+            notificationsAndJobsModel->addSourceModel(portalNotificationsModel.get());
+            // TODO lastread?
+        }
+    } else {
+        if (notificationsModel) {
+            notificationsAndJobsModel->removeSourceModel(notificationsModel.get());
+            disconnect(notificationsModel.get(), nullptr, q, nullptr); // disconnect all
+            notificationsModel = nullptr;
+        }
+        if (portalNotificationsModel) {
+            notificationsAndJobsModel->removeSourceModel(portalNotificationsModel.get());
+            disconnect(portalNotificationsModel.get(), nullptr, q, nullptr);
+            portalNotificationsModel = nullptr;
+        }
     }
 
     if (showJobs && !jobsModel) {
@@ -154,9 +170,9 @@ void Notifications::Private::initProxyModels()
     /* The data flow is as follows:
      * NOTE when you add or re-arrange models make sure to update mapFromModel()!
      *
-     * NotificationsModel      JobsModel
-     *        \\                 /
-     *         \\               /
+     * NotificationsModel  PortalNotificationsModel  JobsModel
+     *        \\                 //                     /
+     *         \\               //                     /
      *     QConcatenateTablesProxyModel
      *               |||
      *               |||
@@ -300,6 +316,7 @@ void Notifications::Private::updateCount()
             if (notificationsModel && date > notificationsModel->lastRead()) {
                 ++unread;
             }
+            // FIXME read portal
         }
 
         if (!isExpired && idx.data(Notifications::ResidentRole).toBool() && idx.data(Notifications::DismissedRole).toBool()) {
@@ -388,7 +405,7 @@ QModelIndex Notifications::Private::mapFromModel(const QModelIndex &idx) const
                     break;
                 }
             } else if (auto *concatenateModel = qobject_cast<QConcatenateTablesProxyModel *>(model)) {
-                if (idxModel == notificationsModel.get() || idxModel == jobsModel.get()) {
+                if (idxModel == notificationsModel.get() || idxModel == portalNotificationsModel.get() || idxModel == jobsModel.get()) {
                     resolvedIdx = concatenateModel->mapFromSource(resolvedIdx);
                     found = true;
                     break;
@@ -492,15 +509,22 @@ void Notifications::setExpandUnread(bool expand)
 
 QWindow *Notifications::window() const
 {
+    // TODO portal?
     return d->notificationsModel ? d->notificationsModel->window() : nullptr;
 }
 
 void Notifications::setWindow(QWindow *window)
 {
+    if (!d->notificationsModel || !d->portalNotificationsModel) {
+        qCWarning(NOTIFICATIONMANAGER) << "Setting window before initialising the model" << this << window;
+        return;
+    }
+
     if (d->notificationsModel) {
         d->notificationsModel->setWindow(window);
-    } else {
-        qCWarning(NOTIFICATIONMANAGER) << "Setting window before initialising the model" << this << window;
+    }
+    if (d->portalNotificationsModel) {
+        d->portalNotificationsModel->setWindow(window);
     }
 }
 
@@ -677,6 +701,7 @@ int Notifications::expiredNotificationsCount() const
 
 QDateTime Notifications::lastRead() const
 {
+    // TODO portal
     if (d->notificationsModel) {
         return d->notificationsModel->lastRead();
     }
@@ -685,6 +710,7 @@ QDateTime Notifications::lastRead() const
 
 void Notifications::setLastRead(const QDateTime &lastRead)
 {
+    // TODO portal
     // TODO jobs could also be unread?
     if (d->notificationsModel) {
         d->notificationsModel->setLastRead(lastRead);
@@ -727,9 +753,16 @@ QPersistentModelIndex Notifications::makePersistentModelIndex(const QModelIndex 
 void Notifications::expire(const QModelIndex &idx)
 {
     switch (static_cast<Notifications::Type>(idx.data(Notifications::TypeRole).toInt())) {
-    case Notifications::NotificationType:
-        d->notificationsModel->expire(Private::notificationId(idx));
+    case Notifications::NotificationType: {
+        const auto notificationId = Private::notificationId(idx);
+        // TODO can we do this better? I don't want a "SourceRole" in the public API, though...
+        if (const QModelIndex portalIndex = Utils::mapToModel(idx, d->portalNotificationsModel.get()); portalIndex.isValid()) {
+            d->portalNotificationsModel->expire(notificationId);
+        } else {
+            d->notificationsModel->expire(notificationId);
+        }
         break;
+    }
     case Notifications::JobType:
         d->jobsModel->expire(Utils::mapToModel(idx, d->jobsModel.get()));
         break;
@@ -762,9 +795,15 @@ void Notifications::close(const QModelIndex &idx)
     }
 
     switch (static_cast<Notifications::Type>(idx.data(Notifications::TypeRole).toInt())) {
-    case Notifications::NotificationType:
-        d->notificationsModel->close(Private::notificationId(idx));
+    case Notifications::NotificationType: {
+        const auto notificationId = Private::notificationId(idx);
+        if (const QModelIndex portalIndex = Utils::mapToModel(idx, d->portalNotificationsModel.get()); portalIndex.isValid()) {
+            d->portalNotificationsModel->close(notificationId);
+        } else {
+            d->notificationsModel->close(notificationId);
+        }
         break;
+    }
     case Notifications::JobType:
         d->jobsModel->close(Utils::mapToModel(idx, d->jobsModel.get()));
         break;
@@ -775,6 +814,7 @@ void Notifications::close(const QModelIndex &idx)
 
 void Notifications::configure(const QModelIndex &idx)
 {
+    // TODO portal
     if (!d->notificationsModel) {
         return;
     }
@@ -793,13 +833,21 @@ void Notifications::configure(const QModelIndex &idx)
 
 void Notifications::invokeDefaultAction(const QModelIndex &idx, InvokeBehavior behavior)
 {
-    if (d->notificationsModel) {
+    if (!checkIndex(idx, CheckIndexOption::IndexIsValid)) {
+        return;
+    }
+
+    const auto notificationId = Private::notificationId(idx);
+    if (const QModelIndex portalIndex = Utils::mapToModel(idx, d->portalNotificationsModel.get()); portalIndex.isValid()) {
+        d->portalNotificationsModel->invokeDefaultAction(notificationId, behavior);
+    } else {
         d->notificationsModel->invokeDefaultAction(Private::notificationId(idx), behavior);
     }
 }
 
 void Notifications::invokeAction(const QModelIndex &idx, const QString &actionId, InvokeBehavior behavior)
 {
+    // TODO portal
     if (d->notificationsModel) {
         d->notificationsModel->invokeAction(Private::notificationId(idx), actionId, behavior);
     }
@@ -807,6 +855,7 @@ void Notifications::invokeAction(const QModelIndex &idx, const QString &actionId
 
 void Notifications::reply(const QModelIndex &idx, const QString &text, InvokeBehavior behavior)
 {
+    // TODO portal
     if (d->notificationsModel) {
         d->notificationsModel->reply(Private::notificationId(idx), text, behavior);
     }
@@ -814,11 +863,13 @@ void Notifications::reply(const QModelIndex &idx, const QString &text, InvokeBeh
 
 void Notifications::startTimeout(const QModelIndex &idx)
 {
+    // TODO portal
     startTimeout(Private::notificationId(idx));
 }
 
 void Notifications::startTimeout(uint notificationId)
 {
+    // TODO portal
     if (d->notificationsModel) {
         d->notificationsModel->startTimeout(notificationId);
     }
@@ -826,6 +877,7 @@ void Notifications::startTimeout(uint notificationId)
 
 void Notifications::stopTimeout(const QModelIndex &idx)
 {
+    // TODO portal
     if (d->notificationsModel) {
         d->notificationsModel->stopTimeout(Private::notificationId(idx));
     }
@@ -854,6 +906,7 @@ void Notifications::killJob(const QModelIndex &idx)
 
 void Notifications::clear(ClearFlags flags)
 {
+    // TODO portal
     if (d->notificationsModel) {
         d->notificationsModel->clear(flags);
     }

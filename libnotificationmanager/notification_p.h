@@ -37,9 +37,11 @@ public:
 
     void setDesktopEntry(const QString &desktopEntry);
     void processHints(const QVariantMap &hints);
+    void processPortalProperties(const QVariantMap &props);
 
     void setUrgency(Notifications::Urgency urgency);
 
+    Notification::Source source = Notification::Source::Unknown;
     uint id = 0;
     // Bus name of the creator/sender
     QString dBusService;
@@ -53,7 +55,7 @@ public:
     QString rawBody;
     // Can be theme icon name or path
     QString icon;
-    static QCache<uint /*id*/, QImage> s_imageCache;
+    static QCache<QPair<Notification::Source, uint /*id*/>, QImage> s_imageCache;
 
     QString applicationName;
     QString desktopEntry;
@@ -65,7 +67,8 @@ public:
 
     QStringList actionNames;
     QStringList actionLabels;
-    bool hasDefaultAction = false;
+
+    QString defaultActionId; // on fdo it's always "default".
     QString defaultActionLabel;
 
     bool hasConfigureAction = false;

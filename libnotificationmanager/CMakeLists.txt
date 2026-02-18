@@ -8,6 +8,7 @@ set(notificationmanager_LIB_SRCS
     server.cpp
     server_p.cpp
     serverinfo.cpp
+    portal_p.cpp
     settings.cpp
     mirroredscreenstracker.cpp
     fullscreentracker.cpp
@@ -16,6 +17,7 @@ set(notificationmanager_LIB_SRCS
 
     abstractnotificationsmodel.cpp
     notificationsmodel.cpp
+    portalnotificationsmodel.cpp
     notificationfilterproxymodel.cpp
     notificationsortproxymodel.cpp
     notificationgroupingproxymodel.cpp
@@ -56,6 +58,7 @@ kconfig_add_kcfg_files(notificationmanager_LIB_SRCS kcfg/eventsettings.kcfgc GEN
 # Notifications
 qt_add_dbus_adaptor(notificationmanager_LIB_SRCS dbus/org.freedesktop.Notifications.xml server_p.h NotificationManager::ServerPrivate)
 qt_add_dbus_adaptor(notificationmanager_LIB_SRCS dbus/org.kde.notificationmanager.xml server_p.h NotificationManager::ServerPrivate)
+qt_add_dbus_adaptor(notificationmanager_LIB_SRCS dbus/org.freedesktop.impl.portal.Notification.xml portal_p.h NotificationManager::PortalPrivate portalnotificationsadaptor PortalNotificationsAdaptor)
 qt_add_dbus_interface(notificationmanager_LIB_SRCS dbus/org.freedesktop.Notifications.xml fdonotifications_interface)
 # JobView
 qt_add_dbus_adaptor(notificationmanager_LIB_SRCS dbus/org.kde.kuiserver.xml jobsmodel_p.h NotificationManager::JobsModelPrivate)
