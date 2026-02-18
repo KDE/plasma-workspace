@@ -218,7 +218,7 @@ ColumnLayout {
             QtControls2.Button {
                 visible: root.cfg_DynamicMode == 1
                 enabled: KConfig.KAuthorized.authorizeControlModule("kcm_nighttime")
-                text: i18nc("@action:button Configure day-night cycle times", "Configure…")
+                text: i18ndc("plasma_wallpaper_org.kde.image", "@action:button Configure day-night cycle times", "Configure…")
                 icon.name: "configure"
                 onClicked: KCM.KCMLauncher.open("kcm_nighttime")
             }
