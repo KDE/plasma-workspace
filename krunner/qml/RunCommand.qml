@@ -46,7 +46,9 @@ ColumnLayout {
             root.runnerManager.historyEnabled = root.runnerWindow.historyBehavior !== RunnerWindow.Disabled
         }
         function onActivityChanged(activity) {
-            root.runnerManager.setHistoryEnvironmentIdentifier(activity)
+            if (activity) {
+                root.runnerManager.setHistoryEnvironmentIdentifier(activity)
+            }
         }
     }
     Component.onCompleted: {
