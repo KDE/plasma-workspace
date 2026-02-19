@@ -22,6 +22,8 @@
 #include <KLocalizedString>
 #include <KStatusNotifierItem>
 
+using namespace Qt::StringLiterals;
+
 PlasmaWindowedView::PlasmaWindowedView(QWindow *parent)
     : QQuickView(parent)
     , m_applet(nullptr)
@@ -63,7 +65,7 @@ void PlasmaWindowedView::setApplet(Plasma::Applet *applet)
     m_appletInterface->setParentItem(m_rootObject);
     m_rootObject->setProperty("appletInterface", QVariant::fromValue(m_appletInterface.data()));
     m_appletInterface->setVisible(true);
-    m_appletInterface->setProperty("hideOnWindowDeactivate", false);
+    QQmlProperty::write(m_appletInterface, u"hideOnWindowDeactivate"_s, false);
     setTitle(applet->title());
     setIcon(QIcon::fromTheme(applet->icon()));
 
