@@ -85,6 +85,7 @@ KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype,
             w->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityExclusive);
             w->setExclusiveZone(-1);
             w->setLayer(LayerShellQt::Window::LayerOverlay);
+            w->setScreen(screen);
         }
     }
 
