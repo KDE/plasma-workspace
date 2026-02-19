@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-17 00:47+0000\n"
-"PO-Revision-Date: 2026-01-14 07:24+0400\n"
+"PO-Revision-Date: 2026-02-18 17:47+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -101,10 +101,9 @@ msgstr[5] ""
 "تشغيله، فقد يفقد هؤلاء المستخدمين عملهم."
 
 #: contents/logout/Logout.qml:188
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will enter the firmware setup screen."
+#, kde-format
 msgid "When restarted, the computer will enter UEFI firmware settings."
-msgstr "عند إعادة التشغيل، سيدخل الحاسوب إلى شاشة إعداد البرنامج الثابت."
+msgstr "عند إعادة التشغيل، سيدخل الحاسوب إلى إعدادات البرنامج الثابت UEFI."
 
 #: contents/logout/Logout.qml:190
 #, kde-format

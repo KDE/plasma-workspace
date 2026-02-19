@@ -8,70 +8,67 @@ msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-31 00:45+0000\n"
-"PO-Revision-Date: 2013-09-08 07:05+0900\n"
-"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
+"PO-Revision-Date: 2026-02-09 18:08-0500\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.8\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "ئابدۇقادىر ئابلىز, غەيرەت كەنجى"
+msgstr "ئابدۇقادىر ئابلىز، غەيرەت كەنجى"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "sahran.ug@gmail.com,  gheyret@gmail.com"
+msgstr "sahranbay@gmail.com, gheyret@gmail.com"
 
 #: colors.cpp:253
 #, kde-format
 msgid "Unable to create a temporary file."
-msgstr ""
+msgstr "ۋاقىتلىق ھۆججەت قۇرالمايدۇ."
 
 #: colors.cpp:266
-#, fuzzy, kde-format
-#| msgid "&Enter a name for the color scheme:"
+#, kde-format
 msgid "Unable to download the color scheme: %1"
-msgstr "رەڭ لايىھىسىنىڭ ئاتىنى كىرگۈزۈڭ(&E):"
+msgstr "رەڭ لايىھەسىنى چۈشۈرەلمەيدۇ: %1"
 
 #: colors.cpp:284
-#, fuzzy, kde-format
-#| msgid "Import a color scheme from a file"
+#, kde-format
 msgid "This file is not a color scheme file."
-msgstr "رەڭ لايىھىسىنى ھۆججەتتىن ئىمپورت قىلىدۇ"
+msgstr "بۇ ھۆججەت رەڭ لايىھە ھۆججىتى ئەمەس."
 
 #: colors.cpp:303
 #, kde-format
 msgid "Failed to create 'color-scheme' data folder."
-msgstr ""
+msgstr "«color-scheme» سانلىق مەلۇمات قىسقۇچى قۇرالمىدى."
 
 #: colors.cpp:310
 #, kde-format
 msgid "Failed to copy color scheme into 'color-scheme' data folder."
-msgstr ""
+msgstr "رەڭ لايىھەسىنى «color-scheme» سانلىق مەلۇمات قىسقۇچىغا كۆچۈرەلمىدى."
 
 #: colors.cpp:327
 #, kde-format
 msgid "Color scheme installed successfully."
-msgstr ""
+msgstr "رەڭ لايىھەسى مۇۋەپپەقىيەتلىك ئورنىتىلدى."
 
 #. i18n: ectx: label, entry (colorScheme), group (General)
 #: colorssettings.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Save Color Scheme"
+#, kde-format
 msgid "Color scheme name"
-msgstr "رەڭ لايىھىسىنى ساقلاش"
+msgstr "رەڭ لايىھە ئىسمى"
 
 #. i18n: ectx: label, entry (accentColor), group (General)
 #: colorssettings.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Inactive color"
+#, kde-format
 msgid "Accent color"
-msgstr "پاسسىپ رەڭ"
+msgstr "روشەن رەڭ"
 
 #. i18n: ectx: label, entry (lastUsedCustomAccentColor), group (General)
 #: colorssettings.kcfg:17
@@ -80,34 +77,34 @@ msgid ""
 "The last used custom accent color before user switched to wallpaper "
 "generated color or default color"
 msgstr ""
+"ئىشلەتكۈچى تام قەغەز ھاسىللىغان رەڭ ياكى كۆڭۈلدىكى رەڭگە ئالماشتۇرۇشتىن "
+"ئىلگىرى ئاخىرقى قېتىم ئىشلەتكەن ئىختىيارى روشەن رەڭ"
 
 #. i18n: ectx: label, entry (accentColorFromWallpaper), group (General)
 #: colorssettings.kcfg:21
 #, kde-format
 msgid "Whether accent color from wallpaper should be applied"
-msgstr ""
+msgstr "تام قەغەزدىن ئاجراتقان روشەن رەڭنى قوللىنامدۇ يوق"
 
 #: editor/kcolorschemeeditor.cpp:23
-#, fuzzy, kde-format
-#| msgid "Save Color Scheme"
+#, kde-format
 msgid "KColorSchemeEditor"
-msgstr "رەڭ لايىھىسىنى ساقلاش"
+msgstr "KColor رەڭ لايىھە تەھرىرلىگۈچ"
 
 #: editor/kcolorschemeeditor.cpp:25
-#, fuzzy, kde-format
-#| msgid "Save the current color scheme"
+#, kde-format
 msgid "Utility to edit and create color schemes"
-msgstr "نۆۋەتتىكى رەڭ لاھىيەسىنى ساقلايدۇ"
+msgstr "رەڭ لايىھەسى قۇرۇپ ۋە تەھرىرلەيدىغان قورال"
 
 #: editor/kcolorschemeeditor.cpp:27
 #, kde-format
 msgid "Olivier Churlaud"
-msgstr ""
+msgstr "Olivier Churlaud"
 
 #: editor/kcolorschemeeditor.cpp:27
 #, kde-format
 msgid "Utility creation"
-msgstr ""
+msgstr "قۇرۇش قورالى"
 
 #: editor/kcolorschemeeditor.cpp:28
 #, kde-format
@@ -117,7 +114,7 @@ msgstr "Jeremy Whiting"
 #: editor/kcolorschemeeditor.cpp:28 editor/kcolorschemeeditor.cpp:29
 #, kde-format
 msgid "KCM code (reused in here)"
-msgstr ""
+msgstr "KCM كودى (بۇ يەردە قايتا ئىشلىتىلگەن)"
 
 #: editor/kcolorschemeeditor.cpp:29
 #, kde-format
@@ -127,7 +124,7 @@ msgstr "Matthew Woehlke"
 #: editor/kcolorschemeeditor.cpp:33
 #, kde-format
 msgid "Scheme to edit or to use as a base."
-msgstr ""
+msgstr "تەھرىرلەش ياكى ئىشلىتىشتە ئاساس قىلىدىغان رەڭ لايىھەسى."
 
 #: editor/kcolorschemeeditor.cpp:35
 #, kde-format
@@ -135,17 +132,20 @@ msgid ""
 "Show 'Apply' button that saves changes without asking (unlike 'Save As' "
 "button)"
 msgstr ""
+"ئۆزگەرتىشنى سورىمايلا ساقلايدىغان «قوللان» توپچەنى كۆرسىتىدۇ («باشقا ئاتتا "
+"ساقلا» توپچە بىلەن ئوخشىمايدۇ)"
 
 #: editor/kcolorschemeeditor.cpp:39
 #, kde-format
 msgid ""
 "Makes the dialog transient for another application window specified by handle"
 msgstr ""
+"تۇتقۇچتا بەلگىلەنگەن باشقا پىروگرامما كۆزنىكىنىڭ سۆزلەشكۈسىنى سۈزۈك قىلىدۇ"
 
 #: editor/kcolorschemeeditor.cpp:55
 #, kde-format
 msgid "Scheme not found, falling back to current one.\n"
-msgstr ""
+msgstr "رەڭ لايىھەسى تېپىلمىدى، نۆۋەتتىكى بىرسىگە قايتىدۇ.\n"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label)
 #: editor/preview.ui:29
@@ -156,9 +156,7 @@ msgstr "كۆزنەك تەگلىكىدىكى كۆزنەك تېكىستى"
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: editor/preview.ui:32
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "Window text"
+#, kde-format
 msgctxt "color-kcm-preview"
 msgid "Window text"
 msgstr "كۆزنەك تېكىستى"
@@ -167,7 +165,7 @@ msgstr "كۆزنەك تېكىستى"
 #: editor/preview.ui:39
 #, kde-format
 msgid "Button text on Button Background"
-msgstr "توپچا تەگلىكىدىكى توپچا تېكىستى"
+msgstr "توپچە تەگلىكىدىكى توپچە تېكىستى"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QPushButton, pushButton)
@@ -175,14 +173,13 @@ msgstr "توپچا تەگلىكىدىكى توپچا تېكىستى"
 #, kde-format
 msgctxt "color-kcm-preview"
 msgid "Push Button"
-msgstr "توپچا"
+msgstr "توپچە"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelSelection0)
 #: editor/preview.ui:123
-#, fuzzy, kde-format
-#| msgid "Normal Text on Normal Background"
+#, kde-format
 msgid "Selection Normal Text against Selection Normal Background"
-msgstr "نورمال تەگلىكتىكى نورمال تېكىست"
+msgstr "تاللانغان ئادەتتىكى تەگلىكتە تاللانغان ئادەتتىكى تېكىست"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, labelSelection0)
@@ -194,48 +191,41 @@ msgstr "تاللانغان تېكىست"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelSelection3)
 #: editor/preview.ui:138
-#, fuzzy, kde-format
-#| msgid "Link Text on Normal Background"
+#, kde-format
 msgid "Selection Link Text against Selection Normal Background"
-msgstr "نورمال تەگلىكتىكى ئۇلانما تېكىستى"
+msgstr "تاللانغان ئادەتتىكى تەگلىكتە تاللانغان ئۇلانما تېكىست"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, labelSelection3)
 #. i18n: ectx: property (text), widget (QLabel, labelView3)
 #: editor/preview.ui:141 editor/preview.ui:265
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "link"
+#, kde-format
 msgctxt "color-kcm-preview"
 msgid "link"
 msgstr "ئۇلانما"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelSelection4)
 #: editor/preview.ui:153
-#, fuzzy, kde-format
-#| msgid "Visited Text on Normal Background"
+#, kde-format
 msgid "Selection Visited Text against Selection Normal Background"
-msgstr "نورمال تەگلىكتىكى كۆرۈلگەن تېكىست"
+msgstr "تاللانغان ئادەتتىكى تەگلىكتە تاللانغان زىيارەت قىلىنغان تېكىست"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, labelSelection4)
 #. i18n: ectx: property (text), widget (QLabel, labelView4)
 #: editor/preview.ui:156 editor/preview.ui:280
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "visited"
+#, kde-format
 msgctxt "color-kcm-preview"
 msgid "visited"
-msgstr "كۆرۈلگەن"
+msgstr "زىيارەت قىلىنغان"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelSelection2)
 #: editor/preview.ui:163
-#, fuzzy, kde-format
-#| msgid "Active Text on Normal Background"
+#, kde-format
 msgid "Selection Active Text against Selection Normal Background"
-msgstr "نورمال تەگلىكتىكى ئاكتىپ تېكىست"
+msgstr "تاللانغان ئادەتتىكى تەگلىكتە تاللانغان ئاكتىپ تېكىست"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -249,10 +239,9 @@ msgstr "a"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelSelection1)
 #: editor/preview.ui:173
-#, fuzzy, kde-format
-#| msgid "Inactive Text on Normal Background"
+#, kde-format
 msgid "Selection Inactive Text against Selection Normal Background"
-msgstr "نورمال تەگلىكتىكى پاسسىپ تېكىست"
+msgstr "تاللانغان ئادەتتىكى تەگلىكتە تاللانغان پاسسىپ تېكىست"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -266,10 +255,9 @@ msgstr "i"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelSelection5)
 #: editor/preview.ui:183
-#, fuzzy, kde-format
-#| msgid "Negative Text on Normal Background"
+#, kde-format
 msgid "Selection Negative Text against Selection Normal Background"
-msgstr "نورمال تەگلىكتىكى تەتۈر تېكىست"
+msgstr "تاللانغان ئادەتتىكى تەگلىكتە تاللانغان تەتۈر رەڭ تېكىست"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -283,10 +271,9 @@ msgstr "!"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelSelection6)
 #: editor/preview.ui:193
-#, fuzzy, kde-format
-#| msgid "Neutral Text on Normal Background"
+#, kde-format
 msgid "Selection Neutral Text against Selection Normal Background"
-msgstr "نورمال تەگلىكتىكى بىتەرەپ تېكىست"
+msgstr "تاللانغان ئادەتتىكى تەگلىكتە تاللانغان بىتەرەپ تېكىست"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -300,10 +287,9 @@ msgstr "="
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelSelection7)
 #: editor/preview.ui:203
-#, fuzzy, kde-format
-#| msgid "Positive Text on Normal Background"
+#, kde-format
 msgid "Selection Positive Text against Selection Normal Background"
-msgstr "نورمال تەگلىكتىكى ئوڭ تېكىست"
+msgstr "تاللانغان ئادەتتىكى تەگلىكتە تاللانغان ھەقىقىي تېكىست"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -317,69 +303,59 @@ msgstr "+"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView0)
 #: editor/preview.ui:247
-#, fuzzy, kde-format
-#| msgid "Normal Text on Normal Background"
+#, kde-format
 msgid "View Normal Text against View Normal Background"
-msgstr "نورمال تەگلىكتىكى نورمال تېكىست"
+msgstr "كۆرۈنۈش ئادەتتىكى تەگلىكتە كۆرۈنۈش ئادەتتىكى تېكىست"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, labelView0)
 #: editor/preview.ui:250
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "Normal text"
+#, kde-format
 msgctxt "color-kcm-preview"
 msgid "Normal text"
-msgstr "نورمال تېكىست"
+msgstr "ئادەتتىكى تېكىست"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView3)
 #: editor/preview.ui:262
-#, fuzzy, kde-format
-#| msgid "Link Text on Normal Background"
+#, kde-format
 msgid "View Link Text against View Normal Background"
-msgstr "نورمال تەگلىكتىكى ئۇلانما تېكىستى"
+msgstr "كۆرۈنۈش ئادەتتىكى تەگلىكتە كۆرۈنۈش ئۇلانما تېكىست"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView4)
 #: editor/preview.ui:277
-#, fuzzy, kde-format
-#| msgid "Visited Text on Normal Background"
+#, kde-format
 msgid "View Visited Text against View Normal Background"
-msgstr "نورمال تەگلىكتىكى كۆرۈلگەن تېكىست"
+msgstr "كۆرۈنۈش ئادەتتىكى تەگلىكتە كۆرۈنۈش زىيارەت قىلىنغان تېكىست"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView2)
 #: editor/preview.ui:287
-#, fuzzy, kde-format
-#| msgid "Active Text on Normal Background"
+#, kde-format
 msgid "View Active Text against View Normal Background"
-msgstr "نورمال تەگلىكتىكى ئاكتىپ تېكىست"
+msgstr "كۆرۈنۈش ئادەتتىكى تەگلىكتە كۆرۈنۈش ئاكتىپ تېكىست"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView1)
 #: editor/preview.ui:297
-#, fuzzy, kde-format
-#| msgid "Inactive Text on Normal Background"
+#, kde-format
 msgid "View Inactive Text against View Normal Background"
-msgstr "نورمال تەگلىكتىكى پاسسىپ تېكىست"
+msgstr "كۆرۈنۈش ئادەتتىكى تەگلىكتە كۆرۈنۈش پاسسىپ تېكىست"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView5)
 #: editor/preview.ui:307
-#, fuzzy, kde-format
-#| msgid "Negative Text on Normal Background"
+#, kde-format
 msgid "View Negative Text against View Normal Background"
-msgstr "نورمال تەگلىكتىكى تەتۈر تېكىست"
+msgstr "كۆرۈنۈش ئادەتتىكى تەگلىكتە كۆرۈنۈش تەتۈر رەڭ تېكىست"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView6)
 #: editor/preview.ui:317
-#, fuzzy, kde-format
-#| msgid "Neutral Text on Normal Background"
+#, kde-format
 msgid "View Neutral Text against View Normal Background"
-msgstr "نورمال تەگلىكتىكى بىتەرەپ تېكىست"
+msgstr "كۆرۈنۈش ئادەتتىكى تەگلىكتە كۆرۈنۈش بىتەرەپ تېكىست"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView7)
 #: editor/preview.ui:327
-#, fuzzy, kde-format
-#| msgid "Positive Text on Normal Background"
+#, kde-format
 msgid "View Positive Text against View Normal Background"
-msgstr "نورمال تەگلىكتىكى ئوڭ تېكىست"
+msgstr "كۆرۈنۈش ئادەتتىكى تەگلىكتە كۆرۈنۈش ئوڭ رەڭ تېكىست"
 
 #: editor/scmeditorcolors.cpp:64 editor/scmeditorcolors.cpp:85
 #, kde-format
@@ -389,7 +365,7 @@ msgstr "ئۆزگىرىشچان"
 #: editor/scmeditorcolors.cpp:108
 #, kde-format
 msgid "Normal Background"
-msgstr "نورمال كۆزنەك"
+msgstr "ئادەتتىكى تەگلىك"
 
 #: editor/scmeditorcolors.cpp:109
 #, kde-format
@@ -399,7 +375,7 @@ msgstr "زاپاس تەگلىك"
 #: editor/scmeditorcolors.cpp:110
 #, kde-format
 msgid "Normal Text"
-msgstr "نورمال تېكىست"
+msgstr "ئادەتتىكى تېكىست"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.cpp:111 editor/scmeditorcolors.ui:303
@@ -417,7 +393,7 @@ msgstr "ئاكتىپ تېكىست"
 #: editor/scmeditorcolors.cpp:113 editor/scmeditorcolors.ui:313
 #, kde-format
 msgid "Link Text"
-msgstr "ئۇلانما تېكىستى"
+msgstr "ئۇلانما تېكىست"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.cpp:114 editor/scmeditorcolors.ui:318
@@ -429,13 +405,13 @@ msgstr "زىيارەت قىلىنغان تېكىست"
 #: editor/scmeditorcolors.cpp:115 editor/scmeditorcolors.ui:323
 #, kde-format
 msgid "Negative Text"
-msgstr "تەتۈر تېكىست"
+msgstr "تەتۈر رەڭ تېكىست"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.cpp:116 editor/scmeditorcolors.ui:328
 #, kde-format
 msgid "Neutral Text"
-msgstr "تەرەپسىز تېكىست"
+msgstr "بىتەرەپ تېكىست"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.cpp:117 editor/scmeditorcolors.ui:333
@@ -453,7 +429,7 @@ msgstr "فوكۇس بېزىكى"
 #: editor/scmeditorcolors.cpp:119 editor/scmeditorcolors.ui:343
 #, kde-format
 msgid "Hover Decoration"
-msgstr ""
+msgstr "لەيلىتىش بېزىكى"
 
 #. i18n: ectx: property (text), widget (QLabel, label_7)
 #: editor/scmeditorcolors.ui:23
@@ -470,12 +446,10 @@ msgstr "كۆرىدىغان/تۈزىتىدىغان رەڭ توپلىمى"
 #. i18n: 'Common' here means &quot;frequent/not rare&quot;, not &quot;shared&quot;
 #. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
 #: editor/scmeditorcolors.ui:40
-#, fuzzy, kde-format
-#| msgctxt "color-sets"
-#| msgid "Common Colors"
+#, kde-format
 msgctxt "color-sets"
 msgid "Common colors"
-msgstr "دائىم ئىشلىتىدىغان رەڭلەر"
+msgstr "دائىم ئىشلىتىدىغان رەڭ"
 
 #. i18n: see plasma-workspace/kcms/colors/README.i18n
 #. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
@@ -496,12 +470,10 @@ msgstr "كۆزنەك"
 #. i18n: see plasma-workspace/kcms/colors/README.i18n
 #. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
 #: editor/scmeditorcolors.ui:55
-#, fuzzy, kde-format
-#| msgctxt "color-sets"
-#| msgid "Button"
+#, kde-format
 msgctxt "color-sets"
 msgid "Button"
-msgstr "توپچا"
+msgstr "توپچە"
 
 #. i18n: see plasma-workspace/kcms/colors/README.i18n
 #. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
@@ -525,7 +497,7 @@ msgstr "كۆرسەتمە"
 #, kde-format
 msgctxt "color-sets"
 msgid "Complementary"
-msgstr ""
+msgstr "تولۇقلىما رەڭ"
 
 #. i18n: see plasma-workspace/kcms/colors/README.i18n
 #. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
@@ -533,7 +505,7 @@ msgstr ""
 #, kde-format
 msgctxt "color-sets"
 msgid "Header"
-msgstr ""
+msgstr "بەت قاش"
 
 #. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:118 editor/scmeditorcolors.ui:123
@@ -569,13 +541,13 @@ msgstr "1"
 #: editor/scmeditorcolors.ui:258
 #, kde-format
 msgid "View Background"
-msgstr "رەكلىك كۆرۈش"
+msgstr "كۆرۈنۈش تەگلىكى"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:263
 #, kde-format
 msgid "View Text"
-msgstr "تېكىست كۆرۈش"
+msgstr "كۆرۈنۈش تېكىست"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:268
@@ -593,13 +565,13 @@ msgstr "كۆزنەك خېتى"
 #: editor/scmeditorcolors.ui:278
 #, kde-format
 msgid "Button Background"
-msgstr "توپچا تەگلىكى"
+msgstr "توپچە تەگلىكى"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:283
 #, kde-format
 msgid "Button Text"
-msgstr "توپچا تېكىستى"
+msgstr "توپچە تېكىستى"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:288
@@ -641,13 +613,13 @@ msgstr "ئاكتىپ ماۋزۇ بالدىقى"
 #: editor/scmeditorcolors.ui:363
 #, kde-format
 msgid "Active Titlebar Text"
-msgstr "ئاكتىپ ماۋزۇ بالدىقى تېكىستى"
+msgstr "ئاكتىپ ماۋزۇ بالداق تېكىستى"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:368
 #, kde-format
 msgid "Active Titlebar Secondary"
-msgstr "ئاكتىپ ماۋزۇ بالدىقى ئىككىنچى"
+msgstr "ئاكتىپ ماۋزۇ بالداق ئىككىنچى"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:373
@@ -659,13 +631,13 @@ msgstr "پاسسىپ ماۋزۇ بالداق"
 #: editor/scmeditorcolors.ui:378
 #, kde-format
 msgid "Inactive Titlebar Text"
-msgstr "پاسسىپ ماۋزۇ بالدىقى تېكىستى"
+msgstr "پاسسىپ ماۋزۇ بالداق تېكىستى"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:383
 #, kde-format
 msgid "Inactive Titlebar Secondary"
-msgstr "پاسسىپ ماۋزۇ بالدىقى ئىككىنچى"
+msgstr "پاسسىپ ماۋزۇ بالداق ئىككىنچى"
 
 #: editor/scmeditordialog.cpp:62
 #, kde-format
@@ -675,34 +647,32 @@ msgstr "تاللانما"
 #: editor/scmeditordialog.cpp:63
 #, kde-format
 msgid "Colors"
-msgstr "رەڭلەر"
+msgstr "رەڭ"
 
 #: editor/scmeditordialog.cpp:64
-#, fuzzy, kde-format
-#| msgctxt "@title:tab color transformations on disabled elements"
-#| msgid "Disabled"
+#, kde-format
 msgid "Disabled"
-msgstr "ئىناۋەتسىز قىلىنغان"
+msgstr "چەكلەنگەن"
 
 #: editor/scmeditordialog.cpp:96
 #, kde-format
 msgid "You have unsaved changes. Do you really want to quit?"
-msgstr ""
+msgstr "ساقلىمىغان ئۆزگەرتىشىڭىز بار. راستتىنلا چېكىنەمسىز؟"
 
 #: editor/scmeditordialog.cpp:97
 #, kde-format
 msgid "Unsaved changes"
-msgstr ""
+msgstr "ساقلانمىغان ئۆزگەرتىش"
 
 #: editor/scmeditordialog.cpp:117 editor/scmeditordialog.cpp:142
 #, kde-format
 msgid "Save Color Scheme"
-msgstr "رەڭ لايىھىسىنى ساقلاش"
+msgstr "رەڭ لايىھەسىنى ساقلاش"
 
 #: editor/scmeditordialog.cpp:117
 #, kde-format
 msgid "&Enter a name for the color scheme:"
-msgstr "رەڭ لايىھىسىنىڭ ئاتىنى كىرگۈزۈڭ(&E):"
+msgstr "رەڭ لايىھەسىنىڭ ئاتى كىرگۈزۈلىدۇ(&E):"
 
 #: editor/scmeditordialog.cpp:141
 #, kde-format
@@ -710,13 +680,13 @@ msgid ""
 "A color scheme with that name already exists.\n"
 "Do you want to overwrite it?"
 msgstr ""
-"شۇنداق ئاتتىكى رەڭ لايىھىسى مەۋجۇت.\n"
+"شۇنداق ئاتتىكى رەڭ لايىھەسى مەۋجۇت.\n"
 "قاپلىۋېتەمسىز؟"
 
 #: editor/scmeditordialog.cpp:178
 #, kde-format
 msgid "You do not have permission to overwrite that scheme"
-msgstr "بۇ لاھىيەنى قاپلاش ھوقۇقىڭىز يوق"
+msgstr "بۇ لايىھەنى قاپلاش ئىجازىتىڭىز يوق"
 
 #: editor/scmeditordialog.cpp:178
 #, kde-format
@@ -724,11 +694,9 @@ msgid "Error"
 msgstr "خاتالىق"
 
 #: editor/scmeditordialog.cpp:193
-#, fuzzy, kde-format
-#| msgctxt "@title:tab color transformations on inactive elements"
-#| msgid "Inactive"
+#, kde-format
 msgid "Inactive"
-msgstr "ئاكتىپسىز"
+msgstr "پاسسىپ"
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: editor/scmeditoreffects.ui:17
@@ -746,7 +714,7 @@ msgstr "كۈچلۈكلۈك:"
 #: editor/scmeditoreffects.ui:37
 #, kde-format
 msgid "Disabled color effect type"
-msgstr "ئىناۋەتسىز قىلىنغان  رەڭ ئۈنۈمىنىڭ تىپى"
+msgstr "چەكلەنگەن رەڭ ئۈنۈمىنىڭ تۈرى"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
 #: editor/scmeditoreffects.ui:41
@@ -760,28 +728,27 @@ msgstr "يوق"
 #, kde-format
 msgctxt "disabled color effect"
 msgid "Desaturate"
-msgstr "ئاچۇرۇش"
+msgstr "ئاچۇر"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
 #: editor/scmeditoreffects.ui:51
 #, kde-format
 msgctxt "disabled color effect"
 msgid "Fade"
-msgstr "سۇسلاشتۇر"
+msgstr "ئاقارت"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, colorBox)
 #: editor/scmeditoreffects.ui:56
 #, kde-format
 msgctxt "disabled color effect"
 msgid "Tint"
-msgstr "رەڭلە"
+msgstr "قارايت"
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, intensityBox)
 #: editor/scmeditoreffects.ui:64
-#, fuzzy, kde-format
-#| msgid "Disabled color effect type"
+#, kde-format
 msgid "Disabled intensity effect type"
-msgstr "ئىناۋەتسىز قىلىنغان  رەڭ ئۈنۈمىنىڭ تىپى"
+msgstr "چەكلەنگەن كۈچلۈكلۈك ئۈنۈم تۈرى"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
 #: editor/scmeditoreffects.ui:68
@@ -795,7 +762,7 @@ msgstr "يوق"
 #, kde-format
 msgctxt "disabled intensity effect"
 msgid "Shade"
-msgstr "تۈرۈش"
+msgstr "قاتلا"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, intensityBox)
 #: editor/scmeditoreffects.ui:78
@@ -815,32 +782,31 @@ msgstr "يورۇت"
 #: editor/scmeditoreffects.ui:107
 #, kde-format
 msgid "Contrast:"
-msgstr "سېلىشتۇرما دەرىجە:"
+msgstr "سېلىشتۇرمىسى:"
 
 #. i18n: ectx: property (toolTip), widget (QSlider, colorSlider)
 #: editor/scmeditoreffects.ui:120
 #, kde-format
 msgid "Disabled color effect amount"
-msgstr "ئىناۋەتسىز قىلىنغان  رەڭ ئۈنۈمىنىڭ مىقدارى"
+msgstr "چەكلەنگەن رەڭ ئۈنۈمىنىڭ مىقدارى"
 
 #. i18n: ectx: property (toolTip), widget (QSlider, intensitySlider)
 #: editor/scmeditoreffects.ui:139
-#, fuzzy, kde-format
-#| msgid "Disabled color effect amount"
+#, kde-format
 msgid "Disabled intensity effect amount"
-msgstr "ئىناۋەتسىز قىلىنغان  رەڭ ئۈنۈمىنىڭ مىقدارى"
+msgstr "چەكلەنگەن كۈچلۈكلۈك ئۈنۈم مىقدارى"
 
 #. i18n: ectx: property (toolTip), widget (KColorButton, colorButton)
 #: editor/scmeditoreffects.ui:158
 #, kde-format
 msgid "Disabled color"
-msgstr "ئىناۋەتسىز قىلىنغان رەڭ"
+msgstr "چەكلەنگەن رەڭ"
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, contrastBox)
 #: editor/scmeditoreffects.ui:181
 #, kde-format
 msgid "Disabled contrast type"
-msgstr "ئىناۋەتسىز قىلىنغان سېلىشتۇرما دەرىجەنىڭ تىپى"
+msgstr "چەكلەنگەن سېلىشتۇرما دەرىجە تۈرى"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
 #: editor/scmeditoreffects.ui:185
@@ -854,70 +820,68 @@ msgstr "يوق"
 #, kde-format
 msgctxt "disabled contrast"
 msgid "Fade"
-msgstr "سۇسلاشتۇر"
+msgstr "ئاقارت"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
 #: editor/scmeditoreffects.ui:195
 #, kde-format
 msgctxt "disabled contrast"
 msgid "Tint"
-msgstr "رەڭلە"
+msgstr "قارايت"
 
 #. i18n: ectx: property (toolTip), widget (QSlider, contrastSlider)
 #: editor/scmeditoreffects.ui:222
 #, kde-format
 msgid "Disabled contrast amount"
-msgstr "ئىناۋەتسىز قىلىنغان سېلىشتۇرما دەرىجەنىڭ مىقدارى"
+msgstr "چەكلەنگەن سېلىشتۇرما دەرىجەنىڭ مىقدارى"
 
 #. i18n: ectx: property (text), widget (QCheckBox, useInactiveEffects)
 #: editor/scmeditoroptions.ui:17
-#, fuzzy, kde-format
-#| msgid "Apply inactive window color &effects"
+#, kde-format
 msgid "Apply &effects to inactive windows"
-msgstr "پاسسىپ كۆزنەك رەڭ ئۈنۈمىنى قوللان(&E)"
+msgstr "ئۈنۈمنى پاسسىپ كۆزنەككە قوللىنىدۇ(&E)"
 
 #. i18n: ectx: property (text), widget (QCheckBox, inactiveSelectionEffect)
 #: editor/scmeditoroptions.ui:24
 #, kde-format
 msgid "Use different colors for in&active selections"
-msgstr ""
+msgstr "پاسسىپ تاللاشقا پەرقلىق رەڭ ئىشلىتىدۇ(&A)"
 
 #. i18n: ectx: property (text), widget (QCheckBox, shadeSortedColumn)
 #: editor/scmeditoroptions.ui:31
 #, kde-format
 msgid "Shade sorted column &in lists"
-msgstr "تىزىمدىكى تەرتىپلەنگەن ئىستوننى سايىلەشتۇر"
+msgstr "تىزىمدىكى تەرتىپلەنگەن رەتنى سايىلەشتۇر(&I)"
 
 #. i18n: ectx: property (text), widget (QCheckBox, accentTitlebar)
 #: editor/scmeditoroptions.ui:38
 #, kde-format
 msgid "Make window titlebars a&ccent-colored"
-msgstr ""
+msgstr "كۆزنەك ماۋزۇ بالداققا كۈچەيتىلگەن رەڭ ئىشلىتىدۇ(&C)"
 
 #. i18n: ectx: property (text), widget (QCheckBox, tintColors)
 #: editor/scmeditoroptions.ui:45
-#, fuzzy, kde-format
-#| msgid "Inactive color"
+#, kde-format
 msgid "Tint all colors with accent color"
-msgstr "پاسسىپ رەڭ"
+msgstr "ھەممە رەڭنى كۈچەيتىلگەن رەڭدە قارايتىدۇ"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: editor/scmeditoroptions.ui:52
 #, kde-format
 msgid "Tint strength:"
-msgstr ""
+msgstr "قارايتىش كۈچلۈكلۈكى:"
 
 #. i18n: ectx: property (toolTip), widget (QGroupBox, groupBox_5)
 #: editor/scmeditoroptions.ui:69
 #, kde-format
 msgid "Contrast of the frames, separators and outlines"
-msgstr ""
+msgstr "كاندۇك، ئايرىغۇچ ۋە گىرۋەكنىڭ سېلىشتۇرمىسى"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
 #: editor/scmeditoroptions.ui:72
 #, kde-format
 msgid "Frames and Outlines"
-msgstr ""
+msgstr "كاندۇك ۋە گىرۋەك"
 
 #. i18n: ectx: property (text), widget (KMessageWidget, contrastValueWarning)
 #: editor/scmeditoroptions.ui:93
@@ -926,25 +890,27 @@ msgid ""
 "Contrast values below 15% may produce visually awkward effects with some "
 "applications and color schemes. Consider yourself warned!"
 msgstr ""
+"بەزى پىروگرامما ۋە رەڭ لايىھەسىدە سېلىشتۇرما قىممىتى 15% تىن تۆۋەن بولغاندا "
+"كۆرۈنۈشتە غەلىتە ئۈنۈمنى پەيدا قىلىدۇ.ئاگاھلاندۇرۇلدۇم دەپ قاراڭ!"
 
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, contrastPercentageSpinBox)
 #: editor/scmeditoroptions.ui:109
 #, no-c-format, kde-format
 msgid "%"
-msgstr ""
+msgstr "%"
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: editor/scmeditoroptions.ui:138
 #, kde-format
 msgid "Contrast"
-msgstr "ئاق-قارىلىقى"
+msgstr "سېلىشتۇرمىسى"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelFore0)
 #. i18n: ectx: property (toolTip), widget (QLabel, labelBack0)
 #: editor/setpreview.ui:35 editor/setpreview.ui:189
 #, kde-format
 msgid "Normal Text on Normal Background"
-msgstr "نورمال تەگلىكتىكى نورمال تېكىست"
+msgstr "ئادەتتىكى تەگلىكتىكى ئادەتتىكى تېكىست"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -954,13 +920,13 @@ msgstr "نورمال تەگلىكتىكى نورمال تېكىست"
 #, kde-format
 msgctxt "color-kcm-set-preview"
 msgid "normal"
-msgstr "نورمال"
+msgstr "ئادەتتىكى"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelFore3)
 #: editor/setpreview.ui:56
 #, kde-format
 msgid "Link Text on Normal Background"
-msgstr "نورمال تەگلىكتىكى ئۇلانما تېكىستى"
+msgstr "ئادەتتىكى تەگلىكتىكى ئۇلانما تېكىست"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -976,7 +942,7 @@ msgstr "ئۇلانما"
 #: editor/setpreview.ui:77
 #, kde-format
 msgid "Visited Text on Normal Background"
-msgstr "نورمال تەگلىكتىكى كۆرۈلگەن تېكىست"
+msgstr "ئادەتتىكى تەگلىكتىكى زىيارەت قىلىنغان تېكىست"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -986,13 +952,13 @@ msgstr "نورمال تەگلىكتىكى كۆرۈلگەن تېكىست"
 #, kde-format
 msgctxt "color-kcm-set-preview"
 msgid "visited"
-msgstr "كۆرۈلگەن"
+msgstr "زىيارەت قىلىنغان"
 
 #. i18n: ectx: property (toolTip), widget (QWidget, widgetFore2)
 #: editor/setpreview.ui:90
 #, kde-format
 msgid "Active Text on Normal Background"
-msgstr "نورمال تەگلىكتىكى ئاكتىپ تېكىست"
+msgstr "ئادەتتىكى تەگلىكتىكى ئاكتىپ تېكىست"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -1008,7 +974,7 @@ msgstr "ئاكتىپ"
 #: editor/setpreview.ui:109
 #, kde-format
 msgid "Inactive Text on Normal Background"
-msgstr "نورمال تەگلىكتىكى پاسسىپ تېكىست"
+msgstr "ئادەتتىكى تەگلىكتىكى پاسسىپ تېكىست"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, labelFore1)
@@ -1022,7 +988,7 @@ msgstr "پاسسىپ"
 #: editor/setpreview.ui:125
 #, kde-format
 msgid "Negative Text on Normal Background"
-msgstr "نورمال تەگلىكتىكى تەتۈر تېكىست"
+msgstr "ئادەتتىكى تەگلىكتىكى تەتۈر رەڭ تېكىست"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -1032,7 +998,7 @@ msgstr "نورمال تەگلىكتىكى تەتۈر تېكىست"
 #, kde-format
 msgctxt "color-kcm-set-preview"
 msgid "negative"
-msgstr "تەتۈر"
+msgstr "تەتۈر رەڭ"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelFore6)
 #: editor/setpreview.ui:141
@@ -1064,14 +1030,13 @@ msgstr "نورمال تەگلىكتىكى ئوڭ تېكىست"
 #, kde-format
 msgctxt "color-kcm-set-preview"
 msgid "positive"
-msgstr "ئوڭ"
+msgstr "ئوڭ رەڭ"
 
 #. i18n: ectx: property (toolTip), widget (QWidget, widgetFore8)
 #: editor/setpreview.ui:170
-#, fuzzy, kde-format
-#| msgid "Focus on Normal Background"
+#, kde-format
 msgid "Hover on Normal Background"
-msgstr "نورمال تەگلىك ئۈستىدىكى فوكۇس"
+msgstr "ئادەتتىكى تەگلىكتە لەيلەت"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, labelFore8)
@@ -1079,7 +1044,7 @@ msgstr "نورمال تەگلىك ئۈستىدىكى فوكۇس"
 #, kde-format
 msgctxt "color-kcm-set-preview"
 msgid "hover"
-msgstr ""
+msgstr "لەيلەت"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelBack3)
 #: editor/setpreview.ui:211
@@ -1089,6 +1054,9 @@ msgid ""
 "(Note: Link Background is derived from Link Text and cannot be separately "
 "configured at this time)"
 msgstr ""
+"ئۇلانما تەگلىكتىكى ئۇلانما تېكىست\n"
+"(دىققەت: ئۇلانما تەگلىك ئۇلانما تېكىستتىن پەيدا بولىدۇ، بۇ چاغدا ئايرىپ "
+"سەپلىگىلى بولمايدۇ)"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelBack4)
 #: editor/setpreview.ui:233
@@ -1098,6 +1066,9 @@ msgid ""
 "(Note: Visited Background is derived from Visited Text and cannot be "
 "separately configured at this time)"
 msgstr ""
+"زىيارەت قىلىنغان تەگلىكتىكى زىيارەت قىلىنغان تېكىست\n"
+"(دىققەت: زىيارەت قىلىنغان تەگلىك زىيارەت قىلىنغان تېكىستتىن پەيدا بولىدۇ، بۇ "
+"چاغدا ئايرىپ سەپلىگىلى بولمايدۇ)"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelBack2)
 #: editor/setpreview.ui:250
@@ -1107,13 +1078,15 @@ msgid ""
 "(Note: Active Background is derived from Active Text and cannot be "
 "separately configured at this time)"
 msgstr ""
+"ئاكتىپ تەگلىكتىكى ئاكتىپ تېكىست\n"
+"(دىققەت: ئاكتىپ تەگلىك ئاكتىپ تېكىستتىن پەيدا بولىدۇ، بۇ چاغدا ئايرىپ "
+"سەپلىگىلى بولمايدۇ)"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelBack1)
 #: editor/setpreview.ui:266
-#, fuzzy, kde-format
-#| msgid "Inactive Text on Normal Background"
+#, kde-format
 msgid "Inactive Text on Alternate Background"
-msgstr "نورمال تەگلىكتىكى پاسسىپ تېكىست"
+msgstr "ئالماشتۇرىدىغان تەگلىكتىكى پاسسىپ تېكىست"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, labelBack1)
@@ -1131,6 +1104,9 @@ msgid ""
 "(Note: Negative Background is derived from Negative Text and cannot be "
 "separately configured at this time)"
 msgstr ""
+"تەتۈر رەڭ تەگلىكتىكى تەتۈر رەڭ تېكىست\n"
+"(دىققەت: تەتۈر رەڭ تەگلىك تەتۈر رەڭ تېكىستتىن پەيدا بولىدۇ، بۇ چاغدا ئايرىپ "
+"سەپلىگىلى بولمايدۇ)"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelBack6)
 #: editor/setpreview.ui:300
@@ -1140,6 +1116,9 @@ msgid ""
 "(Note: Neutral Background is derived from Neutral Text and cannot be "
 "separately configured at this time)"
 msgstr ""
+"بىتەرەپ تەگلىكتىكى بىتەرەپ تېكىست\n"
+"(دىققەت: بىتەرەپ تەگلىك بىتەرەپ تېكىستتىن پەيدا بولىدۇ، بۇ چاغدا ئايرىپ "
+"سەپلىگىلى بولمايدۇ)"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelBack7)
 #: editor/setpreview.ui:317
@@ -1149,12 +1128,15 @@ msgid ""
 "(Note: Positive Background is derived from Positive Text and cannot be "
 "separately configured at this time)"
 msgstr ""
+"ئوڭ تەگلىكتىكى ئوڭ تېكىست\n"
+"(دىققەت: ئوڭ تەگلىك ئوڭ تېكىستتىن پەيدا بولىدۇ، بۇ چاغدا ئايرىپ سەپلىگىلى "
+"بولمايدۇ)"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelFore9)
 #: editor/setpreview.ui:333
 #, kde-format
 msgid "Focus on Normal Background"
-msgstr "نورمال تەگلىك ئۈستىدىكى فوكۇس"
+msgstr "ئادەتتىكى تەگلىكتىكى فوكۇس"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, labelFore9)
@@ -1171,6 +1153,9 @@ msgid ""
 "without accidentally setting it to one that is either not available, or "
 "which is already set."
 msgstr ""
+"بۇ قورال نۆۋەتتىكى Plasma جەريانچاقنىڭ رەڭ ئۆرنىكىنى تەڭشەشكە يول قويىدۇ، "
+"ئۇنى ئىشلەتكىلى بولمايدىغان لايىھە قىلىپ تەڭشەش ياكى  ئىشلىتىلىۋاتقان لايىھە "
+"قىلىپ تەڭشەشتىن ساقلىنىدۇ."
 
 #: plasma-apply-colorscheme.cpp:45
 #, kde-format
@@ -1178,6 +1163,8 @@ msgid ""
 "The name of the color scheme you wish to set for your current Plasma session "
 "(passing a full path will only use the last part of the path)"
 msgstr ""
+"نۆۋەتتىكى Plasma جەريانچاق (تولۇق يول يەتكۈزۈلسە يولنىڭ پەقەت ئاخىرقى "
+"بۆلىكىلا ئىشلىتىلىدۇ) قا تەڭشىمەكچى بولغان رەڭ لايىھە ئىسمى"
 
 #: plasma-apply-colorscheme.cpp:48
 #, kde-format
@@ -1185,6 +1172,8 @@ msgid ""
 "Show all the color schemes available on the system (and which is the current "
 "theme)"
 msgstr ""
+"سىستېمىدا ئىشلەتكىلى بولىدىغان ھەممە رەڭ لايىھەسى (ۋە قايسىسىنىڭ نۆۋەتتە "
+"ئۆرنەك ئىكەنلىكى) نى كۆرسىتىدۇ"
 
 #: plasma-apply-colorscheme.cpp:53
 #, kde-format
@@ -1193,6 +1182,9 @@ msgid ""
 "w3.org/TR/SVG11/types.html#ColorKeywords) and hex color codes are supported. "
 "Quote the hex code if there is possibility of shell expansion"
 msgstr ""
+"تەڭشىمەكچى بولغان روشەن رەڭنىڭ ئىسمى. SVG رەڭ ئىسمى (https://www.w3.org/TR/"
+"SVG11/types.html#ColorKeywords) ۋە ئون ئالتىلىك رەڭ كودىنى قوللايدۇ. ئەگەر "
+"shell كېڭەيتىلمىسى ئىشلىتىش مۇمكىن بولسا ئون ئالتىلىك رەڭ كودى نەقىل ئېلىنىدۇ"
 
 #: plasma-apply-colorscheme.cpp:80
 #, kde-format
@@ -1200,11 +1192,15 @@ msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
 "Plasma session."
 msgstr ""
+"ئىلتىماس قىلىنغان ئۆرنەك «%1» ئاللىبۇرۇن نۆۋەتتىكى  Plasma جەريانچاقنىڭ "
+"ئۆرنىكىگە تەڭشەلگەن."
 
 #: plasma-apply-colorscheme.cpp:113
 #, kde-format
 msgid "Successfully applied the color scheme %1 to your current Plasma session"
 msgstr ""
+"رەڭ لايىھە ئۆرنىكى «%1» نۆۋەتتىكى Plasma جەريانچاققا مۇۋەپپەقىيەتلىك "
+"قوللىنىلدى"
 
 #: plasma-apply-colorscheme.cpp:115
 #, kde-format
@@ -1212,176 +1208,154 @@ msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
 "options: %2"
 msgstr ""
+"«%1» ئۆرنەكنى تاپالمىدى. ئۆرنەك تۆۋەندىكى تاللانمىدىن بىرى بولۇشى كېرەك: %2"
 
 #: plasma-apply-colorscheme.cpp:123
 #, kde-format
 msgid ""
 "You have managed to pass an empty color scheme name, which isn't supported "
 "behavior."
-msgstr ""
+msgstr "قىلمىشىنى قوللىمايدىغان بوش رەڭ لايىھە ئىسمىدىن بىرنى تەمىنلىدىڭىز."
 
 #: plasma-apply-colorscheme.cpp:127
 #, kde-format
 msgid ""
 "The file you attempted to set as your scheme, %1, could not be identified as "
 "a color scheme."
-msgstr ""
+msgstr "سىز تەڭشەشنى سىناۋاتقان ھۆججەت %1 نى رەڭ لايىھەسى دەپ تونۇيالمىدى."
 
 #: plasma-apply-colorscheme.cpp:151
 #, kde-format
 msgid "Successfully applied the accent color %1"
-msgstr ""
+msgstr "روشەن رەڭ %1 مۇۋەپپەقىيەتلىك قوللىنىلدى"
 
 #: plasma-apply-colorscheme.cpp:153
-#, fuzzy, kde-format
-#| msgid "Inactive color"
+#, kde-format
 msgid "Invalid accent color "
-msgstr "پاسسىپ رەڭ"
+msgstr "ئىناۋەتسىز روشەن رەڭ "
 
 #: plasma-apply-colorscheme.cpp:158
 #, kde-format
 msgid "You have the following color schemes on your system:"
-msgstr ""
+msgstr "سىستېمىڭىزدا تۆۋەندىكى رەڭ لايىھەلىرى بار:"
 
 #: plasma-apply-colorscheme.cpp:163
-#, fuzzy, kde-format
-#| msgid "Save the current color scheme"
+#, kde-format
 msgid " * %1 (current color scheme)"
-msgstr "نۆۋەتتىكى رەڭ لاھىيەسىنى ساقلايدۇ"
+msgstr " * %1 (نۆۋەتتىكى رەڭ لايىھەسى)"
 
 #: ui/AccentColorUI.qml:27
-#, fuzzy, kde-format
-#| msgid "Import Color Scheme"
+#, kde-format
 msgctxt "@item:inlistbox Accent color from color scheme"
 msgid "Accent color from color scheme"
-msgstr "رەڭ لايىھىسىنى ئىمپورت قىلىش"
+msgstr "رەڭ لايىھەسى ئاساسىدىكى روشەن رەڭ"
 
 #: ui/AccentColorUI.qml:28
-#, fuzzy, kde-format
-#| msgid "Import Color Scheme"
+#, kde-format
 msgctxt "@item:inlistbox Accent color from wallpaper"
 msgid "Accent color from wallpaper"
-msgstr "رەڭ لايىھىسىنى ئىمپورت قىلىش"
+msgstr "تام قەغەز ئاساسىدىكى روشەن رەڭ"
 
 #: ui/AccentColorUI.qml:29
-#, fuzzy, kde-format
-#| msgid "Inactive color"
+#, kde-format
 msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom accent color"
-msgstr "پاسسىپ رەڭ"
+msgstr "ئىختىيارى روشەن رەڭ"
 
 #: ui/main.qml:90
 #, kde-format
 msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
-msgstr ""
+msgstr "«%1» رەڭ لايىھەسى ئورنىتىلمىغان. ئورنىغا كۆڭۈلدىكى ئۆرنەك تاللىنىدۇ."
 
 #: ui/main.qml:123
-#, fuzzy, kde-format
-#| msgid "&Upload Scheme..."
+#, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "All schemes"
-msgstr "لايىھىنى يۈكلەش(&U)…"
+msgstr "بارلىق رەڭ لايىھەسى"
 
 #: ui/main.qml:124
-#, fuzzy, kde-format
-#| msgid "&Scheme"
+#, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "Light schemes"
-msgstr "لايىھە(&S)"
+msgstr "يورۇق رەڭ لايىھەسى"
 
 #: ui/main.qml:125
-#, fuzzy, kde-format
-#| msgid "Save Scheme..."
+#, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "Dark schemes"
-msgstr "لاھىيەنى ساقلاش…"
+msgstr "قاراڭغۇ رەڭ لايىھەسى"
 
 #: ui/main.qml:152
 #, kde-format
 msgid "Install from File…"
-msgstr ""
+msgstr "ھۆججەتتىن ئورنات…"
 
 #: ui/main.qml:157
 #, kde-format
 msgid "Get New…"
-msgstr ""
+msgstr "يېڭىسىغا ئېرىش…"
 
 #: ui/main.qml:204
-#, fuzzy, kde-format
-#| msgid "Window Text"
+#, kde-format
 msgid "Window Title"
-msgstr "كۆزنەك خېتى"
+msgstr "كۆزنەك ماۋزۇسى"
 
 #: ui/main.qml:227
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "Window text"
+#, kde-format
 msgid "Window text"
 msgstr "كۆزنەك تېكىستى"
 
 #: ui/main.qml:235
-#, fuzzy, kde-format
-#| msgctxt "color-sets"
-#| msgid "Button"
+#, kde-format
 msgid "Button"
-msgstr "توپچا"
+msgstr "توپچە"
 
 #: ui/main.qml:275
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "link"
+#, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "ئۇلانما"
 
 #: ui/main.qml:277
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "visited"
+#, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
-msgstr "كۆرۈلگەن"
+msgstr "زىيارەت قىلىنغان"
 
 #: ui/main.qml:285
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "Normal text"
+#, kde-format
 msgid "Normal text"
-msgstr "نورمال تېكىست"
+msgstr "ئادەتتىكى تېكىست"
 
 #: ui/main.qml:292
-#, fuzzy, kde-format
-#| msgid "Visited Text"
+#, kde-format
 msgid "Highlighted text"
-msgstr "زىيارەت قىلىنغان تېكىست"
+msgstr "يورۇتۇلغان تېكىست"
 
 #: ui/main.qml:299
-#, fuzzy, kde-format
-#| msgctxt "@title:tab color transformations on disabled elements"
-#| msgid "Disabled"
+#, kde-format
 msgid "Disabled text"
-msgstr "ئىناۋەتسىز قىلىنغان"
+msgstr "چەكلەنگەن تېكىست"
 
 #: ui/main.qml:317
-#, fuzzy, kde-format
-#| msgid "&Upload Scheme..."
+#, kde-format
 msgid "Edit Color Scheme…"
-msgstr "لايىھىنى يۈكلەش(&U)…"
+msgstr "رەڭ لايىھەسى تەھرىرلە…"
 
 #: ui/main.qml:324
 #, fuzzy, kde-format
-#| msgid "Save Color Scheme"
+#| msgid "Remove Color Scheme"
 msgctxt "@info:tooltip"
 msgid "Remove color scheme"
-msgstr "رەڭ لايىھىسىنى ساقلاش"
+msgstr "رەڭ لايىھەسىنى چىقىرىۋەت"
 
 #: ui/main.qml:326
 #, fuzzy, kde-format
-#| msgid "Save the current color scheme"
+#| msgid "Utility to edit and create color schemes"
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active color scheme"
-msgstr "نۆۋەتتىكى رەڭ لاھىيەسىنى ساقلايدۇ"
+msgstr "رەڭ لايىھەسى قۇرۇپ ۋە تەھرىرلەيدىغان قورال"
 
 #: ui/main.qml:328
 #, kde-format
@@ -1395,20 +1369,17 @@ msgid "Don’t delete this color scheme"
 msgstr ""
 
 #: ui/main.qml:380
-#, fuzzy, kde-format
-#| msgid "Save Color Scheme"
+#, kde-format
 msgid "Open Color Scheme"
-msgstr "رەڭ لايىھىسىنى ساقلاش"
+msgstr "رەڭ لايىھەسىنى ئاچ"
 
 #: ui/main.qml:382
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
-msgstr ""
+msgstr "رەڭ لايىھە ھۆججىتى (*.colors)"
 
-#, fuzzy
-#~| msgid "Import Color Scheme"
 #~ msgid "Restore Color Scheme"
-#~ msgstr "رەڭ لايىھىسىنى ئىمپورت قىلىش"
+#~ msgstr "رەڭ لايىھەسىنى ئەسلىگە كەلتۈر"
 
 #~ msgid "Shading"
 #~ msgstr "سايىلەش"
@@ -1419,28 +1390,23 @@ msgstr ""
 #~ msgid "Minimum"
 #~ msgstr "ئەڭ كىچىك"
 
-#, fuzzy
 #~| msgid "Get &New Schemes..."
 #~ msgid "Get New Color Schemes…"
 #~ msgstr "يېڭى لايىھە ئېلىش(&N)…"
 
-#, fuzzy
 #~| msgid "Save the current color scheme"
 #~ msgid "From current color scheme"
 #~ msgstr "نۆۋەتتىكى رەڭ لاھىيەسىنى ساقلايدۇ"
 
-#, fuzzy
 #~| msgid "Save the current color scheme"
 #~ msgctxt "@option:radio wallpaper accent color option"
 #~ msgid "From current wallpaper"
 #~ msgstr "نۆۋەتتىكى رەڭ لاھىيەسىنى ساقلايدۇ"
 
-#, fuzzy
 #~| msgid "Apply inactive window color &effects"
 #~ msgid "Apply a&ccent color to active window titlebars"
 #~ msgstr "پاسسىپ كۆزنەك رەڭ ئۈنۈمىنى قوللان(&E)"
 
-#, fuzzy
 #~| msgid "Apply inactive window color &effects"
 #~ msgid "Apply acce&nt color to inactive window titlebars"
 #~ msgstr "پاسسىپ كۆزنەك رەڭ ئۈنۈمىنى قوللان(&E)"
@@ -1448,12 +1414,10 @@ msgstr ""
 #~ msgid "Share the selected scheme on the Internet"
 #~ msgstr "تاللانغان لايىھىنى ئىنتېرنېتتا ھەمبەھىرلەيدۇ"
 
-#, fuzzy
 #~| msgid "&Upload Scheme..."
 #~ msgid "Upload Scheme"
 #~ msgstr "لايىھىنى يۈكلەش(&U)…"
 
-#, fuzzy
 #~| msgid "Get &New Schemes..."
 #~ msgid "Download New Color Schemes"
 #~ msgstr "يېڭى لايىھە ئېلىش(&N)…"
@@ -1461,12 +1425,10 @@ msgstr ""
 #~ msgid "Remove the selected scheme"
 #~ msgstr "تاللانغان لاھىيەنى چىقىرىۋېتىدۇ"
 
-#, fuzzy
 #~| msgid "Remove Scheme"
 #~ msgid "Remove"
 #~ msgstr "لاھىيەنى چىقىرىۋېتىش"
 
-#, fuzzy
 #~| msgid "Get new color schemes from the Internet"
 #~ msgid "Import a color scheme from a file"
 #~ msgstr "ئىنتېرنېتتىن يېڭى رەڭ لايىھىسىنى ئېلىش"
@@ -1474,12 +1436,10 @@ msgstr ""
 #~ msgid "Get new color schemes from the Internet"
 #~ msgstr "ئىنتېرنېتتىن يېڭى رەڭ لايىھىسىنى ئېلىش"
 
-#, fuzzy
 #~| msgid "Get &New Schemes..."
 #~ msgid "Get &New Color Schemes..."
 #~ msgstr "يېڭى لايىھە ئېلىش(&N)…"
 
-#, fuzzy
 #~| msgid "Apply colors to &non-KDE4 applications"
 #~ msgid "Apply colors to &non-Qt applications"
 #~ msgstr "رەڭلەرنى KDE4 گە تەۋە بولمىغان پروگراممىلارغىمۇ قوللان(&N)"
@@ -1526,7 +1486,6 @@ msgstr ""
 #~ msgid "Inactive"
 #~ msgstr "ئاكتىپسىز"
 
-#, fuzzy
 #~| msgid "Inactive contrast effect type"
 #~ msgid "Inactive intensity effect type"
 #~ msgstr "پاسسىپ سېلىشتۇرما دەرىجەنىڭ ئۈنۈم تىپى"
@@ -1547,7 +1506,6 @@ msgstr ""
 #~ msgid "Lighten"
 #~ msgstr "يورۇت"
 
-#, fuzzy
 #~| msgid "Inactive contrast effect amount"
 #~ msgid "Inactive intensity effect amount"
 #~ msgstr "پاسسىپ سېلىشتۇرما دەرىجەنىڭ مىقدارى"

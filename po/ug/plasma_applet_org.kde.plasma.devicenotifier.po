@@ -8,201 +8,177 @@ msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-11 00:47+0000\n"
-"PO-Revision-Date: 2013-09-08 07:05+0900\n"
-"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
+"PO-Revision-Date: 2026-02-09 18:15-0500\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.8\n"
 
 #: actions/checkaction.cpp:71
 #, kde-format
 msgctxt "@action:button check a storageAccess (i.e disk) for error"
 msgid "Check for Errors"
-msgstr ""
+msgstr "خاتالىق تەكشۈر"
 
 #: actions/mountaction.cpp:93
 #, kde-format
 msgid "Mount"
-msgstr ""
+msgstr "ئېگەرلە"
 
 #: actions/mountandopenaction.cpp:173
 #, kde-format
 msgid "Open in File Manager"
-msgstr ""
+msgstr "ھۆججەت باشقۇرغۇچتا ئاچ"
 
 #: actions/mountandopenaction.cpp:176
 #, kde-format
 msgid "Try to Fix"
-msgstr ""
+msgstr "ئوڭشاشنى سىنا"
 
 #: actions/mountandopenaction.cpp:176
 #, kde-format
 msgid "Mount and Open"
-msgstr ""
+msgstr "ئېگەرلە ۋە ئاچ"
 
 #: actions/mountandopenaction.cpp:178
 #, kde-format
 msgid "Eject"
-msgstr ""
+msgstr "قاڭقىت"
 
 #: actions/mountandopenaction.cpp:180
 #, kde-format
 msgid "Safely remove"
-msgstr ""
+msgstr "بىخەتەر چىقىرىۋەت"
 
 #: messageinfo.cpp:108
 #, kde-format
 msgid "This device has file system errors."
-msgstr ""
+msgstr "بۇ ئۈسكۈنىدە ھۆججەت سىستېما خاتالىقى بار."
 
 #: messageinfo.cpp:110
 #, kde-format
 msgctxt "@label device is a storage disk"
 msgid "This device has no errors"
-msgstr ""
+msgstr "بۇ ئۈسكۈنىدە خاتالىق يوق"
 
 #: messageinfo.cpp:113
 #, kde-format
 msgid "Successfully repaired!"
-msgstr ""
+msgstr "مۇۋەپپەقىيەتلىك ئوڭشىدى!"
 
 #: messageinfo.cpp:117
 #, kde-format
 msgid "Device Status"
-msgstr ""
+msgstr "ئۈسكۈنە ھالىتى"
 
 #: messageinfo.cpp:118
 #, kde-format
 msgid "A device can now be safely removed"
-msgstr ""
+msgstr "ھازىر بىر ئۈسكۈنىنى بىخەتەر چىقىرىۋېتىشكە بولىدۇ"
 
 #: messageinfo.cpp:122
 #, kde-format
 msgid "This device can now be safely removed."
-msgstr ""
+msgstr "ھازىر بۇ ئۈسكۈنىنى بىخەتەر چىقىرىۋېتىشكە بولىدۇ."
 
 #: messageinfo.cpp:129
-#, fuzzy, kde-format
-#| msgid "It is currently safe to remove this device."
+#, kde-format
 msgid "You are not authorized to mount this device."
-msgstr "ھازىر بۇ ئۈسكۈنىنى بىخەتەر چىقىرىۋەتكىلى بولىدۇ."
+msgstr "بۇ ئۈسكۈنىنى ئېگەرلەش ئىجازىتىڭىز يوق."
 
 #: messageinfo.cpp:133
-#, fuzzy, kde-format
-#| msgid "Click to eject this disc."
+#, kde-format
 msgid "You are not authorized to eject this disc."
-msgstr "چېكىلسە بۇ دىسكىنى قاڭقىتىدۇ."
+msgstr "بۇ ئۈسكۈنىنى قاڭقىتىش ئىجازىتىڭىز يوق."
 
 #: messageinfo.cpp:136
-#, fuzzy, kde-format
-#| msgid "It is currently safe to remove this device."
+#, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
-msgstr "ھازىر بۇ ئۈسكۈنىنى بىخەتەر چىقىرىۋەتكىلى بولىدۇ."
+msgstr "بۇ ئۈسكۈنىنى چىقىرىۋېتىش ئىجازىتىڭىز يوق."
 
 #: messageinfo.cpp:139
-#, fuzzy, kde-format
-#| msgid "It is currently safe to remove this device."
+#, kde-format
 msgid "You are not authorized to repair this device."
-msgstr "ھازىر بۇ ئۈسكۈنىنى بىخەتەر چىقىرىۋەتكىلى بولىدۇ."
+msgstr "بۇ ئۈسكۈنىنى ئوڭشاش ئىجازىتىڭىز يوق."
 
 #: messageinfo.cpp:141 messageinfo.cpp:208
 #, kde-format
 msgid "Unknown error type"
-msgstr ""
+msgstr "يوچۇن خاتالىق تۈرى"
 
 #: messageinfo.cpp:145
 #, kde-format
 msgid "Could not mount this device as it is busy."
-msgstr ""
+msgstr "ئۈسكۈنە ئالدىراش بولغانلىقتىن ئېگەرلىيەلمىدى."
 
 #: messageinfo.cpp:173
-#, fuzzy, kde-format
-#| msgid "Click to access this device from other applications."
+#, kde-format
 msgid "One or more files on this device are open within an application."
-msgstr "چېكىلسە بۇ ئۈسكۈنىنى باشقا پروگرامما ئارقىلىق زىيارەت قىلغىلى بولىدۇ."
+msgstr "بۇ ئۈسكۈنىدىكى بىر ياكى بىر قانچە ھۆججەت بىر پىروگراممىدا ئوچۇق."
 
 #: messageinfo.cpp:175
-#, fuzzy, kde-format
-#| msgid "Click to access this device from other applications."
+#, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
 "One or more files on this device are opened in following applications: %2."
-msgstr[0] ""
-"چېكىلسە بۇ ئۈسكۈنىنى باشقا پروگرامما ئارقىلىق زىيارەت قىلغىلى بولىدۇ."
+msgstr[0] "بۇ ئۈسكۈنىدىكى بىر ياكى بىر قانچە ھۆججەت «%2» پىروگراممىدا ئوچۇق."
 
 #: messageinfo.cpp:178
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
-msgstr ""
+msgstr "، "
 
 #: messageinfo.cpp:197
-#, fuzzy, kde-format
-#| msgid "Click to safely remove this device."
+#, kde-format
 msgid "Could not mount this device."
-msgstr "چېكىلسە بۇ ئۈسكۈنىنى بىخەتەر چىقىرىۋېتىدۇ."
+msgstr "بۇ ئۈسكۈنىنى ئېگەرلىيەلمىدى."
 
 #: messageinfo.cpp:201
-#, fuzzy, kde-format
-#| msgid "Click to eject this disc."
+#, kde-format
 msgid "Could not eject this disc."
-msgstr "چېكىلسە بۇ دىسكىنى قاڭقىتىدۇ."
+msgstr "بۇ دىسكىنى قاڭقىتالمىدى."
 
 #: messageinfo.cpp:203
-#, fuzzy, kde-format
-#| msgid "Click to safely remove this device."
+#, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
-msgstr "چېكىلسە بۇ ئۈسكۈنىنى بىخەتەر چىقىرىۋېتىدۇ."
+msgstr "بۇ ئۈسكۈنىنى چىقىرىۋېتەلمىدى."
 
 #: messageinfo.cpp:206
-#, fuzzy, kde-format
-#| msgid "Click to safely remove this device."
+#, kde-format
 msgid "Could not repair this device: %1"
-msgstr "چېكىلسە بۇ ئۈسكۈنىنى بىخەتەر چىقىرىۋېتىدۇ."
+msgstr "بۇ ئۈسكۈنىنى ئوڭشىيالمىدى: %1"
 
 #: qml/DeviceItem.qml:99
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Removing is a less technical word for Unmounting; translation shoud be "
-#| "short and mean 'Currently unmounting this device'"
-#| msgid "Removing..."
+#, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Checking…"
-msgstr "ئۆچۈرۈۋاتىدۇ..."
+msgstr "تەكشۈرۈۋاتىدۇ…"
 
 #: qml/DeviceItem.qml:101
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Removing is a less technical word for Unmounting; translation shoud be "
-#| "short and mean 'Currently unmounting this device'"
-#| msgid "Removing..."
+#, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Repairing…"
-msgstr "ئۆچۈرۈۋاتىدۇ..."
+msgstr "ئوڭشاۋاتىدۇ…"
 
 #: qml/DeviceItem.qml:104
-#, fuzzy, kde-format
-#| msgctxt "@info:status Free disk space"
-#| msgid "%1 free"
+#, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
-msgstr "%1 بوش"
+msgstr "%2 دىن %1 بوش"
 
 #: qml/DeviceItem.qml:108
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Accessing is a less technical word for Mounting; translation should be "
-#| "short and mean 'Currently mounting this device'"
-#| msgid "Accessing..."
+#, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
@@ -210,85 +186,73 @@ msgid "Accessing…"
 msgstr "زىيارەت قىلىۋاتىدۇ…"
 
 #: qml/DeviceItem.qml:111
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Removing is a less technical word for Unmounting; translation shoud be "
-#| "short and mean 'Currently unmounting this device'"
-#| msgid "Removing..."
+#, kde-format
 msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
 "short and mean 'Currently unmounting this device'"
 msgid "Removing…"
-msgstr "ئۆچۈرۈۋاتىدۇ..."
+msgstr "چىقىرىۋېتىۋاتىدۇ…"
 
 #: qml/DeviceItem.qml:114
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
-msgstr ""
+msgstr "تېخى تارتىۋەتمەڭ! ھۆججەت يەنىلا يەتكۈزۈلۈۋاتىدۇ…"
 
 #: qml/FullRepresentation.qml:47 qml/main.qml:123
 #, kde-format
 msgid "Remove All"
-msgstr ""
+msgstr "ھەممىنى چىقىرىۋەت"
 
 #: qml/FullRepresentation.qml:48
-#, fuzzy, kde-format
-#| msgid "Click to safely remove this device."
+#, kde-format
 msgid "Click to safely remove all devices"
-msgstr "چېكىلسە بۇ ئۈسكۈنىنى بىخەتەر چىقىرىۋېتىدۇ."
+msgstr "ھەممە ئۈسكۈنىنى بىخەتەر چىقىرىۋېتىشتە چېكىلىدۇ"
 
 #: qml/FullRepresentation.qml:162
-#, fuzzy, kde-format
-#| msgid "Non-removable devices only"
+#, kde-format
 msgid "No removable devices attached"
-msgstr "يۆتكەلمەيدىغان ئۈسكۈنىلەرلا"
+msgstr "ھېچقانداق يۆتكىلىشچان ئۈسكۈنە چېتىلمىغان"
 
 #: qml/FullRepresentation.qml:162
-#, fuzzy, kde-format
-#| msgid "No Devices Available"
+#, kde-format
 msgid "No disks available"
-msgstr "ئۈسكۈنە يوق"
+msgstr "ھېچقانداق ئىشلىتىلىشچان دىسكا يوق"
 
 #: qml/main.qml:72
-#, fuzzy, kde-format
-#| msgid "Most recent device"
+#, kde-format
 msgid "Most Recent Device"
 msgstr "يېقىندا ئىشلەتكەن ئۈسكۈنە"
 
 #: qml/main.qml:72
 #, kde-format
 msgid "No Devices Available"
-msgstr "ئۈسكۈنە يوق"
+msgstr "ئىشلەتكۈدەك ئۈسكۈنە يوق"
 
 #: qml/main.qml:109
-#, fuzzy, kde-format
-#| msgid "Non-removable devices only"
+#, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
-msgstr "يۆتكەلمەيدىغان ئۈسكۈنىلەرلا"
+msgstr "يۆتكىلىشچان ئۈسكۈنىنى سەپلەيدۇ…"
 
 #: qml/main.qml:131
-#, fuzzy, kde-format
-#| msgid "Removable devices only"
+#, kde-format
 msgid "Removable Devices"
-msgstr "يۆتكىلىشچان ئۈسكۈنىلەرلا"
+msgstr "يۆتكىلىشچان ئۈسكۈنە"
 
 #: qml/main.qml:146
-#, fuzzy, kde-format
-#| msgid "Non-removable devices only"
+#, kde-format
 msgid "Non Removable Devices"
-msgstr "يۆتكەلمەيدىغان ئۈسكۈنىلەرلا"
+msgstr "ھېچقانداق يۆتكىلىشچان ئۈسكۈنە يوق"
 
 #: qml/main.qml:161
-#, fuzzy, kde-format
-#| msgid "All devices"
+#, kde-format
 msgid "All Devices"
-msgstr "بارلىق ئۈسكۈنىلەر"
+msgstr "ھەممە ئۈسكۈنە"
 
 #: qml/main.qml:178
 #, kde-format
 msgid "Show popup when new device is plugged in"
-msgstr ""
+msgstr "يېڭى ئۈسكۈنە چېتىلغاندا قاڭقىش كۆزنىكىنى كۆرسىتىدۇ"
 
 #~ msgid ""
 #~ "It is currently <b>not safe</b> to remove this device: applications may "

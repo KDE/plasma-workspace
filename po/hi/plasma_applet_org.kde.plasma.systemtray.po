@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-10 00:46+0000\n"
+"POT-Creation-Date: 2026-02-19 00:49+0000\n"
 "PO-Revision-Date: 2021-08-13 02:11+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -199,12 +199,12 @@ msgstr ""
 msgid "Status and Notifications"
 msgstr "स्थिति और सूचनाएँ"
 
-#: qml/ExpandedRepresentation.qml:145
+#: qml/ExpandedRepresentation.qml:169
 #, kde-format
 msgid "More actions"
 msgstr "अधिक क्रियाएँ"
 
-#: qml/ExpandedRepresentation.qml:246
+#: qml/ExpandedRepresentation.qml:255
 #, kde-format
 msgid "Keep Open"
 msgstr "खुला रखें"

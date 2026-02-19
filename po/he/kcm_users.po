@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-13 08:43+0000\n"
+"POT-Creation-Date: 2026-02-19 00:49+0000\n"
 "PO-Revision-Date: 2025-12-03 09:10+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -180,7 +180,7 @@ msgctxt "@action:button Create a new user"
 msgid "Create"
 msgstr "יצירה"
 
-#: src/ui/CreateUser.qml:109
+#: src/ui/CreateUser.qml:111
 #, kde-format
 msgctxt "@action:button Cancel creating new user"
 msgid "Cancel"

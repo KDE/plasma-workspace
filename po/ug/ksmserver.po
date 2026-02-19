@@ -8,45 +8,46 @@ msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2013-09-08 07:05+0900\n"
-"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
+"PO-Revision-Date: 2026-02-09 18:15-0500\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.8\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "ئابدۇقادىر ئابلىز, غەيرەت كەنجى"
+msgstr "ئابدۇقادىر ئابلىز، غەيرەت كەنجى"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "sahran.ug@gmail.com,  gheyret@gmail.com"
+msgstr "sahranbay@gmail.com, gheyret@gmail.com"
 
 #: logout.cpp:269
 #, kde-format
 msgid "Logout canceled by '%1'"
-msgstr ""
+msgstr "تىزىمدىن چىقىشتىن «%1» ۋاز كەچتى"
 
 #: logout.cpp:363
 #, kde-format
 msgctxt "@info:status"
 msgid "Session is exiting"
-msgstr ""
+msgstr "جەريانچاق مەۋجۇت"
 
 #: main.cpp:72 main.cpp:80
 #, kde-format
 msgid "No write access to '%1'."
-msgstr ""
+msgstr "«%1» غا يېزىش ئىجازىتى يوق."
 
 #: main.cpp:74 main.cpp:82
 #, kde-format
 msgid "No read access to '%1'."
-msgstr ""
+msgstr "«%1» نى ئوقۇش ئىجازىتى يوق."
 
 #: main.cpp:87
 #, kde-format
@@ -54,6 +55,7 @@ msgid ""
 "The following installation problem was detected\n"
 "while trying to start Plasma:"
 msgstr ""
+"Plasma نى قوزغىتىشنى سىناۋاتقاندا تۆۋەندىكى ئورنىتىش مەسىلىسىنى بايقىدى:"
 
 #: main.cpp:90
 #, kde-format
@@ -62,26 +64,28 @@ msgid ""
 "\n"
 "Plasma is unable to start.\n"
 msgstr ""
+"\n"
+"\n"
+"Plasma قوزغالمايدۇ:\n"
 
 #: main.cpp:129
-#, fuzzy, kde-format
-#| msgid ""
-#| "The reliable KDE session manager that talks the standard X11R6 \n"
-#| "session management protocol (XSMP)."
+#, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
 "session management protocol (XSMP)."
-msgstr "t"
+msgstr ""
+"ئىشەنچلىك Plasma جەريانچاق باشقۇرغۇچ ئۆلچەملىك X11R6 جەريانچاق باشقۇرۇش "
+"كېلىشىمى(XSMP)نى ئىشلىتىدۇ."
 
 #: main.cpp:133
 #, kde-format
 msgid "Restores the saved user session if available"
-msgstr ""
+msgstr "ئەگەر مۇمكىن بولسا ساقلانغان ئىشلەتكۈچى جەريانچاقنى ئەسلىگە كەلتۈرىدۇ"
 
 #: main.cpp:136
 #, kde-format
 msgid "Also allow remote connections"
-msgstr "يىراقتىن باغلىنىشقا ئىجازەت"
+msgstr "يىراقتىن باغلىنىشقا يول قويىدۇ"
 
 #: main.cpp:139
 #, kde-format
@@ -94,12 +98,14 @@ msgid ""
 "Starts without lock screen support. Only needed if other component provides "
 "the lock screen."
 msgstr ""
+"ئېكران قۇلۇپلاشنى قوللىمىغان ئاساستا قوزغىتىدۇ، پەقەت باشقا بۆلەك ئېكران "
+"قۇلۇپلاش بىلەن تەمىنلىگەندىلا ئاندىن لازىم بولىدۇ."
 
 #: server.cpp:775
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
-msgstr ""
+msgstr "(يوچۇن)"
 
 #: server.cpp:798
 #, kde-kuit-format
@@ -109,6 +115,9 @@ msgid ""
 "are exhausted. Here are the top three consumers of session resources:\n"
 "%1"
 msgstr ""
+"بەزى ئەپنى باشقۇرالمايدۇ چۈنكى سىستېمىنىڭ جەريانچاق باشقۇرۇش مەنبەسى خوراپ "
+"تۈگىدى. تۆۋەندىكىسى جەريانچاق مەنبەسىنى ئەڭ كۆپ ئىشلىتىۋاتقان ئۈچى:\n"
+"%1"
 
 #: server.cpp:1055
 #, kde-kuit-format
@@ -118,8 +127,10 @@ msgid ""
 "exhausted the system's session restoration resources. Please report this to "
 "the app's developers."
 msgstr ""
+"<application>%1</application> نى ئەسلىگە كەلتۈرەلمەيدۇ چۈنكى ئۇ بۇزۇلغان ۋە "
+"سىستېمىنىڭ جەريانچاق مەنبەسىنى خورىتىپ تۈگەتتى. بۇنى ئەپ ئىجادكارىغا مەلۇم "
+"قىلىڭ."
 
-#, fuzzy
 #~| msgid "The KDE Session Manager"
 #~ msgid "Session Management"
 #~ msgstr "KDE ئەڭگىمە باشقۇرغۇچ"
@@ -127,7 +138,6 @@ msgstr ""
 #~ msgid "Log Out"
 #~ msgstr "تىزىمدىن چىق"
 
-#, fuzzy
 #~| msgid "&Logout"
 #~ msgid "Logout"
 #~ msgstr "چىقىش(&L)"
@@ -142,12 +152,10 @@ msgstr ""
 #~ msgid_plural "Turning off computer in %1 seconds."
 #~ msgstr[0] "%1 سېكۇنت ئىچىدە كومپيۇتېرنى تاقايدۇ."
 
-#, fuzzy
 #~| msgid "&Turn Off Computer"
 #~ msgid "Turn Off Computer"
 #~ msgstr "كومپيۇتېرنى تاقا(&T)"
 
-#, fuzzy
 #~| msgid "&Restart Computer"
 #~ msgid "Restart Computer"
 #~ msgstr "كومپيۇتېرنى قايتا قوزغات(&R)"
@@ -156,7 +164,6 @@ msgstr ""
 #~ msgid " (default)"
 #~ msgstr " (كۆڭۈلدىكى)"
 
-#, fuzzy
 #~| msgid "&Cancel"
 #~ msgid "Cancel"
 #~ msgstr "ۋاز كەچ(&C)"

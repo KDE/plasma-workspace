@@ -8,29 +8,30 @@ msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2013-09-08 07:05+0900\n"
-"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
+"PO-Revision-Date: 2026-02-09 18:11-0500\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.8\n"
 
 #: gtkpage.cpp:58
 #, kde-format
 msgid "%1 is not a valid GTK Theme archive."
-msgstr ""
+msgstr "%1 ئىناۋەتلىك GTK ئۆرنەك ئارخىپى ئەمەس."
 
 #: kcmstyle.cpp:163 kcmstyle.cpp:170
 #, kde-format
 msgid "There was an error loading the configuration dialog for this style."
-msgstr ""
+msgstr "بۇ ئۇسلۇبنىڭ سەپلىمە سۆزلەشكۈسىنى يۈكلەۋاتقاندا خاتالىق كۆرۈلگەن."
 
 #: kcmstyle.cpp:276
 #, kde-format
 msgid "Failed to apply selected style '%1'."
-msgstr ""
+msgstr "تاللانغان «%1» ئۇسلۇبنى قوللىنالمىدى."
 
 #: styleconfdialog.cpp:21
 #, kde-format
@@ -41,198 +42,176 @@ msgstr "%1 نى سەپلە"
 #: stylepreview.ui:33
 #, kde-format
 msgid "Tab 1"
-msgstr "بەتكۈچ 1"
+msgstr "1-بەتكۈچ‎‏"
 
 #. i18n: ectx: property (text), widget (QPushButton, pushButton)
 #: stylepreview.ui:65
-#, fuzzy, kde-format
-#| msgid "Button"
+#, kde-format
 msgid "Push Button"
-msgstr "توپچا"
+msgstr "توپچە"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
 #: stylepreview.ui:86
 #, kde-format
 msgid "Combo box"
-msgstr ""
+msgstr "بىرىكمە رامكا"
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkBox)
 #: stylepreview.ui:96
 #, kde-format
 msgid "Checkbox"
-msgstr "تاللاش كۆزنەكچىسى"
+msgstr "كۆپ تاللاش"
 
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
 #. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
 #: stylepreview.ui:106 stylepreview.ui:116
 #, kde-format
 msgid "Radio button"
-msgstr ""
+msgstr "يەككە تاللاش توپچە"
 
 #. i18n: ectx: property (format), widget (QProgressBar, progressBar)
 #: stylepreview.ui:128
 #, no-c-format, kde-format
 msgid "%p%"
-msgstr ""
+msgstr "%p%"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: stylepreview.ui:136
 #, kde-format
 msgid "Tab 2"
-msgstr "بەتكۈچ 2"
+msgstr "2-بەتكۈچ"
 
 #. i18n: ectx: label, entry (widgetStyle), group (KDE)
 #: stylesettings.kcfg:9
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "&Applications"
+#, kde-format
 msgid "Application style"
-msgstr "پروگراممىلار(&A)"
+msgstr "پىروگرامما ئۇسلۇبى"
 
 #. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
 #: stylesettings.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Show icons on buttons:"
+#, kde-format
 msgid "Show icons on buttons"
-msgstr "توپچا ئۈستىدە سىنبەلگىلەرنى كۆرسەت:"
+msgstr "توپچىدە سىنبەلگە كۆرسىتىدۇ"
 
 #. i18n: ectx: label, entry (iconsInMenus), group (KDE)
 #: stylesettings.kcfg:17
-#, fuzzy, kde-format
-#| msgid "Show icons on buttons:"
+#, kde-format
 msgid "Show icons in menus"
-msgstr "توپچا ئۈستىدە سىنبەلگىلەرنى كۆرسەت:"
+msgstr "تىزىملىكتە سىنبەلگە كۆرسىتىدۇ"
 
 #. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
 #: stylesettings.kcfg:23
-#, fuzzy, kde-format
-#| msgid "Main toolbar text:"
+#, kde-format
 msgid "Main toolbar label"
-msgstr "ئاساسىي قورال بالداق تېكىستى"
+msgstr "ئاساسىي قورال بالداق بەلگىسى"
 
 #. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
 #: stylesettings.kcfg:27
-#, fuzzy, kde-format
-#| msgid "Secondary toolbar text:"
+#, kde-format
 msgid "Secondary toolbar label"
-msgstr "ئىككىنچى قورال بالداق تېكىستى"
+msgstr "ئىككىنچى قورال بالداق بەلگىسى"
 
 #: ui/EffectSettingsPopup.qml:19
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Icons and Toolbars"
-msgstr ""
+msgstr "سىنبەلگە ۋە قورال بالداق سەپلەيدۇ"
 
 #: ui/EffectSettingsPopup.qml:36
-#, fuzzy, kde-format
-#| msgid "Show icons in menus:"
+#, kde-format
 msgid "Show icons:"
-msgstr "تىزىملىكلەردە سىنبەلگىلەرنى كۆرسەت:"
+msgstr "سىنبەلگە كۆرسىتىدۇ:"
 
 #: ui/EffectSettingsPopup.qml:37
-#, fuzzy, kde-format
-#| msgid "Button"
+#, kde-format
 msgid "On buttons"
-msgstr "توپچا"
+msgstr "توپچىدە"
 
 #: ui/EffectSettingsPopup.qml:48
 #, kde-format
 msgid "In menus"
-msgstr ""
+msgstr "تىزىملىكتە"
 
 #: ui/EffectSettingsPopup.qml:60
-#, fuzzy, kde-format
-#| msgid "Main toolbar text:"
+#, kde-format
 msgid "Main toolbar label:"
-msgstr "ئاساسىي قورال بالداق تېكىستى"
+msgstr "ئاساسىي قورال بالداق بەلگىسى:"
 
 #: ui/EffectSettingsPopup.qml:62
 #, kde-format
 msgid "None"
-msgstr ""
+msgstr "يوق"
 
 #: ui/EffectSettingsPopup.qml:63
-#, fuzzy, kde-format
-#| msgid "Text Only"
+#, kde-format
 msgid "Text only"
 msgstr "تېكىستلا"
 
 #: ui/EffectSettingsPopup.qml:64
-#, fuzzy, kde-format
-#| msgid "Text Beside Icons"
+#, kde-format
 msgid "Beside icons"
-msgstr "تېكىست سىنبەلگە يېنىدا"
+msgstr "سىنبەلگە يېنىدا"
 
 #: ui/EffectSettingsPopup.qml:65
-#, fuzzy, kde-format
-#| msgid "Text Below Icons"
+#, kde-format
 msgid "Below icon"
-msgstr "خەت سىنبەلگىنىڭ ئاستىدا"
+msgstr "سىنبەلگىنىڭ ئاستىدا"
 
 #: ui/EffectSettingsPopup.qml:80
-#, fuzzy, kde-format
-#| msgid "Secondary toolbar text:"
+#, kde-format
 msgid "Secondary toolbar label:"
-msgstr "ئىككىنچى قورال بالداق تېكىستى"
+msgstr "ئىككىنچى قورال بالداق بەلگىسى:"
 
 #: ui/GtkStylePage.qml:17
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "&Applications"
+#, kde-format
 msgid "GNOME/GTK Application Style"
-msgstr "پروگراممىلار(&A)"
+msgstr "GNOME/GTK پىروگرامما ئۇسلۇبى"
 
 #: ui/GtkStylePage.qml:43
 #, kde-format
 msgid "GTK theme:"
-msgstr ""
+msgstr "Gtk ئۆرنىكى:"
 
 #: ui/GtkStylePage.qml:68
-#, fuzzy, kde-format
-#| msgid "Preview"
+#, kde-format
 msgid "Preview…"
-msgstr "ئالدىن كۆزەت"
+msgstr "ئالدىن كۆزەت…"
 
 #: ui/GtkStylePage.qml:87
 #, kde-format
 msgid "Install from File…"
-msgstr ""
+msgstr "ھۆججەتتىن ئورنات…"
 
 #: ui/GtkStylePage.qml:92
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "&Applications"
+#, kde-format
 msgid "Get New GNOME/GTK Application Styles…"
-msgstr "پروگراممىلار(&A)"
+msgstr "يېڭى GNOME/GTK پىروگرامما ئۇسلۇبىغا ئېرىش…"
 
 #: ui/GtkStylePage.qml:108
 #, kde-format
 msgid "Select GTK Theme Archive"
-msgstr ""
+msgstr "GTK ئۆرنەك ئارخىپى تاللىنىدۇ"
 
 #: ui/GtkStylePage.qml:110
 #, kde-format
 msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
-msgstr ""
+msgstr "GTK ئۆرنەك ئارخىپى (*.tar.xz *.tar.gz *.tar.bz2)"
 
 #: ui/main.qml:55
 #, kde-format
 msgid "Configure Icons and Toolbars…"
-msgstr ""
+msgstr "سىنبەلگە ۋە قورال بالداق سەپلەيدۇ…"
 
 #: ui/main.qml:73
-#, fuzzy, kde-format
-#| msgid "Con&figure..."
+#, kde-format
 msgid "Configure GNOME/GTK Application Style…"
-msgstr "سەپلەش(&F)…"
+msgstr "GNOME/GTK پىروگرامما ئۇسلۇبىنى سەپلەيدۇ…"
 
 #: ui/main.qml:106
-#, fuzzy, kde-format
-#| msgid "Con&figure..."
+#, kde-format
 msgid "Configure Style…"
-msgstr "سەپلەش(&F)…"
+msgstr "ئۇسلۇب سەپلەيدۇ…"
 
-#, fuzzy
 #~| msgid ""
 #~| "<h1>Style</h1>This module allows you to modify the visual appearance of "
 #~| "user interface elements, such as the widget style and effects."
@@ -251,13 +230,11 @@ msgstr "سەپلەش(&F)…"
 #~ msgid "Your emails"
 #~ msgstr "sahran.ug@gmail.com,  gheyret@gmail.com"
 
-#, fuzzy
 #~| msgctxt "@title:tab"
 #~| msgid "&Applications"
 #~ msgid "Application Style"
 #~ msgstr "پروگراممىلار(&A)"
 
-#, fuzzy
 #~| msgid "(c) 2002 Karol Szwed, Daniel Molkentin"
 #~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik "
 #~ msgstr "(c) 2002 Karol Szwed، Daniel Molkentin"
@@ -268,25 +245,21 @@ msgstr "سەپلەش(&F)…"
 #~ msgid "Daniel Molkentin"
 #~ msgstr "Daniel Molkentin"
 
-#, fuzzy
 #~| msgctxt "@title:tab"
 #~| msgid "&Applications"
 #~ msgid "Download New GNOME/GTK2 Application Styles..."
 #~ msgstr "پروگراممىلار(&A)"
 
-#, fuzzy
 #~| msgctxt "@title:tab"
 #~| msgid "&Applications"
 #~ msgid "GNOME/GTK2 Application Styles"
 #~ msgstr "پروگراممىلار(&A)"
 
-#, fuzzy
 #~| msgctxt "@title:tab"
 #~| msgid "&Applications"
 #~ msgid "Download New GNOME/GTK3 Application Styles..."
 #~ msgstr "پروگراممىلار(&A)"
 
-#, fuzzy
 #~| msgctxt "@title:tab"
 #~| msgid "&Applications"
 #~ msgid "GNOME/GTK3 Application Styles"
@@ -304,7 +277,6 @@ msgstr "سەپلەش(&F)…"
 #~ msgid "No Text"
 #~ msgstr "تېكىست يوق"
 
-#, fuzzy
 #~| msgid "Widget style:"
 #~ msgid "Widget Style"
 #~ msgstr "ۋىجېت ئۇسلۇبى:"
@@ -328,18 +300,15 @@ msgstr "سەپلەش(&F)…"
 #~ msgid "Menubar"
 #~ msgstr "تىزىملىك بالدىقى"
 
-#, fuzzy
 #~| msgid "Menubar"
 #~ msgid "Menubar style:"
 #~ msgstr "تىزىملىك بالدىقى"
 
-#, fuzzy
 #~| msgctxt "@title:tab"
 #~| msgid "&Applications"
 #~ msgid "In application"
 #~ msgstr "پروگراممىلار(&A)"
 
-#, fuzzy
 #~| msgctxt "@title:tab"
 #~| msgid "&Applications"
 #~ msgid "Global Menu widget"

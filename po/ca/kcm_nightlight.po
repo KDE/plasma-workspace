@@ -1,17 +1,17 @@
 # Translation of kcm_nightlight.po to Catalan
-# Copyright (C) 2017-2025 This_file_is_part_of_KDE
+# Copyright (C) 2017-2026 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # SPDX-FileCopyrightText: 2019, 2020, 2022 Antoni Bella Pérez <antonibella5@yahoo.com>
 # SPDX-FileCopyrightText: 2019 Empar Montoro Martín <montoro_mde@gva.es>
-# SPDX-FileCopyrightText: 2017, 2019, 2021, 2022, 2023, 2024, 2025 Josep M. Ferrer <txemaq@gmail.com>
+# SPDX-FileCopyrightText: 2017, 2019, 2021, 2022, 2023, 2024, 2025, 2026 Josep M. Ferrer <txemaq@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-18 00:48+0000\n"
-"PO-Revision-Date: 2025-07-12 12:01+0200\n"
+"PO-Revision-Date: 2026-02-18 12:57+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 25.04.0\n"
 "X-Accelerator-Marker: &\n"
 
 #: ui/DayNightView.qml:154
@@ -80,7 +80,7 @@ msgstr "Configura…"
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1 K"
-msgstr ""
+msgstr "%1 K"
 
 #: ui/main.qml:123
 #, kde-format

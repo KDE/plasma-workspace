@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-17 00:47+0000\n"
-"PO-Revision-Date: 2026-01-10 12:52+0100\n"
+"PO-Revision-Date: 2026-02-17 09:44+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -75,12 +75,10 @@ msgstr[1] ""
 "usuaris podrien perdre la faena."
 
 #: contents/logout/Logout.qml:188
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will enter the firmware setup screen."
+#, kde-format
 msgid "When restarted, the computer will enter UEFI firmware settings."
 msgstr ""
-"En reiniciar, l'ordinador presentarà la pantalla de configuració del "
-"microprogramari."
+"En reiniciar, l'ordinador entrarà a la configuració del microprogramari UEFI."
 
 #: contents/logout/Logout.qml:190
 #, kde-format

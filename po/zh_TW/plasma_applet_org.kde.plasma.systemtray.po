@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-10 00:46+0000\n"
+"POT-Creation-Date: 2026-02-19 00:49+0000\n"
 "PO-Revision-Date: 2025-12-16 21:40+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -201,12 +201,12 @@ msgstr "返回"
 msgid "Status and Notifications"
 msgstr "狀態與通知"
 
-#: qml/ExpandedRepresentation.qml:145
+#: qml/ExpandedRepresentation.qml:169
 #, kde-format
 msgid "More actions"
 msgstr "更多動作"
 
-#: qml/ExpandedRepresentation.qml:246
+#: qml/ExpandedRepresentation.qml:255
 #, kde-format
 msgid "Keep Open"
 msgstr "保持開啟"

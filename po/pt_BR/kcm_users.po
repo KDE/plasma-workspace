@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-13 08:43+0000\n"
+"POT-Creation-Date: 2026-02-19 00:49+0000\n"
 "PO-Revision-Date: 2025-12-03 08:27-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -186,7 +186,7 @@ msgctxt "@action:button Create a new user"
 msgid "Create"
 msgstr "Criar"
 
-#: src/ui/CreateUser.qml:109
+#: src/ui/CreateUser.qml:111
 #, kde-format
 msgctxt "@action:button Cancel creating new user"
 msgid "Cancel"

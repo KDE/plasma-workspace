@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-17 00:47+0000\n"
-"PO-Revision-Date: 2026-01-27 19:26+0300\n"
-"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"PO-Revision-Date: 2026-02-17 20:34+0200\n"
+"Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: contents/logout/Logout.qml:149
 #, kde-format
@@ -89,26 +89,27 @@ msgstr[3] ""
 "перезагрузке компьютера он может потерять результаты своей работы."
 
 #: contents/logout/Logout.qml:188
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will enter the firmware setup screen."
+#, kde-format
 msgid "When restarted, the computer will enter UEFI firmware settings."
-msgstr "При перезагрузке компьютера будет показан экран настройки прошивки."
+msgstr "После перезагрузки компьютер перейдёт в настройки прошивки UEFI."
 
 #: contents/logout/Logout.qml:190
 #, kde-format
 msgid "When restarted, the computer will enter the firmware setup screen."
-msgstr "При перезагрузке компьютера будет показан экран настройки прошивки."
+msgstr ""
+"После перезагрузки будет открыт экран настройки встроенной микропрограммы "
+"компьютера."
 
 #: contents/logout/Logout.qml:205
 #, kde-format
 msgid "When restarted, the computer will enter the boot loader menu."
-msgstr "При перезагрузке компьютера будет показан экран загрузчика."
+msgstr "После перезагрузки компьютера будет показан экран загрузчика."
 
 #: contents/logout/Logout.qml:218
 #, kde-format
 msgctxt "%1 is a boot loader entry"
 msgid "When restarted, the computer will switch to %1."
-msgstr "При перезагрузке компьютера будет выбран вариант загрузки «%1»."
+msgstr "После перезагрузки компьютера будет выбран вариант загрузки «%1»."
 
 #: contents/logout/Logout.qml:240
 #, kde-format

@@ -8,75 +8,63 @@ msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2013-09-08 07:05+0900\n"
-"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
+"PO-Revision-Date: 2026-02-09 18:11-0500\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.8\n"
 
 #. i18n: ectx: label, entry (forceFontDPI), group (General)
 #: fontsaasettingsbase.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Force fonts DPI:"
+#, kde-format
 msgid "Force font DPI on X11"
-msgstr "خەت نۇسخىسىنىڭ DPI نى بۇنىڭغا زورلا:"
+msgstr "X11 دا خەت نۇسخىسىنىڭ DPI نى مەجبۇرلايدۇ"
 
 #. i18n: ectx: label, entry (font), group (General)
 #: fontssettings.kcfg:9
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "General"
+#, kde-format
 msgid "General font"
-msgstr "ئادەتتىكى"
+msgstr "ئادەتتىكى خەت نۇسخا"
 
 #. i18n: ectx: label, entry (fixed), group (General)
 #: fontssettings.kcfg:17
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Fixed width"
+#, kde-format
 msgid "Fixed width font"
-msgstr "مۇقىم كەڭلىك"
+msgstr "تەڭ كەڭلىكتىكى خەت نۇسخا"
 
 #. i18n: ectx: label, entry (smallestReadableFont), group (General)
 #: fontssettings.kcfg:25
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Small"
+#, kde-format
 msgid "Small font"
-msgstr "كىچىك"
+msgstr "كىچىك خەت نۇسخا"
 
 #. i18n: ectx: label, entry (toolBarFont), group (General)
 #: fontssettings.kcfg:33
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Toolbar"
+#, kde-format
 msgid "Tool bar font"
-msgstr "قورال بالداق"
+msgstr "قورال بالداق خەت نۇسخىسى"
 
 #. i18n: ectx: label, entry (menuFont), group (General)
 #: fontssettings.kcfg:41
 #, kde-format
 msgid "Menu font"
-msgstr ""
+msgstr "تىزىملىك خەت نۇسخىسى"
 
 #. i18n: ectx: label, entry (activeFont), group (WM)
 #: fontssettings.kcfg:51
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Window title"
+#, kde-format
 msgid "Window title font"
-msgstr "كۆزنەك ماۋزۇسى"
+msgstr "كۆزنەك ماۋزۇ خەت نۇسخىسى"
 
 #: kxftconfig.cpp:454
-#, fuzzy, kde-format
-#| msgctxt "Use anti-aliasing"
-#| msgid "System Settings"
+#, kde-format
 msgctxt "use system subpixel setting"
 msgid "Vendor default"
-msgstr "سىستېما تەڭشەكلىرى"
+msgstr "تەمىنلىگۈچى كۆڭۈلدىكى قىممىتى"
 
 #: kxftconfig.cpp:456
 #, kde-format
@@ -97,20 +85,18 @@ msgstr "BGR"
 #: kxftconfig.cpp:462
 #, kde-format
 msgid "Vertical RGB"
-msgstr "تىك يۆنىلىشتىكى RGB"
+msgstr "بويىغا RGB"
 
 #: kxftconfig.cpp:464
 #, kde-format
 msgid "Vertical BGR"
-msgstr "تىك يۆنىلىشتىكى BGR"
+msgstr "توغرىسىغا BGR"
 
 #: kxftconfig.cpp:492
-#, fuzzy, kde-format
-#| msgctxt "Use anti-aliasing"
-#| msgid "System Settings"
+#, kde-format
 msgctxt "use system hinting settings"
 msgid "Vendor default"
-msgstr "سىستېما تەڭشەكلىرى"
+msgstr "تەمىنلىگۈچى كۆڭۈلدىكى قىممىتى"
 
 #: kxftconfig.cpp:494
 #, kde-format
@@ -142,7 +128,7 @@ msgctxt ""
 "%1 is the name of a font type, %2 is the size in points (pt). Ex: Noto Sans "
 "10pt"
 msgid "%1 %2pt"
-msgstr ""
+msgstr "%1 %2pt"
 
 #: ui/main.qml:37
 #, kde-format
@@ -150,13 +136,12 @@ msgctxt ""
 "Sub-string in a font name; 'Display' as in display font — a type of font "
 "inappropriate for computer screens"
 msgid "Display"
-msgstr ""
+msgstr "كۆرسەتكۈچ"
 
 #: ui/main.qml:42
-#, fuzzy, kde-format
-#| msgid "Ad&just All Fonts..."
+#, kde-format
 msgid "Adjust Global Scale…"
-msgstr "بارلىق خەت نۇسخىلىرىنى تەڭشە(&J)"
+msgstr "ئومۇمىيەت كۆرسىتىش نىسبىتىنى تەڭشە…"
 
 #: ui/main.qml:56
 #, kde-format
@@ -164,6 +149,8 @@ msgid ""
 "Some changes such as anti-aliasing or DPI will only affect newly started "
 "applications."
 msgstr ""
+"ھەرە چىشقا قارشى ياكى DPI غا ئوخشاش بەزى ئۆزگىرىش يېڭىدىن قوزغىتىلغان "
+"ئەپكىلا تەسىر كۆرسىتىدۇ."
 
 #: ui/main.qml:72
 #, kde-format
@@ -171,6 +158,8 @@ msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
 "large font size, consider adjusting the global screen scale."
 msgstr ""
+"بەك چوڭ خەت نۇسخىسى غەلىتە كۆرسىتىش نەتىجىسىنى پەيدا قىلىشى مۇمكىن. بەك چوڭ "
+"خەت نۇسخىسى ئىشلىتىشنىڭ ئورنىغا ئومۇمىيەت ئېكران نىسبىتىنى تەڭشەشنى ئويلىشىڭ."
 
 #: ui/main.qml:90
 #, kde-kuit-format
@@ -180,6 +169,10 @@ msgid ""
 "Display_typeface'>not intended for use on computer displays</link>, and may "
 "produce odd results. Consider using a different font."
 msgstr ""
+"«كۆرسىتىش» خەت نۇسخىسى<link url='https://wikipedia.org/wiki/"
+"Display_typeface'>كومپيۇتېر ئېكرانىدا كۆرسىتىشكە لايىھەلەنمىگەن</link>، "
+"غەلىتە كۆرسىتىش نەتىجىسى پەيدا قىلىشى مۇمكىن. باشقا خەت نۇسخىسى ئىشلىتىشنى "
+"ئويلىشىڭ."
 
 #: ui/main.qml:107
 #, kde-format
@@ -187,6 +180,8 @@ msgid ""
 "The recommended way to scale the user interface is using the global screen "
 "scaling feature."
 msgstr ""
+"ئىشلەتكۈچى ئارا يۈزىنى نىسبىتىنى ئۆلچەشتە تەۋسىيە قىلىنىدىغىنى ئومۇمىيەت "
+"ئېكران نىسبىتى ئىقتىدارىنى ئىشلىتىش."
 
 #: ui/main.qml:117
 #, kde-format
@@ -195,6 +190,8 @@ msgid ""
 "Plasma is not designed to be usable with fonts smaller than 4pt. Size has "
 "been reset to 4pt."
 msgstr ""
+"Plasma چوڭلۇقى 4pt دىن كىچىك خەت نۇسخىسىنى ئىشلىتىشكە لايىھەلەنمىگەن. خەت "
+"نۇسخىسىنىڭ چوڭلۇقى 4pt گە ئەسلىگە قايتۇرۇلىدۇ."
 
 #: ui/main.qml:133
 #, kde-format
@@ -203,107 +200,84 @@ msgid ""
 "Very small fonts may produce odd-looking results. Instead of using a very "
 "small font size, consider adjusting the global screen scale."
 msgstr ""
+"بەك كىچىك خەت نۇسخىسى غەلىتە كۆرسىتىش نەتىجىسىنى پەيدا قىلىشى مۇمكىن. بەك "
+"كىچىك خەت نۇسخىسى ئىشلىتىشنىڭ ئورنىغا ئومۇمىيەت ئېكران نىسبىتىنى تەڭشەشنى "
+"ئويلىشىڭ."
 
 #: ui/main.qml:154
-#, fuzzy, kde-format
-#| msgid "Ad&just All Fonts..."
+#, kde-format
 msgid "&Adjust All Fonts…"
-msgstr "بارلىق خەت نۇسخىلىرىنى تەڭشە(&J)"
+msgstr "بارلىق خەت نۇسخىسىنى تەڭشە(&A)…"
 
 #: ui/main.qml:167
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "General"
+#, kde-format
 msgid "General:"
-msgstr "ئادەتتىكى"
+msgstr "ئادەتتىكى:"
 
 #: ui/main.qml:168
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "General"
+#, kde-format
 msgid "Select general font"
-msgstr "ئادەتتىكى"
+msgstr "ئادەتتىكى خەت نۇسخىسى تاللىنىدۇ"
 
 #: ui/main.qml:179
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Fixed width"
+#, kde-format
 msgid "Fixed width:"
-msgstr "مۇقىم كەڭلىك"
+msgstr "مۇقىم كەڭلىك:"
 
 #: ui/main.qml:180
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Fixed width"
+#, kde-format
 msgid "Select fixed width font"
-msgstr "مۇقىم كەڭلىك"
+msgstr "مۇقىم كەڭلىكتىكى خەت نۇسخىسىنى تاللايدۇ"
 
 #: ui/main.qml:191
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Small"
+#, kde-format
 msgid "Small:"
-msgstr "كىچىك"
+msgstr "كىچىك:"
 
 #: ui/main.qml:192
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Small"
+#, kde-format
 msgid "Select small font"
-msgstr "كىچىك"
+msgstr "كىچىك خەت نۇسخىسى تاللىنىدۇ"
 
 #: ui/main.qml:203
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Toolbar"
+#, kde-format
 msgid "Toolbar:"
-msgstr "قورال بالداق"
+msgstr "قورال بالداق:"
 
 #: ui/main.qml:204
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Toolbar"
+#, kde-format
 msgid "Select toolbar font"
-msgstr "قورال بالداق"
+msgstr "قورال بالداق خەت نۇسخىسى تاللىنىدۇ"
 
 #: ui/main.qml:215
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Menu"
+#, kde-format
 msgid "Menu:"
-msgstr "تىزىملىك"
+msgstr "تىزىملىك:"
 
 #: ui/main.qml:216
 #, kde-format
 msgid "Select menu font"
-msgstr ""
+msgstr "تىزىملىك خەت نۇسخىسى تاللىنىدۇ"
 
 #: ui/main.qml:226
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Window title"
+#, kde-format
 msgid "Window title:"
-msgstr "كۆزنەك ماۋزۇسى"
+msgstr "كۆزنەك ماۋزۇسى:"
 
 #: ui/main.qml:227
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Window title"
+#, kde-format
 msgid "Select window title font"
-msgstr "كۆزنەك ماۋزۇسى"
+msgstr "كۆزنەك ماۋزۇ خەت نۇسخىسى تاللىنىدۇ"
 
 #: ui/main.qml:242
-#, fuzzy, kde-format
-#| msgid "Configure Anti-Alias Settings"
+#, kde-format
 msgid "Anti-Aliasing:"
-msgstr "c"
+msgstr "خەت سىلىقلاش:"
 
 #: ui/main.qml:247
-#, fuzzy, kde-format
-#| msgctxt "Use anti-aliasing"
-#| msgid "Enabled"
+#, kde-format
 msgid "Enable"
-msgstr "ئىناۋەتلىك قىلىنغان"
+msgstr "قوزغات"
 
 #: ui/main.qml:251
 #, kde-kuit-format
@@ -315,29 +289,31 @@ msgid ""
 "effect. You generally want to keep this option enabled unless it causes "
 "problems."
 msgstr ""
+"ئېكراندىكى پىكسېل ئادەتتە شادىغا توغرىلىنىدۇ. شۇڭلاشقا بۇ شادىغا ماس "
+"كەلمەيدىغان خەت نۇسخىسىنىڭ شەكلى <emphasis>سىلىقلاش</emphasis> تېخنىكىسىنى "
+"ئىشلەتمىگۈچە ئوڭغۇل دوڭغۇل ۋە خاتا كۆرۈنىدۇ. ئادەتتە تاللانمىدا مەسىلە "
+"كۆرۈلمىسىلا بۇ تاللانمىنى قوزغىتىشنى خالايسىز."
 
 #: ui/main.qml:265
 #, kde-format
 msgid "Exclude range from anti-aliasing"
-msgstr ""
+msgstr "سىلىقلاش دائىرىسىنىڭ سىرتىدا"
 
 #: ui/main.qml:284 ui/main.qml:308
 #, kde-format
 msgid "%1 pt"
-msgstr ""
+msgstr "%1 pt"
 
 #: ui/main.qml:299
-#, fuzzy, kde-format
-#| msgid " to "
+#, kde-format
 msgid "to"
-msgstr " غا "
+msgstr "غا"
 
 #: ui/main.qml:331
-#, fuzzy, kde-format
-#| msgid "&Use sub-pixel rendering:"
+#, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
-msgstr "تارماق پىكسېل سىزىش ئۇسۇلىنى ئىشلەت(&U)"
+msgstr "تارماق پىكسېل ھاسىللاش:"
 
 #: ui/main.qml:377
 #, kde-kuit-format
@@ -352,13 +328,20 @@ msgid ""
 "have <emphasis>BGR</emphasis> and some exotic orderings are not supported by "
 "this feature.</para>This does not work with CRT monitors."
 msgstr ""
+"<para>TFT ياكى LCD ئېكراننىڭ ھەر بىر پىكسېلى 3 تىن 4 كىچە تېخىمۇ كىچىك يەككە "
+"رەڭلىك يورۇق نۇقتىدىن تەركىب تاپىدۇ، ئۇلار <emphasis>تارماق پىكسېل</"
+"emphasis> دەپ ئاتىلىدۇ. خەت نۇسخىسىنىڭ كۆرۈنۈش سۈپىتىنى ياخشىلاش ئۈچۈن ھەر "
+"بىر پىكسېلنىڭ يورۇقلۇقىنى ئايرىم تىزگىنلىگىلى بولىدۇ.</para> <para>بۇ تۈرنى "
+"ئېكراننىڭ فىزىكىلىق قۇرۇلمىسى بىلەن بىردەك تەڭشەڭ. كۆپ ساندىكى كۆرسىتىش "
+"ئېكرانىنىڭ تارماق پىكسېلى <emphasis>RGB</emphasis> تەرتىپىدە تىزىلىدۇ، يەنە "
+"بەزى ئاز ساندىكىلىرى <emphasis>BGR</emphasis> تەرتىپتە تىزىلىدۇ. بۇ ئىقتىدار "
+"بەزى ئۆزگىچە تەرتىپنى قوللىمايدۇ.</para>بۇ ئىقتىدار CRT ئېكراننى قوللىمايدۇ."
 
 #: ui/main.qml:382
-#, fuzzy, kde-format
-#| msgid "Hinting style: "
+#, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
-msgstr "خىنتلاش ئۇسلۇبى: "
+msgstr "مىكرو تەڭشەك:"
 
 #: ui/main.qml:427
 #, kde-kuit-format
@@ -369,12 +352,16 @@ msgid ""
 "leads to sharper edges but the small letters will less closely resemble "
 "their shape at big sizes."
 msgstr ""
+"بۇ ئىقتىدار خەت نۇسخىسىنىڭ ئىچىگە سىڭدۈرۈلگەن مىكرو تەڭشەك ئۇچۇرىغا ئاساسەن "
+"خەت نۇسخىسىنىڭ غولىنى ئېكراندىكى پىكسېل شادىسىغا توغرىلايدۇ. مىكرو تەڭشەش "
+"دەرىجىسى قانچە كۈچلۈك بولسا خەت نۇسخىسىنىڭ قىرى شۇنچە ئېنىق بولىدۇ ئەمما "
+"شەكلىنىڭ توغرىلىقى تۆۋەنلەيدۇ، كىچىك خەت نۇسخىسى بىلەن چوڭ خەت نۇسخىسىنىڭ "
+"شەكلىدە قارىماققا پەرق باردەك تۇيۇلىدۇ."
 
 #: ui/main.qml:440
-#, fuzzy, kde-format
-#| msgid "Force fonts DPI:"
+#, kde-format
 msgid "Force font DPI:"
-msgstr "خەت نۇسخىسىنىڭ DPI نى بۇنىڭغا زورلا:"
+msgstr "خەت نۇسخىسىنىڭ DPI غا مەجبۇرلايدۇ:"
 
 #: ui/main.qml:468
 #, kde-kuit-format
@@ -387,8 +374,16 @@ msgid ""
 "above. To scale everything, use the scaling slider on the <interface>Display "
 "& Monitor</interface> page.</para>"
 msgstr ""
+"<para>بۇ جايغا ئېكرانىڭىزنىڭ DPI قىممىتىنى تولدۇرۇڭ، ئۇ ئېكراندا كۆرسىتىلگەن "
+"خەت نۇسخىسى بىلەن بېسىپ چىقىرىلغان خەت نۇسخىسىنىڭ فىزىكىلىق چوڭ كىچىكلىكىنىڭ "
+"بىردەكلىكىنى ساقلايدۇ. بۇ قىممەتنى كۆڭۈلدىكى قىممەتتىن باشقىسىغا "
+"ئۆزگەرتكەندە نۇرغۇن پىروگرامما بىلەن توقۇنۇشۇپ قالىدۇ؛ بەزى سىنبەلگە ۋە "
+"سۈرەتنىڭ چوڭلۇقى ئۈمىد قىلغاندىكىدەك تەڭشەلمەسلىكى مۇمكىن.</para><para>ئەگەر "
+"پەقەت خەت نۇسخىسىنىڭ چوڭلۇقىنى زورايتماقچى بولغاندا، خەت نۇسخىسىنىڭ "
+"چوڭلۇقىنى ئۆزگەرتىڭ. ئەگەر بارلىق مەزمۇننىڭ چوڭلۇقىنى تەڭشىمەكچى بولسىڭىز، "
+"<interface>كۆرسىتىش ۋە كۆرسەتكۈچ</interface> بېتىدىكى سىيرىلما نىسبىتىنى "
+"ئىشلىتىڭ.</para>"
 
-#, fuzzy
 #~| msgid "Force fonts DPI:"
 #~ msgid "Force font DPI Wayland"
 #~ msgstr "خەت نۇسخىسىنىڭ DPI نى بۇنىڭغا زورلا:"
@@ -396,19 +391,16 @@ msgstr ""
 #~ msgid "Font Settings Changed"
 #~ msgstr "خەت نۇسخا تەڭشىكى ئۆزگەرتىلدى"
 
-#, fuzzy
 #~| msgctxt "Use anti-aliasing"
 #~| msgid "System Settings"
 #~ msgid "Vendor default"
 #~ msgstr "سىستېما تەڭشەكلىرى"
 
-#, fuzzy
 #~| msgctxt "Use anti-aliasing"
 #~| msgid "Disabled"
 #~ msgid "Disabled"
 #~ msgstr "ئىناۋەتسىز قىلىنغان"
 
-#, fuzzy
 #~| msgid "Configure..."
 #~ msgid "Configure the system fonts"
 #~ msgstr "سەپلە…"
@@ -416,7 +408,6 @@ msgstr ""
 #~ msgid "E&xclude range:"
 #~ msgstr "يەكلەش دائىرىسى:"
 
-#, fuzzy
 #~| msgid " pt"
 #~ msgctxt "abbreviation for unit of points"
 #~ msgid " pt"

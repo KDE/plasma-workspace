@@ -8,20 +8,20 @@ msgstr ""
 "Project-Id-Version: plasma_runner_shell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2013-09-08 07:05+0900\n"
-"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
+"PO-Revision-Date: 2026-02-09 18:18-0500\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.8\n"
 
 #: shellrunner.cpp:27
-#, fuzzy, kde-format
-#| msgid "Run in &terminal window"
+#, kde-format
 msgid "Run in Terminal Window"
-msgstr "تېرمىنال ئىجرا قىل(&T)"
+msgstr "تېرمىنال كۆزنىكىدە ئىجرا قىلىدۇ"
 
 #: shellrunner.cpp:34
 #, kde-format
@@ -31,7 +31,7 @@ msgstr "ئورتاق shell تىلقۇرما ئىشلىتىپ :q: غا ماس ك�
 #: shellrunner.cpp:47
 #, kde-format
 msgid "Run %1"
-msgstr "ئىجرا قىل %1"
+msgstr "%1 نى ئىجرا قىل‎‏"
 
 #~ msgid "Enter the user you want to run the application as here."
 #~ msgstr ""

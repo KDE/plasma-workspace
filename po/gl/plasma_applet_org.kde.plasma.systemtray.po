@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-10 00:46+0000\n"
+"POT-Creation-Date: 2026-02-19 00:49+0000\n"
 "PO-Revision-Date: 2025-05-20 06:47+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.gal>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -212,12 +212,12 @@ msgstr "Ir cara atrás"
 msgid "Status and Notifications"
 msgstr "Estado e notificacións"
 
-#: qml/ExpandedRepresentation.qml:145
+#: qml/ExpandedRepresentation.qml:169
 #, kde-format
 msgid "More actions"
 msgstr "Máis accións"
 
-#: qml/ExpandedRepresentation.qml:246
+#: qml/ExpandedRepresentation.qml:255
 #, kde-format
 msgid "Keep Open"
 msgstr "Manter aberto"

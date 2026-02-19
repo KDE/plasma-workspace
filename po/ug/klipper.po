@@ -8,35 +8,32 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-23 00:44+0000\n"
-"PO-Revision-Date: 2013-09-08 07:05+0900\n"
-"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
+"PO-Revision-Date: 2026-02-09 18:14-0500\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.8\n"
 
 #: configdialog.cpp:84
-#, fuzzy, kde-format
-#| msgid "Clipboard history"
+#, kde-format
 msgid "Clipboard history:"
-msgstr "چاپلاش تاختىسى ئىزى"
+msgstr "چاپلاش تاختىسى تارىخى:"
 
 #: configdialog.cpp:90
-#, fuzzy, kde-format
-#| msgid " entry"
-#| msgid_plural " entries"
+#, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
 msgid_plural "%v entries"
-msgstr[0] " كىرگۈز"
+msgstr[0] "%v تۈر"
 
 #: configdialog.cpp:99
-#, fuzzy, kde-format
-#| msgid "Selection and Clipboard"
+#, kde-format
 msgid "Selection and Clipboard:"
-msgstr "تاللاش ۋە چاپلاش تاختىسى"
+msgstr "تاللاش ۋە چاپلاش تاختىسى:"
 
 #: configdialog.cpp:106
 #, kde-kuit-format
@@ -53,36 +50,47 @@ msgid ""
 "selection may still be saved in the clipboard history (subject to the "
 "options below), but it can only be pasted using the middle mouse button."
 msgstr ""
+"چاشقىنەك ياكى ھەرپتاختىدا تېكىست ياكى ئېكراننىڭ بىرەر يېرى يورۇتۇلسا، ئۇ "
+"<emphasis> تاللاش </emphasis> بولىدۇ. ئۇنى چاشقىنەكنىڭ ئوتتۇرا كۇنۇپكىسى "
+"ئارقىلىق چاپلىغىلى بولىدۇ.<nl/><nl/>ئەگەر تاللاش <interface>كۆچۈر</"
+"interface> ياكى <interface>چاپلا</interface> مەشغۇلاتى ئارقىلىق بەلگىلەنگەن "
+"بولسا ئۇلار . <emphasis>چاپلاش تاختىسى</emphasis> غا ساقلىنىدۇ. ئۇنى "
+"<interface>چاپلا</interface> مەشغۇلاتى ئارقىلىق چاپلىغىلى بولىدۇ.<nl/><nl/"
+">بۇ تاللانما ئېچىلغاندا تاللانغان مەزمۇن بىلەن چاپلاش تاختىسىدىكى مەزمۇن "
+"بىردەك دەپ قارىلىدۇ، تاللانغان ھەر قانداق مەزمۇننى خالىغان ئۇسۇلدا دەرھال "
+"چاپلىغىلى بولىدۇ. بۇ تاللانما تاقالغاندا، تاللانغان مەزمۇن يەنىلا چاپلاش "
+"تاختىسىنىڭ تارىخى (تۆۋەندىكى تاللانمىغا ئاساسەن) دا ساقلىنىشى مۇمكىن ئەمما "
+"پەقەت چاشقىنەك ئوتتۇرا كۇنۇپكىسى ئارقىلىقلا چاپلىغىلى بولىدۇ."
 
 #: configdialog.cpp:135 configdialog.cpp:173
 #, kde-format
 msgid "Always save in history"
-msgstr ""
+msgstr "ھەمىشە تارىخ خاتىرىسىگە ساقلايدۇ"
 
 #: configdialog.cpp:139
 #, kde-format
 msgid "Text selection:"
-msgstr ""
+msgstr "تېكىست تاللاش:"
 
 #: configdialog.cpp:141 configdialog.cpp:179
 #, kde-format
 msgid "Only when explicitly copied"
-msgstr ""
+msgstr "پەقەت ئېنىق كۆچۈرۈلگەندىلا"
 
 #: configdialog.cpp:146
 #, kde-format
 msgid "Whether text selections are saved in the clipboard history."
-msgstr ""
+msgstr "تېكىست تاللانمىسى چاپلاش تاختىسىنىڭ تارىخ خاتىرىسىگە ساقلاندىمۇ يوق."
 
 #: configdialog.cpp:177
 #, kde-format
 msgid "Non-text selection:"
-msgstr ""
+msgstr "غەيرى تېكىست تاللاش:"
 
 #: configdialog.cpp:184
 #, kde-format
 msgid "Never save in history"
-msgstr ""
+msgstr "ھەرگىز تارىخى خاتىرىسىدە ساقلىمايدۇ"
 
 #: configdialog.cpp:189
 #, kde-format
@@ -90,12 +98,13 @@ msgid ""
 "Whether non-text selections (such as images) are saved in the clipboard "
 "history."
 msgstr ""
+"غەيرى تېكىست تاللانمىسى (سۈرەتكە ئوخشاش) چاپلاش تاختىسىنىڭ تارىخ خاتىرىسىگە "
+"ساقلاندىمۇ يوق."
 
 #: configdialog.cpp:263
-#, fuzzy, kde-format
-#| msgid "Action properties:"
+#, kde-format
 msgid "Show action popup menu:"
-msgstr "مەشغۇلات خاسلىقى:"
+msgstr "قاڭقىش مەشغۇلات تىزىملىكىنى كۆرسىتىدۇ:"
 
 #: configdialog.cpp:273
 #, kde-kuit-format
@@ -107,28 +116,29 @@ msgid ""
 "excluded window, then it can be shown by using the <shortcut>%1</shortcut> "
 "key shortcut."
 msgstr ""
+"تاللانغان تېكىست ياكى چاپلاش تاختىسىدىكى تارىخ خاتىرىسى تېكىستى بىر مەشغۇلات "
+"ھالىتىگە ماس كەلگەندە، قاڭقىش تىزىملىكىدە قوللىنىدىغان مەشغۇلات ئۆزلۈكىدىن "
+"كۆرۈنىدۇ. ئەگەر بۇ جايدىكى ئاپتوماتىك تىزىملىك  تاقالسا ياكى مۇستەسنا كۆزنەك "
+"تۈپەيلىدىن كۆرۈنمىسە، بۇ مەشغۇلاتنى <shortcut>%1</shortcut> تېزلەتمە "
+"ئارقىلىق كۆرسەتكىلى بولىدۇ."
 
 #: configdialog.cpp:285
-#, fuzzy, kde-format
-#| msgid " second"
-#| msgid_plural " seconds"
+#, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
 msgid_plural "%v seconds"
-msgstr[0] " سېكۇنت"
+msgstr[0] "%v سېكۇنت"
 
 #: configdialog.cpp:286
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
-msgstr ""
+msgstr "يوق"
 
 #: configdialog.cpp:295
-#, fuzzy, kde-format
-#| msgctxt "Actions Config"
-#| msgid "Actions"
+#, kde-format
 msgid "Options:"
-msgstr "مەشغۇلاتلار"
+msgstr "تاللانما:"
 
 #: configdialog.cpp:320
 #, kde-kuit-format
@@ -138,16 +148,18 @@ msgid ""
 "its <interface>commands</interface> appear in the Klipper popup menu and can "
 "be executed."
 msgstr ""
+"<interface>ماس كەلگەن ئەندىزە</interface> بىلەن چاپلاش تاختىسىدىكى مەزمۇن "
+"ماس كەلگەندە، ئۇنىڭ Klipper قاڭقىش تىزىملىكىدىكى <interface>بۇيرۇق</"
+"interface> ى كۆرۈنىدۇ ۋە ئىجرا قىلغىلى بولىدۇ."
 
 #: configdialog.cpp:329
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
-msgstr ""
+msgstr "مەس كەلگەن ئەندىزە ۋە بۇيرۇق"
 
 #: configdialog.cpp:329
-#, fuzzy, kde-format
-#| msgid "Description"
+#, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "چۈشەندۈرۈش"
@@ -158,15 +170,14 @@ msgid "Add Action..."
 msgstr "مەشغۇلات قوش…"
 
 #: configdialog.cpp:339
-#, fuzzy, kde-format
-#| msgid "Add Action..."
+#, kde-format
 msgid "Edit Action..."
-msgstr "مەشغۇلات قوش…"
+msgstr "تەھرىرلەش مەشغۇلاتى…"
 
 #: configdialog.cpp:344
 #, kde-format
 msgid "Delete Action"
-msgstr "مەشغۇلاتنى ئۆچۈرۈش"
+msgstr "ئۆچۈرۈش مەشغۇلاتى"
 
 #: configdialog.cpp:351
 #, kde-kuit-format
@@ -175,6 +186,8 @@ msgid ""
 "These actions appear in the popup menu which can be configured on the "
 "<interface>Action Menu</interface> page."
 msgstr ""
+"قاڭقىش تىزىملىكىدە كۆرۈنگەن مەشغۇلات <interface>مەشغۇلات تىزىملىك</"
+"interface> بېتىدە سەپلىنىدۇ."
 
 #: configdialog.cpp:546
 #, kde-kuit-format
@@ -183,12 +196,13 @@ msgid ""
 "Delete the selected action <resource>%1</resource><nl/>and all of its "
 "commands?"
 msgstr ""
+"تاللانغان مەشغۇلات <resource>%1</resource><nl/> ۋە ئۇنىڭ ھەممە بۇيرۇقىنى "
+"ئۆچۈرەمدۇ؟"
 
 #: configdialog.cpp:547
-#, fuzzy, kde-format
-#| msgid "Delete Action"
+#, kde-format
 msgid "Confirm Delete Action"
-msgstr "مەشغۇلاتنى ئۆچۈرۈش"
+msgstr "ئۆچۈرۈش مەشغۇلاتىنى جەزملە"
 
 #: configdialog.cpp:600
 #, kde-format
@@ -202,211 +216,200 @@ msgid "General Configuration"
 msgstr "ئادەتتىكى سەپلىمە"
 
 #: configdialog.cpp:601
-#, fuzzy, kde-format
-#| msgctxt "Actions Config"
-#| msgid "Actions"
+#, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
-msgstr "مەشغۇلاتلار"
+msgstr "مەشغۇلات تىزىملىكى"
 
 #: configdialog.cpp:601
-#, fuzzy, kde-format
-#| msgctxt "Actions Config"
-#| msgid "Actions"
+#, kde-format
 msgid "Action Menu"
-msgstr "مەشغۇلاتلار"
+msgstr "مەشغۇلات تىزىملىكى"
 
 #: configdialog.cpp:602
-#, fuzzy, kde-format
-#| msgid "General Configuration"
+#, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
-msgstr "ئادەتتىكى سەپلىمە"
+msgstr "مەشغۇلات سەپلىمىسى"
 
 #: configdialog.cpp:602
 #, kde-format
 msgid "Actions Configuration"
-msgstr ""
+msgstr "مەشغۇلات سەپلىمىسى"
 
 #: configdialog.cpp:605
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
-msgstr "تېزلەتمىلەر"
+msgstr "تېزلەتمە"
 
 #: configdialog.cpp:605
 #, kde-format
 msgid "Shortcuts Configuration"
-msgstr ""
+msgstr "تېزلەتمە سەپلىمىسى"
 
 #: declarative/qml/BarcodePage.qml:32
 #, kde-format
 msgid "QR Code"
-msgstr ""
+msgstr "QR كودى"
 
 #: declarative/qml/BarcodePage.qml:33
 #, kde-format
 msgid "Data Matrix"
-msgstr ""
+msgstr "سانلىق مەلۇمات ماترىتساسى"
 
 #: declarative/qml/BarcodePage.qml:34
 #, kde-format
 msgctxt "Aztec barcode"
 msgid "Aztec"
-msgstr ""
+msgstr "ئازتېك"
 
 #: declarative/qml/BarcodePage.qml:35
 #, kde-format
 msgid "Code 39"
-msgstr ""
+msgstr "39 كودى"
 
 #: declarative/qml/BarcodePage.qml:36
 #, kde-format
 msgid "Code 93"
-msgstr ""
+msgstr "93 كودى"
 
 #: declarative/qml/BarcodePage.qml:37
 #, kde-format
 msgid "Code 128"
-msgstr ""
+msgstr "128 كودى"
 
 #: declarative/qml/BarcodePage.qml:53
-#, fuzzy, kde-format
-#| msgid "Add to Clipboard"
+#, kde-format
 msgid "Return to Clipboard"
-msgstr "چاپلاش تاختىسىغا قوش"
+msgstr "چاپلاش تاختىسىغا قايت"
 
 #: declarative/qml/BarcodePage.qml:89
 #, kde-format
 msgctxt "@action:button Copy to clipboard"
 msgid "Copy"
-msgstr ""
+msgstr "كۆچۈر"
 
 #: declarative/qml/BarcodePage.qml:95
 #, kde-format
 msgctxt "@info:status"
 msgid "An image of the QR code has been copied to clipboard"
-msgstr ""
+msgstr "QR كودىنىڭ سۈرىتى چاپلاش تاختىسىغا كۆچۈرۈلدى"
 
 #: declarative/qml/BarcodePage.qml:101
-#, fuzzy, kde-format
-#| msgid "Add to Clipboard"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Copy QR code image to clipboard"
-msgstr "چاپلاش تاختىسىغا قوش"
+msgstr "QR كودىنىڭ سۈرىتىنى چاپلاش تاختىسىغا كۆچۈرىدۇ"
 
 #: declarative/qml/BarcodePage.qml:112
 #, kde-format
 msgid "Change the QR code type"
-msgstr ""
+msgstr "QR كود تۈرىنى ئۆزگەرتىدۇ"
 
 #: declarative/qml/BarcodePage.qml:197
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr ""
+"QR كودنى كۆرسىتىدىغان يېتەرلىك بوشلۇق يوق. بۇ ئەپچىنىڭ چوڭلۇقىنى ئۆزگەرتىڭ."
 
 #: declarative/qml/BarcodePage.qml:197
 #, kde-format
 msgid "Creating QR code failed"
-msgstr ""
+msgstr "QR كودىنى قۇرالمىدى"
 
 #: declarative/qml/ClipboardItemDelegate.qml:202
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
-msgstr ""
+msgstr "يىغ"
 
 #: declarative/qml/ClipboardItemDelegate.qml:202
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
-msgstr ""
+msgstr "ياي"
 
 #: declarative/qml/ClipboardMenu.qml:275
-#, fuzzy, kde-format
-#| msgid "Clipboard history"
+#, kde-format
 msgid "Clear History"
-msgstr "چاپلاش تاختىسى ئىزى"
+msgstr "تارىخنى تازىلا"
 
 #: declarative/qml/ClipboardMenu.qml:329
-#, fuzzy, kde-format
-#| msgid "Clipboard history"
+#, kde-format
 msgid "All History"
-msgstr "چاپلاش تاختىسى ئىزى"
+msgstr "بارلىق تارىخ خاتىرىسى"
 
 #: declarative/qml/ClipboardMenu.qml:334
 #, kde-format
 msgid "Starred Only"
-msgstr ""
+msgstr "يۇلتۇزلانغانلا"
 
 #: declarative/qml/ClipboardMenu.qml:441
 #, kde-format
 msgid "No matches"
-msgstr ""
+msgstr "ماس كەلگىنى يوق"
 
 #: declarative/qml/ClipboardMenu.qml:441
 #, kde-format
 msgid "Clipboard is empty"
-msgstr "چاپلاش تاختىسى قۇرۇق"
+msgstr "چاپلاش تاختىسى بوش"
 
 #: declarative/qml/DelegateToolButtons.qml:37
 #, kde-format
 msgid "Invoke action"
-msgstr ""
+msgstr "چاقىرىش مەشغۇلاتى"
 
 #: declarative/qml/DelegateToolButtons.qml:42
 #, kde-format
 msgid "Show QR code"
-msgstr ""
+msgstr "QR كودىنى كۆرسەت"
 
 #: declarative/qml/DelegateToolButtons.qml:47
-#, fuzzy, kde-format
-#| msgid "&Edit Contents..."
+#, kde-format
 msgid "Edit contents"
-msgstr "مەزمۇنلارنى تەھرىرلە(&E)…"
+msgstr "مەزمۇن تەھرىر"
 
 #: declarative/qml/DelegateToolButtons.qml:53
 #, kde-format
 msgid "Remove from history"
-msgstr ""
+msgstr "تارىخ خاتىرىسىدىن چىقىرىۋەت"
 
 #: declarative/qml/DelegateToolButtons.qml:58
 #, kde-format
 msgid "Remove Star"
-msgstr ""
+msgstr "يۇلتۇزنى چىقىرىۋەت"
 
 #: declarative/qml/DelegateToolButtons.qml:58
-#, fuzzy, kde-format
-#| msgid "Start"
+#, kde-format
 msgid "Star"
-msgstr "باشلاش"
+msgstr "يۇلتۇز"
 
 #: declarative/qml/EditPage.qml:63
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Text edit area"
-msgstr ""
+msgstr "تېكىست تەھرىرلەش رايونى"
 
 #: declarative/qml/EditPage.qml:81
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
-msgstr ""
+msgstr "ساقلا"
 
 #: declarative/qml/EditPage.qml:89
-#, fuzzy, kde-format
-#| msgid "&Cancel"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr "ۋاز كەچ(&C)"
+msgstr "ۋاز كەچ"
 
 #: declarative/qml/UrlItemDelegate.qml:99
 #, kde-format
 msgctxt ""
 "Indicator that there are more urls in the clipboard than previews shown"
 msgid "+%1"
-msgstr ""
+msgstr "+%1"
 
 #: editactiondialog.cpp:36 editcommanddialog.cpp:91
 #, kde-format
@@ -416,7 +419,7 @@ msgstr "پەرۋا قىلما"
 #: editactiondialog.cpp:38
 #, kde-format
 msgid "Replace Clipboard"
-msgstr ""
+msgstr "چاپلاش تاختىسىنى ئالماشتۇر"
 
 #: editactiondialog.cpp:40
 #, kde-format
@@ -431,7 +434,7 @@ msgstr "بۇيرۇق"
 #: editactiondialog.cpp:130
 #, kde-format
 msgid "Output"
-msgstr ""
+msgstr "چىقار"
 
 #: editactiondialog.cpp:132
 #, kde-format
@@ -452,16 +455,20 @@ msgid ""
 "interface> appear in the Klipper popup menu; if one of them is chosen, the "
 "command is executed."
 msgstr ""
+"مەشغۇلات ئۇنىڭ <interface>ماس كەلگەن ئەندىزە</interface> بىلەن چاپلاش "
+"تاختىسىدىكى مەزمۇن ماس كەلگەندە تەسىر كۆرسىتىدۇ. ماس كەلگەن مەزمۇن "
+"بايقالغاندا، ئۇنىڭ Klipper قاڭقىش تىزىملىكىدىكى <interface>بۇيرۇق</"
+"interface> ى كۆرۈنىدۇ؛ ئەگەر بىرى تاللانسا ئۇنداقتا ئۇ بۇيرۇق ئىجرا قىلىنىدۇ."
 
 #: editactiondialog.cpp:210
 #, kde-format
 msgid "Enter a pattern to match against the clipboard"
-msgstr ""
+msgstr "چاپلاش تاختىسىغا ماس كېلىدىغان ئەندىزە كىرگۈزۈلىدۇ"
 
 #: editactiondialog.cpp:212
 #, kde-format
 msgid "Match pattern:"
-msgstr ""
+msgstr "مەس كەلگەن ئەندىزە:"
 
 #: editactiondialog.cpp:215
 #, kde-kuit-format
@@ -471,11 +478,14 @@ msgid ""
 "<link url=\"https://en.wikipedia.org/wiki/Regular_expression\">Wikipedia "
 "entry</link> for this topic."
 msgstr ""
+"ماس كەلگەن ئەندىزە بىر ئۆلچەملىك ئىپادىدۇر. تېخىمۇ كۆپ تەپسىلاتىنى <link url="
+"\"https://en.wikipedia.org/wiki/Regular_expression\">ۋىكى قامۇسى تۈرى</"
+"link>دىكى مۇناسىپ تېمىدىن كۆرۈڭ."
 
 #: editactiondialog.cpp:226
 #, kde-format
 msgid "Enter a description for the action"
-msgstr ""
+msgstr "مەشغۇلات چۈشەندۈرۈشى كىرگۈزۈلىدۇ"
 
 #: editactiondialog.cpp:227 editcommanddialog.cpp:85
 #, kde-format
@@ -485,7 +495,7 @@ msgstr "چۈشەندۈرۈش:"
 #: editactiondialog.cpp:230
 #, kde-format
 msgid "Include in automatic popup"
-msgstr ""
+msgstr "ئۆزلۈكىدىن قاڭقىشنى ئۆز ئىچىگە ئالىدۇ"
 
 #: editactiondialog.cpp:234
 #, kde-kuit-format
@@ -497,52 +507,53 @@ msgid ""
 "the automatic popup but they will be included if the popup is activated "
 "manually with the <shortcut>%1</shortcut> key shortcut."
 msgstr ""
+"ئەگەر بۇ <interface>مەشغۇلات تىزىملىكى</interface> بېتىدە قوزغىتىلغان بولسا، "
+"بۇ ماس كەلگەن مەزمۇن بۇيرۇق ئاپتوماتىك مەشغۇلات قاڭقىش تىزىملىكىگە كىرىدۇ. "
+"ئەگەر بۇ تاللاش تاقالغان بولسا، بۇ ماس كەلگەن بۇيرۇق ئاپتوماتىك ئاپتوماتىك "
+"مەشغۇلات قاڭقىش تىزىملىكىگە كىرمەيدۇ، ئەمما ئەگەر قاڭقىش تىزىملىكى <shortcut>"
+"%1</shortcut> تېزلەتمە كۇنۇپكىسى ئارقىلىق قولدا قوزغىتىلسا قاڭقىش "
+"تىزىملىكىگە كىرىدۇ."
 
 #: editactiondialog.cpp:269
-#, fuzzy, kde-format
-#| msgid "Add Command"
+#, kde-format
 msgid "Add Command..."
-msgstr "بۇيرۇق قوش"
+msgstr "بۇيرۇق قوش…"
 
 #: editactiondialog.cpp:274
-#, fuzzy, kde-format
-#| msgid "Add Command"
+#, kde-format
 msgid "Edit Command..."
-msgstr "بۇيرۇق قوش"
+msgstr "بۇيرۇق تەھرىر…"
 
 #: editactiondialog.cpp:280
-#, fuzzy, kde-format
-#| msgid "Command"
+#, kde-format
 msgid "Delete Command"
-msgstr "بۇيرۇق"
+msgstr "بۇيرۇق ئۆچۈر"
 
 #: editactiondialog.cpp:397
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Delete the selected command <resource>%1</resource>?"
-msgstr ""
+msgstr "تاللانغان بۇيرۇق <resource>%1</resource> نى ئۆچۈرەمدۇ؟"
 
 #: editactiondialog.cpp:398
 #, kde-format
 msgid "Confirm Delete Command"
-msgstr ""
+msgstr "ئۆچۈرۈش بۇيرۇقىنى جەزملە"
 
 #: editcommanddialog.cpp:48
-#, fuzzy, kde-format
-#| msgid "Action Properties"
+#, kde-format
 msgid "Command Properties"
-msgstr "مەشغۇلات خاسلىقى"
+msgstr "بۇيرۇق خاسلىقى"
 
 #: editcommanddialog.cpp:61
 #, kde-format
 msgid "Enter the command and arguments"
-msgstr ""
+msgstr "بۇيرۇق ۋە ئۆزگەرگۈچى كىرگۈزۈلىدۇ"
 
 #: editcommanddialog.cpp:64
-#, fuzzy, kde-format
-#| msgid "Command"
+#, kde-format
 msgid "Command:"
-msgstr "بۇيرۇق"
+msgstr "بۇيرۇق:"
 
 #: editcommanddialog.cpp:73
 #, kde-kuit-format
@@ -553,142 +564,142 @@ msgid ""
 "<placeholder>&#37;9</placeholder> will be replaced by the corresponding "
 "captured texts from the match pattern."
 msgstr ""
+"بۇيرۇقتىكى <placeholder>&#37;s</placeholder> مۇناسىپ چاپلاش تاختىسى تولۇق "
+"مەزمۇن بىلەن ئالماشتۇرۇلىدۇ. <placeholder>&#37;0</placeholder> دىن "
+"<placeholder>&#37;9</placeholder> غا ماسلاشقان ئەندىزە ھالىتىگە ئاساسەن "
+"ئېرىشكەن تېكىست بىلەن ئالماشتۇرۇلىدۇ."
 
 #: editcommanddialog.cpp:83
 #, kde-format
 msgid "Enter a description for the command"
-msgstr ""
+msgstr "بۇيرۇقنىڭ چۈشەندۈرۈشى كىرگۈزۈلىدۇ"
 
 #: editcommanddialog.cpp:93
 #, kde-format
 msgid "Output from command:"
-msgstr ""
+msgstr "بۇيرۇقنىڭ چىقىرىدىغىنى:"
 
 #: editcommanddialog.cpp:95
 #, kde-format
 msgid "Replace current clipboard"
-msgstr ""
+msgstr "نۆۋەتتىكى چاپلاش تاختىسىنى ئالماشتۇرىدۇ"
 
 #: editcommanddialog.cpp:99
-#, fuzzy, kde-format
-#| msgid "Add to Clipboard"
+#, kde-format
 msgid "Append to clipboard"
-msgstr "چاپلاش تاختىسىغا قوش"
+msgstr "چاپلاش تاختىسىغا قوشىدۇ"
 
 #: editcommanddialog.cpp:103
 #, kde-format
 msgid "What happens to the standard output of the command executed."
-msgstr ""
+msgstr "ئىجرا قىلىنىدىغان بۇيرۇقنىڭ ئۆلچەملىك چىقىرىشىدا نېمە ئىش يۈز بېرىدۇ."
 
 #: editcommanddialog.cpp:117
 #, kde-format
 msgid "Reset the icon to the default for the command"
-msgstr ""
+msgstr "سىنبەلگە بۇيرۇقنىڭ كۆڭۈلدىكى قىممىتىگە ئەسلىگە قايتۇرۇلىدۇ."
 
 #: editcommanddialog.cpp:123
 #, kde-format
 msgid "Icon:"
-msgstr ""
+msgstr "سىنبەلگە:"
 
 #: historymodel.cpp:281
 #, kde-format
 msgid "The clipboard history contains starred items. Clear them too?"
 msgstr ""
+"چاپلاش تاختىسى تارىخ خاتىرىسى يۇلتۇزلۇق تۈرنى ئۆز ئىچىگە ئالىدۇ. ئۇلارنىمۇ "
+"تازىلامدۇ؟"
 
 #: historymodel.cpp:282 historymodel.cpp:302
-#, fuzzy, kde-format
-#| msgid "Clipboard history"
+#, kde-format
 msgid "Clear Clipboard History"
-msgstr "چاپلاش تاختىسى ئىزى"
+msgstr "چاپلاش تاختىسى تارىخىنى تازىلا"
 
 #: historymodel.cpp:283
 #, kde-format
 msgid "Clear Everything"
-msgstr ""
+msgstr "ھەممىنى تازىلا"
 
 #: historymodel.cpp:284
-#, fuzzy, kde-format
-#| msgid "Clipboard Contents"
+#, kde-format
 msgid "Keep Starred Items"
-msgstr "چاپلاش تاختىسى مەزمۇنلىرى"
+msgstr "يۇلتۇزلانغان تۈرنى ساقلاپ قال"
 
 #: historymodel.cpp:301
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr ""
+"پۈتكۈل چاپلاش تاختىسىنىڭ تارىخى خاتىرىسىنى راستتىنلا تازىلاپ ۋە ئۆچۈرەمسىز؟"
 
 #: historymodel.cpp:385
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
-msgstr ""
+msgstr "%1x%2"
 
 #: historymodel.cpp:565
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
-msgstr ""
+msgstr "بۇ تۈر يۇلتۇزلانغان. ئۇنى راستتىنلا تارىخ خاتىرىسىدىن چىقىرىۋېتەمسىز؟"
 
 #: historymodel.cpp:566
 #, kde-format
 msgid "Remove Starred Item"
-msgstr ""
+msgstr "يۇلتۇزلانغان تۈرنى چىقىرىۋەت"
 
 #: klipper.cpp:78
-#, fuzzy, kde-format
-#| msgid "Action properties:"
+#, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
-msgstr "مەشغۇلات خاسلىقى:"
+msgstr "ئۆزلۈكىدىن قاڭقىش مەشغۇلات تىزىملىكى"
 
 #: klipper.cpp:96
-#, fuzzy, kde-format
-#| msgid "Clipboard history"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
-msgstr "چاپلاش تاختىسى ئىزى"
+msgstr "چاپلاش تاختىسى تارىخىنى تازىلا(&L)"
 
 #: klipper.cpp:101
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
-msgstr ""
+msgstr "نۆۋەتتىكى چاپلاش تاختىسىدا مەشغۇلاتنى قولدا ئىجرا قىلىدۇ"
 
 #: klipper.cpp:109
-#, fuzzy, kde-format
-#| msgid "&Edit Contents..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
-msgstr "مەزمۇنلارنى تەھرىرلە(&E)…"
+msgstr "مەزمۇن تەھرىر(&E)…"
 
 #: klipper.cpp:115
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
-msgstr ""
+msgstr "سىزىقلىق كودىنى كۆرسەت(&S)"
 
 #: klipper.cpp:122
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
-msgstr ""
+msgstr "كېيىنكى تارىخ خاتىرىسى"
 
 #: klipper.cpp:127
-#, fuzzy, kde-format
-#| msgid "Maintainer"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
-msgstr "مەسئۇل كىشى"
+msgstr "ئالدىنقى تارىخ خاتىرىسى"
 
 #: klipper.cpp:134
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
-msgstr ""
+msgstr "چاشقىنەك ئورنىدا چاپلاش تاختىسى تۈرىنى كۆرسىتىدۇ"
 
 #: klipper.cpp:402 klipper.cpp:411
 #, kde-format
 msgid "Clipboard history"
-msgstr "چاپلاش تاختىسى ئىزى"
+msgstr "چاپلاش تاختىسى تارىخى"
 
 #: klipper.cpp:428
 #, kde-format
@@ -707,16 +718,15 @@ msgstr "ئاستى"
 
 #. i18n: ectx: label, entry (Version), group (General)
 #: klipper.kcfg:10
-#, fuzzy, kde-format
-#| msgid "Klipper"
+#, kde-format
 msgid "Klipper version"
-msgstr "Klipper"
+msgstr "Klipper نەشرى"
 
 #. i18n: ectx: label, entry (KeepClipboardContents), group (General)
 #: klipper.kcfg:13
 #, kde-format
 msgid "Save history across desktop sessions"
-msgstr ""
+msgstr "ئۈستەلئۈستى جەريانچاق ھالقىپ تارىخ خاتىرىسىنى ساقلايدۇ"
 
 #. i18n: ectx: tooltip, entry (KeepClipboardContents), group (General)
 #: klipper.kcfg:15
@@ -725,12 +735,14 @@ msgid ""
 "Retain the clipboard history, so it will be available the next time you log "
 "in."
 msgstr ""
+"چاپلاش تاختىسىنىڭ تارىخ خاتىرىسىنى ساقلاپ قالىدۇ، شۇڭا كېلەر قېتىم تىزىمغا "
+"كىرگەندە ئىشلەتكىلى بولىدۇ."
 
 #. i18n: ectx: label, entry (PreventEmptyClipboard), group (General)
 #: klipper.kcfg:18
 #, kde-format
 msgid "Prevent the clipboard from being cleared"
-msgstr ""
+msgstr "چاپلاش تاختىسىنىڭ تازىلىنىشىنىڭ ئالدىنى ئالىدۇ"
 
 #. i18n: ectx: whatsthis, entry (PreventEmptyClipboard), group (General)
 #: klipper.kcfg:20
@@ -739,13 +751,13 @@ msgid ""
 "Do not allow the clipboard to be cleared, for example when an application "
 "exits."
 msgstr ""
+"چاپلاش تاختىسىنىڭ تازىلىنىشىغا يول قويمايدۇ، مەسىلەن پىروگرامما چېكىنگەندە."
 
 #. i18n: ectx: label, entry (SyncClipboards), group (General)
 #: klipper.kcfg:27
-#, fuzzy, kde-format
-#| msgid "Selection and Clipboard"
+#, kde-format
 msgid "Keep the selection and clipboard the same"
-msgstr "تاللاش ۋە چاپلاش تاختىسى"
+msgstr "تاللاش بىلەن چاپلاش تاختىسىنىڭ بىردەكلىكىنى ساقلايدۇ"
 
 #. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
 #: klipper.kcfg:29
@@ -755,12 +767,16 @@ msgid ""
 "that it can be pasted with either a Paste action or a middle-click.<br/><a "
 "href=\"1\">More about the selection and clipboard</a>."
 msgstr ""
+"نۇر بەلگە بىلەن تاللانغان مەزمۇن ئۆزلۈكىدىن چاپلاش تاختىسىغا كۆچۈرۈلۈپ، "
+"كېيىن چاپلاش مەشغۇلاتى ياكى چاشقىنەك ئوتتۇرا كۇنۇپكىسىدا چېكىش ئارقىلىق "
+"چاپلىغىلى بولىدۇ. <br/><a href=\"1\">تاللاش ۋە چاپلاش تاختىسى ھەققىدىكى "
+"تەپسىلات</a>."
 
 #. i18n: ectx: label, entry (IgnoreSelection), group (General)
 #: klipper.kcfg:32
 #, kde-format
 msgid "Ignore the selection"
-msgstr ""
+msgstr "تاللىغانغا پەرۋا قىلما"
 
 #. i18n: ectx: whatsthis, entry (IgnoreSelection), group (General)
 #: klipper.kcfg:34
@@ -770,12 +786,15 @@ msgid ""
 "is not automatically stored in the clipboard history, and can only be pasted "
 "using a middle-click."
 msgstr ""
+"مەزمۇن سىنبەلگىدە تاللىنىپ ئەمما چاپلاش تاختىسىغا ئېنىق كۆچۈرۈلمىگەن مەزمۇن "
+"چاپلاش تاختىسى تارىخ خاتىرىسىگە ئۆزلۈكىدىن ساقلانمايدۇ، پەقەت چاشقىنەك "
+"ئوتتۇرا كۇنۇپكىسىنى بېسىپ چاپلىغىلى بولىدۇ."
 
 #. i18n: ectx: label, entry (SelectionTextOnly), group (General)
 #: klipper.kcfg:37
 #, kde-format
 msgid "Text selection only"
-msgstr ""
+msgstr "تېكىست تاللاشلا"
 
 #. i18n: ectx: whatsthis, entry (SelectionTextOnly), group (General)
 #: klipper.kcfg:39
@@ -784,13 +803,14 @@ msgid ""
 "Only store text selections in the clipboard history, not images or any other "
 "type of data."
 msgstr ""
+"سۈرەت ياكى باشقا خالىغان تۈردىكى ئۇچۇر ئەمەس پەقەت تېكىست تاللىنىشىلا چاپلاش "
+"تاختىسىنىڭ تارىخ خاتىرىسىگە ساقلىنىدۇ."
 
 #. i18n: ectx: label, entry (IgnoreImages), group (General)
 #: klipper.kcfg:42
-#, fuzzy, kde-format
-#| msgid "Ignore"
+#, kde-format
 msgid "Always ignore images"
-msgstr "پەرۋا قىلما"
+msgstr "ھەمىشە سۈرەتكە پەرۋا قىلمايدۇ"
 
 #. i18n: ectx: whatsthis, entry (IgnoreImages), group (General)
 #: klipper.kcfg:44
@@ -798,18 +818,20 @@ msgstr "پەرۋا قىلما"
 msgid ""
 "Do not store images in the clipboard history, even if explicitly copied."
 msgstr ""
+"گەرچە ئېنىق كۆچۈرۈلگەن تەقدىردىمۇ، سۈرەتنى چاپلاش تاختىسىنىڭ تارىخ "
+"خاتىرىسىگە ساقلىمايدۇ."
 
 #. i18n: ectx: label, entry (UseGUIRegExpEditor), group (General)
 #: klipper.kcfg:47
 #, kde-format
 msgid "Use graphical regexp editor"
-msgstr ""
+msgstr "گىرافىكلىق مۇنتىزىم ئىپادە تەھرىرلىگۈچ"
 
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:51
 #, kde-format
 msgid "Immediately on selection"
-msgstr ""
+msgstr "تاللىغاندا دەرھال"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:52
@@ -817,45 +839,44 @@ msgstr ""
 msgid ""
 "Show the popup menu of applicable actions as soon as a selection is made."
 msgstr ""
+"تاللاش مەشغۇلاتى ئىجرا قىلىنغان ھامان پىروگراممىنىڭ قاڭقىش تىزىملىكىدە "
+"كۆرسىتىدۇ."
 
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
 #: klipper.kcfg:56
-#, fuzzy, kde-format
-#| msgid "Action properties:"
+#, kde-format
 msgid "Automatic action menu time:"
-msgstr "مەشغۇلات خاسلىقى:"
+msgstr "ئۆزلۈكىدىن مەشغۇلات تىزىملىكى ۋاقتى:"
 
 #. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
 #: klipper.kcfg:60
-#, fuzzy, kde-format
-#| msgid "Action properties:"
+#, kde-format
 msgid "Display the automatic action popup menu for this time."
-msgstr "مەشغۇلات خاسلىقى:"
+msgstr "ئۆزلۈكىدىن قاڭقىش مەشغۇلات تىزىملىكىنىڭ كۆرسىتىش ۋاقتى."
 
 #. i18n: ectx: label, entry (MaxClipItems), group (General)
 #: klipper.kcfg:63
-#, fuzzy, kde-format
-#| msgid "Clipboard history size:"
+#, kde-format
 msgid "History size:"
-msgstr "چاپلاش تاختىسى ئىز چوڭلۇقى:"
+msgstr "تارىخ خاتىرە چوڭلۇقى:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
 #: klipper.kcfg:67
 #, kde-format
 msgid "The clipboard history will store up to this many items."
-msgstr ""
+msgstr "چاپلاش تاختىسى تارىخ خاتىرىسى ساقلايدىغان ئۇچۇر سانى."
 
 #. i18n: ectx: label, entry (ActionList), group (General)
 #: klipper.kcfg:70
 #, kde-format
 msgid "Dummy entry for indicating changes in an action's tree widget"
-msgstr ""
+msgstr "مەشغۇلاتنىڭ شاخسىمان ئەپچىدە ئىپادىلەيدىغان ئۆزگىرىشنىڭ بوش ئۇچۇر تۈرى"
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:80
 #, kde-format
 msgid "Trim whitespace from selection"
-msgstr ""
+msgstr "تاللاشتىن ئالدى كەينى بوشلۇقنى چىقىرىۋېتىدۇ"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:82
@@ -866,12 +887,16 @@ msgid ""
 "browser is interpreted as expected. The text saved on the clipboard is not "
 "affected."
 msgstr ""
+"مەشغۇلات قىلىشتىن ئىلگىرى تاللىغان تېكىستنىڭ باش ۋە ئاخىرىدىكى بوشلۇقنى "
+"چىقىرىۋېتىدۇ. مەسىلەن، بۇنداق قىلغاندا چاپلانغان تور ئادرېسىنى توركۆرگۈنىڭ "
+"توغرا يېشىشىگە كاپالەتلىك قىلغىلى بولىدۇ. چاپلاش تاختىسىدىكى تېكىست تەسىرگە "
+"ئۇچرىمايدۇ."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:85
 #, kde-format
 msgid "For an item chosen from history"
-msgstr ""
+msgstr "تارىخ خاتىرىسىدىن ئۇچۇر تاللانغاندا قاڭقىت"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:87
@@ -880,12 +905,14 @@ msgid ""
 "Show the popup menu of applicable actions if an entry is chosen from the "
 "clipboard history."
 msgstr ""
+"چاپلاش تاختىسىدىكى تارىخ خاتىرىسىدىن ئۇچۇر تاللانغاندا پىروگرامما "
+"مەشغۇلاتىنىڭ قاڭقىش تىزىملىكىنى كۆرسىتىدۇ."
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
 #: klipper.kcfg:90
 #, kde-format
 msgid "Include MIME actions"
-msgstr ""
+msgstr "MIME مەشغۇلاتىنى ئۆز ئىچىگە ئالىدۇ"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
 #: klipper.kcfg:92
@@ -894,12 +921,13 @@ msgid ""
 "If a file name or URL is selected, include applications that can accept its "
 "MIME type in the popup menu."
 msgstr ""
+"ئەگەر تاللانغىنى ھۆججەت ئاتى ياكى تور ئادرېسى بولسا، قاڭقىش تىزىملىكىدە "
+"مەزكۇر MIME تۈرىنى قوبۇل قىلالايدىغان پىروگرامما بولىدۇ."
 
 #: klipperpopup.cpp:37
-#, fuzzy, kde-format
-#| msgid "Clipboard history"
+#, kde-format
 msgid "Clipboard Popup"
-msgstr "چاپلاش تاختىسى ئىزى"
+msgstr "چاپلاش تاختىسى قاڭقىش كۆزنىكى"
 
 #: urlgrabber.cpp:197
 #, kde-format
@@ -914,13 +942,11 @@ msgstr "ۋاز كەچ(&C)"
 #~ msgid "Your emails"
 #~ msgstr "sahran.ug@gmail.com,  gheyret@gmail.com"
 
-#, fuzzy
 #~| msgid "&Configure Klipper..."
 #~ msgctxt "@action:inmenu"
 #~ msgid "&Configure Klipper…"
 #~ msgstr "Klipper نى سەپلە(&C)"
 
-#, fuzzy
 #~| msgid "Regular expression:"
 #~ msgid "Invalid regular expression, %1"
 #~ msgstr "مۇنتىزىم ئىپادە:"
@@ -931,14 +957,12 @@ msgstr "ۋاز كەچ(&C)"
 #~ msgid "Do Not Start"
 #~ msgstr "باشلىما"
 
-#, fuzzy
 #~| msgctxt "@item:inmenu Quit Klipper"
 #~| msgid "&Quit"
 #~ msgctxt "@action:inmenu Quit Klipper"
 #~ msgid "&Quit"
 #~ msgstr "ئاخىرلاشتۇر(&Q)"
 
-#, fuzzy
 #~| msgid "Add to Clipboard"
 #~ msgctxt "%1 is application display name"
 #~ msgid "%1 - Clipboard Tool"
@@ -974,7 +998,6 @@ msgstr "ۋاز كەچ(&C)"
 #~ msgid "Luboš Luňák"
 #~ msgstr "Luboš Luňák"
 
-#, fuzzy
 #~| msgid "Maintainer"
 #~ msgid "Previous Maintainer"
 #~ msgstr "مەسئۇل كىشى"
@@ -1015,7 +1038,6 @@ msgstr "ۋاز كەچ(&C)"
 #~ msgid "Save clipboard contents on exit"
 #~ msgstr "ئاخىرلاشقاندا چاپلاش تاختىسىنىڭ مەزمۇنى ساقلا"
 
-#, fuzzy
 #~| msgid "Clipboard Contents"
 #~ msgid "Keep clipboard contents"
 #~ msgstr "چاپلاش تاختىسى مەزمۇنلىرى"

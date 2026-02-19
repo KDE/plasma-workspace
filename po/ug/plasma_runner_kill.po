@@ -8,24 +8,25 @@ msgstr ""
 "Project-Id-Version: plasma_runner_kill\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2013-09-08 07:05+0900\n"
-"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
+"PO-Revision-Date: 2026-02-09 18:17-0500\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.8\n"
 
 #: killrunner.cpp:27
 #, kde-format
 msgid "Send SIGTERM"
-msgstr "SIGTERM ئەۋەت"
+msgstr "SIGTERM يوللا"
 
 #: killrunner.cpp:28
 #, kde-format
 msgid "Send SIGKILL"
-msgstr "SIGKILL ئەۋەت"
+msgstr "SIGKILL يوللا"
 
 #: killrunner.cpp:42 killrunner_config.cpp:42 killrunner_config.cpp:64
 #, kde-format
@@ -35,23 +36,22 @@ msgstr "ئاخىرلاشتۇر"
 #: killrunner.cpp:48
 #, kde-format
 msgid "Terminate running applications whose names match the query."
-msgstr ""
-"ئاتى سۈرۈشتۈرمىگە ماس كەلگەن، ئىجرا بولۇۋاتقان پروگراممىلارنى توختىتىدۇ."
+msgstr "ئاتى سۈرۈشتۈرۈشكە ماس كەلگەن، ئىجرا بولۇۋاتقان پىروگراممىنى توختىتىدۇ."
 
 #: killrunner.cpp:85
 #, kde-format
 msgid "Terminate %1"
-msgstr "توختات %1"
+msgstr "%1 نى توختات‎‏"
 
 #: killrunner.cpp:86
 #, kde-format
 msgid "Process ID: %1"
-msgstr ""
+msgstr "جەريان كىملىكى: %1"
 
 #: killrunner_config.cpp:25
 #, kde-format
 msgid "CPU usage"
-msgstr "CPU نىڭ ئىشلىتىلىش ئەھۋالى"
+msgstr "CPU نىڭ ئىشلىتىلىشى"
 
 #: killrunner_config.cpp:26
 #, kde-format
@@ -67,7 +67,7 @@ msgstr "يوق"
 #: killrunner_config.ui:30
 #, kde-format
 msgid "Kill Applications Config"
-msgstr "سەپلىمىسىنى ئاخىرلاشتۇر"
+msgstr "پىروگرامما سەپلىمىسىنى ئاخىرلاشتۇر"
 
 #. i18n: ectx: property (text), widget (QCheckBox, useTriggerWord)
 #: killrunner_config.ui:39

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-10 00:46+0000\n"
+"POT-Creation-Date: 2026-02-19 00:49+0000\n"
 "PO-Revision-Date: 2024-08-24 11:46+0300\n"
 "Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -196,12 +196,12 @@ msgstr "Μετάβαση πίσω"
 msgid "Status and Notifications"
 msgstr "Κατάσταση και ειδοποιήσεις"
 
-#: qml/ExpandedRepresentation.qml:145
+#: qml/ExpandedRepresentation.qml:169
 #, kde-format
 msgid "More actions"
 msgstr "Περισσότερες ενέργειες"
 
-#: qml/ExpandedRepresentation.qml:246
+#: qml/ExpandedRepresentation.qml:255
 #, kde-format
 msgid "Keep Open"
 msgstr "Διατήρηση ανοιχτό"

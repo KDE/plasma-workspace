@@ -8,14 +8,15 @@ msgstr ""
 "Project-Id-Version: plasma_containmentactions_switchwindow\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2013-09-08 07:05+0900\n"
-"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
+"PO-Revision-Date: 2026-02-09 18:16-0500\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.8\n"
 
 #. i18n: ectx: property (text), widget (QRadioButton, flatButton)
 #: config.ui:16
@@ -36,22 +37,19 @@ msgid "Display only the current desktop's windows"
 msgstr "ھازىرقى ئۈستەلئۈستىنىڭ كۆزنىكىدىلا كۆرسىتىدۇ"
 
 #: switch.cpp:73
-#, fuzzy, kde-format
-#| msgid "Configure Switch Window Plugin"
+#, kde-format
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "Configure Switch Window Plugin"
-msgstr "كۆزنەك ئالماشتۇرۇش قىستۇرما سەپلىمىسى"
+msgstr "كۆزنەك ئالماشتۇرۇش قىستۇرمىسىنى سەپلەيدۇ"
 
 #: switch.cpp:153
-#, fuzzy, kde-format
-#| msgid "Windows"
+#, kde-format
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "Windows"
-msgstr "كۆزنەكلەر"
+msgstr "كۆزنەك"
 
 #: switch.cpp:177 switch.cpp:198 switch.cpp:200
-#, fuzzy, kde-format
-#| msgid "All Desktops"
+#, kde-format
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "All Desktops"
-msgstr "بارلىق ئۈستەلئۈستىلىرى"
+msgstr "بارلىق ئۈستەلئۈستى"

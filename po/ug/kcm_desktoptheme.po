@@ -8,46 +8,46 @@ msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-31 00:45+0000\n"
-"PO-Revision-Date: 2013-09-08 07:05+0900\n"
-"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
+"PO-Revision-Date: 2026-02-09 18:09-0500\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.8\n"
 
 #. i18n: ectx: label, entry (name), group (Theme)
 #: desktopthemesettings.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Get New Themes..."
+#, kde-format
 msgid "Name of the current Plasma Style"
-msgstr "يېڭى ئۆرنەكلەرنى ئېلىش…"
+msgstr "نۆۋەتتىكى Plasma ئۇسلۇبىنىڭ ئاتى"
 
 #: kcm.cpp:111
 #, kde-format
 msgid "Unable to create a temporary file."
-msgstr ""
+msgstr "ۋاقىتلىق ھۆججەت قۇرالمايدۇ."
 
 #: kcm.cpp:122
 #, kde-format
 msgid "Unable to download the theme: %1"
-msgstr ""
+msgstr "ئۆرنەكنى چۈشۈرەلمەيدۇ: %1"
 
 #: kcm.cpp:147
 #, kde-format
 msgid "Theme installed successfully."
-msgstr ""
+msgstr "ئۆرنەك ئوڭۇشلۇق ئورنىتىلدى."
 
 #: kcm.cpp:150 kcm.cpp:156
 #, kde-format
 msgid "Theme installation failed."
-msgstr ""
+msgstr "ئۆرنەك ئورنىتىلمىدى."
 
 #: kcm.cpp:250
 #, kde-format
 msgid "Removing theme failed: %1"
-msgstr ""
+msgstr "ئۆرنەكنى چىقىرىۋېتەلمىدى: %1"
 
 #: plasma-apply-desktoptheme.cpp:33
 #, kde-format
@@ -56,6 +56,9 @@ msgid ""
 "accidentally setting it to one that is either not available, or which is "
 "already set."
 msgstr ""
+"بۇ قورال نۆۋەتتىكى Plasma جەريانچاقنىڭ ئۆرنىكىنى تەڭشەشكە يول قويىدۇ، ئۇنى "
+"ئىشلەتكىلى بولمايدىغان لايىھە قىلىپ تەڭشەش ياكى  ئىشلىتىلىۋاتقان لايىھە "
+"قىلىپ تەڭشەشتىن ساقلىنىدۇ."
 
 #: plasma-apply-desktoptheme.cpp:37
 #, kde-format
@@ -63,12 +66,16 @@ msgid ""
 "The name of the theme you wish to set for your current Plasma session "
 "(passing a full path will only use the last part of the path)"
 msgstr ""
+"نۆۋەتتىكى Plasma جەريانچاق (تولۇق يول يەتكۈزۈلسە يولنىڭ پەقەت ئاخىرقى "
+"بۆلىكىلا ئىشلىتىلىدۇ) قا تەڭشىمەكچى بولغان ئۆرنەك ئىسمى"
 
 #: plasma-apply-desktoptheme.cpp:38
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
 msgstr ""
+"سىستېمىدا ئىشلەتكىلى بولىدىغان ھەممە ئۆرنەك (ۋە قايسىسىنىڭ نۆۋەتتە "
+"ئىشلىتىلىۋاتقىنى ئىكەنلىكى) نى كۆرسىتىدۇ"
 
 #: plasma-apply-desktoptheme.cpp:55
 #, kde-format
@@ -76,11 +83,13 @@ msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
 "Plasma session."
 msgstr ""
+"ئىلتىماس قىلىنغان ئۆرنەك «%1» ئاللىبۇرۇن نۆۋەتتىكى  Plasma جەريانچاقنىڭ "
+"ئۆرنىكىگە تەڭشەلگەن."
 
 #: plasma-apply-desktoptheme.cpp:76
 #, kde-format
 msgid "The current Plasma session's theme has been set to %1"
-msgstr ""
+msgstr "نۆۋەتتىكى Plasma جەريانچاقنىڭ ئۆرنىكى %1 غا تەڭشەلدى"
 
 #: plasma-apply-desktoptheme.cpp:78
 #, kde-format
@@ -88,74 +97,70 @@ msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
 "options: %2"
 msgstr ""
+"«%1» ئۆرنەكنى تاپالمىدى. ئۆرنەك تۆۋەندىكى تاللانمىدىن بىرى بولۇشى كېرەك: %2"
 
 #: plasma-apply-desktoptheme.cpp:86
 #, kde-format
 msgid "You have the following Plasma themes on your system:"
-msgstr ""
+msgstr "سىستېمىڭىزدا تۆۋەندىكى Plasma ئۆرنىكى بار:"
 
 #: ui/main.qml:101
-#, fuzzy, kde-format
-#| msgid "Available themes"
+#, kde-format
 msgctxt "@item:inlistbox filters displayed themes"
 msgid "All themes"
-msgstr "بار ئۆرنەكلەر"
+msgstr "بارلىق ئۆرنەك"
 
 #: ui/main.qml:102
-#, fuzzy, kde-format
-#| msgid "Theme"
+#, kde-format
 msgctxt "@item:inlistbox filters displayed themes"
 msgid "Light themes"
-msgstr "ئۆرنەك"
+msgstr "يورۇق ئۆرنەك"
 
 #: ui/main.qml:103
 #, kde-format
 msgctxt "@item:inlistbox filters displayed themes"
 msgid "Dark themes"
-msgstr ""
+msgstr "قاراڭغۇ ئۆرنەك"
 
 #: ui/main.qml:104
 #, kde-format
 msgctxt "@item:inlistbox filters displayed themes"
 msgid "Color scheme compatible"
-msgstr ""
+msgstr "رەڭ لايىھە ماسلىشىشچانلىقى"
 
 #: ui/main.qml:130
 #, kde-format
 msgid "Install from File…"
-msgstr ""
+msgstr "ھۆججەتتىن ئورنات…"
 
 #: ui/main.qml:135
 #, kde-format
 msgid "Get New…"
-msgstr ""
+msgstr "يېڭىسىغا ئېرىش…"
 
 #: ui/main.qml:148
-#, fuzzy, kde-format
-#| msgctxt "plasma name"
-#| msgid "Color Scheme"
+#, kde-format
 msgid "Follows color scheme"
-msgstr "رەڭ لايىھىسى"
+msgstr "رەڭ لايىھەسىگە ئەگىشىدۇ"
 
 #: ui/main.qml:166
-#, fuzzy, kde-format
-#| msgid "Theme"
+#, kde-format
 msgid "Edit Theme…"
-msgstr "ئۆرنەك"
+msgstr "ئۆرنەك تەھرىر…"
 
 #: ui/main.qml:174
 #, fuzzy, kde-format
-#| msgid "Get New Themes..."
+#| msgid "Plasma Style"
 msgctxt "@info:tooltip"
 msgid "Remove Plasma style"
 msgstr "يېڭى ئۆرنەكلەرنى ئېلىش…"
 
 #: ui/main.qml:176
 #, fuzzy, kde-format
-#| msgid "Get New Themes..."
+#| msgid "Name of the current Plasma Style"
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active Plasma style"
-msgstr "يېڭى ئۆرنەكلەرنى ئېلىش…"
+msgstr "نۆۋەتتىكى Plasma ئۇسلۇبىنىڭ ئاتى"
 
 #: ui/main.qml:178
 #, kde-format
@@ -170,25 +175,21 @@ msgid "Don’t delete this Plasma style"
 msgstr ""
 
 #: ui/main.qml:205
-#, fuzzy, kde-format
-#| msgid "Theme"
+#, kde-format
 msgid "Open Theme"
-msgstr "ئۆرنەك"
+msgstr "ئۆرنەك ئاچ"
 
 #: ui/main.qml:207
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
-msgstr ""
+msgstr "ئۆرنەك ھۆججىتى (*.zip *.tar.gz *.tar.bz2)"
 
 #~ msgid "Remove Theme"
 #~ msgstr "ئۆرنەكنى چىقىرىۋەت"
 
-#, fuzzy
-#~| msgid "Remove Theme"
 #~ msgid "Restore Theme"
-#~ msgstr "ئۆرنەكنى چىقىرىۋەت"
+#~ msgstr "ئۆرنەكنى ئەسلىگە كەلتۈر"
 
-#, fuzzy
 #~| msgid "Get New Themes..."
 #~ msgid "Get New Plasma Styles…"
 #~ msgstr "يېڭى ئۆرنەكلەرنى ئېلىش…"
@@ -201,17 +202,14 @@ msgstr ""
 #~ msgid "Your emails"
 #~ msgstr "sahran.ug@gmail.com,  gheyret@gmail.com"
 
-#, fuzzy
 #~| msgid "Get New Themes..."
 #~ msgid "Plasma Styles"
 #~ msgstr "يېڭى ئۆرنەكلەرنى ئېلىش…"
 
-#, fuzzy
 #~| msgid "Remove Desktop Theme"
 #~ msgid "Download New Plasma Styles"
 #~ msgstr "ئۈستەلئۈستى ئۆرنىكىنى چىقىرىۋېتىش"
 
-#, fuzzy
 #~| msgid "Remove Desktop Theme"
 #~ msgid "Configure Desktop Theme"
 #~ msgstr "ئۈستەلئۈستى ئۆرنىكىنى چىقىرىۋېتىش"
@@ -298,7 +296,6 @@ msgstr ""
 #~ msgid "Source"
 #~ msgstr "مەنبە"
 
-#, fuzzy
 #~| msgid "%1 %2"
 #~ msgctxt ""
 #~ "%1 is the name of the theme, %2 is the type of the element (background, "

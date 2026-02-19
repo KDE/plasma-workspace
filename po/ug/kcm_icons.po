@@ -8,31 +8,31 @@ msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-31 00:45+0000\n"
-"PO-Revision-Date: 2013-09-08 07:05+0900\n"
-"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
+"PO-Revision-Date: 2026-02-09 18:11-0500\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.8\n"
 
 #. i18n: ectx: label, entry (Theme), group (Icons)
 #: iconssettingsbase.kcfg:9
 #, kde-format
 msgid "Name of the current icon theme"
-msgstr ""
+msgstr "نۆۋەتتىكى سىنبەلگە ئۆرنەكنىڭ ئاتى"
 
 #: main.cpp:147
 #, kde-format
 msgid "Unable to create a temporary file."
-msgstr ""
+msgstr "ۋاقىتلىق ھۆججەت قۇرالمايدۇ."
 
 #: main.cpp:158
-#, fuzzy, kde-format
-#| msgid "Unable to find the icon theme archive %1."
+#, kde-format
 msgid "Unable to download the icon theme archive: %1"
-msgstr "سىنبەلگە ئۆرنەك ئارخىپى %1 تېپىلمىدى."
+msgstr "سىنبەلگە ئۆرنەك ئارخىپىنى چۈشۈرەلمەيدۇ: %1"
 
 #: main.cpp:172
 #, kde-format
@@ -46,49 +46,46 @@ msgid ""
 "themes in the archive have been installed"
 msgstr ""
 "ئورنىتىۋاتقاندا مەسىلە كۆرۈلدى. شۇنداقتىمۇ ئارخىپ ئىچىدىكى بارلىق ئۆرنەكلەر "
-"ئورنىتىلدى."
+"ئورنىتىلدى"
 
 #: main.cpp:181
 #, kde-format
 msgid "Theme installed successfully."
-msgstr ""
+msgstr "ئۆرنەك ئوڭۇشلۇق ئورنىتىلدى."
 
 #: main.cpp:225
-#, fuzzy, kde-format
-#| msgid "Installing icon themes"
+#, kde-format
 msgid "Installing icon themes…"
-msgstr "سىنبەلگە ئۆرنەكلىرىنى ئورنىتىش"
+msgstr "سىنبەلگە ئۆرنەكنى ئورنىتىۋاتىدۇ…"
 
 #: main.cpp:235
-#, fuzzy, kde-format
-#| msgid "Installing icon themes"
+#, kde-format
 msgid "Installing %1 theme…"
-msgstr "سىنبەلگە ئۆرنەكلىرىنى ئورنىتىش"
+msgstr "%1 ئۆرنەكنى ئورنىتىۋاتىدۇ…"
 
 #: ui/main.qml:67
-#, fuzzy, kde-format
-#| msgid "Install Theme File..."
+#, kde-format
 msgid "Install from File…"
-msgstr "ئۆرنەك ھۆججىتىنى ئورنات…"
+msgstr "ھۆججەتتىن ئورنات…"
 
 #: ui/main.qml:72
-#, fuzzy, kde-format
-#| msgid "Get New Themes..."
+#, kde-format
 msgid "Get New…"
-msgstr "يېڭى ئۆرنەكلەرنى ئېلىش…"
+msgstr "يېڭىسىغا ئېرىش…"
 
 #: ui/main.qml:189
 #, fuzzy, kde-format
-#| msgid "Remove Theme"
+#| msgid "Remove Icon Theme"
 msgctxt "@info:tooltip"
 msgid "Remove icon theme"
-msgstr "ئۆرنەكنى چىقىرىۋەت"
+msgstr "سىنبەلگە ئۆرنەكنى چىقىرىۋەت"
 
 #: ui/main.qml:191
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Name of the current icon theme"
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active icon theme"
-msgstr ""
+msgstr "نۆۋەتتىكى سىنبەلگە ئۆرنەكنىڭ ئاتى"
 
 #: ui/main.qml:193
 #, kde-format
@@ -103,25 +100,21 @@ msgid "Don’t delete this icon theme"
 msgstr ""
 
 #: ui/main.qml:250
-#, fuzzy, kde-format
-#| msgid "Remove Theme"
+#, kde-format
 msgid "Open Theme"
-msgstr "ئۆرنەكنى چىقىرىۋەت"
+msgstr "ئۆرنەك ئاچ"
 
 #: ui/main.qml:252
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
-msgstr ""
+msgstr "ئۆرنەك ھۆججىتى (*.tar.gz *.tar.bz2)"
 
-#, fuzzy
-#~| msgid "Remove Theme"
 #~ msgid "Restore Icon Theme"
-#~ msgstr "ئۆرنەكنى چىقىرىۋەت"
+#~ msgstr "سىنبەلگە ئۆرنەكنى ئەسلىگە كەلتۈر"
 
 #~ msgid "Main Toolbar"
 #~ msgstr "ئاساسىي قورال بالداق"
 
-#, fuzzy
 #~| msgid "&Second color:"
 #~ msgid "Secondary Toolbars"
 #~ msgstr "ئىككىنچى رەڭ(&S):"
@@ -132,17 +125,14 @@ msgstr ""
 #~ msgid "Dialogs"
 #~ msgstr "سۆزلىشىش رامكىلىرى"
 
-#, fuzzy
 #~| msgid "Main Toolbar"
 #~ msgid "Main toolbar icons size"
 #~ msgstr "ئاساسىي قورال بالداق"
 
-#, fuzzy
 #~| msgid "Small Icons"
 #~ msgid "Small icons size"
 #~ msgstr "كىچىك سىنبەلگە"
 
-#, fuzzy
 #~| msgid "Size:"
 #~ msgctxt "@label:slider"
 #~ msgid "Size:"

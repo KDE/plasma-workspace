@@ -8,24 +8,25 @@ msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-10 00:46+0000\n"
-"PO-Revision-Date: 2013-09-08 07:05+0900\n"
-"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
+"PO-Revision-Date: 2026-02-09 18:16-0500\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.8\n"
 
 #: config.qml:13
 #, kde-format
 msgid "General"
-msgstr ""
+msgstr "ئادەتتىكى"
 
 #: ConfigGeneral.qml:119
 #, kde-format
 msgid "Unavailable"
-msgstr ""
+msgstr "ئىشلەتكىلى بولمايدۇ"
 
 #: data.js:5
 #, kde-format
@@ -38,63 +39,58 @@ msgid "Lock the screen"
 msgstr "ئېكراننى قۇلۇپلايدۇ"
 
 #: data.js:12
-#, fuzzy, kde-format
-#| msgid "Switch user"
+#, kde-format
 msgid "Switch user…"
-msgstr "ئىشلەتكۈچى ئالماشتۇر"
+msgstr "ئىشلەتكۈچى ئالماشتۇر…"
 
 #: data.js:13
 #, kde-format
 msgid "Start a parallel session as a different user"
-msgstr "باشقا ئىشلەتكۈچى سۈپىتىدە پاراللېل ئەڭگىمە باشلايدۇ"
+msgstr "باشقا ئىشلەتكۈچى سۈپىتىدە پاراللېل جەريانچاق باشلايدۇ"
 
 #: data.js:19
 #, kde-format
 msgid "Shut down"
-msgstr ""
+msgstr "تاقا"
 
 #: data.js:20
-#, fuzzy, kde-format
-#| msgid "Logout, turn off or restart the computer"
+#, kde-format
 msgid "Turn off the computer"
-msgstr "كومپيۇتېرنى تىزىمدىن چىقار، تاقا ياكى قايتا قوزغات"
+msgstr "كومپيۇتېرنىڭ توكىنى ئۈز"
 
 #: data.js:26
 #, kde-format
 msgid "Restart"
-msgstr ""
+msgstr "قايتا قوزغات"
 
 #: data.js:27
 #, kde-format
 msgid "Reboot the computer"
-msgstr ""
+msgstr "كومپيۇتېرنى قايتا قوزغات"
 
 #: data.js:33
 #, kde-format
 msgid "Log out"
-msgstr ""
+msgstr "تىزىمدىن چىق"
 
 #: data.js:34
 #, kde-format
 msgid "End the session"
-msgstr ""
+msgstr "جەريانچاقنى ئاخىرلاشتۇر"
 
 #: data.js:40
-#, fuzzy, kde-format
-#| msgid "Lock the screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Show logout screen"
-msgstr "ئېكراننى قۇلۇپلايدۇ"
+msgstr "تىزىمدىن چىقىش ئېكرانىنى كۆرسەت"
 
 #: data.js:41
-#, fuzzy, kde-format
-#| msgid "Logout, turn off or restart the computer"
+#, kde-format
 msgid "Log out, turn off, or restart the computer"
 msgstr "كومپيۇتېرنى تىزىمدىن چىقار، تاقا ياكى قايتا قوزغات"
 
 #: data.js:47
-#, fuzzy, kde-format
-#| msgid "Sleep"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "ئۇخلات"
@@ -102,7 +98,7 @@ msgstr "ئۇخلات"
 #: data.js:48
 #, kde-format
 msgid "Sleep (suspend to RAM)"
-msgstr "ئۇخلا(RAM غا توڭلىتىدۇ)"
+msgstr "ئۇخلا(ئەسلەككەا توڭلىتىدۇ)"
 
 #: data.js:54
 #, kde-format
@@ -114,19 +110,16 @@ msgstr "ئۈچەك"
 msgid "Hibernate (suspend to disk)"
 msgstr "ئۈچەك (دىسكىغا توڭلىتىدۇ)"
 
-#, fuzzy
 #~| msgid "Actions"
 #~ msgctxt "@title:column"
 #~ msgid "Actions"
 #~ msgstr "مەشغۇلاتلار"
 
-#, fuzzy
 #~| msgid "Lock the screen"
 #~ msgctxt "@option:check"
 #~ msgid "Show logout screen"
 #~ msgstr "ئېكراننى قۇلۇپلايدۇ"
 
-#, fuzzy
 #~| msgid "Switch user"
 #~ msgid "Switch User"
 #~ msgstr "ئىشلەتكۈچى ئالماشتۇر"

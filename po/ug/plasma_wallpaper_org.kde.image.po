@@ -8,215 +8,203 @@ msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-06 00:47+0000\n"
-"PO-Revision-Date: 2013-09-08 07:05+0900\n"
-"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
+"PO-Revision-Date: 2026-02-09 18:19-0500\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.8\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "ئابدۇقادىر ئابلىز، غەيرەت كەنجى"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "sahranbay@gmail.com, gheyret@gmail.com"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:56
-#, fuzzy, kde-format
-#| msgid "Open Wallpaper Image"
+#, kde-format
 msgctxt "@title:window"
 msgid "Open Image"
-msgstr "تام قەغىزى سۈرىتىنى ئاچ"
+msgstr "سۈرەت ئاچ"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:68
 #, kde-format
 msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
-msgstr ""
+msgstr "سىيرىلما كۆرسىتىدىغان تام قەغەز بار مۇندەرىجە تاللىنىدۇ"
 
 #: imagepackage/contents/ui/config.qml:156
-#, fuzzy, kde-format
-#| msgid "&Positioning:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Positioning:"
-msgstr "ئورۇن بەلگىلەش(&P):"
+msgstr "ئورنى:"
 
 #: imagepackage/contents/ui/config.qml:159
-#, fuzzy, kde-format
-#| msgid "Scaled & Cropped"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled and cropped"
-msgstr "كىچىكلىتىپ چوڭايتىپ كەس"
+msgstr "كىچىكلەت چوڭايت ۋە كەس"
 
 #: imagepackage/contents/ui/config.qml:163
-#, fuzzy, kde-format
-#| msgid "Scaled"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled"
 msgstr "كىچىكلەت چوڭايت"
 
 #: imagepackage/contents/ui/config.qml:167
-#, fuzzy, kde-format
-#| msgid "Scaled, keep proportions"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled, keep proportions"
 msgstr "كىچىكلەت چوڭايت، نىسبىتىنى ساقلا"
 
 #: imagepackage/contents/ui/config.qml:171
-#, fuzzy, kde-format
-#| msgid "Centered"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "ئوتتۇرىدا"
 
 #: imagepackage/contents/ui/config.qml:199
-#, fuzzy, kde-format
-#| msgid "Get New Wallpapers..."
+#, kde-format
 msgctxt ""
 "@label:listbox part of a sentence: 'Switch dynamic wallpapers [based on]'"
 msgid "Switch dynamic wallpapers:"
-msgstr "يېڭى تام قەغەزلىرىنى ئېلىش…"
+msgstr "ھەرىكەتچان تام قەغەزنى ئالماشتۇرىدۇ:"
 
 #: imagepackage/contents/ui/config.qml:207
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the Plasma style is light or dark "
-msgstr ""
+msgstr "Plasma ئۇسلۇبىنىڭ يورۇق ياكى قاراڭغۇ ئىكەنلىكىگە ئاساسلىنىدۇ "
 
 #: imagepackage/contents/ui/config.qml:209
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on the day-night cycle"
-msgstr ""
+msgstr "كۈندۈز كېچە دەۋرىيلىكىگە ئاساسلىنىدۇ"
 
 #: imagepackage/contents/ui/config.qml:213
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always use light variant"
-msgstr ""
+msgstr "ھەمىشە يورۇق نەشرىنى ئىشلىتىدۇ"
 
 #: imagepackage/contents/ui/config.qml:217
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always use dark variant"
-msgstr ""
+msgstr "ھەمىشە قاراڭغۇ نەشرىنى ئىشلىتىدۇ"
 
 #: imagepackage/contents/ui/config.qml:231
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
-msgstr ""
+msgstr "سەپلە…"
 
 #: imagepackage/contents/ui/config.qml:242
 #, kde-format
 msgid "Background:"
-msgstr ""
+msgstr "تەگلىك:"
 
 #: imagepackage/contents/ui/config.qml:243
 #, kde-format
 msgid "Blur"
-msgstr ""
+msgstr "غۇۋا"
 
 #: imagepackage/contents/ui/config.qml:252
 #, kde-format
 msgid "Solid color"
-msgstr ""
+msgstr "ساپ رەڭ"
 
 #: imagepackage/contents/ui/config.qml:263
 #, kde-format
 msgid "Select Background Color"
-msgstr ""
+msgstr "تەگلىك رەڭگى تاللىنىدۇ"
 
 #: imagepackage/contents/ui/main.qml:37
 #, kde-format
 msgid "Open Wallpaper Image"
-msgstr "تام قەغىزى سۈرىتىنى ئاچ"
+msgstr "تام قەغەز سۈرىتىنى ئاچ"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:88
-#, fuzzy, kde-format
-#| msgid "<b>Images</b>"
+#, kde-format
 msgid "Images"
-msgstr "<b>سۈرەتلەر</b>"
+msgstr "سۈرەت"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:92
 #, kde-format
 msgctxt "@action:button the thing being added is an image file"
 msgid "Add…"
-msgstr ""
+msgstr "قوش…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:93
-#, fuzzy, kde-format
-#| msgid "Open Wallpaper Image"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Wallpaper Image…"
-msgstr "تام قەغىزى سۈرىتىنى ئاچ"
+msgstr "تام قەغەز سۈرىتىنى قوش…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:99
-#, fuzzy, kde-format
-#| msgid "Get New Wallpapers..."
+#, kde-format
 msgctxt "@action:button the new things being gotten are wallpapers"
 msgid "Get New…"
-msgstr "يېڭى تام قەغەزلىرىنى ئېلىش…"
+msgstr "يېڭىسىغا ئېرىش…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:100
-#, fuzzy, kde-format
-#| msgid "Next Wallpaper Image"
+#, kde-format
 msgctxt "@action:button"
 msgid "Get New Wallpaper Images…"
-msgstr "كېيىنكى تام قەغىزى سۈرىتى"
+msgstr "يېڭى تام قەغەز سۈرىتىگە ئېرىش…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:107
 #, kde-format
 msgctxt "@action:button the things being selected are wallpapers"
 msgid "Select All"
-msgstr ""
+msgstr "ھەممىنى تاللا"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:108
 #, kde-format
 msgctxt "@action:button"
 msgid "Select All Slides"
-msgstr ""
+msgstr "ھەممە سىيرىلمىنى تاللا"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:116
 #, kde-format
 msgctxt "@action:button the things being unselected are wallpapers"
 msgid "Select None"
-msgstr ""
+msgstr "ھەممىنى تاللىما"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:117
 #, kde-format
 msgctxt "@action:button"
 msgid "Unselect All Slides"
-msgstr ""
+msgstr "ھەممە سىيرىلمىنى تاللىما"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:33
 #, kde-format
 msgid "Open Containing Folder"
-msgstr ""
+msgstr "ئىچىدىكى قىسقۇچنى ئاچ"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:39
-#, fuzzy, kde-format
-#| msgid "&System wallpapers:"
+#, kde-format
 msgid "Restore wallpaper"
-msgstr "سىستېما تام قەغەزلىرى(&S):"
+msgstr "تام قەغەزنى ئەسلىگە كەلتۈر"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:44
-#, fuzzy, kde-format
-#| msgid "&System wallpapers:"
+#, kde-format
 msgid "Remove Wallpaper"
-msgstr "سىستېما تام قەغەزلىرى(&S):"
+msgstr "تام قەغەزنى چىقىرىۋەت"
 
 #: plasma-apply-wallpaperimage.cpp:28
 #, kde-format
 msgid ""
 "This tool allows you to set an image as the wallpaper for the Plasma session."
-msgstr ""
+msgstr "بۇ قورال نۆۋەتتىكى Plasma جەريانچاققا تام قەغەز تەڭشەشكە يول قويىدۇ."
 
 #: plasma-apply-wallpaperimage.cpp:30
 #, kde-format
@@ -224,11 +212,15 @@ msgid ""
 "An image file or an installed wallpaper kpackage that you wish to set as the "
 "wallpaper for your Plasma session"
 msgstr ""
+"نۆۋەتتىكى Plasma جەريانچاققا تام قەغەز سۈرەت ھۆججىتى ياكى ئورنىتىلغان "
+"kpackage تام قەغەز بوغچىسى تەڭشىشىڭىزگە يول قويىدۇ"
 
 #: plasma-apply-wallpaperimage.cpp:33
 #, kde-format
 msgid "Specify the fill mode (e.g., stretch, preserveAspectCrop, etc.)"
 msgstr ""
+"تولدۇرۇش شەكلىنى بەلگىلەيدۇ (مەسىلەن، سوزۇش، تەرەپ نىسبىتىنى ساقلاپ قېلىپ "
+"كېسىش قاتارلىق)"
 
 #: plasma-apply-wallpaperimage.cpp:58
 #, kde-format
@@ -237,27 +229,33 @@ msgid ""
 "contact the author of the wallpaper to fix this, or rename the file "
 "yourself: %1"
 msgstr ""
+"بۇ تەم قەغەز ھۆججىتىنىڭ ئاتىدا يېپىلمىغان يەككە پەش (') بار - بۇنى ئوڭشاش "
+"ئۈچۈن تام قەغەز ئىجادكارى بىلەن ئالاقىلىشىڭ ياكى ئۆزىڭىز ھۆججەتنىڭ ئاتىنى "
+"ئۆزگەرتىڭ: %1"
 
 #: plasma-apply-wallpaperimage.cpp:96
 #, kde-format
 msgid "Invalid fill mode specified: %1"
-msgstr ""
+msgstr "ئىناۋەتسىز تولدۇرۇش شەكلى بەلگىلەنگەن: %1"
 
 #: plasma-apply-wallpaperimage.cpp:112
 #, kde-format
 msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
-msgstr ""
+msgstr "Plasma تام قەغەزنى تەڭشەشنى سىناۋاتقاندا خاتالىق كۆرۈلدى:\n"
 
 #: plasma-apply-wallpaperimage.cpp:116
 #, kde-format
 msgid ""
 "Successfully set the wallpaper for all desktops to the KPackage based %1"
 msgstr ""
+"بارلىق ئۈستەلئۈستى تام قەغىزىنى مۇۋەپپەقىيەتلىك ھالدا KPackage ئاساسىدىكى %1 "
+"غا تەڭشىدى"
 
 #: plasma-apply-wallpaperimage.cpp:118
 #, kde-format
 msgid "Successfully set the wallpaper for all desktops to the image %1"
 msgstr ""
+"بارلىق ئۈستەلئۈستى تام قەغىزىنى مۇۋەپپەقىيەتلىك ھالدا %1 سۈرەتكە تەڭشىدى"
 
 #: plasma-apply-wallpaperimage.cpp:125
 #, kde-format
@@ -265,189 +263,176 @@ msgid ""
 "The file passed to be set as wallpaper does not exist, or we cannot identify "
 "it as a wallpaper: %1"
 msgstr ""
+"تام قەغىزىگە تەڭشەيدىغان ھۆججەت مەۋجۇت ئەمەس ياكى تام قەغەز ئىكەنلىكىنى "
+"پەرقلەندۈرەلمىدى: %1"
 
 #: plugin/imagebackend.cpp:42
 #, kde-format
 msgid "Next Wallpaper Image"
-msgstr "كېيىنكى تام قەغىزى سۈرىتى"
+msgstr "كېيىنكى تام قەغەز سۈرىتى"
 
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
 #: plugin/imagebackend.cpp:384
-#, fuzzy, kde-format
-#| msgid "<b>Images</b>"
+#, kde-format
 msgid "Media Files"
-msgstr "<b>سۈرەتلەر</b>"
+msgstr "ۋاسىتە ھۆججەت"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:53
 #, kde-format
 msgid "Order:"
-msgstr ""
+msgstr "تەرتىپ:"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:60
 #, kde-format
 msgid "Random"
-msgstr ""
+msgstr "ئىختىيارىي"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:64
 #, kde-format
 msgid "A to Z"
-msgstr ""
+msgstr "A دىن Z غىچە"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:68
 #, kde-format
 msgid "Z to A"
-msgstr ""
+msgstr "Z دىن A غىچە"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:72
 #, kde-format
 msgid "Date modified (newest first)"
-msgstr ""
+msgstr "ئۆزگەرتىلگەن ۋاقتى (يېڭىسى ئالدىدا)"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:76
 #, kde-format
 msgid "Date modified (oldest first)"
-msgstr ""
+msgstr "ئۆزگەرتىلگەن ۋاقتى (كونىسى ئالدىدا)"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:101
 #, kde-format
 msgid "Group by folders"
-msgstr ""
+msgstr "قىسقۇچ بويىچە گۇرۇپپىلا"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:113
-#, fuzzy, kde-format
-#| msgid "C&hange images every:"
+#, kde-format
 msgid "Change every:"
-msgstr "سۈرەت ئالماشتۇرۇش ئارىلىقى(&H):"
+msgstr "ئۆزگەرتىش قەرەلى:"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:123
 #, kde-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
-msgstr[0] ""
+msgstr[0] "%1 سائەت"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:143
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
-msgstr[0] ""
+msgstr[0] "%1 مىنۇت"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:163
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
-msgstr[0] ""
+msgstr[0] "%1 سېكۇنت"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:203
-#, fuzzy, kde-format
-#| msgid "&Remove Folder"
+#, kde-format
 msgid "Folders"
-msgstr "قىسقۇچنى چىقىرىۋەت(&R)"
+msgstr "قىسقۇچ"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:207
 #, kde-format
 msgctxt "@action button the thing being added is a folder"
 msgid "Add…"
-msgstr ""
+msgstr "قوش…"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:208
-#, fuzzy, kde-format
-#| msgid "&Add Folder..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Folder…"
-msgstr "قىسقۇچ قوش(&A)…"
+msgstr "قىسقۇچ قوش…"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:246
-#, fuzzy, kde-format
-#| msgid "&Remove Folder"
+#, kde-format
 msgid "Remove Folder"
-msgstr "قىسقۇچنى چىقىرىۋەت(&R)"
+msgstr "قىسقۇچ چىقىرىۋەت"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:257
-#, fuzzy, kde-format
-#| msgid "&Remove Folder"
+#, kde-format
 msgid "Open Folder…"
-msgstr "قىسقۇچنى چىقىرىۋەت(&R)"
+msgstr "قىسقۇچ ئاچ…"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:272
 #, kde-format
 msgid "There are no wallpaper locations configured"
-msgstr ""
+msgstr "تام قەغەز ئورنى سەپلەنمىگەن"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:47
-#, fuzzy, kde-format
-#| msgid "Get New Wallpapers..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Set as Wallpaper"
-msgstr "يېڭى تام قەغەزلىرىنى ئېلىش…"
+msgstr "تام قەغەزگە تەڭشە"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:50
 #, kde-format
 msgctxt "@action:inmenu Set as Desktop Wallpaper"
 msgid "Desktop"
-msgstr ""
+msgstr "ئۈستەلئۈستى"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:56
 #, kde-format
 msgctxt "@action:inmenu Set as Lockscreen Wallpaper"
 msgid "Lockscreen"
-msgstr ""
+msgstr "قۇلۇپ ئېكرانى"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:62
 #, kde-format
 msgctxt "@action:inmenu Set as both lockscreen and Desktop Wallpaper"
 msgid "Both"
-msgstr ""
+msgstr "ئىككىلىسى"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:95
 #, kde-kuit-format
 msgctxt "@info %1 is the dbus error message"
 msgid "An error occurred while attempting to set the Plasma wallpaper:<nl/>%1"
-msgstr ""
+msgstr "Plasma تام قەغەزنى تەڭشەشنى سىناۋاتقاندا خاتالىق كۆرۈلدى: <nl/>%1"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:108
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
-msgstr ""
+msgstr "kscreenlockerrc سەپلىمە ھۆججەتنى ئېچىشنى سىناۋاتقاندا خاتالىق كۆرۈلدى."
 
-#, fuzzy
 #~| msgid "Tiled"
 #~ msgctxt "@item:inlistbox"
 #~ msgid "Tiled"
 #~ msgstr "يېيىلغان"
 
-#, fuzzy
 #~| msgid "Open Wallpaper Image"
 #~ msgctxt "@title:window"
 #~ msgid "Open Media"
 #~ msgstr "تام قەغىزى سۈرىتىنى ئاچ"
 
-#, fuzzy
 #~| msgid "Use system-installed wallpapers in slideshow"
 #~ msgid "There are no wallpapers in this slideshow"
 #~ msgstr "سىستېمىغا ئورنىتىلغان تام قەغەزلىرىنى تام تەسۋىردە كۆرسەت"
 
-#, fuzzy
 #~| msgid "&System wallpapers:"
 #~ msgid "Add Custom Wallpaper"
 #~ msgstr "سىستېما تام قەغەزلىرى(&S):"
 
-#, fuzzy
 #~| msgid "&System wallpapers:"
 #~ msgid "Remove wallpaper"
 #~ msgstr "سىستېما تام قەغەزلىرى(&S):"
 
-#, fuzzy
 #~| msgctxt "Caption to wallpaper preview, %1 author name"
 #~| msgid "by %1"
 #~ msgid "%1 by %2"
 #~ msgstr "ئاپتور %1"
 
-#, fuzzy
 #~| msgid "&System wallpapers:"
 #~ msgid "Wallpapers"
 #~ msgstr "سىستېما تام قەغەزلىرى(&S):"
 
-#, fuzzy
 #~| msgid "Download new wallpapers"
 #~ msgid "Download Wallpapers"
 #~ msgstr "يېڭى تام قەغەزلىرىنى چۈشۈر"

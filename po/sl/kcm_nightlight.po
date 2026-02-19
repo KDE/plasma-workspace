@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-18 00:48+0000\n"
-"PO-Revision-Date: 2025-07-12 07:49+0200\n"
+"PO-Revision-Date: 2026-02-18 07:24+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.6\n"
+"X-Generator: Poedit 3.8\n"
 
 #: ui/DayNightView.qml:154
 #, kde-format
@@ -76,7 +76,7 @@ msgstr "Konfiguriraj…"
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1 K"
-msgstr ""
+msgstr "%1 K"
 
 #: ui/main.qml:123
 #, kde-format

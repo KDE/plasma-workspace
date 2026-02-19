@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: $2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-10 00:46+0000\n"
+"POT-Creation-Date: 2026-02-19 00:49+0000\n"
 "PO-Revision-Date: 2014-12-25 07:47+0000\n"
 "Last-Translator: Dino Babahmetovic <dbabahmeto1@etf.unsa.ba>\n"
 "Language-Team: none\n"
@@ -192,12 +192,12 @@ msgstr ""
 msgid "Status and Notifications"
 msgstr "Status & Notifikacije"
 
-#: qml/ExpandedRepresentation.qml:145
+#: qml/ExpandedRepresentation.qml:169
 #, kde-format
 msgid "More actions"
 msgstr ""
 
-#: qml/ExpandedRepresentation.qml:246
+#: qml/ExpandedRepresentation.qml:255
 #, kde-format
 msgid "Keep Open"
 msgstr ""
