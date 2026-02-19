@@ -2,20 +2,22 @@
 # Copyright (C) 2009 This_file_is_part_of_KDE
 # This file is distributed under the same license as the kfontinst package.
 # Kevin Scannell <kscanne@gmail.com>, 2009.
+# SPDX-FileCopyrightText: 2026 charlotte <altronic25@protonmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdebase/kfontinst.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2004-12-03 14:52-0500\n"
-"Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
-"Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
+"PO-Revision-Date: 2026-02-18 07:04+0000\n"
+"Last-Translator: charlotte <altronic25@protonmail.com>\n"
+"Language-Team: Irish\n"
 "Language: ga\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -596,12 +598,12 @@ msgstr ""
 #: kcmfontinst/JobRunner.cpp:625 kcmfontinst/JobRunner.cpp:631
 #, kde-format
 msgid "<h3>Error</h3>"
-msgstr ""
+msgstr "<h3>Earráid</h3>"
 
 #: kcmfontinst/JobRunner.cpp:697
 #, kde-format
 msgid "Failed to download <i>%1</i>"
-msgstr ""
+msgstr "Theip ar <i>%1</i> a íosluchtú"
 
 #: kcmfontinst/JobRunner.cpp:699
 #, kde-format
@@ -624,7 +626,7 @@ msgstr ""
 #: kcmfontinst/JobRunner.cpp:705
 #, kde-format
 msgid "<i>%1</i> is not a font."
-msgstr ""
+msgstr "Ní cló é <i>%1</i>."
 
 #: kcmfontinst/JobRunner.cpp:707
 #, kde-format
@@ -649,7 +651,7 @@ msgstr "Níl <i>%1</i> ann."
 #: kcmfontinst/JobRunner.cpp:717
 #, kde-format
 msgid "Permission denied.<br><i>%1</i>"
-msgstr ""
+msgstr "Cead diúltaithe.<br><i>%1</i>"
 
 #: kcmfontinst/JobRunner.cpp:719
 #, kde-format
@@ -667,10 +669,9 @@ msgid "Unexpected error while processing: <i>%1</i>"
 msgstr ""
 
 #: kcmfontinst/KCmFontInst.cpp:169
-#, fuzzy, kde-format
-#| msgid "Font Management Mode"
+#, kde-format
 msgid "Font Management"
-msgstr "Mód Bainisteoireachta na gClónna"
+msgstr "Bainisteoireacht na gClónna"
 
 #: kcmfontinst/KCmFontInst.cpp:173
 #, kde-format
@@ -729,27 +730,24 @@ msgid "Scan for Duplicate Fonts…"
 msgstr "Lorg Clónna Dúblacha..."
 
 #: kcmfontinst/KCmFontInst.cpp:251
-#, fuzzy, kde-format
-#| msgid "Install..."
+#, kde-format
 msgid "Install from File…"
-msgstr "Suiteáil..."
+msgstr "Suiteáil ó Chomhad..."
 
 #: kcmfontinst/KCmFontInst.cpp:251
 #, kde-format
 msgid "Install fonts from a local file"
-msgstr ""
+msgstr "Suiteáil clónna ó chomhad logánta"
 
 #: kcmfontinst/KCmFontInst.cpp:252
-#, fuzzy, kde-format
-#| msgid "Get New Fonts..."
+#, kde-format
 msgid "Get New Fonts…"
 msgstr "Faigh Clónna Nua..."
 
 #: kcmfontinst/KCmFontInst.cpp:253
-#, fuzzy, kde-format
-#| msgid "Enable fonts"
+#, kde-format
 msgid "Download new fonts"
-msgstr "Cumasaigh clónna"
+msgstr "Íosluchtaigh clónna nua"
 
 #: kcmfontinst/KCmFontInst.cpp:255
 #, fuzzy, kde-format
@@ -936,12 +934,12 @@ msgstr "Easpórtáil Grúpa"
 #: kcmfontinst/KCmFontInst.cpp:726
 #, kde-format
 msgid "No files?"
-msgstr ""
+msgstr "Ar Gan Comhaid?"
 
 #: kcmfontinst/KCmFontInst.cpp:729
 #, kde-format
 msgid "Failed to open %1 for writing"
-msgstr ""
+msgstr "Theip ar %1 a oscailt le haghaidh scríofa"
 
 #: kcmfontinst/KCmFontInst.cpp:749
 #, kde-format
@@ -1244,7 +1242,7 @@ msgstr ""
 #: kio/KioFonts.cpp:439
 #, kde-format
 msgid "Cannot copy fonts"
-msgstr ""
+msgstr "Ní féidir clónna a chóipeáil"
 
 #: kio/KioFonts.cpp:444
 #, kde-format
