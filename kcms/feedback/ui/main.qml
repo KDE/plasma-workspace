@@ -74,6 +74,8 @@ SimpleKCM {
                 stepSize: 1
                 snapMode: QQC2.Slider.SnapAlways
 
+                Kirigami.StyleHints.tickMarkStepSize: 1
+
                 function findIndex(array, what, defaultValue) {
                     for (var v in array) {
                         if (array[v] == what)
