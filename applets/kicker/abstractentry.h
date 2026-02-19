@@ -19,6 +19,7 @@ public:
     virtual ~AbstractEntry();
 
     enum EntryType {
+        ApplicationType,
         RunnableType,
         GroupType,
         SeparatorType,

@@ -81,7 +81,7 @@ AppsModel::AppsModel(const QList<AbstractEntry *> &entryList, bool deleteEntries
 {
     for (AbstractEntry *suggestedEntry : entryList) {
         const auto sameStorageId = [=](const AbstractEntry *entry) {
-            return entry->type() == AbstractEntry::RunnableType
+            return entry->type() == AbstractEntry::ApplicationType && suggestedEntry->type() == AbstractEntry::ApplicationType
                 && static_cast<const AppEntry *>(entry)->service()->storageId() == static_cast<const AppEntry *>(suggestedEntry)->service()->storageId();
         };
 
@@ -147,11 +147,11 @@ QVariant AppsModel::data(const QModelIndex &index, int role) const
         return entry->compactName();
     } else if (role == Kicker::DescriptionRole) {
         return entry->description();
-    } else if (role == Kicker::FavoriteIdRole && entry->type() == AbstractEntry::RunnableType) {
+    } else if (role == Kicker::FavoriteIdRole && (entry->type() == AbstractEntry::ApplicationType || entry->type() == AbstractEntry::RunnableType)) {
         return entry->id();
-    } else if (role == Kicker::FavoriteIdRole && entry->type() != AbstractEntry::RunnableType) {
+    } else if (role == Kicker::FavoriteIdRole && (entry->type() != AbstractEntry::ApplicationType || entry->type() != AbstractEntry::RunnableType)) {
         return QString();
-    } else if (role == Kicker::UrlRole && entry->type() == AbstractEntry::RunnableType) {
+    } else if (role == Kicker::UrlRole && (entry->type() == AbstractEntry::ApplicationType || entry->type() == AbstractEntry::RunnableType)) {
         return entry->url();
     } else if (role == Kicker::IsParentRole) {
         return (entry->type() == AbstractEntry::GroupType);
@@ -212,7 +212,7 @@ bool AppsModel::trigger(int row, const QString &actionId, const QVariant &argume
     AbstractEntry *entry = m_entryList.at(row);
     const QString hiddenConfigEntryName = QStringLiteral("hiddenApplications");
 
-    if (actionId == QLatin1String("hideApplication") && entry->type() == AbstractEntry::RunnableType) {
+    if (actionId == QLatin1String("hideApplication") && entry->type() == AbstractEntry::ApplicationType) {
         auto *appletInterface = rootModel()->property("appletInterface").value<QObject *>();
         QQmlPropertyMap *appletConfig = nullptr;
         if (appletInterface) {
@@ -501,7 +501,7 @@ void AppsModel::refresh()
 static bool containsSameStorageId(const QList<AbstractEntry *> &entryList, const KService::Ptr &service)
 {
     return std::ranges::any_of(entryList, [=](const AbstractEntry *entry) {
-        return entry->type() == AbstractEntry::RunnableType && static_cast<const AppEntry *>(entry)->service()->storageId() == service->storageId();
+        return entry->type() == AbstractEntry::ApplicationType && static_cast<const AppEntry *>(entry)->service()->storageId() == service->storageId();
     });
 }
 

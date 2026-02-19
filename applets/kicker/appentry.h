@@ -32,7 +32,7 @@ public:
 
     EntryType type() const override
     {
-        return RunnableType;
+        return ApplicationType;
     }
 
     bool isValid() const override;

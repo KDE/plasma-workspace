@@ -323,7 +323,7 @@ void RootModel::refresh()
         QHash<QString, AbstractEntry *> appsHash;
 
         std::function<void(AbstractEntry *)> processEntry = [&](AbstractEntry *entry) {
-            if (entry->type() == AbstractEntry::RunnableType) {
+            if (entry->type() == AbstractEntry::ApplicationType) {
                 auto *appEntry = static_cast<AppEntry *>(entry);
                 appsHash.insert(appEntry->service()->menuId(), appEntry);
             } else if (entry->type() == AbstractEntry::GroupType) {
@@ -438,7 +438,7 @@ void RootModel::refresh()
         KConfigGroup applicationsGroup = stateConfig->group(QStringLiteral("Application"));
 
         std::function<void(AbstractEntry *)> processEntry = [&](AbstractEntry *entry) {
-            if (entry->type() == AbstractEntry::RunnableType) {
+            if (entry->type() == AbstractEntry::ApplicationType) {
                 auto *appEntry = static_cast<AppEntry *>(entry);
 
                 const QString appId = appEntry->id();
@@ -628,7 +628,7 @@ void RootModel::refreshNewlyInstalledApps()
     bool hasTrackedApp = false;
 
     std::function<void(AbstractEntry *)> processEntry = [&](AbstractEntry *entry) {
-        if (entry->type() == AbstractEntry::RunnableType) {
+        if (entry->type() == AbstractEntry::ApplicationType) {
             auto *appEntry = static_cast<AppEntry *>(entry);
 
             const QString appId = appEntry->id();
@@ -698,7 +698,7 @@ void RootModel::onResourceScoresChanged(const QString &activity,
     const QStringView appId = QStringView(resource).mid(s_prefix.size());
 
     std::function<void(AbstractEntry *)> processEntry = [&](AbstractEntry *entry) {
-        if (entry->type() == AbstractEntry::RunnableType) {
+        if (entry->type() == AbstractEntry::ApplicationType) {
             auto *appEntry = static_cast<AppEntry *>(entry);
 
             if (appEntry->id() == appId && appEntry->isNewlyInstalled()) {
