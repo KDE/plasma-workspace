@@ -40,6 +40,7 @@ SplashWindow::SplashWindow(bool testing, bool window, const QString &theme, QScr
             layerShellWindow->setLayer(LayerShellQt::Window::LayerOverlay);
             layerShellWindow->setExclusiveZone(-1);
             layerShellWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityExclusive);
+            layerShellWindow->setScreen(screen);
         }
     }
 
