@@ -175,7 +175,7 @@ void SchemeEditorDialog::saveScheme(bool overwrite)
         QTextStream out(stdout);
         out << filename << Qt::endl;
     } else if (!canWrite && file.exists()) {
-        KMessageBox::error(this, i18n("You do not have permission to overwrite that scheme"), i18n("Error"));
+        KMessageBox::error(this, i18n("This scheme is read-only. Please save the modifications with another name."), i18n("Error"));
     }
 }
 
