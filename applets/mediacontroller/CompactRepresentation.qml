@@ -25,8 +25,7 @@ Loader {
     Layout.preferredWidth: {
         switch (compactRepresentation.layoutForm) {
         case CompactRepresentation.LayoutType.HorizontalPanel:
-        case CompactRepresentation.LayoutType.HorizontalDesktop:
-            return implicitWidth;
+            return implicitWidth + (root.track == "" ? 0 : Kirigami.Units.smallSpacing * 2);
         default:
             return -1;
         }
