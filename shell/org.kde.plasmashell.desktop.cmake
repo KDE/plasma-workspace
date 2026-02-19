@@ -59,6 +59,7 @@ Name[ta]=பிளாஸ்மா பணிமேடை
 Name[tg]=Фазои мизи кории Плазма
 Name[th]=พื้นที่ทำงานเดสก์ท็อป Plasma
 Name[tr]=Plasma Masaüstü Çalışma Alanı
+Name[ug]=Plasma ئۈستەلئۈستى خىزمەت بوشلۇقى
 Name[uk]=Робочий простір Плазми для комп’ютерів
 Name[vi]=Không gian bàn làm việc Plasma
 Name[zh_CN]=Plasma 桌面工作空间
