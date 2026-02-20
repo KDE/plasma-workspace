@@ -52,18 +52,3 @@ msgstr "%1: %2"
 msgctxt "session (location)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
-
-#~ msgctxt ""
-#~ "Action that reorganizes the windows to try to have them less cluttered"
-#~ msgid "Unclutter Windows"
-#~ msgstr "Cuir Slacht ar na Fuinneoga"
-
-#~ msgctxt "Action that reorganizes the windows so that they are in cascade"
-#~ msgid "Cascade Windows"
-#~ msgstr "Cascáidigh Fuinneoga"
-
-#~ msgid "On All Desktops"
-#~ msgstr "Ar Gach Deasc"
-
-#~ msgid "No Windows"
-#~ msgstr "Gan Fuinneoga"

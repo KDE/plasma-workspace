@@ -30,10 +30,8 @@ msgid "Product"
 msgstr "Táirge"
 
 #: soliddeviceengine.cpp:115
-#, fuzzy
-#| msgid "Type Description"
 msgid "Description"
-msgstr "Cur Síos ar Chineál"
+msgstr ""
 
 #: soliddeviceengine.cpp:116
 msgid "Icon"
@@ -511,32 +509,24 @@ msgid "Camera Battery"
 msgstr "Cadhnra an Cheamara"
 
 #: soliddeviceengine.cpp:389
-#, fuzzy
-#| msgid "Mouse Battery"
 msgid "Phone Battery"
-msgstr "Cadhnra na Luiche"
+msgstr ""
 
 #: soliddeviceengine.cpp:389
-#, fuzzy
-#| msgid "Mouse Battery"
 msgid "Monitor Battery"
-msgstr "Cadhnra na Luiche"
+msgstr ""
 
 #: soliddeviceengine.cpp:390
 msgid "Gaming Input Battery"
 msgstr ""
 
 #: soliddeviceengine.cpp:390
-#, fuzzy
-#| msgid "Mouse Battery"
 msgid "Bluetooth Battery"
-msgstr "Cadhnra na Luiche"
+msgstr ""
 
 #: soliddeviceengine.cpp:393
-#, fuzzy
-#| msgid "Charging"
 msgid "Not Charging"
-msgstr "Á Luchtú"
+msgstr ""
 
 #: soliddeviceengine.cpp:393
 msgid "Charging"
@@ -591,10 +581,8 @@ msgid "Free Space Text"
 msgstr "Spás Saor: Téacs"
 
 #: soliddeviceengine.cpp:541
-#, fuzzy
-#| msgid "Size"
 msgid "Size Text"
-msgstr "Méid"
+msgstr ""
 
 #: soliddeviceengine.cpp:564
 msgid "Temperature"
@@ -607,149 +595,3 @@ msgstr "Aonad Teochta"
 #: soliddeviceengine.cpp:609 soliddeviceengine.cpp:613
 msgid "In Use"
 msgstr "In Úsáid"
-
-#~ msgid "Network Interface"
-#~ msgstr "Comhéadan Líonra"
-
-#~ msgid "Interface Name"
-#~ msgstr "Ainm an Chomhéadain"
-
-#~ msgid "Wireless"
-#~ msgstr "Gan Sreang"
-
-#~ msgid "Hardware Address"
-#~ msgstr "Seoladh Crua-Earraí"
-
-#~ msgid "MAC Address"
-#~ msgstr "Seoladh MAC"
-
-#~ msgid "AC Adapter"
-#~ msgstr "Cuibheoir SA"
-
-#~ msgid "Button"
-#~ msgstr "Cnaipe"
-
-#~ msgid "Lid Button"
-#~ msgstr "Cnaipe Clúdaigh"
-
-#~ msgid "Power Button"
-#~ msgstr "Cnaipe Cumhachta"
-
-#~ msgid "Sleep Button"
-#~ msgstr "Cnaipe Codlata"
-
-#~ msgid "Unknown Button Type"
-#~ msgstr "Cineál Anaithnid Cnaipe"
-
-#~ msgid "Has State"
-#~ msgstr "Staid Aige"
-
-#~ msgid "State Value"
-#~ msgstr "Luach na Staide"
-
-#~ msgid "Pressed"
-#~ msgstr "Brúite"
-
-#~ msgid "Audio Interface"
-#~ msgstr "Comhéadan Fuaime"
-
-#~ msgid "ALSA"
-#~ msgstr "ALSA"
-
-#~ msgid "Open Sound System"
-#~ msgstr "Córas Fuaime Oscailte"
-
-#~ msgid "Unknown Audio Driver"
-#~ msgstr "Tiománaí Anaithnid Fuaime"
-
-#~ msgid "Driver"
-#~ msgstr "Tiománaí"
-
-#~ msgid "Driver Handle"
-#~ msgstr "Hanla an Tiománaí"
-
-#~ msgid "Name"
-#~ msgstr "Ainm"
-
-#~ msgid "Unknown Audio Interface Type"
-#~ msgstr "Cineál Anaithnid Comhéadain Fuaime"
-
-#~ msgid "Audio Control"
-#~ msgstr "Rialú Fuaime"
-
-#~ msgid "Audio Input"
-#~ msgstr "Ionchur Fuaime"
-
-#~ msgid "Audio Output"
-#~ msgstr "Aschur Fuaime"
-
-#~ msgid "Audio Device Type"
-#~ msgstr "Cineál an Ghléis Fuaime"
-
-#~ msgid "Internal Soundcard"
-#~ msgstr "Cárta Inmheánach Fuaime"
-
-#~ msgid "USB Soundcard"
-#~ msgstr "Cárta Fuaime USB"
-
-#~ msgid "Firewire Soundcard"
-#~ msgstr "Cárta Fuaime Firewire"
-
-#~ msgid "Headset"
-#~ msgstr "Gléas Cinn"
-
-#~ msgid "Modem"
-#~ msgstr "Móideim"
-
-#~ msgid "Soundcard Type"
-#~ msgstr "Cineál an Chárta Fuaime"
-
-#~ msgid "DVB Interface"
-#~ msgstr "Comhéadan DVB"
-
-#~ msgid "Device Adapter"
-#~ msgstr "Cuibheoir Gléis"
-
-# DVB = digital video broadcasting
-#~ msgid "DVB Unknown"
-#~ msgstr "DVB Anaithnid"
-
-#~ msgid "DVB Audio"
-#~ msgstr "Fuaim DVB"
-
-# conditional access
-#~ msgid "DVB Ca"
-#~ msgstr "DVB CA"
-
-#~ msgid "DVB Demux"
-#~ msgstr "Dí-ilphléacsóir DVB"
-
-#~ msgid "DVB DVR"
-#~ msgstr "DVB DVR"
-
-#~ msgid "DVB Frontend"
-#~ msgstr "Comhéadan DVB"
-
-#~ msgid "DVB Net"
-#~ msgstr "Líonra DVB"
-
-#~ msgid "DVB OSD"
-#~ msgstr "DVB OSD"
-
-#~ msgid "DVB Sec"
-#~ msgstr "DVB SEC"
-
-#~ msgid "DVB Video"
-#~ msgstr "Fís DVB"
-
-#~ msgid "DVB Device Type"
-#~ msgstr "Cineál Gléis DVB"
-
-#~ msgid "Device Index"
-#~ msgstr "Innéacs Gléis"
-
-#~ msgid "Video"
-#~ msgstr "Físeán"
-
-#~ msgid "Driver Handles"
-#~ msgstr "Hanlaí Tiománaí"

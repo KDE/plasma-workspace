@@ -20,33 +20,27 @@ msgstr ""
 
 #. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
 #: fontsaasettingsbase.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Force fonts DPI:"
+#, kde-format
 msgid "Force font DPI Wayland"
-msgstr "Fórsáil luach PSO na gclónna:"
+msgstr ""
 
 #. i18n: ectx: label, entry (forceFontDPI), group (General)
 #: fontsaasettingsbase.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Force fonts DPI:"
+#, kde-format
 msgid "Force font DPI on X11"
-msgstr "Fórsáil luach PSO na gclónna:"
+msgstr ""
 
 #. i18n: ectx: label, entry (font), group (General)
 #: fontssettings.kcfg:9
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "General"
+#, kde-format
 msgid "General font"
-msgstr "Ginearálta"
+msgstr ""
 
 #. i18n: ectx: label, entry (fixed), group (General)
 #: fontssettings.kcfg:21
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Fixed width"
+#, kde-format
 msgid "Fixed width font"
-msgstr "Aonleithid"
+msgstr ""
 
 #. i18n: ectx: label, entry (smallestReadableFont), group (General)
 #: fontssettings.kcfg:33
@@ -56,35 +50,27 @@ msgstr "Cló Beag"
 
 #. i18n: ectx: label, entry (toolBarFont), group (General)
 #: fontssettings.kcfg:45
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Toolbar"
+#, kde-format
 msgid "Tool bar font"
-msgstr "Barra Uirlisí"
+msgstr ""
 
 #. i18n: ectx: label, entry (menuFont), group (General)
 #: fontssettings.kcfg:57
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "General"
+#, kde-format
 msgid "Menu font"
-msgstr "Ginearálta"
+msgstr ""
 
 #. i18n: ectx: label, entry (activeFont), group (WM)
 #: fontssettings.kcfg:71
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Window title"
+#, kde-format
 msgid "Window title font"
-msgstr "Teideal fuinneog"
+msgstr ""
 
 #: kxftconfig.cpp:458
-#, fuzzy, kde-format
-#| msgctxt "Use anti-aliasing"
-#| msgid "System Settings"
+#, kde-format
 msgctxt "use system subpixel setting"
 msgid "Vendor default"
-msgstr "Socruithe an Chórais"
+msgstr ""
 
 #: kxftconfig.cpp:460
 #, kde-format
@@ -113,12 +99,10 @@ msgid "Vertical BGR"
 msgstr "BGR Ingearach"
 
 #: kxftconfig.cpp:496
-#, fuzzy, kde-format
-#| msgctxt "Use anti-aliasing"
-#| msgid "System Settings"
+#, kde-format
 msgctxt "use system hinting settings"
 msgid "Vendor default"
-msgstr "Socruithe an Chórais"
+msgstr ""
 
 #: kxftconfig.cpp:498
 #, kde-format
@@ -150,10 +134,9 @@ msgid "This module lets you configure the system fonts."
 msgstr ""
 
 #: package/contents/ui/main.qml:26
-#, fuzzy, kde-format
-#| msgid "Ad&just All Fonts..."
+#, kde-format
 msgid "Adjust Global Scale…"
-msgstr "Coi&geartaigh Gach Cló..."
+msgstr ""
 
 #: package/contents/ui/main.qml:37
 #, kde-format
@@ -191,32 +174,24 @@ msgid "&Adjust All Fonts…"
 msgstr "Coige&artaigh Gach Cló..."
 
 #: package/contents/ui/main.qml:119
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "General"
+#, kde-format
 msgid "General:"
-msgstr "Ginearálta"
+msgstr ""
 
 #: package/contents/ui/main.qml:120
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "General"
+#, kde-format
 msgid "Select general font"
-msgstr "Ginearálta"
+msgstr ""
 
 #: package/contents/ui/main.qml:131
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Fixed width"
+#, kde-format
 msgid "Fixed width:"
-msgstr "Aonleithid"
+msgstr ""
 
 #: package/contents/ui/main.qml:132
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Fixed width"
+#, kde-format
 msgid "Select fixed width font"
-msgstr "Aonleithid"
+msgstr ""
 
 #: package/contents/ui/main.qml:143
 #, kde-format
@@ -239,11 +214,9 @@ msgid "Select toolbar font"
 msgstr "Roghnaigh cló barra uirlisí"
 
 #: package/contents/ui/main.qml:167
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Menu"
+#, kde-format
 msgid "Menu:"
-msgstr "Roghchlár"
+msgstr ""
 
 #: package/contents/ui/main.qml:168
 #, kde-format
@@ -261,10 +234,9 @@ msgid "Select window title font"
 msgstr "Roghnaigh cló teideal fuinneog"
 
 #: package/contents/ui/main.qml:194
-#, fuzzy, kde-format
-#| msgid "Use a&nti-aliasing:"
+#, kde-format
 msgid "Anti-Aliasing:"
-msgstr "Úsáid &frithailiasáil:"
+msgstr ""
 
 #: package/contents/ui/main.qml:199
 #, kde-format
@@ -298,11 +270,10 @@ msgid "to"
 msgstr "go"
 
 #: package/contents/ui/main.qml:282
-#, fuzzy, kde-format
-#| msgid "&Use sub-pixel rendering:"
+#, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
-msgstr "Ú&sáid rindreáil fhophicteilín:"
+msgstr ""
 
 #: package/contents/ui/main.qml:324
 #, kde-kuit-format
@@ -335,10 +306,9 @@ msgid ""
 msgstr ""
 
 #: package/contents/ui/main.qml:380
-#, fuzzy, kde-format
-#| msgid "Force fonts DPI:"
+#, kde-format
 msgid "Force font DPI:"
-msgstr "Fórsáil luach PSO na gclónna:"
+msgstr ""
 
 #: package/contents/ui/main.qml:422
 #, kde-kuit-format
@@ -356,171 +326,3 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr ""
-
-#, fuzzy
-#~| msgid ""
-#~| "<p>This option forces a specific DPI value for fonts. It may be useful "
-#~| "when the real DPI of the hardware is not detected properly and it is "
-#~| "also often misused when poor quality fonts are used that do not look "
-#~| "well with DPI values other than 96 or 120 DPI.</p><p>The use of this "
-#~| "option is generally discouraged. For selecting proper DPI value a better "
-#~| "option is explicitly configuring it for the whole X server if possible "
-#~| "(e.g. DisplaySize in xorg.conf or adding <i>-dpi value</i> to "
-#~| "ServerLocalArgs= in $KDEDIR/share/config/kdm/kdmrc). When fonts do not "
-#~| "render properly with real DPI value better fonts should be used or "
-#~| "configuration of font hinting should be checked.</p>"
-#~ msgctxt "@info:tooltip Force fonts DPI"
-#~ msgid ""
-#~ "<para>This option forces a specific DPI value for fonts. It may be useful "
-#~ "when the real DPI of the hardware is not detected properly and it is also "
-#~ "often misused when poor quality fonts are used that do not look well with "
-#~ "DPI values other than 96 or 120 DPI.</para><para>The use of this option "
-#~ "is generally discouraged.</para><para>If you are using the <emphasis>X "
-#~ "Window System</emphasis>, for selecting the proper DPI value a better "
-#~ "option is explicitly configuring it for the whole X server if possible (e."
-#~ "g. DisplaySize in xorg.conf). When fonts do not render properly with the "
-#~ "real DPI value better fonts should be used or configuration of font "
-#~ "hinting should be checked.</para>"
-#~ msgstr ""
-#~ "<p>Leis an rogha seo, úsáidfear luach PSO ar leith do chlónna. Is "
-#~ "úsáideach é seo nuair nach mbraitear fíorluach PSO na gcrua-earraí, ach "
-#~ "ag an am céanna baintear mí-úsáid as an rogha seo go minic nuair atá "
-#~ "clónna den dara scoth in úsáid agus cuma ghránna orthu ag luachanna PSO "
-#~ "seachas 96 nó 120.</p><p>Moltar duit gan an rogha seo a úsáid. Chun luach "
-#~ "oiriúnach PSO a roghnú, moltar duit é a chumrú le haghaidh an fhreastalaí "
-#~ "X go hiomlán (m.sh. socraigh DisplaySize i xorg.conf nó cuir <i>-dpi "
-#~ "luach</i> le ServerLocalArgs= i $KDEDIR/share/config/kdm/kdmrc). Nuair "
-#~ "nach rindreálann clónna mar is ceart le fíorluach PSO, ba chóir duit "
-#~ "clónna níos fearr a úsáid, nó seiceáil cumraíocht choigeartú leideach na "
-#~ "gclónna.</p>"
-
-#~ msgid "Font Settings Changed"
-#~ msgstr "Athraíodh na Socruithe Cló"
-
-#~ msgid ""
-#~ "<p>Some changes such as DPI will only affect newly started applications.</"
-#~ "p>"
-#~ msgstr ""
-#~ "<p>Cuirfear athruithe áirithe (mar shampla PSO) i bhfeidhm ar "
-#~ "fheidhmchláir nua-thosaithe amháin.</p>"
-
-#, fuzzy
-#~| msgctxt "Use anti-aliasing"
-#~| msgid "System Settings"
-#~ msgid "Vendor default"
-#~ msgstr "Socruithe an Chórais"
-
-#, fuzzy
-#~| msgctxt "Use anti-aliasing"
-#~| msgid "Disabled"
-#~ msgid "Disabled"
-#~ msgstr "Díchumasaithe"
-
-#, fuzzy
-#~| msgid "Configure..."
-#~ msgid "Configure the system fonts"
-#~ msgstr "Cumraigh..."
-
-#~ msgid "Configure Anti-Alias Settings"
-#~ msgstr "Cumraigh Socruithe Frith-Ailias"
-
-#~ msgid "E&xclude range:"
-#~ msgstr "Raon &eisiata:"
-
-#, fuzzy
-#~| msgid " pt"
-#~ msgctxt "abbreviation for unit of points"
-#~ msgid " pt"
-#~ msgstr " pt"
-
-#~ msgid ""
-#~ "<p>If you have a TFT or LCD screen you can further improve the quality of "
-#~ "displayed fonts by selecting this option.<br />Sub-pixel rendering is "
-#~ "also known as ClearType(tm).<br /> In order for sub-pixel rendering to "
-#~ "work correctly you need to know how the sub-pixels of your display are "
-#~ "aligned.</p> <p>On TFT or LCD displays a single pixel is actually "
-#~ "composed of three sub-pixels, red, green and blue. Most displays have a "
-#~ "linear ordering of RGB sub-pixel, some have BGR.<br /> This feature does "
-#~ "not work with CRT monitors.</p>"
-#~ msgstr ""
-#~ "<p>Má tá scáileán TFT nó LCD agat, is féidir leat cáilíocht na gclónna a "
-#~ "fheabhsú a thuilleadh leis an rogha seo.<br />Tugtar 'ClearType' ar "
-#~ "rindreáil fophicteilíní freisin.<br /> Ní mór duit eolas a bheith agat "
-#~ "conas atá fophicteilíní do scáileáin ailínithe más mian leat rindreáil "
-#~ "fophicteilíní a oibriú mar is ceart.</p> <p>Ar scáileán TFT nó LCD, tá "
-#~ "trí fhophicteilín ag gach picteilín go hiondúil: dearg, uaine, agus "
-#~ "gorm.  Tá ord líneach RGB ag formhór na scáileán, ach tá BGR ag roinnt "
-#~ "acu.<br />Níl an ghné seo ar fáil ar scáileán CRT.</p>"
-
-#~ msgid ""
-#~ "Hinting is a process used to enhance the quality of fonts at small sizes."
-#~ msgstr ""
-#~ "Próiseas a úsáidtear chun cáilíocht clónna beaga a fheabhsú is ea é "
-#~ "Coigeartú Leideach."
-
-#~ msgid "Used for normal text (e.g. button labels, list items)."
-#~ msgstr ""
-#~ "Le haghaidh gnáth-théacs (m.sh. lipéid ar chnaipí, míreanna i liostaí)."
-
-#~ msgid "A non-proportional font (i.e. typewriter font)."
-#~ msgstr "Cló aonleithid (.i. mar chlóscríobhán)."
-
-#~ msgid "Smallest font that is still readable well."
-#~ msgstr "Cló is lú atá soléite fós."
-
-#~ msgid "Used to display text beside toolbar icons."
-#~ msgstr ""
-#~ "Úsáidte chun téacs a thaispeáint in aice le deilbhíní an bharra uirlisí."
-
-#~ msgid "Used by menu bars and popup menus."
-#~ msgstr "Úsáidte ag barraí roghchláir agus roghchláir aníos."
-
-#~ msgid "Used by the window titlebar."
-#~ msgstr "Úsáidte ag barra theideal na fuinneoige."
-
-#~ msgctxt "Font role"
-#~ msgid "%1: "
-#~ msgstr "%1: "
-
-#~ msgid "Click to change all fonts"
-#~ msgstr "Cliceáil chun gach cló a athrú"
-
-#~ msgctxt "Use anti-aliasing"
-#~ msgid "System Settings"
-#~ msgstr "Socruithe an Chórais"
-
-#, fuzzy
-#~| msgid ""
-#~| "If this option is selected, KDE will smooth the edges of curves in fonts."
-#~ msgid "Select this option to smooth the edges of curves in fonts."
-#~ msgstr "Leis an rogha seo, míneoidh KDE imlínte de chuair i gclónna."
-
-#~ msgctxt "font usage"
-#~ msgid "Taskbar"
-#~ msgstr "Tascbharra"
-
-#~ msgctxt "font usage"
-#~ msgid "Desktop"
-#~ msgstr "Deasc"
-
-#~ msgid "Used by the taskbar."
-#~ msgstr "Úsáidte ag an tascbharra."
-
-#~ msgid "Used for desktop icons."
-#~ msgstr "Úsáidte le haghaidh deilbhíní deisce."
-
-#~ msgctxt "Force fonts DPI"
-#~ msgid "Disabled"
-#~ msgstr "Díchumasaithe"
-
-#~ msgid "96 DPI"
-#~ msgstr "96 PSO"
-
-#~ msgid "120 DPI"
-#~ msgstr "120 PSO"
-
-#~ msgid "Anti-Aliasing Settings Changed"
-#~ msgstr "Athraíodh na Socruithe Frith-Ailias"
-
-#~ msgid "Grayscale"
-#~ msgstr "Liathscála"

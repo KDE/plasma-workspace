@@ -48,10 +48,9 @@ msgid "Estimating…"
 msgstr ""
 
 #: package/contents/ui/BatteryItem.qml:204
-#, fuzzy, kde-format
-#| msgid "Battery:"
+#, kde-format
 msgid "Battery Health:"
-msgstr "Cadhnra:"
+msgstr ""
 
 #: package/contents/ui/BatteryItem.qml:210
 #, kde-format
@@ -118,13 +117,10 @@ msgstr "Gile"
 msgid "Battery"
 msgstr "Cadhnra"
 
-# correct unlenited here
 #: package/contents/ui/main.qml:120
-#, fuzzy, kde-format
-#| msgctxt "tooltip on the config button in the popup"
-#| msgid "Configure Power Management..."
+#, kde-format
 msgid "Power Management"
-msgstr "Cumraigh Bainisteoireacht Cumhachta..."
+msgstr ""
 
 #: package/contents/ui/main.qml:152
 #, kde-format
@@ -147,10 +143,9 @@ msgid "Battery at %1%"
 msgstr "Cadhnra ag %1"
 
 #: package/contents/ui/main.qml:167
-#, fuzzy, kde-format
-#| msgid "Show the percentage of &charge on the battery"
+#, kde-format
 msgid "The power supply is not powerful enough to charge the battery"
-msgstr "Taispeáin lucht an &chadhnra mar chéatadán"
+msgstr ""
 
 #: package/contents/ui/main.qml:171
 #, kde-format
@@ -185,9 +180,6 @@ msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
 
 #: package/contents/ui/main.qml:195
 #, kde-format
@@ -200,9 +192,6 @@ msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
 
 #: package/contents/ui/main.qml:203
 #, kde-format
@@ -210,10 +199,9 @@ msgid "System is in Power Save mode"
 msgstr ""
 
 #: package/contents/ui/main.qml:208
-#, fuzzy, kde-format
-#| msgid "Screen Brightness:"
+#, kde-format
 msgid "Scroll to adjust screen brightness"
-msgstr "Gile an Scáileáin:"
+msgstr ""
 
 #: package/contents/ui/main.qml:310
 #, kde-format
@@ -231,10 +219,9 @@ msgid "&Show Energy Information…"
 msgstr "Taispeáin eola&s faoin lucht"
 
 #: package/contents/ui/main.qml:378
-#, fuzzy, kde-format
-#| msgid "Show &percentage"
+#, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
-msgstr "Tais&peáin céatadán"
+msgstr ""
 
 #: package/contents/ui/main.qml:384
 #, kde-format
@@ -271,9 +258,6 @@ msgid "%1 application is currently blocking sleep and screen locking:"
 msgid_plural "%1 applications are currently blocking sleep and screen locking:"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
 
 #: package/contents/ui/PowerManagementItem.qml:109
 #, kde-format
@@ -330,13 +314,10 @@ msgid ""
 "Performance mode is unavailable because the computer is running too hot."
 msgstr ""
 
-# correct unlenited here
 #: package/contents/ui/PowerProfileItem.qml:195
-#, fuzzy, kde-format
-#| msgctxt "Label for power management inhibition"
-#| msgid "Power management enabled:"
+#, kde-format
 msgid "Performance mode is unavailable."
-msgstr "Bainisteoireacht cumhachta cumasaithe:"
+msgstr ""
 
 #: package/contents/ui/PowerProfileItem.qml:208
 #, kde-format
@@ -350,13 +331,10 @@ msgstr ""
 msgid "Performance may be reduced because the computer is running too hot."
 msgstr ""
 
-# correct unlenited here
 #: package/contents/ui/PowerProfileItem.qml:212
-#, fuzzy, kde-format
-#| msgctxt "Label for power management inhibition"
-#| msgid "Power management enabled:"
+#, kde-format
 msgid "Performance may be reduced."
-msgstr "Bainisteoireacht cumhachta cumasaithe:"
+msgstr ""
 
 #: package/contents/ui/PowerProfileItem.qml:223
 #, kde-format
@@ -364,9 +342,6 @@ msgid "One application has requested activating %2:"
 msgid_plural "%1 applications have requested activating %2:"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
 
 #: package/contents/ui/PowerProfileItem.qml:241
 #, kde-format
@@ -375,219 +350,3 @@ msgctxt ""
 "activating performance mode"
 msgid "%1: %2"
 msgstr "%1: %2"
-
-# correct unlenited here
-#, fuzzy
-#~| msgctxt "Label for power management inhibition"
-#~| msgid "Power management enabled:"
-#~ msgid "Performance mode has been manually enabled"
-#~ msgstr "Bainisteoireacht cumhachta cumasaithe:"
-
-#~ msgid "General"
-#~ msgstr "Ginearálta"
-
-#, fuzzy
-#~| msgid "%1% (charging)"
-#~ msgid "%1% Charging"
-#~ msgstr "%1% (á luchtú)"
-
-#, fuzzy
-#~| msgctxt "tooltip"
-#~| msgid "Plugged in"
-#~ msgid "%1% Plugged in"
-#~ msgstr "Plugáilte isteach"
-
-#, fuzzy
-#~| msgctxt "overlay on the battery, needs to be really tiny"
-#~| msgid "%1%"
-#~ msgctxt "Placeholder is battery's capacity degradation"
-#~ msgid "%1%"
-#~ msgstr "%1%"
-
-#, fuzzy
-#~| msgctxt "overlay on the battery, needs to be really tiny"
-#~| msgid "%1%"
-#~ msgctxt "Placeholder is battery capacity"
-#~ msgid "%1%"
-#~ msgstr "%1%"
-
-#, fuzzy
-#~| msgctxt "overlay on the battery, needs to be really tiny"
-#~| msgid "%1%"
-#~ msgctxt "Placeholder is battery name"
-#~ msgid "%1:"
-#~ msgstr "%1%"
-
-#~ msgid "1 hour "
-#~ msgid_plural "%1 hours "
-#~ msgstr[0] "1 uair "
-#~ msgstr[1] "%1 uair "
-#~ msgstr[2] "%1 huaire "
-#~ msgstr[3] "%1 n-uaire "
-#~ msgstr[4] "%1 uair "
-
-#~ msgid "1 minute"
-#~ msgid_plural "%1 minutes"
-#~ msgstr[0] "1 nóiméad"
-#~ msgstr[1] "%1 nóiméad"
-#~ msgstr[2] "%1 nóiméad"
-#~ msgstr[3] "%1 nóiméad"
-#~ msgstr[4] "%1 nóiméad"
-
-#, fuzzy
-#~| msgid "AC Adapter:"
-#~ msgid "AC Adapter"
-#~ msgstr "Cuibheoir SA:"
-
-#, fuzzy
-#~| msgid "Plugged in"
-#~ msgid "Plugged In"
-#~ msgstr "Plugáilte isteach"
-
-#, fuzzy
-#~| msgid "Not plugged in"
-#~ msgid "Not Plugged In"
-#~ msgstr "Nach plugáilte isteach"
-
-#, fuzzy
-#~| msgctxt "Label for remaining time"
-#~| msgid "Time Remaining:"
-#~ msgid "Time remaining until full: %1"
-#~ msgstr "Am fágtha:"
-
-#, fuzzy
-#~| msgctxt "Label for remaining time"
-#~| msgid "Time Remaining:"
-#~ msgid "Time remaining until empty: %1"
-#~ msgstr "Am fágtha:"
-
-#, fuzzy
-#~| msgid "%1% (charged)"
-#~ msgid "%1% (charged)"
-#~ msgstr "%1% (luchtaithe)"
-
-#, fuzzy
-#~| msgid "AC Adapter:"
-#~ msgctxt "tooltip"
-#~ msgid "AC Adapter:"
-#~ msgstr "Cuibheoir SA:"
-
-#, fuzzy
-#~| msgid "<b>Plugged in</b>"
-#~ msgctxt "tooltip"
-#~ msgid "<b>Plugged in</b>"
-#~ msgstr "<b>Plugáilte isteach</b>"
-
-#, fuzzy
-#~| msgid "<b>Not plugged in</b>"
-#~ msgctxt "tooltip"
-#~ msgid "<b>Not plugged in</b>"
-#~ msgstr "<b>Nach plugáilte isteach</b>"
-
-#~ msgctxt "overlay on the battery, needs to be really tiny"
-#~ msgid "%1%"
-#~ msgstr "%1%"
-
-#~ msgid "Configure Battery Monitor"
-#~ msgstr "Cumraigh Monatóir an Chadhnra"
-
-#~ msgctxt "Suspend the computer to RAM; translation should be short"
-#~ msgid "Sleep"
-#~ msgstr "Codladh"
-
-#~ msgctxt "Suspend the computer to disk; translation should be short"
-#~ msgid "Hibernate"
-#~ msgstr "Geimhrigh"
-
-#~ msgctxt "Battery is not plugged in"
-#~ msgid "<b>Not present</b>"
-#~ msgstr "<b>Níl cadhnra ann</b>"
-
-#~ msgid "Show the state for &each battery present"
-#~ msgstr "Taisp&eáin staid gach cadhnra atá ann"
-
-#~ msgctxt "Placeholder is the battery ID"
-#~ msgid "Battery %1:"
-#~ msgstr "Cadhnra %1:"
-
-#~ msgid "<b>Battery:</b>"
-#~ msgstr "<b>Cadhnra:</b>"
-
-#~ msgctxt "tooltip"
-#~ msgid "<b>AC Adapter:</b>"
-#~ msgstr "<b>Cuibheoir SA:</b>"
-
-#~ msgctxt "tooltip"
-#~ msgid "Not plugged in"
-#~ msgstr "Nach plugáilte isteach"
-
-#~ msgctxt "tooltip: placeholder is the battery ID"
-#~ msgid "<b>Battery %1:</b>"
-#~ msgstr "<b>Cadhnra %1:</b>"
-
-#~ msgid "<b>Battery:</b> "
-#~ msgstr "<b>Cadhnra:</b> "
-
-#~ msgid "Actions"
-#~ msgstr "Gníomhartha"
-
-#~ msgid "<b>Battery:</b> %1% (charging)<br />"
-#~ msgstr "<b>Cadhnra:</b> %1% (á luchtú)<br />"
-
-#~ msgid "<b>Battery %1:</b> %2% (fully charged)<br />"
-#~ msgstr "<b>Cadhnra %1:</b> %2% (luchtaithe go hiomlán)<br />"
-
-#~ msgid "<b>Battery %1:</b> %2% (discharging)<br />"
-#~ msgstr "<b>Cadhnra %1:</b> %2% (á dhíluchtú)<br />"
-
-#~ msgid "<b>AC Adapter:</b> Not plugged in"
-#~ msgstr "<b>Cuibheoir SA:</b> Níl sé plugáilte isteach"
-
-#~ msgid "Oxygen theme"
-#~ msgstr "Téama Oxygen"
-
-#~ msgid "Classic theme"
-#~ msgstr "Téama clasaiceach"
-
-#~ msgid "sources"
-#~ msgstr "foinsí"
-
-#~ msgid "Percent"
-#~ msgstr "Céatadán"
-
-#~ msgid "n/a"
-#~ msgstr "n/a/f"
-
-#~ msgid "Always show &background"
-#~ msgstr "&Taispeáin an cúlra i gcónaí"
-
-#~ msgid "Mains connected"
-#~ msgstr "Príomhshreanga ceangailte"
-
-#~ msgid "0"
-#~ msgstr "0"
-
-#~ msgid "Size of the battery:"
-#~ msgstr "Méid an chadhnra:"
-
-#~ msgid "Change battery size"
-#~ msgstr "Athraigh méid an chadhnra"
-
-#~ msgid ""
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'DejaVu Serif'; font-size:9pt; "
-#~ "font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Change clock size</p></"
-#~ "body></html>"
-#~ msgstr ""
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'DejaVu Serif'; font-size:9pt; "
-#~ "font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\">Athraigh méid an "
-#~ "chloig</p></body></html>"

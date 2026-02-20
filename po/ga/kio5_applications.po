@@ -31,6 +31,3 @@ msgstr "Ríomhchláir"
 #, kde-format
 msgid "Unknown application folder"
 msgstr "Fillteán anaithnid feidhmchláir"
-
-#~ msgid "Settings"
-#~ msgstr "Socruithe"

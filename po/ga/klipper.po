@@ -19,10 +19,9 @@ msgstr ""
 "3 : 4\n"
 
 #: configdialog.cpp:80
-#, fuzzy, kde-format
-#| msgid "Selection and Clipboard"
+#, kde-format
 msgid "Selection and Clipboard:"
-msgstr "Roghnú agus Gearrthaisce"
+msgstr ""
 
 #: configdialog.cpp:87
 #, kde-kuit-format
@@ -46,29 +45,22 @@ msgid "Clipboard history:"
 msgstr "Stair na gearrthaisce:"
 
 #: configdialog.cpp:112
-#, fuzzy, kde-format
-#| msgid " entry"
-#| msgid_plural " entries"
+#, kde-format
 msgctxt "Number of entries"
 msgid " entry"
 msgid_plural " entries"
-msgstr[0] " iontráil"
-msgstr[1] " iontráil"
-msgstr[2] " iontráil"
-msgstr[3] " n-iontráil"
-msgstr[4] " iontráil"
+msgstr[0] ""
+msgstr[1] ""
 
 #: configdialog.cpp:131 configdialog.cpp:169
-#, fuzzy, kde-format
-#| msgid "Replay action in history"
+#, kde-format
 msgid "Always save in history"
-msgstr "Athdhéan gníomh as an stair"
+msgstr ""
 
 #: configdialog.cpp:135
-#, fuzzy, kde-format
-#| msgid "Text selection only"
+#, kde-format
 msgid "Text selection:"
-msgstr "Téacs roghnaithe amháin"
+msgstr ""
 
 #: configdialog.cpp:137 configdialog.cpp:175
 #, kde-format
@@ -76,23 +68,19 @@ msgid "Only when explicitly copied"
 msgstr ""
 
 #: configdialog.cpp:142
-#, fuzzy, kde-format
-#| msgid "Really delete entire clipboard history?"
+#, kde-format
 msgid "Whether text selections are saved in the clipboard history."
 msgstr ""
-"An bhfuil tú cinnte gur mhaith leat stair iomlán na gearrthaisce a scriosadh?"
 
 #: configdialog.cpp:173
-#, fuzzy, kde-format
-#| msgid "Ignore selection"
+#, kde-format
 msgid "Non-text selection:"
-msgstr "Déan neamhaird den roghnúchán"
+msgstr ""
 
 #: configdialog.cpp:180
-#, fuzzy, kde-format
-#| msgid "Replay action in history"
+#, kde-format
 msgid "Never save in history"
-msgstr "Athdhéan gníomh as an stair"
+msgstr ""
 
 #: configdialog.cpp:185
 #, kde-format
@@ -102,10 +90,9 @@ msgid ""
 msgstr ""
 
 #: configdialog.cpp:259
-#, fuzzy, kde-format
-#| msgid "Timeout for action popups:"
+#, kde-format
 msgid "Show action popup menu:"
-msgstr "Teorainn ama do phreabfhuinneoga gnímh:"
+msgstr ""
 
 #: configdialog.cpp:269
 #, kde-kuit-format
@@ -124,17 +111,12 @@ msgid "Exclude Windows..."
 msgstr ""
 
 #: configdialog.cpp:292
-#, fuzzy, kde-format
-#| msgid " second"
-#| msgid_plural " seconds"
+#, kde-format
 msgctxt "Unit of time"
 msgid " second"
 msgid_plural " seconds"
-msgstr[0] " soicind"
-msgstr[1] " shoicind"
-msgstr[2] " shoicind"
-msgstr[3] " soicind"
-msgstr[4] " soicind"
+msgstr[0] ""
+msgstr[1] ""
 
 #: configdialog.cpp:293
 #, kde-format
@@ -143,11 +125,9 @@ msgid "None"
 msgstr ""
 
 #: configdialog.cpp:302
-#, fuzzy, kde-format
-#| msgctxt "Actions Config"
-#| msgid "Actions"
+#, kde-format
 msgid "Options:"
-msgstr "Gníomhartha"
+msgstr ""
 
 #: configdialog.cpp:329
 #, kde-format
@@ -170,11 +150,10 @@ msgid "Match pattern and commands"
 msgstr ""
 
 #: configdialog.cpp:368
-#, fuzzy, kde-format
-#| msgid "Description"
+#, kde-format
 msgctxt "@title:column"
 msgid "Description"
-msgstr "Cur Síos"
+msgstr ""
 
 #: configdialog.cpp:374
 #, kde-format
@@ -208,10 +187,9 @@ msgid ""
 msgstr ""
 
 #: configdialog.cpp:575
-#, fuzzy, kde-format
-#| msgid "Delete Action"
+#, kde-format
 msgid "Confirm Delete Action"
-msgstr "Scrios Gníomh"
+msgstr ""
 
 #: configdialog.cpp:604
 #, kde-format
@@ -225,26 +203,21 @@ msgid "General Configuration"
 msgstr "Cumraíocht Ghinearálta"
 
 #: configdialog.cpp:605
-#, fuzzy, kde-format
-#| msgctxt "Actions Config"
-#| msgid "Actions"
+#, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
-msgstr "Gníomhartha"
+msgstr ""
 
 #: configdialog.cpp:605
-#, fuzzy, kde-format
-#| msgctxt "Actions Config"
-#| msgid "Actions"
+#, kde-format
 msgid "Action Menu"
-msgstr "Gníomhartha"
+msgstr ""
 
 #: configdialog.cpp:606
-#, fuzzy, kde-format
-#| msgid "Actions Configuration"
+#, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
-msgstr "Cumraíocht Gníomhartha"
+msgstr ""
 
 #: configdialog.cpp:606
 #, kde-format
@@ -376,22 +349,19 @@ msgid ""
 msgstr ""
 
 #: editactiondialog.cpp:262
-#, fuzzy, kde-format
-#| msgid "Add Command"
+#, kde-format
 msgid "Add Command..."
-msgstr "Ordú Nua"
+msgstr ""
 
 #: editactiondialog.cpp:267
-#, fuzzy, kde-format
-#| msgid "Add Command"
+#, kde-format
 msgid "Edit Command..."
-msgstr "Ordú Nua"
+msgstr ""
 
 #: editactiondialog.cpp:273
-#, fuzzy, kde-format
-#| msgid "Remove Command"
+#, kde-format
 msgid "Delete Command"
-msgstr "Bain Ordú"
+msgstr ""
 
 #: editactiondialog.cpp:388
 #, kde-kuit-format
@@ -405,10 +375,9 @@ msgid "Confirm Delete Command"
 msgstr ""
 
 #: editcommanddialog.cpp:46
-#, fuzzy, kde-format
-#| msgid "Action Properties"
+#, kde-format
 msgid "Command Properties"
-msgstr "Airíonna an Ghnímh"
+msgstr ""
 
 #: editcommanddialog.cpp:59
 #, kde-format
@@ -416,10 +385,9 @@ msgid "Enter the command and arguments"
 msgstr ""
 
 #: editcommanddialog.cpp:62
-#, fuzzy, kde-format
-#| msgid "Command"
+#, kde-format
 msgid "Command:"
-msgstr "Ordú"
+msgstr ""
 
 #: editcommanddialog.cpp:71
 #, kde-kuit-format
@@ -442,16 +410,14 @@ msgid "Output from command:"
 msgstr ""
 
 #: editcommanddialog.cpp:93
-#, fuzzy, kde-format
-#| msgid "Replace Clipboard"
+#, kde-format
 msgid "Replace current clipboard"
-msgstr "Ionadaigh an Ghearrthaisce"
+msgstr ""
 
 #: editcommanddialog.cpp:97
-#, fuzzy, kde-format
-#| msgid "Add to Clipboard"
+#, kde-format
 msgid "Append to clipboard"
-msgstr "Cuir leis an nGearrthaisce"
+msgstr ""
 
 #: editcommanddialog.cpp:101
 #, kde-format
@@ -474,82 +440,70 @@ msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3bpp"
 
 #: klipper.cpp:157
-#, fuzzy, kde-format
-#| msgid "Timeout for action popups:"
+#, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
-msgstr "Teorainn ama do phreabfhuinneoga gnímh:"
+msgstr ""
 
 #: klipper.cpp:196
-#, fuzzy, kde-format
-#| msgid "C&lear Clipboard History"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
-msgstr "G&lan Stair na Gearrthaisce"
+msgstr ""
 
 #: klipper.cpp:203
-#, fuzzy, kde-format
-#| msgid "&Configure Klipper..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
-msgstr "&Cumraigh Klipper..."
+msgstr ""
 
 #: klipper.cpp:209
-#, fuzzy, kde-format
-#| msgctxt "@item:inmenu Quit Klipper"
-#| msgid "&Quit"
+#, kde-format
 msgctxt "@action:inmenu Quit Klipper"
 msgid "&Quit"
-msgstr "&Scoir"
+msgstr ""
 
 #: klipper.cpp:214
-#, fuzzy, kde-format
-#| msgid "Manually Invoke Action on Current Clipboard"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
-msgstr "Cuir an gníomh i bhfeidhm ar an ngearrthaisce reatha de láimh"
+msgstr ""
 
 #: klipper.cpp:222
-#, fuzzy, kde-format
-#| msgid "Edit Contents"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
-msgstr "Cuir an tÁbhar in Eagar"
+msgstr ""
 
 #: klipper.cpp:230
-#, fuzzy, kde-format
-#| msgid "&Show Barcode..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
-msgstr "Tai&speáin Barrachód..."
+msgstr ""
 
 #: klipper.cpp:239
-#, fuzzy, kde-format
-#| msgid "Next History Item"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
-msgstr "An chéad mhír eile sa stair"
+msgstr ""
 
 #: klipper.cpp:244
-#, fuzzy, kde-format
-#| msgid "Previous History Item"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
-msgstr "An mhír roimhe seo sa stair"
+msgstr ""
 
 #: klipper.cpp:251
-#, fuzzy, kde-format
-#| msgid "Open Klipper at Mouse Position"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Items at Mouse Position"
-msgstr "Oscail Klipper ag ionad an chúrsóra luiche"
+msgstr ""
 
 #: klipper.cpp:262
-#, fuzzy, kde-format
-#| msgid "Klipper - Clipboard Tool"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Tool"
-msgstr "Klipper - Uirlis Ghearrthaisce"
+msgstr ""
 
 #: klipper.cpp:567
 #, kde-kuit-format
@@ -591,17 +545,14 @@ msgid "Mobile Barcode"
 msgstr "Barrachód Soghluaiste"
 
 #: klipper.cpp:1071
-#, fuzzy, kde-format
-#| msgid "Really delete entire clipboard history?"
+#, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr ""
-"An bhfuil tú cinnte gur mhaith leat stair iomlán na gearrthaisce a scriosadh?"
 
 #: klipper.cpp:1072
-#, fuzzy, kde-format
-#| msgid "C&lear Clipboard History"
+#, kde-format
 msgid "Clear Clipboard History"
-msgstr "G&lan Stair na Gearrthaisce"
+msgstr ""
 
 #: klipper.cpp:1088 klipper.cpp:1097
 #, kde-format
@@ -645,10 +596,9 @@ msgstr ""
 
 #. i18n: ectx: label, entry (PreventEmptyClipboard), group (General)
 #: klipper.kcfg:18
-#, fuzzy, kde-format
-#| msgid "Prevent empty clipboard"
+#, kde-format
 msgid "Prevent the clipboard from being cleared"
-msgstr "Coisc gearrthaisce fholamh"
+msgstr ""
 
 #. i18n: ectx: whatsthis, entry (PreventEmptyClipboard), group (General)
 #: klipper.kcfg:20
@@ -660,10 +610,9 @@ msgstr ""
 
 #. i18n: ectx: label, entry (SyncClipboards), group (General)
 #: klipper.kcfg:27
-#, fuzzy, kde-format
-#| msgid "Selection and Clipboard"
+#, kde-format
 msgid "Keep the selection and clipboard the same"
-msgstr "Roghnú agus Gearrthaisce"
+msgstr ""
 
 #. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
 #: klipper.kcfg:29
@@ -676,10 +625,9 @@ msgstr ""
 
 #. i18n: ectx: label, entry (IgnoreSelection), group (General)
 #: klipper.kcfg:32
-#, fuzzy, kde-format
-#| msgid "Ignore selection"
+#, kde-format
 msgid "Ignore the selection"
-msgstr "Déan neamhaird den roghnúchán"
+msgstr ""
 
 #. i18n: ectx: whatsthis, entry (IgnoreSelection), group (General)
 #: klipper.kcfg:34
@@ -706,10 +654,9 @@ msgstr ""
 
 #. i18n: ectx: label, entry (IgnoreImages), group (General)
 #: klipper.kcfg:42
-#, fuzzy, kde-format
-#| msgid "Ignore images"
+#, kde-format
 msgid "Always ignore images"
-msgstr "Déan neamhaird d'íomhánna"
+msgstr ""
 
 #. i18n: ectx: whatsthis, entry (IgnoreImages), group (General)
 #: klipper.kcfg:44
@@ -726,19 +673,16 @@ msgstr "Úsáid eagarthóir grafach chun sloinn ionadaíochta a chur in eagar"
 
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:51
-#, fuzzy, kde-format
-#| msgid "Ignore selection"
+#, kde-format
 msgid "Immediately on selection"
-msgstr "Déan neamhaird den roghnúchán"
+msgstr ""
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:52
-#, fuzzy, kde-format
-#| msgid "Really delete entire clipboard history?"
+#, kde-format
 msgid ""
 "Show the popup menu of applicable actions as soon as a selection is made."
 msgstr ""
-"An bhfuil tú cinnte gur mhaith leat stair iomlán na gearrthaisce a scriosadh?"
 
 #. i18n: ectx: label, entry (NoActionsForWM_CLASS), group (General)
 #: klipper.kcfg:57
@@ -748,24 +692,21 @@ msgstr "Níl aon ghníomhartha ann le haghaidh WM_CLASS"
 
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
 #: klipper.kcfg:60
-#, fuzzy, kde-format
-#| msgid "Timeout for action popups:"
+#, kde-format
 msgid "Automatic action menu time:"
-msgstr "Teorainn ama do phreabfhuinneoga gnímh:"
+msgstr ""
 
 #. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
 #: klipper.kcfg:64
-#, fuzzy, kde-format
-#| msgid "Timeout for action popups:"
+#, kde-format
 msgid "Display the automatic action popup menu for this time."
-msgstr "Teorainn ama do phreabfhuinneoga gnímh:"
+msgstr ""
 
 #. i18n: ectx: label, entry (MaxClipItems), group (General)
 #: klipper.kcfg:67
-#, fuzzy, kde-format
-#| msgid "Clipboard history size:"
+#, kde-format
 msgid "History size:"
-msgstr "Méid stair na gearrthaisce:"
+msgstr ""
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
 #: klipper.kcfg:71
@@ -781,10 +722,9 @@ msgstr "Iontráil dhumaí a léiríonn athruithe i gcrannghiuirléid gníomharth
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:84
-#, fuzzy, kde-format
-#| msgid "Strip whitespace when executing an action"
+#, kde-format
 msgid "Trim whitespace from selection"
-msgstr "Bain spás bán agus gníomhartha á rith"
+msgstr ""
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:86
@@ -798,27 +738,23 @@ msgstr ""
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:89
-#, fuzzy, kde-format
-#| msgid "Replay actions on an item selected from history"
+#, kde-format
 msgid "For an item chosen from history"
-msgstr "Athdhéan gníomhartha ar mhír a roghnaíonn tú as an stair"
+msgstr ""
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:91
-#, fuzzy, kde-format
-#| msgid "Really delete entire clipboard history?"
+#, kde-format
 msgid ""
 "Show the popup menu of applicable actions if an entry is chosen from the "
 "clipboard history."
 msgstr ""
-"An bhfuil tú cinnte gur mhaith leat stair iomlán na gearrthaisce a scriosadh?"
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
 #: klipper.kcfg:94
-#, fuzzy, kde-format
-#| msgid "Enable MIME-based actions"
+#, kde-format
 msgid "Include MIME actions"
-msgstr "Cumasaigh gníomhartha bunaithe ar chineál MIME"
+msgstr ""
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
 #: klipper.kcfg:96
@@ -829,11 +765,10 @@ msgid ""
 msgstr ""
 
 #: klipperpopup.cpp:105
-#, fuzzy, kde-format
-#| msgid "Clipboard Contents"
+#, kde-format
 msgctxt "%1 is application display name"
 msgid "%1 - Clipboard Items"
-msgstr "Inneachar na Gearrthaisce"
+msgstr ""
 
 #: klipperpopup.cpp:109
 #, kde-format
@@ -841,10 +776,9 @@ msgid "Search…"
 msgstr ""
 
 #: klipperpopup.cpp:167
-#, fuzzy, kde-format
-#| msgid "Regular expression:"
+#, kde-format
 msgid "Invalid regular expression, %1"
-msgstr "Slonn ionadaíochta:"
+msgstr ""
 
 #: klipperpopup.cpp:172 tray.cpp:25 tray.cpp:53
 #, kde-format
@@ -852,10 +786,9 @@ msgid "Clipboard is empty"
 msgstr "Tá an ghearrthaisce folamh"
 
 #: klipperpopup.cpp:174
-#, fuzzy, kde-format
-#| msgid "<no matches>"
+#, kde-format
 msgid "No matches"
-msgstr "<níl aon rud comhoiriúnach>"
+msgstr ""
 
 #: main.cpp:27 tray.cpp:22
 #, kde-format
@@ -863,10 +796,9 @@ msgid "Klipper"
 msgstr "Klipper"
 
 #: main.cpp:29
-#, fuzzy, kde-format
-#| msgid "KDE cut & paste history utility"
+#, kde-format
 msgid "Plasma cut & paste history utility"
-msgstr "Uirlis staire gearrtha agus greamaithe KDE"
+msgstr ""
 
 #: main.cpp:31
 #, kde-format
@@ -925,10 +857,9 @@ msgid "Esben Mose Hansen"
 msgstr "Esben Mose Hansen"
 
 #: main.cpp:42
-#, fuzzy, kde-format
-#| msgid "Maintainer"
+#, kde-format
 msgid "Previous Maintainer"
-msgstr "Cothaitheoir"
+msgstr ""
 
 #: main.cpp:44
 #, kde-format
@@ -971,294 +902,3 @@ msgstr "Díchumasaigh an phreabfhuinneog seo"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Cealaigh"
-
-#~ msgid "Delete clipboard history?"
-#~ msgstr "Scrios stair na gearrthaisce?"
-
-#~ msgid "Action list:"
-#~ msgstr "Liosta gníomhartha:"
-
-#~ msgid "Regular Expression"
-#~ msgstr "Slonn Ionadaíochta"
-
-#, fuzzy
-#~| msgid ""
-#~| "Click on a highlighted item's column to change it. \"%s\" in a command "
-#~| "will be replaced with the clipboard contents.<br>For more information "
-#~| "about regular expressions, you could have a look at the <a href=\"http://"
-#~| "en.wikipedia.org/wiki/Regular_expression\">Wikipedia entry about this "
-#~| "topic</a>."
-#~ msgid ""
-#~ "Click on a highlighted item's column to change it. \"%s\" in a command "
-#~ "will be replaced with the clipboard contents.<br>For more information "
-#~ "about regular expressions, you could have a look at the <a href=\"https://"
-#~ "en.wikipedia.org/wiki/Regular_expression\">Wikipedia entry about this "
-#~ "topic</a>."
-#~ msgstr ""
-#~ "Cliceáil ar cholún de mhír aibhsithe chun é a athrú. Cuirfear inneachar "
-#~ "na gearrthaisce in ionad \"%s\" in ordú.<br>Is féidir tuilleadh eolais "
-#~ "faoi shloinn ionadaíochta a fháil ón <a href=\"http://en.wikipedia.org/"
-#~ "wiki/Regular_expression\">Vicipéid (Bhéarla)</a>."
-
-#~ msgid "Output Handling"
-#~ msgstr "Láimhseáil Aschuir"
-
-#~ msgid "new command"
-#~ msgstr "ordú nua"
-
-#~ msgid "Command Description"
-#~ msgstr "Cur Síos ar an Ordú"
-
-#~ msgid "Action properties:"
-#~ msgstr "Airíonna an ghnímh:"
-
-#~ msgid "Automatic:"
-#~ msgstr "Uathoibríoch:"
-
-#~ msgid "List of commands for this action:"
-#~ msgstr "Liosta orduithe le haghaidh an ghnímh seo:"
-
-#~ msgid "Double-click an item to edit"
-#~ msgstr "Déchliceáil ar mhír chun í a chur in eagar"
-
-#~ msgid "Remove whitespace when executing actions"
-#~ msgstr "Bain spás bán agus gníomhartha á rith"
-
-#~ msgid "Advanced..."
-#~ msgstr "Casta..."
-
-#~ msgid "Advanced Settings"
-#~ msgstr "Ardsocruithe"
-
-#~ msgid "D&isable Actions for Windows of Type WM_CLASS"
-#~ msgstr "Díchumasa&igh Gníomhartha le haghaidh Fuinneoga de chineál WM_CLASS"
-
-#~ msgid ""
-#~ "<qt>This lets you specify windows in which Klipper should not invoke "
-#~ "\"actions\". Use<br /><br /><center><b>xprop | grep WM_CLASS</b></"
-#~ "center><br />in a terminal to find out the WM_CLASS of a window. Next, "
-#~ "click on the window you want to examine. The first string it outputs "
-#~ "after the equal sign is the one you need to enter here.</qt>"
-#~ msgstr ""
-#~ "<qt>Leis seo is féidir leat fuinneoga a shonrú i Klipper nach cóir dóibh "
-#~ "\"gníomhartha\" a chur ar siúl. Úsáid<br /><br /><center><b>xprop | grep "
-#~ "WM_CLASS</b></center><br />i dteirminéal chun WM_CLASS d'fhuinneog a "
-#~ "fháil. Ansin, cliceáil an fhuinneog is mian leat a scrúdú. Is é an chéad "
-#~ "teaghrán aschurtha tar éis an chomhartha cothromais an ceann le cur "
-#~ "isteach anseo.</qt>"
-
-#~ msgid "Enable Clipboard Actions"
-#~ msgstr "Cumasaigh Gníomhartha Gearrthaisce"
-
-#~ msgid "URL grabber enabled"
-#~ msgstr "Gabhálaí URL cumasaithe"
-
-#~ msgid "Replay action in history"
-#~ msgstr "Athdhéan gníomh as an stair"
-
-#~ msgid "Save clipboard contents on exit"
-#~ msgstr "Sábháil inneachar na gearrthaisce ag am scortha"
-
-#~ msgid "Synchronize contents of the clipboard and the selection"
-#~ msgstr "Sioncrónaigh inneachar na gearrthaisce leis an roghnúchán"
-
-#~ msgid "Keep clipboard contents"
-#~ msgstr "Coinnigh inneachar na gearrthaisce"
-
-#~ msgid ""
-#~ "Selecting this option has the effect, that the clipboard can never be "
-#~ "emptied. E.g. when an application exits, the clipboard would usually be "
-#~ "emptied."
-#~ msgstr ""
-#~ "Leis an rogha seo, ní fholmhófar an ghearrthaisce riamh.  Mar shampla, "
-#~ "nuair a scoireann feidhmchlár, folmhaítear an ghearrthaisce."
-
-#~ msgid "Ignore Selection"
-#~ msgstr "Déan neamhaird den roghnúchán"
-
-#, fuzzy
-#~| msgid ""
-#~| "<qt>When an area of the screen is selected with mouse or keyboard, this "
-#~| "is called \"the selection\".<br/>If this option is set, the selection is "
-#~| "not entered into the clipboard history, though it is still available for "
-#~| "pasting using the middle mouse button.</qt>"
-#~ msgid ""
-#~ "When an area of the screen is selected with mouse or keyboard, this is "
-#~ "called \"the selection\".<br/>If this option is set, the selection is not "
-#~ "entered into the clipboard history, though it is still available for "
-#~ "pasting using the middle mouse button."
-#~ msgstr ""
-#~ "<qt>Nuair a roghnaítear cuid den scáileán leis an luch nó leis an "
-#~ "méarchlár, tugtar \"an roghnúchán\" air seo.<br/>Leis an rogha seo, ní "
-#~ "chuirfear an roghnúchán i stair na gearrthaisce, cé go mbeidh tú in ann é "
-#~ "a ghreamú fós le lárchnaipe na luiche.</qt>"
-
-#~ msgid "Synchronize clipboard and selection"
-#~ msgstr "Sioncrónaigh an ghearrthaisce leis an roghnúchán"
-
-#, fuzzy
-#~| msgid ""
-#~| "<qt>When an area of the screen is selected with mouse or keyboard, this "
-#~| "is called \"the selection\".<br/>If this option is selected, the "
-#~| "selection and the clipboard is kept the same, so that anything in the "
-#~| "selection is immediately available for pasting elsewhere using any "
-#~| "method, including the traditional middle mouse button. Otherwise, the "
-#~| "selection is recorded in the clipboard history, but the selection can "
-#~| "only be pasted using the middle mouse button. Also see the 'Ignore "
-#~| "Selection' option.</qt>"
-#~ msgid ""
-#~ "When an area of the screen is selected with mouse or keyboard, this is "
-#~ "called \"the selection\".<br/>If this option is selected, the selection "
-#~ "and the clipboard is kept the same, so that anything in the selection is "
-#~ "immediately available for pasting elsewhere using any method, including "
-#~ "the traditional middle mouse button. Otherwise, the selection is recorded "
-#~ "in the clipboard history, but the selection can only be pasted using the "
-#~ "middle mouse button. Also see the 'Ignore Selection' option."
-#~ msgstr ""
-#~ "<qt>Nuair a roghnaítear cuid den scáileán leis an luch nó leis an "
-#~ "méarchlár, tugtar \"an roghnúchán\" air seo.<br/>Leis an rogha seo, "
-#~ "stórálfar an roghnúchán sa ghearrthaisce i gcónaí, sa chaoi go mbeidh tú "
-#~ "in ann an roghnúchán a ghreamú trí mhodh ar bith, lárchnaipe na luiche "
-#~ "san áireamh. Gan an rogha seo, taifeadtar an roghnúchán i stair na "
-#~ "gearrthaisce, ach is féidir an roghnúchána ghreamú le lárchnaipe na "
-#~ "luiche amháin. Féach ar an rogha 'Déan neamhaird den roghnúchán' freisin."
-#~ "</qt>"
-
-#~ msgid "Selection text only"
-#~ msgstr "Téacs roghnaithe amháin"
-
-#, fuzzy
-#~| msgid ""
-#~| "<qt>When an area of the screen is selected with mouse or keyboard, this "
-#~| "is called \"the selection\".<br/>If this option is selected, only text "
-#~| "selections are stored in the history, while images and other selections "
-#~| "are not.</qt>"
-#~ msgid ""
-#~ "When an area of the screen is selected with mouse or keyboard, this is "
-#~ "called \"the selection\".<br/>If this option is selected, only text "
-#~ "selections are stored in the history, while images and other selections "
-#~ "are not."
-#~ msgstr ""
-#~ "<qt>Nuair a roghnaítear cuid den scáileán leis an luch nó leis an "
-#~ "méarchlár, tugtar \"an roghnúchán\" air seo.<br/>Leis an rogha seo, "
-#~ "stóráiltear roghnúcháin téacs amháin sa stair, agus ní stóráiltear "
-#~ "íomhánna ná roghnúcháin eile.</qt>"
-
-#~ msgid "Timeout for action popups (seconds)"
-#~ msgstr "Teorainn ama do phreabfhuinneoga gnímh (soicindí)"
-
-#~ msgid "A value of 0 disables the timeout"
-#~ msgstr "Díchumasaigh an teorainn ama le luach 0"
-
-#~ msgid "Clipboard history size"
-#~ msgstr "Méid stair na gearrthaisce"
-
-#~ msgid ""
-#~ "Sometimes, the selected text has some whitespace at the end, which, if "
-#~ "loaded as URL in a browser would cause an error. Enabling this option "
-#~ "removes any whitespace at the beginning or end of the selected string "
-#~ "(the original clipboard contents will not be modified)."
-#~ msgstr ""
-#~ "Uaireanta tá beagán spás bán ag deireadh an téacs roghnaithe, agus dá "
-#~ "luchtófaí é mar URL i mbrabhsálaí, ba chúis le hearráid é.  Leis an rogha "
-#~ "seo, bainfear aon spás bán ag tús nó deireadh an teaghráin roghnaithe "
-#~ "(ach ní athrófar inneachar na gearrthaisce féin)."
-
-#~ msgid "%1 - Actions For: %2"
-#~ msgstr "%1 - Gníomhartha le haghaidh: %2"
-
-#~ msgid "&Edit Contents..."
-#~ msgstr "Cuir an tÁbhar in &Eagar..."
-
-#~ msgid "<empty clipboard>"
-#~ msgstr "<gearrthaisce folamh>"
-
-#~ msgid ""
-#~ "You can enable URL actions later by left-clicking on the Klipper icon and "
-#~ "selecting 'Enable Clipboard Actions'"
-#~ msgstr ""
-#~ "Is féidir leat gníomhartha URL a chumasú níos déanaí trí chliceáil ar "
-#~ "chlé ar an deilbhín Klipper agus 'Cumasaigh Gníomhartha Gearrthaisce' a "
-#~ "roghnú"
-
-#~ msgid "Enable Clipboard &Actions"
-#~ msgstr "Cum&asaigh Gníomhartha Gearrthaisce"
-
-#~ msgid "Show Klipper Popup-Menu"
-#~ msgstr "Taispeáin Roghchlár Aníos Klipper"
-
-#~ msgid "Popup menu at mouse-cursor position"
-#~ msgstr "Roghchlár aníos ag ionad an chúrsóra luiche"
-
-#~ msgid "Clipboard/Selection Behavior"
-#~ msgstr "Oibriú Gearrthaisce/Roghnaithe"
-
-#~ msgid "Separate clipboard and selection"
-#~ msgstr "Scar an ghearrthaisce agus an roghnúchán"
-
-#~ msgid ""
-#~ "This option prevents the selection being recorded in the clipboard "
-#~ "history. Only explicit clipboard changes are recorded."
-#~ msgstr ""
-#~ "Leis an rogha seo, ní thaifeadfar an roghnúchán i stair na gearrthaisce. "
-#~ "Ní thaifeadfar ach athruithe follasacha sa ghearrthaisce."
-
-#~ msgid ""
-#~ "<qt>There are two different clipboard buffers available:<br /><br /"
-#~ "><b>Clipboard</b> is filled by selecting something and pressing Ctrl+C, "
-#~ "or by clicking \"Copy\" in a toolbar or menubar.<br /><br /><b>Selection</"
-#~ "b> is available immediately after selecting some text. The only way to "
-#~ "access the selection is to press the middle mouse button.<br /><br />You "
-#~ "can configure the relationship between Clipboard and Selection.</qt>"
-#~ msgstr ""
-#~ "<qt>Tá dhá mhaolán gearrthaisce ar fáil:<br /><br />Cuirtear rudaí sa "
-#~ "<b>Ghearrthaisce</b> trí rud éigin a roghnú agus Ctrl+C a bhrú, nó "
-#~ "\"Cóipeáil\" a chliceáil i mbarra uirlisí nó i mbarra roghchláir.<br /"
-#~ "><br />Tá <b>Roghnúchán</b> ar fáil láithreach tar éis duit roinnt téacs "
-#~ "a roghnú. Chun an roghnúchán a rochtain, caithfidh tú lárchnaipe na "
-#~ "luiche a bhrú.<br /><br />Is féidir an gaol idir an Ghearrthaisce agus "
-#~ "Roghnúchán a chumrú.</qt>"
-
-#~ msgid "Klipper - clipboard tool"
-#~ msgstr "Klipper - uirlis ghearrthaisce"
-
-#~ msgid "Action list (right click to add/remove commands):"
-#~ msgstr ""
-#~ "Liosta gníomhartha (deaschliceáil chun orduithe a chur leis nó bhaint):"
-
-#~ msgid "Double-click here to set the command to be executed"
-#~ msgstr "Déchliceáil anseo chun an t-ordú a shocrú"
-
-#~ msgid "Double-click here to set the regular expression"
-#~ msgstr "Déchliceáil anseo chun an slonn ionadaíochta a shocrú"
-
-#~ msgid "<new action>"
-#~ msgstr "<gníomh nua>"
-
-#~ msgid "Selecting this option synchronizes these two buffers."
-#~ msgstr "Sioncrónaítear an dá mhaolán seo nuair a roghnaítear é seo."
-
-#~ msgid "&Use graphical editor for editing regular expressions"
-#~ msgstr "Úsáid eagarthóir &grafach chun sloinn ionadaíochta a chur in eagar"
-
-#~ msgid ""
-#~ "Click on a highlighted item's column to change it. \"%s\" in a command "
-#~ "will be replaced with the clipboard contents."
-#~ msgstr ""
-#~ "Cliceáil colún míre aibhsithe chun é a athrú. Cuir inneachar na "
-#~ "gearrthaisce in ionad \"%s\" in ordú."
-
-#~ msgid "Enable &Actions"
-#~ msgstr "Cum&asaigh Gníomhartha"
-
-#~ msgid "&Actions Enabled"
-#~ msgstr "Gníomh&artha Cumasaithe"
-
-#~ msgid ""
-#~ "Regular Expression (see http://doc.trolltech.com/qregexp.html#details)"
-#~ msgstr ""
-#~ "Slonn Ionadaíochta (féach ar http://doc.trolltech.com/qregexp."
-#~ "html#details)"
-
-#~ msgid "Configure"
-#~ msgstr "Cumraigh"

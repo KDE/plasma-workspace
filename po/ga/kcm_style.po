@@ -34,16 +34,14 @@ msgid "Failed to apply selected style '%1'."
 msgstr ""
 
 #: package/contents/ui/EffectSettingsPopup.qml:32
-#, fuzzy, kde-format
-#| msgid "Show icons in menus:"
+#, kde-format
 msgid "Show icons:"
-msgstr "Taispeáin deilbhíní i roghchláir:"
+msgstr ""
 
 #: package/contents/ui/EffectSettingsPopup.qml:33
-#, fuzzy, kde-format
-#| msgid "Radio button"
+#, kde-format
 msgid "On buttons"
-msgstr "Cnaipe raidió"
+msgstr ""
 
 #: package/contents/ui/EffectSettingsPopup.qml:44
 #, kde-format
@@ -51,10 +49,9 @@ msgid "In menus"
 msgstr ""
 
 #: package/contents/ui/EffectSettingsPopup.qml:56
-#, fuzzy, kde-format
-#| msgid "Main toolbar text:"
+#, kde-format
 msgid "Main toolbar label:"
-msgstr "Téacs ar an bpríomhbharra uirlisí:"
+msgstr ""
 
 #: package/contents/ui/EffectSettingsPopup.qml:58
 #, kde-format
@@ -62,35 +59,29 @@ msgid "None"
 msgstr ""
 
 #: package/contents/ui/EffectSettingsPopup.qml:59
-#, fuzzy, kde-format
-#| msgid "Text Only"
+#, kde-format
 msgid "Text only"
-msgstr "Téacs Amháin"
+msgstr ""
 
 #: package/contents/ui/EffectSettingsPopup.qml:60
-#, fuzzy, kde-format
-#| msgid "Text Beside Icons"
+#, kde-format
 msgid "Beside icons"
-msgstr "Téacs Taobh Leis na Deilbhíní"
+msgstr ""
 
 #: package/contents/ui/EffectSettingsPopup.qml:61
-#, fuzzy, kde-format
-#| msgid "Text Below Icons"
+#, kde-format
 msgid "Below icon"
-msgstr "Téacs Faoi na Deilbhíní"
+msgstr ""
 
 #: package/contents/ui/EffectSettingsPopup.qml:76
-#, fuzzy, kde-format
-#| msgid "Secondary toolbar text:"
+#, kde-format
 msgid "Secondary toolbar label:"
-msgstr "Téacs ar an mbarra uirlisí tanáisteach:"
+msgstr ""
 
 #: package/contents/ui/GtkStylePage.qml:18
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "&Applications"
+#, kde-format
 msgid "GNOME/GTK Application Style"
-msgstr "&Feidhmchláir"
+msgstr ""
 
 #: package/contents/ui/GtkStylePage.qml:44
 #, kde-format
@@ -98,10 +89,9 @@ msgid "GTK theme:"
 msgstr ""
 
 #: package/contents/ui/GtkStylePage.qml:69
-#, fuzzy, kde-format
-#| msgid "Preview"
+#, kde-format
 msgid "Preview…"
-msgstr "Réamhamharc"
+msgstr ""
 
 #: package/contents/ui/GtkStylePage.qml:88
 #, kde-format
@@ -109,11 +99,9 @@ msgid "Install from File…"
 msgstr ""
 
 #: package/contents/ui/GtkStylePage.qml:93
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "&Applications"
+#, kde-format
 msgid "Get New GNOME/GTK Application Styles…"
-msgstr "&Feidhmchláir"
+msgstr ""
 
 #: package/contents/ui/GtkStylePage.qml:109
 #, kde-format
@@ -126,22 +114,16 @@ msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr ""
 
 #: package/contents/ui/main.qml:17
-#, fuzzy, kde-format
-#| msgid ""
-#| "<h1>Style</h1>This module allows you to modify the visual appearance of "
-#| "user interface elements, such as the widget style and effects."
+#, kde-format
 msgid ""
 "This module allows you to modify the visual appearance of applications' user "
 "interface elements."
 msgstr ""
-"<h1>Stíl</h1>Leis an modúl seo is féidir dealramh an chomhéadain úsáideora a "
-"athrú, mar shampla stíl na ngiuirléidí agus maisíochtaí."
 
 #: package/contents/ui/main.qml:96
-#, fuzzy, kde-format
-#| msgid "Con&figure..."
+#, kde-format
 msgid "Configure Style…"
-msgstr "Cu&mraigh..."
+msgstr ""
 
 #: package/contents/ui/main.qml:116
 #, kde-format
@@ -149,10 +131,9 @@ msgid "Configure Icons and Toolbars"
 msgstr ""
 
 #: package/contents/ui/main.qml:132
-#, fuzzy, kde-format
-#| msgid "Con&figure..."
+#, kde-format
 msgid "Configure GNOME/GTK Application Style…"
-msgstr "Cu&mraigh..."
+msgstr ""
 
 #: styleconfdialog.cpp:21
 #, kde-format
@@ -167,17 +148,15 @@ msgstr "Cluaisín 1"
 
 #. i18n: ectx: property (text), widget (QPushButton, pushButton)
 #: stylepreview.ui:65
-#, fuzzy, kde-format
-#| msgid "Button"
+#, kde-format
 msgid "Push Button"
-msgstr "Cnaipe"
+msgstr ""
 
 #. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
 #: stylepreview.ui:86
-#, fuzzy, kde-format
-#| msgid "Combobox"
+#, kde-format
 msgid "Combo box"
-msgstr "Bosca Teaglama"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, checkBox)
 #: stylepreview.ui:96
@@ -206,320 +185,30 @@ msgstr "Cluaisín 2"
 
 #. i18n: ectx: label, entry (widgetStyle), group (KDE)
 #: stylesettings.kcfg:9
-#, fuzzy, kde-format
-#| msgctxt "@title:tab"
-#| msgid "&Applications"
+#, kde-format
 msgid "Application style"
-msgstr "&Feidhmchláir"
+msgstr ""
 
 #. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
 #: stylesettings.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Show icons on buttons:"
+#, kde-format
 msgid "Show icons on buttons"
-msgstr "Taispeáin deilbhíní ar chnaipí:"
+msgstr ""
 
 #. i18n: ectx: label, entry (iconsInMenus), group (KDE)
 #: stylesettings.kcfg:17
-#, fuzzy, kde-format
-#| msgid "Show icons on buttons:"
+#, kde-format
 msgid "Show icons in menus"
-msgstr "Taispeáin deilbhíní ar chnaipí:"
+msgstr ""
 
 #. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
 #: stylesettings.kcfg:23
-#, fuzzy, kde-format
-#| msgid "Main toolbar text:"
+#, kde-format
 msgid "Main toolbar label"
-msgstr "Téacs ar an bpríomhbharra uirlisí:"
+msgstr ""
 
 #. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
 #: stylesettings.kcfg:27
-#, fuzzy, kde-format
-#| msgid "Secondary toolbar text:"
+#, kde-format
 msgid "Secondary toolbar label"
-msgstr "Téacs ar an mbarra uirlisí tanáisteach:"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Séamus Ó Ciardhuáin,Kevin Scannell"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "seoc@iolfree.ie,kscanne@gmail.com"
-
-#, fuzzy
-#~| msgctxt "@title:tab"
-#~| msgid "&Applications"
-#~ msgid "Application Style"
-#~ msgstr "&Feidhmchláir"
-
-#, fuzzy
-#~| msgid "(c) 2002 Karol Szwed, Daniel Molkentin"
-#~ msgid "(c) 2002 Karol Szwed, Daniel Molkentin, (c) 2019 Kai Uwe Broulik "
-#~ msgstr "© 2002 Karol Szwed, Daniel Molkentin"
-
-#~ msgid "Karol Szwed"
-#~ msgstr "Karol Szwed"
-
-#~ msgid "Daniel Molkentin"
-#~ msgstr "Daniel Molkentin"
-
-#, fuzzy
-#~| msgctxt "@title:tab"
-#~| msgid "&Applications"
-#~ msgid "Download New GNOME/GTK2 Application Styles..."
-#~ msgstr "&Feidhmchláir"
-
-#, fuzzy
-#~| msgctxt "@title:tab"
-#~| msgid "&Applications"
-#~ msgid "GNOME/GTK2 Application Styles"
-#~ msgstr "&Feidhmchláir"
-
-#, fuzzy
-#~| msgctxt "@title:tab"
-#~| msgid "&Applications"
-#~ msgid "Download New GNOME/GTK3 Application Styles..."
-#~ msgstr "&Feidhmchláir"
-
-#, fuzzy
-#~| msgctxt "@title:tab"
-#~| msgid "&Applications"
-#~ msgid "GNOME/GTK3 Application Styles"
-#~ msgstr "&Feidhmchláir"
-
-#~ msgid "Unable to Load Dialog"
-#~ msgstr "Ní féidir an dialóg a luchtú"
-
-#~ msgid "No description available."
-#~ msgstr "Níl cur síos ar fáil."
-
-#~ msgid ""
-#~ "This area shows a preview of the currently selected style without having "
-#~ "to apply it to the whole desktop."
-#~ msgstr ""
-#~ "Taispeántar réamhamharc ar an stíl roghnaithe sa limistéar seo gan é a "
-#~ "chur i bhfeidhm ar an deasc féin."
-
-#~ msgid ""
-#~ "Here you can choose from a list of predefined widget styles (e.g. the way "
-#~ "buttons are drawn) which may or may not be combined with a theme "
-#~ "(additional information like a marble texture or a gradient)."
-#~ msgstr ""
-#~ "Anseo is féidir leat stíl ghiuirléide a roghnú ó liosta de stíleanna "
-#~ "réamhshainithe (m.sh. an tslí a ndeartar cnaipí). Uaireanta is féidir an "
-#~ "stíl a chur le chéile le téama (eolas breise cosúil le huigeacht nó "
-#~ "grádán)."
-
-#, fuzzy
-#~| msgid ""
-#~| "If you enable this option, KDE Applications will show small icons "
-#~| "alongside some important buttons."
-#~ msgid ""
-#~ "If you enable this option, applications will show small icons alongside "
-#~ "some important buttons."
-#~ msgstr ""
-#~ "Leis an rogha seo, taispeánfaidh Feidhmchláir KDE deilbhíní beaga le "
-#~ "taobh roinnt cnaipí tábhachtacha."
-
-#, fuzzy
-#~| msgid ""
-#~| "If you enable this option, KDE Applications will show small icons "
-#~| "alongside most menu items."
-#~ msgid ""
-#~ "If you enable this option, applications will show small icons alongside "
-#~ "most menu items."
-#~ msgstr ""
-#~ "Leis an rogha seo, taispeánfaidh Feidhmchláir KDE deilbhíní beaga le "
-#~ "taobh formhór na míreanna roghchláir."
-
-#, fuzzy
-#~| msgid ""
-#~| "<p><b>No Text:</b> Shows only icons on toolbar buttons. Best option for "
-#~| "low resolutions.</p><p><b>Text Only: </b>Shows only text on toolbar "
-#~| "buttons.</p><p><b>Text Beside Icons: </b> Shows icons and text on "
-#~| "toolbar buttons. Text is aligned beside the icon.</p><b>Text Below "
-#~| "Icons: </b> Shows icons and text on toolbar buttons. Text is aligned "
-#~| "below the icon."
-#~ msgid ""
-#~ "<p><b>No text:</b> Shows only icons on toolbar buttons. Best option for "
-#~ "low resolutions.</p><p><b>Text only: </b>Shows only text on toolbar "
-#~ "buttons.</p><p><b>Text beside icons: </b> Shows icons and text on toolbar "
-#~ "buttons. Text is aligned beside the icon.</p><b>Text below icons: </b> "
-#~ "Shows icons and text on toolbar buttons. Text is aligned below the icon."
-#~ msgstr ""
-#~ "<p><b>Gan Téacs:</b> Ná taispeáin ach deilbhíní ar chnaipí sa bharra "
-#~ "uirlisí. An rogha is fearr le taifeach íseal.</p><p><b>Téacs Amháin: </"
-#~ "b>Ná taispeáin ach téacs ar chnaipí sa bharra uirlisí.</p><p><b>Téacs le "
-#~ "taobh deilbhíní: </b> Taispeáin deilbhíní agus téacs ar chnaipí sa bharra "
-#~ "uirlisí. Ailínítear an téacs le taobh an deilbhín.</p><b>Téacs faoi "
-#~ "dheilbhíní: </b> Taispeáin deilbhíní agus téacs ar chnaipí sa bharra "
-#~ "uirlisí. Ailínítear an téacs faoin deilbhín."
-
-#~ msgid "Toolbars"
-#~ msgstr "Barraí Uirlisí"
-
-#~ msgid "No Text"
-#~ msgstr "Gan Téacs"
-
-#, fuzzy
-#~| msgid "Widget style:"
-#~ msgid "Widget Style"
-#~ msgstr "Stíl na ngiuirléidí:"
-
-#~ msgid "Widget style:"
-#~ msgstr "Stíl na ngiuirléidí:"
-
-#~ msgctxt "@title:tab"
-#~ msgid "&Fine Tuning"
-#~ msgstr "Tiúnadh &Fíneálta"
-
-#~ msgid "Description: %1"
-#~ msgstr "Cur Síos: %1"
-
-#~ msgid ""
-#~ "This page allows you to choose details about the widget style options"
-#~ msgstr ""
-#~ "Ar an leathanach seo is féidir leat mionsonraí a roghnú maidir le "
-#~ "roghanna stíl na ngiuirléidí"
-
-#~ msgid "Group Box"
-#~ msgstr "Bosca Grúpa"
-
-#~ msgid "KDE Style Module"
-#~ msgstr "Modúl Stíle KDE"
-
-#~ msgid "Ralf Nolden"
-#~ msgstr "Ralf Nolden"
-
-#~ msgid "Menubar"
-#~ msgstr "Barra Roghchláir"
-
-#, fuzzy
-#~| msgid "Menubar"
-#~ msgid "Menubar style:"
-#~ msgstr "Barra Roghchláir"
-
-#~ msgid "In application"
-#~ msgstr "San fheidhmchlár"
-
-#, fuzzy
-#~| msgctxt "@title:tab"
-#~| msgid "&Applications"
-#~ msgid "Global Menu widget"
-#~ msgstr "&Feidhmchláir"
-
-#~ msgid ""
-#~ "<p>Changes to the visibility of menu icons will only affect newly started "
-#~ "applications.</p>"
-#~ msgstr ""
-#~ "<p>Má athraíonn tú infheictheacht na ndeilbhíní roghchláir, rachaidh sé i "
-#~ "bhfeidhm ar fheidhmchláir nua-thosaithe amháin.</p>"
-
-#~ msgctxt "@title:window"
-#~ msgid "Menu Icons Changed"
-#~ msgstr "Athraíodh Deilbhíní Roghchláir"
-
-#~ msgid "Only export"
-#~ msgstr "Easpórtáil amháin"
-
-#~ msgid "Graphical effects:"
-#~ msgstr "Maisíochtaí grafacha:"
-
-#~ msgid "Low display resolution and Low CPU"
-#~ msgstr "Taifeach íseal taispeána agus LAP Mall"
-
-#~ msgid "High display resolution and Low CPU"
-#~ msgstr "Ardtaifeach taispeána agus LAP Mall"
-
-#~ msgid "Low display resolution and High CPU"
-#~ msgstr "Taifeach íseal taispeána agus LAP tapa"
-
-#~ msgid "High display resolution and High CPU"
-#~ msgstr "Ardtaifeach taispeána agus LAP tapa"
-
-#~ msgid "Low display resolution and Very High CPU"
-#~ msgstr "Taifeach íseal taispeána agus LAP an-tapa"
-
-#~ msgid "High display resolution and Very High CPU"
-#~ msgstr "Ardtaifeach taispeána agus LAP an-tapa"
-
-#~ msgid ""
-#~ "If you enable this option, KDE Applications will run internal animations."
-#~ msgstr "Leis an rogha seo, rithfidh Feidhmchláir KDE beochan inmheánach."
-
-#~ msgid "kcmstyle"
-#~ msgstr "kcmstyle"
-
-#~ msgid "Icons Only"
-#~ msgstr "Deilbhíní Amháin"
-
-#~ msgctxt "@label:listbox"
-#~ msgid "Text pos&ition of toolbar elements:"
-#~ msgstr "Suíomh an téacs in eilimintí sa bharra uirlisí:"
-
-#~ msgctxt "@title:tab"
-#~ msgid "&Style"
-#~ msgstr "&Stíl"
-
-#~ msgid ""
-#~ "This page allows you to enable various widget style effects. For best "
-#~ "performance, it is advisable to disable all effects."
-#~ msgstr ""
-#~ "Ligeann an leathanach seo duit maisíochtaí éagsúla giuirléidí a chumasú. "
-#~ "Moltar duit gan aon mhaisíochtaí a chumasú chun an luas is fearr a bhaint "
-#~ "as do chóras."
-
-#~ msgctxt "@option:check"
-#~ msgid "High&light buttons under mouse"
-#~ msgstr "&Aibhsigh cnaipí faoin luch"
-
-#~ msgctxt "@option:check"
-#~ msgid "E&nable tooltips"
-#~ msgstr "&Cumasaigh leideanna uirlisí"
-
-#~ msgid "&Effects"
-#~ msgstr "&Maisíochtaí"
-
-#~ msgid "&Enable GUI effects"
-#~ msgstr "&Cumasaigh maisíochtaí grafacha"
-
-#~ msgid "Disable"
-#~ msgstr "Díchumasaigh"
-
-#~ msgid "Animate"
-#~ msgstr "Beoigh"
-
-#~ msgid "Combobo&x effect:"
-#~ msgstr "Maisíocht bhos&ca teaglama:"
-
-#~ msgid "Fade"
-#~ msgstr "Céimnigh"
-
-#~ msgid "&Menu effect:"
-#~ msgstr "&Maisíocht roghchláir:"
-
-#~ msgid "0%"
-#~ msgstr "0%"
-
-#~ msgid "50%"
-#~ msgstr "50%"
-
-#~ msgid "100%"
-#~ msgstr "100%"
-
-#~ msgid "Menu &opacity:"
-#~ msgstr "Teimhneacht r&oghchláir:"
-
-#~ msgid "Transparent tool&bars when moving"
-#~ msgstr "&Barraí uirlisí trédhearcacha le linn bogtha"
-
-#~ msgid "Menu translucency is not available.<br />"
-#~ msgstr "Níl roghchláir tréshoilseacha ar fáil.<br />"
-
-#~ msgid "%"
-#~ msgstr "%"
-
-#~ msgid "Button Group"
-#~ msgstr "Grúpa Cnaipí"
+msgstr ""

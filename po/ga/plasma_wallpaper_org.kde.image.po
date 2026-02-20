@@ -28,16 +28,14 @@ msgid "Your emails"
 msgstr "kscanne@gmail.com"
 
 #: imagepackage/contents/ui/config.qml:94
-#, fuzzy, kde-format
-#| msgid "&Positioning:"
+#, kde-format
 msgid "Positioning:"
-msgstr "&Suí:"
+msgstr ""
 
 #: imagepackage/contents/ui/config.qml:97
-#, fuzzy, kde-format
-#| msgid "Scaled & Cropped"
+#, kde-format
 msgid "Scaled and Cropped"
-msgstr "Scálaithe agus Bearrtha"
+msgstr ""
 
 #: imagepackage/contents/ui/config.qml:101
 #, kde-format
@@ -45,10 +43,9 @@ msgid "Scaled"
 msgstr "Scálaithe"
 
 #: imagepackage/contents/ui/config.qml:105
-#, fuzzy, kde-format
-#| msgid "Scaled, keep proportions"
+#, kde-format
 msgid "Scaled, Keep Proportions"
-msgstr "Scálaithe, caomhnaigh coibhneas"
+msgstr ""
 
 #: imagepackage/contents/ui/config.qml:109
 #, kde-format
@@ -87,10 +84,9 @@ msgstr ""
 
 #: imagepackage/contents/ui/config.qml:213
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:257
-#, fuzzy, kde-format
-#| msgid "Get New Wallpapers..."
+#, kde-format
 msgid "Get New Wallpapers…"
-msgstr "Faigh Cúlbhrait Nua..."
+msgstr ""
 
 #: imagepackage/contents/ui/main.qml:66
 #, kde-format
@@ -108,16 +104,14 @@ msgid "Open Containing Folder"
 msgstr ""
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:40
-#, fuzzy, kde-format
-#| msgid "&System wallpapers:"
+#, kde-format
 msgid "Restore wallpaper"
-msgstr "Cúlbhrait an chórai&s:"
+msgstr ""
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:45
-#, fuzzy, kde-format
-#| msgid "&System wallpapers:"
+#, kde-format
 msgid "Remove Wallpaper"
-msgstr "Cúlbhrait an chórai&s:"
+msgstr ""
 
 #: plasma-apply-wallpaperimage.cpp:29
 #, kde-format
@@ -174,16 +168,14 @@ msgid "Directory with the wallpaper to show slides from"
 msgstr ""
 
 #: plugin/imagebackend.cpp:350
-#, fuzzy, kde-format
-#| msgid "Open Wallpaper Image"
+#, kde-format
 msgid "Open Image"
-msgstr "Oscail Íomhá Chúlbhrait"
+msgstr ""
 
 #: plugin/imagebackend.cpp:350
-#, fuzzy, kde-format
-#| msgid "Images"
+#, kde-format
 msgid "Image Files"
-msgstr "Íomhánna"
+msgstr ""
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:38
 #, kde-format
@@ -221,10 +213,9 @@ msgid "Group by folders"
 msgstr ""
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:98
-#, fuzzy, kde-format
-#| msgid "C&hange images every:"
+#, kde-format
 msgid "Change every:"
-msgstr "&Athraigh an íomhá gach:"
+msgstr ""
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:108
 #, kde-format
@@ -232,9 +223,6 @@ msgid "%1 hour"
 msgid_plural "%1 hours"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:128
 #, kde-format
@@ -242,9 +230,6 @@ msgid "%1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:148
 #, kde-format
@@ -252,27 +237,21 @@ msgid "%1 second"
 msgid_plural "%1 seconds"
 msgstr[0] ""
 msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:162
-#, fuzzy, kde-format
-#| msgid "&Remove Folder"
+#, kde-format
 msgid "Folders"
-msgstr "&Bain Fillteán"
+msgstr ""
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:220
-#, fuzzy, kde-format
-#| msgid "&Remove Folder"
+#, kde-format
 msgid "Remove Folder"
-msgstr "&Bain Fillteán"
+msgstr ""
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:225
-#, fuzzy, kde-format
-#| msgid "&Remove Folder"
+#, kde-format
 msgid "Open Folder"
-msgstr "&Bain Fillteán"
+msgstr ""
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:235
 #, kde-format
@@ -280,151 +259,6 @@ msgid "There are no wallpaper locations configured"
 msgstr ""
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:250
-#, fuzzy, kde-format
-#| msgid "&Add Folder..."
+#, kde-format
 msgid "Add Folder…"
-msgstr "&Cuir Fillteán Leis..."
-
-#, fuzzy
-#~| msgid "Use system-installed wallpapers in slideshow"
-#~ msgid "There are no wallpapers in this slideshow"
-#~ msgstr "Úsáid cúlbhrait an chórais i dtaispeántas sleamhnán"
-
-#, fuzzy
-#~| msgid "&System wallpapers:"
-#~ msgid "Add Custom Wallpaper"
-#~ msgstr "Cúlbhrait an chórai&s:"
-
-#, fuzzy
-#~| msgid "&System wallpapers:"
-#~ msgid "Remove wallpaper"
-#~ msgstr "Cúlbhrait an chórai&s:"
-
-#, fuzzy
-#~| msgctxt "Caption to wallpaper preview, %1 author name"
-#~| msgid "by %1"
-#~ msgid "%1 by %2"
-#~ msgstr "le %1"
-
-#, fuzzy
-#~| msgid "&System wallpapers:"
-#~ msgid "Wallpapers"
-#~ msgstr "Cúlbhrait an chórai&s:"
-
-#, fuzzy
-#~| msgid "Download new wallpapers"
-#~ msgid "Download Wallpapers"
-#~ msgstr "Íosluchtaigh cúlbhrat nua"
-
-#~ msgid "Open..."
-#~ msgstr "Oscail..."
-
-#~ msgid "Screenshot"
-#~ msgstr "Seat den Scáileán"
-
-#~ msgid "Center Tiled"
-#~ msgstr "Láraithe Tílithe"
-
-#~ msgid "Select Wallpaper Image File"
-#~ msgstr "Roghnaigh Comhad le hÍomhá Chúlbhrait"
-
-#~ msgid "P&ositioning:"
-#~ msgstr "I&onad:"
-
-#~ msgid "&Color:"
-#~ msgstr "&Dath:"
-
-#~ msgid "Change wallpaper frame color"
-#~ msgstr "Athraigh dath fhráma an chúlbhrait"
-
-#~ msgid ""
-#~ "Change the color of the frame that it may be visible when the wallpaper "
-#~ "is centered or scaled with the same proportions."
-#~ msgstr ""
-#~ "Athraigh dath an fhráma sa chaoi go mbeidh sé infheicthe nuair a bheidh "
-#~ "an cúlbhrat láraithe nó scálaithe go comhréireach."
-
-#~ msgid "Remove from list"
-#~ msgstr "Bain ón liosta"
-
-#~ msgctxt ""
-#~ "(qtdt-format) Please do not change the quotes (') and translate only the "
-#~ "content of the quotes."
-#~ msgid "hh 'Hours' mm 'Mins' ss 'Secs'"
-#~ msgstr "hh 'Uair' mm 'Nóiméad' ss 'Soicind'"
-
-#~ msgid "&My downloaded wallpapers:"
-#~ msgstr "&Cúlbhrait íosluchtaithe:"
-
-#~ msgid ""
-#~ "Use wallpapers I have downloaded with \"Get New Wallpapers...\" in "
-#~ "slideshow"
-#~ msgstr ""
-#~ "Úsáid na cúlbhrait a bhí íosluchtaithe agam trí \"Faigh Cúlbhrait Nua..."
-#~ "\" i dtaispeántas sleamhnán"
-
-#~ msgid "Custom folders:"
-#~ msgstr "Fillteáin shaincheaptha:"
-
-#~ msgid ""
-#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-#~ "REC-html40/strict.dtd\">\n"
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:11pt; "
-#~ "font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-#~ "weight:600;\">Images</span></p></body></html>"
-#~ msgstr ""
-#~ "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/"
-#~ "REC-html40/strict.dtd\">\n"
-#~ "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/"
-#~ "css\">\n"
-#~ "p, li { white-space: pre-wrap; }\n"
-#~ "</style></head><body style=\" font-family:'Sans Serif'; font-size:11pt; "
-#~ "font-weight:400; font-style:normal;\">\n"
-#~ "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-"
-#~ "right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-"
-#~ "weight:600;\">Íomhánna</span></p></body></html>"
-
-#~ msgid "Finding images for the wallpaper slideshow."
-#~ msgstr "Íomhánna á lorg le haghaidh an taispeántais cúlbhrait."
-
-#~ msgid "Adding wallpaper package in %1"
-#~ msgstr "Pacáiste cúlbhrait á chur leis i %1"
-
-#~ msgid "Adding image %1"
-#~ msgstr "Íomhá %1 á cur leis"
-
-#~ msgctxt "Wallpaper info, author name"
-#~ msgid "%1"
-#~ msgstr "%1"
-
-#~ msgid "Email:"
-#~ msgstr "Ríomhphost:"
-
-#~ msgid "License:"
-#~ msgstr "Ceadúnas:"
-
-#~ msgid "Color:"
-#~ msgstr "Dath:"
-
-#~ msgid "Author:"
-#~ msgstr "Údar:"
-
-#~ msgid "Browse"
-#~ msgstr "Brabhsáil"
-
-#~ msgid "&Picture:"
-#~ msgstr "&Pictiúr:"
-
-#~ msgid "Testing %1 for a Wallpaper package"
-#~ msgstr "%1 á thástáil le haghaidh pacáiste Cúlbhrait"
-
-#~ msgid "Maxpect"
-#~ msgstr "Cóimheas Uasta Treoíochta"
-
-#~ msgid "Form"
-#~ msgstr "Foirm"
+msgstr ""

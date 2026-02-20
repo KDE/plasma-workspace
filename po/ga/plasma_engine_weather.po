@@ -128,12 +128,10 @@ msgid "heavy rain shower"
 msgstr "bailc fearthainne"
 
 #: bbcukmet_i18n.dat:19
-#, fuzzy, kde-format
-#| msgctxt "weather condition"
-#| msgid "heavy rain shower"
+#, kde-format
 msgctxt "weather condition"
 msgid "heavy rain showers"
-msgstr "bailc fearthainne"
+msgstr ""
 
 #: bbcukmet_i18n.dat:20
 #, kde-format
@@ -166,12 +164,10 @@ msgid "heavy snow showers"
 msgstr "frascheathanna sneachta"
 
 #: bbcukmet_i18n.dat:25
-#, fuzzy, kde-format
-#| msgctxt "weather condition"
-#| msgid "white cloud"
+#, kde-format
 msgctxt "weather condition"
 msgid "light cloud"
-msgstr "scamall bán"
+msgstr ""
 
 #: bbcukmet_i18n.dat:26 ions/wetter.com/ion_wettercom.cpp:175
 #: ions/wetter.com/ion_wettercom.cpp:176
@@ -187,12 +183,10 @@ msgid "light rain shower"
 msgstr "cith fearthainne éadrom"
 
 #: bbcukmet_i18n.dat:28
-#, fuzzy, kde-format
-#| msgctxt "weather condition"
-#| msgid "light rain shower"
+#, kde-format
 msgctxt "weather condition"
 msgid "light rain showers"
-msgstr "cith fearthainne éadrom"
+msgstr ""
 
 #: bbcukmet_i18n.dat:29
 #, kde-format
@@ -292,12 +286,10 @@ msgid "sunny intervals"
 msgstr "aitill"
 
 #: bbcukmet_i18n.dat:45
-#, fuzzy, kde-format
-#| msgctxt "weather condition"
-#| msgid "white cloud"
+#, kde-format
 msgctxt "weather condition"
 msgid "thick cloud"
-msgstr "scamall bán"
+msgstr ""
 
 #: bbcukmet_i18n.dat:46 ions/wetter.com/ion_wettercom.cpp:196
 #: ions/wetter.com/ion_wettercom.cpp:197
@@ -313,12 +305,10 @@ msgid "thundery shower"
 msgstr "cith toirní"
 
 #: bbcukmet_i18n.dat:48
-#, fuzzy, kde-format
-#| msgctxt "weather condition"
-#| msgid "thundery shower"
+#, kde-format
 msgctxt "weather condition"
 msgid "thundery showers"
-msgstr "cith toirní"
+msgstr ""
 
 #: bbcukmet_i18n.dat:49
 #, kde-format
@@ -441,12 +431,10 @@ msgid "heavy rain shower"
 msgstr "bailc fearthainne"
 
 #: bbcukmet_i18n.dat:69
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "heavy rain shower"
+#, kde-format
 msgctxt "weather forecast"
 msgid "heavy rain showers"
-msgstr "bailc fearthainne"
+msgstr ""
 
 #: bbcukmet_i18n.dat:70
 #, kde-format
@@ -479,12 +467,10 @@ msgid "heavy snow showers"
 msgstr "frascheathanna sneachta"
 
 #: bbcukmet_i18n.dat:75
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "white cloud"
+#, kde-format
 msgctxt "weather forecast"
 msgid "light cloud"
-msgstr "scamall bán"
+msgstr ""
 
 #: bbcukmet_i18n.dat:76
 #, kde-format
@@ -499,12 +485,10 @@ msgid "light rain shower"
 msgstr "barrchith fearthainne"
 
 #: bbcukmet_i18n.dat:78
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "light rain shower"
+#, kde-format
 msgctxt "weather forecast"
 msgid "light rain showers"
-msgstr "barrchith fearthainne"
+msgstr ""
 
 #: bbcukmet_i18n.dat:79
 #, kde-format
@@ -597,20 +581,16 @@ msgid "sunny intervals"
 msgstr "aitill"
 
 #: bbcukmet_i18n.dat:94
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "white cloud"
+#, kde-format
 msgctxt "weather forecast"
 msgid "thick cloud"
-msgstr "scamall bán"
+msgstr ""
 
 #: bbcukmet_i18n.dat:95
-#, fuzzy, kde-format
-#| msgctxt "weather condition"
-#| msgid "thunderstorm"
+#, kde-format
 msgctxt "weather forecast"
 msgid "thunderstorm"
-msgstr "stoirm thoirní"
+msgstr ""
 
 #: bbcukmet_i18n.dat:96
 #, kde-format
@@ -619,12 +599,10 @@ msgid "thundery shower"
 msgstr "cith toirní"
 
 #: bbcukmet_i18n.dat:97
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "thundery shower"
+#, kde-format
 msgctxt "weather forecast"
 msgid "thundery showers"
-msgstr "cith toirní"
+msgstr ""
 
 #: bbcukmet_i18n.dat:98
 #, kde-format
@@ -645,12 +623,10 @@ msgid "Excellent"
 msgstr ""
 
 #: bbcukmet_i18n.dat:101
-#, fuzzy, kde-format
-#| msgctxt "visibility"
-#| msgid "Very good"
+#, kde-format
 msgctxt "visibility"
 msgid "Very Good"
-msgstr "An-mhaith"
+msgstr ""
 
 #: bbcukmet_i18n.dat:102
 #, kde-format
@@ -671,12 +647,10 @@ msgid "Poor"
 msgstr "Olc"
 
 #: bbcukmet_i18n.dat:105
-#, fuzzy, kde-format
-#| msgctxt "visibility"
-#| msgid "Very poor"
+#, kde-format
 msgctxt "visibility"
 msgid "Very Poor"
-msgstr "An-olc"
+msgstr ""
 
 #: envcan_i18n.dat:2 noaa_i18n.dat:7
 #, kde-format
@@ -1171,20 +1145,16 @@ msgid "Thunderstorm with Rain"
 msgstr ""
 
 #: envcan_i18n.dat:84
-#, fuzzy, kde-format
-#| msgctxt "weather condition"
-#| msgid "Heavy Thunderstorm with Rain"
+#, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm with light rainshowers"
-msgstr "Stoirm Thoirní Trom le Báisteach"
+msgstr ""
 
 #: envcan_i18n.dat:85
-#, fuzzy, kde-format
-#| msgctxt "weather condition"
-#| msgid "Recent Thunderstorm with Heavy Hail"
+#, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm with heavy rainshowers"
-msgstr "Stoirm Thoirní le Clocha Sneachta Troma Le Déanaí"
+msgstr ""
 
 #: envcan_i18n.dat:86
 #, kde-format
@@ -1661,20 +1631,16 @@ msgid "Cloudy"
 msgstr ""
 
 #: envcan_i18n.dat:165
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "partly cloudy"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Partly cloudy"
-msgstr "breacscamallach"
+msgstr ""
 
 #: envcan_i18n.dat:166
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "partly cloudy"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Mainly cloudy"
-msgstr "breacscamallach"
+msgstr ""
 
 #: envcan_i18n.dat:167
 #, kde-format
@@ -1851,20 +1817,16 @@ msgid "Ice fog dissipating"
 msgstr ""
 
 #: envcan_i18n.dat:196
-#, fuzzy, kde-format
-#| msgctxt "weather condition"
-#| msgid "Ice Pellets"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Ice pellets"
-msgstr "Millíní Sneachta"
+msgstr ""
 
 #: envcan_i18n.dat:197
-#, fuzzy, kde-format
-#| msgctxt "weather condition"
-#| msgid "light freezing rain"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Ice pellets mixed with freezing rain"
-msgstr "báisteach reoite éadrom"
+msgstr ""
 
 #: envcan_i18n.dat:198
 #, kde-format
@@ -1873,20 +1835,16 @@ msgid "Ice pellets mixed with snow"
 msgstr ""
 
 #: envcan_i18n.dat:199
-#, fuzzy, kde-format
-#| msgctxt "weather condition"
-#| msgid "light freezing rain"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Ice pellets or freezing rain"
-msgstr "báisteach reoite éadrom"
+msgstr ""
 
 #: envcan_i18n.dat:200
-#, fuzzy, kde-format
-#| msgctxt "weather condition"
-#| msgid "Ice Pellets"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Ice pellets or snow"
-msgstr "Millíní Sneachta"
+msgstr ""
 
 #: envcan_i18n.dat:201
 #, kde-format
@@ -2651,12 +2609,10 @@ msgid "Sunny"
 msgstr "Grianmhar"
 
 #: envcan_i18n.dat:328
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Mainly Sunny"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Mainly sunny"
-msgstr "Grianmhar Den Chuid is Mó"
+msgstr ""
 
 #: envcan_i18n.dat:329
 #, kde-format
@@ -2753,11 +2709,10 @@ msgid "Today"
 msgstr ""
 
 #: ions/bbcukmet/ion_bbcukmet.cpp:1010
-#, fuzzy, kde-format
-#| msgid "Night"
+#, kde-format
 msgctxt "Short for Tonight"
 msgid "Tonight"
-msgstr "Oíche"
+msgstr ""
 
 #: ions/bbcukmet/ion_bbcukmet.cpp:1012 ions/dwd/ion_dwd.cpp:650
 #: ions/envcan/ion_envcan.cpp:1557
@@ -2858,11 +2813,10 @@ msgid "Data from Environment and Climate Change Canada"
 msgstr ""
 
 #: ions/noaa/ion_noaa.cpp:633
-#, fuzzy, kde-format
-#| msgid "Data provided by NOAA National Weather Service"
+#, kde-format
 msgctxt "credit line, keep string short)"
 msgid "Data from NOAA National Weather Service"
-msgstr "Sonraí ón NOAA National Weather Service"
+msgstr ""
 
 #: ions/wetter.com/ion_wettercom.cpp:156 ions/wetter.com/ion_wettercom.cpp:157
 #, kde-format
@@ -4502,12 +4456,10 @@ msgid "Severe Tstms"
 msgstr ""
 
 #: noaa_i18n.dat:275
-#, fuzzy, kde-format
-#| msgctxt "weather condition"
-#| msgid "light rain snow"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Snow/Sleet"
-msgstr "báisteach agus sneachta éadrom"
+msgstr ""
 
 #: noaa_i18n.dat:276
 #, kde-format
@@ -4528,12 +4480,10 @@ msgid "Snow/Sleet"
 msgstr ""
 
 #: noaa_i18n.dat:279
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "light rain"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Rain/Sleet"
-msgstr "ceobhrán"
+msgstr ""
 
 #: noaa_i18n.dat:280
 #, kde-format
@@ -4554,12 +4504,10 @@ msgid "Rain/Sleet"
 msgstr ""
 
 #: noaa_i18n.dat:283
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "light rain"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Rain/Freezing Rain"
-msgstr "ceobhrán"
+msgstr ""
 
 #: noaa_i18n.dat:284
 #, kde-format
@@ -4592,12 +4540,10 @@ msgid "Wintry Mix"
 msgstr ""
 
 #: noaa_i18n.dat:289
-#, fuzzy, kde-format
-#| msgctxt "weather condition"
-#| msgid "Light Freezing Drizzle"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Freezing Drizzle"
-msgstr "Ceobhrán Reoite Éadrom"
+msgstr ""
 
 #: noaa_i18n.dat:290
 #, kde-format
@@ -4618,12 +4564,10 @@ msgid "Freezing Drizzle"
 msgstr ""
 
 #: noaa_i18n.dat:293
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "light rain"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Freezing Rain"
-msgstr "ceobhrán"
+msgstr ""
 
 #: noaa_i18n.dat:294
 #, kde-format
@@ -4644,12 +4588,10 @@ msgid "Freezing Rain"
 msgstr ""
 
 #: noaa_i18n.dat:297
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "light rain"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Rain/Snow"
-msgstr "ceobhrán"
+msgstr ""
 
 #: noaa_i18n.dat:298
 #, kde-format
@@ -4670,12 +4612,10 @@ msgid "Rain/Snow"
 msgstr "Báisteach/Sneachta"
 
 #: noaa_i18n.dat:301
-#, fuzzy, kde-format
-#| msgctxt "weather condition"
-#| msgid "light rain snow"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Snow"
-msgstr "báisteach agus sneachta éadrom"
+msgstr ""
 
 #: noaa_i18n.dat:302
 #, kde-format
@@ -4696,12 +4636,10 @@ msgid "Heavy Snow"
 msgstr ""
 
 #: noaa_i18n.dat:306
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "light rain"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Flurries"
-msgstr "ceobhrán"
+msgstr ""
 
 #: noaa_i18n.dat:307
 #, kde-format
@@ -4716,12 +4654,10 @@ msgid "Flurries Likely"
 msgstr ""
 
 #: noaa_i18n.dat:310
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "light snow showers"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Snow Showers"
-msgstr "barrcheathanna sneachta"
+msgstr ""
 
 #: noaa_i18n.dat:311
 #, kde-format
@@ -4742,12 +4678,10 @@ msgid "Snow Showers"
 msgstr ""
 
 #: noaa_i18n.dat:314
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "light rain"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Drizzle"
-msgstr "ceobhrán"
+msgstr ""
 
 #: noaa_i18n.dat:315
 #, kde-format
@@ -4762,12 +4696,10 @@ msgid "Drizzle Likely"
 msgstr ""
 
 #: noaa_i18n.dat:318
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "light rain"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Rain"
-msgstr "ceobhrán"
+msgstr ""
 
 #: noaa_i18n.dat:319
 #, kde-format
@@ -4788,12 +4720,10 @@ msgid "Heavy Rain"
 msgstr ""
 
 #: noaa_i18n.dat:323
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "light snow showers"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Rain Showers"
-msgstr "barrcheathanna sneachta"
+msgstr ""
 
 #: noaa_i18n.dat:324
 #, kde-format
@@ -4904,12 +4834,10 @@ msgid "Mostly Sunny"
 msgstr ""
 
 #: noaa_i18n.dat:346
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Mainly Sunny"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Partly Sunny"
-msgstr "Grianmhar Den Chuid is Mó"
+msgstr ""
 
 #: noaa_i18n.dat:348
 #, kde-format
@@ -4952,231 +4880,3 @@ msgstr ""
 msgctxt "weather forecast"
 msgid "Mostly Clear"
 msgstr ""
-
-#~ msgctxt "weather condition"
-#~ msgid "weather condition"
-#~ msgstr "aimsir"
-
-#~ msgctxt "weather condition"
-#~ msgid "thunder storm"
-#~ msgstr "stoirm thoirní"
-
-#~ msgctxt "weather forecast"
-#~ msgid "thunder storm"
-#~ msgstr "stoirm thoirní"
-
-#~ msgctxt "wind direction"
-#~ msgid "N"
-#~ msgstr "T"
-
-#~ msgctxt "wind direction"
-#~ msgid "NNE"
-#~ msgstr "TOT"
-
-#~ msgctxt "wind direction"
-#~ msgid "NE"
-#~ msgstr "OT"
-
-#~ msgctxt "wind direction"
-#~ msgid "ENE"
-#~ msgstr "OOT"
-
-#~ msgctxt "wind direction"
-#~ msgid "E"
-#~ msgstr "O"
-
-#~ msgctxt "wind direction"
-#~ msgid "SSE"
-#~ msgstr "DOD"
-
-#~ msgctxt "wind direction"
-#~ msgid "SE"
-#~ msgstr "OD"
-
-#~ msgctxt "wind direction"
-#~ msgid "ESE"
-#~ msgstr "OOD"
-
-#~ msgctxt "wind direction"
-#~ msgid "S"
-#~ msgstr "D"
-
-#~ msgctxt "wind direction"
-#~ msgid "NNW"
-#~ msgstr "TIT"
-
-#~ msgctxt "wind direction"
-#~ msgid "NW"
-#~ msgstr "IT"
-
-#~ msgctxt "wind direction"
-#~ msgid "WNW"
-#~ msgstr "IIT"
-
-#~ msgctxt "wind direction"
-#~ msgid "W"
-#~ msgstr "I"
-
-#~ msgctxt "wind direction"
-#~ msgid "SSW"
-#~ msgstr "DID"
-
-#~ msgctxt "wind direction"
-#~ msgid "SW"
-#~ msgstr "ID"
-
-#~ msgctxt "wind direction"
-#~ msgid "WSW"
-#~ msgstr "IID"
-
-#~ msgctxt "wind direction"
-#~ msgid "VR"
-#~ msgstr "Neamhchinnte"
-
-#~ msgctxt "pressure tendency"
-#~ msgid "rising"
-#~ msgstr "éirí"
-
-#~ msgctxt "pressure tendency"
-#~ msgid "falling"
-#~ msgstr "titim"
-
-#~ msgctxt "pressure tendency"
-#~ msgid "no change"
-#~ msgstr "gan athrú"
-
-#~ msgctxt "wind speed"
-#~ msgid "Calm"
-#~ msgstr "Ciúin"
-
-#~ msgctxt "wind direction - wind speed is too low to measure"
-#~ msgid "VR"
-#~ msgstr "Neamhchinnte"
-
-#~ msgid "N"
-#~ msgstr "T"
-
-#~ msgid "NNE"
-#~ msgstr "TOT"
-
-#~ msgid "NE"
-#~ msgstr "OT"
-
-#~ msgid "ENE"
-#~ msgstr "OOT"
-
-#~ msgid "E"
-#~ msgstr "O"
-
-#~ msgid "SSE"
-#~ msgstr "DOD"
-
-#~ msgid "SE"
-#~ msgstr "OD"
-
-#~ msgid "ESE"
-#~ msgstr "OOD"
-
-#~ msgid "S"
-#~ msgstr "D"
-
-#~ msgid "NNW"
-#~ msgstr "TIT"
-
-#~ msgid "NW"
-#~ msgstr "IT"
-
-#~ msgid "WNW"
-#~ msgstr "IIT"
-
-#~ msgid "W"
-#~ msgstr "I"
-
-#~ msgid "SSW"
-#~ msgstr "DID"
-
-#~ msgid "SW"
-#~ msgstr "ID"
-
-#~ msgid "WSW"
-#~ msgstr "IID"
-
-#~ msgid "Meteorological data is provided by Environment Canada"
-#~ msgstr "Sonraí meitéáreolaíochta ó Environment Canada"
-
-#~ msgid "Supported by backstage.bbc.co.uk / Data from UK MET Office"
-#~ msgstr ""
-#~ "Tacaithe ag backstage.bbc.co.uk / Sonraí ó Oifig Mheitéareolaíocht na "
-#~ "Ríochta Aontaithe"
-
-#~ msgctxt "Degree, unit symbol"
-#~ msgid "°"
-#~ msgstr "°"
-
-#~ msgctxt "Celsius, temperature unit"
-#~ msgid "°C"
-#~ msgstr "°C"
-
-#~ msgctxt "Fahrenheit, temperature unit"
-#~ msgid "°F"
-#~ msgstr "°F"
-
-#~ msgctxt "Kelvin, temperature unit"
-#~ msgid "K"
-#~ msgstr "K"
-
-#~ msgctxt "kilometers per hour, windspeed unit"
-#~ msgid "km/h"
-#~ msgstr "km/h"
-
-#~ msgctxt "meters per second, windspeed unit"
-#~ msgid "m/s"
-#~ msgstr "m/s"
-
-#~ msgctxt "miles per hour, windspeed unit"
-#~ msgid "mph"
-#~ msgstr "msu"
-
-#~ msgctxt "knots, wind speed unit"
-#~ msgid "kt"
-#~ msgstr "kt"
-
-#~ msgctxt "beaufort, wind speed unit"
-#~ msgid "Bft"
-#~ msgstr "Bft"
-
-#~ msgctxt "kilometers, distance unit"
-#~ msgid "km"
-#~ msgstr "km"
-
-#~ msgctxt "miles, distance unit"
-#~ msgid "mi"
-#~ msgstr "mi"
-
-#~ msgctxt "centimeters, length unit"
-#~ msgid "cm"
-#~ msgstr "cm"
-
-#~ msgctxt "millimeters, length unit"
-#~ msgid "mm"
-#~ msgstr "mm"
-
-#~ msgctxt "inches, length unit"
-#~ msgid "in"
-#~ msgstr "or"
-
-#~ msgctxt "kilopascals, airpressure unit"
-#~ msgid "kPa"
-#~ msgstr "kPa"
-
-#~ msgctxt "inches hg, airpressure unit"
-#~ msgid "inHg"
-#~ msgstr "orHg"
-
-#~ msgctxt "millibars, airpressure unit"
-#~ msgid "mbar"
-#~ msgstr "mbar"
-
-#~ msgctxt "hectopascals, airpressure unit"
-#~ msgid "hPa"
-#~ msgstr "hPa"

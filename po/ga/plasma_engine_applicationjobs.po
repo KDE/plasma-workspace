@@ -29,6 +29,3 @@ msgstr "JabAmharc %1 gan aimsiú"
 msgctxt "Bytes per second"
 msgid "%1/s"
 msgstr "%1/s"
-
-#~ msgid "Job canceled by user."
-#~ msgstr "Chealaigh an t-úsáideoir an jab."

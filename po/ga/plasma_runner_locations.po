@@ -46,6 +46,3 @@ msgstr "Téigh go %1"
 #, kde-format
 msgid "Send email to %1"
 msgstr "Seol ríomhphost chuig %1"
-
-#~ msgid "Locations"
-#~ msgstr "Suímh"
