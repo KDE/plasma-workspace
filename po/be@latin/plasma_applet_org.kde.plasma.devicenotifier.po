@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-11 00:47+0000\n"
+"POT-Creation-Date: 2026-02-20 00:48+0000\n"
 "PO-Revision-Date: 2008-10-05 10:34+0300\n"
 "Last-Translator: Ihar Hrachyshka <ihar.hrachyshka@gmail.com>\n"
 "Language-Team: Belarusian Latin <i18n@mova.org>\n"
@@ -193,16 +193,16 @@ msgstr "Apošniaja padłučanaja pryłada: %1"
 #: qml/DeviceItem.qml:99
 #, kde-format
 msgctxt ""
-"Accessing is a less technical word for Mounting; translation should be short "
-"and mean 'Currently mounting this device'"
+"Translation should be short and mean 'Currently checking the device for "
+"filesystem errors'"
 msgid "Checking…"
 msgstr ""
 
 #: qml/DeviceItem.qml:101
 #, kde-format
 msgctxt ""
-"Accessing is a less technical word for Mounting; translation should be short "
-"and mean 'Currently mounting this device'"
+"Translation should be short and mean 'The storage device contains filesystem "
+"errors and is being repaired'"
 msgid "Repairing…"
 msgstr ""
 

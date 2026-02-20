@@ -46,6 +46,3 @@ msgstr "Taispeáin na modúil a ritear ag am tosaithe"
 #, kde-format
 msgid "Configuration module to run"
 msgstr "Modúl cumraíochta le rith"
-
-#~ msgid "Module %1 not found"
-#~ msgstr "Modúl %1 gan aimsiú"

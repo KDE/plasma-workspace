@@ -96,7 +96,3 @@ msgstr "Te"
 msgctxt "@label:slider"
 msgid "Night light temperature:"
 msgstr "Solas oíche teochta:"
-
-#~ msgctxt "Color temperature in Kelvin"
-#~ msgid "%1K"
-#~ msgstr "%1K"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-11 00:47+0000\n"
+"POT-Creation-Date: 2026-02-20 00:48+0000\n"
 "PO-Revision-Date: 2025-07-15 10:02+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -165,19 +165,27 @@ msgstr "No s'ha pogut reparar aquest dispositiu: %1"
 
 # skip-rule: kct-remove
 #: qml/DeviceItem.qml:99
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Accessing is a less technical word for Mounting; translation should be "
+#| "short and mean 'Currently mounting this device'"
+#| msgid "Checking…"
 msgctxt ""
-"Accessing is a less technical word for Mounting; translation should be short "
-"and mean 'Currently mounting this device'"
+"Translation should be short and mean 'Currently checking the device for "
+"filesystem errors'"
 msgid "Checking…"
 msgstr "S'està comprovant…"
 
 # skip-rule: kct-remove
 #: qml/DeviceItem.qml:101
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Accessing is a less technical word for Mounting; translation should be "
+#| "short and mean 'Currently mounting this device'"
+#| msgid "Repairing…"
 msgctxt ""
-"Accessing is a less technical word for Mounting; translation should be short "
-"and mean 'Currently mounting this device'"
+"Translation should be short and mean 'The storage device contains filesystem "
+"errors and is being repaired'"
 msgid "Repairing…"
 msgstr "S'està reparant…"
 

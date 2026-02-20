@@ -98,7 +98,3 @@ msgstr "Varm"
 msgctxt "@label:slider"
 msgid "Night light temperature:"
 msgstr "Kveldsfarge-temperatur:"
-
-#~ msgctxt "Color temperature in Kelvin"
-#~ msgid "%1K"
-#~ msgstr "%1 K"

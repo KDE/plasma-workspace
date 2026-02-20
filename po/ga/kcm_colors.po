@@ -34,10 +34,9 @@ msgid "Unable to create a temporary file."
 msgstr "Ní féidir comhad sealadach a chruthú."
 
 #: colors.cpp:266
-#, fuzzy, kde-format
-#| msgid "&Enter a name for the color scheme:"
+#, kde-format
 msgid "Unable to download the color scheme: %1"
-msgstr "&Iontráil ainm ar an scéim datha:"
+msgstr ""
 
 #: colors.cpp:284
 #, kde-format
@@ -61,17 +60,15 @@ msgstr ""
 
 #. i18n: ectx: label, entry (colorScheme), group (General)
 #: colorssettings.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Save Color Scheme"
+#, kde-format
 msgid "Color scheme name"
-msgstr "Sábháil Scéim Datha"
+msgstr ""
 
 #. i18n: ectx: label, entry (accentColor), group (General)
 #: colorssettings.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Inactive color"
+#, kde-format
 msgid "Accent color"
-msgstr "Dath neamhghníomhach"
+msgstr ""
 
 #. i18n: ectx: label, entry (lastUsedCustomAccentColor), group (General)
 #: colorssettings.kcfg:17
@@ -93,10 +90,9 @@ msgid "KColorSchemeEditor"
 msgstr "KColorSchemeEditor"
 
 #: editor/kcolorschemeeditor.cpp:25
-#, fuzzy, kde-format
-#| msgid "Save the current color scheme"
+#, kde-format
 msgid "Utility to edit and create color schemes"
-msgstr "Sábháil an scéim reatha datha"
+msgstr ""
 
 #: editor/kcolorschemeeditor.cpp:27
 #, kde-format
@@ -155,12 +151,10 @@ msgstr "Téacs fuinneoige ar chúlra na fuinneoige"
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: editor/preview.ui:32
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "Window text"
+#, kde-format
 msgctxt "color-kcm-preview"
 msgid "Window text"
-msgstr "Téacs fuinneog"
+msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, pushButton)
 #: editor/preview.ui:39
@@ -217,12 +211,10 @@ msgstr "Nasc Feicthe Roghnaithe ar Ghnáthchúlra Roghnaithe"
 #. i18n: ectx: property (text), widget (QLabel, labelSelection4)
 #. i18n: ectx: property (text), widget (QLabel, labelView4)
 #: editor/preview.ui:156 editor/preview.ui:280
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "visited"
+#, kde-format
 msgctxt "color-kcm-preview"
 msgid "visited"
-msgstr "feicthe"
+msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelSelection2)
 #: editor/preview.ui:163
@@ -313,12 +305,10 @@ msgstr "Gnáth-Théacs Amhairc ar Ghnáthchúlra Amhairc"
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, labelView0)
 #: editor/preview.ui:250
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "Normal text"
+#, kde-format
 msgctxt "color-kcm-preview"
 msgid "Normal text"
-msgstr "Gnáth-théacs"
+msgstr ""
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView3)
 #: editor/preview.ui:262
@@ -452,12 +442,10 @@ msgstr "Tacar dathanna le hamharc/hathrú"
 #. i18n: 'Common' here means &quot;frequent/not rare&quot;, not &quot;shared&quot;
 #. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
 #: editor/scmeditorcolors.ui:40
-#, fuzzy, kde-format
-#| msgctxt "color-sets"
-#| msgid "Common Colors"
+#, kde-format
 msgctxt "color-sets"
 msgid "Common colors"
-msgstr "Gnáth-Dhathanna"
+msgstr ""
 
 #. i18n: see plasma-workspace/kcms/colors/README.i18n
 #. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
@@ -478,12 +466,10 @@ msgstr "Fuinneog"
 #. i18n: see plasma-workspace/kcms/colors/README.i18n
 #. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
 #: editor/scmeditorcolors.ui:55
-#, fuzzy, kde-format
-#| msgctxt "color-sets"
-#| msgid "Button"
+#, kde-format
 msgctxt "color-sets"
 msgid "Button"
-msgstr "Cnaipe"
+msgstr ""
 
 #. i18n: see plasma-workspace/kcms/colors/README.i18n
 #. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
@@ -712,11 +698,9 @@ msgid "Error"
 msgstr "Earráid"
 
 #: editor/scmeditordialog.cpp:193
-#, fuzzy, kde-format
-#| msgctxt "@title:tab color transformations on inactive elements"
-#| msgid "Inactive"
+#, kde-format
 msgid "Inactive"
-msgstr "Neamhghníomhach"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label_4)
 #: editor/scmeditoreffects.ui:17
@@ -857,10 +841,9 @@ msgstr "Méid codarsnachta ar mhíreanna díchumasaithe"
 
 #. i18n: ectx: property (text), widget (QCheckBox, useInactiveEffects)
 #: editor/scmeditoroptions.ui:17
-#, fuzzy, kde-format
-#| msgid "Apply inactive window color &effects"
+#, kde-format
 msgid "Apply &effects to inactive windows"
-msgstr "Cuir maisíochtaí datha i bhf&eidhm ar fhuinneoga neamhghníomhacha"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, inactiveSelectionEffect)
 #: editor/scmeditoroptions.ui:24
@@ -882,10 +865,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QCheckBox, tintColors)
 #: editor/scmeditoroptions.ui:45
-#, fuzzy, kde-format
-#| msgid "Inactive color"
+#, kde-format
 msgid "Tint all colors with accent color"
-msgstr "Dath neamhghníomhach"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: editor/scmeditoroptions.ui:52
@@ -1235,10 +1217,9 @@ msgid "Successfully applied the accent color %1"
 msgstr ""
 
 #: plasma-apply-colorscheme.cpp:153
-#, fuzzy, kde-format
-#| msgid "Inactive color"
+#, kde-format
 msgid "Invalid accent color "
-msgstr "Dath neamhghníomhach"
+msgstr ""
 
 #: plasma-apply-colorscheme.cpp:158
 #, kde-format
@@ -1246,31 +1227,27 @@ msgid "You have the following color schemes on your system:"
 msgstr ""
 
 #: plasma-apply-colorscheme.cpp:163
-#, fuzzy, kde-format
-#| msgid "Save the current color scheme"
+#, kde-format
 msgid " * %1 (current color scheme)"
-msgstr "Sábháil an scéim reatha datha"
+msgstr ""
 
 #: ui/AccentColorUI.qml:27
-#, fuzzy, kde-format
-#| msgid "Import Color Scheme"
+#, kde-format
 msgctxt "@item:inlistbox Accent color from color scheme"
 msgid "Accent color from color scheme"
-msgstr "Iompórtáil Scéim Datha"
+msgstr ""
 
 #: ui/AccentColorUI.qml:28
-#, fuzzy, kde-format
-#| msgid "Import Color Scheme"
+#, kde-format
 msgctxt "@item:inlistbox Accent color from wallpaper"
 msgid "Accent color from wallpaper"
-msgstr "Iompórtáil Scéim Datha"
+msgstr ""
 
 #: ui/AccentColorUI.qml:29
-#, fuzzy, kde-format
-#| msgid "Inactive color"
+#, kde-format
 msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom accent color"
-msgstr "Dath neamhghníomhach"
+msgstr ""
 
 #: ui/main.qml:90
 #, kde-format
@@ -1279,25 +1256,22 @@ msgid ""
 msgstr ""
 
 #: ui/main.qml:123
-#, fuzzy, kde-format
-#| msgid "&Upload Scheme..."
+#, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "All schemes"
-msgstr "&Uasluchtaigh Scéim..."
+msgstr ""
 
 #: ui/main.qml:124
-#, fuzzy, kde-format
-#| msgid "&Scheme"
+#, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "Light schemes"
-msgstr "&Scéim"
+msgstr ""
 
 #: ui/main.qml:125
-#, fuzzy, kde-format
-#| msgid "Save Scheme..."
+#, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "Dark schemes"
-msgstr "Sábháil Scéim..."
+msgstr ""
 
 #: ui/main.qml:152
 #, kde-format
@@ -1309,19 +1283,15 @@ msgstr ""
 msgid "Get New…"
 msgstr ""
 
-# gen plural in all of these
 #: ui/main.qml:204
-#, fuzzy, kde-format
-#| msgid "Window Text"
+#, kde-format
 msgid "Window Title"
-msgstr "Téacs Fuinneog"
+msgstr ""
 
 #: ui/main.qml:227
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "Window text"
+#, kde-format
 msgid "Window text"
-msgstr "Téacs fuinneog"
+msgstr ""
 
 #: ui/main.qml:235
 #, kde-format
@@ -1335,52 +1305,42 @@ msgid "link"
 msgstr "nasc"
 
 #: ui/main.qml:277
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "visited"
+#, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
-msgstr "feicthe"
+msgstr ""
 
 #: ui/main.qml:285
-#, fuzzy, kde-format
-#| msgctxt "color-kcm-preview"
-#| msgid "Normal text"
+#, kde-format
 msgid "Normal text"
-msgstr "Gnáth-théacs"
+msgstr ""
 
 #: ui/main.qml:292
-#, fuzzy, kde-format
-#| msgid "Visited Text"
+#, kde-format
 msgid "Highlighted text"
-msgstr "Téacs Feicthe"
+msgstr ""
 
 #: ui/main.qml:299
-#, fuzzy, kde-format
-#| msgctxt "@title:tab color transformations on disabled elements"
-#| msgid "Disabled"
+#, kde-format
 msgid "Disabled text"
-msgstr "Díchumasaithe"
+msgstr ""
 
 #: ui/main.qml:317
-#, fuzzy, kde-format
-#| msgid "&Upload Scheme..."
+#, kde-format
 msgid "Edit Color Scheme…"
-msgstr "&Uasluchtaigh Scéim..."
+msgstr ""
 
 #: ui/main.qml:324
-#, fuzzy, kde-format
-#| msgid "Save Color Scheme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove color scheme"
-msgstr "Sábháil Scéim Datha"
+msgstr ""
 
 #: ui/main.qml:326
-#, fuzzy, kde-format
-#| msgid "Save the current color scheme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active color scheme"
-msgstr "Sábháil an scéim reatha datha"
+msgstr ""
 
 #: ui/main.qml:328
 #, kde-format
@@ -1402,319 +1362,3 @@ msgstr "Oscail Scéim Datha"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Comhaid Scéim Dathanna (*.colors)"
-
-#, fuzzy
-#~| msgid "Import Color Scheme"
-#~ msgid "Restore Color Scheme"
-#~ msgstr "Iompórtáil Scéim Datha"
-
-#~ msgid "Shading of frames and lighting (\"3D\") effects"
-#~ msgstr "Scáthú frámaí agus maisíochtaí soilsithe (\"3T\")"
-
-#~ msgid "Shading"
-#~ msgstr "Scáthlíniú"
-
-#~ msgid "Maximum"
-#~ msgstr "Uasmhéid"
-
-#~ msgid "Minimum"
-#~ msgstr "Íosmhéid"
-
-#, fuzzy
-#~| msgid "Get &New Schemes..."
-#~ msgid "Get New Color Schemes…"
-#~ msgstr "Faigh Scéimeanna &Nua..."
-
-#, fuzzy
-#~| msgid "Save the current color scheme"
-#~ msgid "From current color scheme"
-#~ msgstr "Sábháil an scéim reatha datha"
-
-#, fuzzy
-#~| msgid "Save the current color scheme"
-#~ msgctxt "@option:radio wallpaper accent color option"
-#~ msgid "From current wallpaper"
-#~ msgstr "Sábháil an scéim reatha datha"
-
-#, fuzzy
-#~| msgid "Apply inactive window color &effects"
-#~ msgid "Apply a&ccent color to active window titlebars"
-#~ msgstr "Cuir maisíochtaí datha i bhf&eidhm ar fhuinneoga neamhghníomhacha"
-
-#, fuzzy
-#~| msgid "Apply inactive window color &effects"
-#~ msgid "Apply acce&nt color to inactive window titlebars"
-#~ msgstr "Cuir maisíochtaí datha i bhf&eidhm ar fhuinneoga neamhghníomhacha"
-
-#~ msgid "Share the selected scheme on the Internet"
-#~ msgstr "Roinn an scéim roghnaithe ar an Idirlíon"
-
-#, fuzzy
-#~| msgid "&Upload Scheme..."
-#~ msgid "Upload Scheme"
-#~ msgstr "&Uasluchtaigh Scéim..."
-
-#, fuzzy
-#~| msgid "Get &New Schemes..."
-#~ msgid "Download New Color Schemes"
-#~ msgstr "Faigh Scéimeanna &Nua..."
-
-#, fuzzy
-#~| msgid "Edit"
-#~ msgid "Edit..."
-#~ msgstr "Eagar"
-
-#~ msgid "Remove the selected scheme"
-#~ msgstr "Bain an scéim roghnaithe"
-
-#, fuzzy
-#~| msgid "Remove Scheme"
-#~ msgid "Remove"
-#~ msgstr "Bain Scéim"
-
-#, fuzzy
-#~| msgid "Get new color schemes from the Internet"
-#~ msgid "Import a color scheme from a file"
-#~ msgstr "Faigh scéimeanna nua datha ón Idirlíon"
-
-#~ msgid "Get new color schemes from the Internet"
-#~ msgstr "Faigh scéimeanna nua datha ón Idirlíon"
-
-#, fuzzy
-#~| msgid "Get &New Schemes..."
-#~ msgid "Get &New Color Schemes..."
-#~ msgstr "Faigh Scéimeanna &Nua..."
-
-#, fuzzy
-#~| msgid "Apply colors to &non-KDE4 applications"
-#~ msgid "Apply colors to &non-Qt applications"
-#~ msgstr "Cuir dathanna i bhfeidhm ar fheidhmchláir &neamh-KDE4"
-
-#~ msgid "(c) 2007 Matthew Woehlke"
-#~ msgstr "© 2007 Matthew Woehlke"
-
-#~ msgctxt "Default color scheme"
-#~ msgid "Default"
-#~ msgstr "Scéim Réamhshocraithe"
-
-#~ msgctxt "Current color scheme"
-#~ msgid "Current"
-#~ msgstr "Scéim Reatha"
-
-#~ msgid "You do not have permission to delete that scheme"
-#~ msgstr "Níl cead agat an scéim sin a scriosadh"
-
-#~ msgid "Notice"
-#~ msgstr "Fógra"
-
-# a checkbox, so this translation is right and not "Dath ..."
-#~ msgid "In&active selection changes color"
-#~ msgstr "&Athraíonn roghnú neamhghníomhach an dath"
-
-#~ msgid "Selecting another scheme will discard any changes you have made"
-#~ msgstr "Má roghnaíonn tú scéim eile, ní choinneofar do chuid athruithe"
-
-#~ msgid "Are you sure?"
-#~ msgstr "An bhfuil tú cinnte?"
-
-#~ msgid ""
-#~ "The scheme you have selected appears to be a KDE3 scheme.\n"
-#~ "\n"
-#~ "KDE will attempt to import this scheme, however many color roles have "
-#~ "been added since KDE3. Some manual work will likely be required.\n"
-#~ "\n"
-#~ "This scheme will not be saved automatically."
-#~ msgstr ""
-#~ "Dealraíonn sé gur scéim KDE3 an scéim a roghnaigh tú.\n"
-#~ "\n"
-#~ "Déanfaidh KDE iarracht an scéim seo a iompórtáil, ach tá go leor rólanna "
-#~ "nua datha ann ó KDE3. Is dócha go mbeidh roinnt oibre láimhe de dhíth.\n"
-#~ "\n"
-#~ "Ní shábhálfar an scéim seo go huathoibríoch."
-
-#~ msgid "Please save the color scheme before uploading it."
-#~ msgstr "Sábháil an scéim datha sula n-uasluchtóidh tú é."
-
-#~ msgid "Please save"
-#~ msgstr "Sábháil é le do thoil"
-
-#~ msgctxt "@title:tab color transformations on inactive elements"
-#~ msgid "Inactive"
-#~ msgstr "Neamhghníomhach"
-
-#~ msgid "Inactive intensity effect type"
-#~ msgstr "Cineál na héifeachta déine ar mhíreanna neamhghníomhacha"
-
-#~ msgctxt "no inactive intensity effect"
-#~ msgid "None"
-#~ msgstr "Neamhní"
-
-#~ msgctxt "inactive intensity effect"
-#~ msgid "Shade"
-#~ msgstr "Scáthaigh"
-
-#~ msgctxt "inactive intensity effect"
-#~ msgid "Darken"
-#~ msgstr "Dorchaigh"
-
-#~ msgctxt "inactive intensity effect"
-#~ msgid "Lighten"
-#~ msgstr "Sorchaigh"
-
-#~ msgid "Inactive intensity effect amount"
-#~ msgstr "Méid na héifeachta déine ar mhíreanna neamhghníomhacha"
-
-#~ msgid "Inactive color effect type"
-#~ msgstr "Cineál na héifeachta datha ar mhíreanna neamhghníomhacha"
-
-#~ msgctxt "no inactive color effect"
-#~ msgid "None"
-#~ msgstr "Neamhní"
-
-#~ msgctxt "inactive color effect"
-#~ msgid "Desaturate"
-#~ msgstr "Dísháithigh"
-
-#~ msgctxt "inactive color effect"
-#~ msgid "Fade"
-#~ msgstr "Céimnigh"
-
-#~ msgctxt "inactive color effect"
-#~ msgid "Tint"
-#~ msgstr "Imir"
-
-#~ msgid "Inactive color amount"
-#~ msgstr "Méid datha ar mhíreanna neamhghníomhacha"
-
-#~ msgid "Inactive contrast effect type"
-#~ msgstr "Cineál na héifeachta codarsnachta ar mhíreanna neamhghníomhacha"
-
-#~ msgctxt "no inactive contrast effect"
-#~ msgid "None"
-#~ msgstr "Neamhní"
-
-#~ msgctxt "inactive contrast effect"
-#~ msgid "Fade"
-#~ msgstr "Céimnigh"
-
-#~ msgctxt "inactive contrast effect"
-#~ msgid "Tint"
-#~ msgstr "Imir"
-
-#~ msgid "Inactive contrast effect amount"
-#~ msgstr "Méid na héifeachta codarsnachta ar mhíreanna neamhghníomhacha"
-
-#~ msgid "Preview"
-#~ msgstr "Réamhamharc"
-
-#~ msgid "Import Scheme..."
-#~ msgstr "Iompórtáil Scéim..."
-
-#~ msgid "Contrast used for 3D objects"
-#~ msgstr "Codarsnacht do réada 3T"
-
-#~ msgid "&Save..."
-#~ msgstr "&Sábháil..."
-
-#~ msgid "Rem&ove"
-#~ msgstr "&Bain"
-
-#~ msgid "I&mport..."
-#~ msgstr "Io&mpórtáil..."
-
-#~ msgid "&Effects"
-#~ msgstr "&Maisíochtaí"
-
-#~ msgid "Active Window"
-#~ msgstr "Fuinneog Ghníomhach"
-
-#~ msgid "Active Window Text"
-#~ msgstr "Téacs Fuinneog Gníomhach"
-
-#~ msgid "Inactive Window"
-#~ msgstr "Fuinneog Neamhghníomhach"
-
-#~ msgid "InactiveWindowText"
-#~ msgstr "Téacs Fuinneog Neamhghníomhach"
-
-#~ msgid "Standard"
-#~ msgstr "Caighdeánach"
-
-#~ msgid "Active Title Button"
-#~ msgstr "Cnaipe Teidil Gníomhach"
-
-#~ msgid "Active Window Handle"
-#~ msgstr "Hanla Fuinneoige Gníomhaí"
-
-#~ msgid "Inactive Window Handle"
-#~ msgstr "Hanla Fuinneoige Neamhghníomhaí"
-
-#~ msgid "Followed Link"
-#~ msgstr "Nasc Leanta"
-
-#~ msgid ""
-#~ "Check this box to show the sorted column in a list with a shaded "
-#~ "background"
-#~ msgstr ""
-#~ "Ticeáil an bosca seo chun an colún sórtáilte a thaispeáint i liosta le "
-#~ "cúlra scáthaithe"
-
-#~ msgctxt "Low Contrast"
-#~ msgid "Low"
-#~ msgstr "Íseal"
-
-#~ msgctxt "High Contrast"
-#~ msgid "High"
-#~ msgstr "Ard"
-
-#~ msgid ""
-#~ "Check this box to apply the current color scheme to non-KDE applications."
-#~ msgstr ""
-#~ "Ticeáil an bosca seo chun an scéim reatha datha a chur i bhfeidhm ar "
-#~ "fheidhmchláir neamh-KDE."
-
-#~ msgid "(c) 1997-2005 Colors Developers"
-#~ msgstr "© 1997-2005 Forbróirí Colors"
-
-#~ msgid "Mark Donohoe"
-#~ msgstr "Mark Donohoe"
-
-#~ msgid "Matthias Ettrich"
-#~ msgstr "Matthias Ettrich"
-
-#~ msgid "Geert Jansen"
-#~ msgstr "Geert Jansen"
-
-#~ msgid "Waldo Bastian"
-#~ msgstr "Waldo Bastian"
-
-#~ msgid "Overwrite"
-#~ msgstr "Forscríobh"
-
-#~ msgid "Import failed."
-#~ msgstr "Theip ar iompórtáil."
-
-#~ msgid "Untitled Theme"
-#~ msgstr "Téama Gan Teideal"
-
-#~ msgid "Role"
-#~ msgstr "Ról"
-
-#~ msgid "Foreground"
-#~ msgstr "Tulra"
-
-#~ msgid "File"
-#~ msgstr "Comhad"
-
-#~ msgid "Standard text"
-#~ msgstr "Téacs Caighdeánach"
-
-#~ msgid "followed link"
-#~ msgstr "nasc leanta"
-
-#~ msgctxt "Menu item"
-#~ msgid "Open"
-#~ msgstr "Oscail"
-
-#~ msgid "&Widget Color"
-#~ msgstr "&Dath Giuirléidí"
