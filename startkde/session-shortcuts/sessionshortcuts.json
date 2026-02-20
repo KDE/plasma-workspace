@@ -43,6 +43,7 @@
         "Description[sv]": "Tillhandahåller genvägar för vanliga sessionsåtgärder",
         "Description[ta]": "அமர்வுகுறித்த வழக்கமான செயல்களுக்கான சுருக்குவழிகளை வழங்கும்",
         "Description[tr]": "Temel oturum eylemleri için kısayollar sağlar",
+        "Description[ug]": "ئادەتتىكى جەريانچاق مەشغۇلاتىغا تېزلەتمە تەمىنلەيدۇ",
         "Description[uk]": "Надає клавіатурні скорочення для типових дій у сеансі",
         "Description[zh_CN]": "提供常见会话操作的快捷方式",
         "Description[zh_TW]": "提供快捷鍵給一般工作階段動作",
@@ -89,6 +90,7 @@
         "Name[sv]": "Sessionsgenvägar",
         "Name[ta]": "அமர்வு சுருக்குவழிகள்",
         "Name[tr]": "Oturum Kısayolları",
+        "Name[ug]": "جەريانچاق تېزلەتمىسى",
         "Name[uk]": "Скорочення сеансу",
         "Name[zh_CN]": "会话快捷键",
         "Name[zh_TW]": "工作階段快捷鍵"

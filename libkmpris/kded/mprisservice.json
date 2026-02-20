@@ -41,6 +41,7 @@
         "Description[sv]": "Styr mediaspelare med globala snabbtangenter",
         "Description[ta]": "முழுதளாவிய விசைச்சுருக்குவழிகளைக் கொண்டு ஊடக இயக்கிகளைக் கட்டுப்படுத்த உதவும்",
         "Description[tr]": "Global klavye kısayollarını kullanarak ortam oynatıcılarını denetler",
+        "Description[ug]": "ئومۇمىيەت ھەرپتاختا تېزلەتمىسى ئارقىلىق ۋاسىتە ياڭراتقۇنى تىزگىنلەيدۇ",
         "Description[uk]": "Керування мультимедійними програвачами за допомогою загальних клавіатурних скорочень",
         "Description[zh_CN]": "使用全局键盘快捷键控制媒体播放器",
         "Description[zh_TW]": "使用全域鍵盤快捷鍵控制媒體播放器",
@@ -88,6 +89,7 @@
         "Name[ta]": "ஊடக கட்டுப்படுத்தி",
         "Name[tok]": "ilo kalama",
         "Name[tr]": "Ortam Denetimcisi",
+        "Name[ug]": "ۋاسىتە تىزگىنى",
         "Name[uk]": "Керування мультимедійними можливостями",
         "Name[zh_CN]": "媒体控制器",
         "Name[zh_TW]": "媒體播放器控制器"

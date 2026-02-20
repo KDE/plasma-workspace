@@ -34,6 +34,7 @@
         "Description[sv]": "Anpassa dag-nattcykeltider",
         "Description[ta]": "பகல்-இரவு மாற்ற நேரங்களை அமையுங்கள்",
         "Description[tr]": "Gece–gündüz döngüsü zamanlarını yapılandırın",
+        "Description[ug]": "كېچە-كۈندۈز دەۋرىيلىك ۋاقتىنى سەپلەيدۇ",
         "Description[uk]": "Налаштовування моментів перемикання у циклі день-ніч",
         "Description[zh_CN]": "配置日夜周期时间",
         "Description[zh_TW]": "設定日夜過渡時間",
@@ -76,6 +77,7 @@
         "Name[sv]": "Dag och nattcykel",
         "Name[ta]": "பகல்-இரவு மாற்றம்",
         "Name[tr]": "Gece–Gündüz Döngüsü",
+        "Name[ug]": "كېچە-كۈندۈز دەۋرىيلىكى",
         "Name[uk]": "Цикл день-ніч",
         "Name[zh_CN]": "日夜周期",
         "Name[zh_TW]": "日夜過渡"
@@ -112,6 +114,7 @@
     "X-KDE-Keywords[sv]": "mörkt,ljust,natt,dag",
     "X-KDE-Keywords[ta]": "dark,light,night,day,இரவு,பகல்,வெளிச்சம்,இருட்டு",
     "X-KDE-Keywords[tr]": "koyu,açık,gece,gündüz,karanlık,aydınlık,akşam,sabah",
+    "X-KDE-Keywords[ug]": "dark,light,night,day,قاراڭغۇ,يورۇق,كېچە,كۈندۈز",
     "X-KDE-Keywords[uk]": "dark,light,night,day,темно,світло,ніч,день",
     "X-KDE-Keywords[zh_CN]": "dark,light,night,day,shense,anse,heian,liangse,qianse,mingliang,yejian,yewan,wanshang,rijian,baitian,深色,暗色,黑暗,亮色,浅色,明亮,夜间,夜晚,晚上,日间,白天",
     "X-KDE-Keywords[zh_TW]": "暗色,亮色,晚上,白天",

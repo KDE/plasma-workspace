@@ -47,6 +47,7 @@
                 "Name[sv]": "Julius Zint",
                 "Name[ta]": "ஜூலியசு ஃஜிண்ட்",
                 "Name[tr]": "Julius Zint",
+                "Name[ug]": "Julius Zint",
                 "Name[uk]": "Julius Zint",
                 "Name[zh_CN]": "Julius Zint",
                 "Name[zh_TW]": "Julius Zint"
@@ -97,6 +98,7 @@
         "Description[sv]": "Använd bild som (låsskärmens) skrivbordsunderlägg",
         "Description[ta]": "படத்தை பூட்டுதிரை பின்புலப்படமாக அமை",
         "Description[tr]": "Görseli, kilit ekranı duvar kâğıdı olarak ayarlayın",
+        "Description[ug]": "سۈرەتنى (قۇلۇپ ئېكران) تام قەغەزگە تەڭشەيدۇ",
         "Description[uk]": "Встановити зображення як фонове (для вікна блокування)",
         "Description[zh_CN]": "设置图像为 (锁屏) 壁纸",
         "Description[zh_TW]": "設定影像為（鎖定螢幕）桌布",
@@ -157,6 +159,7 @@
         "Name[sv]": "Använd som",
         "Name[ta]": "இதுவாக அமை",
         "Name[tr]": "Ayarla",
+        "Name[ug]": "تەڭشىكى",
         "Name[uk]": "Встановити як",
         "Name[zh_CN]": "设为",
         "Name[zh_TW]": "設為"

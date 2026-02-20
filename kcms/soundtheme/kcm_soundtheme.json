@@ -44,6 +44,7 @@
         "Description[sv]": "Välj ett ljudtema för underrättelser",
         "Description[ta]": "அறிவிப்புகளுக்கான ஒலித்திட்டத்தை அமையுங்கள்",
         "Description[tr]": "Bildirimler için bir ses teması seçin",
+        "Description[ug]": "ئۇقتۇرۇشنىڭ ئاۋاز ئۆرنىكى تاللىنىدۇ",
         "Description[uk]": "Вибір звукової теми для сповіщень",
         "Description[zh_CN]": "选择通知的声音主题",
         "Description[zh_TW]": "選擇通知用的音效主題",
@@ -93,6 +94,7 @@
         "Name[ta]": "கணினி ஒலிகள்",
         "Name[tok]": "kalama mu",
         "Name[tr]": "Sistem Sesleri",
+        "Name[ug]": "سىستېما ئاۋازى",
         "Name[uk]": "Системні звуки",
         "Name[zh_CN]": "系统声音",
         "Name[zh_TW]": "系統音效"
@@ -137,6 +139,7 @@
     "X-KDE-Keywords[sv]": "systemljud,ljudtema,ljud,varning,underrättelse,alarm",
     "X-KDE-Keywords[ta]": "system sounds,sound theme,sound,sounds,alert,notification,bell, கணினி ஒலி, கணினி ஒலிகள், ஒலித்திட்டம், ஒலி, ஒலிகள், அறிவிப்பு, மணி",
     "X-KDE-Keywords[tr]": "sistem sesleri,ses teması,ses,uyarı,ikaz,bildirim,zil",
+    "X-KDE-Keywords[ug]": "system sounds,sound theme,sound,sounds,alert,notification,bell,سىستېما ئاۋازى,ئاۋاز ئۆرنىكى,ئاۋاز,ئۈن,قوڭغۇراق,ئاگاھلاندۇرۇش,ئۇقتۇرۇش",
     "X-KDE-Keywords[uk]": "system sounds,sound theme,sound,sounds,alert,notification,bell,системні звуки,звукова тема,звук,звуки,нагадування,сповіщення,дзвінок,гудок",
     "X-KDE-Keywords[zh_CN]": "system sounds,sound theme,sound,sounds,alert,notification,bell,xitongshengyin,shengyinzhuti,shengyin,jinggao,tishi,jingbao,tongzhi,lingsheng,系统声音,声音主题,声音,警告,提示,警报,通知,铃声",
     "X-KDE-Keywords[zh_TW]": "系統聲音,聲音主題,音效主題,警示,主題,響鈴",

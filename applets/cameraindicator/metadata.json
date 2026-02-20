@@ -47,6 +47,7 @@
                 "Name[sv]": "Fushan Wen",
                 "Name[ta]": "ஃபுஷான் வென்",
                 "Name[tr]": "Fuşan Wen",
+                "Name[ug]": "Fushan Wen",
                 "Name[uk]": "Fushan Wen",
                 "Name[zh_CN]": "Fushan Wen",
                 "Name[zh_TW]": "Fushan Wen"
@@ -96,6 +97,7 @@
         "Description[sv]": "Visar om någon kamera för närvarande används av ett program",
         "Description[ta]": "எந்த செயலியாவது படக்கருவியை தற்போது பயன்படுத்துகிறதா என்பதைக் காட்டும்",
         "Description[tr]": "Herhangi bir uygulama tarafından kullanılan kamera olup olmadığını gösterir",
+        "Description[ug]": "نۆۋەتتە كامېرانى بىرەر پىروگرامما ئىشلىتىۋاتامدۇ يوق شۇنى كۆرسىتىدۇ",
         "Description[uk]": "Показує, чи використовується якась камера програмою",
         "Description[zh_CN]": "显示当前是否有应用正在使用相机",
         "Description[zh_TW]": "顯示是否有任何相機正被應用程式使用",
@@ -146,6 +148,7 @@
         "Name[ta]": "படக்கருவி நிலைகாட்டி",
         "Name[tok]": "mu pi ilo lukin",
         "Name[tr]": "Kamera Göstergesi",
+        "Name[ug]": "كامېرا كۆرسەتكۈچ",
         "Name[uk]": "Індикатор камери",
         "Name[zh_CN]": "相机指示器",
         "Name[zh_TW]": "相機指示器",
