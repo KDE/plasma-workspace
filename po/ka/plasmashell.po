@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-20 03:01+0000\n"
+"POT-Creation-Date: 2026-02-20 03:19+0000\n"
 "PO-Revision-Date: 2025-10-05 04:51+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -33,103 +33,103 @@ msgstr "Temuri.doghonadze@gmail.com"
 msgid "Configure Mouse Actions Plugin"
 msgstr "თაგუნას ქცევის დამატების მორგება"
 
-#: desktopview.cpp:220
+#: desktopview.cpp:223
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Dev"
 msgstr "KDE Plasma 6.0 Dev"
 
-#: desktopview.cpp:223
+#: desktopview.cpp:226
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Alpha"
 msgstr "KDE Plasma 6.0 ალფა"
 
-#: desktopview.cpp:226
+#: desktopview.cpp:229
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 1"
 msgstr "KDE Plasma 6.0 ბეტა 1"
 
-#: desktopview.cpp:229
+#: desktopview.cpp:232
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 2"
 msgstr "KDE Plasma 6.0 ბეტა 2"
 
-#: desktopview.cpp:232
+#: desktopview.cpp:235
 #, kde-format
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC1"
 msgstr "KDE Plasma 6.0 RC1"
 
-#: desktopview.cpp:235
+#: desktopview.cpp:238
 #, kde-format
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC2"
 msgstr "KDE Plasma 6.0 RC2"
 
-#: desktopview.cpp:261
+#: desktopview.cpp:264
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Dev"
 msgstr "KDE Plasma %1 Dev"
 
-#: desktopview.cpp:265
+#: desktopview.cpp:268
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Beta"
 msgstr "KDE Plasma %1 ბეტა"
 
-#: desktopview.cpp:268
+#: desktopview.cpp:271
 #, kde-format
 msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
 msgid "KDE Plasma %1 Beta %2"
 msgstr "KDE Plasma %1 ბეტა %2"
 
-#: desktopview.cpp:272
+#: desktopview.cpp:275
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1"
 msgstr "KDE Plasma %1"
 
-#: desktopview.cpp:278
+#: desktopview.cpp:281
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
 msgstr "შეცდომების შესახებ მოსაწერად ეწვიეთ bugs.kde.org"
 
-#: desktopview.cpp:286
+#: desktopview.cpp:289
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy Plasma Version"
 msgstr "Plasma-ის ვერსიის კოპირება"
 
-#: desktopview.cpp:292
+#: desktopview.cpp:295
 #, kde-format
 msgctxt "@action:button"
 msgid "Report a Bug…"
 msgstr "შეცდომის პატაკი…"
 
-#: desktopview.cpp:302
+#: desktopview.cpp:305
 #, kde-format
 msgctxt "@title:menu"
 msgid "Hide Preview Banner"
 msgstr "მინიატურის ბანერის დამალვა"
 
-#: desktopview.cpp:304
+#: desktopview.cpp:307
 #, kde-format
 msgctxt "@action:button Hide the preview banner until the system is restarted"
 msgid "Hide Until Restart"
 msgstr "დამალვა გადატვირთვამდე"
 
-#: desktopview.cpp:311
+#: desktopview.cpp:314
 #, kde-format
 msgctxt "@action:button Hide the preview banner permanently"
 msgid "Hide Permanently…"
 msgstr "სამუდამოდ დამალვა…"
 
-#: desktopview.cpp:317
+#: desktopview.cpp:320
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -142,18 +142,18 @@ msgstr ""
 "დაბრუნება, მხოლოდ, <filename>kdeglobals</filename> კონფიგურაციის ფაილიდან "
 "<icode>ShowDesktopPreviewBanner</icode> შემცველი ხაზის წაშლით შეგიძლიათ."
 
-#: desktopview.cpp:319
+#: desktopview.cpp:322
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide Preview Banner?"
 msgstr "დავმალო მინიატურის ბანერი?"
 
-#: desktopview.cpp:554 desktopview.cpp:570
+#: desktopview.cpp:557 desktopview.cpp:573
 #, kde-format
 msgid "Enter Edit Mode"
 msgstr "ჩასწორების რეჟიმზე გადასვლა"
 
-#: desktopview.cpp:568
+#: desktopview.cpp:571
 #, kde-format
 msgid "Exit Edit Mode"
 msgstr "ჩასწორების რეჟიმიდან გასვლა"
@@ -333,13 +333,13 @@ msgstr ""
 "რეჟიმებს, ცნობილია, რომ ფანჯრის გადათრევისა და ზომის შეცვლისას საშინელი "
 "წარმადობა გააჩნიათ. იფიქრეთ სხვა პარამეტრების გამოყენებაზე."
 
-#: panelview.cpp:1140
+#: panelview.cpp:1144
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "პანელის კონფიგურაციის დამალვა"
 
-#: panelview.cpp:1142
+#: panelview.cpp:1146
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"

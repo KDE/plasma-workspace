@@ -64,16 +64,11 @@ msgid ""
 msgstr ""
 
 #: main.cpp:129
-#, fuzzy, kde-format
-#| msgid ""
-#| "The reliable KDE session manager that talks the standard X11R6 \n"
-#| "session management protocol (XSMP)."
+#, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
 "session management protocol (XSMP)."
 msgstr ""
-"Bainisteoir iontaofa na seisiún KDE a úsáideann prótacal caighdeánaithe\n"
-"X11R6 um bainistiú na seisiún (X Session Management Protocol, XSMP)."
 
 #: main.cpp:133
 #, kde-format
@@ -120,140 +115,3 @@ msgid ""
 "exhausted the system's session restoration resources. Please report this to "
 "the app's developers."
 msgstr ""
-
-#, fuzzy
-#~| msgid "The KDE Session Manager"
-#~ msgid "Session Management"
-#~ msgstr "Bainisteoir na Seisiún KDE"
-
-#~ msgid "Log Out"
-#~ msgstr "Logáil Amach"
-
-#~ msgid "Log Out Without Confirmation"
-#~ msgstr "Logáil Amach Gan Deimhniú"
-
-#, fuzzy
-#~| msgid "Halt Without Confirmation"
-#~ msgid "Shut Down Without Confirmation"
-#~ msgstr "Stop gan Deimhniú"
-
-#~ msgid "Reboot Without Confirmation"
-#~ msgstr "Atosaigh gan Deimhniú"
-
-#, fuzzy
-#~| msgid ""
-#~| "Starts 'wm' in case no other window manager is \n"
-#~| "participating in the session. Default is 'kwin'"
-#~ msgid ""
-#~ "Starts <wm> in case no other window manager is \n"
-#~ "participating in the session. Default is 'kwin'"
-#~ msgstr ""
-#~ "Tosaigh 'wm' sa chás nach bhfuil bainisteoir fuinneog eile\n"
-#~ "páirteach sa seisiún. Is é 'kwin' an ceann réamhshocraithe"
-
-#, fuzzy
-#~| msgid "&Logout"
-#~ msgid "Logout"
-#~ msgstr "&Logáil Amach"
-
-#~ msgid "Sleeping in 1 second"
-#~ msgid_plural "Sleeping in %1 seconds"
-#~ msgstr[0] "Ag dul a chodladh i gceann 1 soicind."
-#~ msgstr[1] "Ag dul a chodladh i gceann %1 shoicind."
-#~ msgstr[2] "Ag dul a chodladh i gceann %1 shoicind."
-#~ msgstr[3] "Ag dul a chodladh i gceann %1 soicind."
-#~ msgstr[4] "Ag dul a chodladh i gceann %1 soicind."
-
-#~ msgid "Lock"
-#~ msgstr "Cuir Faoi Ghlas"
-
-#~ msgid "Turn off"
-#~ msgstr "Múch"
-
-#~ msgid "Sleep"
-#~ msgstr "Codail"
-
-#~ msgid "Logging out in 1 second."
-#~ msgid_plural "Logging out in %1 seconds."
-#~ msgstr[0] "Logáil amach i gceann 1 soicind."
-#~ msgstr[1] "Logáil amach i gceann %1 shoicind."
-#~ msgstr[2] "Logáil amach i gceann %1 shoicind."
-#~ msgstr[3] "Logáil amach i gceann %1 soicind."
-#~ msgstr[4] "Logáil amach i gceann %1 soicind."
-
-#~ msgid "Turning off computer in 1 second."
-#~ msgid_plural "Turning off computer in %1 seconds."
-#~ msgstr[0] "Ríomhaire á mhúchadh i gceann 1 soicind."
-#~ msgstr[1] "Ríomhaire á mhúchadh i gceann %1 shoicind."
-#~ msgstr[2] "Ríomhaire á mhúchadh i gceann %1 shoicind."
-#~ msgstr[3] "Ríomhaire á mhúchadh i gceann %1 soicind."
-#~ msgstr[4] "Ríomhaire á mhúchadh i gceann %1 soicind."
-
-#~ msgid "Restarting computer in 1 second."
-#~ msgid_plural "Restarting computer in %1 seconds."
-#~ msgstr[0] "Ríomhaire á atosú i gceann 1 soicind."
-#~ msgstr[1] "Ríomhaire á atosú i gceann %1 shoicind."
-#~ msgstr[2] "Ríomhaire á atosú i gceann %1 shoicind."
-#~ msgstr[3] "Ríomhaire á atosú i gceann %1 soicind."
-#~ msgstr[4] "Ríomhaire á atosú i gceann %1 soicind."
-
-#, fuzzy
-#~| msgid "&Turn Off Computer"
-#~ msgid "Turn Off Computer"
-#~ msgstr "&Múch an Ríomhaire"
-
-#, fuzzy
-#~| msgid "&Restart Computer"
-#~ msgid "Restart Computer"
-#~ msgstr "&Atosaigh an Ríomhaire"
-
-#~ msgctxt "default option in boot loader"
-#~ msgid " (default)"
-#~ msgstr " (réamhshocrú)"
-
-#, fuzzy
-#~| msgid "&Cancel"
-#~ msgid "Cancel"
-#~ msgstr "&Cealaigh"
-
-#~ msgid "&Standby"
-#~ msgstr "&Fuireachas"
-
-#~ msgid "Suspend to &RAM"
-#~ msgstr "Cuir ar fionraí i &RAM"
-
-#~ msgid "Suspend to &Disk"
-#~ msgstr "Cuir ar fionraí ar an &Diosca"
-
-#~ msgid "(C) 2000, The KDE Developers"
-#~ msgstr "© 2000, Forbróirí KDE"
-
-#~ msgid "Matthias Ettrich"
-#~ msgstr "Matthias Ettrich"
-
-#~ msgid "Luboš Luňák"
-#~ msgstr "Luboš Luňák"
-
-#~ msgid "Maintainer"
-#~ msgstr "Cothaitheoir"
-
-#~ msgctxt "current option in boot loader"
-#~ msgid " (current)"
-#~ msgstr " (reatha)"
-
-#~ msgctxt "@label In corner of the logout dialog"
-#~ msgid "KDE <numid>%1.%2.%3</numid>"
-#~ msgstr "KDE <numid>%1.%2.%3</numid>"
-
-#~ msgctxt "@label In corner of the logout dialog"
-#~ msgid "KDE <numid>%1.%2</numid>"
-#~ msgstr "KDE <numid>%1.%2</numid>"
-
-#~ msgid "End Session for %1"
-#~ msgstr "Cuir Deireadh leis an Seisiún do %1"
-
-#~ msgid "End Session for %1 (%2)"
-#~ msgstr "Cuir Deireadh leis an Seisiún do %1 (%2)"
-
-#~ msgid "End Current Session"
-#~ msgstr "Cuir Deireadh leis an Seisiún Reatha"

@@ -93,10 +93,3 @@ msgstr "&Sórtáil de réir"
 #, kde-format
 msgid "It is not sure, that this will take effect"
 msgstr "Níl sé cinnte go dtarlóidh sé seo"
-
-#~ msgid ""
-#~ "Process ID: %1\n"
-#~ "Running as user: %2"
-#~ msgstr ""
-#~ "Aitheantas an Phróisis: %1\n"
-#~ "Mar úsáideoir: %2"

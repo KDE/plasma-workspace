@@ -38,10 +38,9 @@ msgid "Lock the screen"
 msgstr "Cuir an scáileán faoi ghlas"
 
 #: data.js:12
-#, fuzzy, kde-format
-#| msgid "Switch user"
+#, kde-format
 msgid "Switch user…"
-msgstr "athraigh an t-úsáideoir"
+msgstr ""
 
 #: data.js:13
 #, kde-format
@@ -79,17 +78,15 @@ msgid "End the session"
 msgstr "Críochnaigh an seisiún"
 
 #: data.js:40
-#, fuzzy, kde-format
-#| msgid "Show logout button"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Show logout screen"
-msgstr "Taispeáin cnaipe logála amach"
+msgstr ""
 
 #: data.js:41
-#, fuzzy, kde-format
-#| msgid "Logout, turn off or restart the computer"
+#, kde-format
 msgid "Log out, turn off, or restart the computer"
-msgstr "Logáil amach, múch nó atosaigh an ríomhaire"
+msgstr ""
 
 #: data.js:47
 #, kde-format
@@ -111,62 +108,3 @@ msgstr "Geimhrigh"
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Geimhriú (cuir ar fionraí ar an diosca)"
-
-#, fuzzy
-#~| msgid "Actions"
-#~ msgctxt "@title:column"
-#~ msgid "Actions"
-#~ msgstr "Gníomhartha"
-
-#, fuzzy
-#~| msgid "Show lock button"
-#~ msgctxt ""
-#~ "Heading for a list of actions (leave, lock, switch user, hibernate, "
-#~ "suspend)"
-#~ msgid "Show actions:"
-#~ msgstr "Taispeáin cnaipe glasála"
-
-#, fuzzy
-#~| msgid "Show logout button"
-#~ msgctxt "@option:check"
-#~ msgid "Show logout screen"
-#~ msgstr "Taispeáin cnaipe logála amach"
-
-#, fuzzy
-#~| msgid "Switch user"
-#~ msgid "Switch User"
-#~ msgstr "athraigh an t-úsáideoir"
-
-#~ msgid "Do you want to suspend to disk (hibernate)?"
-#~ msgstr ""
-#~ "An bhfuil fonn ort an córas a chur ar fionraí ar an diosca (geimhriú)?"
-
-#~ msgid "Yes"
-#~ msgstr "Tá"
-
-#~ msgid "No"
-#~ msgstr "Níl"
-
-#~ msgid "Do you want to suspend to RAM (sleep)?"
-#~ msgstr "An bhfuil fonn ort an córas a chur ar fionraí i RAM (codladh)?"
-
-#~ msgid "Leave"
-#~ msgstr "Fág"
-
-#~ msgid "Leave..."
-#~ msgstr "Fág..."
-
-#~ msgid "Suspend"
-#~ msgstr "Cuir ar fionraí"
-
-#~ msgid "Configure Lock/Logout"
-#~ msgstr "Cumraigh Glasáil/Logáil Amach"
-
-#~ msgid "Please select one or more items on the list below."
-#~ msgstr "Roghnaigh mír nó míreanna ón liosta thíos."
-
-#~ msgid "Show hibernate button"
-#~ msgstr "Taispeáin cnaipe geimhrithe"
-
-#~ msgid "Show sleep button"
-#~ msgstr "Taispeáin cnaipe codlata"

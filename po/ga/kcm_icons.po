@@ -29,10 +29,9 @@ msgid "Unable to create a temporary file."
 msgstr ""
 
 #: main.cpp:158
-#, fuzzy, kde-format
-#| msgid "Unable to find the icon theme archive %1."
+#, kde-format
 msgid "Unable to download the icon theme archive: %1"
-msgstr "Ní féidir cartlann an téama deilbhín %1 a aimsiú."
+msgstr ""
 
 #: main.cpp:172
 #, kde-format
@@ -54,284 +53,41 @@ msgid "Theme installed successfully."
 msgstr ""
 
 #: main.cpp:225
-#, fuzzy, kde-format
-#| msgid "Installing icon themes"
+#, kde-format
 msgid "Installing icon themes…"
-msgstr "Téamaí deilbhín á suiteáil"
+msgstr ""
 
 #: main.cpp:235
-#, fuzzy, kde-format
-#| msgid "Installing icon themes"
+#, kde-format
 msgid "Installing %1 theme…"
-msgstr "Téamaí deilbhín á suiteáil"
+msgstr ""
 
 #: ui/main.qml:67
-#, fuzzy, kde-format
-#| msgid "Install Theme File..."
+#, kde-format
 msgid "Install from File…"
-msgstr "Suiteáil Comhad Téama..."
+msgstr ""
 
 #: ui/main.qml:72
-#, fuzzy, kde-format
-#| msgid "Get New Themes..."
+#, kde-format
 msgid "Get New…"
-msgstr "Faigh Téamaí Nua..."
+msgstr ""
 
 #: ui/main.qml:188
-#, fuzzy, kde-format
-#| msgid "Remove Theme"
+#, kde-format
 msgid "Remove Icon Theme"
-msgstr "Bain Téama"
+msgstr ""
 
 #: ui/main.qml:195
-#, fuzzy, kde-format
-#| msgid "Remove Theme"
+#, kde-format
 msgid "Restore Icon Theme"
-msgstr "Bain Téama"
+msgstr ""
 
 #: ui/main.qml:244
-#, fuzzy, kde-format
-#| msgid "Remove Theme"
+#, kde-format
 msgid "Open Theme"
-msgstr "Bain Téama"
+msgstr ""
 
 #: ui/main.qml:246
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr ""
-
-#~ msgid "Main Toolbar"
-#~ msgstr "Príomhbharra Uirlisí"
-
-#, fuzzy
-#~| msgid "&Second color:"
-#~ msgid "Secondary Toolbars"
-#~ msgstr "An &dara dath:"
-
-#~ msgid "Small Icons"
-#~ msgstr "Deilbhíní Beaga"
-
-#~ msgid "Dialogs"
-#~ msgstr "Dialóga"
-
-#, fuzzy
-#~| msgid "Main Toolbar"
-#~ msgid "Main toolbar icons size"
-#~ msgstr "Príomhbharra Uirlisí"
-
-#, fuzzy
-#~| msgid "Small Icons"
-#~ msgid "Small icons size"
-#~ msgstr "Deilbhíní Beaga"
-
-#, fuzzy
-#~| msgid "Size:"
-#~ msgctxt "@label:slider"
-#~ msgid "Size:"
-#~ msgstr "Méid:"
-
-#~ msgid "Toolbar"
-#~ msgstr "Barra Uirlisí"
-
-#~ msgid "Panel"
-#~ msgstr "Painéal"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Séamus Ó Ciardhuáin,Kevin Scannell"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "seoc@iolfree.ie,kscanne@gmail.com"
-
-#~ msgid "Icons"
-#~ msgstr "Deilbhíní"
-
-#~ msgid "Icons Control Panel Module"
-#~ msgstr "Modúl Rialaithe Deilbhíní"
-
-#~ msgid "(c) 2000-2003 Geert Jansen"
-#~ msgstr "© 2000-2003 Geert Jansen"
-
-#~ msgid "Geert Jansen"
-#~ msgstr "Geert Jansen"
-
-#~ msgid "Antonio Larrosa Jimenez"
-#~ msgstr "Antonio Larrosa Jimenez"
-
-#~ msgid "Torsten Rahn"
-#~ msgstr "Torsten Rahn"
-
-#~ msgid "Desktop"
-#~ msgstr "Deasc"
-
-#~ msgid "Use of Icon"
-#~ msgstr "Úsáid Deilbhín"
-
-#~ msgctxt "@label The icon rendered by default"
-#~ msgid "Default"
-#~ msgstr "Réamhshocrú"
-
-#~ msgctxt "@label The icon rendered as active"
-#~ msgid "Active"
-#~ msgstr "Gníomhach"
-
-#~ msgctxt "@label The icon rendered as disabled"
-#~ msgid "Disabled"
-#~ msgstr "Díchumasaithe"
-
-#~ msgid "Set Effect..."
-#~ msgstr "Socraigh Maisíocht..."
-
-#~ msgid "All Icons"
-#~ msgstr "Deilbhíní Uile"
-
-#~ msgid "Setup Default Icon Effect"
-#~ msgstr "Réamhshocraigh Maisíocht Deilbhín"
-
-#~ msgid "Setup Active Icon Effect"
-#~ msgstr "Socraigh Maisíocht Deilbhín Ghníomhaigh"
-
-#~ msgid "Setup Disabled Icon Effect"
-#~ msgstr "Socraigh Maisíocht Deilbhín Díchumasaithe"
-
-#~ msgid "&Effect:"
-#~ msgstr "&Maisíocht:"
-
-#~ msgid "No Effect"
-#~ msgstr "Gan Mhaisíocht"
-
-#~ msgid "To Gray"
-#~ msgstr "Go Liath"
-
-#~ msgid "Colorize"
-#~ msgstr "Dathaigh"
-
-#~ msgid "Gamma"
-#~ msgstr "Gáma"
-
-#~ msgid "Desaturate"
-#~ msgstr "Dísháithigh"
-
-#~ msgid "To Monochrome"
-#~ msgstr "Go Monacróm"
-
-#~ msgid "&Semi-transparent"
-#~ msgstr "&Leaththrédhearcach"
-
-#~ msgid "Preview"
-#~ msgstr "Réamhamharc"
-
-#~ msgid "Effect Parameters"
-#~ msgstr "Paraiméadair na Maisíochta"
-
-#~ msgid "&Amount:"
-#~ msgstr "&Méid:"
-
-#~ msgid "Co&lor:"
-#~ msgstr "&Dath:"
-
-#~ msgid "Name"
-#~ msgstr "Ainm"
-
-#~ msgid "Description"
-#~ msgstr "Cur Síos"
-
-#~ msgid "Install a theme archive file you already have locally"
-#~ msgstr "Suiteáil comhad téama atá agat cheana go logánta"
-
-#~ msgid ""
-#~ "If you already have a theme archive locally, this button will unpack it "
-#~ "and make it available for KDE applications"
-#~ msgstr ""
-#~ "Má tá comhad téama agat cheana go logánta, úsáid an cnaipe seo chun é a "
-#~ "dhíphacáil agus é a chur ar fáil d'fheidhmchláir KDE"
-
-#~ msgid "Get new themes from the Internet"
-#~ msgstr "Faigh téamaí nua ón Idirlíon"
-
-#~ msgid ""
-#~ "You need to be connected to the Internet to use this action. A dialog "
-#~ "will display a list of themes from the http://www.kde.org website. "
-#~ "Clicking the Install button associated with a theme will install this "
-#~ "theme locally."
-#~ msgstr ""
-#~ "Ní mór duit a bheith ceangailte leis an Idirlíon chun an gníomh seo a "
-#~ "úsáid. Taispeánfar liosta téamaí ón suíomh http://www.kde.org/.  Chun "
-#~ "téama a shuiteáil go logánta, cliceáil an cnaipe 'Suiteáil' a bhaineann "
-#~ "leis."
-
-#~ msgid "Remove the selected theme from your disk"
-#~ msgstr "Bain an téama roghnaithe ó do dhiosca"
-
-#~ msgid "This will remove the selected theme from your disk."
-#~ msgstr "Bainfidh sé seo an téama roghnaithe ó do dhiosca."
-
-#~ msgid "Drag or Type Theme URL"
-#~ msgstr "Tarraing nó Clóscríobh URL an Téama"
-
-#~ msgid ""
-#~ "Unable to download the icon theme archive;\n"
-#~ "please check that address %1 is correct."
-#~ msgstr ""
-#~ "Ní féidir cartlann téamaí deilbhín a íosluchtú;\n"
-#~ "bí cinnte go bhfuil seoladh %1 ceart."
-
-#~ msgid "<qt>Installing <strong>%1</strong> theme</qt>"
-#~ msgstr "<qt>Téama <strong>%1</strong> á shuiteáil</qt>"
-
-#~ msgid ""
-#~ "<qt>Are you sure you want to remove the <strong>%1</strong> icon theme?"
-#~ "<br /><br />This will delete the files installed by this theme.</qt>"
-#~ msgstr ""
-#~ "<qt>An bhfuil tú cinnte gur mian leat an téama deilbhín <strong>%1</"
-#~ "strong> a bhaint?<br /><br />Scriosfar gach comhad suiteáilte ag an téama "
-#~ "seo.</qt>"
-
-#~ msgid "Confirmation"
-#~ msgstr "Deimhniú"
-
-#~ msgid "&Theme"
-#~ msgstr "&Téama"
-
-#~ msgid "Ad&vanced"
-#~ msgstr "&Casta"
-
-#~ msgid ""
-#~ "<h1>Icons</h1>This module allows you to choose the icons for your desktop."
-#~ "<p>To choose an icon theme, click on its name and apply your choice by "
-#~ "pressing the \"Apply\" button below. If you do not want to apply your "
-#~ "choice you can press the \"Reset\" button to discard your changes.</"
-#~ "p><p>By pressing the \"Install Theme File...\" button you can install "
-#~ "your new icon theme by writing its location in the box or browsing to the "
-#~ "location. Press the \"OK\" button to finish the installation.</p><p>The "
-#~ "\"Remove Theme\" button will only be activated if you select a theme that "
-#~ "you installed using this module. You are not able to remove globally "
-#~ "installed themes here.</p><p>You can also specify effects that should be "
-#~ "applied to the icons.</p>"
-#~ msgstr ""
-#~ "<h1>Deilbhíní</h1>Leis an modúl seo is féidir leat deilbhíní a roghnú do "
-#~ "do dheasc.<p>Chun téama deilbhíní a roghnú, cliceáil a ainm agus cuir do "
-#~ "rogha i bhfeidhm tríd an cnaipe \"Cuir i bhFeidhm\" a chliceáil thíos. "
-#~ "Mura mian leat do rogha a chur i bhfeidhm, cliceáil an cnaipe "
-#~ "\"Athshocraigh\" agus déanfar neamhaird de do chuid athruithe.</p><p>Má "
-#~ "chliceálann tú an cnaipe \"Suiteáil Comhad Téama...\", is féidir leat "
-#~ "téama nua deilbhíní a shuiteáil trína shuíomh a chur isteach sa bhosca, "
-#~ "nó trí bhrabhsáil go dtí an suíomh. Brúigh an cnaipe \"OK\" chun an "
-#~ "tsuiteáil a chur i gcrích.</p><p>Ní bheidh an cnaipe \"Bain Téama\" "
-#~ "gníomhach murar shuiteáil tú an téama roghnaithe leis an modúl seo. Ní "
-#~ "féidir téamaí a bhí suiteáilte go comhchoiteann a bhaint anseo.</p><p>Is "
-#~ "féidir freisin maisíochtaí a shonrú is mian leat a chur i bhfeidhm ar na "
-#~ "deilbhíní.</p>"
-
-#~ msgid "Animate icons"
-#~ msgstr "Beoigh deilbhíní"
-
-#~ msgid "Select the icon theme you want to use:"
-#~ msgstr "Roghnaigh an téama deilbhín is mian leat a úsáid:"
-
-#~ msgid "Double-sized pixels"
-#~ msgstr "Picteilíní démhéide"
-
-#~ msgid "Desktop/File Manager"
-#~ msgstr "Bainisteoir na Deisce/na gComhad"
