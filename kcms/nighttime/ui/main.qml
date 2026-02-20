@@ -17,7 +17,7 @@ KCM.SimpleKCM {
     id: root
 
     ColumnLayout {
-        spacing: 0
+        spacing: Kirigami.Units.smallSpacing
 
         QQC2.Label {
             Layout.fillWidth: true
@@ -108,7 +108,6 @@ KCM.SimpleKCM {
 
         ColumnLayout {
             Layout.alignment: Qt.AlignHCenter
-            Layout.topMargin: Kirigami.Units.largeSpacing
             visible: kcm.settings.source === Private.NightTimeSettings.Location
             spacing: Kirigami.Units.smallSpacing
 
