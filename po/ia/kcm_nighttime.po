@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-02-21 02:47+0000\n"
 "PO-Revision-Date: 2026-02-05 17:00+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -79,13 +79,13 @@ msgstr[0] ""
 "cyclo preferite ci."
 msgstr[1] "%1 minutas"
 
-#: ui/main.qml:119
+#: ui/main.qml:118
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatically detect location"
 msgstr "Discoperi automaticamente location"
 
-#: ui/main.qml:146
+#: ui/main.qml:145
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -99,7 +99,7 @@ msgstr ""
 "turre de cella si disponibile, o alteremente per inviar su adresse IP a "
 "<link url='https://geoip.com/privacy/'>GeoIP</link>."
 
-#: ui/main.qml:147
+#: ui/main.qml:146
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -114,19 +114,19 @@ msgstr ""
 "demandante a disveloppatores de KDE que scriba un description detaliate de "
 "lo que iste servicio facera."
 
-#: ui/main.qml:164
+#: ui/main.qml:163
 #, kde-format
 msgctxt "@option:radio"
 msgid "Use manual location:"
 msgstr "Usa location manual:"
 
-#: ui/main.qml:176
+#: ui/main.qml:175
 #, kde-format
 msgctxt "@label"
 msgid "Latitude:"
 msgstr "Latitude:"
 
-#: ui/main.qml:196
+#: ui/main.qml:195
 #, kde-format
 msgctxt "@label"
 msgid "Longitude:"

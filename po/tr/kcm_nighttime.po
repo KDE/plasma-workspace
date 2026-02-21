@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-02-21 02:47+0000\n"
 "PO-Revision-Date: 2025-11-02 22:55+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -76,13 +76,13 @@ msgid_plural "%1 minutes"
 msgstr[0] "%1 dakika"
 msgstr[1] "%1 dakika"
 
-#: ui/main.qml:119
+#: ui/main.qml:118
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatically detect location"
 msgstr "Konumu kendiliğinden algıla"
 
-#: ui/main.qml:146
+#: ui/main.qml:145
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -97,7 +97,7 @@ msgstr ""
 "<link url='https://geoip.com/privacy/'>GeoIP</link> hizmetine gönderilerek "
 "alınır."
 
-#: ui/main.qml:147
+#: ui/main.qml:146
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -111,19 +111,19 @@ msgstr ""
 "ayrıntılı bilgi almak için <link url='https://bugs.kde.org'>https://bugs.kde."
 "org</link> adresinden bir hata kaydı açarak KDE geliştiricilerine sorun."
 
-#: ui/main.qml:164
+#: ui/main.qml:163
 #, kde-format
 msgctxt "@option:radio"
 msgid "Use manual location:"
 msgstr "Elle girilen konumu kullan:"
 
-#: ui/main.qml:176
+#: ui/main.qml:175
 #, kde-format
 msgctxt "@label"
 msgid "Latitude:"
 msgstr "Enlem:"
 
-#: ui/main.qml:196
+#: ui/main.qml:195
 #, kde-format
 msgctxt "@label"
 msgid "Longitude:"

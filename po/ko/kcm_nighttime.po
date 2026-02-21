@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-02-21 02:47+0000\n"
 "PO-Revision-Date: 2026-02-03 23:20+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -74,13 +74,13 @@ msgid "%1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] "%1분"
 
-#: ui/main.qml:119
+#: ui/main.qml:118
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatically detect location"
 msgstr "자동으로 위치 감지"
 
-#: ui/main.qml:146
+#: ui/main.qml:145
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -94,7 +94,7 @@ msgstr ""
 "url='https://geoip.com/privacy/'>GeoIP</link> 서비스에 현재 IP 주소 정보를 전"
 "송합니다."
 
-#: ui/main.qml:147
+#: ui/main.qml:146
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -108,19 +108,19 @@ msgstr ""
 "<link url='https://bugs.kde.org'>https://bugs.kde.org</link> 사이트에 버그 보"
 "고서를 작성해 주십시오."
 
-#: ui/main.qml:164
+#: ui/main.qml:163
 #, kde-format
 msgctxt "@option:radio"
 msgid "Use manual location:"
 msgstr "수동으로 위치 지정:"
 
-#: ui/main.qml:176
+#: ui/main.qml:175
 #, kde-format
 msgctxt "@label"
 msgid "Latitude:"
 msgstr "위도:"
 
-#: ui/main.qml:196
+#: ui/main.qml:195
 #, kde-format
 msgctxt "@label"
 msgid "Longitude:"

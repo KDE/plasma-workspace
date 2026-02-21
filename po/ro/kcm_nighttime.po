@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-02-21 02:47+0000\n"
 "PO-Revision-Date: 2026-01-29 01:23+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -78,13 +78,13 @@ msgstr[0] "%1 minut"
 msgstr[1] "%1 minute"
 msgstr[2] "%1 de minute"
 
-#: ui/main.qml:119
+#: ui/main.qml:118
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatically detect location"
 msgstr "Detectează amplasarea automat"
 
-#: ui/main.qml:146
+#: ui/main.qml:145
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -98,7 +98,7 @@ msgstr ""
 "turnurilor celulare dacă sunt disponibile, altfel se va trimite adresa IP "
 "către <link url='https://geoip.com/privacy/'>GeoIP</link>."
 
-#: ui/main.qml:147
+#: ui/main.qml:146
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -113,19 +113,19 @@ msgstr ""
 "dezvoltatorilor KDE să scrie o descriere detaliată a modului de funcționare "
 "al acestui serviciu."
 
-#: ui/main.qml:164
+#: ui/main.qml:163
 #, kde-format
 msgctxt "@option:radio"
 msgid "Use manual location:"
 msgstr "Folosește amplasare manuală:"
 
-#: ui/main.qml:176
+#: ui/main.qml:175
 #, kde-format
 msgctxt "@label"
 msgid "Latitude:"
 msgstr "Latitudine:"
 
-#: ui/main.qml:196
+#: ui/main.qml:195
 #, kde-format
 msgctxt "@label"
 msgid "Longitude:"

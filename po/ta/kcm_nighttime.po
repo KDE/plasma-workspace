@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-02-21 02:47+0000\n"
 "PO-Revision-Date: 2025-11-02 13:44+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -76,13 +76,13 @@ msgid_plural "%1 minutes"
 msgstr[0] "%1 நிமிடம்"
 msgstr[1] "%1 நிமிடம்"
 
-#: ui/main.qml:119
+#: ui/main.qml:118
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatically detect location"
 msgstr "இருப்பிடத்தை தானாக கண்டறி"
 
-#: ui/main.qml:146
+#: ui/main.qml:145
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -96,7 +96,7 @@ msgstr ""
 "இருப்பிடத்தைத் தெரிந்துகொள்ள <application>GeoClue2</application> சேவை அவ்வப்போது "
 "பயன்படுத்தப்படும்."
 
-#: ui/main.qml:147
+#: ui/main.qml:146
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -109,19 +109,19 @@ msgstr ""
 "பயன்படுத்தப்படும். இச்சேவையின் விவரணத்தை வழங்குமாறு கோரி <link url='https://bugs.kde."
 "org'>https://bugs.kde.org</link> என்ற தளத்தில் ஓர் பிழையறிக்கையை சமர்ப்பிக்கவும்."
 
-#: ui/main.qml:164
+#: ui/main.qml:163
 #, kde-format
 msgctxt "@option:radio"
 msgid "Use manual location:"
 msgstr "இருப்பிடத்தை கைமுறையாக தேர்ந்தெடுக்க விடு"
 
-#: ui/main.qml:176
+#: ui/main.qml:175
 #, kde-format
 msgctxt "@label"
 msgid "Latitude:"
 msgstr "அட்சரேகை:"
 
-#: ui/main.qml:196
+#: ui/main.qml:195
 #, kde-format
 msgctxt "@label"
 msgid "Longitude:"

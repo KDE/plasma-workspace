@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-02-21 02:47+0000\n"
 "PO-Revision-Date: 2025-07-19 13:21+0200\n"
 "Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -78,13 +78,13 @@ msgid_plural "%1 minutes"
 msgstr[0] "%1 minut"
 msgstr[1] "%1 minutter"
 
-#: ui/main.qml:119
+#: ui/main.qml:118
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatically detect location"
 msgstr ""
 
-#: ui/main.qml:146
+#: ui/main.qml:145
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -98,7 +98,7 @@ msgstr ""
 "mobilmasttriangulering, hvis det er tilgængeligt, eller ved at sende dens IP-"
 "adresse til <link url='https://geoip.com/privacy/'>GeoIP</link>."
 
-#: ui/main.qml:147
+#: ui/main.qml:146
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -112,7 +112,7 @@ msgstr ""
 "url='https://bugs.kde.org'>https://bugs.kde.org</link> og bed KDE-udviklerne "
 "om at skrive en detaljeret beskrivelse af, hvad tjeneste vil gøre."
 
-#: ui/main.qml:164
+#: ui/main.qml:163
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
@@ -121,13 +121,13 @@ msgctxt "@option:radio"
 msgid "Use manual location:"
 msgstr "Baseret på manuel lokation"
 
-#: ui/main.qml:176
+#: ui/main.qml:175
 #, kde-format
 msgctxt "@label"
 msgid "Latitude:"
 msgstr "Breddegrad:"
 
-#: ui/main.qml:196
+#: ui/main.qml:195
 #, kde-format
 msgctxt "@label"
 msgid "Longitude:"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-02-21 02:47+0000\n"
 "PO-Revision-Date: 2025-08-18 17:19+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -81,13 +81,13 @@ msgstr[0] "%1 minūte"
 msgstr[1] "%1 minūtes"
 msgstr[2] "%1 minūšu"
 
-#: ui/main.qml:119
+#: ui/main.qml:118
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatically detect location"
 msgstr ""
 
-#: ui/main.qml:146
+#: ui/main.qml:145
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -102,7 +102,7 @@ msgstr ""
 "GPS vai saziņu ar mobilo sakaru torņiem, tiks nosūtīta tās IP adrese uz "
 "<link url='https://geoip.com/privacy/'>„GeoIP“</link>."
 
-#: ui/main.qml:147
+#: ui/main.qml:146
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -116,7 +116,7 @@ msgstr ""
 "url='https://bugs.kde.org'>https://bugs.kde.org</link>, lūdzot KDE "
 "izstrādātājiem sīkāk izskaidrot šī pakalpojuma darbību."
 
-#: ui/main.qml:164
+#: ui/main.qml:163
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "@item:inlistbox part of a sentence: 'Determine sunrise and sunset times'"
@@ -125,13 +125,13 @@ msgctxt "@option:radio"
 msgid "Use manual location:"
 msgstr "Pēc manuāli norādītas vietas"
 
-#: ui/main.qml:176
+#: ui/main.qml:175
 #, kde-format
 msgctxt "@label"
 msgid "Latitude:"
 msgstr "Platums:"
 
-#: ui/main.qml:196
+#: ui/main.qml:195
 #, kde-format
 msgctxt "@label"
 msgid "Longitude:"
