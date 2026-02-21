@@ -66,7 +66,7 @@ KRunner::Actions SearchRunner::Actions()
     if (!config.fileIndexingEnabled()) {
         sendErrorReply(QDBusError::ErrorType::NotSupported);
     }
-    return KRunner::Actions({KRunner::Action{s_openParentDirId, i18n("Open Containing Folder"), QStringLiteral("document-open-folder")}});
+    return KRunner::Actions({KRunner::Action{s_openParentDirId, QStringLiteral("document-open-folder"), i18n("Open Containing Folder")}});
 }
 
 RemoteMatches SearchRunner::Match(const QString &searchTerm)
