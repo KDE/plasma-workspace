@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-17 00:47+0000\n"
-"PO-Revision-Date: 2026-01-12 10:34+0100\n"
+"PO-Revision-Date: 2026-02-20 16:25+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 25.12.2\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -81,11 +81,11 @@ msgstr[1] ""
 "données non enregistrées."
 
 #: contents/logout/Logout.qml:188
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will enter the firmware setup screen."
+#, kde-format
 msgid "When restarted, the computer will enter UEFI firmware settings."
 msgstr ""
-"Au redémarrage, l'ordinateur ouvrira l'écran de configuration du firmware."
+"Après le redémarrage, l'ordinateur ouvrira l'écran de configuration du micro-"
+"programme."
 
 #: contents/logout/Logout.qml:190
 #, kde-format

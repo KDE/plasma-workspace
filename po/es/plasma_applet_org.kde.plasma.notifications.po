@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-28 00:46+0000\n"
+"POT-Creation-Date: 2026-02-21 00:47+0000\n"
 "PO-Revision-Date: 2026-01-28 21:13+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -22,7 +22,7 @@ msgstr ""
 "X-Poedit-Country: SPAIN\n"
 "X-Generator: Lokalize 25.12.1\n"
 
-#: components/ActionContainer.qml:81
+#: components/ActionContainer.qml:96
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"

@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-20 00:48+0000\n"
-"PO-Revision-Date: 2026-01-18 00:15+0200\n"
+"PO-Revision-Date: 2026-02-21 02:22+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -168,11 +168,7 @@ msgid "Could not repair this device: %1"
 msgstr "Nepavyko pataisyti šio įrenginio: %1"
 
 #: qml/DeviceItem.qml:99
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Accessing is a less technical word for Mounting; translation should be "
-#| "short and mean 'Currently mounting this device'"
-#| msgid "Checking…"
+#, kde-format
 msgctxt ""
 "Translation should be short and mean 'Currently checking the device for "
 "filesystem errors'"
@@ -180,11 +176,7 @@ msgid "Checking…"
 msgstr "Tikrinama…"
 
 #: qml/DeviceItem.qml:101
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Accessing is a less technical word for Mounting; translation should be "
-#| "short and mean 'Currently mounting this device'"
-#| msgid "Repairing…"
+#, kde-format
 msgctxt ""
 "Translation should be short and mean 'The storage device contains filesystem "
 "errors and is being repaired'"
