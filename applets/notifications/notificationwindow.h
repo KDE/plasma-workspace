@@ -32,5 +32,5 @@ Q_SIGNALS:
 
 private:
     bool m_takeFocus = false;
-    bool m_critial = false;
+    bool m_critical = false;
 };

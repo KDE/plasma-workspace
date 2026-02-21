@@ -42,16 +42,16 @@ void NotificationWindow::setTakeFocus(bool takeFocus)
 
 bool NotificationWindow::isCritical() const
 {
-    return m_critial;
+    return m_critical;
 }
 
 void NotificationWindow::setIsCritical(bool critical)
 {
-    if (m_critial == critical) {
+    if (m_critical == critical) {
         return;
     }
 
-    m_critial = critical;
+    m_critical = critical;
 
     auto role = critical ? QtWayland::org_kde_plasma_surface::role_criticalnotification : QtWayland::org_kde_plasma_surface::role_notification;
     PlasmaShellWaylandIntegration::get(this)->setRole(role);
