@@ -253,17 +253,8 @@ int SlideFilterModel::indexOf(const QString &path)
 
 void SlideFilterModel::openContainingFolder(int rowIndex)
 {
-    const QModelIndex sourceIndex = mapToSource(index(rowIndex, 0));
-    if (!sourceIndex.isValid()) {
-        return;
-    }
-
-    const AbstractImageListModel *sourceModel = qobject_cast<const AbstractImageListModel *>(sourceIndex.model());
-    if (!sourceModel) {
-        return;
-    }
-
-    KIO::highlightInFileManager({sourceModel->effectiveSource(sourceIndex, m_targetSize)});
+    auto slideModel = static_cast<SlideModel *>(sourceModel());
+    slideModel->openContainingFolder(mapToSource(index(rowIndex, 0)).row());
 }
 
 void SlideFilterModel::selectAllSlides()

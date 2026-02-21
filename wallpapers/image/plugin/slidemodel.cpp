@@ -9,6 +9,7 @@
 #include <QDir>
 #include <QUrl>
 
+#include "model/abstractimagelistmodel.h"
 #include "model/imageproxymodel.h"
 
 SlideModel::SlideModel(const QBindable<QSize> &bindableTargetSize, const QBindable<bool> &bindableUsedInConfig, QObject *parent)
@@ -71,6 +72,21 @@ int SlideModel::indexOf(const QString &packagePath) const
     }
 
     return idx;
+}
+
+void SlideModel::openContainingFolder(int rowIndex) const
+{
+    const QModelIndex sourceIndex = mapToSource(index(rowIndex, 0));
+    if (!sourceIndex.isValid()) {
+        return;
+    }
+
+    const ImageProxyModel *sourceModel = qobject_cast<const ImageProxyModel *>(sourceIndex.model());
+    if (!sourceModel) {
+        return;
+    }
+
+    sourceModel->openContainingFolder(sourceIndex.row());
 }
 
 QStringList SlideModel::addDirs(const QStringList &dirs)

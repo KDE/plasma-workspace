@@ -26,6 +26,7 @@ public:
     bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole) override;
 
     int indexOf(const QString &packagePath) const;
+    void openContainingFolder(int rowIndex) const;
 
     /**
      * @return added directories
