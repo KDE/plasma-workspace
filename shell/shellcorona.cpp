@@ -2204,7 +2204,8 @@ Plasma::Containment *ShellCorona::setContainmentTypeForScreen(int screen, const 
     // Move the applets
     const auto applets = oldContainment->applets();
     for (Plasma::Applet *applet : applets) {
-        newContainment->addApplet(applet);
+        // transfer ownership of applet from the old containment to the new containment
+        newContainment->addApplet(std::unique_ptr<Plasma::Applet>(applet));
     }
 
     // remove the "remove" action

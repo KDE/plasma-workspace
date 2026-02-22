@@ -55,7 +55,8 @@ void PlasmaWindowedCorona::loadApplet(const QString &applet, const QVariantList 
         plugin = cg.readEntry("plugin", QString());
 
         if (plugin == applet) {
-            Plasma::Applet *a = Plasma::PluginLoader::self()->loadApplet(applet, group.toInt(), arguments);
+            auto a = Plasma::PluginLoader::self()->loadApplet(applet, group.toInt(), arguments);
+            auto appletPtr = a.get();
             if (!a) {
                 qWarning() << "Unable to load applet" << applet << "with arguments" << arguments;
                 delete std::exchange(m_view, nullptr);
@@ -70,14 +71,15 @@ void PlasmaWindowedCorona::loadApplet(const QString &applet, const QVariantList 
             // will cause applets to be saved in palsmawindowedrc
             // so applets will only be created on demand
             KConfigGroup cg2 = a->config();
-            cont->addApplet(a);
+            cont->addApplet(std::move(a));
 
-            m_view->setApplet(a);
+            m_view->setApplet(appletPtr);
             return;
         }
     }
 
-    Plasma::Applet *a = Plasma::PluginLoader::self()->loadApplet(applet, 0, arguments);
+    auto a = Plasma::PluginLoader::self()->loadApplet(applet, 0, arguments);
+    auto appletPtr = a.get();
     if (!a) {
         qWarning() << "Unable to load applet" << applet << "with arguments" << arguments;
         delete std::exchange(m_view, nullptr);
@@ -88,9 +90,9 @@ void PlasmaWindowedCorona::loadApplet(const QString &applet, const QVariantList 
     // will cause applets to be saved in palsmawindowedrc
     // so applets will only be created on demand
     KConfigGroup cg2 = a->config();
-    cont->addApplet(a);
+    cont->addApplet(std::move(a));
 
-    m_view->setApplet(a);
+    m_view->setApplet(appletPtr);
 }
 
 void PlasmaWindowedCorona::activateRequested(const QStringList &arguments, const QString &workingDirectory)
