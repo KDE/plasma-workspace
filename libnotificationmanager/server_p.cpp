@@ -125,8 +125,6 @@ bool ServerPrivate::init()
                                              SLOT(onBroadcastNotification(QMap<QString, QVariant>)));
     }
 
-    Notification::Private::s_imageCache.setMaxCost(256 * 256 * 100);
-
     m_valid = true;
     Q_EMIT validChanged();
 

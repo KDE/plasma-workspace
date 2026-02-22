@@ -28,7 +28,7 @@
 using namespace NotificationManager;
 using namespace Qt::StringLiterals;
 
-QCache<uint, QImage> Notification::Private::s_imageCache = QCache<uint, QImage>{};
+QCache<uint, QImage> Notification::Private::s_imageCache = QCache<uint, QImage>(256 * 256 * 100);
 
 Notification::Private::Private() = default;
 
