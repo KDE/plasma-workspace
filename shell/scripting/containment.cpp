@@ -210,7 +210,8 @@ QJSValue Containment::addWidget(const QJSValue &v, qreal x, qreal y, qreal w, qr
         return engine()->newError(i18n("Could not create the %1 widget!", v.toString()));
     } else if (auto *widget = qobject_cast<Widget *>(v.toQObject())) {
         Plasma::Applet *applet = widget->applet();
-        d->containment->addApplet(applet);
+        // transfer ownership of applet from the old containment to the new containment
+        d->containment->addApplet(std::unique_ptr<Plasma::Applet>(applet));
         return v;
     }
 
