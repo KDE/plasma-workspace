@@ -119,9 +119,12 @@ void AbstractNotificationsModel::Private::onNotificationAdded(const Notification
     // dispatch a notification and then immediately exit
     if (notification.hasDefaultAction() || notification.hasReplyAction() || !notification.actionNames().empty()) {
         const QString service = notification.dBusService();
-        const auto watchedServices = notificationWatcher.watchedServices();
-        if (!watchedServices.contains(service)) {
-            notificationWatcher.addWatchedService(service);
+        // Portal notifications don't need to be watched, they do DBus activation and what not.
+        if (!service.isEmpty()) {
+            const auto watchedServices = notificationWatcher.watchedServices();
+            if (!watchedServices.contains(service)) {
+                notificationWatcher.addWatchedService(service);
+            }
         }
     }
 
