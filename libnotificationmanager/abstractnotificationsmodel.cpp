@@ -17,8 +17,11 @@
 #include <QProcess>
 #include <QTextDocumentFragment>
 
+#include <KIO/CommandLauncherJob>
 #include <KLocalizedString>
 #include <KShell>
+#include <KWaylandExtras>
+#include <KWindowSystem>
 
 #include <algorithm>
 #include <chrono>
@@ -568,6 +571,38 @@ void AbstractNotificationsModel::setupNotificationTimeout(const Notification &no
 const QList<Notification> &AbstractNotificationsModel::notifications()
 {
     return d->notifications;
+}
+
+void AbstractNotificationsModel::configure(const QString &desktopEntry, const QString &notifyRcName, const QString &eventId)
+{
+    QStringList args;
+    if (!desktopEntry.isEmpty()) {
+        args.append(QStringLiteral("--desktop-entry"));
+        args.append(desktopEntry);
+    }
+    if (!notifyRcName.isEmpty()) {
+        args.append(QStringLiteral("--notifyrc"));
+        args.append(notifyRcName);
+    }
+    if (!eventId.isEmpty()) {
+        args.append(QStringLiteral("--event-id"));
+        args.append(eventId);
+    }
+
+    const QString systemSettings = QStringLiteral("systemsettings");
+    auto job = new KIO::CommandLauncherJob(systemSettings, {QStringLiteral("kcm_notifications"), QStringLiteral("--args"), KShell::joinArgs(args)});
+    job->setDesktopName(systemSettings);
+
+    auto startWithToken = [job](const QString &token) {
+        job->setStartupId(token.toUtf8());
+        job->start();
+    };
+
+    if (KWindowSystem::isPlatformWayland()) {
+        KWaylandExtras::xdgActivationToken(window(), systemSettings).then(job, startWithToken);
+    } else {
+        startWithToken({});
+    }
 }
 
 #include "moc_abstractnotificationsmodel.cpp"
