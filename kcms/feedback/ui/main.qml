@@ -36,12 +36,10 @@ SimpleKCM {
         spacing: 0
 
         Kirigami.SelectableLabel {
-            Kirigami.FormData.label: i18n("Plasma:")
             Layout.fillWidth: true
             Layout.topMargin: Kirigami.Units.gridUnit
             Layout.leftMargin: Kirigami.Units.gridUnit
             Layout.rightMargin: Kirigami.Units.gridUnit
-            Layout.alignment: Qt.AlignHCenter
             text: xi18nc("@info", "You can help KDE improve Plasma by contributing information on how you use it, so we can focus on things that matter to you.<nl/><nl/>Contributing this information is optional and entirely anonymous. We never collect your personal data, files you use, websites you visit, or information that could identify you.<nl/><nl/>You can read about <link url='https://kde.org/privacypolicy-apps.php'>our privacy policy here.</link>")
 
             onLinkActivated: (url) => Qt.openUrlExternally(url)
