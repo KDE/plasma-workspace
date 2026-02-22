@@ -137,7 +137,9 @@ public:
 private:
     friend class NotificationsModel;
     friend class AbstractNotificationsModel;
+    friend class PortalNotificationsModel;
     friend class ServerPrivate;
+    friend class Portal;
 
     class Private;
     Private *d;
