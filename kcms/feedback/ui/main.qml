@@ -35,19 +35,20 @@ SimpleKCM {
     ColumnLayout {
         spacing: 0
 
-        Kirigami.SelectableLabel {
+        QQC2.Label {
             Layout.fillWidth: true
             Layout.topMargin: Kirigami.Units.gridUnit
             Layout.leftMargin: Kirigami.Units.gridUnit
             Layout.rightMargin: Kirigami.Units.gridUnit
-            text: xi18nc("@info", "You can help KDE improve Plasma by contributing information on how you use it, so we can focus on things that matter to you.<nl/><nl/>Contributing this information is optional and entirely anonymous. We never collect your personal data, files you use, websites you visit, or information that could identify you.<nl/><nl/>You can read about <link url='https://kde.org/privacypolicy-apps.php'>our privacy policy here.</link>")
+            wrapMode: Text.Wrap
+            text: xi18nc("@info", "You can help KDE improve Plasma by contributing information on how you use it, so we can focus on things that matter to you.<nl/><nl/>Contributing this information is optional and entirely anonymous. We never collect your personal data, files you use, websites you visit, or information that could identify you.<nl/>")
+        }
 
-            onLinkActivated: (url) => Qt.openUrlExternally(url)
-
-            HoverHandler {
-                acceptedButtons: Qt.NoButton
-                cursorShape: parent.hoveredLink ? Qt.PointingHandCursor : Qt.ArrowCursor
-            }
+        Kirigami.UrlButton {
+            Layout.leftMargin: Kirigami.Units.gridUnit
+            Layout.rightMargin: Kirigami.Units.gridUnit
+            url: "https://kde.org/privacypolicy-apps.php"
+            text: i18nc("@info", "Read more about our privacy policy")
         }
 
         Kirigami.Separator {
