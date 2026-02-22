@@ -74,11 +74,7 @@ void NotificationsModel::invokeDefaultAction(uint notificationId, Notifications:
         return;
     }
 
-    Server::self().invokeAction(notificationId,
-                                QStringLiteral("default"), // FIXME make a static Notification::defaultActionName() or something
-                                notification.d->xdgTokenAppId,
-                                behavior,
-                                window());
+    Server::self().invokeAction(notificationId, notification.d->defaultActionId, notification.desktopEntry(), behavior, window());
 }
 
 void NotificationsModel::invokeAction(uint notificationId, const QString &actionName, Notifications::InvokeBehavior behavior)
@@ -94,7 +90,7 @@ void NotificationsModel::invokeAction(uint notificationId, const QString &action
         return;
     }
 
-    Server::self().invokeAction(notificationId, actionName, notification.d->xdgTokenAppId, behavior, window());
+    Server::self().invokeAction(notificationId, actionName, notification.desktopEntry(), behavior, window());
 }
 
 void NotificationsModel::reply(uint notificationId, const QString &text, Notifications::InvokeBehavior behavior)
@@ -125,7 +121,7 @@ void NotificationsModel::configure(uint notificationId)
     if (notification.d->hasConfigureAction) {
         Server::self().invokeAction(notificationId,
                                     QStringLiteral("settings"),
-                                    notification.d->xdgTokenAppId,
+                                    notification.desktopEntry(),
                                     Notifications::None, // FIXME make a static Notification::configureActionName() or something
                                     window());
         return;

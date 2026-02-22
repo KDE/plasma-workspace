@@ -13,6 +13,7 @@
 
 #include "notification_p.h"
 
+#include "portal_p.h"
 #include "server.h"
 #include "serverinfo.h"
 
@@ -145,9 +146,9 @@ uint ServerPrivate::Notify(const QString &app_name,
     if (wasReplaced) {
         notificationId = replaces_id;
     } else {
-        // Avoid wrapping around to 0 in case of overflow
-        if (!m_highestNotificationId) {
-            ++m_highestNotificationId;
+        // Avoid moving into portal notification ID realm.
+        if (!(m_highestNotificationId & ~Portal::portalIdMask())) {
+            m_highestNotificationId = 1;
         }
         notificationId = m_highestNotificationId;
         ++m_highestNotificationId;
@@ -165,7 +166,7 @@ uint ServerPrivate::Notify(const QString &app_name,
     notification.setWasAddedDuringInhibition(m_inhibited);
 
     // might override some of the things we set above (like application name)
-    notification.d->processHints(hints);
+    notification.d->processFdoHints(hints);
 
     // If we got a pixmap, use app_icon as application icon,
     // otherwise use it as the notification icon.
