@@ -25,8 +25,8 @@ public:
     void invokeAction(uint notificationId, const QString &actionName, Notifications::InvokeBehavior behavior) override;
     void reply(uint notificationId, const QString &text, Notifications::InvokeBehavior behavior) override;
 
+    using AbstractNotificationsModel::configure;
     void configure(uint notificationId);
-    void configure(const QString &desktopEntry, const QString &notifyRcName, const QString &eventId);
 
 private:
     NotificationsModel();

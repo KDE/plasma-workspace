@@ -42,8 +42,7 @@ public:
     virtual void expire(uint notificationId) = 0;
     virtual void close(uint notificationId) = 0;
 
-    // Currently configure actions are not exposed in AbstractNotificationsModel to keep it very minimal
-    // if usecase for this comes up in future, we can revisit it.
+    void configure(const QString &desktopEntry, const QString &notifyRcName, const QString &eventId);
 
     virtual void invokeDefaultAction(uint notificationId, Notifications::InvokeBehavior behavior) = 0;
     virtual void invokeAction(uint notificationId, const QString &actionName, Notifications::InvokeBehavior behavior) = 0;

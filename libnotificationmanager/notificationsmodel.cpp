@@ -11,9 +11,6 @@
 
 #include "debug.h"
 
-#include <KIO/CommandLauncherJob>
-#include <KShell>
-
 using namespace NotificationManager;
 
 NotificationsModel::Ptr NotificationsModel::createNotificationsModel()
@@ -140,26 +137,4 @@ void NotificationsModel::configure(uint notificationId)
     }
 
     qCWarning(NOTIFICATIONMANAGER) << "Trying to configure notification" << notificationId << "which isn't configurable";
-}
-
-void NotificationsModel::configure(const QString &desktopEntry, const QString &notifyRcName, const QString &eventId)
-{
-    QStringList args;
-    if (!desktopEntry.isEmpty()) {
-        args.append(QStringLiteral("--desktop-entry"));
-        args.append(desktopEntry);
-    }
-    if (!notifyRcName.isEmpty()) {
-        args.append(QStringLiteral("--notifyrc"));
-        args.append(notifyRcName);
-    }
-    if (!eventId.isEmpty()) {
-        args.append(QStringLiteral("--event-id"));
-        args.append(eventId);
-    }
-
-    const QString systemSettings = QStringLiteral("systemsettings");
-    auto job = new KIO::CommandLauncherJob(systemSettings, {QStringLiteral("kcm_notifications"), QStringLiteral("--args"), KShell::joinArgs(args)});
-    job->setDesktopName(systemSettings);
-    job->start();
 }
