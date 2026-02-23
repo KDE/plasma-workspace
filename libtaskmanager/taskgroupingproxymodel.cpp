@@ -41,6 +41,8 @@ public:
     void sourceRowsRemoved(const QModelIndex &parent, int start, int end);
     void sourceModelAboutToBeReset();
     void sourceModelReset();
+    void sourceLayoutAboutToBeChanged();
+    void sourceLayoutChanged();
     void sourceDataChanged(QModelIndex topLeft, QModelIndex bottomRight, const QList<int> &roles = QList<int>());
     void adjustMap(int anchor, int delta);
 
@@ -196,6 +198,17 @@ void TaskGroupingProxyModel::Private::sourceModelReset()
 {
     rebuildMap();
 
+    q->endResetModel();
+}
+
+void TaskGroupingProxyModel::Private::sourceLayoutAboutToBeChanged()
+{
+    q->beginResetModel();
+}
+
+void TaskGroupingProxyModel::Private::sourceLayoutChanged()
+{
+    rebuildMap();
     q->endResetModel();
 }
 
@@ -786,6 +799,11 @@ void TaskGroupingProxyModel::setSourceModel(QAbstractItemModel *sourceModel)
         connect(sourceModel, &QSortFilterProxyModel::rowsRemoved, this, std::bind(&TaskGroupingProxyModel::Private::sourceRowsRemoved, dd, _1, _2, _3));
         connect(sourceModel, &QSortFilterProxyModel::modelAboutToBeReset, this, std::bind(&TaskGroupingProxyModel::Private::sourceModelAboutToBeReset, dd));
         connect(sourceModel, &QSortFilterProxyModel::modelReset, this, std::bind(&TaskGroupingProxyModel::Private::sourceModelReset, dd));
+        connect(sourceModel,
+                &QSortFilterProxyModel::layoutAboutToBeChanged,
+                this,
+                std::bind(&TaskGroupingProxyModel::Private::sourceLayoutAboutToBeChanged, dd));
+        connect(sourceModel, &QSortFilterProxyModel::layoutChanged, this, std::bind(&TaskGroupingProxyModel::Private::sourceLayoutChanged, dd));
         connect(sourceModel, &QSortFilterProxyModel::dataChanged, this, std::bind(&TaskGroupingProxyModel::Private::sourceDataChanged, dd, _1, _2, _3));
     } else {
         qDeleteAll(d->rowMap);
