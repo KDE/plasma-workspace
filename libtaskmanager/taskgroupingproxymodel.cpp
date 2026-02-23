@@ -219,7 +219,9 @@ void TaskGroupingProxyModel::Private::sourceDataChanged(QModelIndex topLeft, QMo
         QModelIndex proxyIndex = q->mapFromSource(sourceIndex);
 
         if (!proxyIndex.isValid()) {
-            Q_ASSERT(false);
+            QString msg;
+            QDebug(&msg) << sourceIndex;
+            Q_ASSERT_X(false, "mapping an invalid source index", qPrintable(msg));
             continue;
         }
 
