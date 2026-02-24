@@ -55,9 +55,9 @@ PlasmoidItem {
 
         let formattedTime;
         if (showSeconds) {
-            formattedTime = Qt.formatTime(dateTime, compactRepresentationItem.item.timeFormatWithSeconds);
+            formattedTime = Qt.locale().toString(dateTime, compactRepresentationItem.item.timeFormatWithSeconds);
         } else {
-            formattedTime = Qt.formatTime(dateTime, compactRepresentationItem.item.timeFormat);
+            formattedTime = Qt.locale().toString(dateTime, compactRepresentationItem.item.timeFormat);
         }
 
         if (dateTime.getDay() !== currentClock.dateTime.getDay()) {

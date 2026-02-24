@@ -416,7 +416,7 @@ MouseArea {
                 }
                 minimumPixelSize: 1
 
-                text: Qt.formatTime(clock.dateTime, Plasmoid.configuration.showSeconds === 2 ? main.timeFormatWithSeconds : main.timeFormat)
+                text: Qt.locale().toString(clock.dateTime, Plasmoid.configuration.showSeconds === 2 ? main.timeFormatWithSeconds : main.timeFormat)
                 textFormat: Text.PlainText
 
                 verticalAlignment: Text.AlignVCenter
