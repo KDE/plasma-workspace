@@ -330,7 +330,12 @@ KCMUtils.ScrollViewKCM {
                     id: searchAction
                     property string searchText: ""
                     displayComponent: Kirigami.SearchField {
-                        onTextChanged: sortFilterProxyModel.filterString = text
+                        onTextChanged: {
+                            // reset currentIndex to avoid passing focus to the currentItem when
+                            // the model updates
+                            itemsList.currentIndex = -1
+                            sortFilterProxyModel.filterString = text
+                        }
                     }
                 }
             ]
