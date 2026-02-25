@@ -139,10 +139,12 @@ msgid "Next Decade"
 msgstr "Následující desetiletí"
 
 #: calendar/qml/MonthViewHeader.qml:283
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Keep Open"
 msgctxt "@info:tooltip"
 msgid "Keep Open"
-msgstr ""
+msgstr "Ponechat otevřené"
 
 #: containmentlayoutmanager/qml/BasicAppletContainer.qml:286
 #, kde-format
@@ -184,33 +186,58 @@ msgid "Filters"
 msgstr "Filtry"
 
 #: shellprivate/plasmaappletitemmodel.cpp:199
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "This Widget was written for an unknown older version of Plasma and is not "
+#| "compatible with Plasma %1. Please contact the widget's author for an "
+#| "updated version."
 msgid ""
 "This Widget was written for an unknown older version of Plasma and is not "
 "compatible with Plasma %1. Please contact the widget's author for an updated "
 "version."
 msgstr ""
+"Tento widget byl napsán pro neznámou starší verzi prostředí Plasma a není "
+"kompatibilní s prostředím Plasma verze %1. Pro získání aktuální verze "
+"kontaktujte autora widgetu.."
 
 #: shellprivate/plasmaappletitemmodel.cpp:203
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "This Widget was written for Plasma %1 and is not compatible with Plasma "
+#| "%2. Please contact the widget's author for an updated version."
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please contact the widget's author for an updated version."
 msgstr ""
+"Tento widget byl napsán pro prostředí Plasma verze %1 a není kompatibilní s "
+"prostředím Plasma verze %2. Pro získání aktuální verze kontaktujte autora "
+"widgetu."
 
 #: shellprivate/plasmaappletitemmodel.cpp:207
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "This Widget was written for Plasma %1 and is not compatible with Plasma "
+#| "%2. Please update Plasma in order to use the widget."
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please update Plasma in order to use the widget."
 msgstr ""
+"Tento widget byl napsán pro prostředí Plasma verze %1 a není kompatibilní s "
+"prostředím Plasma verze %2. Pro použití widgetu aktualizujte prostředí "
+"Plasma."
 
 #: shellprivate/plasmaappletitemmodel.cpp:212
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "This Widget was written for Plasma %1 and is not compatible with the "
+#| "latest version of Plasma. Please update Plasma in order to use the widget."
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "
 "version of Plasma. Please update Plasma in order to use the widget."
 msgstr ""
+"Tento widget byl napsán pro prostředí Plasma verze %1 a není kompatibilní s "
+"nainstalovaným prostředím Plasma. Pro použití widgetu aktualizujte prostředí "
+"Plasma."
 
 #: shellprivate/widgetexplorer.cpp:110
 msgctxt "applet category"
@@ -392,49 +419,65 @@ msgid "Installation Failure"
 msgstr "Chyba instalace"
 
 #: timezoneselector/TimezoneSelector.qml:104
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid ""
+#| "The currently selected time zone is not available for visualization on "
+#| "this map"
 msgctxt "@info"
 msgid ""
 "The currently selected time zone is not available for visualization on this "
 "map"
-msgstr ""
+msgstr "Aktuálně vybrané časové pásmo nemůže být na této mapě zobrazeno"
 
 #: timezoneselector/TimezoneSelector.qml:194
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Zoom in"
 msgctxt "@action:button"
 msgid "Zoom in"
-msgstr ""
+msgstr "Přiblížit"
 
 #: timezoneselector/TimezoneSelector.qml:210
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Zoom out"
 msgctxt "@action:button"
 msgid "Zoom out"
-msgstr ""
+msgstr "Oddálit"
 
 #: timezoneselector/TimezoneSelector.qml:239
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:listbox In the context of time zone selection"
+#| msgid "Region:"
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Region:"
-msgstr ""
+msgstr "Region:"
 
 #: timezoneselector/TimezoneSelector.qml:246
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "Placeholder for empty time zone combobox selector"
+#| msgid "Choose…"
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
-msgstr ""
+msgstr "Vybrat…"
 
 #: timezoneselector/TimezoneSelector.qml:250
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Timezone region selector"
 msgid "Timezone region selector"
-msgstr ""
+msgstr "Výběr oblasti časového pásma"
 
 #: timezoneselector/TimezoneSelector.qml:271
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label:listbox In the context of time zone selection"
+#| msgid "Time zone:"
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
-msgstr ""
+msgstr "Časové pásmo:"
 
 #: timezoneselector/TimezoneSelector.qml:281
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Timezone location selector"
 msgid "Timezone location selector"
-msgstr ""
+msgstr "Výběr umístění časového pásma"
