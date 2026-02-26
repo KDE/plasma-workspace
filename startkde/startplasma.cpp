@@ -254,13 +254,13 @@ std::optional<QProcessEnvironment> getSystemdEnvironment()
         return std::nullopt;
     }
     auto variant = qdbus_cast<QVariant>(arguments[0]);
-    if (variant.typeId() != QMetaType::QStringList) {
+    const QStringList *const assignmentList = get_if<QStringList>(&variant);
+    if (!assignmentList) {
         return std::nullopt;
     }
 
-    const auto assignmentList = variant.toStringList();
     QProcessEnvironment ret;
-    for (auto &env : assignmentList) {
+    for (auto &env : *assignmentList) {
         const int idx = env.indexOf(QLatin1Char('='));
         if (Q_LIKELY(idx > 0)) {
             ret.insert(env.left(idx), env.mid(idx + 1));
