@@ -57,8 +57,9 @@ void FilterProxyModel::setQuery(const QString &query)
     if (m_query != query) {
         const int oldIndex = selectedSchemeIndex();
 
+        beginFilterChange();
         m_query = query;
-        invalidateFilter();
+        endFilterChange();
 
         Q_EMIT queryChanged();
 
@@ -78,8 +79,9 @@ void FilterProxyModel::setFilter(KCMColors::SchemeFilter filter)
     if (m_filter != filter) {
         const int oldIndex = selectedSchemeIndex();
 
+        beginFilterChange();
         m_filter = filter;
-        invalidateFilter();
+        endFilterChange();
 
         Q_EMIT filterChanged();
 

@@ -197,8 +197,9 @@ bool DefaultItemFilterProxyModel::lessThan(const QModelIndex &left, const QModel
 
 void DefaultItemFilterProxyModel::setSearchTerm(const QString &pattern)
 {
+    beginFilterChange();
     m_searchPattern = pattern;
-    invalidateFilter();
+    endFilterChange();
     Q_EMIT searchTermChanged(pattern);
 }
 
@@ -209,15 +210,17 @@ QString DefaultItemFilterProxyModel::searchTerm() const
 
 void DefaultItemFilterProxyModel::setFilter(const Filter &filter)
 {
+    beginFilterChange();
     m_filter = filter;
-    invalidateFilter();
+    endFilterChange();
     Q_EMIT filterChanged();
 }
 
 void DefaultItemFilterProxyModel::setFilterType(const QString &type)
 {
+    beginFilterChange();
     m_filter.first = type;
-    invalidateFilter();
+    endFilterChange();
     Q_EMIT filterChanged();
 }
 
@@ -228,8 +231,9 @@ QString DefaultItemFilterProxyModel::filterType() const
 
 void DefaultItemFilterProxyModel::setFilterQuery(const QVariant &query)
 {
+    beginFilterChange();
     m_filter.second = query;
-    invalidateFilter();
+    endFilterChange();
     Q_EMIT filterChanged();
 }
 

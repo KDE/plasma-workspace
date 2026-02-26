@@ -24,8 +24,9 @@ Notifications::Urgencies NotificationFilterProxyModel::urgencies() const
 void NotificationFilterProxyModel::setUrgencies(Notifications::Urgencies urgencies)
 {
     if (m_urgencies != urgencies) {
+        beginFilterChange();
         m_urgencies = urgencies;
-        invalidateFilter();
+        endFilterChange();
         Q_EMIT urgenciesChanged();
     }
 }
@@ -38,8 +39,9 @@ bool NotificationFilterProxyModel::showExpired() const
 void NotificationFilterProxyModel::setShowExpired(bool show)
 {
     if (m_showExpired != show) {
+        beginFilterChange();
         m_showExpired = show;
-        invalidateFilter();
+        endFilterChange();
         Q_EMIT showExpiredChanged();
     }
 }
@@ -52,8 +54,9 @@ bool NotificationFilterProxyModel::showDismissed() const
 void NotificationFilterProxyModel::setShowDismissed(bool show)
 {
     if (m_showDismissed != show) {
+        beginFilterChange();
         m_showDismissed = show;
-        invalidateFilter();
+        endFilterChange();
         Q_EMIT showDismissedChanged();
     }
 }
@@ -66,8 +69,9 @@ bool NotificationFilterProxyModel::showAddedDuringInhibition() const
 void NotificationFilterProxyModel::setShowAddedDuringInhibition(bool show)
 {
     if (m_showAddedDuringInhibition != show) {
+        beginFilterChange();
         m_showAddedDuringInhibition = show;
-        invalidateFilter();
+        endFilterChange();
         Q_EMIT showAddedDuringInhibitionChanged();
     }
 }
@@ -80,8 +84,9 @@ bool NotificationFilterProxyModel::ignoreBlacklistDuringInhibition() const
 void NotificationFilterProxyModel::setIgnoreBlacklistDuringInhibition(bool ignore)
 {
     if (m_ignoreBlacklistDuringInhibition != ignore) {
+        beginFilterChange();
         m_ignoreBlacklistDuringInhibition = ignore;
-        invalidateFilter();
+        endFilterChange();
         Q_EMIT ignoreBlacklistDuringInhibitionChanged();
     }
 }
@@ -94,8 +99,9 @@ QStringList NotificationFilterProxyModel::blacklistedDesktopEntries() const
 void NotificationFilterProxyModel::setBlackListedDesktopEntries(const QStringList &blacklist)
 {
     if (m_blacklistedDesktopEntries != blacklist) {
+        beginFilterChange();
         m_blacklistedDesktopEntries = blacklist;
-        invalidateFilter();
+        endFilterChange();
         Q_EMIT blacklistedDesktopEntriesChanged();
     }
 }
@@ -108,8 +114,9 @@ QStringList NotificationFilterProxyModel::blacklistedNotifyRcNames() const
 void NotificationFilterProxyModel::setBlacklistedNotifyRcNames(const QStringList &blacklist)
 {
     if (m_blacklistedNotifyRcNames != blacklist) {
+        beginFilterChange();
         m_blacklistedNotifyRcNames = blacklist;
-        invalidateFilter();
+        endFilterChange();
         Q_EMIT blacklistedNotifyRcNamesChanged();
     }
 }
@@ -122,8 +129,9 @@ QStringList NotificationFilterProxyModel::whitelistedDesktopEntries() const
 void NotificationFilterProxyModel::setWhiteListedDesktopEntries(const QStringList &whitelist)
 {
     if (m_whitelistedDesktopEntries != whitelist) {
+        beginFilterChange();
         m_whitelistedDesktopEntries = whitelist;
-        invalidateFilter();
+        endFilterChange();
         Q_EMIT whitelistedDesktopEntriesChanged();
     }
 }
@@ -136,8 +144,9 @@ QStringList NotificationFilterProxyModel::whitelistedNotifyRcNames() const
 void NotificationFilterProxyModel::setWhitelistedNotifyRcNames(const QStringList &whitelist)
 {
     if (m_whitelistedNotifyRcNames != whitelist) {
+        beginFilterChange();
         m_whitelistedNotifyRcNames = whitelist;
-        invalidateFilter();
+        endFilterChange();
         Q_EMIT whitelistedNotifyRcNamesChanged();
     }
 }
