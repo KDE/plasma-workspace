@@ -210,6 +210,7 @@ void AppMenuApplet::trigger(QQuickItem *ctx, int idx)
             menuAction->setMenu(m_currentMenu);
         } else {
             m_currentMenu = actionMenu;
+            m_sourceMenu = actionMenu;
         }
 
         QTimer::singleShot(0, ctx, ungrabMouseHack);
