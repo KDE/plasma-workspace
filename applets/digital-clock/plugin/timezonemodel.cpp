@@ -44,10 +44,14 @@ bool TimeZoneFilterProxy::filterAcceptsRow(int source_row, const QModelIndex &so
 
 void TimeZoneFilterProxy::setFilterString(const QString &filterString)
 {
+    if (m_filterString == filterString) {
+        return;
+    }
+    beginFilterChange();
     m_filterString = filterString;
     m_stringMatcher.setPattern(filterString);
+    endFilterChange();
     Q_EMIT filterStringChanged();
-    invalidateFilter();
 }
 
 void TimeZoneFilterProxy::setOnlyShowChecked(const bool show)
@@ -55,9 +59,10 @@ void TimeZoneFilterProxy::setOnlyShowChecked(const bool show)
     if (m_onlyShowChecked == show) {
         return;
     }
+    beginFilterChange();
     m_onlyShowChecked = show;
+    endFilterChange();
     Q_EMIT onlyShowCheckedChanged();
-    invalidateFilter();
 }
 
 //=============================================================================
@@ -254,4 +259,3 @@ QStringList TimeZoneUtils::sortedTimeZones(const QStringList timeZones) const
 }
 
 #include "moc_timezonemodel.cpp"
-

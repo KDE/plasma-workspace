@@ -102,8 +102,9 @@ int NotificationGroupCollapsingProxyModel::limit() const
 void NotificationGroupCollapsingProxyModel::setLimit(int limit)
 {
     if (m_limit != limit) {
+        beginFilterChange();
         m_limit = limit;
-        invalidateFilter();
+        endFilterChange();
         invalidateGroupRoles();
         Q_EMIT limitChanged();
     }
@@ -117,8 +118,9 @@ QDateTime NotificationGroupCollapsingProxyModel::lastRead() const
 void NotificationGroupCollapsingProxyModel::setLastRead(const QDateTime &lastRead)
 {
     if (m_lastRead != lastRead) {
+        beginFilterChange();
         m_lastRead = lastRead;
-        invalidateFilter();
+        endFilterChange();
         invalidateGroupRoles();
         Q_EMIT lastReadChanged();
     }
@@ -132,8 +134,9 @@ bool NotificationGroupCollapsingProxyModel::expandUnread() const
 void NotificationGroupCollapsingProxyModel::setExpandUnread(bool expand)
 {
     if (m_expandUnread != expand) {
+        beginFilterChange();
         m_expandUnread = expand;
-        invalidateFilter();
+        endFilterChange();
         invalidateGroupRoles();
         Q_EMIT expandUnreadChanged();
     }
