@@ -208,6 +208,7 @@ void HistoryModel::clear()
         m_starredCount = 0;
         endResetModel();
     }
+    m_clip->clear(SystemClipboard::SelectionMode(SystemClipboard::Selection | SystemClipboard::Clipboard));
 }
 
 void HistoryModel::clearNonStarredHistory()
@@ -268,6 +269,7 @@ void HistoryModel::clearNonStarredHistory()
     }
 
     QSqlQuery(u"VACUUM"_s, m_db).exec();
+    m_clip->clear(SystemClipboard::SelectionMode(SystemClipboard::Selection | SystemClipboard::Clipboard));
 }
 
 void HistoryModel::clearHistory()
