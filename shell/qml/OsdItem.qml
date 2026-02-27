@@ -36,15 +36,6 @@ RowLayout {
 
     spacing: Kirigami.Units.largeSpacing
 
-    Layout.preferredWidth: Math.max(Math.min(Screen.desktopAvailableWidth / 2, implicitWidth), Kirigami.Units.gridUnit * 15)
-    Layout.preferredHeight: Math.max(iconItem.Layout.preferredHeight, implicitHeight)
-    Layout.minimumWidth: Layout.preferredWidth
-    Layout.minimumHeight: Layout.preferredHeight
-    Layout.maximumWidth: Layout.preferredWidth
-    Layout.maximumHeight: Layout.preferredHeight
-    width: Layout.preferredWidth
-    height: Layout.preferredHeight
-
     Kirigami.Icon {
         id: iconItem
         Layout.leftMargin: Kirigami.Units.smallSpacing // Left end spacing
