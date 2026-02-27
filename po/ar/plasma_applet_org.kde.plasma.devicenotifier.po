@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2022-01-19 17:38+0400\n"
+"PO-Revision-Date: 2026-02-26 13:13+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -56,7 +56,7 @@ msgstr "افتح في مدير الملفّات"
 #: package/contents/ui/DeviceItem.qml:229
 #, kde-format
 msgid "Mount and Open"
-msgstr "ضم وافتح"
+msgstr "صِل وافتح"
 
 #: package/contents/ui/DeviceItem.qml:231
 #, kde-format
@@ -71,7 +71,7 @@ msgstr "أزِل بأمان"
 #: package/contents/ui/DeviceItem.qml:275
 #, kde-format
 msgid "Mount"
-msgstr "ضمّ"
+msgstr "صِل"
 
 #: package/contents/ui/FullRepresentation.qml:41
 #: package/contents/ui/main.qml:238
