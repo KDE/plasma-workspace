@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-17 02:39+0000\n"
-"PO-Revision-Date: 2025-07-15 23:12+0400\n"
+"PO-Revision-Date: 2026-02-26 13:13+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -28,7 +28,7 @@ msgstr "افحص الأخطاء"
 #: actions/mountaction.cpp:97
 #, kde-format
 msgid "Mount"
-msgstr "ضمّ"
+msgstr "صِل"
 
 #: actions/mountandopenaction.cpp:178
 #, kde-format
@@ -43,7 +43,7 @@ msgstr "حاول الإصلاح"
 #: actions/mountandopenaction.cpp:181
 #, kde-format
 msgid "Mount and Open"
-msgstr "ضم وافتح"
+msgstr "صِل وافتح"
 
 #: actions/mountandopenaction.cpp:183
 #, kde-format
@@ -89,7 +89,7 @@ msgstr "يمكن إزالة هذا الجهاز الآن بأمان."
 #: devicemessagemonitor_p.cpp:192
 #, kde-format
 msgid "You are not authorized to mount this device."
-msgstr "لست مستوثقًا لضمّ هذا الجهاز."
+msgstr "لست متوثقًا لوصل هذا الجهاز."
 
 #: devicemessagemonitor_p.cpp:196
 #, kde-format
@@ -115,7 +115,7 @@ msgstr "نوع خطأ مجهول"
 #: devicemessagemonitor_p.cpp:208
 #, kde-format
 msgid "Could not mount this device as it is busy."
-msgstr "تعذّر ضمّ هذا الجهاز فهو مشغول."
+msgstr "تعذّر وصل هذا الجهاز فهو مشغول."
 
 #: devicemessagemonitor_p.cpp:235
 #, kde-format
@@ -143,7 +143,7 @@ msgstr "، "
 #: devicemessagemonitor_p.cpp:258
 #, kde-format
 msgid "Could not mount this device."
-msgstr "تعذّر ضمّ هذا الجهاز."
+msgstr "تعذّر وصل هذا الجهاز."
 
 #: devicemessagemonitor_p.cpp:262
 #, kde-format

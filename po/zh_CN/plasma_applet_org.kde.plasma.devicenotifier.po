@@ -161,7 +161,7 @@ msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Checking…"
-msgstr "正在检查…"
+msgstr ""
 
 #: qml/DeviceItem.qml:101
 #, kde-format
@@ -169,7 +169,7 @@ msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Repairing…"
-msgstr "正在修复…"
+msgstr ""
 
 #: qml/DeviceItem.qml:104
 #, kde-format
