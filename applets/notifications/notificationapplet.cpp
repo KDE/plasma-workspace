@@ -19,7 +19,7 @@
 #include <PlasmaQuick/Dialog>
 #include <PlasmaQuick/PlasmaWindow>
 
-void InputDisabler::makeTransparentForInput(QQuickItem *item)
+void QuickControlsHacks::makeTransparentForInput(QQuickItem *item)
 {
     if (item) {
         item->setAcceptedMouseButtons(Qt::NoButton);

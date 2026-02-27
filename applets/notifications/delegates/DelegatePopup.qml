@@ -45,7 +45,7 @@ BaseDelegate {
 
         // HACK PlasmoidHeading is a QQC2 Control which accepts left mouse button by default,
         // which breaks the popup default action mouse handler, cf. QTBUG-89785
-        Component.onCompleted: Notifications.InputDisabler.makeTransparentForInput(this)
+        Component.onCompleted: Notifications.QuickControlsHacks.makeTransparentForInput(this)
 
         contentItem: Components.NotificationHeader {
             modelInterface: delegateRoot.modelInterface

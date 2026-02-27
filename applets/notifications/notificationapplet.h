@@ -13,7 +13,7 @@
 
 class QRect;
 
-class InputDisabler : public QObject
+class QuickControlsHacks : public QObject
 {
     Q_OBJECT
     QML_ELEMENT
