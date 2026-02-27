@@ -157,6 +157,10 @@ BaseDelegate {
                 modelInterface: delegateRoot.modelInterface
                 Accessible.ignored: true // ignore HTML body in favor of Accessible.description on delegateRoot
             }
+
+            // HACK ScrollView is a Pane which explicitly sets Qt.ArrowCursor shape.
+            // We want the bodyCursorShape to propagate, so this must be unset.
+            Component.onCompleted: Notifications.QuickControlsHacks.unsetCursor(this)
         }
     }
 

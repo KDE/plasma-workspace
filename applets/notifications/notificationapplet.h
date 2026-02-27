@@ -21,6 +21,7 @@ class QuickControlsHacks : public QObject
 
 public:
     Q_INVOKABLE void makeTransparentForInput(QQuickItem *item);
+    Q_INVOKABLE void unsetCursor(QQuickItem *item);
 };
 
 class NotificationApplet : public Plasma::Applet

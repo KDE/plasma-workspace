@@ -9,6 +9,8 @@ import QtQuick.Templates as T
 
 import org.kde.kirigami as Kirigami
 
+import plasma.applet.org.kde.plasma.notifications as Notifications
+
 T.SwipeDelegate {
     id: swipeDelegate
 
@@ -39,4 +41,8 @@ T.SwipeDelegate {
     swipe.left: Item {
         anchors.fill:parent
     }
+
+    // HACK SwipeDelegate is an ItemDelegate is an AbstractButton which explicitly
+    // sets Qt.ArrowCursor shape. We want the bodyCursorShape to propagate, so this must be unset.
+    Component.onCompleted: Notifications.QuickControlsHacks.unsetCursor(this)
 }

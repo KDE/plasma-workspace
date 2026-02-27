@@ -29,6 +29,13 @@ void QuickControlsHacks::makeTransparentForInput(QQuickItem *item)
     }
 }
 
+void QuickControlsHacks::unsetCursor(QQuickItem *item)
+{
+    if (item) {
+        item->unsetCursor();
+    }
+}
+
 NotificationApplet::NotificationApplet(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
     : Plasma::Applet(parent, data, args)
 {
