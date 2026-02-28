@@ -296,6 +296,16 @@ void AppMenuModel::updateApplicationMenu(const QString &serviceName, const QStri
                 return;
             }
 
+            if (m_menu->isEmpty()) {
+                // naughty apps may pretend to have a menu but then don't actually give us one.
+                // let's disable it in that case
+                setMenuAvailable(false);
+                return;
+            } else {
+                // if it somehow comes later, make it available again
+                setMenuAvailable(true);
+            }
+
             // cache first layer of sub menus, which we'll be popping up
             const auto actions = m_menu->actions();
             for (QAction *a : actions) {

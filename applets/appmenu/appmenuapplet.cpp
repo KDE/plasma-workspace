@@ -242,6 +242,10 @@ void AppMenuApplet::trigger(QQuickItem *ctx, int idx)
                 m_currentMenu->popup(pos);
             }
         } else if (view() == CompactView) {
+            if (m_currentMenu->isEmpty()) {
+                // don't try to popup an empty menu in case the app gives us one
+                return;
+            }
             m_currentMenu->popup(pos);
             connect(actionMenu, &QMenu::aboutToHide, this, &AppMenuApplet::onMenuAboutToHide, Qt::UniqueConnection);
         }
