@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-23 00:44+0000\n"
+"POT-Creation-Date: 2026-02-28 02:46+0000\n"
 "PO-Revision-Date: 2025-10-16 12:38-0500\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -566,43 +566,43 @@ msgstr ""
 msgid "Icon:"
 msgstr "ਆਈਕਾਨ:"
 
-#: historymodel.cpp:281
+#: historymodel.cpp:283
 #, kde-format
 msgid "The clipboard history contains starred items. Clear them too?"
 msgstr "ਕਲਿੱਪਬੋਰਡ ਅਤੀਤ ਵਿੱਚ ਤਾਰਾ ਲੱਗੀਆਂ ਚੀਜ਼ਾਂ ਹਨ। ਕੀ ਉਹਨਾਂ ਨੂੰ ਮਿਟਾਉਣਾ ਹੈ?"
 
-#: historymodel.cpp:282 historymodel.cpp:302
+#: historymodel.cpp:284 historymodel.cpp:304
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "ਕਲਿੱਪਬੋਰਡ ਅਤੀਤ ਨੂੰ ਮਿਟਾਓ"
 
-#: historymodel.cpp:283
+#: historymodel.cpp:285
 #, kde-format
 msgid "Clear Everything"
 msgstr "ਹਰ ਚੀਜ਼ ਨੂੰ ਮਿਟਾਓ"
 
-#: historymodel.cpp:284
+#: historymodel.cpp:286
 #, kde-format
 msgid "Keep Starred Items"
 msgstr "ਤਾਰਾ ਲੱਗੀਆਂ ਚੀਜ਼ਾਂ ਨੂੰ ਰੱਖੋ"
 
-#: historymodel.cpp:301
+#: historymodel.cpp:303
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "ਕੀ ਤੁਸੀਂ ਪੂਰੇ ਕਲਿੱਪਬੋਰਡ ਅਤੀਤ ਨੂੰ ਮਿਟਾਉਣਾ ਅਤੇ ਹਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
 
-#: historymodel.cpp:385
+#: historymodel.cpp:387
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: historymodel.cpp:565
+#: historymodel.cpp:567
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr "ਇਹ ਚੀਜ਼ ਤਾਰਾ ਲਗਾਈ ਹੈ। ਕੀ ਤੁਸੀਂ ਇਸ ਨੂੰ ਅਤੀਤ ਵਿੱਚੋਂ ਮਿਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
 
-#: historymodel.cpp:566
+#: historymodel.cpp:568
 #, kde-format
 msgid "Remove Starred Item"
 msgstr "ਤਾਰਾ ਲੱਗੀ ਚੀਜ਼ ਨੂੰ ਹਟਾਓ"

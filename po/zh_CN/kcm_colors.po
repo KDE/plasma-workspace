@@ -736,7 +736,7 @@ msgstr "减淡"
 #, kde-format
 msgctxt "disabled color effect"
 msgid "Tint"
-msgstr "染色"
+msgstr "着色"
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, intensityBox)
 #: editor/scmeditoreffects.ui:64
@@ -821,7 +821,7 @@ msgstr "减淡"
 #, kde-format
 msgctxt "disabled contrast"
 msgid "Tint"
-msgstr "染色"
+msgstr "着色"
 
 #. i18n: ectx: property (toolTip), widget (QSlider, contrastSlider)
 #: editor/scmeditoreffects.ui:222
@@ -857,13 +857,13 @@ msgstr "标题栏使用强调色(&C)"
 #: editor/scmeditoroptions.ui:45
 #, kde-format
 msgid "Tint all colors with accent color"
-msgstr "使用强调色影响所有颜色"
+msgstr "使用强调色对所有颜色进行着色"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: editor/scmeditoroptions.ui:52
 #, kde-format
 msgid "Tint strength:"
-msgstr "染色强度："
+msgstr "着色强度："
 
 #. i18n: ectx: property (toolTip), widget (QGroupBox, groupBox_5)
 #: editor/scmeditoroptions.ui:69

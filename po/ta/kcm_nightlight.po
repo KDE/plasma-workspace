@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Kishore G <kishore96@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2026 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2024-09-01 17:10+0200\n"
+"PO-Revision-Date: 2026-02-27 21:29+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: ui/DayNightView.qml:154
 #, kde-format
@@ -32,46 +32,42 @@ msgid ""
 msgstr "நிறவெப்பம், பகலுக்கானதாக %1-க்கு மாறத் தொடங்கி, %2-க்குள் முழுதாக மாறியிருக்கும்"
 
 #: ui/main.qml:39
-#, fuzzy, kde-format
-#| msgid "The blue light filter makes the colors on the screen warmer."
+#, kde-format
 msgctxt "@info"
 msgid "The blue light filter makes the colors on the screen warmer."
 msgstr ""
-"நீங்கள் தேர்ந்தெடுக்கும் நேரங்களில் காட்சிக் கருவியிலுள்ள நிறங்களை நயமானவையாக "
-"(சிவந்தவையாக) நீல வடிகட்டி மாற்றும்."
+"நீங்கள் தேர்ந்தெடுக்கும் நேரங்களில் திரையிலுள்ள நிறங்களை நயமானவையாக (சிவந்தவையாக) இந்த நீல "
+"வடிகட்டி மாற்றும்."
 
 #: ui/main.qml:49
-#, fuzzy, kde-format
-#| msgid "Switching times:"
+#, kde-format
 msgctxt "@label:listbox Night Light modes"
 msgid "Switching times:"
 msgstr "மாறும் நேரம்:"
 
 #: ui/main.qml:58
-#, fuzzy, kde-format
-#| msgid "Always off"
+#, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Always off"
 msgstr "ஒருபோதும் வேண்டாம்"
 
 #: ui/main.qml:59
-#, fuzzy, kde-format
-#| msgid "Always on night light"
+#, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Always on night light"
-msgstr "எப்போதும் இரவு நிறத்தைப் பயன்படுத்து"
+msgstr "எப்போதும் இரவுக்கான நிறத்தையே பயன்படுத்து"
 
 #: ui/main.qml:60
 #, kde-format
 msgctxt "@item:inlistbox switching times"
 msgid "Sunrise and sunset"
-msgstr ""
+msgstr "சூரிய தோற்றமும் மறைவும்"
 
 #: ui/main.qml:72
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
-msgstr ""
+msgstr "அமை..."
 
 #: ui/main.qml:115 ui/main.qml:166 ui/main.qml:230
 #, kde-format
@@ -80,8 +76,7 @@ msgid "%1K"
 msgstr "%1K"
 
 #: ui/main.qml:123
-#, fuzzy, kde-format
-#| msgid "Day light temperature:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Day light temperature:"
 msgstr "பகலுக்கான நிறவெப்பநிலை:"
@@ -99,8 +94,7 @@ msgid "Warm"
 msgstr "சிவப்பு"
 
 #: ui/main.qml:187
-#, fuzzy, kde-format
-#| msgid "Night light temperature:"
+#, kde-format
 msgctxt "@label:slider"
 msgid "Night light temperature:"
 msgstr "இரவுக்கான நிறவெப்பநிலை:"

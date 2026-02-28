@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-17 02:42+0000\n"
-"PO-Revision-Date: 2026-02-25 16:46+0100\n"
+"PO-Revision-Date: 2026-02-27 13:01+0100\n"
 "Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -85,7 +85,7 @@ msgstr "%1 %2"
 #: calendar/qml/MonthViewHeader.qml:131
 #, kde-format
 msgid "Days"
-msgstr "Dnů"
+msgstr "Dny"
 
 #: calendar/qml/MonthViewHeader.qml:139
 #, kde-format
@@ -369,7 +369,7 @@ msgstr "Nedávno nainstalované"
 #: shellprivate/widgetexplorer.cpp:166
 #, kde-format
 msgid "Categories:"
-msgstr "Kategorie: "
+msgstr "Kategorie:"
 
 #: shellprivate/widgetexplorer.cpp:236
 #, kde-format

@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-23 00:44+0000\n"
+"POT-Creation-Date: 2026-02-28 02:46+0000\n"
 "PO-Revision-Date: 2024-09-19 16:56+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -621,48 +621,48 @@ msgstr "Επαναφορά του εικονιδίου στην προεπιλο
 msgid "Icon:"
 msgstr "Εικονίδιο:"
 
-#: historymodel.cpp:281
+#: historymodel.cpp:283
 #, fuzzy, kde-format
 #| msgid "The clipboard history will store up to this many items."
 msgid "The clipboard history contains starred items. Clear them too?"
 msgstr "Το ιστορικό του πρόχειρου θα αποθηκεύσει έως και τόσα αντικείμενα."
 
-#: historymodel.cpp:282 historymodel.cpp:302
+#: historymodel.cpp:284 historymodel.cpp:304
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Εκκαθάριση ιστορικού πρόχειρου"
 
-#: historymodel.cpp:283
+#: historymodel.cpp:285
 #, kde-format
 msgid "Clear Everything"
 msgstr ""
 
-#: historymodel.cpp:284
+#: historymodel.cpp:286
 #, fuzzy, kde-format
 #| msgid "Clipboard Contents"
 msgid "Keep Starred Items"
 msgstr "Περιεχόμενα του προχείρου"
 
-#: historymodel.cpp:301
+#: historymodel.cpp:303
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr ""
 "Θέλετε πραγματικά να καθαρίσετε και να διαγράψετε ολόκληρο το ιστορικό του "
 "πρόχειρου;"
 
-#: historymodel.cpp:385
+#: historymodel.cpp:387
 #, fuzzy, kde-format
 #| msgid "%1x%2 %3bpp"
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2 %3bpp"
 
-#: historymodel.cpp:565
+#: historymodel.cpp:567
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 
-#: historymodel.cpp:566
+#: historymodel.cpp:568
 #, kde-format
 msgid "Remove Starred Item"
 msgstr ""

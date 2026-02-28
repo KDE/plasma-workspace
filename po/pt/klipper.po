@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-23 00:44+0000\n"
+"POT-Creation-Date: 2026-02-28 02:46+0000\n"
 "PO-Revision-Date: 2022-10-17 10:13+0100\n"
 "Last-Translator: José Nuno Pires <zepires@gmail.com>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
@@ -623,48 +623,48 @@ msgstr "Repor o ícone predefinido para o comando"
 msgid "Icon:"
 msgstr "Ícone:"
 
-#: historymodel.cpp:281
+#: historymodel.cpp:283
 #, fuzzy, kde-format
 #| msgid "The clipboard history will store up to this many items."
 msgid "The clipboard history contains starred items. Clear them too?"
 msgstr ""
 "O histórico da área de transferência irá guardar esta quantidade de itens."
 
-#: historymodel.cpp:282 historymodel.cpp:302
+#: historymodel.cpp:284 historymodel.cpp:304
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Limpar o Histórico da Área de Transferência"
 
-#: historymodel.cpp:283
+#: historymodel.cpp:285
 #, kde-format
 msgid "Clear Everything"
 msgstr ""
 
-#: historymodel.cpp:284
+#: historymodel.cpp:286
 #, fuzzy, kde-format
 #| msgctxt "%1 is application display name"
 #| msgid "%1 - Clipboard Items"
 msgid "Keep Starred Items"
 msgstr "%1 - Itens da Área de Transferência"
 
-#: historymodel.cpp:301
+#: historymodel.cpp:303
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Deseja mesmo limpar e remover o histórico da área de transferência?"
 
-#: historymodel.cpp:385
+#: historymodel.cpp:387
 #, fuzzy, kde-format
 #| msgid "%1x%2 %3bpp"
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2 %3bpp"
 
-#: historymodel.cpp:565
+#: historymodel.cpp:567
 #, kde-format
 msgid "This item is starred. Do you really want to remove it from history?"
 msgstr ""
 
-#: historymodel.cpp:566
+#: historymodel.cpp:568
 #, kde-format
 msgid "Remove Starred Item"
 msgstr ""
