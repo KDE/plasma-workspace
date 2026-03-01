@@ -103,18 +103,6 @@ KCM.GridDelegate {
             onToggled: model.checked = checked
         }
 
-        Kirigami.Icon {
-            anchors.right: parent.right
-            anchors.top: parent.top
-            anchors.margins: Kirigami.Units.smallSpacing
-            visible: model.selectors.includes("day-night")
-            source: "lighttable"
-            isMask: true
-            color: "white"
-            width: Kirigami.Units.iconSizes.medium
-            height: width
-        }
-
         Behavior on color {
             ColorAnimation {
                 duration: Kirigami.Units.longDuration
