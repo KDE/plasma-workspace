@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2026 Mint <5602mint@gmail.com>
 # phanect <phanective@gmail.com>, 2010.
 # Jumpei Ogawa <phanective@gmail.com>, 2010.
 # Tomohiro Hyakutake <tomhioo@outlook.jp>, 2019, 2020.
@@ -8,9 +9,9 @@ msgstr ""
 "Project-Id-Version: kded_susefreespacenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2022-08-18 09:13+0900\n"
-"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
-"Language-Team: Japanese <kde-jp@kde.org>\n"
+"PO-Revision-Date: 2026-02-21 09:29+0900\n"
+"Last-Translator: Mint <5602mint@gmail.com>\n"
+"Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: freespacenotifier.cpp:121
 #, kde-format
@@ -83,7 +84,7 @@ msgstr "空き領域が次の量を下回ったら警告する:"
 #: freespacenotifier_prefs_base.ui:54
 #, no-c-format, kde-format
 msgid "%"
-msgstr ""
+msgstr "%"
 
 #. i18n: ectx: property (text), widget (QLabel, label_info)
 #: freespacenotifier_prefs_base.ui:67
@@ -91,42 +92,34 @@ msgstr ""
 msgid ""
 "The system will notify you if the free space drops below the specified MiB "
 "and the specified percentage of available space."
-msgstr ""
+msgstr "空き領域が設定した MiB および割合 (%) を下回ったときに通知します。"
 
 #: module.cpp:121
-#, fuzzy, kde-format
-#| msgid ""
-#| "Your Root partition is running out of disk space, you have %1 MiB "
-#| "remaining (%2%)."
+#, kde-format
 msgid ""
 "Your %1 partition is running out of disk space; %2 MiB of space remaining "
 "(%3%)."
 msgstr ""
-"ルート パーティションのディスク領域は残り僅かです。残りの領域は %1 MiB です "
-"(%2%)"
+"%1 パーティションの空き領域が少なくなっています。残りの空き容量は %2 MiB で"
+"す (%3%)。"
 
 #: module.cpp:123
-#, fuzzy, kde-format
-#| msgid ""
-#| "Your Root partition is running out of disk space, you have %1 MiB "
-#| "remaining (%2%)."
+#, kde-format
 msgid ""
 "Your Root partition is running out of disk space; %1 MiB of space remaining "
 "(%2%)."
 msgstr ""
-"ルート パーティションのディスク領域は残り僅かです。残りの領域は %1 MiB です "
-"(%2%)"
+"ルート パーティションの空き領域が少なくなっています。残りの空き容量は %1 MiB "
+"です (%2%)。"
 
 #: module.cpp:125
-#, fuzzy, kde-format
-#| msgid ""
-#| "Your Home folder is running out of disk space, you have %1 MiB remaining "
-#| "(%2%)."
+#, kde-format
 msgid ""
 "Your Home folder is running out of disk space; %1 MiB of space remaining "
 "(%2%)."
 msgstr ""
-"ホームフォルダのディスク領域は残り僅かです。残りの領域は %1 MiB です (%2%)。"
+"ホームフォルダの空き領域が少なくなっています。残りの空き容量は %1 MiB です "
+"(%2%)。"
 
 #: module.cpp:150
 #, kde-format

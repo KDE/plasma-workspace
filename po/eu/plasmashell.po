@@ -1,7 +1,7 @@
 # Translation for plasmashell.po to Euskara/Basque (eu).
 # Copyright (C) 2017-2025 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# SPDX-FileCopyrightText: 2023, 2024, 2025 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2023, 2024, 2025, 2026 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Iñigo Salvador Azurmendi <xalba@ni.eus>, 2017, 2018, 2020, 2022, 2023, 2024, 2025.
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-20 03:19+0000\n"
-"PO-Revision-Date: 2025-10-05 19:31+0200\n"
+"PO-Revision-Date: 2026-02-22 20:33+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -179,7 +179,7 @@ msgstr "Ez berrabiarazi plasma-shell automatikoki kraskatu ondoren"
 #: main.cpp:127
 #, kde-format
 msgid "Force loading the given shell plugin"
-msgstr "Behartu adierazitako shell plugina zamatzea"
+msgstr "Behartu adierazitako oskol-plugina zamatzea"
 
 #: main.cpp:131
 #, kde-format
@@ -189,8 +189,7 @@ msgstr "Ordezkatu aurrez dagoen instantzia bat"
 #: main.cpp:134
 #, kde-format
 msgid "Lists the available options for user feedback"
-msgstr ""
-"Erabiltzaileen erreakzioak bidaltzeko aukera erabilgarriak zerrendatzen ditu"
+msgstr "Erabiltzaileen iritziak emateko dauden aukerak zerrendatzen ditu"
 
 #: main.cpp:190
 #, kde-format
@@ -347,7 +346,7 @@ msgstr "Ezkutatu panelaren konfigurazioa"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
-msgstr "Erakutsi panel konfigurazioa"
+msgstr "Erakutsi panelaren konfigurazioa"
 
 #: qml/OsdItem.qml:34
 #, kde-format

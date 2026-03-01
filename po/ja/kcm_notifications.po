@@ -1,14 +1,15 @@
 # SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # Tomohiro Hyakutake <tomhioo@outlook.jp>, 2019, 2020, 2021.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2023.
+# SPDX-FileCopyrightText: 2026 Mint <5602mint@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2025-03-18 07:29+0900\n"
-"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
-"Language-Team: Japanese <kde-jp@kde.org>\n"
+"PO-Revision-Date: 2026-02-21 20:12+0900\n"
+"Last-Translator: Mint <5602mint@gmail.com>\n"
+"Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: kcm.cpp:62
 #, kde-format
@@ -92,14 +93,13 @@ msgstr "音声ファイルを選択"
 #, kde-format
 msgctxt "@action:button Plasma-specific notifications"
 msgid "Configure for System…"
-msgstr ""
+msgstr "システム通知の設定…"
 
 #: ui/main.qml:53
-#, fuzzy, kde-format
-#| msgid "Other Applications"
+#, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Configure for Applications…"
-msgstr "その他のアプリケーション"
+msgstr "アプリケーションの通知を設定..."
 
 #: ui/main.qml:96
 #, kde-format
@@ -153,7 +153,7 @@ msgctxt ""
 "Automatically enable Do Not Disturb mode while a fullscreen application is "
 "focused"
 msgid "While a fullscreen application is focused"
-msgstr ""
+msgstr "フルスクリーンアプリを使用中"
 
 #: ui/main.qml:170
 #, kde-format
@@ -209,7 +209,7 @@ msgstr "通知アイコンの近く"
 #, kde-format
 msgctxt "@action:button choose custom notification position"
 msgid "Choose…"
-msgstr ""
+msgstr "選択…"
 
 #: ui/main.qml:278 ui/main.qml:294
 #, kde-format
@@ -224,13 +224,11 @@ msgid "Hide after:"
 msgstr "非表示にするまでの時間:"
 
 #: ui/main.qml:306
-#, fuzzy, kde-format
-#| msgctxt "Show application jobs in notification widget"
-#| msgid "Show in notifications"
+#, kde-format
 msgctxt ""
 "@option:check Show progress bar on notifications indicating when it will hide"
 msgid "Show timeout indicator"
-msgstr "通知に表示"
+msgstr "タイムアウトインジケーターを表示"
 
 #: ui/main.qml:318
 #, kde-format
@@ -271,12 +269,11 @@ msgid "Popup Position"
 msgstr "ポップアップの位置"
 
 #: ui/SourcesPage.qml:20
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt ""
 "@title:window kcm page title, configure app-specific notification settings"
 msgid "Application Notifications"
-msgstr "アプリケーションの設定"
+msgstr "アプリケーションの通知"
 
 #: ui/SourcesPage.qml:104
 #, kde-format
@@ -299,20 +296,3 @@ msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior"
 msgstr "リストからアプリケーションを選択して通知設定と動作を設定できます"
-
-#~ msgctxt "@action:button Plasma-specific notifications"
-#~ msgid "System Notifications"
-#~ msgstr "システムの通知"
-
-#~ msgctxt "@action:button Application-specific notifications"
-#~ msgid "Application Settings"
-#~ msgstr "アプリケーション設定"
-
-#~ msgid "Normal notifications:"
-#~ msgstr "通常の通知:"
-
-#~ msgid "Show over full screen windows"
-#~ msgstr "フルスクリーンウィンドウの上に表示"
-
-#~ msgid "Choose Custom Position…"
-#~ msgstr "表示位置を指定…"
