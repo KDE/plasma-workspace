@@ -53,14 +53,34 @@ AbstractNotificationsModel::Private::Private(AbstractNotificationsModel *q)
 
     notificationWatcher.setConnection(QDBusConnection::sessionBus());
     notificationWatcher.setWatchMode(QDBusServiceWatcher::WatchForUnregistration);
-    // Forcibly expire the notification once the owning application exits, in order to
-    // remove the interactive buttons from the notification in the history and/or make the
-    // popup disappear.
+
+    // When the owning application exits, the actions won't work anymore because the app
+    // isn't listening anymore. Remove the actions in this case.
     connect(&notificationWatcher, &QDBusServiceWatcher::serviceUnregistered, q, [this, q](const QString &serviceName) {
-        for (const Notification &notification : std::as_const(notifications)) {
-            if (notification.dBusService() == serviceName) {
-                q->expire(notification.id());
+        for (int row = 0; row < notifications.size(); ++row) {
+            Notification &notification = notifications[row];
+
+            if (notification.dBusService() != serviceName) {
+                continue;
             }
+
+            if (notification.actionNames().isEmpty() && !notification.hasDefaultAction() && !notification.hasReplyAction()
+                && !notification.d->hasConfigureAction) {
+                continue;
+            }
+
+            notification.setActions(QStringList());
+
+            const QModelIndex idx = q->index(row);
+            Q_EMIT q->dataChanged(idx,
+                                  idx,
+                                  {Notifications::ActionNamesRole,
+                                   Notifications::ActionLabelsRole,
+                                   Notifications::HasDefaultActionRole,
+                                   Notifications::DefaultActionLabelRole,
+                                   Notifications::HasReplyActionRole,
+                                   Notifications::ReplyActionLabelRole,
+                                   Notifications::ConfigurableRole});
         }
 
         notificationWatcher.removeWatchedService(serviceName);
