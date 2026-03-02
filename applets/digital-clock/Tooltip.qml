@@ -68,7 +68,10 @@ Item {
             level: 3
             elide: Text.ElideRight
             // keep this consistent with toolTipMainText in analog-clock
-            property var mainText: clocks.visible ? Qt.formatDate(clock.dateTime, Qt.locale(), Locale.LongFormat) : Qt.locale().toString(clock.dateTime, "dddd")
+            property var mainText: {
+                const text = clocks.visible ? Qt.formatDate(clock.dateTime, Qt.locale(), Locale.LongFormat) : Qt.locale().toString(clock.dateTime, "dddd");
+                return text.charAt(0).toUpperCase() + text.slice(1);
+            }
             property bool anyTimezoneSet: !!mainText
             text: anyTimezoneSet ? mainText : i18nc("@label main text shown in digital clock's tooltip when timezone is missing", "Time zone is not set")
             textFormat: Text.PlainText

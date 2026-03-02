@@ -37,7 +37,10 @@ PlasmoidItem {
     Plasmoid.backgroundHints: PlasmaCore.Types.NoBackground
     preferredRepresentation: compactRepresentation
 
-    toolTipMainText: Qt.locale().toString(clockSource.dateTime,"dddd")
+    toolTipMainText: {
+        const day = Qt.locale().toString(clockSource.dateTime, "dddd");
+        return day.charAt(0).toUpperCase() + day.slice(1);
+    }
     toolTipSubText: `${currentTime}\n${currentDate}`
 
     Clock {
