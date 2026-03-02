@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-20 03:19+0000\n"
-"PO-Revision-Date: 2025-10-26 12:47+0100\n"
+"PO-Revision-Date: 2026-03-01 19:36+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 26.03.70\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -558,6 +558,10 @@ msgid ""
 "account instead?<nl/><nl/>This will make %1 unable to log in again, and they "
 "may experience strange behaviors until they log out."
 msgstr ""
+"%1 er logga inn nett no, så det er ikkje mogleg å sletta filene til denne "
+"brukaren. Vil du heller berre sletta kontoen?<nl/><nl/>Dette gjer at %1 "
+"ikkje kan logga inn att etterpå, og ting vil gjerne ikkje fungera skikkeleg "
+"mens hen er logga inn."
 
 #: src/ui/UserDetailsPage.qml:118
 #, kde-format
@@ -566,6 +570,9 @@ msgid ""
 "%1 is currently logged in. Deleting the account will make them unable to log "
 "in again, and they may experience strange behaviors until they log out."
 msgstr ""
+"%1 er logga inn nett. Viss du slettar kontoen, kan ikkje brukaren logga inn "
+"att etterpå, og ting vil gjerne ikkje fungera skikkeleg mens hen er logga "
+"inn."
 
 #: src/ui/UserDetailsPage.qml:125
 #, kde-format
@@ -585,6 +592,8 @@ msgid ""
 "Cannot change your own username while logged in; log out and then log in as "
 "another user to change this account’s username."
 msgstr ""
+"Du kan ikkje endra ditt eige brukar­namn når du er innlogga.  Logg ut, og "
+"logg så inn som ein annan brukar om du vil endra brukarnamnet."
 
 #: src/ui/UserDetailsPage.qml:186
 #, kde-format
@@ -593,6 +602,8 @@ msgid ""
 "Cannot change the username of a logged-in user; wait until this user logs "
 "out first."
 msgstr ""
+"Du kan ikkje endra brukarnamn til ein brukar som alt er innlogga. Vent til "
+"brukaren loggar ut."
 
 #: src/ui/UserDetailsPage.qml:214
 #, kde-format
@@ -632,6 +643,8 @@ msgid ""
 "Cannot delete yourself! Log out and then log in as another user to delete "
 "this user account."
 msgstr ""
+"Du ikkje sletta deg sjølv. Logg ut, og logg så inn som ein annan brukar om "
+"du vil sletta denne kontoen."
 
 #: src/ui/UserDetailsPage.qml:286
 #, kde-format
@@ -655,7 +668,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Failed to crop image: %1"
-msgstr ""
+msgstr "Klarte ikkje skjera til biletet: %1"
 
 #: src/user.cpp:337
 #, kde-format
