@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-05 00:45+0000\n"
-"PO-Revision-Date: 2024-07-28 00:19+0200\n"
+"PO-Revision-Date: 2026-03-01 11:39+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 26.03.70\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -33,7 +33,7 @@ msgstr "karl@huftis.org"
 #, kde-format
 msgctxt "Name filter for file dialogs: File type (file extension wildcards)"
 msgid "Image Files (%1)"
-msgstr ""
+msgstr "Biletfiler (%1)"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: lookandfeelsettings.kcfg:9
@@ -44,16 +44,15 @@ msgstr "Globalt tema for utsjånad og åtferd"
 #. i18n: ectx: label, entry (defaultLightLookAndFeel), group (KDE)
 #. i18n: ectx: label, entry (defaultDarkLookAndFeel), group (KDE)
 #: lookandfeelsettings.kcfg:13 lookandfeelsettings.kcfg:17
-#, fuzzy, kde-format
-#| msgid "Global look and feel"
+#, kde-format
 msgid "Global Look and Feel package, alternate"
-msgstr "Globalt tema for utsjånad og åtferd"
+msgstr "Globalt tema for utsjånad og åtferd, alternativ"
 
 #. i18n: ectx: label, entry (automaticLookAndFeel), group (KDE)
 #: lookandfeelsettings.kcfg:21
 #, kde-format
 msgid "Switch between dark and light global themes depending on time of day"
-msgstr ""
+msgstr "Byt mellom lyst og mørkt globalt tema etter klokkeslettet"
 
 #. i18n: ectx: label, entry (automaticLookAndFeelOnIdle), group (KDE)
 #: lookandfeelsettings.kcfg:25

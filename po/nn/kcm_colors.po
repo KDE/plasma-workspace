@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-31 00:45+0000\n"
-"PO-Revision-Date: 2024-09-01 15:08+0200\n"
+"PO-Revision-Date: 2026-03-01 19:32+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 26.03.70\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -879,13 +879,13 @@ msgstr "Justeringsstyrke:"
 #: editor/scmeditoroptions.ui:69
 #, kde-format
 msgid "Contrast of the frames, separators and outlines"
-msgstr ""
+msgstr "Kontrast på rammer, skiljelinjer og omriss"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
 #: editor/scmeditoroptions.ui:72
 #, kde-format
 msgid "Frames and Outlines"
-msgstr ""
+msgstr "Rammer og omriss"
 
 #. i18n: ectx: property (text), widget (KMessageWidget, contrastValueWarning)
 #: editor/scmeditoroptions.ui:93
@@ -894,12 +894,14 @@ msgid ""
 "Contrast values below 15% may produce visually awkward effects with some "
 "applications and color schemes. Consider yourself warned!"
 msgstr ""
+"Åtvaring: Kontrastverdiar under 15 % kan føra til visuelt rare effektar i "
+"nokre program og med nokre fargeoppsett."
 
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, contrastPercentageSpinBox)
 #: editor/scmeditoroptions.ui:109
 #, no-c-format, kde-format
 msgid "%"
-msgstr ""
+msgstr " %"
 
 #. i18n: ectx: property (text), widget (QLabel, label_8)
 #: editor/scmeditoroptions.ui:138
@@ -1347,29 +1349,27 @@ msgid "Edit Color Scheme…"
 msgstr "Rediger fargeoppsett …"
 
 #: ui/main.qml:324
-#, fuzzy, kde-format
-#| msgid "Remove Color Scheme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove color scheme"
-msgstr "Fjern fargeoppsett"
+msgstr "Fjern fargetema"
 
 #: ui/main.qml:326
-#, fuzzy, kde-format
-#| msgid "Utility to edit and create color schemes"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active color scheme"
-msgstr "Verktøy for å laga og redigera fargeoppsett"
+msgstr "Kan ikkje sletta det gjeldande fargeoppsettet"
 
 #: ui/main.qml:328
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed color schemes"
-msgstr ""
+msgstr "Kan ikkje sletta systeminstallerte fargeoppsett"
 
 #: ui/main.qml:336
 #, kde-format
 msgid "Don’t delete this color scheme"
-msgstr ""
+msgstr "Ikkje slette dette fargeoppsettet"
 
 #: ui/main.qml:380
 #, kde-format

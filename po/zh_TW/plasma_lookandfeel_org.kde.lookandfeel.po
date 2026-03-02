@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-24 00:47+0000\n"
-"PO-Revision-Date: 2026-01-13 01:03+0900\n"
+"PO-Revision-Date: 2026-03-02 05:35+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 26.03.70\n"
+"X-Generator: Lokalize 25.11.70\n"
 
 #: contents/logout/Logout.qml:152
 #, kde-format
@@ -65,10 +65,9 @@ msgstr[0] ""
 "作業。"
 
 #: contents/logout/Logout.qml:191
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will enter the firmware setup screen."
+#, kde-format
 msgid "When restarted, the computer will enter UEFI firmware settings."
-msgstr "重新開機後，電腦將進入韌體設定畫面。"
+msgstr "重新開機後，電腦將進入 UEFI 韌體設定畫面。"
 
 #: contents/logout/Logout.qml:193
 #, kde-format
