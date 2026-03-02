@@ -51,7 +51,7 @@ Q_SIGNALS:
 
 private:
     Plasma::Containment *const m_containment;
-    QHash<QString, Plasma::ContainmentActions *> m_plugins;
+    std::map<QString, std::unique_ptr<Plasma::ContainmentActions>> m_plugins;
     KConfigGroup m_baseCfg;
     KConfigGroup m_tempConfig;
     KConfig m_tempConfigParent;

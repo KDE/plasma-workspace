@@ -33,21 +33,19 @@ CurrentContainmentActionsModel::CurrentContainmentActionsModel(Plasma::Containme
     m_baseCfg = KConfigGroup(m_containment->corona()->config(), u"ActionPlugins"_s);
     m_baseCfg = KConfigGroup(&m_baseCfg, QString::number((int)m_containment->containmentType()));
 
-    QHash<QString, Plasma::ContainmentActions *> actions = containment->containmentActions();
-
-    QHashIterator<QString, Plasma::ContainmentActions *> i(actions);
-    while (i.hasNext()) {
-        i.next();
+    const auto actions = containment->containmentActionsList();
+    for (const QString &actionName : actions) {
+        auto action = containment->containmentActions(actionName);
 
         auto *item = new QStandardItem();
-        item->setData(i.key(), ActionRole);
-        item->setData(i.value()->id(), PluginNameRole);
+        item->setData(actionName, ActionRole);
+        item->setData(action->id(), PluginNameRole);
 
-        m_plugins[i.key()] = Plasma::PluginLoader::self()->loadContainmentActions(m_containment, i.value()->id());
-        m_plugins[i.key()]->setContainment(m_containment);
-        KConfigGroup cfg(&m_baseCfg, i.key());
-        m_plugins[i.key()]->restore(cfg);
-        item->setData(m_plugins[i.key()]->hasConfigurationInterface(), HasConfigurationInterfaceRole);
+        m_plugins[actionName] = std::unique_ptr<Plasma::ContainmentActions>(Plasma::PluginLoader::self()->loadContainmentActions(m_containment, action->id()));
+        m_plugins[actionName]->setContainment(m_containment);
+        KConfigGroup cfg(&m_baseCfg, actionName);
+        m_plugins[actionName]->restore(cfg);
+        item->setData(m_plugins[actionName]->hasConfigurationInterface(), HasConfigurationInterfaceRole);
 
         appendRow(item);
     }
@@ -108,7 +106,7 @@ bool CurrentContainmentActionsModel::append(const QString &action, const QString
         return false;
     }
 
-    m_plugins[action] = actions;
+    m_plugins[action] = std::unique_ptr<Plasma::ContainmentActions>(actions);
     m_plugins[action]->setContainment(m_containment);
     // empty config: the new one will ne in default state
     KConfigGroup tempConfig(&m_tempConfigParent, u"test"_s);
@@ -137,16 +135,14 @@ void CurrentContainmentActionsModel::update(int row, const QString &action, cons
         setData(idx, action, ActionRole);
         setData(idx, plugin, PluginNameRole);
 
-        delete m_plugins[oldTrigger];
-        m_plugins.remove(oldTrigger);
+        m_plugins.erase(oldTrigger);
 
         if (oldPlugin != plugin) {
             m_removedTriggers << oldTrigger;
         }
 
         if (!m_plugins.contains(action) || oldPlugin != plugin) {
-            delete m_plugins[action];
-            m_plugins[action] = Plasma::PluginLoader::self()->loadContainmentActions(m_containment, plugin);
+            m_plugins[action] = std::unique_ptr<Plasma::ContainmentActions>(Plasma::PluginLoader::self()->loadContainmentActions(m_containment, plugin));
             m_plugins[action]->setContainment(m_containment);
             // empty config: the new one will ne in default state
             KConfigGroup tempConfig(&m_tempConfigParent, u"test"_s);
@@ -164,8 +160,7 @@ void CurrentContainmentActionsModel::remove(int row)
     removeRows(row, 1);
 
     if (m_plugins.contains(action)) {
-        delete m_plugins[action];
-        m_plugins.remove(action);
+        m_plugins.erase(action);
         m_removedTriggers << action;
         Q_EMIT configurationChanged();
     }
@@ -189,7 +184,7 @@ void CurrentContainmentActionsModel::showConfiguration(int row, QQuickItem *ctx)
         configDlg->windowHandle()->setTransientParent(ctx->window());
     }
 
-    Plasma::ContainmentActions *pluginInstance = m_plugins[action];
+    auto &pluginInstance = m_plugins[action];
     // put the config in the dialog
     QWidget *w = pluginInstance->createConfigurationInterface(configDlg);
     QString title;
@@ -206,13 +201,13 @@ void CurrentContainmentActionsModel::showConfiguration(int row, QQuickItem *ctx)
     connect(buttons, &QDialogButtonBox::accepted, configDlg, &QDialog::accept);
     connect(buttons, &QDialogButtonBox::rejected, configDlg, &QDialog::reject);
 
-    QObject::connect(configDlg, &QDialog::accepted, pluginInstance, [pluginInstance]() {
+    QObject::connect(configDlg, &QDialog::accepted, pluginInstance.get(), [&pluginInstance]() {
         pluginInstance->configurationAccepted();
     });
 
     connect(configDlg, &QDialog::accepted, this, &CurrentContainmentActionsModel::configurationChanged);
 
-    connect(pluginInstance, &QObject::destroyed, configDlg, &QDialog::reject);
+    connect(pluginInstance.get(), &QObject::destroyed, configDlg, &QDialog::reject);
 
     configDlg->show();
 }
@@ -224,14 +219,11 @@ void CurrentContainmentActionsModel::save()
     }
     m_removedTriggers.clear();
 
-    QHashIterator<QString, Plasma::ContainmentActions *> i(m_plugins);
-    while (i.hasNext()) {
-        i.next();
+    for (auto &[key, value] : m_plugins) {
+        KConfigGroup cfg(&m_baseCfg, key);
+        value->save(cfg);
 
-        KConfigGroup cfg(&m_baseCfg, i.key());
-        i.value()->save(cfg);
-
-        m_containment->setContainmentActions(i.key(), i.value()->id());
+        m_containment->setContainmentActions(key, value->id());
     }
 }
 
