@@ -39,6 +39,7 @@ DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
     : PlasmaQuick::ContainmentView(corona, nullptr)
     , m_accentColor(Qt::transparent)
 {
+    setObjectName(u"DesktopView"_s);
     QObject::setParent(corona);
 
     setColor(Qt::black);

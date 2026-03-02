@@ -66,6 +66,7 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
     , m_lengthMode(FillAvailable)
     , m_backgroundHints(Plasma::Types::StandardBackground)
 {
+    setObjectName(u"PanelView"_s);
     if (KWindowSystem::isPlatformWayland()) {
         m_layerWindow = LayerShellQt::Window::get(this);
         m_layerWindow->setLayer(LayerShellQt::Window::LayerTop);

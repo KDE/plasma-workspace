@@ -22,6 +22,9 @@
 #include <KConfigWatcher>
 #include <KPackage/Package>
 
+#include <Spix/AnyRpcServer.h>
+#include <Spix/QtQmlBot.h>
+
 class DesktopView;
 class PanelView;
 class QMenu;
@@ -327,6 +330,7 @@ private:
     Plasma::Applet *m_showingAlternatives = nullptr;
 
     StrutManager *m_strutManager;
+    spix::AnyRpcServer m_spixServer;
     QPointer<ShellContainmentConfig> m_shellContainmentConfig;
     // The set of all the screens which have both the desktop and all panels (if any) fully loaded
     QSet<int> m_screensWithUiReady;

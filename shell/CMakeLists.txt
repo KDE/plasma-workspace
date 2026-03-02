@@ -134,6 +134,7 @@ target_link_libraries(plasmashell PRIVATE
  Qt::DBus
  Qt::WaylandClient
  Wayland::Client
+ Spix::QtQuick
 )
 target_link_libraries(plasmashell PRIVATE KF6::ConfigQml)
 if (TARGET KF6::UserFeedbackCore)

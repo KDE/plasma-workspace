@@ -114,6 +114,10 @@ ShellCorona::ShellCorona(QObject *parent)
     , m_strutManager(new StrutManager(this))
     , m_shellContainmentConfig(nullptr)
 {
+    // Set up Spix
+    auto bot = new spix::QtQmlBot();
+    bot->runTestServer(m_spixServer);
+
     setupWaylandIntegration();
 
     qDBusRegisterMetaType<QColor>();
@@ -1525,6 +1529,8 @@ void ShellCorona::checkAllDesktopsUiReady()
             Q_EMIT screenUiReadyChanged(i, true);
         }
     }
+
+    qWarning() << "AAAAAAA" << m_spixServer.getStringProperty("PanelView", "thickness");
 }
 
 Plasma::Containment *ShellCorona::createContainmentForActivity(const QString &activity, int screenNum)

@@ -57,6 +57,7 @@ MACRO(PLASMASHELL_UNIT_TESTS)
                             Wayland::Server
                             PW::KWorkspace
                             LayerShellQt::Interface
+                            Spix::QtQuick
                             SharedClientTest
                                      )
                target_link_libraries(${_testname} KF6::ConfigQml)
