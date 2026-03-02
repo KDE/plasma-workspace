@@ -78,13 +78,10 @@ target_link_libraries(kickerplugin PRIVATE
                       Wayland::Client
                       PW::KWorkspace)
 
-if (Qt6_VERSION VERSION_GREATER_EQUAL "6.8.0")
-    set(private_code_option  "PRIVATE_CODE")
-endif()
 qt_generate_wayland_protocol_client_sources(kickerplugin
+    PRIVATE_CODE
     FILES
         "${PLASMA_WAYLAND_PROTOCOLS_DIR}/plasma-shell.xml"
-    ${private_code_option}
 )
 
 if (${HAVE_APPSTREAMQT})
