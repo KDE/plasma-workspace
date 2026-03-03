@@ -127,15 +127,16 @@ GridLayout {
                                          totalAsString, processedAsString);
                         }
                     } else {
+                        const displayValue = processed ? processedAsString : totalAsString;
                         switch(modelData) {
                         case "Bytes":
                             return KCoreAddons.Format.formatByteSize(processed || total)
                         case "Files":
-                            return i18ndp("plasma_applet_org.kde.plasma.notifications", "%1 file", "%1 files", (processedAsString || totalAsString));
+                            return i18ndp("plasma_applet_org.kde.plasma.notifications", "%1 file", "%1 files", displayValue);
                         case "Directories":
-                            return i18ndp("plasma_applet_org.kde.plasma.notifications", "%1 folder", "%1 folders", (processedAsString || totalAsString));
+                            return i18ndp("plasma_applet_org.kde.plasma.notifications", "%1 folder", "%1 folders", displayValue);
                         case "Items":
-                            return i18ndp("plasma_applet_org.kde.plasma.notifications", "%1 item", "%1 items", (processedAsString || totalAsString));
+                            return i18ndp("plasma_applet_org.kde.plasma.notifications", "%1 item", "%1 items", displayValue);
                         }
                     }
                 }
