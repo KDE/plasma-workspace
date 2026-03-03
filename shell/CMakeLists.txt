@@ -99,6 +99,11 @@ qt6_generate_wayland_protocol_client_sources(plasmashell
     ${private_code_option}
     FILES
         ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-screen-edge-v1.xml
+)
+
+qt6_generate_wayland_protocol_client_sources(plasmashell_osd
+    ${private_code_option}
+    FILES
         ${PLASMA_WAYLAND_PROTOCOLS_DIR}/plasma-shell.xml
 )
 
