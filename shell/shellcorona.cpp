@@ -142,6 +142,12 @@ void ShellCorona::init()
     m_waitingPanelsTimer.setInterval(250ms);
     connect(&m_waitingPanelsTimer, &QTimer::timeout, this, &ShellCorona::createWaitingPanels);
 
+    connect(this, &Corona::containmentAdded, this, [this](Plasma::Containment *cont) {
+        if (cont->containmentType() == Plasma::Containment::Panel || cont->containmentType() == Plasma::Containment::CustomPanel) {
+            connect(cont, &QObject::destroyed, this, &ShellCorona::panelContainmentDestroyed);
+        }
+    });
+
 #ifndef NDEBUG
     m_invariantsTimer.setSingleShot(true);
     m_invariantsTimer.setInterval(qEnvironmentVariableIsSet("KDECI_BUILD") > 0 ? 30000ms : 1s);
@@ -1605,8 +1611,6 @@ void ShellCorona::createWaitingPanels()
         Q_EMIT cont->screenGeometryChanged(cont->screenGeometry());
 
         rectNotify();
-
-        connect(cont, &QObject::destroyed, this, &ShellCorona::panelContainmentDestroyed);
 
         connect(panel, &QWindow::visibleChanged, this, rectNotify);
         connect(panel, &QWindow::screenChanged, this, rectNotify);
