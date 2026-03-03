@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-21 00:47+0000\n"
+"POT-Creation-Date: 2026-03-03 00:49+0000\n"
 "PO-Revision-Date: 2026-01-28 03:47+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -181,8 +181,8 @@ msgstr[2] "%1 записів"
 msgstr[3] "%1 запис"
 
 #: components/JobDetails.qml:155 components/SpeedChart.qml:72
-#: components/SpeedChart.qml:98 components/SpeedChart.qml:193
-#: components/SpeedChart.qml:204
+#: components/SpeedChart.qml:99 components/SpeedChart.qml:196
+#: components/SpeedChart.qml:209
 #, kde-format
 msgctxt "Bytes per second"
 msgid "%1/s"
@@ -239,17 +239,17 @@ msgctxt "@action:button"
 msgid "Send"
 msgstr "Надіслати"
 
-#: components/SpeedChart.qml:145
+#: components/SpeedChart.qml:147
 #, kde-format
 msgid "Speed"
 msgstr "Швидкість"
 
-#: components/SpeedChart.qml:200
+#: components/SpeedChart.qml:204
 #, kde-format
 msgid "Average Speed"
 msgstr "Середня швидкість"
 
-#: components/SpeedChart.qml:258
+#: components/SpeedChart.qml:264
 #, kde-format
 msgctxt "Percentage of a job"
 msgid "%1%"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-21 00:47+0000\n"
+"POT-Creation-Date: 2026-03-03 00:49+0000\n"
 "PO-Revision-Date: 2025-05-25 10:34+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -160,8 +160,8 @@ msgstr[0] "%1 kohde"
 msgstr[1] "%1 kohdetta"
 
 #: components/JobDetails.qml:155 components/SpeedChart.qml:72
-#: components/SpeedChart.qml:98 components/SpeedChart.qml:193
-#: components/SpeedChart.qml:204
+#: components/SpeedChart.qml:99 components/SpeedChart.qml:196
+#: components/SpeedChart.qml:209
 #, kde-format
 msgctxt "Bytes per second"
 msgid "%1/s"
@@ -218,17 +218,17 @@ msgctxt "@action:button"
 msgid "Send"
 msgstr "Lähetä"
 
-#: components/SpeedChart.qml:145
+#: components/SpeedChart.qml:147
 #, kde-format
 msgid "Speed"
 msgstr "Nopeus"
 
-#: components/SpeedChart.qml:200
+#: components/SpeedChart.qml:204
 #, kde-format
 msgid "Average Speed"
 msgstr "Keskinopeus"
 
-#: components/SpeedChart.qml:258
+#: components/SpeedChart.qml:264
 #, kde-format
 msgctxt "Percentage of a job"
 msgid "%1%"

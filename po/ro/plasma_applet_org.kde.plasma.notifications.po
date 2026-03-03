@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-21 00:47+0000\n"
+"POT-Creation-Date: 2026-03-03 00:49+0000\n"
 "PO-Revision-Date: 2026-01-28 20:36+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -170,8 +170,8 @@ msgstr[1] "%1 elemente"
 msgstr[2] "%1 de elemente"
 
 #: components/JobDetails.qml:155 components/SpeedChart.qml:72
-#: components/SpeedChart.qml:98 components/SpeedChart.qml:193
-#: components/SpeedChart.qml:204
+#: components/SpeedChart.qml:99 components/SpeedChart.qml:196
+#: components/SpeedChart.qml:209
 #, kde-format
 msgctxt "Bytes per second"
 msgid "%1/s"
@@ -228,17 +228,17 @@ msgctxt "@action:button"
 msgid "Send"
 msgstr "Trimite"
 
-#: components/SpeedChart.qml:145
+#: components/SpeedChart.qml:147
 #, kde-format
 msgid "Speed"
 msgstr "Viteză"
 
-#: components/SpeedChart.qml:200
+#: components/SpeedChart.qml:204
 #, kde-format
 msgid "Average Speed"
 msgstr "Viteza medie"
 
-#: components/SpeedChart.qml:258
+#: components/SpeedChart.qml:264
 #, kde-format
 msgctxt "Percentage of a job"
 msgid "%1%"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:44+0000\n"
+"POT-Creation-Date: 2026-03-03 00:49+0000\n"
 "PO-Revision-Date: 2025-11-29 17:08+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -226,50 +226,50 @@ msgstr ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method\">時"
 "間格式說明文件</a>"
 
-#: configAppearance.qml:278
+#: configAppearance.qml:279
 #, kde-format
 msgctxt "@label:group"
 msgid "Text display:"
 msgstr "文字顯示："
 
-#: configAppearance.qml:283
+#: configAppearance.qml:284
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatic"
 msgstr "自動"
 
-#: configAppearance.qml:287
+#: configAppearance.qml:288
 #, kde-format
 msgctxt "@label"
 msgid ""
 "Text will follow the system font and expand to fill the available space."
 msgstr "文字會使用系統字型並填滿可用空間。"
 
-#: configAppearance.qml:301
+#: configAppearance.qml:302
 #, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
 msgstr "手動"
 
-#: configAppearance.qml:311
+#: configAppearance.qml:312
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
 msgstr "選擇風格…"
 
-#: configAppearance.qml:328
+#: configAppearance.qml:329
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
 msgstr "%1pt %2"
 
-#: configAppearance.qml:335
+#: configAppearance.qml:336
 #, kde-format
 msgctxt "@info"
 msgid "Note: size may be reduced if the panel is not thick enough."
 msgstr "請注意：面板不夠厚的時候尺寸可能會縮小。"
 
-#: configAppearance.qml:349
+#: configAppearance.qml:350
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
@@ -438,21 +438,21 @@ msgctxt "@info:tooltip %1 is a localized long date"
 msgid "Today is %1"
 msgstr "今天是 %1"
 
-#: Tooltip.qml:73
+#: Tooltip.qml:76
 #, kde-format
 msgctxt ""
 "@label main text shown in digital clock's tooltip when timezone is missing"
 msgid "Time zone is not set"
 msgstr "時區未設定"
 
-#: Tooltip.qml:94
+#: Tooltip.qml:97
 #, kde-format
 msgctxt ""
 "@label sub text shown in digital clock's tooltip when timezone is missing"
 msgid "Click the clock icon to open Date & Time settings and set a time zone."
 msgstr "點擊時鐘圖示來開啟日期和時間設定頁面以設定時區。"
 
-#: Tooltip.qml:140
+#: Tooltip.qml:144
 #, kde-format
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kgeography\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-05 00:44+0000\n"
+"POT-Creation-Date: 2026-03-03 00:49+0000\n"
 "PO-Revision-Date: 2023-02-15 16:03+0000\n"
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
@@ -986,19 +986,19 @@ msgstr ""
 "<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
 "\">Documentação do Formato da Hora</a>"
 
-#: configAppearance.qml:278
+#: configAppearance.qml:279
 #, kde-format
 msgctxt "@label:group"
 msgid "Text display:"
 msgstr "Apresentação do texto:"
 
-#: configAppearance.qml:283
+#: configAppearance.qml:284
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatic"
 msgstr "Automática"
 
-#: configAppearance.qml:287
+#: configAppearance.qml:288
 #, kde-format
 msgctxt "@label"
 msgid ""
@@ -1007,31 +1007,31 @@ msgstr ""
 "O texto irá seguir o tipo de letra do sistema e expandir-se para preencher o "
 "espaço disponível."
 
-#: configAppearance.qml:301
+#: configAppearance.qml:302
 #, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
 msgstr "Manual"
 
-#: configAppearance.qml:311
+#: configAppearance.qml:312
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
 msgstr "Escolher o Estilo…"
 
-#: configAppearance.qml:328
+#: configAppearance.qml:329
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
 msgstr "%2 %1pt"
 
-#: configAppearance.qml:335
+#: configAppearance.qml:336
 #, kde-format
 msgctxt "@info"
 msgid "Note: size may be reduced if the panel is not thick enough."
 msgstr ""
 
-#: configAppearance.qml:349
+#: configAppearance.qml:350
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
@@ -1211,7 +1211,7 @@ msgctxt "@info:tooltip %1 is a localized long date"
 msgid "Today is %1"
 msgstr "Hoje é %1"
 
-#: Tooltip.qml:73
+#: Tooltip.qml:76
 #, fuzzy, kde-format
 #| msgid "Time Zones"
 msgctxt ""
@@ -1219,14 +1219,14 @@ msgctxt ""
 msgid "Time zone is not set"
 msgstr "Fusos-Horários"
 
-#: Tooltip.qml:94
+#: Tooltip.qml:97
 #, kde-format
 msgctxt ""
 "@label sub text shown in digital clock's tooltip when timezone is missing"
 msgid "Click the clock icon to open Date & Time settings and set a time zone."
 msgstr ""
 
-#: Tooltip.qml:140
+#: Tooltip.qml:144
 #, kde-format
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"
