@@ -7,6 +7,7 @@ qt6_generate_wayland_protocol_client_sources(devicenotifications
 )
 
 target_link_libraries(devicenotifications
+    Qt6::WaylandClient
     KF6::DBusAddons
     KF6::CoreAddons
     KF6::I18n

@@ -263,27 +263,81 @@ void Udev::onSocketActivated()
     }
 }
 
-Output::Output(uint32_t id)
-    : QObject()
-    , kde_output_device_v2()
-    , m_id(id)
+OutputDeviceRegistry::OutputDeviceRegistry()
+    : QWaylandClientExtensionTemplate<OutputDeviceRegistry>(21)
+{
+    initialize();
+
+    connect(this, &OutputDeviceRegistry::activeChanged, this, [this]() {
+        if (!isActive()) {
+            m_outputDevices.clear();
+        }
+    });
+}
+
+OutputDeviceRegistry::~OutputDeviceRegistry()
+{
+    if (qGuiApp && isActive()) {
+        kde_output_device_registry_v2_destroy(object());
+    }
+}
+
+void OutputDeviceRegistry::kde_output_device_registry_v2_finished()
+{
+    delete this;
+}
+
+void OutputDeviceRegistry::kde_output_device_registry_v2_output(struct ::kde_output_device_v2 *output)
+{
+    auto outputDevice = m_outputDevices.emplace_back(std::make_unique<OutputDevice>(output)).get();
+
+    connect(outputDevice, &OutputDevice::done, this, [this, outputDevice]() {
+        Q_EMIT outputAdded(outputDevice);
+    }, Qt::SingleShotConnection);
+
+    connect(outputDevice, &OutputDevice::removed, this, [this, outputDevice]() {
+        if (outputDevice->isInitialized()) {
+            Q_EMIT outputRemoved(outputDevice);
+        }
+
+        const auto it = std::ranges::find_if(m_outputDevices, [outputDevice](const auto &item) {
+            return item.get() == outputDevice;
+        });
+        if (it != m_outputDevices.end()) {
+            m_outputDevices.erase(it);
+        }
+    });
+}
+
+OutputDevice::OutputDevice(::kde_output_device_v2 *outputDevice)
+    : kde_output_device_v2(outputDevice)
 {
 }
 
-Output::~Output()
+OutputDevice::~OutputDevice()
 {
-    kde_output_device_v2_destroy(object());
+    release();
 }
 
-void Output::kde_output_device_v2_uuid(const QString &uuid)
+void OutputDevice::kde_output_device_v2_uuid(const QString &uuid)
 {
     m_uuid = uuid;
-    Q_EMIT uuidAdded();
 }
 
-void Output::kde_output_device_v2_mode(struct ::kde_output_device_mode_v2 *mode)
+void OutputDevice::kde_output_device_v2_mode(struct ::kde_output_device_mode_v2 *mode)
 {
     kde_output_device_mode_v2_destroy(mode);
+}
+
+void OutputDevice::kde_output_device_v2_done()
+{
+    m_isInitialized = true;
+    Q_EMIT done();
+}
+
+void OutputDevice::kde_output_device_v2_removed()
+{
+    Q_EMIT removed();
 }
 
 KdedDeviceNotifications::KdedDeviceNotifications(QObject *parent, const QList<QVariant> &)
@@ -304,8 +358,9 @@ KdedDeviceNotifications::KdedDeviceNotifications(QObject *parent, const QList<QV
 
 KdedDeviceNotifications::~KdedDeviceNotifications()
 {
-    if (m_registry) {
-        wl_registry_destroy(m_registry);
+    // The output device registry will be deleted when the finished event is received from the compositor.
+    if (m_outputRegistry) {
+        m_outputRegistry->stop();
     }
 }
 
@@ -316,51 +371,31 @@ void KdedDeviceNotifications::setupWaylandOutputListener()
         return;
     }
 
-    wl_display *display = waylandApp->display();
+    m_outputRegistry = new OutputDeviceRegistry();
 
-    m_registry = wl_display_get_registry(display);
-
-    auto globalAdded = [](void *data, wl_registry *registry, uint32_t name, const char *interface, uint32_t version) {
-        auto *self = static_cast<KdedDeviceNotifications *>(data);
-        if (qstrcmp(interface, "kde_output_device_v2") == 0) {
-            const bool initialOutputsReceived = self->m_initialOutputsReceived;
-            Output *output = self->m_outputs.emplace_back(std::make_unique<Output>(name)).get();
-            // Notify after the UUID's are resolved, and add it to our timed list
-            connect(output, &Output::uuidAdded, self, [output, self, initialOutputsReceived]() {
-                if (initialOutputsReceived) {
-                    const QString uuid = output->uuid();
-                    // If we recently just removed this output, it wasn't actually physically disconnected
-                    if (!self->m_recentlyRemovedOutputs.removeOne(uuid)) {
-                        self->notifyOutputAdded();
-                    }
-                }
-            });
-            output->init(registry, name, version);
+    connect(m_outputRegistry, &OutputDeviceRegistry::outputAdded, this, [this](OutputDevice *outputDevice) {
+        if (m_initialOutputsReceived) {
+            const QString uuid = outputDevice->uuid();
+            // If we recently just removed this output, it wasn't actually physically disconnected
+            if (!m_recentlyRemovedOutputs.removeOne(uuid)) {
+                notifyOutputAdded();
+            }
         }
-    };
-    auto globalRemoved = [](void *data, wl_registry *registry, uint32_t name) {
-        Q_UNUSED(registry)
-        auto *self = static_cast<KdedDeviceNotifications *>(data);
-        auto result = std::ranges::find_if(self->m_outputs.begin(), self->m_outputs.end(), [name](std::unique_ptr<Output> &out) {
-            return out.get()->id() == name;
+    });
+
+    connect(m_outputRegistry, &OutputDeviceRegistry::outputRemoved, this, [this](OutputDevice *outputDevice) {
+        const QString uuid = outputDevice->uuid();
+        m_recentlyRemovedOutputs.append(uuid);
+        // 2000ms matches the DPMS workaround time in KWin
+        QTimer::singleShot(2000ms, this, [this, uuid]() {
+            // Only notify if the output hasn't been added again in the mean time
+            if (m_recentlyRemovedOutputs.removeOne(uuid)) {
+                notifyOutputRemoved();
+            }
         });
-        if (result != self->m_outputs.end()) {
-            auto out = result.base()->get();
-            const QString uuid = out->uuid();
-            self->m_recentlyRemovedOutputs.append(uuid);
-            // 2000ms matches the DPMS workaround time in KWin
-            QTimer::singleShot(2000ms, self, [self, uuid]() {
-                // Only notify if the output hasn't been added again in the mean time
-                if (self->m_recentlyRemovedOutputs.removeOne(uuid)) {
-                    self->notifyOutputRemoved();
-                }
-            });
-            self->m_outputs.erase(result);
-        }
-    };
+    });
 
-    static const wl_registry_listener registryListener{globalAdded, globalRemoved};
-    wl_registry_add_listener(m_registry, &registryListener, this);
+    wl_display *display = waylandApp->display();
 
     // Suppress notifications until the initial list of outputs has been received.
     auto syncDone = [](void *data, struct wl_callback *wl_callback, uint32_t callback_data) {
