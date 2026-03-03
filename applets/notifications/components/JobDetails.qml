@@ -107,6 +107,8 @@ GridLayout {
 
                 if (processed > 0 || total > 1) {
                     // Format numbers to not display as exponential
+                    // NOTE We use i18np to pick the correct plural but we don't want to show the number
+                    // but our own, so we don't use the %1 placeholder!
                     const processedAsString = processed.toLocaleString(Qt.locale(), 'f', 0);
                     const totalAsString = total.toLocaleString(Qt.locale(), 'f', 0);
 
@@ -117,14 +119,14 @@ GridLayout {
                                 KCoreAddons.Format.formatByteSize(total),
                                 KCoreAddons.Format.formatByteSize(processed))
                         case "Files":
-                            return i18ndcp("plasma_applet_org.kde.plasma.notifications", "How many files have been copied", "%2 of %1 file", "%2 of %1 files",
-                                          totalAsString, processedAsString);
+                            return i18ndcp("plasma_applet_org.kde.plasma.notifications", "How many files have been copied", "%3 of %2 file", "%3 of %2 files",
+                                          total, totalAsString, processedAsString);
                         case "Directories":
-                            return i18ndcp("plasma_applet_org.kde.plasma.notifications", "How many dirs have been copied", "%2 of %1 folder", "%2 of %1 folders",
-                                         totalAsString, processedAsString);
+                            return i18ndcp("plasma_applet_org.kde.plasma.notifications", "How many dirs have been copied", "%3 of %2 folder", "%3 of %2 folders",
+                                         total, totalAsString, processedAsString);
                         case "Items":
-                            return i18ndcp("plasma_applet_org.kde.plasma.notifications", "How many items (that includes files and dirs) have been copied", "%2 of %1 item", "%2 of %1 items",
-                                         totalAsString, processedAsString);
+                            return i18ndcp("plasma_applet_org.kde.plasma.notifications", "How many items (that includes files and dirs) have been copied", "%3 of %2 item", "%3 of %2 items",
+                                         total, totalAsString, processedAsString);
                         }
                     } else {
                         const displayValue = processed ? processedAsString : totalAsString;
