@@ -1520,6 +1520,7 @@ void ShellCorona::checkAllDesktopsUiReady()
     ksplashProgressMessage.setArguments(QList<QVariant>() << QStringLiteral("desktop"));
     QDBusConnection::sessionBus().asyncCall(ksplashProgressMessage);
 
+    m_waitingPanels.removeAll(nullptr);
     if (!m_waitingPanels.isEmpty()) {
         m_waitingPanelsTimer.start();
     }
@@ -1577,7 +1578,9 @@ Plasma::Containment *ShellCorona::createContainmentForActivity(const QString &ac
 
 void ShellCorona::createWaitingPanels()
 {
-    QList<Plasma::Containment *> stillWaitingPanels;
+    m_waitingPanels.removeAll(nullptr);
+
+    QList<QPointer<Plasma::Containment>> stillWaitingPanels;
 
     for (Plasma::Containment *cont : std::as_const(m_waitingPanels)) {
         // ignore non existing (yet?) screens
@@ -1645,9 +1648,7 @@ void ShellCorona::panelContainmentDestroyed(QObject *obj)
 {
     auto *cont = static_cast<Plasma::Containment *>(obj);
 
-    // The destroyed panel containment was still in the m_waitingPanels list
-    if (m_waitingPanels.contains(cont)) {
-        m_waitingPanels.removeAll(cont);
+    if (!m_panelViews.contains(cont)) {
         return;
     }
 
@@ -2300,8 +2301,8 @@ bool ShellCorona::isScreenUiReady(int screen)
         return false;
     }
 
-    for (Plasma::Containment *cont : std::as_const(m_waitingPanels)) {
-        if (cont->lastScreen() == screen) {
+    for (const QPointer<Plasma::Containment> &cont : std::as_const(m_waitingPanels)) {
+        if (cont && cont->lastScreen() == screen) {
             return false;
         }
     }
