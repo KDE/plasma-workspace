@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-28 00:46+0000\n"
+"POT-Creation-Date: 2026-03-04 00:47+0000\n"
 "PO-Revision-Date: 2025-10-30 17:49+0100\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -370,58 +370,58 @@ msgstr "%1 %2 an %3"
 msgid "Disconnected Screen %1"
 msgstr "Getrennter Bildschirm %1"
 
-#: shellcorona.cpp:174 shellcorona.cpp:176
+#: shellcorona.cpp:180 shellcorona.cpp:182
 #, kde-format
 msgid "Show Desktop"
 msgstr "Arbeitsfläche anzeigen"
 
-#: shellcorona.cpp:176
+#: shellcorona.cpp:182
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Arbeitsfläche ausblenden"
 
-#: shellcorona.cpp:191
+#: shellcorona.cpp:197
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr "Anwendungsstarter aktivieren"
 
-#: shellcorona.cpp:199
+#: shellcorona.cpp:205
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Aktivitätenwechsler anzeigen"
 
-#: shellcorona.cpp:208
+#: shellcorona.cpp:214
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Zur vorherigen Aktivität wechseln"
 
-#: shellcorona.cpp:216
+#: shellcorona.cpp:222
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Zur nächsten Aktivität wechseln"
 
-#: shellcorona.cpp:231
+#: shellcorona.cpp:237
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "Fensterleisteneintrag %1 aktivieren"
 
-#: shellcorona.cpp:266
+#: shellcorona.cpp:272
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "Arbeitsflächen und Kontrollleisten verwalten …"
 
-#: shellcorona.cpp:288
+#: shellcorona.cpp:294
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Tastaturfokus zwischen Kontrollleisten umschalten"
 
-#: shellcorona.cpp:2260
+#: shellcorona.cpp:2265
 #, kde-format
 msgid "Add Panel"
 msgstr "Kontrollleiste hinzufügen"
 
-#: shellcorona.cpp:2343
+#: shellcorona.cpp:2348
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

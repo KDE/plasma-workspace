@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-03 00:49+0000\n"
+"POT-Creation-Date: 2026-03-04 00:47+0000\n"
 "PO-Revision-Date: 2023-11-11 15:16+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -147,7 +147,7 @@ msgstr[0] "%2 položka z %1"
 msgstr[1] "%2 položky z %1"
 msgstr[2] "%2 položiek z %1"
 
-#: components/JobDetails.qml:134
+#: components/JobDetails.qml:135
 #, kde-format
 msgid "%1 file"
 msgid_plural "%1 files"
@@ -155,7 +155,7 @@ msgstr[0] "%1 súbor"
 msgstr[1] "%1 súbory"
 msgstr[2] "%1 súborov"
 
-#: components/JobDetails.qml:136
+#: components/JobDetails.qml:137
 #, kde-format
 msgid "%1 folder"
 msgid_plural "%1 folders"
@@ -163,7 +163,7 @@ msgstr[0] "%1 priečinok"
 msgstr[1] "%1 priečinky"
 msgstr[2] "%1 priečinkov"
 
-#: components/JobDetails.qml:138
+#: components/JobDetails.qml:139
 #, kde-format
 msgid "%1 item"
 msgid_plural "%1 items"
@@ -171,7 +171,7 @@ msgstr[0] "%1 položka"
 msgstr[1] "%1 položky"
 msgstr[2] "%1 položiek"
 
-#: components/JobDetails.qml:155 components/SpeedChart.qml:72
+#: components/JobDetails.qml:156 components/SpeedChart.qml:72
 #: components/SpeedChart.qml:99 components/SpeedChart.qml:196
 #: components/SpeedChart.qml:209
 #, kde-format

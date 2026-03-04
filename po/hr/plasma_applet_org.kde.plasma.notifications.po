@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-03 00:49+0000\n"
+"POT-Creation-Date: 2026-03-04 00:47+0000\n"
 "PO-Revision-Date: 2011-03-01 13:40+0100\n"
 "Last-Translator: Marko Dimjasevic <marko@dimjasevic.net>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -154,7 +154,7 @@ msgstr[0] "%2 / %1 datoteka"
 msgstr[1] "%2 / %1 datoteke"
 msgstr[2] "%2 / %1 datoteka"
 
-#: components/JobDetails.qml:134
+#: components/JobDetails.qml:135
 #, fuzzy, kde-format
 #| msgid "%2 / 1 file"
 #| msgid_plural "%2 / %1 files"
@@ -164,7 +164,7 @@ msgstr[0] "%2 / %1 datoteka"
 msgstr[1] "%2 / %1 datoteke"
 msgstr[2] "%2 / %1 datoteka"
 
-#: components/JobDetails.qml:136
+#: components/JobDetails.qml:137
 #, fuzzy, kde-format
 #| msgid "%2 / 1 folder"
 #| msgid_plural "%2 / %1 folders"
@@ -174,7 +174,7 @@ msgstr[0] "%2 / %1 mapa"
 msgstr[1] "%2 / %1 mape"
 msgstr[2] "%2 / %1 mapa"
 
-#: components/JobDetails.qml:138
+#: components/JobDetails.qml:139
 #, kde-format
 msgid "%1 item"
 msgid_plural "%1 items"
@@ -182,7 +182,7 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: components/JobDetails.qml:155 components/SpeedChart.qml:72
+#: components/JobDetails.qml:156 components/SpeedChart.qml:72
 #: components/SpeedChart.qml:99 components/SpeedChart.qml:196
 #: components/SpeedChart.qml:209
 #, kde-format

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-03 00:49+0000\n"
+"POT-Creation-Date: 2026-03-04 00:47+0000\n"
 "PO-Revision-Date: 2022-10-31 11:54+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -133,25 +133,25 @@ msgid "%2 of %1 item"
 msgid_plural "%2 of %1 items"
 msgstr[0] "%2 trong %1 mục"
 
-#: components/JobDetails.qml:134
+#: components/JobDetails.qml:135
 #, kde-format
 msgid "%1 file"
 msgid_plural "%1 files"
 msgstr[0] "%1 tệp"
 
-#: components/JobDetails.qml:136
+#: components/JobDetails.qml:137
 #, kde-format
 msgid "%1 folder"
 msgid_plural "%1 folders"
 msgstr[0] "%1 thư mục"
 
-#: components/JobDetails.qml:138
+#: components/JobDetails.qml:139
 #, kde-format
 msgid "%1 item"
 msgid_plural "%1 items"
 msgstr[0] "%1 mục"
 
-#: components/JobDetails.qml:155 components/SpeedChart.qml:72
+#: components/JobDetails.qml:156 components/SpeedChart.qml:72
 #: components/SpeedChart.qml:99 components/SpeedChart.qml:196
 #: components/SpeedChart.qml:209
 #, kde-format
