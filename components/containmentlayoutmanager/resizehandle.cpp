@@ -186,7 +186,7 @@ void ResizeHandle::mouseMoveEvent(QMouseEvent *event)
         const qreal y = m_mouseDownGeometry.y() + (m_mouseDownGeometry.height() - height);
 
         // -1 to have a bit of margins around
-        if (layout->isRectAvailable(m_mouseDownGeometry.x(), y - 1, m_mouseDownGeometry.width(), m_mouseDownGeometry.height())) {
+        if (layout->isRectAvailable(m_mouseDownGeometry.x(), y - 1, m_mouseDownGeometry.width(), height)) {
             itemContainer->setY(y);
             itemContainer->setHeight(height);
             setResizeBlocked(m_resizeWidthBlocked, m_mouseDownGeometry.height() + difference.y() < minimumSize.height());
