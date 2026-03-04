@@ -282,10 +282,21 @@ ContainmentLayoutManager.AppletContainer {
         running: visible
     }
     configurationRequiredComponent: PlasmaComponents.Button {
+        id: configureButton
         anchors.centerIn: parent
         text: i18nd("plasmashellprivateplugin", "Configure…")
         icon.name: "configure"
+        display: configureMetrics.width + Kirigami.Units.gridUnit * 3 > appletContainer.width ? PlasmaComponents.Button.IconOnly : PlasmaComponents.Button.TextBesideIcon
         visible: appletContainer.applet.plasmoid.configurationRequired
         onClicked: appletContainer.applet.plasmoid.internalAction("configure").trigger();
+
+        PlasmaComponents.ToolTip.visible: (hovered || activeFocus) && configureButton.display === PlasmaComponents.Button.IconOnly
+        PlasmaComponents.ToolTip.text: configureButton.text
+        PlasmaComponents.ToolTip.delay: Kirigami.Units.toolTipDelay
+
+        TextMetrics {
+            id: configureMetrics
+            text: configureButton.text
+        }
     }
 }
