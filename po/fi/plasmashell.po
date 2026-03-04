@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-20 03:19+0000\n"
+"POT-Creation-Date: 2026-03-04 02:42+0000\n"
 "PO-Revision-Date: 2025-10-15 19:27+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -370,58 +370,58 @@ msgstr "%1 %2 %3-liittimessä"
 msgid "Disconnected Screen %1"
 msgstr "Irrotettu näyttö %1"
 
-#: shellcorona.cpp:174 shellcorona.cpp:176
+#: shellcorona.cpp:180 shellcorona.cpp:182
 #, kde-format
 msgid "Show Desktop"
 msgstr "Näytä työpöytä"
 
-#: shellcorona.cpp:176
+#: shellcorona.cpp:182
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Piilota työpöytä"
 
-#: shellcorona.cpp:191
+#: shellcorona.cpp:197
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr "Aktivoi sovelluskäynnistin"
 
-#: shellcorona.cpp:199
+#: shellcorona.cpp:205
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Näytä aktiviteettivaihto"
 
-#: shellcorona.cpp:208
+#: shellcorona.cpp:214
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Vaihtaa edelliseen aktiviteettiin"
 
-#: shellcorona.cpp:216
+#: shellcorona.cpp:222
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Vaihtaa seuraavaan aktiviteettiin"
 
-#: shellcorona.cpp:231
+#: shellcorona.cpp:237
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "Aktivoi tehtävienhallinnan kohta %1"
 
-#: shellcorona.cpp:266
+#: shellcorona.cpp:272
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "Hallitse työpöytiä ja paneeleja…"
 
-#: shellcorona.cpp:288
+#: shellcorona.cpp:294
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Vaihda näppäimistökohdistusta paneelien välillä"
 
-#: shellcorona.cpp:2240
+#: shellcorona.cpp:2245
 #, kde-format
 msgid "Add Panel"
 msgstr "Lisää paneeli"
 
-#: shellcorona.cpp:2323
+#: shellcorona.cpp:2328
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
