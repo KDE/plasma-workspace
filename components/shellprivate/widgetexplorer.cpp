@@ -570,6 +570,9 @@ void WidgetExplorer::removeAllInstances(const QString &pluginName)
                 }
             }
         }
+
+        d->runningApplets.remove(pluginName);
+        d->itemModel.setRunningApplets(d->runningApplets);
     }
 }
 
