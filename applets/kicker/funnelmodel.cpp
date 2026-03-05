@@ -46,6 +46,7 @@ void FunnelModel::setSourceModel(QAbstractItemModel *model)
 
     int oldCount = m_sourceModel->rowCount();
     int newCount = model->rowCount();
+    AbstractModel *oldFavoritesModel = favoritesModel();
 
     auto setNewModel = [this, model]() {
         disconnectSignals();
@@ -77,6 +78,10 @@ void FunnelModel::setSourceModel(QAbstractItemModel *model)
 
     if (oldCount != newCount) {
         Q_EMIT countChanged();
+    }
+
+    if (oldFavoritesModel != favoritesModel()) {
+        Q_EMIT favoritesModelChanged();
     }
 
     Q_EMIT sourceModelChanged();
