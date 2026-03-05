@@ -61,10 +61,35 @@ PlasmoidItem {
         }
 
         if (dateTime.getDay() !== currentClock.dateTime.getDay()) {
-            formattedTime += " (" + compactRepresentationItem.item.dateFormatter(dateTime) + ")";
+            formattedTime += " " + Qt.locale().toString(dateTime, "dddd");
         }
 
         return formattedTime;
+    }
+
+    function formatOffset(dateTime: date): string {
+        const offset = Math.round((dateTime - currentClock.dateTime) / (1000 * 60));
+
+        if (offset === 0) {
+            return "";
+        }
+
+        const hourOffset  = Math.abs(Math.floor(offset / 60));
+        const minuteOffset = offset % 60;
+
+        if (offset > 0) {
+            if (minuteOffset === 0) {
+                return i18ncp("@info offset from current time", " • %1 hour later", " • %1 hours later", hourOffset);
+            } else {
+                return i18nc("@info offset from current time in hours and minutes", " • %1:%2 later", hourOffset, minuteOffset);
+            }
+        } else {
+            if (minuteOffset === 0) {
+                return i18ncp("@info offset from current time", " • %1 hour earlier", " • %1 hours earlier", hourOffset);
+            } else {
+                return i18nc("@info offset from current time in hours and minutes", " • %1:%2 earlier", hourOffset, minuteOffset);
+            }
+        }
     }
 
     function selectedTimeZonesDeduplicatingExplicitLocalTimeZone():/* [string] */var {

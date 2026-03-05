@@ -143,7 +143,7 @@ Item {
                         if (index % 2 === 0) {
                             return i18nc("@label %1 is a city or time zone name", "%1:", Plasmoid.configuration.displayTimezoneAsCode ? tzClock.timeZoneCode : TimeZonesI18n.i18nCity(tzClock.timeZone));
                         } else {
-                            return formatTime(tzClock.dateTime, Plasmoid.configuration.showSeconds > 0);
+                            return formatTime(tzClock.dateTime, Plasmoid.configuration.showSeconds > 0) + formatOffset(tzClock.dateTime);
                         }
                     }
                     Clock {
