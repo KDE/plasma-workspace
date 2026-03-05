@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2022-08-14 16:57+0100\n"
+"PO-Revision-Date: 2026-03-02 10:15+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -152,7 +152,7 @@ msgstr "Obține tematici globale noi…"
 #: package/contents/ui/MoreOptions.qml:23
 #, kde-format
 msgid "Layout settings:"
-msgstr "Configurări aranjament:"
+msgstr "Configurări de aranjament:"
 
 #: package/contents/ui/MoreOptions.qml:27
 #, kde-format
