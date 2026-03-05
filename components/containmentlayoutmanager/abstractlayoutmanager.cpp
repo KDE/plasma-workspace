@@ -48,6 +48,9 @@ QRectF AbstractLayoutManager::candidateGeometry(ItemContainer *item) const
                              qMax(minimumSize.height(), item->layoutAttached()->property("minimumHeight").toReal()));
     }
 
+    minimumSize.setWidth(ceil(minimumSize.width() / m_cellSize.width()) * m_cellSize.width());
+    minimumSize.setHeight(ceil(minimumSize.height() / m_cellSize.height()) * m_cellSize.height());
+
     const QRectF ltrRect = nextAvailableSpace(item, minimumSize, AppletsLayout::LeftToRight);
     const QRectF rtlRect = nextAvailableSpace(item, minimumSize, AppletsLayout::RightToLeft);
     const QRectF ttbRect = nextAvailableSpace(item, minimumSize, AppletsLayout::TopToBottom);
@@ -78,12 +81,18 @@ QRectF AbstractLayoutManager::candidateGeometry(ItemContainer *item) const
         distances[dist] = bttRect;
     }
 
-    if (distances.isEmpty()) {
-        // Failure to layout, completely full
-        return originalItemRect;
-    } else {
+    if (!distances.isEmpty()) {
         return std::as_const(distances).first();
     }
+
+    // Failure to layout, completely full
+    auto rect = originalItemRect;
+    rect.setX(floor(rect.x() / m_cellSize.width()) * m_cellSize.width());
+    rect.setY(floor(rect.y() / m_cellSize.height()) * m_cellSize.height());
+    if (item->layoutAttached()) {
+        rect.setSize(minimumSize);
+    }
+    return rect;
 }
 
 QRectF AbstractLayoutManager::positionItem(ItemContainer *item)
