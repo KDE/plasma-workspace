@@ -1,15 +1,15 @@
 # SPDX-FileCopyrightText: 2010, 2024 Johannes Obermayr <johannesobermayr@gmx.de>
-# SPDX-FileCopyrightText: 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021 Burkhard Lück <lueck@hube-lueck.de>
-# SPDX-FileCopyrightText: 2010, 2011, 2012, 2013, 2016, 2018, 2022, 2023 Frederik Schwarzer <schwarzer@kde.org>
+# SPDX-FileCopyrightText: 2010-2013, 2016, 2018, 2022-2023 Frederik Schwarzer <schwarzer@kde.org>
+# SPDX-FileCopyrightText: 2010-2021 Burkhard Lück <lueck@hube-lueck.de>
 # SPDX-FileCopyrightText: 2023 Jannick Kuhr <opensource@kuhr.org>
 # SPDX-FileCopyrightText: 2025 Alois Spitzbart <spitz234@hotmail.com>
-# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n.daphipz@fastmail.de>
+# SPDX-FileCopyrightText: 2025-2026 Philipp Kiemle <l10n.daphipz@fastmail.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-04 00:47+0000\n"
-"PO-Revision-Date: 2025-12-04 20:40+0100\n"
+"POT-Creation-Date: 2026-03-05 00:46+0000\n"
+"PO-Revision-Date: 2026-02-24 19:32+0100\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.3\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: components/ActionContainer.qml:96
 #, kde-format
@@ -108,58 +108,67 @@ msgctxt "Row description, e.g. Source"
 msgid "%1:"
 msgstr "%1:"
 
-#: components/JobDetails.qml:116
+#: components/JobDetails.qml:118
 #, kde-format
 msgctxt "How many bytes have been copied"
 msgid "%2 of %1"
 msgstr "%2 von %1"
 
-#: components/JobDetails.qml:120
-#, kde-format
+#: components/JobDetails.qml:122
+#, fuzzy, kde-format
+#| msgctxt "How many files have been copied"
+#| msgid "%2 of %1 file"
+#| msgid_plural "%2 of %1 files"
 msgctxt "How many files have been copied"
-msgid "%2 of %1 file"
-msgid_plural "%2 of %1 files"
+msgid "%3 of %2 file"
+msgid_plural "%3 of %2 files"
 msgstr[0] "%2 von %1 Datei"
 msgstr[1] "%2 von %1 Dateien"
 
-#: components/JobDetails.qml:123
-#, kde-format
+#: components/JobDetails.qml:125
+#, fuzzy, kde-format
+#| msgctxt "How many dirs have been copied"
+#| msgid "%2 of %1 folder"
+#| msgid_plural "%2 of %1 folders"
 msgctxt "How many dirs have been copied"
-msgid "%2 of %1 folder"
-msgid_plural "%2 of %1 folders"
+msgid "%3 of %2 folder"
+msgid_plural "%3 of %2 folders"
 msgstr[0] "%2 von %1 Ordner"
 msgstr[1] "%2 von %1 Ordnern"
 
-#: components/JobDetails.qml:126
-#, kde-format
+#: components/JobDetails.qml:128
+#, fuzzy, kde-format
+#| msgctxt "How many items (that includes files and dirs) have been copied"
+#| msgid "%2 of %1 item"
+#| msgid_plural "%2 of %1 items"
 msgctxt "How many items (that includes files and dirs) have been copied"
-msgid "%2 of %1 item"
-msgid_plural "%2 of %1 items"
+msgid "%3 of %2 item"
+msgid_plural "%3 of %2 items"
 msgstr[0] "%2 von %1 Element"
 msgstr[1] "%2 von %1 Elementen"
 
-#: components/JobDetails.qml:135
+#: components/JobDetails.qml:137
 #, kde-format
 msgid "%1 file"
 msgid_plural "%1 files"
 msgstr[0] "%1 Datei"
 msgstr[1] "%1 Dateien"
 
-#: components/JobDetails.qml:137
+#: components/JobDetails.qml:139
 #, kde-format
 msgid "%1 folder"
 msgid_plural "%1 folders"
 msgstr[0] "%1 Ordner"
 msgstr[1] "%1 Ordner"
 
-#: components/JobDetails.qml:139
+#: components/JobDetails.qml:141
 #, kde-format
 msgid "%1 item"
 msgid_plural "%1 items"
 msgstr[0] "%1 Element"
 msgstr[1] "%1 Elemente"
 
-#: components/JobDetails.qml:156 components/SpeedChart.qml:72
+#: components/JobDetails.qml:158 components/SpeedChart.qml:72
 #: components/SpeedChart.qml:99 components/SpeedChart.qml:196
 #: components/SpeedChart.qml:209
 #, kde-format
@@ -397,11 +406,10 @@ msgid "Toggle do not disturb"
 msgstr "Nicht stören umschalten"
 
 #: globalshortcuts.cpp:33
-#, fuzzy, kde-format
-#| msgid "Clear All Notifications"
+#, kde-format
 msgctxt "@action"
 msgid "Clear Notification History"
-msgstr "Alle Benachrichtigungen löschen"
+msgstr "Benachrichtigungsverlauf leeren"
 
 #: globalshortcuts.cpp:52
 #, kde-format
@@ -416,12 +424,10 @@ msgid "Notifications On"
 msgstr "Benachrichtigungen an"
 
 #: globalshortcuts.cpp:68
-#, fuzzy, kde-format
-#| msgctxt "OSD popup, keep short"
-#| msgid "Notifications On"
+#, kde-format
 msgctxt "@label OSD popup, keep short"
 msgid "Notification history cleared"
-msgstr "Benachrichtigungen an"
+msgstr "Benachrichtigungsverlauf geleert"
 
 #: main.qml:61
 #, kde-format

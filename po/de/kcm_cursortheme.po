@@ -1,13 +1,13 @@
-# SPDX-FileCopyrightText: 2015, 2018, 2019, 2021 Burkhard Lück <lueck@hube-lueck.de>
+# SPDX-FileCopyrightText: 2015, 2018-2019, 2021 Burkhard Lück <lueck@hube-lueck.de>
 # SPDX-FileCopyrightText: 2016, 2020, 2023 Frederik Schwarzer <schwarzer@kde.org>
 # SPDX-FileCopyrightText: 2023 Jannick Kuhr <opensource@kuhr.org>
-# SPDX-FileCopyrightText: 2025 Philipp Kiemle <l10n.daphipz@fastmail.de>
+# SPDX-FileCopyrightText: 2025-2026 Philipp Kiemle <l10n.daphipz@fastmail.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_cursortheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-05 00:46+0000\n"
-"PO-Revision-Date: 2025-12-04 20:36+0100\n"
+"PO-Revision-Date: 2026-03-01 16:47+0100\n"
 "Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.3\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #. i18n: ectx: label, entry (cursorTheme), group (Mouse)
 #: cursorthemesettings.kcfg:9
@@ -171,29 +171,28 @@ msgid "(Current theme for this Plasma session)"
 msgstr "(Aktuelles Design dieser Plasma-Sitzung)"
 
 #: ui/Delegate.qml:48
-#, fuzzy, kde-format
-#| msgid "Restore Cursor Theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove cursor theme"
-msgstr "Mauszeiger-Design wiederherstellen"
+msgstr "Mauszeiger-Design entfernen"
 
 #: ui/Delegate.qml:50
-#, fuzzy, kde-format
-#| msgid "Name of the current cursor theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active cursor theme"
-msgstr "Name des aktuellen Mauszeiger-Designs"
+msgstr "Löschen des aktiven Mauszeiger-Designs nicht möglich"
 
 #: ui/Delegate.qml:52
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed cursor themes"
 msgstr ""
+"Löschen von durch das System installierten Mauszeiger-Designs nicht möglich"
 
 #: ui/Delegate.qml:60
 #, kde-format
 msgid "Don’t delete this cursor theme"
-msgstr ""
+msgstr "Dieses Mauszeiger-Design nicht löschen"
 
 #: ui/LaunchFeedbackDialog.qml:16
 #, kde-format

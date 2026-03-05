@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-03-04 00:47+0000\n"
+"POT-Creation-Date: 2026-03-05 00:46+0000\n"
 "PO-Revision-Date: 2015-02-15 12:28+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -116,7 +116,7 @@ msgctxt "Row description, e.g. Source"
 msgid "%1:"
 msgstr "%1:"
 
-#: components/JobDetails.qml:116
+#: components/JobDetails.qml:118
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "How much many bytes (or whether unit in the locale has been copied over "
@@ -126,38 +126,43 @@ msgctxt "How many bytes have been copied"
 msgid "%2 of %1"
 msgstr "%1 od %2"
 
-#: components/JobDetails.qml:120
-#, kde-format
+#: components/JobDetails.qml:122
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "How much many bytes (or whether unit in the locale has been copied over "
+#| "total"
+#| msgid "%1 of %2"
 msgctxt "How many files have been copied"
-msgid "%2 of %1 file"
-msgid_plural "%2 of %1 files"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgid "%3 of %2 file"
+msgid_plural "%3 of %2 files"
+msgstr[0] "%1 od %2"
+msgstr[1] "%1 od %2"
+msgstr[2] "%1 od %2"
 
-#: components/JobDetails.qml:123
-#, kde-format
+#: components/JobDetails.qml:125
+#, fuzzy, kde-format
+#| msgid "%1 of %2 %3"
 msgctxt "How many dirs have been copied"
-msgid "%2 of %1 folder"
-msgid_plural "%2 of %1 folders"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgid "%3 of %2 folder"
+msgid_plural "%3 of %2 folders"
+msgstr[0] "%1 od %2 %3"
+msgstr[1] "%1 od %2 %3"
+msgstr[2] "%1 od %2 %3"
 
-#: components/JobDetails.qml:126
+#: components/JobDetails.qml:128
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "How much many bytes (or whether unit in the locale has been copied over "
 #| "total"
 #| msgid "%1 of %2"
 msgctxt "How many items (that includes files and dirs) have been copied"
-msgid "%2 of %1 item"
-msgid_plural "%2 of %1 items"
+msgid "%3 of %2 item"
+msgid_plural "%3 of %2 items"
 msgstr[0] "%1 od %2"
 msgstr[1] "%1 od %2"
 msgstr[2] "%1 od %2"
 
-#: components/JobDetails.qml:135
+#: components/JobDetails.qml:137
 #, kde-format
 msgid "%1 file"
 msgid_plural "%1 files"
@@ -165,7 +170,7 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: components/JobDetails.qml:137
+#: components/JobDetails.qml:139
 #, kde-format
 msgid "%1 folder"
 msgid_plural "%1 folders"
@@ -173,7 +178,7 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: components/JobDetails.qml:139
+#: components/JobDetails.qml:141
 #, kde-format
 msgid "%1 item"
 msgid_plural "%1 items"
@@ -181,7 +186,7 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: components/JobDetails.qml:156 components/SpeedChart.qml:72
+#: components/JobDetails.qml:158 components/SpeedChart.qml:72
 #: components/SpeedChart.qml:99 components/SpeedChart.qml:196
 #: components/SpeedChart.qml:209
 #, kde-format
@@ -546,9 +551,6 @@ msgstr ""
 #, fuzzy
 #~ msgid "Track file transfers and other jobs"
 #~ msgstr "&Prenosi datoteka i poslovi:"
-
-#~ msgid "%1 of %2 %3"
-#~ msgstr "%1 od %2 %3"
 
 #~ msgid "No notifications or jobs"
 #~ msgstr "Nema obavještenja niti poslova."
