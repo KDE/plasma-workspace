@@ -185,5 +185,6 @@
         "Name[zh_TW]": "面板間隔器",
         "Website": "https://www.kde.org/plasma-desktop"
     },
+    "NoDisplay": true,
     "X-Plasma-API-Minimum-Version": "6.0"
 }
