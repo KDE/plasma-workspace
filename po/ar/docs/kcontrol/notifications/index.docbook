@@ -1,0 +1,382 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmnotify" lang="&language;">
+<title
+>إعدادات إشعارات النظام</title>
+<articleinfo>
+
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+><personname
+><firstname
+>Kai Uwe</firstname
+> <surname
+>Broulik</surname
+></personname
+> <email
+>kde@broulik.de</email
+></author>
+<othercredit role="translator"
+><firstname
+>زايد</firstname
+><surname
+>السعيدي</surname
+><affiliation
+><address
+><email
+>zayed.alsaidi@gmail.com</email
+></address
+></affiliation
+><contrib
+>التّرجمة العربيّة</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-16</date>
+<releaseinfo
+>بلازما 5.21</releaseinfo>
+
+<keywordset>
+<keyword
+>كيدي</keyword>
+<keyword
+>إعدادات النظام</keyword>
+<keyword
+>إشعار النظام</keyword>
+<keyword
+>إشعار</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="sys-notify">
+<title
+>إعدادات إشعارات النظام</title>
+
+<para
+>تحتاج بلازما، مثل كل التطبيقات، إلى إبلاغ المستخدم عند حدوث مشكلة، أو اكتمال مهمة، أو وقوع أمر ما. تستخدم بلازما مجموعة من <quote
+>إشعارات النظام</quote
+> لإبقاء المستخدم على علم بما يحدث.</para>
+
+<para
+>باستخدام هذه الوحدة، يمكنك تحديد ما تفعله بلازما للتواصل مع كل حدث.</para>
+
+<sect2 id="notification-settings">
+<title
+>إعدادات الإشعارات</title>
+
+<sect3 id="do-not-disturb">
+<title
+>وضع «عدم الإزعاج»</title>
+
+    <para
+>يعطل هذا الوضع كل الإشعارات المرئية ومعظم الإشعارات المسموعة لتسمح لك بالتركيز على مهمتك الحالية. تتيح لك الإعدادات في هذا القسم ضبط الظروف التي تفعل فيها بلازما وضع عدم الإزعاج آليًا.</para>
+
+    <variablelist>
+
+    <varlistentry>
+    <term
+><guiicon
+>فعّل عند مطابقة الشاشات</guiicon
+></term>
+    <listitem
+><para
+>يفعل وضع عدم الإزعاج آليًا عند مطابقة الشاشات، على سبيل المثال أثناء عرض تقديمي.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>فعّل أثناء مشاركة الشاشة</guiicon
+></term>
+    <listitem
+><para
+>يفعل وضع عدم الإزعاج آليًا عند مشاركة شاشاتك، على سبيل المثال أثناء محاضرة عبر الإنترنت.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>أظهر الإشعارات الحرجة</guiicon
+></term>
+    <listitem
+><para
+>تحديد ما إذا كانت الإشعارات الحرجة ستظهر، مثل انخفاض شحن البطارية، حتى في وضع عدم الإزعاج.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>بدّل بـ:</guiicon
+></term>
+    <listitem
+><para
+>اختصار عام يمكنك ضغطه لتفعيل وتعطيل وضع عدم الإزعاج في أي وقت.</para
+></listitem>
+    </varlistentry>
+
+    </variablelist>
+
+</sect3>
+
+<sect3 id="notification-filters">
+    <title
+>المرشّحات</title>
+
+    <variablelist>
+
+    <varlistentry>
+    <term
+>الإشعارات الحرجة: <guiicon
+>أبقها دائمًا في المقدمة</guiicon
+></term>
+    <listitem
+><para
+>يبقي الإشعارات الحرجة، مثل انخفاض شحن البطارية، في المقدمة دائمًا. يضمن هذا ظهورها أيضًا أثناء مشاهدة فيديو بملء الشاشة أو تقديم عرض توضيحي.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+>الإشعارات العادية: <guiicon
+>أبقها دائمًا في المقدمة</guiicon
+></term>
+    <listitem
+><para
+>يبقي الإشعارات العادية، مثل الرسائل، في المقدمة دائمًا. يضمن هذا ظهورها أيضًا أثناء مشاهدة فيديو بملء الشاشة أو تقديم عرض توضيحي.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+>إشعارات ذات أولوية منخفضة: <guiicon
+>أظهر منبثقة</guiicon
+> و <guiicon
+>أظهر في التأريخ</guiicon
+></term>
+    <listitem
+><para
+>تحديد ما إذا كانت الإشعارات ذات الأولوية المنخفضة، مثل تغيير المقطوعات في مشغل الوسائط، ستظهر كنوافذ منبثقة أو في التأريخ، على التوالي.</para
+></listitem>
+    </varlistentry>
+
+    </variablelist>
+</sect3>
+
+<sect3 id="notification-behavior">
+    <title
+>السلوك</title>
+
+    <variablelist>
+
+    <varlistentry>
+    <term
+>منبثقة: <guiicon
+>أظهر بالقرب من أيقونة الإشعار</guiicon
+></term>
+    <listitem
+><para
+>يظهر منبثقات الإشعارات بالقرب من مكان وجود أيقونة الإشعارات في لوحتك.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>اختر موضعًا مخصصًا...</guiicon
+></term>
+    <listitem
+><para
+>يتيح لك اختيار زاوية شاشة ثابتة حيث ستوضع منبثقات الإشعارات.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+        <term
+><guiicon
+>أخفِ بعد:</guiicon
+></term>
+    <listitem
+><para
+>يحدد عدد الثواني التي ستختفي بعدها منبثقة الإشعار آليًا. يمكنك الاختيار بين 1 و 120 ثانية.</para
+></listitem>
+    </varlistentry>
+
+    </variablelist>
+</sect3>
+
+<sect3 id="progress-and-badges">
+    <title
+>تقدم التطبيق والشارات</title>
+
+    <sect4 id="application-progress">
+        <title
+>تقدم التطبيق</title>
+
+        <para
+>تتحكم الخيارات في هذا القسم في كيفية عرض تقدم التطبيق، مثل نسخ ملف أو تنزيله.</para>
+
+        <variablelist>
+
+        <varlistentry>
+        <term
+><guiicon
+>أظهر في مدير المهام</guiicon
+></term>
+        <listitem
+><para
+>تلوين النافذة في اللوحة بناءً على التقدم.</para
+></listitem>
+        </varlistentry>
+
+        <varlistentry>
+        <term
+><guiicon
+>أظهر في الإشعارات</guiicon
+></term>
+        <listitem
+><para
+>إظهار منبثقة إشعار أثناء التقدم.</para
+></listitem>
+        </varlistentry>
+
+        <varlistentry>
+        <term
+><guiicon
+>أبقِ المنبثقة مفتوحة أثناء التقدم</guiicon
+></term>
+        <listitem
+><para
+>تحديد ما إذا كانت المنبثقة يجب أن تظل مرئية طوال مدة التقدم أو تختفي آليًا. ستُعرض دائمًا مرة أخرى عند انتهاء المهمة أو فشلها.</para
+></listitem>
+        </varlistentry>
+
+        </variablelist>
+    </sect4>
+
+    <sect4 id="badges">
+        <title
+>شارات الإشعارات</title>
+
+        <variablelist>
+
+        <varlistentry>
+        <term
+><guiicon
+>أظهر في مدير المهام</guiicon
+></term>
+        <listitem
+><para
+>السماح للتطبيقات بإظهار شارات، مثل عدد الرسائل غير المقروءة، في اللوحة.</para
+></listitem>
+        </varlistentry>
+
+        </variablelist>
+    </sect4>
+
+</sect3>
+
+</sect2>
+
+<sect2 id="application-settings">
+<title
+>إعدادات التطبيق</title>
+
+<para
+>يفتح النقر فوق زر <guilabel
+>اضبط...</guilabel
+> في نهاية القائمة صفحة إعدادات التطبيق التي تتيح لك ضبط سلوك الإشعارات لكل تطبيق ولكل خدمة على حدة.</para>
+
+<para
+>استخدم الشريط الجانبي على اليسار لاختيار إدخال من فئة <guilabel
+>التطبيقات</guilabel
+> أو <guilabel
+>خدمات النظام</guilabel
+>.</para>
+
+<para
+>توجد منبثقات التحذير العامة بالإضافة إلى أصوات بدء التشغيل وإيقاف التشغيل تحت خدمة <guilabel
+>مساحة عمل بلازما</guilabel
+>.</para>
+
+<para
+>يمكن ضبط التطبيقات التي لا توفر معرفًا مناسبًا، مثل سكريبتات الصدفة، باستخدام إدخال <guilabel
+>تطبيقات أخرى</guilabel
+>.</para>
+
+<variablelist>
+
+    <varlistentry>
+    <term
+><guiicon
+>أظهر المنبثقات</guiicon
+></term>
+    <listitem
+><para
+>تحديد ما إذا كان يُسمح لهذا التطبيق بإظهار إشعارات منبثقة.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>أظهر في وضع عدم الإزعاج</guiicon
+></term>
+    <listitem
+><para
+>تحديد ما إذا كان يُسمح لهذا التطبيق بإظهار إشعارات منبثقة حتى في وضع عدم الإزعاج.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>أظهر في التأريخ</guiicon
+></term>
+    <listitem
+><para
+>تحديد ما إذا كانت إشعارات هذا التطبيق ستُحفظ في تأريخ الإشعارات.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>أظهر شارات الإشعارات</guiicon
+></term>
+    <listitem
+><para
+>تحديد ما إذا كان يُسمح لهذا التطبيق بإظهار شارات، مثل عدد الرسائل غير المقروءة، في اللوحة.</para
+></listitem>
+    </varlistentry>
+
+    <varlistentry>
+    <term
+><guiicon
+>اضبط الأحداث...</guiicon
+></term>
+    <listitem
+><para
+>بالنسبة لتطبيقات كيدي، يمكنك أيضًا ضبط كل إشعار على حدة.</para
+></listitem>
+    </varlistentry>
+
+</variablelist>
+
+</sect2>
+
+</sect1>
+
+</article>

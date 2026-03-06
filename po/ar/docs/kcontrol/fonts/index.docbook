@@ -1,0 +1,244 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="fonts" lang="&language;">
+<articleinfo>
+<title
+>الخطوط</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail;</author>
+<othercredit role="translator"
+><firstname
+>زايد</firstname
+><surname
+>السعيدي</surname
+><affiliation
+><address
+><email
+>zayed.alsaidi@gmail.com</email
+></address
+></affiliation
+><contrib
+>التّرجمة العربيّة</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-09</date>
+<releaseinfo
+>بلازما 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>كيدي</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>خطوط</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_fonts">
+
+<title
+>الخطوط</title>
+
+<para
+>صُممت هذه الوحدة لتسمح لك باختيار خطوط مختلفة بسهولة لأجزاء مختلفة من سطح مكتب كيدي.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>هذه لقطة شاشة لوحدة إعدادات الخطوط</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>وحدة إعدادات الخطوط</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>تتكون اللوحة من مجموعات خطوط مختلفة لمنحك مرونة كبيرة في ضبط خطوطك: </para>
+
+<itemizedlist>
+<listitem
+><para
+><guilabel
+>عام:</guilabel
+> يُستخدم في كل مكان لا تنطبق عليه مجموعات الخطوط الأخرى</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>عرض ثابت:</guilabel
+> في أي مكان يُحدد فيه خط غير متناسب</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>صغير:</guilabel
+> عند استخدام الخطوط الصغيرة</para
+></listitem
+> 
+
+<listitem
+><para
+><guilabel
+>شريط الأدوات:</guilabel
+> الخط المستخدم في أشرطة أدوات تطبيقات كيدي</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>القائمة:</guilabel
+> الخط المستخدم في قوائم تطبيقات كيدي</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>عنوان النافذة:</guilabel
+> الخط المستخدم في عنوان النافذة</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>شريط المهام:</guilabel
+> الخط المستخدم في بريمج لوحة شريط المهام</para
+></listitem>
+
+<listitem
+><para
+><guilabel
+>سطح المكتب:</guilabel
+> الخط المستخدم على سطح المكتب لتسمية الأيقونات</para
+></listitem>
+
+</itemizedlist>
+
+<para
+>لكل خط زر <guibutton
+>اختر...</guibutton
+> مقابل. بالنقر فوق هذا الزر، يظهر مربع حوار. يمكنك استخدام مربع الحوار هذا لاختيار خط جديد ونمطه وحجمه. ثم اضغط على <guibutton
+>موافق</guibutton
+>.</para>
+
+<para
+>حدد <guilabel
+>أظهر الخطوط أحادية العرض فقط</guilabel
+> لتصفية كافة الخطوط غير أحادية العرض من القائمة.</para>
+
+<para
+>سيُعرض مثال للخط الذي اخترته في المساحة الواقعة بين اسم مجموعة الخط وزر <guibutton
+>اختر...</guibutton
+>.</para>
+
+<para
+>عند الانتهاء، ما عليك سوى النقر فوق <guibutton
+>موافق</guibutton
+> وستُعاد تشغيل كافة مكونات كيدي الضرورية حتى تصبح تغييراتك نافذة على الفور.</para>
+
+<para
+>يسمح لك زر <guibutton
+>اضبط كافة الخطوط...</guibutton
+> بتعيين الخصائص بسرعة لكافة الخطوط المختارة أعلاه. سيظهر مربع حوار لاختيار الخط مشابه للمربع القياسي، لكنك ستلاحظ وجود مربعات اختيار تسمح لك بتغيير <guilabel
+>الخط</guilabel
+>، أو <guilabel
+>نمط الخط</guilabel
+> أو <guilabel
+>الحجم</guilabel
+> بشكل مستقل عن بعضها البعض. يمكنك اختيار أي خيار أو خيارين أو ثلاثة من هذه الخيارات، وستُطبق على كافة مجموعات الخطوط.</para>
+
+<para
+>حدد <guilabel
+>أظهر الخطوط أحادية العرض فقط</guilabel
+> لتصفية كافة الخطوط غير أحادية العرض من القائمة.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>ضبط كافة الخطوط</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="adjust-all.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>مربع حوار اضبط كافة الخطوط...</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>على سبيل المثال، إذا اخترت عدة أوجه خطوط مختلفة أعلاه، وأدركت أنها جميعًا كبيرة جدًا (يحدث هذا غالبًا عند تغيير دقة الشاشة، مثلاً)، يمكنك تطبيق حجم خط جديد على كافة الخطوط، دون التأثير على أوجه الخطوط وأنماطها المخصصة.</para>
+
+<sect2 id="fonts-aa">
+<title
+>تنعيم النص</title>
+
+<para
+>لاستخدام إعداد التنعيم، ما عليك سوى تحديد بند <guilabel
+>ممكّن</guilabel
+> واختيار الإعدادات المخصصة.</para>
+
+<para
+>سيسمح لك وضع علامة في مربع الاختيار <guilabel
+>استثنِ نطاقًا من التنعيم</guilabel
+> بتحديد أي نطاق من الخطوط <emphasis
+>لن</emphasis
+> يُنعّم. يُحدد هذا النطاق باستخدام المربعين المركبين أدناه.</para>
+
+<para
+>يمكنك أيضًا اختيار الطريقة المستخدمة لإنشاء مظهر منعّم لخطوطك، ومدى قوة تطبيقها بتغيير <ulink url="https://en.wikipedia.org/wiki/Subpixel_rendering"
+>صيرورة البكسلات الفرعية</ulink
+> و <ulink url="https://en.wikipedia.org/wiki/Font_hinting"
+>تلميح الخطوط</ulink
+>. من الممكن أيضًا <guilabel
+>فرض DPI للخطوط</guilabel
+> من أجل <ulink url="https://en.wikipedia.org/wiki/Dots_per_inch"
+>صيرورة الشاشة</ulink
+>. إذا لم تكن ملمًا بالطرق الفردية، فيجب عليك ترك هذه الخيارات وشأنها.</para>
+
+<note
+><para
+>تتطلب القدرة على استخدام الخطوط والأيقونات المنعّمة وجود دعم في كل من خادم العرض ومجموعة أدوات Qt، وتثبيت خطوط مناسبة، واستخدام قدرات تقديم الخطوط المدمجة في خادم العرض. إذا كنت لا تزال تواجه مشكلات، فيرجى الاتصال بالقائمة البريدية المناسبة لكيدي.</para
+></note>
+
+</sect2>
+
+<sect2 id="fonts-dpi">
+<title
+>DPI للخطوط</title>
+
+<para
+>يقترح عليك <guilabel
+>افرض DPI للخطوط:</guilabel
+> قيمة DPI بديلة غير تلك الخاصة بنظامك والتي تُستخدم افتراضيًا عندما يكون هذا الإعداد <guilabel
+>معطلاً</guilabel
+>. يمكنك التحقق من قيمة DPI التي ضُبط خادم X عليها عن طريق تشغيل <userinput
+>xdpyinfo | grep resolution</userinput
+> في نافذة سطر الأوامر ثم تغيير DPI باستخدام المربع المنسدل. سيُطبق هذا على التطبيقات التي تُشغل حديثًا فقط.</para>
+</sect2>
+
+</sect1>
+
+</article>

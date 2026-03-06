@@ -1,0 +1,165 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="kcmstyle" lang="&language;">
+<articleinfo>
+
+<title
+>نمط التطبيق</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<othercredit role="translator"
+><firstname
+>زايد</firstname
+><surname
+>السعيدي</surname
+><affiliation
+><address
+><email
+>zayed.alsaidi@gmail.com</email
+></address
+></affiliation
+><contrib
+>التّرجمة العربيّة</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-09</date>
+<releaseinfo
+>بلازما 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>كيدي</keyword>
+<keyword
+>إعدادات النّظام</keyword>
+<keyword
+>نمط</keyword>
+<keyword
+>تطبيق</keyword>
+<keyword
+>ودجات</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>تُستخدم هذه الوحدة لضبط كيفية رسم بلازما للودجات الفردية.</para>
+
+<note
+><para
+>تُعد <emphasis
+>الودجة</emphasis
+> مصطلحًا شائعًا بين المبرمجين للإشارة إلى عناصر واجهة المستخدم مثل الأزرار والقوائم وأشرطة التمرير. يمكنك التفكير فيها على أنها القطع الأساسية التي تُجمع لتشكيل تطبيقك.</para
+></note>
+
+<para
+>يمكنك ضبط كيفية رسم الودجات باستخدام هذه الوحدة، ولكن لتغيير لون الودجات، يجب عليك الرجوع إلى القسم المعنون <ulink url="help:/kcontrol/colors/index.html"
+>الألوان</ulink
+>.</para>
+
+<para
+>تحتوي الشبكة العلوية، المسماة <guilabel
+>نمط التطبيق</guilabel
+>، على قائمة لمعاينات الأنماط المحددة مسبقًا. لكل نمط اسم، ويُعرض وصف موجز عند تمرير مؤشر الفأرة فوق العنصر الخاص به.</para>
+
+<para
+>إذا أردت ضبط سمة بلازما، فاستخدم أيقونة <guilabel
+>اضبط النمط...</guilabel
+> المتراكبة في الركن السفلي الأيمن لأيقونة نمط الودجة في الشبكة.</para>
+
+<para
+>إذا كانت الميزة مدعومة، فمن الممكن تغيير كل جوانب النمط تقريبًا: توسيط ألسنة شريط الألسنة، ورسم فواصل عناصر شريط الأدوات، ورسم مؤشر التركيز في القوائم، ورسم علامات تدرج المنزلق، وتمكين مقابض تغيير الحجم الممتدة، وتحديد رؤية مسرعات لوحة المفاتيح، ووضع سحب النوافذ، واستخدام الإطارات لتحسين الوصول، واستخدام أزرار على أشرطة التمرير، واستخدام الشفافية في القوائم.</para>
+
+<para
+>يمكن إجراء الضبط العام بالضغط على زر <guibutton
+>اضبط الأيقونات وأشرطة الأدوات</guibutton
+> أسفل الشبكة. يفتح هذا الزر لوحة لاختيار المزيد من الإعدادات.</para>
+<variablelist>
+
+<varlistentry
+> 
+<term
+><guilabel
+>أظهر الأيقونات: على الأزرار</guilabel
+></term>
+<listitem>
+<para
+>إذا حُدد هذا الخيار، فستحتوي أزرار الإجراءات (مثل <guibutton
+>موافق</guibutton
+> و <guibutton
+>طبق</guibutton
+>) على أيقونة صغيرة بداخلها لتعمل كمرجع بصري. وإذا لم يُحدد هذا الخيار، فسيظهر النص فقط على الزر.</para>
+</listitem
+> 
+</varlistentry
+> 
+
+<varlistentry
+> 
+<term
+><guilabel
+>أظهر الأيقونات: في القوائم</guilabel
+></term>
+<listitem>
+<para
+>إذا حُدد هذا الخيار، فستعرض تطبيقات كيدي أيقونات صغيرة بجانب معظم عناصر القائمة. وإذا لم يُحدد هذا الخيار، فسيظهر النص فقط في القوائم. لن تؤثر التغييرات على رؤية أيقونات القائمة إلا على التطبيقات التي تُشغل حديثًا.</para>
+</listitem
+> 
+</varlistentry
+> 
+
+<varlistentry
+> 
+<term
+><guilabel
+>لصيقة شريط الأدوات الرئيسي</guilabel
+>، <guilabel
+>لصيقة شريط الأدوات الثانوي</guilabel
+></term>
+<listitem>
+<para
+>تتيح لك هذه المربعات المنسدلة تحديد مكان ظهور الاسم النصي للزر على الزر في كلا شريطي الأدوات كخيار مبدئي. إذا حُدد <guilabel
+>بلا</guilabel
+>، فلن يكون هناك نص على أزرار شريط الأدوات. وإذا حُدد <guilabel
+>نص فقط</guilabel
+>، فستُستبدل أيقونة الزر بالاسم النصي للزر. وإذا حُدد <guilabel
+>بجانب الأيقونات</guilabel
+>، فسيُوضع اسم الزر إلى <emphasis
+>يمين</emphasis
+> الأيقونة. وإذا حُدد <guilabel
+>أسفل الأيقونة</guilabel
+>، فسيكون الوضع المبدئي هو وضع نص الزر <emphasis
+>أسفل</emphasis
+> الأيقونة.</para>
+
+<tip
+><para
+>تحدد هذه الخيارات الموقع <emphasis
+>المبدئي</emphasis
+> فقط. يمكن لكل تطبيق أن يتجاوز الإعدادات المستخدمة في هذه اللوحة.</para
+></tip>
+</listitem
+> 
+</varlistentry
+> 
+
+</variablelist>
+
+<para
+>يمكن استخدام زر <guibutton
+>اضبط نمط تطبيق غنوم/جي تي كيه...</guibutton
+> لفتح لسان الضبط حيث يمكنك اختيار <guilabel
+>سمة جي تي كيه</guilabel
+>، أو تثبيت سمة جي تي كيه من ملف أو <guibutton
+>احصل على أنماط تطبيقات غنوم/جي تي كيه جديدة</guibutton
+> من الإنترنت. </para>
+
+</article>

@@ -1,0 +1,655 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN" 
+"dtd/kdedbx45.dtd" [
+  <!ENTITY kappname "&klipper;">
+  <!ENTITY package "kdebase">
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % English "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<book id="klipper" lang="&language;">
+<bookinfo>
+<title
+>دليل كليبر </title>
+
+<authorgroup>
+<author
+>&Philip.Rodrigues; &Philip.Rodrigues.mail;</author>
+
+<othercredit role="developer"
+>&Carsten.Pfeiffer; &Carsten.Pfeiffer.mail; </othercredit>
+
+<othercredit role="translator"
+><firstname
+>زايد</firstname
+><surname
+>السعيدي</surname
+><affiliation
+><address
+><email
+>zayed.alsaidi@gmail.com</email
+></address
+></affiliation
+><contrib
+>التّرجمة العربيّة</contrib
+></othercredit
+> 
+
+</authorgroup>
+
+<copyright>
+<year
+>2000-2003</year>
+<holder
+>&Philip.Rodrigues;</holder>
+</copyright>
+
+<legalnotice
+>&FDLNotice;</legalnotice>
+
+<date
+>2022-05-05</date>
+<releaseinfo
+>بلازما 5.25</releaseinfo>
+
+<abstract>
+<para
+>كليبر هو أداة قص ولصق الحافظة في بلازما.</para>
+</abstract>
+
+<keywordset>
+<keyword
+>كيدي</keyword>
+<keyword
+>كليبر</keyword>
+<keyword
+>kdebase</keyword>
+<keyword
+>حافظة</keyword>
+</keywordset>
+</bookinfo>
+<!--http://blog.martin-graesslin.com/blog/2014/07/next-generation-klipper/-->
+<chapter id="introduction">
+<title
+>مقدمة</title>
+<para
+>كليبر هو أداة الحافظة لبلازما. يخزن تأريخ الحافظة، ويسمح لك بربط محتويات الحافظة بإجراءات التطبيقات. يرجى الإبلاغ عن أي مشاكل أو طلبات ميزات إلى <ulink url="http://bugs.kde.org"
+>باجزلا كيدي</ulink
+>.</para>
+
+</chapter>
+
+<chapter id="using-klipper">
+<title
+>استخدام كليبر</title>
+
+<sect1 id="basic-usage">
+<title
+>الاستخدام الأساسي</title>
+<para
+>يمكنك استخدام كليبر في صينية النظام إما كودجت بلازما أو كتطبيق كلاسيكي. كلاهما يتشاركان في الوظائف نفسها ولكن لديهما واجهة مستخدم رسومية مختلفة، ويعرضان آخر عنصر في التأريخ عند حوم مؤشر الفأرة فوق أيقونة كليبر في صينية النظام: </para>
+
+<screenshot>
+<screeninfo
+>أيقونة كليبر.</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="screenshot.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>أيقونة كليبر</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>تُخفى ودجت كليبر إذا كانت الحافظة فارغة.</para>
+
+<para
+>لعرض تأريخ الحافظة، انقر فوق أيقونة كليبر في صينية النظام.</para>
+
+<sect2 id="klipper-widget">
+<title
+>ودجت كليبر</title>
+<screenshot>
+<screeninfo
+>ودجت كليبر.</screeninfo>
+<mediaobject>
+<imageobject>
+<imagedata fileref="klipper-widget.png" format="PNG"/>
+</imageobject>
+<textobject>
+<phrase
+>ودجت كليبر</phrase>
+</textobject>
+</mediaobject>
+</screenshot>
+
+<para
+>حوم فوق أحد المدخلات بمؤشر الفأرة لتظهر أربع أيقونات تمكنك من استدعاء إجراء، أو إظهار الرمز الشريطي، أو تحرير المحتوى، أو إزالة المدخل من التأريخ. استخدم سبكتيكل (Spectacle) لالتقاط الرموز الشريطية وحفظها. </para>
+
+<para
+>يمكنك البحث في تأريخ الحافظة بفتحها (انقر فوق كليبر) وكتابة استعلامك. تُحدث النتائج أثناء الكتابة. لمسح تأريخ الحافظة، انقر فوق الأيقونة الموجودة على يمين حقل البحث. </para>
+
+<para
+>يفتح إجراء <guilabel
+>اضبط الحافظة...</guilabel
+> في القائمة السياقية <link linkend="preferences"
+>مربع حوار الإعدادات</link
+>. </para>
+
+</sect2>
+</sect1>
+
+<sect1 id="actions">
+<title
+>الإجراءات</title>
+
+<para
+>يستطيع كليبر تنفيذ إجراءات على محتويات الحافظة، بناءً على مطابقتها لتعبير نمطي معين. على سبيل المثال، يمكن تمرير أي محتوى في الحافظة يبدأ بـ <quote
+>http://</quote
+> إلى فيرفوكس أو كنكورر (Konqueror) كروابط لفتحها. بالإضافة إلى ذلك، إذا طابق المحتوى مساراً، يمكن تنفيذ إجراءات مماثلة وفقاً لنوع الملف. فمثلاً، إذا نُسخ مسار ملف <acronym
+>PDF</acronym
+> إلى الحافظة، يمكن عرض الملف في أوكلار (Okular).</para>
+
+<para
+>لاستخدام هذه الميزة، ما عليك سوى تحديد رابط أو مسار. إذا وجُد تعبير نمطي مطابق في قائمة كليبر، فستظهر قائمة تعرض لك البرامج المناسبة لاختيارك. استخدم الفأرة أو مفاتيح الأسهم لاختيار برنامج، وسيقوم كليبر بتشغيل هذا البرنامج، فاتحاً العنوان الذي يشير إليه الاختيار.</para>
+
+<para
+>إذا كنت لا ترغب في تنفيذ أي إجراءات على محتويات الحافظة، فاختر <guimenuitem
+>عطل هذه المنبثقة</guimenuitem
+> من القائمة المنبثقة للعودة إلى ما كنت تفعله. إذا غادرت القائمة، فستختفي، مما يتيح لك مواصلة عملك. يمكنك تغيير الوقت الذي تبقى فيه القائمة معروضة في مربع حوار الإعدادات، عبر خيار <guilabel
+>أظهر قائمة الإجراءات المنبثقة</guilabel
+> تحت صفحة <guilabel
+>عام</guilabel
+>. يمكنك بشكل منفصل تعطيل جزء مسار الملف باستخدام خيار <guilabel
+>تضمين إجراءات MIME</guilabel
+> تحت صفحة <guilabel
+>قائمة الإجراءات</guilabel
+>.</para>
+
+<para
+>يمكن تعطيل الإجراءات تماماً بالضغط على الاختصار <keycombo action="simul"
+>&Ctrl;&Alt;<keycap
+>X</keycap
+></keycombo
+>.</para>
+
+<para
+>يمكن أيضاً تحرير محتويات الحافظة التي تطابق تعبيراً نمطياً قبل تنفيذ إجراء عليها. اختر <guimenuitem
+>حرر المحتويات...</guimenuitem
+> على يمين مدخل الحافظة، ويمكنك تغيير محتويات الحافظة في مربع الحوار الذي يظهر، قبل النقر فوق زر <guibutton
+>موافق</guibutton
+> لتشغيل الإجراء المناسب.</para>
+
+<para
+>يؤدي الضغط على <keycombo action="simul"
+>&Ctrl;&Alt;<keycap
+>R</keycap
+></keycombo
+> إلى إظهار القائمة المنبثقة لتكرار آخر إجراء نفذه كليبر.</para>
+
+</sect1>
+
+<sect1 id="clipboard-modes">
+<title
+>سلوك الحافظة/الاختيار</title>
+
+<sect2 id="clipboard-modes-general">
+<title
+>عام</title>
+<para
+>يمكن استخدام كليبر لضبط سلوك الحافظة والاختيار في بلازما. </para>
+
+<note
+><para
+>يستخدم نظام النافذة إكس (X-Window) خبيئتين منفصلتين للحافظة: <quote
+>الاختيار</quote
+> و<quote
+>الحافظة</quote
+>. يوضع النص في خبيئة الاختيار بمجرد تحديده، ويمكن لصقه بزر الفأرة الأوسط. لوضع النص في خبيئة الحافظة، حدده واضغط <keycombo
+>&Ctrl;<keycap
+>X</keycap
+> </keycombo
+> أو <keycombo
+>&Ctrl;<keycap
+>C</keycap
+> </keycombo
+>. يُلصق النص من خبيئة الحافظة باستخدام <keycombo
+>&Ctrl;<keycap
+>V</keycap
+> </keycombo
+> أو باختيار <guimenuitem
+>لصق</guimenuitem
+> من القائمة السياقية.</para>
+</note>
+
+</sect2>
+
+<sect2 id="changing-clipboard-modes">
+<title
+>تغيير سلوك الحافظة/الاختيار</title>
+<para
+>من أجل تغيير سلوك الحافظة/الاختيار، اختر <guimenuitem
+>اضبط الحافظة...</guimenuitem
+> من قائمة كليبر السياقية، وفي مربع الحوار الذي يظهر، اختر صفحة <guilabel
+>عام</guilabel
+>. يؤدي إلغاء تحديد <guilabel
+>الاختيار والحافظة</guilabel
+> إلى جعل الحافظة والاختيار يعملان كخبيئتين منفصلتين تماماً كما هو موضح أعلاه. مع تفعيل هذا الإعداد، سيمنع خيار <guilabel
+>تجاهل</guilabel
+> كليبر من تضمين محتويات الاختيار في تأريخ حافظته ومن تنفيذ إجراءات على محتويات الاختيار. اختيار <guilabel
+>الاختيار والحافظة</guilabel
+> يجعل خبيئتي الحافظة والاختيار متطابقتين دائماً، مما يعني أن النص المختار يمكن لصقه إما بـ <mousebutton
+>زر الفأرة الأوسط</mousebutton
+> أو بمزيج المفاتيح <keycombo
+>&Ctrl;<keycap
+>V</keycap
+> </keycombo
+>، وكذلك الأمر بالنسبة للنص الموجود في خبيئة الحافظة. </para>
+
+ <!-- The
+<guilabel
+>Synchronize contents of the clipboard and the
+selection</guilabel
+> check box determines the clipboard mode. If the box is
+selected, the clipboard functions in the &UNIX; mode; if not, the
+&Windows;/&Mac; mode is used. -->
+
+</sect2>
+
+
+</sect1>
+
+</chapter>
+
+<chapter id="preferences">
+<title
+>ضبط كليبر</title>
+
+<sect1 id="general-page">
+<title
+>الخيارات العامة</title>
+
+<variablelist>
+
+<varlistentry
+><term
+><guilabel
+>الاختيار والحافظة</guilabel
+></term>
+<listitem
+><para
+>عند إبراز نص أو منطقة من الشاشة بالفأرة أو لوحة المفاتيح، يسمى هذا <emphasis
+>الاختيار</emphasis
+>. يمكن لصقه باستخدام زر الفأرة الأوسط.</para
+><para
+>إذا نُسخ الاختيار صراحة باستخدام إجراء <guimenuitem
+>نسخ</guimenuitem
+> أو <guimenuitem
+>قص</guimenuitem
+>، فإنه يُحفظ في <emphasis
+>الحافظة</emphasis
+>. يمكن لصقه باستخدام إجراء <guimenuitem
+>لصق</guimenuitem
+>.</para
+><para
+>عند تفعيل هذا الخيار، تظل الحافظة والاختيار متطابقين، بحيث يكون أي اختيار متاحاً فوراً للصق بأي وسيلة. إذا أُغلق، فقد يظل الاختيار محفوظاً في تأريخ الحافظة (حسب الخيارات أدناه)، ولكن لا يمكن لصقه إلا باستخدام زر الفأرة الأوسط.</para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>تأريخ الحافظة</guilabel
+></term>
+<listitem
+><para
+>يبدل تأريخ الحافظة.</para
+></listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>عدد المدخلات</guilabel
+></term>
+<listitem
+><para
+>يحدد عدد العناصر التي تُخزن في تأريخ الحافظة.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>اختيار النص</guilabel
+></term>
+<listitem
+><para
+>عند تحديد منطقة من الشاشة بالفأرة أو لوحة المفاتيح، يسمى هذا <quote
+>الاختيار</quote
+>. يحدد هذا الخيار ما إذا كانت اختيارات النص تُحفظ في تأريخ الحافظة. يمكن الاختيار بين <guilabel
+>احفظ دائماً في التأريخ</guilabel
+> و <guilabel
+>فقط عند النسخ صراحة</guilabel
+>. خيار <guilabel
+>احفظ دائماً في التأريخ</guilabel
+> غير متاح إذا أُغلق مزامنة الاختيار/الحافظة؛ في هذه الحالة لا يُحفظ الاختيار آلياً في تأريخ الحافظة أبداً. انظر <xref linkend="clipboard-modes"/>. </para>
+</listitem>
+</varlistentry
+> 
+
+<varlistentry>
+<term
+><guilabel
+>الاختيار غير النصي</guilabel
+></term>
+<listitem
+><para
+>يحدد هذا الخيار ما إذا كانت الاختيارات غير النصية (مثل الصور) تُحفظ في تأريخ الحافظة. يمكن الاختيار بين <guilabel
+>احفظ دائماً في التأريخ</guilabel
+>، و <guilabel
+>فقط عند النسخ صراحة</guilabel
+>، و <guilabel
+>لا تحفظ أبداً في التأريخ</guilabel
+>. خيار <guilabel
+>احفظ دائماً في التأريخ</guilabel
+> غير متاح إذا أُغلق مزامنة الاختيار/الحافظة؛ في هذه الحالة لا يُحفظ الاختيار آلياً في تأريخ الحافظة أبداً. انظر <xref linkend="clipboard-modes"/>. </para>
+</listitem>
+</varlistentry
+> 
+
+</variablelist>
+
+</sect1>
+
+<sect1 id="action-menu-page">
+<title
+>قائمة الإجراءات</title>
+
+<variablelist>
+
+<varlistentry>
+<term
+><guilabel
+>أظهر قائمة الإجراءات المنبثقة</guilabel
+></term>
+<listitem
+><para
+>يحدد الوقت الذي ستظل فيه القائمة المنبثقة باقية إذا لم تتفاعل معها.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>إعادة تشغيل الإجراءات على عنصر مختار من التأريخ</guilabel
+></term>
+<listitem
+><para
+>إذا فُعل هذا، فإن اختيار عنصر من التأريخ يجعل كليبر يعرض منبثقة الإجراءات على هذا العنصر، إذا كان ذلك مناسباً.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guibutton
+>استثنِ النوافذ</guibutton
+></term>
+<listitem
+><para
+>يظهر مربع حوار <guilabel
+>عطل الإجراءات للنوافذ من نوع WM_CLASS</guilabel
+>.</para>
+<para
+>تستخدم بعض البرامج، مثل كنكورر (Konqueror)، الحافظة داخلياً. إذا كنت تتلقى منبثقات كليبر غير مرغوب فيها طوال الوقت عند استخدام تطبيق معين، فافعل ما يلي:</para>
+
+<orderedlist>
+<listitem
+><para
+>افتح التطبيق.</para
+></listitem>
+<listitem
+><para
+>من الطرفية، شغّل <userinput
+><command
+>xprop</command
+> | <command
+>grep</command
+> <parameter
+>WM_CLASS</parameter
+></userinput
+> ثم انقر فوق نافذة التطبيق الذي تشغله.</para
+></listitem
+> 
+<listitem
+><para
+>السلسلة الأولى بعد علامة التساوي هي التي يجب إدخالها.</para
+></listitem>
+</orderedlist>
+
+<para
+>بمجرد إضافة WM_CLASS، لن تُولّد أي إجراءات أخرى لنوافذ ذلك التطبيق.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>أزل المسافات البيضاء عند تنفيذ الإجراءات</guilabel
+></term>
+<listitem
+><para
+>في حال اختياره، ستُزال أي مسافات بيضاء (مسافات، علامات جدولة، إلخ) في بداية ونهاية محتويات الحافظة قبل تمريرها إلى التطبيق. هذا مفيد، على سبيل المثال، إذا كانت الحافظة تحتوي على رابط به مسافات، مما قد يسبب خطأً عند فتحه بواسطة متصفح ويب.</para>
+</listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+><guilabel
+>تضمين إجراءات MIME</guilabel
+></term>
+<listitem
+><para
+>في حال اختياره، تُضمّن التطبيقات التي يمكنها قبول نوع MIME لاسم ملف أو رابط مختار في القائمة المنبثقة.</para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect1>
+
+<sect1 id="actions-configuration-page">
+<title
+>ضبط الإجراءات</title>
+
+<variablelist>
+<varlistentry>
+<term
+>تحرير التعبيرات/الإجراءات</term>
+<listitem
+><para
+>في صفحة <guilabel
+>الإجراءات</guilabel
+>، انقر نقراً مزدوجاً فوق التعبير النمطي أو الإجراء الذي تريد تحريره، أو حدده واضغط على زر <guibutton
+>حرر الإجراء</guibutton
+>. سيظهر مربع حوار حيث يمكن تحرير نص التعبير كما تشاء.</para
+></listitem>
+</varlistentry>
+
+<varlistentry>
+<term
+>إضافة تعبيرات/إجراءات</term>
+<listitem
+><para
+>انقر فوق زر <guibutton
+>أضف إجراءً...</guibutton
+> لإضافة تعبير نمطي ليطابقه كليبر. يستخدم كليبر <classname
+>QRegularExpression</classname
+> من كيوت (Qt)، والذي يستخدم PCRE (تعبيرات بيرل النمطية المتوافقة).</para>
+<para
+>يمكنك إضافة وصف لنوع التعبير النمطي (مثلاً: <quote
+>رابط HTTP</quote
+>) عبر النقر بـ <mousebutton
+>يسار</mousebutton
+> الفأرة في عمود <guilabel
+>الوصف</guilabel
+>.</para
+>   
+
+<note
+><para
+>يمكنك العثور على معلومات مفصلة حول استخدام تعبيرات <classname
+>QRegularExpression</classname
+> النمطية في <ulink url="https://doc.qt.io/qt-5/qregularexpression.html#details"
+>توثيق كيوت (Qt) المصدري</ulink
+>.</para
+></note>
+
+<para
+>حرر التعبير النمطي كما هو موضح أعلاه. لإضافة أمر لتنفيذه، انقر فوق <guimenuitem
+>أضف أمراً</guimenuitem
+> وحرر الأمر في صندوق تحرير النص الموضعي. يتيح لك النقر المزدوج على الأمر تحريره.</para>
+
+<para
+>لاحظ أن <token
+>%s</token
+> في سطر الأوامر يُستبدل بمحتويات الحافظة، فمثلاً: إذا كان تعريف أمرك هو <userinput
+><command
+>kwrite</command
+> <token
+>%s</token
+></userinput
+> وكانت محتويات حافظتك هي <filename
+>/home/phil/textfile</filename
+>، فسيُشغّل الأمر <userinput
+><command
+>kwrite</command
+> <filename
+>/home/phil/textfile</filename
+></userinput
+>. لتضمين <token
+>%s</token
+> حرفياً في سطر الأوامر، استخدم الهروب ببراغي خلفي: <userinput
+>\%s</userinput
+>.</para>
+
+<para
+>تُستبدل المداخل من <userinput
+><token
+>%0</token
+></userinput
+> إلى <userinput
+><token
+>%9</token
+></userinput
+> بالنصوص الملتقطة المقابلة من نمط المطابقة. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</sect1>
+
+<sect1 id="shortcuts-page">
+<title
+>خيارات الاختصارات</title>
+
+<para
+>تتيح لك صفحة الاختصارات تغيير اختصارات لوحة المفاتيح المستخدمة للوصول إلى وظائف كليبر. يمكنك تغيير الاختصار إلى واحد من ثلاثة أشياء:</para>
+
+<variablelist>
+<varlistentry>
+<term
+><guilabel
+>لا شيء</guilabel
+></term>
+<listitem
+><para
+>لا يمكن الوصول إلى الإجراء المحدد مباشرة من لوحة المفاتيح</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>المبدئيّ</guilabel
+></term>
+<listitem
+><para
+>يستخدم الإجراء المحدد مفتاح كليبر المبدئي. هذه هي الاختصارات المشار إليها في هذا الدليل.</para
+></listitem>
+</varlistentry>
+<varlistentry>
+<term
+><guilabel
+>مخصص</guilabel
+></term>
+<listitem
+><para
+>يُعيّن الإجراء المختار للمفاتيح التي تختارها.</para>
+<para
+>لاختيار مفتاح مخصص للإجراء الذي حددته، انقر فوق <guilabel
+>مخصص</guilabel
+> ثم <guilabel
+>لا شيء</guilabel
+>. الآن اكتب مزيج المفاتيح المطلوب على لوحة المفاتيح، كما هو الحال في أي تطبيق كيدي. </para
+> </listitem>
+</varlistentry>
+</variablelist>
+
+<para
+>إذا حددت اختصاراً لـ <guilabel
+>افتح كليبر عند موضع الفأرة</guilabel
+>، فإن الضغط على هذا الاختصار سيفتح قائمة كليبر المنبثقة عند موضع مؤشر الفأرة، بدلاً من موضعها المبدئي (في لوحة بلازما). هذا مفيد إذا كنت تستخدم الفأرة أكثر من لوحة المفاتيح.</para>
+
+</sect1>
+</chapter>
+
+<chapter id="credits">
+<title
+>الحقوق والترخيص</title>
+
+<para
+>كليبر </para>
+<para
+>حقوق ملكية البرنامج 1998 &Andrew.Stanley-Jones; <email
+>asj@cban.com</email
+> </para>
+<para
+>حقوق ملكية البرنامج 1998-2000 &Carsten.Pfeiffer; &Carsten.Pfeiffer.mail;</para>
+<para
+>يتولى صيانته حالياً Esben Mose Hansen. انظر <ulink url="http://mosehansen.dk/about"
+>http://mosehansen.dk/about</ulink
+> لتفاصيل الاتصال. </para>
+
+<para
+>حقوق ملكية التوثيق 2000-2003، 2005 &Philip.Rodrigues; &Philip.Rodrigues.mail;</para>
+
+<para
+>التّرجمة: زايد السعيدي<email
+>zayed.alsaidi@gmail.com</email
+></para
+> &underFDL; &underGPL; </chapter>
+
+
+&documentation.index; 
+
+</book>
+<!--
+Local Variables:
+mode: sgml
+sgml-minimize-attributes: nil
+sgml-general-insert-case: lower
+sgml-indent-step: 0
+End:
+-->
+
+
+
+
+
+
+
+
+
+
