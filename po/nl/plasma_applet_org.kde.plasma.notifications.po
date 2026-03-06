@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-05 00:46+0000\n"
-"PO-Revision-Date: 2026-01-28 15:58+0100\n"
+"PO-Revision-Date: 2026-03-05 12:40+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: components/ActionContainer.qml:96
 #, kde-format
@@ -113,37 +113,28 @@ msgid "%2 of %1"
 msgstr "%2 van %1"
 
 #: components/JobDetails.qml:122
-#, fuzzy, kde-format
-#| msgctxt "How many files have been copied"
-#| msgid "%2 of %1 file"
-#| msgid_plural "%2 of %1 files"
+#, kde-format
 msgctxt "How many files have been copied"
 msgid "%3 of %2 file"
 msgid_plural "%3 of %2 files"
-msgstr[0] "%2 / %1 bestand"
-msgstr[1] "%2 van %1 bestanden"
+msgstr[0] "%3 van %2 bestand"
+msgstr[1] "%3 van %2 bestanden"
 
 #: components/JobDetails.qml:125
-#, fuzzy, kde-format
-#| msgctxt "How many dirs have been copied"
-#| msgid "%2 of %1 folder"
-#| msgid_plural "%2 of %1 folders"
+#, kde-format
 msgctxt "How many dirs have been copied"
 msgid "%3 of %2 folder"
 msgid_plural "%3 of %2 folders"
-msgstr[0] "%2 van %1 map"
-msgstr[1] "%2 van %1 mappen"
+msgstr[0] "%3 van %2 map"
+msgstr[1] "%3 van %2 mappen"
 
 #: components/JobDetails.qml:128
-#, fuzzy, kde-format
-#| msgctxt "How many items (that includes files and dirs) have been copied"
-#| msgid "%2 of %1 item"
-#| msgid_plural "%2 of %1 items"
+#, kde-format
 msgctxt "How many items (that includes files and dirs) have been copied"
 msgid "%3 of %2 item"
 msgid_plural "%3 of %2 items"
-msgstr[0] "%2 / %1 item"
-msgstr[1] "%2 van %1 items"
+msgstr[0] "%3 van %2 item"
+msgstr[1] "%3 van %2 items"
 
 #: components/JobDetails.qml:137
 #, kde-format

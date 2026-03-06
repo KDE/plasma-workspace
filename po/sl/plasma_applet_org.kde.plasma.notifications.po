@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-05 00:46+0000\n"
-"PO-Revision-Date: 2026-01-28 11:17+0100\n"
+"PO-Revision-Date: 2026-03-05 10:07+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -126,43 +126,34 @@ msgid "%2 of %1"
 msgstr "%2 od %1"
 
 #: components/JobDetails.qml:122
-#, fuzzy, kde-format
-#| msgctxt "How many files have been copied"
-#| msgid "%2 of %1 file"
-#| msgid_plural "%2 of %1 files"
+#, kde-format
 msgctxt "How many files have been copied"
 msgid "%3 of %2 file"
 msgid_plural "%3 of %2 files"
-msgstr[0] "%2 od %1 datotek"
-msgstr[1] "%2 od %1 datoteke"
-msgstr[2] "%2 od %1 datotek"
-msgstr[3] "%2 od %1 datotek"
+msgstr[0] "%3 od %2 datotek"
+msgstr[1] "%3 od %2 datoteke"
+msgstr[2] "%3 od %2 datotek"
+msgstr[3] "%3 od %2 datotek"
 
 #: components/JobDetails.qml:125
-#, fuzzy, kde-format
-#| msgctxt "How many dirs have been copied"
-#| msgid "%2 of %1 folder"
-#| msgid_plural "%2 of %1 folders"
+#, kde-format
 msgctxt "How many dirs have been copied"
 msgid "%3 of %2 folder"
 msgid_plural "%3 of %2 folders"
-msgstr[0] "%2 od %1 map"
-msgstr[1] "%2 od %1 mape"
-msgstr[2] "%2 od %1 map"
-msgstr[3] "%2 od %1 map"
+msgstr[0] "%3 od %2 map"
+msgstr[1] "%3 od %2 mape"
+msgstr[2] "%3 od %2 map"
+msgstr[3] "%3 od %2 map"
 
 #: components/JobDetails.qml:128
-#, fuzzy, kde-format
-#| msgctxt "How many items (that includes files and dirs) have been copied"
-#| msgid "%2 of %1 item"
-#| msgid_plural "%2 of %1 items"
+#, kde-format
 msgctxt "How many items (that includes files and dirs) have been copied"
 msgid "%3 of %2 item"
 msgid_plural "%3 of %2 items"
-msgstr[0] "%2 od %1 predmetov"
-msgstr[1] "%2 od %1 predmeta"
-msgstr[2] "%2 od %1 predmetov"
-msgstr[3] "%2 od %1 predmetov"
+msgstr[0] "%3 od %2 predmetov"
+msgstr[1] "%3 od %2 predmeta"
+msgstr[2] "%3 od %2 predmetov"
+msgstr[3] "%3 od %2 predmetov"
 
 #: components/JobDetails.qml:137
 #, kde-format

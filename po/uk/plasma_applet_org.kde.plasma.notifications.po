@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-05 00:46+0000\n"
-"PO-Revision-Date: 2026-01-28 03:47+0200\n"
+"PO-Revision-Date: 2026-03-05 09:36+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -124,43 +124,34 @@ msgid "%2 of %1"
 msgstr "%2 з %1"
 
 #: components/JobDetails.qml:122
-#, fuzzy, kde-format
-#| msgctxt "How many files have been copied"
-#| msgid "%2 of %1 file"
-#| msgid_plural "%2 of %1 files"
+#, kde-format
 msgctxt "How many files have been copied"
 msgid "%3 of %2 file"
 msgid_plural "%3 of %2 files"
-msgstr[0] "%2 з %1 файла "
-msgstr[1] "%2 з %1 файлів"
-msgstr[2] "%2 з %1 файлів"
-msgstr[3] "%1 файл"
+msgstr[0] "%3 з %2 файла "
+msgstr[1] "%3 з %2 файлів"
+msgstr[2] "%3 з %2 файлів"
+msgstr[3] "%3 з %2 файла"
 
 #: components/JobDetails.qml:125
-#, fuzzy, kde-format
-#| msgctxt "How many dirs have been copied"
-#| msgid "%2 of %1 folder"
-#| msgid_plural "%2 of %1 folders"
+#, kde-format
 msgctxt "How many dirs have been copied"
 msgid "%3 of %2 folder"
 msgid_plural "%3 of %2 folders"
-msgstr[0] "%2 з %1 теки"
-msgstr[1] "%2 з %1 тек"
-msgstr[2] "%2 з %1 тек"
-msgstr[3] "%1 тека"
+msgstr[0] "%3 з %2 теки"
+msgstr[1] "%3 з %2 тек"
+msgstr[2] "%3 з %2 тек"
+msgstr[3] "%3 з %2 тека"
 
 #: components/JobDetails.qml:128
-#, fuzzy, kde-format
-#| msgctxt "How many items (that includes files and dirs) have been copied"
-#| msgid "%2 of %1 item"
-#| msgid_plural "%2 of %1 items"
+#, kde-format
 msgctxt "How many items (that includes files and dirs) have been copied"
 msgid "%3 of %2 item"
 msgid_plural "%3 of %2 items"
-msgstr[0] "%2 з %1 запису"
-msgstr[1] "%2 з %1 записів"
-msgstr[2] "%2 з %1 записів"
-msgstr[3] "%2 з %1 запису"
+msgstr[0] "%3 з %2 запису"
+msgstr[1] "%3 з %2 записів"
+msgstr[2] "%3 з %2 записів"
+msgstr[3] "%3 з %2 запису"
 
 #: components/JobDetails.qml:137
 #, kde-format

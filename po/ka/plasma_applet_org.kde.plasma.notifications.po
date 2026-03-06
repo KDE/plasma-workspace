@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-05 00:46+0000\n"
-"PO-Revision-Date: 2026-01-28 05:13+0100\n"
+"PO-Revision-Date: 2026-03-05 03:56+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -114,37 +114,28 @@ msgid "%2 of %1"
 msgstr "%1 %2-დან"
 
 #: components/JobDetails.qml:122
-#, fuzzy, kde-format
-#| msgctxt "How many files have been copied"
-#| msgid "%2 of %1 file"
-#| msgid_plural "%2 of %1 files"
+#, kde-format
 msgctxt "How many files have been copied"
 msgid "%3 of %2 file"
 msgid_plural "%3 of %2 files"
-msgstr[0] "%2 %1 ფაილიდან"
-msgstr[1] "%2 %1 ფაილიდან"
+msgstr[0] "%3 ფაილი %2-დან"
+msgstr[1] "%3 ფაილი %2-დან"
 
 #: components/JobDetails.qml:125
-#, fuzzy, kde-format
-#| msgctxt "How many dirs have been copied"
-#| msgid "%2 of %1 folder"
-#| msgid_plural "%2 of %1 folders"
+#, kde-format
 msgctxt "How many dirs have been copied"
 msgid "%3 of %2 folder"
 msgid_plural "%3 of %2 folders"
-msgstr[0] "%1 საქაღალდე %2-დან"
-msgstr[1] "%1 საქაღალდე %2-დან"
+msgstr[0] "%3 საქაღალდე %2-დან"
+msgstr[1] "%3 საქაღალდე %2-დან"
 
 #: components/JobDetails.qml:128
-#, fuzzy, kde-format
-#| msgctxt "How many items (that includes files and dirs) have been copied"
-#| msgid "%2 of %1 item"
-#| msgid_plural "%2 of %1 items"
+#, kde-format
 msgctxt "How many items (that includes files and dirs) have been copied"
 msgid "%3 of %2 item"
 msgid_plural "%3 of %2 items"
-msgstr[0] "%2 %1 -დან ჩანაწერი"
-msgstr[1] "%2 %1 -დან ჩანაწერი"
+msgstr[0] "%3 ელემენტი %2-დან"
+msgstr[1] "%3 ელემენტი %2-დან"
 
 #: components/JobDetails.qml:137
 #, kde-format
