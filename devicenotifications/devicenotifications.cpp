@@ -283,7 +283,22 @@ void Output::kde_output_device_v2_uuid(const QString &uuid)
 
 void Output::kde_output_device_v2_mode(struct ::kde_output_device_mode_v2 *mode)
 {
-    kde_output_device_mode_v2_destroy(mode);
+    new OutputDeviceMode(mode);
+}
+
+OutputDeviceMode::OutputDeviceMode(::kde_output_device_mode_v2 *mode)
+    : QtWayland::kde_output_device_mode_v2(mode)
+{
+}
+
+OutputDeviceMode::~OutputDeviceMode()
+{
+    kde_output_device_mode_v2_destroy(object());
+}
+
+void OutputDeviceMode::kde_output_device_mode_v2_removed()
+{
+    delete this;
 }
 
 KdedDeviceNotifications::KdedDeviceNotifications(QObject *parent, const QList<QVariant> &)

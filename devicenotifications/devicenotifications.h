@@ -104,6 +104,16 @@ private:
     QString m_uuid;
 };
 
+class OutputDeviceMode : public QtWayland::kde_output_device_mode_v2
+{
+public:
+    explicit OutputDeviceMode(::kde_output_device_mode_v2 *mode);
+    ~OutputDeviceMode();
+
+protected:
+    void kde_output_device_mode_v2_removed() override;
+};
+
 class KdedDeviceNotifications : public KDEDModule
 {
     Q_OBJECT
