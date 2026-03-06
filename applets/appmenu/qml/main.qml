@@ -123,7 +123,7 @@ PlasmoidItem {
                 Kirigami.MnemonicData.active: altState.pressed
 
                 down: Plasmoid.currentIndex === index
-                visible: text !== "" && activeActions.visible
+                visible: text !== "" && (activeActions?.visible ?? false)
 
                 menuIsOpen: Plasmoid.currentIndex !== -1
                 onActivated: Plasmoid.trigger(this, index)
