@@ -108,6 +108,16 @@ private:
     bool m_isInitialized = false;
 };
 
+class OutputDeviceMode : public QtWayland::kde_output_device_mode_v2
+{
+public:
+    explicit OutputDeviceMode(::kde_output_device_mode_v2 *mode);
+    ~OutputDeviceMode();
+
+protected:
+    void kde_output_device_mode_v2_removed() override;
+};
+
 class OutputDeviceRegistry : public QWaylandClientExtensionTemplate<OutputDeviceRegistry>, public QtWayland::kde_output_device_registry_v2
 {
     Q_OBJECT
