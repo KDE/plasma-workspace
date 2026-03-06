@@ -1,0 +1,289 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % English "INCLUDE">
+]>
+<article id="autostart" lang="&language;">
+<articleinfo>
+<title
+>البدء الآليّ</title>
+<authorgroup>
+<author
+>&Anne-Marie.Mahfouf;</author>
+<othercredit role="translator"
+><firstname
+>زايد</firstname
+><surname
+>السعيدي</surname
+><affiliation
+><address
+><email
+>zayed.alsaidi@gmail.com</email
+></address
+></affiliation
+><contrib
+>التّرجمة العربيّة</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-05</date>
+<releaseinfo
+>بلازما 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>كيدي</keyword>
+<keyword
+>إعدادات النّظام</keyword>
+<keyword
+>بدء آلي</keyword>
+<keyword
+>ملفّ سطح المكتب</keyword>
+<keyword
+>ملف نص برمجي</keyword>
+</keywordset>
+</articleinfo>
+
+<sect1 id="kcm_autostart">
+<title
+>مدير البدء الآليّ</title>
+
+<para
+>هذه الوحدة هي أداة ضبط لإدارة البرامج التي تبدأ مع بلازما الشخصية الخاصة بك. تسمح لك بإضافة برامج أو سكربتات لتُشغل آليًا عند بدء أو إيقاف التشغيل لجلسة بلازما الخاصة بك، ولإدارتها.</para>
+
+<note
+><para
+>يُرجى ملاحظة أن جميع التغييرات في هذه الوحدة تُطبّق فورًا.</para
+></note>
+
+<para
+>البرنامج يفحص <filename
+>$HOME/.config/autostart/</filename
+> بحثًا عن التطبيقات وسكربتات تسجيل الدخول، و<filename class="directory"
+>$HOME/.config/plasma-workspace/env</filename
+> بحثًا عن سكربتات ما قبل التشغيل، و<filename class="directory"
+>$HOME/.config/plasma-workspace/shutdown</filename
+> بحثًا عن سكربتات تسجيل الخروج، للتحقق من البرامج والسكربتات الموجودة بالفعل ويعرضها. يتيح لك إدارتها بسهولة. </para>
+
+<para
+>نصوص تسجيل الدخول هي ملفات <filename class="extension"
+>.desktop</filename
+> بمفتاح <literal
+>X-KDE-AutostartScript=true</literal
+>. نصوص ما قبل بدء التشغيل تُشَغَّلُ مبكرًا ويمكن استخدامها لتعيين متغيرات البيئة. </para>
+
+<note
+><para
+>لاحظ أنه يمكن تغيير موقع مجلد <filename class="directory"
+>البدء الآلي</filename
+> في <menuchoice
+><guimenu
+>التطبيقات</guimenu
+> <guimenuitem
+>المواقع</guimenuitem
+></menuchoice
+> ضمن فئة <guilabel
+>التخصيص</guilabel
+> في إعدادات النظام وتعيين مجلد مختلف بدلاً من <filename class="directory"
+>$HOME/.config/autostart</filename
+>.</para
+></note>
+
+<para
+>يرجى قراءة <ulink url="help:/kcontrol/kcmsmserver"
+>جلسة سطح المكتب</ulink
+> و <ulink url="help:/kcontrol/kded"
+>خدمات الخلفية</ulink
+> أيضًا للحصول على معلومات حول كيفية ضبط سلوك بدء تشغيل جلسة بلازما الخاصة بك.</para>
+
+<para
+>بعض تطبيقات كيدي تعالج سلوك التشغيل الآلي بنفسها، على سبيل المثال، يمكن تمكين أو تعطيل التشغيل الآلي لتطبيق في مربع حوار الإعدادات (منبهك) أو يتوجب استخدام <menuchoice
+><guimenu
+>ملف</guimenu
+><guimenuitem
+>أنهِ</guimenuitem
+></menuchoice
+> (محادثاتك، كوبيتي)، وإلا فإن التطبيق سيظل يعمل في درج النظام وسيُعاد تشغيله عند الولوج التالي. </para>
+
+<sect2 id="migration">
+<title
+>الترحيل من بيئات كيدي 4</title>
+<para
+>لترحيل إعداد التشغيل التلقائي الشخصي الخاص بك من مساحات عمل كيدي 4:</para>
+<simplelist>
+<member
+>انسخ ملفات سطح المكتب من <filename class="directory"
+>$HOME/.كيدي/بدء التشغيل</filename
+> إلى <filename class="directory"
+>$HOME/.تكوين/بدء التشغيل</filename
+></member>
+<member
+>انسخ ملفات سكريبتات التشغيل المسبق من `$HOME/.kde/Autostart` إلى `$HOME/.config/plasma-workspace/env`</member>
+<member
+>انسخ ملفات نصوص إيقاف التشغيل من $HOME/.kde/Autostart إلى $HOME/.config/plasma-workspace/shutdown</member>
+</simplelist>
+</sect2>
+
+<sect2 id="disabling_autostart">
+<title
+>تعطيل ملفات التشغيل التلقائي المقدمة من توزيعتك</title>
+<para
+>الطريقة الصحيحة لتعطيل عنصر بدء تشغيل آلي، على سبيل المثال تطبيق الطابعة الصغير إذا كنت تستخدم الطابعة من وقت لآخر، هي نسخ ملفه <filename class="extension"
+>.desktop</filename
+> إلى مجلد بدء التشغيل الآلي الشخصي الخاص بك. أي شيء يحمل نفس الاسم في <filename class="directory"
+>$HOME/.config/autostart</filename
+> يتجاوز ملف <filename class="extension"
+>.desktop</filename
+> في الحزمة المبدئية. أضف السطر التالي إلى ملف <filename class="extension"
+>.desktop</filename
+> المنسوخ:</para>
+<programlisting
+>Hidden=true
+</programlisting>
+</sect2>
+
+<sect2 id="current">
+<title
+>عرض الملفات</title>
+<para
+>يعرض الجزء الرئيسي من الوحدة البرامج التي تُحمّل عند بدء بلازما والسكربتات التي تُشغّل عند بدء تشغيل بلازما أو إيقافها.</para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>الأيقونة</guilabel
+></term>
+<listitem>
+<para
+>يُظهر هذا العمود أيقونة البرنامج أو السكربت الذي تريد بدء تشغيله مع بلازما. تُستخرج الأيقونة من مفتاح Icon في ملف سطح المكتب للبرنامج، وتكون الأيقونة المبدئية للسكربت. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>الاسم</guilabel
+></term>
+<listitem>
+<para
+>يُظهر هذا العمود اسم البرنامج أو السكربت الذي تريد بدء تشغيله مع بلازما. يُستخرج الاسم من مفتاح <literal
+>Name</literal
+> في ملف <filename class="extension"
+>.desktop</filename
+> للبرنامج، ويكون اسم الملف للسكربت. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>الخصائص</guilabel
+></term>
+<listitem>
+<para
+>لا يظهر هذا الزر إلا عند حوم مؤشر الفأرة فوق العنصر. يسمح الزر (المُفعّل فقط للبرامج وسكربتات الولوج، أي ملفات <filename class="extension"
+>.desktop</filename
+>) بتغيير خصائص البرنامج أو السكربت. لديك خصائص عامة، وخصائص الأذونات، ومعاينة عند توفرها، وخصائص متعلقة بالتطبيق أو سكربت الولوج. يُستخرج الأمر المبدئي من مفتاح <literal
+>Exec</literal
+> في ملف <filename class="extension"
+>.desktop</filename
+>. </para>
+<para
+>بالنسبة لسكربت الخروج، يكون الأمر هو المسار إلى السكربت ولا يمكن تعديله. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guilabel
+>أزل</guilabel
+></term>
+<listitem>
+<para
+>لا يظهر هذا الزر إلا عند حوم مؤشر الفأرة فوق العنصر. سيؤدي الضغط على زر <guibutton
+>&minus;</guibutton
+> إلى إزالة ملف سطح المكتب للبرنامج أو السكربت أو الوصلة الرمزية في مجلد <filename class="directory"
+>البدء الآلي</filename
+> فورًا. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect2>
+
+<sect2 id="actions">
+<title
+>الإجراءات</title>
+<para
+>يوجد في الأسفل زر <guibutton
+>أضف...</guibutton
+> المجمع لاختيار نوع العنصر الذي تريد إضافته. يمكنك إضافة برامج وسكربتات ولوج أو خروج. </para>
+
+<variablelist>
+<varlistentry
+><term
+><guimenuitem
+>أضف برنامج</guimenuitem
+></term>
+<listitem>
+<para
+>يؤدي النقر فوق هذا العنصر إلى عرض مربع حوار بلازما القياسي <guilabel
+>اختر تطبيقًا</guilabel
+> ويسمح لك باختيار البرنامج الذي تريد بدء تشغيله. بعد اختيار البرنامج، سيؤدي النقر فوق <guibutton
+>موافق</guibutton
+> إلى جلب خصائص هذا البرنامج. </para>
+<para
+>سيؤدي هذا إلى نسخ ملف <filename class="extension"
+>.desktop</filename
+> الخاص بالبرنامج في مجلد <filename class="directory"
+>البدء الآلي</filename
+>. </para>
+</listitem>
+</varlistentry>
+
+<varlistentry
+><term
+><guimenuitem
+>أضف سكربت ولوج...</guimenuitem
+></term>
+<listitem>
+<para
+>يفتح هذا العنصر مربع حوار يسألك عن موقع السكربت الذي تريد إضافته. السكربتات المحددة للتشغيل عند الولوج سيُنشأ لها ملف <filename class="extension"
+>.desktop</filename
+> مطابق في مجلد <filename class="directory"
+>البدء الآلي</filename
+> وستُشغّل أثناء بدء تشغيل بلازما. </para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guimenuitem
+>أضف سكربت خروج...</guimenuitem
+></term>
+<listitem>
+<para
+>يفتح هذا العنصر مربع حوار يسألك عن موقع السكربت الذي تريد إضافته. السكربتات المحددة للتشغيل عند الخروج تُنسخ أو تُوصل رمزيًا في دليل <filename class="directory"
+>$HOME/.config/plasma-workspace/shutdown</filename
+> وستُشغّل آليًا أثناء إيقاف تشغيل بلازما بعد خروج المستخدم. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+</sect2>
+</sect1>
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

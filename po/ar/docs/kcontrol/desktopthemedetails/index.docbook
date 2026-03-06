@@ -1,0 +1,191 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % English "INCLUDE">
+]>
+<article id="desktopthemedetails" lang="&language;">
+<articleinfo>
+<title
+>نمط بلازما</title>
+<authorgroup>
+<author
+><firstname
+>Andrew</firstname
+> <surname
+>Lake</surname
+></author>
+<author
+><firstname
+>Carl</firstname
+> <surname
+>Schwan</surname
+> </author>
+<othercredit role="translator"
+><firstname
+>زايد</firstname
+><surname
+>السعيدي</surname
+><affiliation
+><address
+><email
+>zayed.alsaidi@gmail.com</email
+></address
+></affiliation
+><contrib
+>التّرجمة العربيّة</contrib
+></othercredit
+> 
+</authorgroup>
+
+<date
+>2021-04-09</date>
+<releaseinfo
+>بلازما 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>كيدي</keyword>
+<keyword
+>إعدادات النّظام</keyword>
+<keyword
+>سطح المكتب</keyword>
+<keyword
+>نمط</keyword>
+<keyword
+>سمة</keyword>
+<keyword
+>بلازما</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>تأتي بلازما بأنماط متعددة. يحدد نمط بلازما كيفية عرض المكونات المختلفة لبلازما (مثل: بلازميدات، واللوحات، والودجات). </para>
+
+<para>
+  <screenshot>
+    <screeninfo
+>هذه لقطة شاشة لمدير أنماط بلازما</screeninfo>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="main.png" format="PNG"/>
+      </imageobject>
+      <textobject>
+        <phrase
+>تخصيص نمط بلازما</phrase>
+      </textobject>
+    </mediaobject>
+  </screenshot>
+</para>
+
+<para
+>يمكنك في هذه الوحدة:</para>
+<itemizedlist>
+  <listitem
+><para
+>تثبيت واختيار أنماط بلازما</para
+></listitem>
+  <listitem
+><para
+>تحرير أنماط بلازما</para
+></listitem>
+  <listitem
+><para
+>إزالة أنماط بلازما</para
+></listitem>
+</itemizedlist>
+
+<para
+>يمكن تصفية قائمة الأنماط باستخدام حقل <guilabel
+>ابحث...</guilabel
+> الموجود فوق الشبكة. علاوة على ذلك، يمكنك استخدام المربع المركب بجوار هذا الحقل لعرض <guimenuitem
+>السمات الفاتحة</guimenuitem
+> فقط، أو <guimenuitem
+>السمات المظلمة</guimenuitem
+> أو السمات <guimenuitem
+>المتوافقة مع مخطط الألوان</guimenuitem
+>. </para>
+
+<para
+>إذا أردت إزالة نمط ما، فاستخدم أيقونة التراكب <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
+></inlinemediaobject
+> الموجودة أسفل يمين أيقونة النمط. للتراجع عن هذا الإجراء، انقر فوق أيقونة <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-undo.png" format="PNG"/></imageobject
+></inlinemediaobject
+>. إذا ضغطت على زر <guibutton
+>طبق</guibutton
+>، فستُحذف الأنماط المحددة للإزالة فعليًا، لذا لا يمكنك التراجع عن عمليات الحذف الفردية أو الكلية. </para>
+
+<para
+>إذا كانت حزمة plasma-sdk مثبتة على حاسوبك، فسيظهر زر عند التحويم فوق معاينة النمط يتيح لك بدء تشغيل <application
+>مستكشف سمات بلازما</application
+>. </para>
+<para
+>لمزيد من المعلومات التقنية، زر <ulink url="https://develop.kde.org/docs/plasma/theme/theme-details/"
+>هذه الصفحة</ulink
+>. </para>
+
+<variablelist>
+  <varlistentry>
+    <term
+><guilabel
+>احصل على أنماط بلازما جديدة...</guilabel
+></term>
+    <listitem>
+    <para
+>يجب أن تكون متصلاً بالإنترنت لاستخدامه. سيؤدي النقر فوق هذا الزر إلى عرض مربع حوار حيث يمكنك اختيار نمط بلازما جديد. سيؤدي النقر فوق <guibutton
+>ثبّت</guibutton
+> في مربع الحوار إلى تثبيت نمط بلازما المختار، وبعد <guibutton
+>إغلاق</guibutton
+> المثبّت، سيكون نمطك الجديد متاحًا على الفور. </para>
+    <para>
+    <screenshot>
+    <screeninfo
+>احصل على أنماط بلازما جديدة...</screeninfo>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="get-new-theme.png" format="PNG"/>
+        </imageobject>
+        <textobject>
+          <phrase
+>احصل على أنماط بلازما جديدة...</phrase>
+        </textobject>
+      </mediaobject>
+    </screenshot>
+    </para>
+    </listitem>
+  </varlistentry>
+  <varlistentry>
+    <term
+><guilabel
+>ثبّت من ملف...</guilabel
+></term>
+    <listitem>
+      <para
+>إذا نُزّلت أنماط جديدة من الإنترنت، فيمكنك استخدام هذا لتصفح موقع تلك الأنماط المنزّلة حديثًا. سيؤدي النقر فوق هذا الزر إلى فتح مربع حوار الملفات للإشارة إلى أرشيف نمط بلازما الموجود على قرصك.</para>
+
+      <para
+>سيؤدي النقر فوق <guibutton
+>افتح</guibutton
+> في مربع الحوار هذا إلى تثبيت النمط الذي أشرت إليه وجعله متاحًا في قائمة الأنماط. </para>
+    </listitem>
+  </varlistentry>
+</variablelist>
+
+</article>
+
+<!--
+Local Variables:
+mode: xml
+sgml-minimize-attributes:nil
+sgml-general-insert-case:lower
+sgml-indent-step:0
+sgml-indent-data:nil
+End:
+
+vim:tabstop=2:shiftwidth=2:expandtab
+kate: space-indent on; indent-width 2; tab-width 2; indent-mode none;
+-->

@@ -1,0 +1,115 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % English "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="region_language" lang="&language;">
+<articleinfo>
+<title
+>اللغة والمنطقة</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Krishna.Tateneni; &Krishna.Tateneni.mail;</author>
+<author
+>&Han.Young; &Han.Young.mail;</author>
+<othercredit role="translator"
+><firstname
+>زايد</firstname
+><surname
+>السعيدي</surname
+><affiliation
+><address
+><email
+>zayed.alsaidi@gmail.com</email
+></address
+></affiliation
+><contrib
+>التّرجمة العربيّة</contrib
+></othercredit
+> 
+ </authorgroup>
+
+          <date
+>2022-06-23</date>
+          <releaseinfo
+>بلازما 5.26</releaseinfo>
+
+	  <keywordset>
+		<keyword
+>كيدي</keyword>
+		<keyword
+>إعدادات النظام</keyword>
+		<keyword
+>محلية</keyword>
+		<keyword
+>بلد</keyword>
+		<keyword
+>لغة</keyword>
+		<keyword
+>رقم</keyword>
+                <keyword
+>ترجمة</keyword>
+		<keyword
+>عملة</keyword>
+	  </keywordset>
+</articleinfo>
+
+<para
+>يمكنك في هذه الصفحة ضبط لغاتك وتنسيقاتك المفضلة التي تُعرض بها مساحة عمل بلازما وتطبيقاتها. </para>
+
+<para
+>يمكنك ببساطة في معظم الحالات اختيار اللغة وستُضبط جميع الخيارات وفقًا لذلك. كُتبت مساحة عمل بلازما وتطبيقات كيدي بالإنجليزية الأمريكية وتُرجمن إلى لغات مختلفة عديدة بواسطة فرق من المتطوعين. يجب تثبيت هذه الترجمات أولاً قبل أن تتمكن من اختيار استخدامها. </para>
+<note
+><para
+>تأكد من تثبيت حزم لغات بلازما أو ترجمات اللغات التي تريد استخدامها.</para>
+<para
+>بما أن بلازما مبنية على مكتبات Qt، فإنك تحتاج إلى ترجمات Qt للغات المختارة أيضًا للحصول على واجهة مستخدم رسومية محلية بالكامل.</para
+></note>
+
+
+<para
+>تُعرض في كل شريط اختيار أمثلة على شكل كل إعداد ووحدات القياس المستخدمة. بالإضافة إلى الأرقام، يمكنك رؤية كيفية عرض قيم العملات والتواريخ والأوقات بالتنسيقين الطويل والقصير. عند تغيير أي من الإعدادات، تُظهر المعاينة آثار التغييرات قبل تطبيقها. </para>
+
+<para
+>يُظهر النقر فوق زر <guilabel
+>أضف المزيد...</guilabel
+> في صفحة اللغة الفرعية قائمة اللغات المتاحة وسيُعرض مبدئيًا لغتك المختارة حاليًا. إذا أظهر الاختيار <quote
+>لم تُضبط أي لغة</quote
+> فهذا يعني أنك لم تضبط بلدًا وتستخدم اللغة المبدئية التي ضبطها النظام، وعادة ما تكون C. إذا لم تكن اللغة التي تريد استخدامها معروضة في هذه القائمة، فستحتاج إلى تثبيتها باستخدام الطريقة المعتادة لنظامك. </para>
+
+<para
+>يمكنك إزالة لغة من القائمة الرئيسة بتحديدها ثم النقر فوق أيقونة <inlinemediaobject
+><imageobject
+><imagedata fileref="list-remove.png" format="PNG"/> </imageobject
+></inlinemediaobject
+>. يمكنك تغيير ترتيب التفضيل في القائمة بتحديد لغة والنقر فوق أيقونة <inlinemediaobject
+><imageobject
+> <imagedata fileref="go-top.png" format="PNG"/> </imageobject
+></inlinemediaobject
+>. </para>
+
+<para
+>في حال كنت بحاجة إلى إعدادات تنسيق فردية مختلفة، يمكنك اختيار المحلية لـ <guilabel
+>الأرقام</guilabel
+> و <guilabel
+>الوقت</guilabel
+> و <guilabel
+>العملة</guilabel
+> و <guilabel
+>وحدات القياس</guilabel
+>. </para>
+
+<note>
+<para
+>سابقًا، كانت اللغة والتنسيقات إعدادات مستقلة. منذ بلازما 5.26، دُمجت في وحدة التحكم هذه المسماة «المنطقة واللغة». يؤدي تغيير اللغة إلى <emphasis
+>تغيير آلي</emphasis
+> لإعدادات الأرقام والعملة وما إلى ذلك إلى البلد أو المنطقة المقابلة. ومع ذلك، لا يؤدي هذا التغيير إلى كسر الضبط القديم. لا يزال ملف الضبط موجودًا في <emphasis
+>~/.config/plasma-localerc</emphasis
+>. </para>
+</note>
+</article>
