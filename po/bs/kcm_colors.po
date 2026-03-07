@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-31 00:45+0000\n"
+"POT-Creation-Date: 2026-03-07 00:46+0000\n"
 "PO-Revision-Date: 2013-10-18 19:27+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -715,8 +715,9 @@ msgstr ""
 
 #: editor/scmeditordialog.cpp:178
 #, kde-format
-msgid "You do not have permission to overwrite that scheme"
-msgstr "Nemate dozvolu da prebrišete ovu šemu"
+msgid ""
+"This scheme is read-only. Please save the modifications with another name."
+msgstr ""
 
 #: editor/scmeditordialog.cpp:178
 #, kde-format
@@ -724,7 +725,7 @@ msgid "Error"
 msgstr "Greška"
 
 # >> @title:group Inactive window
-#: editor/scmeditordialog.cpp:193
+#: editor/scmeditordialog.cpp:194
 #, fuzzy, kde-format
 #| msgctxt "@title:tab color transformations on inactive elements"
 #| msgid "Inactive"
@@ -1454,6 +1455,9 @@ msgstr "Upisivanje šeme boja"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr ""
+
+#~ msgid "You do not have permission to overwrite that scheme"
+#~ msgstr "Nemate dozvolu da prebrišete ovu šemu"
 
 #, fuzzy
 #~| msgid "Import Color Scheme"

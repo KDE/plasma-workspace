@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-31 00:45+0000\n"
+"POT-Creation-Date: 2026-03-07 00:46+0000\n"
 "PO-Revision-Date: 2026-01-31 17:32+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
@@ -696,15 +696,16 @@ msgstr ""
 
 #: editor/scmeditordialog.cpp:178
 #, kde-format
-msgid "You do not have permission to overwrite that scheme"
-msgstr "அத்திட்டத்தை மேலெழுதும் உரிமை உங்களிடம் இல்லை"
+msgid ""
+"This scheme is read-only. Please save the modifications with another name."
+msgstr ""
 
 #: editor/scmeditordialog.cpp:178
 #, kde-format
 msgid "Error"
 msgstr "சிக்கல்"
 
-#: editor/scmeditordialog.cpp:193
+#: editor/scmeditordialog.cpp:194
 #, kde-format
 msgid "Inactive"
 msgstr "செயலிலில்லை"
@@ -1388,6 +1389,9 @@ msgstr "நிறத்திட்டத்தை திற"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "நிறத்திட்ட கோப்புகள் (*.colors)"
+
+#~ msgid "You do not have permission to overwrite that scheme"
+#~ msgstr "அத்திட்டத்தை மேலெழுதும் உரிமை உங்களிடம் இல்லை"
 
 #~ msgid "Restore Color Scheme"
 #~ msgstr "நிறத்திட்டத்தை மீட்டெடு"

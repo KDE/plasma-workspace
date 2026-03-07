@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-31 00:45+0000\n"
+"POT-Creation-Date: 2026-03-07 00:46+0000\n"
 "PO-Revision-Date: 2026-01-31 17:39+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -697,15 +697,16 @@ msgstr ""
 
 #: editor/scmeditordialog.cpp:178
 #, kde-format
-msgid "You do not have permission to overwrite that scheme"
-msgstr "אין לך הרשאות לדרוס את הסכמה הזאת"
+msgid ""
+"This scheme is read-only. Please save the modifications with another name."
+msgstr ""
 
 #: editor/scmeditordialog.cpp:178
 #, kde-format
 msgid "Error"
 msgstr "שגיאה"
 
-#: editor/scmeditordialog.cpp:193
+#: editor/scmeditordialog.cpp:194
 #, kde-format
 msgid "Inactive"
 msgstr "לא פעיל"
@@ -1376,6 +1377,9 @@ msgstr "פתיחת סכמת צבעים"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "קובצי סכמות צבעים (‎*.colors)"
+
+#~ msgid "You do not have permission to overwrite that scheme"
+#~ msgstr "אין לך הרשאות לדרוס את הסכמה הזאת"
 
 #~ msgid "Restore Color Scheme"
 #~ msgstr "שחזור סכמת צבעים"

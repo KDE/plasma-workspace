@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-05 00:46+0000\n"
-"PO-Revision-Date: 2026-02-08 19:13+0200\n"
+"PO-Revision-Date: 2026-03-06 14:10+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 25.12.2\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -130,43 +130,34 @@ msgid "%2 of %1"
 msgstr "%2 из %1"
 
 #: components/JobDetails.qml:122
-#, fuzzy, kde-format
-#| msgctxt "How many files have been copied"
-#| msgid "%2 of %1 file"
-#| msgid_plural "%2 of %1 files"
+#, kde-format
 msgctxt "How many files have been copied"
 msgid "%3 of %2 file"
 msgid_plural "%3 of %2 files"
-msgstr[0] "%2 из %1 файла"
-msgstr[1] "%2 из %1 файлов"
-msgstr[2] "%2 из %1 файлов"
-msgstr[3] "%2 из %1 файла"
+msgstr[0] "%3 из %2 файла"
+msgstr[1] "%3 из %2 файлов"
+msgstr[2] "%3 из %2 файлов"
+msgstr[3] "%3 из %2 файла"
 
 #: components/JobDetails.qml:125
-#, fuzzy, kde-format
-#| msgctxt "How many dirs have been copied"
-#| msgid "%2 of %1 folder"
-#| msgid_plural "%2 of %1 folders"
+#, kde-format
 msgctxt "How many dirs have been copied"
 msgid "%3 of %2 folder"
 msgid_plural "%3 of %2 folders"
-msgstr[0] "%2 из %1 папки"
-msgstr[1] "%2 из %1 папок"
-msgstr[2] "%2 из %1 папок"
-msgstr[3] "%2 из %1 папки"
+msgstr[0] "%3 из %2 папки"
+msgstr[1] "%3 из %2 папок"
+msgstr[2] "%3 из %2 папок"
+msgstr[3] "%3 из %2 папки"
 
 #: components/JobDetails.qml:128
-#, fuzzy, kde-format
-#| msgctxt "How many items (that includes files and dirs) have been copied"
-#| msgid "%2 of %1 item"
-#| msgid_plural "%2 of %1 items"
+#, kde-format
 msgctxt "How many items (that includes files and dirs) have been copied"
 msgid "%3 of %2 item"
 msgid_plural "%3 of %2 items"
-msgstr[0] "%2 из %1 объектов"
-msgstr[1] "%2 из %1 объектов"
-msgstr[2] "%2 из %1 объектов"
-msgstr[3] "%2 из %1 объекта"
+msgstr[0] "%3 из %2 объекта"
+msgstr[1] "%3 из %2 объектов"
+msgstr[2] "%3 из %2 объектов"
+msgstr[3] "%3 из %2 объекта"
 
 #: components/JobDetails.qml:137
 #, kde-format

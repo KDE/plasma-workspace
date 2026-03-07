@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-31 00:45+0000\n"
+"POT-Creation-Date: 2026-03-07 00:46+0000\n"
 "PO-Revision-Date: 2008-11-04 17:27+0200\n"
 "Last-Translator: Ihar Hrachyshka <ihar.hrachyshka@gmail.com>\n"
 "Language-Team: Belarusian Latin <i18n@mova.org>\n"
@@ -724,15 +724,16 @@ msgstr ""
 
 #: editor/scmeditordialog.cpp:178
 #, kde-format
-msgid "You do not have permission to overwrite that scheme"
-msgstr "Tabie nielha zamianić hetuju schiemu."
+msgid ""
+"This scheme is read-only. Please save the modifications with another name."
+msgstr ""
 
 #: editor/scmeditordialog.cpp:178
 #, kde-format
 msgid "Error"
 msgstr "Pamyłka"
 
-#: editor/scmeditordialog.cpp:193
+#: editor/scmeditordialog.cpp:194
 #, fuzzy, kde-format
 msgid "Inactive"
 msgstr "Niadziejny"
@@ -1417,6 +1418,9 @@ msgstr "Zapišy schiemu koleraŭ"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr ""
+
+#~ msgid "You do not have permission to overwrite that scheme"
+#~ msgstr "Tabie nielha zamianić hetuju schiemu."
 
 #, fuzzy
 #~| msgid "Import Color Scheme"

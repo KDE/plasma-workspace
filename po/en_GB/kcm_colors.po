@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-31 00:45+0000\n"
+"POT-Creation-Date: 2026-03-07 00:46+0000\n"
 "PO-Revision-Date: 2024-09-07 12:03+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -687,15 +687,16 @@ msgstr ""
 
 #: editor/scmeditordialog.cpp:178
 #, kde-format
-msgid "You do not have permission to overwrite that scheme"
-msgstr "You do not have permission to overwrite that scheme"
+msgid ""
+"This scheme is read-only. Please save the modifications with another name."
+msgstr ""
 
 #: editor/scmeditordialog.cpp:178
 #, kde-format
 msgid "Error"
 msgstr "Error"
 
-#: editor/scmeditordialog.cpp:193
+#: editor/scmeditordialog.cpp:194
 #, kde-format
 msgid "Inactive"
 msgstr "Inactive"
@@ -1382,6 +1383,9 @@ msgstr "Open Colour Scheme"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Colour Scheme Files (*.colors)"
+
+#~ msgid "You do not have permission to overwrite that scheme"
+#~ msgstr "You do not have permission to overwrite that scheme"
 
 #~ msgid "Restore Color Scheme"
 #~ msgstr "Restore Colour Scheme"

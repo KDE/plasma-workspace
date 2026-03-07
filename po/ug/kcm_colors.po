@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-31 00:45+0000\n"
+"POT-Creation-Date: 2026-03-07 00:46+0000\n"
 "PO-Revision-Date: 2026-02-09 18:08-0500\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -685,15 +685,16 @@ msgstr ""
 
 #: editor/scmeditordialog.cpp:178
 #, kde-format
-msgid "You do not have permission to overwrite that scheme"
-msgstr "بۇ لايىھەنى قاپلاش ئىجازىتىڭىز يوق"
+msgid ""
+"This scheme is read-only. Please save the modifications with another name."
+msgstr ""
 
 #: editor/scmeditordialog.cpp:178
 #, kde-format
 msgid "Error"
 msgstr "خاتالىق"
 
-#: editor/scmeditordialog.cpp:193
+#: editor/scmeditordialog.cpp:194
 #, kde-format
 msgid "Inactive"
 msgstr "پاسسىپ"
@@ -1377,6 +1378,9 @@ msgstr "رەڭ لايىھەسىنى ئاچ"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "رەڭ لايىھە ھۆججىتى (*.colors)"
+
+#~ msgid "You do not have permission to overwrite that scheme"
+#~ msgstr "بۇ لايىھەنى قاپلاش ئىجازىتىڭىز يوق"
 
 #~ msgid "Restore Color Scheme"
 #~ msgstr "رەڭ لايىھەسىنى ئەسلىگە كەلتۈر"

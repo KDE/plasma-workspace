@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-31 00:45+0000\n"
+"POT-Creation-Date: 2026-03-07 00:46+0000\n"
 "PO-Revision-Date: 2025-03-03 20:07+0700\n"
 "Last-Translator: Pongsakorn S. <kde@xerusion.me>\n"
 "Language-Team: Thai\n"
@@ -703,15 +703,16 @@ msgstr ""
 
 #: editor/scmeditordialog.cpp:178
 #, kde-format
-msgid "You do not have permission to overwrite that scheme"
-msgstr "คุณไม่มีสิทธิ์ที่จะเขียนทับชุดสีชุดนั้น"
+msgid ""
+"This scheme is read-only. Please save the modifications with another name."
+msgstr ""
 
 #: editor/scmeditordialog.cpp:178
 #, kde-format
 msgid "Error"
 msgstr "ผิดพลาด"
 
-#: editor/scmeditordialog.cpp:193
+#: editor/scmeditordialog.cpp:194
 #, fuzzy, kde-format
 #| msgctxt "@title:tab color transformations on inactive elements"
 #| msgid "Inactive"
@@ -1414,6 +1415,9 @@ msgstr "บันทึกชุดสี"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr ""
+
+#~ msgid "You do not have permission to overwrite that scheme"
+#~ msgstr "คุณไม่มีสิทธิ์ที่จะเขียนทับชุดสีชุดนั้น"
 
 #, fuzzy
 #~| msgid "Import Color Scheme"

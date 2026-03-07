@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-31 00:45+0000\n"
+"POT-Creation-Date: 2026-03-07 00:46+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -679,15 +679,16 @@ msgstr ""
 
 #: editor/scmeditordialog.cpp:178
 #, kde-format
-msgid "You do not have permission to overwrite that scheme"
-msgstr "तस्याः योजनायाः अधिलेखनस्य भवतः अनुमतिः नास्ति"
+msgid ""
+"This scheme is read-only. Please save the modifications with another name."
+msgstr ""
 
 #: editor/scmeditordialog.cpp:178
 #, kde-format
 msgid "Error"
 msgstr "त्रुटि"
 
-#: editor/scmeditordialog.cpp:193
+#: editor/scmeditordialog.cpp:194
 #, kde-format
 msgid "Inactive"
 msgstr "निष्क्रिय"
@@ -1363,6 +1364,9 @@ msgstr "रङ्ग योजना उद्घाटयतु"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "रङ्ग योजना सञ्चिकाः (*.colors)"
+
+#~ msgid "You do not have permission to overwrite that scheme"
+#~ msgstr "तस्याः योजनायाः अधिलेखनस्य भवतः अनुमतिः नास्ति"
 
 #~ msgid "Restore Color Scheme"
 #~ msgstr "वर्ण योजना पुनर्स्थापित कुर्वन्तु"
