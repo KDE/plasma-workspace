@@ -28,7 +28,7 @@ PlasmoidItem {
 
     readonly property string dateFormatString: setDateFormatString()
     readonly property var currentTime: currentClock.dateTime
-    readonly property string currentTimezone: currentClock.timeZone
+    readonly property string currentTimeZone: currentClock.timeZone
 
     Clock {
         id: currentClock
