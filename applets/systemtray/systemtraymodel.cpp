@@ -207,6 +207,8 @@ void PlasmoidModel::removeApplet(Plasma::Applet *applet)
 
 void PlasmoidModel::appendRow(const KPluginMetaData &pluginMetaData)
 {
+    Q_ASSERT(pluginMetaData.isValid());
+
     int idx = rowCount();
     beginInsertRows(QModelIndex(), idx, idx);
 
