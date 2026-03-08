@@ -102,13 +102,13 @@ msgstr "菜单项显示图标"
 #: stylesettings.kcfg:23
 #, kde-format
 msgid "Main toolbar label"
-msgstr "主工具栏项文字"
+msgstr "主工具栏项文本标签"
 
 #. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
 #: stylesettings.kcfg:27
 #, kde-format
 msgid "Secondary toolbar label"
-msgstr "副工具栏项文字"
+msgstr "副工具栏项文本标签"
 
 #: ui/EffectSettingsPopup.qml:19
 #, kde-format
@@ -134,7 +134,7 @@ msgstr "菜单图标"
 #: ui/EffectSettingsPopup.qml:60
 #, kde-format
 msgid "Main toolbar label:"
-msgstr "主工具栏文字标签："
+msgstr "主工具栏文本标签："
 
 #: ui/EffectSettingsPopup.qml:62
 #, kde-format
@@ -144,7 +144,7 @@ msgstr "不显示"
 #: ui/EffectSettingsPopup.qml:63
 #, kde-format
 msgid "Text only"
-msgstr "仅显示文字"
+msgstr "仅显示文本"
 
 #: ui/EffectSettingsPopup.qml:64
 #, kde-format
@@ -159,7 +159,7 @@ msgstr "显示在图标下方"
 #: ui/EffectSettingsPopup.qml:80
 #, kde-format
 msgid "Secondary toolbar label:"
-msgstr "副工具栏文字标签："
+msgstr "副工具栏文本标签："
 
 #: ui/GtkStylePage.qml:17
 #, kde-format

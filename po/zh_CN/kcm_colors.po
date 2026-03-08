@@ -145,7 +145,7 @@ msgstr "找不到配色方案，将回退到当前方案。\n"
 #: editor/preview.ui:29
 #, kde-format
 msgid "Window text on Window Background"
-msgstr "窗口背景上的窗口文字"
+msgstr "窗口文本位于窗口背景之上"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, label)
@@ -153,13 +153,13 @@ msgstr "窗口背景上的窗口文字"
 #, kde-format
 msgctxt "color-kcm-preview"
 msgid "Window text"
-msgstr "窗口文字"
+msgstr "窗口文本"
 
 #. i18n: ectx: property (toolTip), widget (QPushButton, pushButton)
 #: editor/preview.ui:39
 #, kde-format
 msgid "Button text on Button Background"
-msgstr "按钮背景上的按钮文字"
+msgstr "按钮文本位于按钮背景之上"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QPushButton, pushButton)
@@ -173,7 +173,7 @@ msgstr "按钮"
 #: editor/preview.ui:123
 #, kde-format
 msgid "Selection Normal Text against Selection Normal Background"
-msgstr "选区正常背景中的正常文字"
+msgstr "选区正常文本位于选区正常背景之上"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, labelSelection0)
@@ -181,13 +181,13 @@ msgstr "选区正常背景中的正常文字"
 #, kde-format
 msgctxt "color-kcm-preview"
 msgid "Selected text"
-msgstr "选中文字"
+msgstr "选中的文本"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelSelection3)
 #: editor/preview.ui:138
 #, kde-format
 msgid "Selection Link Text against Selection Normal Background"
-msgstr "选区正常背景中的链接文字"
+msgstr "选区链接文本位于选区正常背景之上"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -203,7 +203,7 @@ msgstr "链接"
 #: editor/preview.ui:153
 #, kde-format
 msgid "Selection Visited Text against Selection Normal Background"
-msgstr "选区正常背景中的已访问文字"
+msgstr "选区已访问文本位于选区正常背景之上"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -219,7 +219,7 @@ msgstr "已访问"
 #: editor/preview.ui:163
 #, kde-format
 msgid "Selection Active Text against Selection Normal Background"
-msgstr "选区正常背景中的活动文字"
+msgstr "选区活动文本位于选区正常背景之上"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -235,7 +235,7 @@ msgstr "a"
 #: editor/preview.ui:173
 #, kde-format
 msgid "Selection Inactive Text against Selection Normal Background"
-msgstr "选区正常背景中的非活动文字"
+msgstr "选区非活动文本位于选区正常背景之上"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -251,7 +251,7 @@ msgstr "i"
 #: editor/preview.ui:183
 #, kde-format
 msgid "Selection Negative Text against Selection Normal Background"
-msgstr "选区正常背景中的负面文字"
+msgstr "选区负面文本位于选区正常背景之上"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -267,7 +267,7 @@ msgstr "!"
 #: editor/preview.ui:193
 #, kde-format
 msgid "Selection Neutral Text against Selection Normal Background"
-msgstr "选区正常背景中的中性文字"
+msgstr "选区中性文本位于选区正常背景之上"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -283,7 +283,7 @@ msgstr "="
 #: editor/preview.ui:203
 #, kde-format
 msgid "Selection Positive Text against Selection Normal Background"
-msgstr "选区正常背景中的正面文字"
+msgstr "选区正面文本位于选区正常背景之上"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -299,7 +299,7 @@ msgstr "+"
 #: editor/preview.ui:247
 #, kde-format
 msgid "View Normal Text against View Normal Background"
-msgstr "视图正常背景中的正常文字"
+msgstr "视图的正常文本位于视图的正常背景之上"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, labelView0)
@@ -307,49 +307,49 @@ msgstr "视图正常背景中的正常文字"
 #, kde-format
 msgctxt "color-kcm-preview"
 msgid "Normal text"
-msgstr "正常文字"
+msgstr "正常文本"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView3)
 #: editor/preview.ui:262
 #, kde-format
 msgid "View Link Text against View Normal Background"
-msgstr "视图正常背景中的链接文字"
+msgstr "视图的链接文本位于视图的正常背景之上"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView4)
 #: editor/preview.ui:277
 #, kde-format
 msgid "View Visited Text against View Normal Background"
-msgstr "视图正常背景中的已访问文字"
+msgstr "视图的已访问文本位于视图的正常背景之上"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView2)
 #: editor/preview.ui:287
 #, kde-format
 msgid "View Active Text against View Normal Background"
-msgstr "视图正常背景中的活动文字"
+msgstr "视图的活动文本位于视图的正常背景之上"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView1)
 #: editor/preview.ui:297
 #, kde-format
 msgid "View Inactive Text against View Normal Background"
-msgstr "视图正常背景中的非活动文字"
+msgstr "视图的非活动文本位于视图的正常背景之上"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView5)
 #: editor/preview.ui:307
 #, kde-format
 msgid "View Negative Text against View Normal Background"
-msgstr "视图正常背景中的负面文字"
+msgstr "视图的负面文本位于视图的正常背景之上"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView6)
 #: editor/preview.ui:317
 #, kde-format
 msgid "View Neutral Text against View Normal Background"
-msgstr "视图正常背景中的中性文字"
+msgstr "视图的中性文本位于视图的正常背景之上"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView7)
 #: editor/preview.ui:327
 #, kde-format
 msgid "View Positive Text against View Normal Background"
-msgstr "视图正常背景中的正面文字"
+msgstr "视图的正面文本位于视图的正常背景之上"
 
 #: editor/scmeditorcolors.cpp:64 editor/scmeditorcolors.cpp:85
 #, kde-format
@@ -369,49 +369,49 @@ msgstr "交替背景"
 #: editor/scmeditorcolors.cpp:110
 #, kde-format
 msgid "Normal Text"
-msgstr "正常文字"
+msgstr "正常文本"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.cpp:111 editor/scmeditorcolors.ui:303
 #, kde-format
 msgid "Inactive Text"
-msgstr "非活动文字"
+msgstr "非活动文本"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.cpp:112 editor/scmeditorcolors.ui:308
 #, kde-format
 msgid "Active Text"
-msgstr "活动文字"
+msgstr "活动文本"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.cpp:113 editor/scmeditorcolors.ui:313
 #, kde-format
 msgid "Link Text"
-msgstr "链接文字"
+msgstr "链接文本"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.cpp:114 editor/scmeditorcolors.ui:318
 #, kde-format
 msgid "Visited Text"
-msgstr "已访问文字"
+msgstr "已访问文本"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.cpp:115 editor/scmeditorcolors.ui:323
 #, kde-format
 msgid "Negative Text"
-msgstr "负面文字"
+msgstr "负面文本"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.cpp:116 editor/scmeditorcolors.ui:328
 #, kde-format
 msgid "Neutral Text"
-msgstr "中性文字"
+msgstr "中性文本"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.cpp:117 editor/scmeditorcolors.ui:333
 #, kde-format
 msgid "Positive Text"
-msgstr "正面文字"
+msgstr "正面文本"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.cpp:118 editor/scmeditorcolors.ui:338
@@ -541,7 +541,7 @@ msgstr "视图背景"
 #: editor/scmeditorcolors.ui:263
 #, kde-format
 msgid "View Text"
-msgstr "视图文字"
+msgstr "视图文本"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:268
@@ -553,7 +553,7 @@ msgstr "窗口背景"
 #: editor/scmeditorcolors.ui:273
 #, kde-format
 msgid "Window Text"
-msgstr "窗口文字"
+msgstr "窗口文本"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:278
@@ -565,7 +565,7 @@ msgstr "按钮背景"
 #: editor/scmeditorcolors.ui:283
 #, kde-format
 msgid "Button Text"
-msgstr "按钮文字"
+msgstr "按钮文本"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:288
@@ -577,13 +577,13 @@ msgstr "选区背景"
 #: editor/scmeditorcolors.ui:293
 #, kde-format
 msgid "Selection Text"
-msgstr "选区文字"
+msgstr "选区文本"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:298
 #, kde-format
 msgid "Selection Inactive Text"
-msgstr "选区非活动文字"
+msgstr "选区非活动文本"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:348
@@ -595,7 +595,7 @@ msgstr "悬停提示背景"
 #: editor/scmeditorcolors.ui:353
 #, kde-format
 msgid "Tooltip Text"
-msgstr "悬停提示文字"
+msgstr "悬停提示文本"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:358
@@ -607,7 +607,7 @@ msgstr "活动标题栏"
 #: editor/scmeditorcolors.ui:363
 #, kde-format
 msgid "Active Titlebar Text"
-msgstr "活动标题栏文字"
+msgstr "活动标题栏文本"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:368
@@ -625,7 +625,7 @@ msgstr "非活动标题栏"
 #: editor/scmeditorcolors.ui:378
 #, kde-format
 msgid "Inactive Titlebar Text"
-msgstr "非活动标题栏文字"
+msgstr "非活动标题栏文本"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:383
@@ -903,7 +903,7 @@ msgstr "对比度"
 #: editor/setpreview.ui:35 editor/setpreview.ui:189
 #, kde-format
 msgid "Normal Text on Normal Background"
-msgstr "正常背景上的正常文字"
+msgstr "正常文本位于正常背景之上"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -919,7 +919,7 @@ msgstr "正常"
 #: editor/setpreview.ui:56
 #, kde-format
 msgid "Link Text on Normal Background"
-msgstr "正常背景上的链接文字"
+msgstr "链接文本位于正常背景之上"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -935,7 +935,7 @@ msgstr "链接"
 #: editor/setpreview.ui:77
 #, kde-format
 msgid "Visited Text on Normal Background"
-msgstr "正常背景上的已访问文字"
+msgstr "已访问文本位于正常背景之上"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -951,7 +951,7 @@ msgstr "已访问"
 #: editor/setpreview.ui:90
 #, kde-format
 msgid "Active Text on Normal Background"
-msgstr "正常背景上的活动文字"
+msgstr "活动文本位于正常背景之上"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -967,7 +967,7 @@ msgstr "活动"
 #: editor/setpreview.ui:109
 #, kde-format
 msgid "Inactive Text on Normal Background"
-msgstr "正常背景上的非活动文字"
+msgstr "非活动文本位于正常背景之上"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, labelFore1)
@@ -981,7 +981,7 @@ msgstr "非活动"
 #: editor/setpreview.ui:125
 #, kde-format
 msgid "Negative Text on Normal Background"
-msgstr "正常背景上的负面文字"
+msgstr "负面文本位于正常背景之上"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -997,7 +997,7 @@ msgstr "负面"
 #: editor/setpreview.ui:141
 #, kde-format
 msgid "Neutral Text on Normal Background"
-msgstr "正常背景上的中性文字"
+msgstr "中性文本位于正常背景之上"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -1013,7 +1013,7 @@ msgstr "中性"
 #: editor/setpreview.ui:157
 #, kde-format
 msgid "Positive Text on Normal Background"
-msgstr "正常背景上的正面文字"
+msgstr "正面文本位于正常背景之上"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -1029,7 +1029,7 @@ msgstr "正面"
 #: editor/setpreview.ui:170
 #, kde-format
 msgid "Hover on Normal Background"
-msgstr "正常背景上的悬停文字"
+msgstr "悬停文本位于正常背景之上"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, labelFore8)
@@ -1047,8 +1047,8 @@ msgid ""
 "(Note: Link Background is derived from Link Text and cannot be separately "
 "configured at this time)"
 msgstr ""
-"链接背景上的链接文字\n"
-"(注意：链接背景色按照链接文字色自动生成，目前不支持单独设置)"
+"链接文本位于链接背景之上\n"
+"(注意：链接背景的颜色按照链接文本的颜色自动生成，目前不支持单独设置)"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelBack4)
 #: editor/setpreview.ui:233
@@ -1058,8 +1058,8 @@ msgid ""
 "(Note: Visited Background is derived from Visited Text and cannot be "
 "separately configured at this time)"
 msgstr ""
-"已访问背景上的已访问文字\n"
-"(注意：已访问背景色按照已访问文字色自动生成，目前不支持单独设置)"
+"已访问文本位于链接背景之上\n"
+"(注意：已访问背景的颜色按照已访问文本的颜色自动生成，目前不支持单独设置)"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelBack2)
 #: editor/setpreview.ui:250
@@ -1069,14 +1069,16 @@ msgid ""
 "(Note: Active Background is derived from Active Text and cannot be "
 "separately configured at this time)"
 msgstr ""
-"活动背景上的活动文字\n"
-"(注意：活动背景色按照活动文字色自动生成，目前不支持单独设置)"
+"活动文本位于活动背景之上\n"
+"(注意：活动背景的颜色按照活动文本的颜色自动生成，目前不支持单独设置)"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelBack1)
 #: editor/setpreview.ui:266
 #, kde-format
 msgid "Inactive Text on Alternate Background"
-msgstr "交替背景上的非活动文字"
+msgstr ""
+"非活动文本位于交替背景之上\n"
+"(注意：交替背景的颜色按照非活动文本的颜色自动生成，目前不支持单独设置)"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, labelBack1)
@@ -1094,8 +1096,8 @@ msgid ""
 "(Note: Negative Background is derived from Negative Text and cannot be "
 "separately configured at this time)"
 msgstr ""
-"负面背景上的负面文字\n"
-"(注意：负面背景色按照负面文字色自动生成，目前不支持单独设置)"
+"负面文本位于负面背景之上\n"
+"(注意：负面背景的颜色按照负面文本的颜色自动生成，目前不支持单独设置)"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelBack6)
 #: editor/setpreview.ui:300
@@ -1105,8 +1107,8 @@ msgid ""
 "(Note: Neutral Background is derived from Neutral Text and cannot be "
 "separately configured at this time)"
 msgstr ""
-"中性背景上的中性文字\n"
-"(注意：中性背景色按照中性文字色自动生成，目前不支持单独设置)"
+"中性文本位于中性背景之上\n"
+"(注意：中性背景的颜色按照中性文本的颜色自动生成，目前不支持单独设置)"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelBack7)
 #: editor/setpreview.ui:317
@@ -1116,14 +1118,14 @@ msgid ""
 "(Note: Positive Background is derived from Positive Text and cannot be "
 "separately configured at this time)"
 msgstr ""
-"正面背景上的正面文字\n"
-"(注意：正面背景色按照正面文字色自动生成，目前不支持单独设置)"
+"正面文本位于正面背景之上\n"
+"(注意：正面背景的颜色按照正面文本的颜色自动生成，目前不支持单独设置)"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelFore9)
 #: editor/setpreview.ui:333
 #, kde-format
 msgid "Focus on Normal Background"
-msgstr "正常背景上的焦点"
+msgstr "焦点位于正常背景之上"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, labelFore9)
@@ -1305,7 +1307,7 @@ msgstr "已访问"
 #: ui/main.qml:285
 #, kde-format
 msgid "Normal text"
-msgstr "正常文字"
+msgstr "正常文本"
 
 #: ui/main.qml:292
 #, kde-format
@@ -1315,7 +1317,7 @@ msgstr "高亮文本"
 #: ui/main.qml:299
 #, kde-format
 msgid "Disabled text"
-msgstr "已禁用文字"
+msgstr "已禁用文本"
 
 #: ui/main.qml:317
 #, kde-format
