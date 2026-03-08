@@ -82,9 +82,9 @@ void KTimeZoned::init(bool restart)
         m_zoneTabWatch = new KDirWatch(this);
         m_zoneTabWatch->addDir(m_zoneinfoDir, KDirWatch::WatchFiles);
 
-        connect(m_dirWatch, &KDirWatch::dirty, this, &KTimeZoned::updateLocalZone);
-        connect(m_dirWatch, &KDirWatch::created, this, &KTimeZoned::updateLocalZone);
-        connect(m_dirWatch, &KDirWatch::deleted, this, &KTimeZoned::updateLocalZone);
+        connect(m_zoneTabWatch, &KDirWatch::dirty, this, &KTimeZoned::updateLocalZone);
+        connect(m_zoneTabWatch, &KDirWatch::created, this, &KTimeZoned::updateLocalZone);
+        connect(m_zoneTabWatch, &KDirWatch::deleted, this, &KTimeZoned::updateLocalZone);
     }
 }
 
