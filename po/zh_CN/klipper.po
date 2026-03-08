@@ -76,7 +76,7 @@ msgstr "仅在明确复制时"
 #: configdialog.cpp:146
 #, kde-format
 msgid "Whether text selections are saved in the clipboard history."
-msgstr "是否将选中的文字内容保存到剪贴板的历史记录。"
+msgstr "是否将选中的文本内容保存到剪贴板的历史记录。"
 
 #: configdialog.cpp:177
 #, kde-format
@@ -93,7 +93,7 @@ msgstr "永不保存到历史记录"
 msgid ""
 "Whether non-text selections (such as images) are saved in the clipboard "
 "history."
-msgstr "是否将选中的非文字内容 (如图像) 保存到剪贴板的历史记录。"
+msgstr "是否将选中的非文本内容 (如图像) 保存到剪贴板的历史记录。"
 
 #: configdialog.cpp:263
 #, kde-format
@@ -774,7 +774,7 @@ msgstr "仅接受纯文本选中内容"
 msgid ""
 "Only store text selections in the clipboard history, not images or any other "
 "type of data."
-msgstr "仅保存选中的文字内容到剪贴板历史记录，不保存图像或者其他类型的数据。"
+msgstr "仅保存选中的文本内容到剪贴板历史记录，不保存图像或者其他类型的数据。"
 
 #. i18n: ectx: label, entry (IgnoreImages), group (General)
 #: klipper.kcfg:42

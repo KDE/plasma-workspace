@@ -111,9 +111,6 @@ msgstr "%1 中的 %2"
 
 #: components/JobDetails.qml:122
 #, fuzzy, kde-format
-#| msgctxt "How many files have been copied"
-#| msgid "%2 of %1 file"
-#| msgid_plural "%2 of %1 files"
 msgctxt "How many files have been copied"
 msgid "%3 of %2 file"
 msgid_plural "%3 of %2 files"
@@ -121,9 +118,6 @@ msgstr[0] "%1 个文件中的 %2 个文件"
 
 #: components/JobDetails.qml:125
 #, fuzzy, kde-format
-#| msgctxt "How many dirs have been copied"
-#| msgid "%2 of %1 folder"
-#| msgid_plural "%2 of %1 folders"
 msgctxt "How many dirs have been copied"
 msgid "%3 of %2 folder"
 msgid_plural "%3 of %2 folders"
@@ -131,9 +125,6 @@ msgstr[0] "%1 个文件夹中的 %2 个文件夹"
 
 #: components/JobDetails.qml:128
 #, fuzzy, kde-format
-#| msgctxt "How many items (that includes files and dirs) have been copied"
-#| msgid "%2 of %1 item"
-#| msgid_plural "%2 of %1 items"
 msgctxt "How many items (that includes files and dirs) have been copied"
 msgid "%3 of %2 item"
 msgid_plural "%3 of %2 items"

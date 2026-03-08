@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_colors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-07 00:46+0000\n"
-"PO-Revision-Date: 2026-02-02 18:10+0200\n"
+"PO-Revision-Date: 2026-03-07 11:13+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -694,6 +694,8 @@ msgstr ""
 msgid ""
 "This scheme is read-only. Please save the modifications with another name."
 msgstr ""
+"Цю схему призначено лише для читання. Будь ласка, збережіть змінену версію, "
+"змінивши назву."
 
 #: editor/scmeditordialog.cpp:178
 #, kde-format

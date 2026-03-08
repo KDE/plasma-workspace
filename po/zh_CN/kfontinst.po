@@ -707,7 +707,7 @@ msgstr "删除选中的字体…"
 #: kcmfontinst/KCmFontInst.cpp:329
 #, kde-format
 msgid "Change Preview Text…"
-msgstr "更改预览文字…"
+msgstr "更改预览文本…"
 
 #: kcmfontinst/KCmFontInst.cpp:428
 #, kde-format
@@ -853,12 +853,12 @@ msgstr "新建分组"
 #: kcmfontinst/KCmFontInst.cpp:767
 #, kde-format
 msgid "Preview Text"
-msgstr "预览文字"
+msgstr "预览文本"
 
 #: kcmfontinst/KCmFontInst.cpp:767
 #, kde-format
 msgid "Please enter new text:"
-msgstr "请输入新的预览文字："
+msgstr "请输入新的预览文本："
 
 #: kcmfontinst/KCmFontInst.cpp:819
 #, kde-format
@@ -1525,7 +1525,7 @@ msgstr "安装…"
 #: viewpart/FontViewPart.cpp:114
 #, kde-format
 msgid "Change Text…"
-msgstr "更改文字…"
+msgstr "更改文本…"
 
 #: viewpart/FontViewPart.cpp:337
 #, kde-format
@@ -1535,12 +1535,12 @@ msgstr "无法读取字体。"
 #: viewpart/FontViewPart.cpp:403
 #, kde-format
 msgid "Preview String"
-msgstr "预览文字"
+msgstr "预览文本"
 
 #: viewpart/FontViewPart.cpp:403
 #, kde-format
 msgid "Please enter new string:"
-msgstr "请输入新的预览文字："
+msgstr "请输入新的预览文本："
 
 #. i18n: ectx: ToolBar (mainToolBar)
 #: viewpart/kfontviewpart.rc:4
