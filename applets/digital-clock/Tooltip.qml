@@ -154,7 +154,7 @@ Item {
 
                     textFormat: Text.PlainText
 
-                    font.weight: tzClock.timeZone == root.currentTimezone ? Font.Bold : Font.Normal
+                    font.weight: tzClock.timeZone == root.currentTimeZone ? Font.Bold : Font.Normal
                     font.features: {
                         if (index % 2 === 1) {
                             return { "tnum": 1 }
