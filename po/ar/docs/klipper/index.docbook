@@ -4,7 +4,7 @@
   <!ENTITY kappname "&klipper;">
   <!ENTITY package "kdebase">
   <!ENTITY % addindex "IGNORE">
-  <!ENTITY % English "INCLUDE"
+  <!ENTITY % Arabic "INCLUDE"
 > <!-- change language only here -->
 ]>
 
