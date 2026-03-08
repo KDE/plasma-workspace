@@ -460,7 +460,7 @@ void SystemTray::activate(const QString &service, QPoint pos, QQuickItem *status
     }
 
     auto tokenFuture = KWaylandExtras::xdgActivationToken(window, {});
-    tokenFuture.then(this, [source, service, pos](const QString &token) {
+    tokenFuture.then(source, [source, service, pos](const QString &token) {
         source->provideXdgActivationToken(token);
         source->activate(pos.x(), pos.y());
     });
@@ -477,7 +477,7 @@ void SystemTray::secondaryActivate(const QString &service, QPoint pos)
     }
 
     auto tokenFuture = KWaylandExtras::xdgActivationToken(window, {});
-    tokenFuture.then(this, [source, pos](const QString &token) {
+    tokenFuture.then(source, [source, pos](const QString &token) {
         source->provideXdgActivationToken(token);
         source->secondaryActivate(pos.x(), pos.y());
     });
@@ -551,7 +551,7 @@ void SystemTray::openContextMenu(const QString &service, QPoint pos, QQuickItem 
     }
 
     auto tokenFuture = KWaylandExtras::xdgActivationToken(window, {});
-    tokenFuture.then(this, [source, pos](const QString &token) {
+    tokenFuture.then(source, [source, pos](const QString &token) {
         source->provideXdgActivationToken(token);
         source->contextMenu(pos.x(), pos.y());
     });
