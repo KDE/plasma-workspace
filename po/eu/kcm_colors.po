@@ -1,12 +1,12 @@
 # Translation for kcm_colors.po to Euskara/Basque (eu).
-# Copyright (C) 2002-2024 This file is copyright:
+# Copyright (C) 2002-2026 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# SPDX-FileCopyrightText: 2024, 2025 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2024, 2025, 2026 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Marcos <marcos@euskalgnu.org>, 2002, 2003, 2005, 2006, 2007, 2008.
 # Asier Urio Larrea <asieriko@gmail.com>, 2008.
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2011, 2018, 2019, 2020, 2021, 2022, 2023, 2024.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2011, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
