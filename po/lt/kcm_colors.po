@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-07 00:46+0000\n"
-"PO-Revision-Date: 2026-02-02 21:24+0200\n"
+"PO-Revision-Date: 2026-03-08 23:53+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -688,6 +688,7 @@ msgstr ""
 msgid ""
 "This scheme is read-only. Please save the modifications with another name."
 msgstr ""
+"Šis rinkinys yra tik skaitymui. Įrašykite modifikacijas kitu pavadinimu."
 
 #: editor/scmeditordialog.cpp:178
 #, kde-format
