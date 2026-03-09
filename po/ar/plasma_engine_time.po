@@ -32,7 +32,7 @@ msgstr "مدينة المنطقة الزمنيّة"
 
 #: timesource.cpp:68 timesource.cpp:71
 msgid "Timezone Continent"
-msgstr "قارّة المنطقة الزمينّة"
+msgstr "قارّة المنطقة الزمنية"
 
 #: timesource.cpp:72
 msgid "Timezone Country"

@@ -62,7 +62,7 @@
 <keyword
 >مؤشر</keyword>
 <keyword
->مؤشر </keyword>
+>مؤشر</keyword>
 <keyword
 >مرتد</keyword>
 <keyword
@@ -70,7 +70,7 @@
 <keyword
 >تحريك</keyword>
 <keyword
->شغّل </keyword>
+>شغّل</keyword>
 <keyword
 >مؤشر الاستعمال</keyword>
 <keyword
@@ -156,7 +156,7 @@
 <para
 >تسمح بعض السمات باختيار حجم المؤشر. استخدم حقل <guilabel
 >الحجم</guilabel
-> لتحديد الحجم المناسب.</para>
+>  لتحديد الحجم المناسب.</para>
 
 <screenshot>
 <screeninfo

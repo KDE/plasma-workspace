@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2025-08-04 21:11+0400\n"
+"PO-Revision-Date: 2026-01-08 11:36+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -120,7 +120,7 @@ msgstr "جلسة الطرفيّة %1"
 #, kde-format
 msgctxt "User logged in on console (X display number)"
 msgid "on TTY %1 (Display %2)"
-msgstr "في جلسة الطّرفيّة %1 (العرض %2)"
+msgstr "في جلسة الطرفية %1 (العرض %2)"
 
 #: contents/components/UserList.qml:83
 #, kde-format

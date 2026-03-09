@@ -32,7 +32,7 @@ msgstr "واجهة متصفّح رسوميّة لإضافة الودجات"
 #: shellpackage.cpp:29
 #, kde-format
 msgid "User interface for the views that will show containments"
-msgstr "واجهة رسوميّة للمنظورات الّتي ستظهر الحاويات"
+msgstr "واجهة رسوميّة للمنظورات التي ستظهر الحاويات"
 
 #: shellpackage.cpp:37
 #, kde-format
@@ -53,7 +53,7 @@ msgstr "رسالة الخطأ الظّاهرة عندما يفشل تحميل ب
 #: shellpackage.cpp:44
 #, kde-format
 msgid "QML component that shows an applet in a popup"
-msgstr "مكوّن QML الّذي يظهر بريمجًا في منبثقة"
+msgstr "مكوّن QML الذي يظهر بريمجًا في منبثقة"
 
 #: shellpackage.cpp:48
 #, kde-format
