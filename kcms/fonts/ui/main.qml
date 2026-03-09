@@ -363,6 +363,7 @@ KCM.SimpleKCM {
                             // TODO: Check if QTBUG-38127 is fixed and remove the next two lines.
                             sourceSize.width: 1
                             sourceSize.height: 1
+                            asynchronous: true
                         }
                     }
                 }
@@ -414,6 +415,7 @@ KCM.SimpleKCM {
                             // TODO: Check if QTBUG-38127 is fixed and remove the next two lines.
                             sourceSize.width: 1
                             sourceSize.height: 1
+                            asynchronous: true
                         }
                     }
                 }
