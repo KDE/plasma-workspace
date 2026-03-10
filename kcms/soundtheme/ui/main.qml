@@ -1,17 +1,21 @@
 /*
     SPDX-FileCopyrightText: 2023 Ismael Asensio <isma.af@gmail.com>
+    SPDX-FileCopyrightText: 2025 Sam Crawford <samlkcrawford@pm.me>
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
+import QtCore
 import QtQuick
 import QtQuick.Layouts
+import QtQuick.Dialogs as QtDialogs
 import QtQuick.Controls as QQC2
 import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCM
 
-
 KCM.GridViewKCM {
+    id: root
+
     implicitWidth: Kirigami.Units.gridUnit * 50
     implicitHeight: Kirigami.Units.gridUnit * 30
 
@@ -23,34 +27,41 @@ KCM.GridViewKCM {
     view.implicitCellWidth: Kirigami.Units.gridUnit * 22
     view.implicitCellHeight: Kirigami.Units.gridUnit * 11
 
-    actions: Kirigami.Action {
-        id: enabledAction
-        icon.name: "notification-active-symbolic"
-        text: i18nc("@option:check", "Enable notification sounds")
-        checkable: true
-        checked: kcm.settings.soundsEnabled
-
-        displayComponent: QQC2.CheckBox {
-            text: enabledAction.text
-            checked: enabledAction.checked
-            onToggled: kcm.settings.soundsEnabled = checked
-
-            // HACK: Kirigami.ToolBarPageHeader shows no padding otherwise
-            rightPadding: Kirigami.Units.smallSpacing
-
-            KCM.SettingStateBinding {
-                configObject: kcm.settings
-                settingName: "soundsEnabled"
-            }
-        }
-    }
-
     view.model: kcm.themes
     view.currentIndex: kcm.currentIndex
 
+    actions: [
+        Kirigami.Action {
+            text: i18nc("@action:button Install sound theme from file", "Install from File…")
+            icon.name: "document-import"
+            onTriggered: fileDialogLoader.active = true
+        },
+        Kirigami.Action {
+            id: enabledAction
+            icon.name: "notification-active-symbolic"
+            text: i18nc("@option:check", "Enable notification sounds")
+            checkable: true
+            checked: kcm.settings.soundsEnabled
+
+            displayComponent: QQC2.CheckBox {
+                text: enabledAction.text
+                checked: enabledAction.checked
+                onToggled: kcm.settings.soundsEnabled = checked
+
+                // HACK: Kirigami.ToolBarPageHeader shows no padding otherwise
+                rightPadding: Kirigami.Units.smallSpacing
+
+                KCM.SettingStateBinding {
+                    configObject: kcm.settings
+                    settingName: "soundsEnabled"
+                }
+            }
+        }
+    ]
+
     headerPaddingEnabled: false // Let the InlineMessage touch the edges
     header: Kirigami.InlineMessage {
-        id: errorMessage
+        id: infoLabel
         position: Kirigami.InlineMessage.Position.Header
         showCloseButton: true
 
@@ -58,6 +69,33 @@ KCM.GridViewKCM {
             text = errorText
             type = errorType ?? Kirigami.MessageType.Error;
             visible = true;
+        }
+
+        Connections {
+            target: kcm
+            function onShowSuccessMessage(message) {
+                infoLabel.type = Kirigami.MessageType.Positive;
+                infoLabel.text = message;
+                infoLabel.visible = true;
+            }
+            function onShowErrorMessage(message) {
+                infoLabel.type = Kirigami.MessageType.Error;
+                infoLabel.text = message;
+                infoLabel.visible = true;
+            }
+        }
+    }
+
+    DropArea {
+        enabled: view.enabled
+        anchors.fill: parent
+        onEntered: drag => {
+            if (!drag.hasUrls) {
+                drag.accepted = false;
+            }
+        }
+        onDropped: drop => {
+            kcm.installThemeFromFile(drop.urls[0])
         }
     }
 
@@ -182,16 +220,16 @@ KCM.GridViewKCM {
 
             switch (result) {
             case 0: /* CA_ERROR_SUCCESS */
-                errorMessage.visible = false;
+                infoLabel.visible = false;
                 break;
             case -9: /* CA_ERROR_NOTFOUND */
-                errorMessage.display(i18nc("%1 is a sound theme name. %2 is a sound name",
+                infoLabel.display(i18nc("%1 is a sound theme name. %2 is a sound name",
                                            "The %1 theme doesn't include the sound '%2'",
                                            kcm.nameFor(themeId), sounds[0]),
                                      Kirigami.MessageType.Information);
                 break;
             default:
-                errorMessage.display(i18n("Failed to preview sound: %1", kcm.errorString(result)));
+                infoLabel.display(i18n("Failed to preview sound: %1", kcm.errorString(result)));
             }
         }
 
@@ -201,5 +239,23 @@ KCM.GridViewKCM {
         QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
         QQC2.ToolTip.text: text
         QQC2.ToolTip.visible: (hovered || activeFocus) && enabled
+    }
+
+    Loader {
+        id: fileDialogLoader
+        active: false
+        sourceComponent: QtDialogs.FileDialog {
+            title: i18nc("@title:window", "Choose Sound Theme")
+            currentFolder: StandardPaths.standardLocations(StandardPaths.HomeLocation)[0]
+            nameFilters: [ i18n("Theme Files (*.tar.gz *.tar.bz2 *.tar.xz *.tar.lz *.zip)") ]
+            Component.onCompleted: open()
+            onAccepted: {
+                kcm.installThemeFromFile(selectedFile)
+                fileDialogLoader.active = false
+            }
+            onRejected: {
+                fileDialogLoader.active = false
+            }
+        }
     }
 }

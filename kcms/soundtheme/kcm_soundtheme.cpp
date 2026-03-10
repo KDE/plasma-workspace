@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2023 Ismael Asensio <isma.af@gmail.com>
+    SPDX-FileCopyrightText: 2025 Sam Crawford <samlkcrawford@pm.me>
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
@@ -9,18 +10,61 @@
 #include "kcm_soundtheme_debug.h"
 #include "soundthemedata.h"
 
+#include <KIO/FileCopyJob>
+
+#include <QtCore>
+#include <algorithm>
 #include <canberra.h>
+#include <memory>
+#include <numeric>
+#include <ranges>
 
 #include <QCollator>
 #include <QDir>
+#include <QMimeDatabase>
 
 #include <KConfig>
 #include <KConfigGroup>
+#include <KJobUiDelegate>
 #include <KLocalizedString>
 #include <KPluginFactory>
-#include <algorithm>
+#include <KTar>
+#include <KZip>
 
 using namespace Qt::StringLiterals;
+
+/**
+ * @brief Opens an archive
+ *
+ * @param path to the archive
+ * @return the archive if opening was successful else a nullptr
+ */
+static std::unique_ptr<KArchive> openArchive(const QString &path);
+
+/**
+ * @brief Determines if the given archive directory is a theme.
+ *
+ * @param directory to check for
+ * @return true if it contains an index.theme/index.deskop else false
+ */
+static bool isTheme(const KArchiveDirectory *directory);
+
+/**
+ * @brief Installs a theme by copying it to the user's local data.
+ *
+ * @param theme the archive directory that contains the theme files
+ * @param name the name of the directory to save the theme to
+ * @return true on success else false
+ */
+static bool installTheme(const KArchiveDirectory *theme, const QString &name);
+
+/**
+ * @brief Installs all themes that can be found recursively
+ *
+ * @param directory the directory that is searched through
+ * @return the number of themes installed
+ */
+static int installAllThemes(const KArchiveDirectory *directory);
 
 K_PLUGIN_FACTORY_WITH_JSON(KCMSoundThemeFactory, "kcm_soundtheme.json", registerPlugin<KCMSoundTheme>(); registerPlugin<SoundThemeData>();)
 
@@ -188,6 +232,140 @@ int KCMSoundTheme::playSound(const QString &themeId, const QStringList &soundLis
 void KCMSoundTheme::cancelSound()
 {
     ca_context_cancel(canberraContext(), 0);
+}
+
+void KCMSoundTheme::installThemeFromFile(const QUrl &url)
+{
+    if (url.isLocalFile()) {
+        installThemeFile(url.toLocalFile());
+        return;
+    }
+    if (m_tempCopyJob) {
+        return;
+    }
+
+    auto tempFile = std::make_unique<QTemporaryFile>();
+    if (!tempFile->open()) {
+        Q_EMIT showErrorMessage(i18nc("@info:status", "Unable to create a temporary file."));
+        return;
+    }
+
+    const QUrl dest = QUrl::fromLocalFile(tempFile->fileName());
+    m_tempCopyJob = KIO::file_copy(url, dest, -1, KIO::Overwrite);
+    m_tempCopyJob->uiDelegate()->setAutoErrorHandlingEnabled(true);
+
+    connect(m_tempCopyJob, &KIO::FileCopyJob::result, this, [this, temp = std::move(tempFile)](KJob *job) {
+        if (job->error() != KJob::NoError) {
+            Q_EMIT showErrorMessage(i18nc("@info:status", "Unable to download the sound theme archive: %1", job->errorText()));
+            return;
+        }
+        installThemeFile(temp->fileName());
+    });
+}
+
+void KCMSoundTheme::installThemeFile(const QString &path)
+{
+    std::unique_ptr<KArchive> archive = openArchive(path);
+    if (!archive) {
+        Q_EMIT showErrorMessage(i18nc("@info:status", "The archive could not be opened."));
+        return;
+    }
+
+    auto showSuccess = [this](int themeCount) {
+        Q_EMIT showSuccessMessage(i18ncp("@info:status", "Theme installed successfully.", "Themes installed successfully.", themeCount));
+    };
+    auto showFailure = [this]() {
+        Q_EMIT showErrorMessage(i18nc("@info:status", "The archive does not contain a valid sound theme."));
+    };
+
+    const KArchiveDirectory *rootDirectory = archive->directory();
+    if (isTheme(rootDirectory)) { // the theme may be a tar bomb
+        const QString name = QFileInfo(path).baseName();
+        if (installTheme(rootDirectory, name)) {
+            showSuccess(1);
+        } else {
+            showFailure();
+        }
+    } else {
+        int installedCount = installAllThemes(rootDirectory);
+        if (installedCount < 1) {
+            showFailure();
+            archive->close();
+            return;
+        }
+        showSuccess(installedCount);
+    }
+
+    load();
+    archive->close();
+}
+
+static std::unique_ptr<KArchive> openArchive(const QString &path)
+{
+    std::unique_ptr<KArchive> archive;
+    const QMimeType type = QMimeDatabase().mimeTypeForFile(path);
+    if (type.inherits(QStringLiteral("application/zip"))) {
+        archive = std::make_unique<KZip>(path);
+    } else {
+        archive = std::make_unique<KTar>(path);
+    }
+
+    if (!archive->open(QIODevice::ReadOnly)) {
+        return nullptr;
+    }
+
+    return archive;
+}
+
+static bool isTheme(const KArchiveDirectory *directory)
+{
+    const QString indexFile = QStringLiteral("index.theme");
+    const QString legacyIndexFile = QStringLiteral("index.desktop");
+    const QStringList entries = directory->entries();
+    return entries.contains(indexFile) || entries.contains(legacyIndexFile);
+}
+
+static bool installTheme(const KArchiveDirectory *theme, const QString &name)
+{
+    const QString localDataPath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
+    if (localDataPath.isEmpty()) {
+        return false;
+    }
+    const QString themesDirectory = localDataPath + QStringLiteral("/sounds/");
+    return theme->copyTo(themesDirectory + name);
+}
+
+static int installAllThemes(const KArchiveDirectory *directory)
+{
+    auto toEntry = [&directory](const QString &name) {
+        return directory->entry(name);
+    };
+
+    auto isDirectory = [](const KArchiveEntry *entry) {
+        return entry->isDirectory();
+    };
+
+    auto toThemes = [](const KArchiveEntry *dir) {
+        const KArchiveDirectory *directory = dynamic_cast<const KArchiveDirectory *>(dir);
+
+        if (isTheme(directory)) {
+            if (installTheme(directory, directory->name())) {
+                return 1;
+            }
+            return 0;
+        } else {
+            return installAllThemes(directory);
+        }
+    };
+
+    namespace rv = std::ranges::views;
+    // clang-format off
+    auto counts = directory->entries()
+        | rv::transform(toEntry)
+        | rv::filter(isDirectory)
+        | rv::transform(toThemes);
+    // clang-format on
+    return std::accumulate(counts.begin(), counts.end(), 0);
 }
 
 QString KCMSoundTheme::errorString(int errorCode)
