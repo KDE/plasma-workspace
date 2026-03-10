@@ -51,6 +51,7 @@ KFonts::KFonts(QObject *parent, const KPluginMetaData &metaData)
     , m_data(new FontsData(this))
     , m_subPixelOptionsModel(new QStandardItemModel(this))
     , m_hintingOptionsModel(new QStandardItemModel(this))
+    , m_imageProviderReady(false)
 {
     qmlRegisterAnonymousType<QStandardItemModel>("QStandardItemModel", 1);
     qmlRegisterAnonymousType<FontsSettings>("FontsSettings", 1);
@@ -104,10 +105,27 @@ void KFonts::load()
     // otherwise AA settings will be reset in process of loading
     // previews
     engine()->addImageProvider(u"preview"_s, new PreviewImageProvider(fontsSettings()->font()));
-
+    // We need to make sure focusWindow exists, since that is used by the PreviewRenderEngine
+    connect(qApp, &QGuiApplication::focusWindowChanged, this, [this]() {
+        // Tells the main.qml that the source is now available and ready to load
+        setImageProviderReady(true);
+    });
     // KCM expect save state to be false at this point (can be true because if a font setting loaded
     // from the config isn't available on the system, font substitution may take place)
     setNeedsSave(false);
+}
+
+void KFonts::setImageProviderReady(bool ready)
+{
+    if (m_imageProviderReady != ready) {
+        m_imageProviderReady = ready;
+        Q_EMIT imageProviderReadyChanged();
+    }
+}
+
+bool KFonts::imageProviderReady()
+{
+    return m_imageProviderReady;
 }
 
 void KFonts::save()
