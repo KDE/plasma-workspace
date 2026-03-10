@@ -28,6 +28,8 @@ Item {
     readonly property bool fit: barcodeItem.implicitWidth <= barcodeItem.width && barcodeItem.implicitHeight <= barcodeItem.height
     property alias text: barcodeItem.content
 
+    required property bool showBackButton
+
     readonly property var barcodeMap: [
         {text: i18nd("klipper", "QR Code"), type: Prison.Barcode.QRCode, code: "QRCode"},
         {text: i18nd("klipper", "Data Matrix"), type: Prison.Barcode.DataMatrix, code: "DataMatrix"},
@@ -52,6 +54,11 @@ Item {
                 icon.name: "go-previous-view"
                 text: i18nd("klipper", "Return to Clipboard")
                 onClicked: barcodeView.stack.popCurrentItem()
+                visible: barcodeView.showBackButton
+            }
+
+            Item {
+                Layout.fillWidth: true
             }
 
             PlasmaComponents3.Menu {

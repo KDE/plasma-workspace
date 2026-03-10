@@ -40,6 +40,7 @@ PlasmaComponents3.ScrollView {
     readonly property bool editing: T.StackView.view.currentItem instanceof EditPage
 
     property alias view: menuListView
+    property bool showBackButton: true
 
     background: null
     contentWidth: availableWidth - (contentItem as ListView).leftMargin - (contentItem as ListView).rightMargin
@@ -61,6 +62,7 @@ PlasmaComponents3.ScrollView {
             stack: clipboardMenu.T.StackView.view,
             text: text,
             barcodeType: Qt.binding(() => clipboardMenu.barcodeType),
+            showBackButton: clipboardMenu.showBackButton
         });
     }
     onTriggerAction: uuid => model.invokeAction(uuid)
@@ -210,6 +212,10 @@ PlasmaComponents3.ScrollView {
             clipboardMenu.T.StackView.view.popToIndex(0);
         }
         filter.clear();
+    }
+
+    function closeBarcode(): void {
+        clipboardMenu.T.StackView.view.pop()
     }
 
     // Hidden PlasmoidHeading for metrics purposes

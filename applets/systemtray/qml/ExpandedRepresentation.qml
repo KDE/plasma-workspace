@@ -61,7 +61,11 @@ Item {
 
                 KeyNavigation.down: hiddenItemsView.visible ? popup.hiddenLayout : container
 
-                onClicked: systemTrayState.setActiveApplet(null)
+                onClicked: if (typeof systemTrayState.activeApplet?.backAction !== "undefined" && systemTrayState.activeApplet.backAction.enabled) {
+                    systemTrayState.activeApplet?.backAction.trigger()
+                } else {
+                    systemTrayState.setActiveApplet(null)
+                }
             }
 
             Kirigami.Heading {

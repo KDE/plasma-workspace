@@ -10,6 +10,7 @@ pragma ComponentBehavior: Bound
 import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls as QQC2 // For StackView
+import QtQuick.Templates as T
 import org.kde.plasma.plasmoid
 import org.kde.plasma.core as PlasmaCore
 import org.kde.ksvg as KSvg
@@ -37,6 +38,11 @@ PlasmoidItem {
 
     function action_clearHistory() {
         (fullRepresentationItem.clipboardMenu as Private.ClipboardMenu).clearHistory()
+    }
+
+    readonly property Kirigami.Action backAction: Kirigami.Action {
+        enabled: (fullRepresentationItem?.clipboardMenu as Private.ClipboardMenu)?.T.StackView.view.depth === 2
+        onTriggered: (fullRepresentationItem?.clipboardMenu as Private.ClipboardMenu).closeBarcode()
     }
 
     property bool inEmbeddedContainment: Plasmoid.containment.containmentType === PlasmaCore.Containment.CustomEmbedded
@@ -120,6 +126,7 @@ PlasmoidItem {
                 model: historyModel
                 showsClearHistoryButton: !(Plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentDrawsPlasmoidHeading) && clearAction.visible
                 barcodeType: Plasmoid.configuration.barcodeType
+                showBackButton: Plasmoid.containment.pluginName !== "org.kde.plasma.systemtray"
 
                 onItemSelected: if (main.hideOnWindowDeactivate) {
                     main.expanded = false;
