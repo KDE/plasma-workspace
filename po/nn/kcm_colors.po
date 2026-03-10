@@ -1381,6 +1381,3 @@ msgstr "Opna fargeoppsett"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Fargeoppsett-filer (*.colors)"
-
-#~ msgid "You do not have permission to overwrite that scheme"
-#~ msgstr "Du har ikkje løyve til å overskriva det oppsettet"

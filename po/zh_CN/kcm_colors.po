@@ -681,7 +681,7 @@ msgstr ""
 #, kde-format
 msgid ""
 "This scheme is read-only. Please save the modifications with another name."
-msgstr ""
+msgstr "此方案为只读。请用另一个名称保存修改。"
 
 #: editor/scmeditordialog.cpp:178
 #, kde-format
@@ -1357,6 +1357,3 @@ msgstr "打开配色方案"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "配色方案文件 (*.colors)"
-
-#~ msgid "You do not have permission to overwrite that scheme"
-#~ msgstr "您不具备覆盖该配色方案的权限"

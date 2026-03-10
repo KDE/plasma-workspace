@@ -1338,6 +1338,3 @@ msgstr ""
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr ""
-
-#~ msgid "You do not have permission to overwrite that scheme"
-#~ msgstr "Dus eai leat vuoigatvuođat buhttet dien čoahkkádusa"
