@@ -39,7 +39,8 @@ GridLayout {
         {
             role: DelegateToolButtons.ButtonRole.ShowQRCode,
             icon: "view-barcode-qr",
-            text: i18nd("klipper", "Show QR code")
+            text: i18nd("klipper", "Show QR code"),
+            visible: menuItem.type === toolButtonsLayout.textItemType
         },
         {
             role: DelegateToolButtons.ButtonRole.Edit,
