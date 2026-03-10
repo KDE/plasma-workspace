@@ -356,13 +356,6 @@ KCM.SimpleKCM {
                         Image {
                             id: subPixelComboImage
                             source: kcm.imageProviderReady ? "image://preview/" + model.index + "_" + kcm.hintingCurrentIndex + ".png" : ""
-                            // Setting sourceSize here is necessary as a workaround for QTBUG-38127
-                            //
-                            // With this bug, images requested from a QQuickImageProvider have an incorrect scale with devicePixelRatio != 1 when sourceSize is not set.
-                            //
-                            // TODO: Check if QTBUG-38127 is fixed and remove the next two lines.
-                            sourceSize.width: 1
-                            sourceSize.height: 1
                             asynchronous: true
                         }
                     }
@@ -408,13 +401,6 @@ KCM.SimpleKCM {
                         Image {
                             id: hintingComboImage
                             source: kcm.imageProviderReady ? "image://preview/" + kcm.subPixelCurrentIndex + "_" + model.index + ".png" : ""
-                            // Setting sourceSize here is necessary as a workaround for QTBUG-38127
-                            //
-                            // With this bug, images requested from a QQuickImageProvider have an incorrect scale with devicePixelRatio != 1 when sourceSize is not set.
-                            //
-                            // TODO: Check if QTBUG-38127 is fixed and remove the next two lines.
-                            sourceSize.width: 1
-                            sourceSize.height: 1
                             asynchronous: true
                         }
                     }
