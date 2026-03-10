@@ -609,11 +609,11 @@ void SystemTray::openContextMenu(const QString &service, QPoint pos, QQuickItem 
                     showSystemTrayMenuWayland(menu, statusNotifierIcon, location());
                 } else {
                     showSystemTrayMenuX11(menu, statusNotifierIcon, pos, location());
-                }
 
-                // Workaround for QTBUG-59044
-                if (auto item = statusNotifierIcon->window()->mouseGrabberItem()) {
-                    item->ungrabMouse();
+                    // Workaround for QTBUG-59044
+                    if (auto item = statusNotifierIcon->window()->mouseGrabberItem()) {
+                        item->ungrabMouse();
+                    }
                 }
             }
         },
