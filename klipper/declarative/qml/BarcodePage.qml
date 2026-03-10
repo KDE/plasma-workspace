@@ -49,12 +49,15 @@ Item {
     property PlasmaExtras.PlasmoidHeading header: PlasmaExtras.PlasmoidHeading {
         RowLayout {
             anchors.fill: parent
-            PlasmaComponents3.Button {
-                Layout.fillWidth: true
+            PlasmaComponents3.ToolButton {
                 icon.name: "go-previous-view"
                 text: i18nd("klipper", "Return to Clipboard")
                 onClicked: barcodeView.stack.popCurrentItem()
                 visible: barcodeView.showBackButton
+            }
+
+            Item {
+                Layout.fillWidth: true
             }
 
             Item {
