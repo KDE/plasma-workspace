@@ -40,6 +40,118 @@
 
 using namespace Qt::StringLiterals;
 
+static void showSystemTrayMenuX11(QMenu *menu, QQuickItem *trayItem, const QPoint &pos, Plasma::Types::Location location)
+{
+    int x = pos.x();
+    int y = pos.y();
+
+    // try tofind the icon screen coordinates, and adjust the position as a poor
+    // man's popupPosition
+
+    QRect screenItemRect(trayItem->mapToScene(QPointF(0, 0)).toPoint(), QSize(trayItem->width(), trayItem->height()));
+
+    if (trayItem->window()) {
+        screenItemRect.moveTopLeft(trayItem->window()->mapToGlobal(screenItemRect.topLeft()));
+    }
+
+    switch (location) {
+    case Plasma::Types::LeftEdge:
+        x = screenItemRect.right();
+        y = screenItemRect.top();
+        break;
+    case Plasma::Types::RightEdge:
+        x = screenItemRect.left() - menu->width();
+        y = screenItemRect.top();
+        break;
+    case Plasma::Types::TopEdge:
+        x = screenItemRect.left();
+        y = screenItemRect.bottom();
+        break;
+    case Plasma::Types::BottomEdge:
+        x = screenItemRect.left();
+        y = screenItemRect.top() - menu->height();
+        break;
+    default:
+        x = screenItemRect.left();
+        if (screenItemRect.top() - menu->height() >= trayItem->window()->screen()->geometry().top()) {
+            y = screenItemRect.top() - menu->height();
+        } else {
+            y = screenItemRect.bottom();
+        }
+    }
+
+    menu->winId();
+    menu->windowHandle()->setTransientParent(trayItem->window());
+    menu->popup(QPoint(x, y));
+}
+
+static void showSystemTrayMenuWayland(QMenu *menu, QQuickItem *trayItem, Plasma::Types::Location location)
+{
+    QWindow *trayWindow = trayItem->window();
+    if (!trayWindow) {
+        qCWarning(SYSTEM_TRAY) << menu << "has no parent window, this should never happen";
+        return;
+    }
+
+    menu->winId();
+    QWindow *menuWindow = menu->windowHandle();
+
+    const QRect anchorRect = trayItem->mapRectToScene(QRectF(QPoint(0, 0), trayItem->size())).toRect();
+
+    Qt::Edges anchor;
+    Qt::Edges gravity;
+    switch (location) {
+    case Plasma::Types::Location::TopEdge:
+        anchor = Qt::BottomEdge;
+        gravity = Qt::BottomEdge;
+
+        if (qGuiApp->isLeftToRight()) {
+            anchor |= Qt::LeftEdge;
+            gravity |= Qt::RightEdge;
+        } else {
+            anchor |= Qt::RightEdge;
+            gravity |= Qt::LeftEdge;
+        }
+        break;
+
+    case Plasma::Types::Location::BottomEdge:
+        anchor = Qt::TopEdge;
+        gravity = Qt::TopEdge;
+
+        if (qGuiApp->isLeftToRight()) {
+            anchor |= Qt::LeftEdge;
+            gravity |= Qt::RightEdge;
+        } else {
+            anchor |= Qt::RightEdge;
+            gravity |= Qt::LeftEdge;
+        }
+        break;
+
+    case Plasma::Types::Location::LeftEdge:
+        anchor = Qt::RightEdge | Qt::TopEdge;
+        gravity = Qt::RightEdge | Qt::BottomEdge;
+        break;
+
+    case Plasma::Types::Location::RightEdge:
+        anchor = Qt::LeftEdge | Qt::TopEdge;
+        gravity = Qt::LeftEdge | Qt::BottomEdge;
+        break;
+
+    default:
+        anchor = Qt::LeftEdge | Qt::BottomEdge;
+        gravity = Qt::RightEdge | Qt::BottomEdge;
+        break;
+    }
+
+    menuWindow->setTransientParent(trayWindow);
+
+    menuWindow->setProperty("_q_waylandPopupAnchorRect", anchorRect);
+    menuWindow->setProperty("_q_waylandPopupAnchor", QVariant::fromValue(anchor));
+    menuWindow->setProperty("_q_waylandPopupGravity", QVariant::fromValue(gravity));
+
+    menu->popup(trayWindow->screen()->geometry().topLeft());
+}
+
 SystemTray::SystemTray(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
     : Plasma::Containment(parent, data, args)
 {
@@ -237,19 +349,15 @@ void SystemTray::showPlasmoidMenu(QQuickItem *appletInterface, int x, int y)
         return;
     }
 
+    KAcceleratorManager::manage(desktopMenu);
+
     desktopMenu->adjustSize();
 
-    if (QScreen *screen = appletInterface->window()->screen()) {
-        const QRect geo = screen->availableGeometry();
-
-        pos = QPoint(qBound(geo.left(), (int)pos.x(), geo.right() - desktopMenu->width()), //
-                     qBound(geo.top(), (int)pos.y(), geo.bottom() - desktopMenu->height()));
+    if (KWindowSystem::isPlatformWayland()) {
+        showSystemTrayMenuWayland(desktopMenu, appletInterface, location());
+    } else {
+        showSystemTrayMenuX11(desktopMenu, appletInterface, pos.toPoint(), location());
     }
-
-    KAcceleratorManager::manage(desktopMenu);
-    desktopMenu->winId();
-    desktopMenu->windowHandle()->setTransientParent(appletInterface->window());
-    desktopMenu->popup(pos.toPoint());
 }
 
 QPointF SystemTray::popupPosition(QQuickItem *visualParent, int x, int y)
@@ -494,48 +602,15 @@ void SystemTray::openContextMenu(const QString &service, QPoint pos, QQuickItem 
         [this, statusNotifierIcon, pos](QMenu *menu) {
             if (menu && !menu->isEmpty()) {
                 menu->adjustSize();
-                int x = pos.x();
-                int y = pos.y();
-
-                // try tofind the icon screen coordinates, and adjust the position as a poor
-                // man's popupPosition
-
-                QRect screenItemRect(statusNotifierIcon->mapToScene(QPointF(0, 0)).toPoint(), QSize(statusNotifierIcon->width(), statusNotifierIcon->height()));
-
-                if (statusNotifierIcon->window()) {
-                    screenItemRect.moveTopLeft(statusNotifierIcon->window()->mapToGlobal(screenItemRect.topLeft()));
-                }
-
-                switch (location()) {
-                case Plasma::Types::LeftEdge:
-                    x = screenItemRect.right();
-                    y = screenItemRect.top();
-                    break;
-                case Plasma::Types::RightEdge:
-                    x = screenItemRect.left() - menu->width();
-                    y = screenItemRect.top();
-                    break;
-                case Plasma::Types::TopEdge:
-                    x = screenItemRect.left();
-                    y = screenItemRect.bottom();
-                    break;
-                case Plasma::Types::BottomEdge:
-                    x = screenItemRect.left();
-                    y = screenItemRect.top() - menu->height();
-                    break;
-                default:
-                    x = screenItemRect.left();
-                    if (screenItemRect.top() - menu->height() >= statusNotifierIcon->window()->screen()->geometry().top()) {
-                        y = screenItemRect.top() - menu->height();
-                    } else {
-                        y = screenItemRect.bottom();
-                    }
-                }
 
                 KAcceleratorManager::manage(menu);
-                menu->winId();
-                menu->windowHandle()->setTransientParent(statusNotifierIcon->window());
-                menu->popup(QPoint(x, y));
+
+                if (KWindowSystem::isPlatformWayland()) {
+                    showSystemTrayMenuWayland(menu, statusNotifierIcon, location());
+                } else {
+                    showSystemTrayMenuX11(menu, statusNotifierIcon, pos, location());
+                }
+
                 // Workaround for QTBUG-59044
                 if (auto item = statusNotifierIcon->window()->mouseGrabberItem()) {
                     item->ungrabMouse();
