@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-24 00:47+0000\n"
-"PO-Revision-Date: 2026-01-09 16:55+0000\n"
+"PO-Revision-Date: 2026-03-10 12:58+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
 "Language: is\n"
@@ -69,12 +69,11 @@ msgstr[1] ""
 "endurræst gætu viðkomandi tapað gögnum."
 
 #: contents/logout/Logout.qml:191
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will enter the firmware setup screen."
+#, kde-format
 msgid "When restarted, the computer will enter UEFI firmware settings."
 msgstr ""
-"Við endurræsingu mun tölvan fara á skjáinn fyrir uppsetningu fastbúnaðar "
-"(firmware)."
+"Eftir endurræsingu mun tölvan fara á skjáinn fyrir stillingar UEFI-"
+"fastbúnaðar (firmware)."
 
 #: contents/logout/Logout.qml:193
 #, kde-format
@@ -89,11 +88,10 @@ msgid "When restarted, the computer will enter the boot loader menu."
 msgstr "Við endurræsingu fer tölvan á skjáinn með "
 
 #: contents/logout/Logout.qml:221
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will switch to %1."
+#, kde-format
 msgctxt "%1 is a boot loader entry"
 msgid "When restarted, the computer will switch to %1."
-msgstr "Við endurræsingu skiptir tölvan yfir á %1."
+msgstr "Eftir endurræsingu skiptir tölvan yfir í %1."
 
 #: contents/logout/Logout.qml:243
 #, kde-format

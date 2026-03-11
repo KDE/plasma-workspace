@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:54+0000\n"
+"POT-Creation-Date: 2026-03-11 00:49+0000\n"
 "PO-Revision-Date: 2025-03-04 14:52+0700\n"
 "Last-Translator: Pongsakorn S. <kde@xerusion.me>\n"
 "Language-Team: Thai\n"
@@ -16,24 +16,61 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: kcm_soundtheme.cpp:112
+#: kcm_soundtheme.cpp:156
 #, kde-format
 msgctxt "Name of the fallback \"freedesktop\" sound theme"
 msgid "FreeDesktop"
 msgstr "FreeDesktop"
 
-#: kcm_soundtheme.cpp:113
+#: kcm_soundtheme.cpp:157
 #, kde-format
 msgid "Fallback sound theme from freedesktop.org"
 msgstr "ธีมเสียงสํารองจาก freedesktop.org"
 
-#: ui/main.qml:29
+#: kcm_soundtheme.cpp:249
+#, kde-format
+msgctxt "@info:status"
+msgid "Unable to create a temporary file."
+msgstr ""
+
+#: kcm_soundtheme.cpp:259
+#, kde-format
+msgctxt "@info:status"
+msgid "Unable to download the sound theme archive: %1"
+msgstr ""
+
+#: kcm_soundtheme.cpp:270
+#, kde-format
+msgctxt "@info:status"
+msgid "The archive could not be opened."
+msgstr ""
+
+#: kcm_soundtheme.cpp:275
+#, kde-format
+msgctxt "@info:status"
+msgid "Theme installed successfully."
+msgid_plural "Themes installed successfully."
+msgstr[0] ""
+
+#: kcm_soundtheme.cpp:278
+#, kde-format
+msgctxt "@info:status"
+msgid "The archive does not contain a valid sound theme."
+msgstr ""
+
+#: ui/main.qml:35
+#, kde-format
+msgctxt "@action:button Install sound theme from file"
+msgid "Install from File…"
+msgstr ""
+
+#: ui/main.qml:42
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable notification sounds"
 msgstr "เปิดใช้งานเสียงแจ้งเตือน"
 
-#: ui/main.qml:96
+#: ui/main.qml:134
 #, kde-format
 msgctxt ""
 "%2 is a theme name or a list of theme names that the current theme inherits "
@@ -42,7 +79,7 @@ msgid "Based on: %2"
 msgid_plural "Based on: %2"
 msgstr[0] "อิงจาก: %2"
 
-#: ui/main.qml:109
+#: ui/main.qml:147
 #, kde-format
 msgctxt ""
 "@label Precedes a list of buttons which can be clicked to preview the "
@@ -50,25 +87,36 @@ msgctxt ""
 msgid "Preview:"
 msgstr "แสดงตัวอย่าง:"
 
-#: ui/main.qml:128
+#: ui/main.qml:166
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview sound \"%1\""
 msgstr "แสดงตัวอย่างเสียง \"%1\""
 
-#: ui/main.qml:150
+#: ui/main.qml:188
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview the demo sound for the theme \"%1\""
 msgstr "แสดงตัวอย่างเสียงสาธิตสําหรับธีม \"%1\""
 
-#: ui/main.qml:189
+#: ui/main.qml:227
 #, kde-format
 msgctxt "%1 is a sound theme name. %2 is a sound name"
 msgid "The %1 theme doesn't include the sound '%2'"
 msgstr "ธีม %1 ไม่รวมเสียง '%2'"
 
-#: ui/main.qml:194
+#: ui/main.qml:232
 #, kde-format
 msgid "Failed to preview sound: %1"
 msgstr "แสดงตัวอย่างเสียงไม่สําเร็จ: %1"
+
+#: ui/main.qml:248
+#, kde-format
+msgctxt "@title:window"
+msgid "Choose Sound Theme"
+msgstr ""
+
+#: ui/main.qml:250
+#, kde-format
+msgid "Theme Files (*.tar.gz *.tar.bz2 *.tar.xz *.tar.lz *.zip)"
+msgstr ""

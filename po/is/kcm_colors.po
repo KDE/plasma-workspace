@@ -6,14 +6,14 @@
 # Arnar Leósson <leosson@frisurf.no>, 2003.
 # Richard Allen <ra@ra.is>, 2004.
 # Arnar Leosson <leosson@frisurf.no>, 2005.
-# SPDX-FileCopyrightText: 2007, 2008, 2009, 2010, 2011, 2015, 2016, 2022, 2025 Sveinn í Felli <sveinki@nett.is>
+# SPDX-FileCopyrightText: 2007, 2008, 2009, 2010, 2011, 2015, 2016, 2022, 2025, 2026 Sveinn í Felli <sveinki@nett.is>
 # SPDX-FileCopyrightText: 2022, 2023, 2024 Guðmundur Erlingsson <gudmundure@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-07 00:46+0000\n"
-"PO-Revision-Date: 2025-11-23 16:06+0000\n"
+"PO-Revision-Date: 2026-03-10 14:35+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
 "Language: is\n"
@@ -695,7 +695,7 @@ msgstr ""
 #, kde-format
 msgid ""
 "This scheme is read-only. Please save the modifications with another name."
-msgstr ""
+msgstr "Þetta litastef er ekki skrifanlegt. Vistaðu breytingar með öðru heiti."
 
 #: editor/scmeditordialog.cpp:178
 #, kde-format
@@ -1354,29 +1354,27 @@ msgid "Edit Color Scheme…"
 msgstr "Breyta litastefi..."
 
 #: ui/main.qml:324
-#, fuzzy, kde-format
-#| msgid "Remove Color Scheme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove color scheme"
 msgstr "Fjarlægja litastef"
 
 #: ui/main.qml:326
-#, fuzzy, kde-format
-#| msgid "Utility to edit and create color schemes"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active color scheme"
-msgstr "Verkfæri til að breyta og búa til litastef"
+msgstr "Get ekki eytt virku litastefi"
 
 #: ui/main.qml:328
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed color schemes"
-msgstr ""
+msgstr "Get ekki eytt litastefum settum inn af kerfinu"
 
 #: ui/main.qml:336
 #, kde-format
 msgid "Don’t delete this color scheme"
-msgstr ""
+msgstr "Ekki eyða þessu litastefi"
 
 #: ui/main.qml:380
 #, kde-format
