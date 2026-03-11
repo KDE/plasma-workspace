@@ -63,9 +63,9 @@ def run_mapshaper(json_file, output_name):
 # Example usage
 owner = "evansiroky"  # GitHub repository owner
 repo = "timezone-boundary-builder"    # GitHub repository name
-file_name = "timezones.geojson.zip"  # Replace with the name of the file you want to download
+file_name = "timezones-now.geojson.zip"  # Replace with the name of the file you want to download
 download_dir = "."    # Directory to save the file
-json_file = "combined.json"
+json_file = "combined-now.json"
 output_name = "timezones.json"
 
 
