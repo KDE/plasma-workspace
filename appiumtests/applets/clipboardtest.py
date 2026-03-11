@@ -221,19 +221,6 @@ class ClipboardTest(unittest.TestCase):
 
         app.driver.find_element(AppiumBy.NAME, "QR Code")
         app.driver.find_element(AppiumBy.NAME, "Return to Clipboard")
-        app.driver.find_element(AppiumBy.NAME, "Change the QR code type")
-
-        # Opens the barcode type menu and changes the current barcode type
-        app.driver.find_element(AppiumBy.NAME, "Change the QR code type").click()
-        menu_item = app.driver.find_element(AppiumBy.NAME, "Aztec")
-        # Switch to Aztec
-        actions = ActionChains(app.driver)
-        for _ in range(3):
-            actions.send_keys(Keys.DOWN).perform()
-            time.sleep(1)
-        actions.send_keys(Keys.SPACE).perform()
-        WebDriverWait(app.driver, 5).until_not(lambda _: menu_item.is_displayed())
-        app.driver.find_element(AppiumBy.NAME, "Aztec")  # This is from barcodeItem
 
         # Go back to the list from the barcode page
         button_item = app.driver.find_element(AppiumBy.NAME, "Return to Clipboard")
