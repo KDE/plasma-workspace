@@ -54,6 +54,8 @@ static void showSystemTrayMenuX11(QMenu *menu, QQuickItem *trayItem, const QPoin
         screenItemRect.moveTopLeft(trayItem->window()->mapToGlobal(screenItemRect.topLeft()));
     }
 
+    menu->adjustSize();
+
     switch (location) {
     case Plasma::Types::LeftEdge:
         x = screenItemRect.right();
@@ -358,8 +360,6 @@ void SystemTray::showPlasmoidMenu(QQuickItem *appletInterface, int x, int y)
 
     KAcceleratorManager::manage(desktopMenu);
 
-    desktopMenu->adjustSize();
-
     if (KWindowSystem::isPlatformWayland()) {
         showSystemTrayMenuWayland(desktopMenu, appletInterface, location());
     } else {
@@ -608,8 +608,6 @@ void SystemTray::openContextMenu(const QString &service, QPoint pos, QQuickItem 
         this,
         [this, statusNotifierIcon, pos](QMenu *menu) {
             if (menu && !menu->isEmpty()) {
-                menu->adjustSize();
-
                 KAcceleratorManager::manage(menu);
 
                 if (KWindowSystem::isPlatformWayland()) {
