@@ -272,15 +272,21 @@ static QVariant extractIcon(const QIcon &icon, const QVariant &defaultValue = QV
     }
 }
 
-static QString extractItemId(const StatusNotifierItemSource *sniData)
+static QString extractItemId(StatusNotifierItemSource *sniData)
 {
     const QString itemId = sniData->id();
     // Bug 378910: workaround for Dropbox not following the SNI specification
     if (itemId.startsWith(QLatin1String("dropbox-client-"))) {
         return QLatin1String("dropbox-client-PID");
-    } else {
-        return itemId;
     }
+    // Disambiguate Chromium/Electron apps that all share the same tray icon Id
+    if (itemId.startsWith(QLatin1String("chrome_status_icon_"))) {
+        const QString processName = sniData->processName();
+        if (!processName.isEmpty()) {
+            return itemId + QLatin1Char('@') + processName;
+        }
+    }
+    return itemId;
 }
 
 QVariant StatusNotifierModel::data(const QModelIndex &index, int role) const

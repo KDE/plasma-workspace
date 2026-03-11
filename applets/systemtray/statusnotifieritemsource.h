@@ -38,6 +38,7 @@ public:
     QString iconName() const;
     QString iconThemePath() const;
     QString id() const;
+    QString processName();
     bool itemIsMenu() const;
     QString overlayIconName() const;
     QString status() const;
@@ -65,6 +66,7 @@ private:
     QIcon imageVectorToPixmap(const KDbusImageVector &vector) const;
     void overlayIcon(QIcon *icon, QIcon *overlay);
     KIconLoader *iconLoader() const;
+    void resolveProcessName();
 
     bool m_valid;
     QString m_servicename;
@@ -74,6 +76,7 @@ private:
     std::unique_ptr<org::kde::StatusNotifierItem> m_statusNotifierItemInterface;
     bool m_refreshing : 1;
     bool m_needsReRefreshing : 1;
+    bool m_processNameResolved : 1;
 
     QIcon m_attentionIcon;
     QString m_attentionIconName;
@@ -83,6 +86,7 @@ private:
     QString m_iconName;
     QString m_iconThemePath;
     QString m_id;
+    QString m_processName;
     bool m_itemIsMenu;
     QString m_overlayIconName;
     QString m_status;

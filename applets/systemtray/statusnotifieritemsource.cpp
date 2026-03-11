@@ -18,10 +18,14 @@
 #include <Plasma/Theme>
 
 #include <QApplication>
+#include <QDBusConnectionInterface>
 #include <QDBusMessage>
 #include <QDBusPendingCall>
 #include <QDBusPendingReply>
+#include <QDBusReply>
 #include <QDebug>
+#include <QFile>
+#include <QFileInfo>
 #include <QIcon>
 #include <QImage>
 #include <QPainter>
@@ -74,6 +78,7 @@ StatusNotifierItemSource::StatusNotifierItemSource(const QString &notifierItemId
     , m_customIconLoader(nullptr)
     , m_refreshing(false)
     , m_needsReRefreshing(false)
+    , m_processNameResolved(false)
 {
     setObjectName(notifierItemId);
     qDBusRegisterMetaType<KDbusImageStruct>();
@@ -159,6 +164,58 @@ QString StatusNotifierItemSource::iconThemePath() const
 QString StatusNotifierItemSource::id() const
 {
     return m_id;
+}
+
+QString StatusNotifierItemSource::processName()
+{
+    if (!m_processNameResolved) {
+        resolveProcessName();
+    }
+    return m_processName;
+}
+
+void StatusNotifierItemSource::resolveProcessName()
+{
+    m_processNameResolved = true;
+
+    int slash = m_servicename.indexOf(u'/');
+    if (slash == -1) {
+        return;
+    }
+    const QString service = m_servicename.left(slash);
+
+    // Resolve owning process name for disambiguation of Chromium/Electron tray icons.
+    // /proc/PID/comm is insufficient because Electron apps all report "electron".
+    // Instead, parse /proc/PID/cmdline to find the .asar path or the actual binary name.
+    const QDBusReply<uint> pidReply = QDBusConnection::sessionBus().interface()->servicePid(service);
+    if (!pidReply.isValid()) {
+        return;
+    }
+
+    const uint pid = pidReply.value();
+    const QString procBase = QStringLiteral("/proc/%1/").arg(pid);
+
+    // Try cmdline first for Electron apps: extract app name from .asar path
+    // e.g. /usr/lib/vesktop/app.asar -> "vesktop"
+    QFile cmdlineFile(procBase + QStringLiteral("cmdline"));
+    if (cmdlineFile.open(QIODevice::ReadOnly)) {
+        const QByteArray cmdlineData = cmdlineFile.readAll();
+        const QList<QByteArray> args = cmdlineData.split('\0');
+        const auto it = std::find_if(args.cbegin(), args.cend(), [](const QByteArray &arg) {
+            return arg.endsWith(".asar");
+        });
+        if (it != args.cend()) {
+            const QFileInfo asarInfo(QString::fromUtf8(*it));
+            m_processName = QFileInfo(asarInfo.path()).fileName();
+            return;
+        }
+    }
+
+    // Fallback to /proc/PID/comm if cmdline parsing didn't yield a name
+    QFile commFile(procBase + QStringLiteral("comm"));
+    if (commFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        m_processName = QString::fromUtf8(commFile.readAll()).trimmed();
+    }
 }
 
 bool StatusNotifierItemSource::itemIsMenu() const
