@@ -142,6 +142,22 @@ public:
 
     Q_INVOKABLE bool isScreenUiReady(int screen);
 
+    /*!
+        Must be called from DBus!
+
+        Grabs an image of the desktop containment of the defined screen.
+        \a connector is the name of the screen (as per QScreen::name()).
+        \a width and \a height define the resulting image size.
+        \a targetPath defines where the image should be saved.
+
+        Returns true if the image was saved successfully.
+
+        Note that this function is asynchronous and will send a delayed reply.
+
+        DO NOT WAIT BLOCKINGLY!
+    */
+    [[nodiscard]] bool grabContainmentImage(const QString &connector, int width, int height, const QString &targetPath);
+
 Q_SIGNALS:
     void glInitializationFailed();
     // A preview for this containment has been rendered and saved to disk
