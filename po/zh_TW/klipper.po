@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-28 02:46+0000\n"
+"POT-Creation-Date: 2026-03-12 02:38+0000\n"
 "PO-Revision-Date: 2025-09-05 17:17+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -365,17 +365,17 @@ msgstr "觸發動作"
 msgid "Show QR code"
 msgstr "顯示 QR 碼"
 
-#: declarative/qml/DelegateToolButtons.qml:47
+#: declarative/qml/DelegateToolButtons.qml:48
 #, kde-format
 msgid "Edit contents"
 msgstr "編輯內容"
 
-#: declarative/qml/DelegateToolButtons.qml:53
+#: declarative/qml/DelegateToolButtons.qml:54
 #, kde-format
 msgid "Remove from history"
 msgstr "從歷史紀錄中移除"
 
-#: declarative/qml/DelegateToolButtons.qml:58
+#: declarative/qml/DelegateToolButtons.qml:59
 #, kde-format
 msgid "Remove Star"
 msgstr "取消固定"
@@ -383,7 +383,7 @@ msgstr "取消固定"
 # 學 Gboard 用「固定」。
 # 其他選項是釘選、加星號、收藏，這個情境下固定/釘選應該最符合預期。
 # --Kisaragi
-#: declarative/qml/DelegateToolButtons.qml:58
+#: declarative/qml/DelegateToolButtons.qml:59
 #, kde-format
 msgid "Star"
 msgstr "固定"
