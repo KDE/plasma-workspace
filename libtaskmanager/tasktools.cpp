@@ -71,11 +71,12 @@ AppData appDataFromUrl(const QUrl &url, const QIcon &fallbackIcon)
     // (i.e. .desktop file name) rather than the absolute path to a .desktop file.
     if (url.scheme() == QLatin1String("applications")) {
         const KService::Ptr service = KService::serviceByMenuId(url.path());
+        qDebug() << "serviceByMenuId" << url << url.path() << service.data();
 
         if (service && url.path() == service->menuId()) {
             data.name = service->name();
             data.genericName = appropriateCaption(service);
-            data.id = service->storageId();
+            data.id = service->desktopEntryName();
 
             if (data.icon.isNull()) {
                 data.icon = QIcon::fromTheme(service->icon());
@@ -99,7 +100,7 @@ AppData appDataFromUrl(const QUrl &url, const QIcon &fallbackIcon)
             if (service && QUrl::fromLocalFile(service->entryPath()) == url) {
                 data.name = service->name();
                 data.genericName = appropriateCaption(service);
-                data.id = service->storageId();
+                data.id = service->desktopEntryName();
 
                 if (data.icon.isNull()) {
                     data.icon = QIcon::fromTheme(service->icon());
@@ -154,7 +155,7 @@ AppData appDataFromUrl(const QUrl &url, const QIcon &fallbackIcon)
 
             data.name = service->name();
             data.genericName = appropriateCaption(service);
-            data.id = service->storageId();
+            data.id = service->desktopEntryName();
 
             if (data.icon.isNull()) {
                 data.icon = QIcon::fromTheme(service->icon());
