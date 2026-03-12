@@ -53,6 +53,27 @@
       <arg name="screenNum" type="u" direction="out"/>
     </signal>
 
+    <!--
+      Internal API! Do not use in third party software.
+
+      Grabs an image of the desktop containment of the defined screen.
+      Name is the name of the screen (as per QScreen::name()).
+      Width and height define the resulting image size.
+      TargetPath defines where the image should be saved.
+      Returns true if the image was saved successfully.
+
+      Note that this function is asynchronous and will send a delayed reply.
+
+      DO NOT WAIT BLOCKINGLY!
+    -->
+    <method name="grabContainmentImage">
+      <arg name="name" type="s" direction="in"/>
+      <arg name="width" type="i" direction="in"/>
+      <arg name="height" type="i" direction="in"/>
+      <arg name="targetPath" type="s" direction="in"/>
+      <arg name="result" type="b" direction="out"/>
+    </method>
+
     <signal name="colorChanged">
       <arg name="changedColor" type="s" direction="out"/>
     </signal>

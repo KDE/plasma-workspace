@@ -3082,6 +3082,57 @@ void ShellCorona::refreshCurrentShell()
     QProcess::startDetached(u"plasmashell"_s, {u"--replace"_s});
 }
 
+bool ShellCorona::grabContainmentImage(const QString &name, int width, int height, const QString &targetPath)
+{
+    Q_ASSERT(calledFromDBus());
+
+    auto screenId = m_screenPool->idForName(name);
+    if (screenId < 0) {
+        qCWarning(PLASMASHELL) << "grabContainmentImage: unknown screen name" << name;
+        sendErrorReply(QDBusError::InvalidArgs, QStringLiteral("Unknown screen name"));
+        return false;
+    }
+
+    auto currentActivity = m_activityController->currentActivity();
+    currentActivity = QUuid::fromString(currentActivity).isNull() ? QString() : currentActivity;
+
+    auto containment = containmentForScreen(screenId, currentActivity, QString());
+    if (!containment) {
+        qCWarning(PLASMASHELL) << "grabContainmentImage: containment not found for screen" << name << currentActivity;
+        sendErrorReply(QDBusError::InvalidArgs, QStringLiteral("Containment not found for screen"));
+        return false;
+    }
+
+    auto item = PlasmaQuick::AppletQuickItem::itemForApplet(containment);
+    if (!item) {
+        qCWarning(PLASMASHELL) << "grabContainmentImage: could not find quick item for containment on screen" << name << currentActivity;
+        sendErrorReply(QDBusError::InternalError, QStringLiteral("Could not find quick item for containment"));
+        return false;
+    }
+
+    setDelayedReply(true);
+
+    auto result = item->grabToImage(QSize(width, height));
+    connect(
+        result.get(),
+        &QQuickItemGrabResult::ready,
+        this,
+        [callerContext = message(), result, targetPath]() {
+            if (!result->saveToFile(targetPath)) {
+                qCWarning(PLASMASHELL) << "grabContainmentImage: failed to save grab result to file";
+                auto reply = callerContext.createErrorReply(QDBusError::InternalError, QStringLiteral("Failed to save grab result to file"));
+                QDBusConnection::sessionBus().send(reply);
+                return;
+            }
+
+            auto reply = callerContext.createReply(true);
+            QDBusConnection::sessionBus().send(reply);
+        },
+        Qt::SingleShotConnection);
+
+    return false; // Unused - delayed reply.
+}
+
 // Desktop corona handler
 
 #include "moc_shellcorona.cpp"
