@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-25 00:49+0000\n"
+"POT-Creation-Date: 2026-03-12 00:46+0000\n"
 "PO-Revision-Date: 2025-08-30 09:51+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -260,66 +260,66 @@ msgstr "Bližnjice"
 msgid "Shortcuts Configuration"
 msgstr "Nastavitev bližnjic"
 
-#: declarative/qml/BarcodePage.qml:32
+#: declarative/qml/BarcodePage.qml:34
 #, kde-format
 msgid "QR Code"
 msgstr "Koda QR"
 
-#: declarative/qml/BarcodePage.qml:33
+#: declarative/qml/BarcodePage.qml:35
 #, kde-format
 msgid "Data Matrix"
 msgstr "Podatkovna matrika"
 
-#: declarative/qml/BarcodePage.qml:34
+#: declarative/qml/BarcodePage.qml:36
 #, kde-format
 msgctxt "Aztec barcode"
 msgid "Aztec"
 msgstr "Aztec"
 
-#: declarative/qml/BarcodePage.qml:35
+#: declarative/qml/BarcodePage.qml:37
 #, kde-format
 msgid "Code 39"
 msgstr "Koda 39"
 
-#: declarative/qml/BarcodePage.qml:36
+#: declarative/qml/BarcodePage.qml:38
 #, kde-format
 msgid "Code 93"
 msgstr "Koda 93"
 
-#: declarative/qml/BarcodePage.qml:37
+#: declarative/qml/BarcodePage.qml:39
 #, kde-format
 msgid "Code 128"
 msgstr "Koda 128"
 
-#: declarative/qml/BarcodePage.qml:53
+#: declarative/qml/BarcodePage.qml:54
 #, kde-format
 msgid "Return to Clipboard"
 msgstr "Vrni na odložišče"
 
-#: declarative/qml/BarcodePage.qml:89
+#: declarative/qml/BarcodePage.qml:99
 #, kde-format
 msgctxt "@action:button Copy to clipboard"
 msgid "Copy"
 msgstr "Kopiraj"
 
-#: declarative/qml/BarcodePage.qml:95
+#: declarative/qml/BarcodePage.qml:105
 #, kde-format
 msgctxt "@info:status"
 msgid "An image of the QR code has been copied to clipboard"
 msgstr "Slika kode QR je bila prekopirana na odložišče"
 
-#: declarative/qml/BarcodePage.qml:101
+#: declarative/qml/BarcodePage.qml:111
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Copy QR code image to clipboard"
 msgstr "Kopiraj sliko kode QR na odložišče"
 
-#: declarative/qml/BarcodePage.qml:112
+#: declarative/qml/BarcodePage.qml:122
 #, kde-format
 msgid "Change the QR code type"
 msgstr "Spremeni vrsto kode QR"
 
-#: declarative/qml/BarcodePage.qml:197
+#: declarative/qml/BarcodePage.qml:207
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
@@ -327,7 +327,7 @@ msgstr ""
 "Ni dovolj prostora za prikaz kode QR. Poskusite spremeniti velikost tega "
 "programčka."
 
-#: declarative/qml/BarcodePage.qml:197
+#: declarative/qml/BarcodePage.qml:207
 #, kde-format
 msgid "Creating QR code failed"
 msgstr "Kreiranje kode QR ni uspelo"
@@ -344,27 +344,27 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "Razširi"
 
-#: declarative/qml/ClipboardMenu.qml:275
+#: declarative/qml/ClipboardMenu.qml:281
 #, kde-format
 msgid "Clear History"
 msgstr "Počisti zgodovino"
 
-#: declarative/qml/ClipboardMenu.qml:329
+#: declarative/qml/ClipboardMenu.qml:335
 #, kde-format
 msgid "All History"
 msgstr "Vso zgodovino"
 
-#: declarative/qml/ClipboardMenu.qml:334
+#: declarative/qml/ClipboardMenu.qml:340
 #, kde-format
 msgid "Starred Only"
 msgstr "Samo označeno z zvezdicami"
 
-#: declarative/qml/ClipboardMenu.qml:441
+#: declarative/qml/ClipboardMenu.qml:447
 #, kde-format
 msgid "No matches"
 msgstr "Ni ujemanj"
 
-#: declarative/qml/ClipboardMenu.qml:441
+#: declarative/qml/ClipboardMenu.qml:447
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Odložišče je prazno"
@@ -379,22 +379,22 @@ msgstr "Prikliči dejanje"
 msgid "Show QR code"
 msgstr "Prikaži kodo QR"
 
-#: declarative/qml/DelegateToolButtons.qml:47
+#: declarative/qml/DelegateToolButtons.qml:48
 #, kde-format
 msgid "Edit contents"
 msgstr "Uredi vsebine"
 
-#: declarative/qml/DelegateToolButtons.qml:53
+#: declarative/qml/DelegateToolButtons.qml:54
 #, kde-format
 msgid "Remove from history"
 msgstr "Odstrani iz zgodovine"
 
-#: declarative/qml/DelegateToolButtons.qml:58
+#: declarative/qml/DelegateToolButtons.qml:59
 #, kde-format
 msgid "Remove Star"
 msgstr "Odstrani zvezdico"
 
-#: declarative/qml/DelegateToolButtons.qml:58
+#: declarative/qml/DelegateToolButtons.qml:59
 #, kde-format
 msgid "Star"
 msgstr "Zvezdica"

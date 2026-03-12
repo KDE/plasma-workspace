@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-25 00:49+0000\n"
+"POT-Creation-Date: 2026-03-12 00:46+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -244,74 +244,74 @@ msgstr "शॉर्टकट"
 msgid "Shortcuts Configuration"
 msgstr "शॉर्टकट् विन्यासः"
 
-#: declarative/qml/BarcodePage.qml:32
+#: declarative/qml/BarcodePage.qml:34
 #, kde-format
 msgid "QR Code"
 msgstr "QR कोड"
 
-#: declarative/qml/BarcodePage.qml:33
+#: declarative/qml/BarcodePage.qml:35
 #, kde-format
 msgid "Data Matrix"
 msgstr "डाटा मैट्रिक्स"
 
-#: declarative/qml/BarcodePage.qml:34
+#: declarative/qml/BarcodePage.qml:36
 #, kde-format
 msgctxt "Aztec barcode"
 msgid "Aztec"
 msgstr "एज्टेक"
 
-#: declarative/qml/BarcodePage.qml:35
+#: declarative/qml/BarcodePage.qml:37
 #, kde-format
 msgid "Code 39"
 msgstr "संहिता 39"
 
-#: declarative/qml/BarcodePage.qml:36
+#: declarative/qml/BarcodePage.qml:38
 #, kde-format
 msgid "Code 93"
 msgstr "संहिता 93"
 
-#: declarative/qml/BarcodePage.qml:37
+#: declarative/qml/BarcodePage.qml:39
 #, kde-format
 msgid "Code 128"
 msgstr "संहिता १२८"
 
-#: declarative/qml/BarcodePage.qml:53
+#: declarative/qml/BarcodePage.qml:54
 #, kde-format
 msgid "Return to Clipboard"
 msgstr "Clipboard प्रति प्रत्यागच्छन्तु"
 
-#: declarative/qml/BarcodePage.qml:89
+#: declarative/qml/BarcodePage.qml:99
 #, kde-format
 msgctxt "@action:button Copy to clipboard"
 msgid "Copy"
 msgstr ""
 
-#: declarative/qml/BarcodePage.qml:95
+#: declarative/qml/BarcodePage.qml:105
 #, kde-format
 msgctxt "@info:status"
 msgid "An image of the QR code has been copied to clipboard"
 msgstr ""
 
-#: declarative/qml/BarcodePage.qml:101
+#: declarative/qml/BarcodePage.qml:111
 #, fuzzy, kde-format
 #| msgid "Append to clipboard"
 msgctxt "@info:tooltip"
 msgid "Copy QR code image to clipboard"
 msgstr "क्लिप्बोर्ड् मध्ये योजयन्तु"
 
-#: declarative/qml/BarcodePage.qml:112
+#: declarative/qml/BarcodePage.qml:122
 #, kde-format
 msgid "Change the QR code type"
 msgstr "QR कोड प्रकारं परिवर्तयन्तु"
 
-#: declarative/qml/BarcodePage.qml:197
+#: declarative/qml/BarcodePage.qml:207
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr ""
 "QR-सङ्केतं प्रदर्शयितुं पर्याप्तं स्थानं नास्ति । अस्य एप्लेट् इत्यस्य आकारं परिवर्तयितुं प्रयतस्व ।"
 
-#: declarative/qml/BarcodePage.qml:197
+#: declarative/qml/BarcodePage.qml:207
 #, kde-format
 msgid "Creating QR code failed"
 msgstr "QR कोडस्य निर्माणं विफलम् अभवत्"
@@ -328,28 +328,28 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "आतन्"
 
-#: declarative/qml/ClipboardMenu.qml:275
+#: declarative/qml/ClipboardMenu.qml:281
 #, kde-format
 msgid "Clear History"
 msgstr "इतिहासं स्पष्टं कुरुत"
 
-#: declarative/qml/ClipboardMenu.qml:329
+#: declarative/qml/ClipboardMenu.qml:335
 #, fuzzy, kde-format
 #| msgid "Clear History"
 msgid "All History"
 msgstr "इतिहासं स्पष्टं कुरुत"
 
-#: declarative/qml/ClipboardMenu.qml:334
+#: declarative/qml/ClipboardMenu.qml:340
 #, kde-format
 msgid "Starred Only"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:441
+#: declarative/qml/ClipboardMenu.qml:447
 #, kde-format
 msgid "No matches"
 msgstr "न मेलनं"
 
-#: declarative/qml/ClipboardMenu.qml:441
+#: declarative/qml/ClipboardMenu.qml:447
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "क्लिप्बोर्ड् रिक्तम् अस्ति"
@@ -364,23 +364,23 @@ msgstr "कर्म आह्वयन्तु"
 msgid "Show QR code"
 msgstr "QR कोड दर्शयतु"
 
-#: declarative/qml/DelegateToolButtons.qml:47
+#: declarative/qml/DelegateToolButtons.qml:48
 #, kde-format
 msgid "Edit contents"
 msgstr "सामग्रीं सम्पादयन्तु"
 
-#: declarative/qml/DelegateToolButtons.qml:53
+#: declarative/qml/DelegateToolButtons.qml:54
 #, kde-format
 msgid "Remove from history"
 msgstr "इतिहासात् निष्कासयतु"
 
-#: declarative/qml/DelegateToolButtons.qml:58
+#: declarative/qml/DelegateToolButtons.qml:59
 #, fuzzy, kde-format
 #| msgid "Remove from history"
 msgid "Remove Star"
 msgstr "इतिहासात् निष्कासयतु"
 
-#: declarative/qml/DelegateToolButtons.qml:58
+#: declarative/qml/DelegateToolButtons.qml:59
 #, kde-format
 msgid "Star"
 msgstr ""

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-25 00:49+0000\n"
+"POT-Creation-Date: 2026-03-12 00:46+0000\n"
 "PO-Revision-Date: 2024-11-04 22:00\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -258,67 +258,67 @@ msgstr "Спалучэнні клавіш"
 msgid "Shortcuts Configuration"
 msgstr "Канфігурацыя спалучэнняў клавіш"
 
-#: declarative/qml/BarcodePage.qml:32
+#: declarative/qml/BarcodePage.qml:34
 #, kde-format
 msgid "QR Code"
 msgstr "QR-код"
 
-#: declarative/qml/BarcodePage.qml:33
+#: declarative/qml/BarcodePage.qml:35
 #, kde-format
 msgid "Data Matrix"
 msgstr "Матрыца даных"
 
-#: declarative/qml/BarcodePage.qml:34
+#: declarative/qml/BarcodePage.qml:36
 #, kde-format
 msgctxt "Aztec barcode"
 msgid "Aztec"
 msgstr "Ацтэкскі"
 
-#: declarative/qml/BarcodePage.qml:35
+#: declarative/qml/BarcodePage.qml:37
 #, kde-format
 msgid "Code 39"
 msgstr "Код 39"
 
-#: declarative/qml/BarcodePage.qml:36
+#: declarative/qml/BarcodePage.qml:38
 #, kde-format
 msgid "Code 93"
 msgstr "Код 93"
 
-#: declarative/qml/BarcodePage.qml:37
+#: declarative/qml/BarcodePage.qml:39
 #, kde-format
 msgid "Code 128"
 msgstr "Код 128"
 
-#: declarative/qml/BarcodePage.qml:53
+#: declarative/qml/BarcodePage.qml:54
 #, kde-format
 msgid "Return to Clipboard"
 msgstr "Вярнуцца да буфера абмену"
 
-#: declarative/qml/BarcodePage.qml:89
+#: declarative/qml/BarcodePage.qml:99
 #, kde-format
 msgctxt "@action:button Copy to clipboard"
 msgid "Copy"
 msgstr ""
 
-#: declarative/qml/BarcodePage.qml:95
+#: declarative/qml/BarcodePage.qml:105
 #, kde-format
 msgctxt "@info:status"
 msgid "An image of the QR code has been copied to clipboard"
 msgstr ""
 
-#: declarative/qml/BarcodePage.qml:101
+#: declarative/qml/BarcodePage.qml:111
 #, fuzzy, kde-format
 #| msgid "Append to clipboard"
 msgctxt "@info:tooltip"
 msgid "Copy QR code image to clipboard"
 msgstr "Дадаць у буфер абмену"
 
-#: declarative/qml/BarcodePage.qml:112
+#: declarative/qml/BarcodePage.qml:122
 #, kde-format
 msgid "Change the QR code type"
 msgstr "Змяніць тып QR-кода"
 
-#: declarative/qml/BarcodePage.qml:197
+#: declarative/qml/BarcodePage.qml:207
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
@@ -326,7 +326,7 @@ msgstr ""
 "Недастаткова месца для паказу QR-кода. Паспрабуйце змяніць памер гэтага "
 "аплета."
 
-#: declarative/qml/BarcodePage.qml:197
+#: declarative/qml/BarcodePage.qml:207
 #, kde-format
 msgid "Creating QR code failed"
 msgstr "Не ўдалося стварыць QR-код"
@@ -343,28 +343,28 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "Разгарнуць"
 
-#: declarative/qml/ClipboardMenu.qml:275
+#: declarative/qml/ClipboardMenu.qml:281
 #, kde-format
 msgid "Clear History"
 msgstr "Ачысціць гісторыю"
 
-#: declarative/qml/ClipboardMenu.qml:329
+#: declarative/qml/ClipboardMenu.qml:335
 #, fuzzy, kde-format
 #| msgid "Clear History"
 msgid "All History"
 msgstr "Ачысціць гісторыю"
 
-#: declarative/qml/ClipboardMenu.qml:334
+#: declarative/qml/ClipboardMenu.qml:340
 #, kde-format
 msgid "Starred Only"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:441
+#: declarative/qml/ClipboardMenu.qml:447
 #, kde-format
 msgid "No matches"
 msgstr "Няма супадзенняў"
 
-#: declarative/qml/ClipboardMenu.qml:441
+#: declarative/qml/ClipboardMenu.qml:447
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Буфер абмену пусты"
@@ -379,23 +379,23 @@ msgstr "Выклікаць дзеянне"
 msgid "Show QR code"
 msgstr "Паказваць QR-код"
 
-#: declarative/qml/DelegateToolButtons.qml:47
+#: declarative/qml/DelegateToolButtons.qml:48
 #, kde-format
 msgid "Edit contents"
 msgstr "Рэдагаваць змесціва"
 
-#: declarative/qml/DelegateToolButtons.qml:53
+#: declarative/qml/DelegateToolButtons.qml:54
 #, kde-format
 msgid "Remove from history"
 msgstr "Выдаліць з гісторыі"
 
-#: declarative/qml/DelegateToolButtons.qml:58
+#: declarative/qml/DelegateToolButtons.qml:59
 #, fuzzy, kde-format
 #| msgid "Remove from history"
 msgid "Remove Star"
 msgstr "Выдаліць з гісторыі"
 
-#: declarative/qml/DelegateToolButtons.qml:58
+#: declarative/qml/DelegateToolButtons.qml:59
 #, fuzzy, kde-format
 #| msgid "Start"
 msgid "Star"

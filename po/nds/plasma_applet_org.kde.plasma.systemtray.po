@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-19 00:49+0000\n"
+"POT-Creation-Date: 2026-03-12 00:46+0000\n"
 "PO-Revision-Date: 2014-06-09 20:50+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -184,18 +184,18 @@ msgctxt "@action:button"
 msgid "Go Back"
 msgstr ""
 
-#: qml/ExpandedRepresentation.qml:72
+#: qml/ExpandedRepresentation.qml:76
 #, fuzzy, kde-format
 #| msgid "Status & Notifications"
 msgid "Status and Notifications"
 msgstr "Tostand & Bescheden"
 
-#: qml/ExpandedRepresentation.qml:169
+#: qml/ExpandedRepresentation.qml:173
 #, kde-format
 msgid "More actions"
 msgstr ""
 
-#: qml/ExpandedRepresentation.qml:255
+#: qml/ExpandedRepresentation.qml:259
 #, kde-format
 msgid "Keep Open"
 msgstr ""

@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-25 00:49+0000\n"
+"POT-Creation-Date: 2026-03-12 00:46+0000\n"
 "PO-Revision-Date: 2024-09-19 16:56+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -260,67 +260,67 @@ msgstr "Συντομεύσεις"
 msgid "Shortcuts Configuration"
 msgstr "Διαμόρφωση συντομεύσεων"
 
-#: declarative/qml/BarcodePage.qml:32
+#: declarative/qml/BarcodePage.qml:34
 #, kde-format
 msgid "QR Code"
 msgstr "Κωδικός QR"
 
-#: declarative/qml/BarcodePage.qml:33
+#: declarative/qml/BarcodePage.qml:35
 #, kde-format
 msgid "Data Matrix"
 msgstr "Matrix δεδομένων"
 
-#: declarative/qml/BarcodePage.qml:34
+#: declarative/qml/BarcodePage.qml:36
 #, kde-format
 msgctxt "Aztec barcode"
 msgid "Aztec"
 msgstr "Άζτεκ"
 
-#: declarative/qml/BarcodePage.qml:35
+#: declarative/qml/BarcodePage.qml:37
 #, kde-format
 msgid "Code 39"
 msgstr "Κωδικός 39"
 
-#: declarative/qml/BarcodePage.qml:36
+#: declarative/qml/BarcodePage.qml:38
 #, kde-format
 msgid "Code 93"
 msgstr "Κωδικός 93"
 
-#: declarative/qml/BarcodePage.qml:37
+#: declarative/qml/BarcodePage.qml:39
 #, kde-format
 msgid "Code 128"
 msgstr "Κωδικός 128"
 
-#: declarative/qml/BarcodePage.qml:53
+#: declarative/qml/BarcodePage.qml:54
 #, kde-format
 msgid "Return to Clipboard"
 msgstr "Επιστροφή στο πρόχειρο"
 
-#: declarative/qml/BarcodePage.qml:89
+#: declarative/qml/BarcodePage.qml:99
 #, kde-format
 msgctxt "@action:button Copy to clipboard"
 msgid "Copy"
 msgstr ""
 
-#: declarative/qml/BarcodePage.qml:95
+#: declarative/qml/BarcodePage.qml:105
 #, kde-format
 msgctxt "@info:status"
 msgid "An image of the QR code has been copied to clipboard"
 msgstr ""
 
-#: declarative/qml/BarcodePage.qml:101
+#: declarative/qml/BarcodePage.qml:111
 #, fuzzy, kde-format
 #| msgid "Append to clipboard"
 msgctxt "@info:tooltip"
 msgid "Copy QR code image to clipboard"
 msgstr "Προσάρτηση στο πρόχειρο"
 
-#: declarative/qml/BarcodePage.qml:112
+#: declarative/qml/BarcodePage.qml:122
 #, kde-format
 msgid "Change the QR code type"
 msgstr "Αλλαγή του τύπου κώδικα QR"
 
-#: declarative/qml/BarcodePage.qml:197
+#: declarative/qml/BarcodePage.qml:207
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
@@ -328,7 +328,7 @@ msgstr ""
 "Δεν υπάρχει αρκετός χώρος για την εμφάνιση κωδικού QR. Δοκιμάστε να αλλάξετε "
 "το μέγεθος αυτού του συστατικού."
 
-#: declarative/qml/BarcodePage.qml:197
+#: declarative/qml/BarcodePage.qml:207
 #, kde-format
 msgid "Creating QR code failed"
 msgstr "Αποτυχία δημιουργίας κώδικα QR"
@@ -345,28 +345,28 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:275
+#: declarative/qml/ClipboardMenu.qml:281
 #, kde-format
 msgid "Clear History"
 msgstr "Εκκαθάριση ιστορικού"
 
-#: declarative/qml/ClipboardMenu.qml:329
+#: declarative/qml/ClipboardMenu.qml:335
 #, fuzzy, kde-format
 #| msgid "Clear History"
 msgid "All History"
 msgstr "Εκκαθάριση ιστορικού"
 
-#: declarative/qml/ClipboardMenu.qml:334
+#: declarative/qml/ClipboardMenu.qml:340
 #, kde-format
 msgid "Starred Only"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:441
+#: declarative/qml/ClipboardMenu.qml:447
 #, kde-format
 msgid "No matches"
 msgstr "Κανένα αντίστοιχο"
 
-#: declarative/qml/ClipboardMenu.qml:441
+#: declarative/qml/ClipboardMenu.qml:447
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Το πρόχειρο είναι άδειο"
@@ -381,23 +381,23 @@ msgstr "Ανάκληση δράσης"
 msgid "Show QR code"
 msgstr "Εμφάνιση κώδικα QR"
 
-#: declarative/qml/DelegateToolButtons.qml:47
+#: declarative/qml/DelegateToolButtons.qml:48
 #, kde-format
 msgid "Edit contents"
 msgstr "Επεξεργασία περιεχομένων"
 
-#: declarative/qml/DelegateToolButtons.qml:53
+#: declarative/qml/DelegateToolButtons.qml:54
 #, kde-format
 msgid "Remove from history"
 msgstr "Αφαίρεση από το ιστορικό"
 
-#: declarative/qml/DelegateToolButtons.qml:58
+#: declarative/qml/DelegateToolButtons.qml:59
 #, fuzzy, kde-format
 #| msgid "Remove from history"
 msgid "Remove Star"
 msgstr "Αφαίρεση από το ιστορικό"
 
-#: declarative/qml/DelegateToolButtons.qml:58
+#: declarative/qml/DelegateToolButtons.qml:59
 #, fuzzy, kde-format
 #| msgid "Start"
 msgid "Star"

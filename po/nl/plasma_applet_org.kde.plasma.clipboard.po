@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-05 00:44+0000\n"
+"POT-Creation-Date: 2026-03-12 00:46+0000\n"
 "PO-Revision-Date: 2023-05-26 11:30+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -17,22 +17,22 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 23.04.1\n"
 
-#: qml/main.qml:29
+#: qml/main.qml:30
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "Klembordinhoud"
 
-#: qml/main.qml:30
+#: qml/main.qml:31
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Klembordgeschiedenis is leeg"
 
-#: qml/main.qml:61
+#: qml/main.qml:67
 #, kde-format
 msgid "Clear History"
 msgstr "Geschiedenis wissen"
 
-#: qml/main.qml:70
+#: qml/main.qml:76
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "Klembord configureren…"

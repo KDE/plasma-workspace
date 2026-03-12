@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.clipboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-05 00:44+0000\n"
+"POT-Creation-Date: 2026-03-12 00:46+0000\n"
 "PO-Revision-Date: 2025-06-04 19:38+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -18,22 +18,22 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 23.04.1\n"
 
-#: qml/main.qml:29
+#: qml/main.qml:30
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "Contenido del portapapeles"
 
-#: qml/main.qml:30
+#: qml/main.qml:31
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "El portapapeles está vacío"
 
-#: qml/main.qml:61
+#: qml/main.qml:67
 #, kde-format
 msgid "Clear History"
 msgstr "Borrar el historial"
 
-#: qml/main.qml:70
+#: qml/main.qml:76
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "Configurar el Portapapeles…"
