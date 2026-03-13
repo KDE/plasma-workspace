@@ -59,13 +59,13 @@ void Greeter::init()
     setupWaylandIntegration();
 
     if (!m_windowed) {
-        // Quit if we lost focus or failed to gain it after 1 second
+        // Quit if we lost focus or failed to gain it after 3 seconds
         auto *quitTimer = new QTimer(this);
         QObject::connect(quitTimer, &QTimer::timeout, this, [this] {
-            qCWarning(LOGOUT_GREETER) << "Failed to get focus after 1 second, quitting";
+            qCWarning(LOGOUT_GREETER) << "Failed to get focus after 3 seconds, quitting";
             quit();
         });
-        quitTimer->setInterval(1s);
+        quitTimer->setInterval(3s);
         quitTimer->setSingleShot(true);
         quitTimer->start();
         QObject::connect(qApp, &QGuiApplication::applicationStateChanged, this, [this, quitTimer = QPointer(quitTimer)](Qt::ApplicationState state) {
