@@ -10,6 +10,11 @@
       <label>If true it only shows a button for the application menu.</label>
       <default>false</default>
     </entry>
+
+    <entry name="allScreens" type="Bool">
+      <label>Whether to show menus for apps on all screens, instead of just the one with the applet.</label>
+      <default>true</default>
+    </entry>
   </group>
 
 </kcfg>

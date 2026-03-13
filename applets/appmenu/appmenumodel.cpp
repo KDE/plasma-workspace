@@ -43,7 +43,7 @@ AppMenuModel::AppMenuModel(QObject *parent)
     , m_tasksModel(new TaskManager::TasksModel(this))
     , m_serviceWatcher(new QDBusServiceWatcher(this))
 {
-    m_tasksModel->setFilterByScreen(true);
+    m_tasksModel->setFilterByScreen(!m_allScreens);
     connect(m_tasksModel, &TaskManager::TasksModel::activeTaskChanged, this, &AppMenuModel::onActiveWindowChanged);
     connect(m_tasksModel,
             &TaskManager::TasksModel::dataChanged,
@@ -127,6 +127,22 @@ void AppMenuModel::setMenuAvailable(bool set)
         setVisible(true);
         Q_EMIT menuAvailableChanged();
     }
+}
+
+bool AppMenuModel::allScreens() const
+{
+    return m_allScreens;
+}
+
+void AppMenuModel::setallScreens(bool allScreens)
+{
+    if (m_allScreens == allScreens) {
+        return;
+    }
+
+    m_allScreens = allScreens;
+    m_tasksModel->setFilterByScreen(!m_allScreens);
+    Q_EMIT allScreensChanged();
 }
 
 bool AppMenuModel::visible() const

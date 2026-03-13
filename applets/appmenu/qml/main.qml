@@ -147,6 +147,7 @@ PlasmoidItem {
         id: appMenuModel
         containmentStatus: Plasmoid.containment.status
         screenGeometry: root.screenGeometry
+        allScreens: Plasmoid.configuration.allScreens
         onRequestActivateIndex: Plasmoid.requestActivateIndex(index)
         Component.onCompleted: {
             Plasmoid.model = appMenuModel;

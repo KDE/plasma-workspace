@@ -13,6 +13,7 @@ import org.kde.kcmutils as KCM
 
 KCM.SimpleKCM {
     property alias cfg_compactView: compactViewRadioButton.checked
+    property alias cfg_allScreens: allScreensCheckBox.checked
 
     Kirigami.FormLayout {
         RadioButton {
@@ -24,6 +25,11 @@ KCM.SimpleKCM {
             id: fullViewRadioButton
             checked: !compactViewRadioButton.checked
             text: i18n("Show full application menu")
+        }
+
+        CheckBox {
+            id: allScreensCheckBox
+            text: i18n("Show menus for apps on different screens")
         }
     }
 }

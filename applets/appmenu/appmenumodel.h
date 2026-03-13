@@ -29,6 +29,7 @@ class AppMenuModel : public QAbstractListModel
 
     Q_PROPERTY(bool menuAvailable READ menuAvailable WRITE setMenuAvailable NOTIFY menuAvailableChanged)
     Q_PROPERTY(bool visible READ visible NOTIFY visibleChanged)
+    Q_PROPERTY(bool allScreens READ allScreens WRITE setallScreens NOTIFY allScreensChanged)
 
     Q_PROPERTY(Plasma::Types::ItemStatus containmentStatus MEMBER m_containmentStatus NOTIFY containmentStatusChanged)
     Q_PROPERTY(QRect screenGeometry READ screenGeometry WRITE setScreenGeometry NOTIFY screenGeometryChanged)
@@ -51,6 +52,9 @@ public:
     bool menuAvailable() const;
     void setMenuAvailable(bool set);
 
+    bool allScreens() const;
+    void setallScreens(bool allScreens);
+
     bool visible() const;
 
     QRect screenGeometry() const;
@@ -67,6 +71,7 @@ private Q_SLOTS:
     void update();
 
 Q_SIGNALS:
+    void allScreensChanged();
     void menuAvailableChanged();
     void modelNeedsUpdate();
     void containmentStatusChanged();
@@ -75,6 +80,7 @@ Q_SIGNALS:
 
 private:
     bool m_menuAvailable;
+    bool m_allScreens = true;
     bool m_updatePending = false;
     bool m_visible = true;
 
