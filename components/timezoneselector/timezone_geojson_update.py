@@ -1,3 +1,4 @@
+#!/bin/env python
 #
 # SPDX-FileCopyrightText: 2024 Niccolò Venerandi <niccolo@venerandi.com>
 #
@@ -58,7 +59,9 @@ def unzip_file(zip_file_path, extract_to='.'):
 def run_mapshaper(json_file, output_name):
     """Run mapshaper on the specified JSON file."""
     print(f"Running mapshaper on {json_file}...")
-    subprocess.run(['mapshaper', json_file, "-simplify", "0.2%", "keep-shapes", "-o", output_name])
+    subprocess.run(['mapshaper', json_file, "-simplify", "0.2%", "keep-shapes", "-o", "timezones_unmerged.json"])
+    subprocess.run(['mapshaper', "timezones_unmerged.json", "-join", "tz_group_map.csv", "keys=tzid,tzid", "-dissolve", "merged", "-o", output_name])
+
 
 # Example usage
 owner = "evansiroky"  # GitHub repository owner
