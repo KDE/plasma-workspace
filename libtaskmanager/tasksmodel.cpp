@@ -1029,9 +1029,6 @@ TasksModel::TasksModel(QObject *parent)
 {
     d->initModels();
 
-    // Start sorting.
-    sort(0);
-
     connect(this, &TasksModel::sourceModelChanged, this, &TasksModel::countChanged);
 
     // Private::updateGroupInline() sets our source model, populating the model. We
@@ -1044,6 +1041,10 @@ TasksModel::TasksModel(QObject *parent)
     // directly.
     QTimer::singleShot(0, this, [this]() {
         d->updateGroupInline();
+        // Start sorting only once the models are set up and everyone is ready.
+        // This avoids problems where the sorting may be incorrect when updateGroupInline mutates rows.
+        // Notably causing strange mapping problems where items are out of order until the model changes rows.
+        sort(0);
     });
 }
 
