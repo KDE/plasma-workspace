@@ -8,9 +8,6 @@
 #include "Fc.h"
 
 #include <QFontInfo>
-#include <QGuiApplication>
-#include <QScreen>
-#include <QWindow>
 
 #ifdef HAVE_FONTCONFIG
 
@@ -95,15 +92,16 @@ PreviewRenderEngine::PreviewRenderEngine(bool init)
 
 PreviewRenderEngine::~PreviewRenderEngine() = default;
 
-QImage PreviewRenderEngine::drawAutoSize(const QFont &font, const QColor &txt, const QColor &bgnd, const QString &text)
+QImage PreviewRenderEngine::drawAutoSize(const QFont &font, const qreal dpr, const QColor &textColor, const QColor &backgroundColor, const QString &text)
 {
     const QString &name = font.family();
     const quint32 style = qtToFcStyle(font);
     const int faceNo = 0;
-    const QFontInfo info(font);
-    const int fSize(info.pixelSize());
 
-    QImage image(draw(name, style, faceNo, txt, bgnd, fSize, text));
+    const QFontInfo info(font);
+    const int fSize = qRound(info.pixelSize() * dpr);
+
+    QImage image(draw(name, style, faceNo, textColor, backgroundColor, fSize, text));
     return image;
 }
 

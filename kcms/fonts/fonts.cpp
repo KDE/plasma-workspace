@@ -33,6 +33,7 @@
 #include <KWindowSystem>
 
 #include "../kcms-common_p.h"
+#include "devicepixelratiohelper.h"
 #include "krdb.h"
 #include "kxftconfig.h"
 #include "previewimageprovider.h"
@@ -56,6 +57,7 @@ KFonts::KFonts(QObject *parent, const KPluginMetaData &metaData)
     qmlRegisterAnonymousType<QStandardItemModel>("QStandardItemModel", 1);
     qmlRegisterAnonymousType<FontsSettings>("FontsSettings", 1);
     qmlRegisterAnonymousType<FontsAASettings>("FontsAASettings", 1);
+    qmlRegisterType<DevicePixelRatioHelper>("org.kde.plasma.kcm.fonts", 1, 0, "DevicePixelRatioHelper");
 
     setButtons(Apply | Default | Help);
 

@@ -20,6 +20,7 @@ target_sources(kcm_fonts PRIVATE
     fontinit.cpp
     ../kfontinst/lib/FcEngine.cpp
     ../kcms-common.cpp
+    devicepixelratiohelper.cpp
 )
 
 kcmutils_generate_module_data(kcm_fonts
