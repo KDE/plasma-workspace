@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-24 02:42+0000\n"
-"PO-Revision-Date: 2026-01-09 16:55+0000\n"
+"PO-Revision-Date: 2026-03-12 08:19+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
 "Language: is\n"
@@ -81,11 +81,10 @@ msgid "When restarted, the computer will enter the boot loader menu."
 msgstr "Við endurræsingu fer tölvan á skjáinn með "
 
 #: contents/logout/Logout.qml:215
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will switch to %1."
+#, kde-format
 msgctxt "%1 is a boot loader entry"
 msgid "When restarted, the computer will switch to %1."
-msgstr "Við endurræsingu skiptir tölvan yfir á %1."
+msgstr "Við endurræsingu mun tölvan skipta yfir á %1."
 
 #: contents/logout/Logout.qml:237
 #, kde-format
