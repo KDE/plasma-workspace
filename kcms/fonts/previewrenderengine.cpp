@@ -7,6 +7,7 @@
 #include "previewrenderengine.h"
 #include "Fc.h"
 
+#include <QFontInfo>
 #include <QGuiApplication>
 #include <QScreen>
 #include <QWindow>
@@ -98,13 +99,9 @@ QImage PreviewRenderEngine::drawAutoSize(const QFont &font, const QColor &txt, c
 {
     const QString &name = font.family();
     const quint32 style = qtToFcStyle(font);
-    int faceNo = 0;
-
-    auto focusWindow = QGuiApplication::focusWindow();
-    double dpi = focusWindow->screen()->logicalDotsPerInch();
-    double ratio = focusWindow->devicePixelRatio();
-
-    int fSize((int)(((font.pointSizeF() * dpi * ratio) / 72.0) + 0.5));
+    const int faceNo = 0;
+    const QFontInfo info(font);
+    const int fSize(info.pixelSize());
 
     QImage image(draw(name, style, faceNo, txt, bgnd, fSize, text));
     return image;
