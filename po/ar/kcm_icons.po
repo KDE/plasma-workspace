@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-31 00:45+0000\n"
-"PO-Revision-Date: 2026-01-31 20:32+0400\n"
+"PO-Revision-Date: 2026-03-12 10:09+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -40,7 +40,7 @@ msgstr "لم يتمكن من إنشاء ملف مؤقت"
 #: main.cpp:158
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
-msgstr "لم يتمكن من تنزيل سمة الأيقونات: %1"
+msgstr "لم يتمكن من تنزيل أرشيف سمة الأيقونات: %1"
 
 #: main.cpp:172
 #, kde-format

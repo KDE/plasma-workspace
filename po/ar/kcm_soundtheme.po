@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
+# SPDX-FileCopyrightText: 2024, 2026 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 #
-# SPDX-FileCopyrightText: 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-11 00:49+0000\n"
-"PO-Revision-Date: 2024-02-22 12:55+0400\n"
+"PO-Revision-Date: 2026-03-12 10:12+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: kcm_soundtheme.cpp:156
 #, kde-format
@@ -32,43 +33,43 @@ msgstr "سمة صوتية احتياطية من freedesktop.org"
 #, kde-format
 msgctxt "@info:status"
 msgid "Unable to create a temporary file."
-msgstr ""
+msgstr "لم يتمكن من إنشاء ملف مؤقت"
 
 #: kcm_soundtheme.cpp:259
 #, kde-format
 msgctxt "@info:status"
 msgid "Unable to download the sound theme archive: %1"
-msgstr ""
+msgstr "لم يتمكن من تنزيل أرشيف سمة الصوت: %1"
 
 #: kcm_soundtheme.cpp:270
 #, kde-format
 msgctxt "@info:status"
 msgid "The archive could not be opened."
-msgstr ""
+msgstr "تعذّر فتح الأرشيف."
 
 #: kcm_soundtheme.cpp:275
 #, kde-format
 msgctxt "@info:status"
 msgid "Theme installed successfully."
 msgid_plural "Themes installed successfully."
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
-msgstr[4] ""
-msgstr[5] ""
+msgstr[0] "ثُبتت السمة بنجاح."
+msgstr[1] "ثُبتت السمة بنجاح."
+msgstr[2] "ثُبتت السمتان بنجاح."
+msgstr[3] "ثُبتت السمات بنجاح."
+msgstr[4] "ثُبتت السمات بنجاح."
+msgstr[5] "ثُبتت السمات بنجاح."
 
 #: kcm_soundtheme.cpp:278
 #, kde-format
 msgctxt "@info:status"
 msgid "The archive does not contain a valid sound theme."
-msgstr ""
+msgstr "الأرشيف لا يحوي على سمة صوت صالحة."
 
 #: ui/main.qml:35
 #, kde-format
 msgctxt "@action:button Install sound theme from file"
 msgid "Install from File…"
-msgstr ""
+msgstr "ثبت من ملف…"
 
 #: ui/main.qml:42
 #, kde-format
@@ -125,9 +126,9 @@ msgstr "فشل في معاينة الصوت: %1"
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Sound Theme"
-msgstr ""
+msgstr "اختر سمة الصوت"
 
 #: ui/main.qml:250
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2 *.tar.xz *.tar.lz *.zip)"
-msgstr ""
+msgstr "ملفات السمة (*.tar.gz *.tar.bz2 *.tar.xz *.tar.lz *.zip)"

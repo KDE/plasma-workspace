@@ -32,38 +32,38 @@ msgstr "来自 freedesktop.org 的备用声音主题"
 #, kde-format
 msgctxt "@info:status"
 msgid "Unable to create a temporary file."
-msgstr ""
+msgstr "无法创建临时文件。"
 
 #: kcm_soundtheme.cpp:259
 #, kde-format
 msgctxt "@info:status"
 msgid "Unable to download the sound theme archive: %1"
-msgstr ""
+msgstr "无法下载声音主题压缩文件：%1"
 
 #: kcm_soundtheme.cpp:270
 #, kde-format
 msgctxt "@info:status"
 msgid "The archive could not be opened."
-msgstr ""
+msgstr "无法打开此压缩包文件。"
 
 #: kcm_soundtheme.cpp:275
 #, kde-format
 msgctxt "@info:status"
 msgid "Theme installed successfully."
 msgid_plural "Themes installed successfully."
-msgstr[0] ""
+msgstr[0] "主题安装成功。"
 
 #: kcm_soundtheme.cpp:278
 #, kde-format
 msgctxt "@info:status"
 msgid "The archive does not contain a valid sound theme."
-msgstr ""
+msgstr "此压缩包没有包含有效的声音主题。"
 
 #: ui/main.qml:35
 #, kde-format
 msgctxt "@action:button Install sound theme from file"
 msgid "Install from File…"
-msgstr ""
+msgstr "安装声音主题文件…"
 
 #: ui/main.qml:42
 #, kde-format
@@ -115,9 +115,9 @@ msgstr "预览声音失败：%1"
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose Sound Theme"
-msgstr ""
+msgstr "选择声音主题"
 
 #: ui/main.qml:250
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2 *.tar.xz *.tar.lz *.zip)"
-msgstr ""
+msgstr "主题文件 (*.tar.gz *.tar.bz2 *.tar.xz *.tar.lz *.zip)"

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-07 00:46+0000\n"
-"PO-Revision-Date: 2026-01-31 17:32+0530\n"
+"PO-Revision-Date: 2026-03-12 20:44+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-l10n-ta@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -698,7 +698,7 @@ msgstr ""
 #, kde-format
 msgid ""
 "This scheme is read-only. Please save the modifications with another name."
-msgstr ""
+msgstr "இத்தோற்றத்திட்டம் படிக்க முட்டும் கூடியது. மாற்றங்களை வேறு பெயரில் சேமிக்கவும்."
 
 #: editor/scmeditordialog.cpp:178
 #, kde-format
@@ -814,15 +814,15 @@ msgstr "முடங்கிய உக்கிர தாக்க அளவு
 
 #. i18n: ectx: property (toolTip), widget (KColorButton, colorButton)
 #: editor/scmeditoreffects.ui:158
-#, fuzzy, kde-format
+#, kde-format
 msgid "Disabled color"
-msgstr "முடங்கிய நிறம்"
+msgstr "முடங்கியவற்றிற்கான நிறம்"
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, contrastBox)
 #: editor/scmeditoreffects.ui:181
-#, fuzzy, kde-format
+#, kde-format
 msgid "Disabled contrast type"
-msgstr "முடங்கிய நிறவேறுபாட்டு வகை"
+msgstr "முடங்கியவற்றிற்கான நிறவேறுபாட்டு வகை"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
 #: editor/scmeditoreffects.ui:185
@@ -848,9 +848,9 @@ msgstr "டின்ட்"
 
 #. i18n: ectx: property (toolTip), widget (QSlider, contrastSlider)
 #: editor/scmeditoreffects.ui:222
-#, fuzzy, kde-format
+#, kde-format
 msgid "Disabled contrast amount"
-msgstr "முடங்கிய நிறவேறுபாட்டு அளவு"
+msgstr "முடங்கியவற்றிற்கான நிறவேறுபாட்டு அளவு"
 
 #. i18n: ectx: property (text), widget (QCheckBox, useInactiveEffects)
 #: editor/scmeditoroptions.ui:17
