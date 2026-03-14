@@ -1,21 +1,21 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# SPDX-FileCopyrightText: 2019, 2020, 2021, 2023, 2024, 2025 Vit Pelcak <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2023, 2024, 2025, 2026 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-13 08:43+0000\n"
-"PO-Revision-Date: 2025-10-17 12:06+0200\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2026-03-13 14:10+0100\n"
+"Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: kcm.cpp:62
 #, kde-format
@@ -91,14 +91,13 @@ msgstr "Vybrat zvukový soubor"
 #, kde-format
 msgctxt "@action:button Plasma-specific notifications"
 msgid "Configure for System…"
-msgstr ""
+msgstr "Nastavit pro systém…"
 
 #: ui/main.qml:53
-#, fuzzy, kde-format
-#| msgid "Other Applications"
+#, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Configure for Applications…"
-msgstr "Ostatní aplikace"
+msgstr "Nastavit pro aplikace…"
 
 #: ui/main.qml:96
 #, kde-format
@@ -208,7 +207,7 @@ msgstr "Poblíž ikony upozornění"
 #, kde-format
 msgctxt "@action:button choose custom notification position"
 msgid "Choose…"
-msgstr ""
+msgstr "Vybrat…"
 
 #: ui/main.qml:278 ui/main.qml:294
 #, kde-format
@@ -225,13 +224,11 @@ msgid "Hide after:"
 msgstr "Skrýt po:"
 
 #: ui/main.qml:306
-#, fuzzy, kde-format
-#| msgctxt "Show application jobs in notification widget"
-#| msgid "Show in notifications"
+#, kde-format
 msgctxt ""
 "@option:check Show progress bar on notifications indicating when it will hide"
 msgid "Show timeout indicator"
-msgstr "Zobrazit v upozorněních"
+msgstr "Zobrazit indikátor časového limitu"
 
 #: ui/main.qml:318
 #, kde-format
@@ -272,12 +269,11 @@ msgid "Popup Position"
 msgstr "Umístění vyskakovacího okna"
 
 #: ui/SourcesPage.qml:20
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt ""
 "@title:window kcm page title, configure app-specific notification settings"
 msgid "Application Notifications"
-msgstr "Nastavení aplikace"
+msgstr "Upozornění aplikací"
 
 #: ui/SourcesPage.qml:104
 #, kde-format

@@ -1,21 +1,21 @@
 # Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# SPDX-FileCopyrightText: 2025 Vit Pelcak <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2025, 2026 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2025-10-02 09:49+0200\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2026-03-13 14:14+0100\n"
+"Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: geotimezonemodule.cpp:186
 #, kde-format
@@ -29,14 +29,15 @@ msgctxt ""
 "System clock was changed due to time zone change OSD, keep short: new time "
 "(time zone)"
 msgid "Clock changed to %1 (%2)"
-msgstr ""
+msgstr "Hodiny změněny na %1 (%2)"
 
 #: geotimezonemodule.cpp:205
 #, kde-format
 msgid "Refresh is already in progress."
-msgstr ""
+msgstr "Aktualizace již probíhá."
 
 #: geotimezonemodule.cpp:268
 #, kde-format
 msgid "Received no or an invalid time zone."
 msgstr ""
+"Nebylo přijato žádné časové pásmo nebo bylo přijato neplatné časové pásmo."

@@ -1,21 +1,21 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# SPDX-FileCopyrightText: 2023, 2024 Vit Pelcak <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2023, 2024, 2026 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-29 00:44+0000\n"
-"PO-Revision-Date: 2024-04-17 09:46+0200\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2026-03-13 14:16+0100\n"
+"Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: kded/mprisservice.cpp:131
 #, kde-format
@@ -42,36 +42,28 @@ msgid "Media playback previous"
 msgstr "Předchozí média"
 
 #: kded/mprisservice.cpp:144
-#, fuzzy, kde-format
-#| msgctxt "@title shortcut"
-#| msgid "Media playback previous"
+#, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback seek forward 5s"
-msgstr "Předchozí média"
+msgstr "Přeskočit vpřed o 5 sekund při přehrávání"
 
 #: kded/mprisservice.cpp:148
-#, fuzzy, kde-format
-#| msgctxt "@title shortcut"
-#| msgid "Media playback next"
+#, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback seek backward 5s"
-msgstr "Další média"
+msgstr "Přeskočit vzad o 5 sekund při přehrávání"
 
 #: kded/mprisservice.cpp:152
-#, fuzzy, kde-format
-#| msgctxt "@title shortcut"
-#| msgid "Media playback previous"
+#, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback seek forward 30s"
-msgstr "Předchozí média"
+msgstr "Přeskočit vpřed o 30 sekund při přehrávání"
 
 #: kded/mprisservice.cpp:156
-#, fuzzy, kde-format
-#| msgctxt "@title shortcut"
-#| msgid "Media playback next"
+#, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback seek backward 30s"
-msgstr "Další média"
+msgstr "Přeskočit vzad o 30 sekund při přehrávání"
 
 #: kded/mprisservice.cpp:159
 #, kde-format

@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Lukáš Tinkl <ltinkl@redhat.com>, 2010.
 # Tomáš Chvátal <tomas.chvatal@gmail.com>, 2010.
-# SPDX-FileCopyrightText: 2010, 2011, 2012, 2014, 2015, 2016, 2017, 2019, 2020, 2023, 2024 Vít Pelčák <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2010, 2011, 2012, 2014, 2015, 2016, 2017, 2019, 2020, 2023, 2024, 2026 Vít Pelčák <vit@pelcak.org>
 # Vit Pelcak <vit@pelcak.org>, 2021, 2022, 2023.
 #
 msgid ""
@@ -10,27 +10,29 @@ msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:54+0000\n"
-"PO-Revision-Date: 2024-08-30 16:30+0200\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2026-03-13 14:02+0100\n"
+"Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Lukáš Tinkl, Vít Pelčák, Tomáš Chvátal,Marián Kyral,Lukáš Kucharczyk"
+msgstr ""
+"Lukáš Tinkl, Vít Pelčák, Tomáš Chvátal,Marián Kyral,Lukáš Kucharczyk,Libor "
+"Filípek"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
 "lukas@kde.org, vit@pelcak.org, tomas.chvatal@gmail.com,mkyral@email.cz,"
-"lukas@kucharczyk.xyz"
+"lukas@kucharczyk.xyz,libor.filipek@gmail.com"
 
 #: colors.cpp:253
 #, kde-format
@@ -81,6 +83,8 @@ msgid ""
 "The last used custom accent color before user switched to wallpaper "
 "generated color or default color"
 msgstr ""
+"Poslední použitá vlastní barva zvýraznění předtím, než uživatel přepnul na "
+"barvu generovanou tapetou nebo výchozí barvu"
 
 #. i18n: ectx: label, entry (accentColorFromWallpaper), group (General)
 #: colorssettings.kcfg:21
@@ -878,13 +882,13 @@ msgstr "Síla zbarvení:"
 #: editor/scmeditoroptions.ui:69
 #, kde-format
 msgid "Contrast of the frames, separators and outlines"
-msgstr ""
+msgstr "Kontrast rámečků, oddělovačů a obrysů"
 
 #. i18n: ectx: property (title), widget (QGroupBox, groupBox_5)
 #: editor/scmeditoroptions.ui:72
 #, kde-format
 msgid "Frames and Outlines"
-msgstr ""
+msgstr "Rámečky a obrysy"
 
 #. i18n: ectx: property (text), widget (KMessageWidget, contrastValueWarning)
 #: editor/scmeditoroptions.ui:93
@@ -893,6 +897,8 @@ msgid ""
 "Contrast values below 15% may produce visually awkward effects with some "
 "applications and color schemes. Consider yourself warned!"
 msgstr ""
+"Hodnoty kontrastu pod 15 % mohou u některých aplikací a barevných schémat "
+"vyvolat vizuálně nepříjemné efekty. Berte to jako varování!"
 
 #. i18n: ectx: property (suffix), widget (QDoubleSpinBox, contrastPercentageSpinBox)
 #: editor/scmeditoroptions.ui:109
@@ -1183,6 +1189,10 @@ msgid ""
 "w3.org/TR/SVG11/types.html#ColorKeywords) and hex color codes are supported. "
 "Quote the hex code if there is possibility of shell expansion"
 msgstr ""
+"Název barvy, kterou chcete nastavit. Jsou podporovány názvy barev SVG "
+"(https://www.w3.org/TR/SVG11/types.html#ColorKeywords) a hexadecimální kódy "
+"barev. Pokud existuje možnost rozšíření shellu, uveďte hexadecimální kód v "
+"uvozovkách."
 
 #: plasma-apply-colorscheme.cpp:80
 #, kde-format

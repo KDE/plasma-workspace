@@ -1,6 +1,6 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2010, 2011, 2012, 2014, 2017, 2019, 2020, 2023, 2024 Vít Pelčák <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2010, 2011, 2012, 2014, 2017, 2019, 2020, 2023, 2024, 2026 Vít Pelčák <vit@pelcak.org>
 # Lukáš Tinkl <ltinkl@redhat.com>, 2011, 2012.
 # Tomáš Chvátal <tomas.chvatal@gmail.com>, 2012, 2013.
 # SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Vit Pelcak <vit@pelcak.org>
@@ -10,15 +10,15 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-12 02:38+0000\n"
-"PO-Revision-Date: 2025-10-17 13:23+0200\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2026-03-13 14:15+0100\n"
+"Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: configdialog.cpp:84
 #, kde-format
@@ -117,6 +117,10 @@ msgid ""
 "excluded window, then it can be shown by using the <shortcut>%1</shortcut> "
 "key shortcut."
 msgstr ""
+"Když je vybrán text, který odpovídá vzoru akce, nebo je vybrán z historie "
+"schránky, automaticky se zobrazí rozbalovací nabídka s příslušnými akcemi. "
+"Pokud je automatická nabídka zde vypnutá nebo se nezobrazuje pro vyloučené "
+"okno, lze ji zobrazit pomocí klávesové zkratky <shortcut>%1</shortcut>."
 
 #: configdialog.cpp:285
 #, kde-format
@@ -195,6 +199,7 @@ msgid ""
 "Delete the selected action <resource>%1</resource><nl/>and all of its "
 "commands?"
 msgstr ""
+"Odstranit vybranou akci <resource>%1</resource><nl/>a všechny její příkazy?"
 
 #: configdialog.cpp:547
 #, kde-format
@@ -387,7 +392,7 @@ msgstr "Hvězda"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Text edit area"
-msgstr ""
+msgstr "Oblast pro úpravu textu"
 
 #: declarative/qml/EditPage.qml:81
 #, kde-format
@@ -588,12 +593,12 @@ msgstr "Připojit do schránky"
 #: editcommanddialog.cpp:103
 #, kde-format
 msgid "What happens to the standard output of the command executed."
-msgstr ""
+msgstr "Co se stane se standardním výstupem provedeného příkazu."
 
 #: editcommanddialog.cpp:117
 #, kde-format
 msgid "Reset the icon to the default for the command"
-msgstr ""
+msgstr "Obnovit ikonu pro příkaz na výchozí hodnotu"
 
 #: editcommanddialog.cpp:123
 #, kde-format
@@ -729,12 +734,13 @@ msgid ""
 "Retain the clipboard history, so it will be available the next time you log "
 "in."
 msgstr ""
+"Uchovat historii schránky, aby byla k dispozici při příštím přihlášení."
 
 #. i18n: ectx: label, entry (PreventEmptyClipboard), group (General)
 #: klipper.kcfg:18
 #, kde-format
 msgid "Prevent the clipboard from being cleared"
-msgstr ""
+msgstr "Zabránit vymazání schránky"
 
 #. i18n: ectx: whatsthis, entry (PreventEmptyClipboard), group (General)
 #: klipper.kcfg:20
@@ -742,7 +748,7 @@ msgstr ""
 msgid ""
 "Do not allow the clipboard to be cleared, for example when an application "
 "exits."
-msgstr ""
+msgstr "Neumožnit vymazání schránky, například při ukončení aplikace."
 
 #. i18n: ectx: label, entry (SyncClipboards), group (General)
 #: klipper.kcfg:27
@@ -793,6 +799,8 @@ msgid ""
 "Only store text selections in the clipboard history, not images or any other "
 "type of data."
 msgstr ""
+"Do historie schránky ukládat pouze výběry textu, nikoli obrázky ani žádné "
+"jiné typy dat."
 
 #. i18n: ectx: label, entry (IgnoreImages), group (General)
 #: klipper.kcfg:42
@@ -826,6 +834,7 @@ msgstr "Okamžitě po vybrání"
 msgid ""
 "Show the popup menu of applicable actions as soon as a selection is made."
 msgstr ""
+"Jakmile je proveden výběr, zobrazí se vyskakovací nabídka příslušných akcí."
 
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
 #: klipper.kcfg:56
@@ -849,7 +858,7 @@ msgstr "Velikost historie:"
 #: klipper.kcfg:67
 #, kde-format
 msgid "The clipboard history will store up to this many items."
-msgstr ""
+msgstr "Historie schránky uloží až tolik položek."
 
 #. i18n: ectx: label, entry (ActionList), group (General)
 #: klipper.kcfg:70
@@ -880,7 +889,7 @@ msgstr ""
 #: klipper.kcfg:85
 #, kde-format
 msgid "For an item chosen from history"
-msgstr ""
+msgstr "Pro položku vybranou z historie"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:87
@@ -889,6 +898,8 @@ msgid ""
 "Show the popup menu of applicable actions if an entry is chosen from the "
 "clipboard history."
 msgstr ""
+"Zobrazí se rozbalovací nabídka příslušných akcí, pokud je vybrána položka z "
+"historického záznamu schránky."
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
 #: klipper.kcfg:90
@@ -909,7 +920,7 @@ msgstr ""
 #: klipperpopup.cpp:37
 #, kde-format
 msgid "Clipboard Popup"
-msgstr ""
+msgstr "Vyskakovací okno schránky"
 
 #: urlgrabber.cpp:197
 #, kde-format
