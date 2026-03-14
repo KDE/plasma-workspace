@@ -1,21 +1,21 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
-# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024, 2025 Vit Pelcak <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024, 2025, 2026 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-03 00:49+0000\n"
-"PO-Revision-Date: 2025-10-17 13:32+0200\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2026-03-13 14:14+0100\n"
+"Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: src/fingerprintmodel.cpp:144 src/fingerprintmodel.cpp:228
 #, kde-format
@@ -102,6 +102,8 @@ msgid ""
 "Now that you have changed your login password, consider changing the "
 "password on your default KWallet to match it."
 msgstr ""
+"Nyní, když jste změnili své přihlašovací heslo, zvažte změnu hesla ve vašem "
+"výchozím KWallet, aby se shodovalo."
 
 #: src/ui/ChangeWalletPassword.qml:35
 #, kde-format
@@ -373,7 +375,7 @@ msgstr "Přidat nového uživatele…"
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Press Space to edit the user profile"
-msgstr ""
+msgstr "Stiskněte mezerník pro úpravu profilu uživatele."
 
 #: src/ui/PickFinger.qml:28
 #, kde-format
@@ -456,13 +458,13 @@ msgstr "Plazmově modrá"
 #, kde-format
 msgctxt "@item:intable"
 msgid "Pon Purple"
-msgstr ""
+msgstr "Fialová (Pon)"
 
 #: src/ui/PicturesSheet.qml:40
 #, kde-format
 msgctxt "@item:intable"
 msgid "Bajo Purple"
-msgstr ""
+msgstr "Fialová (Bajo)"
 
 #: src/ui/PicturesSheet.qml:41
 #, kde-format
@@ -530,19 +532,19 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button"
 msgid "Placeholder Icon"
-msgstr ""
+msgstr "Ikona zástupného prvku"
 
 #: src/ui/PicturesSheet.qml:290
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"
-msgstr ""
+msgstr "Ikona zástupného symbolu avatara uživatele"
 
 #: src/ui/UserDetailsPage.qml:114
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User Without Deleting Files?"
-msgstr ""
+msgstr "Odstranit přihlášeného uživatele bez odstranění souborů?"
 
 #: src/ui/UserDetailsPage.qml:115
 #, kde-format
@@ -558,6 +560,9 @@ msgid ""
 "account instead?<nl/><nl/>This will make %1 unable to log in again, and they "
 "may experience strange behaviors until they log out."
 msgstr ""
+"%1 je momentálně přihlášen, takže jeho soubory nelze smazat. Chcete místo "
+"toho smazat pouze účet?<nl/><nl/>Tímto krokem se %1 nebude moci znovu "
+"přihlásit a může docházet k neobvyklému chování, dokud se neodhlásí."
 
 #: src/ui/UserDetailsPage.qml:118
 #, kde-format
@@ -566,6 +571,8 @@ msgid ""
 "%1 is currently logged in. Deleting the account will make them unable to log "
 "in again, and they may experience strange behaviors until they log out."
 msgstr ""
+"%1 je momentálně přihlášen. Smazání účtu způsobí, že se nebude moci znovu "
+"přihlásit a do odhlášení se může setkat s neobvyklým chováním."
 
 #: src/ui/UserDetailsPage.qml:125
 #, kde-format
@@ -585,6 +592,9 @@ msgid ""
 "Cannot change your own username while logged in; log out and then log in as "
 "another user to change this account’s username."
 msgstr ""
+"Po přihlášení nelze změnit vlastní uživatelské jméno; odhlaste se a poté se "
+"přihlaste jako jiný uživatel, abyste mohli změnit uživatelské jméno tohoto "
+"účtu."
 
 #: src/ui/UserDetailsPage.qml:186
 #, kde-format
@@ -593,6 +603,8 @@ msgid ""
 "Cannot change the username of a logged-in user; wait until this user logs "
 "out first."
 msgstr ""
+"Nelze změnit uživatelské jméno přihlášeného uživatele; počkejte, až se tento "
+"uživatel nejprve odhlásí."
 
 #: src/ui/UserDetailsPage.qml:214
 #, kde-format
@@ -601,6 +613,9 @@ msgid ""
 "other Administrator account on the system. Without one, authentication would "
 "become impossible or require the insecure use of the root password."
 msgstr ""
+"Typ účtu nelze změnit na Standardní, pokud v systému není alespoň jeden "
+"další účet správce. Bez něj by ověřování bylo nemožné nebo by vyžadovalo "
+"nezabezpečené použití hesla root."
 
 #: src/ui/UserDetailsPage.qml:222
 #, kde-format
@@ -629,6 +644,8 @@ msgid ""
 "Cannot delete yourself! Log out and then log in as another user to delete "
 "this user account."
 msgstr ""
+"Nemůžete smazat sám sebe! Odhlaste se a přihlaste se jako jiný uživatel, "
+"abyste mohli smazat tento uživatelský účet."
 
 #: src/ui/UserDetailsPage.qml:286
 #, kde-format
@@ -644,6 +661,9 @@ msgid ""
 "programs that request them.<nl/><nl/>Logging into the system with your "
 "fingerprint is not yet supported."
 msgstr ""
+"Otisky prstů lze použít namísto hesla při odemykání obrazovky a poskytování "
+"oprávnění správce aplikacím a programům příkazového řádku, které je vyžadují."
+"<nl/><nl/>Přihlášení do systému pomocí otisku prstu zatím není podporováno."
 
 #: src/user.cpp:141
 #, kde-format

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-06 00:44+0000\n"
+"POT-Creation-Date: 2026-03-14 00:46+0000\n"
 "PO-Revision-Date: 2023-01-06 14:58+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -33,15 +33,20 @@ msgstr "Hledat…"
 msgid "Appearance"
 msgstr "Vzhled"
 
-#: qml/configGeneral.qml:20
+#: qml/configGeneral.qml:21
 #, kde-format
 msgid "Use single button for application menu"
 msgstr "Použít jediné tlačítko pro nabídku aplikací"
 
-#: qml/configGeneral.qml:26
+#: qml/configGeneral.qml:27
 #, kde-format
 msgid "Show full application menu"
 msgstr "Zobrazit plnou nabídku aplikací"
+
+#: qml/configGeneral.qml:32
+#, kde-format
+msgid "Show menus for apps on different screens"
+msgstr ""
 
 #: qml/MenuDelegate.qml:62
 #, kde-format

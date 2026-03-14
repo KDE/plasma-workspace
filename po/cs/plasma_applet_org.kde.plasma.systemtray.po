@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Vít Pelčák <vit@pelcak.org>, 2013, 2014, 2015, 2016, 2017, 2019, 2020.
+# SPDX-FileCopyrightText: 2013, 2014, 2015, 2016, 2017, 2019, 2020, 2026 Vít Pelčák <vit@pelcak.org>
 # Vit Pelcak <vit@pelcak.org>, 2021, 2022, 2023.
 #
 msgid ""
@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-12 00:46+0000\n"
-"PO-Revision-Date: 2023-01-06 14:58+0100\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2026-03-13 14:21+0100\n"
+"Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 25.12.3\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
@@ -29,25 +29,25 @@ msgstr "Obecné"
 #, kde-format
 msgctxt "@item:inlistbox Show this System Tray item when relevant"
 msgid "Show when relevant"
-msgstr ""
+msgstr "Zobrazit pokud relevantní"
 
 #: qml/ConfigGeneral.qml:47
 #, kde-format
 msgctxt "@item:inlistbox Always show this System Tray item"
 msgid "Always show"
-msgstr ""
+msgstr "Vždy zobrazovat"
 
 #: qml/ConfigGeneral.qml:51
 #, kde-format
 msgctxt "@item:inlistbox Show this System Tray item only in the expanded popup"
 msgid "Show only in popup"
-msgstr ""
+msgstr "Zobrazit pouze ve vyskakovacím okně"
 
 #: qml/ConfigGeneral.qml:55
 #, kde-format
 msgctxt "@item:inlistbox Never show this System Tray item; disable it"
 msgid "Never show (disabled)"
-msgstr ""
+msgstr "Nikdy nezobrazovat (vypnuto)"
 
 #: qml/ConfigGeneral.qml:126
 #, kde-format
@@ -84,12 +84,18 @@ msgid ""
 "><nl/>Use this setting at your own risk, and do not report issues to KDE or "
 "the app’s author."
 msgstr ""
+"Před provedením tohoto kroku vyhledejte nastavení v <application>%1</"
+"application> pro deaktivaci ikony v systémové liště. Ikony některých "
+"aplikací v systémové liště nebyly navrženy tak, aby je bylo možné "
+"deaktivovat, a použití tohoto nastavení může způsobit jejich neočekávané "
+"chování.<nl/><nl/>Toto nastavení používejte na vlastní riziko a nehlaste "
+"problémy KDE ani autorovi aplikace."
 
 #: qml/ConfigGeneral.qml:175
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
-msgstr ""
+msgstr "Rozumím rizikům"
 
 #: qml/ConfigGeneral.qml:187
 #, kde-kuit-format
@@ -102,6 +108,12 @@ msgid ""
 "configuring the clipboard to not save history, or to only remember one item "
 "at a time."
 msgstr ""
+"Zakázání schránky se nedoporučuje, protože to způsobí ztrátu zkopírovaných "
+"dat při zavření aplikace, ze které byla zkopírována.<nl/><nl/>Udělejte to "
+"pouze v případě, že jste ručně přidali samostatný widget Schránka někam "
+"jinam nebo používáte správce schránky od jiného dodavatele. Zvažte také "
+"nastavit schránku tak, aby neukládala historii nebo si pamatovala pouze "
+"jednu položku."
 
 #: qml/ConfigGeneral.qml:196
 #, kde-kuit-format
@@ -112,26 +124,28 @@ msgid ""
 "added a standalone Notifications widget somewhere else, or are intentionally "
 "using a 3rd-party notification manager to handle notifications."
 msgstr ""
+"Zakázání widgetu upozornění se nedoporučuje, protože upozornění odeslaná "
+"aplikacemi se již nebudou zobrazovat.<nl/><nl/>Tento krok proveďte pouze v "
+"případě, že jste ručně přidali samostatný widget upozornění na jiné místo "
+"nebo záměrně používáte správce upozornění třetí strany k jejich zpracování."
 
 #: qml/ConfigGeneral.qml:208
 #, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel height"
-msgstr ""
+msgstr "Měnit s výškou panelu"
 
 #: qml/ConfigGeneral.qml:209
 #, kde-format
 msgctxt "@item:inlistbox Icon size"
 msgid "Scale with Panel width"
-msgstr ""
+msgstr "Měnit s šířkou panelu"
 
 #: qml/ConfigGeneral.qml:211
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox The spacing between system tray icons in the Panel"
-#| msgid "Panel icon spacing:"
+#, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon size:"
-msgstr "Rozestupy ikon panelu:"
+msgstr "Velikost ikony panelu:"
 
 #: qml/ConfigGeneral.qml:215 qml/ConfigGeneral.qml:256
 #, kde-format
@@ -172,13 +186,13 @@ msgstr "Automaticky přepnout na velké v dotykovém režimu"
 #, kde-format
 msgctxt "@title:column"
 msgid "Entries"
-msgstr ""
+msgstr "Položky"
 
 #: qml/ConfigGeneral.qml:319
 #, kde-format
 msgctxt "@option:check, This is referring to system tray entries"
 msgid "Always show all"
-msgstr ""
+msgstr "Vždy zobrazovat vše"
 
 #: qml/ExpandedRepresentation.qml:60
 #, kde-format
@@ -220,10 +234,10 @@ msgstr "Zobrazit skryté ikony"
 #, kde-format
 msgctxt "@info:whatsthis accessible description for popup grid"
 msgid "Grid with %1 items in %2 columns"
-msgstr ""
+msgstr "Mřížka s %1 položkami v %2 sloupcích"
 
 #: qml/HiddenItemsView.qml:41
 #, kde-format
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
-msgstr ""
+msgstr "AILlmyjgGJP"

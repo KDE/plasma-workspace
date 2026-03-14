@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-06 00:44+0000\n"
+"POT-Creation-Date: 2026-03-14 00:46+0000\n"
 "PO-Revision-Date: 2022-08-08 12:25+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -32,15 +32,20 @@ msgstr "Etsi…"
 msgid "Appearance"
 msgstr "Ulkoasu"
 
-#: qml/configGeneral.qml:20
+#: qml/configGeneral.qml:21
 #, kde-format
 msgid "Use single button for application menu"
 msgstr "Näytä sovellusvalikko yhtenä painikkeena"
 
-#: qml/configGeneral.qml:26
+#: qml/configGeneral.qml:27
 #, kde-format
 msgid "Show full application menu"
 msgstr "Näytä koko sovellusvalikko"
+
+#: qml/configGeneral.qml:32
+#, kde-format
+msgid "Show menus for apps on different screens"
+msgstr ""
 
 #: qml/MenuDelegate.qml:62
 #, kde-format

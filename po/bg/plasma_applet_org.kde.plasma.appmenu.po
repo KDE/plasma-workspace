@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-06 00:44+0000\n"
+"POT-Creation-Date: 2026-03-14 00:46+0000\n"
 "PO-Revision-Date: 2022-07-28 21:15+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -32,15 +32,20 @@ msgstr "Търсене…"
 msgid "Appearance"
 msgstr "Външен вид"
 
-#: qml/configGeneral.qml:20
+#: qml/configGeneral.qml:21
 #, kde-format
 msgid "Use single button for application menu"
 msgstr "Използване на един бутон за меню на приложения"
 
-#: qml/configGeneral.qml:26
+#: qml/configGeneral.qml:27
 #, kde-format
 msgid "Show full application menu"
 msgstr "Показване на цялото меню на приложения"
+
+#: qml/configGeneral.qml:32
+#, kde-format
+msgid "Show menus for apps on different screens"
+msgstr ""
 
 #: qml/MenuDelegate.qml:62
 #, kde-format

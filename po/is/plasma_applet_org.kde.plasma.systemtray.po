@@ -1,14 +1,14 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2022, 2025 Sveinn í Felli <sv1@fellsnet.is>
+# SPDX-FileCopyrightText: 2022, 2025, 2026 Sveinn í Felli <sv1@fellsnet.is>
 # SPDX-FileCopyrightText: 2022, 2024, 2025 Guðmundur Erlingsson <gudmundure@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-12 00:46+0000\n"
-"PO-Revision-Date: 2025-12-19 10:05+0000\n"
+"PO-Revision-Date: 2026-03-13 15:22+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
 "Language: is\n"
@@ -96,13 +96,7 @@ msgid "I understand the risks"
 msgstr "Ég skil áhættuna"
 
 #: qml/ConfigGeneral.qml:187
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info:usagetip"
-#| msgid ""
-#| "Disabling the clipboard is not recommended, as it will cause copied data "
-#| "to be lost when the application it was copied from is closed.<nl/><nl/"
-#| ">Instead consider configuring the clipboard to disable its history, or "
-#| "only remember one item at a time."
+#, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
 "Disabling the clipboard is not recommended, as it will cause copied data to "
@@ -113,9 +107,12 @@ msgid ""
 "at a time."
 msgstr ""
 "Ekki er ráðlagt að slökkva á klippispjaldinu því þá glatast afrituð gögn "
-"þegar forritinu sem þau voru afrituð úr er lokað.<nl/><nl/>Í staðinn skaltu "
-"prófa að grunnstilla klippispjaldið og afvirkja ferilskráningu eða láta það "
-"muna bara eitt atriði í einu."
+"þegar forritinu sem þau voru afrituð úr er lokað.<nl/><nl/>Gerðu þetta "
+"einungis ef þú hefur bætt handvirkt við sjálfstæðum viðmótshluta fyrir "
+"klippispjald á einhverjum öðrum stað, eða sért að nota utanaðkomandi "
+"klippispjaldsstýringu. Í staðinn gætirðu prófað að grunnstilla "
+"klippispjaldið og afvirkja ferilskráningu eða láta það muna bara eitt atriði "
+"í einu."
 
 #: qml/ConfigGeneral.qml:196
 #, kde-kuit-format
@@ -126,6 +123,11 @@ msgid ""
 "added a standalone Notifications widget somewhere else, or are intentionally "
 "using a 3rd-party notification manager to handle notifications."
 msgstr ""
+"Ekki er ráðlagt að slökkva á tilkynninga-viðmótshlutanum því þá birtast ekki "
+"lengur tilkynningar frá forritum.<nl/><nl/>Gerðu þetta einungis ef þú hefur "
+"bætt handvirkt við sjálfstæðum viðmótshluta fyrir tilkynningar á einhverjum "
+"öðrum stað, eða sért að nota utanaðkomandi stýringu til að meðhöndla "
+"tilkynningar."
 
 #: qml/ConfigGeneral.qml:208
 #, kde-format

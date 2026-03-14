@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-12-06 00:44+0000\n"
+"POT-Creation-Date: 2026-03-14 00:46+0000\n"
 "PO-Revision-Date: 2024-07-08 12:14+0200\n"
 "Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -33,15 +33,20 @@ msgstr "Søg…"
 msgid "Appearance"
 msgstr "Udseende"
 
-#: qml/configGeneral.qml:20
+#: qml/configGeneral.qml:21
 #, kde-format
 msgid "Use single button for application menu"
 msgstr "Brug enkelt knap til programmenu"
 
-#: qml/configGeneral.qml:26
+#: qml/configGeneral.qml:27
 #, kde-format
 msgid "Show full application menu"
 msgstr "Vis fuld programmenu"
+
+#: qml/configGeneral.qml:32
+#, kde-format
+msgid "Show menus for apps on different screens"
+msgstr ""
 
 #: qml/MenuDelegate.qml:62
 #, kde-format

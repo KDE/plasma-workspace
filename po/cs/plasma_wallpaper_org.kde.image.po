@@ -1,7 +1,7 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Lukáš Tinkl <ltinkl@redhat.com>, 2010, 2011, 2013.
-# SPDX-FileCopyrightText: 2010, 2011, 2013, 2014, 2015, 2023, 2024 Vít Pelčák <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2010, 2011, 2013, 2014, 2015, 2023, 2024, 2026 Vít Pelčák <vit@pelcak.org>
 # Tomáš Chvátal <tomas.chvatal@gmail.com>, 2012.
 # Vit Pelcak <vit@pelcak.org>, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
 #
@@ -10,27 +10,27 @@ msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-06 00:47+0000\n"
-"PO-Revision-Date: 2024-08-30 16:30+0200\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2026-03-13 14:23+0100\n"
+"Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 25.12.3\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Vít Pelčák"
+msgstr "Vít Pelčák,Libor Filípek"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "vit@pelcak.org"
+msgstr "vit@pelcak.org,libor.filipek@gmail.com"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:56
 #, kde-format
@@ -79,37 +79,37 @@ msgstr "Na střed"
 msgctxt ""
 "@label:listbox part of a sentence: 'Switch dynamic wallpapers [based on]'"
 msgid "Switch dynamic wallpapers:"
-msgstr ""
+msgstr "Přepínání dynamických tapet:"
 
 #: imagepackage/contents/ui/config.qml:207
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on whether the Plasma style is light or dark "
-msgstr ""
+msgstr "Závisí na tom, zda je styl Plasma světlý nebo tmavý "
 
 #: imagepackage/contents/ui/config.qml:209
 #, kde-format
 msgctxt "@item:inlistbox part of a sentence: 'Switch dynamic wallpapers'"
 msgid "Based on the day-night cycle"
-msgstr ""
+msgstr "Závisí na denním a nočním cyklu"
 
 #: imagepackage/contents/ui/config.qml:213
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always use light variant"
-msgstr ""
+msgstr "Vždy použít světlou variantu"
 
 #: imagepackage/contents/ui/config.qml:217
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Always use dark variant"
-msgstr ""
+msgstr "Vždy použít tmavou variantu"
 
 #: imagepackage/contents/ui/config.qml:231
 #, kde-format
 msgctxt "@action:button Configure day-night cycle times"
 msgid "Configure…"
-msgstr ""
+msgstr "Nastavit…"
 
 #: imagepackage/contents/ui/config.qml:242
 #, kde-format
@@ -169,25 +169,25 @@ msgstr "Získat nové obrázky pro tapety…"
 #, kde-format
 msgctxt "@action:button the things being selected are wallpapers"
 msgid "Select All"
-msgstr ""
+msgstr "Vybrat vše"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:108
 #, kde-format
 msgctxt "@action:button"
 msgid "Select All Slides"
-msgstr ""
+msgstr "Vybrat všechny snímky"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:116
 #, kde-format
 msgctxt "@action:button the things being unselected are wallpapers"
 msgid "Select None"
-msgstr ""
+msgstr "Zrušit výběr"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:117
 #, kde-format
 msgctxt "@action:button"
 msgid "Unselect All Slides"
-msgstr ""
+msgstr "Zrušit výběr všech snímků"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:33
 #, kde-format
@@ -216,11 +216,15 @@ msgid ""
 "An image file or an installed wallpaper kpackage that you wish to set as the "
 "wallpaper for your Plasma session"
 msgstr ""
+"Obrázkový soubor nebo nainstalovaný balíček tapet kpackage, který chcete "
+"nastavit jako tapetu pro svou relaci Plasma."
 
 #: plasma-apply-wallpaperimage.cpp:33
 #, kde-format
 msgid "Specify the fill mode (e.g., stretch, preserveAspectCrop, etc.)"
 msgstr ""
+"Určete režim vyplnění (např. roztažení, zachování poměru stran, oříznutí "
+"atd.)."
 
 #: plasma-apply-wallpaperimage.cpp:58
 #, kde-format
@@ -229,6 +233,9 @@ msgid ""
 "contact the author of the wallpaper to fix this, or rename the file "
 "yourself: %1"
 msgstr ""
+"V názvu souboru této tapety se nachází nadbytečná jednoduchá uvozovka (') – "
+"kontaktujte autora tapety, aby tento problém vyřešil, nebo soubor "
+"přejmenujte sami: %1"
 
 #: plasma-apply-wallpaperimage.cpp:96
 #, kde-format
@@ -244,12 +251,12 @@ msgstr "Při pokusu o nastavení tapety Plasma došlo k chybě:\n"
 #, kde-format
 msgid ""
 "Successfully set the wallpaper for all desktops to the KPackage based %1"
-msgstr ""
+msgstr "Úspěšně nastavena tapeta pro všechny plochy na KPackage balík %1"
 
 #: plasma-apply-wallpaperimage.cpp:118
 #, kde-format
 msgid "Successfully set the wallpaper for all desktops to the image %1"
-msgstr ""
+msgstr "Úspěšně nastavena tapeta pro všechny plochy na obrázek %1"
 
 #: plasma-apply-wallpaperimage.cpp:125
 #, kde-format
@@ -257,6 +264,8 @@ msgid ""
 "The file passed to be set as wallpaper does not exist, or we cannot identify "
 "it as a wallpaper: %1"
 msgstr ""
+"Soubor předaný k nastavení jako tapeta neexistuje nebo jej nelze "
+"identifikovat jako tapetu: %1"
 
 #: plugin/imagebackend.cpp:42
 #, kde-format
