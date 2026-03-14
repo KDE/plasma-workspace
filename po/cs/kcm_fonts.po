@@ -1,6 +1,6 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# Vít Pelčák <vit@pelcak.org>, 2010, 2011, 2012, 2013, 2014, 2017, 2018, 2019, 2020.
+# SPDX-FileCopyrightText: 2010, 2011, 2012, 2013, 2014, 2017, 2018, 2019, 2020, 2026 Vít Pelčák <vit@pelcak.org>
 # Tomáš Chvátal <tomas.chvatal@gmail.com>, 2013.
 # SPDX-FileCopyrightText: 2021, 2023, 2025 Vit Pelcak <vit@pelcak.org>
 #
@@ -9,15 +9,15 @@ msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 16:19+0000\n"
-"PO-Revision-Date: 2023-01-30 16:28+0100\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2026-03-13 14:06+0100\n"
+"Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #. i18n: ectx: label, entry (forceFontDPIWayland), group (General)
 #: fontsaasettingsbase.kcfg:9
@@ -298,6 +298,14 @@ msgid ""
 "have <emphasis>BGR</emphasis> and some exotic orderings are not supported by "
 "this feature.</para>This does not work with CRT monitors."
 msgstr ""
+"<para>Na obrazovkách TFT nebo LCD se každý pixel skládá ze tří nebo čtyř "
+"menších monochromatických světel. Tyto <emphasis>subpixely</emphasis> lze "
+"měnit nezávisle na sobě, aby se dále zlepšila kvalita zobrazených fontů.</"
+"para> <para>Kvalita vykreslení se zlepší pouze v případě, že výběr odpovídá "
+"způsobu, jakým jsou subpixely vašeho displeje uspořádány. Většina displejů "
+"má lineární uspořádání <emphasis>RGB</emphasis> subpixelů, některé mají "
+"<emphasis>BGR</emphasis> a některé exotické uspořádání nejsou touto funkcí "
+"podporovány. </para>Toto nefunguje u CRT monitorů."
 
 #: package/contents/ui/main.qml:329
 #, kde-format
@@ -314,6 +322,10 @@ msgid ""
 "leads to sharper edges but the small letters will less closely resemble "
 "their shape at big sizes."
 msgstr ""
+"Hinting je technika, při které se používají hinty zabudované do fontu ke "
+"zlepšení kvality vykreslení, zejména u malých velikostí. Silnější hinting "
+"obecně vede k ostřejším okrajům, ale malá písmena se budou méně podobat "
+"svému tvaru při velkých velikostech."
 
 #: package/contents/ui/main.qml:380
 #, kde-format
@@ -331,6 +343,12 @@ msgid ""
 "above. To scale everything, use the scaling slider on the <interface>Display "
 "& Monitor</interface> page.</para>"
 msgstr ""
+"<para>Zadejte zde hodnotu DPI obrazovky, aby se písma na obrazovce při tisku "
+"shodovala s jejich fyzickou velikostí. Změna této možnosti z výchozí hodnoty "
+"bude v rozporu s mnoha aplikacemi; některé ikony a obrázky se nemusí měnit "
+"podle očekávání.</para><para>Chcete-li zvětšit velikost textu, změňte "
+"velikost písma výše. Chcete-li změnit měřítko všeho, použijte posuvník "
+"měřítka na stránce <interface>Obrazovka a monitorování </interface>.</para>"
 
 #: package/contents/ui/main.qml:428
 #, kde-format
