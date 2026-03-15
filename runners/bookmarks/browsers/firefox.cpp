@@ -73,8 +73,7 @@ Firefox::Firefox(const QString &firefoxConfigDir)
     // icons that are already written to disk can be reused in multiple match sessions
     updateCacheFile(m_dbFile_fav, m_dbCacheFile_fav);
     auto fetchsqlite_fav = std::make_unique<FetchSqlite>(m_dbCacheFile_fav);
-    delete m_favicon;
-    m_favicon = FaviconFromBlob::firefox(std::move(fetchsqlite_fav), this);
+    m_favicon = FaviconFromBlob::firefox(std::move(fetchsqlite_fav));
 }
 
 Firefox::~Firefox()

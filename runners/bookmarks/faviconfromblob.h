@@ -16,7 +16,7 @@ class FaviconFromBlob : public Favicon
     Q_OBJECT
 public:
     static std::unique_ptr<Favicon> chrome(const QString &profileDirectory);
-    static FaviconFromBlob *firefox(std::unique_ptr<FetchSqlite> &&fetchSqlite, QObject *parent = nullptr);
+    static std::unique_ptr<Favicon> firefox(std::unique_ptr<FetchSqlite> &&fetchSqlite);
     static FaviconFromBlob *falkon(const QString &profileDirectory, QObject *parent = nullptr);
     ~FaviconFromBlob() override;
     QIcon iconFor(const QString &url) override;
