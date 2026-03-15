@@ -55,12 +55,12 @@ std::unique_ptr<Favicon> FaviconFromBlob::firefox(std::unique_ptr<FetchSqlite> &
     return std::make_unique<FaviconFromBlob>(QStringLiteral("firefox-default"), faviconQuery, QStringLiteral("data"), std::move(fetchSqlite));
 }
 
-FaviconFromBlob *FaviconFromBlob::falkon(const QString &profileDirectory, QObject *parent)
+std::unique_ptr<Favicon> FaviconFromBlob::falkon(const QString &profileDirectory)
 {
     const QString dbPath = profileDirectory + QStringLiteral("/browsedata.db");
     auto fetchSqlite = std::make_unique<FetchSqlite>(dbPath);
     const QString faviconQuery = QStringLiteral("SELECT icon FROM icons WHERE url = :url LIMIT 1;");
-    return new FaviconFromBlob(QStringLiteral("falkon-default"), faviconQuery, QStringLiteral("icon"), std::move(fetchSqlite), parent);
+    return std::make_unique<FaviconFromBlob>(QStringLiteral("falkon-default"), faviconQuery, QStringLiteral("icon"), std::move(fetchSqlite));
 }
 
 FaviconFromBlob::FaviconFromBlob(const QString &profileName,

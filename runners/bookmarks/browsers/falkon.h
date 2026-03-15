@@ -24,5 +24,5 @@ private:
     QString getStartupProfileDir();
     QJsonArray m_falkonBookmarkEntries;
     QString m_startupProfile;
-    Favicon *m_favicon;
+    std::unique_ptr<Favicon> m_favicon;
 };
