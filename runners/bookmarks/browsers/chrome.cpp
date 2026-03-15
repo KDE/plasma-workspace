@@ -22,11 +22,11 @@ public:
         : m_profile(profile)
     {
     }
-    inline QJsonArray bookmarks()
+    inline QJsonArray bookmarks() const
     {
         return m_bookmarks;
     }
-    inline Profile profile()
+    inline Profile profile() const
     {
         return m_profile;
     }
@@ -62,7 +62,7 @@ Chrome::Chrome(FindProfile *findProfile)
     const auto profiles = findProfile->find();
     for (const Profile &profile : profiles) {
         updateCacheFile(profile.faviconSource(), profile.faviconCache());
-        m_profileBookmarks << new ProfileBookmarks(profile);
+        m_profileBookmarks.push_back(ProfileBookmarks(profile));
         m_watcher->addFile(profile.path());
     }
     connect(m_watcher, &KDirWatch::created, this, [this] {
@@ -72,9 +72,6 @@ Chrome::Chrome(FindProfile *findProfile)
 
 Chrome::~Chrome()
 {
-    for (ProfileBookmarks *profileBookmark : std::as_const(m_profileBookmarks)) {
-        delete profileBookmark;
-    }
 }
 
 QList<BookmarkMatch> Chrome::match(const QString &term, bool addEveryThing)
@@ -83,18 +80,18 @@ QList<BookmarkMatch> Chrome::match(const QString &term, bool addEveryThing)
         prepare();
     }
     QList<BookmarkMatch> results;
-    for (ProfileBookmarks *profileBookmarks : std::as_const(m_profileBookmarks)) {
+    for (const ProfileBookmarks &profileBookmarks : m_profileBookmarks) {
         results << match(term, addEveryThing, profileBookmarks);
     }
     return results;
 }
 
-QList<BookmarkMatch> Chrome::match(const QString &term, bool addEveryThing, ProfileBookmarks *profileBookmarks)
+QList<BookmarkMatch> Chrome::match(const QString &term, bool addEveryThing, const ProfileBookmarks &profileBookmarks)
 {
     QList<BookmarkMatch> results;
 
-    const auto bookmarks = profileBookmarks->bookmarks();
-    Favicon *favicon = profileBookmarks->profile().favicon();
+    const auto bookmarks = profileBookmarks.bookmarks();
+    Favicon *favicon = profileBookmarks.profile().favicon();
     for (const QJsonValue &bookmarkValue : bookmarks) {
         const QJsonObject bookmark = bookmarkValue.toObject();
         const QString url = bookmark.value(u"url").toString();
@@ -107,14 +104,14 @@ QList<BookmarkMatch> Chrome::match(const QString &term, bool addEveryThing, Prof
 void Chrome::prepare()
 {
     m_dirty = false;
-    for (ProfileBookmarks *profileBookmarks : std::as_const(m_profileBookmarks)) {
-        Profile profile = profileBookmarks->profile();
-        profileBookmarks->clear();
+    for (ProfileBookmarks &profileBookmarks : m_profileBookmarks) {
+        Profile profile = profileBookmarks.profile();
+        profileBookmarks.clear();
         const QJsonArray bookmarks = readChromeFormatBookmarks(profile.path());
         if (bookmarks.isEmpty()) {
             continue;
         }
-        profileBookmarks->add(bookmarks);
+        profileBookmarks.add(bookmarks);
         updateCacheFile(profile.faviconSource(), profile.faviconCache());
         profile.favicon()->prepare();
     }
@@ -122,8 +119,8 @@ void Chrome::prepare()
 
 void Chrome::teardown()
 {
-    for (ProfileBookmarks *profileBookmarks : std::as_const(m_profileBookmarks)) {
-        profileBookmarks->tearDown();
+    for (ProfileBookmarks &profileBookmarks : m_profileBookmarks) {
+        profileBookmarks.tearDown();
     }
 }
 

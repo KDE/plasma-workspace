@@ -30,8 +30,8 @@ public Q_SLOTS:
 
 private:
     void parseFolder(const QJsonObject &entry, ProfileBookmarks *profile);
-    virtual QList<BookmarkMatch> match(const QString &term, bool addEveryThing, ProfileBookmarks *profileBookmarks);
-    QList<ProfileBookmarks *> m_profileBookmarks;
+    virtual QList<BookmarkMatch> match(const QString &term, bool addEveryThing, const ProfileBookmarks &profileBookmarks);
+    std::vector<ProfileBookmarks> m_profileBookmarks;
     KDirWatch *m_watcher = nullptr;
     bool m_dirty;
 };
