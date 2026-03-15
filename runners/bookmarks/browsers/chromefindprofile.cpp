@@ -14,9 +14,8 @@
 #include <QJsonObject>
 #include <QVariantMap>
 
-FindChromeProfile::FindChromeProfile(const QString &applicationName, const QString &homeDirectory, QObject *parent)
-    : QObject(parent)
-    , m_applicationName(applicationName)
+FindChromeProfile::FindChromeProfile(const QString &applicationName, const QString &homeDirectory)
+    : m_applicationName(applicationName)
     , m_homeDirectory(homeDirectory)
 {
 }
