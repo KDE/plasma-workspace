@@ -7,8 +7,8 @@
 
 #include "favicon.h"
 
-Favicon::Favicon(QObject *parent)
-    : QObject(parent)
+Favicon::Favicon()
+    : QObject()
     , m_default_icon(QIcon::fromTheme(QStringLiteral("bookmarks")))
 {
 }

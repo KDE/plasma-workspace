@@ -92,8 +92,8 @@ void TestChromeBookmarks::itShouldClearResultAfterCallingTeardown()
 void TestChromeBookmarks::itShouldFindBookmarksFromAllProfiles()
 {
     FakeFindProfile findBookmarksFromAllProfiles(
-        QList<Profile>{Profile(QString(m_configHome + u"/Chrome-Bookmarks-Sample.json"), u"Sample"_s, new FallbackFavicon(this)),
-                       Profile(QString(m_configHome + u"/Chrome-Bookmarks-SecondProfile.json"), u"SecondProfile"_s, new FallbackFavicon(this))});
+        QList<Profile>{Profile(QString(m_configHome + u"/Chrome-Bookmarks-Sample.json"), u"Sample"_s, new FallbackFavicon),
+                       Profile(QString(m_configHome + u"/Chrome-Bookmarks-SecondProfile.json"), u"SecondProfile"_s, new FallbackFavicon)});
     Chrome chrome(&findBookmarksFromAllProfiles);
     chrome.prepare();
     QList<BookmarkMatch> matches = chrome.match(u"any"_s, true);

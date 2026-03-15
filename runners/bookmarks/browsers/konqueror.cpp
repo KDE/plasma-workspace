@@ -25,14 +25,14 @@ QIcon KDEFavicon::iconFor(const QString &url)
     return QIcon::fromTheme(iconFile);
 }
 
-KDEFavicon::KDEFavicon(QObject *parent)
-    : Favicon(parent)
+KDEFavicon::KDEFavicon()
+    : Favicon()
 {
 }
 
 Konqueror::Konqueror()
     : QObject()
-    , m_favicon(new KDEFavicon(this))
+    , m_favicon(new KDEFavicon)
 {
     const QString bookmarksFile = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/konqueror/bookmarks.xml");
     m_bookmarkManager = new KBookmarkManager(bookmarksFile, this);

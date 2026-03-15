@@ -16,7 +16,7 @@ class KDEFavicon : public Favicon
 {
     Q_OBJECT
 public:
-    explicit KDEFavicon(QObject *parent = nullptr);
+    explicit KDEFavicon();
     QIcon iconFor(const QString &url) override;
 };
 
@@ -34,5 +34,5 @@ public Q_SLOTS:
 
 private:
     KBookmarkManager *m_bookmarkManager;
-    Favicon *const m_favicon;
+    std::unique_ptr<Favicon> m_favicon;
 };

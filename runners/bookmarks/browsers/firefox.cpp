@@ -26,7 +26,7 @@ Firefox::Firefox(const QString &firefoxConfigDir)
                     + QStringLiteral("/bookmarksrunner/bookmarkrunnerfirefoxdbfile.sqlite"))
     , m_dbCacheFile_fav(QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation)
                         + QStringLiteral("/bookmarksrunner/bookmarkrunnerfirefoxfavdbfile.sqlite"))
-    , m_favicon(new FallbackFavicon(this))
+    , m_favicon(new FallbackFavicon)
     , m_fetchsqlite(nullptr)
 {
     if (!QSqlDatabase::isDriverAvailable(QStringLiteral("QSQLITE"))) {

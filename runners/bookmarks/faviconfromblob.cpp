@@ -63,12 +63,8 @@ std::unique_ptr<Favicon> FaviconFromBlob::falkon(const QString &profileDirectory
     return std::make_unique<FaviconFromBlob>(QStringLiteral("falkon-default"), faviconQuery, QStringLiteral("icon"), std::move(fetchSqlite));
 }
 
-FaviconFromBlob::FaviconFromBlob(const QString &profileName,
-                                 const QString &query,
-                                 const QString &blobColumn,
-                                 std::unique_ptr<FetchSqlite> &&fetchSqlite,
-                                 QObject *parent)
-    : Favicon(parent)
+FaviconFromBlob::FaviconFromBlob(const QString &profileName, const QString &query, const QString &blobColumn, std::unique_ptr<FetchSqlite> &&fetchSqlite)
+    : Favicon()
     , m_query(query)
     , m_blobcolumn(blobColumn)
     , m_fetchsqlite(std::move(fetchSqlite))
