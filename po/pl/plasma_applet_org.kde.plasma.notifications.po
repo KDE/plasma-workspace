@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-03-05 00:46+0000\n"
-"PO-Revision-Date: 2026-02-21 08:55+0100\n"
+"PO-Revision-Date: 2026-03-14 07:01+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
 "Language: pl\n"
@@ -119,40 +119,31 @@ msgid "%2 of %1"
 msgstr "%2 z %1"
 
 #: components/JobDetails.qml:122
-#, fuzzy, kde-format
-#| msgctxt "How many files have been copied"
-#| msgid "%2 of %1 file"
-#| msgid_plural "%2 of %1 files"
+#, kde-format
 msgctxt "How many files have been copied"
 msgid "%3 of %2 file"
 msgid_plural "%3 of %2 files"
-msgstr[0] "%2 z %1 pliku"
-msgstr[1] "%2 z %1 plików"
-msgstr[2] "%2 z %1 plików"
+msgstr[0] "%3 z %2 pliku"
+msgstr[1] "%3 z %2 plików"
+msgstr[2] "%3 z %2 plików"
 
 #: components/JobDetails.qml:125
-#, fuzzy, kde-format
-#| msgctxt "How many dirs have been copied"
-#| msgid "%2 of %1 folder"
-#| msgid_plural "%2 of %1 folders"
+#, kde-format
 msgctxt "How many dirs have been copied"
 msgid "%3 of %2 folder"
 msgid_plural "%3 of %2 folders"
-msgstr[0] "%2 z %1 katalogu"
-msgstr[1] "%2 z %1 katalogów"
-msgstr[2] "%2 z %1 katalogów"
+msgstr[0] "%3 z %2 katalogu"
+msgstr[1] "%3 z %2 katalogów"
+msgstr[2] "%3 z %2 katalogów"
 
 #: components/JobDetails.qml:128
-#, fuzzy, kde-format
-#| msgctxt "How many items (that includes files and dirs) have been copied"
-#| msgid "%2 of %1 item"
-#| msgid_plural "%2 of %1 items"
+#, kde-format
 msgctxt "How many items (that includes files and dirs) have been copied"
 msgid "%3 of %2 item"
 msgid_plural "%3 of %2 items"
-msgstr[0] "%2 z %1 elementu"
-msgstr[1] "%2 z %1 elementów"
-msgstr[2] "%2 z %1 elementów"
+msgstr[0] "%3 z %2 elementu"
+msgstr[1] "%3 z %2 elementów"
+msgstr[2] "%3 z %2 elementów"
 
 #: components/JobDetails.qml:137
 #, kde-format
