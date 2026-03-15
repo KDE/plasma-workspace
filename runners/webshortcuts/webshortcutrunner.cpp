@@ -18,7 +18,6 @@
 #include <KSycoca>
 #include <KUriFilter>
 #include <QDBusConnection>
-#include <QIcon>
 #include <defaultservice.h>
 
 using namespace Qt::StringLiterals;
@@ -99,7 +98,7 @@ void WebshortcutRunner::configurePrivateBrowsingActions()
         if (containsPrivate || containsIncognito) {
             m_privateAction = action;
             const QString text = containsPrivate ? i18n("Search in private window") : i18n("Search in incognito window");
-            m_match.setActions({KRunner::Action(action.exec(), m_iconName, text)});
+            m_match.setActions({KRunner::Action(action.exec(), QStringLiteral("view-private"), text)});
             return;
         }
     }
@@ -194,7 +193,6 @@ void WebshortcutRunner::run(const KRunner::RunnerContext &context, const KRunner
 
 void WebshortcutRunner::init()
 {
-    m_iconName = QIcon::fromTheme(QStringLiteral("view-private"), QIcon::fromTheme(QStringLiteral("view-hidden"))).name();
     configurePrivateBrowsingActions();
     loadSyntaxes();
 }

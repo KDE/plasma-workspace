@@ -32,7 +32,6 @@ private:
     QString m_lastKey;
     QString m_lastProvider;
     QRegularExpression m_regex;
-    QString m_iconName;
 
     KServiceAction m_privateAction;
 
