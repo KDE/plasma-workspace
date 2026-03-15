@@ -30,5 +30,5 @@ private:
     const QString m_dbCacheFile;
     const QString m_dbCacheFile_fav;
     std::unique_ptr<Favicon> m_favicon;
-    FetchSqlite *m_fetchsqlite;
+    std::unique_ptr<FetchSqlite> m_fetchsqlite;
 };

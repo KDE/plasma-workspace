@@ -96,7 +96,7 @@ Firefox::~Firefox()
 void Firefox::prepare()
 {
     if (updateCacheFile(m_dbFile, m_dbCacheFile) != Error) {
-        m_fetchsqlite = new FetchSqlite(m_dbCacheFile);
+        m_fetchsqlite = std::make_unique<FetchSqlite>(m_dbCacheFile);
         m_fetchsqlite->prepare();
     }
     updateCacheFile(m_dbFile_fav, m_dbCacheFile_fav);
@@ -177,7 +177,6 @@ void Firefox::teardown()
 {
     if (m_fetchsqlite) {
         m_fetchsqlite->teardown();
-        delete std::exchange(m_fetchsqlite, nullptr);
     }
     m_favicon->teardown();
 }
