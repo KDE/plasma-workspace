@@ -18,6 +18,7 @@ Name[ka]=Plasma
 Name[lt]=Plasma
 Name[nl]=Plasma
 Name[nn]=Plasma
+Name[pl]=Plazma
 Name[pt_BR]=Plasma
 Name[ro]=Plasma
 Name[ru]=Plasma
