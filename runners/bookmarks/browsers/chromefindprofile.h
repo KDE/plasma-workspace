@@ -20,4 +20,5 @@ public:
 private:
     QString const m_applicationName;
     QString const m_homeDirectory;
+    std::unique_ptr<Favicon> m_favIcon;
 };

@@ -21,7 +21,7 @@
 #include <QSqlQuery>
 #include <QSqlRecord>
 
-FaviconFromBlob *FaviconFromBlob::chrome(const QString &profileDirectory, QObject *parent)
+std::unique_ptr<Favicon> FaviconFromBlob::chrome(const QString &profileDirectory)
 {
     QString profileName = QFileInfo(profileDirectory).fileName();
     QString faviconCache = QStringLiteral("%1/bookmarksrunner/KRunner-Chrome-Favicons-%2.sqlite")
@@ -42,7 +42,7 @@ FaviconFromBlob *FaviconFromBlob::chrome(const QString &profileDirectory, QObjec
             "WHERE page_url = :url LIMIT 1;");
     }
 
-    return new FaviconFromBlob(profileName, faviconQuery, QStringLiteral("image_data"), std::move(fetchSqlite), parent);
+    return std::make_unique<FaviconFromBlob>(profileName, faviconQuery, QStringLiteral("image_data"), std::move(fetchSqlite));
 }
 
 FaviconFromBlob *FaviconFromBlob::firefox(std::unique_ptr<FetchSqlite> &&fetchSqlite, QObject *parent)
