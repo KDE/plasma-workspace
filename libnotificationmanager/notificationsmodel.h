@@ -15,6 +15,8 @@ namespace NotificationManager
 {
 class NOTIFICATIONMANAGER_EXPORT NotificationsModel : public AbstractNotificationsModel
 {
+    Q_OBJECT
+
 public:
     using Ptr = std::shared_ptr<NotificationsModel>;
     static Ptr createNotificationsModel();
