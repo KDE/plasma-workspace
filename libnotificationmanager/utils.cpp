@@ -111,16 +111,17 @@ QModelIndex Utils::mapToModel(const QModelIndex &idx, const QAbstractItemModel *
     // KModelIndexProxyMapper can only map different indices to a single source
     // but we have the other way round, a single index that splits into different source models
     QModelIndex resolvedIdx = idx;
-    while (resolvedIdx.isValid() && resolvedIdx.model() != sourceModel) {
+    while (resolvedIdx.isValid()) {
         if (auto *proxyModel = qobject_cast<const QAbstractProxyModel *>(resolvedIdx.model())) {
             resolvedIdx = proxyModel->mapToSource(resolvedIdx);
             // QConcatenateTablesProxyModel isn't a "real" proxy model, so we need to special case for it :(
         } else if (auto *concatenateModel = qobject_cast<const QConcatenateTablesProxyModel *>(resolvedIdx.model())) {
             resolvedIdx = concatenateModel->mapToSource(resolvedIdx);
         } else {
-            if (resolvedIdx.model() != sourceModel) {
+            if (sourceModel && resolvedIdx.model() != sourceModel) {
                 resolvedIdx = QModelIndex(); // give up
             }
+            break;
         }
     }
     return resolvedIdx;
