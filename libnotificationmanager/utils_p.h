@@ -19,6 +19,12 @@ QString processNameFromPid(uint pid);
 
 QString desktopEntryFromPid(uint pid);
 
+/**
+ * Map a given index to a given source model
+ * @param The index
+ * @param sourceModel The source model to map to. When nullptr, will map until it finds a model that isn't a proxy model.
+ * @return The mapped index
+ */
 QModelIndex mapToModel(const QModelIndex &idx, const QAbstractItemModel *sourceModel);
 
 bool isDBusMaster();
