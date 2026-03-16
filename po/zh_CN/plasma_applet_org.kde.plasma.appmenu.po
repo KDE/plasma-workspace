@@ -46,7 +46,7 @@ msgstr "显示完整的应用程序菜单"
 #: qml/configGeneral.qml:32
 #, kde-format
 msgid "Show menus for apps on different screens"
-msgstr ""
+msgstr "在不同屏幕上显示应用程序的菜单"
 
 #: qml/MenuDelegate.qml:62
 #, kde-format
