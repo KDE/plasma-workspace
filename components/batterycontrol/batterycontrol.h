@@ -34,13 +34,13 @@ class BatteryControlModel : public QAbstractListModel
 
 public:
     enum BatteryRoles {
+        PrettyName = Qt::DisplayRole,
         Percent = Qt::UserRole + 1,
         Capacity,
         Energy,
         PluggedIn,
         IsPowerSupply,
         ChargeState,
-        PrettyName,
         Type,
     };
     Q_ENUM(BatteryRoles)
