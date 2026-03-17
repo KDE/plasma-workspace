@@ -37,6 +37,7 @@ class KFonts : public KQuickManagedConfigModule
     Q_PROPERTY(int subPixelCurrentIndex READ subPixelCurrentIndex WRITE setSubPixelCurrentIndex NOTIFY subPixelCurrentIndexChanged)
     Q_PROPERTY(QAbstractItemModel *hintingOptionsModel READ hintingOptionsModel CONSTANT)
     Q_PROPERTY(int hintingCurrentIndex READ hintingCurrentIndex WRITE setHintingCurrentIndex NOTIFY hintingCurrentIndexChanged)
+    Q_PROPERTY(bool imageProviderReady READ imageProviderReady NOTIFY imageProviderReadyChanged)
 
 public:
     KFonts(QObject *parent, const KPluginMetaData &metaData);
@@ -51,6 +52,8 @@ public:
     void setSubPixelCurrentIndex(int idx);
     QAbstractItemModel *subPixelOptionsModel() const;
     QAbstractItemModel *hintingOptionsModel() const;
+    void setImageProviderReady(bool ready);
+    bool imageProviderReady();
 
 public Q_SLOTS:
     void load() override;
@@ -65,6 +68,7 @@ Q_SIGNALS:
     void aliasingChangeApplied();
     void fontDpiSettingsChanged();
     void fontTooSmall();
+    void imageProviderReadyChanged();
 
 private:
     QFont applyFontDiff(const QFont &fnt, const QFont &newFont, int fontDiffFlags);
@@ -72,4 +76,5 @@ private:
     FontsData *const m_data;
     QStandardItemModel *const m_subPixelOptionsModel;
     QStandardItemModel *const m_hintingOptionsModel;
+    bool m_imageProviderReady;
 };

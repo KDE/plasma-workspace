@@ -33,6 +33,7 @@
 #include <KWindowSystem>
 
 #include "../kcms-common_p.h"
+#include "devicepixelratiohelper.h"
 #include "krdb.h"
 #include "kxftconfig.h"
 #include "previewimageprovider.h"
@@ -51,10 +52,12 @@ KFonts::KFonts(QObject *parent, const KPluginMetaData &metaData)
     , m_data(new FontsData(this))
     , m_subPixelOptionsModel(new QStandardItemModel(this))
     , m_hintingOptionsModel(new QStandardItemModel(this))
+    , m_imageProviderReady(false)
 {
     qmlRegisterAnonymousType<QStandardItemModel>("QStandardItemModel", 1);
     qmlRegisterAnonymousType<FontsSettings>("FontsSettings", 1);
     qmlRegisterAnonymousType<FontsAASettings>("FontsAASettings", 1);
+    qmlRegisterType<DevicePixelRatioHelper>("org.kde.plasma.kcm.fonts", 1, 0, "DevicePixelRatioHelper");
 
     setButtons(Apply | Default | Help);
 
@@ -104,10 +107,23 @@ void KFonts::load()
     // otherwise AA settings will be reset in process of loading
     // previews
     engine()->addImageProvider(u"preview"_s, new PreviewImageProvider(fontsSettings()->font()));
-
+    setImageProviderReady(true);
     // KCM expect save state to be false at this point (can be true because if a font setting loaded
     // from the config isn't available on the system, font substitution may take place)
     setNeedsSave(false);
+}
+
+void KFonts::setImageProviderReady(bool ready)
+{
+    if (m_imageProviderReady != ready) {
+        m_imageProviderReady = ready;
+        Q_EMIT imageProviderReadyChanged();
+    }
+}
+
+bool KFonts::imageProviderReady()
+{
+    return m_imageProviderReady;
 }
 
 void KFonts::save()
