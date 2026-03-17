@@ -331,11 +331,12 @@ void BatteryControlModel::deviceRemoved(const QString &udi)
 
     qCDebug(COMPONENTS::BATTERYCONTROL) << "battery with udi: " << udi << "at index: " << *position << "is removed";
 
+    beginRemoveRows(QModelIndex(), *position, *position);
+
     for (int newPosition = *position + 1; newPosition < m_batterySources.size(); ++newPosition) {
         m_batteryPositions[m_batterySources[newPosition]] = newPosition - 1;
     }
 
-    beginRemoveRows(QModelIndex(), *position, *position);
     m_batterySources.removeAt(*position);
     endRemoveRows();
 
