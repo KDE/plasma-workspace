@@ -19,7 +19,7 @@ public:
     PreviewRenderEngine(bool init = true);
     ~PreviewRenderEngine() override;
 
-    QImage drawAutoSize(const QFont &font, const QColor &txt, const QColor &bgnd, const QString &text);
+    QImage drawAutoSize(const QFont &font, const qreal dpr, const QColor &textColor, const QColor &backgroundColor, const QString &text);
 };
 
 #endif // HAVE_FONTCONFIG

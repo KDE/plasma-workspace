@@ -13,6 +13,8 @@ import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCM
 import org.kde.config // KAuthorized
 
+import org.kde.plasma.kcm.fonts as FontsKCM
+
 KCM.SimpleKCM {
     id: root
 
@@ -141,6 +143,11 @@ KCM.SimpleKCM {
                 }
             }
         }
+    }
+
+    FontsKCM.DevicePixelRatioHelper {
+        id: dprHelper
+        window: root.Window.window
     }
 
     Kirigami.FormLayout {
@@ -338,13 +345,9 @@ KCM.SimpleKCM {
                 }
                 model: kcm.subPixelOptionsModel
                 textRole: "display"
-                popup.height: popup.implicitHeight
+                popup.width: popup.implicitWidth
                 delegate: QtControls.ItemDelegate {
                     id: subPixelDelegate
-                    width: Math.max(parent.width, implicitWidth)
-                    onWidthChanged: {
-                        subPixelCombo.popup.width = Math.max(subPixelCombo.popup.width, width)
-                    }
                     contentItem: ColumnLayout {
                         id: subPixelLayout
                         Kirigami.Heading {
@@ -355,14 +358,10 @@ KCM.SimpleKCM {
                         }
                         Image {
                             id: subPixelComboImage
-                            source: "image://preview/" + model.index + "_" + kcm.hintingCurrentIndex + ".png"
-                            // Setting sourceSize here is necessary as a workaround for QTBUG-38127
-                            //
-                            // With this bug, images requested from a QQuickImageProvider have an incorrect scale with devicePixelRatio != 1 when sourceSize is not set.
-                            //
-                            // TODO: Check if QTBUG-38127 is fixed and remove the next two lines.
-                            sourceSize.width: 1
-                            sourceSize.height: 1
+                            Layout.preferredWidth: implicitWidth / dprHelper.devicePixelRatio
+                            Layout.preferredHeight: implicitHeight / dprHelper.devicePixelRatio
+                            source: kcm.imageProviderReady ? "image://preview/" + model.index + "_" + kcm.hintingCurrentIndex + "_" + dprHelper.devicePixelRatio : ""
+                            asynchronous: true
                         }
                     }
                 }
@@ -389,13 +388,9 @@ KCM.SimpleKCM {
                 }
                 model: kcm.hintingOptionsModel
                 textRole: "display"
-                popup.height: popup.implicitHeight
+                popup.width: popup.implicitWidth
                 delegate: QtControls.ItemDelegate {
                     id: hintingDelegate
-                    width: Math.max(parent.width, implicitWidth)
-                    onWidthChanged: {
-                        hintingCombo.popup.width = Math.max(hintingCombo.popup.width, width)
-                    }
                     contentItem: ColumnLayout {
                         id: hintingLayout
                         Kirigami.Heading {
@@ -406,14 +401,10 @@ KCM.SimpleKCM {
                         }
                         Image {
                             id: hintingComboImage
-                            source: "image://preview/" + kcm.subPixelCurrentIndex + "_" + model.index + ".png"
-                            // Setting sourceSize here is necessary as a workaround for QTBUG-38127
-                            //
-                            // With this bug, images requested from a QQuickImageProvider have an incorrect scale with devicePixelRatio != 1 when sourceSize is not set.
-                            //
-                            // TODO: Check if QTBUG-38127 is fixed and remove the next two lines.
-                            sourceSize.width: 1
-                            sourceSize.height: 1
+                            Layout.preferredWidth: implicitWidth / dprHelper.devicePixelRatio
+                            Layout.preferredHeight: implicitHeight / dprHelper.devicePixelRatio
+                            source: kcm.imageProviderReady ? "image://preview/" + kcm.subPixelCurrentIndex + "_" + model.index + "_" + dprHelper.devicePixelRatio : ""
+                            asynchronous: true
                         }
                     }
                 }
